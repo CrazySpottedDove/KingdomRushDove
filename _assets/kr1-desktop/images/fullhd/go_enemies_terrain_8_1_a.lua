@@ -1,0 +1,9500 @@
+﻿-- chunkname: @./_assets/kr5-desktop/images/ipadhd_bc3/go_enemies_terrain_8_1_a.lua
+
+local a = {
+	ash_spirit_asst_ash_spirit_arm1_ash_spirit_death_a = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			64,
+			84
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			269,
+			1277,
+			61,
+			81
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_arm_1 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			97,
+			113
+		},
+		trim = {
+			18,
+			20,
+			19,
+			12
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2530,
+			2566,
+			60,
+			81
+		},
+		alias = {
+			"ash_spirit_asst_ash_spirit_arm_side_1",
+			"ash_spirit_asst_ash_spirit_walkfront_arm1",
+			"ash_spirit_asst_ash_spirit_walkfront_arm2"
+		}
+	},
+	ash_spirit_asst_ash_spirit_arm_1_b = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			128,
+			95
+		},
+		trim = {
+			2,
+			2,
+			22,
+			6
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2055,
+			2111,
+			104,
+			87
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_arm_1_b_charged = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			128,
+			95
+		},
+		trim = {
+			2,
+			2,
+			22,
+			6
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2055,
+			2204,
+			104,
+			87
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_arm_2 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			45,
+			64
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2696,
+			2214,
+			41,
+			61
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_arm_2_c = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			77,
+			103
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2372,
+			2573,
+			74,
+			100
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_arm_back_2 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			66,
+			89
+		},
+		trim = {
+			4,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2679,
+			2111,
+			60,
+			85
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_arm_c_1 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			88,
+			65
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			243,
+			1428,
+			84,
+			62
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_armad2 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			68,
+			76
+		},
+		trim = {
+			11,
+			11,
+			8,
+			7
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			269,
+			1364,
+			49,
+			58
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_atack_glow = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			119,
+			107
+		},
+		trim = {
+			21,
+			20,
+			23,
+			16
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2372,
+			2496,
+			75,
+			71
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_attack_fx_1_1 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			95,
+			86
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2581,
+			2111,
+			92,
+			83
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_attack_fx_1_2 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			115,
+			89
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1696,
+			2647,
+			113,
+			85
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_attack_fx_1_3 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			132,
+			85
+		},
+		trim = {
+			1,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1306,
+			1580,
+			129,
+			82
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_attack_fx_1_4 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			140,
+			98
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2454,
+			1074,
+			136,
+			94
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_attack_fx_1_5 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			127,
+			98
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1306,
+			2170,
+			124,
+			95
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_attack_fx_1_6 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			137,
+			91
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2312,
+			1082,
+			133,
+			88
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_attack_fx_1_7 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			139,
+			85
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1453,
+			1090,
+			136,
+			82
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_body = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			154,
+			136
+		},
+		trim = {
+			25,
+			22,
+			29,
+			16
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2055,
+			2584,
+			100,
+			98
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_body_2 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			140,
+			147
+		},
+		trim = {
+			19,
+			27,
+			23,
+			23
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2271,
+			2111,
+			98,
+			97
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_body_3 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			112,
+			82
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2062,
+			1687,
+			109,
+			79
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_death_lava_1 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			154,
+			136
+		},
+		trim = {
+			36,
+			36,
+			37,
+			38
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2271,
+			2424,
+			81,
+			62
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_death_lava_10 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			154,
+			136
+		},
+		trim = {
+			10,
+			54,
+			22,
+			28
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2258,
+			1264,
+			122,
+			54
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_death_lava_2 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			154,
+			136
+		},
+		trim = {
+			31,
+			26,
+			29,
+			43
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2645,
+			499,
+			94,
+			67
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_death_lava_3 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			96,
+			60
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			215,
+			2676,
+			93,
+			56
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_death_lava_4 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			96,
+			65
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			230,
+			1822,
+			93,
+			62
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_death_lava_5 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			101,
+			75
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2493,
+			2025,
+			98,
+			71
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_death_lava_6 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			101,
+			90
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2375,
+			2111,
+			98,
+			86
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_death_lava_7 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			118,
+			51
+		},
+		trim = {
+			2,
+			2,
+			2,
+			2
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			219,
+			2145,
+			114,
+			47
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_death_lava_8 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			154,
+			136
+		},
+		trim = {
+			15,
+			45,
+			15,
+			39
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1045,
+			762,
+			124,
+			52
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_death_lava_9 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			154,
+			136
+		},
+		trim = {
+			17,
+			48,
+			17,
+			36
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2394,
+			1254,
+			120,
+			52
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_face_mew = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			53,
+			52
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			283,
+			963,
+			50,
+			49
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_fx_atack_smear_1 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			234,
+			140
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			6,
+			1428,
+			231,
+			137
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hand_2_mew = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			70,
+			83
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2453,
+			2642,
+			67,
+			80
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_handlike2 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			70,
+			65
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2530,
+			2498,
+			67,
+			62
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hando2 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			48,
+			52
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2603,
+			2498,
+			45,
+			49
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_handoopen_1 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			63,
+			71
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			274,
+			1072,
+			59,
+			68
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_handrock_1 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			45,
+			49
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1246,
+			2688,
+			41,
+			46
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_head = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			52,
+			59
+		},
+		trim = {
+			1,
+			2,
+			1,
+			6
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			283,
+			849,
+			50,
+			51
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_head_2_b = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			89,
+			88
+		},
+		trim = {
+			6,
+			19,
+			11,
+			8
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2533,
+			2417,
+			72,
+			61
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_headpain = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			52,
+			48
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			283,
+			1018,
+			49,
+			45
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_0 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			271,
+			217
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			6,
+			849,
+			271,
+			217
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_1 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			262,
+			199
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			6,
+			1072,
+			262,
+			199
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_10 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			328
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			6,
+			6,
+			376,
+			327
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_11 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			193,
+			154
+		},
+		trim = {
+			0,
+			2,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			948,
+			339,
+			193,
+			152
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_12 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			193,
+			156
+		},
+		trim = {
+			0,
+			2,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			749,
+			339,
+			193,
+			154
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_13 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			199,
+			156
+		},
+		trim = {
+			0,
+			2,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			339,
+			339,
+			199,
+			154
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_14 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			199,
+			152
+		},
+		trim = {
+			0,
+			2,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			544,
+			339,
+			199,
+			150
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_15 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			203,
+			139
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			6,
+			2424,
+			203,
+			138
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_16 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			203,
+			136
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			6,
+			2568,
+			203,
+			135
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_17 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			76,
+			29
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2341,
+			298,
+			76,
+			29
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_18 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			78,
+			31
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2257,
+			298,
+			78,
+			31
+		},
+		alias = {
+			"ash_spirit_asst_ash_spirit_hit_boom_19"
+		}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_2 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			304,
+			234
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			6,
+			609,
+			304,
+			234
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_20 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			60,
+			31
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2423,
+			298,
+			60,
+			31
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_3 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			327,
+			264
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			6,
+			339,
+			327,
+			264
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_4 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			343,
+			286
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2257,
+			6,
+			343,
+			286
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_5 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			356,
+			302
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1895,
+			6,
+			356,
+			302
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_6 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			364,
+			313
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1525,
+			6,
+			364,
+			313
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_7 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			370,
+			321
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1149,
+			6,
+			370,
+			321
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_8 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			374,
+			325
+		},
+		trim = {
+			0,
+			0,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			769,
+			6,
+			374,
+			325
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hit_boom_9 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			375,
+			328
+		},
+		trim = {
+			0,
+			1,
+			0,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			388,
+			6,
+			375,
+			327
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hydra_fx_eclosion_1 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			223,
+			280
+		},
+		trim = {
+			68,
+			33,
+			60,
+			43
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2271,
+			2214,
+			95,
+			204
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hydra_fx_eclosion_10 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			183,
+			103
+		},
+		trim = {
+			2,
+			2,
+			2,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1340,
+			339,
+			179,
+			100
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hydra_fx_eclosion_11 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			169,
+			42
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1340,
+			445,
+			166,
+			38
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hydra_fx_eclosion_12 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			6,
+			7
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1537,
+			325,
+			4,
+			3
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hydra_fx_eclosion_2 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			212,
+			316
+		},
+		trim = {
+			41,
+			28,
+			42,
+			38
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1306,
+			1324,
+			129,
+			250
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hydra_fx_eclosion_3 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			232,
+			339
+		},
+		trim = {
+			33,
+			23,
+			37,
+			32
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			539,
+			1778,
+			162,
+			284
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hydra_fx_eclosion_4 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			253,
+			353
+		},
+		trim = {
+			38,
+			24,
+			41,
+			34
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			539,
+			652,
+			174,
+			295
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hydra_fx_eclosion_5 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			248,
+			356
+		},
+		trim = {
+			28,
+			22,
+			32,
+			32
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			339,
+			708,
+			188,
+			302
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hydra_fx_eclosion_6 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			280,
+			375
+		},
+		trim = {
+			33,
+			26,
+			40,
+			37
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			6,
+			1893,
+			207,
+			312
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hydra_fx_eclosion_7 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			308,
+			378
+		},
+		trim = {
+			42,
+			26,
+			48,
+			36
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			6,
+			1571,
+			218,
+			316
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hydra_fx_eclosion_8 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			286,
+			316
+		},
+		trim = {
+			65,
+			69,
+			64,
+			84
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			719,
+			652,
+			157,
+			163
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_hydra_fx_eclosion_9 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			181,
+			173
+		},
+		trim = {
+			1,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			339,
+			1380,
+			179,
+			171
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_leg_1 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			22,
+			25
+		},
+		trim = {
+			2,
+			1,
+			2,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			79,
+			2709,
+			18,
+			23
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_leg_2 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			24,
+			27
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2550,
+			298,
+			22,
+			24
+		},
+		alias = {
+			"ash_spirit_asst_ash_spirit_walkside_leg1"
+		}
+	},
+	ash_spirit_asst_ash_spirit_muertedeath_lava_1 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			224,
+			199
+		},
+		trim = {
+			58,
+			36,
+			44,
+			38
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1828,
+			1410,
+			122,
+			125
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_muertedeath_lava_10 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			224,
+			199
+		},
+		trim = {
+			54,
+			66,
+			48,
+			92
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2606,
+			290,
+			122,
+			41
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_muertedeath_lava_2 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			224,
+			199
+		},
+		trim = {
+			58,
+			36,
+			20,
+			14
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2456,
+			652,
+			146,
+			149
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_muertedeath_lava_3 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			224,
+			199
+		},
+		trim = {
+			33,
+			26,
+			21,
+			14
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			539,
+			953,
+			170,
+			159
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_muertedeath_lava_4 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			258,
+			240
+		},
+		trim = {
+			45,
+			42,
+			37,
+			29
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			339,
+			2438,
+			176,
+			169
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_muertedeath_lava_5 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			224,
+			199
+		},
+		trim = {
+			19,
+			14,
+			23,
+			11
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			339,
+			1016,
+			182,
+			174
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_muertedeath_lava_6 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			224,
+			199
+		},
+		trim = {
+			48,
+			44,
+			27,
+			46
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1840,
+			652,
+			149,
+			109
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_muertedeath_lava_7 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			224,
+			199
+		},
+		trim = {
+			51,
+			56,
+			57,
+			45
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1696,
+			2543,
+			116,
+			98
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_muertedeath_lava_8 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			224,
+			199
+		},
+		trim = {
+			48,
+			46,
+			47,
+			36
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2530,
+			1178,
+			129,
+			117
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_muertedeath_lava_9 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			224,
+			199
+		},
+		trim = {
+			57,
+			36,
+			50,
+			50
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1696,
+			2025,
+			117,
+			113
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_ran_leg1 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			26,
+			28
+		},
+		trim = {
+			1,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2520,
+			298,
+			24,
+			24
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_rock1 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			54,
+			54
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			274,
+			1146,
+			52,
+			51
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_side_head = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			52,
+			59
+		},
+		trim = {
+			1,
+			2,
+			1,
+			6
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			283,
+			906,
+			50,
+			51
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_splash_1 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			86,
+			71
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			243,
+			1496,
+			83,
+			67
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_splash_14 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			86,
+			67
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2645,
+			572,
+			83,
+			63
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_splash_2 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			81,
+			57
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2629,
+			437,
+			78,
+			54
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_splash_agehs = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			82,
+			66
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2271,
+			2492,
+			79,
+			63
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_symbol_15 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			30,
+			31
+		},
+		trim = {
+			1,
+			2,
+			4,
+			0
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2489,
+			298,
+			25,
+			29
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_symbol_23 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			9,
+			10
+		},
+		trim = {
+			2,
+			2,
+			1,
+			2
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1525,
+			325,
+			6,
+			6
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_tinyrock_1 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			74,
+			67
+		},
+		trim = {
+			2,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2611,
+			2417,
+			71,
+			64
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_tinyrock_2 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			21,
+			20
+		},
+		trim = {
+			1,
+			1,
+			1,
+			2
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1942,
+			314,
+			19,
+			17
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_tinyrock_3 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			21,
+			24
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			6,
+			2709,
+			19,
+			21
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_tinyrock_4 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			45,
+			46
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1921,
+			767,
+			43,
+			43
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_walfront_leg_1 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			22,
+			31
+		},
+		trim = {
+			2,
+			1,
+			1,
+			2
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2578,
+			298,
+			19,
+			28
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_walfront_leg_2 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			21,
+			27
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			31,
+			2709,
+			18,
+			25
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_walkdown_head = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			56,
+			59
+		},
+		trim = {
+			5,
+			3,
+			4,
+			4
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2372,
+			2679,
+			47,
+			52
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_walkfront_body1 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			110,
+			104
+		},
+		trim = {
+			3,
+			5,
+			0,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2175,
+			1773,
+			107,
+			98
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_walkside_body = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			175,
+			161
+		},
+		trim = {
+			38,
+			33,
+			35,
+			28
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			230,
+			1716,
+			102,
+			100
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_walkup_back = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			122,
+			107
+		},
+		trim = {
+			5,
+			8,
+			3,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1941,
+			1773,
+			114,
+			98
+		},
+		alias = {}
+	},
+	ash_spirit_asst_ash_spirit_walkup_leg_2 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			21,
+			26
+		},
+		trim = {
+			2,
+			1,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			55,
+			2709,
+			18,
+			24
+		},
+		alias = {}
+	},
+	ash_spirit_asst_wukong_ashpirit_shadow = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			43,
+			13
+		},
+		trim = {
+			1,
+			2,
+			1,
+			1
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1895,
+			314,
+			41,
+			10
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_0001 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			312,
+			224
+		},
+		trim = {
+			28,
+			47,
+			27,
+			32
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			6,
+			1277,
+			257,
+			145
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0001 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			33,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2290,
+			1687,
+			106,
+			80
+		},
+		alias = {
+			"ashspirit_fx_floor_decal_small_0002"
+		}
+	},
+	ashspirit_fx_floor_decal_small_0003 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			33,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2402,
+			1687,
+			106,
+			80
+		},
+		alias = {
+			"ashspirit_fx_floor_decal_small_0004"
+		}
+	},
+	ashspirit_fx_floor_decal_small_0005 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			20,
+			33,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2634,
+			821,
+			106,
+			86
+		},
+		alias = {
+			"ashspirit_fx_floor_decal_small_0006",
+			"ashspirit_fx_floor_decal_small_0007"
+		}
+	},
+	ashspirit_fx_floor_decal_small_0008 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			33,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2514,
+			1687,
+			106,
+			80
+		},
+		alias = {
+			"ashspirit_fx_floor_decal_small_0009",
+			"ashspirit_fx_floor_decal_small_0010"
+		}
+	},
+	ashspirit_fx_floor_decal_small_0011 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			33,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2626,
+			1687,
+			106,
+			80
+		},
+		alias = {
+			"ashspirit_fx_floor_decal_small_0012"
+		}
+	},
+	ashspirit_fx_floor_decal_small_0013 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			33,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2288,
+			1773,
+			106,
+			80
+		},
+		alias = {
+			"ashspirit_fx_floor_decal_small_0014"
+		}
+	},
+	ashspirit_fx_floor_decal_small_0015 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			33,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2400,
+			1773,
+			106,
+			80
+		},
+		alias = {
+			"ashspirit_fx_floor_decal_small_0016"
+		}
+	},
+	ashspirit_fx_floor_decal_small_0017 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			33,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2512,
+			1773,
+			106,
+			80
+		},
+		alias = {
+			"ashspirit_fx_floor_decal_small_0018"
+		}
+	},
+	ashspirit_fx_floor_decal_small_0019 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			32,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2177,
+			1687,
+			107,
+			80
+		},
+		alias = {
+			"ashspirit_fx_floor_decal_small_0020"
+		}
+	},
+	ashspirit_fx_floor_decal_small_0021 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			24,
+			26,
+			27,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1943,
+			1687,
+			113,
+			80
+		},
+		alias = {
+			"ashspirit_fx_floor_decal_small_0022"
+		}
+	},
+	ashspirit_fx_floor_decal_small_0023 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			24,
+			26,
+			24,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1821,
+			1687,
+			116,
+			80
+		},
+		alias = {
+			"ashspirit_fx_floor_decal_small_0024"
+		}
+	},
+	ashspirit_fx_floor_decal_small_0025 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			22,
+			26,
+			22,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2084,
+			1410,
+			120,
+			80
+		},
+		alias = {
+			"ashspirit_fx_floor_decal_small_0026"
+		}
+	},
+	ashspirit_fx_floor_decal_small_0027 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			20,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1306,
+			2271,
+			124,
+			80
+		},
+		alias = {
+			"ashspirit_fx_floor_decal_small_0028"
+		}
+	},
+	ashspirit_fx_floor_decal_small_0029 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			20,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1306,
+			2357,
+			124,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0030 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			20,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1306,
+			2443,
+			124,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0031 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			20,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1306,
+			2529,
+			124,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0032 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			20,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1306,
+			2615,
+			124,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0033 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			20,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1441,
+			1324,
+			124,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0034 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			20,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1571,
+			1324,
+			124,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0035 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			20,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1701,
+			1324,
+			124,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0036 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			20,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1831,
+			1324,
+			124,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0037 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			20,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1961,
+			1324,
+			124,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0038 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			20,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2091,
+			1324,
+			124,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0039 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			20,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2221,
+			1324,
+			124,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0040 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			20,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2351,
+			1324,
+			124,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0041 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			20,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2481,
+			1324,
+			124,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0042 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			20,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2611,
+			1324,
+			124,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0043 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2460,
+			1410,
+			119,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0044 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2585,
+			1410,
+			119,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0045 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1569,
+			2644,
+			119,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0046 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			20,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1696,
+			1687,
+			119,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0047 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			33,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2624,
+			1773,
+			106,
+			80
+		},
+		alias = {
+			"ashspirit_fx_floor_decal_small_0048",
+			"ashspirit_fx_floor_decal_small_0049",
+			"ashspirit_fx_floor_decal_small_0050",
+			"ashspirit_fx_floor_decal_small_0051",
+			"ashspirit_fx_floor_decal_small_0052",
+			"ashspirit_fx_floor_decal_small_0053",
+			"ashspirit_fx_floor_decal_small_0054",
+			"ashspirit_fx_floor_decal_small_0055",
+			"ashspirit_fx_floor_decal_small_0056",
+			"ashspirit_fx_floor_decal_small_0057",
+			"ashspirit_fx_floor_decal_small_0058",
+			"ashspirit_fx_floor_decal_small_0059",
+			"ashspirit_fx_floor_decal_small_0060",
+			"ashspirit_fx_floor_decal_small_0061",
+			"ashspirit_fx_floor_decal_small_0062"
+		}
+	},
+	ashspirit_fx_floor_decal_small_0063 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			33,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1820,
+			2656,
+			106,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0064 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			33,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2516,
+			1878,
+			106,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0065 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			33,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2628,
+			1878,
+			106,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0066 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			33,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1940,
+			2321,
+			106,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0067 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			33,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1940,
+			2407,
+			106,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0068 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			33,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1940,
+			2493,
+			106,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0069 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			33,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1940,
+			2579,
+			106,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0070 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			33,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2055,
+			2025,
+			106,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_floor_decal_small_0071 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			164,
+			128
+		},
+		trim = {
+			25,
+			26,
+			33,
+			22
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2167,
+			2025,
+			106,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_behind_0001 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			180,
+			188
+		},
+		trim = {
+			39,
+			54,
+			45,
+			52
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2479,
+			2111,
+			96,
+			82
+		},
+		alias = {
+			"ashspirit_fx_heal_behind_0002"
+		}
+	},
+	ashspirit_fx_heal_behind_0003 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			180,
+			188
+		},
+		trim = {
+			29,
+			38,
+			40,
+			58
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2629,
+			339,
+			111,
+			92
+		},
+		alias = {
+			"ashspirit_fx_heal_behind_0004"
+		}
+	},
+	ashspirit_fx_heal_behind_0005 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			180,
+			188
+		},
+		trim = {
+			26,
+			31,
+			39,
+			58
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1820,
+			1773,
+			115,
+			99
+		},
+		alias = {
+			"ashspirit_fx_heal_behind_0006"
+		}
+	},
+	ashspirit_fx_heal_behind_0007 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			180,
+			188
+		},
+		trim = {
+			27,
+			28,
+			39,
+			57
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1820,
+			1878,
+			114,
+			103
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_behind_0008 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			180,
+			188
+		},
+		trim = {
+			27,
+			28,
+			39,
+			55
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			219,
+			2034,
+			114,
+			105
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_behind_0009 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			180,
+			188
+		},
+		trim = {
+			28,
+			26,
+			39,
+			53
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1820,
+			2125,
+			113,
+			109
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_behind_0010 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			180,
+			188
+		},
+		trim = {
+			28,
+			26,
+			36,
+			51
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1696,
+			2426,
+			116,
+			111
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_behind_0011 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			180,
+			188
+		},
+		trim = {
+			28,
+			25,
+			33,
+			49
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2335,
+			1410,
+			119,
+			114
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_behind_0012 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			180,
+			188
+		},
+		trim = {
+			26,
+			25,
+			31,
+			48
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1699,
+			1410,
+			123,
+			115
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_behind_0013 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			180,
+			188
+		},
+		trim = {
+			30,
+			24,
+			42,
+			81
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2061,
+			1773,
+			108,
+			83
+		},
+		alias = {
+			"ashspirit_fx_heal_behind_0014"
+		}
+	},
+	ashspirit_fx_heal_behind_0015 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			180,
+			188
+		},
+		trim = {
+			39,
+			23,
+			44,
+			87
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2597,
+			2025,
+			97,
+			78
+		},
+		alias = {
+			"ashspirit_fx_heal_behind_0016"
+		}
+	},
+	ashspirit_fx_heal_croses_0001 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			128,
+			79,
+			81,
+			53
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2615,
+			2328,
+			75,
+			76
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0002 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			128,
+			76,
+			82,
+			57
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2453,
+			2417,
+			74,
+			75
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0003 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			128,
+			78,
+			86,
+			60
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2453,
+			2566,
+			70,
+			70
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0004 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			128,
+			81,
+			107,
+			63
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			274,
+			1203,
+			49,
+			64
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0005 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			129,
+			78,
+			107,
+			67
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2688,
+			2417,
+			48,
+			63
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0006 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			129,
+			75,
+			107,
+			70
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2530,
+			2653,
+			48,
+			63
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0007 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			119,
+			76,
+			63,
+			39
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2055,
+			2297,
+			102,
+			93
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0008 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			120,
+			96,
+			63,
+			43
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2279,
+			2025,
+			101,
+			69
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0009 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			120,
+			93,
+			63,
+			46
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2386,
+			2025,
+			101,
+			69
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0010 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			120,
+			90,
+			62,
+			49
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			218,
+			2341,
+			102,
+			69
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0011 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			120,
+			86,
+			62,
+			53
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1940,
+			2665,
+			102,
+			69
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0012 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			119,
+			83,
+			62,
+			56
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			230,
+			1571,
+			103,
+			69
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0013 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			119,
+			85,
+			62,
+			59
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			230,
+			1646,
+			103,
+			64
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0014 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			111,
+			89,
+			42,
+			49
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2596,
+			1074,
+			131,
+			70
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0015 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			111,
+			85,
+			43,
+			53
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2394,
+			1178,
+			130,
+			70
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0016 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			111,
+			82,
+			42,
+			56
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1165,
+			2387,
+			131,
+			70
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0017 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			111,
+			79,
+			42,
+			59
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1165,
+			2463,
+			131,
+			70
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0018 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			111,
+			76,
+			42,
+			63
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1165,
+			2539,
+			131,
+			69
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0019 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			110,
+			77,
+			42,
+			66
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2026,
+			1099,
+			132,
+			65
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0020 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			110,
+			83,
+			42,
+			69
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2169,
+			1087,
+			132,
+			56
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0021 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			110,
+			79,
+			41,
+			60
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1523,
+			745,
+			133,
+			69
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0022 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			110,
+			76,
+			42,
+			65
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1019,
+			2656,
+			132,
+			67
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0023 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			110,
+			73,
+			42,
+			68
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1883,
+			1103,
+			132,
+			67
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0024 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			111,
+			69,
+			42,
+			71
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1165,
+			2614,
+			131,
+			68
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0025 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			111,
+			66,
+			43,
+			62
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2258,
+			1178,
+			130,
+			80
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0026 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			115,
+			68,
+			47,
+			66
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1956,
+			1410,
+			122,
+			74
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0027 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			129,
+			93,
+			81,
+			69
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2165,
+			2677,
+			74,
+			46
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0028 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			129,
+			89,
+			80,
+			72
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1840,
+			767,
+			75,
+			47
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0029 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			129,
+			86,
+			81,
+			76
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2271,
+			2675,
+			74,
+			46
+		},
+		alias = {}
+	},
+	ashspirit_fx_heal_croses_0030 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			284,
+			208
+		},
+		trim = {
+			128,
+			82,
+			81,
+			79
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1165,
+			2688,
+			75,
+			47
+		},
+		alias = {}
+	},
+	ashspirit_fx_vfx_explosion_0001 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			46,
+			49,
+			52,
+			137
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			215,
+			2568,
+			118,
+			102
+		},
+		alias = {}
+	},
+	ashspirit_fx_vfx_explosion_0002 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			46,
+			49,
+			52,
+			137
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1696,
+			1773,
+			118,
+			102
+		},
+		alias = {}
+	},
+	ashspirit_fx_vfx_explosion_0003 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			43,
+			46,
+			49,
+			137
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1306,
+			1948,
+			124,
+			105
+		},
+		alias = {}
+	},
+	ashspirit_fx_vfx_explosion_0004 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			43,
+			46,
+			49,
+			137
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1306,
+			2059,
+			124,
+			105
+		},
+		alias = {}
+	},
+	ashspirit_fx_vfx_explosion_0005 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			36,
+			43,
+			44,
+			137
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2454,
+			960,
+			136,
+			108
+		},
+		alias = {}
+	},
+	ashspirit_fx_vfx_explosion_0006 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			36,
+			43,
+			44,
+			137
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2596,
+			960,
+			136,
+			108
+		},
+		alias = {}
+	},
+	ashspirit_fx_vfx_explosion_0007 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			31,
+			40,
+			39,
+			137
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			719,
+			1371,
+			146,
+			111
+		},
+		alias = {}
+	},
+	ashspirit_fx_vfx_explosion_0008 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			31,
+			40,
+			39,
+			137
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			719,
+			1488,
+			146,
+			111
+		},
+		alias = {}
+	},
+	ashspirit_fx_vfx_explosion_0009 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			27,
+			37,
+			36,
+			136
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1205,
+			652,
+			153,
+			115
+		},
+		alias = {}
+	},
+	ashspirit_fx_vfx_explosion_0010 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			27,
+			37,
+			36,
+			136
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1364,
+			652,
+			153,
+			115
+		},
+		alias = {}
+	},
+	ashspirit_fx_vfx_explosion_0011 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			24,
+			34,
+			33,
+			133
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			539,
+			2485,
+			159,
+			121
+		},
+		alias = {}
+	},
+	ashspirit_fx_vfx_explosion_0012 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			24,
+			34,
+			33,
+			136
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			539,
+			2612,
+			159,
+			118
+		},
+		alias = {}
+	},
+	ashspirit_fx_vfx_explosion_0013 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			22,
+			31,
+			32,
+			136
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			539,
+			2068,
+			162,
+			121
+		},
+		alias = {
+			"ashspirit_fx_vfx_explosion_0014"
+		}
+	},
+	ashspirit_fx_vfx_explosion_0015 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			21,
+			29,
+			31,
+			136
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			539,
+			1534,
+			164,
+			123
+		},
+		alias = {
+			"ashspirit_fx_vfx_explosion_0016"
+		}
+	},
+	ashspirit_fx_vfx_explosion_0017 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			20,
+			26,
+			30,
+			136
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2129,
+			499,
+			166,
+			126
+		},
+		alias = {
+			"ashspirit_fx_vfx_explosion_0018"
+		}
+	},
+	ashspirit_fx_vfx_explosion_0019 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			39,
+			23,
+			42,
+			151
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1165,
+			1309,
+			135,
+			114
+		},
+		alias = {
+			"ashspirit_fx_vfx_explosion_0020"
+		}
+	},
+	ashspirit_fx_vfx_explosion_0021 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			39,
+			20,
+			41,
+			152
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2312,
+			960,
+			136,
+			116
+		},
+		alias = {}
+	},
+	ashspirit_fx_vfx_explosion_0022 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			104,
+			72,
+			41,
+			154
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2453,
+			2498,
+			71,
+			62
+		},
+		alias = {}
+	},
+	ashspirit_fx_vfx_explosion_0023 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			216,
+			288
+		},
+		trim = {
+			0,
+			0,
+			214,
+			286
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1547,
+			325,
+			2,
+			2
+		},
+		alias = {
+			"ashspirit_fx_vfx_explosion_0024",
+			"ashspirit_fx_vfx_explosion_0025"
+		}
+	},
+	burning_treant_0001 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			105,
+			138,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1569,
+			1687,
+			121,
+			133
+		},
+		alias = {
+			"burning_treant_0002",
+			"burning_treant_0015",
+			"burning_treant_0016"
+		}
+	},
+	burning_treant_0003 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			102,
+			138,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1696,
+			1544,
+			121,
+			136
+		},
+		alias = {
+			"burning_treant_0004"
+		}
+	},
+	burning_treant_0005 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			102,
+			138,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1823,
+			1544,
+			121,
+			136
+		},
+		alias = {
+			"burning_treant_0006"
+		}
+	},
+	burning_treant_0007 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			103,
+			138,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2204,
+			1544,
+			121,
+			135
+		},
+		alias = {
+			"burning_treant_0008"
+		}
+	},
+	burning_treant_0009 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			101,
+			138,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1441,
+			2567,
+			121,
+			137
+		},
+		alias = {
+			"burning_treant_0010"
+		}
+	},
+	burning_treant_0011 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			98,
+			138,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1441,
+			1986,
+			121,
+			140
+		},
+		alias = {
+			"burning_treant_0012"
+		}
+	},
+	burning_treant_0013 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			99,
+			138,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1441,
+			2278,
+			121,
+			139
+		},
+		alias = {
+			"burning_treant_0014"
+		}
+	},
+	burning_treant_0017 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			103,
+			138,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2331,
+			1544,
+			121,
+			135
+		},
+		alias = {
+			"burning_treant_0018"
+		}
+	},
+	burning_treant_0019 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			102,
+			138,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1950,
+			1544,
+			121,
+			136
+		},
+		alias = {
+			"burning_treant_0020"
+		}
+	},
+	burning_treant_0021 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			102,
+			138,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2077,
+			1544,
+			121,
+			136
+		},
+		alias = {
+			"burning_treant_0022"
+		}
+	},
+	burning_treant_0023 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			100,
+			138,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1441,
+			2423,
+			121,
+			138
+		},
+		alias = {
+			"burning_treant_0024"
+		}
+	},
+	burning_treant_0025 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			105,
+			136,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1820,
+			2382,
+			112,
+			133
+		},
+		alias = {
+			"burning_treant_0026"
+		}
+	},
+	burning_treant_0027 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			102,
+			136,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1820,
+			2240,
+			112,
+			136
+		},
+		alias = {}
+	},
+	burning_treant_0028 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			102,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2056,
+			1878,
+			109,
+			136
+		},
+		alias = {}
+	},
+	burning_treant_0029 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			102,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2171,
+			1878,
+			109,
+			136
+		},
+		alias = {
+			"burning_treant_0030"
+		}
+	},
+	burning_treant_0031 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			121,
+			103,
+			134,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2458,
+			1544,
+			121,
+			135
+		},
+		alias = {
+			"burning_treant_0032"
+		}
+	},
+	burning_treant_0033 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			121,
+			101,
+			134,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1569,
+			1544,
+			121,
+			137
+		},
+		alias = {}
+	},
+	burning_treant_0034 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			101,
+			129,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1442,
+			1178,
+			130,
+			137
+		},
+		alias = {}
+	},
+	burning_treant_0035 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			98,
+			129,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1306,
+			1178,
+			130,
+			140
+		},
+		alias = {
+			"burning_treant_0036"
+		}
+	},
+	burning_treant_0037 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			107,
+			99,
+			125,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			719,
+			1887,
+			144,
+			139
+		},
+		alias = {
+			"burning_treant_0038"
+		}
+	},
+	burning_treant_0039 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			107,
+			105,
+			125,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			719,
+			2032,
+			144,
+			133
+		},
+		alias = {}
+	},
+	burning_treant_0040 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			105,
+			105,
+			123,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2149,
+			652,
+			148,
+			133
+		},
+		alias = {}
+	},
+	burning_treant_0041 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			105,
+			103,
+			123,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1995,
+			652,
+			148,
+			135
+		},
+		alias = {
+			"burning_treant_0042"
+		}
+	},
+	burning_treant_0043 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			113,
+			102,
+			130,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1165,
+			1568,
+			133,
+			136
+		},
+		alias = {
+			"burning_treant_0044"
+		}
+	},
+	burning_treant_0045 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			113,
+			102,
+			130,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1165,
+			1710,
+			133,
+			136
+		},
+		alias = {}
+	},
+	burning_treant_0046 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			118,
+			102,
+			136,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1441,
+			1688,
+			122,
+			136
+		},
+		alias = {}
+	},
+	burning_treant_0047 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			118,
+			100,
+			136,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1441,
+			1544,
+			122,
+			138
+		},
+		alias = {
+			"burning_treant_0048"
+		}
+	},
+	burning_treant_0049 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			115,
+			105,
+			119,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			872,
+			821,
+			142,
+			133
+		},
+		alias = {
+			"burning_treant_0050"
+		}
+	},
+	burning_treant_0051 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			115,
+			102,
+			119,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			719,
+			2315,
+			142,
+			136
+		},
+		alias = {}
+	},
+	burning_treant_0052 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			115,
+			102,
+			120,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			872,
+			1765,
+			141,
+			136
+		},
+		alias = {}
+	},
+	burning_treant_0053 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			115,
+			102,
+			120,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			872,
+			1907,
+			141,
+			136
+		},
+		alias = {
+			"burning_treant_0054"
+		}
+	},
+	burning_treant_0055 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			115,
+			105,
+			122,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2199,
+			821,
+			139,
+			133
+		},
+		alias = {
+			"burning_treant_0056"
+		}
+	},
+	burning_treant_0057 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			115,
+			106,
+			122,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1019,
+			2380,
+			139,
+			132
+		},
+		alias = {}
+	},
+	burning_treant_0058 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			115,
+			106,
+			120,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1906,
+			821,
+			141,
+			132
+		},
+		alias = {}
+	},
+	burning_treant_0059 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			115,
+			102,
+			120,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			872,
+			2049,
+			141,
+			136
+		},
+		alias = {
+			"burning_treant_0060"
+		}
+	},
+	burning_treant_0061 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			115,
+			102,
+			119,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			719,
+			2457,
+			142,
+			136
+		},
+		alias = {
+			"burning_treant_0062"
+		}
+	},
+	burning_treant_0063 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			115,
+			105,
+			119,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1020,
+			821,
+			142,
+			133
+		},
+		alias = {}
+	},
+	burning_treant_0064 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			105,
+			118,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1612,
+			821,
+			141,
+			133
+		},
+		alias = {}
+	},
+	burning_treant_0065 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			103,
+			118,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			872,
+			2333,
+			141,
+			135
+		},
+		alias = {
+			"burning_treant_0066"
+		}
+	},
+	burning_treant_0067 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			120,
+			105,
+			117,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2344,
+			821,
+			139,
+			133
+		},
+		alias = {
+			"burning_treant_0068"
+		}
+	},
+	burning_treant_0069 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			120,
+			106,
+			117,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1019,
+			2518,
+			139,
+			132
+		},
+		alias = {}
+	},
+	burning_treant_0070 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			106,
+			117,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1168,
+			821,
+			142,
+			132
+		},
+		alias = {}
+	},
+	burning_treant_0071 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			104,
+			117,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			719,
+			2599,
+			142,
+			134
+		},
+		alias = {
+			"burning_treant_0072"
+		}
+	},
+	burning_treant_0073 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			118,
+			105,
+			117,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1759,
+			821,
+			141,
+			133
+		},
+		alias = {
+			"burning_treant_0074"
+		}
+	},
+	burning_treant_0075 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			118,
+			102,
+			117,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			872,
+			2191,
+			141,
+			136
+		},
+		alias = {}
+	},
+	burning_treant_0076 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			122,
+			102,
+			120,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2606,
+			6,
+			134,
+			136
+		},
+		alias = {}
+	},
+	burning_treant_0077 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			122,
+			102,
+			120,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2606,
+			148,
+			134,
+			136
+		},
+		alias = {
+			"burning_treant_0078"
+		}
+	},
+	burning_treant_0079 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			125,
+			103,
+			124,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1306,
+			1668,
+			127,
+			135
+		},
+		alias = {
+			"burning_treant_0080"
+		}
+	},
+	burning_treant_0081 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			125,
+			105,
+			124,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1306,
+			1809,
+			127,
+			133
+		},
+		alias = {}
+	},
+	burning_treant_0082 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			120,
+			105,
+			119,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2026,
+			960,
+			137,
+			133
+		},
+		alias = {}
+	},
+	burning_treant_0083 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			120,
+			101,
+			119,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1883,
+			960,
+			137,
+			137
+		},
+		alias = {
+			"burning_treant_0084"
+		}
+	},
+	burning_treant_0085 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			112,
+			101,
+			119,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			719,
+			1605,
+			145,
+			137
+		},
+		alias = {
+			"burning_treant_0086"
+		}
+	},
+	burning_treant_0087 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			112,
+			105,
+			119,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			719,
+			1748,
+			145,
+			133
+		},
+		alias = {}
+	},
+	burning_treant_0088 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			116,
+			105,
+			121,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2489,
+			821,
+			139,
+			133
+		},
+		alias = {}
+	},
+	burning_treant_0089 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			116,
+			103,
+			121,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1019,
+			2239,
+			139,
+			135
+		},
+		alias = {
+			"burning_treant_0090"
+		}
+	},
+	burning_treant_0091 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			120,
+			106,
+			124,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2608,
+			652,
+			132,
+			132
+		},
+		alias = {
+			"burning_treant_0092"
+		}
+	},
+	burning_treant_0093 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			120,
+			106,
+			124,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1165,
+			1852,
+			132,
+			132
+		},
+		alias = {}
+	},
+	burning_treant_0094 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			115,
+			106,
+			119,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1316,
+			821,
+			142,
+			132
+		},
+		alias = {}
+	},
+	burning_treant_0095 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			115,
+			100,
+			119,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			719,
+			2171,
+			142,
+			138
+		},
+		alias = {
+			"burning_treant_0096"
+		}
+	},
+	burning_treant_0097 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			109,
+			138,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1569,
+			1964,
+			121,
+			129
+		},
+		alias = {
+			"burning_treant_0098"
+		}
+	},
+	burning_treant_0099 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			119,
+			103,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			215,
+			2424,
+			118,
+			135
+		},
+		alias = {
+			"burning_treant_0100"
+		}
+	},
+	burning_treant_0101 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			121,
+			106,
+			136,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1569,
+			2369,
+			119,
+			132
+		},
+		alias = {
+			"burning_treant_0102"
+		}
+	},
+	burning_treant_0103 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			112,
+			108,
+			134,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1578,
+			1178,
+			130,
+			130
+		},
+		alias = {
+			"burning_treant_0104"
+		}
+	},
+	burning_treant_0105 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			85,
+			101,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1682,
+			652,
+			152,
+			137
+		},
+		alias = {
+			"burning_treant_0106"
+		}
+	},
+	burning_treant_0107 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			77,
+			101,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			539,
+			2342,
+			160,
+			137
+		},
+		alias = {
+			"burning_treant_0108"
+		}
+	},
+	burning_treant_0109 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			73,
+			103,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			539,
+			1393,
+			164,
+			135
+		},
+		alias = {
+			"burning_treant_0110"
+		}
+	},
+	burning_treant_0111 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			71,
+			107,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1957,
+			499,
+			166,
+			131
+		},
+		alias = {
+			"burning_treant_0112"
+		}
+	},
+	burning_treant_0113 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			89,
+			104,
+			130,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			882,
+			652,
+			157,
+			134
+		},
+		alias = {
+			"burning_treant_0114"
+		}
+	},
+	burning_treant_0115 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			61,
+			42,
+			160
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			6,
+			2211,
+			206,
+			207
+		},
+		alias = {
+			"burning_treant_0116"
+		}
+	},
+	burning_treant_0117 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			74,
+			54,
+			151
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			339,
+			499,
+			194,
+			203
+		},
+		alias = {
+			"burning_treant_0118"
+		}
+	},
+	burning_treant_0119 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			105,
+			67,
+			145
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			339,
+			1196,
+			181,
+			178
+		},
+		alias = {
+			"burning_treant_0120"
+		}
+	},
+	burning_treant_0121 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			103,
+			132,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1696,
+			2144,
+			116,
+			135
+		},
+		alias = {
+			"burning_treant_0122"
+		}
+	},
+	burning_treant_0123 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			107,
+			129,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1569,
+			2507,
+			119,
+			131
+		},
+		alias = {
+			"burning_treant_0124"
+		}
+	},
+	burning_treant_0125 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			114,
+			125,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1570,
+			1410,
+			123,
+			124
+		},
+		alias = {
+			"burning_treant_0126"
+		}
+	},
+	burning_treant_0127 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			110,
+			125,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1441,
+			1410,
+			123,
+			128
+		},
+		alias = {
+			"burning_treant_0128"
+		}
+	},
+	burning_treant_0129 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			112,
+			129,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2210,
+			1410,
+			119,
+			126
+		},
+		alias = {
+			"burning_treant_0130"
+		}
+	},
+	burning_treant_0131 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			116,
+			110,
+			129,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1165,
+			1990,
+			131,
+			128
+		},
+		alias = {
+			"burning_treant_0132"
+		}
+	},
+	burning_treant_0133 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			110,
+			105,
+			132,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1165,
+			1429,
+			134,
+			133
+		},
+		alias = {
+			"burning_treant_0134"
+		}
+	},
+	burning_treant_0135 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			120,
+			100,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1696,
+			1881,
+			117,
+			138
+		},
+		alias = {
+			"burning_treant_0136"
+		}
+	},
+	burning_treant_0137 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			106,
+			138,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1569,
+			1826,
+			121,
+			132
+		},
+		alias = {}
+	},
+	burning_treant_0138 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			109,
+			138,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1569,
+			2099,
+			121,
+			129
+		},
+		alias = {
+			"burning_treant_0139"
+		}
+	},
+	burning_treant_0140 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			106,
+			135,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1820,
+			1987,
+			113,
+			132
+		},
+		alias = {
+			"burning_treant_0141"
+		}
+	},
+	burning_treant_0142 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			103,
+			134,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			219,
+			1893,
+			114,
+			135
+		},
+		alias = {}
+	},
+	burning_treant_0143 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			103,
+			132,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1696,
+			2285,
+			116,
+			135
+		},
+		alias = {}
+	},
+	burning_treant_0144 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			96,
+			33,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			872,
+			960,
+			141,
+			205
+		},
+		alias = {}
+	},
+	burning_treant_0145 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			98,
+			30,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1019,
+			1603,
+			139,
+			208
+		},
+		alias = {}
+	},
+	burning_treant_0146 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			99,
+			30,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1309,
+			960,
+			138,
+			208
+		},
+		alias = {}
+	},
+	burning_treant_0147 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			100,
+			28,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1597,
+			960,
+			137,
+			210
+		},
+		alias = {}
+	},
+	burning_treant_0148 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			100,
+			28,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1740,
+			960,
+			137,
+			210
+		},
+		alias = {}
+	},
+	burning_treant_0149 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			98,
+			26,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1019,
+			1385,
+			139,
+			212
+		},
+		alias = {}
+	},
+	burning_treant_0150 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			99,
+			26,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1165,
+			960,
+			138,
+			212
+		},
+		alias = {}
+	},
+	burning_treant_0151 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			97,
+			25,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			872,
+			2474,
+			140,
+			213
+		},
+		alias = {}
+	},
+	burning_treant_0152 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			98,
+			25,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1019,
+			1166,
+			139,
+			213
+		},
+		alias = {}
+	},
+	burning_treant_0153 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			97,
+			38,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1019,
+			960,
+			140,
+			200
+		},
+		alias = {}
+	},
+	burning_treant_0154 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			98,
+			33,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1019,
+			1817,
+			139,
+			205
+		},
+		alias = {}
+	},
+	burning_treant_0155 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			98,
+			33,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1019,
+			2028,
+			139,
+			205
+		},
+		alias = {}
+	},
+	burning_treant_0156 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			96,
+			38,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			872,
+			1171,
+			141,
+			200
+		},
+		alias = {}
+	},
+	burning_treant_0157 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			96,
+			38,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			872,
+			1377,
+			141,
+			200
+		},
+		alias = {}
+	},
+	burning_treant_0158 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			103,
+			70,
+			180
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1525,
+			339,
+			178,
+			145
+		},
+		alias = {
+			"burning_treant_0159"
+		}
+	},
+	burning_treant_0160 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			141,
+			61,
+			170
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1147,
+			339,
+			187,
+			117
+		},
+		alias = {
+			"burning_treant_0161"
+		}
+	},
+	burning_treant_0162 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			146,
+			85,
+			173
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			539,
+			1663,
+			163,
+			109
+		},
+		alias = {}
+	},
+	burning_treant_0163 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			142,
+			82,
+			172
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2301,
+			499,
+			166,
+			114
+		},
+		alias = {}
+	},
+	burning_treant_0164 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			142,
+			82,
+			172
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2473,
+			499,
+			166,
+			114
+		},
+		alias = {}
+	},
+	burning_treant_0165 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			140,
+			78,
+			171
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1255,
+			499,
+			170,
+			117
+		},
+		alias = {}
+	},
+	burning_treant_0166 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			140,
+			78,
+			171
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1431,
+			499,
+			170,
+			117
+		},
+		alias = {}
+	},
+	burning_treant_0167 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			138,
+			77,
+			172
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			901,
+			499,
+			171,
+			118
+		},
+		alias = {}
+	},
+	burning_treant_0168 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			138,
+			77,
+			172
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1078,
+			499,
+			171,
+			118
+		},
+		alias = {}
+	},
+	burning_treant_0169 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			137,
+			79,
+			171
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1607,
+			499,
+			169,
+			120
+		},
+		alias = {}
+	},
+	burning_treant_0170 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			137,
+			79,
+			171
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1782,
+			499,
+			169,
+			120
+		},
+		alias = {}
+	},
+	burning_treant_0171 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			151,
+			82,
+			170
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			539,
+			1280,
+			166,
+			107
+		},
+		alias = {}
+	},
+	burning_treant_0172 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			163,
+			95,
+			178
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1523,
+			652,
+			153,
+			87
+		},
+		alias = {
+			"burning_treant_0173"
+		}
+	},
+	burning_treant_0174 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			125,
+			113,
+			116,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1165,
+			1178,
+			135,
+			125
+		},
+		alias = {
+			"burning_treant_0175"
+		}
+	},
+	burning_treant_0176 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			114,
+			113,
+			120,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1464,
+			821,
+			142,
+			125
+		},
+		alias = {
+			"burning_treant_0177"
+		}
+	},
+	burning_treant_0178 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			105,
+			113,
+			124,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2303,
+			652,
+			147,
+			125
+		},
+		alias = {
+			"burning_treant_0179"
+		}
+	},
+	burning_treant_0180 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			108,
+			114,
+			130,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1453,
+			960,
+			138,
+			124
+		},
+		alias = {
+			"burning_treant_0181"
+		}
+	},
+	burning_treant_0182 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			113,
+			110,
+			132,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1165,
+			2124,
+			131,
+			128
+		},
+		alias = {
+			"burning_treant_0183"
+		}
+	},
+	burning_treant_0184 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			113,
+			117,
+			126,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2169,
+			960,
+			137,
+			121
+		},
+		alias = {
+			"burning_treant_0185"
+		}
+	},
+	burning_treant_0186 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			120,
+			114,
+			126,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2122,
+			1178,
+			130,
+			124
+		},
+		alias = {
+			"burning_treant_0187"
+		}
+	},
+	burning_treant_0188 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			118,
+			113,
+			128,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1850,
+			1178,
+			130,
+			125
+		},
+		alias = {
+			"burning_treant_0189"
+		}
+	},
+	burning_treant_0190 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			112,
+			129,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1714,
+			1178,
+			130,
+			126
+		},
+		alias = {
+			"burning_treant_0191"
+		}
+	},
+	burning_treant_0192 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			115,
+			113,
+			131,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1986,
+			1178,
+			130,
+			125
+		},
+		alias = {
+			"burning_treant_0193"
+		}
+	},
+	burning_treant_0194 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			114,
+			133,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			218,
+			2211,
+			115,
+			124
+		},
+		alias = {
+			"burning_treant_0195"
+		}
+	},
+	burning_treant_0196 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			110,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2401,
+			1878,
+			109,
+			128
+		},
+		alias = {
+			"burning_treant_0197"
+		}
+	},
+	burning_treant_0198 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			105,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2286,
+			1878,
+			109,
+			133
+		},
+		alias = {
+			"burning_treant_0199"
+		}
+	},
+	burning_treant_0200 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			127,
+			97,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1940,
+			1878,
+			110,
+			141
+		},
+		alias = {
+			"burning_treant_0201"
+		}
+	},
+	burning_treant_0202 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			96,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1940,
+			2025,
+			109,
+			142
+		},
+		alias = {
+			"burning_treant_0203"
+		}
+	},
+	burning_treant_0204 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			96,
+			139,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1940,
+			2173,
+			109,
+			142
+		},
+		alias = {
+			"burning_treant_0205"
+		}
+	},
+	burning_treant_0206 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			120,
+			88,
+			135,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1441,
+			1830,
+			121,
+			150
+		},
+		alias = {
+			"burning_treant_0207"
+		}
+	},
+	burning_treant_0208 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			119,
+			98,
+			136,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1441,
+			2132,
+			121,
+			140
+		},
+		alias = {
+			"burning_treant_0209"
+		}
+	},
+	burning_treant_0210 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			103,
+			138,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2585,
+			1544,
+			121,
+			135
+		},
+		alias = {}
+	},
+	burning_treant_0211 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			117,
+			109,
+			138,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1569,
+			2234,
+			121,
+			129
+		},
+		alias = {
+			"burning_treant_0212"
+		}
+	},
+	burning_treant_0213 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			112,
+			115,
+			133,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1165,
+			2258,
+			131,
+			123
+		},
+		alias = {
+			"burning_treant_0214"
+		}
+	},
+	burning_treant_0215 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			128,
+			109,
+			136,
+			190
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1820,
+			2521,
+			112,
+			129
+		},
+		alias = {
+			"burning_treant_0216"
+		}
+	},
+	burning_treant_0217 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			109,
+			109,
+			127,
+			188
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2053,
+			821,
+			140,
+			131
+		},
+		alias = {
+			"burning_treant_0218"
+		}
+	},
+	burning_treant_0219 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			99,
+			106,
+			116,
+			181
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			539,
+			2195,
+			161,
+			141
+		},
+		alias = {
+			"burning_treant_0220"
+		}
+	},
+	burning_treant_0221 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			93,
+			102,
+			108,
+			179
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			539,
+			499,
+			175,
+			147
+		},
+		alias = {
+			"burning_treant_0222"
+		}
+	},
+	burning_treant_0223 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			92,
+			95,
+			106,
+			178
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			339,
+			1557,
+			178,
+			155
+		},
+		alias = {
+			"burning_treant_0224"
+		}
+	},
+	burning_treant_0225 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			105,
+			84,
+			104,
+			188
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			539,
+			1118,
+			167,
+			156
+		},
+		alias = {
+			"burning_treant_0226"
+		}
+	},
+	burning_treant_0227 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			125,
+			66,
+			104,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			719,
+			1199,
+			147,
+			166
+		},
+		alias = {
+			"burning_treant_0228"
+		}
+	},
+	burning_treant_0229 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			119,
+			56,
+			116,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			872,
+			1583,
+			141,
+			176
+		},
+		alias = {
+			"burning_treant_0230"
+		}
+	},
+	burning_treant_0231 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			116,
+			49,
+			113,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			719,
+			821,
+			147,
+			183
+		},
+		alias = {}
+	},
+	burning_treant_0232 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			116,
+			49,
+			113,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			719,
+			1010,
+			147,
+			183
+		},
+		alias = {}
+	},
+	burning_treant_0233 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			143,
+			50,
+			133,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2055,
+			2396,
+			100,
+			182
+		},
+		alias = {}
+	},
+	burning_treant_0234 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			143,
+			50,
+			133,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2165,
+			2111,
+			100,
+			182
+		},
+		alias = {}
+	},
+	burning_treant_0235 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			145,
+			49,
+			132,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2165,
+			2299,
+			99,
+			183
+		},
+		alias = {}
+	},
+	burning_treant_0236 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			145,
+			49,
+			132,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2165,
+			2488,
+			99,
+			183
+		},
+		alias = {}
+	},
+	burning_treant_0237 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			145,
+			124,
+			156,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2665,
+			1178,
+			75,
+			108
+		},
+		alias = {}
+	},
+	burning_treant_0238 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			145,
+			124,
+			156,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2271,
+			2561,
+			75,
+			108
+		},
+		alias = {
+			"burning_treant_0239"
+		}
+	},
+	burning_treant_0240 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			145,
+			124,
+			156,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2372,
+			2214,
+			75,
+			108
+		},
+		alias = {
+			"burning_treant_0241"
+		}
+	},
+	burning_treant_0242 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			145,
+			124,
+			156,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2453,
+			2214,
+			75,
+			108
+		},
+		alias = {
+			"burning_treant_0243"
+		}
+	},
+	burning_treant_0244 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			145,
+			124,
+			156,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2534,
+			2214,
+			75,
+			108
+		},
+		alias = {
+			"burning_treant_0245"
+		}
+	},
+	burning_treant_0246 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			145,
+			124,
+			156,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2615,
+			2214,
+			75,
+			108
+		},
+		alias = {
+			"burning_treant_0247"
+		}
+	},
+	burning_treant_0248 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			145,
+			151,
+			156,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2453,
+			2328,
+			75,
+			81
+		},
+		alias = {
+			"burning_treant_0249"
+		}
+	},
+	burning_treant_0250 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			145,
+			151,
+			156,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2534,
+			2328,
+			75,
+			81
+		},
+		alias = {
+			"burning_treant_0251"
+		}
+	},
+	burning_treant_0252 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			145,
+			149,
+			156,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2372,
+			2328,
+			75,
+			83
+		},
+		alias = {
+			"burning_treant_0253"
+		}
+	},
+	burning_treant_0254 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			145,
+			159,
+			156,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2372,
+			2417,
+			75,
+			73
+		},
+		alias = {
+			"burning_treant_0255"
+		}
+	},
+	burning_treant_0256 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			145,
+			188,
+			156,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2055,
+			2688,
+			75,
+			44
+		},
+		alias = {
+			"burning_treant_0257"
+		}
+	},
+	burning_treant_0258 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			145,
+			181,
+			156,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2516,
+			1964,
+			75,
+			51
+		},
+		alias = {
+			"burning_treant_0259"
+		}
+	},
+	burning_treant_0260 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			145,
+			183,
+			156,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2628,
+			1964,
+			75,
+			49
+		},
+		alias = {
+			"burning_treant_0261"
+		}
+	},
+	burning_treant_0262 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			376,
+			428
+		},
+		trim = {
+			145,
+			185,
+			156,
+			196
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1956,
+			1490,
+			75,
+			47
+		},
+		alias = {}
+	},
+	burning_treant_area_attk_0001 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			76,
+			38,
+			70,
+			46
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1045,
+			652,
+			154,
+			104
+		},
+		alias = {
+			"burning_treant_area_attk_0002"
+		}
+	},
+	burning_treant_area_attk_0003 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			37,
+			58,
+			37
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			339,
+			1718,
+			178,
+			114
+		},
+		alias = {
+			"burning_treant_area_attk_0004",
+			"burning_treant_area_attk_0017",
+			"burning_treant_area_attk_0018"
+		}
+	},
+	burning_treant_area_attk_0005 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			39,
+			58,
+			37
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			339,
+			1958,
+			178,
+			112
+		},
+		alias = {
+			"burning_treant_area_attk_0006"
+		}
+	},
+	burning_treant_area_attk_0007 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			36,
+			58,
+			37
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2445,
+			339,
+			178,
+			115
+		},
+		alias = {
+			"burning_treant_area_attk_0008"
+		}
+	},
+	burning_treant_area_attk_0009 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			34,
+			58,
+			37
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2261,
+			339,
+			178,
+			117
+		},
+		alias = {
+			"burning_treant_area_attk_0010"
+		}
+	},
+	burning_treant_area_attk_0011 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			32,
+			58,
+			37
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1893,
+			339,
+			178,
+			119
+		},
+		alias = {
+			"burning_treant_area_attk_0012"
+		}
+	},
+	burning_treant_area_attk_0013 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			32,
+			58,
+			37
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			2077,
+			339,
+			178,
+			119
+		},
+		alias = {
+			"burning_treant_area_attk_0014"
+		}
+	},
+	burning_treant_area_attk_0015 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			30,
+			58,
+			37
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1709,
+			339,
+			178,
+			121
+		},
+		alias = {
+			"burning_treant_area_attk_0016"
+		}
+	},
+	burning_treant_area_attk_0019 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			40,
+			58,
+			37
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			339,
+			2076,
+			178,
+			111
+		},
+		alias = {
+			"burning_treant_area_attk_0020"
+		}
+	},
+	burning_treant_area_attk_0021 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			37,
+			58,
+			37
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			339,
+			1838,
+			178,
+			114
+		},
+		alias = {
+			"burning_treant_area_attk_0022"
+		}
+	},
+	burning_treant_area_attk_0023 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			35,
+			59,
+			37
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			339,
+			2316,
+			177,
+			116
+		},
+		alias = {
+			"burning_treant_area_attk_0024"
+		}
+	},
+	burning_treant_area_attk_0025 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			33,
+			59,
+			38
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			339,
+			2193,
+			177,
+			117
+		},
+		alias = {
+			"burning_treant_area_attk_0026"
+		}
+	},
+	burning_treant_area_attk_0027 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			65,
+			33,
+			60,
+			38
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			720,
+			499,
+			175,
+			117
+		},
+		alias = {
+			"burning_treant_area_attk_0028"
+		}
+	},
+	burning_treant_area_attk_0029 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			65,
+			32,
+			60,
+			38
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			339,
+			2613,
+			175,
+			118
+		},
+		alias = {
+			"burning_treant_area_attk_0030"
+		}
+	},
+	burning_treant_area_attk_0031 = {
+		a_name = "go_enemies_terrain_8_1_a-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			0,
+			0,
+			298,
+			186
+		},
+		a_size = {
+			2740,
+			2736
+		},
+		f_quad = {
+			1555,
+			325,
+			2,
+			2
+		},
+		alias = {
+			"burning_treant_area_attk_0032"
+		}
+	}
+}
+
+for k, v in pairs(a) do
+	local rate = 32 / 45
+	a[k]["size"][1] = math.ceil(a[k]["size"][1]*rate)
+	a[k]["size"][2] = math.ceil(a[k]["size"][2]*rate)
+
+	a[k]["trim"][1] = math.ceil(a[k]["trim"][1]*rate)
+	a[k]["trim"][2] = math.ceil(a[k]["trim"][2]*rate)
+	a[k]["trim"][3] = math.ceil(a[k]["trim"][3]*rate)
+	a[k]["trim"][4] = math.ceil(a[k]["trim"][4]*rate)
+
+	a[k]["a_size"][1] = math.ceil(a[k]["a_size"][1]*rate)
+	a[k]["a_size"][2] = math.ceil(a[k]["a_size"][2]*rate)
+
+	a[k]["f_quad"][1] = math.ceil(a[k]["f_quad"][1]*rate)
+	a[k]["f_quad"][2] = math.ceil(a[k]["f_quad"][2]*rate)
+	a[k]["f_quad"][3] = math.ceil(a[k]["f_quad"][3]*rate)
+	a[k]["f_quad"][4] = math.ceil(a[k]["f_quad"][4]*rate)
+end 
+
+return a

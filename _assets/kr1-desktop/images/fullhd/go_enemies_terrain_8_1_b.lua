@@ -1,0 +1,26026 @@
+﻿-- chunkname: @./_assets/kr5-desktop/images/ipadhd_bc3/go_enemies_terrain_8_1_b.lua
+
+local a = {
+	blaze_rider_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			159,
+			94,
+			170,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			329,
+			1223,
+			87,
+			110
+		},
+		alias = {}
+	},
+	blaze_rider_0002 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			163,
+			93,
+			173,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			873,
+			702,
+			80,
+			111
+		},
+		alias = {
+			"blaze_rider_0003"
+		}
+	},
+	blaze_rider_0004 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			163,
+			94,
+			174,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1216,
+			702,
+			79,
+			110
+		},
+		alias = {
+			"blaze_rider_0005"
+		}
+	},
+	blaze_rider_0006 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			163,
+			94,
+			173,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			959,
+			702,
+			80,
+			110
+		},
+		alias = {
+			"blaze_rider_0007"
+		}
+	},
+	blaze_rider_0008 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			164,
+			92,
+			172,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1487,
+			584,
+			80,
+			112
+		},
+		alias = {
+			"blaze_rider_0009"
+		}
+	},
+	blaze_rider_0010 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			166,
+			90,
+			172,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			228,
+			3238,
+			78,
+			114
+		},
+		alias = {
+			"blaze_rider_0011"
+		}
+	},
+	blaze_rider_0012 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			166,
+			89,
+			169,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			700,
+			1088,
+			81,
+			115
+		},
+		alias = {
+			"blaze_rider_0013"
+		}
+	},
+	blaze_rider_0014 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			164,
+			96,
+			169,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			611,
+			584,
+			83,
+			108
+		},
+		alias = {
+			"blaze_rider_0015"
+		}
+	},
+	blaze_rider_0016 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			166,
+			96,
+			168,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			964,
+			584,
+			82,
+			108
+		},
+		alias = {
+			"blaze_rider_0017"
+		}
+	},
+	blaze_rider_0018 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			165,
+			95,
+			170,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1313,
+			584,
+			81,
+			109
+		},
+		alias = {
+			"blaze_rider_0019"
+		}
+	},
+	blaze_rider_0020 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			164,
+			92,
+			170,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			611,
+			1358,
+			82,
+			112
+		},
+		alias = {
+			"blaze_rider_0021"
+		}
+	},
+	blaze_rider_0022 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			162,
+			90,
+			171,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			521,
+			1003,
+			83,
+			114
+		},
+		alias = {
+			"blaze_rider_0023"
+		}
+	},
+	blaze_rider_0024 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			94,
+			173,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			876,
+			584,
+			82,
+			110
+		},
+		alias = {
+			"blaze_rider_0025"
+		}
+	},
+	blaze_rider_0026 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			167,
+			94,
+			168,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1226,
+			584,
+			81,
+			110
+		},
+		alias = {
+			"blaze_rider_0027"
+		}
+	},
+	blaze_rider_0028 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			164,
+			96,
+			168,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1247,
+			467,
+			84,
+			108
+		},
+		alias = {
+			"blaze_rider_0029"
+		}
+	},
+	blaze_rider_0030 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			163,
+			94,
+			168,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			429,
+			1454,
+			85,
+			110
+		},
+		alias = {
+			"blaze_rider_0031"
+		}
+	},
+	blaze_rider_0032 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			162,
+			90,
+			168,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			429,
+			589,
+			86,
+			114
+		},
+		alias = {
+			"blaze_rider_0033"
+		}
+	},
+	blaze_rider_0034 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			162,
+			88,
+			168,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			429,
+			467,
+			86,
+			116
+		},
+		alias = {
+			"blaze_rider_0035"
+		}
+	},
+	blaze_rider_0036 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			162,
+			90,
+			168,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			429,
+			709,
+			86,
+			114
+		},
+		alias = {
+			"blaze_rider_0037"
+		}
+	},
+	blaze_rider_0038 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			163,
+			94,
+			168,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			885,
+			467,
+			85,
+			110
+		},
+		alias = {
+			"blaze_rider_0039"
+		}
+	},
+	blaze_rider_0040 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			163,
+			95,
+			168,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			976,
+			467,
+			85,
+			109
+		},
+		alias = {
+			"blaze_rider_0041"
+		}
+	},
+	blaze_rider_0042 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			163,
+			92,
+			168,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			429,
+			1336,
+			85,
+			112
+		},
+		alias = {
+			"blaze_rider_0043"
+		}
+	},
+	blaze_rider_0044 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			164,
+			89,
+			168,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			222,
+			3876,
+			84,
+			115
+		},
+		alias = {
+			"blaze_rider_0045"
+		}
+	},
+	blaze_rider_0046 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			165,
+			88,
+			168,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			223,
+			3749,
+			83,
+			116
+		},
+		alias = {
+			"blaze_rider_0047"
+		}
+	},
+	blaze_rider_0048 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			166,
+			90,
+			168,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			611,
+			1118,
+			82,
+			114
+		},
+		alias = {
+			"blaze_rider_0049"
+		}
+	},
+	blaze_rider_0050 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			94,
+			171,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1157,
+			467,
+			84,
+			110
+		},
+		alias = {
+			"blaze_rider_0051"
+		}
+	},
+	blaze_rider_0052 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			162,
+			98,
+			171,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			611,
+			698,
+			83,
+			106
+		},
+		alias = {
+			"blaze_rider_0053"
+		}
+	},
+	blaze_rider_0054 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			96,
+			171,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1337,
+			467,
+			84,
+			108
+		},
+		alias = {
+			"blaze_rider_0055"
+		}
+	},
+	blaze_rider_0056 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			94,
+			172,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			521,
+			1357,
+			83,
+			110
+		},
+		alias = {
+			"blaze_rider_0057"
+		}
+	},
+	blaze_rider_0058 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			92,
+			174,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1052,
+			584,
+			81,
+			112
+		},
+		alias = {
+			"blaze_rider_0059"
+		}
+	},
+	blaze_rider_0060 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			89,
+			174,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			700,
+			1209,
+			81,
+			115
+		},
+		alias = {
+			"blaze_rider_0061"
+		}
+	},
+	blaze_rider_0062 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			88,
+			174,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			700,
+			966,
+			81,
+			116
+		},
+		alias = {
+			"blaze_rider_0063"
+		}
+	},
+	blaze_rider_0064 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			94,
+			176,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1301,
+			702,
+			79,
+			110
+		},
+		alias = {
+			"blaze_rider_0065"
+		}
+	},
+	blaze_rider_0066 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			162,
+			98,
+			174,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1045,
+			702,
+			80,
+			106
+		},
+		alias = {
+			"blaze_rider_0067"
+		}
+	},
+	blaze_rider_0068 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			95,
+			174,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1400,
+			584,
+			81,
+			109
+		},
+		alias = {
+			"blaze_rider_0069"
+		}
+	},
+	blaze_rider_0070 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			92,
+			173,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			700,
+			584,
+			82,
+			112
+		},
+		alias = {
+			"blaze_rider_0071"
+		}
+	},
+	blaze_rider_0072 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			88,
+			172,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			521,
+			881,
+			83,
+			116
+		},
+		alias = {
+			"blaze_rider_0073"
+		}
+	},
+	blaze_rider_0074 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			163,
+			87,
+			158,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			329,
+			250,
+			95,
+			117
+		},
+		alias = {
+			"blaze_rider_0075"
+		}
+	},
+	blaze_rider_0076 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			177,
+			49,
+			126,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2949,
+			2934,
+			113,
+			155
+		},
+		alias = {
+			"blaze_rider_0077"
+		}
+	},
+	blaze_rider_0078 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			177,
+			35,
+			135,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			6,
+			608,
+			104,
+			169
+		},
+		alias = {
+			"blaze_rider_0079"
+		}
+	},
+	blaze_rider_0080 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			177,
+			34,
+			142,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			225,
+			373,
+			97,
+			170
+		},
+		alias = {
+			"blaze_rider_0081"
+		}
+	},
+	blaze_rider_0082 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			175,
+			29,
+			106,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3961,
+			578,
+			135,
+			175
+		},
+		alias = {
+			"blaze_rider_0083"
+		}
+	},
+	blaze_rider_0084 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			122,
+			68,
+			121,
+			152
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3424,
+			578,
+			173,
+			172
+		},
+		alias = {
+			"blaze_rider_0085"
+		}
+	},
+	blaze_rider_0086 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			99,
+			80,
+			146,
+			167
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1071,
+			845,
+			171,
+			145
+		},
+		alias = {
+			"blaze_rider_0087"
+		}
+	},
+	blaze_rider_0088 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			99,
+			75,
+			173,
+			172
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1876,
+			2186,
+			144,
+			145
+		},
+		alias = {
+			"blaze_rider_0089"
+		}
+	},
+	blaze_rider_0090 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			100,
+			75,
+			171,
+			184
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2329,
+			1704,
+			145,
+			133
+		},
+		alias = {
+			"blaze_rider_0091"
+		}
+	},
+	blaze_rider_0092 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			147,
+			32,
+			72,
+			163
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			312,
+			2022,
+			197,
+			197
+		},
+		alias = {
+			"blaze_rider_0093"
+		}
+	},
+	blaze_rider_0094 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			165,
+			51,
+			105,
+			163
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1723,
+			3048,
+			146,
+			178
+		},
+		alias = {
+			"blaze_rider_0095"
+		}
+	},
+	blaze_rider_0096 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			77,
+			110,
+			171
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1876,
+			1704,
+			145,
+			144
+		},
+		alias = {}
+	},
+	blaze_rider_0097 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			77,
+			110,
+			171
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2027,
+			1704,
+			145,
+			144
+		},
+		alias = {}
+	},
+	blaze_rider_0098 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			130,
+			119,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2947,
+			1147,
+			136,
+			74
+		},
+		alias = {}
+	},
+	blaze_rider_0099 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			130,
+			119,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3116,
+			1147,
+			136,
+			74
+		},
+		alias = {}
+	},
+	blaze_rider_0100 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			130,
+			119,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2026,
+			2577,
+			136,
+			74
+		},
+		alias = {}
+	},
+	blaze_rider_0101 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			130,
+			119,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2026,
+			2657,
+			136,
+			74
+		},
+		alias = {}
+	},
+	blaze_rider_0102 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			130,
+			119,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2026,
+			2737,
+			136,
+			74
+		},
+		alias = {}
+	},
+	blaze_rider_0103 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			161,
+			130,
+			119,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2026,
+			2817,
+			136,
+			74
+		},
+		alias = {
+			"blaze_rider_0104"
+		}
+	},
+	blaze_rider_0105 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			157,
+			135,
+			115,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			312,
+			4026,
+			144,
+			69
+		},
+		alias = {
+			"blaze_rider_0106"
+		}
+	},
+	blaze_rider_0107 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			171,
+			110,
+			143,
+			184
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			117,
+			286,
+			102,
+			98
+		},
+		alias = {
+			"blaze_rider_0108"
+		}
+	},
+	blaze_rider_0109 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			162,
+			73,
+			161,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			329,
+			498,
+			93,
+			131
+		},
+		alias = {
+			"blaze_rider_0110"
+		}
+	},
+	blaze_rider_0111 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			156,
+			105,
+			153,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3979,
+			3407,
+			107,
+			99
+		},
+		alias = {
+			"blaze_rider_0112"
+		}
+	},
+	blaze_rider_0113 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			159,
+			94,
+			158,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			225,
+			134,
+			99,
+			110
+		},
+		alias = {
+			"blaze_rider_0114"
+		}
+	},
+	blaze_rider_0115 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			159,
+			94,
+			158,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			330,
+			134,
+			99,
+			110
+		},
+		alias = {
+			"blaze_rider_0116"
+		}
+	},
+	blaze_rider_0117 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			176,
+			99,
+			147,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1030,
+			250,
+			93,
+			105
+		},
+		alias = {
+			"blaze_rider_0118"
+		}
+	},
+	blaze_rider_0119 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			115,
+			73,
+			150,
+			171
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2198,
+			1544,
+			151,
+			148
+		},
+		alias = {
+			"blaze_rider_0120"
+		}
+	},
+	blaze_rider_0121 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			95,
+			107,
+			163,
+			168
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1239,
+			3337,
+			158,
+			117
+		},
+		alias = {
+			"blaze_rider_0122"
+		}
+	},
+	blaze_rider_0123 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			108,
+			58,
+			177,
+			187
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2168,
+			2907,
+			131,
+			147
+		},
+		alias = {
+			"blaze_rider_0124"
+		}
+	},
+	blaze_rider_0125 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			139,
+			87,
+			179,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			225,
+			250,
+			98,
+			117
+		},
+		alias = {
+			"blaze_rider_0126"
+		}
+	},
+	blaze_rider_0127 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			96,
+			72,
+			147,
+			163
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3782,
+			578,
+			173,
+			157
+		},
+		alias = {
+			"blaze_rider_0128"
+		}
+	},
+	blaze_rider_0129 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			136,
+			99,
+			51,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			1720,
+			229,
+			105
+		},
+		alias = {
+			"blaze_rider_0130"
+		}
+	},
+	blaze_rider_0131 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			171,
+			105,
+			67,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3869,
+			472,
+			178,
+			99
+		},
+		alias = {
+			"blaze_rider_0132"
+		}
+	},
+	blaze_rider_0133 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			171,
+			109,
+			63,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			902,
+			354,
+			182,
+			95
+		},
+		alias = {
+			"blaze_rider_0134"
+		}
+	},
+	blaze_rider_0135 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			171,
+			114,
+			101,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3454,
+			1135,
+			144,
+			90
+		},
+		alias = {
+			"blaze_rider_0136"
+		}
+	},
+	blaze_rider_0137 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			166,
+			93,
+			126,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2703,
+			2440,
+			124,
+			111
+		},
+		alias = {
+			"blaze_rider_0138"
+		}
+	},
+	blaze_rider_0139 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			164,
+			52,
+			156,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			225,
+			710,
+			96,
+			152
+		},
+		alias = {
+			"blaze_rider_0140"
+		}
+	},
+	blaze_rider_0141 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			159,
+			108,
+			151,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3975,
+			3634,
+			106,
+			96
+		},
+		alias = {
+			"blaze_rider_0142"
+		}
+	},
+	blaze_rider_0143 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			159,
+			94,
+			158,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			435,
+			134,
+			99,
+			110
+		},
+		alias = {
+			"blaze_rider_0144",
+			"blaze_rider_0145",
+			"blaze_rider_0146",
+			"blaze_rider_0179",
+			"blaze_rider_0180"
+		}
+	},
+	blaze_rider_0147 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			163,
+			104,
+			151,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1429,
+			6,
+			102,
+			100
+		},
+		alias = {
+			"blaze_rider_0148"
+		}
+	},
+	blaze_rider_0149 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			157,
+			118,
+			126,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2446,
+			2173,
+			133,
+			86
+		},
+		alias = {
+			"blaze_rider_0150"
+		}
+	},
+	blaze_rider_0151 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			126,
+			126,
+			143,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3424,
+			756,
+			147,
+			78
+		},
+		alias = {
+			"blaze_rider_0152"
+		}
+	},
+	blaze_rider_0153 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			126,
+			126,
+			143,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2099,
+			1139,
+			147,
+			78
+		},
+		alias = {
+			"blaze_rider_0154"
+		}
+	},
+	blaze_rider_0155 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			123,
+			125,
+			150,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2269,
+			1139,
+			143,
+			79
+		},
+		alias = {
+			"blaze_rider_0156"
+		}
+	},
+	blaze_rider_0157 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			177,
+			125,
+			64,
+			167
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2166,
+			701,
+			175,
+			100
+		},
+		alias = {
+			"blaze_rider_0158"
+		}
+	},
+	blaze_rider_0159 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			177,
+			125,
+			61,
+			171
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3317,
+			475,
+			178,
+			96
+		},
+		alias = {
+			"blaze_rider_0160"
+		}
+	},
+	blaze_rider_0161 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			177,
+			125,
+			64,
+			175
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2949,
+			479,
+			175,
+			92
+		},
+		alias = {
+			"blaze_rider_0162"
+		}
+	},
+	blaze_rider_0163 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			141,
+			126,
+			108,
+			181
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3212,
+			260,
+			167,
+			85
+		},
+		alias = {
+			"blaze_rider_0164"
+		}
+	},
+	blaze_rider_0165 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			141,
+			125,
+			118,
+			182
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1929,
+			1139,
+			157,
+			85
+		},
+		alias = {
+			"blaze_rider_0166"
+		}
+	},
+	blaze_rider_0167 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			177,
+			116,
+			50,
+			185
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3212,
+			163,
+			189,
+			91
+		},
+		alias = {
+			"blaze_rider_0168"
+		}
+	},
+	blaze_rider_0169 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			177,
+			113,
+			53,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3794,
+			163,
+			186,
+			91
+		},
+		alias = {
+			"blaze_rider_0170"
+		}
+	},
+	blaze_rider_0171 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			177,
+			114,
+			56,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			312,
+			2882,
+			183,
+			90
+		},
+		alias = {
+			"blaze_rider_0172"
+		}
+	},
+	blaze_rider_0173 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			177,
+			59,
+			67,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2707,
+			694,
+			172,
+			145
+		},
+		alias = {
+			"blaze_rider_0174"
+		}
+	},
+	blaze_rider_0175 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			157,
+			111,
+			151,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3756,
+			3304,
+			108,
+			93
+		},
+		alias = {
+			"blaze_rider_0176"
+		}
+	},
+	blaze_rider_0177 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			159,
+			94,
+			158,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			540,
+			134,
+			99,
+			110
+		},
+		alias = {
+			"blaze_rider_0178"
+		}
+	},
+	blaze_rider_0181 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			143,
+			92,
+			159,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2828,
+			3540,
+			114,
+			112
+		},
+		alias = {
+			"blaze_rider_0182"
+		}
+	},
+	blaze_rider_0183 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			176,
+			93,
+			155,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			521,
+			467,
+			85,
+			111
+		},
+		alias = {
+			"blaze_rider_0184"
+		}
+	},
+	blaze_rider_0185 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			174,
+			93,
+			157,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			612,
+			467,
+			85,
+			111
+		},
+		alias = {
+			"blaze_rider_0186"
+		}
+	},
+	blaze_rider_0187 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			173,
+			93,
+			158,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			703,
+			467,
+			85,
+			111
+		},
+		alias = {
+			"blaze_rider_0188"
+		}
+	},
+	blaze_rider_0189 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			171,
+			93,
+			159,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			429,
+			829,
+			86,
+			111
+		},
+		alias = {
+			"blaze_rider_0190"
+		}
+	},
+	blaze_rider_0191 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			171,
+			93,
+			161,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1067,
+			467,
+			84,
+			111
+		},
+		alias = {
+			"blaze_rider_0192"
+		}
+	},
+	blaze_rider_0193 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			173,
+			93,
+			162,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1139,
+			584,
+			81,
+			111
+		},
+		alias = {
+			"blaze_rider_0194"
+		}
+	},
+	blaze_rider_0195 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			177,
+			93,
+			162,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			787,
+			1363,
+			77,
+			111
+		},
+		alias = {
+			"blaze_rider_0196"
+		}
+	},
+	blaze_rider_0197 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			177,
+			93,
+			160,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1131,
+			702,
+			79,
+			111
+		},
+		alias = {
+			"blaze_rider_0198"
+		}
+	},
+	blaze_rider_0199 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			177,
+			93,
+			154,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			794,
+			467,
+			85,
+			111
+		},
+		alias = {
+			"blaze_rider_0200"
+		}
+	},
+	blaze_rider_0201 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			177,
+			93,
+			156,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			521,
+			1123,
+			83,
+			111
+		},
+		alias = {
+			"blaze_rider_0202"
+		}
+	},
+	blaze_rider_0203 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			177,
+			93,
+			157,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			788,
+			584,
+			82,
+			111
+		},
+		alias = {
+			"blaze_rider_0204"
+		}
+	},
+	blaze_rider_0205 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			177,
+			91,
+			159,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			700,
+			1449,
+			80,
+			113
+		},
+		alias = {
+			"blaze_rider_0206"
+		}
+	},
+	blaze_rider_0207 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			173,
+			87,
+			162,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			700,
+			843,
+			81,
+			117
+		},
+		alias = {
+			"blaze_rider_0208"
+		}
+	},
+	blaze_rider_0209 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			171,
+			93,
+			162,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			521,
+			1240,
+			83,
+			111
+		},
+		alias = {
+			"blaze_rider_0210"
+		}
+	},
+	blaze_rider_0211 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			172,
+			91,
+			163,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			700,
+			1330,
+			81,
+			113
+		},
+		alias = {
+			"blaze_rider_0212"
+		}
+	},
+	blaze_rider_0213 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			171,
+			90,
+			163,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			611,
+			1238,
+			82,
+			114
+		},
+		alias = {
+			"blaze_rider_0214"
+		}
+	},
+	blaze_rider_0215 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			172,
+			85,
+			165,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			787,
+			821,
+			79,
+			119
+		},
+		alias = {
+			"blaze_rider_0216"
+		}
+	},
+	blaze_rider_0217 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			177,
+			100,
+			156,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			611,
+			810,
+			83,
+			104
+		},
+		alias = {
+			"blaze_rider_0218"
+		}
+	},
+	blaze_rider_0219 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			155,
+			100,
+			133,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2977,
+			2298,
+			128,
+			104
+		},
+		alias = {
+			"blaze_rider_0220"
+		}
+	},
+	blaze_rider_0221 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			168,
+			100,
+			146,
+			188
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1213,
+			6,
+			102,
+			104
+		},
+		alias = {
+			"blaze_rider_0222"
+		}
+	},
+	blaze_rider_0223 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			163,
+			100,
+			141,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3186,
+			2934,
+			112,
+			104
+		},
+		alias = {
+			"blaze_rider_0224"
+		}
+	},
+	blaze_rider_0225 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			163,
+			132,
+			141,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3304,
+			2934,
+			112,
+			72
+		},
+		alias = {
+			"blaze_rider_0226"
+		}
+	},
+	blaze_rider_0227 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			416,
+			392
+		},
+		trim = {
+			163,
+			158,
+			141,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2204,
+			302,
+			112,
+			46
+		},
+		alias = {
+			"blaze_rider_0228"
+		}
+	},
+	blaze_rider_hit_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			152,
+			148
+		},
+		trim = {
+			50,
+			38,
+			50,
+			53
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2950,
+			2109,
+			52,
+			57
+		},
+		alias = {}
+	},
+	blaze_rider_hit_0002 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			152,
+			148
+		},
+		trim = {
+			50,
+			38,
+			50,
+			53
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1255,
+			1083,
+			52,
+			57
+		},
+		alias = {}
+	},
+	blaze_rider_hit_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			152,
+			148
+		},
+		trim = {
+			47,
+			28,
+			38,
+			44
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1353,
+			821,
+			67,
+			76
+		},
+		alias = {}
+	},
+	blaze_rider_hit_0004 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			152,
+			148
+		},
+		trim = {
+			47,
+			28,
+			38,
+			44
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1426,
+			821,
+			67,
+			76
+		},
+		alias = {}
+	},
+	blaze_rider_hit_0005 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			152,
+			148
+		},
+		trim = {
+			42,
+			27,
+			33,
+			39
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			787,
+			1480,
+			77,
+			82
+		},
+		alias = {}
+	},
+	blaze_rider_hit_0006 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			152,
+			148
+		},
+		trim = {
+			42,
+			27,
+			33,
+			39
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			872,
+			821,
+			77,
+			82
+		},
+		alias = {}
+	},
+	blaze_rider_hit_0007 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			152,
+			148
+		},
+		trim = {
+			51,
+			45,
+			50,
+			52
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			872,
+			1513,
+			51,
+			51
+		},
+		alias = {}
+	},
+	blaze_rider_hit_0008 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			152,
+			148
+		},
+		trim = {
+			49,
+			43,
+			48,
+			50
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1589,
+			504,
+			55,
+			55
+		},
+		alias = {}
+	},
+	blaze_rider_hit_0009 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			152,
+			148
+		},
+		trim = {
+			48,
+			42,
+			46,
+			49
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			462,
+			4026,
+			58,
+			57
+		},
+		alias = {}
+	},
+	blaze_rider_hit_0010 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			152,
+			148
+		},
+		trim = {
+			0,
+			0,
+			150,
+			146
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			459,
+			135,
+			2,
+			2
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_explosionfuego_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			224,
+			252
+		},
+		trim = {
+			73,
+			78,
+			74,
+			97
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			955,
+			821,
+			77,
+			77
+		},
+		alias = {
+			"fire_phoenix_zhu_que_explosionfuego_0002"
+		}
+	},
+	fire_phoenix_zhu_que_explosionfuego_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			224,
+			252
+		},
+		trim = {
+			47,
+			49,
+			48,
+			74
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2306,
+			2586,
+			129,
+			129
+		},
+		alias = {
+			"fire_phoenix_zhu_que_explosionfuego_0004"
+		}
+	},
+	fire_phoenix_zhu_que_explosionfuego_0005 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			224,
+			252
+		},
+		trim = {
+			42,
+			31,
+			39,
+			78
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3084,
+			1704,
+			143,
+			143
+		},
+		alias = {
+			"fire_phoenix_zhu_que_explosionfuego_0006"
+		}
+	},
+	fire_phoenix_zhu_que_explosionfuego_0007 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			224,
+			252
+		},
+		trim = {
+			57,
+			54,
+			65,
+			106
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3640,
+			3534,
+			102,
+			92
+		},
+		alias = {
+			"fire_phoenix_zhu_que_explosionfuego_0008"
+		}
+	},
+	fire_phoenix_zhu_que_explosionfuego_0009 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			224,
+			252
+		},
+		trim = {
+			52,
+			49,
+			65,
+			109
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3984,
+			3304,
+			107,
+			94
+		},
+		alias = {
+			"fire_phoenix_zhu_que_explosionfuego_0010"
+		}
+	},
+	fire_phoenix_zhu_que_explosionfuego_0011 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			224,
+			252
+		},
+		trim = {
+			48,
+			40,
+			56,
+			113
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2702,
+			3201,
+			120,
+			99
+		},
+		alias = {
+			"fire_phoenix_zhu_que_explosionfuego_0012"
+		}
+	},
+	fire_phoenix_zhu_que_explosionfuego_0013 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			224,
+			252
+		},
+		trim = {
+			50,
+			36,
+			59,
+			116
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2828,
+			3186,
+			115,
+			100
+		},
+		alias = {
+			"fire_phoenix_zhu_que_explosionfuego_0014"
+		}
+	},
+	fire_phoenix_zhu_que_explosionfuego_0015 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			224,
+			252
+		},
+		trim = {
+			53,
+			32,
+			62,
+			122
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3645,
+			3169,
+			109,
+			98
+		},
+		alias = {
+			"fire_phoenix_zhu_que_explosionfuego_0016"
+		}
+	},
+	fire_phoenix_zhu_que_explosionfuego_0017 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			224,
+			252
+		},
+		trim = {
+			55,
+			31,
+			64,
+			126
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			6,
+			507,
+			105,
+			95
+		},
+		alias = {
+			"fire_phoenix_zhu_que_explosionfuego_0018"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			40,
+			98,
+			38,
+			129
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			240,
+			1831,
+			66,
+			93
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0002",
+			"fire_phoenix_zhu_que_firephoenixzhuque_0015",
+			"fire_phoenix_zhu_que_firephoenixzhuque_0016"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			38,
+			99,
+			40,
+			129
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			872,
+			909,
+			66,
+			92
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0004",
+			"fire_phoenix_zhu_que_firephoenixzhuque_0017",
+			"fire_phoenix_zhu_que_firephoenixzhuque_0018"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0005 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			37,
+			99,
+			41,
+			130
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			872,
+			1007,
+			66,
+			91
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0006",
+			"fire_phoenix_zhu_que_firephoenixzhuque_0019",
+			"fire_phoenix_zhu_que_firephoenixzhuque_0020"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0007 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			33,
+			115,
+			32,
+			131
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3973,
+			4022,
+			79,
+			74
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0008",
+			"fire_phoenix_zhu_que_firephoenixzhuque_0021",
+			"fire_phoenix_zhu_que_firephoenixzhuque_0022"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0009 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			38,
+			118,
+			46,
+			119
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1014,
+			909,
+			60,
+			83
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0010",
+			"fire_phoenix_zhu_que_firephoenixzhuque_0023",
+			"fire_phoenix_zhu_que_firephoenixzhuque_0024"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0011 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			43,
+			118,
+			46,
+			130
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1202,
+			998,
+			55,
+			72
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0012",
+			"fire_phoenix_zhu_que_firephoenixzhuque_0025",
+			"fire_phoenix_zhu_que_firephoenixzhuque_0026"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0013 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			49,
+			118,
+			33,
+			124
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			944,
+			1213,
+			62,
+			78
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0014",
+			"fire_phoenix_zhu_que_firephoenixzhuque_0027",
+			"fire_phoenix_zhu_que_firephoenixzhuque_0028"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0029 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			40,
+			98,
+			40,
+			117
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			944,
+			1021,
+			64,
+			105
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0030",
+			"fire_phoenix_zhu_que_firephoenixzhuque_0057",
+			"fire_phoenix_zhu_que_firephoenixzhuque_0058"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0031 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			46,
+			95,
+			45,
+			116
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1078,
+			1083,
+			53,
+			109
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0032"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0033 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			49,
+			94,
+			48,
+			116
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1250,
+			1217,
+			47,
+			110
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0034"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0035 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			31,
+			109,
+			29,
+			121
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			521,
+			785,
+			84,
+			90
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0036"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0037 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			49,
+			119,
+			51,
+			112
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1354,
+			1285,
+			44,
+			89
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0038"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0039 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			49,
+			114,
+			50,
+			126
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1303,
+			1285,
+			45,
+			80
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0040"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0041 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			33,
+			119,
+			33,
+			123
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			787,
+			1159,
+			78,
+			78
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0042"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0043 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			40,
+			98,
+			40,
+			116
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			944,
+			909,
+			64,
+			106
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0044"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0045 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			46,
+			95,
+			45,
+			115
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4043,
+			2298,
+			53,
+			110
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0046"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0047 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			49,
+			94,
+			48,
+			113
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4049,
+			2780,
+			47,
+			113
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0048"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0049 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			31,
+			109,
+			29,
+			117
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			521,
+			685,
+			84,
+			94
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0050"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0051 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			43,
+			119,
+			48,
+			115
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4043,
+			3072,
+			53,
+			86
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0052"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0053 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			42,
+			116,
+			44,
+			120
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1014,
+			998,
+			58,
+			84
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0054"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0055 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			33,
+			119,
+			33,
+			117
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			787,
+			1069,
+			78,
+			84
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0056"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0059 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			44,
+			100,
+			44,
+			114
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1014,
+			1412,
+			56,
+			106
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0060"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0061 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			44,
+			97,
+			44,
+			116
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1014,
+			1299,
+			56,
+			107
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0062"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0063 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			31,
+			94,
+			35,
+			119
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1471,
+			702,
+			78,
+			107
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0064"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0065 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			30,
+			58,
+			33,
+			127
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			700,
+			702,
+			81,
+			135
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0066"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0067 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			25,
+			39,
+			34,
+			139
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			429,
+			946,
+			85,
+			142
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0068 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			25,
+			37,
+			32,
+			139
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			329,
+			927,
+			87,
+			144
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0069 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			25,
+			33,
+			32,
+			147
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			329,
+			1077,
+			87,
+			140
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0070 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			22,
+			30,
+			27,
+			147
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			225,
+			1300,
+			95,
+			143
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0071 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			22,
+			27,
+			27,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			225,
+			1141,
+			95,
+			153
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0072 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			21,
+			25,
+			27,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			225,
+			549,
+			96,
+			155
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0073 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			21,
+			24,
+			27,
+			171
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			225,
+			1010,
+			96,
+			125
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0074 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			29,
+			22,
+			27,
+			171
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4007,
+			2934,
+			88,
+			127
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0075 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			37,
+			22,
+			27,
+			185
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			787,
+			702,
+			80,
+			113
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0076 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			41,
+			21,
+			26,
+			185
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			787,
+			1243,
+			77,
+			114
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0077 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			45,
+			21,
+			26,
+			189
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			233,
+			2919,
+			73,
+			110
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0078 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			46,
+			33,
+			45,
+			189
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1078,
+			1198,
+			53,
+			98
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0079 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			48,
+			86,
+			51,
+			135
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1522,
+			250,
+			45,
+			99
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0080"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0081 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			53,
+			29,
+			56,
+			116
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1354,
+			1380,
+			35,
+			175
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0082"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0083 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			53,
+			102,
+			52,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1454,
+			1285,
+			39,
+			78
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0084"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0085 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			52,
+			100,
+			52,
+			122
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			264,
+			1378,
+			40,
+			98
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0086"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0087 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			52,
+			112,
+			54,
+			140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4058,
+			4022,
+			38,
+			68
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0088"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0089 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			52,
+			111,
+			54,
+			149
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			264,
+			1482,
+			38,
+			60
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0090"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0091 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			61,
+			111,
+			56,
+			161
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			276,
+			1037,
+			27,
+			48
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0092"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0093 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			28,
+			91,
+			34,
+			143
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1449,
+			373,
+			82,
+			86
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0094"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0095 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			28,
+			89,
+			33,
+			142
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			521,
+			1473,
+			83,
+			89
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0096"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0097 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			27,
+			85,
+			33,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			521,
+			584,
+			84,
+			95
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0098"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0099 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			27,
+			83,
+			33,
+			139
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			222,
+			3997,
+			84,
+			98
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0100 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			27,
+			83,
+			33,
+			139
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1427,
+			467,
+			84,
+			98
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0101 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			27,
+			82,
+			34,
+			146
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			611,
+			1020,
+			83,
+			92
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0102 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			27,
+			82,
+			34,
+			144
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			611,
+			920,
+			83,
+			94
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0103 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			28,
+			51,
+			34,
+			143
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			224,
+			3391,
+			82,
+			126
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0104 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			28,
+			51,
+			33,
+			141
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			223,
+			3543,
+			83,
+			128
+		},
+		alias = {}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0105 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			28,
+			34,
+			37,
+			169
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			787,
+			946,
+			79,
+			117
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0106"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0107 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			39,
+			30,
+			45,
+			215
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1146,
+			909,
+			60,
+			75
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0108"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0109 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			40,
+			28,
+			47,
+			206
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1014,
+			1207,
+			57,
+			86
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0110"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0111 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			42,
+			37,
+			51,
+			215
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3824,
+			1946,
+			51,
+			68
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0112"
+		}
+	},
+	fire_phoenix_zhu_que_firephoenixzhuque_0113 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			144,
+			320
+		},
+		trim = {
+			57,
+			50,
+			54,
+			224
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			272,
+			1203,
+			33,
+			46
+		},
+		alias = {
+			"fire_phoenix_zhu_que_firephoenixzhuque_0114"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			76,
+			38,
+			70,
+			46
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			3356,
+			154,
+			104
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_0002"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			37,
+			58,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3501,
+			354,
+			178,
+			114
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_0004",
+			"fire_phoenix_zhu_que_fuego_camino_0017",
+			"fire_phoenix_zhu_que_fuego_camino_0018"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_0005 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			39,
+			58,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3869,
+			354,
+			178,
+			112
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_0006"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_0007 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			36,
+			58,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3317,
+			354,
+			178,
+			115
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_0008"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_0009 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			34,
+			58,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			902,
+			455,
+			178,
+			117
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_0010"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_0011 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			32,
+			58,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2949,
+			354,
+			178,
+			119
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_0012"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_0013 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			32,
+			58,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3133,
+			354,
+			178,
+			119
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_0014"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_0015 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			30,
+			58,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2765,
+			354,
+			178,
+			121
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_0016"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_0019 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			40,
+			58,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			526,
+			2454,
+			178,
+			111
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_0020"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_0021 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			37,
+			58,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3685,
+			354,
+			178,
+			114
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_0022"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_0023 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			35,
+			59,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			526,
+			2694,
+			177,
+			116
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_0024"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_0025 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			64,
+			33,
+			59,
+			38
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			526,
+			2571,
+			177,
+			117
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_0026"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_0027 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			65,
+			33,
+			60,
+			38
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2166,
+			578,
+			175,
+			117
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_0028"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_0029 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			65,
+			32,
+			60,
+			38
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1441,
+			689,
+			175,
+			118
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_0030"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_0031 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			300,
+			188
+		},
+		trim = {
+			0,
+			0,
+			298,
+			186
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			459,
+			143,
+			2,
+			2
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_0032"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_small_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			192,
+			156
+		},
+		trim = {
+			62,
+			37,
+			54,
+			45
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1121,
+			821,
+			76,
+			74
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_small_0002"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_small_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			192,
+			156
+		},
+		trim = {
+			56,
+			33,
+			49,
+			39
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			987,
+			373,
+			87,
+			84
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_small_0004",
+			"fire_phoenix_zhu_que_fuego_camino_small_0005",
+			"fire_phoenix_zhu_que_fuego_camino_small_0006",
+			"fire_phoenix_zhu_que_fuego_camino_small_0019",
+			"fire_phoenix_zhu_que_fuego_camino_small_0020"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_small_0007 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			192,
+			156
+		},
+		trim = {
+			56,
+			37,
+			49,
+			39
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1173,
+			373,
+			87,
+			80
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_small_0008"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_small_0009 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			192,
+			156
+		},
+		trim = {
+			56,
+			32,
+			49,
+			39
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			894,
+			373,
+			87,
+			85
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_small_0010"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_small_0011 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			192,
+			156
+		},
+		trim = {
+			56,
+			30,
+			49,
+			39
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			708,
+			373,
+			87,
+			87
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_small_0012"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_small_0013 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			192,
+			156
+		},
+		trim = {
+			56,
+			29,
+			49,
+			39
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			429,
+			373,
+			87,
+			88
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_small_0014"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_small_0015 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			192,
+			156
+		},
+		trim = {
+			56,
+			28,
+			49,
+			39
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			329,
+			1435,
+			87,
+			89
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_small_0016"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_small_0017 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			192,
+			156
+		},
+		trim = {
+			56,
+			27,
+			49,
+			39
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			329,
+			1339,
+			87,
+			90
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_small_0018"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_small_0021 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			192,
+			156
+		},
+		trim = {
+			56,
+			37,
+			49,
+			39
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1266,
+			373,
+			87,
+			80
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_small_0022"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_small_0023 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			192,
+			156
+		},
+		trim = {
+			56,
+			33,
+			49,
+			39
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1080,
+			373,
+			87,
+			84
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_small_0024"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_small_0025 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			192,
+			156
+		},
+		trim = {
+			56,
+			30,
+			49,
+			39
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			801,
+			373,
+			87,
+			87
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_small_0026"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_small_0027 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			192,
+			156
+		},
+		trim = {
+			56,
+			29,
+			49,
+			39
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			522,
+			373,
+			87,
+			88
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_small_0028"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_small_0029 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			192,
+			156
+		},
+		trim = {
+			56,
+			29,
+			49,
+			39
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			615,
+			373,
+			87,
+			88
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_small_0030"
+		}
+	},
+	fire_phoenix_zhu_que_fuego_camino_small_0031 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			192,
+			156
+		},
+		trim = {
+			57,
+			28,
+			51,
+			40
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1359,
+			373,
+			84,
+			88
+		},
+		alias = {
+			"fire_phoenix_zhu_que_fuego_camino_small_0032"
+		}
+	},
+	firefox_creep_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			196,
+			214,
+			195,
+			243
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4023,
+			1935,
+			73,
+			55
+		},
+		alias = {
+			"firefox_creep_0002"
+		}
+	},
+	firefox_creep_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			184,
+			209,
+			194,
+			250
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2814,
+			293,
+			86,
+			53
+		},
+		alias = {
+			"firefox_creep_0004"
+		}
+	},
+	firefox_creep_0005 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			188,
+			211,
+			193,
+			248
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			223,
+			3677,
+			83,
+			53
+		},
+		alias = {
+			"firefox_creep_0006"
+		}
+	},
+	firefox_creep_0007 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			195,
+			215,
+			191,
+			245
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3341,
+			961,
+			78,
+			52
+		},
+		alias = {
+			"firefox_creep_0008"
+		}
+	},
+	firefox_creep_0009 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			198,
+			212,
+			192,
+			245
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2300,
+			1344,
+			74,
+			55
+		},
+		alias = {
+			"firefox_creep_0010"
+		}
+	},
+	firefox_creep_0011 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			202,
+			210,
+			191,
+			245
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			234,
+			2847,
+			71,
+			57
+		},
+		alias = {
+			"firefox_creep_0012"
+		}
+	},
+	firefox_creep_0013 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			198,
+			209,
+			192,
+			245
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2168,
+			4029,
+			74,
+			58
+		},
+		alias = {
+			"firefox_creep_0014"
+		}
+	},
+	firefox_creep_0015 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			192,
+			208,
+			193,
+			246
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3739,
+			1946,
+			79,
+			58
+		},
+		alias = {
+			"firefox_creep_0016"
+		}
+	},
+	firefox_creep_0017 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			188,
+			206,
+			197,
+			246
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1566,
+			4036,
+			79,
+			60
+		},
+		alias = {
+			"firefox_creep_0018"
+		}
+	},
+	firefox_creep_0019 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			205,
+			205,
+			206,
+			250
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1078,
+			1506,
+			53,
+			57
+		},
+		alias = {
+			"firefox_creep_0020"
+		}
+	},
+	firefox_creep_0021 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			205,
+			202,
+			206,
+			250
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1137,
+			1083,
+			53,
+			60
+		},
+		alias = {
+			"firefox_creep_0022"
+		}
+	},
+	firefox_creep_0023 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			204,
+			197,
+			206,
+			250
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1323,
+			998,
+			54,
+			65
+		},
+		alias = {
+			"firefox_creep_0024"
+		}
+	},
+	firefox_creep_0025 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			205,
+			199,
+			205,
+			245
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1263,
+			998,
+			54,
+			68
+		},
+		alias = {
+			"firefox_creep_0026"
+		}
+	},
+	firefox_creep_0027 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			205,
+			203,
+			207,
+			245
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1137,
+			1221,
+			52,
+			64
+		},
+		alias = {
+			"firefox_creep_0028"
+		}
+	},
+	firefox_creep_0029 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			206,
+			202,
+			207,
+			246
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1137,
+			1428,
+			51,
+			64
+		},
+		alias = {
+			"firefox_creep_0030"
+		}
+	},
+	firefox_creep_0031 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			205,
+			200,
+			207,
+			248
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1137,
+			1291,
+			52,
+			64
+		},
+		alias = {
+			"firefox_creep_0032"
+		}
+	},
+	firefox_creep_0033 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			205,
+			204,
+			206,
+			249
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1196,
+			1083,
+			53,
+			59
+		},
+		alias = {
+			"firefox_creep_0034"
+		}
+	},
+	firefox_creep_0035 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			205,
+			205,
+			206,
+			243
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3964,
+			1946,
+			53,
+			64
+		},
+		alias = {
+			"firefox_creep_0036"
+		}
+	},
+	firefox_creep_0037 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			203,
+			204,
+			204,
+			250
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1473,
+			909,
+			57,
+			58
+		},
+		alias = {
+			"firefox_creep_0038"
+		}
+	},
+	firefox_creep_0039 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			205,
+			199,
+			206,
+			250
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1078,
+			1302,
+			53,
+			63
+		},
+		alias = {
+			"firefox_creep_0040"
+		}
+	},
+	firefox_creep_0041 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			205,
+			203,
+			206,
+			248
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1078,
+			1439,
+			53,
+			61
+		},
+		alias = {
+			"firefox_creep_0042"
+		}
+	},
+	firefox_creep_0043 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			204,
+			204,
+			206,
+			247
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1443,
+			998,
+			54,
+			61
+		},
+		alias = {
+			"firefox_creep_0044"
+		}
+	},
+	firefox_creep_0045 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			206,
+			202,
+			207,
+			245
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1517,
+			467,
+			51,
+			65
+		},
+		alias = {
+			"firefox_creep_0046"
+		}
+	},
+	firefox_creep_0047 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			205,
+			201,
+			207,
+			244
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2248,
+			4029,
+			52,
+			67
+		},
+		alias = {
+			"firefox_creep_0048"
+		}
+	},
+	firefox_creep_0049 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			205,
+			205,
+			206,
+			245
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1078,
+			1371,
+			53,
+			62
+		},
+		alias = {
+			"firefox_creep_0050"
+		}
+	},
+	firefox_creep_0051 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			196,
+			214,
+			195,
+			245
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2728,
+			2113,
+			73,
+			53
+		},
+		alias = {
+			"firefox_creep_0052"
+		}
+	},
+	firefox_creep_0053 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			190,
+			216,
+			197,
+			245
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2778,
+			1171,
+			77,
+			51
+		},
+		alias = {
+			"firefox_creep_0054"
+		}
+	},
+	firefox_creep_0055 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			185,
+			218,
+			199,
+			244
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1804,
+			789,
+			80,
+			50
+		},
+		alias = {
+			"firefox_creep_0056"
+		}
+	},
+	firefox_creep_0057 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			185,
+			217,
+			200,
+			244
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2070,
+			785,
+			79,
+			51
+		},
+		alias = {
+			"firefox_creep_0058"
+		}
+	},
+	firefox_creep_0059 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			190,
+			217,
+			200,
+			244
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2382,
+			1344,
+			74,
+			51
+		},
+		alias = {
+			"firefox_creep_0060"
+		}
+	},
+	firefox_creep_0061 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			188,
+			217,
+			200,
+			245
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			230,
+			3178,
+			76,
+			50
+		},
+		alias = {
+			"firefox_creep_0062"
+		}
+	},
+	firefox_creep_0063 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			193,
+			210,
+			187,
+			245
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3111,
+			291,
+			84,
+			57
+		},
+		alias = {
+			"firefox_creep_0064"
+		}
+	},
+	firefox_creep_0065 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			197,
+			202,
+			185,
+			245
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3170,
+			1946,
+			82,
+			65
+		},
+		alias = {
+			"firefox_creep_0066"
+		}
+	},
+	firefox_creep_0067 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			199,
+			222,
+			183,
+			243
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3407,
+			301,
+			82,
+			47
+		},
+		alias = {
+			"firefox_creep_0068"
+		}
+	},
+	firefox_creep_0069 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			201,
+			219,
+			188,
+			239
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2861,
+			1171,
+			75,
+			54
+		},
+		alias = {
+			"firefox_creep_0070"
+		}
+	},
+	firefox_creep_0071 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			204,
+			220,
+			185,
+			242
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			4041,
+			75,
+			50
+		},
+		alias = {
+			"firefox_creep_0072"
+		}
+	},
+	firefox_creep_0073 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			204,
+			220,
+			185,
+			242
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1151,
+			4041,
+			75,
+			50
+		},
+		alias = {
+			"firefox_creep_0074"
+		}
+	},
+	firefox_creep_0075 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			203,
+			220,
+			185,
+			242
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1890,
+			789,
+			76,
+			50
+		},
+		alias = {
+			"firefox_creep_0076"
+		}
+	},
+	firefox_creep_0077 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			201,
+			217,
+			188,
+			245
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2219,
+			1344,
+			75,
+			50
+		},
+		alias = {}
+	},
+	firefox_creep_0078 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			189,
+			205,
+			188,
+			245
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2741,
+			1952,
+			87,
+			62
+		},
+		alias = {
+			"firefox_creep_0079"
+		}
+	},
+	firefox_creep_0080 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			189,
+			214,
+			183,
+			241
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3013,
+			291,
+			92,
+			57
+		},
+		alias = {
+			"firefox_creep_0081"
+		}
+	},
+	firefox_creep_0082 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			185,
+			198,
+			188,
+			245
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3862,
+			4022,
+			91,
+			69
+		},
+		alias = {
+			"firefox_creep_0083"
+		}
+	},
+	firefox_creep_0084 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			172,
+			185,
+			175,
+			243
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2702,
+			3979,
+			117,
+			84
+		},
+		alias = {
+			"firefox_creep_0085"
+		}
+	},
+	firefox_creep_0086 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			168,
+			177,
+			159,
+			232
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2598,
+			1854,
+			137,
+			103
+		},
+		alias = {
+			"firefox_creep_0087"
+		}
+	},
+	firefox_creep_0088 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			150,
+			145,
+			144,
+			197
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1248,
+			845,
+			170,
+			170
+		},
+		alias = {}
+	},
+	firefox_creep_0089 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			150,
+			145,
+			144,
+			197
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1424,
+			845,
+			170,
+			170
+		},
+		alias = {}
+	},
+	firefox_creep_0090 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			150,
+			145,
+			144,
+			197
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1600,
+			845,
+			170,
+			170
+		},
+		alias = {}
+	},
+	firefox_creep_0091 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			150,
+			133,
+			144,
+			197
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			894,
+			1427,
+			170,
+			182
+		},
+		alias = {}
+	},
+	firefox_creep_0092 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			150,
+			133,
+			144,
+			197
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			894,
+			1615,
+			170,
+			182
+		},
+		alias = {}
+	},
+	firefox_creep_0093 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			150,
+			118,
+			144,
+			197
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			894,
+			1021,
+			170,
+			197
+		},
+		alias = {}
+	},
+	firefox_creep_0094 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			150,
+			118,
+			144,
+			197
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			894,
+			1224,
+			170,
+			197
+		},
+		alias = {}
+	},
+	firefox_creep_0095 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			147,
+			102,
+			137,
+			197
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1838,
+			354,
+			180,
+			213
+		},
+		alias = {}
+	},
+	firefox_creep_0096 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			147,
+			102,
+			137,
+			198
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2024,
+			354,
+			180,
+			212
+		},
+		alias = {}
+	},
+	firefox_creep_0097 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			147,
+			95,
+			135,
+			199
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			526,
+			354,
+			182,
+			218
+		},
+		alias = {}
+	},
+	firefox_creep_0098 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			147,
+			95,
+			135,
+			222
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			714,
+			354,
+			182,
+			195
+		},
+		alias = {}
+	},
+	firefox_creep_0099 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			149,
+			95,
+			136,
+			222
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2396,
+			354,
+			179,
+			195
+		},
+		alias = {
+			"firefox_creep_0100"
+		}
+	},
+	firefox_creep_0101 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			152,
+			89,
+			137,
+			222
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1985,
+			578,
+			175,
+			201
+		},
+		alias = {}
+	},
+	firefox_creep_0102 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			152,
+			89,
+			137,
+			218
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1804,
+			578,
+			175,
+			205
+		},
+		alias = {}
+	},
+	firefox_creep_0103 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			155,
+			100,
+			162,
+			214
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1566,
+			3832,
+			147,
+			198
+		},
+		alias = {}
+	},
+	firefox_creep_0104 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			155,
+			100,
+			158,
+			210
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1566,
+			2125,
+			151,
+			202
+		},
+		alias = {}
+	},
+	firefox_creep_0105 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			156,
+			123,
+			154,
+			207
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			2283,
+			154,
+			182
+		},
+		alias = {}
+	},
+	firefox_creep_0106 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			155,
+			123,
+			152,
+			204
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1239,
+			3570,
+			157,
+			185
+		},
+		alias = {}
+	},
+	firefox_creep_0107 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			464,
+			512
+		},
+		trim = {
+			157,
+			121,
+			173,
+			274
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2308,
+			2020,
+			134,
+			117
+		},
+		alias = {}
+	},
+	flame_guard_creep_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			120,
+			86,
+			125,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1303,
+			1217,
+			47,
+			62
+		},
+		alias = {}
+	},
+	flame_guard_creep_0002 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			119,
+			95,
+			123,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1307,
+			1149,
+			50,
+			53
+		},
+		alias = {
+			"flame_guard_creep_0003"
+		}
+	},
+	flame_guard_creep_0004 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			120,
+			85,
+			125,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1250,
+			1403,
+			47,
+			63
+		},
+		alias = {
+			"flame_guard_creep_0005"
+		}
+	},
+	flame_guard_creep_0006 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			123,
+			82,
+			126,
+			140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4053,
+			354,
+			43,
+			66
+		},
+		alias = {
+			"flame_guard_creep_0007"
+		}
+	},
+	flame_guard_creep_0008 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			122,
+			84,
+			125,
+			140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2820,
+			1336,
+			45,
+			64
+		},
+		alias = {
+			"flame_guard_creep_0009"
+		}
+	},
+	flame_guard_creep_0010 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			124,
+			96,
+			125,
+			140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3810,
+			4042,
+			43,
+			52
+		},
+		alias = {
+			"flame_guard_creep_0011"
+		}
+	},
+	flame_guard_creep_0012 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			125,
+			95,
+			124,
+			140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2834,
+			1952,
+			43,
+			53
+		},
+		alias = {
+			"flame_guard_creep_0013"
+		}
+	},
+	flame_guard_creep_0014 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			125,
+			85,
+			124,
+			140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4053,
+			472,
+			43,
+			63
+		},
+		alias = {
+			"flame_guard_creep_0015"
+		}
+	},
+	flame_guard_creep_0016 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			123,
+			82,
+			125,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1404,
+			1285,
+			44,
+			66
+		},
+		alias = {
+			"flame_guard_creep_0017"
+		}
+	},
+	flame_guard_creep_0018 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			122,
+			85,
+			125,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1303,
+			1443,
+			45,
+			63
+		},
+		alias = {
+			"flame_guard_creep_0019"
+		}
+	},
+	flame_guard_creep_0020 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			121,
+			96,
+			124,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1409,
+			1217,
+			47,
+			52
+		},
+		alias = {
+			"flame_guard_creep_0021"
+		}
+	},
+	flame_guard_creep_0022 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			118,
+			94,
+			122,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1313,
+			1083,
+			52,
+			54
+		},
+		alias = {
+			"flame_guard_creep_0023"
+		}
+	},
+	flame_guard_creep_0024 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			120,
+			84,
+			124,
+			140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			258,
+			1620,
+			48,
+			64
+		},
+		alias = {
+			"flame_guard_creep_0025"
+		}
+	},
+	flame_guard_creep_0026 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			120,
+			82,
+			124,
+			140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			258,
+			1548,
+			48,
+			66
+		},
+		alias = {
+			"flame_guard_creep_0027"
+		}
+	},
+	flame_guard_creep_0028 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			121,
+			82,
+			126,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1303,
+			1371,
+			45,
+			66
+		},
+		alias = {
+			"flame_guard_creep_0029"
+		}
+	},
+	flame_guard_creep_0030 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			120,
+			95,
+			124,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1195,
+			1355,
+			48,
+			53
+		},
+		alias = {
+			"flame_guard_creep_0031"
+		}
+	},
+	flame_guard_creep_0032 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			118,
+			98,
+			122,
+			140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3597,
+			1964,
+			52,
+			50
+		},
+		alias = {
+			"flame_guard_creep_0033"
+		}
+	},
+	flame_guard_creep_0034 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			120,
+			84,
+			123,
+			140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2386,
+			4030,
+			49,
+			64
+		},
+		alias = {
+			"flame_guard_creep_0035"
+		}
+	},
+	flame_guard_creep_0036 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			120,
+			82,
+			123,
+			140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3258,
+			1946,
+			49,
+			66
+		},
+		alias = {
+			"flame_guard_creep_0037"
+		}
+	},
+	flame_guard_creep_0038 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			118,
+			82,
+			122,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1137,
+			1149,
+			52,
+			66
+		},
+		alias = {
+			"flame_guard_creep_0039"
+		}
+	},
+	flame_guard_creep_0040 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			119,
+			91,
+			122,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1371,
+			1083,
+			51,
+			57
+		},
+		alias = {
+			"flame_guard_creep_0041"
+		}
+	},
+	flame_guard_creep_0042 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			120,
+			92,
+			122,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1251,
+			1149,
+			50,
+			56
+		},
+		alias = {
+			"flame_guard_creep_0043"
+		}
+	},
+	flame_guard_creep_0044 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			121,
+			86,
+			122,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1419,
+			1149,
+			49,
+			62
+		},
+		alias = {
+			"flame_guard_creep_0045"
+		}
+	},
+	flame_guard_creep_0046 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			121,
+			84,
+			124,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1250,
+			1333,
+			47,
+			64
+		},
+		alias = {
+			"flame_guard_creep_0047"
+		}
+	},
+	flame_guard_creep_0048 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			121,
+			85,
+			124,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1250,
+			1472,
+			47,
+			63
+		},
+		alias = {
+			"flame_guard_creep_0049"
+		}
+	},
+	flame_guard_creep_0050 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			120,
+			97,
+			124,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1195,
+			1414,
+			48,
+			51
+		},
+		alias = {
+			"flame_guard_creep_0051"
+		}
+	},
+	flame_guard_creep_0052 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			119,
+			92,
+			122,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1428,
+			1083,
+			51,
+			56
+		},
+		alias = {
+			"flame_guard_creep_0053"
+		}
+	},
+	flame_guard_creep_0054 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			120,
+			86,
+			123,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1474,
+			1149,
+			49,
+			62
+		},
+		alias = {
+			"flame_guard_creep_0055"
+		}
+	},
+	flame_guard_creep_0056 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			120,
+			84,
+			123,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1195,
+			1217,
+			49,
+			64
+		},
+		alias = {
+			"flame_guard_creep_0057"
+		}
+	},
+	flame_guard_creep_0058 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			120,
+			86,
+			122,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1195,
+			1149,
+			50,
+			62
+		},
+		alias = {
+			"flame_guard_creep_0059"
+		}
+	},
+	flame_guard_creep_0060 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			119,
+			97,
+			123,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1363,
+			1149,
+			50,
+			51
+		},
+		alias = {
+			"flame_guard_creep_0061"
+		}
+	},
+	flame_guard_creep_0062 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			120,
+			86,
+			125,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1356,
+			1217,
+			47,
+			62
+		},
+		alias = {
+			"flame_guard_creep_0063",
+			"flame_guard_creep_0104",
+			"flame_guard_creep_0105",
+			"flame_guard_creep_0106",
+			"flame_guard_creep_0145",
+			"flame_guard_creep_0146",
+			"flame_guard_creep_0147"
+		}
+	},
+	flame_guard_creep_0064 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			117,
+			93,
+			124,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1485,
+			1083,
+			51,
+			55
+		},
+		alias = {
+			"flame_guard_creep_0065",
+			"flame_guard_creep_0107",
+			"flame_guard_creep_0108"
+		}
+	},
+	flame_guard_creep_0066 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			109,
+			97,
+			125,
+			140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2670,
+			1963,
+			58,
+			51
+		},
+		alias = {
+			"flame_guard_creep_0067",
+			"flame_guard_creep_0109",
+			"flame_guard_creep_0110"
+		}
+	},
+	flame_guard_creep_0068 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			89,
+			96,
+			125,
+			140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3425,
+			961,
+			78,
+			52
+		},
+		alias = {
+			"flame_guard_creep_0069",
+			"flame_guard_creep_0111",
+			"flame_guard_creep_0112"
+		}
+	},
+	flame_guard_creep_0070 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			72,
+			39,
+			129,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1425,
+			250,
+			91,
+			109
+		},
+		alias = {
+			"flame_guard_creep_0071",
+			"flame_guard_creep_0113",
+			"flame_guard_creep_0114"
+		}
+	},
+	flame_guard_creep_0072 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			72,
+			34,
+			129,
+			140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4005,
+			1233,
+			91,
+			114
+		},
+		alias = {
+			"flame_guard_creep_0073",
+			"flame_guard_creep_0115",
+			"flame_guard_creep_0116"
+		}
+	},
+	flame_guard_creep_0074 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			70,
+			34,
+			129,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			931,
+			250,
+			93,
+			114
+		},
+		alias = {
+			"flame_guard_creep_0075",
+			"flame_guard_creep_0117",
+			"flame_guard_creep_0118"
+		}
+	},
+	flame_guard_creep_0076 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			68,
+			32,
+			129,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			430,
+			250,
+			95,
+			116
+		},
+		alias = {
+			"flame_guard_creep_0077",
+			"flame_guard_creep_0119",
+			"flame_guard_creep_0120"
+		}
+	},
+	flame_guard_creep_0078 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			73,
+			43,
+			87,
+			113
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2168,
+			2445,
+			132,
+			132
+		},
+		alias = {
+			"flame_guard_creep_0121"
+		}
+	},
+	flame_guard_creep_0079 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			73,
+			43,
+			52,
+			115
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2652,
+			845,
+			167,
+			130
+		},
+		alias = {
+			"flame_guard_creep_0122"
+		}
+	},
+	flame_guard_creep_0080 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			83,
+			74,
+			53,
+			115
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			1936,
+			156,
+			99
+		},
+		alias = {}
+	},
+	flame_guard_creep_0081 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			83,
+			63,
+			56,
+			122
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2997,
+			1406,
+			153,
+			103
+		},
+		alias = {}
+	},
+	flame_guard_creep_0082 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			121,
+			48,
+			67,
+			131
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			337,
+			6,
+			104,
+			109
+		},
+		alias = {
+			"flame_guard_creep_0083"
+		}
+	},
+	flame_guard_creep_0084 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			93,
+			41,
+			61,
+			130
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1876,
+			3979,
+			138,
+			117
+		},
+		alias = {
+			"flame_guard_creep_0085"
+		}
+	},
+	flame_guard_creep_0086 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			69,
+			30,
+			95,
+			140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2709,
+			2298,
+			128,
+			118
+		},
+		alias = {
+			"flame_guard_creep_0087"
+		}
+	},
+	flame_guard_creep_0088 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			94,
+			40,
+			66,
+			107
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2168,
+			2298,
+			132,
+			141
+		},
+		alias = {}
+	},
+	flame_guard_creep_0089 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			122,
+			50,
+			74,
+			102
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			225,
+			868,
+			96,
+			136
+		},
+		alias = {}
+	},
+	flame_guard_creep_0090 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			120,
+			65,
+			78,
+			104
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			329,
+			373,
+			94,
+			119
+		},
+		alias = {}
+	},
+	flame_guard_creep_0091 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			120,
+			103,
+			102,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			236,
+			2214,
+			70,
+			65
+		},
+		alias = {}
+	},
+	flame_guard_creep_0092 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			123,
+			96,
+			100,
+			119
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1203,
+			821,
+			69,
+			73
+		},
+		alias = {
+			"flame_guard_creep_0093",
+			"flame_guard_creep_0134"
+		}
+	},
+	flame_guard_creep_0094 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			121,
+			98,
+			98,
+			115
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4023,
+			1854,
+			73,
+			75
+		},
+		alias = {
+			"flame_guard_creep_0095",
+			"flame_guard_creep_0135",
+			"flame_guard_creep_0136"
+		}
+	},
+	flame_guard_creep_0096 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			124,
+			92,
+			103,
+			120
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1499,
+			821,
+			65,
+			76
+		},
+		alias = {
+			"flame_guard_creep_0097",
+			"flame_guard_creep_0137",
+			"flame_guard_creep_0138"
+		}
+	},
+	flame_guard_creep_0098 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			121,
+			83,
+			103,
+			125
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			238,
+			1971,
+			68,
+			80
+		},
+		alias = {
+			"flame_guard_creep_0099",
+			"flame_guard_creep_0139",
+			"flame_guard_creep_0140"
+		}
+	},
+	flame_guard_creep_0100 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			119,
+			88,
+			112,
+			125
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			944,
+			1412,
+			61,
+			75
+		},
+		alias = {
+			"flame_guard_creep_0101",
+			"flame_guard_creep_0141",
+			"flame_guard_creep_0142"
+		}
+	},
+	flame_guard_creep_0102 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			120,
+			86,
+			109,
+			127
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			944,
+			1132,
+			63,
+			75
+		},
+		alias = {
+			"flame_guard_creep_0103",
+			"flame_guard_creep_0143",
+			"flame_guard_creep_0144"
+		}
+	},
+	flame_guard_creep_0123 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			83,
+			74,
+			53,
+			115
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			2041,
+			156,
+			99
+		},
+		alias = {}
+	},
+	flame_guard_creep_0124 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			83,
+			69,
+			55,
+			121
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			3466,
+			154,
+			98
+		},
+		alias = {}
+	},
+	flame_guard_creep_0125 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			121,
+			68,
+			64,
+			126
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3527,
+			3534,
+			107,
+			94
+		},
+		alias = {
+			"flame_guard_creep_0126"
+		}
+	},
+	flame_guard_creep_0127 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			123,
+			84,
+			116,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1503,
+			998,
+			53,
+			64
+		},
+		alias = {
+			"flame_guard_creep_0128"
+		}
+	},
+	flame_guard_creep_0129 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			122,
+			35,
+			43,
+			118
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3513,
+			2298,
+			127,
+			135
+		},
+		alias = {
+			"flame_guard_creep_0130"
+		}
+	},
+	flame_guard_creep_0131 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			120,
+			47,
+			44,
+			105
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2441,
+			2298,
+			128,
+			136
+		},
+		alias = {}
+	},
+	flame_guard_creep_0132 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			118,
+			59,
+			57,
+			105
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3075,
+			2780,
+			117,
+			124
+		},
+		alias = {}
+	},
+	flame_guard_creep_0133 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			116,
+			77,
+			62,
+			107
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2828,
+			3772,
+			114,
+			104
+		},
+		alias = {}
+	},
+	flame_guard_creep_0148 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			119,
+			86,
+			125,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1195,
+			1287,
+			48,
+			62
+		},
+		alias = {
+			"flame_guard_creep_0149"
+		}
+	},
+	flame_guard_creep_0150 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			116,
+			96,
+			123,
+			140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2807,
+			2113,
+			53,
+			52
+		},
+		alias = {}
+	},
+	flame_guard_creep_0151 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			116,
+			96,
+			123,
+			140
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3751,
+			4042,
+			53,
+			52
+		},
+		alias = {}
+	},
+	flame_guard_creep_0152 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			118,
+			71,
+			127,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1195,
+			1471,
+			47,
+			77
+		},
+		alias = {
+			"flame_guard_creep_0153"
+		}
+	},
+	flame_guard_creep_0154 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			109,
+			69,
+			127,
+			140
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1078,
+			998,
+			56,
+			79
+		},
+		alias = {}
+	},
+	flame_guard_creep_0155 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			109,
+			69,
+			127,
+			142
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1140,
+			998,
+			56,
+			77
+		},
+		alias = {}
+	},
+	flame_guard_creep_0156 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			102,
+			67,
+			125,
+			138
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			872,
+			1194,
+			65,
+			83
+		},
+		alias = {}
+	},
+	flame_guard_creep_0157 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			102,
+			67,
+			125,
+			138
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			872,
+			1283,
+			65,
+			83
+		},
+		alias = {}
+	},
+	flame_guard_creep_0158 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			105,
+			41,
+			126,
+			138
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			944,
+			1297,
+			61,
+			109
+		},
+		alias = {
+			"flame_guard_creep_0159"
+		}
+	},
+	flame_guard_creep_0160 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			109,
+			37,
+			126,
+			138
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1014,
+			1088,
+			57,
+			113
+		},
+		alias = {
+			"flame_guard_creep_0161"
+		}
+	},
+	flame_guard_creep_0162 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			101,
+			66,
+			126,
+			138
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			241,
+			1720,
+			65,
+			84
+		},
+		alias = {}
+	},
+	flame_guard_creep_0163 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			101,
+			66,
+			126,
+			138
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			872,
+			1104,
+			65,
+			84
+		},
+		alias = {}
+	},
+	flame_guard_creep_0164 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			96,
+			82,
+			126,
+			138
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			236,
+			2521,
+			70,
+			68
+		},
+		alias = {
+			"flame_guard_creep_0165"
+		}
+	},
+	flame_guard_creep_0166 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			89,
+			79,
+			126,
+			138
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1038,
+			821,
+			77,
+			71
+		},
+		alias = {
+			"flame_guard_creep_0167"
+		}
+	},
+	flame_guard_creep_0168 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			92,
+			93,
+			126,
+			138
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2628,
+			1343,
+			74,
+			57
+		},
+		alias = {
+			"flame_guard_creep_0169"
+		}
+	},
+	flame_guard_creep_0170 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			90,
+			93,
+			126,
+			138
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2868,
+			2109,
+			76,
+			57
+		},
+		alias = {
+			"flame_guard_creep_0171"
+		}
+	},
+	flame_guard_creep_0172 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			92,
+			93,
+			126,
+			138
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2306,
+			4030,
+			74,
+			57
+		},
+		alias = {
+			"flame_guard_creep_0173"
+		}
+	},
+	flame_guard_creep_0174 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			92,
+			93,
+			125,
+			138
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3008,
+			2109,
+			75,
+			57
+		},
+		alias = {
+			"flame_guard_creep_0175"
+		}
+	},
+	flame_guard_creep_0176 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			92,
+			93,
+			123,
+			138
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2545,
+			1343,
+			77,
+			57
+		},
+		alias = {
+			"flame_guard_creep_0177"
+		}
+	},
+	flame_guard_creep_0178 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			92,
+			93,
+			123,
+			138
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3881,
+			1946,
+			77,
+			57
+		},
+		alias = {
+			"flame_guard_creep_0179"
+		}
+	},
+	flame_guard_creep_0180 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			92,
+			104,
+			116,
+			138
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2906,
+			293,
+			84,
+			46
+		},
+		alias = {
+			"flame_guard_creep_0181"
+		}
+	},
+	flame_guard_creep_0182 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			92,
+			114,
+			99,
+			130
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3455,
+			113,
+			101,
+			44
+		},
+		alias = {
+			"flame_guard_creep_0183"
+		}
+	},
+	flame_guard_creep_0184 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			92,
+			114,
+			105,
+			128
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2410,
+			302,
+			95,
+			46
+		},
+		alias = {
+			"flame_guard_creep_0185"
+		}
+	},
+	flame_guard_creep_0186 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			92,
+			114,
+			100,
+			132
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3562,
+			113,
+			100,
+			42
+		},
+		alias = {
+			"flame_guard_creep_0187"
+		}
+	},
+	flame_guard_creep_0188 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			92,
+			114,
+			106,
+			128
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2511,
+			302,
+			94,
+			46
+		},
+		alias = {
+			"flame_guard_creep_0189"
+		}
+	},
+	flame_guard_creep_0190 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			92,
+			114,
+			109,
+			130
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2097,
+			303,
+			91,
+			44
+		},
+		alias = {
+			"flame_guard_creep_0191"
+		}
+	},
+	flame_guard_creep_0192 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			292,
+			288
+		},
+		trim = {
+			92,
+			114,
+			107,
+			129
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1998,
+			303,
+			93,
+			45
+		},
+		alias = {
+			"flame_guard_creep_0193",
+			"flame_guard_creep_0194",
+			"flame_guard_creep_0195",
+			"flame_guard_creep_0196",
+			"flame_guard_creep_0197"
+		}
+	},
+	ninetailedfox_creep_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			162,
+			144,
+			170,
+			258
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3445,
+			1544,
+			148,
+			142
+		},
+		alias = {
+			"ninetailedfox_creep_0002"
+		}
+	},
+	ninetailedfox_creep_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			167,
+			142,
+			171,
+			258
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3382,
+			1704,
+			142,
+			144
+		},
+		alias = {
+			"ninetailedfox_creep_0004"
+		}
+	},
+	ninetailedfox_creep_0005 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			169,
+			147,
+			172,
+			257
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1876,
+			3684,
+			139,
+			140
+		},
+		alias = {
+			"ninetailedfox_creep_0006"
+		}
+	},
+	ninetailedfox_creep_0007 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			169,
+			144,
+			173,
+			257
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1876,
+			3830,
+			138,
+			143
+		},
+		alias = {
+			"ninetailedfox_creep_0008"
+		}
+	},
+	ninetailedfox_creep_0009 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			169,
+			141,
+			174,
+			257
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2169,
+			1854,
+			137,
+			146
+		},
+		alias = {
+			"ninetailedfox_creep_0010"
+		}
+	},
+	ninetailedfox_creep_0011 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			167,
+			143,
+			172,
+			258
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1876,
+			2647,
+			141,
+			143
+		},
+		alias = {
+			"ninetailedfox_creep_0012"
+		}
+	},
+	ninetailedfox_creep_0013 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			162,
+			140,
+			171,
+			258
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1723,
+			1907,
+			147,
+			146
+		},
+		alias = {
+			"ninetailedfox_creep_0014"
+		}
+	},
+	ninetailedfox_creep_0015 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			157,
+			143,
+			169,
+			258
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			2626,
+			154,
+			143
+		},
+		alias = {
+			"ninetailedfox_creep_0016"
+		}
+	},
+	ninetailedfox_creep_0017 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			157,
+			154,
+			167,
+			259
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2871,
+			1233,
+			156,
+			131
+		},
+		alias = {
+			"ninetailedfox_creep_0018"
+		}
+	},
+	ninetailedfox_creep_0019 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			154,
+			156,
+			165,
+			259
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			2987,
+			161,
+			129
+		},
+		alias = {
+			"ninetailedfox_creep_0020"
+		}
+	},
+	ninetailedfox_creep_0021 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			153,
+			155,
+			166,
+			258
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			2850,
+			161,
+			131
+		},
+		alias = {
+			"ninetailedfox_creep_0022"
+		}
+	},
+	ninetailedfox_creep_0023 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			160,
+			152,
+			167,
+			258
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			3949,
+			153,
+			134
+		},
+		alias = {
+			"ninetailedfox_creep_0024"
+		}
+	},
+	ninetailedfox_creep_0025 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			158,
+			146,
+			168,
+			258
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			3071,
+			154,
+			140
+		},
+		alias = {
+			"ninetailedfox_creep_0026"
+		}
+	},
+	ninetailedfox_creep_0027 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			160,
+			146,
+			169,
+			258
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2512,
+			1544,
+			151,
+			140
+		},
+		alias = {
+			"ninetailedfox_creep_0028"
+		}
+	},
+	ninetailedfox_creep_0029 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			163,
+			152,
+			169,
+			257
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1566,
+			3691,
+			148,
+			135
+		},
+		alias = {
+			"ninetailedfox_creep_0030"
+		}
+	},
+	ninetailedfox_creep_0031 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			154,
+			136,
+			165,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			2697,
+			161,
+			147
+		},
+		alias = {
+			"ninetailedfox_creep_0032"
+		}
+	},
+	ninetailedfox_creep_0033 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			162,
+			151,
+			165,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1566,
+			1406,
+			153,
+			132
+		},
+		alias = {
+			"ninetailedfox_creep_0034"
+		}
+	},
+	ninetailedfox_creep_0035 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			166,
+			145,
+			167,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1723,
+			2059,
+			147,
+			138
+		},
+		alias = {
+			"ninetailedfox_creep_0036"
+		}
+	},
+	ninetailedfox_creep_0037 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			166,
+			152,
+			168,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3464,
+			1406,
+			146,
+			131
+		},
+		alias = {
+			"ninetailedfox_creep_0038"
+		}
+	},
+	ninetailedfox_creep_0039 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			165,
+			143,
+			170,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2178,
+			1704,
+			145,
+			140
+		},
+		alias = {
+			"ninetailedfox_creep_0040"
+		}
+	},
+	ninetailedfox_creep_0041 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			165,
+			147,
+			172,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3233,
+			1704,
+			143,
+			136
+		},
+		alias = {
+			"ninetailedfox_creep_0042"
+		}
+	},
+	ninetailedfox_creep_0043 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			160,
+			144,
+			170,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2669,
+			1544,
+			150,
+			139
+		},
+		alias = {
+			"ninetailedfox_creep_0044"
+		}
+	},
+	ninetailedfox_creep_0045 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			150,
+			139,
+			167,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2778,
+			1021,
+			163,
+			144
+		},
+		alias = {
+			"ninetailedfox_creep_0046"
+		}
+	},
+	ninetailedfox_creep_0047 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			151,
+			152,
+			165,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3855,
+			845,
+			164,
+			131
+		},
+		alias = {
+			"ninetailedfox_creep_0048"
+		}
+	},
+	ninetailedfox_creep_0049 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			161,
+			144,
+			167,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2040,
+			1544,
+			152,
+			139
+		},
+		alias = {
+			"ninetailedfox_creep_0050"
+		}
+	},
+	ninetailedfox_creep_0051 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			157,
+			152,
+			168,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			2146,
+			155,
+			131
+		},
+		alias = {
+			"ninetailedfox_creep_0052"
+		}
+	},
+	ninetailedfox_creep_0053 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			161,
+			143,
+			170,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3135,
+			1544,
+			149,
+			140
+		},
+		alias = {
+			"ninetailedfox_creep_0054"
+		}
+	},
+	ninetailedfox_creep_0055 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			160,
+			147,
+			172,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3753,
+			1544,
+			148,
+			136
+		},
+		alias = {
+			"ninetailedfox_creep_0056"
+		}
+	},
+	ninetailedfox_creep_0057 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			161,
+			148,
+			170,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3290,
+			1544,
+			149,
+			135
+		},
+		alias = {
+			"ninetailedfox_creep_0058"
+		}
+	},
+	ninetailedfox_creep_0059 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			172,
+			149,
+			173,
+			247
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2026,
+			2897,
+			135,
+			148
+		},
+		alias = {
+			"ninetailedfox_creep_0060"
+		}
+	},
+	ninetailedfox_creep_0061 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			174,
+			151,
+			183,
+			251
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2573,
+			2567,
+			123,
+			142
+		},
+		alias = {
+			"ninetailedfox_creep_0062"
+		}
+	},
+	ninetailedfox_creep_0063 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			179,
+			156,
+			188,
+			254
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2949,
+			3095,
+			113,
+			134
+		},
+		alias = {
+			"ninetailedfox_creep_0064"
+		}
+	},
+	ninetailedfox_creep_0065 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			183,
+			144,
+			191,
+			256
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3527,
+			3634,
+			106,
+			144
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0066 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			183,
+			144,
+			191,
+			256
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3527,
+			3784,
+			106,
+			144
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0067 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			183,
+			142,
+			190,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3414,
+			3554,
+			107,
+			140
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0068 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			186,
+			142,
+			190,
+			262
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			6,
+			1081,
+			104,
+			140
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0069 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			186,
+			136,
+			189,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3751,
+			3743,
+			105,
+			146
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0070 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			189,
+			136,
+			189,
+			262
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			117,
+			134,
+			102,
+			146
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0071 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			189,
+			139,
+			187,
+			262
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			6,
+			783,
+			104,
+			143
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0072 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			189,
+			139,
+			187,
+			262
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			6,
+			932,
+			104,
+			143
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0073 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			190,
+			150,
+			185,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3862,
+			3883,
+			105,
+			133
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0074 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			190,
+			150,
+			185,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3973,
+			3883,
+			105,
+			133
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0075 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			177,
+			160,
+			175,
+			243
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2306,
+			3593,
+			128,
+			141
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0076 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			177,
+			160,
+			175,
+			243
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2306,
+			3740,
+			128,
+			141
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0077 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			173,
+			160,
+			178,
+			246
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2306,
+			2298,
+			129,
+			138
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0078 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			173,
+			160,
+			178,
+			246
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2306,
+			2442,
+			129,
+			138
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0079 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			186,
+			148,
+			185,
+			248
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3185,
+			3169,
+			109,
+			148
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0080 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			186,
+			148,
+			185,
+			248
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3185,
+			3323,
+			109,
+			148
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0081 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			186,
+			146,
+			186,
+			259
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3300,
+			3451,
+			108,
+			139
+		},
+		alias = {
+			"ninetailedfox_creep_0082"
+		}
+	},
+	ninetailedfox_creep_0083 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			185,
+			142,
+			188,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3414,
+			3407,
+			107,
+			141
+		},
+		alias = {
+			"ninetailedfox_creep_0084"
+		}
+	},
+	ninetailedfox_creep_0085 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			184,
+			143,
+			187,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3185,
+			3477,
+			109,
+			139
+		},
+		alias = {
+			"ninetailedfox_creep_0086"
+		}
+	},
+	ninetailedfox_creep_0087 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			183,
+			134,
+			177,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2702,
+			2780,
+			120,
+			149
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0088 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			183,
+			137,
+			177,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2702,
+			2935,
+			120,
+			146
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0089 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			179,
+			137,
+			173,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2306,
+			3291,
+			128,
+			145
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0090 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			179,
+			137,
+			173,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2306,
+			3442,
+			128,
+			145
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0091 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			172,
+			150,
+			166,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3530,
+			1704,
+			142,
+			132
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0092 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			172,
+			150,
+			166,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3678,
+			1704,
+			142,
+			132
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0093 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			176,
+			162,
+			171,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3704,
+			2020,
+			133,
+			120
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0094 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			176,
+			158,
+			171,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3565,
+			2020,
+			133,
+			124
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0095 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			180,
+			149,
+			176,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2441,
+			3588,
+			124,
+			133
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0096 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			181,
+			144,
+			175,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2441,
+			3301,
+			124,
+			139
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0097 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			181,
+			140,
+			175,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2441,
+			3152,
+			124,
+			143
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0098 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			184,
+			141,
+			177,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2702,
+			3717,
+			119,
+			141
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0099 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			184,
+			136,
+			178,
+			260
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2828,
+			2780,
+			118,
+			148
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0100 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			186,
+			142,
+			180,
+			260
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3982,
+			2020,
+			114,
+			142
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0101 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			188,
+			139,
+			180,
+			257
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2949,
+			3896,
+			112,
+			148
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0102 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			188,
+			135,
+			180,
+			257
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2949,
+			3738,
+			112,
+			152
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0103 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			184,
+			142,
+			174,
+			255
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2573,
+			3275,
+			122,
+			147
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0104 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			185,
+			143,
+			178,
+			255
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2952,
+			2780,
+			117,
+			146
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0105 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			179,
+			146,
+			177,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2441,
+			3446,
+			124,
+			136
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0106 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			179,
+			153,
+			177,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2441,
+			3727,
+			124,
+			129
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0107 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			185,
+			148,
+			180,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2828,
+			2934,
+			115,
+			134
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0108 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			185,
+			148,
+			184,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3068,
+			3072,
+			111,
+			134
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0109 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			186,
+			146,
+			180,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2828,
+			3398,
+			114,
+			136
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0110 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			186,
+			146,
+			179,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3686,
+			2780,
+			115,
+			136
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0111 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			186,
+			143,
+			186,
+			260
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3300,
+			3304,
+			108,
+			141
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0112 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			186,
+			143,
+			189,
+			260
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3751,
+			3895,
+			105,
+			141
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0113 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			182,
+			143,
+			182,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3320,
+			2780,
+			116,
+			139
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0114 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			182,
+			137,
+			182,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3198,
+			2780,
+			116,
+			145
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0115 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			162,
+			144,
+			170,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3599,
+			1544,
+			148,
+			139
+		},
+		alias = {
+			"ninetailedfox_creep_0116"
+		}
+	},
+	ninetailedfox_creep_0117 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			165,
+			155,
+			179,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3313,
+			1854,
+			136,
+			128
+		},
+		alias = {
+			"ninetailedfox_creep_0118"
+		}
+	},
+	ninetailedfox_creep_0119 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			166,
+			160,
+			179,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2026,
+			3496,
+			135,
+			123
+		},
+		alias = {
+			"ninetailedfox_creep_0120"
+		}
+	},
+	ninetailedfox_creep_0121 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			166,
+			152,
+			179,
+			260
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2026,
+			3358,
+			135,
+			132
+		},
+		alias = {
+			"ninetailedfox_creep_0122"
+		}
+	},
+	ninetailedfox_creep_0123 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			157,
+			135,
+			179,
+			260
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1876,
+			2031,
+			144,
+			149
+		},
+		alias = {
+			"ninetailedfox_creep_0124"
+		}
+	},
+	ninetailedfox_creep_0125 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			168,
+			142,
+			179,
+			259
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3287,
+			2020,
+			133,
+			143
+		},
+		alias = {
+			"ninetailedfox_creep_0126"
+		}
+	},
+	ninetailedfox_creep_0127 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			167,
+			171,
+			84,
+			260
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3704,
+			6,
+			229,
+			113
+		},
+		alias = {
+			"ninetailedfox_creep_0128"
+		}
+	},
+	ninetailedfox_creep_0129 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			159,
+			164,
+			110,
+			259
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			3749,
+			211,
+			121
+		},
+		alias = {
+			"ninetailedfox_creep_0130"
+		}
+	},
+	ninetailedfox_creep_0131 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			157,
+			164,
+			130,
+			258
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3013,
+			163,
+			193,
+			122
+		},
+		alias = {
+			"ninetailedfox_creep_0132"
+		}
+	},
+	ninetailedfox_creep_0133 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			158,
+			156,
+			153,
+			259
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2302,
+			845,
+			169,
+			129
+		},
+		alias = {
+			"ninetailedfox_creep_0134"
+		}
+	},
+	ninetailedfox_creep_0135 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			156,
+			141,
+			170,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			2775,
+			154,
+			142
+		},
+		alias = {
+			"ninetailedfox_creep_0136"
+		}
+	},
+	ninetailedfox_creep_0137 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			158,
+			136,
+			170,
+			259
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1724,
+			1544,
+			152,
+			149
+		},
+		alias = {
+			"ninetailedfox_creep_0138"
+		}
+	},
+	ninetailedfox_creep_0139 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			162,
+			119,
+			172,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1723,
+			3232,
+			146,
+			164
+		},
+		alias = {
+			"ninetailedfox_creep_0140"
+		}
+	},
+	ninetailedfox_creep_0141 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			164,
+			127,
+			170,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1723,
+			3565,
+			146,
+			156
+		},
+		alias = {
+			"ninetailedfox_creep_0142"
+		}
+	},
+	ninetailedfox_creep_0143 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			166,
+			150,
+			160,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			3217,
+			154,
+			133
+		},
+		alias = {
+			"ninetailedfox_creep_0144"
+		}
+	},
+	ninetailedfox_creep_0145 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			172,
+			149,
+			80,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			1831,
+			228,
+			134
+		},
+		alias = {
+			"ninetailedfox_creep_0146"
+		}
+	},
+	ninetailedfox_creep_0147 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			168,
+			150,
+			64,
+			259
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2703,
+			6,
+			248,
+			135
+		},
+		alias = {
+			"ninetailedfox_creep_0148"
+		}
+	},
+	ninetailedfox_creep_0149 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			158,
+			125,
+			101,
+			260
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			2919,
+			221,
+			159
+		},
+		alias = {
+			"ninetailedfox_creep_0150"
+		}
+	},
+	ninetailedfox_creep_0151 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			150,
+			124,
+			177,
+			259
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			3782,
+			153,
+			161
+		},
+		alias = {
+			"ninetailedfox_creep_0152"
+		}
+	},
+	ninetailedfox_creep_0153 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			143,
+			130,
+			179,
+			259
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1239,
+			3176,
+			158,
+			155
+		},
+		alias = {
+			"ninetailedfox_creep_0154"
+		}
+	},
+	ninetailedfox_creep_0155 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			142,
+			127,
+			92,
+			251
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			1548,
+			246,
+			166
+		},
+		alias = {
+			"ninetailedfox_creep_0156"
+		}
+	},
+	ninetailedfox_creep_0157 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			156,
+			158,
+			81,
+			251
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2957,
+			6,
+			243,
+			135
+		},
+		alias = {
+			"ninetailedfox_creep_0158"
+		}
+	},
+	ninetailedfox_creep_0159 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			156,
+			161,
+			126,
+			250
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2410,
+			163,
+			198,
+			133
+		},
+		alias = {
+			"ninetailedfox_creep_0160"
+		}
+	},
+	ninetailedfox_creep_0161 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			155,
+			155,
+			160,
+			260
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3684,
+			845,
+			165,
+			129
+		},
+		alias = {
+			"ninetailedfox_creep_0162"
+		}
+	},
+	ninetailedfox_creep_0163 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			156,
+			141,
+			170,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			2923,
+			154,
+			142
+		},
+		alias = {
+			"ninetailedfox_creep_0164"
+		}
+	},
+	ninetailedfox_creep_0165 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			156,
+			136,
+			170,
+			259
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			2471,
+			154,
+			149
+		},
+		alias = {
+			"ninetailedfox_creep_0166"
+		}
+	},
+	ninetailedfox_creep_0167 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			162,
+			126,
+			172,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1723,
+			3402,
+			146,
+			157
+		},
+		alias = {
+			"ninetailedfox_creep_0168"
+		}
+	},
+	ninetailedfox_creep_0169 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			164,
+			122,
+			171,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1723,
+			3876,
+			145,
+			161
+		},
+		alias = {
+			"ninetailedfox_creep_0170"
+		}
+	},
+	ninetailedfox_creep_0171 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			166,
+			112,
+			170,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1876,
+			1854,
+			144,
+			171
+		},
+		alias = {
+			"ninetailedfox_creep_0172"
+		}
+	},
+	ninetailedfox_creep_0173 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			172,
+			105,
+			160,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1566,
+			3223,
+			148,
+			178
+		},
+		alias = {
+			"ninetailedfox_creep_0174"
+		}
+	},
+	ninetailedfox_creep_0175 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			168,
+			138,
+			60,
+			242
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			1378,
+			252,
+			164
+		},
+		alias = {
+			"ninetailedfox_creep_0176"
+		}
+	},
+	ninetailedfox_creep_0177 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			158,
+			127,
+			41,
+			237
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			851,
+			281,
+			180
+		},
+		alias = {
+			"ninetailedfox_creep_0178"
+		}
+	},
+	ninetailedfox_creep_0179 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			150,
+			125,
+			124,
+			259
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			957,
+			163,
+			206,
+			160
+		},
+		alias = {
+			"ninetailedfox_creep_0180"
+		}
+	},
+	ninetailedfox_creep_0181 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			143,
+			124,
+			179,
+			259
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1239,
+			3009,
+			158,
+			161
+		},
+		alias = {
+			"ninetailedfox_creep_0182"
+		}
+	},
+	ninetailedfox_creep_0183 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			142,
+			127,
+			173,
+			258
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3513,
+			845,
+			165,
+			159
+		},
+		alias = {
+			"ninetailedfox_creep_0184"
+		}
+	},
+	ninetailedfox_creep_0185 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			156,
+			138,
+			64,
+			237
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			1203,
+			260,
+			169
+		},
+		alias = {
+			"ninetailedfox_creep_0186"
+		}
+	},
+	ninetailedfox_creep_0187 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			156,
+			161,
+			60,
+			223
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			1037,
+			264,
+			160
+		},
+		alias = {
+			"ninetailedfox_creep_0188"
+		}
+	},
+	ninetailedfox_creep_0189 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			155,
+			155,
+			102,
+			229
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			2598,
+			223,
+			160
+		},
+		alias = {
+			"ninetailedfox_creep_0190"
+		}
+	},
+	ninetailedfox_creep_0191 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			162,
+			144,
+			169,
+			247
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2825,
+			1544,
+			149,
+			153
+		},
+		alias = {
+			"ninetailedfox_creep_0192"
+		}
+	},
+	ninetailedfox_creep_0193 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			155,
+			150,
+			168,
+			246
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3939,
+			6,
+			157,
+			148
+		},
+		alias = {
+			"ninetailedfox_creep_0194"
+		}
+	},
+	ninetailedfox_creep_0195 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			146,
+			160,
+			168,
+			232
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2825,
+			845,
+			166,
+			152
+		},
+		alias = {
+			"ninetailedfox_creep_0196"
+		}
+	},
+	ninetailedfox_creep_0197 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			142,
+			162,
+			165,
+			223
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3603,
+			578,
+			173,
+			159
+		},
+		alias = {
+			"ninetailedfox_creep_0198"
+		}
+	},
+	ninetailedfox_creep_0199 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			162,
+			94,
+			159,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1239,
+			1233,
+			159,
+			231
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0200 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			162,
+			94,
+			159,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1239,
+			1470,
+			159,
+			231
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0201 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			154,
+			79,
+			154,
+			224
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			713,
+			1673,
+			172,
+			241
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0202 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			154,
+			79,
+			154,
+			224
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			713,
+			1920,
+			172,
+			241
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0203 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			151,
+			71,
+			161,
+			221
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			894,
+			3154,
+			168,
+			252
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0204 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			151,
+			71,
+			161,
+			221
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			894,
+			3412,
+			168,
+			252
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0205 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			149,
+			71,
+			160,
+			217
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			713,
+			3216,
+			171,
+			256
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0206 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			149,
+			71,
+			160,
+			217
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			713,
+			3478,
+			171,
+			256
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0207 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			149,
+			64,
+			156,
+			215
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			713,
+			845,
+			175,
+			265
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0208 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			149,
+			64,
+			156,
+			215
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			713,
+			1116,
+			175,
+			265
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0209 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			149,
+			75,
+			147,
+			222
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			312,
+			2225,
+			184,
+			247
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0210 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			149,
+			75,
+			147,
+			222
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			312,
+			2478,
+			184,
+			247
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0211 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			152,
+			86,
+			159,
+			221
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			894,
+			2055,
+			169,
+			237
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0212 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			152,
+			86,
+			159,
+			221
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			894,
+			2298,
+			169,
+			237
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0213 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			152,
+			108,
+			155,
+			224
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3066,
+			578,
+			173,
+			212
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0214 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			152,
+			108,
+			155,
+			224
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3245,
+			578,
+			173,
+			212
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0215 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			159,
+			137,
+			152,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			894,
+			2766,
+			169,
+			188
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0216 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			159,
+			137,
+			152,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			894,
+			2960,
+			169,
+			188
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0217 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			161,
+			152,
+			149,
+			224
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1776,
+			845,
+			170,
+			168
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0218 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			169,
+			152,
+			149,
+			224
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			1680,
+			162,
+			168
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0219 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			156,
+			123,
+			158,
+			221
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1415,
+			1021,
+			166,
+			200
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0220 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			156,
+			123,
+			158,
+			221
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1587,
+			1021,
+			166,
+			200
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0221 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			163,
+			101,
+			158,
+			217
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1239,
+			1707,
+			159,
+			226
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0222 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			163,
+			101,
+			158,
+			217
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1239,
+			1939,
+			159,
+			226
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0223 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			162,
+			83,
+			157,
+			215
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			2207,
+			161,
+			246
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0224 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			154,
+			83,
+			157,
+			215
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			894,
+			1803,
+			169,
+			246
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0225 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			154,
+			90,
+			165,
+			222
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			2459,
+			161,
+			232
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0226 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			156,
+			90,
+			165,
+			222
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			3803,
+			159,
+			232
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0227 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			176,
+			88,
+			168,
+			228
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2026,
+			2020,
+			136,
+			228
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0228 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			176,
+			88,
+			168,
+			231
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2026,
+			2254,
+			136,
+			225
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0229 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			178,
+			193,
+			169,
+			232
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3843,
+			2020,
+			133,
+			119
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0230 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			178,
+			193,
+			169,
+			232
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2168,
+			2173,
+			133,
+			119
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0231 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			182,
+			192,
+			172,
+			232
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3779,
+			2298,
+			126,
+			120
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0232 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			182,
+			192,
+			172,
+			232
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3911,
+			2298,
+			126,
+			120
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0233 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			184,
+			189,
+			175,
+			211
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2573,
+			3428,
+			121,
+			144
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0234 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			184,
+			189,
+			175,
+			211
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2573,
+			3578,
+			121,
+			144
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0235 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			185,
+			190,
+			176,
+			207
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2702,
+			3411,
+			119,
+			147
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0236 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			185,
+			190,
+			176,
+			207
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2702,
+			3564,
+			119,
+			147
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0237 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			186,
+			191,
+			177,
+			288
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2884,
+			1946,
+			117,
+			65
+		},
+		alias = {
+			"ninetailedfox_creep_0238"
+		}
+	},
+	ninetailedfox_creep_0239 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			0,
+			0,
+			478,
+			542
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			459,
+			151,
+			2,
+			2
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0240 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			223,
+			270,
+			232,
+			255
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			428,
+			135,
+			25,
+			19
+		},
+		alias = {
+			"ninetailedfox_creep_0241"
+		}
+	},
+	ninetailedfox_creep_0242 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			221,
+			268,
+			230,
+			254
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			327,
+			135,
+			29,
+			22
+		},
+		alias = {
+			"ninetailedfox_creep_0243"
+		}
+	},
+	ninetailedfox_creep_0244 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			202,
+			254,
+			211,
+			239
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			238,
+			2057,
+			67,
+			51
+		},
+		alias = {
+			"ninetailedfox_creep_0245"
+		}
+	},
+	ninetailedfox_creep_0246 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			173,
+			230,
+			173,
+			231
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2868,
+			2020,
+			134,
+			83
+		},
+		alias = {
+			"ninetailedfox_creep_0247"
+		}
+	},
+	ninetailedfox_creep_0248 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			168,
+			224,
+			167,
+			227
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3623,
+			1134,
+			145,
+			93
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0249 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			168,
+			224,
+			167,
+			227
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3792,
+			1134,
+			145,
+			93
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0250 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			154,
+			223,
+			162,
+			232
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3133,
+			479,
+			164,
+			89
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0251 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			161,
+			208,
+			162,
+			232
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2545,
+			1233,
+			157,
+			104
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0252 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			148,
+			208,
+			169,
+			228
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3285,
+			1021,
+			163,
+			108
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0253 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			148,
+			208,
+			169,
+			228
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3454,
+			1021,
+			163,
+			108
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0254 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			155,
+			208,
+			172,
+			225
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2361,
+			1406,
+			153,
+			111
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0255 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			155,
+			208,
+			172,
+			225
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2520,
+			1406,
+			153,
+			111
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0256 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			154,
+			151,
+			163,
+			223
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2609,
+			1021,
+			163,
+			170
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0257 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			146,
+			151,
+			163,
+			223
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			894,
+			845,
+			171,
+			170
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0258 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			146,
+			123,
+			154,
+			230
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2210,
+			354,
+			180,
+			191
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0259 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			148,
+			123,
+			154,
+			230
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2581,
+			354,
+			178,
+			191
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0260 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			148,
+			86,
+			151,
+			228
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			526,
+			1456,
+			181,
+			230
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0261 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			148,
+			86,
+			151,
+			228
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			526,
+			1692,
+			181,
+			230
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0262 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			150,
+			48,
+			148,
+			232
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			312,
+			2978,
+			182,
+			264
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0263 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			150,
+			48,
+			148,
+			232
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			312,
+			3248,
+			182,
+			264
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0264 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			153,
+			37,
+			151,
+			227
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			526,
+			3514,
+			176,
+			280
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0265 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			153,
+			43,
+			151,
+			227
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			526,
+			3800,
+			176,
+			274
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0266 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			126,
+			25,
+			150,
+			232
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			312,
+			1169,
+			204,
+			287
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0267 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			126,
+			25,
+			150,
+			232
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			312,
+			1462,
+			204,
+			287
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0268 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			148,
+			26,
+			151,
+			228
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			526,
+			578,
+			181,
+			290
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0269 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			148,
+			26,
+			151,
+			228
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			526,
+			874,
+			181,
+			290
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0270 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			152,
+			35,
+			152,
+			225
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			526,
+			2934,
+			176,
+			284
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0271 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			152,
+			35,
+			152,
+			225
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			526,
+			3224,
+			176,
+			284
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0272 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			153,
+			41,
+			153,
+			223
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			713,
+			1387,
+			174,
+			280
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0273 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			146,
+			41,
+			153,
+			223
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			526,
+			1170,
+			181,
+			280
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0274 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			146,
+			53,
+			156,
+			230
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			526,
+			2187,
+			178,
+			261
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0275 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			148,
+			53,
+			156,
+			230
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			713,
+			578,
+			176,
+			261
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0276 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			152,
+			75,
+			156,
+			236
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			713,
+			2167,
+			172,
+			233
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0277 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			152,
+			75,
+			156,
+			238
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			713,
+			2644,
+			172,
+			231
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0278 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			166,
+			161,
+			133,
+			239
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1277,
+			354,
+			181,
+			144
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0279 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			166,
+			161,
+			133,
+			239
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1464,
+			354,
+			181,
+			144
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0280 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			148,
+			142,
+			181,
+			239
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1566,
+			2333,
+			151,
+			163
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0281 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			148,
+			142,
+			181,
+			239
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1566,
+			2502,
+			151,
+			163
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0282 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			162,
+			143,
+			172,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1723,
+			2485,
+			146,
+			182
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0283 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			162,
+			143,
+			172,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1723,
+			2673,
+			146,
+			182
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0284 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			162,
+			144,
+			169,
+			215
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1566,
+			2841,
+			149,
+			185
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0285 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			162,
+			144,
+			169,
+			215
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1566,
+			3032,
+			149,
+			185
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0286 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			172,
+			126,
+			178,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2168,
+			3338,
+			130,
+			157
+		},
+		alias = {
+			"ninetailedfox_creep_0287"
+		}
+	},
+	ninetailedfox_creep_0288 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			148,
+			171,
+			155,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			526,
+			2816,
+			177,
+			112
+		},
+		alias = {
+			"ninetailedfox_creep_0289"
+		}
+	},
+	ninetailedfox_creep_0290 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			151,
+			144,
+			160,
+			261
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1952,
+			845,
+			169,
+			139
+		},
+		alias = {
+			"ninetailedfox_creep_0291"
+		}
+	},
+	ninetailedfox_creep_0292 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			172,
+			163,
+			151,
+			224
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1567,
+			1233,
+			157,
+			157
+		},
+		alias = {
+			"ninetailedfox_creep_0293"
+		}
+	},
+	ninetailedfox_creep_0294 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			172,
+			163,
+			151,
+			224
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1730,
+			1233,
+			157,
+			157
+		},
+		alias = {
+			"ninetailedfox_creep_0295"
+		}
+	},
+	ninetailedfox_creep_0296 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			172,
+			153,
+			151,
+			224
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			1233,
+			157,
+			167
+		},
+		alias = {
+			"ninetailedfox_creep_0297"
+		}
+	},
+	ninetailedfox_creep_0298 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			172,
+			138,
+			151,
+			224
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1239,
+			3761,
+			157,
+			182
+		},
+		alias = {
+			"ninetailedfox_creep_0299"
+		}
+	},
+	ninetailedfox_creep_0300 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			169,
+			124,
+			145,
+			225
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			894,
+			3898,
+			166,
+			195
+		},
+		alias = {
+			"ninetailedfox_creep_0301"
+		}
+	},
+	ninetailedfox_creep_0302 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			182,
+			160,
+			170,
+			247
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2306,
+			3887,
+			128,
+			137
+		},
+		alias = {
+			"ninetailedfox_creep_0303"
+		}
+	},
+	ninetailedfox_creep_0304 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			175,
+			150,
+			170,
+			247
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2026,
+			3205,
+			135,
+			147
+		},
+		alias = {
+			"ninetailedfox_creep_0305"
+		}
+	},
+	ninetailedfox_creep_0306 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			175,
+			146,
+			170,
+			247
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3961,
+			1021,
+			135,
+			151
+		},
+		alias = {
+			"ninetailedfox_creep_0307"
+		}
+	},
+	ninetailedfox_creep_0308 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			175,
+			144,
+			168,
+			240
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2026,
+			1854,
+			137,
+			160
+		},
+		alias = {
+			"ninetailedfox_creep_0309"
+		}
+	},
+	ninetailedfox_creep_0310 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			176,
+			142,
+			161,
+			233
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1876,
+			2337,
+			143,
+			169
+		},
+		alias = {
+			"ninetailedfox_creep_0311"
+		}
+	},
+	ninetailedfox_creep_0312 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			177,
+			140,
+			177,
+			266
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2441,
+			2600,
+			126,
+			138
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0313 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			210,
+			227,
+			199,
+			266
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4025,
+			962,
+			71,
+			51
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0314 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			211,
+			226,
+			198,
+			266
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4025,
+			904,
+			71,
+			52
+		},
+		alias = {
+			"ninetailedfox_creep_0315"
+		}
+	},
+	ninetailedfox_creep_0316 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			212,
+			225,
+			197,
+			266
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			4025,
+			845,
+			71,
+			53
+		},
+		alias = {
+			"ninetailedfox_creep_0317"
+		}
+	},
+	ninetailedfox_creep_0318 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			213,
+			224,
+			197,
+			266
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3304,
+			3012,
+			70,
+			54
+		},
+		alias = {
+			"ninetailedfox_creep_0319"
+		}
+	},
+	ninetailedfox_creep_0320 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			214,
+			223,
+			196,
+			266
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3639,
+			4028,
+			70,
+			55
+		},
+		alias = {
+			"ninetailedfox_creep_0321"
+		}
+	},
+	ninetailedfox_creep_0322 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			215,
+			222,
+			195,
+			266
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3185,
+			4030,
+			70,
+			56
+		},
+		alias = {
+			"ninetailedfox_creep_0323"
+		}
+	},
+	ninetailedfox_creep_0324 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			216,
+			221,
+			194,
+			266
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			236,
+			2369,
+			70,
+			57
+		},
+		alias = {
+			"ninetailedfox_creep_0325"
+		}
+	},
+	ninetailedfox_creep_0326 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			217,
+			220,
+			194,
+			266
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1278,
+			821,
+			69,
+			58
+		},
+		alias = {
+			"ninetailedfox_creep_0327"
+		}
+	},
+	ninetailedfox_creep_0328 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			204,
+			202,
+			175,
+			241
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			117,
+			957,
+			101,
+			101
+		},
+		alias = {
+			"ninetailedfox_creep_0329"
+		}
+	},
+	ninetailedfox_creep_0330 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			204,
+			202,
+			175,
+			241
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			117,
+			1064,
+			101,
+			101
+		},
+		alias = {
+			"ninetailedfox_creep_0331"
+		}
+	},
+	ninetailedfox_creep_0332 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			204,
+			195,
+			175,
+			241
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			117,
+			618,
+			101,
+			108
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0333 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			204,
+			195,
+			175,
+			241
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			117,
+			732,
+			101,
+			108
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0334 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			204,
+			185,
+			175,
+			241
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			117,
+			494,
+			101,
+			118
+		},
+		alias = {
+			"ninetailedfox_creep_0335"
+		}
+	},
+	ninetailedfox_creep_0336 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			202,
+			176,
+			171,
+			242
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3989,
+			3169,
+			107,
+			126
+		},
+		alias = {
+			"ninetailedfox_creep_0337"
+		}
+	},
+	ninetailedfox_creep_0338 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			204,
+			184,
+			172,
+			252
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			447,
+			6,
+			104,
+			108
+		},
+		alias = {
+			"ninetailedfox_creep_0339"
+		}
+	},
+	ninetailedfox_creep_0340 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			198,
+			176,
+			172,
+			252
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3068,
+			3407,
+			110,
+			116
+		},
+		alias = {
+			"ninetailedfox_creep_0341"
+		}
+	},
+	ninetailedfox_creep_0342 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			199,
+			174,
+			172,
+			252
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3415,
+			3169,
+			109,
+			118
+		},
+		alias = {
+			"ninetailedfox_creep_0343"
+		}
+	},
+	ninetailedfox_creep_0344 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			199,
+			172,
+			173,
+			246
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3875,
+			3169,
+			108,
+			126
+		},
+		alias = {
+			"ninetailedfox_creep_0345"
+		}
+	},
+	ninetailedfox_creep_0346 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			200,
+			171,
+			168,
+			241
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3068,
+			2934,
+			112,
+			132
+		},
+		alias = {
+			"ninetailedfox_creep_0347"
+		}
+	},
+	ninetailedfox_creep_0348 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			201,
+			169,
+			178,
+			285
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3416,
+			3072,
+			101,
+			90
+		},
+		alias = {
+			"ninetailedfox_creep_0349"
+		}
+	},
+	ninetailedfox_creep_0350 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			160,
+			151,
+			163,
+			236
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1893,
+			1233,
+			157,
+			157
+		},
+		alias = {
+			"ninetailedfox_creep_0351"
+		}
+	},
+	ninetailedfox_creep_0352 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			152,
+			123,
+			154,
+			245
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2527,
+			578,
+			174,
+			176
+		},
+		alias = {
+			"ninetailedfox_creep_0353"
+		}
+	},
+	ninetailedfox_creep_0354 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			148,
+			86,
+			151,
+			248
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1090,
+			354,
+			181,
+			210
+		},
+		alias = {
+			"ninetailedfox_creep_0355"
+		}
+	},
+	ninetailedfox_creep_0356 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			150,
+			48,
+			148,
+			248
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			312,
+			3518,
+			182,
+			248
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0357 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			150,
+			48,
+			148,
+			248
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			312,
+			3772,
+			182,
+			248
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0358 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			153,
+			37,
+			151,
+			255
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			895,
+			578,
+			176,
+			252
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0359 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			153,
+			43,
+			151,
+			255
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1077,
+			578,
+			176,
+			246
+		},
+		alias = {}
+	},
+	ninetailedfox_creep_0360 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			126,
+			25,
+			150,
+			258
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			312,
+			1755,
+			204,
+			261
+		},
+		alias = {
+			"ninetailedfox_creep_0361"
+		}
+	},
+	ninetailedfox_creep_0362 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			150,
+			26,
+			151,
+			265
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			526,
+			1928,
+			179,
+			253
+		},
+		alias = {
+			"ninetailedfox_creep_0363"
+		}
+	},
+	ninetailedfox_creep_0364 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			152,
+			35,
+			152,
+			265
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1259,
+			578,
+			176,
+			244
+		},
+		alias = {
+			"ninetailedfox_creep_0365"
+		}
+	},
+	ninetailedfox_creep_0366 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			153,
+			41,
+			153,
+			264
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2347,
+			578,
+			174,
+			239
+		},
+		alias = {
+			"ninetailedfox_creep_0367"
+		}
+	},
+	ninetailedfox_creep_0368 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			151,
+			53,
+			156,
+			263
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2887,
+			578,
+			173,
+			228
+		},
+		alias = {
+			"ninetailedfox_creep_0369"
+		}
+	},
+	ninetailedfox_creep_0370 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			152,
+			75,
+			156,
+			263
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			713,
+			2881,
+			172,
+			206
+		},
+		alias = {
+			"ninetailedfox_creep_0371"
+		}
+	},
+	ninetailedfox_creep_0372 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			166,
+			161,
+			133,
+			258
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1651,
+			354,
+			181,
+			125
+		},
+		alias = {
+			"ninetailedfox_creep_0373"
+		}
+	},
+	ninetailedfox_creep_0374 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			148,
+			142,
+			181,
+			257
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2355,
+			1544,
+			151,
+			145
+		},
+		alias = {
+			"ninetailedfox_creep_0375"
+		}
+	},
+	ninetailedfox_creep_0376 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			162,
+			143,
+			172,
+			258
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1723,
+			3727,
+			146,
+			143
+		},
+		alias = {
+			"ninetailedfox_creep_0377"
+		}
+	},
+	ninetailedfox_creep_0378 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			480,
+			544
+		},
+		trim = {
+			162,
+			144,
+			169,
+			258
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2980,
+			1544,
+			149,
+			142
+		},
+		alias = {
+			"ninetailedfox_creep_0379"
+		}
+	},
+	ninetailedfox_hit_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			140,
+			140
+		},
+		trim = {
+			48,
+			39,
+			39,
+			43
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3089,
+			2109,
+			53,
+			58
+		},
+		alias = {}
+	},
+	ninetailedfox_hit_0002 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			140,
+			140
+		},
+		trim = {
+			31,
+			23,
+			33,
+			29
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			230,
+			3084,
+			76,
+			88
+		},
+		alias = {}
+	},
+	ninetailedfox_hit_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			140,
+			140
+		},
+		trim = {
+			31,
+			23,
+			29,
+			33
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			611,
+			1476,
+			80,
+			84
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			93,
+			39,
+			38,
+			91
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2168,
+			3733,
+			129,
+			142
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0002 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			93,
+			39,
+			38,
+			91
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2168,
+			3881,
+			129,
+			142
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			93,
+			34,
+			34,
+			91
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3148,
+			2020,
+			133,
+			147
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0004 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			92,
+			34,
+			34,
+			91
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2026,
+			3893,
+			134,
+			147
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0005 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			93,
+			33,
+			33,
+			91
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2026,
+			3739,
+			134,
+			148
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0006 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			92,
+			33,
+			33,
+			91
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2026,
+			3051,
+			135,
+			148
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0007 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			93,
+			33,
+			33,
+			92
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2168,
+			2020,
+			134,
+			147
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0008 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			93,
+			39,
+			45,
+			92
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3974,
+			1704,
+			122,
+			141
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0009 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			92,
+			39,
+			45,
+			92
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2573,
+			2715,
+			123,
+			141
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0010 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			92,
+			39,
+			45,
+			92
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2573,
+			2862,
+			123,
+			141
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0011 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			92,
+			52,
+			57,
+			92
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3539,
+			2934,
+			111,
+			128
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0012 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			92,
+			51,
+			57,
+			92
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3422,
+			2934,
+			111,
+			129
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0013 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			93,
+			50,
+			58,
+			93
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3185,
+			3895,
+			109,
+			129
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0014 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			93,
+			50,
+			58,
+			93
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3300,
+			3169,
+			109,
+			129
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0015 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			92,
+			49,
+			58,
+			93
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3986,
+			163,
+			110,
+			130
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0016 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			92,
+			48,
+			59,
+			93
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3185,
+			3622,
+			109,
+			131
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0017 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			92,
+			48,
+			59,
+			94
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3185,
+			3759,
+			109,
+			130
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0018 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			92,
+			47,
+			60,
+			94
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3300,
+			3596,
+			108,
+			131
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0019 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			92,
+			46,
+			61,
+			94
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3414,
+			3700,
+			107,
+			132
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0020 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			91,
+			45,
+			62,
+			95
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3414,
+			3838,
+			107,
+			132
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0021 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			91,
+			45,
+			63,
+			95
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3639,
+			3774,
+			106,
+			132
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0022 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			91,
+			43,
+			64,
+			96
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			6,
+			6,
+			105,
+			133
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0023 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			90,
+			42,
+			65,
+			96
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3862,
+			3743,
+			105,
+			134
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0024 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			89,
+			41,
+			66,
+			97
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3973,
+			3743,
+			105,
+			134
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0025 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			89,
+			40,
+			67,
+			98
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			6,
+			1227,
+			104,
+			134
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0026 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			88,
+			38,
+			68,
+			111
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			6,
+			1367,
+			104,
+			123
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0027 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			88,
+			37,
+			68,
+			113
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			117,
+			6,
+			104,
+			122
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0028 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			87,
+			37,
+			69,
+			114
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			227,
+			6,
+			104,
+			121
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0029 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			86,
+			36,
+			69,
+			115
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			6,
+			273,
+			105,
+			121
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0030 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			85,
+			34,
+			70,
+			116
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			6,
+			145,
+			105,
+			122
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0031 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			83,
+			33,
+			70,
+			118
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3527,
+			3407,
+			107,
+			121
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0032 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			82,
+			33,
+			71,
+			119
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3414,
+			3976,
+			107,
+			120
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0033 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			80,
+			32,
+			72,
+			120
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3300,
+			3733,
+			108,
+			120
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0034 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			82,
+			40,
+			72,
+			122
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3639,
+			3912,
+			106,
+			110
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0035 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			82,
+			39,
+			74,
+			125
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			557,
+			6,
+			104,
+			108
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0036 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			81,
+			37,
+			76,
+			127
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			886,
+			6,
+			103,
+			108
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0037 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			80,
+			35,
+			76,
+			129
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			667,
+			6,
+			104,
+			108
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0038 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			79,
+			34,
+			78,
+			132
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			995,
+			6,
+			103,
+			106
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0039 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			79,
+			32,
+			80,
+			135
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			117,
+			846,
+			101,
+			105
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0040 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			80,
+			31,
+			82,
+			139
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			750,
+			134,
+			98,
+			102
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_0041 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			260,
+			272
+		},
+		trim = {
+			0,
+			0,
+			258,
+			270
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			467,
+			135,
+			2,
+			2
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_decal_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			280,
+			200
+		},
+		trim = {
+			23,
+			23,
+			31,
+			25
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			1971,
+			226,
+			152
+		},
+		alias = {
+			"ninetailedfox_stun_decal_0002",
+			"ninetailedfox_stun_decal_0003",
+			"ninetailedfox_stun_decal_0004",
+			"ninetailedfox_stun_decal_0005",
+			"ninetailedfox_stun_decal_0006",
+			"ninetailedfox_stun_decal_0007",
+			"ninetailedfox_stun_decal_0008",
+			"ninetailedfox_stun_decal_0009",
+			"ninetailedfox_stun_decal_0010",
+			"ninetailedfox_stun_decal_0011",
+			"ninetailedfox_stun_decal_0012",
+			"ninetailedfox_stun_decal_0013",
+			"ninetailedfox_stun_decal_0014",
+			"ninetailedfox_stun_decal_0015",
+			"ninetailedfox_stun_decal_0016",
+			"ninetailedfox_stun_decal_0017",
+			"ninetailedfox_stun_decal_0018",
+			"ninetailedfox_stun_decal_0019"
+		}
+	},
+	ninetailedfox_stun_decal_0020 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			280,
+			200
+		},
+		trim = {
+			24,
+			23,
+			32,
+			26
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			2129,
+			224,
+			151
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_decal_0021 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			280,
+			200
+		},
+		trim = {
+			24,
+			24,
+			32,
+			26
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			2286,
+			224,
+			150
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_decal_0022 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			280,
+			200
+		},
+		trim = {
+			24,
+			24,
+			32,
+			26
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			2442,
+			224,
+			150
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_decal_0023 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			280,
+			200
+		},
+		trim = {
+			25,
+			24,
+			33,
+			27
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			2764,
+			222,
+			149
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_decal_0024 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			280,
+			200
+		},
+		trim = {
+			27,
+			25,
+			35,
+			27
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			3084,
+			218,
+			148
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_decal_0025 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			280,
+			200
+		},
+		trim = {
+			28,
+			26,
+			36,
+			27
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			3238,
+			216,
+			147
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_decal_0026 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			280,
+			200
+		},
+		trim = {
+			30,
+			27,
+			38,
+			27
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			3391,
+			212,
+			146
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_decal_0027 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			280,
+			200
+		},
+		trim = {
+			31,
+			28,
+			39,
+			27
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			528,
+			163,
+			210,
+			145
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_decal_0028 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			280,
+			200
+		},
+		trim = {
+			35,
+			31,
+			42,
+			27
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1169,
+			163,
+			203,
+			142
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_decal_0029 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			280,
+			200
+		},
+		trim = {
+			38,
+			35,
+			42,
+			28
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1792,
+			163,
+			200,
+			137
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_decal_0030 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			280,
+			200
+		},
+		trim = {
+			38,
+			37,
+			42,
+			29
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1998,
+			163,
+			200,
+			134
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_decal_0031 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			280,
+			200
+		},
+		trim = {
+			38,
+			37,
+			42,
+			30
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2204,
+			163,
+			200,
+			133
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_decal_0032 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			280,
+			200
+		},
+		trim = {
+			41,
+			38,
+			46,
+			38
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2814,
+			163,
+			193,
+			124
+		},
+		alias = {}
+	},
+	ninetailedfox_stun_decal_0033 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			280,
+			200
+		},
+		trim = {
+			0,
+			0,
+			278,
+			198
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			467,
+			143,
+			2,
+			2
+		},
+		alias = {
+			"ninetailedfox_stun_decal_0034",
+			"ninetailedfox_stun_decal_0035",
+			"ninetailedfox_stun_decal_0036",
+			"ninetailedfox_stun_decal_0037",
+			"ninetailedfox_stun_decal_0038",
+			"ninetailedfox_stun_decal_0039",
+			"ninetailedfox_stun_decal_0040",
+			"ninetailedfox_stun_decal_0041",
+			"ninetailedfox_stun_decal_0042",
+			"ninetailedfox_stun_decal_0043",
+			"ninetailedfox_stun_decal_0044",
+			"ninetailedfox_stun_decal_0045",
+			"ninetailedfox_stun_decal_0046",
+			"ninetailedfox_stun_decal_0047",
+			"ninetailedfox_stun_decal_0048",
+			"ninetailedfox_stun_decal_0049",
+			"ninetailedfox_stun_decal_0050",
+			"ninetailedfox_stun_decal_0051",
+			"ninetailedfox_stun_decal_0052",
+			"ninetailedfox_stun_decal_0053",
+			"ninetailedfox_stun_decal_0054",
+			"ninetailedfox_stun_decal_0055",
+			"ninetailedfox_stun_decal_0056",
+			"ninetailedfox_stun_decal_0057",
+			"ninetailedfox_stun_decal_0058",
+			"ninetailedfox_stun_decal_0059",
+			"ninetailedfox_stun_decal_0060"
+		}
+	},
+	ninetailedfox_stunearea_explosion02_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			91,
+			55,
+			98,
+			56
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1277,
+			504,
+			119,
+			65
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion02_0002 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			91,
+			55,
+			98,
+			56
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1464,
+			504,
+			119,
+			65
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion02_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			70,
+			54,
+			77,
+			47
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1651,
+			485,
+			161,
+			75
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion02_0004 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			70,
+			52,
+			77,
+			47
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3794,
+			260,
+			161,
+			77
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion02_0005 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			50,
+			50,
+			56,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1378,
+			259,
+			202,
+			89
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion02_0006 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			50,
+			49,
+			56,
+			37
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1378,
+			163,
+			202,
+			90
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion02_0007 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			29,
+			47,
+			36,
+			28
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3455,
+			6,
+			243,
+			101
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion02_0008 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			29,
+			44,
+			36,
+			28
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3206,
+			6,
+			243,
+			104
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion02_0009 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			19,
+			45,
+			25,
+			24
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2433,
+			6,
+			264,
+			107
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion02_0010 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			19,
+			44,
+			25,
+			24
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2163,
+			6,
+			264,
+			108
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion02_0011 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			87,
+			44,
+			96,
+			44
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2441,
+			2852,
+			125,
+			88
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion02_0012 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			83,
+			43,
+			93,
+			43
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2861,
+			2173,
+			132,
+			90
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion02_0013 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			79,
+			42,
+			89,
+			42
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1876,
+			3307,
+			140,
+			92
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion02_0014 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			76,
+			42,
+			85,
+			42
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3285,
+			1135,
+			147,
+			92
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion02_0015 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			72,
+			42,
+			81,
+			40
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2439,
+			1133,
+			155,
+			94
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion02_0016 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			68,
+			41,
+			78,
+			38
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3685,
+			474,
+			162,
+			97
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion02_0017 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			64,
+			39,
+			74,
+			36
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			713,
+			3955,
+			170,
+			101
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion02_0018 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			61,
+			37,
+			71,
+			34
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1441,
+			578,
+			176,
+			105
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion02_0019 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			308,
+			176
+		},
+		trim = {
+			0,
+			0,
+			306,
+			174
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			467,
+			151,
+			2,
+			2
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			55,
+			76,
+			61,
+			112
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1212,
+			909,
+			60,
+			72
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0002 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			55,
+			70,
+			61,
+			112
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1080,
+			909,
+			60,
+			78
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			45,
+			36,
+			46,
+			109
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			429,
+			1094,
+			85,
+			115
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0004 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			45,
+			36,
+			46,
+			109
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			429,
+			1215,
+			85,
+			115
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0005 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			39,
+			27,
+			38,
+			106
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			117,
+			1278,
+			99,
+			127
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0006 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			39,
+			27,
+			38,
+			106
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			117,
+			1411,
+			99,
+			127
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0007 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			35,
+			21,
+			35,
+			105
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3527,
+			3934,
+			106,
+			134
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0008 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			35,
+			21,
+			35,
+			105
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3639,
+			3634,
+			106,
+			134
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0009 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			29,
+			22,
+			32,
+			102
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3807,
+			2780,
+			115,
+			136
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0010 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			29,
+			22,
+			32,
+			102
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3928,
+			2780,
+			115,
+			136
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0011 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			26,
+			26,
+			29,
+			102
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2573,
+			3728,
+			121,
+			132
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0012 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			26,
+			26,
+			29,
+			102
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2573,
+			3866,
+			121,
+			132
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0013 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			25,
+			30,
+			28,
+			103
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2573,
+			3009,
+			123,
+			127
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0014 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			25,
+			30,
+			28,
+			103
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2573,
+			3142,
+			123,
+			127
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0015 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			25,
+			37,
+			27,
+			102
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2441,
+			3862,
+			124,
+			121
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0016 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			25,
+			37,
+			27,
+			102
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2573,
+			2440,
+			124,
+			121
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0017 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			43,
+			43,
+			42,
+			114
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			329,
+			635,
+			91,
+			103
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0018 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			50,
+			43,
+			47,
+			113
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1386,
+			702,
+			79,
+			104
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0019 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			57,
+			47,
+			60,
+			136
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1278,
+			909,
+			59,
+			77
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0020 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			57,
+			47,
+			60,
+			136
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1343,
+			909,
+			59,
+			77
+		},
+		alias = {}
+	},
+	ninetailedfox_stunearea_explosion_01_0021 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			176,
+			260
+		},
+		trim = {
+			71,
+			66,
+			68,
+			155
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3250,
+			116,
+			37,
+			39
+		},
+		alias = {
+			"ninetailedfox_stunearea_explosion_01_0022"
+		}
+	},
+	ninetailedfox_summon_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			143,
+			102,
+			136,
+			102
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			397,
+			135,
+			25,
+			20
+		},
+		alias = {
+			"ninetailedfox_summon_0002"
+		}
+	},
+	ninetailedfox_summon_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			141,
+			101,
+			134,
+			101
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			362,
+			135,
+			29,
+			22
+		},
+		alias = {
+			"ninetailedfox_summon_0004"
+		}
+	},
+	ninetailedfox_summon_0005 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			122,
+			87,
+			115,
+			87
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1803,
+			4043,
+			67,
+			50
+		},
+		alias = {
+			"ninetailedfox_summon_0006"
+		}
+	},
+	ninetailedfox_summon_0007 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			93,
+			63,
+			77,
+			78
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3008,
+			2020,
+			134,
+			83
+		},
+		alias = {
+			"ninetailedfox_summon_0008"
+		}
+	},
+	ninetailedfox_summon_0009 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			88,
+			57,
+			71,
+			74
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2782,
+			1704,
+			145,
+			93
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0010 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			88,
+			57,
+			71,
+			74
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2933,
+			1704,
+			145,
+			93
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0011 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			74,
+			55,
+			66,
+			79
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2765,
+			481,
+			164,
+			90
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0012 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			81,
+			40,
+			66,
+			79
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2219,
+			1233,
+			157,
+			105
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0013 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			68,
+			41,
+			73,
+			76
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3623,
+			1021,
+			163,
+			107
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0014 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			68,
+			41,
+			73,
+			76
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3792,
+			1021,
+			163,
+			107
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0015 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			75,
+			41,
+			76,
+			72
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2679,
+			1406,
+			153,
+			111
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0016 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			75,
+			41,
+			76,
+			72
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2838,
+			1406,
+			153,
+			111
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0017 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			74,
+			42,
+			74,
+			70
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3681,
+			1233,
+			156,
+			112
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0018 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			66,
+			42,
+			74,
+			70
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1929,
+			1021,
+			164,
+			112
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0019 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			66,
+			50,
+			76,
+			77
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3782,
+			741,
+			162,
+			97
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0020 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			68,
+			50,
+			76,
+			77
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			3597,
+			160,
+			97
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0021 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			68,
+			50,
+			75,
+			76
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			3122,
+			161,
+			98
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0022 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			72,
+			51,
+			75,
+			68
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2382,
+			1233,
+			157,
+			105
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0023 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			72,
+			57,
+			74,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1239,
+			3460,
+			158,
+			104
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0024 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			74,
+			40,
+			74,
+			59
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3195,
+			1233,
+			156,
+			125
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0025 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			88,
+			57,
+			71,
+			60
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2480,
+			1704,
+			145,
+			107
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0026 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			88,
+			57,
+			71,
+			62
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2631,
+			1704,
+			145,
+			105
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0027 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			74,
+			55,
+			66,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2439,
+			1021,
+			164,
+			106
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0028 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			81,
+			40,
+			66,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1239,
+			3949,
+			157,
+			121
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0029 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			68,
+			41,
+			73,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2947,
+			1021,
+			163,
+			120
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0030 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			68,
+			41,
+			73,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3116,
+			1021,
+			163,
+			120
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0031 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			75,
+			41,
+			76,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1884,
+			1406,
+			153,
+			120
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0032 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			75,
+			41,
+			76,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2043,
+			1406,
+			153,
+			120
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0033 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			74,
+			38,
+			74,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3357,
+			1233,
+			156,
+			123
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0034 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			66,
+			34,
+			74,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1759,
+			1021,
+			164,
+			127
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0035 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			66,
+			31,
+			76,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			1854,
+			162,
+			130
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0036 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			68,
+			26,
+			76,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			3329,
+			160,
+			135
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0037 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			68,
+			51,
+			62,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2707,
+			578,
+			174,
+			110
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0038 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			72,
+			51,
+			66,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3341,
+			845,
+			166,
+			110
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0039 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			72,
+			53,
+			70,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			1990,
+			162,
+			108
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0040 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			74,
+			40,
+			70,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			3470,
+			160,
+			121
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0041 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			88,
+			49,
+			70,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3768,
+			1406,
+			146,
+			112
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0042 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			88,
+			48,
+			70,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3616,
+			1406,
+			146,
+			113
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0043 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			74,
+			49,
+			66,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2099,
+			1021,
+			164,
+			112
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0044 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			81,
+			40,
+			66,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2056,
+			1233,
+			157,
+			121
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0045 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			68,
+			41,
+			70,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2997,
+			845,
+			166,
+			120
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0046 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			68,
+			41,
+			70,
+			63
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3169,
+			845,
+			166,
+			120
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0047 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			75,
+			41,
+			73,
+			66
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3519,
+			1233,
+			156,
+			117
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0048 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			75,
+			41,
+			76,
+			68
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2202,
+			1406,
+			153,
+			115
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0049 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			74,
+			42,
+			74,
+			70
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3843,
+			1233,
+			156,
+			112
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0050 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			66,
+			42,
+			74,
+			70
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2269,
+			1021,
+			164,
+			112
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0051 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			66,
+			50,
+			76,
+			77
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			2104,
+			162,
+			97
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0052 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			68,
+			50,
+			76,
+			77
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			3700,
+			160,
+			97
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0053 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			68,
+			51,
+			75,
+			76
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			3226,
+			161,
+			97
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0054 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			72,
+			51,
+			75,
+			76
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2708,
+			1233,
+			157,
+			97
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0055 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			72,
+			57,
+			74,
+			79
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3603,
+			743,
+			158,
+			88
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0056 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			74,
+			40,
+			74,
+			79
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			1825,
+			156,
+			105
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0057 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			89,
+			67,
+			87,
+			83
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3961,
+			759,
+			128,
+			74
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0058 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			95,
+			66,
+			84,
+			86
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1759,
+			1154,
+			125,
+			72
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0059 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			116,
+			86,
+			114,
+			87
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2462,
+			1344,
+			74,
+			51
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0060 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			116,
+			86,
+			114,
+			87
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1723,
+			4043,
+			74,
+			51
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0061 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			122,
+			87,
+			116,
+			87
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1651,
+			4036,
+			66,
+			50
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0062 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			122,
+			87,
+			116,
+			87
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2598,
+			1963,
+			66,
+			50
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0063 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			108,
+			66,
+			102,
+			66
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1468,
+			134,
+			94,
+			92
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0064 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			108,
+			66,
+			102,
+			66
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			225,
+			1449,
+			94,
+			92
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0065 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			106,
+			62,
+			100,
+			62
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			854,
+			134,
+			98,
+			100
+		},
+		alias = {}
+	},
+	ninetailedfox_summon_0066 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			304,
+			224
+		},
+		trim = {
+			106,
+			62,
+			100,
+			62
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			958,
+			134,
+			98,
+			100
+		},
+		alias = {}
+	},
+	ninetailedfox_teleport_smoke_particle_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			160,
+			152
+		},
+		trim = {
+			48,
+			43,
+			47,
+			48
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			872,
+			1446,
+			65,
+			61
+		},
+		alias = {
+			"ninetailedfox_teleport_smoke_particle_0002"
+		}
+	},
+	ninetailedfox_teleport_smoke_particle_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			160,
+			152
+		},
+		trim = {
+			47,
+			31,
+			43,
+			48
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			236,
+			2442,
+			70,
+			73
+		},
+		alias = {
+			"ninetailedfox_teleport_smoke_particle_0004"
+		}
+	},
+	ninetailedfox_teleport_smoke_particle_0005 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			160,
+			152
+		},
+		trim = {
+			46,
+			28,
+			43,
+			48
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			235,
+			2598,
+			71,
+			76
+		},
+		alias = {
+			"ninetailedfox_teleport_smoke_particle_0006"
+		}
+	},
+	ninetailedfox_teleport_smoke_particle_0007 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			160,
+			152
+		},
+		trim = {
+			42,
+			27,
+			46,
+			48
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			234,
+			2764,
+			72,
+			77
+		},
+		alias = {
+			"ninetailedfox_teleport_smoke_particle_0008"
+		}
+	},
+	ninetailedfox_teleport_smoke_particle_0009 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			160,
+			152
+		},
+		trim = {
+			44,
+			27,
+			46,
+			48
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			236,
+			2286,
+			70,
+			77
+		},
+		alias = {
+			"ninetailedfox_teleport_smoke_particle_0010"
+		}
+	},
+	ninetailedfox_teleport_smoke_particle_0011 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			160,
+			152
+		},
+		trim = {
+			45,
+			25,
+			45,
+			48
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			236,
+			2129,
+			70,
+			79
+		},
+		alias = {
+			"ninetailedfox_teleport_smoke_particle_0012"
+		}
+	},
+	ninetailedfox_teleport_smoke_particle_0013 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			160,
+			152
+		},
+		trim = {
+			46,
+			32,
+			43,
+			48
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			235,
+			2680,
+			71,
+			72
+		},
+		alias = {
+			"ninetailedfox_teleport_smoke_particle_0014"
+		}
+	},
+	ninetailedfox_teleport_smoke_particle_0015 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			160,
+			152
+		},
+		trim = {
+			46,
+			38,
+			45,
+			48
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			6,
+			1496,
+			69,
+			66
+		},
+		alias = {
+			"ninetailedfox_teleport_smoke_particle_0016"
+		}
+	},
+	ninetailedfox_teleport_smoke_particle_0017 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			160,
+			152
+		},
+		trim = {
+			49,
+			35,
+			46,
+			49
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			872,
+			1372,
+			65,
+			68
+		},
+		alias = {
+			"ninetailedfox_teleport_smoke_particle_0018"
+		}
+	},
+	ninetailedfox_teleport_smoke_particle_0019 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			160,
+			152
+		},
+		trim = {
+			50,
+			35,
+			49,
+			49
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			944,
+			1493,
+			61,
+			68
+		},
+		alias = {
+			"ninetailedfox_teleport_smoke_particle_0020"
+		}
+	},
+	ninetailedfox_teleport_smoke_particle_0021 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			160,
+			152
+		},
+		trim = {
+			49,
+			36,
+			52,
+			50
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1408,
+			909,
+			59,
+			66
+		},
+		alias = {
+			"ninetailedfox_teleport_smoke_particle_0022"
+		}
+	},
+	ninetailedfox_teleport_smoke_particle_0023 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			160,
+			152
+		},
+		trim = {
+			52,
+			40,
+			56,
+			51
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1137,
+			1361,
+			52,
+			61
+		},
+		alias = {}
+	},
+	ninetailedfox_teleport_smoke_particle_0024 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			160,
+			152
+		},
+		trim = {
+			54,
+			40,
+			55,
+			51
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1137,
+			1498,
+			51,
+			61
+		},
+		alias = {}
+	},
+	wuxian_bolt_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			208,
+			156
+		},
+		trim = {
+			34,
+			37,
+			37,
+			33
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2884,
+			1854,
+			137,
+			86
+		},
+		alias = {
+			"wuxian_bolt_0002"
+		}
+	},
+	wuxian_bolt_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			208,
+			156
+		},
+		trim = {
+			34,
+			37,
+			34,
+			32
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1876,
+			3405,
+			140,
+			87
+		},
+		alias = {
+			"wuxian_bolt_0004"
+		}
+	},
+	wuxian_bolt_0005 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			208,
+			156
+		},
+		trim = {
+			34,
+			38,
+			38,
+			32
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3739,
+			1854,
+			136,
+			86
+		},
+		alias = {
+			"wuxian_bolt_0006"
+		}
+	},
+	wuxian_bolt_0007 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			208,
+			156
+		},
+		trim = {
+			34,
+			37,
+			37,
+			33
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3027,
+			1854,
+			137,
+			86
+		},
+		alias = {
+			"wuxian_bolt_0008"
+		}
+	},
+	wuxian_bolt_0009 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			208,
+			156
+		},
+		trim = {
+			34,
+			37,
+			34,
+			32
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1876,
+			3498,
+			140,
+			87
+		},
+		alias = {
+			"wuxian_bolt_0010"
+		}
+	},
+	wuxian_bolt_0011 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			208,
+			156
+		},
+		trim = {
+			34,
+			38,
+			38,
+			32
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3881,
+			1854,
+			136,
+			86
+		},
+		alias = {
+			"wuxian_bolt_0012"
+		}
+	},
+	wuxian_bolt_0013 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			208,
+			156
+		},
+		trim = {
+			34,
+			37,
+			37,
+			33
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3170,
+			1854,
+			137,
+			86
+		},
+		alias = {
+			"wuxian_bolt_0014"
+		}
+	},
+	wuxian_bolt_0015 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			208,
+			156
+		},
+		trim = {
+			34,
+			37,
+			34,
+			32
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1876,
+			3591,
+			140,
+			87
+		},
+		alias = {
+			"wuxian_bolt_0016"
+		}
+	},
+	wuxian_bolt_0017 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			208,
+			156
+		},
+		trim = {
+			34,
+			38,
+			38,
+			32
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2026,
+			2485,
+			136,
+			86
+		},
+		alias = {
+			"wuxian_bolt_0018"
+		}
+	},
+	wuxian_buff_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			44,
+			46,
+			30,
+			125
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			329,
+			836,
+			90,
+			85
+		},
+		alias = {}
+	},
+	wuxian_buff_0002 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			43,
+			44,
+			29,
+			125
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1327,
+			250,
+			92,
+			87
+		},
+		alias = {}
+	},
+	wuxian_buff_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			41,
+			43,
+			29,
+			126
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			531,
+			250,
+			94,
+			87
+		},
+		alias = {}
+	},
+	wuxian_buff_0004 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			41,
+			42,
+			28,
+			126
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1266,
+			134,
+			95,
+			88
+		},
+		alias = {}
+	},
+	wuxian_buff_0005 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			39,
+			40,
+			28,
+			126
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3837,
+			3072,
+			97,
+			90
+		},
+		alias = {}
+	},
+	wuxian_buff_0006 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			38,
+			38,
+			27,
+			118
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			645,
+			134,
+			99,
+			100
+		},
+		alias = {}
+	},
+	wuxian_buff_0007 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			37,
+			36,
+			27,
+			119
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			117,
+			1171,
+			100,
+			101
+		},
+		alias = {}
+	},
+	wuxian_buff_0008 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			36,
+			36,
+			26,
+			119
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1321,
+			6,
+			102,
+			101
+		},
+		alias = {}
+	},
+	wuxian_buff_0009 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			35,
+			35,
+			26,
+			121
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1104,
+			6,
+			103,
+			100
+		},
+		alias = {}
+	},
+	wuxian_buff_0010 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			34,
+			39,
+			34,
+			121
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1062,
+			134,
+			96,
+			96
+		},
+		alias = {}
+	},
+	wuxian_buff_0011 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			32,
+			58,
+			33,
+			122
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3628,
+			3072,
+			99,
+			76
+		},
+		alias = {}
+	},
+	wuxian_buff_0012 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			33,
+			57,
+			33,
+			122
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3733,
+			3072,
+			98,
+			77
+		},
+		alias = {}
+	},
+	wuxian_buff_0013 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			34,
+			55,
+			34,
+			122
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1164,
+			134,
+			96,
+			79
+		},
+		alias = {}
+	},
+	wuxian_buff_0014 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			35,
+			55,
+			35,
+			123
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			831,
+			250,
+			94,
+			78
+		},
+		alias = {}
+	},
+	wuxian_buff_0015 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			35,
+			52,
+			36,
+			123
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1228,
+			250,
+			93,
+			81
+		},
+		alias = {}
+	},
+	wuxian_buff_0016 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			34,
+			51,
+			35,
+			123
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1367,
+			134,
+			95,
+			82
+		},
+		alias = {}
+	},
+	wuxian_buff_0017 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			34,
+			50,
+			36,
+			124
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			731,
+			250,
+			94,
+			82
+		},
+		alias = {}
+	},
+	wuxian_buff_0018 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			34,
+			48,
+			36,
+			124
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			631,
+			250,
+			94,
+			84
+		},
+		alias = {}
+	},
+	wuxian_buff_0019 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			33,
+			45,
+			35,
+			125
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3957,
+			3534,
+			96,
+			86
+		},
+		alias = {}
+	},
+	wuxian_buff_0020 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			33,
+			43,
+			34,
+			125
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3940,
+			3072,
+			97,
+			88
+		},
+		alias = {}
+	},
+	wuxian_buff_0021 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			33,
+			42,
+			32,
+			125
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3523,
+			3072,
+			99,
+			89
+		},
+		alias = {}
+	},
+	wuxian_buff_0022 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			40,
+			40,
+			31,
+			125
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1129,
+			250,
+			93,
+			91
+		},
+		alias = {}
+	},
+	wuxian_buff_0023 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			164,
+			256
+		},
+		trim = {
+			42,
+			44,
+			31,
+			126
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			329,
+			744,
+			91,
+			86
+		},
+		alias = {}
+	},
+	wuxian_creep_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			263,
+			138,
+			270,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3092,
+			2440,
+			123,
+			95
+		},
+		alias = {
+			"wuxian_creep_0138",
+			"wuxian_creep_0139"
+		}
+	},
+	wuxian_creep_0002 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			261,
+			141,
+			267,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3379,
+			2298,
+			128,
+			92
+		},
+		alias = {
+			"wuxian_creep_0003"
+		}
+	},
+	wuxian_creep_0004 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			261,
+			138,
+			268,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3646,
+			2298,
+			127,
+			95
+		},
+		alias = {
+			"wuxian_creep_0005"
+		}
+	},
+	wuxian_creep_0006 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			261,
+			135,
+			267,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3245,
+			2298,
+			128,
+			98
+		},
+		alias = {
+			"wuxian_creep_0007"
+		}
+	},
+	wuxian_creep_0008 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			260,
+			131,
+			265,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3684,
+			2173,
+			131,
+			102
+		},
+		alias = {
+			"wuxian_creep_0009"
+		}
+	},
+	wuxian_creep_0010 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			260,
+			129,
+			265,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3547,
+			2173,
+			131,
+			104
+		},
+		alias = {}
+	},
+	wuxian_creep_0011 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			263,
+			129,
+			269,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2441,
+			3989,
+			124,
+			104
+		},
+		alias = {}
+	},
+	wuxian_creep_0012 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			263,
+			132,
+			269,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2833,
+			2440,
+			124,
+			101
+		},
+		alias = {}
+	},
+	wuxian_creep_0013 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			267,
+			132,
+			273,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3442,
+			2780,
+			116,
+			101
+		},
+		alias = {}
+	},
+	wuxian_creep_0014 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			267,
+			136,
+			273,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3564,
+			2780,
+			116,
+			97
+		},
+		alias = {}
+	},
+	wuxian_creep_0015 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			268,
+			136,
+			274,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2828,
+			3882,
+			114,
+			97
+		},
+		alias = {}
+	},
+	wuxian_creep_0016 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			268,
+			139,
+			274,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2828,
+			3985,
+			114,
+			94
+		},
+		alias = {}
+	},
+	wuxian_creep_0017 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			270,
+			139,
+			276,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3068,
+			3947,
+			110,
+			94
+		},
+		alias = {}
+	},
+	wuxian_creep_0018 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			270,
+			142,
+			276,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3185,
+			3072,
+			110,
+			91
+		},
+		alias = {}
+	},
+	wuxian_creep_0019 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			269,
+			142,
+			274,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2949,
+			3641,
+			113,
+			91
+		},
+		alias = {}
+	},
+	wuxian_creep_0020 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			269,
+			140,
+			274,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2949,
+			3542,
+			113,
+			93
+		},
+		alias = {}
+	},
+	wuxian_creep_0021 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			267,
+			140,
+			272,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3950,
+			2677,
+			117,
+			93
+		},
+		alias = {}
+	},
+	wuxian_creep_0022 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			267,
+			138,
+			272,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3827,
+			2677,
+			117,
+			95
+		},
+		alias = {}
+	},
+	wuxian_creep_0023 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			260,
+			137,
+			265,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3958,
+			2173,
+			131,
+			96
+		},
+		alias = {}
+	},
+	wuxian_creep_0024 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			260,
+			135,
+			265,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3821,
+			2173,
+			131,
+			98
+		},
+		alias = {
+			"wuxian_creep_0025"
+		}
+	},
+	wuxian_creep_0026 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			259,
+			132,
+			269,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3111,
+			2298,
+			128,
+			101
+		},
+		alias = {
+			"wuxian_creep_0027"
+		}
+	},
+	wuxian_creep_0028 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			260,
+			135,
+			267,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2306,
+			3187,
+			129,
+			98
+		},
+		alias = {
+			"wuxian_creep_0029"
+		}
+	},
+	wuxian_creep_0030 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			259,
+			137,
+			266,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2168,
+			3060,
+			131,
+			96
+		},
+		alias = {
+			"wuxian_creep_0031"
+		}
+	},
+	wuxian_creep_0032 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			267,
+			136,
+			268,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2702,
+			2677,
+			121,
+			97
+		},
+		alias = {
+			"wuxian_creep_0033"
+		}
+	},
+	wuxian_creep_0034 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			267,
+			138,
+			268,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2829,
+			2677,
+			121,
+			95
+		},
+		alias = {
+			"wuxian_creep_0035"
+		}
+	},
+	wuxian_creep_0036 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			267,
+			137,
+			269,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2956,
+			2677,
+			120,
+			96
+		},
+		alias = {
+			"wuxian_creep_0037"
+		}
+	},
+	wuxian_creep_0038 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			267,
+			133,
+			268,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3464,
+			2567,
+			121,
+			100
+		},
+		alias = {
+			"wuxian_creep_0039",
+			"wuxian_creep_0040"
+		}
+	},
+	wuxian_creep_0041 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			266,
+			130,
+			269,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2829,
+			2567,
+			121,
+			103
+		},
+		alias = {
+			"wuxian_creep_0042"
+		}
+	},
+	wuxian_creep_0043 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			266,
+			131,
+			269,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3083,
+			2567,
+			121,
+			102
+		},
+		alias = {
+			"wuxian_creep_0044"
+		}
+	},
+	wuxian_creep_0045 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			267,
+			133,
+			268,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3591,
+			2567,
+			121,
+			100
+		},
+		alias = {
+			"wuxian_creep_0046"
+		}
+	},
+	wuxian_creep_0047 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			267,
+			135,
+			268,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3845,
+			2567,
+			121,
+			98
+		},
+		alias = {
+			"wuxian_creep_0048"
+		}
+	},
+	wuxian_creep_0049 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			267,
+			135,
+			268,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3972,
+			2567,
+			121,
+			98
+		},
+		alias = {
+			"wuxian_creep_0050"
+		}
+	},
+	wuxian_creep_0051 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			267,
+			133,
+			268,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3718,
+			2567,
+			121,
+			100
+		},
+		alias = {
+			"wuxian_creep_0052"
+		}
+	},
+	wuxian_creep_0053 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			267,
+			131,
+			268,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3210,
+			2567,
+			121,
+			102
+		},
+		alias = {
+			"wuxian_creep_0054",
+			"wuxian_creep_0055"
+		}
+	},
+	wuxian_creep_0056 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			267,
+			130,
+			268,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2956,
+			2567,
+			121,
+			103
+		},
+		alias = {
+			"wuxian_creep_0057"
+		}
+	},
+	wuxian_creep_0058 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			267,
+			131,
+			268,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3337,
+			2567,
+			121,
+			102
+		},
+		alias = {
+			"wuxian_creep_0059"
+		}
+	},
+	wuxian_creep_0060 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			267,
+			134,
+			269,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2702,
+			3306,
+			120,
+			99
+		},
+		alias = {
+			"wuxian_creep_0061"
+		}
+	},
+	wuxian_creep_0062 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			272,
+			139,
+			273,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3068,
+			3212,
+			111,
+			94
+		},
+		alias = {
+			"wuxian_creep_0063"
+		}
+	},
+	wuxian_creep_0064 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			272,
+			144,
+			273,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3068,
+			3312,
+			111,
+			89
+		},
+		alias = {
+			"wuxian_creep_0065"
+		}
+	},
+	wuxian_creep_0066 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			272,
+			140,
+			275,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3760,
+			3169,
+			109,
+			93
+		},
+		alias = {
+			"wuxian_creep_0067"
+		}
+	},
+	wuxian_creep_0068 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			270,
+			136,
+			273,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2949,
+			3235,
+			113,
+			97
+		},
+		alias = {}
+	},
+	wuxian_creep_0069 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			270,
+			136,
+			273,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2949,
+			3338,
+			113,
+			97
+		},
+		alias = {
+			"wuxian_creep_0070"
+		}
+	},
+	wuxian_creep_0071 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			270,
+			133,
+			275,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3656,
+			2934,
+			111,
+			100
+		},
+		alias = {
+			"wuxian_creep_0072"
+		}
+	},
+	wuxian_creep_0073 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			271,
+			134,
+			276,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3530,
+			3169,
+			109,
+			99
+		},
+		alias = {
+			"wuxian_creep_0074"
+		}
+	},
+	wuxian_creep_0075 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			272,
+			136,
+			278,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3863,
+			3634,
+			106,
+			97
+		},
+		alias = {
+			"wuxian_creep_0076"
+		}
+	},
+	wuxian_creep_0077 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			270,
+			139,
+			278,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3642,
+			3304,
+			108,
+			94
+		},
+		alias = {
+			"wuxian_creep_0078"
+		}
+	},
+	wuxian_creep_0079 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			270,
+			143,
+			277,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3301,
+			3072,
+			109,
+			90
+		},
+		alias = {
+			"wuxian_creep_0080"
+		}
+	},
+	wuxian_creep_0081 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			272,
+			137,
+			276,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3528,
+			3304,
+			108,
+			96
+		},
+		alias = {
+			"wuxian_creep_0082"
+		}
+	},
+	wuxian_creep_0083 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			270,
+			134,
+			275,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3773,
+			2934,
+			111,
+			99
+		},
+		alias = {
+			"wuxian_creep_0084"
+		}
+	},
+	wuxian_creep_0085 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			270,
+			134,
+			275,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3890,
+			2934,
+			111,
+			99
+		},
+		alias = {}
+	},
+	wuxian_creep_0086 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			272,
+			132,
+			274,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3068,
+			3529,
+			110,
+			101
+		},
+		alias = {}
+	},
+	wuxian_creep_0087 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			272,
+			132,
+			274,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3068,
+			3636,
+			110,
+			101
+		},
+		alias = {}
+	},
+	wuxian_creep_0088 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			273,
+			136,
+			275,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3300,
+			3971,
+			108,
+			97
+		},
+		alias = {}
+	},
+	wuxian_creep_0089 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			273,
+			136,
+			275,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3414,
+			3304,
+			108,
+			97
+		},
+		alias = {}
+	},
+	wuxian_creep_0090 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			271,
+			137,
+			275,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3068,
+			3743,
+			110,
+			96
+		},
+		alias = {}
+	},
+	wuxian_creep_0091 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			271,
+			137,
+			275,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3068,
+			3845,
+			110,
+			96
+		},
+		alias = {}
+	},
+	wuxian_creep_0092 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			265,
+			138,
+			273,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3332,
+			2677,
+			118,
+			95
+		},
+		alias = {
+			"wuxian_creep_0093"
+		}
+	},
+	wuxian_creep_0094 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			273,
+			120,
+			280,
+			219
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			777,
+			6,
+			103,
+			113
+		},
+		alias = {
+			"wuxian_creep_0095"
+		}
+	},
+	wuxian_creep_0096 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			248,
+			137,
+			255,
+			194
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1725,
+			1406,
+			153,
+			121
+		},
+		alias = {
+			"wuxian_creep_0097"
+		}
+	},
+	wuxian_creep_0098 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			250,
+			134,
+			274,
+			193
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2168,
+			2583,
+			132,
+			125
+		},
+		alias = {
+			"wuxian_creep_0099"
+		}
+	},
+	wuxian_creep_0100 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			240,
+			134,
+			279,
+			189
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2312,
+			1854,
+			137,
+			129
+		},
+		alias = {
+			"wuxian_creep_0101"
+		}
+	},
+	wuxian_creep_0102 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			246,
+			134,
+			282,
+			198
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2575,
+			2298,
+			128,
+			120
+		},
+		alias = {
+			"wuxian_creep_0103"
+		}
+	},
+	wuxian_creep_0104 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			250,
+			133,
+			284,
+			213
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3221,
+			2440,
+			122,
+			106
+		},
+		alias = {
+			"wuxian_creep_0105"
+		}
+	},
+	wuxian_creep_0106 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			252,
+			127,
+			289,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2828,
+			3074,
+			115,
+			106
+		},
+		alias = {
+			"wuxian_creep_0107"
+		}
+	},
+	wuxian_creep_0108 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			253,
+			113,
+			88,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			6,
+			315,
+			151
+		},
+		alias = {
+			"wuxian_creep_0109"
+		}
+	},
+	wuxian_creep_0110 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			277,
+			105,
+			79,
+			183
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			508,
+			300,
+			164
+		},
+		alias = {
+			"wuxian_creep_0111"
+		}
+	},
+	wuxian_creep_0112 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			279,
+			108,
+			77,
+			179
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			337,
+			300,
+			165
+		},
+		alias = {
+			"wuxian_creep_0113"
+		}
+	},
+	wuxian_creep_0114 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			279,
+			109,
+			77,
+			175
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			163,
+			300,
+			168
+		},
+		alias = {
+			"wuxian_creep_0115"
+		}
+	},
+	wuxian_creep_0116 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			279,
+			110,
+			78,
+			175
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			678,
+			299,
+			167
+		},
+		alias = {
+			"wuxian_creep_0117"
+		}
+	},
+	wuxian_creep_0118 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			279,
+			117,
+			81,
+			192
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1560,
+			6,
+			296,
+			143
+		},
+		alias = {
+			"wuxian_creep_0119"
+		}
+	},
+	wuxian_creep_0120 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			279,
+			118,
+			79,
+			193
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1256,
+			6,
+			298,
+			141
+		},
+		alias = {
+			"wuxian_creep_0121"
+		}
+	},
+	wuxian_creep_0122 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			279,
+			123,
+			76,
+			196
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			949,
+			6,
+			301,
+			133
+		},
+		alias = {
+			"wuxian_creep_0123"
+		}
+	},
+	wuxian_creep_0124 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			279,
+			125,
+			74,
+			199
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			640,
+			6,
+			303,
+			128
+		},
+		alias = {
+			"wuxian_creep_0125"
+		}
+	},
+	wuxian_creep_0126 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			286,
+			126,
+			75,
+			201
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1862,
+			6,
+			295,
+			125
+		},
+		alias = {
+			"wuxian_creep_0127"
+		}
+	},
+	wuxian_creep_0128 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			273,
+			127,
+			76,
+			202
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			327,
+			6,
+			307,
+			123
+		},
+		alias = {
+			"wuxian_creep_0129"
+		}
+	},
+	wuxian_creep_0130 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			268,
+			129,
+			277,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3985,
+			2440,
+			111,
+			104
+		},
+		alias = {
+			"wuxian_creep_0131"
+		}
+	},
+	wuxian_creep_0132 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			267,
+			133,
+			274,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2828,
+			3292,
+			115,
+			100
+		},
+		alias = {
+			"wuxian_creep_0133"
+		}
+	},
+	wuxian_creep_0134 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			257,
+			146,
+			265,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2728,
+			2020,
+			134,
+			87
+		},
+		alias = {
+			"wuxian_creep_0135"
+		}
+	},
+	wuxian_creep_0136 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			265,
+			138,
+			273,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3456,
+			2677,
+			118,
+			95
+		},
+		alias = {
+			"wuxian_creep_0137"
+		}
+	},
+	wuxian_creep_0140 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			261,
+			136,
+			278,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3704,
+			2677,
+			117,
+			97
+		},
+		alias = {
+			"wuxian_creep_0141"
+		}
+	},
+	wuxian_creep_0142 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			269,
+			140,
+			287,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3748,
+			3534,
+			100,
+			93
+		},
+		alias = {
+			"wuxian_creep_0143"
+		}
+	},
+	wuxian_creep_0144 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			266,
+			140,
+			282,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3870,
+			3304,
+			108,
+			93
+		},
+		alias = {
+			"wuxian_creep_0145"
+		}
+	},
+	wuxian_creep_0146 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			259,
+			138,
+			284,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2949,
+			3441,
+			113,
+			95
+		},
+		alias = {
+			"wuxian_creep_0147"
+		}
+	},
+	wuxian_creep_0148 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			278,
+			138,
+			209,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3501,
+			474,
+			169,
+			95
+		},
+		alias = {
+			"wuxian_creep_0149"
+		}
+	},
+	wuxian_creep_0150 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			268,
+			138,
+			242,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3920,
+			1406,
+			146,
+			95
+		},
+		alias = {
+			"wuxian_creep_0151"
+		}
+	},
+	wuxian_creep_0152 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			273,
+			137,
+			236,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3311,
+			1406,
+			147,
+			96
+		},
+		alias = {
+			"wuxian_creep_0153"
+		}
+	},
+	wuxian_creep_0154 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			277,
+			138,
+			230,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3156,
+			1406,
+			149,
+			95
+		},
+		alias = {
+			"wuxian_creep_0155"
+		}
+	},
+	wuxian_creep_0156 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			272,
+			125,
+			248,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3455,
+			1854,
+			136,
+			108
+		},
+		alias = {
+			"wuxian_creep_0157"
+		}
+	},
+	wuxian_creep_0158 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			264,
+			137,
+			273,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3082,
+			2677,
+			119,
+			96
+		},
+		alias = {
+			"wuxian_creep_0159"
+		}
+	},
+	wuxian_creep_0160 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			265,
+			138,
+			273,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3580,
+			2677,
+			118,
+			95
+		},
+		alias = {
+			"wuxian_creep_0161"
+		}
+	},
+	wuxian_creep_0162 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			272,
+			129,
+			270,
+			215
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2828,
+			3658,
+			114,
+			108
+		},
+		alias = {
+			"wuxian_creep_0163"
+		}
+	},
+	wuxian_creep_0164 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			234,
+			106,
+			239,
+			201
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			312,
+			2731,
+			183,
+			145
+		},
+		alias = {
+			"wuxian_creep_0165"
+		}
+	},
+	wuxian_creep_0166 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			228,
+			65,
+			234,
+			205
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2614,
+			163,
+			194,
+			182
+		},
+		alias = {
+			"wuxian_creep_0167"
+		}
+	},
+	wuxian_creep_0168 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			221,
+			33,
+			224,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			3543,
+			211,
+			200
+		},
+		alias = {
+			"wuxian_creep_0169"
+		}
+	},
+	wuxian_creep_0170 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			245,
+			27,
+			244,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			1021,
+			167,
+			206
+		},
+		alias = {
+			"wuxian_creep_0171"
+		}
+	},
+	wuxian_creep_0172 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			241,
+			27,
+			249,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1243,
+			1021,
+			166,
+			206
+		},
+		alias = {
+			"wuxian_creep_0173"
+		}
+	},
+	wuxian_creep_0174 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			249,
+			32,
+			251,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			1618,
+			156,
+			201
+		},
+		alias = {
+			"wuxian_creep_0175"
+		}
+	},
+	wuxian_creep_0176 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			257,
+			30,
+			241,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1239,
+			2591,
+			158,
+			203
+		},
+		alias = {}
+	},
+	wuxian_creep_0177 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			257,
+			30,
+			241,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1239,
+			2800,
+			158,
+			203
+		},
+		alias = {}
+	},
+	wuxian_creep_0178 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			255,
+			29,
+			242,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1239,
+			2171,
+			159,
+			204
+		},
+		alias = {}
+	},
+	wuxian_creep_0179 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			255,
+			29,
+			242,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1239,
+			2381,
+			159,
+			204
+		},
+		alias = {}
+	},
+	wuxian_creep_0180 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			262,
+			28,
+			243,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1566,
+			1704,
+			151,
+			205
+		},
+		alias = {}
+	},
+	wuxian_creep_0181 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			263,
+			27,
+			240,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			3570,
+			153,
+			206
+		},
+		alias = {}
+	},
+	wuxian_creep_0182 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			260,
+			27,
+			240,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1404,
+			1406,
+			156,
+			206
+		},
+		alias = {}
+	},
+	wuxian_creep_0183 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			260,
+			29,
+			245,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1566,
+			1915,
+			151,
+			204
+		},
+		alias = {}
+	},
+	wuxian_creep_0184 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			241,
+			26,
+			243,
+			194
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			713,
+			2406,
+			172,
+			232
+		},
+		alias = {}
+	},
+	wuxian_creep_0185 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			241,
+			26,
+			240,
+			194
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1623,
+			578,
+			175,
+			232
+		},
+		alias = {}
+	},
+	wuxian_creep_0186 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			248,
+			27,
+			240,
+			203
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			894,
+			3670,
+			168,
+			222
+		},
+		alias = {}
+	},
+	wuxian_creep_0187 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			248,
+			29,
+			245,
+			203
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			1233,
+			163,
+			220
+		},
+		alias = {}
+	},
+	wuxian_creep_0188 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			245,
+			29,
+			242,
+			204
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			894,
+			2541,
+			169,
+			219
+		},
+		alias = {
+			"wuxian_creep_0189"
+		}
+	},
+	wuxian_creep_0190 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			244,
+			32,
+			249,
+			205
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1070,
+			1459,
+			163,
+			215
+		},
+		alias = {
+			"wuxian_creep_0191"
+		}
+	},
+	wuxian_creep_0192 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			240,
+			33,
+			245,
+			210
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			713,
+			3740,
+			171,
+			209
+		},
+		alias = {
+			"wuxian_creep_0193"
+		}
+	},
+	wuxian_creep_0194 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			257,
+			141,
+			262,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2741,
+			1854,
+			137,
+			92
+		},
+		alias = {
+			"wuxian_creep_0195"
+		}
+	},
+	wuxian_creep_0196 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			249,
+			157,
+			259,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2527,
+			760,
+			148,
+			76
+		},
+		alias = {
+			"wuxian_creep_0197"
+		}
+	},
+	wuxian_creep_0198 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			250,
+			123,
+			277,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2306,
+			2955,
+			129,
+			110
+		},
+		alias = {
+			"wuxian_creep_0199"
+		}
+	},
+	wuxian_creep_0200 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			242,
+			113,
+			277,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2455,
+			1854,
+			137,
+			120
+		},
+		alias = {
+			"wuxian_creep_0201"
+		}
+	},
+	wuxian_creep_0202 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			236,
+			86,
+			268,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1882,
+			1544,
+			152,
+			147
+		},
+		alias = {
+			"wuxian_creep_0203"
+		}
+	},
+	wuxian_creep_0204 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			234,
+			79,
+			270,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1566,
+			1544,
+			152,
+			154
+		},
+		alias = {
+			"wuxian_creep_0205"
+		}
+	},
+	wuxian_creep_0206 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			232,
+			69,
+			274,
+			219
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1566,
+			2671,
+			150,
+			164
+		},
+		alias = {
+			"wuxian_creep_0207"
+		}
+	},
+	wuxian_creep_0208 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			230,
+			64,
+			280,
+			207
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1723,
+			2861,
+			146,
+			181
+		},
+		alias = {
+			"wuxian_creep_0209"
+		}
+	},
+	wuxian_creep_0210 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			230,
+			61,
+			279,
+			194
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1723,
+			1704,
+			147,
+			197
+		},
+		alias = {
+			"wuxian_creep_0211"
+		}
+	},
+	wuxian_creep_0212 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			242,
+			64,
+			290,
+			188
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2441,
+			2946,
+			124,
+			200
+		},
+		alias = {
+			"wuxian_creep_0213"
+		}
+	},
+	wuxian_creep_0214 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			235,
+			75,
+			290,
+			190
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2168,
+			2714,
+			131,
+			187
+		},
+		alias = {
+			"wuxian_creep_0215"
+		}
+	},
+	wuxian_creep_0216 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			240,
+			89,
+			286,
+			193
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2168,
+			3162,
+			130,
+			170
+		},
+		alias = {
+			"wuxian_creep_0217"
+		}
+	},
+	wuxian_creep_0218 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			244,
+			105,
+			286,
+			193
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2441,
+			2440,
+			126,
+			154
+		},
+		alias = {
+			"wuxian_creep_0219"
+		}
+	},
+	wuxian_creep_0220 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			237,
+			130,
+			286,
+			193
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3426,
+			2020,
+			133,
+			129
+		},
+		alias = {
+			"wuxian_creep_0221"
+		}
+	},
+	wuxian_creep_0222 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			234,
+			155,
+			286,
+			193
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3597,
+			1854,
+			136,
+			104
+		},
+		alias = {
+			"wuxian_creep_0223"
+		}
+	},
+	wuxian_creep_0224 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			239,
+			142,
+			282,
+			202
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2026,
+			3625,
+			135,
+			108
+		},
+		alias = {
+			"wuxian_creep_0225"
+		}
+	},
+	wuxian_creep_0226 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			238,
+			133,
+			277,
+			201
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1876,
+			2925,
+			141,
+			118
+		},
+		alias = {
+			"wuxian_creep_0227"
+		}
+	},
+	wuxian_creep_0228 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			227,
+			126,
+			273,
+			199
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3033,
+			1233,
+			156,
+			127
+		},
+		alias = {
+			"wuxian_creep_0229"
+		}
+	},
+	wuxian_creep_0230 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			218,
+			122,
+			269,
+			198
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2127,
+			845,
+			169,
+			132
+		},
+		alias = {
+			"wuxian_creep_0231"
+		}
+	},
+	wuxian_creep_0232 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			222,
+			140,
+			262,
+			195
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			713,
+			3093,
+			172,
+			117
+		},
+		alias = {
+			"wuxian_creep_0233"
+		}
+	},
+	wuxian_creep_0234 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			656,
+			452
+		},
+		trim = {
+			247,
+			159,
+			286,
+			193
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2963,
+			2440,
+			123,
+			100
+		},
+		alias = {
+			"wuxian_creep_0235"
+		}
+	},
+	wuxian_explosion_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			264,
+			372
+		},
+		trim = {
+			68,
+			105,
+			99,
+			183
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3854,
+			3534,
+			97,
+			84
+		},
+		alias = {}
+	},
+	wuxian_explosion_0002 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			264,
+			372
+		},
+		trim = {
+			46,
+			90,
+			92,
+			180
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2441,
+			2744,
+			126,
+			102
+		},
+		alias = {}
+	},
+	wuxian_explosion_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			264,
+			372
+		},
+		trim = {
+			34,
+			75,
+			42,
+			165
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3407,
+			163,
+			188,
+			132
+		},
+		alias = {
+			"wuxian_explosion_0004"
+		}
+	},
+	wuxian_explosion_0005 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			264,
+			372
+		},
+		trim = {
+			27,
+			52,
+			37,
+			165
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1586,
+			163,
+			200,
+			155
+		},
+		alias = {
+			"wuxian_explosion_0006"
+		}
+	},
+	wuxian_explosion_0007 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			264,
+			372
+		},
+		trim = {
+			22,
+			25,
+			35,
+			165
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			744,
+			163,
+			207,
+			182
+		},
+		alias = {
+			"wuxian_explosion_0008"
+		}
+	},
+	wuxian_explosion_0009 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			264,
+			372
+		},
+		trim = {
+			19,
+			21,
+			35,
+			166
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			312,
+			163,
+			210,
+			185
+		},
+		alias = {}
+	},
+	wuxian_explosion_0010 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			264,
+			372
+		},
+		trim = {
+			19,
+			21,
+			35,
+			162
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			6,
+			3876,
+			210,
+			189
+		},
+		alias = {}
+	},
+	wuxian_explosion_0011 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			264,
+			372
+		},
+		trim = {
+			19,
+			21,
+			37,
+			158
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			312,
+			556,
+			208,
+			193
+		},
+		alias = {}
+	},
+	wuxian_explosion_0012 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			264,
+			372
+		},
+		trim = {
+			19,
+			21,
+			37,
+			155
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			312,
+			354,
+			208,
+			196
+		},
+		alias = {}
+	},
+	wuxian_explosion_0013 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			264,
+			372
+		},
+		trim = {
+			21,
+			21,
+			38,
+			151
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			312,
+			963,
+			205,
+			200
+		},
+		alias = {}
+	},
+	wuxian_explosion_0014 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			264,
+			372
+		},
+		trim = {
+			21,
+			21,
+			38,
+			149
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			312,
+			755,
+			205,
+			202
+		},
+		alias = {}
+	},
+	wuxian_explosion_0015 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			264,
+			372
+		},
+		trim = {
+			23,
+			19,
+			54,
+			208
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3601,
+			163,
+			187,
+			145
+		},
+		alias = {
+			"wuxian_explosion_0016"
+		}
+	},
+	wuxian_explosion_0017 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			264,
+			372
+		},
+		trim = {
+			41,
+			31,
+			54,
+			212
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2477,
+			845,
+			169,
+			129
+		},
+		alias = {}
+	},
+	wuxian_explosion_0018 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			264,
+			372
+		},
+		trim = {
+			68,
+			53,
+			77,
+			225
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3207,
+			2677,
+			119,
+			94
+		},
+		alias = {}
+	},
+	wuxian_explosion_0019 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			264,
+			372
+		},
+		trim = {
+			77,
+			52,
+			81,
+			262
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2708,
+			1336,
+			106,
+			58
+		},
+		alias = {}
+	},
+	wuxian_hit_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			39,
+			30,
+			91,
+			85
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3826,
+			1704,
+			142,
+			129
+		},
+		alias = {}
+	},
+	wuxian_hit_0002 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			39,
+			30,
+			91,
+			85
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1876,
+			2512,
+			142,
+			129
+		},
+		alias = {}
+	},
+	wuxian_hit_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			34,
+			25,
+			91,
+			84
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1723,
+			2203,
+			147,
+			135
+		},
+		alias = {}
+	},
+	wuxian_hit_0004 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			34,
+			25,
+			91,
+			84
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1723,
+			2344,
+			147,
+			135
+		},
+		alias = {}
+	},
+	wuxian_hit_0005 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			33,
+			24,
+			91,
+			84
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3907,
+			1544,
+			148,
+			136
+		},
+		alias = {}
+	},
+	wuxian_hit_0006 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			33,
+			24,
+			91,
+			84
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1566,
+			3407,
+			148,
+			136
+		},
+		alias = {}
+	},
+	wuxian_hit_0007 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			33,
+			24,
+			91,
+			84
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1566,
+			3549,
+			148,
+			136
+		},
+		alias = {}
+	},
+	wuxian_hit_0008 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			40,
+			37,
+			91,
+			84
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1876,
+			2796,
+			141,
+			123
+		},
+		alias = {}
+	},
+	wuxian_hit_0009 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			40,
+			37,
+			92,
+			84
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1876,
+			3049,
+			140,
+			123
+		},
+		alias = {}
+	},
+	wuxian_hit_0010 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			40,
+			37,
+			92,
+			84
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1876,
+			3178,
+			140,
+			123
+		},
+		alias = {}
+	},
+	wuxian_hit_0011 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			52,
+			49,
+			92,
+			84
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2843,
+			2298,
+			128,
+			111
+		},
+		alias = {}
+	},
+	wuxian_hit_0012 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			51,
+			49,
+			92,
+			84
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2306,
+			2721,
+			129,
+			111
+		},
+		alias = {}
+	},
+	wuxian_hit_0013 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			51,
+			49,
+			92,
+			84
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2306,
+			2838,
+			129,
+			111
+		},
+		alias = {}
+	},
+	wuxian_hit_0014 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			50,
+			50,
+			92,
+			84
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2168,
+			3501,
+			130,
+			110
+		},
+		alias = {}
+	},
+	wuxian_hit_0015 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			50,
+			50,
+			93,
+			84
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2306,
+			3071,
+			129,
+			110
+		},
+		alias = {}
+	},
+	wuxian_hit_0016 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			49,
+			50,
+			93,
+			84
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2168,
+			3617,
+			130,
+			110
+		},
+		alias = {}
+	},
+	wuxian_hit_0017 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			48,
+			51,
+			93,
+			84
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2999,
+			2173,
+			131,
+			109
+		},
+		alias = {}
+	},
+	wuxian_hit_0018 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			47,
+			52,
+			94,
+			83
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3136,
+			2173,
+			131,
+			109
+		},
+		alias = {}
+	},
+	wuxian_hit_0019 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			47,
+			53,
+			94,
+			83
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3273,
+			2173,
+			131,
+			108
+		},
+		alias = {}
+	},
+	wuxian_hit_0020 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			46,
+			54,
+			95,
+			83
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3410,
+			2173,
+			131,
+			107
+		},
+		alias = {}
+	},
+	wuxian_hit_0021 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			45,
+			55,
+			95,
+			82
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2585,
+			2173,
+			132,
+			107
+		},
+		alias = {}
+	},
+	wuxian_hit_0022 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			44,
+			56,
+			96,
+			82
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2723,
+			2173,
+			132,
+			106
+		},
+		alias = {}
+	},
+	wuxian_hit_0023 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			43,
+			57,
+			96,
+			82
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2307,
+			2173,
+			133,
+			105
+		},
+		alias = {}
+	},
+	wuxian_hit_0024 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			41,
+			58,
+			97,
+			81
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2448,
+			2020,
+			134,
+			105
+		},
+		alias = {}
+	},
+	wuxian_hit_0025 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			40,
+			59,
+			98,
+			80
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2588,
+			2020,
+			134,
+			105
+		},
+		alias = {}
+	},
+	wuxian_hit_0026 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			39,
+			60,
+			112,
+			80
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3858,
+			2440,
+			121,
+			104
+		},
+		alias = {}
+	},
+	wuxian_hit_0027 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			38,
+			60,
+			113,
+			79
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3604,
+			2440,
+			121,
+			105
+		},
+		alias = {}
+	},
+	wuxian_hit_0028 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			37,
+			61,
+			114,
+			79
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2702,
+			2567,
+			121,
+			104
+		},
+		alias = {}
+	},
+	wuxian_hit_0029 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			36,
+			61,
+			115,
+			78
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3731,
+			2440,
+			121,
+			105
+		},
+		alias = {}
+	},
+	wuxian_hit_0030 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			34,
+			62,
+			116,
+			76
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3349,
+			2440,
+			122,
+			106
+		},
+		alias = {}
+	},
+	wuxian_hit_0031 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			33,
+			62,
+			118,
+			75
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3477,
+			2440,
+			121,
+			107
+		},
+		alias = {}
+	},
+	wuxian_hit_0032 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			33,
+			63,
+			119,
+			73
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2702,
+			3087,
+			120,
+			108
+		},
+		alias = {}
+	},
+	wuxian_hit_0033 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			32,
+			63,
+			121,
+			72
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2702,
+			3864,
+			119,
+			109
+		},
+		alias = {}
+	},
+	wuxian_hit_0034 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			41,
+			64,
+			123,
+			74
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3300,
+			3859,
+			108,
+			106
+		},
+		alias = {}
+	},
+	wuxian_hit_0035 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			40,
+			66,
+			125,
+			73
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3640,
+			3407,
+			107,
+			105
+		},
+		alias = {}
+	},
+	wuxian_hit_0036 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			38,
+			67,
+			127,
+			73
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3753,
+			3407,
+			107,
+			104
+		},
+		alias = {}
+	},
+	wuxian_hit_0037 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			36,
+			68,
+			129,
+			72
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3866,
+			3407,
+			107,
+			104
+		},
+		alias = {}
+	},
+	wuxian_hit_0038 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			34,
+			70,
+			132,
+			71
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3751,
+			3634,
+			106,
+			103
+		},
+		alias = {}
+	},
+	wuxian_hit_0039 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			32,
+			72,
+			135,
+			71
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			6,
+			400,
+			105,
+			101
+		},
+		alias = {}
+	},
+	wuxian_hit_0040 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			31,
+			74,
+			139,
+			72
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			117,
+			390,
+			102,
+			98
+		},
+		alias = {}
+	},
+	wuxian_hit_0041 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			272,
+			244
+		},
+		trim = {
+			0,
+			0,
+			270,
+			242
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			475,
+			135,
+			2,
+			2
+		},
+		alias = {
+			"wuxian_hit_0042",
+			"wuxian_hit_0043",
+			"wuxian_hit_0044",
+			"wuxian_hit_0045",
+			"wuxian_hit_0046"
+		}
+	},
+	wuxian_hit_mele_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			120,
+			120
+		},
+		trim = {
+			44,
+			38,
+			38,
+			41
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3206,
+			116,
+			38,
+			41
+		},
+		alias = {}
+	},
+	wuxian_hit_mele_0002 = {
+		a_name = "go_enemies_terrain_8_1_b-2.dds",
+		size = {
+			120,
+			120
+		},
+		trim = {
+			32,
+			27,
+			34,
+			31
+		},
+		a_size = {
+			1568,
+			1564
+		},
+		f_quad = {
+			1383,
+			998,
+			54,
+			62
+		},
+		alias = {}
+	},
+	wuxian_hit_mele_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			120,
+			120
+		},
+		trim = {
+			32,
+			27,
+			32,
+			33
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1402,
+			504,
+			56,
+			60
+		},
+		alias = {}
+	},
+	wuxian_hit_mele_0004 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			120,
+			120
+		},
+		trim = {
+			0,
+			0,
+			118,
+			118
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			475,
+			143,
+			2,
+			2
+		},
+		alias = {
+			"wuxian_hit_mele_0005"
+		}
+	},
+	wuxian_trail_0001 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			188,
+			140
+		},
+		trim = {
+			33,
+			33,
+			34,
+			30
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			2573,
+			4004,
+			121,
+			77
+		},
+		alias = {
+			"wuxian_trail_0002"
+		}
+	},
+	wuxian_trail_0003 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			188,
+			140
+		},
+		trim = {
+			40,
+			38,
+			39,
+			35
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			3027,
+			1946,
+			109,
+			67
+		},
+		alias = {
+			"wuxian_trail_0004"
+		}
+	},
+	wuxian_trail_0005 = {
+		a_name = "go_enemies_terrain_8_1_b-1.dds",
+		size = {
+			188,
+			140
+		},
+		trim = {
+			54,
+			45,
+			55,
+			43
+		},
+		a_size = {
+			4096,
+			4096
+		},
+		f_quad = {
+			1985,
+			785,
+			79,
+			52
+		},
+		alias = {
+			"wuxian_trail_0006"
+		}
+	}
+}
+
+for k, v in pairs(a) do
+	local rate = 32 / 45
+	a[k]["size"][1] = math.ceil(a[k]["size"][1]*rate)
+	a[k]["size"][2] = math.ceil(a[k]["size"][2]*rate)
+
+	a[k]["trim"][1] = math.ceil(a[k]["trim"][1]*rate)
+	a[k]["trim"][2] = math.ceil(a[k]["trim"][2]*rate)
+	a[k]["trim"][3] = math.ceil(a[k]["trim"][3]*rate)
+	a[k]["trim"][4] = math.ceil(a[k]["trim"][4]*rate)
+
+	a[k]["a_size"][1] = math.ceil(a[k]["a_size"][1]*rate)
+	a[k]["a_size"][2] = math.ceil(a[k]["a_size"][2]*rate)
+
+	a[k]["f_quad"][1] = math.ceil(a[k]["f_quad"][1]*rate)
+	a[k]["f_quad"][2] = math.ceil(a[k]["f_quad"][2]*rate)
+	a[k]["f_quad"][3] = math.ceil(a[k]["f_quad"][3]*rate)
+	a[k]["f_quad"][4] = math.ceil(a[k]["f_quad"][4]*rate)
+end 
+
+return a
