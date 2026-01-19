@@ -251,6 +251,66 @@ return {
 	["kr1-desktop/images/fullhd/go_enemies_storm-1.dds"] = {
 		size = 5592560
 	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_2-1.png"] = {
+		size = 5626492
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_3-1.png"] = {
+		size = 5986456
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_3-2.png"] = {
+		size = 592219
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_4-1.png"] = {
+		size = 4887771
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_5-1.png"] = {
+		size = 5016260
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_5-2.png"] = {
+		size = 362953
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_6-1.png"] = {
+		size = 5923086
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_6-2.png"] = {
+		size = 789329
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_7-1.png"] = {
+		size = 4719599
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_7_spider_web-1.png"] = {
+		size = 268202
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_8_1_a-1.dds"] = {
+		size = 7496768
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_8_1_b-1.dds"] = {
+		size = 16777344
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_8_1_b-2.dds"] = {
+		size = 2452480
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_8_2_a-1.dds"] = {
+		size = 16112320
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_8_2_b-1.dds"] = {
+		size = 10125248
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_8_3-1.dds"] = {
+		size = 16777344
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_8_3-2.dds"] = {
+		size = 3960224
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_8_4-1.dds"] = {
+		size = 2993024
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_8_4_palace_guard-1.dds"] = {
+		size = 4194432
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_8_4_wukong_terracotta_grande-1.dds"] = {
+		size = 4194432
+	},
 	["kr1-desktop/images/fullhd/go_enemies_torment-1.dds"] = {
 		size = 5592560
 	},
@@ -1408,6 +1468,15 @@ return {
 	},
 	["kr1-desktop/images/fullhd/go_stages_sea_of_trees-1.png"] = {
 		size = 142759
+	},
+	["kr1-desktop/images/fullhd/go_stages_terrain2-1.png"] = {
+		size = 27459
+	},
+	["kr1-desktop/images/fullhd/go_stages_terrain3-1.png"] = {
+		size = 1189516
+	},
+	["kr1-desktop/images/fullhd/go_stages_terrain4-1.png"] = {
+		size = 535452
 	},
 	["kr1-desktop/images/fullhd/go_stages_underground-1.dds"] = {
 		size = 5592560
