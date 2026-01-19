@@ -1050,10 +1050,7 @@ return {
 		size = 2138528
 	},
 	["kr1-desktop/images/fullhd/go_stage2002-1.dds"] = {
-		size = 5592580
-	},
-	["kr1-desktop/images/fullhd/go_stage2002-2.dds"] = {
-		size = 349700
+		size = 8738388
 	},
 	["kr1-desktop/images/fullhd/go_stage2002_bg-1.dds"] = {
 		size = 2138528
