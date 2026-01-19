@@ -5413,7 +5413,7 @@ function scripts.mod_mark_flags.update(this, store)
 	while true do
 		local target = store.entities[m.target_id]
 
-		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration then
+		if not target or (target.health and target.health.dead) or m.duration >= 0 and store.tick_ts - m.ts > m.duration then
 			queue_remove(store, this)
 
 			return
@@ -9235,6 +9235,149 @@ function scripts.mod_attract.update(this, store)
 	queue_remove(store, this)
 end
 
+scripts.delayed_play_kr5 = {}
+
+function scripts.delayed_play_kr5.update(this, store, script)
+	local s = this.render.sprites[1]
+	local d = this.delayed_play
+	local clicks = 0
+
+	if math.random() < d.flip_chance then
+		s.flip_x = not s.flip_x
+	end
+
+	if d.idle_animation then
+		U.animation_start(this, d.idle_animation, nil, store.tick_ts, d.loop_idle)
+	else
+		s.hidden = true
+	end
+
+	d.delay = U.frandom(d.start_min_delay and d.start_min_delay or d.min_delay, d.start_max_delay and d.start_max_delay or d.max_delay)
+
+	if d.start_fixed_delay then
+		d.delay = d.start_fixed_delay
+	end
+
+	while true do
+		if not d.disabled and this.ui and d.required_clicks then
+			if this.ui.clicked then
+				this.ui.clicked = nil
+				clicks = clicks + 1
+
+				if clicks < d.required_clicks then
+					S:queue(d.click_sound)
+				end
+
+				if d.click_tweens and this.tween then
+					this.tween.props[1].ts = store.tick_ts
+					this.tween.disabled = false
+				end
+			end
+
+			if clicks == d.required_clicks then
+				if not d.idle_animation then
+					s.hidden = false
+				end
+
+				S:queue(d.clicked_sound)
+
+				if d.required_clicks_fx then
+					SU.insert_sprite(store, d.required_clicks_fx, this.pos)
+				end
+
+				if d.required_clicks_hides then
+					s.hidden = true
+				elseif d.clicked_animation then
+					U.y_animation_play(this, d.clicked_animation, nil, store.tick_ts, 1)
+				end
+
+				if d.achievement then
+					AC:got(d.achievement)
+				end
+
+				if d.achievement_flag then
+					AC:flag_check(unpack(d.achievement_flag))
+				end
+
+				if d.achievement_inc then
+					AC:inc_check(d.achievement_inc)
+				end
+
+				if d.play_once then
+					queue_remove(store, this)
+
+					return
+				end
+
+				if not d.idle_animation then
+					s.hidden = true
+				else
+					U.animation_start(this, d.idle_animation, nil, store.tick_ts, d.loop_play)
+				end
+
+				clicks = 0
+				this.ui.clicked = nil
+			end
+		end
+
+		if store.tick_ts - s.ts > d.delay then
+			s.ts = store.tick_ts
+
+			if d.disabled then
+			-- block empty
+			else
+				if not d.idle_animation then
+					s.hidden = false
+				end
+
+				if math.random() < d.flip_chance then
+					s.flip_x = not s.flip_x
+				end
+
+				if d.play_animation then
+					if d.play_sound then
+						S:queue(d.play_sound)
+					end
+
+					if d.play_duration then
+						U.animation_start(this, d.play_animation, nil, store.tick_ts, true)
+
+						if U.y_wait(store, d.play_duration, function()
+							return d.click_interrupts and this.ui.clicked
+						end) then
+							goto label_15_0
+						end
+					else
+						U.animation_start(this, d.play_animation, nil, store.tick_ts, false)
+
+						while not U.animation_finished(this) do
+							if d.click_interrupts and this.ui.clicked then
+								goto label_15_0
+							end
+
+							coroutine.yield()
+						end
+					end
+				end
+
+				if not d.idle_animation then
+					s.hidden = true
+				else
+					U.animation_start(this, d.idle_animation, nil, store.tick_ts, d.loop_idle)
+				end
+
+				if this.ui and not d.click_interrupts then
+					this.ui.clicked = nil
+				end
+			end
+		end
+
+		::label_15_0::
+
+		coroutine.yield()
+	end
+end
+
 scripts.bolt_force_motion_kr5 = {}
 
 function scripts.bolt_force_motion_kr5.insert(this, store, script)
@@ -9534,4 +9677,19 @@ function scripts.instant_heal_mod.insert(this, store, script)
 
 	return true
 end
+
+scripts.arrow5_45degrees = {}
+
+function scripts.arrow5_45degrees.insert(this, store, script)
+	local dist = V.dist(this.bullet.to.x, this.bullet.to.y, this.bullet.from.x, this.bullet.from.y)
+
+	this.bullet.flight_time = math.sqrt(2 * dist / -this.bullet.g)
+
+	if this.bullet.flight_time_variance then
+		this.bullet.flight_time = this.bullet.flight_time + fts(math.random(0, this.bullet.flight_time_variance))
+	end
+
+	return scripts.arrow.insert(this, store, script)
+end
+
 return scripts

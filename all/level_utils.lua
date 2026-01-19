@@ -99,7 +99,9 @@ function LU.load_level(store, name)
 			"pan_extension",
 			"show_comic_idx",
 			"nav_mesh",
-			"unlock_towers"
+			"unlock_towers",
+			"custom_start_pos",
+			"ignore_walk_backwards_paths"
 		}) do
 			level[n] = level.data[n]
 		end
