@@ -12271,6 +12271,27 @@ tt.click_play.play_once = true
 tt.click_play.clicked_sound = "Stage0203Rune"
 tt.ui.can_click = true
 tt.ui.click_rect = r(-30, -30, 60, 60)
+tt = E:register_t("ps_bullet_stage_03_heart_of_the_arborean")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "stage_3_HeartProy_trail"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {
+	fts(5),
+	fts(5)
+}
+tt.particle_system.emission_rate = 30
+tt.particle_system.emit_area_spread = vv(0)
+tt.particle_system.scales_y = {
+	1,
+	0.5
+}
+tt.particle_system.scales_x = {
+	1,
+	0.5
+}
 tt = E:register_t("decal_bullet_stage_03_heart_of_the_arborean", "decal")
 
 E:add_comps(tt, "tween")
@@ -12281,6 +12302,46 @@ tt.render.sprites[1].z = Z_DECALS
 tt.tween.disabled = false
 tt.tween.remove = true
 tt.tween.props[1].keys = {{0, 255}, {3, 255}, {4, 0}}
+
+tt = E:register_t("bullet_stage_03_heart_of_the_arborean", "bolt")
+b = balance.specials.trees.heart_of_the_arborean
+E:add_comps(tt, "force_motion")
+tt.render.sprites[1].prefix = "stage_3_HeartProy_proyectile"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_BULLETS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "stage_3_HeartProy_glow"
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].z = Z_BULLETS - 1
+tt.bullet.damage_type = b.damage_type
+tt.height_attack = 70
+tt.initial_vel_y = 50
+tt.transition_time = 1
+tt.target_distance_detection = 20
+tt.main_script.insert = scripts.bullet_heart_of_the_arborean.insert
+tt.main_script.update = scripts.bullet_heart_of_the_arborean.update
+tt.bullet.damage_max = b.damage_max
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_radius = b.damage_radius
+tt.bullet.acceleration_factor = 0.1
+tt.bullet.min_speed = 30
+tt.bullet.max_speed = 300
+tt.bullet.particles_name = "ps_bullet_stage_03_heart_of_the_arborean"
+tt.bullet.max_speed = 1800
+tt.bullet.min_speed = 30
+tt.bullet.hit_sound = "Stage03HeartOfTheForestBlast"
+tt.bullet.hit_decal = "decal_bullet_stage_03_heart_of_the_arborean"
+tt.bullet.hit_fx = "trees_heart_of_the_arborean_decal_hit_fx"
+tt.bullet.align_with_trajectory = true
+tt.initial_impulse = 12000
+tt.initial_impulse_duration = 0.2
+tt.initial_impulse_angle = math.pi / 2
+tt.force_motion.a_step = 15
+tt.force_motion.max_a = 1800
+tt.force_motion.max_v = 600
+tt.sound_events.insert = nil
+
 tt = E:register_t("decal_stage_03_wisps", "decal")
 tt.render.sprites[1].prefix = "stage_3_wisps_1Def"
 tt.render.sprites[1].name = "loop"

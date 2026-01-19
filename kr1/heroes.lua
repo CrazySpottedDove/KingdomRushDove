@@ -134,6 +134,7 @@ tt.melee.attacks[3].vis_bans = F_FLYING
 tt.melee.attacks[3].vis_flags = F_BLOCK
 tt.melee.attacks[3].disabled = true
 tt.melee.attacks[3].never_interrupt = true
+tt.melee.attacks[3].xp_from_skill = "holy_strike"
 tt.melee.range = 65
 tt.timed_attacks.list[1] = CC("mod_attack")
 tt.timed_attacks.list[1].animation = "courage"
