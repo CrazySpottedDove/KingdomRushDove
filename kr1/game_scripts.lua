@@ -78,12 +78,26 @@ local function soldiers_around_need_heal(this, store, trigger_hp_factor, range)
 	end
 end
 
--- require("game_scripts_utils")
+local function y_show_taunt_set(store, taunts, set_name, index, wait)
+	local set = taunts.sets[set_name]
+
+	index = index or set.idxs and table.random(set.idxs) or math.random(set.start_idx, set.end_idx)
+
+	local duration = taunts.duration
+	local taunt_id = _(string.format(set.format, index))
+
+	log.info("show taunt " .. taunt_id)
+	signal.emit("show-balloon_tutorial", taunt_id, false)
+
+	if wait then
+		U.y_wait(store, duration)
+	end
+end
+
 -------------------------------------------
 local scripts = require("tower_scripts")
-
--- require("tower_scripts")(scripts)
 -------------------------------------------
+
 scripts.mod_high_elven = {
 	insert = function(this, store)
 		local m = this.modifier
@@ -48431,7 +48445,7 @@ function scripts.enemy_evolving_scourge.update(this, store, script)
 					this.unit.hit_offset = v(-2, 10 + this.unit_y_offset_config[this.current_phase])
 					this.unit.mod_offset = v(0, 10 + this.unit_y_offset_config[this.current_phase])
 					this.enemy.gold = this.gold_config[this.current_phase]
-					this.info.portrait = "gui_bottom_info_image_enemies_00" .. 34 + this.current_phase
+					this.info.portrait = "kr5_info_portraits_enemies_00" .. 34 + this.current_phase
 					this.trigger_deselect = true
 
 					U.unblock_all(store, this)
@@ -54004,6 +54018,566 @@ function scripts.hero_muyrn_ranged_attack_bullet.update(this, store)
 		ps.particle_system.emit = false
 
 		U.y_wait(store, ps.particle_system.particle_lifetime[2])
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.boss_pig = {}
+
+function scripts.boss_pig.update(this, store, script)
+	local sid_body, sid_fly = 1, 4
+	local d_flying = E:create_entity("decal_boss_pig_flying")
+	local s_flying = d_flying.render.sprites[1]
+
+	queue_insert(store, d_flying)
+
+	local s_body = this.render.sprites[sid_body]
+	local node_id = P:nearest_nodes(698, 467, {2})[1][3]
+	local jump_id = 1
+	local jump_positions = {V.v(698, 467), V.v(150, 278)}
+	local reach_positions = {V.v(418, 435), V.v(868, 242)}
+	local reach_path_id = {1, 2}
+
+	this.fly_time_up = 0.5
+	this.fly_time_down = 0.4
+	this.fly_time_out = 1.5
+	this.fly_offset_y = 60
+
+	local spawners = LU.list_entities(store.entities, "mega_spawner")
+	local megaspawner_boss
+
+	for _, value in pairs(spawners) do
+		if value.load_file == "level106_spawner" then
+			megaspawner_boss = value
+		end
+	end
+
+	local round_idx = 0
+
+	local function y_arrive(to, dest_pi)
+		local start_ts = store.tick_ts
+		local phase
+		local flags = this.vis.flags
+		local bans = this.vis.bans
+
+		this.vis.flags = this.vis.flags_jumping
+		this.vis.bans = this.vis.bans_jumping
+		s_flying.hidden = false
+
+		local shadow = E:create_entity(this.shadow)
+
+		shadow.pos.x, shadow.pos.y = to.x, to.y
+		shadow.render.sprites[1].ts = store.tick_ts
+		shadow.render.sprites[1].runs = 0
+		shadow.tween.props[1].keys[2][1] = this.fly_time_down
+		shadow.tween.reverse = true
+
+		queue_insert(store, shadow)
+		S:queue(this.sound_falling)
+
+		repeat
+			phase = (store.tick_ts - start_ts) / this.fly_time_down
+			d_flying.pos.x = U.ease_value(to.x, to.x, phase, "sine-out")
+			d_flying.pos.y = U.ease_value(868, to.y + 150, phase, "sine-out") + this.fly_offset_y
+
+			coroutine.yield()
+		until phase >= 1
+
+		S:queue(this.sound_land)
+
+		this.phase = "loop"
+
+		local shake = E:create_entity("aura_screen_shake")
+
+		shake.aura.amplitude = 0.5
+		shake.aura.duration = 1
+		shake.aura.freq_factor = 2
+
+		queue_insert(store, shake)
+
+		round_idx = round_idx + 1
+		megaspawner_boss.manual_wave = string.format("BOSS%i", round_idx)
+
+		local damage_on_fall = E:create_entity(this.aura_damage_on_fall)
+
+		damage_on_fall.pos.x, damage_on_fall.pos.y = this.pos.x, this.pos.y
+		damage_on_fall.owner = this
+		damage_on_fall.aura.source_id = this.id
+
+		queue_insert(store, damage_on_fall)
+
+		this.pos.x, this.pos.y = to.x, to.y
+		s_flying.hidden = true
+		this.vis.flags = this.vis.flags_normal
+		this.vis.bans = this.vis.bans_normal
+
+		for _, value in pairs(this.render.sprites) do
+			value.hidden = false
+		end
+
+		local ground_decal = E:create_entity("decal_boss_pig_ground_fall")
+
+		ground_decal.render.sprites[1].ts = store.tick_ts
+		ground_decal.pos.x = this.pos.x
+		ground_decal.pos.y = this.pos.y
+
+		queue_insert(store, ground_decal)
+		U.y_animation_play(this, "fall", true, store.tick_ts, 1)
+
+		this.nav_path.pi = dest_pi
+		this.nav_path.ni = P:nearest_nodes(this.pos.x, this.pos.y, {dest_pi})[1][3]
+
+		U.y_wait(store, 1)
+	end
+
+	local function ready_to_jump()
+		return this.health.dead or jump_id <= 2 and this.nav_path.ni > node_id
+	end
+
+	local function y_fly(to, speed, dest_pi)
+		this.vis.flags = this.vis.flags_jumping
+		this.vis.bans = this.vis.bans_jumping
+
+		local from = this.pos
+
+		SU.remove_modifiers(store, this)
+
+		local af = to.x < from.x
+
+		s_flying.r = V.angleTo(to.x - from.x, to.y - from.y)
+		s_flying.flip_y = math.abs(s_flying.r) > math.pi / 2
+
+		S:queue(this.sound_jump)
+
+		local an, af = U.animation_name_facing_point(this, "idle", this.motion.dest)
+
+		U.animation_start(this, an, af, store.tick_ts, false)
+		U.y_wait(store, 1)
+		U.y_animation_play(this, "jump", af, store.tick_ts, 1)
+
+		local ground_decal = E:create_entity("decal_boss_pig_ground_fall")
+
+		ground_decal.render.sprites[1].ts = store.tick_ts
+		ground_decal.pos.x = this.pos.x
+		ground_decal.pos.y = this.pos.y
+		ground_decal.tween.ts = store.tick_ts
+
+		queue_insert(store, ground_decal)
+
+		local shadow = E:create_entity(this.shadow)
+
+		shadow.pos.x, shadow.pos.y = this.pos.x, this.pos.y
+		shadow.render.sprites[1].ts = store.tick_ts
+		shadow.render.sprites[1].runs = 0
+		shadow.tween.props[1].keys[2][1] = 1.5
+
+		queue_insert(store, shadow)
+
+		s_flying.hidden = false
+
+		for _, value in pairs(this.render.sprites) do
+			value.hidden = true
+		end
+
+		local start_ts = store.tick_ts
+		local phase
+
+		repeat
+			phase = (store.tick_ts - start_ts) / this.fly_time_up
+			d_flying.pos.x = U.ease_value(from.x, from.x, phase, "sine-in")
+			d_flying.pos.y = U.ease_value(from.y, 868, phase, "sine-in") + this.fly_offset_y
+
+			coroutine.yield()
+		until phase >= 1
+
+		U.y_wait(store, this.fly_time_out)
+
+		start_ts = store.tick_ts
+
+		local shadow = E:create_entity(this.shadow)
+
+		shadow.pos.x, shadow.pos.y = to.x, to.y
+		shadow.render.sprites[1].ts = store.tick_ts
+		shadow.render.sprites[1].runs = 0
+		shadow.tween.reverse = true
+		shadow.tween.props[1].keys[2][1] = this.fly_time_down
+
+		queue_insert(store, shadow)
+		S:queue(this.sound_falling)
+
+		repeat
+			phase = (store.tick_ts - start_ts) / this.fly_time_down
+			d_flying.pos.x = U.ease_value(to.x, to.x, phase, "sine-out")
+			d_flying.pos.y = U.ease_value(868, to.y + 150, phase, "sine-out") + this.fly_offset_y
+
+			coroutine.yield()
+		until phase >= 1
+
+		S:queue(this.sound_land)
+
+		this.pos.x, this.pos.y = to.x, to.y
+		s_flying.hidden = true
+		this.vis.flags = this.vis.flags_normal
+		this.vis.bans = this.vis.bans_normal
+
+		for _, value in pairs(this.render.sprites) do
+			value.hidden = false
+		end
+
+		local shake = E:create_entity("aura_screen_shake")
+
+		shake.aura.amplitude = 0.5
+		shake.aura.duration = 1
+		shake.aura.freq_factor = 2
+
+		queue_insert(store, shake)
+
+		round_idx = round_idx + 1
+		megaspawner_boss.manual_wave = string.format("BOSS%i", round_idx)
+
+		local damage_on_fall = E:create_entity(this.aura_damage_on_fall)
+
+		damage_on_fall.pos.x, damage_on_fall.pos.y = this.pos.x, this.pos.y
+		damage_on_fall.owner = this
+		damage_on_fall.aura.source_id = this.id
+
+		queue_insert(store, damage_on_fall)
+
+		local ground_decal = E:create_entity("decal_boss_pig_ground_fall")
+
+		ground_decal.render.sprites[1].ts = store.tick_ts
+		ground_decal.pos.x = this.pos.x
+		ground_decal.pos.y = this.pos.y
+		ground_decal.tween.ts = store.tick_ts
+
+		queue_insert(store, ground_decal)
+		U.y_animation_play(this, "fall", af, store.tick_ts, 1)
+
+		this.nav_path.pi = dest_pi
+		this.nav_path.ni = P:nearest_nodes(this.pos.x, this.pos.y, {dest_pi})[1][3]
+
+		U.y_wait(store, 1)
+	end
+
+	this.vis.flags = this.vis.flags_jumping
+	this.vis.bans = this.vis.bans_jumping
+	this.phase = "intro"
+	this.health_bar.hidden = true
+	this.health_bar.hidden = nil
+
+	for _, value in pairs(this.render.sprites) do
+		value.hidden = true
+	end
+
+	U.y_wait(store, this.fly_time_out)
+	y_arrive(this.pos, 2)
+	signal.emit("boss_fight_start", this)
+
+	::label_20_0::
+
+	while true do
+		if this.health.dead then
+			this.phase = "dead"
+
+			LU.kill_all_enemies(store, true)
+
+			megaspawner_boss.interrupt = true
+
+			S:stop_all()
+			S:queue(this.sound_events.death)
+			U.y_animation_play(this, "death", nil, store.tick_ts)
+
+			if store.level_difficulty == DIFFICULTY_IMPOSSIBLE then
+				signal.emit("no_jump_boss-stage06", jump_id)
+			end
+
+			signal.emit("boss-killed", this)
+			LU.kill_all_enemies(store, true)
+
+			this.phase = "death-complete"
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			U.animation_start(this, "idle", nil, store.tick_ts, -1)
+			coroutine.yield()
+		else
+			if ready_to_jump() then
+				this.ui.can_select = false
+				this.health_bar.hidden = true
+
+				y_fly(reach_positions[jump_id], 300, reach_path_id[jump_id])
+
+				jump_id = jump_id + 1
+
+				if jump_id <= 2 then
+					local next_jump = jump_positions[jump_id]
+
+					node_id = P:nearest_nodes(next_jump.x, next_jump.y, {this.nav_path.pi})[1][3]
+				end
+
+				this.health_bar.hidden = false
+				this.ui.can_select = true
+			end
+
+			local ok, blocker = SU.y_enemy_walk_until_blocked(store, this, false, ready_to_jump)
+
+			if not ok then
+			-- block empty
+			else
+				if blocker then
+					if not SU.y_wait_for_blocker(store, this, blocker) then
+						goto label_20_0
+					end
+
+					while SU.can_melee_blocker(store, this, blocker) and not ready_to_jump() do
+						if not SU.y_enemy_melee_attacks(store, this, blocker) then
+							goto label_20_0
+						end
+
+						coroutine.yield()
+					end
+				end
+
+				coroutine.yield()
+			end
+		end
+	end
+end
+
+scripts.decal_boss_pig_pool = {}
+
+function scripts.decal_boss_pig_pool.update(this, store, script)
+	while store.wave_group_number < 10 do
+		coroutine.yield()
+	end
+
+	while not store.waves_finished or LU.has_alive_enemies(store) do
+		local delay = math.random(this.taunts.delay_min, this.taunts.delay_max)
+
+		U.y_wait(store, delay)
+
+		if store.waves_finished or not LU.has_alive_enemies(store) then
+			break
+		end
+
+		y_show_taunt_set(store, this.taunts, "from_pool", false)
+		coroutine.yield()
+	end
+end
+
+scripts.decal_stage_06_door = {}
+
+function scripts.decal_stage_06_door.update(this, store, script)
+	local spawners = LU.list_entities(store.entities, "mega_spawner")
+	local megaspawner_door
+
+	this.opened = false
+
+	for key, value in pairs(spawners) do
+		if value.load_file == "level106_door" then
+			megaspawner_door = value
+		end
+	end
+
+	local door = this.render.sprites[5]
+	local pig = this.render.sprites[6]
+	local pig_handle = this.render.sprites[7]
+	local sp = this.spawner
+	local pigOrigin = v(-120, 150)
+	local pigDestination = v(-75, 20)
+	local door_height = 50
+	local wave_counter = 1
+	local start_ts = store.tick_ts
+	local phase
+	local pig_clicks = 0
+	local pig_dead = false
+	local door_time = 10
+	local offset_base_x = door.offset.x
+	local offset_base_y = door.offset.y
+
+	while true do
+		if sp.spawn_data == nil then
+		-- block empty
+		elseif not sp.spawn_data.open then
+		-- block empty
+		else
+			start_ts = store.tick_ts
+			phase = 0
+			pig_clicks = 0
+			pig_dead = false
+			this.ui.can_click = true
+
+			U.animation_start(this, "walkingDown", false, store.tick_ts, true, 6)
+
+			this.tween.disabled = false
+			this.tween.reverse = true
+			this.tween.ts = store.tick_ts
+
+			repeat
+				phase = (store.tick_ts - start_ts) / 5
+				pig.offset.x = U.ease_value(pigOrigin.x, pigDestination.x, phase, "linear")
+				pig.offset.y = U.ease_value(pigOrigin.y, pigDestination.y, phase, "linear")
+				pig.hidden = false
+				this.ui.click_rect = r(pig.offset.x - 25, pig.offset.y - 10, 50, 50)
+
+				if this.ui.clicked then
+					this.ui.clicked = nil
+
+					S:queue(this.pig_click_sound)
+
+					pig_clicks = pig_clicks + 1
+
+					if pig_clicks >= this.clicks_to_kill then
+						pig_dead = true
+
+						break
+					else
+						this.tween.props[2].disabled = false
+						this.tween.props[2].ts = store.tick_ts
+						this.tween.props[2].sprite_id = 6
+					end
+				end
+
+				coroutine.yield()
+			until phase >= 1
+
+			if pig_dead then
+				sp.spawn_data = nil
+
+				S:queue(this.pig_death_sound)
+				U.animation_start(this, "death", nil, store.tick_ts, false, 6)
+				U.y_animation_wait(this, 6)
+
+				this.tween.disabled = false
+				this.tween.ts = store.tick_ts
+				this.tween.reverse = false
+				this.ui.can_click = false
+			else
+				pig.hidden = true
+				start_ts = store.tick_ts
+				door.hidden = false
+
+				U.animation_start(this, "ability1_1", false, store.tick_ts, true, 7)
+
+				pig_handle.hidden = false
+
+				U.animation_start_group(this, "ability1_1", nil, store.tick_ts, true, "layers")
+				S:queue("Stage06WoodenDoorOpen")
+
+				repeat
+					phase = (store.tick_ts - start_ts) / door_time
+					door.offset.y = U.ease_value(offset_base_y, door_height, phase, "linear")
+					door.offset.x = offset_base_x + math.random(-1, 1)
+
+					if this.ui.clicked then
+						this.ui.clicked = nil
+
+						S:queue(this.pig_click_sound)
+
+						pig_clicks = pig_clicks + 1
+
+						if pig_clicks >= this.clicks_to_kill then
+							pig_dead = true
+
+							break
+						else
+							this.tween.props[2].disabled = false
+							this.tween.props[2].ts = store.tick_ts
+							this.tween.props[2].sprite_id = 7
+						end
+					end
+
+					coroutine.yield()
+				until phase >= 1
+
+				S:stop("Stage06WoodenDoorOpen")
+
+				if pig_dead then
+					sp.spawn_data = nil
+
+					U.animation_start(this, "ability5_1", false, store.tick_ts, false, 4)
+					S:queue("Stage06WoodenDoorClose")
+					S:queue(this.pig_death_sound)
+					U.animation_start(this, "death1_1", false, store.tick_ts, false, 7)
+					U.y_animation_wait(this, 7)
+
+					repeat
+						phase = (store.tick_ts - start_ts) / 0.5
+						door.offset.y = U.ease_value(door_height, offset_base_y, phase, "sine-out")
+
+						coroutine.yield()
+					until phase >= 1
+
+					U.animation_start_group(this, "ability5_1", nil, store.tick_ts, false, "layers")
+
+					door.hidden = true
+				else
+					this.opened = true
+
+					U.animation_start_group(this, "idle1_1", nil, store.tick_ts, true, "layers")
+					U.animation_start(this, "ability2_1", false, store.tick_ts, true, 7)
+
+					megaspawner_door.manual_wave = "DOOR" .. wave_counter
+					wave_counter = wave_counter + 1
+
+					while sp.spawn_data == nil do
+						coroutine.yield()
+					end
+
+					while sp.spawn_data.open do
+						if this.ui.clicked then
+							this.ui.clicked = nil
+
+							S:queue(this.pig_click_sound)
+
+							pig_clicks = pig_clicks + 1
+
+							if not pig_dead and pig_clicks >= this.clicks_to_kill then
+								pig_dead = true
+
+								S:queue(this.pig_death_sound)
+								U.animation_start(this, "death1_1", false, store.tick_ts, false, 7)
+								U.y_animation_wait(this, 7)
+							else
+								this.tween.props[2].disabled = false
+								this.tween.props[2].ts = store.tick_ts
+								this.tween.props[2].sprite_id = 7
+							end
+						end
+
+						coroutine.yield()
+					end
+
+					if not pig_dead then
+						S:queue(this.pig_death_sound)
+						U.animation_start(this, "death1_1", false, store.tick_ts, false, 7)
+					end
+
+					log.info("close the door")
+
+					start_ts = store.tick_ts
+
+					U.animation_start_group(this, "ability4_1", nil, store.tick_ts, true, "layers")
+					S:queue("Stage06WoodenDoorClose")
+
+					repeat
+						phase = (store.tick_ts - start_ts) / 0.5
+						door.offset.y = U.ease_value(door_height, offset_base_y, phase, "sine-out")
+
+						coroutine.yield()
+					until phase >= 1
+
+					door.hidden = true
+
+					U.animation_start_group(this, "ability5_1", nil, store.tick_ts, false, "layers")
+				end
+			end
+		end
+
+		coroutine.yield()
 	end
 
 	queue_remove(store, this)

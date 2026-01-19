@@ -119,66 +119,9 @@ local obj1 = {
 	},
 	["bag"] = {},
 	["difficulty"] = 4,
-	["gems"] = 118537,
+	["gems"] = 0,
 	["heroes"] = {
-		["selected"] = {
-			[1] = "hero_durax",
-			[2] = "hero_van_helsing"
-		},
-		["status"] = {
-			["hero_10yr"] = {
-				["skills"] = {},
-				["xp"] = 0
-			},
-			["hero_alleria"] = {
-				["skills"] = {},
-				["xp"] = 0
-			},
-			["hero_bolin"] = {
-				["skills"] = {},
-				["xp"] = 0
-			},
-			["hero_denas"] = {
-				["skills"] = {},
-				["xp"] = 0
-			},
-			["hero_elora"] = {
-				["skills"] = {},
-				["xp"] = 0
-			},
-			["hero_gerald"] = {
-				["skills"] = {},
-				["xp"] = 0
-			},
-			["hero_hacksaw"] = {
-				["skills"] = {},
-				["xp"] = 0
-			},
-			["hero_ignus"] = {
-				["skills"] = {},
-				["xp"] = 0
-			},
-			["hero_ingvar"] = {
-				["skills"] = {},
-				["xp"] = 0
-			},
-			["hero_magnus"] = {
-				["skills"] = {},
-				["xp"] = 0
-			},
-			["hero_malik"] = {
-				["skills"] = {},
-				["xp"] = 0
-			},
-			["hero_oni"] = {
-				["skills"] = {},
-				["xp"] = 0
-			},
-			["hero_thor"] = {
-				["skills"] = {},
-				["xp"] = 0
-			}
-		}
+		["selected"] = {}
 	},
 	["levels"] = {
 		[1] = {
@@ -601,25 +544,37 @@ local obj1 = {
 			[3] = 1,
 			["stars"] = 3
 		},
-		[90] = {
+		[101] = {
 			[1] = 1,
 			[2] = 1,
 			[3] = 1,
 			["stars"] = 3
 		},
-		[91] = {
+		[102] = {
 			[1] = 1,
 			[2] = 1,
 			[3] = 1,
 			["stars"] = 3
 		},
-		[92] = {
+		[103] = {
 			[1] = 1,
 			[2] = 1,
 			[3] = 1,
 			["stars"] = 3
 		},
-		[93] = {
+		[104] = {
+			[1] = 1,
+			[2] = 1,
+			[3] = 1,
+			["stars"] = 3
+		},
+		[105] = {
+			[1] = 1,
+			[2] = 1,
+			[3] = 1,
+			["stars"] = 3
+		},
+		[106] = {
 			[1] = 1,
 			[2] = 1,
 			[3] = 1,
@@ -939,6 +894,7 @@ local obj1 = {
 		["rain"] = 6,
 		["reinforcements"] = 6
 	},
+	["upgrade_list_id"] = 1,
 	["locked_towers"] = {},
 	["version_string"] = "kr1-desktop-5.6.12"
 }

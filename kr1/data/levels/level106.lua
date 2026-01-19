@@ -188,7 +188,6 @@ signal.emit("door-stage06",door)
 end
 U.y_wait(store,2)
 signal.emit("boss_fight_end")
-store.custom_game_outcome={postpone_unload=true,next_item_name="boss_fight_1_end"}
 signal.emit("fade-out",1)
 else
 local function get_entity(name)

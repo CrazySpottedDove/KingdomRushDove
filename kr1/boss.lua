@@ -3067,3 +3067,120 @@ tt.render.sprites[1].size_names = {"small", "medium", "large"}
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].loop = false
 --#endregion
+
+local balance = require("kr1.data.balance")
+local v = vec_2
+local vv = vec_1
+
+tt = E:register_t("boss_pig", "boss")
+local b = balance.enemies.werebeasts.boss
+E:add_comps(tt, "melee", "auras")
+tt.enemy.gold = 1
+tt.enemy.lives_cost = 20
+tt.enemy.melee_slot = v(40, 0)
+tt.health.armor = b.armor
+tt.health.dead_lifetime = 100
+tt.health.hp_max = b.hp
+tt.health_bar.offset = v(0, 100)
+tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
+tt.vis.bans = bor(tt.vis.bans, F_STUN, F_FREEZE)
+tt.info.enc_icon = 26
+tt.info.i18n_key = "ENEMY_BOSS_PIG"
+tt.info.portrait = "kr5_info_portraits_enemies_0010"
+tt.info.portrait_boss = "boss_health_bar_icon_0001"
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.boss_pig.update
+tt.motion.max_speed = b.speed
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].prefix = "GoregrindDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].angles = {}
+tt.render.sprites[1].angles.walk = {"walk1", "walk2", "walk2"}
+tt.ui.click_rect = r(-35, 0, 70, 80)
+tt.unit.can_explode = false
+tt.unit.hit_offset = v(0, 40)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 30)
+tt.unit.show_blood_pool = false
+tt.unit.size = UNIT_SIZE_LARGE
+tt.vis.bans = bor(F_RANGED)
+tt.vis.flags_jumping = bor(F_ENEMY, F_BOSS)
+tt.vis.bans_jumping = bor(F_RANGED, F_BLOCK, F_MOD)
+tt.vis.flags_normal = bor(F_ENEMY, F_BOSS)
+tt.vis.bans_normal = 0
+tt.melee.attacks[1] = E:clone_c("area_attack")
+tt.melee.attacks[1].cooldown = b.melee_attack.cooldown
+tt.melee.attacks[1].damage_max = b.melee_attack.damage_max
+tt.melee.attacks[1].damage_min = b.melee_attack.damage_min
+tt.melee.attacks[1].hit_time = fts(22)
+tt.melee.attacks[1].damage_radius = b.melee_attack.damage_radius
+tt.melee.attacks[1].damage_type = bor(DAMAGE_PHYSICAL, DAMAGE_NO_DODGE)
+tt.melee.attacks[1].hit_decal = "decal_boss_pig_ground_attack"
+-- tt.melee.attacks[1].hit_fx = "decal_boss_pig_attack_dust"
+tt.melee.attacks[1].hit_time = fts(14)
+tt.melee.attacks[1].hit_offset = v(50, 0)
+tt.melee.attacks[1].uninterruptible = true
+tt.melee.attacks[1].sound = "Stage06BossPigAttack"
+tt.aura_damage_on_fall = "aura_boss_pig_damage_on_fall"
+tt.shadow = "decal_werebeast_boss_shadow"
+tt.sound_jump = "Stage06BossPigJump"
+tt.sound_land = "Stage06BossPigLand"
+tt.sound_falling = "Stage06BossPigFalling"
+tt.sound_events.death = "Stage06BossPigDeath"
+
+tt = E:register_t("decal_boss_pig_pool", "decal_scripted")
+E:add_comps(tt, "taunts", "editor")
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].prefix = "GoregrindPoolDef"
+tt.render.sprites[1].name = "sleeping"
+tt.main_script.update = scripts.decal_boss_pig_pool.update
+tt.taunts.delay_min = 10
+tt.taunts.delay_max = 20
+tt.taunts.sets = {}
+tt.taunts.sets.from_pool = CC("taunt_set")
+tt.taunts.sets.from_pool.format = "LV06_BOSS_TAUNT_%02i"
+tt.taunts.sets.from_pool.end_idx = 6
+tt.sound_horn = "Stage06BossPigHorn"
+
+tt = E:register_t("decal_boss_pig_flying", "decal")
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "GoregrindFlying_asst_goregrind_flying"
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].z = Z_FLYING_HEROES
+
+tt = E:register_t("decal_boss_pig_smoke", "decal_tween")
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].prefix = "werebeast_boss_death_and_fall_dust"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].loop = false
+tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
+
+-- tt = E:register_t("decal_boss_pig_attack_dust", "decal_tween")
+-- tt.render.sprites[1].animated = true
+-- tt.render.sprites[1].name = "werebeast_boss_attack_dust"
+-- tt.render.sprites[1].loop = false
+-- tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
+-- tt.render.sprites[1].scale = v(0.5, 0.5)
+
+tt = E:register_t("decal_boss_pig_ground_fall", "decal_tween")
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "werebeast_boss_decal"
+tt.render.sprites[1].z = Z_DECALS
+tt.tween.props[1].keys = {{0, 255}, {fts(22), 255}, {fts(22) + fts(5), 0}}
+tt.tween.remove = true
+
+tt = E:register_t("decal_boss_pig_ground_attack", "decal_boss_pig_ground_fall")
+tt.tween.props[1].keys = {{0, 255}, {fts(18), 255}, {fts(18) + fts(5), 0}}
+
+tt = E:register_t("aura_boss_pig_damage_on_fall", "aura")
+b = balance.enemies.werebeasts.boss
+tt.aura.cycles = 1
+tt.aura.cycle_time = 0.3
+tt.aura.damage_min = b.fall.damage_min
+tt.aura.damage_max = b.fall.damage_max
+tt.aura.damage_type = DAMAGE_PHYSICAL
+tt.aura.track_source = true
+tt.aura.radius = b.fall.radius
+tt.aura.vis_bans = F_BOSS
+tt.aura.vis_flags = 0
+tt.main_script.update = scripts.aura_apply_damage.update

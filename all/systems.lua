@@ -88,10 +88,6 @@ function sys.level:init(store)
 
 	store.selected_hero = slot.heroes.selected
 
-	if store.selected_hero and #store.selected_hero > 0 then
-		store.selected_hero_status = slot.heroes.status[slot.heroes.selected[1]]
-	end
-
 	if store.level.init then
 		store.level:init(store)
 	end

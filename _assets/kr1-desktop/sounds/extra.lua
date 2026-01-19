@@ -1412,42 +1412,42 @@ return {
 		},
 		MusicBattlePrep_101 = {
 			source_group = "MUSIC",
-			gain = 0.3,
+			gain = 0.4,
 			loop = true,
 			stream = true,
 			files = {"kr5_bgmusic_t1_preparation1_v1.ogg"}
 		},
 		MusicBattlePrep_102 = {
 			source_group = "MUSIC",
-			gain = 0.3,
+			gain = 0.4,
 			loop = true,
 			stream = true,
 			files = {"kr5_bgmusic_t1_preparation2_v1.ogg"}
 		},
 		MusicBattlePrep_103 = {
 			source_group = "MUSIC",
-			gain = 0.3,
+			gain = 0.4,
 			loop = true,
 			stream = true,
 			files = {"kr5_bgmusic_t1_preparation1_v1.ogg"}
 		},
 		MusicBattlePrep_104 = {
 			source_group = "MUSIC",
-			gain = 0.3,
+			gain = 0.4,
 			loop = true,
 			stream = true,
 			files = {"kr5_bgmusic_t1_preparation2_v1.ogg"}
 		},
 		MusicBattlePrep_105 = {
 			source_group = "MUSIC",
-			gain = 0.3,
+			gain = 0.4,
 			loop = true,
 			stream = true,
 			files = {"kr5_bgmusic_t1_preparation1_v1.ogg"}
 		},
 		MusicBattlePrep_106 = {
 			source_group = "MUSIC",
-			gain = 0.3,
+			gain = 0.4,
 			loop = true,
 			stream = true,
 			files = {"kr5_bgmusic_t1_preparation2_v1.ogg"}
@@ -2520,6 +2520,69 @@ return {
 			gain = 0.7,
 			source_group = "MUSIC",
 			stream = true
+		},
+		MusicBossFight_106 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t1_boss_v2.ogg"}
+		},
+		MusicBossFight_111 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t2_boss_v1.ogg"}
+		},
+		MusicBossFight_115 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t3_boss1_v1.ogg"}
+		},
+		MusicBossFight_116 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_bgmusic_t3_boss2_v1.ogg"}
+		},
+		MusicBossFight_119 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_update1_bgmusic_bossBattle_v2.ogg"}
+		},
+		MusicBossFight_122 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_update2_bgmusic_bossBattle_v1.ogg"}
+		},
+		MusicBossFight_127 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc1_bgmusic_bossBattle_v1.ogg"}
+		},
+		MusicBossFight_130 = {
+			source_group = "MUSIC",
+			gain = 0.4,
+			loop = true,
+			stream = true,
+			files = {"kr5_update3_bgmusic_bossBattle_v1.ogg"}
+		},
+		MusicBossFight_135 = {
+			source_group = "MUSIC",
+			gain = 0.2,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc2_bgmusic_bossBattle_v1.ogg"}
 		},
 		MusicCredits = {
 			files = {"kro_bgmusic_creditos[master].mp3"},

@@ -362,30 +362,8 @@ function storage:load_slot(idx, force)
 		end
 	end
 
-	if input.heroes and input.heroes.status then
-		local tpl = self:new_slot(idx)
-
-		for k, v in pairs(tpl.heroes.status) do
-			if not input.heroes.status[k] then
-				log.debug("adding missing hero %s to savegame", k)
-
-				input.heroes.status[k] = table.deepclone(v)
-			end
-		end
-	end
-
-	if input.heroes and input.heroes.status then
-		for kh, vh in pairs(input.heroes.status) do
-			if vh.skills then
-				for ks, vs in pairs(vh.skills) do
-					if type(vs) ~= "number" or vs < 0 or vs > 3 then
-						log.error("hero %s skill %s outside valid range... patching to 0", kh, ks)
-
-						vh.skills[ks] = 0
-					end
-				end
-			end
-		end
+	if not input.levels[101] then
+		input.levels[101] = {}
 	end
 
 	return input

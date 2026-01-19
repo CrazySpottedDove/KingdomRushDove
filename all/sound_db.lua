@@ -37,8 +37,6 @@ local function is_file(path)
 	return info and info.type == "file"
 end
 
-local _THREADS_ENABLED = true
-
 -- 音频加载的动态线程数计算
 local function calculate_audio_thread_count()
 	local cpu_count = love.system.getProcessorCount() or 4
@@ -239,119 +237,82 @@ function sound_db:load_group(name, yielding, filter)
 		end
 	end
 
-	if _THREADS_ENABLED then
-		local load_threads = {}
-		local th_i = 1
+	local load_threads = {}
+	local th_i = 1
 
-		for i = 1, _MAX_THREADS do
-			local th = love.thread.newThread(_LOAD_AUDIO_THREAD_CODE)
-			local cin = love.thread.newChannel()
-			local cout = love.thread.newChannel()
+	for i = 1, _MAX_THREADS do
+		local th = love.thread.newThread(_LOAD_AUDIO_THREAD_CODE)
+		local cin = love.thread.newChannel()
+		local cout = love.thread.newChannel()
 
-			th:start(cin, cout, i)
+		th:start(cin, cout, i)
 
-			if love.nx then
-				th:setAffinity({false, true, true})
-				log.paranoid(" ++++ SOUND_DB THREAD %s AFFINITY %s", th, getdump(th:getAffinity()))
-			end
-
-			table.insert(load_threads, {th, cin, cout})
+		if love.nx then
+			th:setAffinity({false, true, true})
 		end
 
-		for _, item in pairs(files) do
-			local fn, stream = unpack(item)
-			local mode = self.global_source_mode or stream and "stream" or "static"
+		table.insert(load_threads, {th, cin, cout})
+	end
 
-			if self.sources[fn] then
-				self.source_uses[fn] = self.source_uses[fn] + 1
-			else
-				local file = string.format(self.files_path .. "/%s", fn)
-				local cin = load_threads[th_i][2]
+	for _, item in pairs(files) do
+		local fn, stream = unpack(item)
+		local mode = self.global_source_mode or stream and "stream" or "static"
 
-				cin:push(file)
-				cin:push(mode)
-				cin:push(fn)
+		if self.sources[fn] then
+			self.source_uses[fn] = self.source_uses[fn] + 1
+		else
+			local file = string.format(self.files_path .. "/%s", fn)
+			local cin = load_threads[th_i][2]
 
-				th_i = km.zmod(th_i + 1, #load_threads)
-			end
-		end
+			cin:push(file)
+			cin:push(mode)
+			cin:push(fn)
 
-		for _, item in pairs(load_threads) do
-			item[2]:push("QUIT")
-		end
-
-		local yield_every = 0
-
-		while #load_threads > 0 do
-			local th, cin, cout = unpack(load_threads[1])
-
-			if th:isRunning() then
-				local result = cout:pop()
-
-				if result then
-					local r1, r2, r3 = unpack(result)
-
-					if r1 == "DONE" then
-						table.remove(load_threads, 1)
-					elseif r1 == "ERROR" then
-						log.error("Failed to create audio source for file: %s. Error: %s", r3, r2)
-					elseif r1 == "OK" then
-						local fn, master_src = r3, r2
-
-						self.sources[fn] = {master_src}
-						self.source_uses[fn] = 1
-					end
-				end
-			else
-				log.error("Thread error:%s", th:getError())
-				table.remove(load_threads, 1)
-			end
-
-			yield_every = yield_every + 1
-
-			if yielding and yield_every == 1000 then
-				yield_every = 0
-
-				coroutine.yield()
-			end
-		end
-
-		load_threads = nil
-	-- collectgarbage("collect")
-	else
-		local yield_every = 0
-
-		for _, item in pairs(files) do
-			local fn, stream = unpack(item)
-			local mode = self.global_source_mode or stream and "stream" or "static"
-
-			if self.sources[fn] then
-				self.source_uses[fn] = self.source_uses[fn] + 1
-			else
-				local file = string.format(self.files_path .. "/%s", fn)
-
-				if is_file(file) then
-					local ok, master_src = pcall(love.audio.newSource, file, mode)
-
-					if ok and master_src then
-						self.sources[fn] = {master_src}
-						self.source_uses[fn] = 1
-
-						log.paranoid("Created audio source for %s", file)
-					-- collectgarbage()
-					end
-				end
-			end
-
-			yield_every = yield_every + 1
-
-			if yielding and yield_every == 1000 then
-				yield_every = 0
-
-				coroutine.yield()
-			end
+			th_i = km.zmod(th_i + 1, #load_threads)
 		end
 	end
+
+	for _, item in pairs(load_threads) do
+		item[2]:push("QUIT")
+	end
+
+	local yield_every = 0
+
+	while #load_threads > 0 do
+		local th, cin, cout = unpack(load_threads[1])
+
+		if th:isRunning() then
+			local result = cout:pop()
+
+			if result then
+				local r1, r2, r3 = unpack(result)
+
+				if r1 == "DONE" then
+					table.remove(load_threads, 1)
+				elseif r1 == "ERROR" then
+					log.error("Failed to create audio source for file: %s. Error: %s", r3, r2)
+				elseif r1 == "OK" then
+					local fn, master_src = r3, r2
+
+					self.sources[fn] = {master_src}
+					self.source_uses[fn] = 1
+				end
+			end
+		else
+			log.error("Thread error:%s", th:getError())
+			table.remove(load_threads, 1)
+		end
+
+		yield_every = yield_every + 1
+
+		if yielding and yield_every == 1000 then
+			yield_every = 0
+
+			coroutine.yield()
+		end
+	end
+
+	load_threads = nil
 
 	log.info("Done loading sounds from group %s - time: %s", name, love.timer.getTime() - rt_start)
 
@@ -399,7 +360,6 @@ function sound_db:unload_group(name)
 					source_uses[f] = 0
 				end
 			end
-		-- collectgarbage()
 		end
 	end
 
@@ -427,7 +387,6 @@ function sound_db:unload_group(name)
 					end
 				end
 			end
-		-- collectgarbage()
 		end
 	end
 end

@@ -445,3 +445,62 @@ MODE_FIND_FOREMOST = 0
 MODE_FIND_MAXHP = 1
 TOWER_KIND_MAGE = 0
 TOWER_KIND_ENGINEER = 1
+
+function OV(dimension, default, ...)
+	local dims = {
+		game = KR_GAME,
+		target = KR_TARGET,
+		platform = KR_PLATFORM,
+		os = KR_OS
+	}
+	local dimv = dims[dimension]
+
+	if not dimv then
+		return default
+	end
+
+	local args = {...}
+
+	if #args > 0 then
+		for i, a in ipairs(args) do
+			if i % 2 == 1 and a == dimv then
+				return args[i + 1]
+			end
+		end
+	end
+
+	return default
+end
+
+function OVG(default, ...)
+	return OV("game", default, ...)
+end
+
+function OVT(default, ...)
+	return OV("target", default, ...)
+end
+
+function OVP(default, ...)
+	return OV("platform", default, ...)
+end
+
+function OVO(default, ...)
+	return OV("os", default, ...)
+end
+
+OV_PHONE = "phone"
+OV_TABLET = "tablet"
+OV_DESKTOP = "desktop"
+OV_CONSOLE = "console"
+
+function OVtargets(default, phone, tablet, desktop, console)
+	return OVT(default, OV_PHONE, phone, OV_TABLET, tablet, OV_DESKTOP, desktop, OV_CONSOLE, console)
+end
+
+function OVm(default, mobile)
+	return OVT(default, OV_PHONE, mobile, OV_TABLET, mobile)
+end
+
+function OVnm(default, notmobile)
+	return OVT(default, OV_DESKTOP, notmobile, OV_DESKTOP, notmobile)
+end
