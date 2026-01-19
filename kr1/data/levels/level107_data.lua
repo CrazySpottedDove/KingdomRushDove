@@ -36,15 +36,6 @@ return {
 			}
 		},
 		{
-			template = "debug_path_renderer",
-			["path_debug.background_color"] = {46, 193, 142, 0},
-			["path_debug.path_color"] = {168, 199, 169, 0},
-			pos = {
-				x = -300,
-				y = 868
-			}
-		},
-		{
 			template = "decal_background",
 			["render.sprites[1].z"] = 1000,
 			["render.sprites[1].name"] = "Stage07_0001",

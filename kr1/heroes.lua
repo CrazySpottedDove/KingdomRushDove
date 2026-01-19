@@ -14218,11 +14218,10 @@ tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].scale = vec_1(1)
 tt.timed.duration = fts(27)
 --#endregion
+
 --#region hero_dragon_bone
 tt = RT("hero_dragon_bone", "hero")
-
 AC(tt, "ranged", "timed_attacks", "tween")
-
 b = balance.heroes.hero_dragon_bone
 tt.hero.level_stats.armor = b.armor
 tt.hero.level_stats.hp_max = b.hp_max

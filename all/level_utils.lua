@@ -418,7 +418,7 @@ function LU.insert_hero(store, name, pos, force_full_level)
 		return
 	end
 
-	for _, template_name in ipairs(template_names) do
+	for i, template_name in ipairs(template_names) do
 		local hero = E:create_entity(template_name)
 		local pos
 
@@ -429,7 +429,11 @@ function LU.insert_hero(store, name, pos, force_full_level)
 		end
 
 		if hero.hero.use_custom_spawn_point and store.level.custom_spawn_pos then
-			pos = store.level.custom_spawn_pos
+			if store.level.custom_spawn_pos[i] then
+				pos = store.level.custom_spawn_pos[i].pos
+			else
+				pos = store.level.custom_spawn_pos
+			end
 		else
 			pos = store.level.locations.exits[1].pos
 		end
