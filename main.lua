@@ -689,8 +689,8 @@ local function get_error_stack(msg, layer)
 end
 
 function love.errorhandler(msg)
-	local error_canvas = G.newCanvas(G.getWidth(), G.getHeight())
 	local last_canvas = G.getCanvas()
+	local error_canvas = G.newCanvas(G.getWidth(), G.getHeight())
 
 	G.setCanvas(error_canvas)
 
@@ -702,7 +702,7 @@ function love.errorhandler(msg)
 
 	stack_msg = (stack_msg or "") .. "\n" .. last_log_msg
 
-	print(stack_msg)
+	-- print(stack_msg)
 	log.error(stack_msg)
 	close_log()
 
@@ -808,7 +808,7 @@ function love.errorhandler(msg)
 	if has_tip then
 		table.insert(tip, "666，程序爆炸了! 如果您不想被吐槽看不懂中文的话，请先按照提示说的做。还是搞不定，再将本界面与此前界面截图并反馈，而不是仅语言描述。\n")
 	elseif not has_tip then
-		table.insert(tip, "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下蓝屏的图，截图反馈并用语言简要说明发生了什么。按-以返回蓝屏前图片。\n")
+		table.insert(tip, "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下蓝屏的图，截图反馈并用语言简要说明发生了什么。按b以返回蓝屏前图片。\n")
 	end
 
 	if love.nx then
@@ -868,7 +868,7 @@ function love.errorhandler(msg)
 					quiterr = true
 
 					return
-				elseif a == "-" then
+				elseif a == "b" then
 					show_last = not show_last
 				else
 					return

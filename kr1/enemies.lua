@@ -8471,6 +8471,24 @@ tt.ranged.attacks[1].animation = "attack_01"
 tt.sound_events.death = "EnemyDreadeyeViperDeath"
 tt.unit.blood_color = BLOOD_GREEN
 
+tt = E:register_t("arrow_dreadeye_viper", "arrow5_fixed_height")
+b = balance.enemies.werebeasts.dreadeye_viper
+tt.bullet.damage_min = b.basic_attack.damage_min
+tt.bullet.damage_max = b.basic_attack.damage_max
+tt.bullet.fixed_height = 40
+tt.bullet.g = -1000
+tt.bullet.mod = "mod_dreadeye_viper_arrow_acidic"
+tt.bullet.hit_blood_fx = nil
+tt.bullet.pop = nil
+tt.bullet.hide_radius = 6
+tt.bullet.prediction_error = false
+tt.bullet.predict_target_pos = false
+tt.bullet.hit_fx = "fx_dreadeye_viper_hit"
+tt.bullet.miss_decal = "dreadeye_viper_arrow2"
+tt.bullet.particles_name = "ps_bullet_dreadeye_viper"
+tt.render.sprites[1].name = "dreadeye_viper_arrow"
+tt.bullet.hit_distance = 20
+tt.bullet.extend_particles_cutoff = true
 local b = balance.enemies.werebeasts.surveyor_harpy
 
 tt = E:register_t("enemy_surveyor_harpy", "enemy_KR5")
@@ -8689,3 +8707,8 @@ tt.render.sprites[1].size_names = {"small", "big", "big"}
 tt.render.sprites[1].loop = true
 tt = E:register_t("enemy_hyena5_attack_fx", "fx")
 tt.render.sprites[1].name = "rottenfang_hyena_attack_hit_fx"
+
+tt = E:register_t("fx_dreadeye_viper_hit", "fx")
+tt.render.sprites[1].name = "dreadeye_viper_ranged_attack_hit"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].hide_after_runs = 1

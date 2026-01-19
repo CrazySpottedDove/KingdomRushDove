@@ -3429,7 +3429,7 @@ tt = RT("tower_paladin_covenant_soldier_lvl1", "soldier_militia")
 AC(tt, "nav_grid")
 
 b = balance.towers.paladin_covenant
-tt.info.portrait = "gui_bottom_info_image_soldiers_0001"
+tt.info.portrait = "kr5_info_portraits_soldiers_0001"
 tt.info.random_name_count = 18
 tt.info.random_name_format = "SOLDIER_PALADINS_%i_NAME"
 tt.main_script.update = scripts.tower_paladin_covenant.soldier_update
@@ -3459,7 +3459,7 @@ tt = RT("tower_paladin_covenant_soldier_lvl4", "tower_paladin_covenant_soldier_l
 AC(tt, "powers", "timed_attacks")
 
 b = balance.towers.paladin_covenant
-tt.info.portrait = "gui_bottom_info_image_soldiers_0004"
+tt.info.portrait = "kr5_info_portraits_soldiers_0004"
 tt.render.sprites[1].prefix = "paladin_soldier_lvl4"
 tt.render.sprites[1].angles.walk = {"walk"}
 tt.idle_flip.animations = {"idle"}
@@ -3475,7 +3475,7 @@ tt.powers.lead.health_bar_size = HEALTH_BAR_SIZE_MEDIUM
 tt.powers.lead.cooldown = b.lead.soldier_veteran.aura_cooldown
 tt.powers.lead.animation_upgrade = "raise"
 tt.powers.lead.hit_time = fts(12)
-tt.powers.lead.portrait = "gui_bottom_info_image_soldiers_0005"
+tt.powers.lead.portrait = "kr5_info_portraits_soldiers_0005"
 tt.powers.healing_prayer = CC("power")
 tt.powers.healing_prayer.health_trigger_factor = b.healing_prayer.health_trigger_factor
 tt.powers.healing_prayer.cooldown = b.healing_prayer.cooldown
@@ -3686,3 +3686,110 @@ tt.sound_events.change_rally_point = "TowerPaladinCovenantTaunt"
 tt.ui.click_rect = r(-42, 0, 84, 90)
 
 --#endregion
+
+tt = E:register_t("tower_arborean_sentinels", "tower_KR5")
+b = balance.specials.towers.arborean_sentinels
+
+E:add_comps(tt, "vis", "barrack")
+
+tt.tower.type = "tower_arborean_sentinels"
+tt.tower.level = 1
+tt.tower.kind = TOWER_KIND_BARRACK
+tt.tower.can_be_sold = false
+tt.tower.can_be_mod = false
+tt.info.portrait = "kr5_portraits_towers_0008"
+tt.info.fn = scripts.tower_barrack_mercenaries.get_info
+tt.main_script.update = scripts.tower_barrack_mercenaries.update
+tt.main_script.remove = scripts.tower_barrack.remove
+
+function tt.main_script.insert(this, store)
+	if this.render.sprites[1].flip_x == true then
+		this.barrack.respawn_offset.x = this.barrack.respawn_offset.x * -1
+	end
+
+	return scripts.tower_barrack.insert(this, store)
+end
+
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "stage4_barrack_holder"
+tt.render.sprites[1].offset = v(0, 8)
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "arborean_barrack_lvl1"
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[2].sort_y_offset = -8
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].prefix = "arborean_barrack_lvl1_door"
+tt.render.sprites[3].name = "close"
+tt.render.sprites[3].loop = false
+tt.render.sprites[3].z = Z_OBJECTS
+tt.render.sprites[3].offset = v(3, -4)
+tt.render.sprites[3].sort_y_offset = -8
+tt.render.door_sid = 3
+tt.barrack.soldier_type = "soldier_arborean_sentinels_spearmen"
+tt.barrack.rally_range = 209.28
+tt.barrack.respawn_offset = v(0, 5)
+tt.sound_events.change_rally_point = "Stage04ArboreanThornspears"
+tt = E:register_t("soldier_arborean_sentinels_spearmen", "soldier_militia")
+
+E:add_comps(tt, "powers", "timed_attacks", "ranged", "nav_grid")
+
+tt.health.armor = b.spearmen.armor
+tt.health.hp_max = b.spearmen.hp_max
+tt.regen.health = b.spearmen.regen_health
+tt.health_bar.offset = v(0, 35)
+tt.health.delete_after = 2
+tt.health.dead_lifetime = 1
+tt.info.portrait = "kr5_info_portraits_soldiers_0008"
+tt.info.random_name_format = "SOLDIER_ARBOREAN_SENTINELS_%i_NAME"
+tt.info.random_name_count = 9
+tt.main_script.insert = scripts.soldier_barrack.insert
+tt.main_script.update = scripts.soldier_barrack.update
+tt.melee.attacks[1].cooldown = b.spearmen.melee_attack.cooldown
+tt.melee.attacks[1].damage_max = b.spearmen.melee_attack.damage_max
+tt.melee.attacks[1].damage_min = b.spearmen.melee_attack.damage_min
+tt.melee.attacks[1].hit_time = fts(10)
+tt.melee.range = b.spearmen.melee_attack.range
+tt.motion.max_speed = b.spearmen.max_speed
+tt.ranged.attacks[1].animation = "ranged_attack"
+tt.ranged.attacks[1].bullet = "arborean_sentinels_spearmen_spear"
+tt.ranged.attacks[1].bullet_start_offset = {v(0, 25)}
+tt.ranged.attacks[1].cooldown = b.spearmen.ranged_attack.cooldown
+tt.ranged.attacks[1].max_range = b.spearmen.ranged_attack.max_range
+tt.ranged.attacks[1].min_range = b.spearmen.ranged_attack.min_range
+tt.ranged.attacks[1].shoot_time = fts(6)
+tt.render.sprites[1].prefix = "stage_4_special_arborean_sentinels_spearer_soldier"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.soldier.melee_slot_offset = v(5, 0)
+tt.unit.price = b.spearmen.price
+tt.unit.fade_time_after_death = 1
+tt.sound_events.insert = "Stage04ArboreanThornspears"
+tt = E:register_t("arborean_sentinels_spearmen_spear", "arrow")
+tt.bullet.damage_max = b.spearmen.ranged_attack.damage_max
+tt.bullet.damage_min = b.spearmen.ranged_attack.damage_min
+tt.bullet.damage_type = b.spearmen.ranged_attack.damage_type
+tt.bullet.miss_decal = "stage_4_special_arborean_sentinels_spearer_spear_decal"
+tt.bullet.flight_time = fts(14)
+tt.bullet.hide_radius = 10
+tt.bullet.hit_fx = "fx_arborean_sentinels_spearmen_spear_hit"
+tt.render.sprites[1].name = "stage_4_special_arborean_sentinels_spearer_spear"
+tt = E:register_t("soldier_arborean_sentinels_barkshield", "soldier_militia")
+tt.info.portrait = "kr5_info_portraits_soldiers_0003"
+tt.info.random_name_format = "SOLDIER_ARBOREAN_SENTINELS_%i_NAME"
+tt.info.random_name_count = 9
+tt.render.sprites[1].prefix = "stage_4_special_arborean_sentinels_barkshield_soldier"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.regen.health = b.barkshield.regen_health
+tt.health.hp_max = b.barkshield.hp_max
+tt.health.armor = b.barkshield.armor
+tt.health_bar.offset = v(0, 41)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.melee.attacks[1].cooldown = b.barkshield.melee_attack.cooldown
+tt.melee.attacks[1].damage_min = b.barkshield.melee_attack.damage_min
+tt.melee.attacks[1].damage_max = b.barkshield.melee_attack.damage_max
+tt.melee.attacks[1].hit_time = fts(8)
+tt.melee.range = b.barkshield.melee_attack.range
+tt.motion.max_speed = b.barkshield.max_speed
+tt.main_script.insert = scripts.soldier_barrack.insert
+tt.main_script.update = scripts.soldier_barrack.update
+tt.unit.price = b.barkshield.price

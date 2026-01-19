@@ -6366,6 +6366,22 @@ local specials = {
 			price = 150
 		}
 	},
+	terrain_4 = {
+		blocked_holders = {
+			price = 150
+		}
+	},
+	terrain_6 = {
+		blocked_holders = {
+			price = 150
+		}
+	},
+	terrain_7 = {
+		spider_floor_webs = {
+			sprint_factor = 1.7,
+			slow_factor = 0.3
+		}
+	},
 	terrain_8 = {
 		flaming_ground = {
 			dps = {
@@ -6403,8 +6419,7 @@ local specials = {
 				damage_type = DAMAGE_TRUE
 			},
 			wooden_holder_enhance = {
-				range_factor = 2.5,
-				damage_factor = 1.2,
+				range_factor = 2,
 				first_cooldown = 999999,
 				duration = 8,
 				slow_factor = 0.5,
@@ -6412,7 +6427,7 @@ local specials = {
 				default_max_range = 200,
 				damage_max = 5,
 				skill_detection_range_factor = 0.8,
-				rally_range_factor = 2.5,
+				rally_range_factor = 2,
 				damage_min = 3,
 				damage_every = 0.25,
 				price = 150,
@@ -7002,7 +7017,1721 @@ local specials = {
 		glare1 = {{-1, 0}, {-1, 0}, {-1, 0}, {6, 30}, {6, 20}, {60, 30}},
 		glare2 = {{-1, 0}, {8, 25}, {6, 30}, {-1, 0}, {-1, 0}, {6, 30}}
 	},
+	stage18_eridan = {
+		ranged_attack = {
+			range = 380,
+			damage_min = 18,
+			cooldown = 4,
+			damage_max = 30,
+			damage_type = DAMAGE_PHYSICAL
+		},
+		instakill = {
+			hp_threshold = 700,
+			range = 250,
+			cooldown = 18,
+			damage_type = DAMAGE_INSTAKILL
+		}
+	},
+	stage19_mausoleum = {
+		path_portal_off_delay = 10,
+		wave_config = {{
+			{},
+			{},
+			{},
+			{{
+				duration = 60,
+				time_start = 2
+			}},
+			{},
+			{{
+				duration = 42,
+				time_start = 2
+			}},
+			{},
+			{{
+				duration = 50,
+				time_start = 2
+			}},
+			{{
+				duration = 55,
+				time_start = 2
+			}},
+			{},
+			{{
+				duration = 30,
+				time_start = 2
+			}},
+			{},
+			{},
+			{{
+				duration = 68,
+				time_start = 2
+			}},
+			{{
+				duration = 75,
+				time_start = 2
+			}}
+		}, {{}, {{
+			duration = 55,
+			time_start = 2
+		}}, {{
+			duration = 27,
+			time_start = 2
+		}}, {{
+			duration = 56,
+			time_start = 2
+		}}, {}, {{
+			duration = 75,
+			time_start = 2
+		}}}, {{{
+			duration = 325,
+			time_start = 2
+		}}}}
+	},
+	stage20_arborean_house = {
+		armor = 0.3,
+		magic_armor = 0,
+		hp_max = 280
+	},
+	stage21_falling_rocks = {
+		damage_radius = 60,
+		damage = 2000,
+		damage_type = DAMAGE_PHYSICAL
+	},
+	stage22_remolino = {{
+		[3] = {{28, 41}},
+		[4] = {{35, 48}, {67, 80}},
+		[6] = {{12, 25}, {32, 45}},
+		[7] = {{25, 95}},
+		[9] = {{15, 24}, {75, 84}},
+		[10] = {{5, 52}},
+		[12] = {{12, 21}, {42, 51}},
+		[13] = {{5, 48}},
+		[14] = {{5, 20}, {70, 85}},
+		[15] = {{8, 18}, {48, 58}},
+		BOSS = {{31, 480}}
+	}, {
+		[2] = {{19.5, 27.5}, {43, 51.5}},
+		[3] = {{0.2, 4}},
+		[4] = {{27, 90}},
+		[5] = {{14, 24}},
+		[6] = {{0, 5}, {25, 63}}
+	}, {{{115, 319}}}},
+	stage22_tower_destroyed = {
+		repair_cost = 220
+	},
+	stage23_roboboots = {
+		wave_config = {{
+			{},
+			{{
+				leg = 2,
+				timings = {{0}}
+			}},
+			{{
+				leg = 2,
+				timings = {{nil, 1}}
+			}},
+			{},
+			{{
+				leg = 1,
+				timings = {{10}}
+			}},
+			{{
+				leg = 1,
+				timings = {{nil, 7}}
+			}, {
+				leg = 2,
+				timings = {{17}}
+			}},
+			{{
+				leg = 2,
+				timings = {{nil, 8}}
+			}},
+			{},
+			{{
+				leg = 1,
+				timings = {{1}}
+			}},
+			{{
+				leg = 1,
+				timings = {{nil, 8}}
+			}, {
+				leg = 2,
+				timings = {{1}}
+			}},
+			{{
+				leg = 1,
+				timings = {{5, 25}}
+			}, {
+				leg = 2,
+				timings = {{nil, 10}}
+			}},
+			{},
+			{{
+				leg = 2,
+				timings = {{1}}
+			}},
+			{{
+				leg = 2,
+				timings = {{nil, 5}}
+			}},
+			{{
+				leg = 1,
+				timings = {{10, 76}}
+			}, {
+				leg = 2,
+				timings = {{1, 72}}
+			}}
+		}, {{}, {}, {{
+			leg = 1,
+			timings = {{1}}
+		}}, {{
+			leg = 1,
+			timings = {{nil, 6}}
+		}, {
+			leg = 2,
+			timings = {{1}}
+		}}, {{
+			leg = 2,
+			timings = {{nil, 6}}
+		}}, {{
+			leg = 1,
+			timings = {{20, 46}}
+		}, {
+			leg = 2,
+			timings = {{13, 72}}
+		}}}, {{{
+			leg = 1,
+			timings = {{2, 45}, {114, 163}, {200, 230}, {295, 340}, {345, 370}}
+		}, {
+			leg = 2,
+			timings = {{170, 205}, {280, 345}}
+		}}}}
+	},
+	stage24_factory = {
+		wave_config = {{
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{{
+				duration = 40,
+				time_start = 10
+			}},
+			{},
+			{{
+				duration = 40,
+				time_start = 10
+			}},
+			{},
+			{{
+				duration = 40,
+				time_start = 8
+			}},
+			{},
+			{{
+				duration = 40,
+				time_start = 12
+			}},
+			{},
+			{{
+				duration = 40,
+				time_start = 15
+			}}
+		}, {{}, {}, {}, {}, {}, {}}, {{}}}
+	},
+	stage24_upgrade_station = {
+		wave_config = {{
+			{},
+			{},
+			{},
+			{},
+			{{
+				duration = 60,
+				time_start = 1
+			}},
+			{},
+			{},
+			{{
+				duration = 60,
+				time_start = 10
+			}},
+			{},
+			{},
+			{},
+			{{
+				duration = 50,
+				time_start = 1
+			}},
+			{},
+			{{
+				duration = 45,
+				time_start = 1
+			}},
+			{}
+		}, {{}, {{
+			duration = 55,
+			time_start = 2
+		}}, {}, {}, {{
+			duration = 56,
+			time_start = 2
+		}}, {}}, {{{
+			duration = 560,
+			time_start = 2
+		}}}}
+	},
+	stage25_torso = {
+		fist = {
+			radius = 140
+		},
+		missile = {
+			repair_cost = 50,
+			max_duration = 30
+		},
+		wave_config = {{
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{{
+				action = "open",
+				time_start = 8
+			}, {
+				action = "fist",
+				time_start = 13
+			}, {
+				action = "close",
+				time_start = 23
+			}},
+			{{
+				action = "open",
+				time_start = 13
+			}, {
+				action = "missile",
+				time_start = 18
+			}, {
+				action = "close",
+				time_start = 28
+			}},
+			{},
+			{{
+				action = "open",
+				time_start = 2
+			}, {
+				action = "fist",
+				time_start = 8
+			}, {
+				action = "fist",
+				time_start = 16
+			}},
+			{{
+				action = "missile",
+				time_start = 12
+			}, {
+				action = "missile",
+				time_start = 22
+			}},
+			{{
+				action = "fist",
+				time_start = 10
+			}, {
+				action = "fist",
+				time_start = 26
+			}},
+			{{
+				action = "missile",
+				time_start = 2
+			}, {
+				action = "missile",
+				time_start = 9
+			}, {
+				action = "missile",
+				time_start = 17
+			}},
+			{{
+				action = "missile",
+				time_start = 11
+			}, {
+				action = "missile",
+				time_start = 23
+			}, {
+				action = "missile",
+				time_start = 33
+			}, {
+				action = "missile",
+				time_start = 47
+			}, {
+				action = "missile",
+				time_start = 57
+			}, {
+				action = "missile",
+				time_start = 67
+			}, {
+				action = "missile",
+				time_start = 77
+			}, {
+				action = "missile",
+				time_start = 87
+			}, {
+				action = "missile",
+				time_start = 97
+			}}
+		}, {{{
+			action = "open",
+			time_start = 2
+		}, {
+			action = "fist",
+			time_start = 17
+		}, {
+			action = "fist",
+			time_start = 27
+		}}, {{
+			action = "missile",
+			time_start = 12
+		}, {
+			action = "missile",
+			time_start = 22
+		}, {
+			action = "missile",
+			time_start = 32
+		}}, {{
+			action = "missile",
+			time_start = 8
+		}, {
+			action = "missile",
+			time_start = 26
+		}, {
+			action = "missile",
+			time_start = 38
+		}}, {{
+			action = "fist",
+			time_start = 12
+		}, {
+			action = "fist",
+			time_start = 28
+		}}, {{
+			action = "fist",
+			time_start = 17
+		}, {
+			action = "fist",
+			time_start = 26
+		}}, {{
+			action = "fist",
+			time_start = 17
+		}, {
+			action = "missile",
+			time_start = 24
+		}, {
+			action = "missile",
+			time_start = 34
+		}, {
+			action = "fist",
+			time_start = 46
+		}, {
+			action = "missile",
+			time_start = 59
+		}, {
+			action = "missile",
+			time_start = 72
+		}, {
+			action = "missile",
+			time_start = 83
+		}, {
+			action = "missile",
+			time_start = 94
+		}, {
+			action = "missile",
+			time_start = 106
+		}, {
+			action = "missile",
+			time_start = 120
+		}}}, {{
+			{
+				action = "open",
+				time_start = 12
+			},
+			{
+				action = "missile",
+				time_start = 24
+			},
+			{
+				action = "missile",
+				time_start = 48
+			},
+			{
+				action = "fist",
+				time_start = 66
+			},
+			{
+				action = "missile",
+				time_start = 84
+			},
+			{
+				action = "missile",
+				time_start = 104
+			},
+			{
+				action = "missile",
+				time_start = 132
+			},
+			{
+				action = "missile",
+				time_start = 145
+			},
+			{
+				action = "fist",
+				time_start = 160
+			},
+			{
+				action = "fist",
+				time_start = 180
+			},
+			{
+				action = "missile",
+				time_start = 230
+			},
+			{
+				action = "missile",
+				time_start = 260
+			},
+			{
+				action = "missile",
+				time_start = 272
+			},
+			{
+				action = "missile",
+				time_start = 300
+			},
+			{
+				action = "fist",
+				time_start = 312
+			},
+			{
+				action = "missile",
+				time_start = 325
+			},
+			{
+				action = "missile",
+				time_start = 347
+			},
+			{
+				action = "fist",
+				time_start = 360
+			},
+			{
+				action = "missile",
+				time_start = 372
+			},
+			{
+				action = "missile",
+				time_start = 383
+			},
+			{
+				action = "missile",
+				time_start = 405
+			},
+			{
+				action = "missile",
+				time_start = 416
+			},
+			{
+				action = "fist",
+				time_start = 430
+			},
+			{
+				action = "missile",
+				time_start = 442
+			},
+			{
+				action = "missile",
+				time_start = 455
+			},
+			{
+				action = "missile",
+				time_start = 472
+			},
+			{
+				action = "missile",
+				time_start = 483
+			},
+			{
+				action = "missile",
+				time_start = 505
+			},
+			{
+				action = "missile",
+				time_start = 516
+			},
+			{
+				action = "missile",
+				time_start = 527
+			}
+		}}}
+	},
+	stage26_spawners = {
+		wave_config = {{
+			{},
+			{},
+			{{
+				action = "open",
+				time_start = 8,
+				spawner = "fist",
+				count = 2
+			}, {
+				action = "close",
+				time_start = 17,
+				spawner = "fist"
+			}, {
+				action = "open",
+				time_start = 18,
+				spawner = "fist",
+				count = 2
+			}, {
+				action = "close",
+				time_start = 27,
+				spawner = "fist"
+			}},
+			{},
+			{{
+				action = "open",
+				time_start = 1,
+				spawner = "clone_left"
+			}, {
+				action = "open",
+				time_start = 6,
+				spawner = "fist",
+				count = 2
+			}, {
+				action = "close",
+				time_start = 11,
+				spawner = "clone_left"
+			}, {
+				action = "close",
+				time_start = 16,
+				spawner = "fist"
+			}, {
+				action = "open",
+				time_start = 18,
+				spawner = "clone_left"
+			}, {
+				action = "close",
+				time_start = 38,
+				spawner = "clone_left"
+			}},
+			{{
+				action = "activate",
+				time_start = 1,
+				spawner = "hulk"
+			}, {
+				action = "open",
+				time_start = 4,
+				spawner = "fist",
+				count = 4
+			}, {
+				action = "close",
+				time_start = 25,
+				spawner = "fist"
+			}},
+			{{
+				action = "open",
+				time_start = 1,
+				spawner = "clone_right"
+			}, {
+				action = "close",
+				time_start = 9,
+				spawner = "clone_right"
+			}, {
+				action = "open",
+				time_start = 10,
+				spawner = "clone_right"
+			}, {
+				action = "close",
+				time_start = 19,
+				spawner = "clone_right"
+			}, {
+				action = "open",
+				time_start = 23,
+				spawner = "clone_right"
+			}, {
+				action = "close",
+				time_start = 32,
+				spawner = "clone_right"
+			}},
+			{{
+				action = "open",
+				time_start = 1,
+				spawner = "clone_left"
+			}, {
+				action = "open",
+				time_start = 4,
+				spawner = "fist",
+				count = 2
+			}, {
+				action = "close",
+				time_start = 13,
+				spawner = "fist"
+			}, {
+				action = "close",
+				time_start = 11,
+				spawner = "clone_left"
+			}, {
+				action = "open",
+				time_start = 12,
+				spawner = "clone_left"
+			}, {
+				action = "open",
+				time_start = 14,
+				spawner = "fist",
+				count = 4
+			}, {
+				action = "close",
+				time_start = 24,
+				spawner = "clone_left"
+			}, {
+				action = "open",
+				time_start = 26,
+				spawner = "clone_left"
+			}, {
+				action = "close",
+				time_start = 30,
+				spawner = "fist"
+			}, {
+				action = "close",
+				time_start = 36,
+				spawner = "clone_left"
+			}},
+			{{
+				action = "activate",
+				time_start = 1,
+				spawner = "hulk"
+			}},
+			{{
+				action = "activate",
+				time_start = 1,
+				spawner = "hulk"
+			}},
+			{{
+				action = "open",
+				time_start = 2,
+				spawner = "fist",
+				count = 4
+			}, {
+				action = "open",
+				time_start = 9,
+				spawner = "clone_right"
+			}, {
+				action = "close",
+				time_start = 18,
+				spawner = "fist"
+			}, {
+				action = "close",
+				time_start = 19,
+				spawner = "clone_right"
+			}, {
+				action = "open",
+				time_start = 31,
+				spawner = "fist",
+				count = 4
+			}, {
+				action = "open",
+				time_start = 38,
+				spawner = "clone_right"
+			}, {
+				action = "close",
+				time_start = 47,
+				spawner = "fist"
+			}, {
+				action = "close",
+				time_start = 48,
+				spawner = "clone_right"
+			}},
+			{{
+				action = "open",
+				time_start = 1,
+				spawner = "fist",
+				count = 2
+			}, {
+				action = "open",
+				time_start = 4,
+				spawner = "clone_left"
+			}, {
+				action = "close",
+				time_start = 10,
+				spawner = "fist"
+			}, {
+				action = "close",
+				time_start = 15,
+				spawner = "clone_left"
+			}, {
+				action = "open",
+				time_start = 16,
+				spawner = "fist",
+				count = 2
+			}, {
+				action = "open",
+				time_start = 20,
+				spawner = "clone_left"
+			}, {
+				action = "close",
+				time_start = 26,
+				spawner = "fist"
+			}, {
+				action = "close",
+				time_start = 31,
+				spawner = "clone_left"
+			}},
+			{{
+				action = "activate",
+				time_start = 1,
+				spawner = "hulk"
+			}, {
+				action = "open",
+				time_start = 3,
+				spawner = "clone_right"
+			}, {
+				action = "close",
+				time_start = 14,
+				spawner = "clone_right"
+			}, {
+				action = "activate",
+				time_start = 20,
+				spawner = "hulk"
+			}, {
+				action = "open",
+				time_start = 26,
+				spawner = "clone_right"
+			}, {
+				action = "close",
+				time_start = 38,
+				spawner = "clone_right"
+			}},
+			{
+				{
+					action = "open",
+					time_start = 1,
+					spawner = "clone_left"
+				},
+				{
+					action = "open",
+					time_start = 3,
+					spawner = "clone_right"
+				},
+				{
+					action = "open",
+					time_start = 5,
+					spawner = "fist",
+					count = 4
+				},
+				{
+					action = "close",
+					time_start = 13,
+					spawner = "clone_left"
+				},
+				{
+					action = "close",
+					time_start = 14,
+					spawner = "clone_right"
+				},
+				{
+					action = "open",
+					time_start = 15,
+					spawner = "clone_left"
+				},
+				{
+					action = "open",
+					time_start = 17,
+					spawner = "clone_right"
+				},
+				{
+					action = "close",
+					time_start = 20.5,
+					spawner = "fist"
+				},
+				{
+					action = "open",
+					time_start = 20.5,
+					spawner = "fist",
+					count = 4
+				},
+				{
+					action = "close",
+					time_start = 28,
+					spawner = "clone_left"
+				},
+				{
+					action = "close",
+					time_start = 30,
+					spawner = "clone_right"
+				},
+				{
+					action = "close",
+					time_start = 37,
+					spawner = "fist"
+				},
+				{
+					action = "open",
+					time_start = 38,
+					spawner = "clone_left"
+				},
+				{
+					action = "open",
+					time_start = 40,
+					spawner = "clone_right"
+				},
+				{
+					action = "close",
+					time_start = 48,
+					spawner = "clone_left"
+				},
+				{
+					action = "close",
+					time_start = 50,
+					spawner = "clone_right"
+				}
+			},
+			{{
+				action = "open",
+				time_start = 1,
+				spawner = "fist",
+				count = 4
+			}, {
+				action = "activate",
+				time_start = 3,
+				spawner = "hulk"
+			}, {
+				action = "close",
+				time_start = 16,
+				spawner = "fist"
+			}, {
+				action = "open",
+				time_start = 23,
+				spawner = "fist",
+				count = 4
+			}, {
+				action = "activate",
+				time_start = 27,
+				spawner = "hulk"
+			}, {
+				action = "close",
+				time_start = 38,
+				spawner = "fist"
+			}, {
+				action = "open",
+				time_start = 48,
+				spawner = "fist",
+				count = 4
+			}, {
+				action = "activate",
+				time_start = 52,
+				spawner = "hulk"
+			}, {
+				action = "close",
+				time_start = 63,
+				spawner = "fist"
+			}}
+		}, {{}, {{
+			action = "open",
+			time_start = 0,
+			spawner = "fist",
+			count = 4
+		}, {
+			action = "close",
+			time_start = 16,
+			spawner = "fist"
+		}, {
+			action = "open",
+			time_start = 34,
+			spawner = "fist",
+			count = 4
+		}, {
+			action = "close",
+			time_start = 50,
+			spawner = "fist"
+		}}, {{
+			action = "activate",
+			time_start = 0,
+			spawner = "hulk"
+		}, {
+			action = "open",
+			time_start = 4,
+			spawner = "clone_right"
+		}, {
+			action = "close",
+			time_start = 15,
+			spawner = "clone_right"
+		}, {
+			action = "open",
+			time_start = 33,
+			spawner = "clone_right"
+		}, {
+			action = "close",
+			time_start = 43,
+			spawner = "clone_right"
+		}, {
+			action = "open",
+			time_start = 53,
+			spawner = "clone_right"
+		}, {
+			action = "close",
+			time_start = 63,
+			spawner = "clone_right"
+		}}, {{
+			action = "activate",
+			time_start = 0,
+			spawner = "hulk"
+		}}, {{
+			action = "open",
+			time_start = 0,
+			spawner = "fist",
+			count = 4
+		}, {
+			action = "open",
+			time_start = 7,
+			spawner = "clone_left"
+		}, {
+			action = "close",
+			time_start = 16,
+			spawner = "fist"
+		}, {
+			action = "open",
+			time_start = 21,
+			spawner = "fist",
+			count = 4
+		}, {
+			action = "close",
+			time_start = 23,
+			spawner = "clone_left"
+		}, {
+			action = "open",
+			time_start = 28,
+			spawner = "clone_left"
+		}, {
+			action = "close",
+			time_start = 37,
+			spawner = "fist"
+		}, {
+			action = "close",
+			time_start = 42,
+			spawner = "clone_left"
+		}}, {{
+			action = "open",
+			time_start = 0,
+			spawner = "fist",
+			count = 4
+		}, {
+			action = "activate",
+			time_start = 10,
+			spawner = "hulk"
+		}, {
+			action = "close",
+			time_start = 16,
+			spawner = "fist"
+		}, {
+			action = "open",
+			time_start = 34,
+			spawner = "clone_left"
+		}, {
+			action = "activate",
+			time_start = 56,
+			spawner = "hulk"
+		}, {
+			action = "close",
+			time_start = 62,
+			spawner = "clone_left"
+		}, {
+			action = "activate",
+			time_start = 74,
+			spawner = "hulk"
+		}, {
+			action = "open",
+			time_start = 76,
+			spawner = "fist",
+			count = 4
+		}, {
+			action = "close",
+			time_start = 92,
+			spawner = "fist"
+		}}}, {{
+			{
+				action = "open",
+				time_start = 1,
+				spawner = "clone_left"
+			},
+			{
+				action = "close",
+				time_start = 9,
+				spawner = "clone_left"
+			},
+			{
+				action = "open",
+				time_start = 15,
+				spawner = "clone_left"
+			},
+			{
+				action = "close",
+				time_start = 24,
+				spawner = "clone_left"
+			},
+			{
+				action = "open",
+				time_start = 54,
+				spawner = "clone_left"
+			},
+			{
+				action = "close",
+				time_start = 64,
+				spawner = "clone_left"
+			},
+			{
+				action = "open",
+				time_start = 80,
+				spawner = "fist",
+				count = 6
+			},
+			{
+				action = "close",
+				time_start = 106,
+				spawner = "fist"
+			},
+			{
+				action = "open",
+				time_start = 109,
+				spawner = "fist",
+				count = 4
+			},
+			{
+				action = "close",
+				time_start = 125,
+				spawner = "fist"
+			},
+			{
+				action = "open",
+				time_start = 142,
+				spawner = "clone_right"
+			},
+			{
+				action = "open",
+				time_start = 145,
+				spawner = "fist",
+				count = 3
+			},
+			{
+				action = "close",
+				time_start = 151,
+				spawner = "clone_right"
+			},
+			{
+				action = "open",
+				time_start = 154,
+				spawner = "clone_right"
+			},
+			{
+				action = "close",
+				time_start = 158,
+				spawner = "fist"
+			},
+			{
+				action = "open",
+				time_start = 159,
+				spawner = "fist",
+				count = 7
+			},
+			{
+				action = "close",
+				time_start = 163,
+				spawner = "clone_right"
+			},
+			{
+				action = "open",
+				time_start = 173,
+				spawner = "clone_right"
+			},
+			{
+				action = "close",
+				time_start = 188,
+				spawner = "fist"
+			},
+			{
+				action = "close",
+				time_start = 195,
+				spawner = "clone_right"
+			},
+			{
+				action = "activate",
+				time_start = 260,
+				spawner = "hulk"
+			},
+			{
+				action = "open",
+				time_start = 264,
+				spawner = "fist",
+				count = 4
+			},
+			{
+				action = "close",
+				time_start = 279,
+				spawner = "fist"
+			},
+			{
+				action = "open",
+				time_start = 294,
+				spawner = "clone_right"
+			},
+			{
+				action = "open",
+				time_start = 295,
+				spawner = "fist",
+				count = 4
+			},
+			{
+				action = "close",
+				time_start = 305,
+				spawner = "clone_right"
+			},
+			{
+				action = "close",
+				time_start = 309,
+				spawner = "fist"
+			},
+			{
+				action = "open",
+				time_start = 325,
+				spawner = "clone_right"
+			},
+			{
+				action = "close",
+				time_start = 335,
+				spawner = "clone_right"
+			},
+			{
+				action = "open",
+				time_start = 342,
+				spawner = "clone_left"
+			},
+			{
+				action = "close",
+				time_start = 352,
+				spawner = "clone_left"
+			},
+			{
+				action = "open",
+				time_start = 370,
+				spawner = "clone_left"
+			},
+			{
+				action = "close",
+				time_start = 380,
+				spawner = "clone_left"
+			},
+			{
+				action = "open",
+				time_start = 397,
+				spawner = "clone_right"
+			},
+			{
+				action = "open",
+				time_start = 400,
+				spawner = "clone_left"
+			},
+			{
+				action = "activate",
+				time_start = 419,
+				spawner = "hulk"
+			},
+			{
+				action = "close",
+				time_start = 430,
+				spawner = "clone_right"
+			},
+			{
+				action = "open",
+				time_start = 431,
+				spawner = "fist",
+				count = 4
+			},
+			{
+				action = "close",
+				time_start = 432,
+				spawner = "clone_left"
+			},
+			{
+				action = "close",
+				time_start = 445,
+				spawner = "fist"
+			},
+			{
+				action = "activate",
+				time_start = 464,
+				spawner = "hulk"
+			},
+			{
+				action = "open",
+				time_start = 469,
+				spawner = "fist",
+				count = 8
+			},
+			{
+				action = "close",
+				time_start = 506,
+				spawner = "fist"
+			}
+		}}}
+	},
+	stage27_head = {
+		ray_stun_duration = 15,
+		taps_to_cancel = 20,
+		attack_duration = 6,
+		towers_to_stun = 13,
+		charge_time = 3,
+		scrap_attack = {
+			damage_radius = 50,
+			damage_max = 72,
+			damage_min = 48,
+			damage_type = DAMAGE_EXPLOSION
+		},
+		tower_stun_repair_cost = {50, 75, 100, 125, 150, 175, 200, 225, 250, 275}
+	},
+	stage29_holder_block = {
+		time_to_up = 2,
+		time_to_down = 3,
+		time_netting = 5,
+		taps_to_cancel = 3,
+		waves = {{5, 6, 7, 9, 10, 11, 12, 13, 14, 15}, {2, 3, 4, 5, 6}, {1}},
+		first_cooldown = {{5, 40, 5, 45, 1, 22, 1, 1, 1, 1}, {1, 35, 5, 25, 40}, {30}},
+		cooldown = {{35, 20, 0, 0, 30, 30, 40, 30, 30, 25}, {0, 0, 42, 0, 20}, {50}},
+		max_casts = {{2, 2, 1, 1, 3, 2, 2, 3, 3, 4}, {1, 1, 2, 1, 2}, {50}},
+		blocked_holders = {
+			price = {65, 65, 30}
+		},
+		game_start_blocked_holders = {{}, {}, {
+			"1",
+			"2",
+			"3",
+			"4",
+			"5",
+			"6",
+			"7",
+			"8",
+			"9",
+			"10",
+			"11",
+			"12",
+			"13",
+			"14",
+			"15"
+		}}
+	},
+	stage30_door = {{
+		[5] = {{32, 42}, {58, 68}},
+		[9] = {{21, 31}, {48, 58}},
+		[11] = {{10, 25}, {43, 58}},
+		[13] = {{1, 10}, {18, 28}, {41, 55}},
+		[15] = {{1, 10}, {18, 28}, {52, 62}}
+	}, {{{44, 52}}, {{57, 67}}, {{0.2, 10}, {44, 60}}, {{46, 60}}, {{0.5, 19}}, {{24, 34}, {70, 80}}}, {{{155, 180}, {220, 250}}}},
+	stage31_water_mechanic = {
+		unlock_wave = 4,
+		warn_duration = 5,
+		first_warn_minimum_targets = 3,
+		cooldown = 50,
+		damage_max = 320,
+		damage_min = 280,
+		duration = 4,
+		path = {1, 4},
+		nodes = {{46, 138}, {50, 130}},
+		damage_type = DAMAGE_PHYSICAL
+	},
+	stage32_lightning_strike = {
+		chain_strikes_chance = 0,
+		force_target_soldier_chance = 0.2,
+		warning_duration = 0.75,
+		max_chains = 2,
+		areas_configs = {
+			CAMPAIGN = {
+				["1"] = {
+					[5] = {{
+						max_casts = 10,
+						first_cd = 1,
+						max_cd = 6,
+						min_cd = 4.5
+					}},
+					[6] = {{
+						max_casts = 15,
+						first_cd = 3,
+						max_cd = 5.5,
+						min_cd = 4
+					}},
+					[8] = {{
+						max_casts = 4,
+						first_cd = 3,
+						max_cd = 5,
+						min_cd = 4
+					}},
+					[10] = {{
+						max_casts = 15,
+						first_cd = 5,
+						max_cd = 5,
+						min_cd = 4
+					}},
+					[11] = {{
+						max_casts = 10,
+						first_cd = 15,
+						max_cd = 7,
+						min_cd = 5
+					}},
+					[13] = {{
+						max_casts = 40,
+						first_cd = 5,
+						max_cd = 3.5,
+						min_cd = 3
+					}},
+					[15] = {{
+						max_casts = 75,
+						first_cd = 1,
+						max_cd = 4,
+						min_cd = 3.75
+					}}
+				},
+				["10"] = {},
+				["2"] = {
+					[6] = {{
+						spawn_unit = "enemy_water_spirit_spawnless",
+						first_cd = 10,
+						max_casts = 6,
+						max_cd = 3,
+						min_cd = 2
+					}, {
+						spawn_unit = "enemy_water_spirit_spawnless",
+						first_cd = 42,
+						max_casts = 6,
+						max_cd = 3,
+						min_cd = 2
+					}},
+					[8] = {{
+						max_casts = 8,
+						first_cd = 1,
+						max_cd = 4,
+						min_cd = 2
+					}},
+					[9] = {{
+						max_casts = 11,
+						first_cd = 2,
+						max_cd = 6,
+						min_cd = 5
+					}},
+					[11] = {{
+						spawn_unit = "enemy_water_spirit_spawnless",
+						first_cd = 48.5,
+						max_casts = 6,
+						max_cd = 3,
+						min_cd = 2.5
+					}},
+					[13] = {{
+						max_casts = 10,
+						first_cd = 2,
+						max_cd = 1.5,
+						min_cd = 1
+					}, {
+						max_casts = 20,
+						first_cd = 70,
+						max_cd = 1.25,
+						min_cd = 0.75
+					}},
+					[15] = {{
+						spawn_unit = "enemy_storm_elemental",
+						first_cd = 6.5,
+						max_casts = 1,
+						max_cd = 1,
+						min_cd = 1
+					}, {
+						spawn_unit = "enemy_storm_elemental",
+						first_cd = 52,
+						max_casts = 1,
+						max_cd = 12,
+						min_cd = 10
+					}}
+				},
+				["3"] = {
+					[9] = {{
+						spawn_unit = "enemy_water_spirit_spawnless",
+						first_cd = 6,
+						max_casts = 7,
+						max_cd = 1.5,
+						min_cd = 1
+					}, {
+						spawn_unit = "enemy_water_spirit_spawnless",
+						first_cd = 70,
+						max_casts = 7,
+						max_cd = 1.5,
+						min_cd = 1
+					}},
+					[11] = {{
+						max_casts = 6,
+						first_cd = 3,
+						max_cd = 8,
+						min_cd = 6
+					}},
+					[13] = {{
+						max_casts = 10,
+						first_cd = 10,
+						max_cd = 1.25,
+						min_cd = 0.75
+					}, {
+						spawn_unit = "enemy_storm_elemental",
+						first_cd = 25,
+						max_casts = 2,
+						max_cd = 23,
+						min_cd = 23
+					}},
+					[15] = {{
+						max_casts = 1e+99,
+						first_cd = 1,
+						max_cd = 4,
+						min_cd = 3
+					}}
+				},
+				["4"] = {
+					[9] = {{
+						max_casts = 11,
+						first_cd = 5,
+						max_cd = 6,
+						min_cd = 5
+					}},
+					[11] = {{
+						spawn_unit = "enemy_water_spirit_spawnless",
+						first_cd = 4,
+						max_casts = 8,
+						max_cd = 3,
+						min_cd = 2
+					}, {
+						spawn_unit = "enemy_water_spirit_spawnless",
+						first_cd = 50,
+						max_casts = 6,
+						max_cd = 3,
+						min_cd = 2.5
+					}},
+					[15] = {{
+						spawn_unit = "enemy_storm_elemental",
+						first_cd = 8,
+						max_casts = 1,
+						max_cd = 12,
+						min_cd = 10
+					}, {
+						spawn_unit = "enemy_water_spirit_spawnless",
+						first_cd = 22,
+						max_casts = 6,
+						max_cd = 1.25,
+						min_cd = 1
+					}, {
+						spawn_unit = "enemy_storm_elemental",
+						first_cd = 50,
+						max_casts = 1,
+						max_cd = 12,
+						min_cd = 10
+					}, {
+						spawn_unit = "enemy_water_spirit_spawnless",
+						first_cd = 63,
+						max_casts = 8,
+						max_cd = 0.75,
+						min_cd = 0.5
+					}}
+				},
+				["5"] = {
+					[13] = {{
+						spawn_unit = "enemy_water_spirit_spawnless",
+						first_cd = 5,
+						max_casts = 8,
+						max_cd = 1.5,
+						min_cd = 1
+					}, {
+						spawn_unit = "enemy_water_spirit_spawnless",
+						first_cd = 34,
+						max_casts = 8,
+						max_cd = 1.5,
+						min_cd = 1
+					}}
+				},
+				["6"] = {
+					[10] = {{
+						max_casts = 3,
+						first_cd = 3,
+						max_cd = 1,
+						min_cd = 0.75
+					}, {
+						spawn_unit = "enemy_storm_elemental",
+						first_cd = 39,
+						max_casts = 1,
+						max_cd = 1,
+						min_cd = 0.75
+					}},
+					[13] = {{
+						max_casts = 10,
+						first_cd = 13,
+						max_cd = 1.25,
+						min_cd = 0.75
+					}},
+					[15] = {{
+						spawn_unit = "enemy_storm_elemental",
+						first_cd = 5,
+						max_casts = 1,
+						max_cd = 12,
+						min_cd = 10
+					}, {
+						spawn_unit = "enemy_storm_elemental",
+						first_cd = 54,
+						max_casts = 1,
+						max_cd = 12,
+						min_cd = 10
+					}, {
+						max_casts = 11,
+						first_cd = 60,
+						max_cd = 6,
+						min_cd = 5
+					}}
+				},
+				["7"] = {
+					[15] = {{
+						max_casts = 10,
+						first_cd = 6,
+						max_cd = 5,
+						min_cd = 4
+					}}
+				},
+				["8"] = {}
+			},
+			HEROIC = {},
+			IRON = {
+				["1"] = {{{
+					max_casts = 1e+99,
+					first_cd = 169,
+					max_cd = 7,
+					min_cd = 4
+				}}},
+				["2"] = {{{
+					max_casts = 10,
+					first_cd = 171,
+					max_cd = 5,
+					min_cd = 4
+				}, {
+					spawn_unit = "enemy_water_spirit_spawnless",
+					first_cd = 225,
+					max_casts = 10,
+					max_cd = 2,
+					min_cd = 1.5
+				}}},
+				["3"] = {{{
+					spawn_unit = "enemy_storm_elemental",
+					first_cd = 174,
+					max_casts = 1,
+					max_cd = 1,
+					min_cd = 1
+				}, {
+					max_casts = 1e+99,
+					first_cd = 176,
+					max_cd = 8,
+					min_cd = 5
+				}}},
+				["4"] = {{{
+					max_casts = 6,
+					first_cd = 172.5,
+					max_cd = 7,
+					min_cd = 4
+				}, {
+					spawn_unit = "enemy_water_spirit_spawnless",
+					first_cd = 212,
+					max_casts = 7,
+					max_cd = 2.5,
+					min_cd = 2
+				}}}
+			}
+		},
+		damage_config = {
+			radius = 100,
+			damage_type = DAMAGE_TRUE,
+			damage_max = {50, 50, 85},
+			damage_min = {50, 50, 60}
+		}
+	},
+	stage33_envelops = {
+		cooldown_min = 20,
+		max_speed = 20,
+		decoy_chance = 0.5,
+		gold = 5,
+		min_speed = 10,
+		cooldown_max = 40,
+		gold_balatro = 1000
+	},
+	stage35_cannonball_soldier = {
+		speed = 75,
+		armor = 0,
+		hp = 90,
+		basic_attack = {
+			cooldown = 1,
+			range = 100,
+			damage_max = 13,
+			damage_min = 8
+		}
+	},
 	towers = {
+		tower_stage_28_priests_barrack = {
+			cooldown_disable = 2,
+			max_soldiers = 3,
+			spawn_cooldown_max = 0.6,
+			spawn_cooldown_min = 0.3,
+			price = 0,
+			priest = {
+				regen_health = 0,
+				armor = 0,
+				max_speed = 45,
+				hp_max = 110,
+				price = 0,
+				transform_chances = {100, 0},
+				melee = {
+					cooldown = 1,
+					damage_min = 10,
+					damage_max = 15,
+					damage_type = DAMAGE_MAGICAL
+				},
+				ranged = {
+					range = 218,
+					damage_min = 30,
+					cooldown = 2.5,
+					damage_max = 45,
+					damage_type = DAMAGE_MAGICAL
+				}
+			},
+			abomination = {
+				armor = 0,
+				max_speed = 25,
+				regen_health = 0,
+				hp_max = 500,
+				duration = 20,
+				melee_attack = {
+					cooldown = 2,
+					damage_min = 45,
+					damage_max = 60
+				},
+				eat = {
+					cooldown = 10,
+					hp_required = 0.3
+				}
+			},
+			tentacle = {
+				duration = 15,
+				area_attack = {
+					radius = 50,
+					cooldown_min = 1,
+					damage_min = 12,
+					cooldown_max = 2,
+					damage_max = 20,
+					damage_type = DAMAGE_PHYSICAL
+				}
+			}
+		},
 		arborean_sentinels = {
 			spearmen = {
 				armor = 0.1,
@@ -7065,6 +8794,104 @@ local specials = {
 				damage_every = fts(2),
 				duration = fts(60),
 				damage_type = DAMAGE_DISINTEGRATE
+			}
+		},
+		stage_17_weirdwood = {
+			corruption_limit = 3,
+			holder_cost = 150,
+			basic_attack = {
+				max_range = 190,
+				min_range = 40,
+				damage_min = 28,
+				damage_radius = 55,
+				cooldown = 5,
+				damage_max = 50
+			},
+			corruption_phases = {1, 2, 3}
+		},
+		stage_18_elven_barrack = {
+			corruption_limit = 3,
+			max_soldiers = 3,
+			rally_range = 160,
+			spawn_cooldown = 5,
+			soldier = {
+				speed = 75,
+				armor = 0.5,
+				hp = 120,
+				dead_lifetime = 10,
+				regen_hp = 10,
+				price = {50, 75, 100, 100},
+				basic_attack = {
+					cooldown = 1,
+					range = 75,
+					damage_max = 24,
+					damage_min = 16
+				}
+			},
+			corruption_phases = {1, 2, 3}
+		},
+		stage_20_arborean_oldtree = {
+			max_range = 50,
+			path_index_iron = 3,
+			node_index_iron = 105,
+			cooldown = 90,
+			price_iron = 100,
+			path_index = 2,
+			damage_max = 450,
+			damage_min = 350,
+			node_index = 170,
+			price = 250,
+			damage_type = DAMAGE_PHYSICAL
+		},
+		stage_20_arborean_honey = {
+			max_range = 180,
+			aura_duration = 4,
+			price_heroic = 300,
+			slow_factor = 0.6,
+			cooldown = 5,
+			damage_radius = 100,
+			damage_max = 30,
+			damage_min = 20,
+			slow_mod_duration = 0.5,
+			price = 500,
+			damage_type = DAMAGE_PHYSICAL
+		},
+		tower_stage_20_arborean_barrack = {
+			soldier_hp_max = 120,
+			spawn_cooldown_max = 0.6,
+			hp_max = 500,
+			spawn_cooldown_min = 0.3,
+			cooldown_disable = 2,
+			magic_armor = 0,
+			price = 50,
+			armor = 0.3,
+			soldier_damage_max = 8,
+			soldier_damage_min = 4,
+			spawns = 3,
+			soldier_armor = 0.1,
+			life_thresholds = {0.7, 0.4, 0}
+		},
+		stage_20_arborean_watchtower = {
+			tunnel_check_cooldown = 3,
+			basic_attack = {
+				max_range = 260,
+				damage_min = 19,
+				cooldown = 2.4,
+				damage_max = 28,
+				damage_type = DAMAGE_PHYSICAL
+			},
+			picked_enemies_to_destroy = {2, 4, 6}
+		},
+		stage_22_arborean_mages_tower = {
+			armor = 0.3,
+			magic_armor = 0,
+			hp_max = 500,
+			basic_attack = {
+				max_range = 260,
+				damage_min = 38,
+				cooldown = 2.5,
+				damage_max = 52,
+				damage_type = DAMAGE_MAGICAL
 			}
 		}
 	}

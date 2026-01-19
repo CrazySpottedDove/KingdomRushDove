@@ -2751,5 +2751,11 @@ return {
 		image = "kr5_main_icons_0047",
 		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_METAL_NAME"),
 		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_METAL_DESCRIPTION")
-	})}}
+	})}},
+	tower_arborean_sentinels = {{M(tpl.buy_soldier, {
+		action_arg = "soldier_arborean_sentinels_spearmen",
+		image = "kr5_main_icons_0105",
+		tt_title = _("SPECIAL_ARBOREAN_SENTINELS_SPEARMEN_NAME"),
+		tt_desc = _("SPECIAL_ARBOREAN_SENTINELS_SPEARMEN_DESCRIPTION")
+	}), tpl.rally, tpl.sell}}
 }

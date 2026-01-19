@@ -1244,3 +1244,20 @@ local cheats = E:register_c("cheats")
 
 cheats.buttons = {}
 cheats.buttons[1] = E:clone_c("cheats_text_button")
+
+local glare_kr5 = E:register_c("glare_kr5")
+
+glare_kr5.active = nil
+glare_kr5.regen_hp = 0
+glare_kr5.speed_factor = nil
+glare_kr5.damage_factor = nil
+glare_kr5.on_start_glare = nil
+glare_kr5.on_end_glare = nil
+
+local corruption_kr5 = E:register_c("corruption_kr5")
+
+corruption_kr5.count = 0
+corruption_kr5.limit = 3
+corruption_kr5.on_corrupt = nil
+corruption_kr5.spawn = nil
+corruption_kr5.enabled = true
