@@ -567,7 +567,7 @@ function screen_map:init(w, h, done_callback)
 		return v.available_level
 	end)
 
-	if DBG_SHOW_BALLOONS or table.contains(hero_unlock_levels, self.unlock_data.last_finished_level) then
+	if table.contains(hero_unlock_levels, self.unlock_data.last_finished_level) then
 		self.heroTip = KImageView:new("mapBalloon_heroUnlocked_notxt")
 		self.heroTip.anchor = v(self.heroTip.size.x / 2, self.heroTip.size.y)
 		self.heroTip.pos = v(h_button.pos.x, sh - 165)
@@ -1607,15 +1607,7 @@ function MapView:show_flags(num)
 	self.level_decos = self:load_level_decos(num)
 
 	local max_level = GS["last_level" .. num]
-	local jnum = 0
-
-	if num == 2 then
-		max_level = 22
-		jnum = 26
-	elseif num == 3 then
-		max_level = 22
-		jnum = 48
-	end
+	local jnum = GS["level" .. num .. "_from"]
 
 	local levels = screen_map.user_data.levels
 
@@ -1624,7 +1616,7 @@ function MapView:show_flags(num)
 
 		local ud = screen_map.unlock_data
 
-		local function show_flag1(i, jnum, extra, custom)
+		local function show_flag1(i, jnum, extra)
 			local level = levels[i + jnum]
 
 			if not level then
@@ -1633,7 +1625,7 @@ function MapView:show_flags(num)
 				local points_data = screen_map.map_points.points[i]
 				local flag_pos
 
-				if extra or custom then
+				if extra then
 					flag_pos = V.vclone(screen_map.map_points.flags[i + jnum].pos)
 				else
 					flag_pos = V.vclone(screen_map.map_points.flags[i].pos)
@@ -1669,7 +1661,7 @@ function MapView:show_flags(num)
 
 				local flag
 
-				if extra or custom then
+				if extra then
 					flag = LevelFlagView:new(i + jnum)
 				else
 					flag = LevelFlagView:new(i)
@@ -1678,7 +1670,7 @@ function MapView:show_flags(num)
 				flag:set_data(level)
 				self.flags_layer:add_child(flag)
 
-				if extra or custom then
+				if extra then
 					self.flags[i + jnum] = flag
 				else
 					self.flags[i] = flag
@@ -1722,7 +1714,7 @@ function MapView:show_flags(num)
 
 					self.flags_layer:add_child(wing)
 
-					if extra or custom then
+					if extra then
 						self.wings[i + jnum] = wing
 					else
 						self.wings[i] = wing
@@ -1760,7 +1752,6 @@ function MapView:show_flags(num)
 			-- block empty
 			else
 				local points_data = screen_map.map_points.points[i]
-				-- local flag_pos = screen_map.map_points.flags[i].pos
 				local flag, wing
 
 				if extra then

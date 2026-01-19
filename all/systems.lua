@@ -109,6 +109,19 @@ function sys.level:init(store)
 	store.level.run_complete = nil
 	store.player_gold = ceil(W:initial_gold() * store.config.gold_multiplier)
 
+	-- 英雄经验乘数
+	store.hero_xp_multiplier = GS.hero_xp_gain_per_difficulty_mode[store.level_difficulty] * store.config.hero_xp_gain_multiplier
+
+	if store.level_idx <= 9 then
+		store.hero_xp_multiplier = 0.1 * store.level_idx * store.hero_xp_multiplier
+	elseif store.level_idx <= 35 and store.level_idx > 26 then
+		store.hero_xp_multiplier = 0.1 * (store.level_idx - 26) * store.hero_xp_multiplier
+	elseif store.level_idx <= 57 and store.level_idx > 48 then
+		store.hero_xp_multiplier = 0.1 * (store.level_idx - 48) * store.hero_xp_multiplier
+	elseif store.level_idx <= 109 and store.level_idx > 100 then
+		store.hero_xp_multiplier = 0.1 * (store.level_idx - 100) * store.hero_xp_multiplier
+	end
+
 	if store.criket and store.criket.on then
 		store.player_gold = store.criket.cash
 	end
@@ -249,8 +262,6 @@ function sys.level:init(store)
 	store.player_score = 0
 	store.game_outcome = nil
 	store.main_hero = nil
-
-	log.info("level_idx:%02d, level_mode:%d, level_difficulty:%d", store.level_idx, store.level_mode, store.level_difficulty)
 end
 
 function sys.level:on_update(dt, ts, store)

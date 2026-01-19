@@ -1730,11 +1730,9 @@ function U.count_stars(slot)
 	local iron = 0
 
 	for i, v in pairs(slot.levels) do
-		if i < 80 then
-			heroic = heroic + (v[GAME_MODE_HEROIC] and 1 or 0)
-			iron = iron + (v[GAME_MODE_IRON] and 1 or 0)
-			campaign = campaign + (v.stars or 0)
-		end
+		heroic = heroic + (v[GAME_MODE_HEROIC] and 1 or 0)
+		iron = iron + (v[GAME_MODE_IRON] and 1 or 0)
+		campaign = campaign + (v.stars or 0)
 	end
 
 	return campaign + heroic + iron, heroic, iron

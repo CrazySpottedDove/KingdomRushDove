@@ -377,7 +377,7 @@ upgrades.list = {{
 		from_kr = 2,
 		class = "barracks",
 		rally_range_factor = 1.2,
-		price = 1,
+		price = 2,
 		level = 3,
 		icon = 8
 	},
