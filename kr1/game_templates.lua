@@ -2666,9 +2666,7 @@ tt.sounds = {"UndergroundAmbienceSound"}
 --#endregion
 --#region tower_holder_blocked
 tt = RT("tower_holder_blocked")
-
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "sound_events")
-
 tt.tower.level = 1
 tt.tower.can_be_mod = false
 tt.tower_holder.blocked = true
@@ -2680,6 +2678,7 @@ tt.ui.click_rect = r(-40, -12, 80, 46)
 tt.sound_events.remove = "GUITowerSell"
 --#endregion
 tt = RT("tower_holder_blocked_2", "tower_holder_blocked")
+AC(tt, "editor")
 --#region tower_holder_blocked_jungle
 tt = RT("tower_holder_blocked_jungle", "tower_holder_blocked")
 tt.tower.type = "holder_blocked_jungle"
@@ -13641,10 +13640,9 @@ tt.tween.props[5].sprite_id = 2
 tt.tween.props[6] = table.deepclone(tt.tween.props[4])
 tt.tween.props[6].sprite_id = 3
 tt.tween.remove = true
+
 tt = E:register_t("controller_stage_22_boss_crocs", "decal_scripted")
-
 E:add_comps(tt, "editor")
-
 b = balance.enemies.crocs.boss_crocs.pre_fight_towers_destroy
 tt.main_script.update = scripts.controller_stage_22_boss_crocs.update
 tt.render.sprites[1].prefix = "boss_crocs_intro_bossDef"
@@ -13680,9 +13678,7 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].hide_after_runs = 1
 
 tt = E:register_t("ps_bullet_dreadeye_viper")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "dreadeye_viper_ranged_attack_particle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -13692,3 +13688,22 @@ tt.particle_system.z = Z_BULLET_PARTICLES
 tt.particle_system.anchor = v(0.5, 0.5)
 tt.particle_system.scale_var = {1, 1.1}
 tt.particle_system.particle_lifetime = {0.6, 0.8}
+
+tt = E:register_t("ps_enemy_rhino_charge_a")
+E:add_comps(tt, "pos", "particle_system")
+tt.particle_system.name = "razing_rhino_razing_rhino_charge_dust_a"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 4
+tt.particle_system.track_offset = v(0, 0)
+tt.particle_system.z = Z_DECALS
+
+tt = E:register_t("ps_enemy_rhino_charge_b")
+E:add_comps(tt, "pos", "particle_system")
+tt.particle_system.name = "razing_rhino_razing_rhino_charge_dust_b"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 3
+tt.particle_system.track_offset = v(0, 20)
+tt.particle_system.animation_fps = 15
+tt.particle_system.z = Z_DECALS

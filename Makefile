@@ -65,14 +65,17 @@ download:
 	@lua scripts/download_assets.lua
 
 # deprecated
-main_version_jump: sync
-	git rev-parse HEAD > $(MAIN_VERSION_COMMIT_HASH_FILE)
+# main_version_jump: sync
+# 	git rev-parse HEAD > $(MAIN_VERSION_COMMIT_HASH_FILE)
 
 android:
+	@bash $(MAKE_FILE_DIR)/package.sh
 	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh
 
 windows:
+	@bash $(MAKE_FILE_DIR)/package.sh
 	bash $(MAKE_FILE_DIR)/pack_windows.sh
 
 linux:
+	@bash $(MAKE_FILE_DIR)/package.sh
 	bash $(MAKE_FILE_DIR)/pack_linux.sh

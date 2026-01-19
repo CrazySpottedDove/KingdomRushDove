@@ -342,6 +342,8 @@ bomb.sound_events.insert = "BombShootSound"
 bomb.sound_events.hit = "BombExplosionSound"
 bomb.sound_events.hit_water = "RTWaterExplosion"
 
+local bombKR5 = E:register_t("bombKR5", "bomb")
+
 local bomb_dynamite = E:register_t("bomb_dynamite", "bomb")
 
 bomb_dynamite.render.sprites[1].name = "bombs_0002"
@@ -731,12 +733,22 @@ lava.aura.vis_bans = bor(F_FRIEND, F_FLYING)
 lava.aura.vis_flags = bor(F_MOD, F_BURN)
 lava.main_script.insert = scripts.aura_apply_mod.insert
 lava.main_script.update = scripts.aura_apply_mod.update
+
 tt = E:register_t("tunnel", "aura")
-
 E:add_comps(tt, "tunnel")
-
 tt.main_script.update = scripts.tunnel.update
 tt.tunnel.speed_factor = 2
+
+tt = E:register_t("tunnel_KR5", "tunnel")
+tt.main_script.insert = scripts.tunnel_KR5.insert
+tt.main_script.update = scripts.tunnel_KR5.update
+tt.untargetable_distance = 10
+tt.flags_to_tag = {F_RANGED, F_BLOCK}
+
+tt = E:register_t("tunnel_KR5_destructible", "tunnel_KR5")
+tt.main_script.update = scripts.tunnel_KR5_destructible.update
+tt.destroyed = false
+
 tt = E:register_t("aura_screen_shake", "aura")
 tt.main_script.update = scripts.aura_screen_shake.update
 tt.aura.duration = 0.5

@@ -8650,6 +8650,68 @@ tt.particle_system.loop = false
 tt.particle_system.particle_lifetime = {fts(9), fts(9)}
 tt.particle_system.emission_rate = 30
 tt.particle_system.z = Z_BULLET_PARTICLES
+
+tt = E:register_t("enemy_skunk_bombardier_bomb", "bombKR5")
+b = balance.enemies.werebeasts.skunk_bombardier
+tt.bullet.damage_type = DAMAGE_PHYSICAL
+tt.bullet.damage_max = b.ranged_attack.damage_max
+tt.bullet.damage_min = b.ranged_attack.damage_min
+tt.bullet.damage_radius = b.ranged_attack.radius
+tt.bullet.mod = "mod_enemy_skunk_bombardier_basic_attack"
+tt.bullet.ignore_hit_offset = true
+tt.bullet.flight_time = fts(20)
+tt.bullet.hit_fx = "enemy_skunk_bombardier_hit_fx"
+tt.bullet.damage_bans = bor(F_ENEMY)
+tt.bullet.particles_name = "enemy_skunk_bombardier_bomb_trail"
+tt.main_script.insert = scripts.enemy_bomb.insert
+tt.main_script.update = scripts.enemy_bomb.update
+tt.sound_events.hit_water = nil
+tt.sound_events.hit = "EnemySkunkBombardierBasicAttackImpact"
+tt.sound_events.insert = "EnemySkunkBombardierBasicAttackCast"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "skunk_bombardier_bomb_"
+
+tt = E:register_t("aura_enemy_skunk_bombardier_death_explosion", "aura")
+b = balance.enemies.werebeasts.skunk_bombardier
+tt.aura.mod = "mod_enemy_skunk_bombardier_basic_attack"
+tt.aura.radius = b.ranged_attack.radius
+tt.aura.vis_flags = F_MOD
+tt.aura.vis_bans = bor(F_ENEMY)
+tt.aura.cycles = 1
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+
+tt = E:register_t("mod_enemy_skunk_bombardier_basic_attack", "modifier")
+b = balance.enemies.werebeasts.skunk_bombardier
+E:add_comps(tt, "render")
+tt.modifier.duration = b.ranged_attack.mod_duration
+tt.received_damage_factor = b.ranged_attack.received_damage_factor
+tt.main_script.insert = scripts.mod_damage_factors.insert
+tt.main_script.remove = scripts.mod_damage_factors.remove
+tt.main_script.update = scripts.mod_track_target.update
+tt.modifier.vis_flags = F_MOD
+tt.render.sprites[1].name = "skunk_bombardier_modifier_modifier"
+tt.render.sprites[1].draw_order = DO_MOD_FX
+
+tt = E:register_t("mod_enemy_rhino_charge_enemy", "modifier")
+b = balance.enemies.werebeasts.rhino
+E:add_comps(tt, "dps", "render")
+tt.dps.damage_min = b.charge.damage_enemy_min
+tt.dps.damage_max = b.charge.damage_enemy_max
+tt.dps.damage_type = b.charge.damage_type
+tt.dps.damage_every = fts(10)
+tt.modifier.duration = fts(7)
+tt.modifier.use_mod_offset = true
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+tt.render.sprites[1].name = "razing_rhino_razing_rhino_charge_hit_fx"
+tt.render.sprites[1].loop = false
+
+tt = E:register_t("mod_enemy_rhino_charge_soldier", "mod_enemy_rhino_charge_enemy")
+b = balance.enemies.werebeasts.rhino
+tt.dps.damage_min = b.charge.damage_soldier_min
+tt.dps.damage_max = b.charge.damage_soldier_max
+
 tt = E:register_t("enemy_hyena5", "enemy_KR5")
 
 local b = balance.enemies.werebeasts.hyena5

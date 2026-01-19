@@ -5054,6 +5054,249 @@ function scripts.tunnel.update(this, store)
 	end
 end
 
+scripts.tunnel_KR5 = {}
+
+function scripts.tunnel_KR5.insert(this, store, script)
+	local tu = this.tunnel
+
+	if not tu.pick_ni then
+		tu.pick_ni = P:get_end_node(tu.pick_pi) - 1
+	end
+
+	if not tu.place_ni then
+		tu.place_ni = 1
+	end
+
+	local pick_end = P:get_end_node(tu.pick_pi)
+	local place_start = P:get_start_node(tu.place_pi)
+	local pick_start = pick_end - this.untargetable_distance
+	local place_end = place_start + this.untargetable_distance
+
+	P:add_invalid_range(tu.pick_pi, pick_start, pick_end)
+	P:add_invalid_range(tu.place_pi, place_start, place_end)
+
+	return scripts.aura_apply_mod.insert(this, store, script)
+end
+
+function scripts.tunnel_KR5.update(this, store, script)
+	local tu = this.tunnel
+
+	if not tu.pick_ni then
+		tu.pick_ni = P:get_end_node(tu.pick_pi) - 1
+	end
+
+	if not tu.place_ni then
+		tu.place_ni = 1
+	end
+
+	local pf = P:node_pos(tu.pick_pi, 1, tu.pick_ni)
+	local pt = P:node_pos(tu.place_pi, 1, tu.place_ni)
+	local length = V.dist(pf.x, pf.y, pt.x, pt.y)
+	local picked_enemies = tu.picked_enemies
+
+	tu.length = length
+	this.total_picked_enemies = 0
+
+	while true do
+		local enemies = table.filter(store.entities, function(_, e)
+			return e and e.enemy and e.health and not e.health.dead and e.main_script and e.main_script.co ~= nil and e.nav_path and e.nav_path.pi == tu.pick_pi and e.nav_path.ni >= tu.pick_ni and (tu.pick_pi ~= tu.place_pi or e.nav_path.ni < tu.place_ni)
+		end)
+
+		for _, enemy in pairs(enemies) do
+			if tu.pick_fx then
+				local fx = E:create_entity(tu.pick_fx)
+
+				fx.pos = V.v(enemy.pos.x, enemy.pos.y)
+				fx.render.sprites[1].ts = store.tick_ts
+
+				queue_insert(store, fx)
+			end
+
+			local release_ts = store.tick_ts + length / (tu.speed_factor * enemy.motion.max_speed)
+
+			log.debug("tunnel %s picked %s", this.id, enemy.id)
+			table.insert(picked_enemies, {
+				release_ts = release_ts,
+				entity = enemy
+			})
+			SU.remove_modifiers(store, enemy)
+			SU.remove_auras(store, enemy)
+			queue_remove(store, enemy)
+			U.unblock_all(store, enemy)
+
+			if enemy.ui then
+				enemy.ui.can_click = false
+			end
+
+			enemy.main_script.co = nil
+			enemy.main_script.runs = 0
+
+			if enemy.count_group then
+				enemy.count_group.in_limbo = true
+			end
+
+			this.total_picked_enemies = this.total_picked_enemies + 1
+		end
+
+		for i = #picked_enemies, 1, -1 do
+			local p = picked_enemies[i]
+
+			if p.release_ts > store.tick_ts then
+			-- block empty
+			else
+				local enemy = p.entity
+
+				enemy.nav_path.pi = tu.place_pi
+				enemy.nav_path.ni = tu.place_ni
+				enemy.pos = P:node_pos(enemy.nav_path)
+				enemy.main_script.runs = 1
+				enemy._placed_from_tunnel = true
+
+				if enemy.ui then
+					enemy.ui.can_click = true
+				end
+
+				queue_insert(store, enemy)
+				table.remove(picked_enemies, i)
+
+				if tu.place_fx then
+					local fx = E:create_entity(tu.place_fx)
+
+					fx.pos = V.v(enemy.pos.x, enemy.pos.y)
+					fx.render.sprites[1].ts = store.tick_ts
+
+					queue_insert(store, fx)
+				end
+
+				log.debug("tunnel %s placed %s", this.id, enemy.id)
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.tunnel_KR5_destructible = {}
+
+function scripts.tunnel_KR5_destructible.update(this, store, script)
+	local tu = this.tunnel
+
+	if not tu.pick_ni then
+		tu.pick_ni = P:get_end_node(tu.pick_pi) - 1
+	end
+
+	if not tu.place_ni then
+		tu.place_ni = 1
+	end
+
+	local pf = P:node_pos(tu.pick_pi, 1, tu.pick_ni)
+	local pt = P:node_pos(tu.place_pi, 1, tu.place_ni)
+	local length = V.dist(pf.x, pf.y, pt.x, pt.y)
+	local picked_enemies = tu.picked_enemies
+
+	tu.length = length
+	this.total_picked_enemies = 0
+
+	while true do
+		if not this.destroyed then
+			local enemies = table.filter(store.entities, function(_, e)
+				return e and e.enemy and e.health and not e.health.dead and e.main_script and e.main_script.co ~= nil and e.nav_path and e.nav_path.pi == tu.pick_pi and e.nav_path.ni >= tu.pick_ni and (tu.pick_pi ~= tu.place_pi or e.nav_path.ni < tu.place_ni)
+			end)
+
+			for _, enemy in pairs(enemies) do
+				if tu.pick_fx then
+					local fx = E:create_entity(tu.pick_fx)
+
+					fx.pos = V.v(enemy.pos.x, enemy.pos.y)
+					fx.render.sprites[1].ts = store.tick_ts
+
+					queue_insert(store, fx)
+				end
+
+				local picked_ts = store.tick_ts
+				local release_ts = store.tick_ts + length / (tu.speed_factor * enemy.motion.max_speed)
+
+				log.debug("tunnel %s picked %s", this.id, enemy.id)
+				table.insert(picked_enemies, {
+					picked_ts = picked_ts,
+					release_ts = release_ts,
+					entity = enemy
+				})
+				SU.remove_modifiers(store, enemy)
+				SU.remove_auras(store, enemy)
+				queue_remove(store, enemy)
+				U.unblock_all(store, enemy)
+
+				if enemy.ui then
+					enemy.ui.can_click = false
+				end
+
+				enemy.main_script.co = nil
+				enemy.main_script.runs = 0
+
+				if enemy.count_group then
+					enemy.count_group.in_limbo = true
+				end
+
+				this.total_picked_enemies = this.total_picked_enemies + 1
+			end
+		end
+
+		for i = #picked_enemies, 1, -1 do
+			local p = picked_enemies[i]
+
+			if p.release_ts > store.tick_ts and not this.destroyed then
+			-- block empty
+			else
+				local enemy = p.entity
+
+				enemy.nav_path.pi = tu.place_pi
+
+				if this.destroyed and tu.pick_pi == tu.place_pi then
+					local duration = p.release_ts - p.picked_ts
+					local elapsed = store.tick_ts - p.picked_ts
+					local percentage_done = math.min(elapsed / duration, 1)
+					local desired_ni = tu.pick_ni + math.floor((tu.place_ni - tu.pick_ni) * percentage_done)
+
+					enemy.nav_path.ni = desired_ni
+				else
+					enemy.nav_path.ni = tu.place_ni
+				end
+
+				enemy.pos = P:node_pos(enemy.nav_path)
+				enemy.main_script.runs = 1
+				enemy._placed_from_tunnel = true
+
+				if enemy.ui then
+					enemy.ui.can_click = true
+				end
+
+				queue_insert(store, enemy)
+				table.remove(picked_enemies, i)
+
+				if tu.place_fx then
+					local fx = E:create_entity(tu.place_fx)
+
+					fx.pos = V.v(enemy.pos.x, enemy.pos.y)
+					fx.render.sprites[1].ts = store.tick_ts
+
+					queue_insert(store, fx)
+				end
+
+				log.debug("tunnel %s placed %s", this.id, enemy.id)
+			end
+		end
+
+		if this.destroyed then
+			break
+		end
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
 scripts.decal_tunnel_light = {}
 
 function scripts.decal_tunnel_light.update(this, store)

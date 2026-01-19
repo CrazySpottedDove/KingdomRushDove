@@ -47,6 +47,12 @@ return {
 		tt_title = _("SPECIAL_REPAIR_HOLDER_UNDERGROUND_NAME"),
 		tt_desc = _("SPECIAL_REPAIR_HOLDER_UNDERGROUND_DESCRIPTION")
 	})}},
+	holder_blocked_sea_of_trees = {{M(tpl.unblock, {
+		action_arg = "tower_holder",
+		image = "main_icons_0037",
+		tt_title = _("SPECIAL_REPAIR_HOLDER_SEA_OF_TREES_NAME"),
+		tt_desc = _("SPECIAL_REPAIR_HOLDER_SEA_OF_TREES_DESCRIPTION")
+	})}},
 	-- 法师塔
 	mage = {{M(tpl.common_upgrade, {
 		-- 二级法师塔

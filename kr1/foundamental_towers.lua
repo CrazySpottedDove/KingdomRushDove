@@ -135,7 +135,6 @@ tt = E:register_t("tower_holder_sea_of_trees_16", "tower_holder")
 tt.tower.terrain_style = TERRAIN_STYLE_WUKONG_7
 tt.render.sprites[1].name = "build_terrain_0031"
 
-
 --#region tower_build_archer
 tt = RT("tower_build_archer", "tower_build")
 tt.build_name = "tower_archer_1"
