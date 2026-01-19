@@ -93,7 +93,8 @@ tt.tower.terrain_style = TERRAIN_STYLE_DEFOREST
 tt.render.sprites[1].name = "build_terrain_0007"
 tt = E:register_t("tower_holder_sea_of_trees_3", "tower_holder")
 tt.tower.terrain_style = TERRAIN_STYLE_WILDBOAR
-tt.render.sprites[1].name = "build_terrain_0018"
+-- tt.render.sprites[1].name = "build_terrain_0018"
+tt.render.sprites[1].name = "build_terrain_0007"
 tt = E:register_t("tower_holder_sea_of_trees_4", "tower_holder")
 tt.tower.terrain_style = TERRAIN_STYLE_TEMPLE
 tt.render.sprites[1].name = "build_terrain_0019"
@@ -133,6 +134,8 @@ tt.render.sprites[1].name = "build_terrain_0030"
 tt = E:register_t("tower_holder_sea_of_trees_16", "tower_holder")
 tt.tower.terrain_style = TERRAIN_STYLE_WUKONG_7
 tt.render.sprites[1].name = "build_terrain_0031"
+
+
 --#region tower_build_archer
 tt = RT("tower_build_archer", "tower_build")
 tt.build_name = "tower_archer_1"

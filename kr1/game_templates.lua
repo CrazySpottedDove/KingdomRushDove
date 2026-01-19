@@ -2679,6 +2679,7 @@ tt.render.sprites[1].z = Z_DECALS
 tt.ui.click_rect = r(-40, -12, 80, 46)
 tt.sound_events.remove = "GUITowerSell"
 --#endregion
+tt = RT("tower_holder_blocked_2", "tower_holder_blocked")
 --#region tower_holder_blocked_jungle
 tt = RT("tower_holder_blocked_jungle", "tower_holder_blocked")
 tt.tower.type = "holder_blocked_jungle"
@@ -2689,6 +2690,46 @@ tt = RT("tower_holder_blocked_underground", "tower_holder_blocked")
 tt.tower.type = "holder_blocked_underground"
 tt.tower_holder.unblock_price = 200
 --#endregion
+
+tt = E:register_t("tower_holder_blocked_sea_of_trees", "tower_holder_blocked_2")
+b = balance.specials.trees.blocked_holders
+tt.tower.type = "holder_blocked_sea_of_trees"
+tt.tower_holder.unblock_price = b.price
+-- tt.render.sprites[1].name = "terrains_holders_0001_blocked"
+-- tt.render.sprites[2].name = "terrains_holders_0001_flag_blocked"
+--tt.render.sprites[2].hidden = false
+tt = E:register_t("tower_holder_blocked_sea_of_trees_2", "tower_holder_blocked_2")
+b = balance.specials.trees.blocked_holders
+tt.tower.type = "holder_blocked_sea_of_trees"
+tt.tower_holder.unblock_price = b.price
+-- tt.render.sprites[1].name = "terrains_holders_0003_blocked"
+-- tt.render.sprites[2].name = "terrains_holders_0003_flag_blocked"
+--tt.render.sprites[2].hidden = false
+tt = E:register_t("tower_holder_blocked_terrain_2", "tower_holder_blocked_2")
+b = balance.specials.terrain_2.blocked_holders
+tt.tower.type = "holder_blocked_sea_of_trees"
+tt.tower_holder.unblock_price = b.price
+-- tt.render.sprites[1].name = "terrains_holders_0004_blocked"
+-- tt.render.sprites[2].name = "terrains_holders_0004_flag_blocked"
+--tt.render.sprites[2].hidden = false
+tt = E:register_t("tower_holder_blocked_terrain_3", "tower_holder_blocked_2")
+b = balance.specials.terrain_3.blocked_holders
+tt.tower.type = "holder_blocked_sea_of_trees"
+tt.tower_holder.unblock_price = b.price
+-- tt.render.sprites[1].name = "terrains_holders_0005_blocked"
+-- tt.render.sprites[2].name = "terrains_holders_0005_flag_blocked"
+--tt.render.sprites[2].hidden = false
+tt = E:register_t("tower_holder_blocked_terrain_4", "tower_holder_blocked_2")
+b = balance.specials.trees.blocked_holders
+
+-- E:add_comps(tt, "main_script")
+
+-- tt.main_script.remove = scripts.tower_holder_animated.remove
+tt.tower.type = "holder_blocked_halloween"
+tt.tower_holder.unblock_price = b.price
+-- tt.tower_holder.unblock_fx = "fx_tower_holder_unblock_terrain_4"
+-- tt.render.sprites[1].name = "terrains_holders_0006_blocked"
+-- tt.render.sprites[2].name = "UpdateHalloween_terrain_anim_0001"
 --#region carnivorous_plant
 tt = RT("carnivorous_plant", "decal_scripted")
 
