@@ -53483,7 +53483,7 @@ function scripts.trees_heart_of_the_arborean_decal.update(this, store)
 			end
 
 			for i = 1, a.max_targets do
-				if not targets or #selected_positions > a.max_targets / 2 then
+				if not targets or #targets <= 0 or #selected_positions > a.max_targets / 2 then
 					goto label_801_1
 				end
 
