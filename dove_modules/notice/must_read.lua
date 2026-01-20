@@ -1,19 +1,10 @@
 local MUST_READ = {}
 MUST_READ.text = require("dove_modules.notice.author_words")
+local READ_EXPECTED_TIME = require("dove_modules.notice.read_expected_time")
 local utf8 = require("utf8")
 local storage = require("all.storage")
 MUST_READ.enabled = true
-local confirm_steps = {{
-	btn = "我已阅读，继续游戏"
-}, {
-	btn = "我真的已阅读全部内容"
-}, {
-	btn = "我发誓已阅读完毕"
-}, {
-	btn = "我为因未读完导致的任何事负责"
-}, {
-	btn = "我承诺不人身攻击作者"
-}}
+local confirm_steps = {"我已阅读，继续游戏", "我真的已阅读全部内容", "我发誓已阅读完毕", "我为因未读完导致的任何事负责", "我承诺不人身攻击作者", "读太快了！好好读吧！"}
 
 local function wrap_text(text, font, maxw)
 	local lines = {}
@@ -103,13 +94,7 @@ function MUST_READ.run()
 
 	-- 允许外部传入文本，也可在模块中设置 M.text
 	local text = MUST_READ.text
-	-- 检查并提取隐藏口令
-	local hidden_key = text:match("%[KEY:(.-)%]")
-	if hidden_key then
-		-- 从显示文本中移除口令标记
-		text = text:gsub("%[KEY:.-%]", "")
-		hidden_key = hidden_key:gsub("^%s+", ""):gsub("%s+$", "")
-	end
+	READ_EXPECTED_TIME.read_start("author_words", text)
 
 	-- 状态
 	local font = nil
@@ -216,35 +201,26 @@ function MUST_READ.run()
 		local total_lines = #lines
 		local can_continue = is_scrolled_to_bottom(scroll, total_lines, visible_lines)
 
-		local btn_w, btn_h = 240, 44
+		local btn_w, btn_h = 300, 44
 		local bx = (w - btn_w) / 2
 		local by = h - 100
 
 		if button == 1 then
 			if x >= bx and x <= bx + btn_w and y >= by and y <= by + btn_h and can_continue then
-				if confirm_index < #confirm_steps then
-					confirm_index = confirm_index + 1
+				if confirm_index < #confirm_steps - 1 then
+					if READ_EXPECTED_TIME.read_can_stop("author_words") then
+						confirm_index = confirm_index + 1
+					else
+						confirm_index = #confirm_steps
+					end
+				elseif confirm_index == #confirm_steps then
+					if READ_EXPECTED_TIME.read_can_stop("author_words") then
+						confirm_index = 1
+					end
 				else
 					restore()
 				end
 				return
-			end
-
-			-- 输入框点击区域
-			if hidden_key then
-				local ix, iy, iw, ih = margin, h - 160, content_w, 36
-				if x >= ix and x <= ix + iw and y >= iy and y <= iy + ih then
-					input_active = true
-					pcall(function()
-						love.keyboard.setTextInput(true, ix, iy, iw, ih)
-					end)
-					return
-				else
-					input_active = false
-					pcall(function()
-						love.keyboard.setTextInput(false)
-					end)
-				end
 			end
 		end
 	end
@@ -314,14 +290,14 @@ function MUST_READ.run()
 			end
 
 			-- Continue 按钮（仅当滚到底部时启用）
-			local btn_w, btn_h = 240, 44
+			local btn_w, btn_h = 300, 44
 			local bx = (w - btn_w) / 2
 			local by = h - 100
 			local can_continue = is_scrolled_to_bottom(scroll, total_lines, visible_lines)
 			love.graphics.setColor(can_continue and {0.1, 0.6, 0.1} or {0.4, 0.4, 0.4})
 			love.graphics.rectangle("fill", bx, by, btn_w, btn_h, 6, 6)
 			love.graphics.setColor(1, 1, 1)
-			local btn_text = confirm_steps[confirm_index].btn
+			local btn_text = confirm_steps[confirm_index]
 			love.graphics.printf(btn_text, bx, by + (btn_h - font:getHeight()) / 2, btn_w, "center")
 			love.graphics.present()
 
