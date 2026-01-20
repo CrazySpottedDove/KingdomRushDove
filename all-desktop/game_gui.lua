@@ -2704,24 +2704,30 @@ end
 function Power2Button:fire(wx, wy)
 	Power2Button.super.fire(self, wx, wy)
 
-	local i = math.random(1, 3)
-	local e = E:create_entity("re_current_" .. i)
+	local level_idx = game_gui.game.store.level_index
+	if level_idx == 115 and (game_gui.game.store.level_mode == GAME_MODE_IRON or game_gui.game.store.level_mode == GAME_MODE_HEROIC or (game_gui.game.store.level_mode == GAME_MODE_CAMPAIGN and game_gui.game.store.wave_group_number >= 15)) then
+		local e = E:create_entity("power_denas_control")
+		e.pos.x, e.pos.y = wx, wy
+		game_gui.game.simulation:insert_entity(e)
+	else
+		local i = math.random(1, 3)
+		local e = E:create_entity("re_current_" .. i)
 
-	e.pos.x = wx + 10
-	e.pos.y = wy - 10
-	e.nav_rally.center = V.v(wx, wy)
-	e.nav_rally.pos = V.vclone(e.pos)
+		e.pos.x = wx + 10
+		e.pos.y = wy - 10
+		e.nav_rally.center = V.v(wx, wy)
+		e.nav_rally.pos = V.vclone(e.pos)
+		game_gui.game.simulation:insert_entity(e)
+		i = math.random(1, 3)
+		e = E:create_entity("re_current_" .. i)
+		e.pos.x = wx - 10
+		e.pos.y = wy + 10
+		e.nav_rally.center = V.v(wx, wy)
+		e.nav_rally.pos = V.vclone(e.pos)
 
-	game_gui.game.simulation:insert_entity(e)
+		game_gui.game.simulation:insert_entity(e)
+	end
 
-	i = math.random(1, 3)
-	e = E:create_entity("re_current_" .. i)
-	e.pos.x = wx - 10
-	e.pos.y = wy + 10
-	e.nav_rally.center = V.v(wx, wy)
-	e.nav_rally.pos = V.vclone(e.pos)
-
-	game_gui.game.simulation:insert_entity(e)
 	signal.emit("power-used", 2)
 end
 
@@ -6955,19 +6961,19 @@ function TowerMenu:update(dt)
 			-- else
 			--     c.button:set_image(c.item_image)
 			-- end
-			-- elseif e and c.item_props.action == "tw_free_action" then
-			-- 	local usa = e.user_selection and e.user_selection.actions
-			-- 	if usa and usa.tw_free_action then
-			-- 		if not usa.tw_free_action.allowed then
-			-- 			c:disable()
-			-- 		else
-			-- 			c:enable()
-			-- 		end
-			-- 	elseif not e.user_selection.allowed then
-			-- 		c:disable()
-			-- 	else
-			-- 		c:enable()
-			-- 	end
+			elseif e and c.item_props.action == "tw_free_action" then
+				local usa = e.user_selection and e.user_selection.actions
+				if usa and usa.tw_free_action then
+					if not usa.tw_free_action.allowed then
+						c:disable()
+					else
+						c:enable()
+					end
+				elseif not e.user_selection.allowed then
+					c:disable()
+				else
+					c:enable()
+				end
 			end
 		end
 	end
@@ -7223,14 +7229,20 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 		if not e.user_selection_func or e.user_selection_func(e, game_gui.game.store) then
 		-- block empty
 		end
-	-- self:hide()
-	-- elseif item.action == "tw_free_action" then
-	-- 	if e.user_selection then
-	-- 		e.user_selection.in_progress = true
-	-- 		e.user_selection.arg = item.action_arg
-	-- 		e.user_selection.new_pos = nil
-	-- 	end
-	-- 	self:hide()
+		self:hide()
+	elseif item.action == "tw_free_action" then
+		if e.user_selection then
+			e.user_selection.in_progress = true
+			e.user_selection.arg = item.action_arg
+			e.user_selection.new_pos = nil
+		end
+		self:hide()
+	elseif item.action == "tw_repair" then
+		local e = game_gui.selected_entity
+		if e.user_selection then
+			e.user_selection.in_progress = true
+		end
+		self:hide()
 	end
 
 	if item.sounds and not inhibit_sounds then
@@ -7408,7 +7420,7 @@ function TowerMenuTooltip:show(entity, item)
 	-- if power.level == power.max_level then
 	-- self.hidden = true
 	-- end
-	elseif item.action == "tw_buy_soldier" or item.action == "tw_buy_attack" or item.action == "tw_unblock" then
+	elseif item.action == "tw_buy_soldier" or item.action == "tw_buy_attack" or item.action == "tw_unblock" or item.action == "tw_repair" then
 		if item.tt_title then
 			self.title.text = item.tt_title
 		end
@@ -7603,6 +7615,8 @@ function TowerMenuButton:initialize(item, entity)
 		price_tag = tostring(nt.unit.price)
 	elseif item.action == "tw_buy_attack" then
 		price_tag = ""
+	elseif item.action == "tw_repair" then
+		price_tag = tostring(entity.repair.cost)
 	end
 
 	if price_tag then

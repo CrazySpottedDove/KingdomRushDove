@@ -3393,26 +3393,9 @@ tt.template_hover = "tower_ghost_hover"
 tt.main_script.insert = scripts.tower_ghost_hover_controller.insert
 tt.main_script.remove = scripts.tower_ghost_hover_controller.remove
 --#endregion
---#region controller_tower_swap
-tt = RT("controller_tower_swap")
 
-AC(tt, "main_script")
-
-tt.main_script.update = scripts.controller_tower_swap.update
-tt.path_marker_entity = "decal_path_hero_movement"
-tt.swap_sound = "TowerGhostTeleport"
-tt.tower_1 = nil
-tt.tower_2 = nil
-tt.delay = 0.25
-tt.delay_empty = 0.25
-tt.fx_out = "tower_ghost_teleport_out"
-tt.fx_in = "tower_ghost_teleport_in"
-tt.fx_spawn_delay = fts(14)
-tt.fx_in_delay = fts(14)
-tt.fx_delay_between = 0
 -- 幽冥 END
 -- 圣殿 START
---#endregion
 --#region tower_build_paladin_covenant
 tt = RT("tower_build_paladin_covenant", "tower_build")
 tt.build_name = "tower_paladin_covenant_lvl1"

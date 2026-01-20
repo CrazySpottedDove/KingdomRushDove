@@ -38,7 +38,6 @@ signal.emit("fade-out",0.5,{0,0,0,255})
 U.y_wait(store,0.5)
 store.waves_finished=true
 store.level.run_complete=true
-store.custom_game_outcome={postpone_unload=true,next_item_name="kr5_end"}
 end
 end
 return level

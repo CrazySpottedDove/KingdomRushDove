@@ -9492,12 +9492,30 @@ tt.sound_shield = "Stage11MydriasIllusionShieldCast"
 tt.sound_tentacles_spawn = "Stage11MydriasIllusionTendrilsCast"
 tt.sound_tentacles_death = "Stage11MydriasIllusionTendrilsDeath"
 tt.vis.bans = bor(F_TELEPORT)
+
+tt = E:register_t("bullet_stage_11_cult_leader_illusion", "bolt_enemy")
+local b = balance.specials.stage11_cult_leader.illusion
+tt.bullet.vis_flags = F_RANGED
+tt.bullet.vis_bans = 0
+tt.render.sprites[1].prefix = "mydrias_proyectile"
+tt.render.sprites[1].flip_x = true
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.bullet.hit_fx = "fx_stage_11_cult_leader_attack_hit"
+tt.bullet.pop = nil
+tt.bullet.pop_conds = nil
+tt.bullet.acceleration_factor = 0.5
+tt.bullet.damage_min = b.ranged_attack.damage_min
+tt.bullet.damage_max = b.ranged_attack.damage_max
+tt.bullet.max_speed = 360
+tt.bullet.particles_name = "ps_bullet_stage_11_cult_leader"
+tt.bullet.damage_type = b.ranged_attack.damage_type
+tt.bullet.align_with_trajectory = true
+tt.main_script.insert = scripts.bullet_stage_11_cult_leader_illusion.insert
+tt.main_script.update = scripts.bullet_stage_11_cult_leader_illusion.update
+
 tt = E:register_t("enemy_blinker", "enemy_KR5")
-
 E:add_comps(tt, "glare_kr5", "ranged")
-
 local b = balance.enemies.void_beyond.blinker
-
 tt.info.enc_icon = 16
 tt.info.portrait = "kr5_info_portraits_enemies_0016"
 tt.enemy.gold = b.gold
@@ -9559,6 +9577,33 @@ tt.sound_events.death = "EnemyVoidBlinkerDeath"
 tt.glare_kr5.regen_hp = b.glare.regen_hp
 tt.glare_kr5.on_start_glare = scripts.enemy_blinker.on_start_glare
 tt.glare_kr5.on_end_glare = scripts.enemy_blinker.on_end_glare
+
+tt = E:register_t("aura_enemy_blinker", "aura")
+b = balance.enemies.void_beyond.blinker.ranged_attack
+
+E:add_comps(tt, "render", "tween")
+
+tt.aura.mod = "mod_enemy_blinker_stun"
+tt.aura.radius = b.radius
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = bor(F_FLYING, F_ENEMY)
+tt.aura.cycle_time = b.stun_every
+tt.aura.duration = b.duration
+tt.aura.track_source = false
+tt.render.sprites[1].prefix = "blinker_stun_decal"
+tt.render.sprites[1].name = "Idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].anchor = v(0.5, 0.9)
+tt.tween.remove = false
+tt.tween.props[1].keys = {{0, 0}, {0.25, 255}}
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt = E:register_t("aura_enemy_blinker_glare", "aura_enemy_blinker")
+tt.aura.mods = {"mod_enemy_blinker_stun", "mod_enemy_blinker_glare"}
+tt.render.sprites[1].prefix = "blinker_glare_decal"
+
 tt = E:register_t("enemy_mindless_husk", "enemy_KR5")
 
 local b = balance.enemies.void_beyond.mindless_husk
@@ -9988,26 +10033,7 @@ tt.death_spawns.delay = fts(19)
 tt.sound_events.death = "EnemyAmalgamDeath"
 tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
 tt.vis.bans = bor(F_INSTAKILL, F_POLYMORPH, F_DRILL, F_DISINTEGRATED)
-tt = E:register_t("enemy_overseer_hit_point", "enemy_KR5")
-tt.enemy.gold = 0
-tt.enemy.melee_slot = v(0, 0)
-tt.enemy.lives_cost = 20
-tt.health.hp_max = 1e+99
-tt.health.armor = 0
-tt.health.magic_armor = 0
-tt.unit.blood_color = BLOOD_VIOLET
-tt.main_script.insert = scripts.enemy_basic.insert
-tt.main_script.update = scripts.enemy_overseer_hit_point.update
-tt.health.on_damage = scripts.enemy_overseer_hit_point.on_damage
-tt.motion.max_speed = 0
-tt.render = nil
-tt.ui.click_rect = r(-30, -3, 60, 65)
-tt.ui.can_click = false
-tt.ui.can_select = false
-tt.vis.flags = bor(F_ENEMY, F_FLYING, F_BOSS)
-tt.vis.bans = bor(F_BLOCK, F_FREEZE, F_STUN) --bor(F_MOD, F_BLOCK)
-tt.move_bounds = v(25, 25)
-tt.move_speed = v(0.2, 0.2)
+
 tt = E:register_t("enemy_corrupted_elf", "enemy_KR5")
 b = balance.enemies.undying_hatred.corrupted_elf
 

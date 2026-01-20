@@ -20,7 +20,7 @@ signal.emit("pan-zoom-camera",0,{x=740,y=900},2)
 signal.emit("show-curtains")
 signal.emit("hide-gui")
 signal.emit("start-cinematic")
-local c_taunt=E:create_entity("taunts_s15_controller")
+local c_taunt=E:create_entity("taunts_s115_controller")
 LU.queue_insert(store,c_taunt)
 local cult_leader_tower=E:create_entity("controller_stage_15_cult_leader_tower")
 cult_leader_tower.pos=V.v(986,436)
@@ -59,7 +59,6 @@ if cult_leader_tower.soldiers_grabbed==0 then
 signal.emit("no_soldiers_grabbed-stage15")
 end
 signal.emit("boss_fight_end")
-store.custom_game_outcome={postpone_unload=true,next_item_name="boss_fight_3_end"}
 signal.emit("fade-out",1)
 elseif store.level_mode==GAME_MODE_IRON then
 E:set_template("user_power_2",E:get_template("power_denas_control"))
@@ -68,11 +67,11 @@ local starting_gold=store.player_gold
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="2"
 end)[1]
-holder.tower.upgrade_to="tower_necromancer_lvl1"
+holder.tower.upgrade_to="tower_mage_1"
 holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="7"
 end)[1]
-holder.tower.upgrade_to="tower_necromancer_lvl1"
+holder.tower.upgrade_to="tower_mage_1"
 coroutine.yield()
 store.player_gold=starting_gold
 end

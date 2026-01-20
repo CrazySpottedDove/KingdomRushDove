@@ -2181,6 +2181,9 @@ return {
 			"kra_sfx_stage11_bossFight_endCinematic_platformMove_v1.ogg"
 		}
 	},
+	glareling_spawn = {
+		files = {"kra_sfx_stage11_bossFight_denasGlarelingSpawn_v1.ogg"}
+	},
 	stage_12 = {
 		files = {"kra_sfx_easterEgg_sheepyTerrain3_part1_v1.ogg", "kra_sfx_easterEgg_sheepyTerrain3_part2_v1.ogg", "kra_sfx_easterEgg_sheepyTerrain3_part3_v1.ogg", "kra_sfx_easterEgg_weirderThings_enterChars_climb_v1.ogg", "kra_sfx_easterEgg_weirderThings_enterChars_firstStrum_v1.ogg", "kra_sfx_easterEgg_weirderThings_enterChars_tap2_v1.ogg"}
 	},

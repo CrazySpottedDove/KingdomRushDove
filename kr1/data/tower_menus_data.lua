@@ -2763,5 +2763,39 @@ return {
 		image = "kr5_main_icons_0105",
 		tt_title = _("SPECIAL_ARBOREAN_SENTINELS_SPEARMEN_NAME"),
 		tt_desc = _("SPECIAL_ARBOREAN_SENTINELS_SPEARMEN_DESCRIPTION")
-	}), tpl.rally, tpl.sell}}
+	}), tpl.rally, tpl.sell}},
+	stage_11_veznan = {{{
+		action_arg = 1,
+		action = "tw_free_action",
+		halo = "glow_ico_main",
+		image = "veznan_skill_icons_ingame_skill_veznan_icon_01",
+		place = 6,
+		tt_title = _("SPECIAL_STAGE_11_VEZNAN_ABILITY_NAME_1"),
+		tt_desc = _("SPECIAL_STAGE_11_VEZNAN_ABILITY_DESCRIPTION_1")
+	}, {
+		action_arg = 2,
+		action = "tw_free_action",
+		halo = "glow_ico_main",
+		image = "veznan_skill_icons_ingame_skill_veznan_icon_02",
+		place = 5,
+		tt_title = _("SPECIAL_STAGE_11_VEZNAN_ABILITY_NAME_2"),
+		tt_desc = _("SPECIAL_STAGE_11_VEZNAN_ABILITY_DESCRIPTION_2")
+	}, {
+		action_arg = 3,
+		action = "tw_free_action",
+		halo = "glow_ico_main",
+		image = "veznan_skill_icons_ingame_skill_veznan_icon_03",
+		place = 7,
+		tt_title = _("SPECIAL_STAGE_11_VEZNAN_ABILITY_NAME_3"),
+		tt_desc = _("SPECIAL_STAGE_11_VEZNAN_ABILITY_DESCRIPTION_3")
+	}}},
+	tower_stage_13_sunray = {{{
+		action_arg = "",
+		action = "tw_repair",
+		halo = "glow_ico_main",
+		image = "kr5_main_icons_0030",
+		place = 5,
+		tt_title = _("TOWER_STAGE_13_SUNRAY_REPAIR_NAME"),
+		tt_desc = _("TOWER_STAGE_13_SUNRAY_REPAIR_DESCRIPTION")
+	}}}
 }

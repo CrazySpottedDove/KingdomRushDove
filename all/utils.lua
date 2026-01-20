@@ -2731,4 +2731,37 @@ function U.get_all_holder()
 	}
 end
 
+function U.find_entity_most_surrounded(entities)
+	local sorted_entities = {}
+
+	for _, e1 in ipairs(entities) do
+		local distance_between_entities = 0
+
+		for _, e2 in ipairs(entities) do
+			if e1.id ~= e2.id and e1.health and not e1.health.dead and e2.health and not e2.health.dead and e1.pos and e2.pos then
+				local distance = V.dist(e1.pos.x, e1.pos.y, e2.pos.x, e2.pos.y)
+
+				distance_between_entities = distance_between_entities + distance
+			end
+		end
+
+		table.insert(sorted_entities, {
+			entity = e1,
+			distance = distance_between_entities
+		})
+	end
+
+	table.sort(sorted_entities, function(e1, e2)
+		return e1.distance < e2.distance
+	end)
+
+	local out = {}
+
+	for _, e in ipairs(sorted_entities) do
+		table.insert(out, e.entity)
+	end
+
+	return out[1], out
+end
+
 return U

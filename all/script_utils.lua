@@ -4543,6 +4543,71 @@ local function enemy_scale_mul(store, e, factor, duration)
 	e.health.damage_factor = e.health.damage_factor / (factor * factor * factor)
 end
 
+local function deck_shuffle(deck)
+	deck.trigger_list = table.random_order(deck.trigger_list)
+
+	local trigger_indexes = {}
+
+	for i = #deck.trigger_list - deck.trigger_cards + 1, #deck.trigger_list do
+		table.insert(trigger_indexes, deck.trigger_list[i])
+	end
+
+	deck.trigger_indexes = trigger_indexes
+end
+
+local function deck_new(trigger_cards, total_cards, dont_shuffle)
+	if total_cards <= trigger_cards then
+		log.error("Deck cant have more or equal trigger cards than total cards")
+
+		return nil
+	end
+
+	local trigger_list = {}
+
+	for i = 1, total_cards do
+		table.insert(trigger_list, i)
+	end
+
+	local deck = {
+		dont_shuffle = false,
+		index = 1,
+		trigger_cards = trigger_cards,
+		total_cards = total_cards,
+		trigger_indexes = {},
+		trigger_list = trigger_list
+	}
+
+	if dont_shuffle then
+		deck.dont_shuffle = true
+
+		for i = #deck.trigger_list - deck.trigger_cards + 1, #deck.trigger_list do
+			table.insert(deck.trigger_indexes, deck.trigger_list[i])
+		end
+
+		return deck
+	end
+
+	deck_shuffle(deck)
+
+	return deck
+end
+
+local function deck_draw(deck)
+	local is_trigger = false
+
+	if deck.index and deck.trigger_indexes and table.contains(deck.trigger_indexes, deck.index) then
+		is_trigger = true
+	end
+
+	deck.index = km.zmod(deck.index + 1, deck.total_cards)
+
+	if deck.index == 1 and not deck.dont_shuffle then
+		deck_shuffle(deck)
+	end
+
+	return is_trigger
+end
+
 local SU = {
 	has_modifiers = U.has_modifiers,
 	ui_click_proxy_add = ui_click_proxy_add,
@@ -4657,7 +4722,10 @@ local SU = {
 	remove_unit_cooldown_buff = remove_unit_cooldown_buff,
 	queue_remove_clean_table = queue_remove_clean_table,
 	enemy_scale_mul = enemy_scale_mul,
-	scale_fps_based_keys = scale_fps_based_keys
+	scale_fps_based_keys = scale_fps_based_keys,
+	deck_draw = deck_draw,
+	deck_new = deck_new,
+	deck_shuffle = deck_shuffle
 }
 
 return SU

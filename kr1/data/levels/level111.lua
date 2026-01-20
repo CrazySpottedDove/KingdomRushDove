@@ -24,6 +24,7 @@ signal.emit("start-cinematic")
 local c_taunt=E:create_entity("taunts_s11_controller")
 LU.queue_insert(store,c_taunt)
 local cult_leader,cult_leader_chains,controller_cult_leader,controller_portal
+U.y_wait(store,1.5)
 for _,e in pairs(store.entities) do
 if e.template_name=="decal_stage_11_cult_leader" then
 cult_leader=e
@@ -35,7 +36,6 @@ elseif e.template_name=="controller_stage_11_portal" then
 controller_portal=e
 end
 end
-U.y_wait(store,1.5)
 signal.emit("show-balloon_tutorial","LV11_CULTIST01",false)
 U.y_wait(store,3)
 U.y_wait(store,0.5)
@@ -146,7 +146,6 @@ if store.level_difficulty==DIFFICULTY_IMPOSSIBLE then
 signal.emit("no_projections_bossfight-stage11",controller_cult_leader)
 end
 U.y_wait(store,2)
-store.custom_game_outcome={postpone_unload=true,next_item_name="boss_fight_2_end"}
 signal.emit("fade-out",1)
 end
 else
@@ -155,11 +154,11 @@ local starting_gold=store.player_gold
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="5"
 end)[1]
-holder.tower.upgrade_to="tower_elven_stargazers_lvl1"
+holder.tower.upgrade_to="tower_mage_1"
 holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="10"
 end)[1]
-holder.tower.upgrade_to="tower_elven_stargazers_lvl1"
+holder.tower.upgrade_to="tower_mage_1"
 coroutine.yield()
 store.player_gold=starting_gold
 end

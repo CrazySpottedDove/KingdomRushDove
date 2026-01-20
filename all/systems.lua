@@ -1207,8 +1207,8 @@ function sys.health:on_update(dt, ts, store)
 	local damages_applied = {}
 	local damages_applied_count = 0
 	local entities = store.entities
-
-	for i = #damage_queue, 1, -1 do
+	local damage_queue_len = #damage_queue
+	for i = damage_queue_len, 1, -1 do
 		local d = damage_queue[i]
 		local e = entities[d.target_id]
 
@@ -1353,6 +1353,12 @@ function sys.health:on_update(dt, ts, store)
 	end
 
 	store.damage_queue = new_damage_queue
+
+	-- 处理伤害结算阶段新加入的伤害，避免遗漏。
+	for i = damage_queue_len + 1, #damage_queue do
+		new_damage_queue[#new_damage_queue + 1] = damage_queue[i]
+	end
+
 	store.damages_applied = damages_applied
 	perf.stop("health")
 end

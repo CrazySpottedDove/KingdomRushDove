@@ -43105,7 +43105,12 @@ function scripts.boss_cult_leader.update(this, store)
 		LU.kill_all_enemies(store, true)
 		signal.emit("boss-killed", this)
 
-		cult_leader.boss_dead = true
+		for _, t in pairs(store.entities) do
+			if t.template_name == "controller_stage_15_cult_leader_tower" then
+				t.boss_dead = true
+				break
+			end
+		end
 	end
 
 	local function y_wait_for_blocker_cult_leader(store, this, blocker)
@@ -44002,6 +44007,10 @@ function scripts.controller_stage_16_overseer.update(this, store)
 		check_last_phase_repeat()
 		check_change_damaged_state()
 		check_change_idle_anim()
+
+		if this.health.hp < 0 then
+			this.health.dead = true
+		end
 		coroutine.yield()
 	end
 end
@@ -44208,7 +44217,7 @@ function scripts.enemy_overseer_hit_point.update(this, store)
 	local going_right = math.random(0, 1) == 0
 	local going_up = math.random(0, 1) == 0
 	local nearest = P:nearest_nodes(this.pos.x, this.pos.y, nil, {1})
-
+	local path_pi, path_spi, path_ni
 	if #nearest > 0 then
 		path_pi, path_spi, path_ni = unpack(nearest[1])
 	end
@@ -44291,9 +44300,7 @@ function scripts.enemy_overseer_hit_point.on_damage(this, store, damage)
 	d.value = damage.value
 	d.source_id = damage.source_id
 	d.target_id = this.boss.id
-
 	queue_damage(store, d)
-
 	return true
 end
 
@@ -47998,7 +48005,6 @@ function scripts.enemy_vile_spawner.update(this, store, script)
 	while true do
 		if this.health.dead then
 			this.tween.disabled = true
-			this.tween = nil
 			this.render.sprites[2].hidden = true
 
 			SU.y_enemy_death(store, this)
@@ -55126,6 +55132,21 @@ function scripts.decal_stage_22_easteregg_sheepy.update(this, store, script)
 
 		coroutine.yield()
 	end
+end
+
+scripts.power_stage_15_denas_control = {}
+
+function scripts.power_stage_15_denas_control.insert(this, store, script)
+	local denas = E:create_entity(this.denas_t)
+
+	denas.pos = V.vclone(this.pos)
+	denas.nav_rally.center = V.vclone(this.pos)
+	denas.nav_rally.pos = V.vclone(denas.pos)
+	denas.reinforcement.squad_id = this.id
+
+	queue_insert(store, denas)
+
+	return true
 end
 
 return scripts

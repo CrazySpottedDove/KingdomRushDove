@@ -1374,3 +1374,18 @@ tt = E:register_t("arrow5", "arrow")
 
 tt = E:register_t("arrow5_45degrees", "arrow5")
 tt.main_script.insert = scripts.arrow5_45degrees.insert
+
+tt = E:register_t("controller_tower_swap")
+E:add_comps(tt, "main_script")
+tt.main_script.update = scripts.controller_tower_swap.update
+tt.path_marker_entity = "decal_path_hero_movement"
+tt.swap_sound = "TowerGhostTeleport"
+tt.tower_1 = nil
+tt.tower_2 = nil
+tt.delay = 0.25
+tt.delay_empty = 0.25
+tt.fx_out = "tower_ghost_teleport_out"
+tt.fx_in = "tower_ghost_teleport_in"
+tt.fx_spawn_delay = fts(14)
+tt.fx_in_delay = fts(14)
+tt.fx_delay_between = 0
