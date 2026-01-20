@@ -108,10 +108,15 @@ local candidate_sites = {"https://krdovedownload6.crazyspotteddove.top:52000/", 
 local server_address = nil
 
 for _, site in ipairs(candidate_sites) do
-	if https.request(site) == 200 then
+	local code, response = https.request(site)
+	if code == 200 then
 		server_address = site
 		print("Selected update server:", server_address)
 		break
+	else
+		print("Update server not reachable:", site)
+		print("Response code:", code)
+		print("Response body:", response)
 	end
 end
 
@@ -315,6 +320,8 @@ function M.check_update()
 		end
 	else
 		print("无法检查更新。服务器返回代码：" .. code)
+		print("服务器回复: " .. (response or "nil"))
+		print("失败的请求: " .. url .. " with commit_hash " .. commit_hash)
 		apply_upgrade = false
 	end
 end
