@@ -7134,9 +7134,7 @@ tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
 --#endregion
 --#region hero_elves_archer
 tt = RT("hero_elves_archer", "hero")
-
 AC(tt, "melee", "ranged", "dodge")
-
 image_y = 68
 anchor_y = 16 / image_y
 tt.hero.level_stats.hp_max = {220, 240, 260, 280, 300, 320, 340, 360, 380, 400}
@@ -15632,12 +15630,11 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -10
 tt.render.sprites[1].hidden = true
 --#endregion
+
 --#region hero_wukong
 tt = RT("hero_wukong", "hero")
 b = balance.heroes.hero_wukong
-
 AC(tt, "melee", "timed_attacks")
-
 tt.hero.level_stats.armor = b.armor
 tt.hero.level_stats.hp_max = b.hp_max
 tt.hero.level_stats.melee_damage_max = {}
@@ -15955,3 +15952,401 @@ tt.sound_events.insert = "HeroSpiderGlobalCocoons"
 tt.aura_slow = "aura_hero_wukong_ultimate_slow"
 
 --#endregion
+
+-- 维斯帕
+tt = E:register_t("ps_hero_vesper_arrow_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "hero_vesper_attack_particle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.animation_fps = 15
+tt.particle_system.emission_rate = 100
+tt.particle_system.track_rotation = true
+tt = E:register_t("ps_hero_vesper_arrow_to_the_knee_bullet_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "hero_vesper_arrow_to_the_knee_particles"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 300
+tt.particle_system.animation_fps = 15
+tt.particle_system.track_rotation = true
+tt.particle_system.scales_y = {1.5, 0.7}
+tt.particle_system.scales_x = {1.5, 0.7}
+tt = E:register_t("ps_hero_vesper_ricochet_bullet_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "hero_vesper_ricochet_particle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.animation_fps = 35
+tt.particle_system.emission_rate = 180
+tt.particle_system.track_rotation = true
+tt.particle_system.scales_y = {1.5, 0.7}
+tt.particle_system.scales_x = {1.5, 0.7}
+tt = E:register_t("ps_hero_vesper_ricochet_bullet_trail_bounce")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "hero_vesper_ricochet_particle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.animation_fps = 30
+tt.particle_system.emission_rate = 180
+tt.particle_system.track_rotation = true
+tt.particle_system.scales_y = {1, 0.7}
+tt.particle_system.scales_x = {1, 0.7}
+
+tt = E:register_t("fx_hero_vesper_attack_hit", "fx")
+tt.render.sprites[1].name = "hero_vesper_attack_hit"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].hide_after_runs = 1
+tt.render.sprites[1].z = Z_OBJECTS
+
+tt = E:register_t("hero_vesper", "hero")
+b = balance.heroes.hero_vesper
+E:add_comps(tt, "melee", "ranged", "dodge", "timed_attacks")
+tt.hero.level_stats.armor = b.armor
+tt.hero.level_stats.hp_max = b.hp_max
+tt.hero.level_stats.melee_damage_max = b.basic_melee.damage_max
+tt.hero.level_stats.melee_damage_min = b.basic_melee.damage_min
+tt.hero.level_stats.ranged_short_damage_max = b.basic_ranged_short.damage_max
+tt.hero.level_stats.ranged_short_damage_min = b.basic_ranged_short.damage_min
+tt.hero.level_stats.ranged_long_damage_max = b.basic_ranged_long.damage_max
+tt.hero.level_stats.ranged_long_damage_min = b.basic_ranged_long.damage_min
+tt.hero.level_stats.regen_health = b.regen_health
+tt.hero.skills.arrow_to_the_knee = E:clone_c("hero_skill")
+tt.hero.skills.arrow_to_the_knee.cooldown = b.arrow_to_the_knee.cooldown
+tt.hero.skills.arrow_to_the_knee.damage_min = b.arrow_to_the_knee.damage_min
+tt.hero.skills.arrow_to_the_knee.damage_max = b.arrow_to_the_knee.damage_max
+tt.hero.skills.arrow_to_the_knee.stun_duration = b.arrow_to_the_knee.stun_duration
+tt.hero.skills.arrow_to_the_knee.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.arrow_to_the_knee.xp_gain = b.arrow_to_the_knee.xp_gain
+tt.hero.skills.arrow_to_the_knee.key = "ARROW_TO_THE_KNEE"
+tt.hero.skills.ricochet = E:clone_c("hero_skill")
+tt.hero.skills.ricochet.cooldown = b.ricochet.cooldown
+tt.hero.skills.ricochet.damage_min = b.ricochet.damage_min
+tt.hero.skills.ricochet.damage_max = b.ricochet.damage_max
+tt.hero.skills.ricochet.bounces = b.ricochet.bounces
+tt.hero.skills.ricochet.xp_gain = b.ricochet.xp_gain
+tt.hero.skills.ricochet.xp_level_steps = {
+	[3] = 1,
+	[6] = 2,
+	[9] = 3
+}
+tt.hero.skills.ricochet.key = "RICOCHET"
+tt.hero.skills.martial_flourish = E:clone_c("hero_skill")
+tt.hero.skills.martial_flourish.cooldown = b.martial_flourish.cooldown
+tt.hero.skills.martial_flourish.damage_min = b.martial_flourish.damage_min
+tt.hero.skills.martial_flourish.damage_max = b.martial_flourish.damage_max
+tt.hero.skills.martial_flourish.xp_gain = b.martial_flourish.xp_gain
+tt.hero.skills.martial_flourish.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3
+}
+tt.hero.skills.martial_flourish.key = "MARTIAL_FLOURISH"
+tt.hero.skills.disengage = E:clone_c("hero_skill")
+tt.hero.skills.disengage.cooldown = b.disengage.cooldown
+tt.hero.skills.disengage.damage_min = b.disengage.damage_min
+tt.hero.skills.disengage.damage_max = b.disengage.damage_max
+tt.hero.skills.disengage.min_distance_from_end = b.disengage.min_distance_from_end
+tt.hero.skills.disengage.distance = b.disengage.distance
+tt.hero.skills.disengage.xp_gain = b.disengage.xp_gain
+tt.hero.skills.disengage.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.disengage.key = "DISENGAGE"
+tt.hero.skills.ultimate = E:clone_c("hero_skill")
+tt.hero.skills.ultimate.controller_name = "hero_vesper_ultimate"
+tt.hero.skills.ultimate.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
+}
+tt.hero.skills.ultimate.key = "ARROW_STORM"
+tt.hero.skills.ultimate.duration = b.ultimate.duration
+tt.hero.skills.ultimate.cooldown = b.ultimate.cooldown
+tt.hero.skills.ultimate.entity = b.ultimate.entity
+tt.hero.skills.ultimate.xp_gain_factor = b.ultimate.cooldown[1]
+tt.hero.team = TEAM_LINIREA
+tt.health.armor = nil
+tt.health.dead_lifetime = b.dead_lifetime
+tt.health.hp_max = nil
+tt.health_bar.offset = v(0, 39)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.hero.fn_level_up = scripts.hero_vesper.level_up
+tt.idle_flip.chance = 0.4
+tt.idle_flip.cooldown = 4
+tt.info.fn = scripts.hero_basic.get_info
+tt.info.hero_portrait = "kr5_hero_portraits_0001"
+tt.info.i18n_key = "HERO_VESPER"
+tt.info.portrait = "kr5_info_portraits_heroes_0001"
+tt.info.ultimate_icon = "0001"
+tt.info.ultimate_pointer_style = "area"
+tt.info.stat_hp = b.stats.hp
+tt.info.stat_armor = b.stats.armor
+tt.info.stat_damage = b.stats.damage
+tt.info.stat_cooldown = b.stats.cooldown
+tt.main_script.insert = scripts.hero_vesper.insert
+tt.main_script.update = scripts.hero_vesper.update
+tt.motion.max_speed = b.speed
+tt.regen.cooldown = 1
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].angles = {}
+tt.render.sprites[1].angles.walk = {"walk"}
+tt.render.sprites[1].angles.ranged = {"shoot"}
+tt.render.sprites[1].name = "idle_1"
+tt.render.sprites[1].prefix = "hero_vesper_vesper"
+tt.render.sprites[1].scale = v(1.05, 1.05)
+tt.render.sprites[1].draw_order = DO_HEROES
+tt.sound_events.change_rally_point = "HeroVesperTaunt"
+tt.sound_events.death = "HeroVesperDeath"
+tt.sound_events.respawn = "HeroVesperTauntIntro"
+tt.sound_events.hero_room_select = "HeroVesperTauntSelect"
+tt.soldier.melee_slot_offset.x = 5
+tt.unit.hit_offset = v(0, 12)
+tt.unit.marker_offset = v(0, -1)
+tt.unit.mod_offset = v(0, 19.9)
+tt.dodge.disabled = true
+tt.dodge.ranged = false
+tt.dodge.cooldown = nil
+tt.dodge.chance = 1
+tt.dodge.bullet = "arrow_hero_vesper_disengage"
+tt.dodge.animation_dissapear = "disengage_disappear"
+tt.dodge.animation_appear = "disengage_appear"
+tt.dodge.animation_attack_start = "disengage_attack_start"
+tt.dodge.animation_attack_end = "disengage_attack_end"
+tt.dodge.animation_end = "disengage_end"
+tt.dodge.total_shoots = b.disengage.total_shoots
+tt.dodge.can_dodge = scripts.hero_vesper.can_dodge
+tt.dodge.bullet_start_offset = {v(9, 28)}
+tt.dodge.shoot_time = fts(2)
+tt.dodge.sound = "HeroVesperDisengageCast"
+tt.dodge.hp_to_trigger = b.disengage.hp_to_trigger
+tt.melee.attacks[1] = E:clone_c("melee_attack")
+tt.melee.attacks[1].animation = "melee_attack_2"
+tt.melee.attacks[1].damage_max = nil
+tt.melee.attacks[1].damage_min = nil
+tt.melee.attacks[1].hit_time = fts(10)
+tt.melee.attacks[1].shared_cooldown = true
+tt.melee.attacks[1].sound = "MeleeSword"
+tt.melee.attacks[1].vis_bans = bor(F_CLIFF)
+tt.melee.attacks[1].vis_flags = F_BLOCK
+tt.melee.attacks[1].xp_gain_factor = b.basic_melee.xp_gain_factor
+tt.melee.attacks[1].hit_fx = "fx_hero_vesper_attack_hit"
+tt.melee.attacks[1].hit_offset = v(30, 20)
+tt.melee.attacks[1].basic_attack = true
+tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
+tt.melee.attacks[2].animation = "melee_attack_1"
+tt.melee.attacks[2].chance = 0.2
+tt.melee.attacks[2].hit_time = fts(16)
+tt.melee.attacks[2].hit_offset = v(30, 15)
+tt.melee.attacks[2].basic_attack = true
+tt.melee.attacks[3] = E:clone_c("melee_attack")
+tt.melee.attacks[3].animations = {nil, "martial_flourish"}
+tt.melee.attacks[3].cooldown = nil
+tt.melee.attacks[3].damage_max = nil
+tt.melee.attacks[3].damage_min = nil
+tt.melee.attacks[3].damage_type = b.martial_flourish.damage_type
+tt.melee.attacks[3].disabled = true
+tt.melee.attacks[3].xp_from_skill = "martial_flourish"
+tt.melee.attacks[3].sound = "HeroVesperMartialFlourishCast"
+tt.melee.attacks[3].hit_times = {fts(8), fts(15), fts(23)}
+tt.melee.attacks[3].loops = 1
+tt.melee.attacks[3].mod = "mod_hero_vesper_martial_flourish_fx"
+tt.melee.cooldown = 1
+tt.melee.range = balance.heroes.common.melee_attack_range
+tt.ranged.attacks[1] = E:clone_c("bullet_attack")
+tt.ranged.attacks[1].animation = "ranged_attack"
+tt.ranged.attacks[1].bullet = "arrow_hero_vesper_short_arrow"
+tt.ranged.attacks[1].bullet_start_offset = {v(7, 26)}
+tt.ranged.attacks[1].cooldown = b.basic_ranged_short.cooldown
+tt.ranged.attacks[1].max_range = b.basic_ranged_short.max_range
+tt.ranged.attacks[1].min_range = b.basic_ranged_short.min_range
+tt.ranged.attacks[1].shoot_time = fts(8)
+tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
+tt.ranged.attacks[1].shared_cooldown = true
+tt.ranged.attacks[1].chance = 1
+tt.ranged.attacks[1].node_prediction = fts(8) + fts(15)
+tt.ranged.attacks[1].basic_attack = true
+tt.ranged.attacks[2] = E:clone_c("bullet_attack")
+tt.ranged.attacks[2].animation = "ranged_attack"
+tt.ranged.attacks[2].bullet = "arrow_hero_vesper_long_arrow"
+tt.ranged.attacks[2].bullet_start_offset = {v(7, 26)}
+tt.ranged.attacks[2].cooldown = b.basic_ranged_long.cooldown
+tt.ranged.attacks[2].max_range = b.basic_ranged_long.max_range
+tt.ranged.attacks[2].min_range = b.basic_ranged_long.min_range
+tt.ranged.attacks[2].shoot_time = fts(8)
+tt.ranged.attacks[2].vis_bans = bor(F_NIGHTMARE)
+tt.ranged.attacks[2].shared_cooldown = true
+tt.ranged.attacks[2].chance = 1
+tt.ranged.attacks[2].node_prediction = fts(8) + fts(15)
+tt.ranged.attacks[2].basic_attack = true
+tt.ranged.attacks[3] = E:clone_c("bullet_attack")
+tt.ranged.attacks[3].animation = "arrow_to_the_knee"
+tt.ranged.attacks[3].bullet = "hero_vesper_arrow_to_the_knee_arrow"
+tt.ranged.attacks[3].bullet_start_offset = {v(0, 20), v(0, 20)}
+tt.ranged.attacks[3].cooldown = nil
+tt.ranged.attacks[3].disabled = true
+tt.ranged.attacks[3].max_range = b.arrow_to_the_knee.max_range
+tt.ranged.attacks[3].min_range = b.arrow_to_the_knee.min_range
+tt.ranged.attacks[3].xp_from_skill = "arrow_to_the_knee"
+tt.ranged.attacks[3].vis_flag = bor(F_STUN)
+tt.ranged.attacks[3].vis_bans = bor(F_BOSS, F_NIGHTMARE)
+tt.ranged.attacks[3].shoot_time = fts(16)
+tt.ranged.attacks[3].node_prediction = fts(10)
+tt.ranged.attacks[3].sound = "HeroVesperArrowToTheKneeCast"
+tt.timed_attacks.list[1] = E:clone_c("custom_attack")
+tt.timed_attacks.list[1].animation = "ricochet"
+tt.timed_attacks.list[1].bullet = "arrow_hero_vesper_ricochet"
+tt.timed_attacks.list[1].bullet_start_offset = {v(0, 20)}
+tt.timed_attacks.list[1].cooldown = nil
+tt.timed_attacks.list[1].disabled = true
+tt.timed_attacks.list[1].max_range = b.ricochet.max_range
+tt.timed_attacks.list[1].min_range = b.ricochet.min_range
+tt.timed_attacks.list[1].xp_from_skill = "ricochet"
+tt.timed_attacks.list[1].vis_bans = 0
+tt.timed_attacks.list[1].shoot_time = fts(19)
+tt.timed_attacks.list[1].min_targets = b.ricochet.min_targets
+tt.timed_attacks.list[1].max_range_trigger = b.ricochet.max_range_trigger
+tt.timed_attacks.list[1].sound = "HeroVesperRicochetCast"
+tt.ui.click_rect = r(-19, -5, 38, 43)
+tt.ultimate = {
+	ts = 0,
+	cooldown = b.ultimate.cooldown[1]
+}
+tt = E:register_t("hero_vesper_arrow_to_the_knee_arrow_mod", "mod_stun")
+tt.modifier.duration = nil
+tt = E:register_t("hero_vesper_arrow_to_the_knee_hit", "fx")
+tt.render.sprites[1].name = "hero_vesper_arrow_to_the_knee_hit"
+tt = E:register_t("hero_vesper_ricochet_bullet_hit_fx", "fx")
+tt.render.sprites[1].name = "hero_vesper_ricochet_hit"
+
+tt = E:register_t("hero_vesper_ultimate")
+E:add_comps(tt, "pos", "main_script")
+b = balance.heroes.hero_vesper
+tt.main_script.update = scripts.hero_vesper_ultimate.update
+tt.cooldown = nil
+tt.bullet = "hero_vesper_ultimate_arrow"
+tt.offset_back = -2
+tt.spread = b.ultimate.spread
+tt.damage = b.ultimate.damage
+tt.duration = b.ultimate.duration
+tt.enemies_range = b.ultimate.enemies_range
+tt.node_prediction_offset = b.ultimate.node_prediction_offset
+tt.vis_flags = F_RANGED
+tt.vis_bans = 0
+tt.sounds = {"HeroVesperUltimateLvl1", "HeroVesperUltimateLvl2", "HeroVesperUltimateLvl3"}
+tt = E:register_t("hero_vesper_ultimate_arrow", "bullet")
+tt.main_script.update = scripts.hero_vesper_ultimate_arrow.update
+tt.bullet.damage_radius = 35
+tt.bullet.damage_flags = F_AREA
+tt.bullet.damage_bans = F_FRIEND
+tt.bullet.damage_type = DAMAGE_TRUE
+tt.bullet.arrive_decal = "hero_vesper_ultimate_decal"
+tt.bullet.max_speed = 1500
+tt.bullet.mod = "hero_vesper_ultimate_mod"
+tt.render.sprites[1].name = "hero_vesper_ultimate_arrow"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.sound_events.insert = "ArrowSound"
+tt = E:register_t("hero_vesper_ultimate_mod", "mod_slow")
+tt.modifier.duration = 0.1
+tt.slow.factor = 0.5
+tt = E:register_t("hero_vesper_ultimate_decal", "decal_tween")
+
+AC(tt, "main_script")
+
+tt.main_script.insert = scripts.hero_vesper_ultimate_decal.insert
+tt.tween.props[1].keys = {{0, 255}, {2, 255}, {3, 0}}
+tt.tween.props[2] = table.deepclone(tt.tween.props[1])
+tt.tween.props[2].sprite_id = 1
+tt.render.sprites[1].name = "hero_vesper_ultimate_arrow_decal"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_DECALS
+
+tt = E:register_t("arrow_hero_vesper_short_arrow", "arrow5_fixed_height")
+b = balance.heroes.hero_vesper
+tt.render.sprites[1].name = "hero_vesper_arrow"
+tt.bullet.fixed_height = 35
+tt.bullet.g = -1000
+tt.bullet.hit_blood_fx = nil
+tt.bullet.pop = {"pop_archer"}
+tt.bullet.hide_radius = 1
+tt.bullet.prediction_error = false
+tt.bullet.predict_target_pos = false
+tt.bullet.miss_decal = "hero_vesper_arrow_miss"
+tt.bullet.particles_name = "ps_hero_vesper_arrow_trail"
+tt.bullet.xp_gain_factor = b.basic_ranged_short.xp_gain_factor
+tt.bullet.extend_particles_cutoff = true
+tt.bullet.use_unit_damage_factor = true
+tt = E:register_t("arrow_hero_vesper_long_arrow", "arrow_hero_vesper_short_arrow")
+b = balance.heroes.hero_vesper
+tt.bullet.xp_gain_factor = b.basic_ranged_long.xp_gain_factor
+tt = E:register_t("hero_vesper_arrow_to_the_knee_arrow", "arrow5_45degrees")
+tt.render.sprites[1].name = "hero_vesper_arrow_to_the_knee_arrow"
+tt.render.sprites[1].animated = false
+tt.bullet.miss_decal = "hero_vesper_arrow_to_the_knee_arrow_miss"
+tt.bullet.flight_time = fts(15)
+tt.bullet.hide_radius = nil
+tt.bullet.hit_distance = 35
+tt.bullet.mod = "hero_vesper_arrow_to_the_knee_arrow_mod"
+tt.bullet.particles_name = "ps_hero_vesper_arrow_to_the_knee_bullet_trail"
+tt.bullet.hit_fx = "hero_vesper_arrow_to_the_knee_hit"
+tt.bullet.g = -4 / (fts(1) * fts(1))
+tt.bullet.extend_particles_cutoff = true
+tt.bullet.reset_to_target_pos = true
+tt.bullet.hit_blood_fx = nil
+tt.sound_events.hit = "HeroVesperArrowToTheKneeImpact"
+tt = E:register_t("arrow_hero_vesper_disengage", "arrow5")
+tt.render.sprites[1].name = "hero_vesper_arrow"
+tt.bullet.miss_decal = "archer_hero_proy_0002-f"
+tt.bullet.flight_time_variance = 3
+tt.bullet.flight_time = fts(8)
+tt.bullet.pop = {"pop_archer"}
+tt.bullet.hide_radius = 1
+tt.bullet.particles_name = "ps_hero_vesper_arrow_trail"
+tt.bullet.g = -2.5 / (fts(1) * fts(1))
+
+tt = E:register_t("arrow_hero_vesper_ricochet", "bullet")
+b = balance.heroes.hero_vesper
+tt.main_script.update = scripts.hero_vesper_ricochet_bullet.update
+tt.render.sprites[1].name = "hero_vesper_ricochet_arrow"
+tt.render.sprites[1].animated = false
+tt.bullet.damage_type = b.ricochet.damage_type
+tt.bullet.damage_min = nil
+tt.bullet.damage_max = nil
+tt.bounce_arrow_name = "hero_vesper_ricochet_arrow"
+tt.particle_after_bounce = "ps_hero_vesper_ricochet_bullet_trail_bounce"
+tt.bullet.hit_fx = "hero_vesper_ricochet_bullet_hit_fx"
+tt.bullet.acceleration_factor = 0.2
+tt.bullet.min_speed = 600
+tt.bullet.max_speed = 600
+tt.bullet.vis_flags = F_RANGED
+tt.bullet.vis_bans = 0
+tt.bullet.particles_name = "ps_hero_vesper_ricochet_bullet_trail"
+tt.bullet.g = -1.8 / (fts(1) * fts(1))
+tt.bounces = nil
+tt.bounce_range = b.ricochet.bounce_range
+tt.sound = "HeroVesperRicochetImpact"
+
+tt = E:register_t("mod_hero_vesper_martial_flourish_fx", "modifier")
+E:add_comps(tt, "render")
+tt.modifier.duration = fts(23)
+tt.render.sprites[1].name = "hero_vesper_martial_flourish_hit"
+tt.render.sprites[1].draw_order = 10
+tt.render.sprites[1].loop = false
+tt.main_script.update = scripts.mod_track_target.update

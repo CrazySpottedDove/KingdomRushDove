@@ -61,6 +61,22 @@ return {
 		"tower_entwood",
 		"tower_baby_ashbite",
 		"tower_pixie",
-		"tower_tricannon_lvl4"
+		"tower_tricannon_lvl4",
+		"tower_royal_archers_lvl4",
+		"tower_arcane_wizard_lvl4",
+		"tower_ballista_lvl4",
+		"tower_flamespitter_lvl4",
+		"tower_necromancer_lvl4",
+		"tower_elven_stargazers_lvl4",
+		"tower_demon_pit_lvl4",
+		"tower_sand_lvl4",
+		"tower_rocket_gunners_lvl4",
+		"tower_ray_lvl4",
+		"tower_ghost_lvl4",
+		"tower_dark_elf_lvl4",
+		"tower_hermit_toad_lvl4",
+		"tower_sparking_geode_lvl4",
+		"tower_pandas_lvl4",
+		"tower_dwarf_lvl4"
 	}
 }

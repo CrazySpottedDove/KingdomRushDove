@@ -1001,6 +1001,22 @@ return {
 				thickness = 1 * rs,
 				glow_color = fc(107, 65, 0, 255)
 			}, {}}
+		},
+		hero_vesper = {
+			shader_args = {{
+				margin = 0 * rs,
+				p1 = p11,
+				p2 = p12,
+				c1 = fc(0, 0, 0, 255),
+				c2 = fc(182, 232, 240, 255),
+				c3 = fc(65, 178, 220, 255)
+			}, {
+				thickness = 2.5 * rs,
+				outline_color = fc(0, 69, 100, 255)
+			}, {
+				thickness = 1 * rs,
+				glow_color = fc(0, 69, 100, 255)
+			}, {}}
 		}
 	},
 	hero_data = { -- 爵士
@@ -1488,7 +1504,7 @@ return {
 			portrait = 6,
 			thumb = 6,
 			name = "hero_hunter",
-			available_level = 1,
+			available_level = 107,
 			starting_level = 1,
 			icon = 6,
 			stats = {6, 5, 6, 7}
@@ -1498,7 +1514,7 @@ return {
 			portrait = 7,
 			thumb = 7,
 			name = "hero_space_elf",
-			available_level = 1,
+			available_level = 111,
 			starting_level = 1,
 			icon = 7,
 			stats = {4, 4, 6, 8}
@@ -1508,17 +1524,27 @@ return {
 			portrait = 2,
 			thumb = 2,
 			name = "hero_raelyn",
-			available_level = 1,
+			available_level = 102,
 			starting_level = 1,
 			icon = 2,
 			stats = {7, 6, 0, 3}
+		},
+		{
+			from_kr = 5,
+			portrait = 1,
+			thumb = 1,
+			name = "hero_vesper",
+			available_level = 101,
+			starting_level = 1,
+			icon = 1,
+			stats = {5, 5, 4, 5}
 		}, -- 毒液
 		{
 			from_kr = 5,
 			portrait = 4,
 			thumb = 4,
 			name = "hero_venom",
-			available_level = 1,
+			available_level = 108,
 			starting_level = 1,
 			icon = 4,
 			stats = {5, 5, 5, 6}
@@ -1528,7 +1554,7 @@ return {
 			portrait = 12,
 			thumb = 12,
 			name = "hero_dragon_gem",
-			available_level = 1,
+			available_level = 115,
 			starting_level = 1,
 			icon = 12,
 			stats = {7, 6, 5, 5}
@@ -1538,7 +1564,7 @@ return {
 			portrait = 13,
 			thumb = 13,
 			name = "hero_witch",
-			available_level = 1,
+			available_level = 116,
 			starting_level = 1,
 			icon = 13,
 			stats = {5, 4, 5, 7}
@@ -1548,7 +1574,7 @@ return {
 			portrait = 14,
 			thumb = 14,
 			name = "hero_dragon_bone",
-			available_level = 1,
+			available_level = 116,
 			starting_level = 1,
 			icon = 14,
 			stats = {6, 0, 5, 5}
@@ -1558,7 +1584,7 @@ return {
 			portrait = 11,
 			thumb = 11,
 			name = "hero_lumenir",
-			available_level = 1,
+			available_level = 115,
 			starting_level = 1,
 			icon = 11,
 			stats = {7, 0, 5, 5}
@@ -1568,7 +1594,7 @@ return {
 			portrait = 18,
 			thumb = 18,
 			name = "hero_wukong",
-			available_level = 1,
+			available_level = 116,
 			starting_level = 1,
 			icon = 18,
 			stats = {5, 7, 4, 5}

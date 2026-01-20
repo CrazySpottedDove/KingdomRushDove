@@ -29101,4 +29101,570 @@ function scripts.decal_zhu_apprentice_area_attack.update(this, store)
 end
 
 -- 悟空_END
+
+scripts.hero_vesper = {}
+
+function scripts.hero_vesper.level_up(this, store, initial)
+	local hl, ls = level_up_basic(this)
+
+	this.melee.attacks[1].damage_min = ls.melee_damage_min[hl]
+	this.melee.attacks[1].damage_max = ls.melee_damage_max[hl]
+	this.melee.attacks[2].damage_min = ls.melee_damage_min[hl]
+	this.melee.attacks[2].damage_max = ls.melee_damage_max[hl]
+
+	local bt = E:get_template(this.ranged.attacks[1].bullet)
+	bt.bullet.damage_min = ls.ranged_short_damage_min[hl]
+	bt.bullet.damage_max = ls.ranged_short_damage_max[hl]
+
+	local bt = E:get_template(this.ranged.attacks[2].bullet)
+	bt.bullet.damage_min = ls.ranged_long_damage_min[hl]
+	bt.bullet.damage_max = ls.ranged_long_damage_max[hl]
+
+	upgrade_skill(this, "arrow_to_the_knee", function(this, s)
+		local a = this.ranged.attacks[3]
+
+		a.disabled = nil
+		a.cooldown = s.cooldown[s.level]
+
+		local b = E:get_template(a.bullet)
+
+		b.bullet.damage_min = s.damage_min[s.level]
+		b.bullet.damage_max = s.damage_max[s.level]
+		b.bullet.damage_type = DAMAGE_TRUE
+
+		local m = E:get_template(b.bullet.mod)
+		m.modifier.duration = s.stun_duration[s.level]
+	end)
+
+	upgrade_skill(this, "ricochet", function(this, s)
+		local a = this.timed_attacks.list[1]
+		local sl = s.level
+		a.disabled = nil
+		a.cooldown = s.cooldown[sl]
+
+		local b = E:get_template(a.bullet)
+
+		b.bullet.damage_min = s.damage_min[sl]
+		b.bullet.damage_max = s.damage_max[sl]
+		b.bounces = s.bounces[sl]
+	end)
+
+	upgrade_skill(this, "martial_flourish", function(this, s)
+		local a = this.melee.attacks[3]
+		local sl = s.level
+		a.disabled = nil
+		a.cooldown = s.cooldown[sl]
+		a.damage_min = s.damage_min[sl]
+		a.damage_max = s.damage_max[sl]
+	end)
+
+	upgrade_skill(this, "disengage", function(this, s)
+		local d = this.dodge
+
+		d.disabled = nil
+		local sl = s.level
+		d.cooldown = s.cooldown[sl]
+
+		local b = E:get_template(d.bullet)
+
+		b.bullet.damage_min = s.damage_min[sl]
+		b.bullet.damage_max = s.damage_max[sl]
+	end)
+
+	upgrade_skill(this, "ultimate", function(this, s)
+		local sl = s.level
+		this.ultimate.disabled = nil
+		this.ultimate.cooldown = s.cooldown[sl]
+	end)
+
+	this.health.hp = this.health.hp_max
+	this.hero.melee_active_status = {}
+
+	for index, attack in ipairs(this.melee.attacks) do
+		this.hero.melee_active_status[index] = attack.disabled
+	end
+end
+
+function scripts.hero_vesper.insert(this, store)
+	this.hero.fn_level_up(this, store, true)
+
+	this.melee.order = U.attack_order(this.melee.attacks)
+	this.ranged.order = U.attack_order(this.ranged.attacks)
+
+	return true
+end
+
+function scripts.hero_vesper.can_dodge(store, this, ranged_attack, attack, enemy)
+	local skill = this.hero.skills.disengage
+
+	if enemy and enemy.health and not enemy.health.dead and not this.dodge.disabled and this.health.hp / this.health.hp_max < this.dodge.hp_to_trigger then
+		local enp = enemy.nav_path
+		local new_ni = enp.ni
+		local node_limit = math.floor(skill.min_distance_from_end / P.average_node_dist)
+		local node_jump = math.floor(skill.distance / P.average_node_dist)
+		local nodes_to_goal = P:nodes_to_goal(enp)
+
+		if node_limit < nodes_to_goal then
+			new_ni = new_ni + math.min(nodes_to_goal - 1, node_jump)
+
+			local new_pos = P:node_pos(enp.pi, enp.spi, new_ni)
+
+			this.dodge.new_pos = new_pos
+
+			return true
+		end
+	end
+
+	return false
+end
+
+function scripts.hero_vesper.update(this, store)
+	local h = this.health
+	local brk, sta
+	local basic_attack = this.ranged.attacks[1]
+	local ricochet_attack = this.timed_attacks.list[1]
+
+	local function shoot_arrow_after_dodge(enemy, enemy_pos, enemy_id)
+		local pos, bullet_to, target_id
+
+		if enemy then
+			pos = enemy.pos
+			bullet_to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
+			target_id = enemy.id
+		else
+			pos = enemy_pos
+			bullet_to = enemy_pos
+			target_id = enemy_id
+		end
+
+		local an, af, ai = U.animation_name_facing_point(this, this.dodge.animation_attack_start, pos)
+
+		U.animation_start(this, an, af, store.tick_ts, false)
+		U.y_wait(store, this.dodge.shoot_time)
+
+		local bo = this.dodge.bullet_start_offset[ai]
+		local b = E:create_entity(this.dodge.bullet)
+
+		b.pos = V.vclone(this.pos)
+		b.pos.x, b.pos.y = b.pos.x + (af and -1 or 1) * bo.x, b.pos.y + bo.y
+		b.bullet.from = V.vclone(b.pos)
+		b.bullet.to = bullet_to
+		b.bullet.target_id = target_id
+		b.bullet.flight_time = b.bullet.flight_time + fts(math.random(0, b.bullet.flight_time_variance))
+
+		queue_insert(store, b)
+		U.y_animation_wait(this)
+
+		local an, af, ai = U.animation_name_facing_point(this, this.dodge.animation_attack_end, pos)
+
+		U.animation_start(this, an, af, store.tick_ts, false)
+		U.y_animation_wait(this)
+	end
+
+	this.health_bar.hidden = false
+
+	while true do
+		if h.dead then
+			SU.y_hero_death_and_respawn(store, this)
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			while this.nav_rally.new do
+				if SU.y_hero_new_rally(store, this) then
+					goto label_239_0
+				end
+			end
+
+			if ready_to_use_skill(this.ultimate, store) then
+				local enemy = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range, true)
+
+				if enemy and enemy.pos then
+					U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+					S:queue(this.sound_events.change_rally_point)
+
+					local ultimate_entity = E:create_entity(this.hero.skills.ultimate.controller_name)
+
+					ultimate_entity.damage_factor = this.unit.damage_factor
+					ultimate_entity.pos = V.vclone(enemy.pos)
+					ultimate_entity.level = this.hero.skills.ultimate.level
+
+					queue_insert(store, ultimate_entity)
+
+					this.ultimate.ts = store.tick_ts
+
+					SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
+				else
+					this.ultimate.ts = this.ultimate.ts + 1
+				end
+			end
+
+			if not ricochet_attack.disabled and store.tick_ts - ricochet_attack.ts > ricochet_attack.cooldown then
+				local enemy, enemies = U.find_foremost_enemy(store.entities, this.pos, ricochet_attack.min_range, ricochet_attack.max_range_trigger, ricochet_attack.node_prediction, ricochet_attack.vis_flags, ricochet_attack.vis_bans)
+
+				if not enemy then
+					SU.delay_attack(store, ricochet_attack, fts(10))
+				elseif enemies and #enemies < ricochet_attack.min_targets then
+					SU.delay_attack(store, ricochet_attack, fts(10))
+				else
+					local start_ts = store.tick_ts
+
+					if SU.y_soldier_do_ranged_attack(store, this, enemy, ricochet_attack, V.vclone(enemy.pos)) then
+						ricochet_attack.ts = start_ts
+					end
+				end
+			end
+
+			if not this.dodge.disabled and this.dodge.active and this.vis.bans ~= F_ALL then
+				local enemy = store.entities[this.soldier.target_id]
+
+				if not enemy then
+				-- block empty
+				else
+					local enemy_pos = enemy.pos
+					local enemy_id = enemy.id
+
+					this.dodge.active = false
+					this.dodge.ts = store.tick_ts
+
+					local new_pos = this.dodge.new_pos
+
+					S:queue(this.dodge.sound)
+					U.unblock_target(store, this)
+
+					local bans = this.vis.bans
+
+					this.vis.bans = F_ALL
+
+					SU.hide_modifiers(store, this, true)
+					SU.hide_auras(store, this, true)
+					U.animation_start(this, this.dodge.animation_dissapear, nil, store.tick_ts, false)
+					U.y_animation_wait(this)
+					U.y_wait(store, fts(3))
+
+					this.pos.x, this.pos.y = new_pos.x, new_pos.y
+					this.nav_rally.center = V.vclone(this.pos)
+					this.nav_rally.pos = V.vclone(this.pos)
+
+					SU.hero_gain_xp_from_skill(this, this.hero.skills.disengage)
+					U.y_animation_play(this, this.dodge.animation_appear, nil, store.tick_ts)
+
+					this.vis.bans = bans
+					this.vis._bans = nil
+
+					SU.show_modifiers(store, this, true)
+					SU.show_auras(store, this, true)
+
+					local targets = U.find_enemies_in_range(store.entities, enemy_pos, 0, 100, this.vis.flags, bans)
+
+					if targets then
+						for i = 1, this.dodge.total_shoots do
+							local target = targets[1 + i % #targets]
+
+							shoot_arrow_after_dodge(target, target.pos, target.id)
+						end
+					else
+						for i = 1, this.dodge.total_shoots do
+							shoot_arrow_after_dodge(enemy, enemy_pos, enemy_id)
+						end
+					end
+
+					U.animation_start(this, this.dodge.animation_attack_end, nil, store.tick_ts, false)
+
+					basic_attack.ts = store.tick_ts
+
+					U.animation_start(this, "idle", nil, store.tick_ts, true)
+				end
+			end
+
+			if SU.hero_level_up(store, this) then
+				U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+			end
+
+			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+			if brk or sta ~= A_NO_TARGET then
+			-- block empty
+			elseif SU.soldier_go_back_step(store, this) then
+			-- block empty
+			else
+				brk, sta = SU.y_soldier_ranged_attacks(store, this)
+
+				if brk then
+				-- block empty
+				else
+					SU.soldier_idle(store, this)
+					SU.soldier_regen(store, this)
+				end
+			end
+		end
+
+		::label_239_0::
+
+		coroutine.yield()
+	end
+end
+
+scripts.hero_vesper_ricochet_bullet = {}
+
+function scripts.hero_vesper_ricochet_bullet.update(this, store)
+	local b = this.bullet
+	local mspeed = b.min_speed
+	local target, ps
+	local bounce_count = 0
+	local already_hit = {}
+
+	b.speed.x, b.speed.y = V.normalize(b.to.x - b.from.x, b.to.y - b.from.y)
+
+	if b.particles_name then
+		ps = E:create_entity(b.particles_name)
+		ps.particle_system.track_id = this.id
+
+		queue_insert(store, ps)
+	end
+
+	::label_241_0::
+
+	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
+		target = store.entities[b.target_id]
+
+		if target and target.health and not target.health.dead then
+			b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
+		end
+
+		mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
+		mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
+		b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
+		this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
+		this.render.sprites[1].r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
+
+		coroutine.yield()
+	end
+
+	if target and not target.health.dead then
+		local d = SU.create_bullet_damage(b, target.id, this.id)
+
+		queue_damage(store, d)
+
+		if b.mod or b.mods then
+			local mods = b.mods or {b.mod}
+
+			for _, mod_name in pairs(mods) do
+				local m = E:create_entity(mod_name)
+
+				m.modifier.source_id = this.id
+				m.modifier.target_id = target.id
+				m.modifier.level = b.level
+
+				queue_insert(store, m)
+			end
+		end
+
+		table.insert(already_hit, target.id)
+	end
+
+	if b.hit_fx then
+		local sfx = E:create_entity(b.hit_fx)
+
+		sfx.pos.x, sfx.pos.y = b.to.x, b.to.y
+		sfx.render.sprites[1].ts = store.tick_ts
+		sfx.render.sprites[1].runs = 0
+
+		queue_insert(store, sfx)
+	end
+
+	S:queue(this.sound)
+
+	if bounce_count < this.bounces then
+		local targets = U.find_enemies_in_range(store.entities, this.pos, 0, this.bounce_range, b.vis_flags, b.vis_bans, function(v)
+			return not table.contains(already_hit, v.id)
+		end)
+
+		if not targets then
+			if target and not target.health.dead then
+				already_hit = {target.id}
+			else
+				already_hit = {}
+			end
+
+			targets = U.find_enemies_in_range(store.entities, this.pos, 0, this.bounce_range, b.vis_flags, b.vis_bans, function(v)
+				return not table.contains(already_hit, v.id)
+			end)
+		end
+
+		if targets then
+			if bounce_count == 0 then
+				this.render.sprites[1].name = this.bounce_arrow_name
+
+				if ps then
+					ps.particle_system.emit = false
+
+					queue_remove(store, ps)
+				end
+
+				b.particles_name = this.particle_after_bounce
+				ps = E:create_entity(b.particles_name)
+				ps.particle_system.track_id = this.id
+
+				queue_insert(store, ps)
+			end
+
+			table.sort(targets, function(e1, e2)
+				return V.dist(this.pos.x, this.pos.y, e1.pos.x, e1.pos.y) < V.dist(this.pos.x, this.pos.y, e2.pos.x, e2.pos.y)
+			end)
+
+			local target = targets[1]
+
+			bounce_count = bounce_count + 1
+			b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
+			b.target_id = target.id
+
+			goto label_241_0
+		end
+	end
+
+	if ps then
+		ps.particle_system.emit = false
+
+		queue_remove(store, ps)
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.hero_vesper_ultimate = {}
+
+function scripts.hero_vesper_ultimate.update(this, store)
+	local distance = 2
+
+	local function spawn_arrow(pi, spi, ni)
+		spi = spi or math.random(1, 3)
+
+		local pos = P:node_pos(pi, spi, ni)
+
+		pos.x = pos.x + math.random(-4, 4)
+		pos.y = pos.y + math.random(-5, 5)
+
+		local b = E:create_entity(this.bullet)
+
+		b.bullet.damage_max = this.damage[this.level]
+		b.bullet.damage_min = this.damage[this.level]
+		b.bullet.damage_type = DAMAGE_TRUE
+		b.bullet.from = V.v(pos.x + math.random(-170, -140), pos.y + REF_H)
+		b.bullet.to = pos
+		b.pos = V.vclone(b.bullet.from)
+
+		queue_insert(store, b)
+	end
+
+	local function is_valid_path(pi)
+		return (not store.level.ignore_walk_backwards_paths or not table.contains(store.level.ignore_walk_backwards_paths, pi)) and P:is_path_active(pi)
+	end
+
+	local available_paths = {}
+
+	for k, v in pairs(P.paths) do
+		table.insert(available_paths, k)
+	end
+
+	if store.level.ignore_walk_backwards_paths then
+		available_paths = table.filter(available_paths, is_valid_path)
+	end
+
+	local nearest = P:nearest_nodes(this.pos.x, this.pos.y, available_paths, nil, true)
+
+	if #nearest > 0 then
+		local pi, spi, ni = unpack(nearest[1])
+		local count = this.spread[this.level]
+		local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, this.enemies_range, this.vis_flags, this.vis_bans)
+
+		if enemies and #enemies > 0 and is_valid_path(enemies[1].nav_path.pi) then
+			local enemy_pi = enemies[1].nav_path.pi
+
+			nearest = P:nearest_nodes(this.pos.x, this.pos.y, {enemy_pi})
+
+			if #nearest > 0 then
+				pi, spi, ni = unpack(nearest[1])
+			end
+		end
+
+		ni = ni + this.node_prediction_offset + distance
+
+		S:queue(this.sounds[this.level])
+
+		for i = 1, count do
+			if P:is_node_valid(pi, ni - i * distance) then
+				spawn_arrow(pi, 1, ni - i * distance)
+				spawn_arrow(pi, math.random(2, 3), ni - i * distance)
+				U.y_wait(store, this.duration / count)
+			end
+		end
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.hero_vesper_ultimate_arrow = {}
+
+function scripts.hero_vesper_ultimate_arrow.update(this, store)
+	local b = this.bullet
+	local speed = b.max_speed
+
+	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) >= 2 * (speed * store.tick_length) do
+		b.speed.x, b.speed.y = V.mul(speed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
+		this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
+		this.render.sprites[1].r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
+
+		coroutine.yield()
+	end
+
+	local targets = U.find_targets_in_range(store.entities, b.to, 0, b.damage_radius, b.damage_flags, b.damage_bans)
+
+	if targets then
+		for _, target in pairs(targets) do
+			local d = E:create_entity("damage")
+
+			d.damage_type = b.damage_type
+			d.value = b.damage_max
+			d.source_id = this.id
+			d.target_id = target.id
+
+			queue_damage(store, d)
+
+			if b.mod then
+				local mod = E:create_entity(b.mod)
+
+				mod.modifier.target_id = target.id
+
+				queue_insert(store, mod)
+			end
+		end
+	end
+
+	if b.hit_fx then
+		SU.insert_sprite(store, b.hit_fx, this.pos)
+	end
+
+	if b.arrive_decal then
+		local decal = E:create_entity(b.arrive_decal)
+
+		decal.pos = V.vclone(b.to)
+		decal.render.sprites[1].ts = store.tick_ts
+
+		queue_insert(store, decal)
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.hero_vesper_ultimate_decal = {}
+
+function scripts.hero_vesper_ultimate_decal.insert(this, store)
+	this.render.sprites[1].ts = store.tick_ts
+	this.render.sprites[1].r = U.frandom(-10, 5) * math.pi / 180
+
+	return true
+end
+
 return scripts
