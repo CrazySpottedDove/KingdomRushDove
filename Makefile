@@ -79,3 +79,7 @@ windows:
 linux:
 	@bash $(MAKE_FILE_DIR)/package.sh
 	bash $(MAKE_FILE_DIR)/pack_linux.sh
+
+push:
+	git push origin dev
+	git push server dev
