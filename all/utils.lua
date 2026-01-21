@@ -2764,4 +2764,12 @@ function U.find_entity_most_surrounded(entities)
 	return out[1], out
 end
 
+--- 让 modifier 继承 bullet 的伤害钩子和伤害因子
+--- @param modifier table modifier 组件
+--- @param bullet table bullet 组件
+function U.modifier_inherit_bullet(modifier, bullet)
+    modifier.damage_hooks = bullet.damage_hooks
+    modifier.damage_factor = bullet.damage_factor
+end
+
 return U

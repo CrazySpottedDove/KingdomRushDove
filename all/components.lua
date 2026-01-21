@@ -953,6 +953,8 @@ modifier.removed_by_ban = nil
 modifier.damage_factor = 1
 modifier.ts = 0
 modifier.type = nil
+-- damage_hooks
+modifier.damage_hooks = {}
 
 local dps = E:register_c("dps")
 

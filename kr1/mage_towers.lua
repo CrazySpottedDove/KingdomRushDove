@@ -2917,9 +2917,7 @@ tt.modifier.duration = 1e+99
 --#endregion
 --#region mod_tower_arcane_wizard_ray_hit
 tt = RT("mod_tower_arcane_wizard_ray_hit", "modifier")
-
 AC(tt, "render", "dps")
-
 b = balance.towers.arcane_wizard
 tt.damage_min = b.basic_attack.damage_min
 tt.damage_max = b.basic_attack.damage_max
@@ -2940,12 +2938,8 @@ tt.damage_from_bullet = true
 --#endregion
 --#region tower_arcane_wizard5_ray
 tt = RT("tower_arcane_wizard5_ray", "bullet")
-
 local b = balance.towers.arcane_wizard
-
 tt.bullet.damage_type = DAMAGE_NONE
--- tt.bullet.damage_min_config = b.basic_attack.damage_min
--- tt.bullet.damage_max_config = b.basic_attack.damage_max
 tt.bullet.damage_min = b.basic_attack.damage_min[4]
 tt.bullet.damage_max = b.basic_attack.damage_max[4]
 tt.bullet.hit_time = fts(2)

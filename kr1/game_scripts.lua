@@ -5674,7 +5674,7 @@ function scripts.mod_ray_arcane.update(this, store)
 		d.pop = dps.pop
 		d.pop_chance = dps.pop_chance
 		d.pop_conds = dps.pop_conds
-
+        d.hooks = m.damage_hooks
 		queue_damage(store, d)
 
 		total_damage = total_damage + value
@@ -29950,7 +29950,7 @@ function scripts.ray5_simple.update(this, store)
 			local m = E:create_entity(mod_name)
 
 			m.modifier.target_id = b.target_id
-			m.modifier.damage_factor = b.damage_factor
+			U.modifier_inherit_bullet(m, b)
 
 			if m.damage_from_bullet then
 				if m.dps then
