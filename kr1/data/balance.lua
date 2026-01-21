@@ -11,19 +11,19 @@ local function fts(v)
 end
 
 local function patch_hp(t, mult)
-    for k, v in pairs(t) do
-        if k == "hp" then
-            if type(v) == "table" then
-                for i = 1, #v do
-                    v[i] = v[i] * mult
-                end
-            else
-                t[k] = v * mult
-            end
-        elseif type(v) == "table" then
-            patch_hp(v, mult)
-        end
-    end
+	for k, v in pairs(t) do
+		if k == "hp" then
+			if type(v) == "table" then
+				for i = 1, #v do
+					v[i] = v[i] * mult
+				end
+			else
+				t[k] = v * mult
+			end
+		elseif type(v) == "table" then
+			patch_hp(v, mult)
+		end
+	end
 end
 
 local heroes = {

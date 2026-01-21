@@ -2768,8 +2768,8 @@ end
 --- @param modifier table modifier 组件
 --- @param bullet table bullet 组件
 function U.modifier_inherit_bullet(modifier, bullet)
-    modifier.damage_hooks = bullet.damage_hooks
-    modifier.damage_factor = bullet.damage_factor
+	modifier.damage_hooks = bullet.damage_hooks
+	modifier.damage_factor = bullet.damage_factor
 end
 
 return U

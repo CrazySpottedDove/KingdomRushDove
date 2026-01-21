@@ -46847,7 +46847,7 @@ function scripts.enemy_lesser_sister_nightmare.update(this, store, script)
 
 		if not this.enemy.can_do_magic and not this.tween.reverse then
 			-- this.vis.flags = this.vis.flags_blocked
-            U.bans_remove(this.vis, F_RANGED)
+			U.bans_remove(this.vis, F_RANGED)
 			this.tween.ts = store.tick_ts
 			this.tween.reverse = true
 		end
@@ -46856,7 +46856,7 @@ function scripts.enemy_lesser_sister_nightmare.update(this, store, script)
 	end
 
 	-- this.vis.flags = this.vis.flags_unblocked
-    U.bans_add(this.vis, F_RANGED)
+	U.bans_add(this.vis, F_RANGED)
 
 	if this.render.sprites[1].name == "raise" then
 		if this.sound_events and this.sound_events.raise then
@@ -46877,7 +46877,7 @@ function scripts.enemy_lesser_sister_nightmare.update(this, store, script)
 	while true do
 		if not this.unit.is_stunned and this.enemy.can_do_magic and (bor(this.vis.bans, F_RANGED) == 0 or this.tween.reverse) then
 			-- this.vis.flags = this.vis.flags_unblocked
-            U.bans_add(this.vis, F_RANGED)
+			U.bans_add(this.vis, F_RANGED)
 			this.tween.ts = store.tick_ts
 			this.tween.reverse = false
 		end
@@ -46890,7 +46890,7 @@ function scripts.enemy_lesser_sister_nightmare.update(this, store, script)
 
 		if not this.enemy.can_do_magic and not this.tween.reverse then
 			-- this.vis.flags = this.vis.flags_blocked
-            U.bans_remove(this.vis, F_RANGED)
+			U.bans_remove(this.vis, F_RANGED)
 			this.tween.ts = store.tick_ts
 			this.tween.reverse = true
 		end
@@ -46898,7 +46898,7 @@ function scripts.enemy_lesser_sister_nightmare.update(this, store, script)
 		if this.unit.is_stunned then
 			if band(this.vis.bans, F_RANGED) ~= 0 then
 				-- this.vis.flags = this.vis.flags_blocked
-                U.bans_remove(this.vis, F_RANGED)
+				U.bans_remove(this.vis, F_RANGED)
 				this.tween.ts = store.tick_ts
 				this.tween.reverse = true
 			end
@@ -46915,7 +46915,7 @@ function scripts.enemy_lesser_sister_nightmare.update(this, store, script)
 				else
 					if not this.tween.reverse then
 						-- this.vis.flags = this.vis.flags_blocked
-                        U.bans_remove(this.vis, F_RANGED)
+						U.bans_remove(this.vis, F_RANGED)
 						this.tween.ts = store.tick_ts
 						this.tween.reverse = true
 					end
