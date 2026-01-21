@@ -9855,12 +9855,11 @@ tt.glare_kr5.on_end_glare = scripts.enemy_noxious_horror.on_end_glare
 tt.glare_kr5.magic_armor = b.glare.magic_armor
 tt.glare_kr5.aura_poison = "aura_enemy_noxious_horror_glare"
 tt.sound_events.death = "EnemyNoxiousHorrorDeath"
+
+-- 骇人刃爪
 tt = E:register_t("enemy_hardened_horror", "enemy_KR5")
-
 local b = balance.enemies.void_beyond.hardened_horror
-
 E:add_comps(tt, "melee", "glare_kr5")
-
 tt.info.enc_icon = 3
 tt.info.portrait = "kr5_info_portraits_enemies_0033"
 tt.enemy.gold = b.gold
@@ -9900,12 +9899,10 @@ tt.glare_kr5.roll_speed = b.glare.roll_speed
 tt.glare_kr5.roll_angles = {"roll_loop", "roll_up", "roll_down"}
 tt.sound_events.death = "EnemyHardenedHorrorDeath"
 tt.base_speed = b.speed
+
 tt = E:register_t("enemy_evolving_scourge", "enemy_KR5")
-
 local b = balance.enemies.void_beyond.evolving_scourge
-
 E:add_comps(tt, "melee", "tween", "glare_kr5")
-
 tt.info.enc_icon = 3
 tt.info.portrait = "kr5_info_portraits_enemies_0035"
 tt.enemy.gold = b.gold[1]

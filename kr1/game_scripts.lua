@@ -5674,7 +5674,7 @@ function scripts.mod_ray_arcane.update(this, store)
 		d.pop = dps.pop
 		d.pop_chance = dps.pop_chance
 		d.pop_conds = dps.pop_conds
-        d.hooks = m.damage_hooks
+		d.hooks = m.damage_hooks
 		queue_damage(store, d)
 
 		total_damage = total_damage + value
@@ -46311,7 +46311,7 @@ scripts.screen_focus_circle = {}
 
 function scripts.screen_focus_circle.insert(this, store, script)
 	local visible_coords = store.visible_coords
-    local G = love.graphics
+	local G = love.graphics
 	G.push()
 
 	local canvas = G.newCanvas(visible_coords.right - visible_coords.left, visible_coords.top - visible_coords.bottom)
@@ -46846,7 +46846,8 @@ function scripts.enemy_lesser_sister_nightmare.update(this, store, script)
 		end
 
 		if not this.enemy.can_do_magic and not this.tween.reverse then
-			this.vis.flags = this.vis.flags_blocked
+			-- this.vis.flags = this.vis.flags_blocked
+            U.bans_remove(this.vis, F_RANGED)
 			this.tween.ts = store.tick_ts
 			this.tween.reverse = true
 		end
@@ -46854,7 +46855,8 @@ function scripts.enemy_lesser_sister_nightmare.update(this, store, script)
 		return false
 	end
 
-	this.vis.flags = this.vis.flags_unblocked
+	-- this.vis.flags = this.vis.flags_unblocked
+    U.bans_add(this.vis, F_RANGED)
 
 	if this.render.sprites[1].name == "raise" then
 		if this.sound_events and this.sound_events.raise then
@@ -46873,8 +46875,9 @@ function scripts.enemy_lesser_sister_nightmare.update(this, store, script)
 	end
 
 	while true do
-		if not this.unit.is_stunned and this.enemy.can_do_magic and (this.vis.flags ~= this.vis.flags_unblocked or this.tween.reverse) then
-			this.vis.flags = this.vis.flags_unblocked
+		if not this.unit.is_stunned and this.enemy.can_do_magic and (bor(this.vis.bans, F_RANGED) == 0 or this.tween.reverse) then
+			-- this.vis.flags = this.vis.flags_unblocked
+            U.bans_add(this.vis, F_RANGED)
 			this.tween.ts = store.tick_ts
 			this.tween.reverse = false
 		end
@@ -46886,14 +46889,16 @@ function scripts.enemy_lesser_sister_nightmare.update(this, store, script)
 		end
 
 		if not this.enemy.can_do_magic and not this.tween.reverse then
-			this.vis.flags = this.vis.flags_blocked
+			-- this.vis.flags = this.vis.flags_blocked
+            U.bans_remove(this.vis, F_RANGED)
 			this.tween.ts = store.tick_ts
 			this.tween.reverse = true
 		end
 
 		if this.unit.is_stunned then
-			if this.vis.flags ~= this.vis.flags_blocked then
-				this.vis.flags = this.vis.flags_blocked
+			if band(this.vis.bans, F_RANGED) ~= 0 then
+				-- this.vis.flags = this.vis.flags_blocked
+                U.bans_remove(this.vis, F_RANGED)
 				this.tween.ts = store.tick_ts
 				this.tween.reverse = true
 			end
@@ -46909,7 +46914,8 @@ function scripts.enemy_lesser_sister_nightmare.update(this, store, script)
 				-- block empty
 				else
 					if not this.tween.reverse then
-						this.vis.flags = this.vis.flags_blocked
+						-- this.vis.flags = this.vis.flags_blocked
+                        U.bans_remove(this.vis, F_RANGED)
 						this.tween.ts = store.tick_ts
 						this.tween.reverse = true
 					end
@@ -48351,8 +48357,8 @@ function scripts.enemy_hardened_horror.update(this, store, script)
 					U.y_animation_play(this, "roll_out", nil, store.tick_ts)
 
 					this.render.sprites[1].angles.walk = this._old_angles_walk
-					this.motion.max_speed = this.base_speed
-					this.vis.bans = 0
+					U.update_max_speed(this, this.base_speed)
+					U.bans_remove(this.vis, F_BLOCK)
 				end
 
 				if not cont then
@@ -48367,11 +48373,9 @@ function scripts.enemy_hardened_horror.update(this, store, script)
 
 					this._old_angles_walk = this.render.sprites[1].angles.walk
 					this.render.sprites[1].angles.walk = this.glare_kr5.roll_angles
-					this.motion.max_speed = this.glare_kr5.roll_speed
-
+					U.update_max_speed(this, this.glare_kr5.roll_speed)
 					U.unblock_all(store, this)
-
-					this.vis.bans = bor(F_BLOCK)
+					U.bans_add(this.vis, F_BLOCK)
 				end
 
 				goto label_104_0
