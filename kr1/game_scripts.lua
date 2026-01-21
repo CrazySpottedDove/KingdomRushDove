@@ -43818,10 +43818,10 @@ function scripts.controller_stage_16_overseer.update(this, store)
 						queue_insert(store, change_tower_fx)
 						signal.emit("force-tower-swap", towers[tower_index], holders[tower_index])
 
-						towers[tower_index].tower.blocked = true
-						holders[tower_index].tower.blocked = true
-						towers[tower_index].ui.can_click = false
-						holders[tower_index].ui.can_click = false
+						-- towers[tower_index].tower.blocked = true
+						-- holders[tower_index].tower.blocked = true
+						-- towers[tower_index].ui.can_click = false
+						-- holders[tower_index].ui.can_click = false
 
 						U.y_wait(store, this.swap_delay + 1)
 
@@ -43849,10 +43849,10 @@ function scripts.controller_stage_16_overseer.update(this, store)
 						queue_insert(store, change_tower_fx)
 						signal.emit("force-tower-swap", towers[tower_index], towers[tower_index + 1])
 
-						towers[tower_index].tower.blocked = true
-						towers[tower_index + 1].tower.blocked = true
-						towers[tower_index].ui.can_click = false
-						towers[tower_index + 1].ui.can_click = false
+						-- towers[tower_index].tower.blocked = true
+						-- towers[tower_index + 1].tower.blocked = true
+						-- towers[tower_index].ui.can_click = false
+						-- towers[tower_index + 1].ui.can_click = false
 
 						U.y_wait(store, this.swap_delay + 1)
 

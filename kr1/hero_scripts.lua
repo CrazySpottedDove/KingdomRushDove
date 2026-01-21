@@ -29347,7 +29347,7 @@ function scripts.hero_vesper.update(this, store)
 					SU.hide_auras(store, this, true)
 					U.animation_start(this, this.dodge.animation_dissapear, nil, store.tick_ts, false)
 					U.y_animation_wait(this)
-					U.y_wait(store, fts(3))
+					U.y_wait(store, fts(1))
 
 					this.pos.x, this.pos.y = new_pos.x, new_pos.y
 					this.nav_rally.center = V.vclone(this.pos)
