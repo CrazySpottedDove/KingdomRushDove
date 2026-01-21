@@ -46290,8 +46290,8 @@ function scripts.enemy_rhino.update(this, store, script)
 
 						ps_a.particle_system.emit = false
 						ps_b.particle_system.emit = false
-						this.motion.max_speed = this.base_speed
-						this.vis.bans = U.flag_clear(this.vis.bans, F_BLOCK)
+						U.update_max_speed(this, this.base_speed)
+						U.bans_remove(this.vis, F_BLOCK)
 					end
 				end
 			end
@@ -46311,7 +46311,7 @@ scripts.screen_focus_circle = {}
 
 function scripts.screen_focus_circle.insert(this, store, script)
 	local visible_coords = store.visible_coords
-
+    local G = love.graphics
 	G.push()
 
 	local canvas = G.newCanvas(visible_coords.right - visible_coords.left, visible_coords.top - visible_coords.bottom)
