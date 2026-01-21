@@ -12487,9 +12487,7 @@ tt.modifier.duration = fts(17)
 --#endregion
 --#region hero_raelyn_unbreakable_mod
 tt = RT("hero_raelyn_unbreakable_mod", "modifier")
-
 AC(tt, "render", "health_bar", "health")
-
 tt.modifier.vis_flags = bor(F_MOD)
 tt.modifier.duration = nil
 tt.modifier.use_mod_offset = false

@@ -10,6 +10,22 @@ local function fts(v)
 	return v / FPS
 end
 
+local function patch_hp(t, mult)
+    for k, v in pairs(t) do
+        if k == "hp" then
+            if type(v) == "table" then
+                for i = 1, #v do
+                    v[i] = v[i] * mult
+                end
+            else
+                t[k] = v * mult
+            end
+        elseif type(v) == "table" then
+            patch_hp(v, mult)
+        end
+    end
+end
+
 local heroes = {
 	common = {
 		melee_attack_range = 72,
@@ -5244,19 +5260,7 @@ local enemies = {
 	}
 }
 
-for group_name, group in pairs(enemies) do
-    for enemy_name, enemy in pairs(group) do
-        if enemy.hp then
-            if type(enemy.hp) == "table" then
-                for i, hp in ipairs(enemy.hp) do
-                    enemy.hp[i] = hp * 0.8
-                end
-            else
-                enemy.hp = enemy.hp * 0.8
-            end
-        end
-    end
-end
+patch_hp(enemies, 0.8)
 
 local towers = {
 	arcane_wizard = {
