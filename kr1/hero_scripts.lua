@@ -29118,11 +29118,11 @@ function scripts.hero_vesper.level_up(this, store, initial)
 	this.melee.attacks[2].damage_min = ls.melee_damage_min[hl]
 	this.melee.attacks[2].damage_max = ls.melee_damage_max[hl]
 
-	local bt = E:get_template(this.ranged.attacks[1].bullet)
+	local bt = E:get_template(this.ranged.attacks[2].bullet)
 	bt.bullet.damage_min = ls.ranged_short_damage_min[hl]
 	bt.bullet.damage_max = ls.ranged_short_damage_max[hl]
 
-	local bt = E:get_template(this.ranged.attacks[2].bullet)
+	local bt = E:get_template(this.ranged.attacks[1].bullet)
 	bt.bullet.damage_min = ls.ranged_long_damage_min[hl]
 	bt.bullet.damage_max = ls.ranged_long_damage_max[hl]
 
