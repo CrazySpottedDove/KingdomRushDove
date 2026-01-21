@@ -18127,7 +18127,8 @@ function scripts.hero_hunter.update(this, store)
 				local tw = this.flywalk
 				local force_flywalk = false
 
-				quit_shooting_state()
+				-- quit_shooting_state()
+                shooting_state = false
 
 				for _, p in pairs(this.nav_grid.waypoints) do
 					if GR:cell_is(p.x, p.y, bor(TERRAIN_WATER, TERRAIN_SHALLOW, TERRAIN_NOWALK)) then
@@ -29197,7 +29198,7 @@ end
 function scripts.hero_vesper.can_dodge(store, this, ranged_attack, attack, enemy)
 	local skill = this.hero.skills.disengage
 
-	if enemy and enemy.health and not enemy.health.dead and not this.dodge.disabled and this.health.hp / this.health.hp_max < this.dodge.hp_to_trigger then
+	if enemy and enemy.health and not enemy.health.dead and not this.dodge.disabled then
 		local enp = enemy.nav_path
 		local new_ni = enp.ni
 		local node_limit = math.floor(skill.min_distance_from_end / P.average_node_dist)
