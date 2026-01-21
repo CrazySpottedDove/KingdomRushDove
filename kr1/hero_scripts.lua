@@ -29192,9 +29192,9 @@ function scripts.hero_vesper.level_up(this, store, initial)
 end
 
 function scripts.hero_vesper.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
+	this.hero.fn_level_up(this, store)
 
-	this.melee.order = U.attack_order(this.melee.attacks)
+    this.melee.order = {3, 2, 1}
 	this.ranged.order = U.attack_order(this.ranged.attacks)
 
 	return true
