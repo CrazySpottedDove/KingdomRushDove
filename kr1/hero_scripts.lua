@@ -29194,7 +29194,7 @@ end
 function scripts.hero_vesper.insert(this, store)
 	this.hero.fn_level_up(this, store)
 
-    this.melee.order = {3, 2, 1}
+	this.melee.order = {3, 2, 1}
 	this.ranged.order = U.attack_order(this.ranged.attacks)
 
 	return true
@@ -29363,6 +29363,10 @@ function scripts.hero_vesper.update(this, store)
 					SU.show_auras(store, this, true)
 
 					local targets = U.find_enemies_in_range(store.entities, enemy_pos, 0, 100, this.vis.flags, bans)
+
+					if not targets then
+						targets = U.find_enemies_in_range(store.entities, this.pos, 0, this.ranged.attacks[1].max_range, this.vis.flags, bans)
+					end
 
 					if targets then
 						for i = 1, this.dodge.total_shoots do
