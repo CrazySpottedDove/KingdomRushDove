@@ -246,9 +246,7 @@ tt.tween.reverse = false
 --#endregion
 --#region hero_alleria
 tt = RT("hero_alleria", "hero")
-
 AC(tt, "melee", "ranged", "timed_attacks")
-
 anchor_y = 0.14
 anchor_x = 0.5
 image_y = 76

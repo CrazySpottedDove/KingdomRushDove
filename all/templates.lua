@@ -1371,7 +1371,6 @@ tt.target = nil
 tt.done = nil
 
 tt = E:register_t("arrow5", "arrow")
-
 tt = E:register_t("arrow5_45degrees", "arrow5")
 tt.main_script.insert = scripts.arrow5_45degrees.insert
 

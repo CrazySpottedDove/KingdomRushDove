@@ -741,12 +741,12 @@ local heroes = {
 			damage_min = {8, 9, 10, 12, 13, 14, 16, 17, 19, 20}
 		},
 		basic_ranged_long = {
-			max_range = 200,
+			max_range = 205,
 			xp_gain_factor = 2,
 			cooldown = 2,
 			min_range = 150,
-			damage_max = {18, 22, 25, 29, 31, 34, 37, 40, 44, 47},
-			damage_min = {13, 14, 17, 18, 21, 23, 25, 27, 28, 32}
+			damage_max = {28, 30, 37, 39, 46, 48, 55, 57, 63, 66},
+			damage_min = {17, 19, 22, 26, 28, 30, 35, 37, 41, 44}
 		},
 		arrow_to_the_knee = {
 			max_range = 225,
@@ -759,7 +759,7 @@ local heroes = {
 			xp_gain = {112, 196, 240}
 		},
 		ricochet = {
-			max_range = 180,
+			max_range = 205,
 			min_range = 70,
 			min_targets = 3,
 			max_range_trigger = 200,

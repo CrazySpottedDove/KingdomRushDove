@@ -18128,7 +18128,7 @@ function scripts.hero_hunter.update(this, store)
 				local force_flywalk = false
 
 				-- quit_shooting_state()
-                shooting_state = false
+				shooting_state = false
 
 				for _, p in pairs(this.nav_grid.waypoints) do
 					if GR:cell_is(p.x, p.y, bor(TERRAIN_WATER, TERRAIN_SHALLOW, TERRAIN_NOWALK)) then
@@ -21412,6 +21412,11 @@ function scripts.hero_venom.level_up(this, store, initial)
 		a.regen = s.regen[s.level] * this.health.hp_max
 		a.damage = s.damage[s.level]
 	end)
+	local s = this.hero.skills.eat_enemy
+	if s.level > 0 then
+		this.timed_attacks.list[4].regen = s.regen[s.level] * this.health.hp_max
+	end
+
 	upgrade_skill(this, "ultimate", function(this, s)
 		local uc = E:get_template(s.controller_name)
 
