@@ -5243,6 +5243,21 @@ local enemies = {
 		}
 	}
 }
+
+for group_name, group in pairs(enemies) do
+    for enemy_name, enemy in pairs(group) do
+        if enemy.hp then
+            if type(enemy.hp) == "table" then
+                for i, hp in ipairs(enemy.hp) do
+                    enemy.hp[i] = hp * 0.8
+                end
+            else
+                enemy.hp = enemy.hp * 0.8
+            end
+        end
+    end
+end
+
 local towers = {
 	arcane_wizard = {
 		shared_min_cooldown = 2,
