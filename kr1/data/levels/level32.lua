@@ -7,7 +7,7 @@ local V=require("lib.klua.vector")
 require("all.constants")
 local level={}
 level.required_sounds={"music_stage32","BossEfreeti"}
-level.required_textures={"go_enemies_desert","go_enemies_desert_b","go_stages_desert","go_stage32","go_stage32_bg"}
+level.required_textures={"go_enemies_desert","go_stages_desert","go_stage32","go_stage32_bg"}
 function level:init(store)
 store.level_terrain_type=TERRAIN_STYLE_DESERT
 if store.level_mode==GAME_MODE_CAMPAIGN then

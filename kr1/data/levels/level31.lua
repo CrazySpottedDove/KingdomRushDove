@@ -14,7 +14,7 @@ end
 local v=V.v
 local level={}
 level.required_sounds={"music_stage31","PiratesSounds","SpecialCutTreeSounds"}
-level.required_textures={"go_enemies_desert","go_enemies_desert_b","go_stages_desert","go_stage31","go_stage31_bg"}
+level.required_textures={"go_enemies_desert","go_stages_desert","go_stage31","go_stage31_bg"}
 function level:init(store)
 if store.level_mode==GAME_MODE_CAMPAIGN then
 self.locked_hero=false

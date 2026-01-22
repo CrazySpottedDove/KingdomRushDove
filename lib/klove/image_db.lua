@@ -21,10 +21,11 @@ local function table_to_map(t)
 	return m
 end
 
+-- TODO: 现在不同的 go_...lua 文件中有交叉的纹理，会导致持久化的纹理被其它图集引用计数影响而被卸载，需正规化图集整理，重新打包 go_towers，现在暂时使用不持久化 go_towers 解决问题
 local persistent_textures = table_to_map({
 	"go_decals",
 	"go_enemies_common",
-	"go_towers",
+	-- "go_towers",
 	"go_towers_pandas",
 	"go_towers_dark_elf",
 	"go_towers_tricannon",

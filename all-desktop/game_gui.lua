@@ -2051,7 +2051,7 @@ function game_gui:set_boss(e)
 	local boss_health_bar = self.boss_health_bar
 	if not boss_health_bar:enabled() then
 		boss_health_bar:set_entity(e)
-        boss_health_bar:enable()
+		boss_health_bar:enable()
 	end
 end
 
