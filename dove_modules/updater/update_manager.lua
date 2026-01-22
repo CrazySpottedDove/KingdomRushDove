@@ -102,27 +102,31 @@ local function delete_file(file_path)
 end
 
 -- 网络与JSON
-local https = require("https")
-local json = require("lib.json")
-local candidate_sites = {"https://krdovedownload6.crazyspotteddove.top:52000/", "https://krdovedonwload4.crazyspotteddove.top/"}
 local server_address = nil
+local https
+local json = require("lib.json")
 
-for _, site in ipairs(candidate_sites) do
-	local code, response = https.request(site)
-	if code == 200 then
-		server_address = site
-		print("Selected update server:", server_address)
-		break
-	else
-		print("Update server not reachable:", site)
-		print("Response code:", code)
-		print("Response body:", response)
+if apply_upgrade then
+	https = require("https")
+	local candidate_sites = {"https://krdovedownload6.crazyspotteddove.top:52000/", "https://krdovedonwload4.crazyspotteddove.top/"}
+
+	for _, site in ipairs(candidate_sites) do
+		local code, response = https.request(site)
+		if code == 200 then
+			server_address = site
+			print("Selected update server:", server_address)
+			break
+		else
+			print("Update server not reachable:", site)
+			print("Response code:", code)
+			print("Response body:", response)
+		end
 	end
-end
 
-if not server_address then
-	print("No available update server found. Disabling updates.")
-	apply_upgrade = false
+	if not server_address then
+		print("No available update server found. Disabling updates.")
+		apply_upgrade = false
+	end
 end
 
 local update_response = nil

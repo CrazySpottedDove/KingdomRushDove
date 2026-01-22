@@ -1017,6 +1017,22 @@ return {
 				thickness = 1 * rs,
 				glow_color = fc(0, 69, 100, 255)
 			}, {}}
+		},
+		hero_muyrn = {
+			shader_args = {{
+				margin = 0 * rs,
+				p1 = p11,
+				p2 = p12,
+				c1 = fc(0, 0, 0, 255),
+				c2 = fc(238, 255, 93, 255),
+				c3 = fc(145, 215, 0, 255)
+			}, {
+				thickness = 2.5 * rs,
+				outline_color = fc(37, 93, 0, 255)
+			}, {
+				thickness = 1 * rs,
+				glow_color = fc(37, 93, 0, 255)
+			}, {}}
 		}
 	},
 	hero_data = { -- 爵士
@@ -1495,30 +1511,19 @@ return {
 			icon = 19,
 			stats = {5, 5, 0, 6}
 		},
-		--
-		-- 			五代
-		-- 		--
-		-- 安雅
+		-- 	五代
+		-- 维斯帕
 		{
 			from_kr = 5,
-			portrait = 6,
-			thumb = 6,
-			name = "hero_hunter",
-			available_level = 107,
+			portrait = 1,
+			thumb = 1,
+			name = "hero_vesper",
+			available_level = 101,
 			starting_level = 1,
-			icon = 6,
-			stats = {6, 5, 6, 7}
-		}, -- 虚空法师
-		{
-			from_kr = 5,
-			portrait = 7,
-			thumb = 7,
-			name = "hero_space_elf",
-			available_level = 111,
-			starting_level = 1,
-			icon = 7,
-			stats = {4, 4, 6, 8}
-		}, -- 黑暗中尉
+			icon = 1,
+			stats = {5, 5, 4, 5}
+		},
+		-- 黑暗中尉
 		{
 			from_kr = 5,
 			portrait = 2,
@@ -1529,16 +1534,29 @@ return {
 			icon = 2,
 			stats = {7, 6, 0, 3}
 		},
+		-- 尼鲁
 		{
 			from_kr = 5,
-			portrait = 1,
-			thumb = 1,
-			name = "hero_vesper",
-			available_level = 101,
+			portrait = 3,
+			thumb = 3,
+			name = "hero_muyrn",
+			available_level = 103,
 			starting_level = 1,
-			icon = 1,
-			stats = {5, 5, 4, 5}
-		}, -- 毒液
+			icon = 3,
+			stats = {6, 5, 5, 6}
+		},
+		-- 安雅
+		{
+			from_kr = 5,
+			portrait = 6,
+			thumb = 6,
+			name = "hero_hunter",
+			available_level = 107,
+			starting_level = 1,
+			icon = 6,
+			stats = {6, 5, 6, 7}
+		},
+		-- 毒液
 		{
 			from_kr = 5,
 			portrait = 4,
@@ -1548,37 +1566,19 @@ return {
 			starting_level = 1,
 			icon = 4,
 			stats = {5, 5, 5, 6}
-		}, -- 晶龙
+		},
+		-- 虚空法师
 		{
 			from_kr = 5,
-			portrait = 12,
-			thumb = 12,
-			name = "hero_dragon_gem",
-			available_level = 115,
+			portrait = 7,
+			thumb = 7,
+			name = "hero_space_elf",
+			available_level = 111,
 			starting_level = 1,
-			icon = 12,
-			stats = {7, 6, 5, 5}
-		}, -- 小女巫
-		{
-			from_kr = 5,
-			portrait = 13,
-			thumb = 13,
-			name = "hero_witch",
-			available_level = 116,
-			starting_level = 1,
-			icon = 13,
-			stats = {5, 4, 5, 7}
-		}, -- 骨龙
-		{
-			from_kr = 5,
-			portrait = 14,
-			thumb = 14,
-			name = "hero_dragon_bone",
-			available_level = 116,
-			starting_level = 1,
-			icon = 14,
-			stats = {6, 0, 5, 5}
-		}, -- 圣龙
+			icon = 7,
+			stats = {4, 4, 6, 8}
+		},
+		-- 圣龙
 		{
 			from_kr = 5,
 			portrait = 11,
@@ -1588,7 +1588,41 @@ return {
 			starting_level = 1,
 			icon = 11,
 			stats = {7, 0, 5, 5}
-		}, -- 悟空
+		},
+		-- 晶龙
+		{
+			from_kr = 5,
+			portrait = 12,
+			thumb = 12,
+			name = "hero_dragon_gem",
+			available_level = 115,
+			starting_level = 1,
+			icon = 12,
+			stats = {7, 6, 5, 5}
+		},
+		-- 小女巫
+		{
+			from_kr = 5,
+			portrait = 13,
+			thumb = 13,
+			name = "hero_witch",
+			available_level = 116,
+			starting_level = 1,
+			icon = 13,
+			stats = {5, 4, 5, 7}
+		},
+		-- 骨龙
+		{
+			from_kr = 5,
+			portrait = 14,
+			thumb = 14,
+			name = "hero_dragon_bone",
+			available_level = 116,
+			starting_level = 1,
+			icon = 14,
+			stats = {6, 0, 5, 5}
+		},
+		-- 悟空
 		{
 			from_kr = 5,
 			portrait = 18,

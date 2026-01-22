@@ -17317,3 +17317,52 @@ tt.render.sprites[1].loop = false
 tt.sound_events.insert = "TowerArcaneWizardBasicAttack"
 tt.track_target = true
 tt.ray_duration = fts(26)
+
+tt = E:register_t("hero_muyrn_treewalk_trail")
+E:add_comps(tt, "pos", "particle_system")
+tt.particle_system.animated = true
+tt.particle_system.animation_fps = 15
+tt.particle_system.name = "hero_nyru_walk2_roots_particle"
+tt.particle_system.loop = false
+tt.particle_system.emit_duration = nil
+tt.particle_system.emission_rate = 10
+tt.particle_system.source_lifetime = nil
+tt.particle_system.z = Z_OBJECTS
+tt.particle_system.emit_area_spread = v(0, 5)
+
+tt = E:register_t("ps_hero_muyrn_verdant_blast_bolt_trail")
+E:add_comps(tt, "pos", "particle_system")
+tt.particle_system.name = "hero_nyru_verdant_blast_particle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.emission_rate = 60
+tt.particle_system.emit_rotation_spread = math.pi * 2
+
+tt = E:register_t("fx_hero_muyrn_faery_dust", "fx")
+tt.render.sprites[1].name = "hero_nyru_fairy_dust_FX"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].hide_after_runs = 1
+tt = E:register_t("fx_hero_muyrn_sentinel_wisps_attack", "fx")
+tt.render.sprites[1].name = "hero_nyru_sentinel_wisps_attack_attack"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].hide_after_runs = 1
+tt = E:register_t("hero_muyrn_sentinel_wisps_hit_fx", "fx")
+tt.render.sprites[1].name = "hero_nyru_sentinel_wisps_hit"
+
+tt = E:register_t("decal_hero_muyrn_root_defender_root_1", "decal_scripted")
+tt.render.sprites[1].prefix = "hero_nyru_root_defender_root1"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].name = "start"
+tt.render.sprites[1].hidden = true
+tt.main_script.update = scripts.hero_muyrn_root_defender_root_decal.update
+tt.vis_flags = bor(F_RANGED)
+tt.vis_bans = bor(F_FRIEND)
+tt = E:register_t("decal_hero_muyrn_root_defender_root_2", "decal_hero_muyrn_root_defender_root_1")
+tt.render.sprites[1].prefix = "hero_nyru_root_defender_root2"
+tt = E:register_t("decal_hero_muyrn_root_defender_root_3", "decal_hero_muyrn_root_defender_root_1")
+tt.render.sprites[1].prefix = "hero_nyru_root_defender_root3"
+tt = E:register_t("decal_hero_muyrn_verdant_blast_hit", "decal")
+tt.render.sprites[1].name = "hero_nyru_verdant_blast_explosion_decal"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].hide_after_runs = 1

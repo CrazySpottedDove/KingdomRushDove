@@ -11472,9 +11472,7 @@ tt.distance_to_revive = b.ultimate.distance_to_revive
 --#region hero_hunter
 tt = RT("hero_hunter", "hero")
 b = balance.heroes.hero_hunter
-
 AC(tt, "melee", "ranged", "timed_attacks")
-
 tt.hero.level_stats.armor = b.armor
 tt.hero.level_stats.hp_max = b.hp_max
 tt.hero.level_stats.melee_damage_min = b.basic_melee.damage_min
@@ -15643,7 +15641,6 @@ tt.hero.level_stats.melee_damage_max[3] = b.melee_attacks.simple.damage_max
 tt.hero.level_stats.melee_damage_min[3] = b.melee_attacks.simple.damage_min
 tt.hero.level_stats.melee_damage_max[4] = b.melee_attacks.fast_hits.damage_max
 tt.hero.level_stats.melee_damage_min[4] = b.melee_attacks.fast_hits.damage_min
-tt.hero.level_stats.regen_health = b.regen_health
 tt.hero.skills.hair_clones = E:clone_c("hero_skill")
 tt.hero.skills.hair_clones.cooldown = b.hair_clones.cooldown
 tt.hero.skills.hair_clones.duration = b.hair_clones.soldier.duration
@@ -16014,7 +16011,6 @@ tt.hero.level_stats.ranged_short_damage_max = b.basic_ranged_short.damage_max
 tt.hero.level_stats.ranged_short_damage_min = b.basic_ranged_short.damage_min
 tt.hero.level_stats.ranged_long_damage_max = b.basic_ranged_long.damage_max
 tt.hero.level_stats.ranged_long_damage_min = b.basic_ranged_long.damage_min
-tt.hero.level_stats.regen_health = b.regen_health
 tt.hero.skills.arrow_to_the_knee = E:clone_c("hero_skill")
 tt.hero.skills.arrow_to_the_knee.cooldown = b.arrow_to_the_knee.cooldown
 tt.hero.skills.arrow_to_the_knee.damage_min = b.arrow_to_the_knee.damage_min
@@ -16346,3 +16342,448 @@ tt.render.sprites[1].name = "hero_vesper_martial_flourish_hit"
 tt.render.sprites[1].draw_order = 10
 tt.render.sprites[1].loop = false
 tt.main_script.update = scripts.mod_track_target.update
+
+tt = E:register_t("hero_muyrn", "hero")
+b = balance.heroes.hero_muyrn
+E:add_comps(tt, "melee", "ranged", "timed_attacks")
+tt.hero.level_stats.armor = b.armor
+tt.hero.level_stats.hp_max = b.hp_max
+tt.hero.level_stats.melee_damage_max = b.basic_melee.damage_max
+tt.hero.level_stats.melee_damage_min = b.basic_melee.damage_min
+tt.hero.level_stats.ranged_damage_max = b.basic_ranged.damage_max
+tt.hero.level_stats.ranged_damage_min = b.basic_ranged.damage_min
+tt.hero.skills.sentinel_wisps = E:clone_c("hero_skill")
+tt.hero.skills.sentinel_wisps.cooldown = b.sentinel_wisps.cooldown
+tt.hero.skills.sentinel_wisps.max_summons = b.sentinel_wisps.max_summons
+tt.hero.skills.sentinel_wisps.wisp_damage_max = b.sentinel_wisps.wisp.damage_max
+tt.hero.skills.sentinel_wisps.wisp_damage_min = b.sentinel_wisps.wisp.damage_min
+tt.hero.skills.sentinel_wisps.wisp_duration = b.sentinel_wisps.wisp.duration
+tt.hero.skills.sentinel_wisps.xp_gain = b.sentinel_wisps.xp_gain
+tt.hero.skills.sentinel_wisps.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.verdant_blast = E:clone_c("hero_skill")
+tt.hero.skills.verdant_blast.cooldown = b.verdant_blast.cooldown
+tt.hero.skills.verdant_blast.damage_max = b.verdant_blast.damage_max
+tt.hero.skills.verdant_blast.damage_min = b.verdant_blast.damage_min
+tt.hero.skills.verdant_blast.xp_gain = b.verdant_blast.xp_gain
+tt.hero.skills.verdant_blast.xp_level_steps = {
+	[3] = 1,
+	[6] = 2,
+	[9] = 3
+}
+tt.hero.skills.leaf_whirlwind = E:clone_c("hero_skill")
+tt.hero.skills.leaf_whirlwind.cooldown = b.leaf_whirlwind.cooldown
+tt.hero.skills.leaf_whirlwind.duration = b.leaf_whirlwind.duration
+tt.hero.skills.leaf_whirlwind.damage_max = b.leaf_whirlwind.damage_max
+tt.hero.skills.leaf_whirlwind.damage_min = b.leaf_whirlwind.damage_min
+tt.hero.skills.leaf_whirlwind.heal_min = b.leaf_whirlwind.heal_min
+tt.hero.skills.leaf_whirlwind.heal_max = b.leaf_whirlwind.heal_max
+tt.hero.skills.leaf_whirlwind.xp_gain = b.leaf_whirlwind.xp_gain
+tt.hero.skills.leaf_whirlwind.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3
+}
+tt.hero.skills.faery_dust = E:clone_c("hero_skill")
+tt.hero.skills.faery_dust.cooldown = b.faery_dust.cooldown
+tt.hero.skills.faery_dust.damage_factor = b.faery_dust.damage_factor
+tt.hero.skills.faery_dust.duration = b.faery_dust.duration
+tt.hero.skills.faery_dust.xp_gain = b.faery_dust.xp_gain
+tt.hero.skills.faery_dust.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.ultimate = E:clone_c("hero_skill")
+tt.hero.skills.ultimate.controller_name = "hero_muyrn_ultimate"
+tt.hero.skills.ultimate.slow_factor = b.ultimate.slow_factor
+tt.hero.skills.ultimate.damage_min = b.ultimate.damage_min
+tt.hero.skills.ultimate.damage_max = b.ultimate.damage_max
+tt.hero.skills.ultimate.cooldown = b.ultimate.cooldown
+tt.hero.skills.ultimate.entity = b.ultimate.entity
+tt.hero.skills.ultimate.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
+}
+tt.hero.skills.ultimate.xp_gain_factor = 32
+tt.hero.team = TEAM_LINIREA
+tt.health.dead_lifetime = b.dead_lifetime
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.hero.fn_level_up = scripts.hero_muyrn.level_up
+tt.info.fn = scripts.hero_basic.get_info
+tt.info.hero_portrait = "kr5_hero_portraits_0003"
+tt.info.i18n_key = "HERO_MUYRN"
+tt.info.portrait = "kr5_info_portraits_heroes_0003"
+tt.info.ultimate_icon = "0003"
+tt.info.stat_hp = b.stats.hp
+tt.info.stat_armor = b.stats.armor
+tt.info.stat_damage = b.stats.damage
+tt.info.stat_cooldown = b.stats.cooldown
+tt.info.damage_icon = "magic"
+tt.main_script.insert = scripts.hero_muyrn.insert
+tt.main_script.update = scripts.hero_muyrn.update
+tt.motion.max_speed = b.speed
+tt.regen.cooldown = b.regen_cooldown
+tt.sound_events.change_rally_point = "HeroNyruTaunt"
+tt.sound_events.death = "HeroNyruDeath"
+tt.sound_events.respawn = "HeroNyruTauntIntro"
+tt.sound_events.hero_room_select = "HeroNyruTauntSelect"
+tt.soldier.melee_slot_offset = v(10, 0)
+tt.health_bar.offset = v(0, 38)
+tt.unit.hit_offset = v(0, 16)
+tt.unit.mod_offset = v(0, 22)
+tt.ui.click_rect = r(-25, -3, 50, 43)
+tt.treewalk = {}
+tt.treewalk.min_distance = b.distance_to_treewalk
+tt.treewalk.extra_speed = b.treewalk_speed
+tt.treewalk.animations = {"treewalk", "treewalk_end"}
+tt.treewalk.trail = "hero_muyrn_treewalk_trail"
+tt.treewalk.sound = "HeroNyruTreewalk"
+tt.render.sprites[1].prefix = "hero_nyru_muyrn"
+tt.render.sprites[1].angles.ranged = {"shoot", "shootUp", "shoot"}
+tt.render.sprites[1].angles_custom = {
+	ranged = {45, 135, 210, 315}
+}
+tt.render.sprites[1].angles_flip_vertical = {
+	ranged = true
+}
+tt.render.sprites[1].scale = v(1.15, 1.15)
+tt.render.sprites[1].draw_order = DO_HEROES
+tt.melee.range = balance.heroes.common.melee_attack_range
+tt.melee.attacks[1] = E:clone_c("melee_attack")
+tt.melee.attacks[1].cooldown = b.basic_melee.cooldown
+tt.melee.attacks[1].hit_time = fts(9)
+tt.melee.attacks[1].hit_fx = "hero_muyrn_melee_attack_hit_fx"
+tt.melee.attacks[1].hit_offset = v(24, 0)
+tt.melee.attacks[1].sound = "HeroNyruBasicAttackMelee"
+tt.melee.attacks[1].xp_gain_factor = b.basic_melee.xp_gain_factor
+tt.melee.attacks[1].basic_attack = true
+tt.melee.attacks[1].animation = "melee_attack"
+tt.ranged.attacks[1] = E:clone_c("bullet_attack")
+tt.ranged.attacks[1].max_range = b.basic_ranged.max_range
+tt.ranged.attacks[1].min_range = b.basic_ranged.min_range
+tt.ranged.attacks[1].cooldown = b.basic_ranged.cooldown
+tt.ranged.attacks[1].bullet = "hero_muyrn_bullet"
+tt.ranged.attacks[1].bullet_start_offset = {v(12, 32)}
+tt.ranged.attacks[1].shoot_time = fts(7)
+tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
+tt.ranged.attacks[1].animation = "ranged_attack"
+tt.ranged.attacks[1].sound = "HeroNyruBasicAttackRanged"
+tt.ranged.attacks[1].basic_attack = true
+tt.timed_attacks.list[1] = E:clone_c("custom_attack")
+tt.timed_attacks.list[1].animation = "sentinel_wisps"
+tt.timed_attacks.list[1].cooldown = nil
+tt.timed_attacks.list[1].max_summons = nil
+tt.timed_attacks.list[1].max_range_trigger = b.sentinel_wisps.max_range_trigger
+tt.timed_attacks.list[1].min_targets = b.sentinel_wisps.min_targets
+tt.timed_attacks.list[1].disabled = true
+tt.timed_attacks.list[1].cast_time = fts(6)
+tt.timed_attacks.list[1].xp_from_skill = "sentinel_wisps"
+tt.timed_attacks.list[1].sound = "HeroNyruSentinelWispsCast"
+tt.timed_attacks.list[1].entity = "hero_muyrn_sentinel_wisps_entity"
+tt.timed_attacks.list[2] = E:clone_c("custom_attack")
+tt.timed_attacks.list[2].cooldown = nil
+tt.timed_attacks.list[2].max_range_trigger = b.leaf_whirlwind.max_range_trigger
+tt.timed_attacks.list[2].min_targets = b.leaf_whirlwind.min_targets
+tt.timed_attacks.list[2].disabled = true
+tt.timed_attacks.list[2].cast_time = fts(5)
+tt.timed_attacks.list[2].xp_from_skill = "leaf_whirlwind"
+tt.timed_attacks.list[2].sound = "HeroNyruLeafWhirlwindCast"
+tt.timed_attacks.list[2].aura = "hero_muyrn_leaf_whirlwind_aura"
+tt.timed_attacks.list[2].aura_decal = "hero_muyrn_leaf_whirlwind_decal"
+tt.timed_attacks.list[2].mod = "hero_muyrn_leaf_whirlwind_heal_mod"
+tt.timed_attacks.list[2].vis_flags = F_RANGED
+tt.timed_attacks.list[2].vis_bans = bor(F_FLYING)
+tt.timed_attacks.list[3] = E:clone_c("aura_attack")
+tt.timed_attacks.list[3].animation = "fairy_dust"
+tt.timed_attacks.list[3].cooldown = nil
+tt.timed_attacks.list[3].max_range_trigger = b.faery_dust.max_range_trigger
+tt.timed_attacks.list[3].max_range_effect = b.faery_dust.max_range_effect
+tt.timed_attacks.list[3].min_targets = b.faery_dust.min_targets
+tt.timed_attacks.list[3].disabled = true
+tt.timed_attacks.list[3].cast_time = fts(10)
+tt.timed_attacks.list[3].xp_from_skill = "faery_dust"
+tt.timed_attacks.list[3].sound = "HeroNyruFairyDustCast"
+tt.timed_attacks.list[3].aura = "aura_hero_muyrn_faery_dust"
+tt.timed_attacks.list[3].vis_flags = F_RANGED
+tt.timed_attacks.list[3].vis_bans = bor(F_FLYING)
+tt.timed_attacks.list[3].node_prediction = fts(10)
+tt.timed_attacks.list[4] = E:clone_c("bullet_attack")
+tt.timed_attacks.list[4].disabled = true
+tt.timed_attacks.list[4].max_range = b.verdant_blast.max_range
+tt.timed_attacks.list[4].min_range = b.verdant_blast.min_range
+tt.timed_attacks.list[4].cooldown = nil
+tt.timed_attacks.list[4].bullet = "bullet_hero_muyrn_verdant_blast"
+tt.timed_attacks.list[4].bullet_start_offset = v(-7, 50)
+tt.timed_attacks.list[4].vis_bans = bor(F_NIGHTMARE)
+tt.timed_attacks.list[4].vis_flags = F_RANGED
+tt.timed_attacks.list[4].animation = "verdant_blast"
+tt.timed_attacks.list[4].shoot_time = fts(43)
+tt.timed_attacks.list[4].node_prediction = fts(43)
+tt.timed_attacks.list[4].reset_to_target_pos = true
+tt.timed_attacks.list[4].sound = "HeroNyruVerdantBlastCast"
+tt.ultimate = {
+	ts = 0,
+	cooldown = b.ultimate.cooldown[1]
+}
+
+tt = E:register_t("hero_muyrn_bullet", "bullet")
+E:add_comps(tt, "force_motion")
+tt.render.sprites[1].name = "hero_nyru_ranged_attack_projectile"
+tt.render.sprites[1].animated = false
+tt.bullet.damage_min = nil
+tt.bullet.damage_max = nil
+tt.bullet.hit_fx = "hero_muyrn_bolt_hit_fx"
+tt.bullet.particles_name = "hero_muyrn_bullet_trail"
+tt.bullet.miss_decal = nil
+tt.bullet.vis_flags = F_RANGED
+tt.bullet.vis_bans = 0
+tt.bullet.xp_gain_factor = b.basic_ranged.xp_gain_factor
+tt.bullet.damage_type = b.basic_ranged.damage_type
+tt.bullet.max_speed = 300
+tt.bullet.min_speed = 30
+tt.bullet.use_unit_damage_factor = true
+tt.initial_impulse = 15000
+tt.initial_impulse_duration = 0.15
+tt.initial_impulse_angle_abs = math.pi / 2
+tt.force_motion.a_step = 5
+tt.force_motion.max_a = 3000
+tt.force_motion.max_v = 300
+tt.main_script.update = scripts.hero_muyrn_ranged_attack_bullet.update
+tt = E:register_t("hero_muyrn_melee_attack_hit_fx", "fx")
+tt.render.sprites[1].name = "hero_nyru_ranged_attack_hit"
+tt = E:register_t("hero_muyrn_bolt_hit_fx", "fx")
+tt.render.sprites[1].name = "hero_nyru_ranged_attack_hit"
+tt = E:register_t("hero_muyrn_bullet_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "hero_nyru_ranged_attack_particle"
+tt.particle_system.animated = true
+tt.particle_system.alphas = {255, 0}
+tt.particle_system.particle_lifetime = {fts(16), fts(16)}
+tt.particle_system.scales_y = {0.8, 0.8}
+tt.particle_system.scales_x = {0.8, 0.8}
+tt.particle_system.emission_rate = 70
+tt = E:register_t("hero_muyrn_sentinel_wisps_entity")
+
+E:add_comps(tt, "main_script", "pos", "render", "force_motion", "ranged", "tween")
+
+tt.duration = nil
+tt.hero_max_distance = b.sentinel_wisps.wisp.hero_max_distance
+tt.flight_height = 40
+tt.force_motion.max_a = 135000
+tt.force_motion.max_v = 300
+tt.force_motion.ramp_radius = 10
+tt.main_script.insert = scripts.hero_muyrn_sentinel_wisps_entity.insert
+tt.main_script.update = scripts.hero_muyrn_sentinel_wisps_entity.update
+tt.ranged.attacks[1].bullet = "hero_muyrn_sentinel_wisps_entity_bullet"
+tt.ranged.attacks[1].shoot_time = fts(6)
+tt.ranged.attacks[1].cooldown = b.sentinel_wisps.wisp.cooldown
+tt.ranged.attacks[1].max_range = b.sentinel_wisps.wisp.shoot_range
+tt.ranged.attacks[1].min_range = 0
+tt.ranged.attacks[1].animation = "shoot"
+tt.ranged.attacks[1].vis_flags = F_RANGED
+tt.ranged.attacks[1].vis_bans = 0
+tt.render.sprites[1].prefix = "hero_nyru_sentinel_wisps_wisp"
+tt.render.sprites[1].name = "spawn"
+tt.render.sprites[1].z = Z_FLYING_HEROES
+tt.render.sprites[1].offset = v(0, tt.flight_height)
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "decal_flying_shadow_hard"
+tt.render.sprites[2].offset = v(0, 0)
+tt.render.sprites[2].hidden = false
+tt.render.sprites[2].scale = vv(0.5)
+tt.flight_offset = 5
+tt.attack_fx = "fx_hero_muyrn_sentinel_wisps_attack"
+tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].sprite_id = 2
+tt.tween.remove = false
+tt.tween.reverse = false
+tt.tween.disabled = true
+tt.hp = 40
+tt.sound = "HeroNyruSentinelWispsSpawn"
+tt = E:register_t("hero_muyrn_sentinel_wisps_entity_bullet", "bullet")
+tt.image_width = 75
+tt.main_script.update = scripts.ray_simple.update
+tt.render.sprites[1].name = "hero_nyru_sentinel_wisps_ray"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].anchor = v(0.05, 0.5)
+tt.bullet.damage_min = nil
+tt.bullet.damage_max = nil
+tt.bullet.damage_type = b.sentinel_wisps.wisp.damage_type
+tt.bullet.hit_time = fts(4)
+tt.bullet.hit_fx = "hero_muyrn_sentinel_wisps_hit_fx"
+tt.sound_events.insert = "HeroNyruSentinelWispsShoot"
+tt = E:register_t("hero_muyrn_sentinel_wisps_entity_bullet_fx_mod", "mod_track_target_fx")
+tt.render.sprites[1].name = "hero_nyru_sentinel_wisps_hit"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].hide_after_runs = 1
+tt.modifier.duration = fts(11)
+tt = E:register_t("hero_muyrn_verdant_blast_bolt_hit_fx", "fx")
+tt.render.sprites[1].name = "hero_nyru_verdant_blast_explosion"
+tt = E:register_t("hero_muyrn_verdant_blast_bolt_flying_hit_fx", "fx")
+tt.render.sprites[1].name = "hero_nyru_verdant_blast_explosion_air"
+tt = E:register_t("hero_muyrn_leaf_whirlwind_aura", "aura")
+tt.aura.duration = nil
+tt.aura.damage_min = nil
+tt.aura.damage_max = nil
+tt.aura.damage_type = b.leaf_whirlwind.damage_type
+tt.aura.track_source = true
+tt.aura.cycle_time = b.leaf_whirlwind.damage_every
+tt.aura.radius = b.leaf_whirlwind.radius
+tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
+tt.aura.vis_flags = F_RANGED
+tt.main_script.update = scripts.aura_apply_damage.update
+tt.aura.mods = {"hero_muyrn_leaf_whirlwind_enemy_hit_fx_mod"}
+tt = E:register_t("hero_muyrn_leaf_whirlwind_enemy_hit_fx_mod", "modifier")
+
+E:add_comps(tt, "render")
+
+tt.render.sprites[1].name = "hero_nyru_leaf_whirlwind_hit"
+tt.render.sprites[1].sort_y_offset = -1
+tt.main_script.insert = scripts.mod_track_target.insert
+tt.main_script.remove = scripts.mod_track_target.remove
+tt.main_script.update = scripts.mod_track_target.update
+tt.modifier.duration = fts(20)
+tt = E:register_t("hero_muyrn_leaf_whirlwind_heal_mod", "modifier")
+
+E:add_comps(tt, "hps")
+
+tt.modifier.duration = nil
+tt.hps.heal_min = nil
+tt.hps.heal_max = nil
+tt.hps.heal_every = b.leaf_whirlwind.heal_every
+tt.main_script.insert = scripts.mod_track_target.insert
+tt.main_script.update = scripts.mod_hps.update
+tt = E:register_t("hero_muyrn_leaf_whirlwind_decal", "decal_scripted")
+
+E:add_comps(tt, "render", "sound_events")
+
+tt.main_script.update = scripts.hero_muyrn_leaf_whirlwind_decal.update
+tt.render.sprites[1].prefix = "hero_nyru_leaf_whirlwind"
+tt.render.sprites[1].name = "start"
+tt.render.sprites[1].draw_order = DO_MOD_FX
+tt.duration = nil
+tt = E:register_t("hero_muyrn_ultimate")
+
+E:add_comps(tt, "pos", "main_script", "sound_events")
+
+tt.can_fire_fn = scripts.hero_muyrn_ultimate.can_fire_fn
+tt.main_script.update = scripts.hero_muyrn_ultimate.update
+tt.cooldown = nil
+tt.aura = "aura_hero_muyrn_ultimate"
+tt.aura_sides = "aura_hero_muyrn_ultimate_sides"
+tt.sound_events.insert = nil
+tt.sounds = {"HeroNyruRootDefenderStartLvl1", "HeroNyruRootDefenderStartLvl2", "HeroNyruRootDefenderStartLvl3"}
+
+tt = E:register_t("bullet_hero_muyrn_verdant_blast", "bolt")
+b = balance.heroes.hero_muyrn
+tt.render.sprites[1].prefix = "hero_nyru_verdant_blast_projectile"
+tt.render.sprites[1].name = "flying"
+tt.render.sprites[1].animated = true
+tt.bullet.damage_type = b.verdant_blast.damage_type
+tt.bullet.damage_max = nil
+tt.bullet.damage_min = nil
+tt.bullet.acceleration_factor = 0.1
+tt.bullet.min_speed = 300
+tt.bullet.max_speed = 600
+tt.bullet.hit_distance = 20
+tt.bullet.extend_particles_cutoff = true
+tt.bullet.hide_radius = 0
+tt.bullet.hit_fx = "hero_muyrn_verdant_blast_bolt_flying_hit_fx"
+tt.bullet.hit_fx_flying = "hero_muyrn_verdant_blast_bolt_flying_hit_fx"
+tt.bullet.hit_fx_ignore_hit_offset = true
+tt.bullet.hit_decal = "decal_hero_muyrn_verdant_blast_hit"
+tt.bullet.particles_name = "ps_hero_muyrn_verdant_blast_bolt_trail"
+tt.bullet.miss_decal = nil
+tt.bullet.vis_flags = F_RANGED
+tt.bullet.vis_bans = 0
+tt.sound = "HeroNyruVerdantBlastHit"
+tt.main_script.update = scripts.bullet_hero_muyrn_verdant_blast.update
+
+tt = E:register_t("aura_hero_muyrn_faery_dust", "aura")
+
+E:add_comps(tt, "render")
+
+b = balance.heroes.hero_muyrn
+tt.aura.mods = {"mod_hero_muyrn_faery_dust", "mod_hero_muyrn_faery_dust_fx"}
+tt.aura.duration = fts(13)
+tt.aura.cycle_time = 0.3
+tt.aura.radius = b.faery_dust.radius
+tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
+tt.aura.vis_flags = bor(F_MOD)
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.render.sprites[1].name = "hero_nyru_fairy_dust_decal"
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].anchor = v(0.5, 0.8)
+tt = E:register_t("aura_hero_muyrn_ultimate", "aura")
+b = balance.heroes.hero_muyrn
+tt.aura.duration = nil
+tt.aura.cycle_time = 0.3
+tt.aura.radius = b.ultimate.radius
+tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
+tt.aura.vis_flags = F_RANGED
+tt.aura.mods = {"mod_hero_muyrn_ultimate", "mod_hero_muyrn_ultimate_damage"}
+tt.root_decal = "decal_hero_muyrn_root_defender_root"
+tt.roots_count = b.ultimate.roots_count
+tt.duration = b.ultimate.duration
+tt.main_script.insert = scripts.hero_muyrn_root_defender_aura.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.main_script.remove = scripts.hero_muyrn_root_defender_aura.remove
+tt.end_sound = "HeroNyruRootDefenderEnd"
+tt = E:register_t("aura_hero_muyrn_ultimate_sides", "aura_hero_muyrn_ultimate")
+tt.main_script.insert = scripts.hero_muyrn_root_defender_aura_sides.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.end_sound = "HeroNyruRootDefenderEnd"
+
+tt = E:register_t("mod_hero_muyrn_faery_dust", "modifier")
+
+E:add_comps(tt, "render")
+
+tt.main_script.insert = scripts.mod_damage_factors.insert
+tt.main_script.remove = scripts.mod_damage_factors.remove
+tt.main_script.update = scripts.mod_track_target.update
+tt.inflicted_damage_factor = nil
+tt.modifier.duration = nil
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].name = "hero_nyru_fairy_dust_modifier"
+tt.render.sprites[1].draw_order = DO_MOD_FX
+tt = E:register_t("mod_hero_muyrn_faery_dust_fx", "modifier")
+
+E:add_comps(tt, "render")
+
+tt.main_script.insert = scripts.mod_hero_muyrn_faery_dust_fx.insert
+tt.main_script.update = scripts.mod_track_target.update
+tt.inflicted_damage_factor = nil
+tt.modifier.duration = nil
+tt.modifier.use_mod_offset = false
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].name = "hero_nyru_fairy_dust_FX"
+tt.render.sprites[1].draw_order = DO_MOD_FX
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].size_scales = {vv(0.9), vv(1), vv(1)}
+
+tt = E:register_t("mod_hero_muyrn_ultimate", "mod_slow")
+tt.modifier.duration = 1
+tt.slow.factor = nil
+
+tt = E:register_t("mod_hero_muyrn_ultimate_damage", "modifier")
+b = balance.heroes.hero_muyrn
+E:add_comps(tt, "dps")
+tt.modifier.duration = 1
+tt.dps.damage_min = nil
+tt.dps.damage_max = nil
+tt.dps.damage_type = b.ultimate.damage_type
+tt.dps.damage_every = b.ultimate.damage_every
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update

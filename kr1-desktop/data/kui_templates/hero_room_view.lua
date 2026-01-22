@@ -802,6 +802,21 @@ local hero_room_view = {
 					scale = hero_portraits_scale
 				},
 				{
+					id = "portrait_hero_muyrn",
+					hidden = true,
+					class = "KView",
+					children = {{
+						class = "KImageView",
+						image_name = "kr5_portrait_notxt_0003"
+					}, {
+						id = "name_img",
+						image_name = "hero_room_portraits_name_0000",
+						class = "KImageView"
+					}},
+					pos = hero_portraits_pos,
+					scale = hero_portraits_scale
+				},
+				{
 					id = "portrait_hero_venom",
 					hidden = true,
 					class = "KView",
