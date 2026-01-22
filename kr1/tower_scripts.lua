@@ -523,7 +523,7 @@ scripts.tower_musketeer = {
 						shot_animation(ash, fuse_idx, enemy, ash.animation_seeker)
 
 						sprites[fsid].flip_x = fuse_idx < shooter_idx
-						sprites[ssid].draw_order = 5
+						U.change_sprite_draw_order(this, ssid, 5)
 
 						y_wait(store, ash.shoot_time)
 
@@ -552,7 +552,7 @@ scripts.tower_musketeer = {
 
 						y_animation_wait(this, shooter_sids[shooter_idx])
 
-						sprites[ssid].draw_order = nil
+						U.change_sprite_draw_order(this, ssid)
 					end
 				end
 
@@ -756,7 +756,7 @@ scripts.tower_crossbow = {
 						local shooter_sid = shooter_sprite_ids[shooter_idx]
 						local start_offset = ma.bullet_start_offset[shooter_idx]
 
-						this.render.sprites[shooter_sid].draw_order = 5
+						U.change_sprite_draw_order(this, shooter_sid, 5)
 
 						local an, af = animation_name_facing_point(this, "multishot_start", enemy.pos, shooter_sid, start_offset)
 
@@ -832,7 +832,7 @@ scripts.tower_crossbow = {
 
 						animation_start(this, an, af, store.tick_ts, 1, shooter_sid)
 
-						sprites[shooter_sid].draw_order = nil
+						U.change_sprite_draw_order(this, shooter_sid)
 
 						while not animation_finished(this, shooter_sid) do
 							coroutine.yield()
@@ -855,7 +855,7 @@ scripts.tower_crossbow = {
 						local shooter_sid = shooter_sprite_ids[shooter_idx]
 						local start_offset = aa.bullet_start_offset[shooter_idx]
 
-						sprites[shooter_sid].draw_order = 5
+						U.change_sprite_draw_order(this, shooter_sid, 5)
 
 						local an, af = animation_name_facing_point(this, "shoot", enemy.pos, shooter_sid, start_offset)
 
@@ -903,7 +903,7 @@ scripts.tower_crossbow = {
 
 						animation_start(this, an, af, store.tick_ts, -1, shooter_sid)
 
-						sprites[shooter_sid].draw_order = nil
+						U.change_sprite_draw_order(this, shooter_sid)
 					end
 				end
 

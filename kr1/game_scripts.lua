@@ -54284,7 +54284,8 @@ function scripts.decal_stage_06_door.update(this, store, script)
 					else
 						this.tween.props[2].disabled = false
 						this.tween.props[2].ts = store.tick_ts
-						this.tween.props[2].sprite_id = 6
+						-- this.tween.props[2].sprite_id = 6
+						this.tween.props[3].disabled = true
 					end
 				end
 
@@ -54331,9 +54332,10 @@ function scripts.decal_stage_06_door.update(this, store, script)
 
 							break
 						else
-							this.tween.props[2].disabled = false
-							this.tween.props[2].ts = store.tick_ts
-							this.tween.props[2].sprite_id = 7
+							this.tween.props[2].disabled = true
+							-- this.tween.props[2].sprite_id = 7
+							this.tween.props[3].ts = store.tick_ts
+							this.tween.props[3].disabled = false
 						end
 					end
 
@@ -54389,9 +54391,10 @@ function scripts.decal_stage_06_door.update(this, store, script)
 								U.animation_start(this, "death1_1", false, store.tick_ts, false, 7)
 								U.y_animation_wait(this, 7)
 							else
-								this.tween.props[2].disabled = false
-								this.tween.props[2].ts = store.tick_ts
-								this.tween.props[2].sprite_id = 7
+								this.tween.props[3].disabled = false
+								this.tween.props[3].ts = store.tick_ts
+								-- this.tween.props[2].sprite_id = 7
+								this.tween.props[2].disabled = true
 							end
 						end
 

@@ -2772,4 +2772,18 @@ function U.modifier_inherit_bullet(modifier, bullet)
 	modifier.damage_factor = bullet.damage_factor
 end
 
+--- 用于接管对已经在游戏队列中的实体某个 sprite 的 draw_order 修改，遮蔽内部细节
+---@param entity table
+---@param sprite_id number
+---@param draw_order number|nil，为 nil 时重置 draw_order 为原顺序
+function U.change_sprite_draw_order(entity, sprite_id, draw_order)
+	local sprite = entity.render.sprites[sprite_id]
+	sprite.draw_order = draw_order
+	if draw_order then
+		sprite._draw_order = 100000 * draw_order + entity.id
+	else
+		sprite._draw_order = 100000 * sprite_id + entity.id
+	end
+end
+
 return U

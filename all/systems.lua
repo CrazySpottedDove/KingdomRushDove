@@ -2033,8 +2033,6 @@ function sys.particle_system:on_update(dt, ts, store)
 
 			for i = 1, count do
 				local pts = ps.emit_ts + i / ps.emission_rate
-				local draw_order = ps.draw_order and 100000 * ps.draw_order + e.id or floor(pts * 100)
-
 				ps.particle_count = ps.particle_count + 1
 
 				-- 发生粒子喷射。首先，我们生成粒子，并加入 .particles
@@ -2064,7 +2062,7 @@ function sys.particle_system:on_update(dt, ts, store)
 						x = 0,
 						y = 0
 					},
-					_draw_order = draw_order,
+					_draw_order = ps.draw_order and 100000 * ps.draw_order + e.id or floor(pts * 100),
 					z = ps.z,
 					sort_y = ps.sort_y,
 					sort_y_offset = ps.sort_y_offset,
@@ -2502,10 +2500,10 @@ function sys.render:on_update(dt, ts, store)
 
 			if s.ts > ts then
 				s.hidden = true
-				s._wait = true
-			elseif s._wait then
+				s._hidden_for_ts = true
+			elseif s._hidden_for_ts then
 				s.hidden = false
-				s._wait = false
+				s._hidden_for_ts = false
 			end
 
 			local last_runs = s.runs
@@ -2561,8 +2559,6 @@ function sys.render:on_update(dt, ts, store)
 				s.pos.x, s.pos.y = e.pos.x, e.pos.y
 			end
 
-			s._draw_order = 100000 * (s.draw_order or i) + e.id
-
 			if s.hide_after_runs and s.runs >= s.hide_after_runs then
 				s.hidden = true
 			end
@@ -2574,7 +2570,7 @@ function sys.render:on_update(dt, ts, store)
 			local ff = hb.frames[2]
 			local fk = hb.black_bar_hp and hb.frames[3] or nil
 
-			if hb.hidden then
+			if hb.hidden or e.health.hp == e.health.hp_max then
 				fb.hidden = true
 				ff.hidden = true
 
@@ -2582,6 +2578,7 @@ function sys.render:on_update(dt, ts, store)
 					fk.hidden = true
 				end
 			else
+				-- draw_order 属性在 insert 时即计算，我们要求后续永远不要出现操作 draw_order 的行为
 				fb.hidden = false
 				ff.hidden = false
 				fb.pos.x, fb.pos.y = floor(e.pos.x), ceil(e.pos.y)
@@ -2590,8 +2587,6 @@ function sys.render:on_update(dt, ts, store)
 				ff.offset.x, ff.offset.y = hb.offset.x - ff.bar_width * ff.ss.ref_scale * 0.5, hb.offset.y
 				fb.z = hb.z or Z_OBJECTS
 				ff.z = fb.z
-				fb._draw_order = (hb.draw_order and 100000 * hb.draw_order + 1 or 200002) + e.id
-				ff._draw_order = (hb.draw_order and 100000 * hb.draw_order + 2 or 200003) + e.id
 				fb.sort_y_offset = hb.sort_y_offset
 				ff.sort_y_offset = hb.sort_y_offset
 
@@ -2601,7 +2596,6 @@ function sys.render:on_update(dt, ts, store)
 					fk.offset.x, fk.offset.y = hb.offset.x - fk.bar_width * fk.ss.ref_scale * 0.5, hb.offset.y
 					fk.z = hb.z or Z_OBJECTS
 					fk.sort_y_offset = hb.sort_y_offset
-					fk._draw_order = (hb.draw_order and 100000 * hb.draw_order or 200001) + e.id
 					ff.scale.x = e.health.hp / hb.black_bar_hp * ff.bar_width
 					fb.scale.x = e.health.hp_max / hb.black_bar_hp * fb.bar_width
 				else
@@ -2635,11 +2629,11 @@ function sys.render:on_update(dt, ts, store)
 
 	local new_frames = {}
 
-	for i = 0, n - 1 do
+	local i = 0
+	while i < n do
 		local ffi_f = render_frames_ffi[i]
-		local f = render_frames[ffi_f.lua_index]
-
-		new_frames[i + 1] = f
+		i = i + 1
+		new_frames[i] = render_frames[ffi_f.lua_index]
 	end
 
 	store.render_frames = new_frames
