@@ -475,6 +475,9 @@ function game_gui:init(w, h, game)
 
 	tower_range_upgrade.hidden = true
 
+	local boss_health_bar = require("dove_modules.gui.boss_health_bar"):new()
+	boss_health_bar.hidden = true
+
 	local point_confirm = KImageView:new("confirm_feedback_0001")
 
 	point_confirm.animation = {
@@ -720,6 +723,7 @@ function game_gui:init(w, h, game)
 	layer_gui_game:add_child(criketmenu)
 	layer_gui_game:add_child(heromenu)
 	layer_gui_game:add_child(incoming_tooltip)
+	layer_gui_game:add_child(boss_health_bar)
 
 	if IS_KR1 or IS_KR2 then
 		layer_gui_hud:add_child(layer_freeze)
@@ -757,6 +761,7 @@ function game_gui:init(w, h, game)
 	self.tower_range_upgrade = tower_range_upgrade
 	self.melee_range = meleerange
 	self.ranged_range = rangedrange
+	self.boss_health_bar = boss_health_bar
 	self.point_confirm = point_confirm
 	self.rallyflag = rallyflag
 	self.hud_bottom = hud_bottom
@@ -2040,6 +2045,14 @@ function game_gui.swap_tower()
 
 	game_gui:set_mode(GUI_MODE_IDLE)
 	game_gui:hide_ghost_hover()
+end
+
+function game_gui:set_boss(e)
+	local boss_health_bar = self.boss_health_bar
+	if not boss_health_bar:enabled() then
+		boss_health_bar:set_entity(e)
+        boss_health_bar:enable()
+	end
 end
 
 GemsRewardFx = class("GemsRewardFx", KView)

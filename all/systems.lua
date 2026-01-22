@@ -2983,6 +2983,10 @@ function sys.last_hook:on_insert(e, d)
 			e.health.patched = true
 		end
 
+        if e.enemy.lives_cost == 20 then
+            simulation.store.game_gui:set_boss(e)
+        end
+
 		d.enemy_count = d.enemy_count + 1
 	elseif e.soldier and e.health then
 		d.soldiers[e.id] = e
