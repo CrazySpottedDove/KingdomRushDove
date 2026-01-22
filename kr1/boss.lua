@@ -272,9 +272,7 @@ tt.timed_attacks.list[1].sound_args = {
 --#endregion
 --#region eb_veznan
 tt = RT("eb_veznan", "boss")
-
 AC(tt, "melee", "timed_attacks", "taunts")
-
 anchor_y = 0.17010309278350516
 anchor_x = 0.5
 image_y = 194

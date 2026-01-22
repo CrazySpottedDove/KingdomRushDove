@@ -5439,7 +5439,7 @@ function scripts.mod_track_target.insert(this, store)
 		return false
 	end
 
-	if target and target.unit and this.render then
+	if target and target.unit and this.render and target.render then
 		for i = 1, #this.render.sprites do
 			local s = this.render.sprites[i]
 

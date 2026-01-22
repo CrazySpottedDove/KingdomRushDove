@@ -14493,10 +14493,9 @@ tt.render.sprites[1].prefix = "ymca_spawn_fx_layer_4"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.render.sprites[1].animated = true
+
 tt = E:register_t("decal_stage_11_cult_leader", "decal")
-
 E:add_comps(tt, "taunts", "tween")
-
 tt.render.sprites[1].prefix = "mydriasDef"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
