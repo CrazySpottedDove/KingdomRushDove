@@ -12291,9 +12291,7 @@ tt.main_script.update = scripts.hero_space_elf_ultimate.update
 --#region hero_raelyn
 tt = RT("hero_raelyn", "hero")
 b = balance.heroes.hero_raelyn
-
 AC(tt, "melee", "timed_attacks")
-
 tt.hero.level_stats.armor = b.armor
 tt.hero.level_stats.hp_max = b.hp_max
 tt.hero.level_stats.melee_damage_max = b.melee_damage_max
@@ -12394,7 +12392,7 @@ tt.melee.attacks[2].disabled = true
 tt.melee.attacks[2].cooldown = nil
 tt.melee.attacks[2].damage_max = nil
 tt.melee.attacks[2].damage_min = nil
-tt.melee.attacks[2].hit_time = fts(18)
+tt.melee.attacks[2].hit_time = fts(18) --49 f
 tt.melee.attacks[2].sound = "HeroRaelynBrutalSlashCast"
 tt.melee.attacks[2].animation = "brutal_slash"
 tt.melee.attacks[2].damage_type = bor(b.brutal_slash.damage_type, DAMAGE_FX_EXPLODE)
@@ -16306,7 +16304,6 @@ tt.sound_events.hit = "HeroVesperArrowToTheKneeImpact"
 tt = E:register_t("arrow_hero_vesper_disengage", "arrow5")
 tt.render.sprites[1].name = "hero_vesper_arrow"
 tt.bullet.miss_decal = "archer_hero_proy_0002-f"
-tt.bullet.flight_time_variance = 3
 tt.bullet.flight_time = fts(8)
 tt.bullet.pop = {"pop_archer"}
 tt.bullet.hide_radius = 1

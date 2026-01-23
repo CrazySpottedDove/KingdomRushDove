@@ -1747,7 +1747,6 @@ tt.bullet.hit_fx = "tower_royal_archers_pow_armor_piercer_arrow_hit_fx"
 tt.bullet.particles_name = "royal_archer_tower_lvl4_arrow_armor_breaker_trail_particle"
 tt.bullet.miss_decal = "royal_archer_tower_lvl4_arrow_armor_piercer_0002"
 tt.bullet.fixed_height = 20
-tt.bullet.flight_time_variance = 10
 tt.bullet.mod = "mod_tower_royal_archers_armor_piercer"
 tt.bullet.g = -1.8 / (fts(1) * fts(1))
 tt.render.sprites[1].name = "royal_archer_tower_lvl4_arrow_armor_piercer_0001"

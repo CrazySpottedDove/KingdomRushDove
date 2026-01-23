@@ -20831,9 +20831,6 @@ function scripts.hero_raelyn.update(this, store)
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 	while true do
-		-- while this.spawning_in_cinematic_s2 do
-		--     coroutine.yield()
-		-- end
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
 		end
@@ -20842,8 +20839,35 @@ function scripts.hero_raelyn.update(this, store)
 			SU.soldier_idle(store, this)
 		else
 			while this.nav_rally.new do
-				if SU.y_hero_new_rally(store, this) then
-					goto label_222_0
+				local dx = math.abs(this.nav_rally.pos.x - this.pos.x)
+				if dx > 125 and dx < 300 then
+					S:queue(this.sound_events.change_rally_point)
+					U.unblock_target(store, this)
+					this.nav_rally.new = false
+					U.animation_start(this, "brutal_slash", this.pos.x > this.nav_rally.pos.x, store.tick_ts, false, 1)
+					local jump_rate = (this.render.sprites[1].fps or FPS) / FPS
+					local start_time = fts(8) / jump_rate
+					local flight_time = fts(18) / jump_rate - start_time
+					U.y_wait(store, start_time)
+					local expected_stop_time = store.tick_ts + flight_time
+					local last_ts = store.tick_ts
+					local this_pos = this.pos
+					local g = -2 * V.dist(this.nav_rally.pos.x, this.nav_rally.pos.y, this.pos.x, this.pos.y) / (flight_time * flight_time)
+					local v_x = (this.nav_rally.pos.x - this.pos.x) / flight_time
+					local v_y = ((this.nav_rally.pos.y - this.pos.y) - 0.5 * g * flight_time * flight_time) / flight_time
+					while store.tick_ts <= expected_stop_time do
+						coroutine.yield()
+						local dt = store.tick_ts - last_ts
+						this_pos.x = this_pos.x + v_x * dt
+						this_pos.y = this_pos.y + v_y * dt
+						v_y = v_y + g * dt
+						last_ts = store.tick_ts
+					end
+					U.y_animation_wait(this)
+				else
+					if SU.y_hero_new_rally(store, this) then
+						goto label_222_0
+					end
 				end
 			end
 
@@ -29263,7 +29287,6 @@ function scripts.hero_vesper.update(this, store)
 		b.bullet.from = V.vclone(b.pos)
 		b.bullet.to = bullet_to
 		b.bullet.target_id = target_id
-		b.bullet.flight_time = b.bullet.flight_time + fts(math.random(0, b.bullet.flight_time_variance))
 
 		queue_insert(store, b)
 		U.y_animation_wait(this)

@@ -2707,7 +2707,6 @@ tt.bullet.mod = "mod_tower_stargazers_death_star_stun"
 tt.bullet.damage_max = b.stars_death.damage_max
 tt.bullet.damage_min = b.stars_death.damage_min
 tt.bullet.damage_type = DAMAGE_MAGICAL
-tt.bullet.flight_time_variance = 3
 tt.bullet.flight_time = fts(20)
 tt.bullet.hide_radius = nil
 tt.bullet.g = -1.5 / (fts(1) * fts(1))

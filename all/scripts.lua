@@ -9685,10 +9685,6 @@ function scripts.arrow5_45degrees.insert(this, store, script)
 
 	this.bullet.flight_time = math.sqrt(2 * dist / -this.bullet.g)
 
-	if this.bullet.flight_time_variance then
-		this.bullet.flight_time = this.bullet.flight_time + fts(math.random(0, this.bullet.flight_time_variance))
-	end
-
 	return scripts.arrow.insert(this, store, script)
 end
 

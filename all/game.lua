@@ -341,9 +341,9 @@ function game:update(dt)
 	while d.to > TICK_LENGTH do
 		d.to = d.to - TICK_LENGTH
 		self.simulation:update(d.dt)
-        perf.start("game_gui:update")
+		perf.start("game_gui:update")
 		self.game_gui:update(d.dt)
-        perf.stop("game_gui:update")
+		perf.stop("game_gui:update")
 		d.step = false
 		updated = true
 	end
