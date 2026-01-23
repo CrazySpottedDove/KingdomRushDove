@@ -65,6 +65,7 @@ return {
 		"tower_royal_archers_lvl4",
 		"tower_arcane_wizard_lvl4",
 		"tower_ballista_lvl4",
+        "tower_arborean_emissary_lvl4",
 		"tower_flamespitter_lvl4",
 		"tower_necromancer_lvl4",
 		"tower_elven_stargazers_lvl4",
