@@ -2,7 +2,7 @@ local read_expected_time = {
 	reads = {}
 }
 
-local AVERAGE_CHARS_PER_MIN = 3000
+local AVERAGE_CHARS_PER_MIN = 4000
 
 function read_expected_time.read_start(name, string)
 	read_expected_time.reads[name] = {
