@@ -329,7 +329,9 @@ HEALTH_BAR_SIZES = {
 HEALTH_BAR_COLORS = {
 	black = {0, 0, 0, 255},
 	bg = {126, 0, 12, 255},
-	fg = {68, 174, 50, 255}
+	fg = {68, 174, 50, 255},
+	-- cyan，用于第二级额外血条，可覆盖在第一级上
+	fg2 = {0, 255, 255, 255}
 }
 HEALTH_BAR_CORNER_DOT_QUAD = {0, 0, 1, 1, 1024, 1024}
 BLOOD_NONE = nil

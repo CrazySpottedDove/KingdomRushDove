@@ -2417,7 +2417,7 @@ function HeroPortrait:update_xp(hero)
 end
 
 function HeroPortrait:update(dt)
-	local e = force_hero or game_gui:entity_by_id(self.hero_id)
+	local e = game_gui:entity_by_id(self.hero_id)
 
 	if not e or not e.hero then
 		return
@@ -2429,7 +2429,13 @@ function HeroPortrait:update(dt)
 		self.ov_levelup.ts = 0
 	end
 
-	self.bar_health.scale.x = e.health.hp / e.health.hp_max
+	if e.health.hp > e.health.hp_max then
+		self.bar_health.scale.x = 1
+		self.bar_health.colors.tint = {0, 255, 200, 255}
+	else
+		self.bar_health.scale.x = e.health.hp / e.health.hp_max
+		self.bar_health.colors.tint = {255, 255, 255, 255}
+	end
 
 	if e.health.dead then
 		if self.ov_cooldown.hidden then
@@ -3453,7 +3459,7 @@ function InfoBar:update_stats()
 
 		sv.l_cooldown.text = GU.cooldown_value_desc(stats.cooldown)
 	elseif stats.type == STATS_TYPE_ENEMY then
-		sv.b_hp.bar.scale.x = stats.hp / stats.hp_max
+		sv.b_hp.bar.scale.x = math.min(stats.hp / stats.hp_max, 1)
 
 		if stats.immune then
 			sv.l_hp.text = _("CArmor9")
@@ -3473,7 +3479,7 @@ function InfoBar:update_stats()
 		sv.l_magic_armor.text = GU.armor_value_desc(stats.magic_armor)
 		sv.l_lives.text = type(stats.lives) == "number" and stats.lives > 0 and stats.lives or "-"
 	elseif stats.type == STATS_TYPE_SOLDIER then
-		sv.b_hp.bar.scale.x = stats.hp / stats.hp_max
+		sv.b_hp.bar.scale.x = math.min(stats.hp / stats.hp_max)
 		sv.l_hp.text = string.format("%i/%i", stats.hp, stats.hp_max)
 		sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
 

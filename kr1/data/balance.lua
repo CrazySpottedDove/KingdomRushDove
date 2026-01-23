@@ -5503,12 +5503,13 @@ local towers = {
 		},
 		basic_attack = {
 			cooldown = 1.2,
-			damage_min = {3, 7, 11, 17},
-			damage_max = {6, 13, 20, 32},
+			damage_min = {3, 7, 11, 9},
+			damage_max = {6, 13, 20, 17},
 			damage_type = DAMAGE_MAGICAL,
 			range = {160, 180, 200, 220},
 			received_damage_factor = {1.2, 1.3, 1.4, 1.5},
-			modifier_duration = {5, 5, 5, 5}
+			modifier_duration = {5, 5, 5, 5},
+			count = 2
 		},
 		gift_of_nature = {
 			max_range = 230,
@@ -5517,10 +5518,11 @@ local towers = {
 			price = {120, 120, 120},
 			cooldown = {20, 20, 20},
 			duration = {6, 6, 6},
-			heal_min = {4, 8, 12},
-			heal_max = {4, 8, 12},
-			s_heal = {16, 32, 48},
-			inflicted_damage_factor = {1, 1, 1}
+			heal_min = {5, 10, 15},
+			heal_max = {5, 10, 15},
+			s_heal = {20, 40, 60},
+			inflicted_damage_factor = {1, 1, 1},
+			extra_factor = 2
 		},
 		wave_of_roots = {
 			min_targets = 2,

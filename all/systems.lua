@@ -2599,7 +2599,13 @@ function sys.render:on_update(dt, ts, store)
 					ff.scale.x = e.health.hp / hb.black_bar_hp * ff.bar_width
 					fb.scale.x = e.health.hp_max / hb.black_bar_hp * fb.bar_width
 				else
-					ff.scale.x = e.health.hp / e.health.hp_max * ff.bar_width
+					if e.health.hp > e.health.hp_max then
+						ff.scale.x = ff.bar_width
+						ff.color = self._hb_colors.fg2
+					else
+						ff.scale.x = e.health.hp / e.health.hp_max * ff.bar_width
+						ff.color = self._hb_colors.fg
+					end
 				end
 			end
 		end

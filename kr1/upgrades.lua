@@ -910,7 +910,8 @@ function upgrades:mage_tower_bolts()
 		"bullet_tower_ray_chain",
 		"tower_elven_stargazers_ray",
 		"tower_arcane_wizard5_ray",
-		"bullet_tower_hermit_toad_mage_basic_lvl4"
+		"bullet_tower_hermit_toad_mage_basic_lvl4",
+		"tower_arborean_emissary_bolt_lvl4"
 	}
 end
 
@@ -935,7 +936,8 @@ function upgrades:bolts()
 		"bullet_tower_pandas_ray_lvl4",
 		"bullet_tower_pandas_fire_lvl4",
 		"bullet_tower_pandas_air_lvl4",
-		"tower_arcane_wizard5_ray_disintegrate"
+		"tower_arcane_wizard5_ray_disintegrate",
+		"hero_muyrn_bullet"
 	}
 
 	return table.append(other_bolts, self:mage_tower_bolts())

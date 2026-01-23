@@ -11418,6 +11418,7 @@ function scripts.tower_stargazers.update(this, store)
 				local _, enemies = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, false, aa_vis_flags, aa_vis_bans)
 
 				if enemies then
+					local dead_hit = {}
 					for i = 1, shots do
 						enemy = enemies[km.zmod(i, #enemies)]
 
@@ -11446,7 +11447,11 @@ function scripts.tower_stargazers.update(this, store)
 							bullet.bullet.target_id = nil
 
 							-- new: 鞭尸时，也触发星爆
-							scripts.tower_stargazers.create_star_death(this, store, enemy, 1)
+							if not dead_hit[enemy.id] then
+								dead_hit[enemy.id] = true
+								-- 死亡敌人触发星爆，伤害系数为 1
+								scripts.tower_stargazers.create_star_death(this, store, enemy, 1)
+							end
 						end
 
 						local start_offset = aa.bullet_start_offset[1]
@@ -20200,285 +20205,179 @@ end
 -- 圣殿 END
 -- 树灵 START
 scripts.tower_arborean_emissary = {}
-
 function scripts.tower_arborean_emissary.update(this, store)
 	local tower_sid = this.render.sid_tower
 	local a = this.attacks
 	local ab = this.attacks.list[1]
 	local ag = this.attacks.list[2]
 	local aw = this.attacks.list[3]
-	local pow_g = this.powers and this.powers.gift_of_nature or nil
-	local pow_w = this.powers and this.powers.wave_of_roots or nil
+	local pow_g = this.powers.gift_of_nature
+	local pow_w = this.powers.wave_of_roots
 	local doing_animated_idle = false
 	local last_idle = store.tick_ts
+	local tw = this.tower
+	local tpos = tpos(this)
 
 	this.tower.long_idle_cooldown = math.random(this.tower.long_idle_cooldown_min, this.tower.long_idle_cooldown_max)
 	ab.ts = store.tick_ts - ab.cooldown + a.attack_delay_on_spawn
 
 	local last_ts = store.tick_ts - a.min_cooldown + a.attack_delay_on_spawn
-	local attacks = {}
-	local pows = {}
-
-	if ag then
-		table.insert(attacks, ag)
-		table.insert(pows, pow_g)
-	end
-
-	if aw then
-		table.insert(attacks, aw)
-		table.insert(pows, pow_w)
-	end
-
-	if ab then
-		table.insert(attacks, ab)
-		table.insert(pows, nil)
-	end
-
-	local function find_target(aa)
-		local target, _, pred_pos = U.find_foremost_enemy(store.entities, tpos(this), 0, a.range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
-
-		return target, pred_pos
-	end
-
-	local function find_unmodded_target(aa)
-		local modded_enemies = {}
-
-		for _, v in pairs(store.entities) do
-			if v.template_name == "mod_tower_arborean_emissary_basic_attack" then
-				table.insert(modded_enemies, v.modifier.target_id)
-			end
-		end
-
-		local target, targets, pred_pos = U.find_foremost_enemy(store.entities, tpos(this), 0, a.range, aa.node_prediction, aa.vis_flags, aa.vis_bans, function(e, _)
-			return not table.contains(modded_enemies, e.id)
-		end)
-
-		return target, pred_pos
-	end
-
-	local function find_ally_damaged(aa, vis_flags, vis_bans)
-		local soldiers = U.find_soldiers_in_range(store.entities, tpos(this), 0, aa.max_range, vis_flags, vis_bans, function(e)
-			return e.health and e.health.hp < e.health.hp_max
-		end)
-
-		if soldiers and #soldiers > 0 then
-			local _, surrounded_soldiers = U.find_entity_most_surrounded(soldiers)
-
-			for _, soldier in ipairs(surrounded_soldiers) do
-				local enemies_melee = U.find_enemies_in_range(store.entities, soldier.pos, 0, aa.check_melee_range, vis_flags, vis_bans)
-
-				if enemies_melee and #enemies_melee > 0 then
-					return soldier
-				end
-			end
-
-			return surrounded_soldiers[1]
-		end
-
-		return nil
-	end
-
-	local roots = {}
-
-	::label_1001_0::
 
 	while true do
-		if this.tower.blocked then
+		if tw.blocked then
 			coroutine.yield()
 		else
-			if this.powers then
-				for _, pow in pairs(this.powers) do
-					if pow.changed then
-						pow.changed = nil
-
-						if pow == pow_g then
-							if pow.level == 1 then
-								ag.ts = store.tick_ts
-							end
-
-							ag.cooldown = pow.cooldown[pow.level]
-							ag.ts = store.tick_ts - ag.cooldown
-						end
-
-						if pow == pow_w then
-							if pow.level == 1 then
-								aw.ts = store.tick_ts
-							end
-
-							aw.cooldown = pow.cooldown[pow.level]
-							aw.damage_min = pow.damage_min[pow.level]
-							aw.damage_max = pow.damage_max[pow.level]
-							aw.ts = store.tick_ts - aw.cooldown
-						end
-					end
-				end
+			if pow_g.changed then
+				pow_g.cooldown = pow_g.cooldown[pow_g.level]
+				pow_g.changed = nil
+			end
+			if pow_w.changed then
+				aw.cooldown = pow_w.cooldown[pow_w.level]
+				aw.damage_min = pow_w.damage_min[pow_w.level]
+				aw.damage_max = pow_w.damage_max[pow_w.level]
+				pow_w.changed = nil
 			end
 
 			SU.towers_swaped(store, this, this.attacks.list)
 
-			for i, aa in pairs(attacks) do
-				do
-					local pow = pows[i]
+			if ready_to_use_power(pow_g, ag, store, tw.cooldown_factor) then
+				if soldiers_around_need_heal(this, store, 0.99, a.range) then
+					last_ts = store.tick_ts
+					U.animation_start_group(this, ag.animation, nil, store.tick_ts, false, "layers")
+					U.y_wait(store, ag.shoot_time, false)
+					local targets = table.filter(store.soldiers, function(k, v)
+						return (not v.health.dead and v.health.hp < v.health.hp_max) and U.is_inside_ellipse(v.pos, tpos, a.range)
+					end)
+					if #targets > 0 then
+						S:queue(ag.sound)
+						local target = targets[math.random(1, #targets)]
+						local center_pos = V.vclone(target.pos)
+						local nodes = P:nearest_nodes(center_pos.x, center_pos.y, nil, {1}, false)
+						local pi, spi, ni = unpack(nodes[1])
+						center_pos = P:node_pos(pi, spi, ni)
+						local e = E:create_entity(ag.entity)
+						e.pos = center_pos
+						e.duration = pow_g.aura_duration[pow_g.level]
+						e.tower_pos = V.vclone(this.pos)
+						e.power_level = pow_g.level
 
-					if (not pow or pow.level > 0) and store.tick_ts - aa.ts > aa.cooldown and store.tick_ts - last_ts > a.min_cooldown then
-						if aa == ag then
-							local ally_damaged = find_ally_damaged(aa, aa.vis_flags_soldier, aa.vis_bans_soldier)
+						queue_insert(store, e)
+						U.y_animation_wait_group(this, "layers")
+						ag.ts = last_ts
+					else
+						ag.ts = ag.ts + fts(10)
+					end
+				else
+					ag.ts = ag.ts + fts(10)
+				end
+			end
 
-							if not ally_damaged then
-								SU.delay_attack(store, aa, fts(10))
-							else
-								last_ts = store.tick_ts
+			if ready_to_use_power(pow_w, aw, store, tw.cooldown_factor) then
+				local enemies = U.find_enemies_in_range_filter_off(tpos, a.range, aw.vis_flags, aw.vis_bans)
+				if enemies then
+					last_ts = store.tick_ts
+					U.animation_start_group(this, aw.animation, nil, store.tick_ts, false, "layers")
+					U.y_wait(store, aw.shoot_time, false)
 
-								local center_pos = V.vclone(ally_damaged.pos)
+					enemies = U.find_enemies_in_range_filter_off(tpos, a.range, aw.vis_flags, aw.vis_bans)
+					if enemies then
+						enemies = table.random_order(enemies)
+						enemies = table.slice(enemies, 1, aw.max_targets[pow_w.level])
 
-								U.animation_start_group(this, aa.animation, nil, store.tick_ts, false, "layers")
+						S:queue(aw.sound)
 
-								if U.y_wait(store, aa.shoot_time, false) then
-									goto label_1001_0
-								end
+						for i = 1, #enemies do
+							local e = enemies[i]
+							if not e.health.death then
+								local m = E:create_entity(aw.mod)
 
-								S:queue(aa.sound)
+								m.modifier.target_id = e.id
+								m.modifier.source_id = this.id
+								m.modifier.level = pow_w.level
+								m.modifier.damage_factor = tw.damage_factor
+								m.modifier.duration = aw.mod_duration[pow_w.level]
+								m.wave_of_roots = aw.wave_of_roots_balance
+								m.render.sprites[1].ts = store.tick_ts
 
-								ally_damaged = find_ally_damaged(aa, aa.vis_flags_soldier, aa.vis_bans_soldier)
-								aa.ts = last_ts
+								queue_insert(store, m)
 
-								if ally_damaged then
-									center_pos = V.vclone(ally_damaged.pos)
-								end
+								local d = E:create_entity("damage")
 
-								local nodes = P:nearest_nodes(center_pos.x, center_pos.y, nil, {1}, false)
-								local pi, spi, ni = unpack(nodes[1])
+								d.value = math.random(aw.damage_min, aw.damage_max) * tw.damage_factor
+								d.source_id = this.id
+								d.target_id = e.id
+								d.damage_type = aw.damage_type
 
-								center_pos = P:node_pos(pi, spi, ni)
-
-								local e = E:create_entity(aa.entity)
-
-								e.pos = center_pos
-								e.duration = pow.aura_duration[pow.level]
-								e.tower_pos = V.vclone(this.pos)
-								e.power_level = this.powers.gift_of_nature.level
-
-								queue_insert(store, e)
-								U.y_animation_wait_group(this, "layers")
-							end
-						elseif aa == aw then
-							local _, enemies = U.find_foremost_enemy(store.entities, tpos(this), 0, aa.trigger_range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
-
-							if not enemies or #enemies < aa.min_targets then
-								SU.delay_attack(store, aa, fts(10))
-							else
-								last_ts = store.tick_ts
-
-								U.animation_start_group(this, aa.animation, nil, store.tick_ts, false, "layers")
-
-								if U.y_wait(store, aa.shoot_time, false) then
-									goto label_1001_0
-								end
-
-								aa.ts = last_ts
-
-								local _, enemies = U.find_foremost_enemy(store.entities, tpos(this), 0, aa.effect_range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
-
-								if enemies and #enemies > 0 then
-									enemies = table.random_order(enemies)
-									enemies = table.slice(enemies, 1, aa.max_targets[pow.level])
-								else
-									goto label_1001_1
-								end
-
-								S:queue(aa.sound)
-
-								for _, e in ipairs(enemies) do
-									if not e.health.death then
-										local m = E:create_entity(aa.mod)
-
-										m.modifier.target_id = e.id
-										m.modifier.source_id = this.id
-										m.modifier.level = pow.level
-										m.wave_of_roots = aa.wave_of_roots_balance
-										m.render.sprites[1].ts = store.tick_ts
-
-										queue_insert(store, m)
-
-										local d = E:create_entity("damage")
-
-										d.value = math.random(aa.damage_min, aa.damage_max)
-										d.source_id = this.id
-										d.target_id = e.id
-										d.damage_type = aa.damage_type
-
-										queue_damage(store, d)
-									end
-								end
-
-								U.y_animation_wait_group(this, "layers")
-							end
-						elseif aa == ab then
-							local base_node_prediction = aa.node_prediction
-
-							aa.node_prediction = aa.node_prediction + aa.shoot_time
-
-							local enemy, pred_pos = find_unmodded_target(aa)
-
-							if not enemy or not pred_pos then
-								enemy, pred_pos = find_target(aa)
-							end
-
-							aa.node_prediction = base_node_prediction
-
-							if not enemy then
-								SU.delay_attack(store, aa, fts(10))
-							else
-								local enemy_id = enemy.id
-								local shoot_pos = pred_pos
-
-								last_ts = store.tick_ts
-
-								U.animation_start_group(this, aa.animation, nil, store.tick_ts, false, "layers")
-								U.y_wait(store, aa.shoot_time, false)
-								S:queue(aa.sound)
-
-								enemy, __ = find_unmodded_target(aa)
-
-								if not enemy or not pred_pos then
-									enemy, __ = find_target(aa)
-								end
-
-								if enemy then
-									enemy_id = enemy.id
-									shoot_pos = V.vclone(enemy.pos)
-								end
-
-								local b = E:create_entity(aa.bullet)
-
-								b.pos.x, b.pos.y = this.pos.x + aa.bullet_start_offset.x, this.pos.y + aa.bullet_start_offset.y
-								b.bullet.from = V.vclone(b.pos)
-								b.bullet.to = shoot_pos
-								b.bullet.target_id = enemy_id
-								b.bullet.source_id = this.id
-								b.bullet.level = this.tower.level
-								b.bullet.damage_factor = this.tower.damage_factor
-
-								queue_insert(store, b)
-
-								aa.ts = last_ts
-
-								U.y_animation_wait_group(this, "layers")
+								queue_damage(store, d)
 							end
 						end
-					end
-				end
 
-				::label_1001_1::
+						U.y_animation_wait_group(this, "layers")
+						aw.ts = last_ts
+					else
+						aw.ts = aw.ts + fts(10)
+					end
+				else
+					aw.ts = aw.ts + fts(10)
+				end
+			end
+
+			if ready_to_attack(ab, store, tw.cooldown_factor) then
+				if U.find_first_enemy_in_range_filter_off(tpos, a.range, ab.vis_flags, ab.vis_bans) then
+					ab.ts = store.tick_ts
+					U.animation_start_group(this, ab.animation, nil, store.tick_ts, false, "layers")
+					U.y_wait(store, ab.shoot_time, false)
+					local _, targets = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, ab.node_prediction, ab.vis_flags, ab.vis_bans)
+					if targets then
+						local selected_targets = {}
+						local selected_count = 0
+						for i = 1, #targets do
+							local t = targets[i]
+							if not U.has_modifier(store, t, "mod_tower_arborean_emissary_basic_attack") then
+								selected_count = selected_count + 1
+								selected_targets[selected_count] = t
+								if selected_count >= ab.count then
+									break
+								end
+							end
+						end
+						while selected_count < ab.count do
+							for i = 1, #targets do
+								selected_count = selected_count + 1
+								selected_targets[selected_count] = targets[i]
+								if selected_count >= ab.count then
+									break
+								end
+							end
+						end
+						S:queue(ab.sound)
+						for i = 1, #selected_targets do
+							local t = selected_targets[i]
+							local b = E:create_entity(ab.bullet)
+							b.pos.x, b.pos.y = this.pos.x + ab.bullet_start_offset.x, this.pos.y + ab.bullet_start_offset.y
+							b.bullet.from = V.vclone(b.pos)
+							b.bullet.to = U.calculate_enemy_ffe_pos(t, ab.node_prediction)
+							b.bullet.target_id = t.id
+							b.bullet.source_id = this.id
+							b.bullet.damage_factor = tw.damage_factor
+							queue_insert(store, b)
+						end
+						U.y_animation_wait_group(this, "layers")
+					else
+						ab.ts = ab.ts + fts(10)
+					end
+				else
+					ab.ts = ab.ts + fts(10)
+				end
 			end
 
 			if doing_animated_idle and U.animation_finished_group(this, "layers", 1) then
 				doing_animated_idle = false
 				last_idle = store.tick_ts
-				this.tower.long_idle_cooldown = math.random(this.tower.long_idle_cooldown_min, this.tower.long_idle_cooldown_max)
+				tw.long_idle_cooldown = math.random(tw.long_idle_cooldown_min, tw.long_idle_cooldown_max)
 			end
 
-			if not doing_animated_idle and store.tick_ts - last_ts > this.tower.long_idle_cooldown and store.tick_ts - last_idle > this.tower.long_idle_cooldown then
+			if not doing_animated_idle and store.tick_ts - last_ts > tw.long_idle_cooldown and store.tick_ts - last_idle > tw.long_idle_cooldown then
 				U.animation_start_group(this, this.animation_idles[math.random(#this.animation_idles)], nil, store.tick_ts, false, "layers")
 
 				doing_animated_idle = true
@@ -20926,113 +20825,64 @@ end
 
 scripts.tower_arborean_emissary_root_stun_mod = {}
 
-function scripts.tower_arborean_emissary_root_stun_mod.insert(this, store, script)
-	this.modifier.duration = this.wave_of_roots.mod_duration[this.modifier.level]
+function scripts.tower_arborean_emissary_root_stun_mod.update(this, store)
+	local start_ts, target_hidden
+	local m = this.modifier
+	local target = store.entities[this.modifier.target_id]
 
-	return scripts.mod_stun.insert(this, store, script)
+	if not target then
+		queue_remove(store, this)
+
+		return
+	end
+
+	this.pos = target.pos
+
+	U.y_animation_play(this, this.animation_start, nil, store.tick_ts, 1)
+	U.animation_start(this, this.animation_idle, nil, store.tick_ts, false)
+
+	while store.tick_ts - m.ts < m.duration - this.out_before and target and not target.health.dead do
+		if this.render and m.use_mod_offset and target.unit.mod_offset and not m.custom_offsets then
+			for i = 1, #this.render.sprites do
+				local s = this.render.sprites[i]
+
+				s.offset.x, s.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
+			end
+		end
+
+		coroutine.yield()
+	end
+
+	U.y_animation_play(this, this.animation_end, nil, store.tick_ts, 1)
+	queue_remove(store, this)
 end
 
 scripts.aura_tower_arborean_emissary_gift_of_nature = {}
 
 function scripts.aura_tower_arborean_emissary_gift_of_nature.update(this, store, script)
-	local first_hit_ts
 	local last_hit_ts = 0
-	local cycles_count = 0
-	local victims_count = 0
-
-	if this.aura.track_source and this.aura.source_id then
-		local te = store.entities[this.aura.source_id]
-
-		if te and te.pos then
-			this.pos = te.pos
-		end
-	end
 
 	last_hit_ts = store.tick_ts - this.aura.cycle_time
-
-	if this.aura.apply_delay then
-		last_hit_ts = last_hit_ts + this.aura.apply_delay
-	end
 
 	while true do
 		if this.interrupt then
 			last_hit_ts = 1e+99
 		end
 
-		if this.aura.cycles and cycles_count >= this.aura.cycles or this.aura.duration >= 0 and store.tick_ts - this.aura.ts > this.aura.duration then
+		if this.aura.duration >= 0 and store.tick_ts - this.aura.ts > this.aura.duration then
 			break
 		end
 
-		if this.aura.stop_on_max_count and this.aura.max_count and victims_count >= this.aura.max_count then
-			break
-		end
-
-		if this.aura.track_source and this.aura.source_id then
-			local te = store.entities[this.aura.source_id]
-
-			if not te or te.health and te.health.dead and not this.aura.track_dead then
-				break
-			end
-		end
-
-		if this.aura.requires_magic then
-			local te = store.entities[this.aura.source_id]
-
-			if not te or not te.enemy then
-				goto label_1023_0
-			end
-
-			if this.render then
-				this.render.sprites[1].hidden = not te.enemy.can_do_magic
-			end
-
-			if not te.enemy.can_do_magic then
-				goto label_1023_0
-			end
-		end
-
-		if this.aura.source_vis_flags and this.aura.source_id then
-			local te = store.entities[this.aura.source_id]
-
-			if te and te.vis and band(te.vis.bans, this.aura.source_vis_flags) ~= 0 then
-				goto label_1023_0
-			end
-		end
-
-		if this.aura.requires_alive_source and this.aura.source_id then
-			local te = store.entities[this.aura.source_id]
-
-			if te and te.health and te.health.dead then
-				goto label_1023_0
-			end
-		end
-
-		if not (store.tick_ts - last_hit_ts >= this.aura.cycle_time) or this.aura.apply_duration and first_hit_ts and store.tick_ts - first_hit_ts > this.aura.apply_duration then
+		if not (store.tick_ts - last_hit_ts >= this.aura.cycle_time) then
 		-- block empty
 		else
-			if this.render and this.aura.cast_resets_sprite_id then
-				this.render.sprites[this.aura.cast_resets_sprite_id].ts = store.tick_ts
-			end
-
-			first_hit_ts = first_hit_ts or store.tick_ts
 			last_hit_ts = store.tick_ts
-			cycles_count = cycles_count + 1
 
-			local targets = table.filter(store.entities, function(k, v)
-				return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= v.id)
-			end)
+			local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans) or {}
+
+			local mods = this.aura.mods or {this.aura.mod}
 
 			for i, target in ipairs(targets) do
-				if this.aura.targets_per_cycle and i > this.aura.targets_per_cycle then
-					break
-				end
-
-				if this.aura.max_count and victims_count >= this.aura.max_count then
-					break
-				end
-
-				local mods = this.aura.mods or {this.aura.mod}
-
 				for _, mod_name in pairs(mods) do
 					local new_mod = E:create_entity(mod_name)
 
@@ -21040,23 +20890,13 @@ function scripts.aura_tower_arborean_emissary_gift_of_nature.update(this, store,
 					new_mod.modifier.target_id = target.id
 					new_mod.modifier.source_id = this.id
 
-					if this.aura.hide_source_fx and target.id == this.aura.source_id then
-						new_mod.render = nil
-					end
-
 					queue_insert(store, new_mod)
-
-					victims_count = victims_count + 1
 				end
 			end
 		end
 
-		::label_1023_0::
-
 		coroutine.yield()
 	end
-
-	signal.emit("aura-apply-mod-victims", this, victims_count)
 end
 
 scripts.tower_arborean_emissary_gift_of_nature_heal_mod = {}
@@ -21069,14 +20909,72 @@ function scripts.tower_arborean_emissary_gift_of_nature_heal_mod.insert(this, st
 	return scripts.mod_track_target.insert(this, store)
 end
 
-scripts.tower_arborean_emissary_gift_of_nature_damage_mod = {}
+function scripts.tower_arborean_emissary_gift_of_nature_heal_mod.update(this, store)
+	local m = this.modifier
+	local hps = this.hps
+	local duration = m.duration
 
-function scripts.tower_arborean_emissary_gift_of_nature_damage_mod.insert(this, store)
-	this.dps.damage_min = this.damage_min[this.modifier.level]
-	this.dps.damage_max = this.damage_max[this.modifier.level]
-	this.modifier.duration = this.duration[this.modifier.level]
+	if m.duration_inc then
+		duration = duration + m.level * m.duration_inc
+	end
 
-	return scripts.mod_dps.insert(this, store)
+	local heal_min = hps.heal_min
+	local heal_max = hps.heal_max
+
+	local target = store.entities[m.target_id]
+
+	if not target then
+		queue_remove(store, this)
+
+		return
+	end
+
+	this.pos = target.pos
+
+	while true do
+		target = store.entities[m.target_id]
+
+		if not target or target.health.dead or duration < store.tick_ts - m.ts then
+			queue_remove(store, this)
+
+			return
+		end
+
+		if this.render and m.use_mod_offset and target.unit.mod_offset then
+			for i = 1, #this.render.sprites do
+				local s = this.render.sprites[i]
+
+				s.offset.x, s.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
+			end
+		end
+
+		if hps.heal_every and store.tick_ts - hps.ts >= hps.heal_every then
+			hps.ts = store.tick_ts
+
+			local hp_start = target.health.hp
+
+			target.health.hp = target.health.hp + math.random(heal_min, heal_max)
+			target.health.hp = km.clamp(0, target.health.hp_max * hps.extra_factor, target.health.hp)
+
+			local heal_amount = target.health.hp - hp_start
+
+			target.health.hp_healed = (target.health.hp_healed or 0) + heal_amount
+
+			signal.emit("entity-healed", this, target, heal_amount)
+
+			if hps.fx then
+				local fx = E:create_entity(hps.fx)
+
+				fx.pos = V.vclone(this.pos)
+				fx.render.sprites[1].ts = store.tick_ts
+				fx.render.sprites[1].runs = 0
+
+				queue_insert(store, fx)
+			end
+		end
+
+		coroutine.yield()
+	end
 end
 
 scripts.tower_arborean_emissary_gift_of_nature_heal_mod_decal = {}

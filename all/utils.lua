@@ -28,6 +28,8 @@ local U = {}
 --- Import Functions From Seek
 local seek = require("seek")
 
+--- @param e table
+--- @param predition_time number
 U.calculate_enemy_ffe_pos = seek.calculate_enemy_ffe_pos
 U.find_foremost_enemy_in_range_filter_on = seek.find_foremost_enemy_in_range_filter_on
 U.find_foremost_enemy_in_range_filter_off = seek.find_foremost_enemy_in_range_filter_off

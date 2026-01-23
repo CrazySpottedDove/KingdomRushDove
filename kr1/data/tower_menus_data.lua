@@ -164,14 +164,14 @@ return {
 			tt_title = _("TOWER_HERMIT_TOAD_NAME"),
 			tt_desc = _("TOWER_HERMIT_TOAD_4_DESCRIPTION")
 		}),
-		-- M(tpl.upgrade, {
-		-- 	action_arg = "tower_arborean_emissary_lvl4",
-		-- 	image = "kr5_main_icons_0006",
-		-- 	type = "arborean_emissary",
-		-- 	place = 21,
-		-- 	tt_title = _("TOWER_ARBOREAN_EMISSARY_1_NAME"),
-		-- 	tt_desc = _("TOWER_ARBOREAN_EMISSARY_1_DESCRIPTION")
-		-- }),
+		M(tpl.upgrade, {
+			action_arg = "tower_arborean_emissary_lvl4",
+			image = "kr5_main_icons_0006",
+			type = "arborean_emissary",
+			place = 21,
+			tt_title = _("TOWER_ARBOREAN_EMISSARY_1_NAME"),
+			tt_desc = _("TOWER_ARBOREAN_EMISSARY_1_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	-- 炮塔
