@@ -20228,7 +20228,7 @@ function scripts.tower_arborean_emissary.update(this, store)
 			coroutine.yield()
 		else
 			if pow_g.changed then
-				pow_g.cooldown = pow_g.cooldown[pow_g.level]
+				ag.cooldown = pow_g.cooldown[pow_g.level]
 				pow_g.changed = nil
 			end
 			if pow_w.changed then

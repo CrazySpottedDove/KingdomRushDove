@@ -5503,8 +5503,8 @@ local towers = {
 		},
 		basic_attack = {
 			cooldown = 1.2,
-			damage_min = {3, 7, 11, 9},
-			damage_max = {6, 13, 20, 17},
+			damage_min = {3, 7, 11, 10},
+			damage_max = {6, 13, 20, 20},
 			damage_type = DAMAGE_MAGICAL,
 			range = {160, 180, 200, 220},
 			received_damage_factor = {1.2, 1.3, 1.4, 1.5},

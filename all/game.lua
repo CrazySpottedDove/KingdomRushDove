@@ -1,6 +1,7 @@
 -- chunkname: @./all/game.lua
 local log = require("lib.klua.log"):new("game")
 local km = require("lib.klua.macros")
+local perf = require("dove_modules.perf.perf")
 local signal = require("lib.hump.signal")
 local V = require("hump.vector-light")
 local U = require("utils")
@@ -339,10 +340,10 @@ function game:update(dt)
 
 	while d.to > TICK_LENGTH do
 		d.to = d.to - TICK_LENGTH
-
 		self.simulation:update(d.dt)
+        perf.start("game_gui:update")
 		self.game_gui:update(d.dt)
-
+        perf.stop("game_gui:update")
 		d.step = false
 		updated = true
 	end
