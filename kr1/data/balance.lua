@@ -26,6 +26,22 @@ local function patch_hp(t, mult)
 	end
 end
 
+local function patch_damage_max(t, mult)
+	for k, v in pairs(t) do
+		if k == "damage_max" then
+			if type(v) == "table" then
+				for i = 1, #v do
+					v[i] = v[i] * mult
+				end
+			else
+				t[k] = v * mult
+			end
+		elseif type(v) == "table" then
+			patch_damage_max(v, mult)
+		end
+	end
+end
+
 local heroes = {
 	common = {
 		melee_attack_range = 72,
@@ -5260,6 +5276,7 @@ local enemies = {
 }
 
 patch_hp(enemies, 0.8)
+patch_damage_max(enemies, 1.3)
 
 local towers = {
 	arcane_wizard = {
