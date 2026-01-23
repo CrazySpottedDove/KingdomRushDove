@@ -92,6 +92,15 @@ server  ssh://dove@10.112.99.5:60001/srv/git/KingdomRushDove.git (fetch)
 server  ssh://dove@10.112.99.5:60001/srv/git/KingdomRushDove.git (push)
 ```
 
-### 格式化
+## 格式化
 
 本项目使用专有 vscode 插件 `dlfmt` 格式化。在提交更改前，请右键 `dlfmt_task.json`，选择使用 `dlfmt: 运行 JSON 任务`，以保证整个项目格式一致，且压缩了必要的数据资源。
+
+## 规则
+
+- 任何直接修改 `enemy.can_do_magic` 的行为都是危险的。
+- 任何直接修改 `tween` 的 `sprite_id` 的行为都是危险的。
+- 不允许将 `damage` 作为 component。
+- 不允许在 `tween_prop.keys` 中使用 `key[3]` 指定插值方法，每个 `tween_prop` 只能有一个插值方法，并通过 `tween_prop.interp` 指定。
+- 建议将只运行一次的 `tween` 的 `run_once` 赋为 `true`。
+- 不允许直接修改 `sprite` 的 `draw_order`。如需修改，必须调用 `U.change_sprite_draw_order()`。

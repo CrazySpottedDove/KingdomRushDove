@@ -1926,6 +1926,7 @@ function scripts.tower_barrack.update(this, store)
 					queue_insert(store, s)
 
 					b.soldiers[i] = s
+					s.soldier.tower_soldier_idx = i
 
 					signal.emit("tower-spawn", this, s)
 				end
@@ -2012,10 +2013,6 @@ function scripts.tower_barrack_mercenaries.update(this, store)
 				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b)
 				s.nav_rally.new = true
 
-				U.soldier_inherit_tower_buff_factor(s, this)
-
-				s.cooldown_factor = this.tower.cooldown_factor
-
 				if this.powers then
 					for pn, p in pairs(this.powers) do
 						-- 技能更新逻辑在 soldier_barrack.insert 中处理
@@ -2023,9 +2020,11 @@ function scripts.tower_barrack_mercenaries.update(this, store)
 					end
 				end
 
+				U.soldier_inherit_tower_buff_factor(s, this)
 				queue_insert(store, s)
 
 				b.soldiers[i] = s
+				s.soldier.tower_soldier_idx = i
 
 				signal.emit("tower-spawn", this, s)
 			end
@@ -2064,9 +2063,7 @@ function scripts.tower_barrack_mercenaries.update(this, store)
 				end
 			end
 
-			s.unit.damage_factor = this.tower.damage_factor
-			s.cooldown_factor = this.tower.cooldown_factor
-
+			U.soldier_inherit_tower_buff_factor(s, this)
 			queue_insert(store, s)
 
 			for i, ss in ipairs(b.soldiers) do
@@ -6326,51 +6323,6 @@ function scripts.mod_armor_buff.update(this, store)
 	end
 end
 
-scripts.cast_silence = function(target, store)
-	if not target.silence_cast_count then
-		target.silence_cast_count = 1
-	else
-		target.silence_cast_count = target.silence_cast_count + 1
-	end
-
-	if target.silence_cast_count == 1 then
-		target.silence_ts = store.tick_ts
-	end
-
-	if target.silence_cast_count > 0 then
-		target.enemy.can_do_magic = false
-		target.enemy.can_accept_magic = false
-	end
-end
-scripts.remove_silence = function(target, store)
-	if target then
-		target.silence_cast_count = target.silence_cast_count - 1
-
-		if target.enemy then
-			if target.health.dead then
-				target.enemy.can_do_magic = false
-				target.enemy.can_accept_magic = false
-			elseif target.silence_cast_count < 1 and not target.enemy.can_do_magic then
-				target.enemy.can_do_magic = true
-				target.enemy.can_accept_magic = true
-
-				local duration = store.ts - target.silence_ts
-
-				if target.ranged then
-					for _, a in pairs(target.ranged.attacks) do
-						a.ts = a.ts + duration
-					end
-				end
-
-				if target.timed_attacks then
-					for _, a in pairs(target.timed_attacks.list) do
-						a.ts = a.ts + duration
-					end
-				end
-			end
-		end
-	end
-end
 scripts.mod_silence = {}
 
 function scripts.mod_silence.insert(this, store)
@@ -6380,7 +6332,7 @@ function scripts.mod_silence.insert(this, store)
 		return false
 	end
 
-	scripts.cast_silence(target, store)
+	U.cast_silence(target, store.tick_ts)
 
 	local s = this.render.sprites[1]
 
@@ -6408,7 +6360,7 @@ end
 function scripts.mod_silence.remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 
-	scripts.remove_silence(target, store)
+	U.remove_silence(target, store.tick_ts)
 
 	return true
 end
@@ -8615,15 +8567,6 @@ function scripts.user_item_dynamite.insert(this, store)
 	b.to = V.v(x, y)
 
 	return scripts.bomb.insert(this, store)
-end
-
--- 恢复生命值
-scripts.heal = function(this, amount)
-	this.health.hp = this.health.hp + amount
-
-	if this.health.hp > this.health.hp_max then
-		this.health.hp = this.health.hp_max
-	end
 end
 
 -- 通过复生特性来抵抗异常状态

@@ -5166,7 +5166,7 @@ tt.melee.attacks[1].sound = "MeleeSword"
 tt.melee.attacks[1].damage_type = DAMAGE_TRUE
 tt.melee.attacks[1].xp_gain_factor = 2.5
 tt.melee.attacks[1].side_effect = function(this, store, attack, target)
-	scripts.heal(this, 3)
+	U.heal(this, 3)
 end
 tt.melee.attacks[2] = CC("melee_attack")
 tt.melee.attacks[2].animation = "vampirism"
@@ -5687,7 +5687,7 @@ tt.melee.attacks[5].hit_time = fts(6)
 tt.melee.attacks[5].sound = "HeroMonkHadoken"
 tt.melee.attacks[5].xp_from_skill = "tigerstyle"
 tt.melee.attacks[5].side_effect = function(this, store, attack, target)
-	scripts.heal(this, 30)
+	U.heal(this, 30)
 end
 tt.timed_attacks.list[1] = CC("area_attack")
 tt.timed_attacks.list[1].animation = "dragon"
@@ -10036,7 +10036,7 @@ tt.melee.attacks[4].side_effect = function(this, store, attack, target)
 	this.revive.protect = this.revive.protect + 0.02
 	this.soul_eater.last_ts = store.tick_ts - E:get_template("aura_lilith_soul_eater").aura.cooldown
 
-	scripts.heal(this, this.health.hp_max * 0.2)
+	U.heal(this, this.health.hp_max * 0.2)
 end
 tt.melee.attacks[4].instakill = true
 tt.melee.attacks[4].chance = 0.1
@@ -11303,7 +11303,7 @@ tt.melee.attacks[2].sound = "ElvesHeroBolverkSlash"
 tt.melee.attacks[2].xp_gain_factor = 3.5
 tt.melee.attacks[2].disabled = true
 tt.melee.attacks[2].side_effect = function(this, store, attack, target)
-	scripts.heal(this, (this.health.hp_max - this.health.hp) * 0.12)
+	U.heal(this, (this.health.hp_max - this.health.hp) * 0.12)
 end
 tt.melee.range = 55
 tt.timed_attacks.list[1] = CC("mod_attack")

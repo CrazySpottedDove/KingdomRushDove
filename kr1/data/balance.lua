@@ -5377,7 +5377,7 @@ local towers = {
 	paladin_covenant = {
 		max_soldiers = 3,
 		rally_range = 145,
-		price = {70, 120, 180, 250},
+		price = {70, 120, 180, 185},
 		stats = {
 			damage = 2,
 			armor = 5,
@@ -5386,8 +5386,9 @@ local towers = {
 		soldier = {
 			dead_lifetime = 12,
 			speed = 75,
-			armor = {0, 0.1, 0.25, 0.4},
-			hp = {40, 80, 120, 180},
+			armor = {0, 0.1, 0.25, 0.45},
+			magic_armor = {0, 0.1, 0.25, 0.45},
+			hp = {40, 80, 120, 250},
 			regen_hp = {6, 12, 18, 28},
 			basic_attack = {
 				cooldown = 1,
@@ -5397,18 +5398,18 @@ local towers = {
 			}
 		},
 		lead = {
-			price = {250},
+			price = {225},
 			soldier_veteran = {
-				s_aura_damage_buff_factor = 0.2,
+				s_aura_damage_buff_factor = 0.25,
 				aura_duration = 8,
 				aura_range = 70,
-				armor = 0.6,
-				hp = 200,
-				aura_damage_buff_factor = 1.2,
+				extra_armor = 0.15,
+				extra_hp = 50,
+				aura_damage_buff_factor = 1.25,
 				regen_hp = 30,
 				basic_attack = {
-					damage_max = 22,
-					damage_min = 14
+					extra_damage_max = 8,
+					extra_damage_min = 4
 				},
 				aura_cooldown = {20}
 			}
@@ -5418,8 +5419,8 @@ local towers = {
 			heal_every = 0.25,
 			price = {140, 140, 140},
 			health_trigger_factor = {0.25, 0.25, 0.25},
-			heal = {3, 6, 9},
-			s_healing = {12, 20, 32},
+			heal = {4, 7, 10},
+			s_healing = {16, 28, 40},
 			cooldown = {28, 25, 22}
 		}
 	},

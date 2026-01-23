@@ -7,8 +7,12 @@ local function CJK(default, zh, ja, kr)
 	return i18n.cjk(i18n, default, zh, ja, kr)
 end
 
-local TOWER_MENU_BUTTON_X_UNIT = 62
-local TOWER_MENU_BUTTON_Y_UNIT = 64
+local TOWER_MENU_BUTTON_X_UNIT = 56
+local TOWER_MENU_BUTTON_Y_UNIT = 62
+
+local function tower_menu_button_pos(x, y)
+	return v(74 - x * TOWER_MENU_BUTTON_X_UNIT, (x % 2 == 0 and 130 or 98) - y * TOWER_MENU_BUTTON_Y_UNIT)
+end
 
 return {
 	notifications = {
@@ -1653,26 +1657,30 @@ return {
 		v(124, 20),
 		v(24, 120),
 		v(124, 120),
-		v(74, 2), -- 0, 1
-		v(74 - TOWER_MENU_BUTTON_X_UNIT, 34), -- -1, 1
-		v(74 + TOWER_MENU_BUTTON_X_UNIT, 34), -- 1, 1
+		tower_menu_button_pos(0, 2),
+		tower_menu_button_pos(-1, 1),
+		tower_menu_button_pos(1, 1),
 		v(128, 118),
 		v(74, 140),
-		v(74 - 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - TOWER_MENU_BUTTON_Y_UNIT), -- -2, 2
-		v(74 + 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - TOWER_MENU_BUTTON_Y_UNIT), -- 2, 2
-		v(74 - 2 * TOWER_MENU_BUTTON_X_UNIT, 66), -- -2, 1
-		v(74 + 2 * TOWER_MENU_BUTTON_X_UNIT, 66), -- 2, 1
-		v(74 - 3 * TOWER_MENU_BUTTON_X_UNIT, 34), -- -3, 1
-		v(74 + 3 * TOWER_MENU_BUTTON_X_UNIT, 34), -- 3, 1
-		v(74 - TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT), -- -1, 2
-		v(74 + TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT), -- 1, 2
-		v(74 - 3 * TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT), -- -3, 2
-		v(74 + 3 * TOWER_MENU_BUTTON_X_UNIT, 34 - TOWER_MENU_BUTTON_Y_UNIT), -- 3, 2
-		v(74, 2 - TOWER_MENU_BUTTON_Y_UNIT), -- 0, 2
-		v(74 - 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - 2 * TOWER_MENU_BUTTON_Y_UNIT), -- -2, 3
-		v(74 + 2 * TOWER_MENU_BUTTON_X_UNIT, 66 - 2 * TOWER_MENU_BUTTON_Y_UNIT), -- 2, 3
-		v(74 - 4 * TOWER_MENU_BUTTON_X_UNIT, 2),
-		v(74 + 4 * TOWER_MENU_BUTTON_X_UNIT, 2)
+		tower_menu_button_pos(-2, 2),
+		tower_menu_button_pos(2, 2),
+		tower_menu_button_pos(-2, 1),
+		tower_menu_button_pos(2, 1),
+		tower_menu_button_pos(-3, 1),
+		tower_menu_button_pos(3, 1),
+		tower_menu_button_pos(-1, 2),
+		tower_menu_button_pos(1, 2),
+		tower_menu_button_pos(-3, 2),
+		tower_menu_button_pos(3, 2),
+		tower_menu_button_pos(0, 3),
+		tower_menu_button_pos(-2, 3),
+		tower_menu_button_pos(2, 3),
+		tower_menu_button_pos(-4, 2),
+		tower_menu_button_pos(4, 2),
+		tower_menu_button_pos(-4, 1),
+		tower_menu_button_pos(4, 1),
+		tower_menu_button_pos(-4, 3),
+		tower_menu_button_pos(4, 3)
 	},
 	tower_menu_power_offset = {v(7, -16), v(25, -9), v(31, 8)},
 	-- 原版x差值18, 6 ，y差值7, 17

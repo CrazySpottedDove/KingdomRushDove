@@ -248,7 +248,7 @@ tt.melee.attacks[1].sound_args = {
 	delay = fts(6)
 }
 tt.melee.attacks[1].side_effect = function(this, store, attack, target)
-	scripts.heal(this, 100)
+	U.heal(this, 100)
 end
 tt.timed_attacks.list[1] = CC("custom_attack")
 tt.timed_attacks.list[1].cooldown = 10 + fts(29)

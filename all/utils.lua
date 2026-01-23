@@ -2741,7 +2741,7 @@ function U.find_entity_most_surrounded(entities)
 
 		for _, e2 in ipairs(entities) do
 			if e1.id ~= e2.id and e1.health and not e1.health.dead and e2.health and not e2.health.dead and e1.pos and e2.pos then
-				local distance = V.dist(e1.pos.x, e1.pos.y, e2.pos.x, e2.pos.y)
+				local distance = V.dist2(e1.pos.x, e1.pos.y, e2.pos.x, e2.pos.y)
 
 				distance_between_entities = distance_between_entities + distance
 			end
@@ -2785,6 +2785,73 @@ function U.change_sprite_draw_order(entity, sprite_id, draw_order)
 		sprite._draw_order = 100000 * draw_order + entity.id
 	else
 		sprite._draw_order = 100000 * sprite_id + entity.id
+	end
+end
+
+--- 对目标施加沉默效果
+---@param target table
+---@param ts number store.tick_ts
+function U.cast_silence(target, ts)
+	if not target.silence_cast_count then
+		target.silence_cast_count = 1
+	else
+		target.silence_cast_count = target.silence_cast_count + 1
+	end
+
+	if target.silence_cast_count == 1 then
+		target.silence_ts = ts
+	end
+
+	if target.silence_cast_count > 0 then
+		target.enemy.can_do_magic = false
+		target.enemy.can_accept_magic = false
+	end
+end
+
+--- 移除目标的沉默效果
+---@param target table
+---@param ts number store.tick_ts
+function U.remove_silence(target, ts)
+	if target then
+		target.silence_cast_count = target.silence_cast_count - 1
+
+		if target.enemy then
+			if target.health.dead then
+				target.enemy.can_do_magic = false
+				target.enemy.can_accept_magic = false
+			elseif target.silence_cast_count < 1 and not target.enemy.can_do_magic then
+				target.enemy.can_do_magic = true
+				target.enemy.can_accept_magic = true
+
+				-- 暂不明白为什么这里要保护。。。
+				if target.silence_ts then
+					local duration = ts - target.silence_ts
+
+					if target.ranged then
+						for _, a in pairs(target.ranged.attacks) do
+							a.ts = a.ts + duration
+						end
+					end
+
+					if target.timed_attacks then
+						for _, a in pairs(target.timed_attacks.list) do
+							a.ts = a.ts + duration
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+--- 治疗目标
+---@param target table
+---@param amount number
+function U.heal(target, amount)
+	local h = target.health
+	h.hp = h.hp + amount
+	if h.hp > h.hp_max then
+		h.hp = h.hp_max
 	end
 end
 

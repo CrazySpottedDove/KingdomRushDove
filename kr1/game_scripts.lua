@@ -323,7 +323,7 @@ function scripts.twister.update(this, store)
 							SU.remove_auras(store, enemy)
 							U.sprites_hide(enemy, nil, nil, true)
 							SU.stun_inc(enemy)
-							scripts.cast_silence(enemy, store)
+							U.cast_silence(enemy, store.tick_ts)
 							U.unblock_all(store, enemy)
 
 							if enemy.health_bar then
@@ -368,7 +368,7 @@ function scripts.twister.update(this, store)
 		U.bans_remove(enemy.vis, F_ALL)
 
 		SU.stun_dec(enemy)
-		scripts.remove_silence(enemy, store)
+		U.remove_silence(enemy, store.tick_ts)
 		U.sprites_show(enemy, nil, nil, true)
 	end
 
@@ -4738,7 +4738,7 @@ function scripts.ray_tesla.update(this, store)
 
 			if not this.excluded_templates or not table.contains(this.excluded_templates, target.template_name) then
 				if target.template_name == "hero_thor" then
-					scripts.heal(target, target.lightning_heal)
+					U.heal(target, target.lightning_heal)
 
 					this.bounce_range = this.bounce_range * 2
 				else
@@ -14014,7 +14014,7 @@ scripts.mod_vampiress_gain = {
 					target.gain_count = target.gain_count + 1
 				end
 
-				scripts.heal(target, this.gain.heal)
+				U.heal(target, this.gain.heal)
 
 				has_kills = true
 			end
@@ -14076,9 +14076,9 @@ function scripts.ray_frankenstein.update(this, store)
 		update_sprite()
 
 		if target.template_name == "soldier_frankenstein" and not target.health.dead then
-			scripts.heal(target, this.frankie_heal_hp)
+			U.heal(target, this.frankie_heal_hp)
 		elseif target.template_name == "hero_thor" then
-			scripts.heal(target, target.lightning_heal)
+			U.heal(target, target.lightning_heal)
 		else
 			local mod = E:create_entity(b.mod)
 
@@ -16107,7 +16107,7 @@ end
 
 scripts.holygrail = {
 	side_effect = function(this, store)
-		scripts.heal(this, (this.health.hp_max - this.health.hp) * 0.2)
+		U.heal(this, (this.health.hp_max - this.health.hp) * 0.2)
 
 		this.melee.attacks[1].ts = store.tick_ts - this.melee.cooldown
 		this.melee.attacks[2].ts = store.tick_ts - this.melee.cooldown
@@ -20786,7 +20786,7 @@ function scripts.eb_drow_queen.update(this, store)
 					this.megaspawner.manual_wave = "BOSSRETURN0"
 					this.health.dead = false
 				else
-					this.enemy.can_do_magic = false
+					-- this.enemy.can_do_magic = false
 					this.shield.health.hp = 0
 
 					block_all_towers()
@@ -24059,7 +24059,7 @@ function scripts.mod_timelapse.insert(this, store)
 
 	if target and target.health and not target.health.dead and this._target_prev_bans ~= nil then
 		SU.stun_inc(target)
-		scripts.cast_silence(target, store)
+		U.cast_silence(target, store.tick_ts)
 
 		return true
 	else
@@ -24072,7 +24072,7 @@ function scripts.mod_timelapse.remove(this, store)
 
 	if target then
 		SU.stun_dec(target)
-		scripts.remove_silence(target, store)
+		U.remove_silence(target, store.tick_ts)
 	end
 
 	return true
@@ -26712,7 +26712,7 @@ function scripts.soldier_ewok.update(this, store)
 				this.dodge.last_hit_ts = nil
 				this.health.immune_to = F_ALL
 
-				scripts.heal(this, this.dodge.heal)
+				U.heal(this, this.dodge.heal)
 
 				while store.tick_ts - start_ts < this.dodge.duration and not this.health.dead and not this.unit.is_stunned do
 					SU.soldier_regen(store, this)
@@ -33671,7 +33671,7 @@ function scripts.mod_krdove_elephant_cannibal.insert(this, store)
 		return false
 	end
 
-	scripts.heal(target, this.heal_amount)
+	U.heal(target, this.heal_amount)
 
 	local s = this.render.sprites[1]
 
@@ -46812,15 +46812,9 @@ function scripts.enemy_lesser_sister_nightmare.update(this, store, script)
 	local cont, blocker, ranged
 
 	local function break_fn()
-		if this.enemy.can_do_magic then
-			local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
 
-			if nodes_to_goal <= this.nodes_to_reveal then
-				this.enemy.can_do_magic = false
-			end
-		end
-
-		if not this.enemy.can_do_magic and not this.tween.reverse then
+		if (not this.enemy.can_do_magic or nodes_to_goal <= this.nodes_to_reveal) and not this.tween.reverse then
 			-- this.vis.flags = this.vis.flags_blocked
 			U.bans_remove(this.vis, F_RANGED)
 			this.tween.ts = store.tick_ts
@@ -48850,12 +48844,12 @@ function scripts.enemy_dust_cryptid.update(this, store, script)
 			local nodes_to_goal = P:nodes_to_goal(this.nav_path)
 
 			if nodes_to_goal <= this.nodes_to_prevent_dust then
-				this.enemy.can_do_magic = false
-			end
-
-			if not this.enemy.can_do_magic then
 				this.death_spawns = nil
 			end
+
+			-- if not this.enemy.can_do_magic then
+			-- this.death_spawns = nil
+			-- end
 
 			SU.y_enemy_death(store, this)
 

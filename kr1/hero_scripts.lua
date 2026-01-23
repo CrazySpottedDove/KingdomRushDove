@@ -983,7 +983,7 @@ scripts.hero_mirage = {
 						queue_remove(store, mod)
 					end
 
-					scripts.heal(this, this.health.hp_max * 0.1)
+					U.heal(this, this.health.hp_max * 0.1)
 
 					goto label_296_1
 				end
@@ -6795,7 +6795,7 @@ scripts.hero_ignus = {
 								end
 							end
 
-							scripts.heal(this, this.health.hp_max * a.heal_factor)
+							U.heal(this, this.health.hp_max * a.heal_factor)
 
 							local e = E:create_entity(a.decal)
 
@@ -8710,7 +8710,7 @@ function scripts.hero_crab.on_damage(this, store, damage)
 	local i = this.invuln
 
 	if (i.active or i.pending) and band(damage.damage_type, i.exclude_damage_types) == 0 then
-		scripts.heal(this, damage.value * 0.5)
+		U.heal(this, damage.value * 0.5)
 
 		return false
 	end
@@ -9320,7 +9320,7 @@ scripts.hero_minotaur = {
 								queue_damage(store, d)
 							end
 
-							scripts.heal(this, heal)
+							U.heal(this, heal)
 
 							while not U.animation_finished(this) and not SU.hero_interrupted(this) do
 								coroutine.yield()
@@ -9887,7 +9887,7 @@ scripts.mod_monkey_god_palm = {
 			sm.modifier.duration = this.stun_duration
 
 			queue_insert(store, sm)
-			scripts.cast_silence(target, store)
+			U.cast_silence(target, store.tick_ts)
 
 			local s = this.render.sprites[1]
 
@@ -11458,7 +11458,7 @@ function scripts.mod_lynn_curse.insert(this, store)
 		return false
 	end
 
-	scripts.cast_silence(target, store)
+	U.cast_silence(target, store.tick_ts)
 
 	return true
 end
@@ -11480,7 +11480,7 @@ end
 function scripts.mod_lynn_curse.remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 
-	scripts.remove_silence(target, store)
+	U.remove_silence(target, store.tick_ts)
 
 	return true
 end
@@ -16842,7 +16842,7 @@ function scripts.hero_bolverk.update(this, store)
 							end
 						end
 
-						scripts.heal(this, (this.health.hp_max - this.health.hp) * 0.06)
+						U.heal(this, (this.health.hp_max - this.health.hp) * 0.06)
 						SU.y_hero_animation_wait(this)
 						SU.hero_gain_xp_from_skill(this, this.hero.skills.scream)
 
@@ -16999,7 +16999,7 @@ scripts.hero_dwarf = {
 						this.health_bar.hidden = true
 
 						U.animation_start(this, a.animations[1], nil, store.tick_ts, true)
-						scripts.heal(this, this.health.hp_max * a.scale * 0.1)
+						U.heal(this, this.health.hp_max * a.scale * 0.1)
 
 						while store.tick_ts - bigger_begin_time < a.scale_time do
 							local rate = (store.tick_ts - bigger_begin_time) / a.scale_time
@@ -21754,7 +21754,7 @@ function scripts.hero_venom.update(this, store)
 									d.value = 1
 									eat_enemy_attack.ts = eat_enemy_attack.ts + (target.health.hp - 100) / target.health.hp_max * eat_enemy_attack.cooldown
 
-									scripts.heal(this, eat_enemy_attack.regen)
+									U.heal(this, eat_enemy_attack.regen)
 								else
 									d.damage_type = DAMAGE_RUDE
 									d.value = (eat_enemy_attack.damage + this.damage_buff) * this.unit.damage_factor
@@ -28264,7 +28264,7 @@ function scripts.hero_wukong.update(this, store)
 
 				if target and valid_rally_node_nearby(target.pos) then
 					apply_ultimate(this, store, target, "levelup")
-					scripts.heal(this, h.hp_max)
+					U.heal(this, h.hp_max)
 
 					if this.health.dead then
 						this.health.dead = false

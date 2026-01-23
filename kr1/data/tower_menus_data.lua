@@ -515,14 +515,14 @@ return {
 			tt_title = _("TOWER_GHOST_1_NAME"),
 			tt_desc = _("TOWER_GHOST_1_DESCRIPTION")
 		}),
-		-- M(tpl.upgrade, {
-		-- 	action_arg = "tower_paladin_covenant_lvl4",
-		-- 	type = "paladin_covenant",
-		-- 	image = "kr5_main_icons_0001",
-		-- 	place = 25,
-		-- 	tt_title = _("TOWER_PALADIN_COVENANT_1_NAME"),
-		-- 	tt_desc = _("TOWER_PALADIN_COVENANT_1_DESCRIPTION")
-		-- }),
+		M(tpl.upgrade, {
+			action_arg = "tower_paladin_covenant_lvl4",
+			type = "paladin_covenant",
+			image = "kr5_main_icons_0001",
+			place = 25,
+			tt_title = _("TOWER_PALADIN_COVENANT_1_NAME"),
+			tt_desc = _("TOWER_PALADIN_COVENANT_1_DESCRIPTION")
+		}),
 		tpl.rally,
 		tpl.sell
 	}},

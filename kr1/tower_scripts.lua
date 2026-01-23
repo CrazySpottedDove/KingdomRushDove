@@ -8732,7 +8732,7 @@ function scripts.mod_tower_necromancer_skill_debuff.insert(this, store)
 	local source = store.entities[this.modifier.source_id]
 
 	if target and not target.health.dead and target.enemy then
-		scripts.cast_silence(target, store)
+		U.cast_silence(target, store.tick_ts)
 
 		return true
 	end
@@ -8791,7 +8791,7 @@ function scripts.mod_tower_necromancer_skill_debuff.remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if target and not target.health.dead then
-		scripts.remove_silence(target, store)
+		U.remove_silence(target, store.tick_ts)
 	end
 
 	return true
@@ -19777,92 +19777,40 @@ end
 -- 圣殿 START
 scripts.tower_paladin_covenant = {}
 
-function scripts.tower_paladin_covenant.get_info(this)
-	local s = E:create_entity(this.barrack.soldier_type)
-
-	if this.powers then
-		for pn, p in pairs(this.powers) do
-			for i = 1, p.level do
-				SU.soldier_power_upgrade(s, pn)
-			end
-		end
-	end
-
-	local s_info = s.info.fn(s)
-	local attacks
-
-	if s.melee and s.melee.attacks then
-		attacks = s.melee.attacks
-	elseif s.ranged and s.ranged.attacks then
-		attacks = s.ranged.attacks
-	end
-
-	local min, max
-
-	for _, a in pairs(attacks) do
-		if a.damage_min then
-			local damage_factor = this.tower.damage_factor
-
-			min, max = a.damage_min * damage_factor, a.damage_max * damage_factor
-
-			break
-		end
-	end
-
-	if min and max then
-		min, max = math.ceil(min), math.ceil(max)
-	end
-
-	return {
-		type = STATS_TYPE_TOWER_BARRACK,
-		hp_max = s.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		armor = s.health.armor,
-		respawn = s.health.dead_lifetime
-	}
-end
-
 function scripts.tower_paladin_covenant.soldier_insert(this, store)
 	if scripts.soldier_barrack.insert(this, store) then
-		local pow_h = this.powers and this.powers.healing_prayer or nil
-		local pow_l = this.powers and this.powers.lead or nil
-		local a_h = this.timed_attacks and this.timed_attacks.list[1] or nil
-		local a_l = this.timed_attacks and this.timed_attacks.list[2] or nil
+		local pow_h = this.powers.healing_prayer
+		local pow_l = this.powers.lead
+		local a_h = this.timed_attacks.list[1]
+		local a_l = this.timed_attacks.list[2]
 
-		if this.powers then
-			for pn, p in pairs(this.powers) do
-				if p.level > 0 then
-					if p == pow_h then
-						a_h.disabled = nil
-						a_h.cooldown = p.cooldown[p.level]
-						a_h.lost_health = p.health_trigger_factor[p.level]
-					elseif p == pow_l and this.soldier.tower_soldier_idx and this.soldier.tower_soldier_idx == 1 then
-						local b = p.b
+		for pn, p in pairs(this.powers) do
+			if p.level > 0 then
+				if p == pow_h then
+					a_h.disabled = nil
+					a_h.cooldown = p.cooldown[p.level]
+					a_h.lost_health = p.health_trigger_factor[p.level]
+				elseif p == pow_l and this.soldier.tower_soldier_idx and this.soldier.tower_soldier_idx == 1 then
+					local b = p.b
 
-						this.health.hp_max = b.hp
-						this.health.hp = this.health.hp_max
-						this.regen.health = b.regen_hp
-						this.health.armor = b.armor
-						this.melee.attacks[1].damage_min = b.basic_attack.damage_min
-						this.melee.attacks[1].damage_max = b.basic_attack.damage_max
-						this.melee.attacks[1].hit_time = p.hit_time
-						this.melee.attacks[1]._original_damage_min = b.basic_attack.damage_min
-						this.melee.attacks[1]._original_damage_max = b.basic_attack.damage_max
-						this.melee.attacks[2].damage_min = b.basic_attack.damage_min
-						this.melee.attacks[2].damage_max = b.basic_attack.damage_max
-						this.melee.attacks[2].hit_time = p.hit_time
-						this.melee.attacks[2]._original_damage_min = b.basic_attack.damage_min
-						this.melee.attacks[2]._original_damage_max = b.basic_attack.damage_max
-						this.render.sprites[1].prefix = p.sprite_prefix
-						this.health_bar.type = p.health_bar_size
-						this.health_bar.offset.y = this.health_bar.offset.y + 2
-						this.soldier.is_captain = true
-						this.info.portrait = p.portrait
-						a_l.disabled = nil
-						a_l.cooldown = p.cooldown[p.level]
-						a_l.ts = store.tick_ts
-					end
+					this.health.hp_max = this.health.hp_max + b.extra_hp
+					this.health.hp = this.health.hp_max
+					this.health.armor = this.health.armor + b.extra_armor
+					this.melee.attacks[1].damage_min = this.melee.attacks[1].damage_min + b.basic_attack.extra_damage_min
+					this.melee.attacks[1].damage_max = this.melee.attacks[1].damage_max + b.basic_attack.extra_damage_max
+					this.melee.attacks[1].hit_time = p.hit_time
+					this.melee.attacks[2].damage_min = this.melee.attacks[2].damage_min + b.basic_attack.extra_damage_min
+					this.melee.attacks[2].damage_max = this.melee.attacks[2].damage_max + b.basic_attack.extra_damage_max
+					this.melee.attacks[2].hit_time = p.hit_time
+					this.render.sprites[1].prefix = p.sprite_prefix
+					this.soldier.is_captain = true
+					this.health_bar.type = p.health_bar_size
+					this.health_bar.offset.y = this.health_bar.offset.y + 2
+					this.soldier.is_captain = true
+					this.info.portrait = p.portrait
+					a_l.disabled = nil
+					a_l.cooldown = p.cooldown[p.level]
+					a_l.ts = store.tick_ts
 				end
 			end
 		end
@@ -19873,181 +19821,76 @@ function scripts.tower_paladin_covenant.soldier_insert(this, store)
 	return false
 end
 
+function scripts.tower_paladin_covenant.soldier_on_damage(this, store, damage)
+	local a_h = this.timed_attacks.list[1]
+	if not a_h.disabled and store.tick_ts - a_h.ts > a_h.cooldown then
+		local actual_damage = U.predict_damage(this, damage)
+		if actual_damage >= this.health.hp then
+			this.health.hp = 1
+			return false
+		end
+	end
+	return true
+end
+
 function scripts.tower_paladin_covenant.soldier_update(this, store, script)
 	local brk, sta
-	local pow_h = this.powers and this.powers.healing_prayer or nil
-	local pow_l = this.powers and this.powers.lead or nil
-	local a_h = this.timed_attacks and this.timed_attacks.list[1] or nil
-	local a_l = this.timed_attacks and this.timed_attacks.list[2] or nil
-	local damage_factor_prev = this.health.damage_factor
-	local mods = {}
+	local pow_h = this.powers.healing_prayer
+	local pow_l = this.powers.lead
+	local a_h = this.timed_attacks.list[1]
+	local a_l = this.timed_attacks.list[2]
 
 	if this.vis._bans then
 		this.vis.bans = this.vis._bans
 		this.vis._bans = nil
 	end
 
-	this.nav_rally._first_time = true
-
-	local function y_soldier_new_rally_break_attack(store, this, break_fn)
-		local r = this.nav_rally
-		local out = false
-		local vis_bans = this.vis.bans
-		local prev_immune = this.health.immune_to
-
-		this.health.immune_to = r.immune_to
-		this.vis.bans = F_ALL
-
-		if r.new then
-			r.new = false
-
-			U.unblock_target(store, this)
-			U.set_destination(this, r.pos)
-
-			if r.delay_max then
-				U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
-
-				local index = this.soldier.tower_soldier_idx or 0
-				local tower = store.entities[this.soldier.tower_id]
-				local total = tower and tower.barrack.max_soldiers or 1
-
-				if SU.y_soldier_wait(store, this, index / total * r.delay_max) then
-					goto label_984_0
-				end
-			end
-
-			local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
-
-			U.animation_start(this, an, af, store.tick_ts, -1)
-
-			while not this.motion.arrived do
-				if this.health.dead or this.unit.is_stunned then
-					out = true
-
-					break
-				end
-
-				if r.new then
-					out = false
-
-					U.set_destination(this, r.pos)
-
-					local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
-
-					U.animation_start(this, an, af, store.tick_ts, -1)
-
-					r.new = false
-				end
-
-				if break_fn() then
-					out = false
-
-					break
-				end
-
-				if r._first_time then
-					r._first_time = false
-
-					local target = U.find_foremost_enemy(store.entities, r.center, 0, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF), function(e)
-						return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
-					end)
-
-					if target then
-						out = false
-
-						break
-					end
-				end
-
-				U.walk(this, store.tick_length)
-				coroutine.yield()
-
-				this.motion.speed.x, this.motion.speed.y = 0, 0
-			end
-		end
-
-		::label_984_0::
-
-		this.vis.bans = vis_bans
-		this.health.immune_to = prev_immune
-
-		return out
-	end
-
-	local function check_tower_damage_factor()
-		if store.entities[this.soldier.tower_id] then
-			for _, a in ipairs(this.melee.attacks) do
-				if not a._original_damage_min then
-					a._original_damage_min = a.damage_min
-				end
-
-				if not a._original_damage_max then
-					a._original_damage_max = a.damage_max
-				end
-
-				a.damage_min = a._original_damage_min * store.entities[this.soldier.tower_id].tower.damage_factor
-				a.damage_max = a._original_damage_max * store.entities[this.soldier.tower_id].tower.damage_factor
-			end
-		end
-	end
-
-	local function walk_break_fn()
-		return pow_l and pow_l.changed
-	end
-
 	while true do
-		if this.powers then
-			for pn, p in pairs(this.powers) do
-				if p.changed then
-					p.changed = nil
+		for pn, p in pairs(this.powers) do
+			if p.changed then
+				p.changed = nil
 
-					SU.soldier_power_upgrade(this, pn)
+				SU.soldier_power_upgrade(this, pn)
 
-					if p == pow_h then
-						a_h.disabled = nil
-						a_h.cooldown = p.cooldown[p.level]
-						a_h.lost_health = p.health_trigger_factor[p.level]
-					elseif p == pow_l and this.soldier.tower_soldier_idx and this.soldier.tower_soldier_idx == 1 then
-						local b = p.b
+				if p == pow_h then
+					a_h.disabled = nil
+					a_h.cooldown = p.cooldown[p.level]
+					a_h.lost_health = p.health_trigger_factor[p.level]
+				elseif p == pow_l and this.soldier.tower_soldier_idx and this.soldier.tower_soldier_idx == 1 then
+					local b = p.b
 
-						this.health.hp_max = b.hp
-						this.health.hp = this.health.hp_max
-						this.regen.health = b.regen_hp
-						this.health.armor = b.armor
-						this.melee.attacks[1].damage_min = b.basic_attack.damage_min
-						this.melee.attacks[1].damage_max = b.basic_attack.damage_max
-						this.melee.attacks[1].hit_time = p.hit_time
-						this.melee.attacks[1]._original_damage_min = b.basic_attack.damage_min
-						this.melee.attacks[1]._original_damage_max = b.basic_attack.damage_max
-						this.melee.attacks[2].damage_min = b.basic_attack.damage_min
-						this.melee.attacks[2].damage_max = b.basic_attack.damage_max
-						this.melee.attacks[2].hit_time = p.hit_time
-						this.melee.attacks[2]._original_damage_min = b.basic_attack.damage_min
-						this.melee.attacks[2]._original_damage_max = b.basic_attack.damage_max
-						this.render.sprites[1].prefix = p.sprite_prefix
-						this.soldier.is_captain = true
-						this.health_bar.offset.y = this.health_bar.offset.y + 2
-						this.info.portrait = p.portrait
-						this.health_bar.type = p.health_bar_size
+					this.health.hp_max = this.health.hp_max + b.extra_hp
+					this.health.hp = this.health.hp_max
+					this.health.armor = this.health.armor + b.extra_armor
+					this.melee.attacks[1].damage_min = this.melee.attacks[1].damage_min + b.basic_attack.extra_damage_min
+					this.melee.attacks[1].damage_max = this.melee.attacks[1].damage_max + b.basic_attack.extra_damage_max
+					this.melee.attacks[1].hit_time = p.hit_time
+					this.melee.attacks[2].damage_min = this.melee.attacks[2].damage_min + b.basic_attack.extra_damage_min
+					this.melee.attacks[2].damage_max = this.melee.attacks[2].damage_max + b.basic_attack.extra_damage_max
+					this.melee.attacks[2].hit_time = p.hit_time
+					this.render.sprites[1].prefix = p.sprite_prefix
+					this.soldier.is_captain = true
+					this.health_bar.offset.y = this.health_bar.offset.y + 2
+					this.info.portrait = p.portrait
+					this.health_bar.type = p.health_bar_size
 
-						for _, frame in ipairs(this.health_bar.frames) do
-							local hb_sizes = HEALTH_BAR_SIZES[store.texture_size] or HEALTH_BAR_SIZES.default
-							local hbsize = hb_sizes[this.health_bar.type]
+					for _, frame in ipairs(this.health_bar.frames) do
+						local hb_sizes = HEALTH_BAR_SIZES[store.texture_size] or HEALTH_BAR_SIZES.default
+						local hbsize = hb_sizes[this.health_bar.type]
 
-							frame.bar_width = hbsize.x
-							frame.scale = V.v(hbsize.x, hbsize.y)
-							frame.offset.x = frame.offset.x - hbsize.x * frame.ss.ref_scale / 2
-						end
-
-						a_l.disabled = nil
-						a_l.cooldown = p.cooldown[p.level]
-
-						if p.level == 1 then
-							a_l.ts = store.tick_ts
-						end
-
-						U.y_animation_play(this, this.powers.lead.animation_upgrade, nil, store.tick_ts, 1)
+						frame.bar_width = hbsize.x
+						frame.scale = V.v(hbsize.x, hbsize.y)
+						frame.offset.x = frame.offset.x - hbsize.x * frame.ss.ref_scale / 2
 					end
+
+					a_l.disabled = nil
+					a_l.cooldown = p.cooldown[p.level]
+
+					if p.level == 1 then
+						a_l.ts = store.tick_ts
+					end
+
+					U.y_animation_play(this, this.powers.lead.animation_upgrade, nil, store.tick_ts, 1)
 				end
 			end
 		end
@@ -20058,7 +19901,7 @@ function scripts.tower_paladin_covenant.soldier_update(this, store, script)
 			SU.y_soldier_death(store, this)
 
 			while true do
-				if pow_l and pow_l.changed then
+				if pow_l.changed then
 					queue_remove(store, this)
 				end
 
@@ -20070,95 +19913,87 @@ function scripts.tower_paladin_covenant.soldier_update(this, store, script)
 			SU.soldier_idle(store, this)
 		else
 			while this.nav_rally.new do
-				if y_soldier_new_rally_break_attack(store, this, walk_break_fn) then
+				if SU.y_soldier_new_rally(store, this) then
 					goto label_983_0
 				end
 			end
 
-			check_tower_damage_factor()
+			do
+				local a = a_h
 
-			if this.timed_attacks then
-				do
-					local a = a_h
+				if not a.disabled and this.health.hp <= this.health.hp_max * a.lost_health and store.tick_ts - a.ts > a.cooldown then
+					local needs_cleanup = false
 
-					if not a.disabled and this.health.hp <= this.health.hp_max * a.lost_health and store.tick_ts - a.ts > a.cooldown then
-						local needs_cleanup = false
+					U.animation_start(this, a.animation .. "_start", nil, store.tick_ts)
+					S:queue(a.sound)
 
-						U.animation_start(this, a.animation .. "_start", nil, store.tick_ts)
-						S:queue(a.sound)
+					if SU.y_soldier_wait(store, this, a.hit_time[this.unit.is_captain and 2 or 1]) then
+					-- block empty
+					else
+						a.ts = store.tick_ts
+						needs_cleanup = true
 
-						if SU.y_soldier_wait(store, this, a.hit_time[this.unit.is_captain and 2 or 1]) then
+						for _, m in ipairs(a.mods) do
+							local mod = E:create_entity(m)
+
+							mod.modifier.target_id = this.id
+							mod.modifier.source_id = this.id
+							mod.modifier.level = pow_h.level
+
+							queue_insert(store, mod)
+						end
+
+						this.health.immune_to = F_ALL
+
+						if SU.y_soldier_animation_wait(this) then
 						-- block empty
 						else
-							a.ts = store.tick_ts
-							needs_cleanup = true
-							mods = {}
+							U.animation_start(this, a.animation .. "_loop", nil, store.tick_ts, true)
 
-							for _, m in ipairs(a.mods) do
-								local mod = E:create_entity(m)
-
-								mod.modifier.target_id = this.id
-								mod.modifier.source_id = this.id
-								mod.modifier.level = pow_h.level
-
-								queue_insert(store, mod)
-								table.insert(mods, mod)
-							end
-
-							this.health._damage_factor = this.health.damage_factor
-							this.health.damage_factor = 0
-
-							if SU.y_soldier_animation_wait(this) then
+							if SU.y_soldier_wait(store, this, a.duration - (store.tick_ts - a.ts)) then
 							-- block empty
 							else
-								U.animation_start(this, a.animation .. "_loop", nil, store.tick_ts, true)
+								U.animation_start(this, a.animation .. "_end", nil, store.tick_ts)
 
-								if SU.y_soldier_wait(store, this, a.duration - (store.tick_ts - a.ts)) then
+								if SU.y_soldier_animation_wait(this) then
 								-- block empty
-								else
-									U.animation_start(this, a.animation .. "_end", nil, store.tick_ts)
-
-									if SU.y_soldier_animation_wait(this) then
-									-- block empty
-									end
 								end
 							end
 						end
+						this.health.immune_to = F_NONE
 					end
 				end
+			end
 
-				local a = a_l
+			local a = a_l
 
-				if not a.disabled and store.tick_ts - a.ts > a.cooldown then
-					local _, enemies = U.find_foremost_enemy(store.entities, this.pos, 0, a.enemies_trigger_range, false, a.vis_flags, a.vis_bans)
+			if not a.disabled and store.tick_ts - a.ts > a.cooldown then
+				if not U.find_first_enemy_in_range_filter_off(this.pos, a.enemies_trigger_range, a.vis_flags, a.vis_bans) then
+					a.ts = a.ts + fts(15)
+				else
+					U.animation_start(this, a.animation, nil, store.tick_ts)
+					S:queue(a.sound)
 
-					if not enemies or enemies and #enemies <= 0 then
-						SU.delay_attack(store, a, fts(15))
-					else
-						U.animation_start(this, a.animation, nil, store.tick_ts)
-						S:queue(a.sound)
+					if SU.y_soldier_wait(store, this, a.hit_time) then
+						goto label_983_0
+					end
 
-						if SU.y_soldier_wait(store, this, a.hit_time) then
-							goto label_983_0
-						end
+					a.ts = store.tick_ts
 
-						a.ts = store.tick_ts
+					SU.insert_sprite(store, a.fx, this.pos)
 
-						SU.insert_sprite(store, a.fx, this.pos)
+					do
+						local e = E:create_entity(a.aura_name)
 
-						do
-							local e = E:create_entity(a.aura_name)
+						e.pos.x, e.pos.y = this.pos.x, this.pos.y
+						e.owner = this
+						e.aura.source_id = this.id
 
-							e.pos.x, e.pos.y = this.pos.x, this.pos.y
-							e.owner = this
-							e.aura.source_id = this.id
+						queue_insert(store, e)
+					end
 
-							queue_insert(store, e)
-						end
-
-						if SU.y_soldier_animation_wait(this) then
-							goto label_983_0
-						end
+					if SU.y_soldier_animation_wait(this) then
+						goto label_983_0
 					end
 				end
 			end

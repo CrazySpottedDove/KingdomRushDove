@@ -821,7 +821,8 @@ upgrades.soldiers = {
 	"soldier_tower_pandas_blue_lvl4",
 	"soldier_tower_rocket_gunners_lvl4",
 	"soldier_tower_ghost_lvl4",
-	"soldier_tower_dwarf_lvl4"
+	"soldier_tower_dwarf_lvl4",
+	"tower_paladin_covenant_soldier_lvl4"
 }
 
 upgrades.barrack_soldiers = {
@@ -847,7 +848,8 @@ upgrades.barrack_soldiers = {
 	"soldier_tower_pandas_blue_lvl4",
 	"soldier_tower_rocket_gunners_lvl4",
 	"soldier_tower_ghost_lvl4",
-	"soldier_tower_dwarf_lvl4"
+	"soldier_tower_dwarf_lvl4",
+	"tower_paladin_covenant_soldier_lvl4"
 }
 
 function upgrades:towers_with_barrack()
@@ -879,7 +881,8 @@ function upgrades:towers_with_barrack()
 		"tower_rocket_gunners_lvl4",
 		"tower_ghost_lvl4",
 		"tower_dwarf_lvl4",
-		"tower_barrel_lvl4"
+		"tower_barrel_lvl4",
+		"tower_paladin_covenant_lvl4"
 	}
 end
 

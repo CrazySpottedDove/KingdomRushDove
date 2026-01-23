@@ -78,7 +78,8 @@ GS.barrack_towers = {
 	"tower_pandas_lvl4",
 	"tower_ghost_lvl4",
 	"tower_dwarf_lvl4",
-	"tower_rocket_gunners_lvl4"
+	"tower_rocket_gunners_lvl4",
+	"tower_paladin_covenant_lvl4"
 }
 GS.soldier_regen_factor = 0.2
 GS.gameplay_tips_count = 21
