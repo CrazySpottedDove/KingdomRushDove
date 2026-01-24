@@ -55119,7 +55119,7 @@ function scripts.tower_stage_17_weirdwood.update(this, store)
 					end
 
 					th.tower.terrain_style = this.tower.terrain_style
-					th.render.sprites[1].name = string.format(th.render.sprites[1].name, e.tower.terrain_style)
+					th.render.sprites[1].name = string.format(th.render.sprites[1].name, this.tower.terrain_style)
 
 					if th.ui and this.ui then
 						th.ui.nav_mesh_id = this.ui.nav_mesh_id
