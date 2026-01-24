@@ -108,7 +108,7 @@ local json = require("lib.json")
 
 if apply_upgrade then
 	https = require("https")
-	local candidate_sites = {"https://krdovedownload6.crazyspotteddove.top:52000/", "https://krdovedonwload4.crazyspotteddove.top/"}
+	local candidate_sites = {"https://krdovedownload6.crazyspotteddove.top:52000/", "https://krdovedownload4.crazyspotteddove.top/"}
 
 	for _, site in ipairs(candidate_sites) do
 		local code, response = https.request(site)
