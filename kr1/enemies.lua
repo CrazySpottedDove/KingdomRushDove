@@ -10175,11 +10175,8 @@ tt.death_spawns.delay = fts(9)
 tt.death_spawns.dead_lifetime = 0
 tt.nodes_to_prevent_dust = b.nodes_to_prevent_dust
 tt = E:register_t("enemy_bane_wolf", "enemy_KR5")
-
 local b = balance.enemies.undying_hatred.bane_wolf
-
 E:add_comps(tt, "melee", "auras")
-
 tt.auras.list[1] = E:clone_c("aura_attack")
 tt.auras.list[1].name = "aura_damage_sprint"
 tt.auras.list[1].cooldown = 0
