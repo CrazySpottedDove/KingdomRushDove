@@ -15,7 +15,6 @@ require("lib.klua.table")
 local log = require("lib.klua.log"):new("hero_boss")
 local km = require("lib.klua.macros")
 local GR = require("grid_db")
-local GS = require("kr1.game_settings")
 local P = require("path_db")
 local SU = require("script_utils")
 local U = require("utils")
@@ -696,6 +695,41 @@ local function melee_slot_enemy_position(enemy, soldier, rank, back)
 	return enemy_pos, enemy_on_the_right
 end
 
+local function y_enemy_melee_attacks(store, this, target)
+	for _, i in ipairs(this.melee.order) do
+		local ma = this.melee.attacks[i]
+		local cooldown = ma.cooldown
+
+		if ma.shared_cooldown then
+			cooldown = this.melee.cooldown
+		end
+
+		if not ma.disabled and cooldown <= store.tick_ts - ma.ts and band(ma.vis_flags, target.vis.bans) == 0 and band(ma.vis_bans, target.vis.flags) == 0 and (not ma.fn_can or ma.fn_can(this, store, ma, target)) then
+			ma.ts = store.tick_ts
+
+			if math.random() >= ma.chance then
+			-- block empty
+			else
+				enemy_do_single_melee_attack(store, this, target, ma)
+
+				while not U.animation_finished(this) do
+					if this.health.dead or ma.ignore_stun and this.unit.is_stunned or this.dodge and this.dodge.active and not this.dodge.silent then
+						return false
+					end
+
+					coroutine.yield()
+				end
+
+				U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+				return true
+			end
+		end
+	end
+
+	return true
+end
+
 tt = RT("hero_boss", "enemy")
 tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"running"}
@@ -1010,7 +1044,9 @@ a.bullet = "arrow_multishot_eb_alleria"
 a.cooldown = 2.6 + fts(29)
 a.min_range = 0
 a = tt.ranged.attacks[3]
-a.disabled = true
+if a then
+	a.disabled = true
+end
 a = tt.timed_attacks.list[1]
 a.entity = "eb_alleria_wildcat"
 tt.main_script.update = function(this, store)
@@ -1669,41 +1705,6 @@ tt.main_script.update = function(this, store)
 	local bma = this.timed_attacks.list[3]
 	local a, brk, sta
 
-	local function y_enemy_melee_attacks(store, this, target)
-		for _, i in ipairs(this.melee.order) do
-			local ma = this.melee.attacks[i]
-			local cooldown = ma.cooldown
-
-			if ma.shared_cooldown then
-				cooldown = this.melee.cooldown
-			end
-
-			if not ma.disabled and cooldown <= store.tick_ts - ma.ts and band(ma.vis_flags, target.vis.bans) == 0 and band(ma.vis_bans, target.vis.flags) == 0 and (not ma.fn_can or ma.fn_can(this, store, ma, target)) then
-				ma.ts = store.tick_ts
-
-				if math.random() >= ma.chance then
-				-- block empty
-				else
-					enemy_do_single_melee_attack(store, this, target, ma)
-
-					while not U.animation_finished(this) do
-						if this.health.dead or ma.ignore_stun and this.unit.is_stunned or this.dodge and this.dodge.active and not this.dodge.silent then
-							return false
-						end
-
-						coroutine.yield()
-					end
-
-					U.animation_start(this, "idle", nil, store.tick_ts, true)
-
-					return true
-				end
-			end
-		end
-
-		return true
-	end
-
 	local function y_enemy_mixed_walk_melee_ranged(store, this, ignore_soldiers, walk_break_fn, melee_break_fn, ranged_break_fn)
 		ranged_break_fn = ranged_break_fn or melee_break_fn
 
@@ -2287,3 +2288,93 @@ tt = RT("eb_10yr_strong", "eb_10yr")
 tt.health.hp_max = 1700
 tt.enemy.gold = 150
 tt.enemy.lives_cost = 5
+
+tt = inherit_from_soldier_template("enemy_sand_warrior", "soldier_sand_warrior")
+local sand_warrior = E:get_template("soldier_sand_warrior")
+tt.health.hp_max = tt.health.hp_max + sand_warrior.health.hp_inc * 3
+tt.main_script.update = scripts.enemy_mixed.update
+
+tt = inherit_from_hero_template("eb_alric", "hero_alric")
+local alric = E:get_template("hero_alric")
+tt.health.hp_max = tt.health.hp_max + alric.hero.skills.toughness.hp_max[3]
+local vs = alric.hero.skills.spikedarmor.values
+for i = 1, #vs do
+	tt.health.spiked_armor = (tt.health.spiked_armor or 0) + vs[i]
+end
+local melee_damage_min = alric.hero.level_stats.melee_damage_min[10] + alric.hero.skills.swordsmanship.extra_damage[3]
+local melee_damage_max = alric.hero.level_stats.melee_damage_max[10] + alric.hero.skills.swordsmanship.extra_damage[3]
+tt.melee.attacks[1].damage_min = melee_damage_min
+tt.melee.attacks[1].damage_max = melee_damage_max
+tt.melee.attacks[2].damage_min = melee_damage_min
+tt.melee.attacks[2].damage_max = melee_damage_max
+tt.melee.attacks[3].damage_min = melee_damage_min
+tt.melee.attacks[3].damage_max = melee_damage_max
+tt.melee.attacks[3].loops = alric.hero.skills.flurry.loops[3]
+tt.timed_attacks.list[1].count = alric.hero.skills.sandwarriors.count[3]
+tt.melee.order = {3, 2, 1}
+tt.main_script.update = function(this, store)
+	this.health_bar.hidden = false
+	local sand = this.timed_attacks.list[1]
+
+	local function sand_ready()
+		return ready_to_attack(sand, store) and this.enemy.can_do_magic
+	end
+
+	while true do
+		if this.health.dead then
+			SU.y_enemy_death(store, this)
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		else
+			if sand_ready() then
+				local start_ts = store.tick_ts
+				S:queue(sand.sound)
+				U.animation_start(this, sand.animation, nil, store.tick_ts, 1)
+				while store.tick_ts - start_ts < sand.spawn_time do
+					if unit_interrupted(this) then
+						goto label_alric_end
+					end
+					coroutine.yield()
+				end
+				sand.ts = start_ts
+
+				for i = 1, sand.count do
+					local spawn = E:create_entity("enemy_sand_warrior")
+					spawn.nav_path.pi = this.nav_path.pi
+					spawn.nav_path.spi = km.zmod(i, 3)
+					spawn.nav_path.ni = this.nav_path.ni + 1
+					spawn.owner_id = this.id
+					queue_insert(store, spawn)
+				end
+
+				while not U.animation_finished(this) do
+					if unit_interrupted(this) then
+						goto label_alric_end
+					end
+					coroutine.yield()
+				end
+			end
+		end
+
+		local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, false, sand_ready)
+		if cont then
+			if blocker then
+				if not SU.y_wait_for_blocker(store, this, blocker) then
+					goto label_alric_end
+				end
+
+				while SU.can_melee_blocker(store, this, blocker) do
+					if not y_enemy_melee_attacks(store, this, blocker) then
+						goto label_alric_end
+					end
+
+					coroutine.yield()
+				end
+			end
+		end
+		::label_alric_end::
+	end
+end

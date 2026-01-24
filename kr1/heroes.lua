@@ -2904,9 +2904,7 @@ tt.particle_system.emission_rate = 20
 --#endregion
 --#region hero_alric
 tt = RT("hero_alric", "hero")
-
 AC(tt, "melee", "timed_attacks", "transfer")
-
 anchor_y = 0.09
 image_y = 90
 tt.hero.level_stats.armor = {0.38, 0.41, 0.44, 0.47, 0.5, 0.53, 0.56, 0.59, 0.62, 0.65}
