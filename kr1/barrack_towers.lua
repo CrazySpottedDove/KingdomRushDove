@@ -3472,7 +3472,7 @@ tt.soldier.melee_slot_offset = v(8, 0)
 
 --#region tower_paladin_covenant_soldier_lvl4_healing_mod
 tt = RT("tower_paladin_covenant_soldier_lvl4_healing_mod", "modifier")
-AC(tt, "hps", "render")
+AC(tt, "hps")
 b = balance.towers.paladin_covenant
 tt.modifier.duration = b.healing_prayer.duration
 tt.modifier.resets_same = false

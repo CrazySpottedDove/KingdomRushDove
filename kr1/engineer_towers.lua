@@ -26,9 +26,7 @@ require("game_templates_utils")
 
 --#region tower_bfg
 tt = RT("tower_bfg", "tower")
-
 AC(tt, "attacks", "powers")
-
 image_y = 120
 tt.tower.type = "bfg"
 tt.tower.level = 1

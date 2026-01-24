@@ -114,22 +114,21 @@ while not boss.bossfight_ended do
 coroutine.yield()
 end
 signal.emit("boss_fight_end")
-store.custom_game_outcome={postpone_unload=true,next_item_name="boss_fight_5_end"}
 signal.emit("fade-out",1)
 elseif store.level_mode==GAME_MODE_IRON then
 local starting_gold=store.player_gold
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="1"
 end)[1]
-holder.tower.upgrade_to="tower_dark_elf_lvl1"
+holder.tower.upgrade_to="tower_archer_1"
 holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="4"
 end)[1]
-holder.tower.upgrade_to="tower_dark_elf_lvl1"
+holder.tower.upgrade_to="tower_archer_1"
 holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="11"
 end)[1]
-holder.tower.upgrade_to="tower_dark_elf_lvl1"
+holder.tower.upgrade_to="tower_archer_1"
 coroutine.yield()
 store.player_gold=starting_gold
 end

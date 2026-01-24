@@ -3402,3 +3402,17 @@ tt.mod_heal = "mod_bullet_stage_19_navira_heal"
 tt.sound_transform_in = "Stage19NaviraTornadoIn"
 tt.sound_transform_out = "Stage19NaviraTornadoOut"
 tt.sound_death = "Stage19NaviraDeath"
+
+tt = E:register_t("aura_boss_navira_tornado", "aura")
+b = balance.enemies.undying_hatred.boss_navira.tornado
+tt.aura.damage_min = b.damage
+tt.aura.damage_max = b.damage
+tt.aura.damage_type = b.damage_type
+tt.aura.radius = b.radius
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = bor(F_FLYING, F_ENEMY)
+tt.aura.cycle_time = b.cycle_time
+tt.aura.duration = 1e+99
+tt.aura.track_source = true
+tt.main_script.insert = scripts.aura_apply_damage.insert
+tt.main_script.update = scripts.aura_apply_damage.update

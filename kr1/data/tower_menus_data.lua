@@ -2797,5 +2797,15 @@ return {
 		place = 5,
 		tt_title = _("TOWER_STAGE_13_SUNRAY_REPAIR_NAME"),
 		tt_desc = _("TOWER_STAGE_13_SUNRAY_REPAIR_DESCRIPTION")
-	}}}
+	}}},
+	tower_stage_18_elven_barrack = {{{
+		check = "main_icons_0019",
+		action_arg = "soldier_tower_stage_18_elven_barrack",
+		action = "tw_buy_soldier",
+		halo = "glow_ico_main",
+		image = "kr5_main_icons_0033",
+		place = 5,
+		tt_title = _("SPECIAL_SOLDIER_TOWER_ELVEN_BARRACK_NAME"),
+		tt_desc = _("SPECIAL_SOLDIER_TOWER_ELVEN_BARRACK_DESCRIPTION")
+	}, tpl.rally}}
 }

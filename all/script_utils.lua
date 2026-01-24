@@ -4376,28 +4376,6 @@ local function y_controable_new_rally(store, this)
 	end
 end
 
----更新实体受伤回调
----@param entity table 实体
-local function update_on_damage(entity)
-	entity.health.on_damage = function(this, store, damage)
-		if #entity.health.on_damages == 0 then
-			return true
-		end
-
-		local pass = false
-
-		for _, on_damage in pairs(entity.health.on_damages) do
-			pass = on_damage(this, store, damage)
-
-			if not pass then
-				return false
-			end
-		end
-
-		return pass
-	end
-end
-
 ---获取实体所有可用攻击
 ---@param e table 实体
 ---@return table 所有攻击
@@ -4714,7 +4692,6 @@ local SU = {
 	insert_tower_damage_factor_buff = insert_tower_damage_factor_buff,
 	remove_tower_damage_factor_buff = remove_tower_damage_factor_buff,
 	y_controable_new_rally = y_controable_new_rally,
-	update_on_damage = update_on_damage,
 	get_entity_all_attacks = get_entity_all_attacks,
 	reset_all_attacks_ts = reset_all_attacks_ts,
 	towers_swaped = towers_swaped,

@@ -20224,19 +20224,7 @@ function scripts.mod_hero_space_elf_black_aegis.insert(this, store)
 
 	m.ts = store.tick_ts
 
-	if not target.health.on_damages then
-		target.health.on_damages = {}
-
-		if target.health.on_damage then
-			target.health.on_damages[1] = target.health.on_damage
-		end
-	end
-
-	target.health.on_damages[#target.health.on_damages + 1] = scripts.mod_hero_space_elf_black_aegis.on_damage
-	this.on_damages_index = #target.health.on_damages
-
-	SU.update_on_damage(target)
-
+	this.on_damages_index = U.insert_on_damage(target, scripts.mod_hero_space_elf_black_aegis.on_damage)
 	this._hit_sources = {}
 	this._blood_color = target.unit.blood_color
 	target.unit.blood_color = BLOOD_NONE
@@ -20252,9 +20240,7 @@ function scripts.mod_hero_space_elf_black_aegis.remove(this, store)
 	local target = store.entities[m.target_id]
 
 	if target then
-		target.health.on_damages[this.on_damages_index] = nil
-
-		SU.update_on_damage(target)
+		U.remove_on_damage(target, this.on_damages_index)
 
 		target._shield_mod_black_aegis = nil
 		target.unit.blood_color = this._blood_color
@@ -21128,18 +21114,7 @@ function scripts.hero_raelyn_unbreakable_mod.insert(this, store)
 
 	m.ts = store.tick_ts
 
-	if not target.health.on_damages then
-		target.health.on_damages = {}
-
-		if target.health.on_damage then
-			target.health.on_damages[1] = target.health.on_damage
-		end
-	end
-
-	target.health.on_damages[#target.health.on_damages + 1] = scripts.hero_raelyn_unbreakable_mod.on_damage
-	this.on_damages_index = #target.health.on_damages
-
-	SU.update_on_damage(target)
+	this.on_damages_index = U.insert_on_damage(target, scripts.hero_raelyn_unbreakable_mod.on_damage)
 
 	this._hit_sources = {}
 	this._blood_color = target.unit.blood_color
@@ -21156,10 +21131,7 @@ function scripts.hero_raelyn_unbreakable_mod.remove(this, store)
 	local target = store.entities[m.target_id]
 
 	if target then
-		target.health.on_damages[this.on_damages_index] = nil
-
-		SU.update_on_damage(target)
-
+		U.remove_on_damage(target, this.on_damages_index)
 		target._shield_mod_unbreakable = nil
 		target.unit.blood_color = this._blood_color
 	end

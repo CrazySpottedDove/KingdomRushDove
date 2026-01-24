@@ -6404,89 +6404,91 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
 		local total_cost = 0
 
 		for k, v in pairs(game_gui.game.store.towers) do
-			local new_tower = E:create_entity(item.action_arg)
+			if v.tower.type == "holder" then
+				local new_tower = E:create_entity(item.action_arg)
 
-			game_gui.game.store.criket.tower_name = new_tower.template_name
-			new_tower.pos = V.vclone(v.pos)
-			new_tower.tower.holder_id = v.tower.holder_id
-			new_tower.tower.flip_x = v.tower.flip_x
+				game_gui.game.store.criket.tower_name = new_tower.template_name
+				new_tower.pos = V.vclone(v.pos)
+				new_tower.tower.holder_id = v.tower.holder_id
+				new_tower.tower.flip_x = v.tower.flip_x
 
-			if v.tower.default_rally_pos then
-				new_tower.tower.default_rally_pos = V.vclone(v.tower.default_rally_pos)
-			end
-
-			if v.tower.terrain_style then
-				new_tower.tower.terrain_style = v.tower.terrain_style
-				new_tower.render.sprites[1].name = string.format(new_tower.render.sprites[1].name, v.tower.terrain_style)
-			end
-
-			if new_tower.ui and v.ui then
-				new_tower.ui.nav_mesh_id = v.ui.nav_mesh_id
-			end
-
-			queue_remove(game_gui.game.store, v)
-			queue_insert(game_gui.game.store, new_tower)
-
-			game_gui.game.store.towers[k] = new_tower
-
-			if new_tower.powers then
-				for _, p in pairs(new_tower.powers) do
-					p.level = p.max_level
-					p.changed = true
+				if v.tower.default_rally_pos then
+					new_tower.tower.default_rally_pos = V.vclone(v.tower.default_rally_pos)
 				end
-			end
 
-			if new_tower.barrack then
-				if game_gui.game.store.criket and game_gui.game.store.criket.on then
-					local path_index = game_gui.game.store.criket.groups[1].path_index
-					-- local nodes = P:nearest_nodes(new_tower.pos.x, new_tower.pos.y, {path_index}, {1}, true)
-					local nodes = P.paths[path_index][1]
-					local i = 1
+				if v.tower.terrain_style then
+					new_tower.tower.terrain_style = v.tower.terrain_style
+					new_tower.render.sprites[1].name = string.format(new_tower.render.sprites[1].name, v.tower.terrain_style)
+				end
 
-					while i <= #nodes and not U.is_inside_ellipse(nodes[i], new_tower.pos, new_tower.barrack.rally_range) do
-						i = i + 1
+				if new_tower.ui and v.ui then
+					new_tower.ui.nav_mesh_id = v.ui.nav_mesh_id
+				end
+
+				queue_remove(game_gui.game.store, v)
+				queue_insert(game_gui.game.store, new_tower)
+
+				game_gui.game.store.towers[k] = new_tower
+
+				if new_tower.powers then
+					for _, p in pairs(new_tower.powers) do
+						p.level = p.max_level
+						p.changed = true
 					end
+				end
 
-					if i > #nodes then
-						new_tower.barrack.rally_pos = V.vclone(new_tower.tower.default_rally_pos)
-					else
-						if i == 1 then
-							i = 2
+				if new_tower.barrack then
+					if game_gui.game.store.criket and game_gui.game.store.criket.on then
+						local path_index = game_gui.game.store.criket.groups[1].path_index
+						-- local nodes = P:nearest_nodes(new_tower.pos.x, new_tower.pos.y, {path_index}, {1}, true)
+						local nodes = P.paths[path_index][1]
+						local i = 1
+
+						while i <= #nodes and not U.is_inside_ellipse(nodes[i], new_tower.pos, new_tower.barrack.rally_range) do
+							i = i + 1
 						end
 
-						new_tower.barrack.rally_pos = V.vclone(nodes[i - 1])
+						if i > #nodes then
+							new_tower.barrack.rally_pos = V.vclone(new_tower.tower.default_rally_pos)
+						else
+							if i == 1 then
+								i = 2
+							end
+
+							new_tower.barrack.rally_pos = V.vclone(nodes[i - 1])
+						end
+					else
+						new_tower.barrack.rally_pos = V.vclone(new_tower.tower.default_rally_pos)
 					end
-				else
-					new_tower.barrack.rally_pos = V.vclone(new_tower.tower.default_rally_pos)
 				end
-			end
 
-			if new_tower.mercenary then
-				for i = 1, new_tower.barrack.max_soldiers do
-					new_tower.barrack.soldiers[i] = E:create_entity(new_tower.barrack.soldier_type)
-					new_tower.barrack.soldiers[i].health.dead = true
-					new_tower.barrack.soldiers[i].id = -1
+				if new_tower.mercenary then
+					for i = 1, new_tower.barrack.max_soldiers do
+						new_tower.barrack.soldiers[i] = E:create_entity(new_tower.barrack.soldier_type)
+						new_tower.barrack.soldiers[i].health.dead = true
+						new_tower.barrack.soldiers[i].id = -1
+					end
 				end
-			end
 
-			if table.contains(GS.archer_towers, new_tower.template_name) then
-				total_cost = total_cost + E:get_template("tower_archer_1").tower.price + E:get_template("tower_archer_2").tower.price + E:get_template("tower_archer_3").tower.price
-			elseif table.contains(GS.mage_towers, new_tower.template_name) then
-				total_cost = total_cost + E:get_template("tower_mage_1").tower.price + E:get_template("tower_mage_2").tower.price + E:get_template("tower_mage_3").tower.price
-			elseif table.contains(GS.engineer_towers, new_tower.template_name) then
-				total_cost = total_cost + E:get_template("tower_engineer_1").tower.price + E:get_template("tower_engineer_2").tower.price + E:get_template("tower_engineer_3").tower.price
-			elseif table.contains(GS.barrack_towers, new_tower.template_name) then
-				total_cost = total_cost + E:get_template("tower_barrack_1").tower.price + E:get_template("tower_barrack_2").tower.price + E:get_template("tower_barrack_3").tower.price
-			end
+				if table.contains(GS.archer_towers, new_tower.template_name) then
+					total_cost = total_cost + E:get_template("tower_archer_1").tower.price + E:get_template("tower_archer_2").tower.price + E:get_template("tower_archer_3").tower.price
+				elseif table.contains(GS.mage_towers, new_tower.template_name) then
+					total_cost = total_cost + E:get_template("tower_mage_1").tower.price + E:get_template("tower_mage_2").tower.price + E:get_template("tower_mage_3").tower.price
+				elseif table.contains(GS.engineer_towers, new_tower.template_name) then
+					total_cost = total_cost + E:get_template("tower_engineer_1").tower.price + E:get_template("tower_engineer_2").tower.price + E:get_template("tower_engineer_3").tower.price
+				elseif table.contains(GS.barrack_towers, new_tower.template_name) then
+					total_cost = total_cost + E:get_template("tower_barrack_1").tower.price + E:get_template("tower_barrack_2").tower.price + E:get_template("tower_barrack_3").tower.price
+				end
 
-			total_cost = total_cost + new_tower.tower.price
+				total_cost = total_cost + new_tower.tower.price
 
-			for _, p in pairs(new_tower.powers) do
-				total_cost = total_cost + p.price_base + p.price_inc * (p.max_level - 1)
-			end
+				for _, p in pairs(new_tower.powers) do
+					total_cost = total_cost + p.price_base + p.price_inc * (p.max_level - 1)
+				end
 
-			if new_tower.mercenary then
-				total_cost = total_cost + E:get_template(new_tower.barrack.soldier_type).unit.price
+				if new_tower.mercenary then
+					total_cost = total_cost + E:get_template(new_tower.barrack.soldier_type).unit.price
+				end
 			end
 		end
 

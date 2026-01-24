@@ -1162,7 +1162,7 @@ function sys.main_script:on_update(dt, ts, store)
 			if coroutine.status(s.co) == "dead" or (not success and err ~= nil) then
 				if not success and err ~= nil then
 					-- log.error("Error running coro: %s", debug.traceback(s.co, error))
-					log.error("Error running coro: " .. err .. debug.traceback(s.co))
+					log.error("Error running " .. e.template_name .. " coro: " .. err .. debug.traceback(s.co))
 
 					if LLDEBUGGER then
 						LLDEBUGGER.start()
@@ -2553,6 +2553,9 @@ function sys.render:on_update(dt, ts, store)
 			else
 				s.sync_flag = last_runs ~= s.runs
 				s.ss = I:s(fn)
+			-- if s.ss == nil then
+			--     log.error("Failed to get sprite for entity %s, frame name: %s", e.template_name or e.id, fn)
+			-- end
 			end
 
 			if s._track_e then

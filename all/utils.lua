@@ -2855,4 +2855,52 @@ function U.heal(target, amount)
 	end
 end
 
+---更新实体受伤回调
+---@param entity table 实体
+local function update_on_damage(entity)
+	entity.health.on_damage = function(this, store, damage)
+		if #entity.health.on_damages == 0 then
+			return true
+		end
+
+		local pass = false
+
+		for _, on_damage in pairs(entity.health.on_damages) do
+			pass = on_damage(this, store, damage)
+
+			if not pass then
+				return false
+			end
+		end
+
+		return pass
+	end
+end
+
+--- 插入实体受伤回调
+---@param entity table
+---@param func function(this, store, damage)
+---@return number 回调索引
+function U.insert_on_damage(entity, func)
+	if not entity.health.on_damages then
+		entity.health.on_damages = {}
+
+		if entity.health.on_damage then
+			entity.health.on_damages[1] = entity.health.on_damage
+		end
+	end
+	local index = #entity.health.on_damages + 1
+	entity.health.on_damages[index] = func
+	update_on_damage(entity)
+	return index
+end
+
+--- 移除实体受伤回调
+---@param entity table
+---@param index number 回调索引
+function U.remove_on_damage(entity, index)
+	entity.health.on_damages[index] = nil
+	update_on_damage(entity)
+end
+
 return U

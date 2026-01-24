@@ -16709,7 +16709,7 @@ tt.render.sprites[1].animated = true
 tt = E:register_t("fx_enemy_specter_hit", "fx")
 tt.render.sprites[1].name = "spectre_fx_idle"
 tt = E:register_t("fx_enemy_revenant_harvester_hit", "fx")
-tt.render.sprites[1].name = "harvester_hit_fx"
+tt.render.sprites[1].prefix = "harvester_hit_fx"
 tt = E:register_t("fx_stage_19_statue_hands_dust_1", "fx")
 tt.render.sprites[1].prefix = "navira_hands_dust_01"
 tt.render.sprites[1].name = "idle"
@@ -17370,3 +17370,482 @@ tt = E:register_t("decal_hero_muyrn_verdant_blast_hit", "decal")
 tt.render.sprites[1].name = "hero_nyru_verdant_blast_explosion_decal"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].hide_after_runs = 1
+
+tt = E:register_t("fx_bullet_tower_stage_17_weirdwood", "fx")
+tt.render.sprites[1].prefix = "tower_tree_projectile_explosionDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].offset = v(0, -20)
+tt = E:register_t("fx_tower_stage_17_weirdwood_leafless", "fx")
+tt.render.sprites[1].prefix = "tower_tree_leaflessFXDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].offset = v(0, -50)
+tt = E:register_t("fx_tower_stage_17_weirdwood_transformation", "fx")
+tt.render.sprites[1].prefix = "tower_tree_transformationFXDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt = E:register_t("fx_bullet_enemy_deathwood", "fx")
+tt.render.sprites[1].prefix = "deathwood_spirit_ball"
+tt.render.sprites[1].name = "hit"
+tt = E:register_t("fx_enemy_deathwood_hit", "fx")
+tt.render.sprites[1].prefix = "deathwood_fx"
+tt.render.sprites[1].name = "idle"
+tt = E:register_t("fx_tower_stage_18_elven_barrrack_transformation", "fx")
+tt.render.sprites[1].prefix = "elven_barracks_statechange"
+tt.render.sprites[1].name = "idle"
+tt = E:register_t("fx_tower_stage_18_elven_barrrack_state_change", "fx")
+tt.render.sprites[1].prefix = "elven_barracks_specterattack"
+tt.render.sprites[1].name = "idle"
+tt = E:register_t("fx_bullet_enemy_revenant_soulcaller_tower", "fx")
+tt.render.sprites[1].prefix = "revenant_soulcaller_proy"
+tt.render.sprites[1].name = "hit"
+tt = E:register_t("fx_bullet_enemy_revenant_soulcaller_tower_stun", "fx")
+tt.render.sprites[1].prefix = "revenant_soulcaller_transform"
+tt.render.sprites[1].name = "idle"
+
+tt = E:register_t("tower_stage_17_weirdwood", "tower_KR5")
+b = balance.specials.towers.stage_17_weirdwood
+E:add_comps(tt, "attacks", "vis", "corruption_kr5")
+tt.tower.type = "weirdwood"
+tt.tower.level = 1
+tt.tower.kind = TOWER_KIND_ENGINEER
+tt.tower.can_be_sold = false
+tt.tower.terrain_style = TERRAIN_STYLE_SEA_OF_TREES_6
+tt.tower.range_offset = v(0, 10)
+tt.tower.price = 0
+tt.info.portrait = "kr5_portraits_towers_0021"
+tt.main_script.update = scripts.tower_stage_17_weirdwood.update
+tt.attacks.range = b.basic_attack.max_range
+tt.attacks.load_time = fts(54)
+tt.attacks.list[1] = E:clone_c("bullet_attack")
+tt.attacks.list[1].animation = "attack_shoot"
+tt.attacks.list[1].bullet = "bullet_tower_stage_17_weirdwood"
+tt.attacks.list[1].cooldown = b.basic_attack.cooldown
+tt.attacks.list[1].shoot_time = fts(1.5)
+tt.attacks.list[1].bullet_start_offset = v(-38, 94)
+tt.attacks.list[1].vis_bans = bor(F_FLYING)
+tt.attacks.list[1].node_prediction = true
+tt.attacks.list[1].min_range = b.basic_attack.min_range
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrain_artillery_%04i"
+tt.render.sprites[1].offset = v(0, 10)
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "tower_treeDef"
+tt.render.sprites[2].name = "a_idle"
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].exo = true
+tt.render.sprites[2].offset = v(0, 5)
+tt.tower_sid = 2
+tt.sound_events.insert = nil
+tt.corruption_kr5.corruption_phases = b.corruption_phases
+tt.corruption_kr5.limit = b.corruption_limit
+tt.corruption_kr5.on_corrupt = scripts.tower_stage_17_weirdwood.on_corrupt
+tt.corruption_kr5.spawn = "enemy_deathwood"
+tt.corruption_kr5.spawn_path = 2
+tt.leafless_fx = "fx_tower_stage_17_weirdwood_leafless"
+tt.transformation_fx = "fx_tower_stage_17_weirdwood_transformation"
+tt.holder_cost = b.holder_cost
+tt.editor.props = {{"corruption_kr5.spawn_path", PT_NUMBER}}
+tt.sound_corruption = "TowerWeirdwoodCorruption"
+tt.sound_transform = "TowerWeirdwoodTransform"
+
+tt = E:register_t("tower_stage_18_elven_barrack", "tower_KR5")
+b = balance.specials.towers.stage_18_elven_barrack
+E:add_comps(tt, "vis", "barrack", "corruption_kr5")
+tt.tower.type = "tower_stage_18_elven_barrack"
+tt.tower.level = 1
+tt.tower.kind = TOWER_KIND_BARRACK
+tt.tower.can_be_sold = false
+tt.tower.can_be_mod = false
+tt.tower.terrain_style = TERRAIN_STYLE_SEA_OF_TREES_6
+tt.tower.menu_offset = v(0, 22)
+tt.tower.price = 0
+tt.info.portrait = "kr5_portraits_towers_0022"
+tt.info.fn = scripts.tower_barrack_mercenaries.get_info
+tt.main_script.update = scripts.tower_stage_18_elven_barrack.update
+tt.main_script.remove = scripts.tower_stage_18_elven_barrack.remove
+function tt.main_script.insert(this, store, script)
+	if this.render.sprites[1].flip_x then
+		this.barrack.respawn_offset.x = this.barrack.respawn_offset.x * -1
+	end
+
+	return scripts.tower_barrack.insert(this, store, script)
+end
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrain_barrack_%04i"
+tt.render.sprites[1].offset = v(0, 8)
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "elven_barracks_tower1"
+tt.render.sprites[2].sort_y_offset = 10
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].prefix = "elven_barracks_tower_door"
+tt.render.sprites[3].name = "close"
+tt.render.sprites[3].loop = false
+tt.render.sprites[3].sort_y_offset = 10
+tt.render.door_sid = 3
+tt.barrack.soldier_type = "soldier_tower_stage_18_elven_barrack"
+tt.barrack.rally_range = b.rally_range
+tt.barrack.respawn_offset = v(0, -8)
+tt.barrack.max_soldiers = 3
+tt.barrack.current_soldiers = 0
+tt.sound_events.change_rally_point = "TowerElvenBarrackUnitTaunt"
+tt.corruption_kr5.corruption_phases = b.corruption_phases
+tt.corruption_kr5.limit = b.corruption_limit
+tt.corruption_kr5.on_corrupt = scripts.tower_stage_18_elven_barrack.on_corrupt
+tt.corruption_kr5.spawn = "spawner_stage_18_elven_barrack"
+tt.current_phase = 1
+tt.phases = {"1", "2", "3"}
+tt.state_change_fx = "fx_tower_stage_18_elven_barrrack_state_change"
+tt.transformation_fx = "fx_tower_stage_18_elven_barrrack_transformation"
+tt.soldiers_bought = 0
+
+tt = E:register_t("soldier_tower_stage_18_elven_barrack", "soldier_militia")
+E:add_comps(tt, "nav_grid")
+b = balance.specials.towers.stage_18_elven_barrack.soldier
+tt.info.portrait = "kr5_info_portraits_soldiers_0037"
+tt.info.random_name_count = 6
+tt.info.random_name_format = "SOLDIER_TOWER_ELVEN_BARRACK_%i_NAME"
+tt.main_script.insert = scripts.soldier_barrack.insert
+tt.main_script.update = scripts.soldier_barrack.update
+tt.render.sprites[1].prefix = "elven_barracks_elven_soldier"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].angles.walk = {"walk"}
+tt.unit.hit_offset = v(0, 12)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 13)
+tt.unit.price = 75 --b.price
+tt.unit.fade_time_after_death = 4
+tt.health.armor = b.armor
+tt.health.hp_max = b.hp
+tt.health_bar.offset = v(0, 33)
+tt.health.dead_lifetime = b.dead_lifetime
+tt.regen.health = b.regen_hp
+tt.motion.max_speed = b.speed
+tt.melee.range = b.basic_attack.range
+tt.melee.attacks[1].cooldown = b.basic_attack.cooldown
+tt.melee.attacks[1].damage_min = b.basic_attack.damage_min
+tt.melee.attacks[1].damage_max = b.basic_attack.damage_max
+tt.melee.attacks[1].hit_time = fts(12)
+tt.soldier.melee_slot_spread = v(-8, -8)
+tt.sound_events.insert = "TowerElvenBarrackUnitTaunt"
+tt.sound_events.death = "TowerPaladinCovenantUnitDeath"
+tt.ui.click_rect = r(-13, -2, 26, 28)
+
+tt = E:register_t("spawner_stage_18_elven_barrack", "decal_scripted")
+E:add_comps(tt, "tween", "corruption_kr5")
+b = balance.specials.towers.stage_18_elven_barrack
+tt.main_script.update = scripts.spawner_stage_18_elven_barrack.update
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrains_0006"
+tt.render.sprites[1].offset = v(0, 8)
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "elven_barracks_tower4_base_0002"
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].animated = false
+tt.render.sprites[3].name = "elven_barracks_tower4_top_0002"
+tt.render.sprites[4] = E:clone_c("sprite")
+tt.render.sprites[4].animated = false
+tt.render.sprites[4].name = "elven_barracks_tower4_detail_0002"
+tt.render.sprites[5] = table.deepclone(tt.render.sprites[2])
+tt.render.sprites[5].name = "elven_barracks_tower4_base_0001"
+tt.render.sprites[5].alpha = 0
+tt.render.sprites[6] = table.deepclone(tt.render.sprites[3])
+tt.render.sprites[6].name = "elven_barracks_tower4_top_0001"
+tt.render.sprites[6].alpha = 0
+tt.render.sprites[7] = table.deepclone(tt.render.sprites[4])
+tt.render.sprites[7].name = "elven_barracks_tower4_detail_0001"
+tt.render.sprites[7].alpha = 0
+
+local floating_sprites = {3, 4, 6, 7}
+local i = 1
+
+for k, sid in pairs(floating_sprites) do
+	tt.tween.props[i] = E:clone_c("tween_prop")
+	tt.tween.props[i].name = "offset"
+
+	local start_offset = tt.render.sprites[sid].offset
+	local end_offset = v(start_offset.x, start_offset.y + 2.5)
+
+	tt.tween.props[i].keys = {{0, start_offset}, {1.5, end_offset}, {3, start_offset}}
+	tt.tween.props[i].sprite_id = sid
+	tt.tween.props[i].loop = true
+	tt.tween.props[i].interp = "sine"
+	i = i + 1
+end
+
+tt.tween.remove = false
+tt.corruption_kr5.on_corrupt = scripts.spawner_stage_18_elven_barrack.on_corrupt
+tt.corruption_kr5.spawn = "enemy_animated_armor"
+tt.corruption_kr5.enabled = false
+tt.spawn_cd = b.spawn_cooldown
+
+tt = E:register_t("bullet_tower_stage_17_weirdwood", "bombKR5")
+b = balance.specials.towers.stage_17_weirdwood.basic_attack
+tt.bullet.flight_time = fts(28)
+tt.bullet.hit_fx = "fx_bullet_tower_stage_17_weirdwood"
+tt.bullet.hit_decal = "decal_bullet_tower_stage_17_weirdwood"
+tt.bullet.pop = {"pop_artillery"}
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_max = b.damage_max
+tt.bullet.damage_radius = b.damage_radius
+tt.bullet.pop = {"pop_entwood"}
+tt.render.sprites[1].name = "tower_tree_projectile_asst_projectile"
+tt.sound_events.insert = "TowerWeirdwoodBasicAttackCast"
+tt.sound_events.hit = "TowerWeirdwoodBasicAttackHit"
+tt.sound_events.hit_water = "RTWaterExplosion"
+tt = E:register_t("bullet_enemy_corrupted_elf", "arrow5_45degrees")
+b = balance.enemies.undying_hatred.corrupted_elf
+tt.render.sprites[1].name = "corrupted_ranger_arrow"
+tt.render.sprites[1].animated = false
+tt.bullet.asymmetrical = true
+tt.bullet.damage_min = b.ranged_attack.damage_min
+tt.bullet.damage_max = b.ranged_attack.damage_max
+tt.bullet.flight_time = fts(10)
+tt.bullet.g = -0.7 / (fts(1) * fts(1))
+tt.bullet.miss_decal = "corrupted_ranger_arrow_miss"
+tt.bullet.pop = nil
+tt.bullet.predict_target_pos = false
+tt.bullet.particles_name = "ps_bullet_enemy_corrupted_elf"
+tt = E:register_t("bullet_enemy_deathwood", "bombKR5")
+b = balance.enemies.undying_hatred.deathwood.ranged_attack
+tt.main_script.update = scripts.enemy_bomb.update
+tt.bullet.flight_time = fts(28)
+tt.bullet.hit_fx = "fx_bullet_enemy_deathwood"
+tt.bullet.pop = {"pop_artillery"}
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_max = b.damage_max
+tt.bullet.damage_radius = b.damage_radius
+tt.bullet.pop = {"pop_entwood"}
+tt.bullet.align_with_trajectory = true
+tt.render.sprites[1].prefix = "deathwood_ball_fx"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_BULLET_PARTICLES
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "deathwood_spirit_ball"
+tt.render.sprites[2].name = "idle"
+tt.render.sprites[2].animated = true
+tt.sound_events.insert = "EnemyDeathwoodRangedAttackCast"
+tt.sound_events.hit = "EnemyDeathwoodRangedAttackImpact"
+tt.sound_events.hit_water = "RTWaterExplosion"
+tt = E:register_t("bullet_enemy_revenant_soulcaller", "bolt_enemy")
+
+local b = balance.enemies.undying_hatred.revenant_soulcaller
+
+tt.bullet.vis_flags = F_RANGED
+tt.bullet.vis_bans = 0
+tt.render.sprites[1].prefix = "revenant_soulcaller_proy"
+tt.bullet.pop = nil
+tt.bullet.pop_conds = nil
+tt.bullet.acceleration_factor = 0.5
+tt.bullet.damage_min = b.ranged_attack.damage_min
+tt.bullet.damage_max = b.ranged_attack.damage_max
+tt.bullet.max_speed = 360
+tt.bullet.hit_fx = "fx_bullet_enemy_revenant_soulcaller_tower_stun"
+tt.bullet.particles_name = "ps_bullet_enemy_revenant_soulcaller"
+tt.bullet.damage_type = b.ranged_attack.damage_type
+tt.bullet.align_with_trajectory = true
+tt.sound_events.insert = "EnemyRevenantSoulcallerAttackCast"
+tt = E:register_t("bullet_enemy_revenant_soulcaller_tower_stun", "bullet_enemy_revenant_soulcaller")
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.hit_fx = "fx_bullet_enemy_revenant_soulcaller_tower_stun"
+tt.bullet.hit_mod = "mod_enemy_revenant_soulcaller_branches"
+tt.main_script.update = scripts.bullet_enemy_revenant_soulcaller_tower_stun.update
+tt = E:register_t("bullet_stage_18_eridan_arrow", "arrow5_45degrees")
+b = balance.specials.stage18_eridan.ranged_attack
+tt.render.sprites[1].name = "eridan_s18_arrow"
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_max = b.damage_max
+tt.bullet.damage_type = b.damage_type
+tt.bullet.fixed_height = 50
+tt.bullet.miss_decal = "eridan_s18_arrow_miss"
+tt.bullet.particles_name = "ps_bullet_stage_18_eridan_arrow"
+tt = E:register_t("bullet_stage_19_navira_fire_ball_ray", "bullet")
+tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.hit_time = fts(24)
+tt.bullet.mod = "mod_bullet_stage_19_navira_fire_ball_ray_stun"
+tt.hit_fx_only_no_target = true
+tt.image_width = 186
+tt.main_script.update = scripts.bullet_stage_19_navira_fire_ball_ray.update
+tt.render.sprites[1].anchor = v(0.45, 0.5)
+tt.render.sprites[1].prefix = "navira_soulray"
+tt.render.sprites[1].loop = false
+
+tt = E:register_t("decal_bullet_tower_stage_17_weirdwood", "decal_tween")
+tt.render.sprites[1].name = "tower_tree_explosion_decal_asst_explosion_decal"
+tt.render.sprites[1].animated = false
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {1, 255}, {2, 0}}
+tt.tween.remove = true
+
+tt = E:register_t("ps_bullet_enemy_corrupted_elf")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "corrupted_ranger_arrow_particle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.emission_rate = 30
+tt.particle_system.emit_area_spread = v(5, 5)
+tt.particle_system.emit_rotation_spread = math.pi * 2
+tt = E:register_t("ps_bullet_enemy_revenant_soulcaller")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.anchor = v(0.5, 0.5)
+tt.particle_system.name = "revenant_soulcaller_proy_copy_trail"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(6), fts(6)}
+tt.particle_system.emission_rate = 30
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt.particle_system.scales_y = {1, 0.75}
+tt = E:register_t("ps_bullet_stage_18_eridan_arrow")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.anchor = v(0.5, 0.5)
+tt.particle_system.name = "eridan_s18_arrow_particle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(11), fts(11)}
+tt.particle_system.emission_rate = 100
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt.particle_system.scales_y = {1, 0.75}
+
+tt = E:register_t("ps_enemy_specter_chase_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "spectre_specter_rush_particle_rush_particle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(29), fts(29)}
+tt.particle_system.emission_rate = 20
+tt.particle_system.emit_area_spread = v(5, 5)
+tt.particle_system.emit_rotation_spread = math.pi * 2
+tt.particle_system.emit_offset = v(0, 16)
+tt.particle_system.scales_y = {0.9, 1.1}
+tt.particle_system.scales_x = {0.9, 1.1}
+tt = E:register_t("ps_bullet_crocs_hydra_tower_debuff")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "hydra_projectile_trail"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 15
+tt.particle_system.animation_fps = 30
+tt.particle_system.emit_area_spread = v(10, 0)
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.z = Z_BULLET_PARTICLES
+
+tt = E:register_t("aura_enemy_dust_cryptid", "aura")
+b = balance.enemies.undying_hatred.dust_cryptid
+tt.aura.mod = "mod_enemy_dust_cryptid"
+tt.aura.radius = b.dust_radius
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = bor(F_FRIEND)
+tt.aura.cycle_time = 0.2
+tt.aura.duration = b.dust_duration
+tt.aura.track_source = false
+tt.main_script.insert = scripts.aura_enemy_dust_cryptid.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.main_script.remove = scripts.aura_enemy_dust_cryptid.remove
+tt.decal_t = "decal_enemy_dust_cryptid_dust"
+
+tt = E:register_t("decal_enemy_dust_cryptid_dust", "decal_tween")
+tt.range_factor = 1
+tt.render.sprites[1].prefix = "dust_cryptid_dust_fx"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECT
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].offset = v(0, 10)
+tt.render.sprites[1].fps = 30
+tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
+tt.tween.props[1].loop = false
+tt.tween.remove = false
+
+tt = E:register_t("mod_enemy_dust_cryptid", "modifier")
+E:add_comps(tt, "render")
+tt.modifier.duration = 0.25
+tt.main_script.insert = scripts.mod_enemy_dust_cryptid.insert
+tt.main_script.update = scripts.mod_track_target.update
+tt.main_script.remove = scripts.mod_enemy_dust_cryptid.remove
+tt.render.sprites[1].prefix = "dust_cryptid_modifier"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].loop = true
+
+tt = E:register_t("mod_enemy_revenant_soulcaller_branches", "modifier")
+b = balance.enemies.undying_hatred.revenant_soulcaller.tower_stun
+E:add_comps(tt, "render")
+tt.main_script.update = scripts.mod_enemy_revenant_soulcaller_branches.update
+tt.modifier.duration = b.duration
+tt.render.sprites[1].prefix = "revenant_soulcaller_stuntower"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].draw_order = 20
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -10
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "revenant_soulcaller_stuntower"
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].draw_order = 20
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[2].sort_y_offset = 15
+tt.render.sprites[2].flip_x = true
+tt.render.sprites[2].offset = v(0, 20)
+tt.sound_events.insert = "EnemyRevenantSoulcallerBlockTowerIn"
+tt.sound_events.remove = "EnemyRevenantSoulcallerBlockTowerOut"
+
+tt = E:register_t("mod_enemy_revenant_harvester_mark", "modifier")
+E:add_comps(tt, "mark_flags")
+tt.mark_flags.vis_bans = F_CUSTOM
+tt.modifier.duration = -1
+tt.main_script.queue = scripts.mod_mark_flags.queue
+tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.update = scripts.mod_mark_flags.update
+
+tt = E:register_t("mod_enemy_revenant_soulcaller_mark", "modifier")
+E:add_comps(tt, "mark_flags")
+tt.mark_flags.vis_bans = F_CUSTOM
+tt.modifier.duration = b.duration
+tt.main_script.queue = scripts.mod_mark_flags.queue
+tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.update = scripts.mod_mark_flags.update
+
+tt = E:register_t("mod_stage_18_eridan_stun", "mod_stun")
+tt.modifier.duration = 1e+99
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.vis_bans = bor(F_BOSS)
+tt.render.sprites[1].hidden = true
+
+tt = E:register_t("mod_bullet_stage_19_navira_fire_ball_ray_stun", "modifier")
+b = balance.enemies.undying_hatred.boss_navira
+E:add_comps(tt, "render")
+tt.main_script.update = scripts.mod_bullet_stage_19_navira_fire_ball_ray_stun.update
+tt.modifier.duration = b.fire_balls.stun_duration
+tt.render.sprites[1].prefix = "navira_towerstun"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -10
+tt.sound_events.insert = "Stage19NaviraFireballHit"
+
+tt = E:register_t("mod_bullet_stage_19_navira_heal", "modifier")
+E:add_comps(tt, "render")
+tt.main_script.update = scripts.mod_track_target.update
+tt.modifier.duration = 3
+tt.modifier.use_mod_offset = false
+tt.render.sprites[1].prefix = "navira_heal_fx"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].offset = v(0, 90)

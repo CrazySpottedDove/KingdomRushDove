@@ -6,7 +6,7 @@ local BossHealthBar = class("BossHealthBar", KView)
 
 function BossHealthBar:initialize(size)
 	KView.initialize(self, size)
-	self.pos.x = 480
+	self.pos.x = 478
 	self.pos.y = 20
 	self.health_percent = 1
 	self.boss_name = "BOSS_NAME"

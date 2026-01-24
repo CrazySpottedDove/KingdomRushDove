@@ -48928,6 +48928,28 @@ function scripts.mod_enemy_dust_cryptid.insert(this, store, script)
 		return false
 	end
 
+	local function on_damage(this, store, damage)
+		if U.flag_has(damage.damage_type, bit.bor(DAMAGE_INSTAKILL, DAMAGE_DISINTEGRATE, DAMAGE_EAT, DAMAGE_IGNORE_SHIELD, DAMAGE_NO_DODGE, DAMAGE_POISON, DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL, DAMAGE_AGAINST_ARMOR)) then
+			return true
+		end
+
+		-- local e = E:create_entity("pop_miss")
+
+		-- e.pos = V.v(hero.pos.x, hero.pos.y)
+
+		-- if hero.unit and hero.unit.pop_offset then
+		-- 	e.pos.y = e.pos.y + hero.unit.pop_offset.y
+		-- end
+
+		-- e.pos.y = e.pos.y + e.pop_y_offset
+		-- e.render.sprites[1].r = math.random(-21, 21) * math.pi / 180
+		-- e.render.sprites[1].ts = store.tick_ts
+
+		-- simulation:queue_insert_entity(e)
+
+		return false
+	end
+
 	if target and target.unit and this.render then
 		for i = 1, #this.render.sprites do
 			local s = this.render.sprites[i]
@@ -48940,29 +48962,7 @@ function scripts.mod_enemy_dust_cryptid.insert(this, store, script)
 			end
 		end
 
-		this.old_on_damage = target.health.on_damage
-
-		function target.health.on_damage(hero, store, damage)
-			if U.flag_has(damage.damage_type, bit.bor(DAMAGE_INSTAKILL, DAMAGE_DISINTEGRATE, DAMAGE_EAT, DAMAGE_IGNORE_SHIELD, DAMAGE_NO_DODGE, DAMAGE_POISON, DAMAGE_MODIFIER, DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL)) then
-				return true
-			end
-
-			local e = E:create_entity("pop_miss")
-
-			e.pos = V.v(hero.pos.x, hero.pos.y)
-
-			if hero.unit and hero.unit.pop_offset then
-				e.pos.y = e.pos.y + hero.unit.pop_offset.y
-			end
-
-			e.pos.y = e.pos.y + e.pop_y_offset
-			e.render.sprites[1].r = math.random(-21, 21) * math.pi / 180
-			e.render.sprites[1].ts = store.tick_ts
-
-			simulation:queue_insert_entity(e)
-
-			return false
-		end
+		this.on_damages_index = U.insert_on_damage(target, on_damage)
 	end
 
 	return true
@@ -48972,8 +48972,8 @@ function scripts.mod_enemy_dust_cryptid.remove(this, store, script)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
 
-	if target then
-		target.health.on_damage = this.old_on_damage
+	if target and this.on_damages_index then
+		U.remove_on_damage(target, this.on_damages_index)
 	end
 
 	return true
@@ -49385,7 +49385,7 @@ function scripts.enemy_revenant_soulcaller.update(this, store, script)
 			end
 
 			if ready_to_stun() then
-				local towers = U.find_towers_in_range(store.entities, this.pos, at, function(t)
+				local towers = U.find_towers_in_range(store.towers, this.pos, at, function(t)
 					return t.tower.can_be_mod and not SU.has_modifiers(store, t, at.mark_mod) and not t.tower.blocked
 				end)
 
@@ -54978,6 +54978,771 @@ function scripts.power_stage_15_denas_control.insert(this, store, script)
 	queue_insert(store, denas)
 
 	return true
+end
+
+scripts.tower_stage_17_weirdwood = {}
+
+function scripts.tower_stage_17_weirdwood.update(this, store)
+	local a = this.attacks
+	local aa = this.attacks.list[1]
+	local blink_ts = store.tick_ts
+	local blink_cooldown = math.random(3, 8)
+
+	this.loaded = false
+	this.phases = {"a", "b", "c"}
+	this.current_phase = 1
+
+	U.y_wait(store, fts(math.random(0, 30)))
+
+	local function do_attack(at)
+		SU.delay_attack(store, at, 0.25)
+
+		local target, _, pred_pos = U.find_foremost_enemy(store.entities, tpos(this), at.min_range, a.range, at.node_prediction, at.vis_flags, at.vis_bans)
+
+		if target then
+			at.ts = store.tick_ts
+			blink_ts = store.tick_ts
+			this.loaded = false
+
+			local cp = this.phases[this.current_phase]
+
+			U.animation_start(this, cp .. "_" .. at.animation, nil, store.tick_ts, false, this.tower_sid)
+			U.y_wait(store, at.shoot_time)
+
+			local nt, _, nt_pos = U.find_foremost_enemy(store.entities, tpos(this), 0, a.range, at.node_prediction, at.vis_flags, at.vis_bans)
+
+			if nt then
+				target = nt
+				pred_pos = nt_pos
+			end
+
+			local bo = at.bullet_start_offset
+			local b = E:create_entity(at.bullet)
+
+			b.pos = V.v(this.pos.x + bo.x, this.pos.y + bo.y)
+			b.bullet.from = V.vclone(b.pos)
+			b.bullet.to = V.vclone(pred_pos)
+			b.bullet.source_id = this.id
+			b.bullet.damage_factor = this.tower.damage_factor
+
+			queue_insert(store, b)
+			U.y_animation_wait(this, this.tower_sid)
+
+			return true
+		end
+
+		return false
+	end
+
+	aa.ts = store.tick_ts
+
+	while true do
+		if this.tower.sell then
+			coroutine.yield()
+		elseif this.tower.blocked then
+			coroutine.yield()
+		else
+			if not this.loaded then
+				if store.tick_ts - aa.ts > aa.cooldown - a.load_time then
+					local cp = this.phases[this.current_phase]
+
+					U.y_animation_play(this, cp .. "_attack_load", nil, store.tick_ts, 1, this.tower_sid)
+
+					this.loaded = true
+				end
+
+				if this.tower.blocked then
+					goto label_908_0
+				end
+			end
+
+			if this.loaded and store.tick_ts - aa.ts > aa.cooldown and do_attack(aa) then
+			-- block empty
+			else
+				if blink_cooldown < store.tick_ts - blink_ts then
+					blink_ts = store.tick_ts
+					blink_cooldown = math.random(3, 8)
+
+					local cp = this.phases[this.current_phase]
+					local idle_anim = math.random(2, 3)
+
+					if this.loaded then
+						U.animation_start(this, cp .. "_" .. "idle_" .. idle_anim .. "_attack", nil, store.tick_ts, false, this.tower_sid)
+					else
+						U.animation_start(this, cp .. "_" .. "idle_" .. idle_anim, nil, store.tick_ts, false, this.tower_sid)
+					end
+				end
+
+				if this.corruption_kr5.count >= this.corruption_kr5.limit then
+					local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {this.corruption_kr5.spawn_path}, nil, false)
+					local pi, spi, ni = unpack(nodes[1])
+					local n_pos = P:node_pos(pi, spi, ni)
+
+					S:queue(this.sound_transform)
+
+					local fx = E:create_entity(this.transformation_fx)
+
+					fx.pos = V.vclone(this.pos)
+					fx.render.sprites[1].ts = store.tick_ts
+
+					queue_insert(store, fx)
+					U.y_animation_play(this, "transformation", nil, store.tick_ts, 1, this.tower_sid)
+
+					local e = E:create_entity(this.corruption_kr5.spawn)
+
+					e.pos.x, e.pos.y = this.pos.x, this.pos.y
+					e.started_in_holder = true
+					e.activate_holder = this.tower.holder_id
+					e.walk_pos = V.vclone(n_pos)
+					e.selected_path = pi
+
+					queue_insert(store, e)
+					signal.emit("wave-notification", "icon", "enemy_deathwood")
+
+					local mods = table.filter(store.entities, function(_, ee)
+						return ee.modifier and ee.modifier.target_id == e.id
+					end)
+
+					for _, mod in pairs(mods) do
+						queue_remove(store, mod)
+					end
+
+					local th = E:create_entity("tower_holder_blocked_terrain_4")
+
+					th.pos = V.vclone(this.pos)
+					th.tower.holder_id = this.tower.holder_id
+					th.tower.flip_x = this.tower.flip_x
+					th.tower_holder.unblock_price = this.holder_cost
+
+					if this.tower.default_rally_pos then
+						th.tower.default_rally_pos = this.tower.default_rally_pos
+					end
+
+					th.tower.terrain_style = this.tower.terrain_style
+					th.render.sprites[1].name = string.format(th.render.sprites[1].name, e.tower.terrain_style)
+
+					if th.ui and this.ui then
+						th.ui.nav_mesh_id = this.ui.nav_mesh_id
+					end
+
+					queue_insert(store, th)
+					queue_remove(store, this)
+					signal.emit("tower-removed", this, th)
+
+					return
+				end
+
+				if this.corruption_kr5.count >= this.corruption_kr5.corruption_phases[this.current_phase] then
+					this.current_phase = this.current_phase + 1
+
+					S:queue(this.sound_corruption)
+
+					local fx = E:create_entity(this.leafless_fx)
+
+					fx.pos = V.vclone(this.pos)
+					fx.render.sprites[1].ts = store.tick_ts
+
+					queue_insert(store, fx)
+					U.y_wait(store, fts(6))
+
+					local cp = this.phases[this.current_phase]
+
+					if this.loaded then
+						U.animation_start(this, cp .. "_" .. "idle_1_attack", nil, store.tick_ts, true, this.tower_sid)
+					else
+						U.animation_start(this, cp .. "_" .. "idle", nil, store.tick_ts, true, this.tower_sid)
+					end
+				end
+			end
+		end
+
+		::label_908_0::
+
+		coroutine.yield()
+	end
+end
+
+function scripts.tower_stage_17_weirdwood.on_corrupt(this, store)
+	this.corruption_kr5.count = this.corruption_kr5.count + 1
+end
+
+scripts.tower_stage_18_elven_barrack = {}
+
+function scripts.tower_stage_18_elven_barrack.update(this, store, script)
+	local b = this.barrack
+	local door_sid = this.render.door_sid or 2
+	local formation_offset = 0
+
+	local function check_change_rally()
+		if b.rally_new then
+			b.rally_new = false
+
+			signal.emit("rally-point-changed", this)
+
+			local sounds = {}
+			local all_dead = true
+
+			for i, s in ipairs(b.soldiers) do
+				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, 3, formation_offset)
+				s.nav_rally.new = true
+
+				if s.sound_events.change_rally_point then
+					table.insert(sounds, s.sound_events.change_rally_point)
+				end
+
+				all_dead = all_dead and s.health.dead
+			end
+
+			if not all_dead then
+				if #sounds > 0 then
+					S:queue(sounds[math.random(1, #sounds)])
+				else
+					S:queue(this.sound_events.change_rally_point)
+				end
+			end
+		end
+	end
+
+	while true do
+		local old_count = #b.soldiers
+
+		b.soldiers = table.filter(b.soldiers, function(_, s)
+			return store.entities[s.id] ~= nil
+		end)
+
+		if #b.soldiers > 0 and #b.soldiers ~= old_count then
+			for i, s in ipairs(b.soldiers) do
+				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, 3, formation_offset)
+			end
+		end
+
+		if b.unit_bought then
+			b.current_soldiers = b.current_soldiers + 1
+
+			for i, ss in ipairs(b.soldiers) do
+				ss.nav_rally.pos, ss.nav_rally.center = U.rally_formation_position(i, b, 3, formation_offset)
+			end
+
+			b.unit_bought = nil
+
+			local price = 75 --E:get_template(b.soldier_type).unit.price[this.barrack.max_soldiers]
+
+			store.player_gold = store.player_gold - price
+		end
+
+		check_change_rally()
+
+		if not this.tower.blocked then
+			for i = 1, this.barrack.current_soldiers do
+				local s = b.soldiers[i]
+
+				if not s or s.health.dead and not store.entities[s.id] then
+					if b.has_door and not b.door_open then
+						U.animation_start(this, "open", nil, store.tick_ts, false, door_sid)
+						U.y_animation_wait(this, door_sid)
+
+						b.door_open = true
+						b.door_open_ts = store.tick_ts
+					end
+
+					local spawn_ts = store.tick_ts
+
+					S:queue(this.spawn_sound)
+
+					s = E:create_entity(b.soldier_type)
+					s.soldier.tower_id = this.id
+					s.soldier.tower_soldier_idx = i
+					s.pos = V.v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))
+					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, 3, formation_offset)
+					s.nav_rally.new = true
+					s.render.sprites[1].flip_x = true
+
+					if this.powers then
+						for pn, p in pairs(this.powers) do
+							s.powers[pn].level = p.level
+						end
+					end
+
+					s.spawned_from_tower = true
+
+					queue_insert(store, s)
+
+					b.soldiers[i] = s
+				end
+			end
+		end
+
+		if b.has_door and b.door_open and store.tick_ts - b.door_open_ts > b.door_hold_time then
+			U.animation_start(this, "close", nil, store.tick_ts, false, door_sid)
+			U.y_animation_wait(this, door_sid)
+
+			b.door_open = false
+		end
+
+		if this.corruption_kr5.count >= this.corruption_kr5.corruption_phases[this.current_phase] then
+			this.current_phase = this.current_phase + 1
+
+			if this.current_phase > #this.corruption_kr5.corruption_phases then
+				local fx = E:create_entity(this.state_change_fx)
+
+				fx.pos = V.vclone(this.pos)
+				fx.render.sprites[1].ts = store.tick_ts
+
+				queue_insert(store, fx)
+				U.y_wait(store, fts(20))
+
+				local fx = E:create_entity(this.transformation_fx)
+
+				fx.pos = V.vclone(this.pos)
+				fx.render.sprites[1].ts = store.tick_ts
+
+				queue_insert(store, fx)
+				U.y_wait(store, fts(10))
+
+				local spawner = E:create_entity(this.corruption_kr5.spawn)
+
+				spawner.pos = V.vclone(this.pos)
+				spawner.holder_id = this.tower.holder_id
+
+				queue_insert(store, spawner)
+
+				this.tower.sell = true
+				this.trigger_deselect = true
+
+				return
+			else
+				local fx = E:create_entity(this.state_change_fx)
+
+				fx.pos = V.vclone(this.pos)
+				fx.render.sprites[1].ts = store.tick_ts
+
+				queue_insert(store, fx)
+				U.y_wait(store, fts(10))
+
+				this.render.sprites[2].name = "elven_barracks_tower" .. this.phases[this.current_phase]
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+function scripts.tower_stage_18_elven_barrack.remove(this, store, script)
+	for _, s in pairs(this.barrack.soldiers) do
+		if s.health then
+			s.health.hp = 0
+			s.health.dead = true
+			s.health_bar.hidden = true
+			s.regen = nil
+		end
+	end
+
+	return true
+end
+
+function scripts.tower_stage_18_elven_barrack.on_corrupt(this, store)
+	this.corruption_kr5.count = this.corruption_kr5.count + 1
+end
+
+scripts.spawner_stage_18_elven_barrack = {}
+
+function scripts.spawner_stage_18_elven_barrack.update(this, store)
+	local holder = table.filter(store.entities, function(_, v)
+		return v.tower and v.tower.holder_id == this.holder_id
+	end)
+
+	if #holder > 0 then
+		holder = holder[1]
+		holder.render.sprites[1].z = Z_BACKGROUND + 1
+		holder.render.sprites[2].z = Z_BACKGROUND + 2
+		holder.ui.can_click = false
+		holder.tower.can_hover = false
+	end
+
+	while true do
+		if not this.corruption_kr5.enabled then
+			local s1, s2, s3 = this.render.sprites[5], this.render.sprites[6], this.render.sprites[7]
+
+			U.y_ease_keys(store, {s1, s2, s3}, {"alpha", "alpha", "alpha"}, {0, 0, 0}, {255, 255, 255}, 0.5, {"linear", "linear", "linear"})
+			U.y_wait(store, fts(30))
+
+			local e = E:create_entity(this.corruption_kr5.spawn)
+
+			e.pos.x, e.pos.y = this.pos.x, this.pos.y
+
+			local nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil)
+			local pi, spi, ni = unpack(nearest_nodes[1])
+
+			e.nav_path.pi = pi
+			e.nav_path.spi = spi
+			e.nav_path.ni = ni + 8
+			e.spawned_from_tower = true
+			e.motion.forced_waypoint = P:node_pos(pi, spi, ni + 8)
+			e.enemy.gold = 0
+
+			queue_insert(store, e)
+			signal.emit("wave-notification", "icon", "enemy_animated_armor")
+			U.y_ease_keys(store, {s1, s2, s3}, {"alpha", "alpha", "alpha"}, {255, 255, 255}, {0, 0, 0}, 0.25, {"linear", "linear", "linear"})
+			U.y_wait(store, this.spawn_cd)
+
+			this.corruption_kr5.enabled = true
+		end
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
+function scripts.spawner_stage_18_elven_barrack.on_corrupt(this, store)
+	this.corruption_kr5.enabled = false
+end
+
+scripts.decal_stage_17_tree = {}
+
+function scripts.decal_stage_17_tree.update(this, store, script)
+	while true do
+		if this.ui.clicked then
+			S:queue(this.sound_tap)
+
+			this.ui.clicked = nil
+			this.ui.can_click = false
+
+			U.y_animation_play(this, "action", nil, store.tick_ts, 1)
+			U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+			this.ui.can_click = true
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.decal_stage_18_streetlight = {}
+
+function scripts.decal_stage_18_streetlight.update(this, store, script)
+	while true do
+		if this.ui.clicked then
+			S:queue(this.sound_in)
+
+			this.ui.clicked = nil
+			this.ui.can_click = false
+
+			S:queue(this.sound_break)
+			U.y_animation_play(this, "action", nil, store.tick_ts, 1)
+			U.animation_start(this, "idle_broken", nil, store.tick_ts, true)
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.decal_stage_18_cuckoo = {}
+
+function scripts.decal_stage_18_cuckoo.update(this, store, script)
+	local touch_times = 0
+
+	while true do
+		if this.ui.clicked then
+			this.ui.clicked = nil
+			this.ui.can_click = false
+			touch_times = touch_times + 1
+
+			if touch_times == this.touches_needed then
+				S:queue(this.sound_in)
+				U.y_animation_play(this, "action_2_in", nil, store.tick_ts, 1)
+				U.animation_start(this, "action_2_idle", nil, store.tick_ts, true)
+				U.y_wait(store, this.duration)
+				S:queue(this.sound_out)
+				U.y_animation_play(this, "action_2_out", nil, store.tick_ts, 1)
+
+				this.ui.can_click = true
+
+				if this.reset_touches then
+					touch_times = 0
+				end
+			elseif touch_times < this.touches_needed or touch_times > this.touches_needed and this.touchable_after_anim then
+				U.y_animation_play(this, "action_1", nil, store.tick_ts, 1)
+
+				this.ui.can_click = true
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.decal_stage_19_statue = {}
+
+function scripts.decal_stage_19_statue.update(this, store, script)
+	local current_step = 1
+
+	if store.level_mode == GAME_MODE_CAMPAIGN then
+		this.ui.can_click = false
+	end
+
+	while true do
+		if this.ui.clicked then
+			this.ui.clicked = nil
+			this.ui.can_click = false
+
+			if current_step < 3 then
+				S:queue(this.sound_12)
+			else
+				S:queue(this.sound_3)
+			end
+
+			local action_name = "action_" .. current_step
+			local idle_name = "idle_" .. current_step + 1
+
+			U.y_animation_play(this, action_name, nil, store.tick_ts, 1)
+			U.animation_start(this, idle_name, nil, store.tick_ts, true)
+
+			current_step = current_step + 1
+
+			if current_step < 4 then
+				this.ui.can_click = true
+			else
+				signal.emit("rock-paper-scissors-stage19", this)
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.decal_stage_19_navira_cape = {}
+
+function scripts.decal_stage_19_navira_cape.update(this, store, script)
+	local start_ts = store.tick_ts
+
+	while store.tick_ts - start_ts < fts(38) do
+		coroutine.yield()
+	end
+
+	while true do
+		this.render.sprites[1].hidden = true
+
+		U.y_wait(store, fts(2))
+
+		this.render.sprites[1].hidden = false
+
+		U.y_wait(store, fts(2))
+	end
+end
+
+scripts.stage20_arborean_house = {}
+
+function scripts.stage20_arborean_house.get_info(this)
+	return {
+		type = STATS_TYPE_SOLDIER,
+		hp = this.health.hp,
+		hp_max = this.health.hp_max,
+		armor = this.health.armor
+	}
+end
+
+function scripts.stage20_arborean_house.update(this, store)
+	local current_health_th = 0
+
+	local function spawn_fx(fx_template)
+		local fx = E:create_entity(fx_template)
+
+		fx.pos = V.v(this.pos.x + this.unit.hit_offset.x, this.pos.y + this.unit.hit_offset.y)
+		fx.render.sprites[1].ts = store.tick_ts
+
+		queue_insert(store, fx)
+	end
+
+	local function destroy_house()
+		this.ui.can_select = false
+		this.health.hp = 0
+		this.health.dead = true
+		this.health.death_finished_ts = store.tick_ts
+		this.vis.flags = 0
+		this.render.sprites[1].name = "idle" .. #this.life_thresholds + 1
+	end
+
+	if store.level_mode == GAME_MODE_HEROIC then
+		destroy_house()
+
+		this.health_bar.hidden = true
+
+		return
+	end
+
+	while true do
+		if this.health.dead then
+			destroy_house()
+			spawn_fx(this.threshold_fx_last)
+
+			return
+		end
+
+		if current_health_th <= #this.life_thresholds then
+			local hp_percent = this.health.hp / this.health.hp_max
+
+			if hp_percent < this.life_thresholds[current_health_th + 1] then
+				current_health_th = current_health_th + 1
+				this.render.sprites[1].name = "idle" .. current_health_th + 1
+
+				spawn_fx(this.threshold_fx)
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.decal_achievement_stage_21_croc_boat = {}
+
+function scripts.decal_achievement_stage_21_croc_boat.update(this, store, script)
+	local touch_times = 0
+
+	while true do
+		if this.ui.clicked then
+			this.ui.clicked = nil
+			this.ui.can_click = false
+			touch_times = touch_times + 1
+
+			if touch_times == this.touches_needed then
+				S:queue(this.sound_engine_success)
+				U.animation_start(this, "tap2", nil, store.tick_ts, false, this.render.sid_croc)
+				U.y_wait(store, fts(73))
+				signal.emit("boat-croc-stage21")
+				U.y_animation_wait(this, this.render.sid_croc, 1)
+				U.animation_start(this, "idle2", nil, store.tick_ts, true, this.render.sid_croc)
+			else
+				S:queue(this.sound_engine_fail)
+				U.y_animation_play(this, "tap1", nil, store.tick_ts, 1, this.render.sid_croc)
+				U.animation_start(this, "idle1", nil, store.tick_ts, true, this.render.sid_croc)
+
+				this.ui.can_click = true
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.decal_achievement_stage_22_croc_king = {}
+
+function scripts.decal_achievement_stage_22_croc_king.update(this, store, script)
+	local touch_times = 0
+	local flying = false
+
+	while not flying do
+		if this.ui.clicked then
+			this.ui.clicked = nil
+			this.ui.can_click = false
+			touch_times = touch_times + 1
+
+			if touch_times == 1 then
+				U.y_animation_play(this, "tap1", nil, store.tick_ts)
+				U.animation_start(this, "idle2", nil, store.tick_ts, true)
+
+				this.ui.can_click = true
+			elseif touch_times == 2 then
+				U.y_animation_play(this, "tap2", nil, store.tick_ts)
+				U.animation_start(this, "idle2", nil, store.tick_ts, true)
+
+				this.ui.can_click = true
+			elseif touch_times == 3 then
+				U.y_animation_play(this, "tap3", nil, store.tick_ts)
+				U.animation_start(this, "loop", nil, store.tick_ts, true)
+
+				this.pos.y = this.pos.y - 5
+				flying = true
+				this.render.sprites[1].z = Z_OBJECTS_SKY
+			end
+		end
+
+		coroutine.yield()
+	end
+
+	local speedX = -0.05
+	local max_speedX = -4
+
+	while flying do
+		this.pos.x = this.pos.x + speedX
+		this.pos.y = this.pos.y + 5
+		speedX = math.max(max_speedX, speedX * 1.1)
+
+		if this.pos.y > 900 then
+			signal.emit("flying-king-croc-stage22")
+			queue_remove(store, this)
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.decal_stage_22_easteregg_sheepy = {}
+
+function scripts.decal_stage_22_easteregg_sheepy.update(this, store, script)
+	local touch_times = 0
+	local speed = 30
+	local start_pos = V.vclone(this.pos)
+
+	local function y_sheepy_walk(dest)
+		U.animation_start(this, "running", nil, store.tick_ts, true)
+
+		this.render.sprites[1].flip_x = dest.x > this.pos.x
+
+		local distance = 1000
+
+		while distance > 5 do
+			local vx, vy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
+			local v_angle = V.angleTo(vx, vy)
+			local v_len = V.len(vx, vy)
+
+			distance = v_len
+
+			if distance > 5 then
+				local step = speed * store.tick_length
+				local nx, ny = V.normalize(V.rotate(v_angle, 1, 0))
+				local sx, sy = V.mul(step, nx, ny)
+
+				this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, sx, sy)
+			else
+				U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+				return
+			end
+
+			coroutine.yield()
+		end
+	end
+
+	while true do
+		if this.ui.clicked then
+			this.ui.clicked = nil
+			this.ui.can_click = false
+			touch_times = touch_times + 1
+
+			if touch_times == 1 then
+				y_sheepy_walk(V.v(start_pos.x - 65, start_pos.y))
+				U.y_wait(store, 0.4)
+				y_sheepy_walk(V.v(start_pos.x, start_pos.y))
+				U.y_wait(store, 0.4)
+				y_sheepy_walk(V.v(start_pos.x - 20, start_pos.y + 10))
+
+				this.ui.can_click = true
+			elseif touch_times == 2 then
+				U.y_animation_play(this, "action1", nil, store.tick_ts)
+
+				this.ui.can_click = true
+			elseif touch_times == 3 then
+				y_sheepy_walk(V.v(start_pos.x - 20, start_pos.y - 23))
+				U.y_animation_play(this, "death", nil, store.tick_ts)
+				queue_remove(store, this)
+
+				return
+			end
+		end
+
+		coroutine.yield()
+	end
 end
 
 return scripts
