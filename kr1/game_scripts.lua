@@ -49307,13 +49307,13 @@ end
 
 function scripts.enemy_animated_armor.update(this, store, script)
 	if this.spawned_from_tower then
-		this.motion.max_speed = this.motion.max_speed * 2
+		U.speed_mul_self(this, 2)
 
 		while SU.y_enemy_walk_step(store, this, "spawn") and this.render.sprites[1].runs <= 0 and (not this.enemy.counts.mod_teleport or this.enemy.counts.mod_teleport == 0) and not this.unit.is_stunned do
 		-- block empty
 		end
 
-		this.motion.max_speed = this.motion.max_speed / 2
+		U.speed_div_self(this, 2)
 
 		if this.enemy.counts.mod_teleport == 0 and not this.unit.is_stunned then
 			while SU.y_enemy_walk_step(store, this) do

@@ -528,6 +528,11 @@ local function insert_sprite(store, name, pos, flip_x, ts_offset)
 	return e
 end
 
+-- 淡入淡出的辅助插值函数，为 system.lua 中的副本，用于满足 fade_out_entity 中的运行时修改 tween 的需求。
+local function lerp_number_linear(a, b, t, s, key)
+	s[key] = a == b and a[2] or (a[2] + (b[2] - a[2]) * (t - a[1]) / (b[1] - a[1]))
+end
+
 ---实体淡出
 ---@param store table game.store
 ---@param entity table 实体
@@ -536,27 +541,34 @@ end
 ---@return nil
 local function fade_out_entity(store, entity, delay, duration)
 	duration = duration or 2
-
 	if entity.tween then
 		log.error("entity %s already has tween. cannot be faded out", entity.id)
 
 		return
 	end
 
-	entity.tween = E:clone_c("tween")
-	entity.tween.remove = false
-	entity.tween.ts = store.tick_ts
+	local tween = E:clone_c("tween")
+	tween.remove = false
+	tween.ts = store.tick_ts
+
+	-- 通知系统有实体在运行时增添了 tween 组件
+	store.entities_with_tween[entity.id] = entity
 
 	local p = E:clone_c("tween_prop")
-
 	p.keys = {{0, 255}, {delay, 255}, {delay + duration, 0}}
+	p.name = "alpha"
+	p.interp_fn = lerp_number_linear
 
-	for i, s in ipairs(entity.render.sprites) do
-		local pp = table.deepclone(p)
-
-		pp.sprite_id = i
-		entity.tween.props[i] = pp
+	for i = 1, #entity.render.sprites do
+		local p = E:clone_c("tween_prop")
+		p.keys = {{0, 255}, {delay, 255}, {delay + duration, 0}}
+		p.name = "alpha"
+		p.interp_fn = lerp_number_linear
+		p.sprite_id = i
+		tween.props[i] = p
 	end
+
+	entity.tween = tween
 end
 
 ---创建弹出效果

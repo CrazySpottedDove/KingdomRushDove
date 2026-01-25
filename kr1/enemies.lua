@@ -10260,11 +10260,10 @@ tt.start_as_rock = false
 tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
 tt.vis.bans = bor(F_INSTAKILL, F_POLYMORPH, F_DRILL, F_DISINTEGRATED)
 tt.sound_events.death = "EnemyDeathwoodDeath"
+
 tt = E:register_t("enemy_animated_armor", "enemy_KR5")
 b = balance.enemies.undying_hatred.animated_armor
-
 E:add_comps(tt, "melee", "corruption_kr5")
-
 tt.enemy.gold = b.gold
 tt.enemy.lives_cost = b.lives_cost
 tt.main_script.insert = scripts.enemy_animated_armor.insert
@@ -10311,10 +10310,9 @@ tt.respawn_sound = "EnemyAnimatedArmorRevive"
 tt.corruption_kr5.limit = 1
 tt.corruption_kr5.on_corrupt = scripts.enemy_animated_armor.on_corrupt
 tt.corruption_kr5.enabled = false
+
 tt = E:register_t("enemy_revenant_soulcaller", "enemy_KR5")
-
 local b = balance.enemies.undying_hatred.revenant_soulcaller
-
 E:add_comps(tt, "melee", "ranged", "timed_attacks")
 
 tt.enemy.gold = b.gold
