@@ -22,6 +22,7 @@ if store.level_mode==GAME_MODE_CAMPAIGN then
 local overseer=table.filter(store.entities,function(k,v)
 return v.template_name=="controller_stage_16_overseer"
 end)[1]
+store.game_gui:set_boss(overseer)
 while not store.waves_finished or LU.has_alive_enemies(store) do
 if overseer.health.dead then
 break
