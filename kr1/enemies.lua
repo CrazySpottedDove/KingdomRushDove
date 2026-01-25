@@ -10469,9 +10469,7 @@ tt.water_fixed_speed = b.water_fixed_speed
 local b = balance.enemies.crocs.crocs_basic
 
 tt = E:register_t("enemy_crocs_basic", "enemy_KR5")
-
 E:add_comps(tt, "melee", "water")
-
 tt.enemy.gold = b.gold
 tt.enemy.melee_slot = v(28, 0)
 tt.health.hp_max = b.hp

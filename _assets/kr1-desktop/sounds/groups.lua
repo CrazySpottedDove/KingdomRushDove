@@ -1513,7 +1513,12 @@ return {
 			"kra_sfx_crocs_nesting_gator_melee_var3_v1.ogg",
 			"kra_sfx_crocs_nesting_gator_spawn_op1_v1.ogg",
 			"kra_sfx_crocs_wise_range_cast_var1_v1.ogg",
-			"kra_sfx_crocs_tank_spin_op2_v1.ogg"
+			"kra_sfx_crocs_tank_spin_op2_v1.ogg",
+			"kra_sfx_enemy_patrollingVulture_death_var4_v1.ogg",
+			"kra_sfx_enemy_tuskedBrawler_death_op1_var3.ogg",
+			"kra_sfx_terrain3Ambient_gutural_var2_v1.ogg",
+			"kra_sfx_terrain3Ambient_gutural_var3_v1.ogg",
+			"kra_sfx_terrain3Ambient_gutural_var5_v1.ogg"
 		}
 	},
 	enemies_terrain_spiders = {
@@ -2327,7 +2332,9 @@ return {
 			"kra_sfx_crocs_abominor_shoot_fireball_v1.ogg",
 			"kra_sfx_crocs_abominor_spit_eggs_var1_v1.ogg",
 			"kra_sfx_crocs_abominor_stones_hit_floor_oneShot_v1.ogg",
-			"kra_sfx_crocs_magic_tower_restore_op1_v1.ogg"
+			"kra_sfx_crocs_magic_tower_restore_op1_v1.ogg",
+			"kra_sfx_enemy_razingRhino_death_v1.ogg",
+			"Explosion_water.ogg"
 		}
 	},
 	stage_23 = {

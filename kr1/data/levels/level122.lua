@@ -62,42 +62,12 @@ for _,v in pairs(prebossfight_blocked_paths) do
 P:deactivate_path(v)
 end
 end
-storage=require("storage")
-user_data=storage:load_slot()
-local selected_holders=user_data.towers
-store.selected_towers={}
-local map_data=require("data.map_data")
-local tower_5_data=map_data.tower_5_data
-for i=1,user_data.tower_pick do
-print(tower_5_data[selected_holders[i]]["name"])
-table.insert(store.selected_towers,"hermit_toad")
-end
 end
 function level:update(store)
 if store.level_mode==GAME_MODE_CAMPAIGN then
 self.bossfight_ended=false
 local starting_gold=store.player_gold
-local filtered_towers={}
-for _,twr in pairs(store.selected_towers) do
-local twr_template_name="tower_"..twr.."_lvl1"
-local twr_template=E:get_template(twr_template_name)
-if twr_template.tower.kind~=TOWER_KIND_BARRACK and twr_template.tower.type~="rocket_gunners" then
-table.insert(filtered_towers,twr)
-end
-end
-if #filtered_towers<1 then
-filtered_towers=store.selected_towers
-end
-local selected_tower=table.random(filtered_towers)
-local selected_tower_template=E:get_template("tower_"..selected_tower.."_lvl1")
-local unlevel_towers={"hermit_toad"}
-local selected_leveled_tower="tower_"..selected_tower.."_lvl"
-if table.contains(unlevel_towers,selected_tower_template.tower.type) then
-selected_leveled_tower=selected_leveled_tower.."1"
-else
-selected_leveled_tower=selected_leveled_tower..table.random({2})
-end
-local cinematic_tower_template=E:get_template(selected_leveled_tower)
+local cinematic_tower_template=E:get_template("tower_engineer_1")
 local tower_template_sounds=table.deepclone(cinematic_tower_template.sound_events)
 cinematic_tower_template.sound_events={}
 local tower_template_hide_dust=cinematic_tower_template.tower.hide_dust
@@ -105,7 +75,7 @@ cinematic_tower_template.tower.hide_dust=true
 local cinematic_tower=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="4"
 end)[1]
-cinematic_tower.tower.upgrade_to=cinematic_tower_template
+cinematic_tower.tower.upgrade_to="tower_engineer_1"
 coroutine.yield()
 cinematic_tower_template.sound_events=table.deepclone(tower_template_sounds)
 cinematic_tower_template.tower.hide_dust=tower_template_hide_dust
@@ -195,7 +165,6 @@ while not self.bossfight_ended do
 coroutine.yield()
 end
 signal.emit("boss_fight_end")
-store.custom_game_outcome={postpone_unload=true,next_item_name="boss_fight_6_end"}
 signal.emit("fade-out",1)
 elseif store.level_mode==GAME_MODE_HEROIC then
 for _,mask_settings in pairs(masks_heroic) do

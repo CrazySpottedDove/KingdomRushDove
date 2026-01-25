@@ -2554,7 +2554,15 @@ function sys.render:on_update(dt, ts, store)
 				s.sync_flag = last_runs ~= s.runs
 				s.ss = I:s(fn)
 			-- if s.ss == nil then
-			--     log.error("Failed to get sprite for entity %s, frame name: %s", e.template_name or e.id, fn)
+			-- 	log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+			--     if s.animation then
+			--         log.error("Animation name: %s", s.animation)
+			--     elseif s.animated then
+			--         log.error("Animated prefix: %s", s.prefix)
+			--         log.error("Animated name: %s", s.name)
+			--     else
+			--         log.error("Static sprite name: %s", s.name)
+			--     end
 			-- end
 			end
 

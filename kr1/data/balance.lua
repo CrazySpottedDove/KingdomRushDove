@@ -3294,7 +3294,7 @@ local enemies = {
 			hp = {16000, 16000, 16000, 16000, 16000},
 			armor = {0, 0, 0, 0, 0},
 			magic_armor = {0, 0, 0, 0, 0},
-			speed = {24, 21, 17, 14, 11},
+			speed = {22, 19, 14, 10, 7},
 			eat_tower_evolution = {50, 50, 50, 50},
 			life_percentage_evolution = {0.7, 0.65, 0.58, 0.4},
 			pre_fight_towers_destroy = {
@@ -3303,10 +3303,10 @@ local enemies = {
 				prevent_timed_destroy_price = 0,
 				can_prevent_destroy = false,
 				needs_arborean_mages_to_clean = false,
-				waves = {2, 3, 5, 8, 10, 11, 13, 14, 15},
+				waves = {3, 5, 7, 9, 11, 13, 15},
 				first_cooldown = {5, 5, 7, 1, 15, 10, 10, 5, 1},
 				cooldown = {0, 0, 0, 40, 45, 35, 40, 26, 20},
-				max_casts = {1, 1, 1, 2, 1, 2, 2, 3, 4},
+				max_casts = {1, 1, 1, 1, 1, 1, 1},
 				low_priority_holders = {"4", "7", "8", "12"}
 			},
 			primordial_hunger = {{
@@ -3324,7 +3324,7 @@ local enemies = {
 			}, {
 				hp_evolution_method = 2,
 				pre_evolution_step_cap = 0.8,
-				hp_restore_fixed_amount = 3500
+				hp_restore_fixed_amount = 2200
 			}, {
 				hp_evolution_method = 2,
 				pre_evolution_step_cap = 0.9,
@@ -3335,17 +3335,17 @@ local enemies = {
 				damage_radius = 60,
 				damage_max = {250, 290, 480, 600, 720},
 				damage_min = {150, 240, 360, 430, 500},
-				instakill_threshold = {0.95, 0.95, 0.95, 0.95, 0.95}
+				instakill_threshold = {0.87, 0.89, 0.91, 0.93, 0.95}
 			},
 			tower_destruction = {
-				cooldown = {12, 12, 16, 16, 18},
+				cooldown = {13.2, 13.2, 19.8, 19.8, 22},
 				max_range = {200, 200, 200, 200, 200},
 				low_priority_holders = {}
 			},
 			eggs_spawn = {
 				max_total = 1e+99,
 				distance_between_entities = 12,
-				cooldown = {25, 25, 25, 25, 25},
+				cooldown = {27.5, 27.5, 27.5, 27.5, 27.5},
 				min_range = {80, 90, 100, 110, 120},
 				max_range = {330, 340, 350, 360, 370},
 				loop_times = {2, 3, 4, 4, 5},

@@ -3043,9 +3043,13 @@ local function enemy_water_change(store, this)
 		end
 
 		if terrain_type == TERRAIN_WATER then
-			this.vis.flags = bor(this.vis.flags, F_WATER)
-			w._orig_vis_bans = this.vis.bans
-			this.vis.bans = bor(this.vis.bans, this.water.vis_bans)
+			-- this.vis.flags = bor(this.vis.flags, F_WATER)
+			U.flags_add(this.vis, F_WATER)
+
+			-- w._orig_vis_bans = this.vis.bans
+			-- this.vis.bans = bor(this.vis.bans, this.water.vis_bans)
+			w.bans_added = true
+			U.bans_add(this.vis, this.water.vis_bans)
 
 			U.speed_mul_self(this, this.water.speed_factor)
 
@@ -3058,6 +3062,10 @@ local function enemy_water_change(store, this)
 				if this.water.health_bar_hidden then
 					this.health_bar.hidden = true
 				end
+			end
+
+			if this.water.remove_modifiers then
+				remove_modifiers(store, this)
 			end
 
 			if this.water.hit_offset then
@@ -3085,11 +3093,24 @@ local function enemy_water_change(store, this)
 				s._orig_angles_flip_vertical = s.angles_flip_vertical
 				s.angles_flip_vertical = this.water.angles_flip_vertical
 			end
-		elseif w.last_terrain_type == TERRAIN_WATER and terrain_type == TERRAIN_LAND then
-			this.vis.flags = band(this.vis.flags, bnot(F_WATER))
 
-			if w._orig_vis_bans then
-				this.vis.bans = w._orig_vis_bans
+			if w.hide_sprites_range then
+				local r = w.hide_sprites_range
+				local f = r and r[1]
+				local f, t = f, r and r[2]
+
+				U.sprites_hide(this, f, t, true)
+			end
+		elseif w.last_terrain_type == TERRAIN_WATER and terrain_type == TERRAIN_LAND then
+			-- this.vis.flags = band(this.vis.flags, bnot(F_WATER))
+			U.flags_remove(this.vis, F_WATER)
+
+			-- if w._orig_vis_bans then
+			-- this.vis.bans = w._orig_vis_bans
+			-- end
+			if w.bans_added then
+				U.bans_remove(this.vis, this.water.vis_bans)
+				w.bans_added = nil
 			end
 
 			U.speed_div_self(this, this.water.speed_factor)
@@ -3126,6 +3147,14 @@ local function enemy_water_change(store, this)
 				end
 
 				s.angles_flip_vertical = s._orig_angles_flip_vertical
+			end
+
+			if w.hide_sprites_range then
+				local r = w.hide_sprites_range
+				local f = r and r[1]
+				local f, t = f, r and r[2]
+
+				U.sprites_show(this, f, t, true)
 			end
 		end
 
@@ -4586,6 +4615,30 @@ local function deck_draw(deck)
 	return is_trigger
 end
 
+local function go_to_forced_waypoint(this, store)
+	if this.motion.forced_waypoint then
+		local w = this.motion.forced_waypoint
+
+		if V.dist(w.x, w.y, this.pos.x, this.pos.y) < 2 * this.motion.max_speed * store.tick_length then
+			this.pos.x, this.pos.y = w.x, w.y
+			this.motion.forced_waypoint = nil
+
+			return false
+		end
+
+		U.set_destination(this, this.motion.forced_waypoint)
+
+		local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
+
+		U.animation_start(this, an, af, store.tick_ts, true)
+		U.walk(this, store.tick_length)
+
+		return true
+	end
+
+	return false
+end
+
 local SU = {
 	has_modifiers = U.has_modifiers,
 	ui_click_proxy_add = ui_click_proxy_add,
@@ -4702,7 +4755,8 @@ local SU = {
 	scale_fps_based_keys = scale_fps_based_keys,
 	deck_draw = deck_draw,
 	deck_new = deck_new,
-	deck_shuffle = deck_shuffle
+	deck_shuffle = deck_shuffle,
+	go_to_forced_waypoint = go_to_forced_waypoint
 }
 
 return SU

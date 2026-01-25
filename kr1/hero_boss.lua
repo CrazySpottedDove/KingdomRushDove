@@ -21,7 +21,7 @@ local U = require("utils")
 local LU = require("level_utils")
 local W = require("wave_db")
 local S = require("sound_db")
-local simulation = require("simulation")
+-- local simulation = require("simulation")
 
 local function ready_to_attack(attack, store, factor)
 	return store.tick_ts - attack.ts > attack.cooldown * (factor or 1)

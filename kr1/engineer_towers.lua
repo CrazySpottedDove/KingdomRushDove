@@ -1685,11 +1685,8 @@ tt.render.sprites[1].loop = true
 --#endregion
 --#region tower_flamespitter_lvl4
 tt = RT("tower_flamespitter_lvl4", "tower")
-
 local b = balance.towers.flamespitter
-
 AC(tt, "attacks", "powers")
-
 tt.tower.type = "flamespitter"
 tt.tower.kind = TOWER_KIND_ENGINEER
 tt.tower.team = TEAM_LINIREA
@@ -1750,6 +1747,7 @@ tt.render.sprites[6].draw_order = 3
 tt.render.sprites[7] = CC("sprite")
 tt.render.sprites[7].animated = true
 tt.render.sprites[7].prefix = "dwarven_flamespitter_tower_lvl4_stove_fire_fx"
+tt.render.sprites[7].name = "blazing_trail"
 tt.render.sprites[7].hidden = true
 tt.render.sprites[7].offset = tt.render.sprites[2].offset
 tt.render.sprites[7].sort_y_offset = tt.render.sprites[2].sort_y_offset

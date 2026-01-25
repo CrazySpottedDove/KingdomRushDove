@@ -2807,5 +2807,45 @@ return {
 		place = 5,
 		tt_title = _("SPECIAL_SOLDIER_TOWER_ELVEN_BARRACK_NAME"),
 		tt_desc = _("SPECIAL_SOLDIER_TOWER_ELVEN_BARRACK_DESCRIPTION")
-	}, tpl.rally}}
+	}, tpl.rally}},
+	arborean_oldtree = {{{
+		check = "main_icons_0019",
+		action_arg = 1,
+		action = "tw_buy_attack",
+		halo = "glow_ico_main",
+		image = "kr5_main_icons_0038",
+		place = 5,
+		tt_title = _("SPECIAL_ARBOREAN_OLDTREE_NAME"),
+		tt_desc = _("SPECIAL_ARBOREAN_OLDTREE_DESCRIPTION")
+	}}},
+	arborean_barrack = {{{
+		check = "main_icons_0019",
+		action_arg = 1,
+		action = "tw_buy_attack",
+		halo = "glow_ico_main",
+		image = "kr5_main_icons_0036",
+		place = 5,
+		tt_title = _("SPECIAL_ARBOREAN_BARRACK_NAME"),
+		tt_desc = _("SPECIAL_ARBOREAN_BARRACK_DESCRIPTION")
+	}}},
+	arborean_honey = {{{
+		check = "main_icons_0019",
+		action_arg = "",
+		action = "tw_repair",
+		halo = "glow_ico_main",
+		image = "kr5_main_icons_0037",
+		place = 5,
+		tt_title = _("SPECIAL_ARBOREAN_HONEY_NAME"),
+		tt_desc = _("SPECIAL_ARBOREAN_HONEY_DESCRIPTION")
+	}}},
+	tower_broken_stage_22 = {{{
+		check = "main_icons_0019",
+		action_arg = "",
+		action = "tw_repair",
+		halo = "glow_ico_main",
+		image = "kr5_main_icons_0015",
+		place = 5,
+		tt_title = _("TOWER_CROCS_EATEN_NAME"),
+		tt_desc = _("TOWER_CROCS_EATEN_DESCRIPTION")
+	}}}
 }

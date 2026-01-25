@@ -2049,10 +2049,8 @@ end
 
 function game_gui:set_boss(e)
 	local boss_health_bar = self.boss_health_bar
-	if not boss_health_bar:enabled() then
-		boss_health_bar:set_entity(e)
-		boss_health_bar:enable()
-	end
+	boss_health_bar:set_entity(e)
+	boss_health_bar:enable()
 end
 
 GemsRewardFx = class("GemsRewardFx", KView)
@@ -7605,7 +7603,7 @@ function TowerMenuButton:initialize(item, entity)
 
 	if item.action == "upgrade_power" then
 		bo = create_bo_view("special_icons_0000")
-	elseif table.contains({"tw_upgrade", "tw_buy_soldier", "tw_buy_attack", "tw_unblock"}, item.action) then
+	elseif table.contains({"tw_upgrade", "tw_buy_soldier", "tw_buy_attack", "tw_unblock", "tw_repair"}, item.action) then
 		bo = create_bo_view("main_icons_0000")
 	end
 
@@ -7637,7 +7635,7 @@ function TowerMenuButton:initialize(item, entity)
 	elseif item.action == "tw_buy_attack" then
 		price_tag = ""
 	elseif item.action == "tw_repair" then
-		price_tag = tostring(entity.repair.cost)
+		price_tag = not entity.repair.active and entity.repair.cost or nil
 	end
 
 	if price_tag then
