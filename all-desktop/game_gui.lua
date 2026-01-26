@@ -176,10 +176,6 @@ local function early_wave_called_handler(group, reward, remaining_time, score_re
 	if game_gui.power_3 then
 		game_gui.power_3:early_wave_bonus(remaining_time)
 	end
-
-	if score_reward then
-		game_gui.hud_counters:show_bonus(score_reward)
-	end
 end
 
 local function hide_gui_handler()
@@ -238,20 +234,6 @@ local function show_balloon_handler(id, at_level_idx)
 	if not at_level_idx or at_level_idx == game.store.level_idx then
 		game_gui:show_balloon(id)
 	end
-end
-
-local function show_gems_reward_handler(entity, amount)
-
-	local v = GemsRewardFx:new(amount)
-
-	v.world_pos = V.vclone(entity.pos)
-
-	if entity.unit then
-		v.world_offset = V.vclone(entity.unit.hit_offset)
-	end
-
-	game_gui.layer_gui_game:add_child(v, 1)
-	S:queue("InAppEarnGems")
 end
 
 local function show_achievement_handler(id)
@@ -668,19 +650,6 @@ function game_gui:init(w, h, game)
 		comic_transition.hidden = true
 	end
 
-	local layer_freeze, layer_bomb, layer_wrath, layer_timewarp
-
-	if IS_KR1 or IS_KR2 then
-		layer_freeze = KView:new_from_table(kui_db:get_table("game_gui_layer_user_item_freeze", {
-			SW = self.sw,
-			SH = self.sh
-		}))
-		layer_bomb = KView:new_from_table(kui_db:get_table("game_gui_layer_user_item_bomb", {
-			SW = self.sw,
-			SH = self.sh
-		}))
-	end
-
 	local layer_gui = KView:new()
 
 	layer_gui.id = "layer_gui"
@@ -725,16 +694,12 @@ function game_gui:init(w, h, game)
 	layer_gui_game:add_child(incoming_tooltip)
 	layer_gui_game:add_child(boss_health_bar)
 
-	if IS_KR1 or IS_KR2 then
-		layer_gui_hud:add_child(layer_freeze)
-		layer_gui_hud:add_child(layer_bomb)
-	end
-
 	layer_gui_hud:add_child(hud_counters)
 	layer_gui_hud:add_child(hud_pause)
 	layer_gui_hud:add_child(hud_noti_queue)
 	layer_gui_hud:add_child(hud_bottom)
 	layer_gui_hud:add_child(mouse_pointer)
+
 	layer_gui_top:add_child(overlay)
 	layer_gui_top:add_child(notiview)
 	layer_gui_top:add_child(pauseview)
@@ -742,11 +707,13 @@ function game_gui:init(w, h, game)
 	layer_gui_top:add_child(victoryview)
 	layer_gui_top:add_child(defeatview)
 	layer_gui_top:add_child(comic_transition)
+
 	layer_gui:add_child(rallyflag)
 	layer_gui:add_child(point_confirm)
 	layer_gui:add_child(layer_gui_game)
 	layer_gui:add_child(layer_gui_hud)
 	layer_gui:add_child(layer_gui_top)
+
 	window:add_child(pickview)
 	window:add_child(layer_gui)
 
@@ -851,9 +818,10 @@ function game_gui:destroy()
 	signal.remove("debug-ready-plants-crystals", debug_ready_plants_crystals_handler)
 end
 
+local perf = require("dove_modules.perf.perf")
+
 function game_gui:update(dt)
 	timer:update(dt)
-
 	local e = game_gui.selected_entity
 
 	if e then
@@ -882,22 +850,6 @@ function game_gui:update(dt)
 		game_gui.swap_entity = nil
 	end
 
-	-- if game_gui.mode == GUI_MODE_IDLE or game_gui.mode == GUI_MODE_SWAP_TOWER then
-	-- 	local x, y = game_gui.window:get_mouse_position()
-	-- 	local lx, ly = game_gui._last_mouse_pos_x, game_gui._last_mouse_pos_y
-	-- 	if x ~= lx or y ~= ly then
-	-- 		game_gui._last_mouse_pos_x, game_gui._last_mouse_pos_y = x, y
-	-- 		local wx, wy = game_gui:s2g(V.v(x, y))
-	-- 		local ee = game_gui:entity_at_pos(wx, wy)
-	-- 		local lastt = game_gui.last_tower_hover
-	-- 		if ee and ee.tower and ee.tower.can_hover and ee ~= lastt then
-	-- 			game_gui:show_clickable_hover(ee)
-	-- 		elseif lastt and (not ee or ee ~= lastt) then
-	-- 			game_gui:hide_clickable_hover()
-	-- 			self.last_tower_hover = nil
-	-- 		end
-	-- 	end
-	-- end
 	if game_gui.mode == GUI_MODE_IDLE or game_gui.mode == GUI_MODE_SWAP_TOWER then
 		local x, y = game_gui.window:get_mouse_position()
 		local lx, ly = game_gui._last_mouse_pos_x, game_gui._last_mouse_pos_y
@@ -918,12 +870,11 @@ function game_gui:update(dt)
 			end
 		end
 	end
-
 	self.window:update(dt)
 end
 
 function game_gui:mousepressed(x, y, button)
-	if button == 2 and not DEBUG_RIGHT_CLICK then
+	if button == 2 then
 		self:deselect_all()
 	else
 		self.window:mousepressed(x, y, button)
@@ -934,8 +885,9 @@ function game_gui:mousereleased(x, y, button)
 	self.window:mousereleased(x, y, button)
 end
 
+-- 为移动设备添加快捷按钮
 function game_gui:add_mobile_shortcut_buttons()
-	if not IS_MOBILE then
+	if not (love.system.getOS() == "Android") then
 		return
 	end
 
@@ -1312,8 +1264,6 @@ end
 
 function game_gui:set_mode(mode)
 	local new_mode = mode or GUI_MODE_IDLE
-
-	log.debug("  CHANGING MODE: %s -> %s", self.mode, new_mode)
 
 	self.mode = new_mode
 
@@ -2053,59 +2003,6 @@ function game_gui:set_boss(e)
 	boss_health_bar:enable()
 end
 
-GemsRewardFx = class("GemsRewardFx", KView)
-
-function GemsRewardFx:initialize(amount)
-	KView.initialize(self)
-
-	self.ani_offset = 0
-	self.world_offset = v(0, 0)
-
-	local icon = KImageView:new("gemsReward_0001")
-
-	icon.anchor.y = icon.size.y * 0.5
-
-	self:add_child(icon)
-
-	local digits = SpriteDigits:new("waveRewardTimer", "%i", amount)
-
-	digits.anchor.y = digits.size.y * 0.5
-	digits.pos.x = icon.size.x
-
-	self:add_child(digits)
-
-	self.anchor.x, self.anchor.y = (digits.size.x + icon.size.x) * 0.5, icon.size.y + 2
-	self.scale = V.v(0.3, 0.3)
-
-	timer:script(function(wait)
-		timer:tween(0.21, self.scale, {
-			x = 1,
-			y = 1
-		}, "out-back")
-		wait(0.21)
-
-		local dy = icon.size.y * 0.5
-
-		timer:tween(0.4, self, {
-			alpha = 0,
-			ani_offset = -dy
-		})
-		wait(0.4)
-		self:remove_from_parent()
-	end)
-end
-
-function GemsRewardFx:update(dt)
-	self.class.super.update(self, dt)
-
-	if self.world_pos then
-		local wp, wo = self.world_pos, self.world_offset
-
-		self.pos.x, self.pos.y = game_gui:g2u(V.v(wp.x + wo.x, wp.y + wo.y))
-		self.pos.y = self.pos.y + self.ani_offset
-	end
-end
-
 TimeRewardFx = class("TimeRewardFx", KView)
 
 function TimeRewardFx:initialize(amount)
@@ -2366,12 +2263,6 @@ function HeroPortrait:on_exit()
 end
 
 function HeroPortrait:on_click(button, x, y)
-	if button == 2 and DEBUG_RIGHT_CLICK then
-		local wx, wy = game_gui:u2g(V.v(x, y))
-
-		DEBUG_RIGHT_CLICK(wx, wy)
-	end
-
 	local e = game_gui:entity_by_id(self.hero_id)
 
 	if e == game_gui.selected_entity then
@@ -2394,8 +2285,6 @@ function HeroPortrait:update_xp(hero)
 		end
 	else
 		if self.hero_level ~= e.hero.level then
-			log.debug("level up! %s - %s", e.id, e.template_name)
-
 			self.hero_level = e.hero.level
 			self.hero_xp_base = 0
 
@@ -3362,7 +3251,10 @@ function InfoBar:hide()
 end
 
 function InfoBar:update(dt)
-	InfoBar.super.update(self, dt)
+	if self.hidden then
+		return
+	end
+	-- InfoBar.super.update(self, dt)
 
 	local e = game_gui.selected_entity
 
@@ -3563,10 +3455,6 @@ function HudBottomView:initialize(sw, sh)
 
 	powers:add_child(power_2)
 
-	local power_3
-
-	local bag_button
-
 	for i = 1, 2 do
 		local pb = powers.children[1 + i]
 		local pn = KImageView:new("power_nbrs_000" .. i)
@@ -3586,8 +3474,6 @@ function HudBottomView:initialize(sw, sh)
 	self.bg_center = bg_center
 
 	self:add_child(bg_center)
-
-	local bagbar
 
 	local infobar = InfoBar:new()
 
@@ -3612,8 +3498,6 @@ function HudBottomView:initialize(sw, sh)
 
 	game_gui.power_1 = power_1
 	game_gui.power_2 = power_2
-	game_gui.power_3 = power_3
-	game_gui.bag_button = bag_button
 	game_gui.next_wave_button = next_wave_button
 end
 
@@ -3636,13 +3520,7 @@ function HudBottomView:update_bars_pos()
 
 	self.infobar.pos.x = x_center - 12
 
-	if self.bagbar then
-		self.bagbar.pos.x = x_center
-	end
-
-	if self.bg_center then
-		self.bg_center.pos.x = x_center
-	end
+	self.bg_center.pos.x = x_center
 end
 
 function HudBottomView:add_hero(hero_entity)
@@ -3686,15 +3564,22 @@ function HudBottomView:add_hero(hero_entity)
 	return hero
 end
 
+function HudBottomView:update(dt)
+	self.powers:update(dt)
+	self.infobar:update(dt)
+	self.herobar:update(dt)
+end
+
 HudCountersView = class("HudCountersView", KImageView)
 
 function HudCountersView:initialize(level_mode)
-	-- HudCountersView.super.initialize(self, level_mode == GAME_MODE_ENDLESS and "top_left_endless" or "top_left")
 	HudCountersView.super.initialize(self, "top_left")
 
 	self.level_mode = level_mode
 	self.heart_x = 70
 	self.heart_y = 50
+	-- 对于不可交互的UI元素，应当直接设置其为 disabled，以减少碰撞检测的开销
+	self.disabled = true
 
 	local lbl_lives = GGLabel:new(V.v(71, 35))
 
@@ -3727,87 +3612,35 @@ function HudCountersView:initialize(level_mode)
 	lbl_wave.colors.text = {255, 255, 255}
 	lbl_wave.colors.background = DEBUG_BACKGROUND_COLOR
 
-	local gold_gnome = KImageView:new("gold_gnome")
-
-	gold_gnome.id = "user_item_gold_gnome_view"
-	gold_gnome.pos = v(100, 25)
-	gold_gnome.hidden_x = 80
-	gold_gnome.shown_x = 112
-	gold_gnome.hidden = true
-
 	self:add_child(lbl_lives)
 	self:add_child(lbl_gold)
 	self:add_child(lbl_wave)
-	self:add_child(gold_gnome)
 
 	self.lbl_lives = lbl_lives
 	self.lbl_gold = lbl_gold
 	self.lbl_wave = lbl_wave
-	self.gold_gnome = gold_gnome
--- if level_mode == GAME_MODE_ENDLESS then
---     local lbl_score = GGLabel:new(V.v(56, 28))
---     lbl_score.pos = v(289, 38)
---     lbl_score.text_align = "left"
---     lbl_score.vertical_align = "middle"
---     lbl_score.font_name = "hud"
---     lbl_score.font_size = 12
---     lbl_score.fit_step = 0.25
---     lbl_score.fit_size = true
---     lbl_score.fit_lines = 1
---     lbl_score.colors.text = {255, 255, 255}
---     lbl_score.colors.background = DEBUG_BACKGROUND_COLOR
---     self:add_child(lbl_score)
---     self.lbl_score = lbl_score
---     local bonus_fx = KImageView:new("hud_bonusFx_0001")
---     bonus_fx.animation = {
---         to = 16,
---         prefix = "hud_bonusFx"
---     }
---     bonus_fx.pos = V.v(270, 7)
---     bonus_fx.hidden = true
---     self:add_child(bonus_fx)
---     self.bonus_fx = bonus_fx
---     local lbl_bonus = GGShaderLabel:new(V.v(42, 18))
---     lbl_bonus.r = km.deg2rad(7)
---     lbl_bonus.text = "+9999"
---     lbl_bonus.pos = V.v(28, 40)
---     lbl_bonus.fit_lines = 1
---     lbl_bonus.vertical_align = "middle"
---     lbl_bonus.font_name = "numbers_bold"
---     lbl_bonus.font_size = 17
---     lbl_bonus.colors = {
---         text = {255, 255, 255, 255},
---         background = {0, 0, 0, 0}
---     }
---     lbl_bonus.shaders = {"p_outline", "p_glow"}
---     lbl_bonus.shader_margin = 8
---     lbl_bonus.shader_args = {{
---         thickness = 0.75,
---         outline_color = {0, 0.4980392156862745, 0.7058823529411765, 1}
---     }, {
---         thickness = 0.5,
---         glow_color = {0, 0.4980392156862745, 0.7058823529411765, 1}
---     }}
---     bonus_fx:add_child(lbl_bonus)
---     self.lbl_bonus = lbl_bonus
--- end
+
+	self.last_update_ts = self.ts
 end
 
 function HudCountersView:update(dt)
-	HudCountersView.super.update(self, dt)
+	-- HudCountersView.super.update(self, dt)
+	self.ts = self.ts + dt
 
-	local store = game_gui.game.store
+	if self.last_update_ts + 0.03 > self.ts then
+		self.last_update_ts = self.ts
+		local store = game_gui.game.store
 
-	self.lbl_lives.text = string.format("%d", store.lives)
-	self.lbl_gold.text = string.format("%d", store.player_gold)
+		self.lbl_lives.text = string.format("%d", store.lives)
+		self.lbl_gold.text = string.format("%d", store.player_gold)
 
-	if game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS then
-		self.lbl_wave.text = string.format("%d", store.wave_group_number)
-	-- self.lbl_score.text = string.format("%d", store.player_score)
-	elseif store.criket.on then
-		self.lbl_wave.text = string.format("%3d*%.2f", store.enemy_count, store.config.enemy_health_multiplier)
-	else
-		self.lbl_wave.text = string.format(_("MENU_HUD_WAVES"), store.wave_group_number, store.wave_group_total)
+		if game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS then
+			self.lbl_wave.text = string.format("%d", store.wave_group_number)
+		elseif store.criket.on then
+			self.lbl_wave.text = string.format("%3d*%.2f", store.enemy_count, store.config.enemy_health_multiplier)
+		else
+			self.lbl_wave.text = string.format(_("MENU_HUD_WAVES"), store.wave_group_number, store.wave_group_total)
+		end
 	end
 end
 
@@ -3823,24 +3656,6 @@ function HudCountersView:show()
 	timer:tween(1, self.pos, {
 		y = self._original_pos_y
 	}, "out-quad")
-end
-
-function HudCountersView:show_bonus(reward)
-	if not reward or reward < 1 or not self.lbl_bonus then
-		return
-	end
-
-	self.lbl_bonus.text = string.format("+%d", reward)
-
-	local b = self.bonus_fx
-
-	b.hidden = false
-	b.ts = 0
-	b.alpha = 1
-
-	timer:tween(1, b, {
-		alpha = 0
-	}, "in-quint")
 end
 
 OverlayView = class("OverlayView", KView)
@@ -3896,6 +3711,11 @@ function HudPauseButton:initialize()
 	end
 
 	self:add_child(button)
+end
+
+--- 阻断 update，减小开销
+function HudPauseButton:update(dt)
+	return
 end
 
 function HudPauseButton:hide()
@@ -4085,6 +3905,13 @@ function PauseView:hide()
 	end
 end
 
+function PauseView:update(dt)
+	if self.hidden then
+		return
+	end
+	PauseView.super.update(self, dt)
+end
+
 DefeatView = class("DefeatView", KView)
 
 function DefeatView:initialize()
@@ -4155,6 +3982,10 @@ function DefeatView:show()
 	timer:tween(0.5, self.pos, {
 		y = game_gui.sh * 0.5
 	}, "out-back", nil, 1)
+end
+
+-- 禁用 update 减小开销
+function DefeatView:update(dt)
 end
 
 VictoryParticles = class("VictoryParticles", KView)
@@ -4430,6 +4261,16 @@ end
 
 function VictoryView:hide()
 	return
+end
+
+--- 只 update 事件驱动的元素以减小开销！
+function VictoryView:update(dt)
+	if not self.hidden then
+		if self.particles then
+			self.particles:update(dt)
+		end
+		self.v_stars:update(dt)
+	end
 end
 
 MousePointer = class("MousePointer", KView)
@@ -5360,6 +5201,13 @@ function NotificationView:hide(no_transition)
 	S:queue("GUINotificationClose")
 end
 
+-- 事件驱动，隐藏时不需要更新
+function NotificationView:update(dt)
+	if not self.hidden then
+		NotificationView.super.update(self, dt)
+	end
+end
+
 NotificationQueue = class("NotificationQueue", KView)
 
 function NotificationQueue:initialize(w, h)
@@ -6015,11 +5863,7 @@ function PickView:on_down(button, x, y)
 
 	log.debug("button:%d, screen:%s,%s  world:%s,%s", button, x, y, wx, wy)
 
-	if button == 2 then
-		if DEBUG_RIGHT_CLICK then
-			DEBUG_RIGHT_CLICK(wx, wy)
-		end
-	elseif button == 1 then
+	if button == 1 then
 		if game_gui.mode == GUI_MODE_RALLY_TOWER then
 			log.debug("set rally point. view:%s,%s -> game:%s,%s", x, y, wx, wy)
 
@@ -6213,6 +6057,9 @@ function RangeCircle:initialize(sprite_name)
 	self.actual_radius = v(tl.size.x, tl.size.y)
 end
 
+function RangeCircle:update(dt)
+end
+
 CriketMenuButton = class("CriketMenuButton", KView)
 
 function CriketMenuButton:initialize(item)
@@ -6378,11 +6225,10 @@ function CriketMenu:hide()
 end
 
 function CriketMenu:update(dt)
-	CriketMenu.super.update(self, dt)
-
 	if self.hidden then
 		return
 	end
+	CriketMenu.super.update(self, dt)
 end
 
 function CriketMenu:button_enter(button)
@@ -6876,11 +6722,11 @@ function TowerMenu:hide()
 end
 
 function TowerMenu:update(dt)
-	TowerMenu.super.update(self, dt)
-
 	if self.hidden then
 		return
 	end
+
+	TowerMenu.super.update(self, dt)
 
 	local e = game_gui.selected_entity
 
@@ -7034,7 +6880,7 @@ function TowerMenu:button_enter(button, item, entity, mouse_button)
 			nt = E:get_template(item.action_arg)
 		end
 
-		local ux, uy = game_gui:g2u(V.v(V.add(entity.pos.x, entity.pos.y, entity.tower.range_offset.x, entity.tower.range_offset.y)), snap)
+		local ux, uy = game_gui:g2u(V.v(V.add(entity.pos.x, entity.pos.y, entity.tower.range_offset.x, entity.tower.range_offset.y)))
 
 		if nt and nt.attacks and nt.attacks.range then
 			local new_range = nt.attacks.range
@@ -7372,6 +7218,9 @@ function TowerMenuTooltip:initialize()
 	phrase_label.text_align = "left"
 	self.phrase_label = phrase_label
 
+	-- 不可交互组件，设置 disabled。
+	self.disabled = true
+
 	self:add_child(phrase_label)
 end
 
@@ -7519,6 +7368,10 @@ function TowerMenuTooltip:hide()
 end
 
 TowerMenuButton = class("TowerMenuButton", KView)
+
+-- 事件驱动的，完全禁用 update
+function TowerMenuTooltip:update(dt)
+end
 
 function TowerMenuButton:enable()
 	self.click_disabled = false
@@ -7924,7 +7777,11 @@ function WaveFlag:hide()
 end
 
 function WaveFlag:update(dt)
-	WaveFlag.super.update(self, dt)
+	-- 它的孩子都是非响应的，全都阻断掉，只更新自身时间即可
+	-- WaveFlag.super.update(self, dt)
+	if not self.animation or not self.animation.paused then
+		self.ts = self.ts + dt
+	end
 
 	if self.pulse_animation then
 		local scale = 0.85 + 0.15 * (0.5 * math.sin(2 * math.pi * self.ts * 1.25) + 1)

@@ -348,6 +348,10 @@ function KObject.static:new_from_table(t)
 	return v
 end
 
+--- KObject 初始化方法，在内部允许使用 deserialize 来实现反序列化
+--- self.id string
+--- self.children KObject[]
+--- self.parent KObject|nil
 function KObject:initialize()
 	_last_id = _last_id + 1
 	self.id = tostring(_last_id)
@@ -436,6 +440,9 @@ function KObject:serialize(doing_template)
 	return out
 end
 
+--- 为当前 KObject 添加孩子 c
+---@param c table KObject
+---@param idx integer|nil 插入位置索引，默认为追加到最后
 function KObject:add_child(c, idx)
 	c.parent = self
 
@@ -446,6 +453,8 @@ function KObject:add_child(c, idx)
 	end
 end
 
+--- 删除孩子 c。效率较低，遍历了所有孩子。带有 c 的非 nil 检查
+---@param c table KObject
 function KObject:remove_child(c)
 	if not c then
 		log.error("Removing nil child from %s", self)
@@ -458,18 +467,22 @@ function KObject:remove_child(c)
 	c.parent = nil
 end
 
+--- 删除所有的孩子，并把这些孩子的父亲引用也删除
 function KObject:remove_children()
 	for i = #self.children, 1, -1 do
 		self:remove_child(self.children[i])
 	end
 end
 
+--- 让父亲删除自己这个孩子，并取消自己对父亲的引用
 function KObject:remove_from_parent()
 	if self.parent ~= nil then
 		self.parent:remove_child(self)
 	end
 end
 
+--- 递归地查找自己是不是某一个对象的孩子
+---@param ancestor table KObject
 function KObject:is_child_of(ancestor)
 	if self.parent == nil then
 		return false
@@ -480,6 +493,7 @@ function KObject:is_child_of(ancestor)
 	end
 end
 
+--- 得到自己是父亲的第几个孩子，通过遍历实现。若父亲为 nil 则返回 nil
 function KObject:get_order()
 	if not self.parent then
 		return nil
@@ -494,6 +508,7 @@ function KObject:get_order()
 	return nil
 end
 
+--- 如果有父亲，把自己变为父亲所有孩子中的最后面那个
 function KObject:order_to_front()
 	if self.parent then
 		local p = self.parent
@@ -503,9 +518,11 @@ function KObject:order_to_front()
 	end
 end
 
+--- 如果有父亲，把自己变成父亲所有孩子中的第一个
 function KObject:order_to_back()
 	if self.parent and #self.parent.children > 1 then
-		self:order_below(self.parent.children[1])
+		self.parent:remove_child(self)
+		self.parent:add_child(self, 1)
 	end
 end
 
@@ -525,6 +542,8 @@ function KObject:order_above(c)
 	end
 end
 
+--- 如果自己有父亲，把自己放到父亲的所有孩子中是 c 的前面一个的位置
+---@param c any
 function KObject:order_below(c)
 	local p = self.parent
 
@@ -541,12 +560,16 @@ function KObject:order_below(c)
 	end
 end
 
+--- 克隆自己
 function KObject:clone()
 	local o = table.deepclone(self)
 
 	return o
 end
 
+--- 递归收集以自己为开始的所有孩子，展成一个一维数组返回
+---@param filter function|nil 过滤函数，返回 true 则包含该对象
+---@param trim_filter function|nil 裁剪函数，返回 false 则不继续遍历该对象的孩子
 function KObject:flatten(filter, trim_filter)
 	local o = {}
 
@@ -562,7 +585,7 @@ function KObject:flatten(filter, trim_filter)
 		for _, cc in pairs(self.children) do
 			local l = cc:flatten(filter, trim_filter)
 
-			if l and #l > 0 then
+			if #l > 0 then
 				table.append(o, l)
 			end
 		end
@@ -632,6 +655,12 @@ function KView:deserialize()
 	KView.super.deserialize(self)
 end
 
+--- 设置 UI 对象的图像资源
+---@param image userdata|string|nil
+---@param size table|nil
+---image 为 userdata 时，若有 size，使用 size 设置 self.size，否则使用 image 的尺寸设置 self.size
+---image 为 string 时，若有 size，使用 size 设置 self.size，否则使用 image 数据库中该名称的尺寸设置 self.size
+---image 为 nil 时，若有 size，使用 size 设置 self.size，否则 self.size 不变
 function KView:set_image(image, size)
 	local w, h = 0, 0
 
@@ -669,6 +698,7 @@ function KView:set_image(image, size)
 	self.size.x, self.size.y = w, h
 end
 
+--- 解引用释放资源
 function KView:destroy()
 	for i = #self.children, 1, -1 do
 		self.children[i]:destroy()
@@ -712,8 +742,9 @@ function KView:draw()
 	local pr, pg, pb, pa = G.getColor()
 	local current_alpha = pa * self.alpha
 
-	G.setColor_old({255, 255, 255, current_alpha})
+	G.setColor(1, 1, 1, current_alpha)
 	G.push()
+	-- 转移坐标系
 	G.scale(self.scale.x, self.scale.y)
 	G.rotate(-self.r)
 	G.translate(-self.anchor.x, -self.anchor.y)
@@ -767,12 +798,9 @@ end
 
 function KView:_draw_self()
 	local pr, pg, pb, pa = G.getColor()
-	local current_alpha = pa / 255
 
 	if self.colors.background then
-		local new_c = {self.colors.background[1], self.colors.background[2], self.colors.background[3], self.colors.background[4] * current_alpha}
-
-		G.setColor_old(new_c)
+		G.setColor(self.colors.background[1] / 255, self.colors.background[2] / 255, self.colors.background[3] / 255, self.colors.background[4] * pa / 255)
 
 		if self.shape then
 			local fn = G[self.shape.name]
@@ -790,7 +818,7 @@ function KView:_draw_self()
 	if self.colors.tint then
 		local tint = self.colors.tint
 
-		G.setColor_old({tint[1], tint[2], tint[3], tint[4] * current_alpha})
+		G.setColor(tint[1] / 255, tint[2] / 255, tint[3] / 255, tint[4] * pa / 255)
 	end
 
 	if self.animation then
@@ -840,7 +868,7 @@ function KView:_draw_self()
 		G.pop()
 	end
 
-	G.setColor_old(pr, pg, pb, pa)
+	G.setColor(pr, pg, pb, pa)
 end
 
 function KView:_draw_children()
@@ -921,7 +949,7 @@ end
 function KView:hit_all(x, y, filter)
 	local hits = {}
 
-	if self._disabled then
+	if self._disabled or self.hidden then
 		return hits
 	end
 
@@ -945,7 +973,7 @@ function KView:hit_all(x, y, filter)
 
 	local hr = self.hit_rect
 
-	if not self.hidden and not self._disabled and (hr and x >= hr.pos.x and x <= hr.pos.x + hr.size.x and y >= hr.pos.y and y <= hr.pos.y + hr.size.y or not hr and x >= 0 and x <= self.size.x and y >= 0 and y <= self.size.y) and (filter == nil or filter(self)) then
+	if ((hr and x >= hr.pos.x and x <= hr.pos.x + hr.size.x and y >= hr.pos.y and y <= hr.pos.y + hr.size.y) or (not hr and x >= 0 and x <= self.size.x and y >= 0 and y <= self.size.y)) and (filter == nil or filter(self)) then
 		table.insert(hits, self)
 	end
 
@@ -953,15 +981,52 @@ function KView:hit_all(x, y, filter)
 end
 
 function KView:hit_topmost(x, y, filter)
-	local result = self:hit_all(x, y, filter)
-
-	if #result > 0 then
-		return result[1]
-	else
+	if self.hidden or self._disabled then
 		return nil
 	end
+
+	if self.clip and (x < 0 or x > self.size.x or y < 0 or y > self.size.y) then
+		return nil
+	end
+
+	-- 从最上层的子视图开始检查
+	for i = #self.children, 1, -1 do
+		local c = self.children[i]
+		local cx = (x - c.pos.x + c.anchor.x * c.scale.x) / c.scale.x
+		local cy = (y - c.pos.y + c.anchor.y * c.scale.y - (self.scroll_origin_y or 0)) / c.scale.y
+
+		local hit = c:hit_topmost(cx, cy, filter)
+		if hit then
+			-- 如果在子视图中找到命中，立即返回
+			return hit
+		end
+	end
+
+	-- 如果没有子视图命中，再检查自身
+	local hr = self.hit_rect
+	if (hr and x >= hr.pos.x and x <= hr.pos.x + hr.size.x and y >= hr.pos.y and y <= hr.pos.y + hr.size.y) or (not hr and x >= 0 and x <= self.size.x and y >= 0 and y <= self.size.y) then
+		if filter == nil or filter(self) then
+			return self
+		end
+	end
+
+	-- 没有任何命中
+	return nil
 end
 
+-- function KView:hit_topmost(x, y, filter)
+-- 	local result = self:hit_all(x, y, filter)
+
+-- 	if #result > 0 then
+-- 		return result[1]
+-- 	else
+-- 		return nil
+-- 	end
+-- end
+
+--- 通过递归的方式，将坐标从世界坐标转换到相对坐标
+---@param x any
+---@param y any
 function KView:screen_to_view(x, y)
 	local ox, oy = 0, 0
 	local this = self
@@ -987,6 +1052,9 @@ function KView:screen_to_view(x, y)
 	return vround(x, y)
 end
 
+--- 通过递归的方式，将坐标从相对坐标转换到世界坐标
+---@param x any
+---@param y any
 function KView:view_to_screen(x, y)
 	local ox, oy = 0, 0
 	local this = self
@@ -1005,12 +1073,14 @@ function KView:view_to_screen(x, y)
 	return vround(x, y)
 end
 
+--- 将坐标从一个视图的相对坐标系转换到另一个视图的相对坐标系
 function KView:view_to_view(x, y, dest_view)
 	local ix, iy = self:view_to_screen(x, y)
 
 	return dest_view:screen_to_view(ix, iy)
 end
 
+--- 向上递归查询 window
 function KView:get_window()
 	local this = self
 
@@ -1025,6 +1095,8 @@ function KView:get_window()
 	return nil
 end
 
+--- 通过 id 递归查询孩子
+---@param id any
 function KView:get_child_by_id(id)
 	if self.id == id then
 		return self
@@ -1041,8 +1113,10 @@ function KView:get_child_by_id(id)
 	return nil
 end
 
+-- alias
 KView.ci = KView.get_child_by_id
 
+-- 禁用视图，可选地应用禁用色调
 function KView:disable(tint, color)
 	self._disabled = true
 
@@ -1051,6 +1125,7 @@ function KView:disable(tint, color)
 	end
 end
 
+-- 启用视图，可选地移除禁用色调
 function KView:enable(untint)
 	self._disabled = false
 
@@ -1408,7 +1483,6 @@ end
 
 function KWindow:update(dt)
 	KWindow.super.update(self, dt)
-
 	local x, y = 0, 0
 	local button_1_down = false
 	local touches = love.touch.getTouches()

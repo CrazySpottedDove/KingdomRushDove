@@ -12666,13 +12666,6 @@ tt.editor.overrides = {
 }
 tt.cheats.buttons[1].text = "TreeDecal"
 tt.cheats.buttons[1].fn = function(button, store, e)
-	function DEBUG_RIGHT_CLICK(x, y)
-		local hp = E:create_entity("trees_guardian_tree_vine_aura")
-
-		hp.pos.x, hp.pos.y = x, y
-
-		simulation:queue_insert_entity(hp)
-	end
 end
 tt.cheats.buttons[2] = E:clone_c("cheats_text_button")
 tt.cheats.buttons[2].text = "TreeCD"

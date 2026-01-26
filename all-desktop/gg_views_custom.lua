@@ -91,6 +91,14 @@ function PopUpView:hide()
 	end))
 end
 
+-- 不跳出的情况下不要占用运算资源！
+function PopUpView:update(dt)
+	if self.hidden then
+		return
+	end
+	PopUpView.super.update(self, dt)
+end
+
 function PopUpView:cancel_timers()
 	if self._timers then
 		for _, t in pairs(self._timers) do

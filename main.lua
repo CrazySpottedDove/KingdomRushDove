@@ -23,8 +23,7 @@ do
 			if r[4] and r[4] > 1 then
 				r[4] = r[4] / 255
 			end
-
-			return love.graphics.setColor(r)
+			love.graphics.setColor(r)
 		else
 			if r and r > 1 then
 				r = r / 255
@@ -41,8 +40,7 @@ do
 			if a and a > 1 then
 				a = a / 255
 			end
-
-			return love.graphics.setColor(r, g, b, a)
+			love.graphics.setColor(r, g, b, a)
 		end
 	end
 end
