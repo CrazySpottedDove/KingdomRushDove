@@ -17,6 +17,7 @@ local GS = require("kr1.game_settings")
 local AC = require("achievements")
 local simulation = require("simulation")
 local game_gui = require("game_gui")
+local SH = require("klove.shader_db")
 local G = love.graphics
 local bit = require("bit")
 
@@ -110,7 +111,8 @@ function game:init(screen_w, screen_h, done_callback)
 	self.screen_w = screen_w
 	self.screen_h = screen_h
 	self.done_callback = done_callback
-	self.path_lines = {}
+	self.dashed_shader = SH:get("dashed_path")
+	self.path_meshes = {} -- path_id -> { mesh = ..., total_len = ... }
 
 	local aspect = screen_w / screen_h
 
@@ -1312,141 +1314,90 @@ function game:draw_dark_foreground(rox, roy, gs)
 	G.pop()
 end
 
--- 绘制路径
-function game:draw_path(rox, roy, gs)
-	if self.shown_path then
-		local dash_length = 25 -- 虚线段长度
-		local gap_length = 15 -- 虚线间隔
-		local speed = 60 -- 虚线移动速度（像素/秒）
-		-- 初始化路径数据
-		local path_data = {}
-		local total_length = 0
+-- 构建某条路径的三角形 Mesh（带每顶点 PathDistance），并缓存
+function game:_build_path_mesh(path_id, thickness)
+	local vertex_format = {{"VertexPosition", "float", 2}, {"VertexTexCoord", "float", 2}}
+	local vertices = {}
 
-		self.dash_start_offset = self.dash_start_offset or 0
-		self.dash_start_offset = (self.dash_start_offset + 0.4 * 120 / DRAW_FPS) % (dash_length + gap_length)
-
-		-- self.path_lines[self.shown_path] 记录了这个路径上各个子路径展平成直线后各个顶点在直线上的坐标。
-		if not self.path_lines[self.shown_path] then
-			self.path_lines[self.shown_path] = {}
-
-			for spi, sp in ipairs(P.paths[self.shown_path]) do
-				self.path_lines[self.shown_path][spi] = {}
-
-				local len = 0
-
-				self.path_lines[self.shown_path][spi][1] = 0
-
-				for ni = 2, #sp do
-					local o1 = sp[ni - 1]
-					local o2 = sp[ni]
-					local dx, dy = o2.x - o1.x, o2.y - o1.y
-					local seg_len = math.sqrt(dx * dx + dy * dy)
-
-					len = len + seg_len
-					self.path_lines[self.shown_path][spi][ni] = len
-				end
-			end
+	local function add_quad(p0, p1, d0, d1, t)
+		local x0, y0 = p0.x, REF_H - p0.y
+		local x1, y1 = p1.x, REF_H - p1.y
+		local dx, dy = x1 - x0, y1 - y0
+		local len = math.sqrt(dx * dx + dy * dy)
+		if len <= 0 then
+			return
 		end
+		local nx, ny = -dy / len, dx / len
+		local ox, oy = nx * (t * 0.5), ny * (t * 0.5)
 
-		-- 开始绘制
-		G.push()
-		G.translate(rox, roy)
-		G.scale(gs, gs)
+		local v0 = {x0 + ox, y0 + oy, d0, 0}
+		local v1 = {x0 - ox, y0 - oy, d0, 0}
+		local v2 = {x1 + ox, y1 + oy, d1, 0}
+		local v3 = {x1 - ox, y1 - oy, d1, 0}
 
-		if not self.path_canvas then
-			self.path_canvas = G.newCanvas()
+		-- 两个三角形
+		table.insert(vertices, v0)
+		table.insert(vertices, v1)
+		table.insert(vertices, v2)
 
-			G.setCanvas(self.path_canvas)
-		else
-			G.setCanvas(self.path_canvas)
-			G.clear(0, 0, 0, 0)
-		end
-
-		G.setLineWidth(4)
-		G.setColor(1, 0, 0, 1)
-
-		for spi = 1, #self.path_lines[self.shown_path] do
-			local i = 1
-			local path = P.paths[self.shown_path][spi]
-			local path_line = self.path_lines[self.shown_path][spi]
-
-			while i <= #path_line and path_line[i] < self.dash_start_offset do
-				i = i + 1
-			end
-
-			local x1 = path[i - 1].x
-			local x2 = path[i].x
-			local y1 = REF_H - path[i - 1].y
-			local y2 = REF_H - path[i].y
-			local factor = (self.dash_start_offset - path_line[i - 1]) / (path_line[i] - path_line[i - 1])
-
-			G.line((x2 - x1) * factor + x1, (y2 - y1) * factor + y1, x2, y2)
-
-			local line_len = path_line[i] - self.dash_start_offset
-
-			-- 从第 i 个点开始往下画线
-			while i < #path_line do
-				while line_len <= dash_length + gap_length do
-					local next_span_len = path_line[i + 1] - path_line[i]
-
-					while next_span_len <= 0 do
-						i = i + 1
-
-						if i >= #path_line then
-							break
-						end
-
-						next_span_len = path_line[i + 1] - path_line[i]
-					end
-
-					if i >= #path_line then
-						break
-					end
-
-					if line_len + next_span_len < dash_length then
-						G.line(path[i].x, REF_H - path[i].y, path[i + 1].x, REF_H - path[i + 1].y)
-					else
-						if line_len < dash_length then
-							local factor = (dash_length - line_len) / next_span_len
-							local x1 = path[i].x
-							local y1 = REF_H - path[i].y
-							local x2 = path[i + 1].x
-							local y2 = REF_H - path[i + 1].y
-
-							G.line(x1, y1, x1 + (x2 - x1) * factor, y1 + (y2 - y1) * factor)
-						end
-					end
-
-					line_len = line_len + next_span_len
-					i = i + 1
-
-					if i >= #path_line then
-						break
-					end
-				end
-
-				local factor = (line_len - dash_length - gap_length) / (path_line[i] - path_line[i - 1])
-
-				if factor > 0 then
-					local x1 = path[i - 1].x
-					local y1 = REF_H - path[i - 1].y
-					local x2 = path[i].x
-					local y2 = REF_H - path[i].y
-
-					G.line(x2 - (x2 - x1) * factor, y2 - (y2 - y1) * factor, x2, y2)
-
-					line_len = line_len - dash_length - gap_length
-				end
-			end
-		end
-
-		G.setLineWidth(1)
-		G.setColor(1, 1, 1, 1)
-		G.setCanvas()
-		G.pop()
-	elseif not self.path_canvas then
-		self.path_canvas = nil
+		table.insert(vertices, v2)
+		table.insert(vertices, v1)
+		table.insert(vertices, v3)
 	end
+
+	local total_len = 0
+	for spi, sp in ipairs(P.paths[path_id]) do
+		local d_acc = 0
+		for ni = 2, #sp do
+			local p0 = sp[ni - 1]
+			local p1 = sp[ni]
+			local dx = p1.x - p0.x
+			local dy = p1.y - p0.y
+			local seg = math.sqrt(dx * dx + dy * dy)
+			add_quad(p0, p1, d_acc, d_acc + seg, thickness)
+			d_acc = d_acc + seg
+		end
+		total_len = total_len + d_acc
+	end
+
+	local mesh = G.newMesh(vertex_format, vertices, "triangles", "static")
+	return mesh, total_len
+end
+
+function game:draw_path(rox, roy, gs)
+	-- 懒构建 Mesh 并缓存
+	local pid = self.shown_path
+	if not self.path_meshes[pid] then
+		local mesh, total_len = self:_build_path_mesh(pid, 4) -- 厚度可调
+		self.path_meshes[pid] = {
+			mesh = mesh,
+			total_len = total_len
+		}
+	end
+	local mh = self.path_meshes[pid]
+
+	local dash_length = 25
+	local gap_length = 15
+	local speed = 60
+
+	-- 时间推进（用 store.dt）
+	local d = self.store
+	self.dash_start_offset = (self.dash_start_offset or 0) + speed * (d and d.dt or 0.016)
+	local period = dash_length + gap_length
+	self.dash_start_offset = self.dash_start_offset % period
+
+	-- 设置 shader 参数
+	self.dashed_shader:send("dash_length", dash_length)
+	self.dashed_shader:send("gap_length", gap_length)
+	self.dashed_shader:send("dash_offset", self.dash_start_offset)
+
+	G.setShader(self.dashed_shader)
+	G.push()
+	G.translate(rox, roy)
+	G.scale(gs, gs)
+	G.draw(mh.mesh)
+	G.pop()
+	G.setShader()
 end
 
 -- 绘制变速状态显示
@@ -1539,7 +1490,6 @@ function game:draw_game()
 	end
 
 	self:front_draw_debug(rox, roy, gs)
-	self:draw_path(rox, roy, gs)
 
 	G.push()
 	G.translate(rox, roy)
@@ -1548,9 +1498,7 @@ function game:draw_game()
 	G.pop()
 
 	if self.DBG_DRAW_PATHS or self.shown_path then
-		G.setColor(1, 1, 1, 0.392)
-		G.draw(self.path_canvas)
-		G.setColor(1, 1, 1, 1)
+		self:draw_path(rox, roy, gs)
 	end
 
 	if d.night_mode then

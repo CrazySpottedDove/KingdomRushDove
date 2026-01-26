@@ -30,10 +30,6 @@ end
 function shader_db:get(name)
 	if not self.shaders[name] then
 		local filename = self.path .. "/" .. name .. ".c"
-		local start_ts = love.timer.getTime()
-
-		log.debug("loading shader:%s from file %s", name, filename)
-
 		local ok, sh = pcall(love.graphics.newShader, filename)
 
 		if not ok then
@@ -43,8 +39,6 @@ function shader_db:get(name)
 		end
 
 		self.shaders[name] = sh
-
-		log.debug("    time:%s", love.timer.getTime() - start_ts)
 	end
 
 	return self.shaders[name]
