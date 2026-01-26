@@ -1,14 +1,15 @@
 local M = {}
+local io = require("dove_modules.updater.io")
+
 local G = love.graphics
 local FS = love.filesystem
 
 -- 本模块只在非安卓平台启用
 local apply_upgrade = love.system.getOS() ~= "Android"
-local ok, update_cfg = pcall(dofile, "update.lua")
 
-if (ok and type(update_cfg) == "table" and update_cfg.auto_upgrade == false) or (arg[2] == "debug" or arg[2] == "release") then
-	apply_upgrade = false
-end
+local update_config = io.load()
+
+apply_upgrade = apply_upgrade and update_config.enable and not (arg[2] == "debug" or arg[2] == "release")
 
 local is_windows = package.config:sub(1, 1) == "\\"
 
@@ -108,24 +109,42 @@ local json = require("lib.json")
 
 if apply_upgrade then
 	https = require("https")
-	local candidate_sites = {"https://krdovedownload6.crazyspotteddove.top:52000/", "https://krdovedownload4.crazyspotteddove.top/"}
 
-	for _, site in ipairs(candidate_sites) do
-		local code, response = https.request(site)
-		if code == 200 then
-			server_address = site
-			print("Selected update server:", server_address)
-			break
-		else
-			print("Update server not reachable:", site)
-			print("Response code:", code)
-			print("Response body:", response)
+	local code, response = https.request(update_config.last_site)
+
+	if code == 200 then
+		server_address = update_config.last_site
+		print("Using last known update server:", server_address)
+		io.save(update_config)
+	else
+		print("Last known update server not reachable:", update_config.last_site)
+		print("Response code:", code)
+		print("Response body:", response)
+
+		local candidate_sites = {"https://krdovedownload6.crazyspotteddove.top:52000/", "https://krdovedownload4.crazyspotteddove.top/"}
+
+		for _, site in ipairs(candidate_sites) do
+			if site ~= update_config.last_site then
+				local code, response = https.request(site)
+				if code == 200 then
+					server_address = site
+					print("Selected update server:", server_address)
+					-- 更新配置文件
+					update_config.last_site = site
+					io.save(update_config)
+					break
+				else
+					print("Update server not reachable:", site)
+					print("Response code:", code)
+					print("Response body:", response)
+				end
+			end
 		end
-	end
 
-	if not server_address then
-		print("No available update server found. Disabling updates.")
-		apply_upgrade = false
+		if not server_address then
+			print("No available update server found. Disabling updates.")
+			apply_upgrade = false
+		end
 	end
 end
 
