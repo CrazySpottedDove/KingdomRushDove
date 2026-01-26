@@ -1,5 +1,5 @@
 local M = {}
-local io = require("dove_modules.updater.io")
+local update_io = require("dove_modules.updater.io")
 
 local G = love.graphics
 local FS = love.filesystem
@@ -7,7 +7,7 @@ local FS = love.filesystem
 -- 本模块只在非安卓平台启用
 local apply_upgrade = love.system.getOS() ~= "Android"
 
-local update_config = io.load()
+local update_config = update_io.load()
 
 apply_upgrade = apply_upgrade and update_config.enable and not (arg[2] == "debug" or arg[2] == "release")
 
@@ -115,7 +115,7 @@ if apply_upgrade then
 	if code == 200 then
 		server_address = update_config.last_site
 		print("Using last known update server:", server_address)
-		io.save(update_config)
+		update_io.save(update_config)
 	else
 		print("Last known update server not reachable:", update_config.last_site)
 		print("Response code:", code)
@@ -131,7 +131,7 @@ if apply_upgrade then
 					print("Selected update server:", server_address)
 					-- 更新配置文件
 					update_config.last_site = site
-					io.save(update_config)
+					update_io.save(update_config)
 					break
 				else
 					print("Update server not reachable:", site)
