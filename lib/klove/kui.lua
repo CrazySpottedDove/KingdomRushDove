@@ -738,7 +738,6 @@ function KView:draw()
 	if self.hidden then
 		return
 	end
-
 	local pr, pg, pb, pa = G.getColor()
 	local current_alpha = pa * self.alpha
 
@@ -1014,16 +1013,6 @@ function KView:hit_topmost(x, y, filter)
 	return nil
 end
 
--- function KView:hit_topmost(x, y, filter)
--- 	local result = self:hit_all(x, y, filter)
-
--- 	if #result > 0 then
--- 		return result[1]
--- 	else
--- 		return nil
--- 	end
--- end
-
 --- 通过递归的方式，将坐标从世界坐标转换到相对坐标
 ---@param x any
 ---@param y any
@@ -1204,6 +1193,174 @@ function KView:get_bounds()
 	end
 
 	return V.r(x, y, w, h)
+end
+
+-- Static View，不会重绘自己和孩子，用于提供对静态内容或更新不频繁内容的高性能绘制
+KStaticView = class("KStaticView", KView)
+function KStaticView:initialize(size, image_name, image_scale)
+	KStaticView.super.initialize(self, size, image_name, image_scale)
+	self.canvas_cache = G.newCanvas()
+	self.canvas_cache_dirty = true
+end
+
+function KStaticView:draw()
+	if self.hidden then
+		return
+	end
+
+	local pr, pg, pb, pa = G.getColor()
+	local current_alpha = pa * self.alpha
+
+	G.setColor(1, 1, 1, current_alpha)
+	G.push()
+	-- 转移坐标系
+	G.scale(self.scale.x, self.scale.y)
+	G.rotate(-self.r)
+	G.translate(-self.anchor.x, -self.anchor.y)
+
+	if not self.canvas_cache_dirty then
+		G.draw(self.canvas_cache)
+	else
+		G.setCanvas(self.canvas_cache)
+		G.clear()
+		G.push()
+		G.origin()
+
+		if self.clip then
+			local this = self
+
+			if self.clip_fn then
+				self._stencil_fn = self.clip_fn
+			else
+				function self._stencil_fn()
+					G.rectangle("fill", 0, 0, this.size.x, this.size.y)
+				end
+			end
+
+			G.stencil(self._stencil_fn)
+			G.setStencilTest("greater", 0)
+		end
+
+		self:_draw_self()
+
+		if self.scroll_origin_y then
+			G.push()
+			G.translate(0, self.scroll_origin_y)
+		end
+
+		self:_draw_children()
+
+		if self.scroll_origin_y then
+			G.pop()
+		end
+
+		if self.clip then
+			G.setStencilTest()
+		end
+
+		if self._focused then
+			if self.draw_focus then
+				self:draw_focus()
+			end
+
+			if self.colors.focused_outline then
+				G.setColor_old(self.colors.focused_outline)
+				G.rectangle("line", -1, -1, self.size.x + 1, self.size.y + 1)
+			end
+		end
+
+		G.pop()
+		G.setCanvas()
+		self.canvas_cache_dirty = false
+
+		G.draw(self.canvas_cache)
+	end
+
+	G.pop()
+	G.setColor(pr, pg, pb, pa)
+end
+
+-- KVirtualView，只作为逻辑容器使用，不绘制自己，仅绘制孩子
+KVirtualView = class("KVirtualView", KView)
+function KVirtualView:draw()
+	if self.hidden then
+		return
+	end
+	local pr, pg, pb, pa = G.getColor()
+	local current_alpha = pa * self.alpha
+
+	G.setColor(1, 1, 1, current_alpha)
+	G.push()
+	-- 转移坐标系
+	G.scale(self.scale.x, self.scale.y)
+	G.rotate(-self.r)
+	G.translate(-self.anchor.x, -self.anchor.y)
+
+	self:_draw_children()
+	G.pop()
+	G.setColor(pr, pg, pb, pa)
+end
+
+function KVirtualView:update(dt)
+	for _, c in pairs(self.children) do
+		c:update(dt)
+	end
+end
+
+function KVirtualView:_draw_children()
+	G.push()
+	G.translate(self.padding.x, self.padding.y)
+
+	for _, c in pairs(self.children) do
+		G.push()
+		G.translate(c.pos.x, c.pos.y)
+		c:draw()
+		G.pop()
+	end
+
+	G.pop()
+end
+
+KVirtualStaticView = class("KVirtualStaticView", KVirtualView)
+function KVirtualStaticView:initialize(size)
+	KVirtualStaticView.super.initialize(self, size)
+	self.canvas_cache = G.newCanvas()
+	self.canvas_cache_dirty = true
+end
+
+function KVirtualStaticView:draw()
+	if self.hidden then
+		return
+	end
+	local pr, pg, pb, pa = G.getColor()
+	local current_alpha = pa * self.alpha
+
+	G.setColor(1, 1, 1, current_alpha)
+	G.push()
+	-- 转移坐标系
+	G.scale(self.scale.x, self.scale.y)
+	G.rotate(-self.r)
+	G.translate(-self.anchor.x, -self.anchor.y)
+
+	if not self.canvas_cache_dirty then
+		G.draw(self.canvas_cache)
+	else
+		G.setCanvas(self.canvas_cache)
+		G.clear()
+		G.push()
+		G.origin()
+
+		self:_draw_children()
+
+		G.pop()
+		G.setCanvas()
+		self.canvas_cache_dirty = false
+
+		G.draw(self.canvas_cache)
+	end
+
+	G.pop()
+	G.setColor(pr, pg, pb, pa)
 end
 
 KImageView = class("KImageView", KView)

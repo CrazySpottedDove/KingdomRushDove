@@ -38,6 +38,7 @@ local G = love.graphics
 local i18n = require("i18n")
 local EU = require("endless_utils")
 local EL = require("kr1.data.endless")
+local perf = require("dove_modules.perf.perf")
 
 local function ISW(...)
 	return i18n.sw(i18n, ...)
@@ -817,8 +818,6 @@ function game_gui:destroy()
 	signal.remove("debug-ready-user-powers", debug_ready_user_powers_handler)
 	signal.remove("debug-ready-plants-crystals", debug_ready_plants_crystals_handler)
 end
-
-local perf = require("dove_modules.perf.perf")
 
 function game_gui:update(dt)
 	timer:update(dt)
@@ -2751,296 +2750,6 @@ function PowerButtonBlock:update(dt)
 	PowerButtonBlock.super.update(self, dt)
 end
 
-BagButton = class("BagButton", KImageView)
-BagButton.static.init_arg_names = {"default_image_name", "focused_image_name", "selected_image_name"}
-
-function BagButton:initialize(default_image_name, focused_image_name, selected_image_name)
-	KImageView.initialize(self, default_image_name)
-
-	self.default_image_name = default_image_name
-	self.focused_image_name = focused_image_name
-	self.selected_image_name = selected_image_name
-	self.icon_bg_image_name = icon_bg_image_name
-	self.selected_item = nil
-	self.selected_gui_mode = GUI_MODE_BAG
-
-	self:set_mode("locked")
-
-	self.propagate_on_down = false
-	self.propagate_on_up = false
-	self.propagate_on_touch_down = false
-	self.propagate_on_touch_up = false
-	self.propagate_on_touch_move = false
-end
-
-function BagButton:set_mode(new_mode, item_name)
-	self.mode = new_mode
-	self.selected_item = nil
-
-	local function sid(id)
-		return self:ci(id)
-	end
-
-	local doors = sid("doors")
-	local bb = sid("bag_button_icons")
-
-	local function show_icon(id)
-		for _, v in pairs(bb.children) do
-			v.hidden = v.id ~= id
-		end
-	end
-
-	if new_mode == "locked" then
-		self:disable()
-
-		doors.hidden = false
-		doors.ts = 0
-		doors.animation.paused = true
-	elseif new_mode == "unlocked" then
-		self:enable()
-		self:set_image(self.default_image_name)
-		show_icon("default")
-
-		doors.hidden = false
-		doors.ts = 0
-		doors.animation.paused = nil
-	elseif new_mode == "selected" then
-		self:set_image(self.selected_image_name)
-		show_icon("default")
-	elseif new_mode == "item" then
-		self:set_image(self.selected_image_name)
-		show_icon(item_name)
-
-		self.selected_item = item_name
-	else
-		self:enable()
-		show_icon("default")
-
-		self.mode = "default"
-
-		self:set_image(self.default_image_name)
-	end
-end
-
-function BagButton:deselect()
-	if self.mode == "selected" or self.mode == "item" then
-		self:set_mode("default")
-	end
-
-	wid("bag_view"):hide()
-end
-
-function BagButton:select_item(item_name)
-	self:set_mode("item", item_name)
-	wid("bag_view"):hide()
-	game_gui:set_mode(GUI_MODE_BAG_ITEM)
-end
-
-function BagButton:toggle_selection()
-	log.debug("gui_mode:%s", game_gui.mode)
-
-	if game_gui.mode == GUI_MODE_BAG_ITEM then
-		self:deselect()
-		game_gui:set_mode()
-	elseif game_gui.mode == GUI_MODE_BAG then
-		game_gui:set_mode()
-		self:set_mode("default")
-		wid("bag_view"):hide()
-	else
-		game_gui:deselect_all()
-		game_gui:set_mode(GUI_MODE_BAG)
-		self:set_mode("selected")
-		wid("bag_view"):show()
-		S:queue("GUISpellSelect")
-	end
-end
-
-function BagButton:on_click()
-	self:toggle_selection()
-end
-
-function BagButton:on_enter()
-	if table.contains({"default", "unlocked"}, self.mode) then
-		self:set_image(self.focused_image_name)
-	end
-end
-
-function BagButton:on_exit()
-	if table.contains({"default", "unlocked"}, self.mode) then
-		self:set_image(self.default_image_name)
-	end
-end
-
-function BagButton:fire_item(item_name, x, y, entity)
-	self:deselect()
-
-	local slot = storage:load_slot()
-	local qty = slot.bag[item_name] or 0
-
-	qty = km.clamp(0, 9000000000, qty - 1)
-	slot.bag[item_name] = qty
-
-	storage:save_slot(slot)
-
-	local item_button = wid("bag_item_" .. item_name)
-
-	item_button:ci("bag_item_qty").text = qty
-
-	if qty < 1 then
-		item_button:disable()
-	end
-
-	if item_name == "coins" then
-		local gnome = game_gui.hud_counters.gold_gnome
-
-		timer:script(function(wait)
-			S:queue("InAppExtraGold")
-
-			gnome.hidden = false
-			gnome.alpha = 0
-			gnome.pos.x = gnome.hidden_x
-
-			timer:tween(1.2, gnome.pos, {
-				x = gnome.shown_x
-			}, "out-elastic")
-			timer:tween(0.2, gnome, {
-				alpha = 1
-			})
-
-			local p1, p2 = ItemRewardParticles:new(), ItemRewardParticles:new()
-
-			p1.pos.x, p1.pos.y = x, y
-			p2.pos.x, p2.pos.y = gnome.shown_x, gnome.pos.y
-
-			game_gui.layer_gui_hud:add_child(p1)
-			game_gui.layer_gui_hud:add_child(p2)
-			wait(1)
-			timer:tween(0.2, gnome, {
-				alpha = 0
-			})
-
-			game.store.player_gold = game.store.player_gold + entity.reward
-		end)
-	elseif item_name == "hearts" then
-		S:queue("InAppExtraHearts")
-
-		local lh = game_gui.layer_gui_hud
-		local hud = game_gui.hud_counters
-		local p1 = ItemRewardParticles:new()
-
-		p1.pos.x, p1.pos.y = x, y
-
-		lh:add_child(p1)
-
-		for i = 1, entity.reward do
-			local h = KImageView:new("heart_0001")
-
-			h.pos = V.v(lh:view_to_view(x, y, hud))
-			h.anchor.x, h.anchor.y = h.size.x * 0.5, h.size.y * 0.5
-			h.hidden = true
-
-			hud:add_child(h)
-			timer:after((i - 1) * 0.15, function()
-				h.hidden = false
-
-				timer:tween(1, h.pos, {
-					x = hud.heart_x
-				}, "in-back")
-				timer:tween(1, h.pos, {
-					y = hud.heart_y
-				}, "linear")
-			end)
-			timer:after((i - 1) * 0.15 + 1, function()
-				h:remove_from_parent()
-
-				local p1 = ItemRewardParticles:new(0.4)
-
-				p1.pos = V.v(hud:view_to_view(hud.heart_x, hud.heart_y, lh))
-
-				lh:add_child(p1)
-
-				game.store.lives = game.store.lives + 1
-
-				for _, e in pairs(E:filter_templates("enemy")) do
-					if U.flag_has(e.vis.flags, F_BOSS) then
-						e.enemy.lives_cost = game.store.lives
-					end
-				end
-
-				for _, e in E:filter_iter(game.store.entities, "enemy") do
-					if U.flag_has(e.vis.flags, F_BOSS) then
-						e.enemy.lives_cost = game.store.lives
-					end
-				end
-			end)
-		end
-	elseif item_name == "atomic_bomb" then
-		entity.pos.x, entity.pos.y = game_gui:u2g(V.v(-50, 200))
-		entity.plane_dest = V.v(game_gui:u2g(V.v(game_gui.sw + 50, 200)))
-		entity.bomb_dest = V.v(game_gui:u2g(V.v(game_gui.sw * 0.5, 450)))
-
-		local wx, wy = game_gui:u2g(V.v(x, y))
-	end
-end
-
-BagItemButton = class("BagItemButton", KView)
-BagItemButton.static.init_arg_names = {"item", "image_suffix"}
-
-function BagItemButton:initialize(item, image_suffix)
-	KView.initialize(self)
-
-	self.item = item
-
-	local b = self:ci("bag_item_button")
-
-	b.propagate_on_touch_down = false
-	b.propagate_on_touch_up = false
-	b.propagate_on_touch_move = false
-	b.default_image_name = "backPack_icons_" .. image_suffix
-	b.disabled_image_name = "backPack_icons_off_" .. image_suffix
-	b.hover_image_name = b.default_image_name
-	b.click_image_name = b.default_image_name
-
-	function b.on_click(this)
-		game_gui.bag_button:select_item(self.item)
-	end
-
-	local p = self:ci("bag_item_plus")
-
-	p.hidden = true
-	self.but = b
-	self.plus = p
-
-	self:refresh()
-end
-
-function BagItemButton:refresh()
-	local slot = storage:load_slot()
-	local qty = slot.bag and slot.bag[self.item] or 0
-
-	self:ci("bag_item_qty").text = qty
-
-	if qty < 1 then
-		self:disable()
-	else
-		self:enable()
-	end
-end
-
-function BagItemButton:disable()
-	self.but:set_image(self.but.disabled_image_name)
-	GGImageButton.disable(self.but, false)
-end
-
-function BagItemButton:enable()
-	self.but:set_image(self.but.default_image_name)
-	GGImageButton.enable(self.but)
-end
-
-function BagItemButton:is_disabled()
-	return self.but:is_disabled()
-end
-
 NextWaveButton = class("NextWaveButton", KImageButton)
 
 function NextWaveButton:initialize()
@@ -3050,8 +2759,6 @@ function NextWaveButton:initialize()
 end
 
 function NextWaveButton:on_click(button, x, y)
-	log.debug("")
-
 	game_gui.game.store.send_next_wave = true
 end
 
@@ -3570,10 +3277,10 @@ function HudBottomView:update(dt)
 	self.herobar:update(dt)
 end
 
-HudCountersView = class("HudCountersView", KImageView)
+HudCountersView = class("HudCountersView", KStaticView)
 
 function HudCountersView:initialize(level_mode)
-	HudCountersView.super.initialize(self, "top_left")
+	HudCountersView.super.initialize(self, nil, "top_left")
 
 	self.level_mode = level_mode
 	self.heart_x = 70
@@ -3619,27 +3326,43 @@ function HudCountersView:initialize(level_mode)
 	self.lbl_lives = lbl_lives
 	self.lbl_gold = lbl_gold
 	self.lbl_wave = lbl_wave
-
-	self.last_update_ts = self.ts
+	self.lbl_lives_value = -1
+	self.lbl_gold_value = -1
+	self.lbl_wave_value = -1
 end
 
 function HudCountersView:update(dt)
-	-- HudCountersView.super.update(self, dt)
-	self.ts = self.ts + dt
+	local store = game_gui.game.store
 
-	if self.last_update_ts + 0.03 > self.ts then
-		self.last_update_ts = self.ts
-		local store = game_gui.game.store
-
+	if store.lives ~= self.lbl_lives_value then
+		self.lbl_lives_value = store.lives
 		self.lbl_lives.text = string.format("%d", store.lives)
+		self.canvas_cache_dirty = true
+	end
+
+	if store.player_gold ~= self.lbl_gold_value then
+		self.lbl_gold_value = store.player_gold
 		self.lbl_gold.text = string.format("%d", store.player_gold)
+		self.canvas_cache_dirty = true
+	end
+
+	local wave_value = store.wave_group_number
+	if game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS then
+		wave_value = store.wave_group_number
+	elseif store.criket.on then
+		wave_value = store.enemy_count
+	end
+
+	if wave_value ~= self.lbl_wave_value then
+		self.lbl_wave_value = wave_value
+		self.canvas_cache_dirty = true
 
 		if game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS then
-			self.lbl_wave.text = string.format("%d", store.wave_group_number)
+			self.lbl_wave.text = string.format("%d", wave_value)
 		elseif store.criket.on then
-			self.lbl_wave.text = string.format("%3d*%.2f", store.enemy_count, store.config.enemy_health_multiplier)
+			self.lbl_wave.text = string.format("%3d*%.2f", wave_value, store.config.enemy_health_multiplier)
 		else
-			self.lbl_wave.text = string.format(_("MENU_HUD_WAVES"), store.wave_group_number, store.wave_group_total)
+			self.lbl_wave.text = string.format(_("MENU_HUD_WAVES"), wave_value, store.wave_group_total)
 		end
 	end
 end
@@ -7778,7 +7501,6 @@ end
 
 function WaveFlag:update(dt)
 	-- 它的孩子都是非响应的，全都阻断掉，只更新自身时间即可
-	-- WaveFlag.super.update(self, dt)
 	if not self.animation or not self.animation.paused then
 		self.ts = self.ts + dt
 	end
