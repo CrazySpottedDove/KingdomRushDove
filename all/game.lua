@@ -1510,6 +1510,7 @@ function game:draw_game()
 	G.scale(self.game_scale, self.game_scale)
 	last_idx = draw_frames_range(d.render_frames, last_idx + 1, Z_GUI - 1)
 	G.pop()
+
 	self.game_gui.window:draw_child(self.game_gui.layer_gui)
 
 	if d.speed_factor ~= 1 then

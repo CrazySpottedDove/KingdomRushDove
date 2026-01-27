@@ -5935,7 +5935,7 @@ AchievementsView = class("AchievementsView", PopUpView)
 function AchievementsView:initialize(sw, sh)
 	PopUpView.initialize(self, V.v(sw, sh))
 
-	self.disabled_tint_color = {200, 200, 200, 255}
+	self.disabled_tint_color = {0.7843137254902, 0.7843137254902, 0.7843137254902, 1}
 	self.back = KImageView:new("Achievements_BG_notxt")
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
 	self.back.pos = v(sw / 2 - 15, sh / 2)

@@ -4,7 +4,7 @@ local km = require("lib.klua.macros")
 local signal = require("lib.hump.signal")
 
 require("lib.klua.dump")
-
+local version = require("version")
 local features = require("features")
 local i18n = require("i18n")
 local V = require("lib.klua.vector")

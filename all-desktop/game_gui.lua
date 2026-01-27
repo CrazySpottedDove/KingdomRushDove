@@ -2146,7 +2146,7 @@ function HeroPortrait:initialize(hero_entity)
 	HeroPortrait.super.initialize(self, V.v(102, 101))
 
 	self.colors.background = {0, 0, 0, 0}
-	self.disabled_tint_color = {200, 200, 200, 255}
+	self.disabled_tint_color = {0.7843137254902, 0.7843137254902, 0.7843137254902, 1}
 	self.hero_id = hero_entity.id
 	self.portrait_image_name = hero_entity.info.hero_portrait
 	self.portrait = KImageView:new(self.portrait_image_name)
@@ -2166,7 +2166,7 @@ function HeroPortrait:initialize(hero_entity)
 	self:add_child(self.ov_cooldown)
 
 	self.frame = KImageView:new("heroPortrait_0001")
-	self.frame.disabled_tint_color = {200, 200, 200, 255}
+	self.frame.disabled_tint_color = {0.7843137254902, 0.7843137254902, 0.7843137254902, 1}
 	self.frame.propagate_on_click = true
 
 	self:add_child(self.frame)
@@ -2318,10 +2318,10 @@ function HeroPortrait:update(dt)
 
 	if e.health.hp > e.health.hp_max then
 		self.bar_health.scale.x = 1
-		self.bar_health.colors.tint = {0, 255, 200, 255}
+		self.bar_health.colors.tint = {0, 1, 0.7843137254902, 1}
 	else
 		self.bar_health.scale.x = e.health.hp / e.health.hp_max
-		self.bar_health.colors.tint = {255, 255, 255, 255}
+		self.bar_health.colors.tint = {1, 1, 1, 1}
 	end
 
 	if e.health.dead then

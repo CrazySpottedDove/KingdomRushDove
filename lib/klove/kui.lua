@@ -613,7 +613,7 @@ function KView:initialize(size, image_name, image_scale)
 	self.clip = false
 	self.clip_view = nil
 	self.alpha = 1
-	self.disabled_tint_color = {150, 150, 150, 255}
+	self.disabled_tint_color = {0.58823529411765, 0.58823529411765, 0.58823529411765, 1}
 	self.hit_rect = nil
 	self.focus_order = 0
 	self.focus_nav_dir = nil
@@ -793,7 +793,7 @@ function KView:draw()
 	end
 
 	G.pop()
-	G.setColor_old(pr, pg, pb, pa)
+	G.setColor(pr, pg, pb, pa)
 end
 
 function KView:_draw_self()
@@ -818,7 +818,7 @@ function KView:_draw_self()
 	if self.colors.tint then
 		local tint = self.colors.tint
 
-		G.setColor(tint[1] / 255, tint[2] / 255, tint[3] / 255, tint[4] * pa / 255)
+		G.setColor(tint[1], tint[2], tint[3], tint[4] * pa)
 	end
 
 	if self.animation then
@@ -1844,10 +1844,10 @@ function KLabel:_draw_self()
 		if self.colors.tint then
 			local tint_c = self.colors.tint
 
-			new_c[1] = new_c[1] * tint_c[1] / 255
-			new_c[2] = new_c[2] * tint_c[2] / 255
-			new_c[3] = new_c[3] * tint_c[3] / 255
-			new_c[4] = new_c[4] * tint_c[4] / 255
+			new_c[1] = new_c[1] * tint_c[1]
+			new_c[2] = new_c[2] * tint_c[2]
+			new_c[3] = new_c[3] * tint_c[3]
+			new_c[4] = new_c[4] * tint_c[4]
 		end
 
 		new_c[4] = self.alpha * pa / 255 * new_c[4]
@@ -1858,7 +1858,7 @@ function KLabel:_draw_self()
 	local voff = self.font_adj and self.font_adj.top or 0
 
 	G.printf(self.text, self.text_offset.x, self.text_offset.y + voff, self.text_size.x, self.text_align)
-	G.setColor_old(pr, pg, pb, pa)
+	G.setColor(pr, pg, pb, pa)
 end
 
 function KLabel:get_wrap_lines()

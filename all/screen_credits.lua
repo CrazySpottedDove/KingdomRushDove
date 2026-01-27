@@ -10,7 +10,7 @@ local S = require("sound_db")
 local SU = require("screen_utils")
 local ISM = require("input_state_machine")
 local i18n = require("i18n")
-
+local version = require("version")
 require("klove.kui")
 require("gg_views_custom")
 

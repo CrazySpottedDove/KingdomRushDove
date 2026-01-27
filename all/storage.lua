@@ -8,7 +8,7 @@ local signal = require("lib.hump.signal")
 require("lib.klua.string")
 
 local GS = require("kr1.game_settings")
-require("version")
+local version = require("version")
 
 local sio = require("all.storage_io_generic")
 local storage = {}

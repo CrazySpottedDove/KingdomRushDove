@@ -277,7 +277,7 @@ function GGUpgradesButton:initialize(label_text)
 	GGButton.initialize(self, "Upgrades_Btns_notxt_0001", "Upgrades_Btns_notxt_0002", "Upgrades_Btns_notxt_0002")
 
 	self.on_down_scale = nil
-	self.disabled_tint_color = {150, 150, 150, 255}
+	self.disabled_tint_color = {0.58823529411765, 0.58823529411765, 0.58823529411765, 1}
 	self.anchor.x, self.anchor.y = 0, 0
 	self.label.pos = V.v(20, 18)
 	self.label.size = V.v(93, 38)

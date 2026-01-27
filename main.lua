@@ -1,6 +1,7 @@
 -- chunkname: @./main.lua
+local version = require("version")
+love.filesystem.setIdentity(version.identity)
 local MUST_READ = require("dove_modules.notice.must_read")
-
 local M = require("dove_modules.updater.update_manager")
 
 local perf = require("dove_modules.perf.perf")
@@ -269,7 +270,6 @@ local log = require("lib.klua.log")
 
 require("lib.klua.table")
 require("lib.klua.dump")
-require("version")
 require("all.constants")
 
 if arg[2] == "assets" then
@@ -406,8 +406,6 @@ local function load_app_settings()
 end
 
 local function load(arg)
-	love.filesystem.setIdentity(version.identity)
-
 	if love.filesystem.isFused() and not love.filesystem.getInfo(KR_PATH_ALL_TARGET) then
 		log.info("")
 		log.info("mounting asset files...")

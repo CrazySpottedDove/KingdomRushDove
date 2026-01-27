@@ -104,3 +104,5 @@ server  ssh://dove@10.112.99.5:60001/srv/git/KingdomRushDove.git (push)
 - 不允许在 `tween_prop.keys` 中使用 `key[3]` 指定插值方法，每个 `tween_prop` 只能有一个插值方法，并通过 `tween_prop.interp` 指定。
 - 建议将只运行一次的 `tween` 的 `run_once` 赋为 `true`。
 - 不允许直接修改 `sprite` 的 `draw_order`。如需修改，必须调用 `U.change_sprite_draw_order()`。
+- UI 中的 `colors.tint` 使用归一化参数。
+- KView 中的 `alpha` 是归一化的。

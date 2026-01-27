@@ -1,7 +1,7 @@
 -- chunkname: @./all-desktop/screen_settings.lua
 local log = require("lib.klua.log"):new("game_gui")
 local km = require("lib.klua.macros")
-
+local version = require("version")
 require("lib.klua.table")
 
 local class = require("middleclass")

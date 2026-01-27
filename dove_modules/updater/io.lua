@@ -1,6 +1,7 @@
 local io = {}
 local sio = require("all.storage_io_generic")
 local update_config_template = require("dove_modules.updater.update_config_template")
+
 function io.load()
 	local ok, update_config = sio:load_file("update_config.lua")
 	if not ok or not update_config then

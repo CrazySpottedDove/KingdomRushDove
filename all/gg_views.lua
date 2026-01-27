@@ -200,10 +200,10 @@ function GGLabel:_draw_self()
 		if self.colors.tint then
 			local tint_c = self.colors.tint
 
-			new_c[1] = new_c[1] * tint_c[1] / 255
-			new_c[2] = new_c[2] * tint_c[2] / 255
-			new_c[3] = new_c[3] * tint_c[3] / 255
-			new_c[4] = new_c[4] * tint_c[4] / 255
+			new_c[1] = new_c[1] * tint_c[1]
+			new_c[2] = new_c[2] * tint_c[2]
+			new_c[3] = new_c[3] * tint_c[3]
+			new_c[4] = new_c[4] * tint_c[4]
 		end
 
 		new_c[4] = self.alpha * pa / 255 * new_c[4]
@@ -212,7 +212,7 @@ function GGLabel:_draw_self()
 	end
 
 	G.printf(self.text, self.text_offset.x, self.text_offset.y + voff, self.text_size.x * font_scale, self.text_align, 0, 1 / font_scale)
-	G.setColor_old(pr, pg, pb, pa)
+	G.setColor(pr, pg, pb, pa)
 end
 
 function GGLabel:get_wrap_lines()

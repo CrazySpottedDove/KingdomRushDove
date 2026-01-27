@@ -6,7 +6,7 @@ local FS = love.filesystem
 local G = love.graphics
 local SU = require("screen_utils")
 local timer = require("hump.timer").new()
-
+local version = require("version")
 require("klove.kui")
 require("gg_views_custom")
 
