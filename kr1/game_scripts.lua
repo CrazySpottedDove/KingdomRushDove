@@ -52945,7 +52945,8 @@ function scripts.mod_croc_boss_evolution_polymorph.insert(this, store)
 		entity_poly.health.hp_healed = target.health.hp_healed or 0
 
 		local hp_start = target.health.hp
-        entity_poly.health.patched = target.health.patched
+		entity_poly.health.patched = target.health.patched
+		entity_poly.health.hp_max = target.health.hp_max
 
 		if this.hp_evolution_method[target.boss_crocs_level] == 0 then
 		-- block empty
