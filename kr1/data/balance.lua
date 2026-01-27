@@ -3312,23 +3312,23 @@ local enemies = {
 			primordial_hunger = {{
 				hp_evolution_method = 2,
 				pre_evolution_step_cap = 0.7,
-				hp_restore_fixed_amount = 1700
+				hp_restore_fixed_amount = 3000
 			}, {
 				hp_evolution_method = 2,
 				pre_evolution_step_cap = 0.7,
-				hp_restore_fixed_amount = 2200
+				hp_restore_fixed_amount = 4000
 			}, {
 				hp_evolution_method = 2,
 				pre_evolution_step_cap = 0.7,
-				hp_restore_fixed_amount = 1700
+				hp_restore_fixed_amount = 3000
 			}, {
 				hp_evolution_method = 2,
 				pre_evolution_step_cap = 0.8,
-				hp_restore_fixed_amount = 2200
+				hp_restore_fixed_amount = 4000
 			}, {
 				hp_evolution_method = 2,
 				pre_evolution_step_cap = 0.9,
-				hp_restore_fixed_amount = 3500
+				hp_restore_fixed_amount = 6500
 			}},
 			basic_attack = {
 				cooldown = 1.5,

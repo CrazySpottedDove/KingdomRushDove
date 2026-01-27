@@ -52043,7 +52043,7 @@ function scripts.boss_crocs.update(this, store, script)
 			end
 
 			for _, kill_position in pairs(mask_settings[3]) do
-				local soldiers = U.find_soldiers_in_range(store.entities, kill_position[1], 0, kill_position[2], 0, 0)
+				local soldiers = U.find_soldiers_in_range(store.soldiers, kill_position[1], 0, kill_position[2], 0, 0)
 
 				if soldiers and #soldiers > 0 then
 					for _, sold in pairs(soldiers) do
@@ -52226,9 +52226,7 @@ function scripts.boss_crocs.update(this, store, script)
 	end
 
 	local function ready_to_evolve()
-		local current_percentage = this.health.hp / this.health.hp_max
-
-		if this.evolution_amount < this.eat_tower_evolution and current_percentage > this.life_percentage_evolution then
+		if this.evolution_amount < this.eat_tower_evolution and this.health.hp / this.health.hp_max > this.life_percentage_evolution then
 			return false
 		end
 
@@ -52947,6 +52945,7 @@ function scripts.mod_croc_boss_evolution_polymorph.insert(this, store)
 		entity_poly.health.hp_healed = target.health.hp_healed or 0
 
 		local hp_start = target.health.hp
+        entity_poly.health.patched = target.health.patched
 
 		if this.hp_evolution_method[target.boss_crocs_level] == 0 then
 		-- block empty
