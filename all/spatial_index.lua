@@ -19,7 +19,6 @@ local _y_min = IN_GAME_Y_MIN
 local _cols = SPATIAL_HASH_COLS
 local _rows = SPATIAL_HASH_ROWS
 local _max_size = SPATIAL_HASH_MAX_INDEX
-local _id_array_capacity = ID_ARRAY_CAPACITY
 local _check_interval = SPATIAL_INDEX_CHECK_INTERVAL
 
 -- array: 存储实体 id 的数组
@@ -29,7 +28,7 @@ local _check_interval = SPATIAL_INDEX_CHECK_INTERVAL
 ffi.cdef[[
 typedef struct{
     uint32_t size;
-    uint32_t array[256];
+    uint32_t array[1024];
 } id_array;
 ]]
 

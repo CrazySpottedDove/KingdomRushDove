@@ -11,7 +11,7 @@ local TOWER_MENU_BUTTON_X_UNIT = 56
 local TOWER_MENU_BUTTON_Y_UNIT = 62
 
 local function tower_menu_button_pos(x, y)
-	return v(74 - x * TOWER_MENU_BUTTON_X_UNIT, (x % 2 == 0 and 130 or 98) - y * TOWER_MENU_BUTTON_Y_UNIT)
+	return v(74 + x * TOWER_MENU_BUTTON_X_UNIT, (x % 2 == 0 and 130 or 98) - y * TOWER_MENU_BUTTON_Y_UNIT)
 end
 
 return {

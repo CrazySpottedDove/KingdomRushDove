@@ -854,6 +854,11 @@ a = tt.melee.attacks[2]
 a.damage_type = DAMAGE_PHYSICAL
 a.damage_max = 50
 a.damage_min = 29
+if tt.melee.attacks[3] then
+a = tt.melee.attacks[3]
+a.damage_max = 180
+a.damage_min = 108
+end
 a = tt.timed_attacks.list[1]
 a.mod = "mod_eb_gerald_courage"
 a.vis_flags = F_MOD
@@ -2320,6 +2325,8 @@ tt.main_script.update = function(this, store)
 		return ready_to_attack(sand, store) and this.enemy.can_do_magic
 	end
 
+    local cont, blocker, ranged
+
 	while true do
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
@@ -2359,7 +2366,7 @@ tt.main_script.update = function(this, store)
 			end
 		end
 
-		local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, false, sand_ready)
+		cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, false, sand_ready)
 		if cont then
 			if blocker then
 				if not SU.y_wait_for_blocker(store, this, blocker) then
@@ -2376,5 +2383,6 @@ tt.main_script.update = function(this, store)
 			end
 		end
 		::label_alric_end::
+        coroutine.yield()
 	end
 end
