@@ -5971,7 +5971,7 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
 		local total_cost = 0
 
 		for k, v in pairs(game_gui.game.store.towers) do
-			if v.tower.type == "holder" then
+			if v.tower.type == "holder" or (v.tower_holder and v.tower_holder.blocked) then
 				local new_tower = E:create_entity(item.action_arg)
 
 				game_gui.game.store.criket.tower_name = new_tower.template_name

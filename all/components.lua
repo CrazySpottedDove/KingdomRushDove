@@ -1244,3 +1244,14 @@ corruption_kr5.limit = 3
 corruption_kr5.on_corrupt = nil
 corruption_kr5.spawn = nil
 corruption_kr5.enabled = true
+
+local event = E:register_c("event")
+
+event.name = nil
+event.on_event = nil
+event.entity_id = nil
+
+local events = E:register_c("events")
+
+events.list = {}
+events.list[1] = E:clone_c("event")

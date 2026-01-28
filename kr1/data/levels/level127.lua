@@ -2,7 +2,7 @@ local log=require("klua.log"):new("level01")
 local signal=require("hump.signal")
 local E=require("entity_db")
 local S=require("sound_db")
-local U=require("utils_5")
+local U=require("utils")
 local LU=require("level_utils")
 local V=require("klua.vector")
 local P=require("path_db")
@@ -78,7 +78,6 @@ signal.emit("head-stage27",nil)
 end
 U.y_wait(store,fts(80))
 signal.emit("boss_fight_end")
-store.custom_game_outcome={next_item_name="boss_fight_7_end"}
 signal.emit("fade-out",1)
 else
 if store.level_mode==GAME_MODE_IRON then
@@ -86,11 +85,11 @@ local starting_gold=store.player_gold
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="6"
 end)[1]
-holder.tower.upgrade_to="tower_necromancer_lvl1"
+holder.tower.upgrade_to="tower_mage_1"
 holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="9"
 end)[1]
-holder.tower.upgrade_to="tower_necromancer_lvl1"
+holder.tower.upgrade_to="tower_mage_1"
 coroutine.yield()
 store.player_gold=starting_gold
 end

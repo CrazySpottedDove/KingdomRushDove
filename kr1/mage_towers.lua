@@ -1703,11 +1703,10 @@ tt.render.sprites[1].name = "necromancer_tower_death_rider_start_walk_FX_front_i
 tt = RT("fx_tower_necromancer_rider_spawn_back", "fx")
 tt.render.sprites[1].name = "necromancer_tower_death_rider_start_walk_FX_back_idle"
 --#endregion
+
 --#region tower_necromancer_lvl4
 tt = RT("tower_necromancer_lvl4", "tower")
-
 AC(tt, "attacks", "tower_upgrade_persistent_data", "tween", "powers")
-
 tt.tower.type = "necromancer_lvl4"
 tt.tower.level = 1
 tt.tower.price = b.price[4]
@@ -1748,7 +1747,6 @@ tt.attacks.list[1].cooldown = b.basic_attack.cooldown
 tt.attacks.list[1].shoot_time = fts(10)
 tt.attacks.list[1].bullet_start_offset = vec_2(-15, 75)
 tt.attacks.list[1].ignore_out_of_range_check = 1
-tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
 tt.attacks.list[1].node_prediction = fts(11)
 tt.attacks.list[1].bullet = "bullet_tower_necromancer_lvl4"
 tt.attacks.list[1].bullet_spawn_offset = {vec_2(20, 95), vec_2(-20, 95), vec_2(-36, 75), vec_2(36, 75)}
@@ -1771,7 +1769,7 @@ tt.attacks.list[3].cast_time = fts(27)
 tt.attacks.list[3].node_prediction = fts(60)
 tt.attacks.list[3].min_cooldown = 2
 tt.attacks.list[3].min_targets = b.skill_rider.min_targets
-tt.attacks.list[3].vis_bans = bor(F_FLYING, F_NIGHTMARE)
+tt.attacks.list[3].vis_bans = F_FLYING
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_mage_%04i"
 tt.render.sprites[1].offset = vec_2(0, 13)
@@ -1795,12 +1793,14 @@ tt.render.sprites[4].offset = tt.render.sprites[2].offset
 tt.render.sprites[4].prefix = "necromancer_tower_lvl4_tower_FX_tower_FX"
 tt.render.sprites[4].scale = vec_2(0.9, 0.9)
 tt.render.sprites[4].sort_y_offset = tt.render.sprites[2].sort_y_offset
+tt.render.sprites[4].name = "attack"
 tt.render.sprites[5] = CC("sprite")
 tt.render.sprites[5].animated = true
 tt.render.sprites[5].prefix = "necromancer_tower_lvl4_tower_FX_tower_FX"
 tt.render.sprites[5].offset = tt.render.sprites[2].offset
 tt.render.sprites[5].sort_y_offset = tt.render.sprites[2].sort_y_offset
 tt.render.sprites[5].scale = vec_2(0.9, 0.9)
+tt.render.sprites[5].name = "attack"
 tt.render.sprites[6] = CC("sprite")
 tt.render.sprites[6].animated = true
 tt.render.sprites[6].loop = true

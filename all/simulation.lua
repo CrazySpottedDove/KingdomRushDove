@@ -82,11 +82,58 @@ function simulation:init(store, system_names)
 	self.systems_on_remove_count = #self.systems_on_remove
 	self.systems_on_update_count = #self.systems_on_update
 
-	for _, s in ipairs(systems_order) do
+	-- init 动作必须在最后执行，因为对 systems_on_xxx_count 有依赖。而且，你必须保证所有因 init 而进入的实体都经历所有的钩子处理。
+
+	local system_ids_to_remove = {}
+
+	for i, s in ipairs(systems_order) do
 		if s.init then
-			s:init(self.store)
+			if s:init(self.store) == "skip" then
+				system_ids_to_remove[#system_ids_to_remove + 1] = i
+			end
 		end
 	end
+
+	-- 移除被 skip 的系统
+	for i = #system_ids_to_remove, 1, -1 do
+		local id = system_ids_to_remove[i]
+		table.remove(systems_order, id)
+	end
+
+	-- 重建 systems.on_xxx_count
+	self.systems_on_queue = {}
+	self.systems_on_dequeue = {}
+	self.systems_on_insert = {}
+	self.systems_on_remove = {}
+	self.systems_on_update = {}
+
+	for _, s in ipairs(systems_order) do
+		if s.on_queue then
+			table.insert(self.systems_on_queue, s)
+		end
+
+		if s.on_dequeue then
+			table.insert(self.systems_on_dequeue, s)
+		end
+
+		if s.on_insert then
+			table.insert(self.systems_on_insert, s)
+		end
+
+		if s.on_remove then
+			table.insert(self.systems_on_remove, s)
+		end
+
+		if s.on_update then
+			table.insert(self.systems_on_update, s)
+		end
+	end
+
+	self.systems_on_queue_count = #self.systems_on_queue
+	self.systems_on_dequeue_count = #self.systems_on_dequeue
+	self.systems_on_insert_count = #self.systems_on_insert
+	self.systems_on_remove_count = #self.systems_on_remove
+	self.systems_on_update_count = #self.systems_on_update
 end
 
 function simulation:update(dt)

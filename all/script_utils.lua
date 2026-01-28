@@ -3570,6 +3570,7 @@ local function y_enemy_do_ranged_attack(store, this, target, attack)
 				end
 
 				bullet.bullet.target_id = target.id
+				bullet.bullet.source_id = this.id
 				bullet.bullet.damage_factor = this.unit.damage_factor
 
 				if attack.damage_factor then

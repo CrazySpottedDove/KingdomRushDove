@@ -1388,3 +1388,17 @@ tt.fx_in = "tower_ghost_teleport_in"
 tt.fx_spawn_delay = fts(14)
 tt.fx_in_delay = fts(14)
 tt.fx_delay_between = 0
+
+tt = E:register_t("mod_hide_tower", "modifier")
+tt.main_script.insert = scripts.mod_hide_tower.insert
+tt.main_script.remove = scripts.mod_hide_tower.remove
+tt.skip_sprite_index = {}
+tt.skip_all_modifiers = false
+tt.skip_all_auras = false
+tt.skip_modifiers = {}
+tt.skip_auras = {}
+tt.handle_stun = true
+tt.skip_hide_modifier_self = true
+tt.allows_duplicates = false
+tt.replaces_lower = false
+tt.resets_same = false

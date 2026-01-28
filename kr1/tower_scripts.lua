@@ -7364,7 +7364,7 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 	local last_ts = store.tick_ts - this.attacks.list[1].cooldown
 	local last_ts_shared = store.tick_ts - this.attacks.min_cooldown
 
-	this.attacks._last_target_pos = this.attacks._last_target_pos or vec_2(REF_W, 0)
+	this.attacks._last_target_pos = this.attacks._last_target_pos or v(REF_W, 0)
 	this.attacks.list[1].ts = store.tick_ts - this.attacks.list[1].cooldown + this.attacks.attack_delay_on_spawn
 
 	local max_skulls = #this.attacks.list[1].bullet_spawn_offset
@@ -7677,8 +7677,6 @@ function scripts.bullet_tower_necromancer.insert(this, store)
 		return false
 	end
 
-	animation_start(this, "flying", nil, store.tick_ts, s.loop)
-
 	return true
 end
 
@@ -7809,8 +7807,6 @@ function scripts.bullet_tower_necromancer.update(this, store)
 			local d = math.max(math.abs(target.pos.x + target.unit.hit_offset.x - b.to.x), math.abs(target.pos.y + target.unit.hit_offset.y - b.to.y))
 
 			if d > b.max_track_distance then
-				log.info("BOLT MAX DISTANCE FAIL. (%s) %s / dist:%s target.pos:%s,%s b.to:%s,%s", this.id, this.template_name, d, target.pos.x, target.pos.y, b.to.x, b.to.y)
-
 				target = nil
 				b.target_id = nil
 			else
@@ -8050,7 +8046,7 @@ function scripts.mod_tower_necromancer_curse.insert(this, store)
 			for i = 1, #this.render.sprites do
 				local s = this.render.sprites[i]
 
-				s.flip_x = target.render.sprites[1].flip_x
+				s.flip_x = target.render and target.render.sprites[1].flip_x or false
 				s.ts = store.tick_ts
 
 				if s.size_names then

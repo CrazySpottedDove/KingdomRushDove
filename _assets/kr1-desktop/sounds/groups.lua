@@ -1486,7 +1486,11 @@ return {
 			"kra_sfx_enemy_darksteelGuardian_attack_var3_v1.ogg",
 			"kra_sfx_enemy_darksteelGuardian_death_oneShot_v1.ogg",
 			"kra_sfx_enemy_darksteelGuardian_enrage_cast_v1.ogg",
-			"kra_sfx_enemy_darksteelGuardian_enrage_attack_v1.ogg"
+			"kra_sfx_enemy_darksteelGuardian_enrage_attack_v1.ogg",
+			"kra_sfx_enemy_patrollingVulture_death_var4_v1.ogg",
+			"kra_sfx_enemy_soulcaller_towerBlock_in_v1.ogg",
+			"kra_sfx_enemy_soulcaller_towerBlock_out_v1.ogg",
+			"kra_sfx_enemy_razingRhino_basicAttack_var3_v1.ogg"
 		}
 	},
 	enemies_terrain_crocs = {

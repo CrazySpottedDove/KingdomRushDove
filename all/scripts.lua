@@ -9631,4 +9631,167 @@ function scripts.arrow5_45degrees.insert(this, store, script)
 	return scripts.arrow.insert(this, store, script)
 end
 
+scripts.invisible_bullet = {}
+
+function scripts.invisible_bullet.insert(this, store, script)
+	local b = this.bullet
+
+	if b.start_fx then
+		local fx = E:create_entity(b.start_fx)
+
+		fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
+		fx.render.sprites[1].r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
+		fx.render.sprites[1].ts = store.tick_ts
+
+		queue_insert(store, fx)
+	end
+
+	if b.hide_radius then
+		this.render.sprites[1].hidden = true
+	end
+
+	return true
+end
+
+function scripts.invisible_bullet.update(this, store, script)
+	local b = this.bullet
+	local target = store.entities[b.target_id]
+	local target_invalid = false
+
+	if target and target.health and not target.health.dead then
+		local d = SU.create_bullet_damage(b, target.id, this.id)
+
+		queue_damage(store, d)
+
+		if b.hit_fx then
+			local sfx = E:create_entity(b.hit_fx)
+
+			sfx.pos.x, sfx.pos.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
+			sfx.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, sfx)
+		end
+	elseif b.miss_fx_water and GR:cell_is(b.to.x, b.to.y, TERRAIN_WATER) then
+		local fx = E:create_entity(b.miss_fx_water)
+
+		fx.pos.x, fx.pos.y = b.to.x, b.to.y
+		fx.render.sprites[1].ts = store.tick_ts
+
+		queue_insert(store, fx)
+	elseif b.miss_fx then
+		local fx = E:create_entity(b.miss_fx)
+
+		fx.pos.x, fx.pos.y = b.to.x, b.to.y
+		fx.render.sprites[1].ts = store.tick_ts
+
+		queue_insert(store, fx)
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.mod_hide_tower = {}
+
+function scripts.mod_hide_tower.insert(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+
+	if not target then
+		return false
+	end
+
+	this.hidden_sprites = {}
+
+	for i, spr in ipairs(target.render.sprites) do
+		if spr.hidden then
+		-- block empty
+		elseif table.contains(this.skip_sprite_index, i) then
+		-- block empty
+		else
+			local tower_specific_indexes = this.skip_sprite_index[target.tower.type]
+
+			if tower_specific_indexes and table.contains(tower_specific_indexes, i) then
+			-- block empty
+			else
+				table.insert(this.hidden_sprites, i)
+
+				spr.hidden = true
+			end
+		end
+	end
+
+	this.hidden_particles = {}
+
+	for k, v in pairs(store.particle_systems) do
+		if v.particle_system and v.particle_system.track_id == m.target_id and v.particle_system.emit then
+			table.insert(this.hidden_particles, v.id)
+
+			v.particle_system.emit = false
+		end
+	end
+
+	if not this.skip_all_modifiers then
+		if not this.skip_hide_modifier_self then
+			table.insert(this.skip_modifiers, this.template_name)
+		end
+
+		local mods = table.filter(store.modifiers, function(k, v)
+			return v.modifier and v.modifier.target_id == target.id and not table.contains(this.skip_modifiers, v.template_name)
+		end)
+
+		for _, m in pairs(mods) do
+			U.sprites_hide(m, nil, nil, true)
+		end
+	end
+
+	if not this.skip_all_auras then
+		SU.hide_auras(store, target, true, this.skip_aura)
+	end
+
+	if this.handle_stun then
+		SU.tower_block_inc(target)
+	end
+
+	return true
+end
+
+function scripts.mod_hide_tower.remove(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+
+	if target then
+		for _, i in pairs(this.hidden_sprites) do
+			target.render.sprites[i].hidden = false
+		end
+
+		for _, id in pairs(this.hidden_particles) do
+			local ps = store.entities[id]
+
+			if ps then
+				ps.particle_system.emit = true
+			end
+		end
+
+		if not this.skip_all_modifiers then
+			local mods = table.filter(store.modifiers, function(k, v)
+				return v.modifier and v.modifier.target_id == target.id and not table.contains(this.skip_modifiers, v.template_name)
+			end)
+
+			for _, m in pairs(mods) do
+				U.sprites_show(m, nil, nil, true)
+			end
+		end
+
+		if not this.skip_all_auras then
+			SU.show_auras(store, target, true, this.skip_aura)
+		end
+
+		if this.handle_stun then
+			SU.tower_block_dec(target)
+		end
+	end
+
+	return true
+end
+
 return scripts

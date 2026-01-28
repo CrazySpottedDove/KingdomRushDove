@@ -1357,7 +1357,7 @@ function upgrades:patch_templates(max_level)
 		for _, n in pairs(self:mage_tower_bolts()) do
 			local b = T(n).bullet
 			b.damage_hooks[#b.damage_hooks + 1] = function(entity, damage, protection)
-				if math.random() < 0.1 then
+				if math.random() < 0.1 and protection < 1 then
 					damage.value = damage.value * 1.5 / (1 - protection)
 				end
 			end

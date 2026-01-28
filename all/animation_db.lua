@@ -135,10 +135,6 @@ function animation_db:prebuild_frames()
 	end
 end
 
-function animation_db:has_animation(animation_name)
-	return self.db[animation_name] ~= nil
-end
-
 -- 完成从动画名称到具体帧名（如soldier_0001）的转换
 function animation_db:fn(animation_name, time_offset, loop, fps)
 	local a = self.db[animation_name]
@@ -155,9 +151,6 @@ function animation_db:fn(animation_name, time_offset, loop, fps)
 		return nil
 	end
 
-	-- if not a.frame_names then
-	--     log.error("animation %s has no frame_names", animation_name)
-	-- end
 	return self:fni(a, time_offset, loop, fps)
 end
 

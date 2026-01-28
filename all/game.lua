@@ -82,8 +82,10 @@ game.required_sounds = {
 game.simulation_systems = {
 	"level",
 	"wave_spawn",
+	"wave_spawn_tsv",
 	"mod_lifecycle",
 	"main_script",
+	"events",
 	"timed",
 	"tween",
 	"endless_patch",

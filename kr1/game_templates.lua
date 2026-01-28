@@ -2721,15 +2721,26 @@ tt.tower_holder.unblock_price = b.price
 --tt.render.sprites[2].hidden = false
 tt = E:register_t("tower_holder_blocked_terrain_4", "tower_holder_blocked_2")
 b = balance.specials.trees.blocked_holders
-
 -- E:add_comps(tt, "main_script")
-
 -- tt.main_script.remove = scripts.tower_holder_animated.remove
 tt.tower.type = "holder_blocked_halloween"
 tt.tower_holder.unblock_price = b.price
 -- tt.tower_holder.unblock_fx = "fx_tower_holder_unblock_terrain_4"
 -- tt.render.sprites[1].name = "terrains_holders_0006_blocked"
 -- tt.render.sprites[2].name = "UpdateHalloween_terrain_anim_0001"
+
+tt = E:register_t("tower_holder_blocked_terrain_6", "tower_holder_blocked_2")
+b = balance.specials.terrain_6.blocked_holders
+tt.tower.type = "holder_blocked_sea_of_trees"
+tt.tower_holder.unblock_price = b.price
+-- tt.render.sprites[1].name = "terrains_holders_0008_blocked"
+-- tt.render.sprites[2].name = "terrains_holders_0008_flag_blocked"
+tt = E:register_t("tower_holder_blocked_terrain_6_2", "tower_holder_blocked_2")
+b = balance.specials.terrain_6.blocked_holders
+tt.tower.type = "holder_blocked_sea_of_trees"
+tt.tower_holder.unblock_price = b.price
+-- tt.render.sprites[1].name = "terrains_holders_0009_blocked"
+-- tt.render.sprites[2].name = "terrains_holders_0009_flag_blocked"
 --#region carnivorous_plant
 tt = RT("carnivorous_plant", "decal_scripted")
 
@@ -15494,7 +15505,8 @@ tt.render.sprites[2].prefix = "glare_stage_16_eyelids_2"
 tt = E:register_t("decal_stage_16_glare_eye_small_3", "decal_terrain_3_glare_eye_small")
 tt.render.sprites[1].prefix = "glare_stage_16_eyes_3"
 tt.render.sprites[2].prefix = "glare_stage_16_eyelids_3"
-tt = E:register_t("decal_stage_16_overseer_blood", "decal_scripted")
+tt = E:register_t("decal_stage_16_overseer_blood")
+E:add_comps(tt, "pos", "main_script")
 tt.main_script.update = scripts.decal_stage_16_overseer_blood.update
 tt.blood_pos = {v(20, 20), v(100, 100), v(-100, 100), v(-150, -30), v(150, -70), v(-30, 40)}
 tt.fx_template = "decal_stage_16_overseer_single_blood_fx"
@@ -18824,3 +18836,1698 @@ tt.main_script.update = scripts.mod_dps.update
 
 tt = E:register_t("fx_bullet_tower_arborean_mage_hit", "fx")
 tt.render.sprites[1].name = "Stage_22_shaman_shaman_hitfx_run"
+
+tt = E:register_t("controller_darksteel_guardian")
+E:add_comps(tt, "main_script", "editor")
+tt.main_script.insert = scripts.controller_darksteel_guardian.insert
+tt.guardian_t = "enemy_darksteel_guardian"
+tt.editor.flip_x = false
+tt.editor.path = 1
+tt.editor.props = {{"editor.flip_x", PT_NUMBER}, {"editor.path", PT_NUMBER}}
+
+tt = E:register_t("controller_darksteel_guardian_death")
+b = balance.enemies.hammer_and_anvil.darksteel_guardian
+E:add_comps(tt, "main_script", "render")
+tt.main_script.update = scripts.controller_darksteel_guardian_death.update
+tt.render.sprites[1].name = "darksteel_guardian_dwarf_projectile"
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].animated = false
+tt.clone_t = "bullet_enemy_darksteel_guardian_death"
+tt.nodes_range = 20
+tt.shoot_sound = nil
+tt.spawn_offset = v(0, 20)
+tt.legs_t = "decal_enemy_darksteel_guardian_legs"
+tt.explotion_damage_min = b.death_explotion.damage_min
+tt.explotion_damage_max = b.death_explotion.damage_max
+tt.explotion_damage_radius = b.death_explotion.damage_radius
+tt.explotion_damage_type = b.death_explotion.damage_type
+tt.explotion_vis_bans = bor(F_ENEMY)
+tt.explotion_vis_flags = bor(F_AREA, F_ENEMY)
+
+tt = E:register_t("controller_basic_clone_darksteel_guardian", "enemy_KR5")
+b = balance.enemies.hammer_and_anvil.common_clone
+tt.info.portrait = "kr5_info_portraits_enemies_0067"
+tt.motion.max_speed = b.speed
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.controller_basic_clone_darksteel_guardian.update
+tt.render.sprites[1].prefix = "common_clone_creep"
+tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.vis.bans = F_ALL
+tt.ui.can_click = false
+tt.guardian_t = "enemy_darksteel_guardian"
+
+tt = E:register_t("controller_stage_23_roboboots", "decal_scripted")
+b = balance.specials.stage23_roboboots
+
+E:add_comps(tt, "editor")
+
+tt.main_script.update = scripts.controller_stage_23_roboboots.update
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "dclenanos_stage01_robobootDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].offset = v(0, -1)
+tt.render.sprites[1].sort_y_offset = 200
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "dclenanos_stage01_roboboot2Def"
+tt.render.sprites[2].name = "idle"
+tt.render.sprites[2].exo = true
+tt.render.sprites[2].offset = v(2.3, -3.1)
+tt.render.sprites[2].sort_y_offset = 50
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].prefix = "dclenanos_stage01_roboboot_topDef"
+tt.render.sprites[3].name = "idle"
+tt.render.sprites[3].exo = true
+tt.render.sprites[3].offset = v(0, 0)
+tt.render.sprites[3].sort_y_offset = 200
+tt.render.sprites[3].z = Z_OBJECTS
+tt.render.sprites[4] = E:clone_c("sprite")
+tt.render.sprites[4].prefix = "dclenanos_stage01_roboboot2_topDef"
+tt.render.sprites[4].name = "idle"
+tt.render.sprites[4].exo = true
+tt.render.sprites[4].offset = v(2.3, -2.1)
+tt.render.sprites[4].sort_y_offset = 50
+tt.render.sprites[4].z = Z_OBJECTS
+tt.wave_config = b.wave_config
+tt.sound_open = "Stage23BootOpen"
+tt.sound_close = "Stage23BootClose"
+tt = E:register_t("controller_stage_24_machinist")
+b = balance.specials.stage24_factory
+
+E:add_comps(tt, "main_script")
+
+tt.main_script.update = scripts.controller_stage_24_machinist.update
+tt.wave_config = b.wave_config
+tt.machinist_t = "enemy_machinist"
+tt = E:register_t("decal_stage24_boss_machinist_shoutbox", "decal_stage06_cultist_shoutbox")
+tt = E:register_t("taunts_s24_controller")
+
+E:add_comps(tt, "main_script", "taunts", "editor")
+
+tt.load_file = "level101_taunts"
+tt.main_script.insert = scripts.taunts_controller.insert
+tt.taunts.delay_min = 10
+tt.taunts.delay_max = 20
+tt.taunts.sets = {}
+tt.taunts.sets.stage_24_boss_machinist_before_bossfight = CC("taunt_set")
+tt.taunts.sets.stage_24_boss_machinist_before_bossfight.format = "TAUNT_STAGE24_BOSS_MACHINIST_BEFORE_BOSSFIGHT_%04i"
+tt.taunts.sets.stage_24_boss_machinist_before_bossfight.decal_name = "decal_stage24_boss_machinist_shoutbox"
+tt.taunts.sets.stage_24_boss_machinist_before_bossfight.pos = v(460, 550)
+tt = E:register_t("controller_stage_25_torso")
+b = balance.specials.stage25_torso
+
+E:add_comps(tt, "main_script")
+
+tt.main_script.update = scripts.controller_stage_25_torso.update
+tt.wave_config = b.wave_config
+tt.action_duration = fts(220)
+tt.fist_radius = b.fist.radius
+tt.fist_damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS, DAMAGE_IGNORE_SHIELD, DAMAGE_NO_DODGE)
+tt.torso_t = "decal_stage_25_torso"
+tt.torso_modes_t = "decal_stage_25_torso_modes"
+tt.fist_t = "decal_stage_25_fist"
+tt.fist_decal_t = "decal_stage_25_fist_shadow"
+tt.missile_shoot_time = fts(66)
+tt.missile_mark_mod = "mod_stage_25_torso_missile_mark"
+tt.missile_t = "bullet_stage_25_torso_missile"
+tt.missile_spawn_pos = v(750, 585)
+tt.sound_torso_open = "Stage25TorsoOpen"
+tt.sound_torso_close = "Stage25TorsoClose"
+tt.sound_torso_lever_1 = "Stage25TorsoOperateLever1"
+tt.sound_torso_lever_2 = "Stage25TorsoOperateLever2"
+tt.sound_torso_button = "Stage25TorsoButton"
+tt.sound_fist = "Stage25FistSlam"
+tt.sound_missile = "Stage25MissileLaunch"
+tt = E:register_t("decal_stage25_machinist_shoutbox", "decal_stage06_cultist_shoutbox")
+tt = E:register_t("taunts_s25_controller")
+
+E:add_comps(tt, "main_script", "taunts", "editor")
+
+tt.load_file = "level101_taunts"
+tt.main_script.insert = scripts.taunts_controller.insert
+tt.taunts.delay_min = 10
+tt.taunts.delay_max = 20
+tt.taunts.sets = {}
+tt.taunts.sets.stage_25_machinist_end = CC("taunt_set")
+tt.taunts.sets.stage_25_machinist_end.format = "TAUNT_STAGE25_MACHINIST_END_%04i"
+tt.taunts.sets.stage_25_machinist_end.decal_name = "decal_stage25_machinist_shoutbox"
+tt.taunts.sets.stage_25_machinist_end.pos = v(460, 550)
+tt = E:register_t("controller_stage_25_tunnel_glow")
+
+E:add_comps(tt, "main_script")
+
+tt.main_script.update = scripts.controller_stage_25_tunnel_glow.update
+tt.glow_t = "decal_stage_25_mask_2_glow"
+tt = E:register_t("controller_stage_26_taunts")
+
+E:add_comps(tt, "main_script", "taunts", "editor")
+
+tt.main_script.update = scripts.controller_stage_26_taunts.update
+tt.taunts.delay_min = 20
+tt.taunts.delay_max = 30
+tt.taunts.sets = {}
+tt.taunts.sets.preparation = CC("taunt_set")
+tt.taunts.sets.preparation.format = "LV26_GRYMBEARD_PREPARATION_TAUNT_%02i"
+tt.taunts.sets.preparation.end_idx = 4
+tt.taunts.sets.fight = CC("taunt_set")
+tt.taunts.sets.fight.format = "LV26_GRYMBEARD_FIGHT_TAUNT_%02i"
+tt.taunts.sets.fight.end_idx = 4
+tt = E:register_t("controller_stage_26_spawners")
+b = balance.specials.stage26_spawners
+
+E:add_comps(tt, "main_script")
+
+tt.main_script.update = scripts.controller_stage_26_spawners.update
+tt.wave_config = b.wave_config
+tt.fist_spawner_controller_t = "controller_stage_26_fist_spawner"
+tt.tube_left_t = "decal_stage_26_tube_left"
+tt.tube_right_t = "decal_stage_26_tube_right"
+tt.clone_spawner_controller_t = "controller_stage_26_clone_spawner"
+tt.clone_spawner_t = "decal_stage_26_clone_spawner"
+tt.hulk_spawner_controller_t = "controller_stage_26_hulk_spawner"
+tt.hulk_spawner_t = "decal_stage_26_hulk_spawner"
+tt = E:register_t("controller_stage_26_fist_spawner")
+
+E:add_comps(tt, "main_script")
+
+tt.main_script.update = scripts.controller_stage_26_fist_spawner.update
+tt.boss_t = "decal_stage_26_boss"
+tt.hand_controller_t = "controller_stage_26_fist_spawner_hand"
+tt = E:register_t("controller_stage_26_fist_spawner_hand")
+
+E:add_comps(tt, "main_script")
+
+tt.main_script.update = scripts.controller_stage_26_fist_spawner_hand.update
+tt.fist_spawner_t = "decal_stage_26_fist_spawner"
+tt.fist_spawner_light_t = "decal_stage_26_fist_spawner_light"
+tt.sound_hand = "Stage26FistSpawnerHand"
+tt.sound_open = "Stage26FistSpawnerBoothFrontDoorOpen"
+tt.sound_close = "Stage26FistSpawnerBoothFrontDoorClose"
+tt = E:register_t("controller_stage_26_clone_spawner")
+
+E:add_comps(tt, "main_script")
+
+tt.main_script.update = scripts.controller_stage_26_clone_spawner.update
+tt.clone_spawner_t = "decal_stage_26_fist_spawner"
+tt.tube_t = "decal_stage_26_fist_spawner_light"
+tt.boss_t = "decal_stage_26_boss"
+tt.sound_in = "Stage26CloneSpawnerIn"
+tt.sound_out = "Stage26CloneSpawnerOut"
+tt.sound_chain = "Stage26Chain"
+tt = E:register_t("controller_stage_26_hulk_spawner")
+
+E:add_comps(tt, "main_script", "events")
+
+tt.main_script.update = scripts.controller_stage_26_hulk_spawner.update
+tt.hulk_spawner_t = "decal_stage_26_hulk_spawner"
+tt.hulk_t = "enemy_darksteel_hulk"
+tt.hulk_spawn_delay = fts(322)
+tt.path_to_spawn = 9
+tt.events.list[1].name = "hulk_spawn"
+tt.events.list[1].on_event = scripts.controller_stage_26_hulk_spawner.on_event
+tt.sound_shot = "Stage26HulkSpawnerShotTransform"
+tt = E:register_t("decal_stage26_boss_shoutbox", "decal_stage06_cultist_shoutbox")
+tt = E:register_t("taunts_s26_controller")
+
+E:add_comps(tt, "main_script", "taunts", "editor")
+
+tt.load_file = "level101_taunts"
+tt.main_script.insert = scripts.taunts_controller.insert
+tt.taunts.delay_min = 10
+tt.taunts.delay_max = 20
+tt.taunts.sets = {}
+tt.taunts.sets.stage_26_boss_before_bossfight = CC("taunt_set")
+tt.taunts.sets.stage_26_boss_before_bossfight.format = "TAUNT_STAGE26_BOSS_BEFORE_BOSSFIGHT_%04i"
+tt.taunts.sets.stage_26_boss_before_bossfight.decal_name = "decal_stage26_boss_shoutbox"
+tt.taunts.sets.stage_26_boss_before_bossfight.pos = v(460, 550)
+tt = E:register_t("decal_stage27_boss_shoutbox", "decal_stage06_cultist_shoutbox")
+tt = E:register_t("controller_stage_27_platform")
+
+E:add_comps(tt, "main_script", "events", "taunts", "editor")
+
+tt.main_script.insert = scripts.taunts_controller.insert
+tt.main_script.update = scripts.controller_stage_27_platform.update
+tt.platform_t = "decal_stage_27_platform"
+tt.platform_bars_t = "decal_stage_27_platform_bars"
+tt.cannon_left_t = "decal_stage_27_cannon_left"
+tt.cannon_right_t = "decal_stage_27_cannon_right"
+tt.cannon_controller_t_l = "controller_stage_27_cannon_L"
+tt.cannon_controller_t_r = "controller_stage_27_cannon_R"
+tt.head_controller_t = "controller_stage_27_head"
+tt.door_mask_t = "decal_stage_27_mask_3"
+tt.events.list[1].name = "platform_up"
+tt.events.list[1].on_event = scripts.controller_stage_27_platform.on_platform_up_event
+tt.events.list[2] = E:clone_c("event")
+tt.events.list[2].name = "platform_down"
+tt.events.list[2].on_event = scripts.controller_stage_27_platform.on_platform_down_event
+tt.events.list[3] = E:clone_c("event")
+tt.events.list[3].name = "platform_destroy"
+tt.events.list[3].on_event = scripts.controller_stage_27_platform.on_platform_destroy_event
+tt.events.list[4] = E:clone_c("event")
+tt.events.list[4].name = "cannons"
+tt.events.list[4].on_event = scripts.controller_stage_27_platform.on_cannons_event
+tt.events.list[5] = E:clone_c("event")
+tt.events.list[5].name = "taunt"
+tt.events.list[5].on_event = scripts.controller_stage_27_platform.on_taunt_event
+tt.load_file = "level101_taunts"
+tt.taunts.sets = {}
+tt.taunts.sets.preparation = CC("taunt_set")
+tt.taunts.sets.preparation.format = "LV27_GRYMBEARD_PREPARATION_TAUNT_%02i"
+tt.taunts.sets.preparation.end_idx = 4
+tt.taunts.sets.fight = CC("taunt_set")
+tt.taunts.sets.fight.format = "LV27_GRYMBEARD_FIGHT_TAUNT_%02i"
+tt.taunts.sets.fight.end_idx = 4
+tt.sound_intro = "Stage27Intro"
+tt.sound_platform_up = "Stage27PlatformUp"
+tt.sound_platform_down = "Stage27PlatformDown"
+tt.sound_platform_destroy_chains = "Stage27PlatformDestroyChains"
+tt.sound_platform_destroy_impacts = "Stage27PlatformDestroyHeadImpacts"
+tt.sound_cannon_alarm = "Stage27CloneCannonAlarm"
+tt = E:register_t("controller_stage_27_cannon")
+
+E:add_comps(tt, "main_script")
+
+tt.main_script.update = scripts.controller_stage_27_cannon.update
+tt.cannon_shot_fx_t = "fx_stage_27_cannon_shot"
+tt.cannon_shoot_time = fts(30)
+tt.bullet_clone_dead_t = "bullet_stage_27_clone_dead"
+tt.bullet_clone_alive_t = "bullet_stage_27_clone_alive"
+tt.sound_shot = "Stage27CloneCannonOneShot"
+tt = E:register_t("controller_stage_27_cannon_L", "controller_stage_27_cannon")
+
+E:add_comps(tt, "events")
+
+tt.events.list[1].name = "shoot-cannons-L"
+tt._decal = "decal_stage_27_cannon_left"
+tt.events.list[1].on_event = scripts.controller_stage_27_cannon.on_cannons_event
+tt = E:register_t("controller_stage_27_cannon_R", "controller_stage_27_cannon")
+
+E:add_comps(tt, "events")
+
+tt.events.list[1].name = "shoot-cannons-R"
+tt._decal = "decal_stage_27_cannon_right"
+tt.events.list[1].on_event = scripts.controller_stage_27_cannon.on_cannons_event
+tt = E:register_t("controller_stage_27_head")
+b = balance.specials.stage27_head
+
+E:add_comps(tt, "main_script", "events", "ui", "editor")
+
+tt.main_script.update = scripts.controller_stage_27_head.update
+tt.head_t = "decal_stage_27_head"
+tt.ray_t = "decal_stage_27_ray"
+tt.ray_stun_mod_t = "mod_stage_27_ray_stun"
+tt.ray_damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS, DAMAGE_IGNORE_SHIELD, DAMAGE_NO_DODGE)
+tt.goblins_t = "decal_stage_27_goblins"
+tt.smoke_back_t = "decal_stage_27_smoke_back"
+tt.smoke_front_t = "decal_stage_27_smoke_front"
+tt.sparks_t = "decal_stage_27_sparks"
+tt.scrap_bullet_t = "bullet_stage_27_scrap"
+tt.scrap_fx_t = "fx_stage_27_scrap"
+tt.tower_stun_bullet_t = "bullet_stage_27_tower_stun"
+tt.hand_decal_t = "decal_mod_stage_25_torso_missile_stun_hand"
+tt.towers_to_stun = b.towers_to_stun
+tt.events.list[1].name = "head_attack_left"
+tt.events.list[1].on_event = scripts.controller_stage_27_head.on_attack_left_event
+tt.events.list[2] = E:clone_c("event")
+tt.events.list[2].name = "head_attack_right"
+tt.events.list[2].on_event = scripts.controller_stage_27_head.on_attack_right_event
+tt.events.list[3] = E:clone_c("event")
+tt.events.list[3].name = "head_attack_left_cannon"
+tt.events.list[3].on_event = scripts.controller_stage_27_head.on_attack_left_cannon_event
+tt.events.list[4] = E:clone_c("event")
+tt.events.list[4].name = "head_attack_right_cannon"
+tt.events.list[4].on_event = scripts.controller_stage_27_head.on_attack_right_cannon_event
+tt.events.list[5] = E:clone_c("event")
+tt.events.list[5].name = "head_cannons"
+tt.events.list[5].on_event = scripts.controller_stage_27_head.on_cannons_event
+tt.events.list[6] = E:clone_c("event")
+tt.events.list[6].name = "head_ears"
+tt.events.list[6].on_event = scripts.controller_stage_27_head.on_ears_event
+tt.events.list[7] = E:clone_c("event")
+tt.events.list[7].name = "head_destroy"
+tt.events.list[7].on_event = scripts.controller_stage_27_head.on_head_destroy_event
+tt.events.list[8] = E:clone_c("event")
+tt.events.list[8].name = "head_scrap"
+tt.events.list[8].on_event = scripts.controller_stage_27_head.on_scrap_event
+tt.ui.click_rect = r(-100, 50, 350, 250)
+tt.charge_time = b.charge_time
+tt.attack_duration = b.attack_duration
+tt.taps_to_cancel = b.taps_to_cancel
+tt.sound_ears_open = "Stage27HeadOpen"
+tt.sound_ears_close = "Stage27HeadClose"
+tt.sound_move = "Stage27HeadMove"
+tt.sound_charge = "Stage27HeadFireblastCharge"
+tt.sound_shoot = "Stage27HeadFireblastRelease"
+tt.sound_cancel_tap = "Stage27HeadFireblastCancelTap"
+tt.sound_interrupt = "Stage27HeadFireblastInterrupt"
+tt.sound_return = "Stage27HeadReturn"
+
+tt = E:register_t("decal_stage_23_mask_1", "decal")
+tt.render.sprites[1].name = "stage23_mask1"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 170
+tt = E:register_t("decal_stage_23_mask_2", "decal")
+tt.render.sprites[1].name = "stage23_mask2"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].sort_y_offset = 51
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt = E:register_t("decal_stage_23_mask_4", "decal")
+tt.render.sprites[1].name = "stage23_mask4"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].sort_y_offset = -8
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt = E:register_t("decal_stage_23_mask_5", "decal")
+tt.render.sprites[1].name = "stage23_mask5"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 50
+tt.render.sprites[1].hidden = false
+tt = E:register_t("decal_stage_23_mask_6", "decal")
+tt.render.sprites[1].name = "stage23_mask6"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 123
+tt.render.sprites[1].hidden = true
+tt = E:register_t("decal_stage_23_snow", "decal")
+tt.render.sprites[1].prefix = "dclenanos_stage01_snowfallDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("decal_stage_23_torches", "decal")
+tt.render.sprites[1].prefix = "dclenanos_stage01_torchesDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("decal_stage_23_crane", "decal_scripted")
+
+E:add_comps(tt, "ui")
+
+tt.render.sprites[1].prefix = "DLCenanos_stage1_deco_gruaDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt.main_script.update = scripts.decal_stage_23_crane.update
+tt.ui.can_click = true
+tt.ui.click_rect = r(400, -220, 110, 100)
+tt.sound_tap_1_2 = "Stage23TruckOneShot"
+tt.sound_tap_3 = "Stage23TruckTap3"
+tt = E:register_t("decal_stage_23_rock", "decal")
+tt.render.sprites[1].prefix = "darksteel_guardian_stage_rock"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("decal_stage_24_factory", "decal_scripted")
+
+E:add_comps(tt, "spawner", "editor")
+
+tt.render.sprites[1].prefix = "factoryDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS - 2
+tt.main_script.update = scripts.decal_stage_24_factory.update
+tt.spawner.eternal = true
+tt.sound_factory_turn_on_end = "Stage24FactoryTurnOnEnd"
+tt.sound_factory_turn_off = "Stage24FactoryTurnOff"
+tt = E:register_t("decal_stage_24_gear_factory", "decal")
+tt.render.sprites[1].prefix = "factory2Def"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("decal_stage_24_factory_conveyor_belt", "decal")
+tt.render.sprites[1].prefix = "dlc_enanos_stage_02_LAYERS_factorygate"
+tt.render.sprites[1].name = "activeloop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].draw_order = 1
+tt.render.sprites[1].hidden = true
+tt = E:register_t("decal_stage_24_factory_sparks", "decal_scripted")
+tt.render.sprites[1].prefix = "dlc_dwarf_boss_operator_sparks"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_DECALS + 1
+tt.render.sprites[1].hidden = true
+tt.main_script.update = scripts.decal_stage_24_factory_sparks.update
+tt = E:register_t("decal_stage_24_elevator", "decal_scripted")
+
+E:add_comps(tt, "editor")
+
+tt.render.sprites[1].prefix = "ascensorDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS - 1
+tt.main_script.update = scripts.decal_stage_24_elevator.update
+tt.sound_machinist_in = "Stage24MachinistEnter"
+tt.sound_machinist_out = "Stage24MachinistExit"
+tt = E:register_t("decal_stage_24_mask_1", "decal")
+tt.render.sprites[1].name = "stage24_mask1"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].draw_order = 1
+tt.render.sprites[1].hidden = true
+tt = E:register_t("decal_stage_24_mask_2", "decal")
+tt.render.sprites[1].name = "stage24_mask2"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt = E:register_t("decal_stage_24_mask_3", "decal")
+
+E:add_comps(tt, "editor")
+
+tt.render.sprites[1].name = "stage24_mask3"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("decal_stage_24_mask_4", "decal")
+tt.render.sprites[1].name = "stage24_mask4"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].sort_y_offset = 44
+tt = E:register_t("decal_stage_24_mask_5", "decal")
+tt.render.sprites[1].name = "stage24_mask5"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("decal_stage_24_mask_6", "decal")
+tt.render.sprites[1].name = "stage24_mask6"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].sort_y_offset = 95
+tt = E:register_t("decal_stage_24_fans", "decal")
+tt.render.sprites[1].prefix = "stage2dlcanimsfansDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("decal_stage_24_gears", "decal")
+tt.render.sprites[1].prefix = "stage2dlcanimstuercasDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt = E:register_t("decal_stage_24_gear_floor", "decal_scripted")
+
+E:add_comps(tt, "ui")
+
+tt.render.sprites[1].prefix = "dlc_enanos_stage_02_LAYERS_gear"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.main_script.update = scripts.decal_stage_24_gears.update
+tt.ui.click_rect = r(-25, -5, 50, 35)
+tt = E:register_t("decal_stage_24_gear_tower", "decal_scripted")
+
+E:add_comps(tt, "ui")
+
+tt.render.sprites[1].prefix = "towerDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.main_script.update = scripts.decal_stage_24_gears.update
+tt.ui.click_rect = r(15, -35, 40, 65)
+tt = E:register_t("decal_stage_24_bubble", "decal_scripted")
+tt.render.sprites[1].prefix = "lavabubbleDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt.render.sprites[1].hidden = true
+tt.main_script.update = scripts.decal_stage_24_bubble.update
+tt = E:register_t("decal_stage_24_dust", "decal")
+tt.render.sprites[1].prefix = "t5_dustDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
+tt = E:register_t("decal_stage_24_smoke", "decal")
+tt.render.sprites[1].prefix = "t5_smokeDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_COVERS + 1
+tt = E:register_t("decal_stage_24_upgrade_station", "decal_scripted")
+
+local b = balance.specials.stage24_upgrade_station
+
+tt.render.sprites[1].prefix = "converterDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.main_script.update = scripts.decal_stage_24_upgrade_station.update
+tt.hammerer_t = "enemy_darksteel_hammerer"
+tt.fist_t = "enemy_darksteel_fist"
+tt.wave_config = b.wave_config
+tt.path_in = 8
+tt.path_out = 9
+tt.sound_open = "Stage24UpgradeStationIn"
+tt.sound_close = "Stage24UpgradeStationOut"
+tt.sound_transform = "Stage24UpgradeStationTransform"
+tt = E:register_t("decal_stage_24_modes_decos", "decal_scripted")
+
+E:add_comps(tt, "editor")
+
+tt.render.sprites[1].prefix = "stage2DLC_ascensor_modosDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt.main_script.update = scripts.decal_stage_24_modes_decos.update
+tt = E:register_t("decal_stage_25_mask_1", "decal")
+tt.render.sprites[1].name = "stage25_mask1"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 32
+tt = E:register_t("decal_stage_25_mask_2", "decal")
+tt.render.sprites[1].name = "stage25_mask2"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 18
+tt = E:register_t("decal_stage_25_mask_2_glow", "decal_tween")
+tt.render.sprites[1].name = "stage25_mask2_glow"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 19
+tt.render.sprites[1].alpha = 0
+tt.tween.disabled = true
+tt.tween.remove = false
+tt.tween.props[1].keys = {{0, 0}, {fts(30), 255}}
+tt = E:register_t("decal_stage_25_mask_3", "decal")
+tt.render.sprites[1].name = "stage25_mask3"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 4
+tt = E:register_t("decal_stage_25_mask_4", "decal")
+tt.render.sprites[1].name = "stage25_mask4"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt = E:register_t("decal_stage_25_torso", "decal")
+
+E:add_comps(tt, "editor")
+
+tt.render.sprites[1].prefix = "DLC_stage3_dwarf_machinistDef"
+tt.render.sprites[1].name = "idle_doors"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("decal_stage_25_torso_modes", "decal")
+
+E:add_comps(tt, "editor")
+
+tt.render.sprites[1].prefix = "DLC_stage3_dwarf_machinist_modesDef"
+tt.render.sprites[1].name = "idle_doors"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("decal_stage_25_fist", "decal")
+tt.render.sprites[1].prefix = "DLC_stage3_robot_armDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -20
+tt = E:register_t("decal_stage_25_fist_shadow", "decal")
+tt.render.sprites[1].prefix = "DLC_stage3_robot_arm_decalsDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("decal_stage_25_dwarf_intro", "decal_timed")
+tt.render.sprites[1].prefix = "DLC_stage3_dwarf_inDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+tt = E:register_t("decal_mod_stage_25_torso_missile_stun_water", "decal_timed")
+tt.render.sprites[1].name = "DLC_stage_03_missile_water_splash"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -9
+tt.render.sprites[1].offset = v(0, 5)
+tt = E:register_t("decal_mod_stage_25_torso_missile_stun_hand", "decal_tween")
+tt.render.sprites[1].prefix = "DLC_stage_03_missile_tower_block_tap"
+tt.render.sprites[1].name = "tap"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt.render.sprites[1].offset = v(23, 10)
+tt.tween.props[1].keys = {{0, 0}, {fts(15), 255}, {fts(45), 255}, {fts(60), 0}}
+tt.tween.remove = true
+
+tt = E:register_t("decal_stage_25_solid_snake", "decal_scripted")
+
+E:add_comps(tt, "ui")
+
+tt.render.sprites[1].prefix = "DLC_Enanos_S3_EasterEgg_SolidSnakeDef"
+tt.render.sprites[1].name = "idle_1"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt.main_script.update = scripts.decal_stage_25_solid_snake.update
+tt.ui.can_click = true
+tt.ui.click_rect = r(-325, 290, 50, 45)
+tt.click_rect_1 = r(-325, 290, 50, 45)
+tt.click_rect_2 = r(-335, 283, 50, 45)
+tt.sound_1_2 = "Stage25SolidSnakeTap12"
+tt.sound_3 = "Stage25SolidSnakeTap3"
+tt = E:register_t("decal_stage_26_mask_1", "decal")
+tt.render.sprites[1].name = "DLC_enanos_stage_04_mask_1"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+tt = E:register_t("decal_stage_26_mask_2", "decal")
+tt.render.sprites[1].name = "DLC_enanos_stage_04_mask_2"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+tt = E:register_t("decal_stage_26_mask_3", "decal")
+tt.render.sprites[1].name = "DLC_enanos_stage_04_mask_3"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+tt = E:register_t("decal_stage_26_mask_4", "decal")
+tt.render.sprites[1].name = "DLC_enanos_stage_04_mask_4"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 200
+tt = E:register_t("decal_stage_26_mask_5", "decal")
+tt.render.sprites[1].name = "DLC_enanos_stage_04_mask_5"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("decal_stage_26_foreground_1", "decal")
+tt.render.sprites[1].name = "DLC_enanos_stage_04_foreground_a"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+tt = E:register_t("decal_stage_26_foreground_2", "decal")
+tt.render.sprites[1].name = "DLC_enanos_stage_04_foreground_b"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+tt = E:register_t("decal_stage_26_mewtwo_capsules", "decal_scripted")
+
+E:add_comps(tt, "ui")
+
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_EasterEgg_Mewtwo_CanistersDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt.main_script.update = scripts.decal_stage_26_mewtwo.update
+tt.ui.can_click = true
+tt.ui.click_rect = r(100, 270, 50, 80)
+tt.mewtwo_t = "decal_stage_26_mewtwo"
+tt.sound_1_2 = "Stage26MewtwoTap12"
+tt.sound_3 = "Stage26MewtwoTap3"
+tt.sound_end = "Stage26MewtwoFlightFullSequence"
+tt = E:register_t("decal_stage_26_mewtwo", "decal_timed")
+
+E:add_comps(tt, "ui")
+
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_EasterEgg_MewtwoDef"
+tt.render.sprites[1].name = "spawn"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECT
+tt = E:register_t("decal_stage_26_boss", "decal")
+
+E:add_comps(tt, "editor")
+
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_Boss01Def"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 104
+tt = E:register_t("decal_stage_26_clone_spawner", "decal")
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_ElevatorDef"
+tt.render.sprites[1].name = "idle_1"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("decal_stage_26_tube_left", "decal")
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_ElevatorTubeADef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_BACKGROUND
+tt = E:register_t("decal_stage_26_tube_right", "decal")
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_ElevatorTubeBDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_BACKGROUND
+tt = E:register_t("decal_stage_26_fist_spawner", "decal")
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_CloneActivatorDef"
+tt.render.sprites[1].name = "idle_1"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("decal_stage_26_fist_spawner_light", "decal")
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_ActivatorLightDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt = E:register_t("decal_stage_26_hulk_spawner", "decal")
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_HulkSpawnerDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "DLC_Enanos_S4_HulkSpawnerSyringeDef"
+tt.render.sprites[2].name = "idle"
+tt.render.sprites[2].exo = true
+tt.render.sprites[2].loop = true
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].z = Z_OBJECTS_COVERS
+tt = E:register_t("decal_stage_26_gears_front", "decal")
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_GearsDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("decal_stage_26_gears_back", "decal")
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_GearsBackDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_BACKGROUND
+tt = E:register_t("decal_stage_26_bubbles", "decal")
+tt.render.sprites[1].prefix = "DLC_Enanos_S4_BubblesDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt = E:register_t("decal_stage_26_modes_decos", "decal_scripted")
+
+E:add_comps(tt, "editor")
+
+tt.render.sprites[1].prefix = "DLCstage4_deco_modosDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt.main_script.update = scripts.decal_stage_26_modes_decos.update
+tt = E:register_t("decal_stage_27_mask_1", "decal")
+tt.render.sprites[1].name = "stage27_mask1"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+tt.render.sprites[1].draw_order = 3
+tt = E:register_t("decal_stage_27_mask_2", "decal")
+tt.render.sprites[1].name = "stage27_mask2"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt = E:register_t("decal_stage_27_mask_3", "decal")
+tt.render.sprites[1].name = "stage27_mask3"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].hidden = true
+tt = E:register_t("decal_stage_27_mask_4", "decal")
+tt.render.sprites[1].name = "stage27_mask4"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+tt.render.sprites[1].draw_order = 2
+tt = E:register_t("decal_stage_27_mask_5", "decal")
+tt.render.sprites[1].name = "stage27_mask5"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+tt.render.sprites[1].draw_order = 2
+tt = E:register_t("decal_stage_27_snow", "decal")
+tt.render.sprites[1].prefix = "dclenanos_stage05_snowfallDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_EFFECTS
+tt = E:register_t("decal_stage_27_platform", "decal")
+
+E:add_comps(tt, "editor")
+
+tt.render.sprites[1].prefix = "dclenanos_stage05_platformDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+tt = E:register_t("decal_stage_27_platform_bars", "decal")
+
+E:add_comps(tt, "editor")
+
+tt.render.sprites[1].prefix = "dclenanos_stage05_platform_barsDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
+tt = E:register_t("decal_stage_27_cannon_right", "decal")
+tt.render.sprites[1].prefix = "dlcenanos_stage05_cannonDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
+tt.shot_pos = v(924, 509)
+tt.shot_target_pos = v(815, 364)
+tt = E:register_t("decal_stage_27_cannon_left", "decal")
+tt.render.sprites[1].prefix = "dlcenanos_stage05_cannonDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].flip_x = true
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
+tt.shot_pos = v(238, 532)
+tt.shot_target_pos = v(361, 345)
+tt = E:register_t("decal_stage_27_clone_dead", "decal_tween")
+tt.render.sprites[1].prefix = "cannonLAYERS_clonedecorative"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.tween.props[1].keys = {{0, 255}, {fts(30), 255}, {fts(55), 0}}
+tt.tween.remove = true
+tt = E:register_t("decal_stage_27_clone_alive", "decal_timed")
+tt.render.sprites[1].prefix = "cannonLAYERS_cloneland"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.timed.runs = 1
+tt = E:register_t("decal_stage_27_head", "decal")
+
+E:add_comps(tt, "editor")
+
+tt.render.sprites[1].prefix = "dclenanos_stage05_headDef"
+tt.render.sprites[1].name = "headdeathsmokeidle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+tt.render.sprites[1].draw_order = 1
+tt = E:register_t("decal_stage_27_ray", "decal")
+tt.render.sprites[1].prefix = "dclenanos_stage05_headrayDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt.render.sprites[1].scale = vv(2)
+tt = E:register_t("decal_stage_27_goblins", "decal")
+tt.render.sprites[1].prefix = "dclenanos_head_goblinsDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -350
+tt = E:register_t("decal_stage_27_smoke_back", "decal")
+
+E:add_comps(tt, "editor")
+
+tt.render.sprites[1].prefix = "dclenanos_stage05_HeadSmokeBackDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
+tt = E:register_t("decal_stage_27_smoke_front", "decal")
+
+E:add_comps(tt, "editor")
+
+tt.render.sprites[1].prefix = "dclenanos_stage05_HeadSmokeFrontDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
+tt = E:register_t("decal_stage_27_sparks", "decal")
+
+E:add_comps(tt, "editor")
+
+tt.render.sprites[1].prefix = "dclenanos_stage05_HeadSparksDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
+tt = E:register_t("decal_stage_27_modes_decos", "decal_scripted")
+
+E:add_comps(tt, "editor", "ui")
+
+tt.render.sprites[1].prefix = "DLCstage5_deco_modosDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt.main_script.update = scripts.decal_stage_27_modes_decos.update
+tt.ui.can_click = true
+tt.ui.click_rect = r(-33, 60, 20, 20)
+tt = E:register_t("decal_stage_27_beam", "decal_scripted")
+
+E:add_comps(tt, "ui", "editor")
+
+tt.render.sprites[1].prefix = "DLCstage5_enanos_vigaDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
+tt.main_script.update = scripts.decal_stage_27_beam.update
+tt.ui.can_click = true
+tt.ui.click_rect = r(-470, 200, 150, 60)
+tt.sound_prefix = "Stage27BeamWorkersTap"
+tt = E:register_t("decal_boss_grymbeard_area_attack", "decal_tween")
+tt.render.sprites[1].prefix = "dclenanos_stage05_grymbossdecalDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt.tween.props[1].keys = {{0, 255}, {fts(30), 255}, {fts(60), 0}}
+tt.tween.remove = true
+tt = E:register_t("decal_bullet_boss_grymbeard", "decal_tween")
+tt.render.sprites[1].prefix = "dclenanos_stage05_grymmissiledecalDef"
+tt.render.sprites[1].name = "decal"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt.tween.props[1].keys = {{0, 255}, {fts(30), 255}, {fts(60), 0}}
+tt.tween.remove = true
+tt = E:register_t("decal_bullet_boss_grymbeard_death_clone", "decal_stage_27_clone_dead")
+tt.tween.props[1].keys = {{0, 255}, {1e+99, 255}}
+tt = E:register_t("decal_bullet_boss_grymbeard_death_boss", "decal")
+tt.render.sprites[1].prefix = "dclenanos_stage05_grymbossflyDef"
+tt.render.sprites[1].name = "land"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("decal_bullet_boss_grymbeard_death_scrap_1", "decal")
+tt.render.sprites[1].prefix = "dclenanos_stage05_grymdebree1Def"
+tt.render.sprites[1].name = "land"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("decal_bullet_boss_grymbeard_death_scrap_2", "decal_bullet_boss_grymbeard_death_scrap_1")
+tt.render.sprites[1].prefix = "dclenanos_stage05_grymdebree2Def"
+
+tt = E:register_t("decal_terrain_6_exodia_arm", "decal_scripted")
+
+E:add_comps(tt, "ui")
+
+tt.render.sprites[1].prefix = "DLC_enanos_easter_egg_exodia_arm"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+tt.main_script.update = scripts.decal_terrain_6_exodia_part.update
+tt.ui.can_click = true
+tt.ui.click_rect = r(-15, -5, 30, 20)
+tt.sound_click = "Terrain6ExodiaPart"
+tt = E:register_t("decal_terrain_6_exodia_arm_2", "decal_terrain_6_exodia_arm")
+tt.render.sprites[1].flip_x = true
+tt = E:register_t("decal_terrain_6_exodia_head", "decal_terrain_6_exodia_arm")
+tt.render.sprites[1].prefix = "DLC_enanos_easter_egg_exodia_head"
+tt = E:register_t("decal_terrain_6_exodia_leg", "decal_terrain_6_exodia_arm")
+tt.render.sprites[1].prefix = "DLC_enanos_easter_egg_exodia_leg"
+tt.ui.click_rect = r(-15, -5, 30, 30)
+tt = E:register_t("decal_terrain_6_exodia_leg_2", "decal_terrain_6_exodia_arm")
+tt.render.sprites[1].prefix = "DLC_enanos_easter_egg_exodia_leg"
+tt.render.sprites[1].flip_x = true
+tt.ui.click_rect = r(-15, -5, 30, 30)
+
+tt = E:register_t("ps_bullet_enemy_brute_welder_death_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "brute_welder_tank_particle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(23), fts(23)}
+tt.particle_system.emission_rate = 50
+tt.particle_system.emit_area_spread = v(5, 5)
+tt.particle_system.emit_rotation_spread = math.pi * 2
+tt.particle_system.emit_offset = v(0, 0)
+tt.particle_system.scales_y = {0.9, 1.1}
+tt.particle_system.scales_x = {0.9, 1.1}
+tt = E:register_t("ps_enemy_scrap_speedster_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "scrap_speedster_trail"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.emission_rate = 30
+tt.particle_system.emit_area_spread = v(10, 10)
+tt.particle_system.emit_rotation_spread = math.pi * 2
+tt.particle_system.emit_offset = v(0, 100)
+tt.particle_system.scales_y = {0.6, 1}
+tt.particle_system.scales_x = {0.6, 1}
+tt.particle_system.z = Z_OBJECTS
+tt = E:register_t("ps_bullet_enemy_darksteel_guardian_death_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "darksteel_guardian_dwatf_particle_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(8), fts(8)}
+tt.particle_system.emission_rate = 50
+tt.particle_system.emit_area_spread = v(5, 5)
+tt.particle_system.emit_rotation_spread = math.pi * 2
+tt.particle_system.emit_offset = v(0, 0)
+tt.particle_system.scales_y = {0.9, 1.1}
+tt.particle_system.scales_x = {0.9, 1.1}
+tt = E:register_t("ps_enemy_darksteel_hulk_charge_a")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "darksteel_hulk_run_particle_a"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 4
+tt.particle_system.track_offset = v(0, 0)
+tt.particle_system.z = Z_DECALS
+tt = E:register_t("ps_enemy_darksteel_hulk_charge_b")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "darksteel_hulk_run_particle_b"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 3
+tt.particle_system.track_offset = v(0, 20)
+tt.particle_system.animation_fps = 15
+tt.particle_system.z = Z_DECALS
+tt = E:register_t("ps_bullet_boss_machinist")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "dlc_dwarf_boss_operator_proytrail"
+tt.particle_system.animated = false
+tt.particle_system.emission_rate = 15
+tt.particle_system.spin = {math.pi / 6, math.pi / 4}
+tt.particle_system.emit_area_spread = v(10, 10)
+tt.particle_system.particle_lifetime = {fts(25), fts(25)}
+tt.particle_system.alphas = {255, 0}
+tt.particle_system.scales_x = {0.9, 1.2}
+tt.particle_system.scales_y = {0.9, 1.2}
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("ps_bullet_stage_25_torso_missile")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "DLC_stage_03_missile_particle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(15), fts(15)}
+tt.particle_system.emission_rate = 50
+tt.particle_system.emit_area_spread = v(5, 5)
+tt.particle_system.emit_rotation_spread = math.pi * 2
+tt.particle_system.emit_offset = v(0, 0)
+tt.particle_system.scales_y = {0.9, 1.1}
+tt.particle_system.scales_x = {0.9, 1.1}
+tt = E:register_t("ps_bullet_stage_27_scrap")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "dclenanos_stage05_ScrapProjectileTrail_asst_scrap_projectile_trail"
+tt.particle_system.animated = false
+tt.particle_system.emission_rate = 15
+tt.particle_system.spin = {math.pi / 6, math.pi / 4}
+tt.particle_system.emit_area_spread = v(10, 10)
+tt.particle_system.particle_lifetime = {fts(25), fts(25)}
+tt.particle_system.alphas = {255, 0}
+tt.particle_system.scales_x = {0.9, 1.2}
+tt.particle_system.scales_y = {0.9, 1.2}
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("ps_bullet_stage_27_tower_stun")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "boss_fx_scrap_particle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 60
+tt.particle_system.emit_area_spread = v(10, 10)
+tt.particle_system.particle_lifetime = {fts(6), fts(6)}
+tt.particle_system.scales_x = {0.9, 1.1}
+tt.particle_system.scales_y = {0.9, 1.1}
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("ps_bullet_boss_grymbeard_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "grymbeardbossLAYERS_missiletrail_run"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(15), fts(15)}
+tt.particle_system.emission_rate = 50
+tt.particle_system.emit_area_spread = v(5, 5)
+tt.particle_system.emit_rotation_spread = math.pi * 2
+tt.particle_system.emit_offset = v(0, 0)
+tt.particle_system.scales_y = {0.9, 1.1}
+tt.particle_system.scales_x = {0.9, 1.1}
+tt.emit_offset_relative = v(0, 0)
+tt = E:register_t("ps_bullet_boss_grymbeard_death_boss_trail", "ps_bullet_boss_grymbeard_trail")
+tt.particle_system.name = "grymbeardbossLAYERS_flytrail_run"
+
+tt = E:register_t("decal_scrap", "decal_scripted")
+
+E:add_comps(tt, "tween")
+
+b = balance.enemies.hammer_and_anvil.scrap
+tt.render.sprites[1].prefix = "scrap_pile"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_OBJECT
+tt.main_script.update = scripts.decal_scrap.update
+tt.duration = b.duration
+tt.tween.disabled = true
+tt.tween.remove = false
+tt.tween.props[1].keys = {{0, 255}, {1, 0}}
+tt = E:register_t("decal_ray_mad_tinkerer", "decal")
+
+E:add_comps(tt)
+
+b = balance.enemies.hammer_and_anvil.scrap
+tt.render.sprites[1].prefix = "mad_tinkerer_skill_ray"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_BULLETS
+tt.duration = b.duration
+tt = E:register_t("decal_scrap_bullet_mad_tinkerer", "decal")
+
+E:add_comps(tt)
+
+b = balance.enemies.hammer_and_anvil.scrap
+tt.render.sprites[1].name = "mad_tinkerer_skill_projectile"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_BULLETS
+tt.duration = b.duration
+tt = E:register_t("decal_enemy_darksteel_fist_stun", "decal_tween")
+tt.render.sprites[1].name = "darksteel_fist_stun_floor_decal"
+tt.render.sprites[1].animated = false
+tt.tween.props[1].keys = {{0, 255}, {1, 0}}
+tt.tween.disabled = false
+tt.tween.remove = true
+
+tt = E:register_t("fx_enemy_common_clone_hit", "fx")
+tt.render.sprites[1].name = "common_clone_hit_fx_idle"
+tt = E:register_t("fx_enemy_darksteel_fist_hit", "fx")
+tt.render.sprites[1].name = "darksteel_fist_hit_fx_idle"
+tt = E:register_t("fx_enemy_darksteel_fist_area", "fx")
+
+E:add_comps(tt, "main_script")
+
+tt.render.sprites[1].name = "darksteel_fist_stun_explosion"
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "darksteel_fist_stun_stones"
+tt.render.sprites[2].z = Z_EFFECTS - 1
+tt.main_script.insert = scripts.fx_enemy_darksteel_fist_area.insert
+tt = E:register_t("fx_enemy_darksteel_guardian_hit_1", "fx")
+tt.render.sprites[1].name = "darksteel_guardian_attack_1_hit_idle"
+tt = E:register_t("fx_enemy_darksteel_guardian_hit_2", "fx")
+tt.render.sprites[1].name = "darksteel_guardian_attack_2_hit_idle"
+tt = E:register_t("fx_enemy_darksteel_anvil_hit", "fx")
+tt.render.sprites[1].name = "darksteel_anvil_attack_hit_idle"
+tt = E:register_t("fx_enemy_deformed_grymbeard_clone_shield", "fx")
+tt.render.sprites[1].prefix = "clone_boss_shield"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].draw_order = 100
+tt.render.sprites[1].scale = vv(0.9, 0.9)
+tt.timed.runs = 1e+99
+tt = E:register_t("fx_bullet_enemy_rolling_sentry", "fx")
+tt.render.sprites[1].name = "rolling_sentry_hit_fx_idle"
+tt = E:register_t("fx_boss_machinist_death_smoke", "fx")
+tt.render.sprites[1].prefix = "dlcdwarfbossstage02_smokeDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt = E:register_t("fx_boss_machinist_death_particle", "fx")
+tt.render.sprites[1].prefix = "dlcdwarfbossstage02_particleDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+
+tt = E:register_t("bullet_enemy_rolling_sentry", "bullet")
+b = balance.enemies.hammer_and_anvil.rolling_sentry
+tt.render = nil
+tt.main_script.insert = scripts.invisible_bullet.insert
+tt.main_script.update = scripts.invisible_bullet.update
+tt.bullet.asymmetrical = true
+tt.bullet.damage_min = b.ranged_attack.damage_min
+tt.bullet.damage_max = b.ranged_attack.damage_max
+tt.bullet.damage_type = b.ranged_attack.damage_type
+tt.bullet.hit_fx = "fx_bullet_enemy_rolling_sentry"
+
+tt = E:register_t("bullet_enemy_brute_welder_death", "bullet")
+b = balance.enemies.hammer_and_anvil.brute_welder
+
+E:add_comps(tt, "force_motion")
+
+tt.bullet.flight_time = fts(31)
+tt.bullet.particles_name = "ps_bullet_enemy_brute_welder_death_trail"
+tt.bullet.hit_fx = "fx_bullet_enemy_brute_welder_death_hit"
+tt.bullet.align_with_trajectory = true
+tt.bullet.ignore_hit_offset = true
+tt.bullet.mod = "mod_bullet_enemy_brute_welder_death_stun"
+tt.render.sprites[1].name = "brute_welder_tank_projectile"
+tt.render.sprites[1].animated = false
+tt.main_script.update = scripts.bullet_enemy_brute_welder_death.update
+tt.initial_impulse = 3000
+tt.initial_impulse_duration = 0.3
+tt.initial_impulse_angle = 0
+tt.force_motion.a_step = 5
+tt.force_motion.max_a = 1800
+tt.force_motion.max_v = 450
+tt.sound_events.hit = "EnemyBruteWelderDeathImpact"
+tt.mark_mod = "mod_bullet_enemy_brute_welder_death_mark"
+tt.range = b.death_missile.range
+tt = E:register_t("bullet_enemy_darksteel_guardian_death", "bombKR5")
+b = balance.enemies.hammer_and_anvil.brute_welder
+
+E:add_comps(tt, "force_motion")
+
+tt.bullet.flight_time = fts(31)
+tt.bullet.particles_name = "ps_bullet_enemy_darksteel_guardian_death_trail"
+tt.bullet.ignore_hit_offset = true
+tt.bullet.rotation_speed = 10 * FPS * math.pi / 180
+tt.bullet.hit_decal = "decal_bullet_enemy_darksteel_guardian_death_clone"
+tt.bullet.hit_fx = nil
+tt.bullet.pop_chance = 0
+tt.render.sprites[1].name = "darksteel_guardian_dwarf_projectile"
+tt.render.sprites[1].animated = false
+tt.initial_impulse = 3000
+tt.initial_impulse_duration = 0.3
+tt.initial_impulse_angle = 0
+tt.force_motion.a_step = 5
+tt.force_motion.max_a = 1800
+tt.force_motion.max_v = 450
+tt.sound_events.insert = "TowerRocketGunnersStingMissileCast"
+tt.sound_events.hit = "TowerRocketGunnersStingMissileExplosion"
+tt.range = b.death_missile.range
+tt = E:register_t("bullet_boss_machinist", "bombKR5")
+b = balance.enemies.hammer_and_anvil.boss_machinist.ranged_attack
+tt.bullet.damage_max = b.damage_max
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_radius = b.damage_radius
+tt.bullet.damage_type = b.damage_type
+tt.bullet.flight_time = fts(30)
+tt.bullet.hit_fx = "fx_bullet_boss_machinist"
+tt.bullet.pop_chance = 0.5
+tt.bullet.particles_name = "ps_bullet_boss_machinist"
+tt.bullet.hit_payload = "decal_scrap"
+tt.sound_events.hit_water = nil
+tt.sound_events.hit = "TowerTricannonBasicAttackImpact"
+tt.render.sprites[1].name = "dlc_dwarf_boss_operator_proy"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].hidden = false
+tt.sound_events.insert = "Stage24BFMachinistCannonCastShot"
+tt.sound_events.hit = "Stage24BFMachinistCannonImpact"
+tt.main_script.insert = scripts.enemy_bomb.insert
+tt.main_script.update = scripts.enemy_bomb.update
+tt = E:register_t("bullet_stage_25_torso_missile", "bullet")
+b = balance.enemies.hammer_and_anvil.brute_welder
+
+E:add_comps(tt, "force_motion")
+
+tt.bullet.flight_time = fts(31)
+tt.bullet.particles_name = "ps_bullet_stage_25_torso_missile"
+tt.bullet.hit_fx = "fx_bullet_stage_25_torso_missile_hit"
+tt.bullet.align_with_trajectory = true
+tt.bullet.ignore_hit_offset = true
+tt.bullet.mod = "mod_stage_25_torso_missile_stun"
+tt.render.sprites[1].name = "DLC_stage_03_missile_projectile"
+tt.render.sprites[1].animated = false
+tt.main_script.update = scripts.bullet_stage_25_torso_missile.update
+tt.force_motion.a_step = 5
+tt.force_motion.max_a = 2250
+tt.force_motion.max_v = 750
+tt.sound_events.hit = "Stage25MissileImpact"
+tt.mark_mod = "mod_stage_25_torso_missile_mark"
+tt.relative_to_source = false
+tt.flight_positions = {
+	v(749, 608),
+	v(737, 635),
+	v(707, 673),
+	v(673, 695),
+	v(615, 707),
+	v(547, 701),
+	v(472, 661),
+	v(431, 627),
+	v(390, 580),
+	v(377, 510),
+	v(437, 401),
+	v(553, 412),
+	v(573, 524),
+	v(459, 595),
+	v(389, 522)
+}
+tt = E:register_t("bullet_stage_27_clone_dead", "bombKR5")
+tt.bullet.flight_time = fts(35)
+tt.bullet.hit_fx = nil
+tt.bullet.hit_decal = "decal_stage_27_clone_dead"
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.bullet.damage_radius = 0
+tt.bullet.rotation_speed = 10 * FPS * math.pi / 180
+tt.bullet.pop_chance = 0
+tt.render.sprites[1].name = "cannonLAYERS_flyclone"
+tt.render.sprites[1].animated = false
+tt = E:register_t("bullet_stage_27_clone_alive", "bullet_stage_27_clone_dead")
+tt.bullet.hit_decal = "decal_stage_27_clone_alive"
+tt.bullet.hit_payload = "controller_spawn_enemy_common_clone"
+tt = E:register_t("controller_spawn_enemy_common_clone")
+
+E:add_comps(tt, "main_script", "pos")
+
+tt.main_script.update = scripts.controller_spawn_enemy_common_clone.update
+tt.spawn_t = "enemy_common_clone"
+tt.spawn_delay = fts(32)
+tt = E:register_t("bullet_stage_27_scrap", "bombKR5")
+b = balance.specials.stage27_head.scrap_attack
+tt.bullet.damage_max = b.damage_max
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_radius = b.damage_radius
+tt.bullet.damage_type = b.damage_type
+tt.bullet.damage_bans = bor(F_ENEMY)
+tt.bullet.flight_time = fts(60)
+tt.bullet.hit_fx = "fx_bullet_stage_27_scrap"
+tt.bullet.particles_name = "ps_bullet_stage_27_scrap"
+tt.bullet.hit_payload = "decal_scrap"
+tt.sound_events.hit_water = nil
+tt.sound_events.hit = "TowerTricannonBasicAttackImpact"
+tt.render.sprites[1].name = "dclenanos_stage05_ScrapProjectile_asst_scrap"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].hidden = false
+tt.sound_events.insert = "TowerBallistaScrapBombCast"
+tt.sound_events.hit = "TowerBallistaScrapBombExplosion"
+tt.main_script.insert = scripts.enemy_bomb.insert
+tt.main_script.update = scripts.enemy_bomb.update
+tt = E:register_t("bullet_stage_27_tower_stun", "bombKR5")
+b = balance.specials.stage27_head
+tt.bullet.flight_time = fts(60)
+tt.bullet.particles_name = "ps_bullet_stage_27_tower_stun"
+tt.bullet.hit_fx = "fx_bullet_stage_27_tower_stun"
+tt.bullet.ignore_hit_offset = true
+tt.bullet.mod = "mod_bullet_stage_27_tower_stun"
+tt.bullet.align_with_trajectory = true
+tt.render.sprites[1].name = "boss_fx_scrap_projectile"
+tt.render.sprites[1].animated = false
+tt.main_script.insert = scripts.enemy_bomb.insert
+tt.main_script.update = scripts.bullet_stage_27_tower_stun.update
+tt.sound_events.insert = "TowerRocketGunnersStingMissileCast"
+tt.sound_events.hit = "TowerRocketGunnersStingMissileExplosion"
+tt = E:register_t("bullet_boss_grymbeard", "bullet")
+b = balance.enemies.hammer_and_anvil.boss_grymbeard.ranged_attack
+
+E:add_comps(tt, "force_motion")
+
+tt.bullet.flight_time = fts(31)
+tt.bullet.particles_name = "ps_bullet_boss_grymbeard_trail"
+tt.bullet.hit_fx = "fx_bullet_boss_grymbeard_hit"
+tt.bullet.hit_decal = "decal_bullet_boss_grymbeard"
+tt.bullet.align_with_trajectory = true
+tt.bullet.ignore_hit_offset = true
+tt.bullet.damage_max = b.damage_max
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_radius = b.damage_radius
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].prefix = "grymbeardbossLAYERS_missile"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].loop = true
+tt.main_script.update = scripts.bullet_boss_grymbeard.update
+tt.initial_impulse = 3000
+tt.initial_impulse_duration = 0.3
+tt.initial_impulse_angle = 0
+tt.force_motion.a_step = 5
+tt.force_motion.max_a = 1800
+tt.force_motion.max_v = 450
+tt.sound_events.insert = "Stage27BFGrymbeardRangedAttackCast"
+tt.sound_events.hit = "Stage27BFGrymbeardRangedAttackImpact"
+tt = E:register_t("bullet_boss_grymbeard_death_clone", "bullet_stage_27_clone_dead")
+tt.bullet.flight_time = fts(32)
+tt.bullet.hit_decal = "decal_bullet_boss_grymbeard_death_clone"
+tt = E:register_t("bullet_boss_grymbeard_death_boss", "bullet_stage_27_clone_dead")
+tt.bullet.flight_time = fts(40)
+tt.bullet.hit_decal = "decal_bullet_boss_grymbeard_death_boss"
+tt.bullet.align_with_trajectory = true
+tt.bullet.particles_name = "ps_bullet_boss_grymbeard_death_boss_trail"
+tt.render.sprites[1].prefix = "grymbeardbossLAYERS_flyboss"
+tt.render.sprites[1].name = "fly"
+tt.render.sprites[1].animated = true
+tt = E:register_t("bullet_boss_grymbeard_death_scrap_1", "bullet_stage_27_clone_dead")
+tt.bullet.hit_decal = "decal_bullet_boss_grymbeard_death_scrap_1"
+tt.render.sprites[1].name = "dclenanos_stage05_grymdebree1_Asst_grymbeardebree1"
+tt.render.sprites[1].animated = false
+tt = E:register_t("bullet_boss_grymbeard_death_scrap_2", "bullet_boss_grymbeard_death_scrap_1")
+tt.bullet.hit_decal = "decal_bullet_boss_grymbeard_death_scrap_2"
+tt.render.sprites[1].name = "dclenanos_stage05_grymdebree2_asst_grym3_grymbearddebree2"
+
+tt = E:register_t("decal_enemy_darksteel_guardian_legs", "decal_tween")
+tt.render.sprites[1].name = "darksteel_guardian_creep_grave_loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {2, 255}, {3, 0}}
+tt.tween.remove = true
+tt = E:register_t("decal_bullet_enemy_darksteel_guardian_death_clone", "decal_tween")
+tt.render.sprites[1].name = "common_clone_creep_boss_fall"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {2, 255}, {3, 0}}
+tt.tween.remove = true
+
+tt = E:register_t("aura_enemy_brute_welder", "aura")
+b = balance.enemies.hammer_and_anvil.brute_welder.basic_attack.flame
+tt.aura.duration = b.duration
+tt.aura.radius = b.radius
+tt.aura.vis_bans = bor(F_ENEMY)
+tt.aura.vis_flags = bor(F_RANGED, F_AREA)
+tt.aura.mod = "mod_burning_enemy_brute_welder"
+tt.aura.cycle_time = b.cycle_time
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+
+tt = E:register_t("mod_burning_enemy_brute_welder", "modifier")
+b = balance.enemies.hammer_and_anvil.brute_welder.basic_attack.burn
+
+E:add_comps(tt, "dps", "render")
+
+tt.modifier.duration = b.duration
+tt.dps.damage_min = b.damage_min
+tt.dps.damage_max = b.damage_max
+tt.dps.damage_type = b.damage_type
+tt.dps.damage_every = b.cycle_time
+tt.render.sprites[1].prefix = "brute_welder_attack_mod"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].draw_order = 2
+tt.render.sprites[1].loop = true
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+tt = E:register_t("mod_enemy_darksteel_anvil_buff", "modifier")
+b = balance.enemies.hammer_and_anvil.darksteel_anvil.aura
+
+E:add_comps(tt, "render", "fast")
+
+tt.main_script.insert = scripts.mod_enemy_darksteel_anvil_buff.insert
+tt.main_script.update = scripts.mod_enemy_darksteel_anvil_buff.update
+tt.main_script.remove = scripts.mod_enemy_darksteel_anvil_buff.remove
+tt.modifier.use_mod_offset = true
+tt.extra_armor = b.mod.extra_armor
+tt.fast.factor = b.mod.speed_factor
+tt.modifier.duration = b.mod.duration
+tt.target_self = b.target_self
+tt.render.sprites[1].prefix = "darksteel_anvil_skill_FX"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].draw_order = 2
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].anchor = v(0.5, 0.6)
+tt = E:register_t("mod_enemy_darksteel_hulk_charge_enemy", "modifier")
+b = balance.enemies.hammer_and_anvil.darksteel_hulk
+
+E:add_comps(tt, "dps", "render")
+
+tt.dps.damage_min = b.charge.damage_enemy_min
+tt.dps.damage_max = b.charge.damage_enemy_max
+tt.dps.damage_type = b.charge.damage_type
+tt.dps.damage_every = fts(10)
+tt.modifier.duration = fts(7)
+tt.modifier.use_mod_offset = true
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+tt.render.sprites[1].name = "darksteel_hulk_attack_hit_idle"
+tt.render.sprites[1].loop = false
+tt = E:register_t("mod_enemy_darksteel_hulk_charge_soldier", "mod_enemy_darksteel_hulk_charge_enemy")
+b = balance.enemies.hammer_and_anvil.darksteel_hulk
+tt.dps.damage_min = b.charge.damage_soldier_min
+tt.dps.damage_max = b.charge.damage_soldier_max
+
+tt = E:register_t("fx_bullet_enemy_brute_welder_death_hit", "fx")
+tt.render.sprites[1].prefix = "brute_welder_tower_hit_fx"
+tt.render.sprites[1].name = "idle"
+tt = E:register_t("fx_bullet_boss_machinist", "fx")
+tt.render.sprites[1].prefix = "dlcdwarfbossstage02_particleDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt = E:register_t("fx_bullet_stage_25_torso_missile_hit", "fx")
+tt.render.sprites[1].prefix = "DLC_stage_03_missile_hit"
+tt.render.sprites[1].name = "run"
+
+tt = E:register_t("fx_stage_27_cannon_shot", "fx")
+tt.render.sprites[1].prefix = "dlcenanos_stage05_cannon_explosionDef"
+tt.render.sprites[1].name = "shoot"
+tt.render.sprites[1].exo = true
+tt = E:register_t("fx_stage_27_scrap", "fx")
+tt.render.sprites[1].prefix = "dclenanos_stage05_ScrapProjectileFXDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt = E:register_t("fx_bullet_stage_27_scrap", "fx")
+tt.render.sprites[1].prefix = "dclenanos_stage05_ScrapProjectileHitFXDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt = E:register_t("fx_bullet_stage_27_tower_stun", "fx")
+tt.render.sprites[1].name = "boss_fx_scrap_hit"
+tt = E:register_t("fx_bullet_boss_grymbeard_hit", "fx")
+tt.render.sprites[1].prefix = "dclenanos_stage05_grymmissileDef"
+tt.render.sprites[1].name = "explosion"
+tt.render.sprites[1].exo = true
+
+tt = E:register_t("fx_enemy_mad_tinkerer_hit", "fx")
+tt.render.sprites[1].name = "mad_tinkerer_hit"
+
+tt = E:register_t("aura_enemy_darksteel_anvil", "aura")
+b = balance.enemies.hammer_and_anvil.darksteel_anvil.aura
+tt.aura.duration = b.duration
+tt.aura.radius = b.aura_radius
+tt.aura.vis_bans = bor(F_FRIEND)
+tt.aura.vis_flags = bor(F_RANGED, F_AREA)
+tt.aura.mod = "mod_enemy_darksteel_anvil_buff"
+tt.aura.cycle_time = b.cycle_time
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt = E:register_t("aura_boss_machinist_burn", "aura")
+
+E:add_comps(tt, "render", "tween")
+
+b = balance.enemies.hammer_and_anvil.boss_machinist.fire_floor
+tt.aura.damage_min = b.damage_min
+tt.aura.damage_max = b.damage_max
+tt.aura.damage_type = b.damage_type
+tt.aura._radius = b.radius
+tt.aura.radius = b.radius
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = bor(F_FLYING, F_ENEMY)
+tt.aura.cycle_time = b.cycle_time
+tt.aura.duration = 1e+99
+tt.aura.track_source = true
+tt.aura.mod = "mod_boss_machinist_burn"
+tt.main_script.insert = scripts.aura_apply_damage.insert
+tt.main_script.update = scripts.aura_apply_damage.update
+tt.aura_floor_t = "aura_boss_machinist_burn_floor"
+tt.render.sprites[1].prefix = "dlcdwarfbossstage02_floorsmokeDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].alpha = 0
+tt.tween.remove = false
+tt.tween.disabled = true
+tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
+
+tt = E:register_t("mod_stage_22_tower_destroyed", "mod_hide_tower")
+
+local b = balance.specials.stage22_tower_destroyed
+
+E:add_comps(tt, "render")
+
+tt.main_script.update = scripts.mod_stage_22_tower_destroyed.update
+tt.main_script.remove = nil
+tt.render.sid_holder = 1
+tt.render.sprites[tt.render.sid_holder].name = "terrains_holders_0007"
+tt.render.sprites[tt.render.sid_holder].animated = false
+tt.render.sprites[tt.render.sid_holder].z = Z_DECALS
+tt.render.sprites[tt.render.sid_holder].offset = v(0, 16)
+tt.render.sid_flag = 2
+tt.render.sprites[tt.render.sid_flag] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_flag].name = "terrains_holders_0019_flag"
+tt.render.sprites[tt.render.sid_flag].animated = false
+tt.render.sprites[tt.render.sid_flag].z = Z_OBJECTS
+tt.render.sprites[tt.render.sid_flag].offset = v(-1, 17)
+tt.render.sid_exo = 3
+tt.render.sprites[tt.render.sid_exo] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_exo].prefix = "animations_tower_killDef"
+tt.render.sprites[tt.render.sid_exo].name = "idle"
+tt.render.sprites[tt.render.sid_exo].exo = true
+tt.render.sprites[tt.render.sid_exo].animated = true
+tt.render.sprites[tt.render.sid_exo].draw_order = 20
+tt.render.sprites[tt.render.sid_exo].z = Z_OBJECTS
+tt.render.sprites[tt.render.sid_exo].offset = v(-2, -15)
+tt.sound_restore = "Stage22TowerRestore"
+tt.repair_cost = b.repair_cost
+tt.hand_decal_t = "decal_mod_stage_22_tower_stun_hand"
+tt.skip_modifiers = {"mod_boss_crocs_tower_eat"}
+tt.click_rect = r(-30, 0, 60, 46)
+tt.menu_offset = v(0, 12)
+tt = E:register_t("mod_boss_machinist_burn", "modifier")
+b = balance.enemies.hammer_and_anvil.boss_machinist.fire_floor.burn
+
+E:add_comps(tt, "dps", "render")
+
+tt.modifier.duration = b.duration
+tt.dps.damage_min = b.damage_min
+tt.dps.damage_max = b.damage_max
+tt.dps.damage_type = b.damage_type
+tt.dps.damage_every = b.cycle_time
+tt.render.sprites[1].size_names = {"small", "medium", "large"}
+tt.render.sprites[1].prefix = "fire"
+tt.render.sprites[1].name = "small"
+tt.render.sprites[1].draw_order = 2
+tt.render.sprites[1].loop = true
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+
+tt = E:register_t("bullet_darksteel_anvil", "arrow5_fixed_height")
+b = balance.enemies.hammer_and_anvil.darksteel_anvil
+tt.bullet.flight_time = fts(8)
+tt.bullet.damage_min = b.basic_ranged.damage_min
+tt.bullet.damage_max = b.basic_ranged.damage_max
+tt.bullet.damage_type = b.basic_ranged.damage_type
+tt.bullet.fixed_height = 15
+tt.bullet.g = -1.8 / (fts(1) * fts(1))
+tt.bullet.hit_blood_fx = nil
+tt.bullet.miss_decal = nil
+tt.bullet.pop = nil
+tt.bullet.hide_radius = 6
+tt.bullet.prediction_error = false
+tt.bullet.predict_target_pos = false
+tt.bullet.hit_fx = "fx_enemy_darksteel_anvil_hit"
+tt.render.sprites[1].name = "darksteel_anvil_attack_projectile"
+tt.render.sprites[1].animated = true
+tt.bullet.hide_radius = 0
+tt.bullet.hit_distance = 20
+tt.bullet.extend_particles_cutoff = true

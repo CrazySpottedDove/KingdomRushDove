@@ -2903,4 +2903,20 @@ function U.remove_on_damage(entity, index)
 	update_on_damage(entity)
 end
 
+function U.tower_block_inc(tower_entity)
+	local tw = tower_entity.tower
+	tw.block_count = tw.block_count + 1
+	if tw.block_count > 0 then
+		tw.blocked = true
+	end
+end
+
+function U.tower_block_dec(tower_entity)
+	local tw = tower_entity.tower
+	tw.block_count = tw.block_count - 1
+	if tw.block_count <= 0 then
+		tw.blocked = false
+	end
+end
+
 return U
