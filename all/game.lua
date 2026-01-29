@@ -340,17 +340,27 @@ function game:update(dt)
 	d.ts = d.ts + d.dt
 	d.to = d.to + d.dt
 
+	-- gui 应不受时间倍率影响
+	d.to_gui = d.to_gui + dt
+
 	local updated = false
 
 	while d.to > TICK_LENGTH do
 		d.to = d.to - TICK_LENGTH
-		self.simulation:update(d.dt)
+		self.simulation:update(TICK_LENGTH)
+		d.step = false
+		updated = true
+	end
+
+	while d.to_gui > TICK_LENGTH do
+		d.to_gui = d.to_gui - TICK_LENGTH
 		perf.start("game_gui:update")
-		self.game_gui:update(d.dt)
+		self.game_gui:update(TICK_LENGTH)
 		perf.stop("game_gui:update")
 		d.step = false
 		updated = true
 	end
+
 	return updated
 end
 

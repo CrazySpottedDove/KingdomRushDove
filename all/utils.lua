@@ -1244,7 +1244,8 @@ function U.find_entity_at_pos(entities, x, y, filter_func)
 	local found = {}
 
 	for _, e in pairs(entities) do
-		if e.pos and e.ui and e.ui.can_click then
+		-- if e.pos and e.ui and e.ui.can_click then
+		if e.ui.can_click then
 			local r = e.ui.click_rect
 
 			if x > e.pos.x + r.pos.x and x < e.pos.x + r.pos.x + r.size.x and y > e.pos.y + r.pos.y and y < e.pos.y + r.pos.y + r.size.y and (not filter_func or filter_func(e)) then
@@ -1264,8 +1265,6 @@ function U.find_entity_at_pos(entities, x, y, filter_func)
 	if #found > 0 then
 		local e = found[1]
 
-		log.paranoid("entity:%s template:%s", e.id, e.template_name)
-
 		return e
 	else
 		return nil
@@ -1282,7 +1281,8 @@ function U.find_entities_at_pos(entities, x, y, filter_func)
 	local found = {}
 
 	for _, e in pairs(entities) do
-		if e.pos and e.ui and e.ui.can_click then
+		-- if e.pos and e.ui and e.ui.can_click then
+		if e.ui.can_click then
 			local r = e.ui.click_rect
 
 			if x > e.pos.x + r.pos.x and x < e.pos.x + r.pos.x + r.size.x and y > e.pos.y + r.pos.y and y < e.pos.y + r.pos.y + r.size.y and (not filter_func or filter_func(e)) then

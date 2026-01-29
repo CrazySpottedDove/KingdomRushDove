@@ -18,6 +18,7 @@ function simulation:init(store, system_names)
 	d.tick_ts = 0
 	d.ts = 0
 	d.to = 0
+	d.to_gui = 0
 	d.paused = false
 	d.step = false
 	d.entities = {}
@@ -33,6 +34,7 @@ function simulation:init(store, system_names)
 	d.entities_with_tween = {}
 	d.entities_with_render = {}
 	d.entities_with_lights = {}
+	d.entities_with_ui = {}
 	d.pending_inserts = {}
 	d.pending_removals = {}
 	d.entity_count = 0

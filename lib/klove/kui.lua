@@ -2,7 +2,7 @@
 local log = require("lib.klua.log"):new("kui")
 
 require("lib.klua.table")
-
+local perf = require("dove_modules.perf.perf")
 local km = require("lib.klua.macros")
 local V = require("lib.klua.vector")
 local I = require("klove.image_db")
@@ -730,7 +730,9 @@ function KView:update(dt)
 	end
 
 	for _, c in pairs(self.children) do
+		-- perf.start(tostring(c))
 		c:update(dt)
+	-- perf.stop(tostring(c))
 	end
 end
 

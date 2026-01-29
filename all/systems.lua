@@ -2977,17 +2977,17 @@ function sys.render:on_update(dt, ts, store)
 			else
 				s.sync_flag = last_runs ~= s.runs
 				s.ss = I:s(fn)
-				-- if s.ss == nil then
-				-- 	log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
-				-- 	if s.animation then
-				-- 		log.error("Animation name: %s", s.animation)
-				-- 	elseif s.animated then
-				-- 		log.error("Animated prefix: %s", s.prefix)
-				-- 		log.error("Animated name: %s", s.name)
-				-- 	else
-				-- 		log.error("Static sprite name: %s", s.name)
-				-- 	end
-				-- end
+			-- if s.ss == nil then
+			-- 	log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+			-- 	if s.animation then
+			-- 		log.error("Animation name: %s", s.animation)
+			-- 	elseif s.animated then
+			-- 		log.error("Animated prefix: %s", s.prefix)
+			-- 		log.error("Animated name: %s", s.name)
+			-- 	else
+			-- 		log.error("Static sprite name: %s", s.name)
+			-- 	end
+			-- end
 			end
 
 			if s._track_e then
@@ -3475,6 +3475,10 @@ function sys.last_hook:on_insert(e, d)
 		d.entities_with_lights[e.id] = e
 	end
 
+	if e.ui then
+		d.entities_with_ui[e.id] = e
+	end
+
 	if e.motion and e.motion.max_speed ~= 0 then
 		e.motion.real_speed = e.motion.max_speed
 	end
@@ -3543,6 +3547,10 @@ function sys.last_hook:on_remove(e, d)
 		d.entities_with_lights[e.id] = nil
 	end
 
+	if e.ui then
+		d.entities_with_ui[e.id] = nil
+	end
+
 	for _, hook in pairs(d.last_hooks.on_remove) do
 		hook(e, d)
 	end
@@ -3551,7 +3559,6 @@ function sys.last_hook:on_remove(e, d)
 		e._applied_mods = nil
 	end
 
-	-- log.error(e.template_name)
 	return true
 end
 

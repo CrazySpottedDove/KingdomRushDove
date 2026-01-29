@@ -401,7 +401,7 @@ function game_gui:init(w, h, game)
 	self.mode = GUI_MODE_IDLE
 	self.manual_gui_hide = nil
 	self.keys_disabled = nil
-
+	self.to = 0
 	local settings = storage:load_settings()
 
 	self.key_shortcuts = storage:load_keyset()
@@ -820,56 +820,62 @@ function game_gui:destroy()
 end
 
 function game_gui:update(dt)
-	timer:update(dt)
-	local e = game_gui.selected_entity
+	self.to = self.to + dt
+	-- 为了节约开销，我们锁定 gui 的更新频率到 60 FPS
+	dt = 0.016666666667
+	while self.to > dt do
+		self.to = self.to - dt
+		timer:update(dt)
+		local e = game_gui.selected_entity
 
-	if e then
-		if e.melee and e.melee.range then
-			local ux, uy = game_gui:g2u(e.pos)
+		if e then
+			if e.melee and e.melee.range then
+				local ux, uy = game_gui:g2u(e.pos)
 
-			game_gui:show_melee_range(ux, uy, e.melee.range)
-		end
+				game_gui:show_melee_range(ux, uy, e.melee.range)
+			end
 
-		if e.ranged and e.ranged.attacks[1].max_range and not e.ranged.attacks[1].disabled then
-			local ux, uy = game_gui:g2u(e.pos)
+			if e.ranged and e.ranged.attacks[1].max_range and not e.ranged.attacks[1].disabled then
+				local ux, uy = game_gui:g2u(e.pos)
 
-			game_gui:show_ranged_range(ux, uy, e.ranged.attacks[1].max_range)
-		elseif e.timed_attacks and e.timed_attacks.list[1].max_range and not e.timed_attacks.list[1].disabled then
-			local ux, uy = game_gui:g2u(e.pos)
+				game_gui:show_ranged_range(ux, uy, e.ranged.attacks[1].max_range)
+			elseif e.timed_attacks and e.timed_attacks.list[1].max_range and not e.timed_attacks.list[1].disabled then
+				local ux, uy = game_gui:g2u(e.pos)
 
-			game_gui:show_ranged_range(ux, uy, e.timed_attacks.list[1].max_range)
-		end
-	end
-
-	local st = game_gui.swap_entity
-
-	if game_gui.mode == GUI_MODE_SWAP_TOWER and st and st.tower and st.tower.blocked then
-		game_gui:hide_ghost_hover()
-
-		game_gui.swap_entity = nil
-	end
-
-	if game_gui.mode == GUI_MODE_IDLE or game_gui.mode == GUI_MODE_SWAP_TOWER then
-		local x, y = game_gui.window:get_mouse_position()
-		local lx, ly = game_gui._last_mouse_pos_x, game_gui._last_mouse_pos_y
-
-		if x ~= lx or y ~= ly then
-			game_gui._last_mouse_pos_x, game_gui._last_mouse_pos_y = x, y
-
-			local wx, wy = game_gui:s2g(V.v(x, y))
-			local ee = game_gui:entity_at_pos(wx, wy)
-			local lastt = game_gui.last_tower_hover
-
-			if ee and ee.tower and ee.tower.can_hover and ee ~= lastt then
-				-- game_gui:show_clickable_hover(ee)
-				self.last_tower_hover = ee
-			elseif lastt and (not ee or ee ~= lastt) then
-				-- game_gui:hide_clickable_hover()
-				self.last_tower_hover = nil
+				game_gui:show_ranged_range(ux, uy, e.timed_attacks.list[1].max_range)
 			end
 		end
+
+		local st = game_gui.swap_entity
+
+		if game_gui.mode == GUI_MODE_SWAP_TOWER and st and st.tower and st.tower.blocked then
+			game_gui:hide_ghost_hover()
+
+			game_gui.swap_entity = nil
+		end
+
+		if game_gui.mode == GUI_MODE_IDLE or game_gui.mode == GUI_MODE_SWAP_TOWER then
+			local x, y = game_gui.window:get_mouse_position()
+			local lx, ly = game_gui._last_mouse_pos_x, game_gui._last_mouse_pos_y
+
+			if x ~= lx or y ~= ly then
+				game_gui._last_mouse_pos_x, game_gui._last_mouse_pos_y = x, y
+
+				local wx, wy = game_gui:s2g(V.v(x, y))
+				local ee = game_gui:entity_at_pos(wx, wy)
+				local lastt = game_gui.last_tower_hover
+
+				if ee and ee.tower and ee.tower.can_hover and ee ~= lastt then
+					-- game_gui:show_clickable_hover(ee)
+					self.last_tower_hover = ee
+				elseif lastt and (not ee or ee ~= lastt) then
+					-- game_gui:hide_clickable_hover()
+					self.last_tower_hover = nil
+				end
+			end
+		end
+		self.window:update(dt)
 	end
-	self.window:update(dt)
 end
 
 function game_gui:mousepressed(x, y, button)
@@ -1242,7 +1248,7 @@ function game_gui:s2g(s)
 end
 
 function game_gui:entity_at_pos(x, y)
-	return U.find_entity_at_pos(self.game.simulation.store.entities, x, y)
+	return U.find_entity_at_pos(self.game.simulation.store.entities_with_ui, x, y)
 end
 
 function game_gui:entity_by_id(id)
@@ -1999,6 +2005,14 @@ end
 function game_gui:set_boss(e)
 	local boss_health_bar = self.boss_health_bar
 	boss_health_bar:set_entity(e)
+	local portrait_ss = I:s(e.info.portrait)
+	boss_health_bar:set_portrait(portrait_ss, I:i(portrait_ss.atlas))
+	-- 	if e.info and e.info.i18n_key then
+	-- 	self.l_name.text = string.upper(_(e.info.i18n_key .. "_NAME"))
+	-- else
+	-- 	self.l_name.text = string.upper(_(string.upper(e.template_name) .. "_NAME"))
+	-- end
+	boss_health_bar:set_name(_(e.info.i18n_key and e.info.i18n_key .. "_NAME" or string.upper(e.template_name) .. "_NAME"))
 	boss_health_bar:enable()
 end
 
@@ -2185,6 +2199,8 @@ function HeroPortrait:initialize(hero_entity)
 	self.bar_health.pos = v(23, 83)
 	self.bar_health.anchor = v(0, 0)
 	self.bar_health.propagate_on_click = true
+	self.bar_health._overflow_color = {1, 0.7843137254902, 0, 1}
+	self.bar_health.normal_color = {1, 1, 1, 1}
 
 	self:add_child(self.bar_health)
 
@@ -2314,13 +2330,13 @@ function HeroPortrait:update(dt)
 	if new_level then
 		self.ov_levelup.ts = 0
 	end
-
+	local bar_health = self.bar_health
 	if e.health.hp > e.health.hp_max then
-		self.bar_health.scale.x = 1
-		self.bar_health.colors.tint = {0, 1, 0.7843137254902, 1}
+		bar_health.scale.x = 1
+		bar_health.colors.tint = bar_health._overflow_color
 	else
-		self.bar_health.scale.x = e.health.hp / e.health.hp_max
-		self.bar_health.colors.tint = {1, 1, 1, 1}
+		bar_health.scale.x = e.health.hp / e.health.hp_max
+		bar_health.colors.tint = bar_health.normal_color
 	end
 
 	if e.health.dead then
@@ -2354,7 +2370,8 @@ function HeroPortrait:update(dt)
 		self.portrait_image_name = e.info.hero_portrait
 	end
 
-	HeroPortrait.super.update(self, dt)
+	-- HeroPortrait.super.update(self, dt)
+	self.ov_levelup:update(dt)
 end
 
 PowerButton = class("PowerButton", KButton)
@@ -5501,48 +5518,46 @@ function PickView:initialize(w, h)
 	self.colors.background = {0, 0, 0, 0}
 end
 
-function PickView:update(dt)
-	local function show_tower_hover(entity)
-		if game_gui.game.store.paused then
-			return
-		end
+function PickView:show_tower_hover(entity)
+	if game_gui.game.store.paused then
+		return
+	end
 
-		local s = entity.render.sprites[1]
+	local s = entity.render.sprites[1]
+
+	if s then
+		s._orig_name = s.name
+		s.name = s.name .. "_over"
+
+		if s.hover_off_hidden then
+			s.hidden = nil
+		end
+	end
+
+	self.last_tower_hover = entity
+
+	S:queue("GUIQuickMenuOver")
+end
+
+function PickView:hide_tower_hover()
+	local oe = self.last_tower_hover
+
+	if oe then
+		local s = oe.render.sprites[1]
 
 		if s then
-			s._orig_name = s.name
-			s.name = s.name .. "_over"
+			s.name = s._orig_name
 
 			if s.hover_off_hidden then
-				s.hidden = nil
+				s.hidden = true
 			end
 		end
 
-		self.last_tower_hover = entity
-
-		S:queue("GUIQuickMenuOver")
+		self.last_tower_hover = nil
 	end
+end
 
-	local function hide_tower_hover()
-		local oe = self.last_tower_hover
-
-		if oe then
-			local s = oe.render.sprites[1]
-
-			if s then
-				s.name = s._orig_name
-
-				if s.hover_off_hidden then
-					s.hidden = true
-				end
-			end
-
-			self.last_tower_hover = nil
-		end
-	end
-
-	PickView.super.update(self, dt)
-
+function PickView:update(dt)
 	local e = game_gui.selected_entity
 
 	if e and (e.tower and e.tower.blocked or e.health and e.health.dead and not e.health.ignore_damage) then
@@ -5550,17 +5565,15 @@ function PickView:update(dt)
 	end
 
 	if self:is_disabled() or game_gui.mode ~= GUI_MODE_IDLE then
-		hide_tower_hover()
+		self:hide_tower_hover()
 
 		return
 	elseif not game_gui.towermenu.hidden then
-		local e = game_gui.selected_entity
-
-		if e and game_gui.selected_entity and self.last_tower_hover ~= e then
-			hide_tower_hover()
+		if e and self.last_tower_hover ~= e then
+			self:hide_tower_hover()
 
 			if e.tower and e.tower.can_hover and e.ui and e.ui.can_click and not self.last_tower_hover then
-				show_tower_hover(e)
+				self:show_tower_hover(e)
 			end
 		end
 
@@ -5575,9 +5588,9 @@ function PickView:update(dt)
 	local e = game_gui:entity_at_pos(wx, wy)
 
 	if e and e.tower and e.tower.can_hover and e.ui and e.ui.can_click and not self.last_tower_hover then
-		show_tower_hover(e)
+		self:show_tower_hover(e)
 	elseif self.last_tower_hover and (not e or e ~= self.last_tower_hover) then
-		hide_tower_hover()
+		self:hide_tower_hover()
 	end
 end
 
@@ -6122,7 +6135,7 @@ function HeroMenuButton:initialize(item)
 	self.size = V.vclone(b.size)
 end
 
-HeroMenu = class("CriketMenu", KImageView)
+HeroMenu = class("HeroMenu", KImageView)
 
 function HeroMenu:initialize()
 	HeroMenu.super.initialize(self, "gui_ring")
@@ -6246,6 +6259,13 @@ function HeroMenu:button_enter(button)
 	if button.halo then
 		button.halo.hidden = false
 	end
+end
+
+function HeroMenu:update(dt)
+	if self.hidden then
+		return
+	end
+	HeroMenu.super.update(self, dt)
 end
 
 function HeroMenu:button_exit(button)
@@ -6395,12 +6415,10 @@ function TowerMenu:show()
 	self.hidden = false
 	self.tweening = true
 
-	local game_time = 0.12 * game_gui.game.store.speed_factor
-
-	self.tweeners = {timer:tween(game_time, self.scale, {
+	self.tweeners = {timer:tween(0.12, self.scale, {
 		x = game_gui.game.camera.zoom,
 		y = game_gui.game.camera.zoom
-	}, "out-quad"), timer:tween(game_time, self, {
+	}, "out-quad"), timer:tween(0.12, self, {
 		alpha = 1
 	}, "out-quad", function()
 		self.tweening = nil
@@ -6425,12 +6443,9 @@ function TowerMenu:hide()
 	end
 
 	self.tweening = true
-
-	local game_time = 0.12 * game_gui.game.store.speed_factor
-
-	self.tweeners = {timer:tween(game_time, self, {
+	self.tweeners = {timer:tween(0.12, self, {
 		alpha = 0
-	}, "out-quad"), timer:tween(game_time, self.scale, {
+	}, "out-quad"), timer:tween(0.12, self.scale, {
 		x = 0.6 * game_gui.game.camera.zoom,
 		y = 0.6 * game_gui.game.camera.zoom
 	}, "out-quad", function()
