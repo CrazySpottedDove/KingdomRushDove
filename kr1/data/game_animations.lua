@@ -4763,86 +4763,6 @@ return {
 			prefix = "DwarfWarrior_Bubbles",
 			to = 22
 		},
-		eb_ainyl_block = {
-			from = 116,
-			prefix = "boss_ainyl",
-			to = 190
-		},
-		eb_ainyl_idle = {
-			from = 1,
-			prefix = "boss_ainyl",
-			to = 1
-		},
-		eb_ainyl_shield = {
-			from = 79,
-			prefix = "boss_ainyl",
-			to = 115
-		},
-		eb_ainyl_teleport = {
-			from = 2,
-			prefix = "boss_ainyl",
-			to = 78
-		},
-		eb_alien_l1_idle = {
-			from = 1,
-			prefix = "theBroodmother_layer1",
-			to = 1
-		},
-		eb_alien_l1_lay_egg = {
-			from = 3,
-			prefix = "theBroodmother_layer1",
-			to = 52
-		},
-		eb_alien_l1_screech = {
-			from = 75,
-			prefix = "theBroodmother_layer1",
-			to = 116
-		},
-		eb_alien_l1_spit = {
-			from = 53,
-			prefix = "theBroodmother_layer1",
-			to = 74
-		},
-		eb_alien_l2_idle = {
-			from = 1,
-			prefix = "theBroodmother_layer2",
-			to = 1
-		},
-		eb_alien_l2_lay_egg = {
-			from = 3,
-			prefix = "theBroodmother_layer2",
-			to = 52
-		},
-		eb_alien_l2_screech = {
-			from = 75,
-			prefix = "theBroodmother_layer2",
-			to = 116
-		},
-		eb_alien_l2_spit = {
-			from = 53,
-			prefix = "theBroodmother_layer2",
-			to = 74
-		},
-		eb_alien_l3_idle = {
-			from = 1,
-			prefix = "theBroodmother_layer3",
-			to = 1
-		},
-		eb_alien_l3_lay_egg = {
-			from = 3,
-			prefix = "theBroodmother_layer3",
-			to = 52
-		},
-		eb_alien_l3_screech = {
-			from = 75,
-			prefix = "theBroodmother_layer3",
-			to = 116
-		},
-		eb_alien_l3_spit = {
-			from = 53,
-			prefix = "theBroodmother_layer3",
-			to = 74
-		},
 		eb_bajnimen_attack = {
 			from = 12,
 			prefix = "bajnimen_boss",
@@ -5188,16 +5108,6 @@ return {
 			prefix = "Boss_Efreeti",
 			to = 50
 		},
-		eb_elder_shaman_cast = {
-			from = 2,
-			prefix = "endless_boss",
-			to = 36
-		},
-		eb_elder_shaman_idle = {
-			from = 2,
-			prefix = "endless_boss",
-			to = 1
-		},
 		eb_gnoll_attack = {
 			from = 209,
 			prefix = "bossHiena",
@@ -5389,27 +5299,6 @@ return {
 			from = 1,
 			prefix = "boss_GulThak",
 			to = 17
-		},
-		eb_hee_haw_layerX_idle = {
-			from = 1,
-			layer_from = 1,
-			layer_prefix = "hee-haw_layer%i",
-			layer_to = 2,
-			to = 1
-		},
-		eb_hee_haw_layerX_shoot = {
-			from = 2,
-			layer_from = 1,
-			layer_prefix = "hee-haw_layer%i",
-			layer_to = 2,
-			to = 43
-		},
-		eb_hee_haw_layerX_shout = {
-			from = 44,
-			layer_from = 1,
-			layer_prefix = "hee-haw_layer%i",
-			layer_to = 2,
-			to = 86
 		},
 		eb_jt_attack = {
 			from = 66,
@@ -6047,21 +5936,6 @@ return {
 			from = 57,
 			prefix = "boss_veznan",
 			to = 84
-		},
-		eb_xerxes_cast1 = {
-			from = 2,
-			prefix = "xerxes",
-			to = 31
-		},
-		eb_xerxes_cast2 = {
-			from = 32,
-			prefix = "xerxes",
-			to = 77
-		},
-		eb_xerxes_idle = {
-			from = 1,
-			prefix = "xerxes",
-			to = 1
 		},
 		efreeti_door_destruction = {
 			from = 1,
@@ -12533,26 +12407,6 @@ return {
 			prefix = "elynia_creepExplosion_ashes",
 			to = 25
 		},
-		fx_xerxes_obelisk = {
-			from = 1,
-			prefix = "cementery_fx",
-			to = 18
-		},
-		fx_xerxes_teleport_end = {
-			from = 1,
-			prefix = "sandVortex_explosion",
-			to = 22
-		},
-		fx_xerxes_teleport_start_large = {
-			from = 1,
-			prefix = "sandVortex_creepFx_fat",
-			to = 11
-		},
-		fx_xerxes_teleport_start_small = {
-			from = 1,
-			prefix = "sandVortex_creepFx_thin",
-			to = 11
-		},
 		fx_xin_drink_bubbles = {
 			from = 1,
 			prefix = "xin_hero_drink_bubbles",
@@ -16834,11 +16688,6 @@ return {
 			prefix = "hero_wizard_proyParticle",
 			to = 12
 		},
-		mod_alien_screech = {
-			from = 1,
-			prefix = "theBroodmother_skreech",
-			to = 14
-		},
 		mod_baby_beresad_big = {
 			from = 1,
 			prefix = "babyBeresad_creepFire_big",
@@ -17298,16 +17147,6 @@ return {
 			from = 31,
 			prefix = "CB_Witch_frog",
 			to = 50
-		},
-		mod_xerxes_invisibility_large = {
-			from = 1,
-			prefix = "invisible_fx_big",
-			to = 27
-		},
-		mod_xerxes_invisibility_small = {
-			from = 1,
-			prefix = "invisible_fx_small",
-			to = 27
 		},
 		mod_xin_inspire = {
 			from = 1,
@@ -23323,41 +23162,6 @@ return {
 			from = 15,
 			prefix = "hero_wilburg_drones",
 			to = 29
-		},
-		xerxes_invisibility_cloud = {
-			from = 1,
-			prefix = "invisible_cloud",
-			to = 19
-		},
-		xerxes_obelisk_end = {
-			from = 11,
-			prefix = "cementery",
-			to = 18
-		},
-		xerxes_obelisk_loop = {
-			from = 10,
-			prefix = "cementery",
-			to = 10
-		},
-		xerxes_obelisk_start = {
-			from = 1,
-			prefix = "cementery",
-			to = 10
-		},
-		xerxes_teleport_end = {
-			from = 25,
-			prefix = "sandVortex",
-			to = 34
-		},
-		xerxes_teleport_loop = {
-			from = 9,
-			prefix = "sandVortex",
-			to = 24
-		},
-		xerxes_teleport_start = {
-			from = 1,
-			prefix = "sandVortex",
-			to = 8
 		},
 		xin_shadow_attack = {
 			from = 11,

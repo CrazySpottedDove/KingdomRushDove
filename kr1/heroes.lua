@@ -1913,9 +1913,7 @@ tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 --#endregion
 --#region hero_hacksaw
 tt = RT("hero_hacksaw", "hero")
-
 AC(tt, "melee", "ranged")
-
 anchor_y = 0.13636363636363635
 anchor_x = 0.5
 image_y = 110

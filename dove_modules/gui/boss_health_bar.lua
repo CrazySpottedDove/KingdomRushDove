@@ -14,7 +14,6 @@ function BossHealthBar:initialize(size)
 	self.boss_name = "BOSS_NAME"
 	self.portrait = nil -- love.graphics.Image
 	self.portrait_ss = nil
-	self.portrait_size = 32
 	self.hidden = true
 	self.entity = nil
 	self.font = F:f("button", 12)

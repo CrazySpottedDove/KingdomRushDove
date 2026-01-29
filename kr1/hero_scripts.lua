@@ -30797,4 +30797,4 @@ function scripts.hero_muyrn_ultimate.update(this, store)
 	queue_remove(store, this)
 end
 
-return scripts
+-- return scripts

@@ -1238,71 +1238,6 @@ tt.aura.track_source = true
 tt.aura.vis_bans = bor(F_ENEMY, F_FLYING)
 tt.aura.vis_flags = bor(F_RANGED)
 --#endregion
---#region aura_elder_shaman_healing
-tt = RT("aura_elder_shaman_healing", "aura")
-
-AC(tt, "render", "tween")
-
-tt.aura.mod = "mod_elder_shaman_heal"
-tt.aura.mod_args = nil
-tt.aura.cycle_time = 0.5
-tt.aura.duration = nil
-tt.aura.radius = nil
-tt.aura.vis_bans = bor(F_BOSS, F_FRIEND)
-tt.aura.vis_flags = F_MOD
-tt.aura.requires_magic = true
-tt.render.sprites[1].alpha = 50
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "totem_groundeffect-orange_0002"
-tt.render.sprites[1].scale = vec_2(0.64, 0.64)
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].animated = false
-tt.render.sprites[2].name = "totem_groundeffect-orange_0001"
-tt.render.sprites[2].z = Z_DECALS
-tt.render.sprites[3] = CC("sprite")
-tt.render.sprites[3].anchor = vec_2(0.5, 0.12264150943396226)
-tt.render.sprites[3].loop = false
-tt.render.sprites[3].name = "start"
-tt.render.sprites[3].prefix = "elder_shaman_totem_orange"
-tt.render.sprites[4] = CC("sprite")
-tt.render.sprites[4].anchor = vec_2(0.5, 0.12264150943396226)
-tt.render.sprites[4].hidden = true
-tt.render.sprites[4].loop = true
-tt.render.sprites[4].name = "elder_shaman_totem_orange_fx"
-tt.main_script.update = scripts.aura_elder_shaman.update
-tt.sound_events.insert = "EndlessOrcsTotemHealing"
-tt.tween.remove = false
-tt.tween.props[1].name = "scale"
-tt.tween.props[1].keys = {{0, vec_2(0.64, 0.64)}, {fts(15), vec_2(1, 1)}, {fts(30), vec_2(1.6, 1.6)}}
-tt.tween.props[1].loop = true
-tt.tween.props[2] = CC("tween_prop")
-tt.tween.props[2].keys = {{0, 50}, {fts(10), 255}, {fts(20), 255}, {fts(30), 0}}
-tt.tween.props[2].loop = true
---#endregion
---#region aura_elder_shaman_damage
-tt = RT("aura_elder_shaman_damage", "aura_elder_shaman_healing")
-tt.aura.mod = "mod_elder_shaman_damage"
-tt.aura.cycle_time = 0.2
-tt.aura.requires_magic = true
-tt.aura.vis_bans = bor(F_BOSS, F_ENEMY)
-tt.render.sprites[1].name = "totem_groundeffect-red_0002"
-tt.render.sprites[2].name = "totem_groundeffect-red_0001"
-tt.render.sprites[3].prefix = "elder_shaman_totem_red"
-tt.render.sprites[4].name = "elder_shaman_totem_red_fx"
-tt.sound_events.insert = "EndlessOrcsTotemDamage"
---#endregion
---#region aura_elder_shaman_speed
-tt = RT("aura_elder_shaman_speed", "aura_elder_shaman_healing")
-tt.aura.mod = "mod_elder_shaman_speed"
-tt.aura.requires_magic = true
-tt.aura.cycle_time = 0.2
-tt.render.sprites[1].name = "totem_groundeffect-ligthBlue_0002"
-tt.render.sprites[2].name = "totem_groundeffect-lightBlue_0001"
-tt.render.sprites[3].prefix = "elder_shaman_totem_blue"
-tt.render.sprites[4].name = "elder_shaman_totem_blue_fx"
-tt.sound_events.insert = "EndlessOrcsTotemSpeed"
---#endregion
 --#region mod_arcane_shatter
 tt = RT("mod_arcane_shatter", "mod_damage")
 tt.damage_min = 0.035
@@ -2406,14 +2341,7 @@ tt = RT("decal_endless_burner", "decal_loop")
 tt.render.sprites[1].name = "decal_orc_burner_idle"
 tt.render.sprites[1].random_ts = fts(14)
 --#endregion
---#region decal_s81_percussionist
-tt = RT("decal_s81_percussionist", "decal_scripted")
-tt.render.sprites[1].prefix = "decal_s81_percussionist"
-tt.render.sprites[1].anchor.y = 0.125
-tt.render.sprites[1].loop = false
-tt.main_script.update = scripts.decal_s81_percussionist.update
-tt.play_loops = 0
---#endregion
+
 --#region tower_archer_hammerhold
 tt = RT("tower_archer_hammerhold", "tower")
 
@@ -6321,22 +6249,7 @@ tt.main_script.update = scripts.enemy_bomb.update
 tt.sound_events.insert = nil
 tt.sound_events.hit = "ElvesBalrogBloodpool"
 --#endregion
---#region snare_hee_haw
-tt = RT("snare_hee_haw", "bullet")
-tt.main_script.update = scripts.snare_hee_haw.update
-tt.render.sprites[1].anchor.y = 0.3418803418803419
-tt.render.sprites[1].prefix = "snare_hee_haw"
-tt.render.sprites[1].name = "falling"
-tt.render.sprites[1].scale = vec_1(0.5)
-tt.render.sprites[1].z = Z_BULLETS
-tt.sound_events.insert = "EndlessHeeHawNetHit"
-tt.sound_events.falling = "EndlessHeeHawNetFalling"
-tt.sound_events.hit = "EndlessHeeHawNetHit"
-tt.bullet.vis_flags = F_RANGED
-tt.bullet.vis_bans = bor(F_ENEMY, F_FLYING)
-tt.bullet.mod = "mod_snare_hee_haw"
-tt.bullet.mod_radius = 5
---#endregion
+
 --#region bullet_catapult_endless_rock
 tt = RT("bullet_catapult_endless_rock", "rock_enemy_catapult")
 tt.render.sprites[1].name = "catapult_endless_proy_0001"
@@ -7554,68 +7467,7 @@ tt.render.sprites[1].z = Z_DECALS
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}, {"this.modifier.duration-(10/30)", 255}, {"this.modifier.duration", 0}}
 --#endregion
---#region mod_teleport_ainyl
-tt = RT("mod_teleport_ainyl", "mod_teleport")
-tt.modifier.vis_flags = bor(F_MOD, F_TELEPORT)
-tt.max_times_applied = nil
-tt.delay_start = fts(2)
-tt.hold_time = 0.4
-tt.delay_end = fts(2)
-tt.fx_start = "fx_teleport_scroll"
-tt.fx_end = "fx_teleport_scroll"
---#endregion
---#region mod_block_tower_ainyl
-tt = RT("mod_block_tower_ainyl", "modifier")
 
-AC(tt, "render", "tween")
-
-tt.main_script.update = scripts.mod_block_tower_ainyl.update
-tt.modifier.hide_tower = false
-tt.modifier.duration = 10
-tt.render.sprites[1].name = "ainyl_block_decal"
-tt.render.sprites[1].draw_order = 10
-tt.render.sprites[1].anchor.y = 0.28125
-tt.render.sprites[1].offset.y = -8
-tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].sort_y_offset = -2
-tt.render.sprites[2].anchor = vec_2(0.9655172413793104, 0.5)
-tt.render.sprites[2].offset.y = 21
-tt.render.sprites[2].name = "ainyl_block_fx"
-tt.render.sprites[3] = table.deepclone(tt.render.sprites[2])
-tt.render.sprites[3].scale = vec_2(-1, 1)
-tt.render.sprites[3].time_offset = fts(6)
-tt.render.sprites[4] = table.deepclone(tt.render.sprites[2])
-tt.render.sprites[4].offset.y = 48
-tt.render.sprites[4].hidden = true
-tt.render.sprites[5] = table.deepclone(tt.render.sprites[4])
-tt.render.sprites[5].scale = vec_2(-1, 1)
-tt.render.sprites[5].time_offset = fts(6)
-tt.tween.remove = false
-
-for i = 1, 5 do
-	local p = CC("tween_prop")
-
-	p.keys = {{0, 0}, {0.2, 255}, {"this.modifier.duration-0.2", 255}, {"this.modifier.duration", 0}}
-	p.sprite_id = i
-	tt.tween.props[i] = p
-end
-
---#endregion
---#region mod_shield_ainyl
-tt = RT("mod_shield_ainyl", "modifier")
-
-AC(tt, "render")
-
-tt.modifier.duration = nil
-tt.main_script.insert = scripts.mod_damage_factors.insert
-tt.main_script.remove = scripts.mod_damage_factors.remove
-tt.main_script.update = scripts.mod_track_target.update
-tt.received_damage_factor = 0.001
-tt.render.sprites[1].prefix = "ainyl_shield"
-tt.render.sprites[1].size_names = {"small", "big", "big"}
-tt.render.sprites[1].name = "small"
-tt.render.sprites[1].anchor.y = 0.4
---#endregion
 --#region mod_pixie_teleport
 tt = RT("mod_pixie_teleport", "mod_teleport_mage")
 
@@ -7630,9 +7482,7 @@ tt.sound_events.insert = "ElvesGnomeTeleport"
 --#endregion
 --#region mod_ray_crystal_arcane
 tt = RT("mod_ray_crystal_arcane", "modifier")
-
 AC(tt, "dps")
-
 tt.modifier.duration = fts(16)
 tt.dps.damage_every = fts(4)
 tt.dps.damage_min = 150 / (tt.modifier.duration / tt.dps.damage_every)
@@ -7644,9 +7494,7 @@ tt.main_script.update = scripts.mod_dps.update
 --#endregion
 --#region mod_crystal_arcane_freeze
 tt = RT("mod_crystal_arcane_freeze", "mod_freeze")
-
 AC(tt, "render")
-
 tt.modifier.duration = 4
 tt.modifier.vis_bans = F_BOSS
 tt.render.sprites[1].prefix = "freeze_creep"

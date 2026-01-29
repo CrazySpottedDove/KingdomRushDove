@@ -1,7 +1,8 @@
 require("lib.klua.table")
 require("i18n")
 
-local scripts = require("hero_scripts")
+-- local scripts = require("hero_scripts")
+local scripts = require("scripts")
 local AC = require("achievements")
 local log = require("lib.klua.log"):new("tower_scripts")
 
@@ -20870,4 +20871,4 @@ function scripts.controller_tower_arborean_emissary_gift_of_nature.update(this, 
 end
 
 -- 树灵 END
-return scripts
+-- return scripts
