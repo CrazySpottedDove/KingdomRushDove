@@ -9981,11 +9981,11 @@ tt.glare_kr5.on_start_glare = scripts.enemy_evolving_scourge.on_start_glare
 tt.glare_kr5.armor = b.glare.armor
 tt.sound_events.evolve = "EnemyEvolvingScourgeEvolve"
 tt.sound_events.death = "EnemyEvolvingScourgeDeath"
+
+-- 血壤巨兽
 tt = E:register_t("enemy_amalgam", "enemy_KR5")
 b = balance.enemies.void_beyond.amalgam
-
 E:add_comps(tt, "melee", "glare_kr5", "death_spawns")
-
 tt.enemy.gold = b.gold
 tt.enemy.melee_slot = v(37, 0)
 tt.enemy.lives_cost = b.lives_cost

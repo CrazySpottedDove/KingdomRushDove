@@ -17124,8 +17124,10 @@ tt.modifier.vis_bans = bor(F_ENEMY)
 tt.main_script.remove = scripts.mod_stage_15_cult_leader_tower_stun.remove
 
 tt = E:register_t("decal_enemy_amalgam_hit", "decal_scripted")
+tt.render.sprites[1].name = "Amalgam_Attack1_run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].hidden = true
 tt.main_script.update = scripts.decal_enemy_amalgam_hit.update
-tt.render.sprites[1] = nil
 tt.spike_decals = {"decal_enemy_amalgam_hit_1", "decal_enemy_amalgam_hit_2"}
 tt.decal_spawn_range = 50
 tt.distance_between = 20
