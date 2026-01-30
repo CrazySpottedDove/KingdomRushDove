@@ -4228,6 +4228,10 @@ local function scale_fps_based_keys(tbl, factor, visited)
 	end
 end
 
+---改变实体动画帧率
+---@param ts number 当前时间
+---@param entity table 实体
+---@param factor number 帧率缩放系数，factor > 1 表示加快动画，factor < 1 表示减慢动画
 local function change_fps(ts, entity, factor)
 	if entity.render then
 		for _, s in pairs(entity.render.sprites) do

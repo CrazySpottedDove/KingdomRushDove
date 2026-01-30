@@ -7359,10 +7359,10 @@ function scripts.controller_stage_16_overseer.update(this, store)
 
 				local tower_index = 1
 
-				towers = table.filter(store.entities, function(k, v)
+				towers = table.filter(store.towers, function(k, v)
 					return not v.pending_removal and v.tower and not v.tower.blocked and v.tower.can_be_sold and v.tower.can_be_mod
 				end)
-				holders = table.filter(store.entities, function(k, v)
+				holders = table.filter(store.towers, function(k, v)
 					return v.tower and v.tower.type == "holder"
 				end)
 
@@ -7706,25 +7706,49 @@ function scripts.controller_stage_16_overseer_tentacle.update(this, store)
 			if store.tick_ts - last_shot_ts >= this.config.cooldown[overseer.phase] then
 				local start_ts = store.tick_ts
 
-				this.tentacle_mouth.anim_shot = true
+				local shoot_count = 1
+				local hp_rate = overseer.health.hp / overseer.health.hp_max
+				if hp_rate < 0.25 then
+					shoot_count = 3
+				elseif hp_rate < 0.4 then
+					shoot_count = 2
+				end
 
-				S:queue(this.sound_spawn)
-				U.animation_start(this, "spawnenemies", nil, store.tick_ts, false)
-				U.y_wait(store, this.shot_delay)
+				local speed_factor = shoot_count
 
-				local spawn_pos_i = math.random(1, #this.spawn_pos)
-				local b = E:create_entity(this.bullet)
+				if speed_factor ~= 1 then
+					SU.change_fps(store.tick_ts, this, speed_factor)
+					SU.change_fps(store.tick_ts, this.tentacle_mouth, speed_factor)
+				end
 
-				b.pos.x, b.pos.y = this.pos.x + this.spawn_offset.x, this.pos.y + this.spawn_offset.y
-				b.bullet.from = V.vclone(b.pos)
-				b.bullet.to = this.spawn_pos[spawn_pos_i]
-				b.bullet.source_id = this.id
-				b.path_to_spawn = this.spawn_path
-				b.overseer = overseer
-				b.spawn_path = this.spawn_path[spawn_pos_i]
+				for i = 1, shoot_count do
+					this.tentacle_mouth.anim_shot = true
+					S:queue(this.sound_spawn)
+					U.animation_start(this, "spawnenemies", nil, store.tick_ts, false)
+					U.y_wait(store, this.shot_delay / speed_factor)
 
-				queue_insert(store, b)
-				U.y_animation_wait(this)
+					local spawn_pos_i = math.random(1, #this.spawn_pos)
+					local b = E:create_entity(this.bullet)
+
+					b.pos.x, b.pos.y = this.pos.x + this.spawn_offset.x, this.pos.y + this.spawn_offset.y
+					b.bullet.from = V.vclone(b.pos)
+					b.bullet.to = this.spawn_pos[spawn_pos_i]
+					b.bullet.source_id = this.id
+					b.path_to_spawn = this.spawn_path
+					b.overseer = overseer
+					b.spawn_path = this.spawn_path[spawn_pos_i]
+
+					queue_insert(store, b)
+					U.y_animation_wait(this)
+					U.y_animation_wait(this.tentacle_mouth)
+					coroutine.yield()
+				end
+
+				if speed_factor ~= 1 then
+					SU.change_fps(store.tick_ts, this, 1 / speed_factor)
+					SU.change_fps(store.tick_ts, this.tentacle_mouth, 1 / speed_factor)
+				end
+
 				U.animation_start(this, "idlemouth", nil, store.tick_ts, true, 1, true)
 
 				last_shot_ts = start_ts
