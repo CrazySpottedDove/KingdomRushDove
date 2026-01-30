@@ -78,8 +78,8 @@ game_gui.selected_controables = {}
 local function wid(name)
 	return game_gui.window:ci(name)
 end
-
-local function unlock_user_power_handler(power_idx)
+-- 辅助函数：解锁用户技能（供信号与其他回调复用）
+local function unlock_user_power(power_idx)
 	if power_idx == 1 then
 		game_gui.power_1:set_mode("unlocked")
 	elseif power_idx == 2 then
@@ -89,183 +89,202 @@ local function unlock_user_power_handler(power_idx)
 	end
 end
 
-local function enemy_reached_goal_handler(enemy)
-	if enemy and enemy.enemy and enemy.enemy.lives_cost > 0 then
-		S:queue("GUILooseLife")
-	end
+-- 统一信号映射
+local signals = {
+	["enemy-reached-goal"] = function(enemy)
+		if enemy and enemy.enemy and enemy.enemy.lives_cost > 0 then
+			S:queue("GUILooseLife")
+		end
+		if enemy == game_gui.selected_entity then
+			game_gui:deselect_entity()
+		end
+	end,
 
-	if enemy == game_gui.selected_entity then
-		game_gui:deselect_entity()
-	end
-end
+	["next-wave-ready"] = function(group)
+		log.debug("next_wave_ready_handler. group_idx:%s", group.group_idx)
+		S:queue("GUINextWaveReady")
+		game_gui:show_wave_flags(group)
+		game_gui.next_wave_button:enable()
 
-local function next_wave_ready_handler(group)
-	log.debug("next_wave_ready_handler. group_idx:%s", group.group_idx)
-	S:queue("GUINextWaveReady")
-	game_gui:show_wave_flags(group)
-	game_gui.next_wave_button:enable()
+		if game_gui.game.store.level.show_next_wave_balloon then
+			game_gui.game.store.level.show_next_wave_balloon = nil
+			game_gui:show_balloon("TB_WAVE")
+		end
 
-	if game_gui.game.store.level.show_next_wave_balloon then
-		game_gui.game.store.level.show_next_wave_balloon = nil
-
-		game_gui:show_balloon("TB_WAVE")
-	end
-
-	if game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS then
-		if game_gui.game.store.endless.load_from_history then
-			game_gui.game.store.endless.load_from_history = false
-		else
-			if #game_gui.game.store.endless.upgrade_options > 0 and game_gui.game.store.wave_group_number <= 75 then
-				if game_gui.endless_select_reward_view.hidden then
-					game_gui.endless_select_reward_view:show()
+		if game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS then
+			if game_gui.game.store.endless.load_from_history then
+				game_gui.game.store.endless.load_from_history = false
+			else
+				if #game_gui.game.store.endless.upgrade_options > 0 and game_gui.game.store.wave_group_number <= 75 then
+					if game_gui.endless_select_reward_view.hidden then
+						game_gui.endless_select_reward_view:show()
+					end
 				end
+				local endless = game_gui.game.store.endless
+				EU.patch_enemy_growth(endless)
+			end
+		end
+	end,
+
+	["next-wave-sent"] = function(group)
+		log.debug("next_wave_sent_handler")
+		game_gui:hide_wave_flags()
+		game_gui.next_wave_button:disable()
+		game_gui:show_early_wave_reward()
+
+		if group.group_idx == 1 then
+			local locks = game_gui.game.store.level.locked_powers
+
+			if not locks or #locks == 0 or locks[1] == false then
+				unlock_user_power(1)
+			end
+			if not locks or #locks == 0 or locks[2] == false then
+				unlock_user_power(2)
+			end
+			if game_gui.heroes and #game_gui.heroes > 0 and (not locks or #locks == 0 or locks[3] == false) then
+				unlock_user_power(3)
 			end
 
-			local endless = game_gui.game.store.endless
-
-			EU.patch_enemy_growth(endless)
-		end
-	end
-end
-
-local function next_wave_sent_handler(group)
-	log.debug("next_wave_sent_handler")
-	game_gui:hide_wave_flags()
-	game_gui.next_wave_button:disable()
-	game_gui:show_early_wave_reward()
-
-	if group.group_idx == 1 then
-		local locks = game_gui.game.store.level.locked_powers
-
-		if not locks or #locks == 0 or locks[1] == false then
-			unlock_user_power_handler(1)
-		end
-
-		if not locks or #locks == 0 or locks[2] == false then
-			unlock_user_power_handler(2)
-		end
-
-		if game_gui.heroes and #game_gui.heroes > 0 and (not locks or #locks == 0 or locks[3] == false) then
-			unlock_user_power_handler(3)
-		end
-
-		if game_gui.bag_button then
-			local slot = storage:load_slot()
-
-			if slot.bag then
-				for k, v in pairs(slot.bag) do
-					if v > 0 then
-						game_gui.bag_button:set_mode("unlocked")
-
-						break
+			if game_gui.bag_button then
+				local slot = storage:load_slot()
+				if slot.bag then
+					for _, v in pairs(slot.bag) do
+						if v > 0 then
+							game_gui.bag_button:set_mode("unlocked")
+							break
+						end
 					end
 				end
 			end
+
+			S:stop_group("MUSIC")
+			S:queue(string.format("MusicBattle_%02d", game_gui.game.store.level_idx))
 		end
 
-		S:stop_group("MUSIC")
-		S:queue(string.format("MusicBattle_%02d", game_gui.game.store.level_idx))
-	end
+		S:queue("GUINextWaveIncoming")
+	end,
 
-	S:queue("GUINextWaveIncoming")
-end
-
-local function early_wave_called_handler(group, reward, remaining_time, score_reward)
-	game_gui.power_1:early_wave_bonus(remaining_time)
-	game_gui.power_2:early_wave_bonus(remaining_time)
-
-	if game_gui.power_3 then
-		game_gui.power_3:early_wave_bonus(remaining_time)
-	end
-end
-
-local function hide_gui_handler()
-	log.debug("hide_gui_handler")
-	game_gui:hide()
-end
-
-local function show_gui_handler()
-	log.debug("show_gui_handler")
-	game_gui:show()
-end
-
-local function hero_added_handler(hero)
-	log.debug("hero added: %s", hero.template_name)
-	game_gui:add_hero(hero)
-end
-
-local function hero_added_no_panel_handler(hero)
-	game_gui:add_hero_no_panel(hero)
-end
-
-local function game_defeat_handler(store)
-	game_gui:defeat()
-end
-
-local function game_victory_handler(store)
-	game_gui:deselect_all()
-	game_gui:disable_keys()
-
-	local wait_time
-
-	if store.criket and store.criket.on then
-		wait_time = 0.5
-	else
-		wait_time = 2
-	end
-
-	timer:after(wait_time, function()
-		game_gui:victory()
-	end)
-end
-
-local function wave_notification_handler(type, id, force)
-	log.debug("wave_notification - type:%s, id:%s", type, id)
-
-	if type == "view" then
-		game_gui:show_notification(id, force)
-	elseif type == "icon" then
-		game_gui:queue_notification_icon(id, force)
-	end
-end
-
-local function show_balloon_handler(id, at_level_idx)
-	log.debug("balloon:%s at_level_idx:%s", id, at_level_idx)
-
-	if not at_level_idx or at_level_idx == game.store.level_idx then
-		game_gui:show_balloon(id)
-	end
-end
-
-local function show_achievement_handler(id)
-	log.debug("achievement %s", id)
-	game_gui:show_achievement(id)
-end
-
-local function block_random_power_handler(duration, style)
-	game_gui:block_random_power(duration, style)
-end
-
-local function debug_ready_user_powers_handler()
-	game_gui.power_1:set_mode("ready")
-	game_gui.power_2:set_mode("ready")
-
-	if game_gui.power_3 then
-		game_gui.power_3:set_mode("ready")
-	end
-
-	if game_gui.bag_button then
-		game_gui.bag_button:set_mode("unlocked")
-	end
-end
-
-local function debug_ready_plants_crystals_handler()
-	for _, e in pairs(game_gui.game.simulation.store.entities) do
-		if table.contains({"plant_magic_blossom", "plant_poison_pumpkin", "crystal_arcane", "crystal_unstable", "paralyzing_tree"}, e.template_name) then
-			e.force_ready = true
+	["early-wave-called"] = function(group, reward, remaining_time, score_reward)
+		game_gui.power_1:early_wave_bonus(remaining_time)
+		game_gui.power_2:early_wave_bonus(remaining_time)
+		if game_gui.power_3 then
+			game_gui.power_3:early_wave_bonus(remaining_time)
 		end
+	end,
+
+	["hide-gui"] = function()
+		log.debug("hide_gui_handler")
+		game_gui:hide()
+	end,
+
+	["show-gui"] = function()
+		log.debug("show_gui_handler")
+		game_gui:show()
+	end,
+
+	["hero-added"] = function(hero)
+		log.debug("hero added: %s", hero.template_name)
+		game_gui:add_hero(hero)
+	end,
+
+	["hero-added-no-panel"] = function(hero)
+		game_gui:add_hero_no_panel(hero)
+	end,
+
+	["hero-removed-no-panel"] = function(hero)
+		game_gui:remove_hero_no_panel(hero)
+	end,
+
+	["game-defeat"] = function(store)
+		game_gui:defeat()
+	end,
+
+	["game-victory"] = function(store)
+		game_gui:deselect_all()
+		game_gui:disable_keys()
+
+		local wait_time
+		if store.criket and store.criket.on then
+			wait_time = 0.5
+		else
+			wait_time = 2
+		end
+
+		timer:after(wait_time, function()
+			game_gui:victory()
+		end)
+	end,
+
+	["unlock-user-power"] = function(power_idx)
+		unlock_user_power(power_idx)
+	end,
+
+	["wave-notification"] = function(t, id, force)
+		log.debug("wave_notification - type:%s, id:%s", t, id)
+		if t == "view" then
+			game_gui:show_notification(id, force)
+		elseif t == "icon" then
+			game_gui:queue_notification_icon(id, force)
+		end
+	end,
+
+	["show-balloon"] = function(id, at_level_idx)
+		log.debug("balloon:%s at_level_idx:%s", id, at_level_idx)
+		if not at_level_idx or at_level_idx == game.store.level_idx then
+			game_gui:show_balloon(id)
+		end
+	end,
+
+	["got-achievement"] = function(id)
+		log.debug("achievement %s", id)
+		game_gui:show_achievement(id)
+	end,
+
+	["block-random-power"] = function(duration, style)
+		game_gui:block_random_power(duration, style)
+	end,
+
+	["debug-ready-user-powers"] = function()
+		game_gui.power_1:set_mode("ready")
+		game_gui.power_2:set_mode("ready")
+		if game_gui.power_3 then
+			game_gui.power_3:set_mode("ready")
+		end
+		if game_gui.bag_button then
+			game_gui.bag_button:set_mode("unlocked")
+		end
+	end,
+
+	["debug-ready-plants-crystals"] = function()
+		for _, e in pairs(game_gui.game.simulation.store.entities) do
+			if table.contains({"plant_magic_blossom", "plant_poison_pumpkin", "crystal_arcane", "crystal_unstable", "paralyzing_tree"}, e.template_name) then
+				e.force_ready = true
+			end
+		end
+	end,
+
+	["fade-in"] = function(time)
+		local overlay_view = game_gui.overlay
+		overlay_view.hidden = false
+		overlay_view.colors.background = {0, 0, 0, 255}
+		timer:tween(time, overlay_view.colors, {
+			background = {0, 0, 0, 0}
+		}, "out-linear", function()
+			overlay_view.hidden = true
+		end)
+	end,
+
+	["fade-out"] = function(time, color)
+		local overlay_view = game_gui.overlay
+		overlay_view.hidden = false
+		color = color or {0, 0, 0, 255}
+		timer:tween(time, overlay_view.colors, {
+			background = color
+		}, "out-linear", function()
+			return
+		end)
 	end
-end
+}
 
 function game_gui:init(w, h, game)
 	self.game = game
@@ -630,26 +649,11 @@ function game_gui:init(w, h, game)
 	self.heroes = {}
 	self.heroes_no_panel = {}
 
-	signal.register("enemy-reached-goal", enemy_reached_goal_handler)
-	signal.register("next-wave-ready", next_wave_ready_handler)
-	signal.register("next-wave-sent", next_wave_sent_handler)
-	signal.register("early-wave-called", early_wave_called_handler)
-	signal.register("hide-gui", hide_gui_handler)
-	signal.register("show-gui", show_gui_handler)
-	signal.register("hero-added", hero_added_handler)
-	signal.register("hero-added-no-panel", hero_added_no_panel_handler)
-	signal.register("hero-removed-no-panel", function(hero)
-		game_gui:remove_hero_no_panel(hero)
-	end)
-	signal.register("game-defeat", game_defeat_handler)
-	signal.register("game-victory", game_victory_handler)
-	signal.register("unlock-user-power", unlock_user_power_handler)
-	signal.register("wave-notification", wave_notification_handler)
-	signal.register("show-balloon", show_balloon_handler)
-	signal.register("got-achievement", show_achievement_handler)
-	signal.register("block-random-power", block_random_power_handler)
-	signal.register("debug-ready-user-powers", debug_ready_user_powers_handler)
-	signal.register("debug-ready-plants-crystals", debug_ready_plants_crystals_handler)
+	-- 统一注册 signal
+	for name, handler in pairs(signals) do
+		signal.register(name, handler)
+	end
+
 	self:add_mobile_shortcut_buttons()
 end
 
@@ -664,22 +668,11 @@ function game_gui:destroy()
 	self.game = nil
 
 	SU.remove_references(self, KView)
-	signal.remove("enemy-reached-goal", enemy_reached_goal_handler)
-	signal.remove("next-wave-ready", next_wave_ready_handler)
-	signal.remove("next-wave-sent", next_wave_sent_handler)
-	signal.remove("early-wave-called", early_wave_called_handler)
-	signal.remove("hide-gui", hide_gui_handler)
-	signal.remove("show-gui", show_gui_handler)
-	signal.remove("hero-added", hero_added_handler)
-	signal.remove("game-defeat", game_defeat_handler)
-	signal.remove("game-victory", game_victory_handler)
-	signal.remove("unlock-user-power", unlock_user_power_handler)
-	signal.remove("wave-notification", wave_notification_handler)
-	signal.remove("show-balloon", show_balloon_handler)
-	signal.remove("got-achievement", show_achievement_handler)
-	signal.remove("block-random-power", block_random_power_handler)
-	signal.remove("debug-ready-user-powers", debug_ready_user_powers_handler)
-	signal.remove("debug-ready-plants-crystals", debug_ready_plants_crystals_handler)
+
+	-- 统一卸载 signal
+	for name, handler in pairs(signals) do
+		signal.remove(name, handler)
+	end
 end
 
 function game_gui:update(dt)
