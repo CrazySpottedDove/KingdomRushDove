@@ -90,7 +90,7 @@ function BossHealthBar:_draw_self()
 	-- 黄色滞后血条
 	if lag > hp then
 		G.setColor(1.0, 0.95, 0.3, 0.9)
-		G.rectangle("fill", healthbar_left_padding + hp_width, healthbar_up_padding, healthbar_width * (lag - hp), healthbar_height, 0)
+		G.rectangle("fill", healthbar_left_padding + (hp_width > 0 and hp_width or 0), healthbar_up_padding, healthbar_width * (lag - hp), healthbar_height, 0)
 	end
 
 	-- 血条覆盖层

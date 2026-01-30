@@ -7422,20 +7422,47 @@ function scripts.controller_stage_16_overseer.update(this, store)
 		end
 
 		if this.glare_cooldown[this.phase] ~= nil and store.tick_ts - glare_last_ts >= this.glare_cooldown[this.phase] then
-			local direction = math.random(2, 5)
-			local affect_paths = direction <= 3 and {1, 2} or {3, 4}
-			glare_last_ts = store.tick_ts
-			U.y_animation_play(this, "marktower" .. direction, false, store.tick_ts, 1, 1)
+			local can_affect_paths = {}
+			local direction
 			for _, enemy in pairs(store.enemies) do
-				if table.contains(affect_paths, enemy.nav_path.pi) and enemy.template_name ~= "enemy_overseer_hit_point" then
-					local glare_mod = E:create_entity("mod_glare")
-					glare_mod.modifier.source_id = this.id
-					glare_mod.modifier.target_id = enemy.id
-					glare_mod.modifier.duration = this.glare_duration[this.phase]
-					queue_insert(store, glare_mod)
+				if enemy.template_name ~= "enemy_overseer_hit_point" then
+					can_affect_paths[enemy.nav_path.pi] = true
 				end
 			end
-			last_idle_anim_ts = store.tick_ts
+
+			local can_affect_path_count = 0
+			for _, path in pairs(can_affect_paths) do
+				if can_affect_paths[path] then
+					can_affect_path_count = can_affect_path_count + 1
+				end
+			end
+
+			local index = math.random(1, can_affect_path_count)
+			for path, _ in pairs(can_affect_paths) do
+				index = index - 1
+				if index == 0 then
+					direction = path + 1
+				end
+			end
+
+			if not direction then
+				glare_last_ts = glare_last_ts + 1
+			else
+				glare_last_ts = store.tick_ts
+				local affect_paths = direction <= 3 and {1, 2} or {3, 4}
+
+				U.y_animation_play(this, "marktower" .. direction, false, store.tick_ts, 1, 1)
+				for _, enemy in pairs(store.enemies) do
+					if table.contains(affect_paths, enemy.nav_path.pi) and enemy.template_name ~= "enemy_overseer_hit_point" then
+						local glare_mod = E:create_entity("mod_glare")
+						glare_mod.modifier.source_id = this.id
+						glare_mod.modifier.target_id = enemy.id
+						glare_mod.modifier.duration = this.glare_duration[this.phase]
+						queue_insert(store, glare_mod)
+					end
+				end
+				last_idle_anim_ts = store.tick_ts
+			end
 		end
 
 		if this.heal_cooldown[this.phase] ~= nil and store.tick_ts - last_heal_ts >= this.heal_cooldown[this.phase] then
@@ -7797,6 +7824,7 @@ function scripts.controller_stage_16_overseer_tentacle_mouth.update(this, store)
 	end
 end
 
+-- 受击点
 scripts.enemy_overseer_hit_point = {}
 
 function scripts.enemy_overseer_hit_point.update(this, store)

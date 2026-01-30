@@ -37706,8 +37706,7 @@ function scripts.enemy_evolving_scourge.update(this, store, script)
 					this.current_phase = this.next_phase
 
 					local speed_factor_enemy = GS.difficulty_enemy_speed_factor[store.level_difficulty]
-
-					this.motion.max_speed = this.speed_config[this.current_phase] * speed_factor_enemy
+					U.update_max_speed(this, this.speed_config[this.current_phase] * speed_factor_enemy)
 					this.render.sprites[1].prefix = "evolving_scourge_fase" .. this.current_phase
 					this.ui.click_rect = this.click_rect_config[this.current_phase]
 					this.unit.hit_offset = v(-2, 10 + this.unit_y_offset_config[this.current_phase])

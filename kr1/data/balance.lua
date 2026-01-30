@@ -7027,19 +7027,19 @@ local specials = {
 		}
 	},
 	stage16_overseer = {
-		hp = 30000,
+		hp = 36000,
 		first_time_cooldown = 5,
 		destroy_tower_cooldown = 10,
 		disable_tower_recover_price = 100,
 		phase_per_hp_threshold = {100, 90, 80, 70, 50, 20},
 		phase_per_time = {30, 75, 50, 120, 150},
 		change_tower_cooldown = {nil, 60, 60, 45, 30},
-		glare_cooldown = {nil, nil, nil, 36, 32, 28},
-		glare_duration = {nil, nil, nil, 4, 6, 8},
+		glare_cooldown = {nil, nil, nil, 36, 33, 30},
+		glare_duration = {nil, nil, nil, 4, 5, 6},
 		heal_cooldown = {nil, nil, nil, 30, 30, 15},
 		heal_duration = {nil, nil, nil, 6, 8, 10},
-		heal_per_second = {nil, nil, nil, 125, 250, 25},
-		change_tower_amount = {nil, 1, 2, 3, 4},
+		heal_per_second = {nil, nil, nil, 150, 300, 50},
+		change_tower_amount = {nil, 1, 1, 2, 3},
 		disable_tower_cooldown = {}, -- deprecated
 		destroy_holder = {
 			cooldown = {nil, nil, nil, nil, nil, 21}

@@ -23,6 +23,11 @@ local overseer=table.filter(store.entities,function(k,v)
 return v.template_name=="controller_stage_16_overseer"
 end)[1]
 store.game_gui:set_boss(overseer)
+U.insert_insert_hook(store,overseer.id,function(this,store)
+if this.enemy and this.enemy.gold then
+this.enemy.gold=this.enemy.gold*1.5
+end
+end)
 while not store.waves_finished or LU.has_alive_enemies(store) do
 if overseer.health.dead then
 break
