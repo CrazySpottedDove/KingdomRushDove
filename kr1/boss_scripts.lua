@@ -7218,6 +7218,13 @@ function scripts.controller_stage_16_overseer.update(this, store)
 		end
 	end
 
+	local function check_greatly_hurt()
+		if this._greatly_hurt then
+			this._greatly_hurt = false
+			spawn_blood()
+		end
+	end
+
 	U.animation_start(this, "startidle1", false, store.tick_ts, false, 1)
 
 	for i = 1, #this.hit_point_pos do
@@ -7542,6 +7549,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 		check_last_phase_repeat()
 		check_change_damaged_state()
 		check_change_idle_anim()
+		check_greatly_hurt()
 
 		if this.health.hp < 0 then
 			this.health.dead = true
@@ -7760,7 +7768,7 @@ function scripts.enemy_overseer_hit_point.update(this, store)
 	this.nav_path.pi = path_pi
 	this.nav_path.spi = path_spi
 	this.nav_path.ni = path_ni
-    P:set_end_node(path_pi, 1e6)
+	P:set_end_node(path_pi, 1e6)
 	local npos = P:node_pos(path_pi, path_spi, path_ni)
 
 	this.pos = npos
@@ -7834,6 +7842,11 @@ function scripts.enemy_overseer_hit_point.on_damage(this, store, damage)
 	d.source_id = damage.source_id
 	d.target_id = this.boss.id
 	queue_damage(store, d)
+
+	if damage.value >= 600 then
+		this.boss._greatly_hurt = true
+	end
+
 	return true
 end
 
