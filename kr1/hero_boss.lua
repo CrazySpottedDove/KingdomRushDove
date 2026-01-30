@@ -2250,11 +2250,11 @@ end
 tt = RT("mod_eb_10yr_stun", "mod_10yr_stun")
 tt.modifier.vis_bans = F_FLYING
 tt = RT("eb_gerald_strong", "eb_gerald")
-tt.health.hp_max = 1700
+tt.health.hp_max = 1600
 tt.enemy.gold = 100
 tt.enemy.lives_cost = 3
 tt = RT("eb_alleria_strong", "eb_alleria")
-tt.health.hp_max = 1700
+tt.health.hp_max = 1600
 tt.enemy.gold = 100
 tt.enemy.lives_cost = 3
 a = tt.melee.attacks[1]
@@ -2290,7 +2290,7 @@ tt.bullet.damage_max = 640
 tt.bullet.damage_min = 640
 tt.bullet.damage_inc = 0
 tt = RT("eb_10yr_strong", "eb_10yr")
-tt.health.hp_max = 1700
+tt.health.hp_max = 1600
 tt.enemy.gold = 150
 tt.enemy.lives_cost = 5
 

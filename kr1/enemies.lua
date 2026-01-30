@@ -8023,14 +8023,14 @@ tt.gravity_inc = 0.3 / (fts(1) * fts(1))
 --#region enemy_witch_strong
 tt = RT("enemy_witch_strong", "enemy_witch")
 tt.enemy.gold = 88
-tt.health.hp_max = 1250
+tt.health.hp_max = 1200
 tt.info.i18n_key = "ENEMY_WITCH_STRONG"
 tt.vis.bans = bor(F_BLOCK, F_THORN, F_POISON)
 tt.render.sprites[1].scale = vec_1(1.2)
 --#endregion
 --#region enemy_spectral_knight_strong
 tt = RT("enemy_spectral_knight_strong", "enemy_spectral_knight")
-tt.health.hp_max = 1233
+tt.health.hp_max = 1200
 tt.info.i18n_key = "ENEMY_SPECTRAL_KNIGHT_STRONG"
 tt.render.sprites[1].scale = vec_1(1.2)
 tt.enemy.gold = tt.enemy.gold * 1.2
@@ -8040,7 +8040,7 @@ tt.enemy.melee_slot.x = tt.enemy.melee_slot.x * 1.2
 --#region enemy_fallen_knight_strong
 tt = RT("enemy_fallen_knight_strong", "enemy_fallen_knight")
 tt.death_spawns.name = "enemy_spectral_knight_strong_spawn"
-tt.health.hp_max = 2833
+tt.health.hp_max = 2800
 tt.info.i18n_key = "ENEMY_FALLEN_KNIGHT_STRONG"
 tt.render.sprites[1].scale = vec_1(1.2)
 tt.enemy.gold = tt.enemy.gold * 1.2
@@ -8057,7 +8057,7 @@ tt.enemy.melee_slot.x = tt.enemy.melee_slot.x * 1.2
 tt = RT("enemy_abomination_strong", "enemy_abomination")
 tt.info.i18n_key = "ENEMY_ABOMINATION_STRONG"
 tt.motion.max_speed = 1.28 * 0.5 * FPS
-tt.health.hp_max = 8000
+tt.health.hp_max = 7800
 tt.render.sprites[1].scale = vec_1(1.2)
 tt.enemy.gold = tt.enemy.gold * 1.2
 tt.health_bar.offset.y = tt.health_bar.offset.y * 1.2
