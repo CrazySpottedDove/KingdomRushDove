@@ -7128,6 +7128,8 @@ function scripts.controller_stage_16_overseer.update(this, store)
 	local change_tower_ts = store.tick_ts
 	local disable_tower_ts = store.tick_ts
 	local destroy_holder_last_ts = store.tick_ts
+	local glare_last_ts = store.tick_ts
+	local last_heal_ts = store.tick_ts
 	local next_holder_to_destroy_i = 1
 	local next_idle_anim_cooldown = math.random(this.idle_cooldown_min, this.idle_cooldown_max)
 	local last_idle_anim_ts = store.tick_ts
@@ -7336,147 +7338,6 @@ function scripts.controller_stage_16_overseer.update(this, store)
 			break
 		end
 
-		if this.change_tower_cooldown[this.phase] and change_tower_cooldown and change_tower_cooldown <= store.tick_ts - change_tower_ts then
-			local towers = table.filter(store.towers, function(k, v)
-				return not v.pending_removal and v.tower and not v.tower.blocked and v.tower.can_be_sold and v.tower.can_be_mod
-			end)
-			local holders = table.filter(store.towers, function(k, v)
-				return v.tower and v.tower.type == "holder"
-			end)
-
-			if towers and #towers > 0 then
-				towers = table.random_order(towers)
-
-				if holders and #holders > 0 then
-					holders = table.random_order(holders)
-				end
-
-				S:queue(this.sound_teleport_charge)
-
-				local start_ts = store.tick_ts
-
-				U.animation_start(this, "swaptowers1", false, store.tick_ts, nil, 1)
-
-				local tower_index = 1
-
-				towers = table.filter(store.towers, function(k, v)
-					return not v.pending_removal and v.tower and not v.tower.blocked and v.tower.can_be_sold and v.tower.can_be_mod
-				end)
-				holders = table.filter(store.towers, function(k, v)
-					return v.tower and v.tower.type == "holder"
-				end)
-
-				for i = 1, this.change_tower_amount[this.phase] do
-					if tower_index <= #towers and holders and tower_index <= #holders then
-						local change_tower_fx = E:create_entity(this.change_towers_template)
-
-						change_tower_fx.pos = towers[tower_index].pos
-						change_tower_fx.render.sprites[1].ts = store.tick_ts
-						change_tower_fx.tween.ts = store.tick_ts
-
-						queue_insert(store, change_tower_fx)
-
-						local change_tower_fx = E:create_entity(this.change_towers_template)
-
-						change_tower_fx.pos = holders[tower_index].pos
-						change_tower_fx.render.sprites[1].ts = store.tick_ts
-						change_tower_fx.tween.ts = store.tick_ts
-
-						queue_insert(store, change_tower_fx)
-						signal.emit("force-tower-swap", towers[tower_index], holders[tower_index])
-
-						U.y_wait(store, this.swap_delay + 1)
-
-						local controller = E:create_entity("controller_tower_swap_overseer")
-
-						controller.tower_1 = towers[tower_index]
-						controller.tower_2 = holders[tower_index]
-
-						queue_insert(store, controller)
-					elseif (not holders or tower_index > #holders) and #towers >= tower_index + 1 then
-						local change_tower_fx = E:create_entity(this.change_towers_template)
-
-						change_tower_fx.pos = towers[tower_index].pos
-						change_tower_fx.render.sprites[1].ts = store.tick_ts
-						change_tower_fx.tween.ts = store.tick_ts
-
-						queue_insert(store, change_tower_fx)
-
-						local change_tower_fx = E:create_entity(this.change_towers_template)
-
-						change_tower_fx.pos = towers[tower_index + 1].pos
-						change_tower_fx.render.sprites[1].ts = store.tick_ts
-						change_tower_fx.tween.ts = store.tick_ts
-
-						queue_insert(store, change_tower_fx)
-						signal.emit("force-tower-swap", towers[tower_index], towers[tower_index + 1])
-
-						U.y_wait(store, this.swap_delay + 1)
-
-						local controller = E:create_entity("controller_tower_swap_overseer")
-
-						controller.tower_1 = towers[tower_index]
-						controller.tower_2 = towers[tower_index + 1]
-
-						queue_insert(store, controller)
-
-						tower_index = tower_index + 1
-					end
-
-					tower_index = tower_index + 1
-				end
-
-				U.y_animation_wait(this)
-
-				last_idle_anim_ts = store.tick_ts
-				change_tower_ts = start_ts
-				change_tower_cooldown = this.change_tower_cooldown[this.phase]
-			else
-				change_tower_ts = store.tick_ts - change_tower_cooldown + fts(1) - 1e-06
-			end
-		end
-
-		if this.disable_tower_cooldown[this.phase] and disable_tower_cooldown and disable_tower_cooldown <= store.tick_ts - disable_tower_ts then
-			local close_towers = table.filter(store.towers, function(k, v)
-				return not v.pending_removal and v.tower and not v.tower.blocked and v.tower.can_be_sold and v.tower.can_be_mod and table.contains(this.holders_close, v.tower.holder_id) and v.tower.type ~= "tower_timed_destroy"
-			end)
-
-			if #close_towers > 0 then
-				table.random_order(close_towers)
-				S:queue(this.sound_destroy_charge)
-
-				if close_towers[1].tower.holder_id == this.holders_close[1] then
-					U.animation_start(this, "marktower2", false, store.tick_ts, nil, 1)
-				elseif close_towers[1].tower.holder_id == this.holders_close[2] then
-					U.animation_start(this, "marktower3", false, store.tick_ts, nil, 1)
-				elseif close_towers[1].tower.holder_id == this.holders_close[3] then
-					U.animation_start(this, "marktower4", false, store.tick_ts, nil, 1)
-				elseif close_towers[1].tower.holder_id == this.holders_close[4] then
-					U.animation_start(this, "marktower5", false, store.tick_ts, nil, 1)
-				elseif close_towers[1].tower.holder_id == this.holders_close[5] then
-					U.animation_start(this, "marktower5", false, store.tick_ts, nil, 1)
-				end
-
-				U.y_wait(store, this.disable_delay)
-
-				local mod = E:create_entity(this.disable_tower_mod)
-
-				mod.modifier.target_id = close_towers[1].id
-				mod.disable_tower_recover_price = this.disable_tower_recover_price
-				mod.modifier.source_id = this.id
-				mod.destroy_tower_cooldown = this.destroy_tower_cooldown
-
-				queue_insert(store, mod)
-				U.y_animation_wait(this)
-
-				last_idle_anim_ts = store.tick_ts
-				disable_tower_ts = store.tick_ts
-				disable_tower_cooldown = this.disable_tower_cooldown[this.phase]
-			else
-				disable_tower_ts = store.tick_ts - disable_tower_cooldown + fts(1) - 1e-06
-			end
-		end
-
 		if this.destroy_holder_cooldown[this.phase] ~= nil and store.tick_ts - destroy_holder_last_ts >= this.destroy_holder_cooldown[this.phase] and next_holder_to_destroy_i <= #this.holders_to_destroy then
 			local holder_by_id = table.filter(store.towers, function(k, v)
 				return v.tower and v.tower.holder_id == this.holders_to_destroy[next_holder_to_destroy_i]
@@ -7557,6 +7418,157 @@ function scripts.controller_stage_16_overseer.update(this, store)
 				U.y_animation_wait(this)
 
 				last_idle_anim_ts = store.tick_ts
+			end
+		end
+
+		if this.glare_cooldown[this.phase] ~= nil and store.tick_ts - glare_last_ts >= this.glare_cooldown[this.phase] then
+			local direction = math.random(2, 5)
+			local affect_paths = direction <= 3 and {1, 2} or {3, 4}
+			glare_last_ts = store.tick_ts
+			U.y_animation_play(this, "marktower" .. direction, false, store.tick_ts, 1, 1)
+			for _, enemy in pairs(store.enemies) do
+				if table.contains(affect_paths, enemy.nav_path.pi) and enemy.template_name ~= "enemy_overseer_hit_point" then
+					local glare_mod = E:create_entity("mod_glare")
+					glare_mod.modifier.source_id = this.id
+					glare_mod.modifier.target_id = enemy.id
+					glare_mod.modifier.duration = this.glare_duration[this.phase]
+					queue_insert(store, glare_mod)
+				end
+			end
+			last_idle_anim_ts = store.tick_ts
+		end
+
+		if this.heal_cooldown[this.phase] ~= nil and store.tick_ts - last_heal_ts >= this.heal_cooldown[this.phase] then
+			last_heal_ts = store.tick_ts
+			local heal_duration = this.heal_duration[this.phase]
+			local heal_per_second = this.heal_per_second[this.phase]
+
+			U.y_animation_play(this, "swaptowers1", false, store.tick_ts, nil, 1)
+
+			for _, e in pairs(store.enemies) do
+				if e.template_name == "enemy_overseer_hit_point" then
+					local glare_mod = E:create_entity("mod_glare")
+					glare_mod.modifier.source_id = this.id
+					glare_mod.modifier.target_id = e.id
+					glare_mod.modifier.duration = heal_duration
+					queue_insert(store, glare_mod)
+				end
+			end
+
+			local heal_mod = E:create_entity("mod_heal_overseer")
+			heal_mod.modifier.source_id = this.id
+			heal_mod.modifier.target_id = this.id
+			heal_mod.modifier.duration = heal_duration
+			heal_mod.hps.heal_min = heal_per_second
+			heal_mod.hps.heal_max = heal_per_second
+			queue_insert(store, heal_mod)
+
+			last_idle_anim_ts = store.tick_ts
+		end
+
+		if this.change_tower_cooldown[this.phase] and change_tower_cooldown and change_tower_cooldown <= store.tick_ts - change_tower_ts then
+			local towers = table.filter(store.towers, function(k, v)
+				return not v.pending_removal and v.tower and not v.tower.blocked and v.tower.can_be_sold and v.tower.can_be_mod
+			end)
+			local holders = table.filter(store.towers, function(k, v)
+				return v.tower and v.tower.type == "holder"
+			end)
+
+			if towers and #towers > 0 then
+				towers = table.random_order(towers)
+
+				if holders and #holders > 0 then
+					holders = table.random_order(holders)
+				end
+
+				S:queue(this.sound_teleport_charge)
+
+				local start_ts = store.tick_ts
+
+				U.animation_start(this, "swaptowers1", false, store.tick_ts, nil, 1)
+
+				local tower_index = 1
+
+				towers = table.filter(store.towers, function(k, v)
+					return not v.pending_removal and v.tower and not v.tower.blocked and v.tower.can_be_sold and v.tower.can_be_mod
+				end)
+				holders = table.filter(store.towers, function(k, v)
+					return v.tower and v.tower.type == "holder"
+				end)
+
+				for i = 1, this.change_tower_amount[this.phase] do
+					if tower_index <= #towers and holders and tower_index <= #holders then
+						local change_tower_fx = E:create_entity(this.change_towers_template)
+
+						change_tower_fx.pos = towers[tower_index].pos
+						change_tower_fx.render.sprites[1].ts = store.tick_ts
+						change_tower_fx.tween.ts = store.tick_ts
+
+						queue_insert(store, change_tower_fx)
+
+						local change_tower_fx = E:create_entity(this.change_towers_template)
+
+						change_tower_fx.pos = holders[tower_index].pos
+						change_tower_fx.render.sprites[1].ts = store.tick_ts
+						change_tower_fx.tween.ts = store.tick_ts
+
+						queue_insert(store, change_tower_fx)
+						signal.emit("force-tower-swap", towers[tower_index], holders[tower_index])
+					elseif (not holders or tower_index > #holders) and #towers >= tower_index + 1 then
+						local change_tower_fx = E:create_entity(this.change_towers_template)
+
+						change_tower_fx.pos = towers[tower_index].pos
+						change_tower_fx.render.sprites[1].ts = store.tick_ts
+						change_tower_fx.tween.ts = store.tick_ts
+
+						queue_insert(store, change_tower_fx)
+
+						local change_tower_fx = E:create_entity(this.change_towers_template)
+
+						change_tower_fx.pos = towers[tower_index + 1].pos
+						change_tower_fx.render.sprites[1].ts = store.tick_ts
+						change_tower_fx.tween.ts = store.tick_ts
+
+						queue_insert(store, change_tower_fx)
+						signal.emit("force-tower-swap", towers[tower_index], towers[tower_index + 1])
+						tower_index = tower_index + 1
+					end
+
+					tower_index = tower_index + 1
+				end
+
+				U.y_wait(store, this.swap_delay + 1)
+				tower_index = 1
+
+				for i = 1, this.change_tower_amount[this.phase] do
+					if tower_index <= #towers and holders and tower_index <= #holders then
+						local controller = E:create_entity("controller_tower_swap_overseer")
+
+						controller.tower_1 = towers[tower_index]
+						controller.tower_2 = holders[tower_index]
+
+						queue_insert(store, controller)
+					elseif (not holders or tower_index > #holders) and #towers >= tower_index + 1 then
+						local controller = E:create_entity("controller_tower_swap_overseer")
+
+						controller.tower_1 = towers[tower_index]
+						controller.tower_2 = towers[tower_index + 1]
+
+						queue_insert(store, controller)
+
+						tower_index = tower_index + 1
+					end
+
+					tower_index = tower_index + 1
+				end
+
+				U.y_animation_wait(this)
+
+				last_idle_anim_ts = store.tick_ts
+				change_tower_ts = start_ts
+				change_tower_cooldown = this.change_tower_cooldown[this.phase]
+			else
+				change_tower_ts = store.tick_ts - change_tower_cooldown + fts(1) - 1e-06
 			end
 		end
 
@@ -7714,7 +7726,7 @@ function scripts.controller_stage_16_overseer_tentacle.update(this, store)
 					shoot_count = 2
 				end
 
-				local speed_factor = shoot_count
+				local speed_factor = 0.5 * (shoot_count + 1)
 
 				if speed_factor ~= 1 then
 					SU.change_fps(store.tick_ts, this, speed_factor)

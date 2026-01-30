@@ -531,7 +531,7 @@ function LU.kill_all_enemies(store, discard_gold, keep_spawners)
 		local all = E:filter(list, "enemy")
 
 		for _, e in pairs(all) do
-			if e and e.vis and bit.band(e.vis.flags, F_BOSS) == 0 then
+			if e and e.vis and (bit.band(e.vis.flags, F_BOSS) == 0 or e.enemy.lives_cost < 20) then
 				if e.health.immune_to ~= DAMAGE_ALL then
 					e.health.hp = 0
 

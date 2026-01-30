@@ -12787,6 +12787,11 @@ tt.phase_per_time = b.phase_per_time
 tt.change_tower_cooldown = b.change_tower_cooldown
 tt.change_tower_amount = b.change_tower_amount
 tt.disable_tower_cooldown = b.disable_tower_cooldown
+tt.glare_cooldown = b.glare_cooldown
+tt.glare_duration = b.glare_duration
+tt.heal_cooldown = b.heal_cooldown
+tt.heal_duration = b.heal_duration
+tt.heal_per_second = b.heal_per_second
 tt.holders_close = {"6", "7", "8", "9", "10"}
 tt.swap_delay = fts(60)
 tt.disable_delay = fts(70)
@@ -12893,7 +12898,14 @@ tt.sound_destroy_explosion = "Stage16OverseerDestroyExplosion"
 tt.sound_hurt = "Stage16OverseerHurt"
 tt.sound_death = "Stage16OverseerDeath"
 
+tt = E:register_t("mod_heal_overseer", "modifier")
+E:add_comps(tt, "hps")
+tt.main_script.insert = scripts.mod_hps.insert
+tt.main_script.update = scripts.mod_hps.update
+tt.hps.heal_every = 1
+
 tt = E:register_t("enemy_overseer_hit_point", "enemy_KR5")
+E:add_comps(tt, "glare_kr5")
 tt.enemy.gold = 0
 tt.enemy.melee_slot = v(0, 0)
 tt.enemy.lives_cost = 1
@@ -12906,6 +12918,7 @@ tt.main_script.update = scripts.enemy_overseer_hit_point.update
 tt.health.on_damage = scripts.enemy_overseer_hit_point.on_damage
 tt.motion.max_speed = 0
 tt.render = nil
+tt.glare_kr5.regen_hp = 15
 tt.ui.click_rect = r(-30, -3, 60, 65)
 tt.ui.can_click = false
 tt.ui.can_select = false
