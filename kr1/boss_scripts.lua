@@ -7103,8 +7103,23 @@ function scripts.boss_cult_leader.update(this, store)
 	end
 end
 
--- 大眼
+-- 大眼本体
 scripts.controller_stage_16_overseer = {}
+
+function scripts.controller_stage_16_overseer.get_info(this)
+	return {
+		damage_max = 0,
+		damage_min = 0,
+		lives = 0,
+		magic_armor = 0,
+		armor = 0,
+		type = STATS_TYPE_ENEMY,
+		hp = this.health.hp,
+		hp_max = this.health.hp_max,
+		damage_icon = this.info.damage_icon,
+		immune = this.health.immune_to == DAMAGE_ALL_TYPES
+	}
+end
 
 function scripts.controller_stage_16_overseer.update(this, store)
 	this.phase = 1
@@ -7230,7 +7245,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 	for i = 1, #this.hit_point_pos do
 		local h = E:create_entity(this.hit_point_template)
 
-		h.pos = this.hit_point_pos[i]
+		h.pos = V.vclone(this.hit_point_pos[i])
 		h.boss = this
 
 		queue_insert(store, h)
@@ -7575,21 +7590,7 @@ function scripts.decal_stage_16_overseer_blood.update(this, store)
 	queue_remove(store, this)
 end
 
-function scripts.controller_stage_16_overseer.get_info(this)
-	return {
-		damage_max = 0,
-		damage_min = 0,
-		lives = 0,
-		magic_armor = 0,
-		armor = 0,
-		type = STATS_TYPE_ENEMY,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_icon = this.info.damage_icon,
-		immune = this.health.immune_to == DAMAGE_ALL_TYPES
-	}
-end
-
+-- 大眼的嘴巴出怪口
 scripts.controller_stage_16_overseer_mouth_door = {}
 
 function scripts.controller_stage_16_overseer_mouth_door.update(this, store)
@@ -7641,6 +7642,7 @@ function scripts.controller_stage_16_overseer_mouth_door.update(this, store)
 	end
 end
 
+-- 大眼的触手控制
 scripts.controller_stage_16_overseer_tentacle = {}
 
 function scripts.controller_stage_16_overseer_tentacle.update(this, store)
@@ -7657,6 +7659,11 @@ function scripts.controller_stage_16_overseer_tentacle.update(this, store)
 	this.tentacle_mouth.pos = this.pos
 
 	queue_insert(store, this.tentacle_mouth)
+
+	local hit_point = E:create_entity("enemy_overseer_hit_point")
+	hit_point.pos = V.v(this.pos.x + this.spawn_offset.x + (this.spawn_offset.x < 0 and 35 or -35), this.pos.y + this.spawn_offset.y)
+	hit_point.boss = overseer
+	queue_insert(store, hit_point)
 
 	while true do
 		if overseer.health.dead then
@@ -7759,7 +7766,7 @@ scripts.enemy_overseer_hit_point = {}
 function scripts.enemy_overseer_hit_point.update(this, store)
 	local going_right = math.random(0, 1) == 0
 	local going_up = math.random(0, 1) == 0
-	local nearest = P:nearest_nodes(this.pos.x, this.pos.y, nil, {1})
+	local nearest = P:nearest_nodes(this.pos.x, this.pos.y)
 	local path_pi, path_spi, path_ni
 	if #nearest > 0 then
 		path_pi, path_spi, path_ni = unpack(nearest[1])
@@ -7768,10 +7775,6 @@ function scripts.enemy_overseer_hit_point.update(this, store)
 	this.nav_path.pi = path_pi
 	this.nav_path.spi = path_spi
 	this.nav_path.ni = path_ni
-	P:set_end_node(path_pi, 1e6)
-	local npos = P:node_pos(path_pi, path_spi, path_ni)
-
-	this.pos = npos
 
 	local min_x = this.pos.x - this.move_bounds.x / 2
 	local max_x = min_x + this.move_bounds.x

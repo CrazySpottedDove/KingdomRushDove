@@ -34,7 +34,7 @@ U.y_wait(store,15)
 signal.emit("fade-out",1,{255,255,255,255})
 U.y_wait(store,1)
 signal.emit("hide-curtains")
-U.y_wait(store,3)
+U.y_wait(store,3-2)
 signal.emit("fade-out",0.5,{0,0,0,255})
 U.y_wait(store,0.5)
 store.waves_finished=true
