@@ -26,6 +26,9 @@ store.game_gui:set_boss(overseer)
 U.insert_insert_hook(store,overseer.id,function(this,store)
 if this.enemy and this.enemy.gold then
 this.enemy.gold=this.enemy.gold*1.5
+if this.enemy.gold == 0 then
+this.enemy.gold=1
+end 
 end
 end)
 while not store.waves_finished or LU.has_alive_enemies(store) do
