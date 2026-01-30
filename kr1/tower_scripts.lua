@@ -5525,20 +5525,15 @@ function scripts.tower_tricannon.update(this, store)
 	local ab = this.attacks.list[1]
 	local am = this.attacks.list[2]
 	local ao = this.attacks.list[3]
-	local pow_m = this.powers and this.powers.bombardment
-	local pow_o = this.powers and this.powers.overheat
+	local pow_m = this.powers.bombardment
+	local pow_o = this.powers.overheat
 	local last_ts = store.tick_ts - ab.cooldown
-	local aa, pow
-	local attacks = {ao, am, ab}
-
-	for _, a in pairs(attacks) do
-		a.ts = store.tick_ts
-	end
-
+	ab.ts = store.tick_ts
+	am.ts = store.tick_ts
+	ao.ts = store.tick_ts
+	local tpos = tpos(this)
 	this.decal_mod = nil
 
-	local pows = {pow_o, pow_m}
-	local overheateble_attacks = {am, ab}
 	local tw = this.tower
 
 	local function shoot_bullet(attack, enemy, dest, bullet_idx)
@@ -5593,162 +5588,166 @@ function scripts.tower_tricannon.update(this, store)
 				this.decal_mod = nil
 			end
 
-			for i, aa in pairs(attacks) do
-				pow = pows[i]
+			if ready_to_use_power(pow_o, ao, store, tw.cooldown_factor) and (store.tick_ts - last_ts > a.min_cooldown * tw.cooldown_factor) then
+				if U.find_first_enemy_in_range_filter_off(tpos, a.range, ao.vis_flags, ao.vis_bans) then
+					ao.active = true
+					S:queue(ao.sound)
+					U.y_animation_play_group(this, ao.animation_charge, nil, store.tick_ts, false, "layers")
 
-				if aa and (not pow or pow.level > 0) and ready_to_attack(aa, store, this.tower.cooldown_factor) and (store.tick_ts - last_ts > a.min_cooldown * this.tower.cooldown_factor) then
-					local trigger, enemies, trigger_pos = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
+					local mod = E:create_entity("decalmod_tricannon_overheat")
 
-					if not trigger then
-						aa.ts = aa.ts + fts(5)
-					else
-						local trigger_path = trigger.nav_path.pi
+					mod.modifier.target_id = this.id
+					mod.modifier.source_id = this.id
+					mod.pos = this.pos
 
-						if aa == ab then
-							aa.ts = store.tick_ts
-							last_ts = aa.ts
+					queue_insert(store, mod)
 
-							local trigger_target_positions = {}
+					this.decal_mod = mod
+					ao.ts = store.tick_ts
+				else
+					ao.ts = ao.ts + fts(5)
+				end
+			end
 
-							for j = 1, aa.bomb_amount do
-								local enemy_index = km.zmod(j + 1, #enemies)
-								local enemy = enemies[enemy_index]
-								local ni = enemy.nav_path.ni + P:predict_enemy_node_advance(enemy, aa.node_prediction)
-								local dest = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, ni)
+			if ready_to_use_power(pow_m, am, store, tw.cooldown_factor) and (store.tick_ts - last_ts > a.min_cooldown * tw.cooldown_factor) then
+				local trigger = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range, am.vis_flags, am.vis_bans)
 
-								table.insert(trigger_target_positions, dest)
-							end
+				if not trigger then
+					am.ts = am.ts + fts(5)
+				else
+					local trigger_pos = U.calculate_enemy_ffe_pos(trigger, am.node_prediction)
+					am.ts = store.tick_ts
+					last_ts = am.ts
 
-							local shoot_animation = aa.animation
+					U.animation_start_group(this, am.animation_start, nil, store.tick_ts, false, "layers")
+					y_wait(store, am.shoot_time)
 
-							U.animation_start_group(this, shoot_animation, nil, store.tick_ts, false, "layers")
-							y_wait(store, aa.shoot_time)
-							S:queue(aa.sound)
+					local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range, am.vis_flags, am.vis_bans)
+					local dest = enemy and U.calculate_enemy_ffe_pos(enemy, am.node_prediction) or trigger_pos
+					local dest_path = enemy and enemy.nav_path.pi or trigger.nav_path.pi
+					local nearest_nodes = P:nearest_nodes(dest.x, dest.y, {dest_path})
+					local pi, spi, ni = unpack(nearest_nodes[1])
+					local spread = am.spread[pow_m.level]
+					local node_skip = am.node_skip[pow_m.level]
+					local nindices = {}
 
-							local _, enemies, pred_pos = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
-							local target_positions = {}
-
-							if enemies and #enemies > 0 then
-								for j = 1, aa.bomb_amount do
-									local enemy_index = km.zmod(j + 1, #enemies)
-									local enemy = enemies[enemy_index]
-									local ni = enemy.nav_path.ni + P:predict_enemy_node_advance(enemy, aa.node_prediction)
-									local dest = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, ni)
-
-									table.insert(target_positions, {
-										enemy = enemy,
-										dest = dest
-									})
-								end
-							else
-								for j = 1, aa.bomb_amount do
-									local trigger_target_positions_index = km.zmod(j + 1, #trigger_target_positions)
-									local trigger_target_position = trigger_target_positions[trigger_target_positions_index]
-
-									table.insert(target_positions, {
-										dest = trigger_target_position
-									})
-								end
-							end
-
-							local enemies_hitted = {}
-
-							for bullet_idx, target_position_data in ipairs(target_positions) do
-								local enemy = target_position_data.enemy
-								local pred = target_position_data.dest
-
-								if enemy then
-									local dest = P:predict_enemy_pos(enemy, aa.node_prediction)
-
-									pred = dest
-
-									table.insert(enemies_hitted, enemy.id)
-								end
-
-								local enemy_hit_count = table.count(enemies_hitted, function(k, v)
-									if v == enemy.id then
-										return true
-									end
-
-									return false
-								end)
-
-								if not enemy or enemy and enemy_hit_count > 1 then
-									pred.x = pred.x + U.frandom(0, ab.random_x_to_dest) * U.random_sign()
-									pred.y = pred.y + U.frandom(0, ab.random_y_to_dest) * U.random_sign()
-
-									local nearest_nodes = P:nearest_nodes(pred.x, pred.y)
-									local pi, spi, ni = unpack(nearest_nodes[1])
-
-									pred = P:node_pos(pi, spi, ni)
-								end
-
-								shoot_bullet(aa, nil, pred, bullet_idx)
-								y_wait(store, aa.time_between_bombs * tw.cooldown_factor)
-							end
-
-							U.y_animation_wait_group(this, "layers")
-
-							aa.ts = last_ts
-						elseif aa == am then
-							aa.ts = store.tick_ts
-							last_ts = aa.ts
-
-							U.animation_start_group(this, aa.animation_start, nil, store.tick_ts, false, "layers")
-							y_wait(store, aa.shoot_time)
-
-							local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range, aa.vis_flags, aa.vis_bans)
-							local dest = enemy and U.calculate_enemy_ffe_pos(enemy, aa.node_prediction) or trigger_pos
-							local dest_path = enemy and enemy.nav_path.pi or trigger_path
-							local nearest_nodes = P:nearest_nodes(dest.x, dest.y, {dest_path})
-							local pi, spi, ni = unpack(nearest_nodes[1])
-							local spread = aa.spread[pow.level]
-							local node_skip = aa.node_skip[pow.level]
-							local nindices = {}
-
-							for ni_candidate = ni - spread, ni + spread, node_skip do
-								if P:is_node_valid(pi, ni_candidate) then
-									table.insert(nindices, ni_candidate)
-								end
-							end
-
-							table.append(nindices, table.map(nindices, function(index, value)
-								return value + 1
-							end))
-							S:queue(aa.sounds[pow.level])
-							U.animation_start_group(this, aa.animation_loop, nil, store.tick_ts, true, "layers")
-
-							for _, ni_candidate in ipairs(table.random_order(nindices)) do
-								local spi = random(1, 3)
-								local destination = P:node_pos(pi, spi, ni_candidate)
-								local b = shoot_bullet(aa, nil, destination, 1)
-								local min_time = aa.time_between_bombs_min
-								local max_time = aa.time_between_bombs_max
-
-								y_wait(store, fts(random(min_time, max_time)) * tw.cooldown_factor)
-							end
-
-							U.y_animation_wait_group(this, "layers")
-							U.animation_start_group(this, aa.animation_end, nil, store.tick_ts, false, "layers")
-							U.y_animation_wait_group(this, "layers")
-						elseif aa == ao then
-							aa.active = true
-
-							S:queue(aa.sound)
-							U.y_animation_play_group(this, aa.animation_charge, nil, store.tick_ts, false, "layers")
-
-							local mod = E:create_entity("decalmod_tricannon_overheat")
-
-							mod.modifier.target_id = this.id
-							mod.modifier.source_id = this.id
-							mod.pos = this.pos
-
-							queue_insert(store, mod)
-
-							this.decal_mod = mod
-							aa.ts = store.tick_ts
+					for ni_candidate = ni - spread, ni + spread, node_skip do
+						if P:is_node_valid(pi, ni_candidate) then
+							table.insert(nindices, ni_candidate)
 						end
 					end
+
+					table.append(nindices, table.map(nindices, function(index, value)
+						return value + 1
+					end))
+					S:queue(am.sounds[pow_m.level])
+					U.animation_start_group(this, am.animation_loop, nil, store.tick_ts, true, "layers")
+
+					for _, ni_candidate in ipairs(table.random_order(nindices)) do
+						local spi = random(1, 3)
+						local destination = P:node_pos(pi, spi, ni_candidate)
+						local b = shoot_bullet(am, nil, destination, 1)
+						local min_time = am.time_between_bombs_min
+						local max_time = am.time_between_bombs_max
+
+						y_wait(store, fts(random(min_time, max_time)) * tw.cooldown_factor)
+					end
+
+					U.y_animation_wait_group(this, "layers")
+					U.animation_start_group(this, am.animation_end, nil, store.tick_ts, false, "layers")
+					U.y_animation_wait_group(this, "layers")
+				end
+			end
+
+			if ready_to_attack(ab, store, tw.cooldown_factor) then
+				local trigger, enemies, trigger_pos = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, ab.node_prediction, ab.vis_flags, ab.vis_bans)
+
+				if not trigger then
+					ab.ts = ab.ts + fts(5)
+				else
+					ab.ts = store.tick_ts
+					last_ts = ab.ts
+
+					local trigger_target_positions = {}
+
+					for j = 1, ab.bomb_amount do
+						local enemy_index = km.zmod(j + 1, #enemies)
+						local enemy = enemies[enemy_index]
+						local ni = enemy.nav_path.ni + P:predict_enemy_node_advance(enemy, ab.node_prediction)
+						local dest = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, ni)
+
+						table.insert(trigger_target_positions, dest)
+					end
+
+					U.animation_start_group(this, ab.animation, nil, store.tick_ts, false, "layers")
+					y_wait(store, ab.shoot_time)
+					S:queue(ab.sound)
+
+					local _, enemies, pred_pos = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, ab.node_prediction, ab.vis_flags, ab.vis_bans)
+					local target_positions = {}
+
+					if enemies and #enemies > 0 then
+						for j = 1, ab.bomb_amount do
+							local enemy_index = km.zmod(j + 1, #enemies)
+							local enemy = enemies[enemy_index]
+							local ni = enemy.nav_path.ni + P:predict_enemy_node_advance(enemy, ab.node_prediction)
+							local dest = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, ni)
+
+							table.insert(target_positions, {
+								enemy = enemy,
+								dest = dest
+							})
+						end
+					else
+						for j = 1, ab.bomb_amount do
+							local trigger_target_positions_index = km.zmod(j + 1, #trigger_target_positions)
+							local trigger_target_position = trigger_target_positions[trigger_target_positions_index]
+
+							table.insert(target_positions, {
+								dest = trigger_target_position
+							})
+						end
+					end
+
+					local enemies_hitted = {}
+
+					for bullet_idx, target_position_data in ipairs(target_positions) do
+						local enemy = target_position_data.enemy
+						local pred = target_position_data.dest
+
+						if enemy then
+							local dest = P:predict_enemy_pos(enemy, ab.node_prediction)
+
+							pred = dest
+
+							table.insert(enemies_hitted, enemy.id)
+						end
+
+						local enemy_hit_count = table.count(enemies_hitted, function(k, v)
+							if v == enemy.id then
+								return true
+							end
+
+							return false
+						end)
+
+						if not enemy or enemy and enemy_hit_count > 1 then
+							pred.x = pred.x + U.frandom(0, ab.random_x_to_dest) * U.random_sign()
+							pred.y = pred.y + U.frandom(0, ab.random_y_to_dest) * U.random_sign()
+
+							local nearest_nodes = P:nearest_nodes(pred.x, pred.y)
+							local pi, spi, ni = unpack(nearest_nodes[1])
+
+							pred = P:node_pos(pi, spi, ni)
+						end
+
+						shoot_bullet(ab, nil, pred, bullet_idx)
+						y_wait(store, ab.time_between_bombs * tw.cooldown_factor)
+					end
+
+					U.y_animation_wait_group(this, "layers")
+
+					ab.ts = last_ts
 				end
 			end
 

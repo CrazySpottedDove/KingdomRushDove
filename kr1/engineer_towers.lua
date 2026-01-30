@@ -1208,9 +1208,7 @@ b = balance.towers.tricannon
 --#endregion
 --#region tower_tricannon_lvl4
 tt = RT("tower_tricannon_lvl4", "tower")
-
 AC(tt, "attacks", "powers")
-
 image_y = 120
 tt.tower.type = "tricannon"
 tt.tower.level = 1
@@ -1249,7 +1247,7 @@ tt.attacks.list[1].cooldown = b.basic_attack.cooldown
 tt.attacks.list[1].node_prediction = fts(25)
 tt.attacks.list[1].range = b.basic_attack.range[4]
 tt.attacks.list[1].shoot_time = fts(48)
-tt.attacks.list[1].vis_bans = bor(F_FLYING, F_NIGHTMARE, F_CLIFF)
+tt.attacks.list[1].vis_bans = bor(F_FLYING, F_CLIFF)
 tt.attacks.list[1].time_between_bombs = b.basic_attack.time_between_bombs
 tt.attacks.list[1].random_x_to_dest = 30
 tt.attacks.list[1].random_y_to_dest = 20
@@ -1257,8 +1255,8 @@ tt.attacks.list[1].sound = "TowerTricannonBasicAttackFire"
 tt.attacks.list[2] = table.deepclone(tt.attacks.list[1])
 tt.attacks.list[2].bullet = "tower_tricannon_bomb_bombardment_bomb"
 tt.attacks.list[2].bullet_start_offset = {vec_2(0, 71)}
-tt.attacks.list[2].cooldown = nil
-tt.attacks.list[2].bomb_amount = nil
+tt.attacks.list[2].cooldown = b.bombardment.cooldown[1]
+tt.attacks.list[2].bomb_amount = nil -- 无效字段，所以清空
 tt.attacks.list[2].node_prediction = fts(25)
 tt.attacks.list[2].range = b.bombardment.range
 tt.attacks.list[2].vis_flags = bor(F_MOD, F_RANGED)
@@ -1273,7 +1271,10 @@ tt.attacks.list[2].shoot_time = fts(45)
 tt.attacks.list[2].sounds = {"TowerTricannonBombardmentLvl1", "TowerTricannonBombardmentLvl2", "TowerTricannonBombardmentLvl3"}
 tt.attacks.list[3] = table.deepclone(tt.attacks.list[1])
 tt.attacks.list[3].cooldown = b.overheat.cooldown[1]
-tt.attacks.list[3].duration = nil
+tt.attacks.list[3].duration = b.overheat.duration[1]
+tt.attacks.list[3].bullet = nil
+tt.attacks.list[3].bomb_amount = nil
+tt.attacks.list[3].bullet_start_offset = nil
 tt.attacks.list[3].animation_charge = "skill_2_charge"
 tt.attacks.list[3].animation_idle = "skill_2_idle"
 tt.attacks.list[3].animation_shoot = "skill_2_attack"
