@@ -267,127 +267,6 @@ local function debug_ready_plants_crystals_handler()
 	end
 end
 
-local function atomic_freeze_starts_handler()
-	local this = wid("layer_user_item_freeze")
-
-	if this.timer_h then
-		timer:cancel(this.timer_h)
-	end
-
-	S:queue("InAppAtomicFreezeStart")
-
-	if this.hidden == true then
-		this.hidden = false
-		this.timer_h = timer:tween(0.25, this, {
-			alpha = 1
-		}, "linear")
-	end
-end
-
-local function atomic_freeze_ends_handler()
-	local this = wid("layer_user_item_freeze")
-
-	if this.timer_h then
-		timer:cancel(this.timer_h)
-	end
-
-	S:queue("InAppAtomicFreezeEnd")
-
-	this.timer_h = timer:tween(0.25, this, {
-		alpha = 0
-	}, "linear", function()
-		this.hidden = true
-	end)
-end
-
-local function atomic_bombs_starts_handler()
-	local this = wid("layer_user_item_bomb")
-
-	this.colors.background = {255, 255, 255, 255}
-	this.hidden = false
-	this.alpha = 1
-
-	timer:tween(1.7, this.colors.background, {
-		[2] = 0,
-		[3] = 0
-	})
-	timer:tween(4, this, {
-		alpha = 0
-	}, "out-quad", function()
-		this.hidden = true
-	end)
-end
-
-local function gem_timewarp_starts_handler()
-	local this = wid("layer_user_item_gem_timewarp")
-
-	if this.timer_h then
-		timer:cancel(this.timer_h)
-	end
-
-	if this.hidden == true then
-		this.timer_h = timer:script(function(wait)
-			this.hidden = false
-
-			timer:tween(0.3333333333333333, this, {
-				alpha = 1
-			}, "out-sine")
-			wait(0.3333333333333333)
-			timer:tween(0.3333333333333333, this, {
-				alpha = 0.6
-			}, "in-sine")
-			wait(0.3333333333333333)
-			timer:tween(0.3333333333333333, this, {
-				alpha = 1
-			}, "out-sine")
-			wait(0.3333333333333333)
-			timer:tween(0.3333333333333333, this, {
-				alpha = 0
-			}, "in-sine")
-			wait(0.3333333333333333)
-
-			this.hidden = true
-		end)
-	end
-end
-
-local function wrath_of_elynia_starts_handler()
-	local this = wid("layer_user_item_wrath_of_elynia")
-
-	if this.timer_h then
-		timer:cancel(this.timer_h)
-	end
-
-	if this.hidden == true then
-		this.hidden = false
-		this.timer_h = timer:tween(0.5, this, {
-			alpha = 0.35294117647058826
-		}, "linear")
-	end
-end
-
-local function wrath_of_elynia_ends_handler()
-	local this = wid("layer_user_item_wrath_of_elynia")
-
-	if this.timer_h then
-		timer:cancel(this.timer_h)
-	end
-
-	this.timer_h = timer:tween(0.25, this, {
-		alpha = 0
-	}, "linear", function()
-		this.hidden = true
-	end)
-end
-
-local function hand_midas_starts_handler()
-	log.error("TODO TODO TODO")
-end
-
-local function hand_midas_ends_handler()
-	log.error("TODO TODO TODO")
-end
-
 function game_gui:init(w, h, game)
 	self.game = game
 	self.w = w
@@ -769,14 +648,6 @@ function game_gui:init(w, h, game)
 	signal.register("show-balloon", show_balloon_handler)
 	signal.register("got-achievement", show_achievement_handler)
 	signal.register("block-random-power", block_random_power_handler)
-	signal.register("atomic-freeze-starts", atomic_freeze_starts_handler)
-	signal.register("atomic-freeze-ends", atomic_freeze_ends_handler)
-	signal.register("atomic-bomb-starts", atomic_bombs_starts_handler)
-	signal.register("gem-timewarp-starts", gem_timewarp_starts_handler)
-	signal.register("wrath-of-elynia-starts", wrath_of_elynia_starts_handler)
-	signal.register("wrath-of-elynia-ends", wrath_of_elynia_ends_handler)
-	signal.register("hand-midas-starts", hand_midas_starts_handler)
-	signal.register("hand-midas-ends", hand_midas_ends_handler)
 	signal.register("debug-ready-user-powers", debug_ready_user_powers_handler)
 	signal.register("debug-ready-plants-crystals", debug_ready_plants_crystals_handler)
 	self:add_mobile_shortcut_buttons()
@@ -807,14 +678,6 @@ function game_gui:destroy()
 	signal.remove("show-balloon", show_balloon_handler)
 	signal.remove("got-achievement", show_achievement_handler)
 	signal.remove("block-random-power", block_random_power_handler)
-	signal.remove("atomic-freeze-starts", atomic_freeze_starts_handler)
-	signal.remove("atomic-freeze-ends", atomic_freeze_ends_handler)
-	signal.remove("atomic-bomb-starts", atomic_bombs_starts_handler)
-	signal.remove("gem-timewarp-starts", gem_timewarp_starts_handler)
-	signal.remove("wrath-of-elynia-starts", wrath_of_elynia_starts_handler)
-	signal.remove("wrath-of-elynia-ends", wrath_of_elynia_ends_handler)
-	signal.remove("hand-midas-starts", hand_midas_starts_handler)
-	signal.remove("hand-midas-ends", hand_midas_ends_handler)
 	signal.remove("debug-ready-user-powers", debug_ready_user_powers_handler)
 	signal.remove("debug-ready-plants-crystals", debug_ready_plants_crystals_handler)
 end
@@ -5710,21 +5573,6 @@ function PickView:on_down(button, x, y)
 
 			if not ut.can_fire_fn or ut.can_fire_fn(ut, wx, wy, game_gui.game.store) then
 				game_gui.power_3:fire(wx, wy)
-			else
-				game_gui:show_invalid_point_cross(x, y)
-			end
-		elseif game_gui.mode == GUI_MODE_BAG_ITEM then
-			local item_name = wid("bag_button").selected_item
-			local e = E:create_entity("user_item_" .. item_name)
-			local fn = e.user_selection.can_select_point_fn
-
-			if not fn or fn(e, wx, wy, store) then
-				e.pos.x, e.pos.y = wx, wy
-
-				game_gui.game.simulation:insert_entity(e)
-				wid("bag_button"):fire_item(item_name, x, y, e)
-				signal.emit("item-used", item_name)
-				game_gui:set_mode()
 			else
 				game_gui:show_invalid_point_cross(x, y)
 			end

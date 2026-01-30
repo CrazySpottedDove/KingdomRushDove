@@ -160,8 +160,8 @@ function difficulty:patch_templates()
 	tower_arcane_wizard.powers.disintegrate.upper_damage[2] = tower_arcane_wizard.powers.disintegrate.upper_damage[2] * GS.difficulty_enemy_hp_max_factor[self.level]
 	tower_arcane_wizard.powers.disintegrate.upper_damage[3] = tower_arcane_wizard.powers.disintegrate.upper_damage[3] * GS.difficulty_enemy_hp_max_factor[self.level]
 
-    local overseer = E:get_template("controller_stage_16_overseer")
-    overseer.health.hp_max = overseer.health.hp_max * GS.difficulty_enemy_hp_max_factor[self.level]
+	local overseer = E:get_template("controller_stage_16_overseer")
+	overseer.health.hp_max = overseer.health.hp_max * GS.difficulty_enemy_hp_max_factor[self.level]
 end
 
 return difficulty
