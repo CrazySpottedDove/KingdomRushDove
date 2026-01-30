@@ -7103,6 +7103,7 @@ function scripts.boss_cult_leader.update(this, store)
 	end
 end
 
+-- 大眼
 scripts.controller_stage_16_overseer = {}
 
 function scripts.controller_stage_16_overseer.update(this, store)
@@ -7314,10 +7315,10 @@ function scripts.controller_stage_16_overseer.update(this, store)
 		end
 
 		if this.change_tower_cooldown[this.phase] and change_tower_cooldown and change_tower_cooldown <= store.tick_ts - change_tower_ts then
-			local towers = table.filter(store.entities, function(k, v)
+			local towers = table.filter(store.towers, function(k, v)
 				return not v.pending_removal and v.tower and not v.tower.blocked and v.tower.can_be_sold and v.tower.can_be_mod
 			end)
-			local holders = table.filter(store.entities, function(k, v)
+			local holders = table.filter(store.towers, function(k, v)
 				return v.tower and v.tower.type == "holder"
 			end)
 
@@ -7362,11 +7363,6 @@ function scripts.controller_stage_16_overseer.update(this, store)
 						queue_insert(store, change_tower_fx)
 						signal.emit("force-tower-swap", towers[tower_index], holders[tower_index])
 
-						-- towers[tower_index].tower.blocked = true
-						-- holders[tower_index].tower.blocked = true
-						-- towers[tower_index].ui.can_click = false
-						-- holders[tower_index].ui.can_click = false
-
 						U.y_wait(store, this.swap_delay + 1)
 
 						local controller = E:create_entity("controller_tower_swap_overseer")
@@ -7392,11 +7388,6 @@ function scripts.controller_stage_16_overseer.update(this, store)
 
 						queue_insert(store, change_tower_fx)
 						signal.emit("force-tower-swap", towers[tower_index], towers[tower_index + 1])
-
-						-- towers[tower_index].tower.blocked = true
-						-- towers[tower_index + 1].tower.blocked = true
-						-- towers[tower_index].ui.can_click = false
-						-- towers[tower_index + 1].ui.can_click = false
 
 						U.y_wait(store, this.swap_delay + 1)
 
@@ -7424,7 +7415,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 		end
 
 		if this.disable_tower_cooldown[this.phase] and disable_tower_cooldown and disable_tower_cooldown <= store.tick_ts - disable_tower_ts then
-			local close_towers = table.filter(store.entities, function(k, v)
+			local close_towers = table.filter(store.towers, function(k, v)
 				return not v.pending_removal and v.tower and not v.tower.blocked and v.tower.can_be_sold and v.tower.can_be_mod and table.contains(this.holders_close, v.tower.holder_id) and v.tower.type ~= "tower_timed_destroy"
 			end)
 
@@ -7465,7 +7456,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 		end
 
 		if this.destroy_holder_cooldown[this.phase] ~= nil and store.tick_ts - destroy_holder_last_ts >= this.destroy_holder_cooldown[this.phase] and next_holder_to_destroy_i <= #this.holders_to_destroy then
-			local holder_by_id = table.filter(store.entities, function(k, v)
+			local holder_by_id = table.filter(store.towers, function(k, v)
 				return v.tower and v.tower.holder_id == this.holders_to_destroy[next_holder_to_destroy_i]
 			end)
 
@@ -7769,7 +7760,7 @@ function scripts.enemy_overseer_hit_point.update(this, store)
 	this.nav_path.pi = path_pi
 	this.nav_path.spi = path_spi
 	this.nav_path.ni = path_ni
-
+    P:set_end_node(path_pi, 1e6)
 	local npos = P:node_pos(path_pi, path_spi, path_ni)
 
 	this.pos = npos
@@ -7790,9 +7781,7 @@ function scripts.enemy_overseer_hit_point.update(this, store)
 
 	this.vis.bans = this.vis._bans
 
-	local overseer = table.filter(store.entities, function(k, v)
-		return v.template_name == "controller_stage_16_overseer"
-	end)[1]
+	local overseer = this.boss
 
 	while true do
 		if overseer.health.dead then
