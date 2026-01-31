@@ -7506,16 +7506,10 @@ function scripts.mega_spawner.update(this, store)
 		local current_wave = this.manual_wave or not store.waves_finished and store.wave_group_number or nil
 		local spawn_queue = {}
 
-		if current_wave then
-			log.paranoid("+++++ mega_spawner running wave %s", current_wave)
-		end
-
 		if this.spawner_waves[current_wave] and not this.interrupt then
 			for _, w in pairs(this.spawner_waves[current_wave]) do
 				do
 					local delay, delay_var, group, subpath, qty, force_all, sequence, int_min, int_max, template, custom_data = unpack(w, 1, 11)
-
-					log.paranoid("SPAWN wave: del:%s gr:%s qty:%s spi:%s force:%s seq:%s int:%s,%s tpl:%s", delay, group, qty, subpath, force_all, sequence, int_min, int_max, template)
 
 					local c_delay = delay
 
@@ -7549,8 +7543,6 @@ function scripts.mega_spawner.update(this, store)
 							else
 								for _, wpack in pairs(spack) do
 									local p_delay, p_delay_var, p_group, p_subpath, p_qty, p_force_all, p_sequence, p_int_min, p_int_max, p_template, p_custom_data = unpack(wpack, 1, 11)
-
-									log.paranoid("  PACK del:%s delv:%s gr:%s spi:%s q:%s fo:%s seq:%s imin:%s imax:%s tpl:%s", p_delay, p_delay_var, p_group, p_subpath, p_qty, p_force_all, p_sequence, p_int_min, p_int_max, p_template)
 
 									for i = 1, p_qty do
 										local point = {
@@ -7648,8 +7640,6 @@ function scripts.mega_spawner.update(this, store)
 
 					if template == "CUSTOM" then
 						custom_data.spawner.spawner.spawn_data = custom_data.data
-
-						log.paranoid("%06.2f : SPAWN (%06.2f) - %s spawner:%s, data:%s", store.tick_ts, ts, template, custom_data.spawner.id, getdump(custom_data.data))
 					else
 						local p_from, p_to, p_pi = p_point.from, p_point.to, p_point.path
 						local raise = p_from ~= nil
@@ -7721,12 +7711,21 @@ function scripts.mega_spawner.update(this, store)
 						e.custom_spawn_data = custom_data
 
 						queue_insert(store, e)
-						log.paranoid("%06.2f : SPAWN (%06.2f) - %s from:%s,%s to:%s,%s pi:%s spi:%s", store.tick_ts, ts, template, p_from.x, p_from.y, p_to.x, p_to.y, p_pi, p_spi)
 					end
 
 					::label_156_1::
 
 					ptr = ptr + 1
+
+					if ptr > #spawn_queue then
+						-- 外部可检查的信号，表示该波次的所有敌人已生成完毕
+						this._spawned_all = true
+					end
+				end
+
+				if this.respawn then
+					this.respawn = false
+					goto label_156_3
 				end
 
 				coroutine.yield()
@@ -7736,10 +7735,11 @@ function scripts.mega_spawner.update(this, store)
 				if this.interrupt then
 					goto label_156_2
 				end
-
 				coroutine.yield()
 			end
 		end
+
+		::label_156_3::
 
 		coroutine.yield()
 	end

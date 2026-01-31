@@ -871,9 +871,7 @@ tt.vis.bans = bor(F_LYCAN, F_SKELETON, F_CANNIBALIZE)
 --#endregion
 --#region hero_ignus
 tt = RT("hero_ignus", "hero")
-
 AC(tt, "melee", "timed_attacks")
-
 anchor_y = 0.1
 anchor_x = 0.5
 image_y = 72

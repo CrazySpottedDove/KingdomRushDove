@@ -3417,6 +3417,7 @@ tt.heal_cooldown = b.heal_cooldown
 tt.heal_duration = b.heal_duration
 tt.heal_per_second = b.heal_per_second
 tt.downgrade_cooldown = b.downgrade_cooldown
+tt.downgrade_count = b.downgrade_count
 tt.holders_close = {"6", "7", "8", "9", "10"}
 tt.swap_delay = fts(60)
 tt.destroy_tower_cooldown = b.destroy_tower_cooldown
@@ -3589,9 +3590,7 @@ tt.check_pos = v(721, 553)
 tt.config = b
 tt = E:register_t("controller_stage_16_tentacle_left")
 b = balance.specials.stage16_overseer.tentacle_left
-
 E:add_comps(tt, "editor", "pos", "main_script", "render")
-
 tt.main_script.update = scripts.controller_stage_16_overseer_tentacle.update
 tt.render.sprites[1] = E:clone_c("sprite")
 tt.render.sprites[1].prefix = "overseer_tentacleDef"

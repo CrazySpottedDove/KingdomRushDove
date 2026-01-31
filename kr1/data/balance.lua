@@ -7029,27 +7029,28 @@ local specials = {
 	stage16_overseer = {
 		hp = 36000,
 		first_time_cooldown = 5,
-		destroy_tower_cooldown = 10,
-		disable_tower_recover_price = 100,
 		phase_per_hp_threshold = {100, 90, 80, 70, 50, 20},
-		phase_per_time = {30, 75, 50, 120, 150},
+		phase_per_time = {30, 75, 90, 120, 100000000},
 		change_tower_cooldown = {nil, 60, 60, 45, 30},
 		glare_cooldown = {nil, nil, nil, 36, 33, 30},
 		glare_duration = {nil, nil, nil, 4, 5, 6},
 		heal_cooldown = {nil, nil, nil, 30, 30, 15},
 		heal_duration = {nil, nil, nil, 6, 8, 10},
-		heal_per_second = {nil, nil, nil, 150, 300, 50},
+		heal_per_second = {nil, nil, nil, 150, 450, 50},
 		change_tower_amount = {nil, 1, 1, 2, 3},
 		destroy_holder = {
-			cooldown = {nil, nil, nil, nil, nil, 21}
+			cooldown = {nil, nil, nil, nil, nil, 20}
 		},
-		downgrade_cooldown = {nil, nil, 60, 55, 50, 45},
-		tentacle_spawns_per_phase = {0, 0, 3, 3, 4, 4},
+		downgrade_cooldown = {nil, nil, 60, 55, 45, 40},
+		downgrade_count = {nil, nil, 1, 2, 2, 2},
+		tentacle_spawns_per_phase = {0, 0, 3, 3, 4, 5},
 		tentacle_left = {
-			cooldown = {nil, nil, nil, 30, 20, 10}
+			cooldown = {nil, nil, nil, 40, 30, 20},
+			cooldown_attack_soldiers = {nil, nil, nil, nil, 35, 25}
 		},
 		tentacle_right = {
-			cooldown = {nil, nil, 30, 30, 20, 12}
+			cooldown = {nil, nil, 45, 45, 35, 25},
+			cooldown_attack_soldiers = {nil, nil, nil, 40, 30, 20}
 		},
 		tentacle_bullet_explosion_damage = {
 			damage_max = 180,

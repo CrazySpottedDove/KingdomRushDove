@@ -7233,6 +7233,16 @@ function scripts.controller_stage_16_overseer.update(this, store)
 		end
 	end
 
+	local function check_spawner()
+		if megaspawner_boss._spawned_all then
+			megaspawner_boss._spawned_all = false
+			-- megaspawner_boss.manual_wave = nil
+			-- coroutine.yield()
+			-- megaspawner_boss.manual_wave = string.format("BOSS%i", this.phase)
+			megaspawner_boss.respawn = true
+		end
+	end
+
 	U.animation_start(this, "startidle1", false, store.tick_ts, false, 1)
 
 	for i = 1, #this.hit_point_pos do
@@ -7414,41 +7424,55 @@ function scripts.controller_stage_16_overseer.update(this, store)
 
 		if this.downgrade_cooldown[this.phase] ~= nil and store.tick_ts - downgrade_last_ts >= this.downgrade_cooldown[this.phase] then
 			local can_downgrade_towers = table.filter(store.towers, function(k, t)
-				return (not t.tower.holder or not t.tower_holder.blocked) and t.template_name ~= "tower_barrack_1" and t.template_name ~= "tower_archer_1" and t.template_name ~= "tower_mage_1" and t.template_name ~= "tower_engineer_1"
+				return (not t.tower_holder) and t.template_name ~= "tower_barrack_1" and t.template_name ~= "tower_archer_1" and t.template_name ~= "tower_mage_1" and t.template_name ~= "tower_engineer_1"
 			end)
 			if #can_downgrade_towers > 0 then
-				local target = can_downgrade_towers[math.random(1, #can_downgrade_towers)]
+				local random_can_downgrade_towers = table.random_order(can_downgrade_towers)
+				local downgrade_count = math.min(this.downgrade_count[this.phase], #random_can_downgrade_towers)
+
 				downgrade_last_ts = store.tick_ts
 				S:queue(this.sound_destroy_charge)
 				U.animation_start(this, "swaptowers1", false, store.tick_ts, nil, 1)
-				target.tower.blocked = true
-				target.ui.can_click = false
+				for i = 1, downgrade_count do
+					local target = random_can_downgrade_towers[i]
+					target.tower.blocked = true
+					target.ui.can_click = false
+				end
 				U.y_wait(store, fts(70))
 				S:queue(this.sound_destroy_ray)
 
-				local bullet = E:create_entity("bullet_stage_16_overseer_downgrade_towers")
-				bullet.pos = V.vclone(this.pos)
-				bullet.pos.y = bullet.pos.y + 65
-				bullet.bullet.from = V.vclone(bullet.pos)
-				bullet.bullet.to = V.vclone(target.pos)
-				bullet.bullet.to.y = bullet.bullet.to.y + 20
-				bullet.bullet.target_id = nil
-				bullet.bullet.source_id = this.id
+				for i = 1, downgrade_count do
+					local target = random_can_downgrade_towers[i]
+					local bullet = E:create_entity("bullet_stage_16_overseer_downgrade_towers")
+					bullet.pos = V.vclone(this.pos)
+					bullet.pos.y = bullet.pos.y + 65
+					bullet.bullet.from = V.vclone(bullet.pos)
+					bullet.bullet.to = V.vclone(target.pos)
+					bullet.bullet.to.y = bullet.bullet.to.y + 20
+					bullet.bullet.target_id = nil
+					bullet.bullet.source_id = this.id
 
-				queue_insert(store, bullet)
+					queue_insert(store, bullet)
+				end
 				U.y_wait(store, fts(2))
 
-				local overseer_fx = E:create_entity("decal_stage_16_overseer_destroy_holder_bright")
+				for i = 1, downgrade_count do
+					local target = random_can_downgrade_towers[i]
+					local overseer_fx = E:create_entity("decal_stage_16_overseer_destroy_holder_bright")
 
-				overseer_fx.pos = V.vclone(target.pos)
-				overseer_fx.render.sprites[1].ts = store.tick_ts
-				overseer_fx.tween.ts = store.tick_ts
+					overseer_fx.pos = V.vclone(target.pos)
+					overseer_fx.render.sprites[1].ts = store.tick_ts
+					overseer_fx.tween.ts = store.tick_ts
 
-				queue_insert(store, overseer_fx)
+					queue_insert(store, overseer_fx)
+				end
+
 				U.y_wait(store, fts(12))
 				S:queue(this.sound_destroy_explosion)
 
-				SU.downgrade_tower(store, target)
+				for i = 1, downgrade_count do
+					SU.downgrade_tower(store, random_can_downgrade_towers[i])
+				end
 
 				S:queue(this.sound_rumble)
 
@@ -7563,10 +7587,10 @@ function scripts.controller_stage_16_overseer.update(this, store)
 				local tower_index = 1
 
 				towers = table.filter(store.towers, function(k, v)
-					return not v.pending_removal and v.tower and not v.tower.blocked and v.tower.can_be_sold and v.tower.can_be_mod
+					return not v.tower_holder
 				end)
 				holders = table.filter(store.towers, function(k, v)
-					return v.tower and v.tower.type == "holder"
+					return v.tower_holder
 				end)
 
 				for i = 1, this.change_tower_amount[this.phase] do
@@ -7648,6 +7672,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 		check_change_phase()
 		check_last_phase_repeat()
 		check_change_damaged_state()
+		check_spawner()
 		check_change_idle_anim()
 		check_greatly_hurt()
 
@@ -7734,6 +7759,7 @@ function scripts.controller_stage_16_overseer_tentacle.update(this, store)
 	local current_phase = 1
 	local can_spawn_enemies = false
 	local last_shot_ts = store.tick_ts
+	local last_shot_attack_soldiers_ts = store.tick_ts
 	local overseer = table.filter(store.entities, function(k, v)
 		return v.template_name == "controller_stage_16_overseer"
 	end)[1]
@@ -7753,90 +7779,147 @@ function scripts.controller_stage_16_overseer_tentacle.update(this, store)
 	while true do
 		if overseer.health.dead then
 		-- block empty
-		elseif this.config.cooldown[overseer.phase] ~= nil then
-			if not can_spawn_enemies then
-				U.y_animation_wait(this)
-				S:queue(this.sound_rumble)
+		else
+			if this.config.cooldown[overseer.phase] ~= nil then
+				if not can_spawn_enemies then
+					U.y_animation_wait(this)
+					S:queue(this.sound_rumble)
 
-				local shake = E:create_entity("aura_screen_shake")
+					local shake = E:create_entity("aura_screen_shake")
 
-				shake.aura.amplitude = 0.3
-				shake.aura.duration = fts(120)
-				shake.aura.freq_factor = 3
+					shake.aura.amplitude = 0.3
+					shake.aura.duration = fts(120)
+					shake.aura.freq_factor = 3
 
-				queue_insert(store, shake)
-				S:queue(this.sound_unchain)
-				U.y_animation_play(this, "shake", nil, store.tick_ts, 1)
+					queue_insert(store, shake)
+					S:queue(this.sound_unchain)
+					U.y_animation_play(this, "shake", nil, store.tick_ts, 1)
 
-				this.tentacle_mouth.anim_free = true
+					this.tentacle_mouth.anim_free = true
 
-				U.animation_start(this, "free", nil, store.tick_ts, false, 1)
-				U.y_wait(store, fts(50))
-				S:queue(this.sound_rumble)
+					U.animation_start(this, "free", nil, store.tick_ts, false, 1)
+					U.y_wait(store, fts(50))
+					S:queue(this.sound_rumble)
 
-				local shake = E:create_entity("aura_screen_shake")
+					local shake = E:create_entity("aura_screen_shake")
 
-				shake.aura.amplitude = 0.7
-				shake.aura.duration = fts(10)
-				shake.aura.freq_factor = 3
+					shake.aura.amplitude = 0.7
+					shake.aura.duration = fts(10)
+					shake.aura.freq_factor = 3
 
-				queue_insert(store, shake)
-				U.y_animation_wait(this)
-				U.animation_start(this, "idlemouth", nil, store.tick_ts, true, 1, true)
+					queue_insert(store, shake)
+					U.y_animation_wait(this)
+					U.animation_start(this, "idlemouth", nil, store.tick_ts, true, 1, true)
 
-				can_spawn_enemies = true
-				last_shot_ts = store.tick_ts - this.first_cooldown
+					can_spawn_enemies = true
+					last_shot_ts = store.tick_ts - this.first_cooldown
+				end
+
+				if store.tick_ts - last_shot_ts >= this.config.cooldown[overseer.phase] then
+					local start_ts = store.tick_ts
+
+					local shoot_count = 1
+					local hp_rate = overseer.health.hp / overseer.health.hp_max
+					if hp_rate < 0.25 then
+						shoot_count = 3
+					elseif hp_rate < 0.4 then
+						shoot_count = 2
+					end
+
+					local speed_factor = 0.5 * (shoot_count + 1)
+
+					if speed_factor ~= 1 then
+						SU.change_fps(store.tick_ts, this, speed_factor)
+						SU.change_fps(store.tick_ts, this.tentacle_mouth, speed_factor)
+					end
+
+					for i = 1, shoot_count do
+						this.tentacle_mouth.anim_shot = true
+						S:queue(this.sound_spawn)
+						U.animation_start(this, "spawnenemies", nil, store.tick_ts, false)
+						U.y_wait(store, this.shot_delay / speed_factor)
+
+						local spawn_pos_i = math.random(1, #this.spawn_pos)
+						local b = E:create_entity(this.bullet)
+
+						b.pos.x, b.pos.y = this.pos.x + this.spawn_offset.x, this.pos.y + this.spawn_offset.y
+						b.bullet.from = V.vclone(b.pos)
+						b.bullet.to = this.spawn_pos[spawn_pos_i]
+						b.bullet.source_id = this.id
+						b.path_to_spawn = this.spawn_path
+						b.overseer = overseer
+						b.spawn_path = this.spawn_path[spawn_pos_i]
+
+						queue_insert(store, b)
+						U.y_animation_wait(this)
+						U.y_animation_wait(this.tentacle_mouth)
+						coroutine.yield()
+					end
+
+					if speed_factor ~= 1 then
+						SU.change_fps(store.tick_ts, this, 1 / speed_factor)
+						SU.change_fps(store.tick_ts, this.tentacle_mouth, 1 / speed_factor)
+					end
+
+					U.animation_start(this, "idlemouth", nil, store.tick_ts, true, 1, true)
+
+					last_shot_ts = start_ts
+				end
 			end
 
-			if store.tick_ts - last_shot_ts >= this.config.cooldown[overseer.phase] then
-				local start_ts = store.tick_ts
+			if this.config.cooldown_attack_soldiers[overseer.phase] ~= nil then
+				if store.tick_ts - last_shot_attack_soldiers_ts >= this.config.cooldown_attack_soldiers[overseer.phase] then
+					local start_ts = store.tick_ts
 
-				local shoot_count = 1
-				local hp_rate = overseer.health.hp / overseer.health.hp_max
-				if hp_rate < 0.25 then
-					shoot_count = 3
-				elseif hp_rate < 0.4 then
-					shoot_count = 2
+					local shoot_count = 1
+					local hp_rate = overseer.health.hp / overseer.health.hp_max
+					if hp_rate < 0.15 then
+						shoot_count = 3
+					elseif hp_rate < 0.3 then
+						shoot_count = 2
+					end
+
+					local speed_factor = 0.5 * (shoot_count + 1)
+
+					if speed_factor ~= 1 then
+						SU.change_fps(store.tick_ts, this, speed_factor)
+						SU.change_fps(store.tick_ts, this.tentacle_mouth, speed_factor)
+					end
+
+					for i = 1, shoot_count do
+						this.tentacle_mouth.anim_shot = true
+						S:queue(this.sound_spawn)
+						U.animation_start(this, "spawnenemies", nil, store.tick_ts, false)
+						U.y_wait(store, this.shot_delay / speed_factor)
+
+						local soldier = U.find_nearest_soldier(store.soldiers, this.pos, 0, 225, bor(F_AREA, F_RANGED), F_NONE)
+
+						local spawn_pos = soldier and V.vclone(soldier.pos) or V.vclone(this.spawn_pos[math.random(1, #this.spawn_pos)])
+
+						local b = E:create_entity(this.bullet)
+						b.pos.x, b.pos.y = this.pos.x + this.spawn_offset.x, this.pos.y + this.spawn_offset.y
+						b.bullet.from = V.vclone(b.pos)
+						b.bullet.to = spawn_pos
+						b.bullet.source_id = this.id
+						b.path_to_spawn = this.spawn_path[1]
+						b.overseer = overseer
+						b.spawn_path = this.spawn_path[1]
+
+						queue_insert(store, b)
+						U.y_animation_wait(this)
+						U.y_animation_wait(this.tentacle_mouth)
+						coroutine.yield()
+					end
+
+					if speed_factor ~= 1 then
+						SU.change_fps(store.tick_ts, this, 1 / speed_factor)
+						SU.change_fps(store.tick_ts, this.tentacle_mouth, 1 / speed_factor)
+					end
+
+					U.animation_start(this, "idlemouth", nil, store.tick_ts, true, 1, true)
+
+					last_shot_attack_soldiers_ts = start_ts
 				end
-
-				local speed_factor = 0.5 * (shoot_count + 1)
-
-				if speed_factor ~= 1 then
-					SU.change_fps(store.tick_ts, this, speed_factor)
-					SU.change_fps(store.tick_ts, this.tentacle_mouth, speed_factor)
-				end
-
-				for i = 1, shoot_count do
-					this.tentacle_mouth.anim_shot = true
-					S:queue(this.sound_spawn)
-					U.animation_start(this, "spawnenemies", nil, store.tick_ts, false)
-					U.y_wait(store, this.shot_delay / speed_factor)
-
-					local spawn_pos_i = math.random(1, #this.spawn_pos)
-					local b = E:create_entity(this.bullet)
-
-					b.pos.x, b.pos.y = this.pos.x + this.spawn_offset.x, this.pos.y + this.spawn_offset.y
-					b.bullet.from = V.vclone(b.pos)
-					b.bullet.to = this.spawn_pos[spawn_pos_i]
-					b.bullet.source_id = this.id
-					b.path_to_spawn = this.spawn_path
-					b.overseer = overseer
-					b.spawn_path = this.spawn_path[spawn_pos_i]
-
-					queue_insert(store, b)
-					U.y_animation_wait(this)
-					U.y_animation_wait(this.tentacle_mouth)
-					coroutine.yield()
-				end
-
-				if speed_factor ~= 1 then
-					SU.change_fps(store.tick_ts, this, 1 / speed_factor)
-					SU.change_fps(store.tick_ts, this.tentacle_mouth, 1 / speed_factor)
-				end
-
-				U.animation_start(this, "idlemouth", nil, store.tick_ts, true, 1, true)
-
-				last_shot_ts = start_ts
 			end
 		end
 
@@ -7874,8 +7957,8 @@ end
 scripts.enemy_overseer_hit_point = {}
 
 function scripts.enemy_overseer_hit_point.update(this, store)
-	local going_right = math.random(0, 1) == 0
-	local going_up = math.random(0, 1) == 0
+	-- local going_right = math.random(0, 1) == 0
+	-- local going_up = math.random(0, 1) == 0
 	local nearest = P:nearest_nodes(this.pos.x, this.pos.y)
 	local path_pi, path_spi, path_ni
 	if #nearest > 0 then
@@ -7909,37 +7992,37 @@ function scripts.enemy_overseer_hit_point.update(this, store)
 			break
 		end
 
-		if going_right then
-			if max_x <= this.pos.x then
-				going_right = false
-			else
-				this.pos.x = this.pos.x + this.move_speed.x
-			end
-		end
+		-- if going_right then
+		-- 	if max_x <= this.pos.x then
+		-- 		going_right = false
+		-- 	else
+		-- 		this.pos.x = this.pos.x + this.move_speed.x
+		-- 	end
+		-- end
 
-		if not going_right then
-			if min_x >= this.pos.x then
-				going_right = true
-			else
-				this.pos.x = this.pos.x - this.move_speed.x
-			end
-		end
+		-- if not going_right then
+		-- 	if min_x >= this.pos.x then
+		-- 		going_right = true
+		-- 	else
+		-- 		this.pos.x = this.pos.x - this.move_speed.x
+		-- 	end
+		-- end
 
-		if going_up then
-			if max_y <= this.pos.y then
-				going_up = false
-			else
-				this.pos.y = this.pos.y + this.move_speed.y
-			end
-		end
+		-- if going_up then
+		-- 	if max_y <= this.pos.y then
+		-- 		going_up = false
+		-- 	else
+		-- 		this.pos.y = this.pos.y + this.move_speed.y
+		-- 	end
+		-- end
 
-		if not going_up then
-			if min_y >= this.pos.y then
-				going_up = true
-			else
-				this.pos.y = this.pos.y - this.move_speed.y
-			end
-		end
+		-- if not going_up then
+		-- 	if min_y >= this.pos.y then
+		-- 		going_up = true
+		-- 	else
+		-- 		this.pos.y = this.pos.y - this.move_speed.y
+		-- 	end
+		-- end
 
 		coroutine.yield()
 	end
@@ -8115,7 +8198,7 @@ function scripts.bullet_stage_16_overseer_tentacle_spawn.update(this, store, scr
 		queue_insert(store, enemy)
 	end
 
-	local soldiers = U.find_soldiers_in_range(store.entities, b.to, 0, this.explosion_damage.range, this.explosion_damage.vis_flags, this.explosion_damage.vis_bans)
+	local soldiers = U.find_soldiers_in_range(store.soldiers, b.to, 0, this.explosion_damage.range, this.explosion_damage.vis_flags, this.explosion_damage.vis_bans)
 
 	if soldiers then
 		for _, soldier in pairs(soldiers) do

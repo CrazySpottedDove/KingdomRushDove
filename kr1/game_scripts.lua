@@ -3266,7 +3266,7 @@ function scripts.aura_ignus_surge_of_flame.update(this, store)
 	end
 
 	ps.particle_system.emit = false
-
+	queue_remove(store, ps)
 	queue_remove(store, this)
 end
 
