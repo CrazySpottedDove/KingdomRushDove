@@ -3617,10 +3617,35 @@ tt.spawn_offset = v(-80, -150)
 tt.spawn_pos = {v(850, 446), v(860, 206)}
 tt.spawn_path = {3, 4}
 tt.tentacle_mouth_template = "controller_stage_16_tentacle_mouth_right"
+
+tt = E:register_t("bullet_stage_16_overseer_tentacle_spawn", "bombKR5")
+local b = balance.specials.stage16_overseer.tentacle_bullet_explosion_damage
+tt.bullet.flight_time = fts(31)
+tt.sound_events.hit_water = nil
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "overseer_fx_overseer_proyectile"
+tt.bullet.hit_fx = "fx_stage_16_overseer_tentacle_hit_decal"
+tt.bullet.hit_decal = "decal_stage_16_overseer_tentacle_projectile"
+tt.bullet.particles_name = "ps_bullet_stage_16_overseer_tentacle_spawn"
+tt.bullet.rotation_speed = 5
+tt.bullet.pop = nil
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.main_script.update = scripts.bullet_stage_16_overseer_tentacle_spawn.update
+tt.spawn_offset = {v(-40, 0), v(0, 20), v(30, 0), v(0, -30), v(-20, 0)}
+tt.explosion_damage = {}
+tt.explosion_damage.range = b.range
+tt.explosion_damage.vis_flags = bor(F_RANGED)
+tt.explosion_damage.vis_bans = bor(F_ENEMY)
+tt.explosion_damage.damage_type = b.damage_type
+tt.explosion_damage.damage_min = b.damage_min
+tt.explosion_damage.damage_max = b.damage_max
+tt.spawn_amounts_per_phase = balance.specials.stage16_overseer.tentacle_spawns_per_phase
+tt.sound_events.insert = nil
+tt.sound_events.hit = "Stage16OverseerSpawnerImpact"
+
 tt = E:register_t("controller_stage_16_tentacle_mouth_left")
-
 E:add_comps(tt, "editor", "pos", "main_script", "render")
-
 tt.main_script.update = scripts.controller_stage_16_overseer_tentacle_mouth.update
 tt.render.sprites[1] = E:clone_c("sprite")
 tt.render.sprites[1].prefix = "overseer_tentacle2Def"

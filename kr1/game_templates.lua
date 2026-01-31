@@ -16485,34 +16485,6 @@ tt.particle_system.emission_rate = 15
 tt.particle_system.emit_rotation_spread = math.pi / 2
 tt.particle_system.z = Z_BULLET_PARTICLES
 
-tt = E:register_t("bullet_stage_16_overseer_tentacle_spawn", "bombKR5")
-
-local b = balance.specials.stage16_overseer.tentacle_bullet_explosion_damage
-
-tt.bullet.flight_time = fts(31)
-tt.sound_events.hit_water = nil
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "overseer_fx_overseer_proyectile"
-tt.bullet.hit_fx = "fx_stage_16_overseer_tentacle_hit_decal"
-tt.bullet.hit_decal = "decal_stage_16_overseer_tentacle_projectile"
-tt.bullet.particles_name = "ps_bullet_stage_16_overseer_tentacle_spawn"
-tt.bullet.rotation_speed = 5
-tt.bullet.pop = nil
-tt.bullet.damage_min = 0
-tt.bullet.damage_max = 0
-tt.main_script.update = scripts.bullet_stage_16_overseer_tentacle_spawn.update
-tt.spawn_offset = {v(-40, 0), v(0, 20), v(30, 0), v(0, -30)}
-tt.explosion_damage = {}
-tt.explosion_damage.range = b.range
-tt.explosion_damage.vis_flags = bor(F_RANGED)
-tt.explosion_damage.vis_bans = bor(F_ENEMY)
-tt.explosion_damage.damage_type = b.damage_type
-tt.explosion_damage.damage_min = b.damage_min
-tt.explosion_damage.damage_max = b.damage_max
-tt.spawn_amounts_per_phase = balance.specials.stage16_overseer.tentacle_spawns_per_phase
-tt.sound_events.insert = nil
-tt.sound_events.hit = "Stage16OverseerSpawnerImpact"
-
 tt = E:register_t("hero_muyrn_treewalk_trail")
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.animated = true
