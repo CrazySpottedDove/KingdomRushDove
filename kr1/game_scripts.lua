@@ -4037,7 +4037,6 @@ function scripts.mod_hero_thor_chainlightning.update(this, store)
 	local targets = U.find_enemies_in_range(store, chain_pos, cl.min_range, cl.max_range, cl.vis_flags or 0, cl.vis_bans or 0)
 
 	if targets then
-		-- local last_num = 0
 		for i = 1, cl.count do
 			local num = math.random(1, #targets)
 			local t = targets[num]
@@ -4051,29 +4050,8 @@ function scripts.mod_hero_thor_chainlightning.update(this, store)
 			b.bullet.source_id = m.source_id
 			b.bullet.level = m.level
 
-			-- if last_num == num then
-			-- b.bullet.damage_factor = b.bullet.damage_factor * 0.5
-			-- end
-			-- last_num = num
 			queue_insert(store, b)
 		end
-	-- local random_targets = table.random_order(targets)
-	-- local count = 0
-	-- for _, t in pairs(random_targets) do
-	-- 	if count >= cl.count then
-	-- 		break
-	-- 	end
-	-- 	local dest = V.vclone(t.pos)
-	-- 	local b = E:create_entity(cl.bullet)
-	-- 	b.pos = V.vclone(chain_pos)
-	-- 	b.bullet.from = V.vclone(b.pos)
-	-- 	b.bullet.to = dest
-	-- 	b.bullet.target_id = t.id
-	-- 	b.bullet.source_id = m.source_id
-	-- 	b.bullet.level = m.level
-	-- 	queue_insert(store, b)
-	-- 	count = count + 1
-	-- end
 	end
 
 	queue_remove(store, this)
@@ -4123,7 +4101,7 @@ function scripts.mod_hero_thor_thunderclap.update(this, store)
 
 	if targets then
 		for _, t in ipairs(targets) do
-			d = E:create_entity("damage")
+			local d = E:create_entity("damage")
 			d.damage_type = tc.secondary_damage_type
 			d.value = tc.secondary_damage
 			d.source_id = m.source_id
@@ -4137,7 +4115,7 @@ function scripts.mod_hero_thor_thunderclap.update(this, store)
 				mod.modifier.ts = store.tick_ts
 				mod.modifier.source_id = m.source_id
 
-				if mod == tc.mod_stun then
+				if tm == tc.mod_stun then
 					mod.modifier.duration = U.frandom(tc.stun_duration_min, tc.stun_duration_max)
 				end
 

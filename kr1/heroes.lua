@@ -1776,9 +1776,7 @@ tt.sound_events.ice_break = "HeroFrostIceRainBreak"
 --#endregion
 --#region hero_oni
 tt = RT("hero_oni", "hero")
-
 AC(tt, "melee", "timed_attacks")
-
 anchor_y = 0.14285714285714285
 anchor_x = 0.5
 image_y = 112
@@ -1893,9 +1891,7 @@ tt.unyield_max = 0
 --#endregion
 --#region aura_oni_rage
 tt = RT("aura_oni_rage", "aura")
-
 AC(tt, "render", "tween")
-
 tt.aura.duration = -1
 tt.aura.track_source = true
 tt.main_script.update = scripts.aura_oni_rage.update
