@@ -7126,9 +7126,9 @@ function scripts.controller_stage_16_overseer.update(this, store)
 
 	local change_phase_ts = store.tick_ts
 	local change_tower_ts = store.tick_ts
-	local disable_tower_ts = store.tick_ts
 	local destroy_holder_last_ts = store.tick_ts
 	local glare_last_ts = store.tick_ts
+	local downgrade_last_ts = store.tick_ts
 	local last_heal_ts = store.tick_ts
 	local next_holder_to_destroy_i = 1
 	local next_idle_anim_cooldown = math.random(this.idle_cooldown_min, this.idle_cooldown_max)
@@ -7156,15 +7156,6 @@ function scripts.controller_stage_16_overseer.update(this, store)
 				change_tower_first_time = false
 			else
 				change_tower_cooldown = this.change_tower_cooldown[this.phase]
-			end
-		end
-
-		if this.disable_tower_cooldown[this.phase] then
-			if disable_tower_first_time then
-				disable_tower_cooldown = this.first_time_cooldown
-				disable_tower_first_time = false
-			else
-				disable_tower_cooldown = this.disable_tower_cooldown[this.phase]
 			end
 		end
 	end
@@ -7418,6 +7409,61 @@ function scripts.controller_stage_16_overseer.update(this, store)
 				U.y_animation_wait(this)
 
 				last_idle_anim_ts = store.tick_ts
+			end
+		end
+
+		if this.downgrade_cooldown[this.phase] ~= nil and store.tick_ts - downgrade_last_ts >= this.downgrade_cooldown[this.phase] then
+			local can_downgrade_towers = table.filter(store.towers, function(k, t)
+				return (not t.tower.holder or not t.tower_holder.blocked) and t.template_name ~= "tower_barrack_1" and t.template_name ~= "tower_archer_1" and t.template_name ~= "tower_mage_1" and t.template_name ~= "tower_engineer_1"
+			end)
+			if #can_downgrade_towers > 0 then
+				local target = can_downgrade_towers[math.random(1, #can_downgrade_towers)]
+				downgrade_last_ts = store.tick_ts
+				S:queue(this.sound_destroy_charge)
+				U.animation_start(this, "swaptowers1", false, store.tick_ts, nil, 1)
+				target.tower.blocked = true
+				target.ui.can_click = false
+				U.y_wait(store, fts(70))
+				S:queue(this.sound_destroy_ray)
+
+				local bullet = E:create_entity("bullet_stage_16_overseer_downgrade_towers")
+				bullet.pos = V.vclone(this.pos)
+				bullet.pos.y = bullet.pos.y + 65
+				bullet.bullet.from = V.vclone(bullet.pos)
+				bullet.bullet.to = V.vclone(target.pos)
+				bullet.bullet.to.y = bullet.bullet.to.y + 20
+				bullet.bullet.target_id = nil
+				bullet.bullet.source_id = this.id
+
+				queue_insert(store, bullet)
+				U.y_wait(store, fts(2))
+
+				local overseer_fx = E:create_entity("decal_stage_16_overseer_destroy_holder_bright")
+
+				overseer_fx.pos = V.vclone(target.pos)
+				overseer_fx.render.sprites[1].ts = store.tick_ts
+				overseer_fx.tween.ts = store.tick_ts
+
+				queue_insert(store, overseer_fx)
+				U.y_wait(store, fts(12))
+				S:queue(this.sound_destroy_explosion)
+
+				SU.downgrade_tower(store, target)
+
+				S:queue(this.sound_rumble)
+
+				local shake = E:create_entity("aura_screen_shake")
+
+				shake.aura.amplitude = 0.6
+				shake.aura.duration = fts(20)
+				shake.aura.freq_factor = 3
+
+				queue_insert(store, shake)
+				U.y_animation_wait(this)
+
+				last_idle_anim_ts = store.tick_ts
+			else
+				downgrade_last_ts = downgrade_last_ts + 1
 			end
 		end
 
@@ -8088,83 +8134,6 @@ function scripts.bullet_stage_16_overseer_tentacle_spawn.update(this, store, scr
 	end
 
 	queue_remove(store, this)
-end
-
-scripts.mod_stage_16_overseer_tower_disable = {}
-
-function scripts.mod_stage_16_overseer_tower_disable.insert(this, store)
-	local target = store.entities[this.modifier.target_id]
-
-	if not target then
-		return false
-	end
-
-	target.tower._type = target.tower.type
-	target.tower._prevent_timed_destroy_price = this.disable_tower_recover_price
-	target.tower._prevent_timed_destroy = false
-	target.tower.type = "tower_timed_destroy"
-	target.tower.blocked = true
-
-	return true
-end
-
-function scripts.mod_stage_16_overseer_tower_disable.update(this, store)
-	local target = store.entities[this.modifier.target_id]
-	local holder_id = target.tower.holder_id
-	local holder = store.entities[holder_id]
-	local overseer = table.filter(store.entities, function(k, v)
-		return v.template_name == "controller_stage_16_overseer"
-	end)[1]
-
-	this.pos = target.pos
-
-	U.animation_start(this, "spawn", nil, store.tick_ts, false, 1)
-	U.animation_start(this, "spawn", nil, store.tick_ts, false, 2)
-	U.y_animation_wait(this, 1)
-	U.animation_start(this, "run", nil, store.tick_ts, true, 1)
-	U.animation_start(this, "run", nil, store.tick_ts, true, 2)
-
-	local start_ts = store.tick_ts
-
-	while true do
-		if target.tower._prevent_timed_destroy then
-			break
-		end
-
-		if overseer.health.dead then
-			break
-		end
-
-		if store.tick_ts - start_ts >= this.destroy_tower_cooldown then
-			target.ui.can_click = false
-			target.tower.type = target.tower._type
-			target.tower.blocked = true
-
-			U.animation_start(this, "destroytower", nil, store.tick_ts, false, 1)
-			U.animation_start(this, "destroytower", nil, store.tick_ts, false, 2)
-			U.y_wait(store, fts(40))
-
-			target.tower.destroy = true
-
-			U.y_animation_wait(this, 1)
-			queue_remove(store, this)
-		end
-
-		coroutine.yield()
-	end
-
-	target.tower.type = target.tower._type
-	target.tower.blocked = false
-
-	U.y_animation_wait(this, 1)
-	U.animation_start(this, "dissipate", nil, store.tick_ts, false, 1)
-	U.animation_start(this, "dissipate", nil, store.tick_ts, false, 2)
-	U.y_animation_wait(this, 1)
-	queue_remove(store, this)
-end
-
-function scripts.mod_stage_16_overseer_tower_disable.remove(this, store)
-	return true
 end
 
 scripts.controller_stage_16_overseer_eye = {}

@@ -1286,8 +1286,6 @@ function sys.tower_upgrade:on_update(dt, ts, store)
 				end
 			end
 		elseif e.tower.upgrade_to then
-			log.debug("upgrading %s to %s", e.id, e.tower.upgrade_to)
-
 			if e._applied_mods then
 				for _, mod in pairs(e._applied_mods) do
 					queue_remove(store, mod)

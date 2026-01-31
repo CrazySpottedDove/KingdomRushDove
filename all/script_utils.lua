@@ -4656,6 +4656,42 @@ local function go_to_forced_waypoint(this, store)
 	return false
 end
 
+--- 降级防御塔
+---@param store table game.store
+---@param target table 塔实体
+local function downgrade_tower(store, target)
+	local function to_tower(template_name)
+		target.tower.upgrade_to = template_name
+		target.tower.spent = 0
+		store.player_gold = store.player_gold + E:get_template(template_name).tower.price
+	end
+	if table.contains(GS.archer_towers, target.template_name) then
+		if target.tower.level == 1 and target.template_name ~= "tower_archer_1" then
+			to_tower("tower_archer_3")
+		elseif target.tower.level > 1 then
+			to_tower("tower_archer_1")
+		end
+	elseif table.contains(GS.engineer_towers, target.template_name) then
+		if target.tower.level == 1 and target.template_name ~= "tower_engineer_1" then
+			to_tower("tower_engineer_3")
+		elseif target.tower.level > 1 then
+			to_tower("tower_engineer_1")
+		end
+	elseif table.contains(GS.mage_towers, target.template_name) then
+		if target.tower.level == 1 and target.template_name ~= "tower_mage_1" then
+			to_tower("tower_mage_3")
+		elseif target.tower.level > 1 then
+			to_tower("tower_mage_1")
+		end
+	elseif table.contains(GS.barrack_towers, target.template_name) then
+		if target.tower.level == 1 and target.template_name ~= "tower_barrack_1" then
+			to_tower("tower_barrack_3")
+		elseif target.tower.level > 1 then
+			to_tower("tower_barrack_1")
+		end
+	end
+end
+
 local SU = {
 	has_modifiers = U.has_modifiers,
 	ui_click_proxy_add = ui_click_proxy_add,
@@ -4773,7 +4809,8 @@ local SU = {
 	deck_draw = deck_draw,
 	deck_new = deck_new,
 	deck_shuffle = deck_shuffle,
-	go_to_forced_waypoint = go_to_forced_waypoint
+	go_to_forced_waypoint = go_to_forced_waypoint,
+	downgrade_tower = downgrade_tower
 }
 
 return SU

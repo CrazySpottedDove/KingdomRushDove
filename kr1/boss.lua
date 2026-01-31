@@ -3378,3 +3378,307 @@ tt.death_bullet_clone = "bullet_boss_grymbeard_death_clone"
 tt.death_bullet_boss = "bullet_boss_grymbeard_death_boss"
 tt.death_bullet_scrap = "bullet_boss_grymbeard_death_scrap_"
 tt.sound_death = "Stage27BFGrymbeardDeath"
+
+tt = E:register_t("controller_stage_16_overseer")
+b = balance.specials.stage16_overseer
+E:add_comps(tt, "editor", "pos", "main_script", "render", "health", "info", "ui")
+tt.main_script.update = scripts.controller_stage_16_overseer.update
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "overseerDef"
+tt.render.sprites[1].name = "idle1_1"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 2
+tt.render.sprites[1].exo_hide_prefix = {"hurt2", "hurt1"}
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "overseer_backDef"
+tt.render.sprites[2].name = "loop"
+tt.render.sprites[2].exo = true
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[2].sort_y_offset = 3
+tt.render.sprites[2].offset = v(20, 620)
+tt.config_per_wave = b.config_per_wave
+tt.hit_point_template = "enemy_overseer_hit_point"
+tt.hit_point_pos = {v(400, 440), v(520, 400), v(640, 440)}
+tt.health.armor = 0
+tt.health.hp_max = b.hp
+tt.health.ignore_delete_after = true
+tt.info.i18n_key = "ENEMY_BOSS_OVERSEER"
+tt.info.enc_icon = 42
+tt.info.portrait_boss = "boss_health_bar_icon_0004"
+tt.phase_per_hp_threshold = b.phase_per_hp_threshold
+tt.phase_per_time = b.phase_per_time
+tt.change_tower_cooldown = b.change_tower_cooldown
+tt.change_tower_amount = b.change_tower_amount
+tt.disable_tower_cooldown = b.disable_tower_cooldown
+tt.glare_cooldown = b.glare_cooldown
+tt.glare_duration = b.glare_duration
+tt.heal_cooldown = b.heal_cooldown
+tt.heal_duration = b.heal_duration
+tt.heal_per_second = b.heal_per_second
+tt.downgrade_cooldown = b.downgrade_cooldown
+tt.holders_close = {"6", "7", "8", "9", "10"}
+tt.swap_delay = fts(60)
+tt.destroy_tower_cooldown = b.destroy_tower_cooldown
+tt.destroy_holder_cooldown = b.destroy_holder.cooldown
+tt.holders_to_destroy = {
+	"1",
+	"13",
+	"10",
+	"2",
+	"12",
+	"4",
+	"9",
+	"5",
+	"14",
+	"3",
+	"11",
+	"6",
+	"8",
+	"15",
+	"7"
+}
+tt.nav_mesh_patches = {
+	["1"] = {
+		[2] = {3, 4}
+	},
+	["13"] = {
+		[11] = {nil, 12, 10, 14},
+		[14] = {nil, 10, 15}
+	},
+	["10"] = {
+		[9] = {11, nil, 8, 14},
+		[11] = {nil, 12, 9, 14},
+		[14] = {nil, 11, 15}
+	},
+	["2"] = {
+		[3] = {15, 6},
+		[4] = {6, 5, nil, 3}
+	},
+	["12"] = {
+		[11] = {nil, nil, 9, 14},
+		[5] = {6, nil, nil, 4}
+	},
+	["4"] = {
+		[5] = {6, nil, nil, 3},
+		[6] = {7, nil, 5, 3}
+	},
+	["9"] = {
+		[8] = {11, nil, 7, 15},
+		[11] = {nil, nil, 8, 14},
+		[14] = {nil, 11, 15}
+	},
+	["5"] = {
+		[6] = {7, nil, nil, 3},
+		[3] = {15, 6}
+	},
+	["14"] = {
+		[11] = {nil, nil, 8},
+		[15] = {nil, 8, 3}
+	},
+	["3"] = {
+		[6] = {7},
+		[15] = {nil, 8}
+	},
+	["11"] = {
+		[8] = {nil, nil, 7, 15}
+	},
+	["6"] = {
+		[7] = {8, nil, nil, 15}
+	},
+	["8"] = {
+		[7] = {nil, nil, nil, 15},
+		[15] = {nil, 7}
+	},
+	["15"] = {
+		[7] = {}
+	},
+	["7"] = {}
+}
+tt.idle_cooldown_min = 2
+tt.idle_cooldown_max = 6
+tt.idle_anims = nil
+tt.idle_start_anims = {"startidle2", "startidle1"}
+tt.idle_fight_anims = {"idle1", "idle2", "idle4", "idle5", "idle6"}
+tt.first_time_cooldown = b.first_time_cooldown
+tt.life_hurt_threshold = {33, 66}
+tt.destroy_holders_template = "decal_stage_16_holder_destroy_fx"
+tt.destroy_holders_crater_template = "decal_stage_16_holder_destroy_crater"
+tt.destroy_holders_bullet = "bullet_stage_16_overseer_destroy_holders"
+tt.change_towers_template = "decal_stage_16_tower_change_fx"
+tt.ui.click_rect = r(-120, -30, 240, 180)
+tt.ui.can_click = true
+tt.info.fn = scripts.controller_stage_16_overseer.get_info
+tt.info.portrait = "kr5_info_portraits_enemies_0043"
+tt.sound_rumble = "Stage16OverseerRumble"
+tt.sound_unchain_center = "Stage16OverseerUnchainCenter"
+tt.sound_teleport_charge = "Stage16OverseerTeleportCharge"
+tt.sound_teleport = "Stage16OverseerTeleport"
+tt.sound_destroy_charge = "Stage16OverseerDestroyCharge"
+tt.sound_destroy_ray = "Stage16OverseerDestroyRay"
+tt.sound_destroy_explosion = "Stage16OverseerDestroyExplosion"
+tt.sound_hurt = "Stage16OverseerHurt"
+tt.sound_death = "Stage16OverseerDeath"
+
+tt = E:register_t("mod_heal_overseer", "modifier")
+E:add_comps(tt, "hps")
+tt.main_script.insert = scripts.mod_hps.insert
+tt.main_script.update = scripts.mod_hps.update
+tt.hps.heal_every = 1
+
+tt = E:register_t("bullet_stage_16_overseer_destroy_holders", "bullet")
+tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.bullet.hit_time = fts(2)
+tt.hit_fx_only_no_target = true
+tt.image_width = 381
+tt.main_script.update = scripts.ray5_simple.update
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].name = "overseer_fx_overseer_destroyray_loop"
+tt.render.sprites[1].loop = false
+tt.sound_events.insert = "TowerArcaneWizardBasicAttack"
+tt.track_target = true
+tt.ray_duration = fts(26)
+
+tt = E:register_t("bullet_stage_16_overseer_downgrade_towers", "bullet_stage_16_overseer_destroy_holders")
+
+tt = E:register_t("enemy_overseer_hit_point", "enemy_KR5")
+E:add_comps(tt, "glare_kr5")
+tt.enemy.gold = 0
+tt.enemy.melee_slot = v(0, 0)
+tt.enemy.lives_cost = 1
+tt.health.hp_max = b.hp
+tt.health.armor = 0
+tt.health.magic_armor = 0
+tt.unit.blood_color = BLOOD_VIOLET
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.enemy_overseer_hit_point.update
+tt.health.on_damage = scripts.enemy_overseer_hit_point.on_damage
+tt.motion.max_speed = 0
+tt.render = nil
+tt.glare_kr5.regen_hp = 15
+tt.ui.click_rect = r(-30, -3, 60, 65)
+tt.ui.can_click = false
+tt.ui.can_select = false
+tt.vis.flags = bor(F_ENEMY, F_FLYING, F_BOSS)
+tt.vis.bans = bor(F_BLOCK, F_FREEZE, F_STUN) --bor(F_MOD, F_BLOCK)
+tt.move_bounds = v(25, 25)
+tt.move_speed = v(0.2, 0.2)
+
+tt = E:register_t("controller_stage_16_mouth_left")
+b = balance.specials.stage16_overseer.mouth_left
+E:add_comps(tt, "editor", "pos", "main_script", "render")
+tt.main_script.update = scripts.controller_stage_16_overseer_mouth_door.update
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "overseer_mouthDef"
+tt.render.sprites[1].name = "closeidle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 4
+tt.check_pos = v(282, 556)
+tt.check_cooldown = fts(5)
+tt.check_radius = 150
+tt.check_vis_flags = F_ENEMY
+tt.check_vis_bans = F_BOSS
+tt.config = b
+tt = E:register_t("controller_stage_16_mouth_right", "controller_stage_16_mouth_left")
+tt.render.sprites[1].flip_x = true
+b = balance.specials.stage16_overseer.mouth_right
+tt.check_pos = v(721, 553)
+tt.config = b
+tt = E:register_t("controller_stage_16_tentacle_left")
+b = balance.specials.stage16_overseer.tentacle_left
+
+E:add_comps(tt, "editor", "pos", "main_script", "render")
+
+tt.main_script.update = scripts.controller_stage_16_overseer_tentacle.update
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "overseer_tentacleDef"
+tt.render.sprites[1].name = "idletrapped"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 5
+tt.config = b
+tt.shot_delay = fts(24)
+tt.bullet = "bullet_stage_16_overseer_tentacle_spawn"
+tt.spawn_offset = v(90, -130)
+tt.spawn_pos = {v(76, 332), v(218, 424)}
+tt.spawn_path = {1, 2}
+tt.tentacle_mouth_template = "controller_stage_16_tentacle_mouth_left"
+tt.first_cooldown = balance.specials.stage16_overseer.first_time_cooldown
+tt.sound_rumble = "Stage16OverseerRumble"
+tt.sound_unchain = "Stage16OverseerUnchainLeftRight"
+tt.sound_spawn = "Stage16OverseerSpawnerCast"
+tt = E:register_t("controller_stage_16_tentacle_right", "controller_stage_16_tentacle_left")
+tt.render.sprites[1].flip_x = true
+b = balance.specials.stage16_overseer.tentacle_right
+tt.config = b
+tt.is_right = true
+tt.spawn_offset = v(-80, -150)
+tt.spawn_pos = {v(850, 446), v(860, 206)}
+tt.spawn_path = {3, 4}
+tt.tentacle_mouth_template = "controller_stage_16_tentacle_mouth_right"
+tt = E:register_t("controller_stage_16_tentacle_mouth_left")
+
+E:add_comps(tt, "editor", "pos", "main_script", "render")
+
+tt.main_script.update = scripts.controller_stage_16_overseer_tentacle_mouth.update
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "overseer_tentacle2Def"
+tt.render.sprites[1].name = "free"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
+tt = E:register_t("controller_stage_16_tentacle_mouth_right", "controller_stage_16_tentacle_mouth_left")
+tt.render.sprites[1].flip_x = true
+tt = E:register_t("controller_stage_16_overseer_eye1")
+
+E:add_comps(tt, "editor", "pos", "main_script", "render")
+
+tt.main_script.update = scripts.controller_stage_16_overseer_eye.update
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "overseer_minieye1Def"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -10
+tt.blink_min_cooldown = 3
+tt.blink_max_cooldown = 5
+tt.idle_anims = nil
+tt.idle_not_damaged = {"anim1", "anim2", "anim3"}
+tt.idle_damaged = {"eyehurttwitch"}
+tt.life_hurt_threshold = 66
+tt = E:register_t("controller_stage_16_overseer_eye2", "controller_stage_16_overseer_eye1")
+tt.render.sprites[1].prefix = "overseer_minieye2Def"
+tt.life_hurt_threshold = 33
+tt = E:register_t("controller_stage_16_overseer_eye3", "controller_stage_16_overseer_eye1")
+tt.render.sprites[1].prefix = "overseer_minieye3Def"
+tt.life_hurt_threshold = 33
+tt = E:register_t("controller_stage_16_overseer_eye4", "controller_stage_16_overseer_eye1")
+tt.render.sprites[1].prefix = "overseer_minieye4Def"
+tt.life_hurt_threshold = 66
+tt = E:register_t("controller_stage_16_tentacle_bottom_left")
+
+E:add_comps(tt, "editor", "pos", "render", "main_script")
+
+tt.main_script.update = scripts.controller_stage_16_tentacle_bottom.update
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "overseer_undertent1Def"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "overseer_underbacktents1Def"
+tt.render.sprites[2].name = "loop"
+tt.render.sprites[2].loop = true
+tt.render.sprites[2].exo = true
+tt.render.sprites[2].z = Z_BACKGROUND_COVERS - 1
+tt.render.sprites[2].offset = v(-140, -350)
+tt.phase_to_free = 4
+tt.sound_rumble = "Stage16OverseerRumble"
+tt.sound_unchain = "Stage16OverseerUnchainDown"
+tt = E:register_t("controller_stage_16_tentacle_bottom_right", "controller_stage_16_tentacle_bottom_left")
+tt.render.sprites[1].prefix = "overseer_undertent2Def"
+tt.render.sprites[2].prefix = "overseer_underbacktents2Def"
+tt.render.sprites[2].offset = v(350, -20)
+tt.phase_to_free = 5

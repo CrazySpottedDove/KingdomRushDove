@@ -7040,10 +7040,10 @@ local specials = {
 		heal_duration = {nil, nil, nil, 6, 8, 10},
 		heal_per_second = {nil, nil, nil, 150, 300, 50},
 		change_tower_amount = {nil, 1, 1, 2, 3},
-		disable_tower_cooldown = {}, -- deprecated
 		destroy_holder = {
 			cooldown = {nil, nil, nil, nil, nil, 21}
 		},
+		downgrade_cooldown = {nil, nil, 60, 55, 50, 45},
 		tentacle_spawns_per_phase = {0, 0, 3, 3, 4, 4},
 		tentacle_left = {
 			cooldown = {nil, nil, nil, 30, 20, 10}
