@@ -7293,6 +7293,10 @@ function scripts.controller_stage_16_overseer.update(this, store)
 	set_phase(1)
 
 	while true do
+		if this.health.hp < 0 then
+			this.health.dead = true
+		end
+
 		if this.health.dead then
 			LU.kill_all_enemies(store, true)
 
@@ -7422,6 +7426,11 @@ function scripts.controller_stage_16_overseer.update(this, store)
 			end
 		end
 
+		if this.health.hp < 0 then
+			this.health.dead = true
+			goto continue
+		end
+
 		if this.downgrade_cooldown[this.phase] ~= nil and store.tick_ts - downgrade_last_ts >= this.downgrade_cooldown[this.phase] then
 			local can_downgrade_towers = table.filter(store.towers, function(k, t)
 				return (not t.tower_holder) and t.template_name ~= "tower_barrack_1" and t.template_name ~= "tower_archer_1" and t.template_name ~= "tower_mage_1" and t.template_name ~= "tower_engineer_1"
@@ -7491,6 +7500,11 @@ function scripts.controller_stage_16_overseer.update(this, store)
 			end
 		end
 
+		if this.health.hp < 0 then
+			this.health.dead = true
+			goto continue
+		end
+
 		if this.glare_cooldown[this.phase] ~= nil and store.tick_ts - glare_last_ts >= this.glare_cooldown[this.phase] then
 			local can_affect_paths = {}
 			local direction
@@ -7535,6 +7549,11 @@ function scripts.controller_stage_16_overseer.update(this, store)
 			end
 		end
 
+		if this.health.hp < 0 then
+			this.health.dead = true
+			goto continue
+		end
+
 		if this.heal_cooldown[this.phase] ~= nil and store.tick_ts - last_heal_ts >= this.heal_cooldown[this.phase] then
 			last_heal_ts = store.tick_ts
 			local heal_duration = this.heal_duration[this.phase]
@@ -7561,6 +7580,11 @@ function scripts.controller_stage_16_overseer.update(this, store)
 			queue_insert(store, heal_mod)
 
 			last_idle_anim_ts = store.tick_ts
+		end
+
+		if this.health.hp < 0 then
+			this.health.dead = true
+			goto continue
 		end
 
 		if this.change_tower_cooldown[this.phase] and change_tower_cooldown and change_tower_cooldown <= store.tick_ts - change_tower_ts then
@@ -7669,6 +7693,11 @@ function scripts.controller_stage_16_overseer.update(this, store)
 			end
 		end
 
+		if this.health.hp < 0 then
+			this.health.dead = true
+			goto continue
+		end
+
 		check_change_phase()
 		check_last_phase_repeat()
 		check_change_damaged_state()
@@ -7676,9 +7705,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 		check_change_idle_anim()
 		check_greatly_hurt()
 
-		if this.health.hp < 0 then
-			this.health.dead = true
-		end
+		::continue::
 		coroutine.yield()
 	end
 end
@@ -7957,8 +7984,6 @@ end
 scripts.enemy_overseer_hit_point = {}
 
 function scripts.enemy_overseer_hit_point.update(this, store)
-	-- local going_right = math.random(0, 1) == 0
-	-- local going_up = math.random(0, 1) == 0
 	local nearest = P:nearest_nodes(this.pos.x, this.pos.y)
 	local path_pi, path_spi, path_ni
 	if #nearest > 0 then
@@ -7991,38 +8016,6 @@ function scripts.enemy_overseer_hit_point.update(this, store)
 		if overseer.health.dead then
 			break
 		end
-
-		-- if going_right then
-		-- 	if max_x <= this.pos.x then
-		-- 		going_right = false
-		-- 	else
-		-- 		this.pos.x = this.pos.x + this.move_speed.x
-		-- 	end
-		-- end
-
-		-- if not going_right then
-		-- 	if min_x >= this.pos.x then
-		-- 		going_right = true
-		-- 	else
-		-- 		this.pos.x = this.pos.x - this.move_speed.x
-		-- 	end
-		-- end
-
-		-- if going_up then
-		-- 	if max_y <= this.pos.y then
-		-- 		going_up = false
-		-- 	else
-		-- 		this.pos.y = this.pos.y + this.move_speed.y
-		-- 	end
-		-- end
-
-		-- if not going_up then
-		-- 	if min_y >= this.pos.y then
-		-- 		going_up = true
-		-- 	else
-		-- 		this.pos.y = this.pos.y - this.move_speed.y
-		-- 	end
-		-- end
 
 		coroutine.yield()
 	end

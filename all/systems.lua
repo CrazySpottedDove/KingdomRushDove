@@ -2970,6 +2970,9 @@ function sys.render:on_update(dt, ts, store)
 							end
 						end
 					end
+				else
+					-- fallback
+					s.exo_frame = {}
 				end
 			else
 				s.sync_flag = last_runs ~= s.runs

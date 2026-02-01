@@ -2061,11 +2061,8 @@ tt.main_script.remove = scripts.mod_track_target.remove
 --#endregion
 --#region tower_ray_lvl4
 tt = RT("tower_ray_lvl4", "tower")
-
 local b = balance.towers.ray
-
 AC(tt, "attacks", "vis", "tween", "powers")
-
 tt.tower.type = "ray"
 tt.info.enc_icon = 15
 tt.info.i18n_key = "TOWER_RAY_4"
@@ -2841,7 +2838,7 @@ tt.attacks.list[2].vis_bans = bor(F_NIGHTMARE)
 tt.attacks.list[2].shoot_time = fts(31)
 tt.attacks.list[2].load_time = fts(13)
 tt.attacks.list[2].sound = "TowerArcaneWizardDisintegrate"
-tt.attacks.list[2].excluded_templates = {"enemy_overseer_hit_point"}
+tt.attacks.list[2].excluded_templates = {}
 tt.attacks.list[2].count = 5
 tt.attacks.list[3] = CC("custom_attack")
 tt.attacks.list[3].animation = "skill2"

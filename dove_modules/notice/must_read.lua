@@ -4,7 +4,7 @@ local READ_EXPECTED_TIME = require("dove_modules.notice.read_expected_time")
 local utf8 = require("utf8")
 local storage = require("all.storage")
 MUST_READ.enabled = true
-local confirm_steps = {"我已阅读，继续游戏", "我真的已阅读全部内容", "我发誓已阅读完毕", "我为因未读完导致的任何事负责", "我承诺不人身攻击作者", "读太快了！好好读吧！"}
+local confirm_steps = {"我已阅读，继续游戏", "我真的已阅读全部内容", "我发誓已阅读完毕", "我为因未读完导致的任何事负责", "我承诺不人身攻击作者", "确认过快，请继续阅读"}
 
 local function wrap_text(text, font, maxw)
 	local lines = {}
