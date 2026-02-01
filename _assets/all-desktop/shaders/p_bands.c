@@ -1,3 +1,4 @@
+// 效果：三色带
 extern vec2 c_size;     // canvas size
 extern number c_ss;     // canvas supersampling
 extern vec4 c1;         // band colors
@@ -12,7 +13,7 @@ vec4 effect(vec4 color, Image texture, vec2 texture_coords, vec2 screen_coords)
 {
     float _sharpness = 3.0;
     if (sharpness != 0.0) { _sharpness = sharpness; }
-    
+
     vec4 texcolor = Texel(texture,texture_coords);
     bool in_margin = false;
     float blend = 1.0;
@@ -23,7 +24,7 @@ vec4 effect(vec4 color, Image texture, vec2 texture_coords, vec2 screen_coords)
         int _step = 5;
         int steps = int(ceil(margin * c_ss * float(_step)));
         for (int x=-steps; x<=steps; x++) {
-            for (int y=-steps; y<=steps; y++) {                        
+            for (int y=-steps; y<=steps; y++) {
                 vec2 tc = vec2(texture_coords.x + float(x)/float(c_size.x * float(_step)),
                                texture_coords.y + float(y)/float(c_size.y * float(_step)));
                 vec4 c = Texel(texture,tc);
@@ -33,8 +34,8 @@ vec4 effect(vec4 color, Image texture, vec2 texture_coords, vec2 screen_coords)
         }
         blend = avg / float(cnt);
         blend = pow(blend,_sharpness);
-    }   
-            
+    }
+
     vec4 o;
     if (texture_coords.y < p1)
         o = c1;
@@ -42,7 +43,7 @@ vec4 effect(vec4 color, Image texture, vec2 texture_coords, vec2 screen_coords)
         o = c2;
     else
         o = c3;
-            
+
     o = blend * o + (1.0-blend) * c2;
 
     //if (in_margin == true) { o = c2; }

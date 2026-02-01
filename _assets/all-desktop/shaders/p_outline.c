@@ -1,3 +1,4 @@
+// 外轮廓着色器
 extern vec2 c_size;      // canvas size
 extern number c_ss;  // canvas supersampling
 
@@ -21,11 +22,11 @@ vec4 effect(vec4 color, Image texture, vec2 texture_coords, vec2 screen_coords)
     vec4 _outline_color = vec4(1.0,1.0,0.0,0.5);
     int _samples = 5;
     number _threshold = 0.6;
-    
+
     if (thickness != 0.0) { _thickness = thickness; }
-    if (outline_color != vec4(0.0,0.0,0.0,0.0)) { _outline_color = outline_color; }    
+    if (outline_color != vec4(0.0,0.0,0.0,0.0)) { _outline_color = outline_color; }
     if (samples != 0)     { _samples = samples; }
-    if (threshold != 0.0) { _threshold = threshold; } 
+    if (threshold != 0.0) { _threshold = threshold; }
 
     vec4 texcolor = Texel(texture,texture_coords);
     if (texcolor[3] < 1.0) {
@@ -41,6 +42,6 @@ vec4 effect(vec4 color, Image texture, vec2 texture_coords, vec2 screen_coords)
                 }
             }
         }
-    }            
+    }
     return texcolor * color;
 }

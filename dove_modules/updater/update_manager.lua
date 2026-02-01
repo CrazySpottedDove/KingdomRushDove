@@ -1,3 +1,4 @@
+-- TODO: 修改服务器传输内容，前后进行文件完整性检测，避免替换了损坏的文件导致用户蓝屏且无法修复
 local M = {}
 local update_io = require("dove_modules.updater.io")
 
@@ -177,7 +178,7 @@ function M.sync_assets()
 
 	local ok, resp_json = pcall(json.decode, response_body)
 	if not ok or not resp_json then
-		log_error("无法解码资源同步的服务器回复。")
+		log_error("无法解码资源同步的服务器回复。可能服务器繁忙，可稍后尝试重试。")
 		return false
 	end
 
@@ -194,12 +195,17 @@ function M.sync_assets()
 
 	-- 下载文件
 	local url = server_address .. "assets/download"
-	for i, file_info in ipairs(resp_json.need_files or {}) do
+	local retries = 0
+	local max_retries = 5
+	local i = 1
+	local file_count = #resp_json.need_files
+	while i <= file_count do
+		local file_info = resp_json.need_files[i]
 		local file_path = file_info.file
 		local local_file_path = "_assets/" .. file_path
 		local local_file_info = FS.getInfo(local_file_path)
 		if not (local_file_info and local_file_info.size == file_info.size) then
-			local download_code, file_content = https.request(url, {
+			local download_code, file_content, response_header = https.request(url, {
 				method = "POST",
 				headers = {
 					["Content-Type"] = "application/json"
@@ -209,19 +215,35 @@ function M.sync_assets()
 				})
 			})
 			if download_code == 200 then
-				ensure_parent_dir(local_file_path)
-				local success, err = write_file(local_file_path, file_content)
-				if not success then
-					log_error("写入文件失败: " .. local_file_path .. " (" .. tostring(err) .. ")")
-					return false
+				if tonumber(response_header["content-length"]) == #file_content then
+					ensure_parent_dir(local_file_path)
+					local success, err = write_file(local_file_path, file_content)
+					if not success then
+						log_error("写入文件失败: " .. local_file_path .. " (" .. tostring(err) .. ")")
+						return false
+					end
+					log_info(string.format("下载美术资源 (%d/%d): %s", i, #resp_json.need_files, file_path))
+					retries = 0
+					i = i + 1
+				else
+					-- 可能传输中间发生了网络中断，重试。
+					retries = retries + 1
+					if retries > max_retries then
+						log_error("下载文件失败（多次重试无效）: " .. file_path)
+						return false
+					else
+						log_info("文件长度不符，正在重试（第 " .. retries .. " 次）: " .. file_path)
+					end
 				end
-				log_info(string.format("下载美术资源 (%d/%d): %s", i, #resp_json.need_files, file_path))
 			else
 				log_error("下载文件失败: " .. file_path .. " (Code: " .. download_code .. ")")
 				return false
 			end
+		else
+			i = i + 1
 		end
 	end
+
 	return true
 end
 
@@ -236,8 +258,15 @@ function M.upgrade_new_version(info)
 	-- 1. 下载到临时目录
 	local added_or_modified = info.added_or_modified_files or {}
 	local url = server_address .. "file"
-	for i, file_path in ipairs(added_or_modified) do
-		local download_code, content = https.request(url, {
+
+	local i = 1
+	local file_count = #added_or_modified
+	local max_retries = 5
+	local retries = 0
+
+	while i <= file_count do
+		local file_path = added_or_modified[i]
+		local download_code, content, response_header = https.request(url, {
 			method = "POST",
 			headers = {
 				["Content-Type"] = "application/json"
@@ -246,15 +275,30 @@ function M.upgrade_new_version(info)
 				file = file_path
 			})
 		})
+
 		if download_code == 200 then
-			local tmp_file_path = tmp_dir .. "/" .. file_path
-			FS.createDirectory(tmp_file_path:match("(.+)/"))
-			if not FS.write(tmp_file_path, content) then
-				log_error("写入临时文件失败: " .. tmp_file_path)
-				has_error = true
-				break
+			if tonumber(response_header["content-length"]) == #content then
+				local tmp_file_path = tmp_dir .. "/" .. file_path
+				FS.createDirectory(tmp_file_path:match("(.+)/"))
+				if not FS.write(tmp_file_path, content) then
+					log_error("写入临时文件失败: " .. tmp_file_path)
+					has_error = true
+					break
+				end
+				log_info(string.format("下载代码资源 (%d/%d): %s", i, #added_or_modified, file_path))
+				retries = 0
+				i = i + 1
+			else
+				-- 可能传输中间发生了网络中断，重试。
+				retries = retries + 1
+				if retries > max_retries then
+					log_error("下载代码文件失败（多次重试无效）: " .. file_path)
+					has_error = true
+					break
+				else
+					log_info("文件长度不符，正在重试（第 " .. retries .. " 次）: " .. file_path)
+				end
 			end
-			log_info(string.format("下载代码资源 (%d/%d): %s", i, #added_or_modified, file_path))
 		else
 			log_error("下载代码文件失败: " .. file_path .. " (Code: " .. download_code .. ")")
 			has_error = true

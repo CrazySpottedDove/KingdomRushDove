@@ -1,4 +1,4 @@
-// dashed_path.c — fragment-only for shader_db
+// 虚线路径着色器
 extern number dash_length;   // 每段虚线长度
 extern number gap_length;    // 间隔长度
 extern number dash_offset;   // 虚线滚动偏移
