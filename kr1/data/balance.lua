@@ -7027,7 +7027,7 @@ local specials = {
 		}
 	},
 	stage16_overseer = {
-		hp = 36000,
+		hp = 40000,
 		first_time_cooldown = 5,
 		phase_per_hp_threshold = {100, 90, 80, 70, 50, 20},
 		phase_per_time = {30, 75, 90, 120, 100000000},
@@ -7036,7 +7036,7 @@ local specials = {
 		glare_duration = {nil, nil, nil, 4, 5, 6},
 		heal_cooldown = {nil, nil, nil, 30, 30, 15},
 		heal_duration = {nil, nil, nil, 6, 8, 10},
-		heal_per_second = {nil, nil, nil, 150, 450, 50},
+		heal_per_second = {nil, nil, nil, 150, 450, 200},
 		change_tower_amount = {nil, 1, 1, 2, 3},
 		destroy_holder = {
 			cooldown = {nil, nil, nil, nil, nil, 20}
@@ -7059,7 +7059,13 @@ local specials = {
 			damage_type = DAMAGE_PHYSICAL
 		},
 		glare1 = {{-1, 0}, {-1, 0}, {-1, 0}, {6, 30}, {6, 20}, {60, 30}},
-		glare2 = {{-1, 0}, {8, 25}, {6, 30}, {-1, 0}, {-1, 0}, {6, 30}}
+		glare2 = {{-1, 0}, {8, 25}, {6, 30}, {-1, 0}, {-1, 0}, {6, 30}},
+		slow = {
+			factor = 0.5,
+			duration = 12
+		},
+		slow_cooldown = {nil, 50, 50, 45, 40, 35},
+		slow_count = {nil, 1, 2, 3, 3, 2}
 	},
 	stage18_eridan = {
 		ranged_attack = {

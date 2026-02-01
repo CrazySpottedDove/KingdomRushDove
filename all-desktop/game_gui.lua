@@ -1792,7 +1792,7 @@ function game_gui.swap_tower()
 	local e = game_gui.last_tower_hover
 	local tower_selected = game_gui.swap_entity
 
-	if not e or not e.ui then
+	if not e or not e.ui or not tower_selected then
 		goto lable_return
 	end
 

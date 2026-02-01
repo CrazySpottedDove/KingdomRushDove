@@ -25,9 +25,9 @@ end)[1]
 store.game_gui:set_boss(overseer)
 U.insert_insert_hook(store,overseer.id,function(this,store)
 if this.enemy and this.enemy.gold then
-this.enemy.gold=this.enemy.gold*2
+this.enemy.gold=math.ceil(this.enemy.gold*2.5)
 if this.enemy.gold==0 then
-this.enemy.gold=1
+this.enemy.gold=2
 end
 end
 end)

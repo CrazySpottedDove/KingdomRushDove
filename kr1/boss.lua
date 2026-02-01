@@ -3418,6 +3418,8 @@ tt.heal_duration = b.heal_duration
 tt.heal_per_second = b.heal_per_second
 tt.downgrade_cooldown = b.downgrade_cooldown
 tt.downgrade_count = b.downgrade_count
+tt.slow_cooldown = b.slow_cooldown
+tt.slow_count = b.slow_count
 tt.holders_close = {"6", "7", "8", "9", "10"}
 tt.swap_delay = fts(60)
 tt.destroy_tower_cooldown = b.destroy_tower_cooldown
@@ -3526,6 +3528,17 @@ E:add_comps(tt, "hps")
 tt.main_script.insert = scripts.mod_hps.insert
 tt.main_script.update = scripts.mod_hps.update
 tt.hps.heal_every = 1
+
+tt = E:register_t("mod_slow_overseer", "modifier")
+tt.main_script.insert = scripts.mod_slow_overseer.insert
+tt.main_script.update = scripts.mod_slow_overseer.update
+tt._shader = "p_tint"
+tt._shader_args = {
+	tint_factor = 0.5,
+	tint_color = {0.5, 0, 0.5, 1}
+}
+tt.slow_factor = b.slow.factor
+tt.modifier.duration = b.slow.duration
 
 tt = E:register_t("bullet_stage_16_overseer_destroy_holders", "bullet")
 tt.bullet.damage_type = DAMAGE_NONE

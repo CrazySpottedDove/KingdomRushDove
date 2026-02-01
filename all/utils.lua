@@ -2919,4 +2919,20 @@ function U.tower_block_dec(tower_entity)
 	end
 end
 
+function U.entity_insert_shader(entity, shader, shader_args)
+	for i = 1, #entity.render.sprites do
+		local sprite = entity.render.sprites[i]
+		sprite._shader = shader
+		sprite.shader_args = shader_args
+	end
+end
+
+function U.entity_remove_shader(entity)
+	for i = 1, #entity.render.sprites do
+		local sprite = entity.render.sprites[i]
+		sprite._shader = nil
+		sprite.shader_args = nil
+	end
+end
+
 return U

@@ -4,7 +4,7 @@ local scripts = require("scripts")
 
 local AC = require("achievements")
 local log = require("lib.klua.log"):new("game_scripts")
-
+local SH = require("klove.shader_db")
 require("lib.klua.table")
 require("constants")
 
@@ -7129,6 +7129,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 	local destroy_holder_last_ts = store.tick_ts
 	local glare_last_ts = store.tick_ts
 	local downgrade_last_ts = store.tick_ts
+	local slow_last_ts = store.tick_ts
 	local last_heal_ts = store.tick_ts
 	local next_holder_to_destroy_i = 1
 	local next_idle_anim_cooldown = math.random(this.idle_cooldown_min, this.idle_cooldown_max)
@@ -7230,6 +7231,12 @@ function scripts.controller_stage_16_overseer.update(this, store)
 		if this._greatly_hurt then
 			this._greatly_hurt = false
 			spawn_blood()
+			change_tower_ts = change_tower_ts - 1
+			destroy_holder_last_ts = destroy_holder_last_ts - 1
+			glare_last_ts = glare_last_ts - 1
+			downgrade_last_ts = downgrade_last_ts - 1
+			last_heal_ts = last_heal_ts - 1
+			slow_last_ts = slow_last_ts - 1
 		end
 	end
 
@@ -7634,6 +7641,10 @@ function scripts.controller_stage_16_overseer.update(this, store)
 						change_tower_fx.tween.ts = store.tick_ts
 
 						queue_insert(store, change_tower_fx)
+						towers[tower_index].ui.can_click = false
+						holders[tower_index].ui.can_click = false
+						towers[tower_index].tower.blocked = true
+						holders[tower_index].tower.blocked = true
 						signal.emit("force-tower-swap", towers[tower_index], holders[tower_index])
 					elseif (not holders or tower_index > #holders) and #towers >= tower_index + 1 then
 						local change_tower_fx = E:create_entity(this.change_towers_template)
@@ -7652,6 +7663,10 @@ function scripts.controller_stage_16_overseer.update(this, store)
 
 						queue_insert(store, change_tower_fx)
 						signal.emit("force-tower-swap", towers[tower_index], towers[tower_index + 1])
+						towers[tower_index].ui.can_click = false
+						towers[tower_index + 1].ui.can_click = false
+						towers[tower_index].tower.blocked = true
+						towers[tower_index + 1].tower.blocked = true
 						tower_index = tower_index + 1
 					end
 
@@ -7685,11 +7700,70 @@ function scripts.controller_stage_16_overseer.update(this, store)
 
 				U.y_animation_wait(this)
 
+				tower_index = 1
+				for i = 1, this.change_tower_amount[this.phase] do
+					if tower_index <= #towers and holders and tower_index <= #holders then
+						towers[tower_index].ui.can_click = true
+						holders[tower_index].ui.can_click = true
+						towers[tower_index].tower.blocked = false
+						holders[tower_index].tower.blocked = false
+					elseif (not holders or tower_index > #holders) and #towers >= tower_index + 1 then
+						towers[tower_index].ui.can_click = true
+						towers[tower_index + 1].ui.can_click = true
+						towers[tower_index].tower.blocked = false
+						towers[tower_index + 1].tower.blocked = false
+						tower_index = tower_index + 1
+					end
+
+					tower_index = tower_index + 1
+				end
+
 				last_idle_anim_ts = store.tick_ts
 				change_tower_ts = start_ts
 				change_tower_cooldown = this.change_tower_cooldown[this.phase]
 			else
-				change_tower_ts = store.tick_ts - change_tower_cooldown + fts(1) - 1e-06
+				change_tower_ts = change_tower_ts + 1
+			end
+		end
+
+		if this.health.hp < 0 then
+			this.health.dead = true
+			goto continue
+		end
+
+		if this.slow_cooldown[this.phase] ~= nil and store.tick_ts - slow_last_ts >= this.slow_cooldown[this.phase] then
+			local towers = table.filter(store.towers, function(k, v)
+				return not v.tower_holder
+			end)
+			local slow_count = math.min(this.slow_count[this.phase], #towers)
+			if #towers > 0 then
+				towers = table.random_order(towers)
+				S:queue(this.sound_teleport_charge)
+				slow_last_ts = store.tick_ts
+
+				U.animation_start(this, "swaptowers1", false, store.tick_ts, nil, 1)
+
+				for i = 1, slow_count do
+					local change_tower_fx = E:create_entity(this.change_towers_template)
+					change_tower_fx.pos = towers[i].pos
+					change_tower_fx.render.sprites[1].ts = store.tick_ts
+					change_tower_fx.tween.ts = store.tick_ts
+					queue_insert(store, change_tower_fx)
+				end
+
+				U.y_wait(store, this.swap_delay + 1)
+
+				for i = 1, slow_count do
+					local slow_mod = E:create_entity("mod_slow_overseer")
+					slow_mod.modifier.source_id = this.id
+					slow_mod.modifier.target_id = towers[i].id
+					queue_insert(store, slow_mod)
+				end
+
+				U.y_animation_wait(this)
+				last_idle_anim_ts = store.tick_ts
+			else
+				slow_last_ts = slow_last_ts + 1
 			end
 		end
 
@@ -7978,6 +8052,36 @@ function scripts.controller_stage_16_overseer_tentacle_mouth.update(this, store)
 
 		coroutine.yield()
 	end
+end
+
+scripts.mod_slow_overseer = {}
+
+function scripts.mod_slow_overseer.insert(this, store)
+	local target = store.towers[this.modifier.target_id]
+	if not target then
+		return false
+	end
+	SU.insert_tower_cooldown_buff(store.tick_ts, target, 1 / this.slow_factor)
+	U.entity_insert_shader(target, SH:get(this._shader), this._shader_args)
+	return true
+end
+
+function scripts.mod_slow_overseer.update(this, store)
+	local target = store.towers[this.modifier.target_id]
+	if not target then
+		queue_remove(store, this)
+		return
+	end
+
+	local stop_time = store.tick_ts + this.modifier.duration
+	while store.tick_ts < stop_time do
+		coroutine.yield()
+	end
+
+	SU.remove_tower_cooldown_buff(store.tick_ts, target, 1 / this.slow_factor)
+	U.entity_remove_shader(target)
+
+	queue_remove(store, this)
 end
 
 -- 受击点
