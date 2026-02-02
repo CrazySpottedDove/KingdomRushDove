@@ -1631,8 +1631,6 @@ scripts.tower_mage = {}
 function scripts.tower_mage.get_info(this)
 	local o = scripts.tower_common.get_info(this)
 
-	o.type = STATS_TYPE_TOWER_MAGE
-
 	if this.attacks and this.attacks.list[1].loops then
 		local loops = this.attacks.list[1].loops
 

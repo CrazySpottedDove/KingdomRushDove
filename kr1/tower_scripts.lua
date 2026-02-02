@@ -16995,20 +16995,23 @@ function scripts.tower_hermit_toad.get_info(this)
 	local index = 1
 	local type = STATS_TYPE_TOWER
 
-	if this.tower.kind == TOWER_KIND_MAGE then
+	if this.tower_upgrade_persistent_data.current_mode == 0 then
 		index = 2
-		type = STATS_TYPE_TOWER_MAGE
 	end
+	-- if this.tower.kind == TOWER_KIND_MAGE then
+	-- 	index = 2
+	-- 	type = STATS_TYPE_TOWER_MAGE
+	-- end
 
-	if this.changing_to_new_mode then
-		if this.changing_to_new_mode == 0 then
-			index = 1
-			type = STATS_TYPE_TOWER
-		else
-			index = 2
-			type = STATS_TYPE_TOWER_MAGE
-		end
-	end
+	-- if this.changing_to_new_mode then
+	-- 	if this.changing_to_new_mode == 0 then
+	-- 		index = 1
+	-- 		type = STATS_TYPE_TOWER
+	-- 	else
+	-- 		index = 2
+	-- 		type = STATS_TYPE_TOWER_MAGE
+	-- 	end
+	-- end
 
 	local min, max, d_type
 
@@ -17042,10 +17045,11 @@ end
 function scripts.tower_hermit_toad.update(this, store)
 	local last_ts = store.tick_ts
 	local a_name, a_flip, angle_idx, target, targets, pred_pos
-	local attack_engineer = this.attacks.list[1]
-	local attack_mage = this.attacks.list[2]
-	local attack_instakill = this.attacks.list[3]
-	local attack_jump = this.attacks.list[4]
+	local attacks = this.attacks
+	local attack_engineer = attacks.list[1]
+	local attack_mage = attacks.list[2]
+	local attack_instakill = attacks.list[3]
+	local attack_jump = attacks.list[4]
 	local attack
 	local pow_instakill = this.powers.instakill
 	local pow_jump = this.powers.jump
@@ -17211,7 +17215,9 @@ function scripts.tower_hermit_toad.update(this, store)
 		pause_pipe_ps()
 		pause_area_ps()
 
-		if with_animation == nil or with_animation then
+		local is_init = not (with_animation == nil or with_animation)
+
+		if not is_init then
 			local anim_name = new_mode == MODE_MAGE and "changetower2" or "changetower"
 
 			U.animation_start(this, anim_name, nil, store.tick_ts, false, 3)
@@ -17226,15 +17232,15 @@ function scripts.tower_hermit_toad.update(this, store)
 		this.tower_upgrade_persistent_data.current_mode = new_mode
 		this.render.sprites[2].name = this.idle_modes[new_mode + 1]
 
-		if new_mode == MODE_ENGINEER then
-			tw.kind = TOWER_KIND_ENGINEER
-			this.attacks.range = this.attacks.range / attack_mage.range * attack_engineer.range
-		else
-			tw.kind = TOWER_KIND_MAGE
-			this.attacks.range = this.attacks.range / attack_engineer.range * attack_mage.range
+		if not is_init then
+			if new_mode == MODE_ENGINEER then
+				this.attacks.range = this.attacks.range / attack_mage.range * attack_engineer.range
+			else
+				this.attacks.range = this.attacks.range / attack_engineer.range * attack_mage.range
+			end
 		end
 
-		if with_animation == nil or with_animation then
+		if not is_init then
 			create_splash_fx()
 			U.animation_start(this, get_mode_anim(this.render.bubbles_anims, new_mode), nil, this.render.sprites[4].ts, true, 4)
 			U.y_animation_wait(this, 3)
@@ -17381,7 +17387,7 @@ function scripts.tower_hermit_toad.update(this, store)
 
 			if ready_to_use_power(pow_instakill, attack_instakill, store, tw.cooldown_factor) then
 				attack = attack_instakill
-				target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), attack.range, attack.vis_flags, attack.vis_bans)
+				target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), attacks.range, attack.vis_flags, attack.vis_bans)
 
 				if (not target) or (U.has_modifiers(store, target, attack.mark_mod)) then
 					attack.ts = attack.ts + fts(10)
@@ -17413,7 +17419,7 @@ function scripts.tower_hermit_toad.update(this, store)
 					y_toad_wait_time_check_change_mode(attack.shoot_time)
 					S:queue(attack.sound)
 
-					local retarget = U.detect_foremost_enemy_in_range_filter_off(tpos(this), attack.range, attack.vis_flags, attack.vis_bans)
+					local retarget = U.detect_foremost_enemy_in_range_filter_off(tpos(this), attacks.range, attack.vis_flags, attack.vis_bans)
 
 					if retarget then
 						pred_pos = U.calculate_enemy_ffe_pos(retarget, attack.node_prediction)
@@ -17558,7 +17564,7 @@ function scripts.tower_hermit_toad.update(this, store)
 
 			if ready_to_use_power(pow_jump, attack_jump, store, tw.cooldown_factor) then
 				attack = attack_jump
-				targets = U.find_enemies_in_range_filter_off(tpos(this), attack.range, attack.vis_flags, attack.vis_bans)
+				targets = U.find_enemies_in_range_filter_off(tpos(this), attacks.range, attack.vis_flags, attack.vis_bans)
 
 				if not targets or #targets < attack.min_targets then
 					attack.ts = attack.ts + fts(10)
@@ -17580,7 +17586,7 @@ function scripts.tower_hermit_toad.update(this, store)
 					U.animation_start(this, get_mode_anim(attack.animation_disappear), af, store.tick_ts, true, 3)
 					y_toad_wait_time_check_change_mode(attack.jump_in_delay)
 
-					local retarget = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos(this), attack.range, attack.node_prediction, attack.vis_flags, attack.vis_bans, attack.radius)
+					local retarget = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos(this), attacks.range, attack.node_prediction, attack.vis_flags, attack.vis_bans, attack.radius)
 
 					if retarget then
 						pred_pos = U.calculate_enemy_ffe_pos(retarget, attack.node_prediction)
@@ -17704,7 +17710,7 @@ function scripts.tower_hermit_toad.update(this, store)
 			end
 
 			if ready_to_attack(attack, store, tw.cooldown_factor) then
-				target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, attack.vis_flags, attack.vis_bans)
+				target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), attacks.range, attack.vis_flags, attack.vis_bans)
 
 				if not target then
 					attack.ts = attack.ts + fts(10)
@@ -17727,7 +17733,7 @@ function scripts.tower_hermit_toad.update(this, store)
 				y_toad_wait_time_check_change_mode(attack.shoot_time)
 				S:queue(attack.sound)
 
-				local retarget = U.detect_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, attack.vis_flags, attack.vis_bans)
+				local retarget = U.detect_foremost_enemy_in_range_filter_off(tpos(this), attacks.range, attack.vis_flags, attack.vis_bans)
 
 				if retarget then
 					pred_pos = U.calculate_enemy_ffe_pos(retarget, attack.node_prediction)

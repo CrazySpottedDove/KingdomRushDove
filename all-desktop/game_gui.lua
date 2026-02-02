@@ -748,30 +748,31 @@ end
 
 -- 为移动设备添加快捷按钮
 function game_gui:add_mobile_shortcut_buttons()
-	if not (love.system.getOS() == "Android") then
-		return
-	end
+-- 占用了一些位置，暂时禁用
+-- if not (love.system.getOS() == "Android") then
+-- 	return
+-- end
 
-	local ks = self.key_shortcuts
-	local y = self.sh - 60
-	local idx = 0
+-- local ks = self.key_shortcuts
+-- local y = self.sh - 60
+-- local idx = 0
 
-	for group, keys in pairs(ks) do
-		local key = type(keys) == "table" and keys[1] or keys
+-- for group, keys in pairs(ks) do
+-- 	local key = type(keys) == "table" and keys[1] or keys
 
-		idx = idx + 1
+-- 	idx = idx + 1
 
-		local btn = KButton:new(V.v(80, 40))
+-- 	local btn = KButton:new(V.v(80, 40))
 
-		btn.pos = V.v(20 + (idx - 1) * 90, y)
-		btn.text = tostring(key) -- 直接显示key名
+-- 	btn.pos = V.v(20 + (idx - 1) * 90, y)
+-- 	btn.text = tostring(key) -- 直接显示key名
 
-		function btn:on_click()
-			game_gui:keypressed(key)
-		end
+-- 	function btn:on_click()
+-- 		game_gui:keypressed(key)
+-- 	end
 
-		self.layer_gui_top:add_child(btn)
-	end
+-- 	self.layer_gui_top:add_child(btn)
+-- end
 end
 
 function game_gui:keypressed(key, isrepeat)
@@ -6846,7 +6847,8 @@ function TowerMenuTooltip:show(entity, item)
 		elseif stats.type == STATS_TYPE_TOWER or stats.type == STATS_TYPE_TOWER_MAGE then
 			self.damage_label.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
 
-			self.damage_label:set_image(stats.type == STATS_TYPE_TOWER_MAGE and "tooltip_icons_0010" or "tooltip_icons_0007", V.v(self.damage_label.size.x, self.damage_label.size.y))
+			local ddi = data.damage_icons
+			self.damage_label:set_image(ddi[stats.damage_icon] or ddi[band(DAMAGE_BASE_TYPES, stats.damage_type or 0)] or ddi.default, V.v(self.damage_label.size.x, self.damage_label.size.y))
 
 			self.cooldown_label.text = GU.cooldown_value_desc(stats.cooldown)
 			self.damage_label.hidden = false
@@ -6864,9 +6866,6 @@ function TowerMenuTooltip:show(entity, item)
 
 		self.title.text = texts.tt_title
 		self.desc.text = U.balance_format(texts.tt_desc)
-	-- if power.level == power.max_level then
-	-- self.hidden = true
-	-- end
 	elseif item.action == "tw_buy_soldier" or item.action == "tw_buy_attack" or item.action == "tw_unblock" or item.action == "tw_repair" then
 		if item.tt_title then
 			self.title.text = item.tt_title
