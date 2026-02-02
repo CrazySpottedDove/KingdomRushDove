@@ -1919,9 +1919,6 @@ return {
 	["kr1-desktop/images/fullhd/screen_map_flags-1.dds"] = {
 		size = 654432
 	},
-	["kr1-desktop/images/fullhd/screen_settings-1.dds"] = {
-		size = 1398256
-	},
 	["kr1-desktop/images/fullhd/screen_slots-1.dds"] = {
 		size = 5592560
 	},

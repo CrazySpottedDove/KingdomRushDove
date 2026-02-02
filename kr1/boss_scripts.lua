@@ -6,7 +6,7 @@ local AC = require("achievements")
 local log = require("lib.klua.log"):new("game_scripts")
 local SH = require("klove.shader_db")
 require("lib.klua.table")
-require("constants")
+require("all.constants")
 
 local km = require("lib.klua.macros")
 local signal = require("lib.hump.signal")

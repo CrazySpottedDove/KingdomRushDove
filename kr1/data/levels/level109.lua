@@ -8,7 +8,7 @@ local V=require("klua.vector")
 local P=require("path_db")
 local SU=require("script_utils")
 local GR=require("grid_db")
-require("constants")
+require("all.constants")
 local function fts(v)
 return v/FPS
 end

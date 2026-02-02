@@ -1,6 +1,5 @@
--- TODO: 修改服务器传输内容，前后进行文件完整性检测，避免替换了损坏的文件导致用户蓝屏且无法修复
 local M = {}
-local update_io = require("dove_modules.updater.io")
+-- local update_io = require("dove_modules.updater.io")
 
 local G = love.graphics
 local FS = love.filesystem
@@ -8,9 +7,9 @@ local FS = love.filesystem
 -- 本模块只在非安卓平台启用
 local apply_upgrade = love.system.getOS() ~= "Android"
 
-local update_config = update_io.load()
+-- local update_config = update_io.load()
 
-apply_upgrade = apply_upgrade and update_config.enable and not (arg[2] == "debug" or arg[2] == "release")
+apply_upgrade = apply_upgrade and not (arg[2] == "debug" or arg[2] == "release")
 
 local is_windows = package.config:sub(1, 1) == "\\"
 
@@ -18,10 +17,14 @@ local is_windows = package.config:sub(1, 1) == "\\"
 local STATE_DOWNLOADING_ASSETS = 1
 local STATE_DOWNLOADING_CODE = 2
 local STATE_COMMITTING_CHANGES = 3
+local STATE_SELECT_URL = 4
+local STATE_CHECK_UPDATE = 5
 local STATE_STRING_MAP = {
 	[STATE_DOWNLOADING_ASSETS] = "下载美术资源中（可能需要较长时间）……",
 	[STATE_DOWNLOADING_CODE] = "下载代码资源中……",
-	[STATE_COMMITTING_CHANGES] = "提交更新事务中……"
+	[STATE_COMMITTING_CHANGES] = "提交更新事务中……",
+	[STATE_SELECT_URL] = "选择更新地址中……",
+	[STATE_CHECK_UPDATE] = "检查更新中……"
 }
 local state = STATE_DOWNLOADING_ASSETS
 local update_log_line_max_count = 20
@@ -107,47 +110,6 @@ end
 local server_address = nil
 local https
 local json = require("lib.json")
-
-if apply_upgrade then
-	https = require("https")
-
-	local code, response = https.request(update_config.last_site)
-
-	if code == 200 then
-		server_address = update_config.last_site
-		print("Using last known update server:", server_address)
-		update_io.save(update_config)
-	else
-		print("Last known update server not reachable:", update_config.last_site)
-		print("Response code:", code)
-		print("Response body:", response)
-
-		local candidate_sites = {"https://krdovedownload6.crazyspotteddove.top:52000/", "https://krdovedownload4.crazyspotteddove.top/"}
-
-		for _, site in ipairs(candidate_sites) do
-			if site ~= update_config.last_site then
-				local code, response = https.request(site)
-				if code == 200 then
-					server_address = site
-					print("Selected update server:", server_address)
-					-- 更新配置文件
-					update_config.last_site = site
-					update_io.save(update_config)
-					break
-				else
-					print("Update server not reachable:", site)
-					print("Response code:", code)
-					print("Response body:", response)
-				end
-			end
-		end
-
-		if not server_address then
-			print("No available update server found. Disabling updates.")
-			apply_upgrade = false
-		end
-	end
-end
 
 local update_response = nil
 
@@ -358,7 +320,48 @@ function M.upgrade_new_version(info)
 	return not has_error
 end
 
-function M.check_update()
+function M.check_update(params, storage)
+	apply_upgrade = apply_upgrade and params.update_enabled
+	if apply_upgrade then
+		https = require("https")
+		set_state(STATE_SELECT_URL)
+		log_info("尝试使用：" .. params.update_last_site)
+		local code, response = https.request(params.update_last_site)
+
+		if code == 200 then
+			server_address = params.update_last_site
+			log_info("选中更新地址：" .. server_address)
+		else
+			log_info("该更新地址不可用，返回代码：" .. tostring(code))
+			log_info("返回内容：" .. tostring(response))
+
+			local candidate_sites = {"https://krdovedownload6.crazyspotteddove.top:52000/", "https://krdovedownload4.crazyspotteddove.top/"}
+
+			for _, site in ipairs(candidate_sites) do
+				if site ~= params.update_last_site then
+					log_info("尝试使用候选更新地址：" .. site)
+					local code, response = https.request(site)
+					if code == 200 then
+						server_address = site
+						log_info("选中更新地址：" .. server_address)
+						-- 更新配置文件
+						params.update_last_site = site
+
+						storage:save_settings(params)
+						break
+					else
+						log_info("该更新地址不可用，返回代码：" .. tostring(code))
+						log_info("返回内容：" .. tostring(response))
+					end
+				end
+			end
+
+			if not server_address then
+				log_info("未找到可用的更新地址，取消更新检查。")
+				apply_upgrade = false
+			end
+		end
+	end
 	if not apply_upgrade then
 		return
 	end
@@ -367,6 +370,7 @@ function M.check_update()
 		return
 	end
 	local url = server_address .. "commits"
+	set_state(STATE_CHECK_UPDATE)
 	local code, response = https.request(url, {
 		method = "POST",
 		headers = {
@@ -388,12 +392,13 @@ function M.check_update()
 	else
 		print("无法检查更新。服务器返回代码：" .. code)
 		print("服务器回复: " .. (response or "nil"))
-		print("失败的请求: " .. url .. " with commit_hash " .. commit_hash)
+		print("失败的请求: " .. url .. " commit_hash：" .. commit_hash)
 		apply_upgrade = false
 	end
 end
 
-function M.run()
+function M.run(params, storage)
+	M.check_update(params, storage)
 	if not apply_upgrade then
 		return
 	end

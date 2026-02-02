@@ -262,6 +262,7 @@ function mu.default_params(params, game_name, game_target, game_platform)
 end
 
 function mu.apply_params(params, game_name, game_target, game_platform)
+	require("all.debug_macros")
 	DRAW_FPS = tonumber(params.fps)
 	TICK_LENGTH = 1 / DRAW_FPS
 	SOUND_POOL_SIZE_FACTOR = params.sound_pool_size

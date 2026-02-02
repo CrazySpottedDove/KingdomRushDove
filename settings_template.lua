@@ -12,5 +12,7 @@ return {
 	volume_music = 1,
 	vsync = false,
 	width = 2560,
-	sound_pool_size = 1
+	sound_pool_size = 1,
+	update_enabled = true,
+	update_last_site = "https://krdovedownload6.crazyspotteddove.top:52000/"
 }

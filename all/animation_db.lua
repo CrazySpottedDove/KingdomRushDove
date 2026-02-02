@@ -69,7 +69,7 @@ function animation_db:load()
 			end
 		end
 	end
-
+	self.tick_length = TICK_LENGTH
 	self.db = {}
 
 	local f = string.format("%s/data/game_animations.lua", KR_PATH_GAME)

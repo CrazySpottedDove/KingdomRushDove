@@ -16,7 +16,8 @@ local i18n = require("i18n")
 local fallback_resolutions = {v(800, 600), v(1024, 768), v(1300, 768), v(1500, 800), v(1422, 800), v(1600, 1080), v(1365, 768), v(1280, 720), v(1920, 1080)}
 local screen_settings = {}
 
-screen_settings.required_textures = {"screen_settings"}
+-- screen_settings.required_textures = {"screen_settings"}
+screen_settings.required_textures = {}
 screen_settings.ref_h = 1080
 
 local colors = {
@@ -84,7 +85,7 @@ function screen_settings:init(sw, sh, params, done_callback)
 	local full_screen_modes = love.window.getFullscreenModes(1)
 
 	if full_screen_modes and #full_screen_modes > 0 then
-		for _, item in pairs(love.window.getFullscreenModes(1)) do
+		for _, item in pairs(full_screen_modes) do
 			table.insert(resolutions, v(tonumber(item.width), tonumber(item.height)))
 		end
 	else
@@ -105,15 +106,15 @@ function screen_settings:init(sw, sh, params, done_callback)
 	local y = 0
 	local h = 0
 	local m = 10
-	local back_image = KImageView:new("game_image")
+	-- local back_image = KImageView:new("game_image")
 
-	back_image.anchor.x = back_image.size.x * 0.5
-	y = y + h + m
-	back_image.pos = v(sw * 0.5, y)
+	-- back_image.anchor.x = back_image.size.x * 0.5
+	-- y = y + h + m
+	-- back_image.pos = v(sw * 0.5, y)
 
-	window:add_child(back_image)
+	-- window:add_child(back_image)
 
-	h = back_image.size.y
+	-- h = back_image.size.y
 	y = y + h + m
 	h = 12
 
@@ -194,7 +195,32 @@ function screen_settings:init(sw, sh, params, done_callback)
 
 	window:add_child(sl_res)
 
-	y = back_image.pos.y + back_image.size.y + m
+	y = y + h + m
+	h = 12
+
+	local l_ipv = KLabel:new(V.v(sw * 0.5 - 2 * m, h))
+	l_ipv.pos = v(m, y)
+	l_ipv.font_name = "sans_bold"
+	l_ipv.font_size = 14
+	l_ipv.text = "更新使用IPv"
+	l_ipv.text_align = "left"
+	l_ipv.colors.text = colors.text_black
+
+	window:add_child(l_ipv)
+
+	y = y + h + m
+	h = 48
+
+	local sl_ipv = SelectList:new(sw * 0.5 - 2 * m, h)
+	sl_ipv.pos = v(m, y)
+
+	for _, ipv_option in pairs({{"IPv4", "https://krdovedownload4.crazyspotteddove.top/"}, {"IPv6", "https://krdovedownload6.crazyspotteddove.top:52000/"}}) do
+		sl_ipv:add_item(ipv_option[1], ipv_option[2])
+	end
+	window:add_child(sl_ipv)
+
+	-- y = back_image.pos.y + back_image.size.y + m
+	y = m
 	h = 12
 
 	local l_tex = KLabel:new(V.v(sw * 0.5 - 2 * m, h))
@@ -225,6 +251,7 @@ function screen_settings:init(sw, sh, params, done_callback)
 	end
 
 	window:add_child(sl_tex)
+	self.sl_ipv = sl_ipv
 
 	y = y + h + m
 	h = 10
@@ -241,7 +268,7 @@ function screen_settings:init(sw, sh, params, done_callback)
 	window:add_child(l_fps)
 
 	y = y + h + m
-	h = 72
+	h = 120
 
 	local sl_fps = SelectList:new(sw * 0.5 - 2 * m, h)
 
@@ -301,6 +328,21 @@ function screen_settings:init(sw, sh, params, done_callback)
 
 	y = y + h + m
 	h = 16
+
+	local c_update = CheckBox:new(sw - 2 * m, h, "启动时检查更新")
+	c_update.pos = v(sw * 0.5 + m, y)
+	c_update:get_colors().text = colors.text_black
+
+	function c_update.on_change(this, value)
+		self.params.update_enabled = this.checked
+	end
+
+	window:add_child(c_update)
+	self.c_update = c_update
+
+	y = y + h + m
+	h = 16
+
 	c_highdpi = CheckBox:new(sw - 2 * m, h, _("Retina display (macOS)"))
 	c_highdpi.pos = v(sw * 0.5 + m, y)
 	c_highdpi:get_colors().text = colors.text_black
@@ -420,10 +462,20 @@ function screen_settings:init(sw, sh, params, done_callback)
 		end
 	end
 
+	for _, c in pairs(sl_ipv.children) do
+		if c.custom_value == self.params.update_last_site then
+			sl_ipv:select_item(c)
+			sl_ipv:scroll_to_show_y(c.pos.y)
+
+			break
+		end
+	end
+
 	c_fs:set_check(self.params.fullscreen)
 	c_vsync:set_check(self.params.vsync)
 	c_large_pointer:set_check(self.params.large_pointer)
 	c_highdpi:set_check(self.params.highdpi)
+	c_update:set_check(self.params.update_enabled)
 	b_play:focus()
 end
 
@@ -486,10 +538,17 @@ function screen_settings:handle_play_button()
 		self.params.sound_pool_size = 1
 	end
 
+	if self.sl_ipv.selected_item then
+		self.params.update_last_site = self.sl_ipv.selected_item.custom_value
+	else
+		self.params.update_last_site = "https://krdovedownload6.crazyspotteddove.top:52000/"
+	end
+
 	self.params.fullscreen = self.c_fs.checked
 	self.params.vsync = self.c_vsync.checked
 	self.params.large_pointer = self.c_large_pointer.checked
 	self.params.highdpi = self.c_highdpi.checked
+	self.params.update_enabled = self.c_update.checked
 
 	self.done_callback()
 end

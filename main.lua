@@ -374,23 +374,24 @@ local function load_director()
 end
 
 local function load_app_settings()
-	local I = require("klove.image_db")
+	-- local I = require("klove.image_db")
 	local settings = require("screen_settings")
-	local w, h = 400, 500
-
-	for _, t in pairs(settings.required_textures) do
-		I:load_atlas(1, KR_PATH_ASSETS_GAME_TARGET .. "/images/fullhd", t)
-	end
+	local w, h = love.window.getDesktopDimensions()
+	w, h = w * 0.8, h * 0.8
+	-- for _, t in pairs(settings.required_textures) do
+	-- I:load_atlas(1, KR_PATH_ASSETS_GAME_TARGET .. "/images/fullhd", t)
+	-- end
 
 	local function done_cb()
 		storage:save_settings(main.params)
 
 		main.handler = nil
 
-		for _, t in pairs(settings.required_textures) do
-			I:unload_atlas(t, 1)
-		end
+		-- for _, t in pairs(settings.required_textures) do
+		-- I:unload_atlas(t, 1)
+		-- end
 
+		main._settings_loaded = true
 		collectgarbage()
 		load_director()
 	end
@@ -449,7 +450,6 @@ local function load(arg)
 
 	MU.parse_args(arg, main.params)
 	MU.default_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
-	MU.apply_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
 
 	if main.params.log_level then
 		log.level = tonumber(main.params.log_level)
@@ -492,8 +492,8 @@ local function load(arg)
 		require("debug_tools")
 	end
 
-	-- 启动更新检查
-	M.check_update()
+-- 启动更新检查
+-- M.check_update()
 end
 
 function love.update(dt)
@@ -624,11 +624,64 @@ function love.run()
 	-- 显示作者的话
 	MUST_READ.run()
 
-	-- 运行更新检查
-	M.run()
-
 	local dt = 0
 	local updated = false
+
+	while not main._settings_loaded do
+		love.event.pump()
+
+		for e, a, b, c, d in love.event.poll() do
+			if e == "quit" then
+				quit()
+				return
+			end
+
+			love.handlers[e](a, b, c, d)
+		end
+
+		love.timer.step()
+
+		dt = love.timer.getDelta()
+
+		if love.update then
+			updated = love.update(dt)
+		end
+
+		if love.window.isOpen() and G.isActive() then
+			G.clear()
+			G.origin()
+
+			perf.start("draw")
+			if love.draw then
+				love.draw()
+			end
+			perf.stop("draw")
+			if updated then
+				perf_ui.sync_data()
+				perf.reset()
+			end
+			perf_ui.draw()
+
+			G.present()
+
+			if main.handler.limit_fps then
+				main.handler:limit_fps()
+			else
+				collectgarbage("step")
+				love.timer.sleep(0.001)
+			end
+		else
+			if love.timer then
+				love.timer.sleep(0.001)
+			end
+		end
+	end
+
+	MU.apply_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
+
+	-- 运行更新检查
+	M.run(main.params, storage)
+
 	while true do
 		love.event.pump()
 

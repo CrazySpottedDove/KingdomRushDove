@@ -59,7 +59,9 @@ local SETTINGS_PARAMS = {
 	"joy_y_axis_factor",
 	"nav_key_step",
 	"nav_key_step_alt",
-	"sound_pool_size"
+	"sound_pool_size",
+	"update_enabled",
+	"update_last_site"
 }
 local SLOT_ADDITIONAL_DATA = {
 	gems = 0,

@@ -1,3 +1,4 @@
+-- 提供一个强制阅读作者的话的界面。使用方法：在main.lua的load.run()的主循环前调用 MUST_READ.run() 即可。
 local MUST_READ = {}
 MUST_READ.text = require("dove_modules.notice.author_words")
 local READ_EXPECTED_TIME = require("dove_modules.notice.read_expected_time")

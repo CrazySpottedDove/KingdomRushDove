@@ -10,7 +10,7 @@ local G=love.graphics
 local SU=require("script_utils")
 local storage=require("storage")
 local W=require("wave_db")
-require("constants")
+require("all.constants")
 local tower_menus=require("data.tower_menus_data")
 local function fts(v)
 return v/FPS
