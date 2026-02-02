@@ -108,4 +108,4 @@ rm -rf "$STAGE_DIR"
 
 echo "Packed -> $ARCHIVE_DIR"
 
-scp -P 60001 "$ARCHIVE_DIR" dove@10.112.99.5:/srv/files/王国保卫战Dove版-Windows端/
+scp -P 60001 "$ARCHIVE_DIR" dove@krdovedownload6.crazyspotteddove.top:/srv/files/王国保卫战Dove版-Windows端/

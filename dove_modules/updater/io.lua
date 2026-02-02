@@ -9,7 +9,7 @@ function io.load()
 		return update_config_template
 	end
 	for k, v in pairs(update_config_template) do
-		if not update_config[k] then
+		if update_config[k] == nil then
 			update_config[k] = v
 		end
 	end
