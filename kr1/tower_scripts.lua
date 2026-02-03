@@ -12309,7 +12309,7 @@ function scripts.tower_royal_archers.update(this, store)
 	end
 
 	local function prepare_targets_armor_piercer(enemy, enemies)
-		local reload_enemy, reload_enemies = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, ap.range_effect, ap.vis_flags, ap.vis_bans)
+		local reload_enemy, reload_enemies = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, a.range, ap.vis_flags, ap.vis_bans)
 
 		if reload_enemy and #reload_enemies > 0 then
 			enemy = reload_enemy
@@ -12353,7 +12353,7 @@ function scripts.tower_royal_archers.update(this, store)
 
 			while true do
 				if ready_to_use_power(pow_a, ap, store, tw.cooldown_factor) then
-					local enemy, enemies = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, ap.range_trigger, ap.vis_flags, ap.vis_bans)
+					local enemy, enemies = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, a.range, ap.vis_flags, ap.vis_bans)
 
 					if not enemy then
 						ap.ts = ap.ts + fts(10)
@@ -12375,7 +12375,7 @@ function scripts.tower_royal_archers.update(this, store)
 							s.flip_x = true
 						end
 
-						for _, enemy in pairs(targets) do
+						for _, enemy in ipairs(targets) do
 							local shooting_up = tpos.y < enemy.pos.y
 							local shooting_right = tpos.x < enemy.pos.x
 							local boffset = ap.bullet_start_offset[shooting_up and 1 or 2]
@@ -12383,7 +12383,6 @@ function scripts.tower_royal_archers.update(this, store)
 
 							b.pos.x = this.pos.x + soffset.x + boffset.x * (shooting_right and 1 or -1)
 							b.pos.y = this.pos.y + soffset.y + boffset.y
-							apply_precision(b)
 							local bl = b.bullet
 
 							bl.from = vclone(b.pos)
@@ -12403,6 +12402,7 @@ function scripts.tower_royal_archers.update(this, store)
 							end
 
 							bl.flight_time = bl.flight_time + arrow_number * fts(6)
+							apply_precision(b)
 
 							queue_insert(store, b)
 							y_wait(store, ap.time_between_arrows * tw.cooldown_factor)
@@ -12521,6 +12521,9 @@ function scripts.tower_royal_archers.update(this, store)
 					this.rapacious_hunter_tamer.level = pow_r.level
 					this.rapacious_hunter_tamer.attacks.list[1].range = pow_r.range_config[pow_r.level]
 				end
+
+				a.range = a.range / (pow_r.attack_range_factor[pow_r._last_level] or 1) * pow_r.attack_range_factor[pow_r.level]
+				pow_r._last_level = pow_r.level
 			end
 
 			SU.towers_swaped(store, this, this.attacks.list)

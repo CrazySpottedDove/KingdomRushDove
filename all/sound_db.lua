@@ -61,8 +61,6 @@ local _MAX_THREADS = calculate_audio_thread_count()
 local _LOAD_AUDIO_THREAD_CODE = "local cin,cout,th_i = ...\nrequire \"love.filesystem\"\nrequire \"love.audio\"\nrequire \"love.sound\"\nlocal file_count = 0\nwhile true do\n    -- get params\n    local file = cin:demand()\n    if file == 'QUIT' then goto quit end\n    local mode = cin:demand()\n    local id = cin:demand()\n    \n  local info = love.filesystem.getInfo(file) \n if (not info) or (info.type ~= 'file')  then\n        cout:push({'ERROR','Not a file',file})\n    else\n        local ok, result = pcall(love.audio.newSource, file, mode)\n        collectgarbage()\n        if ok and result then\n            cout:push({'OK',result,id})\n            file_count = file_count + 1\n        else\n            cout:push({'ERROR',result,file})\n        end\n    end\nend\n::quit::\ncout:supply({'DONE'})\n--print('TH  ' ..th_i.. ' QUIT - FILES LOADED ' .. file_count .. '\\n')\n"
 
 function sound_db:init(path)
-	log.debug("path:%s", path)
-
 	self.path = path
 	self.files_path = path .. "/files"
 

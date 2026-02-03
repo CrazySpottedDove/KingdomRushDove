@@ -1016,7 +1016,7 @@ tt.main_script.update = scripts.tower_silver.update
 tt.sound_events.insert = "ElvesArcherGoldenBowTaunt"
 --#endregion
 --#region arrow_silver
-tt = RT("arrow_silver", "arrow_1")
+tt = RT("arrow_silver", "arrow")
 tt.bullet.flight_time_min = fts(8.1)
 tt.bullet.flight_time_factor = fts(0.0135)
 tt.bullet.miss_decal = "archer_silver_proys_0002-f"
@@ -1535,9 +1535,7 @@ tt.modifier.duration = b.slow_duration
 --#endregion
 --#region tower_royal_archers_lvl4
 tt = RT("tower_royal_archers_lvl4", "tower")
-
 AC(tt, "powers", "attacks", "vis")
-
 b = balance.towers.royal_archers
 image_y = 90
 tt.info.portrait = "kr5_portraits_towers" .. "_0002"
@@ -1591,6 +1589,8 @@ tt.powers.rapacious_hunter.enc_icon = 4
 tt.powers.rapacious_hunter.damage_max = b.rapacious_hunter.damage_max
 tt.powers.rapacious_hunter.damage_min = b.rapacious_hunter.damage_min
 tt.powers.rapacious_hunter.range_config = b.rapacious_hunter.range_config
+tt.powers.rapacious_hunter.attack_range_factor = b.rapacious_hunter.attack_range_factor
+tt.powers.rapacious_hunter._last_level = 0
 tt.powers.rapacious_hunter.entity = "tower_royal_archers_pow_rapacious_hunter_tamer"
 tt.powers.rapacious_hunter.entity_offset = vec_2(31, 7)
 tt.powers.rapacious_hunter.purchase_fx = "fx_tower_royal_archer_rapacious_hunter_dust"
@@ -1753,6 +1753,7 @@ tt.render.sprites[1].name = "royal_archer_tower_lvl4_arrow_armor_piercer_0001"
 tt.render.sprites[1].animated = false
 tt.sound_events.insert = nil
 tt.sound_events.hit = "TowerRoyalArchersArmorPiercerHit"
+tt.main_script.update = scripts.arrow_missile.update
 --#endregion
 --#region tower_royal_archers_arrow_lvl4
 tt = RT("tower_royal_archers_arrow_lvl4", "arrow5_fixed_height")

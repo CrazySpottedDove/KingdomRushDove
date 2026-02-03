@@ -5474,9 +5474,10 @@ local towers = {
 			shoot_range = 25,
 			max_distance_from_tower = 240,
 			attack_cooldown = 2,
-			price = {200, 100, 100},
+			price = {200, 110, 110},
 			damage_min = {20, 40, 60},
 			damage_max = {30, 55, 80},
+			attack_range_factor = {1.1, 1.15, 1.2},
 			damage_type = DAMAGE_PHYSICAL
 		}
 	},
