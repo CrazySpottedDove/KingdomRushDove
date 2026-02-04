@@ -2640,10 +2640,12 @@ InfoBar = class("InfoBar", KImageView)
 
 function InfoBar:initialize()
 	InfoBar.super.initialize(self, "base")
+    self.scale.x = 1.25
 	local v_portrait = KView:new(V.v(68, 68))
 
 	v_portrait.anchor = v(34, 34)
-	v_portrait.pos = v(61, 32)
+	-- v_portrait.pos = v(61, 32)
+    v_portrait.pos = v(56, 32)
 	v_portrait.propagate_on_down = true
 	v_portrait.propagate_on_click = true
 	self.v_portrait = v_portrait
@@ -2653,7 +2655,8 @@ function InfoBar:initialize()
 	local portrait_bo = KView:new(V.v(68, 68), "info_portraits_0000")
 
 	portrait_bo.anchor = v(34, 34)
-	portrait_bo.pos = v(61, 32)
+	-- portrait_bo.pos = v(61, 32)
+    portrait_bo.pos = v(56, 32)
 	portrait_bo.propagate_on_down = true
 	portrait_bo.propagate_on_click = true
 	self.portrait_bo = portrait_bo
@@ -2676,21 +2679,22 @@ function InfoBar:initialize()
 
 	self:add_child(l_name)
 
-	local s_1 = 396
-	local s_3 = 133.33333333333334
-	local s_2 = 200
-	local s_4 = 100
-	local s_9 = 44.44444444444444
-	local s_12 = 33.333333333333336
+    local s = 400 * 1.25
+	local s_1 = s / 1
+	local s_3 = s / 3
+	local s_2 = s / 2
+	local s_4 = s / 4
+	local s_9 = s / 9
+	local s_12 = s / 12
 	local margin = v(10, 14)
 	local padding = v(20, CJK(1, 0, 3, -1.5))
 	local label_height = 14
 	local stat_labels = {}
 
 	stat_labels[STATS_TYPE_TOWER_BARRACK] = {{"label", "l_hp", "base_info_icons_0009", 0.8 * s_4}, {"label", "l_damage", "base_info_icons_0001", 0.8 * s_4}, {"label", "l_armor", "base_info_icons_0003", 0.8 * s_4}, {"label", "l_magic_armor", "base_info_icons_0004", 0.8 * s_4}, {"label", "l_respawn", "base_info_icons_0007", 0.8 * s_4}}
-	stat_labels[STATS_TYPE_SOLDIER] = {{"bar", "b_hp", "base_info_bar_bg", "base_info_bar", 3.3 * s_12}, {"label", "l_hp", nil, 3.3 * s_12, "center", true, v(0, CJK(1, 0, 3, -1))}, {"label", "l_damage", "base_info_icons_0001", 2.2 * s_12}, {"label", "l_ranged_damage", "base_info_icons_0001", 2.2 * s_12}, {"label", "l_armor", "base_info_icons_0003", 1.5 * s_12}, {"label", "l_magic_armor", "base_info_icons_0004", 1.5 * s_12}, {"label", "l_respawn", "base_info_icons_0007", 1.5 * s_12}}
+	stat_labels[STATS_TYPE_SOLDIER] = {{"bar", "b_hp", "base_info_bar_bg", "base_info_bar", 3.3 * s_12}, {"label", "l_hp", nil, 3.3 * s_12, "center", true, v(0, CJK(1, 0, 3, -1))}, {"label", "l_damage", "base_info_icons_0001", 2.2 * s_12,}, {"label", "l_ranged_damage", "base_info_icons_0001", 2.2 * s_12}, {"label", "l_armor", "base_info_icons_0003", 1.5 * s_12}, {"label", "l_magic_armor", "base_info_icons_0004", 1.5 * s_12}, {"label", "l_respawn", "base_info_icons_0007", 1.5 * s_12}}
 	stat_labels[STATS_TYPE_ENEMY] = table.deepclone(stat_labels[STATS_TYPE_SOLDIER])
-	stat_labels[STATS_TYPE_ENEMY][7] = {"label", "l_lives", "base_info_icons_0008", 1.5 * s_9}
+	stat_labels[STATS_TYPE_ENEMY][7] = {"label", "l_lives", "base_info_icons_0008", 1.5 * s_12}
 	stat_labels[STATS_TYPE_TOWER] = {{"label", "l_damage", "base_info_icons_0001", s_3}, {"label", "l_range", "base_info_icons_0005", s_3}, {"label", "l_cooldown", "base_info_icons_0006", s_3}}
 	stat_labels[STATS_TYPE_TOWER_NO_RANGE] = {{"label", "l_damage", "base_info_icons_0001", s_2}, {"label", "l_cooldown", "base_info_icons_0006", s_2}}
 	stat_labels[STATS_TYPE_TOWER_MAGE] = table.deepclone(stat_labels[STATS_TYPE_TOWER])
@@ -2728,6 +2732,7 @@ function InfoBar:initialize()
 		sv.pos = v(100, 33)
 		sv.propagate_on_down = true
 		sv.propagate_on_click = true
+        sv.scale.x = 0.8
 		self.stats_views[vn] = sv
 
 		local off_x = 0
@@ -2738,15 +2743,15 @@ function InfoBar:initialize()
 			elseif p[1] == "bar" then
 				local _, name, bg_image, fg_image, w = unpack(p)
 				local b = KImageView:new(bg_image)
+                b.scale.x = 1.25
 				local bfg = KImageView:new(fg_image)
 
 				b:add_child(bfg)
 
-				bfg.pos.x = (b.size.x - bfg.size.x) * 0.5
+				bfg.pos.x = (b.size.x - bfg.size.x) * 0.5 * 1.25
 				bfg.pos.y = (b.size.y - bfg.size.y) * 0.5
-				b.pos.x = off_x
 				b.bar = bfg
-				b.pos.x = (w - b.size.x) * 0.5
+				b.pos.x = (w - b.size.x * 1.25) * 0.5
 				sv[name] = b
 
 				sv:add_child(b)
@@ -2767,6 +2772,11 @@ function InfoBar:initialize()
 			end
 		end
 	end
+
+    v_portrait.scale.x = 0.8
+    portrait_bo.scale.x = 0.8
+    l_name.scale.x = 0.8
+
 end
 
 function InfoBar:show()
