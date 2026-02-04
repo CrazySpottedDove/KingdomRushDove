@@ -20998,7 +20998,10 @@ function scripts.soldier_priests_barrack.update(this, store, script)
 
 		s.soldier.tower_id = tower.id
 
-		table.insert(tower.barrack.soldiers, s)
+		if this.soldier.tower_soldier_idx then
+			tower.barrack.soldiers[this.soldier.tower_soldier_idx] = s
+			s.soldier.tower_soldier_idx = this.soldier.tower_soldier_idx
+		end
 
 		return s
 	end

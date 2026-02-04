@@ -12647,6 +12647,6 @@ tt.render.sprites[1].animated = false
 tt.tween.props[1].keys = {{0, 0}, {0.3, 255}, {b.duration - 0.8, 255}, {b.duration, 0}}
 tt.tween.props[2] = table.deepclone(tt.tween.props[1])
 tt.tween.props[2].name = "scale"
-tt.tween.props[2].keys = {{0, vv(0.8)}, {0.3, vv(1.1)}, {0.4, vv(1)}}
+tt.tween.props[2].keys = {{0, vv(0.8)}, {0.3, vv(1)}, {b.duration - 0.8, vv(1)}, {b.duration, vv(0.8)}}
 tt.tween.disabled = false
 tt.tween.remove = true
