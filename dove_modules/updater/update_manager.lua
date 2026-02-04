@@ -398,8 +398,19 @@ function M.check_update(params, storage)
 end
 
 function M.run(params, storage)
+    if not apply_upgrade then
+		return
+	end
+
+    local old_w, old_h, old_flags = love.window.getMode()
+	local dw, dh = love.window.getDesktopDimensions()
+	love.window.setMode(math.max(800, math.floor(dw * 0.8)), math.max(600, math.floor(dh * 0.8)), {
+		resizable = false
+	})
 	M.check_update(params, storage)
+
 	if not apply_upgrade then
+        love.window.setMode(old_w, old_h, old_flags) -- 恢复窗口
 		return
 	end
 
@@ -415,11 +426,11 @@ function M.run(params, storage)
 	local pressed = love.window.showMessageBox("发现新版本", "检测到有新内容可更新，是否立即更新？\n\n" .. table.concat(messages, "\n\n"), {"更新", "取消"})
 
 	if pressed == 1 then
-		local old_w, old_h, old_flags = love.window.getMode()
-		local dw, dh = love.window.getDesktopDimensions()
-		love.window.setMode(math.max(800, math.floor(dw * 0.8)), math.max(600, math.floor(dh * 0.8)), {
-			resizable = false
-		})
+		-- local old_w, old_h, old_flags = love.window.getMode()
+		-- local dw, dh = love.window.getDesktopDimensions()
+		-- love.window.setMode(math.max(800, math.floor(dw * 0.8)), math.max(600, math.floor(dh * 0.8)), {
+		-- 	resizable = false
+		-- })
 
 		local success = M.sync_assets()
 		if success then

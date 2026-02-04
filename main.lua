@@ -344,7 +344,7 @@ end
 
 local function load_director()
 	love.window.setMode(main.params.width, main.params.height, {
-		fullscreentype = "exclusive",
+		-- fullscreentype = "exclusive",
 		centered = false,
 		fullscreen = main.params.fullscreen,
 		vsync = main.params.vsync,
@@ -385,15 +385,8 @@ local function load_app_settings()
 	local function done_cb()
 		storage:save_settings(main.params)
 
-		main.handler = nil
-
-		-- for _, t in pairs(settings.required_textures) do
-		-- I:unload_atlas(t, 1)
-		-- end
 
 		main._settings_loaded = true
-		collectgarbage()
-		load_director()
 	end
 
 	settings:init(w, h, main.params, done_cb)
@@ -681,6 +674,8 @@ function love.run()
 
 	-- 运行更新检查
 	M.run(main.params, storage)
+
+	load_director()
 
 	while true do
 		love.event.pump()
