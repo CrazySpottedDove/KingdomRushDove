@@ -104,7 +104,7 @@ local signals = {
 		log.debug("next_wave_ready_handler. group_idx:%s", group.group_idx)
 		S:queue("GUINextWaveReady")
 		game_gui:show_wave_flags(group)
-		game_gui.next_wave_button:enable()
+		-- game_gui.next_wave_button:enable()
 
 		if game_gui.game.store.level.show_next_wave_balloon then
 			game_gui.game.store.level.show_next_wave_balloon = nil
@@ -129,7 +129,7 @@ local signals = {
 	["next-wave-sent"] = function(group)
 		log.debug("next_wave_sent_handler")
 		game_gui:hide_wave_flags()
-		game_gui.next_wave_button:disable()
+		-- game_gui.next_wave_button:disable()
 		game_gui:show_early_wave_reward()
 
 		if group.group_idx == 1 then
@@ -964,9 +964,9 @@ function game_gui:keypressed(key, isrepeat)
 	elseif table.contains(ks.normal, key) then
 		self.game.simulation.store.speed_factor = 1
 	elseif table.contains(ks.next_wave, key) then
-		if not self.next_wave_button:is_disabled() then
+		-- if not self.next_wave_button:is_disabled() then
 			game_gui.game.store.send_next_wave = true
-		end
+		-- end
 	elseif table.contains(ks.criket_toggle, key) then
 		if self.criketmenu.hidden then
 			self.criketmenu:show()
@@ -2624,23 +2624,22 @@ function PowerButtonBlock:update(dt)
 	PowerButtonBlock.super.update(self, dt)
 end
 
-NextWaveButton = class("NextWaveButton", KImageButton)
+-- NextWaveButton = class("NextWaveButton", KImageButton)
 
-function NextWaveButton:initialize()
-	NextWaveButton.super.initialize(self, "nextwave_0001", "nextwave_0002", "nextwave_0002")
+-- function NextWaveButton:initialize()
+-- 	NextWaveButton.super.initialize(self, "nextwave_0001", "nextwave_0002", "nextwave_0002")
 
-	self.anchor = v(math.floor(self.size.x * 0.5), self.size.y)
-end
+-- 	self.anchor = v(math.floor(self.size.x * 0.5), self.size.y)
+-- end
 
-function NextWaveButton:on_click(button, x, y)
-	game_gui.game.store.send_next_wave = true
-end
+-- function NextWaveButton:on_click(button, x, y)
+-- 	game_gui.game.store.send_next_wave = true
+-- end
 
 InfoBar = class("InfoBar", KImageView)
 
 function InfoBar:initialize()
 	InfoBar.super.initialize(self, "base")
-
 	local v_portrait = KView:new(V.v(68, 68))
 
 	v_portrait.anchor = v(34, 34)
@@ -2663,7 +2662,7 @@ function InfoBar:initialize()
 
 	local l_name = GGLabel:new(V.v(130, 15))
 
-	l_name.pos = v(97, 11)
+	l_name.pos = v(97, 8)
 	l_name.font_name = "infobar_name"
 	l_name.font_size = 12
 	l_name.colors.text = {255, 255, 255, 255}
@@ -2726,7 +2725,6 @@ function InfoBar:initialize()
 
 	for vn, vp in pairs(stat_labels) do
 		local sv = KView:new()
-
 		sv.pos = v(100, 33)
 		sv.propagate_on_down = true
 		sv.propagate_on_click = true
@@ -2984,28 +2982,20 @@ function HudBottomView:initialize(sw, sh)
 
 	self:add_child(bg_bar)
 
-	local next_wave = KImageView:new("bg_bottom_right")
-
-	next_wave.anchor = v(next_wave.size.x, next_wave.size.y)
-	next_wave.pos = v(sw + 6, sh)
-	self.next_wave = next_wave
-
-	self:add_child(next_wave)
-
-	local bg_nextwave = KImageView:new("bg_bottom_nextwave")
-
-	bg_nextwave.anchor = v(math.floor(bg_nextwave.size.x * 0.5), bg_nextwave.size.y)
-	bg_nextwave.pos = v(next_wave.size.x * 0.5, next_wave.size.y)
-
-	next_wave:add_child(bg_nextwave)
-
-	local next_wave_button = NextWaveButton:new()
-
-	next_wave_button.pos = v(next_wave.size.x * 0.5, 31)
-
-	next_wave:add_child(next_wave_button)
-
-	self.bg_right = next_wave
+    -- 这个下一波按钮的使用率过低，出于减少开销和简化UI的考虑，暂时删除了它。
+	-- local next_wave = KImageView:new("bg_bottom_right")
+	-- next_wave.anchor = v(next_wave.size.x, next_wave.size.y)
+	-- next_wave.pos = v(sw + 6, sh)
+	-- self.next_wave = next_wave
+	-- self:add_child(next_wave)
+	-- local bg_nextwave = KImageView:new("bg_bottom_nextwave")
+	-- bg_nextwave.anchor = v(math.floor(bg_nextwave.size.x * 0.5), bg_nextwave.size.y)
+	-- bg_nextwave.pos = v(next_wave.size.x * 0.5, next_wave.size.y)
+	-- next_wave:add_child(bg_nextwave)
+	-- local next_wave_button = NextWaveButton:new()
+	-- next_wave_button.pos = v(next_wave.size.x * 0.5, 31)
+	-- next_wave:add_child(next_wave_button)
+	-- self.bg_right = next_wave
 
 	local powers = GG9View:new("bg_bottom_left", V.v(247, 36), V.r(140, 36, 10, 1))
 
@@ -3046,7 +3036,8 @@ function HudBottomView:initialize(sw, sh)
 		powers:add_child(pn)
 	end
 
-	local x_center = math.floor((sw - next_wave.size.x - powers.size.x - powers.pos.x) * 0.5) + powers.pos.x + powers.size.x
+	-- local x_center = math.floor((sw - next_wave.size.x - powers.size.x - powers.pos.x) * 0.5) + powers.pos.x + powers.size.x
+    local x_center = math.floor((sw - powers.size.x - powers.pos.x) * 0.5) + powers.pos.x + powers.size.x
 
 	local bg_center = KImageView:new("bg_bottom_center")
 
@@ -3079,7 +3070,7 @@ function HudBottomView:initialize(sw, sh)
 
 	game_gui.power_1 = power_1
 	game_gui.power_2 = power_2
-	game_gui.next_wave_button = next_wave_button
+	-- game_gui.next_wave_button = next_wave_button
 end
 
 function HudBottomView:hide()
@@ -3097,8 +3088,8 @@ function HudBottomView:show()
 end
 
 function HudBottomView:update_bars_pos()
-	local x_center = math.floor((game_gui.sw - self.next_wave.size.x - self.powers.size.x - self.powers.pos.x) * 0.5) + self.powers.pos.x + self.powers.size.x
-
+	-- local x_center = math.floor((game_gui.sw - self.next_wave.size.x - self.powers.size.x - self.powers.pos.x) * 0.5) + self.powers.pos.x + self.powers.size.x
+    local x_center = math.floor((game_gui.sw  - self.powers.size.x - self.powers.pos.x) * 0.5) + self.powers.pos.x + self.powers.size.x
 	self.infobar.pos.x = x_center - 12
 
 	self.bg_center.pos.x = x_center
