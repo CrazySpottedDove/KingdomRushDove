@@ -9495,4 +9495,221 @@ function scripts.mod_hide_tower.remove(this, store)
 	return true
 end
 
+scripts.mod_lifesteal_kr5 = {}
+
+function scripts.mod_lifesteal_kr5.insert(this, store)
+	local source = store.entities[this.modifier.source_id]
+	local target = store.entities[this.modifier.target_id]
+	local damage = 0
+
+	if target and target.health then
+		local dmg_value = this.damage
+
+		if this.damage_min then
+			local damage_min = SU.get_difficulty_field_value(store, this.damage_min)
+			local damage_max = SU.get_difficulty_field_value(store, this.damage_max)
+
+			dmg_value = math.random(damage_min, damage_max)
+		end
+
+		local d = E:create_entity("damage")
+
+		d.value = dmg_value
+		d.source_id = this.id
+		d.target_id = target.id
+		d.damage_type = this.damage_type
+
+		if not this.only_predict_damage then
+			queue_damage(store, d)
+		end
+
+		damage = U.predict_damage(target, d)
+	end
+
+	if source and source.health then
+		local heal_hp = this.heal_hp_fixed and this.heal_hp_fixed or 0
+
+		if this.heal_hp_damage_factor then
+			local heal_hp_damage_factor = SU.get_difficulty_field_value(store, this.heal_hp_damage_factor)
+
+			heal_hp = heal_hp + damage * heal_hp_damage_factor
+		end
+
+		source.health.hp = km.clamp(0, source.health.hp_max, source.health.hp + heal_hp)
+
+		if this.heal_fx then
+			local fx = E:create_entity(this.heal_fx)
+
+			fx.pos = V.v(source.pos.x + source.unit.hit_offset.x + this.heal_fx_offset.x, source.pos.y + source.unit.hit_offset.y + this.heal_fx_offset.y)
+			fx.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, fx)
+		end
+	end
+
+	return false
+end
+
+scripts.mod_test_unit_pos_kr5 = {}
+
+function scripts.mod_test_unit_pos_kr5.update(this, store)
+	local m = this.modifier
+
+	m.ts = store.tick_ts
+
+	local target = store.entities[m.target_id]
+
+	if not target then
+		queue_remove(store, this)
+
+		return
+	end
+
+	this.pos = target.pos
+
+	local targetZ = Z_EFFECTS
+	local targetOffset = V.vv(0)
+
+	if target.render then
+		targetZ = target.render.sprites[1].z
+	end
+
+	if target.unit then
+		if this.position_test == "HEAD" and target.unit.head_offset then
+			targetOffset = V.vclone(target.unit.head_offset)
+		elseif this.position_test == "MOD" and target.unit.mod_offset then
+			targetOffset = V.vclone(target.unit.mod_offset)
+		elseif this.position_test == "HIT" and target.unit.hit_offset then
+			targetOffset = V.vclone(target.unit.hit_offset)
+		end
+	end
+
+	for _, s in pairs(this.render.sprites) do
+		s.offset = targetOffset
+		s.z = targetZ
+	end
+
+	while true do
+		target = store.entities[m.target_id]
+
+		if not target or target.health and target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration then
+			queue_remove(store, this)
+
+			return
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.tower_holder_capture = {}
+
+function scripts.tower_holder_capture.insert(this, store, script)
+	this.tween.props[1].keys[2][1] = this.capture_duration
+
+	local a = E:create_entity(this.aura_capture)
+
+	a.aura.source_id = this.id
+	a.capture_duration = this.capture_duration
+	a.enable_waves = this.enable_waves
+	a.spawn_delay = this.spawn_delay
+	a.enabled_sprite = this.enabled_sprite
+	a.disabled_sprite = this.disabled_sprite
+	a.capture_default_increment = a.aura.cycle_time
+	a.capture_default_decrement = a.capture_default_increment * a.capture_default_decrement_multiplier
+
+	queue_insert(store, a)
+
+	return true
+end
+
+scripts.aura_tower_holder_capture = {}
+
+function scripts.aura_tower_holder_capture.update(this, store, script)
+	this.aura.ts = store.tick_ts
+
+	local holder = store.entities[this.aura.source_id]
+	local conquered_amount = 0
+	local last_tick_ts = store.tick_ts - this.aura.cycle_time
+
+	if this.aura.track_source and this.aura.source_id then
+		local te = store.entities[this.aura.source_id]
+
+		if te and te.pos then
+			this.pos = te.pos
+		end
+	end
+
+	local function can_capture()
+		local current_wave = store.wave_group_number
+
+		if current_wave > 0 and (not this.enable_waves or table.contains(this.enable_waves, current_wave)) then
+			return true
+		end
+
+		return false
+	end
+
+	while true do
+		if conquered_amount == 0 then
+			holder.render.sprites[2].hidden = true
+			holder.render.sprites[3].hidden = true
+		else
+			holder.render.sprites[2].hidden = false
+			holder.render.sprites[3].hidden = false
+		end
+
+		holder.render.sprites[3].ts = store.tick_ts - conquered_amount
+
+		if can_capture() then
+			holder.render.sprites[1].name = this.enabled_sprite
+		else
+			holder.render.sprites[1].name = this.disabled_sprite
+			conquered_amount = km.clamp(0, this.capture_duration, conquered_amount - this.capture_default_decrement)
+
+			goto label_1381_0
+		end
+
+		if store.tick_ts - last_tick_ts >= this.aura.cycle_time then
+			local heroes = table.filter(store.entities, function(k, v)
+				return v.unit and v.vis and v.hero and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.excluded_entities or not table.contains(this.aura.excluded_entities, v.id))
+			end)
+
+			if heroes and #heroes > 0 then
+				for _, heroe in pairs(heroes) do
+					local capture_multiplier = this.capture_multiplier
+
+					if heroe.capture_multiplier then
+						capture_multiplier = heroe.capture_multiplier
+					end
+
+					conquered_amount = km.clamp(0, this.capture_duration, (conquered_amount + this.capture_default_increment) * capture_multiplier)
+				end
+			else
+				conquered_amount = km.clamp(0, this.capture_duration, conquered_amount - this.capture_default_decrement)
+			end
+
+			last_tick_ts = store.tick_ts
+		end
+
+		if conquered_amount >= this.capture_duration then
+			local h = E:create_entity(holder.tower_holder_on_capture)
+
+			h.render.sprites[1].name = string.format(h.render.sprites[1].name, h.tower.terrain_style)
+			h.pos = V.vclone(holder.pos)
+
+			queue_insert(store, h)
+
+			break
+		end
+
+		::label_1381_0::
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, holder)
+	queue_remove(store, this)
+end
+
 return scripts

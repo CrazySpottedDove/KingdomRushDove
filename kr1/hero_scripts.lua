@@ -339,7 +339,7 @@ scripts.hero_gerald = {
 						S:queue(courage.sound)
 						U.animation_start(this, courage.animation, nil, store.tick_ts)
 
-						if SU.y_hero_wait(store, this, courage.shoot_time) then
+						if SU.y_soldier_wait(store, this, courage.shoot_time) then
 						-- block empty
 						else
 							local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, courage.range, courage.vis_flags, courage.vis_bans)
@@ -2489,7 +2489,7 @@ scripts.hero_denas = {
 
 			U.animation_start(this, an, af, store.tick_ts, false)
 
-			if SU.y_hero_wait(store, this, a.shoot_time) then
+			if SU.y_soldier_wait(store, this, a.shoot_time) then
 				return
 			end
 
@@ -2557,7 +2557,7 @@ scripts.hero_denas = {
 						S:queue(a.sound)
 						U.animation_start(this, a.animation, nil, store.tick_ts, 1)
 
-						if SU.y_hero_wait(store, this, a.curse_time) then
+						if SU.y_soldier_wait(store, this, a.curse_time) then
 							goto label_54_0
 						end
 
@@ -2567,7 +2567,7 @@ scripts.hero_denas = {
 
 						queue_insert(store, curse)
 
-						if SU.y_hero_wait(store, this, a.cast_time - a.curse_time) then
+						if SU.y_soldier_wait(store, this, a.cast_time - a.curse_time) then
 							goto label_54_0
 						end
 
@@ -2612,7 +2612,7 @@ scripts.hero_denas = {
 						S:queue(a.sound)
 						U.animation_start(this, a.animation, flip, store.tick_ts)
 
-						if SU.y_hero_wait(store, this, a.cast_time) then
+						if SU.y_soldier_wait(store, this, a.cast_time) then
 							goto label_54_0
 						end
 
@@ -6101,7 +6101,7 @@ function scripts.hero_elora.update(this, store)
 						U.animation_start(this, "iceStorm", flip, store.tick_ts)
 						S:queue(a.sound)
 
-						if SU.y_hero_wait(store, this, a.cast_time) then
+						if SU.y_soldier_wait(store, this, a.cast_time) then
 							goto label_61_0
 						end
 
@@ -6162,7 +6162,7 @@ function scripts.hero_elora.update(this, store)
 						U.animation_start(this, "chill", flip, store.tick_ts)
 						S:queue(a.sound)
 
-						if SU.y_hero_wait(store, this, a.cast_time) then
+						if SU.y_soldier_wait(store, this, a.cast_time) then
 							goto label_61_0
 						end
 
@@ -6482,7 +6482,7 @@ scripts.hero_ingvar = {
 						U.animation_start(this, a.animation, nil, store.tick_ts, 1)
 						S:queue(a.sound, a.sound_args)
 
-						if SU.y_hero_wait(store, this, a.cast_time) then
+						if SU.y_soldier_wait(store, this, a.cast_time) then
 							goto label_67_0
 						end
 
@@ -6994,7 +6994,7 @@ scripts.hero_oni = {
 
 						U.animation_start(this, a.animation, af, store.tick_ts)
 
-						if SU.y_hero_wait(store, this, a.hit_time) then
+						if SU.y_soldier_wait(store, this, a.hit_time) then
 							goto label_83_0
 						end
 
@@ -8151,7 +8151,7 @@ scripts.hero_monk = {
 						})
 						U.animation_start(this, a.animation, nil, store.tick_ts)
 
-						if SU.y_hero_wait(store, this, a.hit_time) then
+						if SU.y_soldier_wait(store, this, a.hit_time) then
 							this.vis.bans = vis_bans
 							this.health_bar.hidden = this.health.dead
 
@@ -11151,7 +11151,7 @@ function scripts.hero_lynn.update(this, store)
 					S:queue(a.sound, a.sound_args)
 					U.animation_start(this, a.animation, nil, store.tick_ts)
 
-					if SU.y_hero_wait(store, this, a.hit_time) then
+					if SU.y_soldier_wait(store, this, a.hit_time) then
 					-- block empty
 					else
 						SU.hero_gain_xp_from_skill(this, skill)
@@ -11199,7 +11199,7 @@ function scripts.hero_lynn.update(this, store)
 					S:queue(a.sound, a.sound_args)
 					U.animation_start(this, a.animation, nil, store.tick_ts)
 
-					if SU.y_hero_wait(store, this, a.hit_time) then
+					if SU.y_soldier_wait(store, this, a.hit_time) then
 					-- block empty
 					else
 						a.ts = store.tick_ts
@@ -11662,7 +11662,7 @@ function scripts.hero_wilbur.update(this, store)
 				S:queue(a.sound)
 				U.animation_start(this, a.animation, flip, store.tick_ts)
 
-				if SU.y_hero_wait(store, this, a.shoot_time) then
+				if SU.y_soldier_wait(store, this, a.shoot_time) then
 					goto label_199_0
 				end
 
@@ -12907,7 +12907,7 @@ function scripts.hero_elves_denas.update(this, store)
 			if ready_to_use_skill(a, store) and this.health.hp <= this.health.hp_max - a.lost_health then
 				U.animation_start(this, a.animation, nil, store.tick_ts)
 
-				if SU.y_hero_wait(store, this, a.hit_time) then
+				if SU.y_soldier_wait(store, this, a.hit_time) then
 					goto label_66_0
 				end
 
@@ -13988,7 +13988,7 @@ function scripts.hero_phoenix.update(this, store)
 				S:queue(a.sound, a.sound_args)
 				U.animation_start(this, a.animation, nil, store.tick_ts)
 
-				if SU.y_hero_wait(store, this, a.hit_time) then
+				if SU.y_soldier_wait(store, this, a.hit_time) then
 				-- block empty
 				else
 					a.ts = store.tick_ts
@@ -14997,7 +14997,7 @@ function scripts.hero_lilith.update(this, store)
 					S:queue(a.sound)
 					U.animation_start(this, a.animation, nil, store.tick_ts)
 
-					if SU.y_hero_wait(store, this, a.shoot_time) then
+					if SU.y_soldier_wait(store, this, a.shoot_time) then
 						goto label_167_0
 					end
 
@@ -16125,7 +16125,7 @@ function scripts.hero_rag.update(this, store)
 					})
 					U.animation_start(this, a.animations[1], flip, store.tick_ts)
 
-					if SU.y_hero_wait(store, this, a.spawn_time) then
+					if SU.y_soldier_wait(store, this, a.spawn_time) then
 					-- block empty
 					else
 						SU.hero_gain_xp_from_skill(this, skill)
@@ -16133,7 +16133,7 @@ function scripts.hero_rag.update(this, store)
 						a.ts = store.tick_ts
 
 						for i = 1, a.count do
-							SU.y_hero_wait(store, this, fts(2))
+							SU.y_soldier_wait(store, this, fts(2))
 
 							local pi, spi, ni = origin[1], km.zmod(i, 3), bullet_to_ni + math.random(-10, 0)
 
@@ -16540,7 +16540,7 @@ function scripts.hero_bruce.update(this, store)
 					S:queue(a.sound, a.sound_args)
 					U.animation_start(this, a.animation, nil, store.tick_ts)
 
-					if SU.y_hero_wait(store, this, a.hit_time) then
+					if SU.y_soldier_wait(store, this, a.hit_time) then
 					-- block empty
 					else
 						SU.hero_gain_xp_from_skill(this, skill)
@@ -16819,7 +16819,7 @@ function scripts.hero_bolverk.update(this, store)
 					S:queue(a.sound, a.sound_args)
 					U.animation_start(this, a.animation, nil, store.tick_ts)
 
-					if SU.y_hero_wait(store, this, a.hit_time) then
+					if SU.y_soldier_wait(store, this, a.hit_time) then
 					-- block empty
 					else
 						targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
@@ -18423,7 +18423,7 @@ function scripts.hero_hunter.update(this, store)
 						queue_insert(store, aura)
 						U.animation_start(this, a.animations[2], nil, store.tick_ts, true)
 
-						if SU.y_hero_wait(store, this, aura.aura.duration - (store.tick_ts - a.ts)) then
+						if SU.y_soldier_wait(store, this, aura.aura.duration - (store.tick_ts - a.ts)) then
 							S:stop(a.sound)
 							S:queue(a.sound_interrupt)
 
@@ -19771,7 +19771,7 @@ function scripts.hero_space_elf.update(this, store)
 						U.animation_start(this, an, af, store.tick_ts, 1, nil)
 						S:queue(a.sound)
 
-						if SU.y_hero_wait(store, this, a.cast_time) then
+						if SU.y_soldier_wait(store, this, a.cast_time) then
 							goto label_242_0
 						end
 
@@ -19814,7 +19814,7 @@ function scripts.hero_space_elf.update(this, store)
 
 					U.animation_start(this, an, af, store.tick_ts, 1, nil)
 
-					if SU.y_hero_wait(store, this, a.cast_time) then
+					if SU.y_soldier_wait(store, this, a.cast_time) then
 					-- block empty
 					else
 						S:queue(a.sound)
@@ -19866,7 +19866,7 @@ function scripts.hero_space_elf.update(this, store)
 
 					U.animation_start(this, an, af, store.tick_ts, 1, nil)
 
-					if SU.y_hero_wait(store, this, a.cast_time) then
+					if SU.y_soldier_wait(store, this, a.cast_time) then
 						goto label_242_0
 					end
 
@@ -20059,7 +20059,7 @@ function scripts.hero_space_elf.update(this, store)
 					S:queue(a.sound)
 					U.animation_start(this, a.animation, nil, store.tick_ts, 1, nil)
 
-					if SU.y_hero_wait(store, this, a.cast_time) then
+					if SU.y_soldier_wait(store, this, a.cast_time) then
 						goto label_242_0
 					end
 
@@ -20912,7 +20912,7 @@ function scripts.hero_raelyn.update(this, store)
 
 					U.animation_start(this, a.animation, nil, store.tick_ts, 1)
 
-					if SU.y_hero_wait(store, this, a.cast_time) then
+					if SU.y_soldier_wait(store, this, a.cast_time) then
 					-- block empty
 					else
 						a.ts = start_ts
@@ -20957,7 +20957,7 @@ function scripts.hero_raelyn.update(this, store)
 					S:queue(a.sound)
 					U.animation_start(this, a.animation, nil, store.tick_ts, 1)
 
-					if SU.y_hero_wait(store, this, a.cast_time) then
+					if SU.y_soldier_wait(store, this, a.cast_time) then
 					-- block empty
 					else
 						local d = E:create_entity(a.mod_decal)
@@ -21851,7 +21851,7 @@ function scripts.hero_venom.update(this, store)
 
 				U.animation_start(this, a.animation_in, flip, store.tick_ts, false)
 
-				if SU.y_hero_wait(store, this, a.cast_time) then
+				if SU.y_soldier_wait(store, this, a.cast_time) then
 					goto label_294_2
 				end
 
@@ -22653,7 +22653,7 @@ function scripts.hero_dragon_gem.update(this, store)
 						S:queue(a.sound)
 						U.animation_start(this, an, af, store.tick_ts)
 
-						if SU.y_hero_wait(store, this, a.shoot_time) then
+						if SU.y_soldier_wait(store, this, a.shoot_time) then
 							goto label_370_2
 						end
 
@@ -24214,7 +24214,7 @@ function scripts.hero_witch.update(this, store)
 
 					U.animation_start(this, an, af, store.tick_ts, false)
 
-					if SU.y_hero_wait(store, this, a.cast_time) then
+					if SU.y_soldier_wait(store, this, a.cast_time) then
 					-- block empty
 					else
 						a.ts = start_ts
@@ -24257,7 +24257,7 @@ function scripts.hero_witch.update(this, store)
 					U.animation_start(this, an, af, store.tick_ts, 1, nil)
 					S:queue(a.sound)
 
-					if SU.y_hero_wait(store, this, a.cast_time) then
+					if SU.y_soldier_wait(store, this, a.cast_time) then
 						goto label_641_0
 					end
 
@@ -24346,7 +24346,7 @@ function scripts.hero_witch.update(this, store)
 
 						U.animation_start(this, an, af, store.tick_ts, false)
 
-						if SU.y_hero_wait(store, this, basic_ranged.shoot_time) then
+						if SU.y_soldier_wait(store, this, basic_ranged.shoot_time) then
 						-- block empty
 						else
 							for i = 1, #basic_ranged.bullets do
@@ -24395,7 +24395,7 @@ function scripts.hero_witch.update(this, store)
 
 						U.animation_start(this, an, af, store.tick_ts, false)
 
-						if SU.y_hero_wait(store, this, a.shoot_time) then
+						if SU.y_soldier_wait(store, this, a.shoot_time) then
 						-- block empty
 						else
 							local bullet = E:create_entity(a.bullet)
@@ -25522,7 +25522,7 @@ function scripts.hero_dragon_bone.update(this, store)
 			S:queue(a.sound)
 			U.animation_start(this, an, af, store.tick_ts)
 
-			if SU.y_hero_wait(store, this, a.shoot_time) then
+			if SU.y_soldier_wait(store, this, a.shoot_time) then
 				goto label_664_4
 			end
 
@@ -25576,7 +25576,7 @@ function scripts.hero_dragon_bone.update(this, store)
 			S:queue(a.sound)
 			U.animation_start(this, an, af, store.tick_ts)
 
-			if SU.y_hero_wait(store, this, a.hit_time) then
+			if SU.y_soldier_wait(store, this, a.hit_time) then
 				goto label_664_4
 			end
 
@@ -25644,7 +25644,7 @@ function scripts.hero_dragon_bone.update(this, store)
 
 			U.animation_start(this, a.animation, flip, store.tick_ts)
 
-			if SU.y_hero_wait(store, this, a.spawn_time) then
+			if SU.y_soldier_wait(store, this, a.spawn_time) then
 				goto label_664_4
 			end
 
@@ -25700,7 +25700,7 @@ function scripts.hero_dragon_bone.update(this, store)
 
 				U.animation_start(this, a.animation, flip, store.tick_ts)
 
-				if SU.y_hero_wait(store, this, a.spawn_time) then
+				if SU.y_soldier_wait(store, this, a.spawn_time) then
 					goto label_664_4
 				end
 
@@ -28285,7 +28285,7 @@ function scripts.hero_wukong.update(this, store)
 
 					U.animation_start(this, an, af, store.tick_ts, false)
 
-					if SU.y_hero_wait(store, this, a.cast_time) then
+					if SU.y_soldier_wait(store, this, a.cast_time) then
 						this.health.immune_to = 0
 
 						goto label_882_1
@@ -28508,7 +28508,7 @@ function scripts.hero_wukong.update(this, store)
 
 					this.health.immune_to = F_ALL
 
-					if SU.y_hero_wait(store, this, a.shoot_time) then
+					if SU.y_soldier_wait(store, this, a.shoot_time) then
 						this.health.immune_to = 0
 
 						goto label_882_1
@@ -29958,7 +29958,7 @@ function scripts.hero_muyrn.update(this, store)
 					S:queue(a.sound)
 					U.animation_start(this, a.animation, nil, store.tick_ts, false)
 
-					if SU.y_hero_wait(store, this, a.cast_time) then
+					if SU.y_soldier_wait(store, this, a.cast_time) then
 						goto label_283_1
 					end
 
@@ -30042,7 +30042,7 @@ function scripts.hero_muyrn.update(this, store)
 
 					U.animation_start(this, an, af, store.tick_ts, false)
 
-					if SU.y_hero_wait(store, this, a.cast_time) then
+					if SU.y_soldier_wait(store, this, a.cast_time) then
 						goto label_283_1
 					end
 
@@ -30096,7 +30096,7 @@ function scripts.hero_muyrn.update(this, store)
 
 					U.animation_start(this, an, af, store.tick_ts, false)
 
-					if SU.y_hero_wait(store, this, a.shoot_time) then
+					if SU.y_soldier_wait(store, this, a.shoot_time) then
 						goto label_283_1
 					end
 

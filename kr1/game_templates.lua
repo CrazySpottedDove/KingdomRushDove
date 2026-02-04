@@ -19689,3 +19689,823 @@ tt.render.sprites[1].animated = true
 tt.bullet.hide_radius = 0
 tt.bullet.hit_distance = 20
 tt.bullet.extend_particles_cutoff = true
+
+tt = E:register_t("decal_stage_28_mask_1", "decal")
+tt.render.sprites[1].name = "stage_28_mask_01"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].sort_y_offset = 106
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("decal_stage_28_mask_2", "decal")
+tt.render.sprites[1].name = "stage_28_mask_02"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("decal_stage_28_mask_3", "decal")
+tt.render.sprites[1].name = "stage_28_mask_03"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_TOWER_BASES
+tt = E:register_t("decal_stage_28_torches", "decal")
+tt.render.sprites[1].prefix = "stage_28_antorchasDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].sort_y_offset = 200
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("decal_achievement_into_the_ogreverse", "decal_scripted")
+
+E:add_comps(tt, "ui")
+
+tt.ui.can_click = true
+tt.ui.click_rect = r(-20, -40, 40, 50)
+tt.main_script.update = scripts.decal_achievement_into_the_ogreverse.update
+tt.render.sprites[1].name = "ogreverse_web"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].anchor = v(0.5, 0)
+tt.render.sprites[1].sort_y_offset = -30
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "ogreverse_character"
+tt.render.sprites[2].name = "cultist_idle"
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[2].offset = v(0, 20)
+tt.render.sprites[2].anchor = vv(0.5)
+tt.render.sprites[2].sort_y_offset = -30
+tt = E:register_t("decal_achievement_a_coon_of_surprises_fredo", "decal_scripted")
+
+E:add_comps(tt, "ui")
+
+tt.ui.can_click = true
+tt.ui.click_rect = r(-20, -50, 40, 40)
+tt.main_script.update = scripts.decal_achievement_a_coon_of_surprises.update
+tt.give_achievement = true
+tt.required_touches = 3
+tt.change_z_time = fts(8)
+tt.change_y_sort_offset = -160
+tt.render.sid_animated = 2
+tt.render.sprites[1].name = "coonsuprices_cuerdafredo"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+tt.render.sprites[1].anchor = v(0.5, 0.11538461538461539)
+tt.render.sprites[tt.render.sid_animated] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_fredo"
+tt.render.sprites[tt.render.sid_animated].name = "idle"
+tt.render.sprites[tt.render.sid_animated].z = Z_OBJECTS_SKY
+tt.render.sprites[tt.render.sid_animated].offset = v(5, 4)
+tt.render.sprites[tt.render.sid_animated].anchor = v(0.5, 0.973404255319149)
+tt = E:register_t("decal_achievement_a_coon_of_surprises_silksong", "decal_achievement_a_coon_of_surprises_fredo")
+
+E:add_comps(tt, "ui")
+
+tt.give_achievement = false
+tt.change_z_time = fts(36)
+tt.change_y_sort_offset = -400
+tt.ui.click_rect = r(-18, -70, 40, 60)
+tt.render.sprites[1].name = "coonsuprices_cuerdasilksong"
+tt.render.sprites[1].anchor = v(0.5, 0.23958333333333334)
+tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_silksong"
+tt.render.sprites[tt.render.sid_animated].name = "idle"
+tt.render.sprites[tt.render.sid_animated].offset = v(2, -30)
+tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
+tt = E:register_t("decal_achievement_a_coon_of_surprises_jarra", "decal_achievement_a_coon_of_surprises_fredo")
+
+E:add_comps(tt, "ui")
+
+tt.give_achievement = false
+tt.change_z_time = fts(32)
+tt.change_y_sort_offset = -210
+tt.ui.click_rect = r(-20, -60, 47, 55)
+tt.render.sprites[1].name = "coonsuprices_cuerdajarra"
+tt.render.sprites[1].anchor = v(0.5, 0.23958333333333334)
+tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_jarra"
+tt.render.sprites[tt.render.sid_animated].name = "idle"
+tt.render.sprites[tt.render.sid_animated].offset = v(-2, -22)
+tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
+tt = E:register_t("decal_achievement_a_coon_of_surprises_darkcrystal", "decal_achievement_a_coon_of_surprises_fredo")
+
+E:add_comps(tt, "ui")
+
+tt.give_achievement = false
+tt.change_z_time = fts(37)
+tt.change_y_sort_offset = -260
+tt.ui.click_rect = r(-20, -80, 40, 80)
+tt.render.sprites[1].name = "coonsuprices_cuerdadarkcrystal"
+tt.render.sprites[1].anchor = v(0.5, 0.23958333333333334)
+tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_darkcrystal"
+tt.render.sprites[tt.render.sid_animated].name = "idle"
+tt.render.sprites[tt.render.sid_animated].offset = v(0, 0)
+tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
+tt = E:register_t("decal_achievement_a_coon_of_surprises_sheepy", "decal_achievement_a_coon_of_surprises_fredo")
+
+E:add_comps(tt, "ui")
+
+tt.give_achievement = false
+tt.change_z_time = fts(30)
+tt.change_y_sort_offset = -336
+tt.ui.click_rect = r(-17, -60, 40, 70)
+tt.render.sprites[1].name = "coonsuprices_cuerdadarkcrystal"
+tt.render.sprites[1].anchor = v(0.5, 0.23958333333333334)
+tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_sheepy"
+tt.render.sprites[tt.render.sid_animated].name = "idle"
+tt.render.sprites[tt.render.sid_animated].offset = v(0, 0)
+tt.render.sprites[tt.render.sid_animated].anchor = v(0.5, 0.5173913043478261)
+tt = E:register_t("decal_achievement_a_coon_of_surprises_arak", "decal_achievement_a_coon_of_surprises_fredo")
+
+E:add_comps(tt, "ui")
+
+tt.give_achievement = false
+tt.ui.click_rect = r(-20, -40, 62, 75)
+tt.change_y_sort_offset = 0
+tt.render.sid_animated = 1
+tt.render.sprites[2] = nil
+tt.render.sprites[tt.render.sid_animated].z = Z_OBJECTS
+tt.render.sprites[tt.render.sid_animated].prefix = "coonsuprices_arak"
+tt.render.sprites[tt.render.sid_animated].name = "idle"
+tt.render.sprites[tt.render.sid_animated].animated = true
+tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
+tt = E:register_t("decal_achievement_lucas_spider", "decal_scripted")
+
+E:add_comps(tt, "ui")
+
+tt.ui.can_click = true
+tt.ui.click_rect = r(-20, -10, 40, 40)
+tt.main_script.update = scripts.decal_achievement_lucas_spider.update
+tt.render.sprites[1].prefix = "export_easter_egg_lucas"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].anchor = vv(0.5)
+tt = E:register_t("decal_stage_29_background_eyes", "decal")
+tt.render.sprites[1].prefix = "spiders_stage29_eyes_stageDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("mask_stage_30_1", "decal")
+tt.render.sprites[1].name = "stage_30_mask_01"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].sort_y_offset = -60
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("mask_stage_30_2", "decal")
+tt.render.sprites[1].name = "stage_30_mask_02"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].sort_y_offset = -112
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("mask_stage_30_3", "decal")
+tt.render.sprites[1].name = "stage_30_mask_03"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].sort_y_offset = 0
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("mask_stage_30_4", "decal")
+tt.render.sprites[1].name = "stage_30_mask_04"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].sort_y_offset = 0
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("mask_stage_30_5", "decal")
+tt.render.sprites[1].name = "stage_30_mask_05"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].sort_y_offset = 0
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("decal_stage_30_door", "decal_scripted")
+b = balance.specials.stage30_door
+tt.render.sprites[1].prefix = "stage_30_spider_doorDef"
+tt.render.sprites[1].name = "idle1"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].sort_y_offset = 100
+tt.render.sprites[1].z = Z_OBJECTS
+tt.main_script.update = scripts.decal_stage_30_door.update
+tt.animation_idle_open = "idle2"
+tt.animation_idle_closed = "idle1"
+tt.animation_open = "open"
+tt.animation_close = "close"
+tt.waves = b
+
+tt = E:register_t("mod_enemy_glarenwarden_melee_lifesteal", "modifier")
+b = balance.enemies.arachnids.glarenwarden.basic_attack
+tt.main_script.insert = scripts.mod_lifesteal_kr5.insert
+tt.damage_min = b.damage_min
+tt.damage_max = b.damage_max
+tt.heal_hp_damage_factor = b.lifesteal.damage_factor
+tt.heal_hp_fixed = b.lifesteal.fixed_heal
+tt.damage_type = b.damage_type
+tt.only_predict_damage = true
+tt.heal_fx = "fx_glarenwarden_healing"
+tt.heal_fx_offset = v(0, 12)
+tt = E:register_t("mod_test_head_pos_kr5", "modifier")
+
+E:add_comps(tt, "render")
+
+tt.modifier.duration = 5
+tt.render.sprites[1].prefix = "poison"
+tt.render.sprites[1].size_names = {"small", "big", "big"}
+tt.render.sprites[1].name = "small"
+tt.render.sprites[1].scale = vv(0.4)
+tt.render.sprites[1].draw_order = 2
+
+for i = 2, 20 do
+	tt.render.sprites[i] = table.deepclone(tt.render.sprites[1])
+	tt.render.sprites[i].r = math.rad(math.random(0, 360))
+end
+
+tt.position_test = "HEAD"
+tt.main_script.update = scripts.mod_test_unit_pos_kr5.update
+tt = E:register_t("mod_test_mod_pos_kr5", "mod_test_head_pos_kr5")
+tt.position_test = "MOD"
+tt = E:register_t("mod_test_hit_pos_kr5", "mod_test_head_pos_kr5")
+tt.position_test = "HIT"
+tt = E:register_t("mod_cultbrood_poison", "modifier")
+b = balance.enemies.arachnids.cultbrood.poison_attack
+
+E:add_comps(tt, "render", "dps")
+
+tt.modifier.duration = b.poison.duration
+tt.modifier.vis_flags = bor(F_MOD)
+tt.render.sprites[1].name = "cultbrood_modifier_idle"
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_cultbrood_poison.update
+tt.dps.damage_every = b.poison.damage_every
+tt.dps.damage_max = b.poison.damage
+tt.dps.damage_min = b.poison.damage
+tt.dps.damage_type = b.poison.damage_type
+tt.transformation_nodes_limit = b.transformation_nodes_limit
+tt = E:register_t("mod_drainbrood_web", "modifier")
+b = balance.enemies.arachnids.drainbrood.webspit
+
+E:add_comps(tt, "render")
+
+tt.main_script.insert = scripts.mod_stun.insert
+tt.main_script.update = scripts.mod_drainbrood_web.update
+tt.main_script.remove = scripts.mod_stun.remove
+tt.modifier.animation_phases = true
+tt.modifier.duration = b.duration
+tt.modifier.hide_target_delay = fts(0)
+tt.modifier.use_mod_offset = false
+tt.render.sprites[1].prefix = "drainblood_cucoon"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt = E:register_t("mod_boss_spider_queen_poison", "mod_poison")
+b = balance.enemies.arachnids.boss_spider_queen.ranged_attack.poison
+tt.dps.damage_every = b.damage_every
+tt.dps.damage_min = b.damage_min
+tt.dps.damage_max = b.damage_max
+tt.dps.kill = true
+tt.modifier.duration = b.duration
+tt.modifier.use_mod_offset = false
+tt.render.sprites[1].prefix = "boss_effects_poison"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].size_names = {"idle", "idle", "idle"}
+tt.render.sprites[1].anchor = vv(0.5)
+tt.render.sprites[1].draw_order = DO_MOD_FX
+tt = E:register_t("mod_boss_spider_queen_area_lifesteal_end", "modifier")
+b = balance.enemies.arachnids.boss_spider_queen.drain_life.lifesteal_end
+tt.main_script.insert = scripts.mod_boss_spider_queen_area_lifesteal.insert
+tt.damage_min = b.damage_min
+tt.damage_max = b.damage_max
+tt.heal_hp_damage_factor = b.damage_factor
+tt.heal_hp_fixed = b.fixed_heal
+tt.damage_type = b.damage_type
+tt = E:register_t("mod_boss_spider_queen_area_lifesteal_loop", "modifier")
+b = balance.enemies.arachnids.boss_spider_queen.drain_life.lifesteal_loop
+tt.main_script.insert = scripts.mod_lifesteal_kr5.insert
+tt.damage_min = b.damage_min
+tt.damage_max = b.damage_max
+tt.heal_hp_damage_factor = b.damage_factor
+tt.heal_hp_fixed = b.fixed_heal
+tt.damage_type = b.damage_type
+tt = E:register_t("mod_spider_web_sprint", "mod_slow")
+b = balance.specials.terrain_7.spider_floor_webs
+tt.slow.factor = b.sprint_factor
+tt.modifier.duration = fts(5)
+tt = E:register_t("mod_spider_web_slowness", "mod_spider_web_sprint")
+b = balance.specials.terrain_7.spider_floor_webs
+tt.slow.factor = b.slow_factor
+
+tt = E:register_t("ps_spider_sister_bolt_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.anchor = v(0.5, 0.45)
+tt.particle_system.name = "spider_sister_fx_attack_1_projectile_trail"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(8), fts(8)}
+tt.particle_system.emission_rate = 30
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt.particle_system.scales_y = {0.8, 0.5}
+tt = E:register_t("ps_boss_spider_queen_bolt_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.anchor = v(0.5, 0.5)
+tt.particle_system.name = "boss_effects_trail"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(5), fts(12)}
+tt.particle_system.emission_rate = 30
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt.particle_system.scales_y = {0.8, 0.5}
+tt.particle_system.alphas = {255, 0}
+tt = E:register_t("ps_boss_spider_queen_lifesteal_trail_1")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.anchor = v(0.5, 0.5)
+tt.particle_system.name = "spider_queen_boss_effects_trail_0001"
+tt.particle_system.animated = false
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.emission_rate = 150
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt.particle_system.scales_x = {1, 0.1}
+tt.particle_system.scales_y = {1, 0.1}
+tt.particle_system.alphas = {255, 0}
+tt = E:register_t("ps_boss_spider_queen_lifesteal_trail_2")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.anchor = v(0.5, 0.5)
+tt.particle_system.name = "spider_queen_boss_effects_trail2_0001"
+tt.particle_system.animated = false
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(2), fts(5)}
+tt.particle_system.emission_rate = 150
+tt.particle_system.z = Z_BULLET_PARTICLES + 1
+tt.particle_system.scales_x = {1, 0.8, 0.1}
+tt.particle_system.scales_y = {1, 0.8, 0.1}
+tt.particle_system.alphas = {255, 170, 0}
+tt = E:register_t("ps_boss_spider_queen_bullet_tower_stun_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.anchor = v(0.5, 0.5)
+tt.particle_system.name = "boss_effects_bolt_run"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(4), fts(4)}
+tt.particle_system.emission_rate = 30
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt.particle_system.scales_x = {0.7, 0.1}
+tt.particle_system.scales_y = {0.7, 0.1}
+tt.particle_system.alphas = {255, 0}
+tt = E:register_t("ps_boss_spider_queen_bullet_tower_stun_trail_2")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.anchor = v(0.5, 0.5)
+tt.particle_system.name = "boss_effects_bolt_trail"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.emission_rate = 15
+tt.particle_system.z = Z_BULLET_PARTICLES + 1
+tt.particle_system.scales_x = {0.7, 0.1}
+tt.particle_system.scales_y = {0.7, 0.1}
+tt.particle_system.alphas = {255, 0}
+tt = E:register_t("ps_bullet_soldier_priests_barrack_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "priest_particle_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 30
+tt.particle_system.emit_rotation_spread = math.pi * 2
+tt.particle_system.particle_lifetime = {fts(7), fts(7)}
+tt.particle_system.anchor = v(0.5, 0.5)
+tt.particle_system.z = Z_BULLET_PARTICLES
+
+tt = E:register_t("fx_bullet_enemy_spider_priest_hit", "fx")
+tt.render.sprites[1].name = "cultist_spider_spell_hit"
+tt = E:register_t("spider_sister_bolt_hit_fx", "fx")
+tt.render.sprites[1].name = "spider_sister_fx_attack_1_hit"
+tt = E:register_t("fx_boss_spider_queen_bolt_hit", "fx")
+tt.render.sprites[1].prefix = "boss_effects_hit"
+tt.render.sprites[1].name = "run"
+tt = E:register_t("fx_boss_spider_queen_lifesteal_healing", "fx")
+tt.render.sprites[1].name = "boss_effects_healing"
+tt = E:register_t("fx_boss_spider_queen_lifesteal_bleeding", "fx")
+tt.render.sprites[1].prefix = "boss_effects_hit_drain"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].scale = vv(2)
+tt = E:register_t("fx_boss_spider_queen_melee_hit", "fx")
+tt.render.sprites[1].prefix = "boss_effects_hit"
+tt.render.sprites[1].name = "run"
+tt = E:register_t("fx_boss_spider_queen_melee_hit_decal", "fx")
+tt.render.sprites[1].name = "boss_effects_decal_back"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 30
+tt.render.sprites[1].offset = v(0, 20)
+tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
+tt.render.sprites[2].name = "boss_effects_decal_front_run"
+tt.render.sprites[2].sort_y_offset = 0
+tt = E:register_t("fx_glarenwarden_healing", "fx")
+tt.render.sprites[1].name = "glarenwarden_healing_run"
+
+tt = E:register_t("bullet_enemy_spider_priest", "bolt_enemy")
+b = balance.enemies.arachnids.spider_priest
+tt.render.sprites[1].prefix = "cultist_spider_projectile"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.bullet.damage_max = b.ranged_attack.damage_max
+tt.bullet.damage_min = b.ranged_attack.damage_min
+tt.bullet.damage_type = b.ranged_attack.damage_type
+tt.bullet.hit_blood_fx = nil
+tt.bullet.acceleration_factor = 0.1
+tt.bullet.min_speed = 30
+tt.bullet.max_speed = 300
+tt.bullet.align_with_trajectory = true
+tt.bullet.hit_fx = "fx_bullet_enemy_spider_priest_hit"
+tt.bullet.particles_name = "ps_bullet_enemy_spider_priest"
+tt = E:register_t("spider_sister_bolt", "bolt_enemy")
+
+local b = balance.enemies.arachnids.spider_sister
+
+tt.bullet.vis_flags = F_RANGED
+tt.bullet.vis_bans = 0
+tt.render.sprites[1].prefix = "spider_sister_fx_attack_1_projectile"
+tt.bullet.hit_fx = "spider_sister_bolt_hit_fx"
+tt.bullet.pop = nil
+tt.bullet.pop_conds = nil
+tt.bullet.acceleration_factor = 0.5
+tt.bullet.damage_min = b.ranged_attack.damage_min
+tt.bullet.damage_max = b.ranged_attack.damage_max
+tt.bullet.max_speed = 360
+tt.bullet.particles_name = "ps_spider_sister_bolt_trail"
+tt.bullet.damage_type = b.ranged_attack.damage_type
+tt.sound_events.insert = "EnemySpiderSisterRange"
+tt = E:register_t("boss_queen_spider_bolt", "bolt_enemy")
+
+local b = balance.enemies.arachnids.boss_spider_queen
+
+tt.bullet.vis_flags = F_RANGED
+tt.bullet.vis_bans = 0
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].prefix = "boss_effects_bolt_magic"
+tt.render.sprites[1].name = "flying"
+tt.render.sprites[1].anchor = vv(0.5)
+tt.bullet.hit_fx = "fx_boss_spider_queen_bolt_hit"
+tt.bullet.pop = nil
+tt.bullet.pop_conds = nil
+tt.bullet.acceleration_factor = 0.5
+tt.bullet.damage_min = b.ranged_attack.damage_min
+tt.bullet.damage_max = b.ranged_attack.damage_max
+tt.bullet.max_speed = 360
+tt.bullet.particles_name = "ps_boss_spider_queen_bolt_trail"
+tt.bullet.damage_type = b.ranged_attack.damage_type
+tt.bullet.mod = "mod_boss_spider_queen_poison"
+tt.sound_events.insert = "Stage30BossfightRange"
+
+tt = E:register_t("mod_boss_spider_queen_tower_debuff", "modifier")
+b = balance.enemies.arachnids.boss_spider_queen.stun_towers
+E:add_comps(tt, "render", "ui")
+if IS_CONSOLE then
+	E:add_comps(tt, "tween")
+end
+tt.main_script.insert = scripts.mod_boss_spider_queen_tower_debuff.insert
+tt.main_script.update = scripts.mod_boss_spider_queen_tower_debuff.update
+tt.modifier.duration = b.duration
+tt.modifier.duration_long = b.duration_long
+tt.render.sid_mask = 1
+tt.render.sprites[tt.render.sid_mask].prefix = "spider_queen_animations_stunDef"
+tt.render.sprites[tt.render.sid_mask].name = "in"
+tt.render.sprites[tt.render.sid_mask].exo = true
+tt.render.sprites[tt.render.sid_mask].animated = true
+tt.render.sprites[tt.render.sid_mask].loop = false
+tt.render.sprites[tt.render.sid_mask].z = Z_OBJECTS
+tt.render.sprites[tt.render.sid_mask].offset = v(0, 30)
+tt.render.sprites[tt.render.sid_mask].sort_y_offset = -5
+tt.render.sprites[tt.render.sid_mask].pos = v(0, 0)
+tt.threads_separation = 38
+tt.threads_amount = math.ceil(REF_H / tt.threads_separation)
+tt.threads_idles = {"idle1", "idle1", "idle2", "idle3", "idle4", "idle4"}
+tt.render.sid_threads_start = 2
+tt.render.sid_threads_end = tt.render.sid_threads_start + tt.threads_amount * 3 - 1
+tt.spiders_offsets = {{
+	x = -17,
+	y = 0
+}, {
+	x = 0,
+	y = 30
+}, {
+	x = 17,
+	y = -10
+}}
+
+for i1 = 1, 3 do
+	for i2 = 1, tt.threads_amount do
+		local s = E:clone_c("sprite")
+
+		s.prefix = "glarewarden_web_spiderweb"
+		s.name = tt.threads_idles[1]
+		s.loop = false
+		s.anchor.y = 0
+		s.offset.x = tt.spiders_offsets[i1].x
+		s.offset.y = (i2 - 1) * tt.threads_separation + tt.spiders_offsets[i1].y
+		s.z = Z_OBJECTS
+		s.sort_y_offset = -s.offset.y
+		s.group = "threads"
+		tt.render.sprites[tt.render.sid_threads_start + tt.threads_amount * (i1 - 1) + i2 - 1] = s
+	end
+end
+
+tt.render.sid_spiders_start = tt.render.sid_threads_end + 1
+tt.render.sid_spiders_end = tt.render.sid_spiders_start + 2
+
+for i = tt.render.sid_spiders_start, tt.render.sid_spiders_end do
+	tt.render.sprites[i] = CC("sprite")
+	tt.render.sprites[i].prefix = "boss_spider_minispider_tower_stun_spider"
+	tt.render.sprites[i].name = "climbDown"
+	tt.render.sprites[i].offset = v(tt.spiders_offsets[i - tt.render.sid_spiders_start + 1].x, tt.spiders_offsets[i - tt.render.sid_spiders_start + 1].y + 30)
+	tt.render.sprites[i].group = "spiders"
+end
+
+tt.render.sid_hand = tt.render.sid_spiders_end + 1
+tt.render.sprites[tt.render.sid_hand] = CC("sprite")
+tt.render.sprites[tt.render.sid_hand].name = "spider_queen_tap"
+tt.render.sprites[tt.render.sid_hand].offset = v(10, 20)
+tt.render.sprites[tt.render.sid_hand].draw_order = 11
+tt.render.sprites[tt.render.sid_hand].hidden = true
+tt.render.sprites[tt.render.sid_hand].z = Z_OBJECTS_COVERS
+tt.required_clicks = IS_PHONE_OR_TABLET and b.required_clics_phone_tablet or IS_CONSOLE and b.required_clics_console or b.required_clics_desktop
+tt.tap_fx = "fx_boss_spider_queen_melee_hit"
+tt.ui.can_click = true
+tt.ui.can_select = false
+tt.ui.click_rect = r(-40, 0, 80, 60)
+tt.ui.z = 1
+
+tt = E:register_t("bullet_soldier_priests_barrack", "bolt")
+b = balance.specials.towers.tower_stage_28_priests_barrack.priest.ranged
+tt.render.sprites[1].name = "priest_projectile"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.bullet.pop = nil
+tt.bullet.pop_conds = nil
+tt.bullet.hit_blood_fx = nil
+tt.bullet.acceleration_factor = 0.1
+tt.bullet.min_speed = 30
+tt.bullet.max_speed = 300
+tt.bullet.align_with_trajectory = true
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_max = b.damage_max
+tt.bullet.damage_type = b.damage_type
+tt.bullet.particles_name = "ps_bullet_soldier_priests_barrack_trail"
+tt.bullet.hit_fx = "fx_soldier_priests_barrack_bolt_hit"
+tt = E:register_t("bullet_boss_spider_queen_tower_stun", "bombKR5")
+tt.main_script.update = scripts.bullet_boss_spider_queen_tower_stun.update
+tt.bullet.flight_time = fts(35)
+tt.bullet.vis_flags = bor(F_RANGED, F_MOD)
+tt.bullet.vis_bans = 0
+tt.render.sprites[1].prefix = "boss_effects_bolt"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].scale = vv(0.7)
+tt.bullet.hit_fx = nil
+tt.bullet.pop = nil
+tt.bullet.pop_conds = nil
+tt.bullet.hit_mod = "mod_boss_spider_queen_tower_debuff"
+tt.bullet.particles_name = "ps_boss_spider_queen_bullet_tower_stun_trail"
+tt.bullet.particles_name_2 = "ps_boss_spider_queen_bullet_tower_stun_trail_2"
+tt.bullet.align_with_trajectory = true
+tt = E:register_t("bullet_boss_spider_queen_lifesteal", "bombKR5")
+tt.main_script.update = scripts.bullet_boss_spider_queen_tower_stun.update
+tt.bullet.flight_time = fts(10)
+tt.bullet.vis_flags = bor(F_RANGED, F_MOD)
+tt.bullet.vis_bans = 0
+tt.render.sprites[1].name = "spider_queen_boss_effects_trail2_0001"
+tt.render.sprites[1].animated = false
+tt.bullet.pop = nil
+tt.bullet.pop_conds = nil
+tt.bullet.particles_name = "ps_boss_spider_queen_lifesteal_trail_1"
+tt.bullet.particles_name_2 = "ps_boss_spider_queen_lifesteal_trail_2"
+tt.bullet.hit_fx = "fx_boss_spider_queen_lifesteal_healing"
+tt.bullet.align_with_trajectory = true
+tt = E:register_t("aura_tower_holder_capture", "aura")
+tt.aura.duration = -1
+tt.aura.radius = 150
+tt.aura.track_source = true
+tt.aura.vis_bans = 0
+tt.aura.vis_flags = bor(F_HERO)
+tt.aura.cycle_time = 0.2
+tt.capture_multiplier = 1
+tt.capture_default_increment = nil
+tt.capture_default_decrement = nil
+tt.capture_default_decrement_multiplier = 0.5
+tt.main_script.update = scripts.aura_tower_holder_capture.update
+
+tt = E:register_t("ps_bullet_enemy_spider_priest")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "cultist_spider_projectile_trail"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 30
+tt.particle_system.emit_rotation_spread = math.pi * 2
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt.particle_system.anchor = v(0.5, 0.5)
+tt.particle_system.particle_lifetime = {fts(6), fts(6)}
+
+tt = E:register_t("fx_soldier_priests_barrack_melee_hit", "fx")
+tt.render.sprites[1].name = "priest_melee_hit"
+tt.render.sprites[1].sort_y_offset = -30
+tt = E:register_t("fx_soldier_priests_barrack_abomination_melee_hit", "fx")
+tt.render.sprites[1].name = "redemeed_cultist_barraca_unblinded_abomination_hit_fx_idle"
+tt.render.sprites[1].sort_y_offset = -30
+tt = E:register_t("fx_soldier_priests_barrack_abomination_eat", "fx")
+tt.render.sprites[1].name = "redemeed_cultist_barraca_unblinded_abomination_eat_fx"
+tt.render.sprites[1].sort_y_offset = -30
+tt = E:register_t("fx_soldier_priests_barrack_bolt_hit", "fx")
+tt.render.sprites[1].name = "priest_ranged_hit_idle"
+
+tt = E:register_t("aura_boss_spider_queen_spiderweb", "aura")
+b = balance.enemies.arachnids.boss_spider_queen.spiderweb
+tt.aura.track_source = true
+tt.aura.cycle_time = b.cycle_time
+tt.main_script.update = scripts.aura_boss_spider_queen_spiderweb.update
+tt.min_decal_distance = b.min_distance
+tt.decal = "decal_boss_spider_queen_spiderweb"
+tt.decal_duration = b.duration
+tt = E:register_t("aura_spider_webs_sprint", "aura")
+
+AC(tt, "editor", "editor_script")
+
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_spider_webs.update
+tt.aura.ignore_flywalk = true
+tt.aura.duration = -1
+tt.aura.mod = "mod_spider_web_sprint"
+tt.aura.radius = 80
+tt.aura.cycle_time = fts(3)
+tt.aura.vis_bans = bor(F_FLYING)
+tt.aura.allowed_templates = {
+	"enemy_spiderling",
+	"enemy_spider_priest",
+	"enemy_glarenwarden",
+	"enemy_ballooning_spider",
+	"enemy_ballooning_spider_flyer",
+	"enemy_spider_sister",
+	"enemy_cultbrood",
+	"enemy_drainbrood",
+	"enemy_spidead",
+	"hero_spider",
+	"soldier_hero_spider_ultimate"
+}
+tt.editor.components = {"render"}
+tt.editor.overrides = {
+	["render.sprites[1].hidden"] = false,
+	["render.sprites[1].animated"] = false,
+	["render.sprites[1].name"] = "editor_red_circle"
+}
+tt.editor.props = {{"aura.radius", PT_NUMBER}}
+tt.editor_script.update = scripts.editor_aura_spider_web_sprint.update
+tt = E:register_t("aura_spider_webs_slowness", "aura_spider_webs_sprint")
+tt.aura.allowed_templates = nil
+tt.aura.mod = "mod_spider_web_slowness"
+tt.aura.vis_bans = bor(F_ENEMY, F_FLYING)
+tt.aura.excluded_templates = {"hero_spider", "soldier_hero_spider_ultimate", "hero_witch", "hero_space_elf"}
+
+tt = E:register_t("controller_stage_29_spider_holders", "decal_scripted")
+
+E:add_comps(tt, "editor", "ui")
+
+b = balance.specials.stage29_holder_block
+tt.main_script.update = scripts.controller_stage_29_spider_holders.update
+tt.render.sprites[1].prefix = "spiderholder_spiderholder"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].anchor = v(0.5, 0.4)
+tt.render.sprites[1].name = "climbing_up_idle"
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+tt.waves = b.waves
+tt.first_cooldown = b.first_cooldown
+tt.cooldown = b.cooldown
+tt.max_casts = b.max_casts
+tt.game_start_blocked_holders = b.game_start_blocked_holders
+tt.time_to_down = b.time_to_down
+tt.time_to_up = b.time_to_up
+tt.time_netting = b.time_netting
+tt.taps_to_cancel = b.taps_to_cancel
+tt.hand_decal_t = "decal_mod_stage_29_holder_block_hand"
+tt.ui.click_rect = r(-35, -40, 70, 70)
+tt.vis_bans = 0
+tt.vis_flags = 0
+tt.threads_separation = 38
+tt.threads_amount = math.ceil(REF_H / tt.threads_separation)
+tt.threads_idles = {"idle1", "idle1", "idle2", "idle3", "idle4", "idle4"}
+
+for i = 1, tt.threads_amount do
+	local s = E:clone_c("sprite")
+
+	s.prefix = "glarewarden_web_spiderweb"
+	s.name = tt.threads_idles[1]
+	s.loop = false
+	s.anchor.y = 0
+	s.offset.y = (i - 1) * tt.threads_separation
+	s.z = Z_OBJECTS_SKY - 1
+	s.hidden = true
+	tt.render.sprites[i + 1] = s
+end
+
+tt.sound_loop = "EnemySpidersMechanicTowerSpiderWorkingLoop"
+tt.sound_death = "EnemySpidersMechanicTowerSpiderDeath"
+tt = E:register_t("tower_holder_pre_blocked_spiders", "decal_scripted")
+tt.render.sprites[1].name = "terrains_holders_00017_flag"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].anchor = v(0.5, 0.3)
+tt = E:register_t("controller_stage_30_boss_spiders", "decal_scripted")
+
+E:add_comps(tt, "editor")
+
+b = balance.enemies.arachnids.boss_spider_queen
+tt.main_script.update = scripts.controller_stage_30_boss_spiders.update
+tt.spawn_path = b.spawn_path
+tt.spawn_node = b.spawn_node
+tt.render.sid_queen_podium = 1
+tt.wave_spawns = b.wave_spawns
+tt.wave_spawns_impossible = b.wave_spawns_impossible
+tt.wave_spawns_object = "glarenwarden_thread_spawner"
+tt.render.sprites[tt.render.sid_queen_podium].prefix = "spiderqueen_spider_queenDef"
+tt.render.sprites[tt.render.sid_queen_podium].animated = true
+tt.render.sprites[tt.render.sid_queen_podium].exo = true
+tt.render.sprites[tt.render.sid_queen_podium].anchor = v(0.5, 0.5)
+tt.render.sprites[tt.render.sid_queen_podium].name = "walk"
+tt.render.sprites[tt.render.sid_queen_podium].z = Z_OBJECTS
+tt.render.sprites[tt.render.sid_queen_podium].sort_y_offset = 0
+tt.render.sid_jump = 2
+tt.render.sprites[tt.render.sid_jump] = table.deepclone(tt.render.sprites[1])
+tt.render.sprites[tt.render.sid_jump].prefix = "spiderqueen_queen_assetDef"
+tt.render.sprites[tt.render.sid_jump].hidden = true
+tt.render.sprites[tt.render.sid_jump].name = "in"
+tt.render.sid_land = 3
+tt.render.sprites[tt.render.sid_land] = table.deepclone(tt.render.sprites[2])
+tt.render.sprites[tt.render.sid_land].prefix = "spiderqueen_spider_jumpDef"
+tt.render.sid_smoke = 4
+tt.render.sprites[tt.render.sid_smoke] = table.deepclone(tt.render.sprites[2])
+tt.render.sprites[tt.render.sid_smoke].prefix = "spiderqueen_smokeDef"
+
+tt = E:register_t("stage_29_cocoon", "decal_scripted")
+
+E:add_comps(tt, "spawner")
+
+tt.render.sprites[1].prefix = "cocon_stage2_coocoon"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.animation_spawner_start = "summon_in"
+tt.animation_spawner_idle = "idle_anim"
+tt.animation_spawner_end = "summon_out"
+tt.animation_spawner_idle_broken = "idle_broken"
+tt.broken_on_heroic = true
+tt.broken_on_iron = true
+tt.main_script.update = scripts.stage_29_cocoon.update
+tt.spawn_data = nil
+tt.spawner.eternal = true
+tt.sound_inflate = "EnemySpidersMechanicSpawnerInflate"
+tt.sound_explode = "EnemySpidersMechanicSpawnerExplode"
+tt.sound_regenerate = "EnemySpidersMechanicSpawnerRegenerate"
+
+tt = E:register_t("decal_mod_stage_29_holder_block_hand", "decal_tween")
+tt.render.sprites[1].prefix = "spiderholder_block_tap"
+tt.render.sprites[1].name = "tap"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+tt.render.sprites[1].offset = v(23, 50)
+tt.tween.props[1].keys = {{0, 0}, {fts(15), 255}, {fts(45), 255}, {fts(60), 0}}
+tt.tween.remove = true
+
+tt = E:register_t("tower_holder_blocked_spiders", "tower_holder_blocked_2")
+E:add_comps(tt, "main_script")
+b = balance.specials.stage29_holder_block.blocked_holders
+tt.main_script.insert = scripts.tower_holder_blocked_spiders.insert
+tt.tower.type = "holder_blocked_spiders"
+tt.tower_holder.unblock_price = b.price[1]
+tt.prices = b.price
+tt.render.sprites[1].name = "build_terrain_blocked_0003"
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "terrains_holders_0018_flag_blocked"
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].offset = vec_2(0, 17)
+
+tt = E:register_t("glarenwarden_thread_spawner", "decal_scripted")
+AC(tt, "nav_path", "motion", "spawner", "sound_events")
+tt.spawn = "enemy_glarenwarden"
+tt.main_script.insert = scripts.glarenwarden_thread_spawner.insert
+tt.main_script.update = scripts.glarenwarden_thread_spawner.update
+tt.sound_events.insert = "ElvesCreepSonOfMactansLanding"
+tt.render.sprites[1].prefix = "glarenwarden_creep"
+tt.render.sprites[1].name = "descending_loop"
+tt.render.sprites[1].offset.y = 0
+tt.render.sprites[1].anchor.y = 0.5
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+tt.threads_separation = 38
+tt.threads_amount = math.ceil(REF_H / tt.threads_separation)
+tt.threads_idles = {"idle1", "idle1", "idle2", "idle3", "idle4", "idle4"}
+
+for i = 1, tt.threads_amount do
+	local s = E:clone_c("sprite")
+	s.prefix = "glarewarden_web_spiderweb"
+	s.name = tt.threads_idles[1]
+	s.loop = false
+	s.anchor.y = 0
+	s.offset.y = (i - 1) * tt.threads_separation
+	s.z = Z_OBJECTS_SKY - 1
+	tt.render.sprites[i + 1] = s
+end

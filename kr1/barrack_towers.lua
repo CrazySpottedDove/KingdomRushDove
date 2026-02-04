@@ -3741,3 +3741,201 @@ tt.motion.max_speed = b.barkshield.max_speed
 tt.main_script.insert = scripts.soldier_barrack.insert
 tt.main_script.update = scripts.soldier_barrack.update
 tt.unit.price = b.barkshield.price
+
+tt = E:register_t("tower_stage_28_priests_barrack", "tower")
+b = balance.specials.towers.tower_stage_28_priests_barrack
+E:add_comps(tt, "vis", "barrack")
+tt.tower.type = "tower_priests_barrack"
+tt.tower.level = 1
+tt.tower.kind = TOWER_KIND_BARRACK
+tt.tower.range_offset = v(0, 10)
+tt.tower.price = 0
+tt.tower.menu_offset = v(0, 25)
+tt.mercenary = true
+function tt.info.fn(this)
+	return {
+		type = STATS_TYPE_TEXT,
+		desc = this.info.desc
+	}
+end
+
+tt.main_script.update = scripts.tower_barrack_mercenaries.update
+tt.main_script.remove = scripts.tower_barrack.remove
+
+function tt.main_script.insert(this, store, script)
+	if this.render.sprites[1].flip_x == true then
+		this.barrack.respawn_offset.x = this.barrack.respawn_offset.x * -1
+	end
+
+	return scripts.tower_barrack.insert(this, store, script)
+end
+
+tt.info.portrait = "kr5_portraits_towers_0029"
+tt.info.desc = "SPECIAL_PRIESTS_SOLDIERS_DESCRIPTION"
+tt.render.sprites[1].name = "terrain_barrack_%04i"
+tt.render.sprites[1].offset = v(0, 13)
+tt.render.sprites[1].animated = false
+tt.render.tower_sid = 2
+tt.render.door_sid = 3
+tt.render.candles_sid = 4
+tt.render.sprites[tt.render.tower_sid] = E:clone_c("sprite")
+tt.render.sprites[tt.render.tower_sid].animated = true
+tt.render.sprites[tt.render.tower_sid].prefix = "redemeed_cultist_barraca_base"
+tt.render.sprites[tt.render.tower_sid].name = "idle"
+tt.render.sprites[tt.render.door_sid] = E:clone_c("sprite")
+tt.render.sprites[tt.render.door_sid].animated = true
+tt.render.sprites[tt.render.door_sid].prefix = "redemeed_cultist_barraca_door"
+tt.render.sprites[tt.render.door_sid].name = "closed"
+tt.render.sprites[tt.render.door_sid].offset = v(0, 14)
+tt.render.sprites[tt.render.candles_sid] = E:clone_c("sprite")
+tt.render.sprites[tt.render.candles_sid].animated = true
+tt.render.sprites[tt.render.candles_sid].prefix = "redemeed_cultist_barraca_fire_candle"
+tt.render.sprites[tt.render.candles_sid].name = "idle"
+tt.barrack.soldier_type = "soldier_priests_barrack"
+tt.barrack.rally_range = 209.28
+tt.barrack.respawn_offset = v(0, 5)
+tt.barrack.max_soldiers = b.max_soldiers
+-- tt.sound_events.change_rally_point = "Stage04ArboreanThornspears"
+tt.sound_events.change_rally_point = nil
+tt.ui.click_rect = r(-35, -15, 70, 70)
+
+tt = E:register_t("soldier_priests_barrack", "soldier_militia")
+b = balance.specials.towers.tower_stage_28_priests_barrack.priest
+E:add_comps(tt, "nav_grid", "ranged", "death_spawns")
+tt.health.armor = b.armor
+tt.health.hp_max = b.hp_max
+tt.health_bar.offset = v(0, 35)
+tt.health.dead_lifetime = 10
+tt.nav_rally.delay_max = nil
+tt.info.fn = scripts.soldier_priests_barrack.get_info
+tt.info.damage_icon = b.melee.damage_type == DAMAGE_MAGICAL and "magic" or nil
+-- TODO
+-- tt.info.portrait = "kr5_info_portraits_soldiers_0058"
+tt.info.portrait = "kr5_info_portraits_soldiers_0036"
+tt.info.random_name_format = "SOLDIER_PRIESTS_BARRACK_%i_NAME"
+tt.info.random_name_count = 9
+tt.main_script.insert = scripts.soldier_barrack.insert
+tt.main_script.update = scripts.soldier_priests_barrack.update
+tt.melee.attacks[1].cooldown = b.melee.cooldown
+tt.melee.attacks[1].damage_max = b.melee.damage_max
+tt.melee.attacks[1].damage_min = b.melee.damage_min
+tt.melee.attacks[1].damage_type = b.melee.damage_type
+tt.melee.attacks[1].hit_time = fts(13)
+tt.melee.attacks[1].animation = "melee_attack"
+tt.melee.attacks[1].hit_fx = "fx_soldier_priests_barrack_melee_hit"
+tt.melee.attacks[1].hit_offset = v(23, 13)
+tt.motion.max_speed = b.max_speed
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].prefix = "redemeed_cultist_barraca_priest"
+tt.render.sprites[1].angles = {}
+tt.render.sprites[1].angles.walk = {"walk", "walk", "walk"}
+tt.render.sprites[1].angles_stickiness = {
+	walk = 10
+}
+tt.render.sprites[1].anchor = v(0.5, 0.5172413793103449)
+tt.ranged.attacks[1] = CC("bullet_attack")
+tt.ranged.attacks[1].animation = "ranged_attack"
+tt.ranged.attacks[1].max_range = b.ranged.range
+tt.ranged.attacks[1].min_range = 0
+tt.ranged.attacks[1].cooldown = b.ranged.cooldown
+tt.ranged.attacks[1].damage_min = b.ranged.damage_min
+tt.ranged.attacks[1].damage_max = b.ranged.damage_max
+tt.ranged.attacks[1].bullet = "bullet_soldier_priests_barrack"
+tt.ranged.attacks[1].bullet_start_offset = {v(0, 36)}
+tt.ranged.attacks[1].shoot_time = fts(24)
+tt.ranged.attacks[1].node_prediction = fts(24)
+tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
+tt.death_spawns.name = "soldier_abomination_priests_barrack"
+tt.death_spawns.death_animation = "transformation_abomination"
+tt.death_spawns.concurrent_with_death = false
+tt.death_spawns.delay = nil
+tt.death_spawns.offset = v(0, 2)
+tt.death_spawns.dead_lifetime = 0
+tt.transform_chances = b.transform_chances
+tt.soldier.melee_slot_offset = v(5, 0)
+tt.unit.price = b.price
+tt.unit.fade_time_after_death = 1
+-- tt.sound_events.insert = "Stage04ArboreanThornspears"
+tt.sound_events.insert = nil
+
+tt = E:register_t("soldier_abomination_priests_barrack", "soldier_militia")
+b = balance.specials.towers.tower_stage_28_priests_barrack.abomination
+E:add_comps(tt, "nav_grid", "reinforcement", "tween")
+tt.health.hp_max = b.hp_max
+tt.health.armor = b.armor
+tt.regen.health = b.regen_health
+tt.health.dead_lifetime = 15
+tt.health_bar.offset = v(0, 50)
+tt.unit.hit_offset = v(0, 21)
+tt.unit.head_offset = v(0, 21)
+tt.unit.mod_offset = v(0, 16)
+tt.unit.show_blood_pool = false
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_MEDIUM
+tt.motion.max_speed = b.max_speed
+tt.render.sprites[1].prefix = "redemeed_cultist_barraca_unblinded_abomination"
+tt.render.sprites[1].angles = {}
+tt.render.sprites[1].angles.walk = {"walk", "walk", "walk"}
+tt.render.sprites[1].angles_stickiness = {
+	walk = 0
+}
+tt.render.sprites[1].anchor = vv(0.5)
+tt.info.enc_icon = 18
+-- TODO
+-- tt.info.portrait = "kr5_info_portraits_soldiers_0059"
+tt.info.portrait = "kr5_info_portraits_soldiers_0036"
+tt.eat = {}
+tt.eat.hp_required = b.eat.hp_required
+tt.main_script.insert = scripts.soldier_barrack.insert
+tt.main_script.update = scripts.soldier_abomination_priests_barrack.update
+tt.melee.attacks[1].cooldown = b.melee_attack.cooldown
+tt.melee.attacks[1].damage_max = b.melee_attack.damage_max
+tt.melee.attacks[1].damage_min = b.melee_attack.damage_min
+tt.melee.attacks[1].hit_time = fts(13)
+tt.melee.attacks[1].hit_fx = "fx_soldier_priests_barrack_abomination_melee_hit"
+tt.melee.attacks[1].hit_offset = v(30, 10)
+tt.melee.attacks[2] = E:clone_c("melee_attack")
+tt.melee.attacks[2].animation = "eat"
+tt.melee.attacks[2].cooldown = b.eat.cooldown
+tt.melee.attacks[2].damage_type = bor(DAMAGE_NONE, DAMAGE_NO_DODGE)
+tt.melee.attacks[2].hit_time = fts(20)
+tt.melee.attacks[2].mod = "mod_priests_abomination_eat"
+tt.melee.attacks[2].vis_flags = bor(F_BLOCK, F_EAT, F_INSTAKILL)
+tt.melee.attacks[2].vis_bans = bor(F_HERO)
+tt.melee.attacks[2].sound = "EnemyAbominationInstakill"
+tt.melee.attacks[2].fn_can = function(t, s, a, target)
+	return target.health and target.health.hp <= target.health.hp_max * t.eat.hp_required
+end
+tt.sound_events.death = "EnemyAbominationDeath"
+tt.ui.click_rect = r(-30, -3, 60, 50)
+tt.reinforcement.duration = b.duration
+tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
+tt.tween.props[1].name = "alpha"
+tt.tween.disabled = true
+tt.tween.remove = false
+tt.tween.reverse = false
+
+tt = E:register_t("decal_tentacle_priests_barrack", "decal_scripted")
+b = balance.specials.towers.tower_stage_28_priests_barrack.tentacle
+E:add_comps(tt, "area_attack")
+tt.render.sprites[1].prefix = "redemeed_cultist_barraca_tentacle"
+tt.render.sprites[1].name = "raise"
+tt.render.sprites[1].sort_y_offset = 1
+tt.render.sprites[1].anchor = vv(0.5)
+tt.main_script.update = scripts.decal_tentacle_priests_barrack.update
+tt.area_attack.aura = "priests_tentacle_aura"
+tt.area_attack.hit_time = fts(14)
+tt.area_attack.max_range = b.area_attack.radius
+tt.area_attack.radius = b.area_attack.radius
+tt.area_attack.cooldown_min = b.area_attack.cooldown_min
+tt.area_attack.cooldown_max = b.area_attack.cooldown_max
+tt.area_attack.animation = "attack01"
+tt.area_attack.vis_bans = 0
+tt.duration = b.duration
+
+tt = E:register_t("mod_priests_abomination_eat", "modifier")
+b = balance.specials.towers.tower_stage_28_priests_barrack.abomination
+tt.main_script.queue = scripts.mod_enemy_unblinded_abomination_eat.queue
+tt.main_script.update = scripts.mod_enemy_unblinded_abomination_eat.update
+tt.explode_fx = "fx_soldier_priests_barrack_abomination_eat"
+tt.required_hp = b.eat.hp_required

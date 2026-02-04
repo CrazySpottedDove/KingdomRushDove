@@ -71,7 +71,6 @@ end
 signal.emit("boss_fight_end")
 U.y_wait(store,4)
 signal.emit("fade-out",1)
-store.custom_game_outcome={postpone_unload=true,next_item_name="boss_fight_8_end"}
 store.waves_finished=true
 store.level.run_complete=true
 elseif store.level_mode==GAME_MODE_IRON then

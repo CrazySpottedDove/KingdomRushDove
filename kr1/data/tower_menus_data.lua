@@ -2847,5 +2847,17 @@ return {
 		place = 5,
 		tt_title = _("TOWER_CROCS_EATEN_NAME"),
 		tt_desc = _("TOWER_CROCS_EATEN_DESCRIPTION")
-	}}}
+	}}},
+	tower_priests_barrack = {{M(tpl.buy_soldier, {
+		image = "kr5_main_icons_0041",
+		action_arg = "soldier_priests_barrack",
+		tt_title = _("SPECIAL_PRIESTS_SOLDIERS_NAME"),
+		tt_desc = _("TOWER_STAGE_28_PRIESTS_BARRACK_DESCRIPTION")
+	}), tpl.rally, tpl.sell}},
+	holder_blocked_spiders = {{M(tpl.unblock, {
+		action_arg = "tower_holder",
+		image = "main_icons_0037",
+		tt_title = _("SPECIAL_REPAIR_HOLDER_SPIDERS_NAME"),
+		tt_desc = _("SPECIAL_REPAIR_HOLDER_SPIDERS_DESCRIPTION")
+	})}}
 }

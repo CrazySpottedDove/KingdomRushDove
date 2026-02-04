@@ -3281,7 +3281,7 @@ return {
 	},
 	EnemyDrainbroodMelee = {
 		delay = 0.33,
-		files = {"kra_sfx_spiders_enemy_spider_drainbrood_melee_var1_v1ogg", "kra_sfx_spiders_enemy_spider_drainbrood_melee_var2_v1.ogg", "kra_sfx_spiders_enemy_spider_drainbrood_melee_var3_v1.ogg"},
+		files = {"kra_sfx_spiders_enemy_spider_drainbrood_melee_var1_v1.ogg", "kra_sfx_spiders_enemy_spider_drainbrood_melee_var2_v1.ogg", "kra_sfx_spiders_enemy_spider_drainbrood_melee_var3_v1.ogg"},
 		gain = 0.4,
 		loop = false,
 		mode = "random",

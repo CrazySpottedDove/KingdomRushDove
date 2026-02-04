@@ -4404,7 +4404,7 @@ scripts.mod_tesla_overcharge = {
 		if scripts.mod_track_target.insert(this, store) then
 			local target = store.entities[this.modifier.target_id]
 
-			if math.random() < 0.12 then
+			if math.random() < 0.12 and band(target.vis.bans, F_STUN) ~= 0 and band(target.vis.flags, F_BOSS) == 0 then
 				SU.stun_inc(target)
 
 				this._stun = true
@@ -20879,4 +20879,516 @@ function scripts.controller_tower_arborean_emissary_gift_of_nature.update(this, 
 end
 
 -- 树灵 END
--- return scripts
+
+scripts.soldier_priests_barrack = {}
+
+function scripts.soldier_priests_barrack.get_info(this)
+	local attacks = this.ranged.attacks
+	local min, max
+
+	for _, a in pairs(attacks) do
+		if a.damage_min then
+			min, max = a.damage_min, a.damage_max
+
+			break
+		end
+	end
+
+	if this.unit and min then
+		min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
+	end
+
+	if min and max then
+		min, max = math.ceil(min), math.ceil(max)
+	end
+
+	return {
+		type = STATS_TYPE_SOLDIER,
+		hp = this.health.hp,
+		hp_max = this.health.hp_max,
+		damage_min = min,
+		damage_max = max,
+		damage_icon = this.info.damage_icon,
+		armor = this.health.armor,
+		respawn = this.health.dead_lifetime
+	}
+end
+
+function scripts.soldier_priests_barrack.update(this, store, script)
+	local brk, sta
+
+	if this.vis._bans then
+		this.vis.bans = this.vis._bans
+		this.vis._bans = nil
+	end
+
+	if this.render.sprites[1].name == "raise" then
+		this.health_bar.hidden = true
+
+		U.animation_start(this, "raise", nil, store.tick_ts, 1)
+
+		while not U.animation_finished(this) and not this.health.dead do
+			coroutine.yield()
+		end
+
+		if not this.health.dead then
+			this.health_bar.hidden = nil
+		end
+	end
+
+	local function priest_transformation()
+		if this.death_spawns.fx then
+			local fx = E:create_entity(this.death_spawns.fx)
+
+			fx.pos = V.vclone(this.pos)
+			fx.render.sprites[1].ts = store.tick_ts
+
+			if this.death_spawns.fx_flip_to_source and this.render and this.render.sprites[1] then
+				fx.render.sprites[1].flip_x = this.render.sprites[1].flip_x
+			end
+
+			queue_insert(store, fx)
+		end
+
+		local s = E:create_entity(this.death_spawns.name)
+
+		s.pos = V.vclone(this.pos)
+
+		if this.death_spawns.spawn_animation and s.render then
+			s.render.sprites[1].name = this.death_spawns.spawn_animation
+		end
+
+		if s.render and s.render.sprites[1] and this.render and this.render.sprites[1] then
+			s.render.sprites[1].flip_x = this.render.sprites[1].flip_x
+		end
+
+		if s.nav_path then
+			s.nav_path.pi = this.nav_path.pi
+
+			local spread_nodes = this.death_spawns.spread_nodes
+
+			if spread_nodes > 0 then
+				s.nav_path.spi = km.zmod(this.nav_path.spi + i, 3)
+
+				local node_offset = spread_nodes * -2 * math.floor(i / 3)
+
+				s.nav_path.ni = this.nav_path.ni + node_offset + spread_nodes
+			else
+				s.nav_path.spi = this.nav_path.spi
+				s.nav_path.ni = this.nav_path.ni + 2
+			end
+		end
+
+		if s.nav_grid and this.nav_grid then
+			s.nav_grid = table.deepclone(this.nav_grid)
+		end
+
+		if s.nav_rally and this.nav_rally then
+			s.nav_rally = table.deepclone(this.nav_rally)
+		end
+
+		if this.death_spawns.offset then
+			s.pos.x = s.pos.x + this.death_spawns.offset.x
+			s.pos.y = s.pos.y + this.death_spawns.offset.y
+		end
+
+		queue_insert(store, s)
+
+		local tower = store.entities[this.soldier.tower_id]
+
+		s.soldier.tower_id = tower.id
+
+		table.insert(tower.barrack.soldiers, s)
+
+		return s
+	end
+
+	while true do
+		if this.powers then
+			for pn, p in pairs(this.powers) do
+				if p.changed then
+					p.changed = nil
+
+					SU.soldier_power_upgrade(this, pn)
+				end
+			end
+		end
+
+		if this.cloak then
+			this.vis.flags = band(this.vis.flags, bnot(this.cloak.flags))
+			this.vis.bans = band(this.vis.bans, bnot(this.cloak.bans))
+			this.render.sprites[1].alpha = 255
+		end
+
+		if not this.health.dead or SU.y_soldier_revive(store, this) then
+		-- block empty
+		else
+			local r = math.random() * 100
+			local transformation = false
+			local force_abomination = false
+
+			if this.mercenary_spawn_number == 1 then
+				force_abomination = true
+			end
+
+			if r < this.transform_chances[1] or force_abomination then
+				S:queue(this.sound_events.death, this.sound_events.death_args)
+				U.y_animation_play(this, "transformation_abomination", nil, store.tick_ts, 1)
+
+				this.ui.can_select = false
+				this.health.death_finished_ts = store.tick_ts
+
+				if this.ui then
+					this.ui.can_click = this.ui.can_click and not this.unit.hide_after_death
+					this.ui.z = -1
+				end
+
+				priest_transformation()
+				queue_remove(store, this)
+
+				return
+			elseif r < this.transform_chances[1] + this.transform_chances[2] then
+				local tentacle = E:create_entity("decal_tentacle_priests_barrack")
+				local maxOffset = 10
+				local offsetX, offsetY = -maxOffset + maxOffset * math.random() * 2, -maxOffset + maxOffset * math.random() * 2
+
+				tentacle.pos = V.v(this.pos.x + offsetX, this.pos.y + offsetY)
+
+				queue_insert(store, tentacle)
+				S:queue(this.sound_events.death, this.sound_events.death_args)
+				U.y_animation_play(this, "transform_tentacle", nil, store.tick_ts, 1)
+
+				this.ui.can_select = false
+				this.health.death_finished_ts = store.tick_ts
+
+				if this.ui then
+					this.ui.can_click = this.ui.can_click and not this.unit.hide_after_death
+					this.ui.z = -1
+				end
+
+				U.sprites_hide(this)
+
+				return
+			end
+
+			SU.y_soldier_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			SU.soldier_courage_upgrade(store, this)
+
+			if this.dodge and this.dodge.active then
+				this.dodge.active = false
+
+				if this.dodge.counter_attack and this.powers[this.dodge.counter_attack.power_name].level > 0 then
+					this.dodge.counter_attack_pending = true
+				elseif this.dodge.animation then
+					U.animation_start(this, this.dodge.animation, nil, store.tick_ts, 1)
+
+					while not U.animation_finished(this) do
+						coroutine.yield()
+					end
+				end
+
+				signal.emit("soldier-dodge", this)
+			end
+
+			if SU.go_to_forced_waypoint(this, store) then
+			-- block empty
+			else
+				while this.nav_rally.new do
+					if SU.y_soldier_new_rally(store, this) then
+						goto label_1140_1
+					end
+				end
+
+				this.nav_rally.delay_max = 0.25
+
+				if this.timed_actions then
+					brk, sta = SU.y_soldier_timed_actions(store, this)
+
+					if brk then
+						goto label_1140_1
+					end
+				end
+
+				if this.timed_attacks then
+					brk, sta = SU.y_soldier_timed_attacks(store, this)
+
+					if brk then
+						goto label_1140_1
+					end
+				end
+
+				if this.ranged and this.ranged.range_while_blocking then
+					brk, sta = SU.y_soldier_ranged_attacks(store, this)
+
+					if brk then
+						goto label_1140_1
+					end
+				end
+
+				if this.melee then
+					brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+					if brk or sta ~= A_NO_TARGET then
+						goto label_1140_1
+					end
+				end
+
+				if this.ranged and not this.ranged.range_while_blocking then
+					brk, sta = SU.y_soldier_ranged_attacks(store, this)
+
+					if brk or sta == A_DONE then
+						goto label_1140_1
+					elseif sta == A_IN_COOLDOWN and not this.ranged.go_back_during_cooldown then
+						goto label_1140_0
+					end
+				end
+
+				if SU.soldier_go_back_step(store, this) then
+					goto label_1140_1
+				end
+
+				::label_1140_0::
+
+				SU.soldier_idle(store, this)
+
+				if this.cloak then
+					this.vis.flags = bor(this.vis.flags, this.cloak.flags)
+					this.vis.bans = bor(this.vis.bans, this.cloak.bans)
+
+					if this.cloak.alpha then
+						this.render.sprites[1].alpha = this.cloak.alpha
+					end
+				end
+
+				SU.soldier_regen(store, this)
+			end
+		end
+
+		::label_1140_1::
+
+		coroutine.yield()
+	end
+end
+
+scripts.soldier_abomination_priests_barrack = {}
+
+function scripts.soldier_abomination_priests_barrack.update(this, store, script)
+	local brk, sta
+
+	this.reinforcement.ts = store.tick_ts
+
+	if this.vis._bans then
+		this.vis.bans = this.vis._bans
+		this.vis._bans = nil
+	end
+
+	if this.render.sprites[1].name == "raise" then
+		this.health_bar.hidden = true
+
+		U.animation_start(this, "raise", nil, store.tick_ts, 1)
+
+		while not U.animation_finished(this) and not this.health.dead do
+			coroutine.yield()
+		end
+
+		if not this.health.dead then
+			this.health_bar.hidden = nil
+		end
+	end
+
+	while true do
+		if this.powers then
+			for pn, p in pairs(this.powers) do
+				if p.changed then
+					p.changed = nil
+
+					SU.soldier_power_upgrade(this, pn)
+				end
+			end
+		end
+
+		if this.cloak then
+			this.vis.flags = band(this.vis.flags, bnot(this.cloak.flags))
+			this.vis.bans = band(this.vis.bans, bnot(this.cloak.bans))
+			this.render.sprites[1].alpha = 255
+		end
+
+		if this.health.dead then
+			this.reinforcement.fade = false
+			this.reinforcement.fade_out = false
+
+			SU.remove_modifiers(store, this)
+			SU.y_soldier_death(store, this)
+
+			return
+		elseif not this.soldier.target_id and this.reinforcement.duration and store.tick_ts - this.reinforcement.ts > this.reinforcement.duration then
+			if this.health.hp > 0 then
+				this.reinforcement.hp_before_timeout = this.health.hp
+			end
+
+			this.health.hp = 0
+
+			SU.remove_modifiers(store, this)
+			SU.y_soldier_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			SU.soldier_courage_upgrade(store, this)
+
+			if this.dodge and this.dodge.active then
+				this.dodge.active = false
+
+				if this.dodge.counter_attack and this.powers[this.dodge.counter_attack.power_name].level > 0 then
+					this.dodge.counter_attack_pending = true
+				elseif this.dodge.animation then
+					U.animation_start(this, this.dodge.animation, nil, store.tick_ts, 1)
+
+					while not U.animation_finished(this) do
+						coroutine.yield()
+					end
+				end
+
+				signal.emit("soldier-dodge", this)
+			end
+
+			while this.nav_rally.new do
+				if SU.y_soldier_new_rally(store, this) then
+					goto label_1142_1
+				end
+			end
+
+			if this.timed_actions then
+				brk, sta = SU.y_soldier_timed_actions(store, this)
+
+				if brk then
+					goto label_1142_1
+				end
+			end
+
+			if this.timed_attacks then
+				brk, sta = SU.y_soldier_timed_attacks(store, this)
+
+				if brk then
+					goto label_1142_1
+				end
+			end
+
+			if this.ranged and this.ranged.range_while_blocking then
+				brk, sta = SU.y_soldier_ranged_attacks(store, this)
+
+				if brk then
+					goto label_1142_1
+				end
+			end
+
+			if this.melee then
+				brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+				if brk or sta ~= A_NO_TARGET then
+					goto label_1142_1
+				end
+			end
+
+			if this.ranged and not this.ranged.range_while_blocking then
+				brk, sta = SU.y_soldier_ranged_attacks(store, this)
+
+				if brk or sta == A_DONE then
+					goto label_1142_1
+				elseif sta == A_IN_COOLDOWN and not this.ranged.go_back_during_cooldown then
+					goto label_1142_0
+				end
+			end
+
+			if SU.soldier_go_back_step(store, this) then
+				goto label_1142_1
+			end
+
+			::label_1142_0::
+
+			SU.soldier_idle(store, this)
+
+			if this.cloak then
+				this.vis.flags = bor(this.vis.flags, this.cloak.flags)
+				this.vis.bans = bor(this.vis.bans, this.cloak.bans)
+
+				if this.cloak.alpha then
+					this.render.sprites[1].alpha = this.cloak.alpha
+				end
+			end
+
+			SU.soldier_regen(store, this)
+		end
+
+		::label_1142_1::
+
+		coroutine.yield()
+	end
+end
+
+scripts.decal_tentacle_priests_barrack = {}
+
+function scripts.decal_tentacle_priests_barrack.update(this, store, script)
+	local a = this.area_attack
+
+	this.spawn_ts = store.tick_ts
+	a.cooldown = U.frandom(a.cooldown_min, a.cooldown_max)
+
+	U.y_animation_play(this, "raise", nil, store.tick_ts)
+	U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+	a.ts = store.tick_ts - a.cooldown
+
+	while true do
+		if store.tick_ts - this.spawn_ts > this.duration then
+			SU.remove_modifiers(store, this)
+			U.y_animation_play(this, "death", nil, store.tick_ts, 1)
+			queue_remove(store, this)
+
+			return
+		end
+
+		if store.tick_ts - a.ts > a.cooldown then
+			local target, targets, pred_pos = U.find_foremost_enemy(store.entities, this.pos, 0, a.max_range, a.hit_time, a.vis_flags, a.vis_bans)
+
+			if not target or not pred_pos then
+			-- block empty
+			else
+				a.ts = store.tick_ts
+
+				S:queue(a.sound)
+
+				local flip_x = pred_pos.x < this.pos.x
+
+				U.animation_start(this, a.animation, flip_x, store.tick_ts, false)
+				U.y_wait(store, a.hit_time)
+
+				local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
+
+				if enemies and #enemies > 0 then
+					local e = E:create_entity(a.aura)
+
+					e.pos.x, e.pos.y = this.pos.x, this.pos.y
+					e.owner = this
+					e.aura.source_id = this.id
+
+					queue_insert(store, e)
+				end
+
+				U.y_animation_wait(this)
+			end
+		end
+
+		coroutine.yield()
+	end
+end

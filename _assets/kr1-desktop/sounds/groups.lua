@@ -1532,7 +1532,7 @@ return {
 			"kra_sfx_spiders_enemy_spider_cultbrood_melee_var1_v1.ogg",
 			"kra_sfx_spiders_enemy_spider_cultbrood_melee_var2_v1.ogg",
 			"kra_sfx_spiders_enemy_spider_cultbrood_melee_var3_v1.ogg",
-			"kra_sfx_spiders_enemy_spider_drainbrood_melee_var1_v1ogg",
+			"kra_sfx_spiders_enemy_spider_drainbrood_melee_var1_v1.ogg",
 			"kra_sfx_spiders_enemy_spider_drainbrood_melee_var2_v1.ogg",
 			"kra_sfx_spiders_enemy_spider_drainbrood_melee_var3_v1.ogg",
 			"kra_sfx_spiders_enemy_spider_glarenwarden_death_v1.ogg",
@@ -1546,7 +1546,12 @@ return {
 			"kra_sfx_spiders_enemy_spider_sister_range_var3_v1.ogg",
 			"kra_sfx_spiders_enemy_spider_sister_spawn_v1.ogg",
 			"kra_sfx_spiders_mechanic_spider_death_v1.ogg",
-			"kra_sfx_spiders_mechanic_spider_working_LOOP_v1.ogg"
+			"kra_sfx_spiders_mechanic_spider_working_LOOP_v1.ogg",
+			"kra_sfx_enemy_spiderling_death_var1_v1.ogg",
+			"kra_sfx_enemy_twistedSister_death_v1.ogg",
+			"kra_sfx_enemy_unblindedPriest_death_var1.ogg",
+			"kra_sfx_enemy_unblindedPriest_death_var2.ogg",
+			"kra_sfx_enemy_unblindedPriest_death_var3.ogg"
 		}
 	},
 	hero_bird = {
@@ -2451,7 +2456,8 @@ return {
 			"kra_sfx_spiders_bossfight_range_var1_v1.ogg",
 			"kra_sfx_spiders_bossfight_range_var2_v1.ogg",
 			"kra_sfx_spiders_bossfight_range_var3_v1.ogg",
-			"kra_sfx_spiders_bossfight_spit_v1.ogg"
+			"kra_sfx_spiders_bossfight_spit_v1.ogg",
+			"kro_sfx_sonofmactans[sinlanding].ogg"
 		}
 	},
 	terrain_1_common = {

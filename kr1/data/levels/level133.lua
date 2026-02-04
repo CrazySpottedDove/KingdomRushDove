@@ -98,7 +98,7 @@ local starting_gold=store.player_gold
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="47"
 end)[1]
-holder.tower.upgrade_to="tower_paladin_covenant_lvl1"
+holder.tower.upgrade_to="tower_barrack_1"
 coroutine.yield()
 store.player_gold=starting_gold
 end

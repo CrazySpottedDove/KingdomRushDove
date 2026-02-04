@@ -238,7 +238,7 @@ tt.bounce_range_inc = 5
 tt.bounce_vis_flags = F_RANGED
 tt.bounce_vis_bans = 0
 tt.bounce_damage_min = 57
--- dps = 105 / 2.2 = 47.727 per second
+-- dps = 81 / 2.2 = 36.82 per second
 tt.bounce_damage_max = 105
 tt.bounce_damage_factor = 0.5
 tt.bounce_damage_factor_min = 0.5
