@@ -3075,9 +3075,7 @@ tt.render.sprites[4].offset.y = 75
 --#region tower_hermit_toad_lvl4
 tt = RT("tower_hermit_toad_lvl4", "tower")
 b = balance.towers.hermit_toad
-
 AC(tt, "attacks", "vis", "idle_flip", "powers", "tower_upgrade_persistent_data")
-
 tt.tower_upgrade_persistent_data.current_mode = 0
 tt.tower_upgrade_persistent_data.max_current_mode = 1
 tt.tower.type = "hermit_toad"

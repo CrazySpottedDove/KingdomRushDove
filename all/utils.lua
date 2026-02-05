@@ -2346,9 +2346,10 @@ function U.balance_format(s)
 	return s
 end
 
+-- TODO: fix unit.cooldown_factor effect with SU function
 function U.soldier_inherit_tower_buff_factor(soldier, tower)
 	soldier.unit.damage_factor = soldier.unit.damage_factor * tower.tower.damage_factor
-	soldier.cooldown_factor = soldier.cooldown_factor * tower.tower.cooldown_factor
+	soldier.unit.cooldown_factor = soldier.unit.cooldown_factor * tower.tower.cooldown_factor
 end
 
 local vis_meta = {}

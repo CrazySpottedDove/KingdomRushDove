@@ -2368,11 +2368,10 @@ tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_BLOCK, F_THORN)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
 --#endregion
+
 --#region enemy_spectral_knight
 tt = RT("enemy_spectral_knight", "enemy")
-
 AC(tt, "melee", "auras")
-
 image_y = 94
 image_x = 128
 anchor_y = 0.1595744680851064

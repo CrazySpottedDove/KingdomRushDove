@@ -432,6 +432,8 @@ unit.hide_during_death = nil
 unit.fade_time_after_death = nil
 unit.spawner_id = nil
 unit.price = 0
+unit.cooldown_factor = 1
+unit.damage_buff = 0
 
 local tower = E:register_c("tower")
 

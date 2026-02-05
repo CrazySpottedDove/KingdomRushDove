@@ -2621,7 +2621,6 @@ AC(tt, "soldier", "motion", "nav_path", "main_script", "vis", "lifespan", "melee
 
 anchor_y = 0.14
 image_y = 72
-tt.damage_buff = 0
 tt.ui = nil
 tt.render.sprites[1].anchor.y = anchor_y
 tt.render.sprites[1].name = "idle"
@@ -3032,7 +3031,6 @@ AC(tt, "soldier", "motion", "nav_path", "main_script", "vis", "info", "lifespan"
 
 anchor_y = 0.2
 image_y = 36
-tt.damage_buff = 0
 tt.info.portrait = "kr2_info_portraits_soldiers_0015"
 tt.health.armor = 0
 tt.health.hp_inc = 40

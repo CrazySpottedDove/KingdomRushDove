@@ -398,11 +398,11 @@ function M.check_update(params, storage)
 end
 
 function M.run(params, storage)
-    if not apply_upgrade then
+	if not apply_upgrade then
 		return
 	end
 
-    local old_w, old_h, old_flags = love.window.getMode()
+	local old_w, old_h, old_flags = love.window.getMode()
 	local dw, dh = love.window.getDesktopDimensions()
 	love.window.setMode(math.max(800, math.floor(dw * 0.8)), math.max(600, math.floor(dh * 0.8)), {
 		resizable = false
@@ -410,7 +410,7 @@ function M.run(params, storage)
 	M.check_update(params, storage)
 
 	if not apply_upgrade then
-        love.window.setMode(old_w, old_h, old_flags) -- 恢复窗口
+		love.window.setMode(old_w, old_h, old_flags) -- 恢复窗口
 		return
 	end
 

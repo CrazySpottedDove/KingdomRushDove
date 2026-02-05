@@ -12,6 +12,17 @@ function GU.lives_desc(v)
 	end
 end
 
+-- Only used in dove, so just in Chinese for quickness
+function GU.armor_value_desc_detailed(v, immune)
+	if immune then
+		return "免疫"
+	end
+	if not v or type(v) ~= "number" or v <= 0 then
+		return "无"
+	end
+	return string.format("%d", v * 100)
+end
+
 function GU.armor_value_desc(v, short)
 	local pref = short and "CArmorSmall" or "CArmor"
 
@@ -47,6 +58,14 @@ function GU.cooldown_value_desc(v)
 		return _("CReload3")
 	else
 		return _("CReload4")
+	end
+end
+
+function GU.cooldown_value_desc_detailed(v)
+	if not v or type(v) ~= "number" then
+		return "-"
+	else
+		return string.format("%.2f s", v)
 	end
 end
 
@@ -97,6 +116,22 @@ function GU.damage_value_desc(min, max)
 		return string.format("%i-%i", min, max)
 	else
 		return _("None")
+	end
+end
+
+function GU.damage_value_and_cooldown_desc(min, max, cooldown)
+	if not cooldown or cooldown <= 0 then
+		if min and max and max > 0 then
+			return string.format("%i-%i", min, max)
+		else
+			return _("None")
+		end
+	end
+
+	if min and max and max > 0 then
+		return string.format("%i-%i/%.2fs", min, max, cooldown)
+	else
+		return _("None/%.2fs", cooldown)
 	end
 end
 

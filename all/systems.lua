@@ -3329,9 +3329,6 @@ function sys.endless_patch:on_insert(entity, store)
 
 				if entity.unit then
 					entity.unit.damage_factor = entity.unit.damage_factor * store.endless.soldier_damage_factor
-				end
-
-				if entity.cooldown_factor then
 					SU.insert_unit_cooldown_buff(store.tick_ts, entity, endless.soldier_cooldown_factor)
 				end
 

@@ -365,7 +365,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 						d.source_id = this.id
 						d.target_id = e.id
 						d.damage_type = attack.damage_type
-						d.value = (math.random(attack.damage_min, attack.damage_max) + (this.damage_buff or 0)) * this.unit.damage_factor
+						d.value = (math.random(attack.damage_min, attack.damage_max) + (this.unit.damage_buff or 0)) * this.unit.damage_factor
 						d.track_kills = this.track_kills ~= nil
 						d.track_damage = attack.track_damage
 						d.xp_gain_factor = attack.xp_gain_factor
@@ -422,7 +422,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 						d.value = attack.fn_damage(this, store, attack, target)
 					else
 						d.damage_type = attack.damage_type
-						d.value = this.unit.damage_factor * (math.random(attack.damage_min, attack.damage_max) + (this.damage_buff or 0))
+						d.value = this.unit.damage_factor * (math.random(attack.damage_min, attack.damage_max) + (this.unit.damage_buff or 0))
 					end
 
 					d.source_id = this.id

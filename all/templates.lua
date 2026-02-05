@@ -985,8 +985,6 @@ local unit = E:register_t("unit")
 E:add_comps(unit, "unit", "pos", "heading", "health", "health_bar", "render", "ui")
 
 unit.ui.click_rect = IS_PHONE_OR_TABLET and r(-20, -5, 40, 40) or r(-15, 0, 30, 30)
-unit.damage_buff = 0
-unit.cooldown_factor = 1
 
 local soldier = E:register_t("soldier", "unit")
 

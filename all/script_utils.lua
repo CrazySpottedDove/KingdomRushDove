@@ -343,7 +343,7 @@ end
 ---@param value number 增加值
 ---@return nil
 function SU.damage_inc(this, value)
-	this.damage_buff = this.damage_buff + value
+	this.unit.damage_buff = this.unit.damage_buff + value
 end
 
 ---减少伤害buff
@@ -351,7 +351,7 @@ end
 ---@param value number 减少值
 ---@return nil
 function SU.damage_dec(this, value)
-	this.damage_buff = this.damage_buff - value
+	this.unit.damage_buff = this.unit.damage_buff - value
 end
 
 ---增加反伤甲
@@ -676,12 +676,8 @@ function SU.create_attack_damage(a, target_id, this)
 
 	d.value = U.frandom(vmin, vmax)
 
-	if this.damage_buff then
-		d.value = d.value + this.damage_buff
-	end
-
-	if this.unit and this.unit.damage_factor then
-		d.value = d.value * this.unit.damage_factor
+	if this.unit then
+		d.value = (d.value + this.unit.damage_buff) * this.unit.damage_factor
 	end
 
 	d.damage_type = a.damage_type
@@ -1096,7 +1092,7 @@ function SU.y_hero_death_and_respawn(store, this)
 				local d = E:create_entity("damage")
 
 				d.damage_type = sd.damage_type
-				d.value = ((sd.damage and sd.damage or math.random(sd.damage_min, sd.damage_max)) + this.damage_buff) * this.unit.damage_factor
+				d.value = ((sd.damage and sd.damage or math.random(sd.damage_min, sd.damage_max)) + this.unit.damage_buff) * this.unit.damage_factor
 				d.source_id = this.id
 				d.target_id = t.id
 
@@ -1499,8 +1495,8 @@ function SU.y_soldier_do_loopable_ranged_attack(store, this, target, attack)
 			b.bullet.source_id = this.id
 			b.bullet.xp_dest_id = this.id
 			b.bullet.damage_factor = this.unit.damage_factor
-			b.bullet.damage_max = b.bullet.damage_max + this.damage_buff
-			b.bullet.damage_min = b.bullet.damage_min + this.damage_buff
+			b.bullet.damage_max = b.bullet.damage_max + this.unit.damage_buff
+			b.bullet.damage_min = b.bullet.damage_min + this.unit.damage_buff
 
 			queue_insert(store, b)
 
@@ -1645,8 +1641,8 @@ function SU.y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
 			b.damage_max = b.damage_max[b.level]
 		end
 
-		b.damage_max = b.damage_max + this.damage_buff
-		b.damage_min = b.damage_min + this.damage_buff
+		b.damage_max = b.damage_max + this.unit.damage_buff
+		b.damage_min = b.damage_min + this.unit.damage_buff
 
 		if attack.mod then
 			b.mod = attack.mod
@@ -1707,10 +1703,10 @@ function SU.soldier_pick_ranged_target_and_attack(store, this)
 			end
 
 			if target then
-				local ready = store.tick_ts - a.ts >= a.cooldown * this.cooldown_factor
+				local ready = store.tick_ts - a.ts >= a.cooldown * this.unit.cooldown_factor
 
 				if r.forced_cooldown then
-					ready = ready and store.tick_ts - r.forced_ts >= r.forced_cooldown * this.cooldown_factor
+					ready = ready and store.tick_ts - r.forced_ts >= r.forced_cooldown * this.unit.cooldown_factor
 				end
 
 				if not ready then
@@ -2012,7 +2008,7 @@ function SU.y_soldier_do_single_area_attack(store, this, target, attack)
 		d.source_id = this.id
 		d.target_id = e.id
 		d.damage_type = attack.damage_type
-		d.value = (math.random(attack.damage_min, attack.damage_max) + this.damage_buff) * this.unit.damage_factor
+		d.value = (math.random(attack.damage_min, attack.damage_max) + this.unit.damage_buff) * this.unit.damage_factor
 		d.track_kills = this.track_kills ~= nil
 		d.track_damage = attack.track_damage
 		d.xp_gain_factor = attack.xp_gain_factor
@@ -2181,7 +2177,7 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 					d.source_id = this.id
 					d.target_id = e.id
 					d.damage_type = attack.damage_type
-					d.value = (math.random(attack.damage_min, attack.damage_max) + this.damage_buff) * this.unit.damage_factor
+					d.value = (math.random(attack.damage_min, attack.damage_max) + this.unit.damage_buff) * this.unit.damage_factor
 					d.track_kills = this.track_kills ~= nil
 					d.track_damage = attack.track_damage
 					d.xp_gain_factor = attack.xp_gain_factor
@@ -2238,7 +2234,7 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 					d.value = attack.fn_damage(this, store, attack, target)
 				else
 					d.damage_type = attack.damage_type
-					d.value = this.unit.damage_factor * (math.random(attack.damage_min, attack.damage_max) + this.damage_buff)
+					d.value = this.unit.damage_factor * (math.random(attack.damage_min, attack.damage_max) + this.unit.damage_buff)
 				end
 
 				d.source_id = this.id
@@ -2379,10 +2375,10 @@ function SU.y_soldier_do_single_melee_attack(store, this, target, attack)
 				d.damage_type = DAMAGE_INSTAKILL
 			elseif attack.fn_damage then
 				d.damage_type = attack.damage_type
-				d.value = attack.fn_damage(this, store, attack, target) + this.damage_buff
+				d.value = (attack.fn_damage(this, store, attack, target) + this.unit.damage_buff) * this.unit.damage_factor
 			elseif attack.damage_min then
 				d.damage_type = attack.damage_type
-				d.value = this.unit.damage_factor * (math.random(attack.damage_min, attack.damage_max) + this.damage_buff)
+				d.value = this.unit.damage_factor * (math.random(attack.damage_min, attack.damage_max) + this.unit.damage_buff)
 			end
 
 			queue_damage(store, d)
@@ -2613,7 +2609,7 @@ function SU.soldier_pick_melee_attack(store, this, target)
 					cooldown = this.melee.cooldown
 				end
 
-				cooldown = cooldown * this.cooldown_factor
+				cooldown = cooldown * this.unit.cooldown_factor
 
 				local forced_cooldown_ok = true
 
@@ -3683,7 +3679,7 @@ function SU.y_enemy_range_attacks(store, this, target)
 			cooldown = this.ranged.cooldown
 		end
 
-		cooldown = cooldown * this.cooldown_factor
+		cooldown = cooldown * this.unit.cooldown_factor
 
 		if not ar.disabled and cooldown <= store.tick_ts - ar.ts and band(ar.vis_flags, target.vis.bans) == 0 and band(ar.vis_bans, target.vis.flags) == 0 and (not ar.sync_animation or this.render.sprites[1].sync_flag) then
 			ar.ts = store.tick_ts
@@ -3727,7 +3723,7 @@ function SU.y_enemy_melee_attacks(store, this, target)
 			cooldown = this.melee.cooldown
 		end
 
-		cooldown = cooldown * this.cooldown_factor
+		cooldown = cooldown * this.unit.cooldown_factor
 
 		if not ma.disabled and cooldown <= store.tick_ts - ma.ts and band(ma.vis_flags, target.vis.bans) == 0 and band(ma.vis_bans, target.vis.flags) == 0 and (not ma.fn_can or ma.fn_can(this, store, ma, target)) then
 			ma.ts = store.tick_ts
@@ -4252,10 +4248,10 @@ function SU.insert_tower_cooldown_buff(ts, target, cooldown_factor)
 
 	if target.barrack then
 		for _, s in pairs(target.barrack.soldiers) do
-			if s.cooldown_factor then
-				s.cooldown_factor = s.cooldown_factor * cooldown_factor
+			if s.unit then
+				s.unit.cooldown_factor = s.unit.cooldown_factor * cooldown_factor
 
-				SU.change_fps(ts, s, 1 / (s.cooldown_factor))
+				SU.change_fps(ts, s, 1 / (s.unit.cooldown_factor))
 			end
 		end
 	end
@@ -4266,10 +4262,10 @@ function SU.insert_unit_cooldown_buff(ts, target, cooldown_factor)
 		return
 	end
 
-	if target.cooldown_factor then
-		target.cooldown_factor = target.cooldown_factor * cooldown_factor
+	if target.unit then
+		target.unit.cooldown_factor = target.unit.cooldown_factor * cooldown_factor
 
-		SU.change_fps(ts, target, 1 / (target.cooldown_factor))
+		SU.change_fps(ts, target, 1 / (target.unit.cooldown_factor))
 	end
 end
 
@@ -4313,10 +4309,10 @@ function SU.remove_tower_cooldown_buff(ts, target, cooldown_factor)
 
 	if target.barrack then
 		for _, s in pairs(target.barrack.soldiers) do
-			if s.cooldown_factor then
-				s.cooldown_factor = s.cooldown_factor / cooldown_factor
+			if s.unit then
+				s.unit.cooldown_factor = s.unit.cooldown_factor / cooldown_factor
 
-				SU.change_fps(ts, s, 1 / (s.cooldown_factor))
+				SU.change_fps(ts, s, 1 / (s.unit.cooldown_factor))
 			end
 		end
 	end
@@ -4327,10 +4323,10 @@ function SU.remove_unit_cooldown_buff(ts, target, cooldown_factor)
 		return
 	end
 
-	if target.cooldown_factor then
-		target.cooldown_factor = target.cooldown_factor / cooldown_factor
+	if target.unit then
+		target.unit.cooldown_factor = target.unit.cooldown_factor / cooldown_factor
 
-		SU.change_fps(ts, target, 1 / (target.cooldown_factor))
+		SU.change_fps(ts, target, 1 / (target.unit.cooldown_factor))
 	end
 end
 

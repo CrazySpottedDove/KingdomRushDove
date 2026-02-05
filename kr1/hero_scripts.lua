@@ -846,7 +846,7 @@ scripts.hero_mirage = {
 		bt.bullet.damage_max = ls.ranged_damage_max[hl]
 
 		upgrade_skill(this, "precision", function(this, s)
-			this.damage_buff = this.damage_buff + s.extra_buff[s.level]
+			this.unit.damage_buff = this.unit.damage_buff + s.extra_buff[s.level]
 		end)
 		upgrade_skill(this, "shadowdodge", function(this, s)
 			this.dodge.chance = s.dodge_chance[s.level]
@@ -1409,9 +1409,9 @@ scripts.missile_wizard = {
 scripts.hero_wizard = {
 	get_info = function(this)
 		local m = E:get_template("mod_ray_wizard")
-		local ranged_min, ranged_max = (m.damage_min + this.damage_buff) * this.unit.damage_factor, (m.damage_max + this.damage_buff) * this.unit.damage_factor
-		local melee_min = (this.melee.attacks[1].damage_min + this.damage_buff) * this.unit.damage_factor
-		local melee_max = (this.melee.attacks[1].damage_max + this.damage_buff) * this.unit.damage_factor
+		local ranged_min, ranged_max = (m.damage_min + this.unit.damage_buff) * this.unit.damage_factor, (m.damage_max + this.unit.damage_buff) * this.unit.damage_factor
+		local melee_min = (this.melee.attacks[1].damage_min + this.unit.damage_buff) * this.unit.damage_factor
+		local melee_max = (this.melee.attacks[1].damage_max + this.unit.damage_buff) * this.unit.damage_factor
 		local ranged_damage_type = DAMAGE_MAGICAL
 		local melee_damage_type = this.melee.attacks[1].damage_type
 
@@ -2511,8 +2511,8 @@ scripts.hero_denas = {
 			bullet.bullet.xp_dest_id = this.id
 			bullet.bullet.level = attack.level
 			bullet.bullet.damage_factor = this.unit.damage_factor
-			bullet.bullet.damage_min = bullet.bullet.damage_min + this.damage_buff
-			bullet.bullet.damage_max = bullet.bullet.damage_max + this.damage_buff
+			bullet.bullet.damage_min = bullet.bullet.damage_min + this.unit.damage_buff
+			bullet.bullet.damage_max = bullet.bullet.damage_max + this.unit.damage_buff
 
 			queue_insert(store, bullet)
 
@@ -4945,7 +4945,7 @@ scripts.mod_giant_massivedamage = {
 		d.source_id = this.id
 		d.target_id = target.id
 		d.damage_type = DAMAGE_TRUE
-		d.value = source.unit.damage_factor * (math.random(this.damage_min, this.damage_max) + source.damage_buff)
+		d.value = source.unit.damage_factor * (math.random(this.damage_min, this.damage_max) + source.unit.damage_buff)
 
 		local predicted_damage = d.value * target.health.damage_factor
 
@@ -5116,7 +5116,7 @@ scripts.hero_giant = {
 
 				d.source_id = this.id
 				d.target_id = t.id
-				d.value = (attack.damage + this.damage_buff) * this.unit.damage_factor
+				d.value = (attack.damage + this.unit.damage_buff) * this.unit.damage_factor
 				d.damage_type = attack.damage_type
 
 				queue_damage(store, d)
@@ -6370,8 +6370,8 @@ scripts.hero_ingvar = {
 			info.ranged_damage_max = nil
 			info.ranged_damage_min = nil
 			info.ranged_damage_type = nil
-			info.damage_min = (this.melee.attacks[3].damage_min + this.damage_buff) * this.unit.damage_factor
-			info.damage_max = (this.melee.attacks[3].damage_max + this.damage_buff) * this.unit.damage_factor
+			info.damage_min = (this.melee.attacks[3].damage_min + this.unit.damage_buff) * this.unit.damage_factor
+			info.damage_max = (this.melee.attacks[3].damage_max + this.unit.damage_buff) * this.unit.damage_factor
 			info.damage_type = this.melee.attacks[3].damage_type
 		end
 
@@ -6785,7 +6785,7 @@ scripts.hero_ignus = {
 									d.damage_type = a.damage_type
 									d.source_id = this.id
 									d.target_id = t.id
-									d.value = (math.random(a.damage_min, a.damage_max) + this.damage_buff) * this.unit.damage_factor
+									d.value = (math.random(a.damage_min, a.damage_max) + this.unit.damage_buff) * this.unit.damage_factor
 
 									queue_damage(store, d)
 
@@ -6959,7 +6959,7 @@ scripts.hero_oni = {
 			local rate = (this.health.hp_max - this.health.hp) / this.health.hp_max
 			local rage = rate * this.rage_max
 
-			this.damage_buff = this.damage_buff - this.rage + rage
+			this.unit.damage_buff = this.unit.damage_buff - this.rage + rage
 			this.rage = rage
 
 			local unyield = rate * this.unyield_max
@@ -7424,7 +7424,7 @@ scripts.hero_10yr = {
 
 function scripts.hero_10yr.get_info(this)
 	local a = this.is_buffed and this.melee.attacks[3] or this.melee.attacks[1]
-	local min, max = a.damage_min + this.damage_buff, a.damage_max + this.damage_buff
+	local min, max = a.damage_min + this.unit.damage_buff, a.damage_max + this.unit.damage_buff
 
 	min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
 
@@ -7782,7 +7782,7 @@ function scripts.hero_vampiress.update(this, store)
 
 							d.source_id = this.id
 							d.target_id = e.id
-							d.value = (math.random(a.damage_min, a.damage_max) + this.damage_buff) * this.unit.damage_factor
+							d.value = (math.random(a.damage_min, a.damage_max) + this.unit.damage_buff) * this.unit.damage_factor
 							d.damage_type = a.damage_type
 							d.track_kills = true
 
@@ -8162,7 +8162,7 @@ scripts.hero_monk = {
 
 						d.source_id = this.id
 						d.target_id = target.id
-						d.value = (a.damage + this.damage_buff) * this.unit.damage_factor
+						d.value = (a.damage + this.unit.damage_buff) * this.unit.damage_factor
 						d.damage_type = a.damage_type
 
 						queue_damage(store, d)
@@ -8231,7 +8231,7 @@ scripts.hero_monk = {
 
 								d.source_id = this.id
 								d.target_id = t.id
-								d.value = (math.random(a.damage_min, a.damage_max) + this.damage_buff) * this.unit.damage_factor
+								d.value = (math.random(a.damage_min, a.damage_max) + this.unit.damage_buff) * this.unit.damage_factor
 								d.damage_type = a.damage_type
 
 								queue_damage(store, d)
@@ -8340,7 +8340,7 @@ scripts.hero_monk = {
 						d.source_id = this.id
 						d.target_id = target.id
 						d.damage_type = a.damage_type
-						d.value = (math.random(a.damage_min, a.damage_max) + this.damage_buff) * this.unit.damage_factor
+						d.value = (math.random(a.damage_min, a.damage_max) + this.unit.damage_buff) * this.unit.damage_factor
 
 						queue_damage(store, d)
 
@@ -8383,7 +8383,7 @@ scripts.hero_monk = {
 				if brk or sta ~= A_NO_TARGET then
 					-- block empty
 					if this.cooldown_factor_dec_count < 8 then
-						this.cooldown_factor = this.cooldown_factor - 0.05
+						SU.insert_unit_cooldown_buff(store.tick_ts, this, 0.938)
 					end
 
 					this.cooldown_factor_dec_count = this.cooldown_factor_dec_count + 1
@@ -8392,7 +8392,7 @@ scripts.hero_monk = {
 				else
 					if this.cooldown_factor_dec_count > 0 then
 						if this.cooldown_factor_dec_count <= 8 then
-							this.cooldown_factor = this.cooldown_factor + 0.05
+							SU.remove_unit_cooldown_buff(store.tick_ts, this, 0.938)
 						end
 
 						this.cooldown_factor_dec_count = this.cooldown_factor_dec_count - 1
@@ -8871,7 +8871,7 @@ function scripts.hero_crab.update(this, store)
 
 									d.source_id = this.id
 									d.target_id = e.id
-									d.value = (b.damage + this.damage_buff) * this.unit.damage_factor * rate
+									d.value = (b.damage + this.unit.damage_buff) * this.unit.damage_factor * rate
 									d.damage_type = DAMAGE_EXPLOSION
 
 									queue_damage(store, d)
@@ -9239,9 +9239,9 @@ scripts.hero_minotaur = {
 			d.target_id = target.id
 
 			if final_hit then
-				d.value = (math.random(a.damage_min, a.damage_max) + this.damage_buff) * this.unit.damage_factor
+				d.value = (math.random(a.damage_min, a.damage_max) + this.unit.damage_buff) * this.unit.damage_factor
 			else
-				d.value = (math.random(a.run_damage_min, a.run_damage_max) + this.damage_buff) * this.unit.damage_factor
+				d.value = (math.random(a.run_damage_min, a.run_damage_max) + this.unit.damage_buff) * this.unit.damage_factor
 			end
 
 			d.damage_type = a.damage_type
@@ -9313,7 +9313,7 @@ scripts.hero_minotaur = {
 
 								d.source_id = this.id
 								d.target_id = e.id
-								d.value = (math.random(a.damage_min, a.damage_max) + this.damage_buff) * this.unit.damage_factor
+								d.value = (math.random(a.damage_min, a.damage_max) + this.unit.damage_buff) * this.unit.damage_factor
 								heal = heal + d.value * 0.25
 								d.damage_type = a.damage_type
 
@@ -10997,13 +10997,13 @@ scripts.hero_lynn = {}
 
 function scripts.hero_lynn.fn_damage_melee(this, store, attack, target)
 	local skill = this.hero.skills.hexfury
-	local value = this.unit.damage_factor * (math.random(attack.damage_min, attack.damage_max + this.damage_buff))
+	local value = math.random(attack.damage_min, attack.damage_max)
 	local mods = {"mod_lynn_curse", "mod_lynn_despair", "mod_lynn_ultimate", "mod_lynn_weakening"}
 
 	if skill.level > 0 then
 		for _, mod in ipairs(mods) do
 			if U.has_modifier(store, target, mod) then
-				value = value + this.unit.damage_factor * skill.extra_damage
+				value = value + skill.extra_damage
 			end
 		end
 	end
@@ -13425,8 +13425,8 @@ function scripts.hero_arivan.update(this, store)
 							b.bullet.source_id = this.id
 							b.bullet.xp_dest_id = this.id
 							b.bullet.damage_factor = this.unit.damage_factor
-							b.bullet.damage_min = b.bullet.damage_min + this.damage_buff
-							b.bullet.damage_max = b.bullet.damage_max + this.damage_buff
+							b.bullet.damage_min = b.bullet.damage_min + this.unit.damage_buff
+							b.bullet.damage_max = b.bullet.damage_max + this.unit.damage_buff
 
 							queue_insert(store, b)
 						end
@@ -15275,7 +15275,7 @@ function scripts.hero_xin.update(this, store)
 
 	while true do
 		if this.mind_over_body_active and store.tick_ts - this.mind_over_body_last_ts >= this.mind_over_body_duration then
-			this.damage_buff = this.damage_buff - this.mind_over_body_damage_buff
+			this.unit.damage_buff = this.unit.damage_buff - this.mind_over_body_damage_buff
 			this.mind_over_body_active = false
 			this.melee.attacks[3].ts = this.melee.attacks[3].ts - this.melee.attacks[3].cooldown * 0.1
 			this.timed_attacks.list[1].ts = this.timed_attacks.list[1].ts - this.timed_attacks.list[1].cooldown * 0.1
@@ -15379,7 +15379,7 @@ function scripts.hero_xin.update(this, store)
 				this.mind_over_body_active = true
 				this.mind_over_body_damage_buff = this.mind_over_body_damage_buff_max
 				this.mind_over_body_last_ts = store.tick_ts
-				this.damage_buff = this.damage_buff + this.mind_over_body_damage_buff
+				this.unit.damage_buff = this.unit.damage_buff + this.mind_over_body_damage_buff
 
 				U.y_animation_wait(this)
 
@@ -15812,7 +15812,7 @@ function scripts.hero_faustus.update(this, store)
 			-- block empty
 			elseif a.sync_animation and not this.render.sprites[1].sync_flag then
 			-- block empty
-			elseif store.tick_ts - a.ts < a.cooldown * this.cooldown_factor then
+			elseif store.tick_ts - a.ts < a.cooldown * this.unit.cooldown_factor then
 			-- block empty
 			else
 				local bullet_t = E:get_template(a.bullet)
@@ -17188,7 +17188,7 @@ function scripts.hero_dragon.update(this, store)
 				local d = E:create_entity("damage")
 
 				d.damage_type = a.damage_type
-				d.value = (a.damage + this.damage_buff) * this.unit.damage_factor
+				d.value = (a.damage + this.unit.damage_buff) * this.unit.damage_factor
 				d.target_id = target.id
 				d.source_id = this.id
 
@@ -17247,7 +17247,7 @@ function scripts.hero_dragon.update(this, store)
 			-- block empty
 			elseif a.sync_animation and not this.render.sprites[1].sync_flag then
 			-- block empty
-			elseif ready_to_attack(a, store, this.cooldown_factor) then
+			elseif ready_to_attack(a, store, this.unit.cooldown_factor) then
 				local origin = V.v(this.pos.x, this.pos.y + a.bullet_start_offset[1].y)
 				local bullet_t = E:get_template(a.bullet)
 				local bullet_speed = bullet_t.bullet.min_speed
@@ -17292,8 +17292,8 @@ function scripts.hero_dragon.update(this, store)
 					b.bullet.target_id = target.id
 					b.bullet.source_id = this.id
 					b.bullet.damage_factor = this.unit.damage_factor
-					b.bullet.damage_min = b.bullet.damage_min + this.damage_buff
-					b.bullet.damage_max = b.bullet.damage_max + this.damage_buff
+					b.bullet.damage_min = b.bullet.damage_min + this.unit.damage_buff
+					b.bullet.damage_max = b.bullet.damage_max + this.unit.damage_buff
 					b.pos = V.vclone(this.pos)
 					b.pos.x = b.pos.x + (af and -1 or 1) * a.bullet_start_offset[ai].x
 					b.pos.y = b.pos.y + a.bullet_start_offset[ai].y
@@ -18013,8 +18013,8 @@ function scripts.hero_hunter.update(this, store)
 		bullet.bullet.xp_dest_id = this.id
 		bullet.bullet.level = this.hero.level
 		bullet.bullet.damage_factor = this.unit.damage_factor
-		bullet.bullet.damage_min = bullet.bullet.damage_min + this.damage_buff
-		bullet.bullet.damage_max = bullet.bullet.damage_max + this.damage_buff
+		bullet.bullet.damage_min = bullet.bullet.damage_min + this.unit.damage_buff
+		bullet.bullet.damage_max = bullet.bullet.damage_max + this.unit.damage_buff
 
 		queue_insert(store, bullet)
 
@@ -21729,7 +21729,7 @@ function scripts.hero_venom.update(this, store)
 									U.heal(this, eat_enemy_attack.regen)
 								else
 									d.damage_type = DAMAGE_RUDE
-									d.value = (eat_enemy_attack.damage + this.damage_buff) * this.unit.damage_factor
+									d.value = (eat_enemy_attack.damage + this.unit.damage_buff) * this.unit.damage_factor
 								end
 
 								queue_damage(store, d)
@@ -23010,8 +23010,8 @@ function scripts.hero_dragon_gem.update(this, store)
 
 								b.bullet.shot_index = i
 								b.initial_impulse = 10
-								b.bullet.damage_min = b.bullet.damage_min + this.damage_buff
-								b.bullet.damage_max = b.bullet.damage_max + this.damage_buff
+								b.bullet.damage_min = b.bullet.damage_min + this.unit.damage_buff
+								b.bullet.damage_max = b.bullet.damage_max + this.unit.damage_buff
 								b.bullet.damage_factor = this.unit.damage_factor
 							end
 
@@ -24352,8 +24352,8 @@ function scripts.hero_witch.update(this, store)
 							for i = 1, #basic_ranged.bullets do
 								local bullet = E:create_entity(basic_ranged.bullets[i])
 
-								bullet.bullet.damage_min = bullet.bullet.damage_min + this.damage_buff
-								bullet.bullet.damage_max = bullet.bullet.damage_max + this.damage_buff
+								bullet.bullet.damage_min = bullet.bullet.damage_min + this.unit.damage_buff
+								bullet.bullet.damage_max = bullet.bullet.damage_max + this.unit.damage_buff
 								bullet.bullet.damage_factor = this.unit.damage_factor
 								bullet.bullet.source_id = this.id
 								bullet.bullet.to = enemy_pos

@@ -1234,8 +1234,8 @@ end
 
 function patch_upgrade_in_game_map.soldier_cooldown(level, store, endless)
 	for _, s in pairs(store.soldiers) do
-		if s.cooldown_factor then
-			s.cooldown_factor = s.cooldown_factor * friend_buff.soldier_cooldown_factor
+		if s.unit then
+			SU.insert_unit_cooldown_buff(store.tick_ts, s, friend_buff.soldier_cooldown_factor)
 		end
 	end
 

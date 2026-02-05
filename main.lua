@@ -385,7 +385,6 @@ local function load_app_settings()
 	local function done_cb()
 		storage:save_settings(main.params)
 
-
 		main._settings_loaded = true
 	end
 

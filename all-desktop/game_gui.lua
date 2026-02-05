@@ -965,8 +965,8 @@ function game_gui:keypressed(key, isrepeat)
 		self.game.simulation.store.speed_factor = 1
 	elseif table.contains(ks.next_wave, key) then
 		-- if not self.next_wave_button:is_disabled() then
-			game_gui.game.store.send_next_wave = true
-		-- end
+		game_gui.game.store.send_next_wave = true
+	-- end
 	elseif table.contains(ks.criket_toggle, key) then
 		if self.criketmenu.hidden then
 			self.criketmenu:show()
@@ -2640,12 +2640,12 @@ InfoBar = class("InfoBar", KImageView)
 
 function InfoBar:initialize()
 	InfoBar.super.initialize(self, "base")
-    self.scale.x = 1.25
+	self.scale.x = 1.25
 	local v_portrait = KView:new(V.v(68, 68))
 
 	v_portrait.anchor = v(34, 34)
 	-- v_portrait.pos = v(61, 32)
-    v_portrait.pos = v(56, 32)
+	v_portrait.pos = v(56, 32)
 	v_portrait.propagate_on_down = true
 	v_portrait.propagate_on_click = true
 	self.v_portrait = v_portrait
@@ -2656,7 +2656,7 @@ function InfoBar:initialize()
 
 	portrait_bo.anchor = v(34, 34)
 	-- portrait_bo.pos = v(61, 32)
-    portrait_bo.pos = v(56, 32)
+	portrait_bo.pos = v(56, 32)
 	portrait_bo.propagate_on_down = true
 	portrait_bo.propagate_on_click = true
 	self.portrait_bo = portrait_bo
@@ -2679,7 +2679,7 @@ function InfoBar:initialize()
 
 	self:add_child(l_name)
 
-    local s = 400 * 1.25
+	local s = 400 * 1.25
 	local s_1 = s / 1
 	local s_3 = s / 3
 	local s_2 = s / 2
@@ -2692,9 +2692,9 @@ function InfoBar:initialize()
 	local stat_labels = {}
 
 	stat_labels[STATS_TYPE_TOWER_BARRACK] = {{"label", "l_hp", "base_info_icons_0009", 0.8 * s_4}, {"label", "l_damage", "base_info_icons_0001", 0.8 * s_4}, {"label", "l_armor", "base_info_icons_0003", 0.8 * s_4}, {"label", "l_magic_armor", "base_info_icons_0004", 0.8 * s_4}, {"label", "l_respawn", "base_info_icons_0007", 0.8 * s_4}}
-	stat_labels[STATS_TYPE_SOLDIER] = {{"bar", "b_hp", "base_info_bar_bg", "base_info_bar", 3.3 * s_12}, {"label", "l_hp", nil, 3.3 * s_12, "center", true, v(0, CJK(1, 0, 3, -1))}, {"label", "l_damage", "base_info_icons_0001", 2.2 * s_12,}, {"label", "l_ranged_damage", "base_info_icons_0001", 2.2 * s_12}, {"label", "l_armor", "base_info_icons_0003", 1.5 * s_12}, {"label", "l_magic_armor", "base_info_icons_0004", 1.5 * s_12}, {"label", "l_respawn", "base_info_icons_0007", 1.5 * s_12}}
+	stat_labels[STATS_TYPE_SOLDIER] = {{"bar", "b_hp", "base_info_bar_bg", "base_info_bar", 3.3 * s_12}, {"label", "l_hp", nil, 3.3 * s_12, "center", true, v(0, CJK(1, 0, 3, -1))}, {"label", "l_damage", "base_info_icons_0001", 2.35 * s_12}, {"label", "l_ranged_damage", "base_info_icons_0001", 2.35 * s_12}, {"label", "l_armor", "base_info_icons_0003", 1.3 * s_12}, {"label", "l_magic_armor", "base_info_icons_0004", 1.3 * s_12}, {"label", "l_respawn", "base_info_icons_0007", 1.3 * s_12}}
 	stat_labels[STATS_TYPE_ENEMY] = table.deepclone(stat_labels[STATS_TYPE_SOLDIER])
-	stat_labels[STATS_TYPE_ENEMY][7] = {"label", "l_lives", "base_info_icons_0008", 1.5 * s_12}
+	stat_labels[STATS_TYPE_ENEMY][7] = {"label", "l_lives", "base_info_icons_0008", 1.3 * s_12}
 	stat_labels[STATS_TYPE_TOWER] = {{"label", "l_damage", "base_info_icons_0001", s_3}, {"label", "l_range", "base_info_icons_0005", s_3}, {"label", "l_cooldown", "base_info_icons_0006", s_3}}
 	stat_labels[STATS_TYPE_TOWER_NO_RANGE] = {{"label", "l_damage", "base_info_icons_0001", s_2}, {"label", "l_cooldown", "base_info_icons_0006", s_2}}
 	stat_labels[STATS_TYPE_TOWER_MAGE] = table.deepclone(stat_labels[STATS_TYPE_TOWER])
@@ -2732,7 +2732,7 @@ function InfoBar:initialize()
 		sv.pos = v(100, 33)
 		sv.propagate_on_down = true
 		sv.propagate_on_click = true
-        sv.scale.x = 0.8
+		sv.scale.x = 0.8
 		self.stats_views[vn] = sv
 
 		local off_x = 0
@@ -2743,7 +2743,7 @@ function InfoBar:initialize()
 			elseif p[1] == "bar" then
 				local _, name, bg_image, fg_image, w = unpack(p)
 				local b = KImageView:new(bg_image)
-                b.scale.x = 1.25
+				b.scale.x = 1.25
 				local bfg = KImageView:new(fg_image)
 
 				b:add_child(bfg)
@@ -2773,9 +2773,9 @@ function InfoBar:initialize()
 		end
 	end
 
-    v_portrait.scale.x = 0.8
-    portrait_bo.scale.x = 0.8
-    l_name.scale.x = 0.8
+	v_portrait.scale.x = 0.8
+	portrait_bo.scale.x = 0.8
+	l_name.scale.x = 0.8
 
 end
 
@@ -2890,7 +2890,7 @@ function InfoBar:update_stats()
 	local sv = self.stats_views[stats.type]
 
 	if not sv then
-		log.error("Entity %s has no infobar", entity)
+		log.error("Entity %s has no infobar", e)
 		self:hide()
 
 		return
@@ -2917,12 +2917,13 @@ function InfoBar:update_stats()
 
 	if stats.type == STATS_TYPE_TOWER_BARRACK then
 		sv.l_hp.text = string.format("%i", stats.hp_max)
-		sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
+		-- sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
+		sv.l_damage.text = GU.damage_value_and_cooldown_desc(stats.damage_min, stats.damage_max, stats.cooldown)
 
 		sv.l_damage:set_image(damage_icon, V.v(sv.l_damage.size.x, sv.l_damage.size.y))
 
-		sv.l_armor.text = GU.armor_value_desc(stats.armor)
-		sv.l_magic_armor.text = GU.armor_value_desc(stats.magic_armor)
+		sv.l_armor.text = GU.armor_value_desc_detailed(stats.armor)
+		sv.l_magic_armor.text = GU.armor_value_desc_detailed(stats.magic_armor)
 		sv.l_respawn.text = stats.respawn and string.format(_("%i sec."), stats.respawn) or "-"
 	elseif stats.type == STATS_TYPE_TOWER or stats.type == STATS_TYPE_TOWER_MAGE then
 		sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
@@ -2930,46 +2931,46 @@ function InfoBar:update_stats()
 		sv.l_damage:set_image(damage_icon, V.v(sv.l_damage.size.x, sv.l_damage.size.y))
 
 		sv.l_range.text = GU.range_value_desc(stats.range)
-		sv.l_cooldown.text = GU.cooldown_value_desc(stats.cooldown)
+		sv.l_cooldown.text = GU.cooldown_value_desc_detailed(stats.cooldown)
 	elseif stats.type == STATS_TYPE_TOWER_NO_RANGE then
 		sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
 
 		sv.l_damage:set_image(damage_icon, V.v(sv.l_damage.size.x, sv.l_damage.size.y))
 
-		sv.l_cooldown.text = GU.cooldown_value_desc(stats.cooldown)
+		sv.l_cooldown.text = GU.cooldown_value_desc_detailed(stats.cooldown)
 	elseif stats.type == STATS_TYPE_ENEMY then
 		sv.b_hp.bar.scale.x = math.min(stats.hp / stats.hp_max, 1)
 
-		if stats.immune then
-			sv.l_hp.text = _("CArmor9")
-		else
-			sv.l_hp.text = string.format("%i/%i", stats.hp, stats.hp_max)
-		end
+		sv.l_hp.text = string.format("%i/%i", stats.hp, stats.hp_max)
 
-		sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
+		-- sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
+		sv.l_damage.text = GU.damage_value_and_cooldown_desc(stats.damage_min, stats.damage_max, stats.cooldown)
 
 		sv.l_damage:set_image(damage_icon, V.v(sv.l_damage.size.x, sv.l_damage.size.y))
 
-		sv.l_ranged_damage.text = GU.damage_value_desc(stats.ranged_damage_min, stats.ranged_damage_max)
+		-- sv.l_ranged_damage.text = GU.damage_value_desc(stats.ranged_damage_min, stats.ranged_damage_max)
+		sv.l_ranged_damage.text = GU.damage_value_and_cooldown_desc(stats.ranged_damage_min, stats.ranged_damage_max, stats.ranged_cooldown)
 
 		sv.l_ranged_damage:set_image(ranged_damage_icon, V.v(sv.l_ranged_damage.size.x, sv.l_ranged_damage.size.y))
 
-		sv.l_armor.text = GU.armor_value_desc(stats.armor)
-		sv.l_magic_armor.text = GU.armor_value_desc(stats.magic_armor)
+		sv.l_armor.text = GU.armor_value_desc_detailed(stats.armor, band(stats.immune or 0, DAMAGE_PHYSICAL_GROUP) ~= 0)
+		sv.l_magic_armor.text = GU.armor_value_desc_detailed(stats.magic_armor, band(stats.immune or 0, DAMAGE_MAGICAL_GROUP) ~= 0)
 		sv.l_lives.text = type(stats.lives) == "number" and stats.lives > 0 and stats.lives or "-"
 	elseif stats.type == STATS_TYPE_SOLDIER then
-		sv.b_hp.bar.scale.x = math.min(stats.hp / stats.hp_max)
+		sv.b_hp.bar.scale.x = math.min(stats.hp / stats.hp_max, 1)
 		sv.l_hp.text = string.format("%i/%i", stats.hp, stats.hp_max)
-		sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
+		-- sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
+		sv.l_damage.text = GU.damage_value_and_cooldown_desc(stats.damage_min, stats.damage_max, stats.cooldown)
 
 		sv.l_damage:set_image(damage_icon, V.v(sv.l_damage.size.x, sv.l_damage.size.y))
 
-		sv.l_ranged_damage.text = GU.damage_value_desc(stats.ranged_damage_min, stats.ranged_damage_max)
+		-- sv.l_ranged_damage.text = GU.damage_value_desc(stats.ranged_damage_min, stats.ranged_damage_max)
+		sv.l_ranged_damage.text = GU.damage_value_and_cooldown_desc(stats.ranged_damage_min, stats.ranged_damage_max, stats.ranged_cooldown)
 
 		sv.l_ranged_damage:set_image(ranged_damage_icon, V.v(sv.l_ranged_damage.size.x, sv.l_ranged_damage.size.y))
 
-		sv.l_armor.text = GU.armor_value_desc(stats.armor)
-		sv.l_magic_armor.text = GU.armor_value_desc(stats.magic_armor)
+		sv.l_armor.text = GU.armor_value_desc_detailed(stats.armor)
+		sv.l_magic_armor.text = GU.armor_value_desc_detailed(stats.magic_armor)
 		sv.l_respawn.text = stats.respawn or "-"
 	elseif stats.type == STATS_TYPE_TEXT then
 		sv.l_desc.text = _(stats.desc)
@@ -2992,7 +2993,7 @@ function HudBottomView:initialize(sw, sh)
 
 	self:add_child(bg_bar)
 
-    -- 这个下一波按钮的使用率过低，出于减少开销和简化UI的考虑，暂时删除了它。
+	-- 这个下一波按钮的使用率过低，出于减少开销和简化UI的考虑，暂时删除了它。
 	-- local next_wave = KImageView:new("bg_bottom_right")
 	-- next_wave.anchor = v(next_wave.size.x, next_wave.size.y)
 	-- next_wave.pos = v(sw + 6, sh)
@@ -3047,7 +3048,7 @@ function HudBottomView:initialize(sw, sh)
 	end
 
 	-- local x_center = math.floor((sw - next_wave.size.x - powers.size.x - powers.pos.x) * 0.5) + powers.pos.x + powers.size.x
-    local x_center = math.floor((sw - powers.size.x - powers.pos.x) * 0.5) + powers.pos.x + powers.size.x
+	local x_center = math.floor((sw - powers.size.x - powers.pos.x) * 0.5) + powers.pos.x + powers.size.x
 
 	local bg_center = KImageView:new("bg_bottom_center")
 
@@ -3080,7 +3081,7 @@ function HudBottomView:initialize(sw, sh)
 
 	game_gui.power_1 = power_1
 	game_gui.power_2 = power_2
-	-- game_gui.next_wave_button = next_wave_button
+-- game_gui.next_wave_button = next_wave_button
 end
 
 function HudBottomView:hide()
@@ -3099,7 +3100,7 @@ end
 
 function HudBottomView:update_bars_pos()
 	-- local x_center = math.floor((game_gui.sw - self.next_wave.size.x - self.powers.size.x - self.powers.pos.x) * 0.5) + self.powers.pos.x + self.powers.size.x
-    local x_center = math.floor((game_gui.sw  - self.powers.size.x - self.powers.pos.x) * 0.5) + self.powers.pos.x + self.powers.size.x
+	local x_center = math.floor((game_gui.sw - self.powers.size.x - self.powers.pos.x) * 0.5) + self.powers.pos.x + self.powers.size.x
 	self.infobar.pos.x = x_center - 12
 
 	self.bg_center.pos.x = x_center
@@ -6841,7 +6842,7 @@ function TowerMenuTooltip:show(entity, item)
 			self.damage_label:set_image("tooltip_icons_0007", V.v(self.damage_label.size.x, self.damage_label.size.y))
 
 			self.health_label.text = stats.hp_max
-			self.armor_label.text = GU.armor_value_desc(stats.armor)
+			self.armor_label.text = GU.armor_value_desc_detailed(stats.armor)
 			self.damage_label.hidden = false
 			self.health_label.hidden = false
 			self.armor_label.hidden = false
@@ -6851,7 +6852,7 @@ function TowerMenuTooltip:show(entity, item)
 			local ddi = data.damage_icons
 			self.damage_label:set_image(ddi[stats.damage_icon] or ddi[band(DAMAGE_BASE_TYPES, stats.damage_type or 0)] or ddi.default, V.v(self.damage_label.size.x, self.damage_label.size.y))
 
-			self.cooldown_label.text = GU.cooldown_value_desc(stats.cooldown)
+			self.cooldown_label.text = GU.cooldown_value_desc_detailed(stats.cooldown)
 			self.damage_label.hidden = false
 			self.cooldown_label.hidden = false
 		end

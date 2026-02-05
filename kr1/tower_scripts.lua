@@ -4553,6 +4553,7 @@ function scripts.soldier_mecha.update(this, store)
 	local pow_m = this.powers.missile
 	local pow_o = this.powers.oil
 	local ab_side = 1
+	local tw = this.owner.tower
 
 	::label_67_0::
 
@@ -4597,7 +4598,7 @@ function scripts.soldier_mecha.update(this, store)
 				end
 			end
 
-			if store.tick_ts - ao.ts > ao.cooldown * this.cooldown_factor then
+			if store.tick_ts - ao.ts > ao.cooldown * tw.cooldown_factor then
 				local _, targets = U.find_foremost_enemy(store, this.pos, ao.min_range, ao.max_range, true, ao.vis_flags, ao.vis_bans)
 
 				if not targets then
@@ -4641,7 +4642,7 @@ function scripts.soldier_mecha.update(this, store)
 				end
 			end
 
-			if store.tick_ts - am.ts > am.cooldown * this.cooldown_factor then
+			if store.tick_ts - am.ts > am.cooldown * tw.cooldown_factor then
 				local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, am.max_range, am.vis_flags, am.vis_bans)
 
 				if not target then
@@ -4682,7 +4683,7 @@ function scripts.soldier_mecha.update(this, store)
 							b.bullet.from = vclone(b.pos)
 							b.bullet.to = v(b.pos.x + (af and -1 or 1) * am.launch_vector.x, b.pos.y + am.launch_vector.y)
 							b.bullet.target_id = target.id
-							b.bullet.damage_factor = this.owner.tower.damage_factor
+							b.bullet.damage_factor = tw.damage_factor
 
 							queue_insert(store, b)
 
@@ -4713,7 +4714,7 @@ function scripts.soldier_mecha.update(this, store)
 			end
 		end
 
-		if store.tick_ts - ab.ts > ab.cooldown * this.owner.tower.cooldown_factor then
+		if store.tick_ts - ab.ts > ab.cooldown * tw.cooldown_factor then
 			local _, targets = U.find_foremost_enemy(store, this.pos, ab.min_range, ab.max_range, ab.node_prediction, ab.vis_flags, ab.vis_bans)
 
 			if not targets then
@@ -4733,7 +4734,7 @@ function scripts.soldier_mecha.update(this, store)
 
 				local b = E:create_entity(ab.bullet)
 
-				b.bullet.damage_factor = this.owner.tower.damage_factor
+				b.bullet.damage_factor = tw.damage_factor
 				b.pos.x = this.pos.x + (af and -1 or 1) * ab.start_offsets[ab_side].x
 				b.pos.y = this.pos.y + ab.start_offsets[ab_side].y
 				b.bullet.from = vclone(b.pos)
@@ -5849,7 +5850,7 @@ function scripts.tower_dark_elf.get_info(this)
 		damage_max = max,
 		damage_type = d_type,
 		range = this.attacks.range,
-		cooldown = cooldown
+		cooldown = cooldown * this.tower.cooldown_factor
 	}
 end
 
@@ -6722,7 +6723,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
 			tower.tower_upgrade_persistent_data.souls_extra_damage_min = tower.tower_upgrade_persistent_data.souls_extra_damage_min + tower.powers.skill_buff.damage_min
 			tower.tower_upgrade_persistent_data.souls_extra_damage_max = tower.tower_upgrade_persistent_data.souls_extra_damage_max + tower.powers.skill_buff.damage_max
 
-			if tower.render.sprites[3].fps < 45 then
+			if tower.tower_upgrade_persistent_data.souls_extra_damage_min / tower.powers.skill_buff.damage_min <= 22 then
 				SU.insert_tower_cooldown_buff(store.tick_ts, tower, 0.99)
 			end
 		else
@@ -17001,39 +17002,15 @@ function scripts.tower_hermit_toad.get_info(this)
 	if this.tower_upgrade_persistent_data.current_mode == 0 then
 		index = 2
 	end
-	-- if this.tower.kind == TOWER_KIND_MAGE then
-	-- 	index = 2
-	-- 	type = STATS_TYPE_TOWER_MAGE
-	-- end
+	local b = E:get_template(this.attacks.list[index].bullet)
 
-	-- if this.changing_to_new_mode then
-	-- 	if this.changing_to_new_mode == 0 then
-	-- 		index = 1
-	-- 		type = STATS_TYPE_TOWER
-	-- 	else
-	-- 		index = 2
-	-- 		type = STATS_TYPE_TOWER_MAGE
-	-- 	end
-	-- end
+	local min, max = b.bullet.damage_min, b.bullet.damage_max
 
-	local min, max, d_type
-
-	if this.attacks and this.attacks.list[index].damage_min then
-		min, max = this.attacks.list[index].damage_min, this.attacks.list[index].damage_max
-	elseif this.attacks and this.attacks.list[index].bullet then
-		local b = E:get_template(this.attacks.list[index].bullet)
-
-		min, max = b.bullet.damage_min, b.bullet.damage_max
-		d_type = b.bullet.damage_type
-	end
+	local d_type = b.bullet.damage_type
 
 	min, max = math.ceil(min * this.tower.damage_factor), math.ceil(max * this.tower.damage_factor)
 
-	local cooldown
-
-	if this.attacks and this.attacks.list[index].cooldown then
-		cooldown = this.attacks.list[index].cooldown
-	end
+	local cooldown = this.attacks.list[index].cooldown * this.tower.cooldown_factor
 
 	return {
 		type = type,

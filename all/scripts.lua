@@ -524,7 +524,7 @@ function scripts.enemy_basic.get_info(this)
 	local info = scripts.soldier_barrack.get_info(this)
 
 	info.lives = this.enemy.lives_cost
-	info.immune = this.health.immune_to == DAMAGE_ALL_TYPES
+	info.immune = this.health.immune_to
 	info.type = STATS_TYPE_ENEMY
 
 	return info
@@ -1127,23 +1127,24 @@ scripts.soldier_barrack = {}
 
 function scripts.soldier_barrack.get_info(this)
 	local attacks, damage_type
-	local min, max
+	local min, max, cooldown
 	local no_ranged = true
 
 	if this.melee and this.melee.attacks then
 		attacks = this.melee.attacks
 
-		for _, a in pairs(attacks) do
+		for _, a in ipairs(attacks) do
 			if a.damage_min then
-				min, max = a.damage_min + this.damage_buff, a.damage_max + this.damage_buff
+				min, max = a.damage_min + this.unit.damage_buff, a.damage_max + this.unit.damage_buff
 				damage_type = a.damage_type
-
+				cooldown = a.cooldown
 				break
 			end
 		end
 
 		if this.unit and min then
 			min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
+			cooldown = cooldown * this.unit.cooldown_factor
 		end
 
 		if min and max then
@@ -1151,22 +1152,22 @@ function scripts.soldier_barrack.get_info(this)
 		end
 	end
 
-	local ranged_min, ranged_max
+	local ranged_min, ranged_max, ranged_cooldown
 	local ranged_damage_type
 
 	if this.ranged and this.ranged.attacks then
-		for _, a in pairs(this.ranged.attacks) do
+		for _, a in ipairs(this.ranged.attacks) do
 			if not a.disabled and a.bullet then
 				local b = E:get_template(a.bullet)
 				local level = a.level
 
 				if b and b.bullet.damage_min and b.bullet.damage_max then
 					if level and b.bullet.damage_inc then
-						ranged_min, ranged_max = b.bullet.damage_min + this.damage_buff + (b.bullet.damage_inc * level), b.bullet.damage_max + this.damage_buff + (b.bullet.damage_inc * level)
+						ranged_min, ranged_max = b.bullet.damage_min + this.unit.damage_buff + (b.bullet.damage_inc * level), b.bullet.damage_max + this.unit.damage_buff + (b.bullet.damage_inc * level)
 					else
-						ranged_min, ranged_max = b.bullet.damage_min + this.damage_buff, b.bullet.damage_max + this.damage_buff
+						ranged_min, ranged_max = b.bullet.damage_min + this.unit.damage_buff, b.bullet.damage_max + this.unit.damage_buff
 					end
-
+					ranged_cooldown = a.cooldown
 					ranged_damage_type = b.bullet.damage_type
 
 					break
@@ -1176,6 +1177,7 @@ function scripts.soldier_barrack.get_info(this)
 
 		if this.unit and ranged_min then
 			ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
+			ranged_cooldown = ranged_cooldown * this.unit.cooldown_factor
 		end
 
 		if ranged_min and ranged_max then
@@ -1187,8 +1189,9 @@ function scripts.soldier_barrack.get_info(this)
 		local b = E:get_template(this.timed_attacks.list[1].bullet)
 
 		if b and b.bullet and b.bullet.damage_min and b.bullet.damage_max then
-			ranged_min, ranged_max = math.ceil((b.bullet.damage_min + this.damage_buff) * this.unit.damage_factor), math.ceil((b.bullet.damage_max + this.damage_buff) * this.unit.damage_factor)
+			ranged_min, ranged_max = math.ceil((b.bullet.damage_min + this.unit.damage_buff) * this.unit.damage_factor), math.ceil((b.bullet.damage_max + this.unit.damage_buff) * this.unit.damage_factor)
 			ranged_damage_type = b.bullet.damage_type
+			ranged_cooldown = this.timed_attacks.list[1].cooldown * this.unit.cooldown_factor
 		end
 	end
 
@@ -1207,11 +1210,12 @@ function scripts.soldier_barrack.get_info(this)
 			local a = this.melee.attacks[melee_count]
 
 			if a.damage_min and not a.disabled then
-				ranged_min, ranged_max = a.damage_min + this.damage_buff, a.damage_max + this.damage_buff
+				ranged_min, ranged_max = a.damage_min + this.unit.damage_buff, a.damage_max + this.unit.damage_buff
 				ranged_damage_type = a.damage_type
 
 				if this.unit then
 					ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
+					ranged_cooldown = ranged_cooldown * this.unit.cooldown_factor
 				end
 
 				ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
@@ -1236,7 +1240,9 @@ function scripts.soldier_barrack.get_info(this)
 		armor = this.health.armor,
 		magic_armor = this.health.magic_armor,
 		respawn = this.health.dead_lifetime,
-		no_ranged = no_ranged
+		no_ranged = no_ranged,
+		cooldown = cooldown,
+		ranged_cooldown = ranged_cooldown
 	}
 end
 
@@ -1634,8 +1640,8 @@ function scripts.tower_mage.get_info(this)
 	if this.attacks and this.attacks.list[1].loops then
 		local loops = this.attacks.list[1].loops
 
-		o.damage_min = o.damage_min * loops
-		o.damage_max = o.damage_max * loops
+		o.damage_min = o.damage_min * loops * this.tower.damage_factor
+		o.damage_max = o.damage_max * loops * this.tower.damage_factor
 	end
 
 	return o
@@ -1816,12 +1822,12 @@ function scripts.tower_barrack.get_info(this)
 		attacks = s.ranged.attacks
 	end
 
-	local min, max
+	local min, max, cooldown
 
 	for _, a in pairs(attacks) do
 		if a.damage_min then
 			min, max = a.damage_min, a.damage_max
-
+			cooldown = a.cooldown
 			break
 		end
 	end
@@ -1837,7 +1843,8 @@ function scripts.tower_barrack.get_info(this)
 		damage_max = max,
 		armor = s.health.armor,
 		magic_armor = s.health.magic_armor,
-		respawn = s.health.dead_lifetime
+		respawn = s.health.dead_lifetime,
+		cooldown = cooldown
 	}
 end
 

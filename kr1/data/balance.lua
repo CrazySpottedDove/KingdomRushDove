@@ -6112,7 +6112,7 @@ local towers = {
 		},
 		price = {90, 130, 180, 275},
 		basic_attack = {
-			cooldown = 2,
+			cooldown = 2.75,
 			damage_min = {14, 40, 76, 134},
 			damage_max = {22, 54, 92, 146},
 			range = {200, 230, 260, 300},
@@ -6148,9 +6148,9 @@ local towers = {
 			damage_type = DAMAGE_PHYSICAL
 		},
 		mage_basic_attack = {
-			cooldown = 1.2,
-			damage_min = {7, 17, 29, 64},
-			damage_max = {10, 22, 38, 80},
+			cooldown = 1.3,
+			damage_min = {7, 17, 29, 70},
+			damage_max = {10, 22, 38, 88},
 			range = {160, 175, 190, 200},
 			damage_type = DAMAGE_MAGICAL
 		},
