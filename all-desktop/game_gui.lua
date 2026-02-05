@@ -356,7 +356,7 @@ function game_gui:init(w, h, game)
 
 	tower_range_upgrade.hidden = true
 
-	local boss_health_bar = require("dove_modules.gui.boss_health_bar"):new()
+	local boss_health_bar = require("dove_modules.gui.boss_health_bar"):new(sw)
 	boss_health_bar.hidden = true
 
 	local point_confirm = KImageView:new("confirm_feedback_0001")

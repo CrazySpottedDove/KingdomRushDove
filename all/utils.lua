@@ -2829,13 +2829,13 @@ function U.remove_silence(target, ts)
 					local duration = ts - target.silence_ts
 
 					if target.ranged then
-						for _, a in pairs(target.ranged.attacks) do
+						for _, a in ipairs(target.ranged.attacks) do
 							a.ts = a.ts + duration
 						end
 					end
 
 					if target.timed_attacks then
-						for _, a in pairs(target.timed_attacks.list) do
+						for _, a in ipairs(target.timed_attacks.list) do
 							a.ts = a.ts + duration
 						end
 					end

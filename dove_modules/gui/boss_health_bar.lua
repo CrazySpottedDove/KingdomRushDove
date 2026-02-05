@@ -14,9 +14,9 @@ local text_up_padding = 6
 local healthbar_height = background_height - healthbar_up_padding - healthbar_bottom_padding
 local healthbar_width = background_width - healthbar_left_padding - healthbar_right_padding
 
-function BossHealthBar:initialize(size)
-	KView.initialize(self, size)
-	self.pos.x = 478
+function BossHealthBar:initialize(sw)
+	KView.initialize(self, nil)
+	self.pos.x = (sw - background_width) / 2
 	self.pos.y = 20
 	self.health_percent = 1
 	self.boss_name = "BOSS_NAME"
