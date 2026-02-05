@@ -1142,13 +1142,11 @@ function scripts.soldier_barrack.get_info(this)
 			end
 		end
 
-		if this.unit and min then
+		if min then
 			min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
-			cooldown = cooldown * this.unit.cooldown_factor
-		end
-
-		if min and max then
-			min, max = math.ceil(min), math.ceil(max)
+			if cooldown then
+				cooldown = cooldown * this.unit.cooldown_factor
+			end
 		end
 	end
 
@@ -1175,23 +1173,28 @@ function scripts.soldier_barrack.get_info(this)
 			end
 		end
 
-		if this.unit and ranged_min then
+		if ranged_min then
 			ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
-			ranged_cooldown = ranged_cooldown * this.unit.cooldown_factor
-		end
-
-		if ranged_min and ranged_max then
-			ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
+			if ranged_cooldown then
+				ranged_cooldown = ranged_cooldown * this.unit.cooldown_factor
+			end
 		end
 	end
 
 	if not ranged_damage_type and this.timed_attacks and this.timed_attacks.list[1].bullet then
-		local b = E:get_template(this.timed_attacks.list[1].bullet)
-
-		if b and b.bullet and b.bullet.damage_min and b.bullet.damage_max then
-			ranged_min, ranged_max = math.ceil((b.bullet.damage_min + this.unit.damage_buff) * this.unit.damage_factor), math.ceil((b.bullet.damage_max + this.unit.damage_buff) * this.unit.damage_factor)
-			ranged_damage_type = b.bullet.damage_type
-			ranged_cooldown = this.timed_attacks.list[1].cooldown * this.unit.cooldown_factor
+		for _, a in ipairs(this.timed_attacks.list) do
+			if a.bullet and not a.disabled then
+				local b = E:get_template(a.bullet)
+				if b.bullet and b.bullet.damage_min and b.bullet.damage_max then
+					ranged_min, ranged_max = (b.bullet.damage_min + this.unit.damage_buff) * this.unit.damage_factor, (b.bullet.damage_max + this.unit.damage_buff) * this.unit.damage_factor
+					ranged_damage_type = b.bullet.damage_type
+					ranged_cooldown = a.cooldown
+					if ranged_cooldown then
+						ranged_cooldown = ranged_cooldown * this.unit.cooldown_factor
+					end
+					break
+				end
+			end
 		end
 	end
 
@@ -1214,12 +1217,10 @@ function scripts.soldier_barrack.get_info(this)
 				ranged_cooldown = a.cooldown
 				ranged_damage_type = a.damage_type
 
-				if this.unit then
-					ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
+				ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
+				if ranged_cooldown then
 					ranged_cooldown = ranged_cooldown * this.unit.cooldown_factor
 				end
-
-				ranged_min, ranged_max = math.ceil(ranged_min), math.ceil(ranged_max)
 
 				break
 			end
