@@ -129,9 +129,9 @@ function GU.damage_value_and_cooldown_desc(min, max, cooldown)
 	end
 
 	if min and max and max > 0 then
-		return string.format("%i-%i/%.2fs", min, max, cooldown)
+		return string.format("%i-%i / %.1f", min, max, cooldown)
 	else
-		return _("None/%.2fs", cooldown)
+		return string.format("无 / %.1f", cooldown)
 	end
 end
 

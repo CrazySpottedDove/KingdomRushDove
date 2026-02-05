@@ -1211,6 +1211,7 @@ function scripts.soldier_barrack.get_info(this)
 
 			if a.damage_min and not a.disabled then
 				ranged_min, ranged_max = a.damage_min + this.unit.damage_buff, a.damage_max + this.unit.damage_buff
+				ranged_cooldown = a.cooldown
 				ranged_damage_type = a.damage_type
 
 				if this.unit then

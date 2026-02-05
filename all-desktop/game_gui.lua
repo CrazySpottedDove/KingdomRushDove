@@ -2692,9 +2692,9 @@ function InfoBar:initialize()
 	local stat_labels = {}
 
 	stat_labels[STATS_TYPE_TOWER_BARRACK] = {{"label", "l_hp", "base_info_icons_0009", 0.8 * s_4}, {"label", "l_damage", "base_info_icons_0001", 0.8 * s_4}, {"label", "l_armor", "base_info_icons_0003", 0.8 * s_4}, {"label", "l_magic_armor", "base_info_icons_0004", 0.8 * s_4}, {"label", "l_respawn", "base_info_icons_0007", 0.8 * s_4}}
-	stat_labels[STATS_TYPE_SOLDIER] = {{"bar", "b_hp", "base_info_bar_bg", "base_info_bar", 3.3 * s_12}, {"label", "l_hp", nil, 3.3 * s_12, "center", true, v(0, CJK(1, 0, 3, -1))}, {"label", "l_damage", "base_info_icons_0001", 2.35 * s_12}, {"label", "l_ranged_damage", "base_info_icons_0001", 2.35 * s_12}, {"label", "l_armor", "base_info_icons_0003", 1.3 * s_12}, {"label", "l_magic_armor", "base_info_icons_0004", 1.3 * s_12}, {"label", "l_respawn", "base_info_icons_0007", 1.3 * s_12}}
+	stat_labels[STATS_TYPE_SOLDIER] = {{"bar", "b_hp", "base_info_bar_bg", "base_info_bar", 3.3 * s_12}, {"label", "l_hp", nil, 3.3 * s_12, "center", true, v(0, CJK(1, 0, 3, -1))}, {"label", "l_damage", "base_info_icons_0001", 2.55 * s_12}, {"label", "l_ranged_damage", "base_info_icons_0001", 2.55 * s_12}, {"label", "l_armor", "base_info_icons_0003", 1.2 * s_12}, {"label", "l_magic_armor", "base_info_icons_0004", 1.2 * s_12}, {"label", "l_respawn", "base_info_icons_0007", 1.2 * s_12}}
 	stat_labels[STATS_TYPE_ENEMY] = table.deepclone(stat_labels[STATS_TYPE_SOLDIER])
-	stat_labels[STATS_TYPE_ENEMY][7] = {"label", "l_lives", "base_info_icons_0008", 1.3 * s_12}
+	stat_labels[STATS_TYPE_ENEMY][7] = {"label", "l_lives", "base_info_icons_0008", 1.2 * s_12}
 	stat_labels[STATS_TYPE_TOWER] = {{"label", "l_damage", "base_info_icons_0001", s_3}, {"label", "l_range", "base_info_icons_0005", s_3}, {"label", "l_cooldown", "base_info_icons_0006", s_3}}
 	stat_labels[STATS_TYPE_TOWER_NO_RANGE] = {{"label", "l_damage", "base_info_icons_0001", s_2}, {"label", "l_cooldown", "base_info_icons_0006", s_2}}
 	stat_labels[STATS_TYPE_TOWER_MAGE] = table.deepclone(stat_labels[STATS_TYPE_TOWER])
@@ -2941,7 +2941,7 @@ function InfoBar:update_stats()
 	elseif stats.type == STATS_TYPE_ENEMY then
 		sv.b_hp.bar.scale.x = math.min(stats.hp / stats.hp_max, 1)
 
-		sv.l_hp.text = string.format("%i/%i", stats.hp, stats.hp_max)
+		sv.l_hp.text = string.format("%i / %i", stats.hp, stats.hp_max)
 
 		-- sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
 		sv.l_damage.text = GU.damage_value_and_cooldown_desc(stats.damage_min, stats.damage_max, stats.cooldown)
@@ -2958,7 +2958,7 @@ function InfoBar:update_stats()
 		sv.l_lives.text = type(stats.lives) == "number" and stats.lives > 0 and stats.lives or "-"
 	elseif stats.type == STATS_TYPE_SOLDIER then
 		sv.b_hp.bar.scale.x = math.min(stats.hp / stats.hp_max, 1)
-		sv.l_hp.text = string.format("%i/%i", stats.hp, stats.hp_max)
+		sv.l_hp.text = string.format("%i / %i", stats.hp, stats.hp_max)
 		-- sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
 		sv.l_damage.text = GU.damage_value_and_cooldown_desc(stats.damage_min, stats.damage_max, stats.cooldown)
 
@@ -2971,7 +2971,7 @@ function InfoBar:update_stats()
 
 		sv.l_armor.text = GU.armor_value_desc_detailed(stats.armor)
 		sv.l_magic_armor.text = GU.armor_value_desc_detailed(stats.magic_armor)
-		sv.l_respawn.text = stats.respawn or "-"
+		sv.l_respawn.text = string.format("%i", stats.respawn) or "-"
 	elseif stats.type == STATS_TYPE_TEXT then
 		sv.l_desc.text = _(stats.desc)
 	end

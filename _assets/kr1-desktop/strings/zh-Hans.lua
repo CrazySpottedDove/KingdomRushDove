@@ -2,7 +2,7 @@ return {
 	["!!!COMMENT_LOCALIZATION_SOURCE"] = "Keywords+CYUGAME",
 	["%d Life"] = "%d 点生命值",
 	["%d Lives"] = "%d 条生命",
-	["%i sec."] = "%i 秒。",
+	["%i sec."] = "%i 秒",
 	["%is"] = "%i秒",
 	["- Hmmm…"] = "嗯...",
 	["- if heroes are allowed"] = "- 若允许英雄",

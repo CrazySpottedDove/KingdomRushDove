@@ -12413,11 +12413,11 @@ function scripts.tower_royal_archers.update(this, store)
 
 						y_animation_wait(this, shooter_sid)
 
-                        if #targets ~= 0 then
-    						ap.ts = start_ts
-                        else
-                            ap.ts = ap.ts + fts(10)
-                        end
+						if #targets ~= 0 then
+							ap.ts = start_ts
+						else
+							ap.ts = ap.ts + fts(10)
+						end
 					end
 				end
 
