@@ -349,7 +349,7 @@ function image_db:queue_load_done()
 		goto label_3_0
 	end
 
-	-- collectgarbage()
+	print("Image DB queue load done in " .. (love.timer.getTime() - self.queue_load_start_time) * 1000 .. "ms. Loaded images: " .. self.queue_load_done_images)
 
 	self.queue_load_start_time = nil
 	self.progress = 1

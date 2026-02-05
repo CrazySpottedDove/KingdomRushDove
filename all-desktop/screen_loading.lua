@@ -102,8 +102,7 @@ function screen:init(w, h)
 	bar.last_ts = screen.window.ts
 
 	function bar.update(this, dt)
-		local d_p = 0.6 * I.progress + 0.4 * S.progress - this.scale.x
-		this.scale.x = km.clamp(0, 1, this.scale.x + d_p)
+		this.scale.x = km.clamp(0, 1, 0.6 * I.progress + 0.4 * S.progress)
 		this.last_ts = screen.window.ts
 
 		if this.scale.x >= 1 then

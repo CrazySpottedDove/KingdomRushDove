@@ -58,7 +58,33 @@ end
 
 -- 替换固定的 _MAX_THREADS = 8
 local _MAX_THREADS = calculate_audio_thread_count()
-local _LOAD_AUDIO_THREAD_CODE = "local cin,cout,th_i = ...\nrequire \"love.filesystem\"\nrequire \"love.audio\"\nrequire \"love.sound\"\nlocal file_count = 0\nwhile true do\n    -- get params\n    local file = cin:demand()\n    if file == 'QUIT' then goto quit end\n    local mode = cin:demand()\n    local id = cin:demand()\n    \n  local info = love.filesystem.getInfo(file) \n if (not info) or (info.type ~= 'file')  then\n        cout:push({'ERROR','Not a file',file})\n    else\n        local ok, result = pcall(love.audio.newSource, file, mode)\n        collectgarbage()\n        if ok and result then\n            cout:push({'OK',result,id})\n            file_count = file_count + 1\n        else\n            cout:push({'ERROR',result,file})\n        end\n    end\nend\n::quit::\ncout:supply({'DONE'})\n--print('TH  ' ..th_i.. ' QUIT - FILES LOADED ' .. file_count .. '\\n')\n"
+local _LOAD_AUDIO_THREAD_CODE = [[local cin,cout,th_i = ...
+require "love.filesystem"
+require "love.audio"
+require "love.sound"
+local file_count = 0
+while true do
+local file = cin:demand()
+if file == 'QUIT' then
+goto quit
+end
+local mode = cin:demand()
+local id = cin:demand()
+local info = love.filesystem.getInfo(file)
+if (not info) or (info.type ~= 'file') then
+cout:push({'ERROR','Not a file',file})
+else
+local ok, result = pcall(love.audio.newSource, file, mode)
+if ok and result then
+cout:push({'OK',result,id})
+file_count = file_count + 1
+else
+cout:push({'ERROR',result,file})
+end
+end
+end
+::quit::
+cout:supply({'DONE'})]]
 
 function sound_db:init(path)
 	self.path = path
@@ -172,7 +198,6 @@ function sound_db:queue_load_done()
 	end
 
 	log.debug("sound queue loaded")
-	-- collectgarbage()
 
 	self.load_queue_current = nil
 	self.progress = 1

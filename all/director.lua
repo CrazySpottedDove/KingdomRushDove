@@ -344,8 +344,10 @@ function director:unload_item(item)
 			item:destroy()
 		end
 	end
-	-- unload item 结束时，统一进行手动 gc
-	collectgarbage()
+	-- unload item 结束时，如果 item 在 director_data 中的 show_loading 为 false，则进行一次完整的垃圾回收。如果 show_loading 为 true，那么 screen_loading 的卸载会替他完成垃圾回收流程，从而减少一次垃圾回收调用。
+	if item.item_name ~= "game" and item.item_name ~= "map" then
+		collectgarbage()
+	end
 end
 
 function director:queue_load_item_named(name, force_reload)
@@ -742,22 +744,19 @@ function director:limit_fps()
 	end
 
 	-- 在剩余时间内推进 GC
+	-- 预留 0.0005 秒避免 gc 超时
+	local gc_stop_time = deadline - 0.0005
 	while true do
-		local now = love.timer.getTime()
-		local remaining = deadline - now
-
-		if remaining <= 0.0015 then
+		if love.timer.getTime() > gc_stop_time then
 			break
 		end
-
 		if collectgarbage("step") then
 			break
 		end -- 本轮 GC 已经完成
 	end
 
 	-- 最后 sleep 精确到下一帧
-	local now = love.timer.getTime()
-	local sleep_time = deadline - now
+	local sleep_time = deadline - love.timer.getTime()
 
 	if sleep_time > 0 then
 		love.timer.sleep(sleep_time)
