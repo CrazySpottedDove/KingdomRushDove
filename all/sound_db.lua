@@ -446,6 +446,7 @@ function sound_db:queue(id, options)
 	table.insert(self.request_queue, req)
 end
 
+-- 声音终止队列，有两种请求：{id}和{gid}，分别表示停止指定声音ID和停止指定声音组的所有声音
 sound_db.stop_queue = {}
 
 function sound_db:stop(id)
@@ -453,8 +454,6 @@ function sound_db:stop(id)
 		local opts = sound_db.sounds[id]
 
 		if opts and (opts.loop or sound_db.sounds[id].interruptible) then
-			log.paranoid("Sound %s stopping queued", id)
-
 			local stop_req = {
 				id = id
 			}
@@ -467,11 +466,7 @@ function sound_db:stop(id)
 end
 
 function sound_db:stop_group(gid)
-	log.paranoid("Stopping sources for group: %s", gid)
-
 	if gid then
-		log.paranoid("Group %s stopping queued", gid)
-
 		local stop_req = {
 			gid = gid
 		}
@@ -486,6 +481,7 @@ function sound_db:stop_all()
 	self.ref_counters = {}
 end
 
+--- 暂停所有正在播放的声音
 function sound_db:pause()
 	self.paused = true
 
@@ -496,6 +492,7 @@ function sound_db:pause()
 	end
 end
 
+--- 恢复所有暂停的声音
 function sound_db:resume()
 	self.paused = false
 
@@ -506,6 +503,7 @@ function sound_db:resume()
 	end
 end
 
+--- 检查指定声音ID是否正在播放
 function sound_db:sound_is_playing(id)
 	local sd = sound_db.sounds[id]
 
@@ -561,29 +559,35 @@ function sound_db:set_groups_gains(ggs)
 	end
 end
 
-function sound_db:_stop_sources(req)
-	log.paranoid("Stoping sources for stop request {id=%s, gid=%s}", req.id, req.gid)
-
-	if req.id and self.sounds[req.id].ref_counted then
-		local rc = self.ref_counters[req.id] or 0
-
-		rc = rc - 1
-		self.ref_counters[req.id] = rc
-
-		log.paranoid("sound %s refcount is now %d", req.id, rc)
-
-		if rc > 0 then
-			return false
-		end
-	end
-
-	for gid, group_active_sources in pairs(self.active_sources) do
-		for _, ast in pairs(group_active_sources) do
-			if gid == req.gid or ast.id == req.id then
-				log.debug("about to stop source %s (ID = %s)", ast.source, id)
-				ast.source:stop()
+---@param req table {id} or {gid}
+function sound_db:_stop_sources(stop_request)
+	if stop_request.id then
+		if self.sounds[stop_request.id].ref_counted then
+			local rc = self.ref_counters[stop_request.id] or 0
+			rc = rc - 1
+			self.ref_counters[stop_request.id] = rc
+			if rc > 0 then
+				return
 			end
 		end
+		for _, group_active_sources in pairs(self.active_sources) do
+			for i = 1, #group_active_sources do
+				if group_active_sources[i].id == stop_request.id then
+					group_active_sources[i].source:stop()
+				end
+			end
+		end
+		return
+	end
+
+	if stop_request.gid then
+		local group_active_sources = self.active_sources[stop_request.gid]
+		if group_active_sources then
+			for i = 1, #group_active_sources do
+				group_active_sources[i].source:stop()
+			end
+		end
+		return
 	end
 end
 
@@ -594,33 +598,56 @@ function sound_db:update(dt)
 		now_ts = now_ts + dt
 	end
 
+	-- 处理所有停止请求
 	for i = #sound_db.stop_queue, 1, -1 do
 		local stop_request = sound_db.stop_queue[i]
 
-		self:_stop_sources(stop_request, self.active_sources)
-
-		if not self.ref_counters[stop_request.id] then
+		if stop_request.id then
+			if self.sounds[stop_request.id].ref_counted then
+				local rc = self.ref_counters[stop_request.id] or 0
+				rc = rc - 1
+				self.ref_counters[stop_request.id] = rc
+				if rc > 0 then
+					goto stop_queue_continue
+				end
+			end
+			for _, group_active_sources in pairs(self.active_sources) do
+				for i = 1, #group_active_sources do
+					if group_active_sources[i].id == stop_request.id then
+						group_active_sources[i].source:stop()
+					end
+				end
+			end
 			for j = #sound_db.request_queue, 1, -1 do
 				if sound_db.request_queue[j].id == stop_request.id then
 					table.remove(sound_db.request_queue, j)
 				end
 			end
+		elseif stop_request.gid then
+			local group_active_sources = self.active_sources[stop_request.gid]
+			if group_active_sources then
+				for i = 1, #group_active_sources do
+					group_active_sources[i].source:stop()
+				end
+			end
 		end
 
-		table.remove(sound_db.stop_queue, i)
+		::stop_queue_continue::
+		sound_db.stop_queue[i] = nil
 	end
 
+	-- 回收已停止的声音源
 	if not self.paused then
 		for gid, group_active_sources in pairs(self.active_sources) do
 			for i = #group_active_sources, 1, -1 do
 				if not group_active_sources[i].source:isPlaying() then
-					log.paranoid("Reclaiming source %s", group_active_sources[i].source)
 					table.remove(group_active_sources, i)
 				end
 			end
 		end
 	end
 
+	-- 处理所有播放请求，如果请求设置了delay选项，则会在指定的延迟时间后才播放
 	local queue = sound_db.request_queue
 	local reqs_due = {}
 
@@ -640,73 +667,67 @@ function sound_db:play(request)
 	local options = request.options
 	local se = self.sound_extras[request.id]
 	local last_play_ts = se.last_play_ts or 0
-	local every_counter = se.every_counter or 0
-	local play_due = true
 
 	if options.chance and math.random() >= options.chance then
 		return
 	end
 
+	-- 如果设置了every选项，则每隔指定的请求次数才会播放一次
 	if options.every then
-		if every_counter ~= 0 then
-			play_due = false
-
-			log.paranoid("%s plays every %d requests. (remaining: %d )", request.id, options.every, options.every - every_counter)
-		end
+		local every_counter = se.every_counter or 0
 
 		every_counter = (every_counter + 1) % options.every
 		se.every_counter = every_counter
+
+		-- 说明起始是 0 或 nil
+		if every_counter ~= 1 then
+			return
+		end
 	end
 
+	-- 如果设置了ignore选项，则在上次播放后指定的时间内再次请求播放同一声音时会被忽略
 	if options.ignore and self.ts - last_play_ts < options.ignore then
-		play_due = false
+		return
 	end
 
+	-- 如果设置了ref_counted选项，则会维护一个引用计数器，后续请求不发出实际声音
 	if options.ref_counted then
 		local rc = self.ref_counters[request.id] or 0
 
 		rc = rc + 1
 
-		if rc ~= 1 then
-			play_due = false
-		end
-
 		self.ref_counters[request.id] = rc
+
+		if rc ~= 1 then
+			return
+		end
 	end
 
-	local pools = {}
-
+	-- 顺序播放
 	if options.mode == "sequence" then
-		table.insert(pools, self.sources[options.files[se.sequence or 1]])
+		if not se.sequence then
+			se.sequence = 1
+		end
 
-		se.sequence = (se.sequence or 1) % #options.files + 1
+		self:_play(request, self.sources[options.files[se.sequence]])
+
+		se.sequence = se.sequence % #options.files + 1
+	-- 随机播放
 	elseif options.mode == "random" then
-		table.insert(pools, self.sources[options.files[math.random(1, #options.files)]])
+		self:_play(request, self.sources[options.files[math.random(1, #options.files)]])
+	-- 并行播放
 	elseif options.mode == "concurrent" then
-		for _, f in pairs(options.files) do
-			table.insert(pools, self.sources[f])
+		for _, f in ipairs(options.files) do
+			self:_play(request, self.sources[f])
 		end
 	else
-		table.insert(pools, self.sources[options.files[1]])
+		self:_play(request, self.sources[options.files[1]])
 	end
 
-	if not pools or #pools == 0 then
-		log.error("SOUND %s defined but sound sources missing. Missing file during load?", request.id)
-
-		return
-	end
-
-	if play_due then
-		log.paranoid("TTP: %s", request.id)
-
-		for _, sp in pairs(pools) do
-			self:_play(request, sp)
-		end
-
-		se.last_play_ts = self.ts
-	end
+	se.last_play_ts = self.ts
 end
 
+-- 在指定的声音源池中找到最早将要停止的声音源，返回其索引位置
 local function soon_to_stop_source(group_active_sources)
 	local mtp = 1000000000
 	local pos = 1
@@ -724,29 +745,20 @@ local function soon_to_stop_source(group_active_sources)
 end
 
 local function get_or_create_source(source_pool)
-	local source
-
+	-- 先遍历，有空闲的资源，直接返回即可
 	for i = 1, #source_pool do
-		source = source_pool[i]
+		local source = source_pool[i]
 
 		if not source:isPlaying() then
-			log.paranoid("Found free source at %d", i)
-
-			break
-		else
-			source = nil
+			return source
 		end
 	end
 
-	if not source then
-		log.paranoid("No free sources in pool %s. Creating a new one", tostring(source_pool))
+	-- 否则，克隆一个新的资源加入池中
+	local new_source = source_pool[1]:clone()
+	source_pool[#source_pool + 1] = new_source
 
-		source = source_pool[1]:clone()
-
-		table.insert(source_pool, source)
-	end
-
-	return source
+	return new_source
 end
 
 function sound_db:_play(request, source_pool)
@@ -764,25 +776,14 @@ function sound_db:_play(request, source_pool)
 	local max = self.source_groups[opts.source_group].max_sources
 	local source
 
-	if max == 0 then
-		log.info("max_sources for %s is 0", opts.source_group)
-
-		return
-	end
-
 	if active < max then
 		source = get_or_create_source(source_pool)
 	else
-		log.paranoid("No free sources for %s. Source group %s maxed out at %d.", request.id, opts.source_group, max)
-
 		local ste_idx = soon_to_stop_source(active_sources[opts.source_group])
 		local ste_ast = active_sources[opts.source_group][ste_idx]
 
-		log.paranoid("Stopping evicted source %s (%s) in group %s", ste_ast.id, tostring(ste_ast.source), opts.source_group)
 		ste_ast.source:stop()
-		table.remove(active_sources[opts.source_group], ste_idx)
-
-		source = get_or_create_source(source_pool)
+		source = ste_ast.source
 	end
 
 	local vol = 1

@@ -2,7 +2,7 @@
 local log = require("lib.klua.log"):new("director")
 local km = require("lib.klua.macros")
 local signal = require("lib.hump.signal")
-
+local perf = require("dove_modules.perf.perf")
 require("lib.klua.dump")
 local version = require("version")
 local features = require("features")
@@ -599,8 +599,9 @@ end
 
 function director:update(dt)
 	local updated = false
+    perf.start("Sound.update")
 	S:update(dt)
-
+    perf.stop("Sound.update")
 	if self.next_item_name then
 		self:queue_load_item_named(self.next_item_name, self.force_reload)
 
