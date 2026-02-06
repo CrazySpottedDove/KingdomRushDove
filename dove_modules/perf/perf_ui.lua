@@ -11,8 +11,60 @@ local perf_ui = {
 	font = require("lib.klove.font_db"):f("msyh", 12),
 	entries = {},
 	total_ms = 0,
-	fps = 0
+	fps = 0,
+	-- 刷新率，每多少次sync_data才更新一次显示
+	refresh_rate = 10,
+	-- 当前计数
+	sync_count = 0,
+	-- 累加的条目
+	sum_entries = {},
+	-- 累加的总耗时
+	sum_total_ms = 0
 }
+
+local function deep_sum_entries(sum_entries, items)
+	for i, e in ipairs(items) do
+		if not sum_entries[i] then
+			sum_entries[i] = {
+				name = e.name,
+				time = 0,
+				percentage = 0
+			}
+		end
+		sum_entries[i].time = sum_entries[i].time + (e.time or 0)
+		sum_entries[i].percentage = sum_entries[i].percentage + (e.percentage or 0)
+	end
+end
+
+function perf_ui.sync_data()
+    if not perf_ui.enabled then
+        return
+    end
+	local items, sum = perf.export_table()
+	perf_ui.sync_count = perf_ui.sync_count + 1
+	deep_sum_entries(perf_ui.sum_entries, items)
+	perf_ui.sum_total_ms = perf_ui.sum_total_ms + sum
+
+	if perf_ui.sync_count >= perf_ui.refresh_rate then
+		-- 计算平均值
+		local avg_entries = {}
+		for i, e in ipairs(perf_ui.sum_entries) do
+			avg_entries[i] = {
+				name = e.name,
+				time = e.time / perf_ui.sync_count,
+				percentage = e.percentage / perf_ui.sync_count
+			}
+		end
+		perf_ui.entries = avg_entries
+		perf_ui.total_ms = perf_ui.sum_total_ms / perf_ui.sync_count
+		perf_ui.fps = 1000000 / (perf_ui.total_ms > 0 and perf_ui.total_ms or 1000)
+
+		-- 重置计数和累加
+		perf_ui.sync_count = 0
+		perf_ui.sum_entries = {}
+		perf_ui.sum_total_ms = 0
+	end
+end
 
 function perf_ui.enable()
 	perf_ui.enabled = true
@@ -29,12 +81,12 @@ local function textWidth(s)
 	return f and f:getWidth(s) or 0
 end
 
-function perf_ui.sync_data()
-	local items, sum = perf.export_table()
-	perf_ui.entries = items
-	perf_ui.total_ms = sum
-	perf_ui.fps = 1000000 / (sum > 0 and sum or 1000)
-end
+-- function perf_ui.sync_data()
+-- 	local items, sum = perf.export_table()
+-- 	perf_ui.entries = items
+-- 	perf_ui.total_ms = sum
+-- 	perf_ui.fps = 1000000 / (sum > 0 and sum or 1000)
+-- end
 
 function perf_ui.draw()
 	if not perf_ui.enabled then
