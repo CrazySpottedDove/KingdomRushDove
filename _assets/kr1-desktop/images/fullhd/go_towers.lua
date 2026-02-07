@@ -24530,38 +24530,6 @@ return {
 		size = {56, 45},
 		trim = {0, 0, 0, 0}
 	},
-	build_archer = {
-		a_name = "go_towers-6.dds",
-		a_size = {2048, 2048},
-		alias = {},
-		f_quad = {1373, 1203, 73, 63},
-		size = {149, 127},
-		trim = {34, 53, 42, 11}
-	},
-	build_artillery = {
-		a_name = "go_towers-6.dds",
-		a_size = {2048, 2048},
-		alias = {},
-		f_quad = {558, 979, 103, 55},
-		size = {146, 127},
-		trim = {22, 51, 21, 21}
-	},
-	build_barracks = {
-		a_name = "go_towers-6.dds",
-		a_size = {2048, 2048},
-		alias = {},
-		f_quad = {558, 1413, 101, 71},
-		size = {152, 127},
-		trim = {19, 50, 32, 6}
-	},
-	build_mage = {
-		a_name = "go_towers-6.dds",
-		a_size = {2048, 2048},
-		alias = {},
-		f_quad = {558, 1490, 101, 51},
-		size = {132, 107},
-		trim = {9, 45, 22, 11}
-	},
 	build_terrain_0001 = {
 		a_name = "go_towers-1.dds",
 		a_size = {2048, 2048},
@@ -51907,14 +51875,6 @@ return {
 		f_quad = {908, 1814, 121, 87},
 		size = {152, 126},
 		trim = {0, 37, 31, 2}
-	},
-	tower_preview_barracks = {
-		a_name = "go_towers-6.dds",
-		a_size = {2048, 2048},
-		alias = {},
-		f_quad = {558, 876, 103, 97},
-		size = {152, 127},
-		trim = {19, 25, 30, 5}
 	},
 	tower_preview_mage = {
 		a_name = "go_towers-1.dds",

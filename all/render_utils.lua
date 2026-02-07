@@ -29,6 +29,7 @@ end
 --- get frame draw params
 ---@param f table sprite
 ---@return userdata quad, number x, number y, number r, number sx, number sy, number ox, number oy
+---@note 要绘画的quad, x坐标, y坐标, 旋转弧度, x缩放, y缩放, x原点偏移, y原点偏移
 function RU.frame_draw_params(f)
 	local ss = f.ss
 	local ref_scale = ss.ref_scale or 1
