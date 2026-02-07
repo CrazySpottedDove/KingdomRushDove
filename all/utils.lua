@@ -1633,9 +1633,9 @@ function U.calc_protection(health, damage_type)
 		protection = health.poison_armor
 	elseif band(damage_type, DAMAGE_TRUE) ~= 0 then
 		protection = 0
-	elseif band(damage_type, DAMAGE_PHYSICAL) ~= 0 then
+	elseif band(damage_type, DAMAGE_PHYSICAL) ~= 0 or band(damage_type, DAMAGE_AGAINST_ARMOR) ~= 0 then
 		protection = health.armor
-	elseif band(damage_type, DAMAGE_MAGICAL) ~= 0 then
+	elseif band(damage_type, DAMAGE_MAGICAL) ~= 0 or band(damage_type, DAMAGE_AGAINST_MAGIC_ARMOR) ~= 0 then
 		protection = health.magic_armor
 	elseif band(damage_type, DAMAGE_MAGICAL_EXPLOSION) ~= 0 then
 		protection = calc_explosion_protection(health.magic_armor)
@@ -1692,11 +1692,12 @@ function U.predict_damage(entity, damage)
 	end
 
 	-- 该类攻击对护甲高的敌人伤害更高
-	if band(damage.damage_type, DAMAGE_AGAINST_ARMOR) ~= 0 then
-		rounded_damage = rounded_damage + rounded_damage * protection * protection * 2 / (1 - protection)
+	local against_extra = 0
+	if band(damage.damage_type, DAMAGE_AGAINST_ARMOR) ~= 0 or band(damage.damage_type, DAMAGE_AGAINST_MAGIC_ARMOR) ~= 0 then
+		against_extra = rounded_damage * protection * protection * 2 * entity.health.damage_factor
 	end
 
-	rounded_damage = km.round(rounded_damage * entity.health.damage_factor * (1 - protection))
+	rounded_damage = km.round(rounded_damage * entity.health.damage_factor * (1 - protection) + against_extra)
 
 	if band(damage.damage_type, DAMAGE_NO_KILL) ~= 0 and entity.health and rounded_damage >= entity.health.hp then
 		rounded_damage = entity.health.hp - 1

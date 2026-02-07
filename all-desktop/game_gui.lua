@@ -2516,14 +2516,14 @@ function InfoBar:initialize()
 	local label_height = 14
 	local stat_labels = {}
 
-	stat_labels[STATS_TYPE_TOWER_BARRACK] = {{"label", "l_hp", "base_info_icons_0009", 0.8 * s_4}, {"label", "l_damage", "base_info_icons_0001", 0.8 * s_4}, {"label", "l_armor", "base_info_icons_0003", 0.8 * s_4}, {"label", "l_magic_armor", "base_info_icons_0004", 0.8 * s_4}, {"label", "l_respawn", "base_info_icons_0007", 0.8 * s_4}}
-	stat_labels[STATS_TYPE_SOLDIER] = {{"bar", "b_hp", "base_info_bar_bg", "base_info_bar", 3.3 * s_12}, {"label", "l_hp", nil, 3.3 * s_12, "center", true, v(0, CJK(1, 0, 3, -1))}, {"label", "l_damage", "base_info_icons_0001", 2.55 * s_12}, {"label", "l_ranged_damage", "base_info_icons_0001", 2.55 * s_12}, {"label", "l_armor", "base_info_icons_0003", 1.2 * s_12}, {"label", "l_magic_armor", "base_info_icons_0004", 1.2 * s_12}, {"label", "l_respawn", "base_info_icons_0007", 1.2 * s_12}}
+	stat_labels[STATS_TYPE_TOWER_BARRACK] = {{"label", "l_hp", "base_info_icons_hp", 0.8 * s_4}, {"label", "l_damage", "base_info_icons_sword", 0.8 * s_4}, {"label", "l_armor", "base_info_icons_armor", 0.8 * s_4}, {"label", "l_magic_armor", "base_info_icons_magic_armor", 0.8 * s_4}, {"label", "l_respawn", "base_info_icons_lifetime", 0.8 * s_4}}
+	stat_labels[STATS_TYPE_SOLDIER] = {{"bar", "b_hp", "base_info_bar_bg", "base_info_bar", 3.3 * s_12}, {"label", "l_hp", nil, 3.3 * s_12, "center", true, v(0, CJK(1, 0, 3, -1))}, {"label", "l_damage", "base_info_icons_sword", 2.55 * s_12}, {"label", "l_ranged_damage", "base_info_icons_arrow", 2.55 * s_12}, {"label", "l_armor", "base_info_icons_armor", 1.2 * s_12}, {"label", "l_magic_armor", "base_info_icons_magic_armor", 1.2 * s_12}, {"label", "l_respawn", "base_info_icons_lifetime", 1.2 * s_12}}
 	stat_labels[STATS_TYPE_ENEMY] = table.deepclone(stat_labels[STATS_TYPE_SOLDIER])
-	stat_labels[STATS_TYPE_ENEMY][7] = {"label", "l_lives", "base_info_icons_0008", 1.2 * s_12}
-	stat_labels[STATS_TYPE_TOWER] = {{"label", "l_damage", "base_info_icons_0001", s_3}, {"label", "l_range", "base_info_icons_0005", s_3}, {"label", "l_cooldown", "base_info_icons_0006", s_3}}
-	stat_labels[STATS_TYPE_TOWER_NO_RANGE] = {{"label", "l_damage", "base_info_icons_0001", s_2}, {"label", "l_cooldown", "base_info_icons_0006", s_2}}
+	stat_labels[STATS_TYPE_ENEMY][7] = {"label", "l_lives", "base_info_icons_cost", 1.2 * s_12}
+	stat_labels[STATS_TYPE_TOWER] = {{"label", "l_damage", "base_info_icons_sword", s_3}, {"label", "l_range", "base_info_icons_range", s_3}, {"label", "l_cooldown", "base_info_icons_cooldown", s_3}}
+	stat_labels[STATS_TYPE_TOWER_NO_RANGE] = {{"label", "l_damage", "base_info_icons_sword", s_2}, {"label", "l_cooldown", "base_info_icons_cooldown", s_2}}
 	stat_labels[STATS_TYPE_TOWER_MAGE] = table.deepclone(stat_labels[STATS_TYPE_TOWER])
-	stat_labels[STATS_TYPE_TOWER_MAGE][1][3] = "base_info_icons_0002"
+	stat_labels[STATS_TYPE_TOWER_MAGE][1][3] = "base_info_icons_magic"
 	stat_labels[STATS_TYPE_TEXT] = {{"label", "l_desc", nil, s_1, "left", false, v(4, CJK(1, -1, 3, -2))}}
 
 	local function make_label(icon, w, align, shadow)
