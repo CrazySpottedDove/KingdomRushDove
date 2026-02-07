@@ -2203,7 +2203,9 @@ function PowerButton:update(dt)
 		end
 	end
 
-	PowerButton.super.update(self, dt)
+	if not self.animation.paused then
+		self.ts = self.ts + dt
+	end
 end
 
 function PowerButton:on_click(button, x, y)
@@ -2415,76 +2417,6 @@ function Power2Button:fire(wx, wy)
 	signal.emit("power-used", 2)
 end
 
-Power3Button = class("Power3Button", PowerButton)
-
-function Power3Button:initialize()
-	local ht = E:get_template(game_gui.game.store.selected_hero)
-	local icon_name = "power_button_icons_" .. ht.info.ultimate_icon
-
-	Power3Button.super.initialize(self, icon_name, "power_button_mask_0001")
-
-	self.animations = {
-		default = {
-			to = 1,
-			prefix = "power_button_mask",
-			from = 1
-		},
-		highlighted = {
-			to = 45,
-			prefix = "power_button_mask",
-			from = 45
-		},
-		cooldown = {
-			to = 1,
-			prefix = "power_button_mask",
-			from = 1
-		},
-		locked = {
-			to = 30,
-			prefix = "power_button_mask",
-			from = 30
-		},
-		unlocked = {
-			to = 44,
-			prefix = "power_button_mask",
-			from = 30
-		},
-		selected = {
-			to = 29,
-			prefix = "power_button_mask",
-			from = 29
-		},
-		ready = {
-			to = 28,
-			prefix = "power_button_mask",
-			from = 1,
-			post = {1}
-		}
-	}
-	self.selected_gui_mode = GUI_MODE_POWER_3
-
-	self:set_mode("locked")
-end
-
-function Power3Button:fire(wx, wy)
-	Power3Button.super.fire(self, wx, wy)
-
-	if game_gui.heroes and game_gui.heroes[1] then
-		local he = game_gui:entity_by_id(game_gui.heroes[1].hero_id)
-		local u = he.hero.skills.ultimate
-		local e = E:create_entity(u.controller_name)
-
-		e.pos.x, e.pos.y = wx, wy
-		e.owner = he
-		e.level = u.level
-
-		game_gui.game.simulation:insert_entity(e)
-		signal.emit("power-used", 3)
-
-		self.cooldown_time = e.cooldown
-	end
-end
-
 PowerButtonBlock = class("PowerButtonBlock", KImageView)
 
 function PowerButtonBlock:initialize(power_button, duration, style_name)
@@ -2528,18 +2460,6 @@ function PowerButtonBlock:update(dt)
 
 	PowerButtonBlock.super.update(self, dt)
 end
-
--- NextWaveButton = class("NextWaveButton", KImageButton)
-
--- function NextWaveButton:initialize()
--- 	NextWaveButton.super.initialize(self, "nextwave_0001", "nextwave_0002", "nextwave_0002")
-
--- 	self.anchor = v(math.floor(self.size.x * 0.5), self.size.y)
--- end
-
--- function NextWaveButton:on_click(button, x, y)
--- 	game_gui.game.store.send_next_wave = true
--- end
 
 InfoBar = class("InfoBar", KImageView)
 
@@ -2882,7 +2802,7 @@ function InfoBar:update_stats()
 	end
 end
 
-HudBottomView = class("HudBottomView", KView)
+HudBottomView = class("HudBottomView", KVirtualView)
 
 function HudBottomView:initialize(sw, sh)
 	sh = sh + 1
@@ -2897,21 +2817,6 @@ function HudBottomView:initialize(sw, sh)
 	bg_bar.pos = v(0, sh)
 
 	self:add_child(bg_bar)
-
-	-- 这个下一波按钮的使用率过低，出于减少开销和简化UI的考虑，暂时删除了它。
-	-- local next_wave = KImageView:new("bg_bottom_right")
-	-- next_wave.anchor = v(next_wave.size.x, next_wave.size.y)
-	-- next_wave.pos = v(sw + 6, sh)
-	-- self.next_wave = next_wave
-	-- self:add_child(next_wave)
-	-- local bg_nextwave = KImageView:new("bg_bottom_nextwave")
-	-- bg_nextwave.anchor = v(math.floor(bg_nextwave.size.x * 0.5), bg_nextwave.size.y)
-	-- bg_nextwave.pos = v(next_wave.size.x * 0.5, next_wave.size.y)
-	-- next_wave:add_child(bg_nextwave)
-	-- local next_wave_button = NextWaveButton:new()
-	-- next_wave_button.pos = v(next_wave.size.x * 0.5, 31)
-	-- next_wave:add_child(next_wave_button)
-	-- self.bg_right = next_wave
 
 	local powers = GG9View:new("bg_bottom_left", V.v(247, 36), V.r(140, 36, 10, 1))
 
@@ -2952,7 +2857,6 @@ function HudBottomView:initialize(sw, sh)
 		powers:add_child(pn)
 	end
 
-	-- local x_center = math.floor((sw - next_wave.size.x - powers.size.x - powers.pos.x) * 0.5) + powers.pos.x + powers.size.x
 	local x_center = math.floor((sw - powers.size.x - powers.pos.x) * 0.5) + powers.pos.x + powers.size.x
 
 	local bg_center = KImageView:new("bg_bottom_center")
@@ -2974,7 +2878,7 @@ function HudBottomView:initialize(sw, sh)
 	self:add_child(infobar)
 	self:update_bars_pos()
 
-	local herobar = KView:new()
+	local herobar = KVirtualView:new()
 
 	herobar.propagate_on_click = true
 	herobar.propagate_on_down = true
@@ -2986,7 +2890,6 @@ function HudBottomView:initialize(sw, sh)
 
 	game_gui.power_1 = power_1
 	game_gui.power_2 = power_2
--- game_gui.next_wave_button = next_wave_button
 end
 
 function HudBottomView:hide()
@@ -3004,7 +2907,6 @@ function HudBottomView:show()
 end
 
 function HudBottomView:update_bars_pos()
-	-- local x_center = math.floor((game_gui.sw - self.next_wave.size.x - self.powers.size.x - self.powers.pos.x) * 0.5) + self.powers.pos.x + self.powers.size.x
 	local x_center = math.floor((game_gui.sw - self.powers.size.x - self.powers.pos.x) * 0.5) + self.powers.pos.x + self.powers.size.x
 	self.infobar.pos.x = x_center - 12
 
@@ -3777,7 +3679,7 @@ function VictoryView:update(dt)
 	end
 end
 
-MousePointer = class("MousePointer", KView)
+MousePointer = class("MousePointer", KVirtualView)
 
 function MousePointer:initialize()
 	MousePointer.super.initialize(self)
@@ -7290,52 +7192,6 @@ function WaveFlag:update(dt)
 	end
 end
 
-ItemRewardParticles = class("ItemRewardParticles", KView)
-
-function ItemRewardParticles:initialize(scale)
-	ItemRewardParticles.super.initialize(self)
-
-	scale = scale or 1
-
-	local ss = I:s("lives_particle")
-	local p_scale = (ss.ref_scale or 1) * scale
-	local c = G.newCanvas(ss.size[1], ss.size[2])
-
-	G.setCanvas(c)
-	G.draw(I:i(ss.atlas), ss.quad, ss.trim[1], ss.trim[2])
-	G.setCanvas()
-
-	local ps = G.newParticleSystem(c, 500)
-
-	ps:setDirection(-math.pi * 0.5)
-	ps:setSpread(2 * math.pi)
-	ps:setSizes(1 * p_scale, 0.5 * p_scale)
-	ps:setParticleLifetime(0, 0.8)
-	ps:setSpeed(50 * scale, 300 * scale)
-	ps:setRadialAcceleration(-50 * scale)
-	ps:setColors(255, 255, 255, 255, 255, 255, 255, 0)
-	ps:emit(150)
-
-	self.ps = ps
-
-	timer:after(1, function()
-		self.parent:remove_child(self)
-		log.debug("remving particles :%s", self)
-	end)
-end
-
-function ItemRewardParticles:update(dt)
-	ItemRewardParticles.super.update(self, dt)
-	self.ps:update(dt)
-end
-
-function ItemRewardParticles:draw()
-	G.setBlendMode("add")
-	G.draw(self.ps, 0, 0)
-	G.setBlendMode("alpha")
-	ItemRewardParticles.super.draw(self)
-end
-
 SelectItem = class("SelectItem", KButton)
 
 function SelectItem:initialize(key_text, size)
@@ -7672,6 +7528,9 @@ function EndlessSelectRewardView:save()
 	game_gui.game.store.paused = false
 
 	game_gui.overlay:hide()
+end
+
+function EndlessSelectRewardView:update(dt)
 end
 
 return game_gui

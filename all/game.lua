@@ -1501,7 +1501,7 @@ function game:draw_game()
 		rox, roy = rox + d.world_offset.x, roy + d.world_offset.y
 	end
 
-	self:front_draw_debug(rox, roy, gs)
+	-- self:front_draw_debug(rox, roy, gs)
 
 	G.push()
 	G.translate(rox, roy)
@@ -1530,7 +1530,7 @@ function game:draw_game()
 		G.draw(self.speed_state)
 	end
 
-	self:after_draw_debug(rox, roy, gs)
+-- self:after_draw_debug(rox, roy, gs)
 end
 
 return game

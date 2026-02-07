@@ -729,10 +729,15 @@ function KView:update(dt)
 		self.ts = self.ts + dt
 	end
 
-	for _, c in pairs(self.children) do
-		-- perf.start(tostring(c))
-		c:update(dt)
-	-- perf.stop(tostring(c))
+	-- for i = 1, #self.children do
+	--     local c = self.children[i]
+	--     perf.start(tostring(c))
+	-- 	c:update(dt)
+	--     perf.stop(tostring(c))
+	-- end
+
+	for i = 1, #self.children do
+		self.children[i]:update(dt)
 	end
 end
 
@@ -884,7 +889,8 @@ function KView:_draw_children()
 	G.push()
 	G.translate(self.padding.x, self.padding.y)
 
-	for _, c in pairs(self.children) do
+	for i = 1, #self.children do
+		local c = self.children[i]
 		if clip_x ~= nil and (clip_xw < c.pos.x or clip_x > c.pos.x + c.size.x or clip_yh < c.pos.y or clip_y > c.pos.y + c.size.y) then
 		-- block empty
 		else
@@ -1174,7 +1180,7 @@ function KView:get_bounds()
 
 	local xmin, xmax, ymin, ymax = 0, self.size.x, 0, self.size.y
 
-	for _, c in pairs(self.children) do
+	for _, c in ipairs(self.children) do
 		if not c.ignore_bounds then
 			local b = c:get_bounds()
 
@@ -1304,8 +1310,8 @@ function KVirtualView:draw()
 end
 
 function KVirtualView:update(dt)
-	for _, c in pairs(self.children) do
-		c:update(dt)
+	for i = 1, #self.children do
+		self.children[i]:update(dt)
 	end
 end
 
@@ -1313,7 +1319,9 @@ function KVirtualView:_draw_children()
 	G.push()
 	G.translate(self.padding.x, self.padding.y)
 
-	for _, c in pairs(self.children) do
+	for i = 1, #self.children do
+		local c = self.children[i]
+
 		G.push()
 		G.translate(c.pos.x, c.pos.y)
 		c:draw()
