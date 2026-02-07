@@ -131,9 +131,6 @@ return {
 	["kr1-desktop/images/fullhd/fl_go_stage131-1.dds"] = {
 		size = 14946080
 	},
-	["kr1-desktop/images/fullhd/go_barrack_pirates-1.dds"] = {
-		size = 5592560
-	},
 	["kr1-desktop/images/fullhd/go_decals-1.dds"] = {
 		size = 2616176
 	},
@@ -570,10 +567,7 @@ return {
 		size = 5592560
 	},
 	["kr1-desktop/images/fullhd/go_hero_van_helsing-1.dds"] = {
-		size = 5592560
-	},
-	["kr1-desktop/images/fullhd/go_hero_van_helsing-2.dds"] = {
-		size = 5592560
+		size = 22369796
 	},
 	["kr1-desktop/images/fullhd/go_hero_venom-1.dds"] = {
 		size = 5592580
@@ -654,10 +648,10 @@ return {
 		size = 1036928
 	},
 	["kr1-desktop/images/fullhd/go_stage09-1.dds"] = {
-		size = 22369776
+		size = 22369796
 	},
 	["kr1-desktop/images/fullhd/go_stage09-2.dds"] = {
-		size = 22369776
+		size = 22369796
 	},
 	["kr1-desktop/images/fullhd/go_stage09_bg-1.dds"] = {
 		size = 1036928
@@ -1113,13 +1107,7 @@ return {
 		size = 2073728
 	},
 	["kr1-desktop/images/fullhd/go_stage26-1.dds"] = {
-		size = 2796368
-	},
-	["kr1-desktop/images/fullhd/go_stage26-2.dds"] = {
-		size = 11184976
-	},
-	["kr1-desktop/images/fullhd/go_stage26-3.dds"] = {
-		size = 11184976
+		size = 22369796
 	},
 	["kr1-desktop/images/fullhd/go_stage26_bg-1.dds"] = {
 		size = 2073728
@@ -1323,13 +1311,10 @@ return {
 		size = 2138528
 	},
 	["kr1-desktop/images/fullhd/go_stage57-1.dds"] = {
-		size = 11184976
+		size = 22369796
 	},
 	["kr1-desktop/images/fullhd/go_stage57-2.dds"] = {
-		size = 11184976
-	},
-	["kr1-desktop/images/fullhd/go_stage57-3.dds"] = {
-		size = 11184976
+		size = 1398276
 	},
 	["kr1-desktop/images/fullhd/go_stage57_bg-1.dds"] = {
 		size = 1069328
@@ -1344,7 +1329,7 @@ return {
 		size = 2138528
 	},
 	["kr1-desktop/images/fullhd/go_stage59-1.dds"] = {
-		size = 22369776
+		size = 22369796
 	},
 	["kr1-desktop/images/fullhd/go_stage59_bg-1.dds"] = {
 		size = 2138528
@@ -1356,7 +1341,7 @@ return {
 		size = 1069328
 	},
 	["kr1-desktop/images/fullhd/go_stage61-1.dds"] = {
-		size = 22369776
+		size = 22369796
 	},
 	["kr1-desktop/images/fullhd/go_stage61_bg-1.dds"] = {
 		size = 1069328
@@ -1428,10 +1413,10 @@ return {
 		size = 1398256
 	},
 	["kr1-desktop/images/fullhd/go_stages_desert-1.dds"] = {
-		size = 5592560
+		size = 1398276
 	},
 	["kr1-desktop/images/fullhd/go_stages_elven_woods-1.dds"] = {
-		size = 5592560
+		size = 5592580
 	},
 	["kr1-desktop/images/fullhd/go_stages_faerie_grove-1.dds"] = {
 		size = 1398256
@@ -1443,10 +1428,7 @@ return {
 		size = 1398256
 	},
 	["kr1-desktop/images/fullhd/go_stages_halloween-1.dds"] = {
-		size = 5592560
-	},
-	["kr1-desktop/images/fullhd/go_stages_halloween-2.dds"] = {
-		size = 5592560
+		size = 1398276
 	},
 	["kr1-desktop/images/fullhd/go_stages_hulking_rage-1.dds"] = {
 		size = 2796368
@@ -1455,7 +1437,7 @@ return {
 		size = 1398256
 	},
 	["kr1-desktop/images/fullhd/go_stages_jungle-1.dds"] = {
-		size = 5592560
+		size = 5592580
 	},
 	["kr1-desktop/images/fullhd/go_stages_rising_tides-1.dds"] = {
 		size = 1398256
@@ -1476,25 +1458,25 @@ return {
 		size = 535452
 	},
 	["kr1-desktop/images/fullhd/go_stages_underground-1.dds"] = {
-		size = 5592560
+		size = 349700
 	},
 	["kr1-desktop/images/fullhd/go_towers-1.dds"] = {
-		size = 22369776
+		size = 22369796
 	},
 	["kr1-desktop/images/fullhd/go_towers-2.dds"] = {
-		size = 22369776
+		size = 22369796
 	},
 	["kr1-desktop/images/fullhd/go_towers-3.dds"] = {
-		size = 22369776
+		size = 22369796
 	},
 	["kr1-desktop/images/fullhd/go_towers-4.dds"] = {
-		size = 22369776
+		size = 22369796
 	},
 	["kr1-desktop/images/fullhd/go_towers-5.dds"] = {
-		size = 22369776
+		size = 22369796
 	},
 	["kr1-desktop/images/fullhd/go_towers-6.dds"] = {
-		size = 22369776
+		size = 22369796
 	},
 	["kr1-desktop/images/fullhd/go_towers-7.dds"] = {
 		size = 22369776

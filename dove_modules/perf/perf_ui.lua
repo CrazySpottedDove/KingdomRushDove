@@ -37,9 +37,9 @@ local function deep_sum_entries(sum_entries, items)
 end
 
 function perf_ui.sync_data()
-    if not perf_ui.enabled then
-        return
-    end
+	if not perf_ui.enabled then
+		return
+	end
 	local items, sum = perf.export_table()
 	perf_ui.sync_count = perf_ui.sync_count + 1
 	deep_sum_entries(perf_ui.sum_entries, items)

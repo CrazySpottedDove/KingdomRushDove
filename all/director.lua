@@ -599,9 +599,9 @@ end
 
 function director:update(dt)
 	local updated = false
-    perf.start("Sound.update")
+	perf.start("Sound.update")
 	S:update(dt)
-    perf.stop("Sound.update")
+	perf.stop("Sound.update")
 	if self.next_item_name then
 		self:queue_load_item_named(self.next_item_name, self.force_reload)
 

@@ -25,7 +25,7 @@ end
 local persistent_textures = table_to_map({
 	"go_decals",
 	"go_enemies_common",
-	-- "go_towers",
+	"go_towers",
 	"go_towers_pandas",
 	"go_towers_dark_elf",
 	"go_towers_tricannon",
@@ -485,7 +485,7 @@ function image_db:preload_atlas(ref_scale, path, name)
 	-- 为每一帧设置具体信息，并处理 alias
 	for _, v in pairs(frames) do
 		v.group = name_scale
-        -- Texture 中 x 坐标，Texture 中 y 坐标，宽度，高度，Texture 宽度，Texture 高度
+		-- Texture 中 x 坐标，Texture 中 y 坐标，宽度，高度，Texture 宽度，Texture 高度
 		v.quad = G.newQuad(v.f_quad[1], v.f_quad[2], v.f_quad[3], v.f_quad[4], v.a_size[1], v.a_size[2])
 
 		if is_android then
