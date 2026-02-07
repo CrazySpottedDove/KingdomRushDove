@@ -488,11 +488,10 @@ tt.sound_events.insert = {"MechTauntReady", "MechSpawn"}
 tt.sound_events.change_rally_point = "MechTaunt"
 tt.ui.click_rect = r(-40, -10, 80, 50)
 --#endregion
+
 --#region soldier_mecha
 tt = RT("soldier_mecha")
-
 AC(tt, "pos", "render", "motion", "nav_rally", "main_script", "vis", "idle_flip", "attacks", "powers")
-
 tt.cooldown_factor = 1
 tt.powers.missile = CC("power")
 tt.powers.oil = CC("power")

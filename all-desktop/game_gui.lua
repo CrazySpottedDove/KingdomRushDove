@@ -2876,7 +2876,7 @@ function InfoBar:update_stats()
 
 		sv.l_armor.text = GU.armor_value_desc_detailed(stats.armor)
 		sv.l_magic_armor.text = GU.armor_value_desc_detailed(stats.magic_armor)
-		sv.l_respawn.text = string.format("%i", stats.respawn) or "-"
+		sv.l_respawn.text = stats.respawn and string.format("%i", stats.respawn) or "-"
 	elseif stats.type == STATS_TYPE_TEXT then
 		sv.l_desc.text = _(stats.desc)
 	end
