@@ -745,8 +745,8 @@ function director:limit_fps()
 	end
 
 	-- 在剩余时间内推进 GC
-	-- 预留 0.0005 秒避免 gc 超时
-	local gc_stop_time = deadline - 0.0005
+	-- 预留 0.001 秒避免 gc 超时
+	local gc_stop_time = deadline - 0.001
 	while true do
 		if love.timer.getTime() > gc_stop_time then
 			break
