@@ -602,37 +602,16 @@ function sound_db:update(dt)
 	for i = #sound_db.stop_queue, 1, -1 do
 		local stop_request = sound_db.stop_queue[i]
 
-		if stop_request.id then
-			if self.sounds[stop_request.id].ref_counted then
-				local rc = self.ref_counters[stop_request.id] or 0
-				rc = rc - 1
-				self.ref_counters[stop_request.id] = rc
-				if rc > 0 then
-					goto stop_queue_continue
-				end
-			end
-			for _, group_active_sources in pairs(self.active_sources) do
-				for i = 1, #group_active_sources do
-					if group_active_sources[i].id == stop_request.id then
-						group_active_sources[i].source:stop()
-					end
-				end
-			end
+		self:_stop_sources(stop_request, self.active_sources)
+
+		if not self.ref_counters[stop_request.id] then
 			for j = #sound_db.request_queue, 1, -1 do
 				if sound_db.request_queue[j].id == stop_request.id then
 					table.remove(sound_db.request_queue, j)
 				end
 			end
-		elseif stop_request.gid then
-			local group_active_sources = self.active_sources[stop_request.gid]
-			if group_active_sources then
-				for i = 1, #group_active_sources do
-					group_active_sources[i].source:stop()
-				end
-			end
 		end
 
-		::stop_queue_continue::
 		sound_db.stop_queue[i] = nil
 	end
 
@@ -667,6 +646,7 @@ function sound_db:play(request)
 	local options = request.options
 	local se = self.sound_extras[request.id]
 	local last_play_ts = se.last_play_ts or 0
+	local play_due = true
 
 	if options.chance and math.random() >= options.chance then
 		return
@@ -676,18 +656,17 @@ function sound_db:play(request)
 	if options.every then
 		local every_counter = se.every_counter or 0
 
+		if every_counter ~= 0 then
+			play_due = false
+		end
+
 		every_counter = (every_counter + 1) % options.every
 		se.every_counter = every_counter
-
-		-- 说明起始是 0 或 nil
-		if every_counter ~= 1 then
-			return
-		end
 	end
 
 	-- 如果设置了ignore选项，则在上次播放后指定的时间内再次请求播放同一声音时会被忽略
 	if options.ignore and self.ts - last_play_ts < options.ignore then
-		return
+		play_due = false
 	end
 
 	-- 如果设置了ref_counted选项，则会维护一个引用计数器，后续请求不发出实际声音
@@ -696,35 +675,43 @@ function sound_db:play(request)
 
 		rc = rc + 1
 
-		self.ref_counters[request.id] = rc
-
 		if rc ~= 1 then
-			return
+			play_due = false
 		end
+
+		self.ref_counters[request.id] = rc
 	end
 
-	-- 顺序播放
+	local pools = {}
+
 	if options.mode == "sequence" then
 		if not se.sequence then
 			se.sequence = 1
 		end
-
-		self:_play(request, self.sources[options.files[se.sequence]])
-
+		pools[#pools + 1] = self.sources[options.files[se.sequence]]
 		se.sequence = se.sequence % #options.files + 1
-	-- 随机播放
 	elseif options.mode == "random" then
-		self:_play(request, self.sources[options.files[math.random(1, #options.files)]])
-	-- 并行播放
+		pools[#pools + 1] = self.sources[options.files[math.random(1, #options.files)]]
 	elseif options.mode == "concurrent" then
 		for _, f in ipairs(options.files) do
-			self:_play(request, self.sources[f])
+			pools[#pools + 1] = self.sources[f]
 		end
 	else
-		self:_play(request, self.sources[options.files[1]])
+		pools[#pools + 1] = self.sources[options.files[1]]
 	end
 
-	se.last_play_ts = self.ts
+	if not pools or #pools == 0 then
+		log.error("SOUND %s defined but sound sources missing. Missing file during load?", request.id)
+
+		return
+	end
+
+	if play_due then
+		for i = 1, #pools do
+			self:_play(request, pools[i])
+		end
+		se.last_play_ts = self.ts
+	end
 end
 
 -- 在指定的声音源池中找到最早将要停止的声音源，返回其索引位置
@@ -789,7 +776,10 @@ function sound_db:_play(request, source_pool)
 		local ste_ast = active_sources[opts.source_group][ste_idx]
 
 		ste_ast.source:stop()
-		source = ste_ast.source
+
+		table.remove(active_sources[opts.source_group], ste_idx)
+
+		source = get_or_create_source(source_pool)
 	end
 
 	local vol = 1
@@ -838,3 +828,4 @@ function sound_db:_play(request, source_pool)
 end
 
 return sound_db
+
