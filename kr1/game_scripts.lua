@@ -23394,9 +23394,6 @@ function scripts.moon_controller_s72.update(this, store)
 			coroutine.yield()
 		end
 
-		-- moon.tween.props[1].keys = {{0, math.pi / 5}, {transit_time, math.pi * 0.5}}
-		-- moon.tween.disabled = nil
-		-- moon.tween.ts = store.tick_ts
 		moon_light.tween.ts = store.tick_ts
 		moon_light.tween.reverse = false
 		this.tween.ts = store.tick_ts
