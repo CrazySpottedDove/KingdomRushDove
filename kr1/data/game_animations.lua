@@ -19027,56 +19027,6 @@ return {
 			prefix = "soldier_lvl4_barbarian",
 			to = 56
 		},
-		soldier_barrack_1_attack = {
-			from = 7,
-			prefix = "soldiers_123",
-			to = 22
-		},
-		soldier_barrack_1_death = {
-			from = 23,
-			prefix = "soldiers_123",
-			to = 31
-		},
-		soldier_barrack_1_idle = {
-			from = 1,
-			prefix = "soldiers_123",
-			to = 1
-		},
-		soldier_barrack_1_ranged_attack = {
-			from = 50,
-			prefix = "soldiers_123",
-			to = 64
-		},
-		soldier_barrack_1_running = {
-			from = 2,
-			prefix = "soldiers_123",
-			to = 6
-		},
-		soldier_barrack_2_attack = {
-			from = 38,
-			prefix = "soldiers_123",
-			to = 49
-		},
-		soldier_barrack_2_death = {
-			from = 65,
-			prefix = "soldiers_123",
-			to = 73
-		},
-		soldier_barrack_2_idle = {
-			from = 32,
-			prefix = "soldiers_123",
-			to = 32
-		},
-		soldier_barrack_2_ranged_attack = {
-			from = 50,
-			prefix = "soldiers_123",
-			to = 64
-		},
-		soldier_barrack_2_running = {
-			from = 33,
-			prefix = "soldiers_123",
-			to = 37
-		},
 		soldier_barrack_3_attack = {
 			from = 80,
 			prefix = "soldiers_123",
@@ -20841,36 +20791,6 @@ return {
 			prefix = "archer_shooter",
 			to = 19
 		},
-		tower_barrack_1_door_close = {
-			from = 22,
-			prefix = "barracks_towers_layer2",
-			to = 25
-		},
-		tower_barrack_1_door_open = {
-			from = 1,
-			prefix = "barracks_towers_layer2",
-			to = 5
-		},
-		tower_barrack_2_door_close = {
-			from = 47,
-			prefix = "barracks_towers_layer2",
-			to = 50
-		},
-		tower_barrack_2_door_open = {
-			from = 26,
-			prefix = "barracks_towers_layer2",
-			to = 30
-		},
-		tower_barrack_3_door_close = {
-			from = 72,
-			prefix = "barracks_towers_layer2",
-			to = 75
-		},
-		tower_barrack_3_door_open = {
-			from = 51,
-			prefix = "barracks_towers_layer2",
-			to = 55
-		},
 		tower_bfg_idle = {
 			from = 1,
 			prefix = "artillery_lvl4_bfg",
@@ -21644,11 +21564,6 @@ return {
 			from = 11,
 			prefix = "tower_archer_ranger_shooter",
 			to = 18
-		},
-		tower_rock_thrower_loading_stones_play = {
-			from = 1,
-			prefix = "artillery_thrower_stones",
-			to = 26
 		},
 		tower_sasquash_frozen = {
 			from = 1,
