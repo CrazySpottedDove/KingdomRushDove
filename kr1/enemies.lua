@@ -1891,7 +1891,7 @@ tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].scale = vec_2(0.5, 0.5)
 tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[2].alpha = 0
-tt.render.sprites[2].animated = false
+tt.render.sprites[2].animated = true
 tt.render.sprites[2].name = "spectral_knight_aura"
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 0}, {fts(20), 255}}
@@ -7909,7 +7909,7 @@ AC(tt, "auras", "melee")
 
 anchor_y = 0.18
 image_y = 50
-tt.health.armor = 0.5
+tt.health.armor = 0.45
 tt.health.hp_max = 1200
 tt.health_bar.offset = vec_2(0, 47.76)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
@@ -7969,7 +7969,7 @@ AC(tt, "render", "armor_buff")
 tt.modifier.duration = 1
 tt.modifier.use_mod_offset = false
 tt.armor_buff.magic = false
-tt.armor_buff.max_factor = 0.4
+tt.armor_buff.max_factor = 0.3
 tt.armor_buff.step_factor = 0.02
 tt.armor_buff.cycle_time = 1
 tt.render.sprites[1].name = "NecromancerSkeletonAura"

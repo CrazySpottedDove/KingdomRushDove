@@ -422,11 +422,10 @@ tt = RT("mod_elf_cripple", "mod_slow")
 tt.slow.factor = 0.6
 tt.modifier.duration = 2.5
 --#endregion
+
 --#region tower_barrack_amazonas
 tt = RT("tower_barrack_amazonas", "tower_barrack_1")
-
 AC(tt, "powers")
-
 tt.tower.type = "mercenaries_amazonas"
 tt.tower.level = 1
 tt.tower.price = 190
@@ -443,11 +442,6 @@ tt.barrack.respawn_offset = vec_2(0, 0)
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_barrack_%04i"
 tt.render.sprites[1].offset = vec_2(0, 10)
-tt.info.fn = function()
-	local tpl = E:get_template("tower_barrack_amazonas")
-
-	return scripts.tower_barrack.get_info(tpl)
-end
 tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.remove = scripts.tower_barrack.remove
 tt.main_script.update = scripts.tower_barrack_mercenaries.update
@@ -465,11 +459,10 @@ tt.powers.valkyrie.max_level = 1
 tt.powers.valkyrie.enc_icon = 19
 tt.powers.valkyrie.name = "VALKYRIE"
 --#endregion
+
 --#region soldier_amazona
 tt = RT("soldier_amazona", "soldier_militia")
-
 AC(tt, "track_kills", "auras", "powers")
-
 anchor_y = 0.35
 image_y = 70
 tt.health.armor = 0
@@ -507,7 +500,6 @@ tt.motion.max_speed = 90
 tt.regen.cooldown = 0.5
 tt.render.sprites[1].anchor.y = anchor_y
 tt.render.sprites[1].prefix = "soldier_amazona"
--- tt.sound_events.insert = "AmazonTaunt"
 tt.sound_events.change_rally_point = "AmazonTaunt"
 tt.track_kills.mod = "amazona_heal_mod"
 tt.unit.marker_offset = vec_2(0, ady(23))
@@ -520,17 +512,21 @@ tt.powers.valkyrie.on_power_upgrade = function(this, power_name, power)
 	this.track_kills.mod = "amazona_gain_mod"
 end
 --#endregion
+
 --#region amazona_heal_mod
 tt = RT("amazona_heal_mod", "modifier")
-
 AC(tt, "render", "heal_on_kill")
-
 tt.main_script.insert = scripts.mod_heal_on_kill.insert
 tt.main_script.update = scripts.mod_heal_on_kill.update
 tt.heal_on_kill.hp = 60
+tt.render.sprites[1].name = "amazona_healing"
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].hide_after_runs = 1
 --#endregion
+
 --#region amazona_gain_mod
 tt = RT("amazona_gain_mod", "modifier")
+AC(tt, "render")
 tt.gain = {
 	damage = 2,
 	hp = 3,
@@ -546,6 +542,9 @@ tt.gain = {
 }
 tt.main_script.insert = scripts.mod_gain_on_kill.insert
 tt.main_script.update = scripts.amazona_gain_mod.update
+tt.render.sprites[1].name = "amazona_healing"
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].hide_after_runs = 1
 
 local tower_templar = RT("tower_templar", "tower_barrack_1")
 

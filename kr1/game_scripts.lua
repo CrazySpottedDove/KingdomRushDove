@@ -768,6 +768,7 @@ function scripts.amazona_gain_mod.update(this, store)
 			if this.render then
 				this.render.sprites[1].ts = store.tick_ts
 				this.render.sprites[1].hidden = false
+				this.render.sprites[1].runs = 0
 			end
 		end
 
