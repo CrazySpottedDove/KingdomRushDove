@@ -3,7 +3,7 @@ local version = require("version")
 love.filesystem.setIdentity(version.identity)
 local MUST_READ = require("dove_modules.notice.must_read")
 local M = require("dove_modules.updater.update_manager")
-
+local is_android = love.system.getOS() == "Android"
 local perf = require("dove_modules.perf.perf")
 do
 	love.graphics.setColor_old = function(r, g, b, a)
@@ -355,8 +355,6 @@ local function load_director()
 	local aw, ah = G.getDimensions()
 
 	if aw and ah and (aw ~= main.params.width or ah ~= main.params.height) then
-		log.debug("patching width/height from %s,%s, to %s,%s dpi scale:%s", main.params.width, main.params.height, aw, ah, love.window.getDPIScale())
-
 		main.params.width, main.params.height = aw, ah
 	end
 
@@ -374,13 +372,21 @@ local function load_director()
 end
 
 local function load_app_settings()
-	-- local I = require("klove.image_db")
 	local settings = require("screen_settings")
+
 	local w, h = love.window.getDesktopDimensions()
-	w, h = w * 0.8, h * 0.8
-	-- for _, t in pairs(settings.required_textures) do
-	-- I:load_atlas(1, KR_PATH_ASSETS_GAME_TARGET .. "/images/fullhd", t)
-	-- end
+
+    love.window.setMode(w, h, {
+		centered = false,
+		vsync = false,
+	})
+
+    local aw, ah = G.getDimensions()
+
+    -- 安卓端尺寸适配
+    if aw and ah and (aw ~= w or ah ~= h) then
+        w, h = aw, ah
+    end
 
 	local function done_cb()
 		storage:save_settings(main.params)
@@ -391,11 +397,6 @@ local function load_app_settings()
 	settings:init(w, h, main.params, done_cb)
 
 	main.handler = settings
-
-	love.window.setMode(w, h, {
-		centered = true,
-		vsync = false
-	})
 end
 
 local function load(arg)

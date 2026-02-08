@@ -254,7 +254,6 @@ screen.signal_handlers = {
 
 function screen:init(w, h, done_callback)
 	self.done_callback = done_callback
-
 	local sw = self.ref_h * (w / h)
 	local sh = self.ref_h
 	local scale = h / self.ref_h

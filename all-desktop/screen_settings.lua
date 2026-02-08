@@ -75,9 +75,12 @@ function KColorButton:on_defocus()
 	self:on_exit()
 end
 
-function screen_settings:init(sw, sh, params, done_callback)
+function screen_settings:init(w, h, params, done_callback)
 	self.params = params
 	self.done_callback = done_callback
+	local sw = self.ref_h * (w / h)
+	local sh = self.ref_h
+	local scale = h / self.ref_h
 	self.sw = sw
 	self.sh = sh
 
@@ -101,20 +104,16 @@ function screen_settings:init(sw, sh, params, done_callback)
 	local window = KWindow:new(V.v(sw, sh))
 
 	window.colors.background = colors.window_bg
+	window.scale = {
+		x = scale,
+		y = scale
+	}
 	self.window = window
 
 	local y = 0
 	local h = 0
 	local m = 10
-	-- local back_image = KImageView:new("game_image")
 
-	-- back_image.anchor.x = back_image.size.x * 0.5
-	-- y = y + h + m
-	-- back_image.pos = v(sw * 0.5, y)
-
-	-- window:add_child(back_image)
-
-	-- h = back_image.size.y
 	y = y + h + m
 	h = 12
 
