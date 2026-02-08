@@ -20509,3 +20509,2664 @@ for i = 1, tt.threads_amount do
 	s.z = Z_OBJECTS_SKY - 1
 	tt.render.sprites[i + 1] = s
 end
+
+tt = RT("controller_stage_31_water_mechanic", "decal_scripted")
+
+AC(tt, "ui", "editor")
+
+b = balance.specials.stage31_water_mechanic
+tt.main_script.update = scripts.controller_stage_31_water_mechanic.update
+tt.duration = b.duration
+tt.cooldown = b.cooldown
+tt.path = b.path
+tt.nodes = b.nodes
+tt.warn_duration = b.warn_duration
+tt.unlock_wave = b.unlock_wave
+tt.spawn_every_nodes = 9
+tt.check_every = 3
+tt.check_radius = 60
+tt.first_warn_minimum_targets = b.first_warn_minimum_targets
+tt.fx_entity = "stage_31_water_mechanic_fx"
+tt.fx_entity_decal = "stage_31_water_mechanic_fx_decal"
+tt.hand_decal_t = "dlc2_generic_tap_hand"
+tt.sound_tap = nil
+tt.render.sprites[1].prefix = "fuente_unitDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "water_cracksDef"
+tt.render.sprites[2].name = "idle"
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].exo = true
+tt.render.sprites[2].sort_y_offset = 0
+tt.render.sprites[2].z = Z_DECALS - 1
+tt.render.sprites[2].pos = v(512, 384)
+tt.ui.can_click = true
+tt.ui.can_select = true
+tt.ui.has_nav_mesh = true
+tt.ui.click_rect = r(-50, -90, 103, 190)
+tt.extra_ui_click_rects = {r(-120, -60, 243, 120), r(-85, -80, 173, 160)}
+tt.extra_ui_click_rect_speach_bubble = r(50, 58, 78, 67)
+tt.mods = {"mod_stage31_water_mechanic_dps"}
+tt.enemies_detection = {"enemy_fire_phoenix", "enemy_fire_fox", "enemy_nine_tailed_fox", "enemy_burning_treant", "enemy_ash_spirit"}
+tt = RT("generic_extra_touch_controller")
+
+AC(tt, "pos", "ui", "main_script")
+
+tt.main_script.update = scripts.generic_extra_touch_controller.update
+tt.ui.can_click = true
+tt.ui.can_select = false
+tt.ui.has_nav_mesh = false
+tt = RT("stage_31_water_mechanic_fx", "decal_scripted")
+tt.main_script.update = scripts.stage_31_water_mechanic_fx.update
+tt.render.sprites[1].prefix = "water_splash_unitDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt = RT("stage_31_water_mechanic_fx_decal", "decal_tween")
+
+AC(tt, "main_script")
+
+b = balance.specials.stage31_water_mechanic
+tt.render.sprites[1].prefix = "charco_unitDef"
+tt.render.sprites[1].name = "Idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt.duration = b.duration
+tt.added_scale = 1
+
+function tt.main_script.insert(this, store, script)
+	this.render.sprites[1].ts = store.tick_ts
+	this.tween.ts = store.tick_ts
+	this.render.sprites[1].flip_x = math.random() > 0.5
+
+	local start_delay = math.random() * fts(8)
+
+	this.tween.props[1].keys = {{0, 0}, {start_delay, 0}, {start_delay + fts(7), 255}, {start_delay + fts(7) + this.duration, 255}, {start_delay + fts(7) + this.duration + fts(27), 0}}
+	this.tween.props[2].keys = {{0, vv(0.8 * this.added_scale)}, {start_delay, vv(0.8 * this.added_scale)}, {start_delay + fts(7), vv(1 * this.added_scale)}, {start_delay + fts(7) + this.duration, vv(1 * this.added_scale)}, {start_delay + fts(7) + this.duration + fts(27), vv(0.8 * this.added_scale)}}
+
+	return true
+end
+
+tt.tween.props[1].keys = {{0, 0}, {fts(2), 0}, {fts(7), 255}, {fts(7) + tt.duration, 255}, {fts(7) + tt.duration + fts(27), 0}}
+tt.tween.props[2] = E:clone_c("tween_prop")
+tt.tween.props[2].keys = {{0, vv(0.8)}, {fts(2), vv(0.8)}, {fts(7), vv(1)}, {fts(7) + tt.duration, vv(1)}, {fts(7) + tt.duration + fts(27), vv(0.8)}}
+tt.tween.props[2].name = "scale"
+tt.tween.props[2].sprite_id = 1
+tt.tween.remove = true
+tt = E:register_t("decal_stage_31_easter_egg_oogway", "decal_scripted")
+
+E:add_comps(tt, "ui", "editor")
+
+tt.main_script.update = scripts.decal_stage_31_easter_egg_oogway.update
+tt.render.sprites[1].prefix = "stage_31_oogwayDef"
+tt.render.sprites[1].name = "idle1"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.idle_cooldown_max = 20
+tt.idle_cooldown_min = 5
+tt.ui.click_rect = r(-30, -20, 60, 60)
+tt = E:register_t("decal_stage_31_easter_egg_littledragon", "decal_scripted")
+
+E:add_comps(tt, "ui", "editor")
+
+tt.main_script.update = scripts.decal_stage_31_easter_egg_littledragon.update
+tt.render.sprites[1].prefix = "littledragon_easteregg_stage1_easteregg"
+tt.render.sprites[1].name = "idle_1"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -30
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "littledragon_easteregg_stage1_easter_egg_dead"
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].offset = v(5, -30)
+tt.render.sprites[2].z = Z_DECALS
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].name = "littledragon_easteregg_stage1_tree"
+tt.render.sprites[3].animated = false
+tt.render.sprites[3].anchor = v(0, 0)
+tt.render.sprites[3].offset = v(-69, -23)
+tt.render.sprites[3].z = Z_OBJECTS
+tt.ui.click_rect = r(-30, -20, 60, 60)
+tt = E:register_t("decal_stage_32_easter_egg_sheepy", "decal_scripted")
+
+E:add_comps(tt, "ui", "editor")
+
+tt.main_script.update = scripts.decal_stage_32_easter_egg_sheepy.update
+tt.render.sprites[1].prefix = "sheepylava_sheepy"
+tt.render.sprites[1].name = "idle_1"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -2
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "sheepylava_crater_1"
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].offset = v(-45, -30)
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].name = "sheepylava_crater_2"
+tt.render.sprites[3].animated = false
+tt.render.sprites[3].offset = v(-20, 0)
+tt.render.sprites[3].sort_y_offset = 2
+tt.render.sprites[3].z = Z_OBJECTS
+tt.render.sprites[4] = E:clone_c("sprite")
+tt.render.sprites[4].prefix = "sheepylava_crater_3"
+tt.render.sprites[4].name = "idle"
+tt.render.sprites[4].animated = true
+tt.render.sprites[4].z = Z_OBJECTS
+tt.render.sprites[4].offset = v(25, -20)
+tt.ui.click_rect = r(-30, -20, 60, 60)
+tt = E:register_t("decal_achievement_saitam_stage31", "decal_scripted")
+
+E:add_comps(tt, "ui", "editor", "tween")
+
+tt.main_script.update = scripts.decal_achievement_saitam.update
+tt.render.sprites[1].prefix = "easter_egg_saitam_saitam_stage_1"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].offset = v(-30, 5)
+tt.render.sprites[1].anchor = v(0.3333333333333333, 0.5222222222222223)
+tt.ui.click_rect = r(-50, -5, 40, 30)
+tt.tween.remove = true
+tt.tween.disabled = true
+tt.tween.props[1].keys = {{0, 255}, {0.5, 0}}
+tt = E:register_t("decal_achievement_saitam_stage32", "decal_achievement_saitam_stage31")
+tt.render.sprites[1].prefix = "easter_egg_saitam_saitam_stage_2"
+tt = E:register_t("decal_achievement_saitam_stage33", "decal_achievement_saitam_stage31")
+tt.render.sprites[1].prefix = "easter_egg_saitam_saitam_stage_3"
+tt = E:register_t("decal_achievement_saitam_stage34", "decal_achievement_saitam_stage31")
+tt.render.sprites[1].prefix = "easter_egg_saitam_saitam_stage_4"
+tt = E:register_t("decal_achievement_saitam_stage35", "decal_achievement_saitam_stage31")
+tt.render.sprites[1].prefix = "easter_egg_saitam_saitam_stage_5"
+tt = E:register_t("dlc2_generic_tap_hand", "decal_tween")
+tt.render.sprites[1].prefix = "dlc2_generic_tap_hand"
+tt.render.sprites[1].name = "tap"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt.render.sprites[1].offset = v(23, 10)
+tt.tween.props[1].keys = {{0, 0}, {fts(15), 255}, {fts(15), 255}, {fts(60), 0}}
+tt.tween.remove = true
+tt = RT("controller_stage_33_lightning_strike")
+
+AC(tt, "pos", "main_script", "editor", "editor_script")
+
+b = balance.specials.stage32_lightning_strike
+tt.main_script.update = scripts.controller_stage_33_lightning_strike.update
+tt.force_target_soldier_chance = b.force_target_soldier_chance
+tt.chain_strikes_chance = b.chain_strikes_chance
+tt.max_chains = b.max_chains
+tt.areas_configs = b.areas_configs
+tt.strikes_spawn_radius = 100
+tt.area_id = 1
+tt.editor.components = {"render", "texts"}
+tt.editor.overrides = {
+	["render.sprites[1].animated"] = false,
+	["render.sprites[1].name"] = "editor_cyan_circle"
+}
+tt.editor.props = {{"strikes_spawn_radius", PT_NUMBER}, {"area_id", PT_NUMBER}}
+tt.editor_script.update = scripts.controller_stage_33_lightning_strike.editor_update
+tt = RT("stage_33_lightning_strike", "decal_scripted")
+
+AC(tt, "tween")
+
+b = balance.specials.stage32_lightning_strike
+tt.main_script.update = scripts.stage_33_lightning_strike.update
+tt.damage_config = b.damage_config
+tt.warning_duration = b.warning_duration
+tt.render.sid_decal = 1
+tt.render.sid_deco = 2
+tt.render.sid_spawner = 3
+tt.vis_bans = bor(F_FLYING, F_ENEMY)
+tt.vis_flags = bor(F_AREA)
+tt.render.sprites[tt.render.sid_decal] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_decal].prefix = "vfx_mecanicas_ray_decal"
+tt.render.sprites[tt.render.sid_decal].name = "Idle"
+tt.render.sprites[tt.render.sid_decal].hidden = true
+tt.render.sprites[tt.render.sid_decal].loop = false
+tt.render.sprites[tt.render.sid_decal].offset = v(0, -5)
+tt.render.sprites[tt.render.sid_decal].z = Z_OBJECTS
+tt.render.sprites[tt.render.sid_deco] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_deco].prefix = "vfx_mecanicas_ray_deco"
+tt.render.sprites[tt.render.sid_deco].name = "idle"
+tt.render.sprites[tt.render.sid_deco].hidden = true
+tt.render.sprites[tt.render.sid_deco].loop = false
+tt.render.sprites[tt.render.sid_deco].offset = v(0, -5)
+tt.render.sprites[tt.render.sid_deco].z = Z_OBJECTS
+tt.render.sprites[tt.render.sid_spawner] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_spawner].prefix = "vfx_mecanicas_ray_portal"
+tt.render.sprites[tt.render.sid_spawner].name = "run"
+tt.render.sprites[tt.render.sid_spawner].hidden = true
+tt.render.sprites[tt.render.sid_spawner].loop = false
+tt.render.sprites[tt.render.sid_spawner].offset = v(0, 0)
+tt.render.sprites[tt.render.sid_spawner].z = Z_OBJECTS
+tt.flash_delay_max = 0.3
+tt.flash_delay_min = 0.1
+tt.flash_duration_max = 0.3
+tt.flash_duration_min = 0.2
+tt.flash_l1_max_alphas = {180, 200}
+tt.flash_l2_max_alpha = 70
+tt.flash_l2_min_alpha = 60
+tt.flash_delta = 0.02
+tt.tween.disabled = true
+tt.tween.remove = false
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 0}, {0.4, 255}}
+tt.tween.props[1].keys_end = {{0, 255}, {0.2, 255}, {0.4, 0}}
+tt.tween.props[1].sprite_id = tt.render.sid_decal
+tt.tween.props[2] = table.deepclone(tt.tween.props[1])
+tt.tween.props[2].sprite_id = tt.render.sid_deco
+tt.tween.props[3] = table.deepclone(tt.tween.props[1])
+tt.tween.props[3].keys_end = {{0, 255}, {0.2, 0}, {0.4, 0}}
+tt.tween.props[3].sprite_id = tt.render.sid_spawner
+tt = E:register_t("stage_33_lightning_strike_overlay", "decal_tween")
+
+E:add_comps(tt, "tween")
+
+image_y = 64
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "square_ffffff"
+tt.render.sprites[1].scale = v(math.ceil(REF_H * 16 / 9 * 1.1 / image_y), math.ceil(REF_H / image_y))
+tt.render.sprites[1].z = Z_OBJECTS_SKY + 2
+tt.render.sprites[1].alpha = 0
+tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
+tt.render.sprites[2].name = "square_ffffff"
+tt.render.sprites[2].color = {184, 184, 184}
+tt.render.sprites[2].alpha = 0
+tt.tween.props[2] = E:clone_c("tween_prop")
+tt.tween.props[2].sprite_id = 2
+tt.tween.remove = false
+tt.ts = 0
+tt.cooldown = 0
+tt = E:register_t("stage_33_lightning_strike_fx_power_thunder_1", "decal_tween")
+
+E:add_comps(tt, "sound_events")
+
+tt.image_h = 496
+tt.render.sprites[1].name = "rayo_og_ray_1"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].anchor.y = 0.5
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+tt.tween.props[1].keys = {{0, 255}, {fts(3), 255}, {fts(8), 0}}
+tt.sound_events.insert = "Stage33StormLightning"
+tt = E:register_t("stage_33_lightning_strike_fx_power_thunder_2", "stage_33_lightning_strike_fx_power_thunder_1")
+tt.image_h = 456
+tt.render.sprites[1].name = "rayo_og_ray_2"
+tt = E:register_t("stage_33_lightning_strike_fx_power_thunder_explosion", "fx")
+tt.render.sprites[1].name = "stage_33_lightning_strike_fx_power_thunder_explosion"
+tt.render.sprites[1].sort_y_offset = -5
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
+tt.render.sprites[2].flip_x = true
+tt = E:register_t("stage_33_lightning_strike_fx_power_thunder_explosion_decal", "fx")
+tt.render.sprites[1].name = "stage_33_lightning_strike_fx_power_thunder_explosion_decal"
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("controller_stage_32_lava_splash")
+
+E:add_comps(tt, "main_script")
+
+tt.main_script.update = scripts.controller_stage_32_lava_splash.update
+tt.mod = "mod_stage_32_lava_splash"
+tt.paths_y = {
+	[2] = 560
+}
+tt.vis_flags = 0
+tt.vis_bans = 0
+tt = E:register_t("controller_stage_32_lava_splash_2", "controller_stage_32_lava_splash")
+tt.mod = "mod_stage_32_lava_splash_2"
+tt.paths_y = {
+	[3] = 560
+}
+tt = E:register_t("controller_stage_34_ponds_spawner")
+
+E:add_comps(tt, "main_script", "events")
+
+tt.main_script.update = scripts.controller_stage_34_ponds_spawner.update
+tt.unit_t = "enemy_water_spirit_spawnless"
+tt.events.list[1].name = "pond_spawn_water_spirit"
+tt.events.list[1].on_event = scripts.controller_stage_34_ponds_spawner.on_event
+tt = E:register_t("controller_boss_princess_iron_fan_waves", "decal_scripted")
+
+E:add_comps(tt, "main_script", "editor")
+
+b = balance.enemies.wukong.boss_princess
+tt.force_capture_hero = scripts.controller_boss_princess_iron_fan_waves.force_capture_hero
+tt.force_go_middle = scripts.controller_boss_princess_iron_fan_waves.force_go_middle
+tt.force_go_back = scripts.controller_boss_princess_iron_fan_waves.force_go_back
+tt.main_script.update = scripts.controller_boss_princess_iron_fan_waves.update
+tt.render.sid_unit = 1
+tt.render.sprites[tt.render.sid_unit].prefix = "boss_princessDef"
+tt.render.sprites[tt.render.sid_unit].exo = true
+tt.render.sprites[tt.render.sid_unit].animated = true
+tt.render.sprites[tt.render.sid_unit].anchor = v(0.5, 0.5)
+tt.render.sprites[tt.render.sid_unit].name = "idle"
+tt.render.sprites[tt.render.sid_unit].z = Z_OBJECTS
+tt.pos_sitting = v(1060, 405)
+tt.pos_standing = v(605, 355)
+tt.illusory_summon = b.waves.illusory_summon
+tt.block_tower = b.waves.tower_curse
+tt.block_tower_loop_duration = 3
+tt.block_tower_mod = "boss_princess_iron_fan_tower_debuff"
+tt.boss_unit_spawn = "boss_princess_iron_fan"
+tt.stun_hero = b.waves.stun_hero
+tt.stun_hero_decal = "decal_boss_princess_iron_fan_stun_heroes_waves"
+tt.stun_hero_warning_duration = b.waves.stun_hero.WARNING_DURATION
+tt.stun_hero_vis_flags = bor(F_MOD, F_STUN, F_AREA)
+tt.stun_hero_vis_bans = bor(0)
+tt.shield_duration = b.waves.shield.duration
+tt.shield_decal = "decal_boss_princess_iron_fan_waves_shield"
+tt.sound_teleport_in = "EnemyBossPrincessTeleportIn"
+tt.sound_teleport_out = "EnemyBossPrincessTeleportOut"
+tt.sound_stun_hero_channel = "EnemyBossPrincessHeroStunChannel"
+tt.sound_stun_hero_fail = "EnemyBossPrincessHeroStunFail"
+tt.sound_stun_hero_success = "EnemyBossPrincessHeroStunSuccess"
+tt = E:register_t("controller_stage_33_ciclone", "decal_scripted")
+
+E:add_comps(tt, "editor", "ui", "events")
+
+tt.main_script.update = scripts.controller_stage_33_ciclone.update
+tt.render.sid_tejas = 1
+tt.render.sid_dirty = 2
+tt.render.sid_shadow = 3
+tt.render.sid_clouds_der = 4
+tt.render.sid_clouds_izq = 5
+tt.render.sid_shadow_2 = 6
+tt.render.sid_clouds_fly = 7
+tt.render.sid_shadows_fly = 8
+tt.render.sid_storm_rayos = 9
+tt.render.sid_tejas_puerta = 10
+tt.render.sid_escombros = 11
+tt.render.sprites[tt.render.sid_tejas] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_tejas].prefix = "stage_33_tejasDef"
+tt.render.sprites[tt.render.sid_tejas].animated = true
+tt.render.sprites[tt.render.sid_tejas].exo = true
+tt.render.sprites[tt.render.sid_tejas].name = "idle"
+tt.render.sprites[tt.render.sid_tejas].z = Z_OBJECTS_COVERS
+tt.render.sprites[tt.render.sid_tejas].group = "layers"
+tt.render.sprites[tt.render.sid_tejas_puerta] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_tejas_puerta].prefix = "stage_33_tejas_puertaDef"
+tt.render.sprites[tt.render.sid_tejas_puerta].animated = true
+tt.render.sprites[tt.render.sid_tejas_puerta].exo = true
+tt.render.sprites[tt.render.sid_tejas_puerta].name = "idle"
+tt.render.sprites[tt.render.sid_tejas_puerta].z = Z_OBJECTS_SKY
+tt.render.sprites[tt.render.sid_dirty] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_dirty].prefix = "stage_33_dirtyDef"
+tt.render.sprites[tt.render.sid_dirty].animated = true
+tt.render.sprites[tt.render.sid_dirty].exo = true
+tt.render.sprites[tt.render.sid_dirty].name = "idle"
+tt.render.sprites[tt.render.sid_dirty].z = Z_OBJECTS_SKY
+tt.render.sprites[tt.render.sid_dirty].group = "layers"
+tt.render.sprites[tt.render.sid_shadow] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_shadow].prefix = "stage_33_shadow_screenDef"
+tt.render.sprites[tt.render.sid_shadow].animated = true
+tt.render.sprites[tt.render.sid_shadow].exo = true
+tt.render.sprites[tt.render.sid_shadow].name = "idle"
+tt.render.sprites[tt.render.sid_shadow].z = Z_OBJECTS_SKY
+tt.render.sprites[tt.render.sid_shadow].group = "layers"
+tt.render.sprites[tt.render.sid_shadows_fly] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_shadows_fly].prefix = "stage_33_shadows_flyDef"
+tt.render.sprites[tt.render.sid_shadows_fly].animated = true
+tt.render.sprites[tt.render.sid_shadows_fly].exo = true
+tt.render.sprites[tt.render.sid_shadows_fly].name = "idle"
+tt.render.sprites[tt.render.sid_shadows_fly].z = Z_OBJECTS_SKY
+tt.render.sprites[tt.render.sid_clouds_der] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_clouds_der].prefix = "stage_33_storm_clouds_derDef"
+tt.render.sprites[tt.render.sid_clouds_der].animated = true
+tt.render.sprites[tt.render.sid_clouds_der].exo = true
+tt.render.sprites[tt.render.sid_clouds_der].name = "in"
+tt.render.sprites[tt.render.sid_clouds_der].z = Z_OBJECTS_SKY
+tt.render.sprites[tt.render.sid_clouds_der].group = "layers"
+tt.render.sprites[tt.render.sid_clouds_izq] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_clouds_izq].prefix = "stage_33_storm_clouds_izqDef"
+tt.render.sprites[tt.render.sid_clouds_izq].animated = true
+tt.render.sprites[tt.render.sid_clouds_izq].exo = true
+tt.render.sprites[tt.render.sid_clouds_izq].name = "in"
+tt.render.sprites[tt.render.sid_clouds_izq].z = Z_OBJECTS_SKY
+tt.render.sprites[tt.render.sid_clouds_izq].group = "layers"
+tt.render.sprites[tt.render.sid_storm_rayos] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_storm_rayos].prefix = "stage_33_storm_rayosDef"
+tt.render.sprites[tt.render.sid_storm_rayos].animated = true
+tt.render.sprites[tt.render.sid_storm_rayos].exo = true
+tt.render.sprites[tt.render.sid_storm_rayos].name = "in"
+tt.render.sprites[tt.render.sid_storm_rayos].z = Z_OBJECTS_SKY
+tt.render.sprites[tt.render.sid_storm_rayos].group = "layers"
+tt.render.sprites[tt.render.sid_clouds_fly] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_clouds_fly].prefix = "stage_33_clouds_flyDef"
+tt.render.sprites[tt.render.sid_clouds_fly].animated = true
+tt.render.sprites[tt.render.sid_clouds_fly].exo = true
+tt.render.sprites[tt.render.sid_clouds_fly].name = "idle"
+tt.render.sprites[tt.render.sid_clouds_fly].z = Z_OBJECTS_SKY
+tt.render.sprites[tt.render.sid_clouds_fly].group = "layers"
+tt.render.sprites[tt.render.sid_shadow_2] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_shadow_2].prefix = "stage_33_storm_shadowDef"
+tt.render.sprites[tt.render.sid_shadow_2].animated = true
+tt.render.sprites[tt.render.sid_shadow_2].exo = true
+tt.render.sprites[tt.render.sid_shadow_2].name = "loop"
+tt.render.sprites[tt.render.sid_shadow_2].z = Z_OBJECTS_SKY + 1
+tt.render.sprites[tt.render.sid_escombros] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_escombros].prefix = "stage33_explosion_escombrosDef"
+tt.render.sprites[tt.render.sid_escombros].animated = true
+tt.render.sprites[tt.render.sid_escombros].exo = true
+tt.render.sprites[tt.render.sid_escombros].name = "idle"
+tt.render.sprites[tt.render.sid_escombros].z = Z_DECALS
+tt.render.sprites[tt.render.sid_escombros].hidden = true
+tt.events.list[1].name = "ciclone"
+tt.events.list[1].on_event = scripts.controller_stage_33_ciclone.on_event
+tt = E:register_t("controller_stage_33_house_doors")
+
+E:add_comps(tt, "main_script")
+
+tt.main_script.insert = scripts.controller_stage_33_house_doors.insert
+tt.citizen_spawned = scripts.controller_stage_33_house_doors.citizen_spawned
+tt.door_positions = {{
+	template = "stage_33_citizen_house_1",
+	pos = v(72, 348)
+}, {
+	template = "stage_33_citizen_house_2",
+	pos = v(197, 348)
+}, {
+	template = "stage_33_citizen_house_1",
+	pos = v(235, 693)
+}, {
+	template = "stage_33_citizen_house_2",
+	pos = v(387, 693)
+}, {
+	template = "stage_33_citizen_house_1",
+	pos = v(799, 692)
+}, {
+	template = "stage_33_citizen_house_2",
+	pos = v(925, 696)
+}, {
+	template = "stage_33_citizen_house_2",
+	pos = v(1030, 348)
+}}
+tt = E:register_t("controller_stage_33_boat", "decal_scripted")
+tt.main_script.update = scripts.controller_stage_33_boat.update
+
+E:add_comps(tt, "events")
+
+tt.render.sid_boat = 1
+tt.render.sid_sail = 2
+tt.render.sprites[tt.render.sid_boat].prefix = "stage_3_barcoDef"
+tt.render.sprites[tt.render.sid_boat].animated = true
+tt.render.sprites[tt.render.sid_boat].exo = true
+tt.render.sprites[tt.render.sid_boat].name = "idle"
+tt.render.sprites[tt.render.sid_boat].z = Z_DECALS
+tt.render.sprites[tt.render.sid_boat].hidden = true
+tt.render.sprites[tt.render.sid_sail] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_sail].prefix = "stage_3_barco_velaDef"
+tt.render.sprites[tt.render.sid_sail].animated = true
+tt.render.sprites[tt.render.sid_sail].exo = true
+tt.render.sprites[tt.render.sid_sail].name = "idle"
+tt.render.sprites[tt.render.sid_sail].z = Z_DECALS
+tt.render.sprites[tt.render.sid_boat].hidden = true
+tt.events.list[1].name = "boat"
+tt.events.list[1].on_event = scripts.controller_stage_33_boat.on_event
+tt = RT("controller_stage_33_tambor", "decal_scripted")
+tt.do_tambor = scripts.controller_stage_33_tambor.do_tambor
+tt.main_script.update = scripts.controller_stage_33_tambor.update
+tt.render.sprites[1].prefix = "stage_33_barco_call_tambor"
+tt.render.sprites[1].name = "idle_tambor"
+tt.render.sprites[1].anchor = v(0.05777310924369748, 0.55625)
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -50
+tt.render.sprites[1].group = "group"
+tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
+tt.render.sprites[2].prefix = "stage_33_barco_call_body"
+tt.render.sprites[2].anchor = v(0.11346863468634687, 0.5290697674418605)
+tt.render.sprites[2].sort_y_offset = -49
+tt = E:register_t("boss_princess_iron_fan", "boss")
+b = balance.enemies.wukong.boss_princess.bossfight
+
+E:add_comps(tt, "melee", "ranged", "timed_attacks")
+
+tt.enemy.lives_cost = 999
+tt.enemy.melee_slot = v(45, 0)
+tt.health.hp_max = b.hp
+tt.health.magic_armor = b.magic_armor
+tt.health.armor = b.armor
+tt.health.dead_lifetime = 1e+99
+tt.health_bar.offset = v(0, 90)
+tt.unit.hit_offset = v(-5, 30)
+tt.unit.head_offset = v(-2, 20)
+tt.unit.mod_offset = v(-5, 30)
+tt.unit.show_blood_pool = false
+tt.ui.click_rect = r(-35, 0, 60, 80)
+tt.unit.size = UNIT_SIZE_LARGE
+tt.unit.blood_color = BLOOD_RED
+tt.motion.max_speed = b.speed
+tt.info.i18n_key = "ENEMY_BOSS_PRINCESS_IRON_FAN"
+tt.info.enc_icon = 117
+tt.info.portrait = "kr5_info_portraits_enemies_0122"
+tt.info.portrait_boss = "boss_health_bar_icon_0012"
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
+tt.render.sid_unit = 1
+tt.render.sprites[tt.render.sid_unit].prefix = "boss_princessDef"
+tt.render.sprites[tt.render.sid_unit].exo = true
+tt.render.sprites[tt.render.sid_unit].animated = true
+tt.render.sprites[tt.render.sid_unit].name = "idle"
+tt.render.sprites[tt.render.sid_unit].z = Z_OBJECTS
+tt.render.sprites[tt.render.sid_unit].angles = {}
+tt.render.sprites[tt.render.sid_unit].angles.walk = {"walk", "walk_back", "walk_front"}
+tt.unit.show_blood_pool = false
+tt.spawn_pos = b.spawn_pos
+tt.health.on_damage = scripts.boss_princess_iron_fan.on_damage
+tt.main_script.insert = scripts.boss_princess_iron_fan.insert
+tt.main_script.update = scripts.boss_princess_iron_fan.update
+tt.melee.attacks[1].cooldown = b.basic_attack.cooldown
+tt.melee.attacks[1].damage_max = b.basic_attack.damage_max
+tt.melee.attacks[1].damage_min = b.basic_attack.damage_min
+tt.melee.attacks[1].damage_type = b.basic_attack.damage_type
+tt.melee.attacks[1].animation = "attack_melee"
+tt.melee.attacks[1].hit_times = {fts(12), fts(18), fts(25)}
+tt.melee.attacks[1].hit_decal = "fx_boss_spider_queen_melee_hit_decal"
+tt.melee.attacks[1].sound = "EnemyBossPrincessMelee"
+tt.melee.attacks[2] = E:clone_c("area_attack")
+tt.melee.attacks[2].cooldown = b.area_attack.cooldown
+tt.melee.attacks[2].damage_max = b.area_attack.damage_max
+tt.melee.attacks[2].damage_min = b.area_attack.damage_min
+tt.melee.attacks[2].damage_type = b.area_attack.damage_type
+tt.melee.attacks[2].damage_radius = b.area_attack.radius
+tt.melee.attacks[2].animation = "attack_area"
+tt.melee.attacks[2].hit_time = fts(28)
+tt.melee.attacks[2].hit_fx = "fx_boss_spider_queen_melee_hit"
+tt.melee.attacks[2].hit_fx_offset = v(55, 10)
+tt.melee.attacks[2].hit_decal = "fx_boss_princess_iron_fan_area_attack"
+tt.melee.attacks[2].sound = "EnemyBossPrincessMeleeArea"
+tt.ranged.attacks[1].animation = "ranged_attack"
+tt.ranged.attacks[1].bullet = "bullet_boss_princess_iron_fan"
+tt.ranged.attacks[1].bullet_start_offset = {v(0, 30)}
+tt.ranged.attacks[1].cooldown = b.ranged_area_attack.cooldown
+tt.ranged.attacks[1].max_range = b.ranged_area_attack.max_range
+tt.ranged.attacks[1].min_range = b.ranged_area_attack.min_range
+tt.ranged.attacks[1].shoot_time = fts(21)
+tt.timed_attacks.list[1] = E:clone_c("custom_attack")
+tt.timed_attacks.list[1].animation = "stun_tower"
+tt.timed_attacks.list[1].first_cooldown = b.illusory_summon.first_cooldown
+tt.timed_attacks.list[1].cooldown = b.illusory_summon.cooldown
+tt.timed_attacks.list[1].nodes_limit = b.illusory_summon.nodes_limit
+tt.timed_attacks.list[1].shield_decal = "decal_boss_princess_iron_fan_bossfight_shield"
+tt.timed_attacks.list[2] = E:clone_c("custom_attack")
+tt.timed_attacks.list[2].animation_in = "stun_tower_in"
+tt.timed_attacks.list[2].animation_loop = "stun_tower_loop"
+tt.timed_attacks.list[2].animation_end = "stun_tower_out"
+tt.timed_attacks.list[2].first_cooldown = b.tower_curse.first_cooldown
+tt.timed_attacks.list[2].cooldown = b.tower_curse.cooldown
+tt.timed_attacks.list[2].loops_amount = 2
+tt.timed_attacks.list[2].nodes_limit = b.tower_curse.nodes_limit
+tt.timed_attacks.list[2].range = b.tower_curse.range
+tt.timed_attacks.list[2].mod = "boss_princess_iron_fan_tower_debuff_bossfight"
+tt.timed_attacks.list[2].holders_not_to_block = b.tower_curse.holders_not_to_block
+tt.timed_attacks.list[3] = E:clone_c("custom_attack")
+tt.timed_attacks.list[3].animation_in = "clone_in"
+tt.timed_attacks.list[3].animation_loop = "clone_loop"
+tt.timed_attacks.list[3].animation_end = "clone_out"
+tt.timed_attacks.list[3].first_cooldown = b.illusory_self.first_cooldown
+tt.timed_attacks.list[3].cooldown = b.illusory_self.cooldown
+tt.timed_attacks.list[3].nodes_limit = b.illusory_self.nodes_limit
+tt.timed_attacks.list[3].spawn_pos = b.illusory_self.clon_config.spawn_pos
+tt.timed_attacks.list[3].casts = 0
+tt.timed_attacks.list[3].loops_amount = 3
+tt.timed_attacks.list[3].entity = "boss_princess_iron_fan_clone"
+tt.timed_attacks.list[4] = E:clone_c("custom_attack")
+tt.timed_attacks.list[4].config = b.change_paths.config
+tt.timed_attacks.list[4].cooldown = b.change_paths.cooldown
+tt.timed_attacks.list[4].animation_in = "teleport_in"
+tt.timed_attacks.list[4].animation_out = "teleport_out"
+tt.timed_attacks.list[5] = E:clone_c("custom_attack")
+tt.timed_attacks.list[5].animation = "stun_hero"
+tt.timed_attacks.list[5].warning_duration = b.stun_hero.warning_duration
+tt.timed_attacks.list[5].first_cooldown = b.stun_hero.first_cooldown
+tt.timed_attacks.list[5].cooldown = b.stun_hero.cooldown
+tt.timed_attacks.list[5].nodes_limit = b.stun_hero.nodes_limit
+tt.timed_attacks.list[5].range = b.stun_hero.range
+tt.timed_attacks.list[5].stun_decal = "decal_boss_princess_iron_fan_stun_heroes_bossfight"
+tt.timed_attacks.list[5].vis_flags = bor(F_MOD, F_STUN, F_AREA)
+tt.timed_attacks.list[5].vis_bans = bor(0)
+tt.sound_death = "EnemyBossPrincessDeath"
+tt.sound_teleport_out = "EnemyBossPrincessTeleportOut"
+tt.sound_clone = "EnemyBossPrincessClone"
+tt.sound_stun_hero_channel = "EnemyBossPrincessHeroStunChannel"
+tt.sound_stun_hero_fail = "EnemyBossPrincessHeroStunFail"
+tt.sound_stun_hero_success = "EnemyBossPrincessHeroStunSuccess"
+tt = E:register_t("boss_princess_iron_fan_clone", "boss_princess_iron_fan")
+b = balance.enemies.wukong.boss_princess.bossfight.illusory_self.clon_config
+tt.health.hp_max = b.hp
+tt.health.magic_armor = b.magic_armor
+tt.health.armor = b.armor
+tt.motion.max_speed = b.speed
+tt.info.i18n_key = "ENEMY_BOSS_PRINCESS_IRON_FAN"
+tt.info.enc_icon = 14
+tt.info.portrait = "kr5_info_portraits_enemies_0123"
+tt.info.portrait_boss = nil
+tt.render.sprites[tt.render.sid_unit].prefix = "boss_princess_cloneDef"
+tt.render.sprites[tt.render.sid_unit].name = "spawn_in"
+tt.melee.attacks[1].cooldown = b.basic_attack.cooldown
+tt.melee.attacks[1].damage_max = b.basic_attack.damage_max
+tt.melee.attacks[1].damage_min = b.basic_attack.damage_min
+tt.melee.attacks[1].damage_type = b.basic_attack.damage_type
+tt.melee.attacks[1].hit_decal = "fx_boss_spider_queen_melee_hit_decal"
+tt.melee.attacks[2] = nil
+tt.ranged.attacks[1].bullet = "bullet_boss_princess_iron_fan"
+tt.ranged.attacks[1].cooldown = b.ranged_area_attack.cooldown
+tt.ranged.attacks[1].max_range = b.ranged_area_attack.max_range
+tt.ranged.attacks[1].min_range = b.ranged_area_attack.min_range
+tt.ranged.attacks[1].ignore_hit_offset = true
+tt.timed_attacks.list[1] = nil
+tt.timed_attacks.list[2] = nil
+tt.timed_attacks.list[3] = nil
+tt.timed_attacks.list[4] = nil
+tt.timed_attacks.list[5] = nil
+tt.unit.fade_time_after_death = 0.5
+tt.unit.fade_duration_after_death = 0.5
+tt.sound_death = nil
+tt = E:register_t("decal_boss_princess_iron_fan_waves_shield", "enemy_KR5")
+b = balance.enemies.wukong.boss_princess
+tt.health.hp_max = b.waves.shield.health
+tt.health.armor = b.waves.shield.armor
+tt.health.magic_armor = b.waves.shield.magic_resistance
+tt.health_bar.hidden = true
+tt.health_bar.offset = v(0, 90)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
+tt.health_bar.colors = {}
+tt.health_bar.colors.fg = {255, 65, 240, 255}
+tt.health_bar.colors.bg = {51, 18, 53, 255}
+tt.health_bar.sort_y_offset = -2
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.decal_boss_princess_iron_fan_waves_shield.update
+tt.render.sprites[1].name = "boss_princess_iron_fan_vfx_stun_hero_particle_loop"
+tt.render.sprites[1].alpha = 0
+tt.render.sprites[1].hidden = true
+tt.enemy.gold = 0
+tt.enemy.melee_slot = v(0, 0)
+tt.enemy.lives_cost = 0
+tt.motion.max_speed = 0
+tt.unit.size = UNIT_SIZE_LARGE
+tt.unit.blood_color = BLOOD_NONE
+tt.unit.hit_offset = v(0, 40)
+tt.unit.mod_offset = v(0, 40)
+tt.ui.can_click = false
+tt.ui.can_select = false
+tt.vis.flags = bor(F_ENEMY, F_BOSS, F_MINIBOSS, F_CLIFF)
+tt.vis.bans = bor(F_ALL)
+tt.can_explode = false
+tt.can_disintegrate = false
+tt = E:register_t("decal_boss_princess_iron_fan_bossfight_shield", "enemy_KR5")
+
+E:add_comps(tt, "tween")
+
+b = balance.enemies.wukong.boss_princess.bossfight
+tt.health.hp_max = b.illusory_summon.shield_hp
+tt.health.armor = b.illusory_summon.shield_armor
+tt.health.magic_armor = b.illusory_summon.shield_magic_resistance
+tt.health_bar.hidden = true
+tt.health_bar.offset = v(0, 90)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
+tt.health_bar.colors = {}
+tt.health_bar.colors.fg = {255, 65, 240, 255}
+tt.health_bar.colors.bg = {51, 18, 53, 255}
+tt.health_bar.sort_y_offset = -2
+tt.main_script.insert = scripts.enemy_basic.insert
+tt.main_script.update = scripts.decal_boss_princess_iron_fan_bossfight_shield.update
+tt.render.sprites[1].name = "s34_malicia_shield_idle"
+tt.render.sprites[1].anchor.y = 0.1423076923076923
+tt.render.sprites[1].offset = v(-5, -10)
+tt.render.sprites[1].alpha = 0
+tt.render.sprites[1].sort_y_offset = -1
+tt.enemy.gold = 0
+tt.enemy.melee_slot = v(0, 0)
+tt.enemy.lives_cost = 0
+tt.motion.max_speed = 0
+tt.unit.size = UNIT_SIZE_LARGE
+tt.unit.blood_color = BLOOD_NONE
+tt.unit.hit_offset = v(0, 40)
+tt.unit.mod_offset = v(0, 40)
+tt.ui.can_click = false
+tt.ui.can_select = false
+tt.tween.remove = false
+tt.tween.disabled = true
+tt.tween.props[1].name = "scale"
+tt.tween.props[1].keys = {{0, vv(1.9)}, {fts(10), vv(2.09)}, {fts(20), vv(1.9)}}
+tt.tween.props[1].loop = true
+tt.tween.props[1].ignore_reverse = true
+tt.tween.props[2] = E:clone_c("tween_prop")
+tt.tween.props[2].keys = {{0, 0}, {fts(11), 153}}
+tt.shield_dps = tt.health.hp_max / b.illusory_summon.shield_duration
+tt.vis.flags = bor(F_ENEMY, F_BOSS, F_MINIBOSS)
+tt.vis.bans = bor(F_ALL)
+tt.can_explode = false
+tt.can_disintegrate = false
+tt.manual_wave_name = b.illusory_summon.manual_wave_name
+tt = E:register_t("decal_boss_princess_iron_fan_stun_heroes_waves", "decal_scripted")
+
+E:add_comps(tt, "tween")
+
+b = balance.enemies.wukong.boss_princess.waves.stun_hero
+tt.finish = scripts.decal_boss_princess_iron_fan_stun_heroes.finish
+tt.hero_escaped = scripts.decal_boss_princess_iron_fan_stun_heroes.hero_escaped
+tt.capture_hero = scripts.decal_boss_princess_iron_fan_stun_heroes.capture_hero
+tt.main_script.update = scripts.decal_boss_princess_iron_fan_stun_heroes.update
+tt.render.sprites[1].prefix = "boss_princess_iron_fan_vfx_stun_hero_decal"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].sort_y_offset = -50
+tt.render.sprites[1].group = "in_group"
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "boss_princess_iron_fan_vfx_stun_hero_decal_2"
+tt.render.sprites[2].name = "loop"
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].z = Z_DECALS
+tt.render.sprites[2].sort_y_offset = -50
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].prefix = "boss_princess_iron_fan_vfx_stun_hero_decal_3"
+tt.render.sprites[3].name = "in"
+tt.render.sprites[3].animated = true
+tt.render.sprites[3].z = Z_DECALS
+tt.render.sprites[3].sort_y_offset = -50
+tt.render.sprites[3].group = "in_group"
+tt.warning_duration = b.WARNING_DURATION
+tt.stun_radius = 60
+tt.vis_flags = bor(F_AREA, F_STUN, F_MOD)
+tt.vis_bans = bor(0)
+tt.stun_mod = "mod_boss_princess_iron_fan_stun_heroes_waves"
+tt.tween.remove = false
+tt.tween.disabled = false
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
+tt.tween.props[1].sprite_id = 2
+tt.tween.props[1].disabled = false
+tt.tween.props[2] = E:clone_c("tween_prop")
+tt.tween.props[2].name = "alpha"
+tt.tween.props[2].keys = {{0, 255}, {0.5, 0}}
+tt.tween.props[2].sprite_id = 1
+tt.tween.props[2].disabled = true
+tt.tween.props[3] = E:clone_c("tween_prop")
+tt.tween.props[3].name = "alpha"
+tt.tween.props[3].keys = {{0, 255}, {0.5, 0}}
+tt.tween.props[3].sprite_id = 2
+tt.tween.props[3].disabled = true
+tt.tween.props[4] = E:clone_c("tween_prop")
+tt.tween.props[4].name = "alpha"
+tt.tween.props[4].keys = {{0, 255}, {0.5, 0}}
+tt.tween.props[4].sprite_id = 3
+tt.tween.props[4].disabled = true
+tt = E:register_t("decal_boss_princess_iron_fan_stun_heroes_bossfight", "decal_boss_princess_iron_fan_stun_heroes_waves")
+b = balance.enemies.wukong.boss_princess.bossfight.stun_hero
+tt.stun_mod = "mod_boss_princess_iron_fan_stun_heroes_bossfight"
+tt = E:register_t("mod_boss_princess_iron_fan_stun_heroes_waves", "mod_stun")
+
+E:add_comps(tt, "tween")
+
+b = balance.enemies.wukong.boss_princess.waves.stun_hero
+tt.modifier.duration = b.DURATION
+tt.main_script.insert = scripts.mod_boss_princess_iron_fan_stun_heroes.insert
+tt.main_script.update = scripts.mod_boss_princess_iron_fan_stun_heroes.update
+tt.main_script.remove = scripts.mod_boss_princess_iron_fan_stun_heroes.remove
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "boss_princess_iron_fan_vfx_stun_hero"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -5
+tt.render.sprites[1].group = "stun"
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].anchor = v(0.5, 0.7121212121212122)
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "boss_princess_iron_fan_vfx_stun_hero_particle_loop"
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[2].sort_y_offset = -5
+tt.render.sprites[2].hidden = true
+tt.render.sprites[2].anchor = v(0.5, 0.7884615384615384)
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].name = "boss_princess_iron_fan_vfx_stun_hero_loop_shadow_0001"
+tt.render.sprites[3].animated = false
+tt.render.sprites[3].z = Z_DECALS
+tt.render.sprites[3].hidden = true
+tt.modifier.use_mod_offset = false
+tt.fx_flying = "fx_boss_princess_iron_fan_stun_heroes_flying"
+tt.fx_ground = "fx_boss_princess_iron_fan_stun_heroes_ground"
+tt.levitate_strength = 10
+tt.levitate_speed = 2
+tt.minimum_y_offset = 40
+tt.tween_remove_keys = {{0, 255}, {0.4, 255}, {0.7, 0}}
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
+tt.tween.props[1].sprite_id = 1
+tt.tween.props[2] = E:clone_c("tween_prop")
+tt.tween.props[2].name = "alpha"
+tt.tween.props[2].keys = {{0, 0}, {0.5, 255}}
+tt.tween.props[2].sprite_id = 2
+tt.tween.props[3] = E:clone_c("tween_prop")
+tt.tween.props[3].name = "alpha"
+tt.tween.props[3].keys = {{0, 0}, {0.5, 255}}
+tt.tween.props[3].sprite_id = 3
+tt.tween.remove = false
+tt.tween.disabled = false
+tt = E:register_t("mod_boss_princess_iron_fan_stun_heroes_bossfight", "mod_boss_princess_iron_fan_stun_heroes_waves")
+b = balance.enemies.wukong.boss_princess.bossfight.stun_hero
+tt = E:register_t("mod_boss_princess_iron_fan_death", "mod_boss_princess_iron_fan_stun_heroes_waves")
+tt.main_script.insert = scripts.mod_boss_princess_iron_fan_death.insert
+tt.main_script.update = scripts.mod_boss_princess_iron_fan_death.update
+tt.main_script.remove = nil
+tt.modifier.duration = 1e+99
+tt.minimum_y_offset = 70
+tt.render.sprites[1].prefix = "boss_princess_iron_fan_vfx_stun_hero_loop_copy"
+tt.render.sprites[3].name = "boss_princess_iron_fan_vfx_stun_hero_loop_shadow_0002"
+tt.tween.props[1].keys = {{0, 0}, {0.2, 255}}
+tt.tween.props[2].keys = {{0, 0}, {0.2, 255}}
+tt.tween.props[3].keys = {{0, 0}, {0.2, 255}}
+tt.render.sprites[1].sort_y_offset = 1
+tt.render.sprites[2].sort_y_offset = 1
+tt.render.sprites[2].scale = vv(1.5)
+tt = E:register_t("fx_boss_princess_iron_fan_stun_heroes_flying", "fx")
+tt.render.sprites[1].prefix = "boss_princess_iron_fan_vfx_stun_hero_dragon"
+tt.render.sprites[1].name = "in_capture"
+tt.render.sprites[1].anchor = v(0.5, 0.7076612903225806)
+tt.render.sprites[1].scale = vv(2)
+tt.render.sprites[1].sort_y_offset = -6
+tt.render.sprites[1].z = Z_FLYING_HEROES
+tt = E:register_t("fx_boss_princess_iron_fan_stun_heroes_ground", "fx")
+tt.render.sprites[1].prefix = "boss_princess_iron_fan_vfx_stun_hero"
+tt.render.sprites[1].name = "in_capture"
+tt.render.sprites[1].scale = vv(2)
+tt.render.sprites[1].sort_y_offset = -6
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("fx_boss_princess_iron_fan_area_attack", "fx")
+tt.render.sprites[1].name = "boss_princess_iron_fan_vfx_fx_area_attack"
+tt = E:register_t("fx_boss_princess_iron_fan_special_vfx", "fx")
+tt.render.sprites[1].prefix = "boss_princess_vfxDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt = E:register_t("boss_princess_iron_fan_tower_debuff", "modifier")
+b = balance.enemies.wukong.boss_princess.waves.tower_curse
+
+E:add_comps(tt, "render", "sound_events")
+
+tt.main_script.insert = scripts.boss_princess_iron_fan_tower_debuff.insert
+tt.main_script.update = scripts.boss_princess_iron_fan_tower_debuff.update
+tt.main_script.remove = scripts.boss_princess_iron_fan_tower_debuff.remove
+tt.modifier.duration = b.DURATION
+tt.modifier.vis_flags = F_CUSTOM
+tt.spawn_every = b.spawn_every
+tt.spawn_formations = b.spawn_formations
+tt.quantity_formations_spawns = b.quantity_formations_spawns
+tt.spawn_offset = v(0, 35)
+tt.spawn_forced_waypoint_offset = v(0, 0)
+tt.render.sid_fachada = 1
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "boss_princess_iron_fan_vfx_torre_fachada"
+tt.render.sprites[1].name = "tower_in"
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].sort_y_offset = -5
+tt.render.sid_floor = 2
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "boss_princess_iron_fan_vfx_torre_floor"
+tt.render.sprites[2].name = "run"
+tt.render.sprites[2].hidden = true
+tt.render.sprites[2].z = Z_DECALS
+tt.render.sid_door = 3
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].prefix = "boss_princess_iron_fan_vfx_torre_door"
+tt.render.sprites[3].name = "idle_door_on"
+tt.render.sprites[3].hidden = true
+tt.render.sprites[3].draw_order = 2
+tt.render.sprites[3].sort_y_offset = -5
+tt.render.sid_spawn_fx = 4
+tt.render.sprites[4] = E:clone_c("sprite")
+tt.render.sprites[4].prefix = "boss_princess_iron_fan_vfx_torre_fx_externos_delante"
+tt.render.sprites[4].name = "run"
+tt.render.sprites[4].hidden = false
+tt.render.sprites[4].scale = vv(1.6666666666666667)
+tt.render.sprites[4].draw_order = 3
+tt.render.sprites[4].sort_y_offset = -10
+tt.offset_y_per_tower = {
+	hermit_toad = 4
+}
+tt.sound_events.insert = "EnemyBossPrincessMudTower"
+tt = E:register_t("boss_princess_iron_fan_tower_debuff_bossfight", "boss_princess_iron_fan_tower_debuff")
+b = balance.enemies.wukong.boss_princess.bossfight.tower_curse
+tt.spawn_every = b.spawn_every
+tt.spawn_formations = b.spawn_formations
+tt.quantity_formations_spawns = b.quantity_formations_spawns
+tt = E:register_t("bullet_boss_princess_iron_fan", "bullet")
+b = balance.enemies.wukong.boss_princess.bossfight.ranged_area_attack
+tt.bullet.damage_type = b.damage_type
+tt.bullet.damage_max = b.damage_max
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_radius = b.radius
+tt.bullet.ignore_hit_offset = true
+tt.bullet.damage_bans = bor(F_ENEMY)
+tt.bullet.pop = nil
+tt.bullet.decal_fx = "fx_boss_princess_iron_fan_proyectile_hit_explosion"
+tt.main_script.update = scripts.bullet_boss_princess_iron_fan.update
+tt.render.sprites[1].name = "boss_princess_iron_fan_vfx_proyectile_run"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].loop = false
+tt.bullet.hit_time = fts(25)
+tt.ray_duration = fts(23)
+tt.image_width = 200
+tt.sound_events.insert = "EnemyBossPrincessRangedCast"
+tt = E:register_t("fx_boss_princess_iron_fan_proyectile_hit_explosion", "decal_scripted")
+
+E:add_comps(tt, "sound_events")
+
+tt.main_script.update = scripts.multi_sprite_fx.update
+tt.render.sprites[1].name = "boss_princess_iron_fan_vfx_projectile_explosion_run"
+tt.render.sprites[1].scale = vv(2)
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -10
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "boss_princess_iron_fan_vfx_projectile_explosion_run"
+tt.render.sprites[2].scale = vv(1.3)
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[2].offset = v(27, -14)
+tt.render.sprites[2].sort_y_offset = -10
+tt.render.sprites[2].hidden = true
+tt.render.sprites[2].delay_start = 0.15
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].name = "boss_princess_iron_fan_vfx_projectile_explosion_run"
+tt.render.sprites[3].scale = vv(1)
+tt.render.sprites[3].z = Z_OBJECTS
+tt.render.sprites[3].offset = v(-38, 20)
+tt.render.sprites[3].hidden = true
+tt.render.sprites[3].delay_start = 0.3
+tt.sound_events.insert = "EnemyBossPrincessRangedImpact"
+
+tt = E:register_t("controller_stage_35_redboy_powers", "decal_scripted")
+
+E:add_comps(tt, "events")
+
+tt.main_script.update = scripts.controller_stage_35_redboy_powers.update
+tt.render.sprites[1].prefix = "redboy_stage5Def"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -85
+tt.events.list[1].name = "samadhi_right"
+tt.events.list[1].on_event = scripts.controller_stage_35_redboy_powers.on_samadhi_right
+tt.events.list[2] = E:clone_c("event")
+tt.events.list[2].name = "samadhi_left"
+tt.events.list[2].on_event = scripts.controller_stage_35_redboy_powers.on_samadhi_left
+tt.events.list[3] = E:clone_c("event")
+tt.events.list[3].name = "portal_left"
+tt.events.list[3].on_event = scripts.controller_stage_35_redboy_powers.on_portal_left
+tt = E:register_t("controller_stage_35_princess_powers", "decal_scripted")
+
+E:add_comps(tt, "events")
+
+b = balance.enemies.wukong.boss_princess
+tt.main_script.update = scripts.controller_stage_35_princess_powers.update
+tt.render.sid_unit = 1
+tt.render.sprites[tt.render.sid_unit].prefix = "ironfan_stage5Def"
+tt.render.sprites[tt.render.sid_unit].exo = true
+tt.render.sprites[tt.render.sid_unit].flip_x = true
+tt.render.sprites[tt.render.sid_unit].animated = true
+tt.render.sprites[tt.render.sid_unit].anchor = v(0.5, 0.5)
+tt.render.sprites[tt.render.sid_unit].name = "idle"
+tt.render.sprites[tt.render.sid_unit].z = Z_OBJECTS
+tt.render.sprites[tt.render.sid_unit].sort_y_offset = -85
+tt.block_tower_mod = "boss_princess_iron_fan_tower_debuff"
+tt.stun_hero_decal = "decal_boss_princess_iron_fan_stun_heroes_waves"
+tt.stun_hero_vis_flags = bor(F_MOD, F_STUN, F_AREA)
+tt.stun_hero_vis_bans = bor(0)
+tt.stun_hero = b.waves.stun_hero
+tt.stun_hero_warning_duration = b.waves.stun_hero.WARNING_DURATION
+tt.events.list[1].name = "block_tower"
+tt.events.list[1].on_event = scripts.controller_stage_35_princess_powers.on_block_tower
+tt.events.list[2] = E:clone_c("event")
+tt.events.list[2].name = "stun_hero"
+tt.events.list[2].on_event = scripts.controller_stage_35_princess_powers.on_stun_hero
+tt.events.list[3] = E:clone_c("event")
+tt.events.list[3].name = "portal_right"
+tt.events.list[3].on_event = scripts.controller_stage_35_princess_powers.on_portal_right
+tt = E:register_t("controller_stage_35_portal_left", "decal_scripted")
+
+E:add_comps(tt, "events")
+
+tt.main_script.update = scripts.controller_stage_35_portal_door_bosses.update
+tt.render.sprites[1].prefix = "stage_5_puerta_redboyDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.events.list[1].name = "portal_left"
+tt.events.list[1].on_event = scripts.controller_stage_35_portal_door_bosses.on_portal_open
+tt.events.list[2] = E:clone_c("event")
+tt.events.list[2].name = "portal_left_close"
+tt.events.list[2].on_event = scripts.controller_stage_35_portal_door_bosses.on_portal_close
+tt = E:register_t("controller_stage_35_portal_right", "controller_stage_35_portal_left")
+tt.render.sprites[1].prefix = "stage_5_puerta_princessDef"
+tt.render.sprites[1].flip_x = true
+tt.events.list[1].name = "portal_right"
+tt.events.list[2].name = "portal_right_close"
+tt.sound_open = "Stage35PortalWater"
+tt = E:register_t("controller_stage_35_lava_splash", "controller_stage_32_lava_splash")
+tt.main_script.update = scripts.controller_stage_35_lava_splash.update
+tt.apply_if_enemy_is_to_right = false
+tt.mod = "mod_stage_35_lava_splash"
+tt.paths_x = {
+	[15] = 0,
+	[7] = 0
+}
+tt = E:register_t("controller_stage_35_water_splash", "controller_stage_35_lava_splash")
+tt.apply_if_enemy_is_to_right = true
+tt.mod = "mod_stage_35_water_splash"
+tt.paths_x = {
+	[8] = 1025
+}
+tt = E:register_t("controller_stage_35_small_spawner", "decal_scripted")
+
+E:add_comps(tt, "events", "editor")
+
+tt.unit_spawned = scripts.controller_stage_35_small_spawner.unit_spawned
+tt.main_script.update = scripts.controller_stage_35_small_spawner.update
+tt.render.sprites[1].name = "stage35_spawner_base"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "stage35_spawner_puerta"
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[2].sort_y_offset = -23
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].prefix = "stage_5_spawnerDef"
+tt.render.sprites[3].name = "in"
+tt.render.sprites[3].exo = true
+tt.render.sprites[3].animated = true
+tt.render.sprites[3].hidden = true
+tt.render.sprites[3].z = Z_OBJECTS
+tt.render.sprites[3].sort_y_offset = -23
+tt.spawner_nmbr = 0
+tt.events.list[1].name = "spawner_open"
+tt.events.list[1].on_event = scripts.controller_stage_35_small_spawner.on_portal_open
+tt.events.list[2] = E:clone_c("event")
+tt.events.list[2].name = "spawner_close"
+tt.events.list[2].on_event = scripts.controller_stage_35_small_spawner.on_portal_close
+tt.sound_open = "Stage35Spawners"
+tt = E:register_t("controller_stage_35_bull_king", "decal_scripted")
+
+E:add_comps(tt, "events", "editor")
+
+tt.main_script.update = scripts.controller_stage_35_bull_king.update
+tt.render.sprites[1].prefix = "stage_35_boss_bull_1Def"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 205
+tt.events.list[1].name = "samadhi_right"
+tt.events.list[1].on_event = scripts.controller_stage_35_bull_king.on_samadhi_right
+tt.events.list[2] = E:clone_c("event")
+tt.events.list[2].name = "samadhi_left"
+tt.events.list[2].on_event = scripts.controller_stage_35_bull_king.on_samadhi_left
+tt.events.list[3] = E:clone_c("event")
+tt.events.list[3].name = "stun_hero"
+tt.events.list[3].on_event = scripts.controller_stage_35_bull_king.on_stun_hero
+tt.events.list[4] = E:clone_c("event")
+tt.events.list[4].name = "golden_beast_right"
+tt.events.list[4].on_event = scripts.controller_stage_35_bull_king.on_golden_eyed
+tt.events.list[5] = E:clone_c("event")
+tt.events.list[5].name = "golden_beast_left"
+tt.events.list[5].on_event = scripts.controller_stage_35_bull_king.on_golden_eyed
+tt.events.list[6] = E:clone_c("event")
+tt.events.list[6].name = "portal_left"
+tt.events.list[6].on_event = scripts.controller_stage_35_bull_king.on_portal_left
+tt.events.list[7] = E:clone_c("event")
+tt.events.list[7].name = "portal_right"
+tt.events.list[7].on_event = scripts.controller_stage_35_bull_king.on_portal_right
+tt = E:register_t("controller_stage_35_golden_eyed_left", "decal_scripted")
+
+E:add_comps(tt, "events")
+
+tt.main_script.update = scripts.controller_stage_35_golden_beast.update
+tt.render.sprites[1].prefix = "spawner_golden_beastDef"
+tt.render.sprites[1].name = "loop_leon"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.events.list[1].name = "golden_beast_left"
+tt.events.list[1].on_event = scripts.controller_stage_35_golden_beast.on_golden_eyed
+tt.path_id = 5
+tt.empty_wait = 2
+tt.golden_eyed_entity = "enemy_golden_eyed"
+tt.summon_sound = "EnemyGoldenEyedSummon"
+tt = E:register_t("controller_stage_35_golden_eyed_right", "controller_stage_35_golden_eyed_left")
+tt.render.sprites[1].prefix = "spawner_golden_beastDef"
+tt.events.list[1].name = "golden_beast_right"
+tt.path_id = 6
+tt = E:register_t("boss_bull_king", "boss")
+b = balance.enemies.wukong.boss_bull_king
+
+E:add_comps(tt, "melee", "timed_attacks")
+
+tt.enemy.lives_cost = 999
+tt.enemy.melee_slot = v(80, 0)
+tt.health.hp_max = b.hp
+tt.health.magic_armor = b.magic_armor
+tt.health.armor = b.armor
+tt.health.dead_lifetime = 1e+99
+tt.health_bar.offset = v(0, 127)
+tt.unit.hit_offset = v(-5, 30)
+tt.unit.head_offset = v(-2, 67)
+tt.unit.mod_offset = v(-5, 30)
+tt.unit.show_blood_pool = false
+tt.ui.click_rect = r(-45, 0, 90, 90)
+tt.unit.size = UNIT_SIZE_LARGE
+tt.unit.blood_color = BLOOD_RED
+tt.motion.max_speed = b.speed
+tt.info.i18n_key = "ENEMY_BOSS_BULL_KING"
+tt.info.enc_icon = 119
+tt.info.portrait = "kr5_info_portraits_enemies_0124"
+tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
+tt.info.portrait_boss = "boss_health_bar_icon_0013"
+tt.render.sid_unit = 1
+tt.render.sprites[tt.render.sid_unit].prefix = "stage_35_boss_bull_2Def"
+tt.render.sprites[tt.render.sid_unit].name = "idle"
+tt.render.sprites[tt.render.sid_unit].exo = true
+tt.render.sprites[tt.render.sid_unit].animated = true
+tt.render.sprites[tt.render.sid_unit].z = Z_OBJECTS
+tt.render.sprites[tt.render.sid_unit].angles = {}
+tt.render.sprites[tt.render.sid_unit].angles.walk = {"walk", "walk", "walk"}
+tt.unit.show_blood_pool = false
+tt.spawn_pos = b.spawn_pos
+tt.spawn_fx = "fx_boss_bull_king_spawn"
+tt.second_manual_wave_pos = b.second_manual_wave_pos
+tt.main_script.insert = scripts.boss_bull_king.insert
+tt.main_script.update = scripts.boss_bull_king.update
+tt.melee.attacks[1].cooldown = b.basic_attack.cooldown
+tt.melee.attacks[1].damage_max = b.basic_attack.damage_max
+tt.melee.attacks[1].damage_min = b.basic_attack.damage_min
+tt.melee.attacks[1].damage_type = b.basic_attack.damage_type
+tt.melee.attacks[1].animation = "attack_melee"
+tt.melee.attacks[1].hit_time = fts(20)
+tt.melee.attacks[1].hit_fx = "fx_boss_bull_king_hit"
+tt.melee.attacks[1].hit_fx_offset = v(80, 10)
+tt.melee.attacks[1].sound_hit = "Stage35BossBullKingMeleeVar1"
+tt.melee.attacks[2] = E:clone_c("area_attack")
+tt.melee.attacks[2].cooldown = b.melee_area_attack.cooldown
+tt.melee.attacks[2].damage_max = b.melee_area_attack.damage_max
+tt.melee.attacks[2].damage_min = b.melee_area_attack.damage_min
+tt.melee.attacks[2].damage_type = b.melee_area_attack.damage_type
+tt.melee.attacks[2].damage_radius = b.melee_area_attack.damage_radius
+tt.melee.attacks[2].animation = "attack_melee_area"
+tt.melee.attacks[2].hit_time = fts(35)
+tt.melee.attacks[2].hit_fx = "fx_boss_bull_king_hit_area"
+tt.melee.attacks[2].hit_fx_offset = v(50, 0)
+tt.melee.attacks[2].hit_offset = v(50, 0)
+tt.melee.attacks[2].sound_hit = "Stage35BossBullKingMeleeArea"
+tt.timed_attacks.list[1] = E:clone_c("custom_attack")
+tt.timed_attacks.list[1].animation_in = "skill_area_kill_in"
+tt.timed_attacks.list[1].animation_loop = "skill_area_kill_loop"
+tt.timed_attacks.list[1].animation_end = "skill_area_kill_out"
+tt.timed_attacks.list[1].loops_amount = 3
+tt.timed_attacks.list[1].dome_fx = "fx_boss_bull_king_domo"
+tt.timed_attacks.list[1].anime_fx = "fx_boss_bull_king_anime"
+tt.timed_attacks.list[1].anime_fx_back_black = "fx_boss_bull_king_anime_black"
+tt.timed_attacks.list[1].anime_fx_back_white = "fx_boss_bull_king_anime_white"
+tt.timed_attacks.list[1].first_cooldown = b.area_attack.first_cooldown
+tt.timed_attacks.list[1].cooldown = b.area_attack.cooldown
+tt.timed_attacks.list[1].damage_type = b.area_attack.damage_type
+tt.timed_attacks.list[1].damage_max = b.area_attack.damage_max
+tt.timed_attacks.list[1].damage_min = b.area_attack.damage_min
+tt.timed_attacks.list[1].damage_radius = b.area_attack.damage_radius
+tt.timed_attacks.list[1].nodes_limit = b.area_attack.nodes_limit
+tt.timed_attacks.list[1].mod_tower_debuff = "mod_bull_king_tower_debuff"
+tt.timed_attacks.list[1].max_towers_block = b.area_attack.max_towers_block
+tt.timed_attacks.list[1].max_range = b.area_attack.max_range_towers_block
+tt.timed_attacks.list[1].min_range = b.area_attack.min_range_towers_block
+tt.timed_attacks.list[1].mod_stun = "mod_bull_king_stun"
+tt.timed_attacks.list[1].vis_flags = bor(F_AREA)
+tt.timed_attacks.list[1].vis_bans = 0
+tt.timed_attacks.list[1].vis_flags_stun = bor(F_AREA)
+tt.timed_attacks.list[1].vis_bans_stun = bor(F_FLYING)
+tt.sound_death = "Stage35BossBullKingDeath"
+tt = E:register_t("mod_bull_king_tower_debuff", "mod_hide_tower")
+b = balance.enemies.wukong.boss_bull_king.area_attack
+
+E:add_comps(tt, "render")
+
+tt.main_script.update = scripts.mod_bull_king_tower_debuff.update
+tt.main_script.remove = nil
+tt.modifier.duration = b.stun_tower_duration
+tt.modifier.vis_flags = F_CUSTOM
+tt.modifier.handle_stun = true
+tt.render.sprites[1].prefix = "stage_35_stun_towerDef"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].offset.y = 5
+tt.render.sprites[1].draw_order = 20
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -5
+tt.offset_y_per_tower = {
+	hermit_toad = 4
+}
+tt = RT("mod_bull_king_stun", "mod_stun")
+b = balance.enemies.wukong.boss_bull_king.area_attack
+
+E:add_comps(tt, "render")
+
+tt.modifier.duration = b.stun_duration
+tt.main_script.insert = scripts.mod_bull_king_stun.insert
+tt.main_script.remove = scripts.mod_bull_king_stun.remove
+tt.render.sprites[1].prefix = "stage_35_stun_unitDef"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -5
+tt.modifier.animation_phases = true
+tt.modifier.hide_target_delay = fts(3)
+tt.modifier.use_mod_offset = false
+tt = E:register_t("fx_boss_bull_king_spawn", "decal_scripted")
+tt.main_script.update = scripts.fx_boss_bull_king_spawn.update
+tt.render.sprites[1].prefix = "stage_35_stun_towerDef"
+tt.render.sprites[1].name = "start"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -20
+tt = E:register_t("fx_boss_bull_king_hit", "fx")
+tt.render.sprites[1].prefix = "stage_35_hitDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].scale = vv(2)
+tt = E:register_t("fx_boss_bull_king_hit_area", "fx")
+tt.render.sprites[1].prefix = "stage_35_areaattackDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("fx_boss_bull_king_domo", "decal_scripted")
+tt.main_script.update = scripts.multi_sprite_fx.update
+tt.render.sprites[1].prefix = "stage_35_domoDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].scale = vv(2)
+tt.render.sprites[1].z = Z_EFFECTS
+tt.render.sprites[1].sort_y_offset = -10
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].delay_start = fts(11)
+tt = E:register_t("fx_boss_bull_king_anime", "decal_scripted")
+tt.main_script.update = scripts.multi_sprite_fx.update
+tt.render.sprites[1].prefix = "stage_35_fx_animeDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].scale = vv(2)
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].delay_start = 1
+tt = E:register_t("fx_boss_bull_king_anime_white", "decal_scripted")
+tt.main_script.update = scripts.fx_boss_bull_king_anime_color.update
+tt.render.sprites[1].name = "stage_35_box_asst_box1"
+tt.render.sprites[1].scale = vv(200)
+tt.render.sprites[1].z = Z_OBJECTS_SKY - 1
+tt.render.sprites[1].sort_y_offset = 10
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].hidden = true
+tt.delay_start = 1.15
+tt = E:register_t("fx_boss_bull_king_anime_black", "fx_boss_bull_king_anime_white")
+tt.render.sprites[1].name = "stage_35_box_asst_box2"
+tt.delay_start = 1.05
+tt = E:register_t("fx_boss_bull_king_explosion", "decal_scripted")
+tt.main_script.update = scripts.multi_sprite_fx.update
+tt.render.sprites[1].prefix = "stage_35_explosion_pathDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 20
+tt = E:register_t("controller_stage_35", "decal_scripted")
+
+E:add_comps(tt, "editor", "ui", "events")
+
+tt.main_script.update = scripts.controller_stage_35.update
+tt.render.sprites[1].prefix = "stage_5_cinematicaDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].z = Z_SCREEN_FIXED
+tt.render.sprites[1].pos = v(0, 0)
+tt.events.list[1].name = "barrage"
+tt.events.list[1].on_event = scripts.controller_stage_35.on_event
+tt.fixed_screen_offset = v(40, 40)
+tt = E:register_t("debug_draw_ability_area", "decal_scripted")
+tt.main_script.update = scripts.debug_draw_ability_area.update
+tt.check_function = nil
+tt.check_every = 0.1
+tt.radius_check = 300
+tt.show_red = false
+tt.sprites_x = math.ceil(REF_W / 10)
+tt.sprites_y = math.ceil(REF_H / 5)
+tt.sprite_size = v(REF_W / tt.sprites_x, REF_H / tt.sprites_y)
+
+for xx = 1, tt.sprites_x do
+	for yy = 1, tt.sprites_y do
+		local index_x = xx
+		local index_y = (yy - 1) * tt.sprites_x
+		local sprite_i = index_x + index_y
+		local pos = v(xx * tt.sprite_size.x, yy * tt.sprite_size.y)
+
+		tt.render.sprites[sprite_i] = E:clone_c("sprite")
+		tt.render.sprites[sprite_i].pos = pos
+		tt.render.sprites[sprite_i].scale = vv(0.5)
+		tt.render.sprites[sprite_i].animated = false
+		tt.render.sprites[sprite_i].z = Z_DECALS
+		tt.render.sprites[sprite_i].name = "decal_blood_0001"
+	end
+end
+
+tt = E:register_t("stage_31_mask_burned_01", "decal")
+
+E:add_comps(tt, "editor", "editor_script")
+
+tt.render.sprites[1].name = "stage_31_mask_burned_01"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].sort_y_offset = -60
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+tt.render.sprites[1].hidden = true
+tt.show_in_editor = true
+tt.editor_script.insert = scripts.editor_mask.insert
+tt = E:register_t("stage_31_mask_burned_02", "stage_31_mask_burned_01")
+tt.render.sprites[1].name = "stage_31_mask_burned_02"
+tt.render.sprites[1].sort_y_offset = -112
+tt = E:register_t("stage_31_mask_burned_03", "stage_31_mask_burned_01")
+tt.render.sprites[1].name = "stage_31_mask_burned_03"
+tt.render.sprites[1].sort_y_offset = -80
+tt = E:register_t("stage_31_mask_shadow_top", "decal")
+tt.render.sprites[1].prefix = "stage_31_shadowDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+tt = E:register_t("stage_31_exo_fire_a", "decal")
+
+E:add_comps(tt, "editor", "editor_script")
+
+tt.render.sprites[1].prefix = "stage_31_fire_ADef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].sort_y_offset = 0
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS + 1
+tt.render.sprites[1].hidden = true
+tt.show_in_editor = true
+tt.editor_script.insert = scripts.editor_mask.insert
+tt = E:register_t("stage_31_exo_fire_b", "stage_31_exo_fire_a")
+tt.render.sprites[1].prefix = "stage_31_fire_BDef"
+tt = E:register_t("stage_31_exo_fire_c", "stage_31_exo_fire_a")
+tt.render.sprites[1].prefix = "stage_31_fire_CDef"
+
+for i = 1, 3 do
+	tt = E:register_t("stage_31_exo_forest_" .. i, "decal")
+
+	E:add_comps(tt, "editor", "editor_script")
+
+	tt.render.sprites[1].prefix = "stage_31_forest_0" .. i .. "Def"
+	tt.render.sprites[1].name = "loop"
+	tt.render.sprites[1].animated = true
+	tt.render.sprites[1].exo = true
+	tt.show_in_editor = false
+	tt.editor_script.insert = scripts.editor_mask.insert
+
+	if i == 3 then
+		tt.render.sprites[1].z = Z_OBJECTS + 1
+		tt.render.sprites[1].sort_y_offset = -700
+	else
+		tt.render.sprites[1].z = Z_DECALS
+	end
+end
+
+for lyr_nmbr = 1, 7 do
+	tt = E:register_t("stage_31_exo_waterfall_layer_" .. lyr_nmbr, "decal")
+	tt.render.sprites[1].prefix = "stage_31_waterfall_layer_" .. lyr_nmbr .. "Def"
+	tt.render.sprites[1].name = "loop"
+	tt.render.sprites[1].animated = true
+	tt.render.sprites[1].exo = true
+	tt.render.sprites[1].z = Z_OBJECTS
+
+	if lyr_nmbr == 1 then
+		tt.render.sprites[1].sort_y_offset = -201
+	elseif lyr_nmbr == 2 then
+		tt.render.sprites[1].sort_y_offset = -200
+	elseif lyr_nmbr == 3 then
+		tt.render.sprites[1].sort_y_offset = 3
+	elseif lyr_nmbr == 4 then
+		tt.render.sprites[1].sort_y_offset = 4
+	elseif lyr_nmbr == 5 then
+		tt.render.sprites[1].sort_y_offset = 5
+	elseif lyr_nmbr == 6 then
+		tt.render.sprites[1].sort_y_offset = 220
+	elseif lyr_nmbr == 7 then
+		tt.render.sprites[1].sort_y_offset = 2001
+	end
+end
+
+tt = RT("decal_generic_kill_area")
+
+AC(tt, "pos", "editor", "editor_script")
+
+tt.kill_area_fn = scripts.decal_generic_kill_area.kill_area_fn
+tt.kill_radius = 200
+tt.kill_area_id = 1
+tt.editor.components = {"render"}
+tt.editor.overrides = {
+	["render.sprites[1].animated"] = false,
+	["render.sprites[1].name"] = "editor_red_circle_filled"
+}
+tt.editor.props = {{"kill_radius", PT_NUMBER, 5, {50, 800}}, {"kill_area_id", PT_NUMBER}}
+tt.editor_script.update = scripts.editor_decal_generic_kill_area.update
+tt = RT("decal_generic_kill_area_rect")
+
+AC(tt, "pos", "editor", "editor_script")
+
+tt.kill_area_fn = scripts.decal_generic_kill_area_rect.kill_area_fn
+tt.kill_size = v(100, 100)
+tt.kill_area_id = 1
+tt.editor.components = {"render"}
+tt.editor.overrides = {
+	["render.sprites[1].animated"] = false,
+	["render.sprites[1].name"] = "editor_red_square_filled"
+}
+tt.editor.props = {{"kill_size", PT_COORDS, 5, {{50, 800}, {50, 800}}}, {"kill_area_id", PT_NUMBER}}
+tt.editor_script.update = scripts.editor_decal_generic_kill_area_rect.update
+tt = E:register_t("stage_32_mask_heads", "decal")
+tt.render.sprites[1].name = "stage_32_masks_layer_01"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].sort_y_offset = 160
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("stage_32_mask_heads_2", "stage_32_mask_heads")
+tt.render.sprites[1].flip_x = true
+tt = E:register_t("stage_32_mask_front", "decal")
+tt.render.sprites[1].prefix = "stage_32_lava_shadow_dragonDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+tt = E:register_t("stage_32_mask_waterfall_1", "decal")
+tt.render.sprites[1].prefix = "stage_32_lava_waterfall_1Def"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+tt = E:register_t("stage_32_mask_waterfall_2", "stage_32_mask_waterfall_1")
+tt.render.sprites[1].prefix = "stage_32_lava_waterfall_2Def"
+tt.render.sprites[1].sort_y_offset = 175
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("stage_32_mask_waterfall_3", "stage_32_mask_waterfall_2")
+tt.render.sprites[1].prefix = "stage_32_lava_waterfall_3Def"
+tt = E:register_t("stage_32_mask_lava_bubbles", "decal")
+tt.render.sprites[1].prefix = "stage_32_lava_bubbleDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].sort_y_offset = 176
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("stage_32_mask_lava_rocks", "decal")
+tt.render.sprites[1].prefix = "stage_32_rockDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("stage_32_mask_fire_decals", "decal")
+tt.render.sprites[1].prefix = "stage_32_lava_buffDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("stage_33_mask_props", "decal")
+tt.render.sprites[1].prefix = "stage_33_anim_propsDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("stage_33_mask_water_small", "decal")
+tt.render.sprites[1].prefix = "stage_33_olas_chicasDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND - 1
+tt = E:register_t("stage_33_mask_water_big", "decal")
+tt.render.sprites[1].prefix = "stage_33_olas_grandesDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_BACKGROUND - 2
+tt = E:register_t("stage_33_mask_1", "decal")
+tt.render.sprites[1].name = "stage33_mask_1_casa_grande"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.pos = v(512, 384)
+tt.render.sprites[1].sort_y_offset = 550 - tt.pos.y
+tt = E:register_t("stage_33_mask_1_destroyed", "stage_33_mask_1")
+tt.render.sprites[1].name = "stage 33_mask_intersection"
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+tt.render.sprites[1].hidden = true
+tt = E:register_t("stage_33_mask_2", "stage_33_mask_1")
+tt.render.sprites[1].name = "stage33_mask_2_casita"
+tt.render.sprites[1].sort_y_offset = 581 - tt.pos.y
+tt = E:register_t("stage_33_mask_3", "stage_33_mask_1")
+tt.render.sprites[1].name = "stage33_mask_3_casita"
+tt.render.sprites[1].sort_y_offset = 544 - tt.pos.y
+tt = E:register_t("stage_33_mask_4", "stage_33_mask_1")
+tt.render.sprites[1].name = "stage33_mask_4_plataforma"
+tt.render.sprites[1].sort_y_offset = 371 - tt.pos.y
+tt = E:register_t("stage_33_mask_5", "stage_33_mask_1")
+tt.render.sprites[1].name = "stage33_mask_5_carpa"
+tt.render.sprites[1].sort_y_offset = 365 - tt.pos.y
+tt = E:register_t("stage_33_mask_6", "stage_33_mask_1")
+tt.render.sprites[1].name = "stage33_mask_6_casita"
+tt.render.sprites[1].sort_y_offset = 374 - tt.pos.y
+tt = E:register_t("stage_33_mask_7", "stage_33_mask_1")
+tt.render.sprites[1].name = "stage33_mask_7_casita"
+tt.render.sprites[1].sort_y_offset = 374 - tt.pos.y
+tt = E:register_t("stage_33_mask_8", "stage_33_mask_1")
+tt.render.sprites[1].name = "stage33_mask_8_casitas"
+tt.render.sprites[1].sort_y_offset = 530 - tt.pos.y
+tt = E:register_t("stage_33_mask_9", "stage_33_mask_1")
+
+E:add_comps(tt, "editor")
+
+tt.render.sprites[1].name = "stage33_mask_9_modos_relleno_holders"
+tt.render.sprites[1].sort_y_offset = 450 - tt.pos.y
+tt = E:register_t("stage_33_house_destroyed_decal_1", "decal")
+tt.render.sprites[1].name = "stage33_casa_holder_escombros_1"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].anchor = v(0.5760714285714286, 0.3502604166666667)
+tt = E:register_t("stage_33_house_destroyed_decal_2", "decal")
+tt.render.sprites[1].name = "stage33_casa_holder_escombros_2"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].anchor = v(0.3246428571428571, 0.23697916666666666)
+tt = E:register_t("stage_33_house_destroyed_decal_3", "decal")
+tt.render.sprites[1].name = "stage33_casa_holder_escombros_3"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].anchor = v(0.7917857142857143, 0.69140625)
+tt = E:register_t("stage_33_citizen_house_1", "decal_scripted")
+tt.main_script.update = scripts.stage_33_citizen_house.update
+tt.open_door = scripts.stage_33_citizen_house.open_door
+tt.render.sid_base = 1
+tt.render.sid_door = 2
+tt.render.sid_floor = 3
+tt.render.sprites[tt.render.sid_base].name = "stage33_casa1_pescadores_base"
+tt.render.sprites[tt.render.sid_base].z = Z_OBJECTS
+tt.render.sprites[tt.render.sid_base].animated = false
+tt.render.sprites[tt.render.sid_base].sort_y_offset = -10
+tt.render.sprites[tt.render.sid_door] = table.deepclone(tt.render.sprites[tt.render.sid_base])
+tt.render.sprites[tt.render.sid_door].prefix = "stage33_casa1_pescadores_door"
+tt.render.sprites[tt.render.sid_door].name = "open"
+tt.render.sprites[tt.render.sid_door].animated = true
+tt.render.sprites[tt.render.sid_door].sort_y_offset = -11
+tt.render.sprites[tt.render.sid_floor] = table.deepclone(tt.render.sprites[tt.render.sid_base])
+tt.render.sprites[tt.render.sid_floor].name = "stage33_casa1_pescadores_sombra"
+tt.render.sprites[tt.render.sid_floor].z = Z_DECALS
+tt.render.sprites[tt.render.sid_floor].sort_y_offset = 0
+tt = E:register_t("stage_33_citizen_house_2", "stage_33_citizen_house_1")
+tt.render.sprites[tt.render.sid_base].name = "stage33_casa2_pescadores_base"
+tt.render.sprites[tt.render.sid_door].prefix = "stage33_casa2_pescadores_door"
+tt.render.sprites[tt.render.sid_door].sort_y_offset = 0
+tt.render.sprites[tt.render.sid_floor].name = "stage33_casa2_pescadores_sombra"
+tt = E:register_t("controller_stage_34_fuentes")
+
+E:add_comps(tt, "main_script")
+
+tt.main_script.update = scripts.controller_stage_34_fuentes.update
+tt.nodes_range = 15
+tt.open_duration = 3
+tt = E:register_t("decal_stage_34_fuente_1", "decal_scripted")
+
+E:add_comps(tt, "events")
+
+tt.start_remolino = scripts.decal_stage_34_fuente.start_remolino
+tt.end_remolino = scripts.decal_stage_34_fuente.end_remolino
+tt.main_script.update = scripts.decal_stage_34_fuente.update
+tt.events.list[1].name = "fuente_remolino_start"
+tt.events.list[1].on_event = scripts.decal_stage_34_fuente.on_event_start
+tt.events.list[2] = E:clone_c("event")
+tt.events.list[2].name = "fuente_remolino_end"
+tt.events.list[2].on_event = scripts.decal_stage_34_fuente.on_event_end
+tt.event_listen_number = 1
+tt.remolino_count = 0
+tt.render.sprites[1].prefix = "stage_34_fuente_1Def"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+tt.connections = {{nil, 12}}
+tt.sound_mud_pool_transformation = "EnemyBossPrincessMudPoolTransformation"
+tt = E:register_t("decal_stage_34_fuente_2", "decal_stage_34_fuente_1")
+tt.event_listen_number = 2
+tt.render.sprites[1].prefix = "stage_34_fuente_2Def"
+tt.connections = {{3, 9}, {4, 10}, {5, 11}}
+tt = E:register_t("decal_stage_34_fuente_3", "decal_stage_34_fuente_1")
+tt.event_listen_number = 3
+tt.render.sprites[1].prefix = "stage_34_fuente_4Def"
+tt.connections = {{6, 9}, {7, 10}, {8, 12}}
+tt = E:register_t("decal_stage_34_fuente_4", "decal_stage_34_fuente_1")
+tt.event_listen_number = 4
+tt.render.sprites[1].prefix = "stage_34_fuente_5Def"
+tt.connections = {{nil, 9}}
+tt = E:register_t("decal_stage_34_fuente_5", "decal_stage_34_fuente_1")
+tt.event_listen_number = 5
+tt.render.sprites[1].prefix = "stage_34_fuente_6Def"
+tt.connections = {{nil, 10}, {nil, 11}}
+tt = E:register_t("decal_stage_34_fuente_6", "decal_stage_34_fuente_1")
+tt.event_listen_number = 6
+tt.render.sprites[1].prefix = "stage_34_fuente_3Def"
+tt.connections = nil
+tt = E:register_t("decal_stage_34_mask_2", "decal")
+tt.render.sprites[1].name = "mascara2_puertas"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].sort_y_offset = -100
+tt = E:register_t("decal_stage_34_mask_3", "decal")
+tt.render.sprites[1].name = "mascara3_gazebo"
+tt.render.sprites[1].animated = false
+tt = E:register_t("decal_stage_34_mask_cascadas_1", "decal")
+tt.render.sprites[1].name = "stage_34_cascadas_1_run"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].animated = true
+tt = E:register_t("decal_stage_34_mask_cascadas_2", "decal_stage_34_mask_cascadas_1")
+tt.render.sprites[1].name = "stage_34_cascadas_2_run"
+tt = E:register_t("decal_stage_34_mask_cascadas_3", "decal_stage_34_mask_cascadas_1")
+tt.render.sprites[1].name = "stage_34_cascadas_3_run"
+tt = E:register_t("decal_stage_34_mask_cascadas_6", "decal_stage_34_mask_cascadas_1")
+tt.render.sprites[1].name = "stage_34_cascadas_6_run"
+tt = E:register_t("decal_stage_34_easter_egg_mono", "decal_scripted")
+
+E:add_comps(tt, "ui")
+
+tt.main_script.update = scripts.decal_stage_34_easter_egg_mono.update
+tt.render.sprites[1].prefix = "wkstatue_sixear"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "wkstatue_ofrendas"
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].z = Z_EFFECTS
+tt.render.sprites[2].offset = v(12, -12)
+tt.ui.click_rect = r(-30, -20, 60, 60)
+tt = E:register_t("stage_34_nubes_camino", "decal")
+tt.render.sprites[1].prefix = "stage_4_nubescaminoDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt = E:register_t("stage_34_nubes", "decal")
+tt.render.sprites[1].prefix = "stage_4_nubesDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt = E:register_t("decal_stage_35_mask_boss_bull", "decal")
+tt.render.sprites[1].name = "stage35_mask_boss"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 200
+tt = E:register_t("decal_stage_35_mask_boss_bull_left", "decal")
+tt.render.sprites[1].name = "stage35_mask_shadow_creeps"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt = E:register_t("decal_stage_35_mask_boss_bull_right", "decal_stage_35_mask_boss_bull_left")
+tt.render.sprites[1].flip_x = true
+tt = E:register_t("decal_stage_35_mask_path_open", "decal")
+tt.render.sprites[1].name = "stage35_mask_path_open"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_BACKGROUND_COVERS
+tt.render.sprites[1].hidden = true
+tt = E:register_t("stage_35_bloqueo_path", "decal")
+tt.render.sprites[1].prefix = "stage_5_bloqueo_pathDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt = E:register_t("decal_stage_35_mask_redboy_top", "decal")
+tt.render.sprites[1].name = "stage35_mask_bosses"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].sort_y_offset = 0
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -86
+tt = E:register_t("decal_stage_35_mask_princess_top", "decal_stage_35_mask_redboy_top")
+tt.render.sprites[1].flip_x = true
+tt = E:register_t("decal_stage_35_mask_redboy_bottom", "decal")
+tt.render.sprites[1].name = "stage35_mask_mask_creeps"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -30
+tt = E:register_t("decal_stage_35_mask_princess_bottom", "decal_stage_35_mask_redboy_bottom")
+tt.render.sprites[1].flip_x = true
+tt = E:register_t("decal_stage_35_escombros_holder_1", "decal")
+tt.render.sprites[1].name = "stage35_escombros_holder_1"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].offset = v(2, -16)
+tt = E:register_t("decal_stage_35_escombros_holder_2", "decal")
+tt.render.sprites[1].name = "stage35_escombros_holder_2"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].offset = v(0, -3)
+tt = E:register_t("decal_stage_35_escombros_holder_3", "decal")
+tt.render.sprites[1].name = "stage35_escombros_holder_3"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].offset = v(0, 0)
+tt = E:register_t("decal_stage_35_escombros_cannonball_camino", "decal_tween")
+tt.render.sprites[1].name = "destruccion_holder_escombros_camino"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt.tween.props[1].keys = {{0, 255}, {14, 255}, {16, 0}}
+tt.tween.remove = true
+tt.tween.disabled = false
+tt = E:register_t("decal_stage_35_escombros_cannonball_holder", "decal_stage_35_escombros_cannonball_camino")
+tt.render.sprites[1].name = "destruccion_holder_escombros_oro"
+tt.render.sprites[1].offset = v(0, 20)
+tt = E:register_t("decal_stage_35_fume_entradas", "decal_scripted")
+tt.main_script.update = scripts.decal_stage_35_fume_entradas.update
+tt.render.sprites[1].prefix = "stage_35_fumeDef"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt.render.sprites[1].animated = true
+
+tt = E:register_t("decal_dlc_wukong_flaming_ground", "decal_scripted")
+
+E:add_comps(tt, "auras")
+
+tt.main_script.insert = scripts.decal_dlc_wukong_flaming_ground.insert
+tt.main_script.update = scripts.decal_dlc_wukong_flaming_ground.update
+tt.in_anim = "in"
+tt.loop_anim = "idle"
+tt.end_anim = "out"
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].prefix = "fire_phoenix_zhu_que_fuego_camino"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].animated = true
+tt.duration = nil
+tt.auras.list[1] = E:clone_c("aura_attack")
+tt.auras.list[1].name = "aura_wukong_fire_ground_dps"
+tt.auras.list[1].cooldown = 0
+tt.auras.list[2] = E:clone_c("aura_attack")
+tt.auras.list[2].name = "aura_wukong_fire_ground_sprint"
+tt.auras.list[2].cooldown = 0
+tt.auras.list[3] = E:clone_c("aura_attack")
+tt.auras.list[3].name = "aura_wukong_fire_ground_healing"
+tt.auras.list[3].cooldown = 0
+tt.auras.list[4] = E:clone_c("aura_attack")
+tt.auras.list[4].name = "aura_wukong_fire_ground_wuxian"
+tt.auras.list[4].cooldown = 0
+tt.is_flaming_ground = true
+tt = E:register_t("decal_dlc_wukong_flaming_ground_small", "decal_dlc_wukong_flaming_ground")
+tt.render.sprites[1].prefix = "fire_phoenix_zhu_que_fuego_camino_small"
+tt = E:register_t("decal_fire_phoenix_flaming_ground", "decal_dlc_wukong_flaming_ground")
+b = balance.enemies.wukong.fire_phoenix.flaming_ground
+tt.duration = b.duration
+tt = E:register_t("decal_burning_treant_flaming_ground", "decal_dlc_wukong_flaming_ground")
+b = balance.enemies.wukong.burning_treant.area_attack.flaming_ground
+tt.duration = b.duration
+tt.render.sprites[1].prefix = "burning_treant_area_attk"
+tt = E:register_t("decal_hellfire_warlock_flaming_ground", "decal_dlc_wukong_flaming_ground")
+b = balance.enemies.wukong.hellfire_warlock.ranged.flaming_ground
+tt.duration = b.duration
+tt = E:register_t("decal_wuxian_flaming_ground", "decal_dlc_wukong_flaming_ground")
+b = balance.enemies.wukong.wuxian.ranged_attack.flaming_ground
+tt.duration = b.duration
+tt = E:register_t("decal_fire_fox_flaming_ground", "decal_dlc_wukong_flaming_ground")
+b = balance.enemies.wukong.fire_fox.flaming_ground
+tt.duration = b.duration
+tt.sid_explotion_aura = #tt.auras.list + 1
+tt.auras.list[tt.sid_explotion_aura] = E:clone_c("aura_attack")
+tt.auras.list[tt.sid_explotion_aura].name = "aura_fire_fox_explotion_dps"
+tt.auras.list[tt.sid_explotion_aura].cooldown = 0
+tt = E:register_t("decal_stage_32_boss_fissure_ability", "decal_dlc_wukong_flaming_ground")
+tt.main_script.update = scripts.decal_stage_32_boss_fissure_ability.update
+tt.render.sprites[1].prefix = "dragon_cracks_floorDef"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].pos = v(512, 384)
+tt.render.sprites[1].z = Z_DECALS - 1
+tt.fx = "fx_stage_32_lava_geyser"
+tt.idle_anim = "idle"
+tt.in_anim = "active_in"
+tt.loop_anim = "active_loop"
+tt.end_anim = "active_end"
+tt.max_geysers = 5
+tt.geyser_delay_max = 0.5
+tt.geyser_delay_min = 0.2
+tt = E:register_t("decal_water_sorceress_heal_wave", "decal_scripted")
+tt.main_script.insert = scripts.decal_water_sorceress_heal_wave.insert
+tt.main_script.update = scripts.decal_water_sorceress_heal_wave.update
+tt.handle_heal = nil
+tt.pi = nil
+tt.spi = nil
+tt.ni = nil
+tt.nodes_range = nil
+tt.nodes_advance = 5
+tt.trail_duration = 0.5
+tt.hit_targets = {}
+tt.vis_flags = 0
+tt.vis_bans = 0
+tt.mod = "mod_water_sorceress_heal_wave_healing"
+tt.mod_damage = "mod_water_sorceress_heal_wave_dps"
+tt.decal_mod_range = 45
+tt.render.sid_wave = 1
+tt.render.sprites[tt.render.sid_wave].prefix = "watersorceress_wave"
+tt.render.sprites[tt.render.sid_wave].name = "run"
+tt.render.sprites[tt.render.sid_wave].animated = true
+tt.render.sprites[tt.render.sid_wave].z = Z_OBJECTS
+tt.render.sprites[tt.render.sid_wave].offset = v(0, 5)
+tt.render.sid_trail = 2
+tt.render.sprites[tt.render.sid_trail] = E:clone_c("sprite")
+tt.render.sprites[tt.render.sid_trail].prefix = "watersorceress_trail_wave"
+tt.render.sprites[tt.render.sid_trail].name = "idle"
+tt.render.sprites[tt.render.sid_trail].animated = true
+tt.render.sprites[tt.render.sid_trail].z = Z_DECALS
+tt.scale_max = 1
+tt.scale_min = 0.9
+tt.center_gravity = vv(0.5)
+tt.wave_template = "decal_water_sorceress_heal_wave"
+tt.wave_small_deco_template = "decal_water_sorceress_heal_wave_small_deco"
+tt = E:register_t("decal_water_sorceress_heal_wave_small_deco", "decal_tween")
+
+E:add_comps(tt, "main_script")
+
+tt.main_script.insert = scripts.decal_water_sorceress_heal_wave.insert
+tt.render.sprites[1].prefix = "watersorceress_trail_wave"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+tt.tween.props[1].keys = {{0, 0}, {0.1, 150}}
+tt.center_gravity = v(0.5, 1.2)
+tt.scale_max = 0.7
+tt.scale_min = 0.5
+tt.tween.remove = false
+tt = E:register_t("decal_redboy_teen_skyrock", "decal_scripted")
+tt.main_script.update = scripts.decal_redboy_teen_skyrock.update
+tt.render.sprites[1].prefix = "teen_redboy_skyrockDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.entity = "enemy_ash_spirit"
+tt = E:register_t("decal_storm_elemental_area_melee", "decal_scripted")
+
+E:add_comps(tt, "tween")
+
+tt.main_script.update = scripts.multi_sprite_fx.update
+tt.render.sprites[1].name = "storm_elemental_vfx_area_attack_crack"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "storm_elemental_vfx_asst_area_attack"
+tt.render.sprites[2].z = Z_DECALS
+tt.render.sprites[2].scale = vv(2)
+tt.tween.props[1].keys = {{0, 255}, {fts(13), 255}, {fts(46), 0}}
+tt.tween.remove = true
+tt = E:register_t("decal_demon_minotaur_area_crack", "decal_tween")
+tt.render.sprites[1].name = "demon_minotaur_decal_crack"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
+tt.tween.remove = true
+tt = E:register_t("decal_demon_minotaur_area_smoke", "fx")
+tt.render.sprites[1].name = "demon_minotaur_smoke_hit_run"
+tt.render.sprites[1].sort_y_offset = -5
+tt.render.sprites[1].z = Z_DECALS
+
+tt = RT("aura_wukong_fire_ground_apply_mod", "aura")
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.aura.duration = -1
+tt.aura.mod = nil
+tt.aura.radius = 55
+tt.aura.cycle_time = fts(3)
+tt.aura.vis_bans = bor(F_FLYING)
+tt = RT("aura_wukong_fire_ground_dps", "aura_wukong_fire_ground_apply_mod")
+tt.aura.mod = "mod_wukong_flaming_ground_dps"
+tt.aura.vis_bans = bor(tt.aura.vis_bans, F_ENEMY)
+tt.aura.excluded_templates = {"hero_lava", "hero_ignus"}
+tt = RT("aura_wukong_fire_ground_sprint", "aura_wukong_fire_ground_apply_mod")
+tt.aura.mod = "mod_wukong_flaming_ground_sprint"
+tt.aura.allowed_templates = {"enemy_fire_fox"}
+tt = RT("aura_wukong_fire_ground_healing", "aura_wukong_fire_ground_apply_mod")
+tt.aura.mod = "mod_wukong_flaming_ground_healing"
+tt.aura.allowed_templates = {"enemy_ash_spirit"}
+tt = RT("aura_wukong_fire_ground_wuxian", "aura_wukong_fire_ground_apply_mod")
+tt.aura.mod = "mod_wukong_flaming_ground_toggle_abilities"
+tt.aura.allowed_templates = {"enemy_wuxian", "enemy_nine_tailed_fox", "enemy_blaze_raider", "enemy_flame_guard"}
+tt = RT("aura_fire_fox_explotion_dps", "aura")
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.aura.duration = -1
+tt.aura.mod = "mod_fire_fox_explotion_dps"
+tt.aura.radius = 70
+tt.aura.cycle_time = 1e+99
+tt.aura.vis_bans = bor(F_FLYING, F_ENEMY)
+
+tt = RT("mod_wukong_flaming_ground_sprint", "mod_slow")
+b = balance.specials.terrain_8.flaming_ground.sprint
+tt.slow.factor = b.sprint_factor
+tt.modifier.duration = b.duration
+tt.modifier.is_fire_buff = true
+tt = RT("mod_wukong_flaming_ground_dps", "modifier")
+
+E:add_comps(tt, "dps", "render")
+
+b = balance.specials.terrain_8.flaming_ground.dps
+tt.dps.damage_every = b.damage_every
+tt.dps.damage_min = b.damage_min
+tt.dps.damage_max = b.damage_max
+tt.dps.damage_type = b.damage_type
+tt.modifier.duration = b.duration
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+tt.render.sprites[1].size_names = {"small", "medium", "large"}
+tt.render.sprites[1].prefix = "fire"
+tt.render.sprites[1].name = "small"
+tt.render.sprites[1].draw_order = 4
+tt.render.sprites[1].loop = true
+tt = RT("mod_wukong_flaming_ground_healing", "modifier")
+
+E:add_comps(tt, "hps", "render")
+
+b = balance.specials.terrain_8.flaming_ground.healing
+tt.main_script.insert = scripts.mod_hps.insert
+tt.main_script.update = scripts.mod_wukong_flaming_ground_healing.update
+tt.modifier.duration = b.heal_duration
+tt.modifier.is_fire_buff = true
+tt.hps.heal_min = b.heal_min
+tt.hps.heal_max = b.heal_max
+tt.hps.heal_every = b.heal_every
+tt.render.sid_behind = 1
+tt.render.sid_crosses = 2
+tt.render.sprites[tt.render.sid_behind].prefix = "ashspirit_fx_heal_behind"
+tt.render.sprites[tt.render.sid_behind].name = "run"
+tt.render.sprites[tt.render.sid_behind].animated = true
+tt.render.sprites[tt.render.sid_behind].loop = false
+tt.render.sprites[tt.render.sid_behind].sort_y_offset = -5
+tt.render.sprites[tt.render.sid_crosses] = table.deepclone(tt.render.sprites[1])
+tt.render.sprites[tt.render.sid_crosses].prefix = "ashspirit_fx_heal_croses"
+tt.render.sprites[tt.render.sid_crosses].loop = true
+tt.render.sprites[tt.render.sid_crosses].name = "run"
+tt.render.sprites[tt.render.sid_crosses].anchor = vv(0.5)
+tt.render.sprites[tt.render.sid_crosses].offset = v(-10, 15)
+tt = E:register_t("mod_wukong_flaming_ground_toggle_abilities", "modifier")
+
+E:add_comps(tt, "render")
+
+tt.modifier.duration = fts(10)
+tt.main_script.insert = scripts.mod_wukong_flaming_ground_toggle_abilities.insert
+tt.main_script.update = scripts.mod_wukong_flaming_ground_toggle_abilities.update
+tt.main_script.remove = scripts.mod_wukong_flaming_ground_toggle_abilities.remove
+tt.modifier.is_fire_buff = true
+tt.render.sid_wuxian = 1
+tt.render.sprites[tt.render.sid_wuxian].prefix = "wuxian_buff"
+tt.render.sprites[tt.render.sid_wuxian].name = "run"
+tt.render.sprites[tt.render.sid_wuxian].animated = true
+tt.render.sprites[tt.render.sid_wuxian].loop = true
+tt.render.sprites[tt.render.sid_wuxian].sort_y_offset = -1
+tt.render.sprites[tt.render.sid_wuxian].hidden = true
+tt.render.sprites[tt.render.sid_wuxian].use_mod_offset = false
+tt.template_scripts = {
+	enemy_wuxian = {
+		sprite_id = tt.render.sid_wuxian,
+		insert = scripts.enemy_wuxian.flaming_toggle_abilities_insert,
+		remove = scripts.enemy_wuxian.flaming_toggle_abilities_remove
+	},
+	enemy_nine_tailed_fox = {
+		insert = scripts.enemy_nine_tailed_fox.flaming_toggle_abilities_insert,
+		remove = scripts.enemy_nine_tailed_fox.flaming_toggle_abilities_remove
+	},
+	enemy_blaze_raider = {
+		insert = scripts.enemy_blaze_raider.flaming_toggle_abilities_insert,
+		remove = scripts.enemy_blaze_raider.flaming_toggle_abilities_remove
+	},
+	enemy_flame_guard = {
+		insert = scripts.enemy_flame_guard.flaming_toggle_abilities_insert,
+		remove = scripts.enemy_flame_guard.flaming_toggle_abilities_remove
+	}
+}
+tt = RT("mod_fire_fox_explotion_dps", "modifier")
+
+E:add_comps(tt, "dps")
+
+b = balance.enemies.wukong.fire_fox.flaming_ground.explotion
+tt.dps.damage_every = 1e+99
+tt.dps.damage_min = b.damage_min
+tt.dps.damage_max = b.damage_max
+tt.dps.damage_type = b.damage_type
+tt.modifier.duration = fts(2)
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+tt = RT("mod_nine_tailed_fox_stun_attack", "mod_stun")
+b = balance.enemies.wukong.nine_tailed_fox.stun_attack
+tt.modifier.duration = b.stun_duration
+tt = RT("mod_nine_tailed_fox_stun_teleport", "mod_stun")
+b = balance.enemies.wukong.nine_tailed_fox.teleport
+tt.modifier.duration = b.stun_duration
+tt = RT("mod_gale_warrior_combo_counter", "modifier")
+tt.main_script.insert = scripts.mod_gale_warrior_combo_counter.insert
+tt.main_script.queue = scripts.mod_gale_warrior_combo_counter.queue
+tt = RT("mod_gale_warrior_dot", "modifier")
+
+E:add_comps(tt, "dps")
+
+b = balance.enemies.wukong.gale_warrior.puncturing_thrust.dot
+tt.dps.damage_every = b.damage_every
+tt.dps.damage_min = b.damage_min
+tt.dps.damage_max = b.damage_max
+tt.dps.damage_type = b.damage_type
+tt.dps.kill = true
+tt.dps.fx = "fx_bleeding"
+tt.dps.fx_with_blood_color = true
+tt.dps.fx_target_flip = true
+tt.dps.fx_tracks_target = true
+tt.modifier.duration = b.duration
+tt.modifier.vis_flags = F_BLOOD
+tt.main_script.queue = scripts.mod_gale_warrior_dot.queue
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+tt = E:register_t("mod_enemy_storm_elemental_tower_mark", "modifier")
+
+E:add_comps(tt, "mark_flags")
+
+tt.modifier.duration = fts(30)
+tt.main_script.queue = scripts.mod_mark_flags.queue
+tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.update = scripts.mod_mark_flags.update
+tt = E:register_t("mod_enemy_storm_elemental_tower_debuff", "modifier")
+b = balance.enemies.wukong.storm_elemental.tower_block
+
+E:add_comps(tt, "render")
+
+tt.main_script.insert = scripts.mod_crocs_shaman_tower_debuff.insert
+tt.main_script.update = scripts.mod_crocs_shaman_tower_debuff.update
+tt.main_script.remove = scripts.mod_crocs_shaman_tower_debuff.remove
+tt.modifier.duration = b.duration
+tt.modifier.vis_flags = F_CUSTOM
+tt.render.sprites[1].prefix = "storm_elemental_vfx_stun"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].draw_order = 20
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -10
+tt.offset_y_per_tower = {
+	hermit_toad = 4
+}
+tt = RT("mod_water_sorceress_heal_wave_healing", "modifier")
+
+E:add_comps(tt, "hps", "render")
+
+b = balance.enemies.wukong.water_sorceress.heal_wave
+tt.main_script.insert = scripts.mod_hps.insert
+tt.main_script.update = scripts.mod_hps.update
+tt.modifier.duration = fts(88)
+tt.hps.heal_min = b.heal_min / (tt.modifier.duration / tt.hps.heal_every)
+tt.hps.heal_max = b.heal_max / (tt.modifier.duration / tt.hps.heal_every)
+tt.hps.heal_every = 0.1
+tt.render.sprites[1].prefix = "watersorceress_heal"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].sort_y_offset = -5
+tt = RT("mod_water_sorceress_heal_wave_dps", "modifier")
+
+E:add_comps(tt, "dps")
+
+b = balance.enemies.wukong.water_sorceress.heal_wave
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+tt.modifier.duration = fts(20)
+tt.dps.damage_every = 1e+99
+tt.dps.damage_min = b.damage_min
+tt.dps.damage_max = b.damage_max
+tt.dps.damage_type = b.damage_type
+tt.dps.fx = "fx_water_sorceress_bolt_hit"
+
+tt = E:register_t("mod_stage31_water_mechanic_dps", "modifier")
+b = balance.specials.stage31_water_mechanic
+
+E:add_comps(tt, "dps")
+
+tt.modifier.duration = 1
+tt.dps.fx = "fx_water_sorceress_bolt_hit"
+tt.dps.damage_min = b.damage_min
+tt.dps.damage_max = b.damage_max
+tt.dps.damage_type = b.damage_type
+tt.dps.damage_every = 1e+99
+tt.main_script.insert = scripts.mod_stage31_water_mechanic_dps.insert
+tt.main_script.update = scripts.mod_stage31_water_mechanic_dps.update
+tt.allowed_templates = {"enemy_fire_phoenix", "enemy_fire_fox", "enemy_nine_tailed_fox", "enemy_burning_treant", "enemy_ash_spirit"}
+
+tt = E:register_t("fx_stage_31_fireball_a", "fx")
+tt.render.sprites[1].prefix = "stage_31_fireball_ADef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+tt.kill_area_id = 1
+tt = E:register_t("fx_stage_31_fireball_b", "fx")
+tt.render.sprites[1].prefix = "stage_31_fireball_BDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+tt.kill_area_id = 2
+tt = E:register_t("fx_stage_31_fireball_c", "fx")
+tt.render.sprites[1].prefix = "stage_31_fireball_CDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+tt.kill_area_id = 3
+tt = E:register_t("fx_stage_32_dragon_mouth_fire_left", "fx")
+tt.render.sprites[1].prefix = "dragon_redboy_stun_vfx_01Def"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = DAMAGE_TRUE
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
+tt = E:register_t("fx_stage_32_dragon_mouth_fire_right", "fx_stage_32_dragon_mouth_fire_left")
+tt.render.sprites[1].prefix = "dragon_redboy_stun_vfx_02Def"
+tt = E:register_t("fx_stage_32_dragon_down_splash", "fx")
+tt.render.sprites[1].prefix = "dragon_redboy_splashDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -20
+tt.render.sprites[1].offset = v(0, 15)
+tt = E:register_t("fx_stage_32_redboy_transform_fire", "fx")
+tt.render.sprites[1].prefix = "dragon_redboy_transformDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].offset = v(0, -30)
+tt = E:register_t("fx_stage_32_fireball_right", "decal_scripted")
+b = balance.enemies.wukong.boss_dragon.campaign.pre_fight_meteorite
+tt.main_script.update = scripts.fx_stage_32_fireball_right.update
+tt.render.sprites[1].prefix = "stage_32_fireball_rDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "stage_31_sign_decal_rDef"
+tt.render.sprites[2].name = "run"
+tt.render.sprites[2].exo = true
+tt.render.sprites[2].loop = false
+tt.render.sprites[2].z = Z_DECALS
+tt.shake_time = 150
+tt.flags_meteorite = bor(F_RANGED, F_AREA)
+tt.bans_meteorite = bor(F_BOSS)
+tt.ni_step = 3
+tt.path = 3
+tt.kill_radius = 80
+tt.force_move_impact_positions = {v(800, 326)}
+tt.fire_duration = b.fire_duration
+tt.path_fires = {
+	[3] = {
+		finish = 100,
+		begin = 20
+	},
+	[4] = {
+		finish = 60,
+		begin = 50
+	}
+}
+tt = E:register_t("fx_stage_32_fireball_left", "fx_stage_32_fireball_right")
+tt.render.sprites[1].prefix = "stage_32_fireball_lDef"
+tt.render.sprites[2].prefix = "stage_31_sign_decal_lDef"
+tt.path = 2
+tt.force_move_impact_positions = {v(207, 226)}
+tt.path_fires = {
+	[2] = {
+		finish = 120,
+		begin = 20
+	},
+	{
+		finish = 50,
+		begin = 40
+	}
+}
+tt = E:register_t("fx_stage_35_fireball_left", "fx_stage_32_fireball_right")
+tt.render.sprites[1].prefix = "stage_35_fireball_lDef"
+tt.render.sprites[2].prefix = "stage5_samadhi_2Def"
+tt.kill_area_id = 1
+tt.path_fires = {{
+	finish = 180,
+	begin = 20
+}}
+tt = E:register_t("fx_stage_35_fireball_right", "fx_stage_32_fireball_right")
+tt.render.sprites[1].prefix = "stage_35_fireball_rDef"
+tt.render.sprites[2].prefix = "stage5_samadhi_1Def"
+tt.kill_area_id = 2
+tt.path_fires = {
+	[2] = {
+		finish = 130,
+		begin = 20
+	}
+}
+tt = E:register_t("fx_stage_32_lava_splash", "fx")
+tt.render.sprites[1].prefix = "stage_32_lava_splashDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].sort_y_offset = -40
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].scale = vv(0.5599999999999999)
+tt = E:register_t("fx_stage_32_lava_splash_2", "fx_stage_32_lava_splash")
+tt.render.sprites[1].flip_x = true
+tt = E:register_t("fx_stage_32_lava_splash_big", "fx")
+tt.render.sprites[1].prefix = "stage_32_lava_splash_bigDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].sort_y_offset = -40
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].scale = vv(0.7)
+tt = E:register_t("fx_stage_32_lava_splash_big_2", "fx_stage_32_lava_splash_big")
+tt.render.sprites[1].flip_x = true
+tt = E:register_t("fx_stage_32_lava_geyser", "fx")
+tt.render.sprites[1].prefix = "dragon_cracks_geyserDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].anchor = vv(0.5)
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("fx_stage_33_house_destroy", "decal_scripted")
+tt.main_script.update = scripts.multi_sprite_fx.update
+tt.render.sprites[1].name = "vfx_mecanicas_destroy_house_run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].anchor = vv(0.5)
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -5
+tt = E:register_t("fx_stage_35_lava_splash", "fx")
+tt.render.sprites[1].prefix = "stage_5_splash_lavaDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].sort_y_offset = -40
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].scale = vv(0.5599999999999999)
+tt = E:register_t("fx_stage_35_lava_splash_big", "fx_stage_35_lava_splash")
+tt.render.sprites[1].scale = vv(1)
+tt = E:register_t("fx_stage_35_water_splash", "fx_stage_35_lava_splash")
+tt.render.sprites[1].prefix = "stage_5_splash_aguaDef"
+tt = E:register_t("fx_stage_35_water_splash_big", "fx_stage_35_water_splash")
+tt.render.sprites[1].scale = vv(1)
+tt = E:register_t("fx_water_spirit_splash", "fx")
+tt.render.sprites[1].name = "wukong_water_spirit_fx_splash"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_EFFECTS
+tt = E:register_t("fx_water_spirit_charco_caida", "fx")
+tt.render.sprites[1].name = "wukong_water_spirit_charco_caida_run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+
+tt = E:register_t("fx_water_spirit_hit", "abstract_fx_mod_in_hit_pos")
+tt.render.sprites[1].name = "wukong_water_spirit_hit_run"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -5
+
+tt = E:register_t("fx_nine_tailed_fox_hit", "fx")
+tt.render.sprites[1].name = "ninetailedfox_hit_hit"
+tt = E:register_t("fx_nine_tailed_fox_hit_stun", "fx")
+tt.render.sprites[1].name = "ninetailedfox_stun_run"
+tt = E:register_t("fx_nine_tailed_fox_tp_stun_1", "fx")
+tt.render.sprites[1].name = "ninetailedfox_stunearea_explosion1_run"
+tt.render.sprites[1].scale = vv(2)
+tt = E:register_t("fx_nine_tailed_fox_tp_stun_2", "fx")
+tt.render.sprites[1].name = "ninetailedfox_stunearea_explosion2_run"
+tt.render.sprites[1].scale = vv(2)
+tt = E:register_t("fx_nine_tailed_fox_tp_stun_decal", "fx")
+tt.render.sprites[1].name = "ninetailedfox_stun_decal_run"
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("fx_nine_tailed_fox_summon", "fx")
+
+E:add_comps(tt, "main_script")
+
+tt.main_script.update = scripts.fx_nine_tailed_fox_summon.update
+tt.render.sprites[1].name = "ninetailedfox_summon"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].z = Z_DECALS
+tt.spawn_offset = v(0, 0)
+tt.spawn_time = fts(45)
+tt.spawn_entity = "enemy_nine_tailed_fox"
+tt = E:register_t("fx_hellfire_warlock_summong_floor_staff", "fx")
+tt.render.sprites[1].name = "hellfire_warlock_summon_stafx_run"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -5
+tt = E:register_t("fx_hellfire_warlock_fireball_hit", "fx")
+tt.render.sprites[1].name = "hellfire_warlock_hit_fireball"
+tt = E:register_t("fx_hellfire_warlock_melee_hit", "fx")
+tt.render.sprites[1].name = "hellfire_warlock_hit_run"
+tt = E:register_t("fx_wuxian_bolt_hit", "fx")
+tt.render.sprites[1].name = "wuxian_explosion_run"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -3
+tt = E:register_t("fx_wuxian_melee_hit", "fx")
+tt.render.sprites[1].name = "wuxian_hit_mele_hit"
+tt = E:register_t("fx_wuxian_kamehame_hit", "fx")
+tt.render.sprites[1].name = "wuxian_hit_run"
+tt = E:register_t("fx_storm_spirit_zap_in_out", "fx")
+tt.render.sprites[1].name = "stormspirit_zap_in_out"
+tt = E:register_t("fx_storm_elemental_bullet_start", "fx")
+tt.render.sprites[1].name = "storm_elemental_vfx_proyectile_fx_run"
+tt.render.sprites[1].z = Z_BULLETS
+tt = E:register_t("fx_storm_elemental_bullet_hit", "fx")
+tt.render.sprites[1].name = "storm_elemental_vfx_hit_run"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -10
+tt = E:register_t("decal_storm_elemental_bullet", "fx")
+tt.render.sprites[1].name = "storm_elemental_vfx_explosion_proyectil"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -10
+tt = E:register_t("decal_storm_elemental_bullet_2", "fx")
+tt.render.sprites[1].name = "storm_elemental_vfx_explosion_proyectil_decal"
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("decal_ash_spirit_hit", "decal_scripted")
+
+E:add_comps(tt, "tween")
+
+tt.main_script.update = scripts.multi_sprite_fx.update
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].name = "ashspirit_fx_floor_decal_0001"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "ashspirit_fx_vfx_explosion"
+tt.render.sprites[2].name = "attack_1"
+tt.render.sprites[2].loop = false
+tt.render.sprites[2].scale = vv(2)
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[2].sort_y_offset = -3
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].prefix = "ashspirit_fx_floor_decal_small"
+tt.render.sprites[3].name = "decal"
+tt.render.sprites[3].z = Z_DECALS
+tt.render.sprites[3].offset = v(0, 0)
+tt.render.sprites[3].delay_start = fts(0)
+tt.render.sprites[3].hidden = true
+tt.render.sprites[4] = table.deepclone(tt.render.sprites[3])
+tt.render.sprites[4].offset = v(-30, 20)
+tt.render.sprites[4].delay_start = fts(3)
+tt.render.sprites[5] = table.deepclone(tt.render.sprites[3])
+tt.render.sprites[5].offset = v(0, -20)
+tt.render.sprites[5].delay_start = fts(0)
+tt.render.sprites[6] = table.deepclone(tt.render.sprites[3])
+tt.render.sprites[6].offset = v(30, 13)
+tt.render.sprites[6].delay_start = fts(3)
+tt.tween.remove = true
+tt.tween.props[1].keys = {{0, 255}, {1.9, 255}, {2.3, 0}}
+tt = E:register_t("fx_redboy_teen_floor_fire_decal", "fx")
+tt.render.sprites[1].prefix = "teen_redboy_decalDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("fx_redboy_teen_hand", "fx")
+tt.render.sprites[1].prefix = "teen_redboy_uiexploDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_EFFECTS
+tt = E:register_t("fx_redboy_teen_hit", "fx")
+tt.render.sprites[1].prefix = "teen_redboy_hitDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+tt = E:register_t("fx_redboy_screen", "fx")
+tt.render.sprites[1].prefix = "dragon_redboy_screenDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_SCREEN_FIXED
+tt = E:register_t("fx_redboy_teen_smoke", "fx")
+tt.render.sprites[1].prefix = "teen_redboy_smokeDef"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("fx_redboy_fireabsorb_decal", "fx")
+tt.render.sprites[1].prefix = "teen_redboy_decal_fireabsorbDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].anchor = vv(0.5)
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("fx_citizen_3_melee_1_hit", "fx")
+tt.render.sprites[1].name = "pueblerino_3_hit_1_run"
+tt = E:register_t("fx_citizen_4_melee_1_hit", "fx")
+tt.render.sprites[1].name = "pueblerino_4_hit_1_run"
+tt = E:register_t("fx_water_sorceress_bolt_hit", "fx")
+tt.render.sprites[1].name = "watersorceress_projectile_hit_run"
+tt = E:register_t("fx_terracota_hit", "fx")
+tt.render.sprites[1].name = "terracota_fx_hit_run"
+tt = E:register_t("fx_demon_minotaur_hit", "fx")
+tt.render.sprites[1].name = "demon_minotaur_hit_run"
+tt = E:register_t("fx_demon_minotaur_rebote", "fx")
+tt.render.sprites[1].name = "demon_minotaur_rebote_fx_run"
+
+tt = E:register_t("fx_blaze_raider_melee_hit", "fx")
+tt.render.sprites[1].name = "blaze_rider_hit_run"
+tt = E:register_t("fx_fire_phoenix_death", "fx")
+tt.render.sprites[1].name = "fire_phoenix_zhu_que_explosionfuego"
+tt.render.sprites[1].z = Z_DECALS
+
+tt = E:register_t("ps_wuxian_bolt_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "wuxian_trail_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 60
+tt.particle_system.particle_lifetime = {fts(6), fts(6)}
+tt.particle_system.anchor = v(0.5, 0.5)
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("ps_water_sorceress_bolt_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "watersorceress_projectile_trail_run"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 20
+tt.particle_system.particle_lifetime = {fts(14), fts(14)}
+tt.particle_system.anchor = v(0.5, 0.5)
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("ps_hellfire_warlock_bullet_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "hellfire_warlock_fireball_trail"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 20
+tt.particle_system.particle_lifetime = {fts(13), fts(13)}
+tt.particle_system.anchor = v(0.6304347826086957, 0.36363636363636365)
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("ps_storm_elemental_bullet_trail_1")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "storm_elemental_vfx_proyectile_trail_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 20
+tt.particle_system.particle_lifetime = {fts(8), fts(8)}
+tt.particle_system.scales_y = {0.7, 0.7}
+tt.particle_system.scales_x = {0.7, 0.7}
+tt.particle_system.anchor = v(0.5, 0.5)
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("ps_storm_elemental_bullet_trail_2")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "storm_elemental_vfx_ranged_attck_trail_run"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 20
+tt.particle_system.particle_lifetime = {fts(8), fts(8)}
+tt.particle_system.scales_y = {0.7, 0.7}
+tt.particle_system.scales_x = {0.7, 0.7}
+tt.particle_system.anchor = v(0.5, 0.5)
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("ps_nine_tailed_fox_underground_trail")
+
+E:add_comps(tt, "pos", "particle_system", "motion", "nav_path", "main_script")
+
+b = balance.enemies.wukong.nine_tailed_fox.teleport
+tt.main_script.update = scripts.ps_nine_tailed_fox_underground_trail.update
+tt.particle_system.animated = true
+tt.particle_system.name = "ninetailedfox_teleport_smoke_particle_run"
+tt.particle_system.loop = false
+tt.particle_system.emit_duration = nil
+tt.particle_system.emission_rate = 10
+tt.particle_system.source_lifetime = nil
+tt.particle_system.z = Z_OBJECTS
+tt.particle_system.emit_area_spread = v(0, 5)
+tt.damage_radius = b.damage_radius
+tt.damage_min = b.damage_min
+tt.damage_max = b.damage_max
+tt.damage_type = b.damage_type
+tt.vis_flags = F_AREA
+tt.vis_bans = F_NONE
+tt = E:register_t("ps_storm_spirit_jump_ahead_trail_1")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.animated = true
+tt.particle_system.name = "stormspirit_trail_run"
+tt.particle_system.loop = false
+tt.particle_system.emit_duration = nil
+tt.particle_system.emission_rate = 30
+tt.particle_system.source_lifetime = nil
+tt.particle_system.z = Z_OBJECTS
+tt.particle_system.emit_area_spread = v(0, 5)
+tt.particle_system.sort_y_offset = -10
+tt = E:register_t("ps_storm_spirit_jump_ahead_trail_2", "ps_storm_spirit_jump_ahead_trail_1")
+tt.particle_system.name = "stormspirit_trail_nubes_run"
+tt.particle_system.emission_rate = 12
+tt.particle_system.sort_y_offset = 0
+tt = E:register_t("ps_water_spirit_trail_jump")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.animated = true
+tt.particle_system.name = "wukong_water_spirit_ranged_attck_trail_run"
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 20
+tt.particle_system.source_lifetime = nil
+tt.particle_system.z = Z_OBJECTS
+tt.particle_system.emit_area_spread = v(0, 5)
+tt.particle_system.track_rotation = true
+tt = E:register_t("ps_water_spirit_trail_swim")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.animated = false
+tt.particle_system.name = "wukong_water_spirit_trail_nadar"
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 12
+tt.particle_system.source_lifetime = nil
+tt.particle_system.z = Z_DECALS
+tt.particle_system.emit_area_spread = v(1, 5)
+tt.particle_system.particle_lifetime = {1, 1}
+tt.particle_system.scales_y = {1, 0.5}
+tt.particle_system.scales_x = {1, 0.5}
+tt.particle_system.alphas = {255, 0}
+tt = E:register_t("ps_storm_elemental_walk_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.animated = false
+tt.particle_system.name = "storm_elemental_vfx_walk_trail_0001"
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 2
+tt.particle_system.source_lifetime = nil
+tt.particle_system.z = Z_DECALS
+tt.particle_system.emit_area_spread = v(1, 3)
+tt.particle_system.particle_lifetime = {4, 4}
+tt.particle_system.scales_y = {1, 0.5}
+tt.particle_system.scales_x = {1, 0.5}
+tt.particle_system.alphas = {255, 0}
+
+tt = E:register_t("bullet_wuxian_bolt", "bolt_enemy")
+b = balance.enemies.wukong.wuxian.ranged_attack
+tt.render.sprites[1].prefix = "wuxian_bolt"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.main_script.update = scripts.bullet_wuxian_bolt.update
+tt.bullet.damage_max = b.damage_max
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_radius = b.damage_radius
+tt.bullet.damage_bans = bor(F_ENEMY)
+tt.bullet.hit_blood_fx = nil
+tt.bullet.acceleration_factor = 0.1
+tt.bullet.min_speed = 42
+tt.bullet.max_speed = 420
+tt.bullet.align_with_trajectory = false
+tt.bullet.hit_fx = "fx_wuxian_bolt_hit"
+tt.bullet.hit_fx_ignore_offset = true
+tt.bullet.hit_decal = "decal_wuxian_flaming_ground"
+tt.bullet.particles_name = "ps_wuxian_bolt_trail"
+tt = E:register_t("bullet_water_sorceress_bolt", "bolt_enemy")
+
+E:add_comps(tt, "force_motion")
+
+b = balance.enemies.wukong.water_sorceress.ranged_attack
+tt.render.sprites[1].prefix = "watersorceress_projectile"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.main_script.update = scripts.bolt_force_motion_kr5.update
+tt.main_script.insert = scripts.bolt_force_motion_kr5.insert
+tt.bullet.damage_max = b.damage_max
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_type = b.damage_type
+tt.bullet.hit_blood_fx = nil
+tt.bullet.acceleration_factor = 0.1
+tt.bullet.min_speed = 60
+tt.bullet.max_speed = 600
+tt.bullet.ignore_rotation = true
+tt.bullet.align_with_trajectory = false
+tt.bullet.force_align_particles_trajectory = true
+tt.bullet.force_align_particles_trajectory_offset = math.rad(-90)
+tt.bullet.hit_fx = "fx_water_sorceress_bolt_hit"
+tt.bullet.particles_name = "ps_water_sorceress_bolt_trail"
+tt.initial_impulse = 12000
+tt.initial_impulse_duration = 0.15
+tt.initial_impulse_angle_abs = math.pi / 2
+tt.initial_impulse_reduction = 0.7
+tt.force_motion.a_step = 5
+tt.force_motion.max_a = 3000
+tt.force_motion.max_v = 300
+tt = E:register_t("bullet_hellfire_warlock_fireball", "bombKR5")
+b = balance.enemies.wukong.hellfire_warlock.ranged
+tt.bullet.damage_type = b.damage_type
+tt.bullet.damage_max = b.damage_max
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_radius = b.radius
+tt.bullet.ignore_hit_offset = true
+tt.bullet.flight_time = fts(20)
+tt.bullet.hit_fx = "fx_hellfire_warlock_fireball_hit"
+tt.bullet.damage_bans = bor(F_ENEMY)
+tt.bullet.pop = nil
+tt.bullet.particles_name = "ps_hellfire_warlock_bullet_trail"
+tt.bullet.hit_decal = "decal_hellfire_warlock_flaming_ground"
+tt.bullet.rotation_random = true
+tt.bullet.align_with_trajectory = false
+tt.bullet.rotation_speed = 60 * FPS * math.pi / 180
+tt.main_script.insert = scripts.enemy_bomb.insert
+tt.main_script.update = scripts.bullet_hellfire_warlock_fireball.update
+tt.render.sprites[1].prefix = "hellfire_warlock_fireball"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].anchor = v(0.5, 0.5128205128205128)
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "hellfire_warlock_fireball"
+tt.render.sprites[2].name = "run"
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].anchor = v(0.5, 0.5128205128205128)
+tt.render.sprites[2].r = math.rad(180)
+tt.sound_events.insert = "EnemyWarlockRangedCast"
+tt.sound_events.hit = "EnemyWarlockRangedImpact"

@@ -1,0 +1,2 @@
+local a={ashspirit_fx_heal_behind_run={prefix="ashspirit_fx_heal_behind",to=16,from=1},ashspirit_fx_heal_croses_run={prefix="ashspirit_fx_heal_croses",to=30,from=1},ashspirit_fx_floor_decal_run={prefix="ashspirit_fx_floor_decal",to=1,from=1},ashspirit_fx_vfx_explosion_attack_1={prefix="ashspirit_fx_vfx_explosion",to=25,from=1},ashspirit_fx_floor_decal_small_decal={prefix="ashspirit_fx_floor_decal_small",to=71,from=1}}
+return a

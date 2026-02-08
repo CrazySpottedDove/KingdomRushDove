@@ -1,4 +1,5 @@
 -- chunkname: @./all/systems.lua
+MISSED_SS = {}
 local log = require("lib.klua.log"):new("systems")
 local log_xp = log.xp or log:new("xp")
 local log_hp = log.hp or log:new("hp")
@@ -2977,15 +2978,21 @@ function sys.render:on_update(dt, ts, store)
 			else
 				s.sync_flag = last_runs ~= s.runs
 				s.ss = I:s(fn)
+
 			-- if s.ss == nil then
-			-- 	log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
-			-- 	if s.animation then
+			-- 	if s.animation and not MISSED_SS[s.animation] then
+			-- 		log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
 			-- 		log.error("Animation name: %s", s.animation)
-			-- 	elseif s.animated then
+			--         MISSED_SS[s.animation] = true
+			-- 	elseif s.animated and not MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] then
+			--         log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
 			-- 		log.error("Animated prefix: %s", s.prefix)
 			-- 		log.error("Animated name: %s", s.name)
-			-- 	else
+			--         MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] = true
+			--     elseif not MISSED_SS[s.name] then
+			--         log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
 			-- 		log.error("Static sprite name: %s", s.name)
+			--         MISSED_SS[s.name] = true
 			-- 	end
 			-- end
 			end

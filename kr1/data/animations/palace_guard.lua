@@ -1,0 +1,2 @@
+local a={palace_guard_idle={prefix="palace_guard_creep",to=1,from=1},palace_guard_walk={prefix="palace_guard_creep",to=21,from=2},palace_guard_walkdown={prefix="palace_guard_creep",to=41,from=22},palace_guard_walkup={prefix="palace_guard_creep",to=61,from=42},palace_guard_attack_01={prefix="palace_guard_creep",to=91,from=62},palace_guard_attack_02={prefix="palace_guard_creep",to=125,from=92},palace_guard_death={prefix="palace_guard_creep",to=181,from=126},palace_guard_raise={prefix="palace_guard_creep",to=1,from=1}}
+return a

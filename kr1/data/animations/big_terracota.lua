@@ -1,0 +1,2 @@
+local a={big_terracota_idle={prefix="terracota_grande",to=1,from=1},big_terracota_raise={prefix="terracota_grande",to=1,from=1},big_terracota_walk={prefix="terracota_grande",to=39,from=2},big_terracota_walkdown={prefix="terracota_grande",to=77,from=40},big_terracota_walkup={prefix="terracota_grande",to=115,from=78},big_terracota_attack={prefix="terracota_grande",to=149,from=116},big_terracota_death={prefix="terracota_grande",to=204,from=150}}
+return a

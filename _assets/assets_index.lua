@@ -128,9 +128,6 @@ return {
 	["kr1-desktop/images/fullhd/encyclopedia_creeps-2.dds"] = {
 		size = 5592580
 	},
-	["kr1-desktop/images/fullhd/fl_go_stage131-1.dds"] = {
-		size = 14946080
-	},
 	["kr1-desktop/images/fullhd/go_decals-1.dds"] = {
 		size = 2616176
 	},
@@ -4384,6 +4381,36 @@ return {
 	},
 	["kr1-desktop/sounds/files/kr5_dlc1_bgmusic_preparation2_v2.ogg"] = {
 		size = 2262426
+	},
+	["kr1-desktop/sounds/files/kr5_dlc2_bgmusic_battle1_v1.ogg"] = {
+		size = 2316213
+	},
+	["kr1-desktop/sounds/files/kr5_dlc2_bgmusic_battle2_v1.ogg"] = {
+		size = 2186777
+	},
+	["kr1-desktop/sounds/files/kr5_dlc2_bgmusic_battle3_v1.ogg"] = {
+		size = 4128811
+	},
+	["kr1-desktop/sounds/files/kr5_dlc2_bgmusic_bossBattle_v1.ogg"] = {
+		size = 2205437
+	},
+	["kr1-desktop/sounds/files/kr5_dlc2_bgmusic_preparation1_v1.ogg"] = {
+		size = 2226327
+	},
+	["kr1-desktop/sounds/files/kr5_dlc2_bgmusic_preparation2_v1.ogg"] = {
+		size = 2659848
+	},
+	["kr1-desktop/sounds/files/kr5_dlc2_exploracion_v3.ogg"] = {
+		size = 2123916
+	},
+	["kr1-desktop/sounds/files/kr5_dlc2_exploracion_variacion_v2.ogg"] = {
+		size = 1938593
+	},
+	["kr1-desktop/sounds/files/kr5_dlc2_guerra_v2.ogg"] = {
+		size = 1918821
+	},
+	["kr1-desktop/sounds/files/kr5_dlc2_guerra_variacion_v2.ogg"] = {
+		size = 2258869
 	},
 	["kr1-desktop/sounds/files/kr5_sfx_UIgate-close.ogg"] = {
 		size = 59623

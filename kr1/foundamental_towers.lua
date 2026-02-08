@@ -121,10 +121,12 @@ tt.tower.terrain_style = TERRAIN_STYLE_FACTORY
 tt.render.sprites[1].name = "build_terrain_0006"
 tt = E:register_t("tower_holder_sea_of_trees_10", "tower_holder")
 tt.tower.terrain_style = TERRAIN_STYLE_WUKONG_1
-tt.render.sprites[1].name = "build_terrain_0025"
+-- tt.render.sprites[1].name = "build_terrain_0025"
+tt.render.sprites[1].name = "build_terrain_0001"
 tt = E:register_t("tower_holder_sea_of_trees_11", "tower_holder")
 tt.tower.terrain_style = TERRAIN_STYLE_WUKONG_2
-tt.render.sprites[1].name = "build_terrain_0026"
+-- tt.render.sprites[1].name = "build_terrain_0026"
+tt.render.sprites[1].name = "build_terrain_0001"
 tt = E:register_t("tower_holder_sea_of_trees_12", "tower_holder")
 tt.tower.terrain_style = TERRAIN_STYLE_WUKONG_3
 tt.render.sprites[1].name = "build_terrain_0027"
@@ -750,17 +752,16 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {2, 255}, {2.5, 255}, {4.5, 0}}
 tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
----龙魂宝壶 木
 --#endregion
---#region tower_holder_blocked_elemental_wood_b
-tt = RT("tower_holder_blocked_elemental_wood_b", "tower_holder_blocked_elemental")
 
+---龙魂宝壶 木
+--#region tower_holder_blocked_elemental_wood
+tt = RT("tower_holder_blocked_elemental_wood", "tower_holder_blocked_elemental")
 E:add_comps(tt, "main_script")
-
 b = balance.specials.terrain_8.elemental_holders.wooden_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
-tt.info.i18n_key = "BLOCKED_ELEMENTAL_TOWER_WOOD"
+tt.info.i18n_key = "SPECIAL_REPAIR_HOLDER_ELEMENTAL_WOOD"
 tt.tower.type = "holder_blocked_elemental_wood"
 tt.tower_holder.unblock_price = b.price
 tt.tower.menu_offset = v(0, 35)
@@ -790,7 +791,7 @@ tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
 --#endregion
 --#region tower_holder_blocked_elemental_wood_enhance
-tt = RT("tower_holder_blocked_elemental_wood_enhance", "tower_holder_blocked_elemental_wood_b")
+tt = RT("tower_holder_blocked_elemental_wood_enhance", "tower_holder_blocked_elemental_wood")
 tt.tower.type = "holder_blocked_elemental_wood_enhance"
 tt.tower_holder.unblock_price = 50
 ---龙魂宝壶 水
@@ -1453,3 +1454,4 @@ tt.ui.click_rect = r(-50, -30, 100, 130)
 tt.ui.hover_sprite_scale = vv(1.4)
 tt.ui.hover_sprite_offset = v(0, -8)
 tt.editor.props = {{"editor.game_mode", PT_NUMBER}}
+

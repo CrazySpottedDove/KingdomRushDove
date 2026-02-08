@@ -1,0 +1,2 @@
+local a={gale_warrior_raise={prefix="gale_warrior",to=1,from=1},gale_warrior_idle={prefix="gale_warrior",to=21,from=1},gale_warrior_walk={prefix="gale_warrior",to=53,from=22},gale_warrior_walk_down={prefix="gale_warrior",to=85,from=54},gale_warrior_walk_up={prefix="gale_warrior",to=117,from=86},gale_warrior_attack={prefix="gale_warrior",to=145,from=118},gale_warrior_special_attack={prefix="gale_warrior",to=172,from=146},gale_warrior_death={prefix="gale_warrior",to=216,from=173}}
+return a

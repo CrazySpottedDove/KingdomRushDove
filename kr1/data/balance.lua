@@ -1,4 +1,5 @@
 -- chunkname: @./kr5/balance/balance.lua
+-- 五代敌人的生命应取老兵难度，因为后面又乘了系数。
 local function v(v1, v2)
 	return {
 		x = v1,

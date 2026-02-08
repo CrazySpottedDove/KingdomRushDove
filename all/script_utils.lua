@@ -4608,4 +4608,44 @@ SU.y_hero_wait = SU.y_soldier_wait
 SU.y_hero_animation_wait = SU.y_soldier_animation_wait
 SU.hero_interrupted = SU.soldier_interrupted
 
+function SU.find_most_crowded_area(enemies, area_center, area_range, grid_size, min_enemies)
+	local grid = {}
+	local max_count = 0
+	local most_crowded_cell
+	local min_x = area_center.x - area_range
+	local min_y = area_center.y - area_range
+
+	for _, enemy in ipairs(enemies) do
+		local x = math.floor((enemy.pos.x - min_x) / grid_size)
+		local y = math.floor((enemy.pos.y - min_y) / grid_size)
+		local key = x .. "," .. y
+
+		grid[key] = grid[key] or {
+			sum_x = 0,
+			sum_y = 0,
+			count = 0
+		}
+
+		local cell = grid[key]
+
+		cell.count = cell.count + 1
+		cell.sum_x = cell.sum_x + enemy.pos.x
+		cell.sum_y = cell.sum_y + enemy.pos.y
+
+		if max_count < cell.count then
+			max_count = cell.count
+			most_crowded_cell = {
+				x = cell.sum_x / cell.count,
+				y = cell.sum_y / cell.count
+			}
+		end
+	end
+
+	if min_enemies <= max_count then
+		return most_crowded_cell, max_count
+	else
+		return nil, 0
+	end
+end
+
 return SU

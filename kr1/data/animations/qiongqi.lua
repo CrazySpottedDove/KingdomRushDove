@@ -1,0 +1,2 @@
+local a={qiongqi_fx_fly={prefix="qiongqi_fx_fly",to=30,from=1},qiongqi_attack={prefix="qiongqi_attack",to=10,from=1},qiongqi_fx_death_in={prefix="qiongqi_fx_death",to=46,from=1},qiongqi_creep_idle={prefix="qiongqi_creep",to=30,from=1},qiongqi_creep_walk={prefix="qiongqi_creep",to=60,from=31},qiongqi_creep_walk_front={prefix="qiongqi_creep",to=90,from=61},qiongqi_creep_walk_down={prefix="qiongqi_creep",to=120,from=91},qiongqi_creep_attack={prefix="qiongqi_creep",to=161,from=121},qiongqi_creep_death={prefix="qiongqi_creep",to=206,from=162}}
+return a

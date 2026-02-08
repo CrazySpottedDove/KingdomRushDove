@@ -1,0 +1,2 @@
+local a={flame_guard_idle={prefix="flame_guard_creep",to=1,from=1},flame_guard_walk={prefix="flame_guard_creep",to=21,from=2},flame_guard_walkdown={prefix="flame_guard_creep",to=41,from=22},flame_guard_walkup={prefix="flame_guard_creep",to=61,from=42},flame_guard_attack_01={prefix="flame_guard_creep",to=104,from=62},flame_guard_attack_02={prefix="flame_guard_creep",to=147,from=105},flame_guard_death={prefix="flame_guard_creep",to=197,from=148},flame_guard_raise={prefix="flame_guard_creep",to=1,from=1}}
+return a

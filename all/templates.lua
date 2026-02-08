@@ -1254,3 +1254,8 @@ tt.skip_hide_modifier_self = true
 tt.allows_duplicates = false
 tt.replaces_lower = false
 tt.resets_same = false
+
+tt = E:register_t("abstract_fx_mod_in_hit_pos", "modifier")
+E:add_comps(tt, "render")
+tt.main_script.update = scripts.mod_fx_in_hit_pos.update
+tt.multi_sprite_fx_update = scripts.multi_sprite_fx.update

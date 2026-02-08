@@ -9722,4 +9722,40 @@ function scripts.aura_tower_holder_capture.update(this, store, script)
 	queue_remove(store, this)
 end
 
+scripts.editor_mask = {}
+
+function scripts.editor_mask.insert(this, store, script)
+	if this.show_in_editor == nil then
+		return true
+	end
+
+	if this.show_in_editor then
+		U.sprites_show(this, nil, nil, true)
+	else
+		U.sprites_hide(this, nil, nil, true)
+	end
+
+	return true
+end
+
+scripts.mod_fx_in_hit_pos = {}
+
+function scripts.mod_fx_in_hit_pos.update(this, store, script)
+	local target = store.entities[this.modifier.target_id]
+
+	if not target then
+		queue_remove(store, this)
+
+		return
+	end
+
+	this.pos = target.pos
+
+	for i = 1, #this.render.sprites do
+		this.render.sprites[i].offset = target.unit.hit_offset
+	end
+
+	return this.multi_sprite_fx_update(this, store, script)
+end
+
 return scripts

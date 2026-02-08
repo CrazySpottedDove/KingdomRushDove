@@ -1,0 +1,123 @@
+#	COMANDOS					1					2					3					4					5					6			
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3
+#	level properties																																	
+	description	rodri mayo																																
+	lives	1																																
+	gold	1700																																
+	gems	150																																
+	enemy_prefix	enemy_																																
+	default_increment	1																																
+	default_interval	20																																
+#	expected gold	1200																																
+#	stage total gold	3920																																
+#	stage gold curve																																	
+#	WAVE 1																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox																						
+#	cant.					0	0	0	0		29	0																						
+#	gold	435				0	0	0	0		435	0																						
+	wave		1		-1																													
+					0		fire_fox		fire_fox																									
+					0.5			    	fire_fox																									
+					0.33			fire_fox																										
+					9							fire_fox		fire_fox																				
+					0.43							fire_fox	fire_fox	fire_fox																				
+					0.43							fire_fox		fire_fox																				
+					9.5		fire_fox		fire_fox																									
+					0.4			fire_fox	fire_fox																									
+					0.55		fire_fox	fire_fox																										
+					0.4		fire_fox		fire_fox																									
+					0.55		fire_fox	fire_fox																										
+					0.4		fire_fox	fire_fox	fire_fox																									
+					4								fire_fox																					
+					1.5							fire_fox																						
+					1.25									fire_fox																				
+					1.5							fire_fox																						
+					1.25									fire_fox																				
+																																		
+																																		
+#	WAVE 2																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox																						
+#	cant.					0	6	0	8		5	3																						
+#	gold	635				0	180	0	200		75	180																						
+#	wave		2																															
+	wait				6																													
+					0								nine_tailed_fox																					
+					10																		blaze_raider											
+					5.5				fire_fox													blaze_raider	fire_phoenix	blaze_raider										
+					5			fire_fox															blaze_raider											
+					6.5		fire_fox															blaze_raider	fire_phoenix	blaze_raider										
+					26		nine_tailed_fox																											
+					5.5									nine_tailed_fox																				
+					1			fire_phoenix																										
+					2		fire_phoenix																											
+					1			fire_fox																										
+					2				fire_phoenix																									
+					5			fire_phoenix																										
+					2		fire_phoenix		fire_phoenix																									
+					3			fire_fox																										
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+#	WAVE 3																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox																						
+#	cant.					0	8	0	4		11	0																						
+#	gold	505				0	240	0	100		165	0																						
+#	wave		3																															
+	wait				15																													
+					0																											blaze_raider		
+					1																								fire_fox					blaze_raider
+					1																						fire_fox							
+					5								fire_fox											fire_fox								blaze_raider		
+					4								fire_fox									blaze_raider												blaze_raider
+					3.5								fire_fox										fire_fox											
+					4.2								fire_fox									blaze_raider												
+					3								fire_fox										blaze_raider											
+					1.5																			fire_phoenix										
+					2								fire_fox									fire_phoenix												
+					3.5								fire_fox											blaze_raider										
+					4																	fire_phoenix												
+					3																		fire_phoenix											
+																																		
+																																		
+																																		
+																																		
+																																		
+#																																		
+#																																		
+#	WAVE 4																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox																						
+#	cant.					0	0	0	3		26	3																						
+#	gold	645				0	0	0	75		390	180																						
+#	wave		4																															
+					15		nine_tailed_fox																											
+					7								nine_tailed_fox																					
+					1.5		fire_fox		fire_fox																									
+					0.45		fire_fox	fire_fox	fire_fox																									
+					0.5			fire_fox	fire_fox																									
+					0.4		fire_fox	fire_fox	fire_fox																									
+					16														nine_tailed_fox															
+					3								fire_phoenix																					
+					3							fire_phoenix																						
+					3									fire_phoenix																				
+					4								fire_fox	fire_fox																				
+					0.5							fire_fox	fire_fox																					
+					0.4							fire_fox		fire_fox																				
+					0.55								fire_fox																					
+					0.4							fire_fox	fire_fox	fire_fox																				
+					0.55							fire_fox	fire_fox	fire_fox																				
+					0.5							fire_fox	fire_fox	fire_fox																				
+																																		
+																																		
+																																		
+																																		
+#	WAVE 5																																	
+#	enemies					flame_guard	blaze_raider	wuxian	fire_phoenix		fire_fox	nine_tailed_fox																						
+#	cant.					0	0	0	0		0	0																						
+#	gold	0				0	0	0	0		0	0																						
+#	wave		5																															
+																																		
+	#																																	

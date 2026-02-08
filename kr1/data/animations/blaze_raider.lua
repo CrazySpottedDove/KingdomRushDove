@@ -1,0 +1,2 @@
+local a={blaze_rider_hit_run={prefix="blaze_rider_hit",to=10,from=1},blaze_rider_idle={prefix="blaze_rider",to=1,from=1},blaze_rider_walk={prefix="blaze_rider",to=25,from=2},blaze_rider_walk_down={prefix="blaze_rider",to=49,from=26},blaze_rider_walk_up={prefix="blaze_rider",to=73,from=50},blaze_rider_attk_1={prefix="blaze_rider",to=116,from=74},blaze_rider_attk_2={prefix="blaze_rider",to=144,from=117},blaze_rider_attk_3={prefix="blaze_rider",to=180,from=145},blaze_rider_death={prefix="blaze_rider",to=228,from=181}}
+return a
