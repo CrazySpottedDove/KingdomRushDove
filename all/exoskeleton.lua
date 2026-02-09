@@ -2,25 +2,16 @@
 local log = require("klua.log"):new("exoskeleton")
 local FS = love.filesystem
 local A = require("animation_db")
-local KRN = KR_NATIVE and require("krn")
 local EXO = {}
 
 EXO.exos = {}
 EXO.exos_count = {}
 EXO.db = {}
-EXO.supported_extensions = KRN and {"exo3mp"} or {"exo3", "exo", "lua"}
+EXO.supported_extensions = {"exo3", "exo", "lua"}
 EXO.base_path = KR_PATH_GAME .. "/data/exoskeletons"
 EXO.exo_lists_to_load = {}
 
 function EXO:load_kui(name)
-	log.paranoid("loading kui exo %s", name)
-
-	if KRN then
-		local anis, max_parts = KRN.exo_db_load_kui(name, EXO.base_path, "kui")
-
-		return anis, max_parts
-	end
-
 	local exo = self:load_lua(name)
 
 	exo.is_kui = true
@@ -101,25 +92,11 @@ function EXO:load_groups(groups)
 			end
 		end
 
-		if KRN then
-			if #exo_names > 0 then
-				KRN.exo_db_load(A.db, exo_names, group_path, g)
-			end
-		else
-			EXO:load(exo_names, g, group_path)
-		end
+		EXO:load(exo_names, g, group_path)
 	end
 end
 
 function EXO:unload(exo_name)
-	log.paranoid("unloading exo %s", exo_name)
-
-	if KRN then
-		KRN.exo_db_unload(exo_name)
-
-		return
-	end
-
 	local exo = self.exos[exo_name]
 
 	if not exo then
@@ -404,27 +381,19 @@ function EXO:load_fake_sprites_to_db(exo)
 end
 
 function EXO:f(fn)
-	if KRN then
-		return fn
-	else
-		local exo_frame = self.db[fn]
+	local exo_frame = self.db[fn]
 
-		if not exo_frame then
-			log.error("Could not find exo_frame called: %s", fn)
+	if not exo_frame then
+		log.error("Could not find exo_frame called: %s", fn)
 
-			return nil
-		end
-
-		return exo_frame
+		return nil
 	end
+
+	return exo_frame
 end
 
 function EXO:get_last_attach_point_xform(entity, sprite_id, name)
-	if KRN then
-		return KRN.exo_db_get_last_attach_point_xform(entity.id, sprite_id, name)
-	end
-
-	local f = entity.render and entity.render.frames[sprite_id]
+	local f = entity.render and entity.render.sprites[sprite_id]
 
 	if not f then
 		log.error("Could not find frame for sprite_id:%s in entity:%s (%s)", sprite_id, entity.id, entity.template_name)
@@ -452,15 +421,9 @@ function EXO:get_last_attach_point_xform(entity, sprite_id, name)
 end
 
 function EXO:get_last_attach_point_xform_kui(frame_name, attach_name)
-	if KRN then
-		return KRN.exo_get_attach_point_xform_kui(frame_name, attach_name)
-	end
 end
 
 function EXO:draw_frame_kui(name, scale_factor, red, green, blue, alpha)
-	if KRN then
-		KRN.exo_draw_frame_kui(name, scale_factor, red, green, blue, alpha)
-	end
 end
 
 function EXO:hide_parts_with_string(sprite, s)

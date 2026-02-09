@@ -20656,6 +20656,7 @@ tt.render.sprites[3].sort_y_offset = 2
 tt.render.sprites[3].z = Z_OBJECTS
 tt.render.sprites[4] = E:clone_c("sprite")
 tt.render.sprites[4].prefix = "sheepylava_crater_3"
+-- 铁皮此处代码基于bug运行，修复不了。
 tt.render.sprites[4].name = "idle"
 tt.render.sprites[4].animated = true
 tt.render.sprites[4].z = Z_OBJECTS
@@ -23170,3 +23171,154 @@ tt.render.sprites[2].anchor = v(0.5, 0.5128205128205128)
 tt.render.sprites[2].r = math.rad(180)
 tt.sound_events.insert = "EnemyWarlockRangedCast"
 tt.sound_events.hit = "EnemyWarlockRangedImpact"
+
+tt = E:register_t("controller_stage_32_boss", "decal_scripted")
+
+E:add_comps(tt, "editor", "ui")
+
+b = balance.enemies.wukong.boss_dragon
+tt.boss_controler_balance = b
+tt.main_script.insert = scripts.controller_stage_32_boss.insert
+tt.main_script.update = scripts.controller_stage_32_boss.update
+tt.toggle_possessed = scripts.controller_stage_32_boss.toggle_possessed
+tt.show_possessed = scripts.controller_stage_32_boss.show_possessed
+tt.hide_possessed = scripts.controller_stage_32_boss.hide_possessed
+tt.render.sid_dragon = 1
+tt.exo_anim_map = {
+	under_in = "dragon_redboy_BDef",
+	under_samadhi_r_end = "dragon_redboy_BDef",
+	idle = "dragon_redboy_CDef",
+	under_samadhi_r_in = "dragon_redboy_BDef",
+	under_samadhi_r_loop = "dragon_redboy_BDef",
+	death_end_01 = "dragon_redboy_ADef",
+	lava_crack = "dragon_redboy_CDef",
+	under_samadhi_l_end = "dragon_redboy_BDef",
+	under_screen_block = "dragon_redboy_BDef",
+	death_in = "dragon_redboy_ADef",
+	under_transform = "dragon_redboy_BDef",
+	death_end_02 = "dragon_redboy_ADef",
+	attack_basic_c = "dragon_redboy_ADef",
+	under_talk = "dragon_redboy_BDef",
+	stun_r = "dragon_redboy_CDef",
+	under_idle = "dragon_redboy_BDef",
+	under_samadhi_l_loop = "dragon_redboy_BDef",
+	under_out = "dragon_redboy_CDef",
+	death_eat_loop_b = "dragon_redboy_ADef",
+	stun_l = "dragon_redboy_CDef",
+	apear_in = "dragon_redboy_ADef",
+	death_eat_loop_d = "dragon_redboy_ADef",
+	talk = "dragon_redboy_CDef",
+	death_eat_loop_a = "dragon_redboy_ADef",
+	under_samadhi_l = "dragon_redboy_BDef",
+	death_eat_loop_c = "dragon_redboy_ADef"
+}
+tt.render.sprites[tt.render.sid_dragon].prefix = tt.exo_anim_map.idle
+tt.render.sprites[tt.render.sid_dragon].animated = true
+tt.render.sprites[tt.render.sid_dragon].exo = true
+tt.render.sprites[tt.render.sid_dragon].name = "idle"
+tt.render.sprites[tt.render.sid_dragon].z = Z_OBJECTS
+tt.render.sprites[tt.render.sid_dragon].offset = v(0, 20)
+tt.death_taps_per_mouth_phase = b.death_taps_per_mouth_phase
+tt.bossfight_start_meteorite_side = balance.enemies.wukong.boss_redboy_teen.skyfire.bossfight_start_meteorite_side
+tt.death_duration = b.death_duration
+tt.ui_block_hand_fx = "fx_redboy_teen_hand"
+tt.hand_decal_t = "dlc2_generic_tap_hand"
+tt.boss_unit_spawn = "boss_redboy_teen"
+tt.decal_fissure_fixed = "decal_dlc_wukong_flaming_ground"
+tt.decal_fissure = "decal_stage_32_boss_fissure_ability"
+tt.mod_tower_block = "mod_stage_32_tower_block"
+tt.tower_block_mouth_fx = "fx_stage_32_dragon_mouth_fire"
+tt.tower_block_mouth_fx_offset = v(0, 0)
+tt.down_bubbles_decal = "decal_stage_32_boss_bubbles"
+tt.ui.can_click = false
+tt.ui.can_select = false
+tt.ui.has_nav_mesh = false
+tt.ui.click_rect = r(-140, -100, 280, 400)
+tt = E:register_t("decal_stage_32_boss_bubbles", "decal_scripted")
+
+E:add_comps(tt, "tween")
+
+tt.main_script.update = scripts.decal_stage_32_boss_bubbles.update
+tt.render.sprites[1].prefix = "dragon_redboy_bubblesDef"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].alpha = 0
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].draw_order = 2
+tt.render.sprites[1].offset = v(0, 15)
+tt.render.sprites[1].sort_y_offset = -tt.render.sprites[1].offset.y
+tt.down_splash_fx = "fx_stage_32_dragon_down_splash"
+tt.tween.remove = false
+tt.tween.disabled = true
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 0}, {fts(4), 255}}
+tt.tween.props[1].loop = false
+
+tt = E:register_t("mod_stage_32_tower_block", "mod_hide_tower")
+
+E:add_comps(tt, "render")
+
+tt.main_script.update = scripts.mod_stage_32_tower_blocked.update
+tt.main_script.remove = nil
+tt.render.sid_lava = 1
+tt.render.sprites[tt.render.sid_lava].prefix = "dragon_rock_stunDef"
+tt.render.sprites[tt.render.sid_lava].exo = true
+tt.render.sprites[tt.render.sid_lava].name = "idle"
+tt.render.sprites[tt.render.sid_lava].animated = true
+tt.render.sprites[tt.render.sid_lava].draw_order = 20
+tt.render.sprites[tt.render.sid_lava].z = Z_OBJECTS
+tt.sound_restore = "Stage22TowerRestore"
+tt.repair_cost = nil
+tt.hand_decal_t = "dlc2_generic_tap_hand"
+tt.skip_modifiers = {"mod_boss_crocs_tower_eat"}
+tt.click_rect = r(-30, 0, 60, 60)
+tt.menu_offset = v(0, 12)
+tt.modifier.duration = nil
+
+tt = E:register_t("mod_stage_32_lava_splash", "modifier")
+tt.main_script.insert = scripts.mod_track_target.insert
+tt.main_script.update = scripts.mod_stage_32_lava_splash.update
+tt.paths_y = {
+	[2] = 555
+}
+tt.paths_y_big = {
+	[2] = 555
+}
+tt.modifier.duration = 1e+99
+tt.fx = "fx_stage_32_lava_splash"
+tt.fx_big = "fx_stage_32_lava_splash_big"
+tt = E:register_t("mod_stage_32_lava_splash_2", "mod_stage_32_lava_splash")
+tt.paths_y = {
+	[3] = 555
+}
+tt.paths_y_big = {
+	[3] = 555
+}
+tt.fx = "fx_stage_32_lava_splash_2"
+tt.fx_big = "fx_stage_32_lava_splash_big_2"
+tt = E:register_t("mod_stage_35_lava_splash", "mod_stage_32_lava_splash")
+tt.main_script.insert = scripts.mod_stage_35_lava_splash.insert
+tt.main_script.update = scripts.mod_stage_35_lava_splash.update
+tt.main_script.remove = scripts.mod_stage_35_lava_splash.remove
+tt.apply_if_enemy_is_to_right = true
+tt.paths_x = {
+	[15] = 0,
+	[7] = 0
+}
+tt.paths_x_big = {
+	[15] = 0,
+	[7] = 0
+}
+tt.fx = "fx_stage_35_lava_splash"
+tt.fx_big = "fx_stage_35_lava_splash_big"
+tt = E:register_t("mod_stage_35_water_splash", "mod_stage_35_lava_splash")
+tt.apply_if_enemy_is_to_right = false
+tt.paths_x = {
+	[8] = 1025
+}
+tt.paths_x_big = {
+	[8] = 1025
+}
+tt.fx = "fx_stage_35_water_splash"
+tt.fx_big = "fx_stage_35_water_splash_big"

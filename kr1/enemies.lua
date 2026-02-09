@@ -13023,11 +13023,10 @@ tt.unit.blood_color = BLOOD_GRAY
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
 tt.vis.flags = bor(F_ENEMY)
 tt.sound_events.death = "EnemyBurningTreantDeath"
+
 tt = E:register_t("enemy_ash_spirit", "enemy_KR5")
 b = balance.enemies.wukong.ash_spirit
-
 E:add_comps(tt, "melee")
-
 tt.info.enc_icon = 100
 tt.info.portrait = "kr5_info_portraits_enemies_0105"
 tt.enemy.gold = b.gold
@@ -13511,13 +13510,12 @@ tt.unit.size = UNIT_SIZE_SMALL
 tt.unit.blood_color = BLOOD_RED
 tt.health_bar.type = HEALTH_BAR_SIZE_SMALL
 tt.sound_events.death = "EnemyWarlockDeath"
+
 tt = E:register_t("boss_redboy_teen", "boss")
 b = balance.enemies.wukong.boss_redboy_teen
-
 E:add_comps(tt, "melee", "timed_attacks")
-
 tt.scale = 0.8
-tt.enemy.lives_cost = 999
+tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = v(45 * tt.scale, 0)
 tt.health.hp_max = b.hp
 tt.health.magic_armor = b.magic_armor
@@ -13673,10 +13671,9 @@ tt.vis.flags_jumping = bor(F_ENEMY, F_BOSS)
 tt.vis.bans_jumping = bor(F_RANGED, F_BLOCK, F_MOD)
 tt.vis.flags_normal = bor(F_ENEMY, F_BOSS)
 tt.vis.bans_normal = 0
+
 tt = E:register_t("enemy_citizen", "enemy_KR5")
-
 E:add_comps(tt, "melee")
-
 b = balance.enemies.wukong.citizen
 tt.main_script.insert = scripts.enemy_citizen.insert
 tt.enemy.gold = b.gold

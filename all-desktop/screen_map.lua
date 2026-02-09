@@ -1010,7 +1010,7 @@ function MapView:initialize(screen_w, screen_h)
 		self.screen_w = screen_w
 		self.screen_h = screen_h
 		self.stime = 0
-		self.max_scroll_speed = 280
+		self.max_scroll_speed = 350
 		self.scrolling_dir = 0
 		self.ma_under_layer = KView:new(V.v(screen_w, screen_h))
 		self.ma_under_layer.propagate_on_click = true
@@ -1069,7 +1069,7 @@ function MapView:initialize(screen_w, screen_h)
 		self.screen_w = screen_w
 		self.screen_h = screen_h
 		self.stime = 0
-		self.max_scroll_speed = 280
+		self.max_scroll_speed = 350
 		self.scrolling_dir = 0
 		self.ma_under_layer = KView:new(V.v(screen_w, screen_h))
 		self.ma_under_layer.propagate_on_click = true
@@ -1128,7 +1128,7 @@ function MapView:initialize(screen_w, screen_h)
 		self.screen_w = screen_w
 		self.screen_h = screen_h
 		self.stime = 0
-		self.max_scroll_speed = 280
+		self.max_scroll_speed = 350
 		self.scrolling_dir = 0
 		self.ma_under_layer = KView:new(V.v(screen_w, screen_h))
 		self.ma_under_layer.propagate_on_click = true
@@ -1187,7 +1187,7 @@ function MapView:initialize(screen_w, screen_h)
 		self.screen_w = screen_w
 		self.screen_h = screen_h
 		self.stime = 0
-		self.max_scroll_speed = 280
+		self.max_scroll_speed = 350
 		self.scrolling_dir = 0
 		self.ma_under_layer = KView:new(V.v(screen_w, screen_h))
 		self.ma_under_layer.propagate_on_click = true

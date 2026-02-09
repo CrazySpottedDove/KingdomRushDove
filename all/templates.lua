@@ -707,6 +707,7 @@ tt.main_script.insert = scripts.mod_freeze.insert
 tt.main_script.update = scripts.mod_freeze.update
 tt.main_script.remove = scripts.mod_freeze.remove
 tt.freeze_decal_name = "decal_freeze_enemy"
+
 tt = E:register_t("decal_freeze_enemy", "decal")
 tt.shader = "p_tint"
 tt.shader_args = {

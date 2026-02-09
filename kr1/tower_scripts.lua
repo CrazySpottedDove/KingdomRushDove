@@ -17464,7 +17464,7 @@ function scripts.tower_hermit_toad.update(this, store)
 						sprites_offset.x, sprites_offset.y = V.sub(target.pos.x, target.pos.y, es.pos.x, es.pos.y)
 
 						if not is_exo then
-							es.render = table.deepclone(target.render)
+							es.render = U.render_clone(target.render)
 
 							for i, s in ipairs(es.render.sprites) do
 								s.shader = es.shader

@@ -5,6 +5,7 @@ local scripts = require("scripts")
 local AC = require("achievements")
 local log = require("lib.klua.log"):new("game_scripts")
 local SH = require("klove.shader_db")
+local EXO = require("all.exoskeleton")
 require("lib.klua.table")
 require("all.constants")
 
@@ -5426,7 +5427,7 @@ function scripts.mod_bram_slap.update(this, store)
 	local es = E:create_entity("decal_bram_enemy_clone")
 
 	es.pos.x, es.pos.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
-	es.render = table.deepclone(target.render)
+	es.render = U.render_clone(target.render)
 	es.render.sprites[1].anchor = this.custom_anchors[target.template_name] or this.custom_anchors.default
 	es.tween.disabled = nil
 	es.tween.ts = store.tick_ts
@@ -12648,4 +12649,927 @@ function scripts.aura_spider_webs.update(this, store, script)
 
 	signal.emit("aura-apply-mod-victims", this, victims_count)
 	queue_remove(store, this)
+end
+
+scripts.boss_redboy_teen = {}
+
+function scripts.boss_redboy_teen.insert(this, store, script)
+	if this.render then
+		for _, s in pairs(this.render.sprites) do
+			s.ts = store.tick_ts
+		end
+	end
+
+	if this.melee then
+		this.melee.order = U.attack_order(this.melee.attacks)
+
+		for _, a in pairs(this.melee.attacks) do
+			a.ts = store.tick_ts
+		end
+	end
+
+	if this.ranged then
+		this.ranged.order = U.attack_order(this.ranged.attacks)
+
+		for _, a in pairs(this.ranged.attacks) do
+			a.ts = store.tick_ts
+		end
+	end
+
+	if this.auras then
+		for _, a in pairs(this.auras.list) do
+			a.ts = store.tick_ts
+
+			if a.cooldown == 0 then
+				local e = E:create_entity(a.name)
+
+				e.pos = V.vclone(this.pos)
+				e.aura.level = this.unit.level
+				e.aura.source_id = this.id
+				e.aura.ts = store.tick_ts
+
+				queue_insert(store, e)
+			end
+		end
+	end
+
+	this.enemy.gold_bag = math.ceil(this.enemy.gold * 0.3)
+
+	if this.water and this.spawn_data and this.spawn_data.water_ignore_pi then
+		this.water.ignore_pi = this.spawn_data.water_ignore_pi
+	end
+
+	return true
+end
+
+function scripts.boss_redboy_teen.update(this, store, script)
+	local a_summon = this.timed_attacks.list[1]
+	local a_block_power = this.timed_attacks.list[2]
+	local a_meteorite = this.timed_attacks.list[3]
+	local a_fireabsorb = this.timed_attacks.list[4]
+	local a_stun_towers = this.timed_attacks.list[5]
+	local a
+	local change_path_node_start = P:nearest_nodes(this.change_path_node_start_pos.x, this.change_path_node_start_pos.y, {this.nav_path.pi})[1][3]
+	local jumped = false
+
+	a_summon.ts = store.tick_ts - a_summon.cooldown + a_summon.first_cooldown
+	a_block_power.ts = store.tick_ts - a_block_power.cooldown + a_block_power.first_cooldown
+	a_fireabsorb.ts = store.tick_ts - a_fireabsorb.cooldown + a_fireabsorb.first_cooldown
+	a_stun_towers.ts = store.tick_ts - a_stun_towers.cooldown + a_stun_towers.first_cooldown
+	a_meteorite.activate_on_nodes = {}
+
+	for path_i, mconfig_array in pairs(a_meteorite.activate_on_positions) do
+		a_meteorite.activate_on_nodes[path_i] = {}
+
+		for _, mconfig in pairs(mconfig_array) do
+			local npos = P:nearest_nodes(mconfig.pos.x, mconfig.pos.y, {path_i})[1][3]
+
+			table.insert(a_meteorite.activate_on_nodes[path_i], {
+				node = npos,
+				side = mconfig.side
+			})
+		end
+	end
+
+	if this.render.sprites[1].name == "spawn" then
+		if this.sound_events and this.sound_events.raise then
+			S:queue(this.sound_events.raise, this.sound_events.raise_args)
+		end
+
+		this.health_bar.hidden = true
+
+		local an, af = U.animation_name_facing_point(this, "spawn", this.motion.dest)
+
+		U.y_animation_play(this, an, af, store.tick_ts, 1)
+
+		if not this.health.dead then
+			this.health_bar.hidden = nil
+		end
+	end
+
+	local function set_exo_for_anim(anim)
+		this.render.sprites[1].prefix = this.exo_anim_map[anim]
+	end
+
+	this.fly_time_up = 0.5
+	this.fly_time_down = 0.4
+	this.fly_offset_y = 0
+
+	local function y_fly(to, dest_pi, skip_landing)
+		this.vis.flags = this.vis.flags_jumping
+		this.vis.bans = this.vis.bans_jumping
+
+		local from = V.vclone(this.pos)
+
+		SU.remove_modifiers(store, this)
+
+		local dragon_controller
+
+		for k, v in pairs(store.entities) do
+			if v.template_name == "controller_stage_32_boss" then
+				dragon_controller = v
+			end
+		end
+
+		local use_attach_point
+
+		if type(to) == "string" then
+			use_attach_point = to
+			to = EXO:get_last_attach_point_xform(dragon_controller, 1, use_attach_point)
+		end
+
+		local af = to.x < from.x
+
+		S:queue(this.sound_jump)
+
+		local jump_in_anim = this.is_dead and "jump_in_02" or "jump_in"
+		local jump_fly_up_anim = this.is_dead and "jump_fly_up_02" or "jump_fly_up"
+		local jump_fly_down_anim = this.is_dead and "jump_fly_down_02" or "jump_fly_down"
+		local hide_possessed_delay = 0.1
+		local hide_possessed_delay_dec_mult = 0.9
+		local hide_possessed_delay_min = 0.05
+		local hide_possessed_max_times = 9
+		local hide_possessed_times = 0
+		local hide_possessed_ts = store.tick_ts + hide_possessed_delay
+
+		local function manage_hide_possessed()
+			if store.tick_ts > hide_possessed_ts and hide_possessed_times < hide_possessed_max_times then
+				if hide_possessed_times == hide_possessed_max_times - 1 then
+					dragon_controller:hide_possessed()
+
+					hide_possessed_times = 1e+99
+
+					return
+				end
+
+				local fire_fx = E:create_entity("fx_stage_32_redboy_transform_fire")
+
+				fire_fx.render.sprites[1].ts = store.tick_ts
+				fire_fx.render.sprites[1].track_attach_point = "Base"
+				fire_fx.render.sprites[1].track_sprite_id = 1
+				fire_fx.render.sprites[1].track_id = dragon_controller.id
+				fire_fx.render.sprites[1].offset = V.v(28, -65)
+				fire_fx.render.sprites[1].scale = V.vv(0.6)
+
+				queue_insert(store, fire_fx)
+
+				fire_fx = E:create_entity("fx_stage_32_redboy_transform_fire")
+				fire_fx.render.sprites[1].ts = store.tick_ts
+				fire_fx.render.sprites[1].track_attach_point = "Base"
+				fire_fx.render.sprites[1].track_sprite_id = 1
+				fire_fx.render.sprites[1].track_id = dragon_controller.id
+				fire_fx.render.sprites[1].offset = V.v(-28, -65)
+				fire_fx.render.sprites[1].flip_x = true
+				fire_fx.render.sprites[1].scale = V.vv(0.6)
+
+				queue_insert(store, fire_fx)
+
+				hide_possessed_times = hide_possessed_max_times - 1
+				hide_possessed_ts = store.tick_ts + hide_possessed_delay
+			end
+		end
+
+		set_exo_for_anim(jump_in_anim)
+		U.y_animation_play(this, jump_in_anim, af, store.tick_ts, 1)
+
+		local fx = E:create_entity("fx_redboy_teen_smoke")
+
+		fx.pos = V.vclone(this.pos)
+		fx.render.sprites[1].ts = store.tick_ts
+
+		queue_insert(store, fx)
+		set_exo_for_anim(jump_fly_up_anim)
+		U.animation_start(this, jump_fly_up_anim, af, store.tick_ts, true, 1, true)
+
+		local start_ts = store.tick_ts
+		local phase, xPhase
+
+		repeat
+			if use_attach_point then
+				to = EXO:get_last_attach_point_xform(dragon_controller, 1, use_attach_point)
+			end
+
+			phase = (store.tick_ts - start_ts) / this.fly_time_up
+			xPhase = phase / 2
+			this.pos.x = U.ease_value(from.x, to.x, xPhase, "sine-in")
+			this.pos.y = U.ease_value(from.y, 600, phase, "sine-in") + this.fly_offset_y
+
+			if this.is_dead then
+				manage_hide_possessed()
+			end
+
+			coroutine.yield()
+		until phase >= 1
+
+		start_ts = store.tick_ts
+
+		set_exo_for_anim(jump_fly_down_anim)
+		U.animation_start(this, jump_fly_down_anim, af, store.tick_ts, true, 1, true)
+		S:queue(this.sound_falling)
+
+		repeat
+			if use_attach_point then
+				to = EXO:get_last_attach_point_xform(dragon_controller, 1, use_attach_point)
+			end
+
+			phase = (store.tick_ts - start_ts) / this.fly_time_down
+			xPhase = phase / 2 + 0.5
+			this.pos.x = U.ease_value(from.x, to.x, xPhase, "sine-in")
+			this.pos.y = U.ease_value(600, to.y, phase, "sine-out") + this.fly_offset_y
+
+			if this.is_dead then
+				manage_hide_possessed()
+			end
+
+			coroutine.yield()
+		until phase >= 1
+
+		if this.is_dead then
+			dragon_controller:hide_possessed()
+		end
+
+		S:queue(this.sound_land)
+
+		this.pos.x, this.pos.y = to.x, to.y
+
+		if not skip_landing then
+			local shake = E:create_entity("aura_screen_shake")
+
+			shake.aura.amplitude = 0.8
+			shake.aura.duration = 0.2
+			shake.aura.freq_factor = 5
+
+			queue_insert(store, shake)
+			set_exo_for_anim("jump_end")
+			U.y_animation_play(this, "jump_end", af, store.tick_ts, 1)
+			set_exo_for_anim("idle")
+			U.animation_start(this, "idle", af, store.tick_ts, true, 1, true)
+		end
+
+		this.vis.flags = this.vis.flags_normal
+		this.vis.bans = this.vis.bans_normal
+		this.nav_path.pi = dest_pi
+		this.nav_path.ni = P:nearest_nodes(this.pos.x, this.pos.y, {dest_pi})[1][3]
+	end
+
+	this.spawn_fly_time_down = 0.1
+
+	local function y_spawn_fly(to, dest_pi, skip_landing)
+		this.vis.flags = this.vis.flags_jumping
+		this.vis.bans = this.vis.bans_jumping
+
+		local from = V.vclone(this.pos)
+
+		SU.remove_modifiers(store, this)
+
+		local af = to.x < from.x
+
+		this.render.sprites[1]._sort_y_offset = this.render.sprites[1].sort_y_offset
+		this.render.sprites[1].sort_y_offset = -200
+
+		set_exo_for_anim("jump_fly_down")
+		U.animation_start(this, "jump_fly_down", af, store.tick_ts, true, 1, true)
+
+		local start_ts = store.tick_ts
+		local phase
+
+		repeat
+			phase = (store.tick_ts - start_ts) / this.spawn_fly_time_down
+			this.pos.x = U.ease_value(from.x, to.x, phase, "sine-in")
+			this.pos.y = U.ease_value(from.y, to.y, phase, "sine-out") + this.fly_offset_y
+
+			coroutine.yield()
+		until phase >= 1
+
+		this.render.sprites[1].sort_y_offset = this.render.sprites[1]._sort_y_offset
+		this.render.sprites[1]._sort_y_offset = nil
+
+		S:queue(this.sound_land)
+
+		this.pos.x, this.pos.y = to.x, to.y
+
+		if not skip_landing then
+			local shake = E:create_entity("aura_screen_shake")
+
+			shake.aura.amplitude = 0.8
+			shake.aura.duration = 0.2
+			shake.aura.freq_factor = 5
+
+			queue_insert(store, shake)
+			set_exo_for_anim("jump_end")
+			U.y_animation_play(this, "jump_end", af, store.tick_ts, 1)
+			set_exo_for_anim("idle")
+			U.animation_start(this, "idle", af, store.tick_ts, true, 1, true)
+		end
+
+		this.vis.flags = this.vis.flags_normal
+		this.vis.bans = this.vis.bans_normal
+		this.nav_path.pi = dest_pi
+		this.nav_path.ni = P:nearest_nodes(this.pos.x, this.pos.y, {dest_pi})[1][3]
+	end
+
+	local function is_after_nodes_limit(attack)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+
+		return nodes_to_goal < attack.nodes_limit
+	end
+
+	local function ready_to_jump()
+		return not jumped and this.nav_path.ni > change_path_node_start
+	end
+
+	local function ready_to_meteorite()
+		local meteorites_in_path = a_meteorite.activate_on_nodes[this.nav_path.pi]
+
+		if meteorites_in_path then
+			for k, v in pairs(meteorites_in_path) do
+				if this.nav_path.ni >= v.node then
+					return true
+				end
+			end
+		end
+
+		return false
+	end
+
+	local function ready_to_stun_towers()
+		if a_stun_towers.disabled then
+			return false
+		end
+
+		if store.tick_ts - a_stun_towers.ts < a_stun_towers.cooldown then
+			return false
+		end
+
+		if is_after_nodes_limit(a_stun_towers) then
+			SU.delay_attack(store, a_stun_towers, 1)
+
+			return false
+		end
+
+		return true
+	end
+
+	local function ready_to_block_power()
+		return false
+	end
+
+	local function ready_to_fireabsorb()
+		if store.tick_ts - a_fireabsorb.ts < a_fireabsorb.cooldown then
+			return false
+		end
+
+		if is_after_nodes_limit(a_fireabsorb) then
+			SU.delay_attack(store, a_fireabsorb, 1)
+
+			return false
+		end
+
+		local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a_fireabsorb.damage_radius, a_fireabsorb.vis_flags, a_fireabsorb.vis_bans)
+
+		if not soldiers or #soldiers == 0 then
+			return false
+		end
+
+		return true
+	end
+
+	local function ready_to_summon()
+		return false
+	end
+
+	local function break_fn()
+		if ready_to_jump() then
+			return true
+		end
+
+		if ready_to_block_power() then
+			return true
+		end
+
+		if ready_to_summon() then
+			return true
+		end
+
+		if ready_to_meteorite() then
+			return true
+		end
+
+		if ready_to_fireabsorb() then
+			return true
+		end
+
+		if ready_to_stun_towers() then
+			return true
+		end
+
+		return false
+	end
+
+	local function melee_break_fn()
+		return break_fn()
+	end
+
+	local function range_break_fn()
+		return break_fn()
+	end
+
+	local function launch_meteorite(meteor_side)
+		S:queue("Stage32RedboySamadhiAsTeen")
+		set_exo_for_anim(a_meteorite.animation_start)
+		U.animation_start(this, a_meteorite.animation_start, nil, store.tick_ts, false, 1, true)
+
+		if SU.y_enemy_wait(store, this, a_meteorite.cast_time) then
+			return false
+		end
+
+		local fireball = E:create_entity("fx_stage_32_fireball_" .. meteor_side)
+
+		fireball.pos.x, fireball.pos.y = 512, 382
+
+		LU.queue_insert(store, fireball)
+
+		if SU.y_enemy_animation_wait(this) then
+			return false
+		end
+
+		set_exo_for_anim(a_meteorite.animation_loop)
+		U.animation_start(this, a_meteorite.animation_loop, nil, store.tick_ts, true, 1, true)
+
+		if SU.y_enemy_wait(store, this, 5) then
+			return false
+		end
+
+		U.animation_start(this, a_meteorite.animation_end, nil, store.tick_ts, false, 1, true)
+		U.y_animation_play(this, a_meteorite.animation_end, nil, store.tick_ts, 1, 1)
+		set_exo_for_anim("idle")
+		U.animation_start(this, "idle", nil, store.tick_ts, true, 1, true)
+	end
+
+	local function do_taunt(key, offset_override)
+		if offset_override then
+			signal.emit("show-balloon_tutorial-pos", key, false, offset_override)
+		else
+			signal.emit("show-balloon_tutorial", key, false)
+		end
+
+		local taunt_start = store.tick_ts
+
+		set_exo_for_anim(this.is_dead and "talk_02" or "talk")
+		U.animation_start(this, this.is_dead and "talk_02" or "talk", nil, store.tick_ts, true, 1, true)
+
+		while taunt_start + 2.5 > store.tick_ts do
+			coroutine.yield()
+		end
+
+		U.y_animation_wait(this, 1, this.render.sprites[1].runs + 1)
+		set_exo_for_anim(this.is_dead and "death_in" or "idle")
+		U.animation_start(this, this.is_dead and "death_in" or "idle", nil, store.tick_ts, true, 1, true)
+	end
+
+	set_exo_for_anim("idle")
+	U.animation_start(this, "idle", true, store.tick_ts, true, 1, true)
+	U.y_wait(store, 1)
+	do_taunt("LV32_BOSS_PREFIGHT_02")
+	signal.emit("pan-zoom-camera", 2, {
+		x = 533,
+		y = 430
+	}, OVm(1, 1.2))
+	launch_meteorite("left")
+	U.y_wait(store, 1.5)
+	signal.emit("hide-curtains")
+	signal.emit("show-gui")
+	signal.emit("end-cinematic")
+	S:queue("Stage32RedboyJumpFromDragon")
+	set_exo_for_anim("jump_out")
+	U.y_animation_play(this, "jump_out", nil, store.tick_ts, 1, 1)
+
+	this.nav_path.pi = this.spawn_pos.path
+	this.nav_path.spi = 1
+	this.nav_path.ni = P:nearest_nodes(this.spawn_pos.node_pos.x, this.spawn_pos.node_pos.y, {this.nav_path.pi})[1][3]
+
+	local next, new = P:next_entity_node(this, store.tick_length)
+
+	if not next then
+		log.debug("(%s) %s has no valid next node", this.id, this.template_name)
+
+		return false
+	end
+
+	U.set_destination(this, next)
+	U.set_heading(this, next)
+
+	this.pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
+	this.render.sprites[1].track_attach_point = nil
+	this.render.sprites[1].track_sprite_id = nil
+	this.render.sprites[1].track_id = nil
+
+	signal.emit("boss_fight_start", this)
+
+	local current_manual_wave = "BOSSTEEN1"
+
+	W:start_manual_wave(current_manual_wave)
+
+	local function y_on_death()
+		S:queue("Stage32RedboyDeathStart")
+
+		local dragon_controller
+
+		for k, v in pairs(store.entities) do
+			if v.template_name == "controller_stage_32_boss" then
+				dragon_controller = v
+			end
+		end
+
+		W:stop_manual_wave(current_manual_wave)
+		LU.kill_all_enemies(store, true)
+		S:stop_all()
+		S:queue(this.sound_death)
+
+		this.is_dead = true
+
+		signal.emit("boss-killed", this)
+		signal.emit("boss_fight_end")
+		U.y_wait(store, 0.2)
+		signal.emit("show-curtains")
+		signal.emit("hide-gui")
+		signal.emit("start-cinematic")
+		signal.emit("pan-zoom-camera", 2, V.v(this.pos.x, this.pos.y), OVm(1, 1.2))
+
+		local af = false
+
+		if this.pos.x > 512 then
+			af = true
+		end
+
+		set_exo_for_anim("death_hit")
+		U.animation_start(this, "death_hit", af, store.tick_ts, false, 1, true)
+
+		while not U.animation_finished(this) do
+			coroutine.yield()
+		end
+
+		set_exo_for_anim("death_in")
+		U.animation_start(this, "death_in", nil, store.tick_ts, true, 1, true)
+
+		local wait_until_ts = store.tick_ts + 2.5
+
+		while wait_until_ts > store.tick_ts do
+			coroutine.yield()
+		end
+
+		U.y_wait(store, 1.5)
+		do_taunt("LV32_BOSS_DEATH", V.v(this.pos.x, this.pos.y + 100))
+		U.y_wait(store, 1.5)
+
+		this.render.sprites[1]._z = this.render.sprites[1].z
+		this.render.sprites[1].z = Z_OBJECTS_SKY
+
+		signal.emit("pan-zoom-camera", 2, V.v(512, 500), OVm(1, 1))
+		S:queue("Stage32RedboyDeathEnd")
+		y_fly(V.v(512, 382), this.nav_path.pi, true)
+		LU.kill_all_enemies(store, true)
+
+		store.level.bossfight_ended = true
+
+		set_exo_for_anim("baculo")
+		U.y_animation_play(this, "baculo", nil, store.tick_ts, 1, 1)
+		queue_remove(store, this)
+	end
+
+	set_exo_for_anim("jump_end_2")
+	U.animation_start(this, "jump_end_2", false, store.tick_ts, false, 1, true)
+	U.y_wait(store, fts(3))
+
+	local shake = E:create_entity("aura_screen_shake")
+
+	shake.aura.amplitude = 0.8
+	shake.aura.duration = 0.2
+	shake.aura.freq_factor = 5
+
+	queue_insert(store, shake)
+	U.y_animation_wait(this, 1)
+	set_exo_for_anim("idle")
+	U.animation_start(this, "idle", false, store.tick_ts, true, 1, true)
+
+	::label_1910_0::
+
+	while true do
+		if this.health.dead then
+			y_on_death()
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			set_exo_for_anim("idle")
+			SU.y_enemy_stun(store, this)
+		else
+			if ready_to_jump() then
+				this.ui.can_select = false
+				this.health_bar.hidden = true
+
+				local dragon_controller
+
+				for k, v in pairs(store.entities) do
+					if v.template_name == "controller_stage_32_boss" then
+						dragon_controller = v
+					end
+				end
+
+				this.render.sprites[1]._sort_y_offset = this.render.sprites[1].sort_y_offset
+				this.render.sprites[1]._z = this.render.sprites[1].z
+				this.render.sprites[1].sort_y_offset = -400
+
+				y_fly("Base", this.nav_path.pi)
+
+				this.render.sprites[1].track_attach_point = "Base"
+				this.render.sprites[1].track_sprite_id = 1
+				this.render.sprites[1].track_id = dragon_controller.id
+
+				set_exo_for_anim("idle")
+				U.animation_start(this, "idle", nil, store.tick_ts, true)
+				launch_meteorite("right")
+				set_exo_for_anim("idle")
+				U.animation_start(this, "idle", nil, store.tick_ts, true)
+				U.y_wait(store, 2)
+				S:queue("Stage32RedboyJumpFromDragon")
+				set_exo_for_anim("jump_out")
+				U.y_animation_play(this, "jump_out", nil, store.tick_ts, 1, 1)
+
+				this.render.sprites[1].track_attach_point = nil
+				this.render.sprites[1].track_sprite_id = nil
+				this.render.sprites[1].track_id = nil
+				this.render.sprites[1].z = this.render.sprites[1]._z
+				this.render.sprites[1]._z = nil
+				this.render.sprites[1].sort_y_offset = this.render.sprites[1]._sort_y_offset
+				this.render.sprites[1]._sort_y_offset = nil
+				this.pos = V.vclone(this.change_path_target.node_pos)
+				this.nav_path.pi = this.change_path_target.path
+				this.nav_path.ni = P:nearest_nodes(this.pos.x, this.pos.y, {this.change_path_target.path})[1][3]
+
+				set_exo_for_anim("jump_end_2")
+				U.animation_start(this, "jump_end_2", false, store.tick_ts, false, 1, true)
+				U.y_wait(store, fts(3))
+
+				local shake = E:create_entity("aura_screen_shake")
+
+				shake.aura.amplitude = 0.8
+				shake.aura.duration = 0.2
+				shake.aura.freq_factor = 5
+
+				queue_insert(store, shake)
+				U.y_animation_wait(this, 1)
+
+				this.health_bar.hidden = false
+				this.ui.can_select = true
+				jumped = true
+
+				set_exo_for_anim("idle")
+				U.animation_start(this, "idle", true, store.tick_ts, true, 1, true)
+				W:stop_manual_wave(current_manual_wave)
+
+				current_manual_wave = "BOSSTEEN2"
+
+				W:start_manual_wave(current_manual_wave)
+
+				a_stun_towers.disabled = false
+				a_stun_towers.ts = store.tick_ts - a_stun_towers.cooldown + a_stun_towers.first_cooldown
+			end
+
+			if ready_to_summon() then
+				set_exo_for_anim(a_summon.animation)
+				U.animation_start(this, a_summon.animation, nil, store.tick_ts, false, 1, true)
+
+				if SU.y_enemy_wait(store, this, a_summon.cast_time) then
+					goto label_1910_0
+				end
+
+				local enemy = E:create_entity(a_summon.entity)
+
+				enemy.pi = this.nav_path.pi
+				enemy.spi = math.random(1, 3)
+				enemy.ni = this.nav_path.ni + math.random(10, 20)
+				enemy.pos = P:node_pos(enemy.pi, enemy.spi, enemy.ni)
+
+				queue_insert(store, enemy)
+
+				local shake = E:create_entity("aura_screen_shake")
+
+				shake.aura.amplitude = 0.35
+				shake.aura.duration = 0.5
+				shake.aura.freq_factor = 2
+
+				queue_insert(store, shake)
+
+				local fx = E:create_entity(a_summon.decal)
+
+				fx.pos = V.v(this.pos.x, this.pos.y + a_summon.decal_offset.y)
+
+				if this.render.sprites[1].flip_x then
+					fx.pos.x = fx.pos.x - a_summon.decal_offset.x
+				else
+					fx.pos.x = fx.pos.x + a_summon.decal_offset.x
+				end
+
+				fx.render.sprites[1].ts = store.tick_ts
+
+				queue_insert(store, fx)
+
+				a_summon.ts = store.tick_ts
+
+				if SU.y_enemy_animation_wait(this) then
+					goto label_1910_0
+				end
+
+				set_exo_for_anim("idle")
+				U.animation_start(this, "idle", nil, store.tick_ts, true, 1, true)
+			end
+
+			if ready_to_fireabsorb() then
+				local s_debug_circle = this.render.sprites[this.render.sid_debug_circle]
+
+				s_debug_circle.scale = V.vv(a_fireabsorb.damage_radius / 30 * s_debug_circle.scale_mult)
+				s_debug_circle.hidden = true
+
+				S:queue("Stage32RedboyAbsorbFire")
+				set_exo_for_anim(a_fireabsorb.animation)
+				U.animation_start(this, a_fireabsorb.animation, nil, store.tick_ts, false, 1, true)
+
+				if SU.y_enemy_wait(store, this, a_fireabsorb.absorb_time) then
+					goto label_1910_0
+				end
+
+				local targets = table.filter(store.entities, function(k, v)
+					return v.pos and v.is_flaming_ground and v.duration ~= 1e+99 and U.is_inside_ellipse(v.pos, this.pos, a_fireabsorb.absorb_radius)
+				end)
+
+				for k, v in pairs(targets) do
+					v.duration = 0
+				end
+
+				if SU.y_enemy_wait(store, this, a_fireabsorb.cast_time - a_fireabsorb.absorb_time) then
+					goto label_1910_0
+				end
+
+				local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a_fireabsorb.damage_radius, a_fireabsorb.vis_flags, a_fireabsorb.vis_bans)
+
+				if soldiers then
+					for _, s in ipairs(soldiers) do
+						local d = E:create_entity("damage")
+
+						d.damage_type = a_fireabsorb.damage_type
+						d.value = math.random(a_fireabsorb.damage_min, a_fireabsorb.damage_max)
+						d.source_id = this.id
+						d.target_id = s.id
+
+						queue_damage(store, d)
+					end
+				end
+
+				local fx = E:create_entity(a_fireabsorb.decal)
+
+				fx.pos = V.vclone(this.pos)
+				fx.render.sprites[1].ts = store.tick_ts
+
+				queue_insert(store, fx)
+
+				a_fireabsorb.ts = store.tick_ts
+
+				if SU.y_enemy_animation_wait(this) then
+					goto label_1910_0
+				end
+
+				s_debug_circle.hidden = true
+
+				set_exo_for_anim("idle")
+				U.animation_start(this, "idle", nil, store.tick_ts, true, 1, true)
+			end
+
+			if ready_to_block_power() then
+				set_exo_for_anim(a_block_power.animation)
+				U.animation_start(this, a_block_power.animation, nil, store.tick_ts, false, 1, true)
+
+				if SU.y_enemy_wait(store, this, a_block_power.fx_time) then
+					goto label_1910_0
+				end
+
+				local fx = E:create_entity(a_block_power.hand_fx)
+
+				fx.pos = V.v(this.pos.x, this.pos.y + a_block_power.hand_fx_offset.y)
+
+				if this.render.sprites[1].flip_x then
+					fx.pos.x = fx.pos.x - a_block_power.hand_fx_offset.x
+				else
+					fx.pos.x = fx.pos.x + a_block_power.hand_fx_offset.x
+				end
+
+				fx.render.sprites[1].ts = store.tick_ts
+
+				queue_insert(store, fx)
+
+				if SU.y_enemy_wait(store, this, a_block_power.cast_time - a_block_power.fx_time) then
+					goto label_1910_0
+				end
+
+				a_block_power.ts = store.tick_ts
+
+				signal.emit("block-random-power", a_block_power.duration, "dragon_boss", true)
+
+				if SU.y_enemy_animation_wait(this) then
+					goto label_1910_0
+				end
+
+				set_exo_for_anim("idle")
+				U.animation_start(this, "idle", nil, store.tick_ts, true, 1, true)
+			end
+
+			if ready_to_meteorite() then
+				local meteor_side = "right"
+				local meteorites_in_path = a_meteorite.activate_on_nodes[this.nav_path.pi]
+
+				if meteorites_in_path then
+					for k, v in pairs(meteorites_in_path) do
+						if this.nav_path.ni >= v.node then
+							meteor_side = v.side
+							meteorites_in_path[k] = nil
+
+							break
+						end
+					end
+				end
+
+				if not launch_meteorite(meteor_side) then
+					goto label_1910_0
+				end
+			end
+
+			if ready_to_stun_towers() then
+				local dragon_controller
+
+				for k, v in pairs(store.entities) do
+					if v.template_name == "controller_stage_32_boss" then
+						dragon_controller = v
+					end
+				end
+
+				set_exo_for_anim(a_stun_towers.animation_start)
+				U.animation_start(this, a_stun_towers.animation_start, true, store.tick_ts, false, 1, true)
+
+				if SU.y_enemy_animation_wait(this) then
+					goto label_1910_0
+				end
+
+				dragon_controller.do_stun_towers = a_stun_towers.side
+				a_stun_towers.ts = store.tick_ts
+
+				set_exo_for_anim(a_stun_towers.animation_loop)
+				U.animation_start(this, a_stun_towers.animation_loop, true, store.tick_ts, true, 1, true)
+
+				if SU.y_enemy_wait(store, this, 4.8) then
+					goto label_1910_0
+				end
+
+				set_exo_for_anim(a_stun_towers.animation_end)
+				U.animation_start(this, a_stun_towers.animation_end, true, store.tick_ts, false, 1, true)
+
+				if SU.y_enemy_animation_wait(this) then
+					goto label_1910_0
+				end
+
+				set_exo_for_anim("idle")
+				U.animation_start(this, "idle", nil, store.tick_ts, true, 1, true)
+			end
+
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, false, break_fn)
+
+			if not cont then
+			-- block empty
+			else
+				if blocker then
+					if not SU.y_wait_for_blocker(store, this, blocker) then
+						goto label_1910_0
+					end
+
+					while SU.can_melee_blocker(store, this, blocker) and (not melee_break_fn or not melee_break_fn(store, this)) do
+						if not SU.y_enemy_melee_attacks(store, this, blocker) then
+							goto label_1910_0
+						end
+
+						coroutine.yield()
+					end
+				elseif ranged then
+					while SU.can_range_soldier(store, this, ranged) and #this.enemy.blockers == 0 and (not range_break_fn or not range_break_fn(store, this)) do
+						if not SU.y_enemy_range_attacks(store, this, ranged) then
+							goto label_1910_0
+						end
+
+						coroutine.yield()
+					end
+				end
+
+				coroutine.yield()
+			end
+		end
+	end
 end

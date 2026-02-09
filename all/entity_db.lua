@@ -124,11 +124,12 @@ function entity_db:test()
 end
 
 function entity_db:register_t(name, base)
-	-- if self.entities[name] then
-	-- 	log.error("template %s already exists", name)
+	-- 仅在开发时启用它，发行时关闭
+	if self.entities[name] then
+		log.error("template %s already exists", name)
 
-	-- 	return self.entities[name]
-	-- end
+		return self.entities[name]
+	end
 
 	local t
 

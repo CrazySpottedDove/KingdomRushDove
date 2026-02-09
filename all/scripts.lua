@@ -5585,7 +5585,8 @@ function scripts.mod_freeze.update(this, store)
 
 	this._decal_freeze = es
 	es.pos.x, es.pos.y = target.pos.x, target.pos.y
-	es.render = table.deepclone(target.render)
+
+	es.render = U.render_clone(target.render)
 
 	for i, s in ipairs(es.render.sprites) do
 		s.shader = es.shader

@@ -1707,5 +1707,74 @@ return {
 		[DAMAGE_MIXED] = "base_info_icons_mixed",
 		[DAMAGE_AGAINST_ARMOR] = "base_info_icons_against_armor",
 		[DAMAGE_AGAINST_MAGIC_ARMOR] = "base_info_icons_against_magic_armor"
+	},
+	power_button_block_styles = {
+		drow_queen = {
+			image = "malicia_powerNet_0001",
+			animations = {
+				block = {
+					to = 14,
+					prefix = "malicia_powerNet",
+					from = 1
+				},
+				unblock = {
+					to = 20,
+					prefix = "malicia_powerNet",
+					from = 15
+				}
+			}
+		},
+		eb_spider = {
+			image = "spiderQueen_powerNet_0001",
+			animations = {
+				block = {
+					to = 14,
+					prefix = "spiderQueen_powerNet",
+					from = 1
+				},
+				unblock = {
+					to = 20,
+					prefix = "spiderQueen_powerNet",
+					from = 15
+				}
+			}
+		},
+		dragon_boss = {
+			image = "ui_redboy_image_0001",
+			animations = {
+				block = {
+					to = 23,
+					prefix = "ui_redboy_image",
+					from = 1
+				},
+				unblock = {
+					to = 40,
+					prefix = "ui_redboy_image",
+					from = 24
+				}
+			}
+		}
+	},
+	hero_portrait_block_styles = {
+		boss_princess = {
+			image = "hero_stun_fire_0001",
+			animations = {
+				block = {
+					to = 16,
+					prefix = "hero_stun_fire",
+					from = 1
+				},
+				loop = {
+					to = 26,
+					prefix = "hero_stun_fire",
+					from = 17
+				},
+				unblock = {
+					to = 43,
+					prefix = "hero_stun_fire",
+					from = 27
+				}
+			}
+		}
 	}
 }

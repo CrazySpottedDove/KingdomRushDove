@@ -129,7 +129,8 @@ tt.tower.terrain_style = TERRAIN_STYLE_WUKONG_2
 tt.render.sprites[1].name = "build_terrain_0001"
 tt = E:register_t("tower_holder_sea_of_trees_12", "tower_holder")
 tt.tower.terrain_style = TERRAIN_STYLE_WUKONG_3
-tt.render.sprites[1].name = "build_terrain_0027"
+-- tt.render.sprites[1].name = "build_terrain_0027"
+tt.render.sprites[1].name = "build_terrain_0008"
 tt = E:register_t("tower_holder_sea_of_trees_13", "tower_holder")
 tt.tower.terrain_style = TERRAIN_STYLE_WUKONG_4
 tt.render.sprites[1].name = "build_terrain_0028"
@@ -714,14 +715,14 @@ tt.ui.click_rect = r(-40, -12, 80, 46)
 ---龙魂宝壶 金
 --#endregion
 --#region tower_holder_blocked_elemental_metal_b
-tt = RT("tower_holder_blocked_elemental_metal_b", "tower_holder_blocked_elemental")
+tt = RT("tower_holder_blocked_elemental_metal", "tower_holder_blocked_elemental")
 
 E:add_comps(tt, "main_script")
 
 b = balance.specials.terrain_8.elemental_holders.metal_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
-tt.info.i18n_key = "BLOCKED_ELEMENTAL_TOWER_METAL"
+tt.info.i18n_key = "SPECIAL_REPAIR_HOLDER_ELEMENTAL_METAL"
 tt.tower.type = "holder_blocked_elemental_metal"
 tt.tower_holder.unblock_price = b.price
 tt.tower.menu_offset = v(0, 35)
@@ -797,14 +798,14 @@ tt.tower_holder.unblock_price = 50
 ---龙魂宝壶 水
 --#endregion
 --#region tower_holder_blocked_elemental_water_b
-tt = RT("tower_holder_blocked_elemental_water_b", "tower_holder_blocked_elemental")
+tt = RT("tower_holder_blocked_elemental_water", "tower_holder_blocked_elemental")
 
 E:add_comps(tt, "main_script")
 
 b = balance.specials.terrain_8.elemental_holders.water_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
-tt.info.i18n_key = "BLOCKED_ELEMENTAL_TOWER_WATER"
+tt.info.i18n_key = "SPECIAL_REPAIR_HOLDER_ELEMENTAL_WATER"
 tt.tower.type = "holder_blocked_elemental_water"
 tt.tower_holder.unblock_price = b.price
 tt.tower.menu_offset = v(0, 35)
@@ -834,15 +835,13 @@ tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
 ---龙魂宝壶 火
 --#endregion
---#region tower_holder_blocked_elemental_fire_b
-tt = RT("tower_holder_blocked_elemental_fire_b", "tower_holder_blocked_elemental")
-
+--#region tower_holder_blocked_elemental_fire
+tt = RT("tower_holder_blocked_elemental_fire", "tower_holder_blocked_elemental")
 E:add_comps(tt, "main_script")
-
 b = balance.specials.terrain_8.elemental_holders.fire_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
-tt.info.i18n_key = "BLOCKED_ELEMENTAL_TOWER_FIRE"
+tt.info.i18n_key = "SPECIAL_REPAIR_HOLDER_ELEMENTAL__FIRE"
 tt.tower.type = "holder_blocked_elemental_fire"
 tt.tower_holder.unblock_price = b.price
 tt.tower.menu_offset = v(0, 35)
@@ -872,15 +871,15 @@ tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
 ---龙魂宝壶 土
 --#endregion
---#region tower_holder_blocked_elemental_earth_b
-tt = RT("tower_holder_blocked_elemental_earth_b", "tower_holder_blocked_elemental")
+--#region tower_holder_blocked_elemental_earth
+tt = RT("tower_holder_blocked_elemental_earth", "tower_holder_blocked_elemental")
 
 E:add_comps(tt, "main_script")
 
 b = balance.specials.terrain_8.elemental_holders.earth_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
-tt.info.i18n_key = "BLOCKED_ELEMENTAL_TOWER_EARTH"
+tt.info.i18n_key = "SPECIAL_REPAIR_HOLDER_ELEMENTAL_EARTH"
 tt.tower.type = "holder_blocked_elemental_earth"
 tt.tower_holder.unblock_price = b.price
 tt.tower.menu_offset = v(0, 35)

@@ -2859,5 +2859,15 @@ return {
 		image = "main_icons_0037",
 		tt_title = _("SPECIAL_REPAIR_HOLDER_SPIDERS_NAME"),
 		tt_desc = _("SPECIAL_REPAIR_HOLDER_SPIDERS_DESCRIPTION")
-	})}}
+	})}},
+	tower_broken_stage_32 = {{{
+		check = "main_icons_0019",
+		action_arg = "",
+		action = "tw_repair",
+		halo = "glow_ico_main",
+		image = "kr5_main_icons_0035",
+		place = 5,
+		tt_title = _("SPECIAL_REPAIR_HOLDER_DRAGON_NAME"),
+		tt_desc = _("SPECIAL_REPAIR_HOLDER_DRAGON_DESCRIPTION")
+	}}}
 }

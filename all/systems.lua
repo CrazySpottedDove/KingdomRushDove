@@ -2979,22 +2979,23 @@ function sys.render:on_update(dt, ts, store)
 				s.sync_flag = last_runs ~= s.runs
 				s.ss = I:s(fn)
 
-			-- if s.ss == nil then
-			-- 	if s.animation and not MISSED_SS[s.animation] then
-			-- 		log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
-			-- 		log.error("Animation name: %s", s.animation)
-			--         MISSED_SS[s.animation] = true
-			-- 	elseif s.animated and not MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] then
-			--         log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
-			-- 		log.error("Animated prefix: %s", s.prefix)
-			-- 		log.error("Animated name: %s", s.name)
-			--         MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] = true
-			--     elseif not MISSED_SS[s.name] then
-			--         log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
-			-- 		log.error("Static sprite name: %s", s.name)
-			--         MISSED_SS[s.name] = true
-			-- 	end
-			-- end
+				-- 仅在开发时启用，用于检查美术资源
+				if s.ss == nil then
+					if s.animation and not MISSED_SS[s.animation] then
+						log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+						log.error("Animation name: %s", s.animation)
+						MISSED_SS[s.animation] = true
+					elseif s.animated and not MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] then
+						log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+						log.error("Animated prefix: %s", s.prefix)
+						log.error("Animated name: %s", s.name)
+						MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] = true
+					elseif not MISSED_SS[s.name] then
+						log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+						log.error("Static sprite name: %s", s.name)
+						MISSED_SS[s.name] = true
+					end
+				end
 			end
 
 			if s._track_e then

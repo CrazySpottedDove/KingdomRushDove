@@ -2461,6 +2461,65 @@ function PowerButtonBlock:update(dt)
 	PowerButtonBlock.super.update(self, dt)
 end
 
+HeroPortraitBlock = class("HeroPortraitBlock", KImageView)
+
+function HeroPortraitBlock:initialize(hero_portrait, duration, style_name)
+	self.hero_portrait = hero_portrait
+	self.duration = duration
+
+	local styles = data.hero_portrait_block_styles
+	local style = styles[style_name] or styles.boss_princess
+
+	KImageView.initialize(self, style.image)
+
+	self.anchor = V.v(self.size.x / 2, self.size.y / 2)
+	self.pos.x, self.pos.y = hero_portrait.size.x / 2, hero_portrait.size.y / 2
+	self.animations = style.animations
+end
+
+function HeroPortraitBlock:block()
+	self.hero_portrait:disable(false)
+
+	self.start_ts = game_gui.game.store.ts
+	self.animation = self.animations.block
+	self.ts = 0
+
+	if self.animations.loop then
+		timer:after((self.animation.to - self.animation.from + 1) / 30, function()
+			self.animation = self.animations.loop
+			self.ts = 0
+			self.start_looping_ts = game_gui.game.store.ts
+			self.looping = true
+		end)
+	end
+end
+
+function HeroPortraitBlock:unblock()
+	self.hero_portrait:enable(false)
+
+	self.start_ts = nil
+	self.animation = self.animations.unblock
+	self.ts = 0
+
+	timer:after((self.animation.to - self.animation.from + 1) / 30, function()
+		self:remove_from_parent()
+	end)
+end
+
+function HeroPortraitBlock:update(dt)
+	if self.start_ts and game_gui.game.store.ts - self.start_ts > self.duration then
+		self.looping = false
+
+		self:unblock()
+	elseif self.looping and game_gui.game.store.ts - self.start_looping_ts > (self.animation.to - self.animation.from + 1) / 30 then
+		self.animation = self.animations.loop
+		self.ts = 0
+		self.start_looping_ts = game_gui.game.store.ts
+	end
+
+	HeroPortraitBlock.super.update(self, dt)
+end
+
 InfoBar = class("InfoBar", KImageView)
 
 function InfoBar:initialize()
@@ -5226,7 +5285,7 @@ end
 function PickView:update(dt)
 	local e = game_gui.selected_entity
 
-	if e and (e.tower and e.tower.blocked or e.health and e.health.dead and not e.health.ignore_damage) then
+	if e and ((e.tower and e.tower.blocked and not (e.ui and e.ui.force_can_select)) or (e.health and e.health.dead and not e.health.ignore_damage)) then
 		game_gui:deselect_all()
 	end
 

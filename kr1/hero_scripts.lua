@@ -9117,7 +9117,7 @@ scripts.mod_minotaur_daedalus = {
 		local es = E:create_entity("daedalus_enemy_decal")
 
 		es.pos.x, es.pos.y = target.pos.x, target.pos.y
-		es.render = table.deepclone(target.render)
+		es.render = U.render_clone(target.render)
 		es.tween.ts = store.tick_ts
 
 		queue_insert(store, es)
@@ -20614,7 +20614,7 @@ function scripts.mod_hero_space_elf_ultimate.update(this, store)
 	if not target.render.sprites[1].exo then
 		this._decal_timelapse = es
 		es.pos.x, es.pos.y = target.pos.x, target.pos.y
-		es.render = table.deepclone(target.render)
+		es.render = U.render_clone(target.render)
 
 		local tween_keys = es.tween.props[1].keys
 

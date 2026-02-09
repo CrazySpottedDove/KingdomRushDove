@@ -376,17 +376,17 @@ local function load_app_settings()
 
 	local w, h = love.window.getDesktopDimensions()
 
-    love.window.setMode(w, h, {
+	love.window.setMode(w, h, {
 		centered = false,
-		vsync = false,
+		vsync = false
 	})
 
-    local aw, ah = G.getDimensions()
+	local aw, ah = G.getDimensions()
 
-    -- 安卓端尺寸适配
-    if aw and ah and (aw ~= w or ah ~= h) then
-        w, h = aw, ah
-    end
+	-- 安卓端尺寸适配
+	if aw and ah and (aw ~= w or ah ~= h) then
+		w, h = aw, ah
+	end
 
 	local function done_cb()
 		storage:save_settings(main.params)
