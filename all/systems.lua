@@ -2243,6 +2243,10 @@ function sys.tween:on_update(dt, ts, store)
 					end
 
 					-- 直接通过 interp_fn 来进行插值计算和赋值，避免创建中间变量与小表的频繁创建，降低 gc 压力
+					-- debug usage: 检查铁皮错误的运行时搞事情
+					-- if not tween_prop.interp_fn then
+					--     log.error("entity %s tween_prop %s has no interp_fn", e.template_name, tween_prop.name)
+					-- end
 					tween_prop.interp_fn(ka, kb, time, s, tween_prop.name)
 
 					finished = finished and tween_prop.loop or ka == kb
@@ -2979,23 +2983,23 @@ function sys.render:on_update(dt, ts, store)
 				s.sync_flag = last_runs ~= s.runs
 				s.ss = I:s(fn)
 
-				-- 仅在开发时启用，用于检查美术资源
-				if s.ss == nil then
-					if s.animation and not MISSED_SS[s.animation] then
-						log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
-						log.error("Animation name: %s", s.animation)
-						MISSED_SS[s.animation] = true
-					elseif s.animated and not MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] then
-						log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
-						log.error("Animated prefix: %s", s.prefix)
-						log.error("Animated name: %s", s.name)
-						MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] = true
-					elseif not MISSED_SS[s.name] then
-						log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
-						log.error("Static sprite name: %s", s.name)
-						MISSED_SS[s.name] = true
-					end
-				end
+			-- -- 仅在开发时启用，用于检查美术资源
+			-- if s.ss == nil then
+			-- 	if s.animation and not MISSED_SS[s.animation] then
+			-- 		log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+			-- 		log.error("Animation name: %s", s.animation)
+			-- 		MISSED_SS[s.animation] = true
+			-- 	elseif s.animated and not MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] then
+			-- 		log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+			-- 		log.error("Animated prefix: %s", s.prefix)
+			-- 		log.error("Animated name: %s", s.name)
+			-- 		MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] = true
+			-- 	elseif not MISSED_SS[s.name] then
+			-- 		log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+			-- 		log.error("Static sprite name: %s", s.name)
+			-- 		MISSED_SS[s.name] = true
+			-- 	end
+			-- end
 			end
 
 			if s._track_e then

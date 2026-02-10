@@ -173,12 +173,12 @@ local signals = {
 	end,
 
 	["hide-gui"] = function()
-		log.debug("hide_gui_handler")
+		-- print("hide_gui_handler")
 		game_gui:hide()
 	end,
 
 	["show-gui"] = function()
-		log.debug("show_gui_handler")
+		-- print("show_gui_handler")
 		game_gui:show()
 	end,
 

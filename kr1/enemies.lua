@@ -13124,6 +13124,10 @@ tt.tween.props[1].keys = {{fts(0), v(0, tt.flight_height)}, {fts(tt.fly_frequenc
 tt.tween.props[1].loop = true
 tt.tween.props[1].disabled = false
 tt.tween.props[1].remove = false
+tt.tween.props[2] = E:clone_c("tween_prop")
+tt.tween.props[2].sprite_id = tt.render.sid_shadow
+tt.tween.props[2].keys = {{0, 255}, {fts(34), 0}}
+tt.tween.props[2].disabled = true
 tt = E:register_t("enemy_water_spirit", "enemy_KR5")
 
 E:add_comps(tt, "melee")

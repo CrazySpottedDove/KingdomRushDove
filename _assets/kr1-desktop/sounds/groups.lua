@@ -1315,7 +1315,8 @@ return {
 			"kra_sfx_wukong_hero_melee_spin_v1.ogg",
 			"kra_sfx_wukong_hero_multi_staf_op1_v1.ogg",
 			"kra_sfx_wukong_hero_ultimate_v1.ogg",
-			"kra_sfx_wukong_hero_zhu_smash_v1.ogg"
+			"kra_sfx_wukong_hero_zhu_smash_v1.ogg",
+			"kra_sfx_spiders_heroe_global_cocoons_v1.ogg"
 		}
 	},
 	enemies_sea_of_trees = {
@@ -2977,7 +2978,11 @@ return {
 			"kra_sfx_wukong_enemy_elemental_death_normal_v1.ogg",
 			"kra_sfx_wukong_enemy_fan_guard_death_op1_v1.ogg",
 			"kra_sfx_wukong_enemy_fan_guard_death_op2_v1.ogg",
-			"kra_sfx_wukong_enemy_fan_guard_special_v1.ogg"
+			"kra_sfx_wukong_enemy_fan_guard_special_v1.ogg",
+			"kra_sfx_crocs_gator_melee_var1_v1.ogg",
+			"kra_sfx_crocs_gator_melee_var2_v1.ogg",
+			"kra_sfx_crocs_gator_melee_var3_v1.ogg",
+			"kra_sfx_enemy_tuskedBrawler_death_op1_var3.ogg"
 		}
 	},
 	enemies_terrain_wukong_3 = {
@@ -3005,7 +3010,11 @@ return {
 			"kra_sfx_wukong_enemy_warlock_ranged_impact_var2_v1.ogg",
 			"kra_sfx_wukong_enemy_warlock_ranged_impact_var3_v1.ogg",
 			"kra_sfx_wukong_enemy_warlock_summon_channel_v1.ogg",
-			"kra_sfx_wukong_enemy_warlock_summon_spawn_v1.ogg"
+			"kra_sfx_wukong_enemy_warlock_summon_spawn_v1.ogg",
+			"kra_sfx_crocs_gator_melee_var1_v1.ogg",
+			"kra_sfx_crocs_gator_melee_var2_v1.ogg",
+			"kra_sfx_crocs_gator_melee_var3_v1.ogg",
+			"kra_sfx_enemy_tuskedBrawler_death_op1_var3.ogg"
 		}
 	}
 }

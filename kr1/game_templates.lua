@@ -5085,7 +5085,7 @@ tt.render.sprites[1].name = "build_terrain_0002"
 --#region tower_holder_ancient_metropolis
 tt = RT("tower_holder_ancient_metropolis", "tower_holder")
 tt.tower.terrain_style = TERRAIN_STYLE_ANCIENT_METROPOLIS
-tt.render.sprites[1].name = "build_terrain_0003"
+tt.render.sprites[1].name = "build_terrain_0007"
 --#endregion
 --#region tower_holder_hulking_rage
 tt = RT("tower_holder_hulking_rage", "tower_holder")
@@ -22614,8 +22614,9 @@ tt.modifier.duration = fts(88)
 tt.hps.heal_min = b.heal_min / (tt.modifier.duration / tt.hps.heal_every)
 tt.hps.heal_max = b.heal_max / (tt.modifier.duration / tt.hps.heal_every)
 tt.hps.heal_every = 0.1
-tt.render.sprites[1].prefix = "watersorceress_heal"
-tt.render.sprites[1].name = "run"
+-- tt.render.sprites[1].prefix = "watersorceress_heal"
+-- tt.render.sprites[1].name = "run"
+tt.render.sprites[1].name = "watersorceress_heal"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].sort_y_offset = -5
@@ -23322,3 +23323,425 @@ tt.paths_x_big = {
 }
 tt.fx = "fx_stage_35_water_splash"
 tt.fx_big = "fx_stage_35_water_splash_big"
+
+tt = E:register_t("decal_stage33_envelop_spawn_pos", "decal")
+
+E:add_comps(tt, "editor")
+
+tt.render.sprites[1].name = "envelops_envelop_water_idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].hidden = true
+tt.editor.overrides = {
+	["render.sprites[1].hidden"] = false
+}
+tt = E:register_t("controller_stage33_envelops")
+
+E:add_comps(tt, "main_script")
+
+b = balance.specials.stage33_envelops
+tt.main_script.update = scripts.controller_stage33_envelops.update
+tt.envelop_t = "decal_stage33_envelop"
+tt.decoy_t = "decal_stage33_envelop_decoy"
+tt.envelop_spawn_pos_t = "decal_stage33_envelop_spawn_pos"
+tt.decoy_chance = b.decoy_chance
+tt.cooldown_min = b.cooldown_min
+tt.cooldown_max = b.cooldown_max
+tt = E:register_t("decal_stage33_envelop", "decal_scripted")
+
+E:add_comps(tt, "ui")
+
+b = balance.specials.stage33_envelops
+tt.main_script.update = scripts.decal_stage33_envelop.update
+tt.render.sprites[1].prefix = "envelops_envelop_water"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].z = Z_BACKGROUND
+tt.fx_open = "fx_stage33_envelop_open"
+tt.max_speed = b.max_speed
+tt.min_speed = b.min_speed
+tt.ui.can_click = true
+tt.ui.click_rect = r(-18, -7, 36, 20)
+tt = E:register_t("fx_stage33_envelop_open", "decal_scripted")
+b = balance.specials.stage33_envelops
+tt.main_script.update = scripts.fx_stage33_envelop_open.update
+tt.render.sprites[1].name = "envelops_open_run"
+tt.render.sprites[1].z = Z_EFFECTS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "envelops_money_run"
+tt.render.sprites[2].z = Z_EFFECTS
+tt.render.sprites[2].offset = v(0, 40)
+tt.render.sprites[2].sort_y_offset = -tt.render.sprites[2].offset.y - 10
+tt.render.sprites[2].hidden = true
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].prefix = "envelops_portraits"
+tt.render.sprites[3].name = "veznan"
+tt.render.sprites[3].z = Z_EFFECTS
+tt.render.sprites[3].offset = v(0, 45)
+tt.render.sprites[3].sort_y_offset = -tt.render.sprites[3].offset.y - 1
+tt.render.sprites[3].hidden = true
+tt.cards = {{
+	name = "veznan",
+	gold = b.gold
+}, {
+	name = "versper",
+	gold = b.gold
+}, {
+	name = "nyru",
+	gold = b.gold
+}}
+tt.balatro_card = {
+	name = "balatro",
+	gold = b.gold_balatro
+}
+tt = E:register_t("fx_stage33_envelop_balatro_coins", "decal_scripted")
+tt.main_script.update = scripts.multi_sprite_fx.update
+tt.render.sprites[1].name = "envelops_money_run"
+tt.render.sprites[1].z = Z_EFFECTS
+tt.render.sprites[1].offset = v(-20, 45)
+tt.render.sprites[1].sort_y_offset = -tt.render.sprites[1].offset.y - 10
+tt.render.sprites[1].hidden = false
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "envelops_money_run"
+tt.render.sprites[2].z = Z_EFFECTS
+tt.render.sprites[2].offset = v(25, 20)
+tt.render.sprites[2].sort_y_offset = -tt.render.sprites[2].offset.y - 10
+tt.render.sprites[2].hidden = true
+tt.render.sprites[2].delay_start = 0.1
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].name = "envelops_money_run"
+tt.render.sprites[3].z = Z_EFFECTS
+tt.render.sprites[3].offset = v(0, 50)
+tt.render.sprites[3].sort_y_offset = -tt.render.sprites[3].offset.y - 10
+tt.render.sprites[3].hidden = true
+tt.render.sprites[3].delay_start = 0.2
+tt.render.sprites[4] = E:clone_c("sprite")
+tt.render.sprites[4].name = "envelops_money_run"
+tt.render.sprites[4].z = Z_EFFECTS
+tt.render.sprites[4].offset = v(10, 30)
+tt.render.sprites[4].sort_y_offset = -tt.render.sprites[4].offset.y - 10
+tt.render.sprites[4].hidden = true
+tt.render.sprites[4].delay_start = 0.3
+tt.render.sprites[5] = E:clone_c("sprite")
+tt.render.sprites[5].name = "envelops_money_run"
+tt.render.sprites[5].z = Z_EFFECTS
+tt.render.sprites[5].offset = v(-15, 40)
+tt.render.sprites[5].sort_y_offset = -tt.render.sprites[5].offset.y - 10
+tt.render.sprites[5].hidden = true
+tt.render.sprites[5].delay_start = 0.4
+tt.render.sprites[6] = E:clone_c("sprite")
+tt.render.sprites[6].name = "envelops_money_run"
+tt.render.sprites[6].z = Z_EFFECTS
+tt.render.sprites[6].offset = v(0, 30)
+tt.render.sprites[6].sort_y_offset = -tt.render.sprites[6].offset.y - 10
+tt.render.sprites[6].hidden = true
+tt.render.sprites[6].delay_start = 0.5
+tt.render.sprites[7] = E:clone_c("sprite")
+tt.render.sprites[7].name = "envelops_money_run"
+tt.render.sprites[7].z = Z_EFFECTS
+tt.render.sprites[7].offset = v(30, 50)
+tt.render.sprites[7].sort_y_offset = -tt.render.sprites[7].offset.y - 10
+tt.render.sprites[7].hidden = true
+tt.render.sprites[7].delay_start = 0.6
+tt = E:register_t("decal_stage33_envelop_decoy", "decal_stage33_envelop")
+tt.render.sprites[1].prefix = "envelops_decoy_1"
+tt.decoy = true
+tt.ui.click_rect = r(-18, -7, 36, 20)
+
+tt = E:register_t("stage_33_spawner")
+
+E:add_comps(tt, "main_script", "spawner")
+
+tt.main_script.update = scripts.stage_33_spawner.update
+tt.spawn_data = nil
+tt.spawner.eternal = true
+
+tt = E:register_t("tower_holder_blocked_stage_33_house_1", "tower_holder_blocked_2")
+tt.pre_destroy_thunders = scripts.stage_33_house_holder.pre_destroy_thunders
+tt.destroy_house = scripts.stage_33_house_holder.destroy_house
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].name = "stage33_casas_holder_1"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].anchor = v(0.5760714285714286, 0.3502604166666667)
+tt.render.sprites[2] = nil
+tt.ui.can_click = false
+tt.ui.can_select = false
+tt.house_destroy_fx = "fx_stage_33_house_destroy"
+tt.house_destroy_decal = "stage_33_house_destroyed_decal_1"
+tt.pre_destroy_thunders_list = {{
+	delay = 0,
+	pos = v(388, 256)
+}, {
+	delay = 0.5,
+	pos = v(450, 300)
+}, {
+	delay = 1.2,
+	pos = v(530, 220)
+}, {
+	delay = 1.7,
+	pos = v(545, 306)
+}, {
+	delay = 2,
+	pos = v(692, 248)
+}, {
+	delay = 3.5,
+	spawn_unit = "enemy_water_spirit_spawnless",
+	pos = v(660, 343)
+}, {
+	delay = 3.8,
+	spawn_unit = "enemy_water_spirit_spawnless",
+	pos = v(620, 385)
+}, {
+	delay = 4.1,
+	spawn_unit = "enemy_water_spirit_spawnless",
+	pos = v(550, 340)
+}}
+tt = E:register_t("tower_holder_blocked_stage_33_house_2", "tower_holder_blocked_stage_33_house_1")
+tt.render.sprites[1].name = "stage33_casas_holder_2"
+tt.render.sprites[1].anchor = v(0.3246428571428571, 0.23697916666666666)
+tt.house_destroy_decal = "stage_33_house_destroyed_decal_2"
+tt.pre_destroy_thunders_list = {{
+	delay = 1.7,
+	pos = v(165, 259)
+}, {
+	delay = 2,
+	pos = v(196, 275)
+}, {
+	delay = 3.5,
+	pos = v(333, 295)
+}, {
+	delay = 3.8,
+	pos = v(428, 270)
+}, {
+	delay = 4.1,
+	pos = v(512, 321)
+}, {
+	delay = 4.4,
+	pos = v(615, 380)
+}, {
+	delay = 4.7,
+	pos = v(630, 420)
+}, {
+	delay = 5,
+	pos = v(583, 524)
+}, {
+	delay = 5.3,
+	pos = v(754, 600)
+}}
+tt = E:register_t("tower_holder_blocked_stage_33_house_3", "tower_holder_blocked_stage_33_house_1")
+tt.render.sprites[1].name = "stage33_casas_holder_3"
+tt.render.sprites[1].anchor = v(0.7917857142857143, 0.69140625)
+tt.house_destroy_decal = "stage_33_house_destroyed_decal_3"
+tt.pre_destroy_thunders_list = {{
+	delay = 0,
+	pos = v(388, 256)
+}, {
+	delay = 0.5,
+	pos = v(450, 300)
+}, {
+	delay = 1.2,
+	pos = v(530, 220)
+}, {
+	delay = 1.7,
+	pos = v(545, 306)
+}, {
+	delay = 2,
+	pos = v(692, 248)
+}}
+tt = E:register_t("tower_holder_blocked_stage_33_invisible", "tower_holder_blocked_2")
+tt.appear = scripts.tower_holder_blocked_stage_33_invisible.appear
+tt.render.sprites[1].hidden = true
+tt.render.sprites[2] = nil
+tt.ui.can_click = false
+tt.ui.can_select = false
+tt = E:register_t("tower_holder_blocked_stage_35_house_1", "tower_holder_blocked_2")
+tt.pre_destroy = scripts.stage_35_house_holder.pre_destroy
+tt.destroy_house = scripts.stage_35_house_holder.destroy_house
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].name = "stage35_deco1"
+tt.render.sprites[1].animated = falses
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].anchor = v(0.13035714285714287, 0.2727864583333333)
+tt.render.sprites[2] = nil
+tt.cannonball_fx = "fx_stage_35_cannonball"
+tt.spawn_escombro = "holder"
+tt.sound = "Stage35Cinematic1"
+tt.unit_spawns = {{
+	unit = "soldier_stage_35_cannonball",
+	spi = 2,
+	ni_offset = 0
+}, {
+	unit = "soldier_stage_35_cannonball",
+	spi = 1,
+	ni_offset = 8
+}, {
+	unit = "soldier_stage_35_cannonball",
+	spi = 3,
+	ni_offset = 4
+}}
+tt.pre_destroy_cannonballs_list = {{
+	delay = 5.6,
+	spawn_escombro = "camino",
+	pos = v(150, 240)
+}, {
+	delay = 6,
+	spawn_escombro = "camino",
+	pos = v(80, 350)
+}}
+tt.cinematic_camera_duration_offset = 0
+tt.ui.can_click = false
+tt.ui.can_select = false
+tt = E:register_t("tower_holder_blocked_stage_35_house_2", "tower_holder_blocked_stage_35_house_1")
+tt.render.sprites[1].name = "stage35_deco2"
+tt.render.sprites[1].anchor = v(0.7857142857142857, 0.7272135416666666)
+tt.unit_spawns = nil
+tt.spawn_escombro = "holder"
+tt.cinematic_camera_duration_offset = -1.4
+tt.pre_destroy_cannonballs_list = nil
+tt.sound = nil
+tt = E:register_t("tower_holder_blocked_stage_35_house_3", "tower_holder_blocked_stage_35_house_1")
+tt.render.sprites[1].name = "stage35_deco3"
+tt.render.sprites[1].anchor = v(0.23, 0.673828125)
+tt.unit_spawns = nil
+tt.spawn_escombro = nil
+tt.pre_destroy_cannonballs_list = {{
+	delay = 5.5,
+	spawn_escombro = "camino",
+	pos = v(300, 460)
+}}
+tt.sound = "Stage35Cinematic3"
+tt = E:register_t("tower_holder_blocked_stage_35_house_4", "tower_holder_blocked_stage_35_house_1")
+tt.render.sprites[1].name = "stage35_deco4"
+tt.render.sprites[1].anchor = v(0.7767857142857143, 0.3190104166666667)
+tt.spawn_escombro = "holder"
+tt.pre_destroy_cannonballs_list = {{
+	delay = 5.8,
+	spawn_escombro = "camino",
+	pos = v(883, 397)
+}}
+tt.sound = "Stage35Cinematic2"
+tt = E:register_t("tower_holder_blocked_stage_35_house_5", "tower_holder_blocked_stage_35_house_1")
+tt.render.sprites[1].hidden = true
+tt.destroy_small_spawner_nmbr = 1
+tt.decal = "decal_stage_35_escombros_holder_2"
+tt.cinematic_camera_duration_offset = -0.4
+tt.spawn_escombro = nil
+tt.pre_destroy_cannonballs_list = {{
+	delay = 1.1,
+	spawn_escombro = "camino",
+	pos = v(872, 527)
+}}
+tt.sound = nil
+tt = E:register_t("tower_holder_blocked_stage_35_house_6", "tower_holder_blocked_stage_35_house_1")
+tt.render.sprites[1].hidden = true
+tt.destroy_small_spawner_nmbr = 3
+tt.decal = "decal_stage_35_escombros_holder_1"
+tt.spawn_escombro = "holder"
+tt.pre_destroy_cannonballs_list = nil
+tt.sound = nil
+tt = E:register_t("tower_holder_blocked_stage_35_house_7", "tower_holder_blocked_stage_35_house_1")
+tt.render.sprites[1].hidden = true
+tt.destroy_small_spawner_nmbr = 2
+tt.decal = "decal_stage_35_escombros_holder_3"
+tt.spawn_escombro = nil
+tt.pre_destroy_cannonballs_list = nil
+tt.sound = nil
+
+tt = E:register_t("bullet_qiongqi_lightning", "bullet")
+b = balance.enemies.wukong.qiongqi.ranged_attack
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_max = b.damage_max
+tt.bullet.damage_type = b.damage_type
+tt.bullet.damage_radius = b.damage_radius
+tt.bullet.hit_time = fts(1)
+tt.image_width = 100
+tt.main_script.update = scripts.ray_qiongqi.update
+tt.render.sprites[1].anchor = v(0, 0.5)
+tt.render.sprites[1].name = "qiongqi_attack"
+tt.render.sprites[1].loop = false
+tt.track_target = false
+tt.ray_duration = fts(10)
+tt.sound_events.insert = "EnemyQiongqiRanged"
+tt = E:register_t("bullet_storm_elemental", "bombKR5")
+b = balance.enemies.wukong.storm_elemental.ranged_attack
+tt.main_script.insert = scripts.enemy_bomb.insert
+tt.main_script.update = scripts.bullet_storm_elemental.update
+tt.bullet.damage_bans = F_ENEMY
+tt.bullet.damage_flags = F_AREA
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_max = b.damage_max
+tt.bullet.damage_type = b.damage_type
+tt.bullet.damage_radius = 62.400000000000006
+tt.render.sprites[1].prefix = "storm_elemental_vfx_proyectile"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].scale = vv(0.7)
+tt.start_fx = "fx_storm_elemental_bullet_start"
+tt.bullet.pop = nil
+tt.bullet.hide_radius = nil
+tt.bullet.miss_fx = nil
+tt.bullet.particles_name_1 = "ps_storm_elemental_bullet_trail_1"
+tt.bullet.particles_name_2 = "ps_storm_elemental_bullet_trail_2"
+tt.bullet.miss_decal = nil
+tt.bullet.hit_blood_fx = nil
+tt.bullet.hit_fx = "fx_storm_elemental_bullet_hit"
+tt.bullet.hit_decal = {"decal_storm_elemental_bullet", "decal_storm_elemental_bullet_2"}
+tt.bullet.hit_fx_water = "decal_storm_elemental_bullet"
+tt.bullet.flight_time_base = fts(5)
+tt.bullet.flight_time_factor = fts(0.016666666666666666)
+tt.bullet.g = -2 / (fts(1) * fts(1)) * 0.5
+tt.bullet.align_with_trajectory = false
+tt.bullet.rotation_speed = 0
+tt.sound_events.hit = "EnemyElementalRangedImpact"
+
+tt = E:register_t("fx_mecanicas_ray_spawner", "fx")
+tt.render.sprites[1].name = "vfx_mecanicas_ray_spawner_run"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -10
+tt.render.sprites[1].scale = vv(1.5)
+tt = E:register_t("fx_stage_34_fuentes_splash", "fx")
+tt.render.sprites[1].prefix = "stage_34_agua_splash"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].animated = true
+tt = E:register_t("fx_stage_34_fuentes_splash_barro", "fx_stage_34_fuentes_splash")
+
+E:add_comps(tt, "sound_events")
+
+tt.render.sprites[1].prefix = "stage_34_barro_splash"
+tt.sound_events.insert = "EnemyBossPrincessMudPoolSummon"
+tt = E:register_t("fx_stage_35_cannonball", "decal_scripted")
+tt.main_script.update = scripts.fx_stage_35_cannonball.update
+tt.render.sprites[1].prefix = "stage5_destruccion_holderDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -30
+tt.escombro_camino = "decal_stage_35_escombros_cannonball_camino"
+tt.escombro_holder = "decal_stage_35_escombros_cannonball_holder"
+tt = E:register_t("fx_stage_35_cannonball_open_path", "decal_scripted")
+tt.main_script.update = scripts.fx_stage_35_cannonball_open_path.update
+tt.render.sprites[1].prefix = "stage_5_pokebola_tntDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -130
+tt = E:register_t("fx_stage_35_cannonball_block_path", "decal_scripted")
+tt.main_script.update = scripts.fx_stage_35_cannonball_block_path.update
+tt.render.sprites[1].prefix = "stage_5_bloqueo_pathDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -450
+tt = E:register_t("fx_stage_35_small_spawner_fx", "decal_scripted")
+tt.main_script.update = scripts.multi_sprite_fx.update
+tt.render.sprites[1].prefix = "stage_5_spawner_fxDef"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_EFFECTS
+tt.render.sprites[1].delay_start = fts(2)
+tt.render.sprites[1].hidden = true

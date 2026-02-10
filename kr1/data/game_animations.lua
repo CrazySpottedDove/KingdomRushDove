@@ -4241,7 +4241,7 @@ return {
 		decal_water_spark_play = {
 			from = 1,
 			prefix = "water_sparks",
-			to = 25
+			to = 24
 		},
 		decal_water_sparks_16_idle = {
 			from = 1,
@@ -4256,7 +4256,7 @@ return {
 		decal_water_sparks_idle = {
 			from = 1,
 			prefix = "water_sparks",
-			to = 25
+			to = 24
 		},
 		decal_water_splash_play = {
 			from = 1,

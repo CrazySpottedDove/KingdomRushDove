@@ -11851,17 +11851,6 @@ function scripts.boss_spider_queen.update(this, store, script)
 
 						decal.render.sprites[1].ts = store.tick_ts
 
-						local duration = decal.duration * 0.85 + math.random() * 0.3 * decal.duration
-						local alpha_transition = 0.1
-						local opacity = 255
-
-						decal.tween.props[1].keys = {{0, 0}, {alpha_transition, opacity}, {duration - alpha_transition, opacity}, {duration, 0}}
-
-						local scale_transition = 0.2
-						local scaleTotal = U.frandom(2.5, 3.5)
-
-						decal.tween.props[2].keys = {{0, V.vv(scaleTotal * 0.5)}, {scale_transition, V.vv(scaleTotal * 1.05)}, {scale_transition + 0.05, V.vv(scaleTotal * 1)}, {duration - scale_transition, V.vv(scaleTotal * 1)}, {duration, V.vv(scaleTotal * 0.9)}}
-
 						queue_insert(store, decal)
 					end
 

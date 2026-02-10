@@ -545,6 +545,7 @@ end
 function SU.fade_out_entity(store, entity, delay, duration)
 	duration = duration or 2
 	if entity.tween then
+		-- 如果实体有tween，你应该直接在模板里面预留一个fade out的tween，而不是在运行时动态添加
 		log.error("entity %s already has tween. cannot be faded out", entity.id)
 
 		return

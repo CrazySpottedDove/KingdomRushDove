@@ -238,7 +238,7 @@
 							5																		gale_warrior											
 																																				
 																																				
-	63																																			
+#	63																																			
 																																				
 																																				
 																																				
@@ -329,7 +329,7 @@
 							6																						water_sorceress							
 							3.5																								water_sorceress					
 																																				
-	47.5																																			
+#	47.5																																			
 																																				
 																																				
 																																				
@@ -363,7 +363,7 @@
 							3																		storm_spirit											
 	event	boat																																		
 							4																	storm_spirit		storm_spirit										
-	66																																			
+#	66																																			
 																																				
 																																				
 																																				
@@ -398,9 +398,6 @@
 							6												storm_spirit																	
 							3														storm_spirit															
 							2												storm_spirit											water_sorceress						
-							2														storm_spirit															
-							3												storm_spirit																	
-	68																																			
 																																				
 																																				
 																																				
@@ -415,29 +412,6 @@
 																																				
 																																				
 																																				
-#	WAVE 14																																			
-#	enemies							water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen																					
-#	cant.							0	0	0	15		2	0	0			0	0	0	0															
-#	gold	760						0	0	0	450		70	0	0			0	0	0	0															
-	wave		14				35																													
-	event	ciclone			out																															
-							2				gale_warrior													gale_warrior		gale_warrior										
-							3		gale_warrior															gale_warrior		gale_warrior										
-	event	boat																																		
-							2																		gale_warrior											
-							10																		gale_warrior											
-							3																	gale_warrior		gale_warrior					water_sorceress					
-							2																		gale_warrior				water_sorceress							
-							12				gale_warrior																									
-	event	boat																																		
-							2		gale_warrior																											
-							2				gale_warrior																									
-							2		gale_warrior																											
-							6																													
-																																				
-																																				
-																																				
-	46																																			
 																																				
 																																				
 																																				
@@ -449,34 +423,60 @@
 																																				
 																																				
 																																				
-#	WAVE 15																																			
-#	enemies							water_spirit	storm_spirit	qiongqi	gale_warrior		water_sorceress	storm_elemental	citizen																					
-#	cant.							0	0	1	6		3	0	0			0	0	0	0															
-#	gold	1320						0	0	65	180		105	0	0			0	0	0	0															
-	wave		15				35																													
-	event	ciclone			in																															
-							1																													
-							6																												water_sorceress	
-	event	boat																																		
-							18																											water_sorceress		
-							3																													water_sorceress
-	wait						3																													
-	event	boat																																		
-	wait						11.5																													
-	event	boat																																		
-							4.5																							qiongqi						
-	wait						4																													
-							1				gale_warrior																									
-							1				gale_warrior																									
-							3							gale_warrior																						
-							1							gale_warrior																						
 																																				
-	event	boat																																		
-							2																							gale_warrior						
-							1																												gale_warrior	
 																																				
-#	59																																			
-	wait_signal	all_enemies_died					-1																													
-	event	ciclone			out																															
-	wait						4																													
-#	Total Wave Intervals: 6.6 mins																																			
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				
+																																				

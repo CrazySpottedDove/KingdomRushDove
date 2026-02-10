@@ -3856,10 +3856,14 @@ tt.render.sprites[1].name = "spider_queen_web_screen"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor = vv(0.5)
 tt.duration = b.duration
-tt.opacity = 255
-tt.tween.props[1].keys = nil
-tt.tween.props[2] = table.deepclone(tt.tween.props[1])
+local opacity = 255
+local alpha_transition = 0.1
+local scale_transition = 0.2
+local scale_total = 3
+tt.tween.props[1].keys = {{0, 0}, {alpha_transition, opacity}, {tt.duration - alpha_transition, opacity}, {tt.duration, 0}}
+tt.tween.props[2] = E:clone_c("tween_prop")
 tt.tween.props[2].name = "scale"
+tt.tween.props[2].keys = {{0, vv(scale_total * 0.5)}, {scale_transition, vv(scale_total * 1.05)}, {scale_transition + 0.05, vv(scale_total)}, {tt.duration - scale_transition, vv(scale_total)}, {tt.duration, vv(scale_total * 0.9)}}
 tt.tween.disabled = false
 tt.tween.remove = true
 

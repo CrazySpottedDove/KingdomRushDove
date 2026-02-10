@@ -51700,20 +51700,9 @@ function scripts.enemy_storm_spirit.update(this, store, script)
 		return true
 	end
 
-	local function fade_sprite(store, sprite_id, duration, fade_init, fade_end, id)
-		duration = duration or 2
-
-		if not this.tween then
-			this.tween = E:clone_c("tween")
-			this.tween.remove = false
-		end
-
-		local p = E:clone_c("tween_prop")
-
-		p.keys = {{0, fade_init}, {duration, fade_end}}
-		p.sprite_id = sprite_id
-		p.ts = store.tick_ts
-		this.tween.props[id] = p
+	local function fade_sprite()
+		this.tween.props[2].ts = store.tick_ts
+		this.tween.props[2].disabled = false
 	end
 
 	local ps1
@@ -51749,7 +51738,7 @@ function scripts.enemy_storm_spirit.update(this, store, script)
 				ps2.particle_system.emit = false
 			end
 
-			fade_sprite(store, 2, fts(34), 255, 0, 2)
+			fade_sprite()
 			SU.y_enemy_death(store, this)
 
 			return
@@ -52129,13 +52118,13 @@ function scripts.enemy_storm_elemental.update(this, store, script)
 			end
 
 			if can_spawn then
-				local towers = SU.find_towers_in_range_vis(store.entities, this.pos, t_block, function(t)
+				local towers = U.find_towers_in_range(store.towers, this.pos, t_block, function(t)
 					return t.tower.can_be_mod and not t.tower.blocked and not SU.has_modifiers(store, t, t_block.mod) and not SU.has_modifiers(store, t, t_block.mark_mod)
 				end)
 
 				if towers and #towers > 0 then
 					table.sort(towers, function(el, e2)
-						return V.dist(el.pos.x, el.pos.y, this.pos.x, this.pos.y) < V.dist(e2.pos.x, e2.pos.y, this.pos.x, this.pos.y)
+						return V.dist2(el.pos.x, el.pos.y, this.pos.x, this.pos.y) < V.dist2(e2.pos.x, e2.pos.y, this.pos.x, this.pos.y)
 					end)
 
 					local target = towers[1]
@@ -52616,7 +52605,7 @@ function scripts.enemy_water_sorceress.update(this, store, script)
 			return false
 		end
 
-		local targets_info = U.find_enemies_in_paths(store.entities, this.pos, 0, heal_wave.nodes_range, nil, heal_wave.vis_flags, heal_wave.vis_bans, false, function(e, o)
+		local targets_info = U.find_enemies_in_paths(store.enemies, this.pos, 0, heal_wave.nodes_range, nil, heal_wave.vis_flags, heal_wave.vis_bans, false, function(e, o)
 			return e.id ~= this.id and e.health and e.health.hp < e.health.hp_max
 		end)
 
@@ -52649,7 +52638,7 @@ function scripts.enemy_water_sorceress.update(this, store, script)
 					goto label_282_0
 				end
 
-				local targets_info = U.find_enemies_in_paths(store.entities, this.pos, 0, heal_wave.nodes_range, nil, heal_wave.vis_flags, heal_wave.vis_bans, false, function(e, o)
+				local targets_info = U.find_enemies_in_paths(store.enemies, this.pos, 0, heal_wave.nodes_range, nil, heal_wave.vis_flags, heal_wave.vis_bans, false, function(e, o)
 					return e.id ~= this.id and e.health and e.health.hp < e.health.hp_max
 				end)
 				local path_index = 0
@@ -54598,7 +54587,7 @@ function scripts.enemy_doom_bringer.update(this, store, script)
 			return nil
 		end
 
-		local towers = U.find_towers_in_range(store.entities, this.pos, a, function(t)
+		local towers = U.find_towers_in_range(store.towers, this.pos, a, function(t)
 			return t.tower.can_be_mod and not U.has_modifiers(store, t, a.mark_mod)
 		end)
 
@@ -62253,7 +62242,7 @@ function scripts.soldier_stage_35_cannonball.update(this, store, script)
 				if search_enemies_ts < store.tick_ts then
 					search_enemies_ts = store.tick_ts + fts(7)
 
-					local targets_info = U.find_enemies_in_paths(store.entities, this.pos, 0, 100, nil, F_BLOCK, bit.bor(F_CLIFF), true)
+					local targets_info = U.find_enemies_in_paths(store.enemies, this.pos, 0, 100, nil, F_BLOCK, bit.bor(F_CLIFF), true)
 
 					if targets_info and #targets_info > 0 then
 						moving_forward = true
@@ -62563,6 +62552,147 @@ function scripts.mod_stage_32_tower_blocked.update(this, store)
 
 	target.trigger_deselect = nil
 
+	queue_remove(store, this)
+end
+
+scripts.stage_33_spawner = {}
+
+function scripts.stage_33_spawner.update(this, store, script)
+	local sp = this.spawner
+	local state = 1
+
+	while true do
+		if sp.interrupt then
+		-- block empty
+		elseif sp.spawn_data then
+			local enable = sp.spawn_data.enable
+
+			if enable then
+				sp.spawn_data.enable = false
+			end
+		end
+
+		sp.interrupt = nil
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.controller_stage33_envelops = {}
+
+function scripts.controller_stage33_envelops.update(this, store, script)
+	store.level.envelops_opened = 0
+
+	local spawn_points = {}
+
+	for _, e in pairs(store.entities) do
+		if e.template_name == this.envelop_spawn_pos_t then
+			table.insert(spawn_points, V.vclone(e.pos))
+			queue_remove(store, e)
+		end
+	end
+
+	while store.wave_group_number < 1 do
+		coroutine.yield()
+	end
+
+	while true do
+		local wait_time = this.cooldown_min + (this.cooldown_max - this.cooldown_min) * math.random()
+
+		U.y_wait(store, wait_time)
+
+		local envelop
+
+		if math.random() < this.decoy_chance then
+			envelop = E:create_entity(this.decoy_t)
+		else
+			envelop = E:create_entity(this.envelop_t)
+		end
+
+		envelop.pos = V.vclone(table.random(spawn_points))
+
+		queue_insert(store, envelop)
+	end
+end
+
+scripts.decal_stage33_envelop = {}
+
+function scripts.decal_stage33_envelop.update(this, store, script)
+	local move_speed = this.min_speed + (this.max_speed - this.min_speed) * math.random()
+	local spr = this.render.sprites[1]
+
+	U.animation_start(this, "in", nil, store.tick_ts, false, 1)
+
+	while true do
+		if this.ui.clicked then
+			this.ui.clicked = nil
+
+			if this.pos.x < 496 or this.pos.x > 743 then
+				this.ui.can_click = false
+
+				S:queue(this.touch_sound)
+
+				if this.decoy then
+					U.y_animation_play(this, "click", nil, store.tick_ts, 1, 1)
+					queue_remove(store, this)
+				else
+					local fx = E:create_entity(this.fx_open)
+
+					fx.pos = V.vclone(this.pos)
+
+					queue_insert(store, fx)
+					queue_remove(store, this)
+				end
+			end
+		end
+
+		if spr.name == "in" and U.animation_finished(this, 1) then
+			U.animation_start(this, "idle", nil, store.tick_ts, true, 1)
+		end
+
+		this.pos.x = this.pos.x + move_speed * store.tick_length
+
+		coroutine.yield()
+	end
+end
+
+scripts.fx_stage33_envelop_open = {}
+
+function scripts.fx_stage33_envelop_open.update(this, store, script)
+	this.render.sprites[1].ts = store.tick_ts
+	this.render.sprites[1].hide_after_runs = 1
+
+	U.y_wait(store, fts(8))
+	U.sprites_show(this, nil, nil, true)
+
+	this.render.sprites[2].ts = store.tick_ts
+	this.render.sprites[2].hide_after_runs = 1
+
+	local card
+
+	if math.random() < 0.01 then
+		card = this.balatro_card
+
+		local fx = E:create_entity("fx_stage33_envelop_balatro_coins")
+
+		fx.pos = V.vclone(this.pos)
+
+		queue_insert(store, fx)
+	else
+		card = table.random(this.cards)
+	end
+
+	store.level.envelops_opened = store.level.envelops_opened + 1
+
+	if store.level.envelops_opened >= 8 then
+		AC:got("DLC2_GATHER_ENVELOPS")
+	end
+
+	store.player_gold = store.player_gold + card.gold
+
+	U.y_animation_play(this, card.name, nil, store.tick_ts, 1, 3)
 	queue_remove(store, this)
 end
 
