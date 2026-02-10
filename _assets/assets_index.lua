@@ -8870,6 +8870,9 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_wukong_princess_mud_summon_var5_v1.ogg"] = {
 		size = 15477
 	},
+	["kr1-desktop/sounds/files/kra_sfx_wukong_princess_mud_tower_op1_v2.ogg"] = {
+		size = 165110
+	},
 	["kr1-desktop/sounds/files/kra_sfx_wukong_princess_mud_tower_op2_v2.ogg"] = {
 		size = 148137
 	},
