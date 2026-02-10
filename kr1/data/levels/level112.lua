@@ -1,5 +1,5 @@
 local log=require("klua.log"):new("level12")
-local signal=require("hump.signal")
+local signal=require("lib.hump.signal")
 local E=require("entity_db")
 local S=require("sound_db")
 local U=require("utils")

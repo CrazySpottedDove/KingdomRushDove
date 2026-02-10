@@ -11,7 +11,7 @@ local V = require("hump.vector-light")
 local F = require("lib.klove.font_db")
 local simulation, A
 local serpent = require("serpent")
-local I = require("klove.image_db")
+local I = require("lib.klove.image_db")
 local E = require("entity_db")
 local U = require("utils")
 local RU = require("render_utils")

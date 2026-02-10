@@ -8,7 +8,7 @@ require("klove.kui")
 
 local kui_db = require("klove.kui_db")
 local F = require("lib.klove.font_db")
-local I = require("klove.image_db")
+local I = require("lib.klove.image_db")
 local SU = require("screen_utils")
 local LU = require("level_utils")
 local E = require("entity_db")

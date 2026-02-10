@@ -23843,21 +23843,6 @@ function scripts.controller_elemental_wood.update(this, store)
 	controller_elemental_generic_insert_buff_to_target(this)
 	update_fx_points()
 
-	-- this.target.cannot_be_swapped = true
-	-- this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
-	-- if this.target.attacks and this.target.attacks.range then
-	-- 	if this.target.tower.type == "tricannon" then
-	-- 		this.target.attacks.list[1].range = this.target.attacks.list[1].range * this.range_factor
-	-- 	end
-	-- 	this.target.attacks.range = this.target.attacks.range * this.range_factor
-	-- 	this.max_range = this.target.attacks.range
-	-- elseif this.target.barrack and this.target.barrack.rally_range then
-	-- 	this.target.barrack.rally_range = this.target.barrack.rally_range * this.rally_range_factor
-	-- 	this.max_range = this.target.barrack.rally_range
-	-- else
-	-- 	this.max_range = this.default_max_range
-	-- end
-	-- SU.insert_tower_damage_factor_buff(this.target, this.damage_factor - 1)
 	this.ability_cooldown = this.first_cooldown
 
 	if store.elemental_holders_cd and store.elemental_holders_cd[this.target.tower.holder_id] then
@@ -23883,7 +23868,7 @@ function scripts.controller_elemental_wood.update(this, store)
 			controller_elemental_generic_remove_buff_from_target(this)
 
 			this.target = new_tower
-
+			tower = new_tower
 			U.y_wait(store, 0.1)
 			controller_elemental_generic_insert_buff_to_target(this)
 			update_fx_points()
@@ -24260,7 +24245,7 @@ function scripts.controller_elemental_fire.update(this, store)
 			controller_elemental_generic_remove_buff_from_target(this)
 
 			this.target = new_tower
-
+			tower = new_tower
 			U.y_wait(store, 0.1)
 			controller_elemental_generic_insert_buff_to_target(this)
 			update_fx_points()
@@ -24514,36 +24499,6 @@ function scripts.controller_elemental_water.update(this, store)
 		end
 	end
 
-	local function y_find_tower()
-		local found_tower = false
-
-		while true do
-			for _, e in pairs(store.entities) do
-				if e.tower and e.tower.type ~= "holder" and e.tower.holder_id == this.target_holder_id then
-					found_tower = true
-
-					if e.build_name then
-						break
-					else
-						return e
-					end
-				end
-			end
-
-			if not found_tower then
-				return nil
-			end
-
-			if U.animation_finished(this, this.render.sid_dragon, 1) and this.render.sprites[this.render.sid_dragon].name == "buy" then
-				U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_dragon, true)
-			end
-
-			coroutine.yield()
-		end
-
-		return nil
-	end
-
 	U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_gradiente)
 
 	if this.buy_anim_dragon_ts then
@@ -24552,7 +24507,7 @@ function scripts.controller_elemental_water.update(this, store)
 		U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_dragon)
 	end
 
-	this.target = y_find_tower()
+	this.target = controller_elemental_generic_find_tower(this, store)
 
 	if not this.target then
 		queue_remove(store, this)
@@ -24571,16 +24526,8 @@ function scripts.controller_elemental_water.update(this, store)
 		U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_dragon)
 	end
 
-	this.target.cannot_be_swapped = true
-	this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
-
-	if this.target.attacks and this.target.attacks.range then
-		this.max_range = this.target.attacks.range
-	elseif this.target.barrack and this.target.barrack.rally_range then
-		this.max_range = this.target.barrack.rally_range
-	else
-		this.max_range = this.default_max_range
-	end
+	controller_elemental_generic_insert_buff_to_target(this)
+	update_fx_points()
 
 	this.ability_cooldown = this.first_cooldown
 
@@ -24600,7 +24547,6 @@ function scripts.controller_elemental_water.update(this, store)
 	aura_controller.aura.radius = this.max_range
 
 	queue_insert(store, aura_controller)
-	update_fx_points()
 	add_mist()
 
 	local show_wings_ts = store.tick_ts + fts(120)
@@ -24614,9 +24560,9 @@ function scripts.controller_elemental_water.update(this, store)
 		local tower = store.entities[this.target.id]
 
 		if not tower then
-			tower = y_find_tower()
+			local new_tower = controller_elemental_generic_find_tower(this, store)
 
-			if not tower then
+			if not new_tower then
 				remove_mist()
 				queue_remove(store, aura_controller)
 				queue_remove(store, this)
@@ -24624,20 +24570,11 @@ function scripts.controller_elemental_water.update(this, store)
 				return
 			end
 
-			this.target = tower
-			this.target.cannot_be_swapped = true
-			this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
-
+			controller_elemental_generic_remove_buff_from_target(this)
+			this.target = new_tower
+			tower = new_tower
 			U.y_wait(store, 0.1)
-
-			if this.target.attacks and this.target.attacks.range then
-				this.max_range = this.target.attacks.range
-			elseif this.target.barrack and this.target.barrack.rally_range then
-				this.max_range = this.target.barrack.rally_range
-			else
-				this.max_range = this.default_max_range
-			end
-
+			controller_elemental_generic_insert_buff_to_target(this)
 			aura_controller.aura.radius = this.max_range
 
 			update_fx_points()
@@ -24929,32 +24866,6 @@ scripts.controller_elemental_earth = {}
 function scripts.controller_elemental_earth.update(this, store)
 	this.spawns_ref = {}
 
-	local function y_find_tower()
-		local found_tower = false
-
-		while true do
-			for _, e in pairs(store.entities) do
-				if e.tower and e.tower.type ~= "holder" and e.tower.holder_id == this.target_holder_id then
-					found_tower = true
-
-					if e.build_name then
-						break
-					else
-						return e
-					end
-				end
-			end
-
-			if not found_tower then
-				return nil
-			end
-
-			coroutine.yield()
-		end
-
-		return nil
-	end
-
 	local function find_target()
 		return U.find_foremost_enemy(store.entities, this.pos, 0, this.max_range, false, this.vis_flags, this.vis_bans)
 	end
@@ -24967,7 +24878,7 @@ function scripts.controller_elemental_earth.update(this, store)
 		U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_dragon)
 	end
 
-	this.target = y_find_tower()
+	this.target = controller_elemental_generic_find_tower(this, store)
 
 	if not this.target then
 		queue_remove(store, this)
@@ -24986,16 +24897,7 @@ function scripts.controller_elemental_earth.update(this, store)
 		U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_dragon)
 	end
 
-	this.target.cannot_be_swapped = true
-	this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
-
-	if this.target.attacks and this.target.attacks.range then
-		this.max_range = this.target.attacks.range
-	elseif this.target.barrack and this.target.barrack.rally_range then
-		this.max_range = this.target.barrack.rally_range
-	else
-		this.max_range = this.default_max_range
-	end
+	controller_elemental_generic_insert_buff_to_target(this)
 
 	local controller = E:create_entity(this.controller_aura_increase_health)
 
@@ -25027,7 +24929,7 @@ function scripts.controller_elemental_earth.update(this, store)
 		local tower = store.entities[this.target.id]
 
 		if not tower then
-			local new_tower = y_find_tower()
+			local new_tower = controller_elemental_generic_find_tower(this, store)
 
 			if not new_tower then
 				for _, spawn in pairs(this.spawns_ref) do
@@ -25039,20 +24941,12 @@ function scripts.controller_elemental_earth.update(this, store)
 				return
 			end
 
+			controller_elemental_generic_remove_buff_from_target(this)
 			this.target = new_tower
-			this.target.cannot_be_swapped = true
-			this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
-
+			tower = new_tower
 			U.y_wait(store, 0.1)
 
-			if this.target.attacks and this.target.attacks.range then
-				this.max_range = this.target.attacks.range
-			elseif this.target.barrack and this.target.barrack.rally_range then
-				this.max_range = this.target.barrack.rally_range
-			else
-				this.max_range = this.default_max_range
-			end
-
+			controller_elemental_generic_insert_buff_to_target(this)
 			controller.aura.radius = this.max_range
 		end
 
@@ -25531,32 +25425,6 @@ function scripts.controller_elemental_metal.update(this, store)
 		this.fx_points = get_new_fx_points()
 	end
 
-	local function y_find_tower()
-		local found_tower = false
-
-		while true do
-			for _, e in pairs(store.entities) do
-				if e.tower and e.tower.type ~= "holder" and e.tower.holder_id == this.target_holder_id then
-					found_tower = true
-
-					if e.build_name then
-						break
-					else
-						return e
-					end
-				end
-			end
-
-			if not found_tower then
-				return nil
-			end
-
-			coroutine.yield()
-		end
-
-		return nil
-	end
-
 	local function find_target()
 		return U.find_foremost_enemy(store.entities, this.pos, 0, this.max_range, false, this.vis_flags, this.vis_bans)
 	end
@@ -25585,7 +25453,7 @@ function scripts.controller_elemental_metal.update(this, store)
 		U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_dragon)
 	end
 
-	this.target = y_find_tower()
+	this.target = controller_elemental_generic_find_tower(this, store)
 
 	if not this.target then
 		queue_remove(store, this)
@@ -25604,16 +25472,7 @@ function scripts.controller_elemental_metal.update(this, store)
 		U.animation_start(this, "buy_tower", nil, store.tick_ts, false, this.render.sid_dragon)
 	end
 
-	this.target.cannot_be_swapped = true
-	this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
-
-	if this.target.attacks and this.target.attacks.range then
-		this.max_range = this.target.attacks.range
-	elseif this.target.barrack and this.target.barrack.rally_range then
-		this.max_range = this.target.barrack.rally_range
-	else
-		this.max_range = this.default_max_range
-	end
+	controller_elemental_generic_insert_buff_to_target(this)
 
 	add_price_multiplier()
 
@@ -25640,7 +25499,7 @@ function scripts.controller_elemental_metal.update(this, store)
 		local tower = store.entities[this.target.id]
 
 		if not tower then
-			local new_tower = y_find_tower()
+			local new_tower = controller_elemental_generic_find_tower(this, store)
 
 			if not new_tower then
 				remove_price_multiplier()
@@ -25648,22 +25507,15 @@ function scripts.controller_elemental_metal.update(this, store)
 
 				return
 			end
+			remove_price_multiplier()
+			controller_elemental_generic_remove_buff_from_target(this)
 
 			tower = new_tower
 			this.target = new_tower
-			this.target.cannot_be_swapped = true
-			this.target.ui.hidden_tower_menu_actions = {"tw_swap_mode"}
 
 			U.y_wait(store, 0.1)
 
-			if this.target.attacks and this.target.attacks.range then
-				this.max_range = this.target.attacks.range
-			elseif this.target.barrack and this.target.barrack.rally_range then
-				this.max_range = this.target.barrack.rally_range
-			else
-				this.max_range = this.default_max_range
-			end
-
+			controller_elemental_generic_insert_buff_to_target(this)
 			update_fx_points()
 			add_price_multiplier()
 		end
@@ -44273,22 +44125,6 @@ end
 
 scripts.soldier_charge = {}
 
-function scripts.soldier_charge.get_info(this)
-	local a = this.melee.attacks[1]
-	local min, max = a.damage_min, a.damage_max
-
-	min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
-
-	return {
-		type = STATS_TYPE_SOLDIER,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		armor = this.health.armor,
-		damage_min = min,
-		damage_max = max
-	}
-end
-
 function scripts.soldier_charge.insert(this, store, script)
 	this.melee.order = U.attack_order(this.melee.attacks)
 
@@ -60443,7 +60279,7 @@ function scripts.bullet_boss_princess_iron_fan.update(this, store)
 		end
 	end
 
-	local targets = table.filter(store.entities, function(_, e)
+	local targets = table.filter(store.soldiers, function(_, e)
 		return e and e.health and not e.health.dead and e.vis and band(e.vis.flags, b.damage_bans) == 0 and band(e.vis.bans, b.damage_flags) == 0 and U.is_inside_ellipse(e.pos, b.to, b.damage_radius)
 	end)
 
@@ -60560,7 +60396,7 @@ function scripts.bullet_boss_princess_iron_fan.update(this, store)
 		queue_insert(store, fx)
 	end
 
-	if b.decal_fx then
+	if b.decal_fx and target then
 		local decal = E:create_entity(b.decal_fx)
 
 		decal.pos.x, decal.pos.y = target.pos.x, target.pos.y
@@ -61512,7 +61348,7 @@ function scripts.boss_bull_king.update(this, store, script)
 
 				if soldiers_damage and #soldiers_damage > 0 then
 					for _, e in pairs(soldiers_damage) do
-						local d = SU.create_attack_damage(a_area_attack, e.id, this.id)
+						local d = SU.create_attack_damage(a_area_attack, e.id, this)
 
 						queue_damage(store, d)
 					end
@@ -61530,7 +61366,7 @@ function scripts.boss_bull_king.update(this, store, script)
 					end
 				end
 
-				local towers = SU.find_towers_in_range_vis(store.entities, this.pos, a_area_attack, function(t)
+				local towers = U.find_towers_in_range(store.towers, this.pos, a_area_attack, function(t)
 					return t.tower.can_be_mod and not t.tower.blocked and not SU.has_modifiers(store, t, a_area_attack.mod_tower_debuff)
 				end)
 
@@ -62317,6 +62153,7 @@ scripts.fx_stage_35_cannonball_open_path = {}
 
 function scripts.fx_stage_35_cannonball_open_path.update(this, store, script)
 	U.y_wait(store, fts(60))
+	this.render.sprites[1].hidden = false
 	U.animation_start(this, "in", nil, store.tick_ts, false)
 	U.y_wait(store, fts(39))
 

@@ -1,5 +1,5 @@
 local log=require("klua.log"):new("level01")
-local signal=require("hump.signal")
+local signal=require("lib.hump.signal")
 local E=require("entity_db")
 local S=require("sound_db")
 local U=require("utils")
@@ -112,7 +112,6 @@ end
 signal.emit("boss_fight_end")
 U.y_wait(store,1)
 signal.emit("fade-out",1)
-store.custom_game_outcome={postpone_unload=true,next_item_name="boss_fight_10_end"}
 store.waves_finished=true
 store.level.run_complete=true
 end

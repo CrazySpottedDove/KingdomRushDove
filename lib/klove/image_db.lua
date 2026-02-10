@@ -146,7 +146,7 @@ end
 function image_db:get_short_stats()
 	local count_frames = 0
 	local o = ""
-	local list = {}
+	-- local list = {}
 
 	o = o .. "Atlas frames count: "
 
@@ -155,17 +155,17 @@ function image_db:get_short_stats()
 	end
 
 	o = o .. count_frames .. "\n"
-	o = o .. "Loaded images: "
+	-- o = o .. "Loaded images: "
 
-	for k, v in pairs(self.db_images) do
-		if v[1] then
-			table.insert(list, k)
-		end
-	end
+	-- for k, v in pairs(self.db_images) do
+	-- 	if v[1] then
+	-- 		table.insert(list, k)
+	-- 	end
+	-- end
 
-	table.sort(list)
+	-- table.sort(list)
 
-	o = o .. table.concat(list, ", ")
+	-- o = o .. table.concat(list, ", ")
 	o = o .. "\nTexture memory (MB): " .. love.graphics.getStats().texturememory / 1048576
 
 	return o

@@ -20,7 +20,7 @@ local bor = bit.bor
 local bnot = bit.bnot
 local AC = require("achievements")
 local F = require("lib.klove.font_db")
-local I = require("klove.image_db")
+local I = require("lib.klove.image_db")
 local S = require("sound_db")
 local SU = require("screen_utils")
 local E = require("entity_db")
@@ -1765,17 +1765,18 @@ function game_gui.swap_tower()
 end
 
 function game_gui:set_boss(e)
-	local boss_health_bar = self.boss_health_bar
-	boss_health_bar:set_entity(e)
-	local portrait_ss = I:s(e.info.portrait)
-	boss_health_bar:set_portrait(portrait_ss, I:i(portrait_ss.atlas))
+	-- local boss_health_bar = self.boss_health_bar
+	-- boss_health_bar:set_entity(e)
+	-- local portrait_ss = I:s(e.info.portrait)
+	-- boss_health_bar:set_portrait(portrait_ss, I:i(portrait_ss.atlas))
 	-- 	if e.info and e.info.i18n_key then
 	-- 	self.l_name.text = string.upper(_(e.info.i18n_key .. "_NAME"))
 	-- else
 	-- 	self.l_name.text = string.upper(_(string.upper(e.template_name) .. "_NAME"))
 	-- end
-	boss_health_bar:set_name(_(e.info.i18n_key and e.info.i18n_key .. "_NAME" or string.upper(e.template_name) .. "_NAME"))
-	boss_health_bar:enable()
+	-- boss_health_bar:set_name(_(e.info.i18n_key and e.info.i18n_key .. "_NAME" or string.upper(e.template_name) .. "_NAME"))
+	-- boss_health_bar:enable()
+	self.boss_health_bar:enable_with(e, self.game.simulation.store)
 end
 
 TimeRewardFx = class("TimeRewardFx", KView)
@@ -6199,7 +6200,13 @@ function TowerMenu:update(dt)
 					nt = E:get_template(nt.build_name)
 				end
 
-				if nt.tower.price > store.player_gold then
+				local price = nt.tower.price
+				if e.tower.upgrade_price_multiplier then
+					price = math.ceil(price * e.tower.upgrade_price_multiplier)
+					price = math.floor(price / 10) * 10
+				end
+
+				if price > store.player_gold then
 					c:disable()
 				else
 					c:enable()
@@ -6343,8 +6350,6 @@ function TowerMenu:button_enter(button, item, entity, mouse_button)
 
 					new_range = new_range * (m.range_factor + m.modifier.level * m.range_factor_inc)
 				end
-
-				log.debug("range:%s new_range:%s eagle mods: %s", nt.attacks.range, new_range, #mods)
 			end
 
 			game_gui:show_tower_range_upgrade(ux, uy, new_range)
@@ -6368,7 +6373,6 @@ function TowerMenu:button_enter(button, item, entity, mouse_button)
 
 		local ux, uy = game_gui:g2u(V.v(V.add(entity.pos.x, entity.pos.y, entity.tower.range_offset.x, entity.tower.range_offset.y)))
 
-		log.debug("range:%s factor:%s", new_range, factor)
 		game_gui:show_tower_range_upgrade(ux, uy, new_range)
 	end
 
@@ -6915,7 +6919,14 @@ function TowerMenuButton:initialize(item, entity)
 			nt = E:get_template(nt.build_name)
 		end
 
-		price_tag = tostring(nt.tower.price)
+		local price = nt.tower.price
+
+		if entity.tower.upgrade_price_multiplier then
+			price = math.ceil(price * entity.tower.upgrade_price_multiplier)
+			price = math.floor(price / 10) * 10
+		end
+
+		price_tag = tostring(price)
 	elseif item.action == "tw_unblock" then
 		price_tag = tostring(entity.tower_holder.unblock_price)
 	elseif item.action == "upgrade_power" then

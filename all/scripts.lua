@@ -5985,7 +5985,6 @@ function scripts.mod_dps.update(this, store)
 		coroutine.yield()
 	end
 
-	log.paranoid(">>>>> id:%s - mod_dps cycles:%s total_damage:%s", this.id, cycles, total_damage)
 	queue_remove(store, this)
 end
 

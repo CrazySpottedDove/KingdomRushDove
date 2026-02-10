@@ -3,7 +3,7 @@ local class = require("middleclass")
 local BossHealthBar = class("BossHealthBar", KView)
 local G = love.graphics
 local F = require("lib.klove.font_db")
-
+local I = require("lib.klove.image_db")
 local background_width = 440
 local background_height = 42
 local healthbar_left_padding = 40
@@ -27,29 +27,44 @@ function BossHealthBar:initialize(sw)
 	self.font = F:f("button", 12)
 	self.hp_lag = 1
 	self.time = 0
+	self.store = nil
 	return self
 end
 
-function BossHealthBar:set_entity(entity)
-	self.entity = entity
+function BossHealthBar:enable_with(entity, store)
+	if not self.entity then
+		self.entity = entity
+		self.hp_lag = 1
+		self.time = 0
+		self.health_percent = 1
+		self.portrait_ss = I:s(entity.info.portrait)
+		self.portrait = I:i(self.portrait_ss.atlas)
+		self.boss_name = _(entity.info.i18n_key and entity.info.i18n_key .. "_NAME" or string.upper(entity.template_name) .. "_NAME")
+		self.hidden = false
+	end
+	self.store = store
 end
 
-function BossHealthBar:set_portrait(portrait_ss, portrait)
-	self.portrait_ss = portrait_ss
-	self.portrait = portrait
-end
+-- function BossHealthBar:set_entity(entity)
+-- 	self.entity = entity
+-- end
 
-function BossHealthBar:set_name(name)
-	self.boss_name = name
-end
+-- function BossHealthBar:set_portrait(portrait_ss, portrait)
+-- 	self.portrait_ss = portrait_ss
+-- 	self.portrait = portrait
+-- end
 
-function BossHealthBar:enable()
-	self.hidden = false
-end
+-- function BossHealthBar:set_name(name)
+-- 	self.boss_name = name
+-- end
 
-function BossHealthBar:enabled()
-	return not self.hidden and self.entity ~= nil
-end
+-- function BossHealthBar:enable()
+-- 	self.hidden = false
+-- end
+
+-- function BossHealthBar:enabled()
+-- 	return not self.hidden and self.entity ~= nil
+-- end
 
 function BossHealthBar:_draw_self()
 	if self.hidden or not self.entity then
@@ -137,21 +152,32 @@ function BossHealthBar:update(dt)
 	if self.entity then
 		local health = self.entity.health
 		if not health or health.dead then
-			self.hidden = true
 			self.entity = nil
-			return
+			local new_entity
+			for _, e in pairs(self.store.enemies) do
+				if not e.health.dead and e.enemy.lives_cost == 20 then
+					new_entity = e
+					break
+				end
+			end
+			if new_entity then
+				self:enable_with(new_entity, self.store)
+			else
+				self.hidden = true
+				self.store = nil
+				return
+			end
 		end
 		self.health_percent = health.hp / health.hp_max
-	end
+		self.time = self.time + dt
 
-	self.time = self.time + dt
-
-	local hp = math.max(0, math.min(self.health_percent, 1))
-	if (self.hp_lag or 1) < hp then
-		self.hp_lag = hp
-	else
-		local speed = 0.8
-		self.hp_lag = self.hp_lag + (hp - self.hp_lag) * math.min(speed * dt, 1)
+		local hp = math.max(0, math.min(self.health_percent, 1))
+		if (self.hp_lag or 1) < hp then
+			self.hp_lag = hp
+		else
+			local speed = 0.8
+			self.hp_lag = self.hp_lag + (hp - self.hp_lag) * math.min(speed * dt, 1)
+		end
 	end
 end
 

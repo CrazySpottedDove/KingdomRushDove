@@ -1,7 +1,7 @@
 -- chunkname: @./all/screen_comics.lua
 local log = require("lib.klua.log"):new("screen_comics")
 local V = require("lib.klua.vector")
-local I = require("klove.image_db")
+local I = require("lib.klove.image_db")
 local F = require("lib.klove.font_db")
 local G = love.graphics
 local S = require("sound_db")

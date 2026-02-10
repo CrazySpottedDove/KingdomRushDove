@@ -556,13 +556,10 @@ tt.coin_tween_time = {fts(7), fts(10)}
 tt.coin_tween_x_offset = {13, 25}
 
 local modifier = E:register_t("modifier")
-
 E:add_comps(modifier, "pos", "modifier", "sound_events", "main_script")
 
 tt = E:register_t("mod_blood", "modifier")
-
 E:add_comps(tt, "dps")
-
 tt.modifier.level = 1
 tt.modifier.duration = 3
 tt.modifier.vis_flags = F_BLOOD
@@ -572,7 +569,6 @@ tt.dps.damage_inc = 15
 tt.dps.damage_every = 1
 tt.dps.damage_type = DAMAGE_TRUE
 tt.dps.fx = "fx_bleeding"
-tt.dps.fx_with_blood_color = true
 tt.dps.fx_target_flip = true
 tt.dps.fx_tracks_target = true
 tt.main_script.insert = scripts.mod_dps.insert
@@ -639,7 +635,7 @@ mod_stun.modifier.vis_flags = F_STUN
 mod_stun.modifier.vis_bans = bor(mod_stun.modifier.vis_bans, F_BOSS)
 mod_stun.render.sprites[1].prefix = "stun"
 mod_stun.render.sprites[1].size_names = {"small", "big", "big"}
-mod_stun.render.sprites[1].name = "small"
+mod_stun.render.sprites[1].name = "loop"
 mod_stun.render.sprites[1].draw_order = 20
 
 -- 用于使实体对于某些效果不可见

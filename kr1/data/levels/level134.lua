@@ -1,5 +1,5 @@
 local log=require("klua.log"):new("level01")
-local signal=require("hump.signal")
+local signal=require("lib.hump.signal")
 local E=require("entity_db")
 local S=require("sound_db")
 local U=require("utils")
@@ -12,37 +12,8 @@ require("all.constants")
 local function fts(v)
 return v/FPS
 end
-local hero_index,selected_hero
 local level={}
-function level:init(store)
-end
-function level:load(store)
-map_data=require("data.map_data")
-local hero_data=map_data.hero_data
-if screen_map.user_data.liuhui_hero.usedoublehero then
-selected_hero=hero_data[screen_map.user_data.liuhui_hero.herolist[1]].name
-else
-selected_hero=store.selected_hero
-end
-print("selected_hero:"..selected_hero)
-end
 function level:update(store)
-local hero
-if not store.main_hero and not store.level.manual_hero_insertion then
-local user_data=storage:load_slot()
-map_data=require("data.map_data")
-local hero_data=map_data.hero_data
-if (not user_data.liuhui_hero) or (not user_data.liuhui_hero.usedoublehero) then
-hero=LU.insert_hero(store)
-else
-name1=hero_data[user_data.liuhui_hero.herolist[1]].name
-name2=hero_data[user_data.liuhui_hero.herolist[2]].name
-hero=LU.insert_double_hero(store,name1,name2)
-end
-print("level 134 insert hero")
-else
-print("level 134 hero have already inserted")
-end
 if store.level_mode==GAME_MODE_CAMPAIGN then
 self.bossfight_ended=false
 local controller_boss_prefight
@@ -60,21 +31,24 @@ while controller_boss_prefight.last_taunt~=key do
 coroutine.yield()
 end
 end
+if not store.main_hero and not store.level.locked_hero and not store.level.manual_hero_insertion then
+LU.insert_hero(store)
+end
 if not store.restarted and not main.params.skip_cutscenes then
-hero.nav_grid.waypoints={}
+store.main_hero.nav_grid.waypoints={}
 local hero_path=10
 local hero_subpath=1
 local hero_move_start_node=P:nearest_nodes(23,463,{hero_path},{hero_subpath},false)[1]
 local hero_move_end_node=P:nearest_nodes(295,400,{hero_path},{hero_subpath},false)[1]
 for ni=hero_move_start_node[3],hero_move_end_node[3],-3 do
 local pos=P:node_pos(hero_path,hero_subpath,ni)
-table.insert(hero.nav_grid.waypoints,pos)
+table.insert(store.main_hero.nav_grid.waypoints,pos)
 end
-hero.nav_rally.new=true
-hero.nav_rally.center=V.vclone(hero.nav_grid.waypoints[#hero.nav_grid.waypoints])
-hero.nav_rally.pos=V.vclone(hero.nav_rally.center)
-local old_vo=table.deepclone(hero.sound_events.change_rally_point)
-hero.sound_events.change_rally_point=nil
+store.main_hero.nav_rally.new=true
+store.main_hero.nav_rally.center=V.vclone(store.main_hero.nav_grid.waypoints[#store.main_hero.nav_grid.waypoints])
+store.main_hero.nav_rally.pos=V.vclone(store.main_hero.nav_rally.center)
+local old_vo=table.deepclone(store.main_hero.sound_events.change_rally_point)
+store.main_hero.sound_events.change_rally_point=nil
 signal.emit("pan-zoom-camera",4,{x=512,y=384},OVtargets(nil,1.2))
 signal.emit("show-curtains")
 signal.emit("hide-gui")
@@ -82,14 +56,14 @@ signal.emit("start-cinematic")
 controller_boss_prefight:force_go_middle(store)
 U.y_wait(store,4)
 y_do_boss_taunt("LV34_BOSS_INTRO_01")
-while U.flag_has(hero.vis.bans,controller_boss_prefight.stun_hero_vis_flags) do
+while U.flag_has(store.main_hero.vis.bans,controller_boss_prefight.stun_hero_vis_flags) do
 coroutine.yield()
 end
-controller_boss_prefight:force_capture_hero(hero)
+controller_boss_prefight:force_capture_hero(store.main_hero)
 U.y_wait(store,5)
 controller_boss_prefight:force_go_back(store)
 U.y_wait(store,6)
-hero.sound_events.change_rally_point=old_vo
+store.main_hero.sound_events.change_rally_point=old_vo
 signal.emit("hide-curtains")
 signal.emit("show-gui")
 signal.emit("end-cinematic",true)

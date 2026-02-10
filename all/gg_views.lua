@@ -8,7 +8,7 @@ local class = require("middleclass")
 local km = require("lib.klua.macros")
 local F = require("lib.klove.font_db")
 local G = love.graphics
-local I = require("klove.image_db")
+local I = require("lib.klove.image_db")
 local utf8 = require("utf8")
 local i18n = require("i18n")
 

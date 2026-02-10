@@ -2539,7 +2539,6 @@ return {
 			"kra_sfx_wukong_mechanic_stage35_cinematic_3_v1.ogg",
 			"kra_sfx_wukong_mechanic_stage35_cinematic_4_part1_v1.ogg",
 			"kra_sfx_wukong_mechanic_stage35_cinematic_4_part2_v1.ogg",
-			"kra_sfx_wukong_mechanic_stage35_cinematic_4_v1.ogg",
 			"kra_sfx_wukong_mechanic_stage35_cinematic_4_scream_v2.ogg"
 		}
 	},

@@ -17247,7 +17247,7 @@ tt.info.portrait = "kr5_info_portraits_soldiers_0032"
 tt.health.armor = b.soldier_armor
 tt.health.hp_max = b.soldier_hp_max
 tt.health_bar.offset = v(0, ady(30))
-tt.info.fn = scripts.soldier_charge.get_info
+tt.info.fn = scripts.soldier_barrack.get_info
 tt.info.i18n_key = "SOLDIER_ARBOREAN_BARRACK"
 tt.lifespan.duration = nil
 tt.main_script.insert = scripts.soldier_charge.insert
@@ -21028,7 +21028,7 @@ b = balance.enemies.wukong.boss_princess.bossfight
 
 E:add_comps(tt, "melee", "ranged", "timed_attacks")
 
-tt.enemy.lives_cost = 999
+tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = v(45, 0)
 tt.health.hp_max = b.hp
 tt.health.magic_armor = b.magic_armor
@@ -21650,7 +21650,7 @@ b = balance.enemies.wukong.boss_bull_king
 
 E:add_comps(tt, "melee", "timed_attacks")
 
-tt.enemy.lives_cost = 999
+tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = v(80, 0)
 tt.health.hp_max = b.hp
 tt.health.magic_armor = b.magic_armor
@@ -22460,9 +22460,7 @@ tt.slow.factor = b.sprint_factor
 tt.modifier.duration = b.duration
 tt.modifier.is_fire_buff = true
 tt = RT("mod_wukong_flaming_ground_dps", "modifier")
-
 E:add_comps(tt, "dps", "render")
-
 b = balance.specials.terrain_8.flaming_ground.dps
 tt.dps.damage_every = b.damage_every
 tt.dps.damage_min = b.damage_min
@@ -22471,15 +22469,15 @@ tt.dps.damage_type = b.damage_type
 tt.modifier.duration = b.duration
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
+tt.modifier.vis_flags = bor(tt.modifier.vis_flags, F_BURN)
 tt.render.sprites[1].size_names = {"small", "medium", "large"}
 tt.render.sprites[1].prefix = "fire"
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].draw_order = 4
 tt.render.sprites[1].loop = true
+
 tt = RT("mod_wukong_flaming_ground_healing", "modifier")
-
 E:add_comps(tt, "hps", "render")
-
 b = balance.specials.terrain_8.flaming_ground.healing
 tt.main_script.insert = scripts.mod_hps.insert
 tt.main_script.update = scripts.mod_wukong_flaming_ground_healing.update
@@ -22538,15 +22536,14 @@ tt.template_scripts = {
 	}
 }
 tt = RT("mod_fire_fox_explotion_dps", "modifier")
-
 E:add_comps(tt, "dps")
-
 b = balance.enemies.wukong.fire_fox.flaming_ground.explotion
 tt.dps.damage_every = 1e+99
 tt.dps.damage_min = b.damage_min
 tt.dps.damage_max = b.damage_max
 tt.dps.damage_type = b.damage_type
 tt.modifier.duration = fts(2)
+tt.modifier.vis_flags = bor(tt.modifier.vis_flags, F_BURN)
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 tt = RT("mod_nine_tailed_fox_stun_attack", "mod_stun")
@@ -22558,29 +22555,19 @@ tt.modifier.duration = b.stun_duration
 tt = RT("mod_gale_warrior_combo_counter", "modifier")
 tt.main_script.insert = scripts.mod_gale_warrior_combo_counter.insert
 tt.main_script.queue = scripts.mod_gale_warrior_combo_counter.queue
-tt = RT("mod_gale_warrior_dot", "modifier")
 
-E:add_comps(tt, "dps")
-
+tt = RT("mod_gale_warrior_dot", "mod_blood")
 b = balance.enemies.wukong.gale_warrior.puncturing_thrust.dot
 tt.dps.damage_every = b.damage_every
 tt.dps.damage_min = b.damage_min
 tt.dps.damage_max = b.damage_max
 tt.dps.damage_type = b.damage_type
-tt.dps.kill = true
-tt.dps.fx = "fx_bleeding"
-tt.dps.fx_with_blood_color = true
-tt.dps.fx_target_flip = true
-tt.dps.fx_tracks_target = true
 tt.modifier.duration = b.duration
-tt.modifier.vis_flags = F_BLOOD
+tt.modifier.level = 0
 tt.main_script.queue = scripts.mod_gale_warrior_dot.queue
-tt.main_script.insert = scripts.mod_dps.insert
-tt.main_script.update = scripts.mod_dps.update
+
 tt = E:register_t("mod_enemy_storm_elemental_tower_mark", "modifier")
-
 E:add_comps(tt, "mark_flags")
-
 tt.modifier.duration = fts(30)
 tt.main_script.queue = scripts.mod_mark_flags.queue
 tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
@@ -23723,10 +23710,11 @@ tt.escombro_holder = "decal_stage_35_escombros_cannonball_holder"
 tt = E:register_t("fx_stage_35_cannonball_open_path", "decal_scripted")
 tt.main_script.update = scripts.fx_stage_35_cannonball_open_path.update
 tt.render.sprites[1].prefix = "stage_5_pokebola_tntDef"
-tt.render.sprites[1].name = "run"
+tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].hidden = true
 tt.render.sprites[1].sort_y_offset = -130
 tt = E:register_t("fx_stage_35_cannonball_block_path", "decal_scripted")
 tt.main_script.update = scripts.fx_stage_35_cannonball_block_path.update
@@ -23745,3 +23733,158 @@ tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_EFFECTS
 tt.render.sprites[1].delay_start = fts(2)
 tt.render.sprites[1].hidden = true
+
+tt = E:register_t("ps_stage_34_petalos_1")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.pos = v(1300, 0)
+tt.particle_system.alphas = {255, 200, 150, 0}
+tt.particle_system.emit_area_spread = v(0, 1300)
+tt.particle_system.emission_rate = 0.5
+tt.particle_system.emit_direction = -3.3161255787892245
+tt.particle_system.emit_offset = {
+	x = 20,
+	y = 65.71428571428572
+}
+tt.particle_system.emit_rotation = 2.0943951023931953
+tt.particle_system.emit_rotation_spread = 5.235987755982985
+tt.particle_system.emit_speed = {50, 100}
+tt.particle_system.emit_spread = 0.7853981633974483
+tt.particle_system.name = "stage34_petalos_1"
+tt.particle_system.particle_lifetime = {10, 23}
+tt.particle_system.spin = {0.5, 5}
+tt.particle_system.z = Z_OBJECTS_SKY
+tt = E:register_t("ps_stage_34_petalos_2", "ps_stage_34_petalos_1")
+tt.particle_system.name = "stage34_petalos_2"
+tt = E:register_t("ps_bullet_enemy_noxious_horror")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "noxious_horror_projectile_vfx_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(8), fts(8)}
+tt.particle_system.emission_rate = 30
+tt.particle_system.emit_area_spread = v(0, 0)
+tt.particle_system.emit_rotation_spread = math.pi * 2
+
+tt = E:register_t("tunnel_KR5_stage_34_ponds", "tunnel_KR5")
+tt.main_script.update = scripts.tunnel_KR5_stage_34_ponds.update
+tt.untargetable_distance = 5
+tt.tunnel.speed_factor = 8
+tt.tunnel.fx_use_unit_offset = false
+tt.tunnel.pick_fx = "fx_stage_34_fuentes_splash"
+tt.tunnel.place_fx = "fx_stage_34_fuentes_splash"
+tt.tunnel.place_fx_barro = "fx_stage_34_fuentes_splash_barro"
+
+tt = E:register_t("fx_enemy_fan_guard_melee_hit", "fx")
+tt.render.sprites[1].name = "fan_guard_hit_run"
+tt.render.sprites[1].sort_y_offset = -30
+
+tt = E:register_t("mod_doom_bringer_tower_block_mark", "modifier")
+
+E:add_comps(tt, "mark_flags")
+
+tt.modifier.duration = fts(30)
+tt.main_script.queue = scripts.mod_mark_flags.queue
+tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.update = scripts.mod_mark_flags.update
+tt = E:register_t("mod_doom_bringer_tower_block", "modifier")
+
+E:add_comps(tt, "render", "tween")
+
+b = balance.enemies.wukong.doom_bringer
+tt.main_script.insert = scripts.mod_doom_bringer_tower_block.insert
+tt.main_script.update = scripts.mod_doom_bringer_tower_block.update
+tt.main_script.remove = scripts.mod_doom_bringer_tower_block.remove
+tt.render.sprites[1].prefix = "doom_bringer_tower_stun_tower_block"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].draw_order = 20
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -15
+tt.render.sprites[1].offset = v(0, 20)
+tt.render.sprites[1].scale = vv(2)
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "doom_bringer_stun_explotion"
+tt.render.sprites[2].name = "run"
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].loop = false
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[2].sort_y_offset = -20
+tt.render.sprites[2].scale = vv(2)
+tt.render.sprites[2].offset = v(0, 20)
+tt.modifier.duration = b.tower_curse.duration
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 0}, {0.5, 0}, {1, 255}, {tt.modifier.duration - 0.5, 255}, {tt.modifier.duration, 0}}
+
+tt = E:register_t("ps_enemy_demon_minotaur_charge_a")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "demon_minotaur_charge_dust_a"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 4
+tt.particle_system.track_offset = v(0, 0)
+tt.particle_system.z = Z_DECALS
+tt.particle_system.particle_lifetime = {fts(14), fts(14)}
+tt = E:register_t("ps_enemy_demon_minotaur_charge_b")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "demon_minotaur_charge_dust_b"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 3
+tt.particle_system.track_offset = v(0, 20)
+tt.particle_system.z = Z_DECALS
+tt.particle_system.particle_lifetime = {fts(44), fts(44)}
+
+tt = E:register_t("soldier_stage_35_cannonball", "soldier_militia")
+b = balance.specials.stage35_cannonball_soldier
+E:add_comps(tt, "reinforcement", "nav_path", "tween")
+-- tt.info.portrait = "gui_bottom_info_image_soldiers_0076"
+tt.info.portrait = "kr5_info_portraits_soldiers_0001"
+tt.health.hp_max = b.hp
+tt.health.armor = b.armor
+tt.health_bar.offset = v(0, 35)
+tt.info.fn = scripts.soldier_charge.get_info
+tt.info.random_name_count = 5
+tt.info.random_name_format = "SOLDIER_CANNONBALL_%i_NAME"
+tt.main_script.insert = scripts.soldier_reinforcement.insert
+tt.main_script.update = scripts.soldier_stage_35_cannonball.update
+tt.melee.range = b.basic_attack.range
+tt.melee.attacks[1].animation = "attack_melee"
+tt.melee.attacks[1].cooldown = b.basic_attack.cooldown
+tt.melee.attacks[1].damage_min = b.basic_attack.damage_min
+tt.melee.attacks[1].damage_max = b.basic_attack.damage_max
+tt.melee.attacks[1].shared_cooldown = true
+tt.melee.attacks[1].hit_time = fts(11)
+tt.soldier.melee_slot_offset = v(8, 0)
+tt.motion.max_speed = b.speed
+tt.render.sprites[1].prefix = "sate_5_mono_unit"
+tt.render.sprites[1].angles = {}
+tt.render.sprites[1].angles.walk = {"walk"}
+tt.render.sprites[1].anchor = vv(0.5)
+tt.soldier.melee_slot_offset.x = 3
+tt.reinforcement.fade = false
+tt.reinforcement.fade_in = false
+tt.reinforcement.fade_out = false
+tt.unit.hit_offset = v(0, 12)
+tt.unit.mod_offset = v(0, ady(22))
+tt.vis.flags = F_FRIEND
+tt.ui.can_click = true
+tt.ui.click_rect = r(-15, -2, 30, 35)
+tt.patrol_pos_offset = v(15, 10)
+tt.patrol_min_cd = 5
+tt.patrol_max_cd = 10
+tt.nav_path.dir = -1
+tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
+tt.tween.props[1].name = "alpha"
+tt.tween.remove = false
+tt.tween.reverse = false
+tt.tween.loop = false
+tt.tween.disabled = true

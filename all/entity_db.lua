@@ -146,11 +146,11 @@ function entity_db:register_t(name, base)
 end
 
 function entity_db:register_c(name, base)
-	if self.components[name] then
-		log.error("component %s already exists", name)
+	-- if self.components[name] then
+	-- 	log.error("component %s already exists", name)
 
-		return
-	end
+	-- 	return
+	-- end
 
 	local c = {}
 
@@ -164,21 +164,21 @@ function entity_db:register_c(name, base)
 end
 
 function entity_db:clone_c(name)
-	if not self.components[name] then
-		log.error("component %s does not exist", name)
+	-- if not self.components[name] then
+	-- 	log.error("component %s does not exist", name)
 
-		return
-	end
+	-- 	return
+	-- end
 
 	return copy(self.components[name])
 end
 
 function entity_db:add_comps(entity, ...)
-	if entity == nil then
-		log.error("entity is nil")
+	-- if entity == nil then
+	-- 	log.error("entity is nil")
 
-		return
-	end
+	-- 	return
+	-- end
 
 	for _, v in pairs({...}) do
 		if not self.components[v] then

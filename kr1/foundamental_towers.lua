@@ -136,13 +136,16 @@ tt.tower.terrain_style = TERRAIN_STYLE_WUKONG_4
 tt.render.sprites[1].name = "build_terrain_0007"
 tt = E:register_t("tower_holder_sea_of_trees_14", "tower_holder")
 tt.tower.terrain_style = TERRAIN_STYLE_WUKONG_5
-tt.render.sprites[1].name = "build_terrain_0029"
+-- tt.render.sprites[1].name = "build_terrain_0029"
+tt.render.sprites[1].name = "build_terrain_0007"
 tt = E:register_t("tower_holder_sea_of_trees_15", "tower_holder")
 tt.tower.terrain_style = TERRAIN_STYLE_WUKONG_6
-tt.render.sprites[1].name = "build_terrain_0030"
+-- tt.render.sprites[1].name = "build_terrain_0030"
+tt.render.sprites[1].name = "build_terrain_0007"
 tt = E:register_t("tower_holder_sea_of_trees_16", "tower_holder")
 tt.tower.terrain_style = TERRAIN_STYLE_WUKONG_7
-tt.render.sprites[1].name = "build_terrain_0031"
+-- tt.render.sprites[1].name = "build_terrain_0031"
+tt.render.sprites[1].name = "build_terrain_0004"
 
 --#region tower_build_archer
 tt = RT("tower_build_archer", "tower_build")
@@ -992,7 +995,7 @@ tt.cannot_be_swapped = true
 tt = RT("tower_holder_elemental_earth", "tower_holder_elemental")
 tt.tower.terrain_style = nil
 tt.render.sid_base = 1
-tt.render.sprites[2].name = "terrains_holders_0014_flag"
+-- tt.render.sprites[2].name = "terrains_holders_0014_flag"
 tt.render.sid_gradiente = #tt.render.sprites + 1
 tt.render.sid_dragon = #tt.render.sprites + 2
 tt.render.sprites[tt.render.sid_gradiente] = E:clone_c("sprite")
@@ -1415,6 +1418,7 @@ tt.root_decal_dragon_kill = "decal_elemental_water_holder_root_dragon_kill"
 tt.tp_max_targets = b.teleport.tp_max_targets
 tt.delay_between_tps = b.teleport.delay_between_tps
 tt.duration = b.teleport.duration
+tt.default_max_range = b.default_max_range
 tt.chase_speed = b.teleport.chase_speed
 tt.wander_interval = b.teleport.wander_interval
 tt.tp_distance_nodes_min = b.teleport.tp_distance_nodes_min
@@ -1577,10 +1581,9 @@ tt.main_script.insert = scripts.mod_hps.insert
 tt.main_script.update = scripts.mod_hps.update
 tt.render.sprites[1].name = "instant_heal_mod_fx"
 tt.render.sprites[1].sort_y_offset = -3
+
 tt = RT("controller_elemental_earth")
-
 E:add_comps(tt, "main_script", "pos", "render", "tween")
-
 b = balance.specials.terrain_8.elemental_holders.earth_holder
 tt.main_script.update = scripts.controller_elemental_earth.update
 tt.main_script.remove = scripts.controller_elemental_generic.remove
@@ -1592,6 +1595,7 @@ tt.unit_spawn = "soldier_earth_elemental"
 tt.spawn_sound = "TerrainWukongElementalHolderEarthActive"
 tt.spawns_amount = b.spawn_amount
 tt.max_spawns = b.max_spawns
+tt.default_max_range = b.default_max_range
 tt.holder_spawn_pos = b.holder_spawn_pos
 tt.controller_aura_increase_health = "aura_elemental_earth_increase_health"
 tt.render.sid_gradiente = 1
@@ -1700,16 +1704,17 @@ tt.main_script.remove = scripts.mod_elemental_earth_increase_health.remove
 tt.modifier.bans = {}
 tt.modifier.duration = 0.5
 tt.modifier.use_mod_offset = false
+
 tt = E:register_t("soldier_earth_elemental", "soldier_militia")
 b = balance.specials.terrain_8.elemental_holders.earth_holder.soldier
-
 E:add_comps(tt, "reinforcement")
-
-tt.info.portrait = "gui_bottom_info_image_soldiers_0075"
+-- TODO: info portrait
+-- tt.info.portrait = "kr5_info_portraits_soldiers_0075"
+tt.info.portrait = "kr5_info_portraits_soldiers_0001"
 tt.health.armor = b.armor
 tt.health.hp_max = b.hp_max
 tt.health_bar.offset = v(0, ady(40))
-tt.info.fn = scripts.soldier_charge.get_info
+tt.info.fn = scripts.soldier_barrack.get_info
 tt.info.i18n_key = "SOLDIER_EARTH_HOLDER"
 tt.info.random_name_count = nil
 tt.info.random_name_format = nil
@@ -1742,10 +1747,12 @@ tt.vis.flags = F_FRIEND
 tt.patrol_pos_offset = v(15, 10)
 tt.patrol_min_cd = 5
 tt.patrol_max_cd = 10
+
+tt = E:register_t("fx_elemental_earth_holder_melee_hit", "fx")
+tt.render.sprites[1].name = "golem_holder_hit_hit"
+
 tt = RT("controller_elemental_metal")
-
 E:add_comps(tt, "main_script", "pos", "render", "tween")
-
 b = balance.specials.terrain_8.elemental_holders.metal_holder
 tt.main_script.update = scripts.controller_elemental_metal.update
 tt.main_script.remove = scripts.controller_elemental_generic.remove

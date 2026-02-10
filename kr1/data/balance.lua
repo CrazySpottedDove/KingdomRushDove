@@ -769,7 +769,7 @@ local heroes = {
 			min_range = 67.5,
 			cooldown = {13, 11.5, 10},
 			damage_min = {60, 120, 180},
-			damage_max = {60, 120, 180},
+			damage_max = {80, 160, 240},
 			s_damage = {40, 70, 90},
 			stun_duration = {0.5, 1, 1.5},
 			xp_gain = {112, 196, 240}
@@ -780,9 +780,9 @@ local heroes = {
 			min_targets = 3,
 			max_range_trigger = 200,
 			bounce_range = 120,
-			cooldown = {20, 18, 16},
-			damage_min = {45, 45, 45},
-			damage_max = {45, 45, 45},
+			cooldown = {20, 17.5, 15},
+			damage_min = {45, 50, 55},
+			damage_max = {45, 50, 55},
 			s_damage = {35, 35, 35},
 			bounces = {3, 5, 7},
 			s_bounces = {4, 6, 8},
@@ -790,7 +790,7 @@ local heroes = {
 			xp_gain = {160, 240, 480}
 		},
 		martial_flourish = {
-			cooldown = {16, 15, 14},
+			cooldown = {16, 14, 12},
 			damage_min = {50, 80, 120},
 			damage_max = {50, 80, 120},
 			s_damage = {90, 180, 270},
@@ -802,9 +802,9 @@ local heroes = {
 			total_shoots = 3,
 			hp_to_trigger = 0.4,
 			min_distance_from_end = 300,
-			cooldown = {20, 16, 12},
-			damage_min = {60, 105, 150},
-			damage_max = {60, 105, 150},
+			cooldown = {16, 14, 12},
+			damage_min = {60, 110, 160},
+			damage_max = {60, 110, 160},
 			s_damage = {40, 80, 120},
 			xp_gain = {160, 320, 480}
 		},
@@ -6542,7 +6542,8 @@ local specials = {
 						x = 770,
 						y = 515
 					}}
-				}
+				},
+				default_max_range = 200
 			},
 			metal_holder = {
 				first_cooldown = 0,

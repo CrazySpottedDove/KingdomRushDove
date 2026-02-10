@@ -547,9 +547,7 @@ tt.render.sprites[1].hidden = true
 tt.render.sprites[1].hide_after_runs = 1
 
 local tower_templar = RT("tower_templar", "tower_barrack_1")
-
 AC(tower_templar, "powers")
-
 tower_templar.info.portrait = "kr2_info_portraits_towers_0007"
 tower_templar.info.enc_icon = 19
 tower_templar.tower.type = "templar"
@@ -587,11 +585,10 @@ tower_templar.render.sprites[5].ts = 0.08
 tower_templar.sound_events.insert = "TemplarTauntReady"
 tower_templar.sound_events.change_rally_point = "TemplarTaunt"
 --#endregion
+
 --#region soldier_templar
 tt = RT("soldier_templar", "soldier_militia")
-
 AC(tt, "revive", "powers")
-
 anchor_y = 0.19
 image_y = 42
 tt.health.armor = 0.5
@@ -640,6 +637,8 @@ tt.melee.attacks[2].side_effect = function(this, store, attack, target)
 end
 tt.melee.arrived_slot_animation = "attack_wait"
 tt.melee.cooldown = 2 + fts(13)
+tt.melee.attacks[1].cooldown = tt.melee.cooldown
+tt.melee.attacks[2].cooldown = tt.melee.cooldown
 tt.melee.range = 64
 tt.motion.max_speed = 75
 tt.powers.blood = CC("power")

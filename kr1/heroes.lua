@@ -3196,19 +3196,15 @@ tt.hps.heal_max = 5
 tt.hps.heal_every = 0.25
 tt.main_script.update = scripts.aura_beastmaster_regeneration.update
 --#endregion
+
 --#region mod_beastmaster_lash
-tt = RT("mod_beastmaster_lash", "modifier")
-
-AC(tt, "dps")
-
+tt = RT("mod_beastmaster_lash", "mod_blood")
 tt.modifier.duration = 6
+tt.modifier.level = 0
 tt.dps.damage_type = DAMAGE_TRUE
-tt.dps.fx = "fx_bleeding"
-tt.dps.fx_with_blood_color = true
-tt.dps.fx_tracks_target = true
-tt.main_script.insert = scripts.mod_dps.insert
-tt.main_script.update = scripts.mod_dps.update
+tt.dps.damage_every = 1
 --#endregion
+
 --#region beastmaster_boar
 tt = RT("beastmaster_boar", "soldier")
 
@@ -7125,13 +7121,13 @@ image_y = 68
 anchor_y = 16 / image_y
 tt.hero.level_stats.hp_max = {220, 240, 260, 280, 300, 320, 340, 360, 380, 400}
 tt.hero.level_stats.armor = {0.19, 0.23, 0.27, 0.31, 0.35, 0.39, 0.43, 0.47, 0.51, 0.55}
-tt.hero.level_stats.melee_damage_min = {10, 10, 11, 12, 13, 14, 14, 15, 16, 17}
+tt.hero.level_stats.melee_damage_min = {11, 11, 12, 13, 14, 15, 15, 16, 17, 18}
 tt.hero.level_stats.melee_damage_max = {13, 14, 16, 17, 18, 19, 20, 22, 23, 25}
-tt.hero.level_stats.ranged_damage_min = {10, 10, 11, 12, 13, 14, 14, 15, 16, 17}
+tt.hero.level_stats.ranged_damage_min = {11, 11, 12, 13, 14, 15, 15, 16, 17, 18}
 tt.hero.level_stats.ranged_damage_max = {13, 14, 16, 17, 18, 19, 20, 22, 23, 25}
 tt.hero.skills.double_strike = CC("hero_skill")
-tt.hero.skills.double_strike.damage_max = {100, 150, 200}
-tt.hero.skills.double_strike.damage_min = {50, 75, 100}
+tt.hero.skills.double_strike.damage_max = {120, 180, 240}
+tt.hero.skills.double_strike.damage_min = {60, 90, 120}
 tt.hero.skills.double_strike.xp_gain_factor = 50
 tt.hero.skills.double_strike.xp_level_steps = {
 	[3] = 1,
@@ -7208,8 +7204,8 @@ tt.dodge.disabled = true
 tt.dodge.counter_attack = CC("melee_attack")
 tt.dodge.counter_attack.animation = "nimble_fencer"
 tt.dodge.counter_attack.cooldown = 0.5
-tt.dodge.counter_attack.damage_max = 45
-tt.dodge.counter_attack.damage_min = 25
+tt.dodge.counter_attack.damage_max = 50
+tt.dodge.counter_attack.damage_min = 30
 tt.dodge.counter_attack.hit_time = fts(8)
 tt.dodge.counter_attack.sound = "ElvesHeroEridanNimbleFencing"
 tt.melee.attacks[1] = CC("melee_attack")
@@ -7223,7 +7219,7 @@ tt.melee.attacks[1].vis_flags = F_BLOCK
 tt.melee.attacks[1].xp_gain_factor = 3
 tt.melee.attacks[2] = CC("melee_attack")
 tt.melee.attacks[2].animation = "double_strike"
-tt.melee.attacks[2].cooldown = 11
+tt.melee.attacks[2].cooldown = 10
 tt.melee.attacks[2].damage_max = nil
 tt.melee.attacks[2].damage_min = nil
 tt.melee.attacks[2].damage_type = bor(DAMAGE_RUDE, DAMAGE_FX_EXPLODE, DAMAGE_NO_DODGE)

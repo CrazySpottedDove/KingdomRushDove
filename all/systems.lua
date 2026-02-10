@@ -13,7 +13,7 @@ local EU = require("endless_utils")
 local A = require("animation_db")
 local AC = require("achievements")
 local DI = require("difficulty")
-local I = require("klove.image_db")
+local I = require("lib.klove.image_db")
 local SH = require("klove.shader_db")
 local E = require("entity_db")
 local P = require("path_db")
@@ -1325,6 +1325,11 @@ function sys.tower_upgrade:on_update(dt, ts, store)
 				price = 0
 			elseif e.tower_holder and e.tower_holder.unblock_price > 0 then
 				price = e.tower_holder.unblock_price
+			end
+
+			if e.tower.upgrade_price_multiplier then
+				price = math.ceil(price * e.tower.upgrade_price_multiplier)
+				price = math.floor(price / 10) * 10
 			end
 
 			store.player_gold = store.player_gold - price
@@ -2983,7 +2988,7 @@ function sys.render:on_update(dt, ts, store)
 				s.sync_flag = last_runs ~= s.runs
 				s.ss = I:s(fn)
 
-			-- -- 仅在开发时启用，用于检查美术资源
+			-- 仅在开发时启用，用于检查美术资源
 			-- if s.ss == nil then
 			-- 	if s.animation and not MISSED_SS[s.animation] then
 			-- 		log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
