@@ -1568,9 +1568,7 @@ tt.regen.health = 5
 --#endregion
 --#region hero_elora
 tt = RT("hero_elora", "hero")
-
 AC(tt, "melee", "ranged", "timed_attacks")
-
 anchor_y = 0.17
 anchor_x = 0.5
 tt.hero.fixed_stat_attack = 2
@@ -1643,7 +1641,7 @@ tt.ranged.attacks[1] = CC("bullet_attack")
 tt.ranged.attacks[1].cooldown = fts(40)
 tt.ranged.attacks[1].bullet = "bolt_elora_freeze"
 tt.ranged.attacks[1].bullet_start_offset = {vec_2(18, 36)}
-tt.ranged.attacks[1].chance = 0.25
+tt.ranged.attacks[1].chance = 0.27
 tt.ranged.attacks[1].min_range = 23.04
 tt.ranged.attacks[1].max_range = 166.4
 tt.ranged.attacks[1].shoot_time = fts(19)
@@ -7158,6 +7156,16 @@ tt.hero.skills.porcupine.xp_level_steps = {
 	[7] = 3,
 	[10] = 4
 }
+-- TODO: 召唤三代3级兵，补强丹哥拦截能力
+tt.hero.skills.guards = CC("hero_skill")
+tt.hero.skills.guards.hp_max = {100, 125, 150}
+tt.hero.skills.guards.armor = {0.4, 0.45, 0.5}
+tt.hero.skills.guards.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.guards.xp_gain_factor = 30
 tt.hero.skills.ultimate = CC("hero_skill")
 tt.hero.skills.ultimate.controller_name = "hero_elves_archer_ultimate"
 tt.hero.skills.ultimate.xp_level_steps = {
@@ -8689,7 +8697,7 @@ tt.hero.level_stats.melee_damage_min = {9, 10, 11, 12, 14, 15, 16, 17, 18, 19}
 tt.hero.level_stats.ranged_damage_min = {9, 10, 11, 12, 14, 15, 16, 17, 18, 19}
 tt.hero.level_stats.ranged_damage_max = {27, 30, 34, 37, 41, 44, 47, 51, 54, 57}
 tt.hero.skills.icy_prison = CC("hero_skill")
-tt.hero.skills.icy_prison.damage = {35, 50, 65}
+tt.hero.skills.icy_prison.damage = {40, 60, 80}
 tt.hero.skills.icy_prison.duration = {2, 4, 6}
 tt.hero.skills.icy_prison.xp_gain = {40, 80, 120}
 tt.hero.skills.icy_prison.xp_level_steps = {
@@ -8698,7 +8706,7 @@ tt.hero.skills.icy_prison.xp_level_steps = {
 	[7] = 3
 }
 tt.hero.skills.lightning_rod = CC("hero_skill")
-tt.hero.skills.lightning_rod.damage_max = {100, 220, 340}
+tt.hero.skills.lightning_rod.damage_max = {120, 240, 360}
 tt.hero.skills.lightning_rod.damage_min = {60, 120, 180}
 tt.hero.skills.lightning_rod.xp_gain = {50, 100, 150}
 tt.hero.skills.lightning_rod.xp_level_steps = {
@@ -8890,17 +8898,13 @@ tt.sound_events.insert = "ElvesHeroArivanLightingBolt"
 --#endregion
 --#region fx_bolt_freeze_arivan_hit
 tt = RT("fx_bolt_freeze_arivan_hit", "fx")
-
 AC(tt, "sound_events")
-
 tt.render.sprites[1].name = "arivan_freeze_hit"
 tt.sound_events.insert = "ElvesHeroArivanIceShootHit"
 --#endregion
 --#region mod_arivan_freeze
 tt = RT("mod_arivan_freeze", "mod_freeze")
-
 AC(tt, "render", "tween")
-
 tt.modifier.duration = nil
 tt.modifier.vis_bans = F_BOSS
 tt.render.sprites[1].name = "arivan_hero_freeze_decal"

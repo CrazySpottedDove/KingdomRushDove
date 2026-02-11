@@ -46,6 +46,12 @@ function EXO:queue_load(exo_list)
 	table.insert(self.exo_lists_to_load, exo_list)
 end
 
+--- 为了避免自引用，选择为 exo_frame 添加属性 exo_name，而不是直接让它引用 exo。因此，EXO 数据库需要暴露通过 exo_frame 查询 exo 的方法。
+---@param exo_frame any
+function EXO:get_exo_by_frame(exo_frame)
+	return self.exos[exo_frame.exo_name]
+end
+
 --- 加载 exo 数据，在进入对局时，A:load()后调用
 function EXO:load()
 	for _, exo_list in pairs(self.exo_lists_to_load) do
@@ -375,16 +381,16 @@ function EXO:load_fake_sprites_to_db(exo)
 			local sprite_name = string.format("%s_%s_%04d", exo.name, ani_name, idx)
 
 			self.db[sprite_name] = frame
-			frame.exo = exo
+			frame.exo_name = exo.name
 		end
 	end
 end
 
-function EXO:f(fn)
-	local exo_frame = self.db[fn]
+function EXO:f(frame_name)
+	local exo_frame = self.db[frame_name]
 
 	if not exo_frame then
-		log.error("Could not find exo_frame called: %s", fn)
+		log.error("Could not find exo_frame called: %s", frame_name)
 
 		return nil
 	end
@@ -401,13 +407,13 @@ function EXO:get_last_attach_point_xform(entity, sprite_id, name)
 		return
 	end
 
-	local exo = f.exo
+	local exo_frame = f.exo_frame
 
-	if not exo then
-		log.error("Could not find exo for sprite_id:%s in entity:%s (%s)", sprite_id, entity.id, entity.template_name)
-
-		return
+	if not exo_frame then
+		log.error("frame for sprite_id:%s in entity:%s (%s) does not have exo_frame", sprite_id, entity.id, entity.template_name)
 	end
+
+	local exo = self.exos[exo_frame.exo_name]
 
 	local idx = exo.attach_idx[name]
 

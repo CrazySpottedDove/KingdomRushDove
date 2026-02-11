@@ -2936,7 +2936,7 @@ function U.entity_remove_shader(entity)
 	end
 end
 
---- 只为临时渲染目的的运行时克隆 render，不考虑 render 除 sprites 外的任何属性；为了回避铁皮 exo 自引用的问题，不对 exo sprites 做克隆。用于代替原代码中任何直接克隆 render 的危险行为。
+--- 只为临时渲染目的的运行时克隆 render，不考虑 render 除 sprites 外的任何属性。
 ---@param render table
 function U.render_clone(render)
 	local new_render = {
@@ -2945,9 +2945,7 @@ function U.render_clone(render)
 
 	for i = 1, #render.sprites do
 		local sprite = render.sprites[i]
-		if not sprite.exo then
-			new_render.sprites[#new_render.sprites + 1] = table.deepclone(sprite)
-		end
+		new_render.sprites[#new_render.sprites + 1] = table.deepclone(sprite)
 	end
 
 	return new_render

@@ -79,6 +79,7 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 		if f.hidden then
 		-- block empty
 		elseif f.exo then
+			local exo = EXO:get_exo_by_frame(f.exo_frame)
 			for part_idx, part in ipairs(f.exo_frame) do
 				do
 					local part_type, part_name_idx, alpha, x, y, sx, sy, r, kx, ky = unpack(part)
@@ -137,7 +138,7 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 							goto label_6_0
 						end
 
-						local part_name, pox, poy = unpack(f.exo.parts[part_name_idx])
+						local part_name, pox, poy = unpack(exo.parts[part_name_idx])
 						local ss = I:s(part_name)
 
 						if batch_count == BATCH_SIZE or f.shader ~= current_shader or ss.atlas and ss.atlas ~= current_atlas then
@@ -175,16 +176,16 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 							batch_count = 0
 							batches_count = batches_count + 1
 
-							if f.shader ~= current_shader then
-								G.setShader(f.shader)
+							if f._shader ~= current_shader then
+								G.setShader(f._shader)
 
 								if f.shader_args then
 									for k, v in pairs(f.shader_args) do
-										f.shader:send(k, v)
+										f._shader:send(k, v)
 									end
 								end
 
-								current_shader = f.shader
+								current_shader = f._shader
 							end
 						end
 

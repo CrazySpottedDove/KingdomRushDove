@@ -2959,9 +2959,10 @@ function sys.render:on_update(dt, ts, store)
 				if exo_frame then
 					s.exo_frame = exo_frame
 
-					local exo = exo_frame.exo
+					-- local exo = exo_frame.exo
 
-					s.exo = exo
+					-- s.exo = exo
+					local exo = EXO:get_exo_by_frame(exo_frame)
 
 					if s.exo_hide_prefix then
 						for _, p in ipairs(exo_frame) do

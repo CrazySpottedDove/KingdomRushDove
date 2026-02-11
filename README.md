@@ -107,4 +107,3 @@ server  ssh://dove@10.112.99.5:60001/srv/git/KingdomRushDove.git (push)
 - UI 中的 `colors.tint` 使用归一化参数。
 - KView 中的 `alpha` 是归一化的。
 - 为了性能考虑，dove 版中，render 只拥有 sprites，frames 的功能全部都合并了进去，以避免每帧大量的拷贝开销。
-- 不可以直接对 render 进行克隆，因为铁皮搞出了 exo 自引用的操作，需要使用 U.render_clone(render) 代替。

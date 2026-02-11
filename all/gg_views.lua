@@ -1078,7 +1078,7 @@ function GGExo:_draw_self_deferred()
 
 			lr, lg, lb, la = r, g, b, a
 		end
-
+		-- TODO: 在用到 GGExo 之后再修复，因为现在 exo_frame 不直接存有对 exo 的引用
 		local exo_part = exo_frame.exo.parts[part.name]
 		local pox, poy = exo_part.offsetX, exo_part.offsetY
 		local quad = ss.quad
