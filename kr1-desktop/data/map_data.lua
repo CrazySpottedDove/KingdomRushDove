@@ -3059,7 +3059,7 @@ return {
 			wait = {1, 8},
 			animation = {
 				to = 18,
-				prefix = "sheep",
+				prefix = "sheep_on_map",
 				from = 1
 			}
 		},
