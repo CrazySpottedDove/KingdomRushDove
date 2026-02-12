@@ -107,3 +107,4 @@ server  ssh://dove@10.112.99.5:60001/srv/git/KingdomRushDove.git (push)
 - UI 中的 `colors.tint` 使用归一化参数。
 - KView 中的 `alpha` 是归一化的。
 - 为了性能考虑，dove 版中，render 只拥有 sprites，frames 的功能全部都合并了进去，以避免每帧大量的拷贝开销。
+- scripts 的 require 关系：scripts->hero_scripts->tower_scripts->boss_scripts，这是为了满足插件的正常跳转功能，并不是随便设计成这样的。之后如果还要拆分逻辑，也需要这样链式插入。

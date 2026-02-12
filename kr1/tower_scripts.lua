@@ -1,8 +1,7 @@
 require("lib.klua.table")
 require("i18n")
 
--- local scripts = require("hero_scripts")
-local scripts = require("scripts")
+local scripts = require("hero_scripts")
 local AC = require("achievements")
 local log = require("lib.klua.log"):new("tower_scripts")
 
@@ -21376,3 +21375,4 @@ function scripts.decal_tentacle_priests_barrack.update(this, store, script)
 		coroutine.yield()
 	end
 end
+return scripts

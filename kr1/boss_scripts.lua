@@ -1,6 +1,6 @@
 require("lib.klua.table")
 require("i18n")
-local scripts = require("scripts")
+local scripts = require("tower_scripts")
 
 local AC = require("achievements")
 local log = require("lib.klua.log"):new("game_scripts")
@@ -13562,3 +13562,4 @@ function scripts.boss_redboy_teen.update(this, store, script)
 		end
 	end
 end
+return scripts

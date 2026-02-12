@@ -658,7 +658,7 @@ tt.revive.sound = "TemplarHolygrail"
 tt.revive.resist = {
 	bans = bor(F_STUN, F_POISON, F_BURN, F_BLOOD),
 	duration = 8,
-	cost = 0.05,
+	cost = 0,
 	side_effect = scripts.holygrail.side_effect
 }
 tt.soldier.melee_slot_offset = vec_2(5, 0)

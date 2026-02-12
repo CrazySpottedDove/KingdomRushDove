@@ -92,10 +92,7 @@ local function y_show_taunt_set(store, taunts, set_name, index, wait)
 	end
 end
 
-local scripts = require("scripts")
-require("hero_scripts")
-require("tower_scripts")
-require("boss_scripts")
+local scripts = require("boss_scripts")
 
 scripts.mod_high_elven = {
 	insert = function(this, store)
