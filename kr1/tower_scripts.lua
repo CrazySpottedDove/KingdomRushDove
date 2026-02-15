@@ -2163,7 +2163,7 @@ scripts.tower_arcane_wizard = {
 
 				::continue_attack::
 
-				if ready_to_attack(ar, store, this.tower.cooldown_factor) and wizard_ready() then
+				if ready_to_attack(ar, store, tw.cooldown_factor) and wizard_ready() then
 					local enemy, _ = find_target(ar)
 
 					if not enemy then
@@ -2183,7 +2183,7 @@ scripts.tower_arcane_wizard = {
 					wizard_attack(ar, enemy)
 				end
 
-				if ready_to_use_power(pow_t, at, store, this.tower.cooldown_factor) and wizard_ready() then
+				if ready_to_use_power(pow_t, at, store, tw.cooldown_factor) and wizard_ready() then
 					local enemy, pred_pos = find_target(at)
 
 					if not enemy then

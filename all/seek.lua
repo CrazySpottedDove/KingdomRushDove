@@ -471,7 +471,7 @@ function seek.detect_foremost_enemy_in_range_filter_on(origin, range, flags, ban
 					local p = entity.nav_path
 					local e_next_nodes_to_goal = P:nodes_to_goal(p.pi, p.spi, p.ni)
 
-					if (not (e_mocking or e_flying) and e_next_mocking) or e_nodes_to_goal > e_next_nodes_to_goal then
+					if (not (e_mocking and not (e_next_mocking or e_next_flying))) and ((not (e_mocking or e_flying) and e_next_mocking) or e_nodes_to_goal > e_next_nodes_to_goal) then
 						e_mocking = e_next_mocking
 						e_flying = e_next_flying
 						e_nodes_to_goal = e_next_nodes_to_goal
@@ -525,7 +525,7 @@ function seek.detect_foremost_enemy_in_range_filter_off(origin, range, flags, ba
 					local p = entity.nav_path
 					local e_next_nodes_to_goal = P:nodes_to_goal(p.pi, p.spi, p.ni)
 
-					if (not (e_mocking or e_flying) and e_next_mocking) or e_nodes_to_goal > e_next_nodes_to_goal then
+					if (not (e_mocking and not (e_next_mocking or e_next_flying))) and ((not (e_mocking or e_flying) and e_next_mocking) or e_nodes_to_goal > e_next_nodes_to_goal) then
 						e_mocking = e_next_mocking
 						e_flying = e_next_flying
 						e_nodes_to_goal = e_next_nodes_to_goal
@@ -581,7 +581,7 @@ function seek.detect_foremost_enemy_between_range_filter_on(origin, min_range, m
 					local p = entity.nav_path
 					local e_next_nodes_to_goal = P:nodes_to_goal(p.pi, p.spi, p.ni)
 
-					if (not (e_mocking or e_flying) and e_next_mocking) or e_nodes_to_goal > e_next_nodes_to_goal then
+					if (not (e_mocking and not (e_next_mocking or e_next_flying))) and ((not (e_mocking or e_flying) and e_next_mocking) or e_nodes_to_goal > e_next_nodes_to_goal) then
 						e_mocking = e_next_mocking
 						e_flying = e_next_flying
 						e_nodes_to_goal = e_next_nodes_to_goal
@@ -637,7 +637,7 @@ function seek.detect_foremost_enemy_between_range_filter_off(origin, min_range, 
 					local p = entity.nav_path
 					local e_next_nodes_to_goal = P:nodes_to_goal(p.pi, p.spi, p.ni)
 
-					if (not (e_mocking or e_flying) and e_next_mocking) or e_nodes_to_goal > e_next_nodes_to_goal then
+					if (not (e_mocking and not (e_next_mocking or e_next_flying))) and ((not (e_mocking or e_flying) and e_next_mocking) or e_nodes_to_goal > e_next_nodes_to_goal) then
 						e_mocking = e_next_mocking
 						e_flying = e_next_flying
 						e_nodes_to_goal = e_next_nodes_to_goal
@@ -686,13 +686,13 @@ function seek.detect_foremost_enemy_with_flying_preference_in_range_filter_on(or
 				local dist2 = dx * dx + dy * dy
 
 				if (dist2 <= r_outer_sq) and enemy_filter_simple(entity, flags, bans) and filter_fn(entity, origin) then
-					local e_next_mocking = band(entity.vis.flags, F_MOCKING) ~= 0
+					local e_next_flying = band(entity.vis.flags, F_FLYING) ~= 0
 
 					if e_flying and not e_next_flying then
 						goto not_accept
 					end
 
-					local e_next_flying = band(entity.vis.flags, F_FLYING) ~= 0
+					local e_next_mocking = band(entity.vis.flags, F_MOCKING) ~= 0
 
 					if e_mocking and not (e_next_mocking or e_next_flying) then
 						goto not_accept
@@ -844,13 +844,13 @@ function seek.detect_foremost_enemy_with_flying_preference_between_range_filter_
 				local dist2 = dx * dx + dy * dy
 
 				if (dist2 <= r_outer_sq) and (dist2 >= r_inner_sq) and enemy_filter_simple(entity, flags, bans) and filter_fn(entity, origin) then
-					local e_next_mocking = band(entity.vis.flags, F_MOCKING) ~= 0
+					local e_next_flying = band(entity.vis.flags, F_FLYING) ~= 0
 
 					if e_flying and not e_next_flying then
 						goto not_accept
 					end
 
-					local e_next_flying = band(entity.vis.flags, F_FLYING) ~= 0
+					local e_next_mocking = band(entity.vis.flags, F_MOCKING) ~= 0
 
 					if e_mocking and not (e_next_mocking or e_next_flying) then
 						goto not_accept
