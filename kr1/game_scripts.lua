@@ -201,14 +201,14 @@ function scripts.aura_totem.update(this, store)
 		coroutine.yield()
 	end
 
-    local total_duration = a.duration + a.duration_inc * a.level
+	local total_duration = a.duration + a.duration_inc * a.level
 
 	while store.tick_ts - this.aura.ts < total_duration do
 		local enemies = U.find_enemies_in_range(store, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
 
 		if enemies then
 			local mods = this.aura.mods or {this.aura.mod}
-            local extra_duration = total_duration - (store.tick_ts - this.aura.ts)
+			local extra_duration = total_duration - (store.tick_ts - this.aura.ts)
 			for _, enemy in pairs(enemies) do
 				for _, mod in pairs(mods) do
 					local new_mod = E:create_entity(mod)
@@ -216,7 +216,7 @@ function scripts.aura_totem.update(this, store)
 					new_mod.modifier.level = this.aura.level
 					new_mod.modifier.target_id = enemy.id
 					new_mod.modifier.source_id = this.id
-                    new_mod.modifier.duration = new_mod.modifier.duration + extra_duration
+					new_mod.modifier.duration = new_mod.modifier.duration + extra_duration
 					queue_insert(store, new_mod)
 				end
 			end
