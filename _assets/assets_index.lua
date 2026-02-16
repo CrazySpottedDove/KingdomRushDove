@@ -1457,24 +1457,6 @@ return {
 	["kr1-desktop/images/fullhd/go_stages_underground-1.dds"] = {
 		size = 349700
 	},
-	["kr1-desktop/images/fullhd/go_towers-1.dds"] = {
-		size = 22369796
-	},
-	["kr1-desktop/images/fullhd/go_towers-2.dds"] = {
-		size = 22369796
-	},
-	["kr1-desktop/images/fullhd/go_towers-3.dds"] = {
-		size = 22369796
-	},
-	["kr1-desktop/images/fullhd/go_towers-4.dds"] = {
-		size = 22369796
-	},
-	["kr1-desktop/images/fullhd/go_towers-5.dds"] = {
-		size = 22369796
-	},
-	["kr1-desktop/images/fullhd/go_towers-6.dds"] = {
-		size = 22369796
-	},
 	["kr1-desktop/images/fullhd/go_towers_arborean_emissary-1.dds"] = {
 		size = 5592580
 	},
@@ -1519,6 +1501,24 @@ return {
 	},
 	["kr1-desktop/images/fullhd/go_towers_ghost-2.dds"] = {
 		size = 1398276
+	},
+	["kr1-desktop/images/fullhd/go_towers_group1-1.dds"] = {
+		size = 22369796
+	},
+	["kr1-desktop/images/fullhd/go_towers_group2-1.dds"] = {
+		size = 22369796
+	},
+	["kr1-desktop/images/fullhd/go_towers_group3-1.dds"] = {
+		size = 22369796
+	},
+	["kr1-desktop/images/fullhd/go_towers_group4-1.dds"] = {
+		size = 22369796
+	},
+	["kr1-desktop/images/fullhd/go_towers_group5-1.dds"] = {
+		size = 22369796
+	},
+	["kr1-desktop/images/fullhd/go_towers_group6-1.dds"] = {
+		size = 22369796
 	},
 	["kr1-desktop/images/fullhd/go_towers_hermit_toad-1.dds"] = {
 		size = 22369796

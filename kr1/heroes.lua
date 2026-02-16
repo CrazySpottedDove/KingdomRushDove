@@ -9089,7 +9089,7 @@ tt.hero.skills.blazing_offspring.xp_level_steps = {
 	[8] = 3
 }
 tt.hero.skills.flaming_path = CC("hero_skill")
-tt.hero.skills.flaming_path.damage = {20, 40, 60}
+tt.hero.skills.flaming_path.damage = {30, 60, 90}
 tt.hero.skills.flaming_path.xp_gain = {75, 150, 225}
 tt.hero.skills.flaming_path.xp_level_steps = {
 	[3] = 1,
@@ -9117,7 +9117,6 @@ tt.hero.tombstone_show_time = nil
 tt.hero.use_custom_spawn_point = true
 tt.idle_flip.cooldown = 10
 tt.info.damage_icon = "fireball"
-tt.info.fn = scripts.hero_phoenix.get_info
 tt.info.hero_portrait = "kr3_hero_portraits_0010"
 tt.info.i18n_key = "HERO_ELVES_PHOENIX"
 tt.info.portrait = "kr3_info_portraits_heroes_0010"
@@ -9216,14 +9215,12 @@ tt.ultimate = {
 --#endregion
 --#region hero_phoenix_ultimate
 tt = RT("hero_phoenix_ultimate", "aura")
-
 AC(tt, "render", "tween")
-
 tt.aura.duration = 180
 tt.aura.vis_flags = F_RANGED
 tt.aura.vis_bans = F_FLYING
 tt.aura.damage_vis_bans = 0
-tt.aura.radius = 50
+tt.aura.radius = 55
 tt.aura.hit_fx = "fx_phoenix_explosion"
 tt.aura.hit_decal = "decal_phoenix_ultimate"
 tt.aura.damage_type = DAMAGE_TRUE
@@ -9258,9 +9255,12 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].anchor = vec_2(0, 0.5)
 tt.bullet.hit_fx = "fx_ray_phoenix_hit"
 tt.bullet.hit_fx_ignore_hit_offset = true
-tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.damage_type = DAMAGE_TRUE
+tt.bullet.damage_min = 8
+tt.bullet.damage_max = 12
 tt.bullet.hit_time = fts(4)
 tt.bullet.hit_payload = "aura_ray_phoenix"
+tt.bullet.xp_gain_factor = 1.5
 tt.track_target = true
 --#endregion
 --#region aura_ray_phoenix
@@ -9275,7 +9275,7 @@ tt.aura.damage_type = DAMAGE_TRUE
 tt.aura.radius = 45
 tt.aura.vis_bans = bor(F_FRIEND)
 tt.aura.mod = "mod_veznan_demon_fire"
-tt.aura.xp_gain_factor = 1.75
+tt.aura.xp_gain_factor = 1.5
 --#endregion
 --#region missile_phoenix
 tt = RT("missile_phoenix", "bullet")
@@ -9330,9 +9330,7 @@ tt.dps.damage_every = fts(6)
 --#endregion
 --#region mod_phoenix_flaming_path
 tt = RT("mod_phoenix_flaming_path", "modifier")
-
 AC(tt, "custom_attack", "render", "tween")
-
 tt.main_script.update = scripts.mod_phoenix_flaming_path.update
 tt.modifier.duration = 6.5
 tt.custom_attack = CC("custom_attack")
@@ -9369,9 +9367,7 @@ tt.tween.props[3].sprite_id = 2
 --#endregion
 --#region aura_phoenix_egg
 tt = RT("aura_phoenix_egg", "aura")
-
 AC(tt, "render")
-
 tt.render.sprites[1].prefix = "hero_phoenix_egg"
 tt.render.sprites[1].name = "spawn"
 tt.render.sprites[1].anchor.y = 0.2

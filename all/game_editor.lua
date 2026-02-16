@@ -41,7 +41,7 @@ require("all.constants")
 BATCH_SIZE = 1000
 DEFAULT_PATH_WIDTH = 40
 editor = {}
-editor.required_textures = {"go_decals", "go_towers", "go_editor"}
+editor.required_textures = {"go_decals", "go_towers_group1", "go_editor", "go_towers_group2", "go_towers_group3", "go_towers_group4", "go_towers_group5", "go_towers_group6"}
 editor.ref_h = REF_H
 editor.ref_w = REF_W
 editor.ref_res = TEXTURE_SIZE_ALIAS.ipad

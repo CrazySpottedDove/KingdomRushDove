@@ -1856,43 +1856,66 @@ set_hero("hero_phoenix")
 set_skill(h.hero.skills.purification)
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
-map["净化"] = str()
+d[1].damage_type = DAMAGE_TRUE
+e = T("aura_phoenix_purification")
+radius = e.aura.radius
+map["净化"] = str("凤凰", radius, "范围内的敌人在死亡后会净化为火羽，自行追踪敌人并造成", damage_str(), "。")
 set_skill(h.hero.skills.inmolate)
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
-map["焚祭"] = str()
+d[1].damage_type = h.selfdestruct.damage_type
+radius = h.selfdestruct.damage_radius
+cooldown = h.timed_attacks.list[1].cooldown
+set_damage_value(h.hero.level_stats.egg_damage[#h.hero.level_stats.egg_damage], 2)
+e = T("mod_phoenix_egg")
+d[2].damage_type = e.dps.damage_type
+cycle_time = e.dps.damage_every
+e = T("aura_phoenix_egg")
+d[3].damage_min = h.hero.level_stats.egg_explosion_damage_min[#h.hero.level_stats.egg_explosion_damage_min]
+d[3].damage_max = h.hero.level_stats.egg_explosion_damage_max[#h.hero.level_stats.egg_explosion_damage_max]
+d[3].damage_type = e.custom_attack.damage_type
+radius_2 = e.aura.radius
+radius_3 = e.custom_attack.radius
+map["焚祭"] = str("凤凰死亡时，将坠落对", radius, "范围内敌人造成", damage_str(), "，并留下一枚凤凰蛋。凤凰蛋每", cycle_time, "秒对", radius_2, "范围内敌人造成", damage_str(2), "，并在复活时对", radius_3, "范围内敌人造成", damage_str(3), "。", cooldown_str(), "凤凰会主动使用焚祭。")
 set_skill(h.hero.skills.blazing_offspring)
+e = T("missile_phoenix")
+get_damage(e.bullet)
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
 count = ss("count")
-map["余烬之地"] = str()
+cooldown = h.ranged.attacks[2].cooldown
+map["炽焰后裔"] = str(cooldown_str(), "凤凰发射", count, "枚火羽追踪并攻击敌人，每枚火羽造成", damage_str(), "。")
 set_skill(h.hero.skills.flaming_path)
 set_damage_value(ss("damage"))
-map["火焰之环"] = str()
+cooldown = h.timed_attacks.list[2].cooldown
+e = T("mod_phoenix_flaming_path")
+duration = e.modifier.duration
+cycle_time = e.custom_attack.cooldown
+radius = e.custom_attack.radius
+d[1].damage_type = e.custom_attack.damage_type
+map["火焰之环"] = str(cooldown_str(), "凤凰增益一座防御塔，持续", duration, "秒，使其每隔", cycle_time, "秒对", radius, "范围内敌人造成", damage_str(), "。")
 set_skill(h.hero.skills.ultimate)
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
-map["炽焰后裔"] = str()
+cooldown = h.ultimate.cooldown
+e = T("hero_phoenix_ultimate")
+radius = e.aura.radius
+duration = e.aura.duration
+d[1].damage_type = e.aura.damage_type
+map["余烬之地"] = str(cooldown_str(), "凤凰产下一枚蛋，驻场", duration, "秒。被触发时，对", radius, "范围内敌人造成", damage_str(), "。")
 
 set_hero("hero_bravebark")
 set_skill(h.hero.skills.ultimate)
-
 cooldown = h.ultimate.cooldown
 e = E:get_template("hero_bravebark_ultimate")
-
 get_damage(e)
-
 radius = e.damage_radius
 e = E:get_template("mod_bravebark_ultimate")
 duration = e.modifier.duration
 count = ss("count")
-
 set_damage_value(ss("damage"))
-
 map["自然之怒"] = str(cooldown_str(), "巴克在一片区域区域召唤共", count, "个树根，每个树根对", radius, "范围内敌人造成", damage_str(), "，并使他们晕眩", duration, "秒。")
-
 set_skill(h.hero.skills.springsap)
-
 duration = ss("duration")
 amount = ss("hp_per_cycle")
 cooldown = h.springsap.cooldown
@@ -1901,39 +1924,27 @@ radius = h.springsap.radius
 e = E:get_template("mod_bravebark_springsap")
 cycle_time = e.hps.heal_every
 map["春生树液"] = str(cooldown_str(), "若巴克身边有生命值低于", factor * 100, "%的友军，巴克便分泌春生树液，在", duration, "秒内持续治疗", radius, "范围内的友军，驱除他们的中毒效果，并每", cycle_time, "秒恢复", amount, "点生命值。")
-
 set_skill(h.hero.skills.oakseeds)
-
 e = E:get_template("soldier_bravebark")
-
 get_health(e)
-
 health[1].hp_max = ss("soldier_hp_max")
-
 get_damage(e.melee.attacks[1])
-
 d[1].damage_max = ss("soldier_damage_max")
 d[1].damage_min = ss("soldier_damage_min")
 cooldown = h.timed_attacks.list[2].cooldown
 count = h.timed_attacks.list[2].count
 duration = e.reinforcement.duration
 map["橡树之种"] = str(cooldown_str(), "巴克种下", count, "枚橡树之种，繁育出小树人。小树人拥有", health_str(), "，每次攻击造成", damage_str(), "。小树人驻场", duration, "秒，且不会尸骸化或狼人化。")
-
 set_skill(h.hero.skills.rootspikes)
-
 a = h.timed_attacks.list[1]
 cooldown = a.cooldown
-
 get_damage(a)
-
 radius = a.damage_radius
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
 count = a.trigger_count
 map["尖刺树根"] = str(cooldown_str(), "巴克从地面召唤出尖刺树根，对", radius, "范围内敌人造成", damage_str(), "。该技能只有周围敌人数量达到", count, "时才会释放。")
-
 set_skill(h.hero.skills.branchball)
-
 cooldown = h.melee.attacks[2].cooldown
 map["本垒打"] = str(cooldown_str(), "巴克抄起大树枝，将面前的敌人打飞出游戏。")
 

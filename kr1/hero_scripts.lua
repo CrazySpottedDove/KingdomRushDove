@@ -13762,28 +13762,14 @@ end
 
 scripts.hero_phoenix = {}
 
-function scripts.hero_phoenix.get_info(this)
-	local b = E:get_template(this.ranged.attacks[1].bullet)
-	local ba = E:get_template(b.bullet.hit_payload)
-	local min, max = ba.aura.damage_min, ba.aura.damage_max
-
-	return {
-		type = STATS_TYPE_SOLDIER,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		ranged_damage_min = min,
-		ranged_damage_max = max,
-		damage_type = ba.aura.damage_type,
-		armor = this.health.armor,
-		respawn = this.health.dead_lifetime
-	}
-end
-
 function scripts.hero_phoenix.level_up(this, store, initiaal)
 	local hl, ls = level_up_basic(this)
-	local b = E:get_template(this.ranged.attacks[1].bullet)
-	local ba = E:get_template(b.bullet.hit_payload)
 
+	local b = E:get_template(this.ranged.attacks[1].bullet)
+	b.bullet.damage_max = ls.ranged_damage_max[hl] * 0.5
+	b.bullet.damage_min = ls.ranged_damage_min[hl] * 0.5
+
+	local ba = E:get_template(b.bullet.hit_payload)
 	ba.aura.damage_max = ls.ranged_damage_max[hl]
 	ba.aura.damage_min = ls.ranged_damage_min[hl]
 
@@ -13883,8 +13869,6 @@ function scripts.hero_phoenix.update(this, store)
 			local respawn_point
 
 			if #nodes < 1 then
-				log.debug("hero_phoenix: could not find nearest node to place egg")
-
 				respawn_point = store.level.custom_spawn_pos or store.level.locations.exits[1].pos
 				this.selfdestruct.disabled = true
 			else
@@ -13893,8 +13877,6 @@ function scripts.hero_phoenix.update(this, store)
 				respawn_point = P:node_pos(pi, spi, ni)
 
 				if dist > 30 then
-					log.debug("hero_phoenix: too far from nearest path for inmolate")
-
 					this.selfdestruct.disabled = true
 				end
 			end
