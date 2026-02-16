@@ -339,7 +339,6 @@ tower_totem.render.sprites[8].loop = false
 tower_totem.sound_events.insert = "TotemTauntReady"
 
 local axe_totem = RT("axe_totem", "arrow")
-
 axe_totem.render.sprites[1].name = "TotemAxe_0001"
 axe_totem.render.sprites[1].animated = false
 axe_totem.bullet.rotation_speed = 30 * FPS * math.pi / 180
@@ -354,10 +353,8 @@ axe_totem.bullet.pop_conds = DR_KILL
 axe_totem.sound_events.insert = "AxeSound"
 
 local mod_silence_totem = RT("mod_silence_totem", "modifier")
-
 AC(mod_silence_totem, "render")
-
-mod_silence_totem.modifier.duration = 3
+mod_silence_totem.modifier.duration = 1
 mod_silence_totem.modifier.bans = {"mod_shaman_armor", "mod_shaman_magic_armor", "mod_shaman_priest_heal", "mod_shaman_rage"}
 mod_silence_totem.modifier.remove_banned = true
 mod_silence_totem.main_script.insert = scripts.mod_silence.insert
@@ -370,26 +367,17 @@ mod_silence_totem.render.sprites[1].loop = true
 mod_silence_totem.render.sprites[1].draw_order = 2
 
 local mod_weakness_totem = RT("mod_weakness_totem", "modifier")
-
--- AC(mod_weakness_totem, "render")
 mod_weakness_totem.inflicted_damage_factor = 0.5
 mod_weakness_totem.received_damage_factor = 1.4
-mod_weakness_totem.modifier.duration = 3
+mod_weakness_totem.modifier.duration = 1
 mod_weakness_totem.modifier.resets_same = false
 mod_weakness_totem.modifier.use_mod_offset = false
 mod_weakness_totem.main_script.insert = scripts.mod_damage_factors.insert
 mod_weakness_totem.main_script.remove = scripts.mod_damage_factors.remove
 mod_weakness_totem.main_script.update = scripts.mod_track_target.update
 
--- mod_weakness_totem.render.sprites[1].prefix = "weakness"
--- mod_weakness_totem.render.sprites[1].size_names = {"small", "big", "big"}
--- mod_weakness_totem.render.sprites[1].name = "small"
--- mod_weakness_totem.render.sprites[1].loop = true
--- mod_weakness_totem.render.sprites[1].z = Z_DECALS
 local totem_silence = RT("totem_silence", "aura")
-
 AC(totem_silence, "render", "tween")
-
 totem_silence.aura.mod = "mod_silence_totem"
 totem_silence.aura.cycle_time = 0.3
 totem_silence.aura.duration = 2
@@ -422,7 +410,6 @@ totem_silence.tween.props[2].keys = {{0, 50}, {fts(10), 255}, {fts(20), 255}, {f
 totem_silence.tween.props[2].loop = true
 
 local totem_weakness = RT("totem_weakness", "totem_silence")
-
 totem_weakness.aura.mods = {"mod_weakness_totem", "mod_totem_fire"}
 totem_weakness.aura.duration = 0
 totem_weakness.aura.duration_inc = 3
