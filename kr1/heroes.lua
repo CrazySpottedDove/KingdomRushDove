@@ -10481,9 +10481,7 @@ tt.modifier.duration = 6
 --#endregion
 --#region hero_faustus
 tt = RT("hero_faustus", "hero")
-
 AC(tt, "ranged", "timed_attacks")
-
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {400, 425, 450, 475, 500, 525, 550, 575, 600, 625}
 tt.hero.level_stats.melee_damage_max = {1, 2, 4, 4, 5, 6, 7, 8, 9, 10}
@@ -10688,11 +10686,58 @@ tt.render.sprites[1].prefix = "bolt_faustus"
 tt.sound_events.insert = nil
 tt.upgrades_disabled = true
 --#endregion
+--#region bolt_lance_faustus
+tt = RT("bolt_lance_faustus", "bolt")
+tt.bullet.acceleration_factor = 0.25
+tt.bullet.damage_type = DAMAGE_TRUE
+tt.bullet.hit_fx = "fx_bolt_lance_faustus_hit"
+tt.bullet.ignore_hit_offset = true
+tt.bullet.max_speed = 600
+tt.bullet.min_speed = 600
+tt.bullet.pop = nil
+tt.bullet.particles_name = "ps_bolt_lance_faustus"
+tt.render.sprites[1].prefix = "bolt_lance_faustus"
+tt.render.sprites[1].hidden = true
+tt.sound_events.insert = nil
+--#endregion
+--#region bullet_liquid_fire_faustus
+tt = RT("bullet_liquid_fire_faustus", "bullet")
+tt.main_script.update = scripts.bullet_liquid_fire_faustus.update
+tt.render = nil
+tt.bullet.particles_name = "ps_bullet_liquid_fire_faustus"
+tt.bullet.flight_time = fts(10)
+tt.flames_count = nil
+tt.bullet.hit_fx = "fx_bullet_liquid_fire_faustus_hit"
+--#endregion
+--#region aura_liquid_fire_flame_faustus
+tt = RT("aura_liquid_fire_flame_faustus", "aura")
+AC(tt, "render", "tween")
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.aura.mod = "mod_liquid_fire_faustus"
+tt.aura.duration = 8
+tt.aura.cycle_time = fts(10)
+tt.aura.radius = 35
+tt.aura.vis_flags = bor(F_RANGED)
+tt.aura.vis_bans = bor(F_FRIEND)
+tt.render.sprites[1].name = "aura_liquid_fire_flame_faustus"
+tt.sound_events.insert = "ElvesHeroFaustusFireLoop"
+tt.sound_events.remove_stop = "ElvesHeroFaustusFireLoop"
+tt.tween.remove = false
+tt.tween.props[1].keys = {{0, 0}, {0.25, 255}, {"this.aura.duration-1", 255}, {"this.aura.duration", 0}}
+tt.tween.props[2] = CC("tween_prop")
+tt.tween.props[2].name = "scale"
+tt.tween.props[2].keys = {{0, vec_1(0.5)}, {0.5, vec_1(1)}}
+--#endregion
+--#region aura_minidragon_faustus
+tt = RT("aura_minidragon_faustus", "aura_liquid_fire_flame_faustus")
+tt.aura.mod = "mod_minidragon_faustus"
+tt.tween.props[1].keys = {{0, 0}, {0.05, 255}, {"this.aura.duration-1", 255}, {"this.aura.duration", 0}}
+tt.tween.props[2] = nil
+--#endregion
 --#region aura_teleport_faustus
 tt = RT("aura_teleport_faustus", "aura")
-
 AC(tt, "render", "tween")
-
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 tt.aura.mod = "mod_teleport_faustus"
@@ -10725,9 +10770,7 @@ tt.damage_inc = 25
 --#endregion
 --#region hero_faustus_ultimate
 tt = RT("hero_faustus_ultimate")
-
 AC(tt, "pos", "main_script", "sound_events")
-
 tt.cooldown = 32
 tt.main_script.update = scripts.hero_faustus_ultimate.update
 tt.sound_events.insert = "ElvesHeroFaustusUltimate"

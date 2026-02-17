@@ -2087,12 +2087,56 @@ d[1].damage_min = ss("damage_min")
 map["熊猫流派"] = str(cooldown_str(), " 鑫施展熊猫流派（屁股墩），对", radius, "范围内敌人造成", damage_str(), "。")
 
 set_hero("hero_faustus")
-
-map["传送符文"] = str()
-map["龙怒"] = str()
-map["龙枪"] = str()
-map["液烟"] = str()
-map["弱能"] = str()
+set_skill(h.hero.skills.teleport_rune)
+count = ss("max_targets")
+a = h.ranged.attacks[3]
+cooldown = a.cooldown
+e = T("aura_teleport_faustus")
+radius = e.aura.radius
+e = T("mod_teleport_faustus")
+set_damage_value(e.damage_base + e.damage_inc * max_lvl)
+d[1].damage_type = e.damage_type
+duration = e.delay_start
+local nodes_offset = -e.nodes_offset
+map["传送符文"] = str(cooldown_str(), "浮士德使用传送符文，影响", radius, "范围内最多", count, "名敌人，使他们晕眩", duration, "秒后传送", nodes_offset, "个节点，并造成", damage_str(), "。")
+set_skill(h.hero.skills.ultimate)
+e = T("mod_minidragon_faustus")
+set_damage_value(ss("mod_damage"))
+cycle_time = e.dps.damage_every
+d[1].damage_type = e.dps.damage_type
+cooldown = h.ultimate.cooldown
+e = T("aura_minidragon_faustus")
+duration = e.aura.duration
+map["龙怒"] = str(cooldown_str(), "浮士德召唤数条小龙，焚烧路径", duration, "秒，使敌人每", cycle_time, "秒受到", damage_str(), "。")
+set_skill(h.hero.skills.dragon_lance)
+d[1].damage_min = ss("damage_min")
+d[1].damage_max = ss("damage_max")
+a = h.ranged.attacks[2]
+cooldown = a.cooldown
+e = T("bolt_lance_faustus")
+d[1].damage_type = e.bullet.damage_type
+map["龙枪"] = str(cooldown_str(), "浮士德射出数根龙枪，每根龙枪造成", damage_str(), "。")
+set_skill(h.hero.skills.liquid_fire)
+count = ss("flames_count")
+e = T("aura_liquid_fire_flame_faustus")
+duration = e.aura.duration
+e = T("mod_liquid_fire_faustus")
+set_damage_value(ss("mod_damage"))
+d[1].damage_type = e.dps.damage_type
+cycle_time = e.dps.damage_every
+a = h.ranged.attacks[5]
+cooldown = a.cooldown
+min_count = a.min_count
+map["液烟"] = str(cooldown_str(), "周围至少有", min_count, "名敌人时，浮士德吐出龙烟，向路径前后方向各传播出", count, "枚火焰，持续", duration, "秒，使敌人每", cycle_time, "秒受到", damage_str(), "。")
+set_skill(h.hero.skills.enervation)
+duration = ss("duration")
+count = ss("max_targets")
+a = h.ranged.attacks[4]
+cooldown = a.cooldown
+map["弱能"] = str(cooldown_str(), "浮士德沉默最多", count, "名施法者，持续", duration, "秒。")
+set_skill(h.hero.skills.urination)
+count = ss("count")
+map["蔓枝"] = str("浮士德的普攻与龙枪会分裂出", count, "发。")
 
 set_hero("hero_rag")
 -- 兔子

@@ -5925,29 +5925,6 @@ tt = RT("arrow_soldier_re_5", "arrow_soldier_re_2")
 tt.bullet.damage_max = 30
 tt.bullet.damage_min = 20
 --#endregion
---#region bolt_lance_faustus
-tt = RT("bolt_lance_faustus", "bolt")
-tt.bullet.acceleration_factor = 0.25
-tt.bullet.damage_type = DAMAGE_TRUE
-tt.bullet.hit_fx = "fx_bolt_lance_faustus_hit"
-tt.bullet.ignore_hit_offset = true
-tt.bullet.max_speed = 600
-tt.bullet.min_speed = 600
-tt.bullet.pop = nil
-tt.bullet.particles_name = "ps_bolt_lance_faustus"
-tt.render.sprites[1].prefix = "bolt_lance_faustus"
-tt.render.sprites[1].hidden = true
-tt.sound_events.insert = nil
---#endregion
---#region bullet_liquid_fire_faustus
-tt = RT("bullet_liquid_fire_faustus", "bullet")
-tt.main_script.update = scripts.bullet_liquid_fire_faustus.update
-tt.render = nil
-tt.bullet.particles_name = "ps_bullet_liquid_fire_faustus"
-tt.bullet.flight_time = fts(10)
-tt.flames_count = nil
-tt.bullet.hit_fx = "fx_bullet_liquid_fire_faustus_hit"
---#endregion
 --#region bullet_bravebark_seed
 tt = RT("bullet_bravebark_seed", "bomb")
 tt.bullet.damage_type = DAMAGE_NONE
@@ -6305,34 +6282,6 @@ tt.main_script.update = scripts.ray_simple.update
 tt.render.sprites[1].anchor = vec_2(0, 0.5)
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].name = "ray_crystal_arcane"
---#endregion
---#region aura_liquid_fire_flame_faustus
-tt = RT("aura_liquid_fire_flame_faustus", "aura")
-
-AC(tt, "render", "tween")
-
-tt.main_script.insert = scripts.aura_apply_mod.insert
-tt.main_script.update = scripts.aura_apply_mod.update
-tt.aura.mod = "mod_liquid_fire_faustus"
-tt.aura.duration = 8
-tt.aura.cycle_time = fts(10)
-tt.aura.radius = 35
-tt.aura.vis_flags = bor(F_RANGED)
-tt.aura.vis_bans = bor(F_FRIEND)
-tt.render.sprites[1].name = "aura_liquid_fire_flame_faustus"
-tt.sound_events.insert = "ElvesHeroFaustusFireLoop"
-tt.sound_events.remove_stop = "ElvesHeroFaustusFireLoop"
-tt.tween.remove = false
-tt.tween.props[1].keys = {{0, 0}, {0.25, 255}, {"this.aura.duration-1", 255}, {"this.aura.duration", 0}}
-tt.tween.props[2] = CC("tween_prop")
-tt.tween.props[2].name = "scale"
-tt.tween.props[2].keys = {{0, vec_1(0.5)}, {0.5, vec_1(1)}}
---#endregion
---#region aura_minidragon_faustus
-tt = RT("aura_minidragon_faustus", "aura_liquid_fire_flame_faustus")
-tt.aura.mod = "mod_minidragon_faustus"
-tt.tween.props[1].keys = {{0, 0}, {0.05, 255}, {"this.aura.duration-1", 255}, {"this.aura.duration", 0}}
-tt.tween.props[2] = nil
 --#endregion
 --#region aura_enervation_faustus
 tt = RT("aura_enervation_faustus", "aura")
@@ -6805,9 +6754,7 @@ tt.dps.damage_type = DAMAGE_POISON
 --#endregion
 --#region mod_enervation_faustus
 tt = RT("mod_enervation_faustus", "modifier")
-
 AC(tt, "render", "tween")
-
 tt.main_script.insert = scripts.mod_silence.insert
 tt.main_script.remove = scripts.mod_silence.remove
 tt.main_script.update = scripts.mod_track_target.update
@@ -6819,9 +6766,7 @@ tt.tween.props[1].keys = {{0, 0}, {0.25, 255}}
 --#endregion
 --#region mod_liquid_fire_faustus
 tt = RT("mod_liquid_fire_faustus", "modifier")
-
 AC(tt, "dps", "render")
-
 tt.dps.damage_max = nil
 tt.dps.damage_min = nil
 tt.dps.damage_type = DAMAGE_TRUE

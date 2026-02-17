@@ -15801,8 +15801,6 @@ function scripts.hero_faustus.update(this, store)
 				local flight_time = a.estimated_flight_time or 1
 				local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans, function(e)
 					if U.flag_has(a.vis_flags, F_SPELLCASTER) and (not U.flag_has(e.vis.flags, F_SPELLCASTER) or not e.enemy.can_do_magic) then
-						log.debug("filtering (%s)%s", e.id, e.template_name)
-
 						return false
 					end
 
