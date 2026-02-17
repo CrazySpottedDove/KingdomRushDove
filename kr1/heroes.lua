@@ -456,9 +456,7 @@ tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE)
 --#endregion
 --#region hero_bolin
 tt = RT("hero_bolin", "hero")
-
 AC(tt, "melee", "timed_attacks")
-
 anchor_y = 0.24
 anchor_x = 0.5
 image_y = 82
@@ -499,7 +497,7 @@ tt.info.damage_icon = "shot"
 tt.info.hero_portrait = "hero_portraits_0004"
 tt.info.i18n_key = "HERO_RIFLEMAN"
 tt.info.portrait = "info_portraits_heroes_0004"
-tt.melee.range = 40
+tt.melee.range = 25
 tt.main_script.update = scripts.hero_bolin.update
 tt.motion.max_speed = 2.7 * FPS
 tt.regen.cooldown = 1
