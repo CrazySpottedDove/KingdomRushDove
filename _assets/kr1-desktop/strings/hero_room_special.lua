@@ -1669,7 +1669,7 @@ e = T("aura_bomb_wilbur")
 get_damage(e.aura)
 radius = e.aura.radius
 cooldown = h.timed_attacks.list[2].cooldown
-map["自走炸弹"] = str(cooldown_str(),"威尔伯放置",count,"枚自走炸弹。自走炸弹爆炸时对", radius, "范围内敌人造成", damage_str(), "。")
+map["自走炸弹"] = str(cooldown_str(), "威尔伯放置", count, "枚自走炸弹。自走炸弹爆炸时对", radius, "范围内敌人造成", damage_str(), "。")
 set_skill(h.hero.skills.ultimate)
 set_damage_value(ss("damage"))
 cooldown = h.ultimate.cooldown
@@ -1680,13 +1680,45 @@ duration = e.duration
 count_2 = e.custom_attack.max_shots
 cycle_time = e.custom_attack.cooldown
 d[1].damage_type = e.custom_attack.damage_type
-map["无人机蜂群"] = str(cooldown_str(),"威尔伯召唤",count,"架无人机协助战斗，驻场",duration,"秒。无人机全图索敌，每隔",cycle_time,"秒攻击一次，最多攻击",count_2,"次，每次造成",damage_str(),"。")
+map["无人机蜂群"] = str(cooldown_str(), "威尔伯召唤", count, "架无人机协助战斗，驻场", duration, "秒。无人机全图索敌，每隔", cycle_time, "秒攻击一次，最多攻击", count_2, "次，每次造成", damage_str(), "。")
 
 set_hero("hero_veznan")
-map["灵魂裂解"] = str()
-map["苦痛牢笼"] = str()
-map["奥术新星"] = str()
-map["恶魔契约"] = str()
+set_skill(h.hero.skills.soulburn)
+amount = ss("total_hp")
+cooldown = h.timed_attacks.list[1].cooldown
+map["灵魂裂解"] = str(cooldown_str(),"维兹南炼化数名总生命值不超过",amount,"的敌人，或无限制炼化视野内生命值最高的一名敌人。")
+set_skill(h.hero.skills.shackles)
+count = ss("max_count")
+cooldown = h.timed_attacks.list[2].cooldown
+e = T("mod_veznan_shackles_dps")
+get_damage(e.dps)
+cycle_time = e.dps.damage_every
+duration = e.modifier.duration
+map["苦痛牢笼"] = str(cooldown_str(), "维兹南禁锢最多", count, "名敌人，持续", duration, "秒，每", cycle_time, "秒造成", damage_str(), "。")
+set_skill(h.hero.skills.arcanenova)
+d[1].damage_max = ss("damage_max")
+d[1].damage_min = ss("damage_min")
+cooldown = h.timed_attacks.list[3].cooldown
+radius = h.timed_attacks.list[3].damage_radius
+d[1].damage_type = h.timed_attacks.list[3].damage_type
+e = T("mod_veznan_arcanenova")
+factor = e.slow.factor
+duration = e.modifier.duration
+map["奥术新星"] = str(cooldown_str(),"维兹南引爆奥术能量，在", radius, "范围内造成", damage_str(), "，并使敌人移速x", factor * 100, "%，持续", duration, "秒。")
+set_skill(h.hero.skills.ultimate)
+duration = ss("stun_duration")
+health[1].hp_max = ss("soldier_hp_max")
+d[1].damage_max = ss("soldier_damage_max")
+d[1].damage_min = ss("soldier_damage_min")
+e = T("hero_veznan_ultimate")
+radius = e.range
+e = T("soldier_veznan_demon")
+health[1].armor = e.health.armor
+health[1].magic_armor = e.health.magic_armor
+d[1].damage_type = e.melee.attacks[1].damage_type
+cooldown = h.ultimate.cooldown
+duration_2 = e.reinforcement.duration
+map["恶魔契约"] = str(cooldown_str(), "维兹南召唤大恶魔，晕眩", radius, "范围内敌人", duration, "秒。大恶魔可调集，驻场", duration_2, "秒，拥有", health_str(), "，每次攻击造成", damage_str(), "。")
 
 set_hero("hero_durax")
 set_skill(h.hero.skills.shardseed)

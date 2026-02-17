@@ -469,7 +469,7 @@ tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {400, 430, 460, 490, 520, 550, 580, 610, 640, 670}
 tt.hero.level_stats.melee_damage_max = {15, 18, 20, 23, 25, 28, 30, 33, 35, 38}
 tt.hero.level_stats.melee_damage_min = {9, 11, 12, 14, 15, 17, 18, 20, 21, 23}
-tt.hero.level_stats.ranged_damage_max = {28, 33, 39, 44, 50, 55, 61, 66, 72, 77}
+tt.hero.level_stats.ranged_damage_max = {28, 33, 38, 43, 49, 55, 61, 67, 73, 79}
 tt.hero.level_stats.ranged_damage_min = {9, 11, 12, 14, 15, 17, 18, 20, 21, 23}
 tt.hero.skills.mines = CC("hero_skill")
 tt.hero.skills.mines.xp_level_steps = {
@@ -8074,17 +8074,15 @@ tt.tween.props[1].interp = "sine"
 --#endregion
 --#region hero_veznan
 tt = RT("hero_veznan", "hero")
-
 AC(tt, "melee", "ranged", "timed_attacks", "teleport")
-
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {185, 200, 215, 230, 245, 260, 275, 290, 305, 320}
 tt.hero.level_stats.melee_damage_max = {8, 10, 11, 12, 13, 14, 16, 17, 18, 19}
 tt.hero.level_stats.melee_damage_min = {6, 6, 7, 8, 9, 10, 10, 11, 12, 13}
-tt.hero.level_stats.ranged_damage_min = {11, 12, 14, 15, 17, 18, 20, 21, 23, 24}
+tt.hero.level_stats.ranged_damage_min = {12, 13, 15, 16, 18, 19, 22, 23, 25, 26}
 tt.hero.level_stats.ranged_damage_max = {32, 36, 41, 45, 50, 54, 59, 63, 68, 72}
 tt.hero.skills.soulburn = CC("hero_skill")
-tt.hero.skills.soulburn.total_hp = {250, 500, 750}
+tt.hero.skills.soulburn.total_hp = {500, 1000, 1500}
 tt.hero.skills.soulburn.xp_gain = {105, 210, 315}
 tt.hero.skills.soulburn.xp_level_steps = {
 	[3] = 1,
@@ -8107,8 +8105,8 @@ tt.hero.skills.hermeticinsight.xp_level_steps = {
 	[7] = 3
 }
 tt.hero.skills.arcanenova = CC("hero_skill")
-tt.hero.skills.arcanenova.damage_min = {28, 46, 64}
-tt.hero.skills.arcanenova.damage_max = {52, 86, 120}
+tt.hero.skills.arcanenova.damage_min = {30, 50, 70}
+tt.hero.skills.arcanenova.damage_max = {60, 100, 140}
 tt.hero.skills.arcanenova.xp_gain = {45, 90, 135}
 tt.hero.skills.arcanenova.xp_level_steps = {
 	[2] = 1,
@@ -8235,9 +8233,7 @@ tt.bullet.pop_conds = DR_KILL
 --#endregion
 --#region hero_veznan_ultimate
 tt = RT("hero_veznan_ultimate")
-
 AC(tt, "pos", "main_script", "sound_events")
-
 tt.cooldown = 96
 tt.entity = "soldier_veznan_demon"
 tt.main_script.update = scripts.hero_veznan_ultimate.update
@@ -8249,12 +8245,11 @@ tt.vis_flags = bor(F_MOD, F_STUN)
 --#endregion
 --#region soldier_veznan_demon
 tt = RT("soldier_veznan_demon", "soldier_militia")
-
 AC(tt, "reinforcement", "ranged", "nav_grid")
-
 tt.controable = true
 tt.controable_other = true
 tt.health.armor = 0
+tt.health.magic_armor = 0.5
 tt.health.hp_max = nil
 tt.health_bar.offset = vec_2(0, 65)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
@@ -8270,11 +8265,6 @@ tt.melee.attacks[1].damage_type = DAMAGE_TRUE
 tt.melee.attacks[1].hit_time = fts(15)
 tt.melee.attacks[1].mod = "mod_veznan_demon_fire"
 tt.melee.continue_in_cooldown = true
-
-function tt.melee.fn_can_pick(soldier, target)
-	return target.template_name ~= "enemy_mantaray"
-end
-
 tt.melee.range = 65
 tt.motion.max_speed = 75
 tt.ranged.attacks[1] = CC("bullet_attack")
@@ -8300,6 +8290,47 @@ tt.unit.mod_offset = vec_2(0, 28)
 tt.unit.hide_after_death = true
 tt.vis.flags = bor(tt.vis.flags, F_HERO)
 tt.vis.bans = bor(F_POISON, F_NET, F_STUN, F_BURN)
+--#endregion
+--#region mod_veznan_ultimate_stun
+tt = RT("mod_veznan_ultimate_stun", "mod_stun")
+tt.modifier.duration = 2
+--#endregion
+--#region mod_veznan_demon_fire
+tt = RT("mod_veznan_demon_fire", "modifier")
+AC(tt, "render")
+tt.main_script.insert = scripts.mod_track_target.insert
+tt.main_script.update = scripts.mod_track_target.update
+tt.modifier.duration = fts(29)
+tt.modifier.resets_same = true
+tt.render.sprites[1].prefix = "fire"
+tt.render.sprites[1].name = "small"
+tt.render.sprites[1].size_names = {"small", "medium", "large"}
+tt.render.sprites[1].draw_order = 10
+--#endregion
+--#region mod_veznan_arcanenova
+tt = RT("mod_veznan_arcanenova", "mod_slow")
+tt.modifier.duration = 2
+tt.slow.factor = 0.5
+--#endregion
+--#region mod_veznan_shackles_stun
+tt = RT("mod_veznan_shackles_stun", "mod_stun")
+tt.render.sprites[1].prefix = "veznan_hero_shackles"
+tt.render.sprites[1].size_names = {"small", "big", "big"}
+tt.render.sprites[1].name = "start"
+tt.render.sprites[1].size_anchors = {vec_2(0.5, 0.7222222222222222), vec_2(0.5, 0.5483870967741935), vec_2(0.5, 0.4838709677419355)}
+tt.modifier.animation_phases = true
+tt.modifier.duration = 3
+--#endregion
+--#region mod_veznan_shackles_dps
+tt = RT("mod_veznan_shackles_dps", "modifier")
+AC(tt, "dps")
+tt.modifier.duration = 3
+tt.dps.damage_min = 3
+tt.dps.damage_max = 4
+tt.dps.damage_every = fts(5)
+tt.dps.damage_type = DAMAGE_TRUE
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
 --#endregion
 --#region hero_durax
 tt = RT("hero_durax", "hero")
