@@ -22,7 +22,6 @@ local level={}
 level.required_sounds={"music_stage41","FrontiersUndergroundAmbienceSounds","FrontiersFinalBoss"}
 level.required_textures={"go_enemies_underground","go_stages_underground","go_stage41","go_stage41_bg"}
 level.show_comic_idx=13
-level.pan_extension=not (KR_TARGET~="phone" and KR_TARGET~="tablet") and {top=48} or nil
 function level:init(store)
 store.level_terrain_type=TERRAIN_STYLE_UNDERGROUND
 self.locations=LU.load_locations(store,self)

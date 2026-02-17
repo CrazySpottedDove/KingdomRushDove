@@ -96,7 +96,6 @@ function LU.load_level(store, name)
 			"locked_towers",
 			"max_upgrade_level",
 			"custom_spawn_pos",
-			"pan_extension",
 			"show_comic_idx",
 			"nav_mesh",
 			"unlock_towers",

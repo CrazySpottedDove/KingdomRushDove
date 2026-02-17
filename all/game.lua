@@ -132,7 +132,6 @@ function game:init(screen_w, screen_h, done_callback)
 
 	self.game_ref_origin = V.v((screen_w - self.ref_w * self.game_scale) * 0.5, (screen_h - self.ref_h * self.game_scale) * 0.5)
 
-	local panext = self.store.level.pan_extension
 	local visible_h = REF_H
 	local visible_w = math.ceil(self.screen_w * self.ref_h / self.screen_h)
 
@@ -140,8 +139,8 @@ function game:init(screen_w, screen_h, done_callback)
 
 	local v_left = (self.ref_w - visible_w) * 0.5
 	local v_right = self.ref_w + (visible_w - self.ref_w) * 0.5
-	local v_top = (panext and panext.top or 0) + visible_h
-	local v_bottom = panext and panext.bottom or 0
+	local v_top = visible_h
+	local v_bottom = 0
 
 	self.store.visible_coords = {
 		top = v_top,
@@ -162,8 +161,7 @@ function game:init(screen_w, screen_h, done_callback)
 	self.camera.wb = (visible_h - v_bottom) * self.game_scale
 	self.camera.zoom = 1
 	self.camera.min_zoom = aspect > 1.7777777777777777 and math.min(screen_w, MAX_SCREEN_ASPECT * screen_h) / (visible_w * self.game_scale) or 1
-	self.camera.max_zoom = KR_TARGET == "tablet" and 1.5 or 2
-
+	self.camera.max_zoom = 2
 	function self.camera:clamp()
 		self.zoom = km.clamp(self.min_zoom, self.max_zoom, self.zoom)
 		self.x = km.clamp(self.wl + self.ww * self.min_zoom / (2 * self.zoom), self.wr - self.ww * self.min_zoom / (2 * self.zoom), self.x)
