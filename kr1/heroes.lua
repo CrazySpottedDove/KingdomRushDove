@@ -7782,9 +7782,7 @@ tt.magic_armor_reduction = -tt.magic_armor_reduction * 0.5
 --#endregion
 --#region hero_wilbur
 tt = RT("hero_wilbur", "hero")
-
 AC(tt, "ranged", "timed_attacks")
-
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {300, 330, 360, 390, 420, 450, 480, 510, 540, 570}
 tt.hero.level_stats.melee_damage_max = {8, 10, 11, 12, 13, 14, 16, 17, 18, 19}
@@ -7793,7 +7791,7 @@ tt.hero.level_stats.ranged_damage_max = {14, 16, 18, 20, 22, 24, 26, 28, 30, 32}
 tt.hero.level_stats.ranged_damage_min = {10, 11, 12, 13, 15, 16, 17, 19, 20, 21}
 tt.hero.skills.missile = CC("hero_skill")
 tt.hero.skills.missile.damage_max = {40, 80, 120}
-tt.hero.skills.missile.damage_min = {28, 56, 84}
+tt.hero.skills.missile.damage_min = {30, 60, 90}
 tt.hero.skills.missile.xp_gain = {100, 150, 225}
 tt.hero.skills.missile.xp_level_steps = {
 	[2] = 1,
@@ -7856,7 +7854,6 @@ tt.nav_grid.ignore_waypoints = true
 tt.nav_grid.valid_terrains = TERRAIN_ALL_MASK
 tt.nav_grid.valid_terrains_dest = TERRAIN_ALL_MASK
 tt.regen.cooldown = 1
-
 for i = 1, 4 do
 	tt.render.sprites[i] = CC("sprite")
 	tt.render.sprites[i].anchor.y = 0.065
@@ -7867,7 +7864,6 @@ for i = 1, 4 do
 	tt.render.sprites[i].group = i == 3 and "gun" or nil
 	tt.render.sprites[i].z = Z_FLYING_HEROES
 end
-
 tt.render.sprites[5] = CC("sprite")
 tt.render.sprites[5].alpha = 150
 tt.render.sprites[5].anchor.y = 0.04032258064516129
@@ -7943,11 +7939,42 @@ tt.ultimate = {
 }
 tt.engine_factor = 1
 --#endregion
+
+--#region aura_smoke_wilbur
+tt = RT("aura_smoke_wilbur", "aura")
+AC(tt, "render", "tween")
+tt.aura.cycle_time = 0.2
+tt.aura.duration = nil
+tt.aura.mod = "mod_slow_wilbur"
+tt.aura.radius = 60
+tt.aura.vis_bans = bor(F_FRIEND)
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+for i, offset in ipairs({vec_2(25, -20), vec_2(-11, -20), vec_2(7, 5)}) do
+	local s = CC("sprite")
+	s.name = "decal_wilbur_smoke"
+	s.offset = offset
+	s.anchor.y = 0.15
+	s.scale = vec_2(1, 1)
+	tt.render.sprites[i] = s
+	tt.tween.props[2 * i - 1] = CC("tween_prop")
+	tt.tween.props[2 * i - 1].keys = {{0, 0}, {0.6, 255}, {"this.aura.duration-0.6", 255}, {"this.aura.duration", 0}}
+	tt.tween.props[2 * i - 1].sprite_id = i
+	tt.tween.props[2 * i] = CC("tween_prop")
+	tt.tween.props[2 * i].keys = {{0, vec_1(0.3)}, {fts(13), vec_1(1.1)}, {fts(15), vec_1(1)}}
+	tt.tween.props[2 * i].name = "scale"
+	tt.tween.props[2 * i].sprite_id = i
+end
+tt.render.sprites[4] = CC("sprite")
+tt.render.sprites[4].anchor.y = 0.14545454545454545
+tt.render.sprites[4].name = "fx_wilbur_smoke_start"
+tt.render.sprites[4].hide_after_runs = 1
+tt.tween.remove = false
+--#endregion
+
 --#region hero_wilbur_ultimate
 tt = RT("hero_wilbur_ultimate")
-
 AC(tt, "pos", "main_script", "sound_events")
-
 tt.cooldown = 32
 tt.main_script.update = scripts.hero_wilbur_ultimate.update
 tt.sound_events.insert = "ElvesHeroGyroDronesSpawn"
@@ -8007,9 +8034,7 @@ tt.render = nil
 --#endregion
 --#region drone_wilbur
 tt = RT("drone_wilbur", "decal_scripted")
-
 AC(tt, "force_motion", "custom_attack", "sound_events", "tween")
-
 tt.main_script.update = scripts.drone_wilbur.update
 tt.flight_height = 70
 tt.force_motion.max_a = 1200

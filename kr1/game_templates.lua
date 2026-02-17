@@ -5259,9 +5259,7 @@ tt.custom_attack.hit_fx = "fx_rabbit_kamihare_explode"
 
 --#region bomb_wilbur
 tt = RT("bomb_wilbur", "rabbit_kamihare")
-
 AC(tt, "sound_events")
-
 tt.render.sprites[1].prefix = "bomb_wilbur"
 tt.render.sprites[1].anchor.y = 0.11666666666666667
 tt.render.sprites[1].random_ts = 0.5
@@ -6324,7 +6322,7 @@ tt.hps.heal_every = 1
 tt = RT("aura_bomb_wilbur", "aura_rabbit_kamihare")
 tt.aura.damage_min = 110
 tt.aura.damage_max = 155
-tt.aura.radius = 30
+tt.aura.radius = 35
 tt.sound_events.insert = "BombExplosionSound"
 --#endregion
 --#region aura_bobbing_wilbur
@@ -6334,9 +6332,7 @@ tt.main_script.update = scripts.aura_wilbur_bobbing.update
 --#endregion
 --#region aura_box_wilbur
 tt = RT("aura_box_wilbur", "decal_scripted")
-
 AC(tt, "spawner", "sound_events")
-
 tt.render.sprites[1].anchor.y = 0.25
 tt.render.sprites[1].name = "box_wilbur_open"
 tt.render.sprites[1].loop = false
@@ -6345,42 +6341,6 @@ tt.spawner.spawn_time = fts(10)
 tt.spawner.count = nil
 tt.sound_events.insert = "ElvesHeroGyroBoombBoxTouchdown"
 tt.main_script.update = scripts.aura_box_wilbur.update
---#endregion
---#region aura_smoke_wilbur
-tt = RT("aura_smoke_wilbur", "aura")
-
-AC(tt, "render", "tween")
-
-tt.aura.cycle_time = 0.2
-tt.aura.duration = nil
-tt.aura.mod = "mod_slow_wilbur"
-tt.aura.radius = 60
-tt.aura.vis_bans = bor(F_FRIEND)
-tt.main_script.insert = scripts.aura_apply_mod.insert
-tt.main_script.update = scripts.aura_apply_mod.update
-
-for i, offset in ipairs({vec_2(25, -20), vec_2(-11, -20), vec_2(7, 5)}) do
-	local s = CC("sprite")
-
-	s.name = "decal_wilbur_smoke"
-	s.offset = offset
-	s.anchor.y = 0.15
-	s.scale = vec_2(1, 1)
-	tt.render.sprites[i] = s
-	tt.tween.props[2 * i - 1] = CC("tween_prop")
-	tt.tween.props[2 * i - 1].keys = {{0, 0}, {0.6, 255}, {"this.aura.duration-0.6", 255}, {"this.aura.duration", 0}}
-	tt.tween.props[2 * i - 1].sprite_id = i
-	tt.tween.props[2 * i] = CC("tween_prop")
-	tt.tween.props[2 * i].keys = {{0, vec_1(0.3)}, {fts(13), vec_1(1.1)}, {fts(15), vec_1(1)}}
-	tt.tween.props[2 * i].name = "scale"
-	tt.tween.props[2 * i].sprite_id = i
-end
-
-tt.render.sprites[4] = CC("sprite")
-tt.render.sprites[4].anchor.y = 0.14545454545454545
-tt.render.sprites[4].name = "fx_wilbur_smoke_start"
-tt.render.sprites[4].hide_after_runs = 1
-tt.tween.remove = false
 --#endregion
 --#region aura_gnoll_gnawer
 tt = RT("aura_gnoll_gnawer", "aura")
