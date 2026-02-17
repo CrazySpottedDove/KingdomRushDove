@@ -17430,12 +17430,10 @@ function scripts.mod_bruce_sharp_claws.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		log.debug("mod_bruce_sharp_claws:%s cannot find target with id:%s", this.id, this.modifier.target_id)
-
 		return false
 	end
 
-	local has_mods, mods = U.has_modifier_types(store, target, this.modifier.type)
+	local has_mods, mods = U.has_modifier_types(store, target, this.modifier.type, MOD_TYPE_POISON)
 
 	if has_mods then
 		local d = E:create_entity("damage")
@@ -17443,7 +17441,7 @@ function scripts.mod_bruce_sharp_claws.insert(this, store)
 		d.value = this.extra_bleeding_damage
 		d.target_id = target.id
 		d.source_id = this.id
-
+		d.damage_type = this.extra_bleeding_damage_type
 		queue_damage(store, d)
 
 		return false

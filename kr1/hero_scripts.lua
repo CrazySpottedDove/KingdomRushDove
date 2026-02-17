@@ -16530,10 +16530,6 @@ function scripts.hero_bruce.update(this, store)
 
 						if targets then
 							for i, target in ipairs(targets) do
-								if i > a.max_count then
-									break
-								end
-
 								local m = E:create_entity(a.mod)
 
 								m.modifier.source_id = this.id

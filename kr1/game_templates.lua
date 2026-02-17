@@ -6923,6 +6923,7 @@ tt.dps.damage_every = fts(11)
 tt.dps.damage_min = nil
 tt.dps.damage_max = nil
 tt.extra_bleeding_damage = nil
+tt.extra_bleeding_damage_type = DAMAGE_RUDE
 tt.xp_from_skill = "sharp_claws"
 --#endregion
 --#region mod_bruce_kings_roar
@@ -6934,37 +6935,6 @@ tt.modifier.use_mod_offset = false
 tt.render.sprites[1].prefix = "mod_bruce_kings_roar"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].size_names = nil
---#endregion
---#region mod_lion_bruce_stun
-tt = RT("mod_lion_bruce_stun", "mod_stun")
-tt.modifier.duration = 3
-tt.modifier.animation_phases = true
-tt.modifier.use_mod_offset = false
-tt.render.sprites[1].size_names = nil
-tt.render.sprites[1].anchor.y = 0.0975609756097561
-tt.render.sprites[1].prefix = "bruce_ultimate_twister"
-tt.sound_events.insert_args = {
-	ignore = 1
-}
-tt.sound_events.insert = {"ElvesHeroBruceGuardianLionsLoopStart", "ElvesHeroBruceGuardianLionsLoop"}
-tt.sound_events.remove_stop = "ElvesHeroBruceGuardianLionsLoop"
-tt.sound_events.remove = "ElvesHeroBruceGuardianLionsLoopEnd"
---#endregion
---#region mod_lion_bruce_damage
-tt = RT("mod_lion_bruce_damage", "modifier")
-
-AC(tt, "dps", "mark_flags")
-
-tt.dps.damage_min = nil
-tt.dps.damage_max = nil
-tt.dps.damage_every = fts(10)
-tt.dps.damage_type = DAMAGE_TRUE
-tt.mark_flags.vis_bans = F_CUSTOM
-tt.modifier.duration = 3
-tt.main_script.insert = scripts.mod_dps.insert
-tt.main_script.update = scripts.mod_dps.update
-tt.main_script.queue = scripts.mod_mark_flags.queue
-tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
 --#endregion
 --#region mod_slow_wilbur
 tt = RT("mod_slow_wilbur", "mod_slow")

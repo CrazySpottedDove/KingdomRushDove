@@ -11076,9 +11076,7 @@ tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
 --#endregion
 --#region hero_bruce
 tt = RT("hero_bruce", "hero")
-
 AC(tt, "melee", "timed_attacks")
-
 tt.hero.level_stats.armor = {0.14, 0.18, 0.22, 0.26, 0.3, 0.34, 0.38, 0.42, 0.46, 0.5}
 tt.hero.level_stats.hp_max = {365, 390, 415, 440, 465, 490, 515, 540, 565, 590}
 tt.hero.level_stats.melee_damage_max = {27, 31, 34, 38, 41, 45, 49, 52, 56, 59}
@@ -11117,7 +11115,7 @@ tt.hero.skills.grievous_bites.xp_level_steps = {
 }
 tt.hero.skills.ultimate = CC("hero_skill")
 tt.hero.skills.ultimate.controller_name = "hero_bruce_ultimate"
-tt.hero.skills.ultimate.damage_per_tick = {8, 12, 14, 16}
+tt.hero.skills.ultimate.damage_per_tick = {11, 14, 17, 20}
 tt.hero.skills.ultimate.xp_level_steps = {
 	[1] = 1,
 	[4] = 2,
@@ -11181,6 +11179,7 @@ tt.melee.attacks[4].sound_args = {
 }
 tt.melee.attacks[4].xp_from_skill = "grievous_bites"
 tt.melee.attacks[4].xp_gain_factor = 5
+tt.melee.attacks[4].mod = "mod_bruce_sharp_claws"
 tt.melee.cooldown = 1
 tt.melee.range = 55
 tt.timed_attacks.list[1] = CC("mod_attack")
@@ -11188,8 +11187,7 @@ tt.timed_attacks.list[1].animation = "specialAttack"
 tt.timed_attacks.list[1].cooldown = 20
 tt.timed_attacks.list[1].disabled = true
 tt.timed_attacks.list[1].hit_time = fts(17)
-tt.timed_attacks.list[1].max_count = 7
-tt.timed_attacks.list[1].min_count = 3
+tt.timed_attacks.list[1].min_count = 2
 tt.timed_attacks.list[1].mod = "mod_bruce_kings_roar"
 tt.timed_attacks.list[1].range = 125
 tt.timed_attacks.list[1].sound = "ElvesHeroBruceKingsRoar"
@@ -11207,9 +11205,7 @@ tt.ultimate = {
 --#endregion
 --#region hero_bruce_ultimate
 tt = RT("hero_bruce_ultimate")
-
 AC(tt, "pos", "main_script", "sound_events")
-
 tt.cooldown = 36
 tt.main_script.update = scripts.hero_bruce_ultimate.update
 tt.sound_events.insert = "ElvesHeroBruceGuardianLionsCast"
@@ -11222,9 +11218,7 @@ tt.vis_bans = bor(F_FLYING)
 --#endregion
 --#region lion_bruce
 tt = RT("lion_bruce", "decal_scripted")
-
 AC(tt, "nav_path", "motion", "custom_attack", "sound_events", "tween")
-
 tt.custom_attack.cooldown = fts(6)
 tt.custom_attack.mods = {"mod_lion_bruce_stun", "mod_lion_bruce_damage"}
 tt.custom_attack.damage_boss = nil
@@ -11232,7 +11226,7 @@ tt.custom_attack.range = 40
 tt.custom_attack.vis_flags = bor(F_RANGED, F_STUN, F_CUSTOM)
 tt.custom_attack.vis_bans = bor(F_FLYING)
 tt.custom_attack.damage_type = DAMAGE_TRUE
-tt.duration = 5
+tt.duration = 10
 tt.motion.max_speed = 150
 tt.main_script.insert = scripts.lion_bruce.insert
 tt.main_script.update = scripts.lion_bruce.update
@@ -11251,6 +11245,35 @@ tt.render.sprites[1].prefix = "bruce_ultimate"
 tt.sound_events.custom_loop_end = "ElvesHeroBruceGuardianLionsLoopEnd"
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
+--#endregion
+--#region mod_lion_bruce_stun
+tt = RT("mod_lion_bruce_stun", "mod_stun")
+tt.modifier.duration = 3
+tt.modifier.animation_phases = true
+tt.modifier.use_mod_offset = false
+tt.render.sprites[1].size_names = nil
+tt.render.sprites[1].anchor.y = 0.0975609756097561
+tt.render.sprites[1].prefix = "bruce_ultimate_twister"
+tt.sound_events.insert_args = {
+	ignore = 1
+}
+tt.sound_events.insert = {"ElvesHeroBruceGuardianLionsLoopStart", "ElvesHeroBruceGuardianLionsLoop"}
+tt.sound_events.remove_stop = "ElvesHeroBruceGuardianLionsLoop"
+tt.sound_events.remove = "ElvesHeroBruceGuardianLionsLoopEnd"
+--#endregion
+--#region mod_lion_bruce_damage
+tt = RT("mod_lion_bruce_damage", "modifier")
+AC(tt, "dps", "mark_flags")
+tt.dps.damage_min = nil
+tt.dps.damage_max = nil
+tt.dps.damage_every = fts(10)
+tt.dps.damage_type = DAMAGE_TRUE
+tt.mark_flags.vis_bans = F_CUSTOM
+tt.modifier.duration = 3
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+tt.main_script.queue = scripts.mod_mark_flags.queue
+tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
 --#endregion
 --#region hero_bolverk
 tt = RT("hero_bolverk", "hero")

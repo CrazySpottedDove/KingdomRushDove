@@ -2193,11 +2193,43 @@ count = ss("max_count")
 map["超级变变变"] = str(cooldown_str(), "瑞格对最多", count, "名敌人施展无生命值限制的布偶变。")
 
 set_hero("hero_bruce")
-
-map["流血利刃"] = str()
-map["王者咆哮"] = str()
-map["野蛮撕咬"] = str()
-map["雄狮守卫"] = str()
+set_skill(h.hero.skills.sharp_claws)
+set_damage_value(ss("damage"), 1)
+e = T("mod_bruce_sharp_claws")
+cycle_time = e.dps.damage_every
+d[1].damage_type = e.dps.damage_type
+set_damage_value(ss("extra_damage"), 2)
+d[2].damage_type = e.extra_bleeding_damage_type
+a = h.melee.attacks[3]
+chance = a.chance
+duration = e.modifier.duration
+map["流血利刃"] = str("布鲁斯每次攻击有", chance, "概率使敌人流血，持续", duration, "秒，每", cycle_time, "秒造成", damage_str(1), "。对流血或中毒的敌人，布鲁斯每次攻击额外造成", damage_str(2), "。")
+set_skill(h.hero.skills.kings_roar)
+duration = ss("stun_duration")
+a = h.timed_attacks.list[1]
+cooldown = a.cooldown
+radius = a.range
+min_count = a.min_count
+map["王者咆哮"] = str(cooldown_str(), "若周围有至少", min_count, "名敌人，布鲁斯一声怒喝，使", radius, "范围内敌人眩晕", duration, "秒。")
+set_skill(h.hero.skills.grievous_bites)
+set_damage_value(ss("damage"))
+a = h.melee.attacks[4]
+cooldown = a.cooldown
+d[1].damage_type = a.damage_type
+count = #a.hit_times
+map["野蛮撕咬"] = str(cooldown_str(), "布鲁斯连续撕咬敌人", count, "次，每次造成", damage_str(), "，并使敌人流血。该技能获得经验量与造成总伤相关。")
+set_skill(h.hero.skills.ultimate)
+cooldown = h.ultimate.cooldown
+set_damage_value(ss("damage_per_tick"))
+set_damage_value(ss("damage_boss"), 2)
+e = T("lion_bruce")
+d[2].damage_type = e.custom_attack.damage_type
+e = T("mod_lion_bruce_damage")
+duration = e.modifier.duration
+d[1].damage_type = e.dps.damage_type
+cycle_time = e.dps.damage_every
+count = ss("count")
+map["雄狮守卫"] = str(cooldown_str(), "布鲁斯召唤", count, "头雄狮守卫向前奔跑，遭遇敌人后消失，使敌人眩晕", duration, "秒，并每", cycle_time, "秒受到", damage_str(1), "。若目标为boss，则改为一次性造成", damage_str(2), "。")
 
 set_hero("hero_bolverk")
 
