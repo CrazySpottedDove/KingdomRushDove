@@ -16044,9 +16044,7 @@ tt.aura_slow = "aura_hero_wukong_ultimate_slow"
 
 -- 维斯帕
 tt = E:register_t("ps_hero_vesper_arrow_trail")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "hero_vesper_attack_particle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -16054,9 +16052,7 @@ tt.particle_system.animation_fps = 15
 tt.particle_system.emission_rate = 100
 tt.particle_system.track_rotation = true
 tt = E:register_t("ps_hero_vesper_arrow_to_the_knee_bullet_trail")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "hero_vesper_arrow_to_the_knee_particles"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -16066,9 +16062,7 @@ tt.particle_system.track_rotation = true
 tt.particle_system.scales_y = {1.5, 0.7}
 tt.particle_system.scales_x = {1.5, 0.7}
 tt = E:register_t("ps_hero_vesper_ricochet_bullet_trail")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "hero_vesper_ricochet_particle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -16078,9 +16072,7 @@ tt.particle_system.track_rotation = true
 tt.particle_system.scales_y = {1.5, 0.7}
 tt.particle_system.scales_x = {1.5, 0.7}
 tt = E:register_t("ps_hero_vesper_ricochet_bullet_trail_bounce")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "hero_vesper_ricochet_particle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -16222,7 +16214,6 @@ tt.dodge.can_dodge = scripts.hero_vesper.can_dodge
 tt.dodge.bullet_start_offset = {v(9, 28)}
 tt.dodge.shoot_time = fts(2)
 tt.dodge.sound = "HeroVesperDisengageCast"
-tt.dodge.hp_to_trigger = b.disengage.hp_to_trigger
 tt.melee.attacks[1] = E:clone_c("melee_attack")
 tt.melee.attacks[1].animation = "melee_attack_2"
 tt.melee.attacks[1].damage_max = nil
@@ -16339,10 +16330,10 @@ tt.vis_bans = 0
 tt.sounds = {"HeroVesperUltimateLvl1", "HeroVesperUltimateLvl2", "HeroVesperUltimateLvl3"}
 tt = E:register_t("hero_vesper_ultimate_arrow", "bullet")
 tt.main_script.update = scripts.hero_vesper_ultimate_arrow.update
-tt.bullet.damage_radius = 35
+tt.bullet.damage_radius = b.ultimate.damage_radius
 tt.bullet.damage_flags = F_AREA
 tt.bullet.damage_bans = F_FRIEND
-tt.bullet.damage_type = DAMAGE_TRUE
+tt.bullet.damage_type = b.ultimate.damage_type
 tt.bullet.arrive_decal = "hero_vesper_ultimate_decal"
 tt.bullet.max_speed = 1500
 tt.bullet.mod = "hero_vesper_ultimate_mod"
@@ -16351,12 +16342,10 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor = v(0.5, 0.5)
 tt.sound_events.insert = "ArrowSound"
 tt = E:register_t("hero_vesper_ultimate_mod", "mod_slow")
-tt.modifier.duration = 0.1
-tt.slow.factor = 0.5
+tt.modifier.duration = b.ultimate.slow_duration
+tt.slow.factor = b.ultimate.slow_factor
 tt = E:register_t("hero_vesper_ultimate_decal", "decal_tween")
-
 AC(tt, "main_script")
-
 tt.main_script.insert = scripts.hero_vesper_ultimate_decal.insert
 tt.tween.props[1].keys = {{0, 255}, {2, 255}, {3, 0}}
 tt.tween.props[2] = table.deepclone(tt.tween.props[1])
@@ -16393,6 +16382,7 @@ tt.bullet.hide_radius = nil
 tt.bullet.hit_distance = 35
 tt.bullet.mod = "hero_vesper_arrow_to_the_knee_arrow_mod"
 tt.bullet.particles_name = "ps_hero_vesper_arrow_to_the_knee_bullet_trail"
+tt.bullet.damage_type = b.arrow_to_the_knee.damage_type
 tt.bullet.hit_fx = "hero_vesper_arrow_to_the_knee_hit"
 tt.bullet.g = -4 / (fts(1) * fts(1))
 tt.bullet.extend_particles_cutoff = true
@@ -16407,6 +16397,7 @@ tt.bullet.pop = {"pop_archer"}
 tt.bullet.hide_radius = 1
 tt.bullet.particles_name = "ps_hero_vesper_arrow_trail"
 tt.bullet.g = -2.5 / (fts(1) * fts(1))
+tt.bullet.damage_type = b.disengage.damage_type
 
 tt = E:register_t("arrow_hero_vesper_ricochet", "bullet")
 b = balance.heroes.hero_vesper

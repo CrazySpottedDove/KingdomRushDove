@@ -279,3 +279,7 @@ function table.safe_index(t, index)
 		return t[idx], idx
 	end
 end
+
+function table.tail(t)
+	return t[#t]
+end

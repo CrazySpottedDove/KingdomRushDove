@@ -25,10 +25,6 @@ function entity_db:load()
 	package.loaded.boss = nil
 	package.loaded.hero_boss = nil
 	package.loaded.game_scripts = nil
-	-- package.loaded.scripts = nil
-	-- package.loaded.script_utils = nil
-	-- package.loaded.hero_scripts = nil
-	-- package.loaded.tower_scripts = nil
 	package.loaded["kr1.data.balance"] = nil
 
 	require("components")
