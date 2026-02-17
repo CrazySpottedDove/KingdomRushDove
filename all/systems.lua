@@ -84,6 +84,10 @@ function sys.level:init(store)
 		W:patch_waves(store.criket)
 	end
 
+	if store.config.random_creeps then
+		W:randomize_creeps()
+	end
+
 	A:load()
 	EXO:load()
 

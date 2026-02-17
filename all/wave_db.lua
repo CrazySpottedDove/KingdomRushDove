@@ -948,6 +948,58 @@ function wave_db:load(level_name, game_mode, endless)
 	return nil
 end
 
+--- 使每条路线出怪随机化
+function wave_db:randomize_creeps()
+	local enumerate = {}
+	local groups = self.db.groups
+	for i = 1, #groups do
+		local group = groups[i]
+		for j = 1, #group.waves do
+			local wave = group.waves[j]
+			local pid = wave.path_index
+			if not enumerate[pid] then
+				enumerate[pid] = {}
+			end
+			local this_path = enumerate[pid]
+			for k = 1, #wave.spawns do
+				local spawn = wave.spawns[k]
+				local creep = spawn.creep
+				local creep_aux = spawn.creep_aux
+				if creep_aux then
+					for l = 1, spawn.max do
+						this_path[#this_path + 1] = l % 2 == 0 and creep_aux or creep
+					end
+				else
+					for l = 1, spawn.max do
+						this_path[#this_path + 1] = creep
+					end
+				end
+			end
+		end
+	end
+
+	-- 然后重新遍历每条路线的每个波次，利用 enumerate 中的随机顺序来重新分配出怪
+	local idx
+	for i = 1, #groups do
+		local group = groups[i]
+		for j = 1, #group.waves do
+			local wave = group.waves[j]
+			local pid = wave.path_index
+			local this_path = enumerate[pid]
+			for k = 1, #wave.spawns do
+				local spawn = wave.spawns[k]
+				spawn.creep, idx = table.random(this_path)
+				-- 概率矫正，减少某些怪完全不出的情况
+				table.remove(this_path, idx)
+				if spawn.creep_aux then
+					spawn.creep_aux, idx = table.random(this_path)
+					table.remove(this_path, idx)
+				end
+			end
+		end
+	end
+end
+
 function wave_db:add_waves_to_groups(gwaves)
 	if self.db.groups then
 		for g, more_waves in pairs(gwaves) do

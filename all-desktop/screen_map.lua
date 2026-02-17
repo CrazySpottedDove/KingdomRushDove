@@ -6513,7 +6513,8 @@ function ConfigPanelView:initialize(sw, sh)
 		hero_damage_multiplier = "英雄伤害倍率",
 		hero_xp_gain_multiplier = "英雄经验倍率",
 		hero_health_damage_multiplier = "英雄受伤倍率",
-		ban_random_towers = "随机禁用高级塔"
+		ban_random_towers = "随机禁用高级塔",
+        random_creeps = "随机出怪"
 	})
 end
 
