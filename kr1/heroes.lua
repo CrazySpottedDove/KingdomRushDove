@@ -11277,9 +11277,7 @@ tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
 --#endregion
 --#region hero_bolverk
 tt = RT("hero_bolverk", "hero")
-
 AC(tt, "melee", "timed_attacks")
-
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {410, 425, 440, 455, 470, 485, 500, 515, 530, 545}
 tt.hero.level_stats.melee_damage_max = {23, 25, 27, 29, 31, 33, 35, 37, 39, 41}
@@ -11290,8 +11288,8 @@ tt.hero.skills.slash.xp_level_steps = {
 	[5] = 2,
 	[8] = 3
 }
-tt.hero.skills.slash.damage_max = {60, 80, 100}
-tt.hero.skills.slash.damage_min = {40, 60, 80}
+tt.hero.skills.slash.damage_max = {120, 160, 200}
+tt.hero.skills.slash.damage_min = {80, 120, 160}
 tt.hero.skills.scream = CC("hero_skill")
 tt.hero.skills.scream.xp_level_steps = {
 	[3] = 1,
@@ -11350,7 +11348,7 @@ tt.melee.attacks[2].damage_min = 80
 tt.melee.attacks[2].damage_type = DAMAGE_RUDE
 tt.melee.attacks[2].hit_time = fts(9)
 tt.melee.attacks[2].sound = "ElvesHeroBolverkSlash"
-tt.melee.attacks[2].xp_gain_factor = 3.5
+tt.melee.attacks[2].xp_gain_factor = 1.8
 tt.melee.attacks[2].disabled = true
 tt.melee.attacks[2].side_effect = function(this, store, attack, target)
 	U.heal(this, (this.health.hp_max - this.health.hp) * 0.12)
@@ -11360,7 +11358,7 @@ tt.timed_attacks.list[1] = CC("mod_attack")
 tt.timed_attacks.list[1].animation = "scream"
 tt.timed_attacks.list[1].cooldown = 10
 tt.timed_attacks.list[1].raw_cooldown = 10
-tt.timed_attacks.list[1].max_range = 60
+tt.timed_attacks.list[1].max_range = 65
 tt.timed_attacks.list[1].min_range = 0
 tt.timed_attacks.list[1].min_count = 1
 tt.timed_attacks.list[1].mods = {"mod_bolverk_scream", "mod_bolverk_fire"}
@@ -11374,9 +11372,7 @@ tt.berserker_factor = 0.5
 --#endregion
 --#region mod_bolverk_scream
 tt = RT("mod_bolverk_scream", "modifier")
-
 AC(tt, "render")
-
 tt.received_damage_factor = 1.5
 tt.inflicted_damage_factor = 0.7
 tt.modifier.duration = 20
@@ -11393,9 +11389,7 @@ tt.render.sprites[1].z = Z_DECALS
 --#endregion
 --#region mod_bolverk_fire
 tt = RT("mod_bolverk_fire", "modifier")
-
 AC(tt, "render", "dps")
-
 tt.explode_fx = "fx_unit_explode"
 tt.modifier.duration = 7
 tt.modifier.vis_flags = bor(F_MOD, F_BURN)

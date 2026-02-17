@@ -11,7 +11,8 @@ local damage_type_map = {
 	[DAMAGE_MAGICAL_EXPLOSION] = "法术爆炸伤害",
 	[DAMAGE_ELECTRICAL] = "雷电伤害",
 	[DAMAGE_MIXED] = "物法混合伤害",
-	[DAMAGE_SHOT] = "枪击伤害"
+	[DAMAGE_SHOT] = "枪击伤害",
+	[DAMAGE_POISON] = "剧毒伤害"
 }
 local bit = require("bit")
 local band = bit.band
@@ -2141,44 +2142,31 @@ map["蔓枝"] = str("浮士德的普攻与龙枪会分裂出", count, "发。")
 set_hero("hero_rag")
 -- 兔子
 set_skill(h.hero.skills.kamihare)
-
 a = h.timed_attacks.list[2]
 cooldown = a.cooldown
 e = T("aura_rabbit_kamihare")
-
 get_damage(e.aura)
-
 radius = e.aura.radius
 count = ss("count")
 map["爆炸兔兔"] = str(cooldown_str(), "瑞格召唤", count, "只兔子敢死队向前行进，每只兔子遇敌爆炸，对", radius, "范围内的敌人造成", damage_str(), "。")
-
 -- 锤子
 set_skill(h.hero.skills.hammer_time)
-
 a = h.timed_attacks.list[3]
 cooldown = a.cooldown
-
 get_damage(a)
-
 radius = a.damage_radius
 duration = ss("duration")
 cycle_time = a.damage_every
 map["敲敲敲"] = str(cooldown_str(), "瑞格抄起大锤胡乱敲打，持续", duration, "秒，每", cycle_time, "秒对", radius, "范围内敌人造成", damage_str(), "和眩晕效果。该技能被手动打断时，按比例返还冷却。")
-
 -- 扔东西
 set_skill(h.hero.skills.angry_gnome)
-
 a = h.timed_attacks.list[1]
 cooldown = a.cooldown
-
 get_damage(T("bullet_rag_throw").bullet)
-
 d[1].damage_max = ss("damage_max")
 d[1].damage_min = ss("damage_min")
 map["侏儒之怒"] = str(cooldown_str(), "瑞格扔出一个不明物体，造成", damage_str(), "。")
-
 set_skill(h.hero.skills.raggified)
-
 a = h.timed_attacks.list[4]
 cooldown = a.cooldown
 amount = ss("max_target_hp")
@@ -2186,9 +2174,7 @@ duration = ss("doll_duration")
 factor = ss("break_factor")
 factor_2 = T("soldier_rag").health.damage_factor
 map["布偶变"] = str(cooldown_str(), "瑞格将一个生命值低于", amount, "的非BOSS陆军敌人变成布偶，为我军作战。布偶继承敌人的生命值与攻击力，且受到伤害x", factor_2, "。在", duration, "秒后，一旦布偶生命值降到", factor * 100, "%以下，布偶将变回敌人。")
-
 set_skill(h.hero.skills.ultimate)
-
 count = ss("max_count")
 map["超级变变变"] = str(cooldown_str(), "瑞格对最多", count, "名敌人施展无生命值限制的布偶变。")
 
@@ -2232,13 +2218,32 @@ count = ss("count")
 map["雄狮守卫"] = str(cooldown_str(), "布鲁斯召唤", count, "头雄狮守卫向前奔跑，遭遇敌人后消失，使敌人眩晕", duration, "秒，并每", cycle_time, "秒受到", damage_str(1), "。若目标为boss，则改为一次性造成", damage_str(2), "。")
 
 set_hero("hero_bolverk")
-
-map["怒击"] = str()
-map["炎吼"] = str()
-map["狂战血脉"] = str()
+set_skill(h.hero.skills.slash)
+d[1].damage_max = ss("damage_max")
+d[1].damage_min = ss("damage_min")
+a = h.melee.attacks[2]
+cooldown = a.cooldown
+d[1].damage_type = a.damage_type
+map["怒击"] = str(cooldown_str(), "波尔维克奋力劈砍敌人，造成", damage_str(), "，并恢复自身12%已损生命值。该技能获取经验量与造成总伤相关。")
+set_skill(h.hero.skills.scream)
+a = h.timed_attacks.list[1]
+set_damage_value(ss("fire_damage"))
+cooldown = a.cooldown
+e = T("mod_bolverk_scream")
+duration = e.modifier.duration
+factor = e.received_damage_factor
+factor_2 = e.inflicted_damage_factor
+e = T("mod_bolverk_fire")
+duration_2 = e.modifier.duration
+cycle_time = e.dps.damage_every
+d[1].damage_type = e.dps.damage_type
+radius = a.max_range
+map["炎吼"] = str(cooldown_str(), "波尔维克展示口气，使", radius, "范围的敌人获得", duration_2, "秒烧伤效果，每", cycle_time, "秒造成", damage_str(), "，并使敌人受到的伤害x", factor, "，造成的伤害x", factor_2, "，持续", duration, "秒。")
+set_skill(h.hero.skills.berserker)
+factor = ss("factor")
+map["狂战血脉"] = str("波尔维克的狂战血脉使他越战越勇。他的生命值越低，技能冷却越快，最高缩减至", factor * 100, "%。")
 
 set_hero("hero_hunter")
-
 map["银白风暴"] = str()
 map["吸血爪击"] = str()
 map["黄昏血妖"] = str()
