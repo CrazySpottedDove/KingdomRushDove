@@ -17780,7 +17780,7 @@ function scripts.hero_hunter.level_up(this, store)
 
 		a.disabled = nil
 		a.cooldown = s.cooldown[s.level]
-		a.cooldown_death_triger = a.cooldown + a.cooldown
+		a.cooldown_death_trigger = a.cooldown * 2
 
 		local uc = E:get_template(s.controller_name)
 		local entity = E:get_template(uc.entity)
@@ -17792,7 +17792,7 @@ function scripts.hero_hunter.level_up(this, store)
 
 		local mod = E:get_template("mod_anya_ultimate_beacon")
 
-		mod.inflicted_damage_factor = 1.5 + s.level * 0.5
+		mod.inflicted_damage_factor = s.damage_factor[s.level]
 	end)
 
 	this.health.hp = this.health.hp_max
@@ -18067,7 +18067,7 @@ function scripts.hero_hunter.update(this, store)
 
 	while true do
 		if h.dead then
-			if store.tick_ts - this.ultimate.death_triger_ts > this.ultimate.cooldown_death_triger then
+			if store.tick_ts - this.ultimate.death_trigger_ts > this.ultimate.cooldown_death_trigger then
 				local revive = true
 
 				for _, s in pairs(store.soldiers) do
@@ -18090,7 +18090,7 @@ function scripts.hero_hunter.update(this, store)
 
 					queue_insert(store, ultimate_entity)
 
-					this.ultimate.death_triger_ts = store.tick_ts
+					this.ultimate.death_trigger_ts = store.tick_ts
 				end
 			end
 
@@ -18994,7 +18994,6 @@ function scripts.soldier_hero_hunter_beast.update(this, store)
 	local attack = this.attacks.list[1]
 	local target = this.enemy_target
 	local move_to_owner = false
-	local enemies_stole_gold = {}
 
 	sf.offset.y = this.flight_height
 	attack.ts = store.tick_ts
@@ -19072,7 +19071,7 @@ function scripts.soldier_hero_hunter_beast.update(this, store)
 
 				queue_damage(store, d)
 
-				if not table.contains(enemies_stole_gold, target.id) and math.random(0, 100) <= this.chance_to_steal then
+				if math.random() <= this.chance_to_steal then
 					local fx = E:create_entity(this.steal_fx)
 
 					fx.pos = V.vclone(target.pos)
@@ -19082,8 +19081,6 @@ function scripts.soldier_hero_hunter_beast.update(this, store)
 					queue_insert(store, fx)
 
 					store.player_gold = store.player_gold + this.gold_to_steal
-
-					table.insert(enemies_stole_gold, target.id)
 				end
 			end
 
@@ -19109,32 +19106,20 @@ function scripts.soldier_hero_hunter_beast.update(this, store)
 			break
 		end
 
-		if target and not store.entities[target.id] or target and target.health.dead then
-			target = nil
-		elseif target and not target.health.dead and not P:is_node_valid(target.nav_path.pi, target.nav_path.ni) then
+        -- 目标不可用，置空
+		if target and (not store.entities[target.id] or target.health.dead or not P:is_node_valid(target.nav_path.pi, target.nav_path.ni)) then
 			target = nil
 		end
 
+        -- 需要和安雅保持距离
 		local distance_from_owner = V.dist(this.owner.pos.x, this.owner.pos.y, this.pos.x, this.pos.y)
 
 		if distance_from_owner > this.max_distance_from_owner then
 			if target then
-				local _, targets = U.find_foremost_enemy(store, tpos(this.owner), 0, attack.range, false, attack.vis_flags, attack.vis_bans, function(v)
-					return not SU.has_modifiers(store, v, attack.mark_mod)
-				end)
+				local new_target = U.detect_foremost_enemy_in_range_filter_off(this.owner.pos, attack.range, attack.vis_flags, attack.vis_bans)
 
-				if targets and #targets > 0 then
-					target = targets[1]
-
-					local mark_mod = E:create_entity(this.mark_mod)
-
-					mark_mod.modifier.source_id = this.id
-					mark_mod.modifier.target_id = target.id
-					mark_mod.modifier.duration = this.mark_mod_duration
-
-					queue_insert(store, mark_mod)
-
-					this._mark_mod = mark_mod
+				if new_target then
+					target = new_target
 				else
 					move_to_owner = true
 				end
@@ -19145,27 +19130,14 @@ function scripts.soldier_hero_hunter_beast.update(this, store)
 
 		if target then
 			local distance_from_target = V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y)
-
-			if store.tick_ts - attack.ts > attack.cooldown and distance_from_target < this.min_distance_to_attack and not do_attack() then
-			-- block empty
-			end
+            if store.tick_ts - attack.ts > attack.cooldown and V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y) < this.min_distance_to_attack then
+                do_attack()
+            end
 		else
-			local _, targets = U.find_foremost_enemy(store, tpos(this.owner), 0, attack.range, false, attack.vis_flags, attack.vis_bans, function(v)
-				return not SU.has_modifiers(store, v, attack.mark_mod)
-			end)
+			local new_target = U.detect_foremost_enemy_in_range_filter_off(this.owner.pos, attack.range, attack.vis_flags, attack.vis_bans)
 
-			if targets and #targets > 0 then
-				target = targets[1]
-
-				local mark_mod = E:create_entity(this.mark_mod)
-
-				mark_mod.modifier.source_id = this.id
-				mark_mod.modifier.target_id = target.id
-				mark_mod.modifier.duration = this.mark_mod_duration
-
-				queue_insert(store, mark_mod)
-
-				this._mark_mod = mark_mod
+			if new_target then
+				target = new_target
 			end
 		end
 
@@ -19214,17 +19186,8 @@ function scripts.soldier_hero_hunter_beast.update(this, store)
 		coroutine.yield()
 	end
 
-	-- this.render.sprites[2].hidden = true
 	U.y_animation_play(this, "leave", nil, store.tick_ts, 1)
 	queue_remove(store, this)
-end
-
-function scripts.soldier_hero_hunter_beast.remove(this, store)
-	if this._mark_mod then
-		queue_remove(store, this._mark_mod)
-	end
-
-	return true
 end
 
 scripts.soldier_hero_hunter_beast_mark = {}

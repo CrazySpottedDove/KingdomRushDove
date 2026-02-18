@@ -950,6 +950,7 @@ end
 
 --- 使每条路线出怪随机化
 function wave_db:randomize_creeps()
+    -- 出怪数量公式：a_1 (1+k)^{n-1} = S_n，a_n: 第 n 波出怪。
 	local enumerate = {}
 	local groups = self.db.groups
 	for i = 1, #groups do
@@ -966,11 +967,11 @@ function wave_db:randomize_creeps()
 				local creep = spawn.creep
 				local creep_aux = spawn.creep_aux
 				if creep_aux then
-					for l = 1, math.ceil(math.sqrt(spawn.max)) do
+					for l = 1, spawn.max do
 						this_path[#this_path + 1] = l % 2 == 0 and creep_aux or creep
 					end
 				else
-					for l = 1, math.ceil(math.sqrt(spawn.max)) do
+					for l = 1, spawn.max do
 						this_path[#this_path + 1] = creep
 					end
 				end
@@ -978,34 +979,81 @@ function wave_db:randomize_creeps()
 		end
 	end
 
-	-- 然后重新遍历每条路线的每个波次，利用 enumerate 中的随机顺序来重新分配出怪
-	local idx
+	-- -- 然后重新遍历每条路线的每个波次，利用 enumerate 中的随机顺序来重新分配出怪
+	-- local idx
+	-- for i = 1, #groups do
+	-- 	local group = groups[i]
+	-- 	for j = 1, #group.waves do
+	-- 		local wave = group.waves[j]
+	-- 		local pid = wave.path_index
+	-- 		local this_path = enumerate[pid]
+	-- 		for k = 1, #wave.spawns do
+	-- 			local spawn = wave.spawns[k]
+	-- 			spawn.creep, idx = table.random(this_path)
+	-- 			-- 概率矫正，减少某些怪完全不出的情况
+	-- 			table.remove(this_path, idx)
+	-- 			if spawn.creep_aux then
+	-- 				spawn.creep_aux, idx = table.random(this_path)
+	-- 				table.remove(this_path, idx)
+	-- 			end
+	-- 		end
+	-- 	end
+	-- end
+
+	local new_groups = {}
 	for i = 1, #groups do
 		local group = groups[i]
+		local new_group = {
+			interval = group.interval,
+			waves = {}
+		}
 		for j = 1, #group.waves do
 			local wave = group.waves[j]
 			local pid = wave.path_index
 			local this_path = enumerate[pid]
+			local new_wave = {
+				path_index = wave.path_index,
+				delay = wave.delay,
+				spawns = {}
+			}
+			local new_spawns = new_wave.spawns
+
 			for k = 1, #wave.spawns do
 				local spawn = wave.spawns[k]
-				spawn.creep, idx = table.random(this_path)
-				-- 概率矫正，减少某些怪完全不出的情况
-				if spawn.creep_aux then
-					spawn.creep_aux, idx = table.random(this_path)
+				if spawn.max == 0 then
+					local new_spawn = table.deepclone(spawn)
+					table.insert(new_spawns, new_spawn)
+				else
+					local avg_interval = spawn.interval / spawn.max
+					for l = 1, spawn.max do
+						local new_spawn = table.deepclone(spawn)
+						new_spawn.interval = avg_interval
+						if l == spawn.max then
+							new_spawn.interval_next = spawn.interval_next
+						else
+							new_spawn.interval_next = 0
+						end
+						new_spawn.creep = table.random(this_path)
+                        new_spawn.max = 1
+						if bit.band(E:get_template(new_spawn.creep).vis.flags, F_FLYING) ~= 0 then
+							new_wave.some_flying = true
+						end
+						table.insert(new_spawns, new_spawn)
+					end
 				end
 			end
+
+			table.insert(new_group.waves, new_wave)
 		end
+		table.insert(new_groups, new_group)
 	end
+    self.db.groups = new_groups
 end
 
 function wave_db:add_waves_to_groups(gwaves)
 	if self.db.groups then
 		for g, more_waves in pairs(gwaves) do
-			log.info("adding %d extra waves to group %d", #more_waves.waves, g)
-
 			if not self.db.groups[g] then
-				log.warning("Adding waves to inexistent group %d")
-
 				self.db.groups[g] = {
 					waves = {}
 				}

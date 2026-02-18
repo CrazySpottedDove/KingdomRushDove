@@ -4924,9 +4924,7 @@ tt.sound_events.insert = "HeroVanHelsingHolyWater"
 --#endregion
 --#region mod_van_helsing_relic
 tt = RT("mod_van_helsing_relic", "modifier")
-
 AC(tt, "render")
-
 tt.render.sprites[1].name = "vanhelsing_relic"
 tt.render.sprites[1].z = Z_EFFECTS
 tt.render.sprites[1].anchor.y = 0
@@ -4950,9 +4948,7 @@ tt.main_script.update = scripts.aura_apply_mod.update
 --#endregion
 --#region mod_van_helsing_beacon
 tt = RT("mod_van_helsing_beacon", "modifier")
-
 AC(tt, "render")
-
 tt.inflicted_damage_factor = nil
 tt.main_script.insert = scripts.mod_van_helsing_beacon.insert
 tt.main_script.remove = scripts.mod_van_helsing_beacon.remove
@@ -4965,7 +4961,7 @@ tt.render.sprites[1].z = Z_DECALS
 --#endregion
 --#region mod_anya_ultimate_beacon
 tt = RT("mod_anya_ultimate_beacon", "mod_van_helsing_beacon")
-tt.inflicted_damage_factor = 1.5
+tt.inflicted_damage_factor = balance.heroes.hero_hunter.ultimate.damage_factor[1]
 tt.modifier.duration = 12
 tt.render.sprites[1].color = {100, 100, 255}
 tt.render.sprites[1].scale = vec_1(1.2)
@@ -11461,9 +11457,7 @@ tt.dps.damage_type = DAMAGE_POISON
 --#endregion
 --#region soldier_hero_hunter_beast
 tt = RT("soldier_hero_hunter_beast", "decal_scripted")
-
 AC(tt, "pos", "main_script", "attacks", "force_motion", "tween", "sound_events", "force_motion")
-
 b = balance.heroes.hero_hunter.beasts
 tt.flight_height = 50
 tt.force_motion.max_a = 6000
@@ -11472,27 +11466,19 @@ tt.force_motion.ramp_radius = 30
 tt.force_motion.fr = 0.1
 tt.force_motion.a_step = 30
 tt.main_script.update = scripts.soldier_hero_hunter_beast.update
-tt.main_script.remove = scripts.soldier_hero_hunter_beast.remove
 tt.max_distance_from_owner = b.max_distance_from_owner
-tt.min_distance_to_attack = 30
+tt.min_distance_to_attack = 50
 tt.duration = nil
 tt.attacks.list[1] = CC("custom_attack")
-tt.mark_mod_duration = 1e+99
 tt.attacks.list[1].cooldown = b.attack_cooldown
 tt.attacks.list[1].shoot_time = fts(15)
 tt.attacks.list[1].damage_type = DAMAGE_PHYSICAL
 tt.attacks.list[1].vis_flags = F_RANGED
--- tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
 tt.attacks.list[1].vis_bans = 0
 tt.attacks.list[1].range = b.attack_range
 tt.render.sprites[1].prefix = "duskbeast"
 tt.render.sprites[1].offset = vec_2(0, 0)
 tt.render.sprites[1].z = Z_FLYING_HEROES
--- tt.render.sprites[2] = CC("sprite")
--- tt.render.sprites[2].animated = false
--- tt.render.sprites[2].name = "decal_flying_shadow_hard"
--- tt.render.sprites[2].offset = vec_2(0, 0)
--- tt.render.sprites[2].z = Z_DECALS
 tt.tween.disabled = true
 tt.tween.remove = false
 tt.steal_fx = "fx_hero_hunter_steal"
@@ -11504,7 +11490,6 @@ tt.tween.props[1].interp = "sine"
 tt.tween.props[1].keys = {{0, vec_2(0, tt.flight_height)}, {nil, vec_2(0, tt.flight_height - 5)}, {nil, vec_2(0, tt.flight_height)}}
 tt.tween.props[1].sprite_id = 1
 tt.tween.props[1].loop = true
-tt.mark_mod = "mod_hero_hunter_beast_mark"
 tt.idle_change_pos_cd = fts(8)
 tt.idle_change_pos_offset = vec_2(35, 35)
 --#endregion
@@ -11626,6 +11611,7 @@ tt.hero.skills.ultimate.controller_name = "controller_hero_hunter_ultimate"
 tt.hero.skills.ultimate.cooldown = b.ultimate.cooldown
 tt.hero.skills.ultimate.damage_min = b.ultimate.entity.basic_ranged.damage_min
 tt.hero.skills.ultimate.damage_max = b.ultimate.entity.basic_ranged.damage_max
+tt.hero.skills.ultimate.damage_factor = b.ultimate.damage_factor
 tt.hero.skills.ultimate.xp_level_steps = {
 	[1] = 1,
 	[4] = 2,
@@ -11745,7 +11731,9 @@ tt.flywalk.sound = "HeroHunterRicochetCast"
 tt.flywalk.trail = "ps_hero_hunter_walk_trail"
 tt.ultimate = {
 	ts = 0,
-	death_triger_ts = 0,
+	death_trigger_ts = 0,
+    cooldown = nil,
+    cooldown_death_trigger = nil,
 	disabled = true
 }
 --#endregion
@@ -11835,9 +11823,7 @@ tt.modifier.duration = b.slow_duration
 --#region aura_hero_hunter_ultimate
 tt = RT("aura_hero_hunter_ultimate", "aura")
 b = balance.heroes.hero_hunter.ultimate
-
 AC(tt, "render")
-
 tt.aura.mod = "mod_hero_hunter_ultimate_slow"
 tt.aura.radius = b.slow_radius
 tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
@@ -11855,9 +11841,7 @@ tt.main_script.update = scripts.aura_apply_mod.update
 --#endregion
 --#region mod_hero_hunter_skill_shoot_around_hit_fx
 tt = RT("mod_hero_hunter_skill_shoot_around_hit_fx", "modifier")
-
 AC(tt, "render")
-
 tt.render.sprites[1].name = "shothit_run"
 tt.main_script.insert = scripts.mod_track_target.insert
 tt.main_script.remove = scripts.mod_track_target.remove
@@ -11867,9 +11851,7 @@ tt.modifier.duration = fts(10)
 --#region mod_hero_hunter_ricochet_attack
 tt = RT("mod_hero_hunter_ricochet_attack", "modifier")
 b = balance.heroes.hero_hunter.ricochet
-
 AC(tt, "render", "tween")
-
 tt.render.sprites[1].name = "mistystep_clone1_run"
 tt.render.sprites[1].anchor = vec_2(0.5, 0.28)
 tt.main_script.insert = scripts.mod_track_target.insert
@@ -11889,16 +11871,6 @@ tt.tween.props[1].keys = {{0, 255}, {tt.modifier.duration - fts(4), 255}, {tt.mo
 tt = RT("mod_hero_hunter_ricochet_stun", "mod_stun")
 tt.modifier.duration = fts(9)
 --#endregion
---#region mod_hero_hunter_beast_mark
-tt = RT("mod_hero_hunter_beast_mark", "modifier")
-
-AC(tt, "mark_flags")
-
-tt.mark_flags.vis_bans = F_CUSTOM
-tt.main_script.queue = scripts.mod_mark_flags.queue
-tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
-tt.main_script.update = scripts.soldier_hero_hunter_beast_mark.update
---#endregion
 --#region mod_hero_hunter_ultimate_slow
 tt = RT("mod_hero_hunter_ultimate_slow", "mod_slow")
 b = balance.heroes.hero_hunter.ultimate
@@ -11907,9 +11879,7 @@ tt.modifier.duration = b.slow_duration
 --#endregion
 --#region controller_hero_hunter_ultimate
 tt = RT("controller_hero_hunter_ultimate")
-
 AC(tt, "pos", "main_script", "sound_events")
-
 tt.cooldown = nil
 tt.entity = "soldier_hero_hunter_ultimate"
 tt.aura = "aura_hero_hunter_ultimate"

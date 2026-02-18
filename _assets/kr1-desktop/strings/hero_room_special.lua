@@ -2316,11 +2316,49 @@ cooldown = table.tail(blc.cooldown)
 map["箭矢风暴"] = str(cooldown_str(), "维斯帕召唤箭矢风暴，在", radius, "范围内共射出", count, "支箭，每支箭对", radius_2, "范围内敌人造成", damage_str(), "，并使其移速x", factor * 100, "%，持续", duration, "秒。")
 
 set_hero("hero_hunter")
-map["银白风暴"] = str()
-map["吸血爪击"] = str()
-map["黄昏血妖"] = str()
-map["迷雾步伐"] = str()
-map["父魂"] = str()
+blc = balance.hero_hunter.shoot_around
+radius = blc.radius
+cooldown = table.tail(blc.cooldown)
+d[1].damage_type = blc.damage_type
+d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_min = table.tail(blc.damage_min)
+factor = blc.slow_factor
+duration = table.tail(blc.duration)
+cycle_time = blc.damage_every
+map["银白风暴"] = str(cooldown_str(), "安雅快速射击", radius, "范围内的敌人，持续",duration,"秒，使敌人移速x", factor * 100, "%，并每", cycle_time, "秒造成", damage_str(), "。打断技能时，等比例返还冷却。")
+blc = balance.hero_hunter.heal_strike
+d[1].damage_type = blc.damage_type
+d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_min = table.tail(blc.damage_min)
+factor = table.tail(blc.heal_factor)
+map["吸血爪击"] = str("每普攻6次，安雅使用吸血爪击，对敌人造成", damage_str(), "，并恢复目标最大生命值", factor * 100, "%的生命。若此时安雅已死亡，恢复的生命会强行将安雅拉出鬼门关。")
+blc = balance.hero_hunter.beasts
+cooldown = table.tail(blc.cooldown)
+cooldown_2 = blc.attack_cooldown
+d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_min = table.tail(blc.damage_min)
+duration = table.tail(blc.duration)
+amount = table.tail(blc.gold_to_steal)
+d[1].damage_type = blc.damage_type
+chance = blc.chance_to_steal
+map["黄昏血妖"] = str(cooldown_str(), "安雅召唤两只黄昏血妖，驻场", duration, "秒。黄昏血妖每次攻击造成", damage_str(), "，并有", chance * 100, "%概率偷取", amount, "枚金币。")
+blc = balance.hero_hunter.ricochet
+cooldown = table.tail(blc.cooldown)
+d[1].damage_type = blc.damage_type
+d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_min = table.tail(blc.damage_min)
+count = table.tail(blc.bounces) + 1
+map["迷雾步伐"] = str(cooldown_str(), "安雅退出射击状态，化身血妖连续攻击最多", count, "名敌人，每次造成", damage_str(), "。")
+blc = balance.hero_hunter.ultimate
+cooldown = table.tail(blc.cooldown)
+duration = blc.duration
+factor = blc.slow_duration
+radius = blc.slow_radius
+factor_2 = table.tail(blc.damage_factor)
+d[1].damage_max = table.tail(blc.entity.basic_ranged.damage_max)
+d[1].damage_min = table.tail(blc.entity.basic_ranged.damage_min)
+d[1].damage_type = blc.entity.basic_ranged.damage_type
+map["父魂"] = str(cooldown_str(), "安雅召唤但丁之魂，驻场", duration, "秒。但丁可调集，每次攻击造成", damage_str(), "，并使", radius, "范围内敌人移速x", factor * 100, "%。当安雅死亡且但丁在附近时，但丁将复活安雅。此技能拥有双倍于基础冷却的独立冷却，在安雅死亡，且场上无但丁灵魂时自动释放，复活安雅。当安雅与但丁同时出战时，召唤但丁之魂替换为自身伤害x", factor_2, "，持续", duration, "秒。")
 
 set_hero("hero_space_elf")
 
