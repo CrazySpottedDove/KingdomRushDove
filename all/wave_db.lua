@@ -966,11 +966,11 @@ function wave_db:randomize_creeps()
 				local creep = spawn.creep
 				local creep_aux = spawn.creep_aux
 				if creep_aux then
-					for l = 1, spawn.max do
+					for l = 1, math.ceil(math.sqrt(spawn.max)) do
 						this_path[#this_path + 1] = l % 2 == 0 and creep_aux or creep
 					end
 				else
-					for l = 1, spawn.max do
+					for l = 1, math.ceil(math.sqrt(spawn.max)) do
 						this_path[#this_path + 1] = creep
 					end
 				end
@@ -990,10 +990,8 @@ function wave_db:randomize_creeps()
 				local spawn = wave.spawns[k]
 				spawn.creep, idx = table.random(this_path)
 				-- 概率矫正，减少某些怪完全不出的情况
-				table.remove(this_path, idx)
 				if spawn.creep_aux then
 					spawn.creep_aux, idx = table.random(this_path)
-					table.remove(this_path, idx)
 				end
 			end
 		end
