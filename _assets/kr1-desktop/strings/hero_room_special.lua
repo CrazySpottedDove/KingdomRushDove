@@ -2325,7 +2325,7 @@ d[1].damage_min = table.tail(blc.damage_min)
 factor = blc.slow_factor
 duration = table.tail(blc.duration)
 cycle_time = blc.damage_every
-map["银白风暴"] = str(cooldown_str(), "安雅快速射击", radius, "范围内的敌人，持续",duration,"秒，使敌人移速x", factor * 100, "%，并每", cycle_time, "秒造成", damage_str(), "。打断技能时，等比例返还冷却。")
+map["银白风暴"] = str(cooldown_str(), "安雅快速射击", radius, "范围内的敌人，持续", duration, "秒，使敌人移速x", factor * 100, "%，并每", cycle_time, "秒造成", damage_str(), "。打断技能时，等比例返还冷却。")
 blc = balance.hero_hunter.heal_strike
 d[1].damage_type = blc.damage_type
 d[1].damage_max = table.tail(blc.damage_max)
@@ -2360,6 +2360,10 @@ d[1].damage_min = table.tail(blc.entity.basic_ranged.damage_min)
 d[1].damage_type = blc.entity.basic_ranged.damage_type
 map["父魂"] = str(cooldown_str(), "安雅召唤但丁之魂，驻场", duration, "秒。但丁可调集，每次攻击造成", damage_str(), "，并使", radius, "范围内敌人移速x", factor * 100, "%。当安雅死亡且但丁在附近时，但丁将复活安雅。此技能拥有双倍于基础冷却的独立冷却，在安雅死亡，且场上无但丁灵魂时自动释放，复活安雅。当安雅与但丁同时出战时，召唤但丁之魂替换为自身伤害x", factor_2, "，持续", duration, "秒。")
 
+local function tail(name)
+	return table.tail(blc[name])
+end
+
 set_hero("hero_space_elf")
 
 map["星界镜像"] = str()
@@ -2369,12 +2373,45 @@ map["空间扭曲"] = str()
 map["异域囚笼"] = str()
 
 set_hero("hero_raelyn")
-
-map["指挥号令"] = str()
-map["残酷打击"] = str()
-map["全力猛攻"] = str()
-map["闻风丧胆"] = str()
-map["坚不可摧"] = str()
+blc = balance.hero_raelyn.ultimate
+cooldown = tail("cooldown")
+duration = blc.entity.duration
+d[1].damage_type = blc.entity.damage_type
+d[1].damage_max = table.tail(blc.entity.damage_max)
+d[1].damage_min = table.tail(blc.entity.damage_min)
+health[1].hp_max = table.tail(blc.entity.hp_max)
+health[1].armor = table.tail(blc.entity.armor)
+health[1].magic_armor = 0
+map["指挥号令"] = str(cooldown_str(), "蕾琳召唤一名可调集的黑骑士，驻场", duration, "秒。黑骑士拥有", health_str(), "，每次攻击造成", damage_str(), "。")
+blc = balance.hero_raelyn.brutal_slash
+cooldown = tail("cooldown")
+d[1].damage_min = tail("damage_min")
+d[1].damage_max = tail("damage_max")
+d[1].damage_type = blc.damage_type
+map["残酷打击"] = str(cooldown_str(), "蕾琳残酷地打击敌人，造成", damage_str(), "。当适当距离横向调遣蕾琳时，蕾琳会利用跳斩快速位移。")
+blc = balance.hero_raelyn.onslaught
+min_count = blc.min_targets
+duration = tail("duration")
+cooldown = tail("cooldown")
+factor = blc.speed_inc_factor
+factor_2 = blc.cooldown_factor
+map["全力猛攻"] = str(cooldown_str(), "当身边至少有", min_count, "名敌人时，蕾琳进入全力猛攻状态，持续", duration, "秒。在此期间，蕾琳的普攻大大加快并额外造成范围伤害，移速提升", factor * 100, "%，攻速加快", (1 - factor_2) * 100, "%。使用其它技能不会消耗全力猛攻状态的时间。")
+blc = balance.hero_raelyn.inspire_fear
+cooldown = tail("cooldown")
+factor = tail("inflicted_damage_factor")
+duration = tail("stun_duration")
+duration_2 = tail("damage_duration")
+radius = blc.max_range_effect
+map["闻风丧胆"] = str(cooldown_str(), "蕾琳发出震慑敌人的怒吼，使", radius, "范围内的敌人眩晕", duration, "秒，并使其造成的伤害x", factor * 100, "%，持续", duration_2, "秒。")
+blc = balance.hero_raelyn.unbreakable
+cooldown = tail("cooldown")
+count = blc.max_targets
+amount = tail("shield_base")
+amount_2 = tail("shield_per_enemy")
+radius = blc.max_range_effect
+duration = tail("duration")
+factor = blc.soldier_factor
+map["坚不可摧"] = str(cooldown_str(), "根据周围敌人数量x（上限为", count, "），蕾琳获得一个持续", duration, "秒，数值为[自身最大生命值]*(", amount, "+", amount_2, "*x)的护盾，并为身边最多", count, "名友军提供基于他们最大生命值的护盾。护盾生效于普通士兵时，数值衰减至", factor * 100, "%。")
 
 set_hero("hero_venom")
 

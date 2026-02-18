@@ -937,6 +937,7 @@ local heroes = {
 			cooldown = {25, 25, 25},
 			duration = {6, 6, 6},
 			shield_base = {0.2, 0.2, 0.2},
+			soldier_factor = 0.6,
 			shield_per_enemy = {0.1, 0.15, 0.2},
 			xp_gain = {280, 560, 840}
 		},
@@ -946,13 +947,13 @@ local heroes = {
 			max_range_effect = 120,
 			cooldown = {21, 21, 21},
 			damage_duration = {6, 6, 6},
-			stun_duration = {2, 2, 2},
+			stun_duration = {2, 2.5, 3},
 			inflicted_damage_factor = {0.6, 0.4, 0.2},
 			s_inflicted_damage_factor = {0.4, 0.6, 0.8},
 			xp_gain = {240, 480, 720}
 		},
 		brutal_slash = {
-			cooldown = {20, 20, 20},
+			cooldown = {20, 19, 18},
 			damage_max = {180, 360, 540},
 			damage_min = {180, 360, 540},
 			s_damage = {160, 320, 480},
@@ -968,7 +969,9 @@ local heroes = {
 			melee_cooldown = {1, 1, 1},
 			duration = {6, 8, 10},
 			damage_type = DAMAGE_PHYSICAL,
-			damage_factor = {0.5, 0.75, 1}
+			damage_factor = {0.6, 0.8, 1},
+			speed_inc_factor = 0.4,
+			cooldown_factor = 0.8
 		},
 		ultimate = {
 			cooldown = {48, 48, 48, 48},
@@ -981,7 +984,6 @@ local heroes = {
 				damage_max = {15, 23, 31, 44},
 				damage_type = DAMAGE_TRUE,
 				hp_max = {156, 260, 364, 468},
-				regen_health = {5, 8, 12, 15},
 				armor = {0.3, 0.4, 0.55, 0.7}
 			}
 		}
@@ -1418,7 +1420,7 @@ local heroes = {
 			slow_factor = 0.75,
 			slow_radius = 80,
 			cooldown = {50, 50, 50, 50},
-            damage_factor = {2, 2.5, 3, 3.5},
+			damage_factor = {2, 2.5, 3, 3.5},
 			entity = {
 				basic_ranged = {
 					max_range = 150,

@@ -19106,12 +19106,12 @@ function scripts.soldier_hero_hunter_beast.update(this, store)
 			break
 		end
 
-        -- 目标不可用，置空
+		-- 目标不可用，置空
 		if target and (not store.entities[target.id] or target.health.dead or not P:is_node_valid(target.nav_path.pi, target.nav_path.ni)) then
 			target = nil
 		end
 
-        -- 需要和安雅保持距离
+		-- 需要和安雅保持距离
 		local distance_from_owner = V.dist(this.owner.pos.x, this.owner.pos.y, this.pos.x, this.pos.y)
 
 		if distance_from_owner > this.max_distance_from_owner then
@@ -19130,9 +19130,9 @@ function scripts.soldier_hero_hunter_beast.update(this, store)
 
 		if target then
 			local distance_from_target = V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y)
-            if store.tick_ts - attack.ts > attack.cooldown and V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y) < this.min_distance_to_attack then
-                do_attack()
-            end
+			if store.tick_ts - attack.ts > attack.cooldown and V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y) < this.min_distance_to_attack then
+				do_attack()
+			end
 		else
 			local new_target = U.detect_foremost_enemy_in_range_filter_off(this.owner.pos, attack.range, attack.vis_flags, attack.vis_bans)
 
@@ -20927,7 +20927,7 @@ function scripts.hero_raelyn.update(this, store)
 							shield_max_damage = shield_max_damage + target.health.hp_max * m.shield_per_enemy * count
 
 							if is_soldier then
-								shield_max_damage = shield_max_damage * 0.6
+								shield_max_damage = shield_max_damage * skill.soldier_factor
 								m.render.sprites[1].scale = v(0.71, 0.71)
 								m.health_bar.offset.y = m.health_bar.offset.y * 0.71
 							end
@@ -21000,11 +21000,11 @@ function scripts.hero_raelyn.update(this, store)
 					basic_attack.hit_offset = a.hit_offset
 					basic_attack.sound = a.sound
 
-					U.speed_inc(this, this.motion.max_speed * 0.4)
+					U.speed_inc(this, this.motion.max_speed * skill.speed_inc_factor)
 
 					this.melee.attacks[2].hit_aura = a.hit_aura
 
-					SU.insert_unit_cooldown_buff(store.tick_ts, this, 0.8)
+					SU.insert_unit_cooldown_buff(store.tick_ts, this, skill.cooldown_factor)
 				end
 			end
 
@@ -21019,8 +21019,8 @@ function scripts.hero_raelyn.update(this, store)
 				basic_attack.sound = a._sound
 				a.ts = store.tick_ts
 
-				U.speed_dec(this, this.motion.max_speed * 0.4)
-				SU.remove_unit_cooldown_buff(store.tick_ts, this, 0.8)
+				U.speed_dec(this, this.motion.max_speed * skill.speed_inc_factor)
+				SU.remove_unit_cooldown_buff(store.tick_ts, this, skill.cooldown_factor)
 			end
 
 			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)

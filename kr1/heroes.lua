@@ -11732,8 +11732,8 @@ tt.flywalk.trail = "ps_hero_hunter_walk_trail"
 tt.ultimate = {
 	ts = 0,
 	death_trigger_ts = 0,
-    cooldown = nil,
-    cooldown_death_trigger = nil,
+	cooldown = nil,
+	cooldown_death_trigger = nil,
 	disabled = true
 }
 --#endregion
@@ -12369,6 +12369,7 @@ tt.hero.skills.unbreakable.cooldown = b.unbreakable.cooldown
 tt.hero.skills.unbreakable.duration = b.unbreakable.duration
 tt.hero.skills.unbreakable.shield_base = b.unbreakable.shield_base
 tt.hero.skills.unbreakable.shield_per_enemy = b.unbreakable.shield_per_enemy
+tt.hero.skills.unbreakable.soldier_factor = b.unbreakable.soldier_factor
 tt.hero.skills.unbreakable.xp_gain = b.unbreakable.xp_gain
 tt.hero.skills.unbreakable.xp_level_steps = {
 	[2] = 1,
@@ -12403,6 +12404,8 @@ tt.hero.skills.onslaught.melee_cooldown = b.onslaught.melee_cooldown
 tt.hero.skills.onslaught.duration = b.onslaught.duration
 tt.hero.skills.onslaught.cooldown = b.onslaught.cooldown
 tt.hero.skills.onslaught.hit_aura = "hero_raelyn_onslaught_aura"
+tt.hero.skills.onslaught.speed_inc_factor = b.onslaught.speed_inc_factor
+tt.hero.skills.onslaught.cooldown_factor = b.onslaught.cooldown_factor
 tt.hero.skills.onslaught.xp_gain = b.onslaught.xp_gain
 tt.hero.skills.onslaught.xp_level_steps = {
 	[2] = 1,
