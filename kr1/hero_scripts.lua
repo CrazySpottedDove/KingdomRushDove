@@ -19765,22 +19765,16 @@ function scripts.hero_space_elf.update(this, store)
 
 						targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.range, a.vis_flags, a.vis_bans)
 
-						if targets and #targets > 0 then
-							table.sort(targets, function(a, b)
-								return a.soldier.target_id and not b.soldier.target_id
-							end)
-
-							for i = 1, 3 do
+						if targets then
+							for i = 1, #targets do
 								local target = targets[i]
 
-								if target then
-									local m = E:create_entity(a.mod)
+								local m = E:create_entity(a.mod)
 
-									m.modifier.source_id = this.id
-									m.modifier.target_id = target.id
+								m.modifier.source_id = this.id
+								m.modifier.target_id = target.id
 
-									queue_insert(store, m)
-								end
+								queue_insert(store, m)
 							end
 						end
 

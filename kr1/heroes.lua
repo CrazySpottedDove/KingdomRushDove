@@ -11889,9 +11889,7 @@ tt.sound = "HeroHunterUltimateCast"
 --#region hero_space_elf
 tt = RT("hero_space_elf", "hero")
 b = balance.heroes.hero_space_elf
-
 AC(tt, "melee", "ranged", "teleport", "transfer", "timed_attacks")
-
 tt.hero.level_stats.armor = b.armor
 tt.hero.level_stats.hp_max = b.hp_max
 tt.hero.level_stats.melee_damage_max = b.basic_melee.damage_max
@@ -12072,9 +12070,7 @@ tt.ultimate = {
 --#endregion
 --#region soldier_hero_space_elf_astral_reflection
 tt = RT("soldier_hero_space_elf_astral_reflection", "soldier_militia")
-
 AC(tt, "melee", "ranged", "reinforcement", "tween", "transfer", "timed_attacks")
-
 b = balance.heroes.hero_space_elf
 tt.info.i18n_key = "HERO_SPACE_ELF_ASTRAL_REFLECTION_ENTITY"
 tt.info.enc_icon = 12
@@ -12114,7 +12110,6 @@ tt.ranged.attacks[1].cooldown = b.astral_reflection.entity.basic_ranged.cooldown
 tt.ranged.attacks[1].max_range = b.astral_reflection.entity.basic_ranged.max_range
 tt.ranged.attacks[1].min_range = b.astral_reflection.entity.basic_ranged.min_range
 tt.ranged.attacks[1].shoot_time = fts(10)
--- tt.ranged.attacks[1].vis_bans = bor(F_WATER, F_NIGHTMARE)
 tt.ranged.attacks[1].vis_flags = bor(F_RANGED)
 tt.ranged.attacks[1].xp_gain_factor = b.basic_ranged.xp_gain_factor
 tt.reinforcement.duration = b.astral_reflection.entity.duration
@@ -12182,7 +12177,8 @@ tt.main_script.update = scripts.mod_track_target.update
 --#endregion
 --#region mod_hero_space_elf_void_rift
 tt = RT("mod_hero_space_elf_void_rift", "mod_slow")
-tt.slow.factor = 0.8
+b = balance.heroes.hero_space_elf
+tt.slow.factor = b.void_rift.slow_factor
 --#endregion
 --#region aura_hero_space_elf_void_rift
 tt = RT("aura_hero_space_elf_void_rift", "aura")
@@ -12221,12 +12217,10 @@ tt.ignore_damage = false
 --#region aura_hero_space_elf_ultimate
 tt = RT("aura_hero_space_elf_ultimate", "aura")
 b = balance.heroes.hero_space_elf
-
 AC(tt, "track_damage")
-
 tt.aura.duration = fts(1)
 tt.aura.radius = b.ultimate.radius
-tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
+tt.aura.vis_bans = F_FRIEND
 tt.aura.vis_flags = F_RANGED
 tt.aura.mod = "mod_hero_space_elf_ultimate"
 tt.main_script.insert = scripts.aura_apply_mod.insert
@@ -12312,9 +12306,7 @@ tt.offset_y_per_tower = {
 --#region mod_hero_space_elf_ultimate
 tt = RT("mod_hero_space_elf_ultimate", "modifier")
 b = balance.heroes.hero_space_elf
-
 AC(tt, "render", "tween", "track_kills", "sound_events")
-
 tt.modifier.type = MOD_TYPE_TIMELAPSE
 tt.modifier.vis_flags = F_MOD
 tt.modifier.vis_bans = F_BOSS
@@ -12349,9 +12341,7 @@ tt.decal = "decal_hero_space_elf_ultimate_mod"
 --#endregion
 --#region controller_hero_space_elf_ultimate
 tt = RT("controller_hero_space_elf_ultimate")
-
 AC(tt, "pos", "main_script", "sound_events")
-
 tt.entity = "aura_hero_space_elf_ultimate"
 tt.decal = "decal_hero_space_elf_ultimate"
 tt.main_script.update = scripts.hero_space_elf_ultimate.update

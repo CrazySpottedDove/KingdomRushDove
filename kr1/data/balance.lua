@@ -571,22 +571,22 @@ local heroes = {
 			cooldown = {25, 25, 25},
 			xp_gain = {200, 400, 600},
 			entity = {
-				range = 72.5,
+				range = 50,
 				duration = 12,
-				hp_max = {60, 120, 180},
+				hp_max = {247, 286, 325},
 				basic_melee = {
 					cooldown = 1,
-					damage_type = DAMAGE_MAGICAL,
-					damage_min = {5, 10, 13},
-					damage_max = {10, 15, 20}
+					damage_type = DAMAGE_PHYSICAL,
+					damage_min = {10, 14, 19},
+					damage_max = {15, 20, 31}
 				},
 				basic_ranged = {
 					max_range = 160,
 					min_range = 68,
 					cooldown = 1.5,
 					damage_type = DAMAGE_MAGICAL,
-					damage_min = {18, 23, 28},
-					damage_max = {32, 41, 52}
+					damage_min = {19, 26, 33},
+					damage_max = {36, 47, 62}
 				}
 			}
 		},
@@ -596,8 +596,8 @@ local heroes = {
 			xp_gain = {120, 240, 360},
 			cooldown = {18, 16, 14},
 			duration = {6, 8, 10},
-			shield_base = {50, 78, 110},
-			explosion_damage = {24, 47, 71},
+			shield_base = {50, 85, 120},
+			explosion_damage = {25, 50, 75},
 			explosion_damage_type = DAMAGE_MAGICAL_EXPLOSION
 		},
 		void_rift = {
@@ -606,13 +606,14 @@ local heroes = {
 			max_range_effect = 300,
 			max_range_trigger = 200,
 			damage_every = 0.25,
-			cooldown = {30, 30, 20},
+			cooldown = {30, 25, 20},
 			xp_gain = {240, 480, 720},
 			duration = {6, 8, 10},
 			cracks_amount = {1, 2, 3},
 			damage_min = {3, 3, 3},
 			damage_max = {6, 6, 6},
-			damage_type = DAMAGE_MAGICAL_EXPLOSION
+			damage_type = DAMAGE_MAGICAL_EXPLOSION,
+			slow_factor = 0.8
 		},
 		spatial_distortion = {
 			cooldown = {25, 23, 20},
@@ -624,7 +625,7 @@ local heroes = {
 			s_range_factor = {0.1, 0.12, 0.15}
 		},
 		ultimate = {
-			radius = 80,
+			radius = 90,
 			cooldown = {45, 45, 45, 45},
 			damage = {39, 117, 234, 351},
 			damage_type = DAMAGE_TRUE,
