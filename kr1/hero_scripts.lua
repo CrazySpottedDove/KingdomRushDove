@@ -21367,10 +21367,6 @@ function scripts.hero_venom.level_up(this, store, initial)
 	end)
 
 	this.health.hp = this.health.hp_max
--- this.hero.melee_active_status = {}
--- for index, attack in ipairs(this.melee.attacks) do
---     this.hero.melee_active_status[index] = attack.disabled
--- end
 end
 
 function scripts.hero_venom.insert(this, store)
@@ -21669,6 +21665,10 @@ function scripts.hero_venom.update(this, store)
 								SU.hero_gain_xp_from_skill(this, skill)
 							end
 
+							if eat_enemy_attack.ts > start_ts then
+								eat_enemy_attack.ts = start_ts
+							end
+
 							local mod = E:create_entity(eat_enemy_attack.mod_regen)
 
 							mod.modifier.target_id = this.id
@@ -21951,6 +21951,10 @@ function scripts.hero_venom.update(this, store)
 
 					if this.health.hp > this.health.hp_max then
 						this.health.hp = this.health.hp_max
+					end
+
+					if this.health.dead and this.health.hp > 0 then
+						this.health.dead = false
 					end
 				end
 			end
@@ -24239,6 +24243,7 @@ function scripts.hero_witch.update(this, store)
 					this.timed_attacks.list[1].ts = this.timed_attacks.list[1].ts - 2
 					this.timed_attacks.list[2].ts = this.timed_attacks.list[2].ts - 2
 					this.timed_attacks.list[3].ts = this.timed_attacks.list[3].ts - 2
+					this.ultimate.ts = this.ultimate.ts - 2
 
 					U.y_animation_wait(this)
 					U.y_wait(store, fts(3))
@@ -25397,7 +25402,6 @@ function scripts.hero_dragon_bone.update(this, store)
 	local nova_attack = this.ranged.attacks[3]
 	local rain_attack = this.ranged.attacks[4]
 	local burst_attack = this.ranged.attacks[5]
-	local upg_lf = UP:get_upgrade("heroes_lethal_focus")
 
 	this.tween.disabled = false
 	this.tween.ts = store.tick_ts
@@ -25812,21 +25816,6 @@ function scripts.hero_dragon_bone.update(this, store)
 
 				b.bullet.shot_index = i
 				b.bullet.damage_factor = this.unit.damage_factor
-
-				if upg_lf then
-					if not this._lethal_focus_deck then
-						this._lethal_focus_deck = SU.deck_new(upg_lf.trigger_cards, upg_lf.total_cards)
-					end
-
-					local triggered_lethal_focus = SU.deck_draw(this._lethal_focus_deck)
-
-					if triggered_lethal_focus then
-						b.bullet.damage_factor = b.bullet.damage_factor * upg_lf.damage_factor_area
-						b.bullet.pop = {"pop_crit"}
-						b.bullet.pop_chance = 1
-						b.bullet.pop_conds = DR_DAMAGE
-					end
-				end
 
 				queue_insert(store, b)
 

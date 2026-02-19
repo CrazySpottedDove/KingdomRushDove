@@ -13046,9 +13046,7 @@ tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 --#endregion
 --#region mod_hero_venom_eat_enemy_regen
 tt = RT("mod_hero_venom_eat_enemy_regen", "modifier")
-
 AC(tt, "render", "tween")
-
 tt.modifier.duration = fts(43)
 tt.main_script.insert = scripts.mod_track_target.insert
 tt.main_script.update = scripts.mod_hero_venom_eat_enemy_regen.update
@@ -13523,12 +13521,11 @@ tt.aura.duration = fts(1)
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_hero_dragon_gem_skill_stun.update
 --#endregion
+
 --#region aura_hero_dragon_gem_crystal_totem
 tt = RT("aura_hero_dragon_gem_crystal_totem", "aura")
 b = balance.heroes.hero_dragon_gem.crystal_totem
-
 AC(tt, "render", "tween")
-
 tt.aura.mod = "mod_hero_dragon_gem_crystal_totem_slow"
 tt.aura.radius = b.aura_radius
 tt.aura.vis_bans = bor(F_FRIEND)
@@ -13541,10 +13538,9 @@ tt.render.sprites[1].loop = true
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_hero_dragon_gem_crystal_totem.update
 tt.damage_range = b.aura_radius
--- tt.damage_bans = bor(F_FLYING)
 tt.damage_min = nil
 tt.damage_max = nil
-tt.damage_type = DAMAGE_MAGICAL
+tt.damage_type = b.damage_type
 tt.tween.props[1].keys = {{0, 255}, {fts(15), 0}}
 tt.tween.disabled = true
 tt.floor_decal = "decal_hero_dragon_gem_floor_circle_totem"
@@ -13565,9 +13561,7 @@ tt.modifier.animation_phases = true
 --#region mod_hero_dragon_gem_crystal_instakill
 tt = RT("mod_hero_dragon_gem_crystal_instakill", "modifier")
 b = balance.heroes.hero_dragon_gem.crystal_instakill
-
 AC(tt, "render")
-
 tt.modifier.duration = fts(30)
 tt.modifier.animation_phases = true
 tt.main_script.insert = scripts.mod_stun.insert
@@ -13583,7 +13577,7 @@ tt.explode_time = b.explode_time
 tt.damage_type = bor(DAMAGE_DISINTEGRATE, DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS)
 tt.damage_aoe_min = nil
 tt.damage_aoe_max = nil
-tt.damage_type_aoe = DAMAGE_PHYSICAL
+tt.damage_type_aoe = b.damage_type
 tt.damage_range = b.damage_range
 tt.damage_aoe_bans = bor(F_FLYING, F_CLIFF)
 --#endregion
@@ -13619,9 +13613,7 @@ tt.main_script.update = scripts.controller_hero_dragon_gem_skill_floor_impact_sp
 --#region soldier_hero_witch_cat
 tt = RT("soldier_hero_witch_cat", "soldier_militia")
 b = balance.heroes.hero_witch
-
 AC(tt, "reinforcement", "tween")
-
 tt.health.armor = b.skill_soldiers.soldier.armor
 tt.health.hp_max = nil
 tt.health_bar.offset = vec_2(0, 30)
@@ -13634,6 +13626,7 @@ tt.main_script.update = scripts.soldier_reinforcement.update
 tt.melee.attacks[1].cooldown = b.skill_soldiers.soldier.melee_attack.cooldown
 tt.melee.attacks[1].damage_max = nil
 tt.melee.attacks[1].damage_min = nil
+tt.melee.attacks[1].damage_type = b.skill_soldiers.soldier.melee_attack.damage_type
 tt.melee.attacks[1].hit_time = fts(11)
 tt.melee.attacks[1].sound = "CommonNoSwordAttack"
 tt.melee.range = b.skill_soldiers.soldier.melee_attack.range
@@ -13705,9 +13698,7 @@ tt.sound_death = "HeroWitchDazzlingDecoyExplosion"
 --#region hero_witch
 tt = RT("hero_witch", "hero")
 b = balance.heroes.hero_witch
-
 AC(tt, "melee", "ranged", "dodge", "timed_attacks")
-
 tt.hero.level_stats.armor = b.armor
 tt.hero.level_stats.hp_max = b.hp_max
 tt.hero.level_stats.melee_damage_max = b.melee_damage_max
@@ -14739,9 +14730,7 @@ tt.decal_cloud_t = "decal_dragon_bone_cloud"
 --#region mod_dragon_bone_plague
 tt = RT("mod_dragon_bone_plague", "modifier")
 b = balance.heroes.hero_dragon_bone.plague
-
 AC(tt, "render", "dps")
-
 tt.modifier.duration = b.duration
 tt.modifier.vis_flags = F_MOD
 tt.render.sprites[1].prefix = "hero_dragon_bone_plague_fx"
@@ -14751,7 +14740,7 @@ tt.render.sprites[1].draw_order = 2
 tt.render.sprites[1].scale = vec_1(1)
 tt.dps.damage_min = b.damage_min
 tt.dps.damage_max = b.damage_max
-tt.dps.damage_type = DAMAGE_TRUE
+tt.dps.damage_type = b.damage_type
 tt.dps.damage_every = b.every
 tt.dps.kill = true
 tt.spread_radius = b.explotion.damage_radius
@@ -14910,9 +14899,7 @@ tt.tween.remove = false
 --#endregion
 --#region hero_lumenir
 tt = RT("hero_lumenir", "hero")
-
 AC(tt, "ranged", "timed_attacks", "tween")
-
 b = balance.heroes.hero_lumenir
 tt.hero.level_stats.armor = b.armor
 tt.hero.level_stats.hp_max = b.hp_max
@@ -15538,12 +15525,11 @@ tt.tween.props[1].sprite_id = 1
 tt.tween.disabled = false
 tt.tween.remove = true
 --#endregion
+
 --#region soldier_hero_wukong_clone
 tt = RT("soldier_hero_wukong_clone", "soldier_militia")
 b = balance.heroes.hero_wukong
-
 AC(tt, "reinforcement")
-
 tt.health.armor = b.hair_clones.soldier.armor
 tt.health.hp_max = nil
 tt.health_bar.offset = v(0, 45)
@@ -15557,6 +15543,7 @@ tt.main_script.update = scripts.soldier_reinforcement.update
 tt.melee.attacks[1].cooldown = b.hair_clones.soldier.melee_attack.cooldown
 tt.melee.attacks[1].damage_max = nil
 tt.melee.attacks[1].damage_min = nil
+tt.melee.attacks[1].damage_type = b.hair_clones.soldier.melee_attack.damage_type
 tt.melee.attacks[1].hit_time = fts(15)
 tt.melee.attacks[1].animation = "attack_melee"
 tt.melee.attacks[1].hit_fx = "fx_hero_wukong_hit_2"
@@ -15579,6 +15566,7 @@ tt.unit.hit_offset = v(0, 14)
 tt.unit.mod_offset = v(0, 14)
 tt.unit.level = 0
 --#endregion
+
 --#region soldier_hero_wukong_clone_b
 tt = RT("soldier_hero_wukong_clone_b", "soldier_hero_wukong_clone")
 tt.info.portrait = "kr5_info_portraits_soldiers_0034"
@@ -15589,9 +15577,7 @@ tt.info.i18n_key = "SOLDIER_HERO_WUKONG_HAIR_CLONES_2"
 --#endregion
 --#region soldier_hero_wukong_zhu_apprentice
 tt = RT("soldier_hero_wukong_zhu_apprentice", "soldier_militia")
-
 AC(tt, "melee", "nav_grid")
-
 b = balance.heroes.hero_wukong.zhu_apprentice
 tt.info.i18n_key = "SOLDIER_ZHU_APPRENTICE"
 tt.info.enc_icon = 12
