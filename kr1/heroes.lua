@@ -16629,10 +16629,9 @@ tt.particle_system.particle_lifetime = {fts(16), fts(16)}
 tt.particle_system.scales_y = {0.8, 0.8}
 tt.particle_system.scales_x = {0.8, 0.8}
 tt.particle_system.emission_rate = 70
+
 tt = E:register_t("hero_muyrn_sentinel_wisps_entity")
-
 E:add_comps(tt, "main_script", "pos", "render", "force_motion", "ranged", "tween")
-
 tt.duration = nil
 tt.hero_max_distance = b.sentinel_wisps.wisp.hero_max_distance
 tt.flight_height = 40

@@ -2364,14 +2364,6 @@ local function tail(name)
 	return table.tail(blc[name])
 end
 
-set_hero("hero_space_elf")
-
-map["星界镜像"] = str()
-map["虚空裂隙"] = str()
-map["黑曜庇护"] = str()
-map["空间扭曲"] = str()
-map["异域囚笼"] = str()
-
 set_hero("hero_raelyn")
 blc = balance.hero_raelyn.ultimate
 cooldown = tail("cooldown")
@@ -2413,52 +2405,133 @@ duration = tail("duration")
 factor = blc.soldier_factor
 map["坚不可摧"] = str(cooldown_str(), "根据周围敌人数量x（上限为", count, "），蕾琳获得一个持续", duration, "秒，数值为[自身最大生命值]*(", amount, "+", amount_2, "*x)的护盾，并为身边最多", count, "名友军提供基于他们最大生命值的护盾。护盾生效于普通士兵时，数值衰减至", factor * 100, "%。")
 
-set_hero("hero_venom")
+set_hero("hero_muyrn")
+blc = balance.hero_muyrn.leaf_whirlwind
+radius = blc.radius
+cycle_time = blc.heal_every
+cycle_time_2 = blc.damage_every
+cooldown = tail("cooldown")
+duration = tail("duration")
+d[1].damage_type = blc.damage_type
+d[1].damage_max = tail("damage_max")
+d[1].damage_min = tail("damage_min")
+amount = tail("heal_max")
+amount_2 = tail("heal_min")
+map["叶片旋风"] = str(cooldown_str(), "尼鲁为自己施加一个微风护盾，持续", duration, "秒。护盾每", cycle_time, "秒恢复尼鲁", amount_2, "-", amount, "点生命，并每", cycle_time_2, "秒对", radius, "范围敌人造成", damage_str(), "。")
+blc = balance.hero_muyrn.faery_dust
+radius = blc.radius
+cooldown = tail("cooldown")
+duration = tail("duration")
+factor = tail("damage_factor")
+map["衰弱咒语"] = str(cooldown_str(), "尼鲁虚弱", radius, "范围内的敌人，使其造成的伤害x", factor, "持续", duration, "秒。")
+blc = balance.hero_muyrn.sentinel_wisps
+cooldown = tail("cooldown")
+count = tail("max_summons")
+duration = table.tail(blc.wisp.duration)
+d[1].damage_max = table.tail(blc.wisp.damage_max)
+d[1].damage_min = table.tail(blc.wisp.damage_min)
+d[1].damage_type = blc.wisp.damage_type
+map["哨兵仙灵"] = str(cooldown_str(), "尼鲁召唤", count, "只小仙灵，驻场", duration, "秒。小仙灵每次攻击造成", damage_str(), "。")
+blc = balance.hero_muyrn.verdant_blast
+cooldown = tail("cooldown")
+d[1].damage_max = tail("damage_max")
+d[1].damage_min = tail("damage_min")
+d[1].damage_type = blc.damage_type
+map["翠绿迸发"] = str(cooldown_str(), "尼鲁搓出一团大法球，造成", damage_str(), "。")
+blc = balance.hero_muyrn.ultimate
+radius = blc.radius
+cycle_time = blc.damage_every
+cooldown = tail("cooldown")
+factor = tail("slow_factor")
+duration = tail("duration")
+d[1].damage_max = tail("damage_max")
+d[1].damage_min = tail("damage_min")
+d[1].damage_type = blc.damage_type
+count = tail("roots_count")
+map["根系守卫"] = str(cooldown_str(), "尼鲁召唤", count, "根树根，每根树根使", radius, "范围内敌人移速x", factor * 100, "%，并每", cycle_time, "秒造成", damage_str(), "，持续", duration, "秒。")
 
+set_hero("hero_space_elf")
+blc = balance.hero_space_elf.astral_reflection
+map["星界镜像"] = str()
+blc = balance.hero_space_elf.void_rift
+map["虚空裂隙"] = str()
+blc = balance.hero_space_elf.black_aegis
+map["黑曜庇护"] = str()
+blc = balance.hero_space_elf.spatial_distortion
+map["空间扭曲"] = str()
+blc = balance.hero_space_elf.ultimate
+map["异域囚笼"] = str()
+
+set_hero("hero_venom")
+blc = balance.hero_venom.ranged_tentacle
 map["贯心追猎"] = str()
+blc = balance.hero_venom.inner_beast
 map["原始野性"] = str()
+blc = balance.hero_venom.floor_spikes
 map["致命尖刺"] = str()
+blc = balance.hero_venom.eat_enemy
 map["重塑血肉"] = str()
+blc = balance.hero_venom.ultimate
 map["死亡蔓延"] = str()
 
 set_hero("hero_dragon_gem")
-
+blc = balance.hero_dragon_gem.stun
 map["结晶吐息"] = str()
+blc = balance.hero_dragon_gem.floor_impact
 map["棱晶碎片"] = str()
+blc = balance.hero_dragon_gem.crystal_instakill
 map["红晶石冢"] = str()
+blc = balance.hero_dragon_gem.crystal_totem
 map["能量输导"] = str()
+blc = balance.hero_dragon_gem.ultimate
 map["水晶崩落"] = str()
 
 set_hero("hero_witch")
-
+blc = balance.hero_witch.skill_polymorph
 map["南瓜魔术"] = str()
+blc = balance.hero_witch.disengage
 map["闪光诱饵"] = str()
+blc = balance.hero_witch.skill_soldiers
 map["黑夜煞星"] = str()
+blc = balance.hero_witch.skill_path_aoe
 map["粘稠魔药"] = str()
+blc = balance.hero_witch.ultimate
 map["昏昏欲退"] = str()
 
 set_hero("hero_dragon_bone")
-
+blc = balance.hero_dragon_bone.rain
 map["脊骨骤雨"] = str()
+blc = balance.hero_dragon_bone.cloud
 map["瘟神毒雾"] = str()
+blc = balance.hero_dragon_bone.plague
 map["爆发感染"] = str()
+blc = balance.hero_dragon_bone.nova
 map["疫病灾星"] = str()
+blc = balance.hero_dragon_bone.ultimate
 map["化骨为龙"] = str()
 
 set_hero("hero_lumenir")
-
+blc = balance.hero_lumenir.fire_balls
 map["光辉波动"] = str()
+blc = balance.hero_lumenir.mini_dragon
 map["光明伙伴"] = str()
+blc = balance.hero_lumenir.shield
 map["反伤赐福"] = str()
+blc = balance.hero_lumenir.celestial_judgement
 map["天国裁决"] = str()
+blc = balance.hero_lumenir.ultimate
 map["光耀凯歌"] = str()
 
 set_hero("hero_wukong")
-
+blc = balance.hero_wukong.zhu_apprentice
 map["八戒师弟"] = str()
+blc = balance.hero_wukong.hair_clones
 map["身外身法"] = str()
+blc = balance.hero_wukong.pole_ranged
 map["雨落千钧"] = str()
+blc = balance.hero_wukong.giant_staff
 map["神珍定海"] = str()
+blc = balance.hero_wukong.ultimate
 map["白龙腾渊"] = str()
 
 return H

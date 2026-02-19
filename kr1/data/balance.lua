@@ -270,11 +270,10 @@ local heroes = {
 			cooldown = {53, 50, 46},
 			xp_gain = {160, 320, 480},
 			area_damage = {
-				-- max_targets = 10,
 				damage_radius = 90,
-				damage_type = DAMAGE_EXPLOSION,
-				damage_max = {65, 97, 130},
-				damage_min = {58, 78, 110}
+				damage_type = DAMAGE_TRUE,
+				damage_max = {140, 200, 260},
+				damage_min = {120, 160, 200}
 			}
 		},
 		ultimate = {
@@ -633,7 +632,7 @@ local heroes = {
 		}
 	},
 	hero_muyrn = {
-		distance_to_treewalk = 150,
+		distance_to_treewalk = 75,
 		speed = 75,
 		treewalk_speed = 95,
 		dead_lifetime = 15,
@@ -658,7 +657,7 @@ local heroes = {
 			cooldown = 1.5,
 			min_range = 68,
 			damage_max = {27, 30, 33, 36, 39, 42, 45, 47, 50, 53},
-			damage_min = {9, 10, 11, 12, 13, 14, 15, 16, 17, 18},
+			damage_min = {17, 19, 21, 23, 25, 27, 29, 31, 33, 35},
 			damage_type = DAMAGE_MAGICAL
 		},
 		sentinel_wisps = {
@@ -671,8 +670,8 @@ local heroes = {
 				cooldown = 1,
 				hero_max_distance = 100,
 				duration = {6, 6, 6},
-				damage_min = {2, 5, 8},
-				damage_max = {4, 10, 16},
+				damage_min = {3, 6, 9},
+				damage_max = {6, 12, 18},
 				damage_type = DAMAGE_MAGICAL
 			},
 			xp_gain = {140, 280, 420}
@@ -684,7 +683,7 @@ local heroes = {
 			damage_max = {120, 240, 360},
 			damage_min = {120, 240, 360},
 			s_damage = {120, 240, 360},
-			damage_type = DAMAGE_MAGICAL,
+			damage_type = DAMAGE_MAGICAL_EXPLOSION,
 			xp_gain = {168, 336, 504}
 		},
 		leaf_whirlwind = {
@@ -693,20 +692,20 @@ local heroes = {
 			max_range_trigger = 60,
 			heal_every = 0.25,
 			damage_every = 0.25,
-			cooldown = {24.5, 24.5, 24.5},
+			cooldown = {25, 23.5, 21},
 			duration = {8, 8, 8},
-			damage_type = DAMAGE_MAGICAL,
+			damage_type = DAMAGE_STAB,
 			damage_max = {4, 8, 12},
 			damage_min = {2, 4, 6},
 			s_damage_min = {8, 16, 24},
 			s_damage_max = {16, 32, 56},
-			heal_max = {2, 3, 4},
+			heal_max = {3, 4, 5},
 			heal_min = {2, 3, 4},
 			xp_gain = {224, 448, 672}
 		},
 		faery_dust = {
 			radius = 80,
-			min_targets = 3,
+			min_targets = 1,
 			max_range_trigger = 160,
 			max_range_effect = 180,
 			cooldown = {14, 14, 14},
