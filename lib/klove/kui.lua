@@ -23,157 +23,6 @@ local function vround(x, y)
 	return math.floor(0.5 + x), math.floor(0.5 + y)
 end
 
-KMDragInertia = {}
-
-function KMDragInertia:included(klass)
-	if klass.initialize then
-		klass._kmdi_initialize = klass.initialize
-	end
-
-	if klass.update then
-		klass._kmdi_update = klass.update
-	end
-
-	if klass.on_down then
-		klass._kmdi_on_down = klass.on_down
-	end
-
-	if klass.on_dropped then
-		klass._kmdi_on_droppped = klass.on_droppped
-	end
-
-	klass.initialize = klass.kmdi_initialize
-	klass.update = klass.kmdi_update
-	klass.on_down = klass.kmdi_on_down
-	klass.on_dropped = klass.kmdi_on_dropped
-
-	table.insert(klass.static.serialize_keys, "inertia_damping")
-end
-
-function KMDragInertia:kmdi_initialize(...)
-	if self._kmdi_initialize then
-		self._kmdi_initialize(self, ...)
-	end
-
-	self._inertia_v = V.v(0, 0)
-	self._inertia_idx = 1
-	self._inertia_deltas = {V.v(0, 0), V.v(0, 0), V.v(0, 0)}
-	self._inertia_last_pos = V.v()
-	self.can_drag = true
-	self.inertia_damping = 0.9
-end
-
-function KMDragInertia:kmdi_update(dt)
-	if self._kmdi_update then
-		self._kmdi_update(self, dt)
-	end
-
-	if self.hidden then
-		return
-	end
-
-	if love.mouse.isDown(1) then
-		self._inertia_idx = km.zmod(self._inertia_idx + 1, #self._inertia_deltas)
-
-		local idelta = self._inertia_deltas[self._inertia_idx]
-
-		idelta.x, idelta.y = (self.pos.x - self._inertia_last_pos.x) / dt, (self.pos.y - self._inertia_last_pos.y) / dt
-		self._inertia_last_pos.x = self.pos.x
-		self._inertia_last_pos.y = self.pos.y
-	else
-		if self._inertia_done then
-			return
-		end
-
-		local lx, ly = self.pos.x, self.pos.y
-
-		self.pos.x = self.pos.x + self._inertia_v.x * dt
-		self.pos.y = self.pos.y + self._inertia_v.y * dt
-		self._inertia_v.x = self._inertia_v.x * self.inertia_damping
-		self._inertia_v.y = self._inertia_v.y * self.inertia_damping
-
-		if self.drag_limits then
-			local dl = self.drag_limits
-
-			self.pos.x = km.clamp(dl.pos.x, dl.pos.x + dl.size.x, self.pos.x)
-			self.pos.y = km.clamp(dl.pos.y, dl.pos.y + dl.size.y, self.pos.y)
-		end
-
-		if math.abs(self.pos.x - lx) < 1 and math.abs(self.pos.y - ly) < 1 then
-			self._inertia_done = true
-		end
-	end
-end
-
-function KMDragInertia:kmdi_on_down(...)
-	if self._kmdi_on_down then
-		self._kmdi_on_down(self, ...)
-	end
-
-	for i = 1, #self._inertia_deltas do
-		local d = self._inertia_deltas[i]
-
-		d.x, d.y = 0, 0
-		self._inertia_v.x = 0
-		self._inertia_v.y = 0
-	end
-
-	self._inertia_last_pos.x = self.pos.x
-	self._inertia_last_pos.y = self.pos.y
-end
-
-function KMDragInertia:kmdi_on_dropped(...)
-	if self._kmdi_on_dropped then
-		self._kmdi_on_dropped(self, ...)
-	end
-
-	if self.inertia_damping then
-		local vx, vy = 0, 0
-		local steps = #self._inertia_deltas
-
-		for i = 1, steps do
-			local p = self._inertia_deltas[i]
-
-			vx = vx + p.x / steps
-			vy = vy + p.y / steps
-		end
-
-		if math.abs(vx) > 1 or math.abs(vy) > 1 then
-			self._inertia_done = nil
-			self._inertia_v.x = vx
-			self._inertia_v.y = vy
-		end
-	end
-end
-
-KMOverrides = {}
-
-function KMOverrides:included(klass)
-	table.insert(klass.static.serialize_keys, "overrides")
-end
-
-function KMOverrides:apply_override(o_key)
-	local function apply_data(this, data)
-		for k, v in pairs(data) do
-			if type(v) == "table" and type(this[k]) == "table" then
-				apply_data(this[k], v)
-			else
-				this[k] = v
-			end
-		end
-	end
-
-	if not self.overrides or not self.overrides[o_key] then
-		return
-	end
-
-	local ov = self.overrides[key]
-
-	apply_data(self, ov)
-
-	self.overrides.active = o_key
-end
-
 KMShaderDraw = {}
 
 function KMShaderDraw:redraw()
@@ -716,12 +565,6 @@ function KView:destroy()
 	self.on_scroll = nil
 	self.on_enter = nil
 	self.hit_rect = nil
-
-	for k, v in pairs(self) do
-		if v and type(v) == "table" and v.isInstanceOf and v:isInstanceOf(klass) then
-			self[k] = nil
-		end
-	end
 end
 
 function KView:update(dt)
@@ -1040,7 +883,6 @@ function KView:screen_to_view(x, y)
 
 		x = (x - v.pos.x) / v.scale.x + v.anchor.x
 		y = (y - v.pos.y) / v.scale.y + v.anchor.y
-
 		if v.parent and v.parent:isInstanceOf(KScrollList) then
 			y = y + v.scroll_origin_y / v.scale.y
 		end
@@ -1059,7 +901,6 @@ function KView:view_to_screen(x, y)
 	repeat
 		x = (x - this.anchor.x) * this.scale.x + this.pos.x
 		y = (y - this.anchor.y) * this.scale.y + this.pos.y
-
 		if this.parent and this.parent:isInstanceOf(KScrollList) then
 			y = y - this.scroll_origin_y
 		end
@@ -2312,10 +2153,6 @@ function KScrollList:on_scroll(button)
 
 	return false
 end
-
-KInertialView = class("KInertialView", KView)
-
-KInertialView:include(KMDragInertia)
 
 KTable = class("KTable", KView)
 

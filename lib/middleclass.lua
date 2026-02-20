@@ -1,10 +1,5 @@
 -- chunkname: @./lib/middleclass.lua
-local middleclass = {
-	_VERSION = "middleclass v4.1.0",
-	_URL = "https://github.com/kikito/middleclass",
-	_DESCRIPTION = "Object Orientation for Lua",
-	_LICENSE = "    MIT LICENSE\n\n    Copyright (c) 2011 Enrique García Cota\n\n    Permission is hereby granted, free of charge, to any person obtaining a\n    copy of this software and associated documentation files (the\n    \"Software\"), to deal in the Software without restriction, including\n    without limitation the rights to use, copy, modify, merge, publish,\n    distribute, sublicense, and/or sell copies of the Software, and to\n    permit persons to whom the Software is furnished to do so, subject to\n    the following conditions:\n\n    The above copyright notice and this permission notice shall be included\n    in all copies or substantial portions of the Software.\n\n    THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\n    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\n    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\n    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\n    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\n    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\n    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n  "
-}
+local middleclass = {}
 
 local function _createIndexWrapper(aClass, f)
 	if f == nil then
@@ -94,7 +89,7 @@ local function _createClass(name, super)
 end
 
 local function _includeMixin(aClass, mixin)
-	assert(type(mixin) == "table", "mixin must be a table")
+	-- assert(type(mixin) == "table", "mixin must be a table")
 
 	for name, method in pairs(mixin) do
 		if name ~= "included" and name ~= "static" then
@@ -121,18 +116,26 @@ local DefaultMixin = {
 		return
 	end,
 	isInstanceOf = function(self, aClass)
-		return type(aClass) == "table" and (aClass == self.class or self.class:isSubclassOf(aClass))
+        -- if type(aClass) ~= "table" then
+        --     -- backtrace
+        --     print("Error: isInstanceOf expects a class (table) as argument")
+        --     print("Backtrace:"
+        --         .. "\n" .. debug.traceback())
+
+        --     return false
+        -- end
+		return aClass == self.class or self.class:isSubclassOf(aClass)
 	end,
 	static = {
 		allocate = function(self)
-			assert(type(self) == "table", "Make sure that you are using 'Class:allocate' instead of 'Class.allocate'")
+			-- assert(type(self) == "table", "Make sure that you are using 'Class:allocate' instead of 'Class.allocate'")
 
 			return setmetatable({
 				class = self
 			}, self.__instanceDict)
 		end,
 		new = function(self, ...)
-			assert(type(self) == "table", "Make sure that you are using 'Class:new' instead of 'Class.new'")
+			-- assert(type(self) == "table", "Make sure that you are using 'Class:new' instead of 'Class.new'")
 
 			local instance = self:allocate()
 
@@ -141,8 +144,8 @@ local DefaultMixin = {
 			return instance
 		end,
 		subclass = function(self, name)
-			assert(type(self) == "table", "Make sure that you are using 'Class:subclass' instead of 'Class.subclass'")
-			assert(type(name) == "string", "You must provide a name(string) for your class")
+			-- assert(type(self) == "table", "Make sure that you are using 'Class:subclass' instead of 'Class.subclass'")
+			-- assert(type(name) == "string", "You must provide a name(string) for your class")
 
 			local subclass = _createClass(name, self)
 
@@ -164,10 +167,10 @@ local DefaultMixin = {
 			return
 		end,
 		isSubclassOf = function(self, other)
-			return type(other) == "table" and type(self.super) == "table" and (self.super == other or self.super:isSubclassOf(other))
+			return type(self.super) == "table" and (self.super == other or self.super:isSubclassOf(other))
 		end,
 		include = function(self, ...)
-			assert(type(self) == "table", "Make sure you that you are using 'Class:include' instead of 'Class.include'")
+			-- assert(type(self) == "table", "Make sure you that you are using 'Class:include' instead of 'Class.include'")
 
 			for _, mixin in ipairs({...}) do
 				_includeMixin(self, mixin)
@@ -179,7 +182,7 @@ local DefaultMixin = {
 }
 
 function middleclass.class(name, super)
-	assert(type(name) == "string", "A name (string) is needed for the new class")
+	-- assert(type(name) == "string", "A name (string) is needed for the new class")
 
 	return super and super:subclass(name) or _includeMixin(_createClass(name), DefaultMixin)
 end
