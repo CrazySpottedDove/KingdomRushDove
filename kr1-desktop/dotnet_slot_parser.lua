@@ -392,7 +392,7 @@ function sm:parse(buf)
 end
 
 if _TESTING then
-	log.level = log.DEBUG_LEVEL
+	log:set_level("debug")
 
 	local args = {...}
 	local fn = args[1]

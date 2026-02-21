@@ -1,7 +1,6 @@
 -- chunkname: @./all/script_utils.lua
 local SU = {}
 local log = require("lib.klua.log"):new("script_utils")
-local log_xp = log.xp or log:new("xp")
 
 require("lib.klua.table")
 
@@ -993,20 +992,6 @@ function SU.hero_gain_xp_from_skill(this, skill)
 		end
 
 		this.hero.xp_queued = this.hero.xp_queued + amount
-
-		if log_xp.level >= log_xp.DEBUG_LEVEL then
-			local skill_name
-
-			for k, v in pairs(this.hero.skills) do
-				if v == skill then
-					skill_name = k
-
-					break
-				end
-			end
-
-			log_xp.debug("XP QUEUE SKILL: (%s)%s xp:%.2f skill:%s level:%s factor:%.2f", this.id, this.template_name, amount, skill_name, skill.level, skill.xp_gain_factor)
-		end
 	end
 end
 
@@ -1017,8 +1002,6 @@ end
 ---@return nil
 function SU.hero_gain_xp(this, value, desc)
 	this.hero.xp_queued = this.hero.xp_queued + value
-
-	log_xp.debug("XP QUEUE MANUAL: (%s)%s xp:%.2f from:%s", this.id, this.template_name, value, desc)
 end
 
 ---英雄升级

@@ -12,7 +12,7 @@ end
 local log = require("lib.klua.log"):new("dotnet_bfds")
 
 if _TESTING then
-	log.level = log.DEBUG_LEVEL
+	log:set_level("debug")
 end
 
 local bf = {}

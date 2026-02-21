@@ -1,8 +1,6 @@
 -- chunkname: @./all/systems.lua
 MISSED_SS = {}
 local log = require("lib.klua.log"):new("systems")
-local log_xp = log.xp or log:new("xp")
-local log_hp = log.hp or log:new("hp")
 local km = require("lib.klua.macros")
 local signal = require("lib.hump.signal")
 local perf = require("dove_modules.perf.perf")

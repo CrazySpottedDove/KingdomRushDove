@@ -301,7 +301,6 @@ end
 log.use_print = KR_PLATFORM == "android"
 log = log:new("main")
 
-local features = require("features")
 local storage = require("storage")
 local F = require("lib.klove.font_db")
 
@@ -448,7 +447,7 @@ local function load(arg)
 	MU.default_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
 
 	if main.params.log_level then
-		log.level = tonumber(main.params.log_level)
+		log:set_level(main.params.log_level)
 	end
 
 	main.log_output = MU.redirect_output(main.params)

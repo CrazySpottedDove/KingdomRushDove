@@ -32,7 +32,7 @@ require("game_editor_classes")
 
 local NODE_SELECTION_WINDOW = 8
 
-log.level = log.DEBUG_LEVEL
+log:set_level("debug")
 
 local gui = {}
 

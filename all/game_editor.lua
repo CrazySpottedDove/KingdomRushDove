@@ -1,7 +1,7 @@
 -- chunkname: @./all/game_editor.lua
 local log = require("lib.klua.log"):new("game")
 
-log.level = log.DEBUG_LEVEL
+log:set_level("debug")
 
 require("lib.klua.dump")
 

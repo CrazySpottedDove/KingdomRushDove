@@ -4,26 +4,35 @@ local data = {
 	-- 最大波数
 	initial_cash = 1500,
 	-- 初始资金
-	initial_inverval = 800,
+	initial_inverval = 1000,
 	-- 初始每大波持续时间
 	final_interval = 2000,
 	-- 最终每大波持续时间
 	paths = {1, 2, 3, 4, 5, 6, 7, 8, 9},
 	-- 允许的路径
+	-- path1: 最短左路
+	-- path2: 左路从下方绕到右路，长
+	-- path3: 同 path2
+	-- path4: 左路从上方绕到右路，中
+	-- path5: 同 path4
+	-- path6: 左路从上方绕到右路，又从下方绕到左路，长
+	-- path7: 右路从上方绕到左路
+	-- path8: 右路短路径
+	-- path9: 右路较短路径
 	path_active_map = {
-		[1] = {1, 2},
-		[2] = {1, 2},
-		[3] = {7, 8},
-		[4] = {1, 2, 7, 8, 9, 10},
-		[5] = {3, 4, 9, 10},
-		[6] = {3, 4, 5, 6, 11},
-		[7] = {3, 4, 7, 8, 5, 6, 9, 10},
-		[8] = {1, 2, 7, 8, 9, 10},
-		[9] = {1, 2, 5, 6, 11},
-		[10] = {3, 4, 7, 8, 9, 10},
-		[11] = {1, 2, 3, 4, 9, 10},
-		[12] = {5, 6, 7, 8, 11},
-		[13] = {1, 2, 3, 4, 5, 6, 9, 10}
+		[1] = {2},
+		[2] = {3},
+		[3] = {2, 3},
+		[4] = {7, 6},
+		[5] = {1, 7},
+		[6] = {1, 7, 6},
+		[7] = {1, 4},
+		[8] = {4, 5},
+		[9] = {2, 3},
+		[10] = {2, 3, 4, 5},
+		[11] = {1},
+		[12] = {8, 9},
+		[13] = {1, 2, 8, 9}
 	},
 	path_weight_map = {
 		[1] = 2,
@@ -37,194 +46,100 @@ local data = {
 		[9] = 3
 	}, -- 每一个路径分配出怪权重时的权重。每次出怪时，取活跃路径的权重相加，然后再根据各路径权重分配出怪权重
 	path_enemy_map = {
-		[1] = { -- 野蛮人
-			"enemy_cannibal",
-			"enemy_cannibal_volcano_normal", -- 野蛮人狂战士
-			"enemy_hunter", -- 野蛮人猎手
-			"enemy_shaman_priest", -- 恢复萨满
-			"enemy_shaman_magic", -- 法抗萨满
-			"enemy_shaman_necro", -- 拉尸体萨满
-			"enemy_jungle_spider_tiny", -- 丛林小蜘蛛
-			"enemy_jungle_spider_small", -- 丛林蜘蛛
-			"enemy_jungle_spider_big", -- 大丛林蜘蛛
-			"enemy_gorilla", -- 大猩猩
-			"enemy_savage_bird_rider", -- 巨鸟骑士,
-			"enemy_shaman_gravity" -- 反重力萨满
-		},
-		[2] = { -- 野蛮人
-			"enemy_cannibal",
-			"enemy_cannibal_volcano_normal", -- 野蛮人狂战士
-			"enemy_hunter", -- 野蛮人猎手
-			"enemy_shaman_priest", -- 恢复萨满
-			"enemy_shaman_rage", -- 加伤加速萨满
-			"enemy_jungle_spider_tiny", -- 丛林小蜘蛛
-			"enemy_jungle_spider_small", -- 丛林蜘蛛
-			"enemy_jungle_spider_big", -- 大丛林蜘蛛
-			"enemy_gorilla", -- 大猩猩
-			"enemy_savage_bird_rider", -- 巨鸟骑士,
-			"enemy_shaman_gravity" -- 反重力萨满
-		},
-		[3] = {"enemy_cannibal", "enemy_cannibal_volcano_normal", "enemy_hunter", "enemy_shaman_priest", "enemy_shaman_magic", "enemy_cannibal_zombie", "enemy_alien_breeder", "enemy_alien_reaper", "enemy_savage_bird", "enemy_savage_bird_rider"},
-		-- 野蛮人
-		-- 野蛮人狂战士
-		-- 野蛮人猎手
-		-- 恢复萨满
-		-- 法抗萨满
-		-- 野蛮人僵尸
-		-- 抱脸虫
-		-- 抱脸虫生出来的
-		-- 巨鸟
-		-- 巨鸟骑士
-		[4] = { -- 野蛮人
-			"enemy_cannibal",
-			"enemy_cannibal_volcano_normal", -- 野蛮人狂战士
-			"enemy_hunter", -- 野蛮人猎手
-			"enemy_shaman_priest", -- 恢复萨满
-			"enemy_shaman_rage", -- 加伤加速萨满
-			"enemy_shaman_necro", -- 拉尸体萨满
-			"enemy_cannibal_zombie", -- 野蛮人僵尸
-			"enemy_alien_breeder", -- 抱脸虫
-			"enemy_alien_reaper", -- 抱脸虫生出来的
-			"enemy_savage_bird", -- 巨鸟
-			"enemy_savage_bird_rider" -- 巨鸟骑士
-		},
-		[5] = { -- 野蛮人
-			"enemy_cannibal",
-			"enemy_cannibal_volcano_normal", -- 野蛮人狂战士
-			"enemy_hunter", -- 野蛮人猎手
-			"enemy_shaman_priest", -- 恢复萨满
-			"enemy_shaman_shield", -- 物抗萨满
-			"enemy_shaman_necro", -- 拉尸体萨满
-			"enemy_jungle_spider_tiny", -- 丛林小蜘蛛
-			"enemy_jungle_spider_small", -- 丛林蜘蛛
-			"enemy_jungle_spider_big", -- 大丛林蜘蛛
-			"enemy_gorilla", -- 大猩猩
-			"enemy_savage_bird_rider" -- 巨鸟骑士
-		},
-		[6] = {"enemy_cannibal", "enemy_cannibal_volcano_normal", "enemy_hunter", "enemy_shaman_priest", "enemy_shaman_gravity", "enemy_jungle_spider_tiny", "enemy_jungle_spider_small", "enemy_jungle_spider_big", "enemy_gorilla", "enemy_savage_bird_rider"},
-		-- 野蛮人
-		-- 野蛮人狂战士
-		-- 野蛮人猎手
-		-- 恢复萨满
-		-- 反重力萨满
-		-- 丛林小蜘蛛
-		-- 丛林蜘蛛
-		-- 大丛林蜘蛛
-		-- 大猩猩
-		-- 巨鸟骑士
-		[7] = {"enemy_cannibal", "enemy_cannibal_volcano_normal", "enemy_hunter", "enemy_shaman_priest", "enemy_shaman_shield", "enemy_cannibal_zombie", "enemy_alien_breeder", "enemy_alien_reaper", "enemy_savage_bird", "enemy_savage_bird_rider"},
-		-- 野蛮人
-		-- 野蛮人狂战士
-		-- 野蛮人猎手
-		-- 恢复萨满
-		-- 物抗萨满
-		-- 野蛮人僵尸
-		-- 抱脸虫
-		-- 抱脸虫生出来的
-		-- 巨鸟
-		-- 巨鸟骑士
-		[8] = { -- 野蛮人
-			"enemy_cannibal",
-			"enemy_cannibal_volcano_normal", -- 野蛮人狂战士
-			"enemy_hunter", -- 野蛮人猎手
-			"enemy_shaman_priest", -- 恢复萨满
-			"enemy_shaman_gravity", -- 加伤加速萨满
-			"enemy_shaman_necro", -- 拉尸体萨满
-			"enemy_cannibal_zombie", -- 野蛮人僵尸
-			"enemy_alien_breeder", -- 抱脸虫
-			"enemy_alien_reaper", -- 抱脸虫生出来的
-			"enemy_savage_bird", -- 巨鸟
-			"enemy_savage_bird_rider" -- 巨鸟骑士
-		},
-		[9] = {"enemy_cannibal", "enemy_hunter"},
-		[10] = {"enemy_cannibal", "enemy_hunter"},
-		[11] = {"enemy_shaman_priest", "enemy_shaman_magic", "enemy_shaman_rage", "enemy_shaman_shield", "enemy_shaman_necro", "enemy_shaman_gravity"}
+		[1] = {"enemy_immortal", "enemy_tremor"},
+		[2] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_munra"},
+		[3] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_munra"},
+		[4] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_munra"},
+		[5] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_munra"},
+		[6] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_munra", "enemy_tremor", "enemy_desert_archer", "enemy_wasp"},
+		[7] = {"enemy_bouncer", "enemy_wasp", "enemy_wasp_queen", "enemy_scorpion", "enemy_executioner"},
+		[8] = {"enemy_fallen", "enemy_wasp_queen", "enemy_scorpion", "enemy_tremor"},
+		[9] = {"enemy_fallen", "enemy_wasp_queen", "enemy_scorpion", "enemy_tremor", "enemy_munra"}
 	},
 	-- 每条路径允许出哪些敌人
 	enemy_weight_map = {
-		["enemy_cannibal"] = 1,
-		["enemy_cannibal_volcano_normal"] = 3,
-		["enemy_hunter"] = 1.5,
-		["enemy_shaman_priest"] = 6,
-		["enemy_shaman_magic"] = 6,
-		["enemy_shaman_rage"] = 9,
-		["enemy_shaman_shield"] = 8,
-		["enemy_shaman_necro"] = 9,
-		["enemy_cannibal_zombie"] = 1.2,
-		["enemy_jungle_spider_tiny"] = 0.35,
-		["enemy_jungle_spider_small"] = 1,
-		["enemy_jungle_spider_big"] = 7,
-		["enemy_gorilla"] = 12,
-		["enemy_alien_breeder"] = 3,
-		["enemy_alien_reaper"] = 3,
-		["enemy_savage_bird"] = 3,
-		["enemy_savage_bird_rider"] = 8,
-		["enemy_shaman_gravity"] = 9
+		["enemy_bouncer"] = 1,
+		["enemy_desert_raider"] = 3,
+		["enemy_desert_wolf_small"] = 1.5,
+		["enemy_desert_wolf"] = 3,
+		["enemy_immortal"] = 7,
+		["enemy_fallen"] = 3,
+		["enemy_desert_archer"] = 4,
+		["enemy_scorpion"] = 8,
+		["enemy_tremor"] = 2.5,
+		["enemy_wasp"] = 2.5,
+		["enemy_wasp_queen"] = 7,
+		["enemy_executioner"] = 12,
+		["enemy_munra"] = 15
 	},
 	-- 敌人的权重
 	enemy_comeout_wave_map = {
-		["enemy_cannibal"] = 1,
-		["enemy_cannibal_volcano_normal"] = 4,
-		["enemy_hunter"] = 1,
-		["enemy_shaman_priest"] = 3,
-		["enemy_shaman_magic"] = 5,
-		["enemy_shaman_rage"] = 7,
-		["enemy_shaman_shield"] = 6,
-		["enemy_shaman_necro"] = 8,
-		["enemy_cannibal_zombie"] = 2,
-		["enemy_jungle_spider_tiny"] = 2,
-		["enemy_jungle_spider_small"] = 1,
-		["enemy_jungle_spider_big"] = 4,
-		["enemy_gorilla"] = 10,
-		["enemy_alien_breeder"] = 10,
-		["enemy_alien_reaper"] = 9,
-		["enemy_savage_bird"] = 5,
-		["enemy_savage_bird_rider"] = 10,
-		["enemy_shaman_gravity"] = 9
+		["enemy_bouncer"] = 1,
+		["enemy_desert_raider"] = 1,
+		["enemy_desert_wolf_small"] = 1,
+		["enemy_desert_wolf"] = 2,
+		["enemy_immortal"] = 3,
+		["enemy_fallen"] = 2,
+		["enemy_desert_archer"] = 4,
+		["enemy_scorpion"] = 8,
+		["enemy_tremor"] = 4,
+		["enemy_wasp"] = 5,
+		["enemy_wasp_queen"] = 7,
+		["enemy_executioner"] = 9,
+		["enemy_munra"] = 10
 	}, -- 敌人首次出现的波次
 	enemy_delete_wave_map = {
 		[1] = {
-			[6] = {"enemy_jungle_spider_tiny"}
+			[7] = {"enemy_bouncer"},
+			[10] = {"enemy_tremor"}
 		},
 		[2] = {
-			[6] = {"enemy_jungle_spider_tiny"}
+			[8] = {"enemy_bouncer", "enemy_desert_raider"},
+			[11] = {"enemy_desert_wolf_small"}
 		},
 		[3] = {
-			[10] = {"enemy_savage_bird"}
+			[8] = {"enemy_bouncer", "enemy_desert_raider"},
+			[11] = {"enemy_desert_wolf_small"}
 		},
 		[4] = {
-			[10] = {"enemy_savage_bird"}
+			[9] = {"enemy_bouncer"},
+			[12] = {"enemy_desert_raider"}
 		},
 		[5] = {
-			[6] = {"enemy_jungle_spider_tiny"}
+			[9] = {"enemy_bouncer"},
+			[12] = {"enemy_desert_raider"}
 		},
 		[6] = {
-			[6] = {"enemy_jungle_spider_tiny"}
+			[10] = {"enemy_bouncer", "enemy_desert_raider"},
+			[12] = {"enemy_desert_wolf_small"}
 		},
 		[7] = {
-			[10] = {"enemy_savage_bird"}
+			[10] = {"enemy_bouncer"},
+			[12] = {"enemy_wasp"}
 		},
 		[8] = {
-			[10] = {"enemy_savage_bird"}
+			[10] = {"enemy_fallen"},
+			[12] = {"enemy_wasp"}
 		},
-		[9] = {},
-		[10] = {},
-		[11] = {}
-	}, -- 每一条路径在哪些波次删除哪些敌人
+		[9] = {
+			[10] = {"enemy_fallen"},
+			[12] = {"enemy_wasp"}
+		}
+	},
+	-- 后面参数建议
 	wave_weight_function = function(wave_number, total_gold)
-		return (50 + (total_gold ^ 0.7) / 18 + wave_number ^ 2.25) * 0.4
+		-- 随波次和总金币递增，后期增长更快
+		return (60 + (total_gold ^ 0.7) / 15 + wave_number ^ 2.3) * 0.45
 	end,
-	interval_next_factor = 0.1, -- interval_next = interval * interval_next_factor
-	min_spawn_weight = 1, -- 每个 spawn 的出怪最少总权重,
-	max_spawn_weight = 20, -- 每个 spawn 的出怪最大总权重,
+	interval_next_factor = 0.12, -- 稍微加快后续出怪节奏
+	min_spawn_weight = 1.2, -- 每组最少权重略提升
+	max_spawn_weight = 22, -- 每组最大权重略提升
 	interval_function = function(weight, e, wave_number)
-		return (25 + 160 * math.log(weight)) * 20 / e.motion.max_speed * (1 - wave_number / 15 * 0.6)
-	end, -- 某权重怪物对应的 spawn 内 interval，允许上下 10% 浮动。interval_next 统一等于 interval * 0.2
-	-- fixed_sub_path 始终赋 0
-	-- delay 始终赋 0
-	-- 如果怪物的 vis.flags 中含有 F_FLYING，就要为 wave 添加 some_flying = true
-	gap_count_range = {0, 1, 2}, -- 每个 wave 中可接受 gap 数量的值，随机选取
-	wave_max_types = 8 -- 每个 wave 最多不同种类敌人数量
+		-- 高权重怪物间隔更大，随波次递减
+		return (30 + 150 * math.log(weight)) * 18 / e.motion.max_speed * (1 - wave_number / 15 * 0.55)
+	end,
+	gap_count_range = {0, 1, 2, 3}, -- 增加一个gap选项，提升变化
+	wave_max_types = 4 -- 每波最多4种敌人
 }
 
 return data

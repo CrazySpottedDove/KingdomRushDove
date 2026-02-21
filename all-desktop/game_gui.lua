@@ -61,8 +61,6 @@ local IS_KR1 = KR_GAME == "kr1"
 
 require("all.constants")
 
-local features = require("features")
-
 require("gg_views_custom")
 
 local data = require("data.game_gui_data")

@@ -9,7 +9,6 @@ local i18n = require("i18n")
 require("all.constants")
 
 local scale_scale = TEXTURE_SIZE_ALIAS.ipad / TEXTURE_SIZE_ALIAS.fullhd
-local features = require("features")
 local anchor_y = 0
 local image_y = 0
 local tt

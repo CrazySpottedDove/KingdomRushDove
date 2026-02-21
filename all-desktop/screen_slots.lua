@@ -15,7 +15,6 @@ local U = require("utils")
 local km = require("lib.klua.macros")
 local GS = require("kr1.game_settings")
 local i18n = require("i18n")
-local features = require("features")
 
 require("gg_views_custom")
 require("klove.kui")

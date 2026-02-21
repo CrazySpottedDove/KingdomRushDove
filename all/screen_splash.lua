@@ -9,7 +9,6 @@ local timer = require("hump.timer").new()
 require("klove.kui")
 
 local storage = require("storage")
-local features = require("features")
 local screen = {}
 
 screen.required_textures = {"screen_splash"}

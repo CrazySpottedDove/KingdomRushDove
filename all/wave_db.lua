@@ -501,10 +501,6 @@ function wave_db:create_wave_group_from_tsv(wave_cmd)
 		end
 	end
 
-	if log.level == log.PARANOID_LEVEL then
-		log.paranoid("group:%s", getfulldump(group))
-	end
-
 	return group
 end
 
@@ -763,16 +759,6 @@ function wave_db:load_tsv(level_name, game_mode, wave_ss_data)
 		elseif err then
 			log_e("error at %s#%s:  %s", sheet_name, i, err)
 		end
-	end
-
-	if log.level == log.PARANOID_LEVEL then
-		local out = ""
-
-		for i, cmd in ipairs(self.db_cmds) do
-			out = out .. string.format("(%02i) - %s : value:%s wait_time:%s\n", i, cmd.name, cmd.value, cmd.wait_time)
-		end
-
-		log.paranoid("wave cmds:\n%s", out)
 	end
 
 	return true
