@@ -116,14 +116,14 @@ local DefaultMixin = {
 		return
 	end,
 	isInstanceOf = function(self, aClass)
-        -- if type(aClass) ~= "table" then
-        --     -- backtrace
-        --     print("Error: isInstanceOf expects a class (table) as argument")
-        --     print("Backtrace:"
-        --         .. "\n" .. debug.traceback())
+		-- if type(aClass) ~= "table" then
+		--     -- backtrace
+		--     print("Error: isInstanceOf expects a class (table) as argument")
+		--     print("Backtrace:"
+		--         .. "\n" .. debug.traceback())
 
-        --     return false
-        -- end
+		--     return false
+		-- end
 		return aClass == self.class or self.class:isSubclassOf(aClass)
 	end,
 	static = {

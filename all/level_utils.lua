@@ -217,7 +217,6 @@ function LU.insert_entities(store, items, store_back_references)
 			log.error("template name missing in idx:%s : %s", i, getdump(item))
 		else
 			local e = E:create_entity(template)
-
 			if not e then
 				log.error("template named %s could not be found", template)
 			else

@@ -8,72 +8,79 @@ MUST_READ.enabled = true
 local confirm_steps = {"我已阅读，继续游戏", "我真的已阅读全部内容", "我发誓已阅读完毕", "我为因未读完导致的任何事负责", "我承诺不人身攻击作者", "确认过快，请继续阅读"}
 
 local function wrap_text(text, font, maxw)
+	local color_white = {1, 1, 1}
+	local color_red = {1, 0, 0}
 	local lines = {}
-	for paragraph in string.gmatch(text, "[^\n]+") do
-		local line = ""
-		for word in string.gmatch(paragraph, "%S+") do
-			local try = (line == "") and word or (line .. " " .. word)
-			if font:getWidth(try) <= maxw then
-				line = try
-			else
-				if line ~= "" then
-					table.insert(lines, line)
-				end
-				-- word may still be too long; split by character (safe UTF-8 aware)
-				if font:getWidth(word) <= maxw then
-					line = word
-				else
-					local cur = ""
-					local splitted = false
-					-- 优先使用 LÖVE 11+ 的 utf8 库，更安全可靠
-					if type(utf8) == "table" and utf8.codes then
-						local ok, positions = pcall(function()
-							local t = {}
-							for p in utf8.codes(word) do
-								table.insert(t, p)
-							end
-							return t
-						end)
-						if ok and #positions > 0 then
-							table.insert(positions, #word + 1) -- 添加末尾边界
-							for i = 1, #positions - 1 do
-								-- 根据准确的字节位置截取完整字符
-								local ch = word:sub(positions[i], positions[i + 1] - 1)
-								if font:getWidth(cur .. ch) <= maxw then
-									cur = cur .. ch
-								else
-									if cur ~= "" then
-										table.insert(lines, cur)
-									end
-									cur = ch
-								end
-							end
-							line = cur
-							splitted = true
-						end
-					end
+	local current_line = {}
+	local current_color = color_white
+	local buffer = ""
+	local width = 0
+	local space_width = font:getWidth(" ")
+	local i = 1
 
-					-- 如果 utf8 库不可用或失败，回退到原来的方法
-					if not splitted then
-						cur = ""
-						for c in word:gmatch(utf8 and "[%z\1-\127\194-\244][\128-\191]*" or ".") do
-							if font:getWidth(cur .. c) <= maxw then
-								cur = cur .. c
-							else
-								if cur ~= "" then
-									table.insert(lines, cur)
-								end
-								cur = c
-							end
-						end
-						line = cur
-					end
+	-- RED状态机
+	local function check_red_tag(idx)
+		if text:sub(idx, idx + 2) == "RED" then
+			return "RED", 3
+		elseif text:sub(idx, idx + 3) == "/RED" then
+			return "/RED", 4
+		end
+		return nil, 0
+	end
+
+	local function flush_buffer()
+		if buffer ~= "" then
+			table.insert(current_line, {
+				text = buffer,
+				color = current_color
+			})
+			buffer = ""
+		end
+	end
+
+	local function flush_line()
+		flush_buffer()
+		table.insert(lines, current_line)
+		current_line = {}
+		width = 0
+	end
+
+	local text_len = #text
+	while i <= text_len do
+		local tag, taglen = check_red_tag(i)
+		if tag == "RED" then
+			flush_buffer()
+			current_color = color_red
+			i = i + taglen
+		elseif tag == "/RED" then
+			flush_buffer()
+			current_color = color_white
+			i = i + taglen
+		else
+			local c_start = i
+			local c_end = utf8.offset(text, 2, i) and utf8.offset(text, 2, i) - 1 or text_len
+			local ch = text:sub(c_start, c_end)
+			i = c_end + 1
+
+			if ch == "\n" then
+				flush_line()
+			else
+				local w = font:getWidth(ch)
+				if width + w > maxw then
+					flush_buffer()
+					flush_line()
+					buffer = ch
+					width = font:getWidth(ch)
+				else
+					buffer = buffer .. ch
+					width = width + w
 				end
 			end
 		end
-		if line ~= "" then
-			table.insert(lines, line)
-		end
+	end
+	flush_buffer()
+	if #current_line > 0 then
+		table.insert(lines, current_line)
 	end
 	return lines
 end
@@ -280,9 +287,16 @@ function MUST_READ.run()
 			local end_i = math.min(total_lines, scroll + visible_lines)
 			local y = 60
 			for i = start_i, end_i do
-				love.graphics.print(lines[i], margin, y)
+				local x = margin
+				local y_line = y
+				for _, seg in ipairs(lines[i]) do
+					love.graphics.setColor(seg.color)
+					love.graphics.print(seg.text, x, y_line)
+					x = x + font:getWidth(seg.text)
+				end
 				y = y + line_h
 			end
+			love.graphics.setColor(1, 1, 1) -- 恢复白色
 
 			-- 滚动提示（若未到底部）
 			if not is_scrolled_to_bottom(scroll, total_lines, visible_lines) then

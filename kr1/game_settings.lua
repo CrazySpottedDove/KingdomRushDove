@@ -118,7 +118,7 @@ GS.last_level5 = 35
 GS.extra_level1_from = 999
 GS.extra_level1 = 3
 GS.extra_level2_from = 1999
-GS.extra_level2 = 4
+GS.extra_level2 = 5
 GS.extra_level3_from = 2999
 GS.extra_level3 = 1
 GS.extra_level5_from = 4999
@@ -138,7 +138,7 @@ GS.level_ranges1 = {
 	{1001},
 	{1002}
 }
-GS.level_ranges2 = {{27, 41}, {42, 44}, {45, 47}, {48}, {2000}, {2001}, {2002}, {2003}}
+GS.level_ranges2 = {{27, 41}, {42, 44}, {45, 47}, {48}, {2000}, {2001}, {2002}, {2003}, {2004}}
 GS.level_ranges3 = {{49, 63}, {64, 66}, {67, 68}, {69, 70}, {3000}}
 GS.level_ranges5 = {{101, 116}, {117, 119}, {120, 122}, {123, 127}, {128, 130}, {131, 135}}
 GS.max_stars = 0

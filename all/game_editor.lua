@@ -693,7 +693,6 @@ function editor:level_load(idx, mode)
 	s.level = LU.load_level(s, s.level_name, true)
 
 	director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
-
 	if s.level.data then
 		LU.insert_entities(self.store, s.level.data.entities_list, true)
 

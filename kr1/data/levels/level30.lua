@@ -66,8 +66,7 @@ if store.level_mode==GAME_MODE_CAMPAIGN then
 while store.wave_group_number<1 do
 coroutine.yield()
 end
-log.debug("-- sandworm released")
-e=E:create_entity("sand_worm")
+local e=E:create_entity("sand_worm")
 LU.queue_insert(store,e)
 end
 while not store.waves_finished or LU.has_alive_enemies(store) do

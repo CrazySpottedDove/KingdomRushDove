@@ -576,6 +576,9 @@ return {
 		music_stage2003 = {
 			sounds = {"MusicBattlePrep_2003", "MusicBattle_2003", "MusicBossFight"}
 		},
+		music_stage2004 = {
+			sounds = {"MusicBattlePrep_2004", "MusicBattle_2004"}
+		},
 		music_stage3000 = {
 			sounds = {"MusicBattlePrep_3000", "MusicBattle_3000"}
 		}
@@ -1697,6 +1700,13 @@ return {
 			source_group = "MUSIC",
 			stream = true
 		},
+		MusicBattlePrep_2004 = {
+			files = {"Desert_Prep.mp3"},
+			gain = 0.6,
+			loop = true,
+			source_group = "MUSIC",
+			stream = true
+		},
 		MusicBattlePrep_3000 = {
 			files = {"kro_bgmusic_t3_prebattle1[master_01-11].mp3"},
 			gain = 0.3,
@@ -2484,6 +2494,13 @@ return {
 		MusicBattle_2003 = {
 			files = {"33145294233-1-192.ogg"},
 			gain = 0.3,
+			loop = true,
+			source_group = "MUSIC",
+			stream = true
+		},
+		MusicBattle_2004 = {
+			files = {"savage_music_desert_battle.mp3"},
+			gain = 0.4,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true

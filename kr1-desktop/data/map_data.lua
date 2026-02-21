@@ -2448,6 +2448,13 @@ return {
 			},
 			iron = {"archers", "mages"}
 		},
+		[2004] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {"artillery"}
+		},
 		[3000] = {
 			upgrades = {
 				heroe = true,
