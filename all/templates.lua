@@ -802,7 +802,7 @@ E:add_comps(tt, "pos", "render", "tween")
 tt.pop_y_offset = 30
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_EFFECTS
-tt.render.sprites[1].hidden = features.pops_hidden
+tt.render.sprites[1].hidden = false
 tt.tween.remove = true
 tt.tween.props[1].name = "scale"
 tt.tween.props[1].keys = {{0, v(0.75, 0.75)}, {0.1, v(1.2, 1.2)}, {0.2, v(1, 1)}, {0.3, v(1.1, 1.1)}, {0.4, v(1, 1)}, {0.9, v(1, 1)}}

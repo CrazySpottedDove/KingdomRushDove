@@ -73,10 +73,6 @@ function director:init(params)
 
 	love.window.setTitle(version.title .. version.id)
 
-	if features.overrides and (table.contains(features.overrides, "censored_cn") or table.contains(features.overrides, "yodo1sdk")) then
-		BLOOD_RED = BLOOD_GRAY
-	end
-
 	-- 跳过开场动画
 	-- self.next_item_name = "splash"
 	self.next_item_name = "slots"
@@ -876,21 +872,11 @@ function director.skip_checks.check_skip_consent()
 end
 
 function director.skip_checks.check_skip_splash_custom()
-	return not features.show_splash_custom
+	return true
 end
 
 function director.skip_checks.check_skip_consent_simple()
-	if not features.show_consent_simple then
-		return true
-	end
-
-	local global = storage:load_global()
-
-	if global.simple_privacy_policy_accepted then
-		return true
-	end
-
-	return false
+	return true
 end
 
 return director

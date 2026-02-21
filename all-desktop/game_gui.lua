@@ -1656,12 +1656,6 @@ function game_gui:show_achievement(id)
 		return
 	end
 
-	if features.hide_achievements_popup then
-		log.debug("features.hide_achievements_popup enabled: not showing achievement popup")
-
-		return
-	end
-
 	if not self.achievement_banner then
 		self.achievement_banner = AchievementBanner:new()
 

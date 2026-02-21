@@ -189,7 +189,7 @@ function screen:start_animation()
 	img:add_child(img_shine)
 
 	local function end_logo_shine()
-		local fade_out_duration = features.splash_fade_out_duration or 0.8
+		local fade_out_duration = 0.8
 
 		timer:tween(fade_out_duration, img, {
 			alpha = 0

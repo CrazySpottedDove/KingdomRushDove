@@ -288,17 +288,6 @@ function screen:init(w, h, done_callback)
 		window:get_child_by_id("main_menu_subtitle_cn").hidden = false
 	end
 
-	if features.gov_approval_id then
-		local v = window:get_child_by_id("gov_approval_view")
-
-		v.hidden = false
-		v.text = string.format(v.text, features.gov_approval_id)
-	end
-
-	if features.health_warning then
-		window:get_child_by_id("health_advice_view").hidden = false
-	end
-
 	local banner = window:get_child_by_id("banner")
 
 	banner.propagate_on_click = true

@@ -282,21 +282,24 @@ end
 
 if version.build == "RELEASE" then
 	DEBUG = nil
-	log.level = log.ERROR_LEVEL
+	log:set_level("error")
+-- log.level = log.ERROR_LEVEL
 
-	local ok, l = pcall(require, "log_levels_release")
+-- local ok, l = pcall(require, "log_levels_release")
 
-	log.default_level_by_name = ok and l or {}
+-- log.default_level_by_name = ok and l or {}
 else
 	DEBUG = true
-	log.level = log.INFO_LEVEL
+	log:set_level("info")
+-- log.level = log.INFO_LEVEL
 
-	local ok, l = pcall(require, "log_levels_debug")
+-- local ok, l = pcall(require, "log_levels_debug")
 
-	log.default_level_by_name = ok and l or {}
+-- log.default_level_by_name = ok and l or {}
 end
 
 log.use_print = KR_PLATFORM == "android"
+log = log:new("main")
 
 local features = require("features")
 local storage = require("storage")
