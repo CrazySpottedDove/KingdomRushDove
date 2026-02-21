@@ -319,8 +319,4 @@ function screen_comics:mousereleased(x, y, button)
 	return
 end
 
-function screen_comics:gamepadpressed(joystick, button)
-	self:skip()
-end
-
 return screen_comics

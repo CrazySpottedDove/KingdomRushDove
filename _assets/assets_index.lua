@@ -1049,6 +1049,9 @@ return {
 	["kr1-desktop/images/fullhd/go_stage2003_bg-1.png"] = {
 		size = 2341147
 	},
+	["kr1-desktop/images/fullhd/go_stage2004_bg-1.dds"] = {
+		size = 2847828
+	},
 	["kr1-desktop/images/fullhd/go_stage20_bg-1.dds"] = {
 		size = 1036928
 	},

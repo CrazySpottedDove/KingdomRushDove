@@ -8,7 +8,6 @@ local km = require("lib.klua.macros")
 local timer = require("hump.timer").new()
 local S = require("sound_db")
 local SU = require("screen_utils")
-local ISM = require("input_state_machine")
 local i18n = require("i18n")
 local version = require("version")
 require("klove.kui")
@@ -460,44 +459,9 @@ function screen:init(w, h, done_callback, ending_version)
 			back:add_child(tbh1)
 		end
 	end
-
-	local ism_data = {
-		FIRST = {{
-			"escape",
-			true,
-			[4] = function()
-				self:on_end_credits()
-			end
-		}, {"return", "escape"}, {
-			"space",
-			true,
-			[4] = function()
-				self.scroll_paused = not self.scroll_paused
-			end
-		}, {
-			"up",
-			true,
-			[4] = self.c_scroll,
-			[5] = {100}
-		}, {
-			"down",
-			true,
-			[4] = self.c_scroll,
-			[5] = {-100}
-		}, {"jleftxy", ISM.q_rate_limit, {0.1}, self.c_scroll, {100}}, {
-			"ja",
-			true,
-			[4] = function()
-				self.scroll_paused = not self.scroll_paused
-			end
-		}, {"jb", "escape"}, {"jdpup", "up"}, {"jdpdown", "down"}}
-	}
-
-	ISM:init(ism_data, window)
 end
 
 function screen:destroy()
-	ISM:destroy(self.window)
 	timer:clear()
 	self.window:destroy()
 
@@ -525,20 +489,6 @@ function screen:on_end_credits()
 			next_item_name = "slots"
 		})
 	end)
-end
-
-function screen.c_scroll(ctx, step)
-	screen.scroll_paused = true
-
-	if ctx.axis_value then
-		local vx, vy = ctx.axis_value[1], ctx.axis_value[2] * ISM.joy_y_axis_factor
-
-		step = (vy > 0 and 1 or -1) * step
-	end
-
-	local dl = screen.scroller.drag_limits
-
-	screen.scroller.pos.y = km.clamp(dl.size.y, dl.pos.y, screen.scroller.pos.y + step)
 end
 
 function screen:update(dt)

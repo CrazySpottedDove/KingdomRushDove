@@ -547,48 +547,6 @@ function love.touchmoved(id, x, y, dx, dy, pressure)
 	end
 end
 
-function love.gamepadaxis(joystick, axis, value)
-	if main.handler.gamepadaxis then
-		main.handler:gamepadaxis(joystick, axis, value)
-	end
-end
-
-function love.gamepadpressed(joystick, button)
-	if main.handler.gamepadpressed then
-		main.handler:gamepadpressed(joystick, button)
-	end
-end
-
-function love.gamepadreleased(joystick, button)
-	if main.handler.gamepadreleased then
-		main.handler:gamepadreleased(joystick, button)
-	end
-end
-
-function love.joystickpressed(joystick, button)
-	if main.handler.joystickpressed then
-		main.handler:joystickpressed(joystick, button)
-	end
-end
-
-function love.joystickreleased(joystick, button)
-	if main.handler.joystickreleased then
-		main.handler:joystickreleased(joystick, button)
-	end
-end
-
-function love.joystickadded(joystick)
-	if main.handler.joystickadded then
-		main.handler:joystickadded(joystick)
-	end
-end
-
-function love.joystickremoved(joystick)
-	if main.handler.joystickremoved then
-		main.handler:joystickremoved(joystick)
-	end
-end
-
 function love.resize(w, h)
 	if main.handler.resize then
 		main.handler:resize(w, h)
@@ -768,12 +726,6 @@ function love.errorhandler(msg)
 
 		if love.mouse.isCursorSupported() then
 			love.mouse.setCursor()
-		end
-	end
-
-	if love.joystick then
-		for i, v in ipairs(love.joystick.getJoysticks()) do
-			v:setVibration()
 		end
 	end
 

@@ -491,48 +491,6 @@ function game:touchmoved(id, x, y, dx, dy, pressure)
 	end
 end
 
-function game:gamepadaxis(joystick, axis, value)
-	if self.game_gui.gamepadaxis then
-		self.game_gui:gamepadaxis(joystick, axis, value)
-	end
-end
-
-function game:gamepadpressed(joystick, button)
-	if self.game_gui.gamepadpressed then
-		self.game_gui:gamepadpressed(joystick, button)
-	end
-end
-
-function game:gamepadreleased(joystick, button)
-	if self.game_gui.gamepadreleased then
-		self.game_gui:gamepadreleased(joystick, button)
-	end
-end
-
-function game:joystickpressed(joystick, button)
-	if self.game_gui.joystickpressed then
-		self.game_gui:joystickpressed(joystick, button)
-	end
-end
-
-function game:joystickreleased(joystick, button)
-	if self.game_gui.joystickreleased then
-		self.game_gui:joystickreleased(joystick, button)
-	end
-end
-
-function game:joystickadded(joystick)
-	if self.game_gui.joystickadded then
-		self.game_gui:joystickadded(joystick)
-	end
-end
-
-function game:joystickremoved(joystick)
-	if self.game_gui.joystickremoved then
-		self.game_gui:joystickremoved(joystick)
-	end
-end
-
 function game:focus(focus)
 	if self.game_gui.focus then
 		self.game_gui:focus(focus)

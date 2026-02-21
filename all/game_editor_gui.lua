@@ -1,6 +1,5 @@
 -- chunkname: @./all/game_editor_gui.lua
 local log = require("lib.klua.log"):new("game_editor_gui")
-local ism
 local km = require("lib.klua.macros")
 
 require("lib.klua.table")
@@ -24,12 +23,6 @@ local G = love.graphics
 require("all.constants")
 
 local IS_KR5 = KR_GAME == "kr5"
-
-if IS_KR5 then
-	ism = require("klove.input_state_machine")
-else
-	ism = require("input_state_machine")
-end
 
 if DEBUG then
 	package.loaded.game_editor_classes = nil
@@ -1498,37 +1491,40 @@ function gui.set_nav_mesh(view, edge_idx)
 end
 
 function gui.assign_nearest_selected(e)
-	if not e then
-		log.error("invalid entity")
+	return
 
-		return
-	end
+-- banned. Delete Input State Machine
+-- if not e then
+-- 	log.error("invalid entity")
 
-	local nearby = {}
+-- 	return
+-- end
 
-	for _, ee in pairs(gui.editor.store.entities) do
-		if ee ~= e and ee.ui then
-			table.insert(nearby, ee)
-		end
-	end
+-- local nearby = {}
 
-	table.sort(nearby, function(e1, e2)
-		return V.dist(e1.pos.x, e1.pos.y, e.pos.x, e.pos.y) < V.dist(e2.pos.x, e2.pos.y, e.pos.x, e.pos.y)
-	end)
+-- for _, ee in pairs(gui.editor.store.entities) do
+-- 	if ee ~= e and ee.ui then
+-- 		table.insert(nearby, ee)
+-- 	end
+-- end
 
-	local nav_mesh = gui.editor.store.level.nav_mesh
+-- table.sort(nearby, function(e1, e2)
+-- 	return V.dist(e1.pos.x, e1.pos.y, e.pos.x, e.pos.y) < V.dist(e2.pos.x, e2.pos.y, e.pos.x, e.pos.y)
+-- end)
 
-	for i = 1, 4 do
-		for _, ee in ipairs(nearby) do
-			if ism.get_dir_idx(ee.pos.x - e.pos.x, ee.pos.y - e.pos.y) == i then
-				nav_mesh[tonumber(e.ui.nav_mesh_id)][i] = tonumber(ee.ui.nav_mesh_id)
+-- local nav_mesh = gui.editor.store.level.nav_mesh
 
-				break
-			end
-		end
-	end
+-- for i = 1, 4 do
+-- 	for _, ee in ipairs(nearby) do
+-- 		if ism.get_dir_idx(ee.pos.x - e.pos.x, ee.pos.y - e.pos.y) == i then
+-- 			nav_mesh[tonumber(e.ui.nav_mesh_id)][i] = tonumber(ee.ui.nav_mesh_id)
 
-	gui.editor.nav_dirty = true
+-- 			break
+-- 		end
+-- 	end
+-- end
+
+-- gui.editor.nav_dirty = true
 end
 
 function gui.assign_nearest_all()

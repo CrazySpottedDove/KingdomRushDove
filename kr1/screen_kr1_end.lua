@@ -63,12 +63,6 @@ function screen:mousereleased(x, y, button)
 	end
 end
 
-function screen:gamepadpressed(joystick, button)
-	if self.active_screen and self.active_screen.gamepadpressed then
-		self.active_screen:gamepadpressed(joystick, button)
-	end
-end
-
 function screen:next_item()
 	local function cb()
 		self:next_item()

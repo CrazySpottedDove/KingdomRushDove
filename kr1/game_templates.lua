@@ -1433,25 +1433,10 @@ tt.render.sprites[1].name = "start"
 tt.render.sprites[1].offset.y = 36
 tt.render.sprites[1].prefix = "mod_jt"
 tt.render.sprites[1].z = Z_OBJECTS
-
-if IS_CONSOLE then
-	tt.render.sprites[2] = CC("sprite")
-	tt.render.sprites[2].alpha = 150
-	tt.render.sprites[2].alpha_focused = 255
-	tt.render.sprites[2].alpha_unfocused = 150
-	tt.render.sprites[2].animated = false
-	tt.render.sprites[2].name = "joystick_shortcuts_hud_0007"
-	tt.render.sprites[2].name_focused = "joystick_shortcuts_hud_halo_0007"
-	tt.render.sprites[2].name_unfocused = "joystick_shortcuts_hud_0007"
-	tt.render.sprites[2].offset.y = 20
-	tt.render.sprites[2].scale = vec_1(1.6)
-else
-	tt.render.sprites[2] = CC("sprite")
-	tt.render.sprites[2].name = "decal_jt_tap"
-	tt.render.sprites[2].offset = vec_2(10, 20)
-	tt.render.sprites[2].random_ts = fts(7)
-end
-
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].name = "decal_jt_tap"
+tt.render.sprites[2].offset = vec_2(10, 20)
+tt.render.sprites[2].random_ts = fts(7)
 tt.render.sprites[2].draw_order = 11
 tt.render.sprites[2].hidden = true
 tt.render.sprites[2].z = Z_OBJECTS
@@ -1539,25 +1524,10 @@ tt.render.sprites[1].name = "start"
 tt.render.sprites[1].offset.y = 36
 tt.render.sprites[1].prefix = "mod_veznan"
 tt.render.sprites[1].z = Z_OBJECTS
-
-if IS_CONSOLE then
-	tt.render.sprites[2] = CC("sprite")
-	tt.render.sprites[2].alpha = 150
-	tt.render.sprites[2].alpha_focused = 255
-	tt.render.sprites[2].alpha_unfocused = 150
-	tt.render.sprites[2].animated = false
-	tt.render.sprites[2].name = "joystick_shortcuts_hud_0007"
-	tt.render.sprites[2].name_focused = "joystick_shortcuts_hud_halo_0007"
-	tt.render.sprites[2].name_unfocused = "joystick_shortcuts_hud_0007"
-	tt.render.sprites[2].offset.y = 20
-	tt.render.sprites[2].scale = vec_1(1.6)
-else
-	tt.render.sprites[2] = CC("sprite")
-	tt.render.sprites[2].name = "decal_veznan_tap"
-	tt.render.sprites[2].offset = vec_2(10, 20)
-	tt.render.sprites[2].random_ts = fts(7)
-end
-
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].name = "decal_veznan_tap"
+tt.render.sprites[2].offset = vec_2(10, 20)
+tt.render.sprites[2].random_ts = fts(7)
 tt.render.sprites[2].draw_order = 11
 tt.render.sprites[2].hidden = true
 tt.render.sprites[2].z = Z_OBJECTS

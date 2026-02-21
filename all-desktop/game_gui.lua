@@ -582,8 +582,8 @@ end
 
 function game_gui:update(dt)
 	self.to = self.to + dt
-	-- 为了节约开销，我们锁定 gui 的更新频率到 60 FPS
-	dt = 0.016666666667
+	-- 为了节约开销，我们锁定 gui 的绘制速度恒为 DRAW_FPS，以避免多倍速时 GUI 更新过快占用性能
+	dt = TICK_LENGTH
 	while self.to > dt do
 		self.to = self.to - dt
 		timer:update(dt)

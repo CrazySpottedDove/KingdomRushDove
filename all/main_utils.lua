@@ -176,80 +176,17 @@ function mu.default_params(params, game_name, game_target, game_platform)
 		end
 	end
 
-	if love.joystick then
-		love.joystick.loadGamepadMappings("6e7061645f68616e6468656c64307801,Joy-Cons connected to console,platform:Nintendo Switch,a:b4,b:b5,x:b6,y:b7,back:b15,start:b14,leftstick:b12,rightstick:b13,leftshoulder:b8,rightshoulder:b9,dpup:b0,dpdown:b1,dpleft:b2,dpright:b3,leftx:a0,lefty:a1,rightx:a2,righty:a3,lefttrigger:b10,righttrigger:b11,platform:Nintendo Switch,")
-		love.joystick.loadGamepadMappings("6e7061645f6a6f796c65667430307801,Joy-Con (Left),platform:Nintendo Switch,a:b3,b:b1,x:b0,y:b2,start:b7,leftstick:b6,leftshoulder:b8,rightshoulder:b4,leftx:a0,lefty:a1,lefttrigger:b9,righttrigger:b5,")
-		love.joystick.loadGamepadMappings("6e7061645f6a6f797269676874307801,Joy-Con (Right),platform:Nintendo Switch,a:b0,b:b1,x:b2,y:b3,start:b7,leftstick:b6,leftshoulder:b9,rightshoulder:b4,leftx:a0,lefty:a1,lefttrigger:b8,righttrigger:b5,")
-		love.joystick.loadGamepadMappings("6e7061645f6a6f796475616c30307801,Joy-Con (Dual),platform:Nintendo Switch,a:b4,b:b5,x:b6,y:b7,back:b15,start:b14,leftstick:b12,rightstick:b13,leftshoulder:b8,rightshoulder:b9,dpup:b0,dpdown:b1,dpleft:b2,dpright:b3,leftx:a0,lefty:a1,rightx:a2,righty:a3,lefttrigger:b10,righttrigger:b11,")
-		love.joystick.loadGamepadMappings("6e7061645f66756c6c6b657930307801,Switch Pro Controller compatible,platform:Nintendo Switch,a:b4,b:b5,x:b6,y:b7,back:b15,start:b14,leftstick:b12,rightstick:b13,leftshoulder:b8,rightshoulder:b9,dpup:b0,dpdown:b1,dpleft:b2,dpright:b3,leftx:a0,lefty:a1,rightx:a2,righty:a3,lefttrigger:b10,righttrigger:b11,")
-	end
-
-	if game_target == "desktop" then
-		d("width", 1024)
-		d("height", 768)
-		d("texture_size", "fullhd")
-		d("fps", 60)
-		d("msaa", 0)
-		d("vsync", false)
-		d("volume_music", 0.5)
-		d("volume_fx", 1)
-		d("highdpi", false)
-		d("pause_on_switch", false)
-		d("image_db_uses_canvas", false)
-	elseif game_target == "phone" then
-		if game_platform == "ios" then
-			d("fullscreen", false)
-			d("highdpi", true)
-		else
-			d("fullscreen", (not api_level or api_level >= 19 or has_menu_key) and true or false)
-		end
-
-		d("width", 1024)
-		d("height", 768)
-		d("skip_settings_dialog", true)
-		d("texture_size", "iphonehd")
-		d("fps", device_profile >= DEVICE_PROFILE_HIGH and 60 or 30, true)
-		d("msaa", 0)
-		d("vsync", true)
-		d("volume_music", 0.5)
-		d("volume_fx", 1)
-		d("image_db_uses_canvas", true)
-		d("locale", device_locale)
-	elseif game_target == "tablet" then
-		if game_platform == "ios" then
-			d("fullscreen", false)
-			d("highdpi", true)
-		else
-			d("fullscreen", (not api_level or api_level >= 19 or has_menu_key) and true or false)
-		end
-
-		d("width", 1024)
-		d("height", 768)
-		d("skip_settings_dialog", true)
-		d("texture_size", "ipadhd")
-		d("fps", device_profile >= DEVICE_PROFILE_HIGH and 60 or 30, true)
-		d("msaa", 0)
-		d("vsync", true)
-		d("volume_music", 0.5)
-		d("volume_fx", 1)
-		d("image_db_uses_canvas", true)
-		d("locale", device_locale)
-	elseif game_target == "console" then
-		d("fps", 30)
-		d("fullscreen", false)
-		d("height", 1080)
-		d("width", 1920)
-		d("highdpi", false)
-		d("image_db_uses_canvas", true)
-		d("msaa", 0)
-		d("pause_on_switch", false)
-		d("skip_settings_dialog", true)
-		d("texture_size", "fullhd")
-		d("volume_fx", 1)
-		d("volume_music", 0.5)
-		d("vsync", true)
-		d("locale", device_locale)
-	end
+	d("width", 1024)
+	d("height", 768)
+	d("texture_size", "fullhd")
+	d("fps", 60)
+	d("msaa", 0)
+	d("vsync", false)
+	d("volume_music", 0.5)
+	d("volume_fx", 1)
+	d("highdpi", false)
+	d("pause_on_switch", false)
+	d("image_db_uses_canvas", false)
 
 	if params.locale and not i18n.locale_names[params.locale] then
 		log.error("Invalid locale %s in settings.lua. Falling back to default.", params.locale)

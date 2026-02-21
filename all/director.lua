@@ -856,68 +856,6 @@ function director:touchmoved(id, x, y, dx, dy, pressure)
 	end
 end
 
-function director:gamepadaxis(joystick, axis, value)
-	if self.active_item and self.active_item.gamepadaxis then
-		self.active_item:gamepadaxis(joystick, axis, value)
-	end
-end
-
-function director:gamepadpressed(joystick, button)
-	if self.active_item then
-		if self.active_item.gamepadpressed then
-			self.active_item:gamepadpressed(joystick, button)
-		end
-
-		local state = self.active_item and self.active_item.get_ism_state and self.active_item:get_ism_state()
-
-		if ISM then
-			ISM:proc_button(state, joystick, button)
-		end
-	end
-end
-
-function director:gamepadreleased(joystick, button)
-	if self.active_item and self.active_item.gamepadreleased then
-		self.active_item:gamepadreleased(joystick, button)
-	end
-end
-
-function director:joystickpressed(joystick, button)
-	if self.active_item and self.active_item.joystickpressed then
-		self.active_item:joystickpressed(joystick, button)
-	end
-end
-
-function director:joystickreleased(joystick, button)
-	if self.active_item and self.active_item.joystickreleased then
-		self.active_item:joystickreleased(joystick, button)
-	end
-end
-
-function director:joystickadded(joystick)
-	if ISM then
-		ISM:joystickadded(joystick)
-	end
-
-	if self.active_item and self.active_item.joystickadded then
-		self.active_item:joystickadded(joystick)
-	end
-
-	signal.emit("joystick-added", joystick)
-end
-
-function director:joystickremoved(joystick)
-	if ISM then
-		ISM:joystickremoved(joystick)
-	end
-
-	if self.active_item and self.active_item.joystickremoved then
-		self.active_item:joystickremoved(joystick)
-	end
-
-	signal.emit("joystick-removed", joystick)
-end
-
 function director:resize(w, h)
 	log.debug(">>>>>>>>> screen size changed to %s,%s", w, h)
 	self:reset_screen_params()
