@@ -22,6 +22,89 @@ path_db.path_valid_margin = 1
 path_db.path_valid_margin_top = 2
 path_db.average_node_dist = 6
 
+local function load_file_by_name(name)
+	local data
+	local fn = KR_PATH_GAME .. "/data/levels/" .. name .. "_paths.lua"
+	if not is_file(fn) then
+		log.debug("Level paths file does not exist for %s", fn)
+
+		data = {
+			connections = {},
+			curves = {},
+			paths = {},
+			active = {}
+		}
+	else
+		local f, err = love.filesystem.load(fn)
+
+		if err then
+			log.error("Error loading path curves for %s: %s", fn, err)
+
+			return nil
+		end
+
+		data = f()
+	end
+	return data
+end
+
+--- 在初始化阶段把有 path_connections 的链合并为单一路径
+--- 支持多级 path_connections (A->B->C->D...)
+--- path_connections 仍然保留以供查询，但不再用于路径切换
+function path_db:flatten_path_connections()
+
+	-- 获取完整连接链
+	local function resolve_chain(start_key)
+		local chain = {}
+		local visited = {}
+
+		local cur = start_key
+		while cur and not visited[cur] do
+			visited[cur] = true
+			chain[#chain + 1] = cur
+			cur = self.path_connections[cur]
+		end
+
+		return chain
+	end
+
+	for from_key, _ in pairs(self.path_connections) do
+
+		local chain = resolve_chain(from_key)
+
+		-- 至少需要两个节点才有意义
+		if #chain < 2 then
+			goto continue
+		end
+
+		local from_path = self.paths[chain[1]]
+
+		for spi, subpath in ipairs(from_path) do
+
+			local current_subpath = subpath
+			local last_node = current_subpath[#current_subpath]
+
+			-- 依次拼接后续路径
+			for ci = 2, #chain do
+				local to_key = chain[ci]
+				local to_path = self.paths[to_key]
+
+				local _, newspi, newni = unpack(self:nearest_nodes(last_node.x, last_node.y, {to_key}, {spi})[1])
+
+				local to_subpath = to_path[newspi]
+
+				for i = newni, #to_subpath do
+					current_subpath[#current_subpath + 1] = V.vclone(to_subpath[i])
+				end
+
+				last_node = current_subpath[#current_subpath]
+			end
+		end
+
+		::continue::
+	end
+end
+
 function path_db:load(name, visible_coords)
 	self.paths = {}
 	self.path_connections = {}
@@ -37,29 +120,7 @@ function path_db:load(name, visible_coords)
 	self.defend_point_node = {}
 	self.path_curves = {}
 
-	local path_list
-	local fn = KR_PATH_GAME .. "/data/levels/" .. name .. "_paths.lua"
-
-	if not is_file(fn) then
-		log.debug("Level paths file does not exist for %s", fn)
-
-		path_list = {
-			connections = {},
-			paths = {},
-			active = {},
-			curves = {}
-		}
-	else
-		local f, err = love.filesystem.load(fn)
-
-		if err then
-			log.error("Error loading paths for %s: %s", fn, err)
-
-			return nil
-		end
-
-		path_list = f()
-	end
+	local path_list = load_file_by_name(name)
 
 	for i, p in ipairs(path_list.paths) do
 		if path_list.active and path_list.active[i] == false then
@@ -74,9 +135,10 @@ function path_db:load(name, visible_coords)
 	self.paths = table.merge(self.paths, path_list.paths)
 	self.path_connections = table.merge(self.path_connections, path_list.connections)
 
-	if path_list.curves then
-		self.path_curves = table.merge(self.path_curves, path_list.curves)
-	end
+	-- if path_list.curves then
+	-- 	self.path_curves = table.merge(self.path_curves, path_list.curves)
+	-- end
+	self:flatten_path_connections()
 
 	for i, p in ipairs(self.paths) do
 		local terrain_types = TERRAIN_NONE
@@ -281,11 +343,11 @@ function path_db:nodes_to_goal(p1, p2, p3)
 
 	count = count + self.path_end_node[cpi]
 
-	if self.path_connections[cpi] then
-		cpi = self.path_connections[cpi]
+	-- if self.path_connections[cpi] then
+	-- 	cpi = self.path_connections[cpi]
 
-		goto label_16_0
-	end
+	-- 	goto label_16_0
+	-- end
 
 	return count, cpi
 end
@@ -497,24 +559,24 @@ function path_db:next_entity_node(e, dt)
 		n.ni = n.ni + n.dir
 
 		if n.ni < 1 or n.ni > #path then
-			if self.path_connections[n.pi] and n.dir > 0 then
-				n.prev_pis = n.prev_pis or {}
+			-- if self.path_connections[n.pi] and n.dir > 0 then
+			-- 	n.prev_pis = n.prev_pis or {}
 
-				table.insert(n.prev_pis, n.pi)
+			-- 	table.insert(n.prev_pis, n.pi)
 
-				local newpi, newspi, newni, dist
+			-- 	local newpi, newspi, newni, dist
 
-				newpi = self.path_connections[n.pi]
-				newpi, newspi, newni, dist = unpack(self:nearest_nodes(e.pos.x, e.pos.y, {newpi})[1])
+			-- 	newpi = self.path_connections[n.pi]
+			-- 	newpi, newspi, newni, dist = unpack(self:nearest_nodes(e.pos.x, e.pos.y, {newpi})[1])
 
-				log.debug("Entity %s switching from path:%i,%i,%i -> path:%i,%i,%i", e.id, n.pi, n.spi, n.ni, newpi, newspi, newni)
+			-- 	log.debug("Entity %s switching from path:%i,%i,%i -> path:%i,%i,%i", e.id, n.pi, n.spi, n.ni, newpi, newspi, newni)
 
-				n.pi = newpi
-				n.ni = newni + n.dir
-				path = self.paths[n.pi][n.spi]
-			else
-				return nil
-			end
+			-- 	n.pi = newpi
+			-- 	n.ni = newni + n.dir
+			-- 	path = self.paths[n.pi][n.spi]
+			-- else
+			return nil
+		-- end
 		end
 
 		new = true
@@ -679,29 +741,7 @@ function path_db:nodes_as_list(id)
 end
 
 function path_db:load_curves(name)
-	local data
-	local fn = KR_PATH_GAME .. "/data/levels/" .. name .. "_paths.lua"
-
-	if not is_file(fn) then
-		log.debug("Level paths file does not exist for %s", fn)
-
-		data = {
-			connections = {},
-			curves = {},
-			paths = {},
-			active = {}
-		}
-	else
-		local f, err = love.filesystem.load(fn)
-
-		if err then
-			log.error("Error loading path curves for %s: %s", fn, err)
-
-			return nil
-		end
-
-		data = f()
-	end
+	local data = load_file_by_name(name)
 
 	self.path_connections = data.connections or {}
 	self.path_curves = data.curves or {}

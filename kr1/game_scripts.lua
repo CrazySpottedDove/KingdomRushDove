@@ -24718,7 +24718,7 @@ end
 
 scripts.aura_elemental_water_healing = {}
 
-function scripts.aura_elemental_water_healing.update(this, store, script)
+function scripts.aura_elemental_water_healing.update(this, store)
 	local first_hit_ts
 	local last_hit_ts = 0
 	local cycles_count = 0
@@ -25113,7 +25113,7 @@ end
 
 scripts.soldier_earth_elemental = {}
 
-function scripts.soldier_earth_elemental.update(this, store, script)
+function scripts.soldier_earth_elemental.update(this, store)
 	local brk, stam, star
 	local source = this.source
 
@@ -25241,7 +25241,7 @@ function scripts.mod_elemental_earth_increase_health.insert(this, store)
 	return true
 end
 
-function scripts.mod_elemental_earth_increase_health.update(this, store, script)
+function scripts.mod_elemental_earth_increase_health.update(this, store)
 	local m = this.modifier
 	local fx_ts = 0
 	local target = store.entities[m.target_id]
@@ -25686,7 +25686,7 @@ function scripts.mod_elemental_metal_gold_per_damage.insert(this, store)
 	return true
 end
 
-function scripts.mod_elemental_metal_gold_per_damage.update(this, store, script)
+function scripts.mod_elemental_metal_gold_per_damage.update(this, store)
 	local m = this.modifier
 	local fx_ts = 0
 	local target = store.entities[m.target_id]
@@ -25793,7 +25793,7 @@ end
 
 scripts.decal_stage_01_robin_hood = {}
 
-function scripts.decal_stage_01_robin_hood.update(this, store, script)
+function scripts.decal_stage_01_robin_hood.update(this, store)
 	local s = this.render.sprites[1]
 	local can_click = true
 	local clicked = false
@@ -25851,7 +25851,7 @@ end
 
 scripts.decal_stage_01_campfire_guy_campfire = {}
 
-function scripts.decal_stage_01_campfire_guy_campfire.update(this, store, script)
+function scripts.decal_stage_01_campfire_guy_campfire.update(this, store)
 	local count = 0
 	local count_limit = 2
 
@@ -25899,7 +25899,7 @@ end
 
 scripts.decal_stage_01_rune = {}
 
-function scripts.decal_stage_01_rune.update(this, store, script)
+function scripts.decal_stage_01_rune.update(this, store)
 	local s = this.render.sprites[1]
 	local c = this.click_play
 	local clicks = 0
@@ -25944,7 +25944,7 @@ end
 
 scripts.stage_02_arborean_old = {}
 
-function scripts.stage_02_arborean_old.update(this, store, script)
+function scripts.stage_02_arborean_old.update(this, store)
 	while true do
 		U.y_animation_play(this, "idle1", nil, store.tick_ts, 1)
 		U.y_wait(store, fts(30 * math.random(4, 7)))
@@ -25957,7 +25957,7 @@ end
 
 scripts.stage_02_arborean_baby1 = {}
 
-function scripts.stage_02_arborean_baby1.update(this, store, script)
+function scripts.stage_02_arborean_baby1.update(this, store)
 	while true do
 		U.y_animation_play(this, "idle1", nil, store.tick_ts, 1)
 		U.y_wait(store, fts(math.random(30, 90)))
@@ -25976,7 +25976,7 @@ end
 
 scripts.stage_02_arborean_baby2 = {}
 
-function scripts.stage_02_arborean_baby2.update(this, store, script)
+function scripts.stage_02_arborean_baby2.update(this, store)
 	local is_standup = true
 
 	this.is_hidden = false
@@ -26049,7 +26049,7 @@ end
 
 scripts.decal_stage_02_rune = {}
 
-function scripts.decal_stage_02_rune.insert(this, store, script)
+function scripts.decal_stage_02_rune.insert(this, store)
 	this.base_rock = E:create_entity(this.base_rock_entity)
 	this.base_rock.pos = this.pos
 
@@ -26058,7 +26058,7 @@ function scripts.decal_stage_02_rune.insert(this, store, script)
 	return true
 end
 
-function scripts.decal_stage_02_rune.update(this, store, script)
+function scripts.decal_stage_02_rune.update(this, store)
 	local s = this.render.sprites[1]
 	local c = this.click_play
 	local clicks = 0
@@ -26109,7 +26109,7 @@ end
 
 scripts.decal_stage_02_fishing_link = {}
 
-function scripts.decal_stage_02_fishing_link.insert(this, store, script)
+function scripts.decal_stage_02_fishing_link.insert(this, store)
 	local e = E:create_entity(this.entity_line)
 
 	e.pos = this.pos
@@ -26120,7 +26120,7 @@ function scripts.decal_stage_02_fishing_link.insert(this, store, script)
 	return true
 end
 
-function scripts.decal_stage_02_fishing_link.update(this, store, script)
+function scripts.decal_stage_02_fishing_link.update(this, store)
 	local s = this.render.sprites[1]
 	local c = this.click_play
 	local line_move_cd = math.random(this.min_line_move_cd, this.max_line_move_cd)
@@ -26232,7 +26232,7 @@ end
 
 scripts.decal_stage_02_fishing_link_line = {}
 
-function scripts.decal_stage_02_fishing_link_line.update(this, store, script)
+function scripts.decal_stage_02_fishing_link_line.update(this, store)
 	local already_move = false
 	local water_splash
 
@@ -26317,7 +26317,7 @@ end
 
 scripts.decal_stage_02_lion_king = {}
 
-function scripts.decal_stage_02_lion_king.insert(this, store, script)
+function scripts.decal_stage_02_lion_king.insert(this, store)
 	this.light = E:create_entity(this.entity_light)
 	this.light.pos = v(979, 428)
 
@@ -26326,7 +26326,7 @@ function scripts.decal_stage_02_lion_king.insert(this, store, script)
 	return true
 end
 
-function scripts.decal_stage_02_lion_king.update(this, store, script)
+function scripts.decal_stage_02_lion_king.update(this, store)
 	local last_change = store.tick_ts
 	local stick_cd = math.random(this.min_cooldown_idle, this.max_cooldown_idle)
 
@@ -26362,7 +26362,7 @@ end
 
 scripts.decal_stage_03_elder_rune = {}
 
-function scripts.decal_stage_03_elder_rune.update(this, store, script)
+function scripts.decal_stage_03_elder_rune.update(this, store)
 	local s = this.render.sprites[1]
 	local c = this.click_play
 	local clicks = 0
@@ -26413,7 +26413,7 @@ end
 
 scripts.decal_stage_03_fat_arborean = {}
 
-function scripts.decal_stage_03_fat_arborean.update(this, store, script)
+function scripts.decal_stage_03_fat_arborean.update(this, store)
 	local s = this.render.sprites[1]
 	local c = this.click_play
 	local clicks = 0
@@ -26454,7 +26454,7 @@ end
 
 scripts.controller_stage_03_arborean_babies = {}
 
-function scripts.controller_stage_03_arborean_babies.update(this, store, script)
+function scripts.controller_stage_03_arborean_babies.update(this, store)
 	local babies = {}
 	local count = 1
 
@@ -26488,7 +26488,7 @@ end
 
 scripts.click_play_and_idle = {}
 
-function scripts.click_play_and_idle.update(this, store, script)
+function scripts.click_play_and_idle.update(this, store)
 	local s = this.render.sprites[1]
 	local c = this.click_play
 	local clicks = 0
@@ -26537,7 +26537,7 @@ end
 
 scripts.decal_scripted_loop_play = {}
 
-function scripts.decal_scripted_loop_play.update(this, store, script)
+function scripts.decal_scripted_loop_play.update(this, store)
 	while true do
 		for _, anim_data in ipairs(this.animations) do
 			local anim = anim_data[1]
@@ -26558,7 +26558,7 @@ end
 
 scripts.stage_4_arborean_vine = {}
 
-function scripts.stage_4_arborean_vine.update(this, store, script)
+function scripts.stage_4_arborean_vine.update(this, store)
 	local s = this.render.sprites[1]
 	local can_click = false
 	local clicked = false
@@ -26613,7 +26613,7 @@ end
 
 scripts.decal_stage_04_elder_rune = {}
 
-function scripts.decal_stage_04_elder_rune.update(this, store, script)
+function scripts.decal_stage_04_elder_rune.update(this, store)
 	local s = this.render.sprites[1]
 	local c = this.click_play
 	local clicks = 0
@@ -26659,7 +26659,7 @@ end
 
 scripts.controller_stage_04_arboreans = {}
 
-function scripts.controller_stage_04_arboreans.update(this, store, script)
+function scripts.controller_stage_04_arboreans.update(this, store)
 	this.arboreans_down = 0
 
 	while true do
@@ -26781,7 +26781,7 @@ end
 
 scripts.controller_stage_04_easteregg_sheepy = {}
 
-function scripts.controller_stage_04_easteregg_sheepy.update(this, store, script)
+function scripts.controller_stage_04_easteregg_sheepy.update(this, store)
 	local decal_old_man = table.filter(store.entities, function(k, v)
 		return v.template_name == "decal_stage_04_easteregg_sheepy_old_man"
 	end)[1]
@@ -26831,7 +26831,7 @@ end
 
 scripts.decal_stage_04_easteregg_sheepy_baby = {}
 
-function scripts.decal_stage_04_easteregg_sheepy_baby.update(this, store, script)
+function scripts.decal_stage_04_easteregg_sheepy_baby.update(this, store)
 	local walking_left = false
 	local is_dead = false
 	local destination_idx = 1
@@ -26884,7 +26884,7 @@ end
 
 scripts.decal_stage_05_elder_rune = {}
 
-function scripts.decal_stage_05_elder_rune.update(this, store, script)
+function scripts.decal_stage_05_elder_rune.update(this, store)
 	local s = this.render.sprites[1]
 	local c = this.click_play
 	local clicks = 0
@@ -27026,7 +27026,7 @@ end
 
 scripts.decal_stage_06_elder_rune = {}
 
-function scripts.decal_stage_06_elder_rune.update(this, store, script)
+function scripts.decal_stage_06_elder_rune.update(this, store)
 	local s = this.render.sprites[1]
 	local c = this.click_play
 	local clicks = 0
@@ -27304,7 +27304,7 @@ end
 
 scripts.controller_stage_07_crows = {}
 
-function scripts.controller_stage_07_crows.update(this, store, script)
+function scripts.controller_stage_07_crows.update(this, store)
 	local crows = {}
 	local count = 1
 
@@ -27338,7 +27338,7 @@ end
 
 scripts.stage_07_crow = {}
 
-function scripts.stage_07_crow.update(this, store, script)
+function scripts.stage_07_crow.update(this, store)
 	local tap_count = 0
 	local taps_to_fly = 3
 	local chance_to_die = 0.1
@@ -27383,7 +27383,7 @@ end
 
 scripts.stage_07_witcher = {}
 
-function scripts.stage_07_witcher.update(this, store, script)
+function scripts.stage_07_witcher.update(this, store)
 	while store.wave_group_number <= 0 do
 		coroutine.yield()
 	end
@@ -27432,7 +27432,7 @@ end
 
 scripts.controller_stage_08_gem_baskets = {}
 
-function scripts.controller_stage_08_gem_baskets.update(this, store, script)
+function scripts.controller_stage_08_gem_baskets.update(this, store)
 	this.baskets_down = 0
 
 	while true do
@@ -27448,7 +27448,7 @@ end
 
 scripts.stage_08_gem_basket = {}
 
-function scripts.stage_08_gem_basket.update(this, store, script)
+function scripts.stage_08_gem_basket.update(this, store)
 	local tap_count = 0
 	local taps_to_fall = 3
 	local controller
@@ -27852,7 +27852,7 @@ end
 
 scripts.soldier_elf_stage_08 = {}
 
-function scripts.soldier_elf_stage_08.update(this, store, script)
+function scripts.soldier_elf_stage_08.update(this, store)
 	local a = this.bullet_attack
 
 	a.cooldown = U.frandom(a.cooldown_min, a.cooldown_max)
@@ -29887,7 +29887,7 @@ end
 
 scripts.mod_stage_10_obelisk_stun = {}
 
-function scripts.mod_stage_10_obelisk_stun.update(this, store, script)
+function scripts.mod_stage_10_obelisk_stun.update(this, store)
 	local start_ts, target_hidden
 	local m = this.modifier
 	local target = store.entities[this.modifier.target_id]
@@ -29973,7 +29973,7 @@ end
 
 scripts.mod_stage_10_obelisk_heal = {}
 
-function scripts.mod_stage_10_obelisk_heal.update(this, store, script)
+function scripts.mod_stage_10_obelisk_heal.update(this, store)
 	local m = this.modifier
 	local hps = this.hps
 	local duration = m.duration
@@ -30194,7 +30194,7 @@ end
 
 scripts.aura_stage_10_obelisk_teleport = {}
 
-function scripts.aura_stage_10_obelisk_teleport.update(this, store, script)
+function scripts.aura_stage_10_obelisk_teleport.update(this, store)
 	local first_hit_ts
 	local last_hit_ts = 0
 	local cycles_count = 0
@@ -30371,7 +30371,7 @@ end
 
 scripts.soldier_stage_10_ymca = {}
 
-function scripts.soldier_stage_10_ymca.update(this, store, script)
+function scripts.soldier_stage_10_ymca.update(this, store)
 	local brk, stam, star
 
 	this.reinforcement.ts = store.tick_ts
@@ -30992,7 +30992,7 @@ end
 
 scripts.bullet_stage_11_cult_leader_illusion = {}
 
-function scripts.bullet_stage_11_cult_leader_illusion.insert(this, store, script)
+function scripts.bullet_stage_11_cult_leader_illusion.insert(this, store)
 	local b = this.bullet
 
 	b.speed.x, b.speed.y = V.normalize(b.to.x - b.from.x, b.to.y - b.from.y)
@@ -31000,7 +31000,7 @@ function scripts.bullet_stage_11_cult_leader_illusion.insert(this, store, script
 	return true
 end
 
-function scripts.bullet_stage_11_cult_leader_illusion.update(this, store, script)
+function scripts.bullet_stage_11_cult_leader_illusion.update(this, store)
 	local b = this.bullet
 	local mspeed = b.min_speed
 	local target, ps
@@ -31219,7 +31219,7 @@ end
 
 scripts.aura_enemy_stage_11_cult_leader_illusion_shield = {}
 
-function scripts.aura_enemy_stage_11_cult_leader_illusion_shield.update(this, store, script)
+function scripts.aura_enemy_stage_11_cult_leader_illusion_shield.update(this, store)
 	local first_hit_ts
 	local last_hit_ts = 0
 	local cycles_count = 0
@@ -31401,7 +31401,7 @@ function scripts.mod_enemy_stage_11_cult_leader_illusion_shield.remove(this, sto
 	return true
 end
 
-function scripts.mod_enemy_stage_11_cult_leader_illusion_shield.update(this, store, script)
+function scripts.mod_enemy_stage_11_cult_leader_illusion_shield.update(this, store)
 	local m = this.modifier
 
 	this.modifier.ts = store.tick_ts
@@ -31885,7 +31885,7 @@ end
 
 scripts.bullet_stage_11_veznan_skill_1 = {}
 
-function scripts.bullet_stage_11_veznan_skill_1.update(this, store, script)
+function scripts.bullet_stage_11_veznan_skill_1.update(this, store)
 	local b = this.bullet
 	local s = this.render.sprites[1]
 	local mspeed = b.min_speed
@@ -32020,7 +32020,7 @@ end
 
 scripts.soldier_stage_11_veznan_skill_soldiers = {}
 
-function scripts.soldier_stage_11_veznan_skill_soldiers.update(this, store, script)
+function scripts.soldier_stage_11_veznan_skill_soldiers.update(this, store)
 	local brk, stam
 
 	this.render.sprites[1].hidden = true
@@ -32150,7 +32150,7 @@ end
 
 scripts.enemy_glareling = {}
 
-function scripts.enemy_glareling.update(this, store, script)
+function scripts.enemy_glareling.update(this, store)
 	if this.spawn_from_bullet then
 		this.render.sprites[1].flip_x = true
 
@@ -32230,7 +32230,7 @@ end
 
 scripts.decal_stage_11_boss_corrupted_denas_hit = {}
 
-function scripts.decal_stage_11_boss_corrupted_denas_hit.update(this, store, script)
+function scripts.decal_stage_11_boss_corrupted_denas_hit.update(this, store)
 	this.available_nodes = {}
 
 	local nodes = P:get_all_valid_pos(this.pos.x, this.pos.y, 0, this.decal_spawn_range, nil, nil, nil, {1, 2, 3})
@@ -32298,7 +32298,7 @@ end
 
 scripts.mod_stage_11_veznan_skill_cage = {}
 
-function scripts.mod_stage_11_veznan_skill_cage.update(this, store, script)
+function scripts.mod_stage_11_veznan_skill_cage.update(this, store)
 	local start_ts, target_hidden
 	local m = this.modifier
 	local target = store.entities[this.modifier.target_id]
@@ -32758,7 +32758,7 @@ function scripts.mod_glare.insert(this, store)
 	return true
 end
 
-function scripts.mod_glare.update(this, store, script)
+function scripts.mod_glare.update(this, store)
 	local m = this.modifier
 	local hps = this.hps
 	local duration = m.duration
@@ -33889,7 +33889,7 @@ end
 
 scripts.decal_stage_14_easter_egg_rickmorty = {}
 
-function scripts.decal_stage_14_easter_egg_rickmorty.update(this, store, script)
+function scripts.decal_stage_14_easter_egg_rickmorty.update(this, store)
 	local idle_cooldown = math.random(this.idle_cooldown_min, this.idle_cooldown_max)
 	local idle_ts = store.tick_ts
 	local click_amounts = 1
@@ -33959,7 +33959,7 @@ end
 
 scripts.soldier_reinforcement_stage_15_denas = {}
 
-function scripts.soldier_reinforcement_stage_15_denas.update(this, store, script)
+function scripts.soldier_reinforcement_stage_15_denas.update(this, store)
 	local brk, stam, star
 
 	this.reinforcement.ts = store.tick_ts
@@ -34169,7 +34169,7 @@ end
 
 scripts.controller_soldier_reinforcement_stage_15_denas_timeout = {}
 
-function scripts.controller_soldier_reinforcement_stage_15_denas_timeout.update(this, store, script)
+function scripts.controller_soldier_reinforcement_stage_15_denas_timeout.update(this, store)
 	while true do
 		if this.denas.reinforcement.duration and store.tick_ts - this.denas.reinforcement.ts > this.denas.reinforcement.duration then
 			this.denas.health.dead = true
@@ -34280,7 +34280,7 @@ end
 
 scripts.aura_stage_15_cult_leader_tower_stun = {}
 
-function scripts.aura_stage_15_cult_leader_tower_stun.update(this, store, script)
+function scripts.aura_stage_15_cult_leader_tower_stun.update(this, store)
 	local first_hit_ts
 	local last_hit_ts = 0
 	local cycles_count = 0
@@ -34457,7 +34457,7 @@ end
 
 scripts.mod_stage_15_cult_leader_tower_stun = {}
 
-function scripts.mod_stage_15_cult_leader_tower_stun.remove(this, store, script)
+function scripts.mod_stage_15_cult_leader_tower_stun.remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 	local source = store.entities[this.modifier.source_id]
 
@@ -34674,7 +34674,7 @@ end
 
 scripts.controller_stage_18_eridan = {}
 
-function scripts.controller_stage_18_eridan.update(this, store, script)
+function scripts.controller_stage_18_eridan.update(this, store)
 	local ab = this.bullet_attack
 
 	ab.ts = store.tick_ts - ab.cooldown
@@ -34848,7 +34848,7 @@ end
 
 scripts.decal_stage_21_falling_rocks = {}
 
-function scripts.decal_stage_21_falling_rocks.update(this, store, script)
+function scripts.decal_stage_21_falling_rocks.update(this, store)
 	this.render.sprites[2].pos = V.vclone(this.fall_position)
 	this.render.sprites[2].scale = V.vv(this.damage_radius / 60)
 
@@ -34898,7 +34898,7 @@ end
 
 scripts.decal_stage_22_rune_rock = {}
 
-function scripts.decal_stage_22_rune_rock.update(this, store, script)
+function scripts.decal_stage_22_rune_rock.update(this, store)
 	while true do
 		if this.boss_eating then
 			U.y_animation_play(this, this.animation_start, nil, store.tick_ts)
@@ -34918,7 +34918,7 @@ end
 
 scripts.decal_stage_22_remolino = {}
 
-function scripts.decal_stage_22_remolino.update(this, store, script)
+function scripts.decal_stage_22_remolino.update(this, store)
 	local wave_index = 0
 	local run_this_wave = false
 	local wave_start_ts = store.tick_ts
@@ -34968,7 +34968,7 @@ end
 
 scripts.enemy_turtle_shaman = {}
 
-function scripts.enemy_turtle_shaman.update(this, store, script)
+function scripts.enemy_turtle_shaman.update(this, store)
 	local a
 	local ah = this.timed_attacks.list[1]
 
@@ -35055,7 +35055,7 @@ end
 
 scripts.enemy_cutthroat_rat = {}
 
-function scripts.enemy_cutthroat_rat.update(this, store, script)
+function scripts.enemy_cutthroat_rat.update(this, store)
 	local ah = this.timed_attacks.list[1]
 
 	ah.ts = store.tick_ts - ah.cooldown
@@ -35183,8 +35183,8 @@ end
 
 scripts.enemy_basic_with_random_range = {}
 
-function scripts.enemy_basic_with_random_range.insert(this, store, script)
-	if scripts.enemy_basic.insert(this, store, script) then
+function scripts.enemy_basic_with_random_range.insert(this, store)
+	if scripts.enemy_basic.insert(this, store) then
 		for _, a in ipairs(this.ranged.attacks) do
 			if a.max_range_variance then
 				a.max_range = a.max_range + math.random(0, a.max_range_variance)
@@ -35199,7 +35199,7 @@ end
 
 scripts.debug_path_renderer = {}
 
-function scripts.debug_path_renderer.insert(this, store, script)
+function scripts.debug_path_renderer.insert(this, store)
 	local visible_coords = store.visible_coords
 
 	G.push()
@@ -35259,7 +35259,7 @@ end
 
 scripts.enemy_rhino = {}
 
-function scripts.enemy_rhino.update(this, store, script)
+function scripts.enemy_rhino.update(this, store)
 	local a = this.timed_attacks.list[1]
 	local ps_a, ps_b
 
@@ -35392,7 +35392,7 @@ end
 
 scripts.screen_focus_circle = {}
 
-function scripts.screen_focus_circle.insert(this, store, script)
+function scripts.screen_focus_circle.insert(this, store)
 	local visible_coords = store.visible_coords
 	local G = love.graphics
 	G.push()
@@ -35435,7 +35435,7 @@ function scripts.screen_focus_circle.insert(this, store, script)
 	return true
 end
 
-function scripts.screen_focus_circle.update(this, store, script)
+function scripts.screen_focus_circle.update(this, store)
 	this.tween.ts = store.tick_ts
 	this.tween.disabled = false
 
@@ -35446,7 +35446,7 @@ end
 
 scripts.enemy_hyena5 = {}
 
-function scripts.enemy_hyena5.update(this, store, script)
+function scripts.enemy_hyena5.update(this, store)
 	this.vis.bans = band(this.vis.bans, bnot(F_BLOCK))
 
 	if this.render.sprites[1].name == "raise" then
@@ -35589,7 +35589,7 @@ end
 
 scripts.enemy_bear_vanguard = {}
 
-function scripts.enemy_bear_vanguard.update(this, store, script)
+function scripts.enemy_bear_vanguard.update(this, store)
 	local trigger_wrath_of_the_fallen = false
 
 	local function can_wrath()
@@ -35664,7 +35664,7 @@ end
 
 scripts.enemy_acolyte = {}
 
-function scripts.enemy_acolyte.update(this, store, script)
+function scripts.enemy_acolyte.update(this, store)
 	while true do
 		if this.health.dead then
 			if this.death_spawns and this.death_spawns.name == "enemy_acolyte_tentacle" then
@@ -35697,7 +35697,7 @@ end
 
 scripts.enemy_acolyte_tentacle = {}
 
-function scripts.enemy_acolyte_tentacle.update(this, store, script)
+function scripts.enemy_acolyte_tentacle.update(this, store)
 	local a
 	local ah = this.timed_attacks.list[1]
 	local start_ts = store.tick_ts
@@ -35812,7 +35812,7 @@ end
 
 scripts.enemy_lesser_sister = {}
 
-function scripts.enemy_lesser_sister.update(this, store, script)
+function scripts.enemy_lesser_sister.update(this, store)
 	local a = this.timed_attacks.list[1]
 	local cg = store.count_groups[a.count_group_type]
 
@@ -35916,7 +35916,7 @@ end
 
 scripts.enemy_lesser_sister_nightmare = {}
 
-function scripts.enemy_lesser_sister_nightmare.update(this, store, script)
+function scripts.enemy_lesser_sister_nightmare.update(this, store)
 	local cont, blocker, ranged
 
 	local function break_fn()
@@ -36022,7 +36022,7 @@ end
 
 scripts.enemy_surveyor_harpy = {}
 
-function scripts.enemy_surveyor_harpy.update(this, store, script)
+function scripts.enemy_surveyor_harpy.update(this, store)
 	local shadow_sprite = this.render.sprites[2]
 	local terrain_type
 
@@ -36170,12 +36170,12 @@ end
 
 scripts.enemy_unblinded_priest = {}
 
-function scripts.enemy_unblinded_priest.on_start_glare(this, store, script)
+function scripts.enemy_unblinded_priest.on_start_glare(this, store)
 	this.do_glare_transform = true
 	this.transformation_time = 0
 end
 
-function scripts.enemy_unblinded_priest.update(this, store, script)
+function scripts.enemy_unblinded_priest.update(this, store)
 	local last_near_priest_check_cd = 1
 	local last_near_priest_check_ts = store.tick_ts - last_near_priest_check_cd
 
@@ -36314,7 +36314,7 @@ end
 
 scripts.enemy_spiderling = {}
 
-function scripts.enemy_spiderling.update(this, store, script)
+function scripts.enemy_spiderling.update(this, store)
 	local terrain_type
 
 	::label_67_0::
@@ -36382,7 +36382,7 @@ end
 
 scripts.enemy_unblinded_shackler = {}
 
-function scripts.enemy_unblinded_shackler.update(this, store, script)
+function scripts.enemy_unblinded_shackler.update(this, store)
 	local a = this.timed_attacks.list[1]
 
 	a.ts = store.tick_ts
@@ -36534,7 +36534,7 @@ end
 
 scripts.enemy_armored_nightmare = {}
 
-function scripts.enemy_armored_nightmare.update(this, store, script)
+function scripts.enemy_armored_nightmare.update(this, store)
 	while true do
 		if this.health.dead then
 			local function show_blood_pool(e, terrain_type)
@@ -36665,7 +36665,7 @@ end
 
 scripts.enemy_corrupted_stalker = {}
 
-function scripts.enemy_corrupted_stalker.update(this, store, script)
+function scripts.enemy_corrupted_stalker.update(this, store)
 	local shadow_sprite = this.render.sprites[2]
 	local terrain_type
 
@@ -36688,7 +36688,7 @@ end
 
 scripts.enemy_crystal_golem = {}
 
-function scripts.enemy_crystal_golem.update(this, store, script)
+function scripts.enemy_crystal_golem.update(this, store)
 	if this.start_as_rock then
 		this.vis._bans = this.vis.bans
 		this.vis.bans = F_ALL
@@ -36905,11 +36905,11 @@ function scripts.enemy_blinker.update(this, store)
 	end
 end
 
-function scripts.enemy_blinker.on_start_glare(this, store, script)
+function scripts.enemy_blinker.on_start_glare(this, store)
 	this.is_glare_active = true
 end
 
-function scripts.enemy_blinker.on_end_glare(this, store, script)
+function scripts.enemy_blinker.on_end_glare(this, store)
 	this.is_glare_active = false
 end
 
@@ -36952,7 +36952,7 @@ end
 
 scripts.enemy_mindless_husk = {}
 
-function scripts.enemy_mindless_husk.update(this, store, script)
+function scripts.enemy_mindless_husk.update(this, store)
 	if not this.death_spawns then
 		this.death_spawns = {}
 		this.death_spawns.name = "noname"
@@ -36998,7 +36998,7 @@ end
 
 scripts.controller_enemy_mindless_husk_glareling_spawn = {}
 
-function scripts.controller_enemy_mindless_husk_glareling_spawn.update(this, store, script)
+function scripts.controller_enemy_mindless_husk_glareling_spawn.update(this, store)
 	U.y_wait(store, this.glareling_spawn_delay)
 
 	local np = this.husk.nav_path
@@ -37018,7 +37018,7 @@ end
 
 scripts.enemy_mindless_husk_egg = {}
 
-function scripts.enemy_mindless_husk_egg.update(this, store, script)
+function scripts.enemy_mindless_husk_egg.update(this, store)
 	local start_ts = store.tick_ts
 
 	while true do
@@ -37057,15 +37057,15 @@ end
 
 scripts.enemy_vile_spawner = {}
 
-function scripts.enemy_vile_spawner.on_start_glare(this, store, script)
+function scripts.enemy_vile_spawner.on_start_glare(this, store)
 	this.timed_attacks.list[1].cooldown = this.glare_kr5.lesser_spawn_cooldown
 end
 
-function scripts.enemy_vile_spawner.on_end_glare(this, store, script)
+function scripts.enemy_vile_spawner.on_end_glare(this, store)
 	this.timed_attacks.list[1].cooldown = this.timed_attacks.list[1].normal_cooldown
 end
 
-function scripts.enemy_vile_spawner.update(this, store, script)
+function scripts.enemy_vile_spawner.update(this, store)
 	local a
 	local ab = this.melee.attacks[1]
 	local as = this.timed_attacks.list[1]
@@ -37184,7 +37184,7 @@ end
 
 scripts.bullet_vile_spawner_spawn = {}
 
-function scripts.bullet_vile_spawner_spawn.update(this, store, script)
+function scripts.bullet_vile_spawner_spawn.update(this, store)
 	local b = this.bullet
 	local dmin, dmax = b.damage_min, b.damage_max
 	local dradius = b.damage_radius
@@ -37309,7 +37309,7 @@ end
 
 scripts.enemy_noxious_horror = {}
 
-function scripts.enemy_noxious_horror.update(this, store, script)
+function scripts.enemy_noxious_horror.update(this, store)
 	while true do
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
@@ -37327,7 +37327,7 @@ function scripts.enemy_noxious_horror.update(this, store, script)
 	end
 end
 
-function scripts.enemy_noxious_horror.on_start_glare(this, store, script)
+function scripts.enemy_noxious_horror.on_start_glare(this, store)
 	this.health.magic_armor = this.health.magic_armor + this.glare_kr5.magic_armor
 	this.aura_glare = E:create_entity(this.glare_kr5.aura_poison)
 	this.aura_glare.aura.source_id = this.id
@@ -37337,7 +37337,7 @@ function scripts.enemy_noxious_horror.on_start_glare(this, store, script)
 	queue_insert(store, this.aura_glare)
 end
 
-function scripts.enemy_noxious_horror.on_end_glare(this, store, script)
+function scripts.enemy_noxious_horror.on_end_glare(this, store)
 	this.health.magic_armor = this.health.magic_armor - this.glare_kr5.magic_armor
 	this.aura_glare.tween.ts = store.tick_ts
 	this.aura_glare.tween.reverse = true
@@ -37346,8 +37346,8 @@ end
 
 scripts.mod_enemy_noxious_horror_poison = {}
 
-function scripts.mod_enemy_noxious_horror_poison.insert(this, store, script)
-	if not scripts.mod_dps.insert(this, store, script) then
+function scripts.mod_enemy_noxious_horror_poison.insert(this, store)
+	if not scripts.mod_dps.insert(this, store) then
 		return false
 	end
 
@@ -37403,7 +37403,7 @@ end
 
 scripts.enemy_hardened_horror = {}
 
-function scripts.enemy_hardened_horror.update(this, store, script)
+function scripts.enemy_hardened_horror.update(this, store)
 	::label_104_0::
 
 	while true do
@@ -37463,13 +37463,13 @@ function scripts.enemy_hardened_horror.update(this, store, script)
 	end
 end
 
-function scripts.enemy_hardened_horror.on_start_glare(this, store, script)
+function scripts.enemy_hardened_horror.on_start_glare(this, store)
 	SU.armor_inc(this, this.glare_kr5.armor)
 
 	this.do_roll_in = true
 end
 
-function scripts.enemy_hardened_horror.on_end_glare(this, store, script)
+function scripts.enemy_hardened_horror.on_end_glare(this, store)
 	SU.armor_dec(this, this.glare_kr5.armor)
 
 	this.do_roll_out = true
@@ -37477,7 +37477,7 @@ end
 
 scripts.enemy_evolving_scourge = {}
 
-function scripts.enemy_evolving_scourge.update(this, store, script)
+function scripts.enemy_evolving_scourge.update(this, store)
 	this.current_phase = 1
 	this.next_phase = 1
 
@@ -37576,7 +37576,7 @@ function scripts.enemy_evolving_scourge.update(this, store, script)
 	end
 end
 
-function scripts.enemy_evolving_scourge.on_start_glare(this, store, script)
+function scripts.enemy_evolving_scourge.on_start_glare(this, store)
 	this.next_phase = 3
 	this.glare_ts = store.tick_ts
 end
@@ -37671,7 +37671,7 @@ end
 
 scripts.enemy_corrupted_elf = {}
 
-function scripts.enemy_corrupted_elf.update(this, store, script)
+function scripts.enemy_corrupted_elf.update(this, store)
 	local has_knife = false
 
 	local function y_stun(store, this)
@@ -37761,15 +37761,15 @@ end
 
 scripts.enemy_specter = {}
 
-function scripts.enemy_specter.insert(this, store, script)
+function scripts.enemy_specter.insert(this, store)
 	if not U.is_seen(store, "enemy_specter") then
 		signal.emit("wave-notification", "icon", "enemy_specter")
 	end
 
-	return scripts.enemy_basic.insert(this, store, script)
+	return scripts.enemy_basic.insert(this, store)
 end
 
-function scripts.enemy_specter.update(this, store, script)
+function scripts.enemy_specter.update(this, store)
 	local search_cd = 0.5
 	local search_ts = store.tick_ts
 
@@ -37927,7 +37927,7 @@ function scripts.enemy_specter.update(this, store, script)
 	queue_remove(store, this)
 end
 
-function scripts.enemy_specter.remove(this, store, script)
+function scripts.enemy_specter.remove(this, store)
 	if this.trail then
 		queue_remove(store, this.trail)
 	end
@@ -37941,7 +37941,7 @@ end
 
 scripts.enemy_dust_cryptid = {}
 
-function scripts.enemy_dust_cryptid.update(this, store, script)
+function scripts.enemy_dust_cryptid.update(this, store)
 	local shadow_sprite = this.render.sprites[2]
 
 	while true do
@@ -37973,7 +37973,7 @@ end
 
 scripts.aura_enemy_dust_cryptid = {}
 
-function scripts.aura_enemy_dust_cryptid.insert(this, store, script)
+function scripts.aura_enemy_dust_cryptid.insert(this, store)
 	this.aura.ts = store.tick_ts
 
 	if this.render then
@@ -38009,7 +38009,7 @@ function scripts.aura_enemy_dust_cryptid.insert(this, store, script)
 	return true
 end
 
-function scripts.aura_enemy_dust_cryptid.remove(this, store, script)
+function scripts.aura_enemy_dust_cryptid.remove(this, store)
 	for k, v in pairs(this.decals) do
 		v.tween.ts = store.tick_ts
 		v.tween.reverse = true
@@ -38021,7 +38021,7 @@ end
 
 scripts.mod_enemy_dust_cryptid = {}
 
-function scripts.mod_enemy_dust_cryptid.insert(this, store, script)
+function scripts.mod_enemy_dust_cryptid.insert(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
 
@@ -38075,7 +38075,7 @@ function scripts.mod_enemy_dust_cryptid.insert(this, store, script)
 	return true
 end
 
-function scripts.mod_enemy_dust_cryptid.remove(this, store, script)
+function scripts.mod_enemy_dust_cryptid.remove(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
 
@@ -38088,7 +38088,7 @@ end
 
 scripts.aura_damage_sprint = {}
 
-function scripts.aura_damage_sprint.insert(this, store, script)
+function scripts.aura_damage_sprint.insert(this, store)
 	local target = store.entities[this.aura.source_id]
 
 	if not target or target.health.dead or not target.motion then
@@ -38107,7 +38107,7 @@ function scripts.aura_damage_sprint.insert(this, store, script)
 	return true
 end
 
-function scripts.aura_damage_sprint.remove(this, store, script)
+function scripts.aura_damage_sprint.remove(this, store)
 	local target = store.entities[this.aura.source_id]
 
 	if target and target.health and target.motion then
@@ -38119,7 +38119,7 @@ function scripts.aura_damage_sprint.remove(this, store, script)
 	return true
 end
 
-function scripts.aura_damage_sprint.update(this, store, script)
+function scripts.aura_damage_sprint.update(this, store)
 	while true do
 		local target = store.entities[this.aura.source_id]
 
@@ -38146,7 +38146,7 @@ end
 
 scripts.enemy_deathwood = {}
 
-function scripts.enemy_deathwood.update(this, store, script)
+function scripts.enemy_deathwood.update(this, store)
 	if this.started_in_holder then
 		if store.wave_group_number < 9 and this.selected_path == 4 then
 			this.selected_path = 1
@@ -38196,7 +38196,7 @@ end
 
 scripts.enemy_animated_armor = {}
 
-function scripts.enemy_animated_armor.insert(this, store, script)
+function scripts.enemy_animated_armor.insert(this, store)
 	local next, new = P:next_entity_node(this, store.tick_length)
 
 	if not next then
@@ -38278,7 +38278,7 @@ function scripts.enemy_animated_armor.insert(this, store, script)
 	return true
 end
 
-function scripts.enemy_animated_armor.update(this, store, script)
+function scripts.enemy_animated_armor.update(this, store)
 	if this.spawned_from_tower then
 		U.speed_mul_self(this, 2)
 
@@ -38361,7 +38361,7 @@ function scripts.enemy_animated_armor.update(this, store, script)
 	end
 end
 
-function scripts.enemy_animated_armor.on_corrupt(this, store, script)
+function scripts.enemy_animated_armor.on_corrupt(this, store)
 	if not this.corruption_kr5.enabled then
 		return
 	end
@@ -38371,7 +38371,7 @@ end
 
 scripts.enemy_revenant_soulcaller = {}
 
-function scripts.enemy_revenant_soulcaller.update(this, store, script)
+function scripts.enemy_revenant_soulcaller.update(this, store)
 	local as = this.timed_attacks.list[1]
 	local at = this.timed_attacks.list[2]
 	local cg = store.count_groups[as.count_group_type]
@@ -38551,7 +38551,7 @@ end
 
 scripts.bullet_enemy_revenant_soulcaller_tower_stun = {}
 
-function scripts.bullet_enemy_revenant_soulcaller_tower_stun.update(this, store, script)
+function scripts.bullet_enemy_revenant_soulcaller_tower_stun.update(this, store)
 	local b = this.bullet
 	local mspeed = b.min_speed
 	local target, ps
@@ -38666,7 +38666,7 @@ end
 
 scripts.enemy_revenant_harvester = {}
 
-function scripts.enemy_revenant_harvester.update(this, store, script)
+function scripts.enemy_revenant_harvester.update(this, store)
 	local ac = this.timed_attacks.list[1]
 	local cg = store.count_groups[ac.count_group_type]
 
@@ -38778,7 +38778,7 @@ end
 
 scripts.enemy_crocs_basic_egg = {}
 
-function scripts.enemy_crocs_basic_egg.update(this, store, script)
+function scripts.enemy_crocs_basic_egg.update(this, store)
 	local terrain_type
 
 	if not this.evolve_ts then
@@ -38895,7 +38895,7 @@ end
 
 scripts.enemy_crocs_basic = {}
 
-function scripts.enemy_crocs_basic.insert(this, store, script)
+function scripts.enemy_crocs_basic.insert(this, store)
 	if not scripts.enemy_basic.insert(this, store, scripts) then
 		return false
 	end
@@ -38943,7 +38943,7 @@ function scripts.enemy_crocs_basic.insert(this, store, script)
 	return true
 end
 
-function scripts.enemy_crocs_basic.update(this, store, script)
+function scripts.enemy_crocs_basic.update(this, store)
 	local terrain_type
 
 	local function ready_to_evolve()
@@ -39026,7 +39026,7 @@ end
 
 scripts.enemy_quickfeet_gator = {}
 
-function scripts.enemy_quickfeet_gator.update(this, store, script)
+function scripts.enemy_quickfeet_gator.update(this, store)
 	local a
 	local attack_chicken = this.timed_attacks.list[1]
 
@@ -39179,7 +39179,7 @@ end
 
 scripts.quickfeet_gator_chicken_leg_bullet = {}
 
-function scripts.quickfeet_gator_chicken_leg_bullet.insert(this, store, script)
+function scripts.quickfeet_gator_chicken_leg_bullet.insert(this, store)
 	local b = this.bullet
 
 	b.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
@@ -39194,7 +39194,7 @@ function scripts.quickfeet_gator_chicken_leg_bullet.insert(this, store, script)
 	return true
 end
 
-function scripts.quickfeet_gator_chicken_leg_bullet.update(this, store, script)
+function scripts.quickfeet_gator_chicken_leg_bullet.update(this, store)
 	local b = this.bullet
 	local has_hit = false
 
@@ -39345,7 +39345,7 @@ end
 
 scripts.enemy_killertile = {}
 
-function scripts.enemy_killertile.update(this, store, script)
+function scripts.enemy_killertile.update(this, store)
 	local terrain_type
 
 	::label_162_0::
@@ -39393,7 +39393,7 @@ end
 
 scripts.enemy_crocs_flier = {}
 
-function scripts.enemy_crocs_flier.update(this, store, script)
+function scripts.enemy_crocs_flier.update(this, store)
 	local shadow_sprite = this.render.sprites[2]
 	local terrain_type
 
@@ -39434,7 +39434,7 @@ end
 
 scripts.enemy_crocs_ranged = {}
 
-function scripts.enemy_crocs_ranged.insert(this, store, script)
+function scripts.enemy_crocs_ranged.insert(this, store)
 	if not scripts.enemy_basic_with_random_range.insert(this, store, scripts) then
 		return false
 	end
@@ -39465,7 +39465,7 @@ function scripts.enemy_crocs_ranged.insert(this, store, script)
 	return true
 end
 
-function scripts.enemy_crocs_ranged.update(this, store, script)
+function scripts.enemy_crocs_ranged.update(this, store)
 	local terrain_type
 
 	::label_165_0::
@@ -39521,7 +39521,7 @@ end
 
 scripts.enemy_crocs_shaman = {}
 
-function scripts.enemy_crocs_shaman.update(this, store, script)
+function scripts.enemy_crocs_shaman.update(this, store)
 	local terrain_type, a
 	local attack_healing = this.timed_attacks.list[1]
 	local attack_debuff = this.timed_attacks.list[2]
@@ -39720,7 +39720,7 @@ end
 
 scripts.mod_crocs_shaman_tower_debuff = {}
 
-function scripts.mod_crocs_shaman_tower_debuff.insert(this, store, script)
+function scripts.mod_crocs_shaman_tower_debuff.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target or band(this.modifier.vis_flags, target.vis.bans) ~= 0 then
@@ -39778,7 +39778,7 @@ end
 
 scripts.enemy_crocs_tank = {}
 
-function scripts.enemy_crocs_tank.update(this, store, script)
+function scripts.enemy_crocs_tank.update(this, store)
 	local a = this.timed_attacks.list[1]
 
 	this.ps_charge_id = nil
@@ -39927,7 +39927,7 @@ end
 
 scripts.mod_enemy_crocs_tank_charge_soldier = {}
 
-function scripts.mod_enemy_crocs_tank_charge_soldier.update(this, store, script)
+function scripts.mod_enemy_crocs_tank_charge_soldier.update(this, store)
 	local cycles, total_damage = 0, 0
 	local m = this.modifier
 	local dps = this.dps
@@ -40050,7 +40050,7 @@ end
 
 scripts.enemy_crocs_egg_spawner = {}
 
-function scripts.enemy_crocs_egg_spawner.update(this, store, script)
+function scripts.enemy_crocs_egg_spawner.update(this, store)
 	local a
 	local ab = this.melee.attacks[1]
 	local as = this.timed_attacks.list[1]
@@ -40177,7 +40177,7 @@ end
 
 scripts.bullet_crocs_egg_spawner_spawn = {}
 
-function scripts.bullet_crocs_egg_spawner_spawn.update(this, store, script)
+function scripts.bullet_crocs_egg_spawner_spawn.update(this, store)
 	local b = this.bullet
 	local dmin, dmax = b.damage_min, b.damage_max
 	local dradius = b.damage_radius
@@ -40253,7 +40253,7 @@ function scripts.enemy_crocs_hydra.on_damage(this, store, damage)
 	return true
 end
 
-function scripts.enemy_crocs_hydra.update(this, store, script)
+function scripts.enemy_crocs_hydra.update(this, store)
 	local attack_debuff = this.timed_attacks.list[1]
 	local attack_transform = this.timed_attacks.list[2]
 	local _gold = this.enemy.gold
@@ -40674,7 +40674,7 @@ end
 
 scripts.mod_enemy_crocs_hydra_tower_debuff = {}
 
-function scripts.mod_enemy_crocs_hydra_tower_debuff.insert(this, store, script)
+function scripts.mod_enemy_crocs_hydra_tower_debuff.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target or band(this.modifier.vis_flags, target.vis.bans) ~= 0 then
@@ -40781,7 +40781,7 @@ end
 
 scripts.aura_bullet_enemy_crocs_hydra_dot = {}
 
-function scripts.aura_bullet_enemy_crocs_hydra_dot.update(this, store, script)
+function scripts.aura_bullet_enemy_crocs_hydra_dot.update(this, store)
 	local first_hit_ts
 	local last_hit_ts = 0
 	local cycles_count = 0
@@ -40849,11 +40849,11 @@ end
 
 scripts.trees_guardian_tree = {}
 
-function scripts.trees_guardian_tree.insert(this, store, script)
+function scripts.trees_guardian_tree.insert(this, store)
 	return true
 end
 
-function scripts.trees_guardian_tree.update(this, store, script)
+function scripts.trees_guardian_tree.update(this, store)
 	local a = this.custom_attack
 
 	a.cooldown = U.frandom(a.cooldown_min, a.cooldown_max)
@@ -41368,7 +41368,7 @@ end
 
 scripts.bullet_heart_of_the_arborean = {}
 
-function scripts.bullet_heart_of_the_arborean.insert(this, store, script)
+function scripts.bullet_heart_of_the_arborean.insert(this, store)
 	local b = this.bullet
 
 	b.speed.x, b.speed.y = V.normalize(b.to.x - b.from.x, b.to.y - b.from.y)
@@ -41572,7 +41572,7 @@ end
 
 scripts.bush_ladder_decal = {}
 
-function scripts.bush_ladder_decal.update(this, store, script)
+function scripts.bush_ladder_decal.update(this, store)
 	local sp = this.spawner
 	local sprite_base = this.render.sprites[1]
 	local sprite_top = this.render.sprites[2]
@@ -41652,7 +41652,7 @@ end
 
 scripts.bush_spawner_decal = {}
 
-function scripts.bush_spawner_decal.update(this, store, script)
+function scripts.bush_spawner_decal.update(this, store)
 	local activated = false
 
 	while true do
@@ -41677,7 +41677,7 @@ end
 
 scripts.decal_boss_pig_pool = {}
 
-function scripts.decal_boss_pig_pool.update(this, store, script)
+function scripts.decal_boss_pig_pool.update(this, store)
 	while store.wave_group_number < 10 do
 		coroutine.yield()
 	end
@@ -41698,7 +41698,7 @@ end
 
 scripts.decal_stage_06_door = {}
 
-function scripts.decal_stage_06_door.update(this, store, script)
+function scripts.decal_stage_06_door.update(this, store)
 	local spawners = LU.list_entities(store.entities, "mega_spawner")
 	local megaspawner_door
 
@@ -42107,7 +42107,7 @@ end
 
 scripts.decal_stage_17_tree = {}
 
-function scripts.decal_stage_17_tree.update(this, store, script)
+function scripts.decal_stage_17_tree.update(this, store)
 	while true do
 		if this.ui.clicked then
 			S:queue(this.sound_tap)
@@ -42127,7 +42127,7 @@ end
 
 scripts.decal_stage_18_streetlight = {}
 
-function scripts.decal_stage_18_streetlight.update(this, store, script)
+function scripts.decal_stage_18_streetlight.update(this, store)
 	while true do
 		if this.ui.clicked then
 			S:queue(this.sound_in)
@@ -42146,7 +42146,7 @@ end
 
 scripts.decal_stage_18_cuckoo = {}
 
-function scripts.decal_stage_18_cuckoo.update(this, store, script)
+function scripts.decal_stage_18_cuckoo.update(this, store)
 	local touch_times = 0
 
 	while true do
@@ -42181,7 +42181,7 @@ end
 
 scripts.decal_stage_19_statue = {}
 
-function scripts.decal_stage_19_statue.update(this, store, script)
+function scripts.decal_stage_19_statue.update(this, store)
 	local current_step = 1
 
 	if store.level_mode == GAME_MODE_CAMPAIGN then
@@ -42220,7 +42220,7 @@ end
 
 scripts.decal_stage_19_navira_cape = {}
 
-function scripts.decal_stage_19_navira_cape.update(this, store, script)
+function scripts.decal_stage_19_navira_cape.update(this, store)
 	local start_ts = store.tick_ts
 
 	while store.tick_ts - start_ts < fts(38) do
@@ -42303,7 +42303,7 @@ end
 
 scripts.decal_achievement_stage_21_croc_boat = {}
 
-function scripts.decal_achievement_stage_21_croc_boat.update(this, store, script)
+function scripts.decal_achievement_stage_21_croc_boat.update(this, store)
 	local touch_times = 0
 
 	while true do
@@ -42334,7 +42334,7 @@ end
 
 scripts.decal_achievement_stage_22_croc_king = {}
 
-function scripts.decal_achievement_stage_22_croc_king.update(this, store, script)
+function scripts.decal_achievement_stage_22_croc_king.update(this, store)
 	local touch_times = 0
 	local flying = false
 
@@ -42386,7 +42386,7 @@ end
 
 scripts.decal_stage_22_easteregg_sheepy = {}
 
-function scripts.decal_stage_22_easteregg_sheepy.update(this, store, script)
+function scripts.decal_stage_22_easteregg_sheepy.update(this, store)
 	local touch_times = 0
 	local speed = 30
 	local start_pos = V.vclone(this.pos)
@@ -42454,7 +42454,7 @@ end
 
 scripts.power_stage_15_denas_control = {}
 
-function scripts.power_stage_15_denas_control.insert(this, store, script)
+function scripts.power_stage_15_denas_control.insert(this, store)
 	local denas = E:create_entity(this.denas_t)
 
 	denas.pos = V.vclone(this.pos)
@@ -42655,7 +42655,7 @@ end
 
 scripts.tower_stage_18_elven_barrack = {}
 
-function scripts.tower_stage_18_elven_barrack.update(this, store, script)
+function scripts.tower_stage_18_elven_barrack.update(this, store)
 	local b = this.barrack
 	local door_sid = this.render.door_sid or 2
 	local formation_offset = 0
@@ -42814,7 +42814,7 @@ function scripts.tower_stage_18_elven_barrack.update(this, store, script)
 	end
 end
 
-function scripts.tower_stage_18_elven_barrack.remove(this, store, script)
+function scripts.tower_stage_18_elven_barrack.remove(this, store)
 	for _, s in pairs(this.barrack.soldiers) do
 		if s.health then
 			s.health.hp = 0
@@ -42887,7 +42887,7 @@ end
 
 scripts.decal_stage_17_tree = {}
 
-function scripts.decal_stage_17_tree.update(this, store, script)
+function scripts.decal_stage_17_tree.update(this, store)
 	while true do
 		if this.ui.clicked then
 			S:queue(this.sound_tap)
@@ -42907,7 +42907,7 @@ end
 
 scripts.decal_stage_18_streetlight = {}
 
-function scripts.decal_stage_18_streetlight.update(this, store, script)
+function scripts.decal_stage_18_streetlight.update(this, store)
 	while true do
 		if this.ui.clicked then
 			S:queue(this.sound_in)
@@ -42926,7 +42926,7 @@ end
 
 scripts.decal_stage_18_cuckoo = {}
 
-function scripts.decal_stage_18_cuckoo.update(this, store, script)
+function scripts.decal_stage_18_cuckoo.update(this, store)
 	local touch_times = 0
 
 	while true do
@@ -42961,7 +42961,7 @@ end
 
 scripts.decal_stage_19_statue = {}
 
-function scripts.decal_stage_19_statue.update(this, store, script)
+function scripts.decal_stage_19_statue.update(this, store)
 	local current_step = 1
 
 	if store.level_mode == GAME_MODE_CAMPAIGN then
@@ -43000,7 +43000,7 @@ end
 
 scripts.decal_stage_19_navira_cape = {}
 
-function scripts.decal_stage_19_navira_cape.update(this, store, script)
+function scripts.decal_stage_19_navira_cape.update(this, store)
 	local start_ts = store.tick_ts
 
 	while store.tick_ts - start_ts < fts(38) do
@@ -43083,7 +43083,7 @@ end
 
 scripts.decal_achievement_stage_21_croc_boat = {}
 
-function scripts.decal_achievement_stage_21_croc_boat.update(this, store, script)
+function scripts.decal_achievement_stage_21_croc_boat.update(this, store)
 	local touch_times = 0
 
 	while true do
@@ -43114,7 +43114,7 @@ end
 
 scripts.decal_achievement_stage_22_croc_king = {}
 
-function scripts.decal_achievement_stage_22_croc_king.update(this, store, script)
+function scripts.decal_achievement_stage_22_croc_king.update(this, store)
 	local touch_times = 0
 	local flying = false
 
@@ -43166,7 +43166,7 @@ end
 
 scripts.decal_stage_22_easteregg_sheepy = {}
 
-function scripts.decal_stage_22_easteregg_sheepy.update(this, store, script)
+function scripts.decal_stage_22_easteregg_sheepy.update(this, store)
 	local touch_times = 0
 	local speed = 30
 	local start_pos = V.vclone(this.pos)
@@ -43424,7 +43424,7 @@ function scripts.tower_stage_20_arborean_honey.get_info(this)
 	}
 end
 
-function scripts.tower_stage_20_arborean_honey.update(this, store, script)
+function scripts.tower_stage_20_arborean_honey.update(this, store)
 	if store.level_mode == GAME_MODE_HEROIC then
 		this.repair.cost = this.price_repair_heroic
 		this.repair_cost_config = this.price_repair_heroic
@@ -44064,7 +44064,7 @@ end
 
 scripts.trees_arborean_sages = {}
 
-function scripts.trees_arborean_sages.update(this, store, script)
+function scripts.trees_arborean_sages.update(this, store)
 	local a = this.bullet_attack
 
 	a.cooldown = U.frandom(a.cooldown_min, a.cooldown_max)
@@ -44122,13 +44122,13 @@ end
 
 scripts.soldier_charge = {}
 
-function scripts.soldier_charge.insert(this, store, script)
+function scripts.soldier_charge.insert(this, store)
 	this.melee.order = U.attack_order(this.melee.attacks)
 
 	return true
 end
 
-function scripts.soldier_charge.update(this, store, script)
+function scripts.soldier_charge.update(this, store)
 	local attack = this.melee.attacks[1]
 	local target
 	local expired = false
@@ -44417,7 +44417,7 @@ end
 
 scripts.decal_stage_23_crane = {}
 
-function scripts.decal_stage_23_crane.update(this, store, script)
+function scripts.decal_stage_23_crane.update(this, store)
 	local taps = 0
 
 	while true do
@@ -45197,7 +45197,7 @@ end
 
 scripts.decal_stage_25_solid_snake = {}
 
-function scripts.decal_stage_25_solid_snake.update(this, store, script)
+function scripts.decal_stage_25_solid_snake.update(this, store)
 	local taps = 0
 	local eyes_ts = store.tick_ts
 	local eyes_cd = math.random(5, 10)
@@ -45946,7 +45946,7 @@ end
 
 scripts.decal_stage_26_mewtwo = {}
 
-function scripts.decal_stage_26_mewtwo.update(this, store, script)
+function scripts.decal_stage_26_mewtwo.update(this, store)
 	local taps = 0
 	local eyes_ts = store.tick_ts
 	local eyes_cd = math.random(5, 10)
@@ -47326,7 +47326,7 @@ end
 
 scripts.bullet_stage_27_tower_stun = {}
 
-function scripts.bullet_stage_27_tower_stun.update(this, store, script)
+function scripts.bullet_stage_27_tower_stun.update(this, store)
 	local b = this.bullet
 	local ps
 
@@ -47566,7 +47566,7 @@ end
 
 scripts.decal_stage_27_modes_decos = {}
 
-function scripts.decal_stage_27_modes_decos.update(this, store, script)
+function scripts.decal_stage_27_modes_decos.update(this, store)
 	U.animation_start(this, "idle", nil, store.tick_ts, true)
 
 	while true do
@@ -47587,7 +47587,7 @@ end
 
 scripts.decal_stage_27_beam = {}
 
-function scripts.decal_stage_27_beam.update(this, store, script)
+function scripts.decal_stage_27_beam.update(this, store)
 	local taps = 0
 	local idle_ts = store.tick_ts
 	local idle_cd = math.random(5, 10)
@@ -47659,7 +47659,7 @@ end
 
 scripts.enemy_darksteel_shielder = {}
 
-function scripts.enemy_darksteel_shielder.update(this, store, script)
+function scripts.enemy_darksteel_shielder.update(this, store)
 	::label_251_0::
 
 	while true do
@@ -47709,7 +47709,7 @@ end
 
 scripts.enemy_surveillance_sentry = {}
 
-function scripts.enemy_surveillance_sentry.update(this, store, script)
+function scripts.enemy_surveillance_sentry.update(this, store)
 	local terrain_type
 
 	local function check_shadow()
@@ -47791,7 +47791,7 @@ end
 
 scripts.enemy_rolling_sentry = {}
 
-function scripts.enemy_rolling_sentry.update(this, store, script)
+function scripts.enemy_rolling_sentry.update(this, store)
 	local ra = this.ranged.attacks[1]
 	local deploy_mode = false
 
@@ -47879,7 +47879,7 @@ end
 
 scripts.enemy_mad_tinkerer = {}
 
-function scripts.enemy_mad_tinkerer.update(this, store, script)
+function scripts.enemy_mad_tinkerer.update(this, store)
 	local ac = this.timed_attacks.list[1]
 	local cg = store.count_groups[ac.count_group_type]
 
@@ -48071,7 +48071,7 @@ function scripts.enemy_brute_welder.get_info(this)
 	}
 end
 
-function scripts.enemy_brute_welder.update(this, store, script)
+function scripts.enemy_brute_welder.update(this, store)
 	local a = this.melee.attacks[1]
 
 	::label_261_0::
@@ -48479,7 +48479,7 @@ end
 
 scripts.enemy_scrap_speedster = {}
 
-function scripts.enemy_scrap_speedster.update(this, store, script)
+function scripts.enemy_scrap_speedster.update(this, store)
 	this.trail = E:create_entity(this.trail_t)
 	this.trail.particle_system.track_id = this.id
 
@@ -48540,7 +48540,7 @@ function scripts.enemy_scrap_speedster.update(this, store, script)
 	end
 end
 
-function scripts.enemy_scrap_speedster.remove(this, store, script)
+function scripts.enemy_scrap_speedster.remove(this, store)
 	if this.trail then
 		queue_remove(store, this.trail)
 	end
@@ -48573,7 +48573,7 @@ end
 
 scripts.enemy_darksteel_fist = {}
 
-function scripts.enemy_darksteel_fist.update(this, store, script)
+function scripts.enemy_darksteel_fist.update(this, store)
 	::label_275_0::
 
 	while true do
@@ -48617,7 +48617,7 @@ end
 
 scripts.fx_enemy_darksteel_fist_area = {}
 
-function scripts.fx_enemy_darksteel_fist_area.insert(this, store, script)
+function scripts.fx_enemy_darksteel_fist_area.insert(this, store)
 	this.render.sprites[1].ts = store.tick_ts
 	this.render.sprites[2].ts = store.tick_ts
 
@@ -48626,7 +48626,7 @@ end
 
 scripts.controller_basic_clone_darksteel_guardian = {}
 
-function scripts.controller_basic_clone_darksteel_guardian.update(this, store, script)
+function scripts.controller_basic_clone_darksteel_guardian.update(this, store)
 	local function reached_guardian()
 		local nodes_to_end = P:get_end_node(this.nav_path.pi) - this.nav_path.ni
 
@@ -48674,7 +48674,7 @@ end
 
 scripts.controller_darksteel_guardian = {}
 
-function scripts.controller_darksteel_guardian.insert(this, store, script)
+function scripts.controller_darksteel_guardian.insert(this, store)
 	local guardian = E:create_entity(this.guardian_t)
 
 	guardian.pos = V.vclone(this.pos)
@@ -48691,7 +48691,7 @@ end
 
 scripts.enemy_darksteel_guardian = {}
 
-function scripts.enemy_darksteel_guardian.update(this, store, script)
+function scripts.enemy_darksteel_guardian.update(this, store)
 	local is_enraged = false
 	local rock
 
@@ -48897,7 +48897,7 @@ end
 
 scripts.enemy_darksteel_anvil = {}
 
-function scripts.enemy_darksteel_anvil.update(this, store, script)
+function scripts.enemy_darksteel_anvil.update(this, store)
 	local cont, blocker, ranged, a
 	local ab = this.timed_attacks.list[1]
 
@@ -49026,7 +49026,7 @@ end
 
 scripts.mod_enemy_darksteel_anvil_buff = {}
 
-function scripts.mod_enemy_darksteel_anvil_buff.insert(this, store, script)
+function scripts.mod_enemy_darksteel_anvil_buff.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target or target.health.dead or not target.unit then
@@ -49048,7 +49048,7 @@ function scripts.mod_enemy_darksteel_anvil_buff.insert(this, store, script)
 	return true
 end
 
-function scripts.mod_enemy_darksteel_anvil_buff.remove(this, store, script)
+function scripts.mod_enemy_darksteel_anvil_buff.remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if target and target.health and target.unit then
@@ -49062,7 +49062,7 @@ function scripts.mod_enemy_darksteel_anvil_buff.remove(this, store, script)
 	return true
 end
 
-function scripts.mod_enemy_darksteel_anvil_buff.update(this, store, script)
+function scripts.mod_enemy_darksteel_anvil_buff.update(this, store)
 	local m = this.modifier
 
 	this.modifier.ts = store.tick_ts
@@ -49112,7 +49112,7 @@ end
 
 scripts.enemy_darksteel_hulk = {}
 
-function scripts.enemy_darksteel_hulk.update(this, store, script)
+function scripts.enemy_darksteel_hulk.update(this, store)
 	local a = this.timed_attacks.list[1]
 	local ps_a, ps_b
 
@@ -49238,7 +49238,7 @@ end
 
 scripts.decal_terrain_6_exodia_part = {}
 
-function scripts.decal_terrain_6_exodia_part.update(this, store, script)
+function scripts.decal_terrain_6_exodia_part.update(this, store)
 	local shine_ts = store.tick_ts
 	local shine_cd = math.random(10, 15)
 
@@ -49808,7 +49808,7 @@ end
 
 scripts.decal_stage_30_door = {}
 
-function scripts.decal_stage_30_door.update(this, store, script)
+function scripts.decal_stage_30_door.update(this, store)
 	local wave_index = 0
 	local run_this_wave = false
 	local wave_start_ts = store.tick_ts
@@ -49867,7 +49867,7 @@ end
 
 scripts.decal_achievement_into_the_ogreverse = {}
 
-function scripts.decal_achievement_into_the_ogreverse.update(this, store, script)
+function scripts.decal_achievement_into_the_ogreverse.update(this, store)
 	local touch_times = 0
 
 	while true do
@@ -49913,7 +49913,7 @@ end
 
 scripts.decal_achievement_a_coon_of_surprises = {}
 
-function scripts.decal_achievement_a_coon_of_surprises.update(this, store, script)
+function scripts.decal_achievement_a_coon_of_surprises.update(this, store)
 	local touch_times = 0
 
 	while true do
@@ -49949,7 +49949,7 @@ end
 
 scripts.decal_achievement_lucas_spider = {}
 
-function scripts.decal_achievement_lucas_spider.update(this, store, script)
+function scripts.decal_achievement_lucas_spider.update(this, store)
 	local touch_times = 0
 
 	while true do
@@ -49981,7 +49981,7 @@ end
 
 scripts.enemy_spider_priest = {}
 
-function scripts.enemy_spider_priest.update(this, store, script)
+function scripts.enemy_spider_priest.update(this, store)
 	local last_near_priest_check_cd = 1
 	local last_near_priest_check_ts = store.tick_ts - last_near_priest_check_cd
 
@@ -50074,7 +50074,7 @@ end
 
 scripts.enemy_glarenwarden = {}
 
-function scripts.enemy_glarenwarden.update(this, store, script)
+function scripts.enemy_glarenwarden.update(this, store)
 	local terrain_type
 
 	::label_203_0::
@@ -50142,7 +50142,7 @@ end
 
 scripts.glarenwarden_thread_spawner = {}
 
-function scripts.glarenwarden_thread_spawner.insert(this, store, script)
+function scripts.glarenwarden_thread_spawner.insert(this, store)
 	for i = 1, this.threads_amount do
 		this.render.sprites[i + 1].name = table.random(this.threads_idles)
 	end
@@ -50371,7 +50371,7 @@ end
 
 scripts.enemy_spider_sister = {}
 
-function scripts.enemy_spider_sister.update(this, store, script)
+function scripts.enemy_spider_sister.update(this, store)
 	local a = this.timed_attacks.list[1]
 	local cg = store.count_groups[a.count_group_type]
 
@@ -50481,7 +50481,7 @@ end
 
 scripts.enemy_glarebrood_crystal = {}
 
-function scripts.enemy_glarebrood_crystal.update(this, store, script)
+function scripts.enemy_glarebrood_crystal.update(this, store)
 	local current_threshold = 0
 	local start_ts = store.tick_ts
 	local next_pos, _ = P:next_entity_node(this, store.tick_length)
@@ -50631,7 +50631,7 @@ end
 
 scripts.enemy_cultbrood = {}
 
-function scripts.enemy_cultbrood.update(this, store, script)
+function scripts.enemy_cultbrood.update(this, store)
 	if this.render.sprites[1].name == "raise" then
 		if this.sound_events and this.sound_events.raise then
 			S:queue(this.sound_events.raise, this.sound_events.raise_args)
@@ -50700,7 +50700,7 @@ end
 
 scripts.enemy_drainbrood = {}
 
-function scripts.enemy_drainbrood.update(this, store, script)
+function scripts.enemy_drainbrood.update(this, store)
 	local a = this.timed_attacks.list[1]
 
 	a.ts = store.tick_ts
@@ -50822,7 +50822,7 @@ end
 
 scripts.mod_drainbrood_web = {}
 
-function scripts.mod_drainbrood_web.update(this, store, script)
+function scripts.mod_drainbrood_web.update(this, store)
 	local start_ts, target_hidden
 	local m = this.modifier
 	local source = store.entities[this.modifier.source_id]
@@ -50902,7 +50902,7 @@ end
 
 scripts.enemy_spidead = {}
 
-function scripts.enemy_spidead.update(this, store, script)
+function scripts.enemy_spidead.update(this, store)
 	::label_222_0::
 
 	while true do
@@ -50982,7 +50982,7 @@ end
 
 scripts.stage_29_cocoon = {}
 
-function scripts.stage_29_cocoon.update(this, store, script)
+function scripts.stage_29_cocoon.update(this, store)
 	if this.broken_on_iron and store.level_mode == GAME_MODE_IRON or this.broken_on_heroic and store.level_mode == GAME_MODE_HEROIC then
 		U.animation_start(this, this.animation_spawner_idle_broken, nil, store.tick_ts, true, 1)
 
@@ -51031,7 +51031,7 @@ end
 
 scripts.tower_holder_blocked_spiders = {}
 
-function scripts.tower_holder_blocked_spiders.insert(this, store, script)
+function scripts.tower_holder_blocked_spiders.insert(this, store)
 	this.tower_holder.unblock_price = this.prices[store.level_mode] and this.prices[store.level_mode] or this.prices[GAME_MODE_CAMPAIGN]
 
 	return true
@@ -51039,7 +51039,7 @@ end
 
 scripts.enemy_fire_phoenix = {}
 
-function scripts.enemy_fire_phoenix.update(this, store, script)
+function scripts.enemy_fire_phoenix.update(this, store)
 	local shadow_sprite = this.render.sprites[2]
 
 	while true do
@@ -51115,7 +51115,7 @@ end
 
 scripts.decal_dlc_wukong_flaming_ground = {}
 
-function scripts.decal_dlc_wukong_flaming_ground.insert(this, store, script)
+function scripts.decal_dlc_wukong_flaming_ground.insert(this, store)
 	for _, e in pairs(store.entities) do
 		if e.template_name == "controller_stage_31_water_mechanic" and scripts.controller_stage_31_water_mechanic.is_in_water_range(e, this) then
 			return false
@@ -51143,7 +51143,7 @@ function scripts.decal_dlc_wukong_flaming_ground.insert(this, store, script)
 	return true
 end
 
-function scripts.decal_dlc_wukong_flaming_ground.update(this, store, script)
+function scripts.decal_dlc_wukong_flaming_ground.update(this, store)
 	if this.start_wait then
 		U.y_wait(store, this.start_wait)
 	end
@@ -51163,7 +51163,7 @@ end
 
 scripts.enemy_fire_fox = {}
 
-function scripts.enemy_fire_fox.update(this, store, script)
+function scripts.enemy_fire_fox.update(this, store)
 	if this.render.sprites[1].name == "raise" then
 		if this.sound_events and this.sound_events.raise then
 			S:queue(this.sound_events.raise, this.sound_events.raise_args)
@@ -51243,7 +51243,7 @@ end
 
 scripts.enemy_nine_tailed_fox = {}
 
-function scripts.enemy_nine_tailed_fox.update(this, store, script)
+function scripts.enemy_nine_tailed_fox.update(this, store)
 	local a_tp = this.timed_attacks.list[1]
 
 	if this.spawned_from_summon then
@@ -51440,7 +51440,7 @@ end
 
 scripts.ps_nine_tailed_fox_underground_trail = {}
 
-function scripts.ps_nine_tailed_fox_underground_trail.update(this, store, script)
+function scripts.ps_nine_tailed_fox_underground_trail.update(this, store)
 	this.target_ni = this.target_ni - 2
 
 	local function y_ps_walk_step()
@@ -51513,7 +51513,7 @@ end
 
 scripts.enemy_storm_spirit = {}
 
-function scripts.enemy_storm_spirit.update(this, store, script)
+function scripts.enemy_storm_spirit.update(this, store)
 	local shadow_sprite = this.render.sprites[2]
 	local did_jump_ahead = false
 
@@ -51648,16 +51648,16 @@ end
 
 scripts.enemy_water_spirit = {}
 
-function scripts.enemy_water_spirit.insert(this, store, script)
+function scripts.enemy_water_spirit.insert(this, store)
 	if not this.skip_spawn_anim then
 		this._pushed_bans = U.push_bans(this.vis, F_ALL)
 		this.ui.can_click = false
 	end
 
-	return scripts.enemy_basic.insert(this, store, script)
+	return scripts.enemy_basic.insert(this, store)
 end
 
-function scripts.enemy_water_spirit.update(this, store, script)
+function scripts.enemy_water_spirit.update(this, store)
 	local ps_jump = E:create_entity(this.ps_trail_jump)
 
 	ps_jump.particle_system.track_id = this.id
@@ -51887,7 +51887,7 @@ function scripts.mod_gale_warrior_combo_counter.queue(this, store, insertion)
 	end
 end
 
-function scripts.mod_gale_warrior_combo_counter.insert(this, store, script)
+function scripts.mod_gale_warrior_combo_counter.insert(this, store)
 	return false
 end
 
@@ -51911,7 +51911,7 @@ end
 
 scripts.enemy_storm_elemental = {}
 
-function scripts.enemy_storm_elemental.update(this, store, script)
+function scripts.enemy_storm_elemental.update(this, store)
 	local t_block = this.timed_attacks.list[1]
 	local ps_walk_trail = E:create_entity(this.ps_walk_trail)
 
@@ -52065,7 +52065,7 @@ end
 
 scripts.bullet_storm_elemental = {}
 
-function scripts.bullet_storm_elemental.update(this, store, script)
+function scripts.bullet_storm_elemental.update(this, store)
 	local b = this.bullet
 	local dmin, dmax = b.damage_min, b.damage_max
 	local dradius = b.damage_radius
@@ -52272,7 +52272,7 @@ end
 
 scripts.bullet_water_sorceress_bolt = {}
 
-function scripts.bullet_water_sorceress_bolt.update(this, store, script)
+function scripts.bullet_water_sorceress_bolt.update(this, store)
 	local b = this.bullet
 	local mspeed = b.min_speed
 	local target, ps
@@ -52404,7 +52404,7 @@ end
 
 scripts.enemy_water_sorceress = {}
 
-function scripts.enemy_water_sorceress.update(this, store, script)
+function scripts.enemy_water_sorceress.update(this, store)
 	local heal_wave = this.timed_attacks.list[1]
 
 	heal_wave.ts = store.tick_ts - heal_wave.cooldown + heal_wave.first_cooldown
@@ -52569,7 +52569,7 @@ end
 
 scripts.decal_water_sorceress_heal_wave = {}
 
-function scripts.decal_water_sorceress_heal_wave.insert(this, store, script)
+function scripts.decal_water_sorceress_heal_wave.insert(this, store)
 	if not P:is_node_valid(this.pi, this.ni) then
 		return false
 	end
@@ -52592,7 +52592,7 @@ function scripts.decal_water_sorceress_heal_wave.insert(this, store, script)
 	return true
 end
 
-function scripts.decal_water_sorceress_heal_wave.update(this, store, script)
+function scripts.decal_water_sorceress_heal_wave.update(this, store)
 	local function can_advance()
 		if this.nodes_range < this.nodes_advance then
 			return false
@@ -52697,7 +52697,7 @@ end
 
 scripts.mod_wukong_flaming_ground_toggle_abilities = {}
 
-function scripts.mod_wukong_flaming_ground_toggle_abilities.insert(this, store, script)
+function scripts.mod_wukong_flaming_ground_toggle_abilities.insert(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
 
@@ -52738,7 +52738,7 @@ function scripts.mod_wukong_flaming_ground_toggle_abilities.insert(this, store, 
 	return true
 end
 
-function scripts.mod_wukong_flaming_ground_toggle_abilities.update(this, store, script)
+function scripts.mod_wukong_flaming_ground_toggle_abilities.update(this, store)
 	local m = this.modifier
 
 	m.ts = store.tick_ts
@@ -52774,7 +52774,7 @@ function scripts.mod_wukong_flaming_ground_toggle_abilities.update(this, store, 
 	end
 end
 
-function scripts.mod_wukong_flaming_ground_toggle_abilities.remove(this, store, script)
+function scripts.mod_wukong_flaming_ground_toggle_abilities.remove(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
 
@@ -52791,7 +52791,7 @@ end
 
 scripts.enemy_wuxian = {}
 
-function scripts.enemy_wuxian.update(this, store, script)
+function scripts.enemy_wuxian.update(this, store)
 	local ranged_attack = this.timed_attacks.list[1]
 
 	ranged_attack.ts = store.tick_ts
@@ -52928,7 +52928,7 @@ end
 
 scripts.bullet_wuxian_bolt = {}
 
-function scripts.bullet_wuxian_bolt.update(this, store, script)
+function scripts.bullet_wuxian_bolt.update(this, store)
 	local b = this.bullet
 	local mspeed = b.min_speed
 	local target, ps
@@ -53105,7 +53105,7 @@ end
 
 scripts.mod_wukong_flaming_ground_healing = {}
 
-function scripts.mod_wukong_flaming_ground_healing.update(this, store, script)
+function scripts.mod_wukong_flaming_ground_healing.update(this, store)
 	local m = this.modifier
 	local hps = this.hps
 	local duration = m.duration
@@ -53203,7 +53203,7 @@ end
 
 scripts.enemy_qiongqi = {}
 
-function scripts.enemy_qiongqi.update(this, store, script)
+function scripts.enemy_qiongqi.update(this, store)
 	local function fade_sprite(store, sprite_id, duration, fade_init, fade_end, id)
 		duration = duration or 2
 
@@ -53292,7 +53292,7 @@ end
 
 scripts.ray_qiongqi = {}
 
-function scripts.ray_qiongqi.update(this, store, script)
+function scripts.ray_qiongqi.update(this, store)
 	local b = this.bullet
 	local s = this.render.sprites[1]
 	local target = store.entities[b.target_id]
@@ -53400,7 +53400,7 @@ end
 
 scripts.enemy_fan_guard = {}
 
-function scripts.enemy_fan_guard.update(this, store, script)
+function scripts.enemy_fan_guard.update(this, store)
 	local cont, blocker, ranged
 	local blocking_armor_diff = this.health.blocking_armor - this.health.walking_armor
 	local blocking_magic_armor_diff = this.health.blocking_magic_armor - this.health.walking_magic_armor
@@ -53714,7 +53714,7 @@ end
 
 scripts.enemy_citizen = {}
 
-function scripts.enemy_citizen.insert(this, store, script)
+function scripts.enemy_citizen.insert(this, store)
 	if this.template_name == "enemy_citizen" then
 		local random_citizen = table.random({"enemy_citizen", "enemy_citizen_2", "enemy_citizen_3", "enemy_citizen_4"})
 
@@ -53818,7 +53818,7 @@ function scripts.generic_unit_spawn_scale.push_and_pop_bans(this, store, bans)
 	this._pushed_bans = U.push_bans(unit.vis, bans)
 end
 
-function scripts.generic_unit_spawn_scale.update(this, store, script)
+function scripts.generic_unit_spawn_scale.update(this, store)
 	local unit = store.entities[this.unit_id]
 
 	if not unit then
@@ -53868,7 +53868,7 @@ end
 
 scripts.enemy_terracota = {}
 
-function scripts.enemy_terracota.update(this, store, script)
+function scripts.enemy_terracota.update(this, store)
 	if this.render.sprites[1].name == "raise" then
 		if this.sound_events and this.sound_events.raise then
 			S:queue(this.sound_events.raise, this.sound_events.raise_args)
@@ -53999,7 +53999,7 @@ end
 
 scripts.enemy_basic_kr5_stage35 = {}
 
-function scripts.enemy_basic_kr5_stage35.insert(this, store, script)
+function scripts.enemy_basic_kr5_stage35.insert(this, store)
 	if not scripts.enemy_basic.insert(this, store) then
 		return false
 	end
@@ -54017,16 +54017,16 @@ end
 
 scripts.enemy_golden_eyed = {}
 
-function scripts.enemy_golden_eyed.insert(this, store, script)
+function scripts.enemy_golden_eyed.insert(this, store)
 	if this.do_jump_anim then
 		this._pushed_bans = U.push_bans(this.vis, F_ALL)
 		this.ui.can_click = false
 	end
 
-	return scripts.enemy_basic.insert(this, store, script)
+	return scripts.enemy_basic.insert(this, store)
 end
 
-function scripts.enemy_golden_eyed.update(this, store, script)
+function scripts.enemy_golden_eyed.update(this, store)
 	local cont, blocker, ranged, a
 	local ab = this.timed_attacks.list[1]
 
@@ -54288,17 +54288,17 @@ function scripts.enemy_golden_eyed.update(this, store, script)
 	end
 end
 
-function scripts.enemy_golden_eyed.remove(this, store, script)
+function scripts.enemy_golden_eyed.remove(this, store)
 	if this.do_jump_anim then
 		this.do_jump_anim.defeated = true
 	end
 
-	return scripts.enemy_basic.remove(this, store, script)
+	return scripts.enemy_basic.remove(this, store)
 end
 
 scripts.mod_enemy_golden_eyed_buff = {}
 
-function scripts.mod_enemy_golden_eyed_buff.insert(this, store, script)
+function scripts.mod_enemy_golden_eyed_buff.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target or target.health.dead or not target.unit then
@@ -54318,7 +54318,7 @@ function scripts.mod_enemy_golden_eyed_buff.insert(this, store, script)
 	return true
 end
 
-function scripts.mod_enemy_golden_eyed_buff.remove(this, store, script)
+function scripts.mod_enemy_golden_eyed_buff.remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if target and target.health and target.unit then
@@ -54330,7 +54330,7 @@ function scripts.mod_enemy_golden_eyed_buff.remove(this, store, script)
 	return true
 end
 
-function scripts.mod_enemy_golden_eyed_buff.update(this, store, script)
+function scripts.mod_enemy_golden_eyed_buff.update(this, store)
 	local m = this.modifier
 
 	this.modifier.ts = store.tick_ts
@@ -54380,7 +54380,7 @@ end
 
 scripts.enemy_doom_bringer = {}
 
-function scripts.enemy_doom_bringer.update(this, store, script)
+function scripts.enemy_doom_bringer.update(this, store)
 	local a = this.timed_attacks.list[1]
 
 	a.ts = store.tick_ts - a.first_cooldown
@@ -54519,7 +54519,7 @@ end
 
 scripts.mod_doom_bringer_tower_block = {}
 
-function scripts.mod_doom_bringer_tower_block.insert(this, store, script)
+function scripts.mod_doom_bringer_tower_block.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target or band(this.modifier.vis_flags, target.vis.bans) ~= 0 then
@@ -54582,7 +54582,7 @@ end
 
 scripts.enemy_hellfire_warlock = {}
 
-function scripts.enemy_hellfire_warlock.update(this, store, script)
+function scripts.enemy_hellfire_warlock.update(this, store)
 	local a_summon = this.timed_attacks.list[1]
 
 	a_summon.ts = store.tick_ts - a_summon.cooldown + a_summon.first_cooldown
@@ -54753,7 +54753,7 @@ end
 
 scripts.decal_hellfire_warlock_summon_decal = {}
 
-function scripts.decal_hellfire_warlock_summon_decal.update(this, store, script)
+function scripts.decal_hellfire_warlock_summon_decal.update(this, store)
 	U.y_animation_play(this, "start", nil, store.tick_ts, 1, 1)
 	U.animation_start(this, "loop", nil, store.tick_ts, true, 1, true)
 
@@ -54767,7 +54767,7 @@ end
 
 scripts.bullet_hellfire_warlock_fireball = {}
 
-function scripts.bullet_hellfire_warlock_fireball.update(this, store, script)
+function scripts.bullet_hellfire_warlock_fireball.update(this, store)
 	local b = this.bullet
 	local ps
 
@@ -54892,7 +54892,7 @@ end
 
 scripts.enemy_demon_minotaur = {}
 
-function scripts.enemy_demon_minotaur.update(this, store, script)
+function scripts.enemy_demon_minotaur.update(this, store)
 	local function y_enemy_walk_step_minotaur(store, this)
 		local next, new, use_path
 
@@ -55074,7 +55074,7 @@ end
 
 scripts.bolt_tower_pandas_ray = {}
 
-function scripts.bolt.insert(this, store, script)
+function scripts.bolt.insert(this, store)
 	local b = this.bullet
 
 	if b.target_id then
@@ -55088,7 +55088,7 @@ function scripts.bolt.insert(this, store, script)
 	return true
 end
 
-function scripts.bolt_tower_pandas_ray.update(this, store, script)
+function scripts.bolt_tower_pandas_ray.update(this, store)
 	local b = this.bullet
 	local target = store.entities[b.target_id]
 
@@ -55153,7 +55153,7 @@ end
 
 scripts.fx_nine_tailed_fox_summon = {}
 
-function scripts.fx_nine_tailed_fox_summon.update(this, store, script)
+function scripts.fx_nine_tailed_fox_summon.update(this, store)
 	for _, s in pairs(this.render.sprites) do
 		s.ts = store.tick_ts
 	end
@@ -55194,7 +55194,7 @@ function scripts.controller_stage_31_water_mechanic.is_in_water_range(controller
 	return false
 end
 
-function scripts.controller_stage_31_water_mechanic.update(this, store, script)
+function scripts.controller_stage_31_water_mechanic.update(this, store)
 	local explained_mechanic = false
 	local used_times = 0
 	local removing_water_end_ts
@@ -55569,7 +55569,7 @@ end
 
 scripts.mod_stage31_water_mechanic_dps = {}
 
-function scripts.mod_stage31_water_mechanic_dps.insert(this, store, script)
+function scripts.mod_stage31_water_mechanic_dps.insert(this, store)
 	if not scripts.mod_dps.insert(this, store) then
 		return false
 	end
@@ -55583,7 +55583,7 @@ function scripts.mod_stage31_water_mechanic_dps.insert(this, store, script)
 	return true
 end
 
-function scripts.mod_stage31_water_mechanic_dps.update(this, store, script)
+function scripts.mod_stage31_water_mechanic_dps.update(this, store)
 	local cycles, total_damage = 0, 0
 	local m = this.modifier
 	local dps = this.dps
@@ -55712,7 +55712,7 @@ end
 
 scripts.generic_extra_touch_controller = {}
 
-function scripts.generic_extra_touch_controller.update(this, store, script)
+function scripts.generic_extra_touch_controller.update(this, store)
 	while true do
 		if this.ui.clicked then
 			this.ui.clicked = nil
@@ -55728,7 +55728,7 @@ end
 
 scripts.stage_31_water_mechanic_fx = {}
 
-function scripts.stage_31_water_mechanic_fx.update(this, store, script)
+function scripts.stage_31_water_mechanic_fx.update(this, store)
 	U.sprites_hide(this, nil, nil)
 	U.y_wait(store, math.random() * fts(8))
 	U.sprites_show(this, nil, nil)
@@ -56015,7 +56015,7 @@ end
 
 scripts.decal_stage_31_easter_egg_oogway = {}
 
-function scripts.decal_stage_31_easter_egg_oogway.update(this, store, script)
+function scripts.decal_stage_31_easter_egg_oogway.update(this, store)
 	U.animation_start(this, "idle1", nil, store.tick_ts, true)
 
 	local next_idle_ts = store.tick_ts + this.idle_cooldown_min + (this.idle_cooldown_max - this.idle_cooldown_min) * math.random()
@@ -56071,7 +56071,7 @@ end
 
 scripts.decal_stage_31_easter_egg_littledragon = {}
 
-function scripts.decal_stage_31_easter_egg_littledragon.update(this, store, script)
+function scripts.decal_stage_31_easter_egg_littledragon.update(this, store)
 	U.animation_start(this, "idle_1", nil, store.tick_ts, true)
 
 	local clicks = 0
@@ -56101,7 +56101,7 @@ end
 
 scripts.decal_stage_32_easter_egg_sheepy = {}
 
-function scripts.decal_stage_32_easter_egg_sheepy.update(this, store, script)
+function scripts.decal_stage_32_easter_egg_sheepy.update(this, store)
 	U.animation_start(this, "idle_1", nil, store.tick_ts, true)
 
 	local clicks = 0
@@ -56148,7 +56148,7 @@ end
 
 scripts.decal_achievement_saitam = {}
 
-function scripts.decal_achievement_saitam.update(this, store, script)
+function scripts.decal_achievement_saitam.update(this, store)
 	U.animation_start(this, "idle", nil, store.tick_ts, true)
 
 	local clicks = 0
@@ -57141,7 +57141,7 @@ end
 
 scripts.decal_stage_32_boss_fissure_ability = {}
 
-function scripts.decal_stage_32_boss_fissure_ability.update(this, store, script)
+function scripts.decal_stage_32_boss_fissure_ability.update(this, store)
 	local function set_auras_enabled(enabled)
 		for _, id in ipairs(this.cached_auras) do
 			local aura = store.entities[id]
@@ -57216,7 +57216,7 @@ end
 
 scripts.decal_redboy_teen_skyrock = {}
 
-function scripts.decal_redboy_teen_skyrock.update(this, store, script)
+function scripts.decal_redboy_teen_skyrock.update(this, store)
 	U.animation_start(this, "run", nil, store.tick_ts, false, 1, true)
 	U.y_wait(store, fts(17))
 
@@ -57654,7 +57654,7 @@ end
 
 scripts.mod_stage_32_lava_splash = {}
 
-function scripts.mod_stage_32_lava_splash.update(this, store, script)
+function scripts.mod_stage_32_lava_splash.update(this, store)
 	local m = this.modifier
 
 	this.modifier.ts = store.tick_ts
@@ -57771,7 +57771,7 @@ end
 
 scripts.mod_stage_35_lava_splash = {}
 
-function scripts.mod_stage_35_lava_splash.insert(this, store, script)
+function scripts.mod_stage_35_lava_splash.insert(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
 
@@ -57794,7 +57794,7 @@ function scripts.mod_stage_35_lava_splash.insert(this, store, script)
 	return true
 end
 
-function scripts.mod_stage_35_lava_splash.update(this, store, script)
+function scripts.mod_stage_35_lava_splash.update(this, store)
 	local m = this.modifier
 
 	this.modifier.ts = store.tick_ts
@@ -57851,7 +57851,7 @@ function scripts.mod_stage_35_lava_splash.update(this, store, script)
 	end
 end
 
-function scripts.mod_stage_35_lava_splash.remove(this, store, script)
+function scripts.mod_stage_35_lava_splash.remove(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
 
@@ -58130,7 +58130,7 @@ function scripts.stage_33_citizen_house.open_door(this, store)
 	this.close_ts = store.tick_ts + 1.5
 end
 
-function scripts.stage_33_citizen_house.update(this, store, script)
+function scripts.stage_33_citizen_house.update(this, store)
 	U.animation_start(this, "close", nil, store.tick_ts - 10, false, this.render.sid_door, true)
 
 	while true do
@@ -58327,7 +58327,7 @@ end
 
 scripts.controller_stage_34_fuentes = {}
 
-function scripts.controller_stage_34_fuentes.update(this, store, script)
+function scripts.controller_stage_34_fuentes.update(this, store)
 	local fountains = {}
 
 	for _, e in pairs(store.entities) do
@@ -58428,7 +58428,7 @@ function scripts.decal_stage_34_fuente.end_remolino(this, store)
 	this.go_end = true
 end
 
-function scripts.decal_stage_34_fuente.update(this, store, script)
+function scripts.decal_stage_34_fuente.update(this, store)
 	U.animation_start(this, "idle", nil, store.tick_ts - 10 * math.random(), true, this.render.sid_door, true)
 
 	while true do
@@ -58485,7 +58485,7 @@ end
 
 scripts.tunnel_KR5_stage_34_ponds = {}
 
-function scripts.tunnel_KR5_stage_34_ponds.update(this, store, script)
+function scripts.tunnel_KR5_stage_34_ponds.update(this, store)
 	local tu = this.tunnel
 
 	if not tu.pick_ni then
@@ -58611,7 +58611,7 @@ end
 
 scripts.decal_stage_34_easter_egg_mono = {}
 
-function scripts.decal_stage_34_easter_egg_mono.update(this, store, script)
+function scripts.decal_stage_34_easter_egg_mono.update(this, store)
 	U.animation_start(this, "idle", nil, store.tick_ts, true)
 
 	local clicks = 0
@@ -58643,7 +58643,7 @@ end
 
 scripts.decal_stage_35_fume_entradas = {}
 
-function scripts.decal_stage_35_fume_entradas.update(this, store, script)
+function scripts.decal_stage_35_fume_entradas.update(this, store)
 	U.animation_start(this, "loop", nil, store.tick_ts, true)
 
 	while not this.finish do
@@ -59160,7 +59160,7 @@ function scripts.mod_boss_princess_iron_fan_stun_heroes.insert(this, store)
 	return true
 end
 
-function scripts.mod_boss_princess_iron_fan_stun_heroes.update(this, store, script)
+function scripts.mod_boss_princess_iron_fan_stun_heroes.update(this, store)
 	local start_ts, target_hidden
 	local m = this.modifier
 	local target = store.entities[this.modifier.target_id]
@@ -59277,7 +59277,7 @@ function scripts.mod_boss_princess_iron_fan_stun_heroes.update(this, store, scri
 	end
 end
 
-function scripts.mod_boss_princess_iron_fan_stun_heroes.remove(this, store, script)
+function scripts.mod_boss_princess_iron_fan_stun_heroes.remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
@@ -59334,7 +59334,7 @@ function scripts.mod_boss_princess_iron_fan_death.insert(this, store)
 	return true
 end
 
-function scripts.mod_boss_princess_iron_fan_death.update(this, store, script)
+function scripts.mod_boss_princess_iron_fan_death.update(this, store)
 	local start_ts, target_hidden
 	local m = this.modifier
 	local target = store.entities[this.modifier.target_id]
@@ -59392,7 +59392,7 @@ end
 
 scripts.boss_princess_iron_fan_tower_debuff = {}
 
-function scripts.boss_princess_iron_fan_tower_debuff.insert(this, store, script)
+function scripts.boss_princess_iron_fan_tower_debuff.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target or band(this.modifier.vis_flags, target.vis.bans) ~= 0 then
@@ -59531,7 +59531,7 @@ function scripts.boss_princess_iron_fan.on_damage(this, store, damage)
 	return true
 end
 
-function scripts.boss_princess_iron_fan.insert(this, store, script)
+function scripts.boss_princess_iron_fan.insert(this, store)
 	this.pos = V.vclone(this.spawn_pos.node_pos)
 	this.nav_path.pi = this.spawn_pos.path
 	this.nav_path.spi = 1
@@ -59604,7 +59604,7 @@ function scripts.boss_princess_iron_fan.insert(this, store, script)
 	return true
 end
 
-function scripts.boss_princess_iron_fan.update(this, store, script)
+function scripts.boss_princess_iron_fan.update(this, store)
 	local a_summon = this.timed_attacks.list[1]
 	local a_block_tower = this.timed_attacks.list[2]
 	local a_clone = this.timed_attacks.list[3]
@@ -60960,7 +60960,7 @@ end
 
 scripts.boss_bull_king = {}
 
-function scripts.boss_bull_king.insert(this, store, script)
+function scripts.boss_bull_king.insert(this, store)
 	this.pos = V.vclone(this.spawn_pos.node_pos)
 	this.nav_path.pi = this.spawn_pos.path
 	this.nav_path.spi = 1
@@ -61038,7 +61038,7 @@ function scripts.boss_bull_king.insert(this, store, script)
 	return true
 end
 
-function scripts.boss_bull_king.update(this, store, script)
+function scripts.boss_bull_king.update(this, store)
 	local a_area_attack = this.timed_attacks.list[1]
 	local cannonnball_open_path, a
 
@@ -61476,7 +61476,7 @@ end
 
 scripts.mod_bull_king_stun = {}
 
-function scripts.mod_bull_king_stun.insert(this, store, script)
+function scripts.mod_bull_king_stun.insert(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
 
@@ -61540,7 +61540,7 @@ function scripts.mod_bull_king_stun.insert(this, store, script)
 	return true
 end
 
-function scripts.mod_bull_king_stun.remove(this, store, script)
+function scripts.mod_bull_king_stun.remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if target then
@@ -61855,7 +61855,7 @@ end
 
 scripts.fx_stage_35_cannonball = {}
 
-function scripts.fx_stage_35_cannonball.update(this, store, script)
+function scripts.fx_stage_35_cannonball.update(this, store)
 	if this.start_delay then
 		U.sprites_hide(this, nil, nil, true)
 		U.y_wait(store, this.start_delay)
@@ -61999,7 +61999,7 @@ end
 
 scripts.soldier_stage_35_cannonball = {}
 
-function scripts.soldier_stage_35_cannonball.update(this, store, script)
+function scripts.soldier_stage_35_cannonball.update(this, store)
 	local attack = this.melee.attacks[1]
 	local brk, sta, star, nearest
 	local source = this.source
@@ -62148,7 +62148,7 @@ end
 
 scripts.fx_stage_35_cannonball_open_path = {}
 
-function scripts.fx_stage_35_cannonball_open_path.update(this, store, script)
+function scripts.fx_stage_35_cannonball_open_path.update(this, store)
 	U.y_wait(store, fts(60))
 	this.render.sprites[1].hidden = false
 	U.animation_start(this, "in", nil, store.tick_ts, false)
@@ -62167,7 +62167,7 @@ end
 
 scripts.fx_stage_35_cannonball_block_path = {}
 
-function scripts.fx_stage_35_cannonball_block_path.update(this, store, script)
+function scripts.fx_stage_35_cannonball_block_path.update(this, store)
 	U.animation_start(this, "in", nil, store.tick_ts, false)
 	U.y_wait(store, fts(39))
 
@@ -62184,7 +62184,7 @@ end
 
 scripts.debug_draw_ability_area = {}
 
-function scripts.debug_draw_ability_area.update(this, store, script)
+function scripts.debug_draw_ability_area.update(this, store)
 	local this_sprites = this.render.sprites
 	local sprites_x = this.sprites_x
 	local sprites_y = this.sprites_y
@@ -62391,7 +62391,7 @@ end
 
 scripts.stage_33_spawner = {}
 
-function scripts.stage_33_spawner.update(this, store, script)
+function scripts.stage_33_spawner.update(this, store)
 	local sp = this.spawner
 	local state = 1
 
@@ -62416,7 +62416,7 @@ end
 
 scripts.controller_stage33_envelops = {}
 
-function scripts.controller_stage33_envelops.update(this, store, script)
+function scripts.controller_stage33_envelops.update(this, store)
 	store.level.envelops_opened = 0
 
 	local spawn_points = {}
@@ -62453,7 +62453,7 @@ end
 
 scripts.decal_stage33_envelop = {}
 
-function scripts.decal_stage33_envelop.update(this, store, script)
+function scripts.decal_stage33_envelop.update(this, store)
 	local move_speed = this.min_speed + (this.max_speed - this.min_speed) * math.random()
 	local spr = this.render.sprites[1]
 
@@ -62494,7 +62494,7 @@ end
 
 scripts.fx_stage33_envelop_open = {}
 
-function scripts.fx_stage33_envelop_open.update(this, store, script)
+function scripts.fx_stage33_envelop_open.update(this, store)
 	this.render.sprites[1].ts = store.tick_ts
 	this.render.sprites[1].hide_after_runs = 1
 
@@ -62527,6 +62527,111 @@ function scripts.fx_stage33_envelop_open.update(this, store, script)
 	store.player_gold = store.player_gold + card.gold
 
 	U.y_animation_play(this, card.name, nil, store.tick_ts, 1, 3)
+	queue_remove(store, this)
+end
+
+scripts.sandstorm = {}
+
+function scripts.sandstorm.insert(this, store)
+	local nav_path_assigned = false
+	if math.random() < this.search_soldier_chance then
+		local soldiers = table.collect(store.soldiers)
+		if #soldiers > 0 then
+			local soldier = table.random(soldiers)
+			local node = P:nearest_nodes(soldier.pos.x, soldier.pos.y)[1]
+			-- 不可离家太近
+			if node and P:nodes_to_goal(node[1], node[2], node[3]) > 10 then
+				this.nav_path.pi = node[1]
+				this.nav_path.spi = node[2]
+				this.nav_path.ni = node[3]
+				nav_path_assigned = true
+			end
+		end
+	end
+
+	if not nav_path_assigned then
+		local _, pi, spi, ni = P:get_random_position({5, 10})
+		this.nav_path.pi = pi
+		this.nav_path.spi = spi
+		this.nav_path.ni = ni
+	end
+
+	return true
+end
+
+function scripts.sandstorm.update(this, store)
+	U.y_animation_play(this, this.travel_animation_names[1], nil, store.tick_ts, 1, 1)
+	U.animation_start(this, this.travel_animation_names[2], nil, store.tick_ts, true)
+	local target_pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
+	local accelerate_time = V.dist(this.pos.x, this.pos.y, target_pos.x, target_pos.y) / (this.motion.real_speed * 3)
+	local a = this.motion.real_speed / accelerate_time
+	local v = 0
+	local accelerate_done_ts = store.tick_ts + accelerate_time
+	local rev_accelerate_ts = accelerate_done_ts + 2 * accelerate_time
+	local stop_ts = rev_accelerate_ts + accelerate_time
+	local last_ts = store.tick_ts
+	local dir_x, dir_y = V.normalize(target_pos.x - this.pos.x, target_pos.y - this.pos.y)
+
+	while store.tick_ts < accelerate_done_ts do
+		local dt = store.tick_ts - last_ts
+		v = v + a * dt
+		this.pos.x = this.pos.x + dir_x * v * dt
+		this.pos.y = this.pos.y + dir_y * v * dt
+		last_ts = store.tick_ts
+		coroutine.yield()
+	end
+
+	while store.tick_ts < rev_accelerate_ts do
+		local dt = store.tick_ts - last_ts
+		this.pos.x = this.pos.x + dir_x * v * dt
+		this.pos.y = this.pos.y + dir_y * v * dt
+		last_ts = store.tick_ts
+		coroutine.yield()
+	end
+
+	while store.tick_ts < stop_ts do
+		local dt = store.tick_ts - last_ts
+		v = math.max(0, v - a * dt)
+		this.pos.x = this.pos.x + dir_x * v * dt
+		this.pos.y = this.pos.y + dir_y * v * dt
+		last_ts = store.tick_ts
+		coroutine.yield()
+	end
+
+	U.y_animation_play(this, this.travel_animation_names[3], nil, store.tick_ts, 1, 1)
+	local e = E:create_entity(this.spawn_entity)
+	e.pos = V.vclone(this.pos)
+	e.nav_path.pi = this.nav_path.pi
+	e.nav_path.spi = this.nav_path.spi
+	e.nav_path.ni = this.nav_path.ni
+	queue_insert(store, e)
+
+	queue_remove(store, this)
+end
+
+scripts.sandstorm_controller = {}
+function scripts.sandstorm_controller.update(this, store)
+	local idx = 1
+	local spawn_group_number = this.spawns[idx].group_number
+	local spawn_group_count = #this.spawns
+	while idx <= spawn_group_count do
+		while store.wave_group_number < spawn_group_number do
+			coroutine.yield()
+		end
+		local entities = this.spawns[idx].entities
+		for k, v in pairs(entities) do
+			for i = 1, v do
+				local e = E:create_entity("sandstorm")
+				e.spawn_entity = k
+				e.pos = V.vclone(this.pos)
+				queue_insert(store, e)
+			end
+		end
+		idx = idx + 1
+		if idx <= spawn_group_count then
+			spawn_group_number = this.spawns[idx].group_number
+		end
+	end
 	queue_remove(store, this)
 end
 

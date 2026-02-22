@@ -16323,7 +16323,7 @@ end
 
 scripts.soldier_paladin_rider = {}
 
-function scripts.soldier_paladin_rider.update(this, store, script)
+function scripts.soldier_paladin_rider.update(this, store)
 	while true do
 		if h.dead then
 			SU.y_soldier_death(store, this)
@@ -16364,13 +16364,13 @@ end
 -- 酒桶 BEGIN
 scripts.tower_barrel = {}
 
-function scripts.tower_barrel.insert(this, store, script)
+function scripts.tower_barrel.insert(this, store)
 	this.barrack.rally_pos = V.vclone(this.tower.default_rally_pos)
 
 	return true
 end
 
-function scripts.tower_barrel.update(this, store, script)
+function scripts.tower_barrel.update(this, store)
 	local a = this.attacks
 	local ba = a.list[1]
 
@@ -16595,7 +16595,7 @@ function scripts.mod_bullet_tower_barrel.insert(this, store)
 	return true
 end
 
-function scripts.mod_bullet_tower_barrel.remove(this, store, script)
+function scripts.mod_bullet_tower_barrel.remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if target and target.health then
@@ -16607,7 +16607,7 @@ end
 
 scripts.aura_bullet_tower_barrel_skill_barrel = {}
 
-function scripts.aura_bullet_tower_barrel_skill_barrel.update(this, store, script)
+function scripts.aura_bullet_tower_barrel_skill_barrel.update(this, store)
 	local first_hit_ts = store.tick_ts
 	local last_hit_ts = 0
 	local a = this.aura
@@ -16732,7 +16732,7 @@ end
 
 scripts.soldier_tower_barrel_skill_warrior = {}
 
-function scripts.soldier_tower_barrel_skill_warrior.insert(this, store, script)
+function scripts.soldier_tower_barrel_skill_warrior.insert(this, store)
 	this.melee.order = U.attack_order(this.melee.attacks)
 
 	local floor_decal = E:create_entity(this.floor_decal)
@@ -16747,7 +16747,7 @@ function scripts.soldier_tower_barrel_skill_warrior.insert(this, store, script)
 	return true
 end
 
-function scripts.soldier_tower_barrel_skill_warrior.update(this, store, script)
+function scripts.soldier_tower_barrel_skill_warrior.update(this, store)
 	local brk, sta
 
 	this.render.sprites[1].ts = store.tick_ts
@@ -17976,19 +17976,19 @@ end
 
 scripts.mod_tower_hermit_toad_engineer_basic_slow = {}
 
-function scripts.mod_tower_hermit_toad_engineer_basic_slow.insert(this, store, script)
+function scripts.mod_tower_hermit_toad_engineer_basic_slow.insert(this, store)
 	this.slow.factor = this.balance_slow_factor[this.modifier.level]
 	this.modifier.duration = this.balance_duration[this.modifier.level]
 
-	return scripts.mod_slow.insert(this, store, script)
+	return scripts.mod_slow.insert(this, store)
 end
 
 scripts.mod_tower_hermit_toad_jump = {}
 
-function scripts.mod_tower_hermit_toad_jump.insert(this, store, script)
+function scripts.mod_tower_hermit_toad_jump.insert(this, store)
 	this.modifier.duration = this.balance_duration[this.modifier.level]
 
-	return scripts.mod_stun.insert(this, store, script)
+	return scripts.mod_stun.insert(this, store)
 end
 
 -- 青蛙 END
@@ -18007,7 +18007,7 @@ function scripts.tower_sparking_geode.get_info(this)
 	return o
 end
 
-function scripts.tower_sparking_geode.update(this, store, script)
+function scripts.tower_sparking_geode.update(this, store)
 	local last_target_pos
 	local a = this.attacks
 	local a_basic = this.attacks.list[1]
@@ -18437,7 +18437,7 @@ end
 
 scripts.mod_tower_sparking_geode_stun = {}
 
-function scripts.mod_tower_sparking_geode_stun.insert(this, store, script)
+function scripts.mod_tower_sparking_geode_stun.insert(this, store)
 	local m = this.modifier
 	local target = store.entities[this.modifier.target_id]
 
@@ -18514,7 +18514,7 @@ function scripts.mod_tower_sparking_geode_stun.insert(this, store, script)
 	return true
 end
 
-function scripts.mod_tower_sparking_geode_stun.update(this, store, script)
+function scripts.mod_tower_sparking_geode_stun.update(this, store)
 	local start_ts, target_hidden
 	local m = this.modifier
 	local target = store.entities[this.modifier.target_id]
@@ -18588,7 +18588,7 @@ function scripts.mod_tower_sparking_geode_stun.update(this, store, script)
 	queue_remove(store, this)
 end
 
-function scripts.mod_tower_sparking_geode_stun.remove(this, store, script)
+function scripts.mod_tower_sparking_geode_stun.remove(this, store)
 	local fx = E:create_entity(this.out_fx)
 
 	fx.pos = V.vclone(this.pos)
@@ -18638,7 +18638,7 @@ end
 
 scripts.aura_tower_sparking_geode_spike_burst = {}
 
-function scripts.aura_tower_sparking_geode_spike_burst.insert(this, store, script)
+function scripts.aura_tower_sparking_geode_spike_burst.insert(this, store)
 	this.aura.ts = store.tick_ts
 
 	if this.render then
@@ -18664,7 +18664,7 @@ function scripts.aura_tower_sparking_geode_spike_burst.insert(this, store, scrip
 	return true
 end
 
-function scripts.aura_tower_sparking_geode_spike_burst.update(this, store, script)
+function scripts.aura_tower_sparking_geode_spike_burst.update(this, store)
 	local first_hit_ts
 	local last_hit_ts = 0
 	local cycles_count = 0
@@ -18802,26 +18802,26 @@ end
 
 scripts.mod_tower_sparking_geode_burst_damage = {}
 
-function scripts.mod_tower_sparking_geode_burst_damage.insert(this, store, script)
+function scripts.mod_tower_sparking_geode_burst_damage.insert(this, store)
 	this.dps.damage_min = this.dps.damage_min[this.modifier.level]
 	this.dps.damage_max = this.dps.damage_max[this.modifier.level]
 
-	return scripts.mod_dps.insert(this, store, script)
+	return scripts.mod_dps.insert(this, store)
 end
 
 scripts.mod_tower_sparking_geode_burst_slow = {}
 
-function scripts.mod_tower_sparking_geode_burst_slow.insert(this, store, script)
+function scripts.mod_tower_sparking_geode_burst_slow.insert(this, store)
 	this.slow.factor = this.slow.factor[this.modifier.level]
 
-	return scripts.mod_slow.insert(this, store, script)
+	return scripts.mod_slow.insert(this, store)
 end
 
 -- 电涌 END
 -- 炮兵 START
 scripts.tower_dwarf = {}
 
-function scripts.tower_dwarf.update(this, store, script)
+function scripts.tower_dwarf.update(this, store)
 	local tower_sid = 2
 	local door_sid = 3
 	if not this.original_max_soldiers then
@@ -18927,7 +18927,7 @@ end
 
 scripts.soldier_tower_dwarf = {}
 
-function scripts.soldier_tower_dwarf.update(this, store, script)
+function scripts.soldier_tower_dwarf.update(this, store)
 	local brk, sta
 	local pow_i = this.powers.incendiary_ammo
 	local a_i = this.ranged.attacks[2]
@@ -19221,7 +19221,7 @@ function scripts.tower_ghost.get_info(this)
 	}
 end
 
-function scripts.tower_ghost.update(this, store, script)
+function scripts.tower_ghost.update(this, store)
 	local spawn_time = 0.5
 	local spawn_ts = store.tick_ts
 	local spawn_id = 4
@@ -19329,7 +19329,7 @@ function scripts.tower_ghost.user_selection_func(this, store)
 	end
 end
 
-function scripts.tower_ghost.soldier_update(this, store, script)
+function scripts.tower_ghost.soldier_update(this, store)
 	if this.vis._bans then
 		this.vis.bans = this.vis._bans
 		this.vis._bans = nil
@@ -19545,7 +19545,7 @@ function scripts.tower_ghost.soldier_update(this, store, script)
 	end
 end
 
-function scripts.tower_ghost.soul_update(this, store, script)
+function scripts.tower_ghost.soul_update(this, store)
 	U.y_wait(store, this.delay)
 
 	this.render.sprites[1].hidden = false
@@ -19577,7 +19577,7 @@ end
 
 scripts.tower_ghost_hover_controller = {}
 
-function scripts.tower_ghost_hover_controller.insert(this, store, script)
+function scripts.tower_ghost_hover_controller.insert(this, store)
 	this.hovers = {}
 
 	for _, v in pairs(store.towers) do
@@ -19818,7 +19818,7 @@ function scripts.tower_paladin_covenant.soldier_on_damage(this, store, damage)
 	return true
 end
 
-function scripts.tower_paladin_covenant.soldier_update(this, store, script)
+function scripts.tower_paladin_covenant.soldier_update(this, store)
 	local brk, sta
 	local pow_h = this.powers.healing_prayer
 	local pow_l = this.powers.lead
@@ -20015,11 +20015,11 @@ end
 
 scripts.tower_paladin_covenant_soldier_lvl4_healing_mod = {}
 
-function scripts.tower_paladin_covenant_soldier_lvl4_healing_mod.insert(this, store, script)
+function scripts.tower_paladin_covenant_soldier_lvl4_healing_mod.insert(this, store)
 	this.hps.heal_min = this.hps.heal_min[this.modifier.level]
 	this.hps.heal_max = this.hps.heal_max[this.modifier.level]
 
-	return scripts.mod_hps.insert(this, store, script)
+	return scripts.mod_hps.insert(this, store)
 end
 
 -- 圣殿 END
@@ -20561,7 +20561,7 @@ end
 
 scripts.mod_arborean_emissary_weak = {}
 
-function scripts.mod_arborean_emissary_weak.insert(this, store, script)
+function scripts.mod_arborean_emissary_weak.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 	local target_id = this.modifier.target_id
 	local template_name = this.template_name
@@ -20627,7 +20627,7 @@ function scripts.mod_arborean_emissary_weak.insert(this, store, script)
 	return true
 end
 
-function scripts.mod_arborean_emissary_weak.remove(this, store, script)
+function scripts.mod_arborean_emissary_weak.remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if target and target.health and target.unit then
@@ -20679,7 +20679,7 @@ end
 
 scripts.aura_tower_arborean_emissary_gift_of_nature = {}
 
-function scripts.aura_tower_arborean_emissary_gift_of_nature.update(this, store, script)
+function scripts.aura_tower_arborean_emissary_gift_of_nature.update(this, store)
 	local last_hit_ts = 0
 
 	last_hit_ts = store.tick_ts - this.aura.cycle_time
@@ -20807,7 +20807,7 @@ end
 
 scripts.controller_tower_arborean_emissary_gift_of_nature = {}
 
-function scripts.controller_tower_arborean_emissary_gift_of_nature.update(this, store, script)
+function scripts.controller_tower_arborean_emissary_gift_of_nature.update(this, store)
 	local wisps = {}
 
 	for i = 1, 3 do
@@ -20894,7 +20894,7 @@ function scripts.soldier_priests_barrack.get_info(this)
 	}
 end
 
-function scripts.soldier_priests_barrack.update(this, store, script)
+function scripts.soldier_priests_barrack.update(this, store)
 	local brk, sta
 
 	if this.vis._bans then
@@ -21162,7 +21162,7 @@ end
 
 scripts.soldier_abomination_priests_barrack = {}
 
-function scripts.soldier_abomination_priests_barrack.update(this, store, script)
+function scripts.soldier_abomination_priests_barrack.update(this, store)
 	local brk, sta
 
 	this.reinforcement.ts = store.tick_ts
@@ -21321,7 +21321,7 @@ end
 
 scripts.decal_tentacle_priests_barrack = {}
 
-function scripts.decal_tentacle_priests_barrack.update(this, store, script)
+function scripts.decal_tentacle_priests_barrack.update(this, store)
 	local a = this.area_attack
 
 	this.spawn_ts = store.tick_ts

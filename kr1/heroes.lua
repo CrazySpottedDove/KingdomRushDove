@@ -3020,11 +3020,10 @@ tt.swordsmanship_extra = 0
 tt.toughness_hp_extra = 0
 tt.toughness_regen_extra = 0
 --#endregion
+
 --#region soldier_sand_warrior
 tt = RT("soldier_sand_warrior", "unit")
-
 AC(tt, "soldier", "motion", "nav_path", "main_script", "vis", "info", "lifespan", "melee", "sound_events")
-
 anchor_y = 0.2
 image_y = 36
 tt.info.portrait = "kr2_info_portraits_soldiers_0015"
@@ -3056,11 +3055,10 @@ tt.unit.mod_offset = vec_2(0, ady(22))
 tt.vis.bans = bor(F_POISON, F_CANNIBALIZE, F_LYCAN, F_SKELETON)
 tt.vis.flags = F_FRIEND
 --#endregion
+
 --#region hero_beastmaster
 tt = RT("hero_beastmaster", "hero")
-
 AC(tt, "melee", "timed_attacks")
-
 anchor_y = 0.175
 image_y = 80
 tt.hero.level_stats.hp_max = {330, 360, 390, 420, 450, 480, 510, 540, 570, 600}

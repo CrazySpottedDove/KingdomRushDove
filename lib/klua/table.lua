@@ -283,3 +283,12 @@ end
 function table.tail(t)
 	return t[#t]
 end
+
+--- 把表收集成新数组
+function table.collect(t)
+	local out = {}
+	for _, v in pairs(t) do
+		out[#out + 1] = v
+	end
+	return out
+end

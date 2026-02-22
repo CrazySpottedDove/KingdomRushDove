@@ -3760,12 +3760,12 @@ end
 tt.main_script.update = scripts.tower_barrack_mercenaries.update
 tt.main_script.remove = scripts.tower_barrack.remove
 
-function tt.main_script.insert(this, store, script)
+function tt.main_script.insert(this, store)
 	if this.render.sprites[1].flip_x == true then
 		this.barrack.respawn_offset.x = this.barrack.respawn_offset.x * -1
 	end
 
-	return scripts.tower_barrack.insert(this, store, script)
+	return scripts.tower_barrack.insert(this, store)
 end
 
 tt.info.portrait = "kr5_portraits_towers_0029"

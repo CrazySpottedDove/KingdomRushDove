@@ -6037,7 +6037,7 @@ end
 
 scripts.boss_corrupted_denas = {}
 
-function scripts.boss_corrupted_denas.update(this, store, script)
+function scripts.boss_corrupted_denas.update(this, store)
 	local path_pi, path_spi, path_ni
 	local spawn_entities_attack = this.timed_attacks.list[1]
 	local nearest = P:nearest_nodes(this.pos.x, this.pos.y, {4}, {1})
@@ -6268,7 +6268,7 @@ end
 
 scripts.bullet_boss_corrupted_denas_spawn_entities = {}
 
-function scripts.bullet_boss_corrupted_denas_spawn_entities.update(this, store, script)
+function scripts.bullet_boss_corrupted_denas_spawn_entities.update(this, store)
 	local b = this.bullet
 	local dmin, dmax = b.damage_min, b.damage_max
 	local dradius = b.damage_radius
@@ -8138,7 +8138,7 @@ end
 
 scripts.bullet_stage_16_overseer_tentacle_spawn = {}
 
-function scripts.bullet_stage_16_overseer_tentacle_spawn.update(this, store, script)
+function scripts.bullet_stage_16_overseer_tentacle_spawn.update(this, store)
 	local b = this.bullet
 	local dmin, dmax = b.damage_min, b.damage_max
 	local dradius = b.damage_radius
@@ -8676,7 +8676,7 @@ end
 
 scripts.boss_navira = {}
 
-function scripts.boss_navira.update(this, store, script)
+function scripts.boss_navira.update(this, store)
 	local spawners = LU.list_entities(store.entities, "mega_spawner")
 	local megaspawner_boss
 
@@ -9287,7 +9287,7 @@ end
 
 scripts.aura_bullet_boss_crocs_poison_rain_lvl1 = {}
 
-function scripts.aura_bullet_boss_crocs_poison_rain_lvl1.update(this, store, script)
+function scripts.aura_bullet_boss_crocs_poison_rain_lvl1.update(this, store)
 	local first_hit_ts
 	local last_hit_ts = 0
 	local cycles_count = 0
@@ -9362,7 +9362,7 @@ end
 
 scripts.boss_crocs = {}
 
-function scripts.boss_crocs.update(this, store, script)
+function scripts.boss_crocs.update(this, store)
 	if this.boss_crocs_level == 1 and not this._placed_from_tunnel then
 		this.vis.bans = U.flag_set(this.vis.bans, F_RANGED)
 		this.vis.bans = U.flag_set(this.vis.bans, F_BLOCK)
@@ -10132,7 +10132,7 @@ end
 
 scripts.mod_croc_boss_melee_hit = {}
 
-function scripts.mod_croc_boss_melee_hit.insert(this, store, script)
+function scripts.mod_croc_boss_melee_hit.insert(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
 
@@ -10366,7 +10366,7 @@ end
 
 scripts.boss_pig = {}
 
-function scripts.boss_pig.update(this, store, script)
+function scripts.boss_pig.update(this, store)
 	local sid_body, sid_fly = 1, 4
 	local d_flying = E:create_entity("decal_boss_pig_flying")
 	local s_flying = d_flying.render.sprites[1]
@@ -10690,7 +10690,7 @@ end
 
 scripts.boss_machinist = {}
 
-function scripts.boss_machinist.update(this, store, script)
+function scripts.boss_machinist.update(this, store)
 	local a = this.ranged.attacks[1]
 	local spawners = LU.list_entities(store.entities, "mega_spawner")
 	local megaspawner_boss
@@ -10989,8 +10989,8 @@ end
 
 scripts.enemy_deformed_grymbeard_clone = {}
 
-function scripts.enemy_deformed_grymbeard_clone.insert(this, store, script)
-	if scripts.enemy_basic.insert(this, store, script) then
+function scripts.enemy_deformed_grymbeard_clone.insert(this, store)
+	if scripts.enemy_basic.insert(this, store) then
 		if this.shield then
 			this.shield.render.sprites[1].hidden = this.health.hp / this.health.hp_max < this.shield_hp_threshold
 		end
@@ -11001,7 +11001,7 @@ function scripts.enemy_deformed_grymbeard_clone.insert(this, store, script)
 	return false
 end
 
-function scripts.enemy_deformed_grymbeard_clone.update(this, store, script)
+function scripts.enemy_deformed_grymbeard_clone.update(this, store)
 	local boss
 
 	for i, v in pairs(store.entities) do
@@ -11059,7 +11059,7 @@ function scripts.enemy_deformed_grymbeard_clone.update(this, store, script)
 	end
 end
 
-function scripts.enemy_deformed_grymbeard_clone.remove(this, store, script)
+function scripts.enemy_deformed_grymbeard_clone.remove(this, store)
 	if this.shield then
 		this.shield.render.sprites[1].hidden = true
 	end
@@ -11069,7 +11069,7 @@ end
 
 scripts.boss_grymbeard = {}
 
-function scripts.boss_grymbeard.update(this, store, script)
+function scripts.boss_grymbeard.update(this, store)
 	local spawn_ts = store.tick_ts
 	local ra = this.ranged.attacks[1]
 
@@ -11500,7 +11500,7 @@ end
 
 scripts.boss_spider_queen = {}
 
-function scripts.boss_spider_queen.update(this, store, script)
+function scripts.boss_spider_queen.update(this, store)
 	local a_stun_towers = this.timed_attacks.list[1]
 	local a_webspit = this.timed_attacks.list[2]
 	local a_drain_life = this.timed_attacks.list[3]
@@ -12188,7 +12188,7 @@ end
 
 scripts.aura_boss_spider_queen_spiderweb = {}
 
-function scripts.aura_boss_spider_queen_spiderweb.update(this, store, script)
+function scripts.aura_boss_spider_queen_spiderweb.update(this, store)
 	this.aura.ts = store.tick_ts
 
 	local last_pos_created = V.vclone(this.pos)
@@ -12234,7 +12234,7 @@ end
 
 scripts.mod_boss_spider_queen_tower_debuff = {}
 
-function scripts.mod_boss_spider_queen_tower_debuff.insert(this, store, script)
+function scripts.mod_boss_spider_queen_tower_debuff.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target or not target.vis or band(this.modifier.vis_flags, target.vis.bans) ~= 0 then
@@ -12474,7 +12474,7 @@ end
 
 scripts.bullet_boss_spider_queen_tower_stun = {}
 
-function scripts.bullet_boss_spider_queen_tower_stun.update(this, store, script)
+function scripts.bullet_boss_spider_queen_tower_stun.update(this, store)
 	local b = this.bullet
 
 	if not this.render.sprites[1].scale then
@@ -12557,7 +12557,7 @@ end
 
 scripts.decal_boss_spider_queen_spiderweb = {}
 
-function scripts.decal_boss_spider_queen_spiderweb.insert(this, store, script)
+function scripts.decal_boss_spider_queen_spiderweb.insert(this, store)
 	this.render.sprites[1].name = this.render.sprites[1].name .. "_000" .. table.random({"1", "2"})
 	this.render.sprites[1].scale = V.vv(0.85 + math.random() * 0.15)
 	this.render.sprites[1].flip_x = table.random({true, false})
@@ -12582,7 +12582,7 @@ end
 
 scripts.aura_spider_webs = {}
 
-function scripts.aura_spider_webs.update(this, store, script)
+function scripts.aura_spider_webs.update(this, store)
 	local first_hit_ts
 	local last_hit_ts = 0
 	local cycles_count = 0
@@ -12642,7 +12642,7 @@ end
 
 scripts.boss_redboy_teen = {}
 
-function scripts.boss_redboy_teen.insert(this, store, script)
+function scripts.boss_redboy_teen.insert(this, store)
 	if this.render then
 		for _, s in pairs(this.render.sprites) do
 			s.ts = store.tick_ts
@@ -12691,7 +12691,7 @@ function scripts.boss_redboy_teen.insert(this, store, script)
 	return true
 end
 
-function scripts.boss_redboy_teen.update(this, store, script)
+function scripts.boss_redboy_teen.update(this, store)
 	local a_summon = this.timed_attacks.list[1]
 	local a_block_power = this.timed_attacks.list[2]
 	local a_meteorite = this.timed_attacks.list[3]

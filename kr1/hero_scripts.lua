@@ -30075,7 +30075,7 @@ end
 
 scripts.bullet_hero_muyrn_verdant_blast = {}
 
-function scripts.bullet_hero_muyrn_verdant_blast.update(this, store, script)
+function scripts.bullet_hero_muyrn_verdant_blast.update(this, store)
 	local b = this.bullet
 	local s = this.render.sprites[1]
 	local mspeed = b.min_speed
@@ -30393,7 +30393,7 @@ end
 
 scripts.hero_muyrn_sentinel_wisps_entity = {}
 
-function scripts.hero_muyrn_sentinel_wisps_entity.insert(this, store, script)
+function scripts.hero_muyrn_sentinel_wisps_entity.insert(this, store)
 	this.ranged.attacks[1].cooldown = this.ranged.attacks[1].cooldown * (0.9 + math.random(1, 2) / 10)
 	this.hero_max_distance = this.hero_max_distance * (0.7 + math.random(1, 3) / 10)
 	this.force_motion.max_a = this.force_motion.max_a * (0.1 + math.random(1, 9) / 10)
@@ -30403,7 +30403,7 @@ function scripts.hero_muyrn_sentinel_wisps_entity.insert(this, store, script)
 	return true
 end
 
-function scripts.hero_muyrn_sentinel_wisps_entity.update(this, store, script)
+function scripts.hero_muyrn_sentinel_wisps_entity.update(this, store)
 	local sb_sid = 1
 	local sb = this.render.sprites[sb_sid]
 	local fm = this.force_motion
@@ -30546,7 +30546,7 @@ end
 
 scripts.hero_muyrn_leaf_whirlwind_decal = {}
 
-function scripts.hero_muyrn_leaf_whirlwind_decal.update(this, store, script)
+function scripts.hero_muyrn_leaf_whirlwind_decal.update(this, store)
 	local start_ts = store.tick_ts
 
 	U.y_animation_play(this, "start", nil, store.tick_ts)

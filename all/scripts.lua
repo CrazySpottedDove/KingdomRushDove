@@ -5060,7 +5060,7 @@ end
 
 scripts.tunnel_KR5 = {}
 
-function scripts.tunnel_KR5.insert(this, store, script)
+function scripts.tunnel_KR5.insert(this, store)
 	local tu = this.tunnel
 
 	if not tu.pick_ni then
@@ -5079,10 +5079,10 @@ function scripts.tunnel_KR5.insert(this, store, script)
 	P:add_invalid_range(tu.pick_pi, pick_start, pick_end)
 	P:add_invalid_range(tu.place_pi, place_start, place_end)
 
-	return scripts.aura_apply_mod.insert(this, store, script)
+	return scripts.aura_apply_mod.insert(this, store)
 end
 
-function scripts.tunnel_KR5.update(this, store, script)
+function scripts.tunnel_KR5.update(this, store)
 	local tu = this.tunnel
 
 	if not tu.pick_ni then
@@ -5182,7 +5182,7 @@ end
 
 scripts.tunnel_KR5_destructible = {}
 
-function scripts.tunnel_KR5_destructible.update(this, store, script)
+function scripts.tunnel_KR5_destructible.update(this, store)
 	local tu = this.tunnel
 
 	if not tu.pick_ni then
@@ -8891,7 +8891,7 @@ end
 
 scripts.delayed_play_kr5 = {}
 
-function scripts.delayed_play_kr5.update(this, store, script)
+function scripts.delayed_play_kr5.update(this, store)
 	local s = this.render.sprites[1]
 	local d = this.delayed_play
 	local clicks = 0
@@ -9034,7 +9034,7 @@ end
 
 scripts.bolt_force_motion_kr5 = {}
 
-function scripts.bolt_force_motion_kr5.insert(this, store, script)
+function scripts.bolt_force_motion_kr5.insert(this, store)
 	local b = this.bullet
 
 	if this.impulse_per_distance then
@@ -9229,7 +9229,7 @@ end
 
 scripts.mod_track_fx = {}
 
-function scripts.mod_track_fx.update(this, store, script)
+function scripts.mod_track_fx.update(this, store)
 	local m = this.modifier
 
 	this.modifier.ts = store.tick_ts
@@ -9302,8 +9302,8 @@ end
 
 scripts.enemy_basic_with_random_range = {}
 
-function scripts.enemy_basic_with_random_range.insert(this, store, script)
-	if scripts.enemy_basic.insert(this, store, script) then
+function scripts.enemy_basic_with_random_range.insert(this, store)
+	if scripts.enemy_basic.insert(this, store) then
 		for _, a in ipairs(this.ranged.attacks) do
 			if a.max_range_variance then
 				a.max_range = a.max_range + math.random(0, a.max_range_variance)
@@ -9318,7 +9318,7 @@ end
 
 scripts.instant_heal_mod = {}
 
-function scripts.instant_heal_mod.insert(this, store, script)
+function scripts.instant_heal_mod.insert(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
 
@@ -9334,17 +9334,17 @@ end
 
 scripts.arrow5_45degrees = {}
 
-function scripts.arrow5_45degrees.insert(this, store, script)
+function scripts.arrow5_45degrees.insert(this, store)
 	local dist = V.dist(this.bullet.to.x, this.bullet.to.y, this.bullet.from.x, this.bullet.from.y)
 
 	this.bullet.flight_time = math.sqrt(2 * dist / -this.bullet.g)
 
-	return scripts.arrow.insert(this, store, script)
+	return scripts.arrow.insert(this, store)
 end
 
 scripts.invisible_bullet = {}
 
-function scripts.invisible_bullet.insert(this, store, script)
+function scripts.invisible_bullet.insert(this, store)
 	local b = this.bullet
 
 	if b.start_fx then
@@ -9364,7 +9364,7 @@ function scripts.invisible_bullet.insert(this, store, script)
 	return true
 end
 
-function scripts.invisible_bullet.update(this, store, script)
+function scripts.invisible_bullet.update(this, store)
 	local b = this.bullet
 	local target = store.entities[b.target_id]
 	local target_invalid = false
@@ -9614,7 +9614,7 @@ end
 
 scripts.tower_holder_capture = {}
 
-function scripts.tower_holder_capture.insert(this, store, script)
+function scripts.tower_holder_capture.insert(this, store)
 	this.tween.props[1].keys[2][1] = this.capture_duration
 
 	local a = E:create_entity(this.aura_capture)
@@ -9635,7 +9635,7 @@ end
 
 scripts.aura_tower_holder_capture = {}
 
-function scripts.aura_tower_holder_capture.update(this, store, script)
+function scripts.aura_tower_holder_capture.update(this, store)
 	this.aura.ts = store.tick_ts
 
 	local holder = store.entities[this.aura.source_id]
@@ -9724,7 +9724,7 @@ end
 
 scripts.editor_mask = {}
 
-function scripts.editor_mask.insert(this, store, script)
+function scripts.editor_mask.insert(this, store)
 	if this.show_in_editor == nil then
 		return true
 	end
@@ -9740,7 +9740,7 @@ end
 
 scripts.mod_fx_in_hit_pos = {}
 
-function scripts.mod_fx_in_hit_pos.update(this, store, script)
+function scripts.mod_fx_in_hit_pos.update(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
@@ -9755,7 +9755,7 @@ function scripts.mod_fx_in_hit_pos.update(this, store, script)
 		this.render.sprites[i].offset = target.unit.hit_offset
 	end
 
-	return this.multi_sprite_fx_update(this, store, script)
+	return this.multi_sprite_fx_update(this, store)
 end
 
 return scripts

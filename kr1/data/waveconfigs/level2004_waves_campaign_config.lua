@@ -90,56 +90,58 @@ local data = {
 	}, -- 敌人首次出现的波次
 	enemy_delete_wave_map = {
 		[1] = {
-			[7] = {"enemy_bouncer"},
-			[10] = {"enemy_tremor"}
+			[6] = {"enemy_bouncer"},
+			[9] = {"enemy_tremor"}
 		},
 		[2] = {
-			[8] = {"enemy_bouncer", "enemy_desert_raider"},
-			[11] = {"enemy_desert_wolf_small"}
+			[7] = {"enemy_bouncer"},
+			[10] = {"enemy_desert_raider"}
 		},
 		[3] = {
-			[8] = {"enemy_bouncer", "enemy_desert_raider"},
-			[11] = {"enemy_desert_wolf_small"}
+			[7] = {"enemy_bouncer"},
+			[10] = {"enemy_desert_raider"}
 		},
 		[4] = {
-			[9] = {"enemy_bouncer"},
-			[12] = {"enemy_desert_raider"}
+			[8] = {"enemy_bouncer"},
+			[11] = {"enemy_desert_wolf_small"}
 		},
 		[5] = {
-			[9] = {"enemy_bouncer"},
-			[12] = {"enemy_desert_raider"}
+			[8] = {"enemy_bouncer"},
+			[11] = {"enemy_desert_wolf_small"}
 		},
 		[6] = {
-			[10] = {"enemy_bouncer", "enemy_desert_raider"},
-			[12] = {"enemy_desert_wolf_small"}
+			[9] = {"enemy_bouncer", "enemy_desert_raider"},
+			[12] = {"enemy_desert_archer"}
 		},
 		[7] = {
-			[10] = {"enemy_bouncer"},
-			[12] = {"enemy_wasp"}
+			[8] = {"enemy_bouncer"},
+			[11] = {"enemy_wasp"}
 		},
 		[8] = {
-			[10] = {"enemy_fallen"},
-			[12] = {"enemy_wasp"}
+			[9] = {"enemy_fallen"},
+			[12] = {"enemy_wasp_queen"}
 		},
 		[9] = {
-			[10] = {"enemy_fallen"},
-			[12] = {"enemy_wasp"}
+			[9] = {"enemy_fallen"},
+			[12] = {"enemy_wasp_queen"}
 		}
 	},
-	-- 后面参数建议
+	-- 波次权重函数：后期增长更快，前期更慢，便于节奏递进
 	wave_weight_function = function(wave_number, total_gold)
-		-- 随波次和总金币递增，后期增长更快
-		return (60 + (total_gold ^ 0.7) / 15 + wave_number ^ 2.3) * 0.45
+		return (50 + (total_gold ^ 0.7) / 18 + wave_number ^ 2.5) * 0.38
 	end,
-	interval_next_factor = 0.12, -- 稍微加快后续出怪节奏
-	min_spawn_weight = 1.2, -- 每组最少权重略提升
-	max_spawn_weight = 22, -- 每组最大权重略提升
+	-- 出怪间隔函数：整体拉大间隔，前期更稀疏，后期略密集
 	interval_function = function(weight, e, wave_number)
-		-- 高权重怪物间隔更大，随波次递减
-		return (30 + 150 * math.log(weight)) * 18 / e.motion.max_speed * (1 - wave_number / 15 * 0.55)
+		local base = 60 + 180 * math.log(weight)
+		local speed_factor = 20 / (e.motion.max_speed or 1)
+		local wave_factor = 1 - math.min(wave_number / 16, 0.6)
+		return base * speed_factor * wave_factor
 	end,
-	gap_count_range = {0, 1, 2, 3}, -- 增加一个gap选项，提升变化
-	wave_max_types = 4 -- 每波最多4种敌人
+	interval_next_factor = 0.18, -- 每组之间的间隔更大，节奏更明显
+	min_spawn_weight = 1.5, -- 每组最少权重提升，避免太碎
+	max_spawn_weight = 18, -- 每组最大权重略降低，避免一波太密集
+	gap_count_range = {1, 2, 3, 4}, -- 每波必有间隔，提升波内节奏变化
+	wave_max_types = 3 -- 每波最多3种敌人，突出单路特色
 }
 
 return data

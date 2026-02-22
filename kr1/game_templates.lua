@@ -16429,12 +16429,12 @@ tt.info.portrait = "kr5_portraits_towers_0022"
 tt.info.fn = scripts.tower_barrack_mercenaries.get_info
 tt.main_script.update = scripts.tower_stage_18_elven_barrack.update
 tt.main_script.remove = scripts.tower_stage_18_elven_barrack.remove
-function tt.main_script.insert(this, store, script)
+function tt.main_script.insert(this, store)
 	if this.render.sprites[1].flip_x then
 		this.barrack.respawn_offset.x = this.barrack.respawn_offset.x * -1
 	end
 
-	return scripts.tower_barrack.insert(this, store, script)
+	return scripts.tower_barrack.insert(this, store)
 end
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_barrack_%04i"
@@ -20379,7 +20379,7 @@ tt.render.sprites[1].z = Z_DECALS
 tt.duration = b.duration
 tt.added_scale = 1
 
-function tt.main_script.insert(this, store, script)
+function tt.main_script.insert(this, store)
 	this.render.sprites[1].ts = store.tick_ts
 	this.tween.ts = store.tick_ts
 	this.render.sprites[1].flip_x = math.random() > 0.5
@@ -23688,3 +23688,25 @@ tt.tween.remove = false
 tt.tween.reverse = false
 tt.tween.loop = false
 tt.tween.disabled = true
+
+tt = RT("sandstorm")
+AC(tt, "render", "main_script", "pos", "nav_path", "motion")
+tt.travel_animation_names = {"hero_alric_sand_travel_start", "hero_alric_sand_travel_loop", "hero_alric_sand_travel_end"}
+tt.render.sprites[1].name = tt.travel_animation_names[1]
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].prefix = nil
+tt.spawn_entity = "enemy_fallen"
+tt.main_script.insert = scripts.sandstorm.insert
+tt.main_script.update = scripts.sandstorm.update
+tt.search_soldier_chance = 0.3
+tt.motion.max_speed = 150
+
+tt = RT("sandstorm_controller")
+AC(tt, "main_script", "pos")
+tt.main_script.update = scripts.sandstorm_controller.update
+tt.spawns = {{
+	group_number = 1,
+	entities = {
+		["enemy_fallen"] = 5
+	}
+}}
