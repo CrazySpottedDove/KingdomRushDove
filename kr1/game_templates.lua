@@ -23704,9 +23704,190 @@ tt.motion.max_speed = 150
 tt = RT("sandstorm_controller")
 AC(tt, "main_script", "pos")
 tt.main_script.update = scripts.sandstorm_controller.update
-tt.spawns = {{
-	group_number = 1,
-	entities = {
-		["enemy_fallen"] = 5
+-- group_number: 第几波的开始执行沙尘暴事件
+-- waves: 本波内的小波列表，每小波包含 entities（敌人类型和数量）与 delay（相对本大波开始的延迟，单位秒）
+tt.spawns = {
+	{
+		group_number = 2,
+		waves = {{
+			entities = {
+				["enemy_fallen"] = 3
+			},
+			delay = 5
+		}}
+	},
+	{
+		group_number = 3,
+		waves = {{
+			entities = {
+				["enemy_bouncer"] = 8,
+				["enemy_desert_wolf_small"] = 5
+			},
+			delay = 3
+		}}
+	},
+	{
+		group_number = 5,
+		waves = {{
+			entities = {
+				["enemy_tremor"] = 4,
+				["enemy_desert_wolf"] = 3
+			},
+			delay = 2
+		}, {
+			entities = {
+				["enemy_immortal"] = 2,
+				["enemy_desert_raider"] = 3
+			},
+			delay = 16
+		}}
+	},
+	{
+		group_number = 6,
+		waves = {{
+			entities = {
+				["enemy_bouncer"] = 5
+			},
+			delay = 5
+		}, {
+			entities = {
+				["enemy_bouncer"] = 5
+			},
+			delay = 15
+		}}
+	},
+	{
+		group_number = 7,
+		waves = {{
+			entities = {
+				["enemy_wasp"] = 4
+			},
+			delay = 0
+		}, {
+			entities = {
+				["enemy_immortal"] = 2,
+				["enemy_desert_archer"] = 3
+			},
+			delay = 12
+		}}
+	},
+	{
+		group_number = 9,
+		waves = {{
+			entities = {
+				["enemy_executioner"] = 1,
+				["enemy_fallen"] = 4
+			},
+			delay = 0
+		}, {
+			entities = {
+				["enemy_scorpion"] = 2
+			},
+			delay = 14
+		}}
+	},
+	{
+		group_number = 10,
+		waves = {{
+			entities = {
+				["enemy_bouncer"] = 15
+			},
+			delay = 0
+		}, {
+			entities = {
+				["enemy_fallen"] = 8
+			},
+			delay = 20
+		}}
+	},
+	{
+		group_number = 11,
+		waves = {{
+			entities = {
+				["enemy_munra"] = 2,
+				["enemy_executioner"] = 1
+			},
+			delay = 0
+		}, {
+			entities = {
+				["enemy_scorpion"] = 2
+			},
+			delay = 18
+		}, {
+			entities = {
+				["enemy_executioner"] = 1,
+				["enemy_immortal"] = 3
+			},
+			delay = 35
+		}}
+	},
+	{
+		group_number = 12,
+		waves = {{
+			entities = {
+				["enemy_bouncer"] = 10
+			},
+			delay = 0
+		}, {
+			entities = {
+				["enemy_bouncer"] = 10
+			},
+			delay = 10
+		}, {
+			entities = {
+				["enemy_bouncer"] = 10
+			},
+			delay = 20
+		}}
+	},
+	{
+		group_number = 13,
+		waves = {{
+			entities = {
+				["enemy_scorpion"] = 2,
+				["enemy_executioner"] = 2
+			},
+			delay = 0
+		}, {
+			entities = {
+				["enemy_munra"] = 1
+			},
+			delay = 16
+		}, {
+			entities = {
+				["enemy_scorpion"] = 1,
+				["enemy_executioner"] = 1,
+				["enemy_immortal"] = 4
+			},
+			delay = 34
+		}}
+	},
+	{
+		group_number = 15,
+		waves = {{
+			entities = {
+				["enemy_executioner"] = 2,
+				["enemy_munra"] = 1
+			},
+			delay = 0
+		}, {
+			entities = {
+				["enemy_scorpion"] = 3
+			},
+			delay = 12
+		}, {
+			entities = {
+				["enemy_munra"] = 2,
+				["enemy_executioner"] = 2,
+				["enemy_scorpion"] = 1
+			},
+			delay = 28
+		}, {
+			entities = {
+				["enemy_executioner"] = 4,
+				["enemy_munra"] = 2
+			},
+			delay = 48
+		}}
 	}
-}}
+}

@@ -62540,7 +62540,7 @@ function scripts.sandstorm.insert(this, store)
 			local soldier = table.random(soldiers)
 			local node = P:nearest_nodes(soldier.pos.x, soldier.pos.y)[1]
 			-- 不可离家太近
-			if node and P:nodes_to_goal(node[1], node[2], node[3]) > 10 then
+			if node and P:nodes_to_goal(node[1], node[2], node[3]) > 80 then
 				this.nav_path.pi = node[1]
 				this.nav_path.spi = node[2]
 				this.nav_path.ni = node[3]
@@ -62550,10 +62550,14 @@ function scripts.sandstorm.insert(this, store)
 	end
 
 	if not nav_path_assigned then
-		local _, pi, spi, ni = P:get_random_position({5, 10})
+		local _, pi, spi, ni = P:get_random_position({5, 80})
 		this.nav_path.pi = pi
 		this.nav_path.spi = spi
 		this.nav_path.ni = ni
+	end
+
+	if not this.nav_path.pi then
+		return false
 	end
 
 	return true
@@ -62618,15 +62622,24 @@ function scripts.sandstorm_controller.update(this, store)
 		while store.wave_group_number < spawn_group_number do
 			coroutine.yield()
 		end
-		local entities = this.spawns[idx].entities
-		for k, v in pairs(entities) do
-			for i = 1, v do
-				local e = E:create_entity("sandstorm")
-				e.spawn_entity = k
-				e.pos = V.vclone(this.pos)
-				queue_insert(store, e)
+		local start_ts = store.tick_ts
+		local waves = this.spawns[idx].waves
+		for i = 1, #waves do
+			local wave = waves[i]
+			while store.tick_ts - start_ts < wave.delay do
+				coroutine.yield()
+			end
+			local entities = wave.entities
+			for k, v in pairs(entities) do
+				for i = 1, v do
+					local e = E:create_entity("sandstorm")
+					e.spawn_entity = k
+					e.pos = V.vclone(this.pos)
+					queue_insert(store, e)
+				end
 			end
 		end
+
 		idx = idx + 1
 		if idx <= spawn_group_count then
 			spawn_group_number = this.spawns[idx].group_number

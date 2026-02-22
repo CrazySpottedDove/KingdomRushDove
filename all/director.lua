@@ -15,7 +15,6 @@ local S = require("sound_db")
 local G = love.graphics
 local AC = require("achievements")
 local LU = require("level_utils")
-local ISM = require("input_state_machine")
 local storage = require("storage")
 local director_data = require("data.director_data")
 local GS = require("kr1.game_settings")

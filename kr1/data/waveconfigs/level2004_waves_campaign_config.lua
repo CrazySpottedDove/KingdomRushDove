@@ -1,10 +1,10 @@
 -- 用于生成出怪文件的初稿
 local data = {
-	max_waves = 13,
+	max_waves = 15,
 	-- 最大波数
-	initial_cash = 1500,
+	initial_cash = 1000,
 	-- 初始资金
-	initial_inverval = 1000,
+	initial_inverval = 800,
 	-- 初始每大波持续时间
 	final_interval = 2000,
 	-- 最终每大波持续时间
@@ -20,19 +20,35 @@ local data = {
 	-- path8: 右路短路径
 	-- path9: 右路较短路径
 	path_active_map = {
+		-- l
 		[1] = {2},
+		-- l
 		[2] = {3},
+		-- l
 		[3] = {2, 3},
+		-- l
 		[4] = {7, 6},
+		-- l
 		[5] = {1, 7},
-		[6] = {1, 7, 6},
+		-- l, r
+		[6] = {1, 7, 9},
+		-- l
 		[7] = {1, 4},
+		-- l
 		[8] = {4, 5},
-		[9] = {2, 3},
+		-- l, r
+		[9] = {2, 8},
+		-- l
 		[10] = {2, 3, 4, 5},
+		-- l
 		[11] = {1},
+		-- r
 		[12] = {8, 9},
-		[13] = {1, 2, 8, 9}
+		-- l, r
+		[13] = {1, 2, 8, 9},
+		-- l, r
+		[14] = {1, 2, 3, 7, 8, 9},
+		[15] = {1, 4, 5, 6, 7, 9}
 	},
 	path_weight_map = {
 		[1] = 2,
@@ -46,10 +62,10 @@ local data = {
 		[9] = 3
 	}, -- 每一个路径分配出怪权重时的权重。每次出怪时，取活跃路径的权重相加，然后再根据各路径权重分配出怪权重
 	path_enemy_map = {
-		[1] = {"enemy_immortal", "enemy_tremor"},
-		[2] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_munra"},
-		[3] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_munra"},
-		[4] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_munra"},
+		[1] = {"enemy_bouncer", "enemy_desert_raider", "enemy_immortal", "enemy_tremor"},
+		[2] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_wasp_queen"},
+		[3] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_munra", "enemy_wasp"},
+		[4] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal"},
 		[5] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_munra"},
 		[6] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_munra", "enemy_tremor", "enemy_desert_archer", "enemy_wasp"},
 		[7] = {"enemy_bouncer", "enemy_wasp", "enemy_wasp_queen", "enemy_scorpion", "enemy_executioner"},
@@ -118,17 +134,15 @@ local data = {
 			[11] = {"enemy_wasp"}
 		},
 		[8] = {
-			[9] = {"enemy_fallen"},
-			[12] = {"enemy_wasp_queen"}
+			[9] = {"enemy_fallen"}
 		},
 		[9] = {
-			[9] = {"enemy_fallen"},
-			[12] = {"enemy_wasp_queen"}
+			[10] = {"enemy_fallen"}
 		}
 	},
 	-- 波次权重函数：后期增长更快，前期更慢，便于节奏递进
 	wave_weight_function = function(wave_number, total_gold)
-		return (50 + (total_gold ^ 0.7) / 18 + wave_number ^ 2.5) * 0.38
+		return (50 + (total_gold ^ 0.72) / 18 + wave_number ^ 2.5) * 0.38
 	end,
 	-- 出怪间隔函数：整体拉大间隔，前期更稀疏，后期略密集
 	interval_function = function(weight, e, wave_number)
