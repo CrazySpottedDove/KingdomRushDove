@@ -490,14 +490,6 @@ function screen:init(w, h, done_callback)
 	for sn, fn in pairs(self.signal_handlers) do
 		signal.register(sn, fn)
 	end
-
-	local global = storage:load_global()
-
-	if not global.first_launch_time then
-		global.first_launch_time = os.time()
-
-		storage:save_global(global)
-	end
 end
 
 function screen:destroy()

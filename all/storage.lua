@@ -16,7 +16,6 @@ local storage = {}
 storage.active_slot_idx = nil
 storage.slot = nil
 storage.SETTINGS_FILE = "settings.lua"
-storage.GLOBAL_FILE = "global.lua"
 storage.SLOT_FILE_FMT = "slot_%d.lua"
 
 local SETTINGS_PARAMS = {
@@ -318,22 +317,6 @@ function storage:save_settings(data_table, should_sync)
 	return success
 end
 
-function storage:load_global()
-	local input = self:load_lua(self.GLOBAL_FILE)
-
-	if not input or not type(input) == "table" then
-		input = {}
-	end
-
-	return input
-end
-
-function storage:save_global(data_table, should_sync)
-	local result = self:write_lua(self.GLOBAL_FILE, data_table)
-
-	return result
-end
-
 function storage:load_slot(idx, force)
 	idx = idx or self.active_slot_idx
 
@@ -536,19 +519,6 @@ end
 function storage:import_plist(filename)
 	local plist = require("lib.klua.plist")
 	local storage_mappings = require("storage_mappings")
-	local global = storage:load_global()
-
-	if filename and self:patch_applied(global, filename) then
-		global.plist_imported = version.string
-
-		storage:save_global(global)
-
-		return
-	elseif global.plist_imported then
-		log.debug("plist was already imported. skipping")
-
-		return
-	end
 
 	local fs
 
@@ -620,121 +590,7 @@ function storage:import_plist(filename)
 		end
 	end
 
-	local src_global = p.global_data
-
-	if not src_global then
-		log.error("Global data could not be found in plist file %s", filename)
-	else
-		storage_mappings:append_global(src_global, global)
-	end
-
-	local src_pp = p.privacy_policy_token
-
-	if not src_pp then
-		log.error("Privacy Policy token data could not be found in plist file %s", filename)
-	else
-		storage_mappings:append_pp_token(src_pp, global)
-	end
-
-	global.plist_imported = version.string
-
-	storage:save_global(global)
 	log.info("plist import finished")
-end
-
-function storage:patch_applied(global, filename)
-	if global and global.plist_imported then
-		if table.contains({"kr2-phone-3.0.19", "kr2-phone-3.0.20", "kr2-phone-3.0.21", "kr2-phone-3.0.22", "kr2-phone-3.0.23"}, global.plist_imported) then
-			for i = 1, 3 do
-				local slot = self:load_slot(i)
-
-				if slot and slot.heroes and slot.heroes.status then
-					local s = slot.heroes.status
-
-					if s.hero_voodoowitch and s.hero_voodoo_witch then
-						log.info("patching hero_voodoowitch xp")
-
-						s.hero_voodoo_witch.xp = math.max(s.hero_voodoowitch.xp, s.hero_voodoo_witch.xp)
-						s.hero_voodoowitch = nil
-					end
-
-					if s.hero_vanhelsing and s.hero_van_helsing then
-						log.info("patching hero_vanhelsing xp")
-
-						s.hero_van_helsing.xp = math.max(s.hero_vanhelsing.xp, s.hero_van_helsing.xp)
-						s.hero_vanhelsing = nil
-					end
-				end
-
-				self:save_slot(slot, i)
-			end
-		elseif table.contains({"kr3-phone-4.0.09", "kr3-phone-4.0.08", "kr3-phone-4.0.07"}, global.plist_imported) then
-			for i = 1, 3 do
-				local slot = self:load_slot(i)
-
-				if slot and slot.heroes and slot.heroes.selected and slot.heroes.selected == "hero_gyro" then
-					log.info("patching hero_gyro as hero_wilbur")
-
-					slot.heroes.selected = "hero_wilbur"
-				end
-
-				self:save_slot(slot, i)
-			end
-		end
-	end
-end
-
-function storage:import_dotnet(dirname)
-	if KR_GAME ~= "kr1" and KR_PLATFORM ~= "desktop" then
-		log.debug("only for legacy kr1-desktop. skipping")
-
-		return
-	end
-
-	local global = storage:load_global()
-
-	if global.dotnet_imported then
-		log.debug("dotnet was already imported. skipping")
-
-		return
-	end
-
-	log.info("importing dotnet from dir %s", dirname)
-
-	local parser = require("dotnet_slot_parser")
-
-	for i = 1, 3 do
-		local src_name = string.format("%s/slot%i.data", dirname, i)
-
-		log.debug("importing %s", src_name)
-
-		local f = io.open(src_name, "rb")
-
-		if not f then
-			log.debug("dotnet slot could not be found at %s", src_name)
-		else
-			local fs = f:read("*a")
-
-			f:close()
-
-			local p, err = parser:parse(fs)
-
-			if not p then
-				log.error("error parsing dotnet slot file %s. %s", src_name, err)
-			else
-				local slot = self:load_slot(i, true) or self:create_slot(i)
-
-				slot = table.deepmerge(slot, p)
-
-				self:save_slot(slot, i, true)
-
-				global.dotnet_imported = version.string
-			end
-		end
-	end
-
-	storage:save_global(global, true)
-	log.info("dotnet import finished")
 end
 
 return storage

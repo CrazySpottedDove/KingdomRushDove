@@ -58,11 +58,7 @@ function screen:init(w, h, done_callback)
 
 	self.overlay = overlay
 
-	local global = storage:load_global()
-
-	if not global or not global.first_launch_time then
-		self.first_launch = true
-	end
+	self.first_launch = true
 	self:start_animation()
 end
 

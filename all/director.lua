@@ -209,14 +209,6 @@ function director:item_done_callback(item_name, outcome)
 		elseif outcome.prevent_loading then
 			self.next_item_prevent_loading = true
 		end
-
-		if outcome.simple_privacy_policy_accepted then
-			local global = storage:load_global()
-
-			global.simple_privacy_policy_accepted = true
-
-			storage:save_global(global)
-		end
 	end
 
 	if item_name == "comics" then
