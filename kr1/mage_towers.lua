@@ -1974,11 +1974,10 @@ tt.sound_events.insert = "TowerNecromancerSigilOfSilence"
 tt.modifier_inflicted_damage_factor = b.skill_debuff.damage_factor
 tt.modifier_duration_config = b.skill_debuff.mod_duration
 --#endregion
+
 --#region aura_tower_necromancer_skill_rider
 tt = RT("aura_tower_necromancer_skill_rider", "aura")
-
 AC(tt, "render", "tween", "motion")
-
 tt.aura.mod = "mod_tower_necromancer_skill_rider"
 tt.aura.radius = b.skill_rider.radius
 tt.aura.vis_flags = bor(F_AREA)

@@ -756,7 +756,6 @@ end
 
 function path_db:generate_paths(pi)
 	local STEP_SAMPLING = 10
-	local PATH_POINTS_DISTANCE = 7
 	local paths = {}
 
 	for ci, curve in pairs(self.path_curves) do

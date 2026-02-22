@@ -1,6 +1,7 @@
 -- chunkname: @./all/constants.lua
 ASSETS_CHECK_ENABLED = false
 GEN_WAVES_ENABLED = false
+PATH_POINTS_DISTANCE = 7
 NULL = "__NULL__"
 FPS = 30
 ASPECT = 0.7
