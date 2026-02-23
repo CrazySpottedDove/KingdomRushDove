@@ -23702,7 +23702,7 @@ tt.search_soldier_chance = 0.3
 tt.motion.max_speed = 150
 
 tt = RT("mod_sandstorm_stun", "mod_stun")
-tt.modifier.duration = 3
+tt.modifier.duration = 2.5
 
 tt = RT("sandstorm_controller")
 AC(tt, "main_script", "pos")
@@ -23793,7 +23793,7 @@ tt.spawns = {
 		group_number = 10,
 		waves = {{
 			entities = {
-				["enemy_bouncer"] = 15
+				["enemy_bouncer"] = 20
 			},
 			delay = 0
 		}, {
@@ -23807,8 +23807,9 @@ tt.spawns = {
 		group_number = 11,
 		waves = {{
 			entities = {
-				["enemy_munra"] = 2,
-				["enemy_executioner"] = 1
+				["enemy_munra"] = 1,
+				["enemy_executioner"] = 1,
+				["enemy_desert_raider"] = 4
 			},
 			delay = 0
 		}, {
@@ -23841,6 +23842,11 @@ tt.spawns = {
 				["enemy_bouncer"] = 12
 			},
 			delay = 20
+		}, {
+			entities = {
+				["enemy_desert_spider"] = 2
+			},
+			delay = 30
 		}}
 	},
 	{
@@ -23860,7 +23866,8 @@ tt.spawns = {
 			entities = {
 				["enemy_scorpion"] = 1,
 				["enemy_executioner"] = 1,
-				["enemy_immortal"] = 4
+				["enemy_immortal"] = 2,
+				["enemy_desert_spider"] = 1
 			},
 			delay = 34
 		}}

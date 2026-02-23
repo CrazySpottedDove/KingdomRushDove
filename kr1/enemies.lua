@@ -14074,7 +14074,7 @@ image_x = 96
 tt.enemy.gold = 80
 tt.enemy.melee_slot = vec_2(35, 0)
 tt.health.armor = 0
-tt.health.hp_max = 1200
+tt.health.hp_max = 1150
 tt.health.magic_armor = 0.5
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.health_bar.offset = vec_2(0, 51)
@@ -14115,8 +14115,8 @@ tt.modifier.duration = 5
 tt = RT("controller_desert_spider_death")
 AC(tt, "main_script", "pos")
 tt.main_script.insert = scripts.controller_desert_spider_death.insert
-tt.radius = 70
-tt.max_count = 3
+tt.radius = 75
+tt.max_count = 5
 tt.vis_bans = F_NONE
 tt.vis_flags = bor(F_RANGED, F_MOD)
 
@@ -14124,6 +14124,11 @@ tt = RT("bullet_desert_spider_death", "arrow")
 tt.render.sprites[1].name = "regson_heal_ball_travel"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_EFFECTS
+tt.render.sprites[1].color = {255, 200, 0}
+tt.shader = "p_tint"
+tt.shader_args = {
+	tint_color = {200 / 255, 200 / 255, 120 / 255, 1}
+}
 tt.bullet.mods = {"mod_desert_spider_lamber"}
 tt.bullet.damage_min = 0
 tt.bullet.damage_max = 0
@@ -14135,6 +14140,7 @@ tt.modifier.vis_flags = F_MOD
 tt.main_script.insert = scripts.mod_desert_spider_lamber.insert
 tt.main_script.remove = scripts.mod_desert_spider_lamber.remove
 tt.freeze_decal_name = "decal_desert_spider_lamber"
+tt.harden_factor = 0.1
 
 tt = RT("decal_desert_spider_lamber", "decal")
 tt.shader = "p_tint"

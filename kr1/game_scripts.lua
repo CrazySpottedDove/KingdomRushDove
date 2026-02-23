@@ -62609,6 +62609,9 @@ function scripts.sandstorm.update(this, store)
 	e.nav_path.spi = this.nav_path.spi
 	e.nav_path.ni = this.nav_path.ni
 	queue_insert(store, e)
+
+	coroutine.yield()
+
 	local m = E:create_entity("mod_sandstorm_stun")
 	m.modifier.target_id = e.id
 	m.modifier.source_id = this.id
@@ -62694,7 +62697,10 @@ scripts.mod_desert_spider_lamber = {}
 function scripts.mod_desert_spider_lamber.insert(this, store)
 	if scripts.mod_freeze.insert(this, store) then
 		local target = store.entities[this.modifier.target_id]
-		target.unit.damage_factor = target.unit.damage_factor * 0.2
+		target.health.damage_factor = target.health.damage_factor * this.harden_factor
+		if target.soldier then
+			U.unblock_target(store, target)
+		end
 		return true
 	end
 	return false
@@ -62703,7 +62709,7 @@ end
 function scripts.mod_desert_spider_lamber.remove(this, store)
 	if scripts.mod_freeze.remove(this, store) then
 		local target = store.entities[this.modifier.target_id]
-		target.unit.damage_factor = target.unit.damage_factor / 0.2
+		target.health.damage_factor = target.health.damage_factor / this.harden_factor
 		return true
 	end
 	return false
