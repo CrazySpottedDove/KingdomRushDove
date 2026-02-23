@@ -48,66 +48,28 @@ local function load_file_by_name(name)
 	return data
 end
 
---- 在初始化阶段把有 path_connections 的链合并为单一路径
---- 支持多级 path_connections (A->B->C->D...)
---- path_connections 仍然保留以供查询，但不再用于路径切换
-function path_db:flatten_path_connections()
-
-	-- 获取完整连接链
-	local function resolve_chain(start_key)
-		local chain = {}
-		local visited = {}
-
-		local cur = start_key
-		while cur and not visited[cur] do
-			visited[cur] = true
-			chain[#chain + 1] = cur
-			cur = self.path_connections[cur]
-		end
-
-		return chain
-	end
-
-	for from_key, _ in pairs(self.path_connections) do
-
-		local chain = resolve_chain(from_key)
-
-		-- 至少需要两个节点才有意义
-		if #chain < 2 then
-			goto continue
-		end
-
-		local from_path = self.paths[chain[1]]
-
+-- 提前计算好每一次路径切换的 ni，避免运行时重复计算
+function path_db:collect_connect_info()
+	for from_key, to_key in pairs(self.path_connections) do
+		local from_path = self.paths[from_key]
+		self.path_connections_spi_to_ni[from_key] = {}
 		for spi, subpath in ipairs(from_path) do
+			local last_node = subpath[#subpath]
+			local _, newspi, newni, dist = unpack(self:nearest_nodes(last_node.x, last_node.y, {to_key}, {spi})[1])
 
-			local current_subpath = subpath
-			local last_node = current_subpath[#current_subpath]
-
-			-- 依次拼接后续路径
-			for ci = 2, #chain do
-				local to_key = chain[ci]
-				local to_path = self.paths[to_key]
-
-				local _, newspi, newni = unpack(self:nearest_nodes(last_node.x, last_node.y, {to_key}, {spi})[1])
-
-				local to_subpath = to_path[newspi]
-
-				for i = newni, #to_subpath do
-					current_subpath[#current_subpath + 1] = V.vclone(to_subpath[i])
-				end
-
-				last_node = current_subpath[#current_subpath]
+			if dist > PATH_POINTS_DISTANCE * 4 then
+				self.path_connections_spi_to_ni[from_key][spi] = 1
+			else
+				self.path_connections_spi_to_ni[from_key][spi] = newni
 			end
 		end
-
-		::continue::
 	end
 end
 
 function path_db:load(name, visible_coords)
 	self.paths = {}
 	self.path_connections = {}
+	self.path_connections_spi_to_ni = {}
 	self.path_start_node = {}
 	self.path_end_node = {}
 	self.visible_path_start_node = {}
@@ -135,10 +97,11 @@ function path_db:load(name, visible_coords)
 	self.paths = table.merge(self.paths, path_list.paths)
 	self.path_connections = table.merge(self.path_connections, path_list.connections)
 
-	-- if path_list.curves then
-	-- 	self.path_curves = table.merge(self.path_curves, path_list.curves)
-	-- end
-	self:flatten_path_connections()
+	if path_list.curves then
+		self.path_curves = table.merge(self.path_curves, path_list.curves)
+	end
+	-- self:flatten_path_connections()
+	self:collect_connect_info()
 
 	for i, p in ipairs(self.paths) do
 		local terrain_types = TERRAIN_NONE
@@ -343,15 +306,16 @@ function path_db:nodes_to_goal(p1, p2, p3)
 
 	count = count + self.path_end_node[cpi]
 
-	-- if self.path_connections[cpi] then
-	-- 	cpi = self.path_connections[cpi]
+	if self.path_connections[cpi] then
+		cpi = self.path_connections[cpi]
 
-	-- 	goto label_16_0
-	-- end
+		goto label_16_0
+	end
 
 	return count, cpi
 end
 
+--- 存在返回 nil 的可能！
 function path_db:get_defend_point_node(pi)
 	return self.defend_point_node[pi]
 end
@@ -559,24 +523,23 @@ function path_db:next_entity_node(e, dt)
 		n.ni = n.ni + n.dir
 
 		if n.ni < 1 or n.ni > #path then
-			-- if self.path_connections[n.pi] and n.dir > 0 then
-			-- 	n.prev_pis = n.prev_pis or {}
+			if self.path_connections[n.pi] and n.dir > 0 then
+				n.prev_pis = n.prev_pis or {}
 
-			-- 	table.insert(n.prev_pis, n.pi)
+				table.insert(n.prev_pis, n.pi)
 
-			-- 	local newpi, newspi, newni, dist
+				-- local newpi, newspi, newni, dist
 
-			-- 	newpi = self.path_connections[n.pi]
-			-- 	newpi, newspi, newni, dist = unpack(self:nearest_nodes(e.pos.x, e.pos.y, {newpi})[1])
+				-- newpi = self.path_connections[n.pi]
+				-- newpi, newspi, newni, dist = unpack(self:nearest_nodes(e.pos.x, e.pos.y, {newpi})[1])
+				local newni = self.path_connections_spi_to_ni[n.pi][n.spi]
 
-			-- 	log.debug("Entity %s switching from path:%i,%i,%i -> path:%i,%i,%i", e.id, n.pi, n.spi, n.ni, newpi, newspi, newni)
-
-			-- 	n.pi = newpi
-			-- 	n.ni = newni + n.dir
-			-- 	path = self.paths[n.pi][n.spi]
-			-- else
-			return nil
-		-- end
+				n.pi = self.path_connections[n.pi]
+				n.ni = newni + n.dir
+				path = self.paths[n.pi][n.spi]
+			else
+				return nil
+			end
 		end
 
 		new = true

@@ -5078,7 +5078,7 @@ function scripts.enemy_munra.update(this, store)
 	ha.ts = store.tick_ts
 
 	local function ready_to_sarcophagus()
-		return enemy_ready_to_magic_attack(this, store, sa) and not this.health.dead and this.nav_path.ni < P:get_defend_point_node(this.nav_path.pi) and (not cg[sa.count_group_name] or cg[sa.count_group_name] < sa.count_group_max)
+		return enemy_ready_to_magic_attack(this, store, sa) and not this.health.dead and (not cg[sa.count_group_name] or cg[sa.count_group_name] < sa.count_group_max)
 	end
 
 	local function ready_to_heal()
@@ -5115,7 +5115,7 @@ function scripts.enemy_munra.update(this, store)
 				local pi, spi, ni = this.nav_path.pi, this.nav_path.spi, this.nav_path.ni
 				local path = P:path(pi, 1)
 
-				ni = km.clamp(1, P:get_defend_point_node(pi) - sa.nodes_limit, ni + math.random(sa.node_random_min, sa.node_random_max))
+				ni = km.clamp(1, P:get_defend_point_node(pi) or #P.paths[pi][spi] - sa.nodes_limit, ni + math.random(sa.node_random_min, sa.node_random_max))
 
 				if not P:is_node_valid(pi, ni) then
 					log.debug("munra %s - cannot summon sarcophagus: node %i,%i is not valid", this.id, pi, ni)

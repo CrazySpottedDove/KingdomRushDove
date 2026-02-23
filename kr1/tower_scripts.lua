@@ -8665,15 +8665,13 @@ function scripts.aura_tower_necromancer_skill_rider.update(this, store)
 			return true
 		end
 
-		local nearests = P:nearest_nodes(this.pos.x, this.pos.y, {path_pi})
+		local paths_flattend = P:get_connected_paths(path_pi)
+		local nearests = P:nearest_nodes(this.pos.x, this.pos.y, paths_flattend)
 
 		if #nearests > 0 then
-			-- path_pi, path_spi, path_ni = unpack(nearest[1])
-
-			-- return path_ni < 10
 			local nearest = nearests[1]
 			path_pi, path_spi, path_ni = unpack(nearest)
-			return nearest[4] > PATH_POINTS_DISTANCE * 10 or path_ni < 10
+			return path_ni < 10 and path_pi ~= paths_flattend[#paths_flattend]
 		end
 
 		return false

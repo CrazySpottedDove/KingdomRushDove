@@ -108,6 +108,6 @@ fi
 # 生成 .love 文件（复制以保留 zip 备份）
 mv "$ARCHIVE_DIR" "$LOVE_FILE"
 
-# echo "Packed -> $ARCHIVE_DIR"
+echo "Packed -> $ARCHIVE_DIR"
 # echo "Also copied to -> $LOVE_FILE"
 scp -P 60001 "$LOVE_FILE" dove@krdovedownload6.crazyspotteddove.top:/srv/files/王国保卫战Dove版-安卓端/

@@ -61,6 +61,7 @@ EXCLUDES=(
     "client.exe"
     ".gdb_history"
     "https.so"
+    "all/librender_sort.so"
 )
 
 should_exclude() {

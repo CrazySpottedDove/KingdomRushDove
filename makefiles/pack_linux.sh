@@ -52,6 +52,7 @@ EXCLUDES=(
     "run.bat"
     "launch.bat"
     "存档位置.lnk"
+    "all/librender_sort.dll"
 )
 
 should_exclude() {

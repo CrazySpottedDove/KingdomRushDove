@@ -1289,7 +1289,7 @@ function game:draw_dark_foreground(rox, roy, gs)
 end
 
 -- 构建某条路径的三角形 Mesh（带每顶点 PathDistance），并缓存
-function game:_build_path_mesh(path_id, thickness)
+function game:_build_path_mesh(path_ids, thickness)
 	local vertex_format = {{"VertexPosition", "float", 2}, {"VertexTexCoord", "float", 2}}
 	local vertices = {}
 
@@ -1320,18 +1320,26 @@ function game:_build_path_mesh(path_id, thickness)
 	end
 
 	local total_len = 0
-	for spi, sp in ipairs(P.paths[path_id]) do
-		local d_acc = 0
-		for ni = 2, #sp do
-			local p0 = sp[ni - 1]
-			local p1 = sp[ni]
-			local dx = p1.x - p0.x
-			local dy = p1.y - p0.y
-			local seg = math.sqrt(dx * dx + dy * dy)
-			add_quad(p0, p1, d_acc, d_acc + seg, thickness)
-			d_acc = d_acc + seg
+
+	for i, path_id in ipairs(path_ids) do
+		for spi, sp in ipairs(P.paths[path_id]) do
+			local d_acc = 0
+			local start_ni = 2
+			-- 如果上一条连接到这一条路径，需要寻找正确的起点
+			if i > 1 then
+				start_ni = math.max(P.path_connections_spi_to_ni[path_ids[i - 1]][spi], 2)
+			end
+			for ni = start_ni, #sp do
+				local p0 = sp[ni - 1]
+				local p1 = sp[ni]
+				local dx = p1.x - p0.x
+				local dy = p1.y - p0.y
+				local seg = math.sqrt(dx * dx + dy * dy)
+				add_quad(p0, p1, d_acc, d_acc + seg, thickness)
+				d_acc = d_acc + seg
+			end
+			total_len = total_len + d_acc
 		end
-		total_len = total_len + d_acc
 	end
 
 	local mesh = G.newMesh(vertex_format, vertices, "triangles", "static")
@@ -1342,7 +1350,7 @@ function game:draw_path(rox, roy, gs)
 	-- 懒构建 Mesh 并缓存
 	local pid = self.shown_path
 	if not self.path_meshes[pid] then
-		local mesh, total_len = self:_build_path_mesh(pid, 4) -- 厚度可调
+		local mesh, total_len = self:_build_path_mesh(P:get_connected_paths(pid), 4) -- 厚度可调
 		self.path_meshes[pid] = {
 			mesh = mesh,
 			total_len = total_len

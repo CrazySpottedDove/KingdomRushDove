@@ -5085,10 +5085,6 @@ end
 function scripts.tunnel_KR5.update(this, store)
 	local tu = this.tunnel
 
-	if not tu.pick_ni then
-		tu.pick_ni = P:get_end_node(tu.pick_pi) - 1
-	end
-
 	if not tu.place_ni then
 		tu.place_ni = 1
 	end
@@ -5102,7 +5098,7 @@ function scripts.tunnel_KR5.update(this, store)
 	this.total_picked_enemies = 0
 
 	while true do
-		local enemies = table.filter(store.entities, function(_, e)
+		local enemies = table.filter(store.enemies, function(_, e)
 			return e and e.enemy and e.health and not e.health.dead and e.main_script and e.main_script.co ~= nil and e.nav_path and e.nav_path.pi == tu.pick_pi and e.nav_path.ni >= tu.pick_ni and (tu.pick_pi ~= tu.place_pi or e.nav_path.ni < tu.place_ni)
 		end)
 
@@ -5184,10 +5180,6 @@ scripts.tunnel_KR5_destructible = {}
 
 function scripts.tunnel_KR5_destructible.update(this, store)
 	local tu = this.tunnel
-
-	if not tu.pick_ni then
-		tu.pick_ni = P:get_end_node(tu.pick_pi) - 1
-	end
 
 	if not tu.place_ni then
 		tu.place_ni = 1
