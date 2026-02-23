@@ -2,7 +2,7 @@
 local data = {
 	max_waves = 15,
 	-- 最大波数
-	initial_cash = 1000,
+	initial_cash = 1200,
 	-- 初始资金
 	initial_inverval = 800,
 	-- 初始每大波持续时间
@@ -66,11 +66,11 @@ local data = {
 		[2] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_wasp_queen"},
 		[3] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_munra", "enemy_wasp"},
 		[4] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal"},
-		[5] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_munra"},
+		[5] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_immortal", "enemy_munra", "enemy_desert_spider"},
 		[6] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_munra", "enemy_tremor", "enemy_desert_archer", "enemy_wasp"},
-		[7] = {"enemy_bouncer", "enemy_wasp", "enemy_wasp_queen", "enemy_scorpion", "enemy_executioner"},
+		[7] = {"enemy_bouncer", "enemy_wasp", "enemy_wasp_queen", "enemy_scorpion", "enemy_executioner", "enemy_desert_spider"},
 		[8] = {"enemy_fallen", "enemy_wasp_queen", "enemy_scorpion", "enemy_tremor"},
-		[9] = {"enemy_fallen", "enemy_wasp_queen", "enemy_scorpion", "enemy_tremor", "enemy_munra"}
+		[9] = {"enemy_fallen", "enemy_wasp_queen", "enemy_scorpion", "enemy_tremor", "enemy_munra", "enemy_desert_spider"}
 	},
 	-- 每条路径允许出哪些敌人
 	enemy_weight_map = {
@@ -86,7 +86,8 @@ local data = {
 		["enemy_wasp"] = 2.5,
 		["enemy_wasp_queen"] = 7,
 		["enemy_executioner"] = 12,
-		["enemy_munra"] = 15
+		["enemy_munra"] = 15,
+		["enemy_desert_spider"] = 10
 	},
 	-- 敌人的权重
 	enemy_comeout_wave_map = {
@@ -102,7 +103,8 @@ local data = {
 		["enemy_wasp"] = 5,
 		["enemy_wasp_queen"] = 7,
 		["enemy_executioner"] = 9,
-		["enemy_munra"] = 10
+		["enemy_munra"] = 10,
+		["enemy_desert_spider"] = 6
 	}, -- 敌人首次出现的波次
 	enemy_delete_wave_map = {
 		[1] = {

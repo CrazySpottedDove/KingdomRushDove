@@ -62609,6 +62609,10 @@ function scripts.sandstorm.update(this, store)
 	e.nav_path.spi = this.nav_path.spi
 	e.nav_path.ni = this.nav_path.ni
 	queue_insert(store, e)
+	local m = E:create_entity("mod_sandstorm_stun")
+	m.modifier.target_id = e.id
+	m.modifier.source_id = this.id
+	queue_insert(store, m)
 
 	queue_remove(store, this)
 end
@@ -62646,6 +62650,63 @@ function scripts.sandstorm_controller.update(this, store)
 		end
 	end
 	queue_remove(store, this)
+end
+
+scripts.controller_desert_spider_death = {}
+function scripts.controller_desert_spider_death.insert(this, store)
+	local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, this.radius, this.vis_flags, this.vis_bans)
+
+	local bullet_available_count = this.max_count
+
+	if soldiers then
+		for i = 1, math.min(#soldiers, bullet_available_count) do
+			local b = E:create_entity("bullet_desert_spider_death")
+			b.pos = V.vclone(this.pos)
+			b.bullet.from = V.vclone(this.pos)
+			b.bullet.to = V.vclone(soldiers[i].pos)
+			b.bullet.target_id = soldiers[i].id
+			b.bullet.source_id = this.id
+			queue_insert(store, b)
+		end
+		bullet_available_count = bullet_available_count - #soldiers
+	end
+
+	if bullet_available_count > 0 then
+		local enemies = U.find_enemies_in_range_filter_off(this.pos, this.radius, this.vis_flags, this.vis_bans)
+
+		if enemies then
+			for i = 1, math.min(#enemies, bullet_available_count) do
+				local b = E:create_entity("bullet_desert_spider_death")
+				b.pos = V.vclone(this.pos)
+				b.bullet.from = V.vclone(this.pos)
+				b.bullet.to = V.vclone(enemies[i].pos)
+				b.bullet.target_id = enemies[i].id
+				b.bullet.source_id = this.id
+				queue_insert(store, b)
+			end
+		end
+	end
+
+	return false
+end
+
+scripts.mod_desert_spider_lamber = {}
+function scripts.mod_desert_spider_lamber.insert(this, store)
+	if scripts.mod_freeze.insert(this, store) then
+		local target = store.entities[this.modifier.target_id]
+		target.unit.damage_factor = target.unit.damage_factor * 0.2
+		return true
+	end
+	return false
+end
+
+function scripts.mod_desert_spider_lamber.remove(this, store)
+	if scripts.mod_freeze.remove(this, store) then
+		local target = store.entities[this.modifier.target_id]
+		target.unit.damage_factor = target.unit.damage_factor / 0.2
+		return true
+	end
+	return false
 end
 
 return scripts

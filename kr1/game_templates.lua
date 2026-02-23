@@ -23701,6 +23701,9 @@ tt.main_script.update = scripts.sandstorm.update
 tt.search_soldier_chance = 0.3
 tt.motion.max_speed = 150
 
+tt = RT("mod_sandstorm_stun", "mod_stun")
+tt.modifier.duration = 3
+
 tt = RT("sandstorm_controller")
 AC(tt, "main_script", "pos")
 tt.main_script.update = scripts.sandstorm_controller.update
@@ -23825,17 +23828,17 @@ tt.spawns = {
 		group_number = 12,
 		waves = {{
 			entities = {
-				["enemy_bouncer"] = 10
+				["enemy_bouncer"] = 12
 			},
 			delay = 0
 		}, {
 			entities = {
-				["enemy_bouncer"] = 10
+				["enemy_bouncer"] = 12
 			},
 			delay = 10
 		}, {
 			entities = {
-				["enemy_bouncer"] = 10
+				["enemy_bouncer"] = 12
 			},
 			delay = 20
 		}}
@@ -23860,6 +23863,28 @@ tt.spawns = {
 				["enemy_immortal"] = 4
 			},
 			delay = 34
+		}}
+	},
+	{
+		group_number = 14,
+		waves = {{
+			entities = {
+				["enemy_bouncer"] = 12,
+				["enemy_fallen"] = 6
+			},
+			delay = 0
+		}, {
+			entities = {
+				["enemy_bouncer"] = 12,
+				["enemy_fallen"] = 6
+			},
+			delay = 15
+		}, {
+			entities = {
+				["enemy_bouncer"] = 12,
+				["enemy_fallen"] = 6
+			},
+			delay = 30
 		}}
 	},
 	{

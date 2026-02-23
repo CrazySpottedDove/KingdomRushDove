@@ -58,6 +58,7 @@ screen_map.required_textures = {
 screen_map.ref_w = 1920
 screen_map.ref_h = 1080
 screen_map.ref_res = TEXTURE_SIZE_ALIAS.fullhd
+screen_map.generation = 1
 
 local function ISW(...)
 	return i18n.sw(i18n, ...)
@@ -128,18 +129,15 @@ function screen_map:init(w, h, done_callback)
 
 	E:load()
 
-	local points_data = require("data.map_points")
-	local generation = 1
-
-	if self.kr2_map then
+	local points_data
+	if self.generation == 1 then
+		points_data = require("data.map_points")
+	elseif self.generation == 2 then
 		points_data = require("data.map_points2")
-		generation = 2
-	elseif self.kr3_map then
+	elseif self.generation == 3 then
 		points_data = require("data.map_points3")
-		generation = 3
-	elseif self.kr5_map then
+	elseif self.generation == 5 then
 		points_data = require("data.map_points5")
-		generation = 5
 	end
 
 	local ppl = {}
@@ -210,7 +208,7 @@ function screen_map:init(w, h, done_callback)
 					self.unlock_data.show_stars_level = victory.level_idx
 					self.unlock_data.star_count_before = 0
 
-					if victory.level_idx < GS["last_level" .. generation] and not levels[victory.level_idx + 1] then
+					if victory.level_idx < GS["last_level" .. self.generation] and not levels[victory.level_idx + 1] then
 						levels[victory.level_idx + 1] = {}
 						self.unlock_data.new_level = victory.level_idx + 1
 						self.unlock_data.last_finished_level = victory.level_idx
@@ -247,7 +245,7 @@ function screen_map:init(w, h, done_callback)
 		storage:save_slot(self.user_data)
 	end
 
-	if U.unlock_next_levels_in_ranges(self.unlock_data, levels, GS, generation) then
+	if U.unlock_next_levels_in_ranges(self.unlock_data, levels, GS, self.generation) then
 		storage:save_slot(self.user_data)
 	end
 
@@ -411,41 +409,17 @@ function screen_map:init(w, h, done_callback)
 	change_button.pos = v(a_button.pos.x - 900, sh - 90)
 
 	function change_button.on_click(this, button, x, y)
-		if self.kr2_map then
-			S:queue("GUIButtonCommon")
-
-			self.kr1_map = false
-			self.kr2_map = false
-			self.kr3_map = true
-			self.kr5_map = false
-
-			screen_map:init(w, h, done_callback)
-		elseif self.kr3_map then
-			S:queue("GUIButtonCommon")
-
-			self.kr1_map = false
-			self.kr2_map = false
-			self.kr3_map = false
-			self.kr5_map = true
-
-			screen_map:init(w, h, done_callback)
-		elseif self.kr5_map then
-			S:queue("GUIButtonCommon")
-
-			self.kr1_map = true
-			self.kr2_map = false
-			self.kr3_map = false
-			self.kr5_map = false
-			screen_map:init(w, h, done_callback)
-		else
-			S:queue("GUIButtonCommon")
-
-			self.kr2_map = true
-			self.kr1_map = false
-			self.kr3_map = false
-			self.kr5_map = false
-			screen_map:init(w, h, done_callback)
+		local generation
+		if self.generation == 1 then
+			generation = 2
+		elseif self.generation == 2 then
+			generation = 3
+		elseif self.generation == 3 then
+			generation = 5
+		elseif self.generation == 5 then
+			generation = 1
 		end
+		self:change_generation(generation)
 	end
 
 	change_button.label.pos = v(50, 121)
@@ -693,14 +667,14 @@ function screen_map:init(w, h, done_callback)
 
 	self.window:add_child(self.criket_panel_view)
 
-	if self.kr2_map then
-		S:queue("MusicMap2")
-	elseif self.kr3_map then
-		S:queue("MusicMap3")
-	elseif self.kr5_map then
-		S:queue("MusicMap5")
-	else
+	if self.generation == 1 then
 		S:queue("MusicMap1")
+	elseif self.generation == 2 then
+		S:queue("MusicMap2")
+	elseif self.generation == 3 then
+		S:queue("MusicMap3")
+	elseif self.generation == 5 then
+		S:queue("MusicMap5")
 	end
 
 	self.stime = 0
@@ -709,7 +683,7 @@ function screen_map:init(w, h, done_callback)
 		signal.register(sn, fn)
 	end
 
-	if screen_map.user_data.difficulty == nil or DEBUG_SHOW_DIFFICULTY then
+	if self.user_data.difficulty == nil or DEBUG_SHOW_DIFFICULTY then
 		self.difficulty_view:show()
 	end
 end
@@ -763,6 +737,29 @@ function screen_map:draw()
 	self.window:draw()
 end
 
+function screen_map:change_generation(i)
+	self.generation = i
+	S:queue("GUIButtonCommon")
+	if self.is_switching_map then
+		return
+	end
+	self.is_switching_map = true
+	timer:tween(0.4, self.window, {
+		alpha = 0,
+		scale = v(0.95, 0.95)
+	}, "out-quad", function()
+		screen_map:init(self.sw, self.sh, self.done_callback)
+		self.window.alpha = 0
+		self.window.scale = v(1.05, 1.05)
+		timer:tween(0.4, self.window, {
+			alpha = 1,
+			scale = v(1, 1)
+		}, "in-quad", function()
+			self.is_switching_map = false
+		end)
+	end)
+end
+
 function screen_map:keypressed(key, isrepeat)
 	local function hide_others()
 		if self.level_select and not self.level_select.hidden then
@@ -792,8 +789,12 @@ function screen_map:keypressed(key, isrepeat)
 			self.option_panel:hide()
 
 			return true
-		elseif self.shop_view and not self.shop_view.hidden then
-			self.shop_view:hide()
+		elseif not self.config_panel_view.hidden then
+			self.config_panel_view:hide()
+
+			return true
+		elseif not self.criket_panel_view.hidden then
+			self.criket_panel_view:hide()
 
 			return true
 		end
@@ -806,12 +807,30 @@ function screen_map:keypressed(key, isrepeat)
 			self.option_panel:show()
 		end
 	elseif key == "f1" then
-		if not hide_others() then
-			self.config_panel_view:show()
-		end
+		hide_others()
+		self.config_panel_view:show()
 	elseif key == "f2" then
-		if not hide_others() then
-			self.criket_panel_view:show()
+		hide_others()
+		self.criket_panel_view:show()
+	elseif key == "1" then
+		if self.generation ~= 1 then
+			hide_others()
+			self:change_generation(1)
+		end
+	elseif key == "2" then
+		if self.generation ~= 2 then
+			hide_others()
+			self:change_generation(2)
+		end
+	elseif key == "3" then
+		if self.generation ~= 3 then
+			hide_others()
+			self:change_generation(3)
+		end
+	elseif key == "5" then
+		if self.generation ~= 5 then
+			hide_others()
+			self:change_generation(5)
 		end
 	end
 
@@ -1004,243 +1023,65 @@ end
 MapView = class("MapView", KImageView)
 
 function MapView:initialize(screen_w, screen_h)
-	if screen_map.kr2_map then
-		KImageView.initialize(self, "map_background_kr2")
+	local background_name = "map_background_kr" .. screen_map.generation
+	KImageView.initialize(self, background_name)
 
-		self.screen_w = screen_w
-		self.screen_h = screen_h
-		self.stime = 0
-		self.max_scroll_speed = 350
-		self.scrolling_dir = 0
-		self.ma_under_layer = KView:new(V.v(screen_w, screen_h))
-		self.ma_under_layer.propagate_on_click = true
-		self.ma_under_layer.propagate_on_down = true
-		self.ma_under_layer.propagate_on_up = true
+	self.screen_w = screen_w
+	self.screen_h = screen_h
+	self.stime = 0
+	self.max_scroll_speed = 350
+	self.scrolling_dir = 0
+	self.ma_under_layer = KView:new(V.v(screen_w, screen_h))
+	self.ma_under_layer.propagate_on_click = true
+	self.ma_under_layer.propagate_on_down = true
+	self.ma_under_layer.propagate_on_up = true
 
-		self:add_child(self.ma_under_layer)
+	self:add_child(self.ma_under_layer)
 
-		self.points_layer = KView:new(V.v(screen_w, screen_h))
-		self.points_layer.propagate_on_click = true
-		self.points_layer.propagate_on_down = true
-		self.points_layer.propagate_on_up = true
+	self.points_layer = KView:new(V.v(screen_w, screen_h))
+	self.points_layer.propagate_on_click = true
+	self.points_layer.propagate_on_down = true
+	self.points_layer.propagate_on_up = true
 
-		self:add_child(self.points_layer)
+	self:add_child(self.points_layer)
 
-		self.ma_mid_layer = KView:new(V.v(screen_w, screen_h))
-		self.ma_mid_layer.propagate_on_click = true
-		self.ma_mid_layer.propagate_on_down = true
-		self.ma_mid_layer.propagate_on_up = true
+	self.ma_mid_layer = KView:new(V.v(screen_w, screen_h))
+	self.ma_mid_layer.propagate_on_click = true
+	self.ma_mid_layer.propagate_on_down = true
+	self.ma_mid_layer.propagate_on_up = true
 
-		self:add_child(self.ma_mid_layer)
+	self:add_child(self.ma_mid_layer)
 
-		self.flags_layer = KView:new(V.v(screen_w, screen_h))
-		self.flags_layer.propagate_on_click = true
-		self.flags_layer.propagate_on_down = true
-		self.flags_layer.propagate_on_up = true
+	self.flags_layer = KView:new(V.v(screen_w, screen_h))
+	self.flags_layer.propagate_on_click = true
+	self.flags_layer.propagate_on_down = true
+	self.flags_layer.propagate_on_up = true
 
-		self:add_child(self.flags_layer)
+	self:add_child(self.flags_layer)
 
-		self.ma_over_layer = KView:new(V.v(screen_w, screen_h))
-		self.ma_over_layer.propagate_on_click = true
-		self.ma_over_layer.propagate_on_down = true
-		self.ma_over_layer.propagate_on_up = true
+	self.ma_over_layer = KView:new(V.v(screen_w, screen_h))
+	self.ma_over_layer.propagate_on_click = true
+	self.ma_over_layer.propagate_on_down = true
+	self.ma_over_layer.propagate_on_up = true
 
-		self:add_child(self.ma_over_layer)
+	self:add_child(self.ma_over_layer)
 
-		local last_flag_idx = screen_map.unlock_data.new_level or #screen_map.user_data.levels
-		local last_flag = screen_map.map_points.flags[last_flag_idx]
+	local last_flag_idx = screen_map.unlock_data.new_level or #screen_map.user_data.levels
+	local last_flag = screen_map.map_points.flags[last_flag_idx]
 
-		if last_flag and last_flag.pos then
-			log.debug("scroll to show level idx:%s", last_flag_idx)
+	if last_flag and last_flag.pos then
+		log.debug("scroll to show level idx:%s", last_flag_idx)
 
-			local vl, vr = -1 * self.pos.x, -1 * self.pos.x + self.screen_w
+		local vl, vr = -1 * self.pos.x, -1 * self.pos.x + self.screen_w
 
-			if vl > last_flag.pos.x or vr < last_flag.pos.x then
-				self.pos.x = -(last_flag.pos.x - self.screen_w / 2)
-				self.pos.x = km.clamp(self.screen_w - self.size.x, 0, self.pos.x)
-			end
+		if vl > last_flag.pos.x or vr < last_flag.pos.x then
+			self.pos.x = -(last_flag.pos.x - self.screen_w / 2)
+			self.pos.x = km.clamp(self.screen_w - self.size.x, 0, self.pos.x)
 		end
-
-		self:load_map_animations(2)
-		self:show_flags(2)
-	elseif screen_map.kr3_map then
-		KImageView.initialize(self, "map_background_kr3")
-
-		self.screen_w = screen_w
-		self.screen_h = screen_h
-		self.stime = 0
-		self.max_scroll_speed = 350
-		self.scrolling_dir = 0
-		self.ma_under_layer = KView:new(V.v(screen_w, screen_h))
-		self.ma_under_layer.propagate_on_click = true
-		self.ma_under_layer.propagate_on_down = true
-		self.ma_under_layer.propagate_on_up = true
-
-		self:add_child(self.ma_under_layer)
-
-		self.points_layer = KView:new(V.v(screen_w, screen_h))
-		self.points_layer.propagate_on_click = true
-		self.points_layer.propagate_on_down = true
-		self.points_layer.propagate_on_up = true
-
-		self:add_child(self.points_layer)
-
-		self.ma_mid_layer = KView:new(V.v(screen_w, screen_h))
-		self.ma_mid_layer.propagate_on_click = true
-		self.ma_mid_layer.propagate_on_down = true
-		self.ma_mid_layer.propagate_on_up = true
-
-		self:add_child(self.ma_mid_layer)
-
-		self.flags_layer = KView:new(V.v(screen_w, screen_h))
-		self.flags_layer.propagate_on_click = true
-		self.flags_layer.propagate_on_down = true
-		self.flags_layer.propagate_on_up = true
-
-		self:add_child(self.flags_layer)
-
-		self.ma_over_layer = KView:new(V.v(screen_w, screen_h))
-		self.ma_over_layer.propagate_on_click = true
-		self.ma_over_layer.propagate_on_down = true
-		self.ma_over_layer.propagate_on_up = true
-
-		self:add_child(self.ma_over_layer)
-
-		local last_flag_idx = screen_map.unlock_data.new_level or #screen_map.user_data.levels
-		local last_flag = screen_map.map_points.flags[last_flag_idx]
-
-		if last_flag and last_flag.pos then
-			log.debug("scroll to show level idx:%s", last_flag_idx)
-
-			local vl, vr = -1 * self.pos.x, -1 * self.pos.x + self.screen_w
-
-			if vl > last_flag.pos.x or vr < last_flag.pos.x then
-				self.pos.x = -(last_flag.pos.x - self.screen_w / 2)
-				self.pos.x = km.clamp(self.screen_w - self.size.x, 0, self.pos.x)
-			end
-		end
-
-		self:load_map_animations(3)
-		self:show_flags(3)
-	elseif screen_map.kr5_map then
-		KImageView.initialize(self, "map_background_kr5")
-
-		self.screen_w = screen_w
-		self.screen_h = screen_h
-		self.stime = 0
-		self.max_scroll_speed = 350
-		self.scrolling_dir = 0
-		self.ma_under_layer = KView:new(V.v(screen_w, screen_h))
-		self.ma_under_layer.propagate_on_click = true
-		self.ma_under_layer.propagate_on_down = true
-		self.ma_under_layer.propagate_on_up = true
-
-		self:add_child(self.ma_under_layer)
-
-		self.points_layer = KView:new(V.v(screen_w, screen_h))
-		self.points_layer.propagate_on_click = true
-		self.points_layer.propagate_on_down = true
-		self.points_layer.propagate_on_up = true
-
-		self:add_child(self.points_layer)
-
-		self.ma_mid_layer = KView:new(V.v(screen_w, screen_h))
-		self.ma_mid_layer.propagate_on_click = true
-		self.ma_mid_layer.propagate_on_down = true
-		self.ma_mid_layer.propagate_on_up = true
-
-		self:add_child(self.ma_mid_layer)
-
-		self.flags_layer = KView:new(V.v(screen_w, screen_h))
-		self.flags_layer.propagate_on_click = true
-		self.flags_layer.propagate_on_down = true
-		self.flags_layer.propagate_on_up = true
-
-		self:add_child(self.flags_layer)
-
-		self.ma_over_layer = KView:new(V.v(screen_w, screen_h))
-		self.ma_over_layer.propagate_on_click = true
-		self.ma_over_layer.propagate_on_down = true
-		self.ma_over_layer.propagate_on_up = true
-
-		self:add_child(self.ma_over_layer)
-
-		local last_flag_idx = screen_map.unlock_data.new_level or #screen_map.user_data.levels
-		local last_flag = screen_map.map_points.flags[last_flag_idx]
-
-		if last_flag and last_flag.pos then
-			log.debug("scroll to show level idx:%s", last_flag_idx)
-
-			local vl, vr = -1 * self.pos.x, -1 * self.pos.x + self.screen_w
-
-			if vl > last_flag.pos.x or vr < last_flag.pos.x then
-				self.pos.x = -(last_flag.pos.x - self.screen_w / 2)
-				self.pos.x = km.clamp(self.screen_w - self.size.x, 0, self.pos.x)
-			end
-		end
-		-- TODO: map_animations 和 show_flags 当前均为空，在 map_data 中等待添加
-		self:load_map_animations(5)
-		self:show_flags(5)
-	else
-		KImageView.initialize(self, "map_background")
-
-		self.screen_w = screen_w
-		self.screen_h = screen_h
-		self.stime = 0
-		self.max_scroll_speed = 350
-		self.scrolling_dir = 0
-		self.ma_under_layer = KView:new(V.v(screen_w, screen_h))
-		self.ma_under_layer.propagate_on_click = true
-		self.ma_under_layer.propagate_on_down = true
-		self.ma_under_layer.propagate_on_up = true
-
-		self:add_child(self.ma_under_layer)
-
-		self.points_layer = KView:new(V.v(screen_w, screen_h))
-		self.points_layer.propagate_on_click = true
-		self.points_layer.propagate_on_down = true
-		self.points_layer.propagate_on_up = true
-
-		self:add_child(self.points_layer)
-
-		self.ma_mid_layer = KView:new(V.v(screen_w, screen_h))
-		self.ma_mid_layer.propagate_on_click = true
-		self.ma_mid_layer.propagate_on_down = true
-		self.ma_mid_layer.propagate_on_up = true
-
-		self:add_child(self.ma_mid_layer)
-
-		self.flags_layer = KView:new(V.v(screen_w, screen_h))
-		self.flags_layer.propagate_on_click = true
-		self.flags_layer.propagate_on_down = true
-		self.flags_layer.propagate_on_up = true
-
-		self:add_child(self.flags_layer)
-
-		self.ma_over_layer = KView:new(V.v(screen_w, screen_h))
-		self.ma_over_layer.propagate_on_click = true
-		self.ma_over_layer.propagate_on_down = true
-		self.ma_over_layer.propagate_on_up = true
-
-		self:add_child(self.ma_over_layer)
-
-		local last_flag_idx = screen_map.unlock_data.new_level or #screen_map.user_data.levels
-		local last_flag = screen_map.map_points.flags[last_flag_idx]
-
-		if last_flag and last_flag.pos then
-			log.debug("scroll to show level idx:%s", last_flag_idx)
-
-			local vl, vr = -1 * self.pos.x, -1 * self.pos.x + self.screen_w
-
-			if vl > last_flag.pos.x or vr < last_flag.pos.x then
-				self.pos.x = -(last_flag.pos.x - self.screen_w / 2)
-				self.pos.x = km.clamp(self.screen_w - self.size.x, 0, self.pos.x)
-			end
-		end
-
-		self:load_map_animations(1)
-		self:show_flags(1)
 	end
+
+	self:load_map_animations(screen_map.generation)
+	self:show_flags(screen_map.generation)
 end
 
 function MapView:load_map_animations(num)
@@ -2665,13 +2506,19 @@ LevelSelectView = class("LevelSelectView", PopUpView)
 function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot_data)
 	PopUpView.initialize(self, V.v(sw, sh))
 
-	if screen_map.kr2_map and not is_extra_level(level_num, 2) then
-		level_num = level_num + GS.level2_from
-	elseif screen_map.kr3_map and not is_extra_level(level_num, 3) then
-		level_num = level_num + GS.level3_from
-	elseif screen_map.kr5_map and not is_extra_level(level_num, 5) then
-		level_num = level_num + GS.level5_from
+	if screen_map.generation ~= 1 then
+		if not is_extra_level(level_num, screen_map.generation) then
+			level_num = level_num + GS["level" .. screen_map.generation .. "_from"]
+		end
 	end
+
+	-- if screen_map.kr2_map and not is_extra_level(level_num, 2) then
+	-- 	level_num = level_num + GS.level2_from
+	-- elseif screen_map.kr3_map and not is_extra_level(level_num, 3) then
+	-- 	level_num = level_num + GS.level3_from
+	-- elseif screen_map.kr5_map and not is_extra_level(level_num, 5) then
+	-- 	level_num = level_num + GS.level5_from
+	-- end
 
 	local level_string = string.format("%02i", level_num)
 	local level_data = screen_map.level_data[level_num]

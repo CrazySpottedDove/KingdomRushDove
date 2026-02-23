@@ -1483,9 +1483,7 @@ tt.vis.bans = bor(F_POISON, F_BURN)
 --#endregion
 --#region enemy_sarelgaz_small
 tt = RT("enemy_sarelgaz_small", "enemy")
-
 AC(tt, "melee")
-
 anchor_y = 0.19
 anchor_x = 0.5
 image_y = 68
@@ -14066,3 +14064,80 @@ tt.render.sprites[1].prefix = "hellfire_warlock_summon_decal"
 tt.render.sprites[1].name = "start"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_DECALS
+
+tt = RT("enemy_desert_spider", "enemy")
+AC(tt, "melee", "death_spawns")
+anchor_y = 0.19
+anchor_x = 0.5
+image_y = 68
+image_x = 96
+tt.enemy.gold = 80
+tt.enemy.melee_slot = vec_2(35, 0)
+tt.health.armor = 0
+tt.health.hp_max = 1200
+tt.health.magic_armor = 0.5
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.health_bar.offset = vec_2(0, 51)
+tt.info.portrait = "info_portraits_enemies_0037"
+tt.info.enc_icon = 31
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_max = 60
+tt.melee.attacks[1].damage_min = 30
+tt.melee.attacks[1].hit_time = fts(11)
+tt.melee.attacks[1].sound = "SpiderAttack"
+tt.melee.attacks[1].mod = "mod_desert_spider_poison"
+tt.motion.max_speed = 1 * FPS
+tt.render.sprites[1].anchor = vec_2(0.5, 0.19)
+tt.render.sprites[1].prefix = "enemy_sarelgaz_small"
+tt.render.sprites[1].shader = "p_tint"
+tt.render.sprites[1].shader_args = {
+	tint_color = {200 / 255, 200 / 255, 120 / 255, 1}
+}
+tt.sound_events.death = "DeathEplosion"
+tt.ui.click_rect.size = vec_2(54, 50)
+tt.ui.click_rect.pos.x = -27
+tt.unit.blood_color = BLOOD_GREEN
+tt.unit.can_explode = false
+tt.unit.hit_offset = vec_2(0, 23)
+tt.unit.mod_offset = vec_2(adx(45), ady(35))
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.vis.bans = bor(F_POISON, F_SKELETON)
+tt.death_spawns.concurrent_with_death = true
+tt.death_spawns.name = "controller_desert_spider_death"
+tt.unit.can_explode = false
+
+tt = RT("mod_desert_spider_poison", "mod_poison")
+tt.dps.damage_min = 1
+tt.dps.damage_max = 2
+tt.dps.damage_every = fts(6)
+tt.modifier.duration = 5
+
+tt = RT("controller_desert_spider_death")
+AC(tt, "main_script", "pos")
+tt.main_script.insert = scripts.controller_desert_spider_death.insert
+tt.radius = 70
+tt.max_count = 3
+tt.vis_bans = F_NONE
+tt.vis_flags = bor(F_RANGED, F_MOD)
+
+tt = RT("bullet_desert_spider_death", "arrow")
+tt.render.sprites[1].name = "regson_heal_ball_travel"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_EFFECTS
+tt.bullet.mods = {"mod_desert_spider_lamber"}
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.bullet.damage_type = DAMAGE_NONE
+
+tt = RT("mod_desert_spider_lamber", "mod_freeze")
+tt.modifier.duration = 6
+tt.modifier.vis_flags = F_MOD
+tt.main_script.insert = scripts.mod_desert_spider_lamber.insert
+tt.main_script.remove = scripts.mod_desert_spider_lamber.remove
+tt.freeze_decal_name = "decal_desert_spider_lamber"
+
+tt = RT("decal_desert_spider_lamber", "decal")
+tt.shader = "p_tint"
+tt.shader_args = {
+	tint_color = {200 / 255, 200 / 255, 120 / 255, 1}
+}
