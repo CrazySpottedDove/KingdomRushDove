@@ -744,16 +744,23 @@ function screen_map:change_generation(i)
 		return
 	end
 	self.is_switching_map = true
+	local scale_x = self.window.scale.x
+	local scale_y = self.window.scale.y
+	local small_scale_x = self.window.scale.x * 0.95
+	local small_scale_y = self.window.scale.y * 0.95
+	local large_scale_x = self.window.scale.x * 1.05
+	local large_scale_y = self.window.scale.y * 1.05
+
 	timer:tween(0.4, self.window, {
 		alpha = 0,
-		scale = v(0.95, 0.95)
+		scale = v(small_scale_x, small_scale_y)
 	}, "out-quad", function()
 		screen_map:init(self.sw, self.sh, self.done_callback)
 		self.window.alpha = 0
-		self.window.scale = v(1.05, 1.05)
+		self.window.scale = v(large_scale_x, large_scale_y)
 		timer:tween(0.4, self.window, {
 			alpha = 1,
-			scale = v(1, 1)
+			scale = v(scale_x, scale_y)
 		}, "in-quad", function()
 			self.is_switching_map = false
 		end)
