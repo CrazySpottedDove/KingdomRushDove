@@ -37,10 +37,10 @@ tt.info.enc_icon = 16
 tt.info.i18n_key = "TOWER_BFG"
 tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_towers_0012" or "info_portraits_towers_0002"
 tt.powers.missile = CC("power")
-tt.powers.missile.price_base = 185
-tt.powers.missile.price_inc = 120
+tt.powers.missile.price_base = 175
+tt.powers.missile.price_inc = 135
 tt.powers.missile.range_inc_factor = 0.3
-tt.powers.missile.damage_inc = 42
+tt.powers.missile.damage_inc = 28
 tt.powers.missile.enc_icon = 17
 tt.powers.missile.cooldown_dec = 2
 tt.powers.missile.cooldown_mixed_dec = 2
@@ -91,6 +91,7 @@ tt.attacks.list[3].cooldown_base = 18.5
 tt.attacks.list[3].node_prediction = fts(40)
 tt.attacks.list[3].vis_bans = 0
 --#endregion
+
 --#region bomb_bfg
 tt = RT("bomb_bfg", "bomb")
 -- dps = 131 / 3.65 = 35.89 per second
@@ -103,11 +104,10 @@ tt.render.sprites[1].name = "bombs_0005"
 tt.sound_events.hit_water = nil
 tt.render.sprites[1].scale = vec_1(1.1)
 --#endregion
+
 --#region bomb_bfg_cluster
 tt = RT("bomb_bfg_cluster", "bullet")
-
 AC(tt, "sound_events")
-
 tt.bullet.damage_type = DAMAGE_NONE
 tt.bullet.flight_time = fts(29)
 tt.bullet.fragment_count = 1
@@ -127,6 +127,7 @@ tt.render.sprites[1].scale = vec_1(1.1)
 tt.sound_events.hit = "BombExplosionSound"
 tt.sound_events.insert = "BombShootSound"
 --#endregion
+
 --#region bomb_bfg_fragment
 tt = RT("bomb_bfg_fragment", "bomb")
 tt.bullet.damage_max = 84
@@ -140,12 +141,14 @@ tt.bullet.mod = "mod_bfg_stun"
 tt.render.sprites[1].name = "bombs_0006"
 tt.sound_events.hit_water = nil
 --#endregion
+
 --#region mod_bfg_stun
 tt = RT("mod_bfg_stun", "mod_stun")
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
 tt.modifier.duration = 0.25
 --#endregion
+
 --#region missile_bfg
 tt = RT("missile_bfg", "bullet")
 tt.render.sprites[1].prefix = "missile_bfg"
@@ -158,19 +161,35 @@ tt.bullet.turn_speed = 10 * math.pi / 180 * 30
 tt.bullet.acceleration_factor = 0.1
 tt.bullet.hit_fx = "fx_explosion_air"
 tt.bullet.hit_fx_air = "fx_explosion_air"
-tt.bullet.damage_min = 63
-tt.bullet.damage_max = 105
-tt.bullet.damage_radius = 41.25
+tt.bullet.damage_min = 42
+tt.bullet.damage_max = 70
+tt.bullet.damage_radius = 45
 tt.bullet.vis_flags = F_RANGED
 tt.bullet.damage_flags = F_AREA
 tt.bullet.particles_name = "ps_missile"
 tt.bullet.retarget_range = 1e+99
 tt.main_script.insert = scripts.missile.insert
 tt.main_script.update = scripts.missile.update
+tt.main_script.remove = scripts.missile_bfg.remove
 tt.sound_events.insert = "RocketLaunchSound"
 tt.sound_events.hit = "BombExplosionSound"
--- 特斯拉
 --#endregion
+
+tt = RT("missile_bfg_second", "missile_bfg")
+tt.render.sprites[1].scale = v(0.8, 0.8)
+-- 伤害运行时由 missile_bfg 决定
+tt.bullet.damage_min = tt.bullet.damage_min / 3
+tt.bullet.damage_max = tt.bullet.damage_max / 3
+tt.bullet.damage_radius = tt.bullet.damage_radius * 0.8
+tt.main_script.remove = nil
+tt.bullet.hit_fx = "fx_explosion_air_small"
+tt.bullet.hif_fx_air = "fx_explosion_air_small"
+tt.bullet.particles_name = "ps_missile_small"
+tt.bullet.min_speed = tt.bullet.min_speed / 0.9
+tt.bullet.max_speed = tt.bullet.max_speed / 0.9
+tt.bullet.acceleration_factor = tt.bullet.acceleration_factor / 0.9
+tt.bullet.turn_speed = tt.bullet.turn_speed / 0.9
+
 --#region tower_tesla
 tt = RT("tower_tesla", "tower")
 

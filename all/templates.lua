@@ -473,11 +473,9 @@ fx_explosion_big.render.sprites[1].sort_y_offset = -2
 fx_explosion_big.render.sprites[1].scale = vv(1.1)
 
 local fx_explosion_small = E:register_t("fx_explosion_small", "fx_explosion_big")
-
 fx_explosion_small.render.sprites[1].scale = v(0.9, 0.9)
 
 local fx_explosion_fragment = E:register_t("fx_explosion_fragment", "fx")
-
 fx_explosion_fragment.render.sprites[1].prefix = "explosion"
 fx_explosion_fragment.render.sprites[1].name = "fragment"
 fx_explosion_fragment.render.sprites[1].anchor.y = 0.13
@@ -485,9 +483,11 @@ fx_explosion_fragment.render.sprites[1].z = Z_OBJECTS
 fx_explosion_fragment.render.sprites[1].sort_y_offset = -2
 
 local fx_explosion_air = E:register_t("fx_explosion_air", "fx")
-
 fx_explosion_air.render.sprites[1].prefix = "explosion"
 fx_explosion_air.render.sprites[1].name = "air"
+
+local fx_explosion_air_small = E:register_t("fx_explosion_air_small", "fx_explosion_air")
+fx_explosion_air_small.render.sprites[1].scale = v(0.8, 0.8)
 
 local fx_explosion_water = E:register_t("fx_explosion_water", "fx")
 
@@ -780,10 +780,9 @@ ps_water_trail.particle_system.scales_y = {1, 0.05}
 ps_water_trail.particle_system.scale_var = {0.9, 1.1}
 ps_water_trail.particle_system.emission_rate = 30
 ps_water_trail.particle_system.z = Z_OBJECTS
+
 tt = E:register_t("ps_missile")
-
 E:add_comps(tt, "pos", "particle_system")
-
 tt.particle_system.name = "particle_smokelet"
 tt.particle_system.animated = false
 tt.particle_system.particle_lifetime = {1.6, 1.8}
@@ -794,10 +793,15 @@ tt.particle_system.scale_var = {0.4, 0.95}
 tt.particle_system.scale_same_aspect = false
 tt.particle_system.emit_spread = math.pi
 tt.particle_system.emission_rate = 30
+
+tt = E:register_t("ps_missile_small", "ps_missile")
+tt.particle_system.particle_lifetime = {tt.particle_system.particle_lifetime[1] * 0.9, tt.particle_system.particle_lifetime[2] * 0.9}
+tt.particle_system.scales_x = {tt.particle_system.scales_x[1] * 0.9, tt.particle_system.scales_x[2] * 0.9}
+tt.particle_system.scales_y = {tt.particle_system.scales_y[1] * 0.9, tt.particle_system.scales_y[2] * 0.9}
+tt.particle_system.scale_var = {tt.particle_system.scale_var[1] * 0.9, tt.particle_system.scale_var[2] * 0.9}
+
 tt = E:register_t("pop")
-
 E:add_comps(tt, "pos", "render", "tween")
-
 tt.pop_y_offset = 30
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_EFFECTS

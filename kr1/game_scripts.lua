@@ -62701,6 +62701,9 @@ function scripts.mod_desert_spider_lamber.insert(this, store)
 		if target.soldier then
 			U.unblock_target(store, target)
 		end
+		if target.enemy then
+			this.modifier.duration = this.modifier.duration * 0.5
+		end
 		return true
 	end
 	return false
@@ -62710,6 +62713,10 @@ function scripts.mod_desert_spider_lamber.remove(this, store)
 	if scripts.mod_freeze.remove(this, store) then
 		local target = store.entities[this.modifier.target_id]
 		target.health.damage_factor = target.health.damage_factor / this.harden_factor
+		local m = E:create_entity("mod_desert_spider_speedup")
+		m.modifier.target_id = target.id
+		m.modifier.source_id = this.id
+		queue_insert(store, m)
 		return true
 	end
 	return false

@@ -1472,7 +1472,6 @@ function game:draw_game()
 	end
 
 	-- self:front_draw_debug(rox, roy, gs)
-
 	G.push()
 	G.translate(rox, roy)
 	G.scale(gs, gs)

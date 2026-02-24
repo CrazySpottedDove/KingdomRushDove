@@ -3444,41 +3444,27 @@ scripts.tower_bfg = {
 		local last_ts = store.tick_ts
 
 		ab.ts = store.tick_ts
-
-		local aa, pow
-		local attacks = {am, ac, ab}
-		local pows = {pow_m, pow_c}
+		local tpos = tpos(this)
 
 		while true do
 			if this.tower.blocked then
 				coroutine.yield()
 			else
-				for k, pow in pairs(this.powers) do
-					if pow.changed then
-						pow.changed = nil
-
-						if pow == pow_m then
-							am.range = am.range_base * (1 + pow_m.range_inc_factor * pow_m.level)
-							am.cooldown = am.cooldown_base - pow_m.cooldown_dec * pow_m.level
-							am.cooldown_mixed = am.cooldown_mixed_base - pow_m.cooldown_mixed_dec * pow_m.level
-
-							if pow.level == 1 then
-								am.ts = store.tick_ts
-							end
-						elseif pow == pow_c and pow.level == 1 then
-							ac.ts = store.tick_ts
-						end
-
-						if pow == pow_c then
-							ac.cooldown = ac.cooldown_base - pow_c.cooldown_dec * pow_c.level
-						end
-					end
+				if pow_m.changed then
+					pow_m.changed = nil
+					am.range = am.range_base * (1 + pow_m.range_inc_factor * pow_m.level)
+					am.cooldown = am.cooldown_base - pow_m.cooldown_dec * pow_m.level
+					am.cooldown_mixed = am.cooldown_mixed_base - pow_m.cooldown_mixed_dec * pow_m.level
+				end
+				if pow_c.changed then
+					pow_c.changed = nil
+					ac.cooldown = ac.cooldown_base - pow_c.cooldown_dec * pow_c.level
 				end
 
 				SU.tower_update_silenced_powers(store, this)
 
 				if ready_to_use_power(pow_m, am, store, this.tower.cooldown_factor) then
-					local trigger = U.find_first_enemy(store, tpos(this), 0, am.range, am.vis_flags, am.vis_bans)
+					local trigger = U.find_first_enemy_in_range_filter_off(tpos, am.range, am.vis_flags, am.vis_bans)
 
 					if not trigger then
 						am.ts = am.ts + fts(5)
@@ -3491,7 +3477,7 @@ scripts.tower_bfg = {
 						animation_start(this, am.animation, nil, store.tick_ts, false, tower_sid)
 						y_wait(store, am.shoot_time)
 
-						local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), am.range, am.vis_flags, am.vis_bans)
+						local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos, am.range, am.vis_flags, am.vis_bans)
 						local dest = enemy and U.calculate_enemy_ffe_pos(enemy, am.node_prediction) or trigger_pos
 						local b = E:create_entity(am.bullet)
 
@@ -3512,10 +3498,8 @@ scripts.tower_bfg = {
 					end
 				end
 
-				aa = ac
-
-				if ready_to_use_power(pow_c, aa, store, this.tower.cooldown_factor) then
-					local trigger = U.find_first_enemy(store, tpos(this), 0, a.range, aa.vis_flags, aa.vis_bans)
+				if ready_to_use_power(pow_c, ac, store, this.tower.cooldown_factor) then
+					local trigger = U.find_first_enemy_in_range_filter_off(tpos, a.range, ac.vis_flags, ac.vis_bans)
 
 					if trigger then
 						am.cooldown = am.cooldown_mixed
@@ -3524,23 +3508,23 @@ scripts.tower_bfg = {
 					end
 
 					if not trigger then
-						aa.ts = aa.ts + fts(5)
+						ac.ts = ac.ts + fts(5)
 					-- block empty
 					else
-						aa.ts = store.tick_ts
+						ac.ts = store.tick_ts
 
 						local trigger_pos = vclone(trigger.pos)
 
-						last_ts = aa.ts
+						last_ts = ac.ts
 
-						animation_start(this, aa.animation, nil, store.tick_ts, false, tower_sid)
-						y_wait(store, aa.shoot_time)
+						animation_start(this, ac.animation, nil, store.tick_ts, false, tower_sid)
+						y_wait(store, ac.shoot_time)
 
-						local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range, aa.vis_flags, aa.vis_bans)
-						local dest = enemy and U.calculate_enemy_ffe_pos(enemy, aa.node_prediction) or trigger_pos
-						local b = E:create_entity(aa.bullet)
+						local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range, ac.vis_flags, ac.vis_bans)
+						local dest = enemy and U.calculate_enemy_ffe_pos(enemy, ac.node_prediction) or trigger_pos
+						local b = E:create_entity(ac.bullet)
 
-						b.pos.x, b.pos.y = this.pos.x + aa.bullet_start_offset.x, this.pos.y + aa.bullet_start_offset.y
+						b.pos.x, b.pos.y = this.pos.x + ac.bullet_start_offset.x, this.pos.y + ac.bullet_start_offset.y
 						b.bullet.damage_factor = this.tower.damage_factor
 						b.bullet.from = vclone(b.pos)
 						b.bullet.to = dest
@@ -3553,10 +3537,8 @@ scripts.tower_bfg = {
 					end
 				end
 
-				aa = ab
-
-				if ready_to_attack(aa, store, this.tower.cooldown_factor) then
-					local trigger = U.find_first_enemy(store, tpos(this), 0, a.range, aa.vis_flags, aa.vis_bans)
+				if ready_to_attack(ab, store, this.tower.cooldown_factor) then
+					local trigger = U.find_first_enemy_in_range_filter_off(tpos, a.range, ab.vis_flags, ab.vis_bans)
 
 					if trigger then
 						am.cooldown = am.cooldown_mixed
@@ -3565,23 +3547,23 @@ scripts.tower_bfg = {
 					end
 
 					if not trigger then
-						aa.ts = aa.ts + fts(5)
+						ab.ts = ab.ts + fts(5)
 					-- block empty
 					else
-						aa.ts = store.tick_ts
+						ab.ts = store.tick_ts
 
 						local trigger_pos = vclone(trigger.pos)
 
-						last_ts = aa.ts
+						last_ts = ab.ts
 
-						animation_start(this, aa.animation, nil, store.tick_ts, false, tower_sid)
-						y_wait(store, aa.shoot_time)
+						animation_start(this, ab.animation, nil, store.tick_ts, false, tower_sid)
+						y_wait(store, ab.shoot_time)
 
-						local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range, aa.vis_flags, aa.vis_bans)
-						local dest = enemy and U.calculate_enemy_ffe_pos(enemy, aa.node_prediction) or trigger_pos
-						local b = E:create_entity(aa.bullet)
+						local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range, ab.vis_flags, ab.vis_bans)
+						local dest = enemy and U.calculate_enemy_ffe_pos(enemy, ab.node_prediction) or trigger_pos
+						local b = E:create_entity(ab.bullet)
 
-						b.pos.x, b.pos.y = this.pos.x + aa.bullet_start_offset.x, this.pos.y + aa.bullet_start_offset.y
+						b.pos.x, b.pos.y = this.pos.x + ab.bullet_start_offset.x, this.pos.y + ab.bullet_start_offset.y
 						b.bullet.damage_factor = this.tower.damage_factor
 						b.bullet.from = vclone(b.pos)
 						b.bullet.to = dest
@@ -3599,6 +3581,26 @@ scripts.tower_bfg = {
 		end
 	end
 }
+
+scripts.missile_bfg = {
+	remove = function(this, store)
+		for i = 1, 3 do
+			local missile_second = E:create_entity("missile_bfg_second")
+			missile_second.render.sprites[1].r = V.angleTo(this.bullet.speed.x, this.bullet.speed.y) + i * math.pi * 2 / 3
+			missile_second.pos = vclone(this.pos)
+			missile_second.bullet.damage_factor = this.bullet.damage_factor
+			missile_second.bullet.damage_max = this.bullet.damage_max / 3
+			missile_second.bullet.damage_min = this.bullet.damage_min / 3
+			missile_second.bullet.from = vclone(this.pos)
+			missile_second.bullet.target_id = this.bullet.target_id
+			missile_second.bullet.source_id = this.bullet.source_id
+			missile_second.bullet.to = v(this.pos.x + math.cos(missile_second.render.sprites[1].r) * 100, this.pos.y + math.sin(missile_second.render.sprites[1].r) * 100)
+			queue_insert(store, missile_second)
+		end
+		return true
+	end
+}
+
 scripts.lava_dwaarp = {
 	update = function(this, store)
 		local last_hit_ts = 0

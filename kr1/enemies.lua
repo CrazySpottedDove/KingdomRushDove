@@ -14115,7 +14115,7 @@ tt.modifier.duration = 5
 tt = RT("controller_desert_spider_death")
 AC(tt, "main_script", "pos")
 tt.main_script.insert = scripts.controller_desert_spider_death.insert
-tt.radius = 75
+tt.radius = 100
 tt.max_count = 5
 tt.vis_bans = F_NONE
 tt.vis_flags = bor(F_RANGED, F_MOD)
@@ -14141,6 +14141,11 @@ tt.main_script.insert = scripts.mod_desert_spider_lamber.insert
 tt.main_script.remove = scripts.mod_desert_spider_lamber.remove
 tt.freeze_decal_name = "decal_desert_spider_lamber"
 tt.harden_factor = 0.1
+
+tt = RT("mod_desert_spider_speedup", "mod_slow")
+tt.modifier.duration = 6
+-- > 1 的 factor 等价于加速
+tt.slow.factor = 1.25
 
 tt = RT("decal_desert_spider_lamber", "decal")
 tt.shader = "p_tint"
