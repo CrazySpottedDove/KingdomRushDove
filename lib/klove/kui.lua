@@ -1048,7 +1048,7 @@ end
 KStaticView = class("KStaticView", KView)
 function KStaticView:initialize(size, image_name, image_scale)
 	KStaticView.super.initialize(self, size, image_name, image_scale)
-	self.canvas_cache = G.newCanvas()
+	self.canvas_cache = G.newCanvas(self.size.x, self.size.y)
 	self.canvas_cache_dirty = true
 end
 

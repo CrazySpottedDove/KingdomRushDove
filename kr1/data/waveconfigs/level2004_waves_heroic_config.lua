@@ -1,12 +1,12 @@
 -- 用于生成出怪文件的初稿
 local data = {
-	max_waves = 15,
+	max_waves = 6,
 	-- 最大波数
 	initial_cash = 1200,
 	-- 初始资金
-	initial_interval = 800,
+	initial_interval = 1500,
 	-- 初始每大波持续时间
-	final_interval = 2000,
+	final_interval = 2500,
 	-- 最终每大波持续时间
 	paths = {1, 2, 3, 4, 5, 6, 7, 8, 9},
 	-- 允许的路径
@@ -20,35 +20,18 @@ local data = {
 	-- path8: 右路短路径
 	-- path9: 右路较短路径
 	path_active_map = {
-		-- l
-		[1] = {2},
-		-- l
-		[2] = {3},
-		-- l
-		[3] = {2, 3},
-		-- l
-		[4] = {7, 6},
-		-- l
-		[5] = {1, 7},
-		-- l, r
-		[6] = {1, 7, 9},
-		-- l
-		[7] = {1, 4},
-		-- l
-		[8] = {4, 5},
-		-- l, r
-		[9] = {2, 8},
-		-- l
-		[10] = {2, 3, 4, 5},
-		-- l
-		[11] = {1},
-		-- r
-		[12] = {8, 9},
-		-- l, r
-		[13] = {1, 2, 8, 9},
-		-- l, r
-		[14] = {1, 2, 3, 7, 8, 9},
-		[15] = {1, 4, 5, 6, 7, 9}
+		-- w1: 快攻先锋 — 最短左路直扑，无预警急袭
+		[1] = {1},
+		-- w2: 双翼奇袭 — 左绕长路 + 右短路，两侧夹击
+		[2] = {3, 8},
+		-- w3: 铁甲推进 — 左下绕 + 右上绕，长路铁甲缓推
+		[3] = {2, 7},
+		-- w4: 三线骚扰 — 左短、左中、右次短，分散防线
+		[4] = {1, 4, 9},
+		-- w5: 精锐突袭 — 四路齐发，考验极限资源分配
+		[5] = {2, 6, 7, 8},
+		-- w6: 全面围攻 — 六路同发，最终决战无退路
+		[6] = {1, 3, 5, 6, 8, 9}
 	},
 	path_weight_map = {
 		[1] = 2,
@@ -91,73 +74,71 @@ local data = {
 	},
 	-- 敌人的权重
 	enemy_comeout_wave_map = {
+		-- w1: 小卒先行
 		["enemy_bouncer"] = 1,
 		["enemy_desert_raider"] = 1,
 		["enemy_desert_wolf_small"] = 1,
+		-- w2: 中型威胁登场
 		["enemy_desert_wolf"] = 2,
-		["enemy_immortal"] = 3,
 		["enemy_fallen"] = 2,
-		["enemy_desert_archer"] = 4,
-		["enemy_scorpion"] = 8,
-		["enemy_tremor"] = 4,
-		["enemy_wasp"] = 5,
-		["enemy_wasp_queen"] = 7,
-		["enemy_executioner"] = 9,
-		["enemy_munra"] = 10,
-		["enemy_desert_spider"] = 6
-	}, -- 敌人首次出现的波次
+		["enemy_tremor"] = 2,
+		-- w3: 精英初现
+		["enemy_immortal"] = 3,
+		["enemy_wasp"] = 3,
+		["enemy_desert_archer"] = 3,
+		-- w4: 特种部队
+		["enemy_desert_spider"] = 4,
+		["enemy_wasp_queen"] = 4,
+		-- w5: 精锐重甲
+		["enemy_scorpion"] = 5,
+		["enemy_executioner"] = 5,
+		-- w6: 终极boss
+		["enemy_munra"] = 6
+	}, -- 敌人首次出现的波次（压缩至6波节奏）
 	enemy_delete_wave_map = {
+		-- 波次缩短，小卒在中期淘汰，保持后期精锐化
 		[1] = {
-			[6] = {"enemy_bouncer"},
-			[9] = {"enemy_tremor"}
+			[4] = {"enemy_bouncer"}
 		},
 		[2] = {
-			[7] = {"enemy_bouncer"},
-			[10] = {"enemy_desert_raider"}
+			[4] = {"enemy_bouncer"},
+			[5] = {"enemy_desert_raider"}
 		},
 		[3] = {
-			[7] = {"enemy_bouncer"},
-			[10] = {"enemy_desert_raider"}
+			[4] = {"enemy_bouncer"},
+			[5] = {"enemy_desert_raider"}
 		},
 		[4] = {
-			[8] = {"enemy_bouncer"},
-			[11] = {"enemy_desert_wolf_small"}
+			[5] = {"enemy_bouncer", "enemy_desert_wolf_small"}
 		},
 		[5] = {
-			[8] = {"enemy_bouncer"},
-			[11] = {"enemy_desert_wolf_small"}
+			[5] = {"enemy_bouncer"}
 		},
 		[6] = {
-			[9] = {"enemy_bouncer", "enemy_desert_raider"},
-			[12] = {"enemy_desert_archer"}
+			[5] = {"enemy_bouncer", "enemy_desert_raider"}
 		},
 		[7] = {
-			[8] = {"enemy_bouncer"},
-			[11] = {"enemy_wasp"}
+			[4] = {"enemy_bouncer"}
 		},
-		[8] = {
-			[9] = {"enemy_fallen"}
-		},
-		[9] = {
-			[10] = {"enemy_fallen"}
-		}
+		[8] = {},
+		[9] = {}
 	},
-	-- 波次权重函数：后期增长更快，前期更慢，便于节奏递进
+	-- 波次权重：陡坡加速，英雄难度后劲更猛
 	wave_weight_function = function(wave_number, total_gold)
-		return (50 + (total_gold ^ 0.72) / 18 + wave_number ^ 2.5) * 0.38
+		return (70 + (total_gold ^ 0.75) / 14 + wave_number ^ 3.0) * 0.65
 	end,
-	-- 出怪间隔函数：整体拉大间隔，前期更稀疏，后期略密集
+	-- 出怪间隔：紧凑有力，前密后更密，每波节奏感强
 	interval_function = function(weight, e, wave_number)
-		local base = 60 + 180 * math.log(weight)
+		local base = 55 + 160 * math.log(weight)
 		local speed_factor = 20 / (e.motion.max_speed or 1)
-		local wave_factor = 1 - math.min(wave_number / 16, 0.6)
+		local wave_factor = 1 - math.min(wave_number / 8, 0.55)
 		return base * speed_factor * wave_factor
 	end,
-	interval_next_factor = 0.18, -- 每组之间的间隔更大，节奏更明显
-	min_spawn_weight = 1.5, -- 每组最少权重提升，避免太碎
-	max_spawn_weight = 18, -- 每组最大权重略降低，避免一波太密集
-	gap_count_range = {1, 2, 3, 4}, -- 每波必有间隔，提升波内节奏变化
-	wave_max_types = 3 -- 每波最多3种敌人，突出单路特色
+	interval_next_factor = 0.15, -- 组间停顿更短，节奏更紧迫
+	min_spawn_weight = 2, -- 每组最小权重稍高，避免零碎小怪
+	max_spawn_weight = 22, -- 每组上限略高，精锐组团出现
+	gap_count_range = {1, 2, 3}, -- 间隔次数减少，压迫感更强
+	wave_max_types = 4 -- 每波最多4种敌人，英雄难度更多变
 }
 
 return data

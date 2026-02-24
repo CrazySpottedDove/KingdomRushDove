@@ -422,7 +422,7 @@ function entity_db:gen_wave(level_idx, game_mode)
 	for wave_i = 1, cfg.max_waves do
 		local group = {}
 
-		group.interval = lerp(cfg.initial_inverval, cfg.final_interval, cfg.max_waves > 1 and (wave_i - 1) / (cfg.max_waves - 1) or 0)
+		group.interval = lerp(cfg.initial_interval, cfg.final_interval, cfg.max_waves > 1 and (wave_i - 1) / (cfg.max_waves - 1) or 0)
 		group.waves = {}
 
 		-- 本波总权重预算 = wave_weight_function

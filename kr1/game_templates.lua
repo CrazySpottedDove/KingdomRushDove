@@ -23705,10 +23705,12 @@ tt = RT("mod_sandstorm_stun", "mod_stun")
 tt.modifier.duration = 2.5
 
 tt = RT("sandstorm_controller")
-AC(tt, "main_script", "pos")
+AC(tt, "main_script", "pos", "editor")
 tt.main_script.update = scripts.sandstorm_controller.update
 -- group_number: 第几波的开始执行沙尘暴事件
 -- waves: 本波内的小波列表，每小波包含 entities（敌人类型和数量）与 delay（相对本大波开始的延迟，单位秒）
+
+tt = RT("sandstorm_controller_s2004_campaign", "sandstorm_controller")
 tt.spawns = {
 	{
 		group_number = 2,
@@ -23923,3 +23925,77 @@ tt.spawns = {
 		}}
 	}
 }
+
+tt = RT("sandstorm_controller_s2004_heroic", "sandstorm_controller")
+tt.spawns = {{
+	group_number = 1,
+	waves = {{
+		entities = {
+			["enemy_fallen"] = 3
+		},
+		delay = 5
+	}}
+}}
+
+tt = RT("sandstorm_controller_s2004_iron", "sandstorm_controller")
+tt.spawns = {{
+	group_number = 1,
+	waves = {{
+		entities = {
+			["enemy_bouncer"] = 3
+		},
+		delay = 10
+	}, {
+		entities = {
+			["enemy_bouncer"] = 6
+		},
+		delay = 20
+	}, {
+		entities = {
+			["enemy_bouncer"] = 9
+		},
+		delay = 30
+	}, {
+		entities = {
+			["enemy_desert_raider"] = 9
+		},
+		delay = 45
+	}, {
+		entities = {
+			["enemy_fallen"] = 9
+		},
+		delay = 60
+	}, {
+		entities = {
+			["enemy_desert_archer"] = 6
+		},
+		delay = 80
+	}, {
+		entities = {
+			["enemy_bouncer"] = 12,
+			["enemy_fallen"] = 8
+		},
+		delay = 120
+	}, {
+		entities = {
+			["enemy_desert_raider"] = 18,
+			["enemy_desert_archer"] = 8
+		},
+		delay = 160
+	}, {
+		entities = {
+			["enemy_immortal"] = 8,
+			["enemy_fallen"] = 24
+		},
+		delay = 200
+	}, {
+		entities = {
+			["enemy_bouncer"] = 12,
+			["enemy_desert_archer"] = 6,
+			["enemy_desert_raider"] = 6,
+			["enemy_fallen"] = 12,
+			["enemy_immortal"] = 6
+		},
+		delay = 240
+	}}
+}}

@@ -4,7 +4,7 @@ local data = {
 	-- 最大波数
 	initial_cash = 1200,
 	-- 初始资金
-	initial_inverval = 7200,
+	initial_interval = 7200,
 	-- 初始每大波持续时间
 	final_interval = 7200,
 	-- 最终每大波持续时间

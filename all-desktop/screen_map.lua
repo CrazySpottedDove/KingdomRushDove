@@ -101,7 +101,7 @@ end
 
 function screen_map:init(w, h, done_callback)
 	self.done_callback = done_callback
-
+	self.original_w, self.original_h = w, h
 	local sw, sh, scale, origin = SU.clamp_window_aspect(w, h, self.ref_w, self.ref_h)
 
 	self.sw, self.sh = sw, sh
@@ -755,7 +755,7 @@ function screen_map:change_generation(i)
 		alpha = 0,
 		scale = v(small_scale_x, small_scale_y)
 	}, "out-quad", function()
-		screen_map:init(self.sw, self.sh, self.done_callback)
+		screen_map:init(self.original_w, self.original_h, self.done_callback)
 		self.window.alpha = 0
 		self.window.scale = v(large_scale_x, large_scale_y)
 		timer:tween(0.4, self.window, {

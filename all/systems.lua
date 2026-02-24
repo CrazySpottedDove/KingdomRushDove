@@ -4,6 +4,7 @@ local log = require("lib.klua.log"):new("systems")
 local km = require("lib.klua.macros")
 local signal = require("lib.hump.signal")
 local perf = require("dove_modules.perf.perf")
+local IS_ANDROID = love.system.getOS() == "Android"
 require("lib.klua.table")
 require("lib.klua.dump")
 
@@ -2415,226 +2416,463 @@ function sys.particle_system:on_remove(entity, store)
 	return true
 end
 
-function sys.particle_system:on_update(dt, ts, store)
-	perf.start("particle_system")
-	local phase_interp = self.phase_interp
-	local particle_systems = store.particle_systems
+if not IS_ANDROID then
+	function sys.particle_system:on_update(dt, ts, store)
+		perf.start("particle_system")
+		local phase_interp = self.phase_interp
+		local particle_systems = store.particle_systems
 
-	for _, e in pairs(particle_systems) do
-		local ps = e.particle_system
-		local e_pos = e.pos
-		local target_rot
-		local particles = ps.particles
-		local frames = ps.frames
+		for _, e in pairs(particle_systems) do
+			local ps = e.particle_system
+			local e_pos = e.pos
+			local target_rot
+			local particles = ps.particles
+			local frames = ps.frames
 
-		if ps.track_id then
-			local target = store.entities[ps.track_id]
+			if ps.track_id then
+				local target = store.entities[ps.track_id]
 
-			if target then
-				ps.last_pos.x, ps.last_pos.y = e.pos.x, e.pos.y
-				e_pos.x, e_pos.y = target.pos.x, target.pos.y
+				if target then
+					ps.last_pos.x, ps.last_pos.y = e.pos.x, e.pos.y
+					e_pos.x, e_pos.y = target.pos.x, target.pos.y
 
-				if ps.track_offset then
-					e_pos.x, e_pos.y = e_pos.x + ps.track_offset.x, e_pos.y + ps.track_offset.y
-				end
+					if ps.track_offset then
+						e_pos.x, e_pos.y = e_pos.x + ps.track_offset.x, e_pos.y + ps.track_offset.y
+					end
 
-				if target.render and target.render.sprites[1] then
-					target_rot = target.render.sprites[1].r
-				end
-			else
-				ps.emit = false
-				ps.source_lifetime = 0
-			end
-		end
-
-		if ps.emit_duration and ps.emit then
-			if not ps.emit_duration_ts then
-				ps.emit_duration_ts = ts
-			end
-
-			if ts - ps.emit_duration_ts > ps.emit_duration then
-				ps.emit = false
-			end
-		end
-
-		if not ps.emit then
-			ps.emit_ts = ts + ps.ts_offset
-		elseif ts - ps.emit_ts > 1 / ps.emission_rate then
-			local count = floor((ts - ps.emit_ts) * ps.emission_rate)
-			local particle_lifetime = (ps.particle_lifetime[1] + ps.particle_lifetime[2]) * 0.5
-
-			for i = 1, count do
-				local pts = ps.emit_ts + i / ps.emission_rate
-				ps.particle_count = ps.particle_count + 1
-
-				-- 发生粒子喷射。首先，我们生成粒子，并加入 .particles
-				-- 改用 particle_t 结构体
-				local p = ffi.new("particle_t", 0, 0, ps.emit_rotation and ps.emit_rotation or (ps.track_rotation and target_rot) or (ps.emit_direction + (random() - 0.5) * ps.emit_rotation_spread), 0, 0, ps.spin and random() * (ps.spin[2] - ps.spin[1]) + ps.spin[1] or 0, 1, 1, pts, pts, particle_lifetime, 0)
-
-				particles[ps.particle_count] = p
-
-				local f = {
-					ss = nil,
-					flip_x = false,
-					flip_y = false,
-					pos = {
-						x = 0,
-						y = 0
-					},
-					r = 0,
-					scale = {
-						x = 1,
-						y = 1
-					},
-					anchor = {
-						x = ps.anchor.x,
-						y = ps.anchor.y
-					},
-					offset = {
-						x = 0,
-						y = 0
-					},
-					_draw_order = ps.draw_order and 100000 * ps.draw_order + e.id or floor(pts * 100),
-					z = ps.z,
-					sort_y = ps.sort_y,
-					sort_y_offset = ps.sort_y_offset,
-					alpha = 255,
-					hidden = nil
-				}
-
-				frames[ps.particle_count] = f
-				store.render_frames[#store.render_frames + 1] = f
-
-				if ps.track_id then
-					local factor = (i - 1) / count
-
-					p.pos_x, p.pos_y = ps.last_pos.x + (e_pos.x - ps.last_pos.x) * factor, ps.last_pos.y + (e_pos.y - ps.last_pos.y) * factor
+					if target.render and target.render.sprites[1] then
+						target_rot = target.render.sprites[1].r
+					end
 				else
-					p.pos_x, p.pos_y = e_pos.x, e_pos.y
+					ps.emit = false
+					ps.source_lifetime = 0
+				end
+			end
+
+			if ps.emit_duration and ps.emit then
+				if not ps.emit_duration_ts then
+					ps.emit_duration_ts = ts
 				end
 
-				if ps.emit_area_spread then
-					local sp = ps.emit_area_spread
+				if ts - ps.emit_duration_ts > ps.emit_duration then
+					ps.emit = false
+				end
+			end
 
-					p.pos_x = p.pos_x + (random() - 0.5) * sp.x * 0.5
-					p.pos_y = p.pos_y + (random() - 0.5) * sp.y * 0.5
+			if not ps.emit then
+				ps.emit_ts = ts + ps.ts_offset
+			elseif ts - ps.emit_ts > 1 / ps.emission_rate then
+				local count = floor((ts - ps.emit_ts) * ps.emission_rate)
+				local particle_lifetime = (ps.particle_lifetime[1] + ps.particle_lifetime[2]) * 0.5
+
+				for i = 1, count do
+					local pts = ps.emit_ts + i / ps.emission_rate
+					ps.particle_count = ps.particle_count + 1
+
+					-- 发生粒子喷射。首先，我们生成粒子，并加入 .particles
+					-- 改用 particle_t 结构体
+					local p = ffi.new("particle_t", 0, 0, ps.emit_rotation and ps.emit_rotation or (ps.track_rotation and target_rot) or (ps.emit_direction + (random() - 0.5) * ps.emit_rotation_spread), 0, 0, ps.spin and random() * (ps.spin[2] - ps.spin[1]) + ps.spin[1] or 0, 1, 1, pts, pts, particle_lifetime, 0)
+
+					particles[ps.particle_count] = p
+
+					local f = {
+						ss = nil,
+						flip_x = false,
+						flip_y = false,
+						pos = {
+							x = 0,
+							y = 0
+						},
+						r = 0,
+						scale = {
+							x = 1,
+							y = 1
+						},
+						anchor = {
+							x = ps.anchor.x,
+							y = ps.anchor.y
+						},
+						offset = {
+							x = 0,
+							y = 0
+						},
+						_draw_order = ps.draw_order and 100000 * ps.draw_order + e.id or floor(pts * 100),
+						z = ps.z,
+						sort_y = ps.sort_y,
+						sort_y_offset = ps.sort_y_offset,
+						alpha = 255,
+						hidden = nil
+					}
+
+					frames[ps.particle_count] = f
+					store.render_frames[#store.render_frames + 1] = f
+
+					if ps.track_id then
+						local factor = (i - 1) / count
+
+						p.pos_x, p.pos_y = ps.last_pos.x + (e_pos.x - ps.last_pos.x) * factor, ps.last_pos.y + (e_pos.y - ps.last_pos.y) * factor
+					else
+						p.pos_x, p.pos_y = e_pos.x, e_pos.y
+					end
+
+					if ps.emit_area_spread then
+						local sp = ps.emit_area_spread
+
+						p.pos_x = p.pos_x + (random() - 0.5) * sp.x * 0.5
+						p.pos_y = p.pos_y + (random() - 0.5) * sp.y * 0.5
+					end
+
+					if ps.emit_offset then
+						p.pos_x = p.pos_x + ps.emit_offset.x
+						p.pos_y = p.pos_y + ps.emit_offset.y
+					end
+
+					if ps.emit_speed then
+						local angle = ps.emission_rate + (random() - 0.5) * ps.emit_spread
+						local len = random() * (ps.emit_speed[2] - ps.emit_speed[1]) + ps.emit_speed[1]
+
+						p.speed_x = cos(angle) * len
+						p.speed_y = sin(angle) * len
+					end
+
+					if ps.scale_var then
+						local factor = random() * (ps.scale_var[2] - ps.scale_var[1]) + ps.scale_var[1]
+
+						p.scale_x = factor
+						p.scale_y = factor
+					-- p.scale_y = ps.scale_same_aspect and factor or random() * factor * 2
+					end
+
+					if ps.names then
+						if ps.cycle_names then
+							if not ps._last_name_idx then
+								ps._last_name_idx = 0
+							end
+
+							ps._last_name_idx = km.zmod(ps._last_name_idx + 1, #ps.names)
+							p.name_idx = ps._last_name_idx
+						else
+							p.name_idx = random(1, #ps.names)
+						end
+					end
 				end
 
-				if ps.emit_offset then
-					p.pos_x = p.pos_x + ps.emit_offset.x
-					p.pos_y = p.pos_y + ps.emit_offset.y
-				end
+				ps.emit_ts = ps.emit_ts + count * 1 / ps.emission_rate
+			end
 
-				if ps.emit_speed then
-					local angle = ps.emission_rate + (random() - 0.5) * ps.emit_spread
-					local len = random() * (ps.emit_speed[2] - ps.emit_speed[1]) + ps.emit_speed[1]
+			-- 更新 particles，并管理它们的生命周期
+			-- 需要从后往前遍历，以满足 swap 删除方式，同时避免跳过元素
+			for i = ps.particle_count, 1, -1 do
+				do
+					local p = particles[i]
+					local f = frames[i]
+					local phase = (ts - p.ts) / p.lifetime
 
-					p.speed_x = cos(angle) * len
-					p.speed_y = sin(angle) * len
-				end
+					if phase >= 1 then
+						-- 不再延迟删除，就地 swap
+						local last_count = ps.particle_count
 
-				if ps.scale_var then
-					local factor = random() * (ps.scale_var[2] - ps.scale_var[1]) + ps.scale_var[1]
+						particles[i] = particles[last_count]
+						frames[i] = frames[last_count]
+						particles[last_count] = nil
+						frames[last_count] = nil
+						ps.particle_count = last_count - 1
+						f.marked_to_remove = true
 
-					p.scale_x = factor
-					p.scale_y = factor
-				-- p.scale_y = ps.scale_same_aspect and factor or random() * factor * 2
-				end
+						goto label_51_0
+					elseif phase < 0 then
+						phase = 0
+					end
 
-				if ps.names then
-					if ps.cycle_names then
-						if not ps._last_name_idx then
-							ps._last_name_idx = 0
+					local tp = ts - p.last_ts
+
+					p.last_ts = ts
+					p.pos_x, p.pos_y = p.pos_x + p.speed_x * tp, p.pos_y + p.speed_y * tp
+					f.pos.x, f.pos.y = p.pos_x, p.pos_y
+					p.r = p.r + p.spin * tp
+					f.r = p.r
+					f.scale.x, f.scale.y = phase_interp(ps.scales_x, phase, 1) * p.scale_x, phase_interp(ps.scales_y, phase, 1) * p.scale_y
+					f.alpha = phase_interp(ps.alphas, phase, 255)
+
+					if ps.sort_y_offsets then
+						f.sort_y_offset = phase_interp(ps.sort_y_offsets, phase, 1)
+					end
+
+					if ps.color then
+						f.color = ps.color
+					end
+
+					local fn
+
+					if ps.animated then
+						local to = ts - p.ts
+
+						if ps.animation_fps then
+							to = to * ps.animation_fps / FPS
 						end
 
-						ps._last_name_idx = km.zmod(ps._last_name_idx + 1, #ps.names)
-						p.name_idx = ps._last_name_idx
+						if p.name_idx > 0 then
+							fn = A:fn(ps.names[p.name_idx], to, ps.loop)
+						else
+							fn = A:fn(ps.name, to, ps.loop)
+						end
+					elseif p.name_idx > 0 then
+						fn = ps.names[p.name_idx]
 					else
-						p.name_idx = random(1, #ps.names)
-					end
-				end
-			end
-
-			ps.emit_ts = ps.emit_ts + count * 1 / ps.emission_rate
-		end
-
-		-- 更新 particles，并管理它们的生命周期
-		-- 需要从后往前遍历，以满足 swap 删除方式，同时避免跳过元素
-		for i = ps.particle_count, 1, -1 do
-			do
-				local p = particles[i]
-				local f = frames[i]
-				local phase = (ts - p.ts) / p.lifetime
-
-				if phase >= 1 then
-					-- 不再延迟删除，就地 swap
-					local last_count = ps.particle_count
-
-					particles[i] = particles[last_count]
-					frames[i] = frames[last_count]
-					particles[last_count] = nil
-					frames[last_count] = nil
-					ps.particle_count = last_count - 1
-					f.marked_to_remove = true
-
-					goto label_51_0
-				elseif phase < 0 then
-					phase = 0
-				end
-
-				local tp = ts - p.last_ts
-
-				p.last_ts = ts
-				p.pos_x, p.pos_y = p.pos_x + p.speed_x * tp, p.pos_y + p.speed_y * tp
-				f.pos.x, f.pos.y = p.pos_x, p.pos_y
-				p.r = p.r + p.spin * tp
-				f.r = p.r
-				f.scale.x, f.scale.y = phase_interp(ps.scales_x, phase, 1) * p.scale_x, phase_interp(ps.scales_y, phase, 1) * p.scale_y
-				f.alpha = phase_interp(ps.alphas, phase, 255)
-
-				if ps.sort_y_offsets then
-					f.sort_y_offset = phase_interp(ps.sort_y_offsets, phase, 1)
-				end
-
-				if ps.color then
-					f.color = ps.color
-				end
-
-				local fn
-
-				if ps.animated then
-					local to = ts - p.ts
-
-					if ps.animation_fps then
-						to = to * ps.animation_fps / FPS
+						fn = ps.name
 					end
 
-					if p.name_idx > 0 then
-						fn = A:fn(ps.names[p.name_idx], to, ps.loop)
-					else
-						fn = A:fn(ps.name, to, ps.loop)
-					end
-				elseif p.name_idx > 0 then
-					fn = ps.names[p.name_idx]
-				else
-					fn = ps.name
+					f.ss = I:s(fn)
 				end
 
-				f.ss = I:s(fn)
+				::label_51_0::
 			end
 
-			::label_51_0::
-		end
+			if ps.source_lifetime and ts - ps.ts > ps.source_lifetime then
+				ps.emit = false
 
-		if ps.source_lifetime and ts - ps.ts > ps.source_lifetime then
-			ps.emit = false
-
-			if ps.particle_count == 0 then
-				queue_remove(store, e)
+				if ps.particle_count == 0 then
+					queue_remove(store, e)
+				end
 			end
 		end
+		perf.stop("particle_system")
 	end
-	perf.stop("particle_system")
+else
+	function sys.particle_system:on_update(dt, ts, store)
+		perf.start("particle_system")
+		local phase_interp = self.phase_interp
+		local particle_systems = store.particle_systems
+
+		for _, e in pairs(particle_systems) do
+			local ps = e.particle_system
+			local e_pos = e.pos
+			local target_rot
+			local particles = ps.particles
+			local frames = ps.frames
+
+			if ps.track_id then
+				local target = store.entities[ps.track_id]
+
+				if target then
+					ps.last_pos.x, ps.last_pos.y = e.pos.x, e.pos.y
+					e_pos.x, e_pos.y = target.pos.x, target.pos.y
+
+					if ps.track_offset then
+						e_pos.x, e_pos.y = e_pos.x + ps.track_offset.x, e_pos.y + ps.track_offset.y
+					end
+
+					if target.render and target.render.sprites[1] then
+						target_rot = target.render.sprites[1].r
+					end
+				else
+					ps.emit = false
+					ps.source_lifetime = 0
+				end
+			end
+
+			if ps.emit_duration and ps.emit then
+				if not ps.emit_duration_ts then
+					ps.emit_duration_ts = ts
+				end
+
+				if ts - ps.emit_duration_ts > ps.emit_duration then
+					ps.emit = false
+				end
+			end
+
+			if not ps.emit then
+				ps.emit_ts = ts + ps.ts_offset
+			elseif ts - ps.emit_ts > 1 / ps.emission_rate then
+				local count = floor((ts - ps.emit_ts) * ps.emission_rate)
+				local particle_lifetime = (ps.particle_lifetime[1] + ps.particle_lifetime[2]) * 0.5
+
+				for i = 1, count do
+					local pts = ps.emit_ts + i / ps.emission_rate
+					ps.particle_count = ps.particle_count + 1
+
+					-- 发生粒子喷射。首先，我们生成粒子，并加入 .particles
+					-- 改用 particle_t 结构体
+					-- local p = ffi.new("particle_t", 0, 0, ps.emit_rotation and ps.emit_rotation or (ps.track_rotation and target_rot) or (ps.emit_direction + (random() - 0.5) * ps.emit_rotation_spread), 0, 0, ps.spin and random() * (ps.spin[2] - ps.spin[1]) + ps.spin[1] or 0, 1, 1, pts, pts, particle_lifetime, 0)
+					local p = {
+						pos_x = 0,
+						pos_y = 0,
+						r = ps.emit_rotation and ps.emit_rotation or (ps.track_rotation and target_rot) or (ps.emit_direction + (random() - 0.5) * ps.emit_rotation_spread),
+						speed_x = 0,
+						speed_y = 0,
+						spin = ps.spin and random() * (ps.spin[2] - ps.spin[1]) + ps.spin[1] or 0,
+						scale_x = 1,
+						scale_y = 1,
+						ts = pts,
+						last_ts = pts,
+						lifetime = particle_lifetime,
+						name_idx = 0
+					}
+					particles[ps.particle_count] = p
+
+					local f = {
+						ss = nil,
+						flip_x = false,
+						flip_y = false,
+						pos = {
+							x = 0,
+							y = 0
+						},
+						r = 0,
+						scale = {
+							x = 1,
+							y = 1
+						},
+						anchor = {
+							x = ps.anchor.x,
+							y = ps.anchor.y
+						},
+						offset = {
+							x = 0,
+							y = 0
+						},
+						_draw_order = ps.draw_order and 100000 * ps.draw_order + e.id or floor(pts * 100),
+						z = ps.z,
+						sort_y = ps.sort_y,
+						sort_y_offset = ps.sort_y_offset,
+						alpha = 255,
+						hidden = nil
+					}
+
+					frames[ps.particle_count] = f
+					store.render_frames[#store.render_frames + 1] = f
+
+					if ps.track_id then
+						local factor = (i - 1) / count
+
+						p.pos_x, p.pos_y = ps.last_pos.x + (e_pos.x - ps.last_pos.x) * factor, ps.last_pos.y + (e_pos.y - ps.last_pos.y) * factor
+					else
+						p.pos_x, p.pos_y = e_pos.x, e_pos.y
+					end
+
+					if ps.emit_area_spread then
+						local sp = ps.emit_area_spread
+
+						p.pos_x = p.pos_x + (random() - 0.5) * sp.x * 0.5
+						p.pos_y = p.pos_y + (random() - 0.5) * sp.y * 0.5
+					end
+
+					if ps.emit_offset then
+						p.pos_x = p.pos_x + ps.emit_offset.x
+						p.pos_y = p.pos_y + ps.emit_offset.y
+					end
+
+					if ps.emit_speed then
+						local angle = ps.emission_rate + (random() - 0.5) * ps.emit_spread
+						local len = random() * (ps.emit_speed[2] - ps.emit_speed[1]) + ps.emit_speed[1]
+
+						p.speed_x = cos(angle) * len
+						p.speed_y = sin(angle) * len
+					end
+
+					if ps.scale_var then
+						local factor = random() * (ps.scale_var[2] - ps.scale_var[1]) + ps.scale_var[1]
+
+						p.scale_x = factor
+						p.scale_y = factor
+					-- p.scale_y = ps.scale_same_aspect and factor or random() * factor * 2
+					end
+
+					if ps.names then
+						if ps.cycle_names then
+							if not ps._last_name_idx then
+								ps._last_name_idx = 0
+							end
+
+							ps._last_name_idx = km.zmod(ps._last_name_idx + 1, #ps.names)
+							p.name_idx = ps._last_name_idx
+						else
+							p.name_idx = random(1, #ps.names)
+						end
+					end
+				end
+
+				ps.emit_ts = ps.emit_ts + count * 1 / ps.emission_rate
+			end
+
+			-- 更新 particles，并管理它们的生命周期
+			-- 需要从后往前遍历，以满足 swap 删除方式，同时避免跳过元素
+			for i = ps.particle_count, 1, -1 do
+				do
+					local p = particles[i]
+					local f = frames[i]
+					local phase = (ts - p.ts) / p.lifetime
+
+					if phase >= 1 then
+						-- 不再延迟删除，就地 swap
+						local last_count = ps.particle_count
+
+						particles[i] = particles[last_count]
+						frames[i] = frames[last_count]
+						particles[last_count] = nil
+						frames[last_count] = nil
+						ps.particle_count = last_count - 1
+						f.marked_to_remove = true
+
+						goto label_51_0
+					elseif phase < 0 then
+						phase = 0
+					end
+
+					local tp = ts - p.last_ts
+
+					p.last_ts = ts
+					p.pos_x, p.pos_y = p.pos_x + p.speed_x * tp, p.pos_y + p.speed_y * tp
+					f.pos.x, f.pos.y = p.pos_x, p.pos_y
+					p.r = p.r + p.spin * tp
+					f.r = p.r
+					f.scale.x, f.scale.y = phase_interp(ps.scales_x, phase, 1) * p.scale_x, phase_interp(ps.scales_y, phase, 1) * p.scale_y
+					f.alpha = phase_interp(ps.alphas, phase, 255)
+
+					if ps.sort_y_offsets then
+						f.sort_y_offset = phase_interp(ps.sort_y_offsets, phase, 1)
+					end
+
+					if ps.color then
+						f.color = ps.color
+					end
+
+					local fn
+
+					if ps.animated then
+						local to = ts - p.ts
+
+						if ps.animation_fps then
+							to = to * ps.animation_fps / FPS
+						end
+
+						if p.name_idx > 0 then
+							fn = A:fn(ps.names[p.name_idx], to, ps.loop)
+						else
+							fn = A:fn(ps.name, to, ps.loop)
+						end
+					elseif p.name_idx > 0 then
+						fn = ps.names[p.name_idx]
+					else
+						fn = ps.name
+					end
+
+					f.ss = I:s(fn)
+				end
+
+				::label_51_0::
+			end
+
+			if ps.source_lifetime and ts - ps.ts > ps.source_lifetime then
+				ps.emit = false
+
+				if ps.particle_count == 0 then
+					queue_remove(store, e)
+				end
+			end
+		end
+		perf.stop("particle_system")
+	end
 end
 
 sys.render = {}
@@ -2664,81 +2902,16 @@ local ok, lib = pcall(ffi.load, libname)
 
 if ok and lib then
 	lib_render_sort = lib
-else
-	-- fallback: 归并排序，直接用 FFI 数组和 tmp
-	local function cmp(a, b)
-		if a.z ~= b.z then
-			return a.z < b.z
-		end
-
-		if a.sort_y ~= b.sort_y then
-			return a.sort_y > b.sort_y
-		end
-
-		if a.draw_order ~= b.draw_order then
-			return a.draw_order < b.draw_order
-		end
-
-		if a.pos_x ~= b.pos_x then
-			return a.pos_x < b.pos_x
-		end
-
-		return false
-	end
-
-	local function merge(arr, tmp, left, mid, right)
-		for i = left, right do
-			tmp[i] = arr[i]
-		end
-
-		local i, j, k = left, mid + 1, left
-
-		while i <= mid and j <= right do
-			if not cmp(tmp[j], tmp[i]) then
-				arr[k] = tmp[i]
-				i = i + 1
-			else
-				arr[k] = tmp[j]
-				j = j + 1
-			end
-
-			k = k + 1
-		end
-
-		while i <= mid do
-			arr[k] = tmp[i]
-			i = i + 1
-			k = k + 1
-		end
-
-		while j <= right do
-			arr[k] = tmp[j]
-			j = j + 1
-			k = k + 1
-		end
-	end
-
-	local function merge_sort(arr, tmp, left, right)
-		if left < right then
-			local mid = math.floor((left + right) / 2)
-
-			merge_sort(arr, tmp, left, mid)
-			merge_sort(arr, tmp, mid + 1, right)
-			merge(arr, tmp, left, mid, right)
-		end
-	end
-
-	lib_render_sort = {
-		ffi_sort = function(arr, tmp, n)
-			merge_sort(arr, tmp, 0, n - 1)
-		end
-	}
 end
 
 function sys.render:init(store)
 	store.render_frames = {}
-	store.render_frames_ffi = ffi.new("RenderFrameFFI[16384]")
-	store.render_frames_ffi_tmp = ffi.new("RenderFrameFFI[16384]")
+
+	-- 在Android上，FFI 性能极差！此时，不如直接上lua。
+	if not IS_ANDROID then
+		store.render_frames_ffi = ffi.new("RenderFrameFFI[16384]")
+		store.render_frames_ffi_tmp = ffi.new("RenderFrameFFI[16384]")
+	end
 
 	local hb_quad = love.graphics.newQuad(unpack(HEALTH_BAR_CORNER_DOT_QUAD))
 
@@ -2918,186 +3091,355 @@ function sys.render:on_remove(entity, store)
 	return true
 end
 
-function sys.render:on_update(dt, ts, store)
-	perf.start("render")
-	local d = store
-	local entities = d.entities_with_render
-	local show_health_bar = store.config and store.config.show_health_bar
+if not IS_ANDROID then
+	function sys.render:on_update(dt, ts, store)
+		perf.start("render")
+		local d = store
+		local entities = d.entities_with_render
+		local show_health_bar = store.config and store.config.show_health_bar
 
-	for _, e in pairs(entities) do
-		local sprites = e.render.sprites
+		for _, e in pairs(entities) do
+			local sprites = e.render.sprites
 
-		for i = 1, #sprites do
-			local s = sprites[i]
+			for i = 1, #sprites do
+				local s = sprites[i]
 
-			if s.ts > ts then
-				s.hidden = true
-				s._hidden_for_ts = true
-			elseif s._hidden_for_ts then
-				s.hidden = false
-				s._hidden_for_ts = false
-			end
+				if s.ts > ts then
+					s.hidden = true
+					s._hidden_for_ts = true
+				elseif s._hidden_for_ts then
+					s.hidden = false
+					s._hidden_for_ts = false
+				end
 
-			local last_runs = s.runs
-			local fn
+				local last_runs = s.runs
+				local fn
 
-			if s.animation then
-				A:generate_frames(s.animation)
+				if s.animation then
+					A:generate_frames(s.animation)
 
-				fn, s.runs, s.frame_idx = A:fni(s.animation, ts - s.ts + s.time_offset, s.loop, s.fps)
-			elseif s.animated then
-				fn, s.runs, s.frame_idx = A:fn(s.prefix and (s.prefix .. "_" .. s.name) or s.name, ts - s.ts + s.time_offset, s.loop, s.fps)
-				s.frame_name = fn
-			else
-				s.runs = 0
-				s.frame_idx = 1
-				fn = s.name
-			end
+					fn, s.runs, s.frame_idx = A:fni(s.animation, ts - s.ts + s.time_offset, s.loop, s.fps)
+				elseif s.animated then
+					fn, s.runs, s.frame_idx = A:fn(s.prefix and (s.prefix .. "_" .. s.name) or s.name, ts - s.ts + s.time_offset, s.loop, s.fps)
+					s.frame_name = fn
+				else
+					s.runs = 0
+					s.frame_idx = 1
+					fn = s.name
+				end
 
-			if s.exo then
-				local exo_frame = EXO:f(fn)
+				if s.exo then
+					local exo_frame = EXO:f(fn)
 
-				if exo_frame then
-					s.exo_frame = exo_frame
+					if exo_frame then
+						s.exo_frame = exo_frame
 
-					-- local exo = exo_frame.exo
+						-- local exo = exo_frame.exo
 
-					-- s.exo = exo
-					local exo = EXO:get_exo_by_frame(exo_frame)
+						-- s.exo = exo
+						local exo = EXO:get_exo_by_frame(exo_frame)
 
-					if s.exo_hide_prefix then
-						for _, p in ipairs(exo_frame) do
-							if p[1] == 1 then
-								local pname = exo.parts[p[2]][1]
+						if s.exo_hide_prefix then
+							for _, p in ipairs(exo_frame) do
+								if p[1] == 1 then
+									local pname = exo.parts[p[2]][1]
 
-								p.hidden = false
+									p.hidden = false
 
-								for _, prefix in ipairs(s.exo_hide_prefix) do
-									if string.find(pname, prefix, 1, true) then
-										p.hidden = true
+									for _, prefix in ipairs(s.exo_hide_prefix) do
+										if string.find(pname, prefix, 1, true) then
+											p.hidden = true
 
-										break
+											break
+										end
 									end
 								end
 							end
 						end
-					end
-				else
-					-- fallback
-					s.exo_frame = {}
-				end
-			else
-				s.sync_flag = last_runs ~= s.runs
-				s.ss = I:s(fn)
-
-			-- 仅在开发时启用，用于检查美术资源
-			-- if s.ss == nil then
-			-- 	if s.animation and not MISSED_SS[s.animation] then
-			-- 		log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
-			-- 		log.error("Animation name: %s", s.animation)
-			-- 		MISSED_SS[s.animation] = true
-			-- 	elseif s.animated and not MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] then
-			-- 		log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
-			-- 		log.error("Animated prefix: %s", s.prefix)
-			-- 		log.error("Animated name: %s", s.name)
-			-- 		MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] = true
-			-- 	elseif not MISSED_SS[s.name] then
-			-- 		log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
-			-- 		log.error("Static sprite name: %s", s.name)
-			-- 		MISSED_SS[s.name] = true
-			-- 	end
-			-- end
-			end
-
-			if s._track_e then
-				s.pos.x, s.pos.y = e.pos.x, e.pos.y
-			end
-
-			if s.hide_after_runs and s.runs >= s.hide_after_runs then
-				s.hidden = true
-			end
-		end
-
-		if e.health_bar and show_health_bar then
-			local hb = e.health_bar
-			local fb = hb.frames[1]
-			local ff = hb.frames[2]
-			local fk = hb.black_bar_hp and hb.frames[3] or nil
-
-			if hb.hidden or e.health.hp == e.health.hp_max then
-				fb.hidden = true
-				ff.hidden = true
-
-				if fk then
-					fk.hidden = true
-				end
-			else
-				-- draw_order 属性在 insert 时即计算，我们要求后续永远不要出现操作 draw_order 的行为
-				fb.hidden = false
-				ff.hidden = false
-				fb.pos.x, fb.pos.y = floor(e.pos.x), ceil(e.pos.y)
-				ff.pos.x, ff.pos.y = fb.pos.x, fb.pos.y
-				fb.offset.x, fb.offset.y = hb.offset.x - fb.bar_width * fb.ss.ref_scale * 0.5, hb.offset.y
-				ff.offset.x, ff.offset.y = hb.offset.x - ff.bar_width * ff.ss.ref_scale * 0.5, hb.offset.y
-				fb.z = hb.z or Z_OBJECTS
-				ff.z = fb.z
-				fb.sort_y_offset = hb.sort_y_offset
-				ff.sort_y_offset = hb.sort_y_offset
-
-				if fk then
-					fk.hidden = false
-					fk.pos.x, fk.pos.y = floor(e.pos.x), floor(e.pos.y)
-					fk.offset.x, fk.offset.y = hb.offset.x - fk.bar_width * fk.ss.ref_scale * 0.5, hb.offset.y
-					fk.z = hb.z or Z_OBJECTS
-					fk.sort_y_offset = hb.sort_y_offset
-					ff.scale.x = e.health.hp / hb.black_bar_hp * ff.bar_width
-					fb.scale.x = e.health.hp_max / hb.black_bar_hp * fb.bar_width
-				else
-					if e.health.hp > e.health.hp_max then
-						ff.scale.x = ff.bar_width
-						ff.color = self._hb_colors.fg2
 					else
-						ff.scale.x = e.health.hp / e.health.hp_max * ff.bar_width
-						ff.color = self._hb_colors.fg
+						-- fallback
+						s.exo_frame = {}
+					end
+				else
+					s.sync_flag = last_runs ~= s.runs
+					s.ss = I:s(fn)
+
+				-- 仅在开发时启用，用于检查美术资源
+				-- if s.ss == nil then
+				-- 	if s.animation and not MISSED_SS[s.animation] then
+				-- 		log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+				-- 		log.error("Animation name: %s", s.animation)
+				-- 		MISSED_SS[s.animation] = true
+				-- 	elseif s.animated and not MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] then
+				-- 		log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+				-- 		log.error("Animated prefix: %s", s.prefix)
+				-- 		log.error("Animated name: %s", s.name)
+				-- 		MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] = true
+				-- 	elseif not MISSED_SS[s.name] then
+				-- 		log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+				-- 		log.error("Static sprite name: %s", s.name)
+				-- 		MISSED_SS[s.name] = true
+				-- 	end
+				-- end
+				end
+
+				if s._track_e then
+					s.pos.x, s.pos.y = e.pos.x, e.pos.y
+				end
+
+				if s.hide_after_runs and s.runs >= s.hide_after_runs then
+					s.hidden = true
+				end
+			end
+
+			if e.health_bar and show_health_bar then
+				local hb = e.health_bar
+				local fb = hb.frames[1]
+				local ff = hb.frames[2]
+				local fk = hb.black_bar_hp and hb.frames[3] or nil
+
+				if hb.hidden or e.health.hp == e.health.hp_max then
+					fb.hidden = true
+					ff.hidden = true
+
+					if fk then
+						fk.hidden = true
+					end
+				else
+					-- draw_order 属性在 insert 时即计算，我们要求后续永远不要出现操作 draw_order 的行为
+					fb.hidden = false
+					ff.hidden = false
+					fb.pos.x, fb.pos.y = floor(e.pos.x), ceil(e.pos.y)
+					ff.pos.x, ff.pos.y = fb.pos.x, fb.pos.y
+					fb.offset.x, fb.offset.y = hb.offset.x - fb.bar_width * fb.ss.ref_scale * 0.5, hb.offset.y
+					ff.offset.x, ff.offset.y = hb.offset.x - ff.bar_width * ff.ss.ref_scale * 0.5, hb.offset.y
+					fb.z = hb.z or Z_OBJECTS
+					ff.z = fb.z
+					fb.sort_y_offset = hb.sort_y_offset
+					ff.sort_y_offset = hb.sort_y_offset
+
+					if fk then
+						fk.hidden = false
+						fk.pos.x, fk.pos.y = floor(e.pos.x), floor(e.pos.y)
+						fk.offset.x, fk.offset.y = hb.offset.x - fk.bar_width * fk.ss.ref_scale * 0.5, hb.offset.y
+						fk.z = hb.z or Z_OBJECTS
+						fk.sort_y_offset = hb.sort_y_offset
+						ff.scale.x = e.health.hp / hb.black_bar_hp * ff.bar_width
+						fb.scale.x = e.health.hp_max / hb.black_bar_hp * fb.bar_width
+					else
+						if e.health.hp > e.health.hp_max then
+							ff.scale.x = ff.bar_width
+							ff.color = self._hb_colors.fg2
+						else
+							ff.scale.x = e.health.hp / e.health.hp_max * ff.bar_width
+							ff.color = self._hb_colors.fg
+						end
 					end
 				end
 			end
 		end
-	end
 
-	-- FFI同步
-	local render_frames = store.render_frames
-	local render_frames_ffi = store.render_frames_ffi
-	local n = 0
+		-- FFI同步
+		local render_frames = store.render_frames
+		local render_frames_ffi = store.render_frames_ffi
+		local n = 0
 
-	for i = 1, #render_frames do
-		local f = render_frames[i]
+		for i = 1, #render_frames do
+			local f = render_frames[i]
 
-		if not f.marked_to_remove then
-			local ffi_f = render_frames_ffi[n]
+			if not f.marked_to_remove then
+				local ffi_f = render_frames_ffi[n]
 
-			ffi_f.z = f.z
-			ffi_f.sort_y = f.sort_y or (f.sort_y_offset or 0) + f.pos.y
-			ffi_f.draw_order = f._draw_order
-			ffi_f.pos_x = f.pos.x
-			ffi_f.lua_index = i
-			n = n + 1
+				ffi_f.z = f.z
+				ffi_f.sort_y = f.sort_y or (f.sort_y_offset or 0) + f.pos.y
+				ffi_f.draw_order = f._draw_order
+				ffi_f.pos_x = f.pos.x
+				ffi_f.lua_index = i
+				n = n + 1
+			end
 		end
+
+		lib_render_sort.ffi_sort(render_frames_ffi, store.render_frames_ffi_tmp, n)
+
+		local new_frames = {}
+
+		local i = 0
+		while i < n do
+			local ffi_f = render_frames_ffi[i]
+			i = i + 1
+			new_frames[i] = render_frames[ffi_f.lua_index]
+		end
+
+		store.render_frames = new_frames
+		perf.stop("render")
 	end
+else
+	local function stable_frame_cmp(a, b)
+		if a.z ~= b.z then
+			return a.z < b.z
+		end
 
-	lib_render_sort.ffi_sort(render_frames_ffi, store.render_frames_ffi_tmp, n)
+		if a._sort_y ~= b._sort_y then
+			return a._sort_y > b._sort_y
+		end
 
-	local new_frames = {}
+		if a._draw_order ~= b._draw_order then
+			return a._draw_order < b._draw_order
+		end
 
-	local i = 0
-	while i < n do
-		local ffi_f = render_frames_ffi[i]
-		i = i + 1
-		new_frames[i] = render_frames[ffi_f.lua_index]
+		if a.pos.x ~= b.pos.x then
+			return a.pos.x < b.pos.x
+		end
+
+		return a._orig_idx < b._orig_idx -- 稳定排序保证
 	end
+	function sys.render:on_update(dt, ts, store)
+		perf.start("render")
+		local d = store
+		local entities = d.entities_with_render
+		local show_health_bar = store.config and store.config.show_health_bar
 
-	store.render_frames = new_frames
-	perf.stop("render")
+		for _, e in pairs(entities) do
+			local sprites = e.render.sprites
+
+			for i = 1, #sprites do
+				local s = sprites[i]
+
+				if s.ts > ts then
+					s.hidden = true
+					s._hidden_for_ts = true
+				elseif s._hidden_for_ts then
+					s.hidden = false
+					s._hidden_for_ts = false
+				end
+
+				local last_runs = s.runs
+				local fn
+
+				if s.animation then
+					A:generate_frames(s.animation)
+
+					fn, s.runs, s.frame_idx = A:fni(s.animation, ts - s.ts + s.time_offset, s.loop, s.fps)
+				elseif s.animated then
+					fn, s.runs, s.frame_idx = A:fn(s.prefix and (s.prefix .. "_" .. s.name) or s.name, ts - s.ts + s.time_offset, s.loop, s.fps)
+					s.frame_name = fn
+				else
+					s.runs = 0
+					s.frame_idx = 1
+					fn = s.name
+				end
+
+				if s.exo then
+					local exo_frame = EXO:f(fn)
+
+					if exo_frame then
+						s.exo_frame = exo_frame
+						local exo = EXO:get_exo_by_frame(exo_frame)
+
+						if s.exo_hide_prefix then
+							for _, p in ipairs(exo_frame) do
+								if p[1] == 1 then
+									local pname = exo.parts[p[2]][1]
+
+									p.hidden = false
+
+									for _, prefix in ipairs(s.exo_hide_prefix) do
+										if string.find(pname, prefix, 1, true) then
+											p.hidden = true
+
+											break
+										end
+									end
+								end
+							end
+						end
+					else
+						s.exo_frame = {}
+					end
+				else
+					s.sync_flag = last_runs ~= s.runs
+					s.ss = I:s(fn)
+				end
+
+				if s._track_e then
+					s.pos.x, s.pos.y = e.pos.x, e.pos.y
+				end
+
+				if s.hide_after_runs and s.runs >= s.hide_after_runs then
+					s.hidden = true
+				end
+			end
+
+			if e.health_bar and show_health_bar then
+				local hb = e.health_bar
+				local fb = hb.frames[1]
+				local ff = hb.frames[2]
+				local fk = hb.black_bar_hp and hb.frames[3] or nil
+
+				if hb.hidden or e.health.hp == e.health.hp_max then
+					fb.hidden = true
+					ff.hidden = true
+
+					if fk then
+						fk.hidden = true
+					end
+				else
+					fb.hidden = false
+					ff.hidden = false
+					fb.pos.x, fb.pos.y = floor(e.pos.x), ceil(e.pos.y)
+					ff.pos.x, ff.pos.y = fb.pos.x, fb.pos.y
+					fb.offset.x, fb.offset.y = hb.offset.x - fb.bar_width * fb.ss.ref_scale * 0.5, hb.offset.y
+					ff.offset.x, ff.offset.y = hb.offset.x - ff.bar_width * ff.ss.ref_scale * 0.5, hb.offset.y
+					fb.z = hb.z or Z_OBJECTS
+					ff.z = fb.z
+					fb.sort_y_offset = hb.sort_y_offset
+					ff.sort_y_offset = hb.sort_y_offset
+
+					if fk then
+						fk.hidden = false
+						fk.pos.x, fk.pos.y = floor(e.pos.x), floor(e.pos.y)
+						fk.offset.x, fk.offset.y = hb.offset.x - fk.bar_width * fk.ss.ref_scale * 0.5, hb.offset.y
+						fk.z = hb.z or Z_OBJECTS
+						fk.sort_y_offset = hb.sort_y_offset
+						ff.scale.x = e.health.hp / hb.black_bar_hp * ff.bar_width
+						fb.scale.x = e.health.hp_max / hb.black_bar_hp * fb.bar_width
+					else
+						if e.health.hp > e.health.hp_max then
+							ff.scale.x = ff.bar_width
+							ff.color = self._hb_colors.fg2
+						else
+							ff.scale.x = e.health.hp / e.health.hp_max * ff.bar_width
+							ff.color = self._hb_colors.fg
+						end
+					end
+				end
+			end
+		end
+
+		-- Android: 纯 Lua 排序，过滤 + 预计算排序键 + table.sort
+		local render_frames = store.render_frames
+		local valid_frames = {}
+		local n = 0
+
+		for i = 1, #render_frames do
+			local f = render_frames[i]
+
+			if not f.marked_to_remove then
+				n = n + 1
+				valid_frames[n] = f
+				-- 预计算排序键，避免排序时重复计算
+				f._sort_y = f.sort_y or (f.sort_y_offset or 0) + f.pos.y
+				f._orig_idx = i
+			end
+		end
+
+		-- 使用 Lua 内置 table.sort（底层是 C 实现的快排，比 Lua 归并快得多）
+		table.sort(valid_frames, stable_frame_cmp)
+
+		store.render_frames = valid_frames
+
+		perf.stop("render")
+	end
 end
 
 sys.sound_events = {}
