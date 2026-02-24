@@ -23931,9 +23931,96 @@ tt.spawns = {{
 	group_number = 1,
 	waves = {{
 		entities = {
-			["enemy_fallen"] = 3
+			["enemy_fallen"] = 4
 		},
 		delay = 5
+	}}
+}, {
+	group_number = 2,
+	waves = {{
+		entities = {
+			["enemy_bouncer"] = 10,
+			["enemy_desert_raider"] = 4
+		},
+		delay = 3
+	}}
+}, {
+	group_number = 3,
+	waves = {{
+		entities = {
+			["enemy_tremor"] = 5,
+			["enemy_desert_wolf"] = 4
+		},
+		delay = 2
+	}, {
+		entities = {
+			["enemy_immortal"] = 3,
+			["enemy_fallen"] = 5
+		},
+		delay = 14
+	}}
+}, {
+	group_number = 4,
+	waves = {{
+		entities = {
+			["enemy_bouncer"] = 12
+		},
+		delay = 0
+	}, {
+		entities = {
+			["enemy_immortal"] = 3,
+			["enemy_desert_raider"] = 6
+		},
+		delay = 10
+	}}
+}, {
+	group_number = 5,
+	waves = {{
+		entities = {
+			["enemy_scorpion"] = 2,
+			["enemy_bouncer"] = 15
+		},
+		delay = 0
+	}, {
+		entities = {
+			["enemy_munra"] = 1,
+			["enemy_immortal"] = 4
+		},
+		delay = 16
+	}, {
+		entities = {
+			["enemy_executioner"] = 1,
+			["enemy_fallen"] = 8
+		},
+		delay = 32
+	}}
+}, {
+	group_number = 6,
+	waves = {{
+		entities = {
+			["enemy_munra"] = 1,
+			["enemy_executioner"] = 1
+		},
+		delay = 0
+	}, {
+		entities = {
+			["enemy_scorpion"] = 3,
+			["enemy_desert_spider"] = 1,
+			["enemy_bouncer"] = 10
+		},
+		delay = 20
+	}, {
+		entities = {
+			["enemy_bouncer"] = 20,
+			["enemy_fallen"] = 10
+		},
+		delay = 35
+	}, {
+		entities = {
+			["enemy_executioner"] = 2,
+			["enemy_immortal"] = 6
+		},
+		delay = 50
 	}}
 }}
 
