@@ -2340,9 +2340,7 @@ tt.main_script.update = scripts.decal_tower_sparking_geode_burst_crystal.update
 --#region tower_sparking_geode_lvl4
 tt = RT("tower_sparking_geode_lvl4", "tower")
 b = balance.towers.sparking_geode
-
 AC(tt, "attacks", "vis", "powers")
-
 tt.powers.crystalize = CC("power")
 tt.powers.crystalize.price_base = b.crystalize.price[2]
 tt.powers.crystalize.price_inc = b.crystalize.price[3]

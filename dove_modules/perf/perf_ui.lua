@@ -11,7 +11,6 @@ local perf_ui = {
 	font = require("lib.klove.font_db"):f("msyh", 12),
 	entries = {},
 	total_ms = 0,
-	fps = 0,
 	-- 刷新率，每多少次sync_data才更新一次显示
 	refresh_rate = 10,
 	-- 当前计数
@@ -57,7 +56,6 @@ function perf_ui.sync_data()
 		end
 		perf_ui.entries = avg_entries
 		perf_ui.total_ms = perf_ui.sum_total_ms / perf_ui.sync_count
-		perf_ui.fps = 1000000 / (perf_ui.total_ms > 0 and perf_ui.total_ms or 1000)
 
 		-- 重置计数和累加
 		perf_ui.sync_count = 0
@@ -81,13 +79,6 @@ local function textWidth(s)
 	return f and f:getWidth(s) or 0
 end
 
--- function perf_ui.sync_data()
--- 	local items, sum = perf.export_table()
--- 	perf_ui.entries = items
--- 	perf_ui.total_ms = sum
--- 	perf_ui.fps = 1000000 / (sum > 0 and sum or 1000)
--- end
-
 function perf_ui.draw()
 	if not perf_ui.enabled then
 		return
@@ -107,7 +98,7 @@ function perf_ui.draw()
 
 	-- 标题：FPS 和 总耗时
 	lg.setColor(1, 1, 1, 0.95)
-	lg.print(string.format("Perf • FPS: %d • Total: %d us", perf_ui.fps, perf_ui.total_ms), x + 8, y + 6)
+	lg.print(string.format("FPS: %d", love.timer.getFPS()), x + 8, y + 6)
 
 	local bx, by = x + 8, y + 28
 	local value_x = x + w - 8

@@ -18207,8 +18207,8 @@ function scripts.tower_sparking_geode.update(this, store)
 
 					local enemies = U.find_enemies_in_range_filter_off(tpos(this), a.range, a_basic.vis_flags, a_basic.vis_bans)
 					local shot_i = 1
-					local zmod_target = 1
 
+                    -- 电涌巨像进入持续攻击状态
 					while not a_basic_break() do
 						if enemies then
 							enemy = table.random(enemies)
@@ -18262,7 +18262,7 @@ function scripts.tower_sparking_geode.update(this, store)
 
 						this.tower_upgrade_persistent_data.last_fight_ts = store.tick_ts
 
-						local ray_timing = a_basic.ray_timing_min + (a_basic.ray_timing_max - a_basic.ray_timing_min) * math.random()
+						local ray_timing = a_basic.ray_timing_min + (a_basic.ray_timing_max - a_basic.ray_timing_min) * math.max(0, 1 - shot_i / 8)
 
 						U.y_wait(store, ray_timing * tw.cooldown_factor)
 
@@ -18273,7 +18273,6 @@ function scripts.tower_sparking_geode.update(this, store)
 						end
 
 						shot_i = shot_i + 1
-						zmod_target = zmod_target + 1
 					end
 
 					U.animation_start(this, "out", nil, store.tick_ts, false, 6)
