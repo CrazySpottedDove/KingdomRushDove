@@ -18127,14 +18127,16 @@ function scripts.tower_sparking_geode.update(this, store)
 				if not enemies then
 					a_crystalize.ts = a_crystalize.ts + a_crystalize.cooldown * 0.2
 				else
-					enemies = table.random_order(enemies)
-					enemies = table.slice(enemies, 1, a_crystalize.max_targets[pow_crystalize.level])
+					-- 筛选生命最高的敌人
+					table.sort(enemies, function(e1, e2)
+						return e1.health.hp > e2.health.hp
+					end)
 
-					for _, enemy in pairs(enemies) do
+					for i = 1, math.min(#enemies, pow_crystalize.level) do
 						local mod = E:create_entity(a_crystalize.mod)
 
 						mod.modifier.source_id = this.id
-						mod.modifier.target_id = enemy.id
+						mod.modifier.target_id = enemies[i].id
 						mod.modifier.duration = a_crystalize.duration[pow_crystalize.level]
 						mod.modifier.damage_factor = tw.damage_factor
 						mod.received_damage_factor = a_crystalize.received_damage_factor[pow_crystalize.level]
@@ -18208,7 +18210,7 @@ function scripts.tower_sparking_geode.update(this, store)
 					local enemies = U.find_enemies_in_range_filter_off(tpos(this), a.range, a_basic.vis_flags, a_basic.vis_bans)
 					local shot_i = 1
 
-                    -- 电涌巨像进入持续攻击状态
+					-- 电涌巨像进入持续攻击状态
 					while not a_basic_break() do
 						if enemies then
 							enemy = table.random(enemies)
