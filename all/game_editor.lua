@@ -26,7 +26,7 @@ local IS_KR5 = KR_GAME == "kr5"
 simulation = require("simulation")
 A = require("animation_db")
 
-local EXO = require("exoskeleton")
+local EXO = require("all.exoskeleton")
 
 if DEBUG then
 	package.loaded.game_editor_gui = nil

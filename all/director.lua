@@ -18,7 +18,7 @@ local LU = require("level_utils")
 local storage = require("storage")
 local director_data = require("data.director_data")
 local GS = require("kr1.game_settings")
-local EXO = require("exoskeleton")
+local EXO = require("all.exoskeleton")
 
 local function replace_locale(list, locale)
 	local out = {}
@@ -251,11 +251,9 @@ function director:unload_item(item)
 		self:unload_texture_groups(replace_locale(game.game_gui.required_textures), self.params.texture_size, game.game_gui.ref_res, "game_gui")
 
 		local groups = {}
-		local scaled_groups = {}
 
 		groups = table.append(groups, replace_locale(game.required_textures))
 		groups = table.append(groups, replace_locale(game.store.level.required_textures))
-		scaled_groups = table.append(scaled_groups, replace_locale(game.scale_required_textures))
 
 		if game.store.config.enable_hero_menu then
 			local hero_data = require("data.map_data").hero_data
@@ -275,7 +273,6 @@ function director:unload_item(item)
 		end
 
 		self:unload_texture_groups(groups, self.params.texture_size, game.ref_res, "game")
-		self:unload_texture_groups(scaled_groups, self.params.texture_size, game.ref_res * game.scale_required_textures_scale, "game")
 		I:unload_atlas("temp_game_texts", game.store.screen_scale)
 
 		if item.required_sounds then
@@ -456,7 +453,6 @@ function director:queue_load_item_named(name, force_reload)
 		end
 
 		self:load_texture_groups(replace_locale(game.required_textures), self.params.texture_size, game.ref_res, true, "game")
-		self:load_texture_groups(replace_locale(game.scale_required_textures), self.params.texture_size, game.ref_res * game.scale_required_textures_scale, true, "game")
 		self:load_texture_groups(replace_locale(game.store.level.required_textures), self.params.texture_size, game.ref_res, true, "game")
 		self:load_texture_groups(replace_locale(game_gui.required_textures), self.params.texture_size, game_gui.ref_res, true, "game_gui")
 		self:load_sound_groups(game.required_sounds)

@@ -70,11 +70,11 @@ local starting_gold=store.player_gold
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="46"
 end)[1]
-holder.tower.upgrade_to="tower_ray_lvl3"
+holder.tower.upgrade_to="tower_mage_3"
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="47"
 end)[1]
-holder.tower.upgrade_to="tower_royal_archers_lvl3"
+holder.tower.upgrade_to="tower_archer_3"
 coroutine.yield()
 store.player_gold=starting_gold
 else

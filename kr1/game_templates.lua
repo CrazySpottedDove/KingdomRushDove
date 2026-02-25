@@ -22961,9 +22961,7 @@ tt.sound_events.insert = "EnemyWarlockRangedCast"
 tt.sound_events.hit = "EnemyWarlockRangedImpact"
 
 tt = E:register_t("controller_stage_32_boss", "decal_scripted")
-
 E:add_comps(tt, "editor", "ui")
-
 b = balance.enemies.wukong.boss_dragon
 tt.boss_controler_balance = b
 tt.main_script.insert = scripts.controller_stage_32_boss.insert

@@ -55,11 +55,9 @@ game.required_textures = {
 	"go_towers_paladin_covenant",
 	"go_towers_arborean_emissary"
 }
-game.scale_required_textures = {}
 game.ref_h = REF_H
 game.ref_w = REF_W
 game.ref_res = TEXTURE_SIZE_ALIAS.ipad
-game.scale_required_textures_scale = TEXTURE_SIZE_ALIAS.ipad / TEXTURE_SIZE_ALIAS.fullhd
 game.required_sounds = {
 	"common",
 	"ElvesTowerTaunts",

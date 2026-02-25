@@ -62712,11 +62712,14 @@ end
 function scripts.mod_desert_spider_lamber.remove(this, store)
 	if scripts.mod_freeze.remove(this, store) then
 		local target = store.entities[this.modifier.target_id]
-		target.health.damage_factor = target.health.damage_factor / this.harden_factor
-		local m = E:create_entity("mod_desert_spider_speedup")
-		m.modifier.target_id = target.id
-		m.modifier.source_id = this.id
-		queue_insert(store, m)
+		if target then
+			target.health.damage_factor = target.health.damage_factor / this.harden_factor
+			local m = E:create_entity("mod_desert_spider_speedup")
+			m.modifier.target_id = target.id
+			m.modifier.source_id = this.id
+			queue_insert(store, m)
+		end
+
 		return true
 	end
 	return false

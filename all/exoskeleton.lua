@@ -52,6 +52,15 @@ function EXO:get_exo_by_frame(exo_frame)
 	return self.exos[exo_frame.exo_name]
 end
 
+--- 简短查看当前 EXO 的加载情况
+function EXO:dump()
+	local exo_names = ""
+	for k, v in pairs(self.exos) do
+		exo_names = exo_names .. k .. ", "
+	end
+	log.error("EXO:dump - currently loaded exos: %s", exo_names)
+end
+
 --- 加载 exo 数据，在进入对局时，A:load()后调用
 function EXO:load()
 	for _, exo_list in pairs(self.exo_lists_to_load) do

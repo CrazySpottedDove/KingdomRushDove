@@ -41,7 +41,7 @@ local PI = math.pi
 require("all.constants")
 
 local ffi = require("ffi")
-local EXO = require("exoskeleton")
+local EXO = require("all.exoskeleton")
 
 local function queue_insert(store, e)
 	simulation:queue_insert_entity(e)
