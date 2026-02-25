@@ -4073,98 +4073,109 @@ function EncyclopediaView:detail_tower(index)
 
 	local tower_data_in_menu = tower_menus_data[dt.tower.type]
 
-	if dt.powers then
-		local specials = GGLabel:new(V.v(190, 26))
+	local specials = GGLabel:new(V.v(190, 26))
 
-		specials.pos = v(300, 462)
-		specials.anchor.x = specials.size.x / 2
-		specials.text = _("Specials")
-		specials.font_name = "h_book"
-		specials.font_size = 20
-		specials.text_align = "center"
-		specials.colors.text = {116, 105, 66, 255}
-		specials.fit_lines = 1
+	specials.pos = v(300, 462)
+	specials.anchor.x = specials.size.x / 2
+	specials.text = _("Specials")
+	specials.font_name = "h_book"
+	specials.font_size = 20
+	specials.text_align = "center"
+	specials.colors.text = {116, 105, 66, 255}
+	specials.fit_lines = 1
 
-		self.right_panel:add_child(specials)
+	self.right_panel:add_child(specials)
 
-		local title_w = specials:get_text_width(specials.text)
-		local left_deco = KImageView:new("encyclopedia_rightArt")
+	local title_w = specials:get_text_width(specials.text)
+	local left_deco = KImageView:new("encyclopedia_rightArt")
 
-		left_deco.pos = v(self.right_panel.size.x / 2 - title_w / 2 - 10, specials.pos.y + 16)
-		left_deco.anchor = v(left_deco.size.x, left_deco.size.y / 2)
-		left_deco.alpha = 0.6
-		left_deco.scale.x = 0.7
+	left_deco.pos = v(self.right_panel.size.x / 2 - title_w / 2 - 10, specials.pos.y + 16)
+	left_deco.anchor = v(left_deco.size.x, left_deco.size.y / 2)
+	left_deco.alpha = 0.6
+	left_deco.scale.x = 0.7
 
-		self.right_panel:add_child(left_deco)
+	self.right_panel:add_child(left_deco)
 
-		local right_deco = KImageView:new("encyclopedia_rightArt")
+	local right_deco = KImageView:new("encyclopedia_rightArt")
 
-		right_deco.pos = v(self.right_panel.size.x / 2 + title_w / 2 + 13, specials.pos.y + 16)
-		right_deco.anchor = v(right_deco.size.x, right_deco.size.y / 2)
-		right_deco.alpha = 0.6
-		right_deco.scale.x = -0.7
+	right_deco.pos = v(self.right_panel.size.x / 2 + title_w / 2 + 13, specials.pos.y + 16)
+	right_deco.anchor = v(right_deco.size.x, right_deco.size.y / 2)
+	right_deco.alpha = 0.6
+	right_deco.scale.x = -0.7
 
-		self.right_panel:add_child(right_deco)
+	self.right_panel:add_child(right_deco)
 
-		local power_names = {}
+	local special_label = GGLabel:new(V.v(300, 50))
 
-		for k, v in pairs(dt.powers) do
-			table.insert(power_names, k)
-		end
+	special_label.pos = v(300, 500)
+	special_label.anchor = v(150, 0)
+	special_label.font_name = "body"
+	special_label.font_size = 15
+	special_label.line_height = CJK(0.85, nil, 1.1, 0.9)
+	special_label.colors.text = {0, 0, 0}
+	special_label.text = _(string.upper(tower_name) .. "_SPECIAL")
+	special_label.text_align = "center"
+	special_label.fit_lines = 4
 
-		table.sort(power_names)
+	self.right_panel:add_child(special_label)
+	-- local power_names = {}
 
-		local tw = 360
-		local iw = math.ceil(tw / #power_names)
+	-- for k, v in pairs(dt.powers) do
+	-- 	table.insert(power_names, k)
+	-- end
 
-		for i, k in pairs(power_names) do
-			local power = dt.powers[k]
-			local px = 120 + (2 * i - 1) * iw / 2
-			-- local f = string.format("encyclopedia_tower_specials_%04i", power.enc_icon)
-			-- local tower_specials_fmt = U.splicing_from_kr(t.from_kr, f)
-			local tower_specials_fmt
+	-- table.sort(power_names)
 
-			for _, item in pairs(tower_data_in_menu[1]) do
-				if item.action_arg == k then
-					tower_specials_fmt = item.image
+	-- local tw = 360
+	-- local iw = math.ceil(tw / #power_names)
 
-					break
-				end
-			end
+	-- for i, k in pairs(power_names) do
+	-- 	local power = dt.powers[k]
+	-- 	local px = 120 + (2 * i - 1) * iw / 2
+	-- 	-- local f = string.format("encyclopedia_tower_specials_%04i", power.enc_icon)
+	-- 	-- local tower_specials_fmt = U.splicing_from_kr(t.from_kr, f)
+	-- 	local tower_specials_fmt
 
-			local icon = KImageView:new(tower_specials_fmt)
+	-- 	for _, item in pairs(tower_data_in_menu[1]) do
+	-- 		if item.action_arg == k then
+	-- 			tower_specials_fmt = item.image
 
-			icon.image_scale = 0.65
-			icon.size.x = icon.size.x * 0.65
-			icon.size.y = icon.size.y * 0.65
-			icon.pos = v(px, 515)
-			icon.anchor = v(icon.size.x / 2, icon.size.y / 2)
+	-- 			break
+	-- 		end
+	-- 	end
 
-			self.right_panel:add_child(icon)
+	-- 	local icon = KImageView:new(tower_specials_fmt)
 
-			local label = GGLabel:new(V.v(tw / #power_names, 50))
+	-- 	icon.image_scale = 0.65
+	-- 	icon.size.x = icon.size.x * 0.65
+	-- 	icon.size.y = icon.size.y * 0.65
+	-- 	icon.pos = v(px, 515)
+	-- 	icon.anchor = v(icon.size.x / 2, icon.size.y / 2)
 
-			label.pos = v(px, 535)
-			label.anchor = v(label.size.x / 2, 0)
-			label.font_name = "body"
-			label.font_size = 14
-			label.line_height = 0.85
-			label.colors.text = {0, 0, 0}
+	-- 	self.right_panel:add_child(icon)
 
-			if t.from_kr == 5 then
-				label.text = _(string.upper(string.format("%s_%s_1_NAME", dt.info.i18n_key or tower_name, power.key or power.name or k)))
-			else
-				label.text = _(string.upper(string.format("%s_%s_NAME_1", dt.info.i18n_key or tower_name, power.name or power.key or k)))
-			end
+	-- 	local label = GGLabel:new(V.v(tw / #power_names, 50))
 
-			label.text_align = "center"
-			label.fit_lines = 2
+	-- 	label.pos = v(px, 535)
+	-- 	label.anchor = v(label.size.x / 2, 0)
+	-- 	label.font_name = "body"
+	-- 	label.font_size = 14
+	-- 	label.line_height = 0.85
+	-- 	label.colors.text = {0, 0, 0}
 
-			self.right_panel:add_child(label)
-		end
-	end
+	-- 	if t.from_kr == 5 then
+	-- 		label.text = _(string.upper(string.format("%s_%s_1_NAME", dt.info.i18n_key or tower_name, power.key or power.name or k)))
+	-- 	else
+	-- 		label.text = _(string.upper(string.format("%s_%s_NAME_1", dt.info.i18n_key or tower_name, power.name or power.key or k)))
+	-- 	end
 
-	local detail_btn = GGOptionsButton:new("细节")
+	-- 	label.text_align = "center"
+	-- 	label.fit_lines = 2
+
+	-- 	self.right_panel:add_child(label)
+	-- end
+
+	local detail_btn = GGOptionsButton:new("技能")
 
 	detail_btn.pos = v(520, 650)
 

@@ -18028,11 +18028,13 @@ function scripts.tower_sparking_geode.update(this, store)
 		if pow_crystalize.changed then
 			pow_crystalize.changed = nil
 			a_crystalize.cooldown = pow_crystalize.cooldown[pow_crystalize.level]
+			a.attack_count_for_min_cooldown = a.attack_count_for_min_cooldown_base - pow_crystalize.level - pow_burst.level
 		end
 
 		if pow_burst.changed then
 			pow_burst.changed = nil
 			a_burst.cooldown = pow_burst.cooldown[pow_burst.level]
+			a.attack_count_for_min_cooldown = a.attack_count_for_min_cooldown_base - pow_crystalize.level - pow_burst.level
 		end
 	end
 
@@ -18219,7 +18221,7 @@ function scripts.tower_sparking_geode.update(this, store)
 						local bullet = E:create_entity(a_basic.bullet)
 
 						bullet.bullet.shot_index = shot_i
-						bullet.bullet.damage_factor = tw.damage_factor
+						bullet.bullet.damage_factor = tw.damage_factor * (enemies and math.max(1, 1 + (4 - #enemies) / 3) or 1)
 						bullet.bullet.source_id = this.id
 
 						local node_offset = P:predict_enemy_node_advance(enemy, bullet.bullet.hit_time)
@@ -18264,7 +18266,7 @@ function scripts.tower_sparking_geode.update(this, store)
 
 						this.tower_upgrade_persistent_data.last_fight_ts = store.tick_ts
 
-						local ray_timing = a_basic.ray_timing_min + (a_basic.ray_timing_max - a_basic.ray_timing_min) * math.max(0, 1 - shot_i / 8)
+						local ray_timing = a_basic.ray_timing_min + (a_basic.ray_timing_max - a_basic.ray_timing_min) * math.max(0, 1 - shot_i / a.attack_count_for_min_cooldown)
 
 						U.y_wait(store, ray_timing * tw.cooldown_factor)
 

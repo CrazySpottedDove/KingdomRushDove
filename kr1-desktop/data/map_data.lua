@@ -2613,7 +2613,13 @@ return {
 			icon = 1,
 			detail_icon = 1,
 			from_kr = 5
-		}, -- 2：圣巢
+		},
+		{
+			name = "tower_paladin_covenant_lvl4",
+			icon = 2,
+			detail_icon = 2,
+			from_kr = 5
+		},
 		{
 			name = "tower_royal_archers_lvl4",
 			icon = 3,
@@ -2631,7 +2637,13 @@ return {
 			icon = 5,
 			detail_icon = 5,
 			from_kr = 5
-		}, -- 6：树灵
+		},
+		{
+			name = "tower_arborean_emissary_lvl4",
+			icon = 6,
+			detail_icon = 6,
+			from_kr = 5
+		},
 		{
 			name = "tower_demon_pit_lvl4",
 			icon = 7,
@@ -2697,8 +2709,7 @@ return {
 			icon = 19,
 			detail_icon = 19,
 			from_kr = 5
-		} -- 16, 17: 蛤蟆
-	-- 18: 巨像
+		}
 	},
 	map_animations1 = {
 		{
