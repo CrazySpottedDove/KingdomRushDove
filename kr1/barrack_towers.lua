@@ -2078,9 +2078,7 @@ tt.render.sprites[1].z = Z_DECALS
 --#endregion
 --#region tower_pandas_lvl4
 tt = RT("tower_pandas_lvl4", "tower")
-
 AC(tt, "attacks", "barrack", "user_selection", "powers")
-
 tt.tower.type = "pandas"
 tt.tower.level = 1
 tt.tower.price = b.price[4]

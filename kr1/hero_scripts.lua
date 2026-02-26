@@ -8382,11 +8382,10 @@ scripts.hero_monk = {
 
 				if brk or sta ~= A_NO_TARGET then
 					-- block empty
-					if this.cooldown_factor_dec_count < 8 then
+					if this.cooldown_factor_dec_count < 8 and sta == A_DONE then
 						SU.insert_unit_cooldown_buff(store.tick_ts, this, 0.938)
+						this.cooldown_factor_dec_count = this.cooldown_factor_dec_count + 1
 					end
-
-					this.cooldown_factor_dec_count = this.cooldown_factor_dec_count + 1
 				elseif SU.soldier_go_back_step(store, this) then
 				-- block empty
 				else

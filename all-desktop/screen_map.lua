@@ -5480,7 +5480,7 @@ function OptionsView:initialize(sw, sh)
 	config_button.pos.x = -75
 	config_button.pos.y = 100
 	function config_button.on_click()
-        S:queue("GUIButtonCommon")
+		S:queue("GUIButtonCommon")
 		screen_map.option_panel:hide()
 		screen_map.config_panel_view:show()
 	end
@@ -5491,7 +5491,7 @@ function OptionsView:initialize(sw, sh)
 	keyset_button.pos.x = -75
 	keyset_button.pos.y = 200
 	function keyset_button.on_click()
-        S:queue("GUIButtonCommon")
+		S:queue("GUIButtonCommon")
 		screen_map.option_panel:hide()
 		screen_map.keyset_panel_view:show()
 	end
@@ -6469,7 +6469,7 @@ end
 
 function EditablePanelView:hide()
 	self.data_group:clear_focus() -- 隐藏前清除焦点状态
-    screen_map.window:set_responder() -- 隐藏时归还输入控制权
+	screen_map.window:set_responder() -- 隐藏时归还输入控制权
 	EditablePanelView.super.hide(self)
 end
 
