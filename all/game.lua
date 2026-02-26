@@ -347,9 +347,9 @@ function game:update(dt)
 
 	local updated = false
 
-	while d.to > TICK_LENGTH do
-		d.to = d.to - TICK_LENGTH
-		self.simulation:update(TICK_LENGTH)
+	while d.to > d.tick_length do
+		d.to = d.to - d.tick_length
+		self.simulation:update(d.tick_length)
 		d.step = false
 		updated = true
 	end
@@ -1444,7 +1444,7 @@ function game:draw_speed_state(rox, roy, gs)
 		G.printf(string.format("%s 倍减速中...", d.speed_factor), pos.x, pos.y - 75, G.getWidth() - pos.x)
 	end
 
-	G.printf(string.format("按 %s 还原", game_gui.key_shortcuts.normal[1]), pos.x, pos.y - 35, G.getWidth() - pos.x)
+	-- G.printf(string.format("按 %s 还原", game_gui.key_shortcuts.normal), pos.x, pos.y - 35, G.getWidth() - pos.x)
 	-- 恢复默认
 	G.setColor(1, 1, 1, 1)
 	G.setCanvas()

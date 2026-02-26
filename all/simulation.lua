@@ -13,8 +13,7 @@ function simulation:init(store, system_names)
 
 	local d = store
 
-	d.tick_length = TICK_LENGTH
-	d.tick = 0
+	d.tick_length = TICK_LENGTH -- 游戏的时间单位，可用于倍速调节。TICK_LENGTH 是恒定值，但是可以通过调整 tick_length 来实现倍速效果。
 	d.tick_ts = 0
 	d.ts = 0
 	d.to = 0
@@ -145,14 +144,13 @@ function simulation:update(dt)
 		return
 	end
 
-	simulation:do_tick()
+	simulation:do_tick(dt)
 end
 
-function simulation:do_tick()
+function simulation:do_tick(dt)
 	local d = self.store
 
-	d.tick = d.tick + 1
-	d.tick_ts = d.tick_ts + TICK_LENGTH
+	d.tick_ts = d.tick_ts + dt
 
 	-- 批量插入
 	local last_count = #d.pending_inserts
@@ -186,7 +184,7 @@ function simulation:do_tick()
 	end
 
 	for i = 1, self.systems_on_update_count do
-		self.systems_on_update[i]:on_update(TICK_LENGTH, d.tick_ts, d)
+		self.systems_on_update[i]:on_update(dt, d.tick_ts, d)
 	end
 end
 

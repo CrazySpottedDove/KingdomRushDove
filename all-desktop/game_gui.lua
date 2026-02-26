@@ -862,10 +862,21 @@ function game_gui:keypressed(key, isrepeat)
 		end
 	elseif ks.slow == key then
 		self.game.simulation.store.speed_factor = self.game.simulation.store.speed_factor * 0.5
+		if self.game.simulation.store.speed_factor > 1 then
+			self.game.simulation.store.tick_length = math.min(TICK_LENGTH * self.game.simulation.store.speed_factor, 1 / 30)
+		else
+			self.game.simulation.store.tick_length = TICK_LENGTH
+		end
 	elseif ks.quick == key then
 		self.game.simulation.store.speed_factor = self.game.simulation.store.speed_factor * 2
+		if self.game.simulation.store.speed_factor > 1 then
+			self.game.simulation.store.tick_length = math.min(TICK_LENGTH * self.game.simulation.store.speed_factor, 1 / 30)
+		else
+			self.game.simulation.store.tick_length = TICK_LENGTH
+		end
 	elseif ks.normal == key then
 		self.game.simulation.store.speed_factor = 1
+		self.game.simulation.store.tick_length = TICK_LENGTH
 	elseif ks.next_wave == key then
 		-- if not self.next_wave_button:is_disabled() then
 		game_gui.game.store.send_next_wave = true

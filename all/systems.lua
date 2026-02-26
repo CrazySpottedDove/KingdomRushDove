@@ -2305,7 +2305,7 @@ function sys.texts:on_insert(entity, store)
 	if entity.texts then
 		for _, t in pairs(entity.texts.list) do
 			local sprite_id = t.sprite_id
-			local image_name = string.format("text_%s_%s_%s", entity.id, sprite_id, store.tick)
+			local image_name = string.format("text_%s_%s_%s", entity.id, sprite_id, store.tick_ts)
 			local image = F:create_text_image(t.text, t.size, t.alignment, t.font_name, t.font_size, t.color, t.line_height, store.screen_scale, t.fit_height, t.debug_bg)
 
 			I:add_image(image_name, image, "temp_game_texts", store.screen_scale)
