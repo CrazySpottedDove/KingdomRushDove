@@ -23,7 +23,7 @@ local timer = require("hump.timer").new()
 local utf8 = require("utf8")
 local achievements_data, map_data
 local tower_menus_data = require("data.tower_menus_data")
-
+local is_android = love.system.getOS() == "Android"
 require("klove.kui")
 
 local kui_db = require("klove.kui_db")
@@ -348,19 +348,6 @@ function screen_map:init(w, h, done_callback)
 
 	self.window:add_child(o_button)
 
-	-- 配置设置
-	local config_button = KImageButton:new("map_configBtn_0001", "map_configBtn_0002", "map_configBtn_0003")
-
-	config_button.anchor = v(o_button.size.x / 2, o_button.size.y / 2)
-	config_button.pos = v(80, 180)
-
-	function config_button.on_click(this, button, x, y)
-		S:queue("GUIButtonCommon")
-		self.config_panel_view:show()
-	end
-
-	self.window:add_child(config_button)
-
 	local a_button = GGButton:new("mapButtons_notxt_0004", "mapButtons_notxt_0005")
 
 	a_button.anchor = v(a_button.size.x / 2, a_button.size.y / 2)
@@ -667,6 +654,9 @@ function screen_map:init(w, h, done_callback)
 
 	self.window:add_child(self.criket_panel_view)
 
+	self.keyset_panel_view = KeysetPanelView:new(sw, sh)
+	self.window:add_child(self.keyset_panel_view)
+
 	if self.generation == 1 then
 		S:queue("MusicMap1")
 	elseif self.generation == 2 then
@@ -804,6 +794,10 @@ function screen_map:keypressed(key, isrepeat)
 			self.criket_panel_view:hide()
 
 			return true
+		elseif not self.keyset_panel_view.hidden then
+			self.keyset_panel_view:hide()
+
+			return true
 		end
 
 		return false
@@ -813,7 +807,15 @@ function screen_map:keypressed(key, isrepeat)
 		if not hide_others() then
 			self.option_panel:show()
 		end
-	elseif key == "f1" then
+	end
+
+	if self.window.responder then
+		-- 输入权转交
+		self.window.responder:on_keypressed(key, isrepeat)
+		return
+	end
+
+	if key == "f1" then
 		hide_others()
 		self.config_panel_view:show()
 	elseif key == "f2" then
@@ -839,6 +841,9 @@ function screen_map:keypressed(key, isrepeat)
 			hide_others()
 			self:change_generation(5)
 		end
+	elseif key == "k" then
+		hide_others()
+		self.keyset_panel_view:show()
 	end
 
 	if DEBUG_MAP_ANI_EDITOR and self.SEL_ANI then
@@ -996,10 +1001,6 @@ function screen_map:keypressed(key, isrepeat)
 				self.map_view:show_flags()
 			end
 		end
-	end
-
-	if self.window.responder then
-		self.window.responder:on_keypressed(key, isrepeat)
 	end
 end
 
@@ -5474,6 +5475,26 @@ function OptionsView:initialize(sw, sh)
 
 	self.back:add_child(title)
 
+	local config_button = GGOptionsButton:new("修改配置")
+	config_button:set_anchor_to_center()
+	config_button.pos.x = -75
+	config_button.pos.y = 100
+	function config_button.on_click()
+		screen_map.option_panel:hide()
+		screen_map.config_panel_view:show()
+	end
+	self.back:add_child(config_button)
+
+	local keyset_button = GGOptionsButton:new("修改键位")
+	keyset_button:set_anchor_to_center()
+	keyset_button.pos.x = -75
+	keyset_button.pos.y = 200
+	function keyset_button.on_click()
+		screen_map.option_panel:hide()
+		screen_map.keyset_panel_view:show()
+	end
+	self.back:add_child(keyset_button)
+
 	self.difficulty_idx = screen_map.user_data.difficulty
 
 	if not self.difficulty_idx then
@@ -6011,20 +6032,18 @@ function AchievementsPageButton:deselect()
 	end
 end
 
-BooleanToggleItem = class("BooleanToggleItem", KButton)
+EditableItem = class("EditableItem", KButton)
 
-function BooleanToggleItem:initialize(key_text, initial_value, size)
+function EditableItem:initialize(key_text, initial_value, size)
 	size = size or V.v(300, 40)
 
-	KButton.initialize(self, size) -- 改为 KButton.initialize
+	KButton.initialize(self, size)
 
 	self.key = key_text
 	self.value = initial_value or false
 	self.on_change_callback = nil
-	-- 移除背景，KButton 自己会处理
-	-- self.background = KView:new(self.size)
-	-- self.background.colors.background = {0, 0, 0, 0}
-	-- self:add_child(self.background)
+	self.is_focused = false -- 新增：焦点状态
+
 	-- 键名标签
 	self.key_label = GGLabel:new(V.v(self.size.x - 80, self.size.y))
 	self.key_label.pos = V.v(10, 0)
@@ -6036,6 +6055,7 @@ function BooleanToggleItem:initialize(key_text, initial_value, size)
 	self.key_label.colors.text = {200, 200, 200, 255}
 	self.key_label.colors.text_default = {200, 200, 200, 255}
 	self.key_label.colors.text_hover = {255, 255, 255, 255}
+	self.key_label.colors.text_focused = {255, 220, 100, 255} -- 新增：焦点颜色
 	self.key_label.propagate_on_click = true
 
 	self:add_child(self.key_label)
@@ -6053,9 +6073,29 @@ function BooleanToggleItem:initialize(key_text, initial_value, size)
 	self.value_label.colors.text_yes_hover = {150, 255, 150, 255}
 	self.value_label.colors.text_no_hover = {255, 150, 150, 255}
 	self.value_label.colors.text_default = {200, 200, 200, 255}
+	self.value_label.colors.text_focused = {255, 255, 100, 255} -- 新增：焦点颜色
 	self.value_label.propagate_on_click = true
 
 	self:add_child(self.value_label)
+
+	-- 新增：输入框边框提示（用于 number 和 string 类型）
+	self.input_border = KView:new(V.v(70, self.size.y - 4))
+	self.input_border.pos = V.v(self.size.x - 75, 2)
+	self.input_border.colors.background = {0, 0, 0, 0}
+	self.input_border.colors.border_focused = {255, 220, 100, 200}
+	self.input_border.colors.border_normal = {100, 100, 100, 100}
+	self.input_border.hidden = true
+	self.input_border.propagate_on_click = true
+	self:add_child(self.input_border)
+
+	-- 新增：光标闪烁效果
+	self.cursor = KView:new(V.v(2, self.size.y - 12))
+	self.cursor.pos = V.v(self.size.x - 15, 6)
+	self.cursor.colors.background = {255, 255, 255, 255}
+	self.cursor.hidden = true
+	self.cursor.propagate_on_click = true
+	self:add_child(self.cursor)
+	self.cursor_blink_time = 0
 
 	self._type = type(initial_value)
 
@@ -6063,8 +6103,25 @@ function BooleanToggleItem:initialize(key_text, initial_value, size)
 	self:update_display()
 end
 
-function BooleanToggleItem:update_display()
+function EditableItem:update(dt)
+	KButton.update(self, dt)
+
+	-- 光标闪烁效果
+	if self.is_focused and (self._type == "number" or self._type == "string") then
+		self.cursor_blink_time = self.cursor_blink_time + dt
+		self.cursor.hidden = math.floor(self.cursor_blink_time * 2) % 2 == 1
+
+		-- 更新光标位置（在文字末尾）
+		local text_width = self.value_label:get_text_width(self.value_label.text or "")
+		self.cursor.pos.x = self.value_label.pos.x + (self.value_label.size.x + text_width) / 2 + 2
+	else
+		self.cursor.hidden = true
+	end
+end
+
+function EditableItem:update_display()
 	if self._type == "boolean" then
+		self.input_border.hidden = true
 		if self.value then
 			self.value_label.text = _("是")
 			self.value_label.colors.text = self.value_label.colors.text_yes
@@ -6073,11 +6130,34 @@ function BooleanToggleItem:update_display()
 			self.value_label.colors.text = self.value_label.colors.text_no
 		end
 	elseif self._type == "number" then
+		self.input_border.hidden = false
 		if not self.value_label.text then
 			self.value_label.text = tostring(self.value)
 		end
 
-		self.value_label.colors.text = self.value_label.colors.text_default
+		if self.is_focused then
+			self.value_label.colors.text = self.value_label.colors.text_focused
+		else
+			self.value_label.colors.text = self.value_label.colors.text_default
+		end
+	elseif self._type == "string" then
+		self.input_border.hidden = false
+		if not self.value_label.text then
+			self.value_label.text = self.value
+		end
+
+		if self.is_focused then
+			self.value_label.colors.text = self.value_label.colors.text_focused
+		else
+			self.value_label.colors.text = self.value_label.colors.text_default
+		end
+	end
+
+	-- 更新边框颜色
+	if self.input_border and not self.input_border.hidden then
+		if self.is_focused then
+			self.colors.background = {80, 70, 30, 150} -- 焦点时的背景色
+		end
 	end
 
 	-- 强制重绘
@@ -6086,10 +6166,12 @@ function BooleanToggleItem:update_display()
 	end
 end
 
-function BooleanToggleItem:on_enter()
+function EditableItem:on_enter()
 	-- 悬浮高亮效果
-	self.colors.background = {50, 50, 50, 100}
-	self.key_label.colors.text = self.key_label.colors.text_hover
+	if not self.is_focused then
+		self.colors.background = {50, 50, 50, 100}
+	end
+	self.key_label.colors.text = self.is_focused and self.key_label.colors.text_focused or self.key_label.colors.text_hover
 
 	if self._type == "boolean" then
 		if self.value then
@@ -6104,21 +6186,51 @@ function BooleanToggleItem:on_enter()
 	end
 end
 
-function BooleanToggleItem:on_exit()
-	-- 取消高亮效果
-	self.colors.background = {0, 0, 0, 0}
-	self.key_label.colors.text = self.key_label.colors.text_default
+function EditableItem:set_focused(focused)
+	self.is_focused = focused
+	self.cursor_blink_time = 0
+
+	if focused then
+		-- 获得焦点时的视觉效果
+		self.colors.background = {80, 70, 30, 150}
+		self.key_label.colors.text = self.key_label.colors.text_focused
+
+		if self._type == "number" or self._type == "string" then
+			self.cursor.hidden = false
+		end
+	else
+		-- 失去焦点时恢复
+		self.colors.background = {0, 0, 0, 0}
+		self.key_label.colors.text = self.key_label.colors.text_default
+		self.cursor.hidden = true
+	end
 
 	self:update_display()
 end
 
-function BooleanToggleItem:set_value_lable(new_value)
+function EditableItem:on_exit()
+	-- 取消高亮效果（但保留焦点状态）
+	if not self.is_focused then
+		self.colors.background = {0, 0, 0, 0}
+		self.key_label.colors.text = self.key_label.colors.text_default
+	else
+		self.colors.background = {80, 70, 30, 150}
+		self.key_label.colors.text = self.key_label.colors.text_focused
+	end
+
+	self:update_display()
+end
+
+function EditableItem:set_value_lable(new_value)
 	self.value_label.text = new_value or self.value_label.text
 
-	local num = tonumber(self.value_label.text)
-
-	if num then
-		self.value = num
+	if self._type == "number" then
+		local num = tonumber(self.value_label.text)
+		if num then
+			self.value = num
+		end
+	elseif self._type == "string" then
+		self.value = self.value_label.text
 	end
 
 	self:update_display()
@@ -6128,22 +6240,31 @@ function BooleanToggleItem:set_value_lable(new_value)
 	end
 end
 
-function BooleanToggleItem:on_click(button, vx, vy)
+function EditableItem:on_click(button, vx, vy)
 	S:queue("GUIButtonCommon")
-	-- self:toggle()
 
 	if self._type == "boolean" then
 		self.value = not self.value
+		self.parent:clear_focus()
 	elseif self._type == "number" then
 		screen_map.window:set_responder(self)
+		self.parent:clear_focus()
+		self:set_focused(true)
 
-		local ix = self:view_to_view(vx, vy, self.parent)
+		if is_android then
+			local ix = self:view_to_view(vx, vy, self.parent)
 
-		if ix < self.pos.x + self.size.x / 2 then
-			self:set_value_lable(tostring(self.value - 1))
-		else
-			self:set_value_lable(tostring(self.value + 1))
+			if ix < self.pos.x + self.size.x / 2 then
+				self:set_value_lable(tostring(self.value - 1))
+			else
+				self:set_value_lable(tostring(self.value + 1))
+			end
 		end
+
+	elseif self._type == "string" then
+		screen_map.window:set_responder(self)
+		self.parent:clear_focus()
+		self:set_focused(true)
 	end
 
 	self:update_display()
@@ -6153,30 +6274,18 @@ function BooleanToggleItem:on_click(button, vx, vy)
 	end
 end
 
--- function BooleanToggleItem:toggle()
--- 	if self._type == "boolean" then
--- 		self.value = not self.value
--- 	elseif self._type == "number" then
--- 		screen_map.window:set_responder(self)
--- 	end
-
--- 	self:update_display()
-
--- 	if self.on_change_callback then
--- 		self.on_change_callback(self.key, self.value)
--- 	end
--- end
-
-function BooleanToggleItem:on_textinput(t)
+function EditableItem:on_textinput(t)
 	if self._type == "number" then
 		self:set_value_lable(tostring(self.value_label.text .. t))
+	elseif self._type == "string" then
+		self:set_value_lable(self.value_label.text .. t)
 	end
 
 	return true
 end
 
-function BooleanToggleItem:on_keypressed(key)
-	if self._type == "number" then
+function EditableItem:on_keypressed(key)
+	if self._type == "number" or self._type == "string" then
 		if key == "backspace" then
 			local text = self.value_label.text
 			local byteoffset = utf8.offset(text, -1)
@@ -6192,14 +6301,18 @@ function BooleanToggleItem:on_keypressed(key)
 			end
 
 			self:set_value_lable()
+		elseif key == "return" then
+			S:queue("GUIButtonCommon")
+			-- 按回车或ESC确认输入并取消焦点
+			self:set_focused(false)
+			screen_map.window:set_responder()
 		end
 	end
 end
 
--- 布尔值切换组类 - 管理多个布尔值项
-BooleanToggleGroup = class("BooleanToggleGroup", KView)
+EditableGroup = class("EditableGroup", KView)
 
-function BooleanToggleGroup:initialize(size)
+function EditableGroup:initialize(size)
 	size = size or V.v(400, 300)
 
 	KView.initialize(self, size)
@@ -6211,15 +6324,21 @@ function BooleanToggleGroup:initialize(size)
 	self.data = {}
 end
 
-function BooleanToggleGroup:set_key_label_map(map)
+function EditableGroup:clear_focus()
+	for _, item in pairs(self.items) do
+		item:set_focused(false)
+	end
+end
+
+function EditableGroup:set_key_label_map(map)
 	self.key_label_map = map
 end
 
-function BooleanToggleGroup:add_items(data)
+function EditableGroup:add_items(data)
 	local total_items = 0
 
 	for key, value in pairs(data) do
-		if type(value) == "boolean" or type(value) == "number" then
+		if type(value) == "boolean" or type(value) == "number" or type(value) == "string" then
 			total_items = total_items + 1
 		end
 	end
@@ -6236,9 +6355,9 @@ function BooleanToggleGroup:add_items(data)
 	local index = 0
 
 	for key, value in pairs(data) do
-		if type(value) == "boolean" or type(value) == "number" then
+		if type(value) == "boolean" or type(value) == "number" or type(value) == "string" then
 			-- 添加新 item
-			local item = BooleanToggleItem:new(self.key_label_map[key] or key, value, V.v(column_width, 40))
+			local item = EditableItem:new(self.key_label_map[key] or key, value, V.v(column_width, 40))
 
 			item.pos = V.v((start_x + math.floor(index / max_rows) * (column_width + self.padding.x)), start_y + (index % max_rows) * row_height)
 			item.on_change_callback = function(label, value)
@@ -6253,21 +6372,15 @@ function BooleanToggleGroup:add_items(data)
 	end
 end
 
--- function BooleanToggleGroup:set_value(key, value)
---     if self.items[key] then
---         self.items[key]:set_value(value)
---         self.data[key] = value
---     end
--- end
-function BooleanToggleGroup:get_value(key)
+function EditableGroup:get_value(key)
 	return self.data[key]
 end
 
-function BooleanToggleGroup:get_all_data()
+function EditableGroup:get_all_data()
 	return self.data
 end
 
-function BooleanToggleGroup:set_all_data(data)
+function EditableGroup:set_all_data(data)
 	self.data = data
 
 	for key, item in pairs(self.items) do
@@ -6279,7 +6392,7 @@ function BooleanToggleGroup:set_all_data(data)
 	self:add_items(data)
 end
 
-function BooleanToggleGroup:set_on_data_change_callback(callback)
+function EditableGroup:set_on_data_change_callback(callback)
 	self.on_data_change_callback = callback
 end
 
@@ -6307,7 +6420,7 @@ function BooleanPanelView:initialize(sw, sh, title)
 	self.back:add_child(header)
 
 	-- 创建配置组
-	self.data_group = BooleanToggleGroup:new(V.v(self.back.size.x, self.back.size.y))
+	self.data_group = EditableGroup:new(V.v(self.back.size.x, self.back.size.y))
 	self.data_group.pos = V.v(100, 100)
 	self.data_group.scale = v(1 / 1.45, 1 / 1.45)
 
@@ -6354,6 +6467,7 @@ function BooleanPanelView:show()
 end
 
 function BooleanPanelView:hide()
+	self.data_group:clear_focus() -- 隐藏前清除焦点状态
 	BooleanPanelView.super.hide(self)
 end
 
@@ -6426,6 +6540,50 @@ function CriketPanelView:save()
 	end
 
 	storage:save_criket(criket)
+end
+
+KeysetPanelView = class("KeysetPanelView", BooleanPanelView)
+
+function KeysetPanelView:initialize(sw, sh)
+	BooleanPanelView.initialize(self, sw, sh, "键位设置")
+	self:set_key_label_map({
+		pow_1 = "火雨",
+		pow_2 = "援军",
+		hero_1 = "英雄1",
+		hero_2 = "英雄2",
+		hero_3 = "英雄3",
+		hero_4 = "英雄4",
+		hero_5 = "英雄5",
+		reinforce = "援军调集",
+		reinforce_other = "召唤物调集",
+		next_wave = "下一波",
+		slow = "游戏减速",
+		quick = "游戏加速",
+		normal = "游戏原速",
+		criket_toggle = "切换一键造塔菜单",
+		endless_shop = "(无尽)开启商店",
+		barrack_seek = "兵营士兵索敌",
+		hero_menu_toggle = "切换英雄召唤菜单",
+		force_next_wave = "跳波",
+		wealthy = "获得金币",
+		healthy = "获得生命",
+		fps = "显示帧率"
+	})
+end
+
+function KeysetPanelView:load()
+	local keyset = storage:load_keyset()
+	self.data_group:set_all_data(keyset)
+end
+
+function KeysetPanelView:save()
+	local keyset = storage:load_keyset()
+
+	for k, v in pairs(self.data_group:get_all_data()) do
+		keyset[k] = v
+	end
+
+	storage:save_keyset(keyset)
 end
 
 return screen_map

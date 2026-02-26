@@ -791,19 +791,19 @@ function game_gui:keypressed(key, isrepeat)
 
 	local ks = self.key_shortcuts
 
-	if table.contains(ks.pow_1, key) and not self.power_1:is_disabled() then
+	if ks.pow_1 == key and not self.power_1:is_disabled() then
 		self.power_1:toggle_selection()
-	elseif table.contains(ks.pow_2, key) and not self.power_2:is_disabled() then
+	elseif ks.pow_2 == key and not self.power_2:is_disabled() then
 		self.power_2:toggle_selection()
-	elseif table.contains(ks.hero_1, key) then
+	elseif ks.hero_1 == key then
 		if self.heroes and self.heroes[1] then
 			self.heroes[1]:on_click(1, 0, 0)
 		end
-	elseif table.contains(ks.hero_2, key) then
+	elseif ks.hero_2 == key then
 		if self.heroes and self.heroes[2] then
 			self.heroes[2]:on_click(1, 0, 0)
 		end
-	elseif table.contains(ks.hero_3, key) then
+	elseif ks.hero_3 == key then
 		if self.heroes_no_panel and self.heroes_no_panel[1] then
 			local e = game_gui:entity_by_id(self.heroes_no_panel[1].id)
 
@@ -814,7 +814,7 @@ function game_gui:keypressed(key, isrepeat)
 				game_gui:select_entity(e)
 			end
 		end
-	elseif table.contains(ks.hero_4, key) then
+	elseif ks.hero_4 == key then
 		if self.heroes_no_panel and self.heroes_no_panel[2] then
 			local e = game_gui:entity_by_id(self.heroes_no_panel[2].id)
 
@@ -825,7 +825,7 @@ function game_gui:keypressed(key, isrepeat)
 				game_gui:select_entity(e)
 			end
 		end
-	elseif table.contains(ks.hero_5, key) then
+	elseif ks.hero_5 == key then
 		if self.heroes_no_panel and self.heroes_no_panel[3] then
 			local e = game_gui:entity_by_id(self.heroes_no_panel[3].id)
 
@@ -836,7 +836,7 @@ function game_gui:keypressed(key, isrepeat)
 				game_gui:select_entity(e)
 			end
 		end
-	elseif table.contains(ks.reinforce, key) then
+	elseif ks.reinforce == key then
 		if #self.selected_controables > 0 then
 			self:deselect_controables()
 		else
@@ -848,7 +848,7 @@ function game_gui:keypressed(key, isrepeat)
 
 			self:set_mode(GUI_MODE_RALLY_CONTROABLES)
 		end
-	elseif table.contains(ks.reinforce_other, key) then
+	elseif ks.reinforce_other == key then
 		if #self.selected_controables > 0 then
 			self:deselect_controables()
 		else
@@ -860,23 +860,23 @@ function game_gui:keypressed(key, isrepeat)
 
 			self:set_mode(GUI_MODE_RALLY_CONTROABLES)
 		end
-	elseif table.contains(ks.slow, key) then
+	elseif ks.slow == key then
 		self.game.simulation.store.speed_factor = self.game.simulation.store.speed_factor * 0.5
-	elseif table.contains(ks.quick, key) then
+	elseif ks.quick == key then
 		self.game.simulation.store.speed_factor = self.game.simulation.store.speed_factor * 2
-	elseif table.contains(ks.normal, key) then
+	elseif ks.normal == key then
 		self.game.simulation.store.speed_factor = 1
-	elseif table.contains(ks.next_wave, key) then
+	elseif ks.next_wave == key then
 		-- if not self.next_wave_button:is_disabled() then
 		game_gui.game.store.send_next_wave = true
 	-- end
-	elseif table.contains(ks.criket_toggle, key) then
+	elseif ks.criket_toggle == key then
 		if self.criketmenu.hidden then
 			self.criketmenu:show()
 		else
 			self.criketmenu:hide()
 		end
-	elseif table.contains(ks.barrack_seek, key) then
+	elseif ks.barrack_seek == key then
 		local store = self.game.simulation.store
 
 		for _, t in pairs(store.towers) do
@@ -902,23 +902,23 @@ function game_gui:keypressed(key, isrepeat)
 				end
 			end
 		end
-	elseif table.contains(ks.endless_shop, key) and self.game.store.level_mode_override == GAME_MODE_ENDLESS and self.game.store.player_gold >= EL.gold_extra_cost and game_gui.endless_select_reward_view.hidden then
+	elseif ks.endless_shop == key and self.game.store.level_mode_override == GAME_MODE_ENDLESS and self.game.store.player_gold >= EL.gold_extra_cost and game_gui.endless_select_reward_view.hidden then
 		self.game.store.player_gold = self.game.store.player_gold - EL.gold_extra_cost
 
 		game_gui.endless_select_reward_view:show(true)
-	elseif table.contains(ks.hero_menu_toggle, key) and self.game.store.config.enable_hero_menu then
+	elseif ks.hero_menu_toggle == key and self.game.store.config.enable_hero_menu then
 		if self.heromenu.hidden then
 			self.heromenu:show()
 		else
 			self.heromenu:hide()
 		end
-	elseif table.contains(ks.force_next_wave, key) then
+	elseif ks.force_next_wave == key then
 		game_gui.game.store.force_next_wave = true
-	elseif table.contains(ks.wealthy, key) then
+	elseif ks.wealthy == key then
 		game_gui.game.store.player_gold = game_gui.game.store.player_gold + 99999
-	elseif table.contains(ks.healthy, key) then
+	elseif ks.healthy == key then
 		game_gui.game.store.lives = game_gui.game.store.lives + 100
-	elseif table.contains(ks.fps, key) then
+	elseif ks.fps == key then
 		require("dove_modules.perf.perf_ui").toggle()
 	end
 end

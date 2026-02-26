@@ -504,6 +504,11 @@ function KView:deserialize()
 	KView.super.deserialize(self)
 end
 
+function KView:set_anchor_to_center()
+	self.anchor.x = self.size.x * 0.5
+	self.anchor.y = self.size.y * 0.5
+end
+
 --- 设置 UI 对象的图像资源
 ---@param image userdata|string|nil
 ---@param size table|nil

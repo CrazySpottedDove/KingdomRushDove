@@ -203,7 +203,7 @@ function storage:load_keyset()
 		self:save_keyset(key_shortcuts)
 	else
 		for k, v in pairs(default_key_shortcuts) do
-			if not key_shortcuts[k] then
+			if not key_shortcuts[k] or type(key_shortcuts[k]) ~= type(v) then
 				key_shortcuts[k] = v
 			end
 		end
