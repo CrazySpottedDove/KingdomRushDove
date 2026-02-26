@@ -5480,6 +5480,7 @@ function OptionsView:initialize(sw, sh)
 	config_button.pos.x = -75
 	config_button.pos.y = 100
 	function config_button.on_click()
+        S:queue("GUIButtonCommon")
 		screen_map.option_panel:hide()
 		screen_map.config_panel_view:show()
 	end
@@ -5490,6 +5491,7 @@ function OptionsView:initialize(sw, sh)
 	keyset_button.pos.x = -75
 	keyset_button.pos.y = 200
 	function keyset_button.on_click()
+        S:queue("GUIButtonCommon")
 		screen_map.option_panel:hide()
 		screen_map.keyset_panel_view:show()
 	end
@@ -6396,9 +6398,9 @@ function EditableGroup:set_on_data_change_callback(callback)
 	self.on_data_change_callback = callback
 end
 
-BooleanPanelView = class("BooleanPanelView", PopUpView)
+EditablePanelView = class("EditablePanelView", PopUpView)
 
-function BooleanPanelView:initialize(sw, sh, title)
+function EditablePanelView:initialize(sw, sh, title)
 	PopUpView.initialize(self, V.v(sw, sh))
 
 	self.back = KImageView:new("options_bg_notxt")
@@ -6441,7 +6443,6 @@ function BooleanPanelView:initialize(sw, sh, title)
 		S:queue("GUIButtonCommon")
 		self:save()
 		self:hide()
-		screen_map.window:set_responder()
 	end
 
 	self.done_button = b
@@ -6449,32 +6450,33 @@ function BooleanPanelView:initialize(sw, sh, title)
 	self.back:add_child(b)
 end
 
-function BooleanPanelView:set_key_label_map(map)
+function EditablePanelView:set_key_label_map(map)
 	self.data_group:set_key_label_map(map)
 end
 
-function BooleanPanelView:load()
-	log.error("BooleanPanelView:load not implemented")
+function EditablePanelView:load()
+	log.error("EditablePanelView:load not implemented")
 end
 
-function BooleanPanelView:save()
-	log.error("BooleanPanelView:save not implemented")
+function EditablePanelView:save()
+	log.error("EditablePanelView:save not implemented")
 end
 
-function BooleanPanelView:show()
+function EditablePanelView:show()
 	self:load()
-	BooleanPanelView.super.show(self)
+	EditablePanelView.super.show(self)
 end
 
-function BooleanPanelView:hide()
+function EditablePanelView:hide()
 	self.data_group:clear_focus() -- 隐藏前清除焦点状态
-	BooleanPanelView.super.hide(self)
+    screen_map.window:set_responder() -- 隐藏时归还输入控制权
+	EditablePanelView.super.hide(self)
 end
 
-ConfigPanelView = class("ConfigPanelView", BooleanPanelView)
+ConfigPanelView = class("ConfigPanelView", EditablePanelView)
 
 function ConfigPanelView:initialize(sw, sh)
-	BooleanPanelView.initialize(self, sw, sh, "自定义配置")
+	EditablePanelView.initialize(self, sw, sh, "自定义配置")
 	self:set_key_label_map({
 		hero_full_level_at_start = "英雄开局满级",
 		reverse_path = "路线倒转",
@@ -6513,10 +6515,10 @@ function ConfigPanelView:save()
 	storage:save_config(config)
 end
 
-CriketPanelView = class("CriketPanelView", BooleanPanelView)
+CriketPanelView = class("CriketPanelView", EditablePanelView)
 
 function CriketPanelView:initialize(sw, sh)
-	BooleanPanelView.initialize(self, sw, sh, "斗蛐蛐配置")
+	EditablePanelView.initialize(self, sw, sh, "斗蛐蛐配置")
 	self:set_key_label_map({
 		on = "启用斗蛐蛐",
 		fps_transformed = "请勿修改本条",
@@ -6542,10 +6544,10 @@ function CriketPanelView:save()
 	storage:save_criket(criket)
 end
 
-KeysetPanelView = class("KeysetPanelView", BooleanPanelView)
+KeysetPanelView = class("KeysetPanelView", EditablePanelView)
 
 function KeysetPanelView:initialize(sw, sh)
-	BooleanPanelView.initialize(self, sw, sh, "键位设置")
+	EditablePanelView.initialize(self, sw, sh, "键位设置")
 	self:set_key_label_map({
 		pow_1 = "火雨",
 		pow_2 = "援军",
