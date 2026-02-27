@@ -34,7 +34,9 @@ local SETTINGS_PARAMS = {
 	"pause_on_switch",
 	"sound_pool_size",
 	"update_enabled",
-	"update_last_site"
+	"update_last_site",
+	"launch_options",
+	"last_slot_idx"
 }
 local SLOT_ADDITIONAL_DATA = {
 	gems = 0,
@@ -266,6 +268,12 @@ function storage:load_settings()
 		for k, v in pairs(template) do
 			if input[k] == nil then
 				input[k] = v
+			elseif type(v) == "table" then
+				for tk, tv in pairs(v) do
+					if input[k][tk] == nil then
+						input[k][tk] = tv
+					end
+				end
 			end
 		end
 
@@ -273,7 +281,7 @@ function storage:load_settings()
 	end
 end
 
-function storage:save_settings(data_table, should_sync)
+function storage:save_settings(data_table)
 	local out = {}
 
 	for _, p in pairs(SETTINGS_PARAMS) do
@@ -282,9 +290,7 @@ function storage:save_settings(data_table, should_sync)
 
 	local success = self:write_lua(self.SETTINGS_FILE, out)
 
-	if success then
-		signal.emit("settings-saved", should_sync)
-	else
+	if not success then
 		log.error("error saving settings")
 	end
 

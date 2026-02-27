@@ -6,7 +6,7 @@ local I = require("lib.klove.image_db")
 local V = require("lib.klua.vector")
 local v = V.v
 local signal = require("lib.hump.signal")
-local storage = require("storage")
+local storage = require("all.storage")
 local slot_template = require("data.slot_template")
 local timer = require("hump.timer").new()
 local S = require("sound_db")
@@ -149,56 +149,23 @@ function SlotView:initialize(slot_idx)
 		delete_view:show()
 	end
 
-	if KR_GAME == "kr1" then
-		local button_slot = self:get_child_by_id("button_slot")
-		local sm = {{1, 2, 3}, {7, 8, 9}, {10, 11, 12}}
+	local button_slot = self:get_child_by_id("button_slot")
+	local sm = {{1, 2, 3}, {7, 8, 9}, {10, 11, 12}}
 
-		for i, k in ipairs({"default_image_name", "hover_image_name", "click_image_name"}) do
-			button_slot[k] = string.gsub(button_slot[k], "_00%d%d$", string.format("_%04d", sm[slot_idx][i]))
-			button_slot[k] = string.gsub(button_slot[k], "_en_", "_" .. i18n.current_locale .. "_")
-		end
-
-		button_slot:on_exit()
-
-		local button_slot_new = self:get_child_by_id("button_slot_new")
-
-		for _, k in pairs({"default_image_name", "hover_image_name", "click_image_name"}) do
-			button_slot_new[k] = string.gsub(button_slot_new[k], "_en_", "_" .. i18n.current_locale .. "_")
-		end
-
-		button_slot_new:on_exit()
-	elseif KR_GAME == "kr3" then
-		for _, id in pairs({"l_slot", "l_slot_new"}) do
-			local v = self:get_child_by_id(id)
-
-			for _, k in pairs({"default_image_name", "hover_image_name"}) do
-				if id == "l_slot" then
-					v[k] = string.gsub(v[k], "_%d_", string.format("_%s_", slot_idx))
-				end
-
-				v[k] = string.gsub(v[k], "_en$", "_" .. i18n.current_locale)
-			end
-
-			v:hide_hover()
-		end
-	else
-		local button_slot = self:get_child_by_id("button_slot")
-
-		for _, k in pairs({"default_image_name", "hover_image_name", "click_image_name"}) do
-			button_slot[k] = string.gsub(button_slot[k], "_%d_", string.format("_%s_", slot_idx))
-			button_slot[k] = string.gsub(button_slot[k], "_en$", "_" .. i18n.current_locale)
-		end
-
-		button_slot:on_exit()
-
-		local button_slot_new = self:get_child_by_id("button_slot_new")
-
-		for _, k in pairs({"default_image_name", "hover_image_name", "click_image_name"}) do
-			button_slot_new[k] = string.gsub(button_slot_new[k], "_en$", "_" .. i18n.current_locale)
-		end
-
-		button_slot_new:on_exit()
+	for i, k in ipairs({"default_image_name", "hover_image_name", "click_image_name"}) do
+		button_slot[k] = string.gsub(button_slot[k], "_00%d%d$", string.format("_%04d", sm[slot_idx][i]))
+		button_slot[k] = string.gsub(button_slot[k], "_en_", "_" .. i18n.current_locale .. "_")
 	end
+
+	button_slot:on_exit()
+
+	local button_slot_new = self:get_child_by_id("button_slot_new")
+
+	for _, k in pairs({"default_image_name", "hover_image_name", "click_image_name"}) do
+		button_slot_new[k] = string.gsub(button_slot_new[k], "_en_", "_" .. i18n.current_locale .. "_")
+	end
+
+	button_slot_new:on_exit()
 
 	self:show()
 end
@@ -371,25 +338,11 @@ function screen:init(w, h, done_callback)
 	end
 
 	for _, v in pairs({show_slots, show_options, show_credits, quit}) do
-		if KR_GAME == "kr1" then
-			for _, k in pairs({"default_image_name", "hover_image_name", "click_image_name"}) do
-				v[k] = string.gsub(v[k], "_en_", "_" .. i18n.current_locale .. "_")
-			end
-
-			v:on_exit()
-		elseif KR_GAME == "kr3" then
-			for _, k in pairs({"default_image_name", "hover_image_name"}) do
-				v.children[1][k] = string.gsub(v.children[1][k], "_en$", "_" .. i18n.current_locale)
-			end
-
-			v.children[1]:hide_hover()
-		else
-			for _, k in pairs({"default_image_name", "hover_image_name", "click_image_name"}) do
-				v[k] = string.gsub(v[k], "_en$", "_" .. i18n.current_locale)
-			end
-
-			v:on_exit()
+		for _, k in pairs({"default_image_name", "hover_image_name", "click_image_name"}) do
+			v[k] = string.gsub(v[k], "_en_", "_" .. i18n.current_locale .. "_")
 		end
+
+		v:on_exit()
 	end
 
 	local delete_view = window:get_child_by_id("delete_view")
@@ -543,6 +496,8 @@ function screen:handle_slot_button(slot_idx)
 	end
 
 	storage:set_active_slot(slot_idx)
+	main.params.last_slot_idx = slot_idx
+	storage:save_settings(main.params)
 	self.done_callback({
 		next_item_name = "map",
 		slot_idx = slot_idx

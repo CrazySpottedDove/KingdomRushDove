@@ -2669,6 +2669,12 @@ return {
 			from_kr = 5
 		},
 		{
+			name = "tower_flamespitter_lvl4",
+			icon = 11,
+			detail_icon = 11,
+			from_kr = 5
+		},
+		{
 			name = "tower_sand_lvl4",
 			icon = 12,
 			detail_icon = 12,
@@ -2681,33 +2687,40 @@ return {
 			from_kr = 5
 		},
 		{
+			name = "tower_ghost_lvl4",
+			icon = 15,
+			detail_icon = 15,
+			from_kr = 5
+		},
+		{
 			name = "tower_dark_elf_lvl4",
 			icon = 16,
 			detail_icon = 16,
 			from_kr = 5
 		},
-		{
-			name = "tower_pandas_lvl4",
-			icon = 21,
-			detail_icon = 21,
-			from_kr = 5
-		},
-		{
-			name = "tower_flamespitter_lvl4",
-			icon = 11,
-			detail_icon = 11,
-			from_kr = 5
-		},
+		-- 蛤蟆：17 + 18
 		{
 			name = "tower_hermit_toad_lvl4",
-			icon = 18,
-			detail_icon = 18,
+			icon = 17,
+			detail_icon = 17,
 			from_kr = 5
 		},
 		{
 			name = "tower_sparking_geode_lvl4",
 			icon = 19,
 			detail_icon = 19,
+			from_kr = 5
+		},
+		{
+			name = "tower_dwarf_lvl4",
+			icon = 20,
+			detail_icon = 20,
+			from_kr = 5
+		},
+		{
+			name = "tower_pandas_lvl4",
+			icon = 21,
+			detail_icon = 21,
 			from_kr = 5
 		}
 	},

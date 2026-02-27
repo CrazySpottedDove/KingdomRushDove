@@ -1,8 +1,6 @@
 -- chunkname: @./main.lua
 local version = require("version")
 love.filesystem.setIdentity(version.identity)
-local MUST_READ = require("dove_modules.notice.must_read")
-local M = require("dove_modules.updater.update_manager")
 local is_android = love.system.getOS() == "Android"
 local perf = require("dove_modules.perf.perf")
 do
@@ -56,41 +54,6 @@ local G = love.graphics
 
 require("main_globals")
 
-local function is_file(path)
-	local info = love.filesystem.getInfo(path)
-
-	return info and info.type == "file"
-end
-
-local function is_directory(path)
-	local info = love.filesystem.getInfo(path)
-
-	return info and info.type == "directory"
-end
-
-if KR_TARGET == "universal" then
-	if KR_PLATFORM == "ios" then
-		local ffi = require("ffi")
-
-		ffi.cdef(" const char* kr_get_device_model(); ")
-
-		local device_model = ffi.string(ffi.C.kr_get_device_model())
-		local m = {string.match(device_model, "(%a+)(%d+),")}
-
-		if m[1] == "iPad" then
-			KR_TARGET = "tablet"
-		else
-			KR_TARGET = "phone"
-		end
-
-		print("UNIVERSAL TARGET SOLVED:", KR_TARGET)
-	else
-		print("ERROR: KR_TARGET==universal and not solved in this platform")
-
-		return
-	end
-end
-
 local base_dir = love.filesystem.getSourceBaseDirectory()
 local work_dir = love.filesystem.getWorkingDirectory()
 
@@ -116,8 +79,6 @@ local ppref
 
 if love.filesystem.isFused() then
 	ppref = ""
-elseif KR_PLATFORM == "android" then
-	ppref = base_dir .. "lovegame/"
 else
 	ppref = base_dir ~= work_dir and "" or "src/"
 end
@@ -128,18 +89,6 @@ local apref = norm_path(ppref .. "_assets/", true)
 local rel_ppref = ""
 local rel_apref = "_assets/"
 local jpref = "joint_apk"
-
-if love.filesystem.isFused() and KR_PLATFORM == "android" and is_directory(jpref) then
-	local ffi = require("ffi")
-	local arch = ffi.abi("gc64") and "64" or "32"
-
-	ppref = jpref .. "/gc" .. arch .. "/"
-	apref = jpref .. "/"
-	rel_ppref = ppref
-	rel_apref = apref
-
-	print(string.format("main.lua - joint_apk found: configuring ppref:%s apref:%s", ppref, apref))
-end
 
 -- 统一构造 additional_paths 并全部规范化为 "/"
 local additional_paths = {string.format("%s?.lua", ppref), string.format("%s%s-%s/?.lua", ppref, KR_GAME, KR_TARGET), string.format("%s%s/?.lua", ppref, KR_GAME), string.format("%sall-%s/?.lua", ppref, KR_TARGET), string.format("%sall/?.lua", ppref), string.format("%slib/?.lua", ppref), string.format("%slib/?/init.lua", ppref), string.format("%s%s-%s/?.lua", apref, KR_GAME, KR_TARGET), string.format("%sall-%s/?.lua", apref, KR_TARGET)}
@@ -251,21 +200,6 @@ KR_PATH_ASSETS_ROOT = norm_path(string.format("%s", rel_apref))
 KR_PATH_ASSETS_ALL_TARGET = norm_path(string.format("%s%s-%s", rel_apref, "all", KR_TARGET))
 KR_PATH_ASSETS_GAME_TARGET = norm_path(string.format("%s%s-%s", rel_apref, KR_GAME, KR_TARGET))
 
-if KR_TARGET == "tablet" then
-	KR_PATH_ASSETS_ALL_FALLBACK = {{
-		path = norm_path(string.format("%s%s-%s", rel_apref, "all", "tablet"))
-	}, {
-		path = norm_path(string.format("%s%s-%s", rel_apref, "all", "phone"))
-	}}
-	KR_PATH_ASSETS_GAME_FALLBACK = {{
-		texture_size = "ipadhd",
-		path = norm_path(string.format("%s%s-%s", rel_apref, KR_GAME, "tablet"))
-	}, {
-		texture_size = "iphonehd",
-		path = norm_path(string.format("%s%s-%s", rel_apref, KR_GAME, "phone"))
-	}}
-end
-
 local log = require("lib.klua.log")
 
 require("lib.klua.table")
@@ -283,25 +217,15 @@ end
 if version.build == "RELEASE" then
 	DEBUG = nil
 	log:set_level("error")
--- log.level = log.ERROR_LEVEL
-
--- local ok, l = pcall(require, "log_levels_release")
-
--- log.default_level_by_name = ok and l or {}
 else
 	DEBUG = true
 	log:set_level("info")
--- log.level = log.INFO_LEVEL
-
--- local ok, l = pcall(require, "log_levels_debug")
-
--- log.default_level_by_name = ok and l or {}
 end
 
 log.use_print = KR_PLATFORM == "android"
 log = log:new("main")
 
-local storage = require("storage")
+local storage = require("all.storage")
 local F = require("lib.klove.font_db")
 
 F:init("_assets/all-desktop/fonts")
@@ -344,33 +268,32 @@ local function close_log()
 	end
 end
 
+local loader
+
 local function load_director()
-	love.window.setMode(main.params.width, main.params.height, {
-		-- fullscreentype = "exclusive",
-		centered = false,
-		fullscreen = main.params.fullscreen,
-		vsync = main.params.vsync,
-		msaa = main.params.msaa,
-		highdpi = main.params.highdpi
-	})
-
-	local aw, ah = G.getDimensions()
-
-	if aw and ah and (aw ~= main.params.width or ah ~= main.params.height) then
-		main.params.width, main.params.height = aw, ah
-	end
-
-	if main.params.wpos then
-		local x, y = unpack(main.params.wpos)
-
-		love.window.setPosition(x or 1, y or 1)
-	end
-
 	local director = require("director")
+	main.handler = director
 
 	require("mods.mod_main"):init(director)
+end
 
-	main.handler = director
+local function load_update_manager()
+	local update_manager = require("dove_modules.updater.update_manager")
+	main.handler = update_manager
+	update_manager:init(main.params, function()
+		loader:load_next()
+	end)
+end
+
+local function load_must_read()
+	local must_read = require("dove_modules.notice.must_read")
+	main.handler = must_read
+	must_read:init(main.params, function()
+		storage:write_lua("must_read.lua", {
+			read = true
+		})
+		loader:load_next()
+	end)
 end
 
 local function load_app_settings()
@@ -392,13 +315,46 @@ local function load_app_settings()
 
 	local function done_cb()
 		storage:save_settings(main.params)
-
-		main._settings_loaded = true
+		MU.apply_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
+		loader:load_next()
 	end
 
 	settings:init(w, h, main.params, done_cb)
 
 	main.handler = settings
+end
+
+loader = {
+	items = {"settings", "must_read", "update_manager", "director"},
+	methods = {
+		settings = load_app_settings,
+		must_read = load_must_read,
+		update_manager = load_update_manager,
+		director = load_director
+	}
+}
+
+function loader:load()
+	local params = main.params
+	if not params.update_enabled then
+		table.removeobject(self.items, "update_manager")
+	end
+	local launch_options = params.launch_options
+	if launch_options.skip_must_read then
+		table.removeobject(self.items, "must_read")
+	end
+	if launch_options.skip_settings then
+		table.removeobject(self.items, "settings")
+		MU.apply_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
+	end
+	self:load_next()
+end
+
+function loader:load_next()
+	local next_item = table.remove(self.items, 1)
+	if next_item then
+		self.methods[next_item]()
+	end
 end
 
 local function load(arg)
@@ -427,20 +383,14 @@ local function load(arg)
 		end
 	end
 
+	-- 首先，要把已持久化的设置加载到 main.params 中。
 	main.params = storage:load_settings()
 
 	MU.basic_init()
 
-	if DEBUG and is_file(KR_PATH_ROOT .. "args.lua") then
-		if KR_TARGET == "desktop" then
-			print("WARNING: Appending parameters from args.lua with command line args.")
-
-			arg = table.append(arg, require("args"), true)
-		else
-			print("WARNING: Reading parameters from args.lua. Overrides all cmdline arguments")
-
-			arg = require("args")
-		end
+	if DEBUG then
+		arg = table.append(arg, require("args"), true)
+		require("debug_tools")
 	end
 
 	MU.parse_args(arg, main.params)
@@ -459,10 +409,6 @@ local function load(arg)
 
 	MU.start_debugger(main.params)
 
-	if DEBUG then
-		log.info(MU.get_debug_info(main.params))
-	end
-
 	local font_paths = KR_PATH_ASSETS_ALL_FALLBACK or {{
 		path = KR_PATH_ASSETS_ALL_TARGET
 	}}
@@ -471,24 +417,10 @@ local function load(arg)
 	love.window.setTitle(version.title .. version.id)
 
 	-- icon switched to krdove
-	local icon = KR_PATH_ASSETS_GAME_TARGET .. "/icons/krdove.png"
+	love.window.setIcon(love.image.newImageData(KR_PATH_ASSETS_GAME_TARGET .. "/icons/krdove.png"))
 
-	if is_file(icon) then
-		love.window.setIcon(love.image.newImageData(icon))
-	end
-
-	if not main.params.skip_settings_dialog then
-		load_app_settings()
-	else
-		load_director()
-	end
-
-	if DEBUG then
-		require("debug_tools")
-	end
-
--- 启动更新检查
--- M.check_update()
+	-- load_app_settings()
+	loader:load()
 end
 
 function love.update(dt)
@@ -561,11 +493,6 @@ function love.focus(focus)
 	end
 end
 
-local function quit()
-	log.info("Quitting...")
-	close_log()
-end
-
 local perf_ui = require("dove_modules.perf.perf_ui")
 function love.run()
 	love.math.setRandomSeed(os.time())
@@ -574,75 +501,15 @@ function love.run()
 
 	love.timer.step()
 
-	-- 显示作者的话
-	MUST_READ.run()
-
 	local dt = 0
 	local updated = false
-
-	while not main._settings_loaded do
-		love.event.pump()
-
-		for e, a, b, c, d in love.event.poll() do
-			if e == "quit" then
-				quit()
-				return
-			end
-
-			love.handlers[e](a, b, c, d)
-		end
-
-		love.timer.step()
-
-		dt = love.timer.getDelta()
-
-		if love.update then
-			updated = love.update(dt)
-		end
-
-		if love.window.isOpen() and G.isActive() then
-			G.clear()
-			G.origin()
-
-			perf.start("draw")
-			if love.draw then
-				love.draw()
-			end
-			perf.stop("draw")
-			if updated then
-				perf_ui.sync_data()
-				perf.reset()
-			end
-			perf_ui.draw()
-
-			G.present()
-
-			if main.handler.limit_fps then
-				main.handler:limit_fps()
-			else
-				collectgarbage("step")
-				love.timer.sleep(0.001)
-			end
-		else
-			if love.timer then
-				love.timer.sleep(0.001)
-			end
-		end
-	end
-
-	MU.apply_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
-
-	-- 运行更新检查
-	M.run(main.params, storage)
-
-	load_director()
 
 	while true do
 		love.event.pump()
 
 		for e, a, b, c, d in love.event.poll() do
 			if e == "quit" then
-				quit()
+				close_log()
 				return
 			end
 
@@ -653,18 +520,14 @@ function love.run()
 
 		dt = love.timer.getDelta()
 
-		if love.update then
-			updated = love.update(dt)
-		end
+		updated = love.update(dt)
 
 		if love.window.isOpen() and G.isActive() then
 			G.clear()
 			G.origin()
 
 			perf.start("draw")
-			if love.draw then
-				love.draw()
-			end
+			love.draw()
 			perf.stop("draw")
 			if updated then
 				perf_ui.sync_data()
@@ -681,9 +544,7 @@ function love.run()
 				love.timer.sleep(0.001)
 			end
 		else
-			if love.timer then
-				love.timer.sleep(0.001)
-			end
+			love.timer.sleep(0.001)
 		end
 	end
 end

@@ -1,16 +1,12 @@
 local M = {}
--- local update_io = require("dove_modules.updater.io")
-
+local storage = require("all.storage")
 local G = love.graphics
 local FS = love.filesystem
+local font = require("lib.klove.font_db"):f("msyh", 20)
 
 -- 本模块只在非安卓平台启用
 local apply_upgrade = love.system.getOS() ~= "Android"
-
--- local update_config = update_io.load()
-
 apply_upgrade = apply_upgrade and not (arg[2] == "debug" or arg[2] == "release")
-
 local is_windows = package.config:sub(1, 1) == "\\"
 
 -- 更新状态定义
@@ -32,28 +28,26 @@ local update_log_line_max_count = 20
 local update_log_lines = {}
 local error_log_lines = {}
 
--- 统一的更新界面绘制函数
-local function update_draw_func()
-	local font = require("lib.klove.font_db"):f("msyh", 20)
-	G.clear(0, 0, 0)
-	G.origin()
-	G.setFont(font)
-	G.setColor(1, 1, 1, 1)
+-- local function update_draw_func()
+-- 	G.clear(0, 0, 0)
+-- 	G.origin()
+-- 	G.setFont(font)
+-- 	G.setColor(1, 1, 1, 1)
 
-	local w, h = G.getDimensions()
-	local text = STATE_STRING_MAP[state]
-	local tw = font:getWidth(text)
-	local th = font:getHeight()
-	G.print(text, (w - tw) / 2, (h - th) / 3)
+-- 	local w, h = G.getDimensions()
+-- 	local text = STATE_STRING_MAP[state]
+-- 	local tw = font:getWidth(text)
+-- 	local th = font:getHeight()
+-- 	G.print(text, (w - tw) / 2, (h - th) / 3)
 
-	-- 显示升级日志
-	G.setColor(1, 1, 1, 1)
-	local log_y = (h - th) / 3 + 60
-	for i, line in ipairs(update_log_lines) do
-		G.print(line, 40, log_y + (i - 1) * 22)
-	end
-	G.present()
-end
+-- 	-- 显示升级日志
+-- 	G.setColor(1, 1, 1, 1)
+-- 	local log_y = (h - th) / 3 + 60
+-- 	for i, line in ipairs(update_log_lines) do
+-- 		G.print(line, 40, log_y + (i - 1) * 22)
+-- 	end
+-- 	G.present()
+-- end
 
 -- 记录普通日志
 local function log_info(line)
@@ -61,7 +55,7 @@ local function log_info(line)
 	if #update_log_lines > update_log_line_max_count then
 		table.remove(update_log_lines, 1)
 	end
-	update_draw_func()
+	coroutine.yield()
 end
 
 -- 记录错误日志
@@ -71,7 +65,7 @@ local function log_error(line)
 		table.remove(update_log_lines, 1)
 	end
 	table.insert(error_log_lines, line) -- 同时存入错误报告
-	update_draw_func()
+	coroutine.yield()
 end
 
 local function set_state(new_state)
@@ -113,8 +107,7 @@ local json = require("lib.json")
 
 local update_response = nil
 
--- 对应 Rust 的 sync_assets("master")
-function M.sync_assets()
+local function sync_assets()
 	if not server_address then
 		return true
 	end
@@ -209,7 +202,7 @@ function M.sync_assets()
 	return true
 end
 
-function M.upgrade_new_version(info)
+local function upgrade_new_version(info)
 	set_state(STATE_DOWNLOADING_CODE)
 
 	local tmp_dir = ".upgrade_tmp"
@@ -320,54 +313,50 @@ function M.upgrade_new_version(info)
 	return not has_error
 end
 
-function M.check_update(params, storage)
-	apply_upgrade = apply_upgrade and params.update_enabled
-	if apply_upgrade then
-		https = require("https")
-		set_state(STATE_SELECT_URL)
-		log_info("尝试使用：" .. params.update_last_site)
-		local code, response = https.request(params.update_last_site)
+--- @return 是否有更新可用
+local function check_update()
+	https = require("https")
+	local params = M.params
+	set_state(STATE_SELECT_URL)
+	log_info("尝试使用：" .. params.update_last_site)
+	local code, response = https.request(params.update_last_site)
 
-		if code == 200 then
-			server_address = params.update_last_site
-			log_info("选中更新地址：" .. server_address)
-		else
-			log_info("该更新地址不可用，返回代码：" .. tostring(code))
-			log_info("返回内容：" .. tostring(response))
+	if code == 200 then
+		server_address = params.update_last_site
+		log_info("选中更新地址：" .. server_address)
+	else
+		log_info("该更新地址不可用，返回代码：" .. tostring(code))
+		log_info("返回内容：" .. tostring(response))
 
-			local candidate_sites = {"https://krdovedownload6.crazyspotteddove.top:52000/", "https://krdovedownload4.crazyspotteddove.top/"}
+		local candidate_sites = {"https://krdovedownload6.crazyspotteddove.top:52000/", "https://krdovedownload4.crazyspotteddove.top/"}
 
-			for _, site in ipairs(candidate_sites) do
-				if site ~= params.update_last_site then
-					log_info("尝试使用候选更新地址：" .. site)
-					local code, response = https.request(site)
-					if code == 200 then
-						server_address = site
-						log_info("选中更新地址：" .. server_address)
-						-- 更新配置文件
-						params.update_last_site = site
+		for _, site in ipairs(candidate_sites) do
+			if site ~= params.update_last_site then
+				log_info("尝试使用候选更新地址：" .. site)
+				local code, response = https.request(site)
+				if code == 200 then
+					server_address = site
+					log_info("选中更新地址：" .. server_address)
+					-- 更新配置文件
+					params.update_last_site = site
 
-						storage:save_settings(params)
-						break
-					else
-						log_info("该更新地址不可用，返回代码：" .. tostring(code))
-						log_info("返回内容：" .. tostring(response))
-					end
+					storage:save_settings(params)
+					break
+				else
+					log_info("该更新地址不可用，返回代码：" .. tostring(code))
+					log_info("返回内容：" .. tostring(response))
 				end
 			end
-
-			if not server_address then
-				log_info("未找到可用的更新地址，取消更新检查。")
-				apply_upgrade = false
-			end
 		end
-	end
-	if not apply_upgrade then
-		return
+
+		if not server_address then
+			log_info("未找到可用的更新地址，取消更新检查。")
+			return false
+		end
 	end
 	local commit_hash = FS.read("current_version_commit_hash.txt")
 	if not commit_hash then
-		return
+		return false
 	end
 	local url = server_address .. "commits"
 	set_state(STATE_CHECK_UPDATE)
@@ -384,33 +373,22 @@ function M.check_update(params, storage)
 	if code == 200 then
 		local resp_json = json.decode(response)
 		if resp_json.commits and #resp_json.commits > 0 then
-			apply_upgrade = true
 			update_response = resp_json
+			return true
 		else
-			apply_upgrade = false
+			return false
 		end
 	else
 		print("无法检查更新。服务器返回代码：" .. code)
 		print("服务器回复: " .. (response or "nil"))
 		print("失败的请求: " .. url .. " commit_hash：" .. commit_hash)
-		apply_upgrade = false
+		return false
 	end
 end
 
-function M.run(params, storage)
-	if not apply_upgrade then
-		return
-	end
-
-	local old_w, old_h, old_flags = love.window.getMode()
-	local dw, dh = love.window.getDesktopDimensions()
-	love.window.setMode(math.max(800, math.floor(dw * 0.8)), math.max(600, math.floor(dh * 0.8)), {
-		resizable = false
-	})
-	M.check_update(params, storage)
-
-	if not apply_upgrade then
-		love.window.setMode(old_w, old_h, old_flags) -- 恢复窗口
+local function run_code()
+	local check_result = check_update()
+	if check_result == false then
 		return
 	end
 
@@ -426,12 +404,6 @@ function M.run(params, storage)
 	local pressed = love.window.showMessageBox("发现新版本", "检测到有新内容可更新，是否立即更新？\n\n" .. table.concat(messages, "\n\n"), {"更新", "取消"})
 
 	if pressed == 1 then
-		-- local old_w, old_h, old_flags = love.window.getMode()
-		-- local dw, dh = love.window.getDesktopDimensions()
-		-- love.window.setMode(math.max(800, math.floor(dw * 0.8)), math.max(600, math.floor(dh * 0.8)), {
-		-- 	resizable = false
-		-- })
-
 		local success = M.sync_assets()
 		if success then
 			success = M.upgrade_new_version(update_response)
@@ -443,9 +415,112 @@ function M.run(params, storage)
 		else
 			local error_report = "升级过程中发生错误，请报告以下问题：\n\n" .. table.concat(error_log_lines, "\n")
 			love.window.showMessageBox("升级失败", error_report, {"确定"})
-			love.window.setMode(old_w, old_h, old_flags) -- 恢复窗口
 		end
 	end
 end
+
+function M:init(params, done_callback)
+	apply_upgrade = apply_upgrade and params.update_enabled
+	self.done_callback = done_callback
+	self.params = params
+
+	if not apply_upgrade then
+		self:done_callback()
+		return
+	end
+
+	local co = coroutine.create(run_code)
+	self.co = co
+end
+
+function M:update(dt)
+	if self.co and coroutine.status(self.co) ~= "dead" then
+		local success, err = coroutine.resume(self.co)
+		if not success then
+			log_error("更新过程中发生错误: " .. tostring(err))
+			love.window.showMessageBox("升级失败", "升级过程中发生错误，错误信息已记录在日志中。请将以下信息报告给开发者：\n\n" .. tostring(err), {"确定"})
+		end
+		self.co = nil
+		self:done_callback()
+	end
+end
+
+-- 统一的更新界面绘制函数
+function M:draw()
+	G.setFont(font)
+	G.setColor(1, 1, 1, 1)
+	local w, h = G.getDimensions()
+	local text = STATE_STRING_MAP[state]
+	local tw = font:getWidth(text)
+	local th = font:getHeight()
+	G.print(text, (w - tw) / 2, (h - th) / 3)
+
+	-- 显示升级日志
+	G.setColor(1, 1, 1, 1)
+	local log_y = (h - th) / 3 + 60
+	for i, line in ipairs(update_log_lines) do
+		G.print(line, 40, log_y + (i - 1) * 22)
+	end
+end
+
+function M:keyreleased(key, scancode)
+end
+
+function M:keypressed(key, isrepeat)
+end
+
+function M:textinput(t)
+end
+
+function M:mousepressed(x, y, button, istouch)
+end
+
+function M:mousereleased(x, y, button, istouch)
+end
+
+-- function M.run(params, storage)
+-- 	if not apply_upgrade then
+-- 		return
+-- 	end
+
+-- 	local old_w, old_h, old_flags = love.window.getMode()
+-- 	local dw, dh = love.window.getDesktopDimensions()
+-- 	love.window.setMode(math.max(800, math.floor(dw * 0.8)), math.max(600, math.floor(dh * 0.8)), {
+-- 		resizable = false
+-- 	})
+-- 	M.check_update(params, storage)
+
+-- 	if not apply_upgrade then
+-- 		love.window.setMode(old_w, old_h, old_flags) -- 恢复窗口
+-- 		return
+-- 	end
+
+-- 	local messages = {}
+-- 	for i, commit in ipairs(update_response.commits or {}) do
+-- 		if i > 20 then
+-- 			table.insert(messages, string.format("...以及另外 %d 条更新内容。", #update_response.commits - 20))
+-- 			break
+-- 		end
+-- 		table.insert(messages, commit.message)
+-- 	end
+
+-- 	local pressed = love.window.showMessageBox("发现新版本", "检测到有新内容可更新，是否立即更新？\n\n" .. table.concat(messages, "\n\n"), {"更新", "取消"})
+
+-- 	if pressed == 1 then
+-- 		local success = M.sync_assets()
+-- 		if success then
+-- 			success = M.upgrade_new_version(update_response)
+-- 		end
+
+-- 		if success then
+-- 			love.window.showMessageBox("升级完成", "资源已更新。点击以关闭游戏。", {"确定"})
+-- 			love.event.quit("restart")
+-- 		else
+-- 			local error_report = "升级过程中发生错误，请报告以下问题：\n\n" .. table.concat(error_log_lines, "\n")
+-- 			love.window.showMessageBox("升级失败", error_report, {"确定"})
+-- 			love.window.setMode(old_w, old_h, old_flags) -- 恢复窗口
+-- 		end
+-- 	end
+-- end
 
 return M

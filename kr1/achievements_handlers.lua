@@ -4,7 +4,7 @@ local signal = require("lib.hump.signal")
 local bit = require("bit")
 local E = require("entity_db")
 local GS = require("kr1.game_settings")
-local storage = require("storage")
+local storage = require("all.storage")
 local ah = {}
 
 function ah:register_handlers(A)

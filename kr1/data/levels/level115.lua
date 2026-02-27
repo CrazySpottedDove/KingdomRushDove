@@ -6,7 +6,7 @@ local U=require("utils")
 local LU=require("level_utils")
 local V=require("klua.vector")
 local P=require("path_db")
-local storage=require("storage")
+local storage=require("all.storage")
 require("all.constants")
 local function fts(v)
 return v/FPS

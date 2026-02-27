@@ -17,7 +17,7 @@ local V = require("lib.klua.vector")
 local v = V.v
 local km = require("lib.klua.macros")
 local i18n = require("i18n")
-local storage = require("storage")
+local storage = require("all.storage")
 local signal = require("lib.hump.signal")
 local timer = require("hump.timer").new()
 local utf8 = require("utf8")
@@ -657,6 +657,9 @@ function screen_map:init(w, h, done_callback)
 	self.keyset_panel_view = KeysetPanelView:new(sw, sh)
 	self.window:add_child(self.keyset_panel_view)
 
+	self.launch_options_panel_view = LaunchOptionsPanelView:new(sw, sh)
+	self.window:add_child(self.launch_options_panel_view)
+
 	if self.generation == 1 then
 		S:queue("MusicMap1")
 	elseif self.generation == 2 then
@@ -798,6 +801,10 @@ function screen_map:keypressed(key, isrepeat)
 			self.keyset_panel_view:hide()
 
 			return true
+		elseif not self.launch_options_panel_view.hidden then
+			self.launch_options_panel_view:hide()
+
+			return true
 		end
 
 		return false
@@ -844,6 +851,9 @@ function screen_map:keypressed(key, isrepeat)
 	elseif key == "k" then
 		hide_others()
 		self.keyset_panel_view:show()
+	elseif key == "l" then
+		hide_others()
+		self.launch_options_panel_view:show()
 	end
 
 	if DEBUG_MAP_ANI_EDITOR and self.SEL_ANI then
@@ -5497,6 +5507,17 @@ function OptionsView:initialize(sw, sh)
 	end
 	self.back:add_child(keyset_button)
 
+	local launch_options_button = GGOptionsButton:new("修改启动项")
+	launch_options_button:set_anchor_to_center()
+	launch_options_button.pos.x = -75
+	launch_options_button.pos.y = 300
+	function launch_options_button.on_click()
+		S:queue("GUIButtonCommon")
+		screen_map.option_panel:hide()
+		screen_map.launch_options_panel_view:show()
+	end
+	self.back:add_child(launch_options_button)
+
 	self.difficulty_idx = screen_map.user_data.difficulty
 
 	if not self.difficulty_idx then
@@ -6586,6 +6607,32 @@ function KeysetPanelView:save()
 	end
 
 	storage:save_keyset(keyset)
+end
+
+LaunchOptionsPanelView = class("LaunchOptionsPanelView", EditablePanelView)
+
+function LaunchOptionsPanelView:initialize(sw, sh)
+	EditablePanelView.initialize(self, sw, sh, "启动选项")
+	self:set_key_label_map({
+		skip_settings = "跳过设置",
+		skip_must_read = "跳过作者的话",
+		skip_slot = "跳过存档选择"
+	})
+end
+
+function LaunchOptionsPanelView:load()
+	local launch_options = main.params.launch_options
+	self.data_group:set_all_data(launch_options)
+end
+
+function LaunchOptionsPanelView:save()
+	local launch_options = main.params.launch_options
+
+	for k, v in pairs(self.data_group:get_all_data()) do
+		launch_options[k] = v
+	end
+
+	storage:save_settings(main.params)
 end
 
 return screen_map

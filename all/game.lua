@@ -790,7 +790,7 @@ if DEBUG then
 			end
 		elseif key == "v" then
 			if shift then
-				local storage = require("storage")
+				local storage = require("all.storage")
 				local slot = storage:load_slot()
 
 				if self.game_gui.window:get_child_by_id("bag_contents_view") then

@@ -37,7 +37,7 @@ copy = table.deepclone
 clone = table.clone
 E = require("entity_db")
 UPGR = require("upgrades")
-storage = require("storage")
+storage = require("all.storage")
 SU = require("script_utils")
 U = require("utils")
 

@@ -22,6 +22,8 @@ return {
 	TOWER_FLAMESPITTER_LVL4_SPECIAL = "追着敌人开火，随机索敌，矩形范围，灼烧敌人",
 	TOWER_HERMIT_TOAD_LVL4_SPECIAL = "法炮双形态",
 	TOWER_SPARKING_GEODE_LVL4_SPECIAL = "普攻八次后到达攻速上限。普攻会弹射，越弹伤害越高。周围敌人数量少时，普攻伤害得到补偿",
+	TOWER_GHOST_LVL4_SPECIAL = "交换塔位",
+	TOWER_DWARF_LVL4_SPECIAL = "利用炮弹位移",
 	["!!!COMMENT_LOCALIZATION_SOURCE"] = "Keywords+CYUGAME",
 	["%d Life"] = "%d 点生命值",
 	["%d Lives"] = "%d 条生命",

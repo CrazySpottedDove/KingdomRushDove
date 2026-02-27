@@ -129,52 +129,6 @@ function mu.default_params(params, game_name, game_target, game_platform)
 	local api_level, has_menu_key, device_locale
 	local device_profile = DEVICE_PROFILE_LOW
 
-	if game_platform == "ios" then
-		local ffi = require("ffi")
-
-		ffi.cdef(" const char* kr_get_current_locale(); ")
-		ffi.cdef(" const char* kr_get_device_model(); ")
-
-		local s = ffi.string(ffi.C.kr_get_current_locale())
-
-		if s then
-			local ll, ls, lc = string.match(s, "^(%a%a)-?(%a*)_?(%a?%a?)")
-
-			device_locale = i18n:find_fallback_locale(ll, ls)
-		end
-
-		local device_model = ffi.string(ffi.C.kr_get_device_model())
-		local m = {string.match(device_model, "(%a+)(%d+),")}
-
-		if m then
-			local iter = tonumber(m[2])
-
-			if m[1] == "iPhone" then
-				if iter == nil then
-				-- block empty
-				elseif iter >= 9 then
-					device_profile = DEVICE_PROFILE_HIGH
-				else
-					device_profile = DEVICE_PROFILE_LOW
-				end
-			elseif m[1] ~= "iPad" or iter == nil then
-			-- block empty
-			elseif iter >= 5 then
-				device_profile = DEVICE_PROFILE_HIGH
-			else
-				device_profile = DEVICE_PROFILE_LOW
-			end
-		end
-	elseif game_platform == "nx" and love.nx then
-		local s = love.nx.getDesiredLanguage()
-
-		if s then
-			local l1, l2 = unpack(string.split(s, "-"))
-
-			device_locale = i18n:find_fallback_locale(l1, l2)
-		end
-	end
-
 	d("width", 1024)
 	d("height", 768)
 	d("texture_size", "fullhd")
@@ -201,8 +155,24 @@ function mu.apply_params(params, game_name, game_target, game_platform)
 	TICK_LENGTH = 1 / DRAW_FPS
 	SOUND_POOL_SIZE_FACTOR = params.sound_pool_size
 
-	if params.level or params.screen then
-		params.skip_settings_dialog = true
+	love.window.setMode(params.width, params.height, {
+		centered = false,
+		fullscreen = params.fullscreen,
+		vsync = params.vsync,
+		msaa = params.msaa,
+		highdpi = params.highdpi
+	})
+
+	local aw, ah = love.graphics.getDimensions()
+
+	if aw and ah and (aw ~= params.width or ah ~= params.height) then
+		params.width, params.height = aw, ah
+	end
+
+	if params.wpos then
+		local x, y = unpack(params.wpos)
+
+		love.window.setPosition(x or 1, y or 1)
 	end
 
 	if params.nojit then

@@ -15,7 +15,7 @@ local S = require("sound_db")
 local G = love.graphics
 local AC = require("achievements")
 local LU = require("level_utils")
-local storage = require("storage")
+local storage = require("all.storage")
 local director_data = require("data.director_data")
 local GS = require("kr1.game_settings")
 local EXO = require("all.exoskeleton")
@@ -57,10 +57,6 @@ function director:init(params)
 
 	AC:init()
 
-	if (KR_TARGET == "phone" or KR_TARGET == "tablet") and KR_PLATFORM == "ios" then
-		storage:import_plist("NSUserDefaults")
-	end
-
 	self.params = params
 
 	self:reset_screen_params()
@@ -71,9 +67,16 @@ function director:init(params)
 
 	love.window.setTitle(version.title .. version.id)
 
-	-- 跳过开场动画
-	-- self.next_item_name = "splash"
-	self.next_item_name = "slots"
+	if params.launch_options.skip_slot then
+		self.next_item_name = "map"
+		self.next_item_args = {
+			next_item_name = "map",
+			slot_idx = params.last_slot_idx
+		}
+		storage:set_active_slot(params.last_slot_idx)
+	else
+		self.next_item_name = "slots"
+	end
 
 	if params.level or params.screen then
 		if not storage:load_slot(1) then
@@ -98,28 +101,25 @@ function director:init(params)
 		end
 	end
 
-	if KR_TARGET == "desktop" then
-		if params.screen == "game_editor" then
-			local c = love.mouse.newCursor(KR_PATH_ASSETS_ALL_TARGET .. "/cursors/crosshair.png", 16, 16)
+	if params.screen == "game_editor" then
+		local c = love.mouse.newCursor(KR_PATH_ASSETS_ALL_TARGET .. "/cursors/crosshair.png", 16, 16)
 
-			love.mouse.setCursor(c)
-		else
-			local cursor_name = "hand_32"
+		love.mouse.setCursor(c)
+	else
+		local cursor_name = "hand_32"
 
-			if params.large_pointer then
-				cursor_name = params.height < 1080 and "hand_48" or "hand_64"
-			end
-
-			self.cursor_up = love.mouse.newCursor(string.format(KR_PATH_ASSETS_ALL_TARGET .. "/cursors/%s_0001.png", cursor_name), 3, 2)
-			self.cursor_down = love.mouse.newCursor(string.format(KR_PATH_ASSETS_ALL_TARGET .. "/cursors/%s_0002.png", cursor_name), 3, 2)
-
-			love.mouse.setCursor(self.cursor_up)
+		if params.large_pointer then
+			cursor_name = params.height < 1080 and "hand_48" or "hand_64"
 		end
+
+		self.cursor_up = love.mouse.newCursor(string.format(KR_PATH_ASSETS_ALL_TARGET .. "/cursors/%s_0001.png", cursor_name), 3, 2)
+		self.cursor_down = love.mouse.newCursor(string.format(KR_PATH_ASSETS_ALL_TARGET .. "/cursors/%s_0002.png", cursor_name), 3, 2)
+
+		love.mouse.setCursor(self.cursor_up)
 	end
 end
 
 function director:quit()
-	log.debug("quitting...")
 	love.event.quit()
 end
 
@@ -186,10 +186,6 @@ function director:item_done_callback(item_name, outcome)
 		if w then
 			log.debug("disabling events for item:%s window:%s", self.active_item.item_name, w)
 			w:disable(false)
-
-			if ISM then
-				ISM:destroy(w)
-			end
 		end
 	end
 

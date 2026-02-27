@@ -8,7 +8,7 @@ local V=require("klua.vector")
 local P=require("path_db")
 local G=love.graphics
 local SU=require("script_utils")
-local storage=require("storage")
+local storage=require("all.storage")
 local W=require("wave_db")
 require("all.constants")
 local tower_menus=require("data.tower_menus_data")
