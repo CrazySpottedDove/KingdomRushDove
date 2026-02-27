@@ -28,27 +28,6 @@ local update_log_line_max_count = 20
 local update_log_lines = {}
 local error_log_lines = {}
 
--- local function update_draw_func()
--- 	G.clear(0, 0, 0)
--- 	G.origin()
--- 	G.setFont(font)
--- 	G.setColor(1, 1, 1, 1)
-
--- 	local w, h = G.getDimensions()
--- 	local text = STATE_STRING_MAP[state]
--- 	local tw = font:getWidth(text)
--- 	local th = font:getHeight()
--- 	G.print(text, (w - tw) / 2, (h - th) / 3)
-
--- 	-- 显示升级日志
--- 	G.setColor(1, 1, 1, 1)
--- 	local log_y = (h - th) / 3 + 60
--- 	for i, line in ipairs(update_log_lines) do
--- 		G.print(line, 40, log_y + (i - 1) * 22)
--- 	end
--- 	G.present()
--- end
-
 -- 记录普通日志
 local function log_info(line)
 	table.insert(update_log_lines, line)
@@ -404,9 +383,9 @@ local function run_code()
 	local pressed = love.window.showMessageBox("发现新版本", "检测到有新内容可更新，是否立即更新？\n\n" .. table.concat(messages, "\n\n"), {"更新", "取消"})
 
 	if pressed == 1 then
-		local success = M.sync_assets()
+		local success = sync_assets()
 		if success then
-			success = M.upgrade_new_version(update_response)
+			success = upgrade_new_version(update_response)
 		end
 
 		if success then
@@ -423,7 +402,7 @@ function M:init(params, done_callback)
 	apply_upgrade = apply_upgrade and params.update_enabled
 	self.done_callback = done_callback
 	self.params = params
-
+	print(apply_upgrade)
 	if not apply_upgrade then
 		self:done_callback()
 		return
@@ -434,14 +413,18 @@ function M:init(params, done_callback)
 end
 
 function M:update(dt)
-	if self.co and coroutine.status(self.co) ~= "dead" then
+	if self.co then
 		local success, err = coroutine.resume(self.co)
 		if not success then
 			log_error("更新过程中发生错误: " .. tostring(err))
 			love.window.showMessageBox("升级失败", "升级过程中发生错误，错误信息已记录在日志中。请将以下信息报告给开发者：\n\n" .. tostring(err), {"确定"})
+			self.co = nil
+			self:done_callback()
 		end
-		self.co = nil
-		self:done_callback()
+		if coroutine.status(self.co) == "dead" then
+			self.co = nil
+			self:done_callback()
+		end
 	end
 end
 
