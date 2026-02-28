@@ -1918,3 +1918,8 @@ tt.ui.hover_sprite_scale = vv(1.4)
 tt.ui.hover_sprite_offset = v(0, -8)
 tt.editor.props = {{"editor.game_mode", PT_NUMBER}}
 
+tt = E:register_t("tower_random_foundamental", "tower")
+tt.info.fn = scripts.tower_random.get_info
+tt.desc_key = "TOWER_RANDOM_FOUNDAMENTAL_DESCIPTION"
+tt.tower.price = math.floor((E:get_template("tower_archer_1").tower.price + E:get_template("tower_mage_1").tower.price + E:get_template("tower_engineer_1").tower.price + E:get_template("tower_barrack_1").tower.price) / 4)
+

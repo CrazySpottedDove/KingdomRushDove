@@ -22,7 +22,7 @@ local signal = require("lib.hump.signal")
 local timer = require("hump.timer").new()
 local utf8 = require("utf8")
 local achievements_data, map_data
-local tower_menus_data = require("data.tower_menus_data")
+local tower_menus_data = require("kr1.data.tower_menus_data")
 local is_android = love.system.getOS() == "Android"
 require("klove.kui")
 
@@ -5464,7 +5464,7 @@ function OptionsView:initialize(sw, sh)
 		S:queue("GUIButtonCommon")
 		love.event.quit("restart")
 	end
-    self.back:add_child(restart_button)
+	self.back:add_child(restart_button)
 
 	self.difficulty_idx = screen_map.user_data.difficulty
 
@@ -6459,7 +6459,8 @@ function ConfigPanelView:initialize(sw, sh)
 		hero_xp_gain_multiplier = "英雄经验倍率",
 		hero_health_damage_multiplier = "英雄受伤倍率",
 		ban_random_towers = "随机禁用高级塔",
-		random_creeps = "随机出怪"
+		random_creeps = "随机出怪",
+		build_random_towers = "随机建造防御塔"
 	})
 end
 

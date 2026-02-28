@@ -24084,3 +24084,40 @@ tt.spawns = {{
 		delay = 240
 	}}
 }}
+
+tt = RT("tower_random_advanced_archer", "tower")
+local GS = require("kr1.game_settings")
+tt.tower.price = 0
+tt.info.fn = scripts.tower_random.get_info
+tt.desc_key = "TOWER_RANDOM_ADVANCED_ARCHER_DESCRIPTION"
+for i = 4, #GS.archer_towers do
+	tt.tower.price = tt.tower.price + E:get_template(GS.archer_towers[i]).tower.price
+end
+tt.tower.price = math.floor(tt.tower.price / (#GS.archer_towers - 3))
+
+tt = RT("tower_random_advanced_mage", "tower")
+tt.tower.price = 0
+tt.info.fn = scripts.tower_random.get_info
+for i = 4, #GS.mage_towers do
+	tt.tower.price = tt.tower.price + E:get_template(GS.mage_towers[i]).tower.price
+end
+tt.desc_key = "TOWER_RANDOM_ADVANCED_MAGE_DESCRIPTION"
+tt.tower.price = math.floor(tt.tower.price / (#GS.mage_towers - 3))
+
+tt = RT("tower_random_advanced_engineer", "tower")
+tt.tower.price = 0
+tt.info.fn = scripts.tower_random.get_info
+for i = 4, #GS.engineer_towers do
+	tt.tower.price = tt.tower.price + E:get_template(GS.engineer_towers[i]).tower.price
+end
+tt.desc_key = "TOWER_RANDOM_ADVANCED_ENGINEER_DESCRIPTION"
+tt.tower.price = math.floor(tt.tower.price / (#GS.engineer_towers - 3))
+
+tt = RT("tower_random_advanced_barrack", "tower")
+tt.tower.price = 0
+tt.info.fn = scripts.tower_random.get_info
+for i = 4, #GS.barrack_towers do
+	tt.tower.price = tt.tower.price + E:get_template(GS.barrack_towers[i]).tower.price
+end
+tt.desc_key = "TOWER_RANDOM_ADVANCED_BARRACK_DESCRIPTION"
+tt.tower.price = math.floor(tt.tower.price / (#GS.barrack_towers - 3))

@@ -1498,6 +1498,14 @@ function scripts.tower_build.update(this, store)
 	this.tower.upgrade_to = this.build_name
 end
 
+scripts.tower_random = {}
+function scripts.tower_random.get_info(this)
+	return {
+		type = STATS_TYPE_TOWER,
+		desc = _(this.desc_key)
+	}
+end
+
 scripts.tower_common = {}
 
 function scripts.tower_common.get_info(this)

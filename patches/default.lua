@@ -35,5 +35,7 @@ return {
 	-- 随机禁用高级防御塔
 	ban_random_towers = false,
 	-- 随机出怪
-	random_creeps = false
+	random_creeps = false,
+	-- 随机造塔
+	build_random_towers = false
 }

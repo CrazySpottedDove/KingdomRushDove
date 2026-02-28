@@ -35,6 +35,41 @@ return {
 		tt_title = _("TOWER_ENGINEER_1_NAME"),
 		tt_desc = _("TOWER_ENGINEER_1_DESCRIPTION")
 	})}},
+	random_foundamental = {{M(tpl.upgrade, {
+		action_arg = "tower_random_foundamental",
+		image = "main_icons_0015",
+		place = 5,
+		tt_title = _("TOWER_RANDOM_FOUNDAMENTAL_NAME"),
+		tt_desc = _("TOWER_RANDOM_FOUNDAMENTAL_DESCRIPTION")
+	})}},
+	random_advanced_archer = {{M(tpl.upgrade, {
+		action_arg = "tower_random_advanced_archer",
+		image = "main_icons_0015",
+		place = 5,
+		tt_title = _("TOWER_RANDOM_ADVANCED_ARCHER_NAME"),
+		tt_desc = _("TOWER_RANDOM_ADVANCED_ARCHER_DESCRIPTION")
+	}), tpl.sell}},
+	random_advanced_mage = {{M(tpl.upgrade, {
+		action_arg = "tower_random_advanced_mage",
+		image = "main_icons_0015",
+		place = 5,
+		tt_title = _("TOWER_RANDOM_ADVANCED_MAGE_NAME"),
+		tt_desc = _("TOWER_RANDOM_ADVANCED_MAGE_DESCRIPTION")
+	}), tpl.sell}},
+	random_advanced_engineer = {{M(tpl.upgrade, {
+		action_arg = "tower_random_advanced_engineer",
+		image = "main_icons_0015",
+		place = 5,
+		tt_title = _("TOWER_RANDOM_ADVANCED_ENGINEER_NAME"),
+		tt_desc = _("TOWER_RANDOM_ADVANCED_ENGINEER_DESCRIPTION")
+	}), tpl.sell}},
+	random_advanced_barrack = {{M(tpl.upgrade, {
+		action_arg = "tower_random_advanced_barrack",
+		image = "main_icons_0015",
+		place = 5,
+		tt_title = _("TOWER_RANDOM_ADVANCED_BARRACK_NAME"),
+		tt_desc = _("TOWER_RANDOM_ADVANCED_BARRACK_DESCRIPTION")
+	}), tpl.rally, tpl.sell}},
 	holder_blocked_jungle = {{M(tpl.unblock, {
 		action_arg = "tower_holder",
 		image = "main_icons_0037",

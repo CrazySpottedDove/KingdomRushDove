@@ -64,7 +64,7 @@ require("all.constants")
 require("gg_views_custom")
 
 local data = require("data.game_gui_data")
-local tower_menus = require("data.tower_menus_data")
+local tower_menus = require("kr1.data.tower_menus_data")
 local game_gui = {}
 
 game_gui.required_textures = {"gui_common", "gui_ico", "gui_portraits", "achievements", "encyclopedia_creeps", "gui_notifications", "gui_notifications_bg", "ballon", "view_options"}
@@ -6042,14 +6042,28 @@ function TowerMenu:show()
 	local current_tms = tower_menus[entity.tower.type]
 
 	if not current_tms or not current_tms[entity.tower.level] then
-		log.debug("tower_menus[%s][%s] not found", entity.tower.type, entity.tower.level)
-
 		self.hidden = true
 
 		return
 	end
 
 	local tm = current_tms[entity.tower.level]
+
+	if game_gui.game.store.config.build_random_towers then
+		if entity.tower.type == "holder" then
+			tm = tower_menus.random_foundamental[1]
+		elseif entity.tower.level == 3 then
+			if entity.tower.type == "archer" then
+				tm = tower_menus.random_advanced_archer[1]
+			elseif entity.tower.type == "barrack" then
+				tm = tower_menus.random_advanced_barrack[1]
+			elseif entity.tower.type == "engineer" then
+				tm = tower_menus.random_advanced_engineer[1]
+			elseif entity.tower.type == "mage" then
+				tm = tower_menus.random_advanced_mage[1]
+			end
+		end
+	end
 
 	self:remove_children()
 
@@ -6083,8 +6097,6 @@ function TowerMenu:show()
 				b:disable()
 			else
 				function b.on_click(this, button, x, y)
-					log.debug("CLICK")
-
 					if not self.tweening and not this.click_disabled then
 						stm:button_callback(this, item, entity, button, x, y)
 					end
@@ -6092,12 +6104,12 @@ function TowerMenu:show()
 
 				function b.on_enter(this, drag_view)
 					if not self.tweening then
-						stm:button_enter(this, item, entity, button)
+						stm:button_enter(this, item, entity)
 					end
 				end
 
 				function b.on_exit(this, drag_view)
-					stm:button_exit(this, item, entity, button)
+					stm:button_exit(this, item, entity)
 				end
 			end
 
@@ -6328,9 +6340,7 @@ function TowerMenu:update(dt)
 	end
 end
 
-function TowerMenu:button_enter(button, item, entity, mouse_button)
-	log.debug("")
-
+function TowerMenu:button_enter(button, item, entity)
 	if button.halo then
 		button.halo.hidden = false
 	end
@@ -6406,8 +6416,6 @@ function TowerMenu:button_enter(button, item, entity, mouse_button)
 end
 
 function TowerMenu:button_exit(button, item, entity, mouse_button)
-	log.debug("")
-
 	if button.halo then
 		button.halo.hidden = true
 	end
@@ -6436,7 +6444,6 @@ function TowerMenu:button_exit(button, item, entity, mouse_button)
 end
 
 function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
-	log.debug("BUTTON CALLBACK action:%s entity:%s", item.action, entity.id)
 	button:disable()
 
 	local inhibit_sounds = false
@@ -6462,7 +6469,17 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 		self:hide()
 	elseif item.action == "tw_upgrade" or item.action == "tw_unblock" then
 		entity.tower.upgrade_to = item.action_arg
-
+		if item.action_arg == "tower_random_foundamental" then
+			entity.tower.upgrade_to = table.random({"tower_archer_1", "tower_mage_1", "tower_engineer_1", "tower_barrack_1"})
+		elseif item.action_arg == "tower_random_advanced_archer" then
+			entity.tower.upgrade_to = GS.archer_towers[math.random(4, #GS.archer_towers)]
+		elseif item.action_arg == "tower_random_advanced_mage" then
+			entity.tower.upgrade_to = GS.mage_towers[math.random(4, #GS.mage_towers)]
+		elseif item.action_arg == "tower_random_advanced_engineer" then
+			entity.tower.upgrade_to = GS.engineer_towers[math.random(4, #GS.engineer_towers)]
+		elseif item.action_arg == "tower_random_advanced_barrack" then
+			entity.tower.upgrade_to = GS.barrack_towers[math.random(4, #GS.barrack_towers)]
+		end
 		signal.emit("tower-built")
 		game_gui:deselect_entity()
 	elseif item.action == "upgrade_power" then

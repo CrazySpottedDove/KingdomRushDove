@@ -7984,5 +7984,15 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	LEVEL_133_HISTORY = "鏖战红孩儿后，我军一路前进，直抵怒风岛。才一登岸，飓风骤起，盘旋如蟒。此岛凶险万分，却是通往铁扇公主宫殿的必经之路！诸君戒备，风暴将至！",
 	LEVEL_134_HISTORY = "先前历经万难，全拜公主铁扇所赐。我军冲破风暴，抵达风眼之地。此处楼台安然无恙，景致虽美，却暗藏杀机，切不可放松戒备！就算是那魔王的家室，也休得阻挡我军前行！",
 	LEVEL_135_HISTORY = "大战在即！牛魔王傲居金城之上，我军剩余部队，定以智勇之力，正面破敌！必须在他染指灵珠之前斩断祸根。\n为了山河社稷，为了天下苍生——联盟将士，列阵除魔！",
-	ENEMY_DESERT_SPIDER_NAME = "沙漠蜘蛛"
+	ENEMY_DESERT_SPIDER_NAME = "沙漠蜘蛛",
+	TOWER_RANDOM_FOUNDAMENTAL_NAME = "随机基础塔",
+	TOWER_RANDOM_FOUNDAMENTAL_DESCRIPTION = "箭兵法炮，来抽个奖！",
+	TOWER_RANDOM_ADVANCED_ARCHER_NAME = "随机高级弓箭塔",
+	TOWER_RANDOM_ADVANCED_ARCHER_DESCRIPTION = "拾起命运的箭矢。",
+	TOWER_RANDOM_ADVANCED_BARRACK_NAME = "随机高级兵营",
+	TOWER_RANDOM_ADVANCED_BARRACK_DESCRIPTION = "请挑选你的随从。",
+	TOWER_RANDOM_ADVANCED_MAGE_NAME = "随机高级法师塔",
+	TOWER_RANDOM_ADVANCED_MAGE_DESCRIPTION = "不稳定魔咒，敬请期待！",
+	TOWER_RANDOM_ADVANCED_ENGINEER_NAME = "随机高级炮塔",
+	TOWER_RANDOM_ADVANCED_ENGINEER_DESCRIPTION = "超级炸药，我赢定了！"
 }
