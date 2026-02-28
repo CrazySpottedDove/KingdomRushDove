@@ -191,15 +191,15 @@ function MUST_READ:mousepressed(x, y, button)
 end
 
 function MUST_READ:mousereleased(x, y, button, istouch)
-	return
 end
 
 function MUST_READ:keypressed(key, isrepeat)
-	return
+end
+
+function MUST_READ:keyreleased(key)
 end
 
 function MUST_READ:update(dt)
-	return
 end
 
 function MUST_READ:draw()

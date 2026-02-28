@@ -4381,9 +4381,12 @@ function EncyclopediaView:show_skill_detail(prefix, power_name, power, from_kr)
 	panel.anchor = v(0, 0)
 
 	local i_map = {"一级: ", "二级: ", "三级: ", "四级: "}
-
+	local height = 150
+	if power.max_level > 3 then
+		height = height * 3 / power.max_level
+	end
 	for i = 1, power.max_level do
-		local offset_y = (i - 1) * 150
+		local offset_y = (i - 1) * height
 		-- 技能名
 		local name_label = GGLabel:new(V.v(400, 40))
 

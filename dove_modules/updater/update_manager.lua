@@ -461,49 +461,4 @@ end
 function M:mousereleased(x, y, button, istouch)
 end
 
--- function M.run(params, storage)
--- 	if not apply_upgrade then
--- 		return
--- 	end
-
--- 	local old_w, old_h, old_flags = love.window.getMode()
--- 	local dw, dh = love.window.getDesktopDimensions()
--- 	love.window.setMode(math.max(800, math.floor(dw * 0.8)), math.max(600, math.floor(dh * 0.8)), {
--- 		resizable = false
--- 	})
--- 	M.check_update(params, storage)
-
--- 	if not apply_upgrade then
--- 		love.window.setMode(old_w, old_h, old_flags) -- 恢复窗口
--- 		return
--- 	end
-
--- 	local messages = {}
--- 	for i, commit in ipairs(update_response.commits or {}) do
--- 		if i > 20 then
--- 			table.insert(messages, string.format("...以及另外 %d 条更新内容。", #update_response.commits - 20))
--- 			break
--- 		end
--- 		table.insert(messages, commit.message)
--- 	end
-
--- 	local pressed = love.window.showMessageBox("发现新版本", "检测到有新内容可更新，是否立即更新？\n\n" .. table.concat(messages, "\n\n"), {"更新", "取消"})
-
--- 	if pressed == 1 then
--- 		local success = M.sync_assets()
--- 		if success then
--- 			success = M.upgrade_new_version(update_response)
--- 		end
-
--- 		if success then
--- 			love.window.showMessageBox("升级完成", "资源已更新。点击以关闭游戏。", {"确定"})
--- 			love.event.quit("restart")
--- 		else
--- 			local error_report = "升级过程中发生错误，请报告以下问题：\n\n" .. table.concat(error_log_lines, "\n")
--- 			love.window.showMessageBox("升级失败", error_report, {"确定"})
--- 			love.window.setMode(old_w, old_h, old_flags) -- 恢复窗口
--- 		end
--- 	end
--- end
-
 return M

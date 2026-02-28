@@ -128,6 +128,7 @@ scripts.tower_archer_dwarf = {
 			type = STATS_TYPE_TOWER,
 			damage_min = min,
 			damage_max = max,
+			damage_type = b.bullet.damage_type,
 			range = this.attacks.range,
 			cooldown = cooldown
 		}
@@ -2963,8 +2964,6 @@ scripts.tower_faerie_dragon = {
 				if pow_m.changed then
 					pow_m.changed = nil
 
-					log.debug("pow_m:%s", getdump(pow_m))
-
 					for i = 1, pow_m.level do
 						if i > #this.dragons then
 							if i > 1 then
@@ -4442,6 +4441,7 @@ scripts.tower_mech = {
 			type = STATS_TYPE_TOWER,
 			damage_min = min,
 			damage_max = max,
+			damage_type = b.bullet.damage_type,
 			range = range,
 			cooldown = cooldown
 		}

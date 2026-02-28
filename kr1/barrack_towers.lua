@@ -302,7 +302,6 @@ tt.barrack.respawn_offset = vec_2(0, 0)
 tt.barrack.soldier_type = "soldier_elf"
 tt.mercenary = true
 tt.editor.props = table.append(tt.editor.props, {{"barrack.rally_pos", PT_COORDS}}, true)
-tt.info.i18n_key = "SPECIAL_ELF"
 tt.info.fn = scripts.tower_elf_holder.get_info
 tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.remove = scripts.tower_barrack.remove
@@ -800,9 +799,7 @@ tt.unit.mod_offset = vec_2(0, ady(23))
 --#endregion
 --#region tower_barrack_dwarf
 tt = RT("tower_barrack_dwarf", "tower_barrack_1")
-
 AC(tt, "powers")
-
 tt.barrack.rally_range = 180
 tt.barrack.soldier_type = "soldier_dwarf"
 tt.barrack.max_soldiers = 4
@@ -945,9 +942,7 @@ tt.powers.djshock.price_inc = 100
 tt = RT("soldier_djinn", "soldier_militia")
 anchor_y = 0.14
 image_y = 54
-
 AC(tt, "timed_attacks", "powers")
-
 tt.health.armor = 0
 tt.health.magic_armor = 0.3
 tt.health.dead_lifetime = 12
@@ -1040,9 +1035,7 @@ tt.duration_base = 1
 --#endregion
 --#region tower_barrack_pirates
 tt = RT("tower_barrack_pirates", "tower")
-
 AC(tt, "barrack", "powers")
-
 tt.tower.type = "mercenaries_pirates"
 tt.tower.level = 1
 tt.tower.price = 195
@@ -1072,11 +1065,10 @@ tt.barrack.rally_range = 150
 tt.barrack.respawn_offset = vec_2(0, 0)
 tt.sound_events.insert = "PiratesTaunt"
 --#endregion
+
 --#region soldier_pirate_flamer
 tt = RT("soldier_pirate_flamer", "soldier_militia")
-
 AC(tt, "ranged", "powers")
-
 anchor_y = 0.16
 image_y = 36
 tt.health.armor = 0
@@ -1088,7 +1080,7 @@ tt.info.random_name_count = 10
 tt.info.random_name_format = "SOLDIER_PIRATES_RANDOM_%i_NAME"
 tt.melee.attacks[1].damage_max = 30
 tt.melee.attacks[1].damage_min = 15
-tt.melee.range = 64
+tt.melee.range = 55
 tt.motion.max_speed = 2.7 * FPS
 tt.regen.cooldown = 1
 tt.render.sprites[1].anchor.y = anchor_y
@@ -1115,11 +1107,11 @@ tt.ranged.attacks[2].cooldown = 7
 tt.ranged.attacks[2].disabled = true
 tt.ranged.attacks[2].power_name = "bigbomb"
 tt.ranged.attacks[2].node_prediction = fts(28)
--- tt.sound_events.insert = "PiratesTaunt"
 tt.sound_events.change_rally_point = "PiratesTaunt"
 tt.powers.bigbomb = CC("power")
 tt.powers.quickup = CC("power")
 --#endregion
+
 --#region bomb_molotov
 tt = RT("bomb_molotov", "bomb")
 tt.render.sprites[1].name = "proy_molotov"
@@ -1130,6 +1122,7 @@ tt.bullet.damage_radius = 48
 tt.bullet.hit_fx = "fx_explosion_molotov"
 tt.sound_events.insert = "AxeSound"
 --#endregion
+
 --#region fx_explosion_molotov
 tt = RT("fx_explosion_molotov", "fx")
 tt.render.sprites[1].name = "explosion_molotov"
@@ -1449,11 +1442,9 @@ tt.main_script.update = scripts.mod_dps.update
 --#endregion
 --#region tower_drow
 tt = RT("tower_drow", "tower_barrack_1")
-
 AC(tt, "powers")
-
 tt.barrack.soldier_type = "soldier_drow"
-tt.info.i18n_key = "ELVES_TOWER_SPECIAL_DROW"
+tt.info.i18n_key = "TOWER_DROW"
 tt.info.portrait = "kr3_info_portraits_towers_0016"
 tt.powers.life_drain = CC("power")
 tt.powers.life_drain.price_base = 225
@@ -1479,9 +1470,7 @@ tt.tower.type = "drow"
 --#endregion
 --#region soldier_drow
 tt = RT("soldier_drow", "soldier_barrack_1")
-
 AC(tt, "powers", "ranged", "track_damage")
-
 tt.health.armor = 0.6
 tt.health.dead_lifetime = 15
 tt.health.hp_max = 200
@@ -1554,9 +1543,7 @@ tt.render.sprites[1].name = "mercenaryDraw_proy"
 --#endregion
 --#region mod_life_drain_drow
 tt = RT("mod_life_drain_drow", "modifier")
-
 AC(tt, "render")
-
 tt.heal_factor = 0.8
 tt.heal_bans = bor(F_POISON)
 tt.heal_base = 30
@@ -1580,7 +1567,6 @@ tt.barrack.rally_range = 175
 tt.barrack.respawn_offset = vec_2(0, 0)
 tt.barrack.soldier_type = "soldier_ewok"
 tt.editor.props = table.append(tt.editor.props, {{"barrack.rally_pos", PT_COORDS}}, true)
-tt.info.i18n_key = "ELVES_EWOK_TOWER"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_barrack_%04i"
 tt.render.sprites[1].offset = vec_2(0, 10)
@@ -1716,16 +1702,14 @@ tt.damage_inc = 0.01
 --#endregion
 --#region tower_baby_ashbite
 tt = RT("tower_baby_ashbite", "tower")
-
 AC(tt, "barrack", "powers")
-
 tt.tower.hide_dust = true
 tt.tower.type = "baby_ashbite"
 tt.tower.level = 1
 tt.tower.price = 350
 tt.info.fn = scripts.tower_baby_ashbite.get_info
 tt.info.portrait = "kr3_info_portraits_towers_0019"
-tt.info.i18n_key = "ELVES_BABY_ASHBITE_TOWER"
+tt.info.i18n_key = "TOWER_BABY_ASHBITE"
 tt.info.damage_icon = "fireball"
 tt.render.sprites[1].name = "babyAshbite_tower_layer1_0001"
 tt.render.sprites[1].animated = false
@@ -1763,9 +1747,7 @@ tt.powers.fiery_mist.max_level = 1
 --#endregion
 --#region soldier_baby_ashbite
 tt = RT("soldier_baby_ashbite", "soldier")
-
 AC(tt, "ranged", "powers")
-
 tt.health.armor = 0.5
 tt.health.dead_lifetime = 10
 tt.health.hp_max = 450
@@ -1776,7 +1758,7 @@ tt.idle_flip.chance = 0.4
 tt.idle_flip.cooldown = 1
 tt.info.fn = scripts.soldier_barrack.get_info
 tt.info.portrait = "kr3_info_portraits_towers_0014"
-tt.info.i18n_key = "ELVES_BABY_ASHBITE"
+tt.info.i18n_key = "TOWER_BABY_ASHBITE"
 tt.info.damage_icon = "fireball"
 tt.main_script.insert = scripts.soldier_baby_ashbite.insert
 tt.main_script.update = scripts.soldier_baby_ashbite.update
@@ -1798,7 +1780,7 @@ tt.unit.hit_offset = vec_2(0, 84)
 tt.unit.hide_after_death = false
 tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, ady(25))
-tt.vis.bans = bor(tt.vis.bans, F_EAT, F_NET, F_POISON)
+tt.vis.bans = bor(tt.vis.bans, F_EAT, F_NET, F_POISON, F_BURN)
 tt.vis.flags = bor(tt.vis.flags, F_HERO, F_FLYING)
 tt.powers.blazing_breath = CC("power")
 tt.powers.fiery_mist = CC("power")
@@ -1809,7 +1791,6 @@ tt.ranged.attacks[1].cooldown = 1.3 + fts(28)
 tt.ranged.attacks[1].min_range = 0
 tt.ranged.attacks[1].max_range = 100
 tt.ranged.attacks[1].shoot_time = fts(12)
--- tt.ranged.attacks[1].sync_animation = true
 tt.ranged.attacks[1].ignore_hit_offset = true
 tt.ranged.attacks[1].animation = "shoot"
 tt.ranged.attacks[1].sound_shoot = "ElvesAshbiteSpit"
@@ -1824,7 +1805,6 @@ tt.ranged.attacks[2].cooldown = 8
 tt.ranged.attacks[2].min_range = 0
 tt.ranged.attacks[2].max_range = 150
 tt.ranged.attacks[2].shoot_time = fts(9)
--- tt.ranged.attacks[2].sync_animation = true
 tt.ranged.attacks[2].animation = "special"
 tt.ranged.attacks[2].sound = "ElvesAshbiteFlameThrower"
 tt.ranged.attacks[2].vis_bans = F_FLYING
@@ -1903,9 +1883,7 @@ tt.render.sprites[1].anchor.y = 0.35714285714285715
 --#endregion
 --#region aura_breath_baby_ashbite
 tt = RT("aura_breath_baby_ashbite", "aura")
-
 AC(tt, "tween", "render")
-
 tt.main_script.update = scripts.aura_apply_damage.update
 tt.aura.duration = fts(30)
 tt.aura.damage_inc = 16.666666666666668
@@ -1955,8 +1933,8 @@ tt.aura.vis_bans = bor(F_FRIEND)
 --#endregion
 --#region mod_slow_baby_ashbite
 tt = RT("mod_slow_baby_ashbite", "mod_slow")
-tt.slow.factor = 0.3
-tt.slow.factor_inc = 0.1
+tt.slow.factor = 0.5
+tt.slow.factor_inc = -0.1
 --#endregion
 --#region decal_fiery_mist_baby_ashbite
 tt = RT("decal_fiery_mist_baby_ashbite", "decal_tween")

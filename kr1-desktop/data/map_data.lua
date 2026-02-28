@@ -2513,6 +2513,16 @@ return {
 			detail_icon = 20
 		},
 		{
+			name = "tower_elf",
+			icon = 21,
+			detail_icon = 21
+		},
+		{
+			name = "tower_sunray",
+			icon = 22,
+			detail_icon = 22
+		},
+		{
 			name = "tower_crossbow",
 			icon = 1,
 			detail_icon = 1,
@@ -2561,6 +2571,42 @@ return {
 			from_kr = 2
 		},
 		{
+			name = "tower_barrack_mercenaries",
+			icon = 9,
+			detail_icon = 9,
+			from_kr = 2
+		},
+		{
+			name = "tower_barrack_pirates",
+			icon = 10,
+			detail_icon = 10,
+			from_kr = 2
+		},
+		{
+			name = "tower_barrack_amazonas",
+			icon = 11,
+			detail_icon = 11,
+			from_kr = 2
+		},
+		{
+			name = "tower_barrack_dwarf",
+			icon = 12,
+			detail_icon = 12,
+			from_kr = 2
+		},
+		{
+			name = "tower_archer_dwarf",
+			icon = 13,
+			detail_icon = 13,
+			from_kr = 2
+		},
+		{
+			name = "tower_pirate_watchtower",
+			icon = 14,
+			detail_icon = 14,
+			from_kr = 2
+		},
+		{
 			name = "tower_druid",
 			icon = 1,
 			detail_icon = 1,
@@ -2606,6 +2652,36 @@ return {
 			name = "tower_blade",
 			icon = 8,
 			detail_icon = 8,
+			from_kr = 3
+		},
+		{
+			name = "tower_ewok",
+			icon = 9,
+			detail_icon = 9,
+			from_kr = 3
+		},
+		{
+			name = "tower_faerie_dragon",
+			icon = 10,
+			detail_icon = 10,
+			from_kr = 3
+		},
+		{
+			name = "tower_pixie",
+			icon = 11,
+			detail_icon = 11,
+			from_kr = 3
+		},
+		{
+			name = "tower_baby_ashbite",
+			icon = 12,
+			detail_icon = 12,
+			from_kr = 3
+		},
+		{
+			name = "tower_drow",
+			icon = 13,
+			detail_icon = 13,
 			from_kr = 3
 		},
 		{

@@ -572,11 +572,10 @@ tt.render.sprites[1].sort_y_offset = -2
 tt.render.sprites[1].prefix = "explosion"
 tt.render.sprites[1].name = "shrapnel"
 --#endregion
+
 --#region tower_archer_dwarf
 tt = RT("tower_archer_dwarf", "tower_archer_1")
-
 AC(tt, "powers")
-
 tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].animation = "shoot"
 tt.attacks.list[1].bullet = "dwarf_shotgun"
@@ -763,8 +762,8 @@ tt.owner = nil
 tt = RT("pirate_watchtower_bomb", "bomb")
 tt.bullet.flight_time = fts(10)
 tt.bullet.rotation_speed = 0
-tt.bullet.damage_max = 40
-tt.bullet.damage_min = 20
+tt.bullet.damage_max = 44
+tt.bullet.damage_min = 22
 tt.bullet.hide_radius = nil
 tt.bullet.mod = "mod_pirate_watchtower_bomb"
 tt.render.sprites[1].name = "pirateTower_bomb"
