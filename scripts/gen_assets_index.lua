@@ -131,6 +131,43 @@ end
 --     p:close()
 --     return tonumber(mtime) or 0
 -- end
+
+-- 更快的采样哈希（只读取头尾各4KB）
+local function file_hash(path)
+	local bit = require("bit")
+	local f = io.open(path, "rb")
+	if not f then
+		return "0"
+	end
+
+	local size = f:seek("end")
+	local hash = 2166136261
+	local prime = 16777619
+	local mod = 0xFFFFFFFF
+
+	-- 读取头部
+	f:seek("set", 0)
+	local head = f:read(4096) or ""
+	for i = 1, #head do
+		hash = (bit.bxor(hash, head:byte(i)) * prime) % mod
+	end
+
+	-- 读取尾部
+	if size > 8192 then
+		f:seek("set", size - 4096)
+		local tail = f:read(4096) or ""
+		for i = 1, #tail do
+			hash = (bit.bxor(hash, tail:byte(i)) * prime) % mod
+		end
+	end
+
+	-- 混入文件大小
+	hash = (bit.bxor(hash, size) * prime) % mod
+
+	f:close()
+	return string.format("%08x", hash)
+end
+
 local assets = {}
 
 for _, path in ipairs(list_files(assets_dir)) do
@@ -140,7 +177,8 @@ for _, path in ipairs(list_files(assets_dir)) do
 		local relpath = to_relpath(path, assets_dir)
 
 		assets[relpath] = {
-			size = file_size(path)
+			size = file_size(path),
+			hash = file_hash(path)
 		}
 	end
 end
@@ -167,7 +205,7 @@ f:write("return {\n")
 for _, path in ipairs(paths) do
 	local info = assets[path]
 
-	f:write(string.format("    [\"%s\"] = { size = %d},\n", path, info.size))
+	f:write(string.format('    ["%s"] = { size = %d, hash = "%s" },\n', path, info.size, info.hash))
 end
 
 f:write("}\n")

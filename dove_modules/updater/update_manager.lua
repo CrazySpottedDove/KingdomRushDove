@@ -15,7 +15,9 @@ local STATE_DOWNLOADING_CODE = 2
 local STATE_COMMITTING_CHANGES = 3
 local STATE_SELECT_URL = 4
 local STATE_CHECK_UPDATE = 5
+local STATE_CHECKING_ASSETS = 6
 local STATE_STRING_MAP = {
+	[STATE_CHECKING_ASSETS] = "校验美术资源中……",
 	[STATE_DOWNLOADING_ASSETS] = "下载美术资源中（可能需要较长时间）……",
 	[STATE_DOWNLOADING_CODE] = "下载代码资源中……",
 	[STATE_COMMITTING_CHANGES] = "提交更新事务中……",
@@ -83,99 +85,210 @@ end
 local server_address = nil
 local https
 local json = require("lib.json")
-
 local update_response = nil
 
-local function sync_assets()
+local function file_hash(path)
+	local bit = require("bit")
+	local f = io.open(path, "rb")
+	if not f then
+		return "0"
+	end
+
+	local size = f:seek("end")
+	local hash = 2166136261
+	local prime = 16777619
+	local mod = 0xFFFFFFFF
+
+	-- 读取头部
+	f:seek("set", 0)
+	local head = f:read(4096) or ""
+	for i = 1, #head do
+		hash = (bit.bxor(hash, head:byte(i)) * prime) % mod
+	end
+
+	-- 读取尾部
+	if size > 8192 then
+		f:seek("set", size - 4096)
+		local tail = f:read(4096) or ""
+		for i = 1, #tail do
+			hash = (bit.bxor(hash, tail:byte(i)) * prime) % mod
+		end
+	end
+
+	-- 混入文件大小
+	hash = (bit.bxor(hash, size) * prime) % mod
+
+	f:close()
+	return string.format("%08x", hash)
+end
+
+local function diff_assets()
+	set_state(STATE_CHECKING_ASSETS)
+	local has_error = false
+	local tmp_dir = ".assets_diff_tmp"
+	FS.remove(tmp_dir)
+	FS.createDirectory(tmp_dir)
+	-- 先从服务器下载 assets_index.lua，准备与本地的assets_index.lua进行对比
+
+	local url = server_address .. "file"
+	local i = 1
+	local max_retries = 5
+	local retries = 0
+
+	while i <= max_retries do
+		local download_code, content, response_header = https.request(url, {
+			method = "POST",
+			headers = {
+				["Content-Type"] = "application/json"
+			},
+			data = json.encode({
+				file = "_assets/assets_index.lua"
+			})
+		})
+
+		if download_code == 200 then
+			if tonumber(response_header["content-length"]) == #content then
+				local tmp_file_path = tmp_dir .. "/" .. "assets_index.lua"
+				FS.createDirectory(tmp_file_path:match("(.+)/"))
+				if not FS.write(tmp_file_path, content) then
+					log_error("写入临时文件失败: " .. tmp_file_path)
+					has_error = true
+					break
+				end
+				log_info("拉取资源索引文件...")
+				retries = 0
+				i = i + 1
+			else
+				-- 可能传输中间发生了网络中断，重试。
+				retries = retries + 1
+				if retries > max_retries then
+					log_error("下载资源索引失败（多次重试无效）")
+					has_error = true
+					break
+				else
+					log_info("文件长度不符，正在重试（第 " .. retries .. " 次）: " .. "_assets/assets_index.lua")
+				end
+			end
+		else
+			log_error("下载资源索引失败: (Code: " .. download_code .. ")")
+			has_error = true
+			break
+		end
+	end
+
+	local added_or_modified = nil
+
+	if not has_error then
+		local remote_assets_index = FS.read(tmp_dir .. "/assets_index.lua")
+		local local_assets_index = dofile("_assets/assets_index.lua")
+
+		-- diff
+		added_or_modified = {}
+		for file, info in pairs(remote_assets_index) do
+			local local_info = local_assets_index[file]
+			if not local_info then
+				added_or_modified[#added_or_modified + 1] = file
+			end
+
+			if not local_info.hash then
+				local_info.hash = file_hash("_assets/" .. file)
+			end
+
+			if local_info.size ~= info.size or local_info.hash ~= info.hash then
+				added_or_modified[#added_or_modified + 1] = file
+			end
+		end
+	end
+
+	FS.remove(tmp_dir) -- 清理
+	return added_or_modified
+end
+
+local function sync_assets(added_or_modified)
 	if not server_address then
 		return true
 	end
 	set_state(STATE_DOWNLOADING_ASSETS)
-	local url = server_address .. "assets"
-	local code, response_body = https.request(url, {
-		method = "POST",
-		headers = {
-			["Content-Type"] = "application/json"
-		},
-		data = json.encode({
-			branch = "master",
-			mode = "download",
-			assets_index = "return {}"
-		})
-	})
+	-- local url = server_address .. "assets"
+	-- local code, response_body = https.request(url, {
+	-- 	method = "POST",
+	-- 	headers = {
+	-- 		["Content-Type"] = "application/json"
+	-- 	},
+	-- 	data = json.encode({
+	-- 		branch = "master",
+	-- 		mode = "download",
+	-- 		assets_index = "return {}"
+	-- 	})
+	-- })
 
-	if code ~= 200 then
-		log_error("无法同步美术资源。服务器返回代码：" .. code)
-		log_error("服务器回复: " .. (response_body or "nil"))
-		return false
-	end
+	-- if code ~= 200 then
+	-- 	log_error("无法同步美术资源。服务器返回代码：" .. code)
+	-- 	log_error("服务器回复: " .. (response_body or "nil"))
+	-- 	return false
+	-- end
 
-	local ok, resp_json = pcall(json.decode, response_body)
-	if not ok or not resp_json then
-		log_error("无法解码资源同步的服务器回复。可能服务器繁忙，可稍后尝试重试。")
-		return false
-	end
+	-- local ok, resp_json = pcall(json.decode, response_body)
+	-- if not ok or not resp_json then
+	-- 	log_error("无法解码资源同步的服务器回复。可能服务器繁忙，可稍后尝试重试。")
+	-- 	return false
+	-- end
 
-	-- 删除文件
-	for _, file_path in ipairs(resp_json.delete_files or {}) do
-		local local_file_path = "_assets/" .. file_path
-		if FS.getInfo(local_file_path) and not delete_file(local_file_path) then
-			log_error("删除文件失败：" .. file_path)
-			return false
-		else
-			log_info("删除文件：" .. file_path)
-		end
-	end
+	-- -- 删除文件
+	-- for _, file_path in ipairs(resp_json.delete_files or {}) do
+	-- 	local local_file_path = "_assets/" .. file_path
+	-- 	if FS.getInfo(local_file_path) and not delete_file(local_file_path) then
+	-- 		log_error("删除文件失败：" .. file_path)
+	-- 		return false
+	-- 	else
+	-- 		log_info("删除文件：" .. file_path)
+	-- 	end
+	-- end
 
 	-- 下载文件
 	local url = server_address .. "assets/download"
 	local retries = 0
 	local max_retries = 5
 	local i = 1
-	local file_count = #resp_json.need_files
+	local file_count = #added_or_modified
 	while i <= file_count do
-		local file_info = resp_json.need_files[i]
-		local file_path = file_info.file
+		local file_path = added_or_modified[i]
 		local local_file_path = "_assets/" .. file_path
-		local local_file_info = FS.getInfo(local_file_path)
-		if not (local_file_info and local_file_info.size == file_info.size) then
-			local download_code, file_content, response_header = https.request(url, {
-				method = "POST",
-				headers = {
-					["Content-Type"] = "application/json"
-				},
-				data = json.encode({
-					file = file_path
-				})
+		local download_code, file_content, response_header = https.request(url, {
+			method = "POST",
+			headers = {
+				["Content-Type"] = "application/json"
+			},
+			data = json.encode({
+				file = file_path
 			})
-			if download_code == 200 then
-				if tonumber(response_header["content-length"]) == #file_content then
-					ensure_parent_dir(local_file_path)
-					local success, err = write_file(local_file_path, file_content)
-					if not success then
-						log_error("写入文件失败: " .. local_file_path .. " (" .. tostring(err) .. ")")
-						return false
-					end
-					log_info(string.format("下载美术资源 (%d/%d): %s", i, #resp_json.need_files, file_path))
-					retries = 0
-					i = i + 1
-				else
-					-- 可能传输中间发生了网络中断，重试。
-					retries = retries + 1
-					if retries > max_retries then
-						log_error("下载文件失败（多次重试无效）: " .. file_path)
-						return false
-					else
-						log_info("文件长度不符，正在重试（第 " .. retries .. " 次）: " .. file_path)
-					end
+		})
+		if download_code == 200 then
+			if tonumber(response_header["content-length"]) == #file_content then
+				ensure_parent_dir(local_file_path)
+				local success, err = write_file(local_file_path, file_content)
+				if not success then
+					log_error("写入文件失败: " .. local_file_path .. " (" .. tostring(err) .. ")")
+					return false
 				end
+				log_info(string.format("下载美术资源 (%d/%d): %s", i, file_count, file_path))
+				retries = 0
+				i = i + 1
 			else
-				log_error("下载文件失败: " .. file_path .. " (Code: " .. download_code .. ")")
-				return false
+				-- 可能传输中间发生了网络中断，重试。
+				retries = retries + 1
+				if retries > max_retries then
+					log_error("下载文件失败（多次重试无效）: " .. file_path)
+					return false
+				else
+					log_info("文件长度不符，正在重试（第 " .. retries .. " 次）: " .. file_path)
+				end
 			end
 		else
-			i = i + 1
+			log_error("下载文件失败: " .. file_path .. " (Code: " .. download_code .. ")")
+			return false
 		end
+		i = i + 1
 	end
 
 	return true
@@ -294,7 +407,6 @@ end
 
 --- @return 是否有更新可用
 local function check_update()
-	https = require("https")
 	local params = M.params
 	set_state(STATE_SELECT_URL)
 	log_info("尝试使用：" .. params.update_last_site)
@@ -383,7 +495,12 @@ local function run_code()
 	local pressed = love.window.showMessageBox("发现新版本", "检测到有新内容可更新，是否立即更新？\n\n" .. table.concat(messages, "\n\n"), {"更新", "取消"})
 
 	if pressed == 1 then
-		local success = sync_assets()
+		local added_or_modified = diff_assets()
+		if not added_or_modified then
+			love.window.showMessageBox("升级失败", "校验美术资源时发生错误，无法继续升级。请将以下信息报告给开发者：\n\n" .. table.concat(error_log_lines, "\n"), {"确定"})
+			return
+		end
+		local success = sync_assets(added_or_modified)
 		if success then
 			success = upgrade_new_version(update_response)
 		end
@@ -402,12 +519,11 @@ function M:init(params, done_callback)
 	apply_upgrade = apply_upgrade and params.update_enabled
 	self.done_callback = done_callback
 	self.params = params
-	print(apply_upgrade)
 	if not apply_upgrade then
 		self:done_callback()
 		return
 	end
-
+	https = require("https")
 	local co = coroutine.create(run_code)
 	self.co = co
 end

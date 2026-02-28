@@ -54,7 +54,7 @@ master:
 
 # 建立美术资源索引，在上传前必须使用
 index:
-	@lua scripts/gen_assets_index.lua
+	@luajit scripts/gen_assets_index.lua
 
 # 上传修改的美术资源(Deprecated)
 upload:

@@ -4226,7 +4226,7 @@ function EncyclopediaView:detail_tower_second(index)
 
 		power_button.image_scale = 0.65
 		power_button.pos = v(px, 90)
-		power_button.anchor = v(power_button.size.x * 0.65/ 2, power_button.size.y * 0.65/ 2)
+		power_button.anchor = v(power_button.size.x * 0.65 / 2, power_button.size.y * 0.65 / 2)
 
 		if i == 1 then
 			self:show_skill_detail(prefix, power.key or power.name or k, power, t.from_kr)
@@ -4287,7 +4287,7 @@ function EncyclopediaView:detail_tower_second(index)
 
 		label.text_align = "center"
 		label.fit_lines = 2
-        label.propagate_on_click = true
+		label.propagate_on_click = true
 
 		self.right_panel:add_child(label)
 	end
