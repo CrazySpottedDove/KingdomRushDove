@@ -316,6 +316,9 @@ local function load_app_settings()
 	local function done_cb()
 		storage:save_settings(main.params)
 		MU.apply_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
+		if not main.params.update_enabled then
+			table.removeobject(loader.items, "update_manager")
+		end
 		loader:load_next()
 	end
 
@@ -335,11 +338,7 @@ loader = {
 }
 
 function loader:load()
-	local params = main.params
-	if not params.update_enabled then
-		table.removeobject(self.items, "update_manager")
-	end
-	local launch_options = params.launch_options
+	local launch_options = main.params.launch_options
 	if launch_options.skip_must_read then
 		table.removeobject(self.items, "must_read")
 	end
