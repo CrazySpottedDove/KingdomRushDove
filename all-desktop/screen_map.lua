@@ -5456,6 +5456,15 @@ function OptionsView:initialize(sw, sh)
 	end
 	self.back:add_child(launch_options_button)
 
+	local restart_button = GGOptionsButton:new("重启游戏")
+	restart_button:set_anchor_to_center()
+	restart_button.pos.x = -75
+	restart_button.pos.y = 400
+	function restart_button.on_click()
+		S:queue("GUIButtonCommon")
+		love.event.quit("restart")
+	end
+
 	self.difficulty_idx = screen_map.user_data.difficulty
 
 	if not self.difficulty_idx then
