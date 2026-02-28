@@ -36,6 +36,7 @@ local function log_info(line)
 	if #update_log_lines > update_log_line_max_count then
 		table.remove(update_log_lines, 1)
 	end
+    print(line) -- 同时输出到控制台，方便调试
 	coroutine.yield()
 end
 
@@ -46,6 +47,7 @@ local function log_error(line)
 		table.remove(update_log_lines, 1)
 	end
 	table.insert(error_log_lines, line) -- 同时存入错误报告
+    print(line)
 	coroutine.yield()
 end
 
@@ -134,6 +136,7 @@ local function diff_assets()
 	local i = 1
 	local max_retries = 5
 	local retries = 0
+	log_info("拉取资源索引文件...")
 
 	while i <= max_retries do
 		local download_code, content, response_header = https.request(url, {
@@ -155,9 +158,8 @@ local function diff_assets()
 					has_error = true
 					break
 				end
-				log_info("拉取资源索引文件...")
-				retries = 0
-				i = i + 1
+                log_info("资源索引文件下载完成")
+				break
 			else
 				-- 可能传输中间发生了网络中断，重试。
 				retries = retries + 1
@@ -179,7 +181,7 @@ local function diff_assets()
 	local added_or_modified = nil
 
 	if not has_error then
-		local remote_assets_index = FS.read(tmp_dir .. "/assets_index.lua")
+		local remote_assets_index = loadstring(FS.read(tmp_dir .. "/assets_index.lua"))()
 		local local_assets_index = dofile("_assets/assets_index.lua")
 
 		-- diff
