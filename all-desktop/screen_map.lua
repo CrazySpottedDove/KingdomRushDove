@@ -5464,6 +5464,7 @@ function OptionsView:initialize(sw, sh)
 		S:queue("GUIButtonCommon")
 		love.event.quit("restart")
 	end
+    self.back:add_child(restart_button)
 
 	self.difficulty_idx = screen_map.user_data.difficulty
 
