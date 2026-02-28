@@ -107,6 +107,7 @@ end
 function MUST_READ:init(params, done_callback)
 	self.done_callback = done_callback
 	self.params = params
+    READ_EXPECTED_TIME.read_start("author_words", self.text)
 	self:layout()
 end
 
@@ -169,20 +170,6 @@ function MUST_READ:mousepressed(x, y, button)
 					self.confirm_index = 1
 				end
 			else
-				-- TODO: 一些结束效果
-				-- local function restore()
-				-- 	MUST_READ.enabled = false
-				-- 	love.window.setMode(old_w, old_h, old_flags)
-				-- 	love.wheelmoved = orig_wheelmoved
-				-- 	love.mousepressed = orig_mousepressed
-				-- 	love.touchpressed = orig_touchpressed
-				-- 	love.touchmoved = orig_touchmoved
-				-- 	love.touchreleased = orig_touchreleased
-				-- 	-- 标记为已阅读
-				-- 	storage:write_lua("must_read.lua", {
-				-- 		read = true
-				-- 	})
-				-- end
 				self.done_callback()
 			end
 			return
