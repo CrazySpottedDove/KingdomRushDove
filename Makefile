@@ -80,6 +80,18 @@ linux:
 	@bash $(MAKE_FILE_DIR)/package.sh
 	bash $(MAKE_FILE_DIR)/pack_linux.sh
 
+windows_quick:
+	@bash $(MAKE_FILE_DIR)/package.sh
+	bash $(MAKE_FILE_DIR)/pack_windows.sh quick
+
+android_quick:
+	@bash $(MAKE_FILE_DIR)/package.sh
+	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh quick
+
+linux_quick:
+	@bash $(MAKE_FILE_DIR)/package.sh
+	bash $(MAKE_FILE_DIR)/pack_linux.sh quick
+
 push:
 	git push origin dev
 	git push server dev

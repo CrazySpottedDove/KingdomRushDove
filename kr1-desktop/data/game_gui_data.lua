@@ -933,20 +933,6 @@ return {
 			subs = {"TOWER_MAGES_SUBTITLE", "TOWER_BARRACKS_SUBTITLE"},
 			seen = {"tower_arcane", "tower_paladins"}
 		},
-		TOWER_LEVEL2 = {
-			always = true,
-			level = 2,
-			layout = N_TOWER_4,
-			images = {"encyclopedia_towers_0006", "encyclopedia_towers_0005", "encyclopedia_towers_0007", "encyclopedia_towers_0008"},
-			seen = {"tower_barrack_2", "tower_archer_2", "tower_mage_2", "tower_engineer_2"}
-		},
-		TOWER_LEVEL3 = {
-			always = true,
-			level = 3,
-			layout = N_TOWER_4,
-			images = {"encyclopedia_towers_0010", "encyclopedia_towers_0009", "encyclopedia_towers_0011", "encyclopedia_towers_0012"},
-			seen = {"tower_barrack_3", "tower_archer_3", "tower_mage_3", "tower_engineer_3"}
-		},
 		TIP_ARMOR = {
 			paper = "notifications_tips_slides_notxt_0001",
 			always = true,
