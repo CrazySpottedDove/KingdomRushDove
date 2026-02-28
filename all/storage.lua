@@ -263,15 +263,21 @@ function storage:load_settings()
 	local template = require("settings_template")
 
 	if not input or not type(input) == "table" then
-		return {}
+		return table.deepclone(template)
 	else
 		for k, v in pairs(template) do
-			if input[k] == nil then
-				input[k] = v
-			elseif type(v) == "table" then
-				for tk, tv in pairs(v) do
-					if input[k][tk] == nil then
-						input[k][tk] = tv
+			if type(v) ~= "table" then
+				if input[k] == nil then
+					input[k] = v
+				end
+			else
+				if input[k] == nil then
+					input[k] = table.deepclone(v)
+				else
+					for tk, tv in pairs(v) do
+						if input[k][tk] == nil then
+							input[k][tk] = tv
+						end
 					end
 				end
 			end

@@ -419,7 +419,6 @@ local function load(arg)
 	-- icon switched to krdove
 	love.window.setIcon(love.image.newImageData(KR_PATH_ASSETS_GAME_TARGET .. "/icons/krdove.png"))
 
-	-- load_app_settings()
 	loader:load()
 end
 
