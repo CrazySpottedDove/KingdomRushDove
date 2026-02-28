@@ -264,11 +264,6 @@ function image_db:queue_load_done()
 
 			th:start(cin, cout, i)
 
-			if love.nx then
-				th:setAffinity({false, true, true})
-				log.paranoid(" ++++ IMAGE_DB THREAD %s AFFINITY %s", th, getdump(th:getAffinity()))
-			end
-
 			table.insert(self.threads, {th, cin, cout})
 		end
 

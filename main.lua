@@ -434,6 +434,10 @@ function love.keypressed(key, scancode, isrepeat)
 	if LLDEBUGGER and key == "0" then
 		LLDEBUGGER.start()
 	end
+	if key == "e" then
+		-- throw error
+		error("This is a test error triggered by pressing 'e'.")
+	end
 
 	main.handler:keypressed(key, isrepeat)
 end
@@ -503,46 +507,39 @@ function love.run()
 	local dt = 0
 	local updated = false
 
-	while true do
+	return function()
 		love.event.pump()
 
-		for e, a, b, c, d in love.event.poll() do
-			if e == "quit" then
+		for name, a, b, c, d, e, f in love.event.poll() do
+			if name == "quit" then
 				close_log()
-				return
+				return a or 0
 			end
 
-			love.handlers[e](a, b, c, d)
+			love.handlers[name](a, b, c, d, e, f)
 		end
 
-		love.timer.step()
-
-		dt = love.timer.getDelta()
-
+		dt = love.timer.step()
 		updated = love.update(dt)
 
-		if love.window.isOpen() and G.isActive() then
-			G.clear()
-			G.origin()
+		G.clear()
+		G.origin()
 
-			perf.start("draw")
-			love.draw()
-			perf.stop("draw")
-			if updated then
-				perf_ui.sync_data()
-				perf.reset()
-			end
-			perf_ui.draw()
+		perf.start("draw")
+		love.draw()
+		perf.stop("draw")
+		if updated then
+			perf_ui.sync_data()
+			perf.reset()
+		end
+		perf_ui.draw()
 
-			G.present()
+		G.present()
 
-			if main.handler.limit_fps then
-				main.handler:limit_fps()
-			else
-				collectgarbage("step")
-				love.timer.sleep(0.001)
-			end
+		if main.handler.limit_fps then
+			main.handler:limit_fps()
 		else
+			collectgarbage("step")
 			love.timer.sleep(0.001)
 		end
 	end
@@ -569,31 +566,15 @@ function love.errorhandler(msg)
 	log.error(stack_msg)
 	close_log()
 
-	if not love.window or not G or not love.event then
-		return
+	love.mouse.setVisible(true)
+	love.mouse.setGrabbed(false)
+	love.mouse.setRelativeMode(false)
+
+	if love.mouse.isCursorSupported() then
+		love.mouse.setCursor()
 	end
 
-	if not G.isCreated() or not love.window.isOpen() then
-		local success, status = pcall(love.window.setMode, 800, 600)
-
-		if not success or not status then
-			return
-		end
-	end
-
-	if love.mouse then
-		love.mouse.setVisible(true)
-		love.mouse.setGrabbed(false)
-		love.mouse.setRelativeMode(false)
-
-		if love.mouse.isCursorSupported() then
-			love.mouse.setCursor()
-		end
-	end
-
-	if love.audio then
-		love.audio.stop()
-	end
+	love.audio.stop()
 
 	G.reset()
 
@@ -609,68 +590,21 @@ function love.errorhandler(msg)
 
 	local err = {}
 	local tip = {}
-	local tip_trigger_errors = {
-		["Texture expected, got nil"] = "你在老本体上放了新版本补丁，请先安装新的本体。\n"
-	}
-	local has_tip
 
-	table.insert(tip, string.format("Version %s: Tip\n", version.id))
+	table.insert(tip, string.format("Version %s\n", version.id))
+	table.insert(err, "\n\n\n\n\nError\n")
 
-	for e, v in pairs(tip_trigger_errors) do
-		if string.find(msg, e, 1, true) then
-			table.insert(tip, "提示: " .. v)
+	table.insert(err, msg .. "\n\n")
 
-			has_tip = true
+	for l in string.gmatch(trace, "(.-)\n") do
+		if not string.match(l, "boot.lua") then
+			l = string.gsub(l, "stack traceback:", "Traceback\n")
+
+			table.insert(err, l)
 		end
 	end
 
-	if has_tip then
-		table.insert(err, "\n\n\n\n\n\n\nError\n")
-	else
-		table.insert(err, "\n\n\n\n\nError\n")
-	end
-
-	local error_type = "common"
-
-	if string.find(msg, "Error running coro", 1, true) then
-		msg = msg:gsub("^[^:]+:%d+: ", "")
-
-		local l = string.gsub(msg, "stack traceback:", "\n\n\nTraceback\n")
-
-		table.insert(err, l)
-
-		for l in string.gmatch(trace, "(.-)\n") do
-			if not string.match(l, "boot.lua") then
-				l = string.gsub(l, "stack traceback:", "")
-
-				table.insert(err, l)
-			end
-		end
-
-		error_type = "coro"
-	else
-		table.insert(err, msg .. "\n\n")
-
-		for l in string.gmatch(trace, "(.-)\n") do
-			if not string.match(l, "boot.lua") then
-				l = string.gsub(l, "stack traceback:", "Traceback\n")
-
-				table.insert(err, l)
-			end
-		end
-	end
-
-	-- if error_type == "coro" then
-	-- 	table.insert(tip, "oops, 发生协程错误! 请将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面，由于是协程错误不影响游戏可按 “Esc” 关闭本界面\n")
-	if has_tip then
-		table.insert(tip, "666，程序爆炸了! 如果您不想被吐槽看不懂中文的话，请先按照提示说的做。还是搞不定，再将本界面与此前界面截图并反馈，而不是仅语言描述。\n")
-	elseif not has_tip then
-		table.insert(tip, "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下蓝屏的图，截图反馈并用语言简要说明发生了什么。按b以查看蓝屏前图片，按ESC以退出\n")
-	end
-
-	if love.nx then
-		table.insert(err, "\n\nFree memory:" .. love.nx.allocGetTotalFreeSize() .. "\n")
-	end
+	table.insert(tip, "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下蓝屏的图，截图反馈并用语言简要说明发生了什么。按b以查看蓝屏前图片，按ESC以退出。\n")
 
 	table.insert(err, "\n\nLast error msgs\n")
 	table.insert(err, last_log_msg)
@@ -696,35 +630,21 @@ function love.errorhandler(msg)
 
 	local show_last = true
 
-	local function draw()
-		if show_last then
-			G.present()
-		else
-			G.draw(error_canvas, 0, 0)
-		end
-	end
-
-	local quiterr
-
 	if LLDEBUGGER then
 		LLDEBUGGER.start()
 	end
 
-	while true do
+	return function()
 		love.event.pump()
-
 		for e, a, b, c in love.event.poll() do
 			if e == "quit" then
-				quiterr = true
-
-				love.event.quit()
-
-				return
+				return 1
 			elseif e == "keypressed" then
 				if a == "escape" then
-					return
+					return 1
 				elseif a == "b" then
-					show_last = not show_last
+					-- show_last = not show_last
+					G.present()
 				end
 			elseif e == "touchpressed" then
 				local name = love.window.getTitle()
@@ -733,19 +653,17 @@ function love.errorhandler(msg)
 					name = "Game"
 				end
 
-				local buttons = {"OK", "Cancel"}
-				local pressed = love.window.showMessageBox("Quit " .. name .. "?", "", buttons)
+				local buttons = {"是", "否", "关闭并复制报错"}
+				local pressed = love.window.showMessageBox("关闭" .. name .. "?", "", buttons)
 
 				if pressed == 1 then
-					return
+					return 1
+				elseif pressed == 3 then
+					love.system.setClipboardText(pt .. p)
+					return 1
 				end
 			end
 		end
-
-		draw()
-
-		if love.timer then
-			love.timer.sleep(2)
-		end
+		love.timer.sleep(0.1)
 	end
 end

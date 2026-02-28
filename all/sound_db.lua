@@ -270,10 +270,6 @@ function sound_db:load_group(name, yielding, filter)
 
 		th:start(cin, cout, i)
 
-		if love.nx then
-			th:setAffinity({false, true, true})
-		end
-
 		table.insert(load_threads, {th, cin, cout})
 	end
 

@@ -98,7 +98,7 @@ function perf_ui.draw()
 
 	-- 标题：FPS 和 总耗时
 	lg.setColor(1, 1, 1, 0.95)
-	lg.print(string.format("FPS: %d", love.timer.getFPS()), x + 8, y + 6)
+	lg.print(string.format("FPS: %d, Memory: %d MB", love.timer.getFPS(), collectgarbage("count") / 1024), x + 8, y + 6)
 
 	local bx, by = x + 8, y + 28
 	local value_x = x + w - 8

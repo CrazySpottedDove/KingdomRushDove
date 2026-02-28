@@ -24524,7 +24524,6 @@ function scripts.controller_elemental_water.update(this, store)
 	end
 
 	controller_elemental_generic_insert_buff_to_target(this)
-	update_fx_points()
 
 	this.ability_cooldown = this.first_cooldown
 
@@ -24542,6 +24541,7 @@ function scripts.controller_elemental_water.update(this, store)
 	aura_controller = E:create_entity(this.controller_aura_healing)
 	aura_controller.pos = this.pos
 	aura_controller.aura.radius = this.max_range
+	update_fx_points()
 
 	queue_insert(store, aura_controller)
 	add_mist()

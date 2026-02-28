@@ -107,7 +107,7 @@ end
 function MUST_READ:init(params, done_callback)
 	self.done_callback = done_callback
 	self.params = params
-    READ_EXPECTED_TIME.read_start("author_words", self.text)
+	READ_EXPECTED_TIME.read_start("author_words", self.text)
 	self:layout()
 end
 
