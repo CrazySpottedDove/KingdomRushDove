@@ -4129,62 +4129,6 @@ function EncyclopediaView:detail_tower(index)
 	special_label.fit_lines = 4
 
 	self.right_panel:add_child(special_label)
-	-- local power_names = {}
-
-	-- for k, v in pairs(dt.powers) do
-	-- 	table.insert(power_names, k)
-	-- end
-
-	-- table.sort(power_names)
-
-	-- local tw = 360
-	-- local iw = math.ceil(tw / #power_names)
-
-	-- for i, k in pairs(power_names) do
-	-- 	local power = dt.powers[k]
-	-- 	local px = 120 + (2 * i - 1) * iw / 2
-	-- 	-- local f = string.format("encyclopedia_tower_specials_%04i", power.enc_icon)
-	-- 	-- local tower_specials_fmt = U.splicing_from_kr(t.from_kr, f)
-	-- 	local tower_specials_fmt
-
-	-- 	for _, item in pairs(tower_data_in_menu[1]) do
-	-- 		if item.action_arg == k then
-	-- 			tower_specials_fmt = item.image
-
-	-- 			break
-	-- 		end
-	-- 	end
-
-	-- 	local icon = KImageView:new(tower_specials_fmt)
-
-	-- 	icon.image_scale = 0.65
-	-- 	icon.size.x = icon.size.x * 0.65
-	-- 	icon.size.y = icon.size.y * 0.65
-	-- 	icon.pos = v(px, 515)
-	-- 	icon.anchor = v(icon.size.x / 2, icon.size.y / 2)
-
-	-- 	self.right_panel:add_child(icon)
-
-	-- 	local label = GGLabel:new(V.v(tw / #power_names, 50))
-
-	-- 	label.pos = v(px, 535)
-	-- 	label.anchor = v(label.size.x / 2, 0)
-	-- 	label.font_name = "body"
-	-- 	label.font_size = 14
-	-- 	label.line_height = 0.85
-	-- 	label.colors.text = {0, 0, 0}
-
-	-- 	if t.from_kr == 5 then
-	-- 		label.text = _(string.upper(string.format("%s_%s_1_NAME", dt.info.i18n_key or tower_name, power.key or power.name or k)))
-	-- 	else
-	-- 		label.text = _(string.upper(string.format("%s_%s_NAME_1", dt.info.i18n_key or tower_name, power.name or power.key or k)))
-	-- 	end
-
-	-- 	label.text_align = "center"
-	-- 	label.fit_lines = 2
-
-	-- 	self.right_panel:add_child(label)
-	-- end
 
 	local detail_btn = GGOptionsButton:new("技能")
 
@@ -4220,138 +4164,132 @@ function EncyclopediaView:detail_tower_second(index)
 	local prefix = string.upper(dt.info.i18n_key or t.name)
 	local tower_data_in_menu = tower_menus_data[dt.tower.type]
 
-	if dt.powers then
-		local specials = GGLabel:new(V.v(190, 26))
+	local specials = GGLabel:new(V.v(190, 26))
 
-		specials.pos = v(300, 44)
-		specials.anchor.x = specials.size.x / 2
-		specials.text = _("Specials")
-		specials.font_name = "h_book"
-		specials.font_size = 20
-		specials.text_align = "center"
-		specials.colors.text = {116, 105, 66, 255}
-		specials.fit_lines = 1
+	specials.pos = v(300, 44)
+	specials.anchor.x = specials.size.x / 2
+	specials.text = _("Specials")
+	specials.font_name = "h_book"
+	specials.font_size = 20
+	specials.text_align = "center"
+	specials.colors.text = {116, 105, 66, 255}
+	specials.fit_lines = 1
 
-		self.right_panel:add_child(specials)
+	self.right_panel:add_child(specials)
 
-		local title_w = specials:get_text_width(specials.text)
-		local left_deco = KImageView:new("encyclopedia_rightArt")
+	local title_w = specials:get_text_width(specials.text)
+	local left_deco = KImageView:new("encyclopedia_rightArt")
 
-		left_deco.pos = v(self.right_panel.size.x / 2 - title_w / 2 - 10, specials.pos.y + 16)
-		left_deco.anchor = v(left_deco.size.x, left_deco.size.y / 2)
-		left_deco.alpha = 0.6
-		left_deco.scale.x = 0.7
+	left_deco.pos = v(self.right_panel.size.x / 2 - title_w / 2 - 10, specials.pos.y + 16)
+	left_deco.anchor = v(left_deco.size.x, left_deco.size.y / 2)
+	left_deco.alpha = 0.6
+	left_deco.scale.x = 0.7
 
-		self.right_panel:add_child(left_deco)
+	self.right_panel:add_child(left_deco)
 
-		local right_deco = KImageView:new("encyclopedia_rightArt")
+	local right_deco = KImageView:new("encyclopedia_rightArt")
 
-		right_deco.pos = v(self.right_panel.size.x / 2 + title_w / 2 + 13, specials.pos.y + 16)
-		right_deco.anchor = v(right_deco.size.x, right_deco.size.y / 2)
-		right_deco.alpha = 0.6
-		right_deco.scale.x = -0.7
+	right_deco.pos = v(self.right_panel.size.x / 2 + title_w / 2 + 13, specials.pos.y + 16)
+	right_deco.anchor = v(right_deco.size.x, right_deco.size.y / 2)
+	right_deco.alpha = 0.6
+	right_deco.scale.x = -0.7
 
-		self.right_panel:add_child(right_deco)
+	self.right_panel:add_child(right_deco)
 
-		local power_names = {}
+	local power_names = {}
 
-		for k, v in pairs(dt.powers) do
-			table.insert(power_names, k)
+	for k, v in pairs(dt.powers) do
+		table.insert(power_names, k)
+	end
+
+	table.sort(power_names)
+
+	local tw = 360
+	local iw = math.ceil(tw / #power_names)
+
+	self.right_panel.power_buttons = {}
+
+	for i, k in pairs(power_names) do
+		local power = dt.powers[k]
+		local px = 120 + (2 * i - 1) * iw / 2
+		local tower_specials_fmt
+
+		for _, item in pairs(tower_data_in_menu[1]) do
+			if item.action_arg == k then
+				tower_specials_fmt = item.image
+
+				break
+			end
 		end
 
-		table.sort(power_names)
+		local power_button = KImageButton:new(tower_specials_fmt)
 
-		local tw = 360
-		local iw = math.ceil(tw / #power_names)
+		power_button.image_scale = 0.65
+		power_button.pos = v(px, 90)
+		power_button.anchor = v(power_button.size.x * 0.65/ 2, power_button.size.y * 0.65/ 2)
 
-		self.right_panel.power_buttons = {}
+		if i == 1 then
+			self:show_skill_detail(prefix, power.key or power.name or k, power, t.from_kr)
 
-		for i, k in pairs(power_names) do
-			local power = dt.powers[k]
-			local px = 120 + (2 * i - 1) * iw / 2
-			-- local f = string.format("encyclopedia_tower_specials_%04i", power.enc_icon)
-			-- local tower_specials_fmt = U.splicing_from_kr(t.from_kr, f)
-			local tower_specials_fmt
+			power_button._selected = true
+		else
+			power_button:apply_disabled_tint()
 
-			for _, item in pairs(tower_data_in_menu[1]) do
-				if item.action_arg == k then
-					tower_specials_fmt = item.image
+			power_button._selected = false
+		end
 
-					break
+		function power_button.on_click()
+			S:queue("GUIButtonCommon")
+			power_button:remove_disabled_tint()
+
+			power_button._selected = true
+
+			self:show_skill_detail(prefix, power.key or power.name or k, power, t.from_kr)
+
+			for _, btn in pairs(self.right_panel.power_buttons) do
+				if btn ~= power_button then
+					btn:apply_disabled_tint()
+
+					btn._selected = false
 				end
 			end
+		end
 
-			local power_button = KImageButton:new(tower_specials_fmt)
-
-			power_button.image_scale = 0.65
-			power_button.size.x = power_button.size.x * 0.65
-			power_button.size.y = power_button.size.y * 0.65
-			power_button.pos = v(px, 90)
-			power_button.anchor = v(power_button.size.x / 2, power_button.size.y / 2)
-
-			if i == 1 then
-				self:show_skill_detail(prefix, power.key or power.name or k, power, t.from_kr)
-
-				power_button._selected = true
-			else
-				-- power_button:disable()
-				power_button:apply_disabled_tint()
-
-				power_button._selected = false
-			end
-
-			function power_button.on_click()
-				S:queue("GUIButtonCommon")
+		function power_button.on_enter()
+			if not power_button._selected then
 				power_button:remove_disabled_tint()
-
-				power_button._selected = true
-
-				self:show_skill_detail(prefix, power.key or power.name or k, power, t.from_kr)
-
-				for _, btn in pairs(self.right_panel.power_buttons) do
-					if btn ~= power_button then
-						btn:apply_disabled_tint()
-
-						btn._selected = false
-					end
-				end
 			end
-
-			function power_button.on_enter()
-				if not power_button._selected then
-					power_button:remove_disabled_tint()
-				end
-			end
-
-			function power_button.on_exit()
-				if not power_button._selected then
-					power_button:apply_disabled_tint()
-				end
-			end
-
-			table.insert(self.right_panel.power_buttons, power_button)
-			self.right_panel:add_child(power_button)
-
-			local label = GGLabel:new(V.v(tw / #power_names, 50))
-
-			label.pos = v(px, 110)
-			label.anchor = v(label.size.x / 2, 0)
-			label.font_name = "body"
-			label.font_size = 14
-			label.line_height = 0.85
-			label.colors.text = {0, 0, 0}
-
-			if t.from_kr == 5 then
-				label.text = _(string.upper(string.format("%s_%s_1_NAME", dt.info.i18n_key or tower_name, power.key or power.name or k)))
-			else
-				label.text = _(string.upper(string.format("%s_%s_NAME_1", dt.info.i18n_key or tower_name, power.name or power.key or k)))
-			end
-
-			label.text_align = "center"
-			label.fit_lines = 2
-
-			self.right_panel:add_child(label)
 		end
+
+		function power_button.on_exit()
+			if not power_button._selected then
+				power_button:apply_disabled_tint()
+			end
+		end
+
+		table.insert(self.right_panel.power_buttons, power_button)
+		self.right_panel:add_child(power_button)
+
+		local label = GGLabel:new(V.v(tw / #power_names, 50))
+
+		label.pos = v(px, 110)
+		label.anchor = v(label.size.x / 2, 0)
+		label.font_name = "body"
+		label.font_size = 14
+		label.line_height = 0.85
+		label.colors.text = {0, 0, 0}
+
+		if t.from_kr == 5 then
+			label.text = _(string.upper(string.format("%s_%s_1_NAME", dt.info.i18n_key or tower_name, power.key or power.name or k)))
+		else
+			label.text = _(string.upper(string.format("%s_%s_NAME_1", dt.info.i18n_key or tower_name, power.name or power.key or k)))
+		end
+
+		label.text_align = "center"
+		label.fit_lines = 2
+        label.propagate_on_click = true
+
+		self.right_panel:add_child(label)
 	end
 
 	local back_btn = GGOptionsButton:new("返回")
@@ -4708,9 +4646,6 @@ function EncyclopediaView:detail_creep(index)
 	local mx = 205
 	local my = 380
 	local ci = ce.info.fn(ce)
-	-- local skill_table = {ci.hp_max, GU.damage_value_desc(ci.damage_min, ci.damage_max), GU.armor_value_desc(ci.armor),
-	--                      GU.armor_value_desc(ci.magic_armor), GU.speed_value_desc(ce.motion.max_speed),
-	--                      (GU.lives_desc(ci.lives))}
 	local skill_table = {ci.hp_max, GU.damage_value_desc(ci.damage_min, ci.damage_max), string.format("%i", ci.armor * 100), string.format("%i", ci.magic_armor * 100), string.format("%i", ce.motion.max_speed), (GU.lives_desc(ci.lives))}
 
 	for i = 1, 6 do
@@ -5962,19 +5897,14 @@ function AchievementsView:createPage(pagenum)
 
 			local isActive = screen_map.user_data.achievements[ach.name]
 
-			-- if isActive then
 			box.img:set_image("achievement_icons_" .. string.format("%04i", ach.icon))
 
 			if not isActive then
 				box.img:disable()
 			end
 
-			-- else
-			-- box.img:set_image("achievement_icons_disabled_" .. string.format("%04i", ach.icon))
-			-- end
-			local prefix = IS_KR3 and "ELVES_" or ""
-			local title = _(prefix .. "ACHIEVEMENT_" .. ach.name .. "_NAME")
-			local desc = _(prefix .. "ACHIEVEMENT_" .. ach.name .. "_DESCRIPTION")
+			local title = _("ACHIEVEMENT_" .. ach.name .. "_NAME")
+			local desc = _("ACHIEVEMENT_" .. ach.name .. "_DESCRIPTION")
 
 			box.title.text = title
 			box.desc.text = desc
