@@ -434,10 +434,6 @@ function love.keypressed(key, scancode, isrepeat)
 	if LLDEBUGGER and key == "0" then
 		LLDEBUGGER.start()
 	end
-	if key == "e" then
-		-- throw error
-		error("This is a test error triggered by pressing 'e'.")
-	end
 
 	main.handler:keypressed(key, isrepeat)
 end
