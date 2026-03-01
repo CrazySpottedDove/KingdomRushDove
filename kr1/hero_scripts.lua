@@ -20782,6 +20782,7 @@ function scripts.hero_raelyn.update(this, store)
 						last_ts = store.tick_ts
 					end
 					U.y_animation_wait(this)
+					this.nav_grid.waypoints = {}
 				else
 					if SU.y_hero_new_rally(store, this) then
 						goto label_222_0
