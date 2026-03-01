@@ -53,12 +53,13 @@ EXCLUDES=(
     "launch.bat"
     "存档位置.lnk"
     "all/librender_sort.dll"
+    "mods/local"
 )
 
 should_exclude() {
     local name="$1"
     for ex in "${EXCLUDES[@]}"; do
-        if [ "$name" = "$ex" ]; then
+        if [[ "$name" == "$ex" ]] || [[ "$name" == "$ex/"* ]]; then
             return 0
         fi
     done
