@@ -43,18 +43,17 @@ function ModToggleButton:initialize(initial_value)
 end
 
 function ModToggleButton:_refresh()
-	if self._is_hovered then
-		self.colors.background = {60, 60, 60, 150}
+	if self.value then
+		self.colors.background = {40, 120, 60, 180}
+		self._text_label.colors.text = {180, 255, 160, 255}
+		self._text_label.text = "启用"
 	else
-		if self.value then
-			self.colors.background = {40, 120, 60, 220}
-			self._text_label.colors.text = {180, 255, 160, 255}
-			self._text_label.text = "启用"
-		else
-			self.colors.background = {120, 40, 40, 200}
-			self._text_label.colors.text = {255, 160, 140, 255}
-			self._text_label.text = "禁用"
-		end
+		self.colors.background = {120, 40, 40, 180}
+		self._text_label.colors.text = {255, 160, 140, 255}
+		self._text_label.text = "禁用"
+	end
+	if self._is_hovered then
+		self.colors.background[4] = self.colors.background[4] + 50
 	end
 end
 

@@ -19,6 +19,7 @@ local function ady(v)
 	return v - anchor_y * image_y
 end
 
+local V = require("lib.klua.vector")
 local v = V.v
 local vv = V.vv
 

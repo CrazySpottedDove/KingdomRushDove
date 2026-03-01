@@ -54,151 +54,92 @@ local G = love.graphics
 
 require("main_globals")
 
-local base_dir = love.filesystem.getSourceBaseDirectory()
-local work_dir = love.filesystem.getWorkingDirectory()
+-- 规范化路径：把所有反斜杠替换为正斜杠
+local function norm_path(p)
+	return p and p:gsub("\\", "/") or p
+end
 
--- 规范化路径：把所有反斜杠替换为正斜杠，并可选保证目录以 / 结尾
-local function norm_path(p, ensure_trail)
-	if not p then
-		return p
+local base_dir = norm_path(love.filesystem.getSourceBaseDirectory())
+
+-- 统一定义所有搜索路径根目录
+local search_roots = {
+	"", -- 当前目录
+	"src",
+	"lib",
+	"all",
+	string.format("all-%s", KR_TARGET),
+	KR_GAME,
+	string.format("%s-%s", KR_GAME, KR_TARGET),
+	"_assets",
+	string.format("_assets/all-%s", KR_TARGET),
+	string.format("_assets/%s-%s", KR_GAME, KR_TARGET),
+	"mods",
+	"mods/all",
+	"mods/local"
+}
+
+-- 从 roots 生成 require 路径字符串
+local function build_require_paths(roots)
+	local paths = {"?.lua", "?/init.lua"}
+
+	for _, root in ipairs(roots) do
+		if root ~= "" then
+			table.insert(paths, root .. "/?.lua")
+			table.insert(paths, root .. "/?/init.lua")
+		end
 	end
 
-	p = p:gsub("\\", "/")
-
-	if ensure_trail and p:sub(-1) ~= "/" then
-		p = p .. "/"
-	end
-
-	return p
+	return table.concat(paths, ";")
 end
 
-base_dir = norm_path(base_dir, true)
-work_dir = norm_path(work_dir, true)
+local require_paths = build_require_paths(search_roots)
 
-local ppref
-
-if love.filesystem.isFused() then
-	ppref = ""
-else
-	ppref = base_dir ~= work_dir and "" or "src/"
-end
-
-ppref = norm_path(ppref, true)
-
-local apref = norm_path(ppref .. "_assets/", true)
-local rel_ppref = ""
-local rel_apref = "_assets/"
-local jpref = "joint_apk"
-
--- 统一构造 additional_paths 并全部规范化为 "/"
-local additional_paths = {string.format("%s?.lua", ppref), string.format("%s%s-%s/?.lua", ppref, KR_GAME, KR_TARGET), string.format("%s%s/?.lua", ppref, KR_GAME), string.format("%sall-%s/?.lua", ppref, KR_TARGET), string.format("%sall/?.lua", ppref), string.format("%slib/?.lua", ppref), string.format("%slib/?/init.lua", ppref), string.format("%s%s-%s/?.lua", apref, KR_GAME, KR_TARGET), string.format("%sall-%s/?.lua", apref, KR_TARGET)}
-
-for i, p in ipairs(additional_paths) do
-	additional_paths[i] = norm_path(p)
-end
-
-local require_paths = "?.lua;?/init.lua;" .. table.concat(additional_paths, ";")
-
-require_paths = norm_path(require_paths)
-
--- 在 ppref/apref 准备好后，注册基于 love.filesystem 的优先 searcher（保证使用 "/"）
+-- 注册自定义 searcher
 do
-	if love and love.filesystem then
-		local lfs = love.filesystem
-		local searchers = package.searchers or package.loaders
+	local lfs = love.filesystem
+	local searchers = package.searchers or package.loaders
 
-		local function lnorm(p)
-			return p and p:gsub("\\", "/") or p
-		end
+	table.insert(searchers, 1, function(module_name)
+		local name = norm_path(module_name:gsub("%.", "/"))
 
-		-- 构造要尝试的根（优先包含 ppref/apref 相关）
-		local roots = { -- module itself
-			"",
-			ppref:gsub("/$", ""), -- ppref
-			apref:gsub("/$", ""), -- apref
-			"src",
-			"lib",
-			"all",
-			"_assets",
-			"kr1",
-			"kr1-desktop",
-			"_assets/kr1-desktop",
-			"all-desktop",
-			"mods",
-			"mods/all"
-		}
-		-- 去重并规范
-		local seen = {}
-		local real_roots = {}
+		-- 遍历所有根目录
+		for _, root in ipairs(search_roots) do
+			local base = (root == "" and "" or (root .. "/"))
 
-		for _, r in ipairs(roots) do
-			r = lnorm(r or "")
-			r = (r:sub(-1) == "/") and r:sub(1, -2) or r
-
-			if not seen[r] then
-				seen[r] = true
-
-				table.insert(real_roots, r)
-			end
-		end
-
-		table.insert(searchers, 1, function(module_name)
-			local name = lnorm((module_name or ""):gsub("%.", "/"))
-			-- 尝试候选路径（均用 "/"）
-			local candidates = {}
-
-			for _, root in ipairs(real_roots) do
-				local base = (root == "" and "" or (root .. "/"))
-
-				table.insert(candidates, base .. name .. ".lua")
-				table.insert(candidates, base .. name .. "/init.lua")
-			end
-
-			-- 也尝试 KR_PATH_* 运行时可能包含的目标目录
-			if KR_PATH_ALL_TARGET then
-				table.insert(candidates, lnorm(KR_PATH_ALL_TARGET .. "/" .. name .. ".lua"))
-				table.insert(candidates, lnorm(KR_PATH_ALL_TARGET .. "/" .. name .. "/init.lua"))
-			end
-
-			if KR_PATH_GAME_TARGET then
-				table.insert(candidates, lnorm(KR_PATH_GAME_TARGET .. "/" .. name .. ".lua"))
-				table.insert(candidates, lnorm(KR_PATH_GAME_TARGET .. "/" .. name .. "/init.lua"))
-			end
-
-			for _, p in ipairs(candidates) do
-				p = lnorm(p)
-
-				local info = lfs.getInfo and lfs.getInfo(p)
+			-- 尝试 .lua 和 /init.lua
+			for _, pattern in ipairs({".lua", "/init.lua"}) do
+				local path = norm_path(base .. name .. pattern)
+				local info = lfs.getInfo(path)
 
 				if info and info.type == "file" then
-					local chunk, err = lfs.load(p)
-
+					local chunk, err = lfs.load(path)
 					if chunk then
 						return chunk
 					end
-
 					return nil, err
 				end
 			end
-
-			return nil
-		end)
-
-		if lfs.setRequirePath then
-			lfs.setRequirePath(require_paths)
 		end
+
+		return nil
+	end)
+
+	-- 设置 love.filesystem 的搜索路径
+	if lfs.setRequirePath then
+		lfs.setRequirePath(require_paths)
 	end
 end
 
-KR_FULLPATH_BASE = norm_path(base_dir .. "/src", true)
-KR_PATH_ROOT = norm_path(tostring(rel_ppref))
-KR_PATH_ALL = norm_path(string.format("%s%s", rel_ppref, "all"))
-KR_PATH_ALL_TARGET = norm_path(string.format("%s%s-%s", rel_ppref, "all", KR_TARGET))
-KR_PATH_GAME = norm_path(string.format("%s%s", rel_ppref, KR_GAME))
-KR_PATH_GAME_TARGET = norm_path(string.format("%s%s-%s", rel_ppref, KR_GAME, KR_TARGET))
-KR_PATH_ASSETS_ROOT = norm_path(string.format("%s", rel_apref))
-KR_PATH_ASSETS_ALL_TARGET = norm_path(string.format("%s%s-%s", rel_apref, "all", KR_TARGET))
-KR_PATH_ASSETS_GAME_TARGET = norm_path(string.format("%s%s-%s", rel_apref, KR_GAME, KR_TARGET))
+-- 定义全局路径常量
+KR_FULLPATH_BASE = norm_path(base_dir .. "/src")
+KR_PATH_ROOT = ""
+KR_PATH_ALL = "all"
+KR_PATH_ALL_TARGET = string.format("all-%s", KR_TARGET)
+KR_PATH_GAME = KR_GAME
+KR_PATH_GAME_TARGET = string.format("%s-%s", KR_GAME, KR_TARGET)
+KR_PATH_ASSETS_ROOT = "_assets"
+KR_PATH_ASSETS_ALL_TARGET = string.format("_assets/all-%s", KR_TARGET)
+KR_PATH_ASSETS_GAME_TARGET = string.format("_assets/%s-%s", KR_GAME, KR_TARGET)
 
 local log = require("lib.klua.log")
 

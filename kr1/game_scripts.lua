@@ -25,7 +25,6 @@ local bor = bit.bor
 local bnot = bit.bnot
 local IS_PHONE = KR_TARGET == "phone"
 local IS_CONSOLE = KR_TARGET == "console"
--- local simulation = require("simulation")
 local v = V.v
 
 local function tpos(e)

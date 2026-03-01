@@ -5058,6 +5058,18 @@ function HeroRoomViewKR1:initialize(size)
 	end
 end
 
+function HeroRoomViewKR1:show()
+	HeroRoomViewKR1.super.show(self)
+	local user_data = storage:load_slot()
+	E:load()
+	UPGR:set_levels(user_data.upgrades)
+	UPGR:set_list_id(user_data.upgrade_list_id)
+	DI:set_level(screen_map.user_data.difficulty)
+	UPGR:patch_templates(6)
+	DI:patch_templates()
+	E:patch_config(storage:load_config())
+end
+
 function HeroRoomViewKR1:show_hero(name)
 	self.hero_shown = name
 

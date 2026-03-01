@@ -2,7 +2,7 @@ local file_utlis = {}
 local P = require("lib.klua.persistence")
 local log = require("lib.klua.log"):new("file_utlis")
 local is_windows = package.config:sub(1, 1) == "\\"
-
+local FS = love.filesystem
 --- 写入文件
 ---@param file_path string 文件路径
 ---@param content string 文件内容
@@ -33,6 +33,31 @@ function file_utlis.ensure_parent_dir(file_path)
 		end
 	end
 	return true -- 在根目录，无需创建
+end
+
+--- 获取目录下的子目录列表。
+---@param path string 目录路径
+---@return table 子目录列表，相对路径。
+function file_utlis.get_subdirs(path)
+	local files = FS.getDirectoryItems(path)
+
+	if not files then
+		log.error("Failed to get directory items for path: %s", path)
+		return {}
+	end
+
+	local file_names = {}
+
+	for i = 1, #files do
+		local file_path = path .. "/" .. files[i]
+		local info = FS.getInfo(file_path)
+
+		if info and info.type == "directory" then
+			file_names[#file_names + 1] = files[i]
+		end
+	end
+
+	return file_names
 end
 
 return file_utlis

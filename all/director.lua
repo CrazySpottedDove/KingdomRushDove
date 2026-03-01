@@ -39,7 +39,7 @@ function director:init(params)
 	KDB:init(KR_PATH_GAME_TARGET .. "/data/kui_templates" .. ";" .. KR_PATH_ALL_TARGET .. "/data/kui_templates", DEBUG)
 	SH:init(KR_PATH_ASSETS_ALL_TARGET .. "/shaders", true)
 
-	local sound_paths = KR_PATH_ASSETS_GAME_FALLBACK or {{
+	local sound_paths = {{
 		path = KR_PATH_ASSETS_GAME_TARGET
 	}}
 
@@ -509,26 +509,6 @@ function director:unload_texture_groups(groups, texture_size, ref_height, item_n
 	local forced_texture_size
 
 	for _, group in pairs(groups) do
-		if KR_PATH_ASSETS_GAME_FALLBACK then
-			local texture_path = KR_PATH_ASSETS_GAME_TARGET .. "/images/" .. texture_size
-
-			if love.filesystem.getInfo(texture_path .. "/" .. group .. ".lua") then
-			-- block empty
-			else
-				for _, v in pairs(KR_PATH_ASSETS_GAME_FALLBACK) do
-					texture_path = v.path .. "/images/" .. v.texture_size
-
-					if love.filesystem.getInfo(texture_path .. "/" .. group .. ".lua") then
-						log.debug(" --- texture group %s fallback to %s", group, texture_path)
-
-						forced_texture_size = v.texture_size
-
-						break
-					end
-				end
-			end
-		end
-
 		local scale = 1
 
 		if ref_height then
