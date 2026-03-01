@@ -1,6 +1,8 @@
 local file_utlis = {}
 local P = require("lib.klua.persistence")
 local log = require("lib.klua.log"):new("file_utlis")
+local is_windows = package.config:sub(1, 1) == "\\"
+
 --- 写入文件
 ---@param file_path string 文件路径
 ---@param content string 文件内容
