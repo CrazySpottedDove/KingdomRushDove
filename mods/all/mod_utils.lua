@@ -2,7 +2,7 @@
 local log = require("klua.log"):new("mod_utils")
 local FS = love.filesystem
 local hook_utils = require("hook_utils")
-local mod_main_config = require("mod_main_config")
+local mod_main_config = require("mods.local.mod_main_config")
 local A
 
 if IS_KR5 then

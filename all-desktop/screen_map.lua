@@ -29,6 +29,7 @@ require("klove.kui")
 local kui_db = require("klove.kui_db")
 
 require("gg_views_custom")
+require("mod_manager_view")
 
 local IS_KR1 = KR_GAME == "kr1"
 local IS_KR3 = KR_GAME == "kr3"
@@ -660,6 +661,9 @@ function screen_map:init(w, h, done_callback)
 	self.launch_options_panel_view = LaunchOptionsPanelView:new(sw, sh)
 	self.window:add_child(self.launch_options_panel_view)
 
+	self.mod_manager_view = ModManagerView:new(sw, sh)
+	self.window:add_child(self.mod_manager_view)
+
 	if self.generation == 1 then
 		S:queue("MusicMap1")
 	elseif self.generation == 2 then
@@ -805,6 +809,10 @@ function screen_map:keypressed(key, isrepeat)
 			self.launch_options_panel_view:hide()
 
 			return true
+		elseif not self.mod_manager_view.hidden then
+			self.mod_manager_view:hide()
+
+			return true
 		end
 
 		return false
@@ -828,6 +836,9 @@ function screen_map:keypressed(key, isrepeat)
 	elseif key == "f2" then
 		hide_others()
 		self.criket_panel_view:show()
+	elseif key == "f3" then
+		hide_others()
+		self.mod_manager_view:show()
 	elseif key == "1" then
 		if self.generation ~= 1 then
 			hide_others()
@@ -5456,10 +5467,21 @@ function OptionsView:initialize(sw, sh)
 	end
 	self.back:add_child(launch_options_button)
 
+	local mod_manager_button = GGOptionsButton:new("模组管理器")
+	mod_manager_button:set_anchor_to_center()
+	mod_manager_button.pos.x = -75
+	mod_manager_button.pos.y = 400
+	function mod_manager_button.on_click()
+		S:queue("GUIButtonCommon")
+		screen_map.option_panel:hide()
+		screen_map.mod_manager_view:show()
+	end
+	self.back:add_child(mod_manager_button)
+
 	local restart_button = GGOptionsButton:new("重启游戏")
 	restart_button:set_anchor_to_center()
 	restart_button.pos.x = -75
-	restart_button.pos.y = 400
+	restart_button.pos.y = 500
 	function restart_button.on_click()
 		S:queue("GUIButtonCommon")
 		love.event.quit("restart")

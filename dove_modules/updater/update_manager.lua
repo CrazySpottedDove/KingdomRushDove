@@ -209,41 +209,6 @@ local function sync_assets(added_or_modified)
 		return true
 	end
 	set_state(STATE_DOWNLOADING_ASSETS)
-	-- local url = server_address .. "assets"
-	-- local code, response_body = https.request(url, {
-	-- 	method = "POST",
-	-- 	headers = {
-	-- 		["Content-Type"] = "application/json"
-	-- 	},
-	-- 	data = json.encode({
-	-- 		branch = "master",
-	-- 		mode = "download",
-	-- 		assets_index = "return {}"
-	-- 	})
-	-- })
-
-	-- if code ~= 200 then
-	-- 	log_error("无法同步美术资源。服务器返回代码：" .. code)
-	-- 	log_error("服务器回复: " .. (response_body or "nil"))
-	-- 	return false
-	-- end
-
-	-- local ok, resp_json = pcall(json.decode, response_body)
-	-- if not ok or not resp_json then
-	-- 	log_error("无法解码资源同步的服务器回复。可能服务器繁忙，可稍后尝试重试。")
-	-- 	return false
-	-- end
-
-	-- -- 删除文件
-	-- for _, file_path in ipairs(resp_json.delete_files or {}) do
-	-- 	local local_file_path = "_assets/" .. file_path
-	-- 	if FS.getInfo(local_file_path) and not delete_file(local_file_path) then
-	-- 		log_error("删除文件失败：" .. file_path)
-	-- 		return false
-	-- 	else
-	-- 		log_info("删除文件：" .. file_path)
-	-- 	end
-	-- end
 
 	-- 下载文件
 	local url = server_address .. "assets/download"

@@ -1,7 +1,7 @@
 -- chunkname: @./mods/all/mod_db.lua
 local log = require("klua.log"):new("mod_db")
 local mod_utils = require("mod_utils")
-local mod_main_config = require("mod_main_config")
+local mod_main_config = require("mods.local.mod_main_config")
 local FS = love.filesystem
 local mod_db = {}
 
@@ -84,7 +84,7 @@ end
 ---@return table 升序排序的表
 function mod_db.check_get_available_mods()
 	local mods_datas = {}
-	local mod_subdirs = mod_utils.get_subdirs("mods", true, function(name, path)
+	local mod_subdirs = mod_utils.get_subdirs("mods/local", true, function(name, path)
 		return not table.contains(mod_main_config.not_mod_path, name)
 	end)
 
@@ -130,6 +130,17 @@ function mod_db.check_get_available_mods()
 	end
 
 	return mods_datas
+end
+
+function mod_db:remove_mod(mod_name)
+	for i, mod_data in ipairs(self.mods_datas) do
+		if mod_data.name == mod_name then
+			table.remove(self.mods_datas, i)
+			self.mods_count = self.mods_count - 1
+			return true
+		end
+	end
+	return false
 end
 
 return mod_db
