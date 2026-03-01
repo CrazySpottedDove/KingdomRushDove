@@ -30,7 +30,7 @@ local kui_db = require("klove.kui_db")
 
 require("gg_views_custom")
 if not is_android then
-	require("mod_manager_view")
+	require("dove_modules.gui.mod_manager_view")
 end
 
 local IS_KR1 = KR_GAME == "kr1"

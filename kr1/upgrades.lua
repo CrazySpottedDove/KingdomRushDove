@@ -783,7 +783,9 @@ function upgrades:arrows()
 		"arrow_armor_piercer_royal_archers",
 		"tower_royal_archers_arrow_lvl4",
 		"bullet_tower_ballista_lvl4",
-		"bullet_tower_ballista_skill_final_shot"
+		"bullet_tower_ballista_skill_final_shot",
+		"arrow_hero_vesper_long_arrow",
+		"arrow_hero_vesper_short_arrow"
 	}
 end
 
