@@ -29,7 +29,9 @@ require("klove.kui")
 local kui_db = require("klove.kui_db")
 
 require("gg_views_custom")
-require("mod_manager_view")
+if not is_android then
+	require("mod_manager_view")
+end
 
 local IS_KR1 = KR_GAME == "kr1"
 local IS_KR3 = KR_GAME == "kr3"
@@ -661,8 +663,10 @@ function screen_map:init(w, h, done_callback)
 	self.launch_options_panel_view = LaunchOptionsPanelView:new(sw, sh)
 	self.window:add_child(self.launch_options_panel_view)
 
-	self.mod_manager_view = ModManagerView:new(sw, sh)
-	self.window:add_child(self.mod_manager_view)
+	if not is_android then
+		self.mod_manager_view = ModManagerView:new(sw, sh)
+		self.window:add_child(self.mod_manager_view)
+	end
 
 	if self.generation == 1 then
 		S:queue("MusicMap1")
@@ -809,10 +813,13 @@ function screen_map:keypressed(key, isrepeat)
 			self.launch_options_panel_view:hide()
 
 			return true
-		elseif not self.mod_manager_view.hidden then
-			self.mod_manager_view:hide()
+		end
+		if not is_android then
+			if not self.mod_manager_view.hidden then
+				self.mod_manager_view:hide()
 
-			return true
+				return true
+			end
 		end
 
 		return false
@@ -836,7 +843,7 @@ function screen_map:keypressed(key, isrepeat)
 	elseif key == "f2" then
 		hide_others()
 		self.criket_panel_view:show()
-	elseif key == "f3" then
+	elseif key == "f3" and not is_android then
 		hide_others()
 		self.mod_manager_view:show()
 	elseif key == "1" then
@@ -5434,10 +5441,12 @@ function OptionsView:initialize(sw, sh)
 
 	self.back:add_child(title)
 
+	local button_height = 100
+
 	local config_button = GGOptionsButton:new("修改配置")
 	config_button:set_anchor_to_center()
 	config_button.pos.x = -75
-	config_button.pos.y = 100
+	config_button.pos.y = button_height
 	function config_button.on_click()
 		S:queue("GUIButtonCommon")
 		screen_map.option_panel:hide()
@@ -5445,10 +5454,11 @@ function OptionsView:initialize(sw, sh)
 	end
 	self.back:add_child(config_button)
 
+	button_height = button_height + 100
 	local keyset_button = GGOptionsButton:new("修改键位")
 	keyset_button:set_anchor_to_center()
 	keyset_button.pos.x = -75
-	keyset_button.pos.y = 200
+	keyset_button.pos.y = button_height
 	function keyset_button.on_click()
 		S:queue("GUIButtonCommon")
 		screen_map.option_panel:hide()
@@ -5456,10 +5466,11 @@ function OptionsView:initialize(sw, sh)
 	end
 	self.back:add_child(keyset_button)
 
+	button_height = button_height + 100
 	local launch_options_button = GGOptionsButton:new("修改启动项")
 	launch_options_button:set_anchor_to_center()
 	launch_options_button.pos.x = -75
-	launch_options_button.pos.y = 300
+	launch_options_button.pos.y = button_height
 	function launch_options_button.on_click()
 		S:queue("GUIButtonCommon")
 		screen_map.option_panel:hide()
@@ -5467,21 +5478,25 @@ function OptionsView:initialize(sw, sh)
 	end
 	self.back:add_child(launch_options_button)
 
-	local mod_manager_button = GGOptionsButton:new("模组管理器")
-	mod_manager_button:set_anchor_to_center()
-	mod_manager_button.pos.x = -75
-	mod_manager_button.pos.y = 400
-	function mod_manager_button.on_click()
-		S:queue("GUIButtonCommon")
-		screen_map.option_panel:hide()
-		screen_map.mod_manager_view:show()
+	if not is_android then
+		button_height = button_height + 100
+		local mod_manager_button = GGOptionsButton:new("模组管理器")
+		mod_manager_button:set_anchor_to_center()
+		mod_manager_button.pos.x = -75
+		mod_manager_button.pos.y = button_height
+		function mod_manager_button.on_click()
+			S:queue("GUIButtonCommon")
+			screen_map.option_panel:hide()
+			screen_map.mod_manager_view:show()
+		end
+		self.back:add_child(mod_manager_button)
 	end
-	self.back:add_child(mod_manager_button)
 
+	button_height = button_height + 100
 	local restart_button = GGOptionsButton:new("重启游戏")
 	restart_button:set_anchor_to_center()
 	restart_button.pos.x = -75
-	restart_button.pos.y = 500
+	restart_button.pos.y = button_height
 	function restart_button.on_click()
 		S:queue("GUIButtonCommon")
 		love.event.quit("restart")
