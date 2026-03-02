@@ -936,6 +936,97 @@ end
 
 --- 使每条路线出怪随机化
 function wave_db:randomize_creeps()
+	if self.format == "tsv" then
+		-- 按 wave 命令将 db_cmds 分组
+		local wave_groups = {}
+		local current_group = nil
+
+		for _, cmd in ipairs(self.db_cmds) do
+			if cmd.name == "wave" then
+				current_group = {
+					cmds = {}
+				}
+				table.insert(wave_groups, current_group)
+			elseif cmd.name == "spawn" and current_group then
+				table.insert(current_group.cmds, cmd)
+			end
+		end
+
+		local enumerate = {}
+		local g_0 = self:initial_gold()
+		local g_t = g_0
+		local t = #wave_groups
+		local creep_count = 0
+		local creep_count_per_group = {}
+
+		for i, wg in ipairs(wave_groups) do
+			creep_count_per_group[i] = 0
+
+			for _, cmd in ipairs(wg.cmds) do
+				for _, es in ipairs(cmd.spawns) do
+					local pid = es.pi
+
+					if not enumerate[pid] then
+						enumerate[pid] = {}
+					end
+
+					local tpl = E:get_template(es.enemy)
+
+					if tpl then
+						table.insert(enumerate[pid], es.enemy)
+						g_t = g_t + tpl.enemy.gold
+					end
+
+					creep_count_per_group[i] = creep_count_per_group[i] + 1
+					creep_count = creep_count + 1
+				end
+			end
+		end
+
+		local lambda = (g_t - g_0) / creep_count
+		local k = ((g_t / g_0) ^ (1 / t) - 1) / lambda
+
+		local function calculate_creep_count_for_group(n)
+			return math.ceil(g_0 * (k * lambda + 1) ^ (n - 1) * k)
+		end
+
+		for i, wg in ipairs(wave_groups) do
+			if creep_count_per_group[i] > 0 then
+				local expected_count = calculate_creep_count_for_group(i)
+				local spawn_factor = expected_count / creep_count_per_group[i]
+				local spawn_step = 0
+
+				for _, cmd in ipairs(wg.cmds) do
+					local new_spawns = {}
+
+					for _, es in ipairs(cmd.spawns) do
+						local pid = es.pi
+						local path_pool = enumerate[pid]
+
+						if path_pool then
+							spawn_step = spawn_step + spawn_factor
+							local count = math.floor(spawn_step)
+
+							if count > 0 then
+								spawn_step = spawn_step - count
+
+								for l = 1, count do
+									local new_es = table.deepclone(es)
+									new_es.enemy = table.random(path_pool)
+									table.insert(new_spawns, new_es)
+								end
+							end
+						end
+					end
+
+					cmd.spawns = new_spawns
+				end
+			end
+		end
+
+		return
+	end
+
 	local enumerate = {}
 	local groups = self.db.groups
 	local g_0 = self:initial_gold()

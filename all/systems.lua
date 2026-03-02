@@ -503,6 +503,7 @@ function sys.wave_spawn_tsv.cmd_fns.wave(store, cmd)
 		U.y_wait(store, wait_time, function(store, wait_time)
 			return store.send_next_wave or store.force_next_wave
 		end)
+
 	end
 
 	local actual_wait_time = store.tick_ts - start_ts
@@ -555,39 +556,42 @@ end
 
 function sys.wave_spawn_tsv.cmd_fns.spawn(store, cmd, wave_name)
 	local wait_time = cmd.wait_time
+	local multiplier = store.config.enemy_count_multiplier
 
-	if wait_time and wait_time > 0 then
-		U.y_wait(store, wait_time, function(store, wait_time)
-			return store.force_next_wave
-		end)
-	end
-
-	if store.force_next_wave then
-		log.debug("skipping spawn command due to force_next_wave")
-
-		return
-	end
-
-	for _, o in pairs(cmd.spawns) do
-		if not U.is_seen(store, o.enemy) then
-			signal.emit("wave-notification", "icon", o.enemy)
-			U.mark_seen(store, o.enemy)
+	for count = 1, multiplier do
+		if wait_time and wait_time > 0 then
+			U.y_wait(store, wait_time / multiplier, function(store, wait_time)
+				return store.force_next_wave
+			end)
 		end
 
-		local e = E:create_entity(o.enemy)
+		if store.force_next_wave then
+			log.debug("skipping spawn command due to force_next_wave")
 
-		if e then
-			store.current_spawn_idx = store.current_spawn_idx + 1
+			return
+		end
 
-			local path = P.paths[o.pi]
+		for _, o in pairs(cmd.spawns) do
+			if not U.is_seen(store, o.enemy) then
+				signal.emit("wave-notification", "icon", o.enemy)
+				U.mark_seen(store, o.enemy)
+			end
 
-			e.nav_path.pi = o.pi
-			e.nav_path.spi = o.spi == "*" and math.random(#path) or o.spi
-			e.nav_path.ni = P:get_start_node(o.pi)
+			local e = E:create_entity(o.enemy)
 
-			queue_insert(store, e)
-		else
-			log.error("Entity template %s not found", o.enemy)
+			if e then
+				store.current_spawn_idx = store.current_spawn_idx + 1
+
+				local path = P.paths[o.pi]
+
+				e.nav_path.pi = o.pi
+				e.nav_path.spi = o.spi == "*" and math.random(#path) or o.spi
+				e.nav_path.ni = P:get_start_node(o.pi)
+
+				queue_insert(store, e)
+			else
+				log.error("Entity template %s not found", o.enemy)
+			end
 		end
 	end
 end

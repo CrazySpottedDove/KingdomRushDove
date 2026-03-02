@@ -21,7 +21,7 @@ local STATE_STRING_MAP = {
 	[STATE_DOWNLOADING_ASSETS] = "下载美术资源中（可能需要较长时间）……",
 	[STATE_DOWNLOADING_CODE] = "下载代码资源中……",
 	[STATE_COMMITTING_CHANGES] = "提交更新事务中……",
-	[STATE_SELECT_URL] = "选择更新地址中……",
+	[STATE_SELECT_URL] = "选择更新地址中……（可能需要较长时间，提示程序未响应为正常现象，耐心等待即可）",
 	[STATE_CHECK_UPDATE] = "检查更新中……"
 }
 local state = STATE_DOWNLOADING_ASSETS
@@ -51,7 +51,7 @@ end
 
 local function set_state(new_state)
 	state = new_state
-	log_info(STATE_STRING_MAP[state])
+-- log_info(STATE_STRING_MAP[state])
 end
 
 -- 文件系统操作封装
