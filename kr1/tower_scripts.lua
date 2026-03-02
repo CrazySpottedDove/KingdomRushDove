@@ -8673,7 +8673,7 @@ function scripts.aura_tower_necromancer_skill_rider.update(this, store)
 		if #nearests > 0 then
 			local nearest = nearests[1]
 			path_pi, path_spi, path_ni = unpack(nearest)
-			return path_ni < 10 and path_pi ~= paths_flattend[#paths_flattend]
+			return path_ni < 10 and (path_pi ~= paths_flattend[#paths_flattend] or #paths_flattend == 1)
 		end
 
 		return false
