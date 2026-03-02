@@ -1042,6 +1042,10 @@ function screen_map:keypressed(key, isrepeat)
 	end
 end
 
+function screen_map:wheelmoved(x, y)
+	self.window:wheelmoved(x, y)
+end
+
 function screen_map:keyreleased(key)
 	return
 end
@@ -3764,12 +3768,10 @@ function EncyclopediaView:initialize(sw, sh)
 		self:hide()
 	end
 end
-
 function EncyclopediaView:show()
 	EncyclopediaView.super.show(self)
 
 	local user_data = storage:load_slot()
-
 	E:load()
 	UPGR:set_levels(user_data.upgrades)
 	UPGR:set_list_id(user_data.upgrade_list_id)

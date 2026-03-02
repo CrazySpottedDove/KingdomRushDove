@@ -7,12 +7,20 @@ local copy = table.deepclone
 local entity_db = {}
 
 entity_db.last_id = 1
-
 function entity_db:load()
 	self.last_id = 1
-	self.components = {}
-	self.entities = {}
-	package.loaded.components = nil
+
+	if not self.components then
+		self.components = {}
+		require("components")
+	end
+
+	if not self.entities then
+		self.entities = {}
+	end
+
+	-- components 模块没有任何数据，也不会受到修改，因此也直接作为缓存，不重新加载。
+	-- package.loaded.components = nil
 	package.loaded.game_templates = nil
 	package.loaded.templates = nil
 	package.loaded.foundamental_towers = nil
@@ -24,12 +32,12 @@ function entity_db:load()
 	package.loaded.enemies = nil
 	package.loaded.boss = nil
 	package.loaded.hero_boss = nil
-	package.loaded.game_scripts = nil
+	-- 作为纯函数模块，并不需要重新加载，直接作为缓存即可
+	-- package.loaded.game_scripts = nil
 	package.loaded["kr1.data.balance"] = nil
-
-	require("components")
 	require("templates")
 	require("game_templates")
+-- self:report_status()
 -- self:test_tween()
 end
 
@@ -53,6 +61,22 @@ function entity_db:test_tween()
 			end
 		end
 	end
+end
+
+function entity_db:report_status()
+	local template_count = 0
+
+	for _ in pairs(self.entities) do
+		template_count = template_count + 1
+	end
+
+	local component_count = 0
+
+	for _ in pairs(self.components) do
+		component_count = component_count + 1
+	end
+
+	print("entity_db status: " .. template_count .. " templates, " .. component_count .. " components")
 end
 
 -- 性能与内存测试函数
@@ -127,6 +151,11 @@ function entity_db:register_t(name, base)
 	-- 	return self.entities[name]
 	-- end
 
+	-- 通过这么做，允许重复加载时直接覆写原来的表，同样起到了数值重置的效果，而避免了克隆，从而提升了执行性能。
+	if self.entities[name] then
+		return self.entities[name]
+	end
+
 	local t
 
 	if base then
@@ -183,7 +212,9 @@ function entity_db:add_comps(entity, ...)
 			return
 		end
 
-		entity[v] = copy(self.components[v])
+		if not entity[v] then
+			entity[v] = copy(self.components[v])
+		end
 	end
 end
 
@@ -220,63 +251,21 @@ function entity_db:clone_entity(e)
 	return out
 end
 
-function entity_db:append_templates(entity, ...)
-	if entity == nil then
-		log.error("entity is nil")
-
-		return
-	end
-
-	for _, tn in pairs({...}) do
-		local tpl = self.entities[tn]
-
-		if not tpl then
-			log.error("template %s not found", tn)
-
-			return
-		end
-
-		for k, v in pairs(tpl) do
-			entity[k] = copy(v)
-		end
-	end
-end
-
-function entity_db:get_component(c)
-	local cmp
-
-	if type(c) == "string" then
-		cmp = self.components[c]
-	else
-		cmp = c
-	end
-
-	if not cmp then
-		log.error("component %s not found", c)
-
-		return nil
-	end
-
-	return cmp
-end
-
 --- 获取对应实体模板
 ---@param t string 模板名
 function entity_db:get_template(t)
-	local tpl = self.entities[t]
-
 	-- if type(t) == "string" then
 	-- 	tpl = self.entities[t]
 	-- else
 	-- 	tpl = t
 	-- end
-	if not tpl then
-		log.error("template %s not found", t)
 
-		return nil
-	end
+	-- 开发时才启用，发布时关闭。
+	-- if not self.entities[t] then
+	-- log.error("template %s not found", t)
+	-- end
 
-	return tpl
+	return self.entities[t]
 end
 
 function entity_db:set_template(name, t)
@@ -709,6 +698,10 @@ end
 
 -- 在 difficulty:patch_templates() 后调用！
 function entity_db:patch_config(config)
+	-- 如果所有倍率都是 1，就直接跳过，避免不必要的循环和乘法运算，提升性能。
+	if config.enemy_damage_multiplier == 1 and config.enemy_health_multiplier == 1 and config.enemy_gold_multiplier == 1 and config.enemy_health_damage_multiplier == 1 and config.enemy_speed_multiplier == 1 then
+		return
+	end
 	for _, t in pairs(self.entities) do
 		if t.enemy then
 			if t.health.hp_max then

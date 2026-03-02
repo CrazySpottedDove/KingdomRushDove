@@ -642,7 +642,7 @@ function director:update(dt)
 				if item.max_fps then
 					fps = item.max_fps
 				else
-					fps = not self.params.vsync and 60 or nil
+					fps = not self.params.vsync and DRAW_FPS or nil
 				end
 
 				item.limit_fps = fps

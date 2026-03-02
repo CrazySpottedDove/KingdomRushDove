@@ -13,7 +13,7 @@ local i18n = require("i18n")
 require("gg_views")
 
 local FADE_IN_TIME = 0.5
-local FADE_OUT_TIME = 0.25
+local FADE_OUT_TIME = 0.35
 
 PopUpView = class("PopUpView", KView)
 
