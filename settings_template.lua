@@ -1,7 +1,7 @@
 return {
 	fps = 60,
-	fullscreen = false,
-	height = 1440,
+	fullscreen = true,
+	height = 768,
 	highdpi = false,
 	large_pointer = false,
 	locale = "zh-Hans",
@@ -11,7 +11,7 @@ return {
 	volume_fx = 1,
 	volume_music = 1,
 	vsync = false,
-	width = 2560,
+	width = 1024,
 	sound_pool_size = 1,
 	update_enabled = true,
 	update_last_site = "https://krdovedownload6.crazyspotteddove.top:52000/",
