@@ -559,11 +559,21 @@ function screen_map:init(w, h, done_callback)
 	self.hero_icon_portrait.propagate_on_up = true
 	self.hero_icon_portrait.hidden = true
 
+	self.hero_icon_portrait_2 = KImageView:new("mapButtons_portrait_hero_0001")
+	self.hero_icon_portrait_2.propagate_on_click = true
+	self.hero_icon_portrait_2.propagate_on_down = true
+	self.hero_icon_portrait_2.propagate_on_up = true
+	self.hero_icon_portrait_2.hidden = true
+
 	if self.user_data.heroes.selected then
 		self.hero_icon_portrait.hidden = false
 	end
 
 	h_button:add_child(self.hero_icon_portrait)
+	h_button:add_child(self.hero_icon_portrait_2)
+
+	self.hero_portrait_width = self.hero_icon_portrait.size.x
+	self.hero_portrait_height = self.hero_icon_portrait.size.y
 
 	self.skill_star = KImageView:new("mapButtons_portrait_hero_points")
 	self.skill_star.anchor = v(self.skill_star.size.x / 2, self.skill_star.size.y / 2)
@@ -4918,12 +4928,14 @@ end
 
 HeroRoomViewKR1 = class("HeroRoomViewKR1", PopUpView)
 
+--- 返回所有已通过关卡的哈希表
+--- @return table 已通过关卡的哈希表，键为关卡id，值为true
 function HeroRoomViewKR1:get_finished_levels()
 	local finished_levels = {}
 
 	for level, level_stats in pairs(screen_map.user_data.levels) do
 		if level_stats.stars then
-			table.insert(finished_levels, level)
+			finished_levels[level] = true
 		end
 	end
 
@@ -4936,35 +4948,45 @@ function HeroRoomViewKR1:initialize(size)
 	local ht = self:get_child_by_id("hero_thumbs")
 	local finished_levels = self:get_finished_levels()
 	local single_hero_thumb_x_size
-	local scale = V.v(0.5, 0.5)
+	local scale = V.v(0.625, 0.625)
+	local per_row = 7
+	local spacing_x = 46 -- 7列右边缘在 6*46+84*0.625=328.5，加滚动条24px共352.5，容器355px
+	local spacing_y = 50
 
-	for i, d in ipairs(screen_map.hero_data) do
-		local tpos = V.v((i - 1) % 10 * 37.5, math.floor((i - 1) / 10) * 38.5)
-		local v2_name = U.splicing_from_kr(d.from_kr, string.format("hero_room_thumbs_%04d", d.thumb))
+	-- 深色半透明主题色
+	ht.colors.scroller_background = {40, 30, 20, 180}
+	ht.colors.scroller_foreground = {140, 110, 60, 220}
+	ht.scroll_amount = spacing_y
+
+	for i, data in ipairs(screen_map.hero_data) do
+		local col = (i - 1) % per_row
+		local row = math.floor((i - 1) / per_row)
+		local thumb_pos = V.v(col * spacing_x, row * spacing_y)
+		local v2_name = U.splicing_from_kr(data.from_kr, string.format("hero_room_thumbs_%04d", data.thumb))
 		local v2 = KImageView:new(v2_name)
 
-		v2.pos = tpos
+		v2.pos = thumb_pos
 		v2.scale = scale
 
 		ht:add_child(v2)
 
 		local bo = KImageView:new("hero_room_thumbs_0000")
 
-		bo.pos = tpos
+		bo.pos = thumb_pos
 		bo.scale = scale
 
 		ht:add_child(bo)
 
-		if not table.find(finished_levels, d.available_level) then
+		if not finished_levels[data.available_level] then
 			local v1 = KImageView:new("hero_room_portraits_lock")
 
 			v1.scale = scale
-			v1.pos = tpos
+			v1.pos = thumb_pos
 
 			ht:add_child(v1)
 		end
 
-		v2.id = d.name
+		v2.id = data.name
 		single_hero_thumb_x_size = v2.size.x
 
 		function v2.on_click(this)
@@ -4982,6 +5004,11 @@ function HeroRoomViewKR1:initialize(size)
 		end
 	end
 
+	-- 设置滚动列表内容高度（用于计算滚动范围）
+	local num_rows = math.ceil(#screen_map.hero_data / per_row)
+
+	ht._bottom_y = (num_rows - 1) * spacing_y + single_hero_thumb_x_size * scale.y
+
 	local function create_select_view(name)
 		local view = KImageView(name)
 
@@ -4994,11 +5021,56 @@ function HeroRoomViewKR1:initialize(size)
 		return view
 	end
 
-	self.check_image_1 = create_select_view("hero_room_thumbs_select_0001")
-	self.check_image_2 = create_select_view("hero_room_thumbs_select_0001")
+	local function create_slot_indicator(slot_number, bg_color)
+		local thumb_render_size = single_hero_thumb_x_size * scale.x
+		local overlay = KView:new(V.v(thumb_render_size, thumb_render_size))
+
+		overlay.hidden = true
+		overlay.not_thumb = true
+		overlay.propagate_on_click = true
+
+		-- 复用选中框资源作为边框
+		local border = KImageView:new("hero_room_thumbs_select_0000")
+		border.scale = scale
+		border.anchor = v(border.size.x / 2, border.size.y / 2)
+		border.pos = v(thumb_render_size / 2, thumb_render_size / 2)
+		border.propagate_on_click = true
+		overlay:add_child(border)
+
+		-- 数字标签
+		local label = GGShaderLabel:new(V.v(thumb_render_size, thumb_render_size))
+		local label_size_factor = 0.5
+		label.scale = V.vv(label_size_factor)
+		label.pos = V.v(thumb_render_size * (1 - label_size_factor * 1.1), thumb_render_size * (1 - label_size_factor * 1.1))
+		label.text = tostring(slot_number)
+		label.font_name = "h" -- 使用标题字体
+		label.font_size = 28 -- 更大的字体
+		label.text_align = "center"
+		label.vertical_align = "middle"
+		label.colors.text = {255, 255, 255, 255}
+		label.propagate_on_click = true
+
+		-- 添加描边和发光效果
+		label.shaders = {"p_outline"}
+		label.shader_args = {{ -- 黑色描边
+			thickness = 3,
+			outline_color = {0, 0, 0, 1}
+		}}
+
+		overlay:add_child(label)
+		ht:add_child(overlay)
+
+		return overlay
+	end
+
+	-- 调用时使用更柔和的颜色
+	self.check_image_1 = create_slot_indicator(1, {220, 80, 80, 180}) -- 更亮的红色
+	self.check_image_2 = create_slot_indicator(2, {80, 120, 220, 180}) -- 更亮的蓝色
+
+	self.check_image_1 = create_slot_indicator(1, {200, 50, 50, 80})
+	self.check_image_2 = create_slot_indicator(2, {50, 50, 200, 80})
 	self.border_image = create_select_view("hero_room_thumbs_select_0000")
 	self.hover_image = create_select_view("hero_room_thumbs_select_0003")
-	self.check_image_1.anchor.x = self.check_image_1.anchor.x + single_hero_thumb_x_size * scale.x - self.check_image_1.size.x * 0.06
 
 	local bs = self:get_child_by_id("hero_room_sel_select")
 	local bd = self:get_child_by_id("hero_room_sel_deselect")
@@ -5030,6 +5102,7 @@ function HeroRoomViewKR1:initialize(size)
 	self.back = self:get_child_by_id("back")
 	self:get_child_by_id("done_button").on_click = self:get_child_by_id("close_button").on_click
 
+	-- 适配原版存档
 	if type(screen_map.user_data.heroes.selected) ~= "table" then
 		screen_map.user_data.heroes.selected = {screen_map.user_data.heroes.selected}
 	end
@@ -5046,28 +5119,77 @@ function HeroRoomViewKR1:initialize(size)
 		if selected_name then
 			self:select_hero(selected_name, true)
 		end
-
-		if selected_name and get_hero_index(selected_name) then
-			local hd = screen_map.hero_data[get_hero_index(selected_name)]
-			local img_name = U.splicing_from_kr(hd.from_kr, string.format("mapButtons_portrait_hero_%04i", hd.icon))
-
-			screen_map.hero_icon_portrait:set_image(img_name)
-		else
-			screen_map.hero_icon_portrait:set_image("mapButtons_portrait_hero_0000")
-		end
 	end
+
+	self:update_portrait_display()
 end
 
-function HeroRoomViewKR1:show()
-	HeroRoomViewKR1.super.show(self)
-	local user_data = storage:load_slot()
-	E:load()
-	UPGR:set_levels(user_data.upgrades)
-	UPGR:set_list_id(user_data.upgrade_list_id)
-	DI:set_level(screen_map.user_data.difficulty)
-	UPGR:patch_templates(6)
-	DI:patch_templates()
-	E:patch_config(storage:load_config())
+function HeroRoomViewKR1:update_portrait_display()
+	local sel = screen_map.user_data.heroes.selected
+	local p1 = screen_map.hero_icon_portrait
+	local p2 = screen_map.hero_icon_portrait_2
+	local W = screen_map.hero_portrait_width
+	local H = screen_map.hero_portrait_height
+
+	if not sel or #sel == 0 then
+		p1:set_image("mapButtons_portrait_hero_0000")
+		p1.image_scale = 1
+		p1.clip = false
+		p1.clip_fn = nil
+		p1.size.x = W
+		p1.image_offset = nil
+		p1.pos.x = 0
+		p1.pos.y = 0
+		p1.hidden = false
+		p2.hidden = true
+	elseif #sel == 1 then
+		local hd = screen_map.hero_data[get_hero_index(sel[1])]
+		local img = U.splicing_from_kr(hd.from_kr, string.format("mapButtons_portrait_hero_%04i", hd.icon))
+
+		p1:set_image(img)
+		p1.image_scale = 1
+		p1.clip = false
+		p1.clip_fn = nil
+		p1.size.x = W
+		p1.image_offset = nil
+		p1.pos.x = 0
+		p1.pos.y = 0
+		p1.hidden = false
+		p2.hidden = true
+	else
+		-- 两名英雄：对角线切割，p1 显示左上半区，p2 显示右下半区
+		-- 对角线从 (W/2+d, 0) 到 (W/2-d, H)，斜向左倾，避免生硬直切
+		local hd1 = screen_map.hero_data[get_hero_index(sel[1])]
+		local hd2 = screen_map.hero_data[get_hero_index(sel[2])]
+		local img1 = U.splicing_from_kr(hd1.from_kr, string.format("mapButtons_portrait_hero_%04i", hd1.icon))
+		local img2 = U.splicing_from_kr(hd2.from_kr, string.format("mapButtons_portrait_hero_%04i", hd2.icon))
+		local d = W / 5 -- 对角线偏移量（像素），值越大斜度越大
+
+		p1:set_image(img1)
+		p1.image_scale = 1
+		p1.clip = true
+		p1.size.x = W
+		p1.image_offset = nil
+		p1.pos.x = 0
+		p1.pos.y = 0
+		p1.clip_fn = function()
+			G.polygon("fill", 0, 0, W / 2 + d, 0, W / 2 - d, H, 0, H)
+		end
+		p1.hidden = false
+
+		-- p2 与 p1 重叠放置（同为 pos.x=0），各自的 clip_fn 保证不互相遮挡
+		p2:set_image(img2)
+		p2.image_scale = 1
+		p2.clip = true
+		p2.size.x = W
+		p2.image_offset = nil
+		p2.pos.x = 0
+		p2.pos.y = 0
+		p2.clip_fn = function()
+			G.polygon("fill", W / 2 + d, 0, W, 0, W, H, W / 2 - d, H)
+		end
+		p2.hidden = false
+	end
 end
 
 function HeroRoomViewKR1:show_hero(name)
@@ -5102,7 +5224,7 @@ function HeroRoomViewKR1:show_hero(name)
 	local bd = self:get_child_by_id("hero_room_sel_deselect")
 	local finished_levels = self:get_finished_levels()
 
-	if not table.contains(finished_levels, hd.available_level) then
+	if not finished_levels[hd.available_level] then
 		ll.hidden = false
 		ll.text = string.format(_("MAP_HERO_ROOM_UNLOCK"), hd.available_level)
 		bs.hidden = true
@@ -5140,11 +5262,6 @@ function HeroRoomViewKR1:deselect_hero(name)
 
 	bs.hidden = false
 	bd.hidden = true
-	screen_map.hero_icon_portrait.image_scale = 1
-	screen_map.hero_icon_portrait.pos.x = 0
-	screen_map.hero_icon_portrait.pos.y = 0
-
-	screen_map.hero_icon_portrait:set_image("mapButtons_portrait_hero_0010")
 
 	local last_hero_num = #screen_map.user_data.heroes.selected
 
@@ -5169,6 +5286,7 @@ function HeroRoomViewKR1:deselect_hero(name)
 		end
 	end
 
+	self:update_portrait_display()
 	storage:save_slot(screen_map.user_data)
 end
 
@@ -5192,16 +5310,6 @@ function HeroRoomViewKR1:select_hero(name, silent)
 	if not silent then
 		S:queue(ht.sound_events.hero_room_select)
 	end
-
-	screen_map.hero_icon_portrait.pos.x = 0
-	screen_map.hero_icon_portrait.pos.y = 0
-	screen_map.hero_icon_portrait.image_scale = 1
-
-	local img_name = U.splicing_from_kr(hd.from_kr, string.format("mapButtons_portrait_hero_%04i", hd.icon))
-
-	screen_map.hero_icon_portrait:set_image(img_name)
-
-	screen_map.hero_icon_portrait.hidden = false
 
 	if not screen_map.user_data.heroes.selected then
 		screen_map.user_data.heroes.selected = {}
@@ -5249,6 +5357,7 @@ function HeroRoomViewKR1:select_hero(name, silent)
 		table.insert(screen_map.user_data.heroes.selected, name)
 	end
 
+	self:update_portrait_display()
 	storage:save_slot(screen_map.user_data)
 end
 

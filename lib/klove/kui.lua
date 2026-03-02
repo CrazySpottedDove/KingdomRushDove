@@ -2048,9 +2048,12 @@ function KScrollList:draw()
 	G.rotate(-self.r)
 
 	if not self.scroller_hidden and self._bottom_y > self.size.y then
-		G.setColor_old(self.colors.scroller_background)
+		local _, _, _, pa = G.getColor()
+		local bg = self.colors.scroller_background
+		local fg = self.colors.scroller_foreground
+		G.setColor(bg[1] / 255, bg[2] / 255, bg[3] / 255, bg[4] * pa / 255)
 		G.rectangle("fill", self.scroller_rect.pos.x, self.scroller_rect.pos.y, self.scroller_rect.size.x, self.scroller_rect.size.y)
-		G.setColor_old(self.colors.scroller_foreground)
+		G.setColor(fg[1] / 255, fg[2] / 255, fg[3] / 255, fg[4] * pa / 255)
 
 		local scroller_height = self.size.y / self._bottom_y * (self.size.y - 2 * self.scroller_margin)
 		local scroller_offset = -self.scroll_origin_y / self._bottom_y * (self.size.y - 2 * self.scroller_margin)
@@ -2102,17 +2105,34 @@ function KScrollList:update(dt)
 	local mx, my, any_button_down = self:get_window():get_mouse_position()
 	local wx, wy = self:screen_to_view(mx, my)
 
-	if any_button_down and self._down_y and V.is_inside(V.v(wx, wy), self.scroller_rect) then
+	if any_button_down and self._down_y then
 		local a = wy - self._down_y
-		local scroller_factor = self._bottom_y / (self.size.y - 2 * self.scroller_margin)
-		local scroller_step = self.scroll_amount / scroller_factor
 
-		if math.abs(a) >= math.abs(scroller_step) then
-			local steps = km.sign(a) * math.floor(math.abs(a) / scroller_step)
+		if self._drag_in_scroller then
+			-- 滚动条拖拽：比例 1:1 平滑映射到内容滚动量
+			local scroller_height = self.size.y / self._bottom_y * (self.size.y - 2 * self.scroller_margin)
+			local scroller_range = self.size.y - 2 * self.scroller_margin - scroller_height
 
-			self._down_y = self._down_y + steps * scroller_step
-			self.scroll_origin_y = self.scroll_origin_y - steps * self.scroll_amount
-			self.scroll_origin_y = km.clamp(-(self._bottom_y - self.size.y), 0, self.scroll_origin_y)
+			if scroller_range > 0 then
+				local content_range = self._bottom_y - self.size.y
+				local ratio = content_range / scroller_range
+
+				self.scroll_origin_y = km.clamp(-(self._bottom_y - self.size.y), 0, self._scroll_origin_start - a * ratio)
+			end
+		else
+			-- 内容区拖拽：1:1 跟随鼠标（向下拖 = 向上滚）
+			self.scroll_origin_y = km.clamp(-(self._bottom_y - self.size.y), 0, self._scroll_origin_start + a)
+			self._target_y = nil -- 拖拽时取消滚轮插值动画
+		end
+	elseif self._target_y ~= nil then
+		-- 平滑插值到滚轮目标位置
+		local diff = self._target_y - self.scroll_origin_y
+
+		if math.abs(diff) < 0.5 then
+			self.scroll_origin_y = self._target_y
+			self._target_y = nil
+		else
+			self.scroll_origin_y = self.scroll_origin_y + diff * math.min(1, 14 * dt)
 		end
 	end
 end
@@ -2120,9 +2140,10 @@ end
 function KScrollList:on_down(button, x, y)
 	log.paranoid("button:%s x:%s, y:%s", button, x, y)
 
-	if button == 1 and V.is_inside(V.v(x, y), self.scroller_rect) and self._bottom_y > self.size.y then
+	if button == 1 and self._bottom_y > self.size.y then
 		self._down_y = y
 		self._scroll_origin_start = self.scroll_origin_y
+		self._drag_in_scroller = V.is_inside(V.v(x, y), self.scroller_rect)
 	end
 end
 
@@ -2134,8 +2155,8 @@ end
 
 function KScrollList:on_exit()
 	log.debug()
-
-	self._down_y = nil
+-- 不在 on_exit 中清除拖拽状态：鼠标离开容器不应中断进行中的拖拽
+-- 拖拽状态只在 on_up（鼠标松开）时才清除
 end
 
 function KScrollList:on_scroll(button)
@@ -2143,18 +2164,10 @@ function KScrollList:on_scroll(button)
 		return false
 	end
 
-	local amount = self.scroll_amount
-	local now = love.timer.getTime()
+	-- 累积到目标位置，由 update 做平滑插值
+	local current = self._target_y ~= nil and self._target_y or self.scroll_origin_y
 
-	if self.scroll_acceleration > 0 and self._last_scroll_time and now - self._last_scroll_time < 0.25 and self._last_scroll_direction == button then
-		amount = km.clamp(1, 30, self._last_scroll_amount * self.scroll_acceleration)
-	end
-
-	self._last_scroll_amount = amount
-	self._last_scroll_time = now
-	self._last_scroll_direction = button
-	self.scroll_origin_y = self.scroll_origin_y + (button == "wu" and 1 or -1) * amount
-	self.scroll_origin_y = km.clamp(-(self._bottom_y - self.size.y), 0, self.scroll_origin_y)
+	self._target_y = km.clamp(-(self._bottom_y - self.size.y), 0, current + (button == "wu" and 1 or -1) * self.scroll_amount)
 
 	return false
 end

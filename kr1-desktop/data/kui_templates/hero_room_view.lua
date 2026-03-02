@@ -49,9 +49,9 @@ local hero_room_view = {
 			}
 		}, {
 			id = "hero_thumbs",
-			class = "KView",
-			pos = v(113, 146),
-			size = v(310, 244)
+			class = "KScrollList",
+			pos = v(128, 146),
+			size = v(355, 244)
 		}, {
 			id = "hero_portraits",
 			class = "KView",

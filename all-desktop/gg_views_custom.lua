@@ -45,21 +45,23 @@ function PopUpView:show()
 	local back = self.back or self:get_child_by_id("back")
 
 	self:enable(false)
+	self.alpha = 0
 
 	if back then
 		back.disabled_tint_color = nil
 		back.pos = V.v(self.sw * 0.5, self.sh * 0.5 - 50)
-		back.alpha = 0
+		back.alpha = 1
 
 		table.insert(_timers, timer:tween(FADE_IN_TIME, back, {
-			alpha = 1,
 			pos = {
 				y = self.sh * 0.5
 			}
 		}, "out-quad"))
 	end
 
-	table.insert(_timers, timer:tween(FADE_IN_TIME, self.colors.background, {0, 0, 0, 160}, "in-quad"))
+	table.insert(_timers, timer:tween(FADE_IN_TIME, self, {
+		alpha = 1
+	}, "out-quad"))
 
 	self.propagating = false
 	self.propagate_on_click = false
@@ -79,15 +81,17 @@ function PopUpView:hide()
 
 	if back then
 		table.insert(_timers, timer:tween(FADE_OUT_TIME, back, {
-			alpha = 0,
 			pos = {
 				y = back.pos.y - 50
 			}
 		}, "out-quad"))
 	end
 
-	table.insert(_timers, timer:tween(FADE_OUT_TIME, self.colors.background, {0, 0, 0, 1}, "in-quad", function()
+	table.insert(_timers, timer:tween(FADE_OUT_TIME, self, {
+		alpha = 0
+	}, "in-quad", function()
 		self.hidden = true
+		self.alpha = 1
 	end))
 end
 
