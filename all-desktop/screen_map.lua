@@ -5628,6 +5628,17 @@ function OptionsView:initialize(sw, sh)
 	end
 	self.back:add_child(restart_button)
 
+	button_height = 100
+	local history_button = GGOptionsButton:new("查看更新日志")
+	history_button:set_anchor_to_center()
+	history_button.pos.x = self.back.size.x + 75
+	history_button.pos.y = button_height
+	function history_button.on_click()
+		S:queue("GUIButtonCommon")
+		love.system.openURL("https://krdovedownload4.crazyspotteddove.top/history")
+	end
+	self.back:add_child(history_button)
+
 	self.difficulty_idx = screen_map.user_data.difficulty
 
 	if not self.difficulty_idx then

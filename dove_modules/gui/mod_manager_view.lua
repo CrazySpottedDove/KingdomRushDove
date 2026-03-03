@@ -277,9 +277,14 @@ function ModManagerView:initialize(sw, sh)
 
 	-- ── 保存并关闭 按钮 ──
 	local y_btn = list_pos_y + SCROLL_H + hint_height
+
 	local save_btn = GGOptionsButton:new("保存并重启")
 	save_btn:set_anchor_to_center()
-	save_btn.pos = V.v(PANEL_W / 2, y_btn)
+	save_btn.pos = V.v(PANEL_W / 4, y_btn)
+
+	local market_btn = GGOptionsButton:new("前往插件商店")
+	market_btn:set_anchor_to_center()
+	market_btn.pos = V.v(PANEL_W * 3 / 4, y_btn)
 
 	local this = self
 	function save_btn.on_click()
@@ -289,6 +294,12 @@ function ModManagerView:initialize(sw, sh)
 	end
 
 	self.back:add_child(save_btn)
+
+	function market_btn.on_click()
+		S:queue("GUIButtonCommon")
+		love.system.openURL("https://krdovedownload4.crazyspotteddove.top/plugins")
+	end
+	self.back:add_child(market_btn)
 
 	local close_btn = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
 	close_btn.pos = V.v(PANEL_W - 20, 20)
