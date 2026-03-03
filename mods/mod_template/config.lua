@@ -1,7 +1,7 @@
 return {
 	name = "mod名称",
 	version = "版本",
-	game_version = {"kr5", "kr3", "kr2", "kr1"}, -- 支持的版本
+	game_version = {"kr5", "kr3", "kr2", "kr1"}, -- 支持的版本，可填 "kr5", "kr3", "kr2", "kr1"。
 	desc = "mod 描述",
 	url = "发布链接",
 	by = "作者",

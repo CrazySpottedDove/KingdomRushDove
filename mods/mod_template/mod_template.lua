@@ -22,8 +22,4 @@ function hook.E.load(load, self)
 	require("mod_template_templates")
 end
 
-function hook:unload(mod_data)
-	hook_utils.UNHOOK(E, "load", self.E.load)
-end
-
 return hook

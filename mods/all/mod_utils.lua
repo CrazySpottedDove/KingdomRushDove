@@ -90,7 +90,7 @@ function mod_utils.table_tostring(t)
 		if type(v) == "string" then
 			value_str = v
 		elseif type(v) == "table" then
-			value_str = "{" .. self:table_tostring(t) .. "}"
+			value_str = "{" .. self.table_tostring(t) .. "}"
 		else
 			value_str = tostring(v)
 		end

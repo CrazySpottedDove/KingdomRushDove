@@ -98,7 +98,7 @@ function hook.I.queue_load_atlas(queue_load_atlas, self, ref_scale, path, name)
 				end
 
 				queue_load_atlas(self, ref_scale, images_path, name)
-				log.info("Found atlas override %s in mod %s", group_file, mod_data.name)
+				log.info("Found atlas override %s in mod %s", lua_file, mod_data.name)
 			end
 		end
 	end
@@ -219,7 +219,7 @@ function hook.S.load_group(load_group, self, name, yielding, filter)
 
 			local origin_path = self.files_path
 
-			self.files_path = mod_files_path
+			self.files_path = files_path
 
 			load_group(self, name, yielding, filter)
 

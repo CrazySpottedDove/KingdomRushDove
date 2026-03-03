@@ -87,26 +87,4 @@ function mod_main:after_init()
 	mod_hook:after_init()
 end
 
-function mod_main:unload_mod(mod_name)
-	for i, entry in ipairs(self.loaded_mods) do
-		local mod, mod_data = unpack(entry)
-		if mod_data.name == mod_name then
-			-- 1. 调用模组自身的 unload（如果有）
-			if mod.unload then
-				mod:unload(mod_data)
-			end
-			-- 2. 从已加载列表移除
-			table.remove(self.loaded_mods, i)
-			-- 3. 从 mod_db 移除（自动停止资产 hooks 遍历）
-			mod_db:remove_mod(mod_name)
-			-- 4. 清除 package.loaded 缓存，允许重新加载
-			package.loaded[mod_name] = nil
-			log.info("Mod unloaded: %s", mod_name)
-			return true
-		end
-	end
-	log.error("Mod not found for unload: %s", mod_name)
-	return false
-end
-
 return mod_main

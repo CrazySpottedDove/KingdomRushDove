@@ -1,5 +1,18 @@
 -- chunkname: @./main.lua
 local version = require("version")
+
+if love.system.getOS() == "Windows" then
+	local ffi = require("ffi")
+	ffi.cdef[[
+        typedef int BOOL;
+        typedef unsigned long DWORD;
+        BOOL SetConsoleOutputCP(DWORD wCodePageID);
+        BOOL SetConsoleCP(DWORD wCodePageID);
+    ]]
+	ffi.C.SetConsoleOutputCP(65001)
+	ffi.C.SetConsoleCP(65001)
+end
+
 love.filesystem.setIdentity(version.identity)
 local is_android = love.system.getOS() == "Android"
 local perf = require("dove_modules.perf.perf")
