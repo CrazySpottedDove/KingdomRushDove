@@ -472,7 +472,7 @@ local function run_code()
 
 		if success then
 			love.window.showMessageBox("升级完成", "资源已更新。点击以重启游戏。", {"确定"})
-			R.tmp()
+			R.full()
 		else
 			local error_report = "升级过程中发生错误，请报告以下问题：\n\n" .. table.concat(error_log_lines, "\n")
 			love.window.showMessageBox("升级失败", error_report, {"确定"})
