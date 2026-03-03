@@ -16,7 +16,7 @@ function entity_db:load()
 	end
 
 	-- if not self.entities then
-		self.entities = {}
+	self.entities = {}
 	-- end
 
 	-- components 模块没有任何数据，也不会受到修改，因此也直接作为缓存，不重新加载。
@@ -153,7 +153,7 @@ function entity_db:register_t(name, base)
 
 	-- 通过这么做，允许重复加载时直接覆写原来的表，同样起到了数值重置的效果，而避免了克隆，从而提升了执行性能。
 	-- if self.entities[name] then
-		-- return self.entities[name]
+	-- return self.entities[name]
 	-- end
 
 	local t
