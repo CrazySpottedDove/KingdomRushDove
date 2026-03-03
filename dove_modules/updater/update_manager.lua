@@ -516,6 +516,16 @@ function M:init(params, done_callback)
 		return
 	end
 	-- https = require("https")
+	-- 清空上次运行（love.event.quit("restart") 跨重启）可能遗留的 channel 消息，
+	-- 防止新 worker 线程一启动就读到旧的 "quit" 而立即退出。
+	local req_ch = love.thread.getChannel("um_http_req")
+	local resp_ch = love.thread.getChannel("um_http_resp")
+	while req_ch:getCount() > 0 do
+		req_ch:pop()
+	end
+	while resp_ch:getCount() > 0 do
+		resp_ch:pop()
+	end
 	http_worker = love.thread.newThread(HTTP_WORKER)
 	http_worker:start()
 	local co = coroutine.create(run_code)

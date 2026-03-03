@@ -657,12 +657,6 @@ function director:update(dt)
 
 	::label_14_0::
 
-	if ISM then
-		local state = self.active_item and self.active_item.get_ism_state and self.active_item:get_ism_state()
-
-		ISM:update(dt, state)
-	end
-
 	return updated
 end
 
@@ -749,12 +743,6 @@ function director:keypressed(key, isrepeat)
 
 	if self.active_item and self.active_item.keypressed and self.active_item:keypressed(key, isrepeat) then
 		return
-	end
-
-	if ISM then
-		local state = self.active_item and self.active_item.get_ism_state and self.active_item:get_ism_state()
-
-		ISM:proc_key(state, key, isrepeat)
 	end
 end
 
