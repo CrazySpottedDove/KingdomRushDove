@@ -8,7 +8,7 @@ local font = require("lib.klove.font_db"):f("msyh", 20)
 local apply_upgrade = love.system.getOS() ~= "Android"
 apply_upgrade = apply_upgrade and not (arg[2] == "debug" or arg[2] == "release")
 local is_windows = package.config:sub(1, 1) == "\\"
-
+local R = require("all.restart")
 -- 更新状态定义
 local STATE_DOWNLOADING_ASSETS = 1
 local STATE_DOWNLOADING_CODE = 2
@@ -472,7 +472,7 @@ local function run_code()
 
 		if success then
 			love.window.showMessageBox("升级完成", "资源已更新。点击以重启游戏。", {"确定"})
-			love.event.quit("restart")
+			R.tmp()
 		else
 			local error_report = "升级过程中发生错误，请报告以下问题：\n\n" .. table.concat(error_log_lines, "\n")
 			love.window.showMessageBox("升级失败", error_report, {"确定"})

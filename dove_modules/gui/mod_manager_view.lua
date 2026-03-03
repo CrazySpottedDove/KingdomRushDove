@@ -5,14 +5,17 @@ local class = require("middleclass")
 local V = require("lib.klua.vector")
 local G = love.graphics
 local FS = love.filesystem
+local S = require("sound_db")
+local restart = require("all.restart")
 
 require("gg_views_custom") -- PopUpView, GGOptionsButton, GGPanelHeader, GGLabel 等
 
-local PANEL_W = 720
-local PANEL_H = 600
-local SCROLL_H = 390
-local ROW_H = 110
-local ROW_PAD = 12 -- 行内左边距
+local PANEL_W = 860
+local PANEL_H = 700
+local SCROLL_H = 470
+local ROW_H = 140
+local ROW_PAD = 16 -- 行内左边距
+local ACCENT_W = 6 -- 行左侧启用/禁用强调色条宽度
 
 -- ─────────────────────────────────────────────
 -- 简单开关按钮：无需图片，用彩色文字表示状态
@@ -22,7 +25,11 @@ ModToggleButton = class("ModToggleButton", KButton)
 function ModToggleButton:initialize(initial_value)
 	local rs = GGLabel.static.ref_h / REF_H
 
-	KButton.initialize(self, V.v(56, 28))
+	KButton.initialize(self, V.v(80, 36))
+	self.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, 80, 36, 10, 10}
+	}
 
 	self.value = initial_value ~= false
 	self.propagate_on_up = false
@@ -31,7 +38,7 @@ function ModToggleButton:initialize(initial_value)
 
 	self._text_label = GGLabel:new(self.size)
 	self._text_label.font_name = "body"
-	self._text_label.font_size = 14 * rs
+	self._text_label.font_size = 16 * rs
 	self._text_label.text_align = "center"
 	self._text_label.vertical_align = "middle"
 	self._text_label.propagate_on_up = true
@@ -44,20 +51,26 @@ end
 
 function ModToggleButton:_refresh()
 	if self.value then
-		self.colors.background = {40, 120, 60, 180}
-		self._text_label.colors.text = {180, 255, 160, 255}
+		if self._is_hovered then
+			self.colors.background = {55, 180, 85, 245}
+		else
+			self.colors.background = {35, 148, 68, 215}
+		end
+		self._text_label.colors.text = {195, 255, 178, 255}
 		self._text_label.text = "启用"
 	else
-		self.colors.background = {120, 40, 40, 180}
-		self._text_label.colors.text = {255, 160, 140, 255}
+		if self._is_hovered then
+			self.colors.background = {178, 55, 55, 245}
+		else
+			self.colors.background = {148, 38, 38, 215}
+		end
+		self._text_label.colors.text = {255, 178, 155, 255}
 		self._text_label.text = "禁用"
-	end
-	if self._is_hovered then
-		self.colors.background[4] = self.colors.background[4] + 50
 	end
 end
 
-function ModToggleButton:on_down(button, x, y)
+function ModToggleButton:on_click(button, x, y)
+	S:queue("GUIButtonCommon")
 	self:set_value(not self.value)
 end
 
@@ -90,68 +103,103 @@ function ModItemRow:initialize(mod_data, row_w)
 	KView.initialize(self, V.v(row_w, ROW_H))
 
 	self.mod_data = mod_data
-	self.colors.background = {28, 22, 16, 200}
+	self._base_bg = {24, 18, 12, 210}
+	self._hover_bg = {40, 30, 18, 230}
+	self.colors.background = {self._base_bg[1], self._base_bg[2], self._base_bg[3], self._base_bg[4]}
+	self.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, row_w, ROW_H, 15, 15}
+	}
 
 	local cfg = mod_data.config or {}
 	local rs = GGLabel.static.ref_h / REF_H
-	local text_w = row_w - 100 -- 留出右侧开关按钮的位置
+	local text_w = row_w - ACCENT_W - ROW_PAD - 118 -- 左色条 + 左边距 + 右侧按钮区域
+
+	-- 左侧启用/禁用强调色条
+	local accent = KView:new(V.v(ACCENT_W, ROW_H - 1))
+	accent.pos = V.v(0, 0)
+	self:add_child(accent)
+	self._accent = accent
 
 	-- 模组名称
-	local name_lbl = GGLabel:new(V.v(text_w, 22))
+	local name_lbl = GGLabel:new(V.v(text_w, 26))
 	name_lbl.font_name = "h"
-	name_lbl.font_size = 15 * rs
+	name_lbl.font_size = 16 * rs
 	name_lbl.text_align = "left"
 	name_lbl.vertical_align = "middle"
-	name_lbl.colors.text = {230, 210, 155, 255}
+	name_lbl.colors.text = {238, 218, 162, 255}
 	name_lbl.text = cfg.name or mod_data.name or "?"
 	name_lbl.fit_lines = 1
 	name_lbl.line_height = 1
-	name_lbl.pos = V.v(ROW_PAD, 6)
+	name_lbl.pos = V.v(ACCENT_W + ROW_PAD, 10)
 	name_lbl.fit_size = true
 	self:add_child(name_lbl)
 
 	-- 版本 + 作者
-	local meta_lbl = GGLabel:new(V.v(text_w, 18))
+	local meta_lbl = GGLabel:new(V.v(text_w, 20))
 	meta_lbl.font_name = "body"
 	meta_lbl.font_size = 13 * rs
 	meta_lbl.text_align = "left"
 	meta_lbl.vertical_align = "middle"
-	meta_lbl.colors.text = {170, 158, 118, 255}
+	meta_lbl.colors.text = {175, 162, 122, 255}
 	meta_lbl.line_height = 1
 	meta_lbl.fit_size = true
 	local ver = cfg.version and ("v" .. cfg.version) or ""
 	local by = cfg.by and ("作者: " .. cfg.by) or ""
 	meta_lbl.text = ver .. (ver ~= "" and by ~= "" and "  " or "") .. by
-	meta_lbl.pos = V.v(ROW_PAD, 28)
+	meta_lbl.pos = V.v(ACCENT_W + ROW_PAD, 38)
 	self:add_child(meta_lbl)
 
 	-- 描述
-	local desc_lbl = GGLabel:new(V.v(text_w, 48))
+	local desc_lbl = GGLabel:new(V.v(text_w, 56))
 	desc_lbl.font_name = "body"
 	desc_lbl.fit_size = true
-	desc_lbl.line_height = 1.2
+	desc_lbl.line_height = 1.3
 	desc_lbl.font_size = 12 * rs
 	desc_lbl.text_align = "left"
 	desc_lbl.vertical_align = "top"
-	desc_lbl.line_height = 1.2
-	desc_lbl.colors.text = {145, 138, 115, 255}
+	desc_lbl.colors.text = {148, 140, 116, 255}
 	desc_lbl.text = cfg.desc or ""
 	desc_lbl.fit_lines = 3
-	desc_lbl.pos = V.v(ROW_PAD, 50)
+	desc_lbl.pos = V.v(ACCENT_W + ROW_PAD, 62)
 	self:add_child(desc_lbl)
 
 	-- 开关按钮（右侧居中）
 	local toggle = ModToggleButton:new(cfg.enabled ~= false)
 	toggle.anchor = V.v(toggle.size.x / 2, toggle.size.y / 2)
-	toggle.pos = V.v(row_w - 42, ROW_H / 2)
+	toggle.pos = V.v(row_w - 52, ROW_H / 2)
 	self:add_child(toggle)
 	self.toggle = toggle
 
+	-- 当开关状态变化时同步刷新强调色条
+	local row_self = self
+	toggle.on_change = function(t, v)
+		row_self:_refresh_accent()
+	end
+
 	-- 分隔线
 	local sep = KView:new(V.v(row_w, 1))
-	sep.colors.background = {55, 44, 30, 200}
+	sep.colors.background = {65, 50, 30, 200}
 	sep.pos = V.v(0, ROW_H - 1)
 	self:add_child(sep)
+
+	self:_refresh_accent()
+end
+
+function ModItemRow:_refresh_accent()
+	if self.toggle.value then
+		self._accent.colors.background = {55, 185, 80, 235}
+	else
+		self._accent.colors.background = {185, 50, 45, 210}
+	end
+end
+
+function ModItemRow:on_enter()
+	self.colors.background = {self._hover_bg[1], self._hover_bg[2], self._hover_bg[3], self._hover_bg[4]}
+end
+
+function ModItemRow:on_exit()
+	self.colors.background = {self._base_bg[1], self._base_bg[2], self._base_bg[3], self._base_bg[4]}
 end
 
 function ModItemRow:is_enabled()
@@ -170,20 +218,14 @@ function ModManagerView:initialize(sw, sh)
 
 	-- 背景面板（深色矩形）
 	self.back = KView:new(V.v(PANEL_W, PANEL_H))
-	self.back.colors.background = {18, 14, 10, 250}
+	self.back.colors.background = {47, 34, 6, 226}
 	self.back.anchor = V.v(PANEL_W / 2, PANEL_H / 2)
 	self.back.pos = V.v(sw / 2, sh / 2)
+	self.back.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, PANEL_W, PANEL_H, 20, 20}
+	}
 	self:add_child(self.back)
-
-	-- 边框效果（略宽、略高的半透明矩形）
-	local border = KView:new(V.v(PANEL_W + 4, PANEL_H + 4))
-	border.colors.background = {90, 70, 40, 160}
-	border.anchor = V.v((PANEL_W + 4) / 2, (PANEL_H + 4) / 2)
-	border.pos = V.v(sw / 2, sh / 2)
-	border.ignore_bounds = true
-	self:add_child(border, 1) -- 放到 back 之前
-	self:remove_child(border)
-	self:add_child(border, 1) -- 确保在最底层
 
 	-- ── 标题 ──
 	local header = GGPanelHeader:new("模组管理器", PANEL_W - 40)
@@ -200,13 +242,13 @@ function ModManagerView:initialize(sw, sh)
 
 	local global_toggle = ModToggleButton:new(false)
 	global_toggle.anchor = V.v(global_toggle.size.x / 2, global_toggle.size.y / 2)
-	global_toggle.pos = V.v(PANEL_W - 48, 70)
+	global_toggle.pos = V.v(PANEL_W - 54, 72)
 	self.back:add_child(global_toggle)
 	self.global_toggle = global_toggle
 
 	-- 分隔线
 	local sep1 = KView:new(V.v(PANEL_W - 40, 1))
-	sep1.colors.background = {75, 60, 36, 255}
+	sep1.colors.background = {95, 75, 40, 255}
 	sep1.pos = V.v(20, 96)
 	self.back:add_child(sep1)
 
@@ -217,7 +259,7 @@ function ModManagerView:initialize(sw, sh)
 	hint_lbl.font_size = 12 * rs
 	hint_lbl.text_align = "left"
 	hint_lbl.colors.text = {140, 130, 100, 255}
-	hint_lbl.text = "保存后需要重启游戏才能生效"
+	hint_lbl.text = [[点击“保存并重启”以应用更改]]
 	hint_lbl.pos = V.v(20, 100)
 	self.back:add_child(hint_lbl)
 
@@ -235,17 +277,29 @@ function ModManagerView:initialize(sw, sh)
 
 	-- ── 保存并关闭 按钮 ──
 	local y_btn = list_pos_y + SCROLL_H + hint_height
-	local save_btn = GGOptionsButton:new("保存并关闭")
+	local save_btn = GGOptionsButton:new("保存并重启")
 	save_btn:set_anchor_to_center()
 	save_btn.pos = V.v(PANEL_W / 2, y_btn)
 
 	local this = self
 	function save_btn.on_click()
+		S:queue("GUIButtonCommon")
 		this:save()
-		this:hide()
+		restart.tmp()
 	end
 
 	self.back:add_child(save_btn)
+
+	local close_btn = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
+	close_btn.pos = V.v(PANEL_W - 20, 20)
+	close_btn:set_anchor_to_center()
+	self.back:add_child(close_btn)
+
+	function close_btn.on_click()
+		S:queue("GUIButtonCommon")
+		this:hide()
+	end
+
 	self._mod_rows = {}
 end
 
@@ -428,6 +482,9 @@ function ModManagerView:_reload_list()
 					local row = ModItemRow:new(mod_data, list_w)
 
 					self.mod_list:add_row(row)
+					-- 行间间隔
+					local gap = KView:new(V.v(list_w, 10))
+					self.mod_list:add_row(gap)
 					table.insert(self._mod_rows, row)
 				end
 			end

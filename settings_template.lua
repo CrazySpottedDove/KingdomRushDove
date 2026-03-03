@@ -20,5 +20,6 @@ return {
 		skip_settings = false,
 		skip_slot = false
 	},
-	last_slot_idx = 1
+	last_slot_idx = 1,
+	tmp_restart = false
 }

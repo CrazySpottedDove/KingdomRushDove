@@ -36,7 +36,9 @@ local SETTINGS_PARAMS = {
 	"update_enabled",
 	"update_last_site",
 	"launch_options",
-	"last_slot_idx"
+	"last_slot_idx",
+	-- 用于指示是否为即时重启。如为即时重启，会跳过多数不必要的 scene。
+	"tmp_restart"
 }
 local SLOT_ADDITIONAL_DATA = {
 	gems = 0,

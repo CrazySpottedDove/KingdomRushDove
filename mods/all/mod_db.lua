@@ -100,8 +100,6 @@ function mod_db.check_get_available_mods()
 		end
 
 		if not config.enabled then
-			log.error("%s is disabled", mod_data.name)
-
 			goto continue
 		end
 

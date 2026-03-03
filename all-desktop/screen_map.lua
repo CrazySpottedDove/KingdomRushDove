@@ -23,6 +23,7 @@ local timer = require("hump.timer").new()
 local utf8 = require("utf8")
 local achievements_data, map_data
 local tower_menus_data = require("kr1.data.tower_menus_data")
+local R = require("all.restart")
 local is_android = love.system.getOS() == "Android"
 require("klove.kui")
 
@@ -5622,7 +5623,8 @@ function OptionsView:initialize(sw, sh)
 	restart_button.pos.y = button_height
 	function restart_button.on_click()
 		S:queue("GUIButtonCommon")
-		love.event.quit("restart")
+
+		R.full()
 	end
 	self.back:add_child(restart_button)
 

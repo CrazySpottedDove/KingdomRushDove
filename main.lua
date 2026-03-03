@@ -279,14 +279,20 @@ loader = {
 }
 
 function loader:load()
-	local launch_options = main.params.launch_options
-	if launch_options.skip_must_read then
-		table.removeobject(self.items, "must_read")
-	end
-	if launch_options.skip_settings then
-		table.removeobject(self.items, "settings")
+	if main.params.tmp_restart then
 		MU.apply_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
+		self.items = {"director"}
+	else
+		local launch_options = main.params.launch_options
+		if launch_options.skip_must_read then
+			table.removeobject(self.items, "must_read")
+		end
+		if launch_options.skip_settings then
+			table.removeobject(self.items, "settings")
+			MU.apply_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
+		end
 	end
+
 	self:load_next()
 end
 

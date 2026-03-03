@@ -81,7 +81,7 @@ function mod_main:after_init()
 		-- 初始化模组
 		loaded_mod:init(mod_data)
 		-- 打印模组加载信息
-		log.error(mod_db.get_debug_info(mod_data.config))
+		print(mod_db.get_debug_info(mod_data.config))
 	end
 
 	mod_hook:after_init()

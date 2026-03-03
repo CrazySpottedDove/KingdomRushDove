@@ -67,7 +67,11 @@ function director:init(params)
 
 	love.window.setTitle(version.title .. version.id)
 
-	if params.launch_options.skip_slot then
+	if params.launch_options.skip_slot or params.tmp_restart then
+		if params.tmp_restart then
+			params.tmp_restart = false
+			storage:save_settings(params)
+		end
 		self.next_item_name = "map"
 		self.next_item_args = {
 			next_item_name = "map",
