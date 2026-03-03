@@ -3,6 +3,7 @@ local storage = require("all.storage")
 local G = love.graphics
 local FS = love.filesystem
 local font = require("lib.klove.font_db"):f("msyh", 20)
+local FU = require("all.file_utlis")
 
 -- 本模块只在非安卓平台启用
 local apply_upgrade = love.system.getOS() ~= "Android"
@@ -21,7 +22,7 @@ local STATE_STRING_MAP = {
 	[STATE_DOWNLOADING_ASSETS] = "下载美术资源中（可能需要较长时间）……",
 	[STATE_DOWNLOADING_CODE] = "下载代码资源中……",
 	[STATE_COMMITTING_CHANGES] = "提交更新事务中……",
-	[STATE_SELECT_URL] = "选择更新地址中……（可能需要较长时间，提示程序未响应为正常现象，耐心等待即可）",
+	[STATE_SELECT_URL] = "选择更新地址中……",
 	[STATE_CHECK_UPDATE] = "检查更新中……"
 }
 local state = STATE_DOWNLOADING_ASSETS
@@ -67,15 +68,15 @@ local function ensure_parent_dir(file_path)
 	return true -- 在根目录，无需创建
 end
 
-local function write_file(file_path, content)
-	local f, err = io.open(file_path, "wb")
-	if not f then
-		return false, err
-	end
-	f:write(content)
-	f:close()
-	return true, nil
-end
+-- local function write_file(file_path, content)
+-- 	local f, err = io.open(file_path, "wb")
+-- 	if not f then
+-- 		return false, err
+-- 	end
+-- 	f:write(content)
+-- 	f:close()
+-- 	return true, nil
+-- end
 
 local function delete_file(file_path)
 	return os.remove(file_path)
@@ -83,9 +84,49 @@ end
 
 -- 网络与JSON
 local server_address = nil
-local https
+-- local https
 local json = require("lib.json")
 local update_response = nil
+
+-- HTTP 工作线程：将阻塞的网络请求移出主线程，避免 OS 误判程序未响应
+local HTTP_WORKER = [[
+local https = require("https")
+local req_ch  = love.thread.getChannel("um_http_req")
+local resp_ch = love.thread.getChannel("um_http_resp")
+while true do
+	local req = req_ch:demand()
+	if req == "quit" then break end
+	local ok, code, body, headers = pcall(https.request, req.url, req.options)
+	if ok then
+		resp_ch:push({code = code, body = body, headers = headers})
+	else
+		resp_ch:push({code = 0, body = tostring(code), headers = {}})
+	end
+end
+]]
+local http_worker = nil
+
+-- 异步 HTTP 请求：向工作线程发送请求并逐帧 yield 等待结果
+local function async_request(url, options)
+	love.thread.getChannel("um_http_req"):push({
+		url = url,
+		options = options
+	})
+	local resp_ch = love.thread.getChannel("um_http_resp")
+	while resp_ch:getCount() == 0 do
+		coroutine.yield()
+	end
+	local resp = resp_ch:pop()
+	return resp.code, resp.body, resp.headers
+end
+
+-- 非阻塞等待：每帧 yield，避免主线程挂起
+local function async_sleep(seconds)
+	local t = love.timer.getTime()
+	while love.timer.getTime() - t < seconds do
+		coroutine.yield()
+	end
+end
 
 local function file_hash(path)
 	local bit = require("bit")
@@ -131,13 +172,12 @@ local function diff_assets()
 	-- 先从服务器下载 assets_index.lua，准备与本地的assets_index.lua进行对比
 
 	local url = server_address .. "file"
-	local i = 1
 	local max_retries = 5
 	local retries = 0
 	log_info("拉取资源索引文件...")
 
-	while i <= max_retries do
-		local download_code, content, response_header = https.request(url, {
+	while true do
+		local download_code, content, response_header = async_request(url, {
 			method = "POST",
 			headers = {
 				["Content-Type"] = "application/json"
@@ -167,6 +207,7 @@ local function diff_assets()
 					break
 				else
 					log_info("文件长度不符，正在重试（第 " .. retries .. " 次）: " .. "_assets/assets_index.lua")
+					async_sleep(math.min(2 ^ retries, 16))
 				end
 			end
 		else
@@ -188,14 +229,14 @@ local function diff_assets()
 			local local_info = local_assets_index[file]
 			if not local_info then
 				added_or_modified[#added_or_modified + 1] = file
-			end
+			else
+				if not local_info.hash then
+					local_info.hash = file_hash("_assets/" .. file)
+				end
 
-			if not local_info.hash then
-				local_info.hash = file_hash("_assets/" .. file)
-			end
-
-			if local_info.size ~= info.size or local_info.hash ~= info.hash then
-				added_or_modified[#added_or_modified + 1] = file
+				if local_info.size ~= info.size or local_info.hash ~= info.hash then
+					added_or_modified[#added_or_modified + 1] = file
+				end
 			end
 		end
 	end
@@ -219,7 +260,7 @@ local function sync_assets(added_or_modified)
 	while i <= file_count do
 		local file_path = added_or_modified[i]
 		local local_file_path = "_assets/" .. file_path
-		local download_code, file_content, response_header = https.request(url, {
+		local download_code, file_content, response_header = async_request(url, {
 			method = "POST",
 			headers = {
 				["Content-Type"] = "application/json"
@@ -231,9 +272,8 @@ local function sync_assets(added_or_modified)
 		if download_code == 200 then
 			if tonumber(response_header["content-length"]) == #file_content then
 				ensure_parent_dir(local_file_path)
-				local success, err = write_file(local_file_path, file_content)
-				if not success then
-					log_error("写入文件失败: " .. local_file_path .. " (" .. tostring(err) .. ")")
+				if not FU.write_file(local_file_path, file_content) then
+					log_error("写入文件失败: " .. local_file_path)
 					return false
 				end
 				log_info(string.format("下载美术资源 (%d/%d): %s", i, file_count, file_path))
@@ -247,13 +287,13 @@ local function sync_assets(added_or_modified)
 					return false
 				else
 					log_info("文件长度不符，正在重试（第 " .. retries .. " 次）: " .. file_path)
+					async_sleep(math.min(2 ^ retries, 16))
 				end
 			end
 		else
 			log_error("下载文件失败: " .. file_path .. " (Code: " .. download_code .. ")")
 			return false
 		end
-		i = i + 1
 	end
 
 	return true
@@ -278,7 +318,7 @@ local function upgrade_new_version(info)
 
 	while i <= file_count do
 		local file_path = added_or_modified[i]
-		local download_code, content, response_header = https.request(url, {
+		local download_code, content, response_header = async_request(url, {
 			method = "POST",
 			headers = {
 				["Content-Type"] = "application/json"
@@ -309,10 +349,11 @@ local function upgrade_new_version(info)
 					break
 				else
 					log_info("文件长度不符，正在重试（第 " .. retries .. " 次）: " .. file_path)
+					async_sleep(math.min(2 ^ retries, 16))
 				end
 			end
 		else
-			log_error("下载代码文件失败: " .. file_path .. " (Code: " .. download_code .. ")")
+			log_error("下载代码文件失败: " .. file_path .. " (Code: " .. download_code .. "content: )" .. tostring(content) .. "response_header: " .. json.encode(response_header))
 			has_error = true
 			break
 		end
@@ -326,9 +367,8 @@ local function upgrade_new_version(info)
 			local content = FS.read(tmp_dir .. "/" .. file_path)
 			if content then
 				ensure_parent_dir(file_path)
-				local success, err = write_file(file_path, content)
-				if not success then
-					log_error("提交更改时写入文件失败: " .. file_path .. " (" .. tostring(err) .. ")")
+				if not FU.write_file(file_path, content) then
+					log_error("提交更改时写入文件失败: " .. file_path)
 					has_error = true
 					break
 				end
@@ -357,7 +397,7 @@ local function upgrade_new_version(info)
 
 	-- 3. 更新版本号
 	if not has_error and info.master_commit_hash then
-		if not write_file("current_version_commit_hash.txt", info.master_commit_hash) then
+		if not FU.write_file("current_version_commit_hash.txt", info.master_commit_hash) then
 			log_error("更新版本 commit hash 失败。")
 			has_error = true
 		end
@@ -373,73 +413,60 @@ end
 --- @return 是否有更新可用
 local function check_update()
 	local params = M.params
-	set_state(STATE_SELECT_URL)
-	log_info("尝试使用：" .. params.update_last_site)
-	local code, response = https.request(params.update_last_site)
-
-	if code == 200 then
-		server_address = params.update_last_site
-		log_info("选中更新地址：" .. server_address)
-	else
-		log_info("该更新地址不可用，返回代码：" .. tostring(code))
-		log_info("返回内容：" .. tostring(response))
-
-		local candidate_sites = {"https://krdovedownload6.crazyspotteddove.top:52000/", "https://krdovedownload4.crazyspotteddove.top/"}
-
-		for _, site in ipairs(candidate_sites) do
-			if site ~= params.update_last_site then
-				log_info("尝试使用候选更新地址：" .. site)
-				local code, response = https.request(site)
-				if code == 200 then
-					server_address = site
-					log_info("选中更新地址：" .. server_address)
-					-- 更新配置文件
-					params.update_last_site = site
-
-					storage:save_settings(params)
-					break
-				else
-					log_info("该更新地址不可用，返回代码：" .. tostring(code))
-					log_info("返回内容：" .. tostring(response))
-				end
-			end
-		end
-
-		if not server_address then
-			log_info("未找到可用的更新地址，取消更新检查。")
-			return false
-		end
-	end
 	local commit_hash = FS.read("current_version_commit_hash.txt")
 	if not commit_hash then
 		return false
 	end
-	local url = server_address .. "commits"
-	set_state(STATE_CHECK_UPDATE)
-	local code, response = https.request(url, {
-		method = "POST",
-		headers = {
-			["Content-Type"] = "application/json"
-		},
-		data = json.encode({
-			commit_hash = commit_hash
-		})
-	})
 
-	if code == 200 then
-		local resp_json = json.decode(response)
-		if resp_json.commits and #resp_json.commits > 0 then
-			update_response = resp_json
-			return true
-		else
-			return false
+	set_state(STATE_SELECT_URL)
+
+	-- 直接向各地址发 commits 请求，成功则同时完成探活，减少一次 RTT
+	local candidate_sites = {params.update_last_site}
+	for _, site in ipairs({"https://krdovedownload6.crazyspotteddove.top:52000/", "https://krdovedownload4.crazyspotteddove.top/"}) do
+		if site ~= params.update_last_site then
+			candidate_sites[#candidate_sites + 1] = site
 		end
-	else
-		print("无法检查更新。服务器返回代码：" .. code)
-		print("服务器回复: " .. (response or "nil"))
-		print("失败的请求: " .. url .. " commit_hash：" .. commit_hash)
+	end
+
+	local resp_json = nil
+	for _, site in ipairs(candidate_sites) do
+		log_info("尝试使用更新地址：" .. site)
+		local url = site .. "commits"
+		set_state(STATE_CHECK_UPDATE)
+		local code, response = async_request(url, {
+			method = "POST",
+			headers = {
+				["Content-Type"] = "application/json"
+			},
+			data = json.encode({
+				commit_hash = commit_hash
+			})
+		})
+		if code == 200 then
+			resp_json = json.decode(response)
+			server_address = site
+			log_info("选中更新地址：" .. server_address)
+			if site ~= params.update_last_site then
+				params.update_last_site = site
+				storage:save_settings(params)
+			end
+			break
+		else
+			log_info("该更新地址不可用，返回代码：" .. tostring(code))
+			set_state(STATE_SELECT_URL)
+		end
+	end
+
+	if not server_address then
+		log_info("未找到可用的更新地址，取消更新检查。")
 		return false
 	end
+
+	if resp_json and resp_json.commits and #resp_json.commits > 0 then
+		update_response = resp_json
+		return true
+	end
+	return false
 end
 
 local function run_code()
@@ -474,7 +501,7 @@ local function run_code()
 			love.window.showMessageBox("升级完成", "资源已更新。点击以重启游戏。", {"确定"})
 			R.full()
 		else
-			local error_report = "升级过程中发生错误，请报告以下问题：\n\n" .. table.concat(error_log_lines, "\n")
+			local error_report = "升级过程中发生错误，请报告以下问题（若是多次重试不成功，可能是服务器网络繁忙，可稍后重试）：\n\n" .. table.concat(error_log_lines, "\n")
 			love.window.showMessageBox("升级失败", error_report, {"确定"})
 		end
 	end
@@ -488,7 +515,9 @@ function M:init(params, done_callback)
 		self:done_callback()
 		return
 	end
-	https = require("https")
+	-- https = require("https")
+	http_worker = love.thread.newThread(HTTP_WORKER)
+	http_worker:start()
 	local co = coroutine.create(run_code)
 	self.co = co
 end
@@ -497,13 +526,16 @@ function M:update(dt)
 	if self.co then
 		local success, err = coroutine.resume(self.co)
 		if not success then
-			log_error("更新过程中发生错误: " .. tostring(err))
+			-- 直接用 table.insert 写日志，不能调用 log_error（会 yield，但此处在主线程）
+			table.insert(update_log_lines, "[错误] 更新过程中发生错误: " .. tostring(err))
+			table.insert(error_log_lines, tostring(err))
 			love.window.showMessageBox("升级失败", "升级过程中发生错误，错误信息已记录在日志中。请将以下信息报告给开发者：\n\n" .. tostring(err), {"确定"})
 			self.co = nil
+			love.thread.getChannel("um_http_req"):push("quit")
 			self:done_callback()
-		end
-		if coroutine.status(self.co) == "dead" then
+		elseif coroutine.status(self.co) == "dead" then
 			self.co = nil
+			love.thread.getChannel("um_http_req"):push("quit")
 			self:done_callback()
 		end
 	end
