@@ -413,7 +413,6 @@ function sys.events:on_insert(entity, store)
 			ev.entity_id = entity.id
 
 			table.insert(store.event_handlers[ev.name], ev)
-			log.debug("sys.events: ++ registered handler for %s entity:(%s)%s", ev.name, entity.id, entity.template_name)
 		end
 	end
 
@@ -425,7 +424,6 @@ function sys.events:on_remove(entity, store)
 		for _, ev in pairs(entity.events.list) do
 			if store.event_handlers[ev.name] then
 				table.removeobject(store.event_handlers[ev.name], ev)
-				log.debug("sys.events: -- removed handler for %s entity:(%s)%s", ev.name, entity.id, entity.template_name)
 			end
 		end
 	end

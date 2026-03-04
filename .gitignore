@@ -52,3 +52,5 @@ client.exe
 client
 .gdb_history
 mods/local
+aidoc
+.plugins/

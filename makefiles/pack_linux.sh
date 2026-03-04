@@ -54,6 +54,8 @@ EXCLUDES=(
     "存档位置.lnk"
     "all/librender_sort.dll"
     "mods/local"
+    ".plugins"
+    "aidoc"
 )
 
 should_exclude() {

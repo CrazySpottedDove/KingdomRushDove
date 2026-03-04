@@ -63,6 +63,8 @@ EXCLUDES=(
     "https.so"
     "all/librender_sort.so"
     "mods/local"
+    ".plugins"
+    "aidoc"
 )
 
 should_exclude() {

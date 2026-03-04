@@ -1,5 +1,5 @@
 return {
-	fps = 60,
+	fps = 144,
 	fullscreen = true,
 	height = 768,
 	highdpi = false,
