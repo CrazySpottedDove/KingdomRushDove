@@ -2822,7 +2822,7 @@ function scripts.bomb.update(this, store)
 	if enemies then
 		for i = 1, #enemies do
 			local enemy = enemies[i]
-			local d = SU.create_bullet_damage(b, enemy.id, this.id)
+			local d = SU.create_bullet_damage_without_pops(b, enemy.id, this.id)
 
 			if UP:get_upgrade("engineer_efficiency") then
 				d.value = dmax
@@ -3196,7 +3196,7 @@ function scripts.missile.update(this, store)
 			local dradius = b.damage_radius
 			for i = 1, #enemies do
 				local enemy = enemies[i]
-				local d = SU.create_bullet_damage(b, enemy.id, this.id)
+				local d = SU.create_bullet_damage_without_pops(b, enemy.id, this.id)
 
 				if UP:get_upgrade("engineer_efficiency") then
 					d.value = dmax
@@ -4463,7 +4463,7 @@ function scripts.fireball.update(this, store)
 	if targets then
 		for _, e in pairs(targets) do
 			if b.damage_type ~= DAMAGE_NONE then
-				local d = SU.create_bullet_damage(b, e.id, this.id)
+				local d = SU.create_bullet_damage_without_pops(b, e.id, this.id)
 
 				d.xp_dest_id = b.source_id
 
@@ -8499,7 +8499,7 @@ function scripts.bomb_bouncing.update(this, store)
 		if enemies then
 			for i = 1, #enemies do
 				local enemy = enemies[i]
-				local d = SU.create_bullet_damage(b, enemy.id, this.id)
+				local d = SU.create_bullet_damage_without_pops(b, enemy.id, this.id)
 
 				if UP:get_upgrade("engineer_efficiency") then
 					d.value = dmax
@@ -9190,7 +9190,7 @@ function scripts.bolt_force_motion_kr5.update(this, store)
 
 		if targets then
 			for _, target in pairs(targets) do
-				local d = SU.create_bullet_damage(b, target.id, this.id)
+				local d = SU.create_bullet_damage_without_pops(b, target.id, this.id)
 
 				queue_damage(store, d)
 			end

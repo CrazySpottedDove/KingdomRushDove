@@ -649,6 +649,49 @@ function SU.create_bullet_damage(bullet, target_id, source_id)
 	return d
 end
 
+--- 创建不弹出pop的子弹伤害，常见于范围伤害。
+---@param bullet table 子弹实体
+---@param target_id number 目标ID
+---@param source_id number 来源ID
+function SU.create_bullet_damage_without_pops(bullet, target_id, source_id)
+	local d = E:create_entity("damage")
+
+	d.damage_type = bullet.damage_type
+	d.reduce_armor = bullet.reduce_armor
+	d.reduce_magic_armor = bullet.reduce_magic_armor
+
+	local vmin, vmax = bullet.damage_min, bullet.damage_max
+
+	if bullet.level and bullet.level > 0 then
+		if bullet.damage_min_inc then
+			vmin = vmin + bullet.damage_min_inc * bullet.level
+		end
+
+		if bullet.damage_max_inc then
+			vmax = vmax + bullet.damage_max_inc * bullet.level
+		end
+
+		if bullet.damage_inc then
+			vmax = vmax + bullet.damage_inc * bullet.level
+			vmin = vmin + bullet.damage_inc * bullet.level
+		end
+	end
+
+	local value = U.frandom(vmin, vmax)
+
+	d.value = math.max(1, bullet.damage_factor * value)
+	d.target_id = target_id
+	d.source_id = source_id
+	d.xp_gain_factor = bullet.xp_gain_factor
+	d.xp_dest_id = bullet.xp_dest_id
+	d.track_damage = bullet.track_damage
+
+	-- 传递伤害钩子，这里采用只读引用，避免不必要的表复制开销
+	d.hooks = bullet.damage_hooks
+
+	return d
+end
+
 ---创建攻击伤害
 ---@param a table 攻击
 ---@param target_id number 目标ID
