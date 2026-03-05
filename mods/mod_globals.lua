@@ -27,7 +27,7 @@ require("klua.table")
 signal = require("lib.hump.signal")
 km = require("klua.macros")
 SH = require("klove.shader_db")
-V = require("klua.vector")
+V = require("lib.klua.vector")
 class = require("middleclass")
 bit = require("bit")
 band = bit.band
