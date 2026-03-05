@@ -2764,4 +2764,58 @@ factor = table.tail(blc.slow_factor) * 100
 duration = table.tail(blc.slow_duration)
 map["白龙腾渊"] = str(cooldown_str(), "小白龙从天而降，造成共计", damage_str(), "，并在落点留下减速区域，使敌人移速x", factor, "%，持续", duration, "秒。释放本技能时，悟空恢复全部生命值。")
 
+set_hero("hero_dragon_arb")
+blc = balance.hero_dragon_arb.arborean_spawn
+local spawn_cooldown = table.tail(blc.cooldown)
+local spawn_count_max = blc.max_targets
+local arb_hp = table.tail(blc.arborean.hp)
+local arb_duration = table.tail(blc.arborean.duration)
+health[1].hp_max = arb_hp
+health[1].armor = 0
+health[1].magic_armor = 0
+d[1].damage_min = table.tail(blc.arborean.basic_attack.damage_min)
+d[1].damage_max = table.tail(blc.arborean.basic_attack.damage_max)
+d[1].damage_type = blc.arborean.basic_attack.damage_type
+local paragon_hp = table.tail(blc.paragon.hp)
+local paragon_duration = table.tail(blc.paragon.duration)
+health[2].hp_max = paragon_hp
+health[2].armor = 0
+health[2].magic_armor = 0
+d[2].damage_min = table.tail(blc.paragon.basic_attack.damage_min)
+d[2].damage_max = table.tail(blc.paragon.basic_attack.damage_max)
+d[2].damage_type = blc.paragon.basic_attack.damage_type
+map["森林呼唤"] = str("每隔", spawn_cooldown, "秒，希尔瓦拉将路径上的绿地化为最多", spawn_count_max, "名树灵守卫。树灵守卫拥有", hp_str(), "，驻场", arb_duration, "秒，每次攻击造成", damage_str(), "。释放自然本性期间，会召唤树灵楷模代替（拥有", hp_str(2), "，驻场", paragon_duration, "秒，每次攻击造成", damage_str(2), "）。")
+
+blc = balance.hero_dragon_arb.tower_runes
+cooldown = table.tail(blc.cooldown)
+local runes_count = table.tail(blc.max_targets)
+local runes_duration = table.tail(blc.duration)
+local runes_factor = table.tail(blc.s_damage_factor) * 100
+map["根深蒂固"] = str(cooldown_str(), "希尔瓦拉为附近最多", runes_count, "座防御塔刻上符文，使其伤害提升", runes_factor, "%，持续", runes_duration, "秒。")
+
+blc = balance.hero_dragon_arb.thorn_bleed
+cooldown = table.tail(blc.cooldown)
+local bleed_ratio = table.tail(blc.damage_speed_ratio)
+local bleed_every = blc.damage_every
+local bleed_duration = table.tail(blc.duration)
+local instakill_chance = table.tail(blc.instakill_chance) * 100
+map["荆棘吐息"] = str(cooldown_str(), "希尔瓦拉强化她的下一次攻击，附加一个持续", bleed_duration, "秒的流血效果，每", bleed_every, "秒造成等于目标移速x", bleed_ratio, "的法术伤害。释放自然本性期间，有", instakill_chance, "%的概率直接秒杀目标。")
+
+blc = balance.hero_dragon_arb.tower_plants
+cooldown = table.tail(blc.cooldown)
+local plants_count = table.tail(blc.max_targets)
+local plants_duration = table.tail(blc.duration)
+local dark_slow = table.tail(blc.dark_army.slow_factor) * 100
+d[1].damage_min = table.tail(blc.dark_army.damage_min)
+d[1].damage_max = table.tail(blc.dark_army.damage_max)
+d[1].damage_type = blc.dark_army.damage_type
+local linirea_heal = table.tail(blc.linirea.heal_max)
+map["创生之种"] = str(cooldown_str(), "希尔瓦拉在最多", plants_count, "座防御塔周围随机召唤植物，持续", plants_duration, "秒。植物可能会治愈周围友军（每次", linirea_heal, "点），也可能造成", damage_str(), "并使敌人移速x", dark_slow, "%。")
+
+blc = balance.hero_dragon_arb.ultimate
+cooldown = table.tail(blc.cooldown)
+local ult_duration = table.tail(blc.duration)
+local ult_bonus = table.tail(blc.s_bonuses) * 100
+map["自然本性"] = str(cooldown_str(), "希尔瓦拉释放真实形态，持续", ult_duration, "秒。期间伤害、速度、护甲和魔法抗性均提升", ult_bonus, "%，并强化森林呼唤和荆棘吐息技能。")
+
 return H

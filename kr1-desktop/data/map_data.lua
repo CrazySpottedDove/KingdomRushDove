@@ -1632,6 +1632,17 @@ return {
 			starting_level = 1,
 			icon = 18,
 			stats = {5, 7, 4, 5}
+		},
+		-- 木龙
+		{
+			from_kr = 5,
+			portrait = 15,
+			thumb = 15,
+			name = "hero_dragon_arb",
+			available_level = 116,
+			starting_level = 1,
+			icon = 15,
+			stats = {8, 4, 7, 5}
 		}
 	},
 	level_data = {

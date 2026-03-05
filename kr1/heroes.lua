@@ -16819,1055 +16819,888 @@ tt.dps.damage_every = b.ultimate.damage_every
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 
--- tt = E:register_t("ps_bullet_hero_dragon_arb_arborean_spawn")
+tt = E:register_t("ps_bullet_hero_dragon_arb_arborean_spawn")
 
--- E:add_comps(tt, "pos", "particle_system")
+E:add_comps(tt, "pos", "particle_system")
 
--- tt.particle_system.name = "hero_dragon_arborean_leaf_projectile"
--- tt.particle_system.animated = false
--- tt.particle_system.loop = false
--- tt.particle_system.alphas = {
--- 	255,
--- 	0
--- }
--- tt.particle_system.particle_lifetime = {
--- 	fts(4),
--- 	fts(4)
--- }
--- tt.particle_system.emission_rate = 14
--- tt.particle_system.track_rotation = true
--- tt.particle_system.z = Z_BULLET_PARTICLES
--- tt = E:register_t("ps_bullet_hero_dragon_arb_rune")
+tt.particle_system.name = "hero_dragon_arborean_leaf_projectile"
+tt.particle_system.animated = false
+tt.particle_system.loop = false
+tt.particle_system.alphas = {255, 0}
+tt.particle_system.particle_lifetime = {fts(4), fts(4)}
+tt.particle_system.emission_rate = 14
+tt.particle_system.track_rotation = true
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("ps_bullet_hero_dragon_arb_rune")
 
--- E:add_comps(tt, "pos", "particle_system")
+E:add_comps(tt, "pos", "particle_system")
 
--- tt.particle_system.name = "hero_dragon_arborean_rune_projectile"
--- tt.particle_system.animated = false
--- tt.particle_system.loop = false
--- tt.particle_system.alphas = {
--- 	255,
--- 	0
--- }
--- tt.particle_system.particle_lifetime = {
--- 	fts(5),
--- 	fts(5)
--- }
--- tt.particle_system.emission_rate = 14
--- tt.particle_system.z = Z_BULLET_PARTICLES
--- tt = E:register_t("ps_bullet_hero_dragon_arb_water")
+tt.particle_system.name = "hero_dragon_arborean_rune_projectile"
+tt.particle_system.animated = false
+tt.particle_system.loop = false
+tt.particle_system.alphas = {255, 0}
+tt.particle_system.particle_lifetime = {fts(5), fts(5)}
+tt.particle_system.emission_rate = 14
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("ps_bullet_hero_dragon_arb_water")
 
--- E:add_comps(tt, "pos", "particle_system")
+E:add_comps(tt, "pos", "particle_system")
 
--- tt.particle_system.name = "hero_dragon_arborean_water_projectile_trail_idle"
--- tt.particle_system.animated = true
--- tt.particle_system.loop = false
--- tt.particle_system.particle_lifetime = {
--- 	fts(10),
--- 	fts(10)
--- }
--- tt.particle_system.emission_rate = 14
--- tt.particle_system.track_rotation = true
--- tt.particle_system.z = Z_BULLET_PARTICLES
--- tt = E:register_t("ps_bullet_hero_dragon_arb_tower_plants")
+tt.particle_system.name = "hero_dragon_arborean_water_projectile_trail_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.emission_rate = 14
+tt.particle_system.track_rotation = true
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt = E:register_t("ps_bullet_hero_dragon_arb_tower_plants")
 
--- E:add_comps(tt, "pos", "particle_system")
+E:add_comps(tt, "pos", "particle_system")
 
--- tt.particle_system.name = "hero_dragon_arborean_flower_projectile_trail"
--- tt.particle_system.animated = false
--- tt.particle_system.loop = false
--- tt.particle_system.particle_lifetime = {
--- 	fts(10),
--- 	fts(10)
--- }
--- tt.particle_system.alphas = {
--- 	255,
--- 	170,
--- 	50
--- }
--- tt.particle_system.scales_x = {
--- 	1.2,
--- 	1.2
--- }
--- tt.particle_system.scales_y = {
--- 	1.2,
--- 	1.2
--- }
--- tt.particle_system.emission_rate = 70
--- tt.particle_system.track_rotation = true
--- tt.particle_system.z = Z_BULLET_PARTICLES
+tt.particle_system.name = "hero_dragon_arborean_flower_projectile_trail"
+tt.particle_system.animated = false
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.alphas = {255, 170, 50}
+tt.particle_system.scales_x = {1.2, 1.2}
+tt.particle_system.scales_y = {1.2, 1.2}
+tt.particle_system.emission_rate = 70
+tt.particle_system.track_rotation = true
+tt.particle_system.z = Z_BULLET_PARTICLES
 
--- tt = E:register_t("ps_bullet_hero_dragon_arb_breath_spikes")
+tt = E:register_t("ps_bullet_hero_dragon_arb_breath_spikes")
 
--- E:add_comps(tt, "pos", "particle_system")
+E:add_comps(tt, "pos", "particle_system")
 
--- tt.particle_system.name = "hero_dragon_arborean_spikes_projectile_trail_idle"
--- tt.particle_system.animated = true
--- tt.particle_system.loop = false
--- tt.particle_system.particle_lifetime = {
--- 	fts(5),
--- 	fts(10)
--- }
--- tt.particle_system.emission_rate = 50
--- tt.particle_system.emit_rotation_spread = math.pi
--- tt.particle_system.z = Z_BULLETS + 1
--- tt = E:register_t("decal_dragon_arb_breath_splint_a", "decal_timed")
--- tt.render.sprites[1].prefix = "hero_dragon_arborean_splinter_ground_a"
--- tt.render.sprites[1].name = "idle"
--- tt.render.sprites[1].animated = true
--- tt.render.sprites[1].z = Z_OBJECTS
--- tt.render.sprites[2] = E:clone_c("sprite")
--- tt.render.sprites[2].animated = false
--- tt.render.sprites[2].loop = false
--- tt.render.sprites[2].name = "hero_dragon_arborean_splinter_decal"
--- tt.render.sprites[2].z = Z_DECALS
--- tt = E:register_t("decal_dragon_arb_breath_splint_b", "decal_timed")
--- tt.render.sprites[1].prefix = "hero_dragon_arborean_splinter_ground_b"
--- tt.render.sprites[1].name = "idle"
--- tt.render.sprites[1].animated = true
--- tt.render.sprites[1].z = Z_OBJECTS
--- tt.render.sprites[2] = E:clone_c("sprite")
--- tt.render.sprites[2].animated = false
--- tt.render.sprites[2].loop = false
--- tt.render.sprites[2].name = "hero_dragon_arborean_splinter_decal"
--- tt.render.sprites[2].z = Z_DECALS
--- tt = E:register_t("hero_dragon_arb", "hero5")
+tt.particle_system.name = "hero_dragon_arborean_spikes_projectile_trail_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(5), fts(10)}
+tt.particle_system.emission_rate = 50
+tt.particle_system.emit_rotation_spread = math.pi
+tt.particle_system.z = Z_BULLETS + 1
+tt = E:register_t("decal_dragon_arb_breath_splint_a", "decal_timed")
+tt.render.sprites[1].prefix = "hero_dragon_arborean_splinter_ground_a"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].loop = false
+tt.render.sprites[2].name = "hero_dragon_arborean_splinter_decal"
+tt.render.sprites[2].z = Z_DECALS
+tt = E:register_t("decal_dragon_arb_breath_splint_b", "decal_timed")
+tt.render.sprites[1].prefix = "hero_dragon_arborean_splinter_ground_b"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].loop = false
+tt.render.sprites[2].name = "hero_dragon_arborean_splinter_decal"
+tt.render.sprites[2].z = Z_DECALS
+tt = E:register_t("hero_dragon_arb", "hero")
 
--- E:add_comps(tt, "ranged", "timed_attacks", "tween")
+E:add_comps(tt, "ranged", "timed_attacks", "tween")
 
--- b = balance.heroes.hero_dragon_arb
--- tt.hero.level_stats.armor = b.armor
--- tt.hero.level_stats.magic_armor = b.magic_armor
--- tt.hero.level_stats.hp_max = b.hp_max
--- tt.hero.level_stats.melee_damage_max = {
--- 	1,
--- 	2,
--- 	4,
--- 	4,
--- 	5,
--- 	6,
--- 	7,
--- 	8,
--- 	9,
--- 	10
--- }
--- tt.hero.level_stats.melee_damage_min = {
--- 	1,
--- 	2,
--- 	3,
--- 	4,
--- 	5,
--- 	6,
--- 	7,
--- 	8,
--- 	9,
--- 	10
--- }
--- tt.hero.level_stats.regen_health = b.regen_health
--- tt.hero.level_stats.ranged_damage_min = b.basic_breath_attack.damage_min
--- tt.hero.level_stats.ranged_damage_max = b.basic_breath_attack.damage_max
--- tt.hero.skills.arborean_spawn = E:clone_c("hero_skill")
--- tt.hero.skills.arborean_spawn.hr_cost = {
--- 	2,
--- 	2,
--- 	2
--- }
--- tt.hero.skills.arborean_spawn.hr_icon = "0041"
--- tt.hero.skills.arborean_spawn.hr_order = 1
--- tt.hero.skills.arborean_spawn.hr_available = true
--- tt.hero.skills.arborean_spawn.cooldown = b.arborean_spawn.cooldown
--- tt.hero.skills.arborean_spawn.key = "ARBOREAN SPAWN"
--- tt.hero.skills.arborean_spawn.xp_gain = b.arborean_spawn.xp_gain
--- tt.hero.skills.tower_runes = E:clone_c("hero_skill")
--- tt.hero.skills.tower_runes.hr_cost = {
--- 	2,
--- 	2,
--- 	2
--- }
--- tt.hero.skills.tower_runes.hr_icon = "0041"
--- tt.hero.skills.tower_runes.hr_order = 2
--- tt.hero.skills.tower_runes.hr_available = true
--- tt.hero.skills.tower_runes.cooldown = b.tower_runes.cooldown
--- tt.hero.skills.tower_runes.max_targets = b.tower_runes.max_targets
--- tt.hero.skills.tower_runes.duration = b.tower_runes.duration
--- tt.hero.skills.tower_runes.damage_factor = b.tower_runes.damage_factor
--- tt.hero.skills.tower_runes.key = "TOWER RUNES"
--- tt.hero.skills.tower_runes.xp_gain = b.tower_runes.xp_gain
--- tt.hero.skills.thorn_bleed = E:clone_c("hero_skill")
--- tt.hero.skills.thorn_bleed.hr_cost = {
--- 	3,
--- 	2,
--- 	1
--- }
--- tt.hero.skills.thorn_bleed.hr_icon = "0041"
--- tt.hero.skills.thorn_bleed.hr_order = 3
--- tt.hero.skills.thorn_bleed.hr_available = true
--- tt.hero.skills.thorn_bleed.cooldown = b.thorn_bleed.cooldown
--- tt.hero.skills.thorn_bleed.instakill_chance = b.thorn_bleed.instakill_chance
--- tt.hero.skills.thorn_bleed.duration = b.thorn_bleed.duration
--- tt.hero.skills.thorn_bleed.damage_speed_ratio = b.thorn_bleed.damage_speed_ratio
--- tt.hero.skills.thorn_bleed.key = "THORN BLEED"
--- tt.hero.skills.thorn_bleed.xp_gain = b.thorn_bleed.xp_gain
--- tt.hero.skills.tower_plants = E:clone_c("hero_skill")
--- tt.hero.skills.tower_plants.hr_cost = {
--- 	3,
--- 	3,
--- 	3
--- }
--- tt.hero.skills.tower_plants.hr_icon = "0041"
--- tt.hero.skills.tower_plants.hr_order = 4
--- tt.hero.skills.tower_plants.hr_available = true
--- tt.hero.skills.tower_plants.cooldown = b.tower_plants.cooldown
--- tt.hero.skills.tower_plants.max_targets = b.tower_plants.max_targets
--- tt.hero.skills.tower_plants.duration = b.tower_plants.duration
--- tt.hero.skills.tower_plants.heal_max = b.tower_plants.linirea.heal_max
--- tt.hero.skills.tower_plants.heal_min = b.tower_plants.linirea.heal_min
--- tt.hero.skills.tower_plants.slow_factor = b.tower_plants.dark_army.slow_factor
--- tt.hero.skills.tower_plants.damage_min = b.tower_plants.dark_army.damage_min
--- tt.hero.skills.tower_plants.damage_max = b.tower_plants.dark_army.damage_max
--- tt.hero.skills.tower_plants.xp_gain = b.tower_plants.xp_gain
--- tt.hero.skills.ultimate = E:clone_c("hero_skill")
--- tt.hero.skills.ultimate.controller_name = "hero_dragon_arb_ultimate"
--- tt.hero.skills.ultimate.hr_available = false
--- tt.hero.skills.ultimate.hr_icon = "0006"
--- tt.hero.skills.ultimate.hr_order = 5
--- tt.hero.skills.ultimate.hr_cost = {
--- 	1,
--- 	3,
--- 	3,
--- 	3
--- }
--- tt.hero.skills.ultimate.hr_available = true
--- tt.hero.skills.ultimate.key = "ARBOREAN EVOLVE"
--- tt.hero.skills.ultimate.cooldown = b.ultimate.cooldown
--- tt.hero.skills.ultimate.duration = b.ultimate.duration
--- tt.hero.skills.ultimate.inflicted_damage_factor = b.ultimate.inflicted_damage_factor
--- tt.hero.skills.ultimate.speed_factor = b.ultimate.speed_factor
--- tt.hero.skills.ultimate.extra_armor = b.ultimate.extra_armor
--- tt.hero.skills.ultimate.extra_magic_armor = b.ultimate.extra_magic_armor
--- tt.hero.skills.ultimate.mod = "mod_hero_dragon_arb_ultimate"
--- tt.hero.skills.ultimate.skip_confirmation = true
--- tt.hero.team = TEAM_LINIREA
--- tt.flight_height = 80
--- tt.health.dead_lifetime = 30
--- tt.health_bar.draw_order = -1
--- tt.health_bar.offset = v(0, 170)
--- tt.health_bar.sort_y_offset = -171
--- tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
--- tt.health_bar.z = Z_FLYING_HEROES
--- tt.hero.fn_level_up = scripts.hero_dragon_arb.level_up
--- tt.hero.use_custom_spawn_point = true
--- tt.idle_flip.cooldown = 10
--- tt.info.fn = scripts.hero_dragon_arb.get_info
--- tt.info.hero_portrait = "hero_portraits_0015"
--- tt.info.i18n_key = "HERO_DRAGON_ARB"
--- tt.info.portrait = "portraits_hero" .. "_0015"
--- tt.info.ultimate_icon = "0015"
--- tt.info.ultimate_pointer_style = "area"
--- tt.info.stat_hp = b.stats.hp
--- tt.info.stat_armor = b.stats.armor
--- tt.info.stat_damage = b.stats.damage
--- tt.info.stat_cooldown = b.stats.cooldown
--- tt.main_script.insert = scripts.hero_dragon_arb.insert
--- tt.main_script.update = scripts.hero_dragon_arb.update
--- tt.motion.max_speed = b.speed
--- tt.nav_rally.requires_node_nearby = false
--- tt.nav_grid.ignore_waypoints = true
--- tt.all_except_flying_nowalk = bor(TERRAIN_NONE, TERRAIN_LAND, TERRAIN_WATER, TERRAIN_CLIFF, TERRAIN_NOWALK, TERRAIN_SHALLOW, TERRAIN_FAERIE, TERRAIN_ICE)
--- tt.nav_grid.valid_terrains = tt.all_except_flying_nowalk
--- tt.nav_grid.valid_terrains_dest = tt.all_except_flying_nowalk
--- tt.drag_line_origin_offset = v(0, tt.flight_height)
--- tt.regen.cooldown = 1
--- tt.render.sprites[1].offset.y = tt.flight_height
--- tt.render.sprites[1].animated = true
--- tt.render.sprites[1].prefix = "hero_dragon_arborean_hero"
--- tt.render.sprites[1].name = "respawn"
--- tt.render.sprites[1].angles.walk = {
--- 	"walk"
--- }
--- tt.render.sprites[1].z = Z_FLYING_HEROES
--- tt.render.sprites[1].group = "unit"
--- tt.render.sprites[2] = E:clone_c("sprite")
--- tt.render.sprites[2].animated = false
--- tt.render.sprites[2].name = "hero_dragon_arborean_shadow"
--- tt.render.sprites[2].offset = v(0, 0)
--- tt.render.sprites[2].z = Z_DECALS + 1
--- tt.render.sprites[2].scale = vv(0.93)
--- tt.render.sprites[3] = table.deepclone(tt.render.sprites[1])
--- tt.render.sprites[3].prefix = "hero_dragon_arborean_transformation_overlay"
--- tt.render.sprites[3].hidden = true
--- tt.render.sprites[3].scale = vv(1.1625)
--- tt.unit.size = UNIT_SIZE_LARGE
--- tt.soldier.melee_slot_offset = v(0, 0)
--- tt.sound_events.change_rally_point = "HeroDragonArbTaunt"
--- tt.sound_events.death = "HeroDragonArbDeath"
--- tt.sound_events.respawn = "HeroDragonArbTauntIntro"
--- tt.sound_events.hero_room_select = "HeroDragonArbTauntSelect"
--- tt.ui.click_rect = r(-37, tt.flight_height - 40, 75, 100)
--- tt.unit.hit_offset = v(0, tt.flight_height + 10)
--- tt.unit.mod_offset = v(0, tt.flight_height + 10)
--- tt.unit.death_animation = "death"
--- tt.unit.hide_after_death = true
--- tt.use_hidden_count_on_respawn = true
--- tt.hero.respawn_animation = "respawn"
--- tt.vis.bans = bor(tt.vis.bans, F_EAT, F_NET)
--- tt.vis.flags = bor(tt.vis.flags, F_FLYING)
--- tt.ranged.attacks[1] = E:clone_c("bullet_attack")
--- tt.ranged.attacks[1].max_angle = 85
--- tt.ranged.attacks[1].max_angle_fliers = 60
--- tt.ranged.attacks[1].bullet_ray = "bullet_hero_dragon_arb_breath"
--- tt.ranged.attacks[1].bullet = "bullet_hero_dragon_arb_breath_splint"
--- tt.ranged.attacks[1].bullet_spikes = "bullet_hero_dragon_arb_breath_spikes"
--- tt.ranged.attacks[1].spikes_fx = "fx_bullet_hero_dragon_arb_breath_spikes"
--- tt.ranged.attacks[1].spikes_fx_offset = 30
--- tt.ranged.attacks[1].ultimate_fx = "fx_bullet_hero_dragon_arb_breath_powered"
--- tt.ranged.attacks[1].ultimate_fx_offset = 30
--- tt.ranged.attacks[1].bullet_start_offset = {
--- 	v(19, tt.flight_height + 13),
--- 	v(19, tt.flight_height + 13)
--- }
--- tt.ranged.attacks[1].cooldown = b.basic_breath_attack.cooldown
--- tt.ranged.attacks[1].min_range = b.basic_breath_attack.min_range
--- tt.ranged.attacks[1].max_range = b.basic_breath_attack.max_range
--- tt.ranged.attacks[1].shoot_times = {
--- 	fts(14),
--- 	fts(16),
--- 	fts(18),
--- 	fts(20),
--- 	fts(22),
--- 	fts(24),
--- 	fts(26)
--- }
--- tt.ranged.attacks[1].sync_animation = true
--- tt.ranged.attacks[1].animation = "attack"
--- tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
--- tt.ranged.attacks[1].basic_attack = true
--- tt.ranged.attacks[1].xp_gain_factor = b.basic_breath_attack.xp_gain_factor
--- tt.ranged.attacks[1].sound = "HeroDragonArbAttackSplints"
--- tt.timed_attacks.list[1] = E:clone_c("bullet_attack")
--- tt.timed_attacks.list[1].disabled = true
--- tt.timed_attacks.list[1].animation = "power_1"
--- tt.timed_attacks.list[1].cast_time = fts(22)
--- tt.timed_attacks.list[1].shoots_delay = 0.05
--- tt.timed_attacks.list[1].min_targets = b.arborean_spawn.min_targets
--- tt.timed_attacks.list[1].max_targets = b.arborean_spawn.max_targets
--- tt.timed_attacks.list[1].min_range = b.arborean_spawn.min_range
--- tt.timed_attacks.list[1].max_range = b.arborean_spawn.max_range
--- tt.timed_attacks.list[1].spawn_max_range_to_enemy = b.arborean_spawn.spawn_max_range_to_enemy
--- tt.timed_attacks.list[1].vis_flags = F_BLOCK
--- tt.timed_attacks.list[1].vis_bans = F_FLYING
--- tt.timed_attacks.list[1].sync_animation = true
--- tt.timed_attacks.list[1].xp_from_skill = "arborean_spawn"
--- tt.timed_attacks.list[1].vis_flags = bor(F_RANGED)
--- tt.timed_attacks.list[1].vis_bans = bor(F_FLYING, F_NIGHTMARE, F_CLIFF)
--- tt.timed_attacks.list[1].spawn = "soldier_hero_dragon_arb_spawn"
--- tt.timed_attacks.list[1].spawn_evolved = "soldier_hero_dragon_arb_spawn_paragon"
--- tt.timed_attacks.list[1].bullet = "bullet_hero_dragon_arb_arborean_spawn"
--- tt.timed_attacks.list[1].bullet_start_offset = {
--- 	v(0, tt.flight_height + 95),
--- 	v(0, tt.flight_height + 95)
--- }
--- tt.timed_attacks.list[2] = E:clone_c("custom_attack")
--- tt.timed_attacks.list[2].disabled = true
--- tt.timed_attacks.list[2].mod = {
--- 	"mod_hero_dragon_arb_bleed",
--- 	"mod_bullet_hero_dragon_arb_breath_spike_hit"
--- }
--- tt.timed_attacks.list[2].instakill_chance = nil
--- tt.timed_attacks.list[3] = E:clone_c("bullet_attack")
--- tt.timed_attacks.list[3].disabled = true
--- tt.timed_attacks.list[3].animation = "power_2"
--- tt.timed_attacks.list[3].cast_time = fts(25)
--- tt.timed_attacks.list[3].shoots_delay = 0.05
--- tt.timed_attacks.list[3].excluded_templates = {}
--- tt.timed_attacks.list[3].exclude_tower_kind = {}
--- tt.timed_attacks.list[3].max_targets = nil
--- tt.timed_attacks.list[3].min_range = b.tower_runes.min_range
--- tt.timed_attacks.list[3].max_range = b.tower_runes.max_range
--- tt.timed_attacks.list[3].sync_animation = true
--- tt.timed_attacks.list[3].xp_from_skill = "tower_runes"
--- tt.timed_attacks.list[3].vis_flags = bor(F_RANGED, F_MOD)
--- tt.timed_attacks.list[3].vis_bans = 0
--- tt.timed_attacks.list[3].bullet = "bullet_hero_dragon_arb_tower_buff"
--- tt.timed_attacks.list[3].bullet_start_offset = {
--- 	v(40, tt.flight_height + 15),
--- 	v(-40, tt.flight_height + 15)
--- }
--- tt.timed_attacks.list[4] = E:clone_c("bullet_attack")
--- tt.timed_attacks.list[4].disabled = true
--- tt.timed_attacks.list[4].animation = "power_4"
--- tt.timed_attacks.list[4].cast_time = fts(26)
--- tt.timed_attacks.list[4].shots_delay = fts(3)
--- tt.timed_attacks.list[4].excluded_templates = {}
--- tt.timed_attacks.list[4].exclude_tower_kind = {}
--- tt.timed_attacks.list[4].max_targets = nil
--- tt.timed_attacks.list[4].min_range = b.tower_plants.min_range
--- tt.timed_attacks.list[4].max_range = b.tower_plants.max_range
--- tt.timed_attacks.list[4].sync_animation = true
--- tt.timed_attacks.list[4].xp_from_skill = "tower_plants"
--- tt.timed_attacks.list[4].vis_flags = bor(F_RANGED, F_MOD)
--- tt.timed_attacks.list[4].vis_bans = 0
--- tt.timed_attacks.list[4].bullet = "bullet_hero_dragon_arb_tower_plants"
--- tt.timed_attacks.list[4].bullet_start_offset = {
--- 	v(0, tt.flight_height + 100),
--- 	v(0, tt.flight_height + 100)
--- }
--- tt.timed_attacks.list[4].plant_linirea = "decal_hero_dragon_arb_tower_plant_linirea"
--- tt.timed_attacks.list[4].plant_dark_army = "decal_hero_dragon_arb_tower_plant_dark_army"
--- tt.tween.disabled = true
--- tt.tween.remove = false
--- tt.tween.props[1].sprite_id = 2
--- tt.tween.props[1].name = "alpha"
--- tt.tween.props[1].keys = {
--- 	{
--- 		0,
--- 		0
--- 	},
--- 	{
--- 		0.5,
--- 		255
--- 	}
--- }
--- tt.tween.props[1].ignore_reverse = true
--- tt.tween.props[2] = E:clone_c("tween_prop")
--- tt.tween.props[2].name = "alpha"
--- tt.tween.props[2].keys = {
--- 	{
--- 		0,
--- 		0
--- 	},
--- 	{
--- 		0.2,
--- 		255
--- 	}
--- }
--- tt.tween.props[2].sprite_id = 3
--- tt.tween.props[2].disabled = true
--- tt.controller_passive = "controller_hero_dragon_arb_passive"
--- tt = E:register_t("hero_dragon_arb_ultimate")
--- b = balance.heroes.hero_dragon_arb.ultimate
+b = balance.heroes.hero_dragon_arb
+tt.hero.level_stats.armor = b.armor
+tt.hero.level_stats.magic_armor = b.magic_armor
+tt.hero.level_stats.hp_max = b.hp_max
+tt.hero.level_stats.melee_damage_max = {1, 2, 4, 4, 5, 6, 7, 8, 9, 10}
+tt.hero.level_stats.melee_damage_min = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+tt.hero.level_stats.regen_health = b.regen_health
+tt.hero.level_stats.ranged_damage_min = b.basic_breath_attack.damage_min
+tt.hero.level_stats.ranged_damage_max = b.basic_breath_attack.damage_max
+tt.hero.skills.arborean_spawn = E:clone_c("hero_skill")
+tt.hero.skills.arborean_spawn.hr_cost = {2, 2, 2}
+tt.hero.skills.arborean_spawn.hr_icon = "0041"
+tt.hero.skills.arborean_spawn.hr_order = 1
+tt.hero.skills.arborean_spawn.hr_available = true
+tt.hero.skills.arborean_spawn.cooldown = b.arborean_spawn.cooldown
+tt.hero.skills.arborean_spawn.key = "ARBOREAN SPAWN"
+tt.hero.skills.arborean_spawn.xp_gain = b.arborean_spawn.xp_gain
+tt.hero.skills.arborean_spawn.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.tower_runes = E:clone_c("hero_skill")
+tt.hero.skills.tower_runes.hr_cost = {2, 2, 2}
+tt.hero.skills.tower_runes.hr_icon = "0041"
+tt.hero.skills.tower_runes.hr_order = 2
+tt.hero.skills.tower_runes.hr_available = true
+tt.hero.skills.tower_runes.cooldown = b.tower_runes.cooldown
+tt.hero.skills.tower_runes.max_targets = b.tower_runes.max_targets
+tt.hero.skills.tower_runes.duration = b.tower_runes.duration
+tt.hero.skills.tower_runes.damage_factor = b.tower_runes.damage_factor
+tt.hero.skills.tower_runes.key = "TOWER RUNES"
+tt.hero.skills.tower_runes.xp_gain = b.tower_runes.xp_gain
+tt.hero.skills.tower_runes.xp_level_steps = {
+	[3] = 1,
+	[6] = 2,
+	[9] = 3
+}
+tt.hero.skills.thorn_bleed = E:clone_c("hero_skill")
+tt.hero.skills.thorn_bleed.hr_cost = {3, 2, 1}
+tt.hero.skills.thorn_bleed.hr_icon = "0041"
+tt.hero.skills.thorn_bleed.hr_order = 3
+tt.hero.skills.thorn_bleed.hr_available = true
+tt.hero.skills.thorn_bleed.cooldown = b.thorn_bleed.cooldown
+tt.hero.skills.thorn_bleed.instakill_chance = b.thorn_bleed.instakill_chance
+tt.hero.skills.thorn_bleed.duration = b.thorn_bleed.duration
+tt.hero.skills.thorn_bleed.damage_speed_ratio = b.thorn_bleed.damage_speed_ratio
+tt.hero.skills.thorn_bleed.key = "THORN BLEED"
+tt.hero.skills.thorn_bleed.xp_gain = b.thorn_bleed.xp_gain
+tt.hero.skills.thorn_bleed.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3
+}
+tt.hero.skills.tower_plants = E:clone_c("hero_skill")
+tt.hero.skills.tower_plants.hr_cost = {3, 3, 3}
+tt.hero.skills.tower_plants.hr_icon = "0041"
+tt.hero.skills.tower_plants.hr_order = 4
+tt.hero.skills.tower_plants.hr_available = true
+tt.hero.skills.tower_plants.cooldown = b.tower_plants.cooldown
+tt.hero.skills.tower_plants.max_targets = b.tower_plants.max_targets
+tt.hero.skills.tower_plants.duration = b.tower_plants.duration
+tt.hero.skills.tower_plants.heal_max = b.tower_plants.linirea.heal_max
+tt.hero.skills.tower_plants.heal_min = b.tower_plants.linirea.heal_min
+tt.hero.skills.tower_plants.slow_factor = b.tower_plants.dark_army.slow_factor
+tt.hero.skills.tower_plants.damage_min = b.tower_plants.dark_army.damage_min
+tt.hero.skills.tower_plants.damage_max = b.tower_plants.dark_army.damage_max
+tt.hero.skills.tower_plants.xp_gain = b.tower_plants.xp_gain
+tt.hero.skills.tower_plants.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.ultimate = E:clone_c("hero_skill")
+tt.hero.skills.ultimate.controller_name = "hero_dragon_arb_ultimate"
+tt.hero.skills.ultimate.hr_available = false
+tt.hero.skills.ultimate.hr_icon = "0006"
+tt.hero.skills.ultimate.hr_order = 5
+tt.hero.skills.ultimate.hr_cost = {1, 3, 3, 3}
+tt.hero.skills.ultimate.hr_available = true
+tt.hero.skills.ultimate.key = "ARBOREAN EVOLVE"
+tt.hero.skills.ultimate.cooldown = b.ultimate.cooldown
+tt.hero.skills.ultimate.duration = b.ultimate.duration
+tt.hero.skills.ultimate.inflicted_damage_factor = b.ultimate.inflicted_damage_factor
+tt.hero.skills.ultimate.speed_factor = b.ultimate.speed_factor
+tt.hero.skills.ultimate.extra_armor = b.ultimate.extra_armor
+tt.hero.skills.ultimate.extra_magic_armor = b.ultimate.extra_magic_armor
+tt.hero.skills.ultimate.mod = "mod_hero_dragon_arb_ultimate"
+tt.hero.skills.ultimate.skip_confirmation = true
+tt.hero.skills.ultimate.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
+}
+tt.hero.team = TEAM_LINIREA
+tt.flight_height = 80
+tt.health.dead_lifetime = 30
+tt.health_bar.draw_order = -1
+tt.health_bar.offset = v(0, 170)
+tt.health_bar.sort_y_offset = -171
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
+tt.health_bar.z = Z_FLYING_HEROES
+tt.hero.fn_level_up = scripts.hero_dragon_arb.level_up
+tt.hero.use_custom_spawn_point = true
+tt.idle_flip.cooldown = 10
+tt.info.fn = scripts.hero_basic.get_info
+tt.info.hero_portrait = "kr5_hero_portraits_0015"
+tt.info.i18n_key = "HERO_DRAGON_ARB"
+tt.info.portrait = "kr5_info_portraits_heroes_0015"
+tt.info.ultimate_icon = "0015"
+tt.info.ultimate_pointer_style = "area"
+tt.info.stat_hp = b.stats.hp
+tt.info.stat_armor = b.stats.armor
+tt.info.stat_damage = b.stats.damage
+tt.info.stat_cooldown = b.stats.cooldown
+tt.main_script.insert = scripts.hero_dragon_arb.insert
+tt.main_script.update = scripts.hero_dragon_arb.update
+tt.motion.max_speed = b.speed
+tt.nav_rally.requires_node_nearby = false
+tt.nav_grid.ignore_waypoints = true
+tt.all_except_flying_nowalk = bor(TERRAIN_NONE, TERRAIN_LAND, TERRAIN_WATER, TERRAIN_CLIFF, TERRAIN_NOWALK, TERRAIN_SHALLOW, TERRAIN_FAERIE, TERRAIN_ICE)
+tt.nav_grid.valid_terrains = tt.all_except_flying_nowalk
+tt.nav_grid.valid_terrains_dest = tt.all_except_flying_nowalk
+tt.drag_line_origin_offset = v(0, tt.flight_height)
+tt.ultimate = {
+	ts = 0,
+	cooldown = b.ultimate.cooldown[1]
+}
+tt.regen.cooldown = 1
+tt.render.sprites[1].offset.y = tt.flight_height
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].prefix = "hero_dragon_arborean_hero"
+tt.render.sprites[1].name = "respawn"
+tt.render.sprites[1].angles.walk = {"walk"}
+tt.render.sprites[1].z = Z_FLYING_HEROES
+tt.render.sprites[1].group = "unit"
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "hero_dragon_arborean_shadow"
+tt.render.sprites[2].offset = v(0, 0)
+tt.render.sprites[2].z = Z_DECALS + 1
+tt.render.sprites[2].scale = vv(0.93)
+tt.render.sprites[3] = table.deepclone(tt.render.sprites[1])
+tt.render.sprites[3].prefix = "hero_dragon_arborean_transformation_overlay"
+tt.render.sprites[3].hidden = true
+tt.render.sprites[3].scale = vv(1.1625)
+tt.unit.size = UNIT_SIZE_LARGE
+tt.soldier.melee_slot_offset = v(0, 0)
+tt.sound_events.change_rally_point = "HeroDragonArbTaunt"
+tt.sound_events.death = "HeroDragonArbDeath"
+tt.sound_events.respawn = "HeroDragonArbTauntIntro"
+tt.sound_events.hero_room_select = "HeroDragonArbTauntSelect"
+tt.ui.click_rect = r(-37, tt.flight_height - 40, 75, 100)
+tt.unit.hit_offset = v(0, tt.flight_height + 10)
+tt.unit.mod_offset = v(0, tt.flight_height + 10)
+tt.unit.death_animation = "death"
+tt.unit.hide_after_death = true
+tt.use_hidden_count_on_respawn = true
+tt.hero.respawn_animation = "respawn"
+tt.vis.bans = bor(tt.vis.bans, F_EAT, F_NET)
+tt.vis.flags = bor(tt.vis.flags, F_FLYING)
+tt.ranged.attacks[1] = E:clone_c("bullet_attack")
+tt.ranged.attacks[1].max_angle = 85
+tt.ranged.attacks[1].max_angle_fliers = 60
+tt.ranged.attacks[1].bullet_ray = "bullet_hero_dragon_arb_breath"
+tt.ranged.attacks[1].bullet = "bullet_hero_dragon_arb_breath_splint"
+tt.ranged.attacks[1].bullet_spikes = "bullet_hero_dragon_arb_breath_spikes"
+tt.ranged.attacks[1].spikes_fx = "fx_bullet_hero_dragon_arb_breath_spikes"
+tt.ranged.attacks[1].spikes_fx_offset = 30
+tt.ranged.attacks[1].ultimate_fx = "fx_bullet_hero_dragon_arb_breath_powered"
+tt.ranged.attacks[1].ultimate_fx_offset = 30
+tt.ranged.attacks[1].bullet_start_offset = {v(19, tt.flight_height + 13), v(19, tt.flight_height + 13)}
+tt.ranged.attacks[1].cooldown = b.basic_breath_attack.cooldown
+tt.ranged.attacks[1].min_range = b.basic_breath_attack.min_range
+tt.ranged.attacks[1].max_range = b.basic_breath_attack.max_range
+tt.ranged.attacks[1].shoot_times = {fts(14), fts(16), fts(18), fts(20), fts(22), fts(24), fts(26)}
+tt.ranged.attacks[1].sync_animation = true
+tt.ranged.attacks[1].animation = "attack"
+tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
+tt.ranged.attacks[1].basic_attack = true
+tt.ranged.attacks[1].xp_gain_factor = b.basic_breath_attack.xp_gain_factor
+tt.ranged.attacks[1].sound = "HeroDragonArbAttackSplints"
+tt.timed_attacks.list[1] = E:clone_c("bullet_attack")
+tt.timed_attacks.list[1].disabled = true
+tt.timed_attacks.list[1].animation = "power_1"
+tt.timed_attacks.list[1].cast_time = fts(22)
+tt.timed_attacks.list[1].shoots_delay = 0.05
+tt.timed_attacks.list[1].min_targets = b.arborean_spawn.min_targets
+tt.timed_attacks.list[1].max_targets = b.arborean_spawn.max_targets
+tt.timed_attacks.list[1].min_range = b.arborean_spawn.min_range
+tt.timed_attacks.list[1].max_range = b.arborean_spawn.max_range
+tt.timed_attacks.list[1].spawn_max_range_to_enemy = b.arborean_spawn.spawn_max_range_to_enemy
+tt.timed_attacks.list[1].vis_flags = F_BLOCK
+tt.timed_attacks.list[1].vis_bans = F_FLYING
+tt.timed_attacks.list[1].sync_animation = true
+tt.timed_attacks.list[1].xp_from_skill = "arborean_spawn"
+tt.timed_attacks.list[1].vis_flags = bor(F_RANGED)
+tt.timed_attacks.list[1].vis_bans = bor(F_FLYING, F_NIGHTMARE, F_CLIFF)
+tt.timed_attacks.list[1].spawn = "soldier_hero_dragon_arb_spawn"
+tt.timed_attacks.list[1].spawn_evolved = "soldier_hero_dragon_arb_spawn_paragon"
+tt.timed_attacks.list[1].bullet = "bullet_hero_dragon_arb_arborean_spawn"
+tt.timed_attacks.list[1].bullet_start_offset = {v(0, tt.flight_height + 95), v(0, tt.flight_height + 95)}
+tt.timed_attacks.list[2] = E:clone_c("custom_attack")
+tt.timed_attacks.list[2].disabled = true
+tt.timed_attacks.list[2].mod = {"mod_hero_dragon_arb_bleed", "mod_bullet_hero_dragon_arb_breath_spike_hit"}
+tt.timed_attacks.list[2].instakill_chance = nil
+tt.timed_attacks.list[3] = E:clone_c("bullet_attack")
+tt.timed_attacks.list[3].disabled = true
+tt.timed_attacks.list[3].animation = "power_2"
+tt.timed_attacks.list[3].cast_time = fts(25)
+tt.timed_attacks.list[3].shoots_delay = 0.05
+tt.timed_attacks.list[3].excluded_templates = {}
+tt.timed_attacks.list[3].exclude_tower_kind = {}
+tt.timed_attacks.list[3].max_targets = nil
+tt.timed_attacks.list[3].min_range = b.tower_runes.min_range
+tt.timed_attacks.list[3].max_range = b.tower_runes.max_range
+tt.timed_attacks.list[3].sync_animation = true
+tt.timed_attacks.list[3].xp_from_skill = "tower_runes"
+tt.timed_attacks.list[3].vis_flags = bor(F_RANGED, F_MOD)
+tt.timed_attacks.list[3].vis_bans = 0
+tt.timed_attacks.list[3].bullet = "bullet_hero_dragon_arb_tower_buff"
+tt.timed_attacks.list[3].bullet_start_offset = {v(40, tt.flight_height + 15), v(-40, tt.flight_height + 15)}
+tt.timed_attacks.list[4] = E:clone_c("bullet_attack")
+tt.timed_attacks.list[4].disabled = true
+tt.timed_attacks.list[4].animation = "power_4"
+tt.timed_attacks.list[4].cast_time = fts(26)
+tt.timed_attacks.list[4].shots_delay = fts(3)
+tt.timed_attacks.list[4].excluded_templates = {}
+tt.timed_attacks.list[4].exclude_tower_kind = {}
+tt.timed_attacks.list[4].max_targets = nil
+tt.timed_attacks.list[4].min_range = b.tower_plants.min_range
+tt.timed_attacks.list[4].max_range = b.tower_plants.max_range
+tt.timed_attacks.list[4].sync_animation = true
+tt.timed_attacks.list[4].xp_from_skill = "tower_plants"
+tt.timed_attacks.list[4].vis_flags = bor(F_RANGED, F_MOD)
+tt.timed_attacks.list[4].vis_bans = 0
+tt.timed_attacks.list[4].bullet = "bullet_hero_dragon_arb_tower_plants"
+tt.timed_attacks.list[4].bullet_start_offset = {v(0, tt.flight_height + 100), v(0, tt.flight_height + 100)}
+tt.timed_attacks.list[4].plant_linirea = "decal_hero_dragon_arb_tower_plant_linirea"
+tt.timed_attacks.list[4].plant_dark_army = "decal_hero_dragon_arb_tower_plant_dark_army"
+tt.tween.disabled = true
+tt.tween.remove = false
+tt.tween.props[1].sprite_id = 2
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
+tt.tween.props[1].ignore_reverse = true
+tt.tween.props[2] = E:clone_c("tween_prop")
+tt.tween.props[2].name = "alpha"
+tt.tween.props[2].keys = {{0, 0}, {0.2, 255}}
+tt.tween.props[2].sprite_id = 3
+tt.tween.props[2].disabled = true
+tt.controller_passive = "controller_hero_dragon_arb_passive"
+tt = E:register_t("hero_dragon_arb_ultimate")
+b = balance.heroes.hero_dragon_arb.ultimate
 
--- E:add_comps(tt, "pos", "main_script", "sound_events")
+E:add_comps(tt, "pos", "main_script", "sound_events")
 
--- tt.can_fire_fn = scripts.hero_dragon_arb_ultimate.can_fire_fn
--- tt.main_script.update = scripts.hero_dragon_arb_ultimate.update
--- tt.soldiers_target = {
--- 	"soldier_hero_dragon_arb_spawn_lvl1",
--- 	"soldier_hero_dragon_arb_spawn_lvl2",
--- 	"soldier_hero_dragon_arb_spawn_lvl3"
--- }
--- tt.soldiers_polymorph_mod = "mod_hero_dragon_arb_ultimate_paragons_polymorph"
--- tt.ultimate_sound = "HeroDragonArbUltimate"
--- tt = E:register_t("decal_hero_dragon_arb_passive_plant_1", "decal_scripted")
+tt.can_fire_fn = scripts.hero_dragon_arb_ultimate.can_fire_fn
+tt.main_script.update = scripts.hero_dragon_arb_ultimate.update
+tt.soldiers_target = {"soldier_hero_dragon_arb_spawn_lvl1", "soldier_hero_dragon_arb_spawn_lvl2", "soldier_hero_dragon_arb_spawn_lvl3"}
+tt.soldiers_polymorph_mod = "mod_hero_dragon_arb_ultimate_paragons_polymorph"
+tt.ultimate_sound = "HeroDragonArbUltimate"
+tt = E:register_t("decal_hero_dragon_arb_passive_plant_1", "decal_scripted")
 
--- E:add_comps(tt, "vis")
+E:add_comps(tt, "vis")
 
--- tt.main_script.update = scripts.decal_hero_dragon_arb_passive_plant.update
--- tt.render.sprites[1].prefix = "hero_dragon_arborean_passive_root1"
--- tt.render.sprites[1].loop = false
--- tt.render.sprites[1].name = "start"
--- tt.render.sprites[1].hidden = true
--- tt.vis.flags = 0
--- tt.vis.bans = bor(F_BLOCK)
--- tt = E:register_t("decal_hero_dragon_arb_passive_plant_2", "decal_hero_dragon_arb_passive_plant_1")
--- tt.render.sprites[1].prefix = "hero_dragon_arborean_passive_root2"
--- tt = E:register_t("decal_hero_dragon_arb_passive_plant_3", "decal_hero_dragon_arb_passive_plant_1")
--- tt.render.sprites[1].prefix = "hero_dragon_arborean_passive_root3"
--- tt = E:register_t("fx_bullet_hero_dragon_arb_breath_powered", "fx")
--- tt.render.sprites[1].name = "hero_dragon_arborean_powered_hit_fx_idle"
--- tt.render.sprites[1].z = Z_BULLETS + 3
--- tt.render.sprites[1].scale = vv(1.25)
--- tt = E:register_t("fx_bullet_hero_dragon_arb_breath_spikes", "fx")
--- tt.render.sprites[1].name = "hero_dragon_arborean_spikes_mouth_fx_idle"
--- tt.render.sprites[1].anchor = v(0.621, 0.5)
--- tt.render.sprites[1].r = math.rad(45)
--- tt.render.sprites[1].z = Z_BULLETS + 2
--- tt = E:register_t("fx_bullet_hero_dragon_arb_arboreans_hit", "fx")
--- tt.render.sprites[1].prefix = "hero_dragon_arborean_hit_fx"
--- tt.render.sprites[1].name = "run"
--- tt = E:register_t("fx_water_bullet_hero_dragon_arb_water_decal", "fx")
--- tt.render.sprites[1].name = "hero_dragon_arborean_water_ground_fx_idle"
--- tt.render.sprites[1].z = Z_DECALS
--- tt = E:register_t("fx_water_bullet_hero_dragon_arb_water_hit", "fx")
--- tt.render.sprites[1].name = "hero_dragon_arborean_water_hit_fx_idle"
--- tt.render.sprites[1].z = Z_OBJECTS
--- tt = E:register_t("fx_bullet_hero_dragon_arb_linirea_plant_heal_hit", "fx")
--- tt.render.sprites[1].name = "hero_dragon_arborean_flower_projectile_hit_fx_idle"
--- tt.render.sprites[1].z = Z_EFFECTS
--- tt = E:register_t("mod_bullet_hero_dragon_arb_breath_hit", "modifier")
+tt.main_script.update = scripts.decal_hero_dragon_arb_passive_plant.update
+tt.render.sprites[1].prefix = "hero_dragon_arborean_passive_root1"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].name = "start"
+tt.render.sprites[1].hidden = true
+tt.vis.flags = 0
+tt.vis.bans = bor(F_BLOCK)
+tt = E:register_t("decal_hero_dragon_arb_passive_plant_2", "decal_hero_dragon_arb_passive_plant_1")
+tt.render.sprites[1].prefix = "hero_dragon_arborean_passive_root2"
+tt = E:register_t("decal_hero_dragon_arb_passive_plant_3", "decal_hero_dragon_arb_passive_plant_1")
+tt.render.sprites[1].prefix = "hero_dragon_arborean_passive_root3"
+tt = E:register_t("fx_bullet_hero_dragon_arb_breath_powered", "fx")
+tt.render.sprites[1].name = "hero_dragon_arborean_powered_hit_fx_idle"
+tt.render.sprites[1].z = Z_BULLETS + 3
+tt.render.sprites[1].scale = vv(1.25)
+tt = E:register_t("fx_bullet_hero_dragon_arb_breath_spikes", "fx")
+tt.render.sprites[1].name = "hero_dragon_arborean_spikes_mouth_fx_idle"
+tt.render.sprites[1].anchor = v(0.621, 0.5)
+tt.render.sprites[1].r = math.rad(45)
+tt.render.sprites[1].z = Z_BULLETS + 2
+tt = E:register_t("fx_bullet_hero_dragon_arb_arboreans_hit", "fx")
+tt.render.sprites[1].prefix = "hero_dragon_arborean_hit_fx"
+tt.render.sprites[1].name = "run"
+tt = E:register_t("fx_water_bullet_hero_dragon_arb_water_decal", "fx")
+tt.render.sprites[1].name = "hero_dragon_arborean_water_ground_fx_idle"
+tt.render.sprites[1].z = Z_DECALS
+tt = E:register_t("fx_water_bullet_hero_dragon_arb_water_hit", "fx")
+tt.render.sprites[1].name = "hero_dragon_arborean_water_hit_fx_idle"
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("fx_bullet_hero_dragon_arb_linirea_plant_heal_hit", "fx")
+tt.render.sprites[1].name = "hero_dragon_arborean_flower_projectile_hit_fx_idle"
+tt.render.sprites[1].z = Z_EFFECTS
+tt = E:register_t("mod_bullet_hero_dragon_arb_breath_hit", "modifier")
 
--- E:add_comps(tt, "render")
+E:add_comps(tt, "render")
 
--- tt.main_script.insert = scripts.mod_track_target.insert
--- tt.main_script.update = scripts.mod_track_target.update
--- tt.modifier.duration = 1
--- tt.modifier.vis_flags = F_MOD
--- tt.chance = 0.24
--- tt.max_targets_per_hit = 2
--- tt.render.sprites[1].prefix = "hero_dragon_arborean_hit_fx"
--- tt.render.sprites[1].name = "run"
--- tt.render.sprites[1].loop = false
--- tt = E:register_t("mod_bullet_hero_dragon_arb_breath_spike_hit", "mod_bullet_hero_dragon_arb_breath_hit")
--- tt.render.sprites[1].prefix = "hero_dragon_arborean_spikes_projectile_hit_fx"
--- tt.render.sprites[1].name = "idle"
--- tt = E:register_t("mod_hero_dragon_arb_ultimate", "modifier")
--- b = balance.heroes.hero_dragon_arb
+tt.main_script.insert = scripts.mod_track_target.insert
+tt.main_script.update = scripts.mod_track_target.update
+tt.modifier.duration = 1
+tt.modifier.vis_flags = F_MOD
+tt.chance = 0.24
+tt.max_targets_per_hit = 2
+tt.render.sprites[1].prefix = "hero_dragon_arborean_hit_fx"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].loop = false
+tt = E:register_t("mod_bullet_hero_dragon_arb_breath_spike_hit", "mod_bullet_hero_dragon_arb_breath_hit")
+tt.render.sprites[1].prefix = "hero_dragon_arborean_spikes_projectile_hit_fx"
+tt.render.sprites[1].name = "idle"
+tt = E:register_t("mod_hero_dragon_arb_ultimate", "modifier")
+b = balance.heroes.hero_dragon_arb
 
--- E:add_comps(tt, "render", "fast")
+E:add_comps(tt, "render", "fast")
 
--- tt.main_script.insert = scripts.mod_hero_dragon_arb_ultimate.insert
--- tt.main_script.update = scripts.mod_hero_dragon_arb_ultimate.update
--- tt.main_script.remove = scripts.mod_hero_dragon_arb_ultimate.remove
--- tt.modifier.duration = 1e+99
--- tt.modifier.use_mod_offset = true
--- tt.inflicted_damage_factor = nil
--- tt.extra_magic_armor = nil
--- tt.extra_armor = nil
--- tt.fast.factor = nil
--- tt.render.sprites[1].prefix = "hero_dragon_arborean_transformation_fx"
--- tt.render.sprites[1].name = "idle"
--- tt.render.sprites[1].loop = false
--- tt.render.sprites[1].z = Z_FLYING_HEROES + 1
--- tt.ultimate_sid = 3
--- tt = E:register_t("soldier_hero_dragon_arb_spawn", "unit")
--- b = balance.heroes.hero_dragon_arb.arborean_spawn.arborean
+tt.main_script.insert = scripts.mod_hero_dragon_arb_ultimate.insert
+tt.main_script.update = scripts.mod_hero_dragon_arb_ultimate.update
+tt.main_script.remove = scripts.mod_hero_dragon_arb_ultimate.remove
+tt.modifier.duration = 1e+99
+tt.modifier.use_mod_offset = true
+tt.inflicted_damage_factor = nil
+tt.extra_magic_armor = nil
+tt.extra_armor = nil
+tt.fast.factor = nil
+tt.render.sprites[1].prefix = "hero_dragon_arborean_transformation_fx"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_FLYING_HEROES + 1
+tt.ultimate_sid = 3
+tt = E:register_t("soldier_hero_dragon_arb_spawn", "unit")
+b = balance.heroes.hero_dragon_arb.arborean_spawn.arborean
 
--- E:add_comps(tt, "soldier", "motion", "nav_path", "main_script", "sound_events", "vis", "info", "melee", "reinforcement", "tween")
+E:add_comps(tt, "soldier", "motion", "nav_path", "main_script", "sound_events", "vis", "info", "melee", "reinforcement", "tween")
 
--- tt.info.enc_icon = 3
--- tt.info.portrait = "gui_bottom_info_image_soldiers_0050"
--- tt.info.fn = scripts.soldier_hero_dragon_arb_spawn.get_info
--- tt.health.armor = b.armor
--- tt.health.magic_armor = b.magic_armor
--- tt.health_bar.offset = v(0, 53)
--- tt.main_script.update = scripts.soldier_hero_dragon_arb_spawn.update
--- tt.melee.attacks[1].damage_type = b.basic_attack.damage_type
--- tt.melee.attacks[1].cooldown = b.basic_attack.cooldown
--- tt.melee.attacks[1].hit_fx = "fx_enemy_deathwood_hit"
--- tt.melee.attacks[1].hit_time = fts(18)
--- tt.melee.attacks[1].hit_offset = v(45, 10)
--- tt.melee.attacks[1].animation = "attack"
--- tt.melee.attacks[1].sound = "HeroDragonArbArboreansHit"
--- tt.melee.range = 70
--- tt.motion.max_speed = b.speed
--- tt.nav_path.dir = -1
--- tt.render.sprites[1].prefix = "hero_dragon_arborean_arborean"
--- tt.render.sprites[1].group = "unit"
--- tt.render.sprites[1].scale = vv(0.93)
--- tt.ui.click_rect = r(-25, 0, 50, 50)
--- tt.unit.hit_offset = v(0, 22)
--- tt.unit.head_offset = v(0, 10)
--- tt.unit.marker_offset = v(-1, 0)
--- tt.unit.mod_offset = v(0, 19)
--- tt.unit.size = UNIT_SIZE_MEDIUM
--- tt.unit.can_explode = false
--- tt.unit.blood_color = BLOOD_GRAY
--- tt.unit.fade_time_after_death = 3
--- tt.unit.fade_duration_after_death = 0.3
--- tt.soldier.melee_slot_offset.x = 5
--- tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
--- tt.vis.flags = bor(F_FRIEND)
--- tt.tween.props[1].keys = {
--- 	{
--- 		0,
--- 		0
--- 	},
--- 	{
--- 		fts(10),
--- 		255
--- 	}
--- }
--- tt.tween.props[1].name = "alpha"
--- tt.tween.props[1].disabled = true
--- tt.tween.remove = false
--- tt.tween.reverse = false
--- tt.tween.disabled = false
+tt.info.enc_icon = 3
+tt.info.portrait = "kr5_info_portraits_soldiers_0032"
+tt.info.fn = scripts.soldier_hero_dragon_arb_spawn.get_info
+tt.health.armor = b.armor
+tt.health.magic_armor = b.magic_armor
+tt.health_bar.offset = v(0, 53)
+tt.main_script.update = scripts.soldier_hero_dragon_arb_spawn.update
+tt.melee.attacks[1].damage_type = b.basic_attack.damage_type
+tt.melee.attacks[1].cooldown = b.basic_attack.cooldown
+tt.melee.attacks[1].hit_fx = "fx_enemy_deathwood_hit"
+tt.melee.attacks[1].hit_time = fts(18)
+tt.melee.attacks[1].hit_offset = v(45, 10)
+tt.melee.attacks[1].animation = "attack"
+tt.melee.attacks[1].sound = "HeroDragonArbArboreansHit"
+tt.melee.range = 70
+tt.motion.max_speed = b.speed
+tt.nav_path.dir = -1
+tt.render.sprites[1].prefix = "hero_dragon_arborean_arborean"
+tt.render.sprites[1].group = "unit"
+tt.render.sprites[1].scale = vv(0.93)
+tt.ui.click_rect = r(-25, 0, 50, 50)
+tt.unit.hit_offset = v(0, 22)
+tt.unit.head_offset = v(0, 10)
+tt.unit.marker_offset = v(-1, 0)
+tt.unit.mod_offset = v(0, 19)
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.unit.can_explode = false
+tt.unit.blood_color = BLOOD_GRAY
+tt.unit.fade_time_after_death = 3
+tt.unit.fade_duration_after_death = 0.3
+tt.soldier.melee_slot_offset.x = 5
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.vis.flags = bor(F_FRIEND)
+tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].disabled = true
+tt.tween.remove = false
+tt.tween.reverse = false
+tt.tween.disabled = false
 
--- for i = 1, 3 do
--- 	tt = E:register_t("soldier_hero_dragon_arb_spawn_lvl" .. i, "soldier_hero_dragon_arb_spawn")
--- 	tt.health.hp_max = b.hp[i]
--- 	tt.melee.attacks[1].damage_max = b.basic_attack.damage_max[i]
--- 	tt.melee.attacks[1].damage_min = b.basic_attack.damage_min[i]
--- 	tt.reinforcement.duration = b.duration[i]
--- end
+for i = 1, 3 do
+	tt = E:register_t("soldier_hero_dragon_arb_spawn_lvl" .. i, "soldier_hero_dragon_arb_spawn")
+	tt.health.hp_max = b.hp[i]
+	tt.melee.attacks[1].damage_max = b.basic_attack.damage_max[i]
+	tt.melee.attacks[1].damage_min = b.basic_attack.damage_min[i]
+	tt.reinforcement.duration = b.duration[i]
+end
 
--- tt = E:register_t("soldier_hero_dragon_arb_spawn_paragon", "soldier_hero_dragon_arb_spawn")
--- b = balance.heroes.hero_dragon_arb.arborean_spawn.paragon
--- tt.health.armor = b.armor
--- tt.health.magic_armor = b.magic_armor
--- tt.health_bar.offset = v(0, 53)
--- tt.melee.attacks[1].cooldown = b.basic_attack.cooldown
--- tt.melee.attacks[1].damage_type = b.basic_attack.damage_type
--- tt.ui.click_rect = r(-25, 0, 50, 50)
--- tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
--- tt.render.sprites[2].prefix = "hero_dragon_arborean_arborean_powered_fx_front"
--- tt.render.sprites[2].alpha = 0
--- tt.render.sprites[2].scale = vv(0.93)
--- tt.render.sprites[3] = table.deepclone(tt.render.sprites[2])
--- tt.render.sprites[3].prefix = "hero_dragon_arborean_arborean_powered_fx_back_idle"
--- tt.render.sprites[3].scale = vv(1, 0.8)
--- tt.render.sprites[3].sort_y_offset = 1
--- tt.render.sprites[3].scale = vv(0.93)
--- tt.tween.props[2] = E:clone_c("tween_prop")
--- tt.tween.props[2].keys = {
--- 	{
--- 		0,
--- 		0
--- 	},
--- 	{
--- 		fts(10),
--- 		255
--- 	}
--- }
--- tt.tween.props[2].name = "alpha"
--- tt.tween.props[2].sprite_id = {
--- 	2,
--- 	3
--- }
--- tt.tween.props[2].disabled = true
--- tt.tween.props[3] = E:clone_c("tween_prop")
--- tt.tween.props[3].keys = {
--- 	{
--- 		0,
--- 		0
--- 	},
--- 	{
--- 		fts(4),
--- 		255
--- 	}
--- }
--- tt.tween.props[3].name = "alpha"
--- tt.tween.props[3].sprite_id = {
--- 	2,
--- 	3
--- }
--- tt.tween.props[3].disabled = true
+tt = E:register_t("soldier_hero_dragon_arb_spawn_paragon", "soldier_hero_dragon_arb_spawn")
+b = balance.heroes.hero_dragon_arb.arborean_spawn.paragon
+tt.health.armor = b.armor
+tt.health.magic_armor = b.magic_armor
+tt.health_bar.offset = v(0, 53)
+tt.melee.attacks[1].cooldown = b.basic_attack.cooldown
+tt.melee.attacks[1].damage_type = b.basic_attack.damage_type
+tt.ui.click_rect = r(-25, 0, 50, 50)
+tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
+tt.render.sprites[2].prefix = "hero_dragon_arborean_arborean_powered_fx_front"
+tt.render.sprites[2].alpha = 0
+tt.render.sprites[2].scale = vv(0.93)
+tt.render.sprites[3] = table.deepclone(tt.render.sprites[2])
+tt.render.sprites[3].prefix = "hero_dragon_arborean_arborean_powered_fx_back_idle"
+tt.render.sprites[3].scale = vv(1, 0.8)
+tt.render.sprites[3].sort_y_offset = 1
+tt.render.sprites[3].scale = vv(0.93)
+tt.tween.props[2] = E:clone_c("tween_prop")
+tt.tween.props[2].keys = {{0, 0}, {fts(10), 255}}
+tt.tween.props[2].name = "alpha"
+tt.tween.props[2].sprite_id = 2
+tt.tween.props[2].disabled = true
+tt.tween.props[3] = E:clone_c("tween_prop")
+tt.tween.props[3].keys = {{0, 0}, {fts(10), 255}}
+tt.tween.props[3].name = "alpha"
+tt.tween.props[3].sprite_id = 3
+tt.tween.props[3].disabled = true
+tt.tween.props[4] = E:clone_c("tween_prop")
+tt.tween.props[4].keys = {{0, 0}, {fts(4), 255}}
+tt.tween.props[4].name = "alpha"
+tt.tween.props[4].sprite_id = 2
+tt.tween.props[4].disabled = true
+tt.tween.props[5] = E:clone_c("tween_prop")
+tt.tween.props[5].keys = {{0, 0}, {fts(4), 255}}
+tt.tween.props[5].name = "alpha"
+tt.tween.props[5].sprite_id = 3
+tt.tween.props[5].disabled = true
 
--- for i = 1, 3 do
--- 	tt = E:register_t("soldier_hero_dragon_arb_spawn_paragon_lvl" .. i, "soldier_hero_dragon_arb_spawn_paragon")
--- 	tt.health.hp_max = b.hp[i]
--- 	tt.melee.attacks[1].damage_max = b.basic_attack.damage_max[i]
--- 	tt.melee.attacks[1].damage_min = b.basic_attack.damage_min[i]
--- 	tt.reinforcement.duration = b.duration[i]
--- end
+for i = 1, 3 do
+	tt = E:register_t("soldier_hero_dragon_arb_spawn_paragon_lvl" .. i, "soldier_hero_dragon_arb_spawn_paragon")
+	tt.health.hp_max = b.hp[i]
+	tt.melee.attacks[1].damage_max = b.basic_attack.damage_max[i]
+	tt.melee.attacks[1].damage_min = b.basic_attack.damage_min[i]
+	tt.reinforcement.duration = b.duration[i]
+end
 
--- tt = E:register_t("mod_hero_dragon_arb_bleed", "modifier")
--- b = balance.heroes.hero_dragon_arb.thorn_bleed
+tt = E:register_t("mod_hero_dragon_arb_bleed", "modifier")
+b = balance.heroes.hero_dragon_arb.thorn_bleed
 
--- E:add_comps(tt, "dps")
+E:add_comps(tt, "dps")
 
--- tt.main_script.insert = scripts.mod_hero_dragon_arb_bleed.insert
--- tt.main_script.update = scripts.mod_hero_dragon_arb_bleed.update
--- tt.modifier.vis_flags = bor(F_MOD)
--- tt.modifier.duration = nil
--- tt.dps.damage_min = nil
--- tt.dps.damage_max = nil
--- tt.dps.damage_type = b.damage_type
--- tt.dps.damage_every = b.damage_every
--- tt.dps.kill = true
--- tt.dps.fx = "fx_bleeding"
--- tt.dps.fx_with_blood_color = true
--- tt.dps.fx_target_flip = true
--- tt.dps.fx_tracks_target = true
--- tt.damage_speed_ratio = nil
--- tt.passive_mark_mod = "mod_hero_dragon_arb_passive_mark"
--- tt.instakill_vis_flags = bor(F_INSTAKILL)
--- tt.instakill_vis_bans = bor(F_BOSS, F_MINIBOSS)
--- tt = E:register_t("mod_hero_dragon_arb_tower_buff", "modifier")
+tt.main_script.insert = scripts.mod_hero_dragon_arb_bleed.insert
+tt.main_script.update = scripts.mod_hero_dragon_arb_bleed.update
+tt.modifier.vis_flags = bor(F_MOD)
+tt.modifier.duration = nil
+tt.dps.damage_min = nil
+tt.dps.damage_max = nil
+tt.dps.damage_type = b.damage_type
+tt.dps.damage_every = b.damage_every
+tt.dps.kill = true
+tt.dps.fx = "fx_bleeding"
+tt.dps.fx_with_blood_color = true
+tt.dps.fx_target_flip = true
+tt.dps.fx_tracks_target = true
+tt.damage_speed_ratio = nil
+tt.passive_mark_mod = "mod_hero_dragon_arb_passive_mark"
+tt.instakill_vis_flags = bor(F_INSTAKILL)
+tt.instakill_vis_bans = bor(F_BOSS, F_MINIBOSS)
+tt = E:register_t("mod_hero_dragon_arb_tower_buff", "modifier")
 
--- E:add_comps(tt, "render")
+E:add_comps(tt, "render")
 
--- tt.main_script.insert = scripts.mod_tower_factors.insert
--- tt.main_script.remove = scripts.mod_tower_factors.remove
--- tt.main_script.update = scripts.mod_hero_dragon_arb_tower_buff.update
--- tt.modifier.duration = nil
--- tt.range_factor = 1
--- tt.damage_factor = nil
--- tt.render.sprites[1].prefix = "hero_dragon_arborean_tower_fx_a"
--- tt.render.sprites[1].animated = true
--- tt.render.sprites[1].offset.y = 33
--- tt.render.sprites[1].sort_y_offset = -10
--- tt.render.sprites[1].draw_order = DO_TOWER_MODS
--- tt.render.sprites[1].group = "layers"
--- tt.render.sprites[1].scale = vv(1.25)
--- tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
--- tt.render.sprites[2].prefix = "hero_dragon_arborean_tower_fx_b"
--- tt.out_anim_duration = fts(29)
--- tt.render.sprites[1].name = "idle"
--- tt = E:register_t("decal_hero_dragon_arb_tower_plant_linirea", "decal_scripted")
--- b = balance.heroes.hero_dragon_arb.tower_plants.linirea
+tt.main_script.insert = scripts.mod_tower_factors.insert
+tt.main_script.remove = scripts.mod_tower_factors.remove
+tt.main_script.update = scripts.mod_hero_dragon_arb_tower_buff.update
+tt.modifier.duration = nil
+tt.range_factor = 1
+tt.damage_factor = nil
+tt.render.sprites[1].prefix = "hero_dragon_arborean_tower_fx_a"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].offset.y = 33
+tt.render.sprites[1].sort_y_offset = -10
+tt.render.sprites[1].draw_order = DO_TOWER_MODS
+tt.render.sprites[1].group = "layers"
+tt.render.sprites[1].scale = vv(1.25)
+tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
+tt.render.sprites[2].prefix = "hero_dragon_arborean_tower_fx_b"
+tt.out_anim_duration = fts(29)
+tt.render.sprites[1].name = "idle"
+tt = E:register_t("decal_hero_dragon_arb_tower_plant_linirea", "decal_scripted")
+b = balance.heroes.hero_dragon_arb.tower_plants.linirea
 
--- E:add_comps(tt, "bullet_attack")
+E:add_comps(tt, "bullet_attack")
 
--- tt.render.sprites[1].prefix = "hero_dragon_arborean_flower"
--- tt.render.sprites[1].name = "spawn"
--- tt.render.sprites[1].sort_y_offset = 1
--- tt.main_script.update = scripts.decal_hero_dragon_arb_tower_plant_linirea.update
--- tt.bullet_attack.max_range = b.range
--- tt.bullet_attack.bullet = "bullet_hero_dragon_arb_linirea_plant_heal"
--- tt.bullet_attack.mark_mod = "mod_hero_dragon_arb_plant_linirea_heal_mark"
--- tt.bullet_attack.shoot_time = fts(6)
--- tt.bullet_attack.cooldown_min = b.cooldown_min
--- tt.bullet_attack.cooldown_max = b.cooldown_max
--- tt.bullet_attack.bullet_start_offset = {
--- 	v(0, 30),
--- 	v(0, 30)
--- }
--- tt.bullet_attack.animation = "attack"
--- tt.bullet_attack.vis_flags = bor(F_RANGED, F_MOD)
--- tt.bullet_attack.vis_bans = 0
--- tt.duration = nil
--- tt = E:register_t("decal_hero_dragon_arb_tower_plant_dark_army", "decal_scripted")
--- b = balance.heroes.hero_dragon_arb.tower_plants.dark_army
+tt.render.sprites[1].prefix = "hero_dragon_arborean_flower"
+tt.render.sprites[1].name = "spawn"
+tt.render.sprites[1].sort_y_offset = 1
+tt.main_script.update = scripts.decal_hero_dragon_arb_tower_plant_linirea.update
+tt.bullet_attack.max_range = b.range
+tt.bullet_attack.bullet = "bullet_hero_dragon_arb_linirea_plant_heal"
+tt.bullet_attack.mark_mod = "mod_hero_dragon_arb_plant_linirea_heal_mark"
+tt.bullet_attack.shoot_time = fts(6)
+tt.bullet_attack.cooldown_min = b.cooldown_min
+tt.bullet_attack.cooldown_max = b.cooldown_max
+tt.bullet_attack.bullet_start_offset = {v(0, 30), v(0, 30)}
+tt.bullet_attack.animation = "attack"
+tt.bullet_attack.vis_flags = bor(F_RANGED, F_MOD)
+tt.bullet_attack.vis_bans = 0
+tt.duration = nil
+tt = E:register_t("decal_hero_dragon_arb_tower_plant_dark_army", "decal_scripted")
+b = balance.heroes.hero_dragon_arb.tower_plants.dark_army
 
--- E:add_comps(tt, "area_attack")
+E:add_comps(tt, "area_attack")
 
--- tt.render.sprites[1].prefix = "hero_dragon_arborean_mushroom"
--- tt.render.sprites[1].name = "spawn"
--- tt.render.sprites[1].sort_y_offset = 1
--- tt.main_script.update = scripts.decal_hero_dragon_arb_tower_plant_dark_army.update
--- tt.area_attack.max_range = b.range
--- tt.area_attack.aura = "aura_hero_dragon_arb_plant_dark_army_slow"
--- tt.area_attack.hit_time = fts(14)
--- tt.area_attack.cooldown_min = b.cooldown_min
--- tt.area_attack.cooldown_max = b.cooldown_max
--- tt.area_attack.animation = "attack"
--- tt.area_attack.vis_flags = bor(tt.area_attack.vis_flags, F_MOD)
--- tt.area_attack.vis_bans = 0
--- tt.duration = nil
--- tt = E:register_t("mod_hero_dragon_arb_plant_linirea_heal", "modifier")
--- b = balance.heroes.hero_dragon_arb.tower_plants.linirea
+tt.render.sprites[1].prefix = "hero_dragon_arborean_mushroom"
+tt.render.sprites[1].name = "spawn"
+tt.render.sprites[1].sort_y_offset = 1
+tt.main_script.update = scripts.decal_hero_dragon_arb_tower_plant_dark_army.update
+tt.area_attack.max_range = b.range
+tt.area_attack.aura = "aura_hero_dragon_arb_plant_dark_army_slow"
+tt.area_attack.hit_time = fts(14)
+tt.area_attack.cooldown_min = b.cooldown_min
+tt.area_attack.cooldown_max = b.cooldown_max
+tt.area_attack.animation = "attack"
+tt.area_attack.vis_flags = bor(tt.area_attack.vis_flags, F_MOD)
+tt.area_attack.vis_bans = 0
+tt.duration = nil
+tt = E:register_t("mod_hero_dragon_arb_plant_linirea_heal", "modifier")
+b = balance.heroes.hero_dragon_arb.tower_plants.linirea
 
--- E:add_comps(tt, "hps", "render")
+E:add_comps(tt, "hps", "render")
 
--- tt.render.sprites[1].prefix = "hero_dragon_arborean_heal_back"
--- tt.render.sprites[1].sort_y_offset = 5
--- tt.render.sprites[1].anchor = v(0.5, 0.6)
--- tt.render.sprites[1].loop = false
--- tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
--- tt.render.sprites[2].prefix = "hero_dragon_arborean_heal_front_a"
--- tt.render.sprites[2].sort_y_offset = -1
--- tt.render.sprites[2].anchor = v(0.5, 0.7)
--- tt.render.sprites[3] = table.deepclone(tt.render.sprites[2])
--- tt.render.sprites[3].prefix = "hero_dragon_arborean_heal_front_b"
--- tt.render.sprites[3].anchor = v(0.5, 0.7)
--- tt.modifier.duration = b.heal_duration
--- tt.hps.heal_every = b.heal_every
--- tt.hps.heal_min = nil
--- tt.hps.heal_max = nil
--- tt.main_script.insert = scripts.mod_hps.insert
--- tt.main_script.update = scripts.mod_hero_dragon_arb_plant_linirea_heal.update
--- tt = E:register_t("mod_hero_dragon_arb_plant_linirea_heal_mark", "modifier")
--- b = balance.heroes.hero_dragon_arb.tower_plants.linirea
+tt.render.sprites[1].prefix = "hero_dragon_arborean_heal_back"
+tt.render.sprites[1].sort_y_offset = 5
+tt.render.sprites[1].anchor = v(0.5, 0.6)
+tt.render.sprites[1].loop = false
+tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
+tt.render.sprites[2].prefix = "hero_dragon_arborean_heal_front_a"
+tt.render.sprites[2].sort_y_offset = -1
+tt.render.sprites[2].anchor = v(0.5, 0.7)
+tt.render.sprites[3] = table.deepclone(tt.render.sprites[2])
+tt.render.sprites[3].prefix = "hero_dragon_arborean_heal_front_b"
+tt.render.sprites[3].anchor = v(0.5, 0.7)
+tt.modifier.duration = b.heal_duration
+tt.hps.heal_every = b.heal_every
+tt.hps.heal_min = nil
+tt.hps.heal_max = nil
+tt.main_script.insert = scripts.mod_hps.insert
+tt.main_script.update = scripts.mod_hero_dragon_arb_plant_linirea_heal.update
+tt = E:register_t("mod_hero_dragon_arb_plant_linirea_heal_mark", "modifier")
+b = balance.heroes.hero_dragon_arb.tower_plants.linirea
 
--- E:add_comps(tt, "mark_flags")
+E:add_comps(tt, "mark_flags")
 
--- tt.mark_flags.vis_bans = F_CUSTOM
--- tt.modifier.duration = b.heal_duration + 2
--- tt.main_script.queue = scripts.mod_mark_flags.queue
--- tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
--- tt.main_script.update = scripts.mod_mark_flags.update
--- tt = E:register_t("mod_hero_dragon_arb_plant_dark_army_slow", "mod_slow")
--- b = balance.heroes.hero_dragon_arb.tower_plants.dark_army
--- tt.modifier.duration = 0.5
--- tt.slow.factor = nil
--- tt = E:register_t("mod_hero_dragon_arb_plant_dark_army_dps", "modifier")
+tt.mark_flags.vis_bans = F_CUSTOM
+tt.modifier.duration = b.heal_duration + 2
+tt.main_script.queue = scripts.mod_mark_flags.queue
+tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.update = scripts.mod_mark_flags.update
+tt = E:register_t("mod_hero_dragon_arb_plant_dark_army_slow", "mod_slow")
+b = balance.heroes.hero_dragon_arb.tower_plants.dark_army
+tt.modifier.duration = 0.5
+tt.slow.factor = nil
+tt = E:register_t("mod_hero_dragon_arb_plant_dark_army_dps", "modifier")
 
--- E:add_comps(tt, "dps")
+E:add_comps(tt, "dps")
 
--- b = balance.heroes.hero_dragon_arb.tower_plants.dark_army
--- tt.modifier.duration = 0.5
--- tt.dps.damage_min = nil
--- tt.dps.damage_max = nil
--- tt.dps.damage_type = b.damage_type
--- tt.dps.damage_every = b.damage_every
--- tt.main_script.insert = scripts.mod_dps.insert
--- tt.main_script.update = scripts.mod_dps.update
--- tt = E:register_t("aura_hero_dragon_arb_plant_dark_army_slow", "aura")
--- b = balance.heroes.hero_dragon_arb.tower_plants.dark_army
--- tt.aura.mods = {
--- 	"mod_hero_dragon_arb_plant_dark_army_slow",
--- 	"mod_hero_dragon_arb_plant_dark_army_dps"
--- }
--- tt.aura.duration = fts(32)
--- tt.aura.cycle_time = 0.3
--- tt.aura.radius = b.range
--- tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
--- tt.aura.vis_flags = bor(F_MOD)
--- tt.main_script.insert = scripts.aura_apply_mod.insert
--- tt.main_script.update = scripts.aura_apply_mod.update
--- tt = E:register_t("mod_hero_dragon_arb_passive_slow", "mod_slow")
+b = balance.heroes.hero_dragon_arb.tower_plants.dark_army
+tt.modifier.duration = 0.5
+tt.dps.damage_min = nil
+tt.dps.damage_max = nil
+tt.dps.damage_type = b.damage_type
+tt.dps.damage_every = b.damage_every
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+tt = E:register_t("aura_hero_dragon_arb_plant_dark_army_slow", "aura")
+b = balance.heroes.hero_dragon_arb.tower_plants.dark_army
+tt.aura.mods = {"mod_hero_dragon_arb_plant_dark_army_slow", "mod_hero_dragon_arb_plant_dark_army_dps"}
+tt.aura.duration = fts(32)
+tt.aura.cycle_time = 0.3
+tt.aura.radius = b.range
+tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
+tt.aura.vis_flags = bor(F_MOD)
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt = E:register_t("mod_hero_dragon_arb_passive_slow", "mod_slow")
 
--- E:add_comps(tt)
+E:add_comps(tt)
 
--- b = balance.heroes.hero_dragon_arb.passive_plant_zones
--- tt.modifier.duration = 0.3
--- tt.slow.factor = b.slow_factor
--- tt = E:register_t("aura_hero_dragon_arb_passive_slow", "aura")
+b = balance.heroes.hero_dragon_arb.passive_plant_zones
+tt.modifier.duration = 0.3
+tt.slow.factor = b.slow_factor
+tt = E:register_t("aura_hero_dragon_arb_passive_slow", "aura")
 
--- E:add_comps(tt)
+E:add_comps(tt)
 
--- b = balance.heroes.hero_dragon_arb.passive_plant_zones
--- tt.aura.mods = {
--- 	"mod_hero_dragon_arb_passive_slow"
--- }
--- tt.aura.duration = 1e+99
--- tt.aura.cycle_time = 0.2
--- tt.aura.radius = b.radius
--- tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
--- tt.aura.vis_flags = bor(F_MOD)
--- tt.main_script.insert = scripts.aura_apply_mod.insert
--- tt.main_script.update = scripts.aura_apply_mod.update
--- tt = E:register_t("mod_hero_dragon_arb_passive_mark", "modifier")
+b = balance.heroes.hero_dragon_arb.passive_plant_zones
+tt.aura.mods = {"mod_hero_dragon_arb_passive_slow"}
+tt.aura.duration = 1e+99
+tt.aura.cycle_time = 0.2
+tt.aura.radius = b.radius
+tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
+tt.aura.vis_flags = bor(F_MOD)
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt = E:register_t("mod_hero_dragon_arb_passive_mark", "modifier")
 
--- E:add_comps(tt)
+E:add_comps(tt)
 
--- b = balance.heroes.hero_dragon_arb.passive_plant_zones
--- tt.main_script.insert = scripts.mod_hero_dragon_arb_passive_mark.insert
--- tt.main_script.remove = scripts.mod_hero_dragon_arb_passive_mark.remove
--- tt.main_script.update = scripts.mod_track_target.update
--- tt.modifier.duration = 0.2
--- tt = E:register_t("bullet_hero_dragon_arb_breath", "bullet")
--- b = balance.heroes.hero_dragon_arb.basic_breath_attack
--- tt.render.sprites[1].z = Z_BULLETS
--- tt.render.sprites[1].prefix = "hero_dragon_arborean_breath"
--- tt.render.sprites[1].anchor = v(0.464, 0.5)
--- tt.render.sprites[1].name = "idle"
--- tt.render.sprites[1].loop = false
--- tt.bullet.flight_time = fts(19)
--- tt.image_width = 146.5
--- tt.hit_delay = fts(1)
--- tt.bullet.hit_time = fts(1)
--- tt.bullet.damage_type = DAMAGE_NONE
--- tt.bullet.damage_max = 0
--- tt.bullet.damage_min = 0
--- tt.bullet.ignore_hit_offset = true
--- tt.main_script.update = scripts.ray_simple.update
--- tt.passive_mark_mod = "mod_hero_dragon_arb_passive_mark"
--- tt = E:register_t("bullet_hero_dragon_arb_breath_splint", "bolt")
--- b = balance.heroes.hero_dragon_arb.basic_breath_attack
+b = balance.heroes.hero_dragon_arb.passive_plant_zones
+tt.main_script.insert = scripts.mod_hero_dragon_arb_passive_mark.insert
+tt.main_script.remove = scripts.mod_hero_dragon_arb_passive_mark.remove
+tt.main_script.update = scripts.mod_track_target.update
+tt.modifier.duration = 0.2
+tt = E:register_t("bullet_hero_dragon_arb_breath", "bullet")
+b = balance.heroes.hero_dragon_arb.basic_breath_attack
+tt.render.sprites[1].z = Z_BULLETS
+tt.render.sprites[1].prefix = "hero_dragon_arborean_breath"
+tt.render.sprites[1].anchor = v(0.464, 0.5)
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].loop = false
+tt.bullet.flight_time = fts(19)
+tt.image_width = 146.5
+tt.hit_delay = fts(1)
+tt.bullet.hit_time = fts(1)
+tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.damage_max = 0
+tt.bullet.damage_min = 0
+tt.bullet.ignore_hit_offset = true
+tt.main_script.update = scripts.ray_simple.update
+tt.passive_mark_mod = "mod_hero_dragon_arb_passive_mark"
+tt = E:register_t("bullet_hero_dragon_arb_breath_splint", "bolt")
+b = balance.heroes.hero_dragon_arb.basic_breath_attack
 
--- E:add_comps(tt, "tween")
+E:add_comps(tt, "tween")
 
--- tt.render.sprites[1].name = "hero_dragon_arborean_splinter_projectile"
--- tt.render.sprites[1].animated = false
--- tt.size_variation = 0.3
--- tt.bullet.align_with_trajectory = true
--- tt.bullet.flight_time = fts(19)
--- tt.bullet.min_speed = 900
--- tt.bullet.max_speed = 3000
--- tt.speed_variation = 0.3
--- tt.bullet.damage_type = b.damage_type
--- tt.bullet.damage_max = nil
--- tt.bullet.damage_min = nil
--- tt.bullet.mod = {
--- 	"mod_bullet_hero_dragon_arb_breath_hit"
--- }
--- tt.bullet.damage_radius = 40
--- tt.bullet.damage_flags = F_AREA
--- tt.bullet.damage_bans = 0
--- tt.bullet.use_unit_damage_factor = true
--- tt.bullet.hit_fx = nil
--- tt.bullet.pop = nil
--- tt.bullet.pop_conds = nil
--- tt.bullet.payload = {
--- 	"decal_dragon_arb_breath_splint_a",
--- 	"decal_dragon_arb_breath_splint_b"
--- }
--- tt.main_script.update = scripts.bullet_hero_dragon_arb_breath_splint.update
--- tt.passive_mark_mod = "mod_hero_dragon_arb_passive_mark"
--- tt.tween.props[1].name = "alpha"
--- tt.tween.props[1].keys = {
--- 	{
--- 		0,
--- 		0
--- 	},
--- 	{
--- 		fts(2),
--- 		255
--- 	}
--- }
--- tt.tween.remove = false
--- tt.sound_events.insert = nil
--- tt = E:register_t("bullet_hero_dragon_arb_breath_spikes", "bolt")
--- b = balance.heroes.hero_dragon_arb.basic_breath_attack
+tt.render.sprites[1].name = "hero_dragon_arborean_splinter_projectile"
+tt.render.sprites[1].animated = false
+tt.size_variation = 0.3
+tt.bullet.align_with_trajectory = true
+tt.bullet.flight_time = fts(19)
+tt.bullet.min_speed = 900
+tt.bullet.max_speed = 3000
+tt.speed_variation = 0.3
+tt.bullet.damage_type = b.damage_type
+tt.bullet.damage_max = nil
+tt.bullet.damage_min = nil
+tt.bullet.mod = {"mod_bullet_hero_dragon_arb_breath_hit"}
+tt.bullet.damage_radius = 40
+tt.bullet.damage_flags = F_AREA
+tt.bullet.damage_bans = 0
+tt.bullet.use_unit_damage_factor = true
+tt.bullet.hit_fx = nil
+tt.bullet.pop = nil
+tt.bullet.pop_conds = nil
+tt.bullet.payload = {"decal_dragon_arb_breath_splint_a", "decal_dragon_arb_breath_splint_b"}
+tt.main_script.update = scripts.bullet_hero_dragon_arb_breath_splint.update
+tt.passive_mark_mod = "mod_hero_dragon_arb_passive_mark"
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 0}, {fts(2), 255}}
+tt.tween.remove = false
+tt.sound_events.insert = nil
+tt = E:register_t("bullet_hero_dragon_arb_breath_spikes", "bolt")
+b = balance.heroes.hero_dragon_arb.basic_breath_attack
 
--- E:add_comps(tt, "tween")
+E:add_comps(tt, "tween")
 
--- tt.render.sprites[1].name = "hero_dragon_arborean_spikes_projectile"
--- tt.render.sprites[1].animated = false
--- tt.bullet.align_with_trajectory = true
--- tt.bullet.flight_time = fts(19)
--- tt.bullet.min_speed = 450
--- tt.bullet.max_speed = 1500
--- tt.bullet.damage_type = b.damage_type
--- tt.bullet.damage_max = 0
--- tt.bullet.damage_min = 0
--- tt.bullet.mod = nil
--- tt.bullet.damage_radius = 0
--- tt.bullet.damage_flags = F_AREA
--- tt.bullet.use_unit_damage_factor = false
--- tt.bullet.hit_fx = nil
--- tt.bullet.pop = nil
--- tt.bullet.pop_conds = nil
--- tt.bullet.payload = nil
--- tt.bullet.particles_name = "ps_bullet_hero_dragon_arb_breath_spikes"
--- tt.main_script.update = scripts.bullet_hero_dragon_arb_breath_splint.update
--- tt.tween.props[1].name = "alpha"
--- tt.tween.props[1].keys = {
--- 	{
--- 		0,
--- 		0
--- 	},
--- 	{
--- 		fts(2),
--- 		255
--- 	}
--- }
--- tt.tween.remove = false
--- tt.sound_events.insert = nil
--- tt = E:register_t("bullet_hero_dragon_arb_arborean_spawn", "bolt")
+tt.render.sprites[1].name = "hero_dragon_arborean_spikes_projectile"
+tt.render.sprites[1].animated = false
+tt.bullet.align_with_trajectory = true
+tt.bullet.flight_time = fts(19)
+tt.bullet.min_speed = 450
+tt.bullet.max_speed = 1500
+tt.bullet.damage_type = b.damage_type
+tt.bullet.damage_max = 0
+tt.bullet.damage_min = 0
+tt.bullet.mod = nil
+tt.bullet.damage_radius = 0
+tt.bullet.damage_flags = F_AREA
+tt.bullet.use_unit_damage_factor = false
+tt.bullet.hit_fx = nil
+tt.bullet.pop = nil
+tt.bullet.pop_conds = nil
+tt.bullet.payload = nil
+tt.bullet.particles_name = "ps_bullet_hero_dragon_arb_breath_spikes"
+tt.main_script.update = scripts.bullet_hero_dragon_arb_breath_splint.update
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 0}, {fts(2), 255}}
+tt.tween.remove = false
+tt.sound_events.insert = nil
+tt = E:register_t("bullet_hero_dragon_arb_arborean_spawn", "bolt")
 
--- E:add_comps(tt, "force_motion")
+E:add_comps(tt, "force_motion")
 
--- b = balance.heroes.hero_dragon_arb
--- tt.bullet.damage_type = DAMAGE_NONE
--- tt.bullet.hit_fx = "fx_bullet_hero_dragon_arb_arboreans_hit"
--- tt.bullet.ignore_hit_offset = true
--- tt.bullet.particles_name = "ps_bullet_hero_dragon_arb_arborean_spawn"
--- tt.bullet.max_speed = 150
--- tt.bullet.min_speed = 30
--- tt.bullet.align_with_trajectory = true
--- tt.bullet.xp_gain_factor = b.xp_gain_factor
--- tt.bullet.use_unit_damage_factor = true
--- tt.bullet.ignore_hit_offset = true
--- tt.bullet.payload = nil
--- tt.bullet.pop_chance = 0
--- tt.initial_impulse = 9000
--- tt.initial_impulse_duration = 0.2
--- tt.initial_impulse_angle_abs = math.pi / 2
--- tt.initial_impulse_angle_variation_d = 20
--- tt.force_motion.a_step = 5
--- tt.force_motion.max_a = 3000
--- tt.force_motion.max_v = 300
--- tt.render.sprites[1].name = "hero_dragon_arborean_leaf_projectile"
--- tt.render.sprites[1].animated = false
--- tt.main_script.update = scripts.bullet_hero_dragon_arb_arborean_spawn.update
--- tt.sound_events.insert = nil
--- tt = E:register_t("bullet_hero_dragon_arb_tower_buff", "bolt")
+b = balance.heroes.hero_dragon_arb
+tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.hit_fx = "fx_bullet_hero_dragon_arb_arboreans_hit"
+tt.bullet.ignore_hit_offset = true
+tt.bullet.particles_name = "ps_bullet_hero_dragon_arb_arborean_spawn"
+tt.bullet.max_speed = 150
+tt.bullet.min_speed = 30
+tt.bullet.align_with_trajectory = true
+tt.bullet.xp_gain_factor = b.xp_gain_factor
+tt.bullet.use_unit_damage_factor = true
+tt.bullet.ignore_hit_offset = true
+tt.bullet.payload = nil
+tt.bullet.pop_chance = 0
+tt.initial_impulse = 9000
+tt.initial_impulse_duration = 0.2
+tt.initial_impulse_angle_abs = math.pi / 2
+tt.initial_impulse_angle_variation_d = 20
+tt.force_motion.a_step = 5
+tt.force_motion.max_a = 3000
+tt.force_motion.max_v = 300
+tt.render.sprites[1].name = "hero_dragon_arborean_leaf_projectile"
+tt.render.sprites[1].animated = false
+tt.main_script.update = scripts.bullet_hero_dragon_arb_arborean_spawn.update
+tt.sound_events.insert = nil
+tt = E:register_t("bullet_hero_dragon_arb_tower_buff", "bolt")
 
--- E:add_comps(tt, "force_motion", "tween")
+E:add_comps(tt, "force_motion", "tween")
 
--- b = balance.heroes.hero_dragon_arb
--- tt.bullet.damage_type = DAMAGE_NONE
--- tt.bullet.hit_fx = nil
--- tt.bullet.ignore_hit_offset = true
--- tt.bullet.particles_name = "ps_bullet_hero_dragon_arb_rune"
--- tt.bullet.max_speed = 300
--- tt.bullet.min_speed = 150
--- tt.bullet.align_with_trajectory = false
--- tt.bullet.xp_gain_factor = b.xp_gain_factor
--- tt.bullet.use_unit_damage_factor = fakse
--- tt.bullet.ignore_hit_offset = true
--- tt.bullet.pop_chance = 0
--- tt.bullet.hit_mod = "mod_hero_dragon_arb_tower_buff"
--- tt.force_motion.a_step = 5
--- tt.force_motion.max_a = 3000
--- tt.force_motion.max_v = 600
--- tt.render.sprites[1].name = "hero_dragon_arborean_rune_projectile"
--- tt.render.sprites[1].animated = false
--- tt.tween.props[1].keys = {
--- 	{
--- 		0,
--- 		255
--- 	},
--- 	{
--- 		fts(4),
--- 		0
--- 	}
--- }
--- tt.tween.props[1].name = "alpha"
--- tt.tween.remove = true
--- tt.tween.reverse = false
--- tt.tween.disabled = true
--- tt.main_script.update = scripts.bullet_hero_dragon_arb_tower_buff.update
--- tt.sound_events.insert = nil
--- tt = E:register_t("bullet_hero_dragon_arb_tower_plants", "bombKR5")
--- tt.bullet.damage_type = DAMAGE_NONE
--- tt.bullet.damage_radius = 0
--- tt.bullet.damage_min = 0
--- tt.bullet.damage_max = 0
--- tt.bullet.rotation_speed = 0
--- tt.bullet.hit_decal = "fx_water_bullet_hero_dragon_arb_water_decal"
--- tt.bullet.hit_fx = "fx_water_bullet_hero_dragon_arb_water_hit"
--- tt.bullet.particles_name = "ps_bullet_hero_dragon_arb_water"
--- tt.bullet.align_with_trajectory = true
--- tt.bullet.xp_gain_factor = b.xp_gain_factor
--- tt.bullet.use_unit_damage_factor = true
--- tt.bullet.pop = nil
--- tt.bullet.pop_chance = 0
--- tt.bullet.hide_radius = 8
--- tt.render.sprites[1].prefix = "hero_dragon_arborean_water_projectile"
--- tt.render.sprites[1].name = "run"
--- tt.render.sprites[1].animated = true
--- tt.render.sprites[1].loop = true
--- tt.render.sprites[1].z = Z_BULLETS
--- tt.sound_events.insert = nil
--- tt.sound_events.hit = nil
--- tt.sound_events.hit_water = nil
--- tt = E:register_t("bullet_hero_dragon_arb_linirea_plant_heal", "bolt")
+b = balance.heroes.hero_dragon_arb
+tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.hit_fx = nil
+tt.bullet.ignore_hit_offset = true
+tt.bullet.particles_name = "ps_bullet_hero_dragon_arb_rune"
+tt.bullet.max_speed = 300
+tt.bullet.min_speed = 150
+tt.bullet.align_with_trajectory = false
+tt.bullet.xp_gain_factor = b.xp_gain_factor
+tt.bullet.use_unit_damage_factor = false
+tt.bullet.ignore_hit_offset = true
+tt.bullet.pop_chance = 0
+tt.bullet.hit_mod = "mod_hero_dragon_arb_tower_buff"
+tt.force_motion.a_step = 5
+tt.force_motion.max_a = 3000
+tt.force_motion.max_v = 600
+tt.render.sprites[1].name = "hero_dragon_arborean_rune_projectile"
+tt.render.sprites[1].animated = false
+tt.tween.props[1].keys = {{0, 255}, {fts(4), 0}}
+tt.tween.props[1].name = "alpha"
+tt.tween.remove = true
+tt.tween.reverse = false
+tt.tween.disabled = true
+tt.main_script.update = scripts.bullet_hero_dragon_arb_tower_buff.update
+tt.sound_events.insert = nil
+tt = E:register_t("bullet_hero_dragon_arb_tower_plants", "bombKR5")
+tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.damage_radius = 0
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.bullet.rotation_speed = 0
+tt.bullet.hit_decal = "fx_water_bullet_hero_dragon_arb_water_decal"
+tt.bullet.hit_fx = "fx_water_bullet_hero_dragon_arb_water_hit"
+tt.bullet.particles_name = "ps_bullet_hero_dragon_arb_water"
+tt.bullet.align_with_trajectory = true
+tt.bullet.xp_gain_factor = b.xp_gain_factor
+tt.bullet.use_unit_damage_factor = true
+tt.bullet.pop = nil
+tt.bullet.pop_chance = 0
+tt.bullet.hide_radius = 8
+tt.render.sprites[1].prefix = "hero_dragon_arborean_water_projectile"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_BULLETS
+tt.sound_events.insert = nil
+tt.sound_events.hit = nil
+tt.sound_events.hit_water = nil
+tt = E:register_t("bullet_hero_dragon_arb_linirea_plant_heal", "bolt")
 
--- E:add_comps(tt, "force_motion")
+E:add_comps(tt, "force_motion")
 
--- tt.render.sprites[1].name = "hero_dragon_arborean_flower_projectile"
--- tt.render.sprites[1].animated = false
--- tt.render.sprites[1].anchor = vv(0.5)
--- tt.bullet.damage_min = 0
--- tt.bullet.damage_max = 0
--- tt.bullet.damage_type = DAMAGE_NONE
--- tt.bullet.hit_fx = "fx_bullet_hero_dragon_arb_linirea_plant_heal_hit"
--- tt.bullet.particles_name = "ps_bullet_hero_dragon_arb_tower_plants"
--- tt.bullet.align_with_trajectory = true
--- tt.bullet.miss_decal = nil
--- tt.bullet.vis_flags = bor(F_RANGED, F_MOD)
--- tt.bullet.vis_bans = 0
--- tt.bullet.max_speed = 300
--- tt.bullet.min_speed = 30
--- tt.bullet.use_unit_damage_factor = true
--- tt.bullet.mod = "mod_hero_dragon_arb_plant_linirea_heal"
--- tt.initial_impulse = 15000
--- tt.initial_impulse_duration = 0.15
--- tt.initial_impulse_angle_abs = math.pi / 2
--- tt.force_motion.a_step = 5
--- tt.force_motion.max_a = 3000
--- tt.force_motion.max_v = 300
--- tt.main_script.update = scripts.bullet_hero_dragon_arb_linirea_plant_heal.update
+tt.render.sprites[1].name = "hero_dragon_arborean_flower_projectile"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].anchor = vv(0.5)
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.hit_fx = "fx_bullet_hero_dragon_arb_linirea_plant_heal_hit"
+tt.bullet.particles_name = "ps_bullet_hero_dragon_arb_tower_plants"
+tt.bullet.align_with_trajectory = true
+tt.bullet.miss_decal = nil
+tt.bullet.vis_flags = bor(F_RANGED, F_MOD)
+tt.bullet.vis_bans = 0
+tt.bullet.max_speed = 300
+tt.bullet.min_speed = 30
+tt.bullet.use_unit_damage_factor = true
+tt.bullet.mod = "mod_hero_dragon_arb_plant_linirea_heal"
+tt.initial_impulse = 15000
+tt.initial_impulse_duration = 0.15
+tt.initial_impulse_angle_abs = math.pi / 2
+tt.force_motion.a_step = 5
+tt.force_motion.max_a = 3000
+tt.force_motion.max_v = 300
+tt.main_script.update = scripts.bullet_hero_dragon_arb_linirea_plant_heal.update
 
--- tt = E:register_t("mod_hero_dragon_arb_ultimate_paragons_polymorph", "modifier")
--- tt.modifier.duration = fts(2)
--- tt.main_script.insert = scripts.mod_hero_dragon_arb_ultimate_paragons_polymorph.insert
--- tt.entity_t = {
--- 	{
--- 		"soldier_hero_dragon_arb_spawn_lvl1",
--- 		"soldier_hero_dragon_arb_spawn_paragon_lvl1"
--- 	},
--- 	{
--- 		"soldier_hero_dragon_arb_spawn_lvl2",
--- 		"soldier_hero_dragon_arb_spawn_paragon_lvl2"
--- 	},
--- 	{
--- 		"soldier_hero_dragon_arb_spawn_lvl3",
--- 		"soldier_hero_dragon_arb_spawn_paragon_lvl3"
--- 	}
--- }
+tt = E:register_t("mod_hero_dragon_arb_ultimate_paragons_polymorph", "modifier")
+tt.modifier.duration = fts(2)
+tt.main_script.insert = scripts.mod_hero_dragon_arb_ultimate_paragons_polymorph.insert
+tt.entity_t = {{"soldier_hero_dragon_arb_spawn_lvl1", "soldier_hero_dragon_arb_spawn_paragon_lvl1"}, {"soldier_hero_dragon_arb_spawn_lvl2", "soldier_hero_dragon_arb_spawn_paragon_lvl2"}, {"soldier_hero_dragon_arb_spawn_lvl3", "soldier_hero_dragon_arb_spawn_paragon_lvl3"}}
 
--- tt = E:register_t("controller_hero_dragon_arb_passive")
--- b = balance.heroes.hero_dragon_arb.passive_plant_zones
+tt = E:register_t("controller_hero_dragon_arb_passive")
+b = balance.heroes.hero_dragon_arb.passive_plant_zones
 
--- E:add_comps(tt, "main_script")
+E:add_comps(tt, "main_script")
 
--- tt.main_script.update = scripts.controller_hero_dragon_arb_passive.update
--- tt.plant_decal = "decal_hero_dragon_arb_passive_plant"
--- tt.aura_slow = "aura_hero_dragon_arb_passive_slow"
--- tt.zones_duration = b.zone_duration
--- tt.zones_radius = b.radius
--- tt.zone_expansion_cooldown = b.expansion_cooldown
+tt.main_script.update = scripts.controller_hero_dragon_arb_passive.update
+tt.plant_decal = "decal_hero_dragon_arb_passive_plant"
+tt.aura_slow = "aura_hero_dragon_arb_passive_slow"
+tt.zones_duration = b.zone_duration
+tt.zones_radius = b.radius
+tt.zone_expansion_cooldown = b.expansion_cooldown

@@ -30738,2550 +30738,2488 @@ function scripts.hero_muyrn_ultimate.update(this, store)
 	queue_remove(store, this)
 end
 
--- scripts.hero_dragon_arb = {}
+scripts.hero_dragon_arb = {}
 
--- function scripts.hero_dragon_arb.get_info(this)
--- 	local a = this.ranged.attacks[1]
--- 	local b = E:get_template(a.bullet)
--- 	local min, max = b.bullet.damage_min, b.bullet.damage_max
+function scripts.hero_dragon_arb.level_up(this, store)
+	local hl, ls = level_up_basic(this)
 
--- 	min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
--- 	min, max = math.ceil(min), math.ceil(max)
+	local b = E:get_template(this.ranged.attacks[1].bullet)
 
--- 	return {
--- 		type = STATS_TYPE_SOLDIER,
--- 		hp = this.health.hp,
--- 		hp_max = this.health.hp_max,
--- 		damage_min = min,
--- 		damage_max = max,
--- 		damage_type = b.bullet.damage_type,
--- 		damage_icon = this.info.damage_icon,
--- 		armor = this.health.armor,
--- 		magic_armor = this.health.magic_armor,
--- 		respawn = this.health.dead_lifetime
--- 	}
--- end
+	b.bullet.damage_max = ls.ranged_damage_max[hl]
+	b.bullet.damage_min = ls.ranged_damage_min[hl]
 
--- function scripts.hero_dragon_arb.level_up(this, store, initial)
--- 	local hl = this.hero.level
--- 	local ls = this.hero.level_stats
+	upgrade_skill(this, "arborean_spawn", function(this, s)
+		local a = this.timed_attacks.list[1]
 
--- 	this.health.hp_max = ls.hp_max[hl]
--- 	this.regen.health = ls.regen_health[hl]
--- 	this.health.armor = ls.armor[hl]
--- 	this.health.magic_armor = ls.magic_armor[hl]
+		a.disabled = nil
+		a.cooldown = s.cooldown[s.level]
+	end)
 
--- 	local b = E:get_template(this.ranged.attacks[1].bullet)
+	upgrade_skill(this, "tower_runes", function(this, s)
+		local sl = s.level
+		local a = this.timed_attacks.list[3]
 
--- 	b.bullet.damage_max = ls.ranged_damage_max[hl]
--- 	b.bullet.damage_min = ls.ranged_damage_min[hl]
+		a.disabled = nil
+		a.cooldown = s.cooldown[sl]
+		a.max_targets = s.max_targets[sl]
 
--- 	local s, sl
+		local bullet = E:get_template(a.bullet)
+		local mod = E:get_template(bullet.bullet.hit_mod)
 
--- 	s = this.hero.skills.arborean_spawn
--- 	sl = s.level
+		mod.damage_factor = s.damage_factor[sl]
+		mod.modifier.duration = s.duration[sl]
+	end)
 
--- 	if initial and s.level > 0 then
--- 		log.info("LEVELUP - %s - %i - ARBOREAN SPAWN - %i", this.template_name, hl, sl)
+	upgrade_skill(this, "thorn_bleed", function(this, s)
+		local sl = s.level
+		local a = this.timed_attacks.list[2]
 
--- 		local a = this.timed_attacks.list[1]
+		a.disabled = nil
+		a.cooldown = s.cooldown[sl]
+		a.instakill_chance = s.instakill_chance[sl]
 
--- 		a.disabled = nil
--- 		a.cooldown = s.cooldown[sl]
--- 	end
+		local mod = E:get_template(a.mod[1])
 
--- 	s = this.hero.skills.tower_runes
--- 	sl = s.level
+		mod.modifier.duration = s.duration[sl]
+		mod.damage_speed_ratio = s.damage_speed_ratio[sl]
+	end)
 
--- 	if initial and s.level > 0 then
--- 		log.info("LEVELUP - %s - %i - TOWER RUNES - %i", this.template_name, hl, sl)
+	upgrade_skill(this, "tower_plants", function(this, s)
+		local sl = s.level
+		local a = this.timed_attacks.list[4]
 
--- 		local a = this.timed_attacks.list[3]
+		a.disabled = nil
+		a.cooldown = s.cooldown[sl]
+		a.max_targets = s.max_targets[sl]
 
--- 		a.disabled = nil
--- 		a.cooldown = s.cooldown[sl]
--- 		a.max_targets = s.max_targets[sl]
+		local p_lin = E:get_template(a.plant_linirea)
 
--- 		local bullet = E:get_template(a.bullet)
--- 		local mod = E:get_template(bullet.bullet.hit_mod)
+		p_lin.duration = s.duration[sl]
 
--- 		mod.damage_factor = s.damage_factor[sl]
--- 		mod.modifier.duration = s.duration[sl]
--- 	end
+		local p_lin_b = E:get_template(p_lin.bullet_attack.bullet)
+		local p_lin_b_mod = E:get_template(p_lin_b.bullet.mod)
 
--- 	s = this.hero.skills.thorn_bleed
--- 	sl = s.level
+		p_lin_b_mod.hps.heal_max = s.heal_max[sl]
+		p_lin_b_mod.hps.heal_min = s.heal_min[sl]
 
--- 	if initial and s.level > 0 then
--- 		log.info("LEVELUP - %s - %i - THORN BLEED - %i", this.template_name, hl, sl)
+		local p_da = E:get_template(a.plant_dark_army)
 
--- 		local a = this.timed_attacks.list[2]
+		p_da.duration = s.duration[sl]
 
--- 		a.disabled = nil
--- 		a.cooldown = s.cooldown[sl]
--- 		a.instakill_chance = s.instakill_chance[sl]
+		local p_da_mod_slow = E:get_template("mod_hero_dragon_arb_plant_dark_army_slow")
 
--- 		local mod = E:get_template(a.mod[1])
+		p_da_mod_slow.slow.factor = s.slow_factor[sl]
 
--- 		mod.modifier.duration = s.duration[sl]
--- 		mod.damage_speed_ratio = s.damage_speed_ratio[sl]
--- 	end
+		local p_da_mod_dps = E:get_template("mod_hero_dragon_arb_plant_dark_army_dps")
 
--- 	s = this.hero.skills.tower_plants
--- 	sl = s.level
+		p_da_mod_dps.dps.damage_min = s.damage_min[sl]
+		p_da_mod_dps.dps.damage_max = s.damage_max[sl]
+	end)
 
--- 	if initial and s.level > 0 then
--- 		log.info("LEVELUP - %s - %i - TOWER PLANTS - %i", this.template_name, hl, sl)
+	upgrade_skill(this, "ultimate", function(this, s)
+		local sl = s.level
 
--- 		local a = this.timed_attacks.list[4]
+		this.ultimate.disabled = nil
+		this.ultimate.cooldown = s.cooldown[sl]
 
--- 		a.disabled = nil
--- 		a.cooldown = s.cooldown[sl]
--- 		a.max_targets = s.max_targets[sl]
+		local mod = E:get_template(s.mod)
 
--- 		local p_lin = E:get_template(a.plant_linirea)
+		mod.inflicted_damage_factor = s.inflicted_damage_factor[sl]
+		mod.extra_magic_armor = s.extra_magic_armor[sl]
+		mod.extra_armor = s.extra_armor[sl]
+		mod.fast.factor = s.speed_factor[sl]
+	end)
 
--- 		p_lin.duration = s.duration[sl]
+	this.health.hp = this.health.hp_max
+end
 
--- 		local p_lin_b = E:get_template(p_lin.bullet_attack.bullet)
--- 		local p_lin_b_mod = E:get_template(p_lin_b.bullet.mod)
+function scripts.hero_dragon_arb.insert(this, store)
+	this.hero.fn_level_up(this, store, true)
 
--- 		p_lin_b_mod.hps.heal_max = s.heal_max[sl]
--- 		p_lin_b_mod.hps.heal_min = s.heal_min[sl]
+	this.ranged.order = U.attack_order(this.ranged.attacks)
 
--- 		local p_da = E:get_template(a.plant_dark_army)
+	return true
+end
 
--- 		p_da.duration = s.duration[sl]
+function scripts.hero_dragon_arb.update(this, store)
+	local h = this.health
+	local he = this.hero
+	local a, skill
+	local shadow_sprite = this.render.sprites[2]
 
--- 		local p_da_mod_slow = E:get_template("mod_hero_dragon_arb_plant_dark_army_slow")
+	this.ultimate_ts = store.tick_ts
 
--- 		p_da_mod_slow.slow.factor = s.slow_factor[sl]
+	local s_ult = this.hero.skills.ultimate
+	local attack_arborean_spawns = this.timed_attacks.list[1]
+	local attack_thorn_bleed = this.timed_attacks.list[2]
+	local attack_tower_runes = this.timed_attacks.list[3]
+	local attack_tower_plants = this.timed_attacks.list[4]
 
--- 		local p_da_mod_dps = E:get_template("mod_hero_dragon_arb_plant_dark_army_dps")
+	this.tween.disabled = false
+	this.tween.ts = store.tick_ts
+	this.health_bar.hidden = false
 
--- 		p_da_mod_dps.dps.damage_min = s.damage_min[sl]
--- 		p_da_mod_dps.dps.damage_max = s.damage_max[sl]
--- 	end
+	local passive_controller = E:create_entity(this.controller_passive)
 
--- 	s = this.hero.skills.ultimate
--- 	sl = s.level
+	queue_insert(store, passive_controller)
 
--- 	if initial and s.level > 0 then
--- 		log.info("LEVELUP - %s - %i - ULTIMATE - %i", this.template_name, hl, sl)
+	local function can_ranged_attack()
+		local a = this.ranged.attacks[1]
 
--- 		local uc = E:get_template(s.controller_name)
+		if a.disabled then
+			return false
+		end
 
--- 		uc.cooldown = s.cooldown[sl]
--- 	end
+		if a.sync_animation and not this.render.sprites[1].sync_flag then
+			return false
+		end
 
--- 	local mod = E:get_template(s.mod)
+		if store.tick_ts - a.ts < a.cooldown then
+			return false
+		end
 
--- 	mod.inflicted_damage_factor = s.inflicted_damage_factor[sl]
--- 	mod.extra_magic_armor = s.extra_magic_armor[sl]
--- 	mod.extra_armor = s.extra_armor[sl]
--- 	mod.fast.factor = s.speed_factor[sl]
--- 	this.health.hp = this.health.hp_max
--- end
+		return true
+	end
 
--- function scripts.hero_dragon_arb.insert(this, store)
--- 	this.hero.fn_level_up(this, store, true)
+	local function attack_is_tower_valid(v, a)
+		local is_tower = v.tower and not v.pending_removal and not v.tower.blocked and (not a.excluded_templates or not table.contains(a.excluded_templates, v.template_name)) and v.vis and band(v.vis.flags, a.vis_bans) == 0 and band(v.vis.bans, a.vis_flags) == 0 and not table.contains(a.exclude_tower_kind, v.tower.kind) and v.tower.can_be_mod and U.is_inside_ellipse(v.pos, this.pos, a.max_range) and (a.min_range == 0 or not U.is_inside_ellipse(v.pos, this.pos, a.min_range))
 
--- 	this.ranged.order = U.attack_order(this.ranged.attacks)
+		return is_tower
+	end
 
--- 	return true
--- end
+	local function attack_get_towers(a)
+		local targets = table.filter(store.entities, function(k, v)
+			return attack_is_tower_valid(v, a)
+		end)
 
--- function scripts.hero_dragon_arb.update(this, store)
--- 	local h = this.health
--- 	local he = this.hero
--- 	local a, skill
--- 	local shadow_sprite = this.render.sprites[2]
--- 	local upg_lf = UP:get_upgrade("heroes_lethal_focus")
+		if targets and #targets > 0 then
+			return targets
+		end
 
--- 	this.ultimate_ts = store.tick_ts
+		return nil
+	end
 
--- 	local s_ult = this.hero.skills.ultimate
--- 	local attack_arborean_spawns = this.timed_attacks.list[1]
--- 	local attack_thorn_bleed = this.timed_attacks.list[2]
--- 	local attack_tower_runes = this.timed_attacks.list[3]
--- 	local attack_tower_plants = this.timed_attacks.list[4]
--- 	local power_index = 2
+	this.desired_rotation = 0
 
--- 	if this.template_name == store.selected_team[2] then
--- 		power_index = 3
--- 	end
+	local function update_dragon_rotation(new_rotation)
+		if new_rotation then
+			this.desired_rotation = new_rotation
+		end
 
--- 	this.tween.disabled = false
--- 	this.tween.ts = store.tick_ts
--- 	this.health_bar.hidden = false
+		local current_rotation = math.abs(this.render.sprites[1].r)
+		local rotation = U.ease_value(current_rotation, this.desired_rotation, 0.2, "linear")
 
--- 	local passive_controller = E:create_entity(this.controller_passive)
+		if not this.render.sprites[1].flip_x then
+			rotation = -rotation
+		end
 
--- 	queue_insert(store, passive_controller)
+		this.render.sprites[1].r = rotation
+		this.render.sprites[3].r = rotation
+	end
 
--- 	local function can_ranged_attack()
--- 		local a = this.ranged.attacks[1]
+	local function y_hero_dragon_arb_walk_waypoints(store, this, animation)
+		local animation = animation or "walk"
+		local r = this.nav_rally
+		local n = this.nav_grid
+		local dest = r.pos
+		local x_to_flip = 0
+		local last_af
+		local start_ts = store.tick_ts
 
--- 		if a.disabled then
--- 			return false
--- 		end
+		while not V.veq(this.pos, dest) do
+			local w = table.remove(n.waypoints, 1) or dest
+			local unsnap = #n.waypoints > 0
 
--- 		if a.sync_animation and not this.render.sprites[1].sync_flag then
--- 			return false
--- 		end
+			U.set_destination(this, w)
 
--- 		if store.tick_ts - a.ts < a.cooldown then
--- 			return false
--- 		end
+			local an, af = U.animation_name_facing_point(this, animation, this.motion.dest)
+			local new_af = af
 
--- 		return true
--- 	end
+			if x_to_flip > math.abs(this.pos.x - this.motion.dest.x) then
+				new_af = last_af
+			end
 
--- 	local function attack_is_tower_valid(v, a)
--- 		local is_tower = v.tower and not v.pending_removal and not v.tower.blocked and (not a.excluded_templates or not table.contains(a.excluded_templates, v.template_name)) and v.vis and band(v.vis.flags, a.vis_bans) == 0 and band(v.vis.bans, a.vis_flags) == 0 and not table.contains(a.exclude_tower_kind, v.tower.kind) and v.tower.can_be_mod and U.is_inside_ellipse(v.pos, this.pos, a.max_range) and (a.min_range == 0 or not U.is_inside_ellipse(v.pos, this.pos, a.min_range))
+			U.animation_start(this, an, new_af, store.tick_ts, true)
 
--- 		return is_tower
--- 	end
+			last_af = new_af
 
--- 	local function attack_get_towers(a)
--- 		local targets = table.filter(store.entities, function(k, v)
--- 			return attack_is_tower_valid(v, a)
--- 		end)
+			local time_to_accel = 0.7
+			local dist_to_break = 50
+			local orig_vx = r.pos.x - this.pos.x
+			local rotation_multiplier = math.min(math.abs(orig_vx) / 300, 1)
+			local current_dir = -1
 
--- 		if targets and #targets > 0 then
--- 			return targets
--- 		end
+			if orig_vx > 0 then
+				current_dir = 1
+			end
 
--- 		return nil
--- 	end
+			local same_dir = false
 
--- 	this.desired_rotation = 0
+			if this.old_rally_dir == current_dir then
+				same_dir = true
+			end
 
--- 	local function update_dragon_rotation(new_rotation)
--- 		if new_rotation then
--- 			this.desired_rotation = new_rotation
--- 		end
+			local old_rally_ease_step = same_dir and this.old_rally_ease_step or nil
 
--- 		local current_rotation = math.abs(this.render.sprites[1].r)
--- 		local rotation = U.ease_value(current_rotation, this.desired_rotation, 0.2, "linear")
+			this.old_rally_dir = current_dir
 
--- 		if not this.render.sprites[1].flip_x then
--- 			rotation = -rotation
--- 		end
+			while not this.motion.arrived do
+				if this.health.dead and not this.health.ignore_damage then
+					return true
+				end
 
--- 		this.render.sprites[1].r = rotation
--- 		this.render.sprites[3].r = rotation
--- 	end
+				if r.new then
+					return false
+				end
 
--- 	local function y_hero_dragon_arb_walk_waypoints(store, this, animation)
--- 		local animation = animation or "walk"
--- 		local r = this.nav_rally
--- 		local n = this.nav_grid
--- 		local dest = r.pos
--- 		local x_to_flip = KR_GAME == "kr5" and 2 or 0
--- 		local last_af
--- 		local start_ts = store.tick_ts
+				local vx, vy = V.sub(r.pos.x, r.pos.y, this.pos.x, this.pos.y)
+				local dist = V.len(vx, vy)
+				local stored_max_speed = this.motion.max_speed
+				local target_ease_step, ease_from
 
--- 		while not V.veq(this.pos, dest) do
--- 			local w = table.remove(n.waypoints, 1) or dest
--- 			local unsnap = #n.waypoints > 0
+				if dist_to_break < dist then
+					target_ease_step = (store.tick_ts - start_ts) / time_to_accel
+					ease_from = 0
+				else
+					target_ease_step = dist / dist_to_break
+					ease_from = 20
+				end
 
--- 			U.set_destination(this, w)
+				local ease_step = target_ease_step
 
--- 			local an, af = U.animation_name_facing_point(this, animation, this.motion.dest)
--- 			local new_af = af
+				if old_rally_ease_step then
+					ease_step = U.ease_value(old_rally_ease_step, target_ease_step, math.min(1, (store.tick_ts - start_ts) / (time_to_accel / 2)), "linear")
+				end
 
--- 			if x_to_flip > math.abs(this.pos.x - this.motion.dest.x) then
--- 				new_af = last_af
--- 			end
+				this.motion.max_speed = U.ease_value(ease_from, stored_max_speed, ease_step, "quad-in")
+				this.old_rally_ease_step = ease_step
 
--- 			U.animation_start(this, an, new_af, store.tick_ts, true)
+				local desired_rotation = math.rad(13 * this.motion.max_speed / stored_max_speed) * rotation_multiplier
 
--- 			last_af = new_af
+				update_dragon_rotation(desired_rotation)
+				U.walk(this, store.tick_length, nil, unsnap)
 
--- 			local time_to_accel = 0.7
--- 			local dist_to_break = 50
--- 			local orig_vx = r.pos.x - this.pos.x
--- 			local rotation_multiplier = math.min(math.abs(orig_vx) / 300, 1)
--- 			local current_dir = -1
+				this.motion.max_speed = stored_max_speed
 
--- 			if orig_vx > 0 then
--- 				current_dir = 1
--- 			end
+				coroutine.yield()
 
--- 			local same_dir = false
+				this.motion.speed.x, this.motion.speed.y = 0, 0
+			end
 
--- 			if this.old_rally_dir == current_dir then
--- 				same_dir = true
--- 			end
+			this.old_rally_ease_step = nil
+			this.old_rally_dir = nil
+		end
+	end
 
--- 			local old_rally_ease_step = same_dir and this.old_rally_ease_step or nil
+	local function y_hero_dragon_arb_new_rally(store, this)
+		local r = this.nav_rally
 
--- 			this.old_rally_dir = current_dir
+		if r.new then
+			r.new = false
 
--- 			while not this.motion.arrived do
--- 				if this.health.dead and not this.health.ignore_damage then
--- 					return true
--- 				end
+			U.unblock_target(store, this)
 
--- 				if r.new then
--- 					return false
--- 				end
+			if this.sound_events then
+				S:queue(this.sound_events.change_rally_point)
+			end
 
--- 				local vx, vy = V.sub(r.pos.x, r.pos.y, this.pos.x, this.pos.y)
--- 				local dist = V.len(vx, vy)
--- 				local stored_max_speed = this.motion.max_speed
--- 				local target_ease_step, ease_from
+			local vis_bans = this.vis.bans
+			local prev_immune = this.health.immune_to
 
--- 				if dist_to_break < dist then
--- 					target_ease_step = (store.tick_ts - start_ts) / time_to_accel
--- 					ease_from = 0
--- 				else
--- 					target_ease_step = dist / dist_to_break
--- 					ease_from = 20
--- 				end
+			this.vis.bans = F_ALL
+			this.health.immune_to = r.immune_to
 
--- 				local ease_step = target_ease_step
+			local out = y_hero_dragon_arb_walk_waypoints(store, this)
 
--- 				if old_rally_ease_step then
--- 					ease_step = U.ease_value(old_rally_ease_step, target_ease_step, math.min(1, (store.tick_ts - start_ts) / (time_to_accel / 2)), "linear")
--- 				end
+			U.animation_start(this, "idle", nil, store.tick_ts, true)
 
--- 				this.motion.max_speed = U.ease_value(ease_from, stored_max_speed, ease_step, "quad-in")
--- 				this.old_rally_ease_step = ease_step
+			this.vis.bans = vis_bans
+			this.health.immune_to = prev_immune
 
--- 				local desired_rotation = math.rad(13 * this.motion.max_speed / stored_max_speed) * rotation_multiplier
+			return out
+		end
+	end
 
--- 				update_dragon_rotation(desired_rotation)
--- 				U.walk(this, store.tick_length, nil, unsnap)
+	U.animation_start_group(this, this.idle_flip.last_animation, nil, store.tick_ts - fts(4), this.idle_flip.loop, this.render.sprites[1].group)
 
--- 				this.motion.max_speed = stored_max_speed
+	while true do
+		if h.dead then
+			SU.remove_modifiers(store, this, this.hero.skills.ultimate.mod)
+			U.sprites_hide(this, 3, 3, true)
+			SU.y_hero_death_and_respawn(store, this)
+			U.animation_start_group(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, this.render.sprites[1].group)
+			U.sprites_show(this, 3, 3, true)
 
--- 				coroutine.yield()
+			this.tween.props[2].disabled = false
+			this.tween.props[2].ts = store.tick_ts
+			this.tween.reverse = false
+		end
 
--- 				this.motion.speed.x, this.motion.speed.y = 0, 0
--- 			end
+		if this.ultimate_active and store.tick_ts > this.ultimate_ts + s_ult.duration[s_ult.level] then
+			this.tween.reverse = true
+			this.tween.props[2].disabled = false
+			this.tween.props[2].ts = store.tick_ts
 
--- 			this.old_rally_ease_step = nil
--- 			this.old_rally_dir = nil
--- 		end
--- 	end
+			SU.y_hero_wait(store, this, this.tween.props[2].keys[2][1])
 
--- 	local function y_hero_dragon_arb_new_rally(store, this)
--- 		local r = this.nav_rally
+			this.ultimate_active = false
 
--- 		if r.new then
--- 			r.new = false
+			SU.remove_modifiers(store, this, s_ult.mod)
+		end
 
--- 			U.unblock_target(store, this)
+		while this.nav_rally.new do
+			local r = this.nav_rally
+			local start_pos = V.vclone(this.pos)
 
--- 			if this.sound_events then
--- 				S:queue(this.sound_events.change_rally_point)
--- 			end
+			y_hero_dragon_arb_new_rally(store, this)
+		end
 
--- 			local vis_bans = this.vis.bans
--- 			local prev_immune = this.health.immune_to
+		if SU.hero_level_up(store, this) then
+			U.y_animation_play_group(this, "levelup", nil, store.tick_ts, 1, this.render.sprites[1].group)
+		end
 
--- 			this.vis.bans = F_ALL
--- 			this.health.immune_to = r.immune_to
+		if ready_to_use_skill(this.ultimate, store) then
+			if not this.ultimate_active then
+				local ue = E:create_entity(this.hero.skills.ultimate.controller_name)
 
--- 			local out = y_hero_dragon_arb_walk_waypoints(store, this)
+				queue_insert(store, ue)
 
--- 			U.animation_start(this, "idle", nil, store.tick_ts, true)
+				this.ultimate.ts = store.tick_ts
 
--- 			this.vis.bans = vis_bans
--- 			this.health.immune_to = prev_immune
+				SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
+			else
+				this.ultimate.ts = this.ultimate.ts + 1
+			end
+		end
 
--- 			return out
--- 		end
--- 	end
+		if can_ranged_attack() then
+			local a = this.ranged.attacks[1]
+			local bullet_t = E:get_template(a.bullet)
+			local flight_time = bullet_t.bullet.flight_time
+			local target = U.find_foremost_enemy(store.entities, this.pos, a.min_range, a.max_range, a.shoot_time + flight_time, a.vis_flags, a.vis_bans, function(v)
+				local v_pos = v.pos
 
--- 	U.animation_start_group(this, this.idle_flip.last_animation, nil, store.tick_ts - fts(4), this.idle_flip.loop, this.render.sprites[1].group)
+				if v.motion and v.motion.speed then
+					local node_offset = P:predict_enemy_node_advance(v, flight_time + a.shoot_time)
 
--- 	while true do
--- 		if h.dead then
--- 			signal.emit("lock-user-power", power_index)
--- 			SU.remove_modifiers(store, this, this.hero.skills.ultimate.mod)
--- 			U.sprites_hide(this, 3, 3, true)
--- 			SU.y_hero_death_and_respawn_kr5(store, this)
--- 			U.animation_start_group(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, this.render.sprites[1].group)
--- 			U.sprites_show(this, 3, 3, true)
+					v_pos = P:node_pos(v.nav_path.pi, 1, v.nav_path.ni + node_offset)
+				end
 
--- 			this.tween.props[2].disabled = false
--- 			this.tween.props[2].ts = store.tick_ts
--- 			this.tween.reverse = false
+				local max_angle = a.max_angle
 
--- 			signal.emit("unlock-user-power", power_index)
--- 		end
+				if band(v.vis.flags, F_FLYING) ~= 0 then
+					v_pos.y = v_pos.y + v.unit.hit_offset.y
+					max_angle = a.max_angle_fliers
+				end
 
--- 		if this.ultimate_active and store.tick_ts > this.ultimate_ts + s_ult.duration[s_ult.level] then
--- 			this.tween.reverse = true
--- 			this.tween.props[2].disabled = false
--- 			this.tween.props[2].ts = store.tick_ts
+				local b_pos = V.vclone(this.pos)
+				local bullet_start_offset = V.v(0, 0)
+				local flip = this.pos.x > v_pos.x
 
--- 			SU.y_hero_wait(store, this, this.tween.props[2].keys[2][1])
+				if a.bullet_start_offset and #a.bullet_start_offset == 2 then
+					local offset_index = flip and 2 or 1
 
--- 			this.ultimate_active = false
+					bullet_start_offset = a.bullet_start_offset[offset_index]
+				end
 
--- 			SU.remove_modifiers(store, this, s_ult.mod)
--- 		end
+				b_pos.x = b_pos.x + (flip and -1 or 1) * bullet_start_offset.x
+				b_pos.y = b_pos.y + bullet_start_offset.y
 
--- 		while this.nav_rally.new do
--- 			local r = this.nav_rally
--- 			local start_pos = V.vclone(this.pos)
+				local angle_d = math.deg(V.angleTo(v_pos.x - b_pos.x, v_pos.y - b_pos.y))
 
--- 			y_hero_dragon_arb_new_rally(store, this)
--- 		end
+				angle_d = angle_d + 90
+				angle_d = math.min(math.abs(angle_d), math.abs(angle_d - 360), math.abs(angle_d + 360))
 
--- 		SU.heroes_visual_learning_upgrade(store, this)
--- 		SU.heroes_lone_wolves_upgrade(store, this)
--- 		SU.alliance_merciless_upgrade(store, this)
--- 		SU.alliance_corageous_upgrade(store, this)
+				if max_angle < angle_d then
+					return false
+				end
 
--- 		if SU.hero_level_up(store, this) then
--- 			U.y_animation_play_group(this, "lvlup", nil, store.tick_ts, 1, this.render.sprites[1].group)
--- 		end
+				angle_d = math.deg(V.angleTo(v_pos.x - this.pos.x, v_pos.y - this.pos.y))
+				angle_d = angle_d + 90
+				angle_d = math.min(math.abs(angle_d), math.abs(angle_d - 360), math.abs(angle_d + 360))
 
--- 		if can_ranged_attack() then
--- 			local a = this.ranged.attacks[1]
--- 			local bullet_t = E:get_template(a.bullet)
--- 			local flight_time = bullet_t.bullet.flight_time
--- 			local target = U.find_foremost_enemy(store.entities, this.pos, a.min_range, a.max_range, a.shoot_time + flight_time, a.vis_flags, a.vis_bans, function(v)
--- 				local v_pos = v.pos
+				if angle_d > 130 then
+					return false
+				end
 
--- 				if v.motion and v.motion.speed then
--- 					local node_offset = P:predict_enemy_node_advance(v, flight_time + a.shoot_time)
+				return true
+			end)
 
--- 					v_pos = P:node_pos(v.nav_path.pi, 1, v.nav_path.ni + node_offset)
--- 				end
+			for _, e in pairs(store.entities) do
+				if e.remove_this_decal_aa then
+					queue_remove(store, e)
 
--- 				local max_angle = a.max_angle
+					break
+				end
+			end
 
--- 				if band(v.vis.flags, F_FLYING) ~= 0 then
--- 					v_pos.y = v_pos.y + v.unit.hit_offset.y
--- 					max_angle = a.max_angle_fliers
--- 				end
+			if target then
+				do
+					local start_ts = store.tick_ts
+					local b, targets, emit_ps, emit_ts
+					local bullet_start_offset = V.vv(0)
+					local apply_thorn_bleed = false
 
--- 				local b_pos = V.vclone(this.pos)
--- 				local bullet_start_offset = V.v(0, 0)
--- 				local flip = this.pos.x > v_pos.x
+					if not attack_thorn_bleed.disabled and store.tick_ts - attack_thorn_bleed.ts >= attack_thorn_bleed.cooldown then
+						apply_thorn_bleed = true
+					end
 
--- 				if a.bullet_start_offset and #a.bullet_start_offset == 2 then
--- 					local offset_index = flip and 2 or 1
+					local node_offset = P:predict_enemy_node_advance(target, flight_time)
+					local t_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni + node_offset)
+					local an, af, ai = U.animation_name_facing_point(this, a.animation, t_pos)
 
--- 					bullet_start_offset = a.bullet_start_offset[offset_index]
--- 				end
+					U.animation_start_group(this, an, af, store.tick_ts, false, this.render.sprites[1].group)
+					S:queue(a.start_sound, a.start_sound_args)
 
--- 				b_pos.x = b_pos.x + (flip and -1 or 1) * bullet_start_offset.x
--- 				b_pos.y = b_pos.y + bullet_start_offset.y
+					local triggered_lethal_focus
 
--- 				local angle_d = math.deg(V.angleTo(v_pos.x - b_pos.x, v_pos.y - b_pos.y))
+					while store.tick_ts - start_ts < a.shoot_times[1] do
+						if this.unit.is_stunned or this.health.dead or this.nav_rally and this.nav_rally.new then
+							goto label_819_0
+						end
 
--- 				angle_d = angle_d + 90
--- 				angle_d = math.min(math.abs(angle_d), math.abs(angle_d - 360), math.abs(angle_d + 360))
+						coroutine.yield()
+					end
 
--- 				if max_angle < angle_d then
--- 					return false
--- 				end
+					S:queue(a.sound)
 
--- 				angle_d = math.deg(V.angleTo(v_pos.x - this.pos.x, v_pos.y - this.pos.y))
--- 				angle_d = angle_d + 90
--- 				angle_d = math.min(math.abs(angle_d), math.abs(angle_d - 360), math.abs(angle_d + 360))
+					if a.bullet_start_offset and #a.bullet_start_offset == 2 then
+						local offset_index = af and 2 or 1
 
--- 				if angle_d > 130 then
--- 					return false
--- 				end
+						bullet_start_offset = a.bullet_start_offset[offset_index]
+					end
 
--- 				return true
--- 			end)
+					local bullet_from_pos = V.v(this.pos.x + (af and -1 or 1) * bullet_start_offset.x, this.pos.y + bullet_start_offset.y)
+					local bullet_dest_pos = V.vclone(t_pos)
 
--- 			for _, e in pairs(store.entities) do
--- 				if e.remove_this_decal_aa then
--- 					queue_remove(store, e)
+					if band(target.vis.flags, F_FLYING) ~= 0 and target.unit.hit_offset then
+						bullet_dest_pos.x = bullet_dest_pos.x + target.unit.hit_offset.x
+						bullet_dest_pos.y = bullet_dest_pos.y + target.unit.hit_offset.y
+					end
 
--- 					break
--- 				end
--- 			end
+					local diff = V.v(bullet_dest_pos.x - bullet_from_pos.x, bullet_dest_pos.y - bullet_from_pos.y)
+					local normal_x, normal_y = V.normalize(diff.x, diff.y)
+					local angle = V.angleTo(normal_x, normal_y)
+					local fliers_bullet_damage_pos = V.v(bullet_dest_pos.x - diff.x / 3, bullet_dest_pos.y - diff.y / 3)
 
--- 			if target then
--- 				do
--- 					local start_ts = store.tick_ts
--- 					local b, targets, emit_ps, emit_ts
--- 					local bullet_start_offset = V.vv(0)
--- 					local apply_thorn_bleed = false
+					if band(target.vis.flags, F_FLYING) ~= 0 and target.unit.hit_offset then
+						local extra_dist = target.unit.hit_offset.y / math.sin(angle)
 
--- 					if not attack_thorn_bleed.disabled and store.tick_ts - attack_thorn_bleed.ts >= attack_thorn_bleed.cooldown then
--- 						apply_thorn_bleed = true
--- 					end
+						fliers_bullet_damage_pos.x = bullet_dest_pos.x
+						fliers_bullet_damage_pos.y = bullet_dest_pos.y
+						bullet_dest_pos.x = bullet_dest_pos.x - normal_x * extra_dist
+						bullet_dest_pos.y = bullet_dest_pos.y - normal_y * extra_dist
+					end
 
--- 					local node_offset = P:predict_enemy_node_advance(target, flight_time)
--- 					local t_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni + node_offset)
--- 					local an, af, ai = U.animation_name_facing_point(this, a.animation, t_pos)
+					b = E:create_entity(a.bullet_ray)
+					b.bullet.target_id = target.id
+					b.bullet.source_id = this.id
+					b.bullet.xp_dest_id = this.id
+					b.pos = V.vclone(bullet_from_pos)
+					b.bullet.from = V.vclone(b.pos)
+					b.bullet.to = V.vclone(bullet_dest_pos)
 
--- 					U.animation_start_group(this, an, af, store.tick_ts, false, this.render.sprites[1].group)
--- 					S:queue(a.start_sound, a.start_sound_args)
+					queue_insert(store, b)
 
--- 					local triggered_lethal_focus
+					if this.ultimate_active or apply_thorn_bleed then
+						local function create_mouth_fx(fx_t, offset)
+							local fx = E:create_entity(fx_t)
 
--- 					while store.tick_ts - start_ts < a.shoot_times[1] do
--- 						if this.unit.is_stunned or this.health.dead or this.nav_rally and this.nav_rally.new then
--- 							goto label_819_0
--- 						end
+							fx.pos = V.v(b.pos.x + normal_x * offset, b.pos.y + normal_y * offset)
 
--- 						coroutine.yield()
--- 					end
+							local s = fx.render.sprites[1]
 
--- 					S:queue(a.sound)
+							s.r = angle
+							s.ts = store.tick_ts
+							s.flip_x = this.render.sprites[1].flip_x
 
--- 					if a.bullet_start_offset and #a.bullet_start_offset == 2 then
--- 						local offset_index = af and 2 or 1
+							if s.flip_x then
+								s.r = s.r + math.rad(180)
+							end
 
--- 						bullet_start_offset = a.bullet_start_offset[offset_index]
--- 					end
+							queue_insert(store, fx)
+						end
 
--- 					local bullet_from_pos = V.v(this.pos.x + (af and -1 or 1) * bullet_start_offset.x, this.pos.y + bullet_start_offset.y)
--- 					local bullet_dest_pos = V.vclone(t_pos)
+						if this.ultimate_active then
+							create_mouth_fx(a.ultimate_fx, a.ultimate_fx_offset)
+						end
 
--- 					if band(target.vis.flags, F_FLYING) ~= 0 and target.unit.hit_offset then
--- 						bullet_dest_pos.x = bullet_dest_pos.x + target.unit.hit_offset.x
--- 						bullet_dest_pos.y = bullet_dest_pos.y + target.unit.hit_offset.y
--- 					end
+						if apply_thorn_bleed then
+							create_mouth_fx(a.spikes_fx, a.spikes_fx_offset)
+						end
+					end
 
--- 					local diff = V.v(bullet_dest_pos.x - bullet_from_pos.x, bullet_dest_pos.y - bullet_from_pos.y)
--- 					local normal_x, normal_y = V.normalize(diff.x, diff.y)
--- 					local angle = V.angleTo(normal_x, normal_y)
--- 					local fliers_bullet_damage_pos = V.v(bullet_dest_pos.x - diff.x / 3, bullet_dest_pos.y - diff.y / 3)
+					if apply_thorn_bleed then
+						b = E:create_entity(a.bullet_spikes)
+						b.bullet.target_id = target.id
+						b.bullet.source_id = this.id
+						b.bullet.xp_dest_id = this.id
+						b.pos = V.v(bullet_from_pos.x + math.random(-5, 5), bullet_from_pos.y + math.random(-5, 5))
+						b.bullet.from = V.vclone(b.pos)
+						b.fliers_damage_pos = V.vclone(fliers_bullet_damage_pos)
+						b.bullet.to = V.v(bullet_dest_pos.x + math.random(-20, 20), bullet_dest_pos.y + math.random(-20, 20))
 
--- 					if band(target.vis.flags, F_FLYING) ~= 0 and target.unit.hit_offset then
--- 						local extra_dist = target.unit.hit_offset.y / math.sin(angle)
+						queue_insert(store, b)
+						SU.hero_gain_xp_from_skill(this, this.hero.skills.thorn_bleed)
+					end
 
--- 						fliers_bullet_damage_pos.x = bullet_dest_pos.x
--- 						fliers_bullet_damage_pos.y = bullet_dest_pos.y
--- 						bullet_dest_pos.x = bullet_dest_pos.x - normal_x * extra_dist
--- 						bullet_dest_pos.y = bullet_dest_pos.y - normal_y * extra_dist
--- 					end
+					a.ts = start_ts
 
--- 					b = E:create_entity(a.bullet_ray)
--- 					b.bullet.target_id = target.id
--- 					b.bullet.source_id = this.id
--- 					b.bullet.xp_dest_id = this.id
--- 					b.pos = V.vclone(bullet_from_pos)
--- 					b.bullet.from = V.vclone(b.pos)
--- 					b.bullet.to = V.vclone(bullet_dest_pos)
+					if a.xp_from_skill then
+						SU.hero_gain_xp_from_skill(this, this.hero.skills[a.xp_from_skill])
+					end
 
--- 					queue_insert(store, b)
+					for shot_time_i = 1, #a.shoot_times do
+						while store.tick_ts - start_ts < a.shoot_times[shot_time_i] do
+							if this.unit.is_stunned or this.health.dead or this.nav_rally and this.nav_rally.new then
+								goto label_819_0
+							end
 
--- 					if this.ultimate_active or apply_thorn_bleed then
--- 						local function create_mouth_fx(fx_t, offset)
--- 							local fx = E:create_entity(fx_t)
+							coroutine.yield()
+						end
 
--- 							fx.pos = V.v(b.pos.x + normal_x * offset, b.pos.y + normal_y * offset)
+						b = E:create_entity(a.bullet)
+						b.bullet.target_id = target.id
+						b.bullet.source_id = this.id
+						b.bullet.xp_gain_factor = a.xp_gain_factor
+						b.bullet.xp_dest_id = this.id
+						b.pos = V.v(bullet_from_pos.x + math.random(-5, 5), bullet_from_pos.y + math.random(-5, 5))
+						b.bullet.from = V.vclone(b.pos)
+						b.fliers_damage_pos = V.vclone(fliers_bullet_damage_pos)
+						b.bullet.to = V.v(bullet_dest_pos.x + math.random(-20, 20), bullet_dest_pos.y + math.random(-20, 20))
+						b.bullet.damage_max = b.bullet.damage_max / #a.shoot_times
+						b.bullet.damage_min = b.bullet.damage_min / #a.shoot_times
+						b.bullet.shot_index = i
 
--- 							local s = fx.render.sprites[1]
+						if b.bullet.use_unit_damage_factor then
+							b.bullet.damage_factor = this.unit.damage_factor
+						end
 
--- 							s.r = angle
--- 							s.ts = store.tick_ts
--- 							s.flip_x = this.render.sprites[1].flip_x
+						b.cached_controller_dragon_arb_passive_id = passive_controller.id
 
--- 							if s.flip_x then
--- 								s.r = s.r + math.rad(180)
--- 							end
+						if apply_thorn_bleed then
+							b.bullet.mod = table.deepclone(attack_thorn_bleed.mod)
 
--- 							queue_insert(store, fx)
--- 						end
+							if this.ultimate_active then
+								b.instakill_chance = attack_thorn_bleed.instakill_chance
+							end
+						end
 
--- 						if this.ultimate_active then
--- 							create_mouth_fx(a.ultimate_fx, a.ultimate_fx_offset)
--- 						end
+						queue_insert(store, b)
+					end
 
--- 						if apply_thorn_bleed then
--- 							create_mouth_fx(a.spikes_fx, a.spikes_fx_offset)
--- 						end
--- 					end
+					if apply_thorn_bleed then
+						attack_thorn_bleed.ts = start_ts
+					end
 
--- 					if apply_thorn_bleed then
--- 						b = E:create_entity(a.bullet_spikes)
--- 						b.bullet.target_id = target.id
--- 						b.bullet.source_id = this.id
--- 						b.bullet.xp_dest_id = this.id
--- 						b.pos = V.v(bullet_from_pos.x + math.random(-5, 5), bullet_from_pos.y + math.random(-5, 5))
--- 						b.bullet.from = V.vclone(b.pos)
--- 						b.fliers_damage_pos = V.vclone(fliers_bullet_damage_pos)
--- 						b.bullet.to = V.v(bullet_dest_pos.x + math.random(-20, 20), bullet_dest_pos.y + math.random(-20, 20))
+					SU.y_hero_animation_wait(this)
+					U.animation_start_group(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, this.render.sprites[1].group)
+				end
 
--- 						queue_insert(store, b)
--- 						SU.hero_gain_xp_from_skill(this, this.hero.skills.thorn_bleed)
--- 					end
+				::label_819_0::
+			end
+		end
 
--- 					a.ts = start_ts
+		skill = this.hero.skills.arborean_spawn
+		a = attack_arborean_spawns
 
--- 					if a.xp_from_skill then
--- 						SU.hero_gain_xp_from_skill(this, this.hero.skills[a.xp_from_skill])
--- 					end
+		if not a.disabled and store.tick_ts - a.ts > a.cooldown then
+			local plant_zones = table.filter(passive_controller.root_zones, function(k, v)
+				if not U.is_inside_ellipse({
+					x = v.x,
+					y = v.y
+				}, this.pos, a.max_range) then
+					return false
+				end
 
--- 					if upg_lf then
--- 						if not this._lethal_focus_deck then
--- 							this._lethal_focus_deck = SU.deck_new(upg_lf.trigger_cards, upg_lf.total_cards)
--- 						end
+				if a.min_range ~= 0 and not not U.is_inside_ellipse({
+					x = v.x,
+					y = v.y
+				}, this.pos, a.min_range) then
+					return false
+				end
 
--- 						triggered_lethal_focus = SU.deck_draw(this._lethal_focus_deck)
--- 					end
+				local enemies = U.find_enemies_in_range(store.entities, {
+					x = v.x,
+					y = v.y
+				}, 0, a.spawn_max_range_to_enemy, a.vis_flags, a.vis_bans)
 
--- 					for shot_time_i = 1, #a.shoot_times do
--- 						while store.tick_ts - start_ts < a.shoot_times[shot_time_i] do
--- 							if this.unit.is_stunned or this.health.dead or this.nav_rally and this.nav_rally.new then
--- 								goto label_819_0
--- 							end
+				if not enemies or #enemies < 1 then
+					return false
+				end
 
--- 							coroutine.yield()
--- 						end
+				return true
+			end)
 
--- 						b = E:create_entity(a.bullet)
--- 						b.bullet.target_id = target.id
--- 						b.bullet.source_id = this.id
--- 						b.bullet.xp_gain_factor = a.xp_gain_factor
--- 						b.bullet.xp_dest_id = this.id
--- 						b.pos = V.v(bullet_from_pos.x + math.random(-5, 5), bullet_from_pos.y + math.random(-5, 5))
--- 						b.bullet.from = V.vclone(b.pos)
--- 						b.fliers_damage_pos = V.vclone(fliers_bullet_damage_pos)
--- 						b.bullet.to = V.v(bullet_dest_pos.x + math.random(-20, 20), bullet_dest_pos.y + math.random(-20, 20))
--- 						b.bullet.damage_max = b.bullet.damage_max / #a.shoot_times
--- 						b.bullet.damage_min = b.bullet.damage_min / #a.shoot_times
--- 						b.bullet.shot_index = i
+			if not plant_zones or #plant_zones < a.min_targets then
+				SU.delay_attack(store, a, fts(10))
+			else
+				plant_zones = table.random_order(plant_zones)
+				plant_zones = table.slice(plant_zones, 1, a.max_targets)
 
--- 						if b.bullet.use_unit_damage_factor then
--- 							b.bullet.damage_factor = this.unit.damage_factor
--- 						end
+				local start_ts = store.tick_ts
 
--- 						b.cached_controller_dragon_arb_passive_id = passive_controller.id
+				S:queue(a.sound)
+				U.animation_start_group(this, a.animation, nil, store.tick_ts, false, this.render.sprites[1].group)
 
--- 						if apply_thorn_bleed then
--- 							b.bullet.mod = table.deepclone(attack_thorn_bleed.mod)
+				if SU.y_hero_wait(store, this, a.cast_time) then
+					goto label_819_1
+				end
 
--- 							if this.ultimate_active then
--- 								b.instakill_chance = attack_thorn_bleed.instakill_chance
--- 							end
--- 						end
+				a.ts = start_ts
 
--- 						if triggered_lethal_focus then
--- 							b.bullet.damage_factor = b.bullet.damage_factor * upg_lf.damage_factor_area
--- 							b.bullet.pop = {
--- 								"pop_crit"
--- 							}
--- 							b.bullet.pop_chance = 1
--- 							b.bullet.pop_conds = DR_DAMAGE
--- 						end
+				SU.hero_gain_xp_from_skill(this, skill)
 
--- 						queue_insert(store, b)
--- 					end
+				for i = 1, #plant_zones do
+					local zone_target = plant_zones[i]
+					local b = E:create_entity(a.bullet)
 
--- 					if apply_thorn_bleed then
--- 						attack_thorn_bleed.ts = start_ts
--- 					end
+					b.bullet.target_id = nil
+					b.bullet.source_id = this.id
+					b.bullet.xp_dest_id = this.id
+					b.pos = V.vclone(this.pos)
 
--- 					SU.y_hero_animation_wait(this)
--- 					U.animation_start_group(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, this.render.sprites[1].group)
--- 				end
+					local bullet_start_offset = v(0, 0)
+					local af = this.render.sprites[1].flip_x
 
--- 				::label_819_0::
--- 			end
--- 		end
+					if a.bullet_start_offset and #a.bullet_start_offset == 2 then
+						local offset_index = af and 2 or 1
 
--- 		skill = this.hero.skills.arborean_spawn
--- 		a = attack_arborean_spawns
+						bullet_start_offset = a.bullet_start_offset[offset_index]
+					end
 
--- 		if not a.disabled and store.tick_ts - a.ts > a.cooldown then
--- 			local plant_zones = table.filter(passive_controller.root_zones, function(k, v)
--- 				if not U.is_inside_ellipse({
--- 					x = v.x,
--- 					y = v.y
--- 				}, this.pos, a.max_range) then
--- 					return false
--- 				end
+					b.pos.x = b.pos.x + (af and -1 or 1) * bullet_start_offset.x
+					b.pos.y = b.pos.y + bullet_start_offset.y
+					b.bullet.from = V.vclone(b.pos)
+					b.bullet.to = V.v(zone_target.x, zone_target.y)
+					b.bullet.level = skill.level
+					b.bullet.payload = (this.ultimate_active and a.spawn_evolved or a.spawn) .. "_lvl" .. skill.level
+					b.cached_controller_dragon_arb_passive_id = passive_controller.id
+					b.zone_target_id = zone_target.zone_id
 
--- 				if a.min_range ~= 0 and not not U.is_inside_ellipse({
--- 					x = v.x,
--- 					y = v.y
--- 				}, this.pos, a.min_range) then
--- 					return false
--- 				end
+					queue_insert(store, b)
 
--- 				local enemies = U.find_enemies_in_range(store.entities, {
--- 					x = v.x,
--- 					y = v.y
--- 				}, 0, a.spawn_max_range_to_enemy, a.vis_flags, a.vis_bans)
+					if SU.y_hero_wait(store, this, a.shoots_delay) then
+						goto label_819_1
+					end
+				end
 
--- 				if not enemies or #enemies < 1 then
--- 					return false
--- 				end
+				SU.y_hero_animation_wait(this)
+			end
+		end
 
--- 				return true
--- 			end)
+		skill = this.hero.skills.tower_runes
+		a = attack_tower_runes
 
--- 			if not plant_zones or #plant_zones < a.min_targets then
--- 				SU.delay_attack(store, a, fts(10))
--- 			else
--- 				plant_zones = table.random_order(plant_zones)
--- 				plant_zones = table.slice(plant_zones, 1, a.max_targets)
+		if not a.disabled and store.tick_ts - a.ts > a.cooldown and store.wave_group_number > 0 then
+			local towers = attack_get_towers(a)
 
--- 				local start_ts = store.tick_ts
+			if not towers then
+				SU.delay_attack(store, a, fts(10))
+			else
+				local start_ts = store.tick_ts
 
--- 				S:queue(a.sound)
--- 				U.animation_start_group(this, a.animation, nil, store.tick_ts, false, this.render.sprites[1].group)
+				S:queue(a.sound)
+				U.animation_start_group(this, a.animation, nil, store.tick_ts, false, this.render.sprites[1].group)
 
--- 				if SU.y_hero_wait(store, this, a.cast_time) then
--- 					goto label_819_1
--- 				end
+				if SU.y_hero_wait(store, this, a.cast_time) then
+					goto label_819_1
+				end
 
--- 				a.ts = start_ts
+				towers = attack_get_towers(a)
 
--- 				SU.hero_gain_xp_from_skill(this, skill)
+				if not towers then
+					SU.delay_attack(store, a, fts(60))
+					SU.y_hero_animation_wait(this)
 
--- 				for i = 1, #plant_zones do
--- 					local zone_target = plant_zones[i]
--- 					local b = E:create_entity(a.bullet)
+					goto label_819_1
+				end
 
--- 					b.bullet.target_id = nil
--- 					b.bullet.source_id = this.id
--- 					b.bullet.xp_dest_id = this.id
--- 					b.pos = V.vclone(this.pos)
+				towers = table.random_order(towers)
+				towers = table.slice(towers, 1, a.max_targets)
+				a.ts = start_ts
 
--- 					local bullet_start_offset = v(0, 0)
--- 					local af = this.render.sprites[1].flip_x
+				SU.hero_gain_xp_from_skill(this, skill)
 
--- 					if a.bullet_start_offset and #a.bullet_start_offset == 2 then
--- 						local offset_index = af and 2 or 1
+				for i = 1, #towers do
+					local target = towers[i]
 
--- 						bullet_start_offset = a.bullet_start_offset[offset_index]
--- 					end
+					if not store.entities[target.id] then
+					-- block empty
+					elseif not attack_is_tower_valid(target, a) then
+					-- block empty
+					else
+						local b = E:create_entity(a.bullet)
 
--- 					b.pos.x = b.pos.x + (af and -1 or 1) * bullet_start_offset.x
--- 					b.pos.y = b.pos.y + bullet_start_offset.y
--- 					b.bullet.from = V.vclone(b.pos)
--- 					b.bullet.to = V.v(zone_target.x, zone_target.y)
--- 					b.bullet.level = skill.level
--- 					b.bullet.payload = (this.ultimate_active and a.spawn_evolved or a.spawn) .. "_lvl" .. skill.level
--- 					b.cached_controller_dragon_arb_passive_id = passive_controller.id
--- 					b.zone_target_id = zone_target.zone_id
+						b.bullet.target_id = target.id
+						b.bullet.source_id = this.id
+						b.bullet.xp_dest_id = this.id
+						b.pos = V.vclone(this.pos)
 
--- 					queue_insert(store, b)
+						local bullet_start_offset = v(0, 0)
+						local af = this.render.sprites[1].flip_x
 
--- 					if SU.y_hero_wait(store, this, a.shoots_delay) then
--- 						goto label_819_1
--- 					end
--- 				end
+						if a.bullet_start_offset and #a.bullet_start_offset == 2 then
+							local offset_index = af and 2 or 1
 
--- 				SU.y_hero_animation_wait(this)
--- 			end
--- 		end
+							bullet_start_offset = a.bullet_start_offset[offset_index]
+						end
 
--- 		skill = this.hero.skills.tower_runes
--- 		a = attack_tower_runes
+						b.pos.x = b.pos.x + (af and -1 or 1) * bullet_start_offset.x
+						b.pos.y = b.pos.y + bullet_start_offset.y
+						b.bullet.from = V.vclone(b.pos)
+						b.bullet.to = V.v(target.pos.x, target.pos.y + 16)
 
--- 		if not a.disabled and store.tick_ts - a.ts > a.cooldown and store.wave_group_number > 0 then
--- 			local towers = attack_get_towers(a)
+						queue_insert(store, b)
 
--- 			if not towers then
--- 				SU.delay_attack(store, a, fts(10))
--- 			else
--- 				local start_ts = store.tick_ts
+						if SU.y_hero_wait(store, this, a.shoots_delay) then
+							goto label_819_1
+						end
+					end
+				end
 
--- 				S:queue(a.sound)
--- 				U.animation_start_group(this, a.animation, nil, store.tick_ts, false, this.render.sprites[1].group)
+				SU.y_hero_animation_wait(this)
+			end
+		end
 
--- 				if SU.y_hero_wait(store, this, a.cast_time) then
--- 					goto label_819_1
--- 				end
+		skill = this.hero.skills.tower_plants
+		a = attack_tower_plants
 
--- 				towers = attack_get_towers(a)
+		if not a.disabled and store.tick_ts - a.ts > a.cooldown and store.wave_group_number > 0 then
+			local towers = attack_get_towers(a)
 
--- 				if not towers then
--- 					SU.delay_attack(store, a, fts(60))
--- 					SU.y_hero_animation_wait(this)
+			if not towers then
+				SU.delay_attack(store, a, fts(10))
+			else
+				local start_ts = store.tick_ts
 
--- 					goto label_819_1
--- 				end
+				S:queue(a.sound)
+				U.animation_start_group(this, a.animation, nil, store.tick_ts, false, this.render.sprites[1].group)
 
--- 				towers = table.random_order(towers)
--- 				towers = table.slice(towers, 1, a.max_targets)
--- 				a.ts = start_ts
+				if SU.y_hero_wait(store, this, a.cast_time) then
+					goto label_819_1
+				end
 
--- 				SU.hero_gain_xp_from_skill(this, skill)
+				towers = attack_get_towers(a)
 
--- 				for i = 1, #towers do
--- 					local target = towers[i]
+				if not towers then
+					SU.delay_attack(store, a, fts(60))
+					SU.y_hero_animation_wait(this)
 
--- 					if not store.entities[target.id] then
--- 						-- block empty
--- 					elseif not attack_is_tower_valid(target, a) then
--- 						-- block empty
--- 					else
--- 						local b = E:create_entity(a.bullet)
+					goto label_819_1
+				end
 
--- 						b.bullet.target_id = target.id
--- 						b.bullet.source_id = this.id
--- 						b.bullet.xp_dest_id = this.id
--- 						b.pos = V.vclone(this.pos)
+				towers = table.random_order(towers)
+				towers = table.slice(towers, 1, a.max_targets)
+				a.ts = start_ts
 
--- 						local bullet_start_offset = v(0, 0)
--- 						local af = this.render.sprites[1].flip_x
+				SU.hero_gain_xp_from_skill(this, skill)
 
--- 						if a.bullet_start_offset and #a.bullet_start_offset == 2 then
--- 							local offset_index = af and 2 or 1
+				for i = 1, #towers do
+					local target = towers[i]
 
--- 							bullet_start_offset = a.bullet_start_offset[offset_index]
--- 						end
+					if not store.entities[target.id] then
+					-- block empty
+					elseif not attack_is_tower_valid(target, a) then
+					-- block empty
+					else
+						local b = E:create_entity(a.bullet)
 
--- 						b.pos.x = b.pos.x + (af and -1 or 1) * bullet_start_offset.x
--- 						b.pos.y = b.pos.y + bullet_start_offset.y
--- 						b.bullet.from = V.vclone(b.pos)
--- 						b.bullet.to = V.v(target.pos.x, target.pos.y + 16)
+						b.bullet.target_id = target.id
+						b.bullet.source_id = this.id
+						b.bullet.xp_dest_id = this.id
+						b.pos = V.vclone(this.pos)
 
--- 						queue_insert(store, b)
+						local bullet_start_offset = v(0, 0)
+						local af = this.render.sprites[1].flip_x
 
--- 						if SU.y_hero_wait(store, this, a.shoots_delay) then
--- 							goto label_819_1
--- 						end
--- 					end
--- 				end
+						if a.bullet_start_offset and #a.bullet_start_offset == 2 then
+							local offset_index = af and 2 or 1
 
--- 				SU.y_hero_animation_wait(this)
--- 			end
--- 		end
+							bullet_start_offset = a.bullet_start_offset[offset_index]
+						end
 
--- 		skill = this.hero.skills.tower_plants
--- 		a = attack_tower_plants
+						b.pos.x = b.pos.x + (af and -1 or 1) * bullet_start_offset.x
+						b.pos.y = b.pos.y + bullet_start_offset.y
+						b.bullet.from = V.vclone(b.pos)
+						b.bullet.to = V.vclone(target.tower.default_rally_pos)
 
--- 		if not a.disabled and store.tick_ts - a.ts > a.cooldown and store.wave_group_number > 0 then
--- 			local towers = attack_get_towers(a)
+						if math.random() < 0.5 then
+							b.bullet.hit_payload = a.plant_linirea
+						else
+							b.bullet.hit_payload = a.plant_dark_army
+						end
 
--- 			if not towers then
--- 				SU.delay_attack(store, a, fts(10))
--- 			else
--- 				local start_ts = store.tick_ts
+						queue_insert(store, b)
+						SU.y_hero_wait(store, this, a.shots_delay)
+					end
+				end
 
--- 				S:queue(a.sound)
--- 				U.animation_start_group(this, a.animation, nil, store.tick_ts, false, this.render.sprites[1].group)
+				SU.y_hero_animation_wait(this)
+			end
+		end
 
--- 				if SU.y_hero_wait(store, this, a.cast_time) then
--- 					goto label_819_1
--- 				end
+		SU.soldier_idle(store, this)
 
--- 				towers = attack_get_towers(a)
+		this.render.sprites[3].flip_x = this.render.sprites[1].flip_x
 
--- 				if not towers then
--- 					SU.delay_attack(store, a, fts(60))
--- 					SU.y_hero_animation_wait(this)
+		SU.soldier_regen(store, this)
 
--- 					goto label_819_1
--- 				end
+		::label_819_1::
 
--- 				towers = table.random_order(towers)
--- 				towers = table.slice(towers, 1, a.max_targets)
--- 				a.ts = start_ts
+		coroutine.yield()
+	end
+end
 
--- 				SU.hero_gain_xp_from_skill(this, skill)
+scripts.bullet_hero_dragon_arb_breath_splint = {}
 
--- 				for i = 1, #towers do
--- 					local target = towers[i]
+function scripts.bullet_hero_dragon_arb_breath_splint.update(this, store, script)
+	local b = this.bullet
+	local s = this.render.sprites[1]
+	local mspeed = b.min_speed
+	local target, ps
+	local new_target = false
+	local target_invalid = false
+	local did_damage_fliers = false
 
--- 					if not store.entities[target.id] then
--- 						-- block empty
--- 					elseif not attack_is_tower_valid(target, a) then
--- 						-- block empty
--- 					else
--- 						local b = E:create_entity(a.bullet)
+	if b.particles_name then
+		ps = E:create_entity(b.particles_name)
+		ps.particle_system.track_id = this.id
 
--- 						b.bullet.target_id = target.id
--- 						b.bullet.source_id = this.id
--- 						b.bullet.xp_dest_id = this.id
--- 						b.pos = V.vclone(this.pos)
+		queue_insert(store, ps)
+	end
 
--- 						local bullet_start_offset = v(0, 0)
--- 						local af = this.render.sprites[1].flip_x
+	local function random_float(lower, greater)
+		return lower + math.random() * (greater - lower)
+	end
 
--- 						if a.bullet_start_offset and #a.bullet_start_offset == 2 then
--- 							local offset_index = af and 2 or 1
+	local function do_damage(is_flying_damage)
+		local origin = is_flying_damage and this.fliers_damage_pos or this.pos
+		local targets = table.filter(store.entities, function(k, v)
+			if v.pending_removal or not v.enemy or not v.vis or not v.nav_path or not v.health or v.health.dead or band(v.vis.flags, b.damage_bans) ~= 0 or band(v.vis.bans, b.damage_flags) ~= 0 then
+				return false
+			end
 
--- 							bullet_start_offset = a.bullet_start_offset[offset_index]
--- 						end
+			local unit_pos = V.vclone(v.pos)
 
--- 						b.pos.x = b.pos.x + (af and -1 or 1) * bullet_start_offset.x
--- 						b.pos.y = b.pos.y + bullet_start_offset.y
--- 						b.bullet.from = V.vclone(b.pos)
--- 						b.bullet.to = V.vclone(target.tower.default_rally_pos)
+			if is_flying_damage and v.unit and v.unit.hit_offset then
+				unit_pos.y = unit_pos.y + v.unit.hit_offset.y
+			end
 
--- 						if target.tower.team == TEAM_LINIREA then
--- 							b.bullet.hit_payload = a.plant_linirea
--- 						else
--- 							b.bullet.hit_payload = a.plant_dark_army
--- 						end
+			return U.is_inside_ellipse(unit_pos, origin, b.damage_radius) and P:is_node_valid(v.nav_path.pi, v.nav_path.ni)
+		end)
 
--- 						queue_insert(store, b)
--- 						SU.y_hero_wait(store, this, a.shots_delay)
--- 					end
--- 				end
+		if targets and #targets > 0 then
+			local mod_hit_times = {}
 
--- 				SU.y_hero_animation_wait(this)
--- 			end
--- 		end
+			for _, e in pairs(targets) do
+				if bit.band(e.vis.flags, F_FLYING) ~= 0 == is_flying_damage then
+					local d = SU.create_bullet_damage(b, e.id, this.id)
+					local u = UP:get_upgrade("mage_spell_of_penetration")
 
--- 		SU.soldier_idle(store, this)
+					if u and math.random() < u.chance then
+						d.damage_type = DAMAGE_TRUE
+					end
 
--- 		this.render.sprites[3].flip_x = this.render.sprites[1].flip_x
+					queue_damage(store, d)
 
--- 		SU.soldier_regen(store, this)
+					local passive_mark_mod = E:create_entity(this.passive_mark_mod)
 
--- 		::label_819_1::
+					passive_mark_mod.modifier.target_id = e.id
+					passive_mark_mod.cached_controller_dragon_arb_passive_id = this.cached_controller_dragon_arb_passive_id
 
--- 		coroutine.yield()
--- 	end
--- end
+					queue_insert(store, passive_mark_mod)
 
--- scripts.bullet_hero_dragon_arb_breath_splint = {}
+					if b.mod then
+						for _, v in pairs(b.mod) do
+							do
+								local mod = E:create_entity(v)
 
--- function scripts.bullet_hero_dragon_arb_breath_splint.update(this, store, script)
--- 	local b = this.bullet
--- 	local s = this.render.sprites[1]
--- 	local mspeed = b.min_speed
--- 	local target, ps
--- 	local new_target = false
--- 	local target_invalid = false
--- 	local did_damage_fliers = false
+								if mod.chance and math.random() >= mod.chance then
+								-- block empty
+								else
+									if mod.max_targets_per_hit then
+										if not mod_hit_times[v] then
+											mod_hit_times[v] = 0
+										end
 
--- 	if b.particles_name then
--- 		ps = E:create_entity(b.particles_name)
--- 		ps.particle_system.track_id = this.id
+										if mod_hit_times[v] >= mod.max_targets_per_hit then
+											goto label_832_0
+										else
+											mod_hit_times[v] = mod_hit_times[v] + 1
+										end
+									end
 
--- 		queue_insert(store, ps)
--- 	end
+									mod.modifier.target_id = e.id
 
--- 	local function random_float(lower, greater)
--- 		return lower + math.random() * (greater - lower)
--- 	end
+									if this.instakill_chance then
+										mod.instakill_chance = this.instakill_chance
+									end
 
--- 	local function do_damage(is_flying_damage)
--- 		local origin = is_flying_damage and this.fliers_damage_pos or this.pos
--- 		local targets = table.filter(store.entities, function(k, v)
--- 			if v.pending_removal or not v.enemy or not v.vis or not v.nav_path or not v.health or v.health.dead or band(v.vis.flags, b.damage_bans) ~= 0 or band(v.vis.bans, b.damage_flags) ~= 0 then
--- 				return false
--- 			end
+									mod.cached_controller_dragon_arb_passive_id = this.cached_controller_dragon_arb_passive_id
 
--- 			local unit_pos = V.vclone(v.pos)
+									queue_insert(store, mod)
+								end
+							end
 
--- 			if is_flying_damage and v.unit and v.unit.hit_offset then
--- 				unit_pos.y = unit_pos.y + v.unit.hit_offset.y
--- 			end
+							::label_832_0::
+						end
+					end
+				end
+			end
+		end
+	end
 
--- 			return U.is_inside_ellipse(unit_pos, origin, b.damage_radius) and P:is_node_valid(v.nav_path.pi, v.nav_path.ni)
--- 		end)
+	this.tween.ts = store.tick_ts
 
--- 		if targets and #targets > 0 then
--- 			local mod_hit_times = {}
+	if this.size_variation then
+		this.render.sprites[1].scale = V.vv(1 + random_float(-this.size_variation, this.size_variation))
 
--- 			for _, e in pairs(targets) do
--- 				if bit.band(e.vis.flags, F_FLYING) ~= 0 == is_flying_damage then
--- 					local d = SU.create_bullet_damage(b, e.id, this.id)
--- 					local u = UP:get_upgrade("mage_spell_of_penetration")
+		local speed_variation = random_float(-this.speed_variation, this.speed_variation)
 
--- 					if u and math.random() < u.chance then
--- 						d.damage_type = DAMAGE_TRUE
--- 					end
+		this.bullet.min_speed = this.bullet.min_speed + this.bullet.min_speed * speed_variation
+		this.bullet.max_speed = this.bullet.max_speed + this.bullet.max_speed * speed_variation
+	end
 
--- 					queue_damage(store, d)
+	if b.store and not b.target_id then
+		S:queue(this.sound_events.summon)
 
--- 					local passive_mark_mod = E:create_entity(this.passive_mark_mod)
+		s.z = Z_OBJECTS
+		s.sort_y_offset = b.store_sort_y_offset
 
--- 					passive_mark_mod.modifier.target_id = e.id
--- 					passive_mark_mod.cached_controller_dragon_arb_passive_id = this.cached_controller_dragon_arb_passive_id
+		U.animation_start(this, "idle", nil, store.tick_ts, true)
 
--- 					queue_insert(store, passive_mark_mod)
+		if ps then
+			ps.particle_system.emit = false
+		end
+	else
+		S:queue(this.sound_events.travel)
 
--- 					if b.mod then
--- 						for _, v in pairs(b.mod) do
--- 							do
--- 								local mod = E:create_entity(v)
+		s.z = Z_BULLETS
+		s.sort_y_offset = nil
 
--- 								if mod.chance and math.random() >= mod.chance then
--- 									-- block empty
--- 								else
--- 									if mod.max_targets_per_hit then
--- 										if not mod_hit_times[v] then
--- 											mod_hit_times[v] = 0
--- 										end
+		U.animation_start(this, "flying", nil, store.tick_ts, s.loop)
 
--- 										if mod_hit_times[v] >= mod.max_targets_per_hit then
--- 											goto label_832_0
--- 										else
--- 											mod_hit_times[v] = mod_hit_times[v] + 1
--- 										end
--- 									end
+		if ps then
+			ps.particle_system.emit = true
+		end
+	end
 
--- 									mod.modifier.target_id = e.id
+	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
+		coroutine.yield()
 
--- 									if this.instakill_chance then
--- 										mod.instakill_chance = this.instakill_chance
--- 									end
+		if not target_invalid then
+			target = store.entities[b.target_id]
+		end
 
--- 									mod.cached_controller_dragon_arb_passive_id = this.cached_controller_dragon_arb_passive_id
+		if target and not new_target then
+			local tpx, tpy = target.pos.x, target.pos.y
 
--- 									queue_insert(store, mod)
--- 								end
--- 							end
+			if not b.ignore_hit_offset then
+				tpx, tpy = tpx + target.unit.hit_offset.x, tpy + target.unit.hit_offset.y
+			end
 
--- 							::label_832_0::
--- 						end
--- 					end
--- 				end
--- 			end
--- 		end
--- 	end
+			local d = math.max(math.abs(tpx - b.to.x), math.abs(tpy - b.to.y))
 
--- 	this.tween.ts = store.tick_ts
+			if d > b.max_track_distance or band(target.vis.bans, F_RANGED) ~= 0 then
+				target_invalid = true
+				target = nil
+			end
+		end
 
--- 	if this.size_variation then
--- 		this.render.sprites[1].scale = V.vv(1 + random_float(-this.size_variation, this.size_variation))
+		mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
+		mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
+		b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
+		this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
 
--- 		local speed_variation = random_float(-this.speed_variation, this.speed_variation)
+		if not b.ignore_rotation then
+			s.r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
+		end
 
--- 		this.bullet.min_speed = this.bullet.min_speed + this.bullet.min_speed * speed_variation
--- 		this.bullet.max_speed = this.bullet.max_speed + this.bullet.max_speed * speed_variation
--- 	end
+		if ps then
+			ps.particle_system.emit_direction = s.r
+		end
 
--- 	if b.store and not b.target_id then
--- 		S:queue(this.sound_events.summon)
+		if not did_damage_fliers and V.dist(this.pos.x, this.pos.y, this.fliers_damage_pos.x, this.fliers_damage_pos.y) < b.damage_radius / 4 then
+			did_damage_fliers = true
 
--- 		s.z = Z_OBJECTS
--- 		s.sort_y_offset = b.store_sort_y_offset
+			do_damage(true)
+		end
+	end
 
--- 		U.animation_start(this, "idle", nil, store.tick_ts, true)
+	this.pos.x, this.pos.y = b.to.x, b.to.y
 
--- 		if ps then
--- 			ps.particle_system.emit = false
--- 		end
--- 	else
--- 		S:queue(this.sound_events.travel)
+	do_damage(false)
 
--- 		s.z = Z_BULLETS
--- 		s.sort_y_offset = nil
+	local terrain_type = band(GR:cell_type(this.pos.x, this.pos.y), TERRAIN_TYPES_MASK)
 
--- 		U.animation_start(this, "flying", nil, store.tick_ts, s.loop)
+	if b.payload and terrain_type ~= TERRAIN_WATER then
+		local hp = E:create_entity(table.random(b.payload))
 
--- 		if ps then
--- 			ps.particle_system.emit = true
--- 		end
--- 	end
+		hp.pos.x, hp.pos.y = b.to.x, b.to.y
 
--- 	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
--- 		coroutine.yield()
+		local hp_s = hp.render.sprites[1]
+		local this_s = this.render.sprites[1]
 
--- 		if not target_invalid then
--- 			target = store.entities[b.target_id]
--- 		end
+		hp_s.ts = store.tick_ts
 
--- 		if target and not new_target then
--- 			local tpx, tpy = target.pos.x, target.pos.y
+		local hp_scale = hp_s.scale and V.vclone(hp_s.scale) or V.vv(1)
+		local scale_diff = V.v(this_s.scale.x - hp_scale.x, this_s.scale.y - hp_scale.y)
 
--- 			if not b.ignore_hit_offset then
--- 				tpx, tpy = tpx + target.unit.hit_offset.x, tpy + target.unit.hit_offset.y
--- 			end
+		hp_s.scale = V.v(hp_scale.x + scale_diff.x * 0.5, hp_scale.y + scale_diff.y * 0.5)
 
--- 			local d = math.max(math.abs(tpx - b.to.x), math.abs(tpy - b.to.y))
+		if b.from.x > b.to.x then
+			hp_s.flip_x = true
+		end
 
--- 			if d > b.max_track_distance or band(target.vis.bans, F_RANGED) ~= 0 then
--- 				target_invalid = true
--- 				target = nil
--- 			end
--- 		end
+		queue_insert(store, hp)
+	end
 
--- 		mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
--- 		mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
--- 		b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
--- 		this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
+	if b.hit_fx then
+		local sfx = E:create_entity(b.hit_fx)
 
--- 		if not b.ignore_rotation then
--- 			s.r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
--- 		end
+		sfx.pos.x, sfx.pos.y = b.to.x, b.to.y
+		sfx.render.sprites[1].ts = store.tick_ts
+		sfx.render.sprites[1].runs = 0
 
--- 		if ps then
--- 			ps.particle_system.emit_direction = s.r
--- 		end
+		if target and sfx.render.sprites[1].size_names then
+			sfx.render.sprites[1].name = sfx.render.sprites[1].size_names[target.unit.size]
+		end
 
--- 		if not did_damage_fliers and V.dist(this.pos.x, this.pos.y, this.fliers_damage_pos.x, this.fliers_damage_pos.y) < b.damage_radius / 4 then
--- 			did_damage_fliers = true
+		queue_insert(store, sfx)
+	end
 
--- 			do_damage(true)
--- 		end
--- 	end
+	queue_remove(store, this)
+end
 
--- 	this.pos.x, this.pos.y = b.to.x, b.to.y
+scripts.bullet_hero_dragon_arb_arborean_spawn = {}
 
--- 	do_damage(false)
+function scripts.bullet_hero_dragon_arb_arborean_spawn.update(this, store, script)
+	local b = this.bullet
+	local s = this.render.sprites[1]
+	local mspeed = b.min_speed
+	local fm = this.force_motion
+	local ps
 
--- 	local terrain_type = band(GR:cell_type(this.pos.x, this.pos.y), TERRAIN_TYPES_MASK)
+	if b.particles_name then
+		ps = E:create_entity(b.particles_name)
+		ps.particle_system.track_id = this.id
 
--- 	if b.payload and terrain_type ~= TERRAIN_WATER then
--- 		local hp = E:create_entity(table.random(b.payload))
+		queue_insert(store, ps)
+	end
 
--- 		hp.pos.x, hp.pos.y = b.to.x, b.to.y
+	local iix, iiy = V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y)
 
--- 		local hp_s = hp.render.sprites[1]
--- 		local this_s = this.render.sprites[1]
+	if this.initial_impulse_angle_variation_d then
+		local variation_rad = math.rad(this.initial_impulse_angle_variation_d)
 
--- 		hp_s.ts = store.tick_ts
+		variation_rad = -variation_rad + 2 * variation_rad * math.random()
+		this.initial_impulse_angle_abs = this.initial_impulse_angle_abs + variation_rad
+	end
 
--- 		local hp_scale = hp_s.scale and V.vclone(hp_s.scale) or V.vv(1)
--- 		local scale_diff = V.v(this_s.scale.x - hp_scale.x, this_s.scale.y - hp_scale.y)
+	local last_pos = V.vclone(this.pos)
 
--- 		hp_s.scale = V.v(hp_scale.x + scale_diff.x * 0.5, hp_scale.y + scale_diff.y * 0.5)
+	b.ts = store.tick_ts
 
--- 		if b.from.x > b.to.x then
--- 			hp_s.flip_x = true
--- 		end
+	local function move_step(dest)
+		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
+		local dist = V.len(dx, dy)
+		local nx, ny = V.mul(fm.max_v, V.normalize(dx, dy))
+		local stx, sty = V.sub(nx, ny, fm.v.x, fm.v.y)
 
--- 		queue_insert(store, hp)
--- 	end
+		if dist <= 4 * fm.max_v * store.tick_length then
+			stx, sty = V.mul(fm.max_a, V.normalize(stx, sty))
+		end
 
--- 	if b.hit_fx then
--- 		local sfx = E:create_entity(b.hit_fx)
+		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step, stx, sty)))
+		fm.v.x, fm.v.y = V.trim(fm.max_v, V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y)))
+		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
+		fm.a.x, fm.a.y = 0, 0
 
--- 		sfx.pos.x, sfx.pos.y = b.to.x, b.to.y
--- 		sfx.render.sprites[1].ts = store.tick_ts
--- 		sfx.render.sprites[1].runs = 0
+		return dist <= fm.max_v * store.tick_length
+	end
 
--- 		if target and sfx.render.sprites[1].size_names then
--- 			sfx.render.sprites[1].name = sfx.render.sprites[1].size_names[target.unit.size]
--- 		end
+	if b.store and not b.target_id then
+		S:queue(this.sound_events.summon)
 
--- 		queue_insert(store, sfx)
--- 	end
+		s.z = Z_OBJECTS
+		s.sort_y_offset = b.store_sort_y_offset
 
--- 	queue_remove(store, this)
--- end
+		U.animation_start(this, "idle", nil, store.tick_ts, true)
 
--- scripts.bullet_hero_dragon_arb_arborean_spawn = {}
+		if ps then
+			ps.particle_system.emit = false
+		end
+	else
+		S:queue(this.sound_events.travel)
 
--- function scripts.bullet_hero_dragon_arb_arborean_spawn.update(this, store, script)
--- 	local b = this.bullet
--- 	local s = this.render.sprites[1]
--- 	local mspeed = b.min_speed
--- 	local fm = this.force_motion
--- 	local ps
+		s.z = Z_BULLETS
+		s.sort_y_offset = nil
 
--- 	if b.particles_name then
--- 		ps = E:create_entity(b.particles_name)
--- 		ps.particle_system.track_id = this.id
+		U.animation_start(this, "flying", nil, store.tick_ts, s.loop)
 
--- 		queue_insert(store, ps)
--- 	end
+		if ps then
+			ps.particle_system.emit = true
+		end
+	end
 
--- 	local iix, iiy = V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y)
+	while true do
+		if this.initial_impulse and store.tick_ts - b.ts < this.initial_impulse_duration then
+			local t = store.tick_ts - b.ts
 
--- 	if this.initial_impulse_angle_variation_d then
--- 		local variation_rad = math.rad(this.initial_impulse_angle_variation_d)
+			if this.initial_impulse_angle_abs then
+				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(this.initial_impulse_angle_abs, 1, 0))
+			else
+				local angle = this.initial_impulse_angle
 
--- 		variation_rad = -variation_rad + 2 * variation_rad * math.random()
--- 		this.initial_impulse_angle_abs = this.initial_impulse_angle_abs + variation_rad
--- 	end
+				if iix < 0 then
+					angle = angle * -1
+				end
 
--- 	local last_pos = V.vclone(this.pos)
+				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(angle, iix, iiy))
+			end
+		end
 
--- 	b.ts = store.tick_ts
+		last_pos.x, last_pos.y = this.pos.x, this.pos.y
 
--- 	local function move_step(dest)
--- 		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
--- 		local dist = V.len(dx, dy)
--- 		local nx, ny = V.mul(fm.max_v, V.normalize(dx, dy))
--- 		local stx, sty = V.sub(nx, ny, fm.v.x, fm.v.y)
+		if move_step(b.to) then
+			break
+		end
 
--- 		if dist <= 4 * fm.max_v * store.tick_length then
--- 			stx, sty = V.mul(fm.max_a, V.normalize(stx, sty))
--- 		end
+		if b.align_with_trajectory then
+			this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
+		end
 
--- 		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step, stx, sty)))
--- 		fm.v.x, fm.v.y = V.trim(fm.max_v, V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y)))
--- 		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
--- 		fm.a.x, fm.a.y = 0, 0
+		coroutine.yield()
+	end
 
--- 		return dist <= fm.max_v * store.tick_length
--- 	end
+	this.pos.x, this.pos.y = b.to.x, b.to.y
 
--- 	if b.store and not b.target_id then
--- 		S:queue(this.sound_events.summon)
+	S:queue(this.sound_hit)
+	table.insert(store.entities[this.cached_controller_dragon_arb_passive_id].root_zones_dequeue, this.zone_target_id)
 
--- 		s.z = Z_OBJECTS
--- 		s.sort_y_offset = b.store_sort_y_offset
+	if b.payload then
+		local hp = E:create_entity(b.payload)
+		local nearest_nodes = P:nearest_nodes(b.to.x, b.to.y, nil, {1, 2, 3}, true)
+		local pi, spi, ni = unpack(nearest_nodes[1])
 
--- 		U.animation_start(this, "idle", nil, store.tick_ts, true)
+		hp.nav_path.pi = pi
+		hp.nav_path.ni = ni
+		hp.nav_path.spi = spi
+		hp.pos.x, hp.pos.y = b.to.x, b.to.y
+		hp.render.sprites[1].ts = store.tick_ts
 
--- 		if ps then
--- 			ps.particle_system.emit = false
--- 		end
--- 	else
--- 		S:queue(this.sound_events.travel)
+		queue_insert(store, hp)
+	end
 
--- 		s.z = Z_BULLETS
--- 		s.sort_y_offset = nil
+	if b.hit_fx then
+		local sfx = E:create_entity(b.hit_fx)
 
--- 		U.animation_start(this, "flying", nil, store.tick_ts, s.loop)
+		sfx.pos.x, sfx.pos.y = b.to.x, b.to.y
+		sfx.render.sprites[1].ts = store.tick_ts
+		sfx.render.sprites[1].runs = 0
 
--- 		if ps then
--- 			ps.particle_system.emit = true
--- 		end
--- 	end
+		queue_insert(store, sfx)
+	end
 
--- 	while true do
--- 		if this.initial_impulse and store.tick_ts - b.ts < this.initial_impulse_duration then
--- 			local t = store.tick_ts - b.ts
+	queue_remove(store, this)
+end
 
--- 			if this.initial_impulse_angle_abs then
--- 				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(this.initial_impulse_angle_abs, 1, 0))
--- 			else
--- 				local angle = this.initial_impulse_angle
+scripts.hero_dragon_arb_ultimate = {}
 
--- 				if iix < 0 then
--- 					angle = angle * -1
--- 				end
+function scripts.hero_dragon_arb_ultimate.can_fire_fn(this, x, y)
+	return true
+end
 
--- 				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(angle, iix, iiy))
--- 			end
--- 		end
+function scripts.hero_dragon_arb_ultimate.update(this, store)
+	S:queue(this.ultimate_sound)
 
--- 		last_pos.x, last_pos.y = this.pos.x, this.pos.y
+	for _, v in pairs(store.entities) do
+		if v.template_name == "hero_dragon_arb" then
+			v.ultimate_active = true
+			v.ultimate_ts = store.tick_ts
 
--- 		if move_step(b.to) then
--- 			break
--- 		end
+			local s_ult = v.hero.skills.ultimate
 
--- 		if b.align_with_trajectory then
--- 			this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
--- 		end
+			if not U.has_modifiers(store, this, s_ult.mod) then
+				local modifier = E:create_entity(s_ult.mod)
 
--- 		coroutine.yield()
--- 	end
+				modifier.modifier.target_id = v.id
+				modifier.modifier.source_id = this.id
 
--- 	this.pos.x, this.pos.y = b.to.x, b.to.y
+				queue_insert(store, modifier)
+			end
+		elseif table.contains(this.soldiers_target, v.template_name) and not v.health.dead then
+			local mod = E:create_entity(this.soldiers_polymorph_mod)
 
--- 	S:queue(this.sound_hit)
--- 	table.insert(store.entities[this.cached_controller_dragon_arb_passive_id].root_zones_dequeue, this.zone_target_id)
+			mod.modifier.target_id = v.id
+			mod.modifier.source_id = this.id
 
--- 	if b.payload then
--- 		local hp = E:create_entity(b.payload)
--- 		local nearest_nodes = P:nearest_nodes(b.to.x, b.to.y, nil, {
--- 			1,
--- 			2,
--- 			3
--- 		}, true)
--- 		local pi, spi, ni = unpack(nearest_nodes[1])
+			queue_insert(store, mod)
+		end
+	end
 
--- 		hp.nav_path.pi = pi
--- 		hp.nav_path.ni = ni
--- 		hp.nav_path.spi = spi
--- 		hp.pos.x, hp.pos.y = b.to.x, b.to.y
--- 		hp.render.sprites[1].ts = store.tick_ts
+	queue_remove(store, this)
+end
 
--- 		queue_insert(store, hp)
--- 	end
+scripts.mod_hero_dragon_arb_ultimate = {}
 
--- 	if b.hit_fx then
--- 		local sfx = E:create_entity(b.hit_fx)
+function scripts.mod_hero_dragon_arb_ultimate.insert(this, store, script)
+	local target = store.entities[this.modifier.target_id]
 
--- 		sfx.pos.x, sfx.pos.y = b.to.x, b.to.y
--- 		sfx.render.sprites[1].ts = store.tick_ts
--- 		sfx.render.sprites[1].runs = 0
+	if not target or target.health.dead or not target.unit then
+		return false
+	end
 
--- 		queue_insert(store, sfx)
--- 	end
+	if this.received_damage_factor then
+		target.health.damage_factor = target.health.damage_factor * this.received_damage_factor
+	end
 
--- 	queue_remove(store, this)
--- end
+	if this.inflicted_damage_factor then
+		target.unit.damage_factor = target.unit.damage_factor * this.inflicted_damage_factor
+	end
 
--- scripts.hero_dragon_arb_ultimate = {}
+	if this.extra_armor then
+		SU.armor_inc(target, this.extra_armor)
+	end
 
--- function scripts.hero_dragon_arb_ultimate.can_fire_fn(this, x, y)
--- 	return true
--- end
+	if this.extra_magic_armor then
+		SU.magic_armor_inc(target, this.extra_magic_armor)
+	end
 
--- function scripts.hero_dragon_arb_ultimate.update(this, store)
--- 	S:queue(this.ultimate_sound)
+	target.motion.max_speed = target.motion.max_speed * this.fast.factor
 
--- 	for _, v in pairs(store.entities) do
--- 		if v.template_name == "hero_dragon_arb" then
--- 			v.ultimate_active = true
--- 			v.ultimate_ts = store.tick_ts
+	U.sprites_show(target, this.ultimate_sid, this.ultimate_sid, true)
 
--- 			local s_ult = v.hero.skills.ultimate
+	if target.tween.props[3] then
+		target.tween.props[3].disabled = false
+		target.tween.props[3].ts = store.tick_ts
+		target.tween.reverse = false
+	end
 
--- 			if not U.has_modifiers(store, this, s_ult.mod) then
--- 				local modifier = E:create_entity(s_ult.mod)
+	target.tween.props[2].disabled = false
+	target.tween.props[2].ts = store.tick_ts
 
--- 				modifier.modifier.target_id = v.id
--- 				modifier.modifier.source_id = this.id
+	signal.emit("mod-applied", this, target)
 
--- 				queue_insert(store, modifier)
--- 			end
--- 		elseif table.contains(this.soldiers_target, v.template_name) and not v.health.dead then
--- 			local mod = E:create_entity(this.soldiers_polymorph_mod)
+	return true
+end
 
--- 			mod.modifier.target_id = v.id
--- 			mod.modifier.source_id = this.id
+function scripts.mod_hero_dragon_arb_ultimate.remove(this, store, script)
+	local target = store.entities[this.modifier.target_id]
 
--- 			queue_insert(store, mod)
--- 		end
--- 	end
+	if target and target.health and target.unit then
+		if this.received_damage_factor then
+			target.health.damage_factor = target.health.damage_factor / this.received_damage_factor
+		end
 
--- 	queue_remove(store, this)
--- end
+		if this.inflicted_damage_factor then
+			target.unit.damage_factor = target.unit.damage_factor / this.inflicted_damage_factor
+		end
 
--- scripts.mod_hero_dragon_arb_ultimate = {}
+		if this.extra_armor then
+			SU.armor_dec(target, this.extra_armor)
+		end
 
--- function scripts.mod_hero_dragon_arb_ultimate.insert(this, store, script)
--- 	local target = store.entities[this.modifier.target_id]
+		if this.extra_magic_armor then
+			SU.magic_armor_dec(target, this.extra_magic_armor)
+		end
 
--- 	if not target or target.health.dead or not target.unit then
--- 		return false
--- 	end
+		target.motion.max_speed = target.motion.max_speed / this.fast.factor
 
--- 	if this.received_damage_factor then
--- 		target.health.damage_factor = target.health.damage_factor * this.received_damage_factor
--- 	end
+		U.sprites_hide(target, this.ultimate_sid, this.ultimate_sid, true)
 
--- 	if this.inflicted_damage_factor then
--- 		target.unit.damage_factor = target.unit.damage_factor * this.inflicted_damage_factor
--- 	end
+		if target.tween.props[3] then
+			target.tween.props[3].disabled = false
+			target.tween.props[3].ts = store.tick_ts
+		end
+		target.tween.props[2].disabled = false
+		target.tween.props[2].ts = store.tick_ts
+		target.tween.reverse = true
 
--- 	if this.extra_armor then
--- 		SU.armor_inc(target, this.extra_armor)
--- 	end
+	end
 
--- 	if this.extra_magic_armor then
--- 		SU.magic_armor_inc(target, this.extra_magic_armor)
--- 	end
+	return true
+end
 
--- 	target.motion.max_speed = target.motion.max_speed * this.fast.factor
+function scripts.mod_hero_dragon_arb_ultimate.update(this, store, script)
+	local m = this.modifier
 
--- 	U.sprites_show(target, this.ultimate_sid, this.ultimate_sid, true)
+	this.modifier.ts = store.tick_ts
 
--- 	target.tween.props[2].disabled = false
--- 	target.tween.props[2].ts = store.tick_ts
--- 	target.tween.reverse = false
+	local target = store.entities[m.target_id]
 
--- 	signal.emit("mod-applied", this, target)
+	if not target or not target.pos then
+		queue_remove(store, this)
 
--- 	return true
--- end
+		return
+	end
 
--- function scripts.mod_hero_dragon_arb_ultimate.remove(this, store, script)
--- 	local target = store.entities[this.modifier.target_id]
+	this.pos = target.pos
 
--- 	if target and target.health and target.unit then
--- 		if this.received_damage_factor then
--- 			target.health.damage_factor = target.health.damage_factor / this.received_damage_factor
--- 		end
+	local start_countdown = false
 
--- 		if this.inflicted_damage_factor then
--- 			target.unit.damage_factor = target.unit.damage_factor / this.inflicted_damage_factor
--- 		end
+	while true do
+		target = store.entities[m.target_id]
 
--- 		if this.extra_armor then
--- 			SU.armor_dec(target, this.extra_armor)
--- 		end
+		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
+			queue_remove(store, this)
 
--- 		if this.extra_magic_armor then
--- 			SU.magic_armor_dec(target, this.extra_magic_armor)
--- 		end
+			return
+		end
 
--- 		target.motion.max_speed = target.motion.max_speed / this.fast.factor
+		if this.render and target.unit then
+			local s = this.render.sprites[1]
+			local flip_sign = 1
 
--- 		U.sprites_hide(target, this.ultimate_sid, this.ultimate_sid, true)
+			if target.render then
+				flip_sign = target.render.sprites[1].flip_x and -1 or 1
+			end
 
--- 		target.tween.props[2].disabled = false
--- 		target.tween.props[2].ts = store.tick_ts
--- 		target.tween.reverse = true
--- 	end
+			if m.health_bar_offset and target.health_bar then
+				local hb = target.health_bar.offset
+				local hbo = m.health_bar_offset
 
--- 	return true
--- end
+				s.offset.x, s.offset.y = hb.x + hbo.x * flip_sign, hb.y + hbo.y
+			elseif m.use_mod_offset and target.unit.mod_offset then
+				s.offset.x, s.offset.y = target.unit.mod_offset.x * flip_sign, target.unit.mod_offset.y
+			end
+		end
 
--- function scripts.mod_hero_dragon_arb_ultimate.update(this, store, script)
--- 	local m = this.modifier
+		coroutine.yield()
+	end
+end
 
--- 	this.modifier.ts = store.tick_ts
+scripts.soldier_hero_dragon_arb_spawn = {}
 
--- 	local target = store.entities[m.target_id]
+function scripts.soldier_hero_dragon_arb_spawn.get_info(this)
+	local t = scripts.soldier_barrack.get_info(this)
 
--- 	if not target or not target.pos then
--- 		queue_remove(store, this)
+	t.respawn = nil
 
--- 		return
--- 	end
+	return t
+end
 
--- 	this.pos = target.pos
+function scripts.soldier_hero_dragon_arb_spawn.update(this, store, script)
+	local attack = this.melee.attacks[1]
+	local target
+	local next_pos = V.vclone(this.pos)
+	local brk, sta, nearest
 
--- 	local start_countdown = false
+	this.reinforcement.ts = store.tick_ts
 
--- 	while true do
--- 		target = store.entities[m.target_id]
+	if this.doing_spawn_anim_ts == nil or this.doing_spawn_anim_ts then
+		local spawn_anim_ts = this.spawn_anim_ts and this.spawn_anim_ts or store.tick_ts
 
--- 		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
--- 			queue_remove(store, this)
+		this.spawn_anim_ts = spawn_anim_ts
 
--- 			return
--- 		end
+		U.y_animation_play(this, "spawn", nil, spawn_anim_ts, 1)
 
--- 		if this.render and target.unit then
--- 			local s = this.render.sprites[1]
--- 			local flip_sign = 1
+		this.doing_spawn_anim_ts = false
+	end
 
--- 			if target.render then
--- 				flip_sign = target.render.sprites[1].flip_x and -1 or 1
--- 			end
+	this.tween.ts = store.tick_ts
 
--- 			if m.health_bar_offset and target.health_bar then
--- 				local hb = target.health_bar.offset
--- 				local hbo = m.health_bar_offset
+	if #this.tween.props > 1 then
+		this.tween.props[4].disabled = false
+		this.tween.props[5].disabled = false
+	end
 
--- 				s.offset.x, s.offset.y = hb.x + hbo.x * flip_sign, hb.y + hbo.y
--- 			elseif m.use_mod_offset and target.unit.mod_offset then
--- 				s.offset.x, s.offset.y = target.unit.mod_offset.x * flip_sign, target.unit.mod_offset.y
--- 			end
--- 		end
+	local function break_fn()
+		if this.reinforcement.duration and store.tick_ts - this.reinforcement.ts > this.reinforcement.duration then
+			return true
+		end
 
--- 		coroutine.yield()
--- 	end
--- end
+		return false
+	end
 
--- scripts.soldier_hero_dragon_arb_spawn = {}
+	local function adjust_tween_for_despawn()
+		this.tween.ts = store.tick_ts
+		this.tween.props[1].disabled = false
 
--- function scripts.soldier_hero_dragon_arb_spawn.get_info(this)
--- 	local t = scripts.soldier_barrack.get_info(this)
+		if #this.tween.props > 1 then
+			this.tween.props[2].disabled = false
+			this.tween.props[3].disabled = false
+			this.tween.props[4].disabled = true
+			this.tween.props[5].disabled = true
+		end
 
--- 	t.respawn = nil
+		this.tween.remove = false
+		this.tween.reverse = false
+		this.tween.disabled = true
+	end
 
--- 	return t
--- end
+	while true do
+		if this.health.dead or not next_pos then
+			this.ui.can_click = false
 
--- function scripts.soldier_hero_dragon_arb_spawn.update(this, store, script)
--- 	local attack = this.melee.attacks[1]
--- 	local target
--- 	local next_pos = V.vclone(this.pos)
--- 	local brk, sta, nearest
+			adjust_tween_for_despawn()
+			SU.y_soldier_death(store, this)
+			queue_remove(store, this)
 
--- 	this.reinforcement.ts = store.tick_ts
+			return
+		end
 
--- 	if this.doing_spawn_anim_ts == nil or this.doing_spawn_anim_ts then
--- 		local spawn_anim_ts = this.spawn_anim_ts and this.spawn_anim_ts or store.tick_ts
+		if this.reinforcement.duration and store.tick_ts - this.reinforcement.ts > this.reinforcement.duration then
+			this.ui.can_click = false
 
--- 		this.spawn_anim_ts = spawn_anim_ts
+			if this.health.hp > 0 then
+				this.reinforcement.hp_before_timeout = this.health.hp
+			end
 
--- 		U.y_animation_play(this, "spawn", nil, spawn_anim_ts, 1)
+			this.health.hp = 0
 
--- 		this.doing_spawn_anim_ts = false
--- 	end
+			adjust_tween_for_despawn()
+			SU.y_soldier_death(store, this)
+			queue_remove(store, this)
 
--- 	this.tween.ts = store.tick_ts
+			return
+		end
 
--- 	if #this.tween.props > 1 then
--- 		this.tween.props[3].disabled = false
--- 	end
+		if this.unit.is_stunned then
+			U.animation_start(this, "idle", nil, store.tick_ts, -1)
+		else
+			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
--- 	local function break_fn()
--- 		if this.reinforcement.duration and store.tick_ts - this.reinforcement.ts > this.reinforcement.duration then
--- 			return true
--- 		end
+			if brk or sta ~= A_NO_TARGET then
+			-- block empty
+			else
+				nearest = P:nearest_nodes(this.pos.x, this.pos.y, {this.nav_path.pi}, {this.nav_path.spi})
 
--- 		return false
--- 	end
+				if nearest and nearest[1] and nearest[1][3] < this.nav_path.ni then
+					this.nav_path.ni = nearest[1][3]
+				end
 
--- 	local function adjust_tween_for_despawn()
--- 		this.tween.ts = store.tick_ts
--- 		this.tween.props[1].disabled = false
+				while next_pos and not target and not this.health.dead and not this.unit.is_stunned and not break_fn() do
+					U.set_destination(this, next_pos)
 
--- 		if #this.tween.props > 1 then
--- 			this.tween.props[2].disabled = false
--- 			this.tween.props[3].disabled = true
--- 		end
+					local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
--- 		this.tween.remove = false
--- 		this.tween.reverse = false
--- 		this.tween.disabled = true
--- 	end
+					U.animation_start(this, an, af, store.tick_ts, -1)
+					U.walk(this, store.tick_length)
+					coroutine.yield()
 
--- 	while true do
--- 		if this.health.dead or not next_pos then
--- 			this.ui.can_click = false
+					target = U.find_foremost_enemy(store.entities, this.pos, 0, this.melee.range, false, attack.vis_flags, attack.vis_bans)
+					next_pos = P:next_entity_node(this, store.tick_length)
 
--- 			adjust_tween_for_despawn()
--- 			SU.y_soldier_death(store, this)
--- 			queue_remove(store, this)
+					if not next_pos or not P:is_node_valid(this.nav_path.pi, this.nav_path.ni) or GR:cell_is(next_pos.x, next_pos.y, bor(TERRAIN_WATER, TERRAIN_CLIFF, TERRAIN_NOWALK)) then
+						next_pos = nil
+					end
+				end
 
--- 			return
--- 		end
+				target = nil
+			end
+		end
 
--- 		if this.reinforcement.duration and store.tick_ts - this.reinforcement.ts > this.reinforcement.duration then
--- 			this.ui.can_click = false
+		coroutine.yield()
+	end
+end
 
--- 			if this.health.hp > 0 then
--- 				this.reinforcement.hp_before_timeout = this.health.hp
--- 			end
+scripts.mod_hero_dragon_arb_bleed = {}
 
--- 			this.health.hp = 0
+function scripts.mod_hero_dragon_arb_bleed.insert(this, store, script)
+	local target = store.entities[this.modifier.target_id]
 
--- 			adjust_tween_for_despawn()
--- 			SU.y_soldier_death(store, this)
--- 			queue_remove(store, this)
+	if not target or target.health.dead then
+		return false
+	end
 
--- 			return
--- 		end
+	if band(this.modifier.vis_flags, target.vis.bans) ~= 0 or band(this.modifier.vis_bans, target.vis.flags) ~= 0 then
+		log.paranoid("mod %s cannot be applied to entity %s:%s because of vis flags/bans", this.template_name, target.id, target.template_name)
 
--- 		if this.unit.is_stunned then
--- 			U.animation_start(this, "idle", nil, store.tick_ts, -1)
--- 		else
--- 			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+		return false
+	end
 
--- 			if brk or sta ~= A_NO_TARGET then
--- 				-- block empty
--- 			else
--- 				nearest = P:nearest_nodes(this.pos.x, this.pos.y, {
--- 					this.nav_path.pi
--- 				}, {
--- 					this.nav_path.spi
--- 				})
+	if target and target.unit and this.render then
+		local s = this.render.sprites[1]
 
--- 				if nearest and nearest[1] and nearest[1][3] < this.nav_path.ni then
--- 					this.nav_path.ni = nearest[1][3]
--- 				end
+		s.ts = store.tick_ts
 
--- 				while next_pos and not target and not this.health.dead and not this.unit.is_stunned and not break_fn() do
--- 					U.set_destination(this, next_pos)
+		if s.size_names then
+			s.name = s.size_names[target.unit.size]
+		end
 
--- 					local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
+		if s.size_scales then
+			s.scale = s.size_scales[target.unit.size]
+		end
 
--- 					U.animation_start(this, an, af, store.tick_ts, -1)
--- 					U.walk(this, store.tick_length)
--- 					coroutine.yield()
+		if target.render then
+			s.z = target.render.sprites[1].z
+		end
+	end
 
--- 					target = U.find_foremost_enemy(store.entities, this.pos, 0, this.melee.range, false, attack.vis_flags, attack.vis_bans)
--- 					next_pos = P:next_entity_node(this, store.tick_length)
+	this.dps.ts = store.tick_ts - this.dps.damage_every
+	this.modifier.ts = store.tick_ts
 
--- 					if not next_pos or not P:is_node_valid(this.nav_path.pi, this.nav_path.ni) or GR:cell_is(next_pos.x, next_pos.y, bor(TERRAIN_WATER, TERRAIN_CLIFF, TERRAIN_NOWALK)) then
--- 						next_pos = nil
--- 					end
--- 				end
+	signal.emit("mod-applied", this, target)
 
--- 				target = nil
--- 			end
--- 		end
+	local passive_mark_mod = E:create_entity(this.passive_mark_mod)
 
--- 		coroutine.yield()
--- 	end
--- end
+	passive_mark_mod.modifier.target_id = target.id
+	passive_mark_mod.cached_controller_dragon_arb_passive_id = this.cached_controller_dragon_arb_passive_id
 
--- scripts.mod_hero_dragon_arb_bleed = {}
+	queue_insert(store, passive_mark_mod)
 
--- function scripts.mod_hero_dragon_arb_bleed.insert(this, store, script)
--- 	local target = store.entities[this.modifier.target_id]
+	return true
+end
 
--- 	if not target or target.health.dead then
--- 		return false
--- 	end
+function scripts.mod_hero_dragon_arb_bleed.update(this, store, script)
+	local cycles, total_damage = 0, 0
+	local m = this.modifier
+	local nodes_dt = 0
+	local dps = this.dps
+	local fx_ts = 0
 
--- 	if band(this.modifier.vis_flags, target.vis.bans) ~= 0 or band(this.modifier.vis_bans, target.vis.flags) ~= 0 then
--- 		log.paranoid("mod %s cannot be applied to entity %s:%s because of vis flags/bans", this.template_name, target.id, target.template_name)
+	local function do_damage(target, value, damage_type)
+		local d = E:create_entity("damage")
 
--- 		return false
--- 	end
+		d.source_id = this.id
+		d.target_id = target.id
+		d.value = value
+		d.damage_type = damage_type
+		d.pop = dps.pop
+		d.pop_chance = dps.pop_chance
+		d.pop_conds = dps.pop_conds
 
--- 	if target and target.unit and this.render then
--- 		local s = this.render.sprites[1]
+		queue_damage(store, d)
 
--- 		s.ts = store.tick_ts
+		local passive_mark_mod = E:create_entity(this.passive_mark_mod)
 
--- 		if s.size_names then
--- 			s.name = s.size_names[target.unit.size]
--- 		end
+		passive_mark_mod.modifier.target_id = target.id
+		passive_mark_mod.cached_controller_dragon_arb_passive_id = this.cached_controller_dragon_arb_passive_id
 
--- 		if s.size_scales then
--- 			s.scale = s.size_scales[target.unit.size]
--- 		end
+		queue_insert(store, passive_mark_mod)
+	end
 
--- 		if target.render then
--- 			s.z = target.render.sprites[1].z
--- 		end
--- 	end
+	local target = store.entities[m.target_id]
 
--- 	this.dps.ts = store.tick_ts - this.dps.damage_every
--- 	this.modifier.ts = store.tick_ts
+	if not target then
+		queue_remove(store, this)
 
--- 	signal.emit("mod-applied", this, target)
+		return
+	end
 
--- 	local passive_mark_mod = E:create_entity(this.passive_mark_mod)
+	if this.instakill_chance and not U.flag_has(target.vis.flags, this.instakill_vis_bans) and not U.flag_has(target.vis.bans, this.instakill_vis_flags) and math.random() < this.instakill_chance then
+		do_damage(target, 0, DAMAGE_INSTAKILL)
+	end
 
--- 	passive_mark_mod.modifier.target_id = target.id
--- 	passive_mark_mod.cached_controller_dragon_arb_passive_id = this.cached_controller_dragon_arb_passive_id
+	this.pos = target.pos
 
--- 	queue_insert(store, passive_mark_mod)
+	while true do
+		target = store.entities[m.target_id]
 
--- 	return true
--- end
+		if not target or target.health.dead then
+			break
+		end
 
--- function scripts.mod_hero_dragon_arb_bleed.update(this, store, script)
--- 	local cycles, total_damage = 0, 0
--- 	local m = this.modifier
--- 	local nodes_dt = 0
--- 	local dps = this.dps
--- 	local fx_ts = 0
+		if store.tick_ts - m.ts >= m.duration - 1e-09 then
+			if dps.damage_last then
+				do_damage(target, dps.damage_last, dps.damage_type)
+			end
 
--- 	local function do_damage(target, value, damage_type)
--- 		local d = E:create_entity("damage")
+			break
+		end
 
--- 		d.source_id = this.id
--- 		d.target_id = target.id
--- 		d.value = value
--- 		d.damage_type = damage_type
--- 		d.pop = dps.pop
--- 		d.pop_chance = dps.pop_chance
--- 		d.pop_conds = dps.pop_conds
+		if this.render and m.use_mod_offset and target.unit.mod_offset then
+			local so = this.render.sprites[1].offset
 
--- 		queue_damage(store, d)
+			so.x, so.y = target.unit.mod_offset.x, target.unit.mod_offset.y
+		end
 
--- 		local passive_mark_mod = E:create_entity(this.passive_mark_mod)
+		if dps.damage_every and store.tick_ts - dps.ts >= dps.damage_every then
+			cycles = cycles + 1
+			dps.ts = dps.ts + dps.damage_every
 
--- 		passive_mark_mod.modifier.target_id = target.id
--- 		passive_mark_mod.cached_controller_dragon_arb_passive_id = this.cached_controller_dragon_arb_passive_id
+			local damage = target.motion.max_speed * this.damage_speed_ratio
 
--- 		queue_insert(store, passive_mark_mod)
--- 	end
+			do_damage(target, damage, dps.damage_type)
 
--- 	local target = store.entities[m.target_id]
+			if dps.fx and (not dps.fx_every or store.tick_ts - fx_ts >= dps.fx_every) then
+				fx_ts = store.tick_ts
 
--- 	if not target then
--- 		queue_remove(store, this)
+				local fx = E:create_entity(dps.fx)
 
--- 		return
--- 	end
+				if dps.fx_tracks_target then
+					fx.pos = target.pos
 
--- 	if this.instakill_chance and not U.flag_has(target.vis.flags, this.instakill_vis_bans) and not U.flag_has(target.vis.bans, this.instakill_vis_flags) and math.random() < this.instakill_chance then
--- 		do_damage(target, 0, DAMAGE_INSTAKILL)
--- 	end
+					if m.use_mod_offset and target.unit.mod_offset then
+						fx.render.sprites[1].offset.x = target.unit.mod_offset.x
+						fx.render.sprites[1].offset.y = target.unit.mod_offset.y
+					end
+				else
+					fx.pos = V.vclone(this.pos)
 
--- 	this.pos = target.pos
+					if m.use_mod_offset and target.unit.mod_offset then
+						fx.pos.x, fx.pos.y = fx.pos.x + target.unit.mod_offset.x, fx.pos.y + target.unit.mod_offset.y
+					end
+				end
 
--- 	while true do
--- 		target = store.entities[m.target_id]
+				fx.render.sprites[1].ts = store.tick_ts
+				fx.render.sprites[1].runs = 0
 
--- 		if not target or target.health.dead then
--- 			break
--- 		end
+				if fx.render.sprites[1].size_names then
+					fx.render.sprites[1].name = fx.render.sprites[1].size_names[target.unit.size]
+				end
 
--- 		if store.tick_ts - m.ts >= m.duration - 1e-09 then
--- 			if dps.damage_last then
--- 				do_damage(target, dps.damage_last, dps.damage_type)
--- 			end
+				if fx.render.sprites[1].use_blood_color and target.unit.blood_color then
+					fx.render.sprites[1].name = fx.render.sprites[1].name .. "_" .. target.unit.blood_color
+				end
 
--- 			break
--- 		end
+				if dps.fx_target_flip and target and target.render then
+					fx.render.sprites[1].flip_x = target.render.sprites[1].flip_x
+				end
 
--- 		if this.render and m.use_mod_offset and target.unit.mod_offset then
--- 			local so = this.render.sprites[1].offset
+				queue_insert(store, fx)
+			end
+		end
 
--- 			so.x, so.y = target.unit.mod_offset.x, target.unit.mod_offset.y
--- 		end
+		coroutine.yield()
+	end
 
--- 		if dps.damage_every and store.tick_ts - dps.ts >= dps.damage_every then
--- 			cycles = cycles + 1
--- 			dps.ts = dps.ts + dps.damage_every
+	queue_remove(store, this)
+end
 
--- 			local damage = target.motion.max_speed * this.damage_speed_ratio
+scripts.bullet_hero_dragon_arb_tower_buff = {}
 
--- 			do_damage(target, damage, dps.damage_type)
+function scripts.bullet_hero_dragon_arb_tower_buff.update(this, store, script)
+	local b = this.bullet
+	local mspeed = b.min_speed
+	local target, ps
 
--- 			if dps.fx and (not dps.fx_every or store.tick_ts - fx_ts >= dps.fx_every) then
--- 				fx_ts = store.tick_ts
+	if b.particles_name then
+		ps = E:create_entity(b.particles_name)
+		ps.particle_system.track_id = this.id
 
--- 				local fx = E:create_entity(dps.fx)
+		queue_insert(store, ps)
+	end
 
--- 				if dps.fx_tracks_target then
--- 					fx.pos = target.pos
+	if b.target_id then
+		S:queue(this.sound_events.travel)
+	else
+		S:queue(this.sound_events.summon)
+	end
 
--- 					if m.use_mod_offset and target.unit.mod_offset then
--- 						fx.render.sprites[1].offset.x = target.unit.mod_offset.x
--- 						fx.render.sprites[1].offset.y = target.unit.mod_offset.y
--- 					end
--- 				else
--- 					fx.pos = V.vclone(this.pos)
+	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
+		if b.target_id then
+			target = store.entities[b.target_id]
+		end
 
--- 					if m.use_mod_offset and target.unit.mod_offset then
--- 						fx.pos.x, fx.pos.y = fx.pos.x + target.unit.mod_offset.x, fx.pos.y + target.unit.mod_offset.y
--- 					end
--- 				end
+		if target then
+			if b.max_track_distance then
+				local d = math.max(math.abs(target.pos.x - b.to.x), math.abs(target.pos.y - b.to.y))
 
--- 				fx.render.sprites[1].ts = store.tick_ts
--- 				fx.render.sprites[1].runs = 0
+				if d > b.max_track_distance then
+					b.target_id = nil
+					target = nil
+				end
+			else
+				b.to.x, b.to.y = target.pos.x, target.pos.y
+			end
+		end
 
--- 				if fx.render.sprites[1].size_names then
--- 					fx.render.sprites[1].name = fx.render.sprites[1].size_names[target.unit.size]
--- 				end
+		mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
+		mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
+		b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
+		this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
 
--- 				if fx.render.sprites[1].use_blood_color and target.unit.blood_color then
--- 					fx.render.sprites[1].name = fx.render.sprites[1].name .. "_" .. target.unit.blood_color
--- 				end
+		if b.align_with_trajectory then
+			this.render.sprites[1].r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
+		else
+			this.render.sprites[1].r = 0
+			this.render.sprites[1].flip_x = b.to.x < this.pos.x
+		end
 
--- 				if dps.fx_target_flip and target and target.render then
--- 					fx.render.sprites[1].flip_x = target.render.sprites[1].flip_x
--- 				end
+		if ps then
+			ps.particle_system.emit_direction = this.render.sprites[1].r
+		end
 
--- 				queue_insert(store, fx)
--- 			end
--- 		end
+		coroutine.yield()
+	end
 
--- 		coroutine.yield()
--- 	end
+	if target then
+		local mod = E:create_entity(b.hit_mod)
 
--- 	queue_remove(store, this)
--- end
+		mod.modifier.target_id = target.id
+		mod.modifier.source_id = b.source
 
--- scripts.bullet_hero_dragon_arb_tower_buff = {}
+		queue_insert(store, mod)
+	end
 
--- function scripts.bullet_hero_dragon_arb_tower_buff.update(this, store, script)
--- 	local b = this.bullet
--- 	local mspeed = b.min_speed
--- 	local target, ps
+	if b.hit_fx then
+		local sfx = E:create_entity(b.hit_fx)
 
--- 	if b.particles_name then
--- 		ps = E:create_entity(b.particles_name)
--- 		ps.particle_system.track_id = this.id
+		sfx.pos.x, sfx.pos.y = b.to.x, b.to.y
+		sfx.render.sprites[1].ts = store.tick_ts
 
--- 		queue_insert(store, ps)
--- 	end
+		queue_insert(store, sfx)
+	end
 
--- 	if b.target_id then
--- 		S:queue(this.sound_events.travel)
--- 	else
--- 		S:queue(this.sound_events.summon)
--- 	end
+	if this.tween then
+		ps.particle_system.emit = false
+		this.tween.disabled = false
+		this.tween.ts = store.tick_ts
 
--- 	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
--- 		if b.target_id then
--- 			target = store.entities[b.target_id]
--- 		end
+		U.y_wait(store, fts(10))
+	end
 
--- 		if target then
--- 			if b.max_track_distance then
--- 				local d = math.max(math.abs(target.pos.x - b.to.x), math.abs(target.pos.y - b.to.y))
+	queue_remove(store, this)
+end
 
--- 				if d > b.max_track_distance then
--- 					b.target_id = nil
--- 					target = nil
--- 				end
--- 			else
--- 				b.to.x, b.to.y = target.pos.x, target.pos.y
--- 			end
--- 		end
+scripts.mod_hero_dragon_arb_tower_buff = {}
 
--- 		mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
--- 		mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
--- 		b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
--- 		this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
+function scripts.mod_hero_dragon_arb_tower_buff.update(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
 
--- 		if b.align_with_trajectory then
--- 			this.render.sprites[1].r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
--- 		else
--- 			this.render.sprites[1].r = 0
--- 			this.render.sprites[1].flip_x = b.to.x < this.pos.x
--- 		end
+	if target then
+		this.pos = target.pos
+	end
 
--- 		if ps then
--- 			ps.particle_system.emit_direction = this.render.sprites[1].r
--- 		end
+	m.ts = store.tick_ts
 
--- 		coroutine.yield()
--- 	end
+	if this.tween then
+		this.tween.ts = store.tick_ts
+	end
 
--- 	if target then
--- 		local mod = E:create_entity(b.hit_mod)
+	U.y_animation_play_group(this, "start", nil, store.tick_ts, 1, this.render.sprites[1].group)
+	U.animation_start_group(this, "idle", nil, store.tick_ts, true, this.render.sprites[1].group)
 
--- 		mod.modifier.target_id = target.id
--- 		mod.modifier.source_id = b.source
+	while store.tick_ts - m.ts < m.duration - this.out_anim_duration do
+		coroutine.yield()
+	end
 
--- 		queue_insert(store, mod)
--- 	end
+	U.y_animation_play_group(this, "end", nil, store.tick_ts, 1, this.render.sprites[1].group)
+	queue_remove(store, this)
+end
 
--- 	if b.hit_fx then
--- 		local sfx = E:create_entity(b.hit_fx)
+scripts.decal_hero_dragon_arb_tower_plant_linirea = {}
 
--- 		sfx.pos.x, sfx.pos.y = b.to.x, b.to.y
--- 		sfx.render.sprites[1].ts = store.tick_ts
+function scripts.decal_hero_dragon_arb_tower_plant_linirea.update(this, store, script)
+	local a = this.bullet_attack
 
--- 		queue_insert(store, sfx)
--- 	end
+	this.spawn_ts = store.tick_ts
+	a.cooldown = U.frandom(a.cooldown_min, a.cooldown_max)
 
--- 	if this.tween then
--- 		ps.particle_system.emit = false
--- 		this.tween.disabled = false
--- 		this.tween.ts = store.tick_ts
+	U.y_animation_play(this, "spawn", nil, store.tick_ts)
+	U.animation_start(this, "idle", nil, store.tick_ts, true)
 
--- 		U.y_wait(store, fts(10))
--- 	end
+	a.ts = store.tick_ts - a.cooldown
 
--- 	queue_remove(store, this)
--- end
+	while true do
+		if store.tick_ts - this.spawn_ts > this.duration then
+			SU.remove_modifiers(store, this)
+			U.y_animation_play(this, "end", nil, store.tick_ts, 1)
+			queue_remove(store, this)
 
--- scripts.mod_hero_dragon_arb_tower_buff = {}
+			return
+		end
 
--- function scripts.mod_hero_dragon_arb_tower_buff.update(this, store)
--- 	local m = this.modifier
--- 	local target = store.entities[m.target_id]
+		if store.tick_ts - a.ts > a.cooldown then
+			local target = U.find_nearest_soldier(store.entities, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(v, origin)
+				return v.health and not v.health.dead and v.health.hp < v.health.hp_max and not U.has_modifiers(store, v, a.mark_mod)
+			end)
 
--- 	if target then
--- 		this.pos = target.pos
--- 	end
+			if not target then
+				SU.delay_attack(store, a, 0.2)
+			else
+				local mark_mod = E:create_entity(a.mark_mod)
 
--- 	m.ts = store.tick_ts
+				mark_mod.modifier.target_id = target.id
+				mark_mod.modifier.source_id = this.id
 
--- 	if this.tween then
--- 		this.tween.ts = store.tick_ts
--- 	end
+				queue_insert(store, mark_mod)
 
--- 	U.y_animation_play_group(this, "start", nil, store.tick_ts, 1, this.render.sprites[1].group)
--- 	U.animation_start_group(this, "idle", nil, store.tick_ts, true, this.render.sprites[1].group)
+				a.ts = store.tick_ts
+				a.cooldown = U.frandom(a.cooldown_min, a.cooldown_max)
 
--- 	while store.tick_ts - m.ts < m.duration - this.out_anim_duration do
--- 		coroutine.yield()
--- 	end
+				local b = E:create_entity(a.bullet)
+				local shooting_right = this.pos.x < target.pos.x
+				local boffset = a.bullet_start_offset[shooting_right and 1 or 2]
 
--- 	U.y_animation_play_group(this, "end", nil, store.tick_ts, 1, this.render.sprites[1].group)
--- 	queue_remove(store, this)
--- end
+				b.bullet.from = V.v(this.pos.x + boffset.x, this.pos.y + boffset.y)
+				b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+				b.bullet.target_id = target.id
+				b.bullet.source_id = this.id
+				b.pos = V.vclone(b.bullet.from)
 
--- scripts.decal_hero_dragon_arb_tower_plant_linirea = {}
+				local target_pos = target.pos
+				local an, af = U.animation_name_facing_point(this, a.animation, target_pos)
 
--- function scripts.decal_hero_dragon_arb_tower_plant_linirea.update(this, store, script)
--- 	local a = this.bullet_attack
+				U.animation_start(this, an, af, store.tick_ts, false)
+				U.y_wait(store, a.shoot_time)
+				queue_insert(store, b)
+				S:queue("ArrowSound")
+				U.y_animation_wait(this)
+				U.animation_start(this, "idle", nil, store.tick_ts)
+			end
+		end
 
--- 	this.spawn_ts = store.tick_ts
--- 	a.cooldown = U.frandom(a.cooldown_min, a.cooldown_max)
+		coroutine.yield()
+	end
+end
 
--- 	U.y_animation_play(this, "spawn", nil, store.tick_ts)
--- 	U.animation_start(this, "idle", nil, store.tick_ts, true)
+scripts.decal_hero_dragon_arb_tower_plant_dark_army = {}
 
--- 	a.ts = store.tick_ts - a.cooldown
+function scripts.decal_hero_dragon_arb_tower_plant_dark_army.update(this, store, script)
+	local a = this.area_attack
 
--- 	while true do
--- 		if store.tick_ts - this.spawn_ts > this.duration then
--- 			SU.remove_modifiers(store, this)
--- 			U.y_animation_play(this, "end", nil, store.tick_ts, 1)
--- 			queue_remove(store, this)
+	this.spawn_ts = store.tick_ts
+	a.cooldown = U.frandom(a.cooldown_min, a.cooldown_max)
 
--- 			return
--- 		end
+	U.y_animation_play(this, "spawn", nil, store.tick_ts)
+	U.animation_start(this, "idle", nil, store.tick_ts, true)
 
--- 		if store.tick_ts - a.ts > a.cooldown then
--- 			local target = U.find_nearest_soldier(store.entities, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(v, origin)
--- 				return v.health and not v.health.dead and v.health.hp < v.health.hp_max and not U.has_modifiers(store, v, a.mark_mod)
--- 			end)
+	a.ts = store.tick_ts - a.cooldown
 
--- 			if not target then
--- 				SU.delay_attack(store, a, 0.2)
--- 			else
--- 				local mark_mod = E:create_entity(a.mark_mod)
+	while true do
+		if store.tick_ts - this.spawn_ts > this.duration then
+			SU.remove_modifiers(store, this)
+			U.y_animation_play(this, "end", nil, store.tick_ts, 1)
+			queue_remove(store, this)
 
--- 				mark_mod.modifier.target_id = target.id
--- 				mark_mod.modifier.source_id = this.id
+			return
+		end
 
--- 				queue_insert(store, mark_mod)
+		if store.tick_ts - a.ts > a.cooldown then
+			local target, targets, pred_pos = U.find_foremost_enemy(store.entities, this.pos, 0, a.max_range, a.hit_time, a.vis_flags, a.vis_bans)
 
--- 				a.ts = store.tick_ts
--- 				a.cooldown = U.frandom(a.cooldown_min, a.cooldown_max)
+			if not target or not pred_pos then
+			-- block empty
+			else
+				a.ts = store.tick_ts
 
--- 				local b = E:create_entity(a.bullet)
--- 				local shooting_right = this.pos.x < target.pos.x
--- 				local boffset = a.bullet_start_offset[shooting_right and 1 or 2]
+				S:queue(a.sound)
 
--- 				b.bullet.from = V.v(this.pos.x + boffset.x, this.pos.y + boffset.y)
--- 				b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
--- 				b.bullet.target_id = target.id
--- 				b.bullet.source_id = this.id
--- 				b.pos = V.vclone(b.bullet.from)
+				local flip_x = pred_pos.x < this.pos.x
 
--- 				local target_pos = target.pos
--- 				local an, af = U.animation_name_facing_point(this, a.animation, target_pos)
+				U.animation_start(this, a.animation, flip_x, store.tick_ts, false)
+				U.y_wait(store, a.hit_time)
 
--- 				U.animation_start(this, an, af, store.tick_ts, false)
--- 				U.y_wait(store, a.shoot_time)
--- 				queue_insert(store, b)
--- 				S:queue("ArrowSound")
--- 				U.y_animation_wait(this)
--- 				U.animation_start(this, "idle", nil, store.tick_ts)
--- 			end
--- 		end
+				local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 
--- 		coroutine.yield()
--- 	end
--- end
+				if enemies and #enemies > 0 then
+					local e = E:create_entity(a.aura)
 
--- scripts.decal_hero_dragon_arb_tower_plant_dark_army = {}
+					e.pos.x, e.pos.y = this.pos.x, this.pos.y
+					e.owner = this
+					e.aura.source_id = this.id
 
--- function scripts.decal_hero_dragon_arb_tower_plant_dark_army.update(this, store, script)
--- 	local a = this.area_attack
+					queue_insert(store, e)
+				end
 
--- 	this.spawn_ts = store.tick_ts
--- 	a.cooldown = U.frandom(a.cooldown_min, a.cooldown_max)
+				U.y_animation_wait(this)
+			end
+		end
 
--- 	U.y_animation_play(this, "spawn", nil, store.tick_ts)
--- 	U.animation_start(this, "idle", nil, store.tick_ts, true)
+		coroutine.yield()
+	end
+end
 
--- 	a.ts = store.tick_ts - a.cooldown
+scripts.bullet_hero_dragon_arb_linirea_plant_heal = {}
 
--- 	while true do
--- 		if store.tick_ts - this.spawn_ts > this.duration then
--- 			SU.remove_modifiers(store, this)
--- 			U.y_animation_play(this, "end", nil, store.tick_ts, 1)
--- 			queue_remove(store, this)
+function scripts.bullet_hero_dragon_arb_linirea_plant_heal.update(this, store)
+	local b = this.bullet
+	local fm = this.force_motion
+	local target = store.entities[b.target_id]
+	local ps
 
--- 			return
--- 		end
+	local function move_step(dest)
+		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
+		local dist = V.len(dx, dy)
+		local nx, ny = V.mul(fm.max_v, V.normalize(dx, dy))
+		local stx, sty = V.sub(nx, ny, fm.v.x, fm.v.y)
 
--- 		if store.tick_ts - a.ts > a.cooldown then
--- 			local target, targets, pred_pos = U.find_foremost_enemy(store.entities, this.pos, 0, a.max_range, a.hit_time, a.vis_flags, a.vis_bans)
+		if dist <= 4 * fm.max_v * store.tick_length then
+			stx, sty = V.mul(fm.max_a, V.normalize(stx, sty))
+		end
 
--- 			if not target or not pred_pos then
--- 				-- block empty
--- 			else
--- 				a.ts = store.tick_ts
+		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step, stx, sty)))
+		fm.v.x, fm.v.y = V.trim(fm.max_v, V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y)))
+		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
+		fm.a.x, fm.a.y = 0, 0
 
--- 				S:queue(a.sound)
+		return dist <= fm.max_v * store.tick_length
+	end
 
--- 				local flip_x = pred_pos.x < this.pos.x
+	if b.particles_name then
+		ps = E:create_entity(b.particles_name)
+		ps.particle_system.emit = true
+		ps.particle_system.track_id = this.id
 
--- 				U.animation_start(this, a.animation, flip_x, store.tick_ts, false)
--- 				U.y_wait(store, a.hit_time)
+		queue_insert(store, ps)
+	end
 
--- 				local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
+	local iix, iiy = V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y)
+	local last_pos = V.vclone(this.pos)
 
--- 				if enemies and #enemies > 0 then
--- 					local e = E:create_entity(a.aura)
+	b.ts = store.tick_ts
 
--- 					e.pos.x, e.pos.y = this.pos.x, this.pos.y
--- 					e.owner = this
--- 					e.aura.source_id = this.id
+	while true do
+		target = store.entities[b.target_id]
 
--- 					queue_insert(store, e)
--- 				end
+		if target and target.health and not target.health.dead and band(target.vis.bans, F_RANGED) == 0 then
+			local hit_offset = V.v(0, 0)
 
--- 				U.y_animation_wait(this)
--- 			end
--- 		end
+			if not b.ignore_hit_offset then
+				hit_offset.x = target.unit.hit_offset.x
+				hit_offset.y = target.unit.hit_offset.y
+			end
 
--- 		coroutine.yield()
--- 	end
--- end
+			local d = math.max(math.abs(target.pos.x + hit_offset.x - b.to.x), math.abs(target.pos.y + hit_offset.y - b.to.y))
 
--- scripts.bullet_hero_dragon_arb_linirea_plant_heal = {}
+			if d > b.max_track_distance then
+				log.debug("BOLT MAX DISTANCE FAIL. (%s) %s / dist:%s target.pos:%s,%s b.to:%s,%s", this.id, this.template_name, d, target.pos.x, target.pos.y, b.to.x, b.to.y)
 
--- function scripts.bullet_hero_dragon_arb_linirea_plant_heal.update(this, store)
--- 	local b = this.bullet
--- 	local fm = this.force_motion
--- 	local target = store.entities[b.target_id]
--- 	local ps
+				target = nil
+				b.target_id = nil
+			else
+				b.to.x, b.to.y = target.pos.x + hit_offset.x, target.pos.y + hit_offset.y
+			end
+		end
 
--- 	local function move_step(dest)
--- 		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
--- 		local dist = V.len(dx, dy)
--- 		local nx, ny = V.mul(fm.max_v, V.normalize(dx, dy))
--- 		local stx, sty = V.sub(nx, ny, fm.v.x, fm.v.y)
+		if this.initial_impulse and store.tick_ts - b.ts < this.initial_impulse_duration then
+			local t = store.tick_ts - b.ts
 
--- 		if dist <= 4 * fm.max_v * store.tick_length then
--- 			stx, sty = V.mul(fm.max_a, V.normalize(stx, sty))
--- 		end
+			if this.initial_impulse_angle_abs then
+				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(this.initial_impulse_angle_abs, 1, 0))
+			else
+				local angle = this.initial_impulse_angle
 
--- 		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step, stx, sty)))
--- 		fm.v.x, fm.v.y = V.trim(fm.max_v, V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y)))
--- 		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
--- 		fm.a.x, fm.a.y = 0, 0
+				if iix < 0 then
+					angle = angle * -1
+				end
 
--- 		return dist <= fm.max_v * store.tick_length
--- 	end
+				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(angle, iix, iiy))
+			end
+		end
 
--- 	if b.particles_name then
--- 		ps = E:create_entity(b.particles_name)
--- 		ps.particle_system.emit = true
--- 		ps.particle_system.track_id = this.id
+		last_pos.x, last_pos.y = this.pos.x, this.pos.y
 
--- 		queue_insert(store, ps)
--- 	end
+		if move_step(b.to) then
+			break
+		end
 
--- 	local iix, iiy = V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y)
--- 	local last_pos = V.vclone(this.pos)
+		if b.align_with_trajectory then
+			this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
+		end
 
--- 	b.ts = store.tick_ts
+		coroutine.yield()
+	end
 
--- 	while true do
--- 		target = store.entities[b.target_id]
+	if target and not target.health.dead then
+		local d = SU.create_bullet_damage(b, target.id, this.id)
 
--- 		if target and target.health and not target.health.dead and band(target.vis.bans, F_RANGED) == 0 then
--- 			local hit_offset = V.v(0, 0)
+		queue_damage(store, d)
+	elseif b.damage_radius and b.damage_radius > 0 then
+		local targets = U.find_enemies_in_range(store.entities, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
 
--- 			if not b.ignore_hit_offset then
--- 				hit_offset.x = target.unit.hit_offset.x
--- 				hit_offset.y = target.unit.hit_offset.y
--- 			end
+		if targets then
+			for _, target in pairs(targets) do
+				local d = SU.create_bullet_damage(b, target.id, this.id)
 
--- 			local d = math.max(math.abs(target.pos.x + hit_offset.x - b.to.x), math.abs(target.pos.y + hit_offset.y - b.to.y))
+				queue_damage(store, d)
+			end
+		end
+	end
 
--- 			if d > b.max_track_distance then
--- 				log.debug("BOLT MAX DISTANCE FAIL. (%s) %s / dist:%s target.pos:%s,%s b.to:%s,%s", this.id, this.template_name, d, target.pos.x, target.pos.y, b.to.x, b.to.y)
+	this.render.sprites[1].hidden = true
 
--- 				target = nil
--- 				b.target_id = nil
--- 			else
--- 				b.to.x, b.to.y = target.pos.x + hit_offset.x, target.pos.y + hit_offset.y
--- 			end
--- 		end
+	if b.hit_fx then
+		local fx = E:create_entity(b.hit_fx)
 
--- 		if this.initial_impulse and store.tick_ts - b.ts < this.initial_impulse_duration then
--- 			local t = store.tick_ts - b.ts
+		fx.pos.x, fx.pos.y = b.to.x, b.to.y
+		fx.render.sprites[1].ts = store.tick_ts
 
--- 			if this.initial_impulse_angle_abs then
--- 				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(this.initial_impulse_angle_abs, 1, 0))
--- 			else
--- 				local angle = this.initial_impulse_angle
+		queue_insert(store, fx)
+	end
 
--- 				if iix < 0 then
--- 					angle = angle * -1
--- 				end
+	if b.hit_decal then
+		local decal = E:create_entity(b.hit_decal)
 
--- 				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(angle, iix, iiy))
--- 			end
--- 		end
+		decal.pos = V.vclone(b.to)
+		decal.render.sprites[1].ts = store.tick_ts
 
--- 		last_pos.x, last_pos.y = this.pos.x, this.pos.y
+		queue_insert(store, decal)
+	end
 
--- 		if move_step(b.to) then
--- 			break
--- 		end
+	if b.mod and target and not target.health.dead then
+		local mod = E:create_entity(b.mod)
 
--- 		if b.align_with_trajectory then
--- 			this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
--- 		end
+		mod.modifier.target_id = target.id
+		mod.modifier.source_id = this.id
 
--- 		coroutine.yield()
--- 	end
+		queue_insert(store, mod)
+	end
 
--- 	if target and not target.health.dead then
--- 		local d = SU.create_bullet_damage(b, target.id, this.id)
+	if ps and ps.particle_system.emit then
+		ps.particle_system.emit = false
 
--- 		queue_damage(store, d)
--- 	elseif b.damage_radius and b.damage_radius > 0 then
--- 		local targets = U.find_enemies_in_range(store.entities, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
+		U.y_wait(store, ps.particle_system.particle_lifetime[2])
+	end
 
--- 		if targets then
--- 			for _, target in pairs(targets) do
--- 				local d = SU.create_bullet_damage(b, target.id, this.id)
+	queue_remove(store, this)
+end
 
--- 				queue_damage(store, d)
--- 			end
--- 		end
--- 	end
+scripts.mod_hero_dragon_arb_plant_linirea_heal = {}
 
--- 	this.render.sprites[1].hidden = true
+function scripts.mod_hero_dragon_arb_plant_linirea_heal.update(this, store, script)
+	local m = this.modifier
+	local hps = this.hps
+	local duration = m.duration
 
--- 	if b.hit_fx then
--- 		local fx = E:create_entity(b.hit_fx)
+	if m.duration_inc then
+		duration = duration + m.level * m.duration_inc
+	end
 
--- 		fx.pos.x, fx.pos.y = b.to.x, b.to.y
--- 		fx.render.sprites[1].ts = store.tick_ts
+	local heal_min = hps.heal_min
+	local heal_max = hps.heal_max
 
--- 		queue_insert(store, fx)
--- 	end
+	if hps.heal_min_inc and hps.heal_max_inc then
+		heal_min = hps.heal_min + m.level * hps.heal_min_inc
+		heal_max = hps.heal_max + m.level * hps.heal_max_inc
+	end
 
--- 	if b.hit_decal then
--- 		local decal = E:create_entity(b.hit_decal)
+	if hps.heal_inc then
+		heal_min = hps.heal_min + m.level * hps.heal_inc
+		heal_max = hps.heal_max + m.level * hps.heal_inc
+	end
 
--- 		decal.pos = V.vclone(b.to)
--- 		decal.render.sprites[1].ts = store.tick_ts
+	local target = store.entities[m.target_id]
 
--- 		queue_insert(store, decal)
--- 	end
+	if not target then
+		queue_remove(store, this)
 
--- 	if b.mod and target and not target.health.dead then
--- 		local mod = E:create_entity(b.mod)
+		return
+	end
 
--- 		mod.modifier.target_id = target.id
--- 		mod.modifier.source_id = this.id
+	if target.unit and target.unit.size == UNIT_SIZE_LARGE then
+		for _, v in pairs(this.render.sprites) do
+			v.scale = v(1.4, 1.4)
+		end
+	end
 
--- 		queue_insert(store, mod)
--- 	end
+	if target.vis and band(target.vis.flags, F_FLYING) ~= 0 then
+		U.sprites_hide(this, 1, 2, true)
+	end
 
--- 	if ps and ps.particle_system.emit then
--- 		ps.particle_system.emit = false
+	if target.render and target.render.sprites[1].z == Z_FLYING_HEROES then
+		this.render.sprites[3].z = Z_FLYING_HEROES + 1
+	end
 
--- 		U.y_wait(store, ps.particle_system.particle_lifetime[2])
--- 	end
+	this.pos = target.pos
 
--- 	queue_remove(store, this)
--- end
+	while true do
+		target = store.entities[m.target_id]
 
--- scripts.mod_hero_dragon_arb_plant_linirea_heal = {}
+		if not target or target.health.dead or duration < store.tick_ts - m.ts then
+			queue_remove(store, this)
 
--- function scripts.mod_hero_dragon_arb_plant_linirea_heal.update(this, store, script)
--- 	local m = this.modifier
--- 	local hps = this.hps
--- 	local duration = m.duration
+			return
+		end
 
--- 	if m.duration_inc then
--- 		duration = duration + m.level * m.duration_inc
--- 	end
+		if this.render and m.use_mod_offset and target.unit.mod_offset then
+			for i = 1, #this.render.sprites do
+				local s = this.render.sprites[i]
 
--- 	local heal_min = hps.heal_min
--- 	local heal_max = hps.heal_max
+				if not s.exclude_mod_offset then
+					s.offset.x, s.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
+				end
+			end
+		end
 
--- 	if hps.heal_min_inc and hps.heal_max_inc then
--- 		heal_min = hps.heal_min + m.level * hps.heal_min_inc
--- 		heal_max = hps.heal_max + m.level * hps.heal_max_inc
--- 	end
+		if hps.heal_every and store.tick_ts - hps.ts >= hps.heal_every then
+			hps.ts = store.tick_ts
 
--- 	if hps.heal_inc then
--- 		heal_min = hps.heal_min + m.level * hps.heal_inc
--- 		heal_max = hps.heal_max + m.level * hps.heal_inc
--- 	end
+			local hp_start = target.health.hp
 
--- 	local target = store.entities[m.target_id]
+			target.health.hp = target.health.hp + math.random(heal_min, heal_max)
+			target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp)
 
--- 	if not target then
--- 		queue_remove(store, this)
+			local heal_amount = target.health.hp - hp_start
 
--- 		return
--- 	end
+			target.health.hp_healed = (target.health.hp_healed or 0) + heal_amount
 
--- 	if target.unit and target.unit.size == UNIT_SIZE_LARGE then
--- 		for _, v in pairs(this.render.sprites) do
--- 			v.scale = v(1.4, 1.4)
--- 		end
--- 	end
+			signal.emit("entity-healed", this, target, heal_amount)
 
--- 	if target.vis and band(target.vis.flags, F_FLYING) ~= 0 then
--- 		U.sprites_hide(this, 1, 2, true)
--- 	end
+			if hps.fx then
+				local fx = E:create_entity(hps.fx)
 
--- 	if target.render and target.render.sprites[1].z == Z_FLYING_HEROES then
--- 		this.render.sprites[3].z = Z_FLYING_HEROES + 1
--- 	end
+				fx.pos = V.vclone(this.pos)
+				fx.render.sprites[1].ts = store.tick_ts
+				fx.render.sprites[1].runs = 0
 
--- 	this.pos = target.pos
+				queue_insert(store, fx)
+			end
+		end
 
--- 	while true do
--- 		target = store.entities[m.target_id]
+		coroutine.yield()
+	end
+end
 
--- 		if not target or target.health.dead or duration < store.tick_ts - m.ts then
--- 			queue_remove(store, this)
+scripts.mod_hero_dragon_arb_ultimate_paragons_polymorph = {}
 
--- 			return
--- 		end
+function scripts.mod_hero_dragon_arb_ultimate_paragons_polymorph.insert(this, store)
+	local target = store.entities[this.modifier.target_id]
 
--- 		if this.render and m.use_mod_offset and target.unit.mod_offset then
--- 			for i = 1, #this.render.sprites do
--- 				local s = this.render.sprites[i]
+	if target then
+		this.target_ref = target
 
--- 				if not s.exclude_mod_offset then
--- 					s.offset.x, s.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
--- 				end
--- 			end
--- 		end
+		for _, s in ipairs(target.render.sprites) do
+			s.hidden = true
+		end
 
--- 		if hps.heal_every and store.tick_ts - hps.ts >= hps.heal_every then
--- 			hps.ts = store.tick_ts
+		SU.remove_modifiers(store, target)
+		SU.remove_auras(store, target)
+		queue_remove(store, target)
+		U.unblock_target(store, target)
 
--- 			local hp_start = target.health.hp
+		if target.ui then
+			target.ui.can_click = false
+		end
 
--- 			target.health.hp = target.health.hp + math.random(heal_min, heal_max)
--- 			target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp)
+		target.main_script.co = nil
+		target.main_script.runs = 0
 
--- 			local heal_amount = target.health.hp - hp_start
+		if target.count_group then
+			target.count_group.in_limbo = true
+		end
 
--- 			target.health.hp_healed = (target.health.hp_healed or 0) + heal_amount
+		local polymorph_template
 
--- 			signal.emit("entity-healed", this, target, heal_amount)
+		for k, v in pairs(this.entity_t) do
+			if target.template_name == v[1] then
+				polymorph_template = v[2]
 
--- 			if hps.fx then
--- 				local fx = E:create_entity(hps.fx)
+				break
+			end
+		end
 
--- 				fx.pos = V.vclone(this.pos)
--- 				fx.render.sprites[1].ts = store.tick_ts
--- 				fx.render.sprites[1].runs = 0
+		local entity_poly = E:create_entity(polymorph_template)
 
--- 				queue_insert(store, fx)
--- 			end
--- 		end
+		entity_poly.pos = target.pos
+		entity_poly.nav_path = target.nav_path
 
--- 		coroutine.yield()
--- 	end
--- end
+		queue_insert(store, entity_poly)
 
--- scripts.mod_hero_dragon_arb_ultimate_paragons_polymorph = {}
+		entity_poly.doing_spawn_anim_ts = target.doing_spawn_anim_ts
+		entity_poly.spawn_anim_ts = target.spawn_anim_ts
 
--- function scripts.mod_hero_dragon_arb_ultimate_paragons_polymorph.insert(this, store)
--- 	local target = store.entities[this.modifier.target_id]
+		return true
+	end
 
--- 	if target then
--- 		this.target_ref = target
+	return false
+end
 
--- 		for _, s in ipairs(target.render.sprites) do
--- 			s.hidden = true
--- 		end
+scripts.decal_hero_dragon_arb_passive_plant = {}
 
--- 		SU.remove_modifiers(store, target)
--- 		SU.remove_auras(store, target)
--- 		queue_remove(store, target)
--- 		U.unblock_target(store, target)
+function scripts.decal_hero_dragon_arb_passive_plant.update(this, store)
+	if this.delay then
+		U.y_wait(store, this.delay)
+	end
 
--- 		if target.ui then
--- 			target.ui.can_click = false
--- 		end
+	local start_ts = store.tick_ts
 
--- 		target.main_script.co = nil
--- 		target.main_script.runs = 0
+	this.render.sprites[1].hidden = nil
 
--- 		if target.count_group then
--- 			target.count_group.in_limbo = true
--- 		end
+	U.y_animation_play(this, "start", nil, store.tick_ts)
 
--- 		local polymorph_template
+	while not this.destroy_plant do
+		if U.find_first_target(store.entities, this.pos, 0, 25, this.vis_flags, this.vis_bans) then
+			U.y_animation_play(this, "loop", nil, store.tick_ts, 1)
+		end
 
--- 		for k, v in pairs(this.entity_t) do
--- 			if target.template_name == v[1] then
--- 				polymorph_template = v[2]
+		coroutine.yield()
+	end
 
--- 				break
--- 			end
--- 		end
+	U.y_wait(store, this.destroy_plant)
+	U.y_animation_play(this, "end", nil, store.tick_ts)
+	queue_remove(store, this)
+end
 
--- 		local entity_poly = E:create_entity(polymorph_template)
+scripts.controller_hero_dragon_arb_passive = {}
 
--- 		entity_poly.pos = target.pos
--- 		entity_poly.nav_path = target.nav_path
+function scripts.controller_hero_dragon_arb_passive.update(this, store)
+	local last_expansion_ts = store.tick_ts - this.zone_expansion_cooldown
+	local available_paths = {}
 
--- 		queue_insert(store, entity_poly)
+	for k, v in pairs(P.paths) do
+		table.insert(available_paths, k)
+	end
 
--- 		entity_poly.doing_spawn_anim_ts = target.doing_spawn_anim_ts
--- 		entity_poly.spawn_anim_ts = target.spawn_anim_ts
+	if store.level.ignore_walk_backwards_paths then
+		available_paths = table.filter(available_paths, function(k, v)
+			return not table.contains(store.level.ignore_walk_backwards_paths, v) and P:is_path_active(v)
+		end)
+	end
 
--- 		return true
--- 	end
+	this.root_zones_dequeue = {}
+	this.root_zones_queue = {}
+	this.root_zones = {}
 
--- 	return false
--- end
+	local zone_last_id = 1
 
--- scripts.decal_hero_dragon_arb_passive_plant = {}
+	local function insert_root_zone(pos)
+		local original_pos = V.vclone(pos)
+		local nearest_nodes = P:nearest_nodes(pos.x, pos.y, nil, nil, true)
 
--- function scripts.decal_hero_dragon_arb_passive_plant.update(this, store)
--- 	if this.delay then
--- 		U.y_wait(store, this.delay)
--- 	end
+		if not nearest_nodes or #nearest_nodes < 1 then
+			return
+		end
 
--- 	local start_ts = store.tick_ts
+		local pi, spi, ni = unpack(nearest_nodes[1])
 
--- 	this.render.sprites[1].hidden = nil
+		if band(GR:cell_type(pos.x, pos.y), bor(TERRAIN_WATER, TERRAIN_CLIFF, TERRAIN_NOWALK)) ~= 0 then
+			return
+		end
 
--- 	U.y_animation_play(this, "start", nil, store.tick_ts)
+		local function is_over_other_zone()
+			for _, v in pairs(this.root_zones) do
+				if V.dist(v.x, v.y, pos.x, pos.y) <= this.zones_radius then
+					return true
+				end
+			end
 
--- 	while not this.destroy_plant do
--- 		if U.find_first_target(store.entities, this.pos, 0, 25, this.vis_flags, this.vis_bans) then
--- 			U.y_animation_play(this, "loop", nil, store.tick_ts, 1)
--- 		end
+			return false
+		end
 
--- 		coroutine.yield()
--- 	end
+		if is_over_other_zone() then
+			local nodes_offset_plus = 0
+			local nodes_offset_minus = 0
+			local can_expand_plus = true
+			local can_expand_minus = true
+			local nodes_offset_inc = 3
+			local found_new_pos = false
 
--- 	U.y_wait(store, this.destroy_plant)
--- 	U.y_animation_play(this, "end", nil, store.tick_ts)
--- 	queue_remove(store, this)
--- end
+			while not found_new_pos and (can_expand_plus or can_expand_minus) do
+				if can_expand_minus then
+					nodes_offset_minus = nodes_offset_minus + nodes_offset_inc
 
--- scripts.controller_hero_dragon_arb_passive = {}
+					if P:is_node_valid(pi, ni - nodes_offset_minus) then
+						pos = P:node_pos(pi, spi, ni - nodes_offset_minus)
 
--- function scripts.controller_hero_dragon_arb_passive.update(this, store)
--- 	local last_expansion_ts = store.tick_ts - this.zone_expansion_cooldown
--- 	local available_paths = {}
+						if band(GR:cell_type(pos.x, pos.y), bor(TERRAIN_WATER, TERRAIN_CLIFF, TERRAIN_NOWALK)) == 0 then
+							if not is_over_other_zone() then
+								found_new_pos = true
+								can_expand_plus = false
+								ni = ni - nodes_offset_minus
+							end
+						else
+							can_expand_minus = false
+						end
+					else
+						can_expand_minus = false
+					end
+				end
 
--- 	for k, v in pairs(P.paths) do
--- 		table.insert(available_paths, k)
--- 	end
+				if can_expand_plus then
+					nodes_offset_plus = nodes_offset_plus + nodes_offset_inc
 
--- 	if store.level.ignore_walk_backwards_paths then
--- 		available_paths = table.filter(available_paths, function(k, v)
--- 			return not table.contains(store.level.ignore_walk_backwards_paths, v) and P:is_path_active(v)
--- 		end)
--- 	end
+					if P:is_node_valid(pi, ni + nodes_offset_plus) then
+						pos = P:node_pos(pi, spi, ni + nodes_offset_plus)
 
--- 	this.root_zones_dequeue = {}
--- 	this.root_zones_queue = {}
--- 	this.root_zones = {}
+						if band(GR:cell_type(pos.x, pos.y), bor(TERRAIN_WATER, TERRAIN_CLIFF, TERRAIN_NOWALK)) == 0 then
+							if not is_over_other_zone() then
+								found_new_pos = true
+								can_expand_minus = false
+								ni = ni + nodes_offset_plus
+							end
+						else
+							can_expand_plus = false
+						end
+					else
+						can_expand_plus = false
+					end
+				end
+			end
 
--- 	local zone_last_id = 1
+			if not found_new_pos then
+				pos = V.vclone(original_pos)
+			end
+		end
 
--- 	local function insert_root_zone(pos)
--- 		local original_pos = V.vclone(pos)
--- 		local nearest_nodes = P:nearest_nodes(pos.x, pos.y, nil, nil, true)
+		local zone = {}
 
--- 		if not nearest_nodes or #nearest_nodes < 1 then
--- 			return
--- 		end
+		zone.x = pos.x
+		zone.y = pos.y
+		zone.ts = store.tick_ts + this.zones_duration
+		zone.plant_decal_ids = {}
+		zone.aura_entity = nil
+		zone.zone_id = zone_last_id + 1
+		zone_last_id = zone.zone_id
 
--- 		local pi, spi, ni = unpack(nearest_nodes[1])
+		local aura = E:create_entity(this.aura_slow)
 
--- 		if band(GR:cell_type(pos.x, pos.y), bor(TERRAIN_WATER, TERRAIN_CLIFF, TERRAIN_NOWALK)) ~= 0 then
--- 			return
--- 		end
+		aura.aura.source_id = this.id
+		aura.aura.ts = store.tick_ts
+		aura.pos = {
+			x = zone.x,
+			y = zone.y
+		}
 
--- 		local function is_over_other_zone()
--- 			for _, v in pairs(this.root_zones) do
--- 				if V.dist(v.x, v.y, pos.x, pos.y) <= this.zones_radius then
--- 					return true
--- 				end
--- 			end
+		queue_insert(store, aura)
 
--- 			return false
--- 		end
+		zone.aura_entity = aura
 
--- 		if is_over_other_zone() then
--- 			local nodes_offset_plus = 0
--- 			local nodes_offset_minus = 0
--- 			local can_expand_plus = true
--- 			local can_expand_minus = true
--- 			local nodes_offset_inc = 3
--- 			local found_new_pos = false
+		local nodes_count = this.zones_radius / P.average_node_dist
+		local ni_inc = 2
 
--- 			while not found_new_pos and (can_expand_plus or can_expand_minus) do
--- 				if can_expand_minus then
--- 					nodes_offset_minus = nodes_offset_minus + nodes_offset_inc
+		for i = 1, nodes_count do
+			local spi = km.zmod(i, 3)
 
--- 					if P:is_node_valid(pi, ni - nodes_offset_minus) then
--- 						pos = P:node_pos(pi, spi, ni - nodes_offset_minus)
+			if P:is_node_valid(pi, ni) then
+				local root_pos = P:node_pos(pi, spi, ni)
+				local in_another_zone = false
 
--- 						if band(GR:cell_type(pos.x, pos.y), bor(TERRAIN_WATER, TERRAIN_CLIFF, TERRAIN_NOWALK)) == 0 then
--- 							if not is_over_other_zone() then
--- 								found_new_pos = true
--- 								can_expand_plus = false
--- 								ni = ni - nodes_offset_minus
--- 							end
--- 						else
--- 							can_expand_minus = false
--- 						end
--- 					else
--- 						can_expand_minus = false
--- 					end
--- 				end
+				for _, v in pairs(this.root_zones) do
+					if V.dist(v.x, v.y, root_pos.x, root_pos.y) <= this.zones_radius then
+						in_another_zone = true
 
--- 				if can_expand_plus then
--- 					nodes_offset_plus = nodes_offset_plus + nodes_offset_inc
+						break
+					end
 
--- 					if P:is_node_valid(pi, ni + nodes_offset_plus) then
--- 						pos = P:node_pos(pi, spi, ni + nodes_offset_plus)
+					if v.plant_decals_ids then
+						for _, other_zone_root_id in pairs(v.plant_decals_ids) do
+							local o_root = store.entities[other_zone_root_id]
 
--- 						if band(GR:cell_type(pos.x, pos.y), bor(TERRAIN_WATER, TERRAIN_CLIFF, TERRAIN_NOWALK)) == 0 then
--- 							if not is_over_other_zone() then
--- 								found_new_pos = true
--- 								can_expand_minus = false
--- 								ni = ni + nodes_offset_plus
--- 							end
--- 						else
--- 							can_expand_plus = false
--- 						end
--- 					else
--- 						can_expand_plus = false
--- 					end
--- 				end
--- 			end
+							if o_root and V.dist(o_root.pos.x, o_root.pos.y, root_pos.x, root_pos.y) < 20 then
+								in_another_zone = true
 
--- 			if not found_new_pos then
--- 				pos = V.vclone(original_pos)
--- 			end
--- 		end
+								break
+							end
+						end
 
--- 		local zone = {}
+						if in_another_zone then
+							break
+						end
+					end
+				end
 
--- 		zone.x = pos.x
--- 		zone.y = pos.y
--- 		zone.ts = store.tick_ts + this.zones_duration
--- 		zone.plant_decal_ids = {}
--- 		zone.aura_entity = nil
--- 		zone.zone_id = zone_last_id + 1
--- 		zone_last_id = zone.zone_id
+				if not in_another_zone then
+					root_pos.x, root_pos.y = root_pos.x + math.random(0, 8), root_pos.y + math.random(0, 8)
 
--- 		local aura = E:create_entity(this.aura_slow)
+					local root = E:create_entity(this.plant_decal .. "_" .. math.random(1, 2, 3))
 
--- 		aura.aura.source_id = this.id
--- 		aura.aura.ts = store.tick_ts
--- 		aura.pos = {
--- 			x = zone.x,
--- 			y = zone.y
--- 		}
+					root.render.sprites[1].flip_x = math.random() < 0.5
+					root.delay = U.frandom(0, 0.3)
+					root.pos = root_pos
+					root.path_i = pi
+					root.node_i = ni
+					root.s_path_i = spi
 
--- 		queue_insert(store, aura)
+					queue_insert(store, root)
+					table.insert(zone.plant_decal_ids, root.id)
+				end
+			end
 
--- 		zone.aura_entity = aura
+			if i % 3 == 0 then
+				ni = ni - ni_inc - math.random(2, 3)
+			end
+		end
 
--- 		local nodes_count = this.zones_radius / P.average_node_dist
--- 		local ni_inc = 2
+		table.insert(this.root_zones, zone)
+	end
 
--- 		for i = 1, nodes_count do
--- 			local spi = km.zmod(i, 3)
+	local function process_new_zones_queue()
+		if store.tick_ts >= last_expansion_ts + this.zone_expansion_cooldown and #this.root_zones_queue > 0 then
+			insert_root_zone(this.root_zones_queue[1])
 
--- 			if P:is_node_valid(pi, ni) then
--- 				local root_pos = P:node_pos(pi, spi, ni)
--- 				local in_another_zone = false
+			this.root_zones_queue = {}
+			last_expansion_ts = store.tick_ts
+		end
+	end
 
--- 				for _, v in pairs(this.root_zones) do
--- 					if V.dist(v.x, v.y, root_pos.x, root_pos.y) <= this.zones_radius then
--- 						in_another_zone = true
+	local function process_zones()
+		for i = #this.root_zones, 1, -1 do
+			local zone = this.root_zones[i]
+			local is_in_dequeue = false
 
--- 						break
--- 					end
+			if table.contains(this.root_zones_dequeue, zone.zone_id) then
+				is_in_dequeue = true
 
--- 					if v.plant_decals_ids then
--- 						for _, other_zone_root_id in pairs(v.plant_decals_ids) do
--- 							local o_root = store.entities[other_zone_root_id]
+				table.removeobject(this.root_zones_dequeue, zone.zone_id)
+			end
 
--- 							if o_root and V.dist(o_root.pos.x, o_root.pos.y, root_pos.x, root_pos.y) < 20 then
--- 								in_another_zone = true
+			if store.tick_ts >= zone.ts or is_in_dequeue then
+				for _, v in pairs(zone.plant_decal_ids) do
+					local plant_decal = store.entities[v]
+					local in_range_of_another_zone = false
 
--- 								break
--- 							end
--- 						end
+					for i2 = 1, #this.root_zones do
+						if i2 ~= i then
+							local zone2 = this.root_zones[i2]
 
--- 						if in_another_zone then
--- 							break
--- 						end
--- 					end
--- 				end
+							if V.dist(plant_decal.pos.x, plant_decal.pos.y, zone2.x, zone2.y) <= this.zones_radius then
+								in_range_of_another_zone = true
 
--- 				if not in_another_zone then
--- 					root_pos.x, root_pos.y = root_pos.x + math.random(0, 8), root_pos.y + math.random(0, 8)
+								table.insert(zone2.plant_decal_ids, plant_decal.id)
 
--- 					local root = E:create_entity(this.plant_decal .. "_" .. math.random(1, 2, 3))
+								break
+							end
+						end
+					end
 
--- 					root.render.sprites[1].flip_x = math.random() < 0.5
--- 					root.delay = U.frandom(0, 0.3)
--- 					root.pos = root_pos
--- 					root.path_i = pi
--- 					root.node_i = ni
--- 					root.s_path_i = spi
+					if not in_range_of_another_zone then
+						plant_decal.destroy_plant = math.random() * 0.5
+					end
+				end
 
--- 					queue_insert(store, root)
--- 					table.insert(zone.plant_decal_ids, root.id)
--- 				end
--- 			end
+				queue_remove(store, zone.aura_entity)
+				table.remove(this.root_zones, i)
+			end
+		end
+	end
 
--- 			if i % 3 == 0 then
--- 				ni = ni - ni_inc - math.random(2, 3)
--- 			end
--- 		end
+	while true do
+		process_new_zones_queue()
+		process_zones()
+		coroutine.yield()
+	end
+end
 
--- 		table.insert(this.root_zones, zone)
--- 	end
+scripts.mod_hero_dragon_arb_passive_mark = {}
 
--- 	local function process_new_zones_queue()
--- 		if store.tick_ts >= last_expansion_ts + this.zone_expansion_cooldown and #this.root_zones_queue > 0 then
--- 			insert_root_zone(this.root_zones_queue[1])
+function scripts.mod_hero_dragon_arb_passive_mark.insert(this, store, script)
+	local target = store.entities[this.modifier.target_id]
 
--- 			this.root_zones_queue = {}
--- 			last_expansion_ts = store.tick_ts
--- 		end
--- 	end
+	if not target then
+		return false
+	end
 
--- 	local function process_zones()
--- 		for i = #this.root_zones, 1, -1 do
--- 			local zone = this.root_zones[i]
--- 			local is_in_dequeue = false
+	if band(this.modifier.vis_flags, target.vis.bans) ~= 0 or band(this.modifier.vis_bans, target.vis.flags) ~= 0 then
+		log.paranoid("mod %s cannot be applied to entity %s:%s because of vis flags/bans", this.template_name, target.id, target.template_name)
 
--- 			if table.contains(this.root_zones_dequeue, zone.zone_id) then
--- 				is_in_dequeue = true
+		return false
+	end
 
--- 				table.removeobject(this.root_zones_dequeue, zone.zone_id)
--- 			end
+	if target.health.dead then
+		table.insert(store.entities[this.cached_controller_dragon_arb_passive_id].root_zones_queue, {
+			x = target.pos.x,
+			y = target.pos.y
+		})
 
--- 			if store.tick_ts >= zone.ts or is_in_dequeue then
--- 				for _, v in pairs(zone.plant_decal_ids) do
--- 					local plant_decal = store.entities[v]
--- 					local in_range_of_another_zone = false
+		return false
+	end
 
--- 					for i2 = 1, #this.root_zones do
--- 						if i2 ~= i then
--- 							local zone2 = this.root_zones[i2]
+	this.modifier.ts = store.tick_ts
 
--- 							if V.dist(plant_decal.pos.x, plant_decal.pos.y, zone2.x, zone2.y) <= this.zones_radius then
--- 								in_range_of_another_zone = true
+	signal.emit("mod-applied", this, target)
 
--- 								table.insert(zone2.plant_decal_ids, plant_decal.id)
+	return true
+end
 
--- 								break
--- 							end
--- 						end
--- 					end
+function scripts.mod_hero_dragon_arb_passive_mark.remove(this, store)
+	local target = store.entities[this.modifier.target_id]
 
--- 					if not in_range_of_another_zone then
--- 						plant_decal.destroy_plant = math.random() * 0.5
--- 					end
--- 				end
+	if not target or not target.health.dead then
+		return true
+	end
 
--- 				queue_remove(store, zone.aura_entity)
--- 				table.remove(this.root_zones, i)
--- 			end
--- 		end
--- 	end
+	table.insert(store.entities[this.cached_controller_dragon_arb_passive_id].root_zones_queue, {
+		x = target.pos.x,
+		y = target.pos.y
+	})
 
--- 	while true do
--- 		process_new_zones_queue()
--- 		process_zones()
--- 		coroutine.yield()
--- 	end
--- end
-
--- scripts.mod_hero_dragon_arb_passive_mark = {}
-
--- function scripts.mod_hero_dragon_arb_passive_mark.insert(this, store, script)
--- 	local target = store.entities[this.modifier.target_id]
-
--- 	if not target then
--- 		return false
--- 	end
-
--- 	if band(this.modifier.vis_flags, target.vis.bans) ~= 0 or band(this.modifier.vis_bans, target.vis.flags) ~= 0 then
--- 		log.paranoid("mod %s cannot be applied to entity %s:%s because of vis flags/bans", this.template_name, target.id, target.template_name)
-
--- 		return false
--- 	end
-
--- 	if target.health.dead then
--- 		table.insert(store.entities[this.cached_controller_dragon_arb_passive_id].root_zones_queue, {
--- 			x = target.pos.x,
--- 			y = target.pos.y
--- 		})
-
--- 		return false
--- 	end
-
--- 	this.modifier.ts = store.tick_ts
-
--- 	signal.emit("mod-applied", this, target)
-
--- 	return true
--- end
-
--- function scripts.mod_hero_dragon_arb_passive_mark.remove(this, store)
--- 	local target = store.entities[this.modifier.target_id]
-
--- 	if not target or not target.health.dead then
--- 		return true
--- 	end
-
--- 	table.insert(store.entities[this.cached_controller_dragon_arb_passive_id].root_zones_queue, {
--- 		x = target.pos.x,
--- 		y = target.pos.y
--- 	})
-
--- 	return true
--- end
+	return true
+end
 
 return scripts
