@@ -1037,7 +1037,6 @@ bullet.target_id = nil
 bullet.track_damage = nil
 bullet.to = E:clone_c("pos")
 bullet.turn_speed = nil
-bullet.use_unit_damage_factor = nil
 bullet.vis_bans = 0
 bullet.vis_flags = 0
 bullet.xp_gain_factor = nil

@@ -2698,8 +2698,7 @@ scripts.arrow_endless_multishot = {}
 
 function scripts.arrow_endless_multishot.insert(this, store)
 	if this._endless_multishot > 0 then
-		local targets = U.find_enemies_in_range(store, this.bullet.to, 0, 100, this.bullet.vis_flags, this.bullet.vis_bans)
-
+		local targets = U.find_enemies_in_range_filter_off(this.bullet.to, 100, this.bullet.vis_flags, this.bullet.vis_bans)
 		if targets then
 			for i = 1, this._endless_multishot do
 				local target = targets[km.zmod(i, #targets)]
@@ -3189,7 +3188,7 @@ function scripts.missile.update(this, store)
 			target._missile_count = target._missile_count - 1
 		end
 
-		local enemies = U.find_enemies_in_range(store, origin, 0, b.damage_radius, b.damage_flags, b.damage_bans)
+		local enemies = U.find_enemies_in_range_filter_off(origin, b.damage_radius, b.damage_flags, b.damage_bans)
 
 		if enemies then
 			local dmin, dmax = b.damage_min, b.damage_max
@@ -3956,7 +3955,7 @@ function scripts.bolt_blast.update(this, store)
 	U.animation_start(this, "hit", nil, store.tick_ts, 1)
 
 	local d_value = U.frandom(dmin, dmax)
-	local enemies = U.find_enemies_in_range(store, explode_pos, 0, dradius, b.damage_flags, b.damage_bans)
+	local enemies = U.find_enemies_in_range_filter_off(explode_pos, dradius, b.damage_flags, b.damage_bans)
 
 	if enemies then
 		for _, enemy in pairs(enemies) do
@@ -4458,7 +4457,7 @@ function scripts.fireball.update(this, store)
 		hit_center.y = hit_center.y - target.unit.hit_offset.y
 	end
 
-	local targets = U.find_enemies_in_range(store, hit_center, 0, b.damage_radius, b.vis_flags, b.vis_bans)
+	local targets = U.find_enemies_in_range_filter_off(hit_center, b.damage_radius, b.vis_flags, b.vis_bans)
 
 	if targets then
 		for _, e in pairs(targets) do
@@ -4745,7 +4744,7 @@ function scripts.aura_apply_mod.update(this, store)
 					return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= v.id)
 				end)
 			elseif band(this.aura.vis_bans, F_FRIEND) ~= 0 then
-				targets = U.find_enemies_in_range(store, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, function(e)
+				targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, function(e)
 					return (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, e.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, e.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= e.id)
 				end) or {}
 			else
@@ -4841,7 +4840,7 @@ function scripts.aura_apply_damage.update(this, store)
 					return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name))
 				end)
 			elseif band(this.aura.vis_bans, F_FRIEND) ~= 0 then
-				targets = U.find_enemies_in_range(store, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, function(e)
+				targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, function(e)
 					return (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, e.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, e.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= e.id)
 				end) or {}
 			else
@@ -7984,7 +7983,6 @@ function scripts.power_fireball.update(this, store)
 
 	queue_insert(store, shadow)
 
-	-- local shadow_tracks = b.from.x ~= b.to.x
 	b.speed.x = 0
 	b.speed.y = -13 * FPS
 	this.render.sprites[1].r = V.angleTo(0, -1)
@@ -7992,21 +7990,15 @@ function scripts.power_fireball.update(this, store)
 	local dist2 = (mspeed * store.tick_length) ^ 2
 
 	while V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) > dist2 do
-		-- mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
-		-- mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
-		-- b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
-		-- this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
 		this.pos.y = this.pos.y + b.speed.y * store.tick_length
 
-		-- if shadow_tracks then
-		-- end
 		coroutine.yield()
 	end
 
 	this.pos.y = b.to.y
 	particle.particle_system.source_lifetime = 0
 
-	local enemies = U.find_enemies_in_range(store, b.to, 0, b.damage_radius, b.damage_flags, b.damage_bans)
+	local enemies = U.find_enemies_in_range_filter_off(b.to, b.damage_radius, b.damage_flags, b.damage_bans)
 
 	if enemies then
 		local damage_value = b.damage_factor * math.random(b.damage_min, b.damage_max)
@@ -9186,8 +9178,7 @@ function scripts.bolt_force_motion_kr5.update(this, store)
 			end
 		end
 	elseif b.damage_radius and b.damage_radius > 0 then
-		local targets = U.find_enemies_in_range(store.entities, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
-
+		local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
 		if targets then
 			for _, target in pairs(targets) do
 				local d = SU.create_bullet_damage_without_pops(b, target.id, this.id)

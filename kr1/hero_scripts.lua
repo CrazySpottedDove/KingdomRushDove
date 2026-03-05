@@ -29072,6 +29072,7 @@ function scripts.hero_vesper.level_up(this, store, initial)
 		local sl = s.level
 		a.disabled = nil
 		a.cooldown = s.cooldown[sl]
+		a.level = sl
 
 		local b = E:get_template(a.bullet)
 
@@ -29285,6 +29286,8 @@ function scripts.hero_vesper.update(this, store)
 
 					SU.show_modifiers(store, this, true)
 					SU.show_auras(store, this, true)
+					ricochet_attack.ts = -ricochet_attack.cooldown
+					this.ranged.attacks[3].ts = -this.ranged.attacks[3].cooldown
 
 					local targets = U.find_enemies_in_range(store.entities, enemy_pos, 0, 100, this.vis.flags, bans)
 

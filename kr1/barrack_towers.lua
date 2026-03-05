@@ -3235,7 +3235,6 @@ tt.bullet.max_speed = 300
 tt.bullet.align_with_trajectory = true
 tt.bullet.mods = {"mod_tower_ghost_soul_slow", "mod_tower_ghost_soul_damage_factor"}
 tt.bullet.hit_fx = "fx_soul_soldier_tower_ghost"
-tt.bullet.use_unit_damage_factor = true
 tt.sound_events.hit = "TowerGhostSoulAttackImpact"
 tt.bullet.damage_type = b.damage_type
 tt.bullet.particles_name = "ps_soul_soldier_tower_ghost"
