@@ -1920,7 +1920,7 @@ local heroes = {
 		}
 	},
 	hero_dragon_arb = {
-		dead_lifetime = 30,
+		dead_lifetime = 15,
 		speed = 130,
 		regen_cooldown = 1,
 		stats = {
@@ -1945,8 +1945,8 @@ local heroes = {
 			cooldown = 1.75,
 			min_range = 10,
 			damage_type = DAMAGE_MAGICAL,
-			damage_max = {15, 19, 23, 27, 32, 36, 40, 44, 49, 53},
-			damage_min = {10, 13, 15, 18, 21, 24, 27, 29, 32, 35}
+			damage_max = {16, 20, 25, 29, 35, 39, 44, 48, 53, 58},
+			damage_min = {11, 14, 16, 19, 23, 26, 29, 31, 35, 38}
 		},
 		arborean_spawn = {
 			max_range = 10000,
