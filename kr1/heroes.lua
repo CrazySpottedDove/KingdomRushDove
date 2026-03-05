@@ -12369,6 +12369,7 @@ tt.hero.skills.inspire_fear.stun_duration = b.inspire_fear.stun_duration
 tt.hero.skills.inspire_fear.slow_factor = b.inspire_fear.slow_factor
 tt.hero.skills.inspire_fear.inflicted_damage_factor = b.inspire_fear.inflicted_damage_factor
 tt.hero.skills.inspire_fear.xp_gain = b.inspire_fear.xp_gain
+tt.hero.skills.inspire_fear.damage = b.inspire_fear.damage
 tt.hero.skills.inspire_fear.xp_level_steps = {
 	[2] = 1,
 	[5] = 2,
@@ -12485,6 +12486,8 @@ tt.timed_attacks.list[2].min_range_trigger = 0
 tt.timed_attacks.list[2].max_range_effect = b.inspire_fear.max_range_effect
 tt.timed_attacks.list[2].min_range_effect = 0
 tt.timed_attacks.list[2].min_targets = b.inspire_fear.min_targets
+tt.timed_attacks.list[2].damage_type = b.inspire_fear.damage_type
+tt.timed_attacks.list[2].damage = b.inspire_fear.damage[1]
 tt.timed_attacks.list[2].mods = {"hero_raelyn_inspire_fear_damage_mod", "hero_raelyn_inspire_fear_stun_mod", "hero_raelyn_inspire_fear_fx_mod"}
 tt.timed_attacks.list[2].sound = "HeroRaelynInspireFearCast"
 tt.timed_attacks.list[2].xp_from_skill = "inspire_fear"
@@ -12500,6 +12503,7 @@ tt.timed_attacks.list[3].disabled = true
 tt.timed_attacks.list[3].vis_bans = bor(F_FLYING)
 tt.timed_attacks.list[3].hit_decal = "decal_hero_raelyn_onslaught_decal"
 tt.timed_attacks.list[3].hit_offset = vec_2(35, 0)
+tt.timed_attacks.list[3].hit_aura = "hero_raelyn_onslaught_aura"
 tt.timed_attacks.list[3].sound = "HeroRaelynOnslaughtCast"
 tt.ui.click_rect = r(-20, -5, 40, 43)
 tt.ultimate = {
@@ -12606,9 +12610,7 @@ tt.modifier.duration = nil
 --#endregion
 --#region hero_raelyn_onslaught_aura
 tt = RT("hero_raelyn_onslaught_aura", "aura")
-
 AC(tt, "render")
-
 tt.aura.duration = fts(11)
 tt.aura.cycle_time = fts(11)
 tt.aura.damage_min = nil
@@ -12626,8 +12628,6 @@ function tt.main_script.insert(this, store)
 			s.ts = store.tick_ts
 		end
 	end
-
-	this.aura.excluded_entities = {this.aura.target_id}
 
 	return true
 end

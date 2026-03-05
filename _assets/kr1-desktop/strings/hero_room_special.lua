@@ -2396,7 +2396,9 @@ factor = tail("inflicted_damage_factor")
 duration = tail("stun_duration")
 duration_2 = tail("damage_duration")
 radius = blc.max_range_effect
-map["闻风丧胆"] = str(cooldown_str(), "蕾琳发出震慑敌人的怒吼，使", radius, "范围内的敌人眩晕", duration, "秒，并使其造成的伤害x", factor * 100, "%，持续", duration_2, "秒。")
+set_damage_value(tail("damage"))
+d[1].damage_type = blc.damage_type
+map["闻风丧胆"] = str(cooldown_str(), "蕾琳发出震慑敌人的怒吼，使", radius, "范围内的敌人眩晕", duration, "秒、受到", damage_str(), "，并使其造成的伤害x", factor * 100, "%，持续", duration_2, "秒。")
 blc = balance.hero_raelyn.unbreakable
 cooldown = tail("cooldown")
 count = blc.max_targets

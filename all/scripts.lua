@@ -4820,7 +4820,6 @@ function scripts.aura_apply_damage.update(this, store)
 
 			if not te or te.health and te.health.dead or (te.enemy and (not te.enemy.can_do_magic)) then
 				queue_remove(store, this)
-
 				return
 			end
 
@@ -4869,7 +4868,7 @@ function scripts.aura_apply_damage.update(this, store)
 					d.source_id = this.id
 					d.target_id = target.id
 
-					d.value = math.random(dmin, dmax)
+					d.value = math.random(dmin, dmax) * this.aura.damage_factor
 					d.damage_type = this.aura.damage_type
 					d.track_damage = this.aura.track_damage
 					d.xp_dest_id = this.aura.xp_dest_id
@@ -4883,7 +4882,7 @@ function scripts.aura_apply_damage.update(this, store)
 						m.modifier.level = this.aura.level
 						m.modifier.target_id = target.id
 						m.modifier.source_id = this.id
-
+						m.modifier.damage_factor = this.aura.damage_factor
 						if this.aura.hide_source_fx and target.id == this.aura.source_id then
 							m.render = nil
 						end

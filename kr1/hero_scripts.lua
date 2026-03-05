@@ -20673,6 +20673,7 @@ function scripts.hero_raelyn.level_up(this, store)
 
 		a.disabled = nil
 		a.cooldown = s.cooldown[s.level]
+		a.damage = s.damage[s.level]
 
 		local md = E:get_template(a.mods[1])
 
@@ -20714,6 +20715,15 @@ function scripts.hero_raelyn.level_up(this, store)
 		this.ultimate.cooldown = s.cooldown[s.level]
 		this.ultimate.disabled = nil
 	end)
+
+	if this.hero.skills.onslaught.level > 0 then
+		local s = this.hero.skills.onslaught
+		local a = this.melee.attacks[1]
+		local hit_aura = E:get_template(s.hit_aura)
+
+		hit_aura.aura.damage_max = a.damage_max * s.damage_factor[s.level]
+		hit_aura.aura.damage_min = a.damage_min * s.damage_factor[s.level]
+	end
 
 	this.health.hp = this.health.hp_max
 	this.hero.melee_active_status = {}
@@ -20864,6 +20874,12 @@ function scripts.hero_raelyn.update(this, store)
 
 									queue_insert(store, m)
 								end
+								local d = E:create_entity("damage")
+								d.value = a.damage
+								d.damage_type = a.damage_type
+								d.source_id = this.id
+								d.target_id = t.id
+								queue_damage(store, d)
 							end
 						end
 

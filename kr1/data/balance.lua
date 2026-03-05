@@ -953,6 +953,8 @@ local heroes = {
 			stun_duration = {2, 2.5, 3},
 			inflicted_damage_factor = {0.6, 0.4, 0.2},
 			s_inflicted_damage_factor = {0.4, 0.6, 0.8},
+			damage = {45, 60, 75},
+			damage_type = DAMAGE_TRUE,
 			xp_gain = {240, 480, 720}
 		},
 		brutal_slash = {
@@ -964,7 +966,7 @@ local heroes = {
 			xp_gain = {240, 480, 720}
 		},
 		onslaught = {
-			radius = 90,
+			radius = 75,
 			min_targets = 2,
 			xp_gain_factor = 4,
 			max_range_trigger = 150,
