@@ -2762,12 +2762,12 @@ return {
 			detail_icon = 13,
 			from_kr = 5
 		},
-        {
-            name = "tower_ray_lvl4",
-            icon = 14,
-            detail_icon = 14,
-            from_kr = 5
-        },
+		{
+			name = "tower_ray_lvl4",
+			icon = 14,
+			detail_icon = 14,
+			from_kr = 5
+		},
 		{
 			name = "tower_ghost_lvl4",
 			icon = 15,

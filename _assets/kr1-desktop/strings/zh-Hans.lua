@@ -37,7 +37,7 @@ return {
 	TOWER_PIXIE_SPECIAL = "偷钱，毒药，秒杀，传送，变兔子",
 	TOWER_BABY_ASHBITE_SPECIAL = "毒火免疫，飞行，范围真伤",
 	TOWER_DROW_SPECIAL = "刺伤小碎片",
-    TOWER_RAY_SPECIAL = "攻击目标死亡后造成范围法术爆炸",
+	TOWER_RAY_SPECIAL = "攻击目标死亡后造成范围法术爆炸",
 	["!!!COMMENT_LOCALIZATION_SOURCE"] = "Keywords+CYUGAME",
 	["%d Life"] = "%d 点生命值",
 	["%d Lives"] = "%d 条生命",

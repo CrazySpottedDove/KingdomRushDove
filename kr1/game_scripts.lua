@@ -17623,10 +17623,20 @@ function scripts.mod_gnoll_blighter.update(this, store)
 	queue_remove(store, this)
 end
 
+function scripts.redcap_heal_side_effect(this, store, attack, target)
+	local m = E:create_entity("mod_redcap_heal")
+	m.modifier.source_id = this.id
+	m.modifier.target_id = this.id
+	if target then
+		m.__redcap__target_id = target.id
+	end
+	queue_insert(store, m)
+end
+
 scripts.mod_redcap_heal = {}
 
 function scripts.mod_redcap_heal.insert(this, store)
-	local target = store.entities[this.modifier.target_id]
+	local target = store.entities[this.__redcap__target_id]
 	local source = store.entities[this.modifier.source_id]
 
 	if target and source then
@@ -17638,8 +17648,6 @@ function scripts.mod_redcap_heal.insert(this, store)
 
 		queue_insert(store, fx)
 	end
-
-	this.modifier.target_id = this.modifier.source_id
 
 	return scripts.mod_hps.insert(this, store)
 end
