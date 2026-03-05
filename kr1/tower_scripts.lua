@@ -10461,9 +10461,9 @@ function scripts.tower_ray.update(this, store)
 							local b = E:create_entity(aa.bullet)
 							local start_offset = aa.bullet_start_offset
 
-							y_wait(store, fts(4))
+							y_wait(store, fts(4) * this.tower.cooldown_factor)
 							U.animation_start_group(this, "idle_2", nil, store.tick_ts, true, "rocks")
-							y_wait(store, aa.shoot_time - fts(4))
+							y_wait(store, (aa.shoot_time - fts(4)) * this.tower.cooldown_factor)
 
 							local an, af, ai = animation_name_facing_point(this, aa.animation_loop, enemy.pos, this.render.sid_mage, this.mage_offset)
 
@@ -10480,7 +10480,7 @@ function scripts.tower_ray.update(this, store)
 								queue_insert(store, fx)
 							end
 
-							y_wait(store, fts(1))
+							y_wait(store, fts(1) * this.tower.cooldown_factor)
 
 							enemy, pred_pos = find_target(aa)
 
@@ -10552,9 +10552,9 @@ function scripts.tower_ray.update(this, store)
 							local b = E:create_entity(aa.bullet)
 							local start_offset = aa.bullet_start_offset
 
-							y_wait(store, fts(4))
+							y_wait(store, fts(4) * this.tower.cooldown_factor)
 							U.animation_start_group(this, "idle_2", nil, store.tick_ts, true, "rocks")
-							y_wait(store, aa.shoot_time - fts(4))
+							y_wait(store, (aa.shoot_time - fts(4)) * this.tower.cooldown_factor)
 
 							local an, af, ai = animation_name_facing_point(this, aa.animation_loop, enemy.pos, this.render.sid_mage, this.mage_offset)
 
@@ -10582,7 +10582,7 @@ function scripts.tower_ray.update(this, store)
 								this.ray_fx_start = fx
 							end
 
-							y_wait(store, fts(1))
+							y_wait(store, fts(1) * this.tower.cooldown_factor)
 
 							local last_fx = store.tick_ts + fts(3)
 
@@ -10621,8 +10621,8 @@ function scripts.tower_ray.update(this, store)
 
 							queue_insert(store, b)
 
-							while store.tick_ts - last_ts < aa.duration * this.tower.cooldown_factor + aa.shoot_time and enemy and not enemy.health.dead and b and not b.force_stop_ray and not this.tower.blocked and V.dist2(tpos(this).x, tpos(this).y, enemy.pos.x, enemy.pos.y) <= range_to_stay * range_to_stay do
-								if store.tick_ts - last_fx > 1 and store.tick_ts - last_ts < aa.duration * this.tower.cooldown_factor + aa.shoot_time - 0.75 and b.bullet.out_start_fx then
+							while store.tick_ts - last_ts < (aa.duration + aa.shoot_time) * this.tower.cooldown_factor and enemy and not enemy.health.dead and b and not b.force_stop_ray and not this.tower.blocked and V.dist2(tpos(this).x, tpos(this).y, enemy.pos.x, enemy.pos.y) <= range_to_stay * range_to_stay do
+								if store.tick_ts - last_fx > 1 and store.tick_ts - last_ts < (aa.duration + aa.shoot_time - 0.75) * this.tower.cooldown_factor and b.bullet.out_start_fx then
 									local fx = E:create_entity(b.bullet.out_start_fx)
 
 									fx.pos.x, fx.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
@@ -11015,7 +11015,7 @@ function scripts.bullet_tower_ray.update(this, store)
 
 				queue_insert(store, explosion_fx)
 
-				local explosion_targets = U.find_enemies_between_range_filter_off(explosion_fx.pos, this.explosion_radius, F_AREA, F_NONE)
+				local explosion_targets = U.find_enemies_in_range_filter_off(explosion_fx.pos, this.explosion_radius, F_AREA, F_NONE)
 
 				if explosion_targets then
 					for i = 1, #explosion_targets do

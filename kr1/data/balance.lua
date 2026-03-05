@@ -6081,7 +6081,7 @@ local towers = {
 			slow = {
 				factor = 0.8
 			},
-			explosion_radius = 50,
+			explosion_radius = 55,
 			explosion_factor = 0.2
 		},
 		skill_chain = {
