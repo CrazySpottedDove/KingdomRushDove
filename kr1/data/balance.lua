@@ -789,8 +789,8 @@ local heroes = {
 			bounces = {3, 5, 7},
 			s_bounces = {4, 6, 8},
 			damage_type = DAMAGE_PHYSICAL,
-            slow_factor = 0.7,
-            duration = 2,
+			slow_factor = 0.7,
+			duration = 2,
 			xp_gain = {160, 240, 480}
 		},
 		martial_flourish = {

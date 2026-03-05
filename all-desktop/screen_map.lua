@@ -842,6 +842,11 @@ function screen_map:keypressed(key, isrepeat)
 		end
 	end
 
+	if key == "tab" and not self.hero_room.hidden then
+		self.hero_room:tab_focus()
+		return
+	end
+
 	if self.window.responder then
 		-- 输入权转交
 		self.window.responder:on_keypressed(key, isrepeat)
@@ -5362,6 +5367,62 @@ function HeroRoomViewKR1:select_hero(name, silent)
 
 	self:update_portrait_display()
 	storage:save_slot(screen_map.user_data)
+end
+
+function HeroRoomViewKR1:scroll_to_hero_animated(name)
+	local index = get_hero_index(name)
+
+	if not index then
+		return
+	end
+
+	local per_row = 7
+	local spacing_y = 50
+	local row = math.floor((index - 1) / per_row)
+	local target_y = row * spacing_y
+	local ht = self:get_child_by_id("hero_thumbs")
+	local target_scroll = -1 * (target_y - ht.size.y * 0.5)
+
+	target_scroll = km.clamp(-(ht._bottom_y - ht.size.y), 0, target_scroll)
+
+	local timer = self:get_window().timer
+
+	timer:tween(0.3, ht, {
+		scroll_origin_y = target_scroll
+	}, "out-quad")
+end
+
+function HeroRoomViewKR1:tab_focus()
+	local selected = screen_map.user_data.heroes.selected
+
+	if not selected or #selected == 0 then
+		return
+	end
+
+	local current = self.hero_shown
+	local target
+
+	local current_slot = nil
+
+	for i, hero in ipairs(selected) do
+		if hero == current then
+			current_slot = i
+			break
+		end
+	end
+
+	if current_slot == nil then
+		target = selected[1]
+	elseif current_slot == 1 and #selected >= 2 then
+		target = selected[2]
+	else
+		target = selected[1]
+	end
+
+	if target and target ~= current then
+		self:show_hero(target)
+		self:scroll_to_hero_animated(target)
+	end
 end
 
 function HeroRoomViewKR1:toggle_special_description()
