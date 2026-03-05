@@ -1560,7 +1560,7 @@ function scripts.tower_archer.update(this, store)
 		elseif store.tick_ts - a.ts < a.cooldown * this.tower.cooldown_factor then
 		-- block empty
 		else
-			enemy = U.find_foremost_enemy(store, tpos(this), 0, at.range, false, a.vis_flags, a.vis_bans)
+			enemy = U.find_foremost_enemy_in_range_filter_off(tpos(this), at.range, false, a.vis_flags, a.vis_bans)
 
 			if enemy then
 				a.ts = store.tick_ts
@@ -1677,7 +1677,7 @@ function scripts.tower_mage.update(this, store)
 		elseif store.tick_ts - aa.ts <= aa.cooldown * this.tower.cooldown_factor then
 		-- block empty
 		else
-			local enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, aa.vis_flags, aa.vis_bans)
+			local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false, aa.vis_flags, aa.vis_bans)
 
 			if enemy then
 				aa.ts = store.tick_ts
@@ -1767,7 +1767,7 @@ function scripts.tower_engineer.update(this, store)
 		elseif store.tick_ts - ba.ts < ba.cooldown * this.tower.cooldown_factor then
 			coroutine.yield()
 		else
-			local enemy, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, ba.node_prediction, ba.vis_flags, ba.vis_bans)
+			local enemy, _, pred_pos = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, ba.node_prediction, ba.vis_flags, ba.vis_bans)
 
 			if enemy then
 				ba.ts = store.tick_ts
@@ -1782,7 +1782,7 @@ function scripts.tower_engineer.update(this, store)
 
 				local trigger_pos = pred_pos
 
-				enemy, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, ba.node_prediction, ba.vis_flags, ba.vis_bans)
+				enemy, _, pred_pos = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, ba.node_prediction, ba.vis_flags, ba.vis_bans)
 
 				local b = E:create_entity(ba.bullet)
 

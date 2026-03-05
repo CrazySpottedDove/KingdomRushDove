@@ -1190,7 +1190,7 @@ function scripts.eb_kingpin.update(this, store)
 				if a == hs and this.health.hp < this.health.hp_max then
 					targets = {this}
 				elseif a == ho then
-					targets = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(e)
+					targets = U.find_enemies_in_range_filter_on(this.pos, a.max_range, a.vis_flags, a.vis_bans, function(e)
 						return e.health.hp < e.health.hp_max and e ~= this
 					end)
 				end
@@ -5315,7 +5315,7 @@ function scripts.eb_bram.update(this, store)
 		else
 			if ready_to_convert() then
 				local a = ac
-				local targets = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(e)
+				local targets = U.find_enemies_in_range_filter_on(this.pos, a.max_range, a.vis_flags, a.vis_bans, function(e)
 					return table.contains(a.allowed_templates, e.template_name)
 				end)
 
@@ -5991,7 +5991,7 @@ function scripts.krdove_eb_elephant_cannibal.update(this, store)
 			SU.y_enemy_stun(store, this)
 		else
 			if ready_to_heal() then
-				local targets = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(e)
+				local targets = U.find_enemies_in_range_filter_on(this.pos, a.max_range, a.vis_flags, a.vis_bans, function(e)
 					return not U.has_modifier(store, e, "mod_krdove_elephant_cannibal")
 				end)
 
@@ -6007,7 +6007,7 @@ function scripts.krdove_eb_elephant_cannibal.update(this, store)
 						goto label_95_0
 					end
 
-					local targets = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(e)
+					local targets = U.find_enemies_in_range_filter_on(this.pos, a.max_range, a.vis_flags, a.vis_bans, function(e)
 						return not U.has_modifier(store, e, "mod_krdove_elephant_cannibal")
 					end)
 
@@ -7808,7 +7808,7 @@ function scripts.controller_stage_16_overseer_mouth_door.update(this, store)
 	end
 
 	local function search_enemies_nearby()
-		local targets = U.find_enemies_in_range(store.entities, this.check_pos, 0, this.check_radius, this.check_vis_flags, this.check_vis_bans, function(e)
+		local targets = U.find_enemies_in_range_filter_on(this.check_pos, this.check_radius, this.check_vis_flags, this.check_vis_bans, function(e)
 			return e.enemy and e.health and not e.health.dead
 		end)
 
@@ -11411,7 +11411,12 @@ function scripts.bullet_boss_grymbeard.update(this, store)
 	ps.particle_system.emission_rate = 90
 
 	if not target or target.health.dead then
-		local new_target, targets = U.find_foremost_enemy(store.entities, source_pos, 0, attack.max_range, false, attack.vis_flags, attack.vis_bans, attack.filter_fn)
+		local new_target, targets
+		if attack.filter_fn then
+			new_target, targets = U.find_foremost_enemy_in_range_filter_on(source_pos, attack.max_range, false, attack.vis_flags, attack.vis_bans, attack.filter_fn)
+		else
+			new_target, targets = U.find_foremost_enemy_in_range_filter_off(source_pos, attack.max_range, false, attack.vis_flags, attack.vis_bans)
+		end
 
 		if new_target then
 			b.target_id = new_target.id

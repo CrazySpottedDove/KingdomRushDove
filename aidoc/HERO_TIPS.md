@@ -29,15 +29,15 @@
 
 ```lua
 -- hr_order 1
-tt.hero.skills.skill_a.xp_level_steps = {[2]=1,[5]=2,[8]=3}
+tt.hero.skills.skill_a.xp_level_steps = { [2] = 1, [5] = 2, [8] = 3 }
 -- hr_order 2
-tt.hero.skills.skill_b.xp_level_steps = {[3]=1,[6]=2,[9]=3}
+tt.hero.skills.skill_b.xp_level_steps = { [3] = 1, [6] = 2, [9] = 3 }
 -- hr_order 3
-tt.hero.skills.skill_c.xp_level_steps = {[1]=1,[4]=2,[7]=3}
+tt.hero.skills.skill_c.xp_level_steps = { [1] = 1, [4] = 2, [7] = 3 }
 -- hr_order 4
-tt.hero.skills.skill_d.xp_level_steps = {[2]=1,[5]=2,[8]=3}
+tt.hero.skills.skill_d.xp_level_steps = { [2] = 1, [5] = 2, [8] = 3 }
 -- ultimate (4级)
-tt.hero.skills.ultimate.xp_level_steps = {[1]=1,[4]=2,[7]=3,[10]=4}
+tt.hero.skills.ultimate.xp_level_steps = { [1] = 1, [4] = 2, [7] = 3, [10] = 4 }
 ```
 
 ### 2.3 终极技组件
@@ -45,7 +45,7 @@ tt.hero.skills.ultimate.xp_level_steps = {[1]=1,[4]=2,[7]=3,[10]=4}
 所有有终极技的英雄模板中，**必须**在 `tt.tween` 之类的字段之后显式添加：
 
 ```lua
-tt.ultimate = { ts=0, cooldown=b.ultimate.cooldown[1] }
+tt.ultimate = { ts = 0, cooldown = b.ultimate.cooldown[1] }
 ```
 
 ### 2.4 英雄头像字段
@@ -75,7 +75,7 @@ FL/kr5 中有 `sprite_id = {2, 3}` 的写法（对多个精灵同时应用 tween
 
 ```lua
 -- 错误（FL写法）：
-tt.tween.props[2].sprite_id = {2, 3}
+tt.tween.props[2].sprite_id = { 2, 3 }
 
 -- 正确（kr1写法）：
 tt.tween.props[2] = E:clone_c("tween_prop")
@@ -114,14 +114,14 @@ dove 版所有英雄的终极技均为**手动释放**，在 `scripts.xxx.update
 
 ```lua
 if ready_to_use_skill(this.ultimate, store) then
-    if not this.ultimate_active then
-        local ue = E:create_entity(this.hero.skills.ultimate.controller_name)
-        queue_insert(store, ue)
-        this.ultimate.ts = store.tick_ts
-        SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
-    else
-        this.ultimate.ts = this.ultimate.ts + 1  -- 已激活时跳过冷却
-    end
+	if not this.ultimate_active then
+		local ue = E:create_entity(this.hero.skills.ultimate.controller_name)
+		queue_insert(store, ue)
+		this.ultimate.ts = store.tick_ts
+		SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
+	else
+		this.ultimate.ts = this.ultimate.ts + 1 -- 已激活时跳过冷却
+	end
 end
 ```
 
@@ -159,8 +159,8 @@ U.y_animation_play_group(this, "levelup", nil, store.tick_ts, 1, this.render.spr
 
 ```lua
 if #target.tween.props > 1 then
-    target.tween.props[2].disabled = false
-    -- ...
+	target.tween.props[2].disabled = false
+	-- ...
 end
 ```
 

@@ -1112,7 +1112,7 @@ function SU.y_hero_death_and_respawn(store, this)
 			SU.hero_gain_xp_from_skill(this, this.hero.skills[sd.xp_from_skill])
 		end
 
-		local targets = U.find_enemies_in_range(store, this.pos, 0, sd.damage_radius, sd.vis_flags, sd.vis_bans)
+		local targets = U.find_enemies_in_range_filter_off(this.pos, sd.damage_radius, sd.vis_flags, sd.vis_bans)
 
 		if targets then
 			for _, t in pairs(targets) do
@@ -2020,7 +2020,7 @@ function SU.y_soldier_do_single_area_attack(store, this, target, attack)
 		hit_pos.y = hit_pos.y + attack.hit_offset.y
 	end
 
-	targets = U.find_enemies_in_range(store, hit_pos, 0, attack.damage_radius, attack.damage_flags, attack.damage_bans) or {}
+	targets = U.find_enemies_in_range_filter_off(hit_pos, attack.damage_radius, attack.damage_flags, attack.damage_bans) or {}
 
 	if attack.count then
 		table.sort(targets, function(e1, e2)
@@ -2196,7 +2196,7 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 					hit_pos.y = hit_pos.y + attack.hit_offset.y
 				end
 
-				local targets = U.find_enemies_in_range(store, hit_pos, 0, attack.damage_radius, attack.damage_flags, attack.damage_bans) or {}
+				local targets = U.find_enemies_in_range_filter_off(hit_pos, attack.damage_radius, attack.damage_flags, attack.damage_bans) or {}
 
 				for _, e in pairs(targets) do
 					local d = E:create_entity("damage")
@@ -2649,7 +2649,7 @@ function SU.soldier_pick_melee_attack(store, this, target)
 						a.ts = store.tick_ts
 					else
 						if a.min_count and a.type == "area" and a.damage_radius then
-							local targets = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius, a.vis_flags, a.vis_bans)
+							local targets = U.find_enemies_in_range_filter_off(this.pos, a.damage_radius, a.vis_flags, a.vis_bans)
 
 							if not targets or #targets < a.min_count then
 								goto label_78_0

@@ -93,7 +93,7 @@ local function engineer_focus_bomb_update(this, store)
 		end
 	end
 
-	local enemies = U.find_enemies_in_range(store, b.to, 0, dradius, b.damage_flags, b.damage_bans)
+	local enemies = U.find_enemies_in_range_filter_off(b.to, dradius, b.damage_flags, b.damage_bans)
 
 	if enemies then
 		for i = 1, #enemies do
@@ -1088,7 +1088,7 @@ function patch_upgrade_map.mage_chain(level, endless)
 				end
 
 				if not this.bullet._endless_mage_chain then
-					local enemies = U.find_enemies_in_range(store, target.pos, 0, friend_buff.mage_chain_radius, F_RANGED, 0, function(e)
+					local enemies = U.find_enemies_in_range_filter_on(target.pos, friend_buff.mage_chain_radius, F_RANGED, 0, function(e)
 						return e.id ~= target.id
 					end)
 

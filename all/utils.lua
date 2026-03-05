@@ -2153,7 +2153,7 @@ end
 ---@param trigger_count number 触发数量
 ---@return table? 传送目标
 function U.find_teleport_moment(store, center, range, trigger_count)
-	local enemies = U.find_enemies_in_range(store, center, 0, range, F_NONE, F_NONE)
+	local enemies = U.find_enemies_in_range_filter_off(center, range, F_NONE, F_NONE)
 
 	if not enemies then
 		return nil

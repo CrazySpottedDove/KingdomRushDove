@@ -4600,7 +4600,7 @@ function scripts.soldier_mecha.update(this, store)
 			end
 
 			if store.tick_ts - ao.ts > ao.cooldown * tw.cooldown_factor then
-				local _, targets = U.find_foremost_enemy(store, this.pos, ao.min_range, ao.max_range, true, ao.vis_flags, ao.vis_bans)
+				local _, targets = U.find_foremost_enemy_between_range_filter_off(this.pos, ao.min_range, ao.max_range, true, ao.vis_flags, ao.vis_bans)
 
 				if not targets then
 				-- block empty
@@ -4716,7 +4716,7 @@ function scripts.soldier_mecha.update(this, store)
 		end
 
 		if store.tick_ts - ab.ts > ab.cooldown * tw.cooldown_factor then
-			local _, targets = U.find_foremost_enemy(store, this.pos, ab.min_range, ab.max_range, ab.node_prediction, ab.vis_flags, ab.vis_bans)
+			local _, targets = U.find_foremost_enemy_between_range_filter_off(this.pos, ab.min_range, ab.max_range, ab.node_prediction, ab.vis_flags, ab.vis_bans)
 
 			if not targets then
 				-- block empty
@@ -16839,7 +16839,7 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store)
 				if r._first_time then
 					r._first_time = false
 
-					local target = U.find_foremost_enemy(store, r.center, 0, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF), function(e)
+					local target = U.find_foremost_enemy_in_range_filter_on(r.center, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF), function(e)
 						return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
 					end)
 
@@ -18998,7 +18998,7 @@ function scripts.soldier_tower_dwarf.update(this, store)
 					if r._first_time then
 						r._first_time = false
 
-						local target = U.find_foremost_enemy(store.entities, r.center, 0, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF), function(e)
+						local target = U.find_foremost_enemy_in_range_filter_on(r.center, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF), function(e)
 							return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
 						end)
 
@@ -19398,7 +19398,7 @@ function scripts.tower_ghost.soldier_update(this, store)
 				if r._first_time then
 					r._first_time = false
 
-					local target = U.find_foremost_enemy(store.entities, r.center, 0, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF), function(e)
+					local target = U.find_foremost_enemy_in_range_filter_on(r.center, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF), function(e)
 						return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
 					end)
 
@@ -20524,7 +20524,7 @@ function scripts.tower_arborean_emissary_bolt.update(this, store)
 			end
 		end
 	elseif b.damage_radius and b.damage_radius > 0 then
-		local targets = U.find_enemies_in_range(store.entities, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
+		local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
 
 		if targets then
 			for _, target in pairs(targets) do
@@ -21348,7 +21348,7 @@ function scripts.decal_tentacle_priests_barrack.update(this, store)
 		end
 
 		if store.tick_ts - a.ts > a.cooldown then
-			local target, targets, pred_pos = U.find_foremost_enemy(store.entities, this.pos, 0, a.max_range, a.hit_time, a.vis_flags, a.vis_bans)
+			local target, targets, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range, a.hit_time, a.vis_flags, a.vis_bans)
 
 			if not target or not pred_pos then
 			-- block empty
@@ -21362,7 +21362,7 @@ function scripts.decal_tentacle_priests_barrack.update(this, store)
 				U.animation_start(this, a.animation, flip_x, store.tick_ts, false)
 				U.y_wait(store, a.hit_time)
 
-				local enemies = U.find_enemies_in_range(store.entities, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
+				local enemies = U.find_enemies_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
 				if enemies and #enemies > 0 then
 					local e = E:create_entity(a.aura)

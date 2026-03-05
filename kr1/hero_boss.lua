@@ -911,7 +911,7 @@ tt.main_script.update = function(this, store)
 					entities = store.entities
 				end
 
-				local targets = U.find_enemies_in_range(entities, this.pos, 0, courage.range, courage.vis_flags, courage.vis_bans, function(v)
+				local targets = U.find_enemies_in_range_filter_on(this.pos, courage.range, courage.vis_flags, courage.vis_bans, function(v)
 					return not U.has_modifier_in_list(store, v, {courage.mod})
 				end)
 
@@ -1625,7 +1625,7 @@ tt.main_script.update = function(this, store)
 						enemy_entities = store
 					end
 
-					local targets = U.find_enemies_in_range(enemy_entities, this.pos, 0, ca.max_range, ca.vis_flags, ca.vis_bans)
+					local targets = U.find_enemies_in_range_filter_off(this.pos, ca.max_range, ca.vis_flags, ca.vis_bans)
 
 					if targets then
 						for _, target in pairs(targets) do
