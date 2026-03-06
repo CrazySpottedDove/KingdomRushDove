@@ -704,20 +704,6 @@ function KView:_draw_self()
 		G.draw(self.image, ix, iy, 0, self.image_scale, self.image_scale)
 	end
 
-	if DEBUG_KUI_DRAW_FOCUS_NAV and self.on_keypressed then
-		G.setColor(0, 0, 1, 1)
-
-		local x, y = 0, 0
-
-		if self.focus_nav_offset then
-			x, y = self.focus_nav_offset.x, self.focus_nav_offset.y
-		elseif self.anchor then
-			x, y = self.anchor.x, self.anchor.y
-		end
-
-		G.rectangle("fill", x - 2, y - 2, 4, 4)
-	end
-
 	if self.image_offset then
 		G.pop()
 	end
@@ -1729,14 +1715,6 @@ function KWindow:find_next_focus(root, focused, key, reverse)
 
 						return d1 < d2
 					end)
-
-					if DEBUG_KUI_DRAW_FOCUS_NAV then
-						log.paranoid("pass - nav_dir: %s", nav_dir)
-
-						for _, item in ipairs(root_pos_list) do
-							log.paranoid("  %s,%s - %s", item[2], item[3], item[1])
-						end
-					end
 
 					for _, row in pairs(root_pos_list) do
 						local v, vx, vy = unpack(row)

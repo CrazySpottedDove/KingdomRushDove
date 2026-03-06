@@ -11,7 +11,7 @@
 
 | 项目 | 系数 | 适用范围 |
 |---|---|---|
-| 生命值（`hp_max`/`hp`） | ×1.3（向下取整） | 英雄本体及所有衍生单位 |
+| 生命值（`hp_max`/`hp`） | ×1.3（向下取整） | 英雄本体及所有衍生单位（士兵、召唤物等子表中的 `hp_max`） |
 | 技能经验获取（`xp_gain`） | ×8 | 所有技能 |
 | 终极技冷却（`ultimate.cooldown`） | ×0.8 | 终极技 |
 
@@ -110,20 +110,32 @@ end
 
 ### 3.2 终极技释放逻辑
 
-dove 版所有英雄的终极技均为**手动释放**，在 `scripts.xxx.update` 中需要：
+dove 版所有英雄的终极技均为**自动释放**（当冷却完成且有敌人时自动触发）。FL 源码中没有这段逻辑，**必须手动添加**，插在 `SU.hero_level_up` 检查之后，第一个技能判断之前：
 
 ```lua
 if ready_to_use_skill(this.ultimate, store) then
-	if not this.ultimate_active then
-		local ue = E:create_entity(this.hero.skills.ultimate.controller_name)
-		queue_insert(store, ue)
+	local target = U.find_foremost_enemy_in_range_filter_off(this.pos, 200, 0, F_AREA, 0)
+
+	if target and target.pos then
+		local e = E:create_entity(this.hero.skills.ultimate.controller_name)
+
+		e.level = this.hero.skills.ultimate.level
+		e.pos = V.vclone(target.pos)
+
+		queue_insert(store, e)
+
 		this.ultimate.ts = store.tick_ts
+
 		SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
 	else
-		this.ultimate.ts = this.ultimate.ts + 1 -- 已激活时跳过冷却
+		this.ultimate.ts = this.ultimate.ts + 1
 	end
 end
 ```
+
+- 范围 200 是通用值；如果英雄技能范围明显更大/更小可以调整
+- `e.pos` 设置为目标敌人位置，让 controller 在敌人附近找路径节点
+- 没有敌人时 `ts + 1` 表示等待，不消耗冷却
 
 ### 3.3 FL 专有代码必须删除
 
@@ -250,7 +262,189 @@ HERO_DRAGON_ARB_SPECIAL = "技能A，技能B，技能C，技能D，技能E",
 
 ---
 
-## 六、快速检查清单
+## 六、批量移植常见运行时错误（2026-03-06 总结）
+
+### 6.1 FX 模板未定义
+
+**错误**：`entity_db.error create_entity() - template fx_xxx not found`
+
+**原因**：FL 中某些 FX 模板是在文件前半段（全局 FX 区）定义的，而不在英雄模板附近。移植时只复制了英雄主模板部分，遗漏了这些 FX 定义。
+
+**修复**：在英雄模板块之前，显式用 `RT(name, base)` 注册所有被英雄引用的 FX。示例：
+
+```lua
+tt = RT("fx_hero_builder_melee_attack_hit", "fx")
+tt.render.sprites[1].name = "hero_obdul_basic_attack_hit"
+
+tt = RT("fx_hero_builder_overtime_work_raise", "fx")
+tt.render.sprites[1].name = "hero_obdul_skill_5_soldier_spawn_decal"
+tt.render.sprites[1].z = Z_DECALS
+```
+
+**排查方法**：搜索英雄模板中所有 `.hit_fx`、`.spawn_fx`、`.fx`、`.aura`、`.bullet` 字段，确保每个被引用的模板名称都有对应的 `RT(...)` 定义。
+
+### 6.2 直接修改 `motion.max_speed` 会被 dove 运动系统忽略
+
+**错误**：英雄速度未生效，或速度修改没有同步到 `real_speed`。
+
+**原因**：dove 的 `U.real_max_speed()` 综合了 `max_speed + buff * factor`，直接赋值 `this.motion.max_speed = x` 不会更新 `real_speed`。
+
+**正确 API**（全部在 `all/utils.lua` 中定义）：
+
+| 场景 | 调用方式 |
+|---|---|
+| 重置到指定值 | `U.update_max_speed(entity, value)` |
+| 技能/状态导致的永久加速 | `U.speed_inc_self(entity, amount)` |
+| 技能/状态导致的永久减速 | `U.speed_dec_self(entity, amount)` |
+| 乘以系数 | `U.speed_mul_self(entity, factor)` |
+| 除以系数 | `U.speed_div_self(entity, factor)` |
+| 外部 buff 加速（临时） | `U.speed_inc(entity, amount)` |
+| 外部 buff 减速（临时） | `U.speed_dec(entity, amount)` |
+
+**注意**：`speed_inc_self` 和 `speed_dec_self` 对称使用，需要在效果结束时调用对应的 dec/inc 来还原，不能用 `original_speed` 变量暂存再恢复，因为多次叠加后直接赋原值会破坏其他效果。
+
+### 6.3 FL 专有函数导致崩溃
+
+以下函数在 dove 中不存在，必须删除或替换：
+
+| FL 调用 | dove 处理方式 |
+|---|---|
+| `y_hero_melee_block_and_attacks(store, this)` | 改为 `SU.y_soldier_melee_block_and_attacks(store, this)` |
+| `y_hero_ranged_attacks(store, this)` | 改为 `SU.y_soldier_ranged_attacks(store, this)` |
+| `SU.heroes_visual_learning_upgrade(store, this)` | 删除（dove 不需要） |
+| `SU.heroes_lone_wolves_upgrade(store, this)` | 删除（dove 不需要） |
+| `SU.y_hero_death_and_respawn_kr5(...)` | 改为 `SU.y_hero_death_and_respawn(...)` |
+
+### 6.4 声音资源缺失
+
+**错误**：英雄嘲讽、死亡、出场音效无声。
+
+**原因**：FL 的语音条目（Taunt/TauntIntro/TauntSelect/Death）存放在 `5_sounds.lua` 或 `kr4_sounds.lua` 等单独文件中，而 SFX 条目在 `sounds.lua` 中，容易遗漏语音部分。
+
+**修复**：移植时必须同时检查 FL 的 `5_sounds.lua`，将所有 `HeroXxxTaunt`、`HeroXxxTauntIntro`、`HeroXxxTauntSelect`、`HeroXxxDeath` 条目添加到 dove 的 `_assets/kr1-desktop/sounds/sounds.lua`。
+
+### 6.5 FL 专有基础模板 `bombKR5` 不存在于 dove
+
+**错误**：`entity_db.error create_entity() - template bombKR5 not found`
+
+**原因**：FL 中定义了 `bombKR5`（继承自 `bomb`，添加了 `damage_decay_random = false`、自定义 `hit_decal`、自定义脚本等），但 dove 已将这些内容合并进 `bomb` 基础模板，不再单独存在 `bombKR5`。
+
+**修复**：将所有 `RT("xxx", "bombKR5")` 改为 `RT("xxx", "bomb")`，并手动补上 `bombKR5` 相对于 `bomb` 额外设置的字段（主要是 `tt.bullet.damage_decay_random = false`）：
+
+```lua
+-- 错误写法（FL 风格）
+tt = RT("bullet_hero_mecha_tar_bomb", "bombKR5")
+
+-- 正确写法（dove）
+tt = RT("bullet_hero_mecha_tar_bomb", "bomb")
+tt.bullet.damage_decay_random = false
+```
+
+**注意**：dove 的 `bomb` 基础模板已包含 `damage_type = DAMAGE_EXPLOSION`、`hit_decal = "decal_bomb_crater"`、`main_script = scripts.bomb.*`，无需重复声明这些字段（除非要覆盖）。
+
+### 6.6 map_data.lua 必须同时添加着色器（shader）
+
+**错误**：英雄名称文字颜色显示为默认白色，无法体现英雄主色调。
+
+**原因**：英雄名称文字颜色由 `kr1-desktop/data/map_data.lua` 中 `hero_shaders` 表的 `shader_args` 控制，移植时只添加了 `hero_data` 条目，遗漏了 `hero_shaders` 条目。
+
+**修复**：在 `hero_shaders` 表（紧接在 `hero_data` 之前）中添加对应条目，颜色值参照 FL 的 `kr3-desktop/data/map_data.lua`。典型格式：
+
+```lua
+hero_xxx = {
+    shader_args = {{
+        margin = 0 * rs,
+        p1 = p11, p2 = p12,
+        c1 = fc(0, 0, 0, 255),
+        c2 = fc(R, G, B, 255),  -- 主色调（亮）
+        c3 = fc(R, G, B, 255)   -- 主色调（暗）
+    }, {
+        thickness = 2.5 * rs,
+        outline_color = fc(R, G, B, 255)
+    }, {
+        thickness = 1 * rs,
+        glow_color = fc(R, G, B, 255)
+    }, {}}
+},
+```
+
+---
+
+## 七、今日移植常见漏洞（2026-03-06 总结）
+
+### 7.1 balance 衍生单位 hp_max 遗漏调整
+
+**错误**：英雄本体 `hp_max` 已应用 ×1.3，但英雄技能召唤的士兵/单位的 `hp_max` 仍是 FL 原值。
+
+**原因**：balance.lua 中一个英雄 block 可能有多个 `hp_max` 数组，脚本/手动调整时只改了顶层的英雄本体 `hp_max`，忽略了子表（如 `skill.soldier.hp_max`）。
+
+**实例**：
+- `hero_bird` 的鸟巢单位 `hp_max = {200, 400, 600}` → 应调整为 `{260, 520, 780}`
+- `hero_lava` 的熔岩分身 `hp_max = {75, 100, 125}` → 应调整为 `{97, 130, 162}`
+
+**规则**：balance block 内**所有 `hp_max` 数组**（不论嵌套深度）均须 ×1.3 floor。
+
+### 7.2 FL 同盟升级函数（alliance upgrade）必须删除
+
+**错误**：`attempt to call field 'alliance_merciless_upgrade' (a nil value)`
+
+**原因**：FL 中存在 `SU.alliance_merciless_upgrade(store, this)` 和 `SU.alliance_corageous_upgrade(store, this)`（同盟系统专属），dove 不存在这两个函数。
+
+**修复**：直接删除这两行，不需要任何替代逻辑。已在 §3.3 表格中列出。
+
+### 7.3 终极技自动释放逻辑必须手动添加
+
+**错误**：英雄终极技永远不触发。
+
+**原因**：FL 的英雄终极技是通过玩家点击（`can_fire_fn`）触发的，`update` 函数中没有自动检测冷却并释放的逻辑。dove 中所有英雄均为**自动释放**，但 FL 源码中无此代码，移植时容易遗漏。
+
+**修复**：参见 §3.2 的标准模板，必须在 `SU.hero_level_up` 检查之后手动插入 `ready_to_use_skill(this.ultimate, store)` 块。这对每一个移植的英雄都是必须步骤。
+
+### 7.5 `level_up` 必须显式更新基础近战伤害
+
+**错误**：英雄近战伤害随等级提升不变化。
+
+**原因**：拥有 `melee` 组件的英雄，其 `level_stats.melee_damage_min/max` 数组在 `heroes.lua` 模板中已正确映射，但 `level_up` 函数内若**未显式赋值**给 `this.melee.attacks[1].damage_min/max`，伤害值将永远停留在模板初始值，不随英雄等级成长。FL 的 level_up 有时也遗漏这一赋值，需在移植时主动补充。
+
+**规则**：只要英雄模板通过 `E:add_comps(tt, "melee", ...)` 添加了 melee 组件，`level_up` 中必须包含：
+
+```lua
+this.melee.attacks[1].damage_min = ls.melee_damage_min[hl]
+this.melee.attacks[1].damage_max = ls.melee_damage_max[hl]
+```
+
+紧跟在 `local hl, ls = level_up_basic(this)` 之后，在所有 `upgrade_skill(...)` 之前。
+
+**受影响**：`hero_lava`（移植时 FL 源码中遗漏此赋值）。纯远程英雄（如 `hero_bird`、`hero_mecha`）无 melee 组件，无需此步骤。
+
+---
+
+### 7.4 `SU.create_attack_damage` 接口差异
+
+**错误**：`attempt to index local 'this' (a number value)` in `all/script_utils.lua`
+
+**原因**：FL 和 dove 的 `create_attack_damage` 签名不同：
+
+| 版本 | 签名 |
+|---|---|
+| FL | `SU.create_attack_damage(a, target.id, this.id)` — 第三参数传 ID（数字） |
+| dove | `SU.create_attack_damage(a, target_id, this)` — 第三参数传实体本身 |
+
+dove 内部用 `this.id` 取 source ID、用 `this.unit.damage_factor` 计算伤害，因此必须传入实体对象而非 ID。
+
+**修复**：所有 `SU.create_attack_damage(...)` 调用中，第三个参数从 `this.id` 改为 `this`：
+
+```lua
+-- 错误（FL 写法）：
+local d = SU.create_attack_damage(a, target.id, this.id)
+
+-- 正确（dove 写法）：
+local d = SU.create_attack_damage(a, target.id, this)
+```
+
+---
+
+## 八、快速检查清单
 
 移植完成后，逐项核对：
 
@@ -265,12 +459,19 @@ HERO_DRAGON_ARB_SPECIAL = "技能A，技能B，技能C，技能D，技能E",
 - [ ] 修饰符访问目标 `tween.props[N]` 前有 `#props > N-1` 的安全检查
 - [ ] 士兵头像使用 `kr5_info_portraits_soldiers_XXXX` 格式
 - [ ] `info.hero_portrait` 和 `info.portrait` 填写正确（两个不同字段）
-- [ ] `map_data.lua` 已添加英雄条目
+- [ ] 英雄模板中所有引用的 FX/PS 名称都有对应的 `RT(...)` 定义
+- [ ] 所有 `motion.max_speed` 修改使用 `U.update_max_speed` / `U.speed_inc_self` 等 API
+- [ ] 语音条目（Taunt/Death 等）已添加到 `sounds.lua`
+- [ ] `map_data.lua` 同时添加了 `hero_data` 条目 **和** `hero_shaders` 条目
 - [ ] `hero_room_view.lua` 已添加大图项
 - [ ] `zh-Hans.lua` 已添加 `_DESCRIPTION` 和 `_SPECIAL`
 - [ ] `hero_room_special.lua` 已添加技能描述块
-- [ ] balance 数值已应用 kr5→kr1 调整系数
+- [ ] balance 数值已应用 kr5→kr1 调整系数（**包括衍生单位的 `hp_max`**）
+- [ ] `update` 函数中已手动添加 `ready_to_use_skill(this.ultimate, store)` 自动释放块（FL 无此逻辑）
+- [ ] 已删除所有 `SU.alliance_merciless_upgrade` / `SU.alliance_corageous_upgrade` 调用
+- [ ] 所有 `SU.create_attack_damage(...)` 第三参数为实体 `this`（不是 `this.id`）
+- [ ] 有 melee 组件的英雄，`level_up` 中已在 `level_up_basic` 后显式赋值 `this.melee.attacks[1].damage_min/max`
 
 ---
 
-*最后更新：2026-03-05（移植 hero_dragon_arb 后总结）*
+*最后更新：2026-03-06（移植 hero_builder/robot/bird/lava/spider/mecha 后总结，补充终极技自动释放、同盟函数、衍生单位 hp 调整等教训）*

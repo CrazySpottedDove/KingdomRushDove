@@ -17735,7 +17735,11 @@ tt.hero.skills.overtime_work.hr_order = 1
 tt.hero.skills.overtime_work.hr_cost = {3, 3, 3}
 tt.hero.skills.overtime_work.xp_gain = b.overtime_work.xp_gain
 tt.hero.skills.overtime_work.key = "OVERTIME_WORK"
-tt.hero.skills.overtime_work.xp_level_steps = {[2] = 1, [5] = 2, [8] = 3}
+tt.hero.skills.overtime_work.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
 tt.hero.skills.lunch_break = E:clone_c("hero_skill")
 tt.hero.skills.lunch_break.cooldown = b.lunch_break.cooldown
 tt.hero.skills.lunch_break.heal_hp = b.lunch_break.heal_hp
@@ -17745,7 +17749,11 @@ tt.hero.skills.lunch_break.hr_order = 2
 tt.hero.skills.lunch_break.hr_cost = {1, 1, 1}
 tt.hero.skills.lunch_break.xp_gain = b.lunch_break.xp_gain
 tt.hero.skills.lunch_break.key = "LUNCH_BREAK"
-tt.hero.skills.lunch_break.xp_level_steps = {[3] = 1, [6] = 2, [9] = 3}
+tt.hero.skills.lunch_break.xp_level_steps = {
+	[3] = 1,
+	[6] = 2,
+	[9] = 3
+}
 tt.hero.skills.demolition_man = E:clone_c("hero_skill")
 tt.hero.skills.demolition_man.cooldown = b.demolition_man.cooldown
 tt.hero.skills.demolition_man.duration = b.demolition_man.duration
@@ -17757,7 +17765,11 @@ tt.hero.skills.demolition_man.hr_order = 3
 tt.hero.skills.demolition_man.hr_cost = {2, 2, 2}
 tt.hero.skills.demolition_man.xp_gain = b.demolition_man.xp_gain
 tt.hero.skills.demolition_man.key = "DEMOLITION_MAN"
-tt.hero.skills.demolition_man.xp_level_steps = {[1] = 1, [4] = 2, [7] = 3}
+tt.hero.skills.demolition_man.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3
+}
 tt.hero.skills.defensive_turret = E:clone_c("hero_skill")
 tt.hero.skills.defensive_turret.cooldown = b.defensive_turret.cooldown
 tt.hero.skills.defensive_turret.attack_cooldown = b.defensive_turret.attack.cooldown
@@ -17770,7 +17782,11 @@ tt.hero.skills.defensive_turret.hr_order = 4
 tt.hero.skills.defensive_turret.hr_cost = {2, 2, 2}
 tt.hero.skills.defensive_turret.xp_gain = b.defensive_turret.xp_gain
 tt.hero.skills.defensive_turret.key = "DEFENSIVE_TURRET"
-tt.hero.skills.defensive_turret.xp_level_steps = {[2] = 1, [5] = 2, [8] = 3}
+tt.hero.skills.defensive_turret.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
 tt.hero.skills.ultimate = E:clone_c("hero_skill")
 tt.hero.skills.ultimate.controller_name = "controller_hero_builder_ultimate"
 tt.hero.skills.ultimate.damage = b.ultimate.damage
@@ -17782,7 +17798,12 @@ tt.hero.skills.ultimate.hr_cost = {4, 4, 4}
 tt.hero.skills.ultimate.key = "WRECKING_BALL"
 tt.hero.skills.ultimate.duration = b.ultimate.duration
 tt.hero.skills.ultimate.cooldown = b.ultimate.cooldown
-tt.hero.skills.ultimate.xp_level_steps = {[1] = 1, [4] = 2, [7] = 3, [10] = 4}
+tt.hero.skills.ultimate.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
+}
 tt.health.dead_lifetime = b.dead_lifetime
 tt.health_bar.offset = v(0, 53)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
@@ -17823,7 +17844,9 @@ tt.melee.attacks[1].hit_time = fts(14)
 tt.melee.attacks[1].hit_fx = "fx_hero_builder_melee_attack_hit"
 tt.melee.attacks[1].hit_offset = v(45, 15)
 tt.melee.attacks[1].sound = "HeroBuilderBasicAttack"
-tt.melee.attacks[1].sound_args = {delay = fts(14)}
+tt.melee.attacks[1].sound_args = {
+	delay = fts(14)
+}
 tt.melee.attacks[1].xp_gain_factor = b.basic_melee.xp_gain_factor
 tt.melee.attacks[1].basic_attack = true
 tt.timed_attacks.list[1] = E:clone_c("custom_attack")
@@ -17874,7 +17897,10 @@ tt.timed_attacks.list[4].min_targets = b.defensive_turret.min_targets
 tt.timed_attacks.list[4].spawn_offset = v(51, 0)
 tt.timed_attacks.list[4].min_cooldown = 5
 tt.timed_attacks.list[4].min_distance_from_border = 100
-tt.ultimate = {ts = 0, cooldown = b.ultimate.cooldown[1]}
+tt.ultimate = {
+	ts = 0,
+	cooldown = b.ultimate.cooldown[1]
+}
 
 tt = RT("soldier_hero_builder_worker", "soldier_militia")
 b = balance.heroes.hero_builder
@@ -17914,10 +17940,10 @@ tt = RT("decal_hero_builder_defensive_turret", "decal_scripted")
 b = balance.heroes.hero_builder.defensive_turret
 AC(tt, "bullet_attack")
 for i = 1, 3 do
-tt.render.sprites[i] = E:clone_c("sprite")
-tt.render.sprites[i].prefix = "hero_obdul_skill_4_tower_layer" .. i
-tt.render.sprites[i].name = "idle"
-tt.render.sprites[i].group = "layers"
+	tt.render.sprites[i] = E:clone_c("sprite")
+	tt.render.sprites[i].prefix = "hero_obdul_skill_4_tower_layer" .. i
+	tt.render.sprites[i].name = "idle"
+	tt.render.sprites[i].group = "layers"
 end
 tt.bullet_attack.max_range = b.attack.range
 tt.bullet_attack.bullet = "arrow_hero_builder_defensive_turret"
@@ -17950,10 +17976,10 @@ tt.render.sprites[2].prefix = "hero_obdul_ultimate"
 tt.render.sprites[2].name = "ball"
 tt.render.sprites[2].loop = false
 for i = 1, 4 do
-tt.render.sprites[i + 2] = E:clone_c("sprite")
-tt.render.sprites[i + 2].prefix = "hero_obdul_ultimate"
-tt.render.sprites[i + 2].name = "rock_0" .. i .. "_in"
-tt.render.sprites[i + 1].loop = false
+	tt.render.sprites[i + 2] = E:clone_c("sprite")
+	tt.render.sprites[i + 2].prefix = "hero_obdul_ultimate"
+	tt.render.sprites[i + 2].name = "rock_0" .. i .. "_in"
+	tt.render.sprites[i + 1].loop = false
 end
 tt.render.sprites[7] = E:clone_c("sprite")
 tt.render.sprites[7].prefix = "hero_obdul_ultimate"
@@ -17983,20 +18009,20 @@ tt.render.sprites[10].scale = v(0.8, 0.8)
 local dust_scales = {v(0.8, 0.8), v(0.7, 0.7), v(0.7, 0.7), v(0.8, 0.8), v(0.7, 0.7), v(0.7, 0.7)}
 local dust_offset = {v(-30, 20), v(-35, 0), v(-20, -10), v(30, 20), v(35, 0), v(20, -10)}
 for i = 1, 6 do
-tt.render.sprites[10 + i] = E:clone_c("sprite")
-tt.render.sprites[10 + i].prefix = "hero_obdul_ultimate"
-tt.render.sprites[10 + i].name = "dust_cloud"
-tt.render.sprites[10 + i].loop = false
-tt.render.sprites[10 + i].scale = dust_scales[i]
-tt.render.sprites[10 + i].offset = dust_offset[i]
+	tt.render.sprites[10 + i] = E:clone_c("sprite")
+	tt.render.sprites[10 + i].prefix = "hero_obdul_ultimate"
+	tt.render.sprites[10 + i].name = "dust_cloud"
+	tt.render.sprites[10 + i].loop = false
+	tt.render.sprites[10 + i].scale = dust_scales[i]
+	tt.render.sprites[10 + i].offset = dust_offset[i]
 end
 tt.main_script.update = scripts.decal_hero_builder_ultimate_ball.update
 tt.tween.remove = true
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {fts(20), 0}}
 for i = 2, 16 do
-tt.tween.props[i] = table.deepclone(tt.tween.props[1])
-tt.tween.props[i].sprite_id = i
+	tt.tween.props[i] = table.deepclone(tt.tween.props[1])
+	tt.tween.props[i].sprite_id = i
 end
 tt.duration = 2.5
 
@@ -18009,6 +18035,10 @@ tt.bullet.hide_radius = 1
 tt.bullet.g = -2 / (fts(1) * fts(1))
 tt.bullet.align_with_trajectory = false
 tt.bullet.rotation_speed = 30 * FPS * math.pi / 180
+tt.bullet.mod = "mod_hero_builder_defensive_turret_stun"
+
+tt = RT("mod_hero_builder_defensive_turret_stun", "mod_stun")
+tt.modifier.duration = balance.heroes.hero_builder.defensive_turret.stun_duration
 
 tt = RT("aura_hero_builder_demolition_man", "aura")
 b = balance.heroes.hero_builder.demolition_man
@@ -18022,7 +18052,7 @@ tt.aura.radius = b.radius
 tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
 tt.aura.vis_flags = F_RANGED
 tt.main_script.update = scripts.aura_apply_damage.update
-tt.aura.mods = {"mod_hero_builder_demolition_man_hit_fx"}
+tt.aura.mods = {"mod_hero_builder_demolition_man_hit_fx", "mod_hero_builder_demolition_man_stun"}
 
 tt = RT("aura_hero_builder_ultimate", "aura")
 b = balance.heroes.hero_builder.ultimate
@@ -18057,6 +18087,9 @@ tt.main_script.insert = scripts.mod_track_target.insert
 tt.main_script.remove = scripts.mod_track_target.remove
 tt.main_script.update = scripts.mod_track_target.update
 tt.modifier.duration = fts(7)
+
+tt = RT("mod_hero_builder_demolition_man_stun", "mod_stun")
+tt.modifier.duration = E:get_template("mod_hero_builder_demolition_man_hit_fx").modifier.duration
 
 tt = RT("controller_hero_builder_ultimate")
 AC(tt, "pos", "main_script", "sound_events")
@@ -18098,12 +18131,7 @@ tt = RT("fx_hero_robot_ultimate_smoke", "decal_tween")
 tt.render.sprites[1].name = "Blaze_skill2humo_loop"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_OBJECTS
-tt.tween.props[1].keys = {
-	{fts(0), 0},
-	{fts(10), 255},
-	{0.8, 255},
-	{1, 0}
-}
+tt.tween.props[1].keys = {{fts(0), 0}, {fts(10), 255}, {0.8, 255}, {1, 0}}
 tt.tween.props[1].loop = false
 
 tt = RT("decal_hero_robot_skill_explode", "decal")
@@ -18157,7 +18185,11 @@ tt.hero.skills.jump.hr_order = 1
 tt.hero.skills.jump.hr_cost = {1, 1, 1}
 tt.hero.skills.jump.xp_gain = b.jump.xp_gain
 tt.hero.skills.jump.key = "JUMP"
-tt.hero.skills.jump.xp_level_steps = {[2] = 1, [5] = 2, [8] = 3}
+tt.hero.skills.jump.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
 tt.hero.skills.fire = CC("hero_skill")
 tt.hero.skills.fire.cooldown = b.fire.cooldown
 tt.hero.skills.fire.damage_min = b.fire.damage_min
@@ -18169,7 +18201,11 @@ tt.hero.skills.fire.hr_order = 2
 tt.hero.skills.fire.hr_cost = {2, 2, 2}
 tt.hero.skills.fire.xp_gain = b.fire.xp_gain
 tt.hero.skills.fire.key = "FIRE"
-tt.hero.skills.fire.xp_level_steps = {[3] = 1, [6] = 2, [9] = 3}
+tt.hero.skills.fire.xp_level_steps = {
+	[3] = 1,
+	[6] = 2,
+	[9] = 3
+}
 tt.hero.skills.explode = CC("hero_skill")
 tt.hero.skills.explode.cooldown = b.explode.cooldown
 tt.hero.skills.explode.damage_min = b.explode.damage_min
@@ -18181,7 +18217,11 @@ tt.hero.skills.explode.hr_order = 3
 tt.hero.skills.explode.hr_cost = {3, 3, 3}
 tt.hero.skills.explode.xp_gain = b.explode.xp_gain
 tt.hero.skills.explode.key = "EXPLODE"
-tt.hero.skills.explode.xp_level_steps = {[1] = 1, [4] = 2, [7] = 3}
+tt.hero.skills.explode.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3
+}
 tt.hero.skills.uppercut = CC("hero_skill")
 tt.hero.skills.uppercut.cooldown = b.uppercut.cooldown
 tt.hero.skills.uppercut.life_threshold = b.uppercut.life_threshold
@@ -18189,7 +18229,11 @@ tt.hero.skills.uppercut.hr_available = true
 tt.hero.skills.uppercut.hr_order = 4
 tt.hero.skills.uppercut.hr_cost = {3, 2, 1}
 tt.hero.skills.uppercut.key = "UPPERCUT"
-tt.hero.skills.uppercut.xp_level_steps = {[2] = 1, [5] = 2, [8] = 3}
+tt.hero.skills.uppercut.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
 tt.hero.skills.ultimate = CC("hero_skill")
 tt.hero.skills.ultimate.controller_name = "controller_hero_robot_ultimate"
 tt.hero.skills.ultimate.cooldown = b.ultimate.cooldown
@@ -18202,7 +18246,12 @@ tt.hero.skills.ultimate.hr_icon = "0010"
 tt.hero.skills.ultimate.hr_order = 5
 tt.hero.skills.ultimate.hr_cost = {4, 4, 4}
 tt.hero.skills.ultimate.key = "TRAIN"
-tt.hero.skills.ultimate.xp_level_steps = {[1] = 1, [4] = 2, [7] = 3, [10] = 4}
+tt.hero.skills.ultimate.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
+}
 tt.particles_name_1 = "ps_hero_robot_smoke_1"
 tt.particles_name_2 = "ps_hero_robot_smoke_2"
 tt.hero.fn_level_up = scripts.hero_robot.level_up
@@ -18244,7 +18293,9 @@ tt.melee.attacks[1].hit_offset = v(45, 15)
 tt.melee.attacks[1].xp_gain_factor = b.basic_melee.xp_gain_factor
 tt.melee.attacks[1].basic_attack = true
 tt.melee.attacks[1].sound = "CommonNoSwordAttack"
-tt.melee.attacks[1].sound_args = {delay = fts(8)}
+tt.melee.attacks[1].sound_args = {
+	delay = fts(8)
+}
 tt.timed_attacks.list[1] = CC("custom_attack")
 tt.timed_attacks.list[1].animation_prepare = "skill1start"
 tt.timed_attacks.list[1].animation = "skill1"
@@ -18254,7 +18305,9 @@ tt.timed_attacks.list[1].vis_flags = bor(F_STUN)
 tt.timed_attacks.list[1].disabled = true
 tt.timed_attacks.list[1].sound_cast = "HeroRobotDeepImpactCast"
 tt.timed_attacks.list[1].sound_impact = "HeroRobotDeepImpactImpact"
-tt.timed_attacks.list[1].sound_impact_args = {delay = fts(14)}
+tt.timed_attacks.list[1].sound_impact_args = {
+	delay = fts(14)
+}
 tt.timed_attacks.list[1].min_cooldown = b.shared_cooldown
 tt.timed_attacks.list[1].min_range = b.jump.min_range
 tt.timed_attacks.list[1].max_range = b.jump.max_range
@@ -18283,7 +18336,9 @@ tt.timed_attacks.list[2].vis_bans = bor(F_FLYING)
 tt.timed_attacks.list[2].damage_bans = bor(F_FLYING)
 tt.timed_attacks.list[2].damage_flags = bor(F_AREA)
 tt.timed_attacks.list[2].sound = "HeroRobotSmokescreenCast"
-tt.timed_attacks.list[2].sound_args = {delay = fts(0)}
+tt.timed_attacks.list[2].sound_args = {
+	delay = fts(0)
+}
 tt.timed_attacks.list[3] = CC("custom_attack")
 tt.timed_attacks.list[3].animation = "skill4"
 tt.timed_attacks.list[3].cooldown = nil
@@ -18322,7 +18377,10 @@ tt.flywalk.min_distance = b.distance_to_flywalk
 tt.flywalk.extra_speed = b.flywalk_speed
 tt.flywalk.animations = {"flystart", "passiveloop", "passiveout"}
 tt.flywalk.sound = "HeroRobotJetpackCast"
-tt.ultimate = {ts = 0, cooldown = b.ultimate.cooldown[1]}
+tt.ultimate = {
+	ts = 0,
+	cooldown = b.ultimate.cooldown[1]
+}
 
 tt = RT("bullet_hero_robot_skill_fire", "bullet")
 b = balance.heroes.hero_robot
@@ -18588,7 +18646,11 @@ tt.hero.skills.cluster_bomb.fire_duration = b.cluster_bomb.fire_duration
 tt.hero.skills.cluster_bomb.burn_damage_min = b.cluster_bomb.burning.damage
 tt.hero.skills.cluster_bomb.burn_damage_max = b.cluster_bomb.burning.damage
 tt.hero.skills.cluster_bomb.key = "CLUSTER_BOMB"
-tt.hero.skills.cluster_bomb.xp_level_steps = {[2] = 1, [5] = 2, [8] = 3}
+tt.hero.skills.cluster_bomb.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
 tt.hero.skills.shout_stun = CC("hero_skill")
 tt.hero.skills.shout_stun.cooldown = b.shout_stun.cooldown
 tt.hero.skills.shout_stun.stun_duration = b.shout_stun.stun_duration
@@ -18599,7 +18661,11 @@ tt.hero.skills.shout_stun.hr_order = 2
 tt.hero.skills.shout_stun.hr_available = true
 tt.hero.skills.shout_stun.xp_gain = b.shout_stun.xp_gain
 tt.hero.skills.shout_stun.key = "SHOUT_STUN"
-tt.hero.skills.shout_stun.xp_level_steps = {[3] = 1, [6] = 2, [9] = 3}
+tt.hero.skills.shout_stun.xp_level_steps = {
+	[3] = 1,
+	[6] = 2,
+	[9] = 3
+}
 tt.hero.skills.gattling = CC("hero_skill")
 tt.hero.skills.gattling.cooldown = b.gattling.cooldown
 tt.hero.skills.gattling.duration = b.gattling.duration
@@ -18611,7 +18677,11 @@ tt.hero.skills.gattling.hr_order = 3
 tt.hero.skills.gattling.hr_available = true
 tt.hero.skills.gattling.xp_gain = b.gattling.xp_gain
 tt.hero.skills.gattling.key = "GATTLING"
-tt.hero.skills.gattling.xp_level_steps = {[1] = 1, [4] = 2, [7] = 3}
+tt.hero.skills.gattling.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3
+}
 tt.hero.skills.eat_instakill = CC("hero_skill")
 tt.hero.skills.eat_instakill.cooldown = b.eat_instakill.cooldown
 tt.hero.skills.eat_instakill.hp_max = b.eat_instakill.hp_max
@@ -18621,7 +18691,11 @@ tt.hero.skills.eat_instakill.hr_order = 4
 tt.hero.skills.eat_instakill.hr_available = true
 tt.hero.skills.eat_instakill.xp_gain = b.eat_instakill.xp_gain
 tt.hero.skills.eat_instakill.key = "EAT_INSTAKILL"
-tt.hero.skills.eat_instakill.xp_level_steps = {[2] = 1, [5] = 2, [8] = 3}
+tt.hero.skills.eat_instakill.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
 tt.hero.skills.ultimate = CC("hero_skill")
 tt.hero.skills.ultimate.controller_name = "hero_bird_ultimate"
 tt.hero.skills.ultimate.damage_min = b.ultimate.bird.melee_attack.damage_min
@@ -18633,7 +18707,12 @@ tt.hero.skills.ultimate.hr_order = 5
 tt.hero.skills.ultimate.hr_cost = {3, 3, 3}
 tt.hero.skills.ultimate.key = "BIRDS_OF_PREY"
 tt.hero.skills.ultimate.cooldown = b.ultimate.cooldown
-tt.hero.skills.ultimate.xp_level_steps = {[1] = 1, [4] = 2, [7] = 3, [10] = 4}
+tt.hero.skills.ultimate.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
+}
 tt.hero.team = TEAM_LINIREA
 tt.flight_height = 80
 tt.unit.flight_height = 80
@@ -18791,7 +18870,10 @@ tt.tween.props[2].name = "scale"
 tt.tween.props[2].sprite_id = 2
 tt.tween.props[2].loop = true
 tt.unit.hide_after_death = true
-tt.ultimate = {ts = 0, cooldown = b.ultimate.cooldown[1]}
+tt.ultimate = {
+	ts = 0,
+	cooldown = b.ultimate.cooldown[1]
+}
 
 tt = RT("hero_bird_ultimate")
 b = balance.heroes.hero_bird.ultimate
@@ -19014,21 +19096,19 @@ tt.health.hp_max = nil
 tt.health_bar.offset = v(0, 30)
 tt.info.i18n_key = "HERO_LAVA_DOUBLE_TROUBLE_SOLDIER"
 tt.info.enc_icon = 12
-tt.info.portrait = "gui_bottom_info_image_soldiers_0056"
-tt.info.fn = scripts.soldier_reinforcement.get_info
-tt.info.random_name_format = nil
-tt.main_script.insert = scripts.soldier_reinforcement.insert
+tt.info.portrait = "kr5_info_portraits_soldiers_0037" -- TODO: 暂无对应头像（FL: 0056）
 tt.main_script.update = scripts.soldier_hero_lava_double_trouble.update
 tt.melee.attacks[1].cooldown = b.cooldown
 tt.melee.attacks[1].damage_max = nil
 tt.melee.attacks[1].damage_min = nil
 tt.melee.attacks[1].hit_time = fts(14)
 tt.melee.attacks[1].sound = "CommonNoSwordAttack"
-tt.melee.attacks[1].sound_args = {delay = fts(14)}
+tt.melee.attacks[1].sound_args = {
+	delay = fts(14)
+}
 tt.melee.range = 72
 tt.motion.max_speed = b.max_speed
 tt.regen.cooldown = 1
-tt.regen.health = 0
 tt.reinforcement.duration = b.duration
 tt.reinforcement.fade = false
 tt.reinforcement.fade_out = false
@@ -19063,7 +19143,11 @@ tt.hero.skills.temper_tantrum.hr_order = 1
 tt.hero.skills.temper_tantrum.hr_cost = {2, 2, 2}
 tt.hero.skills.temper_tantrum.xp_gain = b.temper_tantrum.xp_gain
 tt.hero.skills.temper_tantrum.key = "TEMPER_TANTRUM"
-tt.hero.skills.temper_tantrum.xp_level_steps = {[2] = 1, [5] = 2, [8] = 3}
+tt.hero.skills.temper_tantrum.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
 tt.hero.skills.hotheaded = CC("hero_skill")
 tt.hero.skills.hotheaded.mods = {"mod_hero_lava_hotheaded", "mod_hero_lava_hotheaded_fx"}
 tt.hero.skills.hotheaded.durations = b.hotheaded.durations
@@ -19074,7 +19158,11 @@ tt.hero.skills.hotheaded.hr_order = 2
 tt.hero.skills.hotheaded.hr_cost = {1, 2, 3}
 tt.hero.skills.hotheaded.xp_gain = b.hotheaded.xp_gain
 tt.hero.skills.hotheaded.key = "HOTHEADED"
-tt.hero.skills.hotheaded.xp_level_steps = {[3] = 1, [6] = 2, [9] = 3}
+tt.hero.skills.hotheaded.xp_level_steps = {
+	[3] = 1,
+	[6] = 2,
+	[9] = 3
+}
 tt.hero.skills.double_trouble = CC("hero_skill")
 tt.hero.skills.double_trouble.cooldown = b.double_trouble.cooldown
 tt.hero.skills.double_trouble.hr_available = true
@@ -19088,7 +19176,11 @@ tt.hero.skills.double_trouble.soldier_damage_max = b.double_trouble.soldier.dama
 tt.hero.skills.double_trouble.soldier_hp_max = b.double_trouble.soldier.hp_max
 tt.hero.skills.double_trouble.xp_gain = b.double_trouble.xp_gain
 tt.hero.skills.double_trouble.key = "DOUBLE_TROUBLE"
-tt.hero.skills.double_trouble.xp_level_steps = {[1] = 1, [4] = 2, [7] = 3}
+tt.hero.skills.double_trouble.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3
+}
 tt.hero.skills.wild_eruption = CC("hero_skill")
 tt.hero.skills.wild_eruption.cooldown = b.wild_eruption.cooldown
 tt.hero.skills.wild_eruption.hr_available = true
@@ -19100,7 +19192,11 @@ tt.hero.skills.wild_eruption.damage_max = b.wild_eruption.damage_max
 tt.hero.skills.wild_eruption.duration = b.wild_eruption.duration
 tt.hero.skills.wild_eruption.xp_gain = b.wild_eruption.xp_gain
 tt.hero.skills.wild_eruption.key = "WILD_ERUPTION"
-tt.hero.skills.wild_eruption.xp_level_steps = {[2] = 1, [5] = 2, [8] = 3}
+tt.hero.skills.wild_eruption.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
 tt.hero.skills.ultimate = CC("hero_skill")
 tt.hero.skills.ultimate.controller_name = "hero_lava_ultimate"
 tt.hero.skills.ultimate.hr_available = false
@@ -19114,9 +19210,17 @@ tt.hero.skills.ultimate.damage_max = b.ultimate.bullet.damage_max
 tt.hero.skills.ultimate.fireball_count = b.ultimate.fireball_count
 tt.hero.skills.ultimate.scorch_damage_min = b.ultimate.bullet.scorch.damage_min
 tt.hero.skills.ultimate.scorch_damage_max = b.ultimate.bullet.scorch.damage_max
-tt.hero.skills.ultimate.xp_level_steps = {[1] = 1, [4] = 2, [7] = 3, [10] = 4}
+tt.hero.skills.ultimate.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
+}
 tt.hero.team = TEAM_DARK_ARMY
-tt.ultimate = {ts = 0, cooldown = b.ultimate.cooldown[1]}
+tt.ultimate = {
+	ts = 0,
+	cooldown = b.ultimate.cooldown[1]
+}
 tt.health.dead_lifetime = b.dead_lifetime
 tt.health_bar.offset = v(0, 50)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
@@ -19152,8 +19256,6 @@ tt.melee.attacks[1] = CC("melee_attack")
 tt.melee.attacks[1].animation = "melee_attack"
 tt.melee.attacks[1].cooldown = b.basic_melee.cooldown
 tt.melee.attacks[1].hit_time = fts(14)
-tt.melee.attacks[1].hit_fx = "hero_raelyn_melee_attack_hit"
-tt.melee.attacks[1].hit_offset = v(35, 15)
 tt.melee.attacks[1].sound = "HeroKratoaBasicAttack"
 tt.melee.attacks[1].xp_gain_factor = b.basic_melee.xp_gain_factor
 tt.melee.attacks[1].basic_attack = true
@@ -19440,6 +19542,7 @@ tt = RT("hero_spider", "hero")
 b = balance.heroes.hero_spider
 AC(tt, "melee", "ranged", "teleport", "timed_attacks")
 tt.hero.level_stats.armor = b.armor
+tt.hero.level_stats.magic_armor = b.magic_armor
 tt.hero.level_stats.hp_max = b.hp_max
 tt.hero.level_stats.melee_damage_max = b.basic_melee.damage_max
 tt.hero.level_stats.melee_damage_min = b.basic_melee.damage_min
@@ -19456,7 +19559,11 @@ tt.hero.skills.instakill_melee.hr_order = 1
 tt.hero.skills.instakill_melee.hr_cost = {3, 2, 1}
 tt.hero.skills.instakill_melee.xp_gain = b.instakill_melee.xp_gain
 tt.hero.skills.instakill_melee.key = "INSTAKILL_MELEE"
-tt.hero.skills.instakill_melee.xp_level_steps = {[2] = 1, [5] = 2, [8] = 3}
+tt.hero.skills.instakill_melee.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
 tt.hero.skills.area_attack = CC("hero_skill")
 tt.hero.skills.area_attack.cooldown = b.area_attack.cooldown
 tt.hero.skills.area_attack.damage_type = b.area_attack.damage_type
@@ -19470,7 +19577,11 @@ tt.hero.skills.area_attack.hr_icon = "0008"
 tt.hero.skills.area_attack.hr_order = 2
 tt.hero.skills.area_attack.hr_cost = {2, 2, 2}
 tt.hero.skills.area_attack.key = "AREA_ATTACK"
-tt.hero.skills.area_attack.xp_level_steps = {[3] = 1, [6] = 2, [9] = 3}
+tt.hero.skills.area_attack.xp_level_steps = {
+	[3] = 1,
+	[6] = 2,
+	[9] = 3
+}
 tt.hero.skills.tunneling = CC("hero_skill")
 tt.hero.skills.tunneling.damage_type = b.tunneling.damage_type
 tt.hero.skills.tunneling.damage_radius = b.tunneling.damage_radius
@@ -19481,7 +19592,11 @@ tt.hero.skills.tunneling.hr_available = true
 tt.hero.skills.tunneling.hr_order = 3
 tt.hero.skills.tunneling.hr_cost = {2, 2, 2}
 tt.hero.skills.tunneling.key = "TUNNELING"
-tt.hero.skills.tunneling.xp_level_steps = {[1] = 1, [4] = 2, [7] = 3}
+tt.hero.skills.tunneling.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3
+}
 tt.hero.skills.supreme_hunter = CC("hero_skill")
 tt.hero.skills.supreme_hunter.hr_cost = {3, 3, 3}
 tt.hero.skills.supreme_hunter.hr_order = 4
@@ -19491,7 +19606,11 @@ tt.hero.skills.supreme_hunter.damage_max = b.supreme_hunter.damage_max
 tt.hero.skills.supreme_hunter.damage_min = b.supreme_hunter.damage_min
 tt.hero.skills.supreme_hunter.xp_gain = b.supreme_hunter.xp_gain
 tt.hero.skills.supreme_hunter.key = "SUPREME_HUNTER"
-tt.hero.skills.supreme_hunter.xp_level_steps = {[2] = 1, [5] = 2, [8] = 3}
+tt.hero.skills.supreme_hunter.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
 tt.hero.skills.ultimate = CC("hero_skill")
 tt.hero.skills.ultimate.hr_available = true
 tt.hero.skills.ultimate.hr_icon = "0018"
@@ -19505,9 +19624,17 @@ tt.hero.skills.ultimate.damage_min = b.ultimate.spider.melee_attack.damage_min
 tt.hero.skills.ultimate.damage_max = b.ultimate.spider.melee_attack.damage_max
 tt.hero.skills.ultimate.controller_name = "controller_hero_spider_ultimate"
 tt.hero.skills.ultimate.key = "ARACNID_SPAWNER"
-tt.hero.skills.ultimate.xp_level_steps = {[1] = 1, [4] = 2, [7] = 3, [10] = 4}
+tt.hero.skills.ultimate.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
+}
 tt.hero.team = TEAM_DARK_ARMY
-tt.ultimate = {ts = 0, cooldown = b.ultimate.cooldown[1]}
+tt.ultimate = {
+	ts = 0,
+	cooldown = b.ultimate.cooldown[1]
+}
 tt.health.dead_lifetime = b.dead_lifetime
 tt.health_bar.offset = v(0, 85)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_MEDIUM
@@ -19605,7 +19732,9 @@ tt.melee.attacks[1].cooldown = b.basic_melee.cooldown
 tt.melee.attacks[1].shared_cooldown = b.basic_melee.cooldown
 tt.melee.attacks[1].hit_time = fts(18)
 tt.melee.attacks[1].sound = "HeroSpiderBasicAttack"
-tt.melee.attacks[1].sound_args = {delay = fts(14)}
+tt.melee.attacks[1].sound_args = {
+	delay = fts(14)
+}
 tt.melee.attacks[1].xp_gain_factor = b.basic_melee.xp_gain_factor
 tt.melee.attacks[1].hit_offset = v(27, 15)
 tt.melee.attacks[1].animation = "attack"
@@ -19651,7 +19780,7 @@ tt.health.armor = b.armor
 tt.health.hp_max = b.hp
 tt.health_bar.offset = v(0, 30)
 tt.info.fn = scripts.soldier_reinforcement.get_info
-tt.info.portrait = "gui_bottom_info_image_soldiers_0057"
+tt.info.portrait = "kr5_info_portraits_soldiers_0037" -- TODO: 暂无对应头像（FL: 0057）
 tt.info.random_name_format = nil
 tt.info.random_name_count = nil
 tt.main_script.insert = scripts.soldier_reinforcement.insert
@@ -19741,12 +19870,7 @@ tt.render.sprites[1].name = "run"
 tt.render.sprites[1].anchor = v(0.5, 0.5)
 tt.render.sprites[1].z = Z_EFFECTS
 tt.render.sprites[1].loop = true
-tt.tween.props[1].keys = {
-	{0, 0},
-	{fts(10), 255},
-	{tt.modifier.duration - fts(10), 255},
-	{tt.modifier.duration, 0}
-}
+tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}, {tt.modifier.duration - fts(10), 255}, {tt.modifier.duration, 0}}
 --#endregion hero_spider
 
 --#region hero_mecha
@@ -19837,7 +19961,11 @@ tt.hero.skills.goblidrones.hr_order = 1
 tt.hero.skills.goblidrones.hr_cost = {3, 3, 3}
 tt.hero.skills.goblidrones.xp_gain = b.goblidrones.xp_gain
 tt.hero.skills.goblidrones.key = "GOBLIDRONES"
-tt.hero.skills.goblidrones.xp_level_steps = {[2] = 1, [5] = 2, [8] = 3}
+tt.hero.skills.goblidrones.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
 tt.hero.skills.tar_bomb = CC("hero_skill")
 tt.hero.skills.tar_bomb.cooldown = b.tar_bomb.cooldown
 tt.hero.skills.tar_bomb.duration = b.tar_bomb.duration
@@ -19850,7 +19978,11 @@ tt.hero.skills.tar_bomb.hr_icon = "0007"
 tt.hero.skills.tar_bomb.hr_order = 2
 tt.hero.skills.tar_bomb.hr_cost = {1, 1, 1}
 tt.hero.skills.tar_bomb.key = "TAR_BOMB"
-tt.hero.skills.tar_bomb.xp_level_steps = {[3] = 1, [6] = 2, [9] = 3}
+tt.hero.skills.tar_bomb.xp_level_steps = {
+	[3] = 1,
+	[6] = 2,
+	[9] = 3
+}
 tt.hero.skills.power_slam = CC("hero_skill")
 tt.hero.skills.power_slam.cooldown = b.power_slam.cooldown
 tt.hero.skills.power_slam.damage_type = b.power_slam.damage_type
@@ -19864,7 +19996,11 @@ tt.hero.skills.power_slam.hr_icon = "0008"
 tt.hero.skills.power_slam.hr_order = 3
 tt.hero.skills.power_slam.hr_cost = {2, 2, 2}
 tt.hero.skills.power_slam.key = "POWER_SLAM"
-tt.hero.skills.power_slam.xp_level_steps = {[1] = 1, [4] = 2, [7] = 3}
+tt.hero.skills.power_slam.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3
+}
 tt.hero.skills.mine_drop = CC("hero_skill")
 tt.hero.skills.mine_drop.cooldown = b.mine_drop.cooldown
 tt.hero.skills.mine_drop.max_mines = b.mine_drop.max_mines
@@ -19878,7 +20014,11 @@ tt.hero.skills.mine_drop.hr_order = 4
 tt.hero.skills.mine_drop.hr_cost = {2, 2, 2}
 tt.hero.skills.mine_drop.xp_gain = b.mine_drop.xp_gain
 tt.hero.skills.mine_drop.key = "MINE_DROP"
-tt.hero.skills.mine_drop.xp_level_steps = {[2] = 1, [5] = 2, [8] = 3}
+tt.hero.skills.mine_drop.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
 tt.hero.skills.ultimate = CC("hero_skill")
 tt.hero.skills.ultimate.controller_name = "controller_hero_mecha_ultimate"
 tt.hero.skills.ultimate.cooldown = b.ultimate.cooldown
@@ -19891,17 +20031,25 @@ tt.hero.skills.ultimate.hr_icon = "0010"
 tt.hero.skills.ultimate.hr_order = 5
 tt.hero.skills.ultimate.hr_cost = {4, 4, 4}
 tt.hero.skills.ultimate.key = "DEATH_FROM_ABOVE"
-tt.hero.skills.ultimate.xp_level_steps = {[1] = 1, [4] = 2, [7] = 3, [10] = 4}
-tt.ultimate = {ts = 0, cooldown = b.ultimate.cooldown[1]}
+tt.hero.skills.ultimate.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
+}
+tt.ultimate = {
+	ts = 0,
+	cooldown = b.ultimate.cooldown[1]
+}
 tt.hero.fn_level_up = scripts.hero_mecha.level_up
 tt.health.dead_lifetime = b.dead_lifetime
 tt.health_bar.offset = v(0, 62)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_MEDIUM
 tt.info.fn = scripts.hero_basic.get_info
-tt.info.hero_portrait = "kr5_hero_portraits_0006"
+tt.info.hero_portrait = "kr5_hero_portraits_0009"
 tt.info.ultimate_icon = "0007"
 tt.info.i18n_key = "HERO_MECHA"
-tt.info.portrait = "kr5_info_portraits_heroes_0006"
+tt.info.portrait = "kr5_info_portraits_heroes_0009"
 tt.info.stat_hp = b.stats.hp
 tt.info.stat_armor = b.stats.armor
 tt.info.stat_damage = b.stats.damage
@@ -20036,7 +20184,9 @@ tt.ranged.attacks[1].search_cooldown = 0.1
 tt.ranged.attacks[1].shoot_time = fts(8)
 tt.ranged.attacks[1].shoot_range = 25
 tt.ranged.attacks[1].sound = "HeroMechaGoblidroneAttack"
-tt.ranged.attacks[1].sound_args = {delay = fts(14)}
+tt.ranged.attacks[1].sound_args = {
+	delay = fts(14)
+}
 tt.ranged.attacks[1].sound_chance = 0.5
 tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
 tt.ranged.attacks[1].basic_attack = true
@@ -20044,11 +20194,7 @@ tt.tween.disabled = true
 tt.tween.remove = false
 tt.tween.props[1].name = "offset"
 tt.tween.props[1].loop = true
-tt.tween.props[1].keys = {
-	{0, v(0, tt.flight_height + 2)},
-	{0.4, v(0, tt.flight_height - 2)},
-	{0.8, v(0, tt.flight_height + 2)}
-}
+tt.tween.props[1].keys = {{0, v(0, tt.flight_height + 2)}, {0.4, v(0, tt.flight_height - 2)}, {0.8, v(0, tt.flight_height + 2)}}
 tt.tween.props[1].interp = "sine"
 
 tt = RT("zeppelin_hero_mecha", "decal_scripted")
@@ -20089,7 +20235,9 @@ tt.ranged.attacks[1].damage_type = b.ranged_attack.damage_type
 tt.ranged.attacks[1].damage_min_config = b.ranged_attack.damage_min
 tt.ranged.attacks[1].damage_max_config = b.ranged_attack.damage_max
 tt.ranged.attacks[1].shoot_time = fts(4)
-tt.ranged.attacks[1].sound_args = {delay = fts(14)}
+tt.ranged.attacks[1].sound_args = {
+	delay = fts(14)
+}
 tt.ranged.attacks[1].sound_chance = 0.5
 tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE, F_FLYING, F_CLIFF)
 tt.ranged.attacks[1].basic_attack = true
@@ -20097,10 +20245,7 @@ tt.tween.disabled = true
 tt.tween.remove = false
 tt.tween.props[1].name = "offset"
 tt.tween.props[1].loop = false
-tt.tween.props[1].keys = {
-	{0, v(0, tt.flight_height)},
-	{2, v(0, tt.flight_height_attack)}
-}
+tt.tween.props[1].keys = {{0, v(0, tt.flight_height)}, {2, v(0, tt.flight_height_attack)}}
 tt.tween.props[1].interp = "linear"
 tt.tween.props[1].sprite_id = 2
 tt.tween.props[2] = table.deepclone(tt.tween.props[1])
@@ -20144,8 +20289,9 @@ tt.force_motion.max_v = 450
 tt.max_rotation_speed = 12
 tt.min_speed = 2
 
-tt = RT("bullet_hero_mecha_tar_bomb", "bombKR5")
+tt = RT("bullet_hero_mecha_tar_bomb", "bomb")
 b = balance.heroes.hero_mecha.tar_bomb
+tt.bullet.damage_decay_random = false
 tt.bullet.flight_time = fts(25)
 tt.bullet.hit_fx = "fx_bullet_hero_mecha_tar_bomb"
 tt.bullet.align_with_trajectory = false
@@ -20173,19 +20319,16 @@ tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].sprite_id = 1
-tt.tween.props[1].keys = {
-	{0, 255},
-	{tt.aura.duration - 0.5, 255},
-	{tt.aura.duration, 0}
-}
+tt.tween.props[1].keys = {{0, 255}, {tt.aura.duration - 0.5, 255}, {tt.aura.duration, 0}}
 
 tt = RT("mod_bullet_hero_mecha_tar_bomb_slow", "mod_slow")
 b = balance.heroes.hero_mecha.tar_bomb
 tt.slow.factor = b.slow_factor
 tt.modifier.duration = 0.5
 
-tt = RT("bullet_hero_mecha_mine", "bombKR5")
+tt = RT("bullet_hero_mecha_mine", "bomb")
 b = balance.heroes.hero_mecha.mine_drop
+tt.bullet.damage_decay_random = false
 tt.bullet.flight_time = fts(25)
 tt.bullet.align_with_trajectory = false
 tt.bullet.ignore_hit_offset = true
@@ -20225,8 +20368,9 @@ b = balance.heroes.hero_mecha.power_slam
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS, F_FLYING)
 
-tt = RT("bullet_zeppelin_hero_mecha", "bombKR5")
+tt = RT("bullet_zeppelin_hero_mecha", "bomb")
 b = balance.heroes.hero_mecha.ultimate
+tt.bullet.damage_decay_random = false
 tt.bullet.flight_time = fts(40)
 tt.bullet.hit_fx = "fx_bullet_zeppelin_hero_mecha"
 tt.bullet.align_with_trajectory = false

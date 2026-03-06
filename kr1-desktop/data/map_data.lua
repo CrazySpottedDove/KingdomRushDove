@@ -1657,7 +1657,7 @@ return {
 			icon = 3,
 			stats = {6, 5, 5, 6}
 		},
-        		-- 建筑师
+		-- 建筑师
 		{
 			from_kr = 5,
 			portrait = 5,
@@ -1690,7 +1690,7 @@ return {
 			icon = 4,
 			stats = {5, 5, 5, 6}
 		},
-        		-- 格里芬
+		-- 格里芬
 		{
 			from_kr = 5,
 			portrait = 8,
@@ -1712,8 +1712,17 @@ return {
 			icon = 7,
 			stats = {4, 4, 6, 8}
 		},
-		-- 奥格纳罗：available_level = 112
-        -- 战争巨头
+		{
+			from_kr = 5,
+			portrait = 9,
+			thumb = 9,
+			name = "hero_mecha",
+			available_level = 112,
+			starting_level = 1,
+			icon = 9,
+			stats = {6, 4, 7, 5}
+		},
+		-- 战争巨头
 		{
 			from_kr = 5,
 			portrait = 10,
@@ -1811,16 +1820,6 @@ return {
 			starting_level = 1,
 			icon = 17,
 			stats = {6, 8, 6, 4}
-		}, -- 奥纳格罗
-		{
-			from_kr = 5,
-			portrait = 6,
-			thumb = 6,
-			name = "hero_mecha",
-			available_level = 116,
-			starting_level = 1,
-			icon = 6,
-			stats = {6, 4, 7, 5}
 		}
 	},
 	level_data = {

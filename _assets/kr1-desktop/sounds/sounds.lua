@@ -6568,9 +6568,35 @@ return {
 		loop = false,
 		source_group = "TAUNTS"
 	},
-	HeroRobotDeath = {
+	HeroHacksawDeath = {
 		files = {"Hacksaw-Death01c.ogg"},
 		gain = 1,
+		loop = false,
+		source_group = "TAUNTS"
+	},
+	HeroRobotTaunt = {
+		files = {"kr_voice_warhead_taunt01_b.ogg", "kr_voice_warhead_taunt02_a.ogg", "kr_voice_warhead_taunt03_a.ogg"},
+		gain = 0.7,
+		ignore = 1,
+		loop = false,
+		mode = "sequence",
+		source_group = "TAUNTS"
+	},
+	HeroRobotTauntIntro = {
+		files = {"kr_voice_warhead_select_b.ogg"},
+		gain = 0.8,
+		loop = false,
+		source_group = "TAUNTS"
+	},
+	HeroRobotTauntSelect = {
+		files = {"kr_voice_warhead_select_b.ogg"},
+		gain = 0.7,
+		loop = false,
+		source_group = "TAUNTS"
+	},
+	HeroRobotDeath = {
+		files = {"kr_voice_warhead_death_c.ogg"},
+		gain = 0.7,
 		loop = false,
 		source_group = "TAUNTS"
 	},
@@ -6586,7 +6612,7 @@ return {
 		loop = false,
 		source_group = "SFX"
 	},
-	HeroRobotDrill = {
+	HeroHacksawDrill = {
 		files = {"inferno_lumberjack_drill.ogg"},
 		gain = 1,
 		loop = false,
@@ -6610,7 +6636,7 @@ return {
 		loop = false,
 		source_group = "SFX"
 	},
-	HeroRobotShoot = {
+	HeroHacksawShoot = {
 		files = {"inferno_lumberjack_shootSaw.ogg"},
 		gain = 1,
 		loop = false,
@@ -6622,7 +6648,7 @@ return {
 		loop = false,
 		source_group = "SFX"
 	},
-	HeroRobotTaunt = {
+	HeroHacksawTaunt = {
 		files = {"Hacksaw-01c.ogg", "Hacksaw-02c.ogg", "Hacksaw-03a.ogg", "Hacksaw-04a.ogg"},
 		gain = 1,
 		ignore = 1,
@@ -6630,13 +6656,13 @@ return {
 		mode = "sequence",
 		source_group = "TAUNTS"
 	},
-	HeroRobotTauntIntro = {
+	HeroHacksawTauntIntro = {
 		files = {"Level_up.ogg"},
 		gain = 1,
 		loop = false,
 		source_group = "TAUNTS"
 	},
-	HeroRobotTauntSelect = {
+	HeroHacksawTauntSelect = {
 		files = {"Hacksaw-01c.ogg"},
 		gain = 1,
 		loop = false,

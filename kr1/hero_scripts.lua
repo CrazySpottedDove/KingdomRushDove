@@ -33376,6 +33376,25 @@ function scripts.hero_builder.update(this, store)
 				U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 			end
 
+			if ready_to_use_skill(this.ultimate, store) then
+				local target = U.find_foremost_enemy_in_range_filter_off(this.pos, 200, 0, F_AREA, 0)
+
+				if target and target.pos then
+					local e = E:create_entity(this.hero.skills.ultimate.controller_name)
+
+					e.level = this.hero.skills.ultimate.level
+					e.pos = V.vclone(target.pos)
+
+					queue_insert(store, e)
+
+					this.ultimate.ts = store.tick_ts
+
+					SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
+				else
+					this.ultimate.ts = this.ultimate.ts + 1
+				end
+			end
+
 			skill = this.hero.skills.overtime_work
 			a = overtime_work_attack
 
@@ -33387,7 +33406,9 @@ function scripts.hero_builder.update(this, store)
 				else
 					local start_ts = store.tick_ts
 
-					S:queue(a.sound, {delay = fts(10)})
+					S:queue(a.sound, {
+						delay = fts(10)
+					})
 					U.animation_start(this, a.animation, nil, store.tick_ts, 1)
 
 					if SU.y_hero_wait(store, this, a.cast_time) then
@@ -33451,7 +33472,9 @@ function scripts.hero_builder.update(this, store)
 				a.ts = start_ts
 				last_ts = start_ts
 
-				S:queue(a.sound, {delay = fts(10)})
+				S:queue(a.sound, {
+					delay = fts(10)
+				})
 				SU.hero_gain_xp_from_skill(this, skill)
 
 				local mod = E:create_entity(a.mod)
@@ -33479,7 +33502,9 @@ function scripts.hero_builder.update(this, store)
 				else
 					local start_ts = store.tick_ts
 
-					S:queue(a.sound, {delay = fts(10)})
+					S:queue(a.sound, {
+						delay = fts(10)
+					})
 
 					local fx = E:create_entity(a.fx)
 
@@ -33511,7 +33536,7 @@ function scripts.hero_builder.update(this, store)
 					U.animation_start(fx, "loop", nil, store.tick_ts, true)
 
 					if SU.y_hero_wait(store, this, aura.aura.duration - (store.tick_ts - a.ts)) then
-						-- block empty
+					-- block empty
 					end
 
 					queue_remove(store, aura)
@@ -33608,7 +33633,9 @@ function scripts.hero_builder.update(this, store)
 						e.pos = V.vclone(epos)
 
 						queue_insert(store, e)
-						S:queue(a.sound_cast, {delay = fts(10)})
+						S:queue(a.sound_cast, {
+							delay = fts(10)
+						})
 
 						e.sound_destroy = a.sound_destroy
 
@@ -33631,9 +33658,9 @@ function scripts.hero_builder.update(this, store)
 			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
 			if brk or sta ~= A_NO_TARGET then
-				-- block empty
+			-- block empty
 			elseif SU.soldier_go_back_step(store, this) then
-				-- block empty
+			-- block empty
 			else
 				SU.soldier_idle(store, this)
 				SU.soldier_regen(store, this)
@@ -33678,7 +33705,9 @@ function scripts.decal_hero_builder_defensive_turret.update(this, store)
 
 	while true do
 		if store.tick_ts - this.start_ts > this.duration then
-			S:queue(this.sound_destroy, {delay = fts(10)})
+			S:queue(this.sound_destroy, {
+				delay = fts(10)
+			})
 			U.y_animation_play_group(this, "death", nil, store.tick_ts, false, "layers")
 
 			break
@@ -33976,30 +34005,30 @@ function scripts.hero_robot.update(this, store)
 	end
 
 	local function explosion_damage(point, radius, damage_min, damage_max, damage_type, damage_bans, damage_flags, mod_to_apply)
-		local enemies = table.filter(store.entities, function(k, v)
-			return v.enemy and v.vis and v.health and not v.health.dead and band(v.vis.flags, damage_bans) == 0 and band(v.vis.bans, damage_flags) == 0 and U.is_inside_ellipse(v.pos, point, radius)
-		end)
+		local enemies = U.find_enemies_in_range_filter_off(point, radius, damage_flags, damage_bans)
 
-		for _, enemy in pairs(enemies) do
-			local d = E:create_entity("damage")
+		if enemies then
+			for _, enemy in pairs(enemies) do
+				local d = E:create_entity("damage")
 
-			d.damage_type = damage_type
+				d.damage_type = damage_type
 
-			local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, point, radius)
+				local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, point, radius)
 
-			d.value = math.floor(damage_max - (damage_max - damage_min) * dist_factor)
-			d.source_id = this.id
-			d.target_id = enemy.id
+				d.value = math.floor(damage_max - (damage_max - damage_min) * dist_factor)
+				d.source_id = this.id
+				d.target_id = enemy.id
 
-			queue_damage(store, d)
+				queue_damage(store, d)
 
-			if mod_to_apply then
-				local mod = E:create_entity(mod_to_apply)
+				if mod_to_apply then
+					local mod = E:create_entity(mod_to_apply)
 
-				mod.modifier.target_id = enemy.id
-				mod.modifier.source_id = this.id
+					mod.modifier.target_id = enemy.id
+					mod.modifier.source_id = this.id
 
-				queue_insert(store, mod)
+					queue_insert(store, mod)
+				end
 			end
 		end
 	end
@@ -34057,7 +34086,6 @@ function scripts.hero_robot.update(this, store)
 
 					this.vis.bans = F_ALL
 					this.health.immune_to = F_ALL
-
 
 					U.speed_inc_self(this, tw.extra_speed)
 					this.unit.marker_hidden = true
@@ -34122,9 +34150,27 @@ function scripts.hero_robot.update(this, store)
 				end
 			end
 
-
 			if SU.hero_level_up(store, this) then
 				U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
+			end
+
+			if ready_to_use_skill(this.ultimate, store) then
+				local target = U.find_foremost_enemy_in_range_filter_off(this.pos, 200, 0, F_AREA, 0)
+
+				if target and target.pos then
+					local e = E:create_entity(this.hero.skills.ultimate.controller_name)
+
+					e.level = this.hero.skills.ultimate.level
+					e.pos = V.vclone(target.pos)
+
+					queue_insert(store, e)
+
+					this.ultimate.ts = store.tick_ts
+
+					SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
+				else
+					this.ultimate.ts = this.ultimate.ts + 1
+				end
 			end
 
 			skill = this.hero.skills.jump
@@ -34447,9 +34493,9 @@ function scripts.hero_robot.update(this, store)
 			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
 			if brk or sta ~= A_NO_TARGET then
-				-- block empty
+			-- block empty
 			elseif SU.soldier_go_back_step(store, this) then
-				-- block empty
+			-- block empty
 			else
 				SU.soldier_idle(store, this)
 				SU.soldier_regen(store, this)
@@ -34615,7 +34661,7 @@ function scripts.aura_hero_robot_skill_fire_slow.update(this, store, script)
 		end
 
 		if not (store.tick_ts - last_hit_ts >= this.aura.cycle_time) or this.aura.apply_duration and first_hit_ts and store.tick_ts - first_hit_ts > this.aura.apply_duration then
-			-- block empty
+		-- block empty
 		else
 			if this.render and this.aura.cast_resets_sprite_id then
 				this.render.sprites[this.aura.cast_resets_sprite_id].ts = store.tick_ts
@@ -34847,6 +34893,7 @@ function scripts.mod_hero_robot_skill_uppercut.update(this, store, script)
 		target.ui.can_click = true
 		target.ui.can_select = true
 		target.health_bar.hidden = false
+		target.health.hp = 0
 		target.unit.show_blood_pool = true
 
 		for i, es in pairs(target.render.sprites) do
@@ -35040,9 +35087,9 @@ function scripts.aura_hero_robot_ultimate_train.update(this, store)
 			end
 
 			if already_hit_target then
-				-- block empty
+			-- block empty
 			elseif target and not target.health.dead and target.enemy then
-				queue_damage(store, SU.create_attack_damage(this, target.id, this.id))
+				queue_damage(store, SU.create_attack_damage(this, target.id, this))
 
 				local hit_fx = E:create_entity(this.hit_fx)
 
@@ -35390,23 +35437,41 @@ function scripts.hero_bird.update(this, store)
 			SU.y_hero_new_rally(store, this)
 		end
 
-
 		if SU.hero_level_up(store, this) then
 			U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 		end
 
+		if ready_to_use_skill(this.ultimate, store) then
+			local target = U.find_foremost_enemy_in_range_filter_off(this.pos, 200, 0, F_AREA, 0)
+
+			if target and target.pos then
+				local e = E:create_entity(this.hero.skills.ultimate.controller_name)
+
+				e.level = this.hero.skills.ultimate.level
+				e.pos = V.vclone(target.pos)
+
+				queue_insert(store, e)
+
+				this.ultimate.ts = store.tick_ts
+
+				SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
+			else
+				this.ultimate.ts = this.ultimate.ts + 1
+			end
+		end
+
 		for _, a in pairs(this.timed_attacks.list) do
 			if a.disabled then
-				-- block empty
+			-- block empty
 			elseif a.sync_animation and not this.render.sprites[1].sync_flag then
-				-- block empty
+			-- block empty
 			elseif store.tick_ts - a.ts < a.cooldown then
-				-- block empty
+			-- block empty
 			elseif a == cluster_bomb_attack then
 				local target, targets, pred_pos = U.find_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
 
 				if not targets or #targets < a.min_targets or not pred_pos then
-					-- block empty
+				-- block empty
 				else
 					local start_ts = store.tick_ts
 					local b
@@ -35417,7 +35482,7 @@ function scripts.hero_bird.update(this, store)
 					S:queue(a.start_sound, a.start_sound_args)
 
 					if SU.y_hero_wait(store, this, a.shoot_time) then
-						-- block empty
+					-- block empty
 					else
 						b = E:create_entity(a.bullet)
 						b.bullet.target_id = target.id
@@ -35445,7 +35510,7 @@ function scripts.hero_bird.update(this, store)
 						a.ts = start_ts
 
 						if SU.y_hero_wait(store, this, a.explosion_time) then
-							-- block empty
+						-- block empty
 						else
 							do
 								local ray = E:create_entity(a.ray)
@@ -35475,7 +35540,7 @@ function scripts.hero_bird.update(this, store)
 							end
 
 							if SU.y_hero_animation_wait(this) then
-								-- block empty
+							-- block empty
 							else
 								U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil, true)
 							end
@@ -35488,7 +35553,7 @@ function scripts.hero_bird.update(this, store)
 				local target, targets, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, a.radius, a.node_prediction, a.vis_flags, a.vis_bans)
 
 				if not targets or #targets < a.min_targets or not pred_pos then
-					-- block empty
+				-- block empty
 				else
 					local start_ts = store.tick_ts
 					local an, af, ai = U.animation_name_facing_point(this, a.animation, pred_pos)
@@ -35497,7 +35562,7 @@ function scripts.hero_bird.update(this, store)
 					S:queue(a.sound)
 
 					if SU.y_hero_wait(store, this, a.shoot_time) then
-						-- block empty
+					-- block empty
 					else
 						local targets = U.find_enemies_in_range_filter_off(this.pos, a.radius, a.vis_flags, a.vis_bans)
 
@@ -35530,7 +35595,7 @@ function scripts.hero_bird.update(this, store)
 						end
 
 						if SU.y_hero_animation_wait(this) then
-							-- block empty
+						-- block empty
 						else
 							U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil, true)
 						end
@@ -35540,7 +35605,7 @@ function scripts.hero_bird.update(this, store)
 				local target, _, pred_pos = U.find_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
 
 				if not target or not pred_pos then
-					-- block empty
+				-- block empty
 				else
 					local start_ts = store.tick_ts
 					local an, af, ai = U.animation_name_facing_point(this, a.animation_in, pred_pos)
@@ -35548,7 +35613,7 @@ function scripts.hero_bird.update(this, store)
 					U.animation_start(this, an, af, store.tick_ts, false)
 
 					if SU.y_hero_animation_wait(this) then
-						-- block empty
+					-- block empty
 					else
 						if not target or target.health.dead then
 							target, _, pred_pos = U.find_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
@@ -35645,7 +35710,7 @@ function scripts.hero_bird.update(this, store)
 						end
 
 						if SU.y_hero_animation_wait(this) then
-							-- block empty
+						-- block empty
 						else
 							U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil, true)
 						end
@@ -35657,7 +35722,7 @@ function scripts.hero_bird.update(this, store)
 				end)
 
 				if not target or not pred_pos then
-					-- block empty
+				-- block empty
 				else
 					local start_ts = store.tick_ts
 					local an, af, ai = U.animation_name_facing_point(this, a.animation, pred_pos)
@@ -35675,7 +35740,7 @@ function scripts.hero_bird.update(this, store)
 					S:queue(a.sound)
 
 					if SU.y_hero_wait(store, this, prep_time) then
-						-- block empty
+					-- block empty
 					else
 						local fly_time = a.shoot_time - prep_time
 						local fly_start_ts = store.tick_ts
@@ -35707,7 +35772,7 @@ function scripts.hero_bird.update(this, store)
 						end
 
 						if SU.y_hero_animation_wait(this) then
-							-- block empty
+						-- block empty
 						else
 							U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil, true)
 						end
@@ -35840,10 +35905,7 @@ function scripts.hero_bird_ultimate_child.update(this, store)
 	fm.a_step = fm.a_step + math.random(-3, 3)
 	this.tween.ts = U.frandom(0, 1)
 
-	local oos = {
-		V.v(-20, 0),
-		V.v(20, 7)
-	}
+	local oos = {V.v(-20, 0), V.v(20, 7)}
 	local oo = oos[this.child_id]
 
 	if this.child_id == 1 then
@@ -35901,15 +35963,9 @@ function scripts.hero_bird_ultimate_child.update(this, store)
 				local old_keys1 = this.tween.props[1].keys
 				local old_keys2 = this.tween.props[2].keys
 
-				this.tween.props[1].keys = {
-					{0, v(0, this.flight_height)},
-					{fly_attack_time, v(0, dest_fh)}
-				}
+				this.tween.props[1].keys = {{0, v(0, this.flight_height)}, {fly_attack_time, v(0, dest_fh)}}
 				this.tween.props[1].loop = false
-				this.tween.props[2].keys = {
-					{0, v(0.75, 0.75)},
-					{fly_attack_time, v(1, 1)}
-				}
+				this.tween.props[2].keys = {{0, v(0.75, 0.75)}, {fly_attack_time, v(1, 1)}}
 				this.tween.props[2].loop = false
 				this.tween.ts = store.tick_ts
 
@@ -35920,14 +35976,14 @@ function scripts.hero_bird_ultimate_child.update(this, store)
 				U.y_ease_keys(store, {this.pos, this.pos}, {"x", "y"}, {start_pos.x, start_pos.y}, {dest_atk.x, dest_atk.y}, fly_attack_time)
 
 				if target.health.dead or band(a.vis_flags, target.vis.bans) ~= 0 then
-					-- block empty
+				-- block empty
 				else
 					if math.random() < a.sound_chance then
 						S:queue(a.sound)
 					end
 
 					do
-						local d = SU.create_attack_damage(a, target.id, this.id)
+						local d = SU.create_attack_damage(a, target.id, this)
 
 						queue_damage(store, d)
 
@@ -35947,14 +36003,8 @@ function scripts.hero_bird_ultimate_child.update(this, store)
 
 				local start_offset_y = this.render.sprites[1].offset.y
 
-				this.tween.props[1].keys = {
-					{0, v(0, start_offset_y)},
-					{fly_attack_time, v(0, this.flight_height)}
-				}
-				this.tween.props[2].keys = {
-					{0, v(1, 1)},
-					{fly_attack_time, v(0.75, 0.75)}
-				}
+				this.tween.props[1].keys = {{0, v(0, start_offset_y)}, {fly_attack_time, v(0, this.flight_height)}}
+				this.tween.props[2].keys = {{0, v(1, 1)}, {fly_attack_time, v(0.75, 0.75)}}
 				this.tween.ts = store.tick_ts
 				dest_atk.x = dest_atk.x - (start_pos.x - dest_atk.x)
 				start_pos.x = this.pos.x
@@ -36014,6 +36064,9 @@ scripts.hero_lava = {}
 
 function scripts.hero_lava.level_up(this, store, initial)
 	local hl, ls = level_up_basic(this)
+
+	this.melee.attacks[1].damage_min = ls.melee_damage_min[hl]
+	this.melee.attacks[1].damage_max = ls.melee_damage_max[hl]
 
 	upgrade_skill(this, "temper_tantrum", function(this, s)
 		local a = this.melee.attacks[2]
@@ -36337,9 +36390,27 @@ function scripts.hero_lava.update(this, store)
 			end
 
 			if SU.hero_level_up(store, this) then
-				U.y_animation_play(this, "level_up", nil, store.tick_ts, 1)
+				U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 			end
 
+			if ready_to_use_skill(this.ultimate, store) then
+				local target = U.find_foremost_enemy_in_range_filter_off(this.pos, 200, 0, F_AREA, 0)
+
+				if target and target.pos then
+					local e = E:create_entity(this.hero.skills.ultimate.controller_name)
+
+					e.level = this.hero.skills.ultimate.level
+					e.pos = V.vclone(target.pos)
+
+					queue_insert(store, e)
+
+					this.ultimate.ts = store.tick_ts
+
+					SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
+				else
+					this.ultimate.ts = this.ultimate.ts + 1
+				end
+			end
 
 			skill = this.hero.skills.wild_eruption
 			a = wild_eruption
@@ -36390,14 +36461,14 @@ function scripts.hero_lava.update(this, store)
 			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
 			if brk or sta ~= A_NO_TARGET then
-				-- block empty
+			-- block empty
 			elseif SU.soldier_go_back_step(store, this) then
-				-- block empty
+			-- block empty
 			else
-				brk, sta = y_hero_ranged_attacks(store, this)
+				brk, sta = SU.y_soldier_ranged_attacks(store, this)
 
 				if brk then
-					-- block empty
+				-- block empty
 				else
 					SU.soldier_idle(store, this)
 					SU.soldier_regen(store, this)
@@ -36595,9 +36666,6 @@ function scripts.soldier_hero_lava_double_trouble.update(this, store, script)
 
 			SU.remove_modifiers(store, this)
 			SU.y_soldier_death(store, this)
-
-			this.tween.disabled = false
-			this.tween.ts = store.tick_ts
 
 			return
 		end
@@ -36924,7 +36992,6 @@ function scripts.hero_spider.update(this, store)
 				end
 			end
 
-
 			skill = this.hero.skills.instakill_melee
 			a = instakill_on_melee_attack
 
@@ -37145,20 +37212,39 @@ function scripts.hero_spider.update(this, store)
 			::label_1340_0::
 
 			if SU.hero_level_up(store, this) then
-				U.y_animation_play(this, "level_up", nil, store.tick_ts, 1)
+				U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+			end
+
+			if ready_to_use_skill(this.ultimate, store) then
+				local target = U.find_foremost_enemy_in_range_filter_off(this.pos, 200, 0, F_AREA, 0)
+
+				if target and target.pos then
+					local e = E:create_entity(this.hero.skills.ultimate.controller_name)
+
+					e.level = this.hero.skills.ultimate.level
+					e.pos = V.vclone(target.pos)
+
+					queue_insert(store, e)
+
+					this.ultimate.ts = store.tick_ts
+
+					SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
+				else
+					this.ultimate.ts = this.ultimate.ts + 1
+				end
 			end
 
 			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
 			if brk or sta ~= A_NO_TARGET then
-				-- block empty
+			-- block empty
 			else
-				brk, sta = y_hero_ranged_attacks(store, this)
+				brk, sta = SU.y_soldier_ranged_attacks(store, this)
 
 				if brk then
-					-- block empty
+				-- block empty
 				elseif SU.soldier_go_back_step(store, this) then
-					-- block empty
+				-- block empty
 				else
 					SU.soldier_idle(store, this)
 					SU.soldier_regen(store, this)
@@ -37260,13 +37346,7 @@ function scripts.controller_hero_spider_ultimate.update(this, store)
 	end
 
 	local x, y = this.pos.x, this.pos.y
-	local spawn_formations = {
-		{V.v(x, y)},
-		{V.v(x + 12, y - 12), V.v(x - 12, y + 12)},
-		{V.v(x + 14, y - 12), V.v(x - 14, y - 12), V.v(x, y + 12)},
-		{V.v(x + 12, y - 12), V.v(x - 12, y + 12), V.v(x - 16, y - 12), V.v(x + 16, y + 12)},
-		{V.v(x, y), V.v(x + 14, y - 17), V.v(x - 14, y + 17), V.v(x - 22, y - 13), V.v(x + 22, y + 13)}
-	}
+	local spawn_formations = {{V.v(x, y)}, {V.v(x + 12, y - 12), V.v(x - 12, y + 12)}, {V.v(x + 14, y - 12), V.v(x - 14, y - 12), V.v(x, y + 12)}, {V.v(x + 12, y - 12), V.v(x - 12, y + 12), V.v(x - 16, y - 12), V.v(x + 16, y + 12)}, {V.v(x, y), V.v(x + 14, y - 17), V.v(x - 14, y + 17), V.v(x - 22, y - 13), V.v(x + 22, y + 13)}}
 
 	if this.spawn_amount > #spawn_formations then
 		this.spawn_amount = #spawn_formations
@@ -37368,11 +37448,7 @@ function scripts.hero_mecha.level_up(this, store, initial)
 		local tar = E:get_template(bullet.bullet.hit_payload)
 
 		tar.aura.duration = s.duration[s.level]
-		tar.tween.props[1].keys = {
-			{0, 255},
-			{tar.aura.duration - 0.5, 255},
-			{tar.aura.duration, 0}
-		}
+		tar.tween.props[1].keys = {{0, 255}, {tar.aura.duration - 0.5, 255}, {tar.aura.duration, 0}}
 	end)
 
 	upgrade_skill(this, "power_slam", function(this, s)
@@ -37502,9 +37578,6 @@ function scripts.hero_mecha.update(this, store)
 				idle_ts = store.tick_ts
 			end
 
-			SU.alliance_merciless_upgrade(store, this)
-			SU.alliance_corageous_upgrade(store, this)
-
 			a = this.timed_attacks.list[1]
 			skill = this.hero.skills.goblidrones
 
@@ -37512,7 +37585,7 @@ function scripts.hero_mecha.update(this, store)
 				local target, targets = U.find_foremost_enemy_in_range_filter_off(this.pos, a.spawn_range, false, a.vis_flags, a.vis_bans)
 
 				if not targets or #targets < a.min_targets then
-					-- block empty
+				-- block empty
 				else
 					local start_ts = store.tick_ts
 					local an, af = U.animation_name_facing_point(this, a.animation, target.pos)
@@ -37731,8 +37804,27 @@ function scripts.hero_mecha.update(this, store)
 				U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 			end
 
+			if ready_to_use_skill(this.ultimate, store) then
+				local target = U.find_foremost_enemy_in_range_filter_off(this.pos, 200, 0, F_AREA, 0)
+
+				if target and target.pos then
+					local e = E:create_entity(this.hero.skills.ultimate.controller_name)
+
+					e.level = this.hero.skills.ultimate.level
+					e.pos = V.vclone(target.pos)
+
+					queue_insert(store, e)
+
+					this.ultimate.ts = store.tick_ts
+
+					SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
+				else
+					this.ultimate.ts = this.ultimate.ts + 1
+				end
+			end
+
 			do
-				local brk, sta = y_hero_ranged_attacks(store, this)
+				local brk, sta = SU.y_soldier_ranged_attacks(store, this)
 
 				if sta == A_DONE then
 					if this.ranged.attacks[1].disabled then
@@ -37748,7 +37840,7 @@ function scripts.hero_mecha.update(this, store)
 			end
 
 			if SU.soldier_go_back_step(store, this) then
-				-- block empty
+			-- block empty
 			else
 				SU.soldier_idle(store, this)
 				SU.soldier_regen(store, this)
@@ -38097,7 +38189,7 @@ function scripts.drone_hero_mecha.update(this, store)
 						coroutine.yield()
 					end
 
-					local d = SU.create_attack_damage(a, target.id, this.id)
+					local d = SU.create_attack_damage(a, target.id, this)
 
 					queue_damage(store, d)
 

@@ -703,7 +703,7 @@ return {
 	HeroRifleman = {
 		files = {"Dwarf-Rifleman-02c.ogg", "Dwarf-Rifleman-03c.ogg", "Dwarf-Rifleman-04c.ogg", "Dwarf-Rifleman-Death_c.ogg", "Dwarf_brea_shot2.ogg", "Dwarf_brea_shot_hit.ogg", "Dwarf_mine.ogg", "Level_up.ogg"}
 	},
-	HeroRobot = {
+	HeroHacksaw = {
 		files = {"Hacksaw-02c.ogg", "Hacksaw-03a.ogg", "Hacksaw-04a.ogg", "Hacksaw-Death01c.ogg", "Level_up.ogg", "inferno_lumberjack_drill.ogg", "inferno_lumberjack_shootSaw.ogg", "hero_alien_disc_bounce.ogg", "hero_alien_disc_throw.ogg"}
 	},
 	HeroSamurai = {

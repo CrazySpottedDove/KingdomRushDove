@@ -8646,7 +8646,7 @@ tt.particle_system.particle_lifetime = {fts(9), fts(9)}
 tt.particle_system.emission_rate = 30
 tt.particle_system.z = Z_BULLET_PARTICLES
 
-tt = E:register_t("enemy_skunk_bombardier_bomb", "bombKR5")
+tt = E:register_t("enemy_skunk_bombardier_bomb", "bomb")
 b = balance.enemies.werebeasts.skunk_bombardier
 tt.bullet.damage_type = DAMAGE_PHYSICAL
 tt.bullet.damage_max = b.ranged_attack.damage_max

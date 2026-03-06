@@ -3046,7 +3046,7 @@ tt.unit.size = UNIT_SIZE_LARGE
 tt.sound_transform_in = "Stage11BossCorruptedDenasTransformationIn"
 tt.sound_transform_out = "Stage11BossCorruptedDenasTransformationOut"
 
-tt = E:register_t("bullet_boss_corrupted_denas_spawn_entities", "bombKR5")
+tt = E:register_t("bullet_boss_corrupted_denas_spawn_entities", "bomb")
 tt.bullet.flight_time = fts(30)
 tt.bullet.align_with_trajectory = false
 tt.bullet.ignore_hit_offset = true
@@ -3631,7 +3631,7 @@ tt.spawn_pos = {v(850, 446), v(860, 206)}
 tt.spawn_path = {3, 4}
 tt.tentacle_mouth_template = "controller_stage_16_tentacle_mouth_right"
 
-tt = E:register_t("bullet_stage_16_overseer_tentacle_spawn", "bombKR5")
+tt = E:register_t("bullet_stage_16_overseer_tentacle_spawn", "bomb")
 local b = balance.specials.stage16_overseer.tentacle_bullet_explosion_damage
 tt.bullet.flight_time = fts(31)
 tt.sound_events.hit_water = nil

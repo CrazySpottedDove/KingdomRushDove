@@ -148,7 +148,7 @@ return {
 			alias = "HeroGiant"
 		},
 		hero_hacksaw = {
-			alias = "HeroRobot"
+			alias = "HeroHacksaw"
 		},
 		hero_ignus = {
 			alias = "HeroRainOfFire"

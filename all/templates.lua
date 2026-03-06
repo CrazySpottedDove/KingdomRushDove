@@ -341,8 +341,6 @@ bomb.sound_events.insert = "BombShootSound"
 bomb.sound_events.hit = "BombExplosionSound"
 bomb.sound_events.hit_water = "RTWaterExplosion"
 
-local bombKR5 = E:register_t("bombKR5", "bomb")
-
 local bomb_dynamite = E:register_t("bomb_dynamite", "bomb")
 
 bomb_dynamite.render.sprites[1].name = "bombs_0002"
