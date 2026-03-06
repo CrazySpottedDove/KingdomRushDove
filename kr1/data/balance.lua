@@ -9314,5 +9314,4 @@ if game and game.store and game.store.level_mode then
 		balance.specials.stage07_temple.activation_wave = 1
 	end
 end
-
 return balance

@@ -2323,7 +2323,6 @@ tt.unit.hide_after_death = true
 tt.unit.hit_offset = vec_2(0, 14)
 tt.unit.head_offset = vec_2(0, 5)
 tt.unit.mod_offset = vec_2(0, 10)
-tt.main_script.insert = scripts.enemy_basic.insert
 tt.main_script.update = scripts.enemy_tower_ray_sheep.update
 tt.motion.max_speed = b.speed
 tt.render.sprites[1].prefix = "channeler_tower_sheep"

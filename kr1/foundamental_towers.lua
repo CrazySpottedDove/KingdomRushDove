@@ -648,7 +648,6 @@ tt.revive.fx = "fx_soldier_barrack_revive"
 tt.soldier.melee_slot_offset = vec_2(5, 0)
 tt.ui.click_rect = r(-10, -2, 20, 25)
 tt.unit.hit_offset = vec_2(0, 12)
-tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 10)
 --#endregion
 --#region soldier_barrack_2

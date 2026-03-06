@@ -1234,7 +1234,6 @@ tt.render.sprites[1].prefix = "harrasser"
 tt.render.sprites[1].angles.walk = {"run"}
 tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
 tt.unit.hit_offset = vec_2(0, 12)
-tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 13)
 tt.health.hp_max = b.soldier.hp[1]
 tt.health.armor = b.soldier.armor[1]

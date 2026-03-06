@@ -815,7 +815,6 @@ tt.render.sprites[1].prefix_lvls = {"soldier_frankie_lvl1", "soldier_frankie_lvl
 tt.render.sprites[1].prefix = tt.render.sprites[1].prefix_lvls[1]
 tt.soldier.melee_slot_offset = vec_2(15, 0)
 tt.unit.hit_offset = vec_2(0, 17)
-tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_POLYMORPH, F_POISON, F_LYCAN, F_SKELETON)
 --#endregion
@@ -1016,7 +1015,6 @@ tt.sound_events.insert = "TowerDruidHengeBearSummon"
 tt.sound_events.death = "TowerDruidHengeBearDeath"
 tt.unit.hide_after_death = true
 tt.unit.hit_offset = vec_2(0, 14)
-tt.unit.marker_offset = vec_2(0, 0)
 tt.unit.mod_offset = vec_2(0, 16)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = bor(F_POISON)
