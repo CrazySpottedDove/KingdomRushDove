@@ -12,7 +12,7 @@ S = require("sound_db")
 SU = require("script_utils")
 U = require("utils")
 LU = require("level_utils")
-UP = require("upgrades")
+UP = require("kr1.upgrades")
 V = require("lib.klua.vector")
 W = require("wave_db")
 

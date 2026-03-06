@@ -2,7 +2,7 @@ local E = require("entity_db")
 
 require("all.constants")
 
-local UP = require("upgrades")
+local UP = require("kr1.upgrades")
 local U = require("utils")
 local scripts = require("scripts")
 local EL = require("kr1.data.endless")
