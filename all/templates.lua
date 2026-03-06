@@ -1198,8 +1198,8 @@ tt.modifier.vis_flags = F_MOD
 tt.modifier.duration = 10
 tt.cooldown_factor = 0.9
 
-tt = E:register_t("arrow_fixed_height", "arrow")
-tt.main_script.insert = scripts.arrow_fixed_height.insert
+tt = E:register_t("arrow5_fixed_height", "arrow")
+tt.main_script.insert = scripts.arrow5_fixed_height.insert
 
 tt = E:register_t("mod_attract", "modifier")
 tt.main_script.insert = scripts.mod_attract.insert
@@ -1216,8 +1216,8 @@ tt.main_script.remove = scripts.clickable_hover_controller.remove
 tt.target = nil
 tt.done = nil
 
-tt = E:register_t("arrow_45degrees", "arrow")
-tt.main_script.insert = scripts.arrow_45degrees.insert
+tt = E:register_t("arrow5_45degrees", "arrow")
+tt.main_script.insert = scripts.arrow5_45degrees.insert
 
 tt = E:register_t("controller_tower_swap")
 E:add_comps(tt, "main_script")

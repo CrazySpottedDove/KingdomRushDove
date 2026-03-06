@@ -1719,7 +1719,7 @@ tt.tween.props[2].sprite_id = 1
 tt.tween.props[2].keys = {{0, 255}, {0.25, 0}}
 --#endregion
 --#region arrow_armor_piercer_royal_archers
-tt = RT("arrow_armor_piercer_royal_archers", "arrow_fixed_height")
+tt = RT("arrow_armor_piercer_royal_archers", "arrow5_fixed_height")
 b = balance.towers.royal_archers
 tt.bullet.pop = {"pop_archer"}
 tt.bullet.damage_type = b.armor_piercer.damage_type
@@ -1741,7 +1741,7 @@ tt.sound_events.hit = "TowerRoyalArchersArmorPiercerHit"
 tt.main_script.update = scripts.arrow_missile.update
 --#endregion
 --#region tower_royal_archers_arrow_lvl4
-tt = RT("tower_royal_archers_arrow_lvl4", "arrow_fixed_height")
+tt = RT("tower_royal_archers_arrow_lvl4", "arrow5_fixed_height")
 b = balance.towers.royal_archers
 tt.bullet.damage_min = b.basic_attack.damage_min[4]
 tt.bullet.damage_max = b.basic_attack.damage_max[4]

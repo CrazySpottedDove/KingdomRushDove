@@ -8763,9 +8763,9 @@ function scripts.multi_sprite_fx.update(this, store)
 	end
 end
 
-scripts.arrow_fixed_height = {}
+scripts.arrow5_fixed_height = {}
 
-function scripts.arrow_fixed_height.insert(this, store)
+function scripts.arrow5_fixed_height.insert(this, store)
 	this.bullet.flight_time = 2 * (math.sqrt(2 * this.bullet.fixed_height * this.bullet.g * -1) / this.bullet.g * -1)
 
 	return scripts.arrow.insert(this, store)
@@ -9322,9 +9322,9 @@ function scripts.instant_heal_mod.insert(this, store)
 	return true
 end
 
-scripts.arrow_45degrees = {}
+scripts.arrow5_45degrees = {}
 
-function scripts.arrow_45degrees.insert(this, store)
+function scripts.arrow5_45degrees.insert(this, store)
 	local dist = V.dist(this.bullet.to.x, this.bullet.to.y, this.bullet.from.x, this.bullet.from.y)
 
 	this.bullet.flight_time = math.sqrt(2 * dist / -this.bullet.g)

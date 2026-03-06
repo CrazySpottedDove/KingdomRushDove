@@ -8221,7 +8221,7 @@ tt.ranged.attacks[1].animation = "attack_01"
 tt.sound_events.death = "EnemyDreadeyeViperDeath"
 tt.unit.blood_color = BLOOD_GREEN
 
-tt = E:register_t("arrow_dreadeye_viper", "arrow_fixed_height")
+tt = E:register_t("arrow_dreadeye_viper", "arrow5_fixed_height")
 b = balance.enemies.werebeasts.dreadeye_viper
 tt.bullet.damage_min = b.basic_attack.damage_min
 tt.bullet.damage_max = b.basic_attack.damage_max

@@ -16267,7 +16267,7 @@ tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_DECALS
 
-tt = E:register_t("arrow_hero_vesper_short_arrow", "arrow_fixed_height")
+tt = E:register_t("arrow_hero_vesper_short_arrow", "arrow5_fixed_height")
 b = balance.heroes.hero_vesper
 tt.render.sprites[1].name = "hero_vesper_arrow"
 tt.bullet.fixed_height = 35
@@ -16284,7 +16284,7 @@ tt.bullet.extend_particles_cutoff = true
 tt = E:register_t("arrow_hero_vesper_long_arrow", "arrow_hero_vesper_short_arrow")
 b = balance.heroes.hero_vesper
 tt.bullet.xp_gain_factor = b.basic_ranged_long.xp_gain_factor
-tt = E:register_t("hero_vesper_arrow_to_the_knee_arrow", "arrow_45degrees")
+tt = E:register_t("hero_vesper_arrow_to_the_knee_arrow", "arrow5_45degrees")
 tt.render.sprites[1].name = "hero_vesper_arrow_to_the_knee_arrow"
 tt.render.sprites[1].animated = false
 tt.bullet.miss_decal = "hero_vesper_arrow_to_the_knee_arrow_miss"
