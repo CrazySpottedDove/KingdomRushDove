@@ -3532,7 +3532,7 @@ tt.ray_duration = fts(26)
 
 tt = E:register_t("bullet_stage_16_overseer_downgrade_towers", "bullet_stage_16_overseer_destroy_holders")
 
-tt = E:register_t("enemy_overseer_hit_point", "enemy_KR5")
+tt = E:register_t("enemy_overseer_hit_point", "enemy")
 E:add_comps(tt, "glare_kr5")
 tt.enemy.gold = 0
 tt.enemy.melee_slot = v(0, 0)

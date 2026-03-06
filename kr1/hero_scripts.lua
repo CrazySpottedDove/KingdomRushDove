@@ -31304,9 +31304,7 @@ function scripts.hero_dragon_arb.update(this, store)
 						b.bullet.damage_min = b.bullet.damage_min / #a.shoot_times
 						b.bullet.shot_index = i
 
-						if b.bullet.use_unit_damage_factor then
 							b.bullet.damage_factor = this.unit.damage_factor
-						end
 
 						b.cached_controller_dragon_arb_passive_id = passive_controller.id
 
@@ -35501,9 +35499,7 @@ function scripts.hero_bird.update(this, store)
 						b.bullet.from = V.vclone(b.pos)
 						b.bullet.to = V.v(pred_pos.x, pred_pos.y + a.first_explosion_height)
 
-						if b.bullet.use_unit_damage_factor then
 							b.bullet.damage_factor = this.unit.damage_factor
-						end
 
 						queue_insert(store, b)
 

@@ -7833,7 +7833,7 @@ local balance = require("kr1.data.balance")
 
 local b = balance.enemies.werebeasts.hog_invader
 
-tt = E:register_t("enemy_hog_invader", "enemy_KR5")
+tt = E:register_t("enemy_hog_invader", "enemy")
 
 E:add_comps(tt, "melee")
 
@@ -7859,7 +7859,7 @@ tt.ui.click_rect = r(-17, 0, 34, 30)
 
 local b = balance.enemies.werebeasts.tusked_brawler
 
-tt = E:register_t("enemy_tusked_brawler", "enemy_KR5")
+tt = E:register_t("enemy_tusked_brawler", "enemy")
 
 E:add_comps(tt, "melee")
 
@@ -7907,7 +7907,7 @@ tt.render.sprites[1].name = "turtle_shaman_attack_2_hit"
 
 local b = balance.enemies.werebeasts.turtle_shaman
 
-tt = E:register_t("enemy_turtle_shaman", "enemy_KR5")
+tt = E:register_t("enemy_turtle_shaman", "enemy")
 
 E:add_comps(tt, "melee", "ranged", "timed_attacks")
 
@@ -7997,7 +7997,7 @@ tt.render.sprites[1].z = Z_DECALS
 
 local b = balance.enemies.werebeasts.bear_vanguard
 
-tt = E:register_t("enemy_bear_vanguard", "enemy_KR5")
+tt = E:register_t("enemy_bear_vanguard", "enemy")
 
 E:add_comps(tt, "melee")
 
@@ -8065,7 +8065,7 @@ tt.render.sprites[2].sort_y_offset = -1
 
 local b = balance.enemies.werebeasts.bear_woodcutter
 
-tt = E:register_t("enemy_bear_woodcutter", "enemy_KR5")
+tt = E:register_t("enemy_bear_woodcutter", "enemy")
 
 E:add_comps(tt, "melee")
 
@@ -8109,7 +8109,7 @@ tt.wrath_of_the_fallen.mod = "mod_wrath_of_the_fallen"
 
 local b = balance.enemies.werebeasts.cutthroat_rat
 
-tt = E:register_t("enemy_cutthroat_rat", "enemy_KR5")
+tt = E:register_t("enemy_cutthroat_rat", "enemy")
 
 E:add_comps(tt, "melee", "timed_attacks")
 
@@ -8182,7 +8182,7 @@ tt.dps.damage_min = b.basic_attack.poison.damage_min
 tt.dps.damage_max = b.basic_attack.poison.damage_max
 tt.dps.kill = true
 tt.modifier.duration = b.basic_attack.poison.duration
-tt = E:register_t("enemy_dreadeye_viper", "enemy_KR5")
+tt = E:register_t("enemy_dreadeye_viper", "enemy")
 
 E:add_comps(tt, "melee", "ranged")
 
@@ -8221,7 +8221,7 @@ tt.ranged.attacks[1].animation = "attack_01"
 tt.sound_events.death = "EnemyDreadeyeViperDeath"
 tt.unit.blood_color = BLOOD_GREEN
 
-tt = E:register_t("arrow_dreadeye_viper", "arrow5_fixed_height")
+tt = E:register_t("arrow_dreadeye_viper", "arrow_fixed_height")
 b = balance.enemies.werebeasts.dreadeye_viper
 tt.bullet.damage_min = b.basic_attack.damage_min
 tt.bullet.damage_max = b.basic_attack.damage_max
@@ -8241,7 +8241,7 @@ tt.bullet.hit_distance = 20
 tt.bullet.extend_particles_cutoff = true
 local b = balance.enemies.werebeasts.surveyor_harpy
 
-tt = E:register_t("enemy_surveyor_harpy", "enemy_KR5")
+tt = E:register_t("enemy_surveyor_harpy", "enemy")
 tt.info.enc_icon = 6
 tt.info.portrait = "kr5_info_portraits_enemies_0005"
 tt.enemy.gold = b.gold
@@ -8271,7 +8271,7 @@ tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_BLOCK, F_SKELETON)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
 
-tt = E:register_t("enemy_rhino", "enemy_KR5")
+tt = E:register_t("enemy_rhino", "enemy")
 local b = balance.enemies.werebeasts.rhino
 E:add_comps(tt, "melee", "timed_attacks")
 tt.enemy.gold = b.gold
@@ -8343,7 +8343,7 @@ tt.base_speed = b.speed
 
 local b = balance.enemies.werebeasts.skunk_bombardier
 
-tt = E:register_t("enemy_skunk_bombardier", "enemy_KR5")
+tt = E:register_t("enemy_skunk_bombardier", "enemy")
 
 E:add_comps(tt, "melee", "ranged", "death_spawns")
 
@@ -8454,7 +8454,7 @@ b = balance.enemies.werebeasts.rhino
 tt.dps.damage_min = b.charge.damage_soldier_min
 tt.dps.damage_max = b.charge.damage_soldier_max
 
-tt = E:register_t("enemy_hyena5", "enemy_KR5")
+tt = E:register_t("enemy_hyena5", "enemy")
 
 local b = balance.enemies.werebeasts.hyena5
 
@@ -8518,7 +8518,7 @@ tt.render.sprites[1].hide_after_runs = 1
 
 local b = balance.enemies.cult_of_the_overseer.acolyte
 
-tt = E:register_t("enemy_acolyte", "enemy_KR5")
+tt = E:register_t("enemy_acolyte", "enemy")
 
 E:add_comps(tt, "melee", "death_spawns")
 
@@ -8553,7 +8553,7 @@ tt.sound_death_with_spawn = "EnemyAcolyteDeathSpecial"
 tt.sound_death_no_spawn = "EnemyAcolyteDeath"
 tt = E:register_t("enemy_acolyte_attack_fx", "fx")
 tt.render.sprites[1].name = "acolyte_attack_hit_fx"
-tt = E:register_t("enemy_acolyte_tentacle", "enemy_KR5")
+tt = E:register_t("enemy_acolyte_tentacle", "enemy")
 
 E:add_comps(tt, "melee", "timed_attacks")
 
@@ -8603,7 +8603,7 @@ tt.aura.damage_type = DAMAGE_PHYSICAL
 tt.aura.radius = b.tentacle.hit.radius
 tt.aura.vis_bans = bor(F_ENEMY)
 tt.main_script.update = scripts.aura_apply_damage.update
-tt = E:register_t("enemy_lesser_sister", "enemy_KR5")
+tt = E:register_t("enemy_lesser_sister", "enemy")
 
 local b = balance.enemies.cult_of_the_overseer.lesser_sister
 
@@ -8686,7 +8686,7 @@ tt.particle_system.particle_lifetime = {fts(8), fts(8)}
 tt.particle_system.emission_rate = 30
 tt.particle_system.z = Z_BULLET_PARTICLES
 tt.particle_system.scales_y = {0.8, 0.5}
-tt = E:register_t("enemy_lesser_sister_nightmare", "enemy_KR5")
+tt = E:register_t("enemy_lesser_sister_nightmare", "enemy")
 
 E:add_comps(tt, "melee", "count_group", "tween")
 
@@ -8732,7 +8732,7 @@ tt.nodes_to_reveal = 40
 local tt = E:register_t("enemy_lesser_sister_nightmare_hit_fx", "fx")
 
 tt.render.sprites[1].name = "lesser_sister_nightmare_hit_fx"
-tt = E:register_t("enemy_small_stalker", "enemy_KR5")
+tt = E:register_t("enemy_small_stalker", "enemy")
 
 E:add_comps(tt, "tween")
 
@@ -8786,7 +8786,7 @@ tt.tween.props[1].sprite_id = 2
 tt.tween.remove = false
 tt.tween.disabled = true
 tt.tween.reverse = true
-tt = E:register_t("enemy_unblinded_priest", "enemy_KR5")
+tt = E:register_t("enemy_unblinded_priest", "enemy")
 
 local b = balance.enemies.cult_of_the_overseer.unblinded_priest
 
@@ -8855,7 +8855,7 @@ tt.bullet.align_with_trajectory = true
 tt.bullet.hit_fx = "fx_bullet_enemy_unblinded_priest_hit"
 tt.bullet.particles_name = "ps_bullet_enemy_unblinded_priest"
 
-tt = E:register_t("enemy_unblinded_abomination", "enemy_KR5")
+tt = E:register_t("enemy_unblinded_abomination", "enemy")
 b = balance.enemies.cult_of_the_overseer.unblinded_priest.abomination
 
 E:add_comps(tt, "melee", "glare_kr5")
@@ -8909,7 +8909,7 @@ tt.main_script.update = scripts.mod_enemy_unblinded_abomination_eat.update
 tt.explode_fx = "fx_enemy_unblinded_abomination_eat"
 tt.required_hp = b.abomination.eat.hp_required
 
-tt = E:register_t("enemy_unblinded_abomination_stage_8", "enemy_KR5")
+tt = E:register_t("enemy_unblinded_abomination_stage_8", "enemy")
 b = balance.enemies.cult_of_the_overseer.abomination_stage_8
 E:add_comps(tt, "melee", "regen")
 tt.enemy.gold = b.gold
@@ -8953,7 +8953,7 @@ E:add_comps(tt, "health_bar", "pos", "render", "health")
 tt.render.sprites[1].name = "square_ffffff"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].scale = v(0, 0)
-tt = E:register_t("enemy_spiderling", "enemy_KR5")
+tt = E:register_t("enemy_spiderling", "enemy")
 b = balance.enemies.cult_of_the_overseer.spiderling
 
 E:add_comps(tt, "melee", "cliff")
@@ -8982,7 +8982,7 @@ tt.enemy.melee_slot = v(18, 0)
 tt.transformation_time = b.transformation_time
 tt.cliff.fall_accel = 400
 tt.sound_events.death = "EnemySpiderlingDeath"
-tt = E:register_t("enemy_unblinded_shackler", "enemy_KR5")
+tt = E:register_t("enemy_unblinded_shackler", "enemy")
 b = balance.enemies.cult_of_the_overseer.unblinded_shackler
 
 E:add_comps(tt, "melee", "timed_attacks")
@@ -9028,7 +9028,7 @@ tt.timed_attacks.list[1].sound = "EnemyShacklerBlockTowerBlock"
 tt.timed_attacks.list[1].sound_out = "EnemyShacklerBlockTowerUnblock"
 tt.vis.bans_on_shackles = bor(F_STUN, F_TELEPORT)
 tt.sound_events.death = "EnemyShacklerDeath"
-tt = E:register_t("enemy_armored_nightmare", "enemy_KR5")
+tt = E:register_t("enemy_armored_nightmare", "enemy")
 b = balance.enemies.cult_of_the_overseer.armored_nightmare
 
 E:add_comps(tt, "melee", "death_spawns")
@@ -9073,7 +9073,7 @@ tt.unit.head_offset = v(0, 15)
 tt.unit.mod_offset = v(0, 15)
 tt.unit.blood_color = BLOOD_NONE
 tt.sound_events.death = "EnemyBoundNightmareDeath"
-tt = E:register_t("enemy_corrupted_stalker", "enemy_KR5")
+tt = E:register_t("enemy_corrupted_stalker", "enemy")
 
 local b = balance.enemies.cult_of_the_overseer.corrupted_stalker
 
@@ -9107,7 +9107,7 @@ tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_BLOCK, F_SKELETON)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
 tt.sound_events.death = "EnemyCorruptedStalkerDeath"
-tt = E:register_t("enemy_crystal_golem", "enemy_KR5")
+tt = E:register_t("enemy_crystal_golem", "enemy")
 
 local b = balance.enemies.cult_of_the_overseer.crystal_golem
 
@@ -9150,7 +9150,7 @@ tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
 tt.vis.bans = bor(F_INSTAKILL, F_POLYMORPH, F_DRILL, F_DISINTEGRATED)
 tt.sound_events.death = "EnemyCrystalGolemDeath"
 tt.wake_up_sound = "Stage10ObeliskEffectGolemSpawnGolem"
-tt = E:register_t("enemy_stage_11_cult_leader_illusion", "enemy_KR5")
+tt = E:register_t("enemy_stage_11_cult_leader_illusion", "enemy")
 
 local b = balance.specials.stage11_cult_leader.illusion
 
@@ -9239,7 +9239,7 @@ tt.bullet.align_with_trajectory = true
 tt.main_script.insert = scripts.bullet_stage_11_cult_leader_illusion.insert
 tt.main_script.update = scripts.bullet_stage_11_cult_leader_illusion.update
 
-tt = E:register_t("enemy_blinker", "enemy_KR5")
+tt = E:register_t("enemy_blinker", "enemy")
 E:add_comps(tt, "glare_kr5", "ranged")
 local b = balance.enemies.void_beyond.blinker
 tt.info.enc_icon = 16
@@ -9328,7 +9328,7 @@ tt = E:register_t("aura_enemy_blinker_glare", "aura_enemy_blinker")
 tt.aura.mods = {"mod_enemy_blinker_stun", "mod_enemy_blinker_glare"}
 tt.render.sprites[1].prefix = "blinker_glare_decal"
 
-tt = E:register_t("enemy_mindless_husk", "enemy_KR5")
+tt = E:register_t("enemy_mindless_husk", "enemy")
 
 local b = balance.enemies.void_beyond.mindless_husk
 
@@ -9377,7 +9377,7 @@ tt.start_offset = v(0, 25)
 tt.min_nodes_ahead = b.min_nodes_ahead
 tt.max_nodes_ahead = b.max_nodes_ahead
 tt.sound_spawn = "EnemyMindlessHuskSpawnDeath"
-tt = E:register_t("enemy_glareling", "enemy_KR5")
+tt = E:register_t("enemy_glareling", "enemy")
 b = balance.enemies.cult_of_the_overseer.glareling
 
 E:add_comps(tt, "melee", "glare_kr5")
@@ -9409,7 +9409,7 @@ tt.glare_kr5.regen_hp = b.glare.regen_hp
 tt.glare_kr5.speed_factor = b.glare.speed_factor
 tt.sound_events.death = "EnemyGlarelingDeath"
 tt.sound_events.sacrifice = "Stage14BehemothPoolSplash"
-tt = E:register_t("enemy_vile_spawner", "enemy_KR5")
+tt = E:register_t("enemy_vile_spawner", "enemy")
 b = balance.enemies.void_beyond.vile_spawner
 
 E:add_comps(tt, "melee", "timed_attacks", "tween", "glare_kr5")
@@ -9479,7 +9479,7 @@ tt.tween.props[1].loop = true
 tt.tween.props[1].sprite_id = 1
 tt.sound_events.death = "EnemyVileSpawnerDeath"
 tt.sound_events.spawn_cast = "EnemyVileSpawnerSpawnCast"
-tt = E:register_t("enemy_lesser_eye", "enemy_KR5")
+tt = E:register_t("enemy_lesser_eye", "enemy")
 b = balance.enemies.void_beyond.lesser_eye
 
 E:add_comps(tt, "count_group", "tween", "glare_kr5")
@@ -9525,7 +9525,7 @@ tt.tween.props[1].loop = true
 tt.tween.props[1].sprite_id = 1
 tt.glare_kr5.regen_hp = b.glare.regen_hp
 tt.sound_events.death = "EnemyLesserEyeDeath"
-tt = E:register_t("enemy_noxious_horror", "enemy_KR5")
+tt = E:register_t("enemy_noxious_horror", "enemy")
 
 local b = balance.enemies.void_beyond.noxious_horror
 
@@ -9577,7 +9577,7 @@ tt.glare_kr5.aura_poison = "aura_enemy_noxious_horror_glare"
 tt.sound_events.death = "EnemyNoxiousHorrorDeath"
 
 -- 骇人刃爪
-tt = E:register_t("enemy_hardened_horror", "enemy_KR5")
+tt = E:register_t("enemy_hardened_horror", "enemy")
 local b = balance.enemies.void_beyond.hardened_horror
 E:add_comps(tt, "melee", "glare_kr5")
 tt.info.enc_icon = 3
@@ -9619,7 +9619,7 @@ tt.glare_kr5.roll_angles = {"roll_loop", "roll_up", "roll_down"}
 tt.sound_events.death = "EnemyHardenedHorrorDeath"
 tt.base_speed = b.speed
 
-tt = E:register_t("enemy_evolving_scourge", "enemy_KR5")
+tt = E:register_t("enemy_evolving_scourge", "enemy")
 local b = balance.enemies.void_beyond.evolving_scourge
 E:add_comps(tt, "melee", "tween", "glare_kr5")
 tt.info.enc_icon = 3
@@ -9701,7 +9701,7 @@ tt.sound_events.evolve = "EnemyEvolvingScourgeEvolve"
 tt.sound_events.death = "EnemyEvolvingScourgeDeath"
 
 -- 血壤巨兽
-tt = E:register_t("enemy_amalgam", "enemy_KR5")
+tt = E:register_t("enemy_amalgam", "enemy")
 b = balance.enemies.void_beyond.amalgam
 E:add_comps(tt, "melee", "glare_kr5", "death_spawns")
 tt.enemy.gold = b.gold
@@ -9747,7 +9747,7 @@ tt.sound_events.death = "EnemyAmalgamDeath"
 tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
 tt.vis.bans = bor(F_INSTAKILL, F_POLYMORPH, F_DRILL, F_DISINTEGRATED)
 
-tt = E:register_t("enemy_corrupted_elf", "enemy_KR5")
+tt = E:register_t("enemy_corrupted_elf", "enemy")
 b = balance.enemies.undying_hatred.corrupted_elf
 
 E:add_comps(tt, "melee", "ranged", "death_spawns")
@@ -9791,7 +9791,7 @@ tt.death_spawns.concurrent_with_death = false
 tt.death_spawns.delay = fts(25)
 tt.death_spawns.dead_lifetime = 0
 tt.sound_specter_spawn = "EnemyCorruptedElfSpawn"
-tt = E:register_t("enemy_specter", "enemy_KR5")
+tt = E:register_t("enemy_specter", "enemy")
 b = balance.enemies.undying_hatred.specter
 
 E:add_comps(tt, "melee", "count_group")
@@ -9840,7 +9840,7 @@ tt.chase_delay = fts(30)
 tt.sound_rush_anticipation = "EnemySpecterRushAnticipation"
 tt.sound_rush = "EnemySpecterRush"
 tt.sound_corruption = "EnemySpecterCorruption"
-tt = E:register_t("enemy_dust_cryptid", "enemy_KR5")
+tt = E:register_t("enemy_dust_cryptid", "enemy")
 
 E:add_comps(tt, "death_spawns")
 
@@ -9885,7 +9885,7 @@ tt.death_spawns.concurrent_with_death = true
 tt.death_spawns.delay = fts(9)
 tt.death_spawns.dead_lifetime = 0
 tt.nodes_to_prevent_dust = b.nodes_to_prevent_dust
-tt = E:register_t("enemy_bane_wolf", "enemy_KR5")
+tt = E:register_t("enemy_bane_wolf", "enemy")
 local b = balance.enemies.undying_hatred.bane_wolf
 E:add_comps(tt, "melee", "auras")
 tt.auras.list[1] = E:clone_c("aura_attack")
@@ -9914,7 +9914,7 @@ tt.unit.mod_offset = v(0, 20)
 tt.damage_sprint_factor = b.max_speed_mult - 1
 tt.ui.click_rect = r(-18, -3, 36, 35)
 tt.sound_events.death = "EnemyBaneWolfDeath"
-tt = E:register_t("enemy_deathwood", "enemy_KR5")
+tt = E:register_t("enemy_deathwood", "enemy")
 
 local b = balance.enemies.undying_hatred.deathwood
 
@@ -9969,7 +9969,7 @@ tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
 tt.vis.bans = bor(F_INSTAKILL, F_POLYMORPH, F_DRILL, F_DISINTEGRATED)
 tt.sound_events.death = "EnemyDeathwoodDeath"
 
-tt = E:register_t("enemy_animated_armor", "enemy_KR5")
+tt = E:register_t("enemy_animated_armor", "enemy")
 b = balance.enemies.undying_hatred.animated_armor
 E:add_comps(tt, "melee", "corruption_kr5")
 tt.enemy.gold = b.gold
@@ -10018,7 +10018,7 @@ tt.corruption_kr5.limit = 1
 tt.corruption_kr5.on_corrupt = scripts.enemy_animated_armor.on_corrupt
 tt.corruption_kr5.enabled = false
 
-tt = E:register_t("enemy_revenant_soulcaller", "enemy_KR5")
+tt = E:register_t("enemy_revenant_soulcaller", "enemy")
 local b = balance.enemies.undying_hatred.revenant_soulcaller
 E:add_comps(tt, "melee", "ranged", "timed_attacks")
 
@@ -10078,7 +10078,7 @@ tt.timed_attacks.list[2].mark_mod = "mod_enemy_revenant_soulcaller_mark"
 tt.nodes_limit = b.summon.nodes_limit
 tt.node_random_min = b.summon.nodes_random_min
 tt.node_random_max = b.summon.nodes_random_max
-tt = E:register_t("enemy_revenant_harvester", "enemy_KR5")
+tt = E:register_t("enemy_revenant_harvester", "enemy")
 
 local b = balance.enemies.undying_hatred.revenant_harvester
 
@@ -10125,7 +10125,7 @@ tt.timed_attacks.list[1].count_group_type = COUNT_GROUP_CONCURRENT
 tt.timed_attacks.list[1].count_group_max = b.clone.max_total
 tt.timed_attacks.list[1].mark_mod = "mod_enemy_revenant_harvester_mark"
 tt.nodes_limit = b.clone.nodes_limit
-tt = E:register_t("enemy_crocs_basic_egg", "enemy_KR5")
+tt = E:register_t("enemy_crocs_basic_egg", "enemy")
 
 local b = balance.enemies.crocs.crocs_basic_egg
 
@@ -10170,7 +10170,7 @@ tt.water_fixed_speed = b.water_fixed_speed
 
 local b = balance.enemies.crocs.crocs_basic
 
-tt = E:register_t("enemy_crocs_basic", "enemy_KR5")
+tt = E:register_t("enemy_crocs_basic", "enemy")
 E:add_comps(tt, "melee", "water")
 tt.enemy.gold = b.gold
 tt.enemy.melee_slot = v(28, 0)
@@ -10211,7 +10211,7 @@ tt.water_fixed_speed = b.water_fixed_speed
 
 local b = balance.enemies.crocs.quickfeet_gator
 
-tt = E:register_t("enemy_quickfeet_gator_chicken_leg", "enemy_KR5")
+tt = E:register_t("enemy_quickfeet_gator_chicken_leg", "enemy")
 
 E:add_comps(tt, "melee", "ranged", "timed_attacks", "water")
 
@@ -10294,7 +10294,7 @@ tt.timed_attacks.list[1].disabled = true
 
 local b = balance.enemies.crocs.killertile
 
-tt = E:register_t("enemy_killertile", "enemy_KR5")
+tt = E:register_t("enemy_killertile", "enemy")
 
 E:add_comps(tt, "melee", "water")
 
@@ -10337,7 +10337,7 @@ tt.water_particles_scale_var = {1.6, 1.9}
 
 local b = balance.enemies.crocs.crocs_flier
 
-tt = E:register_t("enemy_crocs_flier", "enemy_KR5")
+tt = E:register_t("enemy_crocs_flier", "enemy")
 
 E:add_comps(tt, "tween")
 
@@ -10380,7 +10380,7 @@ tt.tween.props[1].keys = {{fts(0), v(0, tt.flight_height)}, {fts(tt.fly_frequenc
 tt.tween.props[1].loop = true
 tt.tween.props[1].disabled = false
 tt.tween.props[1].remove = false
-tt = E:register_t("enemy_crocs_ranged", "enemy_KR5")
+tt = E:register_t("enemy_crocs_ranged", "enemy")
 
 E:add_comps(tt, "melee", "ranged", "water")
 
@@ -10429,7 +10429,7 @@ tt.water.hide_sprites_range = {}
 tt.water.remove_modifiers = true
 tt.water.splash_fx = "fx_enemy_splash_crocs"
 tt.water_fixed_speed = b.water_fixed_speed
-tt = E:register_t("enemy_crocs_shaman", "enemy_KR5")
+tt = E:register_t("enemy_crocs_shaman", "enemy")
 
 local b = balance.enemies.crocs.crocs_shaman
 
@@ -10503,7 +10503,7 @@ tt.water_fixed_speed = b.water_fixed_speed
 
 local b = balance.enemies.crocs.crocs_tank
 
-tt = E:register_t("enemy_crocs_tank", "enemy_KR5")
+tt = E:register_t("enemy_crocs_tank", "enemy")
 
 E:add_comps(tt, "melee", "timed_attacks")
 
@@ -10563,7 +10563,7 @@ tt.unit.can_explode = false
 tt.vis.flags = bor(F_ENEMY)
 tt.sound_events.death = "EnemyRazingRhinoDeath"
 tt.base_speed = b.speed
-tt = E:register_t("enemy_crocs_egg_spawner", "enemy_KR5")
+tt = E:register_t("enemy_crocs_egg_spawner", "enemy")
 b = balance.enemies.crocs.crocs_egg_spawner
 
 E:add_comps(tt, "melee", "timed_attacks", "water")
@@ -10625,7 +10625,7 @@ tt.water.remove_modifiers = true
 tt.water.splash_fx = "fx_enemy_splash_crocs"
 tt.water_particles_scale_var = {1.6, 1.9}
 tt.water_fixed_speed = b.water_fixed_speed
-tt = E:register_t("enemy_crocs_hydra", "enemy_KR5")
+tt = E:register_t("enemy_crocs_hydra", "enemy")
 
 local b = balance.enemies.crocs.crocs_hydra
 
@@ -11083,7 +11083,7 @@ tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
 tt.aura.vis_flags = F_RANGED
 tt.include_templates = {"enemy_lesser_sister_nightmare"}
 
-tt = E:register_t("enemy_darksteel_guardian", "enemy_KR5")
+tt = E:register_t("enemy_darksteel_guardian", "enemy")
 b = balance.enemies.hammer_and_anvil.darksteel_guardian
 E:add_comps(tt, "melee", "death_spawns")
 tt.enemy.gold = b.gold
@@ -11147,7 +11147,7 @@ tt.sound_activation = "EnemyDarksteelGuardianActivation"
 tt.sound_rock = "EnemyDarksteelGuardianRock"
 tt.sound_enrage = "EnemyDarksteelEnrage"
 
-tt = E:register_t("enemy_darksteel_hammerer", "enemy_KR5")
+tt = E:register_t("enemy_darksteel_hammerer", "enemy")
 
 local b = balance.enemies.hammer_and_anvil.darksteel_hammerer
 
@@ -11178,7 +11178,7 @@ tt.melee.attacks[1].damage_max = b.melee_attack.damage_max
 tt.melee.attacks[1].damage_min = b.melee_attack.damage_min
 tt.melee.attacks[1].hit_time = fts(15)
 tt.melee.attacks[1].animation = "attack"
-tt = E:register_t("enemy_darksteel_shielder", "enemy_KR5")
+tt = E:register_t("enemy_darksteel_shielder", "enemy")
 
 local b = balance.enemies.hammer_and_anvil.darksteel_shielder
 
@@ -11214,7 +11214,7 @@ tt.melee.attacks[1].animation = "attack"
 tt.death_spawns.name = "enemy_darksteel_hammerer"
 tt.death_spawns.concurrent_with_death = false
 tt.death_spawns.delay = fts(46.1)
-tt = E:register_t("enemy_surveillance_sentry", "enemy_KR5")
+tt = E:register_t("enemy_surveillance_sentry", "enemy")
 
 E:add_comps(tt, "death_spawns", "tween")
 
@@ -11261,7 +11261,7 @@ tt.tween.disabled = true
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
 tt.tween.props[1].sprite_id = 2
-tt = E:register_t("enemy_rolling_sentry", "enemy_KR5")
+tt = E:register_t("enemy_rolling_sentry", "enemy")
 b = balance.enemies.hammer_and_anvil.rolling_sentry
 
 E:add_comps(tt, "melee", "ranged", "death_spawns")
@@ -11307,7 +11307,7 @@ tt.death_spawns.name = "decal_scrap"
 tt.death_spawns.death_animation = "death"
 tt.death_spawns.concurrent_with_death = false
 tt.death_spawns.delay = fts(12)
-tt = E:register_t("enemy_mad_tinkerer", "enemy_KR5")
+tt = E:register_t("enemy_mad_tinkerer", "enemy")
 
 local b = balance.enemies.hammer_and_anvil.mad_tinkerer
 
@@ -11359,7 +11359,7 @@ tt.timed_attacks.list[1].count_group_type = COUNT_GROUP_CONCURRENT
 tt.timed_attacks.list[1].count_group_max = b.clone.max_total
 tt.nodes_limit = b.clone.nodes_limit
 tt.sound_summon = "EnemyMadTinkererSummon"
-tt = E:register_t("enemy_scrap_drone", "enemy_KR5")
+tt = E:register_t("enemy_scrap_drone", "enemy")
 
 E:add_comps(tt, "tween")
 
@@ -11402,7 +11402,7 @@ tt.tween.disabled = true
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
 tt.tween.props[1].sprite_id = 2
-tt = E:register_t("enemy_brute_welder", "enemy_KR5")
+tt = E:register_t("enemy_brute_welder", "enemy")
 
 local b = balance.enemies.hammer_and_anvil.brute_welder
 
@@ -11456,7 +11456,7 @@ tt.shoot_sound = nil
 tt.spawn_offset = v(-5, 20)
 tt.mark_mod = "mod_bullet_enemy_brute_welder_death_mark"
 
-tt = E:register_t("enemy_scrap_speedster", "enemy_KR5")
+tt = E:register_t("enemy_scrap_speedster", "enemy")
 local b = balance.enemies.hammer_and_anvil.scrap_speedster
 E:add_comps(tt, "melee", "death_spawns")
 tt.info.enc_icon = 3
@@ -11492,7 +11492,7 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.death_spawns.name = "decal_scrap"
 tt.death_spawns.delay = fts(14)
 tt.trail_t = "ps_enemy_scrap_speedster_trail"
-tt = E:register_t("enemy_common_clone", "enemy_KR5")
+tt = E:register_t("enemy_common_clone", "enemy")
 
 local b = balance.enemies.hammer_and_anvil.common_clone
 
@@ -11520,7 +11520,7 @@ tt.render.sprites[1].prefix = "common_clone_creep"
 tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
 tt.sound_events.death = "EnemyCommonCloneDeath"
 tt.ui.click_rect = r(-13, 0, 26, 26)
-tt = E:register_t("enemy_darksteel_fist", "enemy_KR5")
+tt = E:register_t("enemy_darksteel_fist", "enemy")
 
 local b = balance.enemies.hammer_and_anvil.darksteel_fist
 
@@ -11697,7 +11697,7 @@ tt.repair_cost = b.tower_stun_repair_cost
 tt.hand_decal_t = "decal_mod_stage_25_torso_missile_stun_hand"
 tt.modifier.duration = 4
 
-tt = E:register_t("enemy_darksteel_anvil", "enemy_KR5")
+tt = E:register_t("enemy_darksteel_anvil", "enemy")
 
 local b = balance.enemies.hammer_and_anvil.darksteel_anvil
 
@@ -11755,7 +11755,7 @@ tt.unit.mod_offset = v(0, 11)
 tt.unit.size = UNIT_SIZE_SMALL
 tt.unit.can_explode = false
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-tt = E:register_t("enemy_darksteel_hulk", "enemy_KR5")
+tt = E:register_t("enemy_darksteel_hulk", "enemy")
 
 local b = balance.enemies.hammer_and_anvil.darksteel_hulk
 
@@ -11816,7 +11816,7 @@ tt.unit.can_explode = false
 tt.vis.flags = bor(F_ENEMY, F_MINIBOSS)
 tt.sound_events.death = "EnemyDarksteelHulkDeath"
 tt.base_speed = b.speed
-tt = E:register_t("enemy_machinist", "enemy_KR5")
+tt = E:register_t("enemy_machinist", "enemy")
 b = balance.enemies.hammer_and_anvil.machinist
 
 E:add_comps(tt, "melee", "regen")
@@ -11862,7 +11862,7 @@ tt.op_cd = b.operation_cd
 tt.op_needed = b.operations_needed
 tt.sound_lever = {"Stage24MachinistLever1", "Stage24MachinistLever2", "Stage24MachinistLever3"}
 tt.sound_factory_on = "Stage24FactoryTurnOnStart"
-tt = E:register_t("enemy_deformed_grymbeard_clone", "enemy_KR5")
+tt = E:register_t("enemy_deformed_grymbeard_clone", "enemy")
 
 E:add_comps(tt)
 
@@ -11909,7 +11909,7 @@ tt.shield_hp_threshold = b.shield_hp_threshold
 tt.no_shield_speed_factor = b.speed_factor
 tt.shield_t = "fx_enemy_deformed_grymbeard_clone_shield"
 
-tt = E:register_t("enemy_spider_priest", "enemy_KR5")
+tt = E:register_t("enemy_spider_priest", "enemy")
 
 local b = balance.enemies.arachnids.spider_priest
 
@@ -11962,7 +11962,7 @@ tt.transformation_sound = "EnemyUnblindedPriestTransformCast"
 tt.transformation_end_sound = "EnemySpiderPriestTransform"
 tt.sound_events.death = "EnemyUnblindedPriestDeath"
 tt.ui.click_rect = r(-15, -3, 30, 32)
-tt = E:register_t("enemy_glarenwarden", "enemy_KR5")
+tt = E:register_t("enemy_glarenwarden", "enemy")
 b = balance.enemies.arachnids.glarenwarden
 
 E:add_comps(tt, "melee", "cliff")
@@ -11997,7 +11997,7 @@ tt.unit.size = UNIT_SIZE_LARGE
 tt.enemy.melee_slot = v(30, 0)
 tt.cliff.fall_accel = 400
 tt.sound_events.death = "EnemyGlarenwardenDeath"
-tt = E:register_t("enemy_ballooning_spider", "enemy_KR5")
+tt = E:register_t("enemy_ballooning_spider", "enemy")
 
 E:add_comps(tt, "tween")
 
@@ -12063,7 +12063,7 @@ tt.tween.props[1].disabled = false
 tt.tween.props[1].remove = false
 tt = E:register_t("enemy_ballooning_spider_flyer", "enemy_ballooning_spider")
 tt.vis.flags = bor(tt.vis.flags, F_FLYING)
-tt = E:register_t("enemy_spider_sister", "enemy_KR5")
+tt = E:register_t("enemy_spider_sister", "enemy")
 
 local b = balance.enemies.arachnids.spider_sister
 
@@ -12122,7 +12122,7 @@ tt.timed_attacks.list[1].count_group_max = b.spiderlings_summon.max_total
 tt.nodes_limit = b.spiderlings_summon.nodes_limit
 tt.node_random_min = b.spiderlings_summon.nodes_random_min
 tt.node_random_max = b.spiderlings_summon.nodes_random_max
-tt = E:register_t("enemy_glarebrood_crystal", "enemy_KR5")
+tt = E:register_t("enemy_glarebrood_crystal", "enemy")
 b = balance.enemies.arachnids.glarebrood_crystal
 
 E:add_comps(tt, "death_spawns")
@@ -12318,7 +12318,7 @@ tt.tween.props[2].keys = {{0, vv(0.8)}, {0.3, vv(1)}, {b.duration - 0.8, vv(1)},
 tt.tween.disabled = false
 tt.tween.remove = true
 
-tt = E:register_t("enemy_fire_phoenix", "enemy_KR5")
+tt = E:register_t("enemy_fire_phoenix", "enemy")
 b = balance.enemies.wukong.fire_phoenix
 
 E:add_comps(tt, "tween")
@@ -12366,7 +12366,7 @@ tt.tween.props[1].disabled = false
 tt.tween.props[1].remove = false
 tt.explode_nodes_limit = b.explode_nodes_limit
 tt.decal_flaming_ground = "decal_fire_phoenix_flaming_ground"
-tt = E:register_t("enemy_blaze_raider", "enemy_KR5")
+tt = E:register_t("enemy_blaze_raider", "enemy")
 
 E:add_comps(tt, "melee")
 
@@ -12421,7 +12421,7 @@ tt.render.sprites[1].prefix = "blaze_rider"
 tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
 tt.sound_events.death = "EnemyTuskedBrawlerDeath"
 tt.ui.click_rect = r(-13, -3, 26, 32)
-tt = E:register_t("enemy_flame_guard", "enemy_KR5")
+tt = E:register_t("enemy_flame_guard", "enemy")
 
 E:add_comps(tt, "melee")
 
@@ -12459,7 +12459,7 @@ tt.render.sprites[1].prefix = "flame_guard"
 tt.render.sprites[1].angles.walk = {"walk", "walkup", "walkdown"}
 tt.sound_events.death = "EnemyTuskedBrawlerDeath"
 tt.ui.click_rect = r(-13, -3, 26, 32)
-tt = E:register_t("enemy_wuxian", "enemy_KR5")
+tt = E:register_t("enemy_wuxian", "enemy")
 
 E:add_comps(tt, "melee", "timed_attacks")
 
@@ -12518,7 +12518,7 @@ tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
 tt.sound_events.death = "EnemyWuxianDeath"
 tt.ui.click_rect = r(-19, -3, 38, 37)
 
-tt = E:register_t("enemy_fire_fox", "enemy_KR5")
+tt = E:register_t("enemy_fire_fox", "enemy")
 E:add_comps(tt, "melee", "death_spawns")
 b = balance.enemies.wukong.fire_fox
 tt.enemy.gold = b.gold
@@ -12558,7 +12558,7 @@ tt.transform_duration = b.transform_duration
 tt.transform_hp_threshold = b.transform_hp_threshold
 tt.transformation_sound = "EnemyUnblindedPriestTransformCast"
 tt.transformation_end_sound = "EnemyUnblindedPriestTransformSpawn"
-tt = E:register_t("enemy_nine_tailed_fox", "enemy_KR5")
+tt = E:register_t("enemy_nine_tailed_fox", "enemy")
 
 E:add_comps(tt, "melee", "timed_attacks")
 
@@ -12635,7 +12635,7 @@ tt.render.sprites[1].anchor = v(0.5, 0.5)
 tt.sound_events.death = "EnemyNineTailedFoxDeath"
 tt.ui.click_rect = r(-18, -3, 36, 36)
 tt.unit.show_blood_pool = false
-tt = E:register_t("enemy_burning_treant", "enemy_KR5")
+tt = E:register_t("enemy_burning_treant", "enemy")
 b = balance.enemies.wukong.burning_treant
 
 E:add_comps(tt, "melee")
@@ -12685,7 +12685,7 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
 tt.vis.flags = bor(F_ENEMY)
 tt.sound_events.death = "EnemyBurningTreantDeath"
 
-tt = E:register_t("enemy_ash_spirit", "enemy_KR5")
+tt = E:register_t("enemy_ash_spirit", "enemy")
 b = balance.enemies.wukong.ash_spirit
 E:add_comps(tt, "melee")
 tt.info.enc_icon = 100
@@ -12726,7 +12726,7 @@ tt.unit.blood_color = BLOOD_GRAY
 tt.unit.show_blood_pool = false
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
 tt.sound_events.death = "EnemyAshSpiritDeath"
-tt = E:register_t("enemy_storm_spirit", "enemy_KR5")
+tt = E:register_t("enemy_storm_spirit", "enemy")
 
 E:add_comps(tt, "tween")
 
@@ -12788,7 +12788,7 @@ tt.tween.props[2] = E:clone_c("tween_prop")
 tt.tween.props[2].sprite_id = tt.render.sid_shadow
 tt.tween.props[2].keys = {{0, 255}, {fts(34), 0}}
 tt.tween.props[2].disabled = true
-tt = E:register_t("enemy_water_spirit", "enemy_KR5")
+tt = E:register_t("enemy_water_spirit", "enemy")
 
 E:add_comps(tt, "melee")
 
@@ -12828,7 +12828,7 @@ tt.charco_caida_fx = "fx_water_spirit_charco_caida"
 tt.sound_events.death = nil
 tt = E:register_t("enemy_water_spirit_spawnless", "enemy_water_spirit")
 tt.skip_spawn_anim = true
-tt = E:register_t("enemy_qiongqi", "enemy_KR5")
+tt = E:register_t("enemy_qiongqi", "enemy")
 
 E:add_comps(tt, "ranged")
 
@@ -12880,7 +12880,7 @@ tt.unit.size = UNIT_SIZE_MEDIUM
 tt.unit.show_blood_pool = false
 tt.vis.bans = bor(F_BLOCK, F_SKELETON)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
-tt = RT("enemy_gale_warrior", "enemy_KR5")
+tt = RT("enemy_gale_warrior", "enemy")
 
 AC(tt, "melee")
 
@@ -12923,7 +12923,7 @@ tt.ui.click_rect = r(-20, -5, 40, 40)
 tt.unit.hit_offset = v(0, 20)
 tt.unit.mod_offset = v(0, 20)
 tt.unit.size = UNIT_SIZE_MEDIUM
-tt = E:register_t("enemy_storm_elemental", "enemy_KR5")
+tt = E:register_t("enemy_storm_elemental", "enemy")
 b = balance.enemies.wukong.storm_elemental
 
 E:add_comps(tt, "melee", "ranged", "timed_attacks")
@@ -12988,7 +12988,7 @@ tt.unit.blood_color = BLOOD_NONE
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
 tt.sound_events.death = "EnemyElementalDeath"
 tt.ps_walk_trail = "ps_storm_elemental_walk_trail"
-tt = E:register_t("enemy_water_sorceress", "enemy_KR5")
+tt = E:register_t("enemy_water_sorceress", "enemy")
 
 E:add_comps(tt, "melee", "ranged", "timed_attacks")
 
@@ -13040,7 +13040,7 @@ tt.render.sprites[1].prefix = "watersorceress"
 tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
 tt.sound_events.death = "EnemyTuskedBrawlerDeath"
 tt.ui.click_rect = r(-17, 0, 34, 30)
-tt = E:register_t("enemy_fan_guard", "enemy_KR5")
+tt = E:register_t("enemy_fan_guard", "enemy")
 b = balance.enemies.wukong.fan_guard
 
 E:add_comps(tt, "melee")
@@ -13103,7 +13103,7 @@ tt.unit.size = UNIT_SIZE_SMALL
 tt.unit.blood_color = BLOOD_RED
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.sound_events.death = "EnemyFanGuardDeath"
-tt = E:register_t("enemy_hellfire_warlock", "enemy_KR5")
+tt = E:register_t("enemy_hellfire_warlock", "enemy")
 b = balance.enemies.wukong.hellfire_warlock
 
 E:add_comps(tt, "melee", "ranged", "timed_attacks")
@@ -13328,7 +13328,7 @@ tt.vis.bans_jumping = bor(F_RANGED, F_BLOCK, F_MOD)
 tt.vis.flags_normal = bor(F_ENEMY, F_BOSS)
 tt.vis.bans_normal = 0
 
-tt = E:register_t("enemy_citizen", "enemy_KR5")
+tt = E:register_t("enemy_citizen", "enemy")
 E:add_comps(tt, "melee")
 b = balance.enemies.wukong.citizen
 tt.main_script.insert = scripts.enemy_citizen.insert
@@ -13396,7 +13396,7 @@ tt.scale_duration = 0.6
 tt.scale_start_delay = 0.5
 tt.push_and_pop_bans = scripts.generic_unit_spawn_scale.push_and_pop_bans
 tt.main_script.update = scripts.generic_unit_spawn_scale.update
-tt = E:register_t("enemy_terracota", "enemy_KR5")
+tt = E:register_t("enemy_terracota", "enemy")
 
 E:add_comps(tt, "melee")
 
@@ -13427,7 +13427,7 @@ tt.render.sprites[1].prefix = "terracota"
 tt.render.sprites[1].angles.walk = {"walk", "walkup", "walkdown"}
 tt.ui.click_rect = r(-13, -3, 26, 32)
 tt.main_script.update = scripts.enemy_terracota.update
-tt = E:register_t("enemy_big_terracota", "enemy_KR5")
+tt = E:register_t("enemy_big_terracota", "enemy")
 
 E:add_comps(tt, "melee")
 
@@ -13459,7 +13459,7 @@ tt.render.sprites[1].prefix = "big_terracota"
 tt.render.sprites[1].angles.walk = {"walk", "walkup", "walkdown"}
 tt.ui.click_rect = r(-19, -5, 38, 43)
 tt.main_script.update = scripts.enemy_terracota.update
-tt = E:register_t("enemy_palace_guard", "enemy_KR5")
+tt = E:register_t("enemy_palace_guard", "enemy")
 
 E:add_comps(tt, "melee")
 
@@ -13493,7 +13493,7 @@ tt.render.sprites[1].prefix = "palace_guard"
 tt.render.sprites[1].angles.walk = {"walk", "walkup", "walkdown"}
 tt.sound_events.death = "EnemyTuskedBrawlerDeath"
 tt.ui.click_rect = r(-13, -3, 26, 32)
-tt = E:register_t("enemy_golden_eyed", "enemy_KR5")
+tt = E:register_t("enemy_golden_eyed", "enemy")
 
 local b = balance.enemies.wukong.golden_eyed
 
@@ -13596,7 +13596,7 @@ tt = E:register_t("golden_eyed_shadow", "decal")
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "goldeneye_beast_shadow"
 tt.render.sprites[1].z = Z_DECALS
-tt = E:register_t("enemy_doom_bringer", "enemy_KR5")
+tt = E:register_t("enemy_doom_bringer", "enemy")
 
 E:add_comps(tt, "melee", "timed_attacks")
 
@@ -13636,7 +13636,7 @@ tt.render.sprites[1].prefix = "doom_bringer_creep"
 tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
 tt.ui.click_rect = r(-19, -5, 38, 43)
 tt.sound_events.death = "EnemyDoomBringerDeath"
-tt = E:register_t("enemy_demon_minotaur", "enemy_KR5")
+tt = E:register_t("enemy_demon_minotaur", "enemy")
 b = balance.enemies.wukong.demon_minotaur
 
 E:add_comps(tt, "melee", "timed_attacks")

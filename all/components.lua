@@ -340,7 +340,6 @@ local user_power = E:register_c("user_power")
 
 user_power.level = 1
 
-local user_item = E:register_c("user_item")
 local water = E:register_c("water")
 
 water.vis_bans = bor(F_BLOCK, F_SKELETON)

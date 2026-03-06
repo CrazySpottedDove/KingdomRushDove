@@ -1084,44 +1084,33 @@ enemy.ui.click_rect = IS_PHONE_OR_TABLET and r(-25, -10, 50, 50) or r(-10, -5, 2
 enemy.sound_events.death = "DeathHuman"
 enemy.sound_events.death_by_explosion = "DeathEplosion"
 
-local enemy_KR5 = E:register_t("enemy_KR5", "enemy")
-
 local boss = E:register_t("boss", "unit")
-
 E:add_comps(boss, "enemy", "motion", "nav_path", "main_script", "vis", "info", "sound_events")
-
 boss.vis.flags = bor(F_ENEMY, F_BOSS)
 boss.info.fn = scripts.enemy_basic.get_info
 boss.ui.click_rect = r(-20, -5, 40, 90)
 boss.health.armor_resilience = 0.5
 boss.silence_cast_count = -1
+
 tt = E:register_t("mega_spawner")
-
 E:add_comps(tt, "main_script", "editor", "editor_script")
-
 tt.main_script.insert = scripts.mega_spawner.insert
 tt.main_script.update = scripts.mega_spawner.update
 tt.manual_wave = nil
 tt.interrupt = false
 tt.editor_script.insert = scripts.editor_mega_spawner.insert
 tt.editor_script.remove = scripts.editor_mega_spawner.remove
+
 tt = E:register_t("background_sounds")
-
 E:add_comps(tt, "main_script")
-
 tt.main_script.update = scripts.background_sounds.insert
 tt.main_script.update = scripts.background_sounds.update
 tt.min_delay = 15
 tt.max_delay = 25
 tt.sounds = {}
-tt = E:register_t("user_item")
-
-E:add_comps(tt, "user_item", "pos", "main_script", "user_selection")
 
 tt = E:register_t("power_fireball_control")
-
 E:add_comps(tt, "user_power", "pos", "main_script", "user_selection")
-
 tt.main_script.update = scripts.power_fireball_control.update
 tt.cooldown = 80
 tt.max_spread = 20
@@ -1144,17 +1133,18 @@ tt.main_script.update = scripts.power_fireball.update
 tt.scorch_earth = false
 tt.sound_events.insert = "FireballRelease"
 tt.sound_events.hit = "FireballHit"
+
 tt = E:register_t("fx_fireball_explosion", "fx")
 tt.render.sprites[1].name = "fireball_explosion"
 tt.render.sprites[1].anchor.y = 0.15
 tt.render.sprites[1].z = Z_OBJECTS
+
 tt = E:register_t("decal_fireball_shadow", "decal")
 tt.render.sprites[1].name = "fireball_shadow"
 tt.render.sprites[1].loop = false
+
 tt = E:register_t("power_scorched_water", "aura")
-
 E:add_comps(tt, "render", "tween")
-
 tt.main_script.update = scripts.aura_apply_damage.update
 tt.aura.duration = 5
 tt.aura.radius = 65
@@ -1172,6 +1162,7 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}, {"this.aura.duration-0.5", 255}, {"this.aura.duration", 0}}
 tt.tween.props[1].loop = false
 tt.tween.props[1].sprite_id = 1
+
 tt = E:register_t("power_scorched_earth", "power_scorched_water")
 tt.render.sprites[1].name = "decal_scorched_earth_base"
 tt.render.sprites[1].animated = false
@@ -1184,14 +1175,14 @@ tt.tween.props[2] = E:clone_c("tween_prop")
 tt.tween.props[2].sprite_id = 2
 tt.tween.props[2].loop = true
 tt.tween.props[2].keys = {{0, 0}, {0.5, 255}, {1, 0}}
+
 tt = E:register_t("mod_health_damage_factor_inc", "modifier")
 tt.main_script.insert = scripts.mod_health_damage_factor_inc.insert
 tt.main_script.update = nil
 tt.modifier.health_damage_factor_inc = 0.01
+
 tt = E:register_t("power_reinforcements_control")
-
 E:add_comps(tt, "user_power", "pos", "main_script", "user_selection")
-
 tt.main_script.insert = scripts.power_reinforcements_control.insert
 tt.user_selection.can_select_point_fn = scripts.power_reinforcements_control.can_select_point
 tt.cooldown = 99
@@ -1203,8 +1194,10 @@ tt.main_script.update = scripts.mod_soldier_cooldown.update
 tt.modifier.vis_flags = F_MOD
 tt.modifier.duration = 10
 tt.cooldown_factor = 0.9
-tt = E:register_t("arrow5_fixed_height", "arrow")
-tt.main_script.insert = scripts.arrow5_fixed_height.insert
+
+tt = E:register_t("arrow_fixed_height", "arrow")
+tt.main_script.insert = scripts.arrow_fixed_height.insert
+
 tt = E:register_t("mod_attract", "modifier")
 tt.main_script.insert = scripts.mod_attract.insert
 tt.main_script.update = scripts.mod_attract.update
@@ -1220,9 +1213,8 @@ tt.main_script.remove = scripts.clickable_hover_controller.remove
 tt.target = nil
 tt.done = nil
 
-tt = E:register_t("arrow5", "arrow")
-tt = E:register_t("arrow5_45degrees", "arrow5")
-tt.main_script.insert = scripts.arrow5_45degrees.insert
+tt = E:register_t("arrow_45degrees", "arrow")
+tt.main_script.insert = scripts.arrow_45degrees.insert
 
 tt = E:register_t("controller_tower_swap")
 E:add_comps(tt, "main_script")
