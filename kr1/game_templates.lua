@@ -5563,7 +5563,6 @@ tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {320, 345, 370, 395, 420, 445, 470, 495, 520, 545}
 tt.hero.level_stats.melee_damage_max = {17, 18, 20, 21, 23, 24, 25, 27, 28, 30}
 tt.hero.level_stats.melee_damage_min = {11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
-tt.hero.level_stats.regen_health = {18, 19, 21, 23, 24, 26, 28, 29, 31, 33}
 tt.hero.skills.smash = CC("hero_skill")
 tt.hero.skills.smash.damage_min = {45, 90, 130}
 tt.hero.skills.smash.damage_max = {55, 110, 170}
