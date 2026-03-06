@@ -1941,6 +1941,7 @@ tt.hero.fn_level_up = scripts.hero_hacksaw.level_up
 tt.hero.tombstone_show_time = fts(150)
 tt.info.hero_portrait = "hero_portraits_0010"
 tt.info.portrait = "info_portraits_heroes_0010"
+tt.info.i18n_key = "HERO_HACKSAW"
 tt.main_script.update = scripts.hero_hacksaw.update
 tt.motion.max_speed = 2.8 * FPS
 tt.regen.cooldown = 1
