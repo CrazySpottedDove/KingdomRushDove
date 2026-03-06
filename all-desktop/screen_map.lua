@@ -131,7 +131,7 @@ function screen_map:init(w, h, done_callback)
 	screen_map.tower_data = map_data.tower_data
 	screen_map.level_data = map_data.level_data
 
-	E:load()
+	E:ensure_loaded()
 
 	local points_data
 	if self.generation == 1 then

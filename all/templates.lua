@@ -20,6 +20,10 @@ local IS_KR1 = KR_GAME == "kr1"
 local IS_KR2 = KR_GAME == "kr2"
 local IS_KR3 = KR_GAME == "kr3"
 
+local function T(t)
+	return E:get_template(t)
+end
+
 local function v(v1, v2)
 	return {
 		x = v1,
@@ -793,10 +797,10 @@ tt.particle_system.emit_spread = math.pi
 tt.particle_system.emission_rate = 30
 
 tt = E:register_t("ps_missile_small", "ps_missile")
-tt.particle_system.particle_lifetime = {tt.particle_system.particle_lifetime[1] * 0.9, tt.particle_system.particle_lifetime[2] * 0.9}
-tt.particle_system.scales_x = {tt.particle_system.scales_x[1] * 0.9, tt.particle_system.scales_x[2] * 0.9}
-tt.particle_system.scales_y = {tt.particle_system.scales_y[1] * 0.9, tt.particle_system.scales_y[2] * 0.9}
-tt.particle_system.scale_var = {tt.particle_system.scale_var[1] * 0.9, tt.particle_system.scale_var[2] * 0.9}
+tt.particle_system.particle_lifetime = {T("ps_missile").particle_system.particle_lifetime[1] * 0.9, T("ps_missile").particle_system.particle_lifetime[2] * 0.9}
+tt.particle_system.scales_x = {T("ps_missile").particle_system.scales_x[1] * 0.9, T("ps_missile").particle_system.scales_x[2] * 0.9}
+tt.particle_system.scales_y = {T("ps_missile").particle_system.scales_y[1] * 0.9, T("ps_missile").particle_system.scales_y[2] * 0.9}
+tt.particle_system.scale_var = {T("ps_missile").particle_system.scale_var[1] * 0.9, T("ps_missile").particle_system.scale_var[2] * 0.9}
 
 tt = E:register_t("pop")
 E:add_comps(tt, "pos", "render", "tween")
@@ -853,10 +857,9 @@ tt = E:register_t("pop_zap_sorcerer", "pop")
 tt.render.sprites[1].name = "pop_0014"
 tt = E:register_t("pop_zapow", "pop")
 tt.render.sprites[1].name = "pop_0017"
+
 tt = E:register_t("editor_wave_flag")
-
 E:add_comps(tt, "pos", "editor", "editor_script", "main_script", "render")
-
 tt.editor.path_id = 1
 tt.editor.r = 0
 tt.editor.len = 240
@@ -872,7 +875,7 @@ tt.render.sprites[3].animated = false
 tt.render.sprites[3].name = "line_red_dotted"
 tt.render.sprites[3].anchor.x = 0
 tt.render.sprites[3]._width = 128
-tt.render.sprites[3].z = tt.render.sprites[1].z - 1
+tt.render.sprites[3].z = Z_OBJECTS - 1
 tt.render.sprites[3].scale = vv(scale_scale)
 tt.main_script.insert = scripts.editor_wave_flag.insert
 tt.editor_script.update = scripts.editor_wave_flag.editor_update

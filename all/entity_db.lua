@@ -4,41 +4,54 @@ local log = require("lib.klua.log"):new("entity_db")
 require("lib.klua.table")
 
 local copy = table.deepclone
-local entity_db = {}
+local entity_db = {
+	last_id = 1,
+	entities = {},
+	loaded = false
+}
 
-entity_db.last_id = 1
+-- 这里需要进行性能优化，避免每次 load 的全量表加载，但是又要考虑 mods 模块的适配性。即： load() 之后，依然可以通过钩子的方式继续向 entity_db.entities 添加或修改模板。
 function entity_db:load()
 	self.last_id = 1
+	self.loaded = true
 
+	-- components 是永远不会被外部修改的，因此完全不需要缓存，直接加载即可。
 	if not self.components then
 		self.components = {}
 		require("components")
 	end
 
-	-- if not self.entities then
-	self.entities = {}
-	-- end
+	-- 可以对 entities 做一个备份。因为 package.loaded 清空后，需要做的事情不只是表的复制，还有 lua 文件的解析。这么做就可以把解析的时间节省下来了。同时，备份只有这些模板文件的部分，这就允许外部通过钩子手动添加，不会导致问题。
+	if not self.entities_backup then
+		-- package.loaded.game_templates = nil
+		-- package.loaded.templates = nil
+		-- package.loaded.foundamental_towers = nil
+		-- package.loaded.mage_towers = nil
+		-- package.loaded.archer_towers = nil
+		-- package.loaded.engineer_towers = nil
+		-- package.loaded.heroes = nil
+		-- package.loaded.barrack_towers = nil
+		-- package.loaded.enemies = nil
+		-- package.loaded.boss = nil
+		-- package.loaded.hero_boss = nil
+		-- package.loaded["kr1.data.balance"] = nil
 
-	-- components 模块没有任何数据，也不会受到修改，因此也直接作为缓存，不重新加载。
-	-- package.loaded.components = nil
-	package.loaded.game_templates = nil
-	package.loaded.templates = nil
-	package.loaded.foundamental_towers = nil
-	package.loaded.mage_towers = nil
-	package.loaded.archer_towers = nil
-	package.loaded.engineer_towers = nil
-	package.loaded.heroes = nil
-	package.loaded.barrack_towers = nil
-	package.loaded.enemies = nil
-	package.loaded.boss = nil
-	package.loaded.hero_boss = nil
-	-- 作为纯函数模块，并不需要重新加载，直接作为缓存即可
-	-- package.loaded.game_scripts = nil
-	package.loaded["kr1.data.balance"] = nil
-	require("templates")
-	require("game_templates")
+		-- 不需要手动清空 package.loaded，因为只有第一次加载会执行这些 require 语句，之后就直接从备份复制了。
+		require("templates")
+		require("game_templates")
+		self.entities_backup = copy(self.entities)
+	else
+		self.entities = copy(self.entities_backup)
+	end
+
 -- self:report_status()
 -- self:test_tween()
+end
+
+function entity_db:ensure_loaded()
+	if not self.loaded then
+		self:load()
+	end
 end
 
 function entity_db:test_tween()
