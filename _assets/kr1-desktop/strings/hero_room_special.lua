@@ -2818,4 +2818,250 @@ local ult_duration = table.tail(blc.duration)
 local ult_bonus = table.tail(blc.s_bonuses) * 100
 map["自然本性"] = str(cooldown_str(), "希尔瓦拉释放真实形态，持续", ult_duration, "秒。期间伤害、速度、护甲和魔法抗性均提升", ult_bonus, "%，并强化森林呼唤和荆棘吐息技能。")
 
+set_hero("hero_builder")
+local blc = balance.hero_builder.overtime_work
+health[1].hp_max = table.tail(blc.soldier.hp_max)
+health[1].armor = blc.soldier.armor
+health[1].magic_armor = 0
+d[1].damage_min = table.tail(blc.soldier.melee_attack.damage_min)
+d[1].damage_max = table.tail(blc.soldier.melee_attack.damage_max)
+d[1].damage_type = DAMAGE_PHYSICAL
+local ow_duration = blc.soldier.duration
+cooldown = table.tail(blc.cooldown)
+map["正在施工"] = str(cooldown_str(), "召唤两名工人并肩作战，各拥有", hp_str(), "，驻场", ow_duration, "秒，每次攻击造成", damage_str(), "。")
+
+blc = balance.hero_builder.lunch_break
+cooldown = table.tail(blc.cooldown)
+local heal_val = table.tail(blc.heal_hp)
+local lost_health_val = blc.lost_health * 100
+map["午休时间"] = str(cooldown_str(), "生命值低于", lost_health_val, "%时，奥布杜尔停下战斗享用小吃，恢复", heal_val, "点生命。")
+
+blc = balance.hero_builder.demolition_man
+cooldown = table.tail(blc.cooldown)
+local demo_duration = table.tail(blc.duration)
+d[1].damage_min = table.tail(blc.s_damage_min)
+d[1].damage_max = table.tail(blc.s_damage_max)
+d[1].damage_type = blc.damage_type
+map["拆迁达人"] = str(cooldown_str(), "奥布杜尔快速旋转手中的木梁，持续", demo_duration, "秒，对周围敌人造成", damage_str(), "。")
+
+blc = balance.hero_builder.defensive_turret
+cooldown = table.tail(blc.cooldown)
+local turret_duration = table.tail(blc.duration)
+d[1].damage_min = table.tail(blc.attack.damage_min)
+d[1].damage_max = table.tail(blc.attack.damage_max)
+d[1].damage_type = DAMAGE_PHYSICAL
+map["防御塔楼"] = str(cooldown_str(), "奥布杜尔在路径上建造一座临时炮台，持续", turret_duration, "秒，每次攻击造成", damage_str(), "。")
+
+blc = balance.hero_builder.ultimate
+cooldown = table.tail(blc.cooldown)
+set_damage_value(table.tail(blc.damage))
+d[1].damage_type = blc.damage_type
+local stun_val = table.tail(blc.stun_duration)
+map["破城钢球"] = str(cooldown_str(), "奥布杜尔朝路径上扔出一个巨大钢球，造成", damage_str(), "，并使敌人眩晕", stun_val, "秒。")
+
+set_hero("hero_robot")
+blc = balance.hero_robot.jump
+cooldown = table.tail(blc.cooldown)
+d[1].damage_min = table.tail(blc.damage_min)
+d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_type = blc.damage_type
+local stun_dur = table.tail(blc.stun_duration)
+local jump_radius = blc.damage_radius
+map["震撼冲击"] = str(cooldown_str(), "布莱兹跳向一名移动中的敌人，砸落时对", jump_radius, "范围内造成", damage_str(), "，并使其眩晕", stun_dur, "秒。")
+
+blc = balance.hero_robot.fire
+cooldown = table.tail(blc.cooldown)
+d[1].damage_min = table.tail(blc.damage_min)
+d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_type = blc.damage_type
+local slow_dur = table.tail(blc.s_slow_duration)
+map["瓦斯烟幕"] = str(cooldown_str(), "布莱兹向路径喷射烟幕，对多名敌人造成", damage_str(), "，并使其减速", slow_dur, "秒。")
+
+blc = balance.hero_robot.explode
+cooldown = table.tail(blc.cooldown)
+d[1].damage_min = table.tail(blc.damage_min)
+d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_type = blc.damage_type
+local burn_dur = blc.burning_duration
+local burn_dmg = table.tail(blc.s_burning_damage)
+map["战争献祭"] = str(cooldown_str(), "布莱兹在脚下引爆炸弹，对周围敌人造成", damage_str(), "，并使其燃烧", burn_dur, "秒，燃烧每秒造成", burn_dmg, "点伤害。")
+
+blc = balance.hero_robot.uppercut
+cooldown = table.tail(blc.cooldown)
+local life_pct = table.tail(blc.s_life_threshold) * 100
+map["强力勾拳"] = str(cooldown_str(), "当目标生命值低于", life_pct, "%时，布莱兹使用强力勾拳将其击飞。")
+
+blc = balance.hero_robot.ultimate
+cooldown = table.tail(blc.cooldown)
+local ult_dur = blc.duration
+local ult_dmg = table.tail(blc.s_damage)
+local ult_burn = blc.s_burning_damage
+local ult_burn_dur = blc.burning_duration
+map["列车炮"] = str(cooldown_str(), "布莱兹召唤一辆战车沿路径逆向行进，持续", ult_dur, "秒，对沿途敌人造成", ult_dmg, "点伤害，并使其燃烧", ult_burn_dur, "秒，每秒造成", ult_burn, "点伤害。")
+
+set_hero("hero_bird")
+blc = balance.hero_bird.cluster_bomb
+set_skill(h.hero.skills.cluster_bomb)
+get_cooldown()
+d[1].damage_min = table.tail(blc.explosion_damage_min)
+d[1].damage_max = table.tail(blc.explosion_damage_max)
+d[1].damage_type = blc.explosion_damage_type
+local fire_dur = table.tail(blc.fire_duration)
+local burn_dmg = table.tail(blc.burning.damage)
+map["集束炸弹"] = str(cooldown_str(), "格里芬向路径投掷集束炸弹，炸弹分裂为多枚子弹，每枚爆炸对范围内敌人造成", damage_str(), "，并在落点引燃持续", fire_dur, "秒的火焰，每", blc.burning.cycle_time, "秒造成", burn_dmg, "点真实伤害。")
+
+blc = balance.hero_bird.shout_stun
+set_skill(h.hero.skills.shout_stun)
+get_cooldown()
+local stun_dur = table.tail(blc.stun_duration)
+local slow_dur = table.tail(blc.slow_duration)
+local slow_factor = (1 - blc.slow_factor) * 100
+map["嘶吼眩晕"] = str(cooldown_str(), "格里芬发出震耳战吼，使", blc.radius, "范围内所有敌人眩晕", stun_dur, "秒，并在之后减速", slow_factor, "%持续", slow_dur, "秒。")
+
+blc = balance.hero_bird.gattling
+set_skill(h.hero.skills.gattling)
+get_cooldown()
+d[1].damage_min = table.tail(blc.damage_min)
+d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_type = blc.damage_type
+local gat_dur = table.tail(blc.duration)
+map["机枪扫射"] = str(cooldown_str(), "格里芬持续扫射目标区域", gat_dur, "秒，对目标及周围敌人造成", damage_str(), "。")
+
+blc = balance.hero_bird.eat_instakill
+set_skill(h.hero.skills.eat_instakill)
+get_cooldown()
+local eat_hp = table.tail(blc.hp_max)
+map["吞噬"] = str(cooldown_str(), "格里芬俯冲并吞噬一名生命值低于", eat_hp, "点的敌人，将其彻底消灭。")
+
+blc = balance.hero_bird.ultimate
+set_skill(h.hero.skills.ultimate)
+get_cooldown()
+local ult_dur = table.tail(blc.bird.duration)
+d[1].damage_min = table.tail(blc.bird.melee_attack.damage_min)
+d[1].damage_max = table.tail(blc.bird.melee_attack.damage_max)
+d[1].damage_type = blc.bird.melee_attack.damage_type
+map["毁灭轰炸"] = str(cooldown_str(), "格里芬召唤两只幼鹰在路径上追击敌人，持续", ult_dur, "秒，每次攻击造成", damage_str(), "。")
+
+set_hero("hero_lava")
+blc = balance.hero_lava.temper_tantrum
+set_skill(h.hero.skills.temper_tantrum)
+get_cooldown()
+d[1].damage_min = table.tail(blc.s_damage_min)
+d[1].damage_max = table.tail(blc.s_damage_max)
+d[1].damage_type = blc.damage_type
+local stun_dur = blc.stun_duration
+map["暴怒猛击"] = str(cooldown_str(), "喀拉托连续猛击一名敌人，造成", damage_str(), "，并将目标击晕", stun_dur, "秒。")
+
+blc = balance.hero_lava.hotheaded
+set_skill(h.hero.skills.hotheaded)
+local hothead_factor = (table.tail(blc.s_damage_factors)) * 100
+local hothead_dur = table.tail(blc.durations)
+map["起床气"] = "（被动）喀拉托复活时，使附近防御塔的伤害提升" .. hothead_factor .. "%，持续" .. hothead_dur .. "秒。"
+
+blc = balance.hero_lava.double_trouble
+set_skill(h.hero.skills.double_trouble)
+get_cooldown()
+d[1].damage_min = table.tail(blc.damage_min)
+d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_type = blc.damage_type
+local sol_dur = blc.soldier.duration
+map["双倍麻烦"] = str(cooldown_str(), "喀拉托投掷熔岩球，爆炸造成", damage_str(), "，并召唤一只熔岩团，持续战斗", sol_dur, "秒。")
+
+blc = balance.hero_lava.wild_eruption
+set_skill(h.hero.skills.wild_eruption)
+get_cooldown()
+d[1].damage_min = table.tail(blc.damage_min)
+d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_type = blc.damage_type
+local erupt_dur = table.tail(blc.duration)
+map["狂野喷发"] = str(cooldown_str(), "喀拉托向周围敌人甩出熔岩，每秒造成", damage_str(), "，并使其灼烧", erupt_dur, "秒。")
+
+blc = balance.hero_lava.ultimate
+set_skill(h.hero.skills.ultimate)
+get_cooldown()
+local ult_count = table.tail(blc.fireball_count)
+d[1].damage_min = table.tail(blc.bullet.damage_min)
+d[1].damage_max = table.tail(blc.bullet.damage_max)
+d[1].damage_type = blc.bullet.damage_type
+local scorch_dur = blc.bullet.scorch.duration
+map["愤怒爆发"] = str(cooldown_str(), "喀拉托向路径喷射", ult_count, "发熔岩弹，每发造成", damage_str(), "，并使敌人灼烧", scorch_dur, "秒。")
+
+set_hero("hero_spider")
+blc = balance.hero_spider.instakill_melee
+set_skill(h.hero.skills.instakill_melee)
+get_cooldown()
+local instakill_threshold = table.tail(blc.life_threshold)
+map["暗杀"] = str(cooldown_str(), "暗影蛛后对被眩晕且生命值低于", instakill_threshold, "的敌人发动一击必杀。")
+
+blc = balance.hero_spider.area_attack
+set_skill(h.hero.skills.area_attack)
+get_cooldown()
+local stun_dur = table.tail(blc.s_stun_time)
+map["蛛网缠绕"] = str(cooldown_str(), "暗影蛛后喷出丝网，将周围敌人眩晕", stun_dur, "秒。")
+
+blc = balance.hero_spider.tunneling
+set_skill(h.hero.skills.tunneling)
+d[1].damage_min = table.tail(blc.damage_min)
+d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_type = blc.damage_type
+map["地道穿越"] = str("（被动）暗影蛛后移动至新集结点时潜入地下，抵达后对周围敌人造成", damage_str(), "。")
+
+blc = balance.hero_spider.supreme_hunter
+set_skill(h.hero.skills.supreme_hunter)
+get_cooldown()
+d[1].damage_min = table.tail(blc.damage_min)
+d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_type = blc.damage_type
+map["猎手本能"] = str(cooldown_str(), "暗影蛛后瞬移至一名远处敌人身旁，造成", damage_str(), "。")
+
+blc = balance.hero_spider.ultimate
+set_skill(h.hero.skills.ultimate)
+get_cooldown()
+local spawn_count = table.tail(blc.spawn_amount)
+local spider_dur = table.tail(blc.spider.duration)
+map["蛛后降临"] = str(cooldown_str(), "暗影蛛后召唤", spawn_count, "只蜘蛛协助战斗，持续", spider_dur, "秒。")
+
+set_hero("hero_mecha")
+blc = balance.hero_mecha.goblidrones
+set_skill(h.hero.skills.goblidrones)
+get_cooldown()
+local drone_dur = table.tail(blc.drone.duration)
+d[1].damage_min = table.tail(blc.drone.ranged_attack.damage_min)
+d[1].damage_max = table.tail(blc.drone.ranged_attack.damage_max)
+d[1].damage_type = blc.drone.ranged_attack.damage_type
+map["哥布林无人机"] = str(cooldown_str(), "召唤", blc.units, "架无人机攻击敌人，持续", drone_dur, "秒，每次攻击造成", damage_str(), "。")
+
+blc = balance.hero_mecha.tar_bomb
+set_skill(h.hero.skills.tar_bomb)
+get_cooldown()
+local tar_dur = table.tail(blc.duration)
+local tar_slow = (1 - blc.slow_factor) * 100
+map["焦油炸弹"] = str(cooldown_str(), "朝路上投掷一颗沥青弹，使敌人减速", tar_slow, "%，持续", tar_dur, "秒。")
+
+blc = balance.hero_mecha.power_slam
+set_skill(h.hero.skills.power_slam)
+get_cooldown()
+local slam_stun = table.tail(blc.stun_time) / 30
+d[1].damage_min = table.tail(blc.damage_min)
+d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_type = blc.damage_type
+map["战争机器"] = str(cooldown_str(), "机甲撞击地面，短暂眩晕附近所有敌人", slam_stun, "秒，并造成", damage_str(), "。")
+
+blc = balance.hero_mecha.mine_drop
+set_skill(h.hero.skills.mine_drop)
+get_cooldown()
+local max_mines = table.tail(blc.max_mines)
+d[1].damage_min = table.tail(blc.damage_min)
+d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_type = blc.damage_type
+map["自毁"] = str(cooldown_str(), "静止时，机甲定期在路径上安放至多", max_mines, "枚爆炸地雷，爆炸造成", damage_str(), "。")
+
+blc = balance.hero_mecha.ultimate
+set_skill(h.hero.skills.ultimate)
+get_cooldown()
+d[1].damage_min = table.tail(blc.ranged_attack.damage_min)
+d[1].damage_max = table.tail(blc.ranged_attack.damage_max)
+d[1].damage_type = blc.ranged_attack.damage_type
+map["终极炮击"] = str(cooldown_str(), "呼叫一架哥布林飞艇，对目标范围附近的敌人进行轰炸，每次攻击造成", damage_str(), "。")
+
 return H

@@ -922,6 +922,97 @@ local hero_room_view = {
 					scale = hero_portraits_scale
 				},
 				{
+					id = "portrait_hero_builder",
+					hidden = true,
+					class = "KView",
+					children = {{
+						class = "KImageView",
+						image_name = "kr5_portrait_notxt_0005"
+					}, {
+						id = "name_img",
+						image_name = "hero_room_portraits_name_0000",
+						class = "KImageView"
+					}},
+					pos = hero_portraits_pos,
+					scale = hero_portraits_scale
+				},
+				{
+					id = "portrait_hero_robot",
+					hidden = true,
+					class = "KView",
+					children = {{
+						class = "KImageView",
+						image_name = "kr5_portrait_notxt_0010"
+					}, {
+						id = "name_img",
+						image_name = "hero_room_portraits_name_0000",
+						class = "KImageView"
+					}},
+					pos = hero_portraits_pos,
+					scale = hero_portraits_scale
+				},
+                -- 小高达：0009
+				{
+					id = "portrait_hero_bird",
+					hidden = true,
+					class = "KView",
+					children = {{
+						class = "KImageView",
+						image_name = "kr5_portrait_notxt_0008"
+					}, {
+						id = "name_img",
+						image_name = "hero_room_portraits_name_0000",
+						class = "KImageView"
+					}},
+					pos = hero_portraits_pos,
+					scale = hero_portraits_scale
+				},
+				{
+					id = "portrait_hero_lava",
+					hidden = true,
+					class = "KView",
+					children = {{
+						class = "KImageView",
+						image_name = "kr5_portrait_notxt_0016"
+					}, {
+						id = "name_img",
+						image_name = "hero_room_portraits_name_0000",
+						class = "KImageView"
+					}},
+					pos = hero_portraits_pos,
+					scale = hero_portraits_scale
+				},
+				{
+					id = "portrait_hero_spider",
+					hidden = true,
+					class = "KView",
+					children = {{
+						class = "KImageView",
+						image_name = "kr5_portrait_notxt_0017"
+					}, {
+						id = "name_img",
+						image_name = "hero_room_portraits_name_0000",
+						class = "KImageView"
+					}},
+					pos = hero_portraits_pos,
+					scale = hero_portraits_scale
+				},
+				{
+					id = "portrait_hero_mecha",
+					hidden = true,
+					class = "KView",
+					children = {{
+						class = "KImageView",
+						image_name = "kr5_portrait_notxt_0006"
+					}, {
+						id = "name_img",
+						image_name = "hero_room_portraits_name_0000",
+						class = "KImageView"
+					}},
+					pos = hero_portraits_pos,
+					scale = hero_portraits_scale
+				},
+				{
 					id = "portrait_hero_name_label",
 					class = "HeroNameLabel",
 					pos = v(230, 335),

@@ -1033,6 +1033,118 @@ return {
 				thickness = 1 * rs,
 				glow_color = fc(37, 93, 0, 255)
 			}, {}}
+		},
+		hero_dragon_arb = {
+			shader_args = {{
+				margin = 0 * rs,
+				p1 = p11,
+				p2 = p12,
+				c1 = fc(0, 0, 0, 255),
+				c2 = fc(112, 217, 96, 255),
+				c3 = fc(45, 162, 76, 255)
+			}, {
+				thickness = 2.5 * rs,
+				outline_color = fc(0, 106, 56, 255)
+			}, {
+				thickness = 1 * rs,
+				glow_color = fc(0, 106, 56, 255)
+			}, {}}
+		},
+		hero_builder = {
+			shader_args = {{
+				margin = 0 * rs,
+				p1 = p11,
+				p2 = p12,
+				c1 = fc(0, 0, 0, 255),
+				c2 = fc(255, 183, 95, 255),
+				c3 = fc(255, 98, 0, 255)
+			}, {
+				thickness = 2.5 * rs,
+				outline_color = fc(88, 19, 0, 255)
+			}, {
+				thickness = 1.5 * rs,
+				glow_color = fc(88, 19, 0, 255)
+			}, {}}
+		},
+		hero_robot = {
+			shader_args = {{
+				margin = 0 * rs,
+				p1 = p11,
+				p2 = p12,
+				c1 = fc(0, 0, 0, 255),
+				c2 = fc(255, 115, 47, 255),
+				c3 = fc(189, 71, 28, 255)
+			}, {
+				thickness = 2.5 * rs,
+				outline_color = fc(123, 27, 9, 255)
+			}, {
+				thickness = 1 * rs,
+				glow_color = fc(123, 27, 9, 255)
+			}, {}}
+		},
+		hero_bird = {
+			shader_args = {{
+				margin = 0 * rs,
+				p1 = p11,
+				p2 = p12,
+				c1 = fc(0, 0, 0, 255),
+				c2 = fc(255, 81, 59, 255),
+				c3 = fc(201, 43, 46, 255)
+			}, {
+				thickness = 2.5 * rs,
+				outline_color = fc(133, 5, 33, 255)
+			}, {
+				thickness = 1 * rs,
+				glow_color = fc(133, 5, 33, 255)
+			}, {}}
+		},
+		hero_lava = {
+			shader_args = {{
+				margin = 0 * rs,
+				p1 = p11,
+				p2 = p12,
+				c1 = fc(0, 0, 0, 255),
+				c2 = fc(255, 140, 16, 255),
+				c3 = fc(207, 76, 16, 255)
+			}, {
+				thickness = 2.5 * rs,
+				outline_color = fc(135, 12, 16, 255)
+			}, {
+				thickness = 1 * rs,
+				glow_color = fc(135, 12, 16, 255)
+			}, {}}
+		},
+		hero_spider = {
+			shader_args = {{
+				margin = 0 * rs,
+				p1 = p11,
+				p2 = p12,
+				c1 = fc(0, 0, 0, 255),
+				c2 = fc(255, 73, 240, 255),
+				c3 = fc(174, 48, 162, 255)
+			}, {
+				thickness = 2.5 * rs,
+				outline_color = fc(89, 23, 84, 255)
+			}, {
+				thickness = 1 * rs,
+				glow_color = fc(89, 23, 84, 255)
+			}, {}}
+		},
+		hero_mecha = {
+			shader_args = {{
+				margin = 0 * rs,
+				p1 = p11,
+				p2 = p12,
+				c1 = fc(0, 0, 0, 255),
+				c2 = fc(252, 142, 18, 255),
+				c3 = fc(194, 102, 30, 255)
+			}, {
+				thickness = 2.5 * rs,
+				outline_color = fc(136, 61, 42, 255)
+			}, {
+				thickness = 1 * rs,
+				glow_color = fc(136, 61, 42, 255)
+			}, {}}
 		}
 	},
 	hero_data = { -- 爵士
@@ -1545,6 +1657,17 @@ return {
 			icon = 3,
 			stats = {6, 5, 5, 6}
 		},
+        		-- 建筑师
+		{
+			from_kr = 5,
+			portrait = 5,
+			thumb = 5,
+			name = "hero_builder",
+			available_level = 105,
+			starting_level = 1,
+			icon = 5,
+			stats = {7, 5, 6, 4}
+		},
 		-- 安雅
 		{
 			from_kr = 5,
@@ -1567,6 +1690,17 @@ return {
 			icon = 4,
 			stats = {5, 5, 5, 6}
 		},
+        		-- 格里芬
+		{
+			from_kr = 5,
+			portrait = 8,
+			thumb = 8,
+			name = "hero_bird",
+			available_level = 109,
+			starting_level = 1,
+			icon = 8,
+			stats = {5, 7, 6, 5}
+		},
 		-- 虚空法师
 		{
 			from_kr = 5,
@@ -1577,6 +1711,18 @@ return {
 			starting_level = 1,
 			icon = 7,
 			stats = {4, 4, 6, 8}
+		},
+		-- 奥格纳罗：available_level = 112
+        -- 战争巨头
+		{
+			from_kr = 5,
+			portrait = 10,
+			thumb = 10,
+			name = "hero_robot",
+			available_level = 114,
+			starting_level = 1,
+			icon = 10,
+			stats = {6, 4, 8, 5}
 		},
 		-- 圣龙
 		{
@@ -1643,6 +1789,38 @@ return {
 			starting_level = 1,
 			icon = 15,
 			stats = {8, 4, 7, 5}
+		},
+		-- 喀拉托
+		{
+			from_kr = 5,
+			portrait = 16,
+			thumb = 16,
+			name = "hero_lava",
+			available_level = 116,
+			starting_level = 1,
+			icon = 16,
+			stats = {7, 5, 7, 4}
+		},
+		-- 暗影蛛后
+		{
+			from_kr = 5,
+			portrait = 17,
+			thumb = 17,
+			name = "hero_spider",
+			available_level = 116,
+			starting_level = 1,
+			icon = 17,
+			stats = {6, 8, 6, 4}
+		}, -- 奥纳格罗
+		{
+			from_kr = 5,
+			portrait = 6,
+			thumb = 6,
+			name = "hero_mecha",
+			available_level = 116,
+			starting_level = 1,
+			icon = 6,
+			stats = {6, 4, 7, 5}
 		}
 	},
 	level_data = {
