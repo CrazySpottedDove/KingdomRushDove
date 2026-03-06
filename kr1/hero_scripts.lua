@@ -4986,9 +4986,10 @@ scripts.aura_giant_bastion = {
 		local s = this.render.sprites[1]
 
 		local function add_damage(value)
-			SU.damage_inc(hero, value)
-
-			added_damage = added_damage + value
+            if added_damage + value >= 0 then
+    			added_damage = added_damage + value
+    			SU.damage_inc(hero, value)
+            end
 		end
 
 		while true do
