@@ -3231,10 +3231,10 @@ if not IS_ANDROID then
 					else
 						if e.health.hp > e.health.hp_max then
 							ff.scale.x = ff.bar_width
-							ff.color = self._hb_colors.fg2
+							ff.color = hb.colors and hb.colors.fg2 or self._hb_colors.fg2
 						else
 							ff.scale.x = e.health.hp / e.health.hp_max * ff.bar_width
-							ff.color = self._hb_colors.fg
+							ff.color = hb.colors and hb.colors.fg or self._hb_colors.fg
 						end
 					end
 				end
@@ -3408,10 +3408,10 @@ else
 					else
 						if e.health.hp > e.health.hp_max then
 							ff.scale.x = ff.bar_width
-							ff.color = self._hb_colors.fg2
+							ff.color = hb.colors and hb.colors.fg2 or self._hb_colors.fg2
 						else
 							ff.scale.x = e.health.hp / e.health.hp_max * ff.bar_width
-							ff.color = self._hb_colors.fg
+							ff.color = hb.colors and hb.colors.fg or self._hb_colors.fg
 						end
 					end
 				end
