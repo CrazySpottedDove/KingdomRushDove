@@ -7879,7 +7879,6 @@ function scripts.power_fireball_control.update(this, store)
 	local start_y = store.visible_coords and store.visible_coords.top or REF_H
 	local ts
 	local burst_interval = 0.33
-
 	for i = 1, math.max(this.fireball_count, this.cataclysm_count) do
 		if i <= this.fireball_count then
 			local e = E:create_entity("power_fireball")

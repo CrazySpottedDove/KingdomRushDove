@@ -690,7 +690,8 @@ for i = 1, 3 do
 end
 
 for i = 1, 3 do
-	E:set_template("re_current_" .. i, E:get_template("re_farmer_" .. i))
+	-- E:set_template("re_current_" .. i, E:get_template("re_farmer_" .. i))
+	E:register_t("re_current_" .. i, "re_farmer_" .. i)
 end
 
 --#endregion
@@ -1570,8 +1571,11 @@ tt.slow.factor = nil
 tt.modifier.duration = 3
 tt.render.sprites[1].name = "mod_elder_shaman_speed"
 
-E:set_template("user_power_1", E:get_template("power_fireball_control"))
-E:set_template("user_power_2", E:get_template("power_reinforcements_control"))
+-- E:set_template("user_power_1", E:get_template("power_fireball_control"))
+E:register_t("user_power_1", "power_fireball_control")
+
+-- E:set_template("user_power_2", E:get_template("power_reinforcements_control"))
+E:register_t("user_power_2", "power_reinforcements_control")
 
 --#endregion
 --#region decal_sheep_big

@@ -1587,7 +1587,12 @@ function upgrades:patch_templates(max_level)
 		at.cooldown[3] = at.cooldown[3] * u.cooldown_factor
 	end
 
+	if self.list_id == 1 or self.list_id == 2 then
+		E:set_template("user_power_1", T("power_fireball_control"))
+	end
+
 	T("power_fireball_control").user_power.level = self.levels.rain
+
 	u = self:get_upgrade("rain_blazing_skies")
 
 	if u then

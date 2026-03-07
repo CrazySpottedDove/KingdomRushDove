@@ -281,6 +281,7 @@ function entity_db:get_template(t)
 	return self.entities[t]
 end
 
+-- 该方法不允许在 entity_db 的 load 阶段使用，必须在 entity_db 已经加载后，再额外设置模板，否则可能导致引用了作为备份的表，导致意外的结果。
 function entity_db:set_template(name, t)
 	self.entities[name] = t
 end
