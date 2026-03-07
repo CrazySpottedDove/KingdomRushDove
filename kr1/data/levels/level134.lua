@@ -34,7 +34,7 @@ end
 if not store.main_hero and not store.level.locked_hero and not store.level.manual_hero_insertion then
 LU.insert_hero(store)
 end
-if not store.restarted and not main.params.skip_cutscenes then
+if not store.restarted and not main.params.skip_cutscenes and not U.flag_has(store.main_hero.vis.bans,controller_boss_prefight.stun_hero_vis_flags) then
 store.main_hero.nav_grid.waypoints={}
 local hero_path=10
 local hero_subpath=1
