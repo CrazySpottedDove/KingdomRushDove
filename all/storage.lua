@@ -554,16 +554,6 @@ function storage:import_plist(filename)
 		return
 	end
 
-	if KR_PLATFORM == "android" then
-		if KR_GAME == "kr1" and p.KingdomRush then
-			p = p.KingdomRush
-		elseif KR_GAME == "kr2" and p.KingdomRushFrontiers then
-			p = p.KingdomRushFrontiers
-		elseif KR_GAME == "kr3" and p.KingdomRushOrigins then
-			p = p.KingdomRushOrigins
-		end
-	end
-
 	for i = 1, 3 do
 		local src_slot_name = string.format("slot_%i", i - 1)
 		local src_slot = p[src_slot_name]

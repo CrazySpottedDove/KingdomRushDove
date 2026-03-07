@@ -250,10 +250,6 @@ function screen:init(w, h, done_callback)
 
 	backImage.pos.x = sw * 0.5
 
-	if i18n.current_locale == "zh-Hans" and KR_GAME == "kr2" then
-		window:get_child_by_id("main_menu_subtitle_cn").hidden = false
-	end
-
 	local banner = window:get_child_by_id("banner")
 
 	banner.propagate_on_click = true

@@ -22,8 +22,6 @@ local G = love.graphics
 
 require("all.constants")
 
-local IS_KR5 = KR_GAME == "kr5"
-
 if DEBUG then
 	package.loaded.game_editor_classes = nil
 end

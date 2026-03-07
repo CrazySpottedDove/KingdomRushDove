@@ -7,9 +7,9 @@ E = require("entity_db")
 
 require("all.constants")
 
-IS_PHONE = KR_TARGET == "phone"
-IS_PHONE_OR_TABLET = KR_TARGET == "phone" or KR_TARGET == "tablet"
-IS_CONSOLE = KR_TARGET == "console"
+IS_PHONE = false
+IS_PHONE_OR_TABLET = false
+IS_CONSOLE = false
 
 function vec_2(v1, v2)
 	return {

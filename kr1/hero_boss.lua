@@ -76,9 +76,6 @@ local bor = bit.bor
 local band = bit.band
 local bnot = bit.bnot
 local E = require("entity_db")
-local IS_PHONE = KR_TARGET == "phone"
-local IS_PHONE_OR_TABLET = KR_TARGET == "phone" or KR_TARGET == "tablet"
-local IS_CONSOLE = KR_TARGET == "console"
 local a
 local V = require("lib.klua.vector")
 

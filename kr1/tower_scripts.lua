@@ -25,8 +25,6 @@ local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
 local bnot = bit.bnot
-local IS_PHONE = KR_TARGET == "phone"
-local IS_CONSOLE = KR_TARGET == "console"
 local v = V.v
 local vclone = V.vclone
 local random = math.random

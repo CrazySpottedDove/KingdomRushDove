@@ -21,7 +21,6 @@ local SU = require("screen_utils")
 local GR = require("grid_db")
 local LU = require("level_utils")
 local sys = require("systems")
-local IS_KR5 = KR_GAME == "kr5"
 
 simulation = require("simulation")
 A = require("animation_db")
@@ -151,13 +150,7 @@ function editor:init(screen_w, screen_h, done_callback)
 
 	self.store = {}
 
-	local systems
-
-	if IS_KR5 then
-		systems = sys
-	else
-		systems = self.simulation_systems
-	end
+	local systems = self.simulation_systems
 
 	simulation:init(self.store, systems, self.simulation_systems, TICK_LENGTH)
 
@@ -669,13 +662,7 @@ function editor:level_load(idx, mode)
 	self.undo_active = false
 	self.store = {}
 
-	local systems
-
-	if IS_KR5 then
-		systems = sys
-	else
-		systems = self.simulation_systems
-	end
+	local systems = self.simulation_systems
 
 	simulation:init(self.store, systems, self.simulation_systems, TICK_LENGTH)
 

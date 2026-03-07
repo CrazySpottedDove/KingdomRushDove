@@ -20,26 +20,16 @@ SPATIAL_HASH_MAX_INDEX = SPATIAL_HASH_COLS * SPATIAL_HASH_ROWS
 SPATIAL_INDEX_CHECK_INTERVAL = 1 / FPS
 ID_ARRAY_CAPACITY = 256
 
-if KR_TARGET == "phone" then
-	GUI_REF_W = 480
-	GUI_REF_H = 320
-else
-	GUI_REF_W = 1024
-	GUI_REF_H = 768
-end
+GUI_REF_W = 1024
+GUI_REF_H = 768
 
 BIG_ENEMY_HP = 750
 MANY_ENEMY_COUNT = 6
 WIDE_SCREEN_ASPECT = 1.775
 ULTRAWIDE_SCREEN_ASPECT = 2.053125
-MIN_SCREEN_ASPECT = KR_TARGET == "phone" and 1.5 or 1.3333333333333333
-MAX_SCREEN_ASPECT = KR_TARGET == "phone" and 2.165 or 1.7777777777777777
-SAFE_FRAME_STEPS = {{ULTRAWIDE_SCREEN_ASPECT, KR_PLATFORM == "ios" and {
-	b = 10,
-	l = 30,
-	r = 30,
-	t = 6
-} or {
+MIN_SCREEN_ASPECT = 1.3333333333333333
+MAX_SCREEN_ASPECT = 1.7777777777777777
+SAFE_FRAME_STEPS = {{ULTRAWIDE_SCREEN_ASPECT, {
 	b = 10,
 	l = 14,
 	r = 14,
@@ -79,7 +69,6 @@ Z_BACKGROUND_BETWEEN = 1100
 Z_BACKGROUND_COVERS = 1200
 Z_TOWER_BASES = 1300
 Z_DECALS = 1400
-Z_GUI_DECALS = 2000
 Z_OBJECTS = 3000
 Z_OBJECTS_COVERS = 3100
 Z_FLYING_HEROES = 3150
@@ -100,14 +89,8 @@ GUI_MODE_POWER_2 = "POWER_2"
 GUI_MODE_POWER_3 = "POWER_3"
 GUI_MODE_BAG = "BAG"
 GUI_MODE_BAG_ITEM = "BAG_ITEM"
-GUI_MODE_TOWER_MENU = "TOWER_MENU"
-GUI_MODE_PAUSE = "PAUSE"
-GUI_MODE_NOTIFICATION = "NOTIFICATION"
 GUI_MODE_WAVE_FLAG = "WAVE_FLAG"
 GUI_MODE_SELECT_POINT = "SELECT_POINT"
-GUI_MODE_POINTER = "POINTER"
-GUI_MODE_DISABLED = "DISABLED"
-GUI_MODE_FINISHED = "FINISHED"
 GUI_MODE_SWAP_TOWER = "SWAP_TOWER"
 STATS_TYPE_ENEMY = 1
 STATS_TYPE_SOLDIER = 2
@@ -147,12 +130,10 @@ DAMAGE_FX_NOT_EXPLODE = 1073741824
 DAMAGE_FX_EXPLODE = 2147483648
 DAMAGE_BASE_TYPES = 1023 + DAMAGE_AGAINST_ARMOR + DAMAGE_AGAINST_MAGIC_ARMOR
 DAMAGE_ALL_TYPES = 16777215
-DAMAGE_ALL_FLAGS = 4278190080
 DAMAGE_ALL = 4294967295
 DAMAGE_NONE = 0
 DAMAGE_MAGICAL_GROUP = DAMAGE_MAGICAL + DAMAGE_MAGICAL_EXPLOSION + DAMAGE_AGAINST_MAGIC_ARMOR
 DAMAGE_PHYSICAL_GROUP = DAMAGE_PHYSICAL + DAMAGE_EXPLOSION + DAMAGE_SHOT + DAMAGE_RUDE + DAMAGE_STAB + DAMAGE_ELECTRICAL + DAMAGE_AGAINST_ARMOR
-DR_NONE = 0
 DR_DAMAGE = 1
 DR_KILL = 2
 DR_ARMOR = 4
@@ -239,7 +220,6 @@ F_BURN = 16384
 F_CANNIBALIZE = 32768
 F_BLOOD = 65536
 F_DRILL = 131072
-F_DRIDER_POISON = 131072
 F_EAT = 262144
 F_INSTAKILL = 524288
 F_POISON = 1048576
@@ -261,7 +241,6 @@ F_DARK_ELF = 1073741824
 F_SPELLCASTER = 2147483648
 F_NONE = 0
 F_ALL = 4294967295
-NF_NONE = 0
 NF_ALL = 4294967295
 NF_RALLY = 1
 NF_RANGE = 2
@@ -270,11 +249,9 @@ NF_POWER_2 = 256
 NF_POWER_3 = 512
 NF_TWISTER = 65536
 NF_NO_EXIT = 131072
-UNIT_SIZE_NONE = 0
 UNIT_SIZE_SMALL = 1
 UNIT_SIZE_MEDIUM = 2
 UNIT_SIZE_LARGE = 3
-TOWER_SIZE_NONE = 0
 TOWER_SIZE_SMALL = 1
 TOWER_SIZE_LARGE = 3
 HEALTH_BAR_SIZE_SMALL = "small"
@@ -368,35 +345,10 @@ A_NO_TARGET = 1
 A_IN_COOLDOWN = 2
 A_DONE = 3
 KEYPRESS_ESCAPE = "escape"
-KEYPRESS_SPACE = "space"
-KEYPRESS_RETURN = "return"
-KEYPRESS_1 = "1"
-KEYPRESS_2 = "2"
-KEYPRESS_3 = "3"
-KEYPRESS_4 = "4"
-KEYPRESS_5 = "5"
-KEYPRESS_6 = "6"
-KEYPRESS_Q = "q"
-KEYPRESS_W = "w"
-KEYPRESS_A = "a"
-KEYPRESS_D = "d"
-KEYPRESS_S = "s"
-KEYPRESS_R = "r"
-KEYPRESS_F = "f"
-KEYPRESS_F1 = "f1"
-KEYPRESS_F2 = "f2"
-KEYPRESS_F3 = "f3"
-KEYPRESS_F4 = "f4"
-KEYPRESS_F5 = "f5"
-KEYPRESS_F6 = "f6"
 PT_NUMBER = "number"
 PT_STRING = "string"
 PT_COORDS = "coords"
-PT_COLOR = "color"
 DEVICE_PROFILE_LOW = 1
-DEVICE_PROFILE_MEDIUM = 2
-DEVICE_PROFILE_HIGH = 3
-ALERT_NODES_TO_DEFEND = 35
 MOD_TYPE_BLEED = "bleed"
 MOD_TYPE_FAST = "fast"
 MOD_TYPE_FREEZE = "freeze"
@@ -407,42 +359,8 @@ MOD_TYPE_SLOW = "slow"
 MOD_TYPE_STUN = "stun"
 MOD_TYPE_TELEPORT = "teleport"
 MOD_TYPE_TIMELAPSE = "timelapse"
-AD_TYPE_REWARDED = "rewarded"
-AD_TYPE_INTERSTITIAL = "interstitial"
-SGN_PS_STATUS_CHANGED = "platform-service-status-changed"
 SGN_PS_SYNC_SLOTS_FINISHED = "platform-service-sync-slots-finished"
-SGN_PS_PUSH_SLOT_FINISHED = "platform-service-push-slot-finished"
-SGN_PS_DELETE_SLOT_FINISHED = "platform-service-delete-slot-finished"
-SGN_PS_SYNC_PRODUCTS_FINISHED = "platform-service-sync-products-finished"
-SGN_PS_SYNC_PURCHASES_FINISHED = "platform-service-sync-purchases-finished"
-SGN_PS_SYNC_PURCHASE_HISTORY_FINISHED = "platform-service-sync-purchase-history-finished"
-SGN_PS_PURCHASE_PRODUCT_FINISHED = "platform-service-purchase-product-finished"
-SGN_PS_RESTORE_PURCHASES_FINISHED = "platform-service-restore-purchases-finished"
-SGN_PS_PREMIUM_UNLOCKED = "platform-service-premium-unlocked"
-SGN_PS_AD_SHOW_VIDEO_STARTED = "platform-service-ad-show-video-started"
-SGN_PS_AD_SHOW_VIDEO_FINISHED = "platform-service-ad-show-video-finished"
-SGN_PS_CHECK_DRM_FINISHED = "platform-service-check-drm-finished"
-SGN_PS_NEWS_CACHED = "platfor-service-news-cached"
-SGN_PS_NEWS_IMAGE_CACHED = "platfor-service-news-image-cached"
-SGN_PS_HTTP_GET_FINISHED = "platform-service-http-get-finished"
-SGN_PS_AUTH_STARTED = "platform-service-auth-started"
-SGN_PS_AUTH_FINISHED = "platform-service-auth-finished"
-SGN_PS_CHANNEL_QUIT_REQUESTED = "platform-service-channel-quit-requested"
-SGN_FS_COMMIT_STARTED = "filesystem-commit-started"
-SGN_FS_COMMIT_ENDED = "filesystem-commit-ended"
 SGN_DIRECTOR_ITEM_SHOWN = "director-item-shown"
-SGN_GAME_GUI_PAUSE_SHOW = "game-gui-pause-show"
-SGN_GAME_GUI_PAUSE_HIDE = "game-gui-pause-hide"
-SGN_SHOP_GEMS_CHANGED = "shop-gems-changed"
-SGN_SHOP_SHOW_IAP_PROGRESS = "shop-show-iap-progress"
-SGN_SHOP_SHOW_MESSAGE = "shop-show-message"
-SGN_SHOW_GEMS_STORE = "show-gems-store"
-SGN_SHOP_SHOWN = "shop-shown"
-SGN_SHOP_HIDDEN = "shop-hidden"
-SGN_FULLADS_WORKFLOW_ICON_TOUCHED = "fullads-workflow-icon-touched"
-SGN_FULLADS_SHOW_MESSAGE = "fullads-show-message"
-SGN_FULLADS_REWARDS_SHOWN = "fullads-rewards-shown"
-SGN_FULLADS_REWARDS_HIDDEN = "fullads-rewards-hidden"
 -- 索敌模式
 MODE_FIND_FOREMOST = 0
 MODE_FIND_MAXHP = 1
@@ -475,20 +393,8 @@ function OV(dimension, default, ...)
 	return default
 end
 
-function OVG(default, ...)
-	return OV("game", default, ...)
-end
-
 function OVT(default, ...)
 	return OV("target", default, ...)
-end
-
-function OVP(default, ...)
-	return OV("platform", default, ...)
-end
-
-function OVO(default, ...)
-	return OV("os", default, ...)
 end
 
 OV_PHONE = "phone"
@@ -504,6 +410,3 @@ function OVm(default, mobile)
 	return OVT(default, OV_PHONE, mobile, OV_TABLET, mobile)
 end
 
-function OVnm(default, notmobile)
-	return OVT(default, OV_DESKTOP, notmobile, OV_DESKTOP, notmobile)
-end

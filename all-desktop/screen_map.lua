@@ -34,8 +34,7 @@ if not is_android then
 	require("dove_modules.gui.mod_manager_view")
 end
 
-local IS_KR1 = KR_GAME == "kr1"
-local IS_KR3 = KR_GAME == "kr3"
+local IS_KR1 = true
 
 screen_map = {}
 screen_map.required_sounds = {"common", "music_screen_map"}
@@ -1776,13 +1775,7 @@ function MapView:show_flags(num)
 
 			start_here.anchor = v(start_here.size.x / 2, start_here.size.y)
 
-			if KR_GAME == "kr1" then
-				start_here.pos = v(292, 775)
-			elseif KR_GAME == "kr2" then
-				start_here.pos = v(307, 280)
-			else
-				start_here.pos = v(194, 170)
-			end
+			start_here.pos = v(292, 775)
 
 			screen_map.map_view:add_child(start_here)
 
@@ -3063,7 +3056,7 @@ function UpgradesView:initialize(sw, sh)
 
 	local header = GGPanelHeader:new(_("UPGRADES"), 274)
 
-	header.pos = V.v(308, CJK(27, 25, nil, 25) + (IS_KR3 and -36 or 0))
+	header.pos = V.v(308, CJK(27, 25, nil, 25))
 
 	self.back:add_child(header)
 
@@ -4759,7 +4752,7 @@ function HeroNameLabel:set_hero(hero_name, hero_i18n_key)
 
 	local parts = conf.single_line and {text} or string.split(text, " ")
 	local labels = self.labels
-	local fs = conf.font_size or #parts > 2 and 28 or #parts > 1 and (IS_KR1 and 38 or 44) or IS_KR1 and 64 or 70
+	local fs = conf.font_size or #parts > 2 and 28 or #parts > 1 and 38 or 64
 
 	if #labels < #parts then
 		for i = #labels + 1, #parts do
@@ -4768,13 +4761,11 @@ function HeroNameLabel:set_hero(hero_name, hero_i18n_key)
 			self:add_child(l)
 
 			labels[i] = l
-			l.font_name = IS_KR1 and "hero_name_label_kr1" or "hero_name_label"
+			l.font_name = "hero_name_label_kr1"
 			l.shaders = {"p_bands", "p_outline", "p_glow", "p_drop_shadow"}
 			l.fit_lines = 1
 
-			if IS_KR1 then
-				l.shader_margin = math.ceil(0.35 * self.size.x)
-			end
+			l.shader_margin = math.ceil(0.35 * self.size.x)
 		end
 	end
 
@@ -5559,7 +5550,7 @@ function OptionsView:initialize(sw, sh)
 	local y = 130
 	local header = GGPanelHeader:new(_("OPTIONS"), 242)
 
-	header.pos = V.v(240, CJK(41, 39, nil, 39) - (IS_KR3 and 19 or 0))
+	header.pos = V.v(240, CJK(41, 39, nil, 39))
 
 	self.back:add_child(header)
 
@@ -5968,7 +5959,7 @@ function DifficultyView:initialize(sw, sh)
 
 	local header = GGPanelHeader:new(_("DIFFICULTY LEVEL"), 260)
 
-	header.pos = V.v(sw / 2, 29 + (IS_KR3 and -34 or 0))
+	header.pos = V.v(sw / 2, 29)
 	header.anchor.x = 130
 
 	self.back:add_child(header)
@@ -6038,7 +6029,7 @@ function AchievementsView:initialize(sw, sh)
 
 	local header = GGPanelHeader:new(_("ACHIEVEMENTS"), 274)
 
-	header.pos = V.v(364, CJK(39, 35, nil, 36) + (IS_KR3 and -36 or 0))
+	header.pos = V.v(364, CJK(39, 35, nil, 36))
 
 	self.back:add_child(header)
 
@@ -6077,7 +6068,7 @@ function AchievementsView:initialize(sw, sh)
 		ach:add_child(ach.img)
 
 		ach.title = GGLabel:new(V.v(260, 32))
-		ach.title.pos = v(118, 2 + (IS_KR3 and 4 or 0))
+		ach.title.pos = v(118, 2)
 		ach.title.font_name = "h"
 		ach.title.font_size = 18
 		ach.title.colors.text = {233, 224, 117}
@@ -6088,7 +6079,7 @@ function AchievementsView:initialize(sw, sh)
 		ach:add_child(ach.title)
 
 		ach.desc = GGLabel:new(V.v(260, 40))
-		ach.desc.pos = v(118, CJK(33, nil, 36, 36) + (IS_KR3 and 6 or 0))
+		ach.desc.pos = v(118, CJK(33, nil, 36, 36))
 		ach.desc.font_name = "body"
 		ach.desc.font_size = 15
 		ach.desc.colors.text = {156, 152, 126}
@@ -6615,7 +6606,7 @@ function EditablePanelView:initialize(sw, sh, title)
 	-- 添加标题
 	local header = GGPanelHeader:new(self.header, 242)
 
-	header.pos = V.v(240, CJK(41, 39, nil, 39) - (IS_KR3 and 19 or 0))
+	header.pos = V.v(240, CJK(41, 39, nil, 39))
 
 	self.back:add_child(header)
 

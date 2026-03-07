@@ -10,13 +10,7 @@ screen.required_sounds = {"common", "music_screen_kr1_end"}
 screen.required_textures = {"screen_credits", "comic_end"}
 screen.ref_h = GUI_REF_H
 
-if KR_TARGET == "console" then
-	screen.ref_res = TEXTURE_SIZE_ALIAS.fullhd * 0.5
-elseif KR_TARGET == "phone" then
-	screen.ref_res = TEXTURE_SIZE_ALIAS.iphone
-else
-	screen.ref_res = TEXTURE_SIZE_ALIAS.ipad
-end
+screen.ref_res = TEXTURE_SIZE_ALIAS.ipad
 
 function screen:init(sw, sh, done_callback)
 	self.sw = sw

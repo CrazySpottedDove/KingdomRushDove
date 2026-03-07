@@ -179,7 +179,7 @@ AC(tt, "attacks")
 tt.tower.type = "mage"
 tt.tower.level = 1
 tt.tower.price = 100
-tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_towers_0003" or "info_portraits_towers_0010"
+tt.info.portrait = "info_portraits_towers_0010"
 tt.info.enc_icon = 3
 tt.info.fn = scripts.tower_mage.get_info
 tt.main_script.insert = scripts.tower_mage.insert
@@ -255,7 +255,7 @@ AC(tt, "attacks")
 tt.tower.type = "engineer"
 tt.tower.level = 1
 tt.tower.price = 125
-tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_towers_0004" or "info_portraits_towers_0003"
+tt.info.portrait = "info_portraits_towers_0003"
 tt.info.enc_icon = 4
 tt.main_script.insert = scripts.tower_engineer.insert
 tt.main_script.update = scripts.tower_engineer.update
@@ -415,7 +415,7 @@ tt.tower.type = "barrack"
 tt.tower.level = 1
 tt.tower.price = 70
 tt.info.fn = scripts.tower_barrack.get_info
-tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_towers_0002" or "info_portraits_towers_0007"
+tt.info.portrait = "info_portraits_towers_0007"
 tt.info.enc_icon = 2
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_barrack_%04i"

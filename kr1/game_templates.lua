@@ -675,7 +675,7 @@ tt.ranged.attacks[1].shoot_time = fts(3)
 tt.ranged.attacks[1].cooldown = 1 + fts(12)
 tt.ranged.attacks[1].max_range = 165
 tt.ranged.attacks[1].min_range = 27
-tt.ranged.attacks[1].animation = IS_PHONE_OR_TABLET and "ranged_attack_p" or "ranged_attack"
+tt.ranged.attacks[1].animation = "ranged_attack"
 tt.ranged.attacks[1].bullet_start_offset = {vec_2(6, 13)}
 
 for i = 1, 3 do
@@ -1440,20 +1440,12 @@ tt.render.sprites[2].random_ts = fts(7)
 tt.render.sprites[2].draw_order = 11
 tt.render.sprites[2].hidden = true
 tt.render.sprites[2].z = Z_OBJECTS
-tt.required_clicks = IS_PHONE_OR_TABLET and 5 or 3
+tt.required_clicks = 3
 tt.end_delay = fts(5)
 tt.sound_events.click = "JtHitIce"
 tt.tween.remove = false
 tt.tween.props[1].disabled = true
 tt.tween.props[1].keys = {{0, 255}, {1, 0}}
-
-if IS_CONSOLE then
-	tt.tween.props[2] = CC("tween_prop")
-	tt.tween.props[2].name = "scale"
-	tt.tween.props[2].keys = {{0, vec_1(1.6)}, {0.25, vec_1(1.9)}, {0.5, vec_1(1.6)}}
-	tt.tween.props[2].sprite_id = 2
-	tt.tween.props[2].loop = true
-end
 
 tt.ui.can_select = false
 tt.ui.can_click = true
@@ -1511,10 +1503,6 @@ tt = RT("mod_veznan_tower", "modifier")
 
 AC(tt, "render", "ui")
 
-if IS_CONSOLE then
-	AC(tt, "tween")
-end
-
 tt.click_time = 4
 tt.duration = 6
 tt.main_script.update = scripts.mod_veznan_tower.update
@@ -1531,19 +1519,10 @@ tt.render.sprites[2].random_ts = fts(7)
 tt.render.sprites[2].draw_order = 11
 tt.render.sprites[2].hidden = true
 tt.render.sprites[2].z = Z_OBJECTS
-tt.required_clicks = IS_PHONE_OR_TABLET and 5 or IS_CONSOLE and 1 or 3
+tt.required_clicks = 3
 tt.sound_blocked = "VeznanHoldTrap"
 tt.sound_click = "VeznanHoldHit"
 tt.sound_released = "VeznanHoldDissipate"
-
-if IS_CONSOLE then
-	tt.tween.remove = false
-	tt.tween.props[1] = CC("tween_prop")
-	tt.tween.props[1].name = "scale"
-	tt.tween.props[1].keys = {{0, vec_1(1.6)}, {0.25, vec_1(1.9)}, {0.5, vec_1(1.6)}}
-	tt.tween.props[1].sprite_id = 2
-	tt.tween.props[1].loop = true
-end
 
 tt.ui.can_click = true
 tt.ui.can_select = false
@@ -3019,7 +2998,7 @@ tt.render.sprites[1].name = "moon_base_0004"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_SCREEN_FIXED + 2
 tt.render.sprites[1].anchor.y = 1
-tt.render.sprites[1].scale = IS_PHONE and vec_2(1.45, 1.45) or nil
+tt.render.sprites[1].scale = nil
 tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[2].name = "moon_base_0001"
 tt.render.sprites[2].hidden = false
@@ -3042,13 +3021,13 @@ tt.tween.props[2].keys = {{0, 0}, {0.5, 255}}
 --#region decal_moon_dark
 tt = RT("decal_moon_dark", "decal_tween")
 tt.pos.x = REF_W * 0.5
-tt.pos.y = REF_H + 1 + 77 * (IS_PHONE and 1.45 or 1)
+tt.pos.y = REF_H + 1 + 77
 tt.render.sprites[1].name = "moon_0001"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_SCREEN_FIXED + 3
 tt.render.sprites[1].anchor.x = 3.6666666666666665
-tt.render.sprites[1].scale = IS_PHONE and vec_2(1.45, 1.45) or nil
+tt.render.sprites[1].scale = nil
 tt.tween.props[1].name = "r"
 tt.tween.props[1].keys = {{0, math.pi / 5}, {0, math.pi * 0.5}}
 tt.tween.disabled = true
@@ -3057,14 +3036,14 @@ tt.tween.remove = false
 --#region decal_moon_light
 tt = RT("decal_moon_light", "decal_tween")
 tt.pos.x = REF_W * 0.5
-tt.pos.y = REF_H + 1 + 77 * (IS_PHONE and 1.45 or 1)
+tt.pos.y = REF_H + 1 + 77
 tt.render.sprites[1].name = "moon_0002"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_SCREEN_FIXED + 4
 tt.render.sprites[1].r = math.pi * 0.5
 tt.render.sprites[1].anchor.x = 3.6666666666666665
-tt.render.sprites[1].scale = IS_PHONE and vec_2(1.45, 1.45) or nil
+tt.render.sprites[1].scale = nil
 tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[2].name = "moon_0003"
 tt.tween.props[1].keys = {{0, 0}, {0.25, 255}, {0.5, 255}}
@@ -5092,7 +5071,7 @@ tt.info.i18n_key = "ELVES_TOWER_BASTION_BROKEN"
 tt.render.sprites[1].name = "galahadriansBastion_layer2_0054"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor.y = 0.3153846153846154
-tt.render.sprites[1].offset = IS_CONSOLE and vec_2(0, 24) or vec_2(0, -9)
+tt.render.sprites[1].offset = vec_2(0, -9)
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].hover_off_hidden = true
 tt.render.sprites[2] = CC("sprite")
@@ -5120,7 +5099,7 @@ tt.powers.razor_edge.attack_idx = 1
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "galahadriansBastion_layer2_0053"
 tt.render.sprites[1].anchor.y = 0.3153846153846154
-tt.render.sprites[1].offset = IS_CONSOLE and vec_2(0, 24) or vec_2(0, -9)
+tt.render.sprites[1].offset = vec_2(0, -9)
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].hover_off_hidden = true
 
@@ -16823,7 +16802,7 @@ tt.tower.type = "arborean_oldtree"
 tt.tower.level = 1
 tt.tower.can_be_sold = false
 tt.tower.can_be_mod = false
-tt.tower.can_hover = IS_CONSOLE
+tt.tower.can_hover = false
 tt.tower.range_offset = v(0, 10)
 tt.tower.price = 0
 tt.tower.menu_offset = v(0, 30)
@@ -16925,7 +16904,7 @@ tt.tower.type = "arborean_honey"
 tt.tower.level = 1
 tt.tower.can_be_sold = false
 tt.tower.can_be_mod = false
-tt.tower.can_hover = IS_CONSOLE
+tt.tower.can_hover = false
 tt.tower.range_offset = v(0, 10)
 tt.tower.price = 0
 tt.tower.cooldown_idle = 10
@@ -16977,7 +16956,7 @@ tt.tower.type = "arborean_barrack"
 tt.tower.level = 1
 tt.tower.can_be_sold = false
 tt.tower.can_be_mod = false
-tt.tower.can_hover = IS_CONSOLE
+tt.tower.can_hover = false
 tt.tower.range_offset = v(0, 10)
 tt.tower.price = 0
 tt.tower.menu_offset = v(0, 25)
@@ -19955,9 +19934,6 @@ tt.sound_events.insert = "Stage30BossfightRange"
 tt = E:register_t("mod_boss_spider_queen_tower_debuff", "modifier")
 b = balance.enemies.arachnids.boss_spider_queen.stun_towers
 E:add_comps(tt, "render", "ui")
-if IS_CONSOLE then
-	E:add_comps(tt, "tween")
-end
 tt.main_script.insert = scripts.mod_boss_spider_queen_tower_debuff.insert
 tt.main_script.update = scripts.mod_boss_spider_queen_tower_debuff.update
 tt.modifier.duration = b.duration
@@ -20023,7 +19999,7 @@ tt.render.sprites[tt.render.sid_hand].offset = v(10, 20)
 tt.render.sprites[tt.render.sid_hand].draw_order = 11
 tt.render.sprites[tt.render.sid_hand].hidden = true
 tt.render.sprites[tt.render.sid_hand].z = Z_OBJECTS_COVERS
-tt.required_clicks = IS_PHONE_OR_TABLET and b.required_clics_phone_tablet or IS_CONSOLE and b.required_clics_console or b.required_clics_desktop
+tt.required_clicks = b.required_clics_desktop
 tt.tap_fx = "fx_boss_spider_queen_melee_hit"
 tt.ui.can_click = true
 tt.ui.can_select = false

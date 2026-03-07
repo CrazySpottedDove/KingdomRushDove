@@ -81,7 +81,7 @@ local holder_to_enable_archer={}
 local holder_to_enable_barrack={}
 level.tower_menu_hiding=true
 level.hide_notifications=false
-local zoom_in_depth=KR_TARGET=="phone" and 1.75 or 1.25
+local zoom_in_depth=1.25
 local signal_handlers
 local function unregister_signals()
 for _,row in pairs(signal_handlers) do

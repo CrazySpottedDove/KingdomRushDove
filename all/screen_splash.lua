@@ -144,10 +144,6 @@ function screen:done()
 		splash_done = true
 	}
 
-	if KR_TARGET == "phone" then
-		outcome.prevent_loading = true
-	end
-
 	self.done_callback(outcome)
 end
 

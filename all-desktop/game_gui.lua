@@ -56,9 +56,6 @@ local function queue_remove(store, e)
 	simulation:queue_remove_entity(e)
 end
 
-local IS_KR2 = KR_GAME == "kr2"
-local IS_KR1 = KR_GAME == "kr1"
-
 require("all.constants")
 
 require("gg_views_custom")
@@ -5192,7 +5189,7 @@ function AchievementBanner:show()
 
 	local id = table.remove(self.queued_ids, 1)
 	local ach = AC:get_data(id)
-	local prefix = KR_GAME == "kr3" and "ELVES_" or ""
+	local prefix = ""
 
 	self.icon:set_image("achievement_icons_" .. string.format("%04i", ach.icon))
 

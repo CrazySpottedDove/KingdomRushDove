@@ -23,8 +23,6 @@ local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
 local bnot = bit.bnot
-local IS_PHONE = KR_TARGET == "phone"
-local IS_CONSOLE = KR_TARGET == "console"
 local v = V.v
 
 local function tpos(e)
@@ -40724,16 +40722,6 @@ function scripts.mod_enemy_crocs_hydra_tower_debuff.update(this, store)
 	SU.ui_click_proxy_add(target, this)
 
 	while clicks < this.required_clicks and store.tick_ts - start_ts < m.duration do
-		if IS_CONSOLE then
-			if target.ui.hover_controller_active then
-				s_tap.alpha = s_tap.alpha_focused
-				s_tap.name = s_tap.name_focused
-			else
-				s_tap.alpha = s_tap.alpha_unfocused
-				s_tap.name = s_tap.name_unfocused
-			end
-		end
-
 		if this.ui.clicked then
 			local fx = E:create_entity(this.tap_fx)
 

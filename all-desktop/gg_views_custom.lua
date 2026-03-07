@@ -352,31 +352,21 @@ function GGPanelHeader:initialize(text, width)
 
 	GGShaderLabel.initialize(self, V.v(width, 32 * rs))
 
-	if KR_GAME == "kr3" then
-		self.colors.text = {47, 45, 30, 255}
-		self.font_name = "h_popup"
-		self.font_size = 28 * rs
-		self.shaders = {"p_drop_shadow"}
-		self.shader_args = {{
-			shadow_color = fc({238, 232, 155, 255})
-		}}
-	else
-		self.colors.text = {250, 250, 250, 255}
-		self.font_name = "h"
-		self.font_size = 24 * rs
-		self.shaders = {"p_bands", "p_glow"}
-		self.shader_args = {{
-			p1 = 0.42,
-			p2 = 0.56,
-			margin = 1 * rs,
-			c1 = fc({250, 250, 250, 255}),
-			c2 = fc({232, 223, 176, 255}),
-			c3 = fc({168, 160, 117, 255})
-		}, {
-			glow_color = {0, 0, 0, 0.85},
-			thickness = 2 * rs
-		}}
-	end
+	self.colors.text = {250, 250, 250, 255}
+	self.font_name = "h"
+	self.font_size = 24 * rs
+	self.shaders = {"p_bands", "p_glow"}
+	self.shader_args = {{
+		p1 = 0.42,
+		p2 = 0.56,
+		margin = 1 * rs,
+		c1 = fc({250, 250, 250, 255}),
+		c2 = fc({232, 223, 176, 255}),
+		c3 = fc({168, 160, 117, 255})
+	}, {
+		glow_color = {0, 0, 0, 0.85},
+		thickness = 2 * rs
+	}}
 
 	self.text_align = "center"
 	self.vertical_align = i18n:cjk("middle-caps", "middle", "middle", "middle")

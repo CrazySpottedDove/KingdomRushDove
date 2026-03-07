@@ -34,8 +34,8 @@ self.locked_towers={"tower_build_mage"}
 end
 end
 function level:load(store)
-local bg_prefix=not (KR_TARGET~="phone" and KR_TARGET~="tablet") and "Stage15_tall_" or "Stage15_"
-local bg_offset=not (KR_TARGET~="phone" and KR_TARGET~="tablet") and 24 or 0
+local bg_prefix="Stage15_"
+local bg_offset=0
 local bg1=LU.insert_background(store,bg_prefix.."0001",Z_BACKGROUND)
 local bg2=LU.insert_background(store,bg_prefix.."0002",Z_OBJECTS,580)
 local bg3=LU.insert_background(store,bg_prefix.."0003",Z_OBJECTS,615)

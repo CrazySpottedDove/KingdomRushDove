@@ -25,8 +25,6 @@ local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
 local bnot = bit.bnot
-local IS_PHONE = KR_TARGET == "phone"
-local IS_CONSOLE = KR_TARGET == "console"
 
 local function tpos(e)
 	return e.tower and e.tower.range_offset and V.v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y) or e.pos

@@ -29,7 +29,7 @@ require("game_templates_utils")
 --#region tower_paladin
 tt = RT("tower_paladin", "tower_barrack_1")
 AC(tt, "powers")
-tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_towers_0007" or "info_portraits_towers_0005"
+tt.info.portrait = "info_portraits_towers_0005"
 tt.info.enc_icon = 14
 tt.info.i18n_key = "TOWER_PALADINS"
 tt.tower.type = "paladin"
@@ -163,7 +163,7 @@ tt.render.sprites[1].sort_y_offset = -2
 --#region tower_barbarian
 tt = RT("tower_barbarian", "tower_barrack_1")
 AC(tt, "powers")
-tt.info.portrait = IS_PHONE_OR_TABLET and "portraits_towers_0008" or "info_portraits_towers_0012"
+tt.info.portrait = "info_portraits_towers_0012"
 tt.info.enc_icon = 18
 tt.info.i18n_key = "TOWER_BARBARIANS"
 tt.tower.type = "barbarian"

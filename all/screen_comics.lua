@@ -20,19 +20,9 @@ end
 
 screen_comics = {}
 
-if KR_TARGET == "console" then
-	screen_comics.ref_h = 320
-	screen_comics.ref_w = 480
-	screen_comics.ref_res = TEXTURE_SIZE_ALIAS.fullhd * 0.5
-elseif KR_TARGET == "tablet" then
-	screen_comics.ref_h = 768
-	screen_comics.ref_w = 1024
-	screen_comics.ref_res = TEXTURE_SIZE_ALIAS.ipad * 1.4222222222222223
-else
-	screen_comics.ref_h = GUI_REF_H
-	screen_comics.ref_w = GUI_REF_W
-	screen_comics.ref_res = KR_TARGET == "phone" and TEXTURE_SIZE_ALIAS.iphone or TEXTURE_SIZE_ALIAS.ipad
-end
+screen_comics.ref_h = GUI_REF_H
+screen_comics.ref_w = GUI_REF_W
+screen_comics.ref_res = TEXTURE_SIZE_ALIAS.ipad
 
 function screen_comics:init(w, h, done_callback)
 	self.done_callback = done_callback

@@ -176,7 +176,7 @@ else
 	log:set_level("info")
 end
 
-log.use_print = KR_PLATFORM == "android"
+log.use_print = false
 log = log:new("main")
 
 local storage = require("all.storage")

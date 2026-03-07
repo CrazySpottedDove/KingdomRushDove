@@ -127,7 +127,7 @@ table.insert(self.alien_eggs,e)
 end
 if store.level_mode==GAME_MODE_CAMPAIGN then
 e=E:create_entity("decal_indiana")
-e.pos=v(892+OX,not (KR_TARGET~="phone" and KR_TARGET~="tablet") and 689 or 669)
+e.pos=v(892+OX,669)
 LU.queue_insert(store,e)
 self.decal_indiana=e
 self.puzzle_attempts=0

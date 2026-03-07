@@ -358,9 +358,9 @@ sm.slot_common = {
 	{"backPack.currentHandOfMidas", "bag.hand_midas"},
 	{"upgrades.archersUpLevel", "upgrades.archers"},
 	{"upgrades.barracksUpLevel", "upgrades.barracks"},
-	{"upgrades.engineersUpLevel", KR_GAME == "kr3" and "upgrades.rocks" or "upgrades.engineers"},
+	{"upgrades.engineersUpLevel", "upgrades.engineers"},
 	{"upgrades.magesUpLevel", "upgrades.mages"},
-	{"upgrades.rainUpLevel", KR_GAME == "kr3" and "upgrades.thunder" or "upgrades.rain"},
+	{"upgrades.rainUpLevel", "upgrades.rain"},
 	{"upgrades.reinforcementLevel", "upgrades.reinforcements"},
 	{"inAppHelpShow", "seen.shop_help"},
 	{"heroRoomFirstTimeSelect", "seen.hero_room_sel_help"},
@@ -576,14 +576,6 @@ sm.slot_kr1 = {
 	{"notifications.notificationTowerEngineersTesla", "seen.tower_tesla"},
 	{"notifications.notificationTipHeroes", "seen.TIP_HEROES"}
 }
-
-if KR_PLATFORM == "android" then
-	sm.slot_kr1_endless = {{"leaderboards.savedScores.CgkI58SFtpQCEAIQSQ.maxWave", "levels[81][1].waves_survived"}, {"leaderboards.savedScores.CgkI58SFtpQCEAIQSQ.score", "levels[81][1].high_score"}, {"leaderboards.savedScores.CgkI58SFtpQCEAIQSg.maxWave", "levels[81][2].waves_survived"}, {"leaderboards.savedScores.CgkI58SFtpQCEAIQSg.score", "levels[81][2].high_score"}, {"leaderboards.savedScores.CgkI58SFtpQCEAIQSw.maxWave", "levels[81][3].waves_survived"}, {"leaderboards.savedScores.CgkI58SFtpQCEAIQSw.score", "levels[81][3].high_score"}}
-elseif KR_PLATFORM == "ios" and KR_TARGET == "phone" then
-	sm.slot_kr1_endless = {{"leaderboards.savedScores.endless_orcs_casual_iphone.maxWave", "levels[81][1].waves_survived"}, {"leaderboards.savedScores.endless_orcs_casual_iphone.score", "levels[81][1].high_score"}, {"leaderboards.savedScores.endless_orcs_normal_iphone.maxWave", "levels[81][2].waves_survived"}, {"leaderboards.savedScores.endless_orcs_normal_iphone.score", "levels[81][2].high_score"}, {"leaderboards.savedScores.endless_orcs_veteran_iphone.maxWave", "levels[81][3].waves_survived"}, {"leaderboards.savedScores.endless_orcs_veteran_iphone.score", "levels[81][3].high_score"}}
-elseif KR_PLATFORM == "ios" and KR_TARGET == "tablet" then
-	sm.slot_kr1_endless = {{"leaderboards.savedScores.endless_orcs_casual.maxWave", "levels[81][1].waves_survived"}, {"leaderboards.savedScores.endless_orcs_casual.score", "levels[81][1].high_score"}, {"leaderboards.savedScores.endless_orcs_normal.maxWave", "levels[81][2].waves_survived"}, {"leaderboards.savedScores.endless_orcs_normal.score", "levels[81][2].high_score"}, {"leaderboards.savedScores.endless_orcs_veteran.maxWave", "levels[81][3].waves_survived"}, {"leaderboards.savedScores.endless_orcs_veteran.score", "levels[81][3].high_score"}}
-end
 
 sm.slot_kr2 = {
 	{"achievements.svAlienKilledCount", "achievement_counters.COLONIALMARINE"},
@@ -876,38 +868,6 @@ sm.slot_kr2 = {
 	{"notifications.notificationTowerMagesNecromancer", "seen.tower_necromancer"},
 	{"notifications.notificationTowerEngineersMech", "seen.tower_mech"}
 }
-
-if KR_PLATFORM == "android" then
-	sm.slot_kr2_endless = {
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQWw.maxWave", "levels[81][1].waves_survived"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQWw.score", "levels[81][1].high_score"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQXA.maxWave", "levels[81][2].waves_survived"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQXA.score", "levels[81][2].high_score"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQXQ.maxWave", "levels[81][3].waves_survived"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQXQ.score", "levels[81][3].high_score"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQXg.maxWave", "levels[82][1].waves_survived"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQXg.score", "levels[82][1].high_score"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQXw.maxWave", "levels[82][2].waves_survived"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQXw.score", "levels[82][2].high_score"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQYA.maxWave", "levels[82][3].waves_survived"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQYA.score", "levels[82][3].high_score"}
-	}
-elseif KR_PLATFORM == "ios" then
-	sm.slot_kr2_endless = {
-		{"leaderboards.savedScores[\"grp.endless_desert_casual\"].maxWave", "levels[81][1].waves_survived"},
-		{"leaderboards.savedScores[\"grp.endless_desert_casual\"].score", "levels[81][1].high_score"},
-		{"leaderboards.savedScores[\"grp.endless_desert_normal\"].maxWave", "levels[81][2].waves_survived"},
-		{"leaderboards.savedScores[\"grp.endless_desert_normal\"].score", "levels[81][2].high_score"},
-		{"leaderboards.savedScores[\"grp.endless_desert_veteran\"].maxWave", "levels[81][3].waves_survived"},
-		{"leaderboards.savedScores[\"grp.endless_desert_veteran\"].score", "levels[81][3].high_score"},
-		{"leaderboards.savedScores[\"grp.endless_jungle_casual\"].maxWave", "levels[82][1].waves_survived"},
-		{"leaderboards.savedScores[\"grp.endless_jungle_casual\"].score", "levels[82][1].high_score"},
-		{"leaderboards.savedScores[\"grp.endless_jungle_normal\"].maxWave", "levels[82][2].waves_survived"},
-		{"leaderboards.savedScores[\"grp.endless_jungle_normal\"].score", "levels[82][2].high_score"},
-		{"leaderboards.savedScores[\"grp.endless_jungle_veteran\"].maxWave", "levels[82][3].waves_survived"},
-		{"leaderboards.savedScores[\"grp.endless_jungle_veteran\"].score", "levels[82][3].high_score"}
-	}
-end
 
 sm.slot_kr3 = {
 	{"achievements.elvesBoljarkCounter", "achievement_counters.BOLJARK"},
@@ -1224,52 +1184,5 @@ sm.slot_kr3 = {
 	{"notifications.notificationPlant3", "seen.ARCANE_CRYSTAL"},
 	{"notifications.notificationPlant4", "seen.PARALYZING_TREE"}
 }
-
-if KR_PLATFORM == "android" then
-	sm.slot_kr3_endless = {
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQWw.maxWave", "levels[81][1].waves_survived"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQWw.score", "levels[81][1].high_score"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQXA.maxWave", "levels[81][2].waves_survived"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQXA.score", "levels[81][2].high_score"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQXQ.maxWave", "levels[81][3].waves_survived"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQXQ.score", "levels[81][3].high_score"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQXg.maxWave", "levels[82][1].waves_survived"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQXg.score", "levels[82][1].high_score"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQXw.maxWave", "levels[82][2].waves_survived"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQXw.score", "levels[82][2].high_score"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQYA.maxWave", "levels[82][3].waves_survived"},
-		{"leaderboards.savedScores.CgkIio3Ql5UKEAIQYA.score", "levels[82][3].high_score"}
-	}
-elseif KR_PLATFORM == "ios" and KR_TARGET == "phone" then
-	sm.slot_kr3_endless = {
-		{"leaderboards.savedScores.endless_gnolls_casual_iphone.maxWave", "levels[81][1].waves_survived"},
-		{"leaderboards.savedScores.endless_gnolls_casual_iphone.score", "levels[81][1].high_score"},
-		{"leaderboards.savedScores.endless_gnolls_normal_iphone.maxWave", "levels[81][2].waves_survived"},
-		{"leaderboards.savedScores.endless_gnolls_normal_iphone.score", "levels[81][2].high_score"},
-		{"leaderboards.savedScores.endless_gnolls_veteran_iphone.maxWave", "levels[81][3].waves_survived"},
-		{"leaderboards.savedScores.endless_gnolls_veteran_iphone.score", "levels[81][3].high_score"},
-		{"leaderboards.savedScores.endless_twilight_casual_iphone.maxWave", "levels[82][1].waves_survived"},
-		{"leaderboards.savedScores.endless_twilight_casual_iphone.score", "levels[82][1].high_score"},
-		{"leaderboards.savedScores.endless_twilight_normal_iphone.maxWave", "levels[82][2].waves_survived"},
-		{"leaderboards.savedScores.endless_twilight_normal_iphone.score", "levels[82][2].high_score"},
-		{"leaderboards.savedScores.endless_twilight_veteran_iphone.maxWave", "levels[82][3].waves_survived"},
-		{"leaderboards.savedScores.endless_twilight_veteran_iphone.score", "levels[82][3].high_score"}
-	}
-elseif KR_PLATFORM == "ios" and KR_TARGET == "tablet" then
-	sm.slot_kr3_endless = {
-		{"leaderboards.savedScores.endless_gnolls_casual.maxWave", "levels[81][1].waves_survived"},
-		{"leaderboards.savedScores.endless_gnolls_casual.score", "levels[81][1].high_score"},
-		{"leaderboards.savedScores.endless_gnolls_normal.maxWave", "levels[81][2].waves_survived"},
-		{"leaderboards.savedScores.endless_gnolls_normal.score", "levels[81][2].high_score"},
-		{"leaderboards.savedScores.endless_gnolls_veteran.maxWave", "levels[81][3].waves_survived"},
-		{"leaderboards.savedScores.endless_gnolls_veteran.score", "levels[81][3].high_score"},
-		{"leaderboards.savedScores.endless_twilight_casual.maxWave", "levels[82][1].waves_survived"},
-		{"leaderboards.savedScores.endless_twilight_casual.score", "levels[82][1].high_score"},
-		{"leaderboards.savedScores.endless_twilight_normal.maxWave", "levels[82][2].waves_survived"},
-		{"leaderboards.savedScores.endless_twilight_normal.score", "levels[82][2].high_score"},
-		{"leaderboards.savedScores.endless_twilight_veteran.maxWave", "levels[82][3].waves_survived"},
-		{"leaderboards.savedScores.endless_twilight_veteran.score", "levels[82][3].high_score"}
-	}
-end
 
 return sm

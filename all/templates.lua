@@ -14,11 +14,7 @@ local image_y = 0
 local tt
 local scripts = require("scripts")
 local game_scripts = require("game_scripts")
-local IS_PHONE = KR_TARGET == "phone"
-local IS_PHONE_OR_TABLET = KR_TARGET == "phone" or KR_TARGET == "tablet"
-local IS_KR1 = KR_GAME == "kr1"
-local IS_KR2 = KR_GAME == "kr2"
-local IS_KR3 = KR_GAME == "kr3"
+local IS_KR1 = true
 
 local function T(t)
 	return E:get_template(t)
@@ -985,7 +981,7 @@ local unit = E:register_t("unit")
 
 E:add_comps(unit, "unit", "pos", "heading", "health", "health_bar", "render", "ui")
 
-unit.ui.click_rect = IS_PHONE_OR_TABLET and r(-20, -5, 40, 40) or r(-15, 0, 30, 30)
+unit.ui.click_rect = r(-15, 0, 30, 30)
 
 local soldier = E:register_t("soldier", "unit")
 
@@ -1028,7 +1024,7 @@ tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"running"}
 tt.render.sprites[1].prefix = "soldiermilitia"
 tt.soldier.melee_slot_offset = v(5, 0)
-tt.ui.click_rect = IS_PHONE_OR_TABLET and r(-20, -5, 40, 40) or r(-10, -2, 20, 25)
+tt.ui.click_rect = r(-10, -2, 20, 25)
 tt.unit.hit_offset = v(0, 12)
 tt.unit.marker_offset = v(0, ady(8))
 tt.unit.mod_offset = v(0, ady(21))
@@ -1062,7 +1058,7 @@ hero.regen.last_hit_standoff_time = 1
 hero.render.sprites[1].angles = {}
 hero.render.sprites[1].angles.walk = {"running"}
 hero.render.sprites[1].name = "idle"
-hero.ui.click_rect = IS_PHONE_OR_TABLET and r(-35, -15, 70, 70) or r(-20, -5, 40, 40)
+hero.ui.click_rect = r(-20, -5, 40, 40)
 hero.ui.z = 2
 hero.unit.hit_offset = v(0, 12)
 
@@ -1083,7 +1079,7 @@ enemy.render.sprites[1].angles_stickiness = {
 enemy.info.fn = scripts.enemy_basic.get_info
 enemy.main_script.insert = scripts.enemy_basic.insert
 enemy.main_script.update = scripts.enemy_mixed.update
-enemy.ui.click_rect = IS_PHONE_OR_TABLET and r(-25, -10, 50, 50) or r(-10, -5, 20, 30)
+enemy.ui.click_rect = r(-10, -5, 20, 30)
 enemy.sound_events.death = "DeathHuman"
 enemy.sound_events.death_by_explosion = "DeathEplosion"
 

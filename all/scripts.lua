@@ -45,10 +45,6 @@ local function fts(v)
 	return v / FPS
 end
 
-local IS_KR1 = KR_GAME == "kr1"
-local IS_KR2 = KR_GAME == "kr2"
-local IS_KR3 = KR_GAME == "kr3"
-
 local function tpos(e)
 	return e.tower and e.tower.range_offset and V.v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y) or e.pos
 end
@@ -8178,63 +8174,59 @@ end
 
 function scripts.mod_lycanthropy.update(this, store)
 	while true do
-		if IS_KR1 or this.active or store.level.moon_controller and store.level.moon_controller.moon_active then
-			local target = store.entities[this.modifier.target_id]
+		local target = store.entities[this.modifier.target_id]
 
-			if not target or target.health.dead then
-				queue_remove(store, this)
-
-				return
-			end
-
-			S:queue(this.sound_events.transform)
-
-			local e = E:create_entity(this.moon.transform_name)
-
-			e.pos.x, e.pos.y = target.pos.x, target.pos.y
-			e.health.hp = this.spawn_hp or e.health.hp
-			e.health.hp_max = this.spawn_hp_max or e.health.hp_max
-
-			if target.nav_path then
-				e.nav_path = table.deepclone(target.nav_path)
-			else
-				local nearest = P:nearest_nodes(e.pos.x, e.pos.y, nil, {1, 2, 3}, true, NF_RALLY)
-
-				if nearest and nearest[1] then
-					e.nav_path.pi, e.nav_path.spi, e.nav_path.ni = unpack(nearest[1])
-				else
-					log.error("Could not find path to transform creature: %s (%s,%s)", target.id, e.pos.x, e.pos.y)
-					queue_remove(store, this)
-
-					return
-				end
-			end
-
-			e.enemy.gold = target.enemy and target.enemy.gold or 0
-			e.render.sprites[1].name = "raise"
-			e.render.sprites[1].flip_x = target.render.sprites[1].flip_x
-
-			queue_insert(store, e)
-
-			local d = E:create_entity("damage")
-
-			d.damage_type = DAMAGE_EAT
-			d.source_id = this.id
-			d.target_id = target.id
-
-			queue_damage(store, d)
-
-			if target.enemy then
-				target.enemy.gold = 0
-				target.enemy.gold_bag = 0
-			end
-
+		if not target or target.health.dead then
 			queue_remove(store, this)
 
 			return
 		end
 
-		coroutine.yield()
+		S:queue(this.sound_events.transform)
+
+		local e = E:create_entity(this.moon.transform_name)
+
+		e.pos.x, e.pos.y = target.pos.x, target.pos.y
+		e.health.hp = this.spawn_hp or e.health.hp
+		e.health.hp_max = this.spawn_hp_max or e.health.hp_max
+
+		if target.nav_path then
+			e.nav_path = table.deepclone(target.nav_path)
+		else
+			local nearest = P:nearest_nodes(e.pos.x, e.pos.y, nil, {1, 2, 3}, true, NF_RALLY)
+
+			if nearest and nearest[1] then
+				e.nav_path.pi, e.nav_path.spi, e.nav_path.ni = unpack(nearest[1])
+			else
+				log.error("Could not find path to transform creature: %s (%s,%s)", target.id, e.pos.x, e.pos.y)
+				queue_remove(store, this)
+
+				return
+			end
+		end
+
+		e.enemy.gold = target.enemy and target.enemy.gold or 0
+		e.render.sprites[1].name = "raise"
+		e.render.sprites[1].flip_x = target.render.sprites[1].flip_x
+
+		queue_insert(store, e)
+
+		local d = E:create_entity("damage")
+
+		d.damage_type = DAMAGE_EAT
+		d.source_id = this.id
+		d.target_id = target.id
+
+		queue_damage(store, d)
+
+		if target.enemy then
+			target.enemy.gold = 0
+			target.enemy.gold_bag = 0
+		end
+
+		queue_remove(store, this)
+
+		return
 	end
 end
 

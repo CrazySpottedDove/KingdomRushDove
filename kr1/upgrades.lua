@@ -10,7 +10,7 @@ local function T(name)
 end
 
 local function DP(desktop, phone)
-	return (KR_TARGET == "phone" or KR_TARGET == "tablet") and phone or desktop
+	return desktop
 end
 
 local epsilon = 1e-09

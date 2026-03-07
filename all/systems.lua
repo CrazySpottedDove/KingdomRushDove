@@ -300,9 +300,9 @@ function sys.level:on_update(dt, ts, store)
 			signal.emit("wave-notification", "view", "TIP_UPGRADES")
 		elseif store.level_mode_override == GAME_MODE_ENDLESS then
 			signal.emit("wave-notification", "view", "TIP_SURVIVAL")
-		elseif KR_GAME == "kr1" and store.selected_hero and #store.selected_hero ~= 0 and not U.is_seen(store, "TIP_HEROES") then
+		elseif store.selected_hero and #store.selected_hero ~= 0 and not U.is_seen(store, "TIP_HEROES") then
 			signal.emit("wave-notification", "icon", "TIP_HEROES")
-		elseif KR_GAME == "kr1" and store.level_mode == GAME_MODE_CAMPAIGN and store.level_idx >= 13 and U.count_stars(slot) < 50 and not U.is_seen(store, "TIP_ELITE") then
+		elseif store.level_mode == GAME_MODE_CAMPAIGN and store.level_idx >= 13 and U.count_stars(slot) < 50 and not U.is_seen(store, "TIP_ELITE") then
 			signal.emit("wave-notification", "view", "TIP_ELITE")
 		end
 	end

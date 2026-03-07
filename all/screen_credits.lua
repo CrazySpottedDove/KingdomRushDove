@@ -13,16 +13,13 @@ local version = require("version")
 require("klove.kui")
 require("gg_views_custom")
 
-local IS_PHONE = KR_TARGET == "phone"
-local IS_TABLET = KR_TARGET == "tablet"
-local IS_MOBILE = KR_TARGET == "phone" or KR_TARGET == "tablet"
 local screen = {}
 
 screen.required_sounds = {"common", "music_screen_credits"}
-screen.required_textures = IS_MOBILE and {"screen_credits", "screen_credits_bg"} or {"screen_credits"}
-screen.ref_h = IS_MOBILE and 320 or 768
-screen.ref_w = IS_MOBILE and 480 or nil
-screen.ref_res = IS_PHONE and TEXTURE_SIZE_ALIAS.iphone or TEXTURE_SIZE_ALIAS.ipad
+screen.required_textures = {"screen_credits"}
+screen.ref_h = 768
+screen.ref_w = nil
+screen.ref_res = TEXTURE_SIZE_ALIAS.ipad
 
 function screen:init(w, h, done_callback, ending_version)
 	if self.args and self.args.custom == "ending" then
@@ -31,7 +28,7 @@ function screen:init(w, h, done_callback, ending_version)
 
 	local music_name
 
-	music_name = KR_GAME == "kr1" and "MusicEndCredits" or KR_GAME == "kr2" and "MusicEndCredits" or "MusicCredits"
+	music_name = "MusicEndCredits"
 
 	if not S:sound_is_playing(music_name) then
 		S:queue(music_name)
@@ -42,9 +39,9 @@ function screen:init(w, h, done_callback, ending_version)
 	self.ending_version = ending_version
 	self.done_callback = done_callback
 	self.end_credits_done = nil
-	self.scroll_speed_max = IS_MOBILE and 50 or 80
-	self.scroll_speed = IS_MOBILE and 0 or screen.scroll_speed_max
-	self.scroll_phase = IS_MOBILE and 1 or nil
+	self.scroll_speed_max = 80
+	self.scroll_speed = screen.scroll_speed_max
+	self.scroll_phase = nil
 	self.scroll_paused = false
 
 	local sw, sh, scale, origin = SU.clamp_window_aspect(w, h, self.ref_w, self.ref_h)
@@ -67,7 +64,7 @@ function screen:init(w, h, done_callback, ending_version)
 	GGLabel.static.font_scale = scale
 	GGLabel.static.ref_h = self.ref_h
 
-	if not IS_MOBILE and not ending_version then
+	if not ending_version then
 		local backImage = KImageView:new("credits_new_bg")
 
 		backImage.anchor = v(backImage.size.x * 0.5, backImage.size.y * 0.5)
@@ -101,18 +98,10 @@ function screen:init(w, h, done_callback, ending_version)
 	container.propagate_on_click = true
 	self.container = container
 
-	local label_w = IS_MOBILE and 380 or sw - 285
+	local label_w = sw - 285
 	local font_size_factor = 1
 
-	if IS_PHONE then
-		font_size_factor = 0.7
-	elseif IS_TABLET then
-		font_size_factor = 0.7
-	elseif KR_TARGET == "console" then
-		font_size_factor = 1.4
-	end
-
-	local font_name_h = IS_MOBILE and "body_bold" or i18n:cjk("body", "sans", nil, "h_noti")
+	local font_name_h = i18n:cjk("body", "sans", nil, "h_noti")
 	local current_y = 0
 
 	for i = 1, #screen.credits_data do
@@ -249,70 +238,17 @@ function screen:init(w, h, done_callback, ending_version)
 
 	local scroller
 
-	if IS_MOBILE and not ending_version then
-		local topv = KImageView:new("credits_tile_lt")
-		local botv = KImageView:new("credits_tile_lt")
-		local container_my = topv.size.y / 3
+	container.size.y = self.tot_y + 100
+	container.anchor = v(sw * 0.5, 0)
 
-		scroller = KView:new(V.v(592, 0))
-
-		scroller:add_child(topv)
-
-		local vy = topv.size.y - 2
-
-		while vy < self.tot_y + 2 * container_my - botv.size.y do
-			local midv = KImageView:new("credits_tile_lc")
-
-			midv.pos.y = vy
-			vy = vy + midv.size.y - 2
-
-			scroller:add_child(midv)
-		end
-
-		botv.scale.y = -1
-		botv.anchor.y = botv.size.y
-		botv.pos.y = vy
-
-		scroller:add_child(botv)
-
-		scroller.clip_view = window
-		scroller.size.y = vy + botv.size.y
-		scroller.pos = v(sw * 0.5, 0)
-		scroller.anchor = v(296, 0)
-
-		scroller:add_child(container)
-
-		local scale = km.clamp(IS_TABLET and 0.5 or 1, 2, self.sw / topv.size.x)
-
-		scroller.scale = V.v(scale, scale)
-		container.size.y = self.tot_y
-		container.anchor = v(sw * 0.5, 0)
-		container.pos.y = container_my
-		container.pos.x = 296
-		container.propagate_on_down = true
-		container.propagate_on_up = true
-		container.clip_view = window
-	else
-		container.size.y = self.tot_y + 100
-		container.anchor = v(sw * 0.5, 0)
-
-		if IS_TABLET then
-			container.scale = V.v(0.7, 0.7)
-		end
-
-		scroller = container
-		scroller.pos = v(sw * 0.5, 2 * sh / 3)
-		scroller.clip_view = window
-	end
+	scroller = container
+	scroller.pos = v(sw * 0.5, 2 * sh / 3)
+	scroller.clip_view = window
 
 	scroller.propagate_on_click = true
 	scroller.can_drag = true
 
-	if IS_MOBILE then
-		scroller.drag_limits = V.r(scroller.pos.x, scroller.pos.y, 0, -scroller.size.y * scroller.scale.y + sh)
-	else
-		scroller.drag_limits = V.r(scroller.pos.x, scroller.pos.y, 0, -scroller.size.y * scroller.scale.y + 0 * sh / 3)
-	end
+	scroller.drag_limits = V.r(scroller.pos.x, scroller.pos.y, 0, -scroller.size.y * scroller.scale.y + 0 * sh / 3)
 
 	function scroller.on_down()
 		self.scroll_paused = true
@@ -326,26 +262,6 @@ function screen:init(w, h, done_callback, ending_version)
 
 	window:add_child(scroller)
 
-	if not ending_version and IS_MOBILE then
-		local vl = GGLabel:new(v(320, 14))
-
-		vl.colors.text = {0, 0, 0, 255}
-		vl.font_name = "numbers_italic"
-		vl.text = version.string .. (version.bundle_keywords or "")
-		vl.anchor = v(0, 0)
-		vl.text_align = "left"
-		vl.font_size = 10
-		vl.pos = v(70, 0)
-
-		scroller:add_child(vl)
-
-		local kv = KImageView:new("credits_sword")
-
-		kv.pos = v(442, -35)
-
-		scroller:add_child(kv)
-	end
-
 	if ending_version then
 		local skip = GGLabel:new(V.v(128, 100))
 
@@ -356,7 +272,7 @@ function screen:init(w, h, done_callback, ending_version)
 		skip.vertical_align = "bottom"
 		skip.text_align = "center"
 		skip.font_name = "body"
-		skip.font_size = 16 * font_size_factor * (IS_TABLET and 0.7 or 1)
+		skip.font_size = 16 * font_size_factor
 
 		local min_w = skip:do_fit_lines(3)
 
@@ -400,7 +316,7 @@ function screen:init(w, h, done_callback, ending_version)
 			}, "in-quad")
 		end)
 	else
-		local back_image = IS_MOBILE and "credits_back_" or "credits_back_bg_"
+		local back_image = "credits_back_bg_"
 		local back = GGButton:new(back_image .. "0001", back_image .. "0002")
 
 		back.pos = v(back.size.x * 0.5, sh)
@@ -409,14 +325,9 @@ function screen:init(w, h, done_callback, ending_version)
 		back.label.text = _("BACK")
 		back.label.font_size = 36 * font_size_factor
 
-		if IS_MOBILE then
-			back.label.pos.x, back.label.pos.y = 24, 25
-			back.label.size.x, back.label.size.y = 62, 26
-		else
-			back.label.pos.x, back.label.pos.y = 142, 80
-			back.label.size.x, back.label.size.y = 142, 54
-			back.label.anchor.x, back.label.anchor.y = back.label.size.x * 0.5, back.label.size.y * 0.5
-		end
+		back.label.pos.x, back.label.pos.y = 142, 80
+		back.label.size.x, back.label.size.y = 142, 54
+		back.label.anchor.x, back.label.anchor.y = back.label.size.x * 0.5, back.label.size.y * 0.5
 
 		back.label.vertical_align = "middle"
 		back.label.r = 2 * math.pi / 180
@@ -445,19 +356,6 @@ function screen:init(w, h, done_callback, ending_version)
 			end
 		end
 
-		if KR_PLATFORM == "nx" then
-			local tbh1 = GGLabel:new(V.v(32, 32))
-
-			tbh1.pos.x, tbh1.pos.y = 130, 116
-			tbh1.text = ""
-			tbh1.font_name = "symbols_nx"
-			tbh1.font_size = 28
-			tbh1.text_align = "center"
-			tbh1.colors.text = back.label_colors.default
-			self.tbh1 = tbh1
-
-			back:add_child(tbh1)
-		end
 	end
 end
 

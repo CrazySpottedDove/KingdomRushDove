@@ -26,8 +26,6 @@ local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
 local bnot = bit.bnot
-local IS_PHONE = KR_TARGET == "phone"
-local IS_CONSOLE = KR_TARGET == "console"
 -- local simulation = require("simulation")
 local v = V.v
 
@@ -273,19 +271,15 @@ function scripts.eb_jt.update(this, store)
 			S:queue(this.sound_events.death)
 			U.y_animation_play(this, "death", nil, store.tick_ts)
 
-			if IS_CONSOLE then
-				U.y_wait(store, this.tap_timeout)
-			else
-				local tap = SU.insert_sprite(store, this.tap_decal, this.pos)
+			local tap = SU.insert_sprite(store, this.tap_decal, this.pos)
 
-				this.ui.clicked = nil
+			this.ui.clicked = nil
 
-				while not this.ui.clicked do
-					coroutine.yield()
-				end
-
-				queue_remove(store, tap)
+			while not this.ui.clicked do
+				coroutine.yield()
 			end
+
+			queue_remove(store, tap)
 
 			S:stop_all()
 			S:queue(this.sound_events.death_explode)
@@ -442,16 +436,6 @@ function scripts.mod_jt_tower.update(this, store)
 	SU.ui_click_proxy_add(target, this)
 
 	while clicks < this.required_clicks do
-		if IS_CONSOLE then
-			if target.ui.hover_controller_active then
-				s_tap.alpha = s_tap.alpha_focused
-				s_tap.name = s_tap.name_focused
-			else
-				s_tap.alpha = s_tap.alpha_unfocused
-				s_tap.name = s_tap.name_unfocused
-			end
-		end
-
 		if this.ui.clicked then
 			S:queue(this.sound_events.click)
 			SU.insert_sprite(store, this.ui.click_fx, target.pos)
@@ -908,16 +892,6 @@ function scripts.mod_veznan_tower.update(this, store)
 	SU.ui_click_proxy_add(target, this)
 
 	while clicks < this.required_clicks and store.tick_ts - hold_ts < this.click_time do
-		if IS_CONSOLE then
-			if target.ui.hover_controller_active then
-				s_tap.alpha = s_tap.alpha_focused
-				s_tap.name = s_tap.name_focused
-			else
-				s_tap.alpha = s_tap.alpha_unfocused
-				s_tap.name = s_tap.name_unfocused
-			end
-		end
-
 		if this.ui.clicked then
 			S:queue(this.sound_click)
 
@@ -12308,16 +12282,6 @@ function scripts.mod_boss_spider_queen_tower_debuff.update(this, store)
 			U.animation_start(this, "in_2", nil, store.tick_ts, false, this.render.sid_mask, false)
 
 			animation_started = true
-		end
-
-		if IS_CONSOLE then
-			if target.ui.hover_controller_active then
-				s_tap.alpha = s_tap.alpha_focused
-				s_tap.name = s_tap.name_focused
-			else
-				s_tap.alpha = s_tap.alpha_unfocused
-				s_tap.name = s_tap.name_unfocused
-			end
 		end
 
 		phase = (store.tick_ts - (start_ts + spiders_appear_delay)) / spiders_arrive_duration
