@@ -9599,6 +9599,41 @@ function scripts.points_spawner.update(this, store)
 	queue_remove(store, this)
 end
 
+scripts.mod_dracula_lifesteal = {}
+
+function scripts.mod_dracula_lifesteal.update(this, store)
+	local m = this.modifier
+	local source = store.entities[m.source_id]
+	local target = store.entities[m.target_id]
+
+	m.ts = store.tick_ts
+
+	local last_ts = store.tick_ts
+
+	SU.stun_inc(target)
+
+	while not source.health.dead and store.tick_ts - m.ts < m.duration do
+		if store.tick_ts - last_ts > this.cycle_time then
+			last_ts = store.tick_ts
+			source.health.hp = km.clamp(0, source.health.hp_max, source.health.hp + this.heal_hp)
+		end
+
+		coroutine.yield()
+	end
+
+	SU.stun_dec(target)
+
+	local d = E:create_entity("damage")
+
+	d.value = this.damage
+	d.source_id = this.id
+	d.target_id = target.id
+	d.damage_type = target.hero and DAMAGE_TRUE or DAMAGE_INSTAKILL
+
+	queue_damage(store, d)
+	queue_remove(store, this)
+end
+
 scripts.decal_stage22_reptile = {}
 
 function scripts.decal_stage22_reptile.update(this, store)
@@ -22358,6 +22393,26 @@ function scripts.ray5_simple.update(this, store)
 	end
 
 	queue_remove(store, this)
+end
+
+scripts.ps_hero_mecha_smoke = {}
+
+function scripts.ps_hero_mecha_smoke.update(this, store)
+	local source_sprite = store.entities[this.particle_system.track_id].render.sprites[1]
+
+	while true do
+		if source_sprite.flip_x then
+			this.particle_system.emit_offset.x = math.abs(this.particle_system.emit_offset.x)
+			this.particle_system.emit_direction = this.emit_direction_sides[2]
+		else
+			this.particle_system.emit_offset.x = -math.abs(this.particle_system.emit_offset.x)
+			this.particle_system.emit_direction = this.emit_direction_sides[1]
+		end
+
+		coroutine.yield()
+	end
+
+	return true
 end
 
 scripts.cricet_random_eff_aura = {}
