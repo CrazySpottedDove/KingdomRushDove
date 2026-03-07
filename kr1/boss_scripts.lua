@@ -12524,31 +12524,6 @@ function scripts.editor_aura_spider_web_sprint.update(this, store)
 	end
 end
 
-scripts.decal_boss_spider_queen_spiderweb = {}
-
-function scripts.decal_boss_spider_queen_spiderweb.insert(this, store)
-	this.render.sprites[1].name = this.render.sprites[1].name .. "_000" .. table.random({"1", "2"})
-	this.render.sprites[1].scale = V.vv(0.85 + math.random() * 0.15)
-	this.render.sprites[1].flip_x = table.random({true, false})
-
-	for _, a in pairs(this.auras.list) do
-		a.ts = store.tick_ts
-
-		if a.cooldown == 0 then
-			local e = E:create_entity(a.name)
-
-			e.pos = V.vclone(this.pos)
-			e.aura.source_id = this.id
-			e.aura.ts = store.tick_ts
-			e.aura.track_source = true
-
-			queue_insert(store, e)
-		end
-	end
-
-	return true
-end
-
 scripts.aura_spider_webs = {}
 
 function scripts.aura_spider_webs.update(this, store)

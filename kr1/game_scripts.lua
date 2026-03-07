@@ -9599,41 +9599,6 @@ function scripts.points_spawner.update(this, store)
 	queue_remove(store, this)
 end
 
-scripts.mod_dracula_lifesteal = {}
-
-function scripts.mod_dracula_lifesteal.update(this, store)
-	local m = this.modifier
-	local source = store.entities[m.source_id]
-	local target = store.entities[m.target_id]
-
-	m.ts = store.tick_ts
-
-	local last_ts = store.tick_ts
-
-	SU.stun_inc(target)
-
-	while not source.health.dead and store.tick_ts - m.ts < m.duration do
-		if store.tick_ts - last_ts > this.cycle_time then
-			last_ts = store.tick_ts
-			source.health.hp = km.clamp(0, source.health.hp_max, source.health.hp + this.heal_hp)
-		end
-
-		coroutine.yield()
-	end
-
-	SU.stun_dec(target)
-
-	local d = E:create_entity("damage")
-
-	d.value = this.damage
-	d.source_id = this.id
-	d.target_id = target.id
-	d.damage_type = target.hero and DAMAGE_TRUE or DAMAGE_INSTAKILL
-
-	queue_damage(store, d)
-	queue_remove(store, this)
-end
-
 scripts.decal_stage22_reptile = {}
 
 function scripts.decal_stage22_reptile.update(this, store)
@@ -10774,89 +10739,6 @@ function scripts.high_elven_sentinel.update(this, store)
 	end
 end
 
-scripts.tower_rock_thrower = {}
-
-function scripts.tower_rock_thrower.update(this, store)
-	local a = this.attacks
-	local ba = this.attacks.list[1]
-	local last_target_pos = v(0, 0)
-	local shooter_sid = 4
-	local rocks_loading_sid = 3
-	local rocks_loading_s = this.render.sprites[rocks_loading_sid]
-	local start_offset = ba.bullet_start_offset
-	local an, af, enemy, _, pred_pos
-	local loaded = false
-
-	rocks_loading_s.hidden = true
-	ba.ts = store.tick_ts
-
-	local function filter_faerie(e)
-		local ppos = P:predict_enemy_pos(e, ba.node_prediction)
-
-		return not GR:cell_is(ppos.x, ppos.y, TERRAIN_FAERIE)
-	end
-
-	while true do
-		if this.tower.blocked then
-		-- block empty
-		else
-			if not loaded then
-				loaded = true
-				an, af = U.animation_name_facing_point(this, "load", last_target_pos, shooter_sid, start_offset)
-
-				U.animation_start_group(this, an, af, store.tick_ts, false, "shooters")
-				U.y_wait(store, fts(8))
-
-				if an == "loadDown" and not af or an == "loadUp" and af then
-					rocks_loading_s.offset.x, rocks_loading_s.offset.y = rocks_loading_s.offsets[2].x, rocks_loading_s.offsets[2].y
-				else
-					rocks_loading_s.offset.x, rocks_loading_s.offset.y = rocks_loading_s.offsets[1].x, rocks_loading_s.offsets[1].y
-				end
-
-				rocks_loading_s.hidden = nil
-
-				U.animation_start(this, "play", nil, store.tick_ts, false, rocks_loading_sid)
-				S:queue("TowerStoneDruidBoulderSummon")
-				U.y_animation_wait(this, shooter_sid)
-			end
-
-			if store.tick_ts - ba.ts < ba.cooldown then
-				coroutine.yield()
-			else
-				enemy, _, pred_pos = U.find_foremost_enemy_in_range_filter_on(tpos(this), a.range, ba.node_prediction, ba.vis_flags, ba.vis_bans, filter_faerie)
-
-				if enemy then
-					loaded = false
-					ba.ts = store.tick_ts
-					last_target_pos.x, last_target_pos.y = pred_pos.x, pred_pos.y
-
-					local an, af = U.animation_name_facing_point(this, "shoot", pred_pos, shooter_sid, start_offset)
-
-					U.animation_start_group(this, an, af, store.tick_ts, false, "shooters")
-					U.y_wait(store, ba.shoot_time)
-
-					local trigger_pos = pred_pos
-
-					enemy, _, pred_pos = U.find_foremost_enemy_in_range_filter_on(tpos(this), a.range, ba.node_prediction, ba.vis_flags, ba.vis_bans, filter_faerie)
-
-					local b = E:create_entity(ba.bullet)
-
-					b.bullet.damage_factor = this.tower.damage_factor
-					b.pos.x, b.pos.y = this.pos.x + ba.bullet_start_offset.x, this.pos.y + ba.bullet_start_offset.y
-					b.bullet.from = V.vclone(b.pos)
-					b.bullet.to = enemy and pred_pos or trigger_pos
-					b.bullet.source_id = this.id
-
-					queue_insert(store, b)
-					U.y_animation_wait(this, shooter_sid)
-				end
-			end
-		end
-
-		coroutine.yield()
-	end
-end
-
 scripts.druid_shooter_nature = {}
 
 function scripts.druid_shooter_nature.update(this, store)
@@ -10929,18 +10811,6 @@ function scripts.druid_shooter_nature.update(this, store)
 
 		coroutine.yield()
 	end
-end
-
-scripts.tower_bastion_holder = {}
-
-function scripts.tower_bastion_holder.insert(this, store)
-	if this.tower.flip_x then
-		for _, s in pairs(this.render.sprites) do
-			s.flip_x = true
-		end
-	end
-
-	return true
 end
 
 scripts.tower_bastion = {}
@@ -22490,26 +22360,6 @@ function scripts.ray5_simple.update(this, store)
 	queue_remove(store, this)
 end
 
-scripts.ps_hero_mecha_smoke = {}
-
-function scripts.ps_hero_mecha_smoke.update(this, store)
-	local source_sprite = store.entities[this.particle_system.track_id].render.sprites[1]
-
-	while true do
-		if source_sprite.flip_x then
-			this.particle_system.emit_offset.x = math.abs(this.particle_system.emit_offset.x)
-			this.particle_system.emit_direction = this.emit_direction_sides[2]
-		else
-			this.particle_system.emit_offset.x = -math.abs(this.particle_system.emit_offset.x)
-			this.particle_system.emit_direction = this.emit_direction_sides[1]
-		end
-
-		coroutine.yield()
-	end
-
-	return true
-end
-
 scripts.cricet_random_eff_aura = {}
 
 function scripts.cricet_random_eff_aura.update(this, store)
@@ -23991,82 +23841,6 @@ function scripts.decal_elemental_wood_holder_root_dragon_kill.update(this, store
 
 	U.y_animation_play(this, "in", nil, store.tick_ts)
 	queue_remove(store, this)
-end
-
-scripts.multi_sprite_fx = {}
-
-function scripts.multi_sprite_fx.update(this, store)
-	local start_ts = store.tick_ts
-	local this_sprites = this.render.sprites
-	local finished_anims = {}
-	local delayed_sprites = {}
-
-	for i = 1, #this_sprites do
-		local s = this_sprites[i]
-
-		if s.animated then
-			if s.delay_start then
-				delayed_sprites[i] = s.delay_start + start_ts
-			else
-				U.animation_start(this, s.name, nil, store.tick_ts, false, i, true)
-			end
-
-			finished_anims[i] = false
-		else
-			finished_anims[i] = true
-		end
-	end
-
-	if this.tween then
-		this.tween.ts = store.tick_ts
-	end
-
-	local function handle_finished_anim(index)
-		if delayed_sprites[index] then
-			if store.tick_ts > delayed_sprites[index] then
-				this_sprites[index].hidden = false
-
-				U.animation_start(this, this_sprites[index].name, nil, store.tick_ts, false, index, true)
-
-				delayed_sprites[index] = nil
-			end
-
-			return false
-		end
-
-		if finished_anims[index] then
-			return false
-		end
-
-		if not U.animation_finished(this, index, 1) then
-			return false
-		end
-
-		this_sprites[index].hidden = true
-		finished_anims[index] = true
-
-		for i = 1, #this_sprites do
-			if not finished_anims[i] then
-				return false
-			end
-		end
-
-		return true
-	end
-
-	while true do
-		for i = 1, #this_sprites do
-			if handle_finished_anim(i) then
-				if not this.tween or not this.tween.remove then
-					queue_remove(store, this)
-				end
-
-				return
-			end
-		end
-
-		coroutine.yield()
-	end
 end
 
 scripts.controller_elemental_fire = {}
@@ -26485,55 +26259,6 @@ function scripts.controller_stage_03_arborean_babies.update(this, store)
 			signal.emit("playful_friends-stage03", this)
 
 			break
-		end
-
-		coroutine.yield()
-	end
-end
-
-scripts.click_play_and_idle = {}
-
-function scripts.click_play_and_idle.update(this, store)
-	local s = this.render.sprites[1]
-	local c = this.click_play
-	local clicks = 0
-	local already_played = false
-
-	while true do
-		if this.ui.clicked then
-			this.ui.clicked = nil
-			clicks = clicks + 1
-		end
-
-		if c.play_once and already_played then
-		-- block empty
-		elseif clicks >= c.required_clicks then
-			if this.tween then
-				this.tween.disabled = false
-			elseif not c.idle_animation then
-				s.hidden = false
-			end
-
-			S:queue(c.clicked_sound)
-			U.y_animation_play(this, c.click_animation, nil, store.tick_ts, 1)
-
-			this.ui.clicked = nil
-			clicks = 0
-			already_played = true
-
-			if not c.idle_animation then
-				s.hidden = true
-			else
-				U.animation_start(this, c.idle_animation, nil, store.tick_ts, true)
-			end
-
-			if c.achievement then
-				AC:got(c.achievement)
-			end
-
-			if c.achievement_flag then
-				AC:flag_check(unpack(c.achievement_flag))
-			end
 		end
 
 		coroutine.yield()
@@ -29652,130 +29377,6 @@ function scripts.decal_stage_10_obelisk_crystal_fx.update(this, store)
 	queue_remove(store, this)
 end
 
-scripts.bullet_stage_10_obelisk_priests = {}
-
-function scripts.bullet_stage_10_obelisk_priests.update(this, store)
-	local b = this.bullet
-	local s = this.render.sprites[1]
-	local mspeed = b.min_speed
-	local target, ps
-	local new_target = false
-	local target_invalid = false
-
-	if b.particles_name then
-		ps = E:create_entity(b.particles_name)
-		ps.particle_system.track_id = this.id
-
-		queue_insert(store, ps)
-	end
-
-	::label_1152_0::
-
-	if b.store and not b.target_id then
-		S:queue(this.sound_events.summon)
-
-		s.z = Z_OBJECTS
-		s.sort_y_offset = b.store_sort_y_offset
-
-		if ps then
-			ps.particle_system.emit = false
-		end
-	else
-		S:queue(this.sound_events.travel)
-
-		s.z = Z_BULLETS
-		s.sort_y_offset = nil
-
-		if ps then
-			ps.particle_system.emit = true
-		end
-	end
-
-	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
-		coroutine.yield()
-
-		if not target_invalid then
-			target = store.entities[b.target_id]
-		end
-
-		if target and not new_target then
-			local tpx, tpy = target.pos.x, target.pos.y
-
-			if not b.ignore_hit_offset then
-				tpx, tpy = tpx + target.unit.hit_offset.x, tpy + target.unit.hit_offset.y
-			end
-
-			local d = math.max(math.abs(tpx - b.to.x), math.abs(tpy - b.to.y))
-
-			if d > b.max_track_distance or band(target.vis.bans, F_RANGED) ~= 0 then
-				target_invalid = true
-				target = nil
-			end
-		end
-
-		if target and target.health and not target.health.dead then
-			if b.ignore_hit_offset then
-				b.to.x, b.to.y = target.pos.x, target.pos.y
-			else
-				b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
-			end
-
-			new_target = false
-		end
-
-		mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
-		mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
-		b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
-		this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
-
-		if not b.ignore_rotation then
-			s.r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
-		end
-
-		if ps then
-			ps.particle_system.emit_direction = s.r
-		end
-	end
-
-	while b.store and not b.target_id do
-		coroutine.yield()
-
-		if b.target_id then
-			mspeed = b.min_speed
-			new_target = true
-
-			goto label_1152_0
-		end
-	end
-
-	this.pos.x, this.pos.y = b.to.x, b.to.y
-	this.target_golem.wake_up = true
-
-	if b.payload then
-		local hp = b.payload
-
-		hp.pos.x, hp.pos.y = b.to.x, b.to.y
-
-		queue_insert(store, hp)
-	end
-
-	if b.hit_fx then
-		local sfx = E:create_entity(b.hit_fx)
-
-		sfx.pos.x, sfx.pos.y = b.to.x, b.to.y
-		sfx.render.sprites[1].ts = store.tick_ts
-		sfx.render.sprites[1].runs = 0
-
-		if target and sfx.render.sprites[1].size_names then
-			sfx.render.sprites[1].name = sfx.render.sprites[1].size_names[target.unit.size]
-		end
-
-		queue_insert(store, sfx)
-	end
-
-	queue_remove(store, this)
-end
-
 scripts.bullet_stage_10_obelisk_priests_alternative = {}
 
 function scripts.bullet_stage_10_obelisk_priests_alternative.update(this, store)
@@ -29885,92 +29486,6 @@ function scripts.bullet_stage_10_obelisk_priests_alternative.update(this, store)
 		ps.particle_system.emit = false
 
 		U.y_wait(store, ps.particle_system.particle_lifetime[2])
-	end
-
-	queue_remove(store, this)
-end
-
-scripts.mod_stage_10_obelisk_stun = {}
-
-function scripts.mod_stage_10_obelisk_stun.update(this, store)
-	local start_ts, target_hidden
-	local m = this.modifier
-	local target = store.entities[this.modifier.target_id]
-
-	if not target then
-		queue_remove(store, this)
-
-		return
-	end
-
-	local target_fly = target and band(target.vis.flags, F_FLYING) ~= 0
-
-	if target_fly then
-		this.render.sprites[1].prefix = this.prefix_flying
-		this.render.sprites[1].offset.y = target.render.sprites[1].offset.y
-	end
-
-	this.pos = target.pos
-	start_ts = store.tick_ts
-
-	if m.animation_phases then
-		U.animation_start(this, "start", nil, store.tick_ts)
-
-		while not U.animation_finished(this) do
-			if not target_hidden and m.hide_target_delay and store.tick_ts - start_ts > m.hide_target_delay then
-				target_hidden = true
-
-				if target.ui then
-					target.ui.can_click = false
-				end
-
-				if target.health_bar then
-					target.health_bar.hidden = true
-				end
-
-				U.sprites_hide(target, nil, nil, true)
-				SU.hide_modifiers(store, target, true, this)
-				SU.hide_auras(store, target, true)
-			end
-
-			coroutine.yield()
-		end
-	end
-
-	U.animation_start(this, "loop", nil, store.tick_ts, true)
-
-	while store.tick_ts - m.ts < m.duration and target and not target.health.dead do
-		if this.render and m.use_mod_offset and target.unit.mod_offset and not m.custom_offsets then
-			for i = 1, #this.render.sprites do
-				local s = this.render.sprites[i]
-
-				s.offset.x, s.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
-			end
-		end
-
-		coroutine.yield()
-	end
-
-	if m.animation_phases then
-		U.animation_start(this, "end", nil, store.tick_ts)
-
-		if target_hidden then
-			if target.ui then
-				target.ui.can_click = true
-			end
-
-			if target.health_bar and not target.health.dead then
-				target.health_bar.hidden = nil
-			end
-
-			U.sprites_show(target, nil, nil, true)
-			SU.show_modifiers(store, target, true, this)
-			SU.show_auras(store, target, true)
-		end
-
-		while not U.animation_finished(this) do
-			coroutine.yield()
-		end
 	end
 
 	queue_remove(store, this)
@@ -33703,27 +33218,6 @@ function scripts.bullet_tower_stage_13_sunray_special.update(this, store)
 	return true
 end
 
-scripts.mod_tower_stage_13_sunray_special = {}
-
-function scripts.mod_tower_stage_13_sunray_special.remove(this, store)
-	local target = store.entities[this.modifier.target_id]
-	local source = store.entities[this.modifier.source_id]
-
-	if target and source and target.health and target.health.dead then
-		local tower = store.entities[source.aura.source_id]
-
-		if tower then
-			tower.total_enemies_killed = tower.total_enemies_killed + 1
-
-			if tower.total_enemies_killed >= 10 then
-				signal.emit("sunray_kills-stage13", this)
-			end
-		end
-	end
-
-	return true
-end
-
 scripts.controller_stage_14_amalgam = {}
 
 function scripts.controller_stage_14_amalgam.update(this, store)
@@ -35186,82 +34680,6 @@ function scripts.enemy_cutthroat_rat.update(this, store)
 	end
 end
 
-scripts.enemy_basic_with_random_range = {}
-
-function scripts.enemy_basic_with_random_range.insert(this, store)
-	if scripts.enemy_basic.insert(this, store) then
-		for _, a in ipairs(this.ranged.attacks) do
-			if a.max_range_variance then
-				a.max_range = a.max_range + math.random(0, a.max_range_variance)
-			end
-		end
-
-		return true
-	else
-		return false
-	end
-end
-
-scripts.debug_path_renderer = {}
-
-function scripts.debug_path_renderer.insert(this, store)
-	local visible_coords = store.visible_coords
-
-	G.push()
-
-	local path_canvas = G.newCanvas(visible_coords.right - visible_coords.left, visible_coords.top - visible_coords.bottom)
-	local cWidth = path_canvas:getWidth()
-	local cHeight = path_canvas:getHeight()
-
-	G.setCanvas(path_canvas)
-
-	local backgroundColor = this.path_debug and this.path_debug.background_color or nil
-	local pathColor = this.path_debug and this.path_debug.path_color or {255, 255, 255, 255}
-
-	if backgroundColor then
-		G.setColor(backgroundColor[1], backgroundColor[2], backgroundColor[3], backgroundColor[4])
-		G.rectangle("fill", 0, 0, cWidth, cHeight)
-	end
-
-	G.translate(-visible_coords.left, -visible_coords.bottom)
-	log.info("PATH_DEBUG: canvas:%f, %f", path_canvas:getWidth(), path_canvas:getHeight())
-
-	local function fill_paths(width_scale)
-		for pi, p in ipairs(P.paths) do
-			local pw = P:path_width(pi) * width_scale
-
-			for ni, o in pairs(p[1]) do
-				if P:is_node_valid(pi, ni) then
-					G.circle("fill", o.x, REF_H - o.y, pw, 16)
-				end
-			end
-		end
-	end
-
-	G.setColor(pathColor[1] * 0.6, pathColor[2] * 0.6, pathColor[3] * 0.6, pathColor[4])
-	fill_paths(1.1)
-	G.setColor(pathColor[1], pathColor[2], pathColor[3], pathColor[4])
-	fill_paths(1)
-	G.setLineWidth(1)
-	G.setColor(255, 255, 255, 255)
-	G.setCanvas()
-	G.pop()
-
-	local image_data = path_canvas:newImageData()
-	local image = G.newImage(image_data)
-	local image_name = "generated_path_image"
-
-	this.generated_image_name = image_name
-
-	I:remove_image(this.generated_image_name)
-	I:add_image(image_name, image, "temp_game_texts", nil)
-
-	this.render.sprites[1].name = image_name
-	this.render.sprites[1].animated = false
-	this.render.sprites[1].anchor = v(0, 0)
-	this.pos = v(visible_coords.left, visible_coords.bottom)
-end
-
 scripts.enemy_rhino = {}
 
 function scripts.enemy_rhino.update(this, store)
@@ -35391,60 +34809,6 @@ function scripts.enemy_rhino.update(this, store)
 			end
 		end
 
-		coroutine.yield()
-	end
-end
-
-scripts.screen_focus_circle = {}
-
-function scripts.screen_focus_circle.insert(this, store)
-	local visible_coords = store.visible_coords
-	local G = love.graphics
-	G.push()
-
-	local canvas = G.newCanvas(visible_coords.right - visible_coords.left, visible_coords.top - visible_coords.bottom)
-	local cWidth = canvas:getWidth()
-	local cHeight = canvas:getHeight()
-
-	G.setCanvas(canvas)
-	G.setColor(0, 0, 0, this.black_opacity)
-	G.rectangle("fill", 0, 0, cWidth, cHeight)
-	G.translate(-visible_coords.left, -visible_coords.bottom)
-	G.setColor(0, 0, 0, 0)
-	G.setBlendMode("replace")
-
-	for i = 1, this.circle_gradient_size do
-		G.setColor(0, 0, 0, (this.circle_gradient_size - i) * this.black_opacity / this.circle_gradient_size)
-		G.circle("fill", this.circle_pos.x, REF_H - this.circle_pos.y, this.circle_radius - i, 100)
-	end
-
-	G.setBlendMode("alpha")
-	G.setCanvas()
-	G.pop()
-
-	local image_data = canvas:newImageData()
-	local image = G.newImage(image_data)
-	local image_name = "generated_circle_image"
-
-	this.generated_image_name = image_name
-
-	I:remove_image(this.generated_image_name)
-	I:add_image(image_name, image, "temp_game_circle", nil)
-
-	this.render.sprites[1].name = image_name
-	this.render.sprites[1].animated = false
-	this.render.sprites[1].anchor = v(0, 0)
-	this.pos = v(visible_coords.left, visible_coords.bottom)
-	this.render.sprites[1].pos = this.pos
-
-	return true
-end
-
-function scripts.screen_focus_circle.update(this, store)
-	this.tween.ts = store.tick_ts
-	this.tween.disabled = false
-
-	while true do
 		coroutine.yield()
 	end
 end
@@ -37019,45 +36383,6 @@ function scripts.controller_enemy_mindless_husk_glareling_spawn.update(this, sto
 
 	queue_insert(store, b)
 	queue_remove(store, this)
-end
-
-scripts.enemy_mindless_husk_egg = {}
-
-function scripts.enemy_mindless_husk_egg.update(this, store)
-	local start_ts = store.tick_ts
-
-	while true do
-		if this.health.dead then
-			SU.y_enemy_death(store, this)
-
-			return
-		end
-
-		if store.tick_ts - start_ts > this.time_to_spawn then
-			local g = E:create_entity(this.spawn_entity)
-
-			g.pos = V.vclone(this.pos)
-			g.render.sprites[1].name = this.spawn_entity_anim
-			g.render.sprites[1].flip_x = this.render.sprites[1].flip_x
-			g.nav_path.pi = this.nav_path.pi
-			g.nav_path.spi = this.nav_path.spi
-			g.nav_path.ni = this.nav_path.ni + 2
-
-			queue_insert(store, g)
-			U.y_wait(store, fts(1))
-
-			this.ui.can_click = not this.unit.hide_after_death and not this.unit.hide_during_death
-			this.ui.z = -1
-			this.render.sprites[1].hidden = true
-			this.health.dead = true
-
-			queue_remove(store, this)
-
-			return
-		end
-
-		coroutine.yield()
-	end
 end
 
 scripts.enemy_vile_spawner = {}
@@ -40677,103 +40002,6 @@ function scripts.enemy_crocs_hydra.update(this, store)
 	end
 end
 
-scripts.mod_enemy_crocs_hydra_tower_debuff = {}
-
-function scripts.mod_enemy_crocs_hydra_tower_debuff.insert(this, store)
-	local target = store.entities[this.modifier.target_id]
-
-	if not target or band(this.modifier.vis_flags, target.vis.bans) ~= 0 then
-		return false
-	end
-
-	return true
-end
-
-function scripts.mod_enemy_crocs_hydra_tower_debuff.update(this, store)
-	local clicks = 0
-	local s_tap = this.render.sprites[4]
-	local m = this.modifier
-	local target = store.entities[m.target_id]
-	local source = store.entities[m.source_id]
-
-	if not target then
-		queue_remove(store, this)
-
-		return
-	end
-
-	m.ts = store.tick_ts
-	this.pos = target.pos
-
-	if this.tween and not this.tween.disabled then
-		this.tween.ts = store.tick_ts
-	end
-
-	U.animation_start(this, "idle", nil, store.tick_ts, this.render.sprites[1].loop, 1)
-	U.y_animation_play_group(this, "in", nil, store.tick_ts, 1, "layers")
-	U.animation_start_group(this, "idle", nil, store.tick_ts, true, "layers")
-
-	s_tap.hidden = nil
-
-	SU.tower_block_inc(target)
-
-	local start_ts = store.tick_ts
-
-	SU.ui_click_proxy_add(target, this)
-
-	while clicks < this.required_clicks and store.tick_ts - start_ts < m.duration do
-		if this.ui.clicked then
-			local fx = E:create_entity(this.tap_fx)
-
-			fx.pos = V.v(this.pos.x - 20 + math.random() * 40, this.pos.y - 20 + math.random() * 40 + 30)
-			fx.render.sprites[1].ts = store.tick_ts
-
-			queue_insert(store, fx)
-			S:queue(this.sound_click)
-
-			this.ui.clicked = nil
-			clicks = clicks + 1
-
-			if clicks >= this.required_clicks then
-				goto label_197_0
-			end
-		end
-
-		if this.remove then
-			goto label_197_0
-		end
-
-		coroutine.yield()
-	end
-
-	s_tap.hidden = true
-	target.ui.can_click = false
-	target.tower.type = target.tower._type
-	target.tower.blocked = true
-
-	S:queue(this.sound_blocked)
-	U.y_wait(store, m.duration)
-
-	target.tower.destroy = true
-
-	queue_remove(store, this)
-
-	goto label_197_1
-
-	::label_197_0::
-
-	SU.ui_click_proxy_remove(target, this)
-
-	s_tap.hidden = true
-
-	S:queue(this.sound_released)
-	U.y_animation_play_group(this, "out", nil, store.tick_ts, 1, "layers")
-	SU.tower_block_dec(target)
-	queue_remove(store, this)
-
-	::label_197_1::
-end
-
 scripts.aura_bullet_enemy_crocs_hydra_dot = {}
 
 function scripts.aura_bullet_enemy_crocs_hydra_dot.update(this, store)
@@ -41029,30 +40257,6 @@ function scripts.trees_guardian_tree_wave_of_roots.update(this, store)
 	end
 
 	queue_remove(store, this)
-end
-
-scripts.trees_guardian_tree_vine_aura_decal = {}
-
-function scripts.trees_guardian_tree_vine_aura_decal.update(this, store)
-	U.y_animation_play(this, "start", nil, store.tick_ts, 1)
-	U.y_animation_play(this, "idle", nil, store.tick_ts, 1)
-
-	local aura = E:create_entity(this.spawn_aura)
-
-	aura.aura.source_id = this.id
-	aura.aura.ts = store.tick_ts
-	aura.pos = V.vclone(this.pos)
-
-	queue_insert(store, aura)
-
-	while true do
-		if store.tick_ts - aura.aura.ts > aura.aura.duration then
-			U.y_animation_play(this, "end", nil, store.tick_ts, 1)
-			queue_remove(store, this)
-		end
-
-		coroutine.yield()
-	end
 end
 
 scripts.trees_guardian_tree_vine_mod = {}
@@ -41960,32 +41164,6 @@ function scripts.decal_stage_09_bridge.update(this, store)
 	end
 
 	queue_remove(store, this)
-end
-
-scripts.aura_stage_09_spawn_nightmare_convert_spawn_fx = {}
-
-function scripts.aura_stage_09_spawn_nightmare_convert_spawn_fx.update(this, store)
-	local enemies_spawned = {}
-
-	while true do
-		local targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, function(e)
-			return this.include_templates and table.contains(this.include_templates, e.template_name)
-		end)
-
-		if targets and #targets > 0 then
-			for _, e in ipairs(targets) do
-				if not table.contains(enemies_spawned, e.id) then
-					e.can_be_converted = true
-
-					table.insert(enemies_spawned, e.id)
-
-					this.portal.enemy_spawned = true
-				end
-			end
-		end
-
-		coroutine.yield()
-	end
 end
 
 scripts.decal_stage_09_candle = {}
@@ -44050,64 +43228,6 @@ function scripts.tower_stage_22_arborean_mages.update(this, store)
 				U.y_animation_play(this, "tauntOut", false, store.tick_ts, 1, 2)
 				U.animation_start(this, "idle", false, store.tick_ts, true, 2)
 				U.y_wait(store, 8)
-			end
-		end
-
-		coroutine.yield()
-	end
-end
-
-scripts.trees_arborean_sages = {}
-
-function scripts.trees_arborean_sages.update(this, store)
-	local a = this.bullet_attack
-
-	a.cooldown = U.frandom(a.cooldown_min, a.cooldown_max)
-
-	while this.spawn_wave > store.wave_group_number do
-		coroutine.yield()
-	end
-
-	U.y_animation_play(this, this.spawn_anim, nil, store.tick_ts, 1)
-
-	a.ts = store.tick_ts - a.cooldown + 1
-
-	while true do
-		U.animation_start(this, "idle", nil, store.tick_ts)
-
-		if store.wave_group_number >= this.leave_wave then
-			U.y_animation_play(this, this.leave_anim, nil, store.tick_ts, 1)
-			U.animation_start(this, this.gone_anim, nil, store.tick_ts, 1)
-
-			return
-		end
-
-		if store.tick_ts - a.ts > a.cooldown then
-			local target, targets = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range, false, a.vis_flags, a.vis_bans)
-
-			if not target then
-				SU.delay_attack(store, a, 0.2)
-			else
-				a.ts = store.tick_ts
-
-				if target and target.health and not target.health.dead then
-					local b = E:create_entity(a.bullet)
-
-					b.bullet.from = V.v(this.pos.x + a.bullet_start_offset.x, this.pos.y + a.bullet_start_offset.y)
-					b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
-					b.bullet.target_id = target.id
-					b.bullet.source_id = this.id
-					b.pos = V.vclone(b.bullet.from)
-
-					U.animation_start(this, a.animation, nil, store.tick_ts)
-					S:queue("SpecialTusken", {
-						delay = fts(19)
-					})
-					U.y_wait(store, a.shoot_time)
-					queue_insert(store, b)
-					S:queue("ShotgunSound")
-					U.y_animation_wait(this)
-				end
 			end
 		end
 
@@ -52265,138 +51385,6 @@ function scripts.bullet_storm_elemental.update(this, store)
 	queue_remove(store, this)
 end
 
-scripts.bullet_water_sorceress_bolt = {}
-
-function scripts.bullet_water_sorceress_bolt.update(this, store)
-	local b = this.bullet
-	local mspeed = b.min_speed
-	local target, ps
-
-	if b.particles_name then
-		ps = E:create_entity(b.particles_name)
-		ps.particle_system.track_id = this.id
-
-		queue_insert(store, ps)
-	end
-
-	if b.target_id then
-		S:queue(this.sound_events.travel)
-	else
-		S:queue(this.sound_events.summon)
-	end
-
-	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
-		if b.target_id then
-			target = store.entities[b.target_id]
-		end
-
-		if target then
-			local ho = target.unit.hit_offset
-
-			if U.flag_has(target.vis.bans, F_RANGED) or target.health.dead then
-				b.target_id = nil
-				target = nil
-			elseif b.max_track_distance then
-				local d = math.max(math.abs(target.pos.x + ho.x - b.to.x), math.abs(target.pos.y + ho.y - b.to.y))
-
-				if d > b.max_track_distance then
-					b.target_id = nil
-					target = nil
-				end
-			else
-				b.to.x, b.to.y = target.pos.x + ho.x, target.pos.y + ho.y
-			end
-		end
-
-		if this.initial_impulse and store.tick_ts - b.ts < this.initial_impulse_duration then
-			local t = store.tick_ts - b.ts
-
-			if this.initial_impulse_angle_abs then
-				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(this.initial_impulse_angle_abs, 1, 0))
-			else
-				local angle = this.initial_impulse_angle
-
-				if iix < 0 then
-					angle = angle * -1
-				end
-
-				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(angle, iix, iiy))
-			end
-		end
-
-		mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
-		mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
-		b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
-		this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
-
-		if b.align_with_trajectory then
-			this.render.sprites[1].r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
-		else
-			this.render.sprites[1].flip_x = b.to.x < this.pos.x
-		end
-
-		if ps then
-			ps.particle_system.emit_direction = this.render.sprites[1].r
-		end
-
-		coroutine.yield()
-	end
-
-	if target and not target.health.dead then
-		local d = SU.create_bullet_damage(b, target.id, this.id)
-
-		queue_damage(store, d)
-
-		if b.mod then
-			local mod = E:create_entity(b.mod)
-
-			mod.modifier.target_id = target.id
-
-			queue_insert(store, mod)
-		end
-
-		if b.hit_payload then
-			local hp
-
-			if type(b.hit_payload) == "string" then
-				hp = E:create_entity(b.hit_payload)
-			else
-				hp = b.hit_payload
-			end
-
-			hp.pos.x, hp.pos.y = this.pos.x, this.pos.y
-
-			queue_insert(store, hp)
-		end
-	end
-
-	local sfx, sfx_ignore_offset
-
-	if b.hit_fx_air and target and U.flag_has(target.vis.flags, F_FLYING) then
-		sfx = b.hit_fx_air
-		sfx_ignore_offset = b.hit_fx_ignore_offset_air
-	elseif b.hit_fx then
-		sfx = b.hit_fx
-		sfx_ignore_offset = b.hit_fx_ignore_offset
-	end
-
-	if sfx then
-		local sfx = E:create_entity(sfx)
-
-		if sfx_ignore_offset and target then
-			sfx.pos.x, sfx.pos.y = target.pos.x, target.pos.y
-		else
-			sfx.pos.x, sfx.pos.y = b.to.x, b.to.y
-		end
-
-		sfx.render.sprites[1].ts = store.tick_ts
-
-		queue_insert(store, sfx)
-	end
-
-	queue_remove(store, this)
-end
-
 scripts.enemy_water_sorceress = {}
 
 function scripts.enemy_water_sorceress.update(this, store)
@@ -55065,85 +54053,6 @@ function scripts.enemy_demon_minotaur.update(this, store)
 
 		coroutine.yield()
 	end
-end
-
-scripts.bolt_tower_pandas_ray = {}
-
-function scripts.bolt.insert(this, store)
-	local b = this.bullet
-
-	if b.target_id then
-		local target = store.entities[b.target_id]
-
-		if not target or band(target.vis.bans, F_RANGED) ~= 0 then
-			return false
-		end
-	end
-
-	return true
-end
-
-function scripts.bolt_tower_pandas_ray.update(this, store)
-	local b = this.bullet
-	local target = store.entities[b.target_id]
-
-	this.pos.x, this.pos.y = b.to.x, b.to.y
-
-	if target and not target.health.dead then
-		local d = SU.create_bullet_damage(b, target.id, this.id)
-		local u = UP:get_upgrade("mage_spell_of_penetration")
-
-		if u and math.random() < u.chance then
-			d.damage_type = DAMAGE_TRUE
-		end
-
-		queue_damage(store, d)
-
-		if b.mod or b.mods then
-			local mods = b.mods or {b.mod}
-
-			for _, mod_name in pairs(mods) do
-				local m = E:create_entity(mod_name)
-
-				m.modifier.target_id = b.target_id
-				m.modifier.level = b.level
-
-				queue_insert(store, m)
-			end
-		end
-
-		if b.hit_payload then
-			local hp = b.hit_payload
-
-			hp.pos.x, hp.pos.y = this.pos.x, this.pos.y
-
-			queue_insert(store, hp)
-		end
-	end
-
-	if b.payload then
-		local hp = b.payload
-
-		hp.pos.x, hp.pos.y = b.to.x, b.to.y
-
-		queue_insert(store, hp)
-	end
-
-	if b.hit_fx then
-		local sfx = E:create_entity(b.hit_fx)
-
-		sfx.pos.x, sfx.pos.y = b.to.x, b.to.y
-		sfx.render.sprites[1].ts = store.tick_ts
-		sfx.render.sprites[1].runs = 0
-
-		if target and sfx.render.sprites[1].size_names then
-			sfx.render.sprites[1].name = sfx.render.sprites[1].size_names[target.unit.size]
-		end
-
-		queue_insert(store, sfx)
-	end
-
-	queue_remove(store, this)
 end
 
 scripts.fx_nine_tailed_fox_summon = {}
