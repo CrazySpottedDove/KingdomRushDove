@@ -32527,7 +32527,7 @@ function scripts.decal_hero_dragon_arb_tower_plant_linirea.update(this, store, s
 		end
 
 		if store.tick_ts - a.ts > a.cooldown then
-			local target = U.find_nearest_soldier(store.entities, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(v, origin)
+			local target = U.find_nearest_soldier(store.soldiers, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(v, origin)
 				return v.health and not v.health.dead and v.health.hp < v.health.hp_max and not U.has_modifiers(store, v, a.mark_mod)
 			end)
 

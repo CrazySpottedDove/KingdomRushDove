@@ -50242,7 +50242,7 @@ function scripts.enemy_ballooning_spider.update(this, store)
 			return false
 		end
 
-		local target = U.find_nearest_soldier(store.entities, this.pos, 0, this.detection_range, this.detection_flags, this.detection_bans)
+		local target = U.find_nearest_soldier(store.soldiers, this.pos, 0, this.detection_range, this.detection_flags, this.detection_bans)
 
 		if target == nil then
 			return false

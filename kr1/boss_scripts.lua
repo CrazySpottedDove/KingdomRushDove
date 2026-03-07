@@ -6701,7 +6701,7 @@ function scripts.boss_cult_leader.update(this, store)
 			if node_valid and not ignore_soldiers and this.ranged then
 				for _, a in pairs(this.ranged.attacks) do
 					if not a.disabled and (not a.requires_magic or this.enemy.can_do_magic) and (a.hold_advance or store.tick_ts - a.ts > a.cooldown) then
-						ranged = U.find_nearest_soldier(store.entities, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
+						ranged = U.find_nearest_soldier(store.soldiers, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 						if ranged ~= nil then
 							break
