@@ -3009,20 +3009,25 @@ blc = balance.hero_spider.instakill_melee
 set_skill(h.hero.skills.instakill_melee)
 get_cooldown()
 local instakill_threshold = table.tail(blc.life_threshold)
-map["暗杀"] = str(cooldown_str(), "暗影蛛后对被眩晕且生命值低于", instakill_threshold, "的敌人发动一击必杀。")
+factor = blc.heal_factor
+map["暗杀"] = str(cooldown_str(), "丝派蒂尔对被眩晕且当前生命值低于", instakill_threshold, "的敌人发动一击必杀，并恢复自身", factor * 100, "%的最大生命值。")
 
 blc = balance.hero_spider.area_attack
 set_skill(h.hero.skills.area_attack)
 get_cooldown()
 local stun_dur = table.tail(blc.s_stun_time)
-map["蛛网缠绕"] = str(cooldown_str(), "暗影蛛后喷出丝网，将周围敌人眩晕", stun_dur, "秒。")
+d[1].damage_min = table.tail(blc.damage_min)
+d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_type = blc.damage_type
+map["蛛网缠绕"] = str(cooldown_str(), "丝派蒂尔喷出丝网，将周围敌人眩晕", stun_dur, "秒，并造成", damage_str(), "。")
 
 blc = balance.hero_spider.tunneling
 set_skill(h.hero.skills.tunneling)
 d[1].damage_min = table.tail(blc.damage_min)
 d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_type = blc.damage_type
-map["地道穿越"] = str("暗影蛛后移动至新集结点时潜入地下，抵达后对周围敌人造成", damage_str(), "。")
+duration = blc.stun_duration
+map["地道穿越"] = str("丝派蒂尔移动至新集结点时潜入地下，抵达后对周围敌人造成", damage_str(), "，并晕眩他们", duration, "秒。")
 
 blc = balance.hero_spider.supreme_hunter
 set_skill(h.hero.skills.supreme_hunter)
@@ -3030,14 +3035,18 @@ get_cooldown()
 d[1].damage_min = table.tail(blc.damage_min)
 d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_type = blc.damage_type
-map["猎手本能"] = str(cooldown_str(), "暗影蛛后瞬移至生命值最高的敌人身旁，造成", damage_str(), "。")
+d[2].damage_min = table.tail(blc.dot_damage_min)
+d[2].damage_max = table.tail(blc.dot_damage_max)
+d[2].damage_type = blc.dot_damage_type
+cycle_time = blc.damage_every
+map["猎手本能"] = str(cooldown_str(), "丝派蒂尔瞬移至生命值最高的敌人身旁，造成", damage_str(), "并施加无限时长的剧毒，每", cycle_time, "秒造成", damage_str(2), "。")
 
 blc = balance.hero_spider.ultimate
 set_skill(h.hero.skills.ultimate)
 get_cooldown()
 local spawn_count = table.tail(blc.spawn_amount)
 local spider_dur = table.tail(blc.spider.duration)
-map["蛛后降临"] = str(cooldown_str(), "暗影蛛后召唤", spawn_count, "只蜘蛛协助战斗，持续", spider_dur, "秒。")
+map["蛛后降临"] = str(cooldown_str(), "丝派蒂尔召唤", spawn_count, "只蜘蛛协助战斗，持续", spider_dur, "秒。")
 
 set_hero("hero_mecha")
 blc = balance.hero_mecha.goblidrones

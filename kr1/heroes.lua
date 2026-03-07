@@ -19395,7 +19395,8 @@ tt.timed_attacks.list[4].min_range = 0
 tt.timed_attacks.list[4].damage_max = nil
 tt.timed_attacks.list[4].damage_min = nil
 tt.timed_attacks.list[4].node_margin = 10
-tt.timed_attacks.list[4].damage_type = DAMAGE_TRUE
+tt.timed_attacks.list[4].damage_type = b.supreme_hunter.damage_type
+tt.timed_attacks.list[4].mod = "mod_hero_spider_supreme_poison"
 tt.sound_events.change_rally_point = "HeroSpiderTaunt"
 tt.sound_events.death = "HeroSpiderDeath"
 tt.sound_events.respawn = "HeroSpiderTauntIntro"
@@ -19414,7 +19415,7 @@ tt.unit.hit_offset = v(0, 23)
 tt.unit.mod_offset = v(0, 23)
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.ui.click_rect = r(-35, -5, 61, 75)
-tt.melee.range = 100
+tt.melee.range = 75
 tt.melee.attacks[1] = CC("melee_attack")
 tt.melee.attacks[1].cooldown = b.basic_melee.cooldown
 tt.melee.attacks[1].shared_cooldown = b.basic_melee.cooldown
@@ -19441,6 +19442,9 @@ tt.ranged.attacks[1].vis_bans = bor(F_WATER, F_NIGHTMARE)
 tt.ranged.attacks[1].vis_flags = bor(F_RANGED)
 tt.ranged.attacks[1].xp_gain_factor = b.basic_ranged.xp_gain_factor
 tt.ranged.attacks[1].basic_attack = true
+
+tt = RT("mod_hero_spider_tunneling_stun", "mod_stun")
+tt.modifier.duration = balance.heroes.hero_spider.tunneling.stun_duration
 
 tt = RT("controller_hero_spider_ultimate")
 b = balance.heroes.hero_spider.ultimate
@@ -19535,6 +19539,7 @@ AC(tt, "dps", "render")
 tt.modifier.duration = fts(2)
 tt.main_script.insert = scripts.mod_hero_spider_skill_instakill_melee.insert
 tt.main_script.update = scripts.mod_hero_spider_skill_instakill_melee.update
+tt.heal_factor = balance.heroes.hero_spider.instakill_melee.heal_factor
 tt.render.sprites[1] = CC("sprite")
 tt.render.sprites[1].prefix = "hero_spider_05_instakill"
 tt.render.sprites[1].name = "run"
@@ -19559,6 +19564,16 @@ tt.render.sprites[1].z = Z_EFFECTS
 tt.render.sprites[1].loop = true
 tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}, {tt.modifier.duration - fts(10), 255}, {tt.modifier.duration, 0}}
 --#endregion hero_spider
+
+tt = RT("mod_hero_spider_supreme_poison", "mod_hero_spider_melee_dot")
+b = balance.heroes.hero_spider.supreme_hunter
+tt.tween = nil
+tt.damage_min_config = b.dot_damage_min
+tt.damage_max_config = b.dot_damage_max
+tt.dps.damage_min = b.dot_damage_min[1]
+tt.dps.damage_max = b.dot_damage_max[1]
+tt.dps.damage_every = b.damage_every
+tt.modifier.duration = 1e9
 
 --#region hero_mecha
 tt = RT("ps_hero_mecha_smoke_1")

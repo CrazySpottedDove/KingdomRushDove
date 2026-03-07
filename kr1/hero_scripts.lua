@@ -36767,6 +36767,10 @@ function scripts.hero_spider.level_up(this, store, initial)
 		a.cooldown = s.cooldown[s.level]
 		a.damage_min = s.damage_min[s.level]
 		a.damage_max = s.damage_max[s.level]
+
+		local m = E:get_template(a.mod)
+		m.dps.damage_min = m.damage_min_config[s.level]
+		m.dps.damage_max = m.damage_max_config[s.level]
 	end)
 
 	upgrade_skill(this, "ultimate", function(this, s)
@@ -36938,6 +36942,13 @@ function scripts.hero_spider.update(this, store)
 								d.target_id = enemy.id
 
 								queue_damage(store, d)
+
+								if band(enemy.vis.bans, bor(F_MOD, F_STUN)) == 0 then
+									local m = E:create_entity("mod_hero_spider_tunneling_stun")
+									m.modifier.source_id = this.id
+									m.modifier.target_id = enemy.id
+									queue_insert(store, m)
+								end
 							end
 						end
 					end
@@ -37184,6 +37195,14 @@ function scripts.hero_spider.update(this, store)
 				this.health_bar.hidden = nil
 
 				queue_damage(store, SU.create_attack_damage(a, target.id, this))
+
+				if band(target.vis.bans, bor(F_MOD, F_POISON)) == 0 then
+					local mod = E:create_entity(a.mod)
+					mod.modifier.target_id = target.id
+					mod.modifier.source_id = this.id
+					queue_insert(store, mod)
+				end
+
 				U.y_animation_wait(this)
 
 				if this.nav_rally.new then
@@ -37321,6 +37340,11 @@ function scripts.mod_hero_spider_skill_instakill_melee.update(this, store, scrip
 
 	this._not_interrupted = true
 	this.pos = target.pos
+
+	local source = store.entities[this.modifier.source_id]
+	if source then
+		U.heal(source, source.health.hp_max * this.heal_factor)
+	end
 
 	U.y_animation_play(this, "run", nil, store.tick_ts, 1)
 	queue_remove(store, this)

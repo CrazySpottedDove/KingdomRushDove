@@ -942,7 +942,8 @@ function upgrades:bolts()
 		"bullet_tower_pandas_fire_lvl4",
 		"bullet_tower_pandas_air_lvl4",
 		"tower_arcane_wizard5_ray_disintegrate",
-		"hero_muyrn_bullet"
+		"hero_muyrn_bullet",
+		"bolt_hero_spider_basic_attack"
 	}
 
 	return table.append(other_bolts, self:mage_tower_bolts())
