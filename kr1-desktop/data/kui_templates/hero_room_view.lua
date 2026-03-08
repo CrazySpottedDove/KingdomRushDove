@@ -1013,6 +1013,21 @@ local hero_room_view = {
 					scale = hero_portraits_scale
 				},
 				{
+					id = "portrait_hero_dragon_sun",
+					hidden = true,
+					class = "KView",
+					children = {{
+						class = "KImageView",
+						image_name = "kr5_portrait_notxt_0019"
+					}, {
+						id = "name_img",
+						image_name = "hero_room_portraits_name_0000",
+						class = "KImageView"
+					}},
+					pos = hero_portraits_pos,
+					scale = hero_portraits_scale
+				},
+				{
 					id = "portrait_hero_name_label",
 					class = "HeroNameLabel",
 					pos = v(230, 335),

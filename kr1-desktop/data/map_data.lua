@@ -1145,6 +1145,22 @@ return {
 				thickness = 1 * rs,
 				glow_color = fc(136, 61, 42, 255)
 			}, {}}
+		},
+		hero_dragon_sun = {
+			shader_args = {{
+				margin = 0 * rs,
+				p1 = p11,
+				p2 = p12,
+				c1 = fc(0, 0, 0, 255),
+				c2 = fc(255, 137, 33, 255),
+				c3 = fc(176, 80, 22, 255)
+			}, {
+				thickness = 2.5 * rs,
+				outline_color = fc(127, 42, 11, 255)
+			}, {
+				thickness = 1 * rs,
+				glow_color = fc(127, 42, 11, 255)
+			}, {}}
 		}
 	},
 	hero_data = { -- 爵士
@@ -1820,6 +1836,16 @@ return {
 			starting_level = 1,
 			icon = 17,
 			stats = {6, 8, 6, 4}
+		},
+		{
+			from_kr = 5,
+			portrait = 19,
+			thumb = 19,
+			name = "hero_dragon_sun",
+			available_level = 116,
+			starting_level = 1,
+			icon = 19,
+			stats = {9, 0, 9, 5}
 		}
 	},
 	level_data = {

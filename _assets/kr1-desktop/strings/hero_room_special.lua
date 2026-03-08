@@ -3091,4 +3091,48 @@ d[1].damage_max = table.tail(blc.ranged_attack.damage_max)
 d[1].damage_type = blc.ranged_attack.damage_type
 map["终极炮击"] = str(cooldown_str(), "呼叫一架哥布林飞艇，对目标范围附近的敌人进行轰炸，每次攻击造成", damage_str(), "。")
 
+set_hero("hero_dragon_sun")
+blc = balance.hero_dragon_sun.worthy_foe
+set_skill(h.hero.skills.worthy_foe)
+get_cooldown()
+d[1].damage_min = table.tail(blc.damages_target.damage_min)
+d[1].damage_max = table.tail(blc.damages_target.damage_max)
+d[1].damage_type = blc.damages_target.damage_type
+map["耀阳审判"] = str(cooldown_str(), "奥利昂传送至视野中生命值最高的敌人，发动毁灭性的一击，造成", damage_str(), "。")
+
+blc = balance.hero_dragon_sun.solar_cleansing
+set_skill(h.hero.skills.solar_cleansing)
+get_cooldown()
+local cleansing_dur = table.tail(blc.duration)
+cycle_time = blc.heal_every
+amount = table.tail(blc.heal)
+map["日耀净化"] = str(cooldown_str(), "奥利昂召唤神圣之光，持续", cleansing_dur, "秒，每", cycle_time, "秒恢复自身与附近友军", amount, "点生命值。")
+
+blc = balance.hero_dragon_sun.overcharge
+set_skill(h.hero.skills.overcharge)
+d[1].damage_min = table.tail(blc.damage_min)
+d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_type = DAMAGE_TRUE
+map["烈阳过载"] = str("若持续", blc.cooldown_init[1], "秒未进行攻击，下一次攻击将优先攻击射程内最强大的敌人，并额外造成", damage_str(), "。")
+
+blc = balance.hero_dragon_sun.solar_stones
+set_skill(h.hero.skills.solar_stones)
+get_cooldown()
+local max_mines = table.tail(blc.max_mines)
+d[1].damage_min = table.tail(blc.damage_min)
+d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_type = blc.damage_type
+radius = blc.damage_radius
+map["日光宝石"] = str(cooldown_str(), "在路径上放置一颗金色宝石，与敌人接触时发生爆炸，在", radius, "范围内造成", damage_str(), "，最多同时存在", max_mines, "颗。")
+
+blc = balance.hero_dragon_sun.ultimate
+set_skill(h.hero.skills.ultimate)
+get_cooldown()
+d[1].damage_min = table.tail(blc.damage_min)
+d[1].damage_max = table.tail(blc.damage_max)
+d[1].damage_type = blc.damage_type
+cycle_time = blc.damage_every
+radius = blc.damage_radius
+map["日炎风暴"] = str(cooldown_str(), "召唤一道纯粹太阳能量的巨型光柱，沿路径前进，每", cycle_time, "秒对", radius, "范围内敌人造成", damage_str(), "。")
+
 return H

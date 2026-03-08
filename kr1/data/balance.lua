@@ -1675,6 +1675,109 @@ local heroes = {
 				}
 			}
 		}
+	},
+	hero_dragon_sun = {
+		dead_lifetime = 15,
+		speed = 190,
+		regen_cooldown = 1,
+		armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+		-- hp_max: FL原值 ×1.3 floor
+		hp_max = {273, 292, 312, 331, 351, 370, 390, 409, 435, 461},
+		basic_attack = {
+			max_range = 220,
+			xp_gain_factor = 1.4,
+			cooldown = 2,
+			min_range = 0,
+			speed = 100,
+			damage_radius = 40,
+			damage_every = 0.25,
+			damage_type = DAMAGE_TRUE,
+			damage_max = {7, 9, 11, 13, 15, 17, 19, 21, 23, 25},
+			damage_min = {5, 7, 9, 10, 12, 14, 16, 17, 19, 22},
+			flier = {
+				xp_gain_factor = 1.4,
+				damage_type = DAMAGE_TRUE,
+				damage_max = {20, 25, 33, 40, 45, 53, 58, 65, 75, 85},
+				damage_min = {13, 18, 23, 25, 30, 35, 40, 43, 48, 55}
+			},
+			burn_dot = {
+				damage_every = 0.3,
+				duration = 2,
+				damage_type = DAMAGE_TRUE,
+				damage_max = {2, 2, 3, 3, 4, 4, 5, 5, 6, 7},
+				damage_min = {1, 2, 2, 3, 3, 4, 4, 5, 5, 5}
+			}
+		},
+		worthy_foe = {
+			enemy_minimum_hp = 500,
+			cooldown = {40, 40, 40},
+			damages_target = {
+				damage_max = {300, 600, 900},
+				damage_min = {200, 400, 500},
+				damage_type = DAMAGE_TRUE
+			},
+			damages_radius = {
+				radius = 70,
+				damage_max = {30, 40, 50},
+				damage_min = {20, 30, 40},
+				damage_type = DAMAGE_TRUE
+			},
+			-- xp_gain: FL原值 ×8
+			xp_gain = {200, 400, 600}
+		},
+		solar_cleansing = {
+			radius = 100,
+			heal_every = 0.25,
+			trigger_requirements = {
+				hero_health_threshold = 0.5,
+				allies_health_threshold = 0.4,
+				ally_count_needed = 3,
+				cooldown = {35, 35, 35}
+			},
+			duration = {6, 6, 6},
+			heal = {4, 8, 12},
+			-- xp_gain: FL原值 ×8
+			xp_gain = {200, 400, 600}
+		},
+		overcharge = {
+			cooldown = {6, 6, 6},
+			cooldown_init = {15, 15, 15},
+			damage_max = {100, 200, 300},
+			damage_min = {75, 150, 225},
+			flier = {
+				damage_max = {200, 350, 500},
+				damage_min = {150, 200, 400}
+			}
+		},
+		solar_stones = {
+			max_range = 105,
+			min_dist_between_mines = 30,
+			mines_duration = 90,
+			min_range = 60,
+			time_to_activate = 3,
+			damage_radius = 50,
+			no_targets_cooldown = 6,
+			cooldown = {10, 10, 10},
+			damage_max = {70, 120, 190},
+			damage_min = {50, 90, 130},
+			damage_type = DAMAGE_TRUE,
+			-- xp_gain: FL原值 ×8
+			xp_gain = {200, 400, 600},
+			max_mines = {3, 4, 5}
+		},
+		ultimate = {
+			damage_every = 0.1,
+			initial_damage_factor = 1.2,
+			final_damage_factor = 0.8,
+			speed = 70,
+			damage_radius = 80,
+			duration = 3,
+			-- cooldown: FL原值 ×0.8 floor
+			cooldown = {62, 62, 62, 62},
+			damage_max = {9, 14, 24, 34},
+			damage_min = {7, 10, 15, 23},
+			damage_type = DAMAGE_TRUE
+		}
 	}
 }
 local enemies = {

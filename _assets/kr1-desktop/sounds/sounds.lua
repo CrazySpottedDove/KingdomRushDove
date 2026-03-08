@@ -5846,6 +5846,96 @@ return {
 		loop = false,
 		source_group = "TAUNTS"
 	},
+	HeroDragonSunTaunt = {
+		loop = false,
+		gain = 0.8,
+		ignore = 1,
+		mode = "sequence",
+		source_group = "TAUNTS",
+		files = {"kr_voice_aurion_01_b.ogg", "kr_voice_aurion_03_a.ogg", "kr_voice_aurion_04_a.ogg"}
+	},
+	HeroDragonSunTauntSelect = {
+		loop = false,
+		mode = "sequence",
+		gain = 0.8,
+		source_group = "TAUNTS",
+		files = {"kr_voice_aurion_01_b.ogg"}
+	},
+	HeroDragonSunWorthyFoe = {
+		source_group = "SFX",
+		gain = 0.6,
+		loop = false,
+		delay = 0.5,
+		files = {"kra_sfx_dragons_hero_worthyfoe_v1.ogg"}
+	},
+	HeroDragonSunBreathAttack = {
+		loop = false,
+		mode = "random",
+		gain = 0.6,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_hero_attack_var1_v1.ogg", "kra_sfx_dragons_hero_attack_var2_v1.ogg", "kra_sfx_dragons_hero_attack_var3_v1.ogg"}
+	},
+	HeroDragonSunCleansing = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_hero_cleansing_v1.ogg"}
+	},
+	HeroDragonSunDeath = {
+		loop = false,
+		mode = "concurrent",
+		gain = 0.75,
+		source_group = "TAUNTS",
+		files = {"kra_sfx_dragons_hero_death_v1.ogg", "kr_voice_aurion_05_a.ogg"}
+	},
+	HeroDragonSunOvercharge = {
+		loop = false,
+		gain = 0.75,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_hero_overcharge_v1.ogg"}
+	},
+	HeroDragonSunStonesArmed = {
+		loop = false,
+		gain = 0.65,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_hero_stones_armed_v1.ogg"}
+	},
+	HeroDragonSunStonesDrop = {
+		loop = false,
+		gain = 0.6,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_hero_stones_drop_v1.ogg"}
+	},
+	HeroDragonSunStonesExplosion = {
+		loop = false,
+		gain = 0.6,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_hero_stones_explosion_v1.ogg"}
+	},
+	HeroDragonSunStonesShot = {
+		loop = false,
+		gain = 0.6,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_hero_stones_shot_v1.ogg"}
+	},
+	HeroDragonSunUltimateBegin = {
+		loop = false,
+		gain = 0.6,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_hero_ultimate_op2_v_martin_begin.ogg"}
+	},
+	HeroDragonSunUltimateLoop = {
+		loop = true,
+		gain = 0.6,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_hero_ultimate_op2_v_martin_loop.ogg"}
+	},
+	HeroDragonSunUltimateEnd = {
+		loop = false,
+		gain = 0.6,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_hero_ultimate_op2_v_martin_end.ogg"}
+	},
 	HeroMinotaurBloodAxe = {
 		files = {"KRF_sfx_minotauro_ataquefuerte.ogg"},
 		gain = 1,

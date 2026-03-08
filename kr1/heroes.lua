@@ -18507,7 +18507,7 @@ tt.render.sprites[1].angles.gattling_loop = {"shootskillloopback", "shootskilllo
 tt.render.sprites[1].angles.gattling_out = {"shootskillendback", "shootskillend"}
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
-tt.render.sprites[2].name = "decal_flying_hero_shadow"
+tt.render.sprites[2].name = "decal_flying_shadow"
 tt.render.sprites[2].offset = v(0, 0)
 tt.render.sprites[2].z = Z_DECALS + 1
 tt.soldier.melee_slot_offset = v(0, 0)
@@ -20060,3 +20060,555 @@ tt.entity = "zeppelin_hero_mecha"
 tt.main_script.update = scripts.hero_mecha_ultimate.update
 tt.sound = "HeroMechaDeathFromAboveCast"
 --#endregion hero_mecha
+
+--#region hero_dragon_sun
+tt = RT("ps_bullet_hero_dragon_sun_solar_stone")
+AC(tt, "pos", "particle_system")
+tt.particle_system.name = "hero_aurion_projectile_trail_run"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 10
+tt.particle_system.track_rotation = true
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+
+tt = RT("fx_hero_dragon_sun_solar_stones_mine_spawn", "fx")
+tt.render.sprites[1].name = "hero_aurion_projectile_smoke_run"
+tt.render.sprites[1].anchor = v(0.4453125, 0.5964912280701754)
+tt.render.sprites[1].alpha = 128
+
+tt = RT("fx_hero_dragon_sun_solar_stones_mine_explosion", "fx")
+tt.render.sprites[1].name = "hero_aurion_explosion_skil_solar_stone__in"
+
+tt = RT("fx_hero_dragon_sun_overcharge_mask", "fx")
+tt.render.sprites[1].name = "hero_aurion_mask_overcharge_in"
+
+tt = RT("fx_hero_dragon_sun_ultimate_in", "decal_scripted")
+tt.main_script.update = scripts.multi_sprite_fx.update
+tt.render.sprites[1].name = "hero_aurion_ulti_in_run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_EFFECTS + 1
+tt.render.sprites[1].delay_start = fts(13)
+tt.render.sprites[1].hidden = true
+
+tt = RT("fx_hero_dragon_sun_basic_ray_back_fire", "fx")
+tt.render.sprites[1].name = "hero_aurion_fire_breath_hit_run"
+tt.render.sprites[1].scale = vv(1)
+
+tt = RT("fx_hero_dragon_sun_ultimate_back_fire", "decal_scripted")
+tt.main_script.update = scripts.multi_sprite_fx.update
+tt.render.sprites[1].name = "hero_aurion_fire_breath_hit_run"
+tt.render.sprites[1].scale = vv(2)
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].delay_start = fts(0)
+tt.render.sprites[1].hidden = true
+
+tt = RT("fx_hero_dragon_sun_teleport_decal_target", "fx")
+tt.render.sprites[1].name = "hero_aurion_decal_target_teleport_full"
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].anchor = vv(0.5)
+
+tt = RT("fx_hero_dragon_sun_teleport_explotion", "fx")
+tt.render.sprites[1].name = "hero_aurion_explosion_run"
+tt.render.sprites[1].anchor = vv(0.5)
+tt.render.sprites[1].scale = vv(2)
+tt.render.sprites[1].z = Z_EFFECTS + 1
+
+tt = RT("fx_hero_dragon_sun_teleport_explotion_decal", "decal_tween")
+tt.render.sprites[1].name = "hero_aurion_decal_teleport_in"
+tt.render.sprites[1].anchor = vv(0.5)
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].scale = vv(2)
+tt.tween.props[1].keys = {{0, 255}, {2, 255}, {3, 0}}
+tt.tween.remove = true
+tt.tween.disabled = false
+
+tt = RT("fx_hero_dragon_sun_teleport_explotion_fire", "fx")
+tt.render.sprites[1].name = "hero_aurion_fire_breath_hit_run"
+tt.render.sprites[1].scale = vv(2)
+
+tt = RT("fx_hero_dragon_sun_heal_particle", "fx")
+tt.render.sprites[1].name = "hero_aurion_helth_run"
+
+tt = RT("decal_bullet_hero_dragon_sun_breath_ray", "decal_tween")
+tt.tween.props[1].keys = {{0, 255}, {0.3, 255}, {1.3, 0}}
+tt.render.sprites[1].name = "hero_aurion_fire_breath_decal_run"
+tt.render.sprites[1].animated = true
+
+tt = RT("decal_bullet_hero_dragon_sun_ultimate_base", "fx")
+tt.render.sprites[1].name = "hero_aurion_decal_ulti_base_in"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+
+tt = RT("decal_bullet_hero_dragon_sun_ultimate", "decal_tween")
+tt.tween.props[1].keys = {{0, 155}, {2, 155}, {3.5, 0}}
+tt.render.sprites[1].name = "hero_aurion_decal_ulti_1"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+
+tt = RT("decal_bullet_hero_dragon_sun_ultimate_2", "decal_tween")
+tt.tween.props[1].keys = {{0, 255}, {1.25, 255}, {2.25, 0}}
+tt.render.sprites[1].name = "hero_aurion_decal_teleport_in"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].scale = vv(2)
+tt.render.sprites[1].z = Z_DECALS + 1
+
+-- bullets
+tt = RT("bullet_hero_dragon_sun_breath_ray", "bullet")
+AC(tt, "nav_path", "motion")
+b = balance.heroes.hero_dragon_sun.basic_attack
+tt.render.sprites[1].z = Z_FLYING_HEROES - 1
+tt.render.sprites[1].prefix = "hero_aurion_ray"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].loop = false
+tt.end_fire_offset_per_angle = -0.25
+tt.image_width = 137.5
+tt.hit_delay = fts(4)
+tt.ray_duration = fts(19)
+tt.bullet.damage_type = b.damage_type
+tt.bullet.damage_max = b.damage_max
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_radius = b.damage_radius
+tt.bullet.xp_gain_factor = b.xp_gain_factor
+tt.damage_every = b.damage_every
+tt.bullet.mod = {"mod_hero_dragon_sun_bassic_attack_burn_dps"}
+tt.motion.max_speed = b.speed
+tt.bullet.damage_flags = F_AREA
+tt.bullet.damage_bans = 0
+tt.main_script.update = scripts.bullet_hero_dragon_sun_breath_ray.update
+tt.decal = "decal_bullet_hero_dragon_sun_breath_ray"
+tt.fire_fx = "fx_hero_dragon_sun_basic_ray_back_fire"
+tt.sound_events.insert = "HeroDragonSunBreathAttack"
+
+tt = RT("bullet_hero_dragon_sun_breath_ray_overcharged", "bullet_hero_dragon_sun_breath_ray")
+tt.render.sprites[1].prefix = "hero_aurion_ray_2"
+
+tt = RT("bullet_hero_dragon_sun_breath_flier", "bullet")
+b = balance.heroes.hero_dragon_sun.basic_attack.flier
+tt.render.sprites[1].z = Z_FLYING_HEROES - 1
+tt.render.sprites[1].prefix = "hero_aurion_ray"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].loop = false
+tt.image_width = 125
+tt.hit_delay = fts(4)
+tt.bullet.hit_time = fts(5)
+tt.ray_duration = fts(19)
+tt.track_target = true
+tt.bullet.damage_type = b.damage_type
+tt.bullet.damage_max = b.damage_max
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_radius = b.damage_radius
+tt.bullet.xp_gain_factor = b.xp_gain_factor
+tt.bullet.mod = "mod_hero_dragon_sun_bassic_attack_burn_only_render"
+tt.main_script.update = scripts.bullet_hero_dragon_sun_breath_flier.update
+tt.sound_events.insert = "HeroDragonSunBreathAttack"
+
+tt = RT("bullet_hero_dragon_sun_breath_flier_overcharged", "bullet_hero_dragon_sun_breath_flier")
+tt.render.sprites[1].color = {255, 200, 200, 255}
+tt.render.sprites[1].scale = v(1, 1.5)
+tt.bullet.mod = "mod_hero_dragon_sun_bassic_attack_burn_only_render_overcharged"
+
+tt = RT("bullet_hero_dragon_sun_ultimate", "bullet")
+AC(tt, "nav_path", "motion", "tween")
+b = balance.heroes.hero_dragon_sun.ultimate
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -30
+tt.render.sprites[1].prefix = "hero_aurion_ulti"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].scale = v(2, 3)
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "hero_aurion_fire_base_ulti_run"
+tt.render.sprites[2].ignore_start = true
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].hidden = true
+tt.render.sprites[2].loop = true
+tt.render.sprites[2].scale = vv(2)
+tt.render.sprites[2].offset = v(0, -30)
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[2].sort_y_offset = -30
+tt.image_width = 146.25
+tt.hit_delay = fts(1)
+tt.ray_duration = b.duration
+tt.initial_damage_factor = b.initial_damage_factor
+tt.final_damage_factor = b.final_damage_factor
+tt.nav_path.dir = -1
+tt.bullet.damage_type = b.damage_type
+tt.bullet.damage_max = nil
+tt.bullet.damage_min = nil
+tt.bullet.damage_radius = b.damage_radius
+tt.damage_every = b.damage_every
+tt.motion.max_speed = b.speed
+tt.bullet.damage_flags = F_AREA
+tt.bullet.damage_bans = 0
+tt.main_script.update = scripts.bullet_hero_dragon_sun_ultimate.update
+tt.fx_in = "fx_hero_dragon_sun_ultimate_in"
+tt.decal_in = "decal_bullet_hero_dragon_sun_ultimate_base"
+tt.decal = "decal_bullet_hero_dragon_sun_ultimate"
+tt.decal_2 = "decal_bullet_hero_dragon_sun_ultimate_2"
+tt.fire_fx = "fx_hero_dragon_sun_ultimate_back_fire"
+tt.tween.disabled = true
+tt.tween.remove = false
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {0.25, 0}}
+tt.tween.props[1].sprite_id = 2
+tt.sound_events.insert = "HeroDragonSunUltimateBegin"
+tt.sound_loop = "HeroDragonSunUltimateLoop"
+tt.sound_end = "HeroDragonSunUltimateEnd"
+
+-- solar stone bomb: bombKR5→bomb, manually add damage_decay_random = false
+tt = RT("bullet_hero_dragon_sun_solar_stone", "bomb")
+b = balance.heroes.hero_dragon_sun.solar_stones
+tt.bullet.damage_decay_random = false
+tt.bullet.flight_time = fts(25)
+tt.bullet.align_with_trajectory = true
+tt.bullet.ignore_hit_offset = true
+tt.bullet.rotation_speed = nil
+tt.bullet.hit_payload = "aura_bullet_hero_dragon_sun_solar_stones_mine"
+tt.bullet.hit_decal = nil
+tt.bullet.hit_fx = nil
+tt.bullet.pop_chance = 0
+tt.main_script.insert = scripts.bullet_hero_dragon_sun_solar_stone.insert
+tt.main_script.update = scripts.bullet_hero_dragon_sun_solar_stone.update
+tt.sound_events.insert = "HeroDragonSunStonesShot"
+tt.sound_events.hit = nil
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].name = "hero_aurion_projectil_skil_solar_stone_in"
+tt.particles_name = "ps_bullet_hero_dragon_sun_solar_stone"
+
+-- auras
+tt = RT("aura_hero_dragon_sun_healing", "aura")
+b = balance.heroes.hero_dragon_sun.solar_cleansing
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_hero_dragon_sun_healing.update
+tt.aura.duration = nil
+tt.aura.vis_flags = bor(tt.aura.vis_flags, F_MOD, F_AREA)
+tt.aura.vis_bans = bor(tt.aura.vis_bans, F_ENEMY)
+tt.aura.mod = "mod_hero_dragon_sun_heal"
+tt.aura.radius = b.radius
+tt.aura.cycle_time = b.heal_every / 4
+tt.heal_fx = "fx_hero_dragon_sun_heal_particle"
+
+tt = RT("aura_bullet_hero_dragon_sun_solar_stones_mine", "aura")
+b = balance.heroes.hero_dragon_sun.solar_stones
+AC(tt, "render", "tween")
+tt.aura.radius = b.damage_radius
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans_trigger = 0
+tt.aura.vis_bans_damage = 0
+tt.aura.cycle_time = fts(5)
+tt.aura.duration = b.mines_duration
+tt.render.sprites[1].prefix = "hero_aurion_decal_skil_solar_stone"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].loop = false
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "hero_aurion_object_skil_solar_stone_activate_loop"
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[2].loop = true
+tt.render.sprites[2].hidden = true
+tt.main_script.insert = scripts.aura_bullet_hero_dragon_sun_solar_stones_mine.insert
+tt.main_script.update = scripts.aura_bullet_hero_dragon_sun_solar_stones_mine.update
+tt.spawn_fx = "fx_hero_dragon_sun_solar_stones_mine_spawn"
+tt.explosion_fx = "fx_hero_dragon_sun_solar_stones_mine_explosion"
+tt.explosion_decal = "decal_bullet_hero_dragon_sun_breath_ray"
+tt.sound_explode = "HeroMechaMineDropExplosion"
+tt.damage_type = b.damage_type
+tt.time_to_activate = b.time_to_activate
+tt.tween.props[1] = E:clone_c("tween_prop")
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {0.5, 0}}
+tt.tween.props[1].sprite_id = 2
+tt.tween.disabled = true
+tt.tween.remove = true
+tt.sound_events.insert = "HeroDragonSunStonesDrop"
+tt.sound_armed = "HeroDragonSunStonesArmed"
+tt.sound_explotion = "HeroDragonSunStonesExplosion"
+
+-- modifiers
+tt = RT("mod_hero_dragon_sun_bassic_attack_burn_dps", "modifier")
+b = balance.heroes.hero_dragon_sun.basic_attack.burn_dot
+AC(tt, "dps", "render")
+tt.modifier.duration = b.duration
+tt.dps.damage_min = nil
+tt.dps.damage_max = nil
+tt.dps.damage_type = b.damage_type
+tt.dps.damage_every = b.damage_every
+tt.render.sprites[1].size_names = {"small", "medium", "large"}
+tt.render.sprites[1].prefix = "fire"
+tt.render.sprites[1].name = "small"
+tt.render.sprites[1].draw_order = 2
+tt.render.sprites[1].loop = true
+tt.modifier.use_mod_offset = true
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_hero_dragon_sun_bassic_attack_burn_dps.update
+
+tt = RT("mod_hero_dragon_sun_bassic_attack_burn_only_render", "mod_hero_dragon_sun_bassic_attack_burn_dps")
+tt.modifier.duration = 0.8
+tt.dps.damage_min = 0
+tt.dps.damage_max = 0
+tt.dps.damage_type = DAMAGE_NONE
+tt.dps.damage_every = 1e+99
+tt.modifier.use_mod_offset = true
+tt.render.sprites[1].offset = v(0, -5)
+
+tt = RT("mod_hero_dragon_sun_bassic_attack_burn_only_render_overcharged", "mod_hero_dragon_sun_bassic_attack_burn_only_render")
+tt.render.sprites[1].prefix = "hero_aurion_fire_modifier_2"
+
+tt = RT("mod_hero_dragon_sun_heal", "modifier")
+AC(tt, "hps", "render")
+b = balance.heroes.hero_dragon_sun.solar_cleansing
+tt.modifier.resets_same = true
+tt.hps.heal_min = nil
+tt.hps.heal_max = nil
+tt.hps.heal_every = b.heal_every
+tt.modifier.duration = 1
+tt.main_script.insert = scripts.mod_hero_dragon_sun_heal.insert
+tt.main_script.update = scripts.mod_hps.update
+tt.render.sprites[1].name = "hero_aurion_healing_run"
+tt.render.sprites[1].sort_y_offset = -3
+tt.modifier.use_mod_offset = true
+
+tt = RT("mod_hero_dragon_stun_worthy_foe_stun", "mod_stun")
+tt.modifier.duration = 1.5
+tt.render.sprites[1].hidden = true
+
+-- ultimate controller
+tt = RT("hero_dragon_sun_ultimate")
+b = balance.heroes.hero_dragon_sun.ultimate
+AC(tt, "pos", "main_script", "sound_events")
+tt.cooldown = b.cooldown
+tt.main_script.update = scripts.hero_dragon_sun_ultimate.update
+tt.spawn_bullet = "bullet_hero_dragon_sun_ultimate"
+
+-- hero main template
+tt = RT("hero_dragon_sun", "hero")
+b = balance.heroes.hero_dragon_sun
+AC(tt, "ranged", "timed_attacks", "tween", "nav_grid")
+tt.hero.level_stats.armor = b.armor
+tt.hero.level_stats.hp_max = b.hp_max
+tt.hero.level_stats.ranged_damage_min = b.basic_attack.damage_min
+tt.hero.level_stats.ranged_damage_max = b.basic_attack.damage_max
+tt.hero.level_stats.ranged_damage_min_flier = b.basic_attack.flier.damage_min
+tt.hero.level_stats.ranged_damage_max_flier = b.basic_attack.flier.damage_max
+tt.hero.level_stats.basic_burn_dot_damage_max = b.basic_attack.burn_dot.damage_min
+tt.hero.level_stats.basic_burn_dot_damage_min = b.basic_attack.burn_dot.damage_max
+
+tt.hero.skills.worthy_foe = E:clone_c("hero_skill")
+tt.hero.skills.worthy_foe.cooldown = b.worthy_foe.cooldown
+tt.hero.skills.worthy_foe.target_damage_min = b.worthy_foe.damages_target.damage_min
+tt.hero.skills.worthy_foe.target_damage_max = b.worthy_foe.damages_target.damage_max
+tt.hero.skills.worthy_foe.area_damage_min = b.worthy_foe.damages_radius.damage_min
+tt.hero.skills.worthy_foe.area_damage_max = b.worthy_foe.damages_radius.damage_max
+tt.hero.skills.worthy_foe.xp_gain = b.worthy_foe.xp_gain
+tt.hero.skills.worthy_foe.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.solar_cleansing = E:clone_c("hero_skill")
+tt.hero.skills.solar_cleansing.cooldown = b.solar_cleansing.trigger_requirements.cooldown
+tt.hero.skills.solar_cleansing.duration = b.solar_cleansing.duration
+tt.hero.skills.solar_cleansing.heal = b.solar_cleansing.heal
+tt.hero.skills.solar_cleansing.xp_gain = b.solar_cleansing.xp_gain
+tt.hero.skills.solar_cleansing.xp_level_steps = {
+	[3] = 1,
+	[6] = 2,
+	[9] = 3
+}
+
+tt.hero.skills.overcharge = E:clone_c("hero_skill")
+tt.hero.skills.overcharge.cooldown = b.overcharge.cooldown
+tt.hero.skills.overcharge.cooldown_init = b.overcharge.cooldown_init
+tt.hero.skills.overcharge.damage_min = b.overcharge.damage_min
+tt.hero.skills.overcharge.damage_max = b.overcharge.damage_max
+tt.hero.skills.overcharge.damage_min_flier = b.overcharge.flier.damage_min
+tt.hero.skills.overcharge.damage_max_flier = b.overcharge.flier.damage_max
+tt.hero.skills.overcharge.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3
+}
+
+tt.hero.skills.solar_stones = E:clone_c("hero_skill")
+tt.hero.skills.solar_stones.cooldown = b.solar_stones.cooldown
+tt.hero.skills.solar_stones.damage_min = b.solar_stones.damage_min
+tt.hero.skills.solar_stones.damage_max = b.solar_stones.damage_max
+tt.hero.skills.solar_stones.max_mines = b.solar_stones.max_mines
+tt.hero.skills.solar_stones.max_range = b.solar_stones.max_range
+tt.hero.skills.solar_stones.xp_gain = b.solar_stones.xp_gain
+tt.hero.skills.solar_stones.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+
+tt.hero.skills.ultimate = E:clone_c("hero_skill")
+tt.hero.skills.ultimate.cooldown = b.ultimate.cooldown
+tt.hero.skills.ultimate.duration = b.ultimate.duration
+tt.hero.skills.ultimate.damage_min = b.ultimate.damage_min
+tt.hero.skills.ultimate.damage_max = b.ultimate.damage_max
+tt.hero.skills.ultimate.controller_name = "hero_dragon_sun_ultimate"
+tt.hero.skills.ultimate.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
+}
+tt.flight_height = 80
+tt.health.dead_lifetime = 30
+tt.health_bar.draw_order = -1
+tt.health_bar.offset = v(0, 120)
+tt.health_bar.sort_y_offset = -121
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
+tt.health_bar.z = Z_FLYING_HEROES
+tt.hero.fn_level_up = scripts.hero_dragon_sun.level_up
+tt.idle_flip.cooldown = 10
+tt.info.fn = scripts.hero_basic.get_info
+tt.info.hero_portrait = "kr5_hero_portraits_0019"
+tt.info.i18n_key = "HERO_DRAGON_SUN"
+tt.info.portrait = "kr5_info_portraits_heroes_0019"
+tt.info.ultimate_icon = "0019"
+tt.main_script.insert = scripts.hero_dragon_sun.insert
+tt.main_script.update = scripts.hero_dragon_sun.update
+tt.motion.max_speed = b.speed
+tt.nav_rally.requires_node_nearby = false
+tt.nav_grid.ignore_waypoints = true
+tt.all_except_flying_nowalk = bor(TERRAIN_NONE, TERRAIN_LAND, TERRAIN_WATER, TERRAIN_CLIFF, TERRAIN_NOWALK, TERRAIN_SHALLOW, TERRAIN_FAERIE, TERRAIN_ICE)
+tt.nav_grid.valid_terrains = tt.all_except_flying_nowalk
+tt.nav_grid.valid_terrains_dest = tt.all_except_flying_nowalk
+tt.drag_line_origin_offset = v(0, tt.flight_height)
+tt.regen.cooldown = 1
+tt.render.sprites[1].offset.y = tt.flight_height
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].prefix = "hero_aurion_dragon"
+tt.render.sprites[1].name = "respawn"
+tt.render.sprites[1].angles.walk = {"walk"}
+tt.render.sprites[1].z = Z_FLYING_HEROES
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "decal_flying_shadow"
+tt.render.sprites[2].offset = v(0, 0)
+tt.render.sprites[2].z = Z_DECALS + 1
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].animated = true
+tt.render.sprites[3].prefix = "hero_aurion_sun_skill_overcharge"
+tt.render.sprites[3].name = "respawn"
+tt.render.sprites[3].offset = tt.render.sprites[1].offset
+tt.render.sprites[3].z = Z_FLYING_HEROES
+tt.render.sprites[3].draw_order = 2
+tt.render.sprites[3].alpha = 0
+tt.render.sid_shadow = 2
+tt.soldier.melee_slot_offset = v(0, 0)
+tt.sound_events.change_rally_point = "HeroDragonSunTaunt"
+tt.sound_events.death = "HeroDragonSunDeath"
+tt.sound_events.respawn = "HeroDragonSunTaunt"
+tt.sound_events.hero_room_select = "HeroDragonSunTauntSelect"
+tt.ui.click_rect = r(-37, tt.flight_height - 40, 90, 85)
+tt.unit.hit_offset = v(0, tt.flight_height)
+tt.unit.mod_offset = v(0, tt.flight_height)
+tt.unit.death_animation = "death"
+tt.unit.hide_after_death = true
+tt.hero.tombstone_decal = nil
+tt.hero.respawn_animation = "respawn"
+tt.vis.bans = bor(tt.vis.bans, F_EAT, F_NET, F_POISON)
+tt.vis.flags = bor(tt.vis.flags, F_FLYING)
+tt.ranged.attacks[1] = E:clone_c("bullet_attack")
+tt.ranged.attacks[1].cooldown = 1
+tt.ranged.attacks[1].animation = "radiant_wave"
+tt.ranged.attacks[1].max_range = b.basic_attack.max_range
+tt.ranged.attacks[1].damage_radius = b.basic_attack.damage_radius
+tt.ranged.attacks[1].shoot_time = fts(26)
+tt.ranged.attacks[1].bullet = "bullet_hero_dragon_sun_breath_ray"
+tt.ranged.attacks[1].bullet_start_offset = {v(33, tt.flight_height - 14), v(33, tt.flight_height - 14)}
+tt.ranged.attacks[1].bullet_flier = "bullet_hero_dragon_sun_breath_flier"
+tt.ranged.attacks[1].sync_animation = true
+tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
+tt.ranged.attacks[1].vis_flags = bor(F_RANGED, F_AREA)
+tt.ranged.attacks[1].basic_attack = true
+tt.ranged.attacks[1].max_angle = 140
+tt.ranged.attacks[1].max_angle_fliers = 140
+tt.tween.disabled = false
+tt.tween.remove = false
+tt.tween.props[1].sprite_id = 2
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
+tt.tween.props[1].disabled = true
+tt.tween.props[1].ignore_reverse = true
+tt.tween.props[2] = E:clone_c("tween_prop")
+tt.tween.props[2].sprite_id = 3
+tt.tween.props[2].name = "alpha"
+tt.tween.props[2].keys = {{0, 0}, {0.5, 255}}
+tt.tween.props[2].disabled = true
+tt.tween.props[2].loop = false
+tt.timed_attacks.sid_healing_aura = 1
+tt.timed_attacks.list[tt.timed_attacks.sid_healing_aura] = E:clone_c("custom_attack")
+tt.timed_attacks.list[tt.timed_attacks.sid_healing_aura].cooldown = nil
+tt.timed_attacks.list[tt.timed_attacks.sid_healing_aura].disabled = true
+tt.timed_attacks.list[tt.timed_attacks.sid_healing_aura].animation = "solar_cleansing"
+tt.timed_attacks.list[tt.timed_attacks.sid_healing_aura].cast_time = fts(20)
+tt.timed_attacks.list[tt.timed_attacks.sid_healing_aura].aura = "aura_hero_dragon_sun_healing"
+tt.timed_attacks.list[tt.timed_attacks.sid_healing_aura].hero_health_threshold = b.solar_cleansing.trigger_requirements.hero_health_threshold
+tt.timed_attacks.list[tt.timed_attacks.sid_healing_aura].allies_health_threshold = b.solar_cleansing.trigger_requirements.allies_health_threshold
+tt.timed_attacks.list[tt.timed_attacks.sid_healing_aura].ally_count_needed = b.solar_cleansing.trigger_requirements.ally_count_needed
+tt.timed_attacks.list[tt.timed_attacks.sid_healing_aura].cached_radius = b.solar_cleansing.radius
+tt.timed_attacks.list[tt.timed_attacks.sid_healing_aura].cast_sound = "HeroDragonSunCleansing"
+tt.timed_attacks.sid_overcharge = 2
+tt.timed_attacks.list[tt.timed_attacks.sid_overcharge] = E:clone_c("custom_attack")
+tt.timed_attacks.list[tt.timed_attacks.sid_overcharge].cooldown = nil
+tt.timed_attacks.list[tt.timed_attacks.sid_overcharge].disabled = true
+tt.timed_attacks.list[tt.timed_attacks.sid_overcharge].bullet = "bullet_hero_dragon_sun_breath_ray_overcharged"
+tt.timed_attacks.list[tt.timed_attacks.sid_overcharge].bullet_flier = "bullet_hero_dragon_sun_breath_flier_overcharged"
+tt.timed_attacks.list[tt.timed_attacks.sid_overcharge].fx_mask = "fx_hero_dragon_sun_overcharge_mask"
+tt.timed_attacks.list[tt.timed_attacks.sid_overcharge].particles_back = nil
+tt.timed_attacks.list[tt.timed_attacks.sid_overcharge].shadow = nil
+tt.timed_attacks.list[tt.timed_attacks.sid_overcharge].cast_sound = "HeroDragonSunOvercharge"
+tt.timed_attacks.sid_worthy_foe = 3
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe] = E:clone_c("custom_attack")
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].cooldown = nil
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].disabled = true
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].enemy_minimum_hp = b.worthy_foe.enemy_minimum_hp
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].target_damage_min = nil
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].target_damage_max = nil
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].target_damage_type = b.worthy_foe.damages_target.damage_type
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].area_damage_min = nil
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].area_damage_max = nil
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].area_damage_type = b.worthy_foe.damages_radius.damage_type
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].area_damage_radius = b.worthy_foe.damages_radius.radius
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].animations = {"worthy_foe_in", "worthy_foe_out", "worthy_foe_in", "worthy_foe_out_2"}
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].vis_flags = bor(F_RANGED)
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].vis_bans = bor(F_FLYING, F_BOSS)
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].node_margin = 10
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].max_range = 9999
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].min_range = 0
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].decal_target = "fx_hero_dragon_sun_teleport_decal_target"
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].explotion_fx = "fx_hero_dragon_sun_teleport_explotion"
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].explotion_fire = "fx_hero_dragon_sun_teleport_explotion_fire"
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].explotion_decal = "fx_hero_dragon_sun_teleport_explotion_decal"
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].stun_mod = "mod_hero_dragon_stun_worthy_foe_stun"
+tt.timed_attacks.list[tt.timed_attacks.sid_worthy_foe].cast_sound = "HeroDragonSunWorthyFoe"
+tt.timed_attacks.sid_solar_stones = 4
+tt.timed_attacks.list[tt.timed_attacks.sid_solar_stones] = E:clone_c("custom_attack")
+tt.timed_attacks.list[tt.timed_attacks.sid_solar_stones].animation = "skill_solar_stone"
+tt.timed_attacks.list[tt.timed_attacks.sid_solar_stones].cast_time = fts(26)
+tt.timed_attacks.list[tt.timed_attacks.sid_solar_stones].cooldown = nil
+tt.timed_attacks.list[tt.timed_attacks.sid_solar_stones].disabled = true
+tt.timed_attacks.list[tt.timed_attacks.sid_solar_stones].bullet = "bullet_hero_dragon_sun_solar_stone"
+tt.timed_attacks.list[tt.timed_attacks.sid_solar_stones].bullet_start_offset = {v(40, tt.flight_height + 50)}
+tt.timed_attacks.list[tt.timed_attacks.sid_solar_stones].max_mines = nil
+tt.timed_attacks.list[tt.timed_attacks.sid_solar_stones].min_range = b.solar_stones.min_range
+tt.timed_attacks.list[tt.timed_attacks.sid_solar_stones].max_range = b.solar_stones.max_range
+tt.timed_attacks.list[tt.timed_attacks.sid_solar_stones].min_dist_between_mines = b.solar_stones.min_dist_between_mines
+tt.timed_attacks.list[tt.timed_attacks.sid_solar_stones].min_distance_from_border = 100
+tt.timed_attacks.list[tt.timed_attacks.sid_solar_stones].no_targets_cooldown = b.solar_stones.no_targets_cooldown
+-- ultimate controller reference stored in hero skills
+tt.ultimate = {
+	ts = 0,
+	cooldown = b.ultimate.cooldown[1]
+}
+--#endregion hero_dragon_sun

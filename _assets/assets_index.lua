@@ -160,16 +160,20 @@ return {
 		hash = "02e4ea78"
 	},
 	["kr1-desktop/images/fullhd/encyclopedia-1.dds"] = {
-		size = 5592580,
-		hash = "29942f28"
+		size = 4818852,
+		hash = "fa39c00c"
 	},
 	["kr1-desktop/images/fullhd/encyclopedia_creeps-1.dds"] = {
-		size = 22369796,
-		hash = "43a8c4ac"
+		size = 21206532,
+		hash = "9fbb90b4"
 	},
 	["kr1-desktop/images/fullhd/encyclopedia_creeps-2.dds"] = {
-		size = 5592580,
-		hash = "9e7d5bea"
+		size = 21166132,
+		hash = "80b6bcf0"
+	},
+	["kr1-desktop/images/fullhd/encyclopedia_creeps-3.dds"] = {
+		size = 4199972,
+		hash = "46cb263e"
 	},
 	["kr1-desktop/images/fullhd/go_decals-1.dds"] = {
 		size = 2616176,
@@ -566,6 +570,18 @@ return {
 	["kr1-desktop/images/fullhd/go_hero_dragon_gem-1.dds"] = {
 		size = 22369796,
 		hash = "e99933b0"
+	},
+	["kr1-desktop/images/fullhd/go_hero_dragon_sun-1.dds"] = {
+		size = 16777344,
+		hash = "ee20b468"
+	},
+	["kr1-desktop/images/fullhd/go_hero_dragon_sun-2.dds"] = {
+		size = 16777344,
+		hash = "1ef5a69c"
+	},
+	["kr1-desktop/images/fullhd/go_hero_dragon_sun-3.dds"] = {
+		size = 7862544,
+		hash = "e69f3770"
 	},
 	["kr1-desktop/images/fullhd/go_hero_durax-1.dds"] = {
 		size = 11184976,
@@ -2108,24 +2124,24 @@ return {
 		hash = "023e78c8"
 	},
 	["kr1-desktop/images/fullhd/gui_ico-1.dds"] = {
-		size = 1398276,
-		hash = "4c2ff92f"
+		size = 2102756,
+		hash = "a46aaacb"
 	},
 	["kr1-desktop/images/fullhd/gui_ico-2.dds"] = {
 		size = 1398276,
 		hash = "91f90214"
 	},
 	["kr1-desktop/images/fullhd/gui_notifications-1.dds"] = {
-		size = 3042048,
-		hash = "d86cb740"
+		size = 3956420,
+		hash = "7a3ff7e4"
 	},
 	["kr1-desktop/images/fullhd/gui_notifications_bg-1.dds"] = {
 		size = 5691968,
 		hash = "7de33398"
 	},
 	["kr1-desktop/images/fullhd/gui_portraits-1.dds"] = {
-		size = 5592580,
-		hash = "3f20bcb4"
+		size = 6189348,
+		hash = "c7ab262c"
 	},
 	["kr1-desktop/images/fullhd/gui_portraits-2.dds"] = {
 		size = 1398276,
@@ -2136,8 +2152,8 @@ return {
 		hash = "b90fec50"
 	},
 	["kr1-desktop/images/fullhd/hero_room-1.dds"] = {
-		size = 22369796,
-		hash = "f04e9060"
+		size = 14769604,
+		hash = "d0f667dc"
 	},
 	["kr1-desktop/images/fullhd/kr2_comic-1.dds"] = {
 		size = 10624448,
@@ -5719,6 +5735,22 @@ return {
 		size = 10615,
 		hash = "97658a72"
 	},
+	["kr1-desktop/sounds/files/kr4_sfx_erudite_shot_op1_var1_v1.ogg"] = {
+		size = 43135,
+		hash = "a177fbd4"
+	},
+	["kr1-desktop/sounds/files/kr4_sfx_erudite_shot_op1_var2_v1.ogg"] = {
+		size = 41976,
+		hash = "d16c7b80"
+	},
+	["kr1-desktop/sounds/files/kr4_sfx_erudite_shot_op2_var1_v1.ogg"] = {
+		size = 45930,
+		hash = "7648a78c"
+	},
+	["kr1-desktop/sounds/files/kr4_sfx_erudite_shot_op2_var2_v1.ogg"] = {
+		size = 43042,
+		hash = "765259e8"
+	},
 	["kr1-desktop/sounds/files/kr4_sfx_juggernaut_punch_var1_v1.ogg"] = {
 		size = 23984,
 		hash = "47e5e958"
@@ -5886,6 +5918,34 @@ return {
 	["kr1-desktop/sounds/files/kr5_dlc2_guerra_variacion_v2.ogg"] = {
 		size = 2258869,
 		hash = "ecf60200"
+	},
+	["kr1-desktop/sounds/files/kr5_dlc3_bgmusic_battle1_v1.ogg"] = {
+		size = 2179383,
+		hash = "108ed2a0"
+	},
+	["kr1-desktop/sounds/files/kr5_dlc3_bgmusic_battle2_v1.ogg"] = {
+		size = 2152151,
+		hash = "96c66f04"
+	},
+	["kr1-desktop/sounds/files/kr5_dlc3_bgmusic_battle3_v1.ogg"] = {
+		size = 2063910,
+		hash = "c880c2f0"
+	},
+	["kr1-desktop/sounds/files/kr5_dlc3_bgmusic_bossBattle_v1.ogg"] = {
+		size = 1787610,
+		hash = "5c62034c"
+	},
+	["kr1-desktop/sounds/files/kr5_dlc3_bgmusic_preparation1_v1.ogg"] = {
+		size = 1238300,
+		hash = "1a7d3e97"
+	},
+	["kr1-desktop/sounds/files/kr5_dlc3_bgmusic_preparation2_v1.ogg"] = {
+		size = 1857941,
+		hash = "df27dbb2"
+	},
+	["kr1-desktop/sounds/files/kr5_dlc3_bgmusic_preparation3_v1.ogg"] = {
+		size = 1465988,
+		hash = "92617694"
 	},
 	["kr1-desktop/sounds/files/kr5_sfx_UIgate-close.ogg"] = {
 		size = 59623,
@@ -6163,6 +6223,22 @@ return {
 		size = 39528,
 		hash = "ee8b5dac"
 	},
+	["kr1-desktop/sounds/files/kr_voice_aurion_01_b.ogg"] = {
+		size = 45474,
+		hash = "eec41c7f"
+	},
+	["kr1-desktop/sounds/files/kr_voice_aurion_03_a.ogg"] = {
+		size = 37856,
+		hash = "bdf72a7c"
+	},
+	["kr1-desktop/sounds/files/kr_voice_aurion_04_a.ogg"] = {
+		size = 38230,
+		hash = "ddd54670"
+	},
+	["kr1-desktop/sounds/files/kr_voice_aurion_05_a.ogg"] = {
+		size = 47745,
+		hash = "3b724e28"
+	},
 	["kr1-desktop/sounds/files/kr_voice_ballistaoutpost_skill_a_b.ogg"] = {
 		size = 32241,
 		hash = "b07bb728"
@@ -6330,6 +6406,26 @@ return {
 	["kr1-desktop/sounds/files/kr_voice_demonpit_taunt_var1a.ogg"] = {
 		size = 34545,
 		hash = "aa9f70b1"
+	},
+	["kr1-desktop/sounds/files/kr_voice_dragonhatchery_01_a.ogg"] = {
+		size = 43217,
+		hash = "73e9c8b4"
+	},
+	["kr1-desktop/sounds/files/kr_voice_dragonhatchery_02_b.ogg"] = {
+		size = 26170,
+		hash = "ae688016"
+	},
+	["kr1-desktop/sounds/files/kr_voice_dragonhatchery_03_a.ogg"] = {
+		size = 42245,
+		hash = "1563b4e2"
+	},
+	["kr1-desktop/sounds/files/kr_voice_dragonhatchery_04_b.ogg"] = {
+		size = 39812,
+		hash = "f77b0430"
+	},
+	["kr1-desktop/sounds/files/kr_voice_dragonhatchery_05_a.ogg"] = {
+		size = 36548,
+		hash = "f4bfae8c"
 	},
 	["kr1-desktop/sounds/files/kr_voice_dunesentinels_select_e.ogg"] = {
 		size = 40091,

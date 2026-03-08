@@ -409,7 +409,7 @@ function storage:set_active_slot(idx)
 	end
 
 	if not self:load_slot(idx) then
-        self:create_slot(idx)
+		self:create_slot(idx)
 	end
 
 	self.active_slot_idx = idx
