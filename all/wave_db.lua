@@ -1051,12 +1051,18 @@ function wave_db:randomize_creeps()
 				if creep_aux then
 					for l = 1, spawn.max do
 						this_path[#this_path + 1] = l % 2 == 0 and creep_aux or creep
-						g_t = g_t + E:get_template(this_path[#this_path]).enemy.gold
+						local tpl = E:get_template(this_path[#this_path])
+						if tpl.enemy then
+							g_t = g_t + tpl.enemy.gold
+						end
 					end
 				else
 					for l = 1, spawn.max do
 						this_path[#this_path + 1] = creep
-						g_t = g_t + E:get_template(this_path[#this_path]).enemy.gold
+						local tpl = E:get_template(creep)
+						if tpl.enemy then
+							g_t = g_t + tpl.enemy.gold
+						end
 					end
 				end
 				creep_count = creep_count + spawn.max
@@ -1111,8 +1117,11 @@ function wave_db:randomize_creeps()
 						end
 						new_spawn.creep = table.random(this_path)
 						new_spawn.max = 1
-						if bit.band(E:get_template(new_spawn.creep).vis.flags, F_FLYING) ~= 0 then
-							new_wave.some_flying = true
+						local tpl = E:get_template(new_spawn.creep)
+						if tpl.vis then
+							if bit.band(tpl.vis.flags, F_FLYING) ~= 0 then
+								new_wave.some_flying = true
+							end
 						end
 						table.insert(new_spawns, new_spawn)
 					end
