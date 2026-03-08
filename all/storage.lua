@@ -409,9 +409,7 @@ function storage:set_active_slot(idx)
 	end
 
 	if not self:load_slot(idx) then
-		log.error("slot %s must exist before setting it as active", idx)
-
-		return
+        self:create_slot(idx)
 	end
 
 	self.active_slot_idx = idx
