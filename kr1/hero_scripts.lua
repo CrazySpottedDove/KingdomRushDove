@@ -38494,7 +38494,6 @@ function scripts.hero_dragon_sun.level_up(this, store)
 
 		a.disabled = nil
 		a.cooldown = s.cooldown[sl]
-		a.cooldown_init = s.cooldown_init[sl]
 
 		local bullet = E:get_template(a.bullet)
 
@@ -38631,61 +38630,11 @@ function scripts.hero_dragon_sun.update(this, store)
 
 	local function do_ranged_attack()
 		local a = this.ranged.attacks[1]
-		-- local target, all_targets = U.find_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.shoot_time, a.vis_flags, a.vis_bans
-		-- , function(v)
-		-- 	local v_pos = v.pos
-
-		-- 	if v.motion and v.motion.speed then
-		-- 		local node_offset = P:predict_enemy_node_advance(v, a.shoot_time)
-
-		-- 		v_pos = P:node_pos(v.nav_path.pi, 1, v.nav_path.ni + node_offset)
-		-- 	end
-
-		-- 	local max_angle = a.max_angle
-
-		-- 	if band(v.vis.flags, F_FLYING) ~= 0 then
-		-- 		v_pos.y = v_pos.y + v.unit.hit_offset.y
-		-- 		max_angle = a.max_angle_fliers
-		-- 	end
-
-		-- 	local b_pos = V.vclone(this.pos)
-		-- 	local bullet_start_offset = V.v(0, 0)
-		-- 	local flip = this.pos.x > v_pos.x
-
-		-- 	if a.bullet_start_offset and #a.bullet_start_offset == 2 then
-		-- 		local offset_index = flip and 2 or 1
-
-		-- 		bullet_start_offset = a.bullet_start_offset[offset_index]
-		-- 	end
-
-		-- 	b_pos.x = b_pos.x + (flip and -1 or 1) * bullet_start_offset.x
-		-- 	b_pos.y = b_pos.y + bullet_start_offset.y
-
-		-- 	local angle_d = math.deg(V.angleTo(v_pos.x - b_pos.x, v_pos.y - b_pos.y))
-
-		-- 	angle_d = angle_d + 90
-		-- 	angle_d = math.min(math.abs(angle_d), math.abs(angle_d - 360), math.abs(angle_d + 360))
-
-		-- 	if max_angle < angle_d then
-		-- 		return false
-		-- 	end
-
-		-- 	return true
-		-- end
-		-- )
-		local target, all_targets = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(this.pos, a.max_range, a.shoot_time, a.vis_flags, a.vis_bans, a.damage_radius)
+		local target, all_targets = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(this.pos, a.max_range, a.shoot_time, a.vis_flags, a.vis_bans, a.damage_radius * 2)
 
 		if not target then
 			return true
 		end
-
-		-- if is_overcharged then
-		-- 	table.sort(all_targets, function(e1, e2)
-		-- 		return e1.health.hp > e2.health.hp
-		-- 	end)
-
-		-- 	target = all_targets[1]
-		-- end
 
 		local start_ts = store.tick_ts
 		local b
@@ -38698,11 +38647,6 @@ function scripts.hero_dragon_sun.update(this, store)
 		bullet_start_offset = a.bullet_start_offset[af and 2 or 1]
 
 		local bullet_from_pos = V.v(this.pos.x + (af and -1 or 1) * bullet_start_offset.x, this.pos.y + bullet_start_offset.y)
-		-- local expected_dist = V.dist(bullet_from_pos.x, bullet_from_pos.y, t_pos.x, t_pos.y)
-
-		-- if expected_dist < 55 then
-		-- return true
-		-- end
 
 		U.animation_start(this, an, af, store.tick_ts)
 
@@ -38739,10 +38683,7 @@ function scripts.hero_dragon_sun.update(this, store)
 		b.pos = V.vclone(bullet_from_pos)
 		b.bullet.from = V.vclone(b.pos)
 		b.bullet.to = V.vclone(bullet_dest_pos)
-
-		if b.bullet.use_unit_damage_factor then
-			b.bullet.damage_factor = this.unit.damage_factor
-		end
+		b.bullet.damage_factor = this.unit.damage_factor
 
 		queue_insert(store, b)
 
@@ -38751,9 +38692,10 @@ function scripts.hero_dragon_sun.update(this, store)
 		end
 
 		a.ts = start_ts
-		a_overcharge.ts = start_ts
+		a_overcharge.ts = a_overcharge.ts + store.tick_ts - start_ts
 
 		if is_overcharged then
+			a_overcharge.ts = start_ts
 			end_overcharge()
 		end
 
@@ -38984,7 +38926,6 @@ function scripts.hero_dragon_sun.update(this, store)
 
 		local initial_pos = V.vclone(this.pos)
 
-		this.pushed_bans = U.push_bans(this.vis, F_ALL)
 		this.health.ignore_damage = true
 		this.health_bar.hidden = true
 
@@ -39066,7 +39007,7 @@ function scripts.hero_dragon_sun.update(this, store)
 
 		queue_insert(store, explotion_decal)
 		U.y_animation_wait(this)
-		U.y_animation_play(this, "idle", nil, store.tick_ts, 1)
+		-- U.y_animation_play(this, "idle", nil, store.tick_ts, 1)
 		U.y_animation_play(this, a.animations[3], nil, store.tick_ts)
 
 		if this.nav_rally.new then
@@ -39084,12 +39025,6 @@ function scripts.hero_dragon_sun.update(this, store)
 		U.y_wait(store, fts(5))
 
 		this.health_bar.hidden = nil
-
-		if this.pushed_bans then
-			U.pop_bans(this.vis, this.pushed_bans)
-
-			this.pushed_bans = nil
-		end
 
 		this.health.ignore_damage = nil
 
@@ -39448,40 +39383,38 @@ function scripts.bullet_hero_dragon_sun_breath_ray.update(this, store)
 		if targets_table and #targets_table > 0 then
 			local mod_hit_times = {}
 
-			for _, e in pairs(targets_table) do
+			for _, e in ipairs(targets_table) do
 				local d = SU.create_bullet_damage(b, e.id, this)
 
 				queue_damage(store, d)
 
-				if b.mod then
-					for _, v in pairs(b.mod) do
-						do
-							local mod = E:create_entity(v)
+				for _, v in ipairs(b.mods) do
+					do
+						local mod = E:create_entity(v)
 
-							if mod.chance and math.random() >= mod.chance then
-							-- block empty
-							else
-								if mod.max_targets_per_hit then
-									if not mod_hit_times[v] then
-										mod_hit_times[v] = 0
-									end
-
-									if mod_hit_times[v] >= mod.max_targets_per_hit then
-										goto label_sun_ray_mod_limit
-									else
-										mod_hit_times[v] = mod_hit_times[v] + 1
-									end
+						if mod.chance and math.random() >= mod.chance then
+						-- block empty
+						else
+							if mod.max_targets_per_hit then
+								if not mod_hit_times[v] then
+									mod_hit_times[v] = 0
 								end
 
-								mod.modifier.target_id = e.id
-								mod.modifier.source_id = this.id
-
-								queue_insert(store, mod)
+								if mod_hit_times[v] >= mod.max_targets_per_hit then
+									goto label_sun_ray_mod_limit
+								else
+									mod_hit_times[v] = mod_hit_times[v] + 1
+								end
 							end
-						end
 
-						::label_sun_ray_mod_limit::
+							mod.modifier.target_id = e.id
+							mod.modifier.source_id = this.id
+
+							queue_insert(store, mod)
+						end
 					end
+
+					::label_sun_ray_mod_limit::
 				end
 
 				if b.hit_fx then
@@ -39624,15 +39557,13 @@ function scripts.bullet_hero_dragon_sun_breath_flier.update(this, store)
 	end
 
 	if target and b.damage_type ~= DAMAGE_NONE then
-		local d = SU.create_bullet_damage(b, target.id, this)
+		local d = SU.create_bullet_damage(b, target.id, this.id)
 
 		queue_damage(store, d)
 	end
 
-	if target and b.mod then
-		local mods = type(b.mod) == "table" and b.mod or {b.mod}
-
-		for _, mod_name in pairs(mods) do
+	if target then
+		for _, mod_name in ipairs(b.mods) do
 			local m = E:create_entity(mod_name)
 
 			m.modifier.target_id = b.target_id
@@ -39915,9 +39846,6 @@ function scripts.bullet_hero_dragon_sun_ultimate.update(this, store)
 
 	local dest = V.vclone(b.to)
 
-	this.render.sprites[1].pos = V.vclone(dest)
-	this.render.sprites[2].pos = this.render.sprites[1].pos
-
 	local last_damage_ts = 0
 	local fx = E:create_entity(this.fx_in)
 
@@ -39951,8 +39879,6 @@ function scripts.bullet_hero_dragon_sun_ultimate.update(this, store)
 	local next_fire_fxs_ts = store.tick_ts
 
 	local function update_targetting()
-		local o_pos = V.vclone(this.pos)
-
 		this.pos.x, this.pos.y = dest.x, dest.y
 
 		local next, new = P:next_entity_node(this, store.tick_length)
@@ -39995,7 +39921,6 @@ function scripts.bullet_hero_dragon_sun_ultimate.update(this, store)
 		end
 
 		dest.x, dest.y = this.pos.x, this.pos.y
-		this.pos.x, this.pos.y = o_pos.x, o_pos.y
 	end
 
 	local function hit_targets(targets_table, factor)
@@ -40007,7 +39932,7 @@ function scripts.bullet_hero_dragon_sun_ultimate.update(this, store)
 			b.damage_max = b.damage_max * factor
 
 			for _, e in pairs(targets_table) do
-				local d = SU.create_bullet_damage(b, e.id, this)
+				local d = SU.create_bullet_damage(b, e.id, this.id)
 
 				queue_damage(store, d)
 			end

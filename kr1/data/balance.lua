@@ -1692,8 +1692,8 @@ local heroes = {
 			damage_radius = 40,
 			damage_every = 0.25,
 			damage_type = DAMAGE_TRUE,
-			damage_max = {7, 9, 11, 13, 15, 17, 19, 21, 23, 25},
-			damage_min = {5, 7, 9, 10, 12, 14, 16, 17, 19, 22},
+			damage_max = {8, 10, 12, 14, 16, 18, 20, 22, 24, 26},
+			damage_min = {6, 8, 10, 11, 13, 15, 17, 18, 20, 23},
 			flier = {
 				xp_gain_factor = 1.4,
 				damage_type = DAMAGE_TRUE,
@@ -1710,10 +1710,10 @@ local heroes = {
 		},
 		worthy_foe = {
 			enemy_minimum_hp = 500,
-			cooldown = {40, 40, 40},
+			cooldown = {40, 36, 32},
 			damages_target = {
-				damage_max = {300, 600, 900},
-				damage_min = {200, 400, 500},
+				damage_max = {300, 540, 720},
+				damage_min = {200, 360, 400},
 				damage_type = DAMAGE_TRUE
 			},
 			damages_radius = {
@@ -1735,13 +1735,12 @@ local heroes = {
 				cooldown = {35, 35, 35}
 			},
 			duration = {6, 6, 6},
-			heal = {4, 8, 12},
+			heal = {5, 10, 15},
 			-- xp_gain: FL原值 ×8
 			xp_gain = {200, 400, 600}
 		},
 		overcharge = {
 			cooldown = {6, 6, 6},
-			cooldown_init = {15, 15, 15},
 			damage_max = {100, 200, 300},
 			damage_min = {75, 150, 225},
 			flier = {
@@ -1774,8 +1773,8 @@ local heroes = {
 			duration = 3,
 			-- cooldown: FL原值 ×0.8 floor
 			cooldown = {62, 62, 62, 62},
-			damage_max = {9, 14, 24, 34},
-			damage_min = {7, 10, 15, 23},
+			damage_max = {10, 20, 30, 40},
+			damage_min = {6, 12, 18, 24},
 			damage_type = DAMAGE_TRUE
 		}
 	}

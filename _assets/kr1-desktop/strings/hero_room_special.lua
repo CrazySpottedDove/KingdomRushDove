@@ -3113,7 +3113,8 @@ set_skill(h.hero.skills.overcharge)
 d[1].damage_min = table.tail(blc.damage_min)
 d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_type = DAMAGE_TRUE
-map["烈阳过载"] = str("若持续", blc.cooldown_init[1], "秒未进行攻击，下一次攻击将优先攻击射程内最强大的敌人，并额外造成", damage_str(), "。")
+cooldown = table.tail(blc.cooldown)
+map["烈阳过载"] = str("在未普攻期间，奥利昂持续充能。充能满", cooldown, "秒后，下一次攻击将额外造成", damage_str(), "。")
 
 blc = balance.hero_dragon_sun.solar_stones
 set_skill(h.hero.skills.solar_stones)

@@ -20172,7 +20172,7 @@ tt.bullet.damage_min = b.damage_min
 tt.bullet.damage_radius = b.damage_radius
 tt.bullet.xp_gain_factor = b.xp_gain_factor
 tt.damage_every = b.damage_every
-tt.bullet.mod = {"mod_hero_dragon_sun_bassic_attack_burn_dps"}
+tt.bullet.mods = {"mod_hero_dragon_sun_bassic_attack_burn_dps"}
 tt.motion.max_speed = b.speed
 tt.bullet.damage_flags = F_AREA
 tt.bullet.damage_bans = 0
@@ -20201,7 +20201,7 @@ tt.bullet.damage_max = b.damage_max
 tt.bullet.damage_min = b.damage_min
 tt.bullet.damage_radius = b.damage_radius
 tt.bullet.xp_gain_factor = b.xp_gain_factor
-tt.bullet.mod = "mod_hero_dragon_sun_bassic_attack_burn_only_render"
+tt.bullet.mods = {"mod_hero_dragon_sun_bassic_attack_burn_only_render"}
 tt.main_script.update = scripts.bullet_hero_dragon_sun_breath_flier.update
 tt.sound_events.insert = "HeroDragonSunBreathAttack"
 
@@ -20424,7 +20424,6 @@ tt.hero.skills.solar_cleansing.xp_level_steps = {
 
 tt.hero.skills.overcharge = E:clone_c("hero_skill")
 tt.hero.skills.overcharge.cooldown = b.overcharge.cooldown
-tt.hero.skills.overcharge.cooldown_init = b.overcharge.cooldown_init
 tt.hero.skills.overcharge.damage_min = b.overcharge.damage_min
 tt.hero.skills.overcharge.damage_max = b.overcharge.damage_max
 tt.hero.skills.overcharge.damage_min_flier = b.overcharge.flier.damage_min
