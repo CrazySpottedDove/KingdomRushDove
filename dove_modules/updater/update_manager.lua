@@ -95,14 +95,24 @@ local HTTP_WORKER = [[
 local http_worker = nil
 
 -- 异步 HTTP 请求
-local function async_request(url, options)
+local function async_request(url, options, timeout)
 	love.thread.getChannel("um_http_req"):push({
 		url = url,
 		options = options
 	})
 	local resp_ch = love.thread.getChannel("um_http_resp")
-	while resp_ch:getCount() == 0 do
-		coroutine.yield()
+	if timeout then
+		local start_time = love.timer.getTime()
+		while resp_ch:getCount() == 0 do
+			if love.timer.getTime() - start_time > timeout then
+				return 0, "请求超时", {}
+			end
+			coroutine.yield()
+		end
+	else
+		while resp_ch:getCount() == 0 do
+			coroutine.yield()
+		end
 	end
 	local resp = resp_ch:pop()
 	return resp.code, resp.body, resp.headers
@@ -553,7 +563,7 @@ local function check_update()
 			data = json.encode({
 				commit_hash = commit_hash
 			})
-		})
+		}, 10)
 		if code == 200 then
 			resp_json = json.decode(response)
 			server_address = site
@@ -602,7 +612,7 @@ local function run_code()
 		local added_or_modified = diff_assets()
 		if not added_or_modified then
 			love.window.showMessageBox("升级失败", "校验美术资源时发生错误，无法继续升级。请将以下信息报告给开发者：\n\n" .. table.concat(error_log_lines, "\n"), {"确定"})
-			return
+			return "NoUpdate"
 		end
 		local success = sync_assets(added_or_modified)
 		if success then
@@ -616,6 +626,7 @@ local function run_code()
 		else
 			local error_report = "升级过程中发生错误，请报告以下问题（若是多次重试不成功，可能是服务器网络繁忙，可稍后重试）：\n\n" .. table.concat(error_log_lines, "\n")
 			love.window.showMessageBox("升级失败", error_report, {"确定"})
+			return "NoUpdate"
 		end
 	elseif pressed == 2 then
 		return "NoUpdate"
