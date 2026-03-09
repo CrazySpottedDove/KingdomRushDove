@@ -3018,6 +3018,12 @@ return {
 			icon = 21,
 			detail_icon = 21,
 			from_kr = 5
+		},
+		{
+			name = "tower_dragons_lvl4",
+			icon = 22,
+			detail_icon = 22,
+			from_kr = 5
 		}
 	},
 	map_animations1 = {
