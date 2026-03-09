@@ -39384,7 +39384,7 @@ function scripts.bullet_hero_dragon_sun_breath_ray.update(this, store)
 			local mod_hit_times = {}
 
 			for _, e in ipairs(targets_table) do
-				local d = SU.create_bullet_damage(b, e.id, this)
+				local d = SU.create_bullet_damage(b, e.id, this.id)
 
 				queue_damage(store, d)
 
@@ -39392,26 +39392,10 @@ function scripts.bullet_hero_dragon_sun_breath_ray.update(this, store)
 					do
 						local mod = E:create_entity(v)
 
-						if mod.chance and math.random() >= mod.chance then
-						-- block empty
-						else
-							if mod.max_targets_per_hit then
-								if not mod_hit_times[v] then
-									mod_hit_times[v] = 0
-								end
+						mod.modifier.target_id = e.id
+						mod.modifier.source_id = this.id
 
-								if mod_hit_times[v] >= mod.max_targets_per_hit then
-									goto label_sun_ray_mod_limit
-								else
-									mod_hit_times[v] = mod_hit_times[v] + 1
-								end
-							end
-
-							mod.modifier.target_id = e.id
-							mod.modifier.source_id = this.id
-
-							queue_insert(store, mod)
-						end
+						queue_insert(store, mod)
 					end
 
 					::label_sun_ray_mod_limit::
