@@ -1,0 +1,159 @@
+#	COMANDOS					1	Por abajo salida 1				2	Por abajo salida 2				3	Por arriba salida 1				4	Por arriba salida 2		
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3
+#	level properties																							
+	description	rodri																						
+	lives	20																						
+	gold	1650																						
+	gems	150																						
+	enemy_prefix	enemy_																						
+	default_increment	1																						
+	default_interval	20																						
+#	expected gold																							
+#	stage total gold	3545																						
+#	stage gold curve																							
+#	PUSH 1																							
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian			
+#	cant.					29	0	0	18		0	0	0	0		0	0	0	0		6			
+#	gold	538				232	0	0	126		0	0	0	0		0	0	0	0		180			
+	wave		1		-1																			
+					2			basic_lava					basic_lava											
+					2		basic_lava					basic_lava												
+					2				basic_lava					basic_lava										
+					5		basic_lava					basic_lava		basic_lava										
+					2				basic_lava			basic_lava		basic_lava										
+					2			basic_lava				basic_lava		basic_lava										
+					1.5		basic_lava					basic_lava		basic_lava										
+					1.5				basic_lava			basic_lava		basic_lava										
+					4.5								tanky_draconian											
+					2.5							tanky_draconian												
+					2.5									tanky_draconian										
+					4							basic_acid												
+					1.5									basic_acid										
+					1.5							basic_acid												
+					1.5									basic_acid										
+					3												basic_acid							
+					0.5														basic_acid					
+					1												basic_acid							
+					0.5														basic_acid					
+					1												basic_acid							
+					0.5														basic_acid					
+					1												basic_acid							
+					0.5														basic_acid					
+					6			tanky_draconian										basic_acid						
+					2.5		tanky_draconian										basic_acid		basic_acid					
+					2.5				tanky_draconian									basic_acid						
+					2.5												basic_acid		basic_acid					
+					12		basic_lava		basic_lava															
+					2		basic_lava		basic_lava															
+					2		basic_lava		basic_lava															
+					2		basic_lava		basic_lava															
+																								
+																								
+#	75.5																							
+#	PUSH 2																							
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian			
+#	cant.					26	0	2	0		0	0	0	0		0	0	0	0		4			
+#	gold	488				208	0	160	0		0	0	0	0		0	0	0	0		120			
+#	wave		2		0																			
+					5													alfa_lava						
+					8							alfa_lava												
+					5									basic_lava										
+					1								basic_lava											
+					4							basic_lava												
+					1								basic_lava											
+					4									basic_lava										
+					1								basic_lava											
+					15		basic_lava		basic_lava														tanky_draconian	
+					3				basic_lava															
+					2		basic_lava																	
+					2.5				basic_lava															tanky_draconian
+					2.77		basic_lava																	
+					1.7				basic_lava															
+					2.66		basic_lava															tanky_draconian		
+					1.25				basic_lava															
+					2.22		basic_lava																	
+					2.5		basic_lava		basic_lava														tanky_draconian	
+					5			basic_lava																
+					1.25		basic_lava		basic_lava															
+					1.25			basic_lava																
+					2			basic_lava																
+					1.25		basic_lava		basic_lava															
+					1.25			basic_lava																
+																								
+																								
+																								
+#	76.6																							
+#	PUSH 3																							
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian			
+#	cant.					38	0	2	0		0	0	0	0		0	27	0	0		0			
+#	gold	869				304	0	160	0		0	0	0	0		0	405	0	0		0			
+#	wave		3		0																			
+					16			alfa_lava																
+																								
+					10		basic_lava		basic_lava															
+					2.5		basic_lava		basic_lava															
+					2.25		basic_lava		basic_lava															
+					2.25		basic_lava		basic_lava															
+					10													alfa_lava						
+					7							basic_lava							basic_lava					
+					2							basic_lava							basic_lava					
+					2.5							basic_lava							basic_lava					
+					2							basic_lava							basic_lava					
+					2.5							basic_lava							basic_lava					
+																								
+					9							basic_storm		basic_storm										
+					1.5													basic_storm						
+					2.5							basic_storm		basic_storm										
+					1.25													basic_storm						
+					2.5							basic_storm		basic_storm										
+					1.25													basic_storm						
+					2.5							basic_storm		basic_storm										
+					1.25													basic_storm						
+					2.5							basic_storm		basic_storm										
+					1.25													basic_storm						
+					9		basic_lava																	
+					1.25			basic_lava				basic_storm		basic_storm										
+					2.5				basic_lava															
+					1.25			basic_lava				basic_storm		basic_storm										
+					2.5		basic_lava																	
+					1.25			basic_lava				basic_storm		basic_storm										
+					2.25				basic_lava															
+					1.25			basic_lava				basic_storm		basic_storm										
+					2.25		basic_lava																	
+					1			basic_lava				basic_storm		basic_storm										
+					2				basic_lava															
+					1			basic_lava				basic_storm		basic_storm										
+					2		basic_lava																	
+					1			basic_lava																
+					1.5		basic_lava		basic_lava															
+					0.75			basic_lava																
+					1.5		basic_lava		basic_lava															
+					0.75			basic_lava																
+																								
+#	119.5																							
+#	PUSH 4																							
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian			
+#	cant.					0	0	0	0		0	0	0	0		0	0	0	0		0			
+#	gold	0				0	0	0	0		0	0	0	0		0	0	0	0		0			
+#	wave		4		17																			
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+																								
+#	0																							

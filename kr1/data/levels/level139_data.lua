@@ -1,0 +1,847 @@
+﻿-- chunkname: @./kr5/data/levels/level39_data.lua
+
+return {
+	locked_hero = false,
+	level_terrain_type = 5,
+	max_upgrade_level = 5,
+	custom_spawn_pos = {
+		{
+			pos = {
+				x = 813,
+				y = 305
+			}
+		},
+		{
+			pos = {
+				x = 630,
+				y = 130
+			}
+		}
+	},
+	custom_start_pos = {
+		zoom = 1,
+		pos = {
+			x = 512,
+			y = 430
+		}
+	},
+	entities_list = {
+		{
+			template = "controller_stage_39_boss",
+			pos = {
+				x = 494,
+				y = 432
+			}
+		},
+		{
+			template = "debug_path_renderer",
+			["path_debug.background_color"] = {
+				46,
+				193,
+				142,
+				0
+			},
+			["path_debug.path_color"] = {
+				168,
+				199,
+				169,
+				0
+			},
+			pos = {
+				x = -300,
+				y = 868
+			}
+		},
+		{
+			template = "decal_background",
+			["render.sprites[1].z"] = 1000,
+			["render.sprites[1].name"] = "Stage39_0001",
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			["editor.flip"] = 1,
+			["editor.orientation"] = 1,
+			template = "decal_defend_point5",
+			["editor.exit_id"] = 1,
+			["editor.alpha"] = 10,
+			pos = {
+				x = 770,
+				y = 45
+			}
+		},
+		{
+			["editor.flip"] = 1,
+			["editor.orientation"] = 1,
+			template = "decal_defend_point5",
+			["editor.exit_id"] = 1,
+			["editor.alpha"] = 10,
+			pos = {
+				x = 1063,
+				y = 211
+			}
+		},
+		{
+			["editor.flip"] = 0,
+			["editor.orientation"] = 1,
+			template = "decal_defend_point5",
+			["editor.exit_id"] = 1,
+			["editor.alpha"] = 10,
+			pos = {
+				x = -40,
+				y = 222
+			}
+		},
+		{
+			["editor.flip"] = 0,
+			template = "decal_defense_flag5",
+			pos = {
+				x = 697,
+				y = 42
+			}
+		},
+		{
+			["editor.flip"] = 0,
+			template = "decal_defense_flag5",
+			pos = {
+				x = 843,
+				y = 54
+			}
+		},
+		{
+			["editor.flip"] = 0,
+			template = "decal_defense_flag5",
+			pos = {
+				x = 1050,
+				y = 149
+			}
+		},
+		{
+			["editor.flip"] = -1,
+			template = "decal_defense_flag5",
+			pos = {
+				x = -37,
+				y = 158
+			}
+		},
+		{
+			["editor.flip"] = 0,
+			template = "decal_defense_flag5",
+			pos = {
+				x = 1074,
+				y = 270
+			}
+		},
+		{
+			["editor.flip"] = 0,
+			template = "decal_defense_flag5",
+			pos = {
+				x = -45,
+				y = 280
+			}
+		},
+		{
+			template = "decal_stage_39_cocoon_center_2_back",
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			template = "decal_stage_39_cocoon_center_5_back",
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			template = "decal_stage_39_easter_egg_sheepy",
+			pos = {
+				x = 920,
+				y = 668
+			}
+		},
+		{
+			template = "decal_stage_39_floor_veins_controller",
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			["editor.r"] = -4.4680428851056,
+			["editor.path_id"] = 6,
+			template = "editor_wave_flag",
+			["editor.len"] = 145,
+			pos = {
+				x = 527,
+				y = 199
+			}
+		},
+		{
+			["editor.r"] = -5.5850536063821,
+			["editor.path_id"] = 7,
+			template = "editor_wave_flag",
+			["editor.len"] = 145,
+			pos = {
+				x = 376,
+				y = 255
+			}
+		},
+		{
+			["editor.r"] = -3.6302848441483,
+			["editor.path_id"] = 5,
+			template = "editor_wave_flag",
+			["editor.len"] = 145,
+			pos = {
+				x = 728,
+				y = 306
+			}
+		},
+		{
+			["editor.r"] = -3.6302848441483,
+			["editor.path_id"] = 4,
+			template = "editor_wave_flag",
+			["editor.len"] = 145,
+			pos = {
+				x = 748,
+				y = 343
+			}
+		},
+		{
+			["editor.r"] = -6.0737457969403,
+			["editor.path_id"] = 1,
+			template = "editor_wave_flag",
+			["editor.len"] = 145,
+			pos = {
+				x = 236,
+				y = 410
+			}
+		},
+		{
+			["editor.r"] = -8.5870199198122,
+			["editor.path_id"] = 3,
+			template = "editor_wave_flag",
+			["editor.len"] = 149,
+			pos = {
+				x = 695,
+				y = 576
+			}
+		},
+		{
+			["editor.r"] = -7.068583470577,
+			["editor.path_id"] = 2,
+			template = "editor_wave_flag",
+			["editor.len"] = 145,
+			pos = {
+				x = 387,
+				y = 599
+			}
+		},
+		{
+			template = "stage_39_cocoon",
+			vena = "decal_stage_39_cocoon_vena_1",
+			path_index = {
+				17
+			},
+			pos = {
+				x = 279,
+				y = 162
+			}
+		},
+		{
+			template = "stage_39_cocoon",
+			vena = "decal_stage_39_cocoon_vena_4",
+			path_index = {
+				8
+			},
+			pos = {
+				x = -61,
+				y = 441
+			}
+		},
+		{
+			["render.sprites[2].flip_x"] = true,
+			["render.sprites[1].flip_x"] = true,
+			template = "stage_39_cocoon",
+			vena = "decal_stage_39_cocoon_vena_3",
+			path_index = {
+				14
+			},
+			pos = {
+				x = 1137,
+				y = 451
+			}
+		},
+		{
+			["render.sprites[2].flip_x"] = true,
+			["render.sprites[1].flip_x"] = true,
+			template = "stage_39_cocoon",
+			vena = "decal_stage_39_cocoon_vena_5",
+			path_index = {
+				9
+			},
+			pos = {
+				x = 247,
+				y = 649
+			}
+		},
+		{
+			template = "stage_39_cocoon",
+			vena = "decal_stage_39_cocoon_vena_2",
+			path_index = {
+				11
+			},
+			pos = {
+				x = 786,
+				y = 651
+			}
+		},
+		{
+			["render.sprites[2].flip_x"] = true,
+			["render.sprites[1].flip_x"] = true,
+			template = "stage_39_cocoon",
+			vena = "decal_stage_39_cocoon_vena_2_2",
+			path_index = {
+				13
+			},
+			pos = {
+				x = 1040,
+				y = 651
+			}
+		},
+		{
+			template = "stage_39_cocoon_center_1",
+			path_index = {
+				6,
+				7
+			},
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			template = "stage_39_cocoon_center_2",
+			path_index = {
+				4,
+				5
+			},
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			template = "stage_39_cocoon_center_3",
+			path_index = {
+				3
+			},
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			template = "stage_39_cocoon_center_4",
+			path_index = {
+				2
+			},
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			template = "stage_39_cocoon_center_5",
+			path_index = {
+				1
+			},
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			["tower.holder_id"] = "3",
+			["tower.terrain_style"] = 34,
+			template = "tower_holder_sea_of_trees_19",
+			["editor.game_mode"] = 0,
+			["ui.nav_mesh_id"] = "3",
+			pos = {
+				x = 138,
+				y = 180
+			},
+			["tower.default_rally_pos"] = {
+				x = 156,
+				y = 265
+			}
+		},
+		{
+			["tower.holder_id"] = "11",
+			["tower.terrain_style"] = 34,
+			template = "tower_holder_sea_of_trees_19",
+			["editor.game_mode"] = 0,
+			["ui.nav_mesh_id"] = "11",
+			pos = {
+				x = 628,
+				y = 189
+			},
+			["tower.default_rally_pos"] = {
+				x = 645,
+				y = 120
+			}
+		},
+		{
+			["tower.holder_id"] = "12",
+			["tower.terrain_style"] = 34,
+			template = "tower_holder_sea_of_trees_19",
+			["editor.game_mode"] = 0,
+			["ui.nav_mesh_id"] = "12",
+			pos = {
+				x = 437,
+				y = 192
+			},
+			["tower.default_rally_pos"] = {
+				x = 510,
+				y = 236
+			}
+		},
+		{
+			["tower.holder_id"] = "9",
+			["tower.terrain_style"] = 34,
+			template = "tower_holder_sea_of_trees_19",
+			["editor.game_mode"] = 0,
+			["ui.nav_mesh_id"] = "9",
+			pos = {
+				x = 896,
+				y = 218
+			},
+			["tower.default_rally_pos"] = {
+				x = 929,
+				y = 296
+			}
+		},
+		{
+			["tower.holder_id"] = "10",
+			["tower.terrain_style"] = 34,
+			template = "tower_holder_sea_of_trees_19",
+			["editor.game_mode"] = 0,
+			["ui.nav_mesh_id"] = "10",
+			pos = {
+				x = 702,
+				y = 248
+			},
+			["tower.default_rally_pos"] = {
+				x = 775,
+				y = 228
+			}
+		},
+		{
+			["tower.holder_id"] = "1",
+			["tower.terrain_style"] = 34,
+			template = "tower_holder_sea_of_trees_19",
+			["editor.game_mode"] = 0,
+			["ui.nav_mesh_id"] = "1",
+			pos = {
+				x = 32,
+				y = 299
+			},
+			["tower.default_rally_pos"] = {
+				x = 116,
+				y = 272
+			}
+		},
+		{
+			["tower.holder_id"] = "2",
+			["tower.terrain_style"] = 34,
+			template = "tower_holder_sea_of_trees_19",
+			["editor.game_mode"] = 0,
+			["ui.nav_mesh_id"] = "2",
+			pos = {
+				x = 239,
+				y = 308
+			},
+			["tower.default_rally_pos"] = {
+				x = 254,
+				y = 247
+			}
+		},
+		{
+			["tower.holder_id"] = "8",
+			["tower.terrain_style"] = 34,
+			template = "tower_holder_sea_of_trees_19",
+			["editor.game_mode"] = 0,
+			["ui.nav_mesh_id"] = "8",
+			pos = {
+				x = 835,
+				y = 359
+			},
+			["tower.default_rally_pos"] = {
+				x = 841,
+				y = 305
+			}
+		},
+		{
+			["tower.holder_id"] = "4",
+			["tower.terrain_style"] = 34,
+			template = "tower_holder_sea_of_trees_19",
+			["editor.game_mode"] = 0,
+			["ui.nav_mesh_id"] = "4",
+			pos = {
+				x = 133,
+				y = 440
+			},
+			["tower.default_rally_pos"] = {
+				x = 164,
+				y = 390
+			}
+		},
+		{
+			["tower.holder_id"] = "6",
+			["tower.terrain_style"] = 34,
+			template = "tower_holder_sea_of_trees_19",
+			["editor.game_mode"] = 0,
+			["ui.nav_mesh_id"] = "6",
+			pos = {
+				x = 829,
+				y = 518
+			},
+			["tower.default_rally_pos"] = {
+				x = 813,
+				y = 601
+			}
+		},
+		{
+			["tower.holder_id"] = "7",
+			["tower.terrain_style"] = 34,
+			template = "tower_holder_sea_of_trees_19",
+			["editor.game_mode"] = 0,
+			["ui.nav_mesh_id"] = "7",
+			pos = {
+				x = 959,
+				y = 523
+			},
+			["tower.default_rally_pos"] = {
+				x = 1053,
+				y = 544
+			}
+		},
+		{
+			["tower.holder_id"] = "5",
+			["tower.terrain_style"] = 34,
+			template = "tower_holder_sea_of_trees_19",
+			["editor.game_mode"] = 0,
+			["ui.nav_mesh_id"] = "5",
+			pos = {
+				x = 42,
+				y = 569
+			},
+			["tower.default_rally_pos"] = {
+				x = 105,
+				y = 529
+			}
+		}
+	},
+	ignore_walk_backwards_paths = {
+		8,
+		9,
+		10,
+		11,
+		12,
+		13,
+		14,
+		15,
+		16,
+		17,
+		18,
+		19,
+		20,
+		21,
+		22
+	},
+	invalid_path_ranges = {},
+	level_mode_overrides = {
+		{
+			max_upgrade_level = 5,
+			locked_powers = {},
+			locked_towers = {}
+		},
+		{
+			nav_mesh = {
+				[21] = {
+					32,
+					22
+				},
+				[22] = {
+					33,
+					23,
+					nil,
+					21
+				},
+				[23] = {
+					24,
+					24,
+					nil,
+					22
+				},
+				[24] = {
+					26,
+					nil,
+					23,
+					23
+				},
+				[26] = {
+					27,
+					nil,
+					24,
+					33
+				},
+				[27] = {
+					28,
+					nil,
+					26,
+					34
+				},
+				[28] = {
+					29,
+					nil,
+					27,
+					34
+				},
+				[29] = {
+					30,
+					nil,
+					28,
+					34
+				},
+				[30] = {
+					nil,
+					29,
+					29,
+					31
+				},
+				[31] = {
+					nil,
+					30,
+					34
+				},
+				[32] = {
+					34,
+					33,
+					21
+				},
+				[33] = {
+					34,
+					26,
+					22,
+					32
+				},
+				[34] = {
+					30,
+					28,
+					33,
+					31
+				}
+			}
+		},
+		{
+			available_towers = {
+				"tower_build_hermit_toad",
+				"tower_build_dwarf"
+			},
+			locked_towers = {
+				"tower_build_necromancer",
+				"tower_build_elven_stargazers",
+				"tower_build_arborean_emissary",
+				"tower_build_ballista",
+				"tower_build_paladin_covenant",
+				"tower_build_tricannon",
+				"tower_build_demon_pit",
+				"tower_build_rocket_gunners",
+				"tower_build_arcane_wizard",
+				"tower_build_barrel",
+				"tower_build_royal_archers",
+				"tower_build_ghost",
+				"tower_build_ray",
+				"tower_build_sand"
+			},
+			nav_mesh = {
+				[41] = {
+					52,
+					42
+				},
+				[42] = {
+					53,
+					44,
+					nil,
+					41
+				},
+				[44] = {
+					47,
+					nil,
+					nil,
+					42
+				},
+				[47] = {
+					48,
+					nil,
+					44,
+					54
+				},
+				[48] = {
+					49,
+					nil,
+					47,
+					54
+				},
+				[49] = {
+					50,
+					nil,
+					48,
+					54
+				},
+				[50] = {
+					nil,
+					49,
+					49,
+					51
+				},
+				[51] = {
+					nil,
+					50,
+					54
+				},
+				[52] = {
+					54,
+					53,
+					41
+				},
+				[53] = {
+					54,
+					44,
+					42,
+					52
+				},
+				[54] = {
+					50,
+					48,
+					53,
+					51
+				}
+			}
+		}
+	},
+	nav_mesh = {
+		{
+			12,
+			2,
+			3
+		},
+		{
+			12,
+			4,
+			3,
+			1
+		},
+		{
+			2,
+			4,
+			nil,
+			1
+		},
+		{
+			6,
+			5,
+			3,
+			2
+		},
+		{
+			6,
+			nil,
+			nil,
+			4
+		},
+		{
+			7,
+			nil,
+			5,
+			8
+		},
+		{
+			[3] = 6,
+			[4] = 8
+		},
+		{
+			7,
+			6,
+			10,
+			9
+		},
+		{
+			nil,
+			8,
+			10
+		},
+		{
+			9,
+			8,
+			12,
+			11
+		},
+		{
+			9,
+			10,
+			12
+		},
+		{
+			11,
+			2,
+			1
+		}
+	},
+	required_exoskeletons = {
+		"stage_39_stun_tower1Def",
+		"stage_39_stun_tower2Def",
+		"stage_39_stun_tower3Def",
+		"stage_39_stun_tower4Def",
+		"stage_39_stun_tower5Def",
+		"stage_39_stun_towerDef",
+		"stage_39_stun_tower_toweroutDef",
+		"stage_39_spawnerDef",
+		"stage_39_spawner_backDef",
+		"stage_39_spawner_splashDef",
+		"stage_39_spawner_splash2Def",
+		"boss_stage_39Def",
+		"spawner_centro_1Def",
+		"spawner_centro_2_backDef",
+		"spawner_centro_2_frontDef",
+		"spawner_centro_3Def",
+		"spawner_centro_4Def",
+		"spawner_centro_5_backDef",
+		"spawner_centro_5_frontDef",
+		"stage_39_venas_spawner_01Def",
+		"stage_39_venas_spawner_02Def",
+		"stage_39_venas_spawner_02_02Def",
+		"stage_39_venas_spawner_03Def",
+		"stage_39_venas_spawner_04Def",
+		"stage_39_venas_spawner_05Def"
+	},
+	required_sounds = {
+		"enemies_terrain_dragons_1",
+		"music_stage139",
+		"stage_139"
+	},
+	required_textures = {
+	},
+	scale_required_textures = {
+		"go_stage139_bg",
+		"go_stage139",
+		"go_enemies_terrain_9_1",
+		"go_enemies_terrain_9_2",
+		"go_enemies_terrain_9_3",
+		"go_enemies_terrain_9_4"
+	}
+}

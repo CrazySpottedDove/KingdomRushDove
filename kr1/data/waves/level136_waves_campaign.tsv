@@ -1,0 +1,448 @@
+#	COMANDOS					1	Por abajo salida 1				2	Por abajo salida 2				3	Por arriba salida 1				4	Por arriba salida 2
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3
+#	level properties
+	description	rodri
+	lives	20
+	gold	500
+	gems	150
+	enemy_prefix	enemy_
+	default_increment	1
+	default_interval	20
+#	expected gold
+#	stage total gold	6610
+#	stage gold curve
+#	WAVE 1
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian
+#	cant.					20	0	0	0		0	0	0	0		0	0	0	0		0
+#	gold	160				160	0	0	0		0	0	0	0		0	0	0	0		0
+	wave		1		-1
+					0.1			basic_lava
+					4		basic_lava		basic_lava
+					2		basic_lava		basic_lava
+					6			basic_lava
+					2		basic_lava		basic_lava
+					6			basic_lava
+					1.5		basic_lava		basic_lava
+					2		basic_lava
+					1.5				basic_lava
+					2.5		basic_lava
+					1.5			basic_lava
+					6		basic_lava		basic_lava
+					2			basic_lava
+					1.4		basic_lava		basic_lava
+
+
+#	38.5
+#	WAVE 2
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian
+#	cant.					8	0	0	14		0	0	0	0		0	0	0	0		0
+#	gold	162				64	0	0	98		0	0	0	0		0	0	0	0		0
+	wave		2		13
+					0.1			basic_acid
+					4		basic_acid
+					1				basic_acid
+					2.5		basic_acid
+					1				basic_acid
+					6			basic_lava
+					1		basic_lava
+					0.5				basic_lava
+					0.8				basic_lava
+					0.7		basic_lava
+					1.5		basic_lava		basic_lava
+					1.5			basic_lava
+					4		basic_acid		basic_acid
+					1				basic_acid
+					5		basic_acid
+					3			basic_acid
+					1		basic_acid		basic_acid
+					1		basic_acid		basic_acid
+
+	wait_signal	all_enemies_died			-1
+	event	show_path	2
+#	35.6
+
+
+#	WAVE 3
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian
+#	cant.					11	0	0	0		0	0	0	0		0	11	0	0		0
+#	gold	253				88	0	0	0		0	0	0	0		0	165	0	0		0
+	wave		3		10
+
+					0.1								basic_storm
+					2							basic_storm
+					2									basic_storm
+					2								basic_storm
+
+					4		basic_lava		basic_lava
+					2.25				basic_lava
+					2.25		basic_lava
+					4			basic_lava				basic_storm
+					1.5									basic_storm
+					2		basic_lava		basic_lava			basic_storm
+					3									basic_storm
+
+					4		basic_lava		basic_lava				basic_storm
+					2		basic_lava							basic_storm
+					2				basic_lava			basic_storm
+
+#	33.1
+#	WAVE 4
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian
+#	cant.					7	0	0	0		0	0	0	0		0	0	0	0		10
+#	gold	356				56	0	0	0		0	0	0	0		0	0	0	0		300
+	wave		4		10
+					1			tanky_draconian
+					4		basic_lava		basic_lava
+					1.5			tanky_draconian
+					3		basic_lava
+					2				basic_lava
+					1		basic_lava
+					1.5			tanky_draconian
+					5.5			tanky_draconian
+					2				tanky_draconian
+					1		tanky_draconian
+					5			basic_lava
+					2				tanky_draconian
+					4			basic_lava
+					1		tanky_draconian
+					2				tanky_draconian
+					2			tanky_draconian
+
+
+
+
+
+
+#	38.5
+
+#	WAVE 5
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian
+#	cant.					9	0	0	17		0	1	0	0		0	0	0	0		0
+#	gold	281				72	0	0	119		0	90	0	0		0	0	0	0		0
+	wave		5		32
+					0.1								basic_acid
+					1.5							basic_acid
+					1									basic_acid
+					1.5							basic_acid
+					1.5									basic_acid
+					3								alfa_acid
+
+					5							basic_acid
+					1.5									basic_acid
+					1.5							basic_acid
+					1.5									basic_acid
+					1.5							basic_acid		basic_acid
+					12		basic_lava		basic_lava
+					2		basic_lava
+					2				basic_lava
+					1.5			basic_lava
+					1		basic_lava		basic_lava
+					1		basic_lava		basic_lava
+					12								basic_acid
+					2							basic_acid
+					2									basic_acid
+					3							basic_acid
+					1							basic_acid		basic_acid
+
+
+
+#	59.1
+
+
+#	WAVE 6
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian
+#	cant.					8	0	0	0		0	0	0	0		0	15	0	0		0
+#	gold	289				64	0	0	0		0	0	0	0		0	225	0	0		0
+	wave		6		34
+					1								basic_storm
+					2							basic_storm		basic_storm
+					2							basic_storm		basic_storm
+					5		basic_lava
+					1.5				basic_lava
+					1.5		basic_lava
+					1.5				basic_lava
+					5							basic_storm		basic_storm
+					1.75									basic_storm
+					1.75							basic_storm
+					2.25									basic_storm
+					3.5		basic_lava
+					1.5			basic_lava
+					1.5				basic_lava
+					1.5		basic_lava
+					2									basic_storm
+					2								basic_storm
+					2.25							basic_storm		basic_storm
+					2								basic_storm
+#	41.5
+#	WAVE 7
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian
+#	cant.					8	0	0	15		0	1	0	0		0	0	0	0		3
+#	gold	349				64	0	0	105		0	90	0	0		0	0	0	0		90
+	wave		7		17
+	event	show_path	1
+					1																	basic_acid		basic_acid
+					1.5																		alfa_acid
+					4																	basic_acid		basic_acid
+					2																	basic_acid		basic_acid
+					1.5																	basic_acid		basic_acid
+					7												basic_lava		basic_lava
+					1.5												basic_lava		basic_lava
+					3			tanky_draconian
+					1																	basic_acid		basic_acid
+					1																	basic_acid		basic_acid
+					8.5		tanky_draconian
+					1.5																		basic_acid
+					3.5				tanky_draconian													basic_acid
+					1.5																			basic_acid
+					9.5												basic_lava
+					1.5														basic_lava
+					1.5														basic_lava
+					2												basic_lava
+#	53
+
+#	WAVE 8
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian
+#	cant.					7	0	0	12		0	1	0	0		0	0	0	0		0
+#	gold	230				56	0	0	84		0	90	0	0		0	0	0	0		0
+	wave		8		32.5
+					1			alfa_acid
+					6		basic_acid		basic_acid
+					5			basic_acid
+					2		basic_acid		basic_acid
+					1			basic_acid
+					10												basic_lava		basic_lava
+					2			basic_acid											basic_lava
+					2		basic_acid		basic_acid								basic_lava
+					2												basic_lava		basic_lava
+					2														basic_lava
+					4			basic_acid
+					2		basic_acid		basic_acid
+
+
+
+
+
+
+
+
+
+
+#	39
+
+#	WAVE 9
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian
+#	cant.					0	0	0	21		0	2	0	0		0	0	0	0		0
+#	gold	327				0	0	0	147		0	180	0	0		0	0	0	0		0
+	wave		9		27
+					0.5												basic_acid		basic_acid
+					1.25													basic_acid
+					1.25												basic_acid		basic_acid
+					3																		alfa_acid
+					3												basic_acid		basic_acid
+					1.25													basic_acid
+
+					14		alfa_acid
+					5			basic_acid									basic_acid
+					1.5		basic_acid		basic_acid										basic_acid
+					4			basic_acid
+					1.5		basic_acid		basic_acid
+					3			basic_acid									basic_acid
+					1.5		basic_acid		basic_acid										basic_acid
+
+
+
+
+
+#	40.75
+
+#	WAVE 10
+a	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian
+#	cant.					0	0	0	0		0	0	0	0		0	18	0	0		9
+#	gold	540				0	0	0	0		0	0	0	0		0	270	0	0		270
+	wave		10		30
+					1																		basic_storm
+					1.5																	basic_storm
+					1.5																			basic_storm
+					1.5																		basic_storm
+					5												tanky_draconian
+					1														tanky_draconian
+					2.5													tanky_draconian
+					5																	basic_storm
+					0.75																			basic_storm
+					0.75													tanky_draconian				basic_storm
+					0.75																			basic_storm
+					0.75																	basic_storm
+					0.75																			basic_storm
+					7														tanky_draconian
+					2												tanky_draconian
+					2														tanky_draconian
+					3																	basic_storm		basic_storm
+					1												tanky_draconian						basic_storm	basic_storm
+					1.5														tanky_draconian			basic_storm		basic_storm
+					1																	basic_storm	basic_storm
+
+
+#	40.25
+#	WAVE 11
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian
+#	cant.					6	0	0	8		0	1	0	0		0	0	0	0		10
+#	gold	494				48	0	0	56		0	90	0	0		0	0	0	0		300
+	wave		11		30
+					1												basic_acid		basic_acid
+					2			tanky_draconian
+					3												basic_acid		basic_acid
+					2			tanky_draconian															alfa_acid
+					6		tanky_draconian
+					1.5				tanky_draconian
+					3		tanky_draconian
+					1.5				tanky_draconian
+					10																	basic_lava
+					1.5																			basic_lava
+					1.5																	basic_lava
+					1.25																			basic_lava
+					1.25																	basic_lava		basic_lava
+					9		tanky_draconian											basic_acid
+					2				tanky_draconian									basic_acid
+					2		tanky_draconian											basic_acid
+					2				tanky_draconian									basic_acid
+
+
+
+
+
+
+
+
+
+#	50.5
+
+#	WAVE 12
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian
+#	cant.					0	0	0	18		0	2	0	0		0	16	0	0		5
+#	gold	696				0	0	0	126		0	180	0	0		0	240	0	0		150
+	wave		12		28
+					1							alfa_acid
+					5			tanky_draconian
+					2		basic_acid		basic_acid
+					2			basic_acid
+					2		basic_acid		basic_acid
+					6				basic_acid													basic_storm		basic_storm
+					1.5			basic_acid														basic_storm		basic_storm
+					1.5		basic_acid															basic_storm		basic_storm
+					1.5				basic_acid													basic_storm		basic_storm
+					8									alfa_acid
+					3		tanky_draconian
+					1.5			tanky_draconian
+					3				tanky_draconian
+					1.5			tanky_draconian
+					3		basic_acid		basic_acid													basic_storm		basic_storm
+					1.5			basic_acid				basic_acid		basic_acid								basic_storm		basic_storm
+					1.5				basic_acid				basic_acid									basic_storm		basic_storm
+					1.5		basic_acid							basic_acid								basic_storm		basic_storm
+
+
+#	47
+
+
+#	WAVE 13
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian
+#	cant.					28	0	0	0		0	0	0	0		0	0	0	0		12
+#	gold	584				224	0	0	0		0	0	0	0		0	0	0	0		360
+	wave		13		35
+					0.77		basic_lava							basic_lava
+					0.77			basic_lava						basic_lava
+					0.77		basic_lava							basic_lava
+					3		basic_lava	basic_lava
+					0.77			basic_lava	basic_lava
+					0.77		basic_lava		basic_lava
+					5		tanky_draconian
+					2														tanky_draconian
+					1.5		tanky_draconian
+					2														tanky_draconian
+					1.5		tanky_draconian
+					2														tanky_draconian
+					7		basic_lava							basic_lava
+					0.77		basic_lava	basic_lava
+					0.77								basic_lava	basic_lava
+					0.77		basic_lava							basic_lava
+					4								basic_lava	basic_lava
+					0.77		basic_lava						basic_lava
+					0.77		basic_lava							basic_lava
+					0.77			basic_lava						basic_lava
+					1.5		tanky_draconian
+					1.5														tanky_draconian
+					2.5		tanky_draconian
+					1.5														tanky_draconian
+					1.5		tanky_draconian												tanky_draconian
+
+#	44.97
+
+
+#	WAVE 14
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian
+#	cant.					0	0	0	26		0	2	0	0		0	21	0	0		0
+#	gold	677				0	0	0	182		0	180	0	0		0	315	0	0		0
+	wave		14		25
+					1		basic_acid												basic_acid
+					1		basic_acid												basic_acid
+					1		basic_acid												basic_acid
+					3							basic_storm												basic_storm
+					1		basic_acid																	basic_storm
+					1							basic_storm
+					1			basic_acid																basic_storm
+					1							basic_storm												basic_storm
+					6		alfa_acid
+					2			basic_acid											alfa_acid
+					4							basic_storm		basic_storm
+					1																	basic_storm		basic_storm
+					1							basic_storm		basic_storm
+					1																	basic_storm		basic_storm
+					3			basic_acid
+					1												basic_acid
+					1.5			basic_acid															basic_acid
+					1														basic_acid
+					4													basic_acid
+					1		basic_acid		basic_acid
+					1.5													basic_acid
+					1		basic_acid		basic_acid
+					5								basic_storm
+					1																	basic_acid		basic_acid
+					2								basic_storm
+					1																	basic_acid		basic_acid
+					3																		basic_acid
+					1							basic_storm		basic_storm
+					1.5																	basic_acid
+					1							basic_storm		basic_storm
+#	54.5
+#	WAVE 15
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian
+#	cant.					0	0	0	16		0	3	0	0		0	0	0	0		11
+#	gold	712				0	0	0	112		0	270	0	0		0	0	0	0		330
+	wave		15		20
+					1							tanky_draconian		tanky_draconian
+					1
+					2.5							tanky_draconian		tanky_draconian
+					1
+					3.5																	tanky_draconian		tanky_draconian
+					1												basic_acid		basic_acid
+					2.5																		tanky_draconian
+					1												basic_acid		basic_acid
+					5		alfa_acid
+					4									tanky_draconian
+					1.5				basic_acid
+					3							tanky_draconian
+					1.5		basic_acid		basic_acid
+					4																		alfa_acid
+					3																	tanky_draconian
+					1.5												basic_acid
+					3																		tanky_draconian
+					1.5														basic_acid
+					10								alfa_acid
+					5		basic_acid
+					1.25								basic_acid						basic_acid
+					3				basic_acid
+					1.25								basic_acid				basic_acid
+					3		basic_acid
+
+
+#	65

@@ -2618,6 +2618,46 @@ return {
 			iron = {}
 
 		},
+		[136] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[137] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[138] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[139] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
+		[140] = {
+			upgrades = {
+				heroe = true,
+				level = 5
+			},
+			iron = {}
+
+		},
 		-- 额外
 		[1001] = {
 			upgrades = {

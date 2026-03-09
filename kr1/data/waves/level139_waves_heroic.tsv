@@ -1,0 +1,196 @@
+#	COMANDOS					1	izq > izq				2	arriba > izq				3	arriba > der				4	med > der				5	abajo > der				6	abajo > abajo der				7	abajo > abajo izq		
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3
+#	level properties																																						
+	description	rodri																																					
+	lives	1																																					
+	gold	2600																																					
+	gems	150																																					
+	enemy_prefix	enemy_																																					
+	default_increment	1																																					
+	default_interval	20																																					
+#	expected gold																																						
+#	stage total gold	5799																																					
+#	stage gold curve																																						
+#	WAVE 1																																						
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm	miniboss_stage_39																
+#	cant.					9	0	0	0		0	0	10	0		0	0	0	0		4	1	0																
+#	gold	382				72	0	0	0		0	0	100	0		0	0	0	0		120	90	0																
+	wave		1		-1																																		
+					0.5																							basic_lava											
+					2.5																											basic_shadow							
+					2																								basic_lava										
+					1.25																												basic_shadow						
+					2																						basic_lava												
+					4																											basic_shadow							
+					2																								basic_lava										
+					1.35													executioner_storm															basic_shadow						
+					2																							basic_lava						basic_shadow					
+					6												tanky_draconian		tanky_draconian																				
+					3												tanky_draconian		tanky_draconian																				
+					10																						basic_lava												
+					2																							basic_lava	basic_lava										
+					1.9																						basic_lava						basic_shadow						
+					2																								basic_lava			basic_shadow							
+					3																													basic_shadow					
+					1.5																												basic_shadow						
+					2																											basic_shadow							
+																																							
+																																							
+																																							
+#	49																																						
+#	WAVE 2																																						
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm	miniboss_stage_39																
+#	cant.					6	0	0	0		0	0	0	0		0	6	0	0		3	2	0																
+#	gold	408				48	0	0	0		0	0	0	0		0	90	0	0		90	180	0																
+	wave		2		23																																		
+					1			basic_lava																															
+					2				basic_lava																														
+					1		basic_lava																																
+																																							
+					4								basic_storm																										
+					3							basic_storm																											
+					3									basic_storm																									
+					3							executioner_storm																											
+					3									executioner_storm																									
+					8								basic_storm																									tanky_draconian	
+					5							basic_storm																											tanky_draconian
+					5									basic_storm																							tanky_draconian		
+																																							
+					7			basic_lava																															
+					2		basic_lava																																
+					1.5				basic_lava																														
+																																							
+																																							
+																																							
+																																							
+																																							
+																																							
+																																							
+#	48.5																																						
+																																							
+#	WAVE 3																																						
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm	miniboss_stage_39																
+#	cant.					12	0	1	12		0	0	0	0		0	0	0	0		0	3	0																
+#	gold	530				96	0	80	84		0	0	0	0		0	0	0	0		0	270	0																
+	wave		3		30																																		
+					1									basic_lava																									
+					2								basic_lava																										
+					1.5							basic_lava																											
+					1.25							basic_lava																											
+					1.5									basic_lava																									
+					4			alfa_lava																															
+					7								basic_lava																										
+					1							basic_lava																											
+					1									basic_lava																									
+					5								basic_lava																										
+					2									basic_lava				executioner_storm																					
+					1.5							basic_lava	basic_lava																										
+					5														executioner_storm																				
+					2												executioner_storm																						
+					8													basic_acid																					
+					1														basic_acid																				
+					2												basic_acid																						
+					1													basic_acid																					
+					1.5													basic_acid	basic_acid																				
+					1.5												basic_acid		basic_acid																				
+					1													basic_acid																					
+					1.25												basic_acid																						
+					1													basic_acid	basic_acid																				
+																																							
+#	54																																						
+#	WAVE 4																																						
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm	miniboss_stage_39																
+#	cant.					8	0	0	0		0	0	8	0		0	0	0	0		6	2	0																
+#	gold	504				64	0	0	0		0	0	80	0		0	0	0	0		180	180	0																
+	wave		4		40																																		
+					1																		tanky_draconian																
+					2.5																	tanky_draconian																	
+					2.5																			tanky_draconian															
+																																							
+					5																							basic_lava											
+					1.5																							basic_lava											
+					3.5																						basic_lava		basic_lava										
+					1.5																						basic_lava		basic_lava										
+					3																							basic_lava											
+					1.5													executioner_storm										basic_lava											
+					1																																		
+					7												basic_shadow																						
+					2														basic_shadow																				
+					1.5												basic_shadow																						
+					1.5														basic_shadow																				
+					2													executioner_storm																					
+					8												basic_shadow																tanky_draconian						
+					2														basic_shadow																				
+					3												basic_shadow															tanky_draconian							
+					2														basic_shadow																				
+					3																													tanky_draconian					
+																																							
+																																							
+																																							
+#	55																																						
+#	WAVE 5																																						
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm	miniboss_stage_39																
+#	cant.					0	0	0	0		0	0	0	0		0	14	0	2		0	2	0																
+#	gold	490				0	0	0	0		0	0	0	0		0	210	0	100		0	180	0																
+	wave		5		17																																		
+					1									executioner_storm																									
+																																							
+					3																																	basic_storm	
+					2.5																																		basic_storm
+					3							executioner_storm																									basic_storm		
+					2.2																																basic_storm		
+					2.8																																	basic_storm	
+					3								alfa_storm																										
+																																							
+					4.5			alfa_storm																															
+					7																																		basic_storm
+					2.5																																basic_storm		
+					3																																	basic_storm	
+					2																																basic_storm		
+					7																																basic_storm		
+					2.5																																	basic_storm	
+					3.1																																basic_storm		
+					2.4																																		basic_storm
+					1.5																																	basic_storm	
+																																							
+																																							
+																																							
+																																							
+																																							
+																																							
+#	53																																						
+#	WAVE 6				1																																		
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm	miniboss_stage_39																
+#	cant.					7	0	1	17		0	0	0	0		0	0	0	0		6	5	0																
+#	gold	885				56	0	80	119		0	0	0	0		0	0	0	0		180	450	0																
+	wave		6		16																																		
+					1			alfa_lava																															
+					5								basic_lava																										
+					1							basic_lava																											
+					1									basic_lava																									
+					1.2							basic_lava	basic_lava																										
+					1									basic_lava																									
+					0.8								basic_lava																										
+					6																																executioner_storm		
+					2																																		executioner_storm
+					4.5																											tanky_draconian							
+					2.5																													tanky_draconian					
+					2																												tanky_draconian						
+					7													executioner_storm																					
+					3																							executioner_storm											
+					3																						basic_acid												
+					1.5																								basic_acid										
+					1																								basic_acid										
+					1																						basic_acid												
+					6			executioner_storm										basic_acid																					
+					1.25														basic_acid																				
+					1.25													basic_acid																					
+					4				tanky_draconian								basic_acid					basic_acid																	
+					1.25																		basic_acid																
+					1.25		tanky_draconian												basic_acid					basic_acid															
+					4				tanky_draconian								basic_acid					basic_acid																	
+					1.25																		basic_acid																
+					1.25													basic_acid						basic_acid															
+																																							
+																																							
+#	66																																						

@@ -1,0 +1,986 @@
+﻿-- chunkname: @./kr5/data/levels/level37_data.lua
+
+return {
+	locked_hero = false,
+	level_terrain_type = 5,
+	max_upgrade_level = 5,
+	custom_spawn_pos = {
+		{
+			pos = {
+				x = -61,
+				y = 555
+			}
+		},
+		{
+			pos = {
+				x = -70,
+				y = 296
+			}
+		}
+	},
+	custom_start_pos = {
+		zoom = 1,
+		pos = {
+			x = 373,
+			y = 380
+		}
+	},
+	entities_list = {
+		{
+			template = "controller_stage_37_dragon_boss",
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			template = "debug_path_renderer",
+			["path_debug.background_color"] = {
+				46,
+				193,
+				142,
+				0
+			},
+			["path_debug.path_color"] = {
+				168,
+				199,
+				169,
+				0
+			},
+			pos = {
+				x = -300,
+				y = 868
+			}
+		},
+		{
+			template = "decal_background",
+			["render.sprites[1].z"] = 1000,
+			["render.sprites[1].name"] = "Stage37_0001",
+			pos = {
+				x = 512,
+				y = 384
+			},
+			["render.sprites[1].scale"] = {
+				x = 6,
+				y = 6
+			}
+		},
+		{
+			["editor.flip"] = 0,
+			["editor.orientation"] = 1,
+			template = "decal_defend_point5",
+			["editor.exit_id"] = 1,
+			["editor.alpha"] = 10,
+			pos = {
+				x = -70,
+				y = 296
+			}
+		},
+		{
+			["editor.flip"] = 0,
+			["editor.orientation"] = 1,
+			template = "decal_defend_point5",
+			["editor.exit_id"] = 1,
+			["editor.alpha"] = 10,
+			pos = {
+				x = -61,
+				y = 555
+			}
+		},
+		{
+			["editor.flip"] = -1,
+			template = "decal_defense_flag5",
+			pos = {
+				x = -74,
+				y = 237
+			}
+		},
+		{
+			["editor.flip"] = 0,
+			template = "decal_defense_flag5",
+			pos = {
+				x = -74,
+				y = 348
+			}
+		},
+		{
+			["editor.flip"] = 0,
+			template = "decal_defense_flag5",
+			pos = {
+				x = -60,
+				y = 497
+			}
+		},
+		{
+			["editor.flip"] = 0,
+			template = "decal_defense_flag5",
+			pos = {
+				x = -61,
+				y = 602
+			}
+		},
+		{
+			template = "decal_stage_37_bridge",
+			pos = {
+				x = 486,
+				y = 323
+			}
+		},
+		{
+			template = "decal_stage_37_easter_daenerys",
+			["editor.game_mode"] = 1,
+			pos = {
+				x = 398,
+				y = 514
+			}
+		},
+		{
+			template = "decal_stage_37_easter_egg_how_to_train_dragon",
+			["editor.game_mode"] = 1,
+			pos = {
+				x = 822,
+				y = 676
+			}
+		},
+		{
+			template = "decal_stage_37_fires_exo",
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			template = "decal_stage_37_layer01",
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			template = "decal_stage_37_layer02",
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			template = "decal_stage_37_mask_01",
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			template = "decal_stage_37_mask_02",
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			template = "decal_stage_37_mask_03",
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			template = "decal_stage_37_mask_04",
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			template = "decal_stage_37_mask_05",
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			template = "decal_stage_37_mask_islas",
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			template = "decal_stage_37_tall_tower_left",
+			pos = {
+				x = 342,
+				y = 557
+			}
+		},
+		{
+			template = "decal_stage_37_tall_tower_mid",
+			pos = {
+				x = 623,
+				y = 383
+			}
+		},
+		{
+			template = "decal_stage_37_tall_tower_right",
+			pos = {
+				x = 1053,
+				y = 244
+			}
+		},
+		{
+			["editor.r"] = -5.2010811709432,
+			["editor.path_id"] = 3,
+			template = "editor_wave_flag",
+			["editor.len"] = 145,
+			pos = {
+				x = 1081,
+				y = 519
+			}
+		},
+		{
+			["editor.r"] = -5.2010811709432,
+			["editor.path_id"] = 4,
+			template = "editor_wave_flag",
+			["editor.len"] = 145,
+			pos = {
+				x = 1042,
+				y = 534
+			}
+		},
+		{
+			["editor.r"] = -5.2010811709432,
+			["editor.path_id"] = 2,
+			template = "editor_wave_flag",
+			["editor.len"] = 145,
+			pos = {
+				x = 1075,
+				y = 561
+			}
+		},
+		{
+			["editor.r"] = -5.1661745859033,
+			["editor.path_id"] = 1,
+			template = "editor_wave_flag",
+			["editor.len"] = 145,
+			pos = {
+				x = 644,
+				y = 655
+			}
+		},
+		{
+			["tower.holder_id"] = "64",
+			["ui.nav_mesh_id"] = "64",
+			template = "stage_37_barrack_dragon_wardens",
+			["editor.game_mode"] = 1,
+			pos = {
+				x = 555,
+				y = 300
+			},
+			["tower.default_rally_pos"] = {
+				x = 755,
+				y = 163
+			}
+		},
+		{
+			["tower.holder_id"] = "62",
+			["ui.nav_mesh_id"] = "62",
+			template = "stage_37_barrack_dragon_wardens",
+			["editor.game_mode"] = 1,
+			pos = {
+				x = 301,
+				y = 507
+			},
+			["tower.default_rally_pos"] = {
+				x = 227,
+				y = 439
+			}
+		},
+		{
+			["tower.holder_id"] = "62",
+			["ui.nav_mesh_id"] = "62",
+			template = "stage_37_barrack_dragon_wardens",
+			["editor.game_mode"] = 2,
+			pos = {
+				x = 301,
+				y = 507
+			},
+			["tower.default_rally_pos"] = {
+				x = 227,
+				y = 439
+			}
+		},
+		{
+			template = "stage_37_paths_controller",
+			pos = {
+				x = 512,
+				y = 384
+			}
+		},
+		{
+			["tower.holder_id"] = "9",
+			["ui.nav_mesh_id"] = "9",
+			template = "tower_dragons_warden",
+			["editor.game_mode"] = 1,
+			pos = {
+				x = 475,
+				y = 204
+			},
+			["tower.default_rally_pos"] = {
+				x = 429,
+				y = 402
+			}
+		},
+		{
+			["tower.holder_id"] = "49",
+			["ui.nav_mesh_id"] = "49",
+			template = "tower_dragons_warden",
+			["editor.game_mode"] = 3,
+			pos = {
+				x = 475,
+				y = 204
+			},
+			["tower.default_rally_pos"] = {
+				x = 429,
+				y = 402
+			}
+		},
+		{
+			["tower.holder_id"] = "8",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 1,
+			["ui.nav_mesh_id"] = "8",
+			pos = {
+				x = 646,
+				y = 156
+			},
+			["tower.default_rally_pos"] = {
+				x = 728,
+				y = 123
+			}
+		},
+		{
+			["tower.holder_id"] = "28",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 2,
+			["ui.nav_mesh_id"] = "28",
+			pos = {
+				x = 646,
+				y = 156
+			},
+			["tower.default_rally_pos"] = {
+				x = 728,
+				y = 123
+			}
+		},
+		{
+			["tower.holder_id"] = "48",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 3,
+			["ui.nav_mesh_id"] = "48",
+			pos = {
+				x = 646,
+				y = 156
+			},
+			["tower.default_rally_pos"] = {
+				x = 728,
+				y = 123
+			}
+		},
+		{
+			["tower.holder_id"] = "1",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 1,
+			["ui.nav_mesh_id"] = "1",
+			pos = {
+				x = 62,
+				y = 207
+			},
+			["tower.default_rally_pos"] = {
+				x = 62,
+				y = 301
+			}
+		},
+		{
+			["tower.holder_id"] = "21",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 2,
+			["ui.nav_mesh_id"] = "21",
+			pos = {
+				x = 62,
+				y = 207
+			},
+			["tower.default_rally_pos"] = {
+				x = 62,
+				y = 301
+			}
+		},
+		{
+			["tower.holder_id"] = "41",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 3,
+			["ui.nav_mesh_id"] = "41",
+			pos = {
+				x = 62,
+				y = 207
+			},
+			["tower.default_rally_pos"] = {
+				x = 62,
+				y = 301
+			}
+		},
+		{
+			["tower.holder_id"] = "7",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 1,
+			["ui.nav_mesh_id"] = "7",
+			pos = {
+				x = 752,
+				y = 240
+			},
+			["tower.default_rally_pos"] = {
+				x = 819,
+				y = 198
+			}
+		},
+		{
+			["tower.holder_id"] = "27",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 2,
+			["ui.nav_mesh_id"] = "27",
+			pos = {
+				x = 752,
+				y = 240
+			},
+			["tower.default_rally_pos"] = {
+				x = 819,
+				y = 198
+			}
+		},
+		{
+			["tower.holder_id"] = "47",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 3,
+			["ui.nav_mesh_id"] = "47",
+			pos = {
+				x = 752,
+				y = 240
+			},
+			["tower.default_rally_pos"] = {
+				x = 819,
+				y = 198
+			}
+		},
+		{
+			["tower.holder_id"] = "10",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 1,
+			["ui.nav_mesh_id"] = "10",
+			pos = {
+				x = 295,
+				y = 308
+			},
+			["tower.default_rally_pos"] = {
+				x = 316,
+				y = 390
+			}
+		},
+		{
+			["tower.holder_id"] = "30",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 2,
+			["ui.nav_mesh_id"] = "30",
+			pos = {
+				x = 295,
+				y = 308
+			},
+			["tower.default_rally_pos"] = {
+				x = 316,
+				y = 390
+			}
+		},
+		{
+			["tower.holder_id"] = "50",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 3,
+			["ui.nav_mesh_id"] = "50",
+			pos = {
+				x = 295,
+				y = 308
+			},
+			["tower.default_rally_pos"] = {
+				x = 316,
+				y = 390
+			}
+		},
+		{
+			["tower.holder_id"] = "2",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 1,
+			["ui.nav_mesh_id"] = "2",
+			pos = {
+				x = 146,
+				y = 374
+			},
+			["tower.default_rally_pos"] = {
+				x = 144,
+				y = 299
+			}
+		},
+		{
+			["tower.holder_id"] = "22",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 2,
+			["ui.nav_mesh_id"] = "22",
+			pos = {
+				x = 146,
+				y = 374
+			},
+			["tower.default_rally_pos"] = {
+				x = 144,
+				y = 299
+			}
+		},
+		{
+			["tower.holder_id"] = "42",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 3,
+			["ui.nav_mesh_id"] = "42",
+			pos = {
+				x = 146,
+				y = 374
+			},
+			["tower.default_rally_pos"] = {
+				x = 144,
+				y = 299
+			}
+		},
+		{
+			["tower.holder_id"] = "5",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 1,
+			["ui.nav_mesh_id"] = "5",
+			pos = {
+				x = 740,
+				y = 427
+			},
+			["tower.default_rally_pos"] = {
+				x = 769,
+				y = 375
+			}
+		},
+		{
+			["tower.holder_id"] = "25",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 2,
+			["ui.nav_mesh_id"] = "25",
+			pos = {
+				x = 740,
+				y = 427
+			},
+			["tower.default_rally_pos"] = {
+				x = 769,
+				y = 375
+			}
+		},
+		{
+			["tower.holder_id"] = "45",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 3,
+			["ui.nav_mesh_id"] = "45",
+			pos = {
+				x = 740,
+				y = 427
+			},
+			["tower.default_rally_pos"] = {
+				x = 769,
+				y = 375
+			}
+		},
+		{
+			["tower.holder_id"] = "6",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 1,
+			["ui.nav_mesh_id"] = "6",
+			pos = {
+				x = 927,
+				y = 467
+			},
+			["tower.default_rally_pos"] = {
+				x = 1000,
+				y = 430
+			}
+		},
+		{
+			["tower.holder_id"] = "26",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 2,
+			["ui.nav_mesh_id"] = "26",
+			pos = {
+				x = 927,
+				y = 467
+			},
+			["tower.default_rally_pos"] = {
+				x = 1000,
+				y = 430
+			}
+		},
+		{
+			["tower.holder_id"] = "46",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 3,
+			["ui.nav_mesh_id"] = "46",
+			pos = {
+				x = 927,
+				y = 467
+			},
+			["tower.default_rally_pos"] = {
+				x = 1000,
+				y = 430
+			}
+		},
+		{
+			["tower.holder_id"] = "4",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 1,
+			["ui.nav_mesh_id"] = "4",
+			pos = {
+				x = 498,
+				y = 577
+			},
+			["tower.default_rally_pos"] = {
+				x = 578,
+				y = 537
+			}
+		},
+		{
+			["tower.holder_id"] = "24",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 2,
+			["ui.nav_mesh_id"] = "24",
+			pos = {
+				x = 498,
+				y = 577
+			},
+			["tower.default_rally_pos"] = {
+				x = 578,
+				y = 537
+			}
+		},
+		{
+			["tower.holder_id"] = "44",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 3,
+			["ui.nav_mesh_id"] = "44",
+			pos = {
+				x = 498,
+				y = 577
+			},
+			["tower.default_rally_pos"] = {
+				x = 578,
+				y = 537
+			}
+		},
+		{
+			["tower.holder_id"] = "3",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 1,
+			["ui.nav_mesh_id"] = "3",
+			pos = {
+				x = 112,
+				y = 579
+			},
+			["tower.default_rally_pos"] = {
+				x = 75,
+				y = 507
+			}
+		},
+		{
+			["tower.holder_id"] = "23",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 2,
+			["ui.nav_mesh_id"] = "23",
+			pos = {
+				x = 112,
+				y = 579
+			},
+			["tower.default_rally_pos"] = {
+				x = 75,
+				y = 507
+			}
+		},
+		{
+			["tower.holder_id"] = "43",
+			["tower.terrain_style"] = 36,
+			template = "tower_holder_sea_of_trees_17",
+			["editor.game_mode"] = 3,
+			["ui.nav_mesh_id"] = "43",
+			pos = {
+				x = 112,
+				y = 579
+			},
+			["tower.default_rally_pos"] = {
+				x = 75,
+				y = 507
+			}
+		},
+		{
+			["tunnel.name"] = "1",
+			template = "tunnel_KR5",
+			["tunnel.place_pi"] = 5,
+			["tunnel.pick_ni"] = 133,
+			["tunnel.pick_pi"] = 2,
+			pos = {
+				x = 669,
+				y = -33
+			}
+		}
+	},
+	ignore_walk_backwards_paths = {},
+	invalid_path_ranges = {},
+	level_mode_overrides = {
+		{
+			max_upgrade_level = 5,
+			locked_powers = {},
+			locked_towers = {}
+		},
+		{
+			nav_mesh = {
+				[21] = {
+					30,
+					22
+				},
+				[22] = {
+					30,
+					23,
+					nil,
+					21
+				},
+				[23] = {
+					24,
+					nil,
+					nil,
+					22
+				},
+				[24] = {
+					25,
+					nil,
+					23,
+					25
+				},
+				[25] = {
+					26,
+					24,
+					30,
+					27
+				},
+				[26] = {
+					[3] = 25,
+					[4] = 27
+				},
+				[27] = {
+					26,
+					25,
+					28,
+					28
+				},
+				[28] = {
+					27,
+					nil,
+					30
+				},
+				[30] = {
+					28,
+					24,
+					22,
+					21
+				},
+				[62] = {}
+			}
+		},
+		{
+			available_towers = {
+				"tower_build_necromancer",
+				"tower_build_dragons"
+			},
+			locked_towers = {
+				"tower_build_hermit_toad",
+				"tower_build_ballista",
+				"tower_build_paladin_covenant",
+				"tower_build_tricannon",
+				"tower_build_arborean_emissary",
+				"tower_build_rocket_gunners",
+				"tower_build_arcane_wizard",
+				"tower_build_barrel",
+				"tower_build_royal_archers",
+				"tower_build_ghost",
+				"tower_build_ray",
+				"tower_build_elven_stargazer",
+				"tower_build_sand"
+			},
+			nav_mesh = {
+				[41] = {
+					50,
+					42
+				},
+				[42] = {
+					50,
+					43,
+					nil,
+					41
+				},
+				[43] = {
+					44,
+					nil,
+					nil,
+					42
+				},
+				[44] = {
+					45,
+					nil,
+					43,
+					49
+				},
+				[45] = {
+					46,
+					nil,
+					44,
+					47
+				},
+				[46] = {
+					[3] = 45,
+					[4] = 47
+				},
+				[47] = {
+					46,
+					45,
+					49,
+					48
+				},
+				[48] = {
+					47,
+					45,
+					49
+				},
+				[49] = {
+					48,
+					44,
+					50
+				},
+				[50] = {
+					45,
+					43,
+					41,
+					49
+				}
+			}
+		}
+	},
+	nav_mesh = {
+		{
+			10,
+			2
+		},
+		{
+			10,
+			3,
+			nil,
+			1
+		},
+		{
+			4,
+			nil,
+			nil,
+			2
+		},
+		{
+			5,
+			nil,
+			3,
+			9
+		},
+		{
+			6,
+			4,
+			nil,
+			7
+		},
+		{
+			[3] = 5,
+			[4] = 7
+		},
+		{
+			6,
+			5,
+			9,
+			8
+		},
+		{
+			7,
+			5,
+			9
+		},
+		{
+			8,
+			4,
+			10
+		},
+		{
+			7,
+			nil,
+			1,
+			9
+		},
+		[62] = {},
+		[64] = {}
+	},
+	required_exoskeletons = {
+		"mecanica_camino_2_stage_2Def",
+		"fuego_fx_stage2_fire1Def",
+		"fuego_fx_stage2_fire2Def",
+		"fuego_fx_stage2_fire3Def",
+		"fuego_fx_stage2_fire6Def",
+		"fuego_fx_stage2_fire7Def",
+		"daenerys_easter_eggDef"
+	},
+	required_sounds = {
+		"enemies_terrain_dragons_1",
+		"music_stage137",
+		"stage_137"
+	},
+	required_textures = {
+
+	},
+	scale_required_textures = {
+		"go_stage137_bg",
+		"go_stage137",
+		--"go_stages_terrain9",
+		"go_enemies_terrain_9_1",
+		"go_enemies_terrain_9_2",
+		"go_towers_dragons"
+	}
+}

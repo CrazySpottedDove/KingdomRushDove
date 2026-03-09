@@ -1,0 +1,645 @@
+#	COMANDOS					1	izq > izq				2	arriba > izq				3	arriba > der				4	med > der				5	abajo > der				6	abajo > abajo der				7	abajo > abajo izq				8	SPWN 1				9	SPWN 2				10	TO P9				11	SPWN 3				12	TO P11				13	SPWN 4				14	SPWN 5				15	TO P14				16	TO PATH 6				17	SPWN 6				18					19	med > der				20	med > der				21	med > der				22	med > der		
+	column_names				inc	1:*	1:2	1:1	1:3		2:*	2:2	2:1	2:3		3:*	3:2	3:1	3:3		4:*	4:2	4:1	4:3		5:*	5:2	5:1	5:3		6:*	6:2	6:1	6:3		7:*	7:2	7:1	7:3		8:*	8:2	8:1	8:3		9:*	9:2	9:1	9:3		10:*	10:2	10:1	10:3		11:*	11:2	11:1	11:3		12:*	12:2	12:1	12:3		13:*	13:2	13:1	13:3		14:*	14:2	14:1	14:3		15:*	15:2	15:1	15:3		16:*	16:2	16:1	16:3		17:*	17:2	17:1	17:3		18:*	18:2	18:1	18:3		19:*	19:2	19:1	19:3		20:*	20:2	20:1	20:3		21:*	21:2	21:1	21:3		22:*	22:2	22:1	22:3
+#	level properties																																																																																																																	
+	description	gerson																																																																																																																
+	lives	20																																																																																																																
+	gold	1200																																																																																																																
+	gems	150																																																																																																																
+	enemy_prefix	enemy_																																																																																																																
+	default_increment	1																																																																																																																
+	default_interval	20																																																																																																																
+#	expected gold																																																																																																																	
+#	stage total gold	7255		BF p1 1000+																																																																																																														
+#	stage gold curve																																																																																																																	
+#	WAVE 1																																																																																																																	
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm																																																																																												
+#	cant.					18	0	1	0		0	0	0	0		0	0	0	0		0	0																																																																																												
+#	gold	224				144	0	80	0		0	0	0	0		0	0	0	0		0	0																																																																																												
+	wave		1		-1																																																																																																													
+																																																																																																																		
+					1																	basic_lava																																																																																												
+					3													alfa_lava						basic_lava																																																																																										
+					2																		basic_lava																																																																																											
+					2																	basic_lava																																																																																												
+					1.5																			basic_lava																																																																																										
+					5																	basic_lava																																																																																												
+					1.25																		basic_lava																																																																																											
+					2																			basic_lava																																																																																										
+					1.5																			basic_lava																																																																																										
+					2													basic_lava				basic_lava																																																																																												
+					1.75												basic_lava						basic_lava																																																																																											
+					9														basic_lava			basic_lava																																																																																												
+					2													basic_lava					basic_lava																																																																																											
+					2																			basic_lava																																																																																										
+					3																																																																																																													
+																																																																																																																		
+																																																																																																																		
+																																																																																																																		
+#	39																																																																																																																	
+#	WAVE 2																																																																																																																	
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm																																																																					tanky_draconian					tanky_draconian					tanky_draconian					tanky_draconian					tanky_draconian			
+#	cant.					12	0	0	0		0	0	0	0		0	10	0	0		0	0																																																																					0					0					0					0					0			
+#	gold	246				96	0	0	0		0	0	0	0		0	150	0	0		0	0																																																																					0					0					0					0					0			
+	wave		2		30																																																																																																													
+																																																																																																																		
+					1								basic_storm																																																																																																					
+					4							basic_storm																																																																																																						
+					3.5									basic_storm																																																																																																				
+					3							basic_storm																																																																																																						
+					5									basic_storm																																																																																																				
+					3								basic_storm				basic_lava																																																																																																	
+					2.5							basic_storm						basic_lava																																																																																																
+					2.5														basic_lava																																																																																															
+					6								basic_storm				basic_lava																																																																																																	
+					3									basic_storm					basic_lava																																																																																															
+					3							basic_storm																																																																																																						
+																																																																																																																		
+					5														basic_lava																																																																																															
+					2												basic_lava																																																																																																	
+					2													basic_lava																																																																																																
+					1.5												basic_lava																																																																																																	
+					2.5														basic_lava																																																																																															
+					1.5												basic_lava																																																																																																	
+					1													basic_lava																																																																																																
+																																																																																																																		
+																																																																																																																		
+#	52																																																																																																																	
+																																																																																																																		
+#	WAVE 3																																																																																																																	
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm																																																																					tanky_draconian					tanky_draconian					tanky_draconian					tanky_draconian					tanky_draconian			
+#	cant.					0	0	0	0		0	0	0	0		0	13	0	0		5	0																																																																					5					5					5					5					5			
+#	gold	345				0	0	0	0		0	0	0	0		0	195	0	0		150	0																																																																					150					150					150					150					150			
+	wave		3		22																																																																																																													
+					1																			tanky_draconian																																																																																										
+					2													basic_storm																																																																																																
+					3																	tanky_draconian																																																																																												
+					2.5												basic_storm																																																																																																	
+					3													basic_storm																																																																																																
+					5														basic_storm																																																																																															
+					3												basic_storm																																																																																																	
+					3													basic_storm																																																																																																
+					2.5												basic_storm																																																																																																	
+					2														basic_storm																																																																																															
+					5																		tanky_draconian																																																																																											
+					3																	tanky_draconian																																																																																												
+					3																			tanky_draconian																																																																																										
+					4												basic_storm																																																																																																	
+					2													basic_storm																																																																																																
+					3														basic_storm																																																																																															
+					2.5													basic_storm																																																																																																
+					2													basic_storm																																																																																																
+	wait_signal	all_enemies_died			-1																																																																																																													
+	event	activate_spawner	11	active																																																																																																														
+	event	activate_spawner	9	active																																																																																																														
+#	50.5																																																																																																																	
+#	WAVE 4																																																																																																																	
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm																																																																					tanky_draconian					tanky_draconian					tanky_draconian					tanky_draconian					tanky_draconian			
+#	cant.					0	0	0	24		0	2	0	0		0	0	0	0		0	0																																																																					0					0					0					0					0			
+#	gold	348				0	0	0	168		0	180	0	0		0	0	0	0		0	0																																																																					0					0					0					0					0			
+	wave		4		3.5																																																																																																													
+																																																																																																																		
+																																																																																																																		
+																																																																																																																		
+					1																																											basic_acid										basic_acid																																																								
+					1																																												basic_acid																																																																	
+					3.3																																																						basic_acid																																																							
+					2								alfa_acid																																			basic_acid																																																																		
+					4																																										basic_acid																																																																			
+					4																																												basic_acid																																																																	
+					4																																											basic_acid																																																																		
+																																																																																																																		
+					8																																	basic_acid																			basic_acid																																																									
+					2.5																																		basic_acid																			basic_acid																																																								
+					3																																basic_acid																																																																													
+					6																																basic_acid																																																																													
+					3																																		basic_acid																																																																											
+					2																																																				basic_acid																																																									
+					4								alfa_acid																																													basic_acid																																																								
+					3																																																						basic_acid																																																							
+					2																																																				basic_acid																																																									
+																																																																																																																		
+					3																																											basic_acid																																																																		
+#	event	activate_spawner	11	desactive																																																																																																														
+					3																																										basic_acid																																																																			
+					1.5																																												basic_acid																																																																	
+																																																																																																																		
+					3																																										basic_acid																																																																			
+					2.5																																											basic_acid																																																																		
+	wait				2																																																																																																													
+#	event	activate_spawner	9	desactive																																																																																																														
+#	67.8																																																																																																																	
+#	WAVE 5																																																																																																																	
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm																																																																																												
+#	cant.					0	0	0	0		0	0	13	0		2	0	0	0		0	0																																																																																												
+#	gold	160				0	0	0	0		0	0	130	0		30	0	0	0		0	0																																																																																												
+	wave		5		45																																																																																																													
+					1		basic_shadow																																																																																																											
+					5				basic_shadow																																																																																																									
+					3			basic_shadow																																																																																																										
+																																																																																																																		
+																																																																																																																		
+					3								alfa_shadow																																																																																																					
+	wait				2																																																																																																													
+	event	activate_spawner	9	active																																																																																																														
+					5																																												basic_shadow																																																																	
+					2.5																																										basic_shadow																																																																			
+					2																																												basic_shadow																																																																	
+					2.5																																										basic_shadow																																																																			
+					2																																	alfa_shadow																																																																												
+					8			basic_shadow																																																																																																										
+					2		basic_shadow																																																																																																											
+					2				basic_shadow																																																																																																									
+	wait				5																																																																																																													
+					2																																												basic_shadow																																																																	
+					1.5																																											basic_shadow																																																																		
+					1.25																																										basic_shadow																																																																			
+	wait				1.25																																																																																																													
+#	event	activate_spawner	9	desactive																																																																																																														
+#	51																																																																																																																	
+																																																																																																																		
+#	WAVE 6																																																																																																																	
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm																																																																					tanky_draconian					tanky_draconian					tanky_draconian					tanky_draconian					tanky_draconian			
+#	cant.					13	0	1	17		0	1	0	0		0	0	0	0		0	0																																																																					0					0					0					0					0			
+#	gold	393				104	0	80	119		0	90	0	0		0	0	0	0		0	0																																																																					0					0					0					0					0			
+	wave	6			22																																																																																																													
+																																																																																																																		
+																																																																																																																		
+					1			alfa_acid																																																																																																										
+					4				basic_acid									alfa_lava																																																																																																
+	wait				5																																																																																																													
+	event	activate_spawner	8	active																																																																																																														
+					4.5																																						basic_acid																																																																							
+					2		basic_acid																																			basic_acid		basic_acid																																																																						
+	wait				8																																																																																																													
+	event	activate_spawner	11	active																																																																																																														
+					3.5																																					basic_acid															basic_lava																																																									
+					1.5												basic_lava																											basic_acid														basic_lava																																																								
+					2														basic_lava																																								basic_lava																																																							
+#	event	activate_spawner	8	desactive																																																																																																														
+					8.5			basic_acid																				basic_lava																																																																																						
+					2				basic_acid																																																																																																									
+					2																								basic_lava																																																																																					
+	event	activate_spawner	9	active																																																																																																														
+					4																						basic_lava																					basic_acid											basic_lava																																																							
+					2																																										basic_acid											basic_lava																																																								
+					2		basic_acid																																																		basic_lava																																																									
+	wait				2																																																																																																													
+#	event	activate_spawner	11	desactive																																																																																																														
+					4																							basic_lava																					basic_acid																																																																	
+					1.5		basic_acid																																										basic_acid																																																																	
+					1.5				basic_acid																		basic_lava																				basic_acid																																																																			
+	wait				2																																																																																																													
+#	event	activate_spawner	9	desactive																																																																																																														
+																																																																																																																		
+#	61																																																																																																																	
+																																																																																																																		
+#	WAVE 7																																																																																																																	
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm																																																																					tanky_draconian					tanky_draconian					tanky_draconian					tanky_draconian					tanky_draconian			
+#	cant.					0	0	0	0		0	0	0	0		0	19	0	1		0	0																																																																					0					0					0					0					0			
+#	gold	335				0	0	0	0		0	0	0	0		0	285	0	50		0	0																																																																					0					0					0					0					0			
+	wave		7		25																																																																																																													
+					1								basic_storm																																																																																																					
+					1							basic_storm																																																																																																						
+					2									basic_storm																																																																																																				
+					1							basic_storm																																																																																																						
+					1.77							basic_storm		basic_storm																																																																																																				
+					1.5								basic_storm																																																																																																					
+																																																																																																																		
+					3								alfa_storm																																																																																																					
+					6							basic_storm																																																																																																						
+					1.25							basic_storm		basic_storm																																																																																																				
+					2.5								basic_storm																																																																																																					
+					6			basic_storm																																																																																																										
+					1.5		basic_storm																																																																																																											
+					1.25				basic_storm																																																																																																									
+					1.5				basic_storm																																																																																																									
+					4.5		basic_storm																																																																																																											
+					1.5			basic_storm	basic_storm																																																																																																									
+					1		basic_storm																																																																																																											
+																																																																																																																		
+#	38.27																																																																																																																	
+																																																																																																																		
+																																																																																																																		
+#	WAVE 8																																																																																																																	
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm																																																																																												
+#	cant.					0	0	0	23		0	0	0	0		0	6	0	2		0	0																																																																																												
+#	gold	351				0	0	0	161		0	0	0	0		0	90	0	100		0	0																																																																																												
+	wave		8		13																																																																																																													
+					1																												basic_acid																																																																																	
+					3									alfa_storm																		basic_acid																																																																																		
+					1.5																													basic_acid																																																																																
+					3																												basic_acid																																																																																	
+					6								alfa_storm																																																																																																					
+																																																																																																																		
+																																																																																																																		
+					5								basic_storm																																																																																																					
+					2									basic_storm																																																																																																				
+	wait				3																																																																																																													
+	event	activate_spawner	17	active																																																																																																														
+					4							basic_storm																					basic_acid																																																						basic_acid																											
+					2								basic_storm																																																																												basic_acid																									
+					1.7							basic_storm																				basic_acid																																																							basic_acid																											
+					2									basic_storm																				basic_acid																																																						basic_acid																										
+	wait				1																																																																																																													
+	event	activate_spawner	9	active																																																																																																														
+	event	activate_spawner	8	active																																																																																																														
+					4																											basic_acid											basic_acid				basic_acid																																									basic_acid																										
+					2																												basic_acid											basic_acid					basic_acid																																								basic_acid																									
+					1.4																													basic_acid								basic_acid					basic_acid																																								basic_acid																											
+																																																																																																																		
+	wait				1.5																																																																																																													
+#	event	activate_spawner	17	desactive																																																																																																														
+#	event	activate_spawner	9	desactive																																																																																																														
+#	event	activate_spawner	8	desactive																																																																																																														
+#	44.1																																																																																																																	
+#	WAVE 9																																																																																																																	
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm																																																																					tanky_draconian					tanky_draconian					tanky_draconian					tanky_draconian					tanky_draconian			
+#	cant.					0	0	0	0		0	0	0	0		0	14	0	2		0	0																																																																					0					0					0					0					0			
+#	gold	310				0	0	0	0		0	0	0	0		0	210	0	100		0	0																																																																					0					0					0					0					0			
+	wave		9		21																																																																																																													
+					1								alfa_storm																																																																																																					
+					3							basic_storm																																																																																																						
+					1.5									basic_storm																																																																																																				
+					1.5								basic_storm																																																																																																					
+	event	activate_spawner	9	active																																																																																																														
+					5																																												basic_storm																																																																	
+					2																																											basic_storm																																																																		
+					3																																										basic_storm																																																																			
+					1.5																																												basic_storm																																																																	
+					2																																										basic_storm																																																																			
+	wait				2																																																																																																													
+#	event	activate_spawner	9	desactive																																																																																																														
+					8.5			alfa_storm																																																																																																										
+																																																																																																																		
+																																																																																																																		
+	event	activate_spawner	8	active																																																																																																														
+					6																																						basic_storm																																																																							
+					2.5																																							basic_storm																																																																						
+					1.5																																					basic_storm																																																																								
+					6																																					basic_storm																																																																								
+					2.5																																						basic_storm																																																																							
+					1.5																																							basic_storm																																																																						
+	wait				2																																																																																																													
+#	event	activate_spawner	8	desactive																																																																																																														
+#	52																																																																																																																	
+#	WAVE 10																																																																																																																	
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm																																																																					tanky_draconian					tanky_draconian					tanky_draconian					tanky_draconian					tanky_draconian			
+#	cant.					21	0	2	0		0	0	0	0		0	0	0	0		2	0																																																																					2					2					2					2					2			
+#	gold	388				168	0	160	0		0	0	0	0		0	0	0	0		60	0																																																																					60					60					60					60					60			
+	wave		10		33																																																																																																													
+	event	activate_spawner	11	active																																																																																																														
+																																																																																																																		
+					1																		alfa_lava																																																																																											
+					3																																																				basic_lava																																																									
+					2																																																					basic_lava																																																								
+					0.8																																																						basic_lava																																																							
+					1.2																																																						basic_lava																																																							
+					5																																																				basic_lava																																																									
+					2.5																																																						basic_lava																																																							
+					1.5																																																					basic_lava																																																								
+					1																																																						basic_lava																																																							
+					1.5																																																				basic_lava																																																									
+					5																	alfa_lava																																																																																												
+					3																							tanky_draconian																																																																																						
+	event	activate_spawner	14	active																																																																																																														
+					4.5																																																																			basic_lava																																										
+					2.2																						tanky_draconian																														basic_lava																																																									
+					2.5																																																						basic_lava														basic_lava																																									
+					2.2																																																																					basic_lava																																								
+					1.8																																																					basic_lava																																																								
+					9																																																																			basic_lava																																										
+					2																																																																					basic_lava																																								
+					2.5																																																				basic_lava																																																									
+					2																																																					basic_lava														basic_lava																																										
+					2.5																																																																					basic_lava																																								
+	wait				2																																																																																																													
+#	event	activate_spawner	14	desactive																																																																																																														
+#	event	activate_spawner	11	desactive																																																																																																														
+																																																																																																																		
+																																																																																																																		
+																																																																																																																		
+																																																																																																																		
+#	60.7																																																																																																																	
+																																																																																																																		
+#	WAVE 11																																																																																																																	
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm																																																																																												
+#	cant.					7	0	0	0		0	0	0	0		0	0	0	0		18	0																																																																																												
+#	gold	596				56	0	0	0		0	0	0	0		0	0	0	0		540	0																																																																																												
+	wave		11		24																																																																																																													
+					0.5																						basic_lava																																																																																							
+					1.7																								basic_lava																																																																																					
+					1.5																						basic_lava																																																																																							
+					1.5																							basic_lava																																																																																						
+					1.5																								basic_lava																																																																																					
+					1																								basic_lava																																																																																					
+					1																						basic_lava																																																																																							
+	event	activate_spawner	14	active																																																																																																														
+	event	activate_spawner	17	active																																																																																																														
+	wait				2																																																																																																													
+					3																												tanky_draconian																																								tanky_draconian															tanky_draconian																										
+	event	activate_spawner	11	active																																																																																																														
+					4																													tanky_draconian																								tanky_draconian																																																								
+	wait				2																																																																																																													
+	event	activate_spawner	8	active																																																																																																														
+	event	activate_spawner	9	active																																																																																																														
+					4.5																																						tanky_draconian					tanky_draconian																																																																		
+	wait				2																																																																																																													
+	event	activate_spawner	13	active																																																																																																														
+					4.5																																tanky_draconian																														tanky_draconian																						tanky_draconian																									
+					5.5																											tanky_draconian															tanky_draconian										tanky_draconian																																																									
+					6																																							tanky_draconian					tanky_draconian																									tanky_draconian																																								
+					6																																		tanky_draconian																														tanky_draconian																																													
+	wait				2																																																																																																													
+#	event	activate_spawner	8	desactive																																																																																																														
+#	event	activate_spawner	9	desactive																																																																																																														
+#	event	activate_spawner	11	desactive																																																																																																														
+#	event	activate_spawner	13	desactive																																																																																																														
+#	event	activate_spawner	14	desactive																																																																																																														
+#	event	activate_spawner	17	desactive																																																																																																														
+#	50.2																																																																																																																	
+																																																																																																																		
+#	WAVE 12																																																																																																																	
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm																																																																																												
+#	cant.					0	0	0	0		0	0	0	0		0	30	0	1		0	2																																																																																												
+#	gold	680				0	0	0	0		0	0	0	0		0	450	0	50		0	180																																																																																												
+	wave		12		19																																																																																																													
+	event	activate_spawner	9	active																																																																																																														
+					4.5																																										basic_storm																																																																			
+					1																																												basic_storm																																																																	
+					1.25																																											basic_storm																																																																		
+					1.75																																										basic_storm		basic_storm																																																																	
+	event	activate_spawner	8	active																																																																																																														
+	event	activate_spawner	11	active																																																																																																														
+					4.5									executioner_storm																														basic_storm															basic_storm																																																							
+					5							executioner_storm																														basic_storm															basic_storm																																																									
+					8																																						basic_storm					basic_storm										basic_storm																																																								
+					4																																										basic_storm												basic_storm																																																							
+					2.3																																												basic_storm																																																																	
+					4.5																																												basic_storm																																																																	
+					1.5																																										basic_storm																																																																			
+					1.5																																												basic_storm																																																																	
+					5			alfa_storm																																																																																																										
+					7																																						basic_storm				basic_storm											basic_storm																																																								
+					2																																							basic_storm															basic_storm																																																							
+					2.2																																											basic_storm									basic_storm																																																									
+					2																																						basic_storm															basic_storm																																																								
+					1.5																																					basic_storm							basic_storm								basic_storm																																																									
+	wait				2																																																																																																													
+#	event	activate_spawner	9	desactive																																																																																																														
+#	event	activate_spawner	8	desactive																																																																																																														
+#	event	activate_spawner	11	desactive																																																																																																														
+#	61.5																																																																																																																	
+#	WAVE 13																																																																																																																	
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm																																																																																												
+#	cant.					0	0	0	6		0	1	0	0		0	22	0	0		0	0																																																																																												
+#	gold	462				0	0	0	42		0	90	0	0		0	330	0	0		0	0																																																																																												
+	wave		13		13																																																																																																													
+	event	activate_spawner	8	active																																																																																																														
+	event	activate_spawner	9	active																																																																																																														
+	wait				1.5																																																																																																													
+					2.5																																							basic_storm			basic_storm																																																																			
+					1.7																																						basic_storm					basic_storm																																																																		
+					1.3																																										basic_storm																																																																			
+					2.2																																						basic_storm						basic_storm																																																																	
+					1.5																																					basic_storm																																																																								
+					0.8																																							basic_storm																																																																						
+					3			alfa_acid																																																																																																										
+#	event	activate_spawner	8	desactive																																																																																																														
+#	event	activate_spawner	9	desactive																																																																																																														
+	wait				3.5																																																																																																													
+	event	activate_spawner	11	active																																																																																																														
+	event	activate_spawner	13	active																																																																																																														
+					4.5				basic_acid																																																										basic_storm																																															
+					1.5		basic_acid																																																				basic_storm																																																							
+					2			basic_acid																																																												basic_storm																																														
+					1.7				basic_acid																																																	basic_storm									basic_storm																																															
+					2		basic_acid																																																		basic_storm																																																									
+					1.7				basic_acid																																																												basic_storm																																													
+	event	activate_spawner	8	active																																																																																																														
+	wait				2																																																																																																													
+#	event	activate_spawner	13	desactive																																																																																																														
+#	event	activate_spawner	11	desactive																																																																																																														
+					2																																					basic_storm																																																																								
+					1																																							basic_storm																																																																						
+					1.5																																					basic_storm																																																																								
+					1.1																																							basic_storm																																																																						
+					1																																					basic_storm																																																																								
+					1																																						basic_storm																																																																							
+	wait				2																																																																																																													
+#	event	activate_spawner	8	desactive																																																																																																														
+																																																																																																																		
+#	41.5																																																																																																																	
+																																																																																																																		
+#	WAVE 14																																																																																																																	
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm																																																																																												
+#	cant.					0	0	0	9		0	0	31	0		2	0	0	0		0	2																																																																																												
+#	gold	403				0	0	0	63		0	0	310	0		30	0	0	0		0	180																																																																																												
+	wave		14		15																																																																																																													
+					1								alfa_shadow				executioner_storm																																																																																																	
+					3		basic_shadow																																																																																																											
+					2				basic_shadow										executioner_storm																																																																																															
+																																																																																																																		
+					2		basic_shadow																																																																																																											
+					1.8			basic_shadow																																																																																																										
+					1.3				basic_shadow																																																																																																									
+	wait				2																																																																																																													
+	event	activate_spawner	14	active																																																																																																														
+	event	activate_spawner	9	active																																																																																																														
+					4.5			alfa_shadow																																																																basic_acid																																										
+					1.5																																										basic_shadow																											basic_acid																																								
+					1.5																																											basic_shadow																									basic_acid																																									
+					1																																												basic_shadow																							basic_acid																																										
+																																																																																																																		
+	event	activate_spawner	17	active																																																																																																														
+					4.5																																											basic_shadow																									basic_acid															basic_shadow																										
+					2																																											basic_shadow																										basic_acid																																								
+					2																																										basic_shadow																									basic_acid															basic_shadow																											
+					1.5																																										basic_shadow																											basic_acid																																								
+					1.5																																												basic_shadow																								basic_acid																basic_shadow																									
+	wait				2																																																																																																													
+#	event	activate_spawner	14	desactive																																																																																				basic_shadow																										
+					6																																												basic_shadow																																																																	
+					2																																										basic_shadow																																								basic_shadow																											
+					2																																											basic_shadow																																																																		
+					1.7																																												basic_shadow																																								basic_shadow																									
+					5																																											basic_shadow																																																																		
+					3																																										basic_shadow																																								basic_shadow																											
+					2																																											basic_shadow																																																																		
+					1.5																																										basic_shadow																																										basic_shadow																									
+					1.5																																												basic_shadow																																							basic_shadow																										
+	wait				2																																																																																																													
+#	event	activate_spawner	9	desactive																																																																																																														
+#	event	activate_spawner	17	desactive																																																																																																														
+#	61.8																																																																																																																	
+#	WAVE 15																																																																																																																	
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm																																																																																												
+#	cant.					18	0	2	12		0	1	0	0		0	12	0	3		0	1																																																																																												
+#	gold	808				144	0	160	84		0	90	0	0		0	180	0	150		0	90																																																																																												
+	wave		15		16																																																																																																													
+					1			alfa_acid																																																																																																										
+					1												alfa_lava																																																																																																	
+	event	activate_spawner	11	active																																																																																																														
+	event	activate_spawner	13	active																																																																																																														
+					4																																																														basic_lava																																															
+					1																																																																basic_lava																																													
+					1																																																															basic_lava																																														
+	event	activate_spawner	17	active																																																																																																														
+					2																																																					basic_lava																																																								
+					2																																																						basic_lava																												basic_acid																											
+					1																																																				basic_lava																															basic_acid	basic_acid																									
+	event	activate_spawner	8	active																																																																																																														
+					4.5																																							basic_acid																							basic_lava																				basic_acid																											
+					1.22																																					basic_acid																											basic_lava																																													
+					1.5																																																															basic_lava																				basic_acid																										
+					2.5													executioner_storm																																																																																																
+	event	activate_spawner	13	desactive																																																																																					basic_acid																									
+					3																																					basic_acid																basic_lava																																																								
+					1.2																																						basic_acid														basic_lava																															basic_acid																										
+					1.3																																							basic_acid															basic_lava																																																							
+	event	activate_spawner	9	active																																																																																																														
+	wait				2																																																																																																													
+#	event	activate_spawner	8	desactive																																																																																																														
+#	event	activate_spawner	11	desactive																																																																																																														
+#	event	activate_spawner	17	desactive																																																																																																														
+					1														alfa_lava																												basic_storm																																																																			
+					1.2																																											basic_storm																																																																		
+					1.5																																												basic_storm																																																																	
+																																																																																																																		
+					3																																										basic_storm																																																																			
+					2																																												basic_storm																																																																	
+					2		alfa_storm				alfa_storm																												alfa_storm																																																																											
+					3																																												basic_storm																																																																	
+					2																																										basic_storm																																																																			
+					1.5																																											basic_storm																																																																		
+					3																																												basic_storm																																																																	
+					2																																										basic_storm																																																																			
+					1.5																																											basic_storm	basic_storm																																																																	
+	wait				2																																																																																																													
+#	event	activate_spawner	8	desactive																																																																																																														
+	wait				4																																																																																																													
+	event	activate_spawner	14	active																																																																																																														
+					4																																																																			basic_lava																																										
+					1.5																																																																					basic_lava																																								
+					1.5																																																																			basic_lava																																										
+					1																																																																					basic_lava																																								
+					1.5																																																																			basic_lava																																										
+					1																																																																					basic_lava																																								
+	wait				2																																																																																																													
+																																																																																																																		
+#	event	activate_spawner	14	desactive																																																																																																														
+																																																																																																																		
+																																																																																																																		
+																																																																																																																		
+#	72.42																																																																																																																	
+																																																																																																																		
+																																																																																																																		
+#	WAVE Boss1																																																																																																																	
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm	miniboss_stage_39																																																																																											
+#	cant.					11	0	0	6		0	0	0	0		0	10	0	1		4	0	0																																																																																											
+#	gold	1050				88	0	0	42		0	0	0	0		0	150	0	50		120	0	600																																																																																											
+																																																																																																																		
+	manual_wave	BOSS1																																																																																																																
+																																																																																																																		
+																																																																																																																		
+					6												tanky_draconian																																																																																																	
+					2														tanky_draconian																																																																																															
+					6																	basic_lava																																																																																												
+					3																			basic_lava																																																																																										
+					3																	basic_lava																																																																																												
+																																																																																																																		
+																																																																																																																		
+																																																																																																																		
+#	20																																																																																																																	
+	manual_wave	BOSS1_2																																																																																																																
+					4.5														basic_lava																																																																																															
+					2												basic_lava																																																																																																	
+					10														basic_lava								basic_lava																																																																																							
+					5												basic_lava												basic_lava																																																																																					
+					4												tanky_draconian		basic_lava								basic_lava																																																																																							
+					4														tanky_draconian																																																																																															
+#	29.5																																																																																																																	
+	manual_wave	BOSS1_3																																																																																																																
+					4							basic_acid		basic_acid																																																																																																				
+					2								basic_acid																																																																																																					
+					1.5									basic_acid																																																																																																				
+					1.7									basic_acid																																																																																																				
+					1.5								basic_acid																																																																																																					
+																																																																																																																		
+																																																																																																																		
+																																																																																																																		
+#	10.7	first push																																																																																																																
+					16		alfa_storm																																																																																																											
+					8								basic_storm																																																																																																					
+					3							basic_storm																																																																																																						
+					8									basic_storm																																																																																																				
+					3								basic_storm																																																																																																					
+																																																																																																																		
+					10								basic_storm																																																																																																					
+					3							basic_storm																																																																																																						
+					3									basic_storm																																																																																																				
+					7								basic_storm																																																																																																					
+					1.5									basic_storm																																																																																																				
+					1.5							basic_storm																																																																																																						
+																																																																																																																		
+	manual_wave_repeat				-1																																																																																																													
+#	64																																																																																																																	
+																																																																																																																		
+																																																																																																																		
+#	WAVE Boss2																																																																																																																	
+#	enemies					basic_lava	evolved_lava	alfa_lava	basic_acid		evolved_acid	alfa_acid	basic_shadow	evolved_shadow		alfa_shadow	basic_storm	evolved_storm	alfa_storm		tanky_draconian	executioner_storm	miniboss_stage_39																																																																																											
+#	cant.					0	0	0	32		0	1	0	0		0	65	0	3		2	0	0																																																																																											
+#	gold	2099				0	0	0	224		0	90	0	0		0	975	0	150		60	0	600																																																																																											
+#	Max. 90 segs																																																																																																																	
+	manual_wave	BOSS2																																																																																																																
+																																																																																																																		
+					15												tanky_draconian																																																																																																	
+					6.5														tanky_draconian																																																																																															
+																																																																																																																		
+					15								alfa_storm					alfa_storm																																																																																																
+					10									basic_storm																																																																																																				
+					3												basic_storm																																																																																																	
+					7														basic_storm																																																																																															
+					3							basic_storm																																																																																																						
+					10																													basic_acid																																																																																
+					3																											basic_acid																																																																																		
+																																																																																																																		
+					15													basic_storm										basic_lava																																																																																						
+					2								basic_storm																																																																																																					
+					1.5			basic_acid																																																																																																										
+					3																								basic_lava																																																																																					
+					1.5		basic_acid												basic_storm																																																																																															
+					2								basic_storm																																																																																																					
+#	76	ragnarok start																																																																																																																
+					10			alfa_storm					alfa_acid														basic_lava																																																																																							
+					1.5																								basic_lava																																																																																					
+					1.5																						basic_lava																																																																																							
+					1																								basic_lava																																																																																					
+					5								basic_storm				basic_storm																																																																																																	
+					1								basic_storm						basic_storm																																																																																															
+					1							basic_storm						basic_storm																																																																																																
+					2.5									basic_storm																																																																																																				
+					1.2							basic_storm					basic_storm																																																																																																	
+					1								basic_storm						basic_storm																																																																																															
+					0.8												basic_storm		basic_storm																																																																																															
+					0.5							basic_storm	basic_storm					basic_storm																																																																																																
+#	27	real ragnarok																																																																																																																
+					5			basic_acid	basic_acid			basic_storm						basic_storm	basic_storm									basic_lava																																																																																						
+					0.4		basic_acid							basic_storm			basic_storm										basic_lava		basic_lava																																																																																					
+					0.66				basic_acid								basic_storm		basic_storm										basic_lava																																																																																					
+					0.5		basic_acid	basic_acid					basic_storm														basic_lava	basic_lava																																																																																						
+					0.6			basic_acid				basic_storm						basic_storm	basic_storm									basic_lava	basic_lava																																																																																					
+					0.4		basic_acid		basic_acid					basic_storm			basic_storm										basic_lava																																																																																							
+					2.5				basic_acid					basic_storm														basic_lava	basic_lava																																																																																					
+					0.7		basic_acid	basic_acid				basic_storm	basic_storm				basic_storm	basic_storm									basic_lava		basic_lava																																																																																					
+					0.66			basic_acid	basic_acid				basic_storm						basic_storm								basic_lava		basic_lava																																																																																					
+					0.8		basic_acid		basic_acid								basic_storm		basic_storm								basic_lava	basic_lava																																																																																						
+					0.5		basic_acid	basic_acid				basic_storm	basic_storm					basic_storm										basic_lava	basic_lava																																																																																					
+					0.6			basic_acid	basic_acid									basic_storm	basic_storm								basic_lava		basic_lava																																																																																					
+					0.4		basic_acid		basic_acid			basic_storm		basic_storm			basic_storm											basic_lava																																																																																						
+					0.66		basic_acid		basic_acid								basic_storm	basic_storm	basic_storm								basic_lava	basic_lava																																																																																						
+					0.5		basic_acid	basic_acid				basic_storm	basic_storm																basic_lava																																																																																					
+					0.6			basic_acid	basic_acid				basic_storm					basic_storm	basic_storm									basic_lava																																																																																						
+					0.4		basic_acid		basic_acid					basic_storm			basic_storm		basic_storm								basic_lava		basic_lava																																																																																					
+																																																																																																																		
+	manual_wave_repeat				-1																																																																																																													
+#	117.88																																																																																																																	
