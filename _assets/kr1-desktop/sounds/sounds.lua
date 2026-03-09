@@ -12676,6 +12676,63 @@ return {
 		source_group = "SFX",
 		files = {"kra_sfx_wukong_tower_pandas_melee_var1_v1.ogg", "kra_sfx_wukong_tower_pandas_melee_var2_v1.ogg", "kra_sfx_wukong_tower_pandas_melee_var3_v1.ogg"}
 	},
+	TowerDragonsEquipTaunt = {
+		loop = false,
+		gain = 0.9,
+		ignore = 1,
+		mode = "sequence",
+		source_group = "TAUNTS",
+		files = {"kr_voice_dragonhatchery_01_a.ogg"}
+	},
+	TowerDragonsSpitUnlockTaunt = {
+		loop = false,
+		gain = 0.9,
+		ignore = 1,
+		mode = "sequence",
+		source_group = "TAUNTS",
+		files = {"kr_voice_dragonhatchery_04_b.ogg"}
+	},
+	TowerDragonsScreechUnlockTaunt = {
+		loop = false,
+		gain = 0.9,
+		ignore = 1,
+		mode = "sequence",
+		source_group = "TAUNTS",
+		files = {"kr_voice_dragonhatchery_05_a.ogg"}
+	},
+	TowerDragonsLevelUpTaunts = {
+		loop = false,
+		gain = 0.9,
+		ignore = 1,
+		mode = "sequence",
+		source_group = "TAUNTS",
+		files = {"kr_voice_dragonhatchery_02_b.ogg", "kr_voice_dragonhatchery_03_a.ogg"}
+	},
+	TowerDragonsAttack = {
+		loop = false,
+		mode = "random",
+		gain = 0.6,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_tower_hatchery_attack_var1_v1.ogg", "kra_sfx_dragons_tower_hatchery_attack_var2_v1.ogg", "kra_sfx_dragons_tower_hatchery_attack_var3_v1.ogg"}
+	},
+	TowerDragonsScreech = {
+		loop = false,
+		gain = 0.6,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_tower_hatchery_skill_screech_v1.ogg"}
+	},
+	TowerDragonsSpitImpact = {
+		loop = false,
+		gain = 0.6,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_tower_hatchery_skill_spit_impact_var1_v1.ogg", "kra_sfx_dragons_tower_hatchery_skill_spit_impact_var2_v1.ogg", "kra_sfx_dragons_tower_hatchery_skill_spit_impact_var3_v1.ogg"}
+	},
+	TowerDragonsSpitOut = {
+		loop = false,
+		gain = 0.6,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_tower_hatchery_skill_spit_out_var1_v1.ogg", "kra_sfx_dragons_tower_hatchery_skill_spit_out_var2_v1.ogg", "kra_sfx_dragons_tower_hatchery_skill_spit_out_var3_v1.ogg"}
+	},
 	HeroWukongTaunt = {
 		loop = false,
 		gain = 0.6,

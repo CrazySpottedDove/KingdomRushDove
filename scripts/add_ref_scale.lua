@@ -32,10 +32,17 @@ local ref_scale_value = format_number(ref_scale)
 
 local f = assert(io.open(input_file, "r"), "无法打开文件: " .. input_file)
 local lines = {}
+local has_crlf = false
 for line in f:lines() do
+	if line:sub(-1) == "\r" then
+		has_crlf = true
+		line = line:sub(1, -2)
+	end
 	lines[#lines + 1] = line
 end
 f:close()
+
+print(#lines .. " 行已读取，正在处理...")
 
 local output_lines = {}
 local added = 0
@@ -68,11 +75,12 @@ while i <= #lines do
 	i = i + 1
 end
 
-local out = assert(io.open(output_file, "w"), "无法写入文件: " .. output_file)
-out:write(table.concat(output_lines, "\n"))
+local out = assert(io.open(output_file, "wb"), "无法写入文件: " .. output_file)
+local eol = has_crlf and "\r\n" or "\n"
+out:write(table.concat(output_lines, eol))
 -- 保留原文件末尾换行
 if lines[#lines] ~= nil then
-	out:write("\n")
+	out:write(eol)
 end
 out:close()
 

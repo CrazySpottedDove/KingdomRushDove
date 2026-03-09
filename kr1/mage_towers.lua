@@ -3701,3 +3701,255 @@ tt.start_offset = {v(-35, 67), v(35, 68), v(0, 50)}
 tt.end_offset = {v(-50, 60), v(0, 80), v(50, 60)}
 
 --#endregion
+
+--#region tower_dragons_lvl4
+local b_dragons = balance.towers.dragons
+
+tt = RT("tower_dragons_lvl4", "tower")
+
+AC(tt, "attacks", "barrack", "vis", "user_selection", "powers")
+
+tt.tower.type = "dragons"
+tt.tower.kind = TOWER_KIND_MAGE
+tt.tower.level = 1
+tt.tower.price = b_dragons.price[4]
+tt.tower.menu_offset = v(0, 28)
+tt.info.i18n_key = "TOWER_DRAGONS_4"
+tt.info.portrait = "kr5_portraits_towers_0032"
+tt.info.enc_icon = 88
+tt.info.fn = scripts.tower_dragons.get_info
+tt.main_script.insert = scripts.tower_barrack.insert
+tt.main_script.update = scripts.tower_dragons.update
+tt.main_script.remove = scripts.tower_dragons.remove
+tt.attacks.list[1] = CC("custom_attack")
+tt.attacks.list[1].cooldown = 3
+tt.attacks.list[1].vis_flags = bor(F_RANGED)
+tt.attacks.range = b_dragons.ranged_attack.range[4]
+tt.attacks.template_unit = "faerie_dragon_lvl4"
+tt.attacks.idle_offsets = {v(-44, 10), v(14, 25), v(50, 10)}
+tt.attacks.max_dragons = 3
+tt.attacks.list[2] = CC("custom_attack")
+tt.attacks.list[2].animation = "scream"
+tt.attacks.list[2].cast_time = fts(16)
+tt.attacks.list[2].range = b_dragons.massive_fear.max_range
+tt.attacks.list[2].vis_bans = bor(F_BOSS)
+tt.attacks.list[2].vis_flags = bor(F_RANGED)
+tt.attacks.list[2].mod_stun = "mod_stun_tower_dragons_massive_fear"
+tt.attacks.list[2].stun_duration = 0
+tt.attacks.list[2].cast_sound = "TowerDragonsScreech"
+tt.attacks.list[3] = CC("bullet_attack")
+tt.attacks.list[3].bullet = "bullet_tower_dragons_dragon_split"
+tt.attacks.list[3].shoot_time = fts(20)
+tt.attacks.list[3].vis_flags = bor(F_RANGED)
+tt.attacks.list[3].vis_bans = bor(F_NIGHTMARE)
+tt.attacks.list[3].node_prediction = fts(30)
+tt.attacks.list[3].animation = {"shoot_left", "shoot_right"}
+tt.attacks.list[3].bullet_start_offset = {v(-30, 53), v(0, 53)}
+tt.attacks.list[3].first_cooldown = 2
+tt.attacks.list[3].min_range = b_dragons.dragon_split.min_range
+tt.attacks.list[3].range = b_dragons.dragon_split.max_range
+tt.attacks.list[3].sound = "TowerHermitToadShootMagic"
+tt.attacks.list[3].damage_min = b_dragons.dragon_split.damage_min
+tt.attacks.list[3].damage_max = b_dragons.dragon_split.damage_max
+tt.attacks.list[3].damage_radius = b_dragons.dragon_split.damage_radius
+tt.attacks.list[3].damage_min_area = b_dragons.dragon_split.damage_min_area
+tt.attacks.list[3].damage_max_area = b_dragons.dragon_split.damage_max_area
+tt.attacks.list[3].damage_type = b_dragons.dragon_split.damage_type
+tt.powers.dragon_split = CC("power")
+tt.powers.dragon_split.cooldown = b_dragons.dragon_split.cooldown
+tt.powers.dragon_split.price_base = b_dragons.dragon_split.price[1]
+tt.powers.dragon_split.price_inc = b_dragons.dragon_split.price[2]
+tt.powers.dragon_split.enc_icon = 543
+tt.powers.dragon_split.max_level = 3
+tt.powers.massive_fear = CC("power")
+tt.powers.massive_fear.cooldown = b_dragons.massive_fear.cooldown
+tt.powers.massive_fear.price_base = b_dragons.massive_fear.price[1]
+tt.powers.massive_fear.price_inc = b_dragons.massive_fear.price[2]
+tt.powers.massive_fear.min_targets = b_dragons.massive_fear.min_targets
+tt.powers.massive_fear.max_targets = b_dragons.massive_fear.max_targets
+tt.powers.massive_fear.stun_duration = b_dragons.massive_fear.stun_duration
+tt.powers.massive_fear.max_level = 2
+tt.powers.massive_fear.enc_icon = 542
+tt.breath_fx = "fx_tower_dragons_respiracion_lvl4"
+tt.breath_fx_spr_idx = 49
+tt.breath_fire_fx = "fx_tower_dragons_respiracion_lvl4_fuego"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrain_mage_%04i"
+tt.render.sprites[1].offset = v(0, 15)
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].prefix = "dlc_dragons_tower_tower_lvl4"
+tt.render.sprites[2].name = "idle"
+tt.render.sprites[2].offset = v(0, 10)
+tt.render.sprites[3] = CC("sprite")
+tt.render.sprites[3].name = "lvl4_angry_head_run"
+tt.render.sprites[3].offset = v(0, 10)
+tt.render.sprites[3].ignore_start = true
+tt.render.sprites[3].hidden = true
+tt.sound_events.insert = "TowerDragonsEquipTaunt"
+tt.sound_events.tower_room_select = "TowerDragonsEquipTaunt"
+
+tt = RT("mod_stun_tower_dragons_massive_fear", "mod_stun")
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.vis_bans = bor(F_BOSS)
+tt.render.sprites[1].prefix = "dlc_dragons_tower_modifier_stun"
+tt.render.sprites[1].size_names = {"run", "run", "run"}
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].anchor = v(0.5, 0.3)
+
+tt = RT("decal_tower_dragons_stun", "decal_scripted")
+tt.main_script.update = scripts.decal_tower_dragons_stun.update
+tt.render.sprites[1].prefix = "dlc_dragons_tower_trail_skill_decal"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].animated = true
+
+local b_ranged = b_dragons.ranged_attack
+anchor_y = 0.5
+image_y = 30
+
+tt = RT("faerie_dragon_lvl4", "decal_scripted")
+
+AC(tt, "force_motion", "custom_attack", "tween")
+
+tt.flight_height = 80
+tt.flight_speed_idle = 80
+tt.flight_speed_busy = 120
+tt.ramp_dist_idle = 80
+tt.ramp_dist_busy = 80
+tt.idle_pos = nil
+tt.main_script.update = scripts.faerie_dragon.update
+tt.custom_attack = CC("bullet_attack")
+tt.custom_attack.animation = "attack"
+tt.custom_attack.bullet = "bolt_faerie_dragon_lvl4"
+tt.custom_attack.shoot_time = fts(12)
+tt.custom_attack.bullet_start_offset = {v(18, -33)}
+tt.custom_attack.cooldown = b_ranged.cooldown
+tt.render.sprites[1].anchor.y = anchor_y
+tt.render.sprites[1].prefix = "dlc_dragons_tower_drake_lvl4"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].draw_order = 2
+tt.render.sprites[1].loop_forced = true
+tt.render.sprites[1].sort_y_offset = -12
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "decal_flying_shadow_hard"
+tt.render.sprites[2].offset = v(0, 0)
+tt.owner = nil
+tt.tween.props[1].keys = {{0, 255}, {0.8, 0}}
+tt.tween.props[1].name = "alpha"
+tt.tween.props[2] = CC("tween_prop")
+tt.tween.props[2].name = "offset"
+tt.tween.props[2].keys = {{0, v(0, tt.flight_height)}, {0.8, v(50, tt.flight_height)}}
+tt.tween.props[3] = CC("tween_prop")
+tt.tween.props[3].keys = {{0, 255}, {0.8, 0}}
+tt.tween.props[3].name = "alpha"
+tt.tween.props[3].sprite_id = 2
+tt.tween.props[4] = CC("tween_prop")
+tt.tween.props[4].name = "offset"
+tt.tween.props[4].keys = {{0, v(0, 0)}, {0.8, v(50, 0)}}
+tt.tween.props[4].sprite_id = 2
+tt.tween.remove = true
+tt.tween.disabled = true
+
+tt = RT("bolt_faerie_dragon_lvl4", "bolt")
+tt.render.sprites[1].prefix = "dlc_dragons_tower_drake_lvl4_proyectile"
+tt.bullet.damage_type = b_ranged.damage_type
+tt.bullet.acceleration_factor = 0.25
+tt.bullet.min_speed = 90
+tt.bullet.max_speed = 180
+tt.bullet.damage_min = b_ranged.damage_min[4]
+tt.bullet.damage_max = b_ranged.damage_max[4]
+tt.bullet.hit_fx = "fx_bolt_faerie_dragon_lvl4"
+tt.bullet.mod = "mod_faerie_dragon_lvl4"
+tt.bullet.particles_name = "ps_bolt_faerie_dragon_lvl4"
+tt.bullet.use_unit_damage_factor = true
+tt.sound_events.insert = "TowerDragonsAttack"
+
+tt = RT("fx_bolt_faerie_dragon_lvl4", "fx")
+tt.render.sprites[1].name = "dlc_dragons_tower_hit_lvl4_run"
+
+tt = RT("ps_bolt_faerie_dragon_lvl4")
+
+AC(tt, "pos", "particle_system")
+
+tt.particle_system.name = "dlc_dragons_tower_drake_lvl4_proyectile_trail_run"
+tt.particle_system.animated = true
+tt.particle_system.particle_lifetime = {fts(14), fts(14)}
+tt.particle_system.emission_rate = 15
+tt.particle_system.emit_offset = v(8, 0)
+
+tt = RT("mod_faerie_dragon_lvl4", "mod_slow")
+
+AC(tt, "render")
+
+tt.main_script.insert = scripts.mod_faerie_dragon_slow.insert
+tt.modifier.duration = b_ranged.slow_duration[4]
+tt.slow.factor = b_ranged.slow_factor[4]
+tt.render.sprites[1].name = "dlc_dragons_tower_modifire_drake_attack_run"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -20
+tt.render.sprites[1].anchor = v(0.5, 0.6)
+tt.render.sprites[1].loop = true
+
+tt = RT("bullet_tower_dragons_dragon_split", "bolt")
+
+AC(tt, "force_motion")
+
+tt.render.sprites[1].prefix = "dlc_dragons_tower_projectil_skill_shoot"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_BULLETS
+tt.render.sprites[1].anchor = vv(0.5)
+tt.bullet.align_with_trajectory = true
+tt.main_script.update = scripts.bullet_tower_dragons_dragon_split.update
+tt.main_script.insert = scripts.bolt_force_motion_kr5.insert
+tt.bullet.hit_fx = "fx_bullet_tower_dragons_dragon_split_hit"
+tt.bullet.hit_decal = "decal_bullet_tower_dragons_dragon_split"
+tt.bullet.particles_name = "ps_bullet_tower_dragons_dragon_split_trail"
+tt.bullet.max_track_distance = tt.bullet.max_track_distance * 1.5
+tt.initial_impulse = 4500
+tt.initial_impulse_duration = 0.1
+tt.initial_impulse_angle_abs = math.pi / 2
+tt.force_motion.a_step = 10
+tt.force_motion.max_a = 3000
+tt.force_motion.max_v = 450
+tt.sound_events.insert = "TowerDragonsSpitOut"
+
+tt = RT("ps_bullet_tower_dragons_dragon_split_trail")
+
+AC(tt, "pos", "particle_system")
+
+tt.particle_system.name = "dlc_dragons_tower_trail_skill_shoot_run"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 30
+tt.particle_system.track_rotation = true
+tt.particle_system.particle_lifetime = {fts(17), fts(17)}
+
+tt = RT("fx_bullet_tower_dragons_dragon_split_hit", "fx")
+tt.render.sprites[1].name = "dlc_dragons_tower_hit_skill_shoot_voladores_run"
+
+tt = RT("decal_bullet_tower_dragons_dragon_split", "decal_scripted")
+
+AC(tt, "sound_events")
+
+tt.render.sprites[1].name = "dlc_dragons_tower_decal_projectile_run"
+tt.render.sprites[1].anchor = v(0.5, 0.5277777777777778)
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].animated = true
+tt.sound_events.insert = "TowerDragonsSpitImpact"
+
+tt = RT("fx_tower_dragons_respiracion_lvl4", "fx")
+tt.render.sprites[1].name = "dlc_dragons_tower_respiracion_lvl4_run"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -30
+tt.render.sprites[1].offset = v(0, 10)
+
+tt = RT("fx_tower_dragons_respiracion_lvl4_fuego", "fx_tower_dragons_respiracion_lvl4")
+tt.render.sprites[1].name = "dlc_dragons_tower_respiracion_lvl4_fuego_run"
+tt.render.sprites[1].offset = v(-3, 10)
+
+--#endregion

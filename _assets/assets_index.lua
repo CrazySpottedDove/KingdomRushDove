@@ -1999,6 +1999,10 @@ return {
 		size = 5592580,
 		hash = "c1e826b8"
 	},
+	["kr1-desktop/images/fullhd/go_towers_dragons-1.dds"] = {
+		size = 11397504,
+		hash = "b9e21648"
+	},
 	["kr1-desktop/images/fullhd/go_towers_dwarf-1.dds"] = {
 		size = 1398276,
 		hash = "030c8718"

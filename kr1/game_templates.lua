@@ -16277,7 +16277,7 @@ tt = E:register_t("fx_bullet_enemy_revenant_soulcaller_tower_stun", "fx")
 tt.render.sprites[1].prefix = "revenant_soulcaller_transform"
 tt.render.sprites[1].name = "idle"
 
-tt = E:register_t("tower_stage_17_weirdwood", "tower_KR5")
+tt = E:register_t("tower_stage_17_weirdwood", "tower")
 b = balance.specials.towers.stage_17_weirdwood
 E:add_comps(tt, "attacks", "vis", "corruption_kr5")
 tt.tower.type = "weirdwood"
@@ -16323,7 +16323,7 @@ tt.editor.props = {{"corruption_kr5.spawn_path", PT_NUMBER}}
 tt.sound_corruption = "TowerWeirdwoodCorruption"
 tt.sound_transform = "TowerWeirdwoodTransform"
 
-tt = E:register_t("tower_stage_18_elven_barrack", "tower_KR5")
+tt = E:register_t("tower_stage_18_elven_barrack", "tower")
 b = balance.specials.towers.stage_18_elven_barrack
 E:add_comps(tt, "vis", "barrack", "corruption_kr5")
 tt.tower.type = "tower_stage_18_elven_barrack"
@@ -16722,7 +16722,7 @@ tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].offset = v(0, 90)
 
-tt = E:register_t("tower_stage_20_arborean_oldtree", "tower_KR5")
+tt = E:register_t("tower_stage_20_arborean_oldtree", "tower")
 b = balance.specials.towers.stage_20_arborean_oldtree
 
 E:add_comps(tt, "attacks", "user_selection")
@@ -16824,7 +16824,7 @@ tt.custom_attack.hit_fx = "fx_tower_arborean_oldtree_hit"
 tt.custom_attack.cycle_time = 0.3
 tt.custom_attack.vis_flags = bor(F_RANGED)
 tt.custom_attack.vis_bans = bor(F_FLYING)
-tt = E:register_t("tower_stage_20_arborean_honey", "tower_KR5")
+tt = E:register_t("tower_stage_20_arborean_honey", "tower")
 b = balance.specials.towers.stage_20_arborean_honey
 
 E:add_comps(tt, "attacks", "user_selection")
@@ -16878,7 +16878,7 @@ tt.ui.has_nav_mesh = true
 tt.sound_bee_fly_chance = 0.2
 tt.sound_bee_fly = "Stage20BeesFly"
 tt.sound_bee_throw = "Stage20BeesThrow"
-tt = E:register_t("tower_stage_20_arborean_barrack", "tower_KR5")
+tt = E:register_t("tower_stage_20_arborean_barrack", "tower")
 b = balance.specials.towers.tower_stage_20_arborean_barrack
 E:add_comps(tt, "vis", "user_selection", "attacks")
 tt.tower.type = "arborean_barrack"
@@ -16982,7 +16982,7 @@ tt.tween.props[1].disabled = true
 tt.tween.remove = false
 tt.tween.reverse = false
 tt.tween.disabled = false
-tt = E:register_t("tower_stage_20_arborean_watchtower", "tower_KR5")
+tt = E:register_t("tower_stage_20_arborean_watchtower", "tower")
 b = balance.specials.towers.stage_20_arborean_watchtower
 
 E:add_comps(tt, "attacks", "vis", "idle_flip")
@@ -17067,7 +17067,7 @@ tt.tunnel_spawns[3] = {
 	place_pi = 12,
 	pick_pi = 13
 }
-tt = E:register_t("tower_stage_22_arborean_mages", "tower_KR5")
+tt = E:register_t("tower_stage_22_arborean_mages", "tower")
 b = balance.specials.towers.stage_22_arborean_mages_tower
 E:add_comps(tt, "attacks", "vis")
 tt.tower.type = "weirdwood"

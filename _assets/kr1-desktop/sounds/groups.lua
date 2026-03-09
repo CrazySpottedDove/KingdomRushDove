@@ -2873,6 +2873,25 @@ return {
 			"kra_sfx_tower_duneSentinels_whirlingDoom_cast_v1.ogg"
 		}
 	},
+	tower_dragons = {
+		files = {
+			"kr_voice_dragonhatchery_02_b.ogg",
+			"kr_voice_dragonhatchery_03_a.ogg",
+			"kr_voice_dragonhatchery_04_b.ogg",
+			"kr_voice_dragonhatchery_05_a.ogg",
+			"kr_voice_dragonhatchery_01_a.ogg",
+			"kra_sfx_dragons_tower_hatchery_attack_var1_v1.ogg",
+			"kra_sfx_dragons_tower_hatchery_attack_var2_v1.ogg",
+			"kra_sfx_dragons_tower_hatchery_attack_var3_v1.ogg",
+			"kra_sfx_dragons_tower_hatchery_skill_screech_v1.ogg",
+			"kra_sfx_dragons_tower_hatchery_skill_spit_impact_var1_v1.ogg",
+			"kra_sfx_dragons_tower_hatchery_skill_spit_impact_var2_v1.ogg",
+			"kra_sfx_dragons_tower_hatchery_skill_spit_impact_var3_v1.ogg",
+			"kra_sfx_dragons_tower_hatchery_skill_spit_out_var1_v1.ogg",
+			"kra_sfx_dragons_tower_hatchery_skill_spit_out_var2_v1.ogg",
+			"kra_sfx_dragons_tower_hatchery_skill_spit_out_var3_v1.ogg"
+		}
+	},
 	tower_sparking_geode = {
 		files = {
 			"kr_voice_surgecolossus_02c.ogg",

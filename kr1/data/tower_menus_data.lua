@@ -202,10 +202,17 @@ return {
 		M(tpl.upgrade, {
 			action_arg = "tower_arborean_emissary_lvl4",
 			image = "kr5_main_icons_0006",
-			type = "arborean_emissary",
 			place = 21,
 			tt_title = _("TOWER_ARBOREAN_EMISSARY_1_NAME"),
 			tt_desc = _("TOWER_ARBOREAN_EMISSARY_1_DESCRIPTION")
+		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_dragons_lvl4",
+			image = "kr5_main_icons_0051",
+			type = "dragons",
+			place = 22,
+			tt_title = _("TOWER_DRAGONS_NAME"),
+			tt_desc = _("TOWER_DRAGONS_4_DESCRIPTION")
 		}),
 		tpl.sell
 	}},
@@ -2901,5 +2908,85 @@ return {
 		place = 5,
 		tt_title = _("SPECIAL_REPAIR_HOLDER_DRAGON_NAME"),
 		tt_desc = _("SPECIAL_REPAIR_HOLDER_DRAGON_DESCRIPTION")
+	}}},
+	dragons = {{M(tpl.upgrade_power, {
+		action_arg = "dragon_split",
+		image = "kr5_special_icons_0046",
+		place = 6,
+		sounds = {"TowerDragonsSpitUnlockTaunt"},
+		tt_phrase = _("TOWER_DRAGONS_4_DRAGON_SPLIT"),
+		tt_list = {{
+			tt_title = _("TOWER_DRAGONS_4_DRAGON_SPLIT_1_NAME"),
+			tt_desc = _("TOWER_DRAGONS_4_DRAGON_SPLIT_1_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_DRAGONS_4_DRAGON_SPLIT_2_NAME"),
+			tt_desc = _("TOWER_DRAGONS_4_DRAGON_SPLIT_2_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_DRAGONS_4_DRAGON_SPLIT_3_NAME"),
+			tt_desc = _("TOWER_DRAGONS_4_DRAGON_SPLIT_3_DESCRIPTION")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "massive_fear",
+		image = "kr5_special_icons_0045",
+		place = 7,
+		sounds = {"TowerDragonsScreechUnlockTaunt"},
+		tt_phrase = _("TOWER_DRAGONS_4_MASSIVE_FEAR"),
+		tt_list = {{
+			tt_title = _("TOWER_DRAGONS_4_MASSIVE_FEAR_1_NAME"),
+			tt_desc = _("TOWER_DRAGONS_4_MASSIVE_FEAR_1_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_DRAGONS_4_MASSIVE_FEAR_2_NAME"),
+			tt_desc = _("TOWER_DRAGONS_4_MASSIVE_FEAR_2_DESCRIPTION")
+		}}
+	}), tpl.sell}},
+	stage_37_barrack_dragon_wardens = {{}},
+	stage_37_tower_dragons_warden = {{{
+		action_arg = "increase_damage",
+		action = "upgrade_power",
+		image = "kr5_special_icons_0044",
+		place = 6,
+		halo = "glow_ico_special",
+		sounds = {"TowerPandasSkillBTaunt"},
+		tt_phrase = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE"),
+		tt_list = {{
+			tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE_1_NAME"),
+			tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE_1_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE_2_NAME"),
+			tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE_2_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE_3_NAME"),
+			tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_DAMAGE_3_DESCRIPTION")
+		}}
+	}, {
+		action_arg = "increase_rate",
+		action = "upgrade_power",
+		image = "kr5_special_icons_0043",
+		place = 7,
+		halo = "glow_ico_special",
+		sounds = {"TowerPandasSkillCTaunt"},
+		tt_phrase = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE"),
+		tt_list = {{
+			tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_1_NAME"),
+			tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_1_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_2_NAME"),
+			tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_2_DESCRIPTION")
+		}, {
+			tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_3_NAME"),
+			tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_3_DESCRIPTION")
+		}}
+	}}},
+	stage_38_tower_dragons_warden_barrack = {{}},
+	tower_broken_stage_37 = {{}},
+	tower_broken_stage_40 = {{{
+		check = "kr5_main_icons_0019",
+		action_arg = "",
+		action = "tw_repair",
+		halo = "glow_ico_main",
+		image = "kr5_main_icons_0052",
+		place = 5,
+		tt_title = _("SPECIAL_REPAIR_STAGE_40_NAME"),
+		tt_desc = _("SPECIAL_REPAIR_STAGE_40_DESCRIPTION")
 	}}}
 }

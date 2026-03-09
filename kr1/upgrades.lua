@@ -916,7 +916,8 @@ function upgrades:mage_tower_bolts()
 		"tower_elven_stargazers_ray",
 		"tower_arcane_wizard5_ray",
 		"bullet_tower_hermit_toad_mage_basic_lvl4",
-		"tower_arborean_emissary_bolt_lvl4"
+		"tower_arborean_emissary_bolt_lvl4",
+		"bolt_faerie_dragon_lvl4"
 	}
 end
 

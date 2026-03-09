@@ -975,8 +975,6 @@ tower.editor.props = {{"tower.terrain_style", PT_NUMBER}, {"tower.default_rally_
 tower.editor_script.insert = scripts.editor_tower.insert
 tower.editor_script.remove = scripts.editor_tower.remove
 
-local tower_KR5 = E:register_t("tower_KR5", "tower")
-
 local unit = E:register_t("unit")
 
 E:add_comps(unit, "unit", "pos", "heading", "health", "health_bar", "render", "ui")

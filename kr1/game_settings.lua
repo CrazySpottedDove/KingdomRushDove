@@ -37,7 +37,8 @@ GS.mage_towers = {
 	"tower_elven_stargazers_lvl4",
 	"tower_arcane_wizard_lvl4",
 	"tower_hermit_toad_lvl4",
-	"tower_arborean_emissary_lvl4"
+	"tower_arborean_emissary_lvl4",
+	"tower_dragons_lvl4"
 }
 GS.engineer_towers = {
 	"tower_engineer_1",

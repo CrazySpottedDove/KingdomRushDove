@@ -19977,9 +19977,10 @@ function scripts.faerie_dragon.update(this, store)
 	ca.ts = store.tick_ts
 	sp.offset.y = this.flight_height
 
-	log.debug(">>>>>>>>> START")
-	U.y_animation_play(this, "rise", nil, store.tick_ts)
-	log.debug(">>>>>>>>> DONE")
+	-- 仙女龙有 rise，龙巢没有
+	if this.template_name == "faerie_dragon" then
+		U.y_animation_play(this, "rise", nil, store.tick_ts)
+	end
 
 	while true do
 		if ca.target_id ~= nil and store.tick_ts - ca.ts > ca.cooldown then

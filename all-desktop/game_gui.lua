@@ -6065,7 +6065,7 @@ function TowerMenu:show()
 	self:remove_children()
 
 	for _, item in pairs(tm) do
-		if item.action == "tw_upgrade" and game_gui.game.store.level.locked_towers and table.contains(game_gui.game.store.level.locked_towers, item.action_arg) and not DEBUG_UNLOCK_ALL_TOWERS then
+		if item.action == "tw_upgrade" and game_gui.game.store.level.locked_towers and table.contains(game_gui.game.store.level.locked_towers, item.action_arg) then
 			local b = KImageView:new("main_icons_0014")
 
 			b.pos = V.vclone(data.tower_menu_button_places[item.place])
@@ -6296,11 +6296,6 @@ function TowerMenu:update(dt)
 				else
 					c.button:set_image(c.item["image_mode" .. current_mode])
 				end
-			-- if current_mode ~= 0 then
-			--     c.button:set_image(U.str_reset_leading_zero(c.item_image, current_mode))
-			-- else
-			--     c.button:set_image(c.item_image)
-			-- end
 			elseif e and c.item_props.action == "tw_free_action" then
 				local usa = e.user_selection and e.user_selection.actions
 				if usa and usa.tw_free_action then
@@ -6957,10 +6952,6 @@ function TowerMenuButton:initialize(item, entity)
 	elseif item.action == "upgrade_power" then
 		local power = entity.powers[item.action_arg]
 		local price = power.level == 0 and power.price_base or power.price_inc
-
-		if power.level == power.max_level then
-		-- block empty
-		end
 
 		price_tag = tostring(price)
 	elseif item.action == "tw_buy_soldier" then

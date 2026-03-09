@@ -95,3 +95,6 @@ linux_quick:
 push:
 	git push origin dev
 	git push server dev
+
+format:
+	dlfmt --json-task ./dlfmt_task.json

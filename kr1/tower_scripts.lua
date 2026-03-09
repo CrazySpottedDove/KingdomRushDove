@@ -21300,4 +21300,878 @@ function scripts.decal_tentacle_priests_barrack.update(this, store)
 		coroutine.yield()
 	end
 end
+
+--#region tower_dragons_lvl4
+
+-- tower_dragons_lvl4 scripts
+
+scripts.tower_dragons = {}
+
+function scripts.tower_dragons.get_info(this)
+	local s = E:get_template(this.attacks.template_unit)
+	local b = E:get_template(s.custom_attack.bullet)
+	local min, max = b.bullet.damage_min, b.bullet.damage_max
+
+	min, max = min * this.tower.damage_factor, max * this.tower.damage_factor
+
+	local d_type = b.bullet.damage_type
+
+	if min and max then
+		min, max = math.ceil(min), math.ceil(max)
+	end
+
+	local cooldown = s.custom_attack.cooldown / this.attacks.max_dragons
+
+	return {
+		type = STATS_TYPE_TOWER_MAGE,
+		damage_min = min,
+		damage_max = max,
+		damage_type = d_type,
+		range = this.attacks.range,
+		cooldown = cooldown
+	}
+end
+
+function scripts.tower_dragons.update(this, store)
+	local dragon_sprite = this.render.sprites[2]
+	local did_breath_fx = false
+	local points, max_targets, total_enemies, count_targets, total_targets, bullet, anim_idx, offset_x, offset_y
+	local a = this.attacks.list[1]
+	local a_massive_fear = this.attacks.list[2]
+	local a_dragon_split = this.attacks.list[3]
+	local pow_dragon_split = this.powers.dragon_split
+	local pow_massive_fear = this.powers.massive_fear
+	local tw = this.tower
+	local tpos = tpos(this)
+
+	if this.tower_upgrade_persistent_data.massive_fear_ts then
+		a_massive_fear.ts = this.tower_upgrade_persistent_data.massive_fear_ts
+	end
+
+	if this.tower_upgrade_persistent_data.dragon_split_ts then
+		a_dragon_split.ts = this.tower_upgrade_persistent_data.dragon_split_ts
+	end
+
+	if this.tower_upgrade_persistent_data.dragon_flipped == nil then
+		this.tower_upgrade_persistent_data.dragon_flipped = math.random() > 0.5 and true or false
+	end
+
+	this.render.sprites[3].flip_x = this.tower_upgrade_persistent_data.dragon_flipped
+
+	this.tower_upgrade_persistent_data.is_awake = false
+
+	U.animation_start(this, "idle", this.tower_upgrade_persistent_data.dragon_flipped, store.tick_ts, true, 2, true)
+
+	local function update_head()
+		if pow_massive_fear.level == 0 then
+			return
+		end
+
+		if this.render.sprites[3].hidden then
+			this.render.sprites[3].hidden = false
+			this.render.sprites[3].ts = dragon_sprite.ts
+		end
+	end
+
+	update_head()
+
+	local function update_powers()
+		if pow_dragon_split.changed then
+			pow_dragon_split.changed = nil
+			a_dragon_split.cooldown = pow_dragon_split.cooldown[pow_dragon_split.level]
+			this.breath_fx = this.breath_fire_fx
+		end
+		if pow_massive_fear.changed then
+			pow_massive_fear.changed = nil
+			a_massive_fear.cooldown = pow_massive_fear.cooldown[pow_massive_fear.level]
+			a_massive_fear.stun_duration = pow_massive_fear.stun_duration[pow_massive_fear.level]
+			update_head()
+		end
+	end
+
+	local function can_massive_fear()
+		if pow_massive_fear.level < 1 then
+			return false
+		end
+
+		if not (store.tick_ts - a_massive_fear.ts > a_massive_fear.cooldown * tw.cooldown_factor) then
+			return false
+		end
+
+		local enemies = U.find_enemies_in_range_filter_off(tpos, a_massive_fear.range[pow_massive_fear.level], a_massive_fear.vis_flags, a_massive_fear.vis_bans)
+
+		if not enemies or #enemies < pow_massive_fear.min_targets[pow_massive_fear.level] then
+			a_massive_fear.ts = a_massive_fear.ts + fts(10)
+			return false
+		end
+
+		return true
+	end
+
+	local function can_dragon_split()
+		if pow_dragon_split.level < 1 then
+			return false
+		end
+
+		if not (store.tick_ts - a_dragon_split.ts > a_dragon_split.cooldown * tw.cooldown_factor) then
+			return false
+		end
+
+		local enemies = U.find_enemies_between_range_filter_off(tpos, a_dragon_split.min_range[pow_dragon_split.level], a_dragon_split.range[pow_dragon_split.level], a_dragon_split.vis_flags, a_dragon_split.vis_bans)
+
+		if not enemies or #enemies < 1 then
+			a_dragon_split.ts = a_dragon_split.ts + fts(10)
+			return false
+		end
+
+		return true
+	end
+
+	local function find_target(a)
+		local target, targets, pred_pos = U.find_foremost_enemy_between_range_filter_off(tpos, a.min_range[pow_dragon_split.level], a.range[pow_dragon_split.level], a.node_prediction, a.vis_flags, a.vis_bans)
+
+		return target, targets, pred_pos
+	end
+
+	local function can_awake()
+		if not this.user_selection.menu_shown then
+			return false
+		end
+
+		if this.tower_upgrade_persistent_data.is_awake then
+			return false
+		end
+
+		return true
+	end
+
+	local function go_awake()
+		if this.render.sprites[3] then
+			this.render.sprites[3].hidden = true
+		end
+
+		U.y_animation_play(this, "tap_in", nil, store.tick_ts, 1, 2)
+		U.animation_start(this, "idle", nil, store.tick_ts, true, 2, true)
+		update_head()
+
+		this.tower_upgrade_persistent_data.is_awake = true
+	end
+
+	local function can_sleep()
+		if this.user_selection.menu_shown then
+			return false
+		end
+
+		if not this.tower_upgrade_persistent_data.is_awake then
+			return false
+		end
+
+		return true
+	end
+
+	local function go_sleep()
+		this.tower_upgrade_persistent_data.is_awake = false
+	end
+
+	local function create_dragons()
+		for i = 1, this.attacks.max_dragons do
+			local o = this.attacks.idle_offsets[i]
+			local e = E:create_entity(this.attacks.template_unit)
+
+			e.idle_pos = 0
+			e.pos.x, e.pos.y = this.pos.x + o.x, this.pos.y + o.y
+			e.owner = this
+			e.idle_pos = V.vclone(e.pos)
+
+			if this.attacks.max_dragons > 1 and i == 1 then
+				e.render.sprites[1].flip_x = true
+			elseif this.attacks.max_dragons == 1 then
+				e.render.sprites[1].flip_x = math.random() > 0.5
+
+				if e.render.sprites[1].flip_x then
+					e.pos.x = this.pos.x - o.x
+				end
+			end
+
+			queue_insert(store, e)
+			table.insert(this.dragons, e)
+		end
+	end
+
+	this.dragons = {}
+
+	create_dragons()
+
+	if this.tower_upgrade_persistent_data.dragons_pos then
+		for i = 1, #this.tower_upgrade_persistent_data.dragons_pos do
+			this.dragons[i].pos.x, this.dragons[i].pos.y = this.tower_upgrade_persistent_data.dragons_pos[i].x, this.tower_upgrade_persistent_data.dragons_pos[i].y
+			this.dragons[i].skip_spawn = true
+		end
+	end
+
+	this.tower_upgrade_persistent_data.dragons_pos = {}
+
+	local function save_dragons_positions()
+		for i = 1, #this.dragons do
+			this.tower_upgrade_persistent_data.dragons_pos[i] = V.vclone(this.dragons[i].pos)
+		end
+	end
+
+	local function find_path_center_positions_near_tower(range)
+		local origin = tpos
+		local nearest_nodes = P:nearest_nodes(origin.x, origin.y, nil, nil, true)
+
+		if not nearest_nodes or #nearest_nodes == 0 then
+			return {}
+		end
+
+		local node_radius = math.max(1, math.floor(range / P.average_node_dist) + 1)
+		local candidates = {}
+		local used_nodes = {}
+		local subpath = 1
+
+		for _, node in ipairs(nearest_nodes) do
+			local pi, _, ni = unpack(node)
+
+			for delta = -node_radius, node_radius do
+				local current_idx = ni + delta
+				local node_key = pi .. ":" .. current_idx
+
+				if not used_nodes[node_key] and P:is_node_valid(pi, current_idx) then
+					local pos = P:node_pos(pi, subpath, current_idx)
+
+					if not GR:cell_is(pos.x, pos.y, TERRAIN_NOWALK) then
+						subpath = subpath == 3 and 1 or subpath + 1
+
+						local dist = V.dist(pos.x, pos.y, origin.x, origin.y)
+
+						if dist <= range then
+							table.insert(candidates, {
+								pos = pos,
+								dist = dist
+							})
+
+							used_nodes[node_key] = true
+						end
+					end
+				end
+			end
+		end
+
+		table.sort(candidates, function(a, b)
+			return a.dist < b.dist
+		end)
+
+		local result = {}
+		local max_positions = math.huge
+		local min_spacing = 40
+
+		for _, candidate in ipairs(candidates) do
+			local too_close = false
+
+			if min_spacing > 0 then
+				for _, existing in ipairs(result) do
+					if min_spacing > V.dist(existing.x, existing.y, candidate.pos.x, candidate.pos.y) then
+						too_close = true
+
+						break
+					end
+				end
+			end
+
+			if not too_close then
+				table.insert(result, candidate.pos)
+
+				if max_positions <= #result then
+					break
+				end
+			end
+		end
+
+		return result
+	end
+
+	while true do
+		update_powers()
+		save_dragons_positions()
+
+		if tw.blocked then
+			this.tower_upgrade_persistent_data.dragons_pos = {}
+
+			for _, dragon in pairs(this.dragons) do
+				dragon.leave = true
+			end
+
+			this.dragons = {}
+
+			while this.tower.blocked do
+				update_powers()
+				coroutine.yield()
+			end
+
+			create_dragons()
+		elseif can_awake() then
+			go_awake()
+		elseif can_sleep() then
+			go_sleep()
+		else
+			if dragon_sprite.name == "idle" then
+				if dragon_sprite.frame_idx > this.breath_fx_spr_idx then
+					if not did_breath_fx then
+						local fx = E:create_entity(this.breath_fx)
+
+						fx.pos = V.vclone(this.pos)
+						fx.render.sprites[1].ts = store.tick_ts
+
+						if this.render.sprites[2].flip_x then
+							fx.render.sprites[1].flip_x = this.render.sprites[2].flip_x
+							fx.render.sprites[1].offset.x = -fx.render.sprites[1].offset.x
+						end
+
+						queue_insert(store, fx)
+
+						did_breath_fx = true
+					end
+				else
+					did_breath_fx = false
+				end
+			end
+
+			if #this.dragons > 0 and store.tick_ts - a.ts > a.cooldown then
+				a.ts = store.tick_ts
+
+				local assigned_target_ids = {}
+
+				for _, dragon in pairs(this.dragons) do
+					if dragon.custom_attack.target_id then
+						table.insert(assigned_target_ids, dragon.custom_attack.target_id)
+					end
+				end
+
+				local targets = U.find_enemies_in_range_filter_on(tpos, this.attacks.range, a.vis_flags, a.vis_bans, function(e)
+					return not table.contains(assigned_target_ids, e.id)
+				end)
+
+				if targets then
+					local origin = tpos
+
+					table.sort(targets, function(e1, e2)
+						local f1 = e1.unit.is_stunned
+						local f2 = e2.unit.is_stunned
+
+						if f1 ~= 0 then
+							return false
+						end
+
+						if f2 ~= 0 then
+							return true
+						end
+
+						return V.dist(e1.pos.x, e1.pos.y, origin.x, origin.y) < V.dist(e2.pos.x, e2.pos.y, origin.x, origin.y)
+					end)
+
+					local i = 1
+
+					for _, dragon in pairs(this.dragons) do
+						if not dragon.custom_attack.target_id then
+							dragon.custom_attack.target_id = targets[i].id
+
+							table.insert(assigned_target_ids, targets[i].id)
+
+							if i < #targets then
+								i = i + 1
+							end
+						end
+					end
+				end
+			end
+
+			if can_massive_fear() then
+				local start_ts = store.tick_ts
+				local enemies = U.find_enemies_in_range_filter_on(tpos, a_massive_fear.range[pow_massive_fear.level], a_massive_fear.vis_flags, a_massive_fear.vis_bans, function(e)
+					return not e.unit.is_stunned
+				end)
+
+				if not enemies or #enemies < pow_massive_fear.min_targets[pow_massive_fear.level] then
+					a_massive_fear.ts = store.tick_ts + a_massive_fear.cooldown * 0.2
+				else
+					S:queue(a_massive_fear.cast_sound)
+
+					if this.render.sprites[3] then
+						this.render.sprites[3].hidden = true
+					end
+
+					U.animation_start(this, a_massive_fear.animation, nil, store.tick_ts, false, 2, true)
+					U.y_wait(store, a_massive_fear.cast_time * tw.cooldown_factor)
+
+					points = find_path_center_positions_near_tower(150)
+
+					for _, p in ipairs(points) do
+						local decal = E:create_entity("decal_tower_dragons_stun")
+
+						decal.render.sprites[1].ts = store.tick_ts
+						decal.pos = p
+						decal.duration = a_massive_fear.stun_duration * 0.8
+
+						queue_insert(store, decal)
+					end
+
+					max_targets = pow_massive_fear.max_targets[pow_massive_fear.level]
+					total_enemies = math.min(#enemies, max_targets)
+					count_targets = 0
+
+					for i = 1, total_enemies do
+						local e = enemies[i]
+						local mod = E:create_entity(a_massive_fear.mod_stun)
+
+						mod.modifier.target_id = e.id
+						mod.modifier.source_id = this.id
+						mod.modifier.duration = a_massive_fear.stun_duration
+
+						queue_insert(store, mod)
+
+						count_targets = count_targets + 1
+					end
+
+					a_massive_fear.ts = start_ts
+					this.tower_upgrade_persistent_data.massive_fear_ts = a_massive_fear.ts
+
+					if count_targets < max_targets then
+						U.y_wait(store, fts(30) * tw.cooldown_factor)
+
+						local enemies_repeat = U.find_enemies_in_range_filter_on(tpos, a_massive_fear.range[pow_massive_fear.level], a_massive_fear.vis_flags, a_massive_fear.vis_bans, function(e)
+							return not e.unit.is_stunned
+						end)
+
+						if enemies_repeat and #enemies_repeat > 0 then
+							local diff_enemies = max_targets - count_targets
+							local total_enemies_repeat = math.min(#enemies_repeat, diff_enemies)
+
+							for i = 1, total_enemies_repeat do
+								local e = enemies_repeat[i]
+								local mod = E:create_entity(a_massive_fear.mod_stun)
+
+								mod.modifier.target_id = e.id
+
+								queue_insert(store, mod)
+							end
+						end
+					end
+
+					U.y_animation_wait(this, 2)
+				end
+
+				U.animation_start(this, "idle", nil, store.tick_ts, true, 2, true)
+				update_head()
+			elseif can_dragon_split() then
+				local attack = a_dragon_split
+				local target, targets, pred_pos = find_target(attack)
+
+				if not target then
+					a_dragon_split.ts = store.tick_ts + a_dragon_split.cooldown * 0.2
+				else
+					S:queue(attack.sound)
+
+					if this.render.sprites[3] then
+						this.render.sprites[3].hidden = true
+					end
+
+					anim_idx = pred_pos.x > this.pos.x and 2 or 1
+
+					if this.render.sprites[2].flip_x then
+						anim_idx = anim_idx == 2 and 1 or 2
+					end
+
+					offset_x = attack.bullet_start_offset[anim_idx].x
+					offset_y = attack.bullet_start_offset[anim_idx].y
+
+					if this.render.sprites[2].flip_x then
+						offset_x = -offset_x
+					end
+
+					U.animation_start(this, attack.animation[anim_idx], nil, store.tick_ts, false, 2, true)
+					U.y_wait(store, attack.shoot_time * tw.cooldown_factor)
+
+					total_targets = math.min(#targets, 3)
+
+					for i = 1, total_targets do
+						bullet = E:create_entity(attack.bullet)
+						bullet.pos = V.v(this.pos.x + offset_x, this.pos.y + offset_y)
+						bullet.bullet.from = V.vclone(bullet.pos)
+						bullet.bullet.to = V.v(targets[i].pos.x + targets[i].unit.hit_offset.x, targets[i].pos.y + targets[i].unit.hit_offset.y)
+						bullet.bullet.target_id = targets[i] and targets[i].id or nil
+						bullet.bullet.source_id = this.id
+						bullet.bullet.damage_factor = this.tower.damage_factor
+						bullet.bullet.damage_min = attack.damage_min[pow_dragon_split.level] / total_targets
+						bullet.bullet.damage_max = attack.damage_max[pow_dragon_split.level] / total_targets
+						bullet.bullet.damage_radius = attack.damage_radius[pow_dragon_split.level]
+						bullet.bullet.damage_min_area = attack.damage_min_area[pow_dragon_split.level]
+						bullet.bullet.damage_max_area = attack.damage_max_area[pow_dragon_split.level]
+						bullet.initial_impulse_duration = 0.1 * i
+
+						queue_insert(store, bullet)
+					end
+
+					a_dragon_split.ts = store.tick_ts
+					this.tower_upgrade_persistent_data.dragon_split_ts = a_dragon_split.ts
+
+					U.y_animation_wait(this, 2)
+				end
+
+				U.animation_start(this, "idle", nil, store.tick_ts, true, 2, true)
+				update_head()
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+function scripts.tower_dragons.remove(this, store, script)
+	for _, s in pairs(this.dragons) do
+		if s.health then
+			s.health.dead = true
+		end
+
+		queue_remove(store, s)
+	end
+
+	return true
+end
+
+scripts.decal_tower_dragons_stun = {}
+
+function scripts.decal_tower_dragons_stun.update(this, store, script)
+	this.render.sprites[1].hidden = true
+
+	U.y_wait(store, fts(math.random(0, 5)))
+
+	this.render.sprites[1].hidden = false
+
+	U.y_animation_play(this, "in", nil, store.tick_ts, 1, 1)
+	U.animation_start(this, "idle", nil, store.tick_ts, true, 1, true)
+	U.y_wait(store, this.duration)
+	SU.fade_out_entity(store, this, 0, fts(10))
+	U.y_wait(store, fts(10))
+	queue_remove(store, this)
+end
+
+scripts.bullet_tower_dragons_dragon_split = {}
+
+function scripts.bullet_tower_dragons_dragon_split.update(this, store)
+	local b = this.bullet
+	local fm = this.force_motion
+	local target = store.entities[b.target_id]
+
+	if target and target.vis and U.flag_has(target.vis.bans, F_FLYING) then
+		b.hit_fx = nil
+	end
+
+	local ps
+
+	local function move_step(dest)
+		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
+		local dist = V.len(dx, dy)
+		local nx, ny = V.mul(fm.max_v, V.normalize(dx, dy))
+		local stx, sty = V.sub(nx, ny, fm.v.x, fm.v.y)
+
+		if dist <= 4 * fm.max_v * store.tick_length then
+			stx, sty = V.mul(fm.max_a, V.normalize(stx, sty))
+		end
+
+		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step, stx, sty)))
+		fm.v.x, fm.v.y = V.trim(fm.max_v, V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y)))
+		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
+		fm.a.x, fm.a.y = 0, 0
+
+		return dist <= fm.max_v * store.tick_length
+	end
+
+	if b.particles_name then
+		ps = E:create_entity(b.particles_name)
+		ps.particle_system.emit = true
+		ps.particle_system.track_id = this.id
+
+		queue_insert(store, ps)
+	end
+
+	local pred_pos
+
+	if target and target.enemy and target.nav_path then
+		pred_pos = P:predict_enemy_pos(target, fts(5))
+	else
+		pred_pos = b.to
+	end
+
+	local iix, iiy = V.normalize(pred_pos.x - this.pos.x, pred_pos.y - this.pos.y)
+	local last_pos = V.vclone(this.pos)
+
+	b.ts = store.tick_ts
+
+	while true do
+		target = store.entities[b.target_id]
+
+		if target and target.health and not target.health.dead and target.vis and band(target.vis.bans, F_RANGED) == 0 then
+			local hit_offset = V.v(0, 0)
+
+			if not b.ignore_hit_offset then
+				hit_offset.x = target.unit.hit_offset.x
+				hit_offset.y = target.unit.hit_offset.y
+			end
+
+			local d = math.max(math.abs(target.pos.x + hit_offset.x - b.to.x), math.abs(target.pos.y + hit_offset.y - b.to.y))
+
+			if d > b.max_track_distance then
+				target = nil
+				b.target_id = nil
+			else
+				b.to.x, b.to.y = target.pos.x + hit_offset.x, target.pos.y + hit_offset.y
+			end
+		end
+
+		if this.initial_impulse and store.tick_ts - b.ts < this.initial_impulse_duration then
+			local t = store.tick_ts - b.ts
+
+			if this.initial_impulse_angle_abs then
+				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(this.initial_impulse_angle_abs, 1, 0))
+			else
+				local angle = this.initial_impulse_angle
+
+				if iix < 0 then
+					angle = angle * -1
+				end
+
+				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(angle, iix, iiy))
+			end
+
+			if this.initial_impulse_reduction then
+				this.initial_impulse = this.initial_impulse * this.initial_impulse_reduction
+			end
+		end
+
+		last_pos.x, last_pos.y = this.pos.x, this.pos.y
+
+		if move_step(b.to) then
+			break
+		end
+
+		if b.align_with_trajectory then
+			this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
+		end
+
+		coroutine.yield()
+	end
+
+	if target and not target.health.dead then
+		local d = SU.create_bullet_damage(b, target.id, this.id)
+
+		queue_damage(store, d)
+
+		if b.mod or b.mods then
+			local mods = b.mods or {b.mod}
+
+			for _, mod_name in ipairs(mods) do
+				local m = E:create_entity(mod_name)
+
+				m.modifier.target_id = b.target_id
+				m.modifier.level = b.level
+
+				queue_insert(store, m)
+			end
+		end
+	end
+
+	if b.damage_radius and b.damage_radius > 0 then
+		local area_targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
+
+		if area_targets then
+			for _, target_area in ipairs(area_targets) do
+				if not target or target_area.id ~= target.id then
+					b.damage_min = b.damage_min_area
+					b.damage_max = b.damage_max_area
+
+					local d = SU.create_bullet_damage(b, target_area.id, this.id)
+
+					queue_damage(store, d)
+				end
+			end
+		end
+	end
+
+	this.render.sprites[1].hidden = true
+
+	if b.hit_fx then
+		local fx = E:create_entity(b.hit_fx)
+
+		fx.pos.x, fx.pos.y = b.to.x, b.to.y
+
+		if target then
+			fx.pos.x, fx.pos.y = target.pos.x, target.pos.y + target.unit.hit_offset.y
+		end
+
+		fx.render.sprites[1].ts = store.tick_ts
+		fx.render.sprites[1].runs = 0
+
+		queue_insert(store, fx)
+	end
+
+	if b.hit_decal and target and target.vis and band(target.vis.flags, F_FLYING) == 0 then
+		local decal = E:create_entity(b.hit_decal)
+
+		decal.pos = V.vclone(target.pos)
+		decal.render.sprites[1].ts = store.tick_ts
+
+		queue_insert(store, decal)
+	end
+
+	if ps and ps.particle_system.emit then
+		ps.particle_system.emit = false
+
+		U.y_wait(store, ps.particle_system.particle_lifetime[2])
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.faerie_dragon = {}
+
+function scripts.faerie_dragon.update(this, store)
+	local sp = this.render.sprites[1]
+	local fm = this.force_motion
+	local ca = this.custom_attack
+	local dest = V.vclone(this.idle_pos)
+	local pred_pos, dist
+
+	local function force_move_step(dest, max_speed, ramp_radius)
+		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
+		local dist = V.len(dx, dy)
+		local df = (not ramp_radius or ramp_radius < dist) and 1 or math.max(dist / ramp_radius, 0.1)
+
+		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(495, V.mul(10 * df, dx, dy)))
+		fm.v.x, fm.v.y = V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y))
+		fm.v.x, fm.v.y = V.trim(max_speed, fm.v.x, fm.v.y)
+		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
+		fm.a.x, fm.a.y = V.mul(-0.05 / store.tick_length, fm.v.x, fm.v.y)
+		sp.flip_x = this.pos.x > dest.x
+	end
+
+	local tower_id = this.owner.id
+	local unit_damage_factor = 1
+
+	local function check_tower_damage_factor()
+		if store.entities[tower_id] then
+			unit_damage_factor = store.entities[tower_id].tower.damage_factor
+		end
+	end
+
+	ca.ts = store.tick_ts
+	sp.offset.y = this.flight_height
+
+	if not this.skip_spawn then
+		U.y_animation_play(this, "spawn", nil, store.tick_ts)
+	end
+
+	while true do
+		if this.leave then
+			local direction = this.render.sprites[1].flip_x and -1 or 1
+
+			this.tween.props[2].keys[2][2].x = this.tween.props[2].keys[2][2].x * direction
+			this.tween.props[4].keys[2][2].x = this.tween.props[4].keys[2][2].x * direction
+			this.tween.disabled = false
+			this.tween.ts = store.tick_ts
+
+			return
+		end
+
+		if ca.target_id ~= nil and store.tick_ts - ca.ts > ca.cooldown then
+			ca.ts = store.tick_ts
+
+			local an, af, ai
+			local target = store.entities[ca.target_id]
+
+			if not target or target.health.dead then
+			-- block empty
+			else
+				an, af, ai = U.animation_name_facing_point(this, "fly", target.pos)
+
+				U.animation_start(this, an, af, store.tick_ts, true)
+
+				repeat
+					target = store.entities[ca.target_id]
+
+					if not target or target.health.dead then
+						goto label_faerie_dragon_no_target
+					end
+
+					dist = V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y + (target.flight_height or 0))
+					pred_pos = P:predict_enemy_pos(target, dist / this.flight_speed_busy)
+					dest.x, dest.y = pred_pos.x, pred_pos.y + (target.flight_height or 0)
+
+					force_move_step(dest, this.flight_speed_busy)
+					coroutine.yield()
+				until dist < 30 or ca.target_id == nil
+
+				if not sp.sync_flag then
+					coroutine.yield()
+				end
+
+				S:queue(ca.sound)
+
+				an, af, ai = U.animation_name_facing_point(this, ca.animation, pred_pos)
+
+				U.animation_start(this, an, af, store.tick_ts, false, 1, true)
+				U.y_wait(store, ca.shoot_time)
+
+				do
+					local so = ca.bullet_start_offset[ai]
+					local b = E:create_entity(ca.bullet)
+
+					b.pos.x, b.pos.y = this.pos.x + (af and -1 or 1) * so.x, this.pos.y + this.flight_height + so.y
+					b.bullet.from = V.vclone(b.pos)
+					b.bullet.to = pred_pos
+					b.bullet.target_id = target.id
+					b.bullet.source_id = this.id
+
+					check_tower_damage_factor()
+
+					if b.bullet.use_unit_damage_factor then
+						b.bullet.damage_factor = unit_damage_factor
+					end
+
+					queue_insert(store, b)
+				end
+
+				U.y_animation_wait(this)
+			end
+
+			::label_faerie_dragon_no_target::
+
+			ca.target_id = nil
+			dest.x, dest.y = this.idle_pos.x, this.idle_pos.y
+		end
+
+		U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+		if V.dist(dest.x, dest.y, this.idle_pos.x, this.idle_pos.y) > 43 or V.dist(dest.x, dest.y, this.pos.x, this.pos.y) < 10 then
+			dest = U.point_on_ellipse(this.idle_pos, 40, U.frandom(0, 2 * math.pi))
+		end
+
+		force_move_step(dest, this.flight_speed_idle, this.ramp_dist_idle)
+		coroutine.yield()
+	end
+end
+
+scripts.mod_faerie_dragon_slow = {}
+
+function scripts.mod_faerie_dragon_slow.insert(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if not target or not target.vis or band(target.vis.bans, F_MOD) ~= 0 then
+		return false
+	end
+
+	return scripts.mod_slow.insert(this, store)
+end
+
+--#endregion tower_dragons_lvl4
 return scripts

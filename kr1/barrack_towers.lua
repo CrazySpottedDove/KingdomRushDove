@@ -3584,7 +3584,7 @@ tt.ui.click_rect = r(-42, 0, 84, 90)
 
 --#endregion
 
-tt = E:register_t("tower_arborean_sentinels", "tower_KR5")
+tt = E:register_t("tower_arborean_sentinels", "tower")
 b = balance.specials.towers.arborean_sentinels
 E:add_comps(tt, "vis", "barrack")
 tt.tower.type = "tower_arborean_sentinels"

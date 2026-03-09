@@ -5901,6 +5901,38 @@ local towers = {
 		teleport = {
 			price = {150, 200}
 		}
+	},
+	dragons = {
+		price = {105, 160, 220, 280},
+		ranged_attack = {
+			cooldown = 2,
+			damage_min = {16, 16, 16, 30},
+			damage_max = {20, 20, 20, 40},
+			damage_type = DAMAGE_MAGICAL,
+			slow_duration = {2, 2, 2, 2},
+			slow_factor = {0.7, 0.7, 0.7, 0.4},
+			range = {275, 275, 275, 275}
+		},
+		dragon_split = {
+			price = {200, 200, 200},
+			cooldown = {9.6, 9.6, 9.6},
+			min_range = {150, 150, 150},
+			max_range = {500, 500, 500},
+			damage_min = {100, 200, 400},
+			damage_max = {150, 300, 600},
+			damage_type = DAMAGE_MAGICAL,
+			damage_radius = {50, 50, 50},
+			damage_min_area = {20, 40, 70},
+			damage_max_area = {30, 60, 100}
+		},
+		massive_fear = {
+			price = {200, 300},
+			cooldown = {17.6, 17.6},
+			stun_duration = {2.5, 4},
+			max_range = {180, 180},
+			min_targets = {3, 3},
+			max_targets = {15, 15}
+		}
 	}
 }
 local specials = {

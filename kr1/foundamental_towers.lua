@@ -1861,7 +1861,7 @@ tt.main_script.update = scripts.mod_elemental_metal_gold_per_damage.update
 tt.modifier.bans = {}
 tt.modifier.duration = 0.5
 tt.modifier.use_mod_offset = false
-tt = E:register_t("tower_stage_13_sunray", "tower_KR5")
+tt = E:register_t("tower_stage_13_sunray", "tower")
 b = balance.specials.towers.stage_13_sunray
 E:add_comps(tt, "user_selection", "attacks", "editor")
 tt.tower.type = "tower_stage_13_sunray"

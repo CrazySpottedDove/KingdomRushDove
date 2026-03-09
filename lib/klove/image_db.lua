@@ -52,7 +52,8 @@ local persistent_textures = table_to_map({
 	"go_towers_paladin_covenant",
 	"go_towers_arborean_emissary",
 	"loading_common",
-	"gui_ico"
+	"gui_ico",
+	"go_towers_dragons"
 })
 
 local km = require("lib.klua.macros")
