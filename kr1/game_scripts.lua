@@ -62254,7 +62254,7 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 
 			local boss_speed = boss.motion.max_speed
 
-			boss.motion.max_speed = 0
+			U.update_max_speed(this, 0)
 
 			queue_insert(store, boss)
 
@@ -62325,7 +62325,7 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 			U.sprites_hide(this)
 
 			boss.render.sprites[1].ts = this.render.sprites[1].ts
-			boss.motion.max_speed = boss_speed
+			U.update_max_speed(boss_speed)
 
 			queue_remove(store, this)
 		end
@@ -67446,7 +67446,7 @@ function scripts.controller_stage_40_moving_island.update(this, store)
 
 			y_remove_rock(path_rock_3, "BLOCK_3")
 
-			this.motion.max_speed = 21
+			U.update_max_speed(this, 21)
 			this.current_step = this.current_step + 1
 			this.reached_destination = false
 		end
@@ -68369,8 +68369,7 @@ function scripts.enemy_evolved_lava.insert(this, store, script)
 end
 
 function scripts.enemy_evolved_lava.update(this, store, script)
-	this.motion.max_speed = this.motion.max_speed * this.speed_fly_mult
-
+	U.speed_mul_self(this, this.speed_fly_mult)
 	if this.render.sprites[1].name == "raise" then
 		if this.sound_events and this.sound_events.raise then
 			S:queue(this.sound_events.raise, this.sound_events.raise_args)
@@ -68398,7 +68397,7 @@ function scripts.enemy_evolved_lava.update(this, store, script)
 			return false
 		end
 
-		local s = U.find_nearest_soldier(store.entities, this.pos, 0, this.landing_damage_radius_find, F_BLOCK, bor(F_FLYING, F_ENEMY))
+		local s = U.find_nearest_soldier(store.soldiers, this.pos, 0, this.landing_damage_radius_find, F_BLOCK, bor(F_FLYING, F_ENEMY))
 
 		if not s then
 			return false
@@ -68429,8 +68428,7 @@ function scripts.enemy_evolved_lava.update(this, store, script)
 		this.render.sprites[1].angles.idle = this.render.sprites[1].angles.idle_ground
 		this.render.sprites[1].angles.walk = this.render.sprites[1].angles.walk_ground
 		this.render.sprites[1].angles.death = this.render.sprites[1].angles.death_ground
-		this.motion.max_speed = this.motion.max_speed / this.speed_fly_mult
-
+		U.speed_div_self(this, this.speed_fly_mult)
 		U.sprites_hide(this, 2, 2, true)
 	end
 
@@ -68517,7 +68515,7 @@ function scripts.enemy_evolved_lava.update(this, store, script)
 		check_flight_settings()
 
 		if can_end_flight() then
-			local s = U.find_nearest_soldier(store.entities, this.pos, 0, this.landing_damage_radius_find, F_BLOCK, bor(F_FLYING, F_ENEMY))
+			local s = U.find_nearest_soldier(store.soldiers, this.pos, 0, this.landing_damage_radius_find, F_BLOCK, bor(F_FLYING, F_ENEMY))
 			local an, af = this.landing_anim
 
 			if s then
@@ -70516,7 +70514,7 @@ function scripts.enemy_basic_shadow.update(this, store, script)
 			return false
 		end
 
-		local disable_smoke_ps_duration = fts(this.motion.max_speed * particles_emit_time_by_speed)
+		local disable_smoke_ps_duration = fts(this.motion.real_speed * particles_emit_time_by_speed)
 
 		if store.tick_ts < disable_smoke_ps_start_ts + disable_smoke_ps_duration then
 			return false
@@ -70599,12 +70597,12 @@ function scripts.enemy_basic_shadow.update(this, store, script)
 			end
 
 			if ready_to_accelerate() then
-				this.motion.max_speed = this.motion.max_speed * this.shadow_speed_mult
+				U.speed_mul_self(this, this.shadow_speed_mult)
 				is_speeding = true
 			end
 
 			if ready_to_decelerate() then
-				this.motion.max_speed = this.motion.max_speed / this.shadow_speed_mult
+				U.speed_div_self(this, this.shadow_speed_mult)
 				is_speeding = false
 			end
 
@@ -70995,7 +70993,7 @@ function scripts.enemy_alfa_shadow.update(this, store, script)
 			ps_trail.particle_system.scales_x = {-1}
 		end
 
-		this.motion.max_speed = this.motion.max_speed * evolve_tp.speed_mult
+		U.speed_mul_self(this, evolve_tp.speed_mult)
 
 		local walk_path = target_pi == this.nav_path.pi
 
@@ -71026,7 +71024,7 @@ function scripts.enemy_alfa_shadow.update(this, store, script)
 		end
 
 		ps_trail.particle_system.emit = false
-		this.motion.max_speed = this.motion.max_speed / evolve_tp.speed_mult
+		U.speed_div_self(this, evolve_tp.speed_mult)
 		this.render.sprites[1].anchor = old_anchor
 		this.health_bar.hidden = nil
 
@@ -72676,7 +72674,7 @@ function scripts.boss_murglum.update(this, store, script)
 			if node_valid and not ignore_soldiers and this.ranged then
 				for _, a in pairs(this.ranged.attacks) do
 					if not a.disabled and (not a.requires_magic or this.enemy.can_do_magic) and (a.hold_advance or store.tick_ts - a.ts > a.cooldown) then
-						ranged = U.find_nearest_soldier(store.entities, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans, function(s)
+						ranged = U.find_nearest_soldier(store.soldiers, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans, function(s)
 							return not a.only_foward or s.pos.x + a.only_foward_range <= this.pos.x
 						end)
 
@@ -73483,11 +73481,11 @@ function scripts.tower_dragons_warden.update(this, store)
 		if this.tower.blocked then
 		-- block empty
 		else
-			if store.tick_ts - aa.ts > aa.cooldown and not this.boss_is_going_to_eat then
+			if store.tick_ts - aa.ts > aa.cooldown * this.tower.cooldown_factor then
 				local trigger_enemy, _, pred_pos = U.find_foremost_enemy(store.entities, tpos(this), 0, a.range, aa.prediction_time, aa.vis_flags, aa.vis_bans)
 
 				if not trigger_enemy then
-					SU.delay_attack(store, aa, fts(10))
+					aa.ts = aa.ts + fts(10)
 				else
 					aa.ts = store.tick_ts
 
@@ -73897,7 +73895,6 @@ function scripts.soldier_dragon_warden_dragon_raider_mounted.update(this, store,
 	local target_pos = V.vclone(this.pos)
 	local target_angle, angle_diff, posx, posy, diff, normal_x, normal_y
 	local wander_radius = this.wander_radius
-	local o_max_speed
 	local speed_easing_mult = 1
 	local speed_easing_deaccel_amount = 5
 	local speed_easing_accel_amount = 5
@@ -74125,19 +74122,16 @@ function scripts.soldier_dragon_warden_dragon_raider_mounted.update(this, store,
 			posx, posy = V.rotate(last_movement_angle, posx, posy)
 			normal_x, normal_y = V.normalize(posx, posy)
 			this.motion.forced_waypoint = V.v(this.pos.x + 40 * normal_x, this.pos.y + 40 * normal_y)
-			o_max_speed = this.motion.max_speed
 
 			if not breaking_movement then
 				speed_easing_mult = speed_easing_mult + (1 - speed_easing_mult) * store.tick_length * speed_easing_accel_amount
 			end
 
-			this.motion.max_speed = this.motion.max_speed * speed_easing_mult
+			U.speed_mul_self(this, speed_easing_mult)
 
-			if SU.go_to_forced_waypoint(this, store) then
-				this.motion.max_speed = o_max_speed
-			else
-				this.motion.max_speed = o_max_speed
-			end
+			SU.go_to_forced_waypoint(this, store)
+
+			U.speed_div_self(this, speed_easing_mult)
 		end
 
 		::label_2472_0::
