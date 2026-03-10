@@ -57,6 +57,28 @@ store.main_hero.nav_rally.pos=V.vclone(store.main_hero.nav_rally.center)
 local old_vo=table.deepclone(store.main_hero.sound_events.change_rally_point)
 store.main_hero.sound_events.change_rally_point=nil
 local fly_hero=U.flag_has(store.main_hero.vis.flags,F_FLYING)
+signal.emit("pan-zoom-camera",4,{x=700,y=384},OVtargets(nil,1.2))
+signal.emit("show-curtains")
+signal.emit("hide-gui")
+signal.emit("start-cinematic")
+U.y_wait(store,4)
+y_do_boss_taunt("LV37_BOSS_INTRO_01")
+U.y_wait(store,1.8)
+while V.dist(store.main_hero.pos.x,store.main_hero.pos.y,hero_end_pos.x,hero_end_pos.y)>10 do
+coroutine.yield()
+end
+U.y_wait(store,0.2)
+if fly_hero then
+signal.emit("show-balloon_tutorial","LV37_BOSS_INTRO_HERO_FLYING",false)
+else
+signal.emit("show-balloon_tutorial","LV37_BOSS_INTRO_HERO",false)
+end
+U.y_wait(store,2)
+signal.emit("pan-zoom-camera",2,{x=400,y=380},OVtargets(nil,1))
+U.y_wait(store,2)
+signal.emit("hide-curtains")
+signal.emit("show-gui")
+signal.emit("end-cinematic",true)
 store.main_hero.sound_events.change_rally_point=old_vo
 end
 while not store.waves_finished or LU.has_alive_enemies(store) do

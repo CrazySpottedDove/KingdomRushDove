@@ -2541,6 +2541,13 @@ return {
 			stream = true,
 			files = {"kr5_dlc3_bgmusic_battle3_v1.ogg"}
 		},
+		MusicBossFight_140 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc3_bgmusic_bossBattle_v1.ogg"}
+		},
 		MusicBattle_1001 = {
 			files = {"MusicBattleUnderAttackMountain.ogg"},
 			gain = 0.8,

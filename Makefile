@@ -98,3 +98,7 @@ push:
 
 format:
 	dlfmt --json-task ./dlfmt_task.json
+
+add:
+	dlfmt --json-task ./dlfmt_task.json
+	git add .

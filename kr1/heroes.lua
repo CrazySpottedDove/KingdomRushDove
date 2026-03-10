@@ -10442,7 +10442,7 @@ tt.modifier.duration = 6
 --#endregion
 --#region hero_faustus
 tt = RT("hero_faustus", "hero")
-AC(tt, "ranged", "timed_attacks")
+AC(tt, "ranged")
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {400, 425, 450, 475, 500, 525, 550, 575, 600, 625}
 tt.hero.level_stats.melee_damage_max = {1, 2, 4, 4, 5, 6, 7, 8, 9, 10}
@@ -11979,7 +11979,7 @@ tt.ultimate = {
 --#endregion
 --#region soldier_hero_space_elf_astral_reflection
 tt = RT("soldier_hero_space_elf_astral_reflection", "soldier_militia")
-AC(tt, "melee", "ranged", "reinforcement", "tween", "transfer", "timed_attacks")
+AC(tt, "melee", "ranged", "reinforcement", "tween", "transfer")
 b = balance.heroes.hero_space_elf
 tt.info.i18n_key = "HERO_SPACE_ELF_ASTRAL_REFLECTION_ENTITY"
 tt.info.enc_icon = 12
@@ -14795,7 +14795,7 @@ tt.tween.remove = false
 --#endregion
 --#region hero_lumenir
 tt = RT("hero_lumenir", "hero")
-AC(tt, "ranged", "timed_attacks", "tween")
+AC(tt, "ranged", "tween")
 b = balance.heroes.hero_lumenir
 tt.hero.level_stats.armor = b.armor
 tt.hero.level_stats.hp_max = b.hp_max

@@ -1137,6 +1137,9 @@ function MapView:initialize(screen_w, screen_h)
 
 	self:load_map_animations(screen_map.generation)
 	self:show_flags(screen_map.generation)
+	if screen_map.generation == 5 then
+		self.pos.y = -700
+	end
 end
 
 function MapView:load_map_animations(num)

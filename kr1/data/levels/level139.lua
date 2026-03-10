@@ -68,6 +68,7 @@ while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end
 boss_controller.start=true
+store.game_gui:set_boss(boss_controller)
 while not self.bossfight_ended do
 coroutine.yield()
 end

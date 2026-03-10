@@ -17732,7 +17732,7 @@ tt.explotion_vis_flags = bor(F_AREA, F_ENEMY)
 
 tt = E:register_t("controller_basic_clone_darksteel_guardian", "enemy")
 b = balance.enemies.hammer_and_anvil.common_clone
-tt.info.portrait = "kr5_info_portraits_enemies_0067"
+tt.info.portrait = "kr5_info_portraits_enemies_0001"
 tt.motion.max_speed = b.speed
 tt.main_script.update = scripts.controller_basic_clone_darksteel_guardian.update
 tt.render.sprites[1].prefix = "common_clone_creep"
@@ -23334,8 +23334,6 @@ tt.spawn_escombro = nil
 tt.pre_destroy_cannonballs_list = nil
 tt.sound = nil
 
-tt = RT("tower_holder_blocked_stage_38", "tower_holder_blocked_2")
-
 tt = E:register_t("bullet_qiongqi_lightning", "bullet")
 b = balance.enemies.wukong.qiongqi.ranged_attack
 tt.bullet.damage_min = b.damage_min
@@ -25396,7 +25394,7 @@ tt.tower.level = 1
 tt.tower.kind = TOWER_KIND_BARRACK
 tt.tower.can_be_sold = false
 tt.tower.can_be_mod = false
-tt.info.portrait = "portraits_towers_0008"
+tt.info.portrait = "kr5_portraits_towers_0008"
 tt.info.fn = scripts.tower_barrack_mercenaries.get_info
 tt.ui.has_nav_mesh = true
 tt.ui.can_click = false
@@ -25874,15 +25872,13 @@ tt.tween.props[2].interp = "sine"
 tt.tween.props[2].keys = {{0, v(0, tt.flight_height)}, {fts(6), v(0, tt.flight_height)}, {fts(11), v(0, tt.flight_height + 50)}, {fts(19), v(0, tt.flight_height + 70)}, {fts(24), v(0, tt.flight_height + 70)}, {fts(26), v(0, 0)}}
 tt.tween.props[2].sprite_id = 1
 tt.tween.props[2].disabled = true
-tt = RT("controller_stage_38_cinematic", "decal_scripted")
 
-E:add_comps(tt, "editor")
-
+tt = RT("controller_stage_38_cinematic")
+E:add_comps(tt, "editor", "main_script")
 tt.main_script.update = scripts.controller_stage_38_cinematic.update
+
 tt = RT("stage_39_veins_tower_stun", "modifier")
-
 E:add_comps(tt, "render", "sound_events")
-
 tt.main_script.insert = scripts.stage_39_veins_tower_stun.insert
 tt.main_script.update = scripts.stage_39_veins_tower_stun.update
 tt.main_script.remove = scripts.stage_39_veins_tower_stun.remove
@@ -26078,9 +26074,7 @@ tt.editor.overrides = {
 	["render.sprites[1].name"] = "idle"
 }
 tt = RT("controller_stage_39_boss")
-
-E:add_comps(tt, "editor", "pos", "main_script", "render", "health", "info", "ui", "timed_attacks")
-
+E:add_comps(tt, "editor", "pos", "main_script", "render", "health", "info", "ui")
 tt.main_script.update = scripts.controller_stage_39_boss.update
 tt.info.fn = scripts.controller_stage_39_boss.get_info
 tt.miniboss_died = scripts.controller_stage_39_boss.miniboss_died
@@ -26158,11 +26152,10 @@ tt.timed_attacks.list[tt.attack_units_index].stun_fliers = b.stun_units.stun_fli
 tt.timed_attacks.list[tt.attack_units_index].mod_stun_wardens = "mod_boss_stage_40_stun_wardens"
 tt.events.list[1].name = "stun_stage"
 tt.events.list[1].on_event = scripts.controller_stage_40_boss_shadow_waves.on_stun_stage
+
 tt = RT("controller_stage_40_boss")
 b = balance.enemies.dragons.boss_stage_40.bossfight
-
 E:add_comps(tt, "editor", "pos", "main_script", "render", "health", "info", "ui", "timed_attacks")
-
 tt.main_script.update = scripts.controller_stage_40_boss.update
 tt.get_hit_by_ballista_fn = scripts.controller_stage_40_boss.get_hit_by_ballista_fn
 tt.percentage_to_death = b.percentage_to_death
@@ -26856,10 +26849,11 @@ tt.aura.vis_flags = bor(F_MOD, F_TELEPORT, F_INSTAKILL)
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 tt = RT("enemy_stage_40_boss_hit_point", "enemy")
+local b = balance.enemies.dragons.boss_stage_40.bossfight
 tt.enemy.gold = 0
 tt.enemy.melee_slot = v(0, 0)
-tt.enemy.lives_cost = 9999
-tt.health.hp_max = 1e+99
+tt.enemy.lives_cost = 1
+tt.health.hp_max = b.hp * 1.25
 tt.health.armor = 0
 tt.health.magic_armor = 0
 tt.unit.blood_color = BLOOD_VIOLET
@@ -26880,12 +26874,12 @@ tt.move_speed = v(0.2, 0.2)
 tt.ui.click_rect = r(-10, -10, 20, 20)
 tt.get_damaged_fx = "fx_stage_40_boss_get_damaged"
 tt.sound_events.death = nil
+
 tt = RT("enemy_stage_40_boss_hit_point_feet", "enemy_stage_40_boss_hit_point")
 tt.unit.hit_offset = v(0, 0)
+
 tt = RT("stage_39_cocoon", "decal_scripted")
-
 E:add_comps(tt, "events", "editor")
-
 tt.render.sprites[1].prefix = "stage_39_spawnerDef"
 tt.render.sprites[1].name = "spawner_inactivo_idle"
 tt.render.sprites[1].z = Z_OBJECTS
@@ -27322,3 +27316,106 @@ tt.render.sprites[1].sort_y_offset = -16
 
 tt = RT("fx_soldier_dragon_warden_dragon_raider_mounted_death", "fx")
 tt.render.sprites[1].name = "warden_warlock_stage3_dragon_rider_death_rider"
+
+tt = RT("decal_boss_40_waves_stun_decoy_position", "decal")
+E:add_comps(tt, "editor")
+tt.render.sprites[1].name = "waveFlag_0001"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].scale = vv(0.35)
+tt.render.sprites[1].offset = v(-6, -6)
+tt.render.sprites[1].hidden = true
+tt.render.sprites[2] = table.deepclone(tt.render.sprites[1])
+tt.render.sprites[2].offset = v(6, -6)
+tt.render.sprites[3] = table.deepclone(tt.render.sprites[1])
+tt.render.sprites[3].offset = v(0, 6)
+tt.editor.overrides = {
+	["render.sprites[2].hidden"] = false,
+	["render.sprites[1].hidden"] = false,
+	["render.sprites[3].hidden"] = false
+}
+
+tt = RT("ps_decal_boss_40_waves_stun_towers")
+E:add_comps(tt, "pos", "particle_system")
+tt.particle_system.name = "vfx_dragon_projectile_stun_trail_run"
+tt.particle_system.animated = true
+tt.particle_system.anchor = v(0.4353932584269663, 0.5)
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 22
+tt.particle_system.track_rotation = true
+tt.particle_system.particle_lifetime = {fts(14), fts(14)}
+tt = RT("decal_boss_40_waves_stun_decoy", "decal_boss_40_waves_stun_towers")
+tt.main_script.insert = scripts.decal_boss_40_waves_stun_decoy.insert
+tt.main_script.update = scripts.decal_boss_40_waves_stun_decoy.update
+tt.fx = "fx_decal_boss_40_waves_stun_decoy"
+tt = RT("fx_decal_boss_40_waves_stun_decoy", "decal_tween")
+tt.render.sprites[1].prefix = "vfx_dragon_stun_tower"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {0.4, 255}, {0.6, 0}}
+tt.tween.props[1].loop = false
+tt.tween.props[1].sprite_id = 1
+tt.tween.disabled = false
+tt.tween.remove = true
+
+tt = RT("decal_boss_40_scream_base", "decal_scripted")
+
+E:add_comps(tt, "tween")
+
+tt.main_script.update = scripts.multi_sprite_fx.update
+tt.render.sprites[1].name = "vfx_dragon_crack_loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].scale = vv(4)
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "vfx_dragon_stun_tower_run"
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].loop = true
+tt.render.sprites[2].scale = vv(3)
+tt.render.sprites[2].z = Z_OBJECTS
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {fts(60), 255}, {fts(70), 0}}
+tt.tween.props[1].loop = false
+tt.tween.props[1].sprite_id = 1
+tt.tween.props[2] = E:clone_c("tween_prop")
+tt.tween.props[2].name = "alpha"
+tt.tween.props[2].keys = {{0, 255}, {fts(60), 255}, {fts(70), 0}}
+tt.tween.props[2].loop = false
+tt.tween.props[2].sprite_id = 2
+tt.tween.disabled = false
+tt.tween.remove = true
+tt.dont_hide = {
+	[1] = true,
+	[2] = true
+}
+
+tt = RT("decal_boss_40_scream_chase_mod")
+E:add_comps(tt, "pos", "main_script")
+tt.main_script.update = scripts.decal_boss_40_scream_chase_mod.update
+tt.speed = 250
+tt.decal = "decal_boss_40_scream_chase_decal"
+tt.mod = nil
+tt.holder_id = nil
+tt.target_id = nil
+
+tt = RT("decal_boss_40_scream_chase_decal", "decal_scripted")
+E:add_comps(tt, "tween")
+tt.main_script.update = scripts.multi_sprite_fx.update
+tt.render.sprites[1].name = "vfx_dragon_crack_loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].loop = false
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "vfx_dragon_fire_particles_run"
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].loop = false
+tt.render.sprites[2].z = Z_OBJECTS
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {fts(20), 255}, {fts(30), 0}}
+tt.tween.props[1].loop = false
+tt.tween.props[1].sprite_id = 1
+tt.tween.disabled = false
+tt.tween.remove = true

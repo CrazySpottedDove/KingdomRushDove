@@ -2660,7 +2660,10 @@ return {
 			"kr4_sfx_erudite_shot_op2_var1_v1.ogg",
 			"kr4_sfx_erudite_shot_op2_var2_v1.ogg",
 			"kra_sfx_crocs_killertile_bitemelee_v1.ogg",
-			"kra_sfx_enemy_razingRhino_basicAttack_var3_v1.ogg"
+			"kra_sfx_enemy_razingRhino_basicAttack_var3_v1.ogg",
+			"kr5_dlc3_bgmusic_preparation3_v1.ogg",
+			"kr5_dlc3_bgmusic_battle3_v1.ogg",
+			"kr5_dlc3_bgmusic_bossBattle_v1.ogg"
 		}
 	},
 	enemies_terrain_dragons_1 = {

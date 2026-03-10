@@ -15,8 +15,12 @@ local function patch_hp(t, mult)
 	for k, v in pairs(t) do
 		if k == "hp" then
 			if type(v) == "table" then
-				for i = 1, #v do
-					v[i] = v[i] * mult
+				if #v == 4 then
+					t[k] = v[3] * mult
+				else
+					for i = 1, #v do
+						v[i] = v[i] * mult
+					end
 				end
 			else
 				t[k] = v * mult
@@ -4893,7 +4897,7 @@ local enemies = {
 		}
 	},
 	dragons = {
-		gold_multiplier = 1.08,
+		gold_multiplier = 1.1,
 		tanky_draconian = {
 			speed = 38,
 			armor = 0.35,

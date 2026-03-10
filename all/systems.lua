@@ -3251,7 +3251,9 @@ if not IS_ANDROID then
 
 			if not f.marked_to_remove then
 				local ffi_f = render_frames_ffi[n]
-
+				if not f.z then
+					log.error("prefix: %s, name: %s, _draw_order: %d, pos: %s", f.prefix or "nil", f.name or "nil", f._draw_order or 0, f.pos and (f.pos.x .. "," .. f.pos.y) or "nil")
+				end
 				ffi_f.z = f.z
 				ffi_f.sort_y = f.sort_y or (f.sort_y_offset or 0) + f.pos.y
 				ffi_f.draw_order = f._draw_order
@@ -3996,6 +3998,9 @@ if ASSETS_CHECK_ENABLED then
 				if s == nil then
 					info_portraits_check_result[e.template_name] = e.info.portrait
 				end
+			end
+			if e.timed_attacks and not e.timed_attacks.list[1] then
+				log.error("Entity %s has timed_attacks component but empty list", e.template_name)
 			end
 		end
 

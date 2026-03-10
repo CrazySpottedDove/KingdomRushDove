@@ -62254,7 +62254,7 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 
 			local boss_speed = boss.motion.max_speed
 
-			U.update_max_speed(this, 0)
+			U.update_max_speed(boss, 0)
 
 			queue_insert(store, boss)
 
@@ -62325,7 +62325,7 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 			U.sprites_hide(this)
 
 			boss.render.sprites[1].ts = this.render.sprites[1].ts
-			U.update_max_speed(boss_speed)
+			U.update_max_speed(boss, boss_speed)
 
 			queue_remove(store, this)
 		end
@@ -62384,6 +62384,8 @@ function scripts.controller_stage_38_cinematic.update(this, store, script)
 		manage_taunts()
 		coroutine.yield()
 	end
+
+	queue_remove(store, this)
 end
 
 scripts.decal_stage_37_tall_tower = {}
@@ -63011,6 +63013,11 @@ function scripts.decal_stage_39_floor_veins_controller.update(this, store, scrip
 		end
 
 		current_sequence = current_sequence + 1
+
+		if not this.veins_sequences[current_sequence] then
+			break
+		end
+
 		this.do_veins = this.veins_sequences[current_sequence].veins
 
 		local veins_per_cast = this.veins_sequences[current_sequence].veins_per_cast
@@ -63078,6 +63085,8 @@ function scripts.decal_stage_39_floor_veins_controller.update(this, store, scrip
 
 		coroutine.yield()
 	end
+
+	queue_remove(store, this)
 end
 
 function scripts.decal_stage_39_floor_veins_controller.activate_veins_fn(this)
@@ -64494,7 +64503,6 @@ function scripts.controller_stage_39_boss.update(this, store)
 	local function y_first_death()
 		W:stop_manual_wave(current_manual_wave)
 		LU.kill_all_enemies(store, true)
-		log.todo("stop manual wave %s", current_manual_wave)
 		S:queue("Stage39BossDeathFake")
 		U.animation_start(this, "damage_death", nil, store.tick_ts, false, 1, true)
 		U.y_wait(store, 0.5)
@@ -64546,13 +64554,11 @@ function scripts.controller_stage_39_boss.update(this, store)
 		current_manual_wave = "BOSS2"
 
 		W:start_manual_wave(current_manual_wave)
-		log.todo("start manual wave %s", current_manual_wave)
 	end
 
 	local function y_death()
 		W:stop_manual_wave(current_manual_wave)
 		LU.kill_all_enemies(store, true)
-		log.todo("stop manual wave %s", current_manual_wave)
 		signal.emit("boss_fight_end")
 		signal.emit("pan-zoom-camera", 2, {
 			x = 512,
@@ -64631,17 +64637,14 @@ function scripts.controller_stage_39_boss.update(this, store)
 			current_manual_wave = "BOSS1"
 
 			W:start_manual_wave(current_manual_wave)
-			log.todo("start manual wave %s", current_manual_wave)
 		elseif vein_attack_nmbr == 2 then
 			current_manual_wave = "BOSS1_2"
 
 			W:start_manual_wave(current_manual_wave)
-			log.todo("start manual wave %s", current_manual_wave)
 		elseif vein_attack_nmbr == 3 then
 			current_manual_wave = "BOSS1_3"
 
 			W:start_manual_wave(current_manual_wave)
-			log.todo("start manual wave %s", current_manual_wave)
 		end
 	end
 
@@ -64765,6 +64768,9 @@ function scripts.controller_stage_39_boss.update(this, store)
 	local end_first_cinematic_ts = store.tick_ts + 4
 
 	while true do
+		if this.health.hp <= 0 then
+			this.health.dead = true
+		end
 		if this.health.dead then
 			if not first_death then
 				y_death()
@@ -65391,8 +65397,8 @@ function scripts.decal_stage_40_path_rock.update(this, store)
 
 		while not U.animation_finished_group(this, "layers") do
 			if orig_z and change_z_ts <= store.tick_ts then
-				orig_z = nil
 				this.render.sprites[2].z = orig_z
+				orig_z = nil
 			end
 
 			if not this.skip_big_dust and fx_ts and fx_ts <= store.tick_ts then
@@ -65771,6 +65777,88 @@ function scripts.mod_stage_40_boss_shadow_units_stun.update(this, store, script)
 			coroutine.yield()
 		end
 	end
+
+	queue_remove(store, this)
+end
+
+scripts.decal_boss_40_waves_stun_decoy = {}
+
+function scripts.decal_boss_40_waves_stun_decoy.insert(this, store)
+	this.target_pos = V.vclone(this.pos)
+
+	if this.side == "LEFT" then
+		this.render.sprites[1].r = math.rad(-70)
+	else
+		this.render.sprites[1].r = math.rad(-110)
+	end
+
+	local dist = REF_H
+	local n_x, n_y = math.cos(this.render.sprites[1].r), math.sin(this.render.sprites[1].r)
+
+	this.pos.x = this.pos.x - n_x * dist
+	this.pos.y = this.pos.y - n_y * dist
+	this.delay_start = this.delay_start - 0.2
+
+	return true
+end
+
+function scripts.decal_boss_40_waves_stun_decoy.update(this, store)
+	if this.delay_start then
+		U.y_wait(store, this.delay_start)
+	end
+
+	local ps
+
+	if this.particles_name then
+		ps = E:create_entity(this.particles_name)
+		ps.particle_system.track_id = this.id
+
+		queue_insert(store, ps)
+	end
+
+	local scale = 0.75
+
+	scale = scale * (0.94 + 0.06 * math.random())
+	this.render.sprites[1].scale = V.vv(scale)
+
+	if ps then
+		ps.particle_system.scales_y = {scale, scale}
+		ps.particle_system.scales_x = {scale, scale}
+		ps.particle_system.emission_rate = ps.particle_system.emission_rate / scale
+	end
+
+	local target_hit_pos = this.target_pos
+	local random_sin_start = store.tick_ts * math.random()
+	local start_r = this.render.sprites[1].r
+	local start_dist = V.len(this.pos.x - target_hit_pos.x, this.pos.y - target_hit_pos.y)
+
+	while true do
+		local target_dist = V.len(this.pos.x - target_hit_pos.x, this.pos.y - target_hit_pos.y)
+		local dist_value = (start_dist - target_dist) / start_dist
+		local dist_value_inverse = 1 - dist_value
+		local oscillation_r = math.rad(math.deg(start_r) + math.sin(random_sin_start + store.tick_ts * this.oscillation_speed) * this.oscillation_force)
+		local target_r = V.angleTo(target_hit_pos.x - this.pos.x, target_hit_pos.y - this.pos.y)
+		local diff_oscillation_r = oscillation_r - this.render.sprites[1].r
+		local diff_target_r = target_r - this.render.sprites[1].r
+		local diff_to_use = diff_oscillation_r * dist_value_inverse + diff_target_r * dist_value
+
+		this.render.sprites[1].r = this.render.sprites[1].r + diff_to_use * store.tick_length * 60
+
+		local n_x, n_y = math.cos(this.render.sprites[1].r), math.sin(this.render.sprites[1].r)
+
+		this.pos.x = this.pos.x + n_x * this.speed * store.tick_length
+		this.pos.y = this.pos.y + n_y * this.speed * store.tick_length
+
+		if V.dist(this.pos.x, this.pos.y, target_hit_pos.x, target_hit_pos.y) < this.dist_to_apply then
+			break
+		end
+
+		coroutine.yield()
+	end
+
+	local fx = SU.spawn_fx(this.fx, this.pos, store)
+
+	fx.tween.ts = store.tick_ts
 
 	queue_remove(store, this)
 end
@@ -66563,6 +66651,10 @@ function scripts.controller_stage_40_boss.update(this, store)
 		S:stop("Stage40BossHyperbeam")
 		S:stop("Stage40BossScreech")
 		S:stop("Stage40BossStep")
+
+		if this.health.hp <= 0 then
+			this.health.dead = true
+		end
 
 		if this.health.dead then
 			y_death()
@@ -71413,7 +71505,7 @@ function scripts.enemy_alfa_storm.update(this, store, script)
 		end
 
 		if a_special.min_towers_target > 0 then
-			local towers = SU.find_towers_in_range_vis(store.entities, this.pos, a_special, function(t)
+			local towers = U.find_towers_in_range(store.towers, this.pos, a_special, function(t)
 				return t.tower.can_be_mod and not t.tower.blocked and not SU.has_modifiers(store, t, a_special.towers_mod) and not SU.has_modifiers(store, t, a_special.towers_mod_mark)
 			end)
 
@@ -71595,7 +71687,7 @@ function scripts.enemy_alfa_storm.update(this, store, script)
 			end
 
 			if ready_to_special() then
-				local towers = SU.find_towers_in_range_vis(store.entities, this.pos, a_special, function(t)
+				local towers = U.find_towers_in_range(store.towers, this.pos, a_special, function(t)
 					return t.tower.can_be_mod and not t.tower.blocked and not SU.has_modifiers(store, t, a_special.mod) and not SU.has_modifiers(store, t, a_special.mark_mod)
 				end)
 
@@ -71636,7 +71728,7 @@ function scripts.enemy_alfa_storm.update(this, store, script)
 					goto label_2303_0
 				end
 
-				towers = SU.find_towers_in_range_vis(store.entities, this.pos, a_special, function(t)
+				towers = U.find_towers_in_range(store.towers, this.pos, a_special, function(t)
 					if not t.tower.can_be_mod then
 						return false
 					end
@@ -74333,4 +74425,70 @@ function scripts.bullet_boss_morglun_tower_stun.update(this, store, script)
 
 	queue_remove(store, this)
 end
+
+scripts.decal_boss_40_scream_chase_mod = {}
+
+function scripts.decal_boss_40_scream_chase_mod.update(this, store)
+	U.y_wait(store, this.delay)
+
+	local next_decal_ts = store.tick_ts + fts(10)
+	local target
+
+	local function find_target()
+		target = store.entities[this.target_id]
+
+		if not target and this.holder_id then
+			for _, e in pairs(store.entities) do
+				if e.tower and e.tower.holder_id == this.holder_id then
+					target = e
+
+					break
+				end
+			end
+		end
+	end
+
+	while true do
+		find_target()
+
+		if not target then
+			break
+		end
+
+		local pos_diff = V.v(target.pos.x - this.pos.x, target.pos.y - this.pos.y)
+		local n_x, n_y = V.normalize(pos_diff.x, pos_diff.y)
+
+		this.pos.x = this.pos.x + n_x * this.speed * store.tick_length
+		this.pos.y = this.pos.y + n_y * this.speed * store.tick_length
+
+		if V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y) < 10 then
+			if this.holder_id and not target.tower.can_be_mod then
+				break
+			end
+
+			local mod = E:create_entity(this.mod)
+
+			mod.modifier.target_id = target.id
+
+			queue_insert(store, mod)
+
+			break
+		end
+
+		if next_decal_ts <= store.tick_ts then
+			next_decal_ts = store.tick_ts + fts(10)
+
+			local decal = E:create_entity(this.decal)
+
+			decal.pos = V.vclone(this.pos)
+
+			queue_insert(store, decal)
+		end
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
 return scripts

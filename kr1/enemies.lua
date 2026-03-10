@@ -13804,10 +13804,9 @@ tt.shader_args = {
 tt = RT("enemy_dragons", "enemy")
 tt.main_script.insert = scripts.enemy_dragons.insert
 tt.gold_multiplier = balance.enemies.dragons.gold_multiplier
+
 tt = RT("enemy_basic_lava", "enemy_dragons")
-
 E:add_comps(tt, "melee")
-
 b = balance.enemies.dragons.basic_lava
 tt.enemy.gold = b.gold
 tt.enemy.melee_slot = v(25, 0)
@@ -14318,10 +14317,9 @@ tt.tween.props[2].keys = {{0, v(tt.render.sprites[1].offset.x, tt.render.sprites
 tt.tween.remove = true
 tt.tween.disabled = true
 tt.sheep_sound = "EnemyAlfaAcidEvolverSheep"
+
 tt = RT("enemy_basic_shadow", "enemy_dragons")
-
 E:add_comps(tt, "tween")
-
 b = balance.enemies.dragons.basic_shadow
 tt.flight_height = 40
 tt.info.enc_icon = 135
@@ -14369,10 +14367,9 @@ tt.tween.props[1].interp = "sine"
 tt.tween.props[1].keys = {{fts(0), v(0, 0)}, {fts(25), v(0, tt.flight_height)}}
 tt.tween.props[1].loop = false
 tt.tween.props[1].sprite_id = 1
+
 tt = RT("enemy_evolved_shadow", "enemy_dragons")
-
 E:add_comps(tt, "ranged")
-
 b = balance.enemies.dragons.evolved_shadow
 tt.info.enc_icon = 136
 tt.info.portrait = "kr5_info_portraits_enemies_0137"
@@ -14793,11 +14790,10 @@ tt.unit.can_explode = false
 tt.vis.flags = bor(F_ENEMY)
 tt.sound_events.death = "EnemyRazingRhinoDeath"
 tt.mod_invulneravility = "mod_enemy_brute_storm_invulnerability"
+
 tt = RT("enemy_miniboss_stage_39", "enemy")
 b = balance.enemies.dragons.miniboss_stage_39
-
-E:add_comps(tt, "melee", "timed_attacks", "regen")
-
+E:add_comps(tt, "melee", "regen")
 tt.enemy.gold = b.gold
 tt.enemy.melee_slot = v(41, 0)
 tt.enemy.lives_cost = b.lives_cost

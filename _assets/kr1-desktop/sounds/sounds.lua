@@ -553,6 +553,90 @@ return {
 		loop = false,
 		source_group = "SFX"
 	},
+	EnemyStormAlfaDeath = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "DEATH",
+		files = {"kra_sfx_dragons_enemy_storm_alfa_death_v1.ogg"}
+	},
+	EnemyStormAlfaEvolutionLoop = {
+		loop = true,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_storm_alfa_evolution_LOOP_v1.ogg"}
+	},
+	EnemyStormAlfaEvolutionLoopStart = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_storm_alfa_evolution_loopStart_v1.ogg"}
+	},
+	EnemyStormAlfaEvolutionOneShot = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_storm_alfa_evolution_oneShot_v1.ogg"}
+	},
+	EnemyStormAlfaMelee = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_storm_alfa_melee_var1_v1.ogg", "kra_sfx_dragons_enemy_storm_alfa_melee_var2_v1.ogg", "kra_sfx_dragons_enemy_storm_alfa_melee_var3_v1.ogg"}
+	},
+	EnemyStormAlfaRanged = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_storm_alfa_ranged_var1_v1.ogg", "kra_sfx_dragons_enemy_storm_alfa_ranged_var2_v1.ogg", "kra_sfx_dragons_enemy_storm_alfa_ranged_var3_v1.ogg"}
+	},
+	EnemyStormAlfaStunTower = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_storm_alfa_stun_tower_v1.ogg"}
+	},
+	EnemyStormAlfaStunTowerShoot = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_storm_alfa_stun_tower_shoot_v1.ogg"}
+	},
+	EnemyStormBasicEvolution = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_storm_basic_evolution_v1.ogg"}
+	},
+	EnemyStormEvolvedAttack = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_storm_evolved_attack_var1_v1.ogg", "kra_sfx_dragons_enemy_storm_evolved_attack_var2_v1.ogg", "kra_sfx_dragons_enemy_storm_evolved_attack_var3_v1.ogg"}
+	},
+	EnemyStormExecuthosDeath = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "DEATH",
+		files = {"kra_sfx_dragons_enemy_storm_executhos_death_v1.ogg"}
+	},
+	EnemyStormExecuthosSpecialAttack = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_storm_executhos_special_attack_v1.ogg"}
+	},
 	ElfBleed = {
 		files = {"Elf_bleed.ogg"},
 		gain = 1,

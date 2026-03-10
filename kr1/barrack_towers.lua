@@ -3524,7 +3524,7 @@ tt.tower.level = 1
 tt.tower.price = b.price[1]
 tt.tower.menu_offset = v(0, 20)
 tt.info.i18n_key = "TOWER_PALADIN_COVENANT_1"
-tt.info.portrait = "portraits_towers_0001"
+tt.info.portrait = "kr5_portraits_towers_0001"
 tt.info.enc_icon = 5
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_barrack_%04i"
@@ -3625,7 +3625,7 @@ tt.barrack.respawn_offset = v(0, 5)
 tt.sound_events.change_rally_point = "Stage04ArboreanThornspears"
 
 tt = E:register_t("soldier_arborean_sentinels_spearmen", "soldier_militia")
-E:add_comps(tt, "powers", "timed_attacks", "ranged", "nav_grid")
+E:add_comps(tt, "powers", "ranged", "nav_grid")
 tt.health.armor = b.spearmen.armor
 tt.health.hp_max = b.spearmen.hp_max
 tt.regen.health = b.spearmen.regen_health

@@ -87,7 +87,7 @@ LU.queue_insert(store,shake)
 end
 if entry.holders then
 local holders={}
-for _,v in pairs(store.entities) do
+for _,v in pairs(store.towers) do
 if v.tower and (v.tower.holder_id=="11" or v.tower.holder_id=="9") then
 table.insert(holders,v)
 local fx=E:create_entity("fx_stage_40_moving_island_explosion_dirt")
@@ -102,7 +102,9 @@ end
 coroutine.yield()
 for _,v in pairs(holders) do
 U.sprites_show(v,nil,nil,true)
+if v.tower_holder then
 v.tower_holder.blocked=false
+end
 v.ui.can_click=true
 v.ui.can_select=true
 end
@@ -249,6 +251,8 @@ U.y_wait(store,3)
 local boss=E:create_entity("controller_stage_40_boss")
 boss.pos=V.v(512,384)
 LU.queue_insert(store,boss)
+coroutine.yield()
+store.game_gui:set_boss(boss)
 signal.emit("pan-zoom-camera",4,{x=512,y=380},1)
 U.y_wait(store,8.2)
 moving_island.remove_runas=true
