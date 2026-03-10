@@ -64530,7 +64530,7 @@ function scripts.controller_stage_39_boss.update(this, store)
 		SU.shake_screen(store, 1, fts(45), 2.5)
 		S:queue("Stage39BossRoarReanimate")
 		U.animation_start(this, "angry_loop", nil, store.tick_ts, true, 1, true)
-
+		store.game_gui:set_boss(this)
 		local min_regen_per_second = this.health.hp_max * 0.3
 		local min_regen_per_tick = min_regen_per_second * store.tick_length
 
@@ -64735,6 +64735,7 @@ function scripts.controller_stage_39_boss.update(this, store)
 		coroutine.yield()
 	end
 
+	store.game_gui:set_boss(this)
 	signal.emit("show-curtains")
 	signal.emit("hide-gui")
 	signal.emit("start-cinematic")

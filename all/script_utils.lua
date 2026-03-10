@@ -3324,7 +3324,7 @@ function SU.y_enemy_death(store, this)
 	elseif band(this.health.last_damage_types, bor(DAMAGE_EAT)) ~= 0 then
 		this.unit.hide_during_death = true
 		this.unit.show_blood_pool = false
-	elseif band(terrain_type, TERRAIN_CLIFF) ~= 0 and band(this.vis.flags, F_FLYING) == 0 then
+	elseif band(terrain_type, TERRAIN_CLIFF) ~= 0 and band(this.vis.flags, F_FLYING) == 0 and this.cliff then
 		S:queue("WilhemScream")
 		S:queue(this.sound_events.death, this.sound_events.death_args)
 		U.animation_start(this, "fall", nil, store.tick_ts, true)
