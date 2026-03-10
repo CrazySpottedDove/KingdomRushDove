@@ -227,8 +227,11 @@ local loader
 local function load_director()
 	local director = require("director")
 	main.handler = director
-
-	require("mods.mod_main"):init(director)
+	if is_android then
+		director:init(main.params)
+	else
+		require("mods.mod_main"):init(director)
+	end
 end
 
 local function load_update_manager()

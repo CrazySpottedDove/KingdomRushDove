@@ -36,7 +36,7 @@ JOBS=${JOBS:-$(nproc 2>/dev/null || echo 4)}
 
 echo "Creating base archive (excluding PNGs) -> $ARCHIVE_DIR"
 # 先打包项目中除 png 和 .versions 的文件（避免把 archive 自己打进去）
-zip -r "$ARCHIVE_DIR" . -x "*.dds" -x ".versions/*" -x "tmp/*" -x "*.exe" -x ".git/*" -x "KingdomRushDoveUpdater" -x "client.log" -x "client" -x "https.dll" -x "https.so" -x "run.bat" -x "launch.bat" -x "存档位置.lnk" -x "dlfmt" -x ".dlfmt_cache.json" -x "update.lua" -x ".gdb_history" -x "mods/local" -x "mods/local/*" -x "aidoc/*" -x ".plugins/*" -q
+zip -r "$ARCHIVE_DIR" . -x "*.dds" -x ".versions/*" -x "tmp/*" -x "*.exe" -x ".git/*" -x "KingdomRushDoveUpdater" -x "client.log" -x "client" -x "https.dll" -x "https.so" -x "run.bat" -x "launch.bat" -x "存档位置.lnk" -x "dlfmt" -x ".dlfmt_cache.json" -x "update.lua" -x ".gdb_history" -x "aidoc/*" -x ".plugins/*" -x "mods/local/*" -q
 
 # 创建临时目录用于放置缩放后的 png，保留相对路径
 tempdir=$(mktemp -d)
