@@ -84,9 +84,9 @@ rm -rf "$STAGE_DIR"
 
 echo "Packed -> $ARCHIVE_DIR"
 
-# 如果传入了参数 quick，则使用内网 scp 传输
-# if [ "${1:-}" = "quick" ]; then
-#     scp -P 60001 "$ARCHIVE_DIR" dove@10.112.99.5:/srv/files/王国保卫战Dove版-Windows端/
-# else
-#     scp -P 60001 "$ARCHIVE_DIR" dove@krdovedownload6.crazyspotteddove.top:/srv/files/王国保卫战Dove版-Windows端/
-# fi
+如果传入了参数 quick，则使用内网 scp 传输
+if [ "${1:-}" = "quick" ]; then
+    scp -P 60001 "$ARCHIVE_DIR" dove@10.112.99.5:/srv/files/王国保卫战Dove版-Windows端/
+else
+    scp -P 60001 "$ARCHIVE_DIR" dove@krdovedownload6.crazyspotteddove.top:/srv/files/王国保卫战Dove版-Windows端/
+fi

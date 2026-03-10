@@ -38482,7 +38482,7 @@ function scripts.hero_dragon_sun.level_up(this, store)
 
 		aura.aura.duration = s.duration[sl]
 
-		local mod = E:get_template(aura.aura.mod)
+		local mod = E:get_template(aura.aura.mods[1])
 
 		mod.hps.heal_min = s.heal[sl]
 		mod.hps.heal_max = s.heal[sl]
