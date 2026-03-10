@@ -887,6 +887,51 @@ function screen_map:keypressed(key, isrepeat)
 	elseif key == "l" then
 		hide_others()
 		self.launch_options_panel_view:show()
+	elseif key == "w" then
+		if self.map_view.pos.y ~= 0 then
+			if self.map_tween_handle then
+				timer:cancel(self.map_tween_handle)
+			end
+			self.map_view.scrolling_dir = 0
+			self.map_tween_handle = timer:tween(0.6, self.map_view.pos, {
+				y = 0
+			}, "out-quad")
+		end
+
+	elseif key == "a" then
+		if self.map_view.pos.x ~= 0 then
+			if self.map_tween_handle then
+				timer:cancel(self.map_tween_handle)
+			end
+			self.map_view.scrolling_dir = 0
+			self.map_tween_handle = timer:tween(0.6, self.map_view.pos, {
+				x = 0
+			}, "out-quad")
+		end
+	elseif key == "s" then
+		local target_y = self.map_view.screen_h - self.map_view.size.y
+		if self.map_view.pos.y ~= target_y then
+			if self.map_tween_handle then
+				timer:cancel(self.map_tween_handle)
+			end
+			self.map_view.scrolling_dir = 0
+			local target_y = self.map_view.screen_h - self.map_view.size.y
+			self.map_tween_handle = timer:tween(0.6, self.map_view.pos, {
+				y = target_y
+			}, "out-quad")
+		end
+	elseif key == "d" then
+		local target_x = self.map_view.screen_w - self.map_view.size.x
+		if self.map_view.pos.x ~= target_x then
+			if self.map_tween_handle then
+				timer:cancel(self.map_tween_handle)
+			end
+			self.map_view.scrolling_dir = 0
+			local target_x = self.map_view.screen_w - self.map_view.size.x
+			self.map_tween_handle = timer:tween(0.6, self.map_view.pos, {
+				x = target_x
+			}, "out-quad")
+		end
 	end
 
 	if DEBUG_MAP_ANI_EDITOR and self.SEL_ANI then
