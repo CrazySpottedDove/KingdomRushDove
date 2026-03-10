@@ -58,6 +58,7 @@ end
 
 function spatial_index.insert_entity(entity)
 	local id_array_index = floor((entity.pos.y - _y_min) * _cell_size_factor) * _cols + floor((entity.pos.x - _x_min) * _cell_size_factor)
+
 	local id_array = id_arrays[id_array_index]
 
 	-- 让 entity 知道自己在 spatial_index 中的位置

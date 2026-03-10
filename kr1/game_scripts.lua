@@ -51822,7 +51822,7 @@ function scripts.enemy_qiongqi.update(this, store)
 			this.tween = E:clone_c("tween")
 			this.tween.remove = false
 		end
-
+		-- TODO: 修复 tween
 		local p = E:clone_c("tween_prop")
 
 		p.keys = {{0, fade_init}, {duration, fade_end}}
@@ -56457,6 +56457,7 @@ function scripts.controller_stage_33_ciclone.update(this, store)
 			this.tween.props = {}
 		end
 
+		-- TODO: 修复 tween
 		local p = E:clone_c("tween_prop")
 
 		p.keys = {{0, fade_init}, {duration, fade_end}}
@@ -61770,7 +61771,7 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 			offset_escalation.x = -offset_escalation.x
 		end
 
-		for _, pos in ipairs(fires_positions) do
+		for i, pos in ipairs(fires_positions) do
 			local b = E:create_entity(this.decal_bullet[store.level_mode])
 
 			b.bullet.to = pos
@@ -61781,7 +61782,6 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 			U.animation_start(this, "torre_ataque_basic_loop", nil, store.tick_ts, false, 1, true)
 			U.y_animation_wait(this, 1, 1)
 		end
-
 		U.y_animation_play(this, "torre_ataque_basic_out", nil, store.tick_ts, 1, 1)
 
 		next_area_attack_ts = store.tick_ts + b.area_attack_cooldown
@@ -62302,7 +62302,7 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 
 			queue_insert(store, shake)
 			U.y_animation_wait(this)
-			U.animation_start(this, "walk", flip, store.tick_ts, true, 1, true)
+			U.animation_start(this, "walk", nil, store.tick_ts, true, 1, true)
 
 			local diff, norm_x, norm_y
 			local speed = 100
@@ -63264,11 +63264,6 @@ function scripts.bullet_boss_stage_37_geisers_bossfight.update(this, store, scri
 
 	if target and not target.health.dead then
 		local d = SU.create_bullet_damage(b, target.id, this.id)
-		local u = UP:get_upgrade("mage_spell_of_penetration")
-
-		if u and math.random() < u.chance then
-			d.damage_type = DAMAGE_TRUE
-		end
 
 		queue_damage(store, d)
 
@@ -65127,7 +65122,7 @@ function scripts.controller_stage_40_boss_shadow_waves.update(this, store, scrip
 	local function get_towers(side)
 		local allowed_holders = a_stun_towers.holders_ids[side]
 
-		return U.find_towers_in_range(store.entities, this.pos, a_stun_towers, function(t)
+		return U.find_towers_in_range(store.towers, this.pos, a_stun_towers, function(t)
 			if not t.tower.can_be_mod then
 				return false
 			end
@@ -67324,7 +67319,7 @@ function scripts.controller_stage_40_moving_island.update(this, store)
 	signal.emit("hide-gui")
 	signal.emit("start-cinematic")
 
-	--local cam_pos, cam_zoom = SU.get_camera_values()
+	local cam_pos, cam_zoom = SU.get_camera_values()
 
 	signal.emit("pan-zoom-camera", 1.5, {
 		x = 800,
@@ -67514,8 +67509,8 @@ function scripts.controller_stage_40_moving_island.update(this, store)
 		if return_camera_ts and return_camera_ts < store.tick_ts then
 			return_camera_ts = nil
 
-			--signal.emit("pan-zoom-camera", 1.5, cam_pos, cam_zoom)
-			signal.emit("pan-zoom-camera", 1.5, 512, 384)
+			signal.emit("pan-zoom-camera", 1.5, cam_pos, cam_zoom)
+		-- signal.emit("pan-zoom-camera", 1.5, 512, 384)
 		end
 
 		if end_cinematic_ts and end_cinematic_ts < store.tick_ts then
@@ -67881,7 +67876,7 @@ function scripts.soldier_warden_stage_40_island_stopped.update(this, store, scri
 			this.reinforcement.fade = false
 			this.reinforcement.fade_out = false
 			this.ui.can_click = false
-			this.tween = nil
+			-- this.tween = nil
 
 			SU.y_soldier_death(store, this)
 
@@ -68315,55 +68310,55 @@ end
 
 scripts.enemy_evolved_lava = {}
 
-function scripts.enemy_evolved_lava.get_info(this)
-	local min, max, attacks
+-- function scripts.enemy_evolved_lava.get_info(this)
+-- 	local min, max, attacks
 
-	if this.melee and this.melee.attacks then
-		for _, a in pairs(this.melee.attacks) do
-			if a.damage_min then
-				min, max = a.damage_min, a.damage_max
+-- 	if this.melee and this.melee.attacks then
+-- 		for _, a in pairs(this.melee.attacks) do
+-- 			if a.damage_min then
+-- 				min, max = a.damage_min, a.damage_max
 
-				break
-			end
-		end
+-- 				break
+-- 			end
+-- 		end
 
-		if this.unit and min then
-			min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
-		end
-	elseif this.ranged and this.ranged.attacks then
-		for _, a in pairs(this.ranged.attacks) do
-			if a.bullet then
-				local b = E:get_template(a.bullet)
+-- 		if this.unit and min then
+-- 			min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
+-- 		end
+-- 	elseif this.ranged and this.ranged.attacks then
+-- 		for _, a in pairs(this.ranged.attacks) do
+-- 			if a.bullet then
+-- 				local b = E:get_template(a.bullet)
 
-				if b and b.bullet.damage_min and b.bullet.damage_max then
-					min, max = b.bullet.damage_min, b.bullet.damage_max
+-- 				if b and b.bullet.damage_min and b.bullet.damage_max then
+-- 					min, max = b.bullet.damage_min, b.bullet.damage_max
 
-					break
-				end
-			end
-		end
-	end
+-- 					break
+-- 				end
+-- 			end
+-- 		end
+-- 	end
 
-	if min and max then
-		min, max = math.ceil(min) * #this.melee.attacks[1].hit_times, math.ceil(max) * #this.melee.attacks[1].hit_times
-	end
+-- 	if min and max then
+-- 		min, max = math.ceil(min) * #this.melee.attacks[1].hit_times, math.ceil(max) * #this.melee.attacks[1].hit_times
+-- 	end
 
-	local armor = band(this.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or this.health.armor
-	local magic_armor = band(this.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or this.health.magic_armor
+-- 	local armor = band(this.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or this.health.armor
+-- 	local magic_armor = band(this.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or this.health.magic_armor
 
-	return {
-		type = STATS_TYPE_ENEMY,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		damage_icon = this.info.damage_icon,
-		armor = armor,
-		magic_armor = magic_armor,
-		lives = this.enemy.lives_cost,
-		immune = this.health.immune_to == DAMAGE_ALL_TYPES
-	}
-end
+-- 	return {
+-- 		type = STATS_TYPE_ENEMY,
+-- 		hp = this.health.hp,
+-- 		hp_max = this.health.hp_max,
+-- 		damage_min = min,
+-- 		damage_max = max,
+-- 		damage_icon = this.info.damage_icon,
+-- 		armor = armor,
+-- 		magic_armor = magic_armor,
+-- 		lives = this.enemy.lives_cost,
+-- 		immune = this.health.immune_to == DAMAGE_ALL_TYPES
+-- 	}
+-- end
 
 function scripts.enemy_evolved_lava.insert(this, store, script)
 	if not U.is_seen(store, "enemy_evolved_lava") then
@@ -68484,25 +68479,26 @@ function scripts.enemy_evolved_lava.update(this, store, script)
 
 	while true do
 		if this.health.dead then
-			if U.flag_has(this.vis.flags, F_FLYING) then
-				this.unit.fade_time_after_death = nil
+			-- TODO: 优化淡出效果。此处代码不合规
+			-- if U.flag_has(this.vis.flags, F_FLYING) then
+			-- 	this.unit.fade_time_after_death = nil
 
-				local props_amount = #this.tween.props
+			-- 	local props_amount = #this.tween.props
 
-				for i = 2, props_amount do
-					this.tween.props[i] = nil
-				end
+			-- 	for i = 2, props_amount do
+			-- 		this.tween.props[i] = nil
+			-- 	end
 
-				this.tween.disabled = false
-				this.tween.props[1].disabled = false
-				this.tween.props[1].name = "alpha"
-				this.tween.props[1].keys = {{0, 255}, {0.9, 255}, {1, 0}}
-				this.tween.props[1].sprite_id = 2
-				this.tween.props[1].ts = store.tick_ts
-				this.tween.ts = store.tick_ts
-			else
-				this.tween = nil
-			end
+			-- 	this.tween.disabled = false
+			-- 	this.tween.props[1].disabled = false
+			-- 	this.tween.props[1].name = "alpha"
+			-- 	this.tween.props[1].keys = {{0, 255}, {0.9, 255}, {1, 0}}
+			-- 	this.tween.props[1].sprite_id = 2
+			-- 	this.tween.props[1].ts = store.tick_ts
+			-- 	this.tween.ts = store.tick_ts
+			-- else
+			-- this.tween = nil
+			-- end
 
 			SU.y_enemy_death(store, this)
 
@@ -70315,8 +70311,6 @@ function scripts.mod_enemy_alfa_acid_evolve.insert(this, store)
 	local polymorph_template
 
 	for k, v in pairs(this.entity_t) do
-		log.info()
-
 		if target.template_name == v[1] then
 			polymorph_template = v[2]
 
@@ -70325,14 +70319,11 @@ function scripts.mod_enemy_alfa_acid_evolve.insert(this, store)
 	end
 
 	local entity_poly = E:create_entity(polymorph_template)
-
+	entity_poly.health.hp_max = entity_poly.health.hp_max * target.health.hp / target.health.hp_max
 	entity_poly.pos = target.pos
 	entity_poly.nav_path = target.nav_path
 
 	queue_insert(store, entity_poly)
-
-	entity_poly.enemy.gems = target.enemy.gems
-	target.enemy.gems = 0
 
 	return false
 end
@@ -70568,7 +70559,7 @@ function scripts.enemy_basic_shadow.update(this, store, script)
 		if this.health.dead then
 			smoke_ps_dark.particle_system.emit = false
 			smoke_ps.particle_system.emit = false
-			this.tween = nil
+			-- this.tween = nil
 
 			SU.y_enemy_death(store, this)
 
@@ -72731,7 +72722,7 @@ function scripts.boss_murglum.update(this, store, script)
 			return false
 		end
 
-		local towers = U.find_towers_in_range(store.entities, this.pos, a_block_towers, function(t)
+		local towers = U.find_towers_in_range(store.towers, this.pos, a_block_towers, function(t)
 			return t.vis and t.tower.can_be_mod
 		end)
 
@@ -72745,7 +72736,7 @@ function scripts.boss_murglum.update(this, store, script)
 	end
 
 	local function do_block_tower()
-		local towers = U.find_towers_in_range(store.entities, this.pos, a_block_towers, function(t)
+		local towers = U.find_towers_in_range(store.towers, this.pos, a_block_towers, function(t)
 			return t.vis and t.tower.can_be_mod
 		end)
 
@@ -73598,7 +73589,7 @@ function scripts.soldier_dragon_warden_warrior.update(this, store, script)
 			this.reinforcement.fade = false
 			this.reinforcement.fade_out = false
 			this.ui.can_click = false
-			this.tween = nil
+			-- this.tween = nil
 
 			SU.y_soldier_death(store, this)
 

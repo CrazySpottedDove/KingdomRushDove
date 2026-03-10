@@ -13917,8 +13917,9 @@ tt.unit.head_offset = v(0, 20)
 tt.unit.marker_offset = v(0, 0)
 tt.unit.mod_offset = v(0, 15 + tt.flight_height)
 tt.unit.show_blood_pool = false
-tt.unit.fade_time_after_death = 0.6
-tt.info.fn = scripts.enemy_evolved_lava.get_info
+-- TODO: add tween props
+-- tt.unit.fade_time_after_death = 0.6
+-- tt.info.fn = scripts.enemy_evolved_lava.get_info
 tt.main_script.insert = scripts.enemy_evolved_lava.insert
 tt.main_script.update = scripts.enemy_evolved_lava.update
 tt.melee.attacks[1].hit_times = {fts(6), fts(15), fts(22)}
@@ -14009,11 +14010,10 @@ tt.tween.props[5].name = "offset"
 tt.tween.props[5].interp = "sine"
 tt.tween.props[5].sprite_id = 2
 tt.tween.props[5].keys = {{0, vv(1)}, {tt.landing_duration_evolve, vv(0.7)}}
+
 tt = RT("enemy_alfa_lava", "enemy_dragons")
 b = balance.enemies.dragons.alfa_lava
-
 E:add_comps(tt, "melee", "timed_attacks")
-
 tt.info.enc_icon = 130
 tt.info.portrait = "kr5_info_portraits_enemies_0132"
 tt.enemy.gold = b.gold
@@ -15257,3 +15257,50 @@ tt.render.sprites[1].draw_order = 20
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].scale = vv(2)
 tt.modifier.duration = nil
+
+tt = RT("bullet_alfa_lava_vomit", "bomb")
+tt.main_script.update = scripts.bullet_alfa_lava_vomit.update
+tt.render.sprites[1].prefix = "lava_alpha_proyectil"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.bullet.particles_name = "ps_bullet_alfa_lava_vomit"
+tt.bullet.flight_time = fts(30)
+tt.bullet.align_with_trajectory = true
+tt.bullet.ignore_hit_offset = true
+tt.bullet.hit_decal = "decal_enemy_alfa_lava_dot"
+tt.bullet.hit_fx = nil
+tt.bullet.pop_chance = 0
+tt.sound_events.insert = nil
+tt.sound_events.hit = nil
+
+tt = RT("bolt_boss_murglum", "bolt_enemy")
+b = balance.enemies.dragons.dragon_boss_stage_37.basic_attack
+tt.bullet.damage_type = b.damage_type
+tt.bullet.particles_name = "ps_bullet_murglum_geiser_bossfight"
+tt.bullet.align_with_trajectory = true
+tt.bullet.ignore_hit_offset = true
+tt.bullet.max_speed = 600
+tt.bullet.min_speed = 600
+tt.bullet.pop_chance = 0
+tt.bullet.damage_type = b.damage_type
+tt.bullet.damage_max = b.damage_max
+tt.bullet.damage_min = b.damage_min
+tt.bullet.damage_radius = b.damage_radius
+tt.bullet.hit_decal = "decal_boss_murglum_geiser_bossfight"
+tt.bullet.hit_fx = "fx_boss_murglum_geiser_lava"
+tt.render.sprites[1].prefix = "boss_murglun_proyectil_basic"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].anchor = v(0.4166666666666667, 0.5263157894736842)
+tt.render.sprites[1].z = Z_BULLETS
+tt.main_script.update = scripts.bolt_boss_murglum_attack.update
+tt.sound_events.insert = "Stage37MurglunAttack"
+
+tt = RT("aura_enemy_alfa_lava_dot", "aura")
+b = balance.enemies.dragons.alfa_lava.lava_vomit_attack
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.aura.duration = -1
+tt.aura.mod = "mod_enemy_alfa_lava_dot"
+tt.aura.radius = b.lava_radius
+tt.aura.cycle_time = 0.1
+tt.aura.vis_bans = bor(F_FLYING, F_ENEMY)

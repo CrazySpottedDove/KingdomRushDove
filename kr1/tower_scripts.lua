@@ -21424,12 +21424,6 @@ function scripts.tower_dragons.update(this, store)
 		return true
 	end
 
-	local function find_target(a)
-		local target, targets, pred_pos = U.find_foremost_enemy_between_range_filter_off(tpos, a.min_range[pow_dragon_split.level], a.range[pow_dragon_split.level], a.node_prediction, a.vis_flags, a.vis_bans)
-
-		return target, targets, pred_pos
-	end
-
 	local function can_awake()
 		if not this.user_selection.menu_shown then
 			return false
@@ -21862,8 +21856,6 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 		b.hit_fx = nil
 	end
 
-	local ps
-
 	local function move_step(dest)
 		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
 		local dist = V.len(dx, dy)
@@ -21882,13 +21874,11 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 		return dist <= fm.max_v * store.tick_length
 	end
 
-	if b.particles_name then
-		ps = E:create_entity(b.particles_name)
-		ps.particle_system.emit = true
-		ps.particle_system.track_id = this.id
+	local ps = E:create_entity(b.particles_name)
+	ps.particle_system.emit = true
+	ps.particle_system.track_id = this.id
 
-		queue_insert(store, ps)
-	end
+	queue_insert(store, ps)
 
 	local pred_pos
 
@@ -22019,7 +22009,7 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 		queue_insert(store, decal)
 	end
 
-	if ps and ps.particle_system.emit then
+	if ps.particle_system.emit then
 		ps.particle_system.emit = false
 
 		U.y_wait(store, ps.particle_system.particle_lifetime[2])

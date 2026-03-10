@@ -3893,9 +3893,7 @@ tt.render.sprites[1].anchor = v(0.5, 0.6)
 tt.render.sprites[1].loop = true
 
 tt = RT("bullet_tower_dragons_dragon_split", "bolt")
-
 AC(tt, "force_motion")
-
 tt.render.sprites[1].prefix = "dlc_dragons_tower_projectil_skill_shoot"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].animated = true
@@ -3930,14 +3928,11 @@ tt.particle_system.particle_lifetime = {fts(17), fts(17)}
 tt = RT("fx_bullet_tower_dragons_dragon_split_hit", "fx")
 tt.render.sprites[1].name = "dlc_dragons_tower_hit_skill_shoot_voladores_run"
 
-tt = RT("decal_bullet_tower_dragons_dragon_split", "decal_scripted")
-
+tt = RT("decal_bullet_tower_dragons_dragon_split", "decal_timed")
 AC(tt, "sound_events")
-
 tt.render.sprites[1].name = "dlc_dragons_tower_decal_projectile_run"
 tt.render.sprites[1].anchor = v(0.5, 0.5277777777777778)
 tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].loop = false
 tt.render.sprites[1].animated = true
 tt.sound_events.insert = "TowerDragonsSpitImpact"
 

@@ -2593,7 +2593,8 @@ return {
 			"kr4_sfx_erudite_shot_op1_var1_v1.ogg",
 			"kr4_sfx_erudite_shot_op1_var2_v1.ogg",
 			"kr4_sfx_erudite_shot_op2_var1_v1.ogg",
-			"kr4_sfx_erudite_shot_op2_var2_v1.ogg"
+			"kr4_sfx_erudite_shot_op2_var2_v1.ogg",
+			"kra_sfx_dragons_mechanic_stage1_path_open_1_v1.ogg"
 		}
 	},
 	stage_138 = {

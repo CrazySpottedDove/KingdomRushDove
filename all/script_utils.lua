@@ -4687,4 +4687,106 @@ function SU.shake_screen(store, amplitude, duration, freq_factor)
 	return shake
 end
 
+function SU.get_camera_values()
+	local camera_posX = game.camera.x / game.game_scale
+	local camera_posY = game.ref_h - game.camera.y / game.game_scale
+	local zoom_value = game.camera.zoom
+
+	return {
+		x = camera_posX,
+		y = camera_posY
+	}, zoom_value
+end
+
+function SU.remove_near_points(points, radius)
+	local floor = math.floor
+	local r = radius
+	local r2 = r * r
+	local cellSize = r
+	local invCell = 1 / cellSize
+	local grid = {}
+	local kept = {}
+
+	local function getBucket(cx, cy, create)
+		local col = grid[cx]
+
+		if not col then
+			if not create then
+				return nil
+			end
+
+			col = {}
+			grid[cx] = col
+		end
+
+		local bucket = col[cy]
+
+		if not bucket and create then
+			bucket = {}
+			col[cy] = bucket
+		end
+
+		return bucket
+	end
+
+	for i = 1, #points do
+		local p = points[i]
+		local x, y = p.x, p.y
+		local cx = floor(x * invCell)
+		local cy = floor(y * invCell)
+		local tooClose = false
+
+		for oy = -1, 1 do
+			for ox = -1, 1 do
+				local bucket = getBucket(cx + ox, cy + oy, false)
+
+				if bucket then
+					for j = 1, #bucket do
+						local q = kept[bucket[j]]
+						local dx = x - q.x
+						local dy = y - q.y
+
+						if r2 > dx * dx + dy * dy then
+							tooClose = true
+
+							break
+						end
+					end
+				end
+
+				if tooClose then
+					break
+				end
+			end
+
+			if tooClose then
+				break
+			end
+		end
+
+		if not tooClose then
+			local idx = #kept + 1
+
+			kept[idx] = p
+
+			local bucket = getBucket(cx, cy, true)
+
+			bucket[#bucket + 1] = idx
+		end
+	end
+
+	return kept
+end
+
+function SU.spawn_fx(template, pos, store)
+	local fx = E:create_entity(template)
+
+	fx.pos = V.vclone(pos)
+	fx.render.sprites[1].ts = store.tick_ts
+
+	queue_insert(store, fx)
+
+	return fx
+end
+
 return SU

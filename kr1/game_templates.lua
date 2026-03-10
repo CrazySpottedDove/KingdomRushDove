@@ -25491,13 +25491,12 @@ tt.melee.attacks[1].damage_min = b.melee.damage_min
 tt.melee.attacks[1].damage_type = b.melee.damage_type
 tt.motion.max_speed = b.speed
 tt.melee.range = b.melee.range
+
 tt = RT("boss_murglum", "boss")
 b = balance.enemies.dragons.dragon_boss_stage_37
-
 E:add_comps(tt, "ranged", "timed_attacks", "tween")
-
 tt.enemy.gold = 1
-tt.enemy.lives_cost = 999
+tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = v(40, 0)
 tt.flight_height = 80
 tt.fly_strenght = 5
@@ -25512,7 +25511,6 @@ tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
 tt.info.enc_icon = 138
 tt.info.i18n_key = "ENEMY_BOSS_MURGLUM"
 tt.info.portrait = "kr5_info_portraits_enemies_0143"
-tt.info.portrait_boss = "boss_health_bar_icon_0014"
 tt.main_script.insert = scripts.enemy_basic.insert
 tt.main_script.update = scripts.boss_murglum.update
 tt.motion.max_speed = b.speed
@@ -25712,27 +25710,7 @@ tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_BULLETS
 tt.render.sprites[1].anchor = v(0.4888888888888889, 0.5344827586206896)
 tt.sound_events.insert = "DragonsDLCMageWardensShoot"
-tt = RT("bolt_boss_murglum", "bolt_enemy")
-b = balance.enemies.dragons.dragon_boss_stage_37.basic_attack
-tt.bullet.damage_type = b.damage_type
-tt.bullet.particles_name = "ps_bullet_murglum_geiser_bossfight"
-tt.bullet.align_with_trajectory = true
-tt.bullet.ignore_hit_offset = true
-tt.bullet.max_speed = 600
-tt.bullet.min_speed = 600
-tt.bullet.pop_chance = 0
-tt.bullet.damage_type = b.damage_type
-tt.bullet.damage_max = b.damage_max
-tt.bullet.damage_min = b.damage_min
-tt.bullet.damage_radius = b.damage_radius
-tt.bullet.hit_decal = "decal_boss_murglum_geiser_bossfight"
-tt.bullet.hit_fx = "fx_boss_murglum_geiser_lava"
-tt.render.sprites[1].prefix = "boss_murglun_proyectil_basic"
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].anchor = v(0.4166666666666667, 0.5263157894736842)
-tt.render.sprites[1].z = Z_BULLETS
-tt.main_script.update = scripts.bolt_boss_murglum_attack.update
-tt.sound_events.insert = "Stage37MurglunAttack"
+
 tt = RT("bullet_boss_stage_37_geisers_bossfight", "bolt")
 tt.main_script.update = scripts.bullet_boss_stage_37_geisers_bossfight.update
 tt.render.sprites[1].prefix = "boss_murglun_proyectil_basic"
@@ -26004,19 +25982,17 @@ tt.editor.overrides = {
 	["render.sprites[1].hidden"] = false,
 	["render.sprites[1].name"] = "idle"
 }
+
 tt = RT("controller_stage_36_portal_splash")
-
 E:add_comps(tt, "main_script")
-
 tt.main_script.update = scripts.controller_stage_36_portal_splash.update
 tt.mod = "mod_stage_36_portal_splash"
 tt.paths_nodes = {23, 23, 23, 23}
 tt.vis_flags = 0
 tt.vis_bans = 0
+
 tt = RT("stage_37_paths_controller", "decal_scripted")
-
 E:add_comps(tt, "events", "editor")
-
 tt.main_script.update = scripts.stage_36_paths_controller.update
 tt.render.sprites[1].prefix = "mecanica_camino_2_stage_2Def"
 tt.render.sprites[1].name = "in"
@@ -27330,3 +27306,21 @@ tt.render.sprites[1].z = Z_EFFECTS
 tt.render.sprites[1].scale = vv(2)
 tt.sound_events.insert = "Stage37MurglunTowerBlockImpact"
 
+tt = RT("ps_bullet_soldier_dragon_warden_dragon_raider_trail")
+
+E:add_comps(tt, "pos", "particle_system")
+
+tt.particle_system.name = "warden_warlock_stage3_trail_run"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 20
+tt.particle_system.track_rotation = true
+tt.particle_system.particle_lifetime = {fts(9), fts(9)}
+
+tt = RT("fx_warden_warrior_hit", "fx")
+tt.render.sprites[1].name = "warden_warrior_hit_run"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -16
+
+tt = RT("fx_soldier_dragon_warden_dragon_raider_mounted_death", "fx")
+tt.render.sprites[1].name = "warden_warlock_stage3_dragon_rider_death_rider"
