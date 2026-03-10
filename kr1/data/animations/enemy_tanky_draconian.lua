@@ -1,0 +1,2 @@
+local a={lava_tanky_hit_run={prefix="lava_tanky_hit",to=6,from=1},lava_tanky_creep_idle={prefix="lava_tanky_creep",to=1,from=1},lava_tanky_creep_walk={prefix="lava_tanky_creep",to=21,from=2},lava_tanky_creep_walk_down={prefix="lava_tanky_creep",to=41,from=22},lava_tanky_creep_walk_up={prefix="lava_tanky_creep",to=61,from=42},lava_tanky_creep_mele={prefix="lava_tanky_creep",to=97,from=62},lava_tanky_creep_death={prefix="lava_tanky_creep",to=119,from=98}}
+return a

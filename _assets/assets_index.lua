@@ -411,6 +411,30 @@ return {
 		size = 4194432,
 		hash = "4e435590"
 	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_9_1-1.dds"] = {
+		size = 10837392,
+		hash = "7af9fca4"
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_9_2-1.dds"] = {
+		size = 16777344,
+		hash = "1ef5a69c"
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_9_3-1.dds"] = {
+		size = 8145440,
+		hash = "9fcfb1b4"
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_9_4-1.dds"] = {
+		size = 16777344,
+		hash = "b09414ac"
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_9_4-2.dds"] = {
+		size = 819136,
+		hash = "8c00c79c"
+	},
+	["kr1-desktop/images/fullhd/go_enemies_terrain_9_5-1.dds"] = {
+		size = 384528,
+		hash = "21f6f3d4"
+	},
 	["kr1-desktop/images/fullhd/go_enemies_torment-1.dds"] = {
 		size = 5592560,
 		hash = "ee641b4c"
@@ -1315,6 +1339,66 @@ return {
 		size = 2809104,
 		hash = "716af029"
 	},
+	["kr1-desktop/images/fullhd/go_stage136-1.dds"] = {
+		size = 16728224,
+		hash = "f4ae86c0"
+	},
+	["kr1-desktop/images/fullhd/go_stage136-2.dds"] = {
+		size = 835520,
+		hash = "72fbbfc2"
+	},
+	["kr1-desktop/images/fullhd/go_stage136_bg-1.dds"] = {
+		size = 4300928,
+		hash = "6facec74"
+	},
+	["kr1-desktop/images/fullhd/go_stage136_masks-1.dds"] = {
+		size = 5941856,
+		hash = "eb6ac08d"
+	},
+	["kr1-desktop/images/fullhd/go_stage137-1.dds"] = {
+		size = 16777344,
+		hash = "a7a8b898"
+	},
+	["kr1-desktop/images/fullhd/go_stage137-2.dds"] = {
+		size = 8214080,
+		hash = "31829b30"
+	},
+	["kr1-desktop/images/fullhd/go_stage137_bg-1.dds"] = {
+		size = 183168,
+		hash = "7cbaef96"
+	},
+	["kr1-desktop/images/fullhd/go_stage137_boss-1.dds"] = {
+		size = 16777344,
+		hash = "526f562a"
+	},
+	["kr1-desktop/images/fullhd/go_stage137_boss-2.dds"] = {
+		size = 16777344,
+		hash = "1cd19ba8"
+	},
+	["kr1-desktop/images/fullhd/go_stage137_boss-3.dds"] = {
+		size = 6927552,
+		hash = "c9f65db0"
+	},
+	["kr1-desktop/images/fullhd/go_stage137_layers-1.dds"] = {
+		size = 11018720,
+		hash = "54bed550"
+	},
+	["kr1-desktop/images/fullhd/go_stage138-1.dds"] = {
+		size = 14638400,
+		hash = "a75b3a40"
+	},
+	["kr1-desktop/images/fullhd/go_stage138_bg-1.dds"] = {
+		size = 4300928,
+		hash = "e4032eb8"
+	},
+	["kr1-desktop/images/fullhd/go_stage139-1.dds"] = {
+		size = 11009248,
+		hash = "d19da35c"
+	},
+	["kr1-desktop/images/fullhd/go_stage139_bg-1.dds"] = {
+		size = 4300928,
+		hash = "dd790874"
+	},
 	["kr1-desktop/images/fullhd/go_stage13_bg-1.dds"] = {
 		size = 1036928,
 		hash = "c6f1a060"
@@ -1330,6 +1414,26 @@ return {
 	["kr1-desktop/images/fullhd/go_stage14-3.dds"] = {
 		size = 1398256,
 		hash = "dc1fdb81"
+	},
+	["kr1-desktop/images/fullhd/go_stage140-1.dds"] = {
+		size = 16777344,
+		hash = "ce0e5c20"
+	},
+	["kr1-desktop/images/fullhd/go_stage140-2.dds"] = {
+		size = 7279328,
+		hash = "9088a200"
+	},
+	["kr1-desktop/images/fullhd/go_stage140_bossfight-1.dds"] = {
+		size = 16777344,
+		hash = "1ef5a69c"
+	},
+	["kr1-desktop/images/fullhd/go_stage140_bossfight-2.dds"] = {
+		size = 12446912,
+		hash = "7c342194"
+	},
+	["kr1-desktop/images/fullhd/go_stage140_bossfight_cannon_exo-1.dds"] = {
+		size = 1373712,
+		hash = "6f35e174"
 	},
 	["kr1-desktop/images/fullhd/go_stage14_bg-1.dds"] = {
 		size = 1036928,
@@ -2467,6 +2571,26 @@ return {
 		size = 5592580,
 		hash = "794c7a84"
 	},
+	["kr1-desktop/images/fullhd/kr5_thumb_0136.dds"] = {
+		size = 114372,
+		hash = "25105d46"
+	},
+	["kr1-desktop/images/fullhd/kr5_thumb_0137.dds"] = {
+		size = 114372,
+		hash = "441ba248"
+	},
+	["kr1-desktop/images/fullhd/kr5_thumb_0138.dds"] = {
+		size = 114372,
+		hash = "e34e10f0"
+	},
+	["kr1-desktop/images/fullhd/kr5_thumb_0139.dds"] = {
+		size = 114372,
+		hash = "e14543c8"
+	},
+	["kr1-desktop/images/fullhd/kr5_thumb_0140.dds"] = {
+		size = 114372,
+		hash = "5151191c"
+	},
 	["kr1-desktop/images/fullhd/level_select-1.dds"] = {
 		size = 17283252,
 		hash = "1bbaacd0"
@@ -2536,8 +2660,8 @@ return {
 		hash = "8b0ad498"
 	},
 	["kr1-desktop/images/fullhd/screen_map_background-5.dds"] = {
-		size = 3104768,
-		hash = "6bc1b0a4"
+		size = 23347328,
+		hash = "c8ae2dba"
 	},
 	["kr1-desktop/images/fullhd/screen_map_buttons-1.dds"] = {
 		size = 362128,

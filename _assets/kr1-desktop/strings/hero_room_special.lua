@@ -3106,7 +3106,7 @@ get_cooldown()
 local cleansing_dur = table.tail(blc.duration)
 cycle_time = blc.heal_every
 amount = table.tail(blc.heal)
-map["日耀净化"] = str(cooldown_str(), "奥利昂召唤神圣之光，持续", cleansing_dur, "秒，每", cycle_time, "秒恢复自身与附近友军", amount, "点生命值。")
+map["日耀净化"] = str(cooldown_str(), "奥利昂召唤神圣之光，持续", cleansing_dur, "秒，每", cycle_time, "秒恢复自身与附近友军", amount, "点生命值，并驱除他们的异常状态。")
 
 blc = balance.hero_dragon_sun.overcharge
 set_skill(h.hero.skills.overcharge)

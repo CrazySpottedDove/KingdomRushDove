@@ -39616,10 +39616,9 @@ function scripts.aura_hero_dragon_sun_healing.update(this, store, script)
 				return v.unit and v.vis and v.health and not v.health.dead and v.health.hp < v.health.hp_max and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius)
 			end)
 
-			for i, target in ipairs(targets) do
-				local mods = this.aura.mods or {this.aura.mod}
-
-				for _, mod_name in pairs(mods) do
+			local mods = this.aura.mods
+			for _, target in ipairs(targets) do
+				for _, mod_name in ipairs(mods) do
 					local new_mod = E:create_entity(mod_name)
 
 					new_mod.modifier.level = this.aura.level

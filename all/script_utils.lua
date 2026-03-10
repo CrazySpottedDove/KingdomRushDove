@@ -4675,4 +4675,16 @@ function SU.find_most_crowded_area(enemies, area_center, area_range, grid_size, 
 	end
 end
 
+function SU.shake_screen(store, amplitude, duration, freq_factor)
+	local shake = E:create_entity("aura_screen_shake")
+
+	shake.aura.amplitude = amplitude
+	shake.aura.duration = duration
+	shake.aura.freq_factor = freq_factor
+
+	queue_insert(store, shake)
+
+	return shake
+end
+
 return SU

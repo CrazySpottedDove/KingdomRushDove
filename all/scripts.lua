@@ -8374,16 +8374,7 @@ scripts.mod_ban.insert = function(this, store)
 		return false
 	end
 
-	if not target.origin_vis_bans then
-		target.origin_vis_bans = target.vis.bans
-	end
-
-	if not target.mod_ban_count then
-		target.mod_ban_count = 0
-	end
-
-	target.mod_ban_count = target.mod_ban_count + 1
-	target.vis.bans = bor(target.vis.bans, this.modifier.ban_vis)
+	U.bans_add(target.vis, this.modifier.ban_vis)
 
 	return true
 end
@@ -8409,12 +8400,7 @@ scripts.mod_ban.remove = function(this, store)
 		return true
 	end
 
-	target.mod_ban_count = target.mod_ban_count - 1
-
-	if target.mod_ban_count <= 0 then
-		target.vis.bans = target.origin_vis_bans
-		target.mod_ban_count = 0
-	end
+	U.bans_remove(target.vis, this.modifier.ban_vis)
 
 	return true
 end

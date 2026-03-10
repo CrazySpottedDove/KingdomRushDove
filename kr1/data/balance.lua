@@ -72,7 +72,7 @@ local heroes = {
 		dead_lifetime = 15,
 		teleport_min_distance = 250,
 		shared_cooldown = 3,
-		armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+		armor = {0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1},
 		hp_max = {260, 286, 312, 338, 354, 390, 416, 442, 468, 494},
 		melee_attacks = {
 			can_repeat_attack = false,
@@ -129,7 +129,7 @@ local heroes = {
 					cooldown = 1,
 					range = 72,
 					damage_min = {4, 8, 12},
-					damage_max = {5, 10, 14},
+					damage_max = {5, 10, 15},
 					damage_type = DAMAGE_PHYSICAL
 				}
 			}
@@ -4891,6 +4891,591 @@ local enemies = {
 				damage_type = DAMAGE_PHYSICAL
 			}
 		}
+	},
+	dragons = {
+		gold_multiplier = 1.08,
+		tanky_draconian = {
+			speed = 38,
+			armor = 0.35,
+			gold = 30,
+			magic_armor = 0,
+			hp = {670, 800, 960, 1060},
+			basic_attack = {
+				cooldown = 2,
+				damage_min = 38,
+				damage_max = 55,
+				damage_type = DAMAGE_PHYSICAL
+			}
+		},
+		basic_lava = {
+			speed = 50,
+			armor = 0.25,
+			gold = 8,
+			magic_armor = 0,
+			hp = {250, 300, 350, 390},
+			basic_attack = {
+				cooldown = 1.5,
+				damage_min = 19,
+				damage_max = 28,
+				damage_type = DAMAGE_PHYSICAL
+			},
+			special_attack = {
+				damage_min = 22,
+				damage_max = 30,
+				damage_type = DAMAGE_TRUE
+			}
+		},
+		evolved_lava = {
+			gold = 15,
+			armor = 0.5,
+			speed_fly_mult = 1.5,
+			magic_armor = 0,
+			speed = 20,
+			minimum_fly_duration = 2.5,
+			hp = 750,
+			basic_attack = {
+				cooldown = 1.2,
+				damage_min = 30,
+				damage_max = 35,
+				damage_type = DAMAGE_PHYSICAL
+			},
+			landing_attack = {
+				radius_find = 30,
+				radius = 40,
+				damage_min = 70,
+				damage_max = 95,
+				damage_type = DAMAGE_PHYSICAL
+			},
+			special_attack = {
+				radius = 65,
+				damage_min = 55,
+				cooldown = 8,
+				damage_max = 82,
+				damage_type = DAMAGE_TRUE,
+				dot = {
+					damage_every = 0.25,
+					damage_min = 2,
+					duration = 4,
+					damage_max = 2,
+					damage_type = DAMAGE_TRUE
+				}
+			}
+		},
+		alfa_lava = {
+			speed = 18,
+			armor = 0.75,
+			hp = 2500,
+			gold = 80,
+			magic_armor = 0,
+			lives_cost = 2,
+			basic_attack = {
+				cooldown = 2.2,
+				damage_min = 50,
+				damage_radius = 40,
+				damage_max = 87,
+				damage_type = DAMAGE_PHYSICAL
+			},
+			lava_vomit_attack = {
+				lava_radius = 50,
+				cooldown_min = 18,
+				first_cooldown = 16,
+				cooldown_max = 20,
+				lava_duration = 5,
+				nodes_limit = 30,
+				max_evolves = 1,
+				only_while_blocked = false,
+				jump = {
+					damage_min = 60,
+					radius = 70,
+					damage_max = 100,
+					damage_type = DAMAGE_PHYSICAL
+				},
+				dot = {
+					damage_every = 0.25,
+					damage_min = 3,
+					duration = 4,
+					damage_max = 3,
+					damage_type = DAMAGE_TRUE
+				}
+			}
+		},
+		basic_acid = {
+			speed = 38,
+			armor = 0,
+			gold = 7,
+			magic_armor = 0,
+			hp = {190, 250, 270, 300},
+			basic_attack = {
+				cooldown = 1.5,
+				damage_max = 14,
+				damage_min = 9,
+				damage_type = DAMAGE_PHYSICAL
+			},
+			ranged_attack = {
+				max_range = 180,
+				min_range = 50,
+				magic_armor_reduction = 0,
+				armor_reduction = 0,
+				cooldown = 1.5,
+				armor_reduction_duration = 6,
+				damage_max = 32,
+				hold_advance = true,
+				damage_min = 18,
+				damage_type = DAMAGE_TRUE
+			}
+		},
+		evolved_acid = {
+			speed = 42,
+			armor = 0,
+			gold = 14,
+			magic_armor = 0,
+			lives_cost = 1,
+			hp = {360, 460, 520, 570},
+			ranged_attack = {
+				max_range = 250,
+				radius = 50,
+				min_range = 50,
+				armor_reduction = 0.35,
+				cooldown = 2.5,
+				magic_armor_reduction = 0.35,
+				damage_max = 68,
+				armor_reduction_duration = 6,
+				damage_min = 48,
+				damage_type = DAMAGE_TRUE
+			},
+			summon = {
+				min_nodes_range = 5,
+				first_cooldown = 99999,
+				cooldown = 999999999,
+				nodes_limit = 30,
+				max_nodes_range = 30
+			}
+		},
+		alfa_acid = {
+			gold = 90,
+			magic_armor = 0.5,
+			speed = 24,
+			armor = 0,
+			hp = 1800,
+			lives_cost = 2,
+			basic_attack = {
+				cooldown = 1e+99,
+				damage_min = 76,
+				damage_radius = 50,
+				damage_max = 104,
+				damage_type = DAMAGE_PHYSICAL
+			},
+			ranged_attack = {
+				max_range = 350,
+				damage_max = 164,
+				cooldown = 3,
+				max_range_variance = 50,
+				min_range = 100,
+				hold_advance = false,
+				damage_min = 102,
+				damage_type = DAMAGE_TRUE,
+				poison = {
+					damage_every = 0.25,
+					transformation_nodes_limit = 30,
+					damage_min = 1,
+					duration = 0,
+					damage_max = 2,
+					damage_type = DAMAGE_TRUE
+				}
+			},
+			evolve_shot = {
+				max_range = 250,
+				first_cooldown = 3,
+				self_nodes_limit = 30,
+				target_nodes_limit = 30,
+				cooldown = 6,
+				sheep_ttl = 4,
+				min_range = 30
+			}
+		},
+		basic_shadow = {
+			armor = 0,
+			shadow_speed_nodes_limit = 70,
+			gold = 10,
+			magic_armor = 0.3,
+			speed = 46,
+			shadow_distance = 60,
+			shadow_speed_mult = 2.5,
+			shadow_distance_to_show = 85,
+			hp = {210, 240, 300, 300}
+		},
+		evolved_shadow = {
+			speed = 28,
+			armor = 0,
+			hp = 600,
+			invisibility_safe_nodes = 45,
+			gold = 20,
+			magic_armor = 0.6,
+			lives_cost = 1,
+			ranged_attack = {
+				max_range = 70,
+				hold_advance = true,
+				damage_min = 58,
+				cooldown = 1.5,
+				max_range_variance = 30,
+				damage_max = 82,
+				min_range = 0,
+				damage_type = DAMAGE_TRUE
+			}
+		},
+		alfa_shadow = {
+			gold = 15,
+			magic_armor = 0.9,
+			speed = 28,
+			armor = 0,
+			lives_cost = 2,
+			hp = {1050, 1350, 1500, 1650},
+			melee_attack = {
+				cooldown = 1.5,
+				damage_min = 75,
+				damage_radius = 70,
+				damage_max = 110,
+				damage_type = DAMAGE_MAGICAL
+			},
+			ranged_attack = {
+				max_range = 120,
+				min_range = 20,
+				damage_min = 100,
+				cooldown = 1.8,
+				damage_max = 140,
+				damage_type = DAMAGE_MAGICAL
+			},
+			evolve_tp = {
+				min_nodes_range = 30,
+				first_cooldown = 4.5,
+				nodes_limit_end = 60,
+				max_nodes_range = 600,
+				cooldown = 7,
+				nodes_limit_start = 35,
+				not_while_blocked = true
+			}
+		},
+		basic_storm = {
+			speed = 56,
+			armor = 0,
+			hp = 190,
+			gold = 15,
+			magic_armor = 0.25,
+			lives_cost = 1
+		},
+		evolved_storm = {
+			speed = 16,
+			armor = 0,
+			hp = 1200,
+			gold = 65,
+			magic_armor = 0.25,
+			lives_cost = 1,
+			charged_attack = {
+				min_targets = 1,
+				first_cooldown = 1,
+				damage_min = 70,
+				damage_radius = 50,
+				cooldown = 2.5,
+				damage_max = 90,
+				removes_charged_status = true,
+				damage_type = DAMAGE_MAGICAL
+			},
+			stun_tower = {
+				range = 120,
+				duration = 10,
+				nodes_limit = 30
+			}
+		},
+		alfa_storm = {
+			gold = 50,
+			magic_armor = 0.5,
+			speed = 26,
+			armor = 0,
+			hp = {1230, 1500, 1750, 1930},
+			melee_attack = {
+				cooldown = 1,
+				damage_min = 22,
+				damage_max = 42,
+				damage_type = DAMAGE_PHYSICAL
+			},
+			ranged_attack = {
+				max_range = 150,
+				min_range = 50,
+				damage_min = 43,
+				cooldown = 1,
+				damage_max = 76,
+				damage_type = DAMAGE_MAGICAL
+			},
+			special_attack = {
+				first_cooldown = 8,
+				radius = 120,
+				min_towers_target = 1,
+				nodes_limit = 30,
+				cooldown = 10,
+				stun_towers_by_distance = true,
+				tower_stun_duration = 7,
+				max_towers_stunned = 3
+			},
+			evolve_attack = {
+				max_range = 120,
+				first_cooldown = 5,
+				loop_times = 1,
+				nodes_limit = 20,
+				cooldown = 12,
+				max_count = 2,
+				min_range = 0
+			}
+		},
+		executioner_storm = {
+			speed = 20,
+			armor = 0.85,
+			gold = 90,
+			magic_armor = 0,
+			lives_cost = 1,
+			hp = {1400, 1800, 2000, 2200},
+			basic_attack = {
+				cooldown = 1.5,
+				damage_min = 80,
+				damage_max = 115
+			},
+			charged_instakill = {
+				cooldown = 10,
+				first_cooldown = 1,
+				removes_charged_status = true,
+				nodes_limit = 30,
+				hp_threshold = 0.5
+			}
+		},
+		brute_storm = {
+			speed = 20,
+			armor = 0.35,
+			hp = 2200,
+			gold = 70,
+			magic_armor = 0,
+			lives_cost = 2,
+			basic_attack = {
+				cooldown = 2,
+				damage_min = 48,
+				damage_max = 64
+			},
+			charged_invulneravility = {
+				hp_heal_threshold = 0.6,
+				hp_healing_amount = 0.3
+			}
+		},
+		dragon_boss_stage_37 = {
+			hp = 13000,
+			max_towers_blocked = 2,
+			spawn_node = 50,
+			magic_armor = 0,
+			speed = 27,
+			armor = 0,
+			basic_attack = {
+				only_foward = true,
+				min_range = 50,
+				max_range = 150,
+				cooldown = 1.3,
+				damage_max = 120,
+				hold_advance = true,
+				damage_min = 100,
+				damage_radius = 50,
+				only_foward_range = 50,
+				damage_type = DAMAGE_MAGICAL
+			},
+			block_towers_bossfight = {
+				repair_cost = 100,
+				first_cooldown = 10,
+				duration = 10,
+				nodes_limit = 30,
+				cooldown = 5,
+				max_towers_blocked = 1,
+				min_range = 100,
+				max_range = 250
+			},
+			geisers_bossfight = {
+				only_foward = true,
+				first_cooldown = 10,
+				duration = 6,
+				geisers_amount = 7,
+				cooldown = 13,
+				max_damage = 15,
+				min_damage = 10,
+				nodes_limit = 30,
+				damage_every = 0.3,
+				damage_type = DAMAGE_MAGICAL
+			},
+			feral_bite = {
+				cooldown = 5,
+				first_cooldown = 10,
+				nodes_limit = 30,
+				area_damage = {
+					min_damage = 300,
+					radius = 50,
+					max_damage = 500,
+					damage_type = DAMAGE_PHYSICAL
+				}
+			},
+			campaign = {
+				area_attack_damage_min = 10,
+				area_attack_damage_max = 30,
+				max_towers_blocked = 1,
+				area_attack_damage_every = 0.3,
+				area_attack_cooldown = 20,
+				area_attack_duration = 10,
+				area_attack_extension = 7,
+				block_tower_list = {
+					start = {5, 6, 7, 8},
+					mid = {5, 6, 7, 10},
+					final = {3, 4, 2}
+				},
+				pre_fight_area_attack = {
+					start = {
+						left = {
+							node = 90,
+							path = 2
+						},
+						right = {
+							node = 90,
+							path = 2
+						}
+					},
+					mid = {
+						left = {
+							node = 120,
+							path = 4
+						},
+						right = {
+							node = 87,
+							path = 4
+						}
+					},
+					final = {
+						left = {
+							node = 100,
+							path = 1
+						},
+						right = {
+							node = 65,
+							path = 1
+						}
+					}
+				},
+				area_attack_damage_type = DAMAGE_EXPLOSION
+			},
+			heroic = {
+				path = {1},
+				node = {50}
+			},
+			block_tower_list = {{7, 8, 9, 10}},
+			pre_fight_area_attack = {},
+			iron = {
+				max_towers_blocked = 2,
+				block_tower_list = {{7, 8, 9, 10}},
+				pre_fight_area_attack = {
+					path = {1},
+					node = {50}
+				}
+			}
+		},
+		boss_stage_39 = {
+			tower_block = {
+				duration = 10
+			}
+		},
+		miniboss_stage_39 = {
+			regen_health = 10,
+			gold = 120,
+			magic_armor = 0,
+			speed = 12,
+			armor = 0,
+			regen_cooldown = 1,
+			lives_cost = 20,
+			hp = {2400, 2800, 3000, 3100},
+			basic_attack = {
+				cooldown = 2,
+				damage_min = 94,
+				damage_radius = 60,
+				damage_max = 132,
+				damage_type = DAMAGE_PHYSICAL
+			},
+			instakill = {
+				damage_radius = 60,
+				damage_min = 9999,
+				cooldown = 15,
+				damage_max = 9999,
+				damage_type = DAMAGE_INSTAKILL
+			}
+		},
+		boss_stage_40 = {
+			shadow_waves = {
+				stun_units = {
+					enabled = true,
+					duration = 8,
+					stun_fliers = true,
+					stun_wardens_duration = 18
+				},
+				tower_block = {
+					repair_cost = 75,
+					duration = 7, --25,
+					holders = {
+						RIGHT = {"1", "4", "5", "10", "12", "6", "7", "8", "9"},
+						LEFT = {"1", "4", "5", "10", "12", "6", "7", "8", "9"}
+					}
+				}
+			},
+			bossfight = {
+				armor = 0.25,
+				hp = 30000,
+				scream_loop_duration = 3,
+				percentage_to_death = 0.1,
+				magic_armor = 0.25,
+				breath_loop_duration = 3,
+				steps = {{
+					chillido_cast_time = 28,
+					breath_cast_time = 18,
+					breath_wins = false,
+					manual_wave = "BOSS1",
+					next_step_time = 35,
+					chillido_block_towers = {"9", "8", "6", "5", "12"},
+					destroy_holders = {"7"}
+				}, {
+					chillido_cast_time = 3,
+					breath_cast_time = 24,
+					breath_wins = false,
+					manual_wave = "BOSS2",
+					next_step_time = 32,
+					chillido_block_towers = {"12", "5", "10", "11", "1"},
+					destroy_holders = {"6", "8", "9"}
+				}, {
+					chillido_cast_time = 25,
+					breath_cast_time = 4,
+					breath_wins = false,
+					manual_wave = "BOSS3",
+					next_step_time = 32,
+					chillido_block_towers = {"4", "11", "1", "10"},
+					destroy_holders = {"5", "12"}
+				}, {
+					chillido_cast_time = 4,
+					breath_cast_time = 22,
+					breath_wins = false,
+					manual_wave = "BOSS4",
+					next_step_time = 30,
+					chillido_block_towers = {"1", "2", "3", "4"},
+					destroy_holders = {"10", "11"}
+				}, {
+					chillido_cast_time = 11,
+					breath_cast_time = 4,
+					breath_wins = true,
+					manual_wave = "BOSS4",
+					chillido_block_towers = {"1", "2", "3", "4"},
+					destroy_holders = {"1", "2", "3", "4", "13"}
+				}}
+			},
+			ballista = {
+				cooldown = 20,
+				damage = {2000, 2500, 3000, 4000, 5000, 7000, 7000}
+			}
+		}
 	}
 }
 
@@ -5916,8 +6501,7 @@ local towers = {
 		dragon_split = {
 			price = {200, 200, 200},
 			cooldown = {9.6, 9.6, 9.6},
-			min_range = {150, 150, 150},
-			max_range = {500, 500, 500},
+			range_factor = 500 / 275,
 			damage_min = {100, 200, 400},
 			damage_max = {150, 300, 600},
 			damage_type = DAMAGE_MAGICAL,
@@ -5929,9 +6513,9 @@ local towers = {
 			price = {200, 300},
 			cooldown = {17.6, 17.6},
 			stun_duration = {2.5, 4},
-			max_range = {180, 180},
-			min_targets = {3, 3},
-			max_targets = {15, 15}
+			range_factor = 180 / 275,
+			min_targets = 3,
+			max_targets = 15
 		}
 	}
 }
@@ -8314,6 +8898,123 @@ local specials = {
 			damage_min = 8
 		}
 	},
+	stage_37_dragon_wardens = {
+		max_soldiers = 3,
+		rally_range = 300,
+		respawn_time = 30,
+		soldiers = {
+			warrior = {
+				speed = 70,
+				armor = 0,
+				hp_max = 350,
+				health_regen = 28,
+				magic_armor = 0,
+				melee = {
+					cooldown = 1.5,
+					damage_min = 60,
+					damage_max = 75,
+					damage_type = DAMAGE_PHYSICAL
+				}
+			}
+		}
+	},
+	stage_38_dragon_wardens = {
+		soldiers = {
+			dragon_raider = {
+				speed = 36,
+				armor = 0,
+				hp_max = 180,
+				balloon_duration = 3,
+				health_regen = 15,
+				magic_armor = 0,
+				melee = {
+					cooldown = 1.25,
+					damage_min = 12,
+					damage_max = 24,
+					damage_type = DAMAGE_PHYSICAL
+				}
+			},
+			dragon_raider_mounted = {
+				wait_after_max_spawns = 5,
+				wander_radius = 250,
+				max_spawns = 3,
+				hp_max = 450,
+				health_regen = 15,
+				magic_armor = 0,
+				speed = 60,
+				armor = 0,
+				ranged = {
+					max_range = 150,
+					min_range = 0,
+					damage_min = 38,
+					cooldown = 1.25,
+					damage_max = 60,
+					damage_type = DAMAGE_MAGICAL
+				}
+			}
+		}
+	},
+	stage_40_moving_island = {
+		speed = 7,
+		stop_steps = {500, 310, 100, 20},
+		ranged = {
+			max_count = 3,
+			range = 350,
+			damage_min = 38,
+			cooldown = 1.25,
+			damage_max = 60,
+			damage_type = DAMAGE_MAGICAL
+		},
+		soldiers = {
+			max_speed = 32,
+			armor = 0,
+			regen_health = 30,
+			hp_max = 550,
+			magic_armor = 0,
+			ranged = {
+				max_range = 350,
+				damage_min = 38,
+				cooldown = 1.25,
+				damage_max = 60,
+				damage_type = DAMAGE_MAGICAL
+			}
+		}
+	},
+	stage_40_warden_reinforcements = {
+		warrior = {
+			speed = 70,
+			armor = 0,
+			regen_health = 20,
+			hp_max = 150,
+			magic_armor = 0,
+			melee = {
+				range = 130,
+				damage_min = 25,
+				cooldown = 1.5,
+				damage_max = 42,
+				damage_type = DAMAGE_PHYSICAL
+			}
+		},
+		mage = {
+			speed = 70,
+			armor = 0,
+			regen_health = 10,
+			hp_max = 70,
+			magic_armor = 0,
+			ranged = {
+				max_range = 200,
+				damage_min = 15,
+				cooldown = 1.5,
+				damage_max = 27,
+				damage_type = DAMAGE_MAGICAL
+			}
+		}
+	},
+	stage38 = {
+		blocked_holders = {
+			price = 150
+		}
+	},
 	towers = {
 		tower_stage_28_priests_barrack = {
 			cooldown_disable = 2,
@@ -8531,6 +9232,39 @@ local specials = {
 				damage_max = 52,
 				damage_type = DAMAGE_MAGICAL
 			}
+		},
+		tower_dragons_warden = {
+			basic_attack = {
+				max_range = 400,
+				damage_min = 60,
+				cooldown = 3.5,
+				damage_max = 75,
+				damage_type = DAMAGE_MAGICAL
+			},
+			increase_damage = {
+				damage_factor = {1.5, 2, 3},
+				price = {150, 300, 600}
+			},
+			increase_rate = {
+				attack_cooldown = {3, 2.4, 1.6},
+				price = {150, 250, 500}
+			}
+		}
+	}
+}
+local reinforcements = {
+	soldier = {
+		armor = 0,
+		regen_health = 8,
+		max_speed = 64,
+		hp_max = 40,
+		cooldown = 15,
+		duration = 12,
+		melee_attack = {
+			cooldown = 1,
+			range = 72,
+			damage_min = 1,
+			damage_max = 2
 		}
 	}
 }
@@ -8538,7 +9272,8 @@ local balance = {
 	heroes = heroes,
 	enemies = enemies,
 	towers = towers,
-	specials = specials
+	specials = specials,
+	reinforcements = reinforcements
 }
 
 if game and game.store and game.store.level_mode then

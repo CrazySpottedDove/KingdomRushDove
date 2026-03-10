@@ -10312,6 +10312,360 @@ return {
 		source_group = "SPECIALS",
 		files = {"kra_sfx_wukong_mechanic_stage35_cinematic_4_scream_v2.ogg"}
 	},
+	Stage36PathOpen1 = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_mechanic_stage1_path_open_1_v1.ogg"}
+	},
+	Stage36PathOpen2 = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_mechanic_stage1_path_open_2_v1.ogg"}
+	},
+	Stage36EasterEggSpyroJump = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		delay = 0.1,
+		files = {"kra_sfx_dragons_ee_s1_spyro_1_v1.ogg"}
+	},
+	Stage36EasterEggSpyroFall = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		delay = 1,
+		files = {"kra_sfx_dragons_ee_s1_spyro_2_fallOnly_v1.ogg"}
+	},
+	Stage36EasterEggGreenRangerPart1 = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		delay = 0.9,
+		files = {"kra_sfx_dragons_ee_s1_granger_1_v1.ogg"}
+	},
+	Stage36EasterEggGreenRangerPart2 = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		delay = 0.3,
+		files = {"kra_sfx_dragons_ee_s1_granger_2_fullSeq_v1.ogg"}
+	},
+	Stage37Cinematic1Roar = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_mechanic_stage2_cinematic_p1_roar_v1.ogg"}
+	},
+	Stage37Cinematic1Arrive = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_mechanic_stage2_cinematic_p1_arrive_v1.ogg"}
+	},
+	Stage37Cinematic1Aleteo = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_mechanic_stage2_cinematic_p1_aleteo_v1.ogg"}
+	},
+	Stage37Cinematic2 = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_mechanic_stage2_cinematic_p2_v1.ogg"}
+	},
+	Stage37MurglunAttack = {
+		loop = false,
+		mode = "random",
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_murglun_attack_var1_v1.ogg", "kra_sfx_dragons_murglun_attack_var2_v1.ogg", "kra_sfx_dragons_murglun_attack_var3_v1.ogg"}
+	},
+	Stage37MurglunDeath = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_murglun_death_v1.ogg"}
+	},
+	Stage37MurglunFireSpit = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_murglun_fire_spit_v1.ogg"}
+	},
+	Stage37MurglunIntroRoar = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_murglun_intro_roar_v1.ogg"}
+	},
+	Stage37MurglunTowerBlockImpact = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_murglun_tower_block_impact_v1.ogg"}
+	},
+	Stage37MurglunTowerBlockSpit = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_murglun_tower_block_spit_v1.ogg"}
+	},
+	Stage37MurglunDive = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_murglun_dive_v1.ogg"}
+	},
+	Stage37EasterEggDaenerysPart1 = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_ee_s2_daenerys_1_v1.ogg"}
+	},
+	Stage37EasterEggDaenerysPart2 = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_ee_s2_daenerys_2_v1.ogg"}
+	},
+	Stage37EasterEggTrainDragonPart1 = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_ee_s2_httyd_1_growl_v1.ogg"}
+	},
+	Stage37EasterEggTrainDragonPart2 = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		delay = 2.5,
+		files = {"kra_sfx_dragons_ee_s2_httyd_1_purr_v1.ogg"}
+	},
+	Stage38OpenPath = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_mechanic_stage3_path_open_v1.ogg"}
+	},
+	Stage38WardensGrowl = {
+		loop = false,
+		mode = "random",
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_wardens_growl_var1_v1.ogg", "kra_sfx_dragons_wardens_growl_var2_v1.ogg", "kra_sfx_dragons_wardens_growl_var3_v1.ogg"}
+	},
+	Stage38EasterEggEnderEgg = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_ee_s3_enderegg_v1.ogg"}
+	},
+	Stage39EggsGrow = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_mechanic_stage4_eggs_grow_v1.ogg"}
+	},
+	Stage39VeinsExtend = {
+		loop = false,
+		mode = "random",
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_mechanic_stage4_veins_extend_var_001.ogg", "kra_sfx_dragons_mechanic_stage4_veins_extend_var_002.ogg", "kra_sfx_dragons_mechanic_stage4_veins_extend_var_003.ogg", "kra_sfx_dragons_mechanic_stage4_veins_extend_var_004.ogg", "kra_sfx_dragons_mechanic_stage4_veins_extend_var_005.ogg"}
+	},
+	Stage39VeinsSpawnEnemy = {
+		loop = false,
+		mode = "random",
+		gain = 0.5,
+		source_group = "SFX",
+		files = {"kra_sfx_spiders_mechanic_spawner_explode_v1.ogg"}
+	},
+	Stage39BossDamaged = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_broodmother_damaged_v1.ogg"}
+	},
+	Stage39BossSpawnerVeins = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		delay = 1,
+		files = {"kra_sfx_dragons_broodmother_veins_roar_v1.ogg"}
+	},
+	Stage39BossDeathFake = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_broodmother_death_v2.ogg"}
+	},
+	Stage39BossDeath = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_broodmother_death_v2.ogg"}
+	},
+	Stage39BossRoarIntro = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_broodmother_roar_intro_v1.ogg"}
+	},
+	Stage39BossRoarReanimate = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_broodmother_roar_reanimate_v1.ogg"}
+	},
+	Stage39BossStomps = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_broodmother_stomps_v1.ogg"}
+	},
+	Stage39MinibossInstakill = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		delay = 0.5,
+		files = {"kra_sfx_dragons_enemy_miniboss_instakill_v1.ogg"}
+	},
+	Stage39MinibossDeath = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_enemy_miniboss_death_v1.ogg"}
+	},
+	Stage38EasterEggSheepyPart1 = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		delay = 0.55,
+		files = {"kra_sfx_dragons_ee_s4_sheepy_1_v1.ogg"}
+	},
+	Stage38EasterEggSheepyPart2 = {
+		loop = false,
+		gain = 0.5,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_ee_s4_sheepy_2_v1.ogg"}
+	},
+	Stage40BossDrivebyFinal = {
+		loop = false,
+		gain = 0.9,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_tyranthor_driveby_v1.ogg"}
+	},
+	Stage40BossDriveby = {
+		loop = false,
+		gain = 0.9,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_tyranthor_driveby_v4.ogg"}
+	},
+	Stage40BossHyperbeam = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SPECIALS",
+		delay = 1.5,
+		interruptible = true,
+		files = {"kra_sfx_dragons_tyranthor_hyperbeam_v1.ogg"}
+	},
+	Stage40BossIntroRoar = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SPECIALS",
+		delay = 4.9,
+		files = {"kra_sfx_dragons_tyranthor_intro_roar_v1.ogg"}
+	},
+	Stage40BossRoar = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SPECIALS",
+		delay = 1.3,
+		files = {"kra_sfx_dragons_tyranthor_roar_v1.ogg"}
+	},
+	Stage40BossScreech = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SPECIALS",
+		delay = 1.5,
+		interruptible = true,
+		files = {"kra_sfx_dragons_tyranthor_screech_v1.ogg"}
+	},
+	Stage40BossStep = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SPECIALS",
+		delay = 2.2,
+		interruptible = true,
+		files = {"kra_sfx_dragons_tyranthor_step_v1.ogg"}
+	},
+	Stage40CannonShotSuccess = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_mechanic_stage5_cannon_shot_success_v1.ogg"}
+	},
+	Stage40EggMovementStart = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_mechanic_stage5_egg_movement_start_v1.ogg"}
+	},
+	Stage40MageIntroFullSeq = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SPECIALS",
+		delay = 3.1,
+		files = {"kra_sfx_dragons_mechanic_stage5_mage_intro_fullSeq_v1.ogg"}
+	},
+	Stage40MageRuneDisappearOp1 = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_mechanic_stage5_mage_rune_disappear_op1_v1.ogg"}
+	},
+	Stage40MageRuneDisappearOp2 = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_mechanic_stage5_mage_rune_disappear_op2_v1.ogg"}
+	},
+	Stage40MageStatueDown = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SPECIALS",
+		delay = 1.5,
+		files = {"kra_sfx_dragons_mechanic_stage5_mage_statue_down_v1.ogg"}
+	},
+	Stage40MageStatueStart = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SPECIALS",
+		delay = 2.4,
+		files = {"kra_sfx_dragons_mechanic_stage5_mage_statue_start.ogg"}
+	},
+	Stage40PathOpen = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_mechanic_stage5_path_open_v1.ogg"}
+	},
+	Stage40CannonShotFail = {
+		loop = false,
+		gain = 0.8,
+		source_group = "SPECIALS",
+		files = {"kra_sfx_dragons_mechanic_stage5_cannon_shot_failed_new_v3.ogg"}
+	},
+	DragonsDLCMageWardensShoot = {
+		source_group = "SFX",
+		gain = 0.55,
+		loop = false,
+		mode = "random",
+		files = {"kr4_sfx_erudite_shot_op1_var1_v1.ogg", "kr4_sfx_erudite_shot_op1_var2_v1.ogg", "kr4_sfx_erudite_shot_op2_var1_v1.ogg", "kr4_sfx_erudite_shot_op2_var2_v1.ogg"}
+	},
 	TeleporthSound = {
 		files = {"Sound_Teleport.ogg"},
 		gain = 1,
@@ -10792,6 +11146,188 @@ return {
 		gain = 0.4,
 		source_group = "SFX",
 		files = {"kra_sfx_wukong_princess_teleport-OUT_v1.ogg"}
+	},
+	EnemyAcidBasicAttack = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_acid_basic_attack_var1_v1.ogg", "kra_sfx_dragons_enemy_acid_basic_attack_var2_v1.ogg", "kra_sfx_dragons_enemy_acid_basic_attack_var3_v1.ogg"}
+	},
+	EnemyAcidBasicEvolution = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_acid_basic_evolution_v1.ogg"}
+	},
+	EnemyAlfaAcidAttack = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_acid_alfa_attack_var1_v2.ogg", "kra_sfx_dragons_enemy_acid_alfa_attack_var2_v2.ogg", "kra_sfx_dragons_enemy_acid_alfa_attack_var3_v2.ogg"}
+	},
+	EnemyAlfaAcidDeath = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_acid_alfa_death_v1.ogg"}
+	},
+	EnemyEvolvedAcidAttack = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_acid_evolved_attack_var1_v1.ogg", "kra_sfx_dragons_enemy_acid_evolved_attack_var2_v1.ogg", "kra_sfx_dragons_enemy_acid_evolved_attack_var3_v1.ogg"}
+	},
+	EnemyEvolvedAcidDeath = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_acid_evolved_death_v1.ogg"}
+	},
+	EnemyLavaBasicFlameBreath = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_lava_basic_flameb_var1_v1.ogg", "kra_sfx_dragons_enemy_lava_basic_flameb_var2_v1.ogg", "kra_sfx_dragons_enemy_lava_basic_flameb_var3_v1.ogg"}
+	},
+	EnemyLavaTankyAttack = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_lava_tanky_attack_var1_v1.ogg", "kra_sfx_dragons_enemy_lava_tanky_attack_var2_v1.ogg", "kra_sfx_dragons_enemy_lava_tanky_attack_var3_v1.ogg"}
+	},
+	EnemyLavaTankyDeath = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_lava_tanky_death_var1_v1.ogg", "kra_sfx_dragons_enemy_lava_tanky_death_var2_v1.ogg", "kra_sfx_dragons_enemy_lava_tanky_death_var3_v1.ogg"}
+	},
+	EnemyStormBasicDeath = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_storm_basic_death_var1_v1.ogg", "kra_sfx_dragons_enemy_storm_basic_death_var2_v1.ogg", "kra_sfx_dragons_enemy_storm_basic_death_var3_v1.ogg"}
+	},
+	EnemyAlfaAcidEvolverSheep = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_acid_alfa_evolver-sheep_v2.ogg"}
+	},
+	EnemyAlfaAcidEvolverSpit = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_acid_alfa_evolver-spit_v2.ogg"}
+	},
+	EnemyLavaAlfaAttack = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_lava_alfa_attack_var1_v1.ogg", "kra_sfx_dragons_enemy_lava_alfa_attack_var2_v1.ogg", "kra_sfx_dragons_enemy_lava_alfa_attack_var3_v1.ogg"}
+	},
+	EnemyLavaAlfaEvolverShot = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_lava_alfa_evo_shot_v1.ogg"}
+	},
+	EnemyLavaEvolverSkyfall = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_lava_evolved_skyfall_var1_v1.ogg", "kra_sfx_dragons_enemy_lava_evolved_skyfall_var2_v1.ogg", "kra_sfx_dragons_enemy_lava_evolved_skyfall_var3_v1.ogg"}
+	},
+	EnemyLavaEvolverFlameBreath = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_lava_evolved_flameb_var1_v1.ogg", "kra_sfx_dragons_enemy_lava_evolved_flameb_var2_v1.ogg", "kra_sfx_dragons_enemy_lava_evolved_flameb_var3_v1.ogg"}
+	},
+	EnemyLavaBasicEvolution = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_lava_basic_evolution_var1_v1.ogg", "kra_sfx_dragons_enemy_lava_basic_evolution_var2_v1.ogg", "kra_sfx_dragons_enemy_lava_basic_evolution_var3_v1.ogg"}
+	},
+	EnemyShadowAlfaAttack = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_shadow_alfa_attack_var1_v1.ogg", "kra_sfx_dragons_enemy_shadow_alfa_attack_var2_v1.ogg", "kra_sfx_dragons_enemy_shadow_alfa_attack_var3_v1.ogg"}
+	},
+	EnemyShadowAlfaDeath = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "DEATH",
+		files = {"kra_sfx_dragons_enemy_shadow_alfa_death_v1.ogg"}
+	},
+	EnemyShadowAlfaCloack = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_shadow_basic_cloack_var1_v1.ogg", "kra_sfx_dragons_enemy_shadow_basic_cloack_var2_v1.ogg", "kra_sfx_dragons_enemy_shadow_basic_cloack_var3_v1.ogg"}
+	},
+	EnemyShadowAlfaEvolveScream = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_shadow_alfa_evolve_scream_v1.ogg"}
+	},
+	EnemyShadowAlfaRangedAttack = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_shadow_alfa_ranged_attack_var1_v1.ogg", "kra_sfx_dragons_enemy_shadow_alfa_ranged_attack_var2_v1.ogg", "kra_sfx_dragons_enemy_shadow_alfa_ranged_attack_var3_v1.ogg"}
+	},
+	EnemyShadowBasicCloack = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_shadow_basic_cloack_var1_v1.ogg", "kra_sfx_dragons_enemy_shadow_basic_cloack_var2_v1.ogg", "kra_sfx_dragons_enemy_shadow_basic_cloack_var3_v1.ogg"}
+	},
+	EnemyShadowBasicEvolution = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_shadow_basic_evolution_v1.ogg"}
+	},
+	EnemyShadowEvolvedAttack = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "SFX",
+		files = {"kra_sfx_dragons_enemy_shadow_evolved_attack_var1_v1.ogg", "kra_sfx_dragons_enemy_shadow_evolved_attack_var2_v1.ogg", "kra_sfx_dragons_enemy_shadow_evolved_attack_var3_v1.ogg"}
+	},
+	EnemyShadowEvolvedDeath = {
+		loop = false,
+		mode = "random",
+		gain = 0.4,
+		source_group = "DEATH",
+		files = {"kra_sfx_dragons_enemy_shadow_evolved_death_v1.ogg"}
 	},
 	Terrain1AmbienceSoundBirds = {
 		files = {"kra_sfx_terrain1Ambient_birds_var1_v1.ogg", "kra_sfx_terrain1Ambient_birds_var2_v1.ogg", "kra_sfx_terrain1Ambient_birds_var3_v1.ogg", "kra_sfx_terrain1Ambient_birds_var4_v1.ogg", "kra_sfx_terrain1Ambient_birds_var5_v1.ogg", "kra_sfx_terrain1Ambient_birds_var6_v1.ogg"},

@@ -31,17 +31,12 @@ else
     exit 1
 fi
 
-PNGQUANT_CMD=""
-if command -v pngquant >/dev/null 2>&1; then
-    PNGQUANT_CMD="pngquant"
-fi
-
 # 并行任务数（可通过环境变量 JOBS 调整）
 JOBS=${JOBS:-$(nproc 2>/dev/null || echo 4)}
 
 echo "Creating base archive (excluding PNGs) -> $ARCHIVE_DIR"
 # 先打包项目中除 png 和 .versions 的文件（避免把 archive 自己打进去）
-zip -r "$ARCHIVE_DIR" . -x "*.dds" -x ".versions/*" -x "tmp/*" -x "*.exe" -x ".git/*" -x "KingdomRushDoveUpdater" -x "client.log" -x "client" -x "https.dll" -x "https.so" -x "run.bat" -x "launch.bat" -x "存档位置.lnk" -x "dlfmt" -x ".dlfmt_cache.json" -x "update.lua" -x ".gdb_history" -x "mods/local/*" -x "aidoc/*" -x ".plugins/*" -q
+zip -r "$ARCHIVE_DIR" . -x "*.dds" -x ".versions/*" -x "tmp/*" -x "*.exe" -x ".git/*" -x "KingdomRushDoveUpdater" -x "client.log" -x "client" -x "https.dll" -x "https.so" -x "run.bat" -x "launch.bat" -x "存档位置.lnk" -x "dlfmt" -x ".dlfmt_cache.json" -x "update.lua" -x ".gdb_history" -x "mods/local" -x "mods/local/*" -x "aidoc/*" -x ".plugins/*" -q
 
 # 创建临时目录用于放置缩放后的 png，保留相对路径
 tempdir=$(mktemp -d)
@@ -52,8 +47,7 @@ DDS_ASSETS_DIR="./_assets/kr1-desktop/images/fullhd"
 mapfile -d '' dds_files < <(find $DDS_ASSETS_DIR -type f -name "*.dds" -print0 || printf '')
 
 # 更可靠地计算数量
-dds_count=$(find $DDS_ASSETS_DIR -type f -name "*.dds" 2>/dev/null | wc -l | tr -d ' ')
-dds_count=${dds_count:-0}
+dds_count=${#dds_files[@]}
 
 if [ "$dds_count" -eq 0 ]; then
     echo "No DDS files found in $DDS_ASSETS_DIR."
@@ -71,25 +65,6 @@ else
         # 用 ImageMagick 转换并缩小一半
         "$IM_CMD" "$src" -resize 50% -strip "$dest"
     '
-
-    # 实时进度监控
-    processed=0
-    start_ts=$(date +%s)
-    while :; do
-        processed=$(find "$tempdir" -type f -name "*.png" 2>/dev/null | wc -l || echo 0)
-        printf "\r[PNG] %d/%d processed..." "$processed" "$dds_count"
-        if [ "$processed" -ge "$dds_count" ]; then
-            break
-        fi
-        now_ts=$(date +%s)
-        if [ $((now_ts - start_ts)) -gt 1800 ]; then
-            echo
-            echo "Warning: PNG processing timeout" >&2
-            break
-        fi
-        sleep 0.5
-    done
-    echo
 
     processed=$(find "$tempdir" -type f -name "*.png" 2>/dev/null | wc -l || echo 0)
     printf "[PNG] %d/%d processed.\n" "$processed" "$dds_count"

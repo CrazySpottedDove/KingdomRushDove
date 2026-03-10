@@ -2976,7 +2976,7 @@ return {
 			tt_title = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_3_NAME"),
 			tt_desc = _("TOWER_DRAGONS_WARDEN_INCREASE_RATE_3_DESCRIPTION")
 		}}
-	}}},
+	}, tpl.sell}},
 	stage_38_tower_dragons_warden_barrack = {{}},
 	tower_broken_stage_37 = {{}},
 	tower_broken_stage_40 = {{{

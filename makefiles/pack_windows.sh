@@ -23,6 +23,10 @@ if ! command -v zip >/dev/null 2>&1; then
     echo "ERROR: zip not found" >&2
     exit 1
 fi
+if ! command -v rsync >/dev/null 2>&1; then
+    echo "ERROR: rsync not found" >&2
+    exit 1
+fi
 
 # 临时打包目录（舞台目录）
 STAGE_DIR=".versions/_pack_tmp_${current_id}"
@@ -46,57 +50,25 @@ fi
 DEST_DIR="$STAGE_DIR/$TOPDIR/KingdomRushDove"
 mkdir -p "$DEST_DIR"
 
-# 需要排除的顶层路径/文件
-EXCLUDES=(
-    ".versions"
-    ".git"
-    "tmp"
-    "love_env"
-    "KingdomRushDoveUpdater"
-    "client.log"
-    "update.lua"
-    "dlfmt"
-    ".dlfmt_cache.json"
-    "client"
-    "client.exe"
-    ".gdb_history"
-    "https.so"
-    "all/librender_sort.so"
-    "mods/local"
-    ".plugins"
-    "aidoc"
-)
-
-should_exclude() {
-    local name="$1"
-    for ex in "${EXCLUDES[@]}"; do
-        if [[ "$name" == "$ex" ]] || [[ "$name" == "$ex/"* ]]; then
-            return 0
-        fi
-    done
-    return 1
-}
-
-# 复制项目根目录下的文件与文件夹到 DEST_DIR（应用排除）
-shopt -s dotglob nullglob
-for entry in * .*; do
-    # 跳过当前/父目录伪项
-    [ "$entry" = "." ] && continue
-    [ "$entry" = ".." ] && continue
-    # 确保存在
-    [ -e "$entry" ] || continue
-    # 应用排除规则
-    if should_exclude "$entry"; then
-        continue
-    fi
-    # 复制
-    if cp -a "$entry" "$DEST_DIR/" 2>/dev/null; then
-        :
-    else
-        cp -r "$entry" "$DEST_DIR/"
-    fi
-done
-shopt -u dotglob nullglob
+# 复制项目根目录到 DEST_DIR（应用排除）
+rsync -a \
+    --exclude='.versions/' \
+    --exclude='.git/' \
+    --exclude='tmp/' \
+    --exclude='love_env/' \
+    --exclude='KingdomRushDoveUpdater' \
+    --exclude='client.log' \
+    --exclude='update.lua' \
+    --exclude='dlfmt' \
+    --exclude='.dlfmt_cache.json' \
+    --exclude='client' \
+    --exclude='client.exe' \
+    --exclude='.gdb_history' \
+    --exclude='https.so' \
+    --exclude='all/librender_sort.so' \
+    --exclude='mods/local/' \
+    --exclude='.plugins/' \
+    ./ "$DEST_DIR/"
 
 echo "Creating archive -> $ARCHIVE_DIR"
 (
@@ -113,8 +85,8 @@ rm -rf "$STAGE_DIR"
 echo "Packed -> $ARCHIVE_DIR"
 
 # 如果传入了参数 quick，则使用内网 scp 传输
-if [ "${1:-}" = "quick" ]; then
-    scp -P 60001 "$ARCHIVE_DIR" dove@10.112.99.5:/srv/files/王国保卫战Dove版-Windows端/
-else
-    scp -P 60001 "$ARCHIVE_DIR" dove@krdovedownload6.crazyspotteddove.top:/srv/files/王国保卫战Dove版-Windows端/
-fi
+# if [ "${1:-}" = "quick" ]; then
+#     scp -P 60001 "$ARCHIVE_DIR" dove@10.112.99.5:/srv/files/王国保卫战Dove版-Windows端/
+# else
+#     scp -P 60001 "$ARCHIVE_DIR" dove@krdovedownload6.crazyspotteddove.top:/srv/files/王国保卫战Dove版-Windows端/
+# fi

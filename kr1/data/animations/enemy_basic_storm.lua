@@ -1,0 +1,2 @@
+local a={basic_storm_shadow={prefix="basic_storm_shadow",to=1,from=1},basic_storm_creep_idle={prefix="basic_storm_creep",to=18,from=1},basic_storm_creep_walk={prefix="basic_storm_creep",to=18,from=1},basic_storm_creep_walkDown={prefix="basic_storm_creep",to=36,from=19},basic_storm_creep_walkUp={prefix="basic_storm_creep",to=54,from=37},basic_storm_creep_death={prefix="basic_storm_creep",to=91,from=55},basic_storm_creep_evolve_in={prefix="basic_storm_creep",to=166,from=92}}
+return a

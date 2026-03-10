@@ -158,11 +158,11 @@ end
 
 function entity_db:register_t(name, base)
 	-- 仅在开发时启用它，发行时关闭
-	-- if self.entities[name] then
-	-- 	log.error("template %s already exists", name)
+	if self.entities[name] then
+		log.error("template %s already exists", name)
 
-	-- 	return self.entities[name]
-	-- end
+		return self.entities[name]
+	end
 
 	-- 通过这么做，允许重复加载时直接覆写原来的表，同样起到了数值重置的效果，而避免了克隆，从而提升了执行性能。
 	-- if self.entities[name] then

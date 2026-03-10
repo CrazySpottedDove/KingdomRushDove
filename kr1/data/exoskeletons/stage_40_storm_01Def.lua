@@ -1,0 +1,1 @@
+return {version=3,partScaleCompensation=1,fps=30,parts={{'stage_40_storm_01_asst_over_all_sky',0.8,-305.6}},attach_points={},animations={{name='loop',frames={{{1,1,1,2.7,0.3,0.250000,0.250000,0,0,0}}}}}}

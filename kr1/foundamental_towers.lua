@@ -147,6 +147,22 @@ tt.tower.terrain_style = TERRAIN_STYLE_WUKONG_7
 -- tt.render.sprites[1].name = "build_terrain_0031"
 tt.render.sprites[1].name = "build_terrain_0004"
 
+tt = RT("tower_holder_sea_of_trees_17", "tower_holder")
+tt.tower.terrain_style = TERRAIN_STYLE_DRAGON_1
+tt.render.sprites[1].name = "build_terrain_0007"
+
+tt = RT("tower_holder_sea_of_trees_18", "tower_holder")
+tt.tower.terrain_style = TERRAIN_STYLE_DRAGON_2
+tt.render.sprites[1].name = "build_terrain_0007"
+
+tt = RT("tower_holder_sea_of_trees_19", "tower_holder")
+tt.tower.terrain_style = TERRAIN_STYLE_DRAGON_3
+tt.render.sprites[1].name = "build_terrain_0007"
+
+tt = RT("tower_holder_sea_of_trees_20", "tower_holder")
+tt.tower.terrain_style = TERRAIN_STYLE_DRAGON_4
+tt.render.sprites[1].name = "build_terrain_0007"
+
 --#region tower_build_archer
 tt = RT("tower_build_archer", "tower_build")
 tt.build_name = "tower_archer_1"

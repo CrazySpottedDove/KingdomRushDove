@@ -21336,7 +21336,8 @@ function scripts.tower_dragons.update(this, store)
 	local dragon_sprite = this.render.sprites[2]
 	local did_breath_fx = false
 	local points, max_targets, total_enemies, count_targets, total_targets, bullet, anim_idx, offset_x, offset_y
-	local a = this.attacks.list[1]
+	local a = this.attacks
+	local a_basic = this.attacks.list[1]
 	local a_massive_fear = this.attacks.list[2]
 	local a_dragon_split = this.attacks.list[3]
 	local pow_dragon_split = this.powers.dragon_split
@@ -21398,9 +21399,7 @@ function scripts.tower_dragons.update(this, store)
 			return false
 		end
 
-		local enemies = U.find_enemies_in_range_filter_off(tpos, a_massive_fear.range[pow_massive_fear.level], a_massive_fear.vis_flags, a_massive_fear.vis_bans)
-
-		if not enemies or #enemies < pow_massive_fear.min_targets[pow_massive_fear.level] then
+		if not U.find_first_enemy_in_range_filter_off(tpos, a.range * a_massive_fear.range_factor, a_massive_fear.vis_flags, a_massive_fear.vis_bans) then
 			a_massive_fear.ts = a_massive_fear.ts + fts(10)
 			return false
 		end
@@ -21417,9 +21416,7 @@ function scripts.tower_dragons.update(this, store)
 			return false
 		end
 
-		local enemies = U.find_enemies_between_range_filter_off(tpos, a_dragon_split.min_range[pow_dragon_split.level], a_dragon_split.range[pow_dragon_split.level], a_dragon_split.vis_flags, a_dragon_split.vis_bans)
-
-		if not enemies or #enemies < 1 then
+		if not U.find_first_enemy_in_range_filter_off(tpos, a.range * a_dragon_split.range_factor, a_dragon_split.vis_flags, a_dragon_split.vis_bans) then
 			a_dragon_split.ts = a_dragon_split.ts + fts(10)
 			return false
 		end
@@ -21483,7 +21480,7 @@ function scripts.tower_dragons.update(this, store)
 			e.owner = this
 			e.idle_pos = V.vclone(e.pos)
 
-			if this.attacks.max_dragons > 1 and i == 1 then
+			if a.max_dragons > 1 and i == 1 then
 				e.render.sprites[1].flip_x = true
 			elseif this.attacks.max_dragons == 1 then
 				e.render.sprites[1].flip_x = math.random() > 0.5
@@ -21604,7 +21601,7 @@ function scripts.tower_dragons.update(this, store)
 
 			this.dragons = {}
 
-			while this.tower.blocked do
+			while tw.blocked do
 				update_powers()
 				coroutine.yield()
 			end
@@ -21637,8 +21634,8 @@ function scripts.tower_dragons.update(this, store)
 				end
 			end
 
-			if #this.dragons > 0 and store.tick_ts - a.ts > a.cooldown then
-				a.ts = store.tick_ts
+			if #this.dragons > 0 and store.tick_ts - a_basic.ts > a_basic.cooldown * tw.cooldown_factor then
+				a_basic.ts = store.tick_ts
 
 				local assigned_target_ids = {}
 
@@ -21648,7 +21645,7 @@ function scripts.tower_dragons.update(this, store)
 					end
 				end
 
-				local targets = U.find_enemies_in_range_filter_on(tpos, this.attacks.range, a.vis_flags, a.vis_bans, function(e)
+				local targets = U.find_enemies_in_range_filter_on(tpos, a.range, a_basic.vis_flags, a_basic.vis_bans, function(e)
 					return not table.contains(assigned_target_ids, e.id)
 				end)
 
@@ -21688,11 +21685,11 @@ function scripts.tower_dragons.update(this, store)
 
 			if can_massive_fear() then
 				local start_ts = store.tick_ts
-				local enemies = U.find_enemies_in_range_filter_on(tpos, a_massive_fear.range[pow_massive_fear.level], a_massive_fear.vis_flags, a_massive_fear.vis_bans, function(e)
+				local enemies = U.find_enemies_in_range_filter_on(tpos, a_massive_fear.range_factor * a.range, a_massive_fear.vis_flags, a_massive_fear.vis_bans, function(e)
 					return not e.unit.is_stunned
 				end)
 
-				if not enemies or #enemies < pow_massive_fear.min_targets[pow_massive_fear.level] then
+				if not enemies or #enemies < a_massive_fear.min_targets then
 					a_massive_fear.ts = store.tick_ts + a_massive_fear.cooldown * 0.2
 				else
 					S:queue(a_massive_fear.cast_sound)
@@ -21716,8 +21713,7 @@ function scripts.tower_dragons.update(this, store)
 						queue_insert(store, decal)
 					end
 
-					max_targets = pow_massive_fear.max_targets[pow_massive_fear.level]
-					total_enemies = math.min(#enemies, max_targets)
+					total_enemies = math.min(#enemies, a_massive_fear.max_targets)
 					count_targets = 0
 
 					for i = 1, total_enemies do
@@ -21736,15 +21732,15 @@ function scripts.tower_dragons.update(this, store)
 					a_massive_fear.ts = start_ts
 					this.tower_upgrade_persistent_data.massive_fear_ts = a_massive_fear.ts
 
-					if count_targets < max_targets then
+					if count_targets < a_massive_fear.max_targets then
 						U.y_wait(store, fts(30) * tw.cooldown_factor)
 
-						local enemies_repeat = U.find_enemies_in_range_filter_on(tpos, a_massive_fear.range[pow_massive_fear.level], a_massive_fear.vis_flags, a_massive_fear.vis_bans, function(e)
+						local enemies_repeat = U.find_enemies_in_range_filter_on(tpos, a_massive_fear.range_factor * a.range, a_massive_fear.vis_flags, a_massive_fear.vis_bans, function(e)
 							return not e.unit.is_stunned
 						end)
 
 						if enemies_repeat and #enemies_repeat > 0 then
-							local diff_enemies = max_targets - count_targets
+							local diff_enemies = a_massive_fear.max_targets - count_targets
 							local total_enemies_repeat = math.min(#enemies_repeat, diff_enemies)
 
 							for i = 1, total_enemies_repeat do
@@ -21758,14 +21754,14 @@ function scripts.tower_dragons.update(this, store)
 						end
 					end
 
-					U.y_animation_wait(this, 2)
+					U.y_animation_wait(this, 2 * tw.cooldown_factor)
 				end
 
 				U.animation_start(this, "idle", nil, store.tick_ts, true, 2, true)
 				update_head()
 			elseif can_dragon_split() then
 				local attack = a_dragon_split
-				local target, targets, pred_pos = find_target(attack)
+				local target, targets, pred_pos = U.find_foremost_enemy_in_range_filter_off(tpos, a.range * attack.range_factor, attack.node_prediction, attack.vis_flags, attack.vis_bans)
 
 				if not target then
 					a_dragon_split.ts = store.tick_ts + a_dragon_split.cooldown * 0.2
@@ -21792,18 +21788,17 @@ function scripts.tower_dragons.update(this, store)
 					U.animation_start(this, attack.animation[anim_idx], nil, store.tick_ts, false, 2, true)
 					U.y_wait(store, attack.shoot_time * tw.cooldown_factor)
 
-					total_targets = math.min(#targets, 3)
-
-					for i = 1, total_targets do
+					for i = 1, 3 do
+						local j = km.zmod(i, #targets)
 						bullet = E:create_entity(attack.bullet)
 						bullet.pos = V.v(this.pos.x + offset_x, this.pos.y + offset_y)
 						bullet.bullet.from = V.vclone(bullet.pos)
-						bullet.bullet.to = V.v(targets[i].pos.x + targets[i].unit.hit_offset.x, targets[i].pos.y + targets[i].unit.hit_offset.y)
-						bullet.bullet.target_id = targets[i] and targets[i].id or nil
+						bullet.bullet.to = V.v(targets[j].pos.x + targets[j].unit.hit_offset.x, targets[j].pos.y + targets[j].unit.hit_offset.y)
+						bullet.bullet.target_id = targets[j].id
 						bullet.bullet.source_id = this.id
 						bullet.bullet.damage_factor = this.tower.damage_factor
-						bullet.bullet.damage_min = attack.damage_min[pow_dragon_split.level] / total_targets
-						bullet.bullet.damage_max = attack.damage_max[pow_dragon_split.level] / total_targets
+						bullet.bullet.damage_min = attack.damage_min[pow_dragon_split.level] / 3
+						bullet.bullet.damage_max = attack.damage_max[pow_dragon_split.level] / 3
 						bullet.bullet.damage_radius = attack.damage_radius[pow_dragon_split.level]
 						bullet.bullet.damage_min_area = attack.damage_min_area[pow_dragon_split.level]
 						bullet.bullet.damage_max_area = attack.damage_max_area[pow_dragon_split.level]
@@ -21815,7 +21810,7 @@ function scripts.tower_dragons.update(this, store)
 					a_dragon_split.ts = store.tick_ts
 					this.tower_upgrade_persistent_data.dragon_split_ts = a_dragon_split.ts
 
-					U.y_animation_wait(this, 2)
+					U.y_animation_wait(this, 2 * tw.cooldown_factor)
 				end
 
 				U.animation_start(this, "idle", nil, store.tick_ts, true, 2, true)
@@ -22033,9 +22028,9 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 	queue_remove(store, this)
 end
 
-scripts.faerie_dragon = {}
+scripts.faerie_dragon_lvl4 = {}
 
-function scripts.faerie_dragon.update(this, store)
+function scripts.faerie_dragon_lvl4.update(this, store)
 	local sp = this.render.sprites[1]
 	local fm = this.force_motion
 	local ca = this.custom_attack
@@ -22134,9 +22129,7 @@ function scripts.faerie_dragon.update(this, store)
 
 					check_tower_damage_factor()
 
-					if b.bullet.use_unit_damage_factor then
-						b.bullet.damage_factor = unit_damage_factor
-					end
+					b.bullet.damage_factor = unit_damage_factor
 
 					queue_insert(store, b)
 				end

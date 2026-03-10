@@ -428,7 +428,7 @@ function LU.insert_hero(store, name, pos, force_full_level)
 			return
 		end
 
-		if hero.hero.use_custom_spawn_point and store.level.custom_spawn_pos then
+		if store.level.custom_spawn_pos then
 			if store.level.custom_spawn_pos[i] then
 				pos = store.level.custom_spawn_pos[i].pos
 			else

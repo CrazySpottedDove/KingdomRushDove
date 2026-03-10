@@ -561,6 +561,21 @@ return {
 		music_stage135 = {
 			sounds = {"MusicBattlePrep_135", "MusicBattle_135", "MusicBossFight_135"}
 		},
+		music_stage136 = {
+			sounds = {"MusicBattlePrep_136", "MusicBattle_136"}
+		},
+		music_stage137 = {
+			sounds = {"MusicBattlePrep_137", "MusicBattle_137"}
+		},
+		music_stage138 = {
+			sounds = {"MusicBattlePrep_138", "MusicBattle_138"}
+		},
+		music_stage139 = {
+			sounds = {"MusicBattlePrep_139", "MusicBattle_139"}
+		},
+		music_stage140 = {
+			sounds = {"MusicBattlePrep_140", "MusicBattle_140", "MusicBossFight_140"}
+		},
 		music_stage1001 = {
 			sounds = {"MusicBattlePrep_1001", "MusicBattle_1001", "MusicBossFight"}
 		},
@@ -1658,6 +1673,41 @@ return {
 			stream = true,
 			files = {"kr5_dlc2_bgmusic_preparation2_v1.ogg"}
 		},
+		MusicBattlePrep_136 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc3_bgmusic_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_137 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc3_bgmusic_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_138 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc3_bgmusic_preparation1_v1.ogg"}
+		},
+		MusicBattlePrep_139 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc3_bgmusic_preparation2_v1.ogg"}
+		},
+		MusicBattlePrep_140 = {
+			source_group = "MUSIC",
+			gain = 0.35,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc3_bgmusic_preparation3_v1.ogg"}
+		},
 		MusicBattlePrep_1001 = {
 			files = {"MusicBattlePreparationsMountain.ogg"},
 			gain = 0.8,
@@ -2455,6 +2505,41 @@ return {
 			loop = true,
 			stream = true,
 			files = {"kr5_dlc2_bgmusic_battle2_v1.ogg"}
+		},
+		MusicBattle_136 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc3_bgmusic_battle1_v1.ogg"}
+		},
+		MusicBattle_137 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc3_bgmusic_battle1_v1.ogg"}
+		},
+		MusicBattle_138 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc3_bgmusic_battle1_v1.ogg"}
+		},
+		MusicBattle_139 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc3_bgmusic_battle2_v1.ogg"}
+		},
+		MusicBattle_140 = {
+			source_group = "MUSIC",
+			gain = 0.3,
+			loop = true,
+			stream = true,
+			files = {"kr5_dlc3_bgmusic_battle3_v1.ogg"}
 		},
 		MusicBattle_1001 = {
 			files = {"MusicBattleUnderAttackMountain.ogg"},

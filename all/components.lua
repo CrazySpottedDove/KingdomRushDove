@@ -529,7 +529,6 @@ hero.stage_hero = nil
 hero.tombstone_show_time = nil
 hero.tombstone_decal = "decal_hero_tombstone"
 hero.respawn_point = nil
-hero.use_custom_spawn_point = nil
 
 local hero_skill = E:register_c("hero_skill")
 
