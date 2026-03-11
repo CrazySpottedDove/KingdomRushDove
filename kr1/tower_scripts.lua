@@ -21748,7 +21748,7 @@ function scripts.tower_dragons.update(this, store)
 						end
 					end
 
-					U.y_animation_wait(this, 2 * tw.cooldown_factor)
+					U.y_animation_wait(this, 2)
 				end
 
 				U.animation_start(this, "idle", nil, store.tick_ts, true, 2, true)
@@ -21804,7 +21804,7 @@ function scripts.tower_dragons.update(this, store)
 					a_dragon_split.ts = store.tick_ts
 					this.tower_upgrade_persistent_data.dragon_split_ts = a_dragon_split.ts
 
-					U.y_animation_wait(this, 2 * tw.cooldown_factor)
+					U.y_animation_wait(this, 2)
 				end
 
 				U.animation_start(this, "idle", nil, store.tick_ts, true, 2, true)
