@@ -280,43 +280,43 @@ local starting_gold=store.player_gold
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="41"
 end)[1]
-holder.tower.upgrade_to="tower_paladin_covenant_lvl1"
+holder.tower.upgrade_to="tower_barrack_1"
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="44"
 end)[1]
-holder.tower.upgrade_to="tower_paladin_covenant_lvl1"
+holder.tower.upgrade_to="tower_barrack_1"
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="45"
 end)[1]
-holder.tower.upgrade_to="tower_paladin_covenant_lvl1"
+holder.tower.upgrade_to="tower_barrack_1"
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="46"
 end)[1]
-holder.tower.upgrade_to="tower_paladin_covenant_lvl1"
+holder.tower.upgrade_to="tower_barrack_1"
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="47"
 end)[1]
-holder.tower.upgrade_to="tower_paladin_covenant_lvl1"
+holder.tower.upgrade_to="tower_barrack_1"
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="48"
 end)[1]
-holder.tower.upgrade_to="tower_paladin_covenant_lvl1"
+holder.tower.upgrade_to="tower_barrack_1"
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="49"
 end)[1]
-holder.tower.upgrade_to="tower_paladin_covenant_lvl1"
+holder.tower.upgrade_to="tower_barrack_1"
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="50"
 end)[1]
-holder.tower.upgrade_to="tower_paladin_covenant_lvl1"
+holder.tower.upgrade_to="tower_barrack_1"
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="51"
 end)[1]
-holder.tower.upgrade_to="tower_paladin_covenant_lvl1"
+holder.tower.upgrade_to="tower_barrack_1"
 local holder=table.filter(game.store.entities,function(k,e)
 return e.tower and e.tower.holder_id=="52"
 end)[1]
-holder.tower.upgrade_to="tower_paladin_covenant_lvl1"
+holder.tower.upgrade_to="tower_barrack_1"
 for x=2,87 do
 for y=32,15,-1 do
 GR:set_cell(x,y,TERRAIN_LAND)
