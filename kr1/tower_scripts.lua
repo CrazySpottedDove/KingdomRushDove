@@ -21320,7 +21320,7 @@ function scripts.tower_dragons.get_info(this)
 		min, max = math.ceil(min), math.ceil(max)
 	end
 
-	local cooldown = s.custom_attack.cooldown / this.attacks.max_dragons
+	local cooldown = s.custom_attack.cooldown / this.attacks.max_dragons * this.tower.cooldown_factor
 
 	return {
 		type = STATS_TYPE_TOWER_MAGE,
@@ -21628,7 +21628,7 @@ function scripts.tower_dragons.update(this, store)
 				end
 			end
 
-			if #this.dragons > 0 and store.tick_ts - a_basic.ts > a_basic.cooldown * tw.cooldown_factor then
+			if store.tick_ts - a_basic.ts > a_basic.cooldown * tw.cooldown_factor then
 				a_basic.ts = store.tick_ts
 
 				local assigned_target_ids = {}
@@ -21639,9 +21639,7 @@ function scripts.tower_dragons.update(this, store)
 					end
 				end
 
-				local targets = U.find_enemies_in_range_filter_on(tpos, a.range, a_basic.vis_flags, a_basic.vis_bans, function(e)
-					return not table.contains(assigned_target_ids, e.id)
-				end)
+				local targets = U.find_enemies_in_range_filter_off(tpos, a.range, a_basic.vis_flags, a_basic.vis_bans)
 
 				if targets then
 					local origin = tpos
@@ -21658,21 +21656,28 @@ function scripts.tower_dragons.update(this, store)
 							return true
 						end
 
-						return V.dist(e1.pos.x, e1.pos.y, origin.x, origin.y) < V.dist(e2.pos.x, e2.pos.y, origin.x, origin.y)
+						if table.contains(assigned_target_ids, e1.id) and not table.contains(assigned_target_ids, e2.id) then
+							return false
+						end
+
+						return V.dist2(e1.pos.x, e1.pos.y, origin.x, origin.y) < V.dist2(e2.pos.x, e2.pos.y, origin.x, origin.y)
 					end)
 
 					local i = 1
 
-					for _, dragon in pairs(this.dragons) do
+					for _, dragon in ipairs(this.dragons) do
+						dragon.custom_attack.active = true
 						if not dragon.custom_attack.target_id then
 							dragon.custom_attack.target_id = targets[i].id
 
 							table.insert(assigned_target_ids, targets[i].id)
 
-							if i < #targets then
-								i = i + 1
-							end
+							i = km.zmod(i + 1, #targets)
 						end
+					end
+				else
+					for _, dragon in ipairs(this.dragons) do
+						dragon.custom_attack.active = false
 					end
 				end
 			end
@@ -21947,7 +21952,7 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 		coroutine.yield()
 	end
 
-	if target and not target.health.dead then
+	local function do_hit(target)
 		local d = SU.create_bullet_damage(b, target.id, this.id)
 
 		queue_damage(store, d)
@@ -21964,9 +21969,7 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 				queue_insert(store, m)
 			end
 		end
-	end
 
-	if b.damage_radius and b.damage_radius > 0 then
 		local area_targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
 
 		if area_targets then
@@ -21983,24 +21986,61 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 		end
 	end
 
-	this.render.sprites[1].hidden = true
+	if target and not target.health.dead then
+		do_hit(target)
+	else
+		local next_target = U.find_biggest_enemy_in_range_filter_off(this.pos, 200, b.vis_flags, b.vis_bans)
+		if next_target then
+			b.to.x, b.to.y = next_target.pos.x + next_target.unit.hit_offset.x, next_target.pos.y + next_target.unit.hit_offset.y
+			b.target_id = next_target.id
 
-	if b.hit_fx then
-		local fx = E:create_entity(b.hit_fx)
+			while true do
+				if move_step(b.to) then
+					break
+				end
 
-		fx.pos.x, fx.pos.y = b.to.x, b.to.y
+				if b.align_with_trajectory then
+					this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
+				end
 
-		if target then
-			fx.pos.x, fx.pos.y = target.pos.x, target.pos.y + target.unit.hit_offset.y
+				coroutine.yield()
+			end
+
+			if not next_target.health.dead then
+				do_hit(next_target)
+			else
+				local area_targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
+
+				if area_targets then
+					for _, target_area in ipairs(area_targets) do
+						b.damage_min = b.damage_min_area
+						b.damage_max = b.damage_max_area
+
+						local d = SU.create_bullet_damage(b, target_area.id, this.id)
+
+						queue_damage(store, d)
+					end
+				end
+			end
 		end
-
-		fx.render.sprites[1].ts = store.tick_ts
-		fx.render.sprites[1].runs = 0
-
-		queue_insert(store, fx)
 	end
 
-	if b.hit_decal and target and target.vis and band(target.vis.flags, F_FLYING) == 0 then
+	this.render.sprites[1].hidden = true
+
+	local fx = E:create_entity(b.hit_fx)
+
+	fx.pos.x, fx.pos.y = b.to.x, b.to.y
+
+	if target then
+		fx.pos.x, fx.pos.y = target.pos.x, target.pos.y + target.unit.hit_offset.y
+	end
+
+	fx.render.sprites[1].ts = store.tick_ts
+	fx.render.sprites[1].runs = 0
+
+	queue_insert(store, fx)
+
+	if target and target.vis and band(target.vis.flags, F_FLYING) == 0 then
 		local decal = E:create_entity(b.hit_decal)
 
 		decal.pos = V.vclone(target.pos)
@@ -22042,10 +22082,12 @@ function scripts.faerie_dragon_lvl4.update(this, store)
 
 	local tower_id = this.owner.id
 	local unit_damage_factor = 1
+	local cooldown_factor = 1
 
 	local function check_tower_damage_factor()
 		if store.entities[tower_id] then
 			unit_damage_factor = store.entities[tower_id].tower.damage_factor
+			cooldown_factor = store.entities[tower_id].tower.cooldown_factor
 		end
 	end
 
@@ -22068,69 +22110,74 @@ function scripts.faerie_dragon_lvl4.update(this, store)
 			return
 		end
 
-		if ca.target_id ~= nil and store.tick_ts - ca.ts > ca.cooldown then
-			ca.ts = store.tick_ts
+		while ca.active do
+			check_tower_damage_factor()
+			if ca.target_id ~= nil and store.tick_ts - ca.ts > ca.cooldown * cooldown_factor then
+				ca.ts = store.tick_ts
 
-			local an, af, ai
-			local target = store.entities[ca.target_id]
+				local an, af, ai
+				local target = store.entities[ca.target_id]
 
-			if not target or target.health.dead then
-			-- block empty
-			else
-				an, af, ai = U.animation_name_facing_point(this, "fly", target.pos)
+				if not target or target.health.dead then
+				-- block empty
+				else
+					an, af, ai = U.animation_name_facing_point(this, "fly", target.pos)
 
-				U.animation_start(this, an, af, store.tick_ts, true)
+					U.animation_start(this, an, af, store.tick_ts, true)
 
-				repeat
-					target = store.entities[ca.target_id]
+					repeat
+						target = store.entities[ca.target_id]
 
-					if not target or target.health.dead then
-						goto label_faerie_dragon_no_target
+						if not target or target.health.dead then
+							goto label_faerie_dragon_no_target
+						end
+
+						dist = V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y + (target.flight_height or 0))
+						pred_pos = P:predict_enemy_pos(target, dist / this.flight_speed_busy)
+						dest.x, dest.y = pred_pos.x, pred_pos.y + (target.flight_height or 0)
+
+						force_move_step(dest, this.flight_speed_busy)
+						coroutine.yield()
+					until dist < 30 or ca.target_id == nil
+
+					if not sp.sync_flag then
+						coroutine.yield()
 					end
 
-					dist = V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y + (target.flight_height or 0))
-					pred_pos = P:predict_enemy_pos(target, dist / this.flight_speed_busy)
-					dest.x, dest.y = pred_pos.x, pred_pos.y + (target.flight_height or 0)
+					S:queue(ca.sound)
 
-					force_move_step(dest, this.flight_speed_busy)
-					coroutine.yield()
-				until dist < 30 or ca.target_id == nil
+					an, af, ai = U.animation_name_facing_point(this, ca.animation, pred_pos)
 
-				if not sp.sync_flag then
-					coroutine.yield()
+					U.animation_start(this, an, af, store.tick_ts, false, 1, true)
+					U.y_wait(store, ca.shoot_time)
+
+					do
+						local so = ca.bullet_start_offset[ai]
+						local b = E:create_entity(ca.bullet)
+
+						b.pos.x, b.pos.y = this.pos.x + (af and -1 or 1) * so.x, this.pos.y + this.flight_height + so.y
+						b.bullet.from = V.vclone(b.pos)
+						b.bullet.to = pred_pos
+						b.bullet.target_id = target.id
+						b.bullet.source_id = this.id
+						b.bullet.damage_factor = unit_damage_factor
+
+						queue_insert(store, b)
+					end
+
+					U.y_animation_wait(this)
 				end
 
-				S:queue(ca.sound)
+				::label_faerie_dragon_no_target::
 
-				an, af, ai = U.animation_name_facing_point(this, ca.animation, pred_pos)
-
-				U.animation_start(this, an, af, store.tick_ts, false, 1, true)
-				U.y_wait(store, ca.shoot_time)
-
-				do
-					local so = ca.bullet_start_offset[ai]
-					local b = E:create_entity(ca.bullet)
-
-					b.pos.x, b.pos.y = this.pos.x + (af and -1 or 1) * so.x, this.pos.y + this.flight_height + so.y
-					b.bullet.from = V.vclone(b.pos)
-					b.bullet.to = pred_pos
-					b.bullet.target_id = target.id
-					b.bullet.source_id = this.id
-
-					check_tower_damage_factor()
-
-					b.bullet.damage_factor = unit_damage_factor
-
-					queue_insert(store, b)
-				end
-
-				U.y_animation_wait(this)
+				ca.target_id = nil
+				U.animation_start(this, "idle", nil, store.tick_ts, true)
+			-- dest.x, dest.y = this.idle_pos.x, this.idle_pos.y
 			end
-
-			::label_faerie_dragon_no_target::
-
-			ca.target_id = nil
-			dest.x, dest.y = this.idle_pos.x, this.idle_pos.y
+			coroutine.yield()
+			if not ca.active then
+				dest.x, dest.y = this.idle_pos.x, this.idle_pos.y
+			end
 		end
 
 		U.animation_start(this, "idle", nil, store.tick_ts, true)

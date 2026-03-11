@@ -3882,10 +3882,6 @@ function scripts.bolt_trace_target.update(this, store)
 	if target and not target.health.dead then
 		local d = SU.create_bullet_damage(b, target.id, this.id)
 
-		-- local u = UP:get_upgrade("mage_spell_of_penetration")
-		-- if u and math.random() < u.chance then
-		--     d.damage_type = DAMAGE_TRUE
-		-- end
 		queue_damage(store, d)
 
 		if b.mod or b.mods then
