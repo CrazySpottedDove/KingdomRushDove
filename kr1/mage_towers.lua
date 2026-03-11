@@ -419,9 +419,9 @@ tower_archmage.attacks.list[2].nodes_limit = 30
 tower_archmage.sound_events.insert = "ArchmageTauntReady"
 
 local fx_bolt_archmage_hit = RT("fx_bolt_archmage_hit", "fx")
-
 fx_bolt_archmage_hit.render.sprites[1].name = "bolt_archmage_hit"
 --#endregion
+
 --#region bolt_archmage
 tt = RT("bolt_archmage", "bolt")
 tt.render.sprites[1].prefix = "bolt_archmage"

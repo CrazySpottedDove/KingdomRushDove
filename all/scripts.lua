@@ -2390,6 +2390,7 @@ function scripts.arrow_missile.update(this, store)
 	local retarget_for_next = false
 	local target_num = b.target_num or 1
 	local hitted_targets = {}
+	local dynamic_hit_distance = b.hit_distance
 
 	hitted_targets[b.target_id] = true
 
@@ -2535,6 +2536,7 @@ function scripts.arrow_missile.update(this, store)
 
 				coroutine.yield()
 			end
+			dynamic_hit_distance = math.max(mspeed * store.tick_length, b.hit_distance * 1.2)
 		end
 	end
 
@@ -2547,7 +2549,7 @@ function scripts.arrow_missile.update(this, store)
 			target_pos.x, target_pos.y = target_pos.x + target.unit.hit_offset.x, target_pos.y + target.unit.hit_offset.y
 		end
 
-		if V.dist2(this_pos.x, this_pos.y, target_pos.x, target_pos.y) < b.hit_distance * b.hit_distance * 1.44 and not SU.unit_dodges(store, target, true) and (not b.hit_chance or math.random() < b.hit_chance) then
+		if V.dist2(this_pos.x, this_pos.y, target_pos.x, target_pos.y) < dynamic_hit_distance * dynamic_hit_distance and not SU.unit_dodges(store, target, true) and (not b.hit_chance or math.random() < b.hit_chance) then
 			hit = true
 			target_num = target_num - 1
 
