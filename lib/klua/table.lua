@@ -292,3 +292,14 @@ function table.collect(t)
 	end
 	return out
 end
+
+--- 把数组收集成哈希表
+function table.to_map(t)
+	local m = {}
+
+	for _, v in pairs(t) do
+		m[v] = true
+	end
+
+	return m
+end

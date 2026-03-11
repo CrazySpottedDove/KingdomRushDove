@@ -4897,7 +4897,7 @@ local enemies = {
 		}
 	},
 	dragons = {
-		gold_multiplier = 1.1,
+		gold_multiplier = 1.12,
 		tanky_draconian = {
 			speed = 38,
 			armor = 0.35,

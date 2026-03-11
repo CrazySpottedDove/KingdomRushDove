@@ -734,9 +734,7 @@ tt.ui.click_rect = r(-40, -12, 80, 46)
 --#endregion
 --#region tower_holder_blocked_elemental_metal_b
 tt = RT("tower_holder_blocked_elemental_metal", "tower_holder_blocked_elemental")
-
 E:add_comps(tt, "main_script")
-
 b = balance.specials.terrain_8.elemental_holders.metal_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
