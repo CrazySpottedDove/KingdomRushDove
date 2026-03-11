@@ -1186,11 +1186,10 @@ tt.sound_events.insert = "ElvesBarrackBladesingerTaunt"
 tt.tower.price = 185
 tt.tower.type = "blade"
 --#endregion
+
 --#region tower_forest
 tt = RT("tower_forest", "tower_barrack_1")
-
 AC(tt, "powers")
-
 tt.barrack.rally_range = 165
 tt.info.enc_icon = 19
 tt.info.portrait = "kr3_info_portraits_towers_0006"
@@ -1208,8 +1207,8 @@ tt.powers.eerie.price_inc = 200
 tt.powers.eerie.max_level = 2
 tt.powers.eerie.enc_icon = 5
 tt.powers.oak = CC("power")
-tt.powers.oak.price_base = 200
-tt.powers.oak.price_inc = 250
+tt.powers.oak.price_base = 190
+tt.powers.oak.price_inc = 240
 tt.powers.oak.enc_icon = 10
 tt.render.sprites[2].name = "barracks_towers_layer1_0101"
 tt.render.sprites[3].prefix = "tower_forest_door"
@@ -1219,11 +1218,10 @@ tt.sound_events.insert = "ElvesBarrackForestKeeperTaunt"
 tt.tower.price = 185
 tt.tower.type = "forest"
 --#endregion
+
 --#region soldier_blade
 tt = RT("soldier_blade", "soldier_barrack_1")
-
 AC(tt, "powers", "dodge", "timed_attacks")
-
 image_y = 68
 anchor_y = 15 / image_y
 tt.dodge.animation = "dodge"
@@ -1290,11 +1288,9 @@ tt.timed_attacks.list[1].hit_time = fts(5)
 tt.timed_attacks.list[1].sound = "TowerBladesingerBladedance"
 tt.unit.mod_offset = vec_2(0, 14)
 --#endregion
---#region soldier_forest
+
 tt = RT("soldier_forest", "soldier_barrack_1")
-
 AC(tt, "powers", "timed_attacks", "ranged")
-
 image_y = 114
 anchor_y = 31 / image_y
 tt.health.armor = 0
@@ -1355,7 +1351,7 @@ tt.timed_attacks.list[2].vis_flags = bor(F_RANGED)
 tt.ui.click_rect = r(-10, -2, 20, 35)
 tt.unit.mod_offset = vec_2(0, 25)
 tt.unit.hit_offset = vec_2(0, 25)
---#endregion
+
 --#region spear_forest
 tt = RT("spear_forest", "arrow")
 tt.bullet.damage_max = 69

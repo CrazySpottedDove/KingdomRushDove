@@ -11156,29 +11156,27 @@ function scripts.soldier_forest.update(this, store)
 	end
 
 	while true do
-		if this.powers then
-			for pn, p in pairs(this.powers) do
-				if p.changed then
-					p.changed = nil
+		for pn, p in pairs(this.powers) do
+			if p.changed then
+				p.changed = nil
 
-					SU.soldier_power_upgrade(this, pn)
+				SU.soldier_power_upgrade(this, pn)
 
-					if pn == "oak" then
-						if p.level >= 1 then
-							this.ranged.attacks[1].disabled = true
-							this.ranged.attacks[2].disabled = nil
-						end
-
-						this.ranged.attacks[2].level = p.level
+				if pn == "oak" then
+					if p.level >= 1 then
+						this.ranged.attacks[1].disabled = true
+						this.ranged.attacks[2].disabled = nil
 					end
 
-					if pn == "circle" then
-						this.timed_attacks.list[1].ts = store.tick_ts
-					end
+					this.ranged.attacks[2].level = p.level
+				end
 
-					if pn == "eerie" then
-						this.timed_attacks.list[2].ts = store.tick_ts
-					end
+				if pn == "circle" then
+					this.timed_attacks.list[1].ts = store.tick_ts
+				end
+
+				if pn == "eerie" then
+					this.timed_attacks.list[2].ts = store.tick_ts
 				end
 			end
 		end
