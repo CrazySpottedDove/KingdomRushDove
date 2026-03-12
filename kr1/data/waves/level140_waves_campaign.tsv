@@ -3,7 +3,7 @@
 #	level properties																																																
 	description	gerson																																															
 	lives	20																																															
-	gold	1000																																															
+	gold	2000																																															
 	gems	300																																															
 	enemy_prefix	enemy_																																															
 	default_increment	1																																															

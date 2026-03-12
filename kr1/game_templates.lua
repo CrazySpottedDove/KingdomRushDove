@@ -25188,11 +25188,10 @@ tt.appear_anim = "spawn"
 tt.idle_flip.cooldown = 3
 tt.idle_flip.chance = 0.7
 tt.ui.click_rect = r(-35, -15, 70, 70)
+
 tt = RT("tower_stage_38_dragon_wardens", "tower")
 b = balance.specials.stage_38_dragon_wardens
-
 E:add_comps(tt, "vis", "user_selection", "attacks", "events")
-
 tt.tower.type = "stage_38_tower_dragons_warden_barrack"
 tt.tower.level = 1
 tt.tower.can_be_sold = false
@@ -25222,10 +25221,9 @@ tt.events.list[1].on_event = scripts.tower_stage_38_dragon_wardens.on_event
 tt.ui.can_click = false
 tt.ui.can_hover = false
 tt.ui.can_select = false
+
 tt = RT("tower_stage_38_dragon_wardens_goal", "decal_scripted")
-
 E:add_comps(tt, "attacks")
-
 tt.main_script.update = scripts.tower_stage_38_dragon_wardens_goal.update
 tt.render.sid_base = 1
 tt.render.sid_domo = 2
