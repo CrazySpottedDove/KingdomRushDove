@@ -384,7 +384,7 @@ function screen_settings:init(w, h, params, done_callback)
 	end
 
 	function b_quit.on_keypressed(this, key)
-		if key == "return" or key == "space" then
+		if key == "escape" then
 			self:handle_quit_button()
 		end
 	end
@@ -491,6 +491,9 @@ function screen_settings:init(w, h, params, done_callback)
 	c_large_pointer:set_check(self.params.large_pointer)
 	c_highdpi:set_check(self.params.highdpi)
 	c_update:set_check(self.params.update_enabled)
+
+	-- 允许玩家直接 enter 进游戏
+	self.window:set_responder(b_play)
 end
 
 function screen_settings:update(dt)
@@ -517,6 +520,7 @@ function screen_settings:draw()
 end
 
 function screen_settings:keypressed(key, isrepeat)
+	print("screen_settings:keypressed", key, isrepeat)
 	self.window:keypressed(key)
 end
 
@@ -689,6 +693,7 @@ function CheckBox:on_click(button, x, y)
 end
 
 function CheckBox:on_keypressed(key)
+
 	if key == "space" or key == "return" then
 		self:set_check(not self.checked)
 	end
