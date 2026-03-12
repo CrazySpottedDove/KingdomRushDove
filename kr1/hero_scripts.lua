@@ -30966,7 +30966,7 @@ function scripts.hero_dragon_arb.update(this, store)
 			U.y_animation_play_group(this, "levelup", nil, store.tick_ts, 1, this.render.sprites[1].group)
 		end
 
-		if ready_to_use_skill(this.ultimate, store) then
+		if ready_to_use_skill(this.ultimate, store) and find_target_at_critical_moment(this, store, 200) then
 			if not this.ultimate_active then
 				local ue = E:create_entity(this.hero.skills.ultimate.controller_name)
 
@@ -30984,54 +30984,7 @@ function scripts.hero_dragon_arb.update(this, store)
 			local a = this.ranged.attacks[1]
 			local bullet_t = E:get_template(a.bullet)
 			local flight_time = bullet_t.bullet.flight_time
-			local target = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.shoot_time + flight_time, a.vis_flags, a.vis_bans, function(v)
-				local v_pos = v.pos
-
-				if v.motion and v.motion.speed then
-					local node_offset = P:predict_enemy_node_advance(v, flight_time + a.shoot_time)
-
-					v_pos = P:node_pos(v.nav_path.pi, 1, v.nav_path.ni + node_offset)
-				end
-
-				local max_angle = a.max_angle
-
-				if band(v.vis.flags, F_FLYING) ~= 0 then
-					v_pos.y = v_pos.y + v.unit.hit_offset.y
-					max_angle = a.max_angle_fliers
-				end
-
-				local b_pos = V.vclone(this.pos)
-				local bullet_start_offset = V.v(0, 0)
-				local flip = this.pos.x > v_pos.x
-
-				if a.bullet_start_offset and #a.bullet_start_offset == 2 then
-					local offset_index = flip and 2 or 1
-
-					bullet_start_offset = a.bullet_start_offset[offset_index]
-				end
-
-				b_pos.x = b_pos.x + (flip and -1 or 1) * bullet_start_offset.x
-				b_pos.y = b_pos.y + bullet_start_offset.y
-
-				local angle_d = math.deg(V.angleTo(v_pos.x - b_pos.x, v_pos.y - b_pos.y))
-
-				angle_d = angle_d + 90
-				angle_d = math.min(math.abs(angle_d), math.abs(angle_d - 360), math.abs(angle_d + 360))
-
-				if max_angle < angle_d then
-					return false
-				end
-
-				angle_d = math.deg(V.angleTo(v_pos.x - this.pos.x, v_pos.y - this.pos.y))
-				angle_d = angle_d + 90
-				angle_d = math.min(math.abs(angle_d), math.abs(angle_d - 360), math.abs(angle_d + 360))
-
-				if angle_d > 130 then
-					return false
-				end
-
-				return true
-			end)
+			local target = U.find_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.shoot_time + flight_time, a.vis_flags, a.vis_bans)
 
 			for _, e in pairs(store.entities) do
 				if e.remove_this_decal_aa then
