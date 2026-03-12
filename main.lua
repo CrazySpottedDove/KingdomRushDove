@@ -562,7 +562,7 @@ function love.errorhandler(msg)
 		end
 	end
 
-	table.insert(tip, "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下蓝屏的图，截图反馈并用语言简要说明发生了什么。按b以查看蓝屏前图片，按ESC以退出。\n")
+	table.insert(tip, "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下蓝屏的图与蓝屏前的图，反馈并用语言简要说明发生了什么。按b以查看蓝屏前图片，按ESC以退出。\n")
 
 	table.insert(err, "\n\nLast error msgs\n")
 	table.insert(err, last_log_msg)

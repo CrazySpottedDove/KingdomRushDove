@@ -64287,6 +64287,7 @@ function scripts.tower_stage_38_dragon_wardens.update(this, store)
 					spawn.nav_path.pi = path_index
 					spawn.nav_path.spi = 3
 					spawn.nav_path.ni = node_index
+					spawn.nav_path.dir = -1
 					spawn.pos = V.vclone(this.pos)
 					spawn.goal_id = goal_id
 					spawn.do_balloon = spawns_done == 0
@@ -73953,24 +73954,6 @@ end
 
 scripts.soldier_dragon_warden_dragon_raider_mounted = {}
 
-function scripts.soldier_dragon_warden_dragon_raider_mounted.get_info(this)
-	local a = this.ranged.attacks[1]
-	local b = E:get_template(a.bullet)
-	local min, max = b.bullet.damage_min, b.bullet.damage_max
-
-	min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
-
-	return {
-		type = STATS_TYPE_SOLDIER,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		armor = this.health.armor,
-		damage_icon = this.info.damage_icon,
-		damage_min = min,
-		damage_max = max
-	}
-end
-
 function scripts.soldier_dragon_warden_dragon_raider_mounted.insert(this, store, script)
 	return true
 end
@@ -74034,12 +74017,6 @@ function scripts.soldier_dragon_warden_dragon_raider_mounted.update(this, store,
 			return false, A_NO_TARGET, false
 		end
 
-		if speed_easing_mult > 0.2 then
-			speed_easing_mult = speed_easing_mult + (0 - speed_easing_mult) * store.tick_length * speed_easing_deaccel_amount
-
-			return false, nil, true
-		end
-
 		if not aaa then
 			return false, A_IN_COOLDOWN, false
 		end
@@ -74050,10 +74027,6 @@ function scripts.soldier_dragon_warden_dragon_raider_mounted.update(this, store,
 		U.set_destination(this, this.pos)
 
 		attack_done = SU.y_soldier_do_ranged_attack(store, this, target, aaa, pred_pos)
-
-		if attack_done then
-			aaa.ts = start_ts
-		end
 
 		if attack_done then
 			return false, A_DONE, false
@@ -74133,11 +74106,7 @@ function scripts.soldier_dragon_warden_dragon_raider_mounted.update(this, store,
 		this.health.death_finished_ts = store.tick_ts
 
 		if this.ui then
-			if IS_TRILOGY then
-				this.ui.can_click = not this.unit.hide_after_death
-			else
-				this.ui.can_click = this.ui.can_click and not this.unit.hide_after_death
-			end
+			this.ui.can_click = this.ui.can_click and not this.unit.hide_after_death
 
 			this.ui.z = -1
 		end
@@ -74168,14 +74137,12 @@ function scripts.soldier_dragon_warden_dragon_raider_mounted.update(this, store,
 		if this.unit.is_stunned then
 			U.animation_start(this, "idle", nil, store.tick_ts, -1)
 		else
-			if this.ranged then
-				brk, star, breaking_movement = y_custom_soldier_ranged_attacks(store, this)
+			brk, star, breaking_movement = y_custom_soldier_ranged_attacks(store, this)
 
-				if brk or star == A_DONE then
-					goto label_2472_0
-				elseif star == A_IN_COOLDOWN then
-					goto label_2472_0
-				end
+			if brk or star == A_DONE then
+				goto label_2472_0
+			elseif star == A_IN_COOLDOWN then
+				goto label_2472_0
 			end
 
 			SU.soldier_regen(store, this)
@@ -74214,15 +74181,7 @@ function scripts.soldier_dragon_warden_dragon_raider_mounted.update(this, store,
 			normal_x, normal_y = V.normalize(posx, posy)
 			this.motion.forced_waypoint = V.v(this.pos.x + 40 * normal_x, this.pos.y + 40 * normal_y)
 
-			if not breaking_movement then
-				speed_easing_mult = speed_easing_mult + (1 - speed_easing_mult) * store.tick_length * speed_easing_accel_amount
-			end
-
-			U.speed_mul_self(this, speed_easing_mult)
-
 			SU.go_to_forced_waypoint(this, store)
-
-			U.speed_div_self(this, speed_easing_mult)
 		end
 
 		::label_2472_0::

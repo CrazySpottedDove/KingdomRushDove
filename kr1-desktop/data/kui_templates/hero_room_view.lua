@@ -1168,7 +1168,7 @@ local hero_room_view = {
 			anchor = v(71.5, 35.5)
 		}, {
 			class = "GGDoneButton",
-			label_text_key = "切换",
+			label_text_key = "TOGGLE",
 			id = "special_description_toggle_button",
 			pos = v(960 - 737, 698),
 			anchor = v(71.5, 35.5)

@@ -1021,12 +1021,6 @@ return {
 		tt_list = {{
 			tt_title = _("TOWER_PALADINS_SHIELD_NAME_1"),
 			tt_desc = _("TOWER_PALADINS_SHIELD_DESCRIPTION_1")
-		}, {
-			tt_title = _("TOWER_PALADINS_SHIELD_NAME_2"),
-			tt_desc = _("TOWER_PALADINS_SHIELD_DESCRIPTION_2")
-		}, {
-			tt_title = _("TOWER_PALADINS_SHIELD_NAME_3"),
-			tt_desc = _("TOWER_PALADINS_SHIELD_DESCRIPTION_3")
 		}}
 	}), M(tpl.upgrade_power, {
 		action_arg = "holystrike",
@@ -1602,9 +1596,6 @@ return {
 		}, {
 			tt_title = _("TOWER_FOREST_KEEPERS_EERIE_NAME_2"),
 			tt_desc = _("TOWER_FOREST_KEEPERS_EERIE_DESCRIPTION_2")
-		}, {
-			tt_title = _("TOWER_FOREST_KEEPERS_EERIE_NAME_3"),
-			tt_desc = _("TOWER_FOREST_KEEPERS_EERIE_DESCRIPTION_3")
 		}}
 	}), M(tpl.upgrade_power, {
 		action_arg = "oak",
@@ -1651,9 +1642,6 @@ return {
 		}, {
 			tt_title = _("TOWER_STONE_DRUID_NATURES_FRIEND_NAME_2"),
 			tt_desc = _("TOWER_STONE_DRUID_NATURES_FRIEND_DESCRIPTION_2")
-		}, {
-			tt_title = _("TOWER_STONE_DRUID_NATURES_FRIEND_NAME_3"),
-			tt_desc = _("TOWER_STONE_DRUID_NATURES_FRIEND_DESCRIPTION_3")
 		}}
 	}), tpl.rally, tpl.sell}},
 	entwood = {{M(tpl.upgrade_power, {

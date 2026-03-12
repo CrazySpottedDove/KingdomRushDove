@@ -46,6 +46,8 @@ function _(s, default)
 	elseif default then
 		return default
 	else
+		-- DEBUG_USE
+		print("Missing translation for '" .. s .. "' in locale '" .. i18n.current_locale .. "'")
 		return s
 	end
 end

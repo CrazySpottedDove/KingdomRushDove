@@ -25247,12 +25247,10 @@ tt.render.sprites[tt.render.sid_tower].name = "wardens_dragon_house_house_front"
 tt.attacks.list[1] = E:clone_c("custom_attack")
 tt.attacks.list[1].entity = "soldier_dragon_warden_dragon_raider_mounted"
 tt.attacks.list[1].spawn_delay = 1
+
 tt = RT("soldier_dragon_warden_dragon_raider", "unit")
 b = balance.specials.stage_38_dragon_wardens.soldiers.dragon_raider
-
 E:add_comps(tt, "soldier", "motion", "nav_path", "main_script", "vis", "info", "sound_events", "melee", "regen")
-tt.controable = true
-tt.controable_other = true
 -- TODO: missing portrait
 tt.info.portrait = "kr5_info_portraits_soldiers_0001"
 -- tt.info.portrait = "gui_bottom_info_image_soldiers_0078"
@@ -25266,7 +25264,7 @@ tt.health.dead_lifetime = 3
 tt.unit.fade_time_after_death = tt.health.dead_lifetime - 1
 tt.unit.fade_duration_after_death = 0.3
 tt.info.damage_icon = "magic"
-tt.info.fn = scripts.soldier_dragon_warden_charge.get_info
+tt.info.fn = scripts.soldier_barrack.get_info
 tt.info.i18n_key = "SOLDIER_DRAGON_WARDEN_DRAGON_RAIDER"
 tt.main_script.insert = scripts.soldier_charge.insert
 tt.main_script.update = scripts.soldier_dragon_warden_charge.update
@@ -25308,16 +25306,14 @@ tt.bullet.hit_fx = "fx_bullet_soldier_dragon_warden_dragon_raider_hit"
 tt.bullet.particles_name = "ps_bullet_soldier_dragon_warden_dragon_raider_trail"
 tt.bullet.align_with_trajectory = true
 tt.sound_events.insert = "DragonsDLCMageWardensShoot"
+
 tt = RT("soldier_dragon_warden_dragon_raider_mounted", "unit")
 b = balance.specials.stage_38_dragon_wardens.soldiers.dragon_raider_mounted
-
 E:add_comps(tt, "soldier", "motion", "main_script", "vis", "info", "sound_events", "ranged", "tween", "regen")
-
 tt.health.armor = b.armor
 tt.health.hp_max = b.hp_max
 tt.flight_height = 60
 tt.regen.cooldown = 1
-tt.regen.health = b.health_regen
 tt.health_bar.draw_order = -1
 tt.health_bar.offset = v(0, tt.flight_height + 40)
 tt.health_bar.sort_y_offset = -tt.health_bar.offset.y - 1
@@ -25328,7 +25324,7 @@ tt.info.damage_icon = "magic"
 tt.info.portrait = "kr5_info_portraits_soldiers_0001"
 -- tt.info.portrait = "gui_bottom_info_image_soldiers_0078"
 tt.info.i18n_key = "SOLDIER_DRAGON_WARDEN_DRAGON_RAIDER_MOUNTED"
-tt.info.fn = scripts.soldier_dragon_warden_dragon_raider_mounted.get_info
+tt.info.fn = scripts.soldier_barrack.get_info
 tt.main_script.insert = scripts.soldier_dragon_warden_dragon_raider_mounted.insert
 tt.main_script.update = scripts.soldier_dragon_warden_dragon_raider_mounted.update
 tt.motion.max_speed = b.speed
@@ -25356,7 +25352,7 @@ tt.render.sprites[2].name = "warden_warlock_stage3_shadow"
 tt.render.sprites[2].z = Z_DECALS
 tt.soldier.melee_slot_offset = v(5, 0)
 tt.unit.fade_time_after_death = 1
-tt.vis.bans = 0
+tt.vis.bans = F_RANGED
 tt.vis.flags = bor(tt.vis.flags, F_FLYING)
 tt.death_fade_duration = 0.6
 tt.tween.props[1].keys = {{0, 255}, {tt.death_fade_duration - fts(6), 255}, {tt.death_fade_duration, 0}}
@@ -25384,11 +25380,10 @@ tt.wander_radius = b.wander_radius
 tt.chase_prediction_time = 1
 tt.fx_death = "fx_soldier_dragon_warden_dragon_raider_mounted_death"
 tt.sound_events.insert = "Stage38WardensGrowl"
+
 tt = RT("stage_37_barrack_dragon_wardens", "tower")
 b = balance.specials.stage_37_dragon_wardens
-
 E:add_comps(tt, "barrack", "vis")
-
 tt.tower.type = "stage_37_barrack_dragon_wardens"
 tt.tower.level = 1
 tt.tower.kind = TOWER_KIND_BARRACK
