@@ -70526,6 +70526,10 @@ function scripts.enemy_basic_shadow.update(this, store, script)
 			return false
 		end
 
+		if P:nodes_to_goal(this.nav_path) < this.shadow_hide_nodes_limit then
+			return false
+		end
+
 		local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, this.shadow_distance, 0, F_FLYING)
 
 		if not soldiers or #soldiers <= 0 then
@@ -70548,6 +70552,10 @@ function scripts.enemy_basic_shadow.update(this, store, script)
 
 		if store.tick_ts < next_check_ts then
 			return false
+		end
+
+		if P:nodes_to_goal(this.nav_path) < this.shadow_hide_nodes_limit then
+			return true
 		end
 
 		local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, this.shadow_distance_to_show, 0, F_FLYING)

@@ -5100,6 +5100,7 @@ local enemies = {
 		basic_shadow = {
 			armor = 0,
 			shadow_speed_nodes_limit = 70,
+			shadow_hide_nodes_limit = 50,
 			gold = 10,
 			magic_armor = 0.3,
 			speed = 46,

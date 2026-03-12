@@ -14358,6 +14358,7 @@ tt.shadow_distance_to_show = b.shadow_distance_to_show
 tt.shadow_speed_mult = b.shadow_speed_mult
 tt.shadow_min_duration = 1
 tt.shadow_speed_nodes_limit = b.shadow_speed_nodes_limit
+tt.shadow_hide_nodes_limit = b.shadow_hide_nodes_limit
 tt.evolve_mod = "mod_enemy_alfa_shadow_evolve"
 tt.evolve_decal = "decal_enemy_basic_shadow_evolve"
 tt.tween.remove = false
