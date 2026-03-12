@@ -6362,10 +6362,10 @@ function EditableItem:update_display()
 	if self._type == "boolean" then
 		self.input_border.hidden = true
 		if self.value then
-			self.value_label.text = _("是")
+			self.value_label.text = _("YES")
 			self.value_label.colors.text = self.value_label.colors.text_yes
 		else
-			self.value_label.text = _("否")
+			self.value_label.text = _("NO")
 			self.value_label.colors.text = self.value_label.colors.text_no
 		end
 	elseif self._type == "number" then
