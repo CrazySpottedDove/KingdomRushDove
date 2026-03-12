@@ -1,5 +1,5 @@
 -- chunkname: @./all-desktop/screen_settings.lua
-local log = require("lib.klua.log"):new("game_gui")
+local log = require("lib.klua.log"):new("gameGui")
 local km = require("lib.klua.macros")
 local version = require("version")
 require("lib.klua.table")
@@ -21,17 +21,23 @@ screen_settings.required_textures = {}
 screen_settings.ref_h = 1080
 
 local colors = {
-	window_bg = {220, 220, 220, 255},
-	selection = {40, 130, 230, 255},
-	select_list_bg = {242, 242, 242, 255},
-	select_list_scroller_bg = {200, 200, 200, 255},
-	select_list_scroller_fg = {40, 130, 230, 255},
-	button_default_bg = {242, 242, 242, 255},
-	button_hover_bg = {40, 130, 230, 255},
-	button_click_bg = {20, 70, 140, 255},
-	focused_outline = {40, 130, 230, 255},
-	text_black = {0, 0, 0, 255},
-	text_white = {255, 255, 255, 255}
+	window_bg = {245, 247, 252, 255},
+	selection = {52, 120, 210, 255},
+	select_list_bg = {255, 255, 255, 255},
+	list_item_hover_bg = {232, 240, 255, 255},
+	select_list_scroller_bg = {215, 225, 245, 255},
+	select_list_scroller_fg = {52, 120, 210, 255},
+	button_default_bg = {228, 233, 245, 255},
+	button_hover_bg = {52, 120, 210, 255},
+	button_click_bg = {36, 86, 158, 255},
+	button_play_hover_bg = {45, 155, 75, 255},
+	button_play_click_bg = {30, 110, 55, 255},
+	button_quit_hover_bg = {155, 52, 48, 255},
+	button_quit_click_bg = {105, 32, 30, 255},
+	focused_outline = {52, 120, 210, 255},
+	text_black = {30, 35, 50, 255},
+	text_white = {255, 255, 255, 255},
+	title_text = {30, 35, 50, 255}
 }
 
 KColorButton = class("KColorButton", KButton)
@@ -45,7 +51,7 @@ function KColorButton:initialize(default_color, hover_color, click_color, w, h)
 	self.colors.background = default_color
 	self.shape = {
 		name = "rectangle",
-		args = {"fill", 0, 0, self.size.x, self.size.y, 4, 4, 8}
+		args = {"fill", 0, 0, self.size.x, self.size.y}
 	}
 end
 
@@ -109,10 +115,21 @@ function screen_settings:init(w, h, params, done_callback)
 		y = scale
 	}
 	self.window = window
+	self.scale = scale
 
-	local y = 0
+	local title_h = 48
+	local l_title = KLabel:new(V.v(sw, title_h - 6))
+	l_title.pos = v(0, 4)
+	l_title.font_name = "sans_bold"
+	l_title.font_size = 20
+	l_title.text = "设置面板"
+	l_title.text_align = "center"
+	l_title.colors.text = colors.title_text
+	window:add_child(l_title)
+
+	local y = title_h
 	local h = 0
-	local m = 10
+	local m = 24
 
 	y = y + h + m
 	h = 12
@@ -129,7 +146,7 @@ function screen_settings:init(w, h, params, done_callback)
 	window:add_child(l_lang)
 
 	y = y + h + m
-	h = 24
+	h = 28
 
 	-- only keep zh-Hans, so h 96 -> 24
 	local sl_lang = SelectList:new(sw * 0.5 - 2 * m, h)
@@ -157,7 +174,7 @@ function screen_settings:init(w, h, params, done_callback)
 	window:add_child(l_sound_pool)
 
 	y = y + h + m
-	h = 72
+	h = 84
 
 	local sl_sound_pool = SelectList:new(sw * 0.5 - 2 * m, h)
 
@@ -185,7 +202,7 @@ function screen_settings:init(w, h, params, done_callback)
 	window:add_child(l_res)
 
 	y = y + h + m
-	h = 72
+	h = 84
 
 	-- leave place for sound_pool_size, so h 96 -> 72
 	local sl_res = SelectList:new(sw * 0.5 - 2 * m, h)
@@ -208,7 +225,7 @@ function screen_settings:init(w, h, params, done_callback)
 	window:add_child(l_ipv)
 
 	y = y + h + m
-	h = 48
+	h = 56
 
 	local sl_ipv = SelectList:new(sw * 0.5 - 2 * m, h)
 	sl_ipv.pos = v(m, y)
@@ -218,8 +235,7 @@ function screen_settings:init(w, h, params, done_callback)
 	end
 	window:add_child(sl_ipv)
 
-	-- y = back_image.pos.y + back_image.size.y + m
-	y = m
+	y = m + title_h
 	h = 12
 
 	local l_tex = KLabel:new(V.v(sw * 0.5 - 2 * m, h))
@@ -234,7 +250,7 @@ function screen_settings:init(w, h, params, done_callback)
 	window:add_child(l_tex)
 
 	y = y + h + m
-	h = 24
+	h = 28
 
 	-- delete ipad, so h 48 -> 24
 	local sl_tex = SelectList:new(sw * 0.5 - 2 * m, h)
@@ -267,7 +283,7 @@ function screen_settings:init(w, h, params, done_callback)
 	window:add_child(l_fps)
 
 	y = y + h + m
-	h = 120
+	h = 140
 
 	local sl_fps = SelectList:new(sw * 0.5 - 2 * m, h)
 
@@ -280,7 +296,7 @@ function screen_settings:init(w, h, params, done_callback)
 	window:add_child(sl_fps)
 
 	y = y + h + m
-	h = 16
+	h = 22
 
 	local c_vsync = CheckBox:new(sw - 2 * m, h, _("SETTINGS_VSYNC"))
 
@@ -290,7 +306,7 @@ function screen_settings:init(w, h, params, done_callback)
 	window:add_child(c_vsync)
 
 	y = y + h + m
-	h = 16
+	h = 22
 
 	local c_large_pointer = CheckBox:new(sw - 2 * m, h, _("SETTINGS_LARGE_MOUSE_POINTER"))
 
@@ -300,7 +316,7 @@ function screen_settings:init(w, h, params, done_callback)
 	window:add_child(c_large_pointer)
 
 	y = y + h + m
-	h = 16
+	h = 22
 
 	local c_highdpi
 	local c_fs = CheckBox:new(sw - 2 * m, h, _("SETTINGS_FULLSCREEN"))
@@ -326,7 +342,7 @@ function screen_settings:init(w, h, params, done_callback)
 	window:add_child(c_fs)
 
 	y = y + h + m
-	h = 16
+	h = 22
 
 	local c_update = CheckBox:new(sw - 2 * m, h, "启动时检查更新")
 	c_update.pos = v(sw * 0.5 + m, y)
@@ -340,7 +356,7 @@ function screen_settings:init(w, h, params, done_callback)
 	self.c_update = c_update
 
 	y = y + h + m
-	h = 16
+	h = 22
 
 	c_highdpi = CheckBox:new(sw - 2 * m, h, _("Retina display (macOS)"))
 	c_highdpi.pos = v(sw * 0.5 + m, y)
@@ -353,14 +369,14 @@ function screen_settings:init(w, h, params, done_callback)
 
 	window:add_child(c_highdpi)
 
-	local button_offset = 70
-	local b_quit = KColorButton:new(colors.button_default_bg, colors.button_hover_bg, colors.button_click_bg, 120, 45)
+	local button_offset = 74
+	local b_quit = KColorButton:new(colors.button_default_bg, colors.button_quit_hover_bg, colors.button_quit_click_bg, 130, 46)
 
 	b_quit.pos = v((sw * 0.5 - b_quit.size.x) * 0.5, sh - button_offset)
 	b_quit.text = _("QUIT")
 	b_quit.font_name = "sans_bold"
 	b_quit.font_size = 14
-	b_quit.text_offset = v(0, 12)
+	b_quit.text_offset = v(0, 13)
 	b_quit.colors.text = colors.text_black
 
 	function b_quit.on_click()
@@ -375,13 +391,13 @@ function screen_settings:init(w, h, params, done_callback)
 
 	window:add_child(b_quit)
 
-	local b_play = KColorButton:new(colors.button_default_bg, colors.button_hover_bg, colors.button_click_bg, 120, 45)
+	local b_play = KColorButton:new(colors.button_default_bg, colors.button_play_hover_bg, colors.button_play_click_bg, 130, 46)
 
 	b_play.pos = v((3 * sw * 0.5 - b_quit.size.x) * 0.5, sh - button_offset)
 	b_play.text = _("START")
 	b_play.font_name = "sans_bold"
 	b_play.font_size = 14
-	b_play.text_offset = v(0, 12)
+	b_play.text_offset = v(0, 13)
 	b_play.colors.text = colors.text_black
 
 	function b_play.on_click()
@@ -475,7 +491,6 @@ function screen_settings:init(w, h, params, done_callback)
 	c_large_pointer:set_check(self.params.large_pointer)
 	c_highdpi:set_check(self.params.highdpi)
 	c_update:set_check(self.params.update_enabled)
-	b_play:focus()
 end
 
 function screen_settings:update(dt)
@@ -485,6 +500,20 @@ end
 
 function screen_settings:draw()
 	self.window:draw()
+
+	local G = love.graphics
+	local w, h = love.graphics.getDimensions()
+	local scale = self.scale
+
+	-- Title area bottom separator
+	G.setColor(52 / 255, 120 / 255, 210 / 255, 0.5)
+	G.setLineWidth(1)
+	G.line(20, 48 * scale, w - 20, 48 * scale)
+
+	-- Single subtle outer border
+	G.setColor(52 / 255, 120 / 255, 210 / 255, 0.25)
+	G.rectangle("line", 3, 3, w - 6, h - 6)
+	G.setLineWidth(1)
 end
 
 function screen_settings:keypressed(key, isrepeat)
@@ -616,19 +645,22 @@ function CheckBox:initialize(w, h, text)
 	self.checked = false
 	self.text = text and text or ""
 
-	local l = KLabel:new(V.v(w, h))
-
+	-- Label sits to the right of the drawn indicator
+	local indicator_w = h + 2
+	local l = KLabel:new(V.v(w - indicator_w - 4, h))
+	l.pos = v(indicator_w + 4, 0)
 	l.text = self.text
 	l.font_name = "sans"
-	l.font_size = 12
+	l.font_size = 14
+	l.text_offset = v(0, 4)
 	l.colors.text = {255, 255, 255, 255}
 	l.colors.focused_outline = colors.focused_outline
 	l.text_align = "left"
 	l.propagate_on_click = true
 
 	self:add_child(l)
-
 	self._l = l
+	self._indicator_w = indicator_w
 
 	self:set_check(self.checked)
 end
@@ -639,17 +671,14 @@ end
 
 function CheckBox:set_text(text)
 	self.text = text
-
-	self:set_check(self.checked)
+	self._l.text = text
 end
 
 function CheckBox:set_check(value)
 	if value == true then
 		self.checked = true
-		self._l.text = "[X] " .. self.text
 	else
 		self.checked = false
-		self._l.text = "[ ] " .. self.text
 	end
 
 	self:on_change(value)
@@ -669,14 +698,50 @@ function CheckBox:on_change(value)
 	return
 end
 
+function CheckBox:_draw_self()
+	KView._draw_self(self)
+
+	local G = love.graphics
+	local pr, pg, pb, pa = G.getColor()
+
+	-- Box geometry: square centered vertically in the indicator area
+	local s = self.size.y
+	local bpad = 3
+	local ix, iy = bpad, bpad
+	local iw, ih = s - bpad * 2, s - bpad * 2
+
+	if self.checked then
+		-- Filled blue box
+		G.setColor(52 / 255, 120 / 255, 210 / 255, 1)
+		G.rectangle("fill", ix, iy, iw, ih)
+		-- Checkmark drawn as two line segments
+		G.setColor(1, 1, 1, 0.95)
+		G.setLineWidth(2)
+		local mx = ix + math.floor(iw * 0.38)
+		local my = iy + ih - 4
+		G.line(ix + 3, iy + ih * 0.52, mx, my)
+		G.line(mx, my, ix + iw - 2, iy + 3)
+		G.setLineWidth(1)
+	else
+		-- Empty box with blue border
+		G.setColor(52 / 255, 120 / 255, 210 / 255, 0.45)
+		G.setLineWidth(1.5)
+		G.rectangle("line", ix, iy, iw, ih)
+		G.setLineWidth(1)
+	end
+
+	G.setColor(pr, pg, pb, pa)
+end
+
 function CheckBox:draw_focus()
 	local l = self._l
 
 	G.setColor_old(l.colors.focused_outline)
 
-	local tw = l.font:getWidth(self._l.text)
-
-	G.rectangle("line", 0, l.size.y, tw, 1)
+	if l.font then
+		local tw = l.font:getWidth(self._l.text)
+		G.rectangle("line", l.pos.x, l.size.y, tw, 1)
+	end
 end
 
 SelectList = class("SelectList", KScrollList)
@@ -686,7 +751,7 @@ function SelectList:initialize(w, h)
 
 	self._items = {}
 	self.scroll_acceleration = 0
-	self.scroll_amount = 24
+	self.scroll_amount = 28
 	self.selected_item = nil
 	self.colors.background = colors.select_list_bg
 	self.colors.scroller_foreground = colors.select_list_scroller_fg
@@ -694,8 +759,11 @@ function SelectList:initialize(w, h)
 	self.colors.focused_outline = colors.focused_outline
 
 	self:set_scroller_size(10, 2)
+	self.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, w, h}
+	}
 end
-
 function SelectList:draw()
 	KScrollList.super.draw(self)
 	G.push()
@@ -713,20 +781,56 @@ function SelectList:draw()
 		G.rectangle("fill", self.size.x - self.scroller_width - self.scroller_margin, scroller_offset + self.scroller_margin, self.scroller_width, scroller_height)
 	end
 
+	-- Rounded border drawn on top so corners look clean
+	local pr2, pg2, pb2, pa2 = G.getColor()
+	G.setColor(52 / 255, 120 / 255, 210 / 255, 0.45)
+	G.setLineWidth(2)
+	G.rectangle("line", 0, 0, self.size.x, self.size.y)
+	G.setLineWidth(1)
+	G.setColor(pr2, pg2, pb2, pa2)
+
 	G.pop()
 end
 
 function SelectList:add_item(text, custom_value)
-	local l = KLabel:new(V.v(self.size.x, 24))
+	local l = KLabel:new(V.v(self.size.x, 28))
 
-	l.colors.background = {255, 255, 255, 0}
+	l.colors.background = nil -- transparent; highlight drawn manually below
 	l.text_align = "left"
 	l.text = text
 	l.font_name = "NotoSansCJKkr-Regular"
-	l.font_size = 12
-	l.text_offset = v(5, 6)
+	l.font_size = 13
+	l.text_offset = v(14, 5)
 	l.colors.text = colors.text_black
 	l.propagate_on_down = true
+
+	function l:_draw_self()
+		local pr, pg, pb, pa = G.getColor()
+		if self._selected then
+			G.setColor(52 / 255, 118 / 255, 210 / 255, 1)
+			G.rectangle("fill", 4, 2, self.size.x - 8, self.size.y - 4)
+		elseif self._hovered then
+			G.setColor(75 / 255, 110 / 255, 175 / 255, 0.35)
+			G.rectangle("fill", 4, 2, self.size.x - 8, self.size.y - 4)
+		end
+		G.setColor(pr, pg, pb, pa)
+		KLabel._draw_self(self)
+		-- Subtle separator
+		G.setColor(0, 0, 0, 0.06)
+		G.setLineWidth(1)
+		G.line(8, self.size.y - 1, self.size.x - 8, self.size.y - 1)
+		G.setColor(pr, pg, pb, pa)
+	end
+
+	function l.on_enter()
+		if not l._selected then
+			l._hovered = true
+		end
+	end
+
+	function l.on_exit()
+		l._hovered = false
+	end
 
 	function l.on_click()
 		self:select_item(l)
@@ -740,11 +844,12 @@ end
 function SelectList:select_item(item)
 	for _, c in pairs(self.children) do
 		if c == item then
-			c.colors.background = colors.selection
+			c._selected = true
+			c._hovered = false
 			c.colors.text = colors.text_white
 			self.selected_item = c
 		else
-			c.colors.background = colors.select_list_bg
+			c._selected = false
 			c.colors.text = colors.text_black
 		end
 	end
