@@ -32633,7 +32633,7 @@ function scripts.mod_hero_dragon_arb_plant_linirea_heal.update(this, store, scri
 
 	if target.unit and target.unit.size == UNIT_SIZE_LARGE then
 		for _, v in pairs(this.render.sprites) do
-			v.scale = v(1.4, 1.4)
+			v.scale = V.v(1.4, 1.4)
 		end
 	end
 
