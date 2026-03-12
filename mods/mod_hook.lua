@@ -24,7 +24,7 @@ function hook:front_init()
 end
 
 function hook:after_init()
-	HOOK(A, "fni", self.A.fni)
+	-- HOOK(A, "fni", self.A.fni)
 	HOOK(I, "load_atlas", self.I.load_atlas)
 	HOOK(I, "queue_load_atlas", self.I.queue_load_atlas)
 	HOOK(S, "load_group", self.S.load_group)
@@ -32,12 +32,13 @@ function hook:after_init()
 	HOOK(P, "load", self.P.load)
 end
 
--- 为单独修改动画速度增加支持
-function hook.A.fni(fni, self, animation, time_offset, loop, fps, tick_length)
-	fps = animation.fps or self.fps
+-- dove 版已支持，不再使用这个钩子，避免问题。
+-- -- 为单独修改动画速度增加支持
+-- function hook.A.fni(fni, self, animation, time_offset, loop, fps, tick_length)
+-- 	fps = animation.fps or self.fps
 
-	return fni(self, animation, time_offset, loop, fps, tick_length)
-end
+-- 	return fni(self, animation, time_offset, loop, fps, tick_length)
+-- end
 
 -- 增加图像资源覆盖路径
 function hook.I.load_atlas(load_atlas, self, ref_scale, path, name, yielding)
