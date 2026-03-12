@@ -68287,7 +68287,7 @@ function scripts.enemy_basic_lava.update(this, store, script)
 
 		local found_decal = false
 
-		for _, e in pairs(store.templates) do
+		for _, e in pairs(store.entities) do
 			if e.template_name == "decal_enemy_alfa_lava_dot" and not e.has_been_picked and not e.leaving and e.subpath == this.nav_path.spi and V.dist(this.pos.x, this.pos.y, e.pos.x, e.pos.y) < 40 then
 				e:picked(store)
 
