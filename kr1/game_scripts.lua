@@ -38631,14 +38631,11 @@ function scripts.mod_chicken_leg_polymorph.insert(this, store)
 		end
 
 		local entity_poly = E:create_entity(polymorph_template)
-
+		entity_poly.health.hp_max = entity_poly.health.hp_max * target.health.hp / target.health.hp_max
 		entity_poly.pos = target.pos
 		entity_poly.nav_path = target.nav_path
 
 		queue_insert(store, entity_poly)
-
-		entity_poly.enemy.gems = target.enemy.gems
-		target.enemy.gems = 0
 
 		return true
 	end
