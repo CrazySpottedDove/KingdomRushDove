@@ -16843,7 +16843,7 @@ tt.hero.skills.ultimate.xp_level_steps = {
 	[10] = 4
 }
 tt.flight_height = 80
-tt.health.dead_lifetime = 30
+tt.health.dead_lifetime = b.dead_lifetime
 tt.health_bar.draw_order = -1
 tt.health_bar.offset = v(0, 170)
 tt.health_bar.sort_y_offset = -171
