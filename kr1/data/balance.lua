@@ -5129,7 +5129,7 @@ local enemies = {
 			}
 		},
 		alfa_shadow = {
-			gold = 15,
+			gold = 60,
 			magic_armor = 0.9,
 			speed = 28,
 			armor = 0,
