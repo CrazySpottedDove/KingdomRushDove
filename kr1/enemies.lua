@@ -13893,10 +13893,9 @@ tt.render.sprites[1].prefix = "lava_tanky_creep"
 tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
 tt.ui.click_rect = r(-16, 0, 32, 36)
 tt.sound_events.death = "EnemyLavaTankyDeath"
+
 tt = RT("enemy_evolved_lava", "enemy_dragons")
-
 E:add_comps(tt, "melee", "tween")
-
 b = balance.enemies.dragons.evolved_lava
 tt.enemy.gold = b.gold
 tt.enemy.melee_slot = v(30, 0)
@@ -14009,6 +14008,10 @@ tt.tween.props[5].name = "offset"
 tt.tween.props[5].interp = "sine"
 tt.tween.props[5].sprite_id = 2
 tt.tween.props[5].keys = {{0, vv(1)}, {tt.landing_duration_evolve, vv(0.7)}}
+tt.tween.props[6] = E:clone_c("tween_prop")
+tt.tween.props[6].disabled = true
+tt.tween.props[6].keys = {{0, 255}, {0.9, 255}, {1, 0}}
+tt.tween.props[6].sprite_id = 2
 
 tt = RT("enemy_alfa_lava", "enemy_dragons")
 b = balance.enemies.dragons.alfa_lava

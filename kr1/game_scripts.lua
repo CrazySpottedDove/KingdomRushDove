@@ -68272,6 +68272,10 @@ function scripts.enemy_basic_lava.update(this, store, script)
 	end
 
 	local function ready_to_evolve()
+		if not this.enemy.can_do_magic then
+			return false
+		end
+
 		if picked_evolve_decal then
 			return true
 		end
@@ -68286,7 +68290,7 @@ function scripts.enemy_basic_lava.update(this, store, script)
 
 		local found_decal = false
 
-		for _, e in pairs(store.entities) do
+		for _, e in pairs(store.auras) do
 			if e.template_name == "decal_enemy_alfa_lava_dot" and not e.has_been_picked and not e.leaving and e.subpath == this.nav_path.spi and V.dist(this.pos.x, this.pos.y, e.pos.x, e.pos.y) < 40 then
 				e:picked(store)
 
@@ -68402,56 +68406,6 @@ end
 
 scripts.enemy_evolved_lava = {}
 
--- function scripts.enemy_evolved_lava.get_info(this)
--- 	local min, max, attacks
-
--- 	if this.melee and this.melee.attacks then
--- 		for _, a in pairs(this.melee.attacks) do
--- 			if a.damage_min then
--- 				min, max = a.damage_min, a.damage_max
-
--- 				break
--- 			end
--- 		end
-
--- 		if this.unit and min then
--- 			min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
--- 		end
--- 	elseif this.ranged and this.ranged.attacks then
--- 		for _, a in pairs(this.ranged.attacks) do
--- 			if a.bullet then
--- 				local b = E:get_template(a.bullet)
-
--- 				if b and b.bullet.damage_min and b.bullet.damage_max then
--- 					min, max = b.bullet.damage_min, b.bullet.damage_max
-
--- 					break
--- 				end
--- 			end
--- 		end
--- 	end
-
--- 	if min and max then
--- 		min, max = math.ceil(min) * #this.melee.attacks[1].hit_times, math.ceil(max) * #this.melee.attacks[1].hit_times
--- 	end
-
--- 	local armor = band(this.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or this.health.armor
--- 	local magic_armor = band(this.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or this.health.magic_armor
-
--- 	return {
--- 		type = STATS_TYPE_ENEMY,
--- 		hp = this.health.hp,
--- 		hp_max = this.health.hp_max,
--- 		damage_min = min,
--- 		damage_max = max,
--- 		damage_icon = this.info.damage_icon,
--- 		armor = armor,
--- 		magic_armor = magic_armor,
--- 		lives = this.enemy.lives_cost,
--- 		immune = this.health.immune_to == DAMAGE_ALL_TYPES
--- 	}
--- end
-
 function scripts.enemy_evolved_lava.insert(this, store, script)
 	if not U.is_seen(store, "enemy_evolved_lava") then
 		signal.emit("wave-notification", "icon", "enemy_evolved_lava")
@@ -68487,6 +68441,11 @@ function scripts.enemy_evolved_lava.update(this, store, script)
 
 		if store.tick_ts - spawn_ts < this.minimum_fly_duration then
 			return false
+		end
+
+		-- 被沉默时直接坠机
+		if not this.enemy.can_do_magic then
+			return true
 		end
 
 		local s = U.find_nearest_soldier(store.soldiers, this.pos, 0, this.landing_damage_radius_find, F_BLOCK, bor(F_FLYING, F_ENEMY))
@@ -68569,26 +68528,17 @@ function scripts.enemy_evolved_lava.update(this, store, script)
 
 	while true do
 		if this.health.dead then
-			-- TODO: 优化淡出效果。此处代码不合规
-			-- if U.flag_has(this.vis.flags, F_FLYING) then
-			-- 	this.unit.fade_time_after_death = nil
-
-			-- 	local props_amount = #this.tween.props
-
-			-- 	for i = 2, props_amount do
-			-- 		this.tween.props[i] = nil
-			-- 	end
-
-			-- 	this.tween.disabled = false
-			-- 	this.tween.props[1].disabled = false
-			-- 	this.tween.props[1].name = "alpha"
-			-- 	this.tween.props[1].keys = {{0, 255}, {0.9, 255}, {1, 0}}
-			-- 	this.tween.props[1].sprite_id = 2
-			-- 	this.tween.props[1].ts = store.tick_ts
-			-- 	this.tween.ts = store.tick_ts
-			-- else
-			-- this.tween = nil
-			-- end
+			if U.flag_has(this.vis.flags, F_FLYING) then
+				this.unit.fade_time_after_death = nil
+				this.tween.disabled = false
+				this.tween.props[1].disabled = true
+				this.tween.props[2].disabled = true
+				this.tween.props[3].disabled = true
+				this.tween.props[4].disabled = true
+				this.tween.props[5].disabled = true
+				this.tween.props[6].disabled = false
+				this.tween.props[6].ts = store.tick_ts
+			end
 
 			SU.y_enemy_death(store, this)
 
@@ -68731,6 +68681,9 @@ function scripts.enemy_alfa_lava.update(this, store, script)
 	end
 
 	local function can_vomit()
+		if not this.enemy.can_do_magic then
+			return false
+		end
 		if not P:is_node_valid(this.nav_path.pi, this.nav_path.ni) then
 			return false
 		end
@@ -68939,7 +68892,7 @@ function scripts.bullet_alfa_lava_vomit.update(this, store, script)
 		end
 	end
 
-	local enemies = table.filter(store.entities, function(k, v)
+	local enemies = table.filter(store.enemies, function(k, v)
 		return v.enemy and v.vis and v.health and not v.health.dead and band(v.vis.flags, b.damage_bans) == 0 and band(v.vis.bans, b.damage_flags) == 0 and U.is_inside_ellipse(v.pos, b.to, dradius)
 	end)
 
@@ -68953,16 +68906,11 @@ function scripts.bullet_alfa_lava_vomit.update(this, store, script)
 		if b.damage_decay_random then
 			d.value = U.frandom(dmin, dmax)
 		else
-			local upg = UP:get_upgrade("towers_improved_formulas")
 			local source = store.entities[b.source_id]
 
-			if upg and (source and source.tower or this.from_tower) then
-				d.value = dmax
-			else
-				local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, b.to, dradius)
+			local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, b.to, dradius)
 
-				d.value = math.floor(dmax - (dmax - dmin) * dist_factor)
-			end
+			d.value = math.floor(dmax - (dmax - dmin) * dist_factor)
 		end
 
 		d.value = math.ceil(b.damage_factor * d.value)
@@ -68975,15 +68923,6 @@ function scripts.bullet_alfa_lava_vomit.update(this, store, script)
 		end
 
 		queue_damage(store, d)
-		log.paranoid("bomb id:%s, radius:%s, enemy id:%s, dist:%s, damage:%s damage_type:%x", this.id, dradius, enemy.id, V.dist(enemy.pos.x, enemy.pos.y, b.to.x, b.to.y), d.value, d.damage_type)
-
-		if this.up_shock_and_awe_chance and band(enemy.vis.bans, F_STUN) == 0 and band(enemy.vis.flags, bor(F_BOSS, F_CLIFF, F_FLYING)) == 0 and math.random() < this.up_shock_and_awe_chance then
-			local mod = E:create_entity("mod_shock_and_awe")
-
-			mod.modifier.target_id = enemy.id
-
-			queue_insert(store, mod)
-		end
 
 		if b.mod then
 			local mod = E:create_entity(b.mod)
@@ -69210,7 +69149,7 @@ function scripts.aura_enemy_alfa_lava_dot.update(this, store, script)
 			last_hit_ts = store.tick_ts
 			cycles_count = cycles_count + 1
 
-			local targets = table.filter(store.entities, function(k, v)
+			local targets = table.filter(store.soldiers, function(k, v)
 				return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= v.id)
 			end)
 
@@ -69991,6 +69930,9 @@ function scripts.enemy_alfa_acid.update(this, store, script)
 	end
 
 	local function can_shoot_evolve()
+		if not this.enemy.can_do_magic then
+			return false
+		end
 		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
 
 		if nodes_to_goal < a.self_nodes_limit then
@@ -70522,6 +70464,10 @@ function scripts.enemy_basic_shadow.update(this, store, script)
 			return false
 		end
 
+		if not this.enemy.can_do_magic then
+			return false
+		end
+
 		if store.tick_ts < next_check_ts then
 			return false
 		end
@@ -70544,6 +70490,10 @@ function scripts.enemy_basic_shadow.update(this, store, script)
 	local function ready_to_show()
 		if not is_hidden then
 			return false
+		end
+
+		if not this.enemy.can_do_magic then
+			return true
 		end
 
 		if store.tick_ts < hide_start_ts + this.shadow_min_duration then
@@ -70769,10 +70719,6 @@ function scripts.enemy_evolved_shadow.update(this, store, script)
 	local hide_delay_ts = store.tick_ts
 	local sprite_offset = this.render.sprites[1].offset
 
-	if this.tween then
-		this.tween.ts = store.tick_ts
-	end
-
 	if this.render.sprites[1].name == "raise" then
 		if this.sound_events and this.sound_events.raise then
 			S:queue(this.sound_events.raise, this.sound_events.raise_args)
@@ -70978,6 +70924,10 @@ function scripts.enemy_alfa_shadow.update(this, store, script)
 	end
 
 	local function ready_to_evolve_tp()
+		if not this.enemy.can_do_magic then
+			return false
+		end
+
 		if store.tick_ts - evolve_tp.ts < evolve_tp.cooldown then
 			return false
 		end
@@ -71508,6 +71458,9 @@ function scripts.enemy_alfa_storm.update(this, store, script)
 	a_evolve.ts = store.tick_ts - a_evolve.cooldown + a_evolve.first_cooldown
 
 	local function ready_to_special()
+		if not this.enemy.can_do_magic then
+			return false
+		end
 		if store.tick_ts - a_special.ts < a_special.cooldown then
 			return false
 		end
@@ -71528,6 +71481,9 @@ function scripts.enemy_alfa_storm.update(this, store, script)
 	end
 
 	local function ready_to_cast_evolve()
+		if not this.enemy.can_do_magic then
+			return false
+		end
 		if store.tick_ts - a_evolve.ts < a_evolve.cooldown then
 			return false
 		end
@@ -71905,6 +71861,9 @@ function scripts.enemy_executioner_storm.update(this, store, script)
 	end
 
 	local function can_instakill()
+		if not this.enemy.can_do_magic then
+			return false
+		end
 		if store.tick_ts - a_instakill.ts < a_instakill.cooldown then
 			return false
 		end
@@ -72089,8 +72048,6 @@ function scripts.mod_enemy_brute_storm_invulnerability.insert(this, store, scrip
 	end
 
 	if band(this.modifier.vis_flags, target.vis.bans) ~= 0 or band(this.modifier.vis_bans, target.vis.flags) ~= 0 then
-		log.paranoid("mod %s cannot be applied to entity %s:%s because of vis flags/bans", this.template_name, target.id, target.template_name)
-
 		return false
 	end
 
@@ -72255,473 +72212,6 @@ function scripts.mod_enemies_storm_charged.remove(this, store, script)
 	end
 
 	return true
-end
-
--- Missing stage 36-40 scripts (ported from FL)
-
--- Lines 363-828 from FL
-scripts.mod_test_unit_pos_kr5 = {}
-
-function scripts.mod_test_unit_pos_kr5.update(this, store, script)
-	local m = this.modifier
-
-	m.ts = store.tick_ts
-
-	local target = store.entities[m.target_id]
-
-	if not target then
-		queue_remove(store, this)
-
-		return
-	end
-
-	this.pos = target.pos
-
-	local targetZ = Z_EFFECTS
-	local targetOffset = V.vv(0)
-
-	if target.render then
-		targetZ = target.render.sprites[1].z
-	end
-
-	if target.unit then
-		if this.position_test == "HEAD" then
-			if target.unit.hit_offset then
-				targetOffset = V.vclone(target.unit.hit_offset)
-
-				if target.unit.head_offset then
-					targetOffset = V.v(targetOffset.x + target.unit.head_offset.x, targetOffset.y + target.unit.head_offset.y)
-				else
-					log.debug("ERROR: Mod test unit pos: Unit is missing head offset values")
-				end
-			else
-				log.debug("ERROR: Mod test unit pos: Unit is missing hit offset values which for some reason head offset depends on")
-			end
-		elseif this.position_test == "MOD" then
-			if target.unit.mod_offset then
-				targetOffset = V.vclone(target.unit.mod_offset)
-			else
-				log.debug("ERROR: Mod test unit pos: Unit is missing mod offset values")
-			end
-		elseif this.position_test == "HIT" and target.unit.hit_offset then
-			if target.unit.hit_offset then
-				targetOffset = V.vclone(target.unit.hit_offset)
-			else
-				log.debug("ERROR: Mod test unit pos: Unit is missing hit offset values")
-			end
-		end
-	end
-
-	for _, s in pairs(this.render.sprites) do
-		s.offset = targetOffset
-		s.z = targetZ
-		s.sort_y_offset = -targetOffset.y
-	end
-
-	while true do
-		target = store.entities[m.target_id]
-
-		if not target or target.health and target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration then
-			queue_remove(store, this)
-
-			return
-		end
-
-		coroutine.yield()
-	end
-end
-
-scripts.mod_lifesteal_kr5 = {}
-
-function scripts.mod_lifesteal_kr5.insert(this, store)
-	local source = store.entities[this.modifier.source_id]
-	local target = store.entities[this.modifier.target_id]
-	local damage = 0
-
-	if target and target.health then
-		local dmg_value = this.damage
-
-		if this.damage_min then
-			local damage_min = SU.get_difficulty_field_value(store, this.damage_min)
-			local damage_max = SU.get_difficulty_field_value(store, this.damage_max)
-
-			dmg_value = math.random(damage_min, damage_max)
-		end
-
-		local d = E:create_entity("damage")
-
-		d.value = dmg_value
-		d.source_id = this.id
-		d.target_id = target.id
-		d.damage_type = this.damage_type
-
-		if not this.only_predict_damage then
-			queue_damage(store, d)
-		end
-
-		damage = U.predict_damage(target, d)
-	end
-
-	if source and source.health then
-		local heal_hp = this.heal_hp_fixed and this.heal_hp_fixed or 0
-
-		if this.heal_hp_damage_factor then
-			local heal_hp_damage_factor = SU.get_difficulty_field_value(store, this.heal_hp_damage_factor)
-
-			heal_hp = heal_hp + damage * heal_hp_damage_factor
-		end
-
-		source.health.hp = km.clamp(0, source.health.hp_max, source.health.hp + heal_hp)
-
-		if this.heal_fx then
-			local fx = E:create_entity(this.heal_fx)
-
-			fx.pos = V.v(source.pos.x + source.unit.hit_offset.x + this.heal_fx_offset.x, source.pos.y + source.unit.hit_offset.y + this.heal_fx_offset.y)
-			fx.render.sprites[1].ts = store.tick_ts
-
-			queue_insert(store, fx)
-		end
-	end
-
-	return false
-end
-
-scripts.delayed_play_kr5 = {}
-
-function scripts.delayed_play_kr5.update(this, store, script)
-	local s = this.render.sprites[1]
-	local d = this.delayed_play
-	local clicks = 0
-
-	if math.random() < d.flip_chance then
-		s.flip_x = not s.flip_x
-	end
-
-	if d.idle_animation then
-		U.animation_start(this, d.idle_animation, nil, store.tick_ts, d.loop_idle)
-	else
-		s.hidden = true
-	end
-
-	d.delay = U.frandom(d.start_min_delay and d.start_min_delay or d.min_delay, d.start_max_delay and d.start_max_delay or d.max_delay)
-
-	if d.start_fixed_delay then
-		d.delay = d.start_fixed_delay
-	end
-
-	while true do
-		if not d.disabled and this.ui and d.required_clicks then
-			if this.ui.clicked then
-				this.ui.clicked = nil
-				clicks = clicks + 1
-
-				if clicks < d.required_clicks then
-					S:queue(d.click_sound)
-				end
-
-				if d.click_tweens and this.tween then
-					this.tween.props[1].ts = store.tick_ts
-					this.tween.disabled = false
-				end
-			end
-
-			if clicks == d.required_clicks then
-				if not d.idle_animation then
-					s.hidden = false
-				end
-
-				S:queue(d.clicked_sound)
-
-				if d.required_clicks_fx then
-					SU.insert_sprite(store, d.required_clicks_fx, this.pos)
-				end
-
-				if d.required_clicks_hides then
-					s.hidden = true
-				elseif d.clicked_animation then
-					U.y_animation_play(this, d.clicked_animation, nil, store.tick_ts, 1)
-				end
-
-				if d.achievement then
-					AC:got(d.achievement)
-				end
-
-				if d.achievement_flag then
-					AC:flag_check(unpack(d.achievement_flag))
-				end
-
-				if d.achievement_inc then
-					AC:inc_check(d.achievement_inc)
-				end
-
-				if d.play_once then
-					queue_remove(store, this)
-
-					return
-				end
-
-				if not d.idle_animation then
-					s.hidden = true
-				else
-					U.animation_start(this, d.idle_animation, nil, store.tick_ts, d.loop_play)
-				end
-
-				clicks = 0
-				this.ui.clicked = nil
-			end
-		end
-
-		if store.tick_ts - s.ts > d.delay then
-			s.ts = store.tick_ts
-
-			if d.disabled then
-			-- block empty
-			else
-				if not d.idle_animation then
-					s.hidden = false
-				end
-
-				if math.random() < d.flip_chance then
-					s.flip_x = not s.flip_x
-				end
-
-				if d.play_animation then
-					if d.play_sound then
-						S:queue(d.play_sound)
-					end
-
-					if d.play_duration then
-						U.animation_start(this, d.play_animation, nil, store.tick_ts, true)
-
-						if U.y_wait(store, d.play_duration, function()
-							return d.click_interrupts and this.ui.clicked
-						end) then
-							goto label_25_0
-						end
-					else
-						U.animation_start(this, d.play_animation, nil, store.tick_ts, false)
-
-						while not U.animation_finished(this) do
-							if d.click_interrupts and this.ui.clicked then
-								goto label_25_0
-							end
-
-							coroutine.yield()
-						end
-					end
-				end
-
-				if not d.idle_animation then
-					s.hidden = true
-				else
-					U.animation_start(this, d.idle_animation, nil, store.tick_ts, d.loop_idle)
-				end
-
-				if this.ui and not d.click_interrupts then
-					this.ui.clicked = nil
-				end
-			end
-		end
-
-		::label_25_0::
-
-		coroutine.yield()
-	end
-end
-
-scripts.bolt_force_motion_kr5 = {}
-
-function scripts.bolt_force_motion_kr5.insert(this, store, script)
-	local b = this.bullet
-
-	if this.impulse_per_distance then
-		local dx, dy = V.sub(b.to.x, b.to.y, b.from.x, b.from.y)
-		local dist = V.len(dx, dy)
-
-		this.initial_impulse = this.impulse_per_distance * dist
-	end
-
-	if b.target_id then
-		local target = store.entities[b.target_id]
-
-		if not target or band(target.vis.bans, F_RANGED) ~= 0 then
-			return false
-		end
-	end
-
-	b.speed.x, b.speed.y = V.normalize(b.to.x - b.from.x, b.to.y - b.from.y)
-
-	local s = this.render.sprites[1]
-
-	if not b.ignore_rotation then
-		s.r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
-	end
-
-	return true
-end
-
-function scripts.bolt_force_motion_kr5.update(this, store)
-	local b = this.bullet
-	local fm = this.force_motion
-	local target = store.entities[b.target_id]
-	local ps
-
-	local function move_step(dest)
-		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
-		local dist = V.len(dx, dy)
-		local nx, ny = V.mul(fm.max_v, V.normalize(dx, dy))
-		local stx, sty = V.sub(nx, ny, fm.v.x, fm.v.y)
-
-		if dist <= 4 * fm.max_v * store.tick_length then
-			stx, sty = V.mul(fm.max_a, V.normalize(stx, sty))
-		end
-
-		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step, stx, sty)))
-		fm.v.x, fm.v.y = V.trim(fm.max_v, V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y)))
-		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
-		fm.a.x, fm.a.y = 0, 0
-
-		return dist <= fm.max_v * store.tick_length
-	end
-
-	if b.particles_name then
-		ps = E:create_entity(b.particles_name)
-		ps.particle_system.emit = true
-		ps.particle_system.track_id = this.id
-
-		queue_insert(store, ps)
-	end
-
-	local pred_pos
-
-	if target and target.enemy and target.nav_path then
-		pred_pos = P:predict_enemy_pos(target, fts(5))
-	else
-		pred_pos = b.to
-	end
-
-	local iix, iiy = V.normalize(pred_pos.x - this.pos.x, pred_pos.y - this.pos.y)
-	local last_pos = V.vclone(this.pos)
-
-	b.ts = store.tick_ts
-
-	while true do
-		target = store.entities[b.target_id]
-
-		if target and target.health and not target.health.dead and band(target.vis.bans, F_RANGED) == 0 then
-			local hit_offset = V.v(0, 0)
-
-			if not b.ignore_hit_offset then
-				hit_offset.x = target.unit.hit_offset.x
-				hit_offset.y = target.unit.hit_offset.y
-			end
-
-			local d = math.max(math.abs(target.pos.x + hit_offset.x - b.to.x), math.abs(target.pos.y + hit_offset.y - b.to.y))
-
-			if d > b.max_track_distance then
-				log.debug("BOLT MAX DISTANCE FAIL. (%s) %s / dist:%s target.pos:%s,%s b.to:%s,%s", this.id, this.template_name, d, target.pos.x, target.pos.y, b.to.x, b.to.y)
-
-				target = nil
-				b.target_id = nil
-			else
-				b.to.x, b.to.y = target.pos.x + hit_offset.x, target.pos.y + hit_offset.y
-			end
-		end
-
-		if this.initial_impulse and store.tick_ts - b.ts < this.initial_impulse_duration then
-			local t = store.tick_ts - b.ts
-
-			if this.initial_impulse_angle_abs then
-				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(this.initial_impulse_angle_abs, 1, 0))
-			else
-				local angle = this.initial_impulse_angle
-
-				if iix < 0 then
-					angle = angle * -1
-				end
-
-				fm.a.x, fm.a.y = V.mul((1 - t) * this.initial_impulse, V.rotate(angle, iix, iiy))
-			end
-
-			if this.initial_impulse_reduction then
-				this.initial_impulse = this.initial_impulse * this.initial_impulse_reduction
-			end
-		end
-
-		last_pos.x, last_pos.y = this.pos.x, this.pos.y
-
-		if move_step(b.to) then
-			break
-		end
-
-		if b.align_with_trajectory then
-			this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
-		end
-
-		if ps and b.force_align_particles_trajectory then
-			ps.particle_system.emit_rotation = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y) + (b.force_align_particles_trajectory_offset or 0)
-		end
-
-		coroutine.yield()
-	end
-
-	if target and not target.health.dead then
-		local d = SU.create_bullet_damage(b, target.id, this.id)
-
-		queue_damage(store, d)
-
-		if b.mod or b.mods then
-			local mods = b.mods or {b.mod}
-
-			for _, mod_name in pairs(mods) do
-				local m = E:create_entity(mod_name)
-
-				m.modifier.target_id = b.target_id
-				m.modifier.level = b.level
-
-				queue_insert(store, m)
-			end
-		end
-	elseif b.damage_radius and b.damage_radius > 0 then
-		local targets = U.find_enemies_in_range(store.entities, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
-
-		if targets then
-			for _, target in pairs(targets) do
-				local d = SU.create_bullet_damage(b, target.id, this.id)
-
-				queue_damage(store, d)
-			end
-		end
-	end
-
-	this.render.sprites[1].hidden = true
-
-	if b.hit_fx then
-		local fx = E:create_entity(b.hit_fx)
-
-		fx.pos.x, fx.pos.y = b.to.x, b.to.y
-		fx.render.sprites[1].ts = store.tick_ts
-		fx.render.sprites[1].runs = 0
-
-		queue_insert(store, fx)
-	end
-
-	if b.hit_decal then
-		local decal = E:create_entity(b.hit_decal)
-
-		decal.pos = V.vclone(b.to)
-		decal.render.sprites[1].ts = store.tick_ts
-
-		queue_insert(store, decal)
-	end
-
-	if ps and ps.particle_system.emit then
-		ps.particle_system.emit = false
-
-		U.y_wait(store, ps.particle_system.particle_lifetime[2])
-	end
-
-	queue_remove(store, this)
 end
 
 -- Lines 97478-98548 from FL

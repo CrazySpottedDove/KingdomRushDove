@@ -2986,7 +2986,7 @@ function SU.can_melee_blocker(store, this, blocker)
 	return not this.health.dead and not this.unit.is_stunned and blocker and not blocker.health.dead and table.contains(this.enemy.blockers, blocker.id) and store.entities[blocker.id]
 end
 
----判断敌人是否可被远程士兵攻击
+---判断敌人是否可远程攻击士兵
 ---@param store table game.store
 ---@param this table 敌人实体
 ---@param soldier table 士兵实体
