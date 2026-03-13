@@ -1106,18 +1106,33 @@ function upgrades:patch_templates(max_level)
 		end
 	end
 
+	local function apply_mod(bullet, mod_name)
+		if type(bullet.mod) == "table" then
+			table.insert(bullet.mod, mod_name)
+		elseif bullet.mod ~= nil then
+			bullet.mod = {bullet.mod, mod_name}
+		elseif bullet.mods ~= nil then
+			table.insert(bullet.mods, mod_name)
+		else
+			bullet.mod = mod_name
+		end
+	end
+
 	u = self:get_upgrade("archer_tear")
 	if u then
 		for _, n in pairs(self:arrows()) do
 			local b = T(n).bullet
-			if type(b.mod) == "table" then
-				table.insert(b.mod, "mod_archer_tear")
-			elseif b.mod ~= nil then
-				b.mod = {b.mod, "mod_archer_tear"}
-			elseif b.mods ~= nil then
-				table.insert(b.mods, "mod_archer_tear")
-			else
-				b.mod = "mod_archer_tear"
+			if b.damage_min and b.damage_max then
+				local damage_avg = (b.damage_min + b.damage_max) / 2
+				if damage_avg > 40 then
+					apply_mod(b, "mod_archer_tear_strong")
+				elseif damage_avg > 20 then
+					apply_mod(b, "mod_archer_tear")
+				elseif damage_avg > 10 then
+					apply_mod(b, "mod_archer_tear_small")
+				else
+					apply_mod(b, "mod_archer_tear_tiny")
+				end
 			end
 		end
 	end
@@ -1148,16 +1163,7 @@ function upgrades:patch_templates(max_level)
 	if u then
 		for _, n in pairs(self:arrows()) do
 			local b = T(n).bullet
-
-			if type(b.mod) == "table" then
-				table.insert(b.mod, "mod_blood_elves")
-			elseif b.mod ~= nil then
-				b.mod = {b.mod, "mod_blood_elves"}
-			elseif b.mods ~= nil then
-				table.insert(b.mods, "mod_blood_elves")
-			else
-				b.mod = "mod_blood_elves"
-			end
+			apply_mod(b, "mod_blood_elves")
 		end
 	end
 
