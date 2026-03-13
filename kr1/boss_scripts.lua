@@ -8183,15 +8183,6 @@ function scripts.bullet_stage_16_overseer_tentacle_spawn.update(this, store)
 		d.target_id = enemy.id
 
 		queue_damage(store, d)
-		log.paranoid("bomb id:%s, radius:%s, enemy id:%s, dist:%s, damage:%s damage_type:%x", this.id, dradius, enemy.id, V.dist(enemy.pos.x, enemy.pos.y, b.to.x, b.to.y), d.value, d.damage_type)
-
-		if this.up_shock_and_awe_chance and band(enemy.vis.bans, F_STUN) == 0 and band(enemy.vis.flags, bor(F_BOSS, F_CLIFF, F_FLYING)) == 0 and math.random() < this.up_shock_and_awe_chance then
-			local mod = E:create_entity("mod_shock_and_awe")
-
-			mod.modifier.target_id = enemy.id
-
-			queue_insert(store, mod)
-		end
 
 		if b.mod then
 			local mod = E:create_entity(b.mod)

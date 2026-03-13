@@ -113,12 +113,6 @@ local function engineer_focus_bomb_update(this, store)
 
 			queue_damage(store, d)
 
-			-- if this.up_shock_and_awe_chance and band(enemy.vis.bans, F_STUN) == 0 and
-			--     band(enemy.vis.flags, bor(F_BOSS, F_CLIFF, F_FLYING)) == 0 and math.random() < this.up_shock_and_awe_chance then
-			--     local mod = E:create_entity("mod_shock_and_awe")
-			--     mod.modifier.target_id = enemy.id
-			--     queue_insert(store, mod)
-			-- end
 			local mods
 
 			if b.mod then

@@ -2257,7 +2257,7 @@ function scripts.arrow.update(this, store)
 			end
 
 			if mods then
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local mod = E:create_entity(mod_name)
 
 					mod.modifier.source_id = this.id
@@ -2566,7 +2566,7 @@ function scripts.arrow_missile.update(this, store)
 			end
 
 			if mods then
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local mod = E:create_entity(mod_name)
 
 					mod.modifier.source_id = this.id
@@ -2842,7 +2842,7 @@ function scripts.bomb.update(this, store)
 			end
 
 			if mods then
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local mod = E:create_entity(mod_name)
 
 					mod.modifier.damage_factor = b.damage_factor
@@ -2985,7 +2985,7 @@ function scripts.enemy_bomb.update(this, store)
 		end)
 	end
 
-	for _, target in pairs(targets) do
+	for _, target in ipairs(targets) do
 		local d = E:create_entity("damage")
 
 		d.damage_type = b.damage_type
@@ -3176,9 +3176,6 @@ function scripts.missile.update(this, store)
 	end
 
 	if b.damage_radius and b.damage_radius > 0 then
-		-- local alchemical_powder = UP:get_upgrade("engineer_alchemical_powder")
-		-- local alchemical_powder_on = alchemical_powder and math.random() < alchemical_powder.chance
-		-- local shock_and_awe = UP:get_upgrade("engineer_shock_and_awe")
 		local origin = V.vclone(b.to)
 
 		if target then
@@ -3214,7 +3211,7 @@ function scripts.missile.update(this, store)
 
 					queue_insert(store, mod)
 				elseif b.mods then
-					for _, mod_name in pairs(b.mods) do
+					for _, mod_name in ipairs(b.mods) do
 						local mod = E:create_entity(mod_name)
 
 						mod.modifier.damage_factor = b.damage_factor
@@ -3226,12 +3223,6 @@ function scripts.missile.update(this, store)
 						end
 					end
 				end
-			-- if shock_and_awe and band(enemy.vis.bans, F_STUN) == 0 and
-			--     band(enemy.vis.flags, bor(F_BOSS, F_CLIFF, F_FLYING)) == 0 and math.random() < shock_and_awe.chance then
-			--     local mod = E:create_entity("mod_shock_and_awe")
-			--     mod.modifier.target_id = enemy.id
-			--     queue_insert(store, mod)
-			-- end
 			end
 		end
 	elseif target then
@@ -8479,13 +8470,6 @@ function scripts.bomb_bouncing.update(this, store)
 
 				queue_damage(store, d)
 
-				-- if this.up_shock_and_awe_chance and band(enemy.vis.bans, F_STUN) == 0 and
-				--     band(enemy.vis.flags, bor(F_BOSS, F_CLIFF, F_FLYING)) == 0 and math.random() <
-				--     this.up_shock_and_awe_chance then
-				--     local mod = E:create_entity("mod_shock_and_awe")
-				--     mod.modifier.target_id = enemy.id
-				--     queue_insert(store, mod)
-				-- end
 				local mods
 
 				if b.mod then

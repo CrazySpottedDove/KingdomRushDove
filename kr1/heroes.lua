@@ -6344,7 +6344,7 @@ tt.modifier.duration = 1
 tt.slow.factor = 0.5
 --#endregion
 --#region mod_giant_stun
-tt = RT("mod_giant_stun", "mod_shock_and_awe")
+tt = RT("mod_giant_stun", "mod_stun")
 tt.modifier.duration = nil
 --#endregion
 --#region giant_stomp_decal
@@ -6554,7 +6554,7 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 --#endregion
 --#region mod_minotaur_stun
-tt = RT("mod_minotaur_stun", "mod_shock_and_awe")
+tt = RT("mod_minotaur_stun", "mod_stun")
 tt.modifier.duration = nil
 --#endregion
 --#region mod_minotaur_dust
@@ -6836,14 +6836,12 @@ tt.main_script.update = scripts.mod_dps.update
 --#endregion
 --#region mod_monkey_god_palm
 tt = RT("mod_monkey_god_palm", "modifier")
-
 AC(tt, "render")
-
 tt.main_script.insert = scripts.mod_monkey_god_palm.insert
 tt.main_script.remove = scripts.mod_monkey_god_palm.remove
 tt.main_script.update = scripts.mod_track_target.update
 tt.stun_duration = nil
-tt.stun_mod = "mod_shock_and_awe"
+tt.stun_mod = "mod_stun"
 tt.modifier.duration = nil
 tt.modifier.bans = {"mod_shaman_armor", "mod_shaman_magic_armor", "mod_shaman_priest_heal", "mod_silence_totem"}
 tt.modifier.remove_banned = true
@@ -8632,7 +8630,7 @@ tt.unit.level = 0
 tt.vis.bans = bor(F_SKELETON, F_LYCAN)
 --#endregion
 --#region mod_elves_denas_celebrity
-tt = RT("mod_elves_denas_celebrity", "mod_shock_and_awe")
+tt = RT("mod_elves_denas_celebrity", "mod_stun")
 tt.modifier.duration = nil
 --#endregion
 --#region mod_elves_denas_sybarite
@@ -10397,7 +10395,7 @@ tt.sound_events.insert = "ElvesHeroXinAfterTeleportIn"
 tt.sound_events.death = "ElvesHeroXinAfterTeleportOut"
 --#endregion
 --#region mod_xin_stun
-tt = RT("mod_xin_stun", "mod_shock_and_awe")
+tt = RT("mod_xin_stun", "mod_stun")
 tt.modifier.duration = 1.3
 --#endregion
 --#region mod_xin_inspire
@@ -19499,7 +19497,7 @@ tt.stun_chance = b.stun_chance
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_MINIBOSS, F_BOSS)
 
-tt = RT("mod_hero_spider_stun", "mod_shock_and_awe")
+tt = RT("mod_hero_spider_stun", "mod_stun")
 tt.modifier.duration = 1.3
 
 tt = RT("bolt_hero_spider_basic_attack", "bolt")

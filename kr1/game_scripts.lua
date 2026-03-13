@@ -16588,6 +16588,26 @@ function scripts.mod_blood_elves.insert(this, store)
 	return true
 end
 
+function scripts.mod_archer_magic.insert(this, store)
+	local target = store.entities[this.modifier.target_id]
+	if not target then
+		return false
+	end
+
+	local source_damage = this.modifier.source_damage
+	if not source_damage then
+		return false
+	end
+
+	local dmg = E:create_entity("damage")
+	dmg.damage_type = DAMAGE_MAGICAL
+	dmg.value = math.max(source_damage.value * this._mod_archer_magic_factor, 1)
+	dmg.source_id = this.id
+	dmg.target_id = target.id
+	queue_damage(store, dmg)
+	return false
+end
+
 scripts.mod_timelapse = {}
 
 function scripts.mod_timelapse.queue(this, store, insertion)
@@ -51609,16 +51629,11 @@ function scripts.bullet_wuxian_bolt.update(this, store)
 		if b.damage_decay_random then
 			d.value = U.frandom(dmin, dmax)
 		else
-			local upg = UP:get_upgrade("towers_improved_formulas")
 			local source = store.entities[b.source_id]
 
-			if upg and source and source.tower then
-				d.value = dmax
-			else
-				local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, b.to, dradius)
+			local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, b.to, dradius)
 
-				d.value = math.floor(dmax - (dmax - dmin) * dist_factor)
-			end
+			d.value = math.floor(dmax - (dmax - dmin) * dist_factor)
 		end
 
 		d.value = math.ceil(b.damage_factor * d.value)
@@ -51631,15 +51646,6 @@ function scripts.bullet_wuxian_bolt.update(this, store)
 		end
 
 		queue_damage(store, d)
-		log.paranoid("bomb id:%s, radius:%s, enemy id:%s, dist:%s, damage:%s damage_type:%x", this.id, dradius, enemy.id, V.dist(enemy.pos.x, enemy.pos.y, b.to.x, b.to.y), d.value, d.damage_type)
-
-		if this.up_shock_and_awe_chance and band(enemy.vis.bans, F_STUN) == 0 and band(enemy.vis.flags, bor(F_BOSS, F_CLIFF, F_FLYING)) == 0 and math.random() < this.up_shock_and_awe_chance then
-			local mod = E:create_entity("mod_shock_and_awe")
-
-			mod.modifier.target_id = enemy.id
-
-			queue_insert(store, mod)
-		end
 
 		if b.mod then
 			local mod = E:create_entity(b.mod)

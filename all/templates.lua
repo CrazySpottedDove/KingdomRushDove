@@ -644,7 +644,6 @@ mod_ban.main_script.remove = scripts.mod_ban.remove
 mod_ban.modifier.duration = 6
 mod_ban.modifier.ban_vis = 0
 
-local mod_shock_and_awe = E:register_t("mod_shock_and_awe", "mod_stun")
 local mod_lava = E:register_t("mod_lava", "modifier")
 
 E:add_comps(mod_lava, "dps", "render")

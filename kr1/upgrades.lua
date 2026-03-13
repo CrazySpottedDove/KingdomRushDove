@@ -9,10 +9,6 @@ local function T(name)
 	return E:get_template(name)
 end
 
-local function DP(desktop, phone)
-	return desktop
-end
-
 local epsilon = 1e-09
 local upgrades = {}
 
@@ -32,28 +28,28 @@ upgrades.list = {{
 		class = "archers",
 		price = 1,
 		level = 1,
-		icon = DP(13, 6)
+		icon = 13
 	},
 	archer_eagle_eye = {
 		range_factor = 1.25,
 		class = "archers",
 		price = 1,
 		level = 2,
-		icon = DP(14, 7)
+		icon = 14
 	},
 	archer_piercing = {
 		class = "archers",
 		reduce_armor_factor = 0.1,
 		price = 2,
 		level = 3,
-		icon = DP(15, 8)
+		icon = 15
 	},
 	archer_far_shots = {
 		range_factor = 1.05,
 		class = "archers",
 		price = 2,
 		level = 4,
-		icon = DP(16, 9)
+		icon = 16
 	},
 	archer_precision = {
 		damage_factor = 1.8,
@@ -61,7 +57,7 @@ upgrades.list = {{
 		chance = 0.1,
 		price = 3,
 		level = 5,
-		icon = DP(17, 10)
+		icon = 17
 	},
 	archer_el_bloodletting_shoot = {
 		from_kr = 3,
@@ -75,14 +71,14 @@ upgrades.list = {{
 		class = "barracks",
 		price = 1,
 		level = 1,
-		icon = DP(8, 1)
+		icon = 8
 	},
 	barrack_better_armor = {
 		class = "barracks",
 		armor_increase = 0.1,
 		price = 1,
 		level = 2,
-		icon = DP(9, 2)
+		icon = 9
 	},
 	barrack_improved_deployment = {
 		cooldown_factor = 0.8,
@@ -90,21 +86,21 @@ upgrades.list = {{
 		class = "barracks",
 		price = 2,
 		level = 3,
-		icon = DP(10, 3)
+		icon = 10
 	},
 	barrack_survival_2 = {
 		health_factor = 1.09,
 		class = "barracks",
 		price = 2,
 		level = 4,
-		icon = DP(11, 4)
+		icon = 11
 	},
 	barrack_barbed_armor = {
 		spiked_armor_factor = 0.1,
 		class = "barracks",
 		price = 3,
 		level = 5,
-		icon = DP(12, 5)
+		icon = 12
 	},
 	barrack_el_enchanted_armor = {
 		from_kr = 3,
@@ -120,7 +116,7 @@ upgrades.list = {{
 		class = "mages",
 		price = 1,
 		level = 1,
-		icon = DP(18, 11)
+		icon = 18
 	},
 	mage_arcane_shatter = {
 		mod_normal = "mod_arcane_shatter",
@@ -128,28 +124,28 @@ upgrades.list = {{
 		class = "mages",
 		price = 1,
 		level = 2,
-		icon = DP(19, 12)
+		icon = 19
 	},
 	mage_hermetic_study = {
 		class = "mages",
 		cost_factor = 0.91,
 		price = 2,
 		level = 3,
-		icon = DP(20, 13)
+		icon = 20
 	},
 	mage_empowered_magic = {
 		damage_factor = 1.15,
 		class = "mages",
 		price = 2,
 		level = 4,
-		icon = DP(21, 14)
+		icon = 21
 	},
 	mage_slow_curse = {
 		mod = "mod_slow_curse",
 		class = "mages",
 		price = 3,
 		level = 5,
-		icon = DP(22, 15)
+		icon = 22
 	},
 	mage_brilliance = {
 		from_kr = 2,
@@ -182,34 +178,34 @@ upgrades.list = {{
 		class = "engineers",
 		price = 1,
 		level = 1,
-		icon = DP(23, 16)
+		icon = 23
 	},
 	engineer_range_finder = {
 		range_factor = 1.1,
 		class = "engineers",
 		price = 1,
 		level = 2,
-		icon = DP(24, 17)
+		icon = 24
 	},
 	engineer_field_logistics = {
 		class = "engineers",
 		cost_factor = 0.9,
 		price = 2,
 		level = 3,
-		icon = DP(25, 18)
+		icon = 25
 	},
 	engineer_industrialization = {
 		class = "engineers",
 		cost_factor = 0.8,
 		price = 3,
 		level = 4,
-		icon = DP(26, 19)
+		icon = 26
 	},
 	engineer_efficiency = {
 		price = 3,
 		class = "engineers",
 		level = 5,
-		icon = DP(27, 20)
+		icon = 27
 	},
 	engineer_gnomish_tinkering = {
 		from_kr = 2,
@@ -226,13 +222,13 @@ upgrades.list = {{
 		damage_increase = 30,
 		price = 2,
 		level = 1,
-		icon = DP(3, 26)
+		icon = 3
 	},
 	rain_scorched_earth = {
 		price = 2,
 		class = "rain",
 		level = 2,
-		icon = DP(4, 27)
+		icon = 4
 	},
 	rain_bigger_and_meaner = {
 		range_factor = 1.25,
@@ -241,21 +237,21 @@ upgrades.list = {{
 		damage_increase = 30,
 		price = 3,
 		level = 3,
-		icon = DP(5, 28)
+		icon = 5
 	},
 	rain_blazing_earth = {
 		cooldown_reduction = 10,
 		class = "rain",
 		price = 3,
 		level = 4,
-		icon = DP(6, 29)
+		icon = 6
 	},
 	rain_cataclysm = {
 		class = "rain",
 		damage_increase = 60,
 		price = 3,
 		level = 5,
-		icon = DP(7, 30)
+		icon = 7
 	},
 	rain_armaggedon = {
 		from_kr = 2,
@@ -270,35 +266,35 @@ upgrades.list = {{
 		template_name = "re_farmer_well_fed",
 		price = 2,
 		level = 1,
-		icon = DP(28, 21)
+		icon = 28
 	},
 	reinforcement_level_2 = {
 		class = "reinforcements",
 		template_name = "re_conscript",
 		price = 3,
 		level = 2,
-		icon = DP(29, 22)
+		icon = 29
 	},
 	reinforcement_level_3 = {
 		class = "reinforcements",
 		template_name = "re_warrior",
 		price = 3,
 		level = 3,
-		icon = DP(30, 23)
+		icon = 30
 	},
 	reinforcement_level_4 = {
 		class = "reinforcements",
 		template_name = "re_legionnaire",
 		price = 3,
 		level = 4,
-		icon = DP(1, 24)
+		icon = 1
 	},
 	reinforcement_level_5 = {
 		class = "reinforcements",
 		template_name = "re_legionnaire_ranged",
 		price = 4,
 		level = 5,
-		icon = DP(2, 25)
+		icon = 2
 	},
 	reinforcement_level_6 = {
 		from_kr = 3,
@@ -499,13 +495,13 @@ upgrades.list = {{
 		radius_factor = 1.2,
 		price = 3,
 		level = 4,
-		icon = DP(23, 16)
+		icon = 23
 	},
 	engineer_efficiency = {
 		price = 3,
 		class = "engineers",
 		level = 5,
-		icon = DP(27, 20)
+		icon = 27
 	},
 	engineer_gnomish_tinkering = {
 		from_kr = 2,
@@ -621,13 +617,13 @@ upgrades.list = {{
 		damage_increase = 30,
 		price = 2,
 		level = 1,
-		icon = DP(3, 26)
+		icon = 3
 	},
 	rain_scorched_earth = {
 		price = 2,
 		class = "rain",
 		level = 2,
-		icon = DP(4, 27)
+		icon = 4
 	},
 	rain_bigger_and_meaner = {
 		range_factor = 1.25,
@@ -636,21 +632,21 @@ upgrades.list = {{
 		damage_increase = 30,
 		price = 3,
 		level = 3,
-		icon = DP(5, 28)
+		icon = 5
 	},
 	rain_blazing_earth = {
 		cooldown_reduction = 10,
 		class = "rain",
 		price = 3,
 		level = 4,
-		icon = DP(6, 29)
+		icon = 6
 	},
 	rain_cataclysm = {
 		class = "rain",
 		damage_increase = 60,
 		price = 3,
 		level = 5,
-		icon = DP(7, 30)
+		icon = 7
 	},
 	rain_armaggedon = {
 		from_kr = 2,
@@ -665,35 +661,35 @@ upgrades.list = {{
 		template_name = "re_farmer_well_fed",
 		price = 2,
 		level = 1,
-		icon = DP(28, 21)
+		icon = 28
 	},
 	reinforcement_level_2 = {
 		class = "reinforcements",
 		template_name = "re_conscript",
 		price = 3,
 		level = 2,
-		icon = DP(29, 22)
+		icon = 29
 	},
 	reinforcement_level_3 = {
 		class = "reinforcements",
 		template_name = "re_warrior",
 		price = 3,
 		level = 3,
-		icon = DP(30, 23)
+		icon = 30
 	},
 	reinforcement_level_4 = {
 		class = "reinforcements",
 		template_name = "re_legionnaire",
 		price = 3,
 		level = 4,
-		icon = DP(1, 24)
+		icon = 1
 	},
 	reinforcement_level_5 = {
 		class = "reinforcements",
 		template_name = "re_legionnaire_ranged",
 		price = 4,
 		level = 5,
-		icon = DP(2, 25)
+		icon = 2
 	},
 	reinforcement_level_6 = {
 		from_kr = 3,
@@ -705,6 +701,103 @@ upgrades.list = {{
 		level = 6
 	}
 }}
+-- ,{
+--     archer_salvage = {
+-- 		cost_factor = 0.95,
+-- 		class = "archers",
+-- 		price = 1,
+-- 		level = 1,
+-- 		icon = 13
+-- 	},
+--     archer_eagle_eye = {
+--         from_kr = 3,
+-- 		range_factor = 1.25,
+-- 		class = "archers",
+-- 		price = 1,
+-- 		level = 2,
+-- 		icon = 4
+-- 	},
+--     -- 黑曜石箭头：对护甲低于 10 的敌人造成额外伤害
+--     archer_obsidian = {
+--         from_kr = 3,
+--         class = "archers",
+--         price = 2,
+--         level = 3,
+--         icon = 2,
+--         damage_factor = 1.3
+--     },
+--     archer_far_shots = {
+-- 		range_factor = 1.05,
+-- 		class = "archers",
+-- 		price = 2,
+-- 		level = 4,
+-- 		icon = 16
+-- 	},
+--     -- 附魔箭矢：攻击附带法术伤害
+--     archer_magic = {
+--         from_kr = 3,
+--         class = "archers",
+--         price = 2,
+--         level = 5,
+--         factor = 0.12,
+--         icon = 3
+--     },
+--     archer_el_bloodletting_shoot = {
+-- 		from_kr = 3,
+-- 		price = 4,
+-- 		icon = 5,
+-- 		class = "archers",
+-- 		level = 6
+-- 	},
+--     barrack_survival = {
+-- 		health_factor = 1.1,
+-- 		class = "barracks",
+-- 		price = 1,
+-- 		level = 1,
+-- 		icon = 8
+-- 	},
+--     barrack_better_armor = {
+-- 		class = "barracks",
+-- 		armor_increase = 0.1,
+-- 		price = 1,
+-- 		level = 2,
+-- 		icon = 9
+-- 	},
+-- 	barrack_go_on = {
+-- 		from_kr = 2,
+-- 		cooldown_factor = 0.8,
+-- 		class = "barracks",
+-- 		price = 3,
+-- 		level = 3,
+-- 		icon = 10
+-- 	},
+--     barrack_survival_2 = {
+--         from_kr = 3,
+--         health_factor = 1.09,
+-- 		class = "barracks",
+-- 		price = 2,
+-- 		level = 4,
+-- 		icon = 10
+--     },
+--     barrack_swift = {
+--         from_kr = 2,
+--         class = "barracks",
+--         icon = 7,
+--         level = 5,
+--         price = 3,
+--         speed_factor = 1.25,
+--         cooldown_factor = 0.95
+--     },
+--     barrack_dominant = {
+--         from_kr = 3,
+--         icon = 7,
+--         level = 6,
+--         class = "barracks",
+--         price = 4,
+--         rally_range_factor = 2
+--     },
+
+-- }
 upgrades.list_count = #upgrades.list
 
 function upgrades:toggle_list_id()
