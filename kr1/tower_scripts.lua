@@ -21487,6 +21487,7 @@ function scripts.tower_dragons.update(this, store)
 			queue_insert(store, e)
 			table.insert(this.dragons, e)
 		end
+		U.y_animation_wait(this.dragons[1], 1, 1)
 	end
 
 	this.dragons = {}
@@ -21589,8 +21590,9 @@ function scripts.tower_dragons.update(this, store)
 		if tw.blocked then
 			this.tower_upgrade_persistent_data.dragons_pos = {}
 
-			for _, dragon in pairs(this.dragons) do
+			for _, dragon in ipairs(this.dragons) do
 				dragon.leave = true
+				dragon.custom_attack.active = false
 			end
 
 			this.dragons = {}
@@ -21633,7 +21635,7 @@ function scripts.tower_dragons.update(this, store)
 
 				local assigned_target_ids = {}
 
-				for _, dragon in pairs(this.dragons) do
+				for _, dragon in ipairs(this.dragons) do
 					if dragon.custom_attack.target_id then
 						table.insert(assigned_target_ids, dragon.custom_attack.target_id)
 					end
@@ -22095,7 +22097,7 @@ function scripts.faerie_dragon_lvl4.update(this, store)
 	sp.offset.y = this.flight_height
 
 	if not this.skip_spawn then
-		U.y_animation_play(this, "spawn", nil, store.tick_ts)
+		U.y_animation_play(this, "spawn", nil, store.tick_ts, 1)
 	end
 
 	while true do

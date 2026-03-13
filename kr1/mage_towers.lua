@@ -3809,9 +3809,7 @@ anchor_y = 0.5
 image_y = 30
 
 tt = RT("faerie_dragon_lvl4", "decal_scripted")
-
 AC(tt, "force_motion", "custom_attack", "tween")
-
 tt.flight_height = 80
 tt.flight_speed_idle = 80
 tt.flight_speed_busy = 120

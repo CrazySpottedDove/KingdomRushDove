@@ -358,7 +358,7 @@ function screen_settings:init(w, h, params, done_callback)
 	y = y + h + m
 	h = 22
 
-	c_highdpi = CheckBox:new(sw - 2 * m, h, _("Retina display (macOS)"))
+	c_highdpi = CheckBox:new(sw - 2 * m, h, _("SETTINGS_RETINA_DISPLAY"))
 	c_highdpi.pos = v(sw * 0.5 + m, y)
 	c_highdpi:get_colors().text = colors.text_black
 	c_highdpi.hidden = love.system.getOS() ~= "OS X"
