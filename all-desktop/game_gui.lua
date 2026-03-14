@@ -5356,8 +5356,6 @@ function PickView:on_down(button, x, y)
 		elseif game_gui.mode == GUI_MODE_RALLY_HERO or game_gui.mode == GUI_MODE_RALLY_CONTROABLE then
 			local e = game_gui.selected_entity
 
-			log.debug("set rally point for hero %s to %s,%s", e, wx, sy)
-
 			if (not e.nav_rally.requires_node_nearby or P:valid_node_nearby(wx, wy, nil, NF_RALLY)) and GR:cell_is_only(wx, wy, e.nav_grid.valid_terrains_dest) and (e.teleport and not e.teleport.disabled and V.dist(wx, wy, e.pos.x, e.pos.y) > e.teleport.min_distance or e.nav_grid.ignore_waypoints or GR:find_waypoints(e.pos, e.nav_rally.pos, V.v(wx, wy), e.nav_grid.valid_terrains)) then
 				if not e.nav_grid.ignore_waypoints then
 					e.nav_grid.waypoints = GR:find_waypoints(e.pos, e.nav_rally.pos, V.v(wx, wy), e.nav_grid.valid_terrains)

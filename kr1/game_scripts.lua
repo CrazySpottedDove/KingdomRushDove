@@ -16588,6 +16588,8 @@ function scripts.mod_blood_elves.insert(this, store)
 	return true
 end
 
+scripts.mod_archer_magic = {}
+
 function scripts.mod_archer_magic.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 	if not target then

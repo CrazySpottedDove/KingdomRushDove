@@ -275,7 +275,7 @@ function grid_db:print_cell(type)
 end
 
 function grid_db:find_waypoints(from, from_fallback, to, valid_terrains, force_recalc)
-	local function valid_cell_fn(i, j, cell)
+	local function is_cell_valid(i, j, cell)
 		return band(cell, bnot(valid_terrains)) == 0
 	end
 
@@ -283,9 +283,7 @@ function grid_db:find_waypoints(from, from_fallback, to, valid_terrains, force_r
 	local ti, tj = self:get_coords(to.x, to.y)
 	local path_c
 
-	if from_fallback and not valid_cell_fn(fi, fj, self.grid[fi][fj]) then
-		log.debug("find_waypoints: getting from from_fallback: %s,%s", from_fallback.x, from_fallback.y)
-
+	if from_fallback and not is_cell_valid(fi, fj, self.grid[fi][fj]) then
 		fi, fj = self:get_coords(from_fallback.x, from_fallback.y)
 	end
 
@@ -297,10 +295,8 @@ function grid_db:find_waypoints(from, from_fallback, to, valid_terrains, force_r
 		y = tj
 	}
 
-	if not valid_cell_fn(fi, fj, self.grid[fi][fj]) then
-		log.warning("find_waypoints: starting coords %s,%s are in invalid terrain. searching nearby...", fi, fj)
-
-		from_c = GA.find_nearest_valid(from_c, self.grid, valid_cell_fn, 5)
+	if not is_cell_valid(fi, fj, self.grid[fi][fj]) then
+		from_c = GA.find_nearest_valid(from_c, self.grid, is_cell_valid, 5)
 
 		if not from_c then
 			return nil
@@ -317,7 +313,7 @@ function grid_db:find_waypoints(from, from_fallback, to, valid_terrains, force_r
 		self.waypoints_cache.to_c = nil
 		self.waypoints_cache.path_c = nil
 		self.waypoints_cache.path = nil
-		path_c = GA.get_path(from_c, to_c, self.grid, valid_cell_fn)
+		path_c = GA.get_path(from_c, to_c, self.grid, is_cell_valid)
 	end
 
 	if path_c == nil then
@@ -349,8 +345,6 @@ function grid_db:find_waypoints(from, from_fallback, to, valid_terrains, force_r
 	self.waypoints_cache.to_c = to_c
 	self.waypoints_cache.path_c = path_c
 	self.waypoints_cache.path = result
-
-	log.debug("a_star path: f:%s,%s t:%s,%s p:%s", from.x, from.y, to.x, to.y, GA.dump_path(result))
 
 	return result
 end
