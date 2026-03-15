@@ -27142,10 +27142,9 @@ E:add_comps(tt, "sound_events")
 
 tt.render.sprites[1].name = "lava_evolve_engage_hit_run"
 tt.sound_events.insert = "EnemyLavaEvolverSkyfall"
+
 tt = RT("fx_enemy_evolved_storm_attack", "decal_scripted")
-
 E:add_comps(tt, "tween")
-
 tt.main_script.update = scripts.multi_sprite_fx.update
 tt.render.sprites[1].prefix = "storm_evolve_electric_fx_area"
 tt.render.sprites[1].name = "run"

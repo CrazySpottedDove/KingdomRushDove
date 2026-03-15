@@ -12988,10 +12988,9 @@ tt.unit.blood_color = BLOOD_NONE
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
 tt.sound_events.death = "EnemyElementalDeath"
 tt.ps_walk_trail = "ps_storm_elemental_walk_trail"
+
 tt = E:register_t("enemy_water_sorceress", "enemy")
-
 E:add_comps(tt, "melee", "ranged", "timed_attacks")
-
 b = balance.enemies.wukong.water_sorceress
 tt.enemy.gold = b.gold
 tt.enemy.melee_slot = v(28, 0)
@@ -13857,10 +13856,9 @@ tt.evolve_sound = "EnemyLavaBasicEvolution"
 tt.transform_anim_in = "evolve_in"
 tt.transform_anim_loop = "evolve_loop"
 tt.transform_anim_out = "evolve_out"
+
 tt = RT("enemy_tanky_draconian", "enemy_dragons")
-
 E:add_comps(tt, "melee")
-
 b = balance.enemies.dragons.tanky_draconian
 tt.enemy.gold = b.gold
 tt.enemy.melee_slot = v(25, 0)
@@ -13915,9 +13913,6 @@ tt.unit.head_offset = v(0, 20)
 tt.unit.marker_offset = v(0, 0)
 tt.unit.mod_offset = v(0, 15 + tt.flight_height)
 tt.unit.show_blood_pool = false
--- TODO: add tween props
--- tt.unit.fade_time_after_death = 0.6
--- tt.info.fn = scripts.enemy_evolved_lava.get_info
 tt.main_script.insert = scripts.enemy_evolved_lava.insert
 tt.main_script.update = scripts.enemy_evolved_lava.update
 tt.melee.attacks[1].hit_times = {fts(6), fts(15), fts(22)}
@@ -14070,13 +14065,12 @@ tt.unit.size = UNIT_SIZE_MEDIUM
 tt.unit.can_explode = false
 tt.unit.blood_color = BLOOD_GRAY
 tt.unit.show_blood_pool = false
+tt.vis.bans = bor(tt.vis.bans, F_INSTAKILL)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
+
 tt = RT("enemy_basic_acid", "enemy_dragons")
-
 local b = balance.enemies.dragons.basic_acid
-
 E:add_comps(tt, "melee", "timed_attacks")
-
 tt.info.enc_icon = 124
 tt.info.portrait = "kr5_info_portraits_enemies_0133"
 tt.enemy.gold = b.gold
@@ -14130,14 +14124,12 @@ tt.unit.hit_offset = v(0, 10)
 tt.unit.marker_offset = v(0, 0)
 tt.unit.mod_offset = v(0, 7)
 tt.unit.size = UNIT_SIZE_SMALL
-tt.vis.flags = bor(F_ENEMY)
+tt.vis.flags = bor(F_ENEMY, F_POISON)
 tt.sound_events.death = "EnemyNoxiousHorrorDeath"
+
 tt = RT("enemy_evolved_acid", "enemy_dragons")
-
 local b = balance.enemies.dragons.evolved_acid
-
 E:add_comps(tt, "timed_attacks", "tween")
-
 tt.info.enc_icon = 125
 tt.info.portrait = "kr5_info_portraits_enemies_0134"
 tt.enemy.gold = b.gold
@@ -14194,7 +14186,7 @@ tt.unit.show_blood_pool = false
 tt.unit.hide_after_death = true
 tt.unit.disintegrate_fx = "fx_enemy_desintegrate_air"
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
-tt.vis.bans = bor(F_BLOCK)
+tt.vis.bans = bor(F_BLOCK, F_POISON)
 tt.sound_events.death = "EnemyEvolvedAcidDeath"
 tt.sound_events.death_args = {
 	delay = fts(20)
@@ -14211,11 +14203,10 @@ tt.tween.props[2].keys = {{fts(0), 255}, {fts(24), 255}, {fts(30), 0}}
 tt.tween.props[2].loop = false
 tt.tween.props[2].sprite_id = 2
 tt.tween.props[2].disabled = true
+
 tt = RT("enemy_alfa_acid", "enemy_dragons")
 b = balance.enemies.dragons.alfa_acid
-
 E:add_comps(tt, "ranged", "timed_attacks", "tween")
-
 tt.enemy.gold = b.gold
 tt.enemy.melee_slot = v(37, 0)
 tt.enemy.lives_cost = b.lives_cost
@@ -14278,7 +14269,7 @@ tt.unit.hide_after_death = true
 tt.unit.show_blood_pool = false
 tt.transformation_time = b.transformation_time
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
-tt.vis.bans = bor(tt.vis.bans, F_BLOCK)
+tt.vis.bans = bor(tt.vis.bans, F_BLOCK, F_POISON)
 tt.sound_events.death = "EnemyAlfaAcidDeath"
 tt.sound_events.death_args = {
 	delay = fts(21)
@@ -14295,10 +14286,9 @@ tt.tween.props[2].keys = {{fts(0), 255}, {fts(27), 255}, {fts(34), 0}}
 tt.tween.props[2].loop = false
 tt.tween.props[2].sprite_id = 2
 tt.tween.props[2].disabled = true
+
 tt = RT("enemy_alfa_acid_sheep", "decal_scripted")
-
 E:add_comps(tt, "tween")
-
 b = balance.enemies.dragons.alfa_acid.evolve_shot
 tt.main_script.update = scripts.enemy_alfa_acid_sheep.update
 tt.range = 30
@@ -14426,12 +14416,10 @@ tt.shadow_smoke_fx = "fx_enemy_evolved_shadow_burst"
 tt.shadow_min_duration = 1
 tt.sound_events.death = "EnemyShadowEvolvedDeath"
 tt.invisibility_safe_nodes = b.invisibility_safe_nodes
+
 tt = RT("enemy_alfa_shadow", "enemy_dragons")
-
 local b = balance.enemies.dragons.alfa_shadow
-
 E:add_comps(tt, "melee", "ranged", "timed_attacks")
-
 tt.ui.click_rect = r(-23, 0, 46, 60)
 tt.enemy.melee_slot = v(35, 0)
 tt.health.hp_max = b.hp
@@ -14499,10 +14487,9 @@ tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"walk", "fly_down", "walk_down"}
 tt.render.sprites[1].animated = true
 tt.sound_events.death = "EnemyShadowAlfaDeath"
+
 tt = RT("enemy_basic_storm", "enemy_dragons")
-
 E:add_comps(tt, "tween")
-
 b = balance.enemies.dragons.basic_storm
 tt.info.enc_icon = 131
 tt.info.portrait = "kr5_info_portraits_enemies_0139"
@@ -14556,10 +14543,9 @@ tt.tween.props[2].disabled = true
 tt.tween.props[1].loop = true
 tt.tween.props[1].disabled = false
 tt.tween.props[1].remove = false
+
 tt = RT("enemy_evolved_storm", "enemy_dragons")
-
 E:add_comps(tt, "timed_attacks", "tween")
-
 b = balance.enemies.dragons.evolved_storm
 tt.info.enc_icon = 132
 tt.info.portrait = "kr5_info_portraits_enemies_0140"
@@ -14625,12 +14611,10 @@ tt.tween.props[1].remove = false
 tt.tween.disabled = true
 tt.tween.remove = false
 tt.tween.loop = false
+
 tt = RT("enemy_alfa_storm", "enemy_dragons")
-
 local b = balance.enemies.dragons.alfa_storm
-
 E:add_comps(tt, "melee", "ranged", "timed_attacks")
-
 tt.enemy.gold = b.gold
 tt.enemy.melee_slot = v(35, 0)
 tt.health.hp_max = b.hp
@@ -14675,7 +14659,7 @@ tt.timed_attacks.list[1].cast_time = fts(87)
 tt.timed_attacks.list[1].cooldown = b.special_attack.cooldown
 tt.timed_attacks.list[1].max_range = b.special_attack.radius
 tt.timed_attacks.list[1].min_range = 0
-tt.timed_attacks.list[1].allowed_templates = {"enemy_evolved_storm", "enemy_executioner_storm", "enemy_brute_storm"}
+tt.timed_attacks.list[1].allowed_templates = {"enemy_evolved_storm", "enemy_executioner_storm"}
 tt.timed_attacks.list[1].towers_mod = "mod_enemy_alfa_storm_tower_stun"
 tt.timed_attacks.list[1].towers_mod_mark = "mod_enemy_alfa_storm_tower_mark"
 tt.timed_attacks.list[1].max_towers_stunned = b.special_attack.max_towers_stunned
@@ -14701,10 +14685,9 @@ tt.timed_attacks.list[2].vis_flags = F_MOD
 tt.timed_attacks.list[2].vis_bans = 0
 tt.timed_attacks.list[2].max_count = b.evolve_attack.max_count
 b = balance.enemies.dragons.executioner_storm
+
 tt = RT("enemy_executioner_storm", "enemy_dragons")
-
 E:add_comps(tt, "melee", "timed_attacks")
-
 tt.enemy.gold = b.gold
 tt.enemy.melee_slot = v(30, 0)
 tt.health.hp_max = b.hp
@@ -14741,6 +14724,7 @@ tt.timed_attacks.list[1].vis_flags = F_INSTAKILL
 tt.timed_attacks.list[1].hit_time = fts(3)
 tt.timed_attacks.list[1].removes_charged_status = b.charged_instakill.removes_charged_status
 tt.timed_attacks.list[1].hp_threshold = b.charged_instakill.hp_threshold
+tt.vis.bans = bor(tt.vis.bans, F_INSTAKILL)
 tt.motion.max_speed = b.speed
 tt.render.sprites[1].prefix = "storm_executor_creep"
 tt.render.sprites[1].angles.walk = {"walk", "walk_up", "walk_down"}
@@ -14748,52 +14732,6 @@ tt.ui.click_rect = r(-23, 0, 46, 45)
 tt.sound_events.death = "EnemyStormExecuthosDeath"
 tt.unit.fade_time_after_death = fts(100)
 tt.health.dead_lifetime = fts(100)
-b = balance.enemies.dragons.brute_storm
-tt = RT("enemy_brute_storm", "enemy_dragons")
-
-E:add_comps(tt, "melee")
-
-tt.enemy.gold = b.gold
-tt.enemy.melee_slot = v(42, 0)
-tt.enemy.lives_cost = b.lives_cost
-tt.health.hp_max = b.hp
-tt.health.armor = b.armor
-tt.health.magic_armor = b.magic_armor
-tt.health_bar.offset = v(0, 60)
-tt.info.enc_icon = 62
-tt.info.portrait = "kr5_info_portraits_enemies_0062"
-tt.unit.hit_offset = v(0, 20)
-tt.unit.head_offset = v(0, 50)
-tt.unit.marker_offset = v(0, 0)
-tt.unit.mod_offset = v(0, 17)
-tt.main_script.update = scripts.enemy_brute_storm.update
-tt.on_storm_charged = scripts.enemy_brute_storm.on_storm_charged
-tt.on_storm_uncharged = scripts.enemy_brute_storm.on_storm_uncharged
-tt.melee.attacks[1].cooldown = b.basic_attack.cooldown
-tt.melee.attacks[1].damage_max = b.basic_attack.damage_max
-tt.melee.attacks[1].damage_min = b.basic_attack.damage_min
-tt.melee.attacks[1].hit_time = fts(11)
-tt.melee.attacks[1].animation = "attack_2"
-tt.melee.attacks[1].hit_fx = "fx_crocs_tank_melee_hit"
-tt.melee.attacks[1].hit_offset = v(44, 15)
-tt.motion.max_speed = b.speed
-tt.render.sprites[1].prefix = "Tank_crocs_animationsDef"
-tt.render.sprites[1].angles.idle = {"idle", "idle", "idle"}
-tt.render.sprites[1].angles.walk = {"walk_side", "walk_up", "walk_down"}
-tt.render.sprites[1].angles.charge = {"attack_1", "attack_1", "attack_1"}
-tt.render.sprites[1].angles_custom = {
-	charge = {55, 115, 245, 305}
-}
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].offset = v(-2, 0)
-tt.ui.click_rect = r(-30, -3, 60, 50)
-tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
-tt.unit.size = UNIT_SIZE_LARGE
-tt.unit.can_explode = false
-tt.unit.can_explode = false
-tt.vis.flags = bor(F_ENEMY)
-tt.sound_events.death = "EnemyRazingRhinoDeath"
-tt.mod_invulneravility = "mod_enemy_brute_storm_invulnerability"
 
 tt = RT("enemy_miniboss_stage_39", "enemy")
 b = balance.enemies.dragons.miniboss_stage_39
@@ -14836,7 +14774,7 @@ tt.melee.attacks[2].animation = "instakill"
 tt.melee.attacks[2].cooldown = b.instakill.cooldown
 tt.melee.attacks[2].damage_max = b.instakill.damage_max
 tt.melee.attacks[2].damage_min = b.instakill.damage_min
-tt.melee.attacks[2].damage_type = bor(b.instakill.damage_type)
+tt.melee.attacks[2].damage_type = b.instakill.damage_type
 tt.melee.attacks[2].damage_radius = b.instakill.damage_radius
 tt.melee.attacks[2].hit_time = fts(20)
 tt.melee.attacks[2].type = "area"
@@ -14863,9 +14801,7 @@ tt = RT("mod_enemy_miniboss_stage_39_instakill", "modifier")
 tt.main_script.insert = scripts.mod_enemy_miniboss_stage_39_instakill.insert
 
 tt = RT("bullet_enemy_basic_acid", "arrow")
-
 local b = balance.enemies.dragons.basic_acid.ranged_attack
-
 tt.render.sprites[1].prefix = "acid_basic_proyectil"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].animated = true
@@ -14873,6 +14809,7 @@ tt.bullet.damage_max = b.damage_max
 tt.bullet.damage_min = b.damage_min
 tt.bullet.damage_type = b.damage_type
 tt.bullet.flight_time = fts(25)
+tt.bullet.mod = "mod_enemy_basic_acid_armor_reduction"
 tt.bullet.hit_fx = "fx_bullet_enemy_basic_acid"
 tt.bullet.hit_decal = nil
 tt.bullet.particles_name = "ps_bullet_enemy_basic_acid"
@@ -14881,10 +14818,9 @@ tt.bullet.damage_bans = bor(F_ENEMY)
 tt.bullet.hit_blood_fx = nil
 tt.bullet.miss_decal = nil
 tt.bullet.miss_fx_water = nil
+
 tt = RT("bullet_enemy_evolved_acid", "bomb")
-
 local b = balance.enemies.dragons.evolved_acid.ranged_attack
-
 tt.bullet.damage_max = b.damage_max
 tt.bullet.damage_min = b.damage_min
 tt.bullet.damage_radius = b.radius
@@ -14893,6 +14829,7 @@ tt.bullet.flight_time = fts(25)
 tt.bullet.hit_fx = "fx_enemy_evolved_acid_hit"
 tt.bullet.hit_decal = "decal_enemy_evolved_acid_bullet"
 tt.bullet.particles_name = "ps_bullet_enemy_evolved_acid"
+tt.bullet.mod = "mod_enemy_evolved_acid_armor_reduction"
 tt.bullet.align_with_trajectory = true
 tt.vis_flags = bor(F_AREA)
 tt.vis_bans = bor(F_FLYING, F_ENEMY)
@@ -14904,10 +14841,9 @@ tt.render.sprites[1].animated = true
 tt.bullet.pop = nil
 tt.bullet.pop_conds = nil
 tt.sound_events.hit = "EnemyEvolvedAcidAttack"
+
 tt = RT("bullet_enemy_evolved_acid_spawn", "bomb")
-
 local b = balance.enemies.dragons.evolved_acid.ranged_attack
-
 tt.bullet.damage_max = 0
 tt.bullet.damage_min = 0
 tt.bullet.damage_radius = 0
@@ -14923,10 +14859,9 @@ tt.main_script.insert = scripts.enemy_bomb.insert
 tt.main_script.update = scripts.bullet_enemy_evolved_acid_spawn.update
 tt.render.sprites[1].name = "evolved_acid_projectil"
 tt.render.sprites[1].animated = false
+
 tt = RT("bullet_enemy_alfa_acid", "bolt_enemy")
-
 local b = balance.enemies.dragons.alfa_acid.ranged_attack
-
 tt.main_script.insert = scripts.bullet_enemy_alfa_acid.insert
 tt.main_script.update = nil
 tt.bullet.damage_max = b.damage_max
@@ -14934,12 +14869,10 @@ tt.bullet.damage_min = b.damage_min
 tt.bullet.damage_type = b.damage_type
 tt.bullets_templates = {"bullet_enemy_alfa_acid_a", "bullet_enemy_alfa_acid_b", "bullet_enemy_alfa_acid_c"}
 tt.sound_events.insert = "EnemyAlfaAcidAttack"
+
 tt = RT("bullet_enemy_alfa_acid_a", "bolt_enemy")
-
 E:add_comps(tt, "force_motion")
-
 local b = balance.enemies.dragons.alfa_acid.ranged_attack
-
 tt.render.sprites[1].prefix = "alpha_acid_projectile2"
 tt.render.sprites[1].name = "flying"
 tt.render.sprites[1].animated = true
@@ -14965,22 +14898,23 @@ tt.force_motion.a_step = 10
 tt.force_motion.max_a = 3000
 tt.force_motion.max_v = 600
 tt.sound_events.insert = nil
+
 tt = RT("bullet_enemy_alfa_acid_b", "bullet_enemy_alfa_acid_a")
 tt.initial_impulse = 7500
 tt.initial_impulse_duration = 0.12
 tt.initial_impulse_angle_abs = tt.initial_impulse_angle_abs * 1.2
 tt.initial_impulse_reduction = 0.7
 tt.force_motion.max_v = tt.force_motion.max_v * 0.9
+
 tt = RT("bullet_enemy_alfa_acid_c", "bullet_enemy_alfa_acid_a")
 tt.initial_impulse = 9750
 tt.initial_impulse_duration = 0.2
 tt.initial_impulse_angle_abs = tt.initial_impulse_angle_abs * 0.7
 tt.initial_impulse_reduction = 0.7
 tt.force_motion.max_v = tt.force_motion.max_v * 1.1
+
 tt = RT("bullet_enemy_alfa_acid_evolve", "bullet")
-
 local b = balance.enemies.dragons.alfa_acid.evolve_shot
-
 tt.main_script.insert = scripts.bullet_enemy_alfa_acid_evolve.insert
 tt.main_script.update = scripts.bullet_enemy_alfa_acid_evolve.update
 tt.render.sprites[1].name = "alpha_acid_sheep_projectile"
@@ -15075,9 +15009,7 @@ tt.ray_duration = fts(8)
 tt.sound_events.insert = "EnemyStormAlfaRanged"
 
 tt = RT("mod_enemy_evolved_lava_dot", "modifier")
-
 E:add_comps(tt, "render", "dps")
-
 b = balance.enemies.dragons.evolved_lava.special_attack.dot
 tt.modifier.duration = b.duration
 tt.main_script.insert = scripts.mod_dps.insert
@@ -15114,10 +15046,9 @@ tt = RT("mod_enemy_alfa_lava_evolve", "modifier")
 tt.modifier.duration = fts(2)
 tt.main_script.insert = scripts.mod_enemy_alfa_acid_evolve.insert
 tt.entity_t = {{"enemy_basic_lava", "enemy_evolved_lava"}}
+
 tt = RT("mod_enemy_basic_acid_armor_reduction", "modifier")
-
 E:add_comps(tt, "render")
-
 b = balance.enemies.dragons.basic_acid.ranged_attack
 tt.modifier.duration = b.armor_reduction_duration
 tt.armor_reduction = b.armor_reduction
@@ -15130,10 +15061,15 @@ tt.render.sprites[1].anchor = v(0.5, 0.6)
 tt.main_script.insert = scripts.mod_enemy_basic_acid_armor_reduction.insert
 tt.main_script.remove = scripts.mod_enemy_basic_acid_armor_reduction.remove
 tt.main_script.update = scripts.mod_track_target.update
+
+tt = RT("mod_enemy_evolved_acid_armor_reduction", "mod_enemy_basic_acid_armor_reduction")
+b = balance.enemies.dragons.evolved_acid.ranged_attack
+tt.modifier.duration = b.armor_reduction_duration
+tt.armor_reduction = b.armor_reduction
+tt.magic_armor_reduction = b.magic_armor_reduction
+
 tt = RT("mod_enemy_alfa_acid_poison", "modifier")
-
 E:add_comps(tt, "render", "dps")
-
 b = balance.enemies.dragons.alfa_acid.ranged_attack.poison
 tt.modifier.duration = b.duration
 tt.modifier.vis_flags = bor(F_MOD, F_POISON)
@@ -15149,6 +15085,7 @@ tt.dps.damage_min = b.damage_min
 tt.dps.damage_type = b.damage_type
 tt.transformation_nodes_limit = b.transformation_nodes_limit
 tt.spawn_entity = "enemy_basic_acid"
+
 tt = RT("mod_enemy_alfa_acid_evolve", "modifier")
 tt.modifier.duration = fts(2)
 tt.main_script.insert = scripts.mod_enemy_alfa_acid_evolve.insert
@@ -15186,7 +15123,7 @@ tt.modifier.duration = 1e+99
 tt.main_script.insert = scripts.mod_enemies_storm_charged.insert
 tt.main_script.update = scripts.mod_track_target.update
 tt.main_script.remove = scripts.mod_enemies_storm_charged.remove
-tt.allowed_templates = {"enemy_evolved_storm", "enemy_executioner_storm", "enemy_brute_storm"}
+tt.allowed_templates = {"enemy_evolved_storm", "enemy_executioner_storm"}
 tt.render.sprites[1].name = "alpha_storm_modifier_creep_run"
 tt.render.sprites[1].anchor = v(0.5, 0.5)
 tt.render.sprites[1].loop = true
@@ -15224,29 +15161,17 @@ tt.render.sprites[4] = E:clone_c("sprite")
 tt.render.sprites[4].name = "alpha_storm_stun_tower_fx_run"
 tt.render.sprites[4].z = Z_OBJECTS
 tt.render.sprites[4].sort_y_offset = -25
+
 tt = RT("mod_enemy_alfa_storm_tower_mark", "modifier")
-
 E:add_comps(tt, "mark_flags")
-
 b = balance.enemies.dragons.alfa_storm.special_attack
 tt.modifier.duration = 6
 tt.main_script.queue = scripts.mod_mark_flags.queue
 tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
 tt.main_script.update = scripts.mod_mark_flags.update
-tt = RT("mod_enemy_brute_storm_invulnerability", "modifier")
-b = balance.enemies.dragons.alfa_storm.special_attack
-tt.modifier.duration = b.charge_duration
-b = balance.enemies.dragons.brute_storm.charged_invulneravility
-tt.main_script.insert = scripts.mod_enemy_brute_storm_invulnerability.insert
-tt.main_script.update = scripts.mod_enemy_brute_storm_invulnerability.update
-tt.main_script.remove = scripts.mod_enemy_brute_storm_invulnerability.remove
-tt.hp_heal_threshold = b.hp_heal_threshold
-tt.hp_healing_amount = b.hp_healing_amount
 
 tt = RT("mod_boss_murglum_tower_block", "mod_hide_tower")
-
 E:add_comps(tt, "render")
-
 tt.main_script.insert = scripts.mod_boss_murglum_tower_block.insert
 tt.main_script.update = scripts.mod_boss_murglum_tower_block.update
 tt.main_script.remove = scripts.mod_boss_murglum_tower_block.remove

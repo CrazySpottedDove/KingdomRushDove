@@ -4930,32 +4930,32 @@ local enemies = {
 			}
 		},
 		evolved_lava = {
-			gold = 15,
+			gold = 20,
 			armor = 0.5,
 			speed_fly_mult = 1.5,
 			magic_armor = 0,
 			speed = 20,
 			minimum_fly_duration = 2.5,
-			hp = 750,
+			hp = 1000,
 			basic_attack = {
 				cooldown = 1.2,
-				damage_min = 30,
-				damage_max = 35,
+				damage_min = 25,
+				damage_max = 30,
 				damage_type = DAMAGE_PHYSICAL
 			},
 			landing_attack = {
 				radius_find = 30,
 				radius = 40,
-				damage_min = 70,
-				damage_max = 95,
+				damage_min = 60,
+				damage_max = 80,
 				damage_type = DAMAGE_PHYSICAL
 			},
 			special_attack = {
 				radius = 65,
-				damage_min = 55,
+				damage_min = 50,
 				cooldown = 8,
-				damage_max = 82,
-				damage_type = DAMAGE_TRUE,
+				damage_max = 75,
+				damage_type = DAMAGE_RUDE,
 				dot = {
 					damage_every = 0.25,
 					damage_min = 2,
@@ -5006,7 +5006,7 @@ local enemies = {
 		basic_acid = {
 			speed = 38,
 			armor = 0,
-			gold = 7,
+			gold = 8,
 			magic_armor = 0,
 			hp = {190, 250, 270, 300},
 			basic_attack = {
@@ -5018,8 +5018,8 @@ local enemies = {
 			ranged_attack = {
 				max_range = 180,
 				min_range = 50,
-				magic_armor_reduction = 0,
-				armor_reduction = 0,
+				magic_armor_reduction = 0.1,
+				armor_reduction = 0.1,
 				cooldown = 1.5,
 				armor_reduction_duration = 6,
 				damage_max = 32,
@@ -5031,10 +5031,10 @@ local enemies = {
 		evolved_acid = {
 			speed = 42,
 			armor = 0,
-			gold = 14,
+			gold = 70,
 			magic_armor = 0,
 			lives_cost = 1,
-			hp = {360, 460, 520, 570},
+			hp = {400, 500, 600, 650},
 			ranged_attack = {
 				max_range = 250,
 				radius = 50,
@@ -5045,18 +5045,18 @@ local enemies = {
 				damage_max = 68,
 				armor_reduction_duration = 6,
 				damage_min = 48,
-				damage_type = DAMAGE_TRUE
+				damage_type = DAMAGE_EXPLOSION
 			},
 			summon = {
 				min_nodes_range = 5,
-				first_cooldown = 99999,
-				cooldown = 999999999,
+				first_cooldown = 8,
+				cooldown = 12,
 				nodes_limit = 30,
 				max_nodes_range = 30
 			}
 		},
 		alfa_acid = {
-			gold = 90,
+			gold = 95,
 			magic_armor = 0.5,
 			speed = 24,
 			armor = 0,
@@ -5071,18 +5071,18 @@ local enemies = {
 			},
 			ranged_attack = {
 				max_range = 350,
-				damage_max = 164,
+				damage_max = 148,
 				cooldown = 3,
 				max_range_variance = 50,
 				min_range = 100,
 				hold_advance = false,
-				damage_min = 102,
+				damage_min = 92,
 				damage_type = DAMAGE_TRUE,
 				poison = {
 					damage_every = 0.25,
 					transformation_nodes_limit = 30,
 					damage_min = 1,
-					duration = 0,
+					duration = 6,
 					damage_max = 2,
 					damage_type = DAMAGE_TRUE
 				}
@@ -5112,20 +5112,20 @@ local enemies = {
 		evolved_shadow = {
 			speed = 28,
 			armor = 0,
-			hp = 600,
+			hp = 900,
 			invisibility_safe_nodes = 45,
-			gold = 20,
+			gold = 50,
 			magic_armor = 0.6,
 			lives_cost = 1,
 			ranged_attack = {
 				max_range = 70,
 				hold_advance = true,
-				damage_min = 58,
+				damage_min = 53,
 				cooldown = 1.5,
 				max_range_variance = 30,
-				damage_max = 82,
+				damage_max = 74,
 				min_range = 0,
-				damage_type = DAMAGE_TRUE
+				damage_type = DAMAGE_MAGICAL
 			}
 		},
 		alfa_shadow = {
@@ -5172,8 +5172,8 @@ local enemies = {
 			speed = 16,
 			armor = 0,
 			hp = 1200,
-			gold = 65,
-			magic_armor = 0.25,
+			gold = 70,
+			magic_armor = 0.3,
 			lives_cost = 1,
 			charged_attack = {
 				min_targets = 1,
@@ -5184,15 +5184,10 @@ local enemies = {
 				damage_max = 90,
 				removes_charged_status = true,
 				damage_type = DAMAGE_MAGICAL
-			},
-			stun_tower = {
-				range = 120,
-				duration = 10,
-				nodes_limit = 30
 			}
 		},
 		alfa_storm = {
-			gold = 50,
+			gold = 70,
 			magic_armor = 0.5,
 			speed = 26,
 			armor = 0,
@@ -5234,10 +5229,10 @@ local enemies = {
 		executioner_storm = {
 			speed = 20,
 			armor = 0.85,
-			gold = 90,
+			gold = 100,
 			magic_armor = 0,
 			lives_cost = 1,
-			hp = {1400, 1800, 2000, 2200},
+			hp = {1500, 1900, 2200, 2400},
 			basic_attack = {
 				cooldown = 1.5,
 				damage_min = 80,
@@ -5249,23 +5244,6 @@ local enemies = {
 				removes_charged_status = true,
 				nodes_limit = 30,
 				hp_threshold = 0.5
-			}
-		},
-		brute_storm = {
-			speed = 20,
-			armor = 0.35,
-			hp = 2200,
-			gold = 70,
-			magic_armor = 0,
-			lives_cost = 2,
-			basic_attack = {
-				cooldown = 2,
-				damage_min = 48,
-				damage_max = 64
-			},
-			charged_invulneravility = {
-				hp_heal_threshold = 0.6,
-				hp_healing_amount = 0.3
 			}
 		},
 		dragon_boss_stage_37 = {
@@ -5405,9 +5383,9 @@ local enemies = {
 			},
 			instakill = {
 				damage_radius = 60,
-				damage_min = 9999,
+				damage_min = 999,
 				cooldown = 15,
-				damage_max = 9999,
+				damage_max = 999,
 				damage_type = DAMAGE_INSTAKILL
 			}
 		},

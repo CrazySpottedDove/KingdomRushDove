@@ -38653,7 +38653,7 @@ function scripts.mod_chicken_leg_polymorph.insert(this, store)
 		end
 
 		local entity_poly = E:create_entity(polymorph_template)
-		entity_poly.health.hp_max = entity_poly.health.hp_max * target.health.hp / target.health.hp_max
+		entity_poly.health.hp_max = entity_poly.health.hp_max * math.min(target.health.hp / target.health.hp_max + 0.25, 1)
 		entity_poly.pos = target.pos
 		entity_poly.nav_path = target.nav_path
 
@@ -69411,8 +69411,6 @@ function scripts.mod_enemy_basic_acid_armor_reduction.insert(this, store)
 	end
 
 	if band(this.modifier.vis_flags, target.vis.bans) ~= 0 or band(this.modifier.vis_bans, target.vis.flags) ~= 0 then
-		log.paranoid("mod %s cannot be applied to entity %s:%s because of vis flags/bans", this.template_name, target.id, target.template_name)
-
 		return false
 	end
 
@@ -69471,6 +69469,10 @@ function scripts.enemy_evolved_acid.update(this, store, script)
 	end
 
 	local function can_summon()
+		if not this.enemy.can_do_magic then
+			return false
+		end
+
 		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
 
 		if nodes_to_goal < a_summon.nodes_limit then
@@ -69485,6 +69487,9 @@ function scripts.enemy_evolved_acid.update(this, store, script)
 	end
 
 	local function ready_to_shot()
+		if not this.enemy.can_do_magic then
+			return false
+		end
 		if not P:is_node_valid(this.nav_path.pi, this.nav_path.ni) then
 			return false
 		end
@@ -69860,8 +69865,8 @@ function scripts.bullet_enemy_evolved_acid_spawn.update(this, store, script)
 	if target and target.vis and U.flag_has(target.vis.flags, F_FLYING) then
 		targets = {target}
 	else
-		targets = table.filter(store.entities, function(_, e)
-			return e and e.health and not e.health.dead and e.vis and band(e.vis.flags, b.damage_bans) == 0 and band(e.vis.bans, b.damage_flags) == 0 and U.is_inside_ellipse(e.pos, b.to, b.damage_radius)
+		targets = table.filter(store.soldiers, function(_, e)
+			return not e.health.dead and band(e.vis.flags, b.damage_bans) == 0 and band(e.vis.bans, b.damage_flags) == 0 and U.is_inside_ellipse(e.pos, b.to, b.damage_radius)
 		end)
 	end
 
@@ -70356,7 +70361,7 @@ function scripts.mod_enemy_alfa_acid_evolve.insert(this, store)
 	end
 
 	local entity_poly = E:create_entity(polymorph_template)
-	entity_poly.health.hp_max = entity_poly.health.hp_max * target.health.hp / target.health.hp_max
+	entity_poly.health.hp_max = entity_poly.health.hp_max * math.min(target.health.hp / target.health.hp_max + 0.25, 1)
 	entity_poly.pos = target.pos
 	entity_poly.nav_path = target.nav_path
 
@@ -71239,6 +71244,9 @@ function scripts.enemy_evolved_storm.update(this, store, script)
 	a_area.ts = store.tick_ts - a_area.cooldown + a_area.first_cooldown
 
 	local function ready_to_area_attack()
+		if not this.enemy.can_do_magic then
+			return false
+		end
 		if store.tick_ts - a_area.ts < a_area.cooldown then
 			return false
 		end
@@ -71333,126 +71341,6 @@ function scripts.enemy_evolved_storm.update(this, store, script)
 			end
 		end
 	end
-end
-
-scripts.bullet_enemy_evolved_storm_tower_stun = {}
-
-function scripts.bullet_enemy_evolved_storm_tower_stun.insert(this, store, script)
-	local b = this.bullet
-
-	b.speed.x, b.speed.y = V.normalize(b.to.x - b.from.x, b.to.y - b.from.y)
-
-	U.animation_start(this, "run", nil, store.tick_ts, -1)
-
-	return true
-end
-
-function scripts.bullet_enemy_evolved_storm_tower_stun.update(this, store, script)
-	local b = this.bullet
-	local mspeed = b.min_speed
-	local target, ps
-
-	if b.particles_name then
-		ps = E:create_entity(b.particles_name)
-		ps.particle_system.track_id = this.id
-
-		queue_insert(store, ps)
-	end
-
-	if b.target_id then
-		S:queue(this.sound_events.travel)
-	else
-		S:queue(this.sound_events.summon)
-	end
-
-	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
-		if b.target_id then
-			target = store.entities[b.target_id]
-		end
-
-		if target then
-			if U.flag_has(target.vis.bans, F_RANGED) then
-				b.target_id = nil
-				target = nil
-			elseif b.max_track_distance then
-				local d = math.max(math.abs(target.pos.x - b.to.x), math.abs(target.pos.y - b.to.y))
-
-				if d > b.max_track_distance then
-					b.target_id = nil
-					target = nil
-				end
-			else
-				b.to.x, b.to.y = target.pos.x, target.pos.y
-			end
-		end
-
-		mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
-		mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
-		b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
-		this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
-
-		if b.align_with_trajectory then
-			this.render.sprites[1].r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
-		else
-			this.render.sprites[1].flip_x = b.to.x < this.pos.x
-		end
-
-		if ps then
-			ps.particle_system.emit_direction = this.render.sprites[1].r
-		end
-
-		coroutine.yield()
-	end
-
-	if target then
-		if b.mod then
-			local mod = E:create_entity(b.mod)
-
-			mod.modifier.target_id = target.id
-
-			queue_insert(store, mod)
-		end
-
-		if b.hit_payload then
-			local hp
-
-			if type(b.hit_payload) == "string" then
-				hp = E:create_entity(b.hit_payload)
-			else
-				hp = b.hit_payload
-			end
-
-			hp.pos.x, hp.pos.y = this.pos.x, this.pos.y
-
-			queue_insert(store, hp)
-		end
-	end
-
-	local sfx, sfx_ignore_offset
-
-	if b.hit_fx_air and target and U.flag_has(target.vis.flags, F_FLYING) then
-		sfx = b.hit_fx_air
-		sfx_ignore_offset = b.hit_fx_ignore_offset_air
-	elseif b.hit_fx then
-		sfx = b.hit_fx
-		sfx_ignore_offset = b.hit_fx_ignore_offset
-	end
-
-	if sfx then
-		local sfx = E:create_entity(sfx)
-
-		if sfx_ignore_offset and target then
-			sfx.pos.x, sfx.pos.y = target.pos.x, target.pos.y
-		else
-			sfx.pos.x, sfx.pos.y = b.to.x, b.to.y
-		end
-
-		sfx.render.sprites[1].ts = store.tick_ts
-
-		queue_insert(store, sfx)
-	end
-
-	queue_remove(store, this)
 end
 
 scripts.enemy_alfa_storm = {}
@@ -71966,201 +71854,6 @@ function scripts.enemy_executioner_storm.update(this, store, script)
 	end
 end
 
-scripts.enemy_brute_storm = {}
-
-function scripts.enemy_brute_storm.update(this, store, script)
-	local is_in_invulnerable_stance = false
-
-	local function ready_to_change_stance()
-		if is_in_invulnerable_stance and not this.health.ignore_damage then
-			return true
-		elseif not is_in_invulnerable_stance and this.health.ignore_damage then
-			return true
-		end
-
-		return false
-	end
-
-	local function break_fn()
-		return ready_to_change_stance()
-	end
-
-	::label_2323_0::
-
-	while true do
-		if this.health.dead then
-			SU.y_enemy_death(store, this)
-
-			return
-		end
-
-		if this.unit.is_stunned then
-			SU.y_enemy_stun(store, this)
-		else
-			if ready_to_change_stance() then
-				if is_in_invulnerable_stance then
-					is_in_invulnerable_stance = false
-					this.render.sprites[1].angles.walk = this.original_angles_walk
-					this.render.sprites[1].angles.idle = {"idle", "idle", "idle"}
-					this.melee.attacks[1].disabled = false
-
-					U.animation_start(this, "out_attack_1", nil, store.tick_ts, false, 1, true)
-
-					if SU.y_enemy_animation_wait(this) then
-						goto label_2323_0
-					end
-
-					U.animation_start(this, "idle", nil, store.tick_ts, true, 1, true)
-				else
-					is_in_invulnerable_stance = true
-					this.original_angles_walk = this.render.sprites[1].angles.walk
-					this.render.sprites[1].angles.walk = this.render.sprites[1].angles.charge
-					this.render.sprites[1].angles.idle = {"attack_1", "attack_1", "attack_1"}
-					this.melee.attacks[1].disabled = true
-
-					U.y_animation_play(this, "in_attack_1", nil, store.tick_ts, 1)
-					U.animation_start(this, "attack_1", nil, store.tick_ts, true, 1, true)
-				end
-			end
-
-			if not SU.y_enemy_mixed_walk_melee_ranged(store, this, nil, break_fn, break_fn, break_fn) then
-			-- block empty
-			else
-				coroutine.yield()
-			end
-		end
-	end
-end
-
-function scripts.enemy_brute_storm.on_storm_charged(this, store)
-	local mod = E:create_entity(this.mod_invulneravility)
-
-	mod.modifier.target_id = this.id
-
-	queue_insert(store, mod)
-end
-
-function scripts.enemy_brute_storm.on_storm_uncharged(this, store)
-	SU.remove_modifiers(store, this, this.mod_invulneravility)
-end
-
-scripts.mod_enemy_brute_storm_invulnerability = {}
-
-function scripts.mod_enemy_brute_storm_invulnerability.insert(this, store, script)
-	local m = this.modifier
-	local target = store.entities[m.target_id]
-
-	if not target or target.health.dead then
-		return false
-	end
-
-	if band(this.modifier.vis_flags, target.vis.bans) ~= 0 or band(this.modifier.vis_bans, target.vis.flags) ~= 0 then
-		return false
-	end
-
-	if target.unit and this.render then
-		for i = 1, #this.render.sprites do
-			local s = this.render.sprites[i]
-
-			s.flip_x = target.render.sprites[1].flip_x
-			s.ts = store.tick_ts
-
-			if s.size_names then
-				s.name = s.size_names[target.unit.size]
-			end
-		end
-	end
-
-	target.health.ignore_damage = true
-
-	return true
-end
-
-function scripts.mod_enemy_brute_storm_invulnerability.update(this, store, script)
-	local m = this.modifier
-
-	this.modifier.ts = store.tick_ts
-
-	local target = store.entities[m.target_id]
-
-	if not target or not target.pos then
-		queue_remove(store, this)
-
-		return
-	end
-
-	this.pos = target.pos
-
-	local is_healing = false
-	local healing_per_tick = 0
-	local healing_total_ticks = 10
-	local healing_ticks_done = 0
-	local healing_tick_delay = fts(3)
-	local last_heal_ts = store.tick_ts
-	local healing_done = false
-
-	while true do
-		target = store.entities[m.target_id]
-
-		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
-			queue_remove(store, this)
-
-			return
-		end
-
-		if not is_healing then
-			if target.health.hp < target.health.hp_max * this.hp_heal_threshold then
-				local healing_to_do = target.health.hp_max * this.hp_healing_amount
-
-				healing_per_tick = healing_to_do / healing_total_ticks
-				is_healing = true
-			end
-		elseif not healing_done and healing_tick_delay <= store.tick_ts - last_heal_ts then
-			healing_ticks_done = healing_ticks_done + 1
-
-			if healing_total_ticks <= healing_ticks_done then
-				healing_done = true
-			end
-
-			last_heal_ts = store.tick_ts
-			target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp + healing_per_tick)
-
-			signal.emit("health-regen", target, healing_per_tick)
-		end
-
-		if this.render and target.unit then
-			local s = this.render.sprites[1]
-			local flip_sign = 1
-
-			if target.render then
-				flip_sign = target.render.sprites[1].flip_x and -1 or 1
-			end
-
-			if m.health_bar_offset and target.health_bar then
-				local hb = target.health_bar.offset
-				local hbo = m.health_bar_offset
-
-				s.offset.x, s.offset.y = hb.x + hbo.x * flip_sign, hb.y + hbo.y
-			elseif m.use_mod_offset and target.unit.mod_offset then
-				s.offset.x, s.offset.y = target.unit.mod_offset.x * flip_sign, target.unit.mod_offset.y
-			end
-		end
-
-		coroutine.yield()
-	end
-end
-
-function scripts.mod_enemy_brute_storm_invulnerability.remove(this, store, script)
-	local m = this.modifier
-	local target = store.entities[m.target_id]
-
-	if target then
-		target.health.ignore_damage = false
-	end
-
-	return true
-end
-
 scripts.mod_enemies_storm_charged = {}
 
 function scripts.mod_enemies_storm_charged.insert(this, store, script)
@@ -72172,8 +71865,6 @@ function scripts.mod_enemies_storm_charged.insert(this, store, script)
 	end
 
 	if band(this.modifier.vis_flags, target.vis.bans) ~= 0 or band(this.modifier.vis_bans, target.vis.flags) ~= 0 then
-		log.paranoid("mod %s cannot be applied to entity %s:%s because of vis flags/bans", this.template_name, target.id, target.template_name)
-
 		return false
 	end
 
