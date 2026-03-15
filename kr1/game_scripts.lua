@@ -68233,8 +68233,8 @@ end
 -- Dragon world (KR5) scripts
 scripts.enemy_dragons = {}
 
-function scripts.enemy_dragons.insert(this, store, script)
-	if scripts.enemy_basic.insert(this, store, script) then
+function scripts.enemy_dragons.insert(this, store)
+	if scripts.enemy_basic.insert(this, store) then
 		for _, e in pairs(store.entities) do
 			if string.find(e.template_name, "^stage_39_cocoon") and table.contains(e.path_index, this.nav_path.pi) and this.nav_path.ni < 5 then
 				e.spawn_enemy = V.vclone(this.pos)
@@ -68245,6 +68245,10 @@ function scripts.enemy_dragons.insert(this, store, script)
 		end
 
 		this.enemy.gold = math.ceil(this.enemy.gold * this.gold_multiplier)
+
+		if this.health.hp_max > 2000 and store.wave_group_number > 6 then
+			this.health.hp_max = math.floor(this.health.hp_max * 1.1)
+		end
 
 		return true
 	end
@@ -70797,7 +70801,6 @@ function scripts.enemy_evolved_shadow.update(this, store, script)
 		smoke_fx()
 
 		if this.shadow_pushed_bans then
-			-- U.pop_bans(this.vis, this.shadow_pushed_bans)
 			U.bans_remove(this.vis, this.shadow_vis_bans)
 			this.shadow_pushed_bans = nil
 		end
@@ -70807,7 +70810,11 @@ function scripts.enemy_evolved_shadow.update(this, store, script)
 	end
 
 	local function break_fn(store, this)
-		shadow_hide()
+		if this.enemy.can_do_magic then
+			shadow_hide()
+		else
+			shadow_show()
+		end
 
 		local ntg = P:nodes_to_goal(this.nav_path)
 

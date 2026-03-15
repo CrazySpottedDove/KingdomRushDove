@@ -520,7 +520,6 @@ function screen_settings:draw()
 end
 
 function screen_settings:keypressed(key, isrepeat)
-	print("screen_settings:keypressed", key, isrepeat)
 	self.window:keypressed(key)
 end
 

@@ -5662,7 +5662,7 @@ function scripts.mod_stun.insert(this, store)
 		for i = 1, #this.render.sprites do
 			local s = this.render.sprites[i]
 
-			if not s.keep_flip_x then
+			if not s.keep_flip_x and target.render then
 				s.flip_x = target.render.sprites[1].flip_x
 			end
 
