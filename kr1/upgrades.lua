@@ -1218,7 +1218,7 @@ function upgrades:patch_templates(max_level)
 			if b.damage_min and b.damage_max then
 				local damage_avg = (b.damage_min + b.damage_max) / 2
 				if damage_avg > 40 then
-					apply_mod(b, "mod_archer_tear_strong")
+					apply_mod(b, "mod_archer_tear_big")
 				elseif damage_avg > 20 then
 					apply_mod(b, "mod_archer_tear")
 				elseif damage_avg > 10 then

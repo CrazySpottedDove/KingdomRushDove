@@ -619,6 +619,7 @@ return {
 	CArmorSmall3 = "高",
 	CArmorSmall4 = "极高",
 	CArmorSmall9 = "免疫",
+	Cancel = "取消",
 	CHANGE_LANGUAGE_QUESTION = "确定要更改语言设置吗？",
 	CINEMATICS_TAP_TO_CONTINUE_KR1 = "单击以继续...",
 	CINEMATICS_TAP_TO_CONTINUE_KR2 = "单击以继续...",
