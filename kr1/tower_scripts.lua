@@ -6289,7 +6289,7 @@ function scripts.bullet_tower_dark_elf.update(this, store)
 			end
 
 			if mods then
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local mod = E:create_entity(mod_name)
 
 					mod.modifier.source_id = this.id
@@ -15552,6 +15552,10 @@ function scripts.tower_ballista.update(this, store)
 					bl.from = V.vclone(b.pos)
 
 					if shoot_final_shot then
+						if target then
+							pred_pos.x = pred_pos.x + target.unit.hit_offset.x
+							pred_pos.y = pred_pos.y + target.unit.hit_offset.y
+						end
 						local dist = V.dist(bl.from.x, bl.from.y, pred_pos.x, pred_pos.y)
 						local factor = a.range * 1.5 / dist
 
@@ -15708,7 +15712,7 @@ function scripts.bullet_tower_ballista.update(this, store)
 			end
 
 			if mods then
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local mod = E:create_entity(mod_name)
 
 					mod.modifier.source_id = this.id
@@ -15830,9 +15834,7 @@ scripts.bullet_tower_ballista_skill_final_shot = {
 	update = function(this, store)
 		local b = this.bullet
 		local s = this.render.sprites[1]
-		-- local target = store.entities[b.target_id]
 		local source = store.entities[b.source_id]
-		-- local dest = V.vclone(b.to)
 		local dest = b.to
 		local angle = math.atan2(dest.y - b.from.y, dest.x - b.from.x)
 
@@ -15859,7 +15861,7 @@ scripts.bullet_tower_ballista_skill_final_shot = {
 
 			queue_damage(store, d)
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local mod = E:create_entity(mod_name)
 
 				mod.modifier.source_id = this.id
@@ -15881,7 +15883,7 @@ scripts.bullet_tower_ballista_skill_final_shot = {
 			fx.render.sprites[1].r = angle
 		end
 
-		local targets = {}
+		-- local targets = {}
 
 		s.ts = store.tick_ts
 
@@ -15899,27 +15901,12 @@ scripts.bullet_tower_ballista_skill_final_shot = {
 			end
 
 			if not already_hit_target and store.tick_ts - s.ts > this.hit_delay then
-				local sample_count = math.ceil(dist / (radius * 1.5))
-				local Dx = dest.x - b.from.x
-				local Dy = dest.y - b.from.y
+				local targets = U.find_enemies_around_line(b.from.x, b.from.y, dest.x, dest.y, radius, F_RANGED, F_NONE)
 
-				for i = 1, sample_count + 1 do
-					local lambda = (i - 1) / sample_count
-					local sample_pos = {
-						x = lambda * Dx + b.from.x,
-						y = lambda * Dy + b.from.y
-					}
-					local sample_targets = U.find_enemies_in_range_filter_off(sample_pos, radius, F_RANGED, F_NONE)
-
-					if sample_targets then
-						for _, target in pairs(sample_targets) do
-							targets[target] = true
-						end
+				if targets then
+					for _, target in ipairs(targets) do
+						hit_target(target)
 					end
-				end
-
-				for target, _ in pairs(targets) do
-					hit_target(target)
 				end
 
 				already_hit_target = true

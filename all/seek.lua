@@ -1584,4 +1584,54 @@ function seek.find_enemies_in_range_filter_override(origin, range, override_fn)
 	return result
 end
 
+--- 找到线段周围的所有敌人
+---@param x1 number
+---@param y1 number
+---@param x2 number
+---@param y2 number
+---@param d number 范围
+---@param flags number
+---@param bans number
+---@return table?
+function seek.find_enemies_around_line(x1, y1, x2, y2, d, flags, bans)
+	local result = {}
+	local dx = x2 - x1
+	local dy = y2 - y1
+	local theta = math.atan2(dy, dx)
+	local cos_theta = math.cos(theta)
+	local sin_theta = math.sin(theta)
+
+	local x1_ = sin_theta * x1 - cos_theta * y1
+	local y1_ = cos_theta * x1 + sin_theta * y1
+	local y2_ = cos_theta * x2 + sin_theta * y2
+
+	-- 确保 y1_ <= y2_
+	if y1_ > y2_ then
+		local tmp = y1_
+		y1_ = y2_
+		y2_ = tmp
+	end
+	local count = 0
+
+	for _, e in pairs(entities) do
+		if enemy_filter_simple(e, flags, bans) then
+			local hit_pos_x = e.pos.x + e.unit.hit_offset.x
+			local hit_pos_y = e.pos.y + e.unit.hit_offset.y
+			local hit_pos_x_ = sin_theta * hit_pos_x - cos_theta * hit_pos_y
+			local hit_pos_y_ = cos_theta * hit_pos_x + sin_theta * hit_pos_y
+
+			if hit_pos_y_ >= y1_ - d and hit_pos_y_ <= y2_ + d and hit_pos_x_ >= x1_ - d and hit_pos_x_ <= x1_ + d then
+				count = count + 1
+				result[count] = e
+			end
+		end
+	end
+
+	if count == 0 then
+		return nil
+	end
+
+	return result
+end
+
 return seek
