@@ -70775,7 +70775,9 @@ function scripts.enemy_evolved_shadow.update(this, store, script)
 
 		smoke_fx()
 
-		this.shadow_pushed_bans = U.push_bans(this.vis, this.shadow_vis_bans)
+		U.bans_add(this.vis, this.shadow_vis_bans)
+		this.shadow_pushed_bans = true
+		-- this.shadow_pushed_bans = U.push_bans(this.vis, this.shadow_vis_bans)
 		this.render.sprites[1].angles.idle = table.deepclone(this.render.sprites[1].angles.walk_shadow)
 		this.render.sprites[1].angles.walk = table.deepclone(this.render.sprites[1].angles.walk_shadow)
 	end
@@ -70790,8 +70792,8 @@ function scripts.enemy_evolved_shadow.update(this, store, script)
 		smoke_fx()
 
 		if this.shadow_pushed_bans then
-			U.pop_bans(this.vis, this.shadow_pushed_bans)
-
+			-- U.pop_bans(this.vis, this.shadow_pushed_bans)
+			U.bans_remove(this.vis, this.shadow_vis_bans)
 			this.shadow_pushed_bans = nil
 		end
 

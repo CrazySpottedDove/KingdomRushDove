@@ -6966,49 +6966,10 @@ end
 
 scripts.mod_teleport = {}
 
-function scripts.mod_teleport.queue(this, store, insertion)
-	local target = store.entities[this.modifier.target_id]
-
-	if not target then
-		return
-	end
-
-	if insertion then
-		log.debug("%s (%s) queue/insertion", this.template_name, this.id)
-
-		if U.flags_pass(target.vis, this.modifier) then
-			this._target_prev_bans = target.vis.bans
-		-- target.vis.bans = F_ALL
-		end
-	else
-		log.debug("%s (%s) queue/removal", this.template_name, this.id)
-
-		if this._target_prev_bans then
-			target.vis.bans = this._target_prev_bans
-		end
-	end
-end
-
-function scripts.mod_teleport.dequeue(this, store, insertion)
-	local target = store.entities[this.modifier.target_id]
-
-	if not target then
-		return
-	end
-
-	if insertion then
-		log.debug("%s (%s) dequeue/insertion", this.template_name, this.id)
-
-		if this._target_prev_bans then
-			target.vis.bans = this._target_prev_bans
-		end
-	end
-end
-
 function scripts.mod_teleport.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
-	if target and target.health and not target.health.dead and this._target_prev_bans ~= nil and (not this.max_times_applied or not target.enemy.counts.mod_teleport or target.enemy.counts.mod_teleport < this.max_times_applied) and (not this.jump_connection or P:get_next_pi(target.nav_path.pi)) then
+	if target and target.health and not target.health.dead and (not this.max_times_applied or not target.enemy.counts.mod_teleport or target.enemy.counts.mod_teleport < this.max_times_applied) and (not this.jump_connection or P:get_next_pi(target.nav_path.pi)) then
 		if this.damage_base ~= 0 then
 			local d = E:create_entity("damage")
 
@@ -7165,6 +7126,8 @@ function scripts.mod_teleport.update(this, store)
 		U.y_wait(store, this.delay_end)
 	end
 
+	U.sprites_show(target, nil, nil, true)
+
 	if target.health and not target.health.dead then
 		if target.ui then
 			target.ui.can_click = true
@@ -7174,19 +7137,18 @@ function scripts.mod_teleport.update(this, store)
 			target.health_bar.hidden = health_bar_hidden
 		end
 
-		U.sprites_show(target, nil, nil, true)
 		SU.show_modifiers(store, target, true)
 		SU.show_auras(store, target, true)
+	end
 
-		local nn, new = P:next_entity_node(target, store.tick_length)
+	local nn, new = P:next_entity_node(target, store.tick_length)
 
-		if nn then
-			local vx, vy = V.sub(nn.x, nn.y, target.pos.x, target.pos.y)
-			local v_angle = V.angleTo(vx, vy)
+	if nn then
+		local vx, vy = V.sub(nn.x, nn.y, target.pos.x, target.pos.y)
+		local v_angle = V.angleTo(vx, vy)
 
-			if target.heading then
-				target.heading.angle = v_angle
-			end
+		if target.heading then
+			target.heading.angle = v_angle
 		end
 	end
 

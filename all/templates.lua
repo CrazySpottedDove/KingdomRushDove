@@ -673,9 +673,8 @@ tt.damage_max = 0
 tt.damage_min = 0
 tt.damage_type = DAMAGE_PHYSICAL
 tt.main_script.insert = scripts.mod_damage.insert
+
 tt = E:register_t("mod_teleport", "modifier")
-tt.main_script.queue = scripts.mod_teleport.queue
-tt.main_script.dequeue = scripts.mod_teleport.dequeue
 tt.main_script.update = scripts.mod_teleport.update
 tt.main_script.insert = scripts.mod_teleport.insert
 tt.main_script.remove = scripts.mod_teleport.remove
