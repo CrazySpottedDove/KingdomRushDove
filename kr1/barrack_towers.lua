@@ -2417,7 +2417,7 @@ tt.sound_events.insert = "TowerPandasRangedHat"
 --#region bullet_tower_pandas_air_soldier_special_lvl1
 tt = RT("bullet_tower_pandas_air_soldier_special_lvl1", "bullet_tower_pandas_air_lvl4")
 tt.main_script.update = scripts.bullet_tower_pandas_air.update
-tt.bullet.damage_min = b.soldier.hat.damage_levels[1].max
+tt.bullet.damage_min = b.soldier.hat.damage_levels[1].min
 tt.bullet.damage_max = b.soldier.hat.damage_levels[1].max
 tt.max_bounces = b.soldier.hat.max_bounces
 tt.bounce_range = b.soldier.hat.bounce_range
