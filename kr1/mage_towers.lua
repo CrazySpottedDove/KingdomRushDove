@@ -771,9 +771,9 @@ tt.powers.charge.price_base = 250
 tt.powers.charge.max_charge_factor = 0.5
 tt.powers.charge.min_charge_factor = 0.2
 tt.main_script.update = scripts.tower_sunray.update
-tt.render.sprites[1].name = "sunrayTower_layer1_0068"
+tt.render.sprites[1].name = "sunrayTower_layer1_0001"
 tt.render.sprites[1].animated = false
-tt.render.sprites[1].offset = vec_2(-4.2, 48.2)
+tt.render.sprites[1].offset = vec_2(-1.0, 10)
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].hover_off_hidden = true
 tt.render.sprites[2] = CC("sprite")
@@ -2402,7 +2402,8 @@ tt = RT("bullet_tower_ray_chain", "bullet_tower_ray_lvl4")
 
 local b = balance.towers.ray
 
-tt.damage_mult = nil
+-- 连锁伤害倍率由局内 ac.damage_mult（升级等级）与 tower_scripts 在发射时写入；
+-- 勿置 nil，否则 this.damage_mult 在脚本里参与运算会报错。
 tt.max_enemies = b.skill_chain.max_enemies
 tt.chain_pos = 1
 tt.chain_delay = b.skill_chain.chain_delay

@@ -670,7 +670,7 @@ function scripts.eb_veznan.update(this, store)
 			end
 
 			for _, target in pairs(targets or {}) do
-				if not drained_ids[target.id] and not target.health.dead and not is_soul_drain_immune(target) then
+				if not drained_ids[target.id] and target.health and not target.health.dead and not is_soul_drain_immune(target) then
 					local d = E:create_entity("damage")
 
 					d.damage_type = bor(DAMAGE_DISINTEGRATE, DAMAGE_INSTAKILL)
@@ -1321,7 +1321,8 @@ function scripts.eb_kingpin.update(this, store)
 				end
 
 				if targets then
-					for _, target in pairs(targets) do
+					for i = 1, #targets do
+						local target = targets[i]
 						local m = E:create_entity(a.mod)
 
 						m.modifier.source_id = this.id
@@ -1510,7 +1511,8 @@ function scripts.eb_moloch.update(this, store)
 					targets = U.find_soldiers_in_range(store.soldiers, dest, 0, ha.damage_radius, ha.vis_flags or 0, ha.vis_bans or 0)
 
 					if targets then
-						for _, t in pairs(targets) do
+						for i = 1, #targets do
+							local t = targets[i]
 							local d = SU.create_attack_damage(ha, t.id, this)
 
 							queue_damage(store, d)
@@ -1651,7 +1653,8 @@ function scripts.eb_myconid.update(this, store)
 				local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, sa.radius, sa.vis_flags, sa.vis_bans)
 
 				if targets then
-					for _, target in pairs(targets) do
+					for i = 1, #targets do
+						local target = targets[i]
 						local m = E:create_entity(sa.mod)
 
 						m.modifier.target_id = target.id
@@ -1797,7 +1800,8 @@ function scripts.eb_blackburn.update(this, store)
 				end)
 
 				if towers then
-					for _, tt in pairs(towers) do
+					for i = 1, #towers do
+						local tt = towers[i]
 						local tm = E:create_entity(sa.mod_towers)
 
 						tm.modifier.source_id = this.id
@@ -1810,7 +1814,8 @@ function scripts.eb_blackburn.update(this, store)
 				local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, sa.damage_radius, sa.vis_flags or 0, sa.vis_bans or 0)
 
 				if targets then
-					for _, t in pairs(targets) do
+					for i = 1, #targets do
+						local t = targets[i]
 						local d = E:create_entity("damage")
 
 						d.damage_type = sa.damage_type
@@ -3892,7 +3897,8 @@ function scripts.dracula_damage_aura.update(this, store)
 			local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.radius, a.vis_flags, a.vis_bans)
 
 			if targets then
-				for _, target in pairs(targets) do
+				for i = 1, #targets do
+					local target = targets[i]
 					local value = math.random(a.dps_min, a.dps_max)
 
 					value = value * dt * (target.hero and a.hero_damage_factor or 1)
@@ -4002,7 +4008,8 @@ function scripts.eb_saurian_king.update(this, store)
 		local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, ha.damage_radius, ha.vis_flags, ha.vis_bans)
 
 		if targets then
-			for _, target in pairs(targets) do
+			for i = 1, #targets do
+				local target = targets[i]
 				local dist_factor = U.dist_factor_inside_ellipse(target.pos, this.pos, ha.damage_radius, ha.max_damage_radius)
 				local d = E:create_entity("damage")
 
@@ -4182,7 +4189,8 @@ function scripts.eb_saurian_king.update(this, store)
 		local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, ha.damage_radius, ha.vis_flags, ha.vis_bans)
 
 		if targets then
-			for _, target in pairs(targets) do
+			for i = 1, #targets do
+				local target = targets[i]
 				local dist_factor = U.dist_factor_inside_ellipse(target.pos, this.pos, ha.damage_radius, ha.max_damage_radius)
 				local d = E:create_entity("damage")
 
@@ -4391,7 +4399,8 @@ function scripts.eb_gnoll.update(this, store)
 				local targets = U.find_soldiers_in_range(store.soldiers, this.pos, fa.min_range, fa.max_range, fa.vis_flags, fa.vis_bans)
 
 				if targets then
-					for _, target in pairs(targets) do
+					for i = 1, #targets do
+						local target = targets[i]
 						local d = E:create_entity("damage")
 
 						d.damage_type = fa.damage_type
@@ -6045,7 +6054,7 @@ scripts.mod_krdove_elephant_cannibal = {}
 function scripts.mod_krdove_elephant_cannibal.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
-	if not target or target.health.dead then
+	if not target or not target.health or target.health.dead then
 		return false
 	end
 
@@ -6072,7 +6081,7 @@ end
 function scripts.mod_krdove_elephant_cannibal.update(this, store)
 	local target = store.entities[this.modifier.target_id]
 
-	if not target or target.health.dead then
+	if not target or not target.health or target.health.dead then
 		queue_remove(store, this)
 
 		return
@@ -6083,7 +6092,7 @@ function scripts.mod_krdove_elephant_cannibal.update(this, store)
 	while true do
 		local target = store.entities[this.modifier.target_id]
 
-		if not target or target.health.dead then
+		if not target or not target.health or target.health.dead then
 			break
 		end
 
@@ -6716,7 +6725,8 @@ function scripts.boss_cult_leader.update(this, store)
 		end)
 
 		if targets and min_targets <= #targets then
-			for _, target in pairs(targets) do
+			for i = 1, #targets do
+				local target = targets[i]
 				local d = E:create_entity("damage")
 
 				d.source_id = this.id
@@ -11525,7 +11535,7 @@ function scripts.bullet_boss_grymbeard.update(this, store)
 	fm.max_v = 900
 	ps.particle_system.emission_rate = 90
 
-	if not target or target.health.dead then
+	if not target or not target.health or target.health.dead then
 		local new_target, targets
 		if attack.filter_fn then
 			new_target, targets = U.find_foremost_enemy_in_range_filter_on(source_pos, attack.max_range, false, attack.vis_flags, attack.vis_bans, attack.filter_fn)
@@ -11580,7 +11590,8 @@ function scripts.bullet_boss_grymbeard.update(this, store)
 		local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
 
 		if targets then
-			for _, target in pairs(targets) do
+			for i = 1, #targets do
+				local target = targets[i]
 				local d = SU.create_bullet_damage(b, target.id, this.id)
 
 				queue_damage(store, d)
@@ -13478,8 +13489,8 @@ function scripts.boss_redboy_teen.update(this, store)
 					return v.pos and v.is_flaming_ground and v.duration ~= 1e+99 and U.is_inside_ellipse(v.pos, this.pos, a_fireabsorb.absorb_radius)
 				end)
 
-				for k, v in pairs(targets) do
-					v.duration = 0
+				for i = 1, #targets do
+					targets[i].duration = 0
 				end
 
 				if SU.y_enemy_wait(store, this, a_fireabsorb.cast_time - a_fireabsorb.absorb_time) then

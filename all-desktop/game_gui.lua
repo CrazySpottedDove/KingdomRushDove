@@ -5578,8 +5578,10 @@ function PickView:show_tower_hover(entity)
 	local s = entity.render.sprites[1]
 
 	if s then
-		s._orig_name = s.name
-		s.name = s.name .. "_over"
+		if s.name then
+			s._orig_name = s.name
+			s.name = s.name .. "_over"
+		end
 
 		if s.hover_off_hidden then
 			s.hidden = nil
@@ -5598,7 +5600,10 @@ function PickView:hide_tower_hover()
 		local s = oe.render.sprites[1]
 
 		if s then
-			s.name = s._orig_name
+			if s._orig_name then
+				s.name = s._orig_name
+				s._orig_name = nil
+			end
 
 			if s.hover_off_hidden then
 				s.hidden = true

@@ -1,7 +1,7 @@
 local E = require("entity_db")
 local U = require("utils")
 local UP = require("kr1.upgrades")
-local scripts = require("scripts")
+local scripts = require("endless_scripts")
 
 local function patch_archer_bleed(level, ctx)
 	local mod = E:get_template("mod_blood_elves")

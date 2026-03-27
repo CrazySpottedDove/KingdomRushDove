@@ -2692,33 +2692,6 @@ function scripts.arrow_missile.update(this, store)
 	queue_remove(store, this)
 end
 
-scripts.arrow_endless_multishot = {}
-
-function scripts.arrow_endless_multishot.insert(this, store)
-	if this._endless_multishot > 0 then
-		local targets = U.find_enemies_in_range_filter_off(this.bullet.to, 100, this.bullet.vis_flags, this.bullet.vis_bans)
-		if targets then
-			for i = 1, this._endless_multishot do
-				local target = targets[km.zmod(i, #targets)]
-
-				if target then
-					local b = E:clone_entity(this)
-
-					b._endless_multishot = 0
-					b.bullet.from = V.vclone(this.pos)
-					b.bullet.to.x = target.pos.x + target.unit.hit_offset.x
-					b.bullet.to.y = target.pos.y + target.unit.hit_offset.y
-					b.bullet.target_id = target.id
-
-					queue_insert(store, b)
-				end
-			end
-		end
-	end
-
-	return true
-end
-
 scripts.mod_health_damage_factor_inc = {}
 
 function scripts.mod_health_damage_factor_inc.insert(this, store)
@@ -6454,21 +6427,24 @@ scripts.mod_tower_factors = {}
 function scripts.mod_tower_factors.insert(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
+	local range_factor = this.range_factor or m.range_factor
+	local damage_factor = this.damage_factor or m.damage_factor
+	local cooldown_factor = this.cooldown_factor or m.cooldown_factor
 
 	if not target or not target.tower then
 		return false
 	end
 
-	if this.range_factor then
-		SU.insert_tower_range_buff(target, this.range_factor, true)
+	if range_factor then
+		SU.insert_tower_range_buff(target, range_factor, true)
 	end
 
-	if this.damage_factor then
-		SU.insert_tower_damage_factor_buff(target, this.damage_factor - 1)
+	if damage_factor then
+		SU.insert_tower_damage_factor_buff(target, damage_factor - 1)
 	end
 
-	if this.cooldown_factor then
-		SU.insert_tower_cooldown_buff(store.tick_ts, target, this.cooldown_factor)
+	if cooldown_factor then
+		SU.insert_tower_cooldown_buff(store.tick_ts, target, cooldown_factor)
 	end
 
 	signal.emit("mod-applied", this, target)
@@ -6479,21 +6455,24 @@ end
 function scripts.mod_tower_factors.remove(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
+	local range_factor = this.range_factor or m.range_factor
+	local damage_factor = this.damage_factor or m.damage_factor
+	local cooldown_factor = this.cooldown_factor or m.cooldown_factor
 
 	if not target or not target.tower then
 		return true
 	end
 
-	if this.range_factor then
-		SU.remove_tower_range_buff(target, this.range_factor, true)
+	if range_factor then
+		SU.remove_tower_range_buff(target, range_factor, true)
 	end
 
-	if this.damage_factor then
-		SU.remove_tower_damage_factor_buff(target, this.damage_factor - 1)
+	if damage_factor then
+		SU.remove_tower_damage_factor_buff(target, damage_factor - 1)
 	end
 
-	if this.cooldown_factor then
-		SU.remove_tower_cooldown_buff(store.tick_ts, target, this.cooldown_factor)
+	if cooldown_factor then
+		SU.remove_tower_cooldown_buff(store.tick_ts, target, cooldown_factor)
 	end
 
 	return true
