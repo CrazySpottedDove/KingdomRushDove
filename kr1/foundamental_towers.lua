@@ -10,6 +10,7 @@ local tt = nil
 local b
 local balance = require("kr1.data.balance")
 local scripts = require("game_scripts")
+local U = require("utils")
 
 require("templates")
 
