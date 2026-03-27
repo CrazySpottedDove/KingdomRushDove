@@ -22,7 +22,7 @@ level.required_sounds={"music_stage38","FrontiersUndergroundAmbienceSounds"}
 level.required_textures={"go_enemies_underground","go_stages_underground","go_stage38","go_stage38_bg"}
 level.show_comic_idx=12
 function level:init(store)
-store.level_terrain_type=TERRAIN_STYLE_UNDERGROUND
+store.level_terrain_style=TERRAIN_STYLE_UNDERGROUND
 self.locations=LU.load_locations(store,self)
 self.locked_hero=false
 self.locked_powers={}
@@ -38,7 +38,7 @@ LU.insert_background(store,"Stage12_0005",Z_BACKGROUND_COVERS,nil,-4)
 LU.insert_background(store,"Stage12_0002",Z_OBJECTS,548)
 LU.insert_background(store,"Stage12_0003",Z_OBJECTS,623)
 LU.insert_background(store,"Stage12_0004",Z_OBJECTS,354)
-LU.insert_defend_points(store,self.locations.exits,store.level_terrain_type)
+LU.insert_defend_points(store,self.locations.exits,store.level_terrain_style)
 if store.level_mode==GAME_MODE_CAMPAIGN then
 for _,h in pairs(self.locations.holders) do
 if h.id=="2" then

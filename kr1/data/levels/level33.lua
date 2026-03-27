@@ -18,7 +18,7 @@ level.required_sounds={"music_stage33","FrontiersJungleAmbienceSounds","AmazonSo
 level.required_textures={"go_enemies_jungle","go_stages_jungle","go_stage33","go_stage33_bg"}
 level.show_comic_idx=11
 function level:init(store)
-store.level_terrain_type=TERRAIN_STYLE_JUNGLE
+store.level_terrain_style=TERRAIN_STYLE_JUNGLE
 self.locations=LU.load_locations(store,self)
 if store.level_mode==GAME_MODE_CAMPAIGN then
 self.locked_hero=false
@@ -44,7 +44,7 @@ LU.insert_background(store,"Stage07_0002",Z_OBJECTS,200)
 LU.insert_background(store,"Stage07_0003",Z_OBJECTS,130)
 LU.insert_background(store,"Stage07_0004",Z_OBJECTS,25)
 LU.insert_background(store,"Stage07_0005",Z_OBJECTS,600)
-LU.insert_defend_points(store,self.locations.exits,store.level_terrain_type)
+LU.insert_defend_points(store,self.locations.exits,store.level_terrain_style)
 self.hidden_holders={}
 if store.level_mode==GAME_MODE_CAMPAIGN then
 for _,h in pairs(self.locations.holders) do

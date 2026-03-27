@@ -86,7 +86,7 @@ function LU.load_level(store, name)
 	level.locations = LU.load_locations(store) or {}
 
 	if level.data then
-		store.level_terrain_type = level.data.level_terrain_type
+		store.level_terrain_style = level.data.level_terrain_style
 
 		for _, n in pairs({
 			"required_textures",
@@ -255,7 +255,11 @@ function LU.insert_entities(store, items, store_back_references)
 					-- if e.tower and e.tower.terrain_style then
 					-- 	e.render.sprites[1].name = string.format(e.render.sprites[1].name, e.tower.terrain_style)
 					-- end
-					if e.tower and e.tower.terrain_style then
+					if e.tower then
+						if not e.tower.terrain_style then
+							U.set_terrain_style(e, store.level_terrain_style)
+						end
+
 						if e.render.sprites[1].name and string.find(e.render.sprites[1].name, "%%") then
 							U.set_terrain_style(e, e.tower.terrain_style)
 						end

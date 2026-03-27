@@ -33,13 +33,13 @@ self.max_upgrade_level=3
 self.locked_towers={"tower_build_barrack","tower_build_engineer"}
 end
 self.unlock_towers={"tower_dwaarp","tower_barrack_pirates"}
-store.level_terrain_type=TERRAIN_STYLE_DESERT
+store.level_terrain_style=TERRAIN_STYLE_DESERT
 self.locations=LU.load_locations(store,self)
 end
 function level:load(store)
 LU.insert_background(store,"Stage05_0001",Z_BACKGROUND)
 LU.insert_background(store,"Stage05_0002",Z_OBJECT,631)
-LU.insert_defend_points(store,self.locations.exits,store.level_terrain_type)
+LU.insert_defend_points(store,self.locations.exits,store.level_terrain_style)
 if store.level_mode==GAME_MODE_CAMPAIGN or store.level_mode==GAME_MODE_HEROIC then
 for _,h in pairs(self.locations.holders) do
 if h.id=="13" then

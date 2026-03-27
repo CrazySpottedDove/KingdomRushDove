@@ -16,7 +16,7 @@ local level={}
 level.required_sounds={"music_stage34","FrontiersJungleAmbienceSounds","PiratesSounds","SpecialCarnivorePlantSounds","SpecialMermaid"}
 level.required_textures={"go_enemies_jungle","go_stages_jungle","go_stage34","go_stage34_bg"}
 function level:init(store)
-store.level_terrain_type=TERRAIN_STYLE_JUNGLE
+store.level_terrain_style=TERRAIN_STYLE_JUNGLE
 self.locations=LU.load_locations(store,self)
 P:deactivate_path(4)
 P:add_invalid_range(3,1,40)
@@ -40,7 +40,7 @@ self.unlock_towers={"tower_totem"}
 end
 function level:load(store)
 LU.insert_background(store,"Stage08_0001",Z_BACKGROUND)
-LU.insert_defend_points(store,self.locations.exits,store.level_terrain_type)
+LU.insert_defend_points(store,self.locations.exits,store.level_terrain_style)
 self.hidden_holders={}
 if store.level_mode==GAME_MODE_CAMPAIGN or store.level_mode==GAME_MODE_HEROIC then
 for _,h in pairs(self.locations.holders) do

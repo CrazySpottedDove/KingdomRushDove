@@ -23,7 +23,7 @@ level.required_sounds={"music_stage41","FrontiersUndergroundAmbienceSounds","Fro
 level.required_textures={"go_enemies_underground","go_stages_underground","go_stage41","go_stage41_bg"}
 level.show_comic_idx=13
 function level:init(store)
-store.level_terrain_type=TERRAIN_STYLE_UNDERGROUND
+store.level_terrain_style=TERRAIN_STYLE_UNDERGROUND
 self.locations=LU.load_locations(store,self)
 self.locked_hero=false
 self.locked_powers={}
@@ -42,7 +42,7 @@ local bg3=LU.insert_background(store,bg_prefix.."0003",Z_OBJECTS,615)
 bg1.pos.y=bg1.pos.y+bg_offset
 bg2.pos.y=bg2.pos.y+bg_offset
 bg3.pos.y=bg3.pos.y+bg_offset
-LU.insert_defend_points(store,self.locations.exits,store.level_terrain_type)
+LU.insert_defend_points(store,self.locations.exits,store.level_terrain_style)
 if store.level_mode==GAME_MODE_CAMPAIGN or store.level_mode==GAME_MODE_HEROIC then
 for _,h in pairs(self.locations.holders) do
 if table.contains({"6","3","14","11","10"},h.id) then

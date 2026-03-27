@@ -9,7 +9,7 @@ level.required_sounds={"music_stage42","PiratesSounds","PirateBigSounds","Pirate
 level.required_textures={"go_enemies_desert","go_enemies_rising_tides","go_stages_rising_tides","go_stage42","go_stage42_bg"}
 level.show_comic_idx=16
 function level:init(store)
-store.level_terrain_type=TERRAIN_STYLE_BEACH
+store.level_terrain_style=TERRAIN_STYLE_BEACH
 self.locations=LU.load_locations(store,self)
 self.locked_hero=false
 self.max_upgrade_level=6
@@ -23,7 +23,7 @@ end
 function level:load(store)
 LU.insert_background(store,"Stage16_0001",Z_BACKGROUND)
 LU.insert_background(store,"Stage16_0002",Z_OBJECT,616)
-LU.insert_defend_points(store,self.locations.exits,store.level_terrain_type)
+LU.insert_defend_points(store,self.locations.exits,store.level_terrain_style)
 for _,h in pairs(self.locations.holders) do
 if store.level_mode==GAME_MODE_CAMPAIGN and (h.id=="8" or h.id=="5") or store.level_mode==GAME_MODE_HEROIC and (h.id=="8" or h.id=="141") or store.level_mode==GAME_MODE_IRON and (h.id=="8" or h.id=="7" or h.id=="11") then
 LU.insert_tower(store,"tower_pirate_watchtower",h.style,h.pos,h.rally_pos,nil,h.id)

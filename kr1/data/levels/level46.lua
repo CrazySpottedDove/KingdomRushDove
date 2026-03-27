@@ -15,7 +15,7 @@ local level={}
 level.required_sounds={"music_stage46","HalloweenSounds","HWHeadlessHorseman"}
 level.required_textures={"go_enemies_halloween","go_enemies_blackburn","go_stages_halloween","go_stage46","go_stage46_bg"}
 function level:init(store)
-store.level_terrain_type=TERRAIN_STYLE_HALLOWEEN
+store.level_terrain_style=TERRAIN_STYLE_HALLOWEEN
 self.locations=LU.load_locations(store,self)
 self.locked_hero=false
 self.max_upgrade_level=6
@@ -27,7 +27,7 @@ end
 end
 function level:load(store)
 LU.insert_background(store,"Stage20_0001",Z_BACKGROUND)
-LU.insert_defend_points(store,self.locations.exits,store.level_terrain_type)
+LU.insert_defend_points(store,self.locations.exits,store.level_terrain_style)
 for _,h in pairs(self.locations.holders) do
 if store.level_mode==GAME_MODE_IRON and h.id=="11" then
 LU.insert_tower(store,"tower_barrack_2",h.style,h.pos,h.rally_pos,0,h.id)

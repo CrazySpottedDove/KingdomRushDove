@@ -9,7 +9,7 @@ local level={}
 level.required_sounds={"music_stage28","SpecialStargate"}
 level.required_textures={"go_enemies_desert","go_stages_desert","go_stage28","go_stage28_bg"}
 function level:init(store)
-store.level_terrain_type=TERRAIN_STYLE_DESERT
+store.level_terrain_style=TERRAIN_STYLE_DESERT
 self.locations=LU.load_locations(store,self)
 if store.level_mode==GAME_MODE_CAMPAIGN then
 self.max_upgrade_level=6
@@ -26,7 +26,7 @@ end
 end
 function level:load(store)
 LU.insert_background(store,"Stage02_0001",Z_BACKGROUND)
-LU.insert_defend_points(store,self.locations.exits,store.level_terrain_type)
+LU.insert_defend_points(store,self.locations.exits,store.level_terrain_style)
 for _,h in pairs(self.locations.holders) do
 if h.id=="14" or h.id=="15" then
 LU.insert_tower(store,"tower_archer_hammerhold",h.style,h.pos,h.rally_pos,nil,h.id)

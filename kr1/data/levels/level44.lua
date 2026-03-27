@@ -11,7 +11,7 @@ local level={}
 level.required_sounds={"music_stage44","RisingTidesSounds","SpecialMermaid"}
 level.required_textures={"go_enemies_desert","go_enemies_rising_tides","go_stages_rising_tides","go_stage44","go_stage44_bg"}
 function level:init(store)
-store.level_terrain_type=TERRAIN_STYLE_BEACH
+store.level_terrain_style=TERRAIN_STYLE_BEACH
 self.locations=LU.load_locations(store,self)
 self.locked_hero=false
 self.max_upgrade_level=6
@@ -24,7 +24,7 @@ end
 function level:load(store)
 LU.insert_background(store,"Stage18_0001",Z_BACKGROUND)
 LU.insert_background(store,"Stage18_0002",Z_OBJECT,370)
-LU.insert_defend_points(store,self.locations.exits,store.level_terrain_type)
+LU.insert_defend_points(store,self.locations.exits,store.level_terrain_style)
 local flags={{"decal_defense_flag_water",717,55},{"decal_defense_flag_water",863,55},{"decal_defense_flag",400,55},{"decal_defense_flag",549,55}}
 for _,f in pairs(flags) do
 local e=E:create_entity(f[1])

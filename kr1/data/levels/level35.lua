@@ -16,7 +16,7 @@ local level={}
 level.required_sounds={"music_stage35","FrontiersJungleAmbienceSounds","SpecialAlienSounds"}
 level.required_textures={"go_enemies_jungle","go_stages_jungle","go_stage35","go_stage35_bg"}
 function level:init(store)
-store.level_terrain_type=TERRAIN_STYLE_JUNGLE
+store.level_terrain_style=TERRAIN_STYLE_JUNGLE
 self.locations=LU.load_locations(store,self)
 if store.level_mode==GAME_MODE_CAMPAIGN then
 self.locked_hero=false
@@ -38,7 +38,7 @@ self.unlock_towers={"tower_necromancer"}
 end
 function level:load(store)
 LU.insert_background(store,"Stage09_0001",Z_BACKGROUND)
-LU.insert_defend_points(store,self.locations.exits,store.level_terrain_type)
+LU.insert_defend_points(store,self.locations.exits,store.level_terrain_style)
 self.hidden_holders={}
 if store.level_mode==GAME_MODE_CAMPAIGN then
 for _,h in pairs(self.locations.holders) do

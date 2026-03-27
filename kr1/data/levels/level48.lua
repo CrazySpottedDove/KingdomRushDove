@@ -17,7 +17,7 @@ level.required_sounds={"music_stage48","FrontiersUndergroundAmbienceSounds","Sau
 level.required_textures={"go_enemies_underground","go_stages_underground","go_stage48","go_stage48_bg"}
 level.show_comic_idx=18
 function level:init(store)
-store.level_terrain_type=TERRAIN_STYLE_UNDERGROUND
+store.level_terrain_style=TERRAIN_STYLE_UNDERGROUND
 self.locations=LU.load_locations(store,self)
 self.locked_hero=false
 self.max_upgrade_level=6
@@ -30,7 +30,7 @@ end
 function level:load(store)
 LU.insert_background(store,"Stage22_0001",Z_BACKGROUND)
 LU.insert_background(store,"Stage22_0002",Z_BACKGROUND_COVERS,nil,-1)
-LU.insert_defend_points(store,self.locations.exits,store.level_terrain_type)
+LU.insert_defend_points(store,self.locations.exits,store.level_terrain_style)
 for _,h in pairs(self.locations.holders) do
 if store.level_mode==GAME_MODE_IRON and table.contains({"4","6","12"},h.id) or store.level_mode~=GAME_MODE_IRON and h.id=="16" then
 e=LU.insert_tower(store,"tower_barrack_dwarf",h.style,h.pos,h.rally_pos,nil,h.id)
