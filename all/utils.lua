@@ -2996,6 +2996,11 @@ function U.set_terrain_style(e, terrain_style)
 		return
 	end
 
+	-- 对于坏塔位，不修改 sprite
+	if e.render.sprites[1].name and string.find(e.render.sprites[1].name, "build_terrain_blocked") then
+		return
+	end
+
 	e.render.sprites[1].name = TERRAIN_STYLE_SPRITE_DICT[terrain_style]
 -- DEBUG USE: GUARANTEE THAT terrain_style is not a number!
 -- print("set terrain style to " .. terrain_style)
