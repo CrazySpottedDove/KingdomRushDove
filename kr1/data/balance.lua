@@ -5809,7 +5809,7 @@ local towers = {
 			},
 			ranged_attack = {
 				cooldown = 2,
-				max_range = {150, 150, 150, 160},
+				max_range = {150, 150, 150, 165},
 				min_range = {10, 10, 10, 10},
 				damage_max = {7, 18, 34, 60},
 				damage_min = {5, 12, 22, 40}
@@ -5831,11 +5831,13 @@ local towers = {
 					[3] = 24
 				},
 				damage_factor = {1, 1, 1},
-				damage_type = DAMAGE_AGAINST_ARMOR
+				damage_type = DAMAGE_AGAINST_ARMOR,
+				slow_duration = 0.25,
+				slow_factor = 0.35
 			},
 			sting_missiles = {
 				price = {250, 100, 100},
-				max_range = {200, 125, 125},
+				max_range = {200, 200, 200},
 				min_range = {20, 20, 20},
 				damage_type = DAMAGE_INSTAKILL,
 				hp_max_target = {300, 600, 900},

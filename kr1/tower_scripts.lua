@@ -13482,7 +13482,7 @@ local function tower_rocket_gunners_phosphoric_area_damage(soldier, store, targe
 		return
 	end
 
-	for _, enemy in pairs(enemies) do
+	for _, enemy in ipairs(enemies) do
 		local d = E:create_entity("damage")
 
 		d.damage_type = attack.damage_type
@@ -13502,8 +13502,12 @@ local function tower_rocket_gunners_phosphoric_area_damage(soldier, store, targe
 		d.value = d.value * soldier.unit.damage_factor
 		d.source_id = soldier.id
 		d.target_id = enemy.id
-
 		queue_damage(store, d)
+
+		local mod = E:create_entity("mod_soldier_tower_rocket_gunners_phosphoric_slow")
+		mod.modifier.source_id = soldier.id
+		mod.modifier.target_id = enemy.id
+		queue_insert(store, mod)
 	end
 end
 
@@ -13837,7 +13841,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 
 			animation_start(this, an, af, store.tick_ts, true)
 		else
-			animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil, force_ts)
+			animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil)
 		end
 
 		if store.tick_ts - this.idle_flip.ts > 2 * store.tick_length then

@@ -2692,6 +2692,12 @@ tt.track_target = true
 tt.ray_duration = fts(2)
 tt.sound_events.insert = "TowerRocketGunnersPhosphoricCoating"
 --#endregion
+
+tt = RT("mod_soldier_tower_rocket_gunners_phosphoric_slow", "mod_slow")
+b = balance.towers.rocket_gunners.soldier
+tt.modifier.duration = b.phosphoric.slow_duration
+tt.slow.factor = b.phosphoric.slow_factor
+
 --#region bullet_soldier_tower_rocket_gunners_sting_missiles
 tt = RT("bullet_soldier_tower_rocket_gunners_sting_missiles", "bullet")
 b = balance.towers.rocket_gunners.soldier
