@@ -12901,17 +12901,27 @@ function scripts.tower_arcane_wizard5.update(this, store)
 		else
 			if pow_d.changed then
 				pow_d.changed = nil
-				ad.cooldown = pow_d.cooldown[pow_d.level]
+				local new_cd_d = pow_d.cooldown and pow_d.cooldown[pow_d.level]
+				if new_cd_d then
+					ad.cooldown = new_cd_d
+				end
 
-				if pow_d.level == 1 then
+				if pow_d.level == 1 and ad.cooldown then
 					ad.ts = store.tick_ts - ad.cooldown
 				end
 			end
 
 			if pow_e.changed then
 				pow_e.changed = nil
-				ae.cooldown = pow_e.cooldown[pow_e.level]
-				ae.ts = store.tick_ts - ae.cooldown
+				local new_cd_e = pow_e.cooldown and pow_e.cooldown[pow_e.level]
+				if new_cd_e then
+					ae.cooldown = new_cd_e
+					ae.ts = store.tick_ts - ae.cooldown
+				else
+					-- 这里一般是 level=0 或配置没给到，直接走禁用分支，不让协程因为 cooldown=nil 崩掉
+					-- 我补充两句：这里宁可保守禁用，也不伪造默认冷却，避免未解锁技能误触发。
+					ae.ts = store.tick_ts
+				end
 			end
 
 			SU.towers_swaped(store, this, this.attacks.list)

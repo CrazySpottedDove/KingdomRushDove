@@ -30,6 +30,8 @@ sound_db.progress = 0
 sound_db.groups_total = 0
 sound_db.groups_done = 0
 sound_db.sounds_uses = {}
+sound_db.missing_sources_warned = {}
+sound_db.missing_sources_summary_printed = false
 
 local function is_file(path)
 	local info = love.filesystem.getInfo(path)
@@ -89,6 +91,8 @@ cout:supply({'DONE'})]]
 function sound_db:init(path)
 	self.path = path
 	self.files_path = path .. "/files"
+	self.missing_sources_warned = {}
+	self.missing_sources_summary_printed = false
 
 	local f_settings = FS.load(path .. "/settings.lua")()
 
@@ -635,6 +639,17 @@ function sound_db:update(dt)
 		end
 	end
 
+	if not self.missing_sources_summary_printed and next(self.missing_sources_warned) ~= nil then
+		local missing = {}
+		for sid, _ in pairs(self.missing_sources_warned) do
+			missing[#missing + 1] = sid
+		end
+		table.sort(missing)
+		self.missing_sources_summary_printed = true
+		-- 这里给一条总清单，方便后续一次性补资源文件。
+		log.error("Missing sound sources summary (%s): %s", #missing, table.concat(missing, ", "))
+	end
+
 	self.ts = now_ts
 end
 
@@ -697,7 +712,11 @@ function sound_db:play(request)
 	end
 
 	if not pools or #pools == 0 then
-		log.error("SOUND %s defined but sound sources missing. Missing file during load?", request.id)
+		if not self.missing_sources_warned[request.id] then
+			self.missing_sources_warned[request.id] = true
+			-- 同一声音缺资源只记录一次，避免重复刷屏。
+			log.error("SOUND %s defined but sound sources missing. Missing file during load?", request.id)
+		end
 
 		return
 	end

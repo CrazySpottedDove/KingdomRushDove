@@ -1,0 +1,145 @@
+================================================================================
+KingdomRushDove-dev — 变更清单（手动上传对照用）
+================================================================================
+生成说明：依据本地 Git 提交 1b6880bfd（feat: 维兹南灵魂瓦解与无尽模式相关改动）
+若你之后又改过文件，请以 `git status` / `git diff` 为准补全本清单。
+================================================================================
+
+【一、统计】
+  · 涉及文件：55 个
+  · 约 +6045 行 / -4190 行（含大段从单文件迁出到多文件的重构）
+  · 操作类型：无「仅删除」的独立文件；多为「修改」与「新增」
+  · 逻辑删除：`all/systems.lua`、`kr1/endless_utils.lua` 等文件内大量代码被
+    迁出到 `all/systems/*.lua` 等新文件，属重构而非整文件删除
+
+--------------------------------------------------------------------------------
+【二、新增文件（A = Add，需整份上传）】
+--------------------------------------------------------------------------------
+
+aidoc/
+  ENDLESS_TECH_REGISTRY_GUIDE.md
+
+all/systems/
+  assets_checker.lua
+  count_groups.lua
+  editor_overrides.lua
+  editor_script.lua
+  endless.lua
+  events.lua
+  game_upgrades.lua
+  goal_line.lua
+  health.lua
+  hero_xp_tracking.lua
+  index.lua
+  last_hook.lua
+  lights.lua
+  main_script.lua
+  mod_lifecycle.lua
+  particle_system_init.lua
+  particle_system_lifecycle.lua
+  particle_system_update.lua
+  pops.lua
+  seen_tracker.lua
+  sound_events.lua
+  spatial_index.lua
+  texts.lua
+  timed.lua
+  tower_skill.lua
+  tower_upgrade.lua
+  wave_generator.lua
+  wave_spawn.lua
+  wave_spawn_tsv.lua
+
+kr1/data/
+  tower_skills_endless.lua
+
+kr1/endless/
+  tech_registry.lua
+
+kr1/endless/tech_handlers/
+  archer.lua
+  barrack.lua
+  common.lua
+  engineer.lua
+  friend_core.lua
+  global.lua
+  mage.lua
+  rain.lua
+
+kr1/
+  tower_skill_protocol.lua
+
+--------------------------------------------------------------------------------
+【三、修改文件（M = Modify，需用新版本覆盖旧文件）】
+--------------------------------------------------------------------------------
+
+_assets/kr1-desktop/sounds/
+  groups.lua          — 音效分组（含维兹南相关等）
+  sounds.lua          — 音效条目（如 Soul Drain / VeznanSoulDrain 等注册）
+
+_assets/kr1-desktop/strings/
+  zh-Hans.lua         — 中文文案
+
+all/
+  game.lua            — 游戏入口/加载相关
+  sound_db.lua        — 音效数据库
+  storage.lua         — 存储
+  systems.lua         — 系统注册表大幅瘦身，逻辑拆到 all/systems/*.lua
+
+kr1/
+  boss.lua            — eb_veznan：定时技能（spellDown / Soul Drain 等）、数值与模板
+  boss_scripts.lua    — eb_veznan：封印塔、传送门、灵魂瓦解流程与打断冷却等
+  endless_utils.lua   — 无尽相关工具重构（行数明显减少）
+  tower_scripts.lua   — 塔脚本衔接
+
+kr1/data/
+  endless.lua         — 无尽数据
+  game_animations.lua — 动画条目（含 eb_veznan_spellDown / soulDrain 分段等）
+
+mods/
+  mod_main.lua        — 模组入口
+
+--------------------------------------------------------------------------------
+【四、功能与内容摘要（便于核对是否漏传）】
+--------------------------------------------------------------------------------
+
+1）维兹南 eb_veznan（boss.lua + boss_scripts.lua + game_animations + 音效）
+   · 第三段定时攻击：Soul Drain（动画分段、范围、吸血、秒杀伤害带 d.value 等）
+   · spellDown：封印塔与召唤传送门共用；attack_duration 与动画帧数对齐（如 fts(28)）
+   · 封印塔 / 传送门：flip_x、y_animation_wait + 剩余时长等待
+   · Soul Drain 被打断（眩晕等）时推迟冷却，避免每帧重复 animation_start
+
+2）音效资源（sounds.lua + groups.lua）
+   · Soul Drain 相关键与 ogg 白名单（具体键名以仓库内为准）
+
+3）无尽模式 / 塔技能
+   · all/systems.lua 拆分：多子系统迁入 all/systems/*.lua，由 index 等串联
+   · kr1/endless/*、tower_skills_endless.lua、tower_skill_protocol.lua
+   · endless_utils.lua 大幅调整
+   · aidoc/ENDLESS_TECH_REGISTRY_GUIDE.md 为说明文档
+
+4）其它
+   · zh-Hans.lua 等字符串与 mod_main 衔接
+
+--------------------------------------------------------------------------------
+【五、未包含在本提交中的说明】
+--------------------------------------------------------------------------------
+
+· 若你本地还曾修改大量 _assets/.../go_*.lua、assets_index.lua 等但未纳入该提交，
+  手动上传时需自行对比 `git status` 未跟踪/未提交文件。
+· 分支 `_wipe_remote_master` 仅用于向远程推「空仓库」测试，与游戏内容无关，
+  手动上传代码时可忽略该分支。
+
+--------------------------------------------------------------------------------
+【六、手动上传建议目录结构（相对仓库根目录）】
+--------------------------------------------------------------------------------
+
+保持与上述路径一致即可，重点：
+  · 新增：整目录 all/systems/（除已存在的 systems.lua 外的新 lua）
+  · 新增：kr1/endless/ 下整目录
+  · 新增：kr1/data/tower_skills_endless.lua、kr1/tower_skill_protocol.lua
+  · 覆盖：列在「三、修改文件」中的所有路径
+
+================================================================================
+结束
+================================================================================

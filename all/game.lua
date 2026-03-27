@@ -102,6 +102,7 @@ game.simulation_systems = {
 	"pops",
 	"goal_line",
 	"tower_upgrade",
+	"tower_skill",
 	"game_upgrades",
 	"texts",
 	"particle_system",

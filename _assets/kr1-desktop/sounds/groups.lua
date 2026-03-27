@@ -818,7 +818,7 @@ return {
 		files = {"worm_bite.ogg", "worm_dirtLoop.ogg"}
 	},
 	VeznanEffects = {
-		files = {"Sound_DemonPortal_Summon.ogg", "Sound_DemonPortal_Telein.ogg", "Sound_EnemyVeznan_attack.ogg", "Sound_EnemyVeznan_death.ogg", "Sound_EnemyVeznan_demonFire.ogg", "Sound_EnemyVeznan_toDemon.ogg", "Sound_SpellTowerHold_Cast.ogg", "Sound_SpellTowerHold_Dissipate.ogg", "Sound_SpellTowerHold_Hit.ogg", "Sound_SpellTowerHold_Trap.ogg"}
+		files = {"Sound_DemonPortal_Summon.ogg", "Sound_DemonPortal_Telein.ogg", "Sound_EnemyVeznan_attack.ogg", "Sound_EnemyVeznan_death.ogg", "Sound_EnemyVeznan_demonFire.ogg", "Sound_EnemyVeznan_toDemon.ogg", "Sound_SpellTowerHold_Cast.ogg", "Sound_SpellTowerHold_Dissipate.ogg", "Sound_SpellTowerHold_Hit.ogg", "Sound_SpellTowerHold_Trap.ogg", "Soul_Drain.ogg"}
 	},
 	common = {
 		files = {

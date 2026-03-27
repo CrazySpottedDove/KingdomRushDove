@@ -188,7 +188,16 @@ function storage:save_endless(level_name, endless)
 end
 
 function storage:delete_endless(level_name)
-	local success = self:remove(string.format("endless_%s.lua", level_name), true)
+	local filename = string.format("endless_%s.lua", level_name)
+
+	-- 目标文件本来就不存在时，按“删除成功”处理。
+	-- 目的：避免反复打无效错误日志，影响排查真正问题。
+	-- 这里不是吞错误，而是把“无文件可删”识别为正常结果。
+	if not FS.getInfo(filename) then
+		return true
+	end
+
+	local success = self:remove(filename, true)
 
 	if not success then
 		log.error("Error deleting endless_%s.lua", level_name)

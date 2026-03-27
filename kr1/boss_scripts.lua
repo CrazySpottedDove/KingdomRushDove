@@ -495,6 +495,7 @@ end
 function scripts.eb_veznan.update(this, store)
 	local ba = this.timed_attacks.list[1]
 	local pa = this.timed_attacks.list[2]
+	local sda = this.timed_attacks.list[3]
 	local taunt_ts
 	local portals = LU.list_entities(store.entities, pa.portal_name)
 	local initial_hp = this.health.hp_max
@@ -519,11 +520,15 @@ function scripts.eb_veznan.update(this, store)
 
 		local start_ts = store.tick_ts
 
-		U.animation_start(this, ba.animation, nil, store.tick_ts)
+		-- 这里的第三参 flip_x 不能给 nil，不然攻击期间朝向还会被移动逻辑/其它系统拉来拉去，
+		-- spellDown 视觉上就会显得“卡、不顺”，甚至像重复跳帧那种感觉
+		local random_towers = table.random_order(towers)
+		local first_tower = random_towers and random_towers[1]
+		local af = first_tower and first_tower.pos and (first_tower.pos.x < this.pos.x) or nil
+
+		U.animation_start(this, ba.animation, af, store.tick_ts)
 		U.y_wait(store, ba.hit_time)
 		S:queue(ba.sound)
-
-		local random_towers = table.random_order(towers)
 
 		for i, t in ipairs(random_towers) do
 			if i > ba.count then
@@ -551,7 +556,12 @@ function scripts.eb_veznan.update(this, store)
 	local function y_portal()
 		local start_ts = store.tick_ts
 
-		U.animation_start(this, pa.animation, nil, store.tick_ts)
+		local af = this.render and this.render.sprites and this.render.sprites[1] and this.render.sprites[1].flip_x or nil
+		if af == nil and portals and portals[1] and portals[1].pos then
+			af = portals[1].pos.x < this.pos.x
+		end
+
+		U.animation_start(this, pa.animation, af, store.tick_ts)
 		U.y_wait(store, pa.hit_time)
 		S:queue(pa.sound)
 
@@ -575,6 +585,146 @@ function scripts.eb_veznan.update(this, store)
 		end
 	end
 
+	local function is_soul_drain_immune(target)
+		local tn = target and target.template_name and string.lower(target.template_name) or ""
+
+		return string.find(tn, "elemental", 1, true) ~= nil
+	end
+
+	local function spawn_soul_to_veznan(target)
+		local soul = E:create_entity(sda.soul_effect)
+		local from_x = target.pos.x + target.unit.mod_offset.x
+		local from_y = target.pos.y + target.unit.mod_offset.y
+		local hand_sign = this.render.sprites[1].flip_x and -1 or 1
+		local hand_x = this.pos.x + sda.soul_hand_offset.x * hand_sign
+		local hand_y = this.pos.y + sda.soul_hand_offset.y
+		local dist = V.dist(from_x, from_y, hand_x, hand_y)
+		local speed = sda.soul_speed
+
+		soul.pos = V.v(from_x, from_y)
+		soul.soul_phase = 1
+		soul.angle = V.angleTo(hand_x - from_x, hand_y - from_y)
+		soul.angle_variation = 0
+		soul.min_angle = 0
+		soul.max_angle = 0
+		soul.speed = {speed, speed}
+		soul.duration = dist / speed
+
+		queue_insert(store, soul)
+
+		return soul.duration
+	end
+
+	local function y_soul_drain()
+		local started_ts = store.tick_ts
+		local last_soul_arrival_ts = started_ts
+		local drained_ids = {}
+		-- 被打断（眩晕等）时必须推迟冷却，否则 ready_to_soul_drain 仍为 true，会每帧重进并重复 animation_start
+		local function abort_soul_drain()
+			SU.delay_attack(store, sda, 0.2)
+
+			return false
+		end
+
+		local function has_targets()
+			for _, e in pairs(store.soldiers) do
+				if not e.health.dead and U.is_inside_ellipse(e.pos, this.pos, sda.range) and U.flags_pass(e.vis, sda) and not is_soul_drain_immune(e) then
+					return true
+				end
+			end
+
+			return false
+		end
+
+		if not has_targets() then
+			SU.delay_attack(store, sda, 0.2)
+
+			return false
+		end
+
+		local hold_started = false
+
+		U.animation_start(this, sda.animation_start or sda.animation, nil, store.tick_ts, false)
+
+		while store.tick_ts - started_ts < sda.kill_start_time do
+			if this.unit.is_stunned then
+				return abort_soul_drain()
+			end
+
+			coroutine.yield()
+		end
+
+		S:queue(sda.sound)
+
+		while store.tick_ts - started_ts <= sda.kill_end_time do
+			local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, sda.range, sda.vis_flags, sda.vis_bans)
+			local elapsed = store.tick_ts - started_ts
+
+			if not hold_started and elapsed >= (sda.loop_start_time or sda.kill_start_time) then
+				U.animation_start(this, sda.animation_hold or sda.animation, nil, store.tick_ts, true)
+				hold_started = true
+			end
+
+			if this.unit.is_stunned then
+				return abort_soul_drain()
+			end
+
+			for _, target in pairs(targets or {}) do
+				if not drained_ids[target.id] and not target.health.dead and not is_soul_drain_immune(target) then
+					local d = E:create_entity("damage")
+
+					d.damage_type = bor(DAMAGE_DISINTEGRATE, DAMAGE_INSTAKILL)
+					d.value = target.health.hp_max + 1
+					d.source_id = this.id
+					d.target_id = target.id
+
+					queue_damage(store, d)
+					local soul_duration = spawn_soul_to_veznan(target)
+					last_soul_arrival_ts = math.max(last_soul_arrival_ts, store.tick_ts + soul_duration)
+					U.heal(this, this.health.hp_max * sda.heal_hp_factor)
+
+					drained_ids[target.id] = true
+				end
+			end
+
+			coroutine.yield()
+		end
+
+		local enter_end_ts = math.max(started_ts + sda.kill_end_time, last_soul_arrival_ts)
+
+		while store.tick_ts < enter_end_ts do
+			if this.unit.is_stunned then
+				return abort_soul_drain()
+			end
+
+			coroutine.yield()
+		end
+
+		if sda.animation_end then
+			U.animation_start(this, sda.animation_end, nil, store.tick_ts, false)
+
+			while not U.animation_finished(this) do
+				if this.unit.is_stunned then
+					return abort_soul_drain()
+				end
+
+				coroutine.yield()
+			end
+
+			if sda.animation_end_extra_time and sda.animation_end_extra_time > 0 then
+				U.y_wait(store, sda.animation_end_extra_time)
+			end
+		end
+
+		sda.ts = store.tick_ts
+
+		if this.phase == "castle" then
+			U.animation_start(this, "idleDown", nil, store.tick_ts, true)
+		end
+
+		return true
+	end
+
 	local function signal_ready()
 		return this.phase_signal
 	end
@@ -591,11 +741,14 @@ function scripts.eb_veznan.update(this, store)
 		return not pa.disabled and enemy_ready_to_magic_attack(this, store, pa) and pa.count < pa.max_count
 	end
 
-	local function can_break_battle_walk()
-		return ready_to_block() or ready_to_portal() or this.phase_signal
+	local function ready_to_soul_drain()
+		return not sda.disabled and enemy_ready_to_magic_attack(this, store, sda)
 	end
 
-	this.phase_signal = nil
+	local function can_break_battle_walk()
+		return ready_to_block() or ready_to_portal() or ready_to_soul_drain() or this.phase_signal
+	end
+
 	this.phase_signal = nil
 
 	while not this.phase_signal do
@@ -626,6 +779,7 @@ function scripts.eb_veznan.update(this, store)
 
 	ba.ts = store.tick_ts
 	pa.ts = store.tick_ts
+	sda.ts = store.tick_ts
 	taunt_ts = store.tick_ts
 	this.phase_signal = nil
 
@@ -668,6 +822,10 @@ function scripts.eb_veznan.update(this, store)
 			y_portal()
 		end
 
+		if ready_to_soul_drain() and not this.phase_signal then
+			y_soul_drain()
+		end
+
 		coroutine.yield()
 	end
 
@@ -689,6 +847,7 @@ function scripts.eb_veznan.update(this, store)
 	this.pos = P:node_pos(this.nav_path)
 	pa.ts = store.tick_ts
 	ba.ts = store.tick_ts
+	sda.ts = store.tick_ts
 	this.vis.bans = U.flag_clear(this.vis.bans, F_ALL)
 	this.health.ignore_damage = false
 	this.health_bar.hidden = nil
@@ -706,6 +865,10 @@ function scripts.eb_veznan.update(this, store)
 
 			if ready_to_portal() and not this.phase_signal then
 				y_portal()
+			end
+
+			if ready_to_soul_drain() and not this.phase_signal then
+				y_soul_drain()
 			end
 
 			if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, can_break_battle_walk, can_break_battle_walk) then

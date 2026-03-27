@@ -12,7 +12,8 @@ local FU = require("all.file_utlis")
 local f = io.open(mod_main_config_path, "r")
 if not f then
 	FU.ensure_parent_dir(mod_main_config_path)
-	FU.write_lua(mod_main_config_path, dofile("mods/mod_main_config.lua"))
+	-- avoid cwd-dependent dofile path when launching from other directories
+	FU.write_lua(mod_main_config_path, require("mod_main_config"))
 end
 
 require("mod_globals")

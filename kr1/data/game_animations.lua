@@ -5917,6 +5917,26 @@ return {
 			prefix = "boss_veznan",
 			to = 185
 		},
+		eb_veznan_soulDrain = {
+			from = 186,
+			prefix = "boss_veznan",
+			to = 212
+		},
+		eb_veznan_soulDrainStart = {
+			from = 186,
+			prefix = "boss_veznan",
+			to = 195
+		},
+		eb_veznan_soulDrainHold = {
+			from = 196,
+			prefix = "boss_veznan",
+			to = 208
+		},
+		eb_veznan_soulDrainEnd = {
+			from = 209,
+			prefix = "boss_veznan",
+			to = 210
+		},
 		eb_veznan_walkAway = {
 			from = 343,
 			prefix = "boss_veznan",

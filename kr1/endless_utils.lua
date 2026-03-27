@@ -2,197 +2,154 @@ local E = require("entity_db")
 
 require("all.constants")
 
-local UP = require("kr1.upgrades")
-local U = require("utils")
-local scripts = require("scripts")
 local EL = require("kr1.data.endless")
 local enemy_buff = EL.enemy_buff
 local friend_buff = EL.friend_buff
 local enemy_upgrade_max_levels = EL.enemy_upgrade_max_levels
 local endless_template = EL.template
-local SU = require("script_utils")
+local TechRegistry = require("kr1.endless.tech_registry")
+local TechHandlerGlobal = require("kr1.endless.tech_handlers.global")
+local TechHandlerFriendCore = require("kr1.endless.tech_handlers.friend_core")
+local TechHandlerArcher = require("kr1.endless.tech_handlers.archer")
+local TechHandlerMage = require("kr1.endless.tech_handlers.mage")
+local TechHandlerRain = require("kr1.endless.tech_handlers.rain")
+local TechHandlerEngineer = require("kr1.endless.tech_handlers.engineer")
+local TechHandlerBarrack = require("kr1.endless.tech_handlers.barrack")
 local storage = require("all.storage")
-local log = require("lib.klua.log"):new("endless_utils")
-local GR = require("grid_db")
-local S = require("sound_db")
 local P = require("path_db")
-
-local function fts(t)
-	return t / FPS
-end
-
-local function vv(x)
-	return {
-		x = x,
-		y = x
-	}
-end
-
-local V = require("lib.klua.vector")
+local log = require("lib.klua.log"):new("endless_utils")
 local bit = require("bit")
 local band = bit.band
-local bor = bit.bor
-local bnot = bit.bnot
-
-local function queue_damage(store, damage)
-	store.damage_queue[#store.damage_queue + 1] = damage
-end
-
-local function queue_insert(store, e)
-	simulation:queue_insert_entity(e)
-end
-
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
 
 local EU = {}
+local tech_registry_inited = false
+local warned_unhandled_upgrade = {}
+local warned_invalid_upgrade_key = {}
 
-local function engineer_focus_bomb_update(this, store)
-	local b = this.bullet
-	local dmin, dmax = b.damage_min, b.damage_max
-	local dradius = b.damage_radius
+local function debug_enabled(flag_name)
+	-- 小工具函数：集中判断开关，后面所有 debug_log 都走它。
+	return EL[flag_name] == true
+end
 
-	if b.level and b.level > 0 then
-		if b.damage_radius_inc then
-			dradius = dradius + b.level * b.damage_radius_inc
+local function debug_log(flag_name, fmt, ...)
+	if debug_enabled(flag_name) then
+		log.info(fmt, ...)
+	end
+end
+
+local function get_tech_def(key)
+	return TechRegistry.get(key)
+end
+
+local function has_template_handler(key)
+	local def = get_tech_def(key)
+	return def and def.apply_template ~= nil
+end
+
+local function has_runtime_handler(key)
+	local def = get_tech_def(key)
+	return def and def.apply_runtime ~= nil
+end
+
+local function has_any_handler(key)
+	return has_template_handler(key) or has_runtime_handler(key)
+end
+
+local function warn_invalid_upgrade_once(tag, fmt, ...)
+	-- 同类错误只报一次，避免日志淹没关键信息。
+	if warned_invalid_upgrade_key[tag] then
+		return
+	end
+	warned_invalid_upgrade_key[tag] = true
+	log.error(fmt, ...)
+end
+
+local function validate_runtime_upgrade_key(key, endless)
+	-- 局内升级入口校验：不合法就早退，保证流程稳。
+	if endless.upgrade_levels[key] == nil then
+		warn_invalid_upgrade_once("runtime_unknown:" .. tostring(key), "ignore unknown endless upgrade key=%s", tostring(key))
+		return false
+	end
+	if EL.upgrade_max_levels[key] == nil then
+		warn_invalid_upgrade_once("runtime_missing_max:" .. tostring(key), "missing upgrade_max_levels config for key=%s", tostring(key))
+		return false
+	end
+	return true
+end
+
+local function validate_template_upgrade_key(key, level)
+	-- 读档/开局模板应用校验：历史脏数据直接跳过，不让整局崩。
+	if EL.upgrade_max_levels[key] == nil then
+		warn_invalid_upgrade_once("template_missing_max:" .. tostring(key), "patch_upgrades skip key without upgrade_max_levels config key=%s level=%s", tostring(key), tostring(level))
+		return false
+	end
+	return true
+end
+
+local function audit_tech_registry_coverage()
+	if not debug_enabled("debug_check_registry_coverage") then
+		return
+	end
+
+	local missing = {}
+	local template_missing = {}
+	local runtime_missing = {}
+
+	for key, _ in pairs(EL.upgrade_max_levels) do
+		if not get_tech_def(key) then
+			missing[#missing + 1] = key
 		end
-
-		if b.damage_min_inc then
-			dmin = dmin + b.level * b.damage_min_inc
+		if not has_template_handler(key) then
+			template_missing[#template_missing + 1] = key
 		end
-
-		if b.damage_max_inc then
-			dmax = dmax + b.level * b.damage_max_inc
+		if not has_runtime_handler(key) then
+			runtime_missing[#runtime_missing + 1] = key
 		end
 	end
 
-	local ps
+	table.sort(missing)
+	table.sort(template_missing)
+	table.sort(runtime_missing)
 
-	if b.particles_name then
-		ps = E:create_entity(b.particles_name)
-		ps.particle_system.track_id = this.id
+	if #missing > 0 then
+		log.error("endless tech registry missing handlers(%s): %s", #missing, table.concat(missing, ", "))
+	else
+		local ids = TechRegistry.ids()
+		log.info("endless tech registry coverage check passed (%s/%s)", #ids, #ids)
+		debug_log(
+			"debug_check_registry_coverage",
+			"endless tech phase coverage: template_missing=%s runtime_missing=%s",
+			tostring(#template_missing),
+			tostring(#runtime_missing)
+		)
+	end
+end
 
-		queue_insert(store, ps)
+local function ensure_tech_registry()
+	if tech_registry_inited then
+		return
 	end
 
-	while store.tick_ts - b.ts + store.tick_length < b.flight_time do
-		coroutine.yield()
+	local ctx = {
+		EL = EL,
+		friend_buff = friend_buff
+	}
 
-		b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
-		this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
+	TechHandlerGlobal.register(TechRegistry, ctx)
+	TechHandlerFriendCore.register(TechRegistry, ctx)
+	TechHandlerArcher.register(TechRegistry, ctx)
+	TechHandlerMage.register(TechRegistry, ctx)
+	TechHandlerRain.register(TechRegistry, ctx)
+	TechHandlerEngineer.register(TechRegistry, ctx)
+	TechHandlerBarrack.register(TechRegistry, ctx)
 
-		if b.align_with_trajectory then
-			this.render.sprites[1].r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
-		elseif b.rotation_speed then
-			this.render.sprites[1].r = this.render.sprites[1].r + b.rotation_speed * store.tick_length
-		end
-
-		if b.hide_radius then
-			this.render.sprites[1].hidden = V.dist2(this.pos.x, this.pos.y, b.from.x, b.from.y) < b.hide_radius * b.hide_radius or V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) < b.hide_radius * b.hide_radius
-		end
+	if EL.debug_print_registered_techs then
+		local ids = TechRegistry.ids()
+		log.info("registered endless techs(%s): %s", #ids, table.concat(ids, ", "))
 	end
+	audit_tech_registry_coverage()
 
-	local enemies = U.find_enemies_in_range_filter_off(b.to, dradius, b.damage_flags, b.damage_bans)
-
-	if enemies then
-		for i = 1, #enemies do
-			local enemy = enemies[i]
-			local d = E:create_entity("damage")
-
-			d.damage_type = b.damage_type
-			d.reduce_armor = b.reduce_armor
-			d.reduce_magic_armor = b.reduce_magic_armor
-
-			local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, b.to, dradius)
-
-			d.value = dmax + (dmax - (dmax - dmin) * dist_factor) * (store.endless.upgrade_levels.engineer_focus * EL.friend_buff.engineer_focus)
-			d.value = b.damage_factor * d.value
-			d.source_id = this.id
-			d.target_id = enemy.id
-
-			queue_damage(store, d)
-
-			local mods
-
-			if b.mod then
-				mods = type(b.mod) == "string" and {b.mod} or b.mod
-			elseif b.mods then
-				mods = b.mods
-			end
-
-			if mods then
-				for _, mod_name in pairs(mods) do
-					local mod = E:create_entity(mod_name)
-
-					mod.modifier.damage_factor = b.damage_factor
-					mod.modifier.target_id = enemy.id
-					mod.modifier.source_id = this.id
-
-					if U.flags_pass(enemy.vis, mod.modifier) then
-						queue_insert(store, mod)
-					end
-				end
-			end
-		end
-	end
-
-	local p = SU.create_bullet_pop(store, this)
-
-	queue_insert(store, p)
-
-	local cell_type = GR:cell_type(b.to.x, b.to.y)
-
-	if b.hit_fx_water and band(cell_type, TERRAIN_WATER) ~= 0 then
-		S:queue(this.sound_events.hit_water)
-
-		local water_fx = E:create_entity(b.hit_fx_water)
-
-		water_fx.pos.x, water_fx.pos.y = b.to.x, b.to.y
-		water_fx.render.sprites[1].ts = store.tick_ts
-		water_fx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
-
-		queue_insert(store, water_fx)
-	elseif b.hit_fx then
-		S:queue(this.sound_events.hit)
-
-		local sfx = E:create_entity(b.hit_fx)
-
-		sfx.pos = V.vclone(b.to)
-		sfx.render.sprites[1].ts = store.tick_ts
-		sfx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
-
-		queue_insert(store, sfx)
-	end
-
-	if b.hit_decal and band(cell_type, TERRAIN_WATER) == 0 then
-		local decal = E:create_entity(b.hit_decal)
-
-		decal.pos = V.vclone(b.to)
-		decal.render.sprites[1].ts = store.tick_ts
-
-		queue_insert(store, decal)
-	end
-
-	if b.hit_payload then
-		local hp
-
-		if type(b.hit_payload) == "string" then
-			hp = E:create_entity(b.hit_payload)
-		else
-			hp = b.hit_payload
-		end
-
-		hp.pos.x, hp.pos.y = b.to.x, b.to.y
-
-		if hp.aura then
-			hp.aura.level = this.bullet.level
-		end
-
-		queue_insert(store, hp)
-	end
-
-	queue_remove(store, this)
+	tech_registry_inited = true
 end
 
 local function get_enemy_weight(name)
@@ -338,6 +295,17 @@ function EU.init_endless(level_name, groups)
 		end
 	end
 
+	debug_log(
+		"debug_trace_init",
+		"init_endless level=%s load_from_history=%s enemy_types=%s paths=%s spawn_per_wave=%s weight_per_wave=%s",
+		tostring(level_name),
+		tostring(endless.load_from_history),
+		tostring(#endless.enemy_list),
+		tostring(#endless.available_paths),
+		tostring(endless.spawn_count_per_wave),
+		tostring(endless.enemy_weight_per_wave)
+	)
+
 	return endless
 end
 
@@ -435,6 +403,7 @@ end
 
 function EU.patch_enemy_growth(endless)
 	local imax = 2
+	local upgraded_keys = {}
 
 	if math.random() < 0.1 then
 		imax = 3
@@ -477,977 +446,41 @@ function EU.patch_enemy_growth(endless)
 		end
 
 		endless.enemy_upgrade_levels[key] = endless.enemy_upgrade_levels[key] + 1
+		upgraded_keys[#upgraded_keys + 1] = key .. ":" .. tostring(endless.enemy_upgrade_levels[key])
 
 		if endless.enemy_upgrade_levels[key] >= enemy_upgrade_max_levels[key] then
 			table.removeobject(endless.enemy_upgrade_options, key)
 		end
 	end
+
+	debug_log(
+		"debug_trace_enemy_growth",
+		"patch_enemy_growth count=%s picked=[%s] hp=%.3f dmg=%.3f spd=%.3f instakill=%.3f",
+		tostring(#upgraded_keys),
+		table.concat(upgraded_keys, ", "),
+		endless.enemy_health_factor,
+		endless.enemy_damage_factor,
+		endless.enemy_speed_factor,
+		endless.enemy_instakill_resistance
+	)
 end
 
--- 对于友方buff，只需在这两个表里加上两个同名函数
--- 考虑一次性的 patch，一般用于初始化
+-- 老映射已废弃，逻辑都在 tech_registry。
+-- 这里留空表只做兼容，防止历史调用点直接报错。
+-- 我补充两句：变量名保留是刻意设计，旧逻辑进来会自然落到注册表处理，不会直接炸。
 local patch_upgrade_map = {}
--- 考虑游戏内的 patch，还需要考虑游戏内实体，且每次升级都会调用
 local patch_upgrade_in_game_map = {}
-
-function patch_upgrade_map.archer_bleed(level, endless)
-	local mod = E:get_template("mod_blood_elves")
-
-	mod.damage_factor = 0.1 + friend_buff.archer_bleed * level
-end
-
-function patch_upgrade_map.archer_insight(level, endless)
-	for _, name in ipairs(UP.arrows) do
-		local arrow = E:get_template(name)
-
-		if not arrow._endless_archer_insight then
-			U.append_mod(arrow.bullet, "mod_endless_archer_insight")
-		end
-
-		local mod = E:get_template("mod_endless_archer_insight")
-
-		mod.modifier.health_damage_factor_inc = level * friend_buff.archer_insight
-	end
-end
-
-function patch_upgrade_map.archer_multishot(level, endless)
-	for _, name in ipairs(table.append(UP.arrows, {"arrow_arcane_burst"}, true)) do
-		local arrow = E:get_template(name)
-
-		if not arrow._endless_multishot then
-			arrow.main_script.insert = U.function_append(arrow.main_script.insert, scripts.arrow_endless_multishot.insert)
-		end
-
-		arrow._endless_multishot = level
-	end
-end
-
-function patch_upgrade_map.archer_critical(level, endless)
-	for _, name in pairs(table.append(UP.arrows, {"arrow_arcane_burst"}, true)) do
-		local arrow = E:get_template(name)
-
-		if not arrow._endless_archer_critical then
-			arrow.main_script.insert = U.function_append(function(this, store)
-				if not this.bullet._endless_archer_critical then
-					this.bullet._endless_archer_critical = true
-
-					if math.random() < this._endless_archer_critical then
-						this.bullet.damage_factor = this.bullet.damage_factor * 3
-
-						if not (this.bullet.pop and table.contains(this.bullet.pop, "pop_headshot")) then
-							this.bullet.pop = {"pop_crit"}
-							this.bullet.pop_conds = DR_DAMAGE
-						end
-					end
-				end
-
-				return true
-			end, arrow.main_script.insert)
-		end
-
-		arrow._endless_archer_critical = level * friend_buff.archer_critical
-	end
-end
-
-function patch_upgrade_map.rain_count_inc(level, endless)
-	local controller = E:get_template("power_fireball_control")
-
-	controller.cataclysm_count = controller.cataclysm_count + level * friend_buff.rain_count_inc
-	controller.fireball_count = controller.fireball_count + level * friend_buff.rain_count_inc
-end
-
-function patch_upgrade_map.rain_damage_inc(level, endless)
-	local fireball = E:get_template("power_fireball")
-
-	fireball.bullet.damage_min = fireball.bullet.damage_min + level * friend_buff.rain_damage_inc
-	fireball.bullet.damage_max = fireball.bullet.damage_max + level * friend_buff.rain_damage_inc
-
-	local scorched_water = E:get_template("power_scorched_water")
-
-	scorched_water.aura.damage_min = scorched_water.aura.damage_min + level * friend_buff.rain_damage_inc * 0.1
-	scorched_water.aura.damage_max = scorched_water.aura.damage_max + level * friend_buff.rain_damage_inc * 0.1
-
-	local scorched_earth = E:get_template("power_scorched_earth")
-
-	scorched_earth.aura.damage_min = scorched_earth.aura.damage_min + level * friend_buff.rain_damage_inc * 0.1
-	scorched_earth.aura.damage_max = scorched_earth.aura.damage_max + level * friend_buff.rain_damage_inc * 0.1
-
-	local thunder = E:get_template("power_thunder_control")
-
-	thunder.thunders[1].damage_min = thunder.thunders[1].damage_min + level * friend_buff.rain_damage_inc * 0.5
-	thunder.thunders[1].damage_max = thunder.thunders[1].damage_max + level * friend_buff.rain_damage_inc * 0.5
-	thunder.thunders[2].damage_min = thunder.thunders[2].damage_min + level * friend_buff.rain_damage_inc * 0.5
-	thunder.thunders[2].damage_max = thunder.thunders[2].damage_max + level * friend_buff.rain_damage_inc * 0.5
-	thunder = E:get_template("endless_mage_thunder")
-	thunder.thunders[1].damage_min = thunder.thunders[1].damage_min + level * friend_buff.rain_damage_inc * 0.5
-	thunder.thunders[1].damage_max = thunder.thunders[1].damage_max + level * friend_buff.rain_damage_inc * 0.5
-	thunder.thunders[2].damage_min = thunder.thunders[2].damage_min + level * friend_buff.rain_damage_inc * 0.5
-	thunder.thunders[2].damage_max = thunder.thunders[2].damage_max + level * friend_buff.rain_damage_inc * 0.5
-end
-
-function patch_upgrade_map.rain_radius_mul(level, endless)
-	local fireball = E:get_template("power_fireball")
-
-	fireball.bullet.damage_radius = fireball.bullet.damage_radius * friend_buff.rain_radius_mul ^ level
-	fireball.render.sprites[1].scale = vv(friend_buff.rain_radius_mul ^ level)
-
-	local scorched_water = E:get_template("power_scorched_water")
-
-	scorched_water.aura.radius = scorched_water.aura.radius * friend_buff.rain_radius_mul ^ level
-	scorched_water.render.sprites[1].scale = vv(friend_buff.rain_radius_mul ^ level)
-
-	local scorched_earth = E:get_template("power_scorched_earth")
-
-	scorched_earth.aura.radius = scorched_earth.aura.radius * friend_buff.rain_radius_mul ^ level
-	scorched_earth.render.sprites[1].scale = vv(friend_buff.rain_radius_mul ^ level)
-end
-
-function patch_upgrade_map.rain_cooldown_dec(level, endless)
-	local controller = E:get_template("power_fireball_control")
-
-	controller.cooldown = controller.cooldown - level * friend_buff.rain_cooldown_dec
-end
-
-function patch_upgrade_map.rain_scorch_damage_true(level, endless)
-	local scorched_earth = E:get_template("power_scorched_earth")
-
-	scorched_earth.aura.damage_type = DAMAGE_TRUE
-	scorched_earth.aura.damage_min = scorched_earth.aura.damage_min + level * friend_buff.rain_scorch_damage_true
-	scorched_earth.aura.damage_max = scorched_earth.aura.damage_max + level * friend_buff.rain_scorch_damage_true
-
-	local scorched_water = E:get_template("power_scorched_water")
-
-	scorched_water.aura.damage_type = DAMAGE_TRUE
-	scorched_water.aura.damage_min = scorched_water.aura.damage_min + level * friend_buff.rain_scorch_damage_true
-	scorched_water.aura.damage_max = scorched_water.aura.damage_max + level * friend_buff.rain_scorch_damage_true
-end
-
-function patch_upgrade_map.rain_thunder(level, endless)
-	local controller = E:get_template("power_fireball_control")
-
-	if not controller._endless_rain_thunder then
-		controller.main_script.insert = U.function_append(controller.main_script.insert, function(this, store)
-			local thunder = E:create_entity("power_thunder_control")
-
-			thunder.slow.disabled = false
-			thunder.rain.disabled = false
-			thunder.thunders[1].count = this.fireball_count
-			thunder.thunders[2].count = this.cataclysm_count
-
-			queue_insert(store, thunder)
-
-			return true
-		end)
-		controller._endless_rain_thunder = true
-	end
-end
-
-function patch_upgrade_map.barrack_luck(level, endless)
-	for _, name in pairs(UP.soldiers) do
-		local s = E:get_template(name)
-
-		if not s._endless_barrack_luck then
-			s.health.on_damage = U.function_append(s.health.on_damage, function(this, store, damage)
-				return math.random() > this._endless_barrack_luck
-			end)
-		end
-
-		s._endless_barrack_luck = level * friend_buff.barrack_luck
-	end
-end
-
-function patch_upgrade_map.barrack_unity(level, endless)
-	for _, name in pairs(UP.towers_with_barrack) do
-		if name ~= "tower_pandas_lvl4" then
-			local t = E:get_template(name)
-
-			t.barrack.max_soldiers = t.barrack.max_soldiers + level * friend_buff.barrack_unity_count
-		end
-	end
-
-	for _, name in pairs(UP.soldiers) do
-		local s = E:get_template(name)
-
-		s.health.dead_lifetime = s.health.dead_lifetime - friend_buff.barrack_unity_lifetime * level
-	end
-end
-
-function patch_upgrade_map.barrack_synergy(level, endless)
-	for _, name in pairs(UP.soldiers) do
-		local s = E:get_template(name)
-
-		if not s._barrack_synergy then
-			if s.main_script then
-				s.main_script.insert = U.function_append(s.main_script.insert, function(this, store)
-					local a = E:create_entity("endless_barrack_synergy_aura")
-
-					a.aura.source_id = this.id
-
-					queue_insert(store, a)
-
-					this._barrack_synergy_aura = a
-
-					return true
-				end)
-				s.main_script.remove = U.function_append(s.main_script.remove, function(this, store)
-					if this._barrack_synergy_aura then
-						queue_remove(this._barrack_synergy_aura)
-					end
-
-					return true
-				end)
-			end
-
-			s._barrack_synergy = true
-		end
-	end
-
-	local m = E:get_template("mod_endless_barrack_synergy")
-
-	m.extra_damage = level * friend_buff.barrack_synergy
-end
-
-function patch_upgrade_map.barrack_rally(level, endless)
-	for _, name in pairs(UP.towers_with_barrack) do
-		local t = E:get_template(name)
-
-		t.barrack.rally_range = math.huge
-	end
-
-	local pixie_tower = E:get_template("tower_pixie")
-
-	pixie_tower.attacks.range = math.huge
-end
-
-local bombs = {
-	"bomb",
-	"bomb_dynamite",
-	"bomb_black",
-	"bomb_musketeer",
-	"dwarf_barrel",
-	"pirate_watchtower_bomb",
-	"bomb_molotov",
-	"bomb_molotov_big",
-	"bomb_bfg",
-	"bomb_bfg_fragment",
-	"bomb_mecha",
-	"tower_tricannon_bomb",
-	"tower_tricannon_bomb_bombardment_bomb",
-	"rock_druid",
-	"rock_entwood",
-	"rock_druid",
-	"bullet_tower_demon_pit_basic_attack_lvl4",
-	"bullet_tower_flamespitter_skill_bomb"
-}
-
-function patch_upgrade_map.engineer_focus(level, endless)
-	for _, name in pairs(bombs) do
-		local b = E:get_template(name)
-
-		if not b._endless_engineer_focus then
-			if name == "rock_druid" then
-				b.main_script.update = function(this, store)
-					local b = this.bullet
-
-					this.render.sprites[1].z = Z_OBJECTS
-
-					S:queue(this.sound_events.load, {
-						delay = fts(4)
-					})
-					U.y_animation_play(this, "load", nil, store.tick_ts)
-					U.y_animation_play(this, "travel", nil, store.tick_ts)
-
-					this.tween.disabled = false
-
-					while not b.target_id do
-						coroutine.yield()
-					end
-
-					local fx = E:create_entity("fx_rock_druid_launch")
-
-					fx.pos.x, fx.pos.y = b.from.x, b.from.y
-					fx.render.sprites[1].ts = store.tick_ts
-					fx.render.sprites[1].flip_x = b.to.x < fx.pos.x
-
-					queue_insert(store, fx)
-
-					this.render.sprites[1].sort_y_offset = nil
-					this.render.sprites[1].z = Z_BULLETS
-					this.tween.disabled = true
-					b.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
-					b.ts = store.tick_ts
-					b.last_pos = V.vclone(b.from)
-					b.rotation_speed = b.rotation_speed * (b.to.x > b.from.x and -1 or 1)
-
-					engineer_focus_bomb_update(this, store)
-				end
-			else
-				b.main_script.update = engineer_focus_bomb_update
-			end
-
-			b._endless_engineer_focus = true
-		end
-	end
-
-	local tower = E:get_template("tower_tesla")
-
-	tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_focus * 0.8
-	tower = E:get_template("tower_dwaarp")
-	tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_focus * 0.8
-	tower = E:get_template("tower_frankenstein")
-	tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_focus * 0.8
-	tower = E:get_template("tower_flamespitter_lvl4")
-	tower.tower.damage_factor = tower.tower.damage_factor + level * friend_buff.engineer_focus * 0.8
-
-	local missile = E:get_template("missile_bfg")
-
-	if not missile.bullet._engineer_focus_damage_min then
-		missile.bullet._engineer_focus_damage_min = missile.bullet.damage_min
-		missile.bullet._engineer_focus_damage_max = missile.bullet.damage_max
-	end
-
-	missile.bullet.damage_min = missile.bullet._engineer_focus_damage_min * (1 + 0.8 * friend_buff.engineer_focus * level)
-	missile.bullet.damage_max = missile.bullet._engineer_focus_damage_max * (1 + 0.8 * friend_buff.engineer_focus * level)
-	missile = E:get_template("missile_mecha")
-
-	if not missile.bullet._engineer_focus_damage_min then
-		missile.bullet._engineer_focus_damage_min = missile.bullet.damage_min
-		missile.bullet._engineer_focus_damage_max = missile.bullet.damage_max
-	end
-
-	missile.bullet.damage_min = missile.bullet._engineer_focus_damage_min * (1 + 0.8 * friend_buff.engineer_focus * level)
-	missile.bullet.damage_max = missile.bullet._engineer_focus_damage_max * (1 + 0.8 * friend_buff.engineer_focus * level)
-end
-
-local function endless_engineer_aftermath_ray_remove(this, store)
-	local after_math = E:create_entity("aura_endless_engineer_aftermath_ray")
-
-	after_math.pos.x, after_math.pos.y = this.bullet.to.x, this.bullet.to.y
-	after_math.aura.source_id = this.id
-	after_math.aura.level = store.endless.upgrade_levels.engineer_aftermath
-
-	queue_insert(store, after_math)
-
-	return true
-end
-
-function patch_upgrade_map.engineer_aftermath(level, endless)
-	for _, name in pairs(table.append(bombs, {"missile_mecha"}, true)) do
-		local b = E:get_template(name)
-
-		if not b._endless_engineer_aftermath then
-			U.append_mod(b.bullet, "mod_endless_engineer_aftermath")
-
-			b._endless_engineer_aftermath = true
-		end
-	end
-
-	local dwarrp_attack = E:get_template("tower_dwaarp").attacks.list[1]
-
-	if not dwarrp_attack._endless_engineer_aftermath then
-		U.append_mod(dwarrp_attack, "mod_endless_engineer_aftermath")
-
-		dwarrp_attack._endless_engineer_aftermath = true
-	end
-
-	local mod = E:get_template("mod_endless_engineer_aftermath")
-
-	mod.value = level * friend_buff.engineer_aftermath
-
-	local ray = E:get_template("ray_tesla")
-
-	if not ray._endless_engineer_aftermath then
-		ray.main_script.remove = U.function_append(ray.main_script.remove, endless_engineer_aftermath_ray_remove)
-		ray._endless_engineer_aftermath = true
-	end
-
-	ray = E:get_template("ray_frankenstein")
-
-	if not ray._endless_engineer_aftermath then
-		ray.main_script.remove = U.function_append(ray.main_script.remove, endless_engineer_aftermath_ray_remove)
-		ray._endless_engineer_aftermath = true
-	end
-
-	local tower = E:get_template("tower_flamespitter_lvl4")
-
-	if not tower._endless_engineer_aftermath then
-		tower.attacks.range = tower.attacks.range * (1 + friend_buff.engineer_seek)
-		tower._endless_engineer_aftermath = true
-		tower._endless_engineer_aftermath_last_level = 0
-	end
-
-	tower.tower.damage_factor = tower.tower.damage_factor + (level - tower._endless_engineer_aftermath_last_level) * friend_buff.engineer_aftermath * 0.8
-	tower._endless_engineer_aftermath_last_level = level
-end
-
-function patch_upgrade_map.engineer_seek(level, endless)
-	local t = E:get_template("tower_engineer_1")
-
-	local function clear_flying_bans(attack)
-		attack.vis_bans = U.flag_clear(attack.vis_bans, F_FLYING)
-	end
-
-	clear_flying_bans(t.attacks.list[1])
-
-	t = E:get_template("tower_engineer_2")
-
-	clear_flying_bans(t.attacks.list[1])
-
-	t = E:get_template("tower_engineer_3")
-
-	clear_flying_bans(t.attacks.list[1])
-
-	t = E:get_template("tower_bfg")
-
-	clear_flying_bans(t.attacks.list[1])
-
-	t = E:get_template("soldier_mecha")
-
-	clear_flying_bans(t.attacks.list[1])
-
-	t = E:get_template("tower_druid")
-
-	clear_flying_bans(t.attacks.list[1])
-
-	t = E:get_template("tower_entwood")
-
-	clear_flying_bans(t.attacks.list[1])
-	clear_flying_bans(t.attacks.list[2])
-
-	t = E:get_template("tower_tricannon_lvl4")
-
-	clear_flying_bans(t.attacks.list[1])
-	clear_flying_bans(t.attacks.list[2])
-
-	t = E:get_template("soldier_mecha")
-
-	clear_flying_bans(t.attacks.list[1])
-
-	t = E:get_template("tower_tesla")
-	t.attacks.range = t.attacks.range * (1 + level * friend_buff.engineer_seek)
-	t = E:get_template("tower_frankenstein")
-	t.attacks.range = t.attacks.range * (1 + level * friend_buff.engineer_seek)
-	t = E:get_template("tower_dwaarp")
-	t.attacks.range = t.attacks.range * (1 + level * friend_buff.engineer_seek)
-	t = E:get_template("tower_flamespitter_lvl4")
-	t.attacks.range = t.attacks.range * (1 + level * friend_buff.engineer_seek)
-end
-
-local function fireball_quick_up(this, store)
-	store.game_gui.power_1:wait_time_dec(fts(friend_buff.engineer_fireball * store.endless.upgrade_levels.engineer_fireball))
-
-	return true
-end
-
-function patch_upgrade_map.engineer_fireball(level, endless)
-	for _, name in pairs(bombs) do
-		local b = E:get_template(name)
-
-		if not b._endless_engineer_fireball then
-			b.main_script.remove = U.function_append(b.main_script.remove, fireball_quick_up)
-			b._endless_engineer_fireball = true
-		end
-	end
-
-	local ray = E:get_template("ray_tesla")
-
-	if not ray._endless_engineer_fireball then
-		ray.main_script.remove = U.function_append(ray.main_script.remove, fireball_quick_up)
-		ray._endless_engineer_fireball = true
-	end
-
-	ray = E:get_template("ray_frankenstein")
-
-	if not ray._endless_engineer_fireball then
-		ray.main_script.remove = U.function_append(ray.main_script.remove, fireball_quick_up)
-		ray._endless_engineer_fireball = true
-	end
-
-	local flame = E:get_template("fx_tower_flamespitter_flame")
-
-	if not flame._endless_engineer_fireball then
-		E:add_comps(flame, "main_script")
-
-		flame._endless_engineer_fireball = true
-		flame.main_script.remove = U.function_append(flame.main_script.remove, fireball_quick_up)
-	end
-end
-
-function patch_upgrade_map.mage_thunder(level, endless)
-	for _, name in pairs(table.append(UP.bolts, {"ray_arcane_disintegrate", "bullet_tower_ray_lvl4"}, true)) do
-		local bolt = E:get_template(name)
-
-		if not bolt._endless_mage_thunder then
-			bolt._endless_mage_thunder = true
-
-			if (bolt.bullet and bolt.bullet.damage_max and bolt.bullet.damage_max >= 50) or bolt.template_name == "ray_arcane" then
-				bolt.main_script.insert = U.function_append(bolt.main_script.insert, function(this, store)
-					local target = store.entities[this.bullet.target_id]
-
-					if not target or target.health.dead then
-						return true
-					end
-
-					if math.random() < store.endless.upgrade_levels.mage_thunder * friend_buff.mage_thunder_normal then
-						local thunder = E:create_entity("endless_mage_thunder")
-
-						thunder.pos = V.vclone(target.pos)
-
-						queue_insert(store, thunder)
-					end
-
-					return true
-				end)
-			else
-				bolt.main_script.insert = U.function_append(bolt.main_script.insert, function(this, store)
-					local target = store.entities[this.bullet.target_id]
-
-					if not target or target.health.dead then
-						return true
-					end
-
-					if math.random() < store.endless.upgrade_levels.mage_thunder * friend_buff.mage_thunder_small then
-						local thunder = E:create_entity("endless_mage_thunder")
-
-						thunder.pos = V.vclone(target.pos)
-
-						queue_insert(store, thunder)
-					end
-
-					return true
-				end)
-			end
-		end
-	end
-
-	local mod_pixie_pickpocket = E:get_template("mod_pixie_pickpocket")
-
-	if not mod_pixie_pickpocket._endless_mage_thunder then
-		mod_pixie_pickpocket._endless_mage_thunder = true
-		mod_pixie_pickpocket.main_script.insert = U.function_append(mod_pixie_pickpocket.main_script.insert, function(this, store)
-			local target = store.entities[this.modifier.target_id]
-
-			if not target or target.health.dead then
-				return true
-			end
-
-			if math.random() < store.endless.upgrade_levels.mage_thunder * friend_buff.mage_thunder_normal then
-				local thunder = E:create_entity("endless_mage_thunder")
-
-				thunder.pos = V.vclone(target.pos)
-
-				queue_insert(store, thunder)
-			end
-
-			return true
-		end)
-	end
-end
-
-function patch_upgrade_map.mage_shatter(level, endless)
-	for _, name in pairs(table.append(UP.bolts, {"bullet_pixie_poison"}, true)) do
-		local bolt = E:get_template(name)
-
-		if not bolt._endless_mage_shatter then
-			bolt._endless_mage_shatter = true
-			bolt.main_script.insert = U.function_append(bolt.main_script.insert, function(this, store)
-				local target = store.entities[this.bullet.target_id]
-
-				if not target or target.health.dead then
-					return true
-				end
-
-				if not this.bullet._endless_mage_shatter then
-					this.bullet.damage_factor = this.bullet.damage_factor * (1 + target.health.armor * store.endless.upgrade_levels.mage_shatter * friend_buff.mage_shatter)
-					this.bullet._endless_mage_shatter = true
-				end
-
-				return true
-			end)
-		end
-	end
-end
-
-function patch_upgrade_map.mage_chain(level, endless)
-	for _, name in pairs(table.append(UP.bolts, {"bullet_pixie_poison", "bullet_pixie_instakill", "ray_arcane_disintegrate"}, true)) do
-		local bolt = E:get_template(name)
-
-		if not bolt._endless_mage_chain then
-			bolt._endless_mage_chain = true
-			bolt.main_script.remove = U.function_append(bolt.main_script.remove, function(this, store)
-				local target = store.entities[this.bullet.target_id]
-
-				if not target or target.health.dead then
-					return true
-				end
-
-				if not this.bullet._endless_mage_chain then
-					local enemies = U.find_enemies_in_range_filter_on(target.pos, friend_buff.mage_chain_radius, F_RANGED, 0, function(e)
-						return e.id ~= target.id
-					end)
-
-					if enemies then
-						for i = 1, #enemies do
-							local enemy = enemies[i]
-							local bolt = E:create_entity(this.template_name)
-
-							bolt.bullet.target_id = enemy.id
-							bolt.bullet.from = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
-							bolt.pos = V.vclone(bolt.bullet.from)
-							bolt.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
-							bolt.bullet.damage_factor = bolt.bullet.damage_factor * friend_buff.mage_chain * store.endless.upgrade_levels.mage_chain
-							bolt.bullet._endless_mage_chain = true
-
-							if bolt.tween then
-								bolt.tween.ts = store.tick_ts
-							end
-
-							if this.bullet.payload then
-								local payload = E:create_entity(this.bullet.payload.template_name)
-
-								if payload.bullet then
-									payload.bullet.level = this.bullet.payload.bullet.level
-									payload.bullet.damage_factor = this.bullet.payload.bullet.damage_factor
-								end
-
-								bolt.bullet.payload = payload
-							end
-
-							if this.bullet.shot_index then
-								bolt.bullet.shot_index = this.bullet.shot_index
-							end
-
-							queue_insert(store, bolt)
-						end
-					end
-				end
-
-				return true
-			end)
-		end
-	end
-end
-
-function patch_upgrade_map.mage_curse(level, endless)
-	local curse = E:get_template("mod_slow_curse")
-
-	curse.slow.factor = friend_buff.mage_curse_factor
-	curse.slow.duration = friend_buff.mage_curse_duration
-end
-
-function patch_upgrade_map.ban_rain(level, endless)
-	for _, name in pairs(EL.rain) do
-		table.removeobject(endless.upgrade_options, name)
-		table.removeobject(endless.gold_extra_upgrade_options, name)
-	end
-end
-
-function patch_upgrade_map.ban_archer(level, endless)
-	for _, name in pairs(EL.archer) do
-		table.removeobject(endless.upgrade_options, name)
-		table.removeobject(endless.gold_extra_upgrade_options, name)
-	end
-end
-
-function patch_upgrade_map.ban_barrack(level, endless)
-	for _, name in pairs(EL.barrack) do
-		table.removeobject(endless.upgrade_options, name)
-		table.removeobject(endless.gold_extra_upgrade_options, name)
-	end
-end
-
-function patch_upgrade_map.ban_engineer(level, endless)
-	for _, name in pairs(EL.engineer) do
-		table.removeobject(endless.upgrade_options, name)
-		table.removeobject(endless.gold_extra_upgrade_options, name)
-	end
-end
-
-function patch_upgrade_map.ban_mage(level, endless)
-	for _, name in pairs(EL.mage) do
-		table.removeobject(endless.upgrade_options, name)
-		table.removeobject(endless.gold_extra_upgrade_options, name)
-	end
-end
-
-function patch_upgrade_in_game_map.ban_rain(level, store, endless)
-	for _, name in pairs(EL.rain) do
-		table.removeobject(endless.upgrade_options, name)
-		table.removeobject(endless.gold_extra_upgrade_options, name)
-	end
-end
-
-function patch_upgrade_in_game_map.ban_archer(level, store, endless)
-	for _, name in pairs(EL.archer) do
-		table.removeobject(endless.upgrade_options, name)
-		table.removeobject(endless.gold_extra_upgrade_options, name)
-	end
-end
-
-function patch_upgrade_in_game_map.ban_barrack(level, store, endless)
-	for _, name in pairs(EL.barrack) do
-		table.removeobject(endless.upgrade_options, name)
-		table.removeobject(endless.gold_extra_upgrade_options, name)
-	end
-end
-
-function patch_upgrade_in_game_map.ban_engineer(level, store, endless)
-	for _, name in pairs(EL.engineer) do
-		table.removeobject(endless.upgrade_options, name)
-		table.removeobject(endless.gold_extra_upgrade_options, name)
-	end
-end
-
-function patch_upgrade_in_game_map.ban_mage(level, store, endless)
-	for _, name in pairs(EL.mage) do
-		table.removeobject(endless.upgrade_options, name)
-		table.removeobject(endless.gold_extra_upgrade_options, name)
-	end
-end
-
-function patch_upgrade_in_game_map.health(level, store, endless)
-	for _, s in pairs(store.soldiers) do
-		if s.health then
-			s.health.hp_max = s.health.hp_max * friend_buff.health_factor
-			s.health.hp = s.health.hp_max
-		end
-	end
-
-	endless.soldier_health_factor = endless.soldier_health_factor * friend_buff.health_factor
-end
-
-function patch_upgrade_in_game_map.soldier_damage(level, store, endless)
-	for _, s in pairs(store.soldiers) do
-		if s.unit then
-			s.unit.damage_factor = s.unit.damage_factor * friend_buff.soldier_damage_factor
-		end
-	end
-
-	endless.soldier_damage_factor = endless.soldier_damage_factor * friend_buff.soldier_damage_factor
-end
-
-function patch_upgrade_in_game_map.soldier_cooldown(level, store, endless)
-	for _, s in pairs(store.soldiers) do
-		if s.unit then
-			SU.insert_unit_cooldown_buff(store.tick_ts, s, friend_buff.soldier_cooldown_factor)
-		end
-	end
-
-	endless.soldier_cooldown_factor = endless.soldier_cooldown_factor * friend_buff.soldier_cooldown_factor
-end
-
-function patch_upgrade_in_game_map.tower_damage(level, store, endless)
-	for _, t in pairs(store.towers) do
-		SU.insert_tower_damage_factor_buff(t, friend_buff.tower_damage_factor)
-	end
-
-	endless.tower_damage_factor = endless.tower_damage_factor + friend_buff.tower_damage_factor
-end
-
-function patch_upgrade_in_game_map.tower_cooldown(level, store, endless)
-	for _, t in pairs(store.towers) do
-		SU.insert_tower_cooldown_buff(store.tick_ts, t, friend_buff.tower_cooldown_factor)
-	end
-
-	endless.tower_cooldown_factor = endless.tower_cooldown_factor * friend_buff.tower_cooldown_factor
-end
-
-function patch_upgrade_in_game_map.hero_damage(level, store, endless)
-	for _, h in pairs(store.soldiers) do
-		if h.hero then
-			h.unit.damage_factor = h.unit.damage_factor * friend_buff.hero_damage_factor
-			h.health.hp_max = h.health.hp_max * friend_buff.hero_health_factor
-			h.health.hp = h.health.hp_max
-		end
-	end
-
-	endless.hero_damage_factor = endless.hero_damage_factor * friend_buff.hero_damage_factor
-	endless.hero_health_factor = endless.hero_health_factor * friend_buff.hero_health_factor
-end
-
-function patch_upgrade_in_game_map.hero_cooldown(level, store, endless)
-	for _, h in pairs(store.soldiers) do
-		if h.hero then
-			SU.insert_unit_cooldown_buff(store.tick_ts, h, friend_buff.hero_cooldown_factor)
-		end
-	end
-
-	endless.hero_cooldown_factor = endless.hero_cooldown_factor * friend_buff.hero_cooldown_factor
-end
-
-function patch_upgrade_in_game_map.archer_bleed(level, store, endless)
-	patch_upgrade_map.archer_bleed(level)
-end
-
-function patch_upgrade_in_game_map.archer_multishot(level, store, endless)
-	patch_upgrade_map.archer_multishot(level)
-end
-
-function patch_upgrade_in_game_map.archer_insight(level, store, endless)
-	patch_upgrade_map.archer_insight(level)
-end
-
-function patch_upgrade_in_game_map.archer_critical(level, store, endless)
-	patch_upgrade_map.archer_critical(level)
-end
-
-function patch_upgrade_in_game_map.rain_count_inc(level, store, endless)
-	patch_upgrade_map.rain_count_inc(1)
-end
-
-function patch_upgrade_in_game_map.rain_damage_inc(level, store, endless)
-	patch_upgrade_map.rain_damage_inc(1)
-end
-
-function patch_upgrade_in_game_map.rain_radius_mul(level, store, endless)
-	patch_upgrade_map.rain_radius_mul(1)
-end
-
-function patch_upgrade_in_game_map.rain_cooldown_dec(level, store, endless)
-	patch_upgrade_map.rain_cooldown_dec(1)
-	store.game_gui.power_1:set_cooldown_time(E:get_template("power_fireball_control").cooldown)
-end
-
-function patch_upgrade_in_game_map.rain_scorch_damage_true(level, store, endless)
-	patch_upgrade_map.rain_scorch_damage_true(1)
-end
-
-function patch_upgrade_in_game_map.rain_thunder(level, store, endless)
-	patch_upgrade_map.rain_thunder(1)
-end
-
-function patch_upgrade_in_game_map.more_gold(level, store, endless)
-	endless.enemy_gold_factor = endless.enemy_gold_factor + friend_buff.more_gold
-end
-
-function patch_upgrade_in_game_map.barrack_rally(level, store, endless)
-	for _, t in pairs(store.towers) do
-		if t.barrack then
-			t.barrack.rally_range = math.huge
-		end
-	end
-
-	patch_upgrade_map.barrack_rally(level)
-end
-
-function patch_upgrade_in_game_map.barrack_unity(level, store, endless)
-	for _, t in pairs(store.towers) do
-		if t.barrack then
-			t.barrack.max_soldiers = t.barrack.max_soldiers + friend_buff.barrack_unity_count
-		elseif t.template_name == "tower_pixie" then
-			t.attacks.range = math.huge
-		end
-	end
-
-	patch_upgrade_map.barrack_unity(level)
-end
-
-function patch_upgrade_in_game_map.barrack_luck(level, store, endless)
-	patch_upgrade_map.barrack_luck(level)
-
-	for _, s in pairs(store.soldiers) do
-		if s.health then
-			if not s._endless_barrack_luck then
-				s.health.on_damage = U.function_append(s.health.on_damage, function(this, store, damage)
-					return math.random() > this._endless_barrack_luck
-				end)
-			end
-
-			s._endless_barrack_luck = level * friend_buff.barrack_luck
-		end
-	end
-end
-
-function patch_upgrade_in_game_map.barrack_synergy(level, store, endless)
-	for _, s in pairs(store.soldiers) do
-		if not s._barrack_synergy_aura then
-			local a = E:create_entity("endless_barrack_synergy_aura")
-
-			a.aura.source_id = s.id
-
-			queue_insert(store, a)
-
-			s._barrack_synergy_aura = a
-
-			if s.main_script then
-				s.main_script.remove = U.function_append(s.main_script.remove, function(this, store)
-					if this._barrack_synergy_aura then
-						queue_remove(this._barrack_synergy_aura)
-					end
-
-					return true
-				end)
-			end
-		end
-	end
-
-	patch_upgrade_map.barrack_synergy(level)
-end
-
-function patch_upgrade_in_game_map.engineer_focus(level, store, endless)
-	for _, t in pairs(store.towers) do
-		if t.template_name == "tower_tesla" or t.template_name == "tower_dwaarp" or t.template_name == "tower_frankenstein" or t.template_name == "tower_flamespitter_lvl4" then
-			SU.insert_tower_damage_factor_buff(t, friend_buff.engineer_focus * 0.8)
-		end
-	end
-
-	patch_upgrade_map.engineer_focus(1)
-end
-
-function patch_upgrade_in_game_map.engineer_aftermath(level, store, endless)
-	patch_upgrade_map.engineer_aftermath(level)
-end
-
-function patch_upgrade_in_game_map.engineer_seek(level, store, endless)
-	patch_upgrade_map.engineer_seek(level)
-
-	for _, t in pairs(store.towers) do
-		if table.contains({"tower_engineer_1", "tower_engineer_2", "tower_engineer_3", "tower_bfg", "tower_druid", "tower_entwood", "tower_tricannon_lvl4"}, t.template_name) then
-			t.attacks.list[1].vis_bans = U.flag_clear(t.attacks.list[1].vis_bans, F_FLYING)
-		end
-
-		if t.template_name == "tower_entwood" or t.template_name == "tower_tricannon_lvl4" then
-			t.attacks.list[2].vis_bans = U.flag_clear(t.attacks.list[2].vis_bans, F_FLYING)
-		elseif t.template_name == "tower_tesla" then
-			t.attacks.range = t.attacks.range * (1 + friend_buff.engineer_seek)
-		elseif t.template_name == "tower_frankenstein" then
-			t.attacks.range = t.attacks.range * (1 + friend_buff.engineer_seek)
-		elseif t.template_name == "tower_dwaarp" then
-			t.attacks.range = t.attacks.range * (1 + friend_buff.engineer_seek)
-		elseif t.template_name == "tower_mech" then
-			for _, s in pairs(t.barrack.soldiers) do
-				s.attacks.list[1].vis_bans = U.flag_clear(s.attacks.list[1].vis_bans, F_FLYING)
-			end
-		elseif t.template_name == "tower_flamespitter_lvl4" then
-			t.attacks.range = t.attacks.range * (1 + friend_buff.engineer_seek)
-		end
-	end
-end
-
-function patch_upgrade_in_game_map.engineer_fireball(level, store, endless)
-	patch_upgrade_map.engineer_fireball(1)
-end
-
-function patch_upgrade_in_game_map.mage_thunder(level, store, endless)
-	patch_upgrade_map.mage_thunder(level)
-end
-
-function patch_upgrade_in_game_map.mage_shatter(level, store, endless)
-	patch_upgrade_map.mage_shatter(level)
-end
-
-function patch_upgrade_in_game_map.mage_chain(level, store, endless)
-	patch_upgrade_map.mage_chain(level)
-end
-
-function patch_upgrade_in_game_map.mage_curse(level, store, endless)
-	patch_upgrade_map.mage_curse(level)
-end
 
 function EU.patch_upgrade_in_game(key, store, endless)
 	if not key then
 		return
 	end
+
+	if not validate_runtime_upgrade_key(key, endless) then
+		return
+	end
+
+	ensure_tech_registry()
 
 	endless.upgrade_levels[key] = endless.upgrade_levels[key] + 1
 
@@ -1460,18 +493,71 @@ function EU.patch_upgrade_in_game(key, store, endless)
 	end
 
 	local level = endless.upgrade_levels[key]
-	local patch_func = patch_upgrade_in_game_map[key]
+	local handled = TechRegistry.apply_runtime(key, level, store, endless, {
+		EL = EL,
+		friend_buff = friend_buff
+	})
 
-	if patch_func then
-		patch_func(level, store, endless)
+	debug_log(
+		"debug_trace_upgrades",
+		"patch_upgrade_in_game key=%s level=%s handled_by_registry=%s",
+		tostring(key),
+		tostring(level),
+		tostring(handled)
+	)
+
+	if not handled then
+		local patch_func = patch_upgrade_in_game_map[key]
+		if patch_func then
+			patch_func(level, store, endless)
+		elseif debug_enabled("debug_trace_upgrades") and not has_any_handler(key) and not warned_unhandled_upgrade["runtime:" .. tostring(key)] then
+			warned_unhandled_upgrade["runtime:" .. tostring(key)] = true
+			log.error("no runtime handler for endless upgrade key=%s level=%s", tostring(key), tostring(level))
+		elseif debug_enabled("debug_trace_upgrades") and not warned_unhandled_upgrade["runtime_template_only:" .. tostring(key)] then
+			warned_unhandled_upgrade["runtime_template_only:" .. tostring(key)] = true
+			debug_log("debug_trace_upgrades", "runtime phase skip key=%s (template-only handler)", tostring(key))
+		end
 	end
 end
 
 function EU.patch_upgrades(endless)
+	ensure_tech_registry()
+	local skipped_invalid_keys = {}
+
 	for k, v in pairs(endless.upgrade_levels) do
-		if v > 0 and patch_upgrade_map[k] then
-			patch_upgrade_map[k](v, endless)
+		if v > 0 then
+			if not validate_template_upgrade_key(k, v) then
+				skipped_invalid_keys[#skipped_invalid_keys + 1] = k
+			else
+				local handled = TechRegistry.apply_template(k, v, endless, {
+					EL = EL,
+					friend_buff = friend_buff
+				})
+
+				debug_log(
+					"debug_trace_upgrades",
+					"patch_upgrades key=%s level=%s handled_by_registry=%s",
+					tostring(k),
+					tostring(v),
+					tostring(handled)
+				)
+
+				if not handled and patch_upgrade_map[k] then
+					patch_upgrade_map[k](v, endless)
+				elseif not handled and debug_enabled("debug_trace_upgrades") and not has_any_handler(k) and not warned_unhandled_upgrade["template:" .. tostring(k)] then
+					warned_unhandled_upgrade["template:" .. tostring(k)] = true
+					log.error("no template handler for endless upgrade key=%s level=%s", tostring(k), tostring(v))
+				elseif not handled and debug_enabled("debug_trace_upgrades") and not warned_unhandled_upgrade["template_runtime_only:" .. tostring(k)] then
+					warned_unhandled_upgrade["template_runtime_only:" .. tostring(k)] = true
+					debug_log("debug_trace_upgrades", "template phase skip key=%s (runtime-only handler)", tostring(k))
+				end
+			end
 		end
+	end
+
+	if #skipped_invalid_keys > 0 then
+		table.sort(skipped_invalid_keys)
+		log.error("patch_upgrades skipped invalid keys(%s): %s", #skipped_invalid_keys, table.concat(skipped_invalid_keys, ", "))
 	end
 end
 

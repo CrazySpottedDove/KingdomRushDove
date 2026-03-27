@@ -1,5 +1,18 @@
 local i18n = require("i18n")
 local endless = {
+	-- 调试开关区（默认全关）。排查问题时按需开启，平时保持关闭。
+	debug_print_registered_techs = false,
+	-- 打印无尽初始化摘要（敌人池/路径/每波规模）。
+	debug_trace_init = false,
+	-- 打印敌方成长变化，定位“后期强度异常”。
+	debug_trace_enemy_growth = false,
+	-- 科技应用链路日志（模板阶段 + 局内阶段）。
+	-- 出现“升级不生效”时优先开启。
+	debug_trace_upgrades = false,
+	-- 注册覆盖率检查日志，不改任何数值。
+	debug_check_registry_coverage = false,
+	-- 塔技能触发日志，输出量很大，只建议短时排查。
+	debug_trace_tower_skills = false,
 	friend_buff = {
 		health_factor = 1.15,
 		s_health_factor = 15,

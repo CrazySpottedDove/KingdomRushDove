@@ -13070,6 +13070,12 @@ return {
 		loop = false,
 		source_group = "BULLETS"
 	},
+	VeznanSoulDrain = {
+		files = {"Soul_Drain.ogg"},
+		gain = 1,
+		loop = false,
+		source_group = "BULLETS"
+	},
 	VeznanDeath = {
 		files = {"Sound_EnemyVeznan_death.ogg"},
 		gain = 1,
