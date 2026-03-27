@@ -50,6 +50,7 @@ function screen_comics:init(w, h, done_callback)
 	local sprites_order = {}
 	local sprites = {}
 	local labels = {}
+	local missing_sids_warned = {}
 
 	local function new_page_view(hidden)
 		local page_view = KView:new(V.v(self.ref_h, self.ref_w))
@@ -187,7 +188,17 @@ function screen_comics:init(w, h, done_callback)
 		local sid = sprites_order[i]
 		local s = sprites[sid]
 
-		page_views[s.current_page]:add_child(s)
+		if s and s.current_page and page_views[s.current_page] then
+			page_views[s.current_page]:add_child(s)
+		else
+			-- 某些 comic 的 ORDER 会包含控制占位（例如 frame_continue / frame_*），不是实际图片节点
+			local is_control_sid = type(sid) == "string" and string.find(sid, "frame_", 1, true) == 1
+
+			if not is_control_sid and not missing_sids_warned[sid] then
+				missing_sids_warned[sid] = true
+				log.error("comic sprite missing or invalid: sid=%s", tostring(sid))
+			end
+		end
 	end
 
 	for i, p in ipairs(page_views) do
