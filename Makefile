@@ -43,6 +43,7 @@ package:
 	git checkout master
 	git merge dev
 	git push server master
+	git push origin master
 # 	git push gitee master
 	git checkout dev
 
