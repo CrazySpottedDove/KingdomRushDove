@@ -4491,7 +4491,7 @@ return {
 		desintegrate_soldier = {
 			from = 1,
 			prefix = "states_soldiers",
-			to = 15
+			to = 10
 		},
 		dracolich_disease_big = {
 			from = 1,
