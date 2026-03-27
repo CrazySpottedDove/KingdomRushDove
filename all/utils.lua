@@ -2997,6 +2997,9 @@ function U.set_terrain_style(e, terrain_style)
 	end
 
 	e.render.sprites[1].name = TERRAIN_STYLE_SPRITE_DICT[terrain_style]
+-- DEBUG USE: GUARANTEE THAT terrain_style is not a number!
+-- print("set terrain style to " .. terrain_style)
+-- print("sprite name is " .. e.render.sprites[1].name)
 end
 
 return U

@@ -121,7 +121,9 @@ tt.tower.can_be_mod = false
 tt.tower.type = "blocked_holder"
 tt.tower_holder.blocked = true
 tt.render.sprites[1].animated = false
-tt.render.sprites[1].name = "build_terrain_blocked_%04i"
+-- default fallback
+tt.render.sprites[1].name = "build_terrain_blocked_0001"
+-- tt.render.sprites[1].name = "build_terrain_blocked_%04i"
 tt.render.sprites[1].offset = vec_2(0, 17)
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[2] = CC("sprite")

@@ -14,6 +14,7 @@ local P = require("path_db")
 local serpent = require("serpent")
 local bit = require("bit")
 local bor = bit.bor
+local U = require("utils")
 local LU = {}
 
 local function is_file(path)
@@ -318,9 +319,12 @@ end
 
 function LU.insert_tower(store, template, style, pos, rally_pos, spent, holder_id)
 	local template_name = template
+	local terrain_style = TERRAIN_STYLES[style]
+
 	if template == "tower_holder" then
-		template_name = TERRAIN_STYLES[style]
+		template_name = terrain_style
 	end
+
 	local e = E:create_entity(template_name)
 
 	e.pos = V.v(pos.x, pos.y)
@@ -334,6 +338,10 @@ function LU.insert_tower(store, template, style, pos, rally_pos, spent, holder_i
 
 	if e.ui then
 		e.ui.nav_mesh_id = holder_id
+	end
+
+	if terrain_style then
+		U.set_terrain_style(e, terrain_style)
 	end
 
 	LU.queue_insert(store, e)
