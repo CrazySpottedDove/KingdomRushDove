@@ -15,4 +15,8 @@ function read_expected_time.read_can_stop(name)
 	return love.timer.getTime() >= read_expected_time.reads[name].expected_stop_time
 end
 
+function read_expected_time.read_time_left(name)
+	return math.ceil(math.max(read_expected_time.reads[name].expected_stop_time - love.timer.getTime(), 0))
+end
+
 return read_expected_time
