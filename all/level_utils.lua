@@ -255,6 +255,11 @@ function LU.insert_entities(store, items, store_back_references)
 					-- if e.tower and e.tower.terrain_style then
 					-- 	e.render.sprites[1].name = string.format(e.render.sprites[1].name, e.tower.terrain_style)
 					-- end
+					if e.tower and e.tower.terrain_style then
+						if e.render.sprites[1].name and string.find(e.render.sprites[1].name, "%%") then
+							U.set_terrain_style(e, e.tower.terrain_style)
+						end
+					end
 
 					if e.sound_events and e.sound_events.mute_on_level_insert then
 						e.sound_events.insert = nil
