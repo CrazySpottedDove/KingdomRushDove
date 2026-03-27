@@ -2549,17 +2549,17 @@ function SU.soldier_pick_melee_target(store, this)
 	if not target then
 		-- 如果当前还没有 target_id，就索一下敌
 		if this.hero then
-			target = U.find_nearest_enemy(store, center, 0, this.melee.range, F_BLOCK, bor(F_CLIFF, F_FLYING), function(e)
+			target = U.find_nearest_enemy(store, center, 0, this.melee.range, F_BLOCK, bor(F_CLIFF), function(e)
 				return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
 			end)
 		else
-			target = U.detect_foremost_enemy_in_range_filter_on(center, this.melee.range, F_BLOCK, bor(F_CLIFF, F_FLYING), function(e)
+			target = U.detect_foremost_enemy_in_range_filter_on(center, this.melee.range, F_BLOCK, bor(F_CLIFF), function(e)
 				return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
 			end)
 		end
 	elseif U.blocker_rank(store, this) ~= 1 then
 		-- 如果当前拦截的敌人被多个士兵拦截，就尝试寻找别的尚未被拦截的敌人作为目标
-		local alt_target = U.detect_foremost_enemy_in_range_filter_on(center, this.melee.range, F_BLOCK, bor(F_CLIFF, F_FLYING), function(e)
+		local alt_target = U.detect_foremost_enemy_in_range_filter_on(center, this.melee.range, F_BLOCK, bor(F_CLIFF), function(e)
 			return #e.enemy.blockers == 0 and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0
 		end)
 
