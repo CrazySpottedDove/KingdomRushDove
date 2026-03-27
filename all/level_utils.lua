@@ -317,7 +317,11 @@ function LU.insert_holders(store, holders, templates)
 end
 
 function LU.insert_tower(store, template, style, pos, rally_pos, spent, holder_id)
-	local e = E:create_entity(TERRAIN_STYLES[style])
+	local template_name = template
+	if template == "tower_holder" then
+		template_name = TERRAIN_STYLES[style]
+	end
+	local e = E:create_entity(template_name)
 
 	e.pos = V.v(pos.x, pos.y)
 	e.tower.spent = spent and spent or 0

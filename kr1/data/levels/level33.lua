@@ -8,6 +8,7 @@ local U=require("utils")
 local LU=require("level_utils")
 local V=require("lib.klua.vector")
 require("all.constants")
+local e
 local function fts(v)
 return v/FPS
 end
