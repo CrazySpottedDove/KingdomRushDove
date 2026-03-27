@@ -32,20 +32,22 @@ function M.register(sys, deps)
 					end
 				end
 
-				local th = E:create_entity("tower_holder")
+				local th = E:create_entity(e.tower.terrain_style)
 
 				th.pos = V.vclone(e.pos)
 				th.tower.holder_id = e.tower.holder_id
 				th.tower.flip_x = e.tower.flip_x
 
+				U.set_terrain_style(th, e.tower.terrain_style)
+
 				if e.tower.default_rally_pos then
 					th.tower.default_rally_pos = e.tower.default_rally_pos
 				end
 
-				if e.tower.terrain_style then
-					th.tower.terrain_style = e.tower.terrain_style
-					th.render.sprites[1].name = string.format(th.render.sprites[1].name, e.tower.terrain_style)
-				end
+				-- if e.tower.terrain_style then
+				-- 	th.tower.terrain_style = e.tower.terrain_style
+				-- 	th.render.sprites[1].name = string.format(th.render.sprites[1].name, e.tower.terrain_style)
+				-- end
 
 				if th.ui and e.ui then
 					th.ui.nav_mesh_id = e.ui.nav_mesh_id
@@ -84,9 +86,12 @@ function M.register(sys, deps)
 					ne.tower.default_rally_pos = V.vclone(e.tower.default_rally_pos)
 				end
 
+				-- if e.tower.terrain_style then
+				-- 	ne.tower.terrain_style = e.tower.terrain_style
+				-- 	ne.render.sprites[1].name = string.format(ne.render.sprites[1].name, e.tower.terrain_style)
+				-- end
 				if e.tower.terrain_style then
-					ne.tower.terrain_style = e.tower.terrain_style
-					ne.render.sprites[1].name = string.format(ne.render.sprites[1].name, e.tower.terrain_style)
+					U.set_terrain_style(ne, e.tower.terrain_style)
 				end
 
 				if ne.ui and e.ui then
