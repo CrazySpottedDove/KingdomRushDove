@@ -4015,6 +4015,10 @@ return {
 		size = 18458,
 		hash = "67546ad6"
 	},
+	["kr1-desktop/sounds/files/Soul_Drain.ogg"] = {
+		size = 11922,
+		hash = "936caf62"
+	},
 	["kr1-desktop/sounds/files/Sound_AchievementWin.ogg"] = {
 		size = 20671,
 		hash = "63621174"

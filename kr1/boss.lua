@@ -390,18 +390,19 @@ tt.timed_attacks.list[2].data = {
 	[14] = {15, 3, {1, 1, 1}},
 	[15] = {15, 3, {1, 1, 1}}
 }
+-- 魂吸
 tt.timed_attacks.list[3] = CC("custom_attack")
 tt.timed_attacks.list[3].animation = "soulDrain"
 tt.timed_attacks.list[3].animation_start = "soulDrainStart"
 tt.timed_attacks.list[3].animation_hold = "soulDrainHold"
 tt.timed_attacks.list[3].animation_end = "soulDrainEnd"
-tt.timed_attacks.list[3].cooldown = 5
-tt.timed_attacks.list[3].range = 240
+tt.timed_attacks.list[3].cooldown = 8
+tt.timed_attacks.list[3].range = 150
 tt.timed_attacks.list[3].sound = "VeznanSoulDrain"
 tt.timed_attacks.list[3].soul_effect = "veznan_soul"
 tt.timed_attacks.list[3].soul_hand_offset = vec_2(16, 20)
 tt.timed_attacks.list[3].soul_speed = 10 * FPS
-tt.timed_attacks.list[3].heal_hp_factor = 0.05
+tt.timed_attacks.list[3].heal_hp_factor = 0.035
 tt.timed_attacks.list[3].kill_start_time = fts(9)
 tt.timed_attacks.list[3].kill_end_time = fts(23)
 tt.timed_attacks.list[3].loop_start_time = fts(11)
