@@ -97,7 +97,7 @@ local function register_rain_techs(registry, ctx)
 		end,
 		apply_runtime = function(level, store, endless)
 			patch_rain_count_inc(1, ctx)
-		end,
+		end
 	})
 
 	registry.register({
@@ -108,7 +108,7 @@ local function register_rain_techs(registry, ctx)
 		end,
 		apply_runtime = function(level, store, endless)
 			patch_rain_damage_inc(1, ctx)
-		end,
+		end
 	})
 
 	registry.register({
@@ -119,7 +119,7 @@ local function register_rain_techs(registry, ctx)
 		end,
 		apply_runtime = function(level, store, endless)
 			patch_rain_radius_mul(1, ctx)
-		end,
+		end
 	})
 
 	registry.register({
@@ -131,7 +131,7 @@ local function register_rain_techs(registry, ctx)
 		apply_runtime = function(level, store, endless)
 			patch_rain_cooldown_dec(1, ctx)
 			store.game_gui.power_1:set_cooldown_time(E:get_template("power_fireball_control").cooldown)
-		end,
+		end
 	})
 
 	registry.register({
@@ -142,7 +142,7 @@ local function register_rain_techs(registry, ctx)
 		end,
 		apply_runtime = function(level, store, endless)
 			patch_rain_scorch_damage_true(1, ctx)
-		end,
+		end
 	})
 
 	registry.register({
@@ -153,10 +153,10 @@ local function register_rain_techs(registry, ctx)
 		end,
 		apply_runtime = function(level, store, endless)
 			patch_rain_thunder(1)
-		end,
+		end
 	})
 end
 
 return {
-	register = register_rain_techs,
+	register = register_rain_techs
 }

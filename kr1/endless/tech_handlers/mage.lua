@@ -168,7 +168,7 @@ local function register_mage_techs(registry, ctx)
 		end,
 		apply_runtime = function(level, store, endless)
 			patch_mage_thunder(level, ctx)
-		end,
+		end
 	})
 
 	registry.register({
@@ -179,7 +179,7 @@ local function register_mage_techs(registry, ctx)
 		end,
 		apply_runtime = function(level, store, endless)
 			patch_mage_shatter(level, ctx)
-		end,
+		end
 	})
 
 	registry.register({
@@ -190,7 +190,7 @@ local function register_mage_techs(registry, ctx)
 		end,
 		apply_runtime = function(level, store, endless)
 			patch_mage_chain(level, ctx)
-		end,
+		end
 	})
 
 	registry.register({
@@ -201,10 +201,10 @@ local function register_mage_techs(registry, ctx)
 		end,
 		apply_runtime = function(level, store, endless)
 			patch_mage_curse(level, ctx)
-		end,
+		end
 	})
 end
 
 return {
-	register = register_mage_techs,
+	register = register_mage_techs
 }

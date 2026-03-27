@@ -132,7 +132,7 @@ local function register_barrack_techs(registry, ctx)
 		apply_runtime = function(level, store, endless)
 			patch_barrack_rally_runtime(level, store)
 			patch_barrack_rally(level)
-		end,
+		end
 	})
 
 	registry.register({
@@ -144,7 +144,7 @@ local function register_barrack_techs(registry, ctx)
 		apply_runtime = function(level, store, endless)
 			patch_barrack_unity_runtime(level, store, ctx)
 			patch_barrack_unity(level, ctx)
-		end,
+		end
 	})
 
 	registry.register({
@@ -156,7 +156,7 @@ local function register_barrack_techs(registry, ctx)
 		apply_runtime = function(level, store, endless)
 			patch_barrack_luck(level, ctx)
 			patch_barrack_luck_runtime(level, store, ctx)
-		end,
+		end
 	})
 
 	registry.register({
@@ -168,10 +168,10 @@ local function register_barrack_techs(registry, ctx)
 		apply_runtime = function(level, store, endless)
 			patch_barrack_synergy_runtime(level, store)
 			patch_barrack_synergy(level, ctx)
-		end,
+		end
 	})
 end
 
 return {
-	register = register_barrack_techs,
+	register = register_barrack_techs
 }

@@ -13,7 +13,7 @@ local function register_friend_core_techs(registry, ctx)
 			end
 
 			endless.soldier_health_factor = endless.soldier_health_factor * ctx.friend_buff.health_factor
-		end,
+		end
 	})
 
 	registry.register({
@@ -27,7 +27,7 @@ local function register_friend_core_techs(registry, ctx)
 			end
 
 			endless.soldier_damage_factor = endless.soldier_damage_factor * ctx.friend_buff.soldier_damage_factor
-		end,
+		end
 	})
 
 	registry.register({
@@ -41,7 +41,7 @@ local function register_friend_core_techs(registry, ctx)
 			end
 
 			endless.soldier_cooldown_factor = endless.soldier_cooldown_factor * ctx.friend_buff.soldier_cooldown_factor
-		end,
+		end
 	})
 
 	registry.register({
@@ -53,7 +53,7 @@ local function register_friend_core_techs(registry, ctx)
 			end
 
 			endless.tower_damage_factor = endless.tower_damage_factor + ctx.friend_buff.tower_damage_factor
-		end,
+		end
 	})
 
 	registry.register({
@@ -65,7 +65,7 @@ local function register_friend_core_techs(registry, ctx)
 			end
 
 			endless.tower_cooldown_factor = endless.tower_cooldown_factor * ctx.friend_buff.tower_cooldown_factor
-		end,
+		end
 	})
 
 	registry.register({
@@ -82,7 +82,7 @@ local function register_friend_core_techs(registry, ctx)
 
 			endless.hero_damage_factor = endless.hero_damage_factor * ctx.friend_buff.hero_damage_factor
 			endless.hero_health_factor = endless.hero_health_factor * ctx.friend_buff.hero_health_factor
-		end,
+		end
 	})
 
 	registry.register({
@@ -96,10 +96,10 @@ local function register_friend_core_techs(registry, ctx)
 			end
 
 			endless.hero_cooldown_factor = endless.hero_cooldown_factor * ctx.friend_buff.hero_cooldown_factor
-		end,
+		end
 	})
 end
 
 return {
-	register = register_friend_core_techs,
+	register = register_friend_core_techs
 }

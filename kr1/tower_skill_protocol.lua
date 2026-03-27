@@ -130,13 +130,7 @@ local function tick_skill(skill_cfg, tower, store, state)
 	state[key] = now + (skill_cfg.cooldown or 10)
 
 	if EL.debug_trace_tower_skills then
-		log.error(
-			"trigger tower_skill tower=%s skill=%s targets=%s next_cd=%.2f",
-			tostring(tower.template_name),
-			tostring(key),
-			tostring(applied_count),
-			state[key] - now
-		)
+		log.error("trigger tower_skill tower=%s skill=%s targets=%s next_cd=%.2f", tostring(tower.template_name), tostring(key), tostring(applied_count), state[key] - now)
 	end
 end
 
@@ -190,12 +184,7 @@ function TowerSkill.tick_all(store)
 			end
 			store._tower_skill_dbg_next_ts = store.tick_ts + 5
 			-- 心跳每 5 秒输出一次，用于确认系统在运行。
-			log.error(
-				"tower_skill heartbeat total_towers=%s skill_towers=%s source=%s",
-				tostring(total_towers),
-				tostring(skill_towers),
-				has_list_towers and "store.towers" or "fallback_scan"
-			)
+			log.error("tower_skill heartbeat total_towers=%s skill_towers=%s source=%s", tostring(total_towers), tostring(skill_towers), has_list_towers and "store.towers" or "fallback_scan")
 		end
 	end
 

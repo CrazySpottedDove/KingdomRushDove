@@ -394,7 +394,7 @@ local function register_engineer_techs(registry, ctx)
 		end,
 		apply_runtime = function(level, store, endless)
 			patch_engineer_seek_runtime(level, store, endless, ctx)
-		end,
+		end
 	})
 
 	registry.register({
@@ -405,7 +405,7 @@ local function register_engineer_techs(registry, ctx)
 		end,
 		apply_runtime = function(level, store, endless)
 			patch_engineer_fireball(1, ctx)
-		end,
+		end
 	})
 
 	registry.register({
@@ -421,7 +421,7 @@ local function register_engineer_techs(registry, ctx)
 					SU.insert_tower_damage_factor_buff(t, ctx.friend_buff.engineer_focus * 0.8)
 				end
 			end
-		end,
+		end
 	})
 
 	registry.register({
@@ -432,10 +432,10 @@ local function register_engineer_techs(registry, ctx)
 		end,
 		apply_runtime = function(level, store, endless)
 			patch_engineer_aftermath(level, ctx)
-		end,
+		end
 	})
 end
 
 return {
-	register = register_engineer_techs,
+	register = register_engineer_techs
 }

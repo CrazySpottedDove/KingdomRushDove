@@ -69,7 +69,7 @@ local function register_archer_techs(registry, ctx)
 		end,
 		apply_runtime = function(level, store, endless)
 			patch_archer_bleed(level, ctx)
-		end,
+		end
 	})
 
 	registry.register({
@@ -80,7 +80,7 @@ local function register_archer_techs(registry, ctx)
 		end,
 		apply_runtime = function(level, store, endless)
 			patch_archer_insight(level, ctx)
-		end,
+		end
 	})
 
 	registry.register({
@@ -91,7 +91,7 @@ local function register_archer_techs(registry, ctx)
 		end,
 		apply_runtime = function(level, store, endless)
 			patch_archer_multishot(level)
-		end,
+		end
 	})
 
 	registry.register({
@@ -102,10 +102,10 @@ local function register_archer_techs(registry, ctx)
 		end,
 		apply_runtime = function(level, store, endless)
 			patch_archer_critical(level, ctx)
-		end,
+		end
 	})
 end
 
 return {
-	register = register_archer_techs,
+	register = register_archer_techs
 }

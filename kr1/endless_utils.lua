@@ -116,12 +116,7 @@ local function audit_tech_registry_coverage()
 	else
 		local ids = TechRegistry.ids()
 		log.info("endless tech registry coverage check passed (%s/%s)", #ids, #ids)
-		debug_log(
-			"debug_check_registry_coverage",
-			"endless tech phase coverage: template_missing=%s runtime_missing=%s",
-			tostring(#template_missing),
-			tostring(#runtime_missing)
-		)
+		debug_log("debug_check_registry_coverage", "endless tech phase coverage: template_missing=%s runtime_missing=%s", tostring(#template_missing), tostring(#runtime_missing))
 	end
 end
 
@@ -295,16 +290,7 @@ function EU.init_endless(level_name, groups)
 		end
 	end
 
-	debug_log(
-		"debug_trace_init",
-		"init_endless level=%s load_from_history=%s enemy_types=%s paths=%s spawn_per_wave=%s weight_per_wave=%s",
-		tostring(level_name),
-		tostring(endless.load_from_history),
-		tostring(#endless.enemy_list),
-		tostring(#endless.available_paths),
-		tostring(endless.spawn_count_per_wave),
-		tostring(endless.enemy_weight_per_wave)
-	)
+	debug_log("debug_trace_init", "init_endless level=%s load_from_history=%s enemy_types=%s paths=%s spawn_per_wave=%s weight_per_wave=%s", tostring(level_name), tostring(endless.load_from_history), tostring(#endless.enemy_list), tostring(#endless.available_paths), tostring(endless.spawn_count_per_wave), tostring(endless.enemy_weight_per_wave))
 
 	return endless
 end
@@ -453,16 +439,7 @@ function EU.patch_enemy_growth(endless)
 		end
 	end
 
-	debug_log(
-		"debug_trace_enemy_growth",
-		"patch_enemy_growth count=%s picked=[%s] hp=%.3f dmg=%.3f spd=%.3f instakill=%.3f",
-		tostring(#upgraded_keys),
-		table.concat(upgraded_keys, ", "),
-		endless.enemy_health_factor,
-		endless.enemy_damage_factor,
-		endless.enemy_speed_factor,
-		endless.enemy_instakill_resistance
-	)
+	debug_log("debug_trace_enemy_growth", "patch_enemy_growth count=%s picked=[%s] hp=%.3f dmg=%.3f spd=%.3f instakill=%.3f", tostring(#upgraded_keys), table.concat(upgraded_keys, ", "), endless.enemy_health_factor, endless.enemy_damage_factor, endless.enemy_speed_factor, endless.enemy_instakill_resistance)
 end
 
 -- 老映射已废弃，逻辑都在 tech_registry。
@@ -498,13 +475,7 @@ function EU.patch_upgrade_in_game(key, store, endless)
 		friend_buff = friend_buff
 	})
 
-	debug_log(
-		"debug_trace_upgrades",
-		"patch_upgrade_in_game key=%s level=%s handled_by_registry=%s",
-		tostring(key),
-		tostring(level),
-		tostring(handled)
-	)
+	debug_log("debug_trace_upgrades", "patch_upgrade_in_game key=%s level=%s handled_by_registry=%s", tostring(key), tostring(level), tostring(handled))
 
 	if not handled then
 		local patch_func = patch_upgrade_in_game_map[key]
@@ -534,13 +505,7 @@ function EU.patch_upgrades(endless)
 					friend_buff = friend_buff
 				})
 
-				debug_log(
-					"debug_trace_upgrades",
-					"patch_upgrades key=%s level=%s handled_by_registry=%s",
-					tostring(k),
-					tostring(v),
-					tostring(handled)
-				)
+				debug_log("debug_trace_upgrades", "patch_upgrades key=%s level=%s handled_by_registry=%s", tostring(k), tostring(v), tostring(handled))
 
 				if not handled and patch_upgrade_map[k] then
 					patch_upgrade_map[k](v, endless)

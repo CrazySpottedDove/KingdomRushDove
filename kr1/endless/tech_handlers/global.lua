@@ -10,7 +10,7 @@ local function register_global_techs(registry, ctx)
 			end,
 			apply_runtime = function(level, store, endless)
 				Common.remove_upgrade_group(endless, ctx.EL[list_key])
-			end,
+			end
 		})
 	end
 
@@ -19,7 +19,7 @@ local function register_global_techs(registry, ctx)
 		group = "global",
 		apply_runtime = function(level, store, endless)
 			endless.enemy_gold_factor = endless.enemy_gold_factor + ctx.friend_buff.more_gold
-		end,
+		end
 	})
 
 	register_ban_tech("ban_rain", "rain")
@@ -31,5 +31,5 @@ local function register_global_techs(registry, ctx)
 end
 
 return {
-	register = register_global_techs,
+	register = register_global_techs
 }

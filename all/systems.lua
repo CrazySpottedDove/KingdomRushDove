@@ -1244,8 +1244,7 @@ SystemsIndex.register_extracted(sys, {
 	bor = bor,
 	queue_insert = queue_insert,
 	queue_remove = queue_remove,
-	floor = floor
-	,
+	floor = floor,
 	ffi = ffi,
 	cos = cos,
 	sin = sin,
