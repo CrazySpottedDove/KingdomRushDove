@@ -15,7 +15,22 @@ local MUST_READ = {
 }
 local READ_EXPECTED_TIME = require("dove_modules.notice.read_expected_time")
 local utf8 = require("utf8")
-local confirm_steps = {"我已阅读，继续游戏", "我真的已阅读全部内容", "我发誓已阅读完毕", "我为因未读完导致的任何事负责", "我承诺不人身攻击作者", "确认过快，请继续阅读"}
+local confirm_steps = {"我已阅读，继续游戏", "我真的已阅读全部内容", "我发誓已阅读完毕", "我为因未读完导致的任何事负责", "我承诺不人身攻击作者", "%s(%i秒)"}
+local persuade_words = {
+	"确认过快，继续阅读",
+	"求求你了好好读吧",
+	"拜托，一定要看完",
+	"读完有好处的",
+	"看完问题少一半的",
+	"作者真的苦口婆心的",
+	"看完真的很有用的",
+	"求你了真的要看",
+	"不要挂机刷视频啊",
+	"阅读是游玩改版第一步",
+	"阅读是人类进步的阶梯",
+	"我和我的朋友都看完了",
+	"作者让你看一定有他的用意"
+}
 local font = require("lib.klove.font_db"):f("msyh", 20)
 local line_h = font:getHeight() + 6
 local lines = {}
@@ -243,6 +258,13 @@ function MUST_READ:draw()
 	love.graphics.rectangle("fill", bx, by, btn_w, btn_h, 6, 6)
 	love.graphics.setColor(1, 1, 1)
 	local btn_text = confirm_steps[self.confirm_index]
+	if self.confirm_index == #confirm_steps then
+		if not self.last_persuade_time or love.timer.getTime() - self.last_persuade_time > 3 then
+			self.last_persuade_time = love.timer.getTime()
+			self.persuade_word = persuade_words[math.random(#persuade_words)]
+		end
+		btn_text = string.format(btn_text, self.persuade_word, READ_EXPECTED_TIME.read_time_left("author_words"))
+	end
 	love.graphics.printf(btn_text, bx, by + (btn_h - font:getHeight()) / 2, btn_w, "center")
 end
 
