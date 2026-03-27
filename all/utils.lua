@@ -2988,6 +2988,14 @@ end
 --- @param terrain_style string 塔位地形样式
 function U.set_terrain_style(e, terrain_style)
 	e.tower.terrain_style = terrain_style
+
+	local sprite_name = TERRAIN_STYLE_SPRITE_DICT[terrain_style]
+
+	if not sprite_name then
+		log.error("not found terrain style's sprite: %s", terrain_style)
+		return
+	end
+
 	e.render.sprites[1].name = TERRAIN_STYLE_SPRITE_DICT[terrain_style]
 end
 
