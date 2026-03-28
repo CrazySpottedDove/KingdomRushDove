@@ -656,17 +656,22 @@ function scripts.eb_veznan.update(this, store)
 			return false
 		end
 
-		local function has_targets()
-			for _, e in pairs(store.soldiers or {}) do
-				if e and e.pos and e.health and not e.health.dead and U.is_inside_ellipse(e.pos, this.pos, sda.range) and e.vis and U.flags_pass(e.vis, sda) and not is_soul_drain_immune(e) then
-					return true
-				end
-			end
-
-			return false
+		-- soul_drain：旧版用 pairs+flags_pass+椭圆手写「是否有目标」，杀伤段用 find_soldiers_in_range。
+		-- 两套条件曾漂移（典型：未与 Utils 同步 pending_removal、vis/椭圆边界），易出现「ready 了但吸不到 /
+		-- 重复一堆 if 仍难对齐」的隐性 BUG。现只保留一处索敌：find_soldiers_in_range + 元素免疫过滤。
+		local function find_soul_drain_targets()
+			return U.find_soldiers_in_range(store.soldiers, this.pos, 0, sda.range, sda.vis_flags, sda.vis_bans, function(e)
+				return not is_soul_drain_immune(e)
+			end)
 		end
 
-		if not has_targets() then
+		local function has_soul_drain_targets()
+			local t = find_soul_drain_targets()
+
+			return t ~= nil and #t > 0
+		end
+
+		if not has_soul_drain_targets() then
 			SU.delay_attack(store, sda, 0.2)
 
 			return false
@@ -687,7 +692,7 @@ function scripts.eb_veznan.update(this, store)
 		S:queue(sda.sound)
 
 		while store.tick_ts - started_ts <= sda.kill_end_time do
-			local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, sda.range, sda.vis_flags, sda.vis_bans)
+			local targets = find_soul_drain_targets()
 			local elapsed = store.tick_ts - started_ts
 
 			if not hold_started and elapsed >= (sda.loop_start_time or sda.kill_start_time) then
@@ -699,21 +704,26 @@ function scripts.eb_veznan.update(this, store)
 				return abort_soul_drain()
 			end
 
-			for _, target in pairs(targets or {}) do
-				if not drained_ids[target.id] and target.health and not target.health.dead and not is_soul_drain_immune(target) then
-					local d = E:create_entity("damage")
+			-- find_soldiers_in_range 返回连续数组；此处每帧热路径，用下标循环避免 pairs（LuaJIT）
+			if targets then
+				for i = 1, #targets do
+					local target = targets[i]
 
-					d.damage_type = bor(DAMAGE_DISINTEGRATE, DAMAGE_INSTAKILL)
-					d.value = (tonumber(target.health.hp_max) or 0) + 1
-					d.source_id = this.id
-					d.target_id = target.id
+					if not drained_ids[target.id] then
+						local d = E:create_entity("damage")
 
-					queue_damage(store, d)
-					local soul_duration = spawn_soul_to_veznan(target)
-					last_soul_arrival_ts = math.max(last_soul_arrival_ts, store.tick_ts + soul_duration)
-					U.heal(this, this.health.hp_max * sda.heal_hp_factor)
+						d.damage_type = bor(DAMAGE_DISINTEGRATE, DAMAGE_INSTAKILL)
+						d.value = (tonumber(target.health.hp_max) or 0) + 1
+						d.source_id = this.id
+						d.target_id = target.id
 
-					drained_ids[target.id] = true
+						queue_damage(store, d)
+						local soul_duration = spawn_soul_to_veznan(target)
+						last_soul_arrival_ts = math.max(last_soul_arrival_ts, store.tick_ts + soul_duration)
+						U.heal(this, this.health.hp_max * sda.heal_hp_factor)
+
+						drained_ids[target.id] = true
+					end
 				end
 			end
 
