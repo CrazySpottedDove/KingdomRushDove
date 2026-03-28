@@ -700,522 +700,510 @@ GS.encyclopedia_enemies = {
 	},
 	{
 		name = "eb_balrog"
+	},
+	{
+		always_shown = true,
+		name = "enemy_hog_invader"
+	},
+	{
+		name = "enemy_tusked_brawler"
+	},
+	{
+
+		name = "enemy_cutthroat_rat"
+	},
+	{
+
+		name = "enemy_bear_vanguard"
+	},
+	{
+
+		name = "enemy_turtle_shaman"
+	},
+	{
+
+		name = "enemy_surveyor_harpy"
+	},
+	{
+
+		name = "enemy_dreadeye_viper"
+	},
+	{
+
+		name = "enemy_hyena5"
+	},
+	{
+
+		name = "enemy_skunk_bombardier"
+	},
+	{
+
+		name = "enemy_bear_woodcutter"
+	},
+	{
+
+		name = "enemy_rhino"
+	},
+	{
+
+		name = "boss_pig"
+	},
+	{
+
+		name = "enemy_acolyte"
+	},
+	{
+
+		name = "enemy_acolyte_tentacle"
+	},
+	{
+
+		name = "enemy_small_stalker"
+	},
+	{
+
+		name = "enemy_lesser_sister"
+	},
+	{
+
+		name = "enemy_lesser_sister_nightmare"
+	},
+	{
+
+		name = "enemy_spiderling"
+	},
+	{
+
+		name = "enemy_unblinded_priest"
+	},
+	{
+
+		name = "enemy_unblinded_abomination"
+	},
+	{
+
+		name = "enemy_unblinded_abomination_stage_8"
+	},
+	{
+
+		name = "enemy_armored_nightmare"
+	},
+	{
+
+		name = "enemy_unblinded_shackler"
+	},
+	{
+
+		name = "enemy_corrupted_stalker"
+	},
+	{
+
+		name = "enemy_stage_11_cult_leader_illusion"
+	},
+	{
+
+		name = "enemy_blinker"
+	},
+	{
+
+		name = "enemy_crystal_golem"
+	},
+	{
+
+		name = "enemy_glareling"
+	},
+	{
+
+		name = "boss_corrupted_denas"
+	},
+	{
+
+		name = "enemy_mindless_husk"
+	},
+	{
+
+		name = "enemy_vile_spawner"
+	},
+	{
+
+		name = "enemy_lesser_eye"
+	},
+	{
+
+		name = "enemy_noxious_horror"
+	},
+	{
+
+		name = "enemy_hardened_horror"
+	},
+	{
+
+		name = "enemy_amalgam"
+	},
+	{
+
+		name = "enemy_evolving_scourge"
+	},
+	{
+
+		name = "boss_cult_leader"
+	},
+	{
+
+		name = "controller_stage_16_overseer"
+	},
+	{
+
+		name = "enemy_corrupted_elf"
+	},
+	{
+
+		name = "enemy_specter"
+	},
+	{
+
+		name = "enemy_bane_wolf"
+	},
+	{
+
+		name = "enemy_dust_cryptid"
+	},
+	{
+
+		name = "enemy_deathwood"
+	},
+	{
+
+		name = "enemy_revenant_soulcaller"
+	},
+	{
+
+		name = "enemy_animated_armor"
+	},
+	{
+
+		name = "enemy_revenant_harvester"
+	},
+	{
+
+		name = "boss_navira"
+	},
+	{
+
+		name = "enemy_crocs_basic"
+	},
+	{
+
+		name = "enemy_crocs_basic_egg"
+	},
+	{
+
+		name = "enemy_crocs_ranged"
+	},
+	{
+
+		name = "enemy_crocs_flier"
+	},
+	{
+
+		name = "enemy_killertile"
+	},
+	{
+
+		name = "enemy_quickfeet_gator"
+	},
+	{
+
+		name = "enemy_crocs_egg_spawner"
+	},
+	{
+
+		name = "enemy_crocs_shaman"
+	},
+	{
+
+		name = "enemy_crocs_hydra"
+	},
+	{
+
+		name = "enemy_crocs_tank"
+	},
+	{
+
+		name = "boss_crocs_lvl1"
+	},
+	{
+
+		name = "enemy_darksteel_hammerer"
+	},
+	{
+
+		name = "enemy_scrap_speedster"
+	},
+	{
+
+		name = "enemy_darksteel_shielder"
+	},
+	{
+
+		name = "enemy_darksteel_guardian"
+	},
+	{
+
+		name = "enemy_surveillance_sentry"
+	},
+	{
+
+		name = "enemy_rolling_sentry"
+	},
+	{
+
+		name = "enemy_brute_welder"
+	},
+	{
+
+		name = "enemy_darksteel_fist"
+	},
+	{
+
+		name = "enemy_machinist"
+	},
+	{
+
+		name = "enemy_mad_tinkerer"
+	},
+	{
+
+		name = "enemy_scrap_drone"
+	},
+	{
+
+		name = "boss_machinist"
+	},
+	{
+
+		name = "enemy_darksteel_anvil"
+	},
+	{
+
+		name = "enemy_common_clone"
+	},
+	{
+
+		name = "enemy_darksteel_hulk"
+	},
+	{
+
+		name = "enemy_deformed_grymbeard_clone"
+	},
+	{
+
+		name = "boss_grymbeard"
+	},
+	{
+
+		name = "enemy_ballooning_spider"
+	},
+	{
+
+		name = "enemy_glarenwarden"
+	},
+	{
+
+		name = "enemy_spider_sister"
+	},
+	{
+
+		name = "enemy_spider_priest"
+	},
+	{
+
+		name = "enemy_drainbrood"
+	},
+	{
+
+		name = "enemy_cultbrood"
+	},
+	{
+
+		name = "enemy_spidead"
+	},
+	{
+
+		name = "boss_spider_queen"
+	},
+	{
+
+		name = "enemy_flame_guard"
+	},
+	{
+
+		name = "enemy_blaze_raider"
+	},
+	{
+
+		name = "enemy_fire_fox"
+	},
+	{
+
+		name = "enemy_fire_phoenix"
+	},
+	{
+
+		name = "enemy_nine_tailed_fox"
+	},
+	{
+
+		name = "enemy_wuxian"
+	},
+	{
+
+		name = "enemy_burning_treant"
+	},
+	{
+
+		name = "enemy_ash_spirit"
+	},
+	{
+
+		name = "boss_redboy_teen"
+	},
+	{
+
+		name = "enemy_citizen_1"
+	},
+	{
+
+		name = "enemy_gale_warrior"
+	},
+	{
+
+		name = "enemy_water_spirit"
+	},
+	{
+
+		name = "enemy_storm_spirit"
+	},
+	{
+
+		name = "enemy_storm_elemental"
+	},
+	{
+
+		name = "enemy_qiongqi"
+	},
+	{
+
+		name = "enemy_water_sorceress"
+	},
+	{
+
+		name = "enemy_palace_guard"
+	},
+	{
+
+		name = "enemy_fan_guard"
+	},
+	{
+
+		name = "boss_princess_iron_fan"
+	},
+	{
+
+		name = "enemy_doom_bringer"
+	},
+	{
+
+		name = "enemy_demon_minotaur"
+	},
+	{
+
+		name = "enemy_golden_eyed"
+	},
+	{
+
+		name = "enemy_hellfire_warlock"
+	},
+	{
+
+		name = "boss_bull_king"
+	},
+	{
+
+		name = "enemy_tower_ray_sheep"
+	},
+	{
+
+		name = "enemy_pumpkin_witch"
+	},
+	{
+
+		name = "enemy_basic_lava"
+	},
+	{
+
+		name = "enemy_evolved_lava"
+	},
+	{
+
+		name = "enemy_alfa_lava"
+	},
+	{
+
+		name = "enemy_basic_acid"
+	},
+	{
+
+		name = "enemy_evolved_acid"
+	},
+	{
+
+		name = "enemy_alfa_acid"
+	},
+	{
+
+		name = "enemy_basic_shadow"
+	},
+	{
+
+		name = "enemy_evolved_shadow"
+	},
+	{
+
+		name = "enemy_alfa_shadow"
+	},
+	{
+
+		name = "enemy_basic_storm"
+	},
+	{
+
+		name = "enemy_evolved_storm"
+	},
+	{
+
+		name = "enemy_alfa_storm"
+	},
+	{
+
+		name = "enemy_executioner_storm"
+	},
+	{
+
+		name = "boss_murglum"
+	},
+	{
+
+		name = "enemy_miniboss_stage_39"
+	},
+	{
+
+		name = "controller_stage_39_boss"
+	},
+	{
+
+		name = "controller_stage_40_boss"
 	}
--- {
--- 	always_shown = true,
--- 	name = "enemy_hog_invader"
--- },
--- {
--- 	name = "enemy_tusked_brawler"
--- },
--- {
-
--- 	name = "enemy_cutthroat_rat"
--- },
--- {
-
--- 	name = "enemy_bear_vanguard"
--- },
--- {
-
--- 	name = "enemy_turtle_shaman"
--- },
--- {
-
--- 	name = "enemy_surveyor_harpy"
--- },
--- {
-
--- 	name = "enemy_dreadeye_viper"
--- },
--- {
-
--- 	name = "enemy_hyena5"
--- },
--- {
-
--- 	name = "enemy_skunk_bombardier"
--- },
--- {
-
--- 	name = "enemy_bear_woodcutter"
--- },
--- {
-
--- 	name = "enemy_rhino"
--- },
--- {
-
--- 	name = "boss_pig"
--- },
--- {
-
--- 	name = "enemy_acolyte"
--- },
--- {
-
--- 	name = "enemy_acolyte_tentacle"
--- },
--- {
-
--- 	name = "enemy_small_stalker"
--- },
--- {
-
--- 	name = "enemy_lesser_sister"
--- },
--- {
-
--- 	name = "enemy_lesser_sister_nightmare"
--- },
--- {
-
--- 	name = "enemy_spiderling"
--- },
--- {
-
--- 	name = "enemy_unblinded_priest"
--- },
--- {
-
--- 	name = "enemy_unblinded_abomination"
--- },
--- {
-
--- 	name = "enemy_unblinded_abomination_stage_8"
--- },
--- {
-
--- 	name = "enemy_armored_nightmare"
--- },
--- {
-
--- 	name = "enemy_unblinded_shackler"
--- },
--- {
-
--- 	name = "enemy_corrupted_stalker"
--- },
--- {
-
--- 	name = "enemy_stage_11_cult_leader_illusion"
--- },
--- {
-
--- 	name = "enemy_blinker"
--- },
--- {
-
--- 	name = "enemy_crystal_golem"
--- },
--- {
-
--- 	name = "enemy_glareling"
--- },
--- {
-
--- 	name = "boss_corrupted_denas"
--- },
--- {
-
--- 	name = "enemy_mindless_husk"
--- },
--- {
-
--- 	name = "enemy_vile_spawner"
--- },
--- {
-
--- 	name = "enemy_lesser_eye"
--- },
--- {
-
--- 	name = "enemy_noxious_horror"
--- },
--- {
-
--- 	name = "enemy_hardened_horror"
--- },
--- {
-
--- 	name = "enemy_amalgam"
--- },
--- {
-
--- 	name = "enemy_evolving_scourge"
--- },
--- {
-
--- 	name = "boss_cult_leader"
--- },
--- {
-
--- 	name = "controller_stage_16_overseer"
--- },
--- {
-
--- 	name = "enemy_corrupted_elf"
--- },
--- {
-
--- 	name = "enemy_specter"
--- },
--- {
-
--- 	name = "enemy_bane_wolf"
--- },
--- {
-
--- 	name = "enemy_dust_cryptid"
--- },
--- {
-
--- 	name = "enemy_deathwood"
--- },
--- {
-
--- 	name = "enemy_revenant_soulcaller"
--- },
--- {
-
--- 	name = "enemy_animated_armor"
--- },
--- {
-
--- 	name = "enemy_revenant_harvester"
--- },
--- {
-
--- 	name = "boss_navira"
--- },
--- {
-
--- 	name = "enemy_crocs_basic"
--- },
--- {
-
--- 	name = "enemy_crocs_basic_egg"
--- },
--- {
-
--- 	name = "enemy_crocs_ranged"
--- },
--- {
-
--- 	name = "enemy_crocs_flier"
--- },
--- {
-
--- 	name = "enemy_killertile"
--- },
--- {
-
--- 	name = "enemy_quickfeet_gator"
--- },
--- {
-
--- 	name = "enemy_crocs_egg_spawner"
--- },
--- {
-
--- 	name = "enemy_crocs_shaman"
--- },
--- {
-
--- 	name = "enemy_crocs_hydra"
--- },
--- {
-
--- 	name = "enemy_crocs_tank"
--- },
--- {
-
--- 	name = "boss_crocs_lvl1"
--- },
--- {
-
--- 	name = "enemy_darksteel_hammerer"
--- },
--- {
-
--- 	name = "enemy_scrap_speedster"
--- },
--- {
-
--- 	name = "enemy_darksteel_shielder"
--- },
--- {
-
--- 	name = "enemy_darksteel_guardian"
--- },
--- {
-
--- 	name = "enemy_surveillance_sentry"
--- },
--- {
-
--- 	name = "enemy_rolling_sentry"
--- },
--- {
-
--- 	name = "enemy_brute_welder"
--- },
--- {
-
--- 	name = "enemy_darksteel_fist"
--- },
--- {
-
--- 	name = "enemy_machinist"
--- },
--- {
-
--- 	name = "enemy_mad_tinkerer"
--- },
--- {
-
--- 	name = "enemy_scrap_drone"
--- },
--- {
-
--- 	name = "boss_machinist"
--- },
--- {
-
--- 	name = "enemy_darksteel_anvil"
--- },
--- {
-
--- 	name = "enemy_common_clone"
--- },
--- {
-
--- 	name = "enemy_darksteel_hulk"
--- },
--- {
-
--- 	name = "enemy_deformed_grymbeard_clone"
--- },
--- {
-
--- 	name = "boss_grymbeard"
--- },
--- {
-
--- 	name = "enemy_ballooning_spider"
--- },
--- {
-
--- 	name = "enemy_glarenwarden"
--- },
--- {
-
--- 	name = "enemy_spider_sister"
--- },
--- {
-
--- 	name = "enemy_spider_priest"
--- },
--- {
-
--- 	name = "enemy_drainbrood"
--- },
--- {
-
--- 	name = "enemy_cultbrood"
--- },
--- {
-
--- 	name = "enemy_spidead"
--- },
--- {
-
--- 	name = "boss_spider_queen"
--- },
--- {
-
--- 	name = "enemy_flame_guard"
--- },
--- {
-
--- 	name = "enemy_blaze_raider"
--- },
--- {
-
--- 	name = "enemy_fire_fox"
--- },
--- {
-
--- 	name = "enemy_fire_phoenix"
--- },
--- {
-
--- 	name = "enemy_nine_tailed_fox"
--- },
--- {
-
--- 	name = "enemy_wuxian"
--- },
--- {
-
--- 	name = "enemy_burning_treant"
--- },
--- {
-
--- 	name = "enemy_ash_spirit"
--- },
--- {
-
--- 	name = "boss_redboy_teen"
--- },
--- {
-
--- 	name = "enemy_citizen_1"
--- },
--- {
-
--- 	name = "enemy_citizen_2"
--- },
--- {
-
--- 	name = "enemy_citizen_3"
--- },
--- {
-
--- 	name = "enemy_citizen_4"
--- },
--- {
-
--- 	name = "enemy_gale_warrior"
--- },
--- {
-
--- 	name = "enemy_water_spirit"
--- },
--- {
-
--- 	name = "enemy_storm_spirit"
--- },
--- {
-
--- 	name = "enemy_storm_elemental"
--- },
--- {
-
--- 	name = "enemy_qiongqi"
--- },
--- {
-
--- 	name = "enemy_water_sorceress"
--- },
--- {
-
--- 	name = "enemy_palace_guard"
--- },
--- {
-
--- 	name = "enemy_fan_guard"
--- },
--- {
-
--- 	name = "boss_princess_iron_fan"
--- },
--- {
-
--- 	name = "enemy_doom_bringer"
--- },
--- {
-
--- 	name = "enemy_demon_minotaur"
--- },
--- {
-
--- 	name = "enemy_golden_eyed"
--- },
--- {
-
--- 	name = "enemy_hellfire_warlock"
--- },
--- {
-
--- 	name = "boss_bull_king"
--- },
--- {
-
--- 	name = "enemy_tower_ray_sheep"
--- },
--- {
-
--- 	name = "enemy_pumpkin_witch"
--- },
--- {
-
--- 	name = "enemy_basic_lava"
--- },
--- {
-
--- 	name = "enemy_evolved_lava"
--- },
--- {
-
--- 	name = "enemy_alfa_lava"
--- },
--- {
-
--- 	name = "enemy_basic_acid"
--- },
--- {
-
--- 	name = "enemy_evolved_acid"
--- },
--- {
-
--- 	name = "enemy_alfa_acid"
--- },
--- {
-
--- 	name = "enemy_basic_shadow"
--- },
--- {
-
--- 	name = "enemy_evolved_shadow"
--- },
--- {
-
--- 	name = "enemy_alfa_shadow"
--- },
--- {
-
--- 	name = "enemy_basic_storm"
--- },
--- {
-
--- 	name = "enemy_evolved_storm"
--- },
--- {
-
--- 	name = "enemy_alfa_storm"
--- },
--- {
-
--- 	name = "enemy_executioner_storm"
--- },
--- {
-
--- 	name = "boss_murglum"
--- },
--- {
-
--- 	name = "enemy_miniboss_stage_39"
--- },
--- {
-
--- 	name = "controller_stage_39_boss"
--- },
--- {
-
--- 	name = "controller_stage_40_boss"
--- }
 }
 
 GS.wraith = {
