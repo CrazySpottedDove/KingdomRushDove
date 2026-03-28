@@ -4,6 +4,7 @@ GEN_WAVES_ENABLED = false
 -- ========== 伤害调试（默认全关；排查异常掉血/来源链时再开）==========
 -- 依赖：all/systems/health.lua；各脚本可在 damage 实体上写 damage_trace_origin / damage_trace_extra。
 -- 主开关：为 true 时按下面子开关记录受击历史、死亡摘要，并覆盖所有伤害结算分支（血量/吞噬/物甲/魔甲）。
+-- 亦可在启动参数中开启，见 main.lua（如 love . --damage-trace）。
 DEBUG_DAMAGE_TRACE = false
 -- 为 true 且主开关为 true：每次结算立即打印一行 [DAMAGE_TRACE]（含 branch、dtype、来源链）；默认仅「敌人」；若同时打开 ALL_TARGETS 则含士兵/英雄等。
 DEBUG_DAMAGE_TRACE_ALL_ENEMY_HITS = false

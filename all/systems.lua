@@ -201,63 +201,70 @@ function sys.level:init(store)
 		end
 
 		if endless_data.towers then
-			for _, tower_data in ipairs(endless_data.towers) do
+			for i = #endless_data.towers, 1, -1 do
+				local tower_data = endless_data.towers[i]
 				local tower = E:create_entity(tower_data.template_name)
 
-				tower.pos = V.v(tower_data.pos.x, tower_data.pos.y)
-				tower.tower.level = tower_data.tower_level
-				tower.tower.spent = tower_data.spent
-				tower.tower.holder_id = tower_data.holder_id
+				if not tower then
+					-- 仅从内存中的无尽数据剔除；回图时 game_gui:go_to_map 会按 store.towers 重写并 save_endless，不在此处写盘以免加载阶段阻塞主线程
+					log.error("endless restore: tower template missing, removed from list (holder_id=%s name=%s)", tostring(tower_data.holder_id), tostring(tower_data.template_name))
+					table.remove(endless_data.towers, i)
+				else
+					tower.pos = V.v(tower_data.pos.x, tower_data.pos.y)
+					tower.tower.level = tower_data.tower_level
+					tower.tower.spent = tower_data.spent
+					tower.tower.holder_id = tower_data.holder_id
 
-				for _, e in pairs(store.pending_inserts) do
-					if e.tower and e.tower.holder_id == tower.tower.holder_id then
-						if e.template_name == tower.template_name then
-							-- 说明是同一座塔，移除待插入的旧数据
-							goto continue
-						end
+					for _, e in pairs(store.pending_inserts) do
+						if e.tower and e.tower.holder_id == tower.tower.holder_id then
+							if e.template_name == tower.template_name then
+								-- 说明是同一座塔，移除待插入的旧数据
+								goto continue
+							end
 
-						tower.tower.default_rally_pos = V.vclone(e.tower.default_rally_pos)
+							tower.tower.default_rally_pos = V.vclone(e.tower.default_rally_pos)
 
-						if tower.ui and e.ui then
-							tower.ui.nav_mesh_id = e.ui.nav_mesh_id
-						end
+							if tower.ui and e.ui then
+								tower.ui.nav_mesh_id = e.ui.nav_mesh_id
+							end
 
-						queue_remove(store, e)
-					end
-				end
-
-				tower.tower.flip_x = tower_data.flip_x
-
-				if tower_data.terrain_style then
-					U.set_terrain_style(tower, tower_data.terrain_style)
-				end
-
-				-- 恢复技能等级
-				if tower_data.powers and tower.powers then
-					for power_name, power_data in pairs(tower_data.powers) do
-						if tower.powers[power_name] then
-							tower.powers[power_name].level = power_data.level
-							tower.powers[power_name].changed = true
+							queue_remove(store, e)
 						end
 					end
-				end
 
-				-- 恢复集结点
-				if tower_data.rally_pos and tower.barrack then
-					tower.barrack.rally_pos = V.v(tower_data.rally_pos.x, tower_data.rally_pos.y)
+					tower.tower.flip_x = tower_data.flip_x
 
-					if tower.mercenary then
-						for i = 1, tower_data.soldier_count do
-							tower.barrack.soldiers[i] = E:create_entity(tower.barrack.soldier_type)
-							tower.barrack.soldiers[i].health.dead = true
-							tower.barrack.soldiers[i].id = -1
+					if tower_data.terrain_style then
+						U.set_terrain_style(tower, tower_data.terrain_style)
+					end
+
+					-- 恢复技能等级
+					if tower_data.powers and tower.powers then
+						for power_name, power_data in pairs(tower_data.powers) do
+							if tower.powers[power_name] then
+								tower.powers[power_name].level = power_data.level
+								tower.powers[power_name].changed = true
+							end
 						end
 					end
+
+					-- 恢复集结点
+					if tower_data.rally_pos and tower.barrack then
+						tower.barrack.rally_pos = V.v(tower_data.rally_pos.x, tower_data.rally_pos.y)
+
+						if tower.mercenary then
+							for si = 1, tower_data.soldier_count do
+								tower.barrack.soldiers[si] = E:create_entity(tower.barrack.soldier_type)
+								tower.barrack.soldiers[si].health.dead = true
+								tower.barrack.soldiers[si].id = -1
+							end
+						end
+					end
+
+					queue_insert(store, tower)
+
+					::continue::
 				end
-
-				queue_insert(store, tower)
-
-				::continue::
 			end
 		end
 	end

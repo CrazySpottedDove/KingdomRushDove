@@ -160,6 +160,26 @@ require("lib.klua.table")
 require("lib.klua.dump")
 require("all.constants")
 
+-- 伤害调试等开关：love . --damage-trace …（与 constants.lua 中 DEBUG_* 对应）
+for i = 1, #arg do
+	local a = arg[i]
+
+	if a == "--damage-trace" then
+		DEBUG_DAMAGE_TRACE = true
+	elseif a == "--damage-trace-enemy-hits" then
+		DEBUG_DAMAGE_TRACE = true
+		DEBUG_DAMAGE_TRACE_ALL_ENEMY_HITS = true
+	elseif a == "--damage-trace-all-targets" then
+		DEBUG_DAMAGE_TRACE = true
+		DEBUG_DAMAGE_TRACE_ALL_TARGETS = true
+	elseif a == "--damage-trace-tower" then
+		DEBUG_DAMAGE_TRACE = true
+		DEBUG_DAMAGE_TRACE_TOWER_ATTACKS = true
+	elseif a == "--damage-investigate" then
+		DEBUG_DAMAGE_TRACE_INVESTIGATE = true
+	end
+end
+
 if arg[2] == "assets" then
 	ASSETS_CHECK_ENABLED = true
 end

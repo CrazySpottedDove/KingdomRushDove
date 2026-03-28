@@ -10307,6 +10307,34 @@ function scripts.tower_ray.update(this, store)
 		return not e or e.health.dead
 	end
 
+	---蓄力窗口内：当前锁定目标失效时立刻重新索敌并转向；只有范围内完全无敌时才放弃（避免哥布林先死导致整段动画重来）
+	local function ray_wait_retarget(duration, aa, enemy_id)
+		local t0 = store.tick_ts
+		local eid = enemy_id
+
+		while store.tick_ts - t0 < duration do
+			if ray_target_invalid(store, eid) then
+				local enemy = find_target(aa)
+
+				if enemy then
+					eid = enemy.id
+
+					a._last_target_pos.x, a._last_target_pos.y = enemy.pos.x, enemy.pos.y
+
+					local an, af, ai = animation_name_facing_point(this, aa.animation_start, enemy.pos, this.render.sid_mage, this.mage_offset)
+
+					animation_start(this, an, af, store.tick_ts, false, this.render.sid_mage)
+				else
+					return nil
+				end
+			end
+
+			coroutine.yield()
+		end
+
+		return eid
+	end
+
 	do
 		local soffset = this.shooter_offset
 		local an, af, ai = animation_name_facing_point(this, "idle", a._last_target_pos, this.render.sid_mage, soffset)
@@ -10381,17 +10409,17 @@ function scripts.tower_ray.update(this, store)
 							animation_start(this, an, af, store.tick_ts, false, this.render.sid_mage)
 							U.animation_start_group(this, "glow_start", nil, store.tick_ts, false, "rocks")
 
-							if y_wait(store, fts(4) * this.tower.cooldown_factor, function(st, time)
-								return ray_target_invalid(st, enemy_id)
-							end) then
+							enemy_id = ray_wait_retarget(fts(4) * this.tower.cooldown_factor, aa, enemy_id)
+
+							if not enemy_id then
 								goto label_989_0
 							end
 
 							U.animation_start_group(this, "idle_2", nil, store.tick_ts, true, "rocks")
 
-							if y_wait(store, (aa.shoot_time - fts(4)) * this.tower.cooldown_factor, function(st, time)
-								return ray_target_invalid(st, enemy_id)
-							end) then
+							enemy_id = ray_wait_retarget((aa.shoot_time - fts(4)) * this.tower.cooldown_factor, aa, enemy_id)
+
+							if not enemy_id then
 								goto label_989_0
 							end
 
@@ -10419,9 +10447,9 @@ function scripts.tower_ray.update(this, store)
 								queue_insert(store, fx)
 							end
 
-							if y_wait(store, fts(1) * this.tower.cooldown_factor, function(st, time)
-								return ray_target_invalid(st, enemy_id)
-							end) then
+							enemy_id = ray_wait_retarget(fts(1) * this.tower.cooldown_factor, aa, enemy_id)
+
+							if not enemy_id then
 								goto label_989_0
 							end
 
@@ -10495,17 +10523,17 @@ function scripts.tower_ray.update(this, store)
 								queue_insert(store, fx)
 							end
 
-							if y_wait(store, fts(4) * this.tower.cooldown_factor, function(st, time)
-								return ray_target_invalid(st, enemy_id)
-							end) then
+							enemy_id = ray_wait_retarget(fts(4) * this.tower.cooldown_factor, aa, enemy_id)
+
+							if not enemy_id then
 								goto label_989_1
 							end
 
 							U.animation_start_group(this, "idle_2", nil, store.tick_ts, true, "rocks")
 
-							if y_wait(store, (aa.shoot_time - fts(4)) * this.tower.cooldown_factor, function(st, time)
-								return ray_target_invalid(st, enemy_id)
-							end) then
+							enemy_id = ray_wait_retarget((aa.shoot_time - fts(4)) * this.tower.cooldown_factor, aa, enemy_id)
+
+							if not enemy_id then
 								goto label_989_1
 							end
 
@@ -10544,9 +10572,9 @@ function scripts.tower_ray.update(this, store)
 								this.ray_fx_start = fx
 							end
 
-							if y_wait(store, fts(1) * this.tower.cooldown_factor, function(st, time)
-								return ray_target_invalid(st, enemy_id)
-							end) then
+							enemy_id = ray_wait_retarget(fts(1) * this.tower.cooldown_factor, aa, enemy_id)
+
+							if not enemy_id then
 								goto label_989_1
 							end
 
@@ -11017,38 +11045,58 @@ function scripts.bullet_tower_ray.update(this, store)
 	local start_chain_delay = this.chain_delay
 	local source = store.entities[b.source_id]
 	local ray_duration = (tonumber(this.ray_duration) or 0) * b.cooldown_factor
+	local kill_explosion_done = false
+	local last_hit_explosion_pos = nil
+
+	local function spawn_ray_kill_explosion_at(hit_pos)
+		local explosion_fx = E:create_entity("fx_tower_ray_lvl4_attack_sheep_hit")
+
+		explosion_fx.pos = hit_pos
+		explosion_fx.render.sprites[1].ts = store.tick_ts
+
+		queue_insert(store, explosion_fx)
+
+		local explosion_targets = U.find_enemies_in_range_filter_off(explosion_fx.pos, tonumber(this.explosion_radius) or 0, F_AREA, F_NONE)
+
+		if explosion_targets then
+			for i = 1, #explosion_targets do
+				local explosion_target = explosion_targets[i]
+				local d = E:create_entity("damage")
+
+				d.source_id = this.id
+				d.target_id = explosion_target.id
+				local ex_dmin = tonumber(b.damage_min) or 0
+				local ex_dmax = tonumber(b.damage_max) or ex_dmin
+
+				d.value = random(ex_dmin, ex_dmax) * (tonumber(b.damage_factor) or 1) * (tonumber(this.explosion_factor) or 1)
+				d.damage_type = DAMAGE_MAGICAL_EXPLOSION
+
+				queue_damage(store, d)
+			end
+		end
+
+		kill_explosion_done = true
+	end
 
 	while store.tick_ts - start_ts < ray_duration and target and not this.force_stop_ray and source do
+		if target and target.unit and target.unit.hit_offset then
+			last_hit_explosion_pos = {
+				x = target.pos.x + target.unit.hit_offset.x,
+				y = target.pos.y + target.unit.hit_offset.y
+			}
+		elseif target then
+			last_hit_explosion_pos = {
+				x = target.pos.x,
+				y = target.pos.y
+			}
+		end
+
 		if target.health and target.health.dead then
 			if (not this.chain_pos or this.chain_pos == 1) and target.unit and target.unit.hit_offset then
-				local explosion_fx = E:create_entity("fx_tower_ray_lvl4_attack_sheep_hit")
-
-				explosion_fx.pos = {
+				spawn_ray_kill_explosion_at({
 					x = target.pos.x + target.unit.hit_offset.x,
 					y = target.pos.y + target.unit.hit_offset.y
-				}
-				explosion_fx.render.sprites[1].ts = store.tick_ts
-
-				queue_insert(store, explosion_fx)
-
-				local explosion_targets = U.find_enemies_in_range_filter_off(explosion_fx.pos, tonumber(this.explosion_radius) or 0, F_AREA, F_NONE)
-
-				if explosion_targets then
-					for i = 1, #explosion_targets do
-						local explosion_target = explosion_targets[i]
-						local d = E:create_entity("damage")
-
-						d.source_id = this.id
-						d.target_id = explosion_target.id
-						local ex_dmin = tonumber(b.damage_min) or 0
-						local ex_dmax = tonumber(b.damage_max) or ex_dmin
-
-						d.value = random(ex_dmin, ex_dmax) * (tonumber(b.damage_factor) or 1) * (tonumber(this.explosion_factor) or 1)
-						d.damage_type = DAMAGE_MAGICAL_EXPLOSION
-
-						queue_damage(store, d)
-					end
-				end
+				})
 			end
 
 			break
@@ -11136,6 +11184,14 @@ function scripts.bullet_tower_ray.update(this, store)
 
 		s.hidden = false
 		source = store.entities[b.source_id]
+	end
+
+	if not kill_explosion_done and last_hit_explosion_pos and (not this.chain_pos or this.chain_pos == 1) then
+		local te = b.target_id and store.entities[b.target_id]
+
+		if not te or te.health and te.health.dead then
+			spawn_ray_kill_explosion_at(last_hit_explosion_pos)
+		end
 	end
 
 	if not target or not target.health or target.health.dead or this.force_stop_ray or not source then
@@ -20114,6 +20170,17 @@ function scripts.tower_arborean_emissary.update(this, store)
 
 	this.tower.long_idle_cooldown = math.random(this.tower.long_idle_cooldown_min, this.tower.long_idle_cooldown_max)
 	ab.ts = store.tick_ts - ab.cooldown + a.attack_delay_on_spawn
+
+	-- 生成/读档时技能等级已存在但未必触发 pow_*.changed：按当前等级与 balance 对齐 attacks（与升级分支一致）
+	if pow_g.level > 0 then
+		ag.cooldown = pow_g.cooldown[pow_g.level]
+	end
+
+	if pow_w.level > 0 then
+		aw.cooldown = pow_w.cooldown[pow_w.level]
+		aw.damage_min = pow_w.damage_min[pow_w.level]
+		aw.damage_max = pow_w.damage_max[pow_w.level]
+	end
 
 	local last_ts = store.tick_ts - a.min_cooldown + a.attack_delay_on_spawn
 
