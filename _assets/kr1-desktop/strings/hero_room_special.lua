@@ -1549,9 +1549,6 @@ set_skill(h.hero.skills.guards)
 e = E:get_template(h.timed_attacks.list[1].entity)
 get_damage(e.melee.attacks[1])
 
-d[1].damage_min = s.melee_damage_min[max_lvl]
-d[1].damage_max = s.melee_damage_max[max_lvl]
-
 get_health(e)
 health[1].hp_max = s.hp_max[max_lvl]
 health[1].armor = s.armor[max_lvl]
