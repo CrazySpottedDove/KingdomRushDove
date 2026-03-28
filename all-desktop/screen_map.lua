@@ -1113,23 +1113,27 @@ end
 -- 处理移动端的触摸事件，实现地图跟手滚动且不灵敏
 if is_android then
 	local touch_last_y = 0
+	local touch_last_x = 0
 	local touch_scrolling = false
-	local touch_total_delta = 0
+	local touch_total_delta_y = 0
+	local touch_total_delta_x = 0
 	local TOUCH_SCROLL_THRESHOLD = 15 -- 滑动阈值，像素
 	local TOUCH_SCROLL_SENSITIVITY = 2.25 -- 灵敏度系数，0.5~1.0之间
 
 	function screen_map:touchpressed(id, x, y, dx, dy, pressure)
 		touch_last_y = y
 		touch_scrolling = true
-		touch_total_delta = 0
+		touch_total_delta_y = 0
+		touch_last_x = x
+		touch_total_delta_x = 0
 	end
 
 	function screen_map:touchmoved(id, x, y, dx, dy, pressure)
 		if touch_scrolling then
 			local delta_y = y - touch_last_y
 			touch_last_y = y
-			touch_total_delta = touch_total_delta + math.abs(delta_y)
-			if touch_total_delta > TOUCH_SCROLL_THRESHOLD then
+			touch_total_delta_y = touch_total_delta_y + math.abs(delta_y)
+			if touch_total_delta_y > TOUCH_SCROLL_THRESHOLD then
 				-- 只有累计滑动超过阈值才开始移动地图
 				local move_y = delta_y * TOUCH_SCROLL_SENSITIVITY
 				local new_y = self.map_view.pos.y + move_y
@@ -1142,6 +1146,22 @@ if is_android then
 					new_y = max_y
 				end
 				self.map_view.pos.y = new_y
+			end
+			local delta_x = x - touch_last_x
+			touch_last_x = x
+			touch_total_delta_x = touch_total_delta_x + math.abs(delta_x)
+			if touch_total_delta_x > TOUCH_SCROLL_THRESHOLD then
+				local move_x = delta_x * TOUCH_SCROLL_SENSITIVITY
+				local new_x = self.map_view.pos.x + move_x
+				local min_x = self.map_view.screen_w - self.map_view.size.x
+				local max_x = 0
+				if new_x < min_x then
+					new_x = min_x
+				end
+				if new_x > max_x then
+					new_x = max_x
+				end
+				self.map_view.pos.x = new_x
 			end
 		end
 	end

@@ -321,7 +321,7 @@ function game_gui:init(w, h, game)
 	if is_android then
 		-- 这里要通过长宽比来判断，因为有些安卓设备虽然是移动平台但屏幕比较大，适合用桌面版的 HUD 布局和大小
 		local aspect_ratio = self.sw / self.sh
-		if aspect_ratio > GUI_REF_W / GUI_REF_H then
+		if aspect_ratio > 1920 / 1080 then
 			-- 屏幕更宽的设备使用放大 HUD，屏幕更窄的设备使用桌面的 HUD
 			hud_scale = 1.35
 		end
