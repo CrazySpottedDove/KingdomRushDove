@@ -13764,6 +13764,7 @@ tt.timed_attacks.list[3].vis_bans = bor(F_FLYING, F_NIGHTMARE, F_CLIFF)
 tt.timed_attacks.list[3].sound = "HeroWitchSquishNSquashCast"
 tt.timed_attacks.list[3].min_cooldown = 5
 tt.ui.click_rect = r(-20, -5, 40, 43)
+tt.nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_SHALLOW, TERRAIN_NOWALK, TERRAIN_ICE)
 tt.ultimate = {
 	ts = 0,
 	cooldown = 30,
