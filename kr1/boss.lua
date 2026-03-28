@@ -2009,7 +2009,7 @@ AC(tt, "melee", "taunts", "tween")
 
 tt.info.enc_icon = 27
 tt.info.i18n_key = "EB_DROW_QUEEN"
-tt.info.portrait = "kr3_info_portraits_enemies_0039"
+tt.info.portrait = "kr3_info_portraits_enemies_0040"
 tt.enemy.gold = 0
 tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = vec_2(25, 0)

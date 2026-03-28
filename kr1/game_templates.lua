@@ -5735,8 +5735,8 @@ tt.bullet.reset_to_target_pos = true
 --#endregion
 --#region arrow_soldier_barrack_3
 tt = RT("arrow_soldier_barrack_3", "arrow_soldier_barrack_2")
-tt.bullet.damage_max = 12
-tt.bullet.damage_min = 8
+tt.bullet.damage_max = 18
+tt.bullet.damage_min = 12
 --#endregion
 --#region arrow_soldier_re_2
 tt = RT("arrow_soldier_re_2", "arrow")

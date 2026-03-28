@@ -1545,6 +1545,21 @@ factor = 1 - e.slow.factor
 duration = e.modifier.duration
 map["箭雨"] = str(cooldown_str(), "艾莉丹在大范围内发射共", count, "支箭矢，每支箭矢对", radius, "范围内敌人造成", damage_str(), "，并使其受到", factor * 100, "%的减速效果，持续", duration, "秒。")
 
+set_skill(h.hero.skills.guards)
+e = E:get_template(h.timed_attacks.list[1].entity)
+get_damage(e.melee.attacks[1])
+
+d[1].damage_min = s.melee_damage_min[max_lvl]
+d[1].damage_max = s.melee_damage_max[max_lvl]
+
+get_health(e)
+health[1].hp_max = s.hp_max[max_lvl]
+health[1].armor = s.armor[max_lvl]
+cooldown = h.timed_attacks.list[1].cooldown
+local duration = e.reinforcement.duration
+
+map["护卫"] = str("每隔", cooldown, "秒，艾利丹召唤一名可调集的游侠护卫协助战斗。游侠护卫拥有", hp_str(), "，", armor_str(), "，", "每次攻击造成", damage_str(), "，驻场", duration, "秒。")
+
 set_hero("hero_regson")
 set_skill(h.hero.skills.slash)
 

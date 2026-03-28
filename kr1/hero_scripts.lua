@@ -9924,6 +9924,14 @@ scripts.hero_elves_archer = {
 			a.damage_min = s.damage_min[s.level]
 			a.damage_max = s.damage_max[s.level]
 		end)
+		upgrade_skill(this, "guards", function(this, s)
+			local a = this.timed_attacks.list[1]
+
+			a.disabled = nil
+			local e = E:get_template(a.entity)
+			e.health.hp_max = s.hp_max[s.level]
+			e.health.armor = s.armor[s.level]
+		end)
 		upgrade_skill(this, "ultimate", function(this, s)
 			this.ultimate.disabled = nil
 		end)
@@ -9951,6 +9959,7 @@ scripts.hero_elves_archer = {
 		local he = this.hero
 		local brk, sta, a, skill
 		local is_sword = false
+		local guard_attack = this.timed_attacks.list[1]
 		local porcupine_target, porcupine_level = nil, 0
 
 		local function update_porcupine(attack, target)
@@ -10016,6 +10025,35 @@ scripts.hero_elves_archer = {
 					else
 						this.ultimate.ts = this.ultimate.ts + 1
 					end
+				end
+
+				skill = this.hero.skills.guards
+				if ready_to_use_skill(guard_attack, store) then
+					local nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, nil, NF_RALLY)
+
+					if #nodes < 1 then
+						SU.delay_attack(store, guard_attack, 0.4)
+					else
+						U.animation_start(this, guard_attack.animation, nil, store.tick_ts)
+						S:queue(guard_attack.sound)
+						SU.hero_gain_xp_from_skill(this, skill)
+
+						guard_attack.ts = store.tick_ts
+
+						local pi, spi, ni = unpack(nodes[1])
+						local new_soldier = E:create_entity(guard_attack.entity)
+						local e_spi, e_ni = math.random(1, 3), ni
+
+						new_soldier.nav_rally.center = P:node_pos(pi, e_spi, e_ni)
+						new_soldier.nav_rally.pos = V.vclone(new_soldier.nav_rally.center)
+						new_soldier.pos = V.vclone(new_soldier.nav_rally.center)
+						new_soldier.owner = this
+
+						queue_insert(store, new_soldier)
+					end
+
+					SU.y_hero_animation_wait(this)
+					::label_79_4::
 				end
 
 				-- 近战状态

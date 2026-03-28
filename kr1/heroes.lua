@@ -7013,7 +7013,7 @@ tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
 --#endregion
 --#region hero_elves_archer
 tt = RT("hero_elves_archer", "hero")
-AC(tt, "melee", "ranged", "dodge")
+AC(tt, "melee", "ranged", "dodge", "timed_attacks")
 image_y = 68
 anchor_y = 16 / image_y
 tt.hero.level_stats.hp_max = {220, 240, 260, 280, 300, 320, 340, 360, 380, 400}
@@ -7159,11 +7159,35 @@ tt.ranged.attacks[2].max_range = 215
 tt.ranged.attacks[2].min_range = 0
 tt.ranged.attacks[2].shoot_times = {fts(3)}
 tt.ranged.attacks[2].xp_from_skill = "multishot"
+tt.timed_attacks.list[1] = CC("spawn_attack")
+tt.timed_attacks.list[1].animation = "levelup"
+tt.timed_attacks.list[1].cooldown = 13
+tt.timed_attacks.list[1].disabled = true
+tt.timed_attacks.list[1].entity = "soldier_hero_elves_archer_guard"
+tt.timed_attacks.list[1].sound = "ElvesHeroEridanTaunt"
 tt.ultimate = {}
 tt.ultimate.ts = 0
 tt.ultimate.cooldown = 32
 tt.ultimate.disabled = true
 --#endregion
+
+-- 艾利丹召唤物
+tt = RT("soldier_hero_elves_archer_guard", "soldier_barrack_3")
+AC(tt, "reinforcement", "nav_grid", "tween")
+tt.controable = true
+tt.controable_other = true
+tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
+tt.tween.props[1].name = "alpha"
+tt.tween.remove = false
+tt.tween.reverse = false
+tt.reinforcement.duration = 14
+tt.reinforcement.fade = true
+tt.motion.max_speed = 100
+tt.vis.bans = bor(F_LYCAN, F_SKELETON, F_CANNIBALIZE)
+tt.main_script.insert = scripts.soldier_reinforcement.insert
+tt.main_script.update = scripts.soldier_reinforcement.update
+tt.main_script.remove = nil
+
 --#region aura_elves_archer_regen
 tt = RT("aura_elves_archer_regen", "aura")
 tt.aura.duration = -1
