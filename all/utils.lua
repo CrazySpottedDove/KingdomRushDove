@@ -3001,6 +3001,11 @@ function U.set_terrain_style(e, terrain_style)
 		return
 	end
 
+	-- 动画纹理不修改 sprite name
+	if e.render.sprites[1].animated then
+		return
+	end
+
 	e.render.sprites[1].name = TERRAIN_STYLE_SPRITE_DICT[terrain_style]
 -- DEBUG USE: GUARANTEE THAT terrain_style is not a number!
 -- print("set terrain style to " .. terrain_style)
