@@ -10304,7 +10304,7 @@ function scripts.tower_ray.update(this, store)
 	local function ray_target_invalid(store, enemy_id)
 		local e = store.entities[enemy_id]
 
-		return not e or not e.health or e.health.dead
+		return not e or e.health.dead
 	end
 
 	do
