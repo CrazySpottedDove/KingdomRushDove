@@ -2616,8 +2616,8 @@ return {
 		hash = "8ad25250"
 	},
 	["kr1-desktop/images/fullhd/tower_holders-1.dds"] = {
-		size = 1432036,
-		hash = "7d9e8cc8"
+		size = 1426900,
+		hash = "80051272"
 	},
 	["kr1-desktop/images/fullhd/upgrades-1.dds"] = {
 		size = 1484688,
