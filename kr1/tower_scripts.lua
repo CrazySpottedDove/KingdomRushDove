@@ -5210,7 +5210,7 @@ function scripts.mod_druid_sylvan.update(this, store)
 			ray_ts = store.tick_ts
 		end
 
-		if target and target.health and target.health.dead then
+		if target.health.dead then
 			local new_target = U.find_first_enemy_in_range_filter_on(target.pos, a.max_range, a.vis_flags, a.vis_bans, function(v)
 				return not U.has_modifier(store, v, "mod_druid_sylvan")
 			end)
@@ -5751,7 +5751,7 @@ scripts.mod_tricannon_overheat_dps = {}
 function scripts.mod_tricannon_overheat_dps.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
-	if not target or not target.health or target.health.dead then
+	if not target or target.health.dead then
 		return false
 	end
 
@@ -6073,7 +6073,7 @@ function scripts.tower_dark_elf.update(this, store)
 
 				local old_target = target
 
-				if old_target and old_target.health and old_target.health.dead then
+				if old_target and old_target.health.dead then
 					target, pred_pos = retarget(attack.node_prediction)
 				end
 
@@ -6185,7 +6185,7 @@ function scripts.mod_tower_dark_elf_big_target.update(this, store)
 			t_id = m.target_id
 		end
 
-		this.render.sprites[1].hidden = not target or not target.health or target.health.dead or not source or not source.tower_upgrade_persistent_data or source.tower_upgrade_persistent_data.current_mode == 0
+		this.render.sprites[1].hidden = not target or target.health.dead or not source or not source.tower_upgrade_persistent_data or source.tower_upgrade_persistent_data.current_mode == 0
 
 		if m.duration >= 0 and store.tick_ts - m.ts > m.duration then
 			queue_remove(store, this)
@@ -6219,24 +6219,11 @@ scripts.bullet_tower_dark_elf = {}
 
 function scripts.bullet_tower_dark_elf.update(this, store)
 	local b = this.bullet
-	local s = this.render and this.render.sprites and this.render.sprites[1]
-
-	if not b or not s then
-		queue_remove(store, this)
-
-		return
-	end
-
-	if not b.to then
-		queue_remove(store, this)
-
-		return
-	end
+	local s = this.render.sprites[1]
 
 	local target = store.entities[b.target_id]
 	local source = store.entities[b.source_id]
 	local dest = vclone(b.to)
-	local image_width = tonumber(this.image_width) or 1
 
 	local function update_sprite()
 		if this.track_target and target and target.motion then
@@ -6248,7 +6235,7 @@ function scripts.bullet_tower_dark_elf.update(this, store)
 
 			local d = math.max(math.abs(tpx - b.to.x), math.abs(tpy - b.to.y))
 
-			if b.max_track_distance and d > b.max_track_distance then
+			if d > b.max_track_distance then
 				log.paranoid("(%s) ray_simple target (%s) out of max_track_distance", this.id, target.id)
 
 				target = nil
@@ -6264,11 +6251,11 @@ function scripts.bullet_tower_dark_elf.update(this, store)
 		local angle = V.angleTo(dest.x - this.pos.x, dest.y - this.pos.y)
 
 		s.r = angle
-		s.scale.x = V.dist(dest.x, dest.y, this.pos.x, this.pos.y) / image_width
+		s.scale.x = V.dist(dest.x, dest.y, this.pos.x, this.pos.y) / this.image_width
 	end
 
 	local function hit_target()
-		if target and target.health and not target.health.dead then
+		if target then
 			local d = SU.create_bullet_damage(b, target.id, this.id)
 
 			queue_damage(store, d)
@@ -6295,22 +6282,20 @@ function scripts.bullet_tower_dark_elf.update(this, store)
 				end
 			end
 
-			if b.hit_fx then
-				local fx = E:create_entity(b.hit_fx)
-				local fxs = fx.render and fx.render.sprites and fx.render.sprites[1]
+			local fx = E:create_entity(b.hit_fx)
+			local fxs = fx.render and fx.render.sprites and fx.render.sprites[1]
 
-				if target.unit and target.unit.hit_offset then
-					fx.pos = v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
-				else
-					fx.pos = v(target.pos.x, target.pos.y)
-				end
+			if target.unit and target.unit.hit_offset then
+				fx.pos = v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+			else
+				fx.pos = v(target.pos.x, target.pos.y)
+			end
 
-				if fxs then
-					fxs.ts = store.tick_ts
-					fxs.r = this.render.sprites[1].r
+			if fxs then
+				fxs.ts = store.tick_ts
+				fxs.r = this.render.sprites[1].r
 
-					queue_insert(store, fx)
-				end
+				queue_insert(store, fx)
 			end
 
 			local tower = source and store.entities[source.id]
@@ -6367,7 +6352,7 @@ function scripts.bullet_tower_dark_elf.update(this, store)
 
 	update_sprite()
 
-	if b.hit_time and b.hit_time > fts(1) then
+	if b.hit_time > fts(1) then
 		while store.tick_ts - s.ts < b.hit_time do
 			coroutine.yield()
 
@@ -6384,7 +6369,7 @@ function scripts.bullet_tower_dark_elf.update(this, store)
 	local already_hit_target = false
 
 	if this.ray_duration then
-		while store.tick_ts - s.ts < (tonumber(this.ray_duration) or 0) do
+		while store.tick_ts - s.ts < this.ray_duration do
 			if this.track_target then
 				update_sprite()
 			end
@@ -7806,7 +7791,7 @@ function scripts.bullet_tower_necromancer.update(this, store)
 	while true do
 		target = store.entities[b.target_id]
 
-		if target and target.health and not target.health.dead and band(target.vis.bans, F_RANGED) == 0 then
+		if target and not target.health.dead and band(target.vis.bans, F_RANGED) == 0 then
 			local d = math.max(math.abs(target.pos.x + target.unit.hit_offset.x - b.to.x), math.abs(target.pos.y + target.unit.hit_offset.y - b.to.y))
 
 			if d > b.max_track_distance then
@@ -7832,7 +7817,7 @@ function scripts.bullet_tower_necromancer.update(this, store)
 		coroutine.yield()
 	end
 
-	if target and target.health and not target.health.dead then
+	if target and not target.health.dead then
 		if b.mods then
 			for _, mod_name in pairs(b.mods) do
 				local mod = E:create_entity(mod_name)
@@ -7972,7 +7957,7 @@ function scripts.bullet_tower_necromancer_deathspawn.update(this, store)
 
 		target = store.entities[b.target_id]
 
-		if not target or not target.health or target.health.dead then
+		if not target or target.health.dead then
 			y_wait(store, 1)
 
 			target = U.find_first_enemy(store, this.pos, 0, b.search_range, F_RANGED, F_NONE)
@@ -7981,7 +7966,7 @@ function scripts.bullet_tower_necromancer_deathspawn.update(this, store)
 		coroutine.yield()
 	end
 
-	if target and target.health and not target.health.dead then
+	if target and not target.health.dead then
 		if b.mods then
 			for _, mod_name in pairs(b.mods) do
 				local mod = E:create_entity(mod_name)
@@ -8036,7 +8021,7 @@ function scripts.mod_tower_necromancer_curse.insert(this, store)
 		return false
 	end
 
-	if target and target.health and target.health.dead then
+	if target.health.dead then
 	-- block empty
 	else
 		if band(this.modifier.vis_flags, target.vis.bans) ~= 0 or band(this.modifier.vis_bans, target.vis.flags) ~= 0 then
@@ -8049,7 +8034,7 @@ function scripts.mod_tower_necromancer_curse.insert(this, store)
 			for i = 1, #this.render.sprites do
 				local s = this.render.sprites[i]
 
-				s.flip_x = target.render and target.render.sprites[1].flip_x or false
+				s.flip_x = target.render.sprites[1].flip_x
 				s.ts = store.tick_ts
 
 				if s.size_names then
@@ -8540,7 +8525,7 @@ function scripts.aura_tower_necromancer_skill_rider.update(this, store)
 				this.damage_max = this.damage_max_config[this.aura.level]
 				this.damage_min = this.damage_min_config[this.aura.level]
 
-				if target and target.health and not target.health.dead and target.enemy then
+				if target and not target.health.dead and target.enemy then
 					queue_damage(store, SU.create_attack_damage(this, target.id, this))
 
 					local hit_fx = E:create_entity(this.hit_fx)
@@ -8733,7 +8718,7 @@ function scripts.mod_tower_necromancer_skill_debuff.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 	local source = store.entities[this.modifier.source_id]
 
-	if target and target.health and not target.health.dead and target.enemy then
+	if target and not target.health.dead and target.enemy then
 		U.cast_silence(target, store.tick_ts)
 
 		return true
@@ -8792,7 +8777,7 @@ end
 function scripts.mod_tower_necromancer_skill_debuff.remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 
-	if target and target.health and not target.health.dead then
+	if target and not target.health.dead then
 		U.remove_silence(target, store.tick_ts)
 	end
 
@@ -9468,19 +9453,7 @@ scripts.tower_pandas_ray = {}
 
 function scripts.tower_pandas_ray.update(this, store)
 	local b = this.bullet
-	local s = this.render and this.render.sprites and this.render.sprites[1]
-
-	if not b or not s then
-		queue_remove(store, this)
-
-		return
-	end
-
-	if not b.to then
-		queue_remove(store, this)
-
-		return
-	end
+	local s = this.render.sprites[1]
 
 	local target = store.entities[b.target_id]
 	local dest = vclone(b.to)
@@ -9617,7 +9590,7 @@ function scripts.tower_pandas_ray.update(this, store)
 	local disable_hit = false
 
 	if this.hit_fx_only_no_target then
-		disable_hit = target and target.health and not target.health.dead or false
+		disable_hit = target and not target.health.dead or false
 	end
 
 	local fx
@@ -9753,7 +9726,7 @@ function scripts.bullet_tower_pandas_air.update(this, store)
 			end
 		end
 
-		if target and target.health and not target.health.dead then
+		if target and not target.health.dead then
 			if b.ignore_hit_offset then
 				b.to.x, b.to.y = target.pos.x, target.pos.y
 			else
@@ -9790,7 +9763,7 @@ function scripts.bullet_tower_pandas_air.update(this, store)
 
 	this.pos.x, this.pos.y = b.to.x, b.to.y
 
-	if target and target.health and not target.health.dead then
+	if target and not target.health.dead then
 		table.insert(already_hit, target.id)
 
 		local d = SU.create_bullet_damage(b, target.id, this.id)
@@ -10782,7 +10755,7 @@ scripts.mod_tower_ray_slow = {}
 function scripts.mod_tower_ray_slow.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
-	if not target or not target.health or target.health.dead or not target.motion or target.motion.invulnerable then
+	if not target or target.health.dead or not target.motion or target.motion.invulnerable then
 		return false
 	end
 
@@ -10808,7 +10781,7 @@ function scripts.mod_tower_ray_slow.remove(this, store)
 
 	local target = store.entities[this.modifier.target_id]
 
-	if target and target.health and target.motion then
+	if target and target.motion then
 		U.speed_div(target, this.slow.factor)
 	end
 
@@ -10821,20 +10794,7 @@ scripts.bullet_tower_ray = {}
 
 function scripts.bullet_tower_ray.update(this, store)
 	local b = this.bullet
-	local s = this.render and this.render.sprites and this.render.sprites[1]
-
-	if not b or not s then
-		queue_remove(store, this)
-
-		return
-	end
-
-	if not b.to then
-		queue_remove(store, this)
-
-		return
-	end
-
+	local s = this.render.sprites[1]
 	local target = store.entities[b.target_id]
 	local dest = vclone(b.to)
 	local tower = this.tower_ref
@@ -10936,7 +10896,7 @@ function scripts.bullet_tower_ray.update(this, store)
 	local disable_hit = false
 
 	if this.hit_fx_only_no_target then
-		disable_hit = target and target.health and not target.health.dead or false
+		disable_hit = target and not target.health.dead or false
 	end
 
 	local fx
@@ -11175,7 +11135,7 @@ function scripts.bullet_tower_ray_sheep.update(this, store)
 	while true do
 		target = store.entities[b.target_id]
 
-		if target and target.health and not target.health.dead and band(target.vis.bans, F_RANGED) == 0 then
+		if target and not target.health.dead and band(target.vis.bans, F_RANGED) == 0 then
 			local d = math.max(math.abs(target.pos.x + target.unit.hit_offset.x - b.to.x), math.abs(target.pos.y + target.unit.hit_offset.y - b.to.y))
 
 			if d > b.max_track_distance then
@@ -11201,7 +11161,7 @@ function scripts.bullet_tower_ray_sheep.update(this, store)
 		coroutine.yield()
 	end
 
-	if target and target.health and not target.health.dead then
+	if target and not target.health.dead then
 		local sheep_t = this.sheep_t
 
 		if band(target.vis.flags, F_FLYING) ~= 0 then
@@ -11981,7 +11941,7 @@ function scripts.bullet_tower_sand.update(this, store)
 	while V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) > b.fixed_speed * store.tick_length * (b.fixed_speed * store.tick_length) do
 		target = store.entities[b.target_id]
 
-		if target and target.health and not target.health.dead then
+		if target and not target.health.dead then
 			b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
 		end
 
@@ -11994,7 +11954,7 @@ function scripts.bullet_tower_sand.update(this, store)
 
 	local will_kill
 
-	if target and target.health and not target.health.dead then
+	if target and not target.health.dead then
 		local d = SU.create_bullet_damage(b, target.id, this.id)
 
 		queue_damage(store, d)
@@ -12061,7 +12021,7 @@ function scripts.bullet_tower_sand.update(this, store)
 		local targets = U.find_enemies_in_range_filter_on(this.pos, this.bounce_range, b.vis_flags, b.vis_bans, filter_fn)
 
 		if not targets then
-			if target and target.health and not target.health.dead then
+			if target and not target.health.dead then
 				already_hit = {target.id}
 			else
 				already_hit = {}
@@ -12733,7 +12693,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.update(this, sto
 			end
 		end
 
-		if target and target.health and not target.health.dead then
+		if target and not target.health.dead then
 			if not P:is_node_valid(target.nav_path.pi, target.nav_path.ni) then
 				target_still_valid = false
 			end
@@ -12773,7 +12733,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.update(this, sto
 			local dist = V.dist(this.pos.x, this.pos.y, target_pos.x, target_pos.y)
 			local start_dist = dist
 
-			while dist > mspeed * store.tick_length and target and target.health and not target.health.dead do
+			while dist > mspeed * store.tick_length and target and not target.health.dead do
 				local tx, ty = target_pos.x, target_pos.y
 				local dx, dy = V.mul(mspeed * store.tick_length, V.normalize(V.sub(tx, ty, this.pos.x, this.pos.y)))
 
@@ -12792,7 +12752,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.update(this, sto
 				mspeed = km.clamp(this.min_speed, this.max_speed, mspeed + accel * store.tick_length)
 			end
 
-			if target and target.health and target.health.dead then
+			if target and target.health.dead then
 				queue_remove(store, trail)
 
 				ca.ts = store.tick_ts
@@ -14483,7 +14443,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 			target = U.detect_foremost_enemy_in_range_filter_on(soldier_floor_pos, attack.max_range, attack.vis_flags, attack.vis_bans, attack.filter_fn)
 		end
 
-		if target and target.health and not target.health.dead and band(target.vis.bans, bor(F_RANGED, F_INSTAKILL)) == 0 then
+		if target and not target.health.dead and band(target.vis.bans, bor(F_RANGED, F_INSTAKILL)) == 0 then
 			b.target_id = target.id
 
 			local hit_offset = v(0, 0)
@@ -14510,7 +14470,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 		coroutine.yield()
 	end
 
-	if target and target.health and not target.health.dead then
+	if target and not target.health.dead then
 		local d = E:create_entity("damage")
 
 		d.source_id = this.id
@@ -16572,7 +16532,7 @@ end
 function scripts.mod_bullet_tower_barrel.remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 
-	if target and target.health then
+	if target then
 		target.unit.damage_factor = target.unit.damage_factor / (1 - this.damage_reduction)
 	end
 
@@ -18330,7 +18290,7 @@ function scripts.tower_sparking_geode_ray.update(this, store)
 		end
 	end
 
-	if target and target.health and not target.health.dead then
+	if target and not target.health.dead then
 		local u = UP:get_upgrade("engineer_efficiency")
 		local d = SU.create_bullet_damage(b, target.id, this.id)
 
@@ -18343,7 +18303,7 @@ function scripts.tower_sparking_geode_ray.update(this, store)
 
 	local mods_added = {}
 
-	if target and target.health and not target.health.dead then
+	if target and not target.health.dead then
 		if b.mod or b.mods then
 			local mods = b.mods or {b.mod}
 
@@ -18566,7 +18526,7 @@ function scripts.mod_tower_sparking_geode_stun.update(this, store)
 	U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_crystal)
 	U.animation_start(this, "idle", nil, store.tick_ts, true, this.render.sid_fx)
 
-	while store.tick_ts - m.ts < m.duration and target and target.health and not target.health.dead do
+	while store.tick_ts - m.ts < m.duration and target and not target.health.dead do
 		if this.render and m.use_mod_offset and target.unit.mod_offset and not m.custom_offsets then
 			for i = 1, #this.render.sprites do
 				local s = this.render.sprites[i]
@@ -20471,7 +20431,7 @@ function scripts.tower_arborean_emissary_bolt.update(this, store)
 	while true do
 		target = store.entities[b.target_id]
 
-		if target and target.health and not target.health.dead and band(target.vis.bans, F_RANGED) == 0 then
+		if target and not target.health.dead and band(target.vis.bans, F_RANGED) == 0 then
 			local hit_offset = V.v(0, 0)
 
 			if not b.ignore_hit_offset then
@@ -20520,7 +20480,7 @@ function scripts.tower_arborean_emissary_bolt.update(this, store)
 		coroutine.yield()
 	end
 
-	if target and target.health and not target.health.dead then
+	if target and not target.health.dead then
 		local d = SU.create_bullet_damage(b, target.id, this.id)
 
 		queue_damage(store, d)
@@ -20650,7 +20610,7 @@ end
 function scripts.mod_arborean_emissary_weak.remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 
-	if target and target.health and target.unit then
+	if target then
 		if this.received_damage_factor then
 			target.health.damage_factor = target.health.damage_factor / this.received_damage_factor
 		end
@@ -20681,7 +20641,7 @@ function scripts.tower_arborean_emissary_root_stun_mod.update(this, store)
 	U.y_animation_play(this, this.animation_start, nil, store.tick_ts, 1)
 	U.animation_start(this, this.animation_idle, nil, store.tick_ts, false)
 
-	while store.tick_ts - m.ts < m.duration - this.out_before and target and target.health and not target.health.dead do
+	while store.tick_ts - m.ts < m.duration - this.out_before and target and not target.health.dead do
 		if this.render and m.use_mod_offset and target.unit.mod_offset and not m.custom_offsets then
 			for i = 1, #this.render.sprites do
 				local s = this.render.sprites[i]
@@ -21999,7 +21959,7 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 	while true do
 		target = store.entities[b.target_id]
 
-		if target and target.health and not target.health.dead and target.vis and band(target.vis.bans, F_RANGED) == 0 then
+		if target and not target.health.dead and target.vis and band(target.vis.bans, F_RANGED) == 0 then
 			local hit_offset = V.v(0, 0)
 
 			if not b.ignore_hit_offset then
@@ -22084,7 +22044,7 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 		end
 	end
 
-	if target and target.health and not target.health.dead then
+	if target and not target.health.dead then
 		do_hit(target)
 	else
 		local next_target = U.find_biggest_enemy_in_range_filter_off(this.pos, 200, b.vis_flags, b.vis_bans)

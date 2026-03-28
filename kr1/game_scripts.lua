@@ -23051,7 +23051,7 @@ function scripts.tower_holder_elemental.remove(this, store)
 
 	return true
 end
--- 
+--
 function scripts.tower_holder_elemental.update(this, store)
 	local start_anim_gradiente = false
 
@@ -39545,7 +39545,7 @@ function scripts.enemy_crocs_hydra.update(this, store)
 			SU.y_enemy_stun(store, this)
 		else
 			if ready_to_special_ability() then
-				local target = find_furthest_soldier(store.entities, this.pos, attack_debuff.min_range, attack_debuff.max_range, attack_debuff.vis_flags, attack_debuff.vis_bans)
+				local target = find_furthest_soldier(store.soldiers, this.pos, attack_debuff.min_range, attack_debuff.max_range, attack_debuff.vis_flags, attack_debuff.vis_bans)
 
 				if not target then
 					SU.delay_attack(store, attack_debuff, fts(10))
@@ -39640,8 +39640,9 @@ function scripts.aura_bullet_enemy_crocs_hydra_dot.update(this, store)
 				return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= v.id)
 			end)
 
+			local mods = this.aura.mods or {this.aura.mod}
+
 			for i, target in ipairs(targets) do
-				local mods = this.aura.mods or {this.aura.mod}
 
 				for _, mod_name in pairs(mods) do
 					local new_mod = E:create_entity(mod_name)

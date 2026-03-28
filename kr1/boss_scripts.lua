@@ -3251,7 +3251,7 @@ function scripts.umbra_portal.update(this, store)
 		queue_insert(store, spawn)
 
 		if sp.spawn_fx then
-			fx = E:create_entity(sp.spawn_fx)
+			local fx = E:create_entity(sp.spawn_fx)
 			fx.pos.x, fx.pos.y = spawn.pos.x, spawn.pos.y - 1
 			fx.render.sprites[1].ts = store.tick_ts
 
