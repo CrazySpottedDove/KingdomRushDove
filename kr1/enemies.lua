@@ -11219,7 +11219,7 @@ E:add_comps(tt, "death_spawns", "tween")
 
 local b = balance.enemies.hammer_and_anvil.surveillance_sentry
 
-tt.info.enc_icon = 62
+tt.info.enc_icon = 63
 tt.info.portrait = "kr5_info_portraits_enemies_0077"
 tt.enemy.gold = b.gold
 tt.enemy.lives_cost = b.lives_cost
@@ -11829,7 +11829,7 @@ tt.health_bar.offset = v(0, 45)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.regen.cooldown = b.regen_cooldown
 tt.regen.health = b.regen_health
-tt.info.enc_icon = 70
+tt.info.enc_icon = 67
 tt.info.portrait = "kr5_info_portraits_enemies_0085"
 tt.main_script.update = scripts.enemy_machinist.update
 tt.melee.attacks[1] = E:clone_c("melee_attack")
@@ -12729,7 +12729,7 @@ tt = E:register_t("enemy_storm_spirit", "enemy")
 E:add_comps(tt, "tween")
 
 b = balance.enemies.wukong.storm_spirit
-tt.info.enc_icon = 99
+tt.info.enc_icon = 96
 tt.info.portrait = "kr5_info_portraits_enemies_0108"
 tt.enemy.gold = b.gold
 tt.flight_height = 40
@@ -12792,7 +12792,7 @@ E:add_comps(tt, "melee")
 
 b = balance.enemies.wukong.water_spirit
 tt.info.i18n_key = "ENEMY_WATER_SPIRIT"
-tt.info.enc_icon = 98
+tt.info.enc_icon = 95
 tt.info.portrait = "kr5_info_portraits_enemies_0107"
 tt.enemy.gold = b.gold
 tt.enemy.melee_slot = v(24, 0)
@@ -12831,7 +12831,7 @@ tt = E:register_t("enemy_qiongqi", "enemy")
 E:add_comps(tt, "ranged")
 
 b = balance.enemies.wukong.qiongqi
-tt.info.enc_icon = 101
+tt.info.enc_icon = 98
 tt.info.portrait = "kr5_info_portraits_enemies_0109"
 tt.enemy.gold = b.gold
 tt.enemy.lives_cost = b.lives_cost
@@ -12892,7 +12892,7 @@ tt.health.magic_armor = b.magic_armor
 tt.health_bar.offset = v(0, 48)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.info.i18n_key = "ENEMY_GALE_WARRIOR"
-tt.info.enc_icon = 97
+tt.info.enc_icon = 94
 tt.info.portrait = "kr5_info_portraits_enemies_0110"
 tt.melee.cooldown = b.basic_attack.cooldown
 tt.melee.attacks[1].shared_cooldown = true
@@ -12926,7 +12926,7 @@ b = balance.enemies.wukong.storm_elemental
 
 E:add_comps(tt, "melee", "ranged", "timed_attacks")
 
-tt.info.enc_icon = 100
+tt.info.enc_icon = 97
 tt.info.portrait = "kr5_info_portraits_enemies_0112"
 tt.enemy.gold = b.gold
 tt.enemy.melee_slot = v(41, 0)
@@ -12996,7 +12996,7 @@ tt.health.hp_max = b.hp
 tt.health.armor = b.armor
 tt.health.magic_armor = b.magic_armor
 tt.health_bar.offset = v(0, 38)
-tt.info.enc_icon = 102
+tt.info.enc_icon = 99
 tt.info.portrait = "kr5_info_portraits_enemies_0111"
 tt.unit.hit_offset = v(0, 14)
 tt.unit.head_offset = v(0, 20)
@@ -13042,7 +13042,7 @@ b = balance.enemies.wukong.fan_guard
 
 E:add_comps(tt, "melee")
 
-tt.info.enc_icon = 104
+tt.info.enc_icon = 101
 tt.info.portrait = "kr5_info_portraits_enemies_0119"
 tt.main_script.update = scripts.enemy_fan_guard.update
 tt.enemy.gold = b.gold
@@ -13105,7 +13105,7 @@ b = balance.enemies.wukong.hellfire_warlock
 
 E:add_comps(tt, "melee", "ranged", "timed_attacks")
 
-tt.info.enc_icon = 109
+tt.info.enc_icon = 106
 tt.info.portrait = "kr5_info_portraits_enemies_0128"
 tt.main_script.update = scripts.enemy_hellfire_warlock.update
 tt.enemy.gold = b.gold
@@ -13304,7 +13304,7 @@ tt.health.hp_max = b.hp
 tt.health.armor = b.armor
 tt.health.magic_armor = b.magic_armor
 tt.health_bar.offset = v(0, 32)
-tt.info.enc_icon = 103
+tt.info.enc_icon = 100
 tt.info.portrait = "kr5_info_portraits_enemies_0118"
 tt.unit.hit_offset = v(0, 14)
 tt.unit.head_offset = v(0, 20)
@@ -13333,7 +13333,7 @@ local b = balance.enemies.wukong.golden_eyed
 
 E:add_comps(tt, "melee", "timed_attacks")
 
-tt.info.enc_icon = 108
+tt.info.enc_icon = 105
 tt.info.portrait = "kr5_info_portraits_enemies_0126"
 tt.enemy.gold = b.gold
 tt.enemy.melee_slot = v(55, 0)
@@ -13442,7 +13442,7 @@ tt.health.armor = b.armor
 tt.health.magic_armor = b.magic_armor
 tt.health_bar.offset = v(0, 59)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-tt.info.enc_icon = 106
+tt.info.enc_icon = 103
 tt.info.portrait = "kr5_info_portraits_enemies_0127"
 tt.unit.hit_offset = v(0, 26)
 tt.unit.head_offset = v(0, 23)
@@ -13482,7 +13482,7 @@ tt.health.hp_max = b.hp
 tt.health.armor = b.armor
 tt.health.magic_armor = b.magic_armor
 tt.health_bar.offset = v(0, 80)
-tt.info.enc_icon = 107
+tt.info.enc_icon = 104
 tt.info.portrait = "kr5_info_portraits_enemies_0125"
 tt.unit.hit_offset = v(0, 26)
 tt.unit.head_offset = v(0, 7)
@@ -13648,7 +13648,7 @@ tt.health.hp_max = b.hp
 tt.health.armor = b.armor
 tt.health.magic_armor = b.magic_armor
 tt.health_bar.offset = v(0, 32)
-tt.info.enc_icon = 112
+tt.info.enc_icon = 109
 tt.info.portrait = "kr5_info_portraits_enemies_0129"
 tt.unit.hit_offset = v(0, 14)
 tt.unit.head_offset = v(0, 6)
@@ -13702,7 +13702,7 @@ tt.health.armor = b.armor
 tt.health.magic_armor = b.magic_armor
 tt.health_bar.offset = v(0, 45)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-tt.info.enc_icon = 111
+tt.info.enc_icon = 108
 tt.info.portrait = "kr5_info_portraits_enemies_0131"
 tt.unit.hit_offset = v(0, 18)
 tt.unit.head_offset = v(0, 13)
@@ -13741,7 +13741,7 @@ tt.health.armor = b.armor
 tt.health.magic_armor = b.magic_armor
 tt.health_bar.offset = v(0, 55 + tt.flight_height)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
-tt.info.enc_icon = 113
+tt.info.enc_icon = 110
 tt.info.portrait = "kr5_info_portraits_enemies_0130"
 tt.unit.hit_offset = v(0, 14 + tt.flight_height)
 tt.unit.head_offset = v(0, 20)
@@ -13846,7 +13846,7 @@ tt.tween.props[6].sprite_id = 2
 tt = RT("enemy_alfa_lava", "enemy_dragons")
 b = balance.enemies.dragons.alfa_lava
 E:add_comps(tt, "melee", "timed_attacks")
-tt.info.enc_icon = 114
+tt.info.enc_icon = 111
 tt.info.portrait = "kr5_info_portraits_enemies_0132"
 tt.enemy.gold = b.gold
 tt.enemy.melee_slot = v(36, 0)
@@ -13906,7 +13906,7 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
 tt = RT("enemy_basic_acid", "enemy_dragons")
 local b = balance.enemies.dragons.basic_acid
 E:add_comps(tt, "melee", "timed_attacks")
-tt.info.enc_icon = 115
+tt.info.enc_icon = 112
 tt.info.portrait = "kr5_info_portraits_enemies_0133"
 tt.enemy.gold = b.gold
 tt.enemy.melee_slot = v(24, 0)
@@ -13965,7 +13965,7 @@ tt.sound_events.death = "EnemyNoxiousHorrorDeath"
 tt = RT("enemy_evolved_acid", "enemy_dragons")
 local b = balance.enemies.dragons.evolved_acid
 E:add_comps(tt, "timed_attacks", "tween")
-tt.info.enc_icon = 116
+tt.info.enc_icon = 113
 tt.info.portrait = "kr5_info_portraits_enemies_0134"
 tt.enemy.gold = b.gold
 tt.enemy.melee_slot = v(25, 0)
@@ -14053,7 +14053,7 @@ tt.health.armor = b.armor
 tt.health.magic_armor = b.magic_armor
 tt.health_bar.offset = v(0, 60 + tt.flight_height)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_MEDIUM
-tt.info.enc_icon = 117
+tt.info.enc_icon = 114
 tt.info.portrait = "kr5_info_portraits_enemies_0135"
 tt.main_script.update = scripts.enemy_alfa_acid.update
 tt.ranged.attacks[1].animation = "attack"
@@ -14150,7 +14150,7 @@ tt = RT("enemy_basic_shadow", "enemy_dragons")
 E:add_comps(tt, "tween")
 b = balance.enemies.dragons.basic_shadow
 tt.flight_height = 40
-tt.info.enc_icon = 118
+tt.info.enc_icon = 115
 tt.info.portrait = "kr5_info_portraits_enemies_0136"
 tt.unit.mod_offset = v(0, 12)
 tt.unit.hit_offset = v(0, 15)
@@ -14200,7 +14200,7 @@ tt.tween.props[1].sprite_id = 1
 tt = RT("enemy_evolved_shadow", "enemy_dragons")
 E:add_comps(tt, "ranged")
 b = balance.enemies.dragons.evolved_shadow
-tt.info.enc_icon = 119
+tt.info.enc_icon = 116
 tt.info.portrait = "kr5_info_portraits_enemies_0137"
 tt.enemy.gold = b.gold
 tt.enemy.lives_cost = b.lives_cost
@@ -14270,7 +14270,7 @@ tt.health.dead_lifetime = fts(126)
 tt.motion.max_speed = b.speed
 tt.sound_events.death = "Stage11MydriasIllusionDeath"
 tt.enemy.gold = b.gold
-tt.info.enc_icon = 120
+tt.info.enc_icon = 117
 tt.info.portrait = "kr5_info_portraits_enemies_0138"
 tt.main_script.update = scripts.enemy_alfa_shadow.update
 tt.melee.range = 72
@@ -14326,7 +14326,7 @@ tt.sound_events.death = "EnemyShadowAlfaDeath"
 tt = RT("enemy_basic_storm", "enemy_dragons")
 E:add_comps(tt, "tween")
 b = balance.enemies.dragons.basic_storm
-tt.info.enc_icon = 121
+tt.info.enc_icon = 118
 tt.info.portrait = "kr5_info_portraits_enemies_0139"
 tt.enemy.gold = b.gold
 tt.flight_height = 40
@@ -14382,7 +14382,7 @@ tt.tween.props[1].remove = false
 tt = RT("enemy_evolved_storm", "enemy_dragons")
 E:add_comps(tt, "timed_attacks", "tween")
 b = balance.enemies.dragons.evolved_storm
-tt.info.enc_icon = 122
+tt.info.enc_icon = 119
 tt.info.portrait = "kr5_info_portraits_enemies_0140"
 tt.enemy.gold = b.gold
 tt.enemy.lives_cost = b.lives_cost
@@ -14471,7 +14471,7 @@ tt.sound_events.death = "EnemyStormAlfaDeath"
 tt.sound_events.death_args = {
 	delay = fts(9)
 }
-tt.info.enc_icon = 123
+tt.info.enc_icon = 120
 tt.info.portrait = "kr5_info_portraits_enemies_0141"
 tt.main_script.update = scripts.enemy_alfa_storm.update
 tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
@@ -14532,7 +14532,7 @@ tt.health_bar.offset = v(0, 55)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_MEDIUM
 tt.health.dead_lifetime = 1.3
 tt.unit.size = UNIT_SIZE_MEDIUM
-tt.info.enc_icon = 124
+tt.info.enc_icon = 121
 tt.info.portrait = "kr5_info_portraits_enemies_0142"
 tt.unit.hit_offset = v(0, 23)
 tt.unit.head_offset = v(0, 12)
@@ -14580,7 +14580,7 @@ tt.health.magic_armor = b.magic_armor
 tt.health_bar.offset = v(0, 100)
 tt.regen.cooldown = b.regen_cooldown
 tt.regen.health = b.regen_health
-tt.info.enc_icon = 126
+tt.info.enc_icon = 123
 tt.info.portrait = "kr5_info_portraits_enemies_0144"
 tt.unit.hit_offset = v(0, 35)
 tt.unit.head_offset = v(0, 35)

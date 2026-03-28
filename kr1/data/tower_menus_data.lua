@@ -248,8 +248,8 @@ return {
 			action_arg = "tower_frankenstein",
 			image = "main_icons_0039",
 			place = 11,
-			tt_title = _("SPECIAL_TOWER_FRANKENSTEIN_NAME"),
-			tt_desc = _("SPECIAL_TOWER_FRANKENSTEIN_DESCRIPTION")
+			tt_title = _("TOWER_FRANKENSTEIN_NAME"),
+			tt_desc = _("TOWER_FRANKENSTEIN_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_druid",
@@ -1481,32 +1481,32 @@ return {
 		image = "special_icons_0048",
 		place = 1,
 		sounds = {"HWFrankensteinUpgradeLightning"},
-		tt_phrase = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_1_NOTE"),
+		tt_phrase = _("TOWER_FRANKENSTEIN_LIGHTNING_NOTE"),
 		tt_list = {{
-			tt_title = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_1_NAME"),
-			tt_desc = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_1_DESCRIPTION_1")
+			tt_title = _("TOWER_FRANKENSTEIN_LIGHTNING_NAME_1"),
+			tt_desc = _("TOWER_FRANKENSTEIN_LIGHTNING_DESCRIPTION_1")
 		}, {
-			tt_title = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_1_NAME"),
-			tt_desc = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_1_DESCRIPTION_2")
+			tt_title = _("TOWER_FRANKENSTEIN_LIGHTNING_NAME_2"),
+			tt_desc = _("TOWER_FRANKENSTEIN_LIGHTNING_DESCRIPTION_2")
 		}, {
-			tt_title = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_1_NAME"),
-			tt_desc = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_1_DESCRIPTION_3")
+			tt_title = _("TOWER_FRANKENSTEIN_LIGHTNING_NAME_3"),
+			tt_desc = _("TOWER_FRANKENSTEIN_LIGHTNING_DESCRIPTION_3")
 		}}
 	}), M(tpl.upgrade_power, {
 		action_arg = "frankie",
 		image = "special_icons_0049",
 		place = 2,
 		sounds = {"HWFrankensteinUpgradeFrankenstein"},
-		tt_phrase = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_2_NOTE"),
+		tt_phrase = _("TOWER_FRANKENSTEIN_FRANKIE_NOTE"),
 		tt_list = {{
-			tt_title = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_2_NAME"),
-			tt_desc = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_2_DESCRIPTION_1")
+			tt_title = _("TOWER_FRANKENSTEIN_FRANKIE_NAME_1"),
+			tt_desc = _("TOWER_FRANKENSTEIN_FRANKIE_DESCRIPTION_1")
 		}, {
-			tt_title = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_2_NAME"),
-			tt_desc = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_2_DESCRIPTION_2")
+			tt_title = _("TOWER_FRANKENSTEIN_FRANKIE_NAME_2"),
+			tt_desc = _("TOWER_FRANKENSTEIN_FRANKIE_DESCRIPTION_2")
 		}, {
-			tt_title = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_2_NAME"),
-			tt_desc = _("SPECIAL_TOWER_FRANKENSTEIN_UPGRADE_2_DESCRIPTION_3")
+			tt_title = _("TOWER_FRANKENSTEIN_FRANKIE_NAME_3"),
+			tt_desc = _("TOWER_FRANKENSTEIN_FRANKIE_DESCRIPTION_3")
 		}}
 	}), tpl.rally, tpl.sell}},
 	--

@@ -2861,6 +2861,12 @@ return {
 			from_kr = 2
 		},
 		{
+			name = "tower_frankenstein",
+			icon = 15,
+			detail_icon = 15,
+			from_kr = 2
+		},
+		{
 			name = "tower_druid",
 			icon = 1,
 			detail_icon = 1,

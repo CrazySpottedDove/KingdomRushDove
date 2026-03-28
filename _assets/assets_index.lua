@@ -132,8 +132,8 @@ return {
 		hash = "864f0030"
 	},
 	["kr1-desktop/images/fullhd/achievements-1.dds"] = {
-		size = 2015360,
-		hash = "5266209c"
+		size = 3453092,
+		hash = "6a03d1ba"
 	},
 	["kr1-desktop/images/fullhd/ballon-1.dds"] = {
 		size = 693536,
@@ -161,7 +161,7 @@ return {
 	},
 	["kr1-desktop/images/fullhd/encyclopedia-1.dds"] = {
 		size = 4818852,
-		hash = "fa39c00c"
+		hash = "c4e54180"
 	},
 	["kr1-desktop/images/fullhd/encyclopedia_creeps-1.dds"] = {
 		size = 21206532,
@@ -169,11 +169,11 @@ return {
 	},
 	["kr1-desktop/images/fullhd/encyclopedia_creeps-2.dds"] = {
 		size = 21166132,
-		hash = "80b6bcf0"
+		hash = "e1073270"
 	},
 	["kr1-desktop/images/fullhd/encyclopedia_creeps-3.dds"] = {
 		size = 4199972,
-		hash = "46cb263e"
+		hash = "a5ec5cac"
 	},
 	["kr1-desktop/images/fullhd/go_decals-1.dds"] = {
 		size = 2616176,

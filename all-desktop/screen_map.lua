@@ -4783,7 +4783,7 @@ function EncyclopediaView:detail_creep(index)
 	local mx = 205
 	local my = 380
 	local ci = ce.info.fn(ce)
-	local skill_table = {ci.hp_max, GU.damage_value_desc(ci.damage_min, ci.damage_max), string.format("%i", ci.armor * 100), string.format("%i", ci.magic_armor * 100), string.format("%i", ce.motion.max_speed), (GU.lives_desc(ci.lives))}
+	local skill_table = {ci.hp_max, GU.damage_value_desc(ci.damage_min, ci.damage_max), string.format("%i", ci.armor * 100), string.format("%i", ci.magic_armor * 100), string.format("%i", ce.motion and ce.motion.max_speed or 0), (GU.lives_desc(ci.lives))}
 
 	for i = 1, 6 do
 		local desc_label = GGLabel:new(V.v(90, 50))

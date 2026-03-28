@@ -2320,7 +2320,7 @@ tt.enemy.gold = b.gold
 tt.health.armor = b.armor
 tt.health.magic_armor = b.magic_armor
 tt.health_bar.offset = vec_2(0, 32)
-tt.info.enc_icon = 129
+tt.info.enc_icon = 126
 tt.info.portrait = "kr5_info_portraits_enemies_0042"
 tt.unit.hide_after_death = true
 tt.unit.hit_offset = vec_2(0, 14)
@@ -2340,7 +2340,7 @@ tt = RT("enemy_tower_ray_sheep_flying", "enemy_tower_ray_sheep")
 
 local b = balance.towers.ray.skill_sheep.sheep
 
-tt.info.enc_icon = 129
+tt.info.enc_icon = 126
 tt.info.portrait = "kr5_info_portraits_enemies_0041"
 tt.flight_height = 47
 tt.health_bar.offset = vec_2(0, tt.flight_height + 40)
