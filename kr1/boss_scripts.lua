@@ -34,6 +34,10 @@ local function tpos(e)
 end
 
 local function enemy_ready_to_magic_attack(this, store, attack)
+	if not attack or not this.enemy or this.enemy.can_do_magic == nil then
+		return false
+	end
+
 	return this.enemy.can_do_magic and store.tick_ts - attack.ts > attack.cooldown
 end
 
@@ -62,9 +66,21 @@ local function queue_damage(store, damage)
 end
 
 local function y_show_taunt_set(store, taunts, set_name, index, wait)
+	if not taunts or not taunts.sets or set_name == nil then
+		return
+	end
+
 	local set = taunts.sets[set_name]
 
-	index = index or set.idxs and table.random(set.idxs) or math.random(set.start_idx, set.end_idx)
+	if not set or not set.format then
+		return
+	end
+
+	index = index or (set.idxs and table.random(set.idxs)) or (set.start_idx ~= nil and set.end_idx ~= nil and math.random(set.start_idx, set.end_idx))
+
+	if index == nil then
+		return
+	end
 
 	local duration = taunts.duration
 	local taunt_id = _(string.format(set.format, index))
@@ -567,10 +583,10 @@ function scripts.eb_veznan.update(this, store)
 
 		pa.count = pa.count + 1
 
-		for _, p in pairs(portals) do
-			if pa.portals[p.portal_idx] ~= 1 then
-			-- block empty
-			else
+		for _, p in pairs(portals or {}) do
+			local pidx = p and p.portal_idx
+
+			if pidx and pa.portals and pa.portals[pidx] == 1 then
 				p.spawn_signal = true
 			end
 		end
@@ -592,14 +608,24 @@ function scripts.eb_veznan.update(this, store)
 	end
 
 	local function spawn_soul_to_veznan(target)
+		if not target or not target.pos or not sda or not sda.soul_effect then
+			return 0
+		end
+
 		local soul = E:create_entity(sda.soul_effect)
-		local from_x = target.pos.x + target.unit.mod_offset.x
-		local from_y = target.pos.y + target.unit.mod_offset.y
-		local hand_sign = this.render.sprites[1].flip_x and -1 or 1
+		local mo = target.unit and target.unit.mod_offset or v(0, 0)
+		local from_x = target.pos.x + mo.x
+		local from_y = target.pos.y + mo.y
+		local s1 = this.render and this.render.sprites and this.render.sprites[1]
+		local hand_sign = s1 and s1.flip_x and -1 or 1
 		local hand_x = this.pos.x + sda.soul_hand_offset.x * hand_sign
 		local hand_y = this.pos.y + sda.soul_hand_offset.y
 		local dist = V.dist(from_x, from_y, hand_x, hand_y)
-		local speed = sda.soul_speed
+		local speed = tonumber(sda.soul_speed) or 0
+
+		if speed <= 0 then
+			speed = 1
+		end
 
 		soul.pos = V.v(from_x, from_y)
 		soul.soul_phase = 1
@@ -616,6 +642,10 @@ function scripts.eb_veznan.update(this, store)
 	end
 
 	local function y_soul_drain()
+		if not sda then
+			return false
+		end
+
 		local started_ts = store.tick_ts
 		local last_soul_arrival_ts = started_ts
 		local drained_ids = {}
@@ -627,8 +657,8 @@ function scripts.eb_veznan.update(this, store)
 		end
 
 		local function has_targets()
-			for _, e in pairs(store.soldiers) do
-				if not e.health.dead and U.is_inside_ellipse(e.pos, this.pos, sda.range) and U.flags_pass(e.vis, sda) and not is_soul_drain_immune(e) then
+			for _, e in pairs(store.soldiers or {}) do
+				if e and e.pos and e.health and not e.health.dead and U.is_inside_ellipse(e.pos, this.pos, sda.range) and e.vis and U.flags_pass(e.vis, sda) and not is_soul_drain_immune(e) then
 					return true
 				end
 			end
@@ -647,7 +677,7 @@ function scripts.eb_veznan.update(this, store)
 		U.animation_start(this, sda.animation_start or sda.animation, nil, store.tick_ts, false)
 
 		while store.tick_ts - started_ts < sda.kill_start_time do
-			if this.unit.is_stunned then
+			if this.unit.is_stunned or this.phase_signal then
 				return abort_soul_drain()
 			end
 
@@ -665,7 +695,7 @@ function scripts.eb_veznan.update(this, store)
 				hold_started = true
 			end
 
-			if this.unit.is_stunned then
+			if this.unit.is_stunned or this.phase_signal then
 				return abort_soul_drain()
 			end
 
@@ -674,7 +704,7 @@ function scripts.eb_veznan.update(this, store)
 					local d = E:create_entity("damage")
 
 					d.damage_type = bor(DAMAGE_DISINTEGRATE, DAMAGE_INSTAKILL)
-					d.value = target.health.hp_max + 1
+					d.value = (tonumber(target.health.hp_max) or 0) + 1
 					d.source_id = this.id
 					d.target_id = target.id
 
@@ -693,7 +723,7 @@ function scripts.eb_veznan.update(this, store)
 		local enter_end_ts = math.max(started_ts + sda.kill_end_time, last_soul_arrival_ts)
 
 		while store.tick_ts < enter_end_ts do
-			if this.unit.is_stunned then
+			if this.unit.is_stunned or this.phase_signal then
 				return abort_soul_drain()
 			end
 
@@ -704,7 +734,7 @@ function scripts.eb_veznan.update(this, store)
 			U.animation_start(this, sda.animation_end, nil, store.tick_ts, false)
 
 			while not U.animation_finished(this) do
-				if this.unit.is_stunned then
+				if this.unit.is_stunned or this.phase_signal then
 					return abort_soul_drain()
 				end
 
@@ -712,7 +742,11 @@ function scripts.eb_veznan.update(this, store)
 			end
 
 			if sda.animation_end_extra_time and sda.animation_end_extra_time > 0 then
-				U.y_wait(store, sda.animation_end_extra_time)
+				if U.y_wait(store, sda.animation_end_extra_time, function(st, time)
+					return this.unit.is_stunned or this.phase_signal
+				end) then
+					return abort_soul_drain()
+				end
 			end
 		end
 
@@ -742,6 +776,10 @@ function scripts.eb_veznan.update(this, store)
 	end
 
 	local function ready_to_soul_drain()
+		if not sda then
+			return false
+		end
+
 		return not sda.disabled and enemy_ready_to_magic_attack(this, store, sda)
 	end
 
@@ -779,13 +817,17 @@ function scripts.eb_veznan.update(this, store)
 
 	ba.ts = store.tick_ts
 	pa.ts = store.tick_ts
-	sda.ts = store.tick_ts
+
+	if sda then
+		sda.ts = store.tick_ts
+	end
+
 	taunt_ts = store.tick_ts
 	this.phase_signal = nil
 
 	while not this.phase_signal do
 		if store.wave_group_number ~= last_wave and not this.phase_signal then
-			local ba_wave_data = ba.data[store.wave_group_number]
+			local ba_wave_data = ba.data and ba.data[store.wave_group_number]
 
 			ba.disabled = not ba_wave_data
 
@@ -794,7 +836,7 @@ function scripts.eb_veznan.update(this, store)
 				ba.count = ba_wave_data and ba_wave_data[2] or 0
 			end
 
-			local pa_wave_data = pa.data[store.wave_group_number]
+			local pa_wave_data = pa.data and pa.data[store.wave_group_number]
 
 			pa.disabled = not pa_wave_data
 
@@ -847,7 +889,11 @@ function scripts.eb_veznan.update(this, store)
 	this.pos = P:node_pos(this.nav_path)
 	pa.ts = store.tick_ts
 	ba.ts = store.tick_ts
-	sda.ts = store.tick_ts
+
+	if sda then
+		sda.ts = store.tick_ts
+	end
+
 	this.vis.bans = U.flag_clear(this.vis.bans, F_ALL)
 	this.health.ignore_damage = false
 	this.health_bar.hidden = nil
@@ -890,14 +936,25 @@ function scripts.eb_veznan.update(this, store)
 	this.health.hp = initial_hp * 1.5
 	this.health.hp_max = initial_hp * 1.5
 	this.health_bar.offset = this.demon.health_bar_offset
-	this.health_bar.frames[1].bar_width = this.health_bar.frames[1].bar_width * this.demon.health_bar_scale
-	this.health_bar.frames[2].bar_width = this.health_bar.frames[2].bar_width * this.demon.health_bar_scale
-	this.health_bar.frames[1].scale.x = this.health_bar.frames[1].scale.x * this.demon.health_bar_scale
-	this.health_bar.frames[2].scale.x = this.health_bar.frames[2].scale.x * this.demon.health_bar_scale
+	do
+		local hb = this.health_bar
+		local f1 = hb and hb.frames and hb.frames[1]
+		local f2 = hb and hb.frames and hb.frames[2]
+		local sc = this.demon.health_bar_scale
+
+		if f1 and f2 and sc then
+			f1.bar_width = f1.bar_width * sc
+			f2.bar_width = f2.bar_width * sc
+			f1.scale.x = f1.scale.x * sc
+			f2.scale.x = f2.scale.x * sc
+		end
+	end
 	this.melee.attacks[1].disabled = true
 	this.melee.attacks[2].disabled = false
 	U.update_max_speed(this, this.demon.speed)
-	this.render.sprites[1].prefix = this.demon.sprites_prefix
+	if this.render and this.render.sprites and this.render.sprites[1] then
+		this.render.sprites[1].prefix = this.demon.sprites_prefix
+	end
 	this.ui.click_rect = this.demon.ui_click_rect
 	this.unit.hit_offset = this.demon.unit_hit_offset
 	this.unit.mod_offset = this.demon.unit_mod_offset
@@ -1106,6 +1163,12 @@ end
 scripts.veznan_soul = {}
 
 function scripts.veznan_soul.update(this, store)
+	if not this.render or not this.render.sprites or not this.render.sprites[1] then
+		queue_remove(store, this)
+
+		return
+	end
+
 	local speed = math.random(this.speed[1], this.speed[2])
 	local inc = math.random() > 0.5 and this.angle_variation or -this.angle_variation
 	local angle_var = 0
@@ -1117,7 +1180,9 @@ function scripts.veznan_soul.update(this, store)
 
 	local pl = ps.particle_system.particle_lifetime
 
-	pl[1], pl[2] = pl[1] * this.soul_phase, pl[2] * this.soul_phase
+	if pl and pl[1] and pl[2] then
+		pl[1], pl[2] = pl[1] * this.soul_phase, pl[2] * this.soul_phase
+	end
 
 	queue_insert(store, ps)
 

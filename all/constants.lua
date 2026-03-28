@@ -1,6 +1,20 @@
 -- chunkname: @./all/constants.lua
 ASSETS_CHECK_ENABLED = false
 GEN_WAVES_ENABLED = false
+-- ========== 伤害调试（默认全关；排查异常掉血/来源链时再开）==========
+-- 依赖：all/systems/health.lua；各脚本可在 damage 实体上写 damage_trace_origin / damage_trace_extra。
+-- 主开关：为 true 时按下面子开关记录受击历史、死亡摘要，并覆盖所有伤害结算分支（血量/吞噬/物甲/魔甲）。
+DEBUG_DAMAGE_TRACE = true
+-- 为 true 且主开关为 true：每次结算立即打印一行 [DAMAGE_TRACE]（含 branch、dtype、来源链）；默认仅「敌人」；若同时打开 ALL_TARGETS 则含士兵/英雄等。
+DEBUG_DAMAGE_TRACE_ALL_ENEMY_HITS = true
+-- 为 true 且主开关为 true：除敌人外，对士兵、英雄、任意带 health 的实体也记录（日志量会明显变大）。
+DEBUG_DAMAGE_TRACE_ALL_TARGETS = true
+-- 每个实体保留的最近受击条数上限（仅主开关为 true 时写入，供死亡摘要使用）。
+DEBUG_DAMAGE_TRACE_HISTORY = 32
+-- 为 true 且主开关为 true：红法等在 queue_insert(子弹) 前多打一行 [TOWER_TRACE]（需 tower_scripts 里对应打印）。
+DEBUG_DAMAGE_TRACE_TOWER_ATTACKS = true
+-- 为 true：每次受击结算多打 [DAMAGE_INVESTIGATE]（src_id、origin/extra、源实体快照）；可不依赖主开关，单独用于深挖。
+DEBUG_DAMAGE_TRACE_INVESTIGATE = true
 PATH_POINTS_DISTANCE = 7
 NULL = "__NULL__"
 FPS = 30

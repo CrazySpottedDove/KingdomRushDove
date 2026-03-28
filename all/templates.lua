@@ -72,6 +72,9 @@ damage.track_kills = nil
 damage.track_damage = nil
 damage.target_id = nil
 damage.source_id = nil
+-- 调试：health 在 DEBUG_DAMAGE_TRACE 下打印（如 mod_tower_ray_damage / 无尽技能 写入）
+damage.damage_trace_extra = nil
+damage.damage_trace_origin = nil
 damage.damage_applied = nil
 damage.damage_result = 0
 damage.xp_dest_id = nil

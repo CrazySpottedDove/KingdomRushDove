@@ -92,6 +92,8 @@ local function execute_effect(cfg, tower, store, targets)
 
 	if effect.type == "damage" then
 		-- 伤害统一走 damage 实体，复用现有 health/pops 链路，兼容现有 mod。
+		-- source_id 为塔 id（无尽无子弹链）；用 origin/extra 与射线 mod 区分，便于 DEBUG_DAMAGE_TRACE。
+		local skill_id = cfg.id or "?"
 		for _, t in pairs(targets) do
 			if t.health and not t.health.dead then
 				local dmg = E:create_entity("damage")
@@ -103,6 +105,8 @@ local function execute_effect(cfg, tower, store, targets)
 				dmg.damage_type = effect.damage_type or DAMAGE_TRUE
 				dmg.pop = effect.pop
 				dmg.pop_conds = effect.pop_conds or DR_DAMAGE
+				dmg.damage_trace_origin = "tower_skill_endless"
+				dmg.damage_trace_extra = string.format("skill=%s tower=%s", tostring(skill_id), tostring(tower.template_name))
 				store.damage_queue[#store.damage_queue + 1] = dmg
 			end
 		end

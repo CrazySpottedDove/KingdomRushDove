@@ -10301,6 +10301,12 @@ function scripts.tower_ray.update(this, store)
 		return target, target and U.calculate_enemy_ffe_pos(target, aa.node_prediction) or nil
 	end
 
+	local function ray_target_invalid(store, enemy_id)
+		local e = store.entities[enemy_id]
+
+		return not e or not e.health or e.health.dead
+	end
+
 	do
 		local soffset = this.shooter_offset
 		local an, af, ai = animation_name_facing_point(this, "idle", a._last_target_pos, this.render.sid_mage, soffset)
@@ -10361,6 +10367,8 @@ function scripts.tower_ray.update(this, store)
 						else
 							local enemy_id = enemy.id
 							local enemy_pos = enemy.pos
+							local b
+							local start_offset
 
 							last_ts = store.tick_ts
 
@@ -10373,14 +10381,30 @@ function scripts.tower_ray.update(this, store)
 							animation_start(this, an, af, store.tick_ts, false, this.render.sid_mage)
 							U.animation_start_group(this, "glow_start", nil, store.tick_ts, false, "rocks")
 
-							local b = E:create_entity(aa.bullet)
-							local start_offset = aa.bullet_start_offset
+							if y_wait(store, fts(4) * this.tower.cooldown_factor, function(st, time)
+								return ray_target_invalid(st, enemy_id)
+							end) then
+								goto label_989_0
+							end
 
-							y_wait(store, fts(4) * this.tower.cooldown_factor)
 							U.animation_start_group(this, "idle_2", nil, store.tick_ts, true, "rocks")
-							y_wait(store, (aa.shoot_time - fts(4)) * this.tower.cooldown_factor)
 
-							local an, af, ai = animation_name_facing_point(this, aa.animation_loop, enemy.pos, this.render.sid_mage, this.mage_offset)
+							if y_wait(store, (aa.shoot_time - fts(4)) * this.tower.cooldown_factor, function(st, time)
+								return ray_target_invalid(st, enemy_id)
+							end) then
+								goto label_989_0
+							end
+
+							enemy, pred_pos = find_target(aa)
+
+							if not enemy then
+								goto label_989_0
+							end
+
+							b = E:create_entity(aa.bullet)
+							start_offset = aa.bullet_start_offset
+
+							an, af, ai = animation_name_facing_point(this, aa.animation_loop, enemy.pos, this.render.sid_mage, this.mage_offset)
 
 							a._last_target_pos.x, a._last_target_pos.y = enemy.pos.x, enemy.pos.y
 
@@ -10395,7 +10419,11 @@ function scripts.tower_ray.update(this, store)
 								queue_insert(store, fx)
 							end
 
-							y_wait(store, fts(1) * this.tower.cooldown_factor)
+							if y_wait(store, fts(1) * this.tower.cooldown_factor, function(st, time)
+								return ray_target_invalid(st, enemy_id)
+							end) then
+								goto label_989_0
+							end
 
 							enemy, pred_pos = find_target(aa)
 
@@ -10420,15 +10448,14 @@ function scripts.tower_ray.update(this, store)
 
 							::label_989_0::
 
-							local an, af, ai = animation_name_facing_point(this, aa.animation_end, a._last_target_pos, this.render.sid_mage, this.mage_offset)
+							an, af, ai = animation_name_facing_point(this, aa.animation_end, a._last_target_pos, this.render.sid_mage, this.mage_offset)
 
 							animation_start(this, an, af, store.tick_ts, false, this.render.sid_mage)
 							U.y_animation_play_group(this, "glow_end", nil, store.tick_ts, 1, "rocks")
 							U.animation_start_group(this, "idle", nil, store.tick_ts, true, "rocks")
 							y_animation_wait(this, this.render.sid_mage)
 
-							local soffset = this.shooter_offset
-							local an, af, ai = animation_name_facing_point(this, "idle", a._last_target_pos, this.render.sid_mage, soffset)
+							an, af, ai = animation_name_facing_point(this, "idle", a._last_target_pos, this.render.sid_mage, this.shooter_offset)
 
 							animation_start(this, an, af, store.tick_ts, true, this.render.sid_mage)
 
@@ -10442,6 +10469,10 @@ function scripts.tower_ray.update(this, store)
 						else
 							local enemy_id = enemy.id
 							local enemy_pos = enemy.pos
+							local b
+							local start_offset
+							local last_fx
+							local range_to_stay
 
 							last_ts = store.tick_ts
 
@@ -10464,14 +10495,30 @@ function scripts.tower_ray.update(this, store)
 								queue_insert(store, fx)
 							end
 
-							local b = E:create_entity(aa.bullet)
-							local start_offset = aa.bullet_start_offset
+							if y_wait(store, fts(4) * this.tower.cooldown_factor, function(st, time)
+								return ray_target_invalid(st, enemy_id)
+							end) then
+								goto label_989_1
+							end
 
-							y_wait(store, fts(4) * this.tower.cooldown_factor)
 							U.animation_start_group(this, "idle_2", nil, store.tick_ts, true, "rocks")
-							y_wait(store, (aa.shoot_time - fts(4)) * this.tower.cooldown_factor)
 
-							local an, af, ai = animation_name_facing_point(this, aa.animation_loop, enemy.pos, this.render.sid_mage, this.mage_offset)
+							if y_wait(store, (aa.shoot_time - fts(4)) * this.tower.cooldown_factor, function(st, time)
+								return ray_target_invalid(st, enemy_id)
+							end) then
+								goto label_989_1
+							end
+
+							enemy, pred_pos = find_target(aa)
+
+							if not enemy then
+								goto label_ray_lvl4_abort_before_beam
+							end
+
+							b = E:create_entity(aa.bullet)
+							start_offset = aa.bullet_start_offset
+
+							an, af, ai = animation_name_facing_point(this, aa.animation_loop, enemy.pos, this.render.sid_mage, this.mage_offset)
 
 							a._last_target_pos.x, a._last_target_pos.y = enemy.pos.x, enemy.pos.y
 
@@ -10497,9 +10544,13 @@ function scripts.tower_ray.update(this, store)
 								this.ray_fx_start = fx
 							end
 
-							y_wait(store, fts(1) * this.tower.cooldown_factor)
+							if y_wait(store, fts(1) * this.tower.cooldown_factor, function(st, time)
+								return ray_target_invalid(st, enemy_id)
+							end) then
+								goto label_989_1
+							end
 
-							local last_fx = store.tick_ts + fts(3)
+							last_fx = store.tick_ts + fts(3)
 
 							this.render.sprites[this.render.sid_crystal_union].hidden = false
 
@@ -10507,7 +10558,7 @@ function scripts.tower_ray.update(this, store)
 								this.render.sprites[i].hidden = true
 							end
 
-							local range_to_stay = a.range + a.extra_range
+							range_to_stay = a.range + a.extra_range
 
 							enemy, pred_pos = find_target(aa)
 
@@ -10536,7 +10587,17 @@ function scripts.tower_ray.update(this, store)
 
 							queue_insert(store, b)
 
-							while store.tick_ts - last_ts < (aa.duration + aa.shoot_time) * this.tower.cooldown_factor and enemy and not enemy.health.dead and b and not b.force_stop_ray and not this.tower.blocked and V.dist2(tpos(this).x, tpos(this).y, enemy.pos.x, enemy.pos.y) <= range_to_stay * range_to_stay do
+							while store.tick_ts - last_ts < (aa.duration + aa.shoot_time) * this.tower.cooldown_factor and b and not b.force_stop_ray and not this.tower.blocked do
+								if ray_target_invalid(store, enemy_id) then
+									break
+								end
+
+								local e = store.entities[enemy_id]
+
+								if V.dist2(tpos(this).x, tpos(this).y, e.pos.x, e.pos.y) > range_to_stay * range_to_stay then
+									break
+								end
+
 								if store.tick_ts - last_fx > 1 and store.tick_ts - last_ts < (aa.duration + aa.shoot_time - 0.75) * this.tower.cooldown_factor and b.bullet.out_start_fx then
 									local fx = E:create_entity(b.bullet.out_start_fx)
 
@@ -10551,15 +10612,23 @@ function scripts.tower_ray.update(this, store)
 								coroutine.yield()
 							end
 
-							if this.tower.blocked or V.dist2(tpos(this).x, tpos(this).y, enemy.pos.x, enemy.pos.y) > range_to_stay * range_to_stay then
-								b.force_stop_ray = true
+							do
+								local e_tail = store.entities[enemy_id]
+
+								if this.tower.blocked or ray_target_invalid(store, enemy_id) or e_tail and V.dist2(tpos(this).x, tpos(this).y, e_tail.pos.x, e_tail.pos.y) > range_to_stay * range_to_stay then
+									b.force_stop_ray = true
+								end
 							end
 
 							::label_989_1::
 
 							aa.ts = last_ts
 
-							queue_remove(store, this.ray_fx_start)
+							if this.ray_fx_start then
+								queue_remove(store, this.ray_fx_start)
+
+								this.ray_fx_start = nil
+							end
 
 							this.render.sprites[this.render.sid_crystal_union].hidden = true
 
@@ -10569,19 +10638,44 @@ function scripts.tower_ray.update(this, store)
 
 							U.animation_start_group(this, "break", nil, store.tick_ts, false, "crystals")
 
-							local an, af, ai = animation_name_facing_point(this, aa.animation_end, a._last_target_pos, this.render.sid_mage, this.mage_offset)
+							an, af, ai = animation_name_facing_point(this, aa.animation_end, a._last_target_pos, this.render.sid_mage, this.mage_offset)
 
 							animation_start(this, an, af, store.tick_ts, false, this.render.sid_mage)
 							U.y_animation_play_group(this, "glow_end", nil, store.tick_ts, 1, "rocks")
 							U.animation_start_group(this, "idle", nil, store.tick_ts, true, "rocks")
 							y_animation_wait(this, this.render.sid_mage)
 
-							local soffset = this.shooter_offset
-							local an, af, ai = animation_name_facing_point(this, "idle", a._last_target_pos, this.render.sid_mage, soffset)
+							an, af, ai = animation_name_facing_point(this, "idle", a._last_target_pos, this.render.sid_mage, this.shooter_offset)
 
 							animation_start(this, an, af, store.tick_ts, true, this.render.sid_mage)
 
 							idle_ts = store.tick_ts
+
+							goto label_ray_lvl4_main_attack_done
+
+							::label_ray_lvl4_abort_before_beam::
+
+							aa.ts = last_ts
+
+							U.animation_start_group(this, "idle", nil, store.tick_ts, true, "crystals")
+
+							do
+								local an, af, ai = animation_name_facing_point(this, aa.animation_end, a._last_target_pos, this.render.sid_mage, this.mage_offset)
+
+								animation_start(this, an, af, store.tick_ts, false, this.render.sid_mage)
+								U.y_animation_play_group(this, "glow_end", nil, store.tick_ts, 1, "rocks")
+								U.animation_start_group(this, "idle", nil, store.tick_ts, true, "rocks")
+								y_animation_wait(this, this.render.sid_mage)
+
+								local soffset = this.shooter_offset
+
+								an, af, ai = animation_name_facing_point(this, "idle", a._last_target_pos, this.render.sid_mage, soffset)
+								animation_start(this, an, af, store.tick_ts, true, this.render.sid_mage)
+							end
+
+							idle_ts = store.tick_ts
+
+							::label_ray_lvl4_main_attack_done::
 						end
 					end
 				end

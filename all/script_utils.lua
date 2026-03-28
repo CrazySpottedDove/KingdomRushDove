@@ -4003,14 +4003,35 @@ end
 ---@param decal string? 使用的贴图名称（可选）
 ---@return table 创建的嘲讽实体
 function SU.y_show_taunt_set(store, taunts, set_name, index, pos, duration, wait, decal)
+	if not taunts or not taunts.sets or set_name == nil then
+		return nil
+	end
+
 	local set = taunts.sets[set_name]
 
-	index = index or set.idxs and table.random(set.idxs) or math.random(set.start_idx, set.end_idx)
+	if not set or not set.format then
+		return nil
+	end
+
+	index = index or (set.idxs and table.random(set.idxs)) or (set.start_idx ~= nil and set.end_idx ~= nil and math.random(set.start_idx, set.end_idx))
+
+	if index == nil then
+		return nil
+	end
+
 	duration = duration or taunts.duration
 	pos = pos or set.pos or taunts.pos
 
+	if not pos then
+		return nil
+	end
+
 	local offset = set.offset or taunts.offset or v(0, 0)
 	local t = E:create_entity(decal or set.decal_name or taunts.decal_name)
+
+	if not t or not t.texts or not t.texts.list or not t.texts.list[1] then
+		return nil
+	end
 
 	t.texts.list[1].text = _(string.format(set.format, index))
 	t.pos.x, t.pos.y = pos.x + offset.x, pos.y + offset.y
