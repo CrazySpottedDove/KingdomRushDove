@@ -209,10 +209,15 @@ function sys.level:init(store)
 					-- Do not table.remove: keep endless_data entry so mod towers are not wiped when template is missing (MOD off / load order).
 					log.error("endless restore: tower template missing, skip spawn (holder_id=%s name=%s)", tostring(tower_data.holder_id), tostring(tower_data.template_name))
 				else
+					if not tower then
+					-- 仅从内存中的无尽数据剔除；回图时 game_gui:go_to_map 会按 store.towers 重写并 save_endless，不在此处写盘以免加载阶段阻塞主线程
+					log.error("endless restore: tower template missing, removed from list (holder_id=%s name=%s)", tostring(tower_data.holder_id), tostring(tower_data.template_name))
+					table.remove(endless_data.towers, i)
+				else
 					tower.pos = V.v(tower_data.pos.x, tower_data.pos.y)
-					tower.tower.level = tower_data.tower_level
-					tower.tower.spent = tower_data.spent
-					tower.tower.holder_id = tower_data.holder_id
+						tower.tower.level = tower_data.tower_level
+						tower.tower.spent = tower_data.spent
+						tower.tower.holder_id = tower_data.holder_id
 
 					for _, e in pairs(store.pending_inserts) do
 						if e.tower and e.tower.holder_id == tower.tower.holder_id then
