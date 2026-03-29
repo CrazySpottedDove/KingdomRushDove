@@ -1151,7 +1151,7 @@ tt.hero.skills.catapult.xp_level_steps = {
 	[10] = 4
 }
 tt.hero.skills.catapult.xp_gain = {50, 100, 200, 300}
-tt.tower_price_factor = 0.96
+tt.tower_price_factor = 0.95
 tt.health.dead_lifetime = 15
 tt.health_bar.offset = vec_2(0, 60)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
