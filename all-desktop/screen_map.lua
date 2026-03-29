@@ -751,11 +751,11 @@ function screen_map:draw()
 end
 
 function screen_map:change_generation(i)
-	self.generation = i
-	S:queue("GUIButtonCommon")
 	if self.is_switching_map then
 		return
 	end
+	S:queue("GUIButtonCommon")
+	self.generation = i
 	self.is_switching_map = true
 	local scale_x = self.window.scale.x
 	local scale_y = self.window.scale.y
