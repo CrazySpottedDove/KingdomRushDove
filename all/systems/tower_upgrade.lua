@@ -170,7 +170,7 @@ function M.register(sys, deps)
 									ns.nav_rally.new = true
 								end
 
-								if ns.melee then
+								if ns.melee and s.melee then
 									for i, a in ipairs(ns.melee.attacks) do
 										if s.melee.attacks[i] then
 											a.ts = s.melee.attacks[i].ts
