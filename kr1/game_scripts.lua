@@ -41935,10 +41935,10 @@ function scripts.tower_stage_20_arborean_honey.update(this, store)
 
 			S:queue(this.sound_bee_fly)
 
-			this.render.sprites[1].name = "arborean_honey_tower_tower_0002"
 			this.render.sprites[2].hidden = false
 			this.render.sprites[3].hidden = false
 			this.render.sprites[4].hidden = false
+			this.render.sprites[5].name = "arborean_honey_tower_tower_0002"
 
 			U.animation_start(this, "arborean_honey_tower_smoke", nil, store.tick_ts, false, 4)
 			U.y_animation_wait(this, 4)
