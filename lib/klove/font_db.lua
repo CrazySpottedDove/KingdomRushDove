@@ -26,24 +26,6 @@ function font_db:load(font_sizes)
 	self.font_adj = {}
 
 	local path = self.path or "fonts"
-	local settings_f = path .. "/" .. "font_settings.lua"
-	local settings
-	local info = FS.getInfo(settings_f)
-
-	if info and info.type == "file" then
-		local f, err = FS.load(settings_f)
-
-		if err then
-			log.error("Error loading settings file %s", settings_f)
-		elseif f then
-			settings = f()
-			self.settings = settings
-
-			log.paranoid("font settings: %s", getfulldump(settings))
-		end
-	else
-		log.info("Font settings file could not be found at %s", settings_f)
-	end
 
 	font_sizes = font_sizes or {12}
 
@@ -56,7 +38,7 @@ function font_db:load(font_sizes)
 		font_files[i] = path .. "/" .. f
 	end
 
-	for _, f in pairs(font_files) do
+	for _, f in ipairs(font_files) do
 		if not is_file(f) then
 		-- block empty
 		elseif string.match(f, ".PNG$") or string.match(f, ".png$") then
@@ -93,18 +75,14 @@ function font_db:load(font_sizes)
 			key = string.gsub(key, ".ttc$", "")
 			key = string.gsub(key, "^" .. string.gsub(path, "%-", "%%-") .. "/", "")
 
-			if settings and settings.cache and table.contains(settings.cache, key) then
-				log.debug("preloading font file data %s", f)
-
-				self.font_files[key] = FS.newFileData(f)
-			else
-				self.font_files[key] = f
-			end
+			self.font_files[key] = f
 		end
 	end
 
-	log.debug("Fonts loaded\n%s", getfulldump(self.fonts))
-	log.debug("Font ascents\n%s", getfulldump(self.ascents))
+	if DEBUG then
+		log.debug("Fonts loaded\n%s", getfulldump(self.fonts))
+		log.debug("Font ascents\n%s", getfulldump(self.ascents))
+	end
 end
 
 function font_db:f(alias, size)
@@ -127,13 +105,6 @@ function font_db:f(alias, size)
 		local font_file = self.font_files[name]
 
 		if font_file then
-			if self.settings and self.settings.cache_missing and type(font_file) == "string" then
-				log.debug("caching font file data for %s", font_file)
-
-				font_file = FS.newFileData(font_file)
-				self.font_files[name] = font_file
-			end
-
 			log.debug("creating font %s-%s (orig size:%s) from file %s ", name, real_size, size, font_file)
 
 			local font = G.newFont(font_file, tonumber(real_size), "light")
@@ -234,7 +205,9 @@ function font_db:create_text_image(text, size, alignment, font_name, font_size, 
 end
 
 function font_db:set_font_subst(orig, subst, adj)
-	log.paranoid("------------------------- orig:%s subst:%s %s", orig, subst, getfulldump(adj))
+	if DEBUG then
+		log.paranoid("------------------------- orig:%s subst:%s %s", orig, subst, getfulldump(adj))
+	end
 
 	self.font_subst[orig] = subst
 	self.font_adj[orig] = adj or {
