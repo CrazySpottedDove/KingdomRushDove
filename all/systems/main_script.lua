@@ -45,6 +45,9 @@ function M.register(sys, deps)
 					if not success and err ~= nil then
 						log.error("Error running " .. e.template_name .. " coro: " .. err .. debug.traceback(s.co))
 
+						-- -- 安卓测试端逻辑：直接抛出错误，触发全局错误捕获机制，弹出错误提示框
+						-- error("Error running " .. e.template_name .. " coro: " .. err .. debug.traceback(s.co))
+
 						if LLDEBUGGER then
 							LLDEBUGGER.start()
 						end
