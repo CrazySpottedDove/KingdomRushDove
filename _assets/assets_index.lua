@@ -2567,10 +2567,6 @@ return {
 		size = 6141922,
 		hash = "b34a7e0a"
 	},
-	["kr1-desktop/sounds/files/33280295359-1-192.ogg"] = {
-		size = 2127880,
-		hash = "6c6f6960"
-	},
 	["kr1-desktop/sounds/files/Aleria_special_arrow.ogg"] = {
 		size = 10104,
 		hash = "79d1e120"
@@ -3075,10 +3071,6 @@ return {
 		size = 32107,
 		hash = "c05d349a"
 	},
-	["kr1-desktop/sounds/files/Finalboss_fight.mp3"] = {
-		size = 1240732,
-		hash = "0e6e3aec"
-	},
 	["kr1-desktop/sounds/files/Finalboss_prefight.mp3"] = {
 		size = 465744,
 		hash = "169a741c"
@@ -3571,10 +3563,6 @@ return {
 		size = 1226922,
 		hash = "439e9e82"
 	},
-	["kr1-desktop/sounds/files/Map_Theme_1_alias.mp3"] = {
-		size = 1226922,
-		hash = "439e9e82"
-	},
 	["kr1-desktop/sounds/files/Minotaur_01b.ogg"] = {
 		size = 22387,
 		hash = "e7d1dcb0"
@@ -3670,10 +3658,6 @@ return {
 	["kr1-desktop/sounds/files/MusicMap.ogg"] = {
 		size = 1601492,
 		hash = "2b8cbb96"
-	},
-	["kr1-desktop/sounds/files/MusicSuspense.mp3"] = {
-		size = 268965,
-		hash = "a03a8798"
 	},
 	["kr1-desktop/sounds/files/MusicSuspense.ogg"] = {
 		size = 172295,
@@ -4102,10 +4086,6 @@ return {
 	["kr1-desktop/sounds/files/Sound_GUIBuyUpgrade.ogg"] = {
 		size = 26995,
 		hash = "cfb5aa10"
-	},
-	["kr1-desktop/sounds/files/Sound_GUIMouseOverTower.ogg"] = {
-		size = 31010,
-		hash = "46caa904"
 	},
 	["kr1-desktop/sounds/files/Sound_GUIMouseOverTowerIcon.ogg"] = {
 		size = 27721,
@@ -5455,17 +5435,9 @@ return {
 		size = 37848,
 		hash = "9f682e90"
 	},
-	["kr1-desktop/sounds/files/kr1_sfx_tenshi_buffedBombAttack_3hits_v1_op1.ogg"] = {
-		size = 77560,
-		hash = "93eba058"
-	},
 	["kr1-desktop/sounds/files/kr1_sfx_tenshi_buffedBombAttack_3hits_v1_op2.ogg"] = {
 		size = 74348,
 		hash = "f916db0c"
-	},
-	["kr1-desktop/sounds/files/kr1_sfx_tenshi_buffedBombAttack_6hits_v1_op1.ogg"] = {
-		size = 84597,
-		hash = "cf88d324"
 	},
 	["kr1-desktop/sounds/files/kr1_sfx_tenshi_buffedBombAttack_6hits_v1_op2.ogg"] = {
 		size = 85253,
@@ -5483,29 +5455,9 @@ return {
 		size = 55738,
 		hash = "4c234e0e"
 	},
-	["kr1-desktop/sounds/files/kr1_sfx_tenshi_rainOfFire_loop-End_v1.ogg"] = {
-		size = 34612,
-		hash = "9a75348e"
-	},
 	["kr1-desktop/sounds/files/kr1_sfx_tenshi_rainOfFire_loop-End_v1_10db.ogg"] = {
 		size = 36597,
 		hash = "f4e3c6dd"
-	},
-	["kr1-desktop/sounds/files/kr1_sfx_tenshi_rainOfFire_loop-Start_v1.ogg"] = {
-		size = 58456,
-		hash = "ec761698"
-	},
-	["kr1-desktop/sounds/files/kr1_sfx_tenshi_rainOfFire_loop-Start_v1_10db.ogg"] = {
-		size = 61859,
-		hash = "0705d750"
-	},
-	["kr1-desktop/sounds/files/kr1_sfx_tenshi_rainOfFire_loop_v1.ogg"] = {
-		size = 91872,
-		hash = "c0eff554"
-	},
-	["kr1-desktop/sounds/files/kr1_sfx_tenshi_rainOfFire_single_v1.ogg"] = {
-		size = 58744,
-		hash = "0c77dbf8"
 	},
 	["kr1-desktop/sounds/files/kr1_sfx_tenshi_rainOfFire_start_mix.ogg"] = {
 		size = 51456,
@@ -5518,10 +5470,6 @@ return {
 	["kr1-desktop/sounds/files/kr1_sfx_tenshi_transformToBuffed_op1_v1.ogg"] = {
 		size = 73790,
 		hash = "5edc372e"
-	},
-	["kr1-desktop/sounds/files/kr1_sfx_tenshi_transformToBuffed_op2_v1.ogg"] = {
-		size = 67822,
-		hash = "7fed36b9"
 	},
 	["kr1-desktop/sounds/files/kr1_sfx_tenshi_transformToNormal_v1.ogg"] = {
 		size = 52075,
@@ -5747,14 +5695,6 @@ return {
 		size = 2095879,
 		hash = "40d75d80"
 	},
-	["kr1-desktop/sounds/files/kr5_bgmusic_credits_v3.ogg"] = {
-		size = 2124059,
-		hash = "f820b2f0"
-	},
-	["kr1-desktop/sounds/files/kr5_bgmusic_mainMenu_v1.ogg"] = {
-		size = 1377388,
-		hash = "e82ab0a8"
-	},
 	["kr1-desktop/sounds/files/kr5_bgmusic_t1_battle1_v1.ogg"] = {
 		size = 2158790,
 		hash = "31d37aec"
@@ -5762,10 +5702,6 @@ return {
 	["kr1-desktop/sounds/files/kr5_bgmusic_t1_battle2_v1.ogg"] = {
 		size = 2149114,
 		hash = "d7eb4efc"
-	},
-	["kr1-desktop/sounds/files/kr5_bgmusic_t1_boss_v1.ogg"] = {
-		size = 2200822,
-		hash = "5aca5b90"
 	},
 	["kr1-desktop/sounds/files/kr5_bgmusic_t1_boss_v2.ogg"] = {
 		size = 2200822,
@@ -5815,10 +5751,6 @@ return {
 		size = 2115095,
 		hash = "845dd67c"
 	},
-	["kr1-desktop/sounds/files/kr5_bgmusic_t3_boss_victory.ogg"] = {
-		size = 2021401,
-		hash = "ee59e85e"
-	},
 	["kr1-desktop/sounds/files/kr5_bgmusic_t3_preparation1_v1.ogg"] = {
 		size = 2021401,
 		hash = "ee59e85e"
@@ -5831,17 +5763,9 @@ return {
 		size = 1973636,
 		hash = "9e05bc58"
 	},
-	["kr1-desktop/sounds/files/kr5_button_hover_op1.ogg"] = {
-		size = 5683,
-		hash = "889ed5a0"
-	},
 	["kr1-desktop/sounds/files/kr5_button_hover_op2.ogg"] = {
 		size = 6454,
 		hash = "fd30bd58"
-	},
-	["kr1-desktop/sounds/files/kr5_button_hover_op3.ogg"] = {
-		size = 5391,
-		hash = "162a98b0"
 	},
 	["kr1-desktop/sounds/files/kr5_dlc1_bgmusic_battle1_v1.ogg"] = {
 		size = 2338825,
@@ -5886,22 +5810,6 @@ return {
 	["kr1-desktop/sounds/files/kr5_dlc2_bgmusic_preparation2_v1.ogg"] = {
 		size = 2659848,
 		hash = "6b478a8a"
-	},
-	["kr1-desktop/sounds/files/kr5_dlc2_exploracion_v3.ogg"] = {
-		size = 2123916,
-		hash = "c4d1b5a2"
-	},
-	["kr1-desktop/sounds/files/kr5_dlc2_exploracion_variacion_v2.ogg"] = {
-		size = 1938593,
-		hash = "f91ba3b8"
-	},
-	["kr1-desktop/sounds/files/kr5_dlc2_guerra_v2.ogg"] = {
-		size = 1918821,
-		hash = "0884b043"
-	},
-	["kr1-desktop/sounds/files/kr5_dlc2_guerra_variacion_v2.ogg"] = {
-		size = 2258869,
-		hash = "ecf60200"
 	},
 	["kr1-desktop/sounds/files/kr5_dlc3_bgmusic_battle1_v1.ogg"] = {
 		size = 2179383,
@@ -6607,10 +6515,6 @@ return {
 		size = 41165,
 		hash = "5b59512e"
 	},
-	["kr1-desktop/sounds/files/kr_voice_lumenir_taunt01_a.ogg"] = {
-		size = 39303,
-		hash = "7ce278a4"
-	},
 	["kr1-desktop/sounds/files/kr_voice_lumenir_taunt02_c.ogg"] = {
 		size = 22645,
 		hash = "12c89df8"
@@ -6762,10 +6666,6 @@ return {
 	["kr1-desktop/sounds/files/kr_voice_raelyn_taunt_var1c.ogg"] = {
 		size = 32421,
 		hash = "dd49751c"
-	},
-	["kr1-desktop/sounds/files/kr_voice_rescuedelves_taunt01_a.ogg"] = {
-		size = 21863,
-		hash = "f32f871c"
 	},
 	["kr1-desktop/sounds/files/kr_voice_rescuedelves_taunt01_b.ogg"] = {
 		size = 24847,
@@ -7219,18 +7119,6 @@ return {
 		size = 25772,
 		hash = "98366228"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_combat_meleeAttack_noSword_LOOP_var1_v1.ogg"] = {
-		size = 100126,
-		hash = "0964f118"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_combat_meleeAttack_noSword_LOOP_var2_v1.ogg"] = {
-		size = 98400,
-		hash = "c0da04a5"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_combat_meleeAttack_noSword_LOOP_var3_v1.ogg"] = {
-		size = 120593,
-		hash = "7e37eb78"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_combat_meleeAttack_noSword_var1.ogg"] = {
 		size = 10276,
 		hash = "20196528"
@@ -7258,10 +7146,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_combat_rangedAttack_arrows_var1_v1.ogg"] = {
 		size = 9652,
 		hash = "b96e7833"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_combat_rangedAttack_arrows_var2_v1.ogg"] = {
-		size = 4237,
-		hash = "9421ed04"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_combat_rangedAttack_arrows_var3_v1.ogg"] = {
 		size = 11120,
@@ -7567,14 +7451,6 @@ return {
 		size = 14918,
 		hash = "75248a99"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_crocs_tree_wakeup_op4_v1.ogg"] = {
-		size = 14894,
-		hash = "02d0f430"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_crocs_trunk_hit_floor_repeat.ogg"] = {
-		size = 32227,
-		hash = "ad2b65c0"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_crocs_trunk_hit_floor_v1.ogg"] = {
 		size = 38775,
 		hash = "903faee4"
@@ -7842,10 +7718,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_dragons_enemy_shadow_alfa_attack_var3_v1.ogg"] = {
 		size = 28070,
 		hash = "fa9e5528"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_dragons_enemy_shadow_alfa_cloack_v1.ogg"] = {
-		size = 35525,
-		hash = "d9251df0"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_dragons_enemy_shadow_alfa_death_v1.ogg"] = {
 		size = 38408,
@@ -8247,10 +8119,6 @@ return {
 		size = 38615,
 		hash = "ff40619c"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_easterEgg_arboreanTap_in.ogg"] = {
-		size = 19496,
-		hash = "42e59824"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_easterEgg_arboreanTap_in_var1_v2.ogg"] = {
 		size = 16282,
 		hash = "03025b90"
@@ -8267,10 +8135,6 @@ return {
 		size = 35575,
 		hash = "16657710"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_easterEgg_arboreanTap_out_fullSequence_v1.ogg"] = {
-		size = 48837,
-		hash = "2cc7e3fc"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_easterEgg_basket_break_v1.ogg"] = {
 		size = 40667,
 		hash = "afd7aca5"
@@ -8278,14 +8142,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_easterEgg_basket_tap_v1.ogg"] = {
 		size = 45998,
 		hash = "a2d97e80"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_easterEgg_camperFire_tap1_v1.ogg"] = {
-		size = 128580,
-		hash = "292bd60c"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_easterEgg_camperFire_tap2_v1.ogg"] = {
-		size = 124383,
-		hash = "cabe43e4"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_easterEgg_camperFire_tap3_v1.ogg"] = {
 		size = 201886,
@@ -8471,10 +8327,6 @@ return {
 		size = 47575,
 		hash = "288cc330"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_easterEgg_villagePeople_hits_op2_v1.ogg"] = {
-		size = 75817,
-		hash = "75f77570"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_easterEgg_villagePeople_hits_op2_v2.ogg"] = {
 		size = 78811,
 		hash = "5e05e250"
@@ -8651,10 +8503,6 @@ return {
 		size = 52855,
 		hash = "d9687bfc"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_enemy_cultistAcolyte_death_v1.ogg"] = {
-		size = 8820,
-		hash = "a8af3928"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_enemy_cultistAcolyte_death_var1_v1.ogg"] = {
 		size = 14708,
 		hash = "0c873100"
@@ -8678,10 +8526,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_enemy_cutthroatRat_death_var3_v1.ogg"] = {
 		size = 26145,
 		hash = "d0fdeb84"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_enemy_cutthroatRat_stealthSkill-oneShot_v1 (1).ogg"] = {
-		size = 30298,
-		hash = "fcf2775c"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_enemy_cutthroatRat_stealthSkill-oneShot_v1.ogg"] = {
 		size = 30298,
@@ -8855,14 +8699,6 @@ return {
 		size = 31321,
 		hash = "dc349b32"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_enemy_patrollingVulture_death_var1_v1.ogg"] = {
-		size = 21780,
-		hash = "4cb0c050"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_enemy_patrollingVulture_death_var2_v1.ogg"] = {
-		size = 20105,
-		hash = "27a095fc"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_enemy_patrollingVulture_death_var4_v1.ogg"] = {
 		size = 20784,
 		hash = "6b3bdefc"
@@ -8906,10 +8742,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_enemy_scrapDrone_death_v1.ogg"] = {
 		size = 23651,
 		hash = "22fbf544"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_enemy_scrapSpeedster_death_var1_v1 (1).ogg"] = {
-		size = 29249,
-		hash = "2005bfac"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_enemy_scrapSpeedster_death_var1_v1.ogg"] = {
 		size = 29249,
@@ -9051,10 +8883,6 @@ return {
 		size = 79573,
 		hash = "8fd6e444"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_enemy_twistedSister_summon_spawn_v1.ogg"] = {
-		size = 63349,
-		hash = "c3c9f9c8"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_enemy_twistedSister_summon_spawn_v2.ogg"] = {
 		size = 85220,
 		hash = "20cca602"
@@ -9070,10 +8898,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_enemy_unblindedPriest_death_var3.ogg"] = {
 		size = 21795,
 		hash = "b5d10177"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_enemy_unblindedPriest_transform_cast_op1_v1.ogg"] = {
-		size = 131965,
-		hash = "88b5f8ac"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_enemy_unblindedPriest_transform_cast_v2.ogg"] = {
 		size = 138284,
@@ -9118,10 +8942,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_heroes_anya_argentStorm_fadeOut_v1.ogg"] = {
 		size = 41031,
 		hash = "35706ed8"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_heroes_anya_argentStorm_fadeOut_v2.ogg"] = {
-		size = 36375,
-		hash = "a757c1b4"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_heroes_anya_argentStorm_shot_op1_v1.ogg"] = {
 		size = 195415,
@@ -9483,10 +9303,6 @@ return {
 		size = 82510,
 		hash = "466da727"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_heroes_kratoa_rageOutburst_cast_var1_v1.ogg"] = {
-		size = 31835,
-		hash = "2213b3b8"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_heroes_kratoa_rageOutburst_cast_var2_v1.ogg"] = {
 		size = 33448,
 		hash = "cf568548"
@@ -9498,10 +9314,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_heroes_kratoa_rageOutburst_death_v1.ogg"] = {
 		size = 50535,
 		hash = "10e63b70"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_heroes_kratoa_rageOutburst_impact_var1_v1.ogg"] = {
-		size = 32217,
-		hash = "d6aaf9f8"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_heroes_kratoa_rageOutburst_impact_var2_v1.ogg"] = {
 		size = 31640,
@@ -9575,10 +9387,6 @@ return {
 		size = 93592,
 		hash = "63f5e6fe"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_heroes_lumenir_death_v1.ogg"] = {
-		size = 87639,
-		hash = "e60eba28"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_heroes_lumenir_lightCompanion_basicAttack_var1_v1.ogg"] = {
 		size = 41851,
 		hash = "e5215790"
@@ -9610,10 +9418,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_heroes_mineDrop_cast_var3_v1.ogg"] = {
 		size = 12035,
 		hash = "adc3da64"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_heroes_mineDrop_explosion_v1.ogg"] = {
-		size = 29535,
-		hash = "10d2debf"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_heroes_mineDrop_explosion_v2.ogg"] = {
 		size = 46926,
@@ -9830,18 +9634,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_heroes_torres_defensiveTurret_destroy_v1.ogg"] = {
 		size = 38472,
 		hash = "2df6a6c4"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_heroes_torres_demolitionMan_cast_v1 (1).ogg"] = {
-		size = 45040,
-		hash = "3e01b33f"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_heroes_torres_demolitionMan_cast_v1.ogg"] = {
-		size = 45040,
-		hash = "3e01b33f"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_heroes_torres_demolitionMan_destroy_v1.ogg"] = {
-		size = 38489,
-		hash = "523eef68"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_heroes_torres_demolitionMan_spin_v1.ogg"] = {
 		size = 41870,
@@ -10231,10 +10023,6 @@ return {
 		size = 53252,
 		hash = "cd4bd0a8"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_stage04_wildbeastElevatorMechanism_in.ogg"] = {
-		size = 39146,
-		hash = "c0adbb70"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_stage04_wildbeastElevator_inFull_op1.ogg"] = {
 		size = 77875,
 		hash = "3d131fd0"
@@ -10278,14 +10066,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_stage10_obelisk_activation_op1_v3.ogg"] = {
 		size = 141089,
 		hash = "43b78440"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_stage10_obelisk_activation_v1.ogg"] = {
-		size = 303970,
-		hash = "1fcdc20a"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_stage10_obelisk_effectChange_v1.ogg"] = {
-		size = 264339,
-		hash = "d6f8df04"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_stage10_obelisk_effectChange_v2.ogg"] = {
 		size = 256904,
@@ -10447,25 +10227,13 @@ return {
 		size = 137744,
 		hash = "cb776604"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_stage14_behemothPool_spawn1_v1.ogg"] = {
-		size = 46751,
-		hash = "1b657e42"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_stage14_behemothPool_spawn1_v2.ogg"] = {
 		size = 59736,
 		hash = "576e224c"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_stage14_behemothPool_spawn2_v1.ogg"] = {
-		size = 66464,
-		hash = "7bbd0c30"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_stage14_behemothPool_spawn2_v2.ogg"] = {
 		size = 68884,
 		hash = "ee5c9a28"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_stage14_behemothPool_spawn3_v1.ogg"] = {
-		size = 89358,
-		hash = "dd5a7622"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_stage14_behemothPool_spawn3_v2.ogg"] = {
 		size = 112665,
@@ -10510,10 +10278,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_stage15_bossFight_mydriasTentacleCircle_op2_v2.ogg"] = {
 		size = 103448,
 		hash = "d517f7a0"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_stage15_bossFight_mydriasTentacleCircle_v1.ogg"] = {
-		size = 68135,
-		hash = "c923b0d4"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_stage15_bossFight_mydriasTentacleTrap_v1.ogg"] = {
 		size = 56205,
@@ -10570,10 +10334,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_stage15_reinforcementDenas_summon_op1_v1.ogg"] = {
 		size = 73287,
 		hash = "4b3cd830"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_stage16_bossFight_overseerDefeat_fullSeq_v1.ogg"] = {
-		size = 646211,
-		hash = "f10c5f0c"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_stage16_bossFight_overseerDefeat_fullSeq_v2.ogg"] = {
 		size = 652974,
@@ -10638,10 +10398,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_stage17_rootSoulcaller_out.ogg"] = {
 		size = 61194,
 		hash = "e00094db"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_stage17_vinesOut_v1.ogg"] = {
-		size = 160960,
-		hash = "31923804"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_stage17_weirdwood_basicAttack_explosion_v1.ogg"] = {
 		size = 22114,
@@ -10767,10 +10523,6 @@ return {
 		size = 30756,
 		hash = "bbec6121"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_stage24_assemblyLine_on.ogg"] = {
-		size = 56689,
-		hash = "6a6f29ec"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_stage24_bossFight_machinist_cannon_cast_shot_v1.ogg"] = {
 		size = 33431,
 		hash = "119e46c4"
@@ -10799,10 +10551,6 @@ return {
 		size = 32969,
 		hash = "fa3d4e24"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_stage24_machinist_in_v2.ogg"] = {
-		size = 10018,
-		hash = "f44ac09c"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_stage24_machinist_lever_1_v1.ogg"] = {
 		size = 83284,
 		hash = "22eaeec4"
@@ -10814,14 +10562,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_stage24_machinist_lever_3_v1.ogg"] = {
 		size = 77595,
 		hash = "be06708c"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_stage24_machinist_out_v2.ogg"] = {
-		size = 10043,
-		hash = "8a97d38f"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_stage24_machinist_pullLever.ogg"] = {
-		size = 9087,
-		hash = "fc46afc8"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_stage24_outro_v1.ogg"] = {
 		size = 204468,
@@ -10922,10 +10662,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_stage26_hulkSpawner_shot-transform_oneShot_v1.ogg"] = {
 		size = 232024,
 		hash = "3c7a4d14"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_stage26_outro_v1.ogg"] = {
-		size = 486745,
-		hash = "699e23a6"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_stage26_outro_v2.ogg"] = {
 		size = 468526,
@@ -11070,14 +10806,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_stageMechanic_wildbeastElevator_break_v1.ogg"] = {
 		size = 31270,
 		hash = "01d26305"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_stageMechanic_wildbeastElevator_in_oneShot_v1.ogg"] = {
-		size = 109691,
-		hash = "e0c86098"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_stageMechanic_wildbeastElevator_out_v1.ogg"] = {
-		size = 68280,
-		hash = "e9e0f2fc"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_stageMechanic_woodcutterBear_chop_1_v1.ogg"] = {
 		size = 29081,
@@ -11442,18 +11170,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_tower_dwarvenFlamespitter_scorchingTorches_flareUp_var4_v1.ogg"] = {
 		size = 25758,
 		hash = "f3aa413e"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_tower_eldrictchChannelers_basicAttack_cast_var1_v1.ogg"] = {
-		size = 109643,
-		hash = "cba0f02d"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_tower_eldrictchChannelers_basicAttack_cast_var2_v1.ogg"] = {
-		size = 116633,
-		hash = "0887914c"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_tower_eldrictchChannelers_basicAttack_cast_var3_v1.ogg"] = {
-		size = 107200,
-		hash = "0a382de8"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_tower_eldrictchChannelers_basicAttack_long_var1_v1.ogg"] = {
 		size = 177986,
@@ -11822,22 +11538,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_ui_buttonUnavailable_v1.ogg"] = {
 		size = 7673,
 		hash = "c036a956"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_gemCounter_LONG_v1.ogg"] = {
-		size = 79340,
-		hash = "03a9961c"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_gemCounter_LOOPEND.ogg"] = {
-		size = 19418,
-		hash = "4ddfccb3"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_gemCounter_LOOP_v1.ogg"] = {
-		size = 70523,
-		hash = "19dfd950"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_gemCounter_SHORT_v1.ogg"] = {
-		size = 45171,
-		hash = "229d2374"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_ui_gemCounter_SINGLE_v1.ogg"] = {
 		size = 19042,
@@ -12411,42 +12111,6 @@ return {
 		size = 50064,
 		hash = "a23c0030"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_wukong_mechanic_stage3_cinematic_1_fadeIn_v1.ogg"] = {
-		size = 43279,
-		hash = "35c2047c"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_wukong_mechanic_stage3_cinematic_1_fadeOut_v1.ogg"] = {
-		size = 46601,
-		hash = "16de8ddc"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_wukong_mechanic_stage3_cinematic_1_fullSeq_v1.ogg"] = {
-		size = 181857,
-		hash = "b0c1fd9c"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_wukong_mechanic_stage3_cinematic_1_thunderStrikes_v1.ogg"] = {
-		size = 154674,
-		hash = "0c421908"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_wukong_mechanic_stage3_cinematic_2_fullSequence_v1.ogg"] = {
-		size = 289102,
-		hash = "0602f91c"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_wukong_mechanic_stage3_cinematic_2_thunderStrikes_v1.ogg"] = {
-		size = 224836,
-		hash = "4b72d479"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_wukong_mechanic_stage3_cinematic_3_fadeIn_v1.ogg"] = {
-		size = 82850,
-		hash = "0731c2d0"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_wukong_mechanic_stage3_cinematic_3_fullSeq_v1.ogg"] = {
-		size = 251996,
-		hash = "a660cf70"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_wukong_mechanic_stage3_cinematic_3_thunderStrikes_v1.ogg"] = {
-		size = 168226,
-		hash = "7eb96df8"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_wukong_mechanic_stage3_storm_ambience_LOOPStart_v1.ogg"] = {
 		size = 74126,
 		hash = "1133b55c"
@@ -12695,10 +12359,6 @@ return {
 		size = 71599,
 		hash = "03d19368"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_wukong_tower_pandas_skill_bolt_op2_v1.ogg"] = {
-		size = 65226,
-		hash = "2bc6066c"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_wukong_tower_pandas_skill_fire_v1.ogg"] = {
 		size = 48305,
 		hash = "869491b8"
@@ -12903,10 +12563,6 @@ return {
 		size = 52144,
 		hash = "37a46668"
 	},
-	["kr1-desktop/sounds/files/kro_bgmusic_bossfight[master].mp3"] = {
-		size = 870140,
-		hash = "b6d16b80"
-	},
 	["kr1-desktop/sounds/files/kro_bgmusic_bossfight_prebattle_v2[master_03-11].mp3"] = {
 		size = 266761,
 		hash = "50b83b68"
@@ -12914,10 +12570,6 @@ return {
 	["kr1-desktop/sounds/files/kro_bgmusic_creditos[master].mp3"] = {
 		size = 1077972,
 		hash = "9884e9bc"
-	},
-	["kr1-desktop/sounds/files/kro_bgmusic_maintheme[master_25-08].mp3"] = {
-		size = 782292,
-		hash = "ca5b9d88"
 	},
 	["kr1-desktop/sounds/files/kro_bgmusic_t1_battle1_v4[master_03-11].mp3"] = {
 		size = 575607,
@@ -12966,10 +12618,6 @@ return {
 	["kr1-desktop/sounds/files/kro_bgmusic_t3_prebattle2[master_25-08].mp3"] = {
 		size = 805662,
 		hash = "d1dff520"
-	},
-	["kr1-desktop/sounds/files/kro_bgmusic_victory[master_03-11].mp3"] = {
-		size = 309016,
-		hash = "7e86f5c8"
 	},
 	["kr1-desktop/sounds/files/kro_sfx_ainyl_disable.ogg"] = {
 		size = 50765,
@@ -13102,10 +12750,6 @@ return {
 	["kr1-desktop/sounds/files/kro_sfx_bitteringrancor_drizzt.ogg"] = {
 		size = 109007,
 		hash = "da0db9e1"
-	},
-	["kr1-desktop/sounds/files/kro_sfx_bitteringrancor_drizzt_growl.ogg"] = {
-		size = 41742,
-		hash = "36caa968"
 	},
 	["kr1-desktop/sounds/files/kro_sfx_bitteringrancor_lynn-curseofdispair[conprecarga].ogg"] = {
 		size = 61231,
@@ -13955,14 +13599,6 @@ return {
 		size = 14577,
 		hash = "05dc7d94"
 	},
-	["kr1-desktop/sounds/files/logo_shimmer.mp3"] = {
-		size = 19406,
-		hash = "50d8bf17"
-	},
-	["kr1-desktop/sounds/files/logo_shimmer.ogg"] = {
-		size = 21199,
-		hash = "211253c5"
-	},
 	["kr1-desktop/sounds/files/mecha_dropoil.ogg"] = {
 		size = 66868,
 		hash = "a19c32f8"
@@ -14102,10 +13738,6 @@ return {
 	["kr1-desktop/sounds/files/savage_music_jungle_preparation.mp3"] = {
 		size = 1101815,
 		hash = "201610b4"
-	},
-	["kr1-desktop/sounds/files/savage_music_theme.mp3"] = {
-		size = 1187024,
-		hash = "06864ed2"
 	},
 	["kr1-desktop/sounds/files/savage_music_underground_battle.mp3"] = {
 		size = 771707,
