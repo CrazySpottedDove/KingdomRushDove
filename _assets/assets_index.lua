@@ -27,89 +27,29 @@ return {
 		size = 4470,
 		hash = "337306a0"
 	},
-	["all-desktop/fonts/BMYEONSUNG.otf"] = {
-		size = 874464,
-		hash = "7b5f3345"
-	},
 	["all-desktop/fonts/Comic Book Italic.ttf"] = {
 		size = 96300,
 		hash = "8fbe4c94"
-	},
-	["all-desktop/fonts/DroidSans.ttf"] = {
-		size = 190776,
-		hash = "13c98f00"
-	},
-	["all-desktop/fonts/DroidSansBold.ttf"] = {
-		size = 194488,
-		hash = "69948124"
 	},
 	["all-desktop/fonts/DroidSansMono.ttf"] = {
 		size = 109052,
 		hash = "724636e8"
 	},
-	["all-desktop/fonts/Heuristica_Italic.otf"] = {
-		size = 152144,
-		hash = "72f0ad30"
-	},
 	["all-desktop/fonts/JIMOJW.ttf"] = {
 		size = 8131584,
 		hash = "3a879197"
-	},
-	["all-desktop/fonts/JejuHallasan_Regular.ttf"] = {
-		size = 6678596,
-		hash = "879deb32"
-	},
-	["all-desktop/fonts/NanumPen.otf"] = {
-		size = 1780792,
-		hash = "1ba79718"
-	},
-	["all-desktop/fonts/NotoSansCJKjp-Bold.otf"] = {
-		size = 855832,
-		hash = "ade147e4"
 	},
 	["all-desktop/fonts/NotoSansCJKjp-Regular.otf"] = {
 		size = 831852,
 		hash = "f1e6fcfc"
 	},
-	["all-desktop/fonts/NotoSansCJKkr-Bold.otf"] = {
-		size = 2104064,
-		hash = "01f37654"
-	},
 	["all-desktop/fonts/NotoSansCJKkr-Regular.otf"] = {
 		size = 2043136,
 		hash = "610dca78"
 	},
-	["all-desktop/fonts/ObelixPro.ttf"] = {
-		size = 66372,
-		hash = "ed84e99b"
-	},
-	["all-desktop/fonts/Sun Yun He Xuan Li Ti.ttf"] = {
-		size = 6137720,
-		hash = "b6040f5c"
-	},
 	["all-desktop/fonts/TOONISH.ttf"] = {
 		size = 14508,
 		hash = "8a704946"
-	},
-	["all-desktop/fonts/Verdana.ttf"] = {
-		size = 149752,
-		hash = "ac7fc41b"
-	},
-	["all-desktop/fonts/YIKES-kr-ios.ttf"] = {
-		size = 100160,
-		hash = "ffed94e8"
-	},
-	["all-desktop/fonts/YIKES.ttf"] = {
-		size = 92820,
-		hash = "f231d789"
-	},
-	["all-desktop/fonts/ZinHenaBokuryu_CRF.otf"] = {
-		size = 2966056,
-		hash = "b129bdf4"
-	},
-	["all-desktop/fonts/ZinPenCiro_B.otf"] = {
-		size = 2029812,
-		hash = "6e06eafa"
 	},
 	["all-desktop/fonts/msyh.ttc"] = {
 		size = 19704352,
@@ -118,14 +58,6 @@ return {
 	["all-desktop/fonts/msyhbd.ttc"] = {
 		size = 16883552,
 		hash = "0404aeee"
-	},
-	["all-desktop/fonts/msyhl.ttc"] = {
-		size = 12189612,
-		hash = "21a348e7"
-	},
-	["all-desktop/fonts/tetsubin_gothic.otf"] = {
-		size = 6107260,
-		hash = "1424eac8"
 	},
 	["kr1-desktop/icons/krdove.png"] = {
 		size = 1673424,
