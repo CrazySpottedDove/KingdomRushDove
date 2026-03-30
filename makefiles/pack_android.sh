@@ -131,8 +131,50 @@ if [ "$rebuild_love" -eq 1 ]; then
 
     echo "Creating base archive (excluding PNGs) -> $ARCHIVE_DIR"
 
-    # 先打包项目中除 dds 和 .versions 的文件（避免把 archive 自己打进去）
-    zip -r "$ARCHIVE_DIR" . -x "*.dds" -x ".versions/*" -x "tmp/*" -x "*.exe" -x ".git/*" -x "KingdomRushDoveUpdater" -x "client.log" -x "client" -x "https.dll" -x "https.so" -x "run.bat" -x "launch.bat" -x "存档位置.lnk" -x "dlfmt" -x ".dlfmt_cache.json" -x "update.lua" -x ".gdb_history" -x "aidoc/*" -x ".plugins/*" -x "mods/local/*" -x "all/librender_sort.so" -x "all/librender_sort.dll" -x "love_env/*" -x ".vscode/*" -x "Makefile" -x "makefiles/*" -x "scripts/*" -x "dlfmt_task.json" -x "run.bat" -x "README.md" -x "launch.bat" -x "KingdomRushDove版启动器.exe" -x "current_version_commit_hash.txt" -x ".gitignore" -x "游玩必读说明，务必阅读.url" -q
+    EXCLUDES=(
+        "*.dds"
+        ".versions/*"
+        "tmp/*"
+        "*.exe"
+        ".git/*"
+        "KingdomRushDoveUpdater"
+        "client.log"
+        "client"
+        "https.dll"
+        "https.so"
+        "run.bat"
+        "launch.bat"
+        "存档位置.lnk"
+        "dlfmt"
+        ".dlfmt_cache.json"
+        "update.lua"
+        ".gdb_history"
+        "aidoc/*"
+        ".plugins/*"
+        "mods/*"
+        "all/librender_sort.so"
+        "all/librender_sort.dll"
+        "love_env/*"
+        ".vscode/*"
+        "Makefile"
+        "makefiles/*"
+        "scripts/*"
+        "dlfmt_task.json"
+        "README.md"
+        "KingdomRushDove版启动器.exe"
+        "current_version_commit_hash.txt"
+        ".gitignore"
+        "游玩必读说明，务必阅读.url"
+        "_assets/assets_index.lua"
+        "_assets/tmp_download/*"
+    )
+    ZIP_EXCLUDES=()
+    for pattern in "${EXCLUDES[@]}"; do
+        ZIP_EXCLUDES+=("-x" "$pattern")
+    done
+    zip -r "$ARCHIVE_DIR" . "${ZIP_EXCLUDES[@]}" -q
+    # # 先打包项目中除 dds 和 .versions 的文件（避免把 archive 自己打进去）
+    # zip -r "$ARCHIVE_DIR" . -x "*.dds" -x ".versions/*" -x "tmp/*" -x "*.exe" -x ".git/*" -x "KingdomRushDoveUpdater" -x "client.log" -x "client" -x "https.dll" -x "https.so" -x "run.bat" -x "launch.bat" -x "存档位置.lnk" -x "dlfmt" -x ".dlfmt_cache.json" -x "update.lua" -x ".gdb_history" -x "aidoc/*" -x ".plugins/*" -x "mods/local/*" -x "all/librender_sort.so" -x "all/librender_sort.dll" -x "love_env/*" -x ".vscode/*" -x "Makefile" -x "makefiles/*" -x "scripts/*" -x "dlfmt_task.json" -x "run.bat" -x "README.md" -x "launch.bat" -x "KingdomRushDove版启动器.exe" -x "current_version_commit_hash.txt" -x ".gitignore" -x "游玩必读说明，务必阅读.url" -x  -q
 
     # 分析图像大小，生成缩放映射
     echo "Analyzing image sizes from Lua definitions..."
