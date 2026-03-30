@@ -60,8 +60,8 @@ return {
 		hash = "0404aeee"
 	},
 	["kr1-desktop/icons/krdove.png"] = {
-		size = 1673424,
-		hash = "864f0030"
+		size = 5314,
+		hash = "9b7b3fbd"
 	},
 	["kr1-desktop/images/fullhd/achievements-1.dds"] = {
 		size = 3453092,
