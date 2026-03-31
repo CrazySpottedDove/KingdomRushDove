@@ -37907,10 +37907,46 @@ function scripts.bullet_hero_mecha.update(this, store)
 		coroutine.yield()
 	end
 
-	if target and not target.health.dead then
-		local d = SU.create_bullet_damage(b, target.id, this.id)
+	local enemies = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.damage_flags, b.damage_bans)
+	local mods
+	if b.mod then
+		mods = type(b.mod) == "string" and {b.mod} or b.mod
+	elseif b.mods then
+		mods = b.mods
+	end
 
-		queue_damage(store, d)
+	if enemies then
+		for i = 1, #enemies do
+			local enemy = enemies[i]
+			local d = SU.create_bullet_damage_without_pops(b, enemy.id, this.id)
+
+			if UP:get_upgrade("engineer_efficiency") then
+				d.value = b.damage_max
+			else
+				local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, b.to, b.damage_radius)
+
+				d.value = b.damage_max - (b.damage_max - b.damage_min) * dist_factor
+			end
+
+			d.value = b.damage_factor * d.value
+
+			queue_damage(store, d)
+
+			if mods then
+				for _, mod_name in ipairs(mods) do
+					local mod = E:create_entity(mod_name)
+
+					mod.modifier.damage_factor = b.damage_factor
+					mod.modifier.target_id = enemy.id
+					mod.modifier.source_id = this.id
+
+					if U.flags_pass(enemy.vis, mod.modifier) then
+						queue_insert(store, mod)
+					end
+				end
+			end
+		end
+
 		S:queue(this.sound_events.hit)
 	end
 

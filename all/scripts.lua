@@ -2788,6 +2788,12 @@ function scripts.bomb.update(this, store)
 	end
 
 	local enemies = U.find_enemies_in_range_filter_off(this_pos, dradius, b.damage_flags, b.damage_bans)
+	local mods
+	if b.mod then
+		mods = type(b.mod) == "string" and {b.mod} or b.mod
+	elseif b.mods then
+		mods = b.mods
+	end
 
 	if enemies then
 		for i = 1, #enemies do
@@ -2805,14 +2811,6 @@ function scripts.bomb.update(this, store)
 			d.value = b.damage_factor * d.value
 
 			queue_damage(store, d)
-
-			local mods
-
-			if b.mod then
-				mods = type(b.mod) == "string" and {b.mod} or b.mod
-			elseif b.mods then
-				mods = b.mods
-			end
 
 			if mods then
 				for _, mod_name in ipairs(mods) do

@@ -689,7 +689,8 @@ local heroes = {
 			xp_gain_factor = 2.35,
 			damage_type = DAMAGE_EXPLOSION,
 			damage_max = {17, 19, 22, 24, 26, 29, 31, 34, 37, 41},
-			damage_min = {11, 13, 14, 16, 18, 19, 21, 22, 24, 27}
+			damage_min = {11, 13, 14, 16, 18, 19, 21, 22, 24, 27},
+			damage_radius = 55
 		},
 		goblidrones = {
 			units = 2,
