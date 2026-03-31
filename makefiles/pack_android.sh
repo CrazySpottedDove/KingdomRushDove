@@ -89,7 +89,7 @@ calc_love_fingerprint() {
             -path "./.git" -prune -o \
             -path "./.versions" -prune -o \
             -path "./tmp" -prune -o \
-            -path "./aidoc" -prune -o \
+            -path "./docs" -prune -o \
             -path "./.plugins" -prune -o \
             -path "./mods/local" -prune -o \
             -type f ! -name "*.dds" ! -name "*.exe" \
@@ -149,7 +149,7 @@ if [ "$rebuild_love" -eq 1 ]; then
         ".dlfmt_cache.json"
         "update.lua"
         ".gdb_history"
-        "aidoc/*"
+        "docs/*"
         ".plugins/*"
         "mods/*"
         "all/librender_sort.so"
@@ -173,8 +173,6 @@ if [ "$rebuild_love" -eq 1 ]; then
         ZIP_EXCLUDES+=("-x" "$pattern")
     done
     zip -r "$ARCHIVE_DIR" . "${ZIP_EXCLUDES[@]}" -q
-    # # 先打包项目中除 dds 和 .versions 的文件（避免把 archive 自己打进去）
-    # zip -r "$ARCHIVE_DIR" . -x "*.dds" -x ".versions/*" -x "tmp/*" -x "*.exe" -x ".git/*" -x "KingdomRushDoveUpdater" -x "client.log" -x "client" -x "https.dll" -x "https.so" -x "run.bat" -x "launch.bat" -x "存档位置.lnk" -x "dlfmt" -x ".dlfmt_cache.json" -x "update.lua" -x ".gdb_history" -x "aidoc/*" -x ".plugins/*" -x "mods/local/*" -x "all/librender_sort.so" -x "all/librender_sort.dll" -x "love_env/*" -x ".vscode/*" -x "Makefile" -x "makefiles/*" -x "scripts/*" -x "dlfmt_task.json" -x "run.bat" -x "README.md" -x "launch.bat" -x "KingdomRushDove版启动器.exe" -x "current_version_commit_hash.txt" -x ".gitignore" -x "游玩必读说明，务必阅读.url" -x  -q
 
     # 分析图像大小，生成缩放映射
     echo "Analyzing image sizes from Lua definitions..."
