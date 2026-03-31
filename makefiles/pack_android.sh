@@ -167,6 +167,7 @@ if [ "$rebuild_love" -eq 1 ]; then
         "游玩必读说明，务必阅读.url"
         "_assets/assets_index.lua"
         "_assets/tmp_download/*"
+        "lldebugger.lua"
     )
     ZIP_EXCLUDES=()
     for pattern in "${EXCLUDES[@]}"; do
