@@ -1,5 +1,5 @@
 local M = {}
-
+require("all.constants")
 M.skills_by_tower = {
 	tower_barrel_lvl4 = {{
 		id = "barrel_field_ration",
