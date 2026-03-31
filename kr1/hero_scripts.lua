@@ -37865,6 +37865,8 @@ function scripts.bullet_hero_mecha.update(this, store)
 
 	y_fly_to_pos(target_pos)
 
+	::attack_start::
+
 	fm.a_step = 5
 	fm.max_a = 1800
 	fm.max_v = 360
@@ -37905,6 +37907,16 @@ function scripts.bullet_hero_mecha.update(this, store)
 		end
 
 		coroutine.yield()
+	end
+
+	if not target or target.health.dead then
+		target = U.find_first_enemy_in_range_filter_off(this.pos, b.damage_radius * 3, F_RANGED, F_NONE)
+
+		if target then
+			b.from.x, b.from.y = this.pos.x, this.pos.y
+			b.target_id = target.id
+			goto attack_start
+		end
 	end
 
 	local enemies = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.damage_flags, b.damage_bans)
@@ -37986,7 +37998,7 @@ function scripts.drone_hero_mecha.update(this, store)
 	local hero = this.owner
 
 	local function find_target(range)
-		target, targets = U.find_nearest_enemy(store, hero.pos, 0, range, a.vis_flags, a.vis_bans)
+		local target, targets = U.find_nearest_enemy(store, hero.pos, 0, range, a.vis_flags, a.vis_bans)
 
 		if not target then
 			return nil
