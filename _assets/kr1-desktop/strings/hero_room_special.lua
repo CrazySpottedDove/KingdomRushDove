@@ -2881,7 +2881,8 @@ d[1].damage_max = table.tail(blc.damage_max)
 d[1].damage_type = blc.damage_type
 local stun_dur = table.tail(blc.stun_duration)
 local jump_radius = blc.damage_radius
-map["震撼冲击"] = str(cooldown_str(), "布莱兹跳向一名移动中的敌人，砸落时对", jump_radius, "范围内造成", damage_str(), "，并使其眩晕", stun_dur, "秒。")
+loop = table.tail(blc.loops)
+map["震撼冲击"] = str(cooldown_str(), "布莱兹", loop, " 次跳向一名随机敌人，砸落时对", jump_radius, "范围内造成", damage_str(), "，并使其眩晕", stun_dur, "秒。")
 
 blc = balance.hero_robot.fire
 cooldown = table.tail(blc.cooldown)
