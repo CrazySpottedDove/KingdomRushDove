@@ -888,7 +888,7 @@ local heroes = {
 		uppercut = {
 			life_threshold = {25, 30, 40},
 			s_life_threshold = {0.25, 0.3, 0.4},
-			cooldown = {34, 30, 26}
+			cooldown = {32, 28, 24}
 		},
 		explode = {
 			max_range = 90,
