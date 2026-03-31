@@ -20045,13 +20045,14 @@ tt.modifier.vis_bans = bor(F_BOSS, F_FLYING)
 
 tt = RT("bullet_zeppelin_hero_mecha", "bomb")
 b = balance.heroes.hero_mecha.ultimate
-tt.bullet.damage_decay_random = false
 tt.bullet.flight_time = fts(40)
 tt.bullet.hit_fx = "fx_bullet_zeppelin_hero_mecha"
 tt.bullet.align_with_trajectory = false
 tt.bullet.ignore_hit_offset = true
 tt.bullet.pop_chance = 0.5
 tt.bullet.rotation_speed = 10
+tt.bullet.damage_type = b.ranged_attack.damage_type
+tt.bullet.damage_radius = b.ranged_attack.damage_radius
 tt.sound_events.insert = "HeroMechaDeathFromAboveAttack"
 tt.sound_events.hit = "HeroMechaDeathFromAboveExplosion"
 tt.render.sprites[1].animated = false
