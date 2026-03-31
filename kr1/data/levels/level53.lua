@@ -26,7 +26,7 @@ while store.wave_group_number<1 do
 coroutine.yield()
 end
 if self.catapult_waves then
-local cwi,cw=0
+local cwi,cw=0,nil
 local wts=store.tick_ts
 ::label_3_0::
 while not store.waves_finished do

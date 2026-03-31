@@ -19368,7 +19368,7 @@ end
 scripts.gryphon_controller = {}
 
 function scripts.gryphon_controller.update(this, store)
-	local cwi, cw = 0
+	local cwi, cw = 0, nil
 	local wts = store.tick_ts
 
 	::label_529_0::

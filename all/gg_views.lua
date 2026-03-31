@@ -1052,7 +1052,7 @@ function GGExo:_draw_self_deferred()
 
 			batch:clear()
 
-			lr, lg, lb, la = nil
+			lr, lg, lb, la = nil, nil, nil, nil
 
 			if ss.atlas then
 				current_atlas = ss.atlas

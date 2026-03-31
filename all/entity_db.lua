@@ -306,7 +306,7 @@ end
 
 function entity_db:filter_iter(entities, c1, c2, c3)
 	local function next_entity(t, i)
-		local k, v = i
+		local k, v = i, nil
 
 		while true do
 			::label_14_0::
