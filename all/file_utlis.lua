@@ -3,6 +3,7 @@ local P = require("lib.klua.persistence")
 local log = require("lib.klua.log"):new("file_utlis")
 local is_windows = package.config:sub(1, 1) == "\\"
 local FS = love.filesystem
+
 --- 写入文件
 ---@param file_path string 文件路径
 ---@param content string 文件内容
@@ -18,11 +19,17 @@ function file_utlis.write_file(file_path, content)
 	return true
 end
 
+--- 把 lua 数据写入文件
+---@param file_path string 文件路径
+---@param data any lua 数据
 function file_utlis.write_lua(file_path, data)
 	local content = P.serialize_to_string(data)
 	return file_utlis.write_file(file_path, content)
 end
 
+--- 确认某个路径的父路径存在。如不存在，创建父目录。
+---@param file_path string 路径
+---@return boolean 为 false 时，创建父目录失败
 function file_utlis.ensure_parent_dir(file_path)
 	local parent_dir = file_path:match("(.+)[/\\]")
 	if parent_dir then
@@ -58,6 +65,12 @@ function file_utlis.get_subdirs(path)
 	end
 
 	return file_names
+end
+
+--- 删除文件
+---@param file_path string 文件路径
+function file_utlis.delete_file(file_path)
+	os.remove(file_path)
 end
 
 return file_utlis
