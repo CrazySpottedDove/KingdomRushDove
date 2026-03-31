@@ -4888,7 +4888,7 @@ function HeroNameLabel:set_hero(hero_name, hero_i18n_key)
 			self:add_child(l)
 
 			labels[i] = l
-			l.font_name = "hero_name_label_kr1"
+			l.font_name = "hero_name_label"
 			l.shaders = {"p_bands", "p_outline", "p_glow", "p_drop_shadow"}
 			l.fit_lines = 1
 

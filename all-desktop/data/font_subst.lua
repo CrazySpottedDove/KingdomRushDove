@@ -1,24 +1,50 @@
 -- chunkname: @./all-desktop/data/font_subst.lua
 return {
 	global = {{"numbers", "Comic Book Italic"}, {"numbers_italic", "Comic Book Italic"}, {"numbers_bold", "TOONISH"}},
+	-- default = {
+	-- 	{"body", "Comic Book Italic"},
+	-- 	{"body_bold", "Comic Book Italic"},
+	-- 	{"body_slides", "Comic Book Italic"},
+	-- 	-- {"button", "ObelixPro"},
+	-- 	{"button", ""},
+	-- 	-- {"capitals", "Heuristica_Italic"},
+	-- 	{"capitals", ""},
+	-- 	-- {"h", "ObelixPro"},
+	-- 	{"h", ""},
+	-- 	-- {"h_book", "Heuristica_Italic"},
+	--     {"h_book",""},
+	-- 	-- {"h_map", "YIKES"},
+	--     {"h_map",""},
+	-- 	{"h_noti", "YIKES"},
+	-- 	{"h_popup", "YIKES-kr-ios"},
+	-- 	{"hero_name_label", "ObelixPro"},
+	-- 	{"hud", "Comic Book Italic"},
+	-- 	{"infobar_name", "ObelixPro"},
+	-- 	{"infobar_stats", "Comic Book Italic"},
+	-- 	{"sans", "NotoSansCJKkr-Regular"},
+	-- 	{"sans_bold", "NotoSansCJKkr-Bold"},
+	-- 	{"taunts", "Comic Book Italic", {
+	-- 		["middle-caps"] = 0,
+	-- 		size = 1
+	-- 	}}
+	-- },
 	default = {
 		{"body", "Comic Book Italic"},
 		{"body_bold", "Comic Book Italic"},
 		{"body_slides", "Comic Book Italic"},
-		{"button", "ObelixPro"},
-		{"capitals", "Heuristica_Italic"},
-		{"h", "ObelixPro"},
-		{"h_book", "Heuristica_Italic"},
-		{"h_map", "YIKES"},
-		{"h_noti", "YIKES"},
-		{"h_popup", "YIKES-kr-ios"},
-		{"hero_name_label_kr1", "ObelixPro"},
-		{"hero_name_label", "ObelixPro"},
+		{"button", "Comic Book Italic"},
+		{"capitals", "Comic Book Italic"},
+		{"h", "Comic Book Italic"},
+		{"h_book", "Comic Book Italic"},
+		{"h_map", "Comic Book Italic"},
+		{"h_noti", "Comic Book Italic"},
+		{"h_popup", "Comic Book Italic"},
+		{"hero_name_label", "TOONISH"},
 		{"hud", "Comic Book Italic"},
-		{"infobar_name", "ObelixPro"},
+		{"infobar_name", "Comic Book Italic"},
 		{"infobar_stats", "Comic Book Italic"},
 		{"sans", "NotoSansCJKkr-Regular"},
-		{"sans_bold", "NotoSansCJKkr-Bold"},
+		{"sans_bold", "msyhbd"},
 		{"taunts", "Comic Book Italic", {
 			["middle-caps"] = 0,
 			size = 1
@@ -60,10 +86,6 @@ return {
 		{"h_popup", "JIMOJW", {
 			middle = 0.1,
 			size = 1.2
-		}},
-		{"hero_name_label_kr1", "JIMOJW", {
-			top = -0.1,
-			size = 1
 		}},
 		{"hero_name_label", "JIMOJW", {
 			top = -0.1,
@@ -137,10 +159,6 @@ return {
 			middle = 0,
 			size = 1
 		}},
-		{"hero_name_label_kr1", "NotoSansCJKkr-Bold", {
-			top = -0.2,
-			size = 0.8
-		}},
 		{"hero_name_label", "NotoSansCJKkr-Bold", {
 			top = -0.2,
 			size = 0.8
@@ -185,7 +203,6 @@ return {
 			middle = 0.25,
 			size = 1
 		}},
-		{"hero_name_label_kr1", "tetsubin_gothic"},
 		{"hero_name_label", "tetsubin_gothic"},
 		{"hud", "ZinPenCiro_B"},
 		{"infobar_name", "tetsubin_gothic"},
@@ -231,10 +248,6 @@ return {
 			middle = 0.1,
 			size = 1.3,
 			bottom = 0.2
-		}},
-		{"hero_name_label_kr1", "JejuHallasan_Regular", {
-			top = 0,
-			size = 1
 		}},
 		{"hero_name_label", "JejuHallasan_Regular", {
 			top = -0.05,
