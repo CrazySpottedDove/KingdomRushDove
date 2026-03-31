@@ -857,7 +857,7 @@ local heroes = {
 			damage_min = {7, 9, 10, 11, 13, 13, 14, 15, 16, 19}
 		},
 		jump = {
-			max_range = 100,
+			max_range = 180,
 			radius = 60,
 			min_range = 0,
 			damage_radius = 100,
