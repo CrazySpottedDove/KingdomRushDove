@@ -419,14 +419,22 @@ upgrades.list = {{
 		level = 2,
 		icon = 12
 	},
-	mage_power = {
+	mage_spell_reach = {
 		from_kr = 2,
+		range_factor = 1.1,
 		class = "mages",
-		damage_factor = 1.1,
 		price = 2,
 		level = 3,
 		icon = 13
 	},
+	-- mage_power = {
+	-- 	from_kr = 2,
+	-- 	class = "mages",
+	-- 	damage_factor = 1.1,
+	-- 	price = 2,
+	-- 	level = 3,
+	-- 	icon = 13
+	-- },
 	mage_old_folk = {
 		from_kr = 2,
 		cost_factor = 0.85,
