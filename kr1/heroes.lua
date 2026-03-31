@@ -17994,6 +17994,7 @@ tt.hero.skills.jump.cooldown = b.jump.cooldown
 tt.hero.skills.jump.damage_min = b.jump.damage_min
 tt.hero.skills.jump.damage_max = b.jump.damage_max
 tt.hero.skills.jump.stun_duration = b.jump.stun_duration
+tt.hero.skills.jump.loops = b.jump.loops
 tt.hero.skills.jump.xp_gain = b.jump.xp_gain
 tt.hero.skills.jump.xp_level_steps = {
 	[2] = 1,

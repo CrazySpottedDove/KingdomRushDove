@@ -24410,10 +24410,17 @@ tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_OBJECTS
 tt.ui.click_rect = r(-25, -20, 75, 40)
 tt.spawn_entity = "soldier_dragon_warden_dragon_raider_mounted"
+
+tt = RT("fx_ender_egg_explosion_normal", "fx")
+tt.render.sprites[1].name = "ender_egg_particle_drop_run"
+tt.render.sprites[1].offset = v(0, 5)
+
+tt = RT("fx_ender_egg_explosion_final", "fx")
+tt.render.sprites[1].name = "ender_egg_particle_explosion_run"
+tt.render.sprites[1].offset = v(0, 10)
+
 tt = RT("decal_stage_38_easter_egg_ender_egg", "decal_scripted")
-
 E:add_comps(tt, "ui", "editor")
-
 tt.main_script.insert = scripts.decal_stage_38_easter_ender_egg.insert
 tt.main_script.update = scripts.decal_stage_38_easter_ender_egg.update
 tt.render.sprites[1].prefix = "ender_egg_egg"

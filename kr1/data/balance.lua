@@ -866,6 +866,7 @@ local heroes = {
 			damage_type = DAMAGE_PHYSICAL,
 			damage_max = {30, 60, 90},
 			damage_min = {30, 60, 90},
+			loops = {1, 2, 3},
 			s_damage = {15, 30, 60},
 			xp_gain = {120, 240, 360}
 		},
