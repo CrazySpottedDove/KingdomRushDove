@@ -168,6 +168,7 @@ if [ "$rebuild_love" -eq 1 ]; then
         "_assets/assets_index.lua"
         "_assets/tmp_download/*"
         "lldebugger.lua"
+        "kr1/data/waveconfigs/*"
     )
     ZIP_EXCLUDES=()
     for pattern in "${EXCLUDES[@]}"; do
