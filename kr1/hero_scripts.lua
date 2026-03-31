@@ -33726,6 +33726,7 @@ function scripts.hero_robot.level_up(this, store)
 		a.cooldown = s.cooldown[s.level]
 		a.damage_min = s.damage_min[s.level]
 		a.damage_max = s.damage_max[s.level]
+		a.loops = s.loops[s.level]
 
 		local aura = E:get_template(a.aura)
 		local mod = E:get_template(aura.aura.mod)
@@ -34015,112 +34016,114 @@ function scripts.hero_robot.update(this, store)
 				if this.soldier.target_id ~= nil then
 					SU.delay_attack(store, a, fts(5))
 				else
-					local target, _, pred_pos = U.find_foremost_enemy_in_range_filter_on(this.pos, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, function(e, origin)
-						return e.motion and e.motion.max_speed and e.motion.max_speed > 0 and P:is_node_valid(e.nav_path.pi, e.nav_path.ni)
-					end)
+					for i = 1, a.loops do
+						local target, pred_pos = U.find_random_enemy_with_pos(store, this.pos, 0, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, function(e, origin)
+							return P:is_node_valid(e.nav_path.pi, e.nav_path.ni)
+						end)
 
-					if not target then
-						SU.delay_attack(store, a, fts(5))
-					else
-						local n_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni)
-
-						if V.dist2(n_pos.x, n_pos.y, target.pos.x, target.pos.y) > 25 then
+						if not target then
 							SU.delay_attack(store, a, fts(5))
+							break
 						else
-							local new_ni = target.nav_path.ni + a.fall_ahead
-							local target_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, new_ni)
+							local n_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni)
 
-							last_ts = store.tick_ts
+							if V.dist2(n_pos.x, n_pos.y, target.pos.x, target.pos.y) > 25 then
+								SU.delay_attack(store, a, fts(5))
+							else
+								local new_ni = target.nav_path.ni + a.fall_ahead
+								local target_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, new_ni)
 
-							S:queue(a.sound_cast)
-							U.unblock_target(store, this)
+								last_ts = store.tick_ts
 
-							local bans = this.vis.bans
+								S:queue(a.sound_cast)
+								U.unblock_target(store, this)
 
-							this.vis.bans = F_ALL
+								local bans = this.vis.bans
 
-							SU.hide_modifiers(store, this, true)
-							SU.hide_auras(store, this, true)
+								this.vis.bans = F_ALL
 
-							ps1.particle_system.emit = false
-							ps2.particle_system.emit = false
+								SU.hide_modifiers(store, this, true)
+								SU.hide_auras(store, this, true)
 
-							local an, af, ai = U.animation_name_facing_point(this, a.animation_prepare, target_pos)
+								ps1.particle_system.emit = false
+								ps2.particle_system.emit = false
 
-							U.y_animation_play(this, an, af, store.tick_ts, 1)
+								local an, af, ai = U.animation_name_facing_point(this, a.animation_prepare, target_pos)
 
-							local an, af, ai = U.animation_name_facing_point(this, a.animation, target_pos)
+								U.y_animation_play(this, an, af, store.tick_ts, 1)
 
-							U.animation_start(this, an, af, store.tick_ts, false)
+								local an, af, ai = U.animation_name_facing_point(this, a.animation, target_pos)
 
-							local target, _, pred_pos = U.find_foremost_enemy_in_range_filter_on(tpos(this), a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, function(e, origin)
-								return e.motion and e.motion.max_speed and e.motion.max_speed > 0 and P:is_node_valid(e.nav_path.pi, e.nav_path.ni)
-							end)
+								U.animation_start(this, an, af, store.tick_ts, false)
 
-							if target then
-								new_ni = target.nav_path.ni + a.fall_ahead
-								target_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, new_ni)
-							end
+								local target, pred_pos = U.find_random_enemy_with_pos(store, this.pos, 0, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, function(e, origin)
+									return P:is_node_valid(e.nav_path.pi, e.nav_path.ni)
+								end)
 
-							local dest = V.vclone(target_pos)
-
-							U.set_destination(this, dest)
-
-							local animation_length = fts(20)
-							local remaining_time = animation_length
-							local start_jump_ts = store.tick_ts
-
-							S:queue(a.sound_impact, a.sound_impact_args)
-
-							while animation_length > store.tick_ts - start_jump_ts do
-								local distance_x = math.abs(this.pos.x - this.motion.dest.x)
-								local distance_y = math.abs(this.pos.y - this.motion.dest.y)
-
-								if this.pos.x - this.motion.dest.x < 0 then
-									this.pos.x = this.pos.x + distance_x / (remaining_time / store.tick_length)
-								else
-									this.pos.x = this.pos.x - distance_x / (remaining_time / store.tick_length)
+								if target then
+									new_ni = target.nav_path.ni + a.fall_ahead
+									target_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, new_ni)
 								end
 
-								if this.pos.y - this.motion.dest.y < 0 then
-									this.pos.y = this.pos.y + distance_y / (remaining_time / store.tick_length)
-								else
-									this.pos.y = this.pos.y - distance_y / (remaining_time / store.tick_length)
+								local dest = V.vclone(target_pos)
+
+								U.set_destination(this, dest)
+
+								local animation_length = fts(20)
+								local remaining_time = animation_length
+								local start_jump_ts = store.tick_ts
+
+								S:queue(a.sound_impact, a.sound_impact_args)
+
+								while animation_length > store.tick_ts - start_jump_ts do
+									local distance_x = math.abs(this.pos.x - this.motion.dest.x)
+									local distance_y = math.abs(this.pos.y - this.motion.dest.y)
+
+									if this.pos.x - this.motion.dest.x < 0 then
+										this.pos.x = this.pos.x + distance_x / (remaining_time / store.tick_length)
+									else
+										this.pos.x = this.pos.x - distance_x / (remaining_time / store.tick_length)
+									end
+
+									if this.pos.y - this.motion.dest.y < 0 then
+										this.pos.y = this.pos.y + distance_y / (remaining_time / store.tick_length)
+									else
+										this.pos.y = this.pos.y - distance_y / (remaining_time / store.tick_length)
+									end
+
+									remaining_time = remaining_time - store.tick_length
+
+									coroutine.yield()
 								end
 
-								remaining_time = remaining_time - store.tick_length
+								this.motion.arrived = true
+								this.nav_rally.pos = V.vclone(this.pos)
+								this.nav_rally.center = V.vclone(this.pos)
+								a.ts = last_ts
 
-								coroutine.yield()
+								local aura = E:create_entity(a.aura)
+
+								aura.pos = V.v(dest.x, dest.y - 10)
+								aura.owner = this
+								aura.aura.source_id = this.id
+
+								queue_insert(store, aura)
+								explosion_damage(dest, a.damage_radius, a.damage_min, a.damage_max, a.damage_type, a.damage_bans, a.damage_flags)
+
+								this.vis.bans = bans
+								this.vis._bans = nil
+
+								SU.show_modifiers(store, this, true)
+								SU.show_auras(store, this, true)
+								SU.hero_gain_xp_from_skill(this, skill)
+								U.y_animation_wait(this)
+
+								ps1.particle_system.emit = true
+								ps2.particle_system.emit = true
 							end
-
-							this.motion.arrived = true
-							this.nav_rally.pos = V.vclone(this.pos)
-							this.nav_rally.center = V.vclone(this.pos)
-							a.ts = last_ts
-
-							local aura = E:create_entity(a.aura)
-
-							aura.pos = V.v(dest.x, dest.y - 10)
-							aura.owner = this
-							aura.aura.source_id = this.id
-
-							queue_insert(store, aura)
-							explosion_damage(dest, a.damage_radius, a.damage_min, a.damage_max, a.damage_type, a.damage_bans, a.damage_flags)
-
-							this.vis.bans = bans
-							this.vis._bans = nil
-
-							SU.show_modifiers(store, this, true)
-							SU.show_auras(store, this, true)
-							SU.hero_gain_xp_from_skill(this, skill)
-							U.y_animation_wait(this)
-
-							ps1.particle_system.emit = true
-							ps2.particle_system.emit = true
-
-							goto label_432_1
 						end
 					end
+					goto label_432_1
 				end
 			end
 
@@ -37919,7 +37922,6 @@ function scripts.bullet_hero_mecha.update(this, store)
 		end
 	end
 
-	local enemies = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.damage_flags, b.damage_bans)
 	local mods
 	if b.mod then
 		mods = type(b.mod) == "string" and {b.mod} or b.mod
@@ -37927,39 +37929,61 @@ function scripts.bullet_hero_mecha.update(this, store)
 		mods = b.mods
 	end
 
-	if enemies then
-		for i = 1, #enemies do
-			local enemy = enemies[i]
-			local d = SU.create_bullet_damage_without_pops(b, enemy.id, this.id)
+	if target and band(target.vis.flags, F_FLYING) ~= 0 then
+		local d = SU.create_bullet_damage(b, target.id, this.id)
+		queue_damage(store, d)
 
-			if UP:get_upgrade("engineer_efficiency") then
-				d.value = b.damage_max
-			else
-				local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, b.to, b.damage_radius)
+		if mods then
+			for _, mod_name in ipairs(mods) do
+				local mod = E:create_entity(mod_name)
 
-				d.value = b.damage_max - (b.damage_max - b.damage_min) * dist_factor
-			end
+				mod.modifier.damage_factor = b.damage_factor
+				mod.modifier.target_id = target.id
+				mod.modifier.source_id = this.id
 
-			d.value = b.damage_factor * d.value
-
-			queue_damage(store, d)
-
-			if mods then
-				for _, mod_name in ipairs(mods) do
-					local mod = E:create_entity(mod_name)
-
-					mod.modifier.damage_factor = b.damage_factor
-					mod.modifier.target_id = enemy.id
-					mod.modifier.source_id = this.id
-
-					if U.flags_pass(enemy.vis, mod.modifier) then
-						queue_insert(store, mod)
-					end
+				if U.flags_pass(target.vis, mod.modifier) then
+					queue_insert(store, mod)
 				end
 			end
 		end
 
 		S:queue(this.sound_events.hit)
+	else
+		local enemies = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.damage_flags, b.damage_bans)
+		if enemies then
+			for i = 1, #enemies do
+				local enemy = enemies[i]
+				local d = SU.create_bullet_damage_without_pops(b, enemy.id, this.id)
+
+				if UP:get_upgrade("engineer_efficiency") then
+					d.value = b.damage_max
+				else
+					local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, b.to, b.damage_radius)
+
+					d.value = b.damage_max - (b.damage_max - b.damage_min) * dist_factor
+				end
+
+				d.value = b.damage_factor * d.value
+
+				queue_damage(store, d)
+
+				if mods then
+					for _, mod_name in ipairs(mods) do
+						local mod = E:create_entity(mod_name)
+
+						mod.modifier.damage_factor = b.damage_factor
+						mod.modifier.target_id = enemy.id
+						mod.modifier.source_id = this.id
+
+						if U.flags_pass(enemy.vis, mod.modifier) then
+							queue_insert(store, mod)
+						end
+					end
+				end
+			end
+
+			S:queue(this.sound_events.hit)
+		end
 	end
 
 	this.render.sprites[1].hidden = true
