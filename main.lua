@@ -14,7 +14,7 @@ if love.system.getOS() == "Windows" then
 end
 
 love.filesystem.setIdentity(version.identity)
-local is_android = love.system.getOS() == "Android"
+IS_ANDROID = love.system.getOS() == "Android"
 local perf = require("dove_modules.perf.perf")
 do
 	love.graphics.setColor_old = function(r, g, b, a)
@@ -247,7 +247,7 @@ local loader
 local function load_director()
 	local director = require("director")
 	main.handler = director
-	if is_android then
+	if IS_ANDROID then
 		director:init(main.params)
 	else
 		require("mods.mod_main"):init(director)

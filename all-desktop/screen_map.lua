@@ -24,13 +24,12 @@ local utf8 = require("utf8")
 local achievements_data, map_data
 local tower_menus_data = require("kr1.data.tower_menus_data")
 local R = require("all.restart")
-local is_android = love.system.getOS() == "Android"
 require("klove.kui")
 
 local kui_db = require("klove.kui_db")
 
 require("gg_views_custom")
-if not is_android then
+if not IS_ANDROID then
 	require("dove_modules.gui.mod_manager_view")
 end
 
@@ -269,7 +268,7 @@ function screen_map:init(w, h, done_callback)
 	self.window:add_child(vign)
 
 	-- 电脑端滚动焦点逻辑
-	if not is_android then
+	if not IS_ANDROID then
 		local map_scroll_hotspots_l = KView:new(V.v(scroll_hotpot_width, sh))
 
 		map_scroll_hotspots_l.propagate_on_click = true
@@ -675,7 +674,7 @@ function screen_map:init(w, h, done_callback)
 	self.launch_options_panel_view = LaunchOptionsPanelView:new(sw, sh)
 	self.window:add_child(self.launch_options_panel_view)
 
-	if not is_android then
+	if not IS_ANDROID then
 		self.mod_manager_view = ModManagerView:new(sw, sh)
 		self.window:add_child(self.mod_manager_view)
 	end
@@ -826,7 +825,7 @@ function screen_map:keypressed(key, isrepeat)
 
 			return true
 		end
-		if not is_android then
+		if not IS_ANDROID then
 			if not self.mod_manager_view.hidden then
 				self.mod_manager_view:hide()
 
@@ -860,7 +859,7 @@ function screen_map:keypressed(key, isrepeat)
 	elseif key == "f2" then
 		hide_others()
 		self.criket_panel_view:show()
-	elseif key == "f3" and not is_android then
+	elseif key == "f3" and not IS_ANDROID then
 		hide_others()
 		self.mod_manager_view:show()
 	elseif key == "1" then
@@ -1111,7 +1110,7 @@ function screen_map:mousereleased(x, y, button)
 end
 
 -- 处理移动端的触摸事件，实现地图跟手滚动且不灵敏
-if is_android then
+if IS_ANDROID then
 	local touch_last_y = 0
 	local touch_last_x = 0
 	local touch_scrolling = false
@@ -2689,7 +2688,7 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 	self.back.alpha = 0
 
 	-- 安卓设备上适当缩放界面以适配不同分辨率
-	if is_android then
+	if IS_ANDROID then
 		local scale = math.min(sw / self.back.size.x, sh / self.back.size.y) * 0.85
 
 		self.scale = v(scale, scale)
@@ -3696,7 +3695,7 @@ function UpgradeButtons:ungrey_me()
 end
 
 function UpgradeButtons:on_click(button, x, y)
-	if is_android and not self._android_checked then
+	if IS_ANDROID and not self._android_checked then
 		self._android_checked = true
 		return
 	end
@@ -3728,7 +3727,7 @@ function UpgradeButtons:on_click(button, x, y)
 		self:ungrey_me()
 		screen_map.upgrades:upgrade_bought(self.data_values.class, self.data_values.level - 1, self.data_values.price)
 	end
-	if is_android then
+	if IS_ANDROID then
 		self._android_checked = nil
 	end
 end
@@ -5782,7 +5781,7 @@ function OptionsView:initialize(sw, sh)
 	end
 	self.back:add_child(launch_options_button)
 
-	if not is_android then
+	if not IS_ANDROID then
 		button_height = button_height + 100
 		local mod_manager_button = GGOptionsButton:new("模组管理器")
 		mod_manager_button:set_anchor_to_center()
@@ -6570,7 +6569,7 @@ function EditableItem:on_click(button, vx, vy)
 		self.parent:clear_focus()
 		self:set_focused(true)
 
-		if is_android then
+		if IS_ANDROID then
 			local ix = self:view_to_view(vx, vy, self.parent)
 
 			if ix < self.pos.x + self.size.x / 2 then

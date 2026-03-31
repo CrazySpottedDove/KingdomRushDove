@@ -43,9 +43,6 @@ local i18n = require("i18n")
 local EU = require("endless_utils")
 local EL = require("kr1.data.endless")
 local perf = require("dove_modules.perf.perf")
-local is_android = love.system.getOS() == "Android"
--- DEBUG USE
--- is_android = true
 local function ISW(...)
 	return i18n.sw(i18n, ...)
 end
@@ -318,7 +315,7 @@ function game_gui:init(w, h, game)
 	GGLabel.static.ref_h = self.ref_h
 
 	local hud_scale = 1
-	if is_android then
+	if IS_ANDROID then
 		-- 这里要通过长宽比来判断，因为有些安卓设备虽然是移动平台但屏幕比较大，适合用桌面版的 HUD 布局和大小
 		local aspect_ratio = self.sw / self.sh
 		if aspect_ratio > 1920 / 1080 then
@@ -3419,7 +3416,7 @@ function PauseView:initialize()
 	self:add_child(s_music)
 
 	-- Android专用快捷键按钮
-	if is_android then
+	if IS_ANDROID then
 		local button_height = 100
 		local left_x = -75 -- 左侧按钮x位置
 		local right_x = self.size.x + 75 -- 右侧按钮x位置
@@ -6789,7 +6786,7 @@ function TowerMenu:button_exit(button, item, entity, mouse_button)
 		entity.ui.args = nil
 	end
 
-	if is_android then
+	if IS_ANDROID then
 		button._android_checked = nil
 	end
 end
@@ -6797,7 +6794,7 @@ end
 local actions_needing_confirmation_in_android = table.to_map({"tw_upgrade", "tw_unblock", "upgrade_power", "tw_sell", "tw_buy_soldier", "tw_buy_attack", "tw_change_mode", "tw_free_action", "tw_repair"})
 
 function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
-	if is_android then
+	if IS_ANDROID then
 		if actions_needing_confirmation_in_android[item.action] and not button._android_checked then
 			button._android_checked = true
 			return
@@ -6960,7 +6957,7 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 		end
 	end
 
-	if is_android and actions_needing_confirmation_in_android[item.action] then
+	if IS_ANDROID and actions_needing_confirmation_in_android[item.action] then
 		button._android_checked = nil
 	end
 end
@@ -7628,7 +7625,7 @@ function WaveFlag:initialize(flying, duration, report, path_index, world_pos)
 end
 
 function WaveFlag:on_click()
-	if is_android then
+	if IS_ANDROID then
 		if not self._android_checked then
 			self._android_checked = true
 			return
@@ -7638,7 +7635,7 @@ function WaveFlag:on_click()
 
 	self.clicked = true
 	game_gui.game.store.send_next_wave = true
-	if is_android then
+	if IS_ANDROID then
 		self._android_checked = nil
 	end
 end
@@ -7656,7 +7653,7 @@ function WaveFlag:on_exit()
 	game.shown_path = nil
 
 	game_gui.incoming_tooltip:hide()
-	if is_android then
+	if IS_ANDROID then
 		self._android_checked = nil
 	end
 end

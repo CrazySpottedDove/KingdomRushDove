@@ -79,8 +79,6 @@ image_db.use_canvas = true
 -- by dove
 image_db.supportedformats = love.graphics.getImageFormats()
 
-local is_android = love.system.getOS() == "Android"
-
 -- 简化版本，只基于CPU核心数
 local function calculate_thread_count()
 	local cpu_count = love.system.getProcessorCount() or 4
@@ -490,15 +488,18 @@ function image_db:preload_atlas(ref_scale, path, name)
 		v.quad = G.newQuad(v.f_quad[1], v.f_quad[2], v.f_quad[3], v.f_quad[4], v.a_size[1], v.a_size[2])
 
 		-- Android 端：自动选择实际存在的格式（ASTC > PNG > DDS）
-		if is_android then
+		if IS_ANDROID then
 			if v.a_name:match("%.dds$") then
 				local astc_name = v.a_name:gsub("%.dds$", ".astc")
-				local png_name = v.a_name:gsub("%.dds$", ".png")
 
 				if is_file(path .. "/" .. astc_name) then
 					v.a_name = astc_name
-				elseif is_file(path .. "/" .. png_name) then
-					v.a_name = png_name
+				else
+					local png_name = v.a_name:gsub("%.dds$", ".png")
+
+					if is_file(path .. "/" .. png_name) then
+						v.a_name = png_name
+					end
 				end
 			elseif v.a_name:match("%.png$") then
 				local astc_name = v.a_name:gsub("%.png$", ".astc")
@@ -581,7 +582,7 @@ function image_db:load_image_file(fn, path)
 			compressed = true
 
 			-- Android 端应该已在 preload_atlas 中转换为 .astc 或 .png，此处为容错
-			if is_android then
+			if IS_ANDROID then
 				local astc_fn = fn:gsub("%.dds$", ".astc")
 				if is_file(path .. "/" .. astc_fn) then
 					return self:load_image_file(astc_fn, path)

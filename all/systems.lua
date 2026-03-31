@@ -5,7 +5,6 @@ local km = require("lib.klua.macros")
 local signal = require("lib.hump.signal")
 local perf = require("dove_modules.perf.perf")
 local SystemsIndex = require("systems.index")
-local IS_ANDROID = love.system.getOS() == "Android"
 require("lib.klua.table")
 require("lib.klua.dump")
 

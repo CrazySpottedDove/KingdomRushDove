@@ -17,6 +17,8 @@ DEBUG_DAMAGE_TRACE_TOWER_ATTACKS = false
 -- 为 true：每次受击结算多打 [DAMAGE_INVESTIGATE]（src_id、origin/extra、源实体快照）；可不依赖主开关，单独用于深挖。
 DEBUG_DAMAGE_TRACE_INVESTIGATE = false
 PATH_POINTS_DISTANCE = 7
+-- 运行时平台是否为安卓
+IS_ANDROID = false
 NULL = "__NULL__"
 FPS = 30
 ASPECT = 0.7
