@@ -853,7 +853,7 @@ local heroes = {
 			xp_gain_factor = 2.2,
 			cooldown = 1,
 			damage_type = DAMAGE_PHYSICAL,
-			damage_max = {13, 14, 15, 16, 18, 20, 22, 23, 26, 29},
+			damage_max = {14, 15, 16, 17, 19, 22, 24, 25, 28, 31},
 			damage_min = {7, 9, 10, 11, 13, 13, 14, 15, 16, 19}
 		},
 		jump = {
@@ -913,7 +913,7 @@ local heroes = {
 			s_burning_damage = 4,
 			speed = 200,
 			damage_every = 0.25,
-			duration = 4,
+			duration = 5,
 			cooldown = {40, 40, 40, 40},
 			damage_type = DAMAGE_PHYSICAL,
 			damage_max = {60, 130, 200, 270},
