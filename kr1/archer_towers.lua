@@ -1761,6 +1761,7 @@ tt.tower.price = b.price[4]
 tt.tower.menu_offset = v(0, 30)
 tt.tower.type = "ballista"
 tt.info.i18n_key = "TOWER_BALLISTA_4"
+tt.info.portrait = "kr5_portraits_towers_0010"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_archer_%04i"
 tt.render.sprites[1].offset = v(0, 15)
