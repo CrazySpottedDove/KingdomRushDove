@@ -1852,504 +1852,504 @@ return {
 		{
 			upgrades = {
 				heroe = false,
-				level = 1
+				level = 2
 			},
 			iron = {"archers", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = false,
-				level = 2
+				level = 3
 			},
 			iron = {"barracks"}
 		},
 		{
 			upgrades = {
 				heroe = false,
-				level = 2
+				level = 3
 			},
 			iron = {"artillery"}
 		},
 		{
 			upgrades = {
 				heroe = false,
-				level = 2
+				level = 3
 			},
 			iron = {"mages", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = false,
-				level = 3
+				level = 4
 			},
 			iron = {"barracks"}
 		},
 		{
 			upgrades = {
 				heroe = false,
-				level = 3
+				level = 4
 			},
 			iron = {"archers", "mages", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = false,
-				level = 3
+				level = 4
 			},
 			iron = {"barracks", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = false,
-				level = 4
+				level = 5
 			},
 			iron = {"archers", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = false,
-				level = 4
+				level = 5
 			},
 			iron = {"archers", "barracks", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 4
+				level = 5
 			},
 			iron = {"artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"artillery", "archers"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"artillery", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"archers", "barracks"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"archers", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"archers", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"mages", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"archers", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"barracks", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"mages"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"archers", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"barracks", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"archers", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"archers", "barracks"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"archers", "artillery"}
 		}, -- 2代
 		{
 			upgrades = {
 				heroe = false,
-				level = 1
+				level = 2
 			},
 			iron = {"archers", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = false,
-				level = 2
+				level = 3
 			},
 			iron = {"archers", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = false,
-				level = 2
+				level = 3
 			},
 			iron = {"artillery"}
 		},
 		{
 			upgrades = {
 				heroe = false,
-				level = 2
+				level = 3
 			},
 			iron = {"artillery", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 2
+				level = 3
 			},
 			iron = {"barracks", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 3
+				level = 4
 			},
 			iron = {"barracks", "archers"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 3
+				level = 4
 			},
 			iron = {"artillery", "archers"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 3
+				level = 4
 			},
 			iron = {"mages", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 4
+				level = 5
 			},
 			iron = {"barracks", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 4
+				level = 5
 			},
 			iron = {"artillery", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 4
+				level = 5
 			},
 			iron = {"barracks", "archers"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"artillery", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"mages", "archers"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"artillery", "barracks"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"mages"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"mages", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"archers", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"archers", "barracks"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"barracks", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"artillery", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"archers", "barracks"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"barracks", "mages"}
 		}, -- 3代
 		{
 			upgrades = {
 				heroe = true,
-				level = 1
+				level = 2
 			},
 			iron = {"archers", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 2
+				level = 3
 			},
 			iron = {"mages", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 2
+				level = 3
 			},
 			iron = {"archers", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 2
+				level = 3
 			},
 			iron = {"barracks", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 2
+				level = 3
 			},
 			iron = {"barracks", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 3
+				level = 4
 			},
 			iron = {"archers", "barracks"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 3
+				level = 4
 			},
 			iron = {"mages", "barracks"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 3
+				level = 4
 			},
 			iron = {"mages", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 4
+				level = 5
 			},
 			iron = {"barracks", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 4
+				level = 5
 			},
 			iron = {"archers", "barracks"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 4
+				level = 5
 			},
 			iron = {"barracks", "mages"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"mages", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"archers", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"barracks", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"archers", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"archers", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"mages", "archers"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"mages", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"mages", "archers"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"barracks", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"mages", "artillery"}
 		},
 		{
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"archers", "artillery"}
 		}, --5代
 		[101] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 		},
 		[102] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2357,7 +2357,7 @@ return {
 		[103] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2365,7 +2365,7 @@ return {
 		[104] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2373,7 +2373,7 @@ return {
 		[105] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2381,7 +2381,7 @@ return {
 		[106] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2389,7 +2389,7 @@ return {
 		[107] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2397,7 +2397,7 @@ return {
 		[108] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2405,7 +2405,7 @@ return {
 		[109] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2413,7 +2413,7 @@ return {
 		[110] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2421,7 +2421,7 @@ return {
 		[111] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2429,7 +2429,7 @@ return {
 		[112] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2437,7 +2437,7 @@ return {
 		[113] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2445,7 +2445,7 @@ return {
 		[114] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2453,7 +2453,7 @@ return {
 		[115] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2461,7 +2461,7 @@ return {
 		[116] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2469,7 +2469,7 @@ return {
 		[117] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2477,7 +2477,7 @@ return {
 		[118] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2485,7 +2485,7 @@ return {
 		[119] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2493,7 +2493,7 @@ return {
 		[120] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2501,7 +2501,7 @@ return {
 		[121] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2509,7 +2509,7 @@ return {
 		[122] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2517,7 +2517,7 @@ return {
 		[123] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2525,7 +2525,7 @@ return {
 		[124] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2533,7 +2533,7 @@ return {
 		[125] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2541,7 +2541,7 @@ return {
 		[126] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2549,7 +2549,7 @@ return {
 		[127] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2557,7 +2557,7 @@ return {
 		[128] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2565,7 +2565,7 @@ return {
 		[129] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2573,7 +2573,7 @@ return {
 		[130] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2581,7 +2581,7 @@ return {
 		[131] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2589,7 +2589,7 @@ return {
 		[132] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2597,7 +2597,7 @@ return {
 		[133] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2605,7 +2605,7 @@ return {
 		[134] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2613,7 +2613,7 @@ return {
 		[135] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2621,7 +2621,7 @@ return {
 		[136] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2629,7 +2629,7 @@ return {
 		[137] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2637,7 +2637,7 @@ return {
 		[138] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2645,7 +2645,7 @@ return {
 		[139] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2653,7 +2653,7 @@ return {
 		[140] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 
@@ -2662,35 +2662,35 @@ return {
 		[1001] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"mages", "artillery"}
 		},
 		[1002] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"archers", "artillery", "barracks"}
 		},
 		[2000] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"archers", "artillery", "barracks"}
 		},
 		[2001] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"mages", "barracks"}
 		},
 		[2002] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"artillery", "mages"}
 		},
@@ -2698,28 +2698,28 @@ return {
 		[2003] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"archers", "mages"}
 		},
 		[2004] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"artillery"}
 		},
 		[3000] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {"artillery", "mages"}
 		},
 		[1000] = {
 			upgrades = {
 				heroe = true,
-				level = 5
+				level = 6
 			},
 			iron = {}
 		}
