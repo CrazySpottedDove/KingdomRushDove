@@ -26,6 +26,7 @@ local SU = require("screen_utils")
 local E = require("entity_db")
 local U = require("utils")
 local V = require("lib.klua.vector")
+-- local V= require("lib.vector_ffi")
 local v = V.v
 local r = V.r
 
@@ -417,7 +418,7 @@ function game_gui:init(w, h, game)
 	pauseview.pos.x = self.sw * 0.5
 	pauseview.hidden = true
 
-	local hud_noti_queue = NotificationQueue:new()
+	local hud_noti_queue = NotificationQueue:new(0, 0)
 
 	hud_noti_queue.anchor = v(0, 0)
 	hud_noti_queue.pos = v(80, 100)

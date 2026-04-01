@@ -45,13 +45,6 @@ function V.r(x, y, w, h)
 	}
 end
 
-function V.rclone(r)
-	return {
-		pos = {r.pos.x, r.pos.y},
-		size = {r.size.x, r.size.y}
-	}
-end
-
 function V.is_inside(p, r)
 	return p.x >= r.pos.x and p.x <= r.pos.x + r.size.x and p.y >= r.pos.y and p.y <= r.pos.y + r.size.y
 end
