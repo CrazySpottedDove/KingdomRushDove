@@ -172,12 +172,10 @@ local signals = {
 	end,
 
 	["hide-gui"] = function()
-		-- print("hide_gui_handler")
 		game_gui:hide()
 	end,
 
 	["show-gui"] = function()
-		-- print("show_gui_handler")
 		game_gui:show()
 	end,
 
@@ -572,8 +570,6 @@ function game_gui:init(w, h, game)
 	for name, handler in pairs(signals) do
 		signal.register(name, handler)
 	end
-
-	self:add_mobile_shortcut_buttons()
 end
 
 function game_gui:destroy()
@@ -663,35 +659,6 @@ end
 
 function game_gui:mousereleased(x, y, button)
 	self.window:mousereleased(x, y, button)
-end
-
--- 为移动设备添加快捷按钮
-function game_gui:add_mobile_shortcut_buttons()
--- 占用了一些位置，暂时禁用
--- if not (love.system.getOS() == "Android") then
--- 	return
--- end
-
--- local ks = self.key_shortcuts
--- local y = self.sh - 60
--- local idx = 0
-
--- for group, keys in pairs(ks) do
--- 	local key = type(keys) == "table" and keys[1] or keys
-
--- 	idx = idx + 1
-
--- 	local btn = KButton:new(V.v(80, 40))
-
--- 	btn.pos = V.v(20 + (idx - 1) * 90, y)
--- 	btn.text = tostring(key) -- 直接显示key名
-
--- 	function btn:on_click()
--- 		game_gui:keypressed(key)
--- 	end
-
--- 	self.layer_gui_top:add_child(btn)
--- end
 end
 
 function game_gui:keypressed(key, isrepeat)
@@ -2088,17 +2055,23 @@ function HeroPortrait:deselect()
 end
 
 function HeroPortrait:hide()
-	self._original_pos_y = self.pos.y
+	if not self._original_pos_y then
+		self._original_pos_y = self.pos.y
+	end
 
 	timer:tween(1, self.pos, {
 		y = self._original_pos_y + self.size.y
-	}, "out-quad")
+	}, "out-quad", function()
+		self.pos.y = self._original_pos_y + self.size.y
+	end)
 end
 
 function HeroPortrait:show()
 	timer:tween(1, self.pos, {
 		y = self._original_pos_y
-	}, "out-quad")
+	}, "out-quad", function()
+		self.pos.y = self._original_pos_y
+	end)
 end
 
 function HeroPortrait:on_enter()
@@ -3112,17 +3085,22 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 end
 
 function HudBottomView:hide()
-	self._original_pos_y = self.pos.y
-
+	if not self._original_pos_y then
+		self._original_pos_y = self.pos.y
+	end
 	timer:tween(1, self.pos, {
 		y = self._original_pos_y + 110
-	}, "out-quad")
+	}, "out-quad", function()
+		self.pos.y = self._original_pos_y + 110
+	end)
 end
 
 function HudBottomView:show()
 	timer:tween(1, self.pos, {
 		y = self._original_pos_y
-	}, "out-quad")
+	}, "out-quad", function()
+		self.pos.y = self._original_pos_y
+	end)
 end
 
 function HudBottomView:update_bars_pos()
@@ -3271,17 +3249,22 @@ function HudCountersView:update(dt)
 end
 
 function HudCountersView:hide()
-	self._original_pos_y = self.pos.y
-
+	if not self._original_pos_y then
+		self._original_pos_y = self.pos.y
+	end
 	timer:tween(1, self.pos, {
 		y = self._original_pos_y - self.size.y
-	}, "out-quad")
+	}, "out-quad", function()
+		self.pos.y = self._original_pos_y - self.size.y
+	end)
 end
 
 function HudCountersView:show()
 	timer:tween(1, self.pos, {
 		y = self._original_pos_y
-	}, "out-quad")
+	}, "out-quad", function()
+		self.pos.y = self._original_pos_y
+	end)
 end
 
 OverlayView = class("OverlayView", KView)
@@ -3345,17 +3328,23 @@ function HudPauseButton:update(dt)
 end
 
 function HudPauseButton:hide()
-	self._original_pos_y = self.pos.y
+	if not self._original_pos_y then
+		self._original_pos_y = self.pos.y
+	end
 
 	timer:tween(1, self.pos, {
 		y = self._original_pos_y - self.size.y
-	}, "out-quad")
+	}, "out-quad", function()
+		self.pos.y = self._original_pos_y - self.size.y
+	end)
 end
 
 function HudPauseButton:show()
 	timer:tween(1, self.pos, {
 		y = self._original_pos_y
-	}, "out-quad")
+	}, "out-quad", function()
+		self.pos.y = self._original_pos_y
+	end)
 end
 
 PauseView = class("PauseView", KImageView)

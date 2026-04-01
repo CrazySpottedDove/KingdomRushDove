@@ -1,4 +1,4 @@
--- chunkname: @./lib/hump/timer.lua
+-- timer:tween(len 补间持续时间, subject 被补间的对象, target 目标状态, method 插值方法, after 补间结束后的回调函数, ...)
 local log = require("lib.klua.log"):new("timer")
 local Timer = {}
 
@@ -11,6 +11,7 @@ end
 function Timer:update(dt)
 	local to_remove = {}
 
+	-- 每次更新时，遍历所有 active 的 handle，增加它们的时间，并调用它们的 during 函数
 	for handle in pairs(self.functions) do
 		handle.time = handle.time + dt
 
@@ -37,6 +38,10 @@ function Timer:update(dt)
 	end
 end
 
+--- 为指定时间段内的补间创建一个 handle
+---@param delay number 多少时间后完成补间
+---@param during function 每帧调用的函数 function(dt)
+---@param after function 补间结束后调用的函数
 function Timer:during(delay, during, after)
 	local handle = {
 		count = 1,
@@ -51,10 +56,17 @@ function Timer:during(delay, during, after)
 	return handle
 end
 
+--- func desc
+---@param delay any
+---@param func any
 function Timer:after(delay, func)
 	return self:during(delay, _nothing_, func)
 end
 
+--- func desc
+---@param delay any
+---@param after any
+---@param count any
 function Timer:every(delay, after, count)
 	local count = count or math.huge
 	local handle = {
@@ -139,14 +151,16 @@ Timer.tween = setmetatable({
 	end
 }, {
 	__call = function(tween, self, len, subject, target, method, after, ...)
+		-- 收集补间信息，生成一个包含所有需要修改的字段和对应增量的列表
 		local function tween_collect_payload(subject, target, out)
-			if type(target) ~= "table" then
-				log.error(target)
+			-- if type(target) ~= "table" then
+			-- 	log.error(target)
 
-				return {}
-			end
+			-- 	return {}
+			-- end
 
 			for k, v in pairs(target) do
+				-- subject: 被补间的对象
 				local ref = subject[k]
 
 				-- assert(type(v) == type(ref), "Type mismatch in field \"" .. k .. "\".")
@@ -154,19 +168,21 @@ Timer.tween = setmetatable({
 				if type(v) == "table" then
 					tween_collect_payload(ref, v, out)
 				else
-					local ok, delta = pcall(function()
-						return (v - ref) * 1
-					end)
+					-- local ok, delta = pcall(function()
+					-- return (v - ref) * 1
+					-- end)
 
 					-- assert(ok, "Field \"" .. k .. "\" does not support arithmetic operations")
 
-					out[#out + 1] = {subject, k, delta}
+					-- 输出补间信息：subject[k] 需要增加的增量为 v - ref，即从原值变成目标值需要增加的量
+					out[#out + 1] = {subject, k, v - ref}
 				end
 			end
 
 			return out
 		end
 
+		-- 补间方法默认为 linear
 		method = tween[method or "linear"]
 
 		local payload, t, args = tween_collect_payload(subject, target, {}), 0, {...}
@@ -187,6 +203,7 @@ Timer.tween = setmetatable({
 			end
 		end, after)
 	end,
+	-- 允许组合补间方法，例如 in-quad, out-quad, in-out-quad 等
 	__index = function(tweens, key)
 		if type(key) == "function" then
 			return key
