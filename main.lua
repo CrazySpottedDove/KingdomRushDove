@@ -1,5 +1,6 @@
 -- chunkname: @./main.lua
 local version = require("version")
+require("all.constants")
 
 if love.system.getOS() == "Windows" then
 	local ffi = require("ffi")
@@ -15,6 +16,7 @@ end
 
 love.filesystem.setIdentity(version.identity)
 IS_ANDROID = love.system.getOS() == "Android"
+
 local perf = require("dove_modules.perf.perf")
 do
 	love.graphics.setColor_old = function(r, g, b, a)
@@ -158,7 +160,6 @@ local log = require("lib.klua.log")
 
 require("lib.klua.table")
 require("lib.klua.dump")
-require("all.constants")
 
 -- 伤害调试等开关：love . --damage-trace …（与 constants.lua 中 DEBUG_* 对应）
 for i = 1, #arg do

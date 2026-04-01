@@ -282,10 +282,12 @@ if [ "$rebuild_love" -eq 1 ]; then
         mkdir -p "$ARCHIVE_DIR.tmp/_assets/all-desktop/fonts"
         cp tmp/msyh_minify.ttc "$ARCHIVE_DIR.tmp/_assets/all-desktop/fonts/msyh.ttc"
         cp tmp/msyhbd_minify.ttc "$ARCHIVE_DIR.tmp/_assets/all-desktop/fonts/msyhbd.ttc"
+        cp tmp/JIMOJW_minify.ttf "$ARCHIVE_DIR.tmp/_assets/all-desktop/fonts/JIMOJW.ttf"
 
         # 从 zip 中删除原始字体文件
         zip -d "$ARCHIVE_DIR" "_assets/all-desktop/fonts/msyh.ttc" -q 2>/dev/null || true
         zip -d "$ARCHIVE_DIR" "_assets/all-desktop/fonts/msyhbd.ttc" -q 2>/dev/null || true
+        zip -d "$ARCHIVE_DIR" "_assets/all-desktop/fonts/JIMOJW.ttf" -q 2>/dev/null || true
 
         # 添加新的字体文件到正确的位置
         (cd "$ARCHIVE_DIR.tmp" && zip -r "$OLDPWD/$ARCHIVE_DIR" _assets/all-desktop/fonts -q)

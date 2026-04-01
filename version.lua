@@ -9,7 +9,7 @@ local version = {
 	vc = "kr1-desktop-5.6.12",
 	build = is_build,
 	bundle_keywords = "-standalone",
-	id = "9.9.1"
+	id = "9.9.2"
 }
 
 return version
