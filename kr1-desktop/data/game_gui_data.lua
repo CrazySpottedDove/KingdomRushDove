@@ -1152,9 +1152,7 @@ return {
 			text_align = "center",
 			pos = v(52, 60),
 			size = v(380, 30),
-			anchor = {
-				y = 30
-			}
+			anchor = v(0, 30)
 		}, {
 			vertical_align = "middle",
 			fit_lines = 1,
@@ -1210,9 +1208,7 @@ return {
 			font_size = 22,
 			pos = v(38, 50),
 			size = v(389, 30),
-			anchor = {
-				y = 30
-			}
+			anchor = v(0, 30)
 		}, {
 			text = "Build towers on strategic points to stop the enemy hordes from getting through.",
 			color = "gray",
@@ -1278,9 +1274,7 @@ return {
 			text_align = "center",
 			pos = v(54, 55),
 			size = v(482, 28),
-			anchor = {
-				y = 30
-			}
+			anchor = v(0, 30)
 		}, {
 			text = "There are four basic types of towers available.",
 			color = "gray",
@@ -1397,9 +1391,7 @@ return {
 			font_size = 24,
 			pos = v(118, 81),
 			size = v(337, 30),
-			anchor = {
-				y = 30
-			}
+			anchor = v(0, 30)
 		}, {
 			color = "gray",
 			fit_lines = 4,
@@ -1430,9 +1422,7 @@ return {
 			font_size = 24,
 			pos = v(118, 83),
 			size = v(337, 30),
-			anchor = {
-				y = 30
-			}
+			anchor = v(0, 30)
 		}, {
 			color = "gray",
 			fit_lines = 4,
@@ -1471,9 +1461,7 @@ return {
 			text_align = "center",
 			pos = v(53, 64),
 			size = v(408, 34),
-			anchor = {
-				y = 34
-			}
+			anchor = v(0, 34)
 		}, {
 			color = "gray",
 			fit_lines = 4,
@@ -1520,9 +1508,7 @@ return {
 			text_align = "center",
 			pos = v(53, 60),
 			size = v(408, 38),
-			anchor = {
-				y = 38
-			}
+			anchor = v(0, 38)
 		}, {
 			fit_lines = 3,
 			color = "gray",
