@@ -1398,6 +1398,7 @@ function game:draw_path(rox, roy, gs)
 end
 
 function game:draw_game()
+	perf.start("game_draw")
 	local d = self.store
 
 	local frame_draw_params = RU.frame_draw_params
@@ -1436,8 +1437,10 @@ function game:draw_game()
 	last_idx = draw_frames_range(d.render_frames, last_idx + 1, Z_GUI - 1)
 	G.pop()
 
+	perf.stop("game_draw")
+	perf.start("game_gui_draw")
 	self.game_gui.window:draw_child(self.game_gui.layer_gui)
-
+	perf.stop("game_gui_draw")
 -- self:after_draw_debug(rox, roy, gs)
 end
 

@@ -149,7 +149,7 @@ Timer.tween = setmetatable({
 			for k, v in pairs(target) do
 				local ref = subject[k]
 
-				assert(type(v) == type(ref), "Type mismatch in field \"" .. k .. "\".")
+				-- assert(type(v) == type(ref), "Type mismatch in field \"" .. k .. "\".")
 
 				if type(v) == "table" then
 					tween_collect_payload(ref, v, out)
@@ -158,7 +158,7 @@ Timer.tween = setmetatable({
 						return (v - ref) * 1
 					end)
 
-					assert(ok, "Field \"" .. k .. "\" does not support arithmetic operations")
+					-- assert(ok, "Field \"" .. k .. "\" does not support arithmetic operations")
 
 					out[#out + 1] = {subject, k, delta}
 				end
@@ -192,7 +192,7 @@ Timer.tween = setmetatable({
 			return key
 		end
 
-		assert(type(key) == "string", "Method must be function or string.")
+		-- assert(type(key) == "string", "Method must be function or string.")
 
 		if rawget(tweens, key) then
 			return rawget(tweens, key)

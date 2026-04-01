@@ -3,7 +3,8 @@ local log = require("lib.klua.log"):new("gg_views_custom")
 
 require("klove.kui")
 
-local V = require("lib.klua.vector")
+-- local V = require("lib.klua.vector")
+local V = require("lib.vector_ffi")
 local class = require("middleclass")
 local km = require("lib.klua.macros")
 local F = require("lib.klove.font_db")
@@ -348,6 +349,7 @@ GGPanelHeader:append_serialize_keys("text")
 GGPanelHeader.static.init_arg_names = {"text", "width"}
 
 function GGPanelHeader:initialize(text, width)
+	width = width or 0
 	local rs = GGLabel.static.ref_h / REF_H
 
 	GGShaderLabel.initialize(self, V.v(width, 32 * rs))

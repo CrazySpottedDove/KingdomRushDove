@@ -504,9 +504,9 @@ function love.run()
 		G.clear()
 		G.origin()
 
-		perf.start("draw")
+		-- perf.start("draw")
 		love.draw()
-		perf.stop("draw")
+		-- perf.stop("draw")
 		if updated then
 			perf_ui.sync_data()
 			perf.reset()
