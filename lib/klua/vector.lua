@@ -1,5 +1,5 @@
 -- chunkname: @./lib/klua/vector.lua
-local V = require("hump.vector-light")
+local V = require("lib.klua.vector")
 
 function V.v(vx, vy)
 	return {
