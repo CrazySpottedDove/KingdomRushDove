@@ -43,6 +43,10 @@ local function load_file_by_name(name)
 			return nil
 		end
 
+		-- 注入向量
+		local env = {}
+		env.v = V.v
+		setfenv(f, env)
 		data = f()
 	end
 	return data

@@ -46,51 +46,6 @@ grid_db.cell_type_names = {
 	[TERRAIN_ICE] = "i"
 }
 
-function grid_db:load_legacy(grid_name)
-	local grid_list = require("data.levels." .. grid_name .. "_grid")
-	local grid = {}
-	local i_col, col
-
-	for _, p in ipairs(grid_list.grid) do
-		local p_col = 1 + tonumber(p.column)
-		local p_row = 1 + tonumber(p.row)
-		local p_type = tonumber(p.terrainType)
-
-		if p_col ~= i_col then
-			if col then
-				grid[i_col] = col
-			end
-
-			i_col = p_col
-			col = {}
-		end
-
-		local tt = 0
-
-		if p_type == 1 then
-			tt = TERRAIN_LAND
-		elseif p_type == 2 then
-			tt = bor(TERRAIN_LAND, TERRAIN_NOWALK)
-		elseif p_type == 4 then
-			tt = TERRAIN_WATER
-		elseif p_type == 8 then
-			tt = bor(TERRAIN_WATER, TERRAIN_SHALLOW)
-		elseif p_type == 16 then
-			tt = bor(TERRAIN_WATER, TERRAIN_NOWALK)
-		end
-
-		col[p_row] = tt
-	end
-
-	if i_col then
-		grid[i_col] = col
-	end
-
-	self.grid = grid
-	self.grid_w = #grid
-	self.grid_h = #grid[1]
-end
-
 function grid_db:init_grid(w, h, ox, oy, cell_size)
 	self.ox = ox
 	self.oy = oy
