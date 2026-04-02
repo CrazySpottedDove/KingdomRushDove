@@ -74,6 +74,8 @@ function path_db:load(name, visible_coords)
 	self.paths = {}
 	self.path_connections = {}
 	self.path_connections_spi_to_ni = {}
+	-- 反向索引，记录哪些路径回去是什么，以消除 prev_pis 这种运行时补丁
+	self.path_connections_reserve = {}
 	self.path_start_node = {}
 	self.path_end_node = {}
 	self.visible_path_start_node = {}
@@ -106,6 +108,11 @@ function path_db:load(name, visible_coords)
 	end
 	-- self:flatten_path_connections()
 	self:collect_connect_info()
+
+	-- 建立反向索引
+	for from_pi, to_pi in pairs(self.path_connections) do
+		self.path_connections_reserve[to_pi] = from_pi
+	end
 
 	for i, p in ipairs(self.paths) do
 		local terrain_types = TERRAIN_NONE
@@ -280,6 +287,12 @@ function path_db:get_end_node(pi)
 	ni = ni or #self.paths[pi]
 
 	return ni
+end
+
+--- 返回该路径上一条连接的路径 pi
+---@param pi integer 当前路径索引
+function path_db:get_prev_pi(pi)
+	return self.path_connections_reserve[pi]
 end
 
 function path_db:nodes_from_start(p1, p2, p3)
@@ -543,9 +556,9 @@ function path_db:next_entity_node(e, dt)
 
 		if n.ni < 1 or n.ni > #path then
 			if self.path_connections[n.pi] and n.dir > 0 then
-				n.prev_pis = n.prev_pis or {}
+				-- n.prev_pis = n.prev_pis or {}
 
-				table.insert(n.prev_pis, n.pi)
+				-- table.insert(n.prev_pis, n.pi)
 
 				-- local newpi, newspi, newni, dist
 

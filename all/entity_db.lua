@@ -201,6 +201,13 @@ function entity_db:register_c(name, base)
 	return c
 end
 
+--- 在 entity_db 中注册一个 ffi 类型的组件，无返回值，所有默认值需提前在 ffi 结构体中准备好
+---@param name string 组件名称
+---@param ffi_data userdata ffi 组件数据，必须是一个已经准备好默认值的 ffi 结构体实例
+function entity_db:register_c_ffi(name, ffi_data)
+	self.components[name] = ffi_data
+end
+
 function entity_db:clone_c(name)
 	-- if not self.components[name] then
 	-- 	log.error("component %s does not exist", name)

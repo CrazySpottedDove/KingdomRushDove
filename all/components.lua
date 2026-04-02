@@ -8,28 +8,13 @@ local V = require("lib.klua.vector")
 require("all.constants")
 local v = V.v
 local r = V.r
--- local function v(v1, v2)
--- 	return {
--- 		x = v1,
--- 		y = v2
--- 	}
--- end
-
--- local function r(x, y, w, h)
--- 	return {
--- 		pos = v(x, y),
--- 		size = v(w, h)
--- 	}
--- end
 
 local function fts(v)
 	return v / FPS
 end
 
-local pos = E:register_c("pos")
-
-pos.x = 0
-pos.y = 0
+local pos = v(0, 0)
+E:register_c_ffi("pos", pos)
 
 local heading = E:register_c("heading")
 
@@ -113,7 +98,7 @@ nav_path.pi = 1
 nav_path.spi = 1
 nav_path.ni = 1
 nav_path.dir = 1
-nav_path.prev_pis = nil
+-- nav_path.prev_pis = nil
 
 local nav_rally = E:register_c("nav_rally")
 

@@ -7042,9 +7042,9 @@ function scripts.mod_teleport.update(this, store)
 	end
 
 	if this.jump_connection then
-		target.nav_path.prev_pis = target.nav_path.prev_pis or {}
+		-- target.nav_path.prev_pis = target.nav_path.prev_pis or {}
 
-		table.insert(target.nav_path.prev_pis, target.nav_path.pi)
+		-- table.insert(target.nav_path.prev_pis, target.nav_path.pi)
 
 		local npi = P:get_next_pi(target.nav_path.pi)
 
@@ -7069,10 +7069,19 @@ function scripts.mod_teleport.update(this, store)
 		local n_ni = target.nav_path.ni + n_off
 		local n_limit = this.nodeslimit
 
-		if n_ni < 1 and target.nav_path.prev_pis and #target.nav_path.prev_pis > 0 then
-			target.nav_path.pi = table.remove(target.nav_path.prev_pis, #target.nav_path.prev_pis)
-			target.nav_path.ni = P:get_end_node(target.nav_path.pi)
-			n_ni = target.nav_path.ni + n_ni
+		-- if n_ni < 1 and target.nav_path.prev_pis and #target.nav_path.prev_pis > 0 then
+		-- 	target.nav_path.pi = table.remove(target.nav_path.prev_pis, #target.nav_path.prev_pis)
+		-- 	target.nav_path.ni = P:get_end_node(target.nav_path.pi)
+		-- 	n_ni = target.nav_path.ni + n_ni
+		-- end
+
+		if n_ni < 1 then
+			local prev_pi = P:get_prev_pi(target.nav_path.pi)
+			if prev_pi then
+				target.nav_path.pi = prev_pi
+				target.nav_path.ni = P:get_end_node(prev_pi)
+				n_ni = target.nav_path.ni + n_ni
+			end
 		end
 
 		target.nav_path.ni = km.clamp(n_limit, P:get_end_node(target.nav_path.pi) - n_limit, n_ni)
