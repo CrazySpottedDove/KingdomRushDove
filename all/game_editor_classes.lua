@@ -567,9 +567,7 @@ function KEPicker:update(dt)
 	local x, y = love.mouse.getPosition()
 
 	if not self._last_pos then
-		self._last_pos = {}
-		self._last_pos.x = x
-		self._last_pos.y = y
+		self._last_pos = V.v(x, y)
 	end
 
 	if self.gui.are_axes_in_range({

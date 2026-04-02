@@ -1,5 +1,6 @@
 local M = {}
 
+local V = require("lib.klua.vector")
 local perf = require("dove_modules.perf.perf")
 
 function M.register(sys)
@@ -18,10 +19,7 @@ function M.register(sys)
 			for i = 1, #entity.lights do
 				local l = entity.lights[i]
 
-				l.pos = {
-					x = entity.pos.x,
-					y = entity.pos.y
-				}
+				l.pos = V.v(entity.pos.x, entity.pos.y)
 				d.lights[#d.lights + 1] = l
 			end
 		end

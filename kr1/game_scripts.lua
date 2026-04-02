@@ -39886,10 +39886,7 @@ function scripts.trees_guardian_tree_vine_mod.insert(this, store)
 		if s.size_scales then
 			local scale = s.size_scales[target.unit.size]
 
-			s.scale = {
-				x = s.scale.x * scale,
-				y = s.scale.y * scale
-			}
+			s.scale = V.v(s.scale.x * scale, s.scale.y * scale)
 		end
 
 		if this.modifier.use_mod_offset and target.unit.mod_offset then

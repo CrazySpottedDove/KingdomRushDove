@@ -4481,10 +4481,7 @@ end
 
 function SU.enemy_scale_mul(store, e, factor, duration)
 	if not e.render.sprites[1].scale then
-		e.render.sprites[1].scale = {
-			x = 1,
-			y = 1
-		}
+		e.render.sprites[1].scale = V.v(1, 1)
 	end
 	local stop_ts = store.tick_ts + duration
 	local initial_scale_x = e.render.sprites[1].scale.x
@@ -4683,10 +4680,7 @@ function SU.find_most_crowded_area(enemies, area_center, area_range, grid_size, 
 
 		if max_count < cell.count then
 			max_count = cell.count
-			most_crowded_cell = {
-				x = cell.sum_x / cell.count,
-				y = cell.sum_y / cell.count
-			}
+			most_crowded_cell = V.v(cell.sum_x / cell.count, cell.sum_y / cell.count)
 		end
 	end
 

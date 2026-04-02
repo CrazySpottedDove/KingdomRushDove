@@ -436,10 +436,7 @@ game._pinch_last_center = nil
 game._pinch_last_zoom = nil
 
 function game:touchpressed(id, x, y, dx, dy, pressure)
-	self._touch_points[id] = {
-		x = x,
-		y = y
-	}
+	self._touch_points[id] = V.v(x, y)
 
 	-- 保持原有 GUI 事件
 	if self.game_gui and self.game_gui.touchpressed then
@@ -459,10 +456,7 @@ function game:touchreleased(id, x, y, dx, dy, pressure)
 end
 
 function game:touchmoved(id, x, y, dx, dy, pressure)
-	self._touch_points[id] = {
-		x = x,
-		y = y
-	}
+	self._touch_points[id] = V.v(x, y)
 
 	local points = self._touch_points
 	local ids = {}
@@ -482,10 +476,7 @@ function game:touchmoved(id, x, y, dx, dy, pressure)
 
 			if not self._pinch_last_dist then
 				self._pinch_last_dist = dist
-				self._pinch_last_center = {
-					x = cx,
-					y = cy
-				}
+				self._pinch_last_center = V.v(cx, cy)
 				self._pinch_last_zoom = self.camera.zoom
 			else
 				local scale = dist / self._pinch_last_dist

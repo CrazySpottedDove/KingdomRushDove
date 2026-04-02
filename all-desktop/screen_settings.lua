@@ -114,10 +114,7 @@ function screen_settings:init(w, h, params, done_callback)
 	local window = KWindow:new(V.v(sw, sh))
 
 	window.colors.background = colors.window_bg
-	window.scale = {
-		x = scale,
-		y = scale
-	}
+	window.scale = V.v(scale, scale)
 	self.window = window
 	self.scale = scale
 
@@ -618,10 +615,7 @@ function screen_settings:update_resolutions_list(fullscreen, highdpi)
 	local prev_selection
 
 	if sl_res.selected_item then
-		prev_selection = {
-			x = sl_res.selected_item.custom_value.x,
-			y = sl_res.selected_item.custom_value.y
-		}
+		prev_selection = V.v(sl_res.selected_item.custom_value.x, sl_res.selected_item.custom_value.y)
 	end
 
 	sl_res:clear_rows()

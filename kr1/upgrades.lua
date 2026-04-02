@@ -4,6 +4,7 @@ local km = require("lib.klua.macros")
 local E = require("entity_db")
 local bit = require("bit")
 local U = require("utils")
+local V = require("lib.klua.vector")
 require("all.constants")
 
 local function T(name)
@@ -1747,10 +1748,7 @@ function upgrades:patch_templates(max_level)
 							s.scale.x = s.scale.x * u.radius_factor
 							s.scale.y = s.scale.y * u.radius_factor
 						else
-							s.scale = {
-								x = u.radius_factor,
-								y = u.radius_factor
-							}
+							s.scale = V.v(u.radius_factor, u.radius_factor)
 						end
 					end
 				end

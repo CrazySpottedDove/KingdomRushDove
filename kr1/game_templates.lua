@@ -23243,10 +23243,7 @@ tt.particle_system.alphas = {255, 200, 150, 0}
 tt.particle_system.emit_area_spread = v(0, 1300)
 tt.particle_system.emission_rate = 0.5
 tt.particle_system.emit_direction = -3.3161255787892245
-tt.particle_system.emit_offset = {
-	x = 20,
-	y = 65.71428571428572
-}
+tt.particle_system.emit_offset = V.v(20, 65.71428571428572)
 tt.particle_system.emit_rotation = 2.0943951023931953
 tt.particle_system.emit_rotation_spread = 5.235987755982985
 tt.particle_system.emit_speed = {50, 100}

@@ -235,14 +235,8 @@ function screen:init(w, h, done_callback)
 	local tt = kui_db:get_table("screen_slots", ctx)
 	local window = KWindow:new_from_table(tt)
 
-	window.scale = {
-		x = scale,
-		y = scale
-	}
-	window.size = {
-		x = sw,
-		y = sh
-	}
+	window.scale = V.v(scale, scale)
+	window.size = V.v(sw, sh)
 	window.timer = timer
 	self.window = window
 

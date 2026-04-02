@@ -21,6 +21,7 @@ local U = require("utils")
 local LU = require("level_utils")
 local W = require("wave_db")
 local S = require("sound_db")
+local V = require("lib.klua.vector")
 -- local simulation = require("simulation")
 
 local function ready_to_attack(attack, store, factor)
@@ -687,10 +688,7 @@ local function melee_slot_enemy_position(enemy, soldier, rank, back)
 		enemy_on_the_right = not enemy_on_the_right
 	end
 
-	local enemy_pos = {
-		x = soldier.pos.x + (enemy_on_the_right and 1 or -1) * (enemy.enemy.melee_slot.x + x_off + soldier.soldier.melee_slot_offset.x),
-		y = soldier.pos.y + (enemy.enemy.melee_slot.y + y_off + soldier.soldier.melee_slot_offset.y)
-	}
+	local enemy_pos = V.v(soldier.pos.x + (enemy_on_the_right and 1 or -1) * (enemy.enemy.melee_slot.x + x_off + soldier.soldier.melee_slot_offset.x), soldier.pos.y + (enemy.enemy.melee_slot.y + y_off + soldier.soldier.melee_slot_offset.y))
 
 	return enemy_pos, enemy_on_the_right
 end

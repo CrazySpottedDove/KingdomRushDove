@@ -1,4 +1,5 @@
 local log = require("lib.klua.log"):new("grid_a_star")
+local V = require("lib.klua.vector")
 
 require("lib.klua.table")
 
@@ -161,15 +162,9 @@ end
 function a.get_node(nodes, x, y)
 	if nodes[x] == nil then
 		nodes[x] = {}
-		nodes[x][y] = {
-			x = x,
-			y = y
-		}
+		nodes[x][y] = V.v(x, y)
 	elseif nodes[x][y] == nil then
-		nodes[x][y] = {
-			x = x,
-			y = y
-		}
+		nodes[x][y] = V.v(x, y)
 	end
 
 	return nodes[x][y]

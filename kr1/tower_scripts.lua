@@ -11081,15 +11081,9 @@ function scripts.bullet_tower_ray.update(this, store)
 
 	while store.tick_ts - start_ts < ray_duration and target and not this.force_stop_ray and source do
 		if target and target.unit and target.unit.hit_offset then
-			last_hit_explosion_pos = {
-				x = target.pos.x + target.unit.hit_offset.x,
-				y = target.pos.y + target.unit.hit_offset.y
-			}
+			last_hit_explosion_pos = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 		elseif target then
-			last_hit_explosion_pos = {
-				x = target.pos.x,
-				y = target.pos.y
-			}
+			last_hit_explosion_pos = V.v(target.pos.x, target.pos.y)
 		end
 
 		if target.health and target.health.dead then
@@ -11398,10 +11392,7 @@ function scripts.tower_stargazers.create_star_death(this, store, enemy, factor)
 	local pow_s = this.powers.stars_death
 
 	if pow_s.level > 0 then
-		local e_pos = {
-			x = enemy.pos.x + enemy.unit.hit_offset.x,
-			y = enemy.pos.y + enemy.unit.hit_offset.y
-		}
+		local e_pos = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 		local targets = U.find_enemies_in_range_filter_off(e_pos, mod_star_m.stars_death_max_range, F_ENEMY, F_NONE)
 
 		if targets then
@@ -15213,10 +15204,7 @@ function scripts.tower_flamespitter.update(this, store)
 
 						local r = -this.flame_fx.render.sprites[1].r
 						-- 矩形索敌
-						local aura_center = {
-							x = this.pos.x + this.tower_top_offset.x - math.cos(r) * this.attacks.range * 0.6,
-							y = this.pos.y + this.tower_top_offset.y + math.sin(r) * this.attacks.range * 0.6
-						}
+						local aura_center = V.v(this.pos.x + this.tower_top_offset.x - math.cos(r) * this.attacks.range * 0.6, this.pos.y + this.tower_top_offset.y + math.sin(r) * this.attacks.range * 0.6)
 						local aura_targets = U.find_enemies_in_range_filter_on(tpos, this.attacks.range, attack_basic.vis_flags, attack_basic.vis_bans, function(v)
 							return U.is_inside_square(aura_center, this.attacks.range * 0.6, attack_basic.square_half_x * scale_factor, r, v.pos)
 						end)
@@ -15735,10 +15723,7 @@ function scripts.tower_ballista.update(this, store)
 						local dist = V.dist(bl.from.x, bl.from.y, pred_pos.x, pred_pos.y)
 						local factor = a.range * 1.5 / dist
 
-						bl.to = {
-							x = bl.from.x + factor * (pred_pos.x - bl.from.x),
-							y = bl.from.y + factor * (pred_pos.y - bl.from.y)
-						}
+						bl.to = V.v(bl.from.x + factor * (pred_pos.x - bl.from.x), bl.from.y + factor * (pred_pos.y - bl.from.y))
 					else
 						bl.to = V.vclone(pred_pos)
 					end
@@ -16027,10 +16012,7 @@ scripts.bullet_tower_ballista_skill_final_shot = {
 		local radius = b.damage_radius
 		local dist = V.dist(dest.x, dest.y, b.from.x, b.from.y)
 
-		s.scale = {
-			x = dist / this.image_width,
-			y = 1.35
-		}
+		s.scale = V.v(dist / this.image_width, 1.35)
 
 		local function hit_target(target)
 			local d = SU.create_bullet_damage(b, target.id, this.id)

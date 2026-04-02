@@ -1638,10 +1638,7 @@ function game_gui:go_to_map()
 		for _, tower in pairs(self.game.store.towers) do
 			local tower_data = {
 				template_name = tower.template_name,
-				pos = {
-					x = tower.pos.x,
-					y = tower.pos.y
-				},
+				pos = V.v(tower.pos.x, tower.pos.y),
 				tower_level = tower.tower.level,
 				spent = tower.tower.spent or 0,
 				holder_id = tower.tower.holder_id,
@@ -1664,10 +1661,7 @@ function game_gui:go_to_map()
 
 			-- 保存兵营的集结点
 			if tower.barrack and tower.barrack.rally_pos then
-				tower_data.rally_pos = {
-					x = tower.barrack.rally_pos.x,
-					y = tower.barrack.rally_pos.y
-				}
+				tower_data.rally_pos = V.v(tower.barrack.rally_pos.x, tower.barrack.rally_pos.y)
 				tower_data.soldier_count = #tower.barrack.soldiers
 			end
 

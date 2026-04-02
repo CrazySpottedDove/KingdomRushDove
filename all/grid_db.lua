@@ -1,5 +1,6 @@
 -- chunkname: @./all/grid_db.lua
 local log = require("lib.klua.log"):new("grid_db")
+local V = require("lib.klua.vector")
 local FS = love.filesystem
 local km = require("lib.klua.macros")
 
@@ -242,13 +243,7 @@ function grid_db:find_waypoints(from, from_fallback, to, valid_terrains, force_r
 		fi, fj = self:get_coords(from_fallback.x, from_fallback.y)
 	end
 
-	local from_c, to_c = {
-		x = fi,
-		y = fj
-	}, {
-		x = ti,
-		y = tj
-	}
+	local from_c, to_c = V.v(fi, fj), V.v(ti, tj)
 
 	if not is_cell_valid(fi, fj, self.grid[fi][fj]) then
 		from_c = GA.find_nearest_valid(from_c, self.grid, is_cell_valid, 5)

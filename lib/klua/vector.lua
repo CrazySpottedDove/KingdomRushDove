@@ -1,5 +1,5 @@
 -- chunkname: @./lib/klua/vector.lua
-local V = require("hump.vector-light")
+local V = require("lib.hump.vector-light")
 
 local ffi = require("ffi")
 ffi.cdef[[

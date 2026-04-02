@@ -954,20 +954,14 @@ function screen_map:keypressed(key, isrepeat)
 		if ctrl then
 			if key == "up" then
 				if not av.scale then
-					av.scale = {
-						x = 1,
-						y = 1
-					}
+					av.scale = V.v(1, 1)
 				end
 
 				av.scale.x = av.scale.x + 0.1
 				av.scale.y = av.scale.y + 0.1
 			elseif key == "down" then
 				if not av.scale then
-					av.scale = {
-						x = 1,
-						y = 1
-					}
+					av.scale = V.v(1, 1)
 				end
 
 				av.scale.x = av.scale.x - 0.1

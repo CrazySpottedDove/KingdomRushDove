@@ -128,6 +128,9 @@ function LU.eval_file(filename)
 	end
 
 	local env = {}
+	setmetatable(env, {
+		__index = _G
+	})
 
 	env.V = V
 	env.v = V.v

@@ -51,10 +51,7 @@ function screen:init(w, h, done_callback, ending_version)
 
 	local window = KWindow:new(v(sw, sh))
 
-	window.scale = {
-		x = scale,
-		y = scale
-	}
+	window.scale = V.v(scale, scale)
 	window.origin = origin
 	window.colors.background = ending_version and {0, 0, 0, 255} or {0, 0, 0, 255}
 

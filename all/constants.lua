@@ -1,4 +1,5 @@
 -- chunkname: @./all/constants.lua
+local V = require("lib.klua.vector")
 ASSETS_CHECK_ENABLED = false
 GEN_WAVES_ENABLED = false
 -- ========== 伤害调试（默认全关；排查异常掉血/来源链时再开）==========
@@ -321,48 +322,18 @@ HEALTH_BAR_SIZE_MEDIUM_LARGE = "med_big"
 HEALTH_BAR_SIZE_LARGE = "big"
 HEALTH_BAR_SIZES = {
 	fullhd = {
-		[HEALTH_BAR_SIZE_SMALL] = {
-			x = 22,
-			y = 3
-		},
-		[HEALTH_BAR_SIZE_MEDIUM] = {
-			x = 34,
-			y = 3
-		},
-		[HEALTH_BAR_SIZE_MEDIUM_MEDIUM] = {
-			x = 42,
-			y = 4
-		},
-		[HEALTH_BAR_SIZE_MEDIUM_LARGE] = {
-			x = 62,
-			y = 4
-		},
-		[HEALTH_BAR_SIZE_LARGE] = {
-			x = 110,
-			y = 4
-		}
+		[HEALTH_BAR_SIZE_SMALL] = V.v(22, 3),
+		[HEALTH_BAR_SIZE_MEDIUM] = V.v(34, 3),
+		[HEALTH_BAR_SIZE_MEDIUM_MEDIUM] = V.v(42, 4),
+		[HEALTH_BAR_SIZE_MEDIUM_LARGE] = V.v(62, 4),
+		[HEALTH_BAR_SIZE_LARGE] = V.v(110, 4)
 	},
 	default = {
-		[HEALTH_BAR_SIZE_SMALL] = {
-			x = 16,
-			y = 2
-		},
-		[HEALTH_BAR_SIZE_MEDIUM] = {
-			x = 24,
-			y = 2
-		},
-		[HEALTH_BAR_SIZE_MEDIUM_MEDIUM] = {
-			x = 30,
-			y = 3
-		},
-		[HEALTH_BAR_SIZE_MEDIUM_LARGE] = {
-			x = 44,
-			y = 3
-		},
-		[HEALTH_BAR_SIZE_LARGE] = {
-			x = 78,
-			y = 3
-		}
+		[HEALTH_BAR_SIZE_SMALL] = V.v(16, 2),
+		[HEALTH_BAR_SIZE_MEDIUM] = V.v(24, 2),
+		[HEALTH_BAR_SIZE_MEDIUM_MEDIUM] = V.v(30, 3),
+		[HEALTH_BAR_SIZE_MEDIUM_LARGE] = V.v(44, 3),
+		[HEALTH_BAR_SIZE_LARGE] = V.v(78, 3)
 	}
 }
 HEALTH_BAR_COLORS = {

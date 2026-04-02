@@ -1,6 +1,7 @@
 local M = {}
 
 -- Dependencies
+local V = require("lib.klua.vector")
 local perf = require("dove_modules.perf.perf")
 local ffi = require("ffi")
 local km = require("lib.klua.macros")
@@ -76,10 +77,7 @@ function M.register(sys)
 
 			ps.emit_ts = (ps.emit_ts and ps.emit_ts or store.tick_ts) + ps.ts_offset
 			ps.ts = store.tick_ts
-			ps.last_pos = {
-				x = 0,
-				y = 0
-			}
+			ps.last_pos = V.v(0, 0)
 		end
 
 		return true
@@ -158,23 +156,11 @@ function M.register(sys)
 						ss = nil,
 						flip_x = false,
 						flip_y = false,
-						pos = {
-							x = 0,
-							y = 0
-						},
+						pos = V.v(0, 0),
 						r = 0,
-						scale = {
-							x = 1,
-							y = 1
-						},
-						anchor = {
-							x = ps.anchor.x,
-							y = ps.anchor.y
-						},
-						offset = {
-							x = 0,
-							y = 0
-						},
+						scale = V.v(1, 1),
+						anchor = V.v(ps.anchor.x, ps.anchor.y),
+						offset = V.v(0, 0),
 						_draw_order = ps.draw_order and 100000 * ps.draw_order + e.id or floor(pts * 100),
 						z = ps.z,
 						sort_y = ps.sort_y,

@@ -166,14 +166,8 @@ function screen_comics:init(w, h, done_callback)
 					local t = fts(frame - last_frame)
 
 					timer_comic:tween(t, s, {
-						pos = {
-							x = x,
-							y = y
-						},
-						scale = {
-							x = scale_x,
-							y = scale_y
-						},
+						pos = V.v(x, y),
+						scale = V.v(scale_x, scale_y),
 						alpha = alpha
 					}, ease > 0 and "out-expo" or "in-expo")
 					wait(t)

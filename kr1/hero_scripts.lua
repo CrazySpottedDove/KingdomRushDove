@@ -11137,10 +11137,7 @@ function scripts.hero_lynn.update(this, store)
 
 					ultimate_entity.level = this.hero.skills.ultimate.level
 					ultimate_entity.damage_factor = this.unit.damage_factor
-					ultimate_entity.pos = {
-						x = enemy.pos.x + enemy.unit.hit_offset.x,
-						y = enemy.pos.y + enemy.unit.hit_offset.y
-					}
+					ultimate_entity.pos = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 
 					queue_insert(store, ultimate_entity)
 
@@ -32899,10 +32896,7 @@ function scripts.controller_hero_dragon_arb_passive.update(this, store)
 
 		aura.aura.source_id = this.id
 		aura.aura.ts = store.tick_ts
-		aura.pos = {
-			x = zone.x,
-			y = zone.y
-		}
+		aura.pos = V.v(zone.x, zone.y)
 
 		queue_insert(store, aura)
 

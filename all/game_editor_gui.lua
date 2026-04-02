@@ -76,19 +76,10 @@ function gui:init(w, h, editor)
 	local tt = kui_db:get_table("game_editor_gui")
 	local window = KWindow:new_from_table(tt)
 
-	window.scale = {
-		x = self.scale,
-		y = self.scale
-	}
-	window.size = {
-		x = self.sw,
-		y = self.sh
-	}
+	window.scale = V.v(self.scale, self.scale)
+	window.size = V.v(self.sw, self.sh)
 	self.window = window
-	wid("picker").size = {
-		x = self.sw,
-		y = self.sh
-	}
+	wid("picker").size = V.v(self.sw, self.sh)
 	wid("picker").gui = self
 	wid("tools_save").on_click = function()
 		editor:level_save(wid("tools_level_name").value, wid("tools_game_mode").value)
@@ -847,10 +838,7 @@ function gui:update_entity_prop(prop_view)
 	local picker = wid("picker")
 
 	if not self._last_prop_value then
-		self._last_prop_value = {
-			x = prop_value.x,
-			y = prop_value.y
-		}
+		self._last_prop_value = V.v(prop_value.x, prop_value.y)
 	end
 
 	if prop_type == PT_COORDS then

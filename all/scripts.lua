@@ -8703,10 +8703,7 @@ scripts.enemy_attracted.update = function(this, store)
 				-- U.animation_start(this, "idle", nil, store.tick_ts, true)
 				angle = math.atan2(this_pos.y - attract_pos.y, this_pos.x - attract_pos.x)
 
-				local dest = {
-					x = attract_pos.x + attract_radius * math.cos(angle + d_angle),
-					y = attract_pos.y + attract_radius * math.sin(angle + d_angle)
-				}
+				local dest = V.v(attract_pos.x + attract_radius * math.cos(angle + d_angle), attract_pos.y + attract_radius * math.sin(angle + d_angle))
 
 				U.set_destination(this, dest)
 			else
