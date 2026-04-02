@@ -4,13 +4,34 @@
 -- 2. 进度显示优化，避免频繁刷新导致闪烁
 -- 3. 删除文件使用 FU.delete_file 而非 os.remove
 -- 4. 重启卡死修复：在协程外（M:update）清理线程后再执行重启，避免在协程内调用quit导致卡死
+-- 5. 【新增】现代化 UI：卡片式界面、动画、详细信息
 
 local M = {}
 local storage = require("all.storage")
 local G = love.graphics
 local FS = love.filesystem
-local font = require("lib.klove.font_db"):f("msyh", 20)
+local font_title = require("lib.klove.font_db"):f("msyh", 28)
+local font_normal = require("lib.klove.font_db"):f("msyh", 18)
+local font_small = require("lib.klove.font_db"):f("msyh", 14)
+local font = font_normal -- 兼容旧代码
 local FU = require("all.file_utlis")
+
+-- UI 动画状态
+local ui_state = {
+	progress_display = 0, -- 显示用的进度（平滑动画）
+	progress_target = 0, -- 目标进度
+	pulse_time = 0, -- 脉冲动画计时
+	fade_alpha = 0, -- 淡入动画
+	bytes_downloaded = 0, -- 已下载字节
+	bytes_total = 0, -- 总字节
+	download_start_time = 0, -- 下载开始时间
+	current_file = "", -- 当前文件名
+	files_done = 0, -- 已完成文件数
+	files_total = 0, -- 总文件数
+	speed_samples = {}, -- 速度采样（用于计算平均速度）
+	last_bytes = 0, -- 上次记录的字节数
+	last_sample_time = 0 -- 上次采样时间
+}
 
 -- 本模块只在非安卓平台启用
 local apply_upgrade = not IS_ANDROID
@@ -44,16 +65,24 @@ local error_log_lines = {}
 
 -- 【关键配置】分块下载 - 避免超时
 local DOWNLOAD_CONFIG = {
-	chunk_size = 1 * 1024 * 1024, -- 每块 1MB（远低于任何超时限制）
-	chunk_timeout = 60, -- 单块超时 60 秒（1MB足够）
-	chunk_max_retries = 10, -- 单块最多重试 10 次
-	file_max_retries = 3, -- 整个文件失败后，最多从头重试 3 次
-	retry_backoff_base = 2, -- 退避基数
-	retry_backoff_max = 30, -- 最大退避 30 秒
-	network_error_delay = 15, -- 网络错误特殊延迟
-	base_timeout = 30, -- 基础超时（用于小请求）
-	progress_update_interval = 0.5 -- 进度更新间隔，避免闪烁
+	chunk_size_initial = 1 * 1024 * 1024, -- 初始块大小 1MB
+	chunk_size_min = 64 * 1024, -- 最小块大小 64KB
+	chunk_timeout = 45, -- 单块超时 45 秒
+	chunk_max_retries = 5, -- 单块最多重试 5 次（移除文件级重试）
+	retry_backoff_base = 1.5, -- 退避基数（缩短）
+	retry_backoff_max = 8, -- 最大退避 8 秒（大幅缩短）
+	network_error_delay = 5, -- 网络错误延迟 5 秒（缩短）
+	base_timeout = 20, -- 基础超时（用于小请求）
+	progress_update_interval = 0.3 -- 进度更新间隔
 }
+
+-- 当前自适应的块大小（会根据网络情况动态调整，单次更新中保持）
+local current_chunk_size = DOWNLOAD_CONFIG.chunk_size_initial
+-- 连续成功计数（用于判断是否可以增大块大小）
+local consecutive_success_count = 0
+
+-- 更新目录（基于 local_hash + server_hash）
+local update_cache_dir = nil
 
 -- 进度跟踪（避免频繁刷新日志）
 local last_progress_update = 0
@@ -78,17 +107,165 @@ local function log_error(line)
 	coroutine.yield()
 end
 
--- 更新进度（避免频繁刷新）
-local function update_progress(percent, force)
+-- 更新进度（避免频繁刷新）+ 收集详细信息用于现代 UI
+local function update_progress(percent, force, bytes_downloaded, bytes_total)
 	local now = love.timer.getTime()
 	if force or (now - last_progress_update) > DOWNLOAD_CONFIG.progress_update_interval then
 		current_download_progress = percent
 		last_progress_update = now
+
+		-- 更新 UI 状态
+		ui_state.progress_target = percent
+		if bytes_downloaded then
+			ui_state.bytes_downloaded = bytes_downloaded
+		end
+		if bytes_total then
+			ui_state.bytes_total = bytes_total
+		end
+
+		-- 采样下载速度（每 0.5 秒一次）
+		if bytes_downloaded and (now - ui_state.last_sample_time) >= 0.5 then
+			local delta_bytes = bytes_downloaded - ui_state.last_bytes
+			local delta_time = now - ui_state.last_sample_time
+			if delta_time > 0 then
+				local speed = delta_bytes / delta_time
+				table.insert(ui_state.speed_samples, speed)
+				-- 只保留最近 10 个样本
+				if #ui_state.speed_samples > 10 then
+					table.remove(ui_state.speed_samples, 1)
+				end
+			end
+			ui_state.last_bytes = bytes_downloaded
+			ui_state.last_sample_time = now
+		end
 	end
+end
+
+-- 设置当前下载文件信息（用于 UI 显示）
+local function set_current_file(filename, file_index, file_total)
+	ui_state.current_file = filename or ""
+	ui_state.files_done = file_index or 0
+	ui_state.files_total = file_total or 0
 end
 
 local function set_state(new_state)
 	state = new_state
+	-- 重置下载开始时间
+	if new_state == STATE_DOWNLOADING_ASSETS or new_state == STATE_DOWNLOADING_CODE then
+		ui_state.download_start_time = love.timer.getTime()
+		ui_state.speed_samples = {}
+		ui_state.last_bytes = 0
+		ui_state.last_sample_time = love.timer.getTime()
+	end
+end
+
+-- 【新增】生成更新缓存目录名（基于 local_hash 和 server_hash）
+local function get_update_cache_dir(local_hash, server_hash)
+	-- 取 hash 前 8 位作为目录名
+	local short_local = local_hash:sub(1, 8)
+	local short_server = server_hash:sub(1, 8)
+	return string.format("tmp/update_%s_%s", short_local, short_server)
+end
+
+-- 【新增】清理过时的更新缓存目录
+local function cleanup_old_update_dirs(current_dir)
+	local tmp_items = FS.getDirectoryItems("tmp")
+	if not tmp_items then
+		return
+	end
+
+	for _, item in ipairs(tmp_items) do
+		if item:match("^update_") then
+			local full_path = "tmp/" .. item
+			if full_path ~= current_dir then
+				-- 这是一个过时的更新目录，删除它
+				local info = FS.getInfo(full_path)
+				if info and info.type == "directory" then
+					-- 递归删除目录内容
+					local function remove_dir_recursive(dir_path)
+						local items = FS.getDirectoryItems(dir_path)
+						for _, sub_item in ipairs(items or {}) do
+							local sub_path = dir_path .. "/" .. sub_item
+							local sub_info = FS.getInfo(sub_path)
+							if sub_info then
+								if sub_info.type == "directory" then
+									remove_dir_recursive(sub_path)
+								else
+									FS.remove(sub_path)
+								end
+							end
+						end
+						FS.remove(dir_path)
+					end
+					remove_dir_recursive(full_path)
+					log_info("清理旧缓存: " .. item)
+				end
+			end
+		end
+	end
+end
+
+-- 【新增】确保更新缓存目录存在
+local function ensure_update_cache_dir(local_hash, server_hash)
+	local dir = get_update_cache_dir(local_hash, server_hash)
+
+	-- 确保 tmp 目录存在
+	FS.createDirectory("tmp")
+
+	-- 清理旧的更新目录
+	cleanup_old_update_dirs(dir)
+
+	-- 创建当前更新目录
+	FS.createDirectory(dir)
+	FS.createDirectory(dir .. "/code")
+	FS.createDirectory(dir .. "/assets")
+
+	update_cache_dir = dir
+	return dir
+end
+
+-- 【新增】获取文件在缓存目录中的路径
+local function get_cached_file_path(file_path, file_type)
+	if not update_cache_dir then
+		return nil
+	end
+	-- file_type: "code" 或 "assets"
+	return update_cache_dir .. "/" .. file_type .. "/" .. file_path
+end
+
+-- 【新增】检查文件是否已经完整下载到缓存
+local function is_file_cached(file_path, file_type, expected_size)
+	local cached_path = get_cached_file_path(file_path, file_type)
+	if not cached_path then
+		return false
+	end
+
+	local info = FS.getInfo(cached_path)
+	if info and info.size == expected_size then
+		return true
+	end
+	return false
+end
+
+-- 【新增】根据网络状况动态调整块大小
+local function adjust_chunk_size(success)
+	if success then
+		consecutive_success_count = consecutive_success_count + 1
+		-- 连续 5 次成功后才尝试增大块大小
+		if consecutive_success_count >= 5 and current_chunk_size < DOWNLOAD_CONFIG.chunk_size_initial then
+			current_chunk_size = math.min(current_chunk_size * 1.5, DOWNLOAD_CONFIG.chunk_size_initial)
+			consecutive_success_count = 0
+			log_info(string.format("网络稳定，增大块: %dKB", current_chunk_size / 1024))
+		end
+	else
+		-- 失败时立即减半块大小（但不低于最小值）
+		consecutive_success_count = 0
+		local old_size = current_chunk_size
+		current_chunk_size = math.max(current_chunk_size / 2, DOWNLOAD_CONFIG.chunk_size_min)
+		if current_chunk_size ~= old_size then
+			log_info(string.format("网络不稳定，减小块: %dKB", current_chunk_size / 1024))
+		end
+	end
 end
 
 -- 网络与JSON
@@ -209,21 +386,27 @@ end
 -- 判断是否应该重试
 local function should_retry_error(code, retry_count)
 	if code == 0 then -- 网络错误
+		log_error("网络错误: " .. tostring(code))
 		return true, "network"
 	end
 	if code >= 500 then -- 服务器错误
+		log_error("服务器错误: HTTP " .. tostring(code))
 		return true, "server"
 	end
 	if code == 408 or code == 429 then -- 超时或限流
+		log_error("请求超时或被限流: HTTP " .. tostring(code))
 		return true, "throttle"
 	end
 	if code == 404 then -- 文件不存在
+		log_error("文件未找到: HTTP 404")
 		return false, "not_found"
 	end
 	if code == 416 then -- Range 无效
+		log_error("请求的范围无效: HTTP 416")
 		return false, "invalid_range"
 	end
 	if code >= 400 and code < 500 then
+		log_error("客户端错误: HTTP " .. tostring(code))
 		return retry_count < 3, "client" -- 其他客户端错误，最多3次
 	end
 	return true, "unknown"
@@ -231,17 +414,22 @@ end
 
 -- 计算退避时间
 local function calculate_backoff(retry_count, error_type)
+	-- 【优化】缩短退避时间，让用户不会感觉卡住
 	if error_type == "network" then
 		return DOWNLOAD_CONFIG.network_error_delay
 	end
+	-- 使用更短的退避时间：1.5^n，上限 8 秒
 	local backoff = math.min(DOWNLOAD_CONFIG.retry_backoff_base ^ retry_count, DOWNLOAD_CONFIG.retry_backoff_max)
-	return backoff
+	return math.floor(backoff)
 end
 
 -- 【核心函数】分块下载到真实文件系统（支持断点续传）
+-- 使用自适应块大小
 local function download_to_file_chunked(url_base, file_param, real_path)
 	local part_path = real_path .. ".part"
-	local chunk_size = DOWNLOAD_CONFIG.chunk_size
+
+	-- 使用当前自适应的块大小
+	local chunk_size = current_chunk_size
 
 	-- 编码文件参数
 	local encoded_file = url_encode(file_param)
@@ -328,14 +516,9 @@ local function download_to_file_chunked(url_base, file_param, real_path)
 
 				downloaded_size = downloaded_size + #body
 
-				-- 更新进度（避免闪烁）
+				-- 更新进度（传递字节信息用于 UI）
 				local percent = downloaded_size * 100.0 / total_size
-				update_progress(percent, true)
-
-				-- -- 仅在每 10% 或完成时记录日志
-				-- if percent >= 100 or percent - (percent % 10) > (downloaded_size - #body) * 100.0 / total_size - ((downloaded_size - #body) * 100.0 / total_size % 10) then
-				-- 	log_info(string.format("进度: %.0f%%", percent))
-				-- end
+				update_progress(percent, true, downloaded_size, total_size)
 
 				chunk_success = true
 				break
@@ -351,28 +534,24 @@ local function download_to_file_chunked(url_base, file_param, real_path)
 				chunk_retries = chunk_retries + 1
 				if chunk_retries > DOWNLOAD_CONFIG.chunk_max_retries then
 					log_error("块下载失败（超过重试限制）")
-
-					-- 整个文件重试
-					file_retries = file_retries + 1
-					if file_retries > DOWNLOAD_CONFIG.file_max_retries then
-						log_error("文件下载失败（整体重试用尽）")
-						return false
-					end
-
-					log_info(string.format("从头重试 (第 %d 次)...", file_retries))
-					os.remove(part_path)
-					downloaded_size = 0
-					break -- 跳出块重试循环
+					return false
 				end
 
+				-- 【优化】使用自适应块大小
+				adjust_chunk_size(false)
+				-- 更新本次循环使用的块大小
+				chunk_size = current_chunk_size
+
 				local backoff = calculate_backoff(chunk_retries, error_type)
-				log_info(string.format("重试中 (%d/%d, %ds)...", chunk_retries, DOWNLOAD_CONFIG.chunk_max_retries, backoff))
+				log_info(string.format("重试中 (%d/%d, %ds, 块%dKB)...", chunk_retries, DOWNLOAD_CONFIG.chunk_max_retries, backoff, chunk_size / 1024))
 				async_sleep(backoff)
 			end
 		end
 
-		if not chunk_success then
-		-- 触发了整体重试，继续外层循环
+		-- 【优化】成功下载块后，尝试逐步恢复块大小
+		if chunk_success then
+			adjust_chunk_size(true)
+			chunk_size = current_chunk_size
 		end
 	end
 
@@ -417,10 +596,11 @@ local function download_to_file_chunked(url_base, file_param, real_path)
 	return true
 end
 
--- 【核心函数】分块下载到 LÖVE 文件系统
+-- 【核心函数】分块下载到 LÖVE 文件系统（使用自适应块大小）
 local function download_to_lovefs_chunked(url_base, file_param, fs_path)
 	local part_path = fs_path .. ".part"
-	local chunk_size = DOWNLOAD_CONFIG.chunk_size
+	-- 使用自适应块大小
+	local chunk_size = current_chunk_size
 
 	local encoded_file = url_encode(file_param)
 	local url = url_base .. "?file=" .. encoded_file
@@ -455,8 +635,7 @@ local function download_to_lovefs_chunked(url_base, file_param, fs_path)
 		log_info(string.format("续传 %.2f/%.2f KB", downloaded_size / 1024, total_size / 1024))
 	end
 
-	-- 分块下载
-	local file_retries = 0
+	-- 分块下载（移除文件级别重试，只保留块级别重试）
 	while downloaded_size < total_size do
 		local chunk_start = downloaded_size
 		local chunk_end = math.min(chunk_start + chunk_size - 1, total_size - 1)
@@ -477,9 +656,9 @@ local function download_to_lovefs_chunked(url_base, file_param, fs_path)
 				FS.write(part_path, existing)
 				downloaded_size = #existing
 
-				-- 更新进度
+				-- 更新进度（传递字节信息用于 UI）
 				local percent = downloaded_size * 100.0 / total_size
-				update_progress(percent, true)
+				update_progress(percent, true, downloaded_size, total_size)
 
 				chunk_success = true
 				break
@@ -493,26 +672,24 @@ local function download_to_lovefs_chunked(url_base, file_param, fs_path)
 
 				chunk_retries = chunk_retries + 1
 				if chunk_retries > DOWNLOAD_CONFIG.chunk_max_retries then
-					file_retries = file_retries + 1
-					if file_retries > DOWNLOAD_CONFIG.file_max_retries then
-						return false, nil
-					end
-
-					log_info("从头重新下载...")
-					FS.remove(part_path)
-					existing = ""
-					downloaded_size = 0
-					break
+					log_error("块下载失败（超过重试限制）")
+					return false, nil
 				end
 
+				-- 使用自适应块大小
+				adjust_chunk_size(false)
+				chunk_size = current_chunk_size
+
 				local backoff = calculate_backoff(chunk_retries, error_type)
-				log_info(string.format("重试中 (%d/%d)...", chunk_retries, DOWNLOAD_CONFIG.chunk_max_retries))
+				log_info(string.format("重试中 (%d/%d, %ds, 块%dKB)...", chunk_retries, DOWNLOAD_CONFIG.chunk_max_retries, backoff, chunk_size / 1024))
 				async_sleep(backoff)
 			end
 		end
 
-		if not chunk_success then
-		-- 触发了整体重试
+		-- 成功下载块后，尝试恢复块大小
+		if chunk_success then
+			adjust_chunk_size(true)
+			chunk_size = current_chunk_size
 		end
 	end
 
@@ -572,8 +749,9 @@ local function diff_assets()
 	return added_or_modified
 end
 
+-- 【重构】下载资源到缓存目录（不直接覆盖本地文件）
 local function sync_assets(added_or_modified)
-	if not server_address then
+	if not server_address or not update_cache_dir then
 		return true
 	end
 	set_state(STATE_DOWNLOADING_ASSETS)
@@ -582,91 +760,139 @@ local function sync_assets(added_or_modified)
 	local file_count = #added_or_modified
 
 	for i, file_path in ipairs(added_or_modified) do
-		local local_file_path = "_assets/" .. file_path
+		-- 下载到缓存目录，而不是直接覆盖本地文件
+		local cached_path = update_cache_dir .. "/assets/" .. file_path
 
-		log_info(string.format("[%d/%d] %s", i, file_count, file_path))
+		-- 设置当前文件信息（用于 UI）
+		set_current_file(file_path, i, file_count)
+		log_info(string.format("[资源 %d/%d] %s", i, file_count, file_path))
 
-		FU.ensure_parent_dir(local_file_path)
-		local ok = download_to_file_chunked(url_base, file_path, local_file_path)
+		-- 检查是否已经在缓存中（断点续传）
+		local cached_info = FS.getInfo(cached_path)
+		if cached_info and cached_info.size and cached_info.size > 0 then
+			log_info("已缓存，跳过")
+		else
+			FU.ensure_parent_dir(cached_path)
+			local ok = download_to_file_chunked(url_base, file_path, cached_path)
 
-		if not ok then
-			log_error("下载失败: " .. file_path)
-			return false
+			if not ok then
+				log_error("下载失败: " .. file_path)
+				return false
+			end
 		end
-
-	-- log_info(string.format("完成 (%d/%d)", i, file_count))
 	end
 
 	return true
 end
 
+-- 【重构】下载代码到缓存目录
 local function upgrade_new_version(info)
 	set_state(STATE_DOWNLOADING_CODE)
-
-	local tmp_dir = ".upgrade_tmp"
-	FS.remove(tmp_dir)
-	FS.createDirectory(tmp_dir)
 
 	local added_or_modified = info.added_or_modified_files or {}
 	local url_base = server_address .. "file"
 	local file_count = #added_or_modified
 
 	for i, file_path in ipairs(added_or_modified) do
-		local tmp_file_path = tmp_dir .. "/" .. file_path
+		-- 下载到缓存目录
+		local cached_path = update_cache_dir .. "/code/" .. file_path
 
-		log_info(string.format("[%d/%d] %s", i, file_count, file_path))
+		-- 设置当前文件信息（用于 UI）
+		set_current_file(file_path, i, file_count)
+		log_info(string.format("[代码 %d/%d] %s", i, file_count, file_path))
 
-		local ok, _ = download_to_lovefs_chunked(url_base, file_path, tmp_file_path)
+		-- 检查是否已经在缓存中（断点续传）
+		local cached_info = FS.getInfo(cached_path)
+		if cached_info and cached_info.size and cached_info.size > 0 then
+			log_info("已缓存，跳过")
+		else
+			FU.ensure_parent_dir(cached_path)
+			local ok, _ = download_to_lovefs_chunked(url_base, file_path, cached_path)
 
-		if not ok then
-			log_error("下载失败: " .. file_path)
-			FS.remove(tmp_dir)
-			return false
+			if not ok then
+				log_error("下载失败: " .. file_path)
+				return false
+			end
 		end
-
-	-- log_info(string.format("完成 (%d/%d)", i, file_count))
 	end
 
-	-- 提交更改
+	return true
+end
+
+-- 【新增】统一提交所有更改（代码 + 资源）
+local function commit_all_changes(info)
 	set_state(STATE_COMMITTING_CHANGES)
-	for _, file_path in ipairs(added_or_modified) do
-		local content = FS.read(tmp_dir .. "/" .. file_path)
+
+	local added_or_modified_code = info.added_or_modified_files or {}
+	local added_or_modified_assets = info.added_or_modified_assets or {}
+	local deleted_files = info.deleted_files or {}
+
+	-- 1. 提交代码文件
+	for _, file_path in ipairs(added_or_modified_code) do
+		local cached_path = update_cache_dir .. "/code/" .. file_path
+		local content = FS.read(cached_path)
 		if content then
 			FU.ensure_parent_dir(file_path)
 			if not FU.write_file(file_path, content) then
-				log_error("写入文件失败: " .. file_path)
-				FS.remove(tmp_dir)
+				log_error("写入代码失败: " .. file_path)
 				return false
 			end
-			log_info("提交: " .. file_path)
+			log_info("提交代码: " .. file_path)
 		else
-			log_error("读取临时文件失败: " .. file_path)
-			FS.remove(tmp_dir)
+			log_error("读取缓存失败: " .. cached_path)
 			return false
 		end
 	end
 
-	-- 【修复3】删除文件使用 FU.delete_file，并忽略不存在的文件
-	for _, file_path in ipairs(info.deleted_files or {}) do
+	-- 2. 提交资源文件（从缓存复制到 _assets/）
+	for _, file_path in ipairs(added_or_modified_assets) do
+		local cached_path = update_cache_dir .. "/assets/" .. file_path
+		local local_path = "_assets/" .. file_path
+
+		-- 读取缓存文件
+		local rf = io.open(cached_path, "rb")
+		if not rf then
+			log_error("读取资源缓存失败: " .. cached_path)
+			return false
+		end
+		local content = rf:read("*a")
+		rf:close()
+
+		-- 写入本地文件
+		FU.ensure_parent_dir(local_path)
+		local wf = io.open(local_path, "wb")
+		if not wf then
+			log_error("写入资源失败: " .. local_path)
+			return false
+		end
+		wf:write(content)
+		wf:close()
+		log_info("提交资源: " .. file_path)
+	end
+
+	-- 3. 删除文件
+	for _, file_path in ipairs(deleted_files) do
 		if FS.getInfo(file_path) then
-			local success = FU.delete_file and FU.delete_file(file_path) or os.remove(file_path)
+			local success = FU.delete_file and FU.delete_file(file_path) or FS.remove(file_path)
 			if not success then
 				log_error("删除文件失败: " .. file_path)
-			-- 不要因为删除失败就中断更新，继续
+			-- 不中断更新
 			else
 				log_info("删除: " .. file_path)
 			end
 		end
 	end
 
-	FS.remove(tmp_dir)
-
+	-- 4. 更新版本号
 	if info.master_commit_hash then
 		if not FU.write_file("current_version_commit_hash.txt", info.master_commit_hash) then
 			log_error("更新版本号失败")
 			return false
 		end
 	end
+
+	-- 5. 清理缓存目录
+	cleanup_old_update_dirs(nil) -- 传 nil 表示清理所有更新目录
 
 	return true
 end
@@ -761,8 +987,20 @@ local function run_code()
 end
 
 local function do_update()
-	local added_or_modified = diff_assets()
-	if not added_or_modified then
+	-- 【新增】初始化缓存目录
+	local local_hash = FS.read("current_version_commit_hash.txt")
+	if local_hash then
+		local_hash = local_hash:match("^%s*(.-)%s*$")
+	else
+		local_hash = "unknown"
+	end
+	local server_hash = update_response.master_commit_hash or "unknown"
+	ensure_update_cache_dir(local_hash, server_hash)
+	log_info("缓存目录: " .. update_cache_dir)
+
+	-- 1. 检查资源差异
+	local added_or_modified_assets = diff_assets()
+	if not added_or_modified_assets then
 		return {
 			status = "Error",
 			title = "升级失败",
@@ -770,24 +1008,48 @@ local function do_update()
 		}
 	end
 
-	local success = sync_assets(added_or_modified)
-	if success then
-		success = upgrade_new_version(update_response)
-	end
-
-	if success then
-		return {
-			status = "Updated",
-			-- message = "资源已更新，点击重启游戏。"
-			message = "资源已更新，点击关闭游戏"
-		}
-	else
+	-- 2. 下载资源到缓存
+	local success = sync_assets(added_or_modified_assets)
+	if not success then
 		return {
 			status = "Error",
 			title = "升级失败",
-			message = "升级失败，但已保留进度，下次将自动续传。\n\n" .. table.concat(error_log_lines, "\n")
+			message = "下载资源失败，但已保留进度，下次将自动续传。\n\n" .. table.concat(error_log_lines, "\n")
 		}
 	end
+
+	-- 3. 下载代码到缓存
+	success = upgrade_new_version(update_response)
+	if not success then
+		return {
+			status = "Error",
+			title = "升级失败",
+			message = "下载代码失败，但已保留进度，下次将自动续传。\n\n" .. table.concat(error_log_lines, "\n")
+		}
+	end
+
+	-- 4. 【关键】所有下载完成后，统一提交更改
+	-- 构建完整的更新信息
+	local commit_info = {
+		added_or_modified_files = update_response.added_or_modified_files or {},
+		added_or_modified_assets = added_or_modified_assets,
+		deleted_files = update_response.deleted_files or {},
+		master_commit_hash = update_response.master_commit_hash
+	}
+
+	success = commit_all_changes(commit_info)
+	if not success then
+		return {
+			status = "Error",
+			title = "升级失败",
+			message = "提交更改失败。\n\n" .. table.concat(error_log_lines, "\n")
+		}
+	end
+
+	return {
+		status = "Updated",
+		message = "资源已更新，点击关闭游戏"
+	}
 end
 
 function M:init(params, done_callback)
@@ -870,49 +1132,281 @@ function M:update(dt)
 	end
 end
 
+-- ============================================================
+-- 【现代化 UI 绘制】
+-- ============================================================
+
+-- 绘制圆角矩形（填充模式）
+local function draw_rounded_rect_fill(x, y, w, h, r)
+	r = math.min(r, w / 2, h / 2)
+	-- 中间主体
+	G.rectangle("fill", x + r, y, w - 2 * r, h)
+	-- 左右两侧
+	G.rectangle("fill", x, y + r, r, h - 2 * r)
+	G.rectangle("fill", x + w - r, y + r, r, h - 2 * r)
+	-- 四个圆角
+	G.arc("fill", x + r, y + r, r, math.pi, math.pi * 1.5)
+	G.arc("fill", x + w - r, y + r, r, -math.pi / 2, 0)
+	G.arc("fill", x + w - r, y + h - r, r, 0, math.pi / 2)
+	G.arc("fill", x + r, y + h - r, r, math.pi / 2, math.pi)
+end
+
+-- 绘制圆角矩形边框（只画外圈弧线，无直角）
+local function draw_rounded_rect_line(x, y, w, h, r)
+	r = math.min(r, w / 2, h / 2)
+	-- 四条直线
+	G.line(x + r, y, x + w - r, y) -- 上
+	G.line(x + w, y + r, x + w, y + h - r) -- 右
+	G.line(x + w - r, y + h, x + r, y + h) -- 下
+	G.line(x, y + h - r, x, y + r) -- 左
+	-- 四个圆角（使用 "open" 模式避免画到圆心的连线）
+	G.arc("line", "open", x + r, y + r, r, math.pi, math.pi * 1.5)
+	G.arc("line", "open", x + w - r, y + r, r, -math.pi / 2, 0)
+	G.arc("line", "open", x + w - r, y + h - r, r, 0, math.pi / 2)
+	G.arc("line", "open", x + r, y + h - r, r, math.pi / 2, math.pi)
+end
+
+-- 格式化字节数
+local function format_bytes(bytes)
+	if bytes < 1024 then
+		return string.format("%d B", bytes)
+	elseif bytes < 1024 * 1024 then
+		return string.format("%.1f KB", bytes / 1024)
+	else
+		return string.format("%.2f MB", bytes / 1024 / 1024)
+	end
+end
+
+-- 格式化时间
+local function format_time(seconds)
+	if seconds < 60 then
+		return string.format("%d秒", math.ceil(seconds))
+	elseif seconds < 3600 then
+		return string.format("%d分%d秒", math.floor(seconds / 60), math.floor(seconds % 60))
+	else
+		return string.format("%d时%d分", math.floor(seconds / 3600), math.floor((seconds % 3600) / 60))
+	end
+end
+
+-- 计算平均下载速度
+local function get_average_speed()
+	if #ui_state.speed_samples == 0 then
+		return 0
+	end
+	local sum = 0
+	for _, s in ipairs(ui_state.speed_samples) do
+		sum = sum + s
+	end
+	return sum / #ui_state.speed_samples
+end
+
+-- 计算剩余时间
+local function get_eta()
+	local speed = get_average_speed()
+	if speed <= 0 or ui_state.bytes_total <= 0 then
+		return nil
+	end
+	local remaining = ui_state.bytes_total - ui_state.bytes_downloaded
+	return remaining / speed
+end
+
+-- 主绘制函数
 function M:draw()
-	G.setFont(font)
-	G.setColor(1, 1, 1, 1)
 	local w, h = G.getDimensions()
-	local text = STATE_STRING_MAP[state]
-	local tw = font:getWidth(text)
-	local th = font:getHeight()
-	G.print(text, (w - tw) / 2, (h - th) / 3)
+	local dt = love.timer.getDelta()
 
-	-- 【修复2】优化进度显示，避免闪烁
-	G.setColor(1, 1, 1, 1)
-	local log_y = (h - th) / 3 + 60
+	-- 更新动画
+	ui_state.pulse_time = ui_state.pulse_time + dt
+	ui_state.fade_alpha = math.min(ui_state.fade_alpha + dt * 2, 1)
 
-	-- 显示日志
-	for i, line in ipairs(update_log_lines) do
-		G.print(line, 40, log_y + (i - 1) * 22)
+	-- 平滑进度动画
+	local progress_diff = ui_state.progress_target - ui_state.progress_display
+	ui_state.progress_display = ui_state.progress_display + progress_diff * math.min(dt * 8, 1)
+
+	-- 背景渐变（深蓝色调）
+	local bg_top = {0.08, 0.10, 0.15}
+	local bg_bottom = {0.05, 0.07, 0.12}
+	for i = 0, h do
+		local t = i / h
+		G.setColor(bg_top[1] + (bg_bottom[1] - bg_top[1]) * t, bg_top[2] + (bg_bottom[2] - bg_top[2]) * t, bg_top[3] + (bg_bottom[3] - bg_top[3]) * t, ui_state.fade_alpha)
+		G.rectangle("fill", 0, i, w, 1)
 	end
 
-	-- 显示当前进度条（如果正在下载）
+	-- 主卡片尺寸（尽量填满窗口，留 20px 边距）
+	local card_x = 0.05 * w + 20
+	local card_y = 0.05 * h + 20
+	local card_w = w - 2 * card_x
+	local card_h = h - 2 * card_y
+
+	-- 卡片阴影
+	G.setColor(0, 0, 0, 0.3 * ui_state.fade_alpha)
+	draw_rounded_rect_fill(card_x + 4, card_y + 4, card_w, card_h, 16)
+
+	-- 卡片背景
+	G.setColor(0.12, 0.14, 0.18, 0.95 * ui_state.fade_alpha)
+	draw_rounded_rect_fill(card_x, card_y, card_w, card_h, 16)
+
+	-- 卡片边框（微光效果）
+	local pulse = math.sin(ui_state.pulse_time * 2) * 0.1 + 0.2
+	G.setColor(0.3, 0.5, 0.8, pulse * ui_state.fade_alpha)
+	G.setLineWidth(2)
+	draw_rounded_rect_line(card_x, card_y, card_w, card_h, 16)
+	G.setLineWidth(1)
+
+	-- 标题区域
+	local title_y = card_y + 20
+	G.setFont(font_title)
+	local title_text = "正在更新游戏"
+	local title_w = font_title:getWidth(title_text)
+	G.setColor(1, 1, 1, ui_state.fade_alpha)
+	G.print(title_text, card_x + (card_w - title_w) / 2, title_y)
+
+	-- 状态文字
+	local status_y = title_y + 40
+	G.setFont(font_normal)
+	local status_text = STATE_STRING_MAP[state] or "处理中……"
+	local status_w = font_normal:getWidth(status_text)
+	G.setColor(0.7, 0.8, 0.9, ui_state.fade_alpha)
+	G.print(status_text, card_x + (card_w - status_w) / 2, status_y)
+
+	-- 进度条区域
+	local bar_y = status_y + 45
+	local bar_x = card_x + 30
+	local bar_w = card_w - 60
+	local bar_h = 24
+
 	if state == STATE_DOWNLOADING_ASSETS or state == STATE_DOWNLOADING_CODE then
-		if current_download_progress > 0 and current_download_progress < 100 then
-			local bar_y = log_y + #update_log_lines * 22 + 10
-			local bar_w = w - 80
-			local bar_h = 20
-			local bar_x = 40
+		-- 进度条背景
+		G.setColor(0.2, 0.22, 0.28, ui_state.fade_alpha)
+		draw_rounded_rect_fill(bar_x, bar_y, bar_w, bar_h, bar_h / 2)
 
-			-- 背景
-			G.setColor(0.3, 0.3, 0.3, 1)
-			G.rectangle("fill", bar_x, bar_y, bar_w, bar_h)
+		-- 进度条填充（渐变色）
+		local progress_w = bar_w * ui_state.progress_display / 100
+		if progress_w > 0 then
+			-- 渐变：蓝色到青色
+			local gradient_start = {0.2, 0.6, 1.0}
+			local gradient_end = {0.3, 0.9, 0.7}
+			local t = ui_state.progress_display / 100
+			G.setColor(gradient_start[1] + (gradient_end[1] - gradient_start[1]) * t, gradient_start[2] + (gradient_end[2] - gradient_start[2]) * t, gradient_start[3] + (gradient_end[3] - gradient_start[3]) * t, ui_state.fade_alpha)
+			draw_rounded_rect_fill(bar_x, bar_y, math.max(progress_w, bar_h), bar_h, bar_h / 2)
 
-			-- 进度
-			G.setColor(0.2, 0.8, 0.3, 1)
-			G.rectangle("fill", bar_x, bar_y, bar_w * current_download_progress / 100, bar_h)
-
-			-- 边框
-			G.setColor(1, 1, 1, 1)
-			G.rectangle("line", bar_x, bar_y, bar_w, bar_h)
-
-		-- 百分比文字
-		-- local progress_text = string.format("%.1f%%", current_download_progress)
-		-- local progress_tw = font:getWidth(progress_text)
-		-- G.print(progress_text, bar_x + (bar_w - progress_tw) / 2, bar_y + 2)
+			-- 发光效果
+			G.setColor(1, 1, 1, 0.15 * ui_state.fade_alpha)
+			draw_rounded_rect_fill(bar_x, bar_y, math.max(progress_w, bar_h), bar_h / 2, bar_h / 4)
 		end
+
+		-- 进度百分比（居中显示）
+		local percent_text = string.format("%.1f%%", ui_state.progress_display)
+		local percent_w = font_normal:getWidth(percent_text)
+		G.setColor(1, 1, 1, ui_state.fade_alpha)
+		G.print(percent_text, bar_x + (bar_w - percent_w) / 2, bar_y + 2)
+
+		-- 详细信息区域
+		local info_y = bar_y + bar_h + 15
+		G.setFont(font_small)
+
+		-- 当前文件
+		if ui_state.current_file ~= "" then
+			local filename = ui_state.current_file:match("[^/]+$") or ui_state.current_file
+			if #filename > 50 then
+				filename = "..." .. filename:sub(-47)
+			end
+			G.setColor(0.6, 0.7, 0.8, ui_state.fade_alpha)
+			G.print("当前文件: " .. filename, bar_x, info_y)
+		end
+
+		-- 文件进度
+		if ui_state.files_total > 0 then
+			local files_text = string.format("文件进度: %d / %d", ui_state.files_done, ui_state.files_total)
+			G.setColor(0.6, 0.7, 0.8, ui_state.fade_alpha)
+			G.print(files_text, bar_x + bar_w - font_small:getWidth(files_text), info_y)
+		end
+
+		-- 下载速度和剩余时间
+		local speed_y = info_y + 20
+		local speed = get_average_speed()
+		if speed > 0 then
+			local speed_text = format_bytes(speed) .. "/s"
+			G.setColor(0.5, 0.8, 0.5, ui_state.fade_alpha)
+			G.print("速度: " .. speed_text, bar_x, speed_y)
+		end
+
+		-- 已下载/总大小
+		if ui_state.bytes_total > 0 then
+			local size_text = string.format("%s / %s", format_bytes(ui_state.bytes_downloaded), format_bytes(ui_state.bytes_total))
+			G.setColor(0.6, 0.7, 0.8, ui_state.fade_alpha)
+			local size_w = font_small:getWidth(size_text)
+			G.print(size_text, bar_x + (bar_w - size_w) / 2, speed_y)
+		end
+
+		-- 剩余时间
+		local eta = get_eta()
+		if eta and eta > 0 and eta < 86400 then
+			local eta_text = "剩余: " .. format_time(eta)
+			G.setColor(0.6, 0.7, 0.8, ui_state.fade_alpha)
+			G.print(eta_text, bar_x + bar_w - font_small:getWidth(eta_text), speed_y)
+		end
+	else
+		-- 非下载状态：显示加载动画
+		local spinner_x = card_x + card_w / 2
+		local spinner_y = bar_y + 20
+		local spinner_r = 20
+		G.setLineWidth(3)
+		for i = 0, 7 do
+			local angle = (i / 8) * math.pi * 2 + ui_state.pulse_time * 4
+			local alpha = ((i + 1) / 8) * ui_state.fade_alpha
+			G.setColor(0.3, 0.6, 1.0, alpha)
+			local x1 = spinner_x + math.cos(angle) * (spinner_r - 8)
+			local y1 = spinner_y + math.sin(angle) * (spinner_r - 8)
+			local x2 = spinner_x + math.cos(angle) * spinner_r
+			local y2 = spinner_y + math.sin(angle) * spinner_r
+			G.line(x1, y1, x2, y2)
+		end
+		G.setLineWidth(1)
+	end
+
+	-- 日志区域（卡片底部，动态计算高度）
+	-- bar_y 是相对屏幕的绝对坐标，所以 log_y 也是
+	local log_y = bar_y + bar_h + 60 -- 进度条下方留出信息区域空间
+	local log_bottom_margin = 15
+	local log_x = card_x + 20
+	local log_w = card_w - 40
+	local log_h = (card_y + card_h - log_bottom_margin) - log_y
+
+	-- 日志背景
+	G.setColor(0.08, 0.09, 0.12, 0.8 * ui_state.fade_alpha)
+	draw_rounded_rect_fill(log_x, log_y, log_w, log_h, 8)
+
+	-- 计算可显示的日志行数（填满整个日志区域）
+	local line_height = 18
+	local log_padding = 8
+	local max_visible_logs = math.floor((log_h - log_padding * 2) / line_height)
+
+	-- 增加日志保留数量以填满区域
+	if max_visible_logs > update_log_line_max_count then
+		update_log_line_max_count = max_visible_logs
+	end
+
+	local visible_logs = math.min(max_visible_logs, #update_log_lines)
+	local start_idx = math.max(1, #update_log_lines - visible_logs + 1)
+
+	-- 计算最大字符数（根据日志区域宽度）
+	local max_chars = math.floor((log_w - 20) / font_small:getWidth("M"))
+
+	G.setFont(font_small)
+	for i = start_idx, #update_log_lines do
+		local line = update_log_lines[i]
+		if #line > max_chars then
+			line = line:sub(1, max_chars - 3) .. "..."
+		end
+		local line_y = log_y + log_padding + (i - start_idx) * line_height
+		-- 错误日志用红色
+		if line:find("错误") then
+			G.setColor(1, 0.4, 0.4, ui_state.fade_alpha)
+		else
+			G.setColor(0.5, 0.6, 0.7, ui_state.fade_alpha)
+		end
+		G.print(line, log_x + 10, line_y)
 	end
 end
 
