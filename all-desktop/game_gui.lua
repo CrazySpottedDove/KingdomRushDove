@@ -617,6 +617,34 @@ function game_gui:update(dt)
 			end
 		end
 
+		-- Update rally range position when camera moves
+		if game_gui.mode == GUI_MODE_RALLY_TOWER and not game_gui.rallyrange.hidden then
+			local e = game_gui.selected_entity
+			if e then
+				local tower_entity = e
+				if not e.barrack and e.soldier and e.soldier.tower_id then
+					tower_entity = game_gui.game.simulation.store.entities[e.soldier.tower_id]
+				end
+
+				if tower_entity and tower_entity.barrack then
+					local ux, uy = game_gui:g2u(V.v(V.add(tower_entity.pos.x, tower_entity.pos.y, tower_entity.tower.range_offset.x, tower_entity.tower.range_offset.y)))
+					game_gui:show_rally_range(ux, uy, tower_entity.barrack.rally_range)
+				end
+			end
+		end
+
+		-- Update tower_range_upgrade position when camera moves
+		if not game_gui.tower_range_upgrade.hidden then
+			local e = game_gui.selected_entity
+			if e and e.tower then
+				local ux, uy = game_gui:g2u(V.v(V.add(e.pos.x, e.pos.y, e.tower.range_offset.x, e.tower.range_offset.y)))
+				local stored_range = game_gui.tower_range_upgrade.range_shown
+				if stored_range then
+					game_gui:show_tower_range_upgrade(ux, uy, stored_range)
+				end
+			end
+		end
+
 		local st = game_gui.swap_entity
 
 		if game_gui.mode == GUI_MODE_SWAP_TOWER and st and st.tower and st.tower.blocked then
@@ -6713,7 +6741,7 @@ function TowerMenu:update(dt)
 		end
 	end
 
-	if e and e.attacks and e.attacks.range and not game_gui.tower_range.hidden and game_gui.tower_range.range_shown ~= e.attacks.range then
+	if e and e.attacks and e.attacks.range and not game_gui.tower_range.hidden then
 		local ux, uy = game_gui:g2u(V.v(V.add(e.pos.x, e.pos.y, e.tower.range_offset.x, e.tower.range_offset.y)), true)
 
 		game_gui:show_tower_range(ux, uy, e.attacks.range)
