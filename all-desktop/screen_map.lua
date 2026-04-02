@@ -5084,6 +5084,16 @@ function HeroRoomViewKR1:initialize(size)
 	local spacing_x = 46 -- 7列右边缘在 6*46+84*0.625=328.5，加滚动条24px共352.5，容器355px
 	local spacing_y = 50
 
+	-- 安卓端：给按钮提供更大的点击区域
+	local android_scale_factor = 7 / 5
+	if IS_ANDROID then
+		scale.x = scale.x * android_scale_factor
+		scale.y = scale.y * android_scale_factor
+		spacing_x = spacing_x * android_scale_factor
+		spacing_y = spacing_y * android_scale_factor
+		per_row = per_row / android_scale_factor
+	end
+
 	-- 深色半透明主题色
 	ht.colors.scroller_background = {40, 30, 20, 180}
 	ht.colors.scroller_foreground = {140, 110, 60, 220}
@@ -5162,7 +5172,8 @@ function HeroRoomViewKR1:initialize(size)
 
 		-- 复用选中框资源作为边框
 		local border = KImageView:new("hero_room_thumbs_select_0000")
-		border.scale = scale
+		border.scale = V.vclone(scale)
+		border.scale:scalar_mul(1.1) -- 稍微放大一点强调
 		border.anchor = v(border.size.x / 2, border.size.y / 2)
 		border.pos = v(thumb_render_size / 2, thumb_render_size / 2)
 		border.propagate_on_click = true
@@ -5175,7 +5186,7 @@ function HeroRoomViewKR1:initialize(size)
 		label.pos = V.v(thumb_render_size * (1 - label_size_factor * 1.1), thumb_render_size * (1 - label_size_factor * 1.1))
 		label.text = tostring(slot_number)
 		label.font_name = "h" -- 使用标题字体
-		label.font_size = 28 -- 更大的字体
+		label.font_size = 32 -- 更大的字体
 		label.text_align = "center"
 		label.vertical_align = "middle"
 		label.colors.text = {255, 255, 255, 255}
@@ -5187,6 +5198,10 @@ function HeroRoomViewKR1:initialize(size)
 			thickness = 3,
 			outline_color = {0, 0, 0, 1}
 		}}
+
+		if IS_ANDROID then
+			label.font_size = label.font_size * android_scale_factor
+		end
 
 		overlay:add_child(label)
 		ht:add_child(overlay)
