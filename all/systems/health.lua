@@ -1,14 +1,23 @@
 local M = {}
 
-function M.register(sys, deps)
-	local perf = deps.perf
-	local band = deps.band
-	local bor = deps.bor
-	local U = deps.U
-	local SU = deps.SU
-	local signal = deps.signal
-	local E = deps.E
-	local queue_remove = deps.queue_remove
+local bit = require("bit")
+local bor = bit.bor
+local band = bit.band
+local perf = require("dove_modules.perf.perf")
+local E = require("entity_db")
+local signal = require("lib.hump.signal")
+local SU = require("script_utils")
+local U = require("utils")
+
+function M.register(sys)
+
+	local function queue_insert(store, e)
+		simulation:queue_insert_entity(e)
+	end
+
+	local function queue_remove(store, e)
+		simulation:queue_remove_entity(e)
+	end
 
 	--- 从 damage.source_id 沿 modifier.source_id / bullet.source_id 追溯
 	local function damage_trace_bullet_hints(s)

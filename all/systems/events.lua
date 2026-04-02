@@ -1,6 +1,6 @@
 local M = {}
 
-function M.register(sys, deps)
+function M.register(sys)
 	sys.events = {}
 	sys.events.name = "events"
 

@@ -1,8 +1,9 @@
 local M = {}
 
-function M.register(sys, deps)
-	local F = deps.F
-	local I = deps.I
+local F = require("lib.klove.font_db")
+local I = require("lib.klove.image_db")
+
+function M.register(sys)
 
 	sys.texts = {}
 	sys.texts.name = "texts"

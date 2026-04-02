@@ -1,7 +1,8 @@
 local M = {}
 
-function M.register(sys, deps)
-	local perf = deps.perf
+local perf = require("dove_modules.perf.perf")
+
+function M.register(sys)
 
 	sys.hero_xp_tracking = {}
 	sys.hero_xp_tracking.name = "hero_xp_tracking"

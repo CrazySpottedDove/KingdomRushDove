@@ -1,14 +1,13 @@
 local M = {}
 
-function M.register(sys, deps)
-	if not deps.ASSETS_CHECK_ENABLED then
+local log = require("lib.klua.log"):new("systems")
+local E = require("entity_db")
+local I = require("lib.klove.image_db")
+
+function M.register(sys)
+	if not ASSETS_CHECK_ENABLED then
 		return
 	end
-
-	local E = deps.E
-	local I = deps.I
-	local log = deps.log
-
 	sys.assets_checker = {}
 	sys.assets_checker.name = "assets_checker"
 

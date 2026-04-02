@@ -1,8 +1,16 @@
 local M = {}
 
-function M.register(sys, deps)
-	local perf = deps.perf
-	local queue_remove = deps.queue_remove
+local perf = require("dove_modules.perf.perf")
+
+function M.register(sys)
+
+	local function queue_insert(store, e)
+		simulation:queue_insert_entity(e)
+	end
+
+	local function queue_remove(store, e)
+		simulation:queue_remove_entity(e)
+	end
 
 	sys.timed = {}
 	sys.timed.name = "timed"

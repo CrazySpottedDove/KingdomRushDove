@@ -1,9 +1,10 @@
 local M = {}
 
-function M.register(sys, deps)
-	local storage = deps.storage
-	local U = deps.U
-	local perf = deps.perf
+local storage = require("all.storage")
+local perf = require("dove_modules.perf.perf")
+local U = require("utils")
+
+function M.register(sys)
 
 	sys.seen_tracker = {}
 	sys.seen_tracker.name = "seen_tracker"

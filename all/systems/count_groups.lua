@@ -1,8 +1,9 @@
 local M = {}
 
-function M.register(sys, deps)
-	local km = deps.km
-	local signal = deps.signal
+local signal = require("lib.hump.signal")
+local km = require("lib.klua.macros")
+
+function M.register(sys)
 
 	sys.count_groups = {}
 	sys.count_groups.name = "count_groups"

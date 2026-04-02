@@ -1,9 +1,11 @@
 local M = {}
 
-function M.register(sys, deps)
-	local E = deps.E
-	local perf = deps.perf
-	local log = deps.log
+local perf = require("dove_modules.perf.perf")
+local E = require("entity_db")
+
+local log = require("lib.klua.log"):new("systems")
+
+function M.register(sys)
 
 	sys.editor_script = {}
 	sys.editor_script.name = "editor_script"

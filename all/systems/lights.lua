@@ -1,7 +1,8 @@
 local M = {}
 
-function M.register(sys, deps)
-	local perf = deps.perf
+local perf = require("dove_modules.perf.perf")
+
+function M.register(sys)
 
 	sys.lights = {}
 	sys.lights.name = "lights"

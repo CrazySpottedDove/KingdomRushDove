@@ -1,20 +1,106 @@
 local M = {}
 
-function M.register(sys, deps)
-	local perf = deps.perf
-	local ffi = deps.ffi
-	local random = deps.random
-	local cos = deps.cos
-	local sin = deps.sin
-	local floor = deps.floor
-	local km = deps.km
-	local A = deps.A
-	local I = deps.I
-	local queue_remove = deps.queue_remove
+-- Dependencies
+local perf = require("dove_modules.perf.perf")
+local ffi = require("ffi")
+local km = require("lib.klua.macros")
+local A = require("animation_db")
+local I = require("lib.klove.image_db")
+local floor = math.floor
+local random = math.random
+local cos = math.cos
+local sin = math.sin
+
+-- FFI Definition for particle_t
+ffi.cdef[[
+    typedef struct {
+        float pos_x;
+        float pos_y;
+        float r;
+        float speed_x;
+        float speed_y;
+        float spin;
+        float scale_x;
+        float scale_y;
+        float ts;
+        float last_ts;
+        float lifetime;
+        int name_idx;
+    } particle_t;
+]]
+
+function M.register(sys)
+	sys.particle_system = {}
+	sys.particle_system.name = "particle_system"
+
+	local phase_interp = function(values, phase, default)
+		if not values or #values == 0 then
+			return default
+		end
+
+		if #values == 1 then
+			return values[1]
+		end
+
+		local intervals = #values - 1
+		local interval = floor(phase * intervals)
+		local interval_phase = phase * intervals - interval
+		local a = values[interval + 1]
+		local b = values[interval + 2]
+		local ta = type(a)
+
+		if ta == "table" then
+			local out = {}
+
+			for i = 1, #a do
+				out[i] = a[i] + (b[i] - a[i]) * interval_phase
+			end
+
+			return out
+		elseif ta == "boolean" then
+			return a
+		elseif a ~= nil and b ~= nil then
+			return a + (b - a) * interval_phase
+		end
+
+		return default
+	end
+
+	function sys.particle_system:init(store)
+		self.phase_interp = phase_interp
+	end
+
+	function sys.particle_system:on_insert(entity, store)
+		if entity.particle_system then
+			local ps = entity.particle_system
+
+			ps.emit_ts = (ps.emit_ts and ps.emit_ts or store.tick_ts) + ps.ts_offset
+			ps.ts = store.tick_ts
+			ps.last_pos = {
+				x = 0,
+				y = 0
+			}
+		end
+
+		return true
+	end
+
+	function sys.particle_system:on_remove(entity, store)
+		if entity.particle_system then
+			local ps = entity.particle_system
+
+			for i = ps.particle_count, 1, -1 do
+				ps.particles[i] = nil
+				ps.frames[i].marked_to_remove = true
+				ps.frames[i] = nil
+			end
+		end
+
+		return true
+	end
 
 	function sys.particle_system:on_update(dt, ts, store)
 		perf.start("particle_system")
-		local phase_interp = self.phase_interp
 		local particle_systems = store.particle_systems
 
 		for _, e in pairs(particle_systems) do
@@ -218,7 +304,7 @@ function M.register(sys, deps)
 				ps.emit = false
 
 				if ps.particle_count == 0 then
-					queue_remove(store, e)
+					simulation:queue_remove_entity(e)
 				end
 			end
 		end
@@ -227,3 +313,4 @@ function M.register(sys, deps)
 end
 
 return M
+

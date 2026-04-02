@@ -1,13 +1,23 @@
 local M = {}
 
-function M.register(sys, deps)
-	local perf = deps.perf
-	local random = deps.random
-	local band = deps.band
-	local E = deps.E
-	local V = deps.V
-	local PI = deps.PI
-	local queue_insert = deps.queue_insert
+local math = require("math")
+local PI = math.pi
+local random = math.random
+local bit = require("bit")
+local band = bit.band
+local perf = require("dove_modules.perf.perf")
+local E = require("entity_db")
+local V = require("lib.klua.vector")
+
+function M.register(sys)
+
+	local function queue_insert(store, e)
+		simulation:queue_insert_entity(e)
+	end
+
+	local function queue_remove(store, e)
+		simulation:queue_remove_entity(e)
+	end
 
 	sys.pops = {}
 	sys.pops.name = "pops"

@@ -1,7 +1,8 @@
 local M = {}
 
-function M.register(sys, deps)
-	local E = deps.E
+local E = require("entity_db")
+
+function M.register(sys)
 
 	if GEN_WAVES_ENABLED then
 		sys.wave_generator = {}

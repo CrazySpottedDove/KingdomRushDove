@@ -4,7 +4,7 @@ local log = require("lib.klua.log"):new("systems")
 local km = require("lib.klua.macros")
 local signal = require("lib.hump.signal")
 local perf = require("dove_modules.perf.perf")
-local SystemsIndex = require("systems.index")
+local SystemsIndex = require("all.systems.index")
 require("lib.klua.table")
 require("lib.klua.dump")
 
@@ -735,26 +735,6 @@ function sys.tween:on_update(dt, ts, store)
 	perf.stop("tween_system")
 end
 
-sys.particle_system = {}
-sys.particle_system.name = "particle_system"
-
-ffi.cdef[[
-    typedef struct {
-        float pos_x;
-        float pos_y;
-        float r;
-        float speed_x;
-        float speed_y;
-        float spin;
-        float scale_x;
-        float scale_y;
-        float ts;
-        float last_ts;
-        float lifetime;
-        int name_idx;
-    } particle_t;
-]]
-
 sys.render = {}
 sys.render.name = "render"
 
@@ -1236,38 +1216,5 @@ function sys.render:on_update(dt, ts, store)
 	perf.stop("render")
 end
 
-SystemsIndex.register_extracted(sys, {
-	log = log,
-	perf = perf,
-	km = km,
-	signal = signal,
-	E = E,
-	UP = UP,
-	U = U,
-	SU = SU,
-	LU = LU,
-	P = P,
-	W = W,
-	GS = GS,
-	DI = DI,
-	S = S,
-	V = V,
-	F = F,
-	I = I,
-	ASSETS_CHECK_ENABLED = ASSETS_CHECK_ENABLED,
-	storage = storage,
-	fts = fts,
-	ceil = ceil,
-	random = random,
-	PI = PI,
-	band = band,
-	bor = bor,
-	queue_insert = queue_insert,
-	queue_remove = queue_remove,
-	floor = floor,
-	ffi = ffi,
-	cos = cos,
-	sin = sin,
-	A = A
-})
+SystemsIndex.register_systems(sys)
 return sys

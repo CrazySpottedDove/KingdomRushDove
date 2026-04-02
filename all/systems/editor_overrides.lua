@@ -1,8 +1,9 @@
 local M = {}
 
-function M.register(sys, deps)
-	local E = deps.E
-	local LU = deps.LU
+local E = require("entity_db")
+local LU = require("level_utils")
+
+function M.register(sys)
 
 	sys.editor_overrides = {}
 	sys.editor_overrides.name = "editor_overrides"

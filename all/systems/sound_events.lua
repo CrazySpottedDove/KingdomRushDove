@@ -1,7 +1,8 @@
 local M = {}
 
-function M.register(sys, deps)
-	local S = deps.S
+local S = require("sound_db")
+
+function M.register(sys)
 
 	sys.sound_events = {}
 	sys.sound_events.name = "sound_events"

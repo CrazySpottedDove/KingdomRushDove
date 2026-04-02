@@ -1,9 +1,12 @@
 local M = {}
 
-function M.register(sys, deps)
-	local U = deps.U
-	local SU = deps.SU
-	local ceil = deps.ceil
+local math = require("math")
+local ceil = math.ceil
+local bit = require("bit")
+local SU = require("script_utils")
+local U = require("utils")
+
+function M.register(sys)
 
 	sys.endless_patch = {}
 	sys.endless_patch.name = "endless_patch"

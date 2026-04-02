@@ -1,11 +1,19 @@
 local M = {}
 
-function M.register(sys, deps)
-	local perf = deps.perf
-	local P = deps.P
-	local signal = deps.signal
-	local km = deps.km
-	local queue_remove = deps.queue_remove
+local perf = require("dove_modules.perf.perf")
+local signal = require("lib.hump.signal")
+local km = require("lib.klua.macros")
+local P = require("path_db")
+
+function M.register(sys)
+
+	local function queue_insert(store, e)
+		simulation:queue_insert_entity(e)
+	end
+
+	local function queue_remove(store, e)
+		simulation:queue_remove_entity(e)
+	end
 
 	sys.goal_line = {}
 	sys.goal_line.name = "goal_line"

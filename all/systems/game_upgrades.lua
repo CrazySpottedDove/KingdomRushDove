@@ -1,10 +1,13 @@
 local M = {}
 
-function M.register(sys, deps)
-	local E = deps.E
-	local UP = deps.UP
-	local km = deps.km
-	local ceil = deps.ceil
+local math = require("math")
+local ceil = math.ceil
+local bit = require("bit")
+local E = require("entity_db")
+local UP = require("kr1.upgrades")
+local km = require("lib.klua.macros")
+
+function M.register(sys)
 
 	sys.game_upgrades = {}
 	sys.game_upgrades.name = "game_upgrades"

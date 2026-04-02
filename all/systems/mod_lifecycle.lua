@@ -1,8 +1,10 @@
 local M = {}
 
-function M.register(sys, deps)
+function M.register(sys)
 	local table_contains = table.contains
-	local queue_remove = deps.queue_remove
+	local function queue_remove(store, e)
+		simulation:queue_remove_entity(e)
+	end
 
 	sys.mod_lifecycle = {}
 	sys.mod_lifecycle.name = "mod_lifecycle"

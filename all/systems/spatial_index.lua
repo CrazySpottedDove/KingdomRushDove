@@ -1,7 +1,10 @@
 local M = {}
 
-function M.register(sys, deps)
-	local perf = deps.perf
+local perf = require("dove_modules.perf.perf")
+
+local log = require("lib.klua.log"):new("systems")
+
+function M.register(sys)
 
 	sys.spatial_index = {}
 	sys.spatial_index.name = "spatial_index"

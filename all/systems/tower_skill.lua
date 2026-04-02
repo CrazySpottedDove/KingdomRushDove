@@ -2,8 +2,9 @@ local TowerSkill = require("kr1.tower_skill_protocol")
 
 local M = {}
 
-function M.register(sys, deps)
-	local perf = deps.perf
+local perf = require("dove_modules.perf.perf")
+
+function M.register(sys)
 
 	sys.tower_skill = {}
 	sys.tower_skill.name = "tower_skill"

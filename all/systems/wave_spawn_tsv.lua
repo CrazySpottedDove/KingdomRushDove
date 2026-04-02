@@ -1,17 +1,29 @@
 local M = {}
 
-function M.register(sys, deps)
-	local W = deps.W
-	local U = deps.U
-	local E = deps.E
-	local P = deps.P
-	local LU = deps.LU
-	local km = deps.km
-	local GS = deps.GS
-	local signal = deps.signal
-	local log = deps.log
-	local queue_insert = deps.queue_insert
-	local fts = deps.fts
+local E = require("entity_db")
+local GS = require("kr1.game_settings")
+local LU = require("level_utils")
+local signal = require("lib.hump.signal")
+local km = require("lib.klua.macros")
+local P = require("path_db")
+local U = require("utils")
+local W = require("wave_db")
+
+local log = require("lib.klua.log"):new("systems")
+
+function M.register(sys)
+
+	local function queue_insert(store, e)
+		simulation:queue_insert_entity(e)
+	end
+
+	local function queue_remove(store, e)
+		simulation:queue_remove_entity(e)
+	end
+
+	local function fts(v)
+		return v / FPS
+	end
 
 	sys.wave_spawn_tsv = {}
 	sys.wave_spawn_tsv.name = "wave_spawn_tsv"

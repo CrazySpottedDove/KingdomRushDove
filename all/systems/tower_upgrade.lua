@@ -1,15 +1,22 @@
 local M = {}
 
-function M.register(sys, deps)
-	local E = deps.E
-	local V = deps.V
-	local U = deps.U
-	local S = deps.S
-	local km = deps.km
-	local signal = deps.signal
-	local perf = deps.perf
-	local queue_insert = deps.queue_insert
-	local queue_remove = deps.queue_remove
+local perf = require("dove_modules.perf.perf")
+local E = require("entity_db")
+local signal = require("lib.hump.signal")
+local km = require("lib.klua.macros")
+local V = require("lib.klua.vector")
+local S = require("sound_db")
+local U = require("utils")
+
+function M.register(sys)
+
+	local function queue_insert(store, e)
+		simulation:queue_insert_entity(e)
+	end
+
+	local function queue_remove(store, e)
+		simulation:queue_remove_entity(e)
+	end
 
 	sys.tower_upgrade = {}
 	sys.tower_upgrade.name = "tower_upgrade"

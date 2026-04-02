@@ -1,8 +1,10 @@
 local M = {}
 
-function M.register(sys, deps)
-	local perf = deps.perf
-	local log = deps.log
+local perf = require("dove_modules.perf.perf")
+
+local log = require("lib.klua.log"):new("systems")
+
+function M.register(sys)
 
 	sys.main_script = {}
 	sys.main_script.name = "main_script"
