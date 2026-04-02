@@ -25,7 +25,8 @@ local W = require("wave_db")
 local U = require("utils")
 local SU = require("script_utils")
 local LU = require("level_utils")
-local V = require("lib.klua.vector")
+-- local V = require("lib.klua.vector")
+local V = require("lib.vector_ffi")
 local storage = require("all.storage")
 local bit = require("bit")
 local band = bit.band
@@ -888,10 +889,11 @@ function sys.render:on_insert(entity, store)
 			end
 
 			if not s.pos then
-				s.pos = {
-					x = entity.pos.x,
-					y = entity.pos.y
-				}
+				-- s.pos = {
+				-- x = entity.pos.x,
+				-- y = entity.pos.y
+				-- }
+				s.pos = V.v(entity.pos.x, entity.pos.y)
 				s._track_e = true
 			end
 
@@ -912,60 +914,68 @@ function sys.render:on_insert(entity, store)
 		local hbsize = self._hb_sizes[hb.type]
 		local fb = {
 			flip_x = false,
-			pos = {
-				x = 0,
-				y = 0
-			},
+			-- pos = {
+			-- x = 0,
+			-- y = 0
+			-- },
+			pos = V.vv(0),
 			r = 0,
 			alpha = 255,
-			anchor = {
-				x = 0,
-				y = 0
-			},
-			offset = {
-				x = hb.offset.x,
-				y = hb.offset.y
-			},
+			-- anchor = {
+			-- x = 0,
+			-- y = 0
+			-- },
+			anchor = V.vv(0),
+			-- offset = {
+			-- x = hb.offset.x,
+			-- y = hb.offset.y
+			-- },
+			offset = V.v(hb.offset.x, hb.offset.y),
 			_draw_order = (hb.draw_order and 100000 * hb.draw_order + 1 or 200002) + entity.id,
 			z = Z_OBJECTS,
 			sort_y_offset = hb.sort_y_offset,
 			ss = self._hb_ss,
 			color = hb.colors and hb.colors.bg or self._hb_colors.bg,
 			bar_width = hbsize.x,
-			scale = {
-				x = hbsize.x,
-				y = hbsize.y
-			}
+			-- scale = {
+			-- x = hbsize.x,
+			-- y = hbsize.y
+			-- }
+			scale = V.v(hbsize.x, hbsize.y)
 		}
 
 		fb.offset.x = fb.offset.x - hbsize.x * fb.ss.ref_scale * 0.5
 
 		local ff = {
 			flip_x = false,
-			pos = {
-				x = 0,
-				y = 0
-			},
+			-- pos = {
+			-- x = 0,
+			-- y = 0
+			-- },
+			pos = V.vv(0),
 			r = 0,
 			alpha = 255,
-			anchor = {
-				x = 0,
-				y = 0
-			},
-			offset = {
-				x = hb.offset.x,
-				y = hb.offset.y
-			},
+			-- anchor = {
+			-- x = 0,
+			-- y = 0
+			-- },
+			anchor = V.vv(0),
+			-- offset = {
+			-- x = hb.offset.x,
+			-- y = hb.offset.y
+			-- },
+			offset = V.v(hb.offset.x, hb.offset.y),
 			_draw_order = (hb.draw_order and 100000 * hb.draw_order + 2 or 200003) + entity.id,
 			z = Z_OBJECTS,
 			sort_y_offset = hb.sort_y_offset,
 			ss = self._hb_ss,
 			color = hb.colors and hb.colors.fg or self._hb_colors.fg,
 			bar_width = hbsize.x,
-			scale = {
-				x = hbsize.x,
-				y = hbsize.y
-			}
+			-- scale = {
+			-- x = hbsize.x,
+			-- y = hbsize.y
+			-- }
+			scale = V.v(hbsize.x, hbsize.y)
 		}
 
 		ff.offset.x = ff.offset.x - hbsize.x * ff.ss.ref_scale * 0.5
@@ -982,30 +992,34 @@ function sys.render:on_insert(entity, store)
 		if hb.black_bar_hp then
 			local fk = {
 				flip_x = false,
-				pos = {
-					x = 0,
-					y = 0
-				},
+				-- pos = {
+				-- x = 0,
+				-- y = 0
+				-- },
+				pos = V.vv(0),
 				r = 0,
 				alpha = 255,
-				anchor = {
-					x = 0,
-					y = 0
-				},
-				offset = {
-					x = hb.offset.x - hbsize.x * 0.5,
-					y = hb.offset.y
-				},
+				-- anchor = {
+				-- x = 0,
+				-- y = 0
+				-- },
+				anchor = V.vv(0),
+				-- offset = {
+				-- x = hb.offset.x - hbsize.x * 0.5,
+				-- y = hb.offset.y
+				-- },
+				offset = V.v(hb.offset.x - hbsize.x * 0.5, hb.offset.y),
 				_draw_order = (hb.draw_order and 100000 * hb.draw_order or 200001) + entity.id,
 				z = Z_OBJECTS,
 				sort_y_offset = hb.sort_y_offset,
 				ss = self._hb_ss,
 				color = hb.colors and hb.colors.black or self._hb_colors.black,
 				bar_width = hbsize.x,
-				scale = {
-					x = hbsize.x,
-					y = hbsize.y
-				}
+				-- scale = {
+				-- x = hbsize.x,
+				-- y = hbsize.y
+				-- }
+				scale = V.v(hbsize.x, hbsize.y)
 			}
 
 			hb.frames[3] = fk
