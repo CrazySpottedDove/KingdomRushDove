@@ -60676,13 +60676,9 @@ function scripts.sandstorm.insert(this, store)
 
 	if not nav_path_assigned then
 		local _, pi, spi, ni = P:get_random_position({5, 80})
-		this.nav_path.pi = pi
-		this.nav_path.spi = spi
-		this.nav_path.ni = ni
-	end
-
-	if not this.nav_path.pi then
-		return false
+		if not pi then
+			return false
+		end
 	end
 
 	return true
