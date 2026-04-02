@@ -18,13 +18,14 @@ end
 local function ady(v)
 	return v - anchor_y * image_y
 end
-
-local function v(x, y)
-	return {
-		x = x,
-		y = y
-	}
-end
+local V = require("lib.klua.vector")
+local v = V.v
+-- local function v(x, y)
+-- 	return {
+-- 		x = x,
+-- 		y = y
+-- 	}
+-- end
 
 require("game_templates_utils")
 

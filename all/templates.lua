@@ -19,7 +19,7 @@ local IS_KR1 = true
 local function T(t)
 	return E:get_template(t)
 end
-local V = require("lib.vector_ffi")
+local V = require("lib.klua.vector")
 local v = V.v
 local vv = V.vv
 local r = V.r

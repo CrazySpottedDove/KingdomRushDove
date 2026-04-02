@@ -9,6 +9,7 @@ local image_y = nil
 local tt = nil
 local scripts = require("game_scripts")
 local SU = require("script_utils")
+-- local V = require("lib.klua.vector")
 local V = require("lib.klua.vector")
 
 require("templates")

@@ -9,7 +9,9 @@ local band = bit.band
 local bor = bit.bor
 
 require("all.constants")
-
+local V = require("lib.klua.vector")
+local v = V.v
+local vclone = V.vclone
 local id_arrays
 local entities
 
@@ -34,9 +36,6 @@ local ceil = math.ceil
 local floor = math.floor
 local max = math.max
 local min = math.min
-local V = require("lib.klua.vector")
-local v = V.v
-local vclone = V.vclone
 
 local function _x_to_col(x)
 	return floor((x - _x_min) * _cell_size_factor) + 1

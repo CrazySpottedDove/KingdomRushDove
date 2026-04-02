@@ -18,20 +18,22 @@ end
 local function ady(v)
 	return v - anchor_y * image_y
 end
+local V = require("lib.klua.vector")
+local v = V.v
+local vv = V.vv
+-- local function v(x, y)
+-- 	return {
+-- 		x = x,
+-- 		y = y
+-- 	}
+-- end
 
-local function v(x, y)
-	return {
-		x = x,
-		y = y
-	}
-end
-
-local function vv(x)
-	return {
-		x = x,
-		y = x
-	}
-end
+-- local function vv(x)
+-- 	return {
+-- 		x = x,
+-- 		y = x
+-- 	}
+-- end
 
 local balance = require("kr1.data.balance")
 local b

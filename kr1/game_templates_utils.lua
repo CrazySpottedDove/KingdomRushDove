@@ -11,7 +11,7 @@ IS_PHONE = false
 IS_PHONE_OR_TABLET = false
 IS_CONSOLE = false
 
-local V = require("lib.vector_ffi")
+local V = require("lib.klua.vector")
 vec_2 = V.v
 vec_1 = V.vv
 r = V.r

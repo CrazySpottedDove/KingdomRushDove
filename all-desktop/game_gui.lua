@@ -26,7 +26,7 @@ local SU = require("screen_utils")
 local E = require("entity_db")
 local U = require("utils")
 -- local V = require("lib.klua.vector")
-local V = require("lib.vector_ffi")
+local V = require("lib.klua.vector")
 local v = V.v
 local r = V.r
 

@@ -1,11 +1,13 @@
 -- chunkname: @./kr5/balance/balance.lua
 -- 五代敌人的生命应取老兵难度，因为后面又乘了系数。
-local function v(v1, v2)
-	return {
-		x = v1,
-		y = v2
-	}
-end
+local V = require("lib.klua.vector")
+local v = V.v
+-- local function v(v1, v2)
+-- 	return {
+-- 		x = v1,
+-- 		y = v2
+-- 	}
+-- end
 
 local function fts(v)
 	return v / FPS

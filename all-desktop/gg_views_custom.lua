@@ -4,7 +4,7 @@ local log = require("lib.klua.log"):new("gg_views_custom")
 require("klove.kui")
 
 -- local V = require("lib.klua.vector")
-local V = require("lib.vector_ffi")
+local V = require("lib.klua.vector")
 local class = require("middleclass")
 local km = require("lib.klua.macros")
 local F = require("lib.klove.font_db")

@@ -20,8 +20,9 @@ local function ady(v)
 	return v - anchor_y * image_y
 end
 
-local V = require("lib.vector_ffi")
+local V = require("lib.klua.vector")
 local v = V.v
+local vv = V.vv
 -- local function v(x, y)
 -- return {
 -- x = x,
@@ -10927,12 +10928,12 @@ tt.damage_min = 0.0025
 tt.damage_max = 0.0025
 
 -- G5
-local function vv(x)
-	return {
-		x = x,
-		y = x
-	}
-end
+-- local function vv(x)
+-- 	return {
+-- 		x = x,
+-- 		y = x
+-- 	}
+-- end
 tt = E:register_t("decal_stage_01_wisps", "decal")
 tt.render.sprites[1].prefix = "stage_1_wisps_1Def"
 tt.render.sprites[1].name = "loop"

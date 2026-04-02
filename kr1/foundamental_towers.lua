@@ -22,8 +22,11 @@ local function ady(v)
 	return v - anchor_y * image_y
 end
 
-local v = require("lib.klua.vector").v
-local vv = require("lib.klua.vector").vv
+-- local v = require("lib.klua.vector").v
+-- local vv = require("lib.klua.vector").vv
+local V = require("lib.klua.vector")
+local v = V.v
+local vv = V.vv
 
 require("game_templates_utils")
 

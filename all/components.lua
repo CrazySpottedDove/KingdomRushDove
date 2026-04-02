@@ -4,7 +4,7 @@ local bor = bit.bor
 local band = bit.band
 local bnot = bit.bnot
 local E = require("entity_db")
-local V = require("lib.vector_ffi")
+local V = require("lib.klua.vector")
 require("all.constants")
 local v = V.v
 local r = V.r
