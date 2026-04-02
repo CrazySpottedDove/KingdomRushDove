@@ -611,7 +611,8 @@ function sys.tween:on_insert(entity, store)
 
 				-- 初始化
 				if not sprite[p.name] then
-					if key_type == "table" then
+					-- 兼容 table vector 和 ffi vector
+					if key_type == "table" or key_type == "cdata" then
 						sprite[p.name] = V.vclone(p.keys[1][2])
 					else
 						sprite[p.name] = p.keys[1][2]
@@ -635,7 +636,7 @@ function sys.tween:on_insert(entity, store)
 					elseif interp_type == "quad" then
 						p.interp_fn = multiply and lerp_number_quad_multiply or lerp_number_quad
 					end
-				elseif key_type == "table" then
+				elseif key_type == "table" or key_type == "cdata" then
 					if interp_type == "linear" then
 						p.interp_fn = multiply and lerp_table_linear_multiply or lerp_table_linear
 					elseif interp_type == "sine" then

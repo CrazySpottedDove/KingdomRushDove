@@ -4,22 +4,23 @@ local bor = bit.bor
 local band = bit.band
 local bnot = bit.bnot
 local E = require("entity_db")
-
+local V = require("lib.vector_ffi")
 require("all.constants")
+local v = V.v
+local r = V.r
+-- local function v(v1, v2)
+-- 	return {
+-- 		x = v1,
+-- 		y = v2
+-- 	}
+-- end
 
-local function v(v1, v2)
-	return {
-		x = v1,
-		y = v2
-	}
-end
-
-local function r(x, y, w, h)
-	return {
-		pos = v(x, y),
-		size = v(w, h)
-	}
-end
+-- local function r(x, y, w, h)
+-- 	return {
+-- 		pos = v(x, y),
+-- 		size = v(w, h)
+-- 	}
+-- end
 
 local function fts(v)
 	return v / FPS

@@ -43,7 +43,7 @@ return {
 	-- 立刻获得 100 生命，默认为 "f7"
 	healthy = "f7",
 	-- 全屏随机建满高级塔
-	-- random_towers = "f8",
+	random_towers = "f8",
 	fps = "f10",
 	restart = "return"
 }

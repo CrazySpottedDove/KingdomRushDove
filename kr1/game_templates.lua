@@ -20,12 +20,14 @@ local function ady(v)
 	return v - anchor_y * image_y
 end
 
-local function v(x, y)
-	return {
-		x = x,
-		y = y
-	}
-end
+local V = require("lib.vector_ffi")
+local v = V.v
+-- local function v(x, y)
+-- return {
+-- x = x,
+-- y = y
+-- }
+-- end
 
 require("game_templates_utils")
 ----------
@@ -7115,7 +7117,7 @@ tt.render.sprites[1].anchor = vec_2(0.5, 0.295)
 tt.modifier.hide_target_delay = nil
 tt.modifier.custom_scales = {}
 tt.modifier.custom_scales.default = vec_1(0.5)
-tt.modifier.custom_scales.hero_elves_denas = vec_2(0.7)
+tt.modifier.custom_scales.hero_elves_denas = vec_1(0.7)
 tt.modifier.custom_scales.hero_bravebark = vec_1(1)
 tt.modifier.custom_scales.hero_xin = vec_1(1)
 tt.modifier.custom_scales.soldier_forest = vec_1(0.7)

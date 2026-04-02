@@ -82,6 +82,20 @@ GS.barrack_towers = {
 	"tower_rocket_gunners_lvl4",
 	"tower_paladin_covenant_lvl4"
 }
+GS.advanced_towers = {}
+for i = 4, #GS.archer_towers do
+	table.insert(GS.advanced_towers, GS.archer_towers[i])
+end
+for i = 4, #GS.mage_towers do
+	table.insert(GS.advanced_towers, GS.mage_towers[i])
+end
+for i = 4, #GS.engineer_towers do
+	table.insert(GS.advanced_towers, GS.engineer_towers[i])
+end
+for i = 4, #GS.barrack_towers do
+	table.insert(GS.advanced_towers, GS.barrack_towers[i])
+end
+
 GS.soldier_regen_factor = 0.2
 GS.gameplay_tips_count = 21
 GS.early_wave_reward_per_second = 1

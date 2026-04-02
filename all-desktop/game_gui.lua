@@ -661,6 +661,71 @@ function game_gui:mousereleased(x, y, button)
 	self.window:mousereleased(x, y, button)
 end
 
+function game_gui:build_random_towers()
+	for k, v in pairs(game_gui.game.store.towers) do
+		local new_tower = E:create_entity(table.random(GS.advanced_towers))
+		new_tower.pos = V.vclone(v.pos)
+		new_tower.tower.holder_id = v.tower.holder_id
+		new_tower.tower.flip_x = v.tower.flip_x
+
+		if v.tower.default_rally_pos then
+			new_tower.tower.default_rally_pos = V.vclone(v.tower.default_rally_pos)
+		end
+
+		if v.tower.terrain_style then
+			U.set_terrain_style(new_tower, v.tower.terrain_style)
+		end
+
+		if new_tower.ui and v.ui then
+			new_tower.ui.nav_mesh_id = v.ui.nav_mesh_id
+		end
+
+		queue_remove(game_gui.game.store, v)
+		queue_insert(game_gui.game.store, new_tower)
+
+		game_gui.game.store.towers[k] = new_tower
+
+		if new_tower.powers then
+			for _, p in pairs(new_tower.powers) do
+				p.level = p.max_level
+				p.changed = true
+			end
+		end
+
+		if new_tower.barrack then
+			if game_gui.game.store.criket and game_gui.game.store.criket.on then
+				local path_index = game_gui.game.store.criket.groups[1].path_index
+				local nodes = P.paths[path_index][1]
+				local i = 1
+
+				while i <= #nodes and not U.is_inside_ellipse(nodes[i], new_tower.pos, new_tower.barrack.rally_range) do
+					i = i + 1
+				end
+
+				if i > #nodes then
+					new_tower.barrack.rally_pos = V.vclone(new_tower.tower.default_rally_pos)
+				else
+					if i == 1 then
+						i = 2
+					end
+
+					new_tower.barrack.rally_pos = V.vclone(nodes[i - 1])
+				end
+			else
+				new_tower.barrack.rally_pos = V.vclone(new_tower.tower.default_rally_pos)
+			end
+		end
+
+		if new_tower.mercenary then
+			for i = 1, new_tower.barrack.max_soldiers do
+				new_tower.barrack.soldiers[i] = E:create_entity(new_tower.barrack.soldier_type)
+				new_tower.barrack.soldiers[i].health.dead = true
+				new_tower.barrack.soldiers[i].id = -1
+			end
+		end
+	end
+end
+
 function game_gui:keypressed(key, isrepeat)
 	if isrepeat then
 		return
@@ -915,6 +980,7 @@ function game_gui:keypressed(key, isrepeat)
 	elseif ks.fps == key then
 		require("dove_modules.perf.perf_ui").toggle()
 	elseif ks.random_towers == key then
+		game_gui:build_random_towers()
 	elseif ks.restart == key and game_gui.game.store.criket.on then
 		game_gui:restart_game()
 	end
@@ -6104,14 +6170,6 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
 	end
 
 	self:hide()
-end
-
--- TODO: 替换全场防御塔为随机防御塔
-function CriketMenu:build_random_towers()
-	local store = game_gui.game.store
-	for k, v in pairs(store.towers) do
-
-	end
 end
 
 -- 局内召唤英雄仪表盘

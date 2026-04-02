@@ -6887,7 +6887,8 @@ function KeysetPanelView:initialize(sw, sh)
 		wealthy = "获得金币",
 		healthy = "获得生命",
 		fps = "显示帧率",
-		restart = "重开（斗蛐蛐生效）"
+		restart = "重开（斗蛐蛐生效）",
+		random_towers = "随机建造高级塔"
 	})
 end
 

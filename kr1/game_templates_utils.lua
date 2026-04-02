@@ -11,26 +11,30 @@ IS_PHONE = false
 IS_PHONE_OR_TABLET = false
 IS_CONSOLE = false
 
-function vec_2(v1, v2)
-	return {
-		x = v1,
-		y = v2
-	}
-end
+local V = require("lib.vector_ffi")
+vec_2 = V.v
+vec_1 = V.vv
+r = V.r
+-- function vec_2(v1, v2)
+-- 	return {
+-- 		x = v1,
+-- 		y = v2
+-- 	}
+-- end
 
-function vec_1(v1)
-	return {
-		x = v1,
-		y = v1
-	}
-end
+-- function vec_1(v1)
+-- 	return {
+-- 		x = v1,
+-- 		y = v1
+-- 	}
+-- end
 
-function r(x, y, w, h)
-	return {
-		pos = vec_2(x, y),
-		size = vec_2(w, h)
-	}
-end
+-- function r(x, y, w, h)
+-- 	return {
+-- 		pos = vec_2(x, y),
+-- 		size = vec_2(w, h)
+-- 	}
+-- end
 
 function fts(v)
 	return v / FPS

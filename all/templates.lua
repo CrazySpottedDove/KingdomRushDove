@@ -19,27 +19,30 @@ local IS_KR1 = true
 local function T(t)
 	return E:get_template(t)
 end
+local V = require("lib.vector_ffi")
+local v = V.v
+local vv = V.vv
+local r = V.r
+-- local function v(v1, v2)
+-- 	return {
+-- 		x = v1,
+-- 		y = v2
+-- 	}
+-- end
 
-local function v(v1, v2)
-	return {
-		x = v1,
-		y = v2
-	}
-end
+-- local function vv(v1)
+-- 	return {
+-- 		x = v1,
+-- 		y = v1
+-- 	}
+-- end
 
-local function vv(v1)
-	return {
-		x = v1,
-		y = v1
-	}
-end
-
-local function r(x, y, w, h)
-	return {
-		pos = v(x, y),
-		size = v(w, h)
-	}
-end
+-- local function r(x, y, w, h)
+-- 	return {
+-- 		pos = v(x, y),
+-- 		size = v(w, h)
+-- 	}
+-- end
 
 local function fts(v)
 	return v / FPS

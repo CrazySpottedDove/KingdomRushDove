@@ -48,6 +48,9 @@ function table.deepclone(t)
 		end
 
 		return out
+	-- 兼容 ffi 数据，如果 cdata 对象有 clone 方法，则调用它来克隆对象
+	elseif type(t) == "cdata" and t.clone then
+		return t:clone()
 	else
 		return t
 	end
