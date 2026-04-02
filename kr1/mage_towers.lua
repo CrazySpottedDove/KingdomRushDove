@@ -20,7 +20,7 @@ local function ady(v)
 end
 
 local GS = require("kr1.game_settings")
--- local V = require("lib.klua.vector")
+
 local V = require("lib.klua.vector")
 local v = V.v
 local vv = V.vv

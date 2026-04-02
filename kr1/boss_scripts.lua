@@ -20,7 +20,7 @@ local SU = require("script_utils")
 local U = require("utils")
 local LU = require("level_utils")
 local UP = require("kr1.upgrades")
--- local V = require("lib.klua.vector")
+
 local V = require("lib.klua.vector")
 local W = require("wave_db")
 local bit = require("bit")

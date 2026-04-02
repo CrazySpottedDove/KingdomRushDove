@@ -4,7 +4,7 @@ local log = require("lib.klua.log"):new("kui")
 require("lib.klua.table")
 local perf = require("dove_modules.perf.perf")
 local km = require("lib.klua.macros")
--- local V = require("lib.klua.vector")
+
 local V = require("lib.klua.vector")
 local I = require("lib.klove.image_db")
 local F = require("lib.klove.font_db")

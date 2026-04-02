@@ -77,7 +77,7 @@ local band = bit.band
 local bnot = bit.bnot
 local E = require("entity_db")
 local a
--- local V = require("lib.klua.vector")
+
 local V = require("lib.klua.vector")
 local v = V.v
 local vv = V.vv

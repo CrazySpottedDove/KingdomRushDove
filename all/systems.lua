@@ -25,7 +25,7 @@ local W = require("wave_db")
 local U = require("utils")
 local SU = require("script_utils")
 local LU = require("level_utils")
--- local V = require("lib.klua.vector")
+
 local V = require("lib.klua.vector")
 local storage = require("all.storage")
 local bit = require("bit")
