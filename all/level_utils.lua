@@ -443,7 +443,11 @@ function LU.insert_hero(store, name, pos, force_full_level)
 		end
 
 		if store.level.custom_spawn_pos then
-			if store.level.custom_spawn_pos[i] then
+			-- 首先检查 ffi 结构体
+			if type(store.level.custom_spawn_pos) == "cdata" then
+				pos = store.level.custom_spawn_pos
+			-- 然后看这是多个位置还是单个位置，直接用索引判断。
+			elseif store.level.custom_spawn_pos[i] then
 				pos = store.level.custom_spawn_pos[i].pos
 			else
 				pos = store.level.custom_spawn_pos
