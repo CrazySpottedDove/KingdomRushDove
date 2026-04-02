@@ -151,7 +151,7 @@ e.pos=gnoll.pos
 e.nav_path.pi=node[1]
 e.nav_path.spi=1
 e.nav_path.ni=node[3]+3
-local npos=P:node_pos(e.nav_path)
+local npos=P:node_pos(e.nav_path.pi,e.nav_path.spi,e.nav_path.ni)
 e.motion.forced_waypoint=npos
 LU.queue_insert(store,e)
 LU.queue_remove(store,gnoll)

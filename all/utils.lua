@@ -486,7 +486,7 @@ function U.animation_name_facing_point(e, group, point, idx, offset, use_path)
 	local fx, fy
 
 	if e.nav_path and use_path then
-		local npos = P:node_pos(e.nav_path)
+		local npos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
 
 		fx, fy = npos.x, npos.y
 	else

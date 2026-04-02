@@ -231,7 +231,7 @@ boss.tower_pos_right=v(584+OX,370)
 boss.nav_path.pi=2
 boss.nav_path.spi=1
 boss.nav_path.ni=104
-boss.pos=P:node_pos(boss.nav_path)
+boss.pos=P:node_pos(boss.nav_path.pi,boss.nav_path.spi,boss.nav_path.ni)
 boss.pos.y=boss.pos.y+300
 LU.queue_insert(store,boss)
 self.boss=boss

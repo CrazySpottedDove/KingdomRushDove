@@ -913,9 +913,9 @@ scripts.hero_mirage = {
 						local node_jump = 12
 						local range
 
-						if node_jump < P:nodes_to_goal(enp) - node_limit then
+						if node_jump < P:nodes_to_goal(enp.pi, enp.spi, enp.ni) - node_limit then
 							range = {new_ni + node_jump, new_ni, -1}
-						elseif node_jump < P:nodes_from_start(enp) - node_limit then
+						elseif node_jump < P:nodes_from_start(enp.pi, enp.spi, enp.ni) - node_limit then
 							range = {new_ni - node_jump, new_ni, 1}
 						else
 							goto label_296_0
@@ -2694,7 +2694,7 @@ scripts.aura_beastmaster_regeneration = {
 -- 兽王-犀牛
 scripts.beastmaster_rhino = {
 	insert = function(this, store)
-		this.pos = P:node_pos(this.nav_path)
+		this.pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if not this.pos then
 			return false
@@ -3656,7 +3656,7 @@ scripts.hero_van_helsing = {
 
 				if ready_to_use_skill(a, store) then
 					local target = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.shoot_time, a.vis_flags, a.vis_bans, function(e)
-						return math.abs(P:nodes_to_defend_point(e.nav_path)) < a.nodes_to_defend
+						return math.abs(P:nodes_to_defend_point(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)) < a.nodes_to_defend
 					end)
 
 					if not target then
@@ -9107,7 +9107,7 @@ scripts.mod_minotaur_daedalus = {
 		target.nav_path.spi = this.dest_spi
 		target.nav_path.ni = this.dest_ni
 
-		local pos = P:node_pos(target.nav_path)
+		local pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni)
 
 		target.pos.x, target.pos.y = pos.x, pos.y
 		es.pos = V.vclone(pos)
@@ -9372,7 +9372,7 @@ scripts.hero_minotaur = {
 						local ppos = P:predict_enemy_pos(e, ftime)
 						local slot_pos = U.melee_slot_position(this, e, 1)
 
-						return P:nodes_to_goal(e.nav_path) > a.nodes_limit and P:is_node_valid(e.nav_path.pi, e.nav_path.ni) and P:is_node_valid(e.nav_path.pi, pni) and GR:cell_is_only(slot_pos.x, slot_pos.y, this.nav_grid.valid_terrains_dest) and GR:cell_is_only(ppos.x, ppos.y, this.nav_grid.valid_terrains_dest) and GR:find_line_waypoints(this.pos, ppos, this.nav_grid.valid_terrains) ~= nil
+						return P:nodes_to_goal(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni) > a.nodes_limit and P:is_node_valid(e.nav_path.pi, e.nav_path.ni) and P:is_node_valid(e.nav_path.pi, pni) and GR:cell_is_only(slot_pos.x, slot_pos.y, this.nav_grid.valid_terrains_dest) and GR:cell_is_only(ppos.x, ppos.y, this.nav_grid.valid_terrains_dest) and GR:find_line_waypoints(this.pos, ppos, this.nav_grid.valid_terrains) ~= nil
 					end)
 
 					if not target then
@@ -12218,7 +12218,7 @@ function scripts.hero_veznan.update(this, store)
 
 					node.spi = 1
 
-					local node_pos = P:node_pos(node)
+					local node_pos = P:node_pos(node.pi, node.spi, node.ni)
 					local targets = U.find_enemies_in_range_filter_off(node_pos, a.damage_radius, a.vis_flags, a.vis_bans)
 
 					if targets then
@@ -12573,7 +12573,7 @@ function scripts.hero_durax.update(this, store)
 					ns.spi = math.random(1, 3)
 					ns.ni = nearest[1][3] - math.random(a.nodes_offset[1], a.nodes_offset[2])
 
-					local node_pos = P:node_pos(ns)
+					local node_pos = P:node_pos(ns.pi, ns.spi, ns.ni)
 
 					if not P:is_node_valid(ns.pi, ns.ni, NF_RALLY) or band(GR:cell_type(node_pos.x, node_pos.y), bor(TERRAIN_NOWALK, TERRAIN_FAERIE)) ~= 0 then
 						SU.delay_attack(store, a, 0.3333333333333333)
@@ -13671,7 +13671,7 @@ function scripts.hero_arivan_ultimate.update(this, store)
 		np.pi, np.spi, np.ni = o[1], 1, o[3]
 	end
 
-	this.pos = P:node_pos(np)
+	this.pos = P:node_pos(np.pi, np.spi, np.ni)
 
 	U.y_animation_play(this, "start", nil, store.tick_ts)
 	U.animation_start(this, "travel", nil, store.tick_ts, true)
@@ -15134,7 +15134,7 @@ function scripts.hero_lilith_ultimate.update(this, store)
 				pi = nearest[1][1],
 				ni = nearest[1][3]
 			}
-			local node_pos = P:node_pos(node)
+			local node_pos = P:node_pos(node.pi, node.spi, node.ni)
 			local target, targets = U.find_foremost_enemy_in_range_filter_off(this.pos, this.angel_range, fts(10), this.angel_vis_flags, this.angel_vis_bans)
 			local idx = 1
 
@@ -15620,7 +15620,7 @@ function scripts.hero_xin_ultimate.update(this, store)
 		pi = nodes[1][1],
 		ni = nodes[1][3]
 	}
-	local node_pos = P:node_pos(node)
+	local node_pos = P:node_pos(node.pi, node.spi, node.ni)
 	local count = this.count
 	local target, targets = U.find_foremost_enemy_in_range_filter_off(this.pos, this.range, fts(10), this.vis_flags, this.vis_bans)
 	local idx = 1
@@ -16241,7 +16241,7 @@ function scripts.hero_rag.update(this, store)
 								next_node.ni = next_node.ni + next_node.dir
 								next_node.spi = next_node.spi == 3 and 2 or 3
 
-								U.set_destination(this, P:node_pos(next_node))
+								U.set_destination(this, P:node_pos(next_node.pi, next_node.spi, next_node.ni))
 
 								this.render.sprites[1].flip_x = this.motion.dest.x < this.pos.x
 							end
@@ -16646,7 +16646,7 @@ end
 scripts.lion_bruce = {}
 
 function scripts.lion_bruce.insert(this, store)
-	this.pos = P:node_pos(this.nav_path)
+	this.pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 	if not this.pos then
 		return false
@@ -17483,7 +17483,7 @@ function scripts.fierymist_dragon.update(this, store)
 
 	local aura = E:create_entity(b.hit_payload)
 
-	aura.pos = P:node_pos(node)
+	aura.pos = P:node_pos(node.pi, node.spi, node.ni)
 
 	queue_insert(store, aura)
 
@@ -17679,7 +17679,7 @@ function scripts.wildfirebarrage_dragon.update(this, store)
 				spi = node_subpaths[i],
 				ni = node.ni + node_offsets[i]
 			}
-			local pos = P:node_pos(n)
+			local pos = P:node_pos(n.pi, n.spi, n.ni)
 
 			if not P:is_node_valid(n.pi, n.ni) then
 			-- block empty
@@ -17928,7 +17928,7 @@ function scripts.hero_hunter.update(this, store)
 		local fx, fy
 
 		if e.nav_path and use_path then
-			local npos = P:node_pos(e.nav_path)
+			local npos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
 
 			fx, fy = npos.x, npos.y
 		else
@@ -22868,7 +22868,7 @@ function scripts.hero_dragon_gem.update(this, store)
 							goto label_370_1
 						end
 
-						if P:nodes_to_goal(aim_target.nav_path) < a.nodes_prediction + 10 then
+						if P:nodes_to_goal(aim_target.nav_path.pi, aim_target.nav_path.spi, aim_target.nav_path.ni) < a.nodes_prediction + 10 then
 							SU.delay_attack(store, a, 0.4)
 
 							goto label_370_1
@@ -23670,7 +23670,7 @@ function scripts.hero_dragon_gem_ultimate.update(this, store)
 		pi = nodes[1][1],
 		ni = nodes[1][3]
 	}
-	local node_pos = P:node_pos(node)
+	local node_pos = P:node_pos(node.pi, node.spi, node.ni)
 	local count = this.max_shards
 
 	local function shard_too_close(new_pos)
@@ -24032,7 +24032,7 @@ function scripts.hero_witch.can_dodge(store, this, ranged_attack, attack, enemy)
 		local new_ni = enp.ni
 		local node_limit = math.floor(skill.min_distance_from_end / P.average_node_dist)
 		local node_jump = math.floor(skill.distance / P.average_node_dist)
-		local nodes_to_goal = P:nodes_to_goal(enp)
+		local nodes_to_goal = P:nodes_to_goal(enp.pi, enp.spi, enp.ni)
 
 		if node_limit < nodes_to_goal then
 			new_ni = new_ni + math.min(nodes_to_goal - 1, node_jump)
@@ -24337,7 +24337,7 @@ function scripts.hero_witch.update(this, store)
 
 				if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
 					local enemy, enemies = U.find_foremost_enemy_in_range_filter_on(this.pos, a.range, false, a.vis_flags, a.vis_bans, function(e)
-						return e.health and e.health.hp_max <= a.hp_max and P:nodes_to_goal(e.nav_path) >= a.max_nodes_to_goal
+						return e.health and e.health.hp_max <= a.hp_max and P:nodes_to_goal(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni) >= a.max_nodes_to_goal
 					end)
 
 					if not enemy then
@@ -26910,7 +26910,7 @@ function scripts.hero_lumenir_ultimate.update(this, store)
 		pi = nodes[1][1],
 		ni = nodes[1][3]
 	}
-	local node_pos = P:node_pos(node)
+	local node_pos = P:node_pos(node.pi, node.spi, node.ni)
 	local count = this.count
 	local target, targets = U.find_nearest_enemy(store, this.pos, 0, this.range, this.vis_flags, this.vis_bans)
 	local idx = 1
@@ -27397,7 +27397,7 @@ end
 scripts.aura_fire_balls_hero_lumenir = {}
 
 function scripts.aura_fire_balls_hero_lumenir.insert(this, store)
-	local next_pos = P:node_pos(this.nav_path)
+	local next_pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 	if not next_pos then
 		return false
@@ -27420,7 +27420,7 @@ function scripts.aura_fire_balls_hero_lumenir.update(this, store)
 	m.max_speed = m.max_speed + math.random(0, m.max_speed_var)
 
 	local step = m.max_speed * dt
-	local next_pos = P:node_pos(nav)
+	local next_pos = P:node_pos(nav.pi, nav.spi, nav.ni)
 
 	next_pos.y = next_pos.y + y_off
 
@@ -27456,7 +27456,7 @@ function scripts.aura_fire_balls_hero_lumenir.update(this, store)
 
 			nav.ni = km.clamp(1, p_len, nav.ni)
 			nav.spi = km.zmod(nav.spi + math.random(1, 2), 3)
-			next_pos = P:node_pos(nav)
+			next_pos = P:node_pos(nav.pi, nav.spi, nav.ni)
 			next_pos.y = next_pos.y + y_off
 
 			U.set_destination(this, next_pos)
@@ -29047,7 +29047,7 @@ function scripts.hero_vesper.can_dodge(store, this, ranged_attack, attack, enemy
 		local new_ni = enp.ni
 		local node_limit = math.floor(skill.min_distance_from_end / P.average_node_dist)
 		local node_jump = math.floor(skill.distance / P.average_node_dist)
-		local nodes_to_goal = P:nodes_to_goal(enp)
+		local nodes_to_goal = P:nodes_to_goal(enp.pi, enp.spi, enp.ni)
 
 		if node_limit < nodes_to_goal then
 			new_ni = new_ni + math.min(nodes_to_goal - 1, node_jump)
@@ -35702,7 +35702,7 @@ function scripts.hero_bird_ultimate.update(this, store)
 		pi = nodes[1][1],
 		ni = nodes[1][3]
 	}
-	local node_pos = P:node_pos(node)
+	local node_pos = P:node_pos(node.pi, node.spi, node.ni)
 	local child1 = E:create_entity(this.child)
 
 	child1.pos = V.vclone(node_pos)
@@ -39860,7 +39860,7 @@ function scripts.bullet_hero_dragon_sun_ultimate.update(this, store)
 	local start_loop_sound_ts = store.tick_ts + 1.8
 	local s = this.render.sprites[1]
 
-	b.to = P:node_pos(this.nav_path)
+	b.to = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 	local dest = V.vclone(b.to)
 

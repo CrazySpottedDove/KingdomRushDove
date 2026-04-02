@@ -136,7 +136,7 @@ boss.enemy.wave_group_idx=store.wave_group_number
 boss.nav_path.pi=19
 boss.nav_path.spi=1
 boss.nav_path.ni=45
-boss.pos=P:node_pos(boss.nav_path)
+boss.pos=P:node_pos(boss.nav_path.pi,boss.nav_path.spi,boss.nav_path.ni)
 LU.queue_insert(store,boss)
 set_terrain(walkable_cells_bossfight,bit.bor(TERRAIN_LAND))
 for _,v in pairs(prebossfight_blocked_paths) do

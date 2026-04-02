@@ -1820,7 +1820,7 @@ tt.main_script.update = function(this, store)
 	end
 
 	local function teleport_ready()
-		return this.enemy.can_do_magic and this.teleport.triggered and not this.is_buffed and P:nodes_to_defend_point(this.nav_path) > this.teleport.nodes
+		return this.enemy.can_do_magic and this.teleport.triggered and not this.is_buffed and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > this.teleport.nodes
 	end
 
 	local function ba_exit()

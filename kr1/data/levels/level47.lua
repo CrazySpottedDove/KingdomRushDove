@@ -199,7 +199,7 @@ local boss=E:create_entity("eb_dracula")
 boss.nav_path.pi=2
 boss.nav_path.spi=1
 boss.nav_path.ni=1
-boss.pos=P:node_pos(boss.nav_path)
+boss.pos=P:node_pos(boss.nav_path.pi,boss.nav_path.spi,boss.nav_path.ni)
 LU.queue_insert(store,boss)
 self.boss=boss
 U.y_wait(store,4)

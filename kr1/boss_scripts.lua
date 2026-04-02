@@ -897,7 +897,7 @@ function scripts.eb_veznan.update(this, store)
 	U.y_animation_play(this, "walkAway", nil, store.tick_ts)
 
 	this.nav_path.pi, this.nav_path.spi, this.nav_path.ni = 1, 1, 1
-	this.pos = P:node_pos(this.nav_path)
+	this.pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 	pa.ts = store.tick_ts
 	ba.ts = store.tick_ts
 
@@ -2444,7 +2444,7 @@ function scripts.eb_gorilla.update(this, store)
 	end
 
 	local enter_from = V.vclone(this.pos)
-	local enter_to = P:node_pos(this.nav_path)
+	local enter_to = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 	U.animation_start(this, "fly", nil, store.tick_ts, true)
 
@@ -2494,7 +2494,7 @@ function scripts.eb_gorilla.update(this, store)
 
 					this.render.sprites[1].z = Z_OBJECTS_SKY
 
-					y_jump(this.pos, P:node_pos(this.nav_path))
+					y_jump(this.pos, P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni))
 
 					this.render.sprites[1].z = Z_OBJECTS
 					this.render.sprites[1].sort_y_offset = nil
@@ -2828,7 +2828,7 @@ function scripts.eb_umbra.update(this, store)
 	update_cooldowns()
 
 	this.nav_path = home_node
-	this.pos = P:node_pos(this.nav_path)
+	this.pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 	this.phase = "intro"
 
 	U.animation_start(this, "idle", nil, store.tick_ts, true, body_sid)
@@ -2869,7 +2869,7 @@ function scripts.eb_umbra.update(this, store)
 
 					if pieces_alive <= callback_pieces then
 						goto label_254_0
-					elseif piece_arrival_node > P:nodes_to_goal(p.nav_path) then
+					elseif piece_arrival_node > P:nodes_to_goal(p.nav_path.pi, p.nav_path.spi, p.nav_path.ni) then
 						goto label_254_0
 					elseif p.health.dead then
 						pieces_alive = pieces_alive - 1
@@ -2915,7 +2915,7 @@ function scripts.eb_umbra.update(this, store)
 				for i = #pieces, 1, -1 do
 					local p = pieces[i]
 
-					if piece_arrival_node > P:nodes_to_goal(p.nav_path) then
+					if piece_arrival_node > P:nodes_to_goal(p.nav_path.pi, p.nav_path.spi, p.nav_path.ni) then
 						table.remove(pieces, i)
 						table.insert(pieces_returned, p)
 
@@ -3093,7 +3093,7 @@ function scripts.eb_umbra.update(this, store)
 						p.nav_path.pi = table.random(ap.dest_pi)
 						p.nav_path.spi = math.random(1, 3)
 						p.nav_path.ni = math.random(P:get_start_node(p.nav_path.pi) + ap.initial_ni, P:get_end_node(p.nav_path.pi) - ap.limit_ni)
-						p.pos = P:node_pos(p.nav_path)
+						p.pos = P:node_pos(p.nav_path.pi, p.nav_path.spi, p.nav_path.ni)
 
 						if death_cycles > 0 then
 							p.piece_respawn_delay = p.piece_respawn_delay_repeating
@@ -3122,7 +3122,7 @@ function scripts.eb_umbra.update(this, store)
 
 					this.render.sprites[1].hidden = true
 					this.nav_path = home_node
-					this.pos = P:node_pos(this.nav_path)
+					this.pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 					this.vis.bans = this.vis.bans_in_pieces
 					is_at_home = true
 					is_in_pieces = true
@@ -3156,7 +3156,7 @@ function scripts.eb_umbra.update(this, store)
 					for _, n in pairs(nodes) do
 						local s = E:create_entity(as.entity)
 
-						s.pos = P:node_pos(n[1])
+						s.pos = P:node_pos(n[1].pi, n[1].spi, n[1].ni)
 						s.spawner.allowed_nodes = n
 						s.spawner.count = as.count_min + math.floor((max_pieces - pieces_alive) * as.add_per_missing_piece)
 
@@ -3208,7 +3208,7 @@ function scripts.eb_umbra.update(this, store)
 					end
 
 					this.nav_path = jump_node
-					this.pos = P:node_pos(this.nav_path)
+					this.pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 					this.vis.bans = is_at_home and this.vis.bans_at_home or this.vis.bans_in_battlefield
 
 					U.y_animation_play(this, "teleport_in", nil, store.tick_ts, 1, body_sid)
@@ -3322,7 +3322,7 @@ function scripts.umbra_portal.update(this, store)
 		spawn.nav_path.spi = km.zmod(i, 3)
 		spawn.nav_path.ni = no.ni + math.random(-sp.ni_var, sp.ni_var)
 		spawn.unit.spawner_id = this.id
-		spawn.pos = P:node_pos(spawn.nav_path)
+		spawn.pos = P:node_pos(spawn.nav_path.pi, spawn.nav_path.spi, spawn.nav_path.ni)
 
 		queue_insert(store, spawn)
 
@@ -4415,7 +4415,7 @@ function scripts.eb_gnoll.update(this, store)
 	end
 
 	local function ready_to_flail()
-		return store.tick_ts - fa.ts > fa.cooldown and not this.health.dead and P:nodes_to_defend_point(this.nav_path) > 0
+		return store.tick_ts - fa.ts > fa.cooldown and not this.health.dead and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > 0
 	end
 
 	local function y_do_howl()
@@ -5165,7 +5165,7 @@ function scripts.eb_spider.update(this, store)
 			}
 		end
 
-		local dest = P:node_pos(dest_node)
+		local dest = P:node_pos(dest_node.pi, dest_node.spi, dest_node.ni)
 
 		this.nav_path.pi = dest_node.pi
 		this.nav_path.ni = dest_node.ni + 1
@@ -5459,7 +5459,7 @@ function scripts.eb_bram.update(this, store)
 	local ac = this.timed_attacks.list[1]
 
 	local function ready_to_convert()
-		return store.tick_ts - ac.ts > ac.cooldown and P:nodes_to_defend_point(this.nav_path) > ac.nodes_limit
+		return store.tick_ts - ac.ts > ac.cooldown and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > ac.nodes_limit
 	end
 
 	this.phase_signal = nil
@@ -11750,7 +11750,7 @@ function scripts.boss_spider_queen.update(this, store)
 	end
 
 	local function is_after_nodes_limit(attack)
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		return nodes_to_goal < attack.nodes_limit
 	end
@@ -12102,7 +12102,7 @@ function scripts.boss_spider_queen.update(this, store)
 					else
 						local sign = 1
 						local sign_offset = 1
-						local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+						local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 						if nodes_to_goal < a.nodes_limit_reverse then
 							sign_offset = -1
@@ -13130,7 +13130,7 @@ function scripts.boss_redboy_teen.update(this, store)
 	end
 
 	local function is_after_nodes_limit(attack)
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		return nodes_to_goal < attack.nodes_limit
 	end

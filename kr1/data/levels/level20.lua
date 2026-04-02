@@ -21,7 +21,7 @@ boss.nav_path.pi=2
 boss.nav_path.spi=1
 boss.nav_path.ni=35
 boss.ignore_seen_tracker=true
-local npos=P:node_pos(boss.nav_path)
+local npos=P:node_pos(boss.nav_path.pi,boss.nav_path.spi,boss.nav_path.ni)
 boss.motion.forced_waypoint=npos
 LU.queue_insert(store,boss)
 coroutine.yield()

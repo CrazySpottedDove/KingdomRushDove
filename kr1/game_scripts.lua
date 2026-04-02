@@ -1011,7 +1011,7 @@ end
 scripts.dracolich_plague_carrier = {}
 
 function scripts.dracolich_plague_carrier.insert(this, store)
-	next_pos = P:node_pos(this.nav_path)
+	local next_pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 	if not next_pos then
 		return false
@@ -1880,7 +1880,7 @@ function scripts.enemy_demon_legion.update(this, store)
 	local a = this.timed_attacks.list[1]
 
 	local function ready_to_clone()
-		return a.count > 0 and enemy_ready_to_magic_attack(this, store, a) and P:nodes_to_defend_point(this.nav_path) > a.nodes_limit
+		return a.count > 0 and enemy_ready_to_magic_attack(this, store, a) and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > a.nodes_limit
 	end
 
 	if this.render.sprites[1].name == "raise" then
@@ -1970,7 +1970,7 @@ function scripts.enemy_demon_gulaemon.update(this, store)
 	a.ts = store.tick_ts
 
 	local function ready_for_takeoff()
-		return not is_flying and enemy_ready_to_magic_attack(this, store, a) and P:nodes_to_defend_point(this.nav_path) > a.nodes_limit_start
+		return not is_flying and enemy_ready_to_magic_attack(this, store, a) and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > a.nodes_limit_start
 	end
 
 	local function ready_to_land()
@@ -4299,7 +4299,7 @@ function scripts.mod_gulaemon_fly.update(this, store)
 	while true do
 		target = store.entities[m.target_id]
 
-		if not target or target.health.dead or store.tick_ts - m.ts > m.duration or P:nodes_to_defend_point(target.nav_path) < this.nodes_limit then
+		if not target or target.health.dead or store.tick_ts - m.ts > m.duration or P:nodes_to_defend_point(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni) < this.nodes_limit then
 			queue_remove(store, this)
 
 			return
@@ -4386,7 +4386,7 @@ function scripts.graveyard_controller.update(this, store)
 							e.nav_path.pi, e.nav_path.spi, e.nav_path.ni = pi, math.random(1, 3), ni
 							e.pos = V.vclone(s_pos)
 							e.render.sprites[1].name = "raise"
-							e.motion.forced_waypoint = P:node_pos(e.nav_path)
+							e.motion.forced_waypoint = P:node_pos(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
 
 							if not g.keep_gold and e.enemy then
 								e.enemy.gold = 0
@@ -4451,7 +4451,7 @@ function scripts.graveyard_s110.update(this, store)
 							e.nav_path.pi, e.nav_path.spi, e.nav_path.ni = pi, math.random(1, 3), ni
 							e.pos = V.vclone(s_pos)
 							-- e.render.sprites[1].name = "raise"
-							e.motion.forced_waypoint = P:node_pos(e.nav_path)
+							e.motion.forced_waypoint = P:node_pos(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
 
 							for _, sprite in pairs(e.render.sprites) do
 								sprite.alpha = 180
@@ -5849,7 +5849,7 @@ function scripts.enemy_nightscale.update(this, store)
 	local hide_times = 0
 
 	local function ready_to_hide()
-		return hide_times < h.max_times and this.enemy.can_do_magic and not this.unit.is_stunned and terrain_type == TERRAIN_LAND and this.health.hp / this.health.hp_max <= h.trigger_health_factor and P:nodes_to_defend_point(this.nav_path) > h.nodeslimit
+		return hide_times < h.max_times and this.enemy.can_do_magic and not this.unit.is_stunned and terrain_type == TERRAIN_LAND and this.health.hp / this.health.hp_max <= h.trigger_health_factor and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > h.nodeslimit
 	end
 
 	::label_30_0::
@@ -5882,7 +5882,7 @@ function scripts.enemy_nightscale.update(this, store)
 				this.render.sprites[1].alpha = 40
 				h.ts = store.tick_ts
 
-				while store.tick_ts - h.ts < h.duration and not this.health.dead and this.enemy.can_do_magic and P:nodes_to_defend_point(this.nav_path) > h.nodeslimit do
+				while store.tick_ts - h.ts < h.duration and not this.health.dead and this.enemy.can_do_magic and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > h.nodeslimit do
 					if this.unit.is_stunned then
 						U.animation_start(this, "idle", nil, store.tick_ts, true)
 						coroutine.yield()
@@ -5934,7 +5934,7 @@ function scripts.enemy_darter.update(this, store)
 	local last_blink_hp = this.health.hp
 
 	local function ready_to_blink()
-		if this.enemy.can_do_magic and terrain_type == TERRAIN_LAND and last_blink_hp ~= this.health.hp and store.tick_ts - b.ts > b.cooldown and P:nodes_to_defend_point(this.nav_path) > b.nodeslimit and P:get_end_node(this.nav_path.pi) - this.nav_path.ni > b.nodeslimit_conn then
+		if this.enemy.can_do_magic and terrain_type == TERRAIN_LAND and last_blink_hp ~= this.health.hp and store.tick_ts - b.ts > b.cooldown and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > b.nodeslimit and P:get_end_node(this.nav_path.pi) - this.nav_path.ni > b.nodeslimit_conn then
 			return true
 		else
 			last_blink_hp = this.health.hp
@@ -5983,7 +5983,7 @@ function scripts.enemy_darter.update(this, store)
 				this.nav_path.ni = this.nav_path.ni + math.random(b.nodes_offset_min, b.nodes_offset_max)
 				this.nav_path.ni = math.min(this.nav_path.ni, P:get_end_node(this.nav_path.pi) - b.nodeslimit_conn)
 
-				local npos = P:node_pos(this.nav_path)
+				local npos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 				this.pos.x, this.pos.y = npos.x, npos.y
 
@@ -6046,7 +6046,7 @@ function scripts.enemy_savant.update(this, store)
 	pa.ts = store.tick_ts
 
 	local function ready_to_portal()
-		return enemy_ready_to_magic_attack(this, store, pa) and (not cg[pa.count_group_name] or cg[pa.count_group_name] < pa.count_group_max) and P:nodes_to_defend_point(this.nav_path) > pa.nodes_limit and P:is_node_valid(this.nav_path.pi, this.nav_path.ni + pa.node_offset + 1)
+		return enemy_ready_to_magic_attack(this, store, pa) and (not cg[pa.count_group_name] or cg[pa.count_group_name] < pa.count_group_max) and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > pa.nodes_limit and P:is_node_valid(this.nav_path.pi, this.nav_path.ni + pa.node_offset + 1)
 	end
 
 	::label_36_0::
@@ -6168,7 +6168,7 @@ function scripts.savant_portal.update(this, store)
 			spi = km.zmod(spi + 1, 3)
 			ni = p.ni + math.random(p.node_var[1], p.node_var[2])
 			spawn.nav_path.pi, spawn.nav_path.spi, spawn.nav_path.ni = pi, spi, ni
-			spawn.pos = P:node_pos(spawn.nav_path)
+			spawn.pos = P:node_pos(spawn.nav_path.pi, spawn.nav_path.spi, spawn.nav_path.ni)
 			spawn.enemy.gold = 0
 			spawn.unit.spawner_id = this.id
 
@@ -6387,7 +6387,7 @@ function scripts.enemy_blacksurge.update(this, store)
 	h.ts = -h.cooldown
 
 	local function ready_to_hide()
-		return enemy_ready_to_magic_attack(this, store, h) and terrain_type == TERRAIN_LAND and this.health.hp > 0 and this.health.hp / this.health.hp_max <= h.trigger_health_factor and P:nodes_to_defend_point(this.nav_path) > h.nodeslimit
+		return enemy_ready_to_magic_attack(this, store, h) and terrain_type == TERRAIN_LAND and this.health.hp > 0 and this.health.hp / this.health.hp_max <= h.trigger_health_factor and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > h.nodeslimit
 	end
 
 	local function ready_to_curse()
@@ -6495,7 +6495,7 @@ function scripts.enemy_blacksurge.update(this, store)
 
 				h.ts = store.tick_ts
 
-				while store.tick_ts - h.ts < h.duration and P:nodes_to_defend_point(this.nav_path) > h.nodeslimit do
+				while store.tick_ts - h.ts < h.duration and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > h.nodeslimit do
 					if band(GR:cell_type(this.pos.x, this.pos.y), TERRAIN_TYPES_MASK) ~= TERRAIN_LAND then
 						goto label_46_1
 					end
@@ -6986,7 +6986,7 @@ function scripts.headless_horseman_spawner_aura.update(this, store)
 
 				pi_idx = km.zmod(pi_idx + 1, #sd.s_paths)
 
-				local spawn_pos = P:node_pos(source.nav_path)
+				local spawn_pos = P:node_pos(source.nav_path.pi, source.nav_path.spi, source.nav_path.ni)
 				local nodes = P:nearest_nodes(spawn_pos.x, spawn_pos.y, {pi})
 				local ni = nodes[1][3]
 				local spawn_queue = {}
@@ -9453,7 +9453,7 @@ function scripts.points_spawner.update(this, store)
 						e.nav_path.spi = nodes[1][2]
 						e.nav_path.ni = nodes[1][3]
 						e.pos = V.vclone(p_from)
-						e.motion.forced_waypoint = P:node_pos(e.nav_path)
+						e.motion.forced_waypoint = P:node_pos(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
 						e.render.sprites[1].name = "raise"
 						e.custom_spawn_data = custom_data
 
@@ -12207,7 +12207,7 @@ function scripts.enemy_twilight_elf_harasser.update(this, store)
 
 				this.nav_path.ni = nni
 
-				local npos = P:node_pos(this.nav_path)
+				local npos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 				this.pos.x, this.pos.y = npos.x, npos.y
 
@@ -12645,7 +12645,7 @@ function scripts.enemy_gloomy.update(this, store)
 	a.ts = store.tick_ts
 
 	local function ready_to_clone()
-		return store.tick_ts - a.ts > a.cooldown and this._clones_count < a.max_clones and (not cg[this.template_name] or cg[this.template_name] < a.count_group_max) and P:nodes_to_defend_point(this.nav_path) > a.nodes_limit
+		return store.tick_ts - a.ts > a.cooldown and this._clones_count < a.max_clones and (not cg[this.template_name] or cg[this.template_name] < a.count_group_max) and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > a.nodes_limit
 	end
 
 	if this.render.sprites[1].name == "spawnClone" then
@@ -12710,7 +12710,7 @@ function scripts.enemy_satyr_hoplite.update(this, store)
 	a.ts = store.tick_ts
 
 	local function ready_to_summon(spread)
-		return store.tick_ts - a.ts > a.cooldown and this.enemy.can_do_magic and (not cg[a.count_group_name] or cg[a.count_group_name] < a.count_group_max) and P:nodes_to_defend_point(this.nav_path) > a.nodes_limit and (not spread or math.floor(store.tick_ts * 10) % spread_seed == 0)
+		return store.tick_ts - a.ts > a.cooldown and this.enemy.can_do_magic and (not cg[a.count_group_name] or cg[a.count_group_name] < a.count_group_max) and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > a.nodes_limit and (not spread or math.floor(store.tick_ts * 10) % spread_seed == 0)
 	end
 
 	::label_252_0::
@@ -13028,7 +13028,7 @@ function scripts.enemy_twilight_scourger_banshee.update(this, store)
 			end
 		end
 
-		if not fading and not kamikaze_target and P:nodes_to_defend_point(this.nav_path) < this.fade_nodes_to_defend_point then
+		if not fading and not kamikaze_target and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) < this.fade_nodes_to_defend_point then
 			this.tween.disabled = nil
 			this.tween.ts = store.tick_ts
 			fading = true
@@ -13373,7 +13373,7 @@ function scripts.enemy_twilight_heretic.update(this, store)
 	end
 
 	local function ready_to_consume()
-		return store.tick_ts - ac.ts > ac.cooldown and this.enemy.can_do_magic and P:nodes_to_goal(this.nav_path) > ac.nodes_limit
+		return store.tick_ts - ac.ts > ac.cooldown and this.enemy.can_do_magic and P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > ac.nodes_limit
 	end
 
 	::label_281_0::
@@ -13786,7 +13786,7 @@ function scripts.enemy_razorboar.update(this, store)
 	queue_insert(store, ps)
 
 	local function ready_to_rampage()
-		return store.tick_ts - a.ts > a.cooldown and not U.get_blocker(store, this) and this.enemy.can_do_magic and P:nodes_to_defend_point(this.nav_path) > a.nodes_limit
+		return store.tick_ts - a.ts > a.cooldown and not U.get_blocker(store, this) and this.enemy.can_do_magic and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > a.nodes_limit
 	end
 
 	while true do
@@ -13904,7 +13904,7 @@ function scripts.enemy_arachnomancer.update(this, store)
 	a.ts = store.tick_ts
 
 	local function ready_to_summon()
-		return store.tick_ts - a.ts > a.cooldown and this.enemy.can_do_magic and not U.get_blocker(store, this) and P:nodes_to_defend_point(this.nav_path) > a.nodes_limit
+		return store.tick_ts - a.ts > a.cooldown and this.enemy.can_do_magic and not U.get_blocker(store, this) and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > a.nodes_limit
 	end
 
 	for i = 1, 3 do
@@ -14273,7 +14273,7 @@ function scripts.enemy_bloodsydian_warlock.update(this, store)
 	a.ts = store.tick_ts
 
 	local function ready_to_cast()
-		return this.enemy.can_do_magic and store.tick_ts - a.ts > a.cooldown and this.nav_path.ni > a.nodes_min and P:nodes_to_defend_point(this.nav_path) > a.nodes_limit
+		return this.enemy.can_do_magic and store.tick_ts - a.ts > a.cooldown and this.nav_path.ni > a.nodes_min and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > a.nodes_limit
 	end
 
 	::label_302_0::
@@ -15698,7 +15698,7 @@ function scripts.bullet_liquid_fire_faustus.update(this, store)
 		return
 	end
 
-	local node_pos = P:node_pos(node)
+	local node_pos = P:node_pos(node.pi, node.spi, node.ni)
 	local dist = V.dist(node_pos.x, node_pos.y, b.from.x, b.from.y)
 	local ps = E:create_entity(b.particles_name)
 
@@ -15737,7 +15737,7 @@ function scripts.bullet_liquid_fire_faustus.update(this, store)
 		end
 
 		a = E:create_entity("aura_liquid_fire_flame_faustus")
-		a.pos = P:node_pos(nn)
+		a.pos = P:node_pos(nn.pi, nn.spi, nn.ni)
 		a.pos.x = a.pos.x + math.random(-8, 8)
 		a.aura.ts = store.tick_ts
 
@@ -15760,7 +15760,7 @@ function scripts.bullet_liquid_fire_faustus.update(this, store)
 		end
 
 		a = E:create_entity("aura_liquid_fire_flame_faustus")
-		a.pos = P:node_pos(nn)
+		a.pos = P:node_pos(nn.pi, nn.spi, nn.ni)
 		a.pos.x = a.pos.x + math.random(-8, 8)
 		a.aura.ts = store.tick_ts
 
@@ -15978,7 +15978,7 @@ scripts.bullet_arachnomancer_spawn = {}
 function scripts.bullet_arachnomancer_spawn.insert(this, store)
 	local b = this.bullet
 
-	b.to = P:node_pos(this.nav_path)
+	b.to = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 	b.from = V.vclone(this.pos)
 
 	local e = E:create_entity(this.payload_entity)
@@ -17670,7 +17670,7 @@ function scripts.mod_twilight_heretic_consume.update(this, store)
 	while true do
 		target = store.entities[m.target_id]
 
-		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or P:nodes_to_goal(target.nav_path) < this.nodes_limit then
+		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or P:nodes_to_goal(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni) < this.nodes_limit then
 			queue_remove(store, this)
 
 			return
@@ -18693,7 +18693,7 @@ function scripts.decal_river_object.update(this, store)
 	::label_514_0::
 
 	this.ui.clicked = nil
-	this.pos = P:node_pos(this.nav_path)
+	this.pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 	U.animation_start(this, "travel", nil, store.tick_ts, true)
 
@@ -18732,7 +18732,7 @@ function scripts.decal_river_object.update(this, store)
 		this.nav_path.ni = 1
 
 		local normal_speed = this.motion.max_speed
-		local fall_dest = P:node_pos(this.nav_path)
+		local fall_dest = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		U.update_max_speed(this, V.dist(fall_dest.x, fall_dest.y, this.pos.x, this.pos.y) / this.fall_time)
 		U.set_destination(this, fall_dest)
@@ -18850,7 +18850,7 @@ function scripts.decal_tree_ewok.update(this, store)
 	this.nav_path.pi = this.path_id
 	this.nav_path.spi = 1
 	this.nav_path.ni = 1
-	this.pos = P:node_pos(this.nav_path)
+	this.pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 	while true do
 		if store.tick_ts - a.ts > a.cooldown then
@@ -20640,7 +20640,7 @@ function scripts.decal_s12_lemur.update(this, store)
 	::label_573_0::
 
 	this.nav_path.ni = 1
-	this.pos = P:node_pos(this.nav_path)
+	this.pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 	U.y_wait(store, U.frandom(this.wait_time[1], this.wait_time[2]))
 
@@ -20865,7 +20865,7 @@ function scripts.decal_black_baby_dragon.update(this, store)
 			for _, pass in pairs(this.dragon_passes) do
 				this.nav_path.pi = pass.path_id
 				this.nav_path.ni = 1
-				this.pos = P:node_pos(this.nav_path)
+				this.pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 				local nex, new = P:next_entity_node(this, store.tick_length)
 				local flip = nex.x < this.pos.x
@@ -26280,7 +26280,7 @@ function scripts.decal_stage_05_bear_woodcutter.update(this, store)
 	entity.nav_path.pi = pi
 	entity.nav_path.spi = spi
 	entity.nav_path.ni = ni
-	entity.motion.forced_waypoint = P:node_pos(entity.nav_path)
+	entity.motion.forced_waypoint = P:node_pos(entity.nav_path.pi, entity.nav_path.spi, entity.nav_path.ni)
 
 	U.set_destination(entity, this.waypoint_pos)
 
@@ -27803,7 +27803,7 @@ function scripts.controller_stage_10_obelisk.update(this, store)
 			on_mode_end()
 		elseif store.tick_ts - mode_ability_ts >= this.config.teleport.cooldown then
 			local enemies = table.filter(store.entities, function(k, v)
-				return not v.pending_removal and v.health and not v.health.dead and v.vis and v.vis.flags and band(v.vis.flags, this.teleport_bans) == 0 and v.vis and v.vis.bans and band(v.vis.bans, this.teleport_flags) == 0 and (not this.teleport_excluded_teplates or not table.contains(this.teleport_excluded_teplates, v.template_name)) and v.nav_path and P:nodes_to_goal(v.nav_path) >= this.config.teleport.nodes_to_goal_selectable and v.nav_path.ni >= this.config.teleport.nodes_from_selectable
+				return not v.pending_removal and v.health and not v.health.dead and v.vis and v.vis.flags and band(v.vis.flags, this.teleport_bans) == 0 and v.vis and v.vis.bans and band(v.vis.bans, this.teleport_flags) == 0 and (not this.teleport_excluded_teplates or not table.contains(this.teleport_excluded_teplates, v.template_name)) and v.nav_path and P:nodes_to_goal(v.nav_path.pi, v.nav_path.spi, v.nav_path.ni) >= this.config.teleport.nodes_to_goal_selectable and v.nav_path.ni >= this.config.teleport.nodes_from_selectable
 			end)
 
 			if not enemies or #enemies < this.config.min_enemies then
@@ -27826,7 +27826,7 @@ function scripts.controller_stage_10_obelisk.update(this, store)
 			S:queue(this.sound_cast_teleport)
 
 			local enemies = table.filter(store.entities, function(k, v)
-				return not v.pending_removal and v.health and not v.health.dead and v.vis and v.vis.flags and band(v.vis.flags, this.teleport_bans) == 0 and v.vis and v.vis.bans and band(v.vis.bans, this.teleport_flags) == 0 and (not this.teleport_excluded_teplates or not table.contains(this.teleport_excluded_teplates, v.template_name)) and v.nav_path and P:nodes_to_goal(v.nav_path) >= this.config.teleport.nodes_to_goal_selectable and v.nav_path.ni >= this.config.teleport.nodes_from_selectable
+				return not v.pending_removal and v.health and not v.health.dead and v.vis and v.vis.flags and band(v.vis.flags, this.teleport_bans) == 0 and v.vis and v.vis.bans and band(v.vis.bans, this.teleport_flags) == 0 and (not this.teleport_excluded_teplates or not table.contains(this.teleport_excluded_teplates, v.template_name)) and v.nav_path and P:nodes_to_goal(v.nav_path.pi, v.nav_path.spi, v.nav_path.ni) >= this.config.teleport.nodes_to_goal_selectable and v.nav_path.ni >= this.config.teleport.nodes_from_selectable
 			end)
 
 			if enemies and #enemies > 0 then
@@ -28198,7 +28198,7 @@ function scripts.controller_stage_10_obelisk_by_wave.update(this, store)
 
 		if store.tick_ts - mode_ability_ts >= this.config.teleport.cooldown then
 			local enemies = table.filter(store.entities, function(k, v)
-				return not v.pending_removal and v.health and not v.health.dead and v.vis and v.vis.flags and band(v.vis.flags, this.teleport_bans) == 0 and v.vis and v.vis.bans and band(v.vis.bans, this.teleport_flags) == 0 and (not this.teleport_excluded_teplates or not table.contains(this.teleport_excluded_teplates, v.template_name)) and v.nav_path and P:nodes_to_goal(v.nav_path) >= this.config.teleport.nodes_to_goal_selectable and v.nav_path.ni >= this.config.teleport.nodes_from_selectable
+				return not v.pending_removal and v.health and not v.health.dead and v.vis and v.vis.flags and band(v.vis.flags, this.teleport_bans) == 0 and v.vis and v.vis.bans and band(v.vis.bans, this.teleport_flags) == 0 and (not this.teleport_excluded_teplates or not table.contains(this.teleport_excluded_teplates, v.template_name)) and v.nav_path and P:nodes_to_goal(v.nav_path.pi, v.nav_path.spi, v.nav_path.ni) >= this.config.teleport.nodes_to_goal_selectable and v.nav_path.ni >= this.config.teleport.nodes_from_selectable
 			end)
 
 			if not enemies or #enemies < this.config.min_enemies then
@@ -28221,7 +28221,7 @@ function scripts.controller_stage_10_obelisk_by_wave.update(this, store)
 			S:queue(this.sound_cast_teleport)
 
 			local enemies = table.filter(store.entities, function(k, v)
-				return not v.pending_removal and v.health and not v.health.dead and v.vis and v.vis.flags and band(v.vis.flags, this.teleport_bans) == 0 and v.vis and v.vis.bans and band(v.vis.bans, this.teleport_flags) == 0 and (not this.teleport_excluded_teplates or not table.contains(this.teleport_excluded_teplates, v.template_name)) and v.nav_path and P:nodes_to_goal(v.nav_path) >= this.config.teleport.nodes_to_goal_selectable and v.nav_path.ni >= this.config.teleport.nodes_from_selectable
+				return not v.pending_removal and v.health and not v.health.dead and v.vis and v.vis.flags and band(v.vis.flags, this.teleport_bans) == 0 and v.vis and v.vis.bans and band(v.vis.bans, this.teleport_flags) == 0 and (not this.teleport_excluded_teplates or not table.contains(this.teleport_excluded_teplates, v.template_name)) and v.nav_path and P:nodes_to_goal(v.nav_path.pi, v.nav_path.spi, v.nav_path.ni) >= this.config.teleport.nodes_to_goal_selectable and v.nav_path.ni >= this.config.teleport.nodes_from_selectable
 			end)
 
 			if enemies and #enemies > 0 then
@@ -28616,7 +28616,7 @@ function scripts.controller_stage_10_obelisk_wave_fixed.update(this, store)
 
 		if store.tick_ts - mode_ability_ts >= this.config.teleport.cooldown then
 			local enemies = table.filter(store.entities, function(k, v)
-				return not v.pending_removal and v.health and not v.health.dead and v.vis and v.vis.flags and band(v.vis.flags, this.teleport_bans) == 0 and v.vis and v.vis.bans and band(v.vis.bans, this.teleport_flags) == 0 and (not this.teleport_excluded_teplates or not table.contains(this.teleport_excluded_teplates, v.template_name)) and v.nav_path and P:nodes_to_goal(v.nav_path) >= this.config.teleport.nodes_to_goal_selectable and v.nav_path.ni >= this.config.teleport.nodes_from_selectable
+				return not v.pending_removal and v.health and not v.health.dead and v.vis and v.vis.flags and band(v.vis.flags, this.teleport_bans) == 0 and v.vis and v.vis.bans and band(v.vis.bans, this.teleport_flags) == 0 and (not this.teleport_excluded_teplates or not table.contains(this.teleport_excluded_teplates, v.template_name)) and v.nav_path and P:nodes_to_goal(v.nav_path.pi, v.nav_path.spi, v.nav_path.ni) >= this.config.teleport.nodes_to_goal_selectable and v.nav_path.ni >= this.config.teleport.nodes_from_selectable
 			end)
 
 			if not enemies or #enemies < this.config.min_enemies then
@@ -28639,7 +28639,7 @@ function scripts.controller_stage_10_obelisk_wave_fixed.update(this, store)
 			S:queue(this.sound_cast_teleport)
 
 			local enemies = table.filter(store.entities, function(k, v)
-				return not v.pending_removal and v.health and not v.health.dead and v.vis and v.vis.flags and band(v.vis.flags, this.teleport_bans) == 0 and v.vis and v.vis.bans and band(v.vis.bans, this.teleport_flags) == 0 and (not this.teleport_excluded_teplates or not table.contains(this.teleport_excluded_teplates, v.template_name)) and v.nav_path and P:nodes_to_goal(v.nav_path) >= this.config.teleport.nodes_to_goal_selectable and v.nav_path.ni >= this.config.teleport.nodes_from_selectable
+				return not v.pending_removal and v.health and not v.health.dead and v.vis and v.vis.flags and band(v.vis.flags, this.teleport_bans) == 0 and v.vis and v.vis.bans and band(v.vis.bans, this.teleport_flags) == 0 and (not this.teleport_excluded_teplates or not table.contains(this.teleport_excluded_teplates, v.template_name)) and v.nav_path and P:nodes_to_goal(v.nav_path.pi, v.nav_path.spi, v.nav_path.ni) >= this.config.teleport.nodes_to_goal_selectable and v.nav_path.ni >= this.config.teleport.nodes_from_selectable
 			end)
 
 			if enemies and #enemies > 0 then
@@ -30021,7 +30021,7 @@ function scripts.enemy_stage_11_cult_leader_illusion.update(this, store)
 	end
 
 	local function break_fn()
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_to_goal <= this.nodes_limit then
 			return true
@@ -33820,7 +33820,7 @@ function scripts.controller_stage_18_eridan.update(this, store)
 
 	local function find_target()
 		return U.find_foremost_enemy_in_range_filter_on(this.pos, ab.max_range, false, ab.vis_flags, ab.vis_bans, function(e, o)
-			return P:nodes_to_goal(e.nav_path) > 20
+			return P:nodes_to_goal(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni) > 20
 		end)
 	end
 
@@ -34295,7 +34295,7 @@ function scripts.enemy_rhino.update(this, store)
 	a.hit_targets = {}
 
 	local function ready_to_charge()
-		return store.tick_ts - a.ts > a.cooldown and not U.get_blocker(store, this) and P:nodes_to_defend_point(this.nav_path) > a.min_distance_from_end
+		return store.tick_ts - a.ts > a.cooldown and not U.get_blocker(store, this) and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > a.min_distance_from_end
 	end
 
 	while true do
@@ -34550,7 +34550,7 @@ function scripts.enemy_hyena5.update(this, store)
 						this.nav_path.ni = nearest[1][3]
 					end
 
-					this.motion.forced_waypoint = P:node_pos(this.nav_path)
+					this.motion.forced_waypoint = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 					U.set_destination(this, this.motion.forced_waypoint)
 				end
@@ -34795,7 +34795,7 @@ function scripts.enemy_lesser_sister.update(this, store)
 
 	local function ready_to_crooked_souls()
 		if not a.disabled and store.tick_ts - a.ts > a.cooldown then
-			local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+			local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 			if nodes_to_goal < this.nodes_limit then
 				a.disabled = true
@@ -34894,7 +34894,7 @@ function scripts.enemy_lesser_sister_nightmare.update(this, store)
 	local cont, blocker, ranged
 
 	local function break_fn()
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if (not this.enemy.can_do_magic or nodes_to_goal <= this.nodes_to_reveal) and not this.tween.reverse then
 			-- this.vis.flags = this.vis.flags_blocked
@@ -35130,7 +35130,7 @@ end
 
 function scripts.enemy_small_stalker.on_damage(this, store, damage)
 	if not this.skill_teleport.active and store.tick_ts - this.skill_teleport.ts > this.skill_teleport.cooldown then
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_to_goal > this.nodes_before_exit and this.enemy.can_do_magic then
 			this.skill_teleport.active = true
@@ -36625,7 +36625,7 @@ function scripts.enemy_corrupted_elf.update(this, store)
 
 	while true do
 		if this.health.dead then
-			local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+			local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 			if nodes_to_goal < this.spawn_nodes_limit then
 				this.death_spawns = nil
@@ -36883,7 +36883,7 @@ function scripts.enemy_dust_cryptid.update(this, store)
 		if this.health.dead then
 			shadow_sprite.hidden = true
 
-			local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+			local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 			if nodes_to_goal <= this.nodes_to_prevent_dust then
 				this.death_spawns = nil
@@ -37320,7 +37320,7 @@ function scripts.enemy_revenant_soulcaller.update(this, store)
 			return false
 		end
 
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_to_goal < this.nodes_limit then
 			as.disabled = true
@@ -37342,7 +37342,7 @@ function scripts.enemy_revenant_soulcaller.update(this, store)
 			return false
 		end
 
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_to_goal < this.nodes_limit then
 			at.disabled = true
@@ -37616,7 +37616,7 @@ function scripts.enemy_revenant_harvester.update(this, store)
 			return false
 		end
 
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_to_goal < this.nodes_limit then
 			ac.disabled = true
@@ -37970,7 +37970,7 @@ function scripts.enemy_quickfeet_gator.update(this, store)
 	local terrain_type
 
 	local function ready_to_chicken()
-		local nodes_from_start = P:nodes_from_start(this.nav_path)
+		local nodes_from_start = P:nodes_from_start(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_from_start < attack_chicken.self_nodes_from_start then
 			return false
@@ -38007,7 +38007,7 @@ function scripts.enemy_quickfeet_gator.update(this, store)
 				if not enemy then
 					SU.delay_attack(store, a, fts(10))
 				elseif enemy then
-					local e_nodes_from_start = P:nodes_from_start(enemy.nav_path)
+					local e_nodes_from_start = P:nodes_from_start(enemy.nav_path.pi, enemy.nav_path.spi, enemy.nav_path.ni)
 
 					if e_nodes_from_start < attack_chicken.target_nodes_from_start then
 						SU.delay_attack(store, a, fts(10))
@@ -38473,7 +38473,7 @@ function scripts.enemy_crocs_shaman.update(this, store)
 			return false
 		end
 
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_to_goal < attack_debuff.nodes_limit then
 			return false
@@ -38729,7 +38729,7 @@ function scripts.enemy_crocs_tank.update(this, store)
 	local charge_blocker_delay_ts = store.tick_ts + a.blocker_charge_delay
 
 	local function ready_to_charge()
-		return store.tick_ts - a.ts > a.cooldown and store.tick_ts > charge_blocker_delay_ts and P:nodes_to_defend_point(this.nav_path) > a.min_distance_from_end
+		return store.tick_ts - a.ts > a.cooldown and store.tick_ts > charge_blocker_delay_ts and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > a.min_distance_from_end
 	end
 
 	local walk_break_fn
@@ -39396,7 +39396,7 @@ function scripts.enemy_crocs_hydra.update(this, store)
 			return false
 		end
 
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if attack_debuff.disabled or terrain_type == TERRAIN_WATER or nodes_to_goal < attack_debuff.nodes_limit then
 			SU.delay_attack(store, attack_debuff, fts(10))
@@ -39981,7 +39981,7 @@ function scripts.trees_heart_of_the_arborean_decal.update(this, store)
 
 		node.spi = 1
 
-		local node_pos = P:node_pos(node)
+		local node_pos = P:node_pos(node.pi, node.spi, node.ni)
 
 		return node_pos
 	end
@@ -43490,7 +43490,7 @@ function scripts.decal_stage_24_upgrade_station.update(this, store)
 
 							local start_tel_count = hammerer.enemy.counts.mod_teleport
 
-							while hammerer and P:nodes_to_goal(hammerer.nav_path) > 1 do
+							while hammerer and P:nodes_to_goal(hammerer.nav_path.pi, hammerer.nav_path.spi, hammerer.nav_path.ni) > 1 do
 								if not hammerer or hammerer.health.dead then
 									goto label_1580_0
 								end
@@ -46173,7 +46173,7 @@ function scripts.enemy_rolling_sentry.update(this, store)
 
 	while true do
 		if this.health.dead then
-			local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+			local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 			S:queue(this.sound_specter_spawn, {
 				delay = 1
@@ -46265,7 +46265,7 @@ function scripts.enemy_mad_tinkerer.update(this, store)
 			return false
 		end
 
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_to_goal < this.nodes_limit then
 			ac.disabled = true
@@ -47276,13 +47276,13 @@ function scripts.enemy_darksteel_anvil.update(this, store)
 			return false
 		end
 
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_to_goal < ab.nodes_limit_end then
 			return false
 		end
 
-		local nodes_from_start = P:nodes_from_start(this.nav_path)
+		local nodes_from_start = P:nodes_from_start(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_from_start < ab.nodes_limit_start then
 			return false
@@ -47490,7 +47490,7 @@ function scripts.enemy_darksteel_hulk.update(this, store)
 	a.hit_targets = {}
 
 	local function ready_to_charge()
-		return store.tick_ts - a.ts > a.cooldown and this.health.hp / this.health.hp_max <= a.health_threshold and P:nodes_to_defend_point(this.nav_path) > a.min_distance_from_end
+		return store.tick_ts - a.ts > a.cooldown and this.health.hp / this.health.hp_max <= a.health_threshold and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > a.min_distance_from_end
 	end
 
 	local function break_fn()
@@ -48362,7 +48362,7 @@ function scripts.enemy_spider_priest.update(this, store)
 			return false
 		end
 
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_to_goal <= this.transformation_nodes_limit then
 			return false
@@ -48750,7 +48750,7 @@ function scripts.enemy_spider_sister.update(this, store)
 
 	local function ready_to_crooked_souls()
 		if not a.disabled and store.tick_ts - a.ts > a.cooldown then
-			local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+			local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 			if nodes_to_goal < this.nodes_limit then
 				a.disabled = true
@@ -49277,7 +49277,7 @@ function scripts.enemy_spidead.update(this, store)
 
 	while true do
 		if this.health.dead then
-			local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+			local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 			if nodes_to_goal <= this.nodes_to_prevent_web then
 				this.enemy.can_do_magic = false
@@ -49416,7 +49416,7 @@ function scripts.enemy_fire_phoenix.update(this, store)
 		if this.health.dead then
 			S:queue(this.sound_events.death_custom)
 
-			if P:is_node_valid(this.nav_path.pi, this.nav_path.ni) and P:nodes_to_goal(this.nav_path) > this.explode_nodes_limit then
+			if P:is_node_valid(this.nav_path.pi, this.nav_path.ni) and P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > this.explode_nodes_limit then
 				this.tween.disabled = true
 
 				U.animation_start(this, "bomb_death", nil, store.tick_ts, 1, 1)
@@ -49640,7 +49640,7 @@ function scripts.enemy_nine_tailed_fox.update(this, store)
 	this.spawned_from_summon = nil
 
 	local function is_after_nodes_limit(attack)
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		return nodes_to_goal < attack.nodes_limit
 	end
@@ -49896,7 +49896,7 @@ function scripts.enemy_storm_spirit.update(this, store)
 			return false
 		end
 
-		if P:nodes_to_goal(this.nav_path) < this.jump_ahead.nodes_limit then
+		if P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) < this.jump_ahead.nodes_limit then
 			return false
 		end
 
@@ -52259,13 +52259,13 @@ function scripts.enemy_golden_eyed.update(this, store)
 			return false
 		end
 
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_to_goal < ab.nodes_limit_end then
 			return false
 		end
 
-		local nodes_from_start = P:nodes_from_start(this.nav_path)
+		local nodes_from_start = P:nodes_from_start(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_from_start < ab.nodes_limit_start then
 			return false
@@ -52636,7 +52636,7 @@ function scripts.enemy_doom_bringer.update(this, store)
 			return nil
 		end
 
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_to_goal < a.nodes_limit then
 			SU.delay_attack(store, a, fts(10))
@@ -52842,7 +52842,7 @@ function scripts.enemy_hellfire_warlock.update(this, store)
 			return false
 		end
 
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_to_goal < a_summon.nodes_limit then
 			return false
@@ -53173,7 +53173,7 @@ function scripts.enemy_demon_minotaur.update(this, store)
 
 	a.ts = store.tick_ts
 
-	local pi_minotaur = P:nodes_to_defend_point(this.nav_path)
+	local pi_minotaur = P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 	while not this.health.dead and not this.unit.is_stunned do
 		local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.range_jump, a.vis_flags, a.vis_bans)
 
@@ -53181,10 +53181,10 @@ function scripts.enemy_demon_minotaur.update(this, store)
 			break
 		end
 
-		if P:nodes_to_defend_point(this.nav_path) > pi_minotaur then
+		if P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > pi_minotaur then
 			break
 		else
-			pi_minotaur = P:nodes_to_defend_point(this.nav_path)
+			pi_minotaur = P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 		end
 
 		SU.y_enemy_walk_step(store, this, a.animation)
@@ -56716,7 +56716,7 @@ function scripts.tunnel_KR5_stage_34_ponds.update(this, store)
 
 				enemy.nav_path.pi = tu.place_pi
 				enemy.nav_path.ni = tu.place_ni
-				enemy.pos = P:node_pos(enemy.nav_path)
+				enemy.pos = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, enemy.nav_path.ni)
 				enemy.main_script.runs = 1
 				enemy._placed_from_tunnel = true
 
@@ -57959,7 +57959,7 @@ function scripts.boss_princess_iron_fan.update(this, store)
 	end
 
 	local function is_after_nodes_limit(attack)
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		return nodes_to_goal < attack.nodes_limit
 	end
@@ -59216,7 +59216,7 @@ function scripts.boss_bull_king.update(this, store)
 	local area_attack_nodes_limit_to_destroy_path = 10
 
 	local function is_after_nodes_limit(attack)
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		return nodes_to_goal < attack.nodes_limit
 	end
@@ -61841,7 +61841,7 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 			boss.nav_path.pi = 4
 			boss.nav_path.spi = 1
 			boss.nav_path.ni = boss.spawn_node
-			boss.pos = P:node_pos(boss.nav_path)
+			boss.pos = P:node_pos(boss.nav_path.pi, boss.nav_path.spi, boss.nav_path.ni)
 
 			local boss_pushed_bans = U.push_bans(boss.vis, F_ALL)
 
@@ -68302,7 +68302,7 @@ function scripts.enemy_alfa_lava.update(this, store, script)
 			return false
 		end
 
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_to_goal < a.nodes_limit then
 			return false
@@ -69078,7 +69078,7 @@ function scripts.enemy_evolved_acid.update(this, store, script)
 			return false
 		end
 
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_to_goal < a_summon.nodes_limit then
 			return false
@@ -69548,7 +69548,7 @@ function scripts.enemy_alfa_acid.update(this, store, script)
 		if not this.enemy.can_do_magic then
 			return false
 		end
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_to_goal < a.self_nodes_limit then
 			return false
@@ -69624,7 +69624,7 @@ function scripts.enemy_alfa_acid.update(this, store, script)
 				if not enemy then
 					SU.delay_attack(store, a, fts(10))
 				elseif enemy then
-					local e_nodes_from_start = P:nodes_from_start(enemy.nav_path)
+					local e_nodes_from_start = P:nodes_from_start(enemy.nav_path.pi, enemy.nav_path.spi, enemy.nav_path.ni)
 
 					if e_nodes_from_start < a.target_nodes_limit then
 						SU.delay_attack(store, a, fts(10))
@@ -70087,7 +70087,7 @@ function scripts.enemy_basic_shadow.update(this, store, script)
 			return false
 		end
 
-		if P:nodes_to_goal(this.nav_path) < this.shadow_hide_nodes_limit then
+		if P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) < this.shadow_hide_nodes_limit then
 			return false
 		end
 
@@ -70119,7 +70119,7 @@ function scripts.enemy_basic_shadow.update(this, store, script)
 			return false
 		end
 
-		if P:nodes_to_goal(this.nav_path) < this.shadow_hide_nodes_limit then
+		if P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) < this.shadow_hide_nodes_limit then
 			return true
 		end
 
@@ -70374,7 +70374,7 @@ function scripts.enemy_evolved_shadow.update(this, store, script)
 			return
 		end
 
-		local ntg = P:nodes_to_goal(this.nav_path)
+		local ntg = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if ntg <= this.invisibility_safe_nodes then
 			return
@@ -70414,7 +70414,7 @@ function scripts.enemy_evolved_shadow.update(this, store, script)
 			shadow_show()
 		end
 
-		local ntg = P:nodes_to_goal(this.nav_path)
+		local ntg = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if ntg <= this.invisibility_safe_nodes then
 			shadow_show()
@@ -70989,7 +70989,7 @@ function scripts.enemy_alfa_storm.update(this, store, script)
 		end
 
 		local enemy, enemies, pred_pos = U.find_foremost_enemy(store.entities, this.pos, a_evolve.min_range, a_evolve.max_range, a_evolve.shoot_time + fts(5), a_evolve.vis_flags, a_evolve.vis_bans, function(e)
-			local nodes_to_goal = P:nodes_to_goal(e.nav_path)
+			local nodes_to_goal = P:nodes_to_goal(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
 
 			if nodes_to_goal < a_evolve.nodes_limit then
 				return false
@@ -71039,7 +71039,7 @@ function scripts.enemy_alfa_storm.update(this, store, script)
 		else
 			if ready_to_cast_evolve() then
 				local enemy, enemies, pred_pos = U.find_foremost_enemy(store.entities, this.pos, a_evolve.min_range, a_evolve.max_range, a_evolve.shoot_time + fts(5), a_evolve.vis_flags, a_evolve.vis_bans, function(e)
-					local nodes_to_goal = P:nodes_to_goal(e.nav_path)
+					local nodes_to_goal = P:nodes_to_goal(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
 
 					if nodes_to_goal < a_evolve.nodes_limit then
 						return false
@@ -71101,7 +71101,7 @@ function scripts.enemy_alfa_storm.update(this, store, script)
 
 					if not enemy or enemy.health.dead then
 						enemy, enemies, pred_pos = U.find_foremost_enemy(store.entities, this.pos, a_evolve.min_range, a_evolve.max_range, a_evolve.shoot_time + fts(5), a_evolve.vis_flags, a_evolve.vis_bans, function(e)
-							local nodes_to_goal = P:nodes_to_goal(e.nav_path)
+							local nodes_to_goal = P:nodes_to_goal(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
 
 							if nodes_to_goal < a_evolve.nodes_limit then
 								return false
@@ -71603,7 +71603,7 @@ function scripts.boss_murglum.update(this, store, script)
 			return false
 		end
 
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_to_goal < a_block_towers.nodes_limit then
 			return false
@@ -71682,7 +71682,7 @@ function scripts.boss_murglum.update(this, store, script)
 			return false
 		end
 
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_to_goal < a_geisers.nodes_limit then
 			return false
@@ -71766,7 +71766,7 @@ function scripts.boss_murglum.update(this, store, script)
 			return false
 		end
 
-		local nodes_to_goal = P:nodes_to_goal(this.nav_path)
+		local nodes_to_goal = P:nodes_to_goal(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 
 		if nodes_to_goal < a_feral_bite.nodes_limit then
 			return false

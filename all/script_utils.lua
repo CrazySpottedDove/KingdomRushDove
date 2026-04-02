@@ -4096,7 +4096,7 @@ function SU.y_spawner_spawn(store, this)
 			end
 		else
 			spawn.nav_path.ni = sp.ni + sp.node_offset
-			spawn.motion.forced_waypoint = P:node_pos(spawn.nav_path)
+			spawn.motion.forced_waypoint = P:node_pos(spawn.nav_path.pi, spawn.nav_path.spi, spawn.nav_path.ni)
 		end
 
 		spawn.pos.x, spawn.pos.y = this.pos.x + sp.pos_offset.x, this.pos.y + sp.pos_offset.y

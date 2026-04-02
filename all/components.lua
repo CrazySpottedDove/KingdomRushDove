@@ -92,13 +92,15 @@ force_motion.ramp_radius = nil
 force_motion.ramp_min_factor = 0.1
 force_motion.ramp_max_factor = 1
 
-local nav_path = E:register_c("nav_path")
+local nav_path = require("lib.nav_path")(1, 1, 1, 1)
+E:register_c_ffi("nav_path", nav_path)
 
-nav_path.pi = 1
-nav_path.spi = 1
-nav_path.ni = 1
-nav_path.dir = 1
--- nav_path.prev_pis = nil
+-- local nav_path = E:register_c("nav_path")
+
+-- nav_path.pi = 1
+-- nav_path.spi = 1
+-- nav_path.ni = 1
+-- nav_path.dir = 1
 
 local nav_rally = E:register_c("nav_rally")
 

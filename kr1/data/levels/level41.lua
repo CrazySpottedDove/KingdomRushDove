@@ -70,7 +70,7 @@ end
 local e
 local home_pi=9
 local home_node={spi=1,dir=1,pi=home_pi,ni=P:get_end_node(home_pi)-1}
-local home_pos=P:node_pos(home_node)
+local home_pos=P:node_pos(home_node.pi,home_node.spi,home_node.ni)
 self.home_node=home_node
 self.home_pos=home_pos
 local CRYSTAL_OFF_Y=45

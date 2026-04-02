@@ -11685,7 +11685,7 @@ function scripts.tower_stargazers.update(this, store)
 						local enemy = p.entity
 
 						enemy.nav_path.ni = p.ni
-						enemy.pos = P:node_pos(enemy.nav_path)
+						enemy.pos = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, enemy.nav_path.ni)
 
 						if enemy.ui then
 							enemy.ui.can_click = true
@@ -11747,7 +11747,7 @@ function scripts.tower_stargazers.remove(this, store)
 			local enemy = p.entity
 
 			enemy.nav_path.ni = p.ni
-			enemy.pos = P:node_pos(enemy.nav_path)
+			enemy.pos = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, enemy.nav_path.ni)
 
 			if enemy.ui then
 				enemy.ui.can_click = true

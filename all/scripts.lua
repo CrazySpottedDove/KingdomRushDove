@@ -4994,7 +4994,7 @@ function scripts.tunnel.update(this, store)
 
 				enemy.nav_path.pi = tu.place_pi
 				enemy.nav_path.ni = tu.place_ni
-				enemy.pos = P:node_pos(enemy.nav_path)
+				enemy.pos = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, enemy.nav_path.ni)
 				enemy.main_script.runs = 1
 
 				if enemy.ui then
@@ -5111,7 +5111,7 @@ function scripts.tunnel_KR5.update(this, store)
 
 				enemy.nav_path.pi = tu.place_pi
 				enemy.nav_path.ni = tu.place_ni
-				enemy.pos = P:node_pos(enemy.nav_path)
+				enemy.pos = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, enemy.nav_path.ni)
 				enemy.main_script.runs = 1
 				enemy._placed_from_tunnel = true
 
@@ -5222,7 +5222,7 @@ function scripts.tunnel_KR5_destructible.update(this, store)
 					enemy.nav_path.ni = tu.place_ni
 				end
 
-				enemy.pos = P:node_pos(enemy.nav_path)
+				enemy.pos = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, enemy.nav_path.ni)
 				enemy.main_script.runs = 1
 				enemy._placed_from_tunnel = true
 
@@ -7087,7 +7087,7 @@ function scripts.mod_teleport.update(this, store)
 		target.nav_path.ni = km.clamp(n_limit, P:get_end_node(target.nav_path.pi) - n_limit, n_ni)
 	end
 
-	local npos = P:node_pos(target.nav_path)
+	local npos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni)
 
 	U.unblock_all(store, target)
 
@@ -7638,7 +7638,7 @@ function scripts.mega_spawner.update(this, store)
 						e.nav_path.spi = node.spi
 						e.nav_path.ni = node.ni
 						e.pos = V.vclone(p_from)
-						e.motion.forced_waypoint = P:node_pos(e.nav_path)
+						e.motion.forced_waypoint = P:node_pos(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
 
 						if raise then
 							e.render.sprites[1].name = "raise"
@@ -8091,7 +8091,7 @@ function scripts.mod_lycanthropy.insert(this, store)
 		return false
 	end
 
-	if source and P:nodes_to_defend_point(source.nav_path) < this.nodeslimit then
+	if source and P:nodes_to_defend_point(source.nav_path.pi, source.nav_path.spi, source.nav_path.ni) < this.nodeslimit then
 		return false
 	end
 

@@ -203,15 +203,7 @@ function path_db:set_path_width(pi, value)
 	self.path_widths[pi] = value
 end
 
-function path_db:node_pos(p1, p2, p3, return_ref)
-	local pi, spi, ni
-
-	if type(p1) == "table" then
-		pi, spi, ni = p1.pi, p1.spi, p1.ni
-	else
-		pi, spi, ni = p1, p2, p3
-	end
-
+function path_db:node_pos(pi, spi, ni, return_ref)
 	local path = self.paths[pi][spi]
 
 	ni = km.clamp(1, #path, ni)
@@ -223,15 +215,7 @@ function path_db:node_pos(p1, p2, p3, return_ref)
 	end
 end
 
-function path_db:node_offset_pos(offset, p1, p2, p3)
-	local pi, spi, ni
-
-	if type(p1) == "table" then
-		pi, spi, ni = p1.pi, p1.spi, p1.ni
-	else
-		pi, spi, ni = p1, p2, p3
-	end
-
+function path_db:node_offset_pos(offset, pi, spi, ni)
 	ni = km.clamp(1, #self.paths[pi][spi], ni)
 
 	local o = self.paths[pi][spi][ni]
@@ -295,27 +279,11 @@ function path_db:get_prev_pi(pi)
 	return self.path_connections_reserve[pi]
 end
 
-function path_db:nodes_from_start(p1, p2, p3)
-	local pi, spi, ni
-
-	if type(p1) == "table" then
-		pi, spi, ni = p1.pi, p1.spi, p1.ni
-	else
-		pi, spi, ni = p1, p2, p3
-	end
-
+function path_db:nodes_from_start(pi, spi, ni)
 	return ni - self:get_start_node(pi)
 end
 
-function path_db:nodes_to_goal(p1, p2, p3)
-	local pi, spi, ni
-
-	if type(p1) == "table" then
-		pi, spi, ni = p1.pi, p1.spi, p1.ni
-	else
-		pi, spi, ni = p1, p2, p3
-	end
-
+function path_db:nodes_to_goal(pi, spi, ni)
 	local cpi = pi
 	local count = -ni
 
@@ -341,15 +309,7 @@ function path_db:set_defend_point_node(pi, ni)
 	self.defend_point_node[pi] = ni
 end
 
-function path_db:nodes_to_defend_point(p1, p2, p3)
-	local pi, spi, ni
-
-	if type(p1) == "table" then
-		pi, spi, ni = p1.pi, p1.spi, p1.ni
-	else
-		pi, spi, ni = p1, p2, p3
-	end
-
+function path_db:nodes_to_defend_point(pi, spi, ni)
 	local ntg, lpi = self:nodes_to_goal(pi, spi, ni)
 	local dn = self:get_defend_point_node(lpi)
 
