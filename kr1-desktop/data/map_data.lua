@@ -6306,12 +6306,8 @@ return {
 			template = "ma_metro_1",
 			move = {
 				time = 1,
-				from = {
-					y = 539
-				},
-				to = {
-					y = 542
-				}
+				from = v(960, 539),
+				to = v(960, 542)
 			},
 			animation = {
 				from = 6,
@@ -6323,12 +6319,8 @@ return {
 			template = "ma_metro_1",
 			move = {
 				time = 2,
-				from = {
-					y = 538
-				},
-				to = {
-					y = 541
-				}
+				from = v(960, 538),
+				to = v(960, 541)
 			},
 			animation = {
 				from = 7,
@@ -6340,12 +6332,8 @@ return {
 			template = "ma_metro_1",
 			move = {
 				time = 3,
-				from = {
-					y = 539
-				},
-				to = {
-					y = 542
-				}
+				from = v(960, 539),
+				to = v(960, 542)
 			},
 			animation = {
 				from = 8,
@@ -6357,12 +6345,8 @@ return {
 			template = "ma_metro_1",
 			move = {
 				time = 1,
-				from = {
-					y = 538
-				},
-				to = {
-					y = 542
-				}
+				from = v(960, 538),
+				to = v(960, 542)
 			},
 			animation = {
 				from = 9,
@@ -6374,12 +6358,8 @@ return {
 			template = "ma_metro_1",
 			move = {
 				time = 2.2,
-				from = {
-					y = 538
-				},
-				to = {
-					y = 542
-				}
+				from = v(960, 538),
+				to = v(960, 542)
 			},
 			animation = {
 				from = 10,

@@ -165,6 +165,7 @@ Timer.tween = setmetatable({
 
 				-- assert(type(v) == type(ref), "Type mismatch in field \"" .. k .. "\".")
 
+				-- ! 补间参数不可以传入 cdata，但是被补间的对象可以是 cdata!
 				if type(v) == "table" then
 					tween_collect_payload(ref, v, out)
 				else

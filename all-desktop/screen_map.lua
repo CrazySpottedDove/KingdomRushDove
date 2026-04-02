@@ -765,14 +765,20 @@ function screen_map:change_generation(i)
 
 	timer:tween(0.4, self.window, {
 		alpha = 0,
-		scale = v(small_scale_x, small_scale_y)
+		scale = {
+			x = small_scale_x,
+			y = small_scale_y
+		}
 	}, "out-quad", function()
 		screen_map:init(self.original_w, self.original_h, self.done_callback)
 		self.window.alpha = 0
 		self.window.scale = v(large_scale_x, large_scale_y)
 		timer:tween(0.4, self.window, {
 			alpha = 1,
-			scale = v(scale_x, scale_y)
+			scale = {
+				x = scale_x,
+				y = scale_y
+			}
 		}, "in-quad", function()
 			self.is_switching_map = false
 		end)
@@ -1402,7 +1408,6 @@ function MapView:load_map_animations(num)
 						}
 					}
 
-					log.paranoid(" MOVING (%s): %s,%s to %s,%s in %s", av.id, av.pos.x, av.pos.y, m.to.x, m.to.y, move_time)
 					timer:tween(move_time, av, params, m.interp, function(func2)
 						if not av.move.permanent then
 							av.hidden = true

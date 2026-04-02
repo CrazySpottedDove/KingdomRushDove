@@ -111,7 +111,7 @@ game.simulation_systems = {
 	"seen_tracker",
 	"spatial_index",
 	"last_hook",
-	"lights",
+	-- "lights",
 	"assets_checker",
 	"wave_generator"
 }

@@ -10463,17 +10463,17 @@ tt.render.sprites[1].animated = false
 tt = RT("defend_flag_water", "defend_flag")
 tt.render.sprites[1].name = "defendFlag_water"
 --#endregion
---#region decal_street_lamp
-tt = RT("decal_street_lamp", "decal")
+-- --#region decal_street_lamp
+-- tt = RT("decal_street_lamp", "decal")
 
-AC(tt, "lights")
+-- AC(tt, "lights")
 
-tt.lights[1].radius = 70
---#endregion
---#region decal_lamp
-tt = RT("decal_lamp", "decal_street_lamp")
-tt.lights[1].radius = 70
---#endregion
+-- tt.lights[1].radius = 70
+-- --#endregion
+-- --#region decal_lamp
+-- tt = RT("decal_lamp", "decal_street_lamp")
+-- tt.lights[1].radius = 70
+-- --#endregion
 --#region fx_tower_arcane_wizard_ray_hit_start
 tt = RT("fx_tower_arcane_wizard_ray_hit_start", "fx")
 
