@@ -193,8 +193,6 @@ function director:item_done_callback(item_name, outcome)
 		end
 	end
 
-	log.debug("DONE CALLBACK FROM %s with outcome %s", item_name, getdump(outcome))
-
 	if outcome then
 		if outcome.quit then
 			self:quit()
@@ -349,10 +347,6 @@ function director:queue_load_item_named(name, force_reload)
 	local props = self.item_props[name]
 
 	self:reset_screen_params(props and props.scissor)
-
-	if DBG_REPLACE_MISSING_TEXTURES then
-		self:load_texture_groups({"_debug_textures"}, self.params.texture_size, 480, false)
-	end
 
 	local show_loading = props.show_loading
 
