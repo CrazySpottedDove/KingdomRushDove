@@ -70,7 +70,7 @@ end
 --- 删除文件
 ---@param file_path string 文件路径
 function file_utlis.delete_file(file_path)
-	os.remove(file_path)
+	return os.remove(file_path)
 end
 
 return file_utlis

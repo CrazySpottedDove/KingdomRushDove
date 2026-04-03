@@ -873,7 +873,7 @@ local function commit_all_changes(info)
 	-- 3. 删除文件
 	for _, file_path in ipairs(deleted_files) do
 		if FS.getInfo(file_path) then
-			local success = FU.delete_file and FU.delete_file(file_path) or FS.remove(file_path)
+			local success = FU.delete_file(file_path)
 			if not success then
 				log_error("删除文件失败: " .. file_path)
 			-- 不中断更新
