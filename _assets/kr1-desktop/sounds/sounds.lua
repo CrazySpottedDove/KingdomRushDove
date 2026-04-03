@@ -2571,54 +2571,6 @@ return {
 		loop = true,
 		source_group = "SFX"
 	},
-	ElvesInAppHandOfMidas = {
-		files = {"kro_sfx_inapp-handofmidas[op1].ogg"},
-		gain = 0.8,
-		loop = false,
-		source_group = "SPECIALS"
-	},
-	ElvesInAppHandOfMidasLoop = {
-		files = {"kro_sfx_inapp-handofmidas-active[op3]C.ogg"},
-		gain = 0.6,
-		loop = true,
-		source_group = "SPECIALS"
-	},
-	ElvesInAppHornOfHeroism = {
-		files = {"kro_sfx_inapp_hornofheroism[op2].ogg"},
-		gain = 0.8,
-		loop = false,
-		source_group = "SPECIALS"
-	},
-	ElvesInAppRodDragon = {
-		files = {"kre_sfx_arivan_fireballhit_v3.ogg"},
-		gain = 0.8,
-		loop = false,
-		source_group = "SPECIALS"
-	},
-	ElvesInAppTearOfElynie = {
-		files = {"kro_sfx_inapp-tearofelynie_v2[conlacrimosa].ogg"},
-		gain = 0.8,
-		loop = false,
-		source_group = "SPECIALS"
-	},
-	ElvesInAppTeleportGemEnemiesIn = {
-		files = {"kro_sfx_inapp-teleportgem_v2[enemiesin].ogg"},
-		gain = 0.8,
-		loop = false,
-		source_group = "SPECIALS"
-	},
-	ElvesInAppTeleportGemEnemiesOut = {
-		files = {"kro_sfx_inapp-teleportgem_v2[enemiesout].ogg"},
-		gain = 0.8,
-		loop = false,
-		source_group = "SPECIALS"
-	},
-	ElvesInAppTeleportScroll = {
-		files = {"kro_sfx_inapp-teleportscroll_v2[sinslam].ogg"},
-		gain = 0.8,
-		loop = false,
-		source_group = "SPECIALS"
-	},
 	ElvesMageHighElvenSentinelTaunt = {
 		files = {"HighMage_ArcaneSentinel-01c.ogg"},
 		gain = 0.6,
@@ -4107,64 +4059,14 @@ return {
 		loop = false,
 		source_group = "SFX"
 	},
-	GUIAchievementClaim = {
-		files = {"kr5_sfx_achievementcollect.ogg"},
-		gain = 0.8,
-		ignore = 0.2,
-		loop = false,
-		source_group = "GUI"
-	},
 	GUIAchievementWin = {
 		files = {"Sound_AchievementWin.ogg"},
 		gain = 1,
 		loop = false,
 		source_group = "GUI"
 	},
-	GUIBalloonIn = {
-		files = {"kr5_sfx_balloon-in.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIBalloonOut = {
-		files = {"kr5_sfx_balloon-out.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
 	GUIButtonCommon = {
 		files = {"Sound_GUIButtonCommon.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIButtonHover = {
-		files = {"kra_sfx_uiMenu_hover_op1_v1.ogg"},
-		gain = 0.2,
-		ignore = 0.1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIButtonOut = {
-		files = {"kra_sfx_ui_buttonOut_op2_v2.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIButtonSoft1 = {
-		files = {"kr5_sfx_genericbuttonsoft_op1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIButtonSoft2 = {
-		files = {"kr5_sfx_genericbuttonsoft_op2.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIButtonUnavailable = {
-		files = {"kra_sfx_ui_buttonUnavailable_v1.ogg"},
 		gain = 1,
 		loop = false,
 		source_group = "GUI"
@@ -4181,64 +4083,8 @@ return {
 		loop = false,
 		source_group = "GUI"
 	},
-	GUIEquip = {
-		files = {"kr5_sfx_heroselect_op2.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIFlagFall = {
-		files = {"kr5_sfx_flagfall.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIGemCounterSingle = {
-		files = {"kra_sfx_ui_gemCounter_SINGLE_v1.ogg"},
-		gain = 0.7,
-		ignore = 0.1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIHeroScroll = {
-		files = {"kr5_sfx_heroscroll_op1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIHeroSelect = {
-		files = {"kr5_sfx_heroselect_op1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIHeroSkillConfirm = {
-		files = {"kr5_sfx_heroskillconfirm.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIHeroSkillSelect = {
-		files = {"kr5_sfx_heroskillselect.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIHeroTowerSelect = {
-		files = {"kra_sfx_ui_heroTowerSelect_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
 	GUILooseLife = {
 		files = {"Sound_LooseLife.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIMapCloudRemoval = {
-		delay = 1.5,
-		files = {"kra_sfx_uiMap_cloudRemoval_v1.ogg"},
 		gain = 1,
 		loop = false,
 		source_group = "GUI"
@@ -4250,26 +4096,8 @@ return {
 		loop = false,
 		source_group = "GUI"
 	},
-	GUIMapDotsAppear = {
-		files = {"kra_sfx_ui_mapDotsAppear_op2_v2.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
 	GUIMapNewFlah = {
 		files = {"Sound_MapNewFlag.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIMapStageFlagAppear = {
-		files = {"kra_sfx_ui_stageFlagAppear_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIMapStageFlagHeroicWings = {
-		files = {"kra_sfx_uiMap_heroicChallengeFlag_v1.ogg"},
 		gain = 1,
 		loop = false,
 		source_group = "GUI"
@@ -4340,12 +4168,6 @@ return {
 		loop = false,
 		source_group = "GUI"
 	},
-	GUIResetUpgrade = {
-		files = {"kra_sfx_ui_resetSkills_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
 	GUISpellRefresh = {
 		files = {"Sound_SpellRefresh.ogg"},
 		gain = 1,
@@ -4354,25 +4176,6 @@ return {
 	},
 	GUISpellSelect = {
 		files = {"Sound_SpellSelect.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUISplash = {
-		delay = 0,
-		files = {"KR5_SFX_IronhideLogo_24042024.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIStageDefeat = {
-		files = {"kra_sfx_ui_stageDefeat_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIStageVictory = {
-		files = {"kra_sfx_ui_stageVictory_v1.ogg"},
 		gain = 1,
 		loop = false,
 		source_group = "GUI"
@@ -4391,18 +4194,6 @@ return {
 	},
 	GUITowerSell = {
 		files = {"Sound_TowerSell.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUITowerWheelTapOff = {
-		files = {"kra_sfx_ui_towerWheelDrag_tapOff_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUITowerWheelTapOn = {
-		files = {"kra_sfx_ui_towerWheelDrag_tapOn_v1.ogg"},
 		gain = 1,
 		loop = false,
 		source_group = "GUI"
@@ -13117,18 +12908,6 @@ return {
 	},
 	kr4_map_star = {
 		files = {"kr4_map_star.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "SFX"
-	},
-	kra_sfx_ui_mapDotsAppear_op2_v2 = {
-		files = {"kra_sfx_ui_mapDotsAppear_op2_v2.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "SFX"
-	},
-	kra_sfx_ui_stageFlagAppear = {
-		files = {"kra_sfx_ui_stageFlagAppear_v1.ogg"},
 		gain = 1,
 		loop = false,
 		source_group = "SFX"

@@ -96,11 +96,11 @@ linux_quick:
 	bash $(MAKE_FILE_DIR)/pack_linux.sh quick
 
 android_build:
-	@bash $(MAKE_FILE_DIR)/package.sh
+# 	@bash $(MAKE_FILE_DIR)/package.sh
 	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh no-upload
 
 android_hd_build:
-	@bash $(MAKE_FILE_DIR)/package.sh
+# 	@bash $(MAKE_FILE_DIR)/package.sh
 	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh hd no-upload
 
 push:

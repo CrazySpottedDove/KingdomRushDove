@@ -38,7 +38,6 @@ local apply_upgrade = not IS_ANDROID
 -- DEBUG 不启用
 apply_upgrade = apply_upgrade and not (arg[2] == "debug" or arg[2] == "release")
 
-local is_windows = package.config:sub(1, 1) == "\\"
 local R = require("all.restart")
 
 -- 更新状态定义
@@ -1054,6 +1053,7 @@ end
 
 function M:init(params, done_callback)
 	apply_upgrade = apply_upgrade and params.update_enabled
+
 	self.done_callback = done_callback
 	self.params = params
 	if not apply_upgrade then

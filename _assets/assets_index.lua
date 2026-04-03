@@ -3319,10 +3319,6 @@ return {
 		size = 1373426,
 		hash = "0cc941ac"
 	},
-	["kr1-desktop/sounds/files/KR5_SFX_IronhideLogo_24042024.ogg"] = {
-		size = 216376,
-		hash = "65edea00"
-	},
 	["kr1-desktop/sounds/files/KRF_sfx_minotauro_ataquefuerte.ogg"] = {
 		size = 43053,
 		hash = "b35bb3f4"
@@ -5846,50 +5842,6 @@ return {
 	["kr1-desktop/sounds/files/kr5_sfx_UIgate-open_op1.ogg"] = {
 		size = 44507,
 		hash = "c197ed2c"
-	},
-	["kr1-desktop/sounds/files/kr5_sfx_achievementcollect.ogg"] = {
-		size = 68534,
-		hash = "d5b74b60"
-	},
-	["kr1-desktop/sounds/files/kr5_sfx_balloon-in.ogg"] = {
-		size = 10667,
-		hash = "ebb5b8c0"
-	},
-	["kr1-desktop/sounds/files/kr5_sfx_balloon-out.ogg"] = {
-		size = 9414,
-		hash = "2f41684c"
-	},
-	["kr1-desktop/sounds/files/kr5_sfx_flagfall.ogg"] = {
-		size = 19746,
-		hash = "e02ff398"
-	},
-	["kr1-desktop/sounds/files/kr5_sfx_genericbuttonsoft_op1.ogg"] = {
-		size = 10271,
-		hash = "0d9dc1cc"
-	},
-	["kr1-desktop/sounds/files/kr5_sfx_genericbuttonsoft_op2.ogg"] = {
-		size = 10665,
-		hash = "52eb7cfc"
-	},
-	["kr1-desktop/sounds/files/kr5_sfx_heroscroll_op1.ogg"] = {
-		size = 15668,
-		hash = "46334364"
-	},
-	["kr1-desktop/sounds/files/kr5_sfx_heroselect_op1.ogg"] = {
-		size = 38157,
-		hash = "a465fb50"
-	},
-	["kr1-desktop/sounds/files/kr5_sfx_heroselect_op2.ogg"] = {
-		size = 45863,
-		hash = "de08b6b4"
-	},
-	["kr1-desktop/sounds/files/kr5_sfx_heroskillconfirm.ogg"] = {
-		size = 37985,
-		hash = "a9ef3c14"
-	},
-	["kr1-desktop/sounds/files/kr5_sfx_heroskillselect.ogg"] = {
-		size = 10261,
-		hash = "00fae5ac"
 	},
 	["kr1-desktop/sounds/files/kr5_sfx_veznanwrath_appear_sinrisa_v1.ogg"] = {
 		size = 157265,
@@ -11515,65 +11467,9 @@ return {
 		size = 29774,
 		hash = "aff01a7c"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_uiMap_cloudRemoval_v1.ogg"] = {
-		size = 147275,
-		hash = "e85f51cc"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_uiMap_cultistBridge_op2_v1.ogg"] = {
 		size = 72000,
 		hash = "4db25394"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_uiMap_heroicChallengeFlag_v1.ogg"] = {
-		size = 22059,
-		hash = "f080d970"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_uiMenu_hover_op1_v1.ogg"] = {
-		size = 6440,
-		hash = "ef30a74e"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_buttonOut_op2_v2.ogg"] = {
-		size = 7827,
-		hash = "9a31b480"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_buttonUnavailable_v1.ogg"] = {
-		size = 7673,
-		hash = "c036a956"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_gemCounter_SINGLE_v1.ogg"] = {
-		size = 19042,
-		hash = "5097ddac"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_heroTowerSelect_v1.ogg"] = {
-		size = 41262,
-		hash = "61b044a0"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_mapDotsAppear_op2_v2.ogg"] = {
-		size = 7002,
-		hash = "612e34c2"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_resetSkills_v1.ogg"] = {
-		size = 15790,
-		hash = "66f64fc4"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_stageDefeat_v1.ogg"] = {
-		size = 118504,
-		hash = "766cff84"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_stageFlagAppear_v1.ogg"] = {
-		size = 27735,
-		hash = "1f444e74"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_stageVictory_v1.ogg"] = {
-		size = 107630,
-		hash = "42c08d02"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_towerWheelDrag_tapOff_v1.ogg"] = {
-		size = 15533,
-		hash = "c0185578"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_towerWheelDrag_tapOn_v1.ogg"] = {
-		size = 10129,
-		hash = "886e6da4"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_update1Ambient_wind_var1.ogg"] = {
 		size = 149864,
@@ -13094,34 +12990,6 @@ return {
 	["kr1-desktop/sounds/files/kro_sfx_hulkingrage_mining_v2[op2].ogg"] = {
 		size = 119259,
 		hash = "3c4f806f"
-	},
-	["kr1-desktop/sounds/files/kro_sfx_inapp-handofmidas-active[op3]C.ogg"] = {
-		size = 154103,
-		hash = "61e32c58"
-	},
-	["kr1-desktop/sounds/files/kro_sfx_inapp-handofmidas[op1].ogg"] = {
-		size = 44235,
-		hash = "8def96e8"
-	},
-	["kr1-desktop/sounds/files/kro_sfx_inapp-tearofelynie_v2[conlacrimosa].ogg"] = {
-		size = 97072,
-		hash = "22d841f1"
-	},
-	["kr1-desktop/sounds/files/kro_sfx_inapp-teleportgem_v2[enemiesin].ogg"] = {
-		size = 13241,
-		hash = "a91af3cc"
-	},
-	["kr1-desktop/sounds/files/kro_sfx_inapp-teleportgem_v2[enemiesout].ogg"] = {
-		size = 48084,
-		hash = "68055668"
-	},
-	["kr1-desktop/sounds/files/kro_sfx_inapp-teleportscroll_v2[sinslam].ogg"] = {
-		size = 51850,
-		hash = "a7fc265a"
-	},
-	["kr1-desktop/sounds/files/kro_sfx_inapp_hornofheroism[op2].ogg"] = {
-		size = 44640,
-		hash = "2596129c"
 	},
 	["kr1-desktop/sounds/files/kro_sfx_lilith_infernalwheel.ogg"] = {
 		size = 75337,
