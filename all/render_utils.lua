@@ -84,16 +84,17 @@ if IS_ANDROID then
 					local exo = EXO:get_exo_by_frame(f.exo_frame)
 					for part_idx, part in ipairs(f.exo_frame) do
 						do
-							local part_type, part_name_idx, alpha, x, y, sx, sy, r, kx, ky = unpack(part)
+							local part_type, part_name_idx, alpha, x, y, sx, sy, r, kx, ky = part[1], part[2], part[3], part[4], part[5], part[6], part[7], part[8], part[9], part[10]
 
-							if part.hidden then
-							else
+							if not part.hidden then
 								if part_type == 8 then
-									local flipf = (f.flip_x and -1 or 1) * (f.flip_y and -1 or 1)
-									sy = sy * (f.flip_y and -1 or 1)
-									sx = sx * (f.flip_x and -1 or 1)
 									local f_sx = f.flip_x and -1 or 1
 									local f_sy = f.flip_y and -1 or 1
+
+									local flipf = f_sx * f_sy
+
+									sx = sx * f_sx
+									sy = sy * f_sy
 
 									if f.scale then
 										sy = sy * f.scale.y
@@ -104,6 +105,7 @@ if IS_ANDROID then
 
 									local p_x_s = x * f_sx
 									local p_y_s = y * f_sy
+
 									r = -f.r * flipf + r
 
 									if f.r ~= 0 then
@@ -111,6 +113,7 @@ if IS_ANDROID then
 										local sr = math.sin(-f.r)
 										local p_x = p_x_s * cr - p_y_s * sr
 										local p_y = p_x_s * sr + p_y_s * cr
+
 										x = p_x + f.pos.x + f.offset.x
 										y = -p_y + f.pos.y + f.offset.y
 									else
@@ -121,10 +124,13 @@ if IS_ANDROID then
 									if not f.last_attach_point_xform then
 										f.last_attach_point_xform = {}
 									end
+
 									if not f.last_attach_point_xform[part_name_idx] then
 										f.last_attach_point_xform[part_name_idx] = {}
 									end
+
 									local l = f.last_attach_point_xform[part_name_idx]
+
 									l.x, l.y = x, y
 									l.r = r * flipf
 									l.sx, l.sy = sx, sy
@@ -132,15 +138,19 @@ if IS_ANDROID then
 									goto label_6_0
 								end
 
-								local part_name, pox, poy = unpack(exo.parts[part_name_idx])
+								local part_name, pox, poy = exo.parts[part_name_idx][1], exo.parts[part_name_idx][2], exo.parts[part_name_idx][3]
 								local ss = I:s(part_name)
 
 								-- 计算最终渲染坐标
-								local flipf = (f.flip_x and -1 or 1) * (f.flip_y and -1 or 1)
-								sy = alpha * (f.flip_y and -1 or 1)
-								sx = alpha * (f.flip_x and -1 or 1)
+								local ref_scale = ss.ref_scale or 1
+
 								local f_sx = f.flip_x and -1 or 1
 								local f_sy = f.flip_y and -1 or 1
+
+								local flipf = f_sx * f_sy
+
+								sx = sx * f_sx * ref_scale
+								sy = sy * f_sy * ref_scale
 
 								if f.scale then
 									sy = sy * f.scale.y
@@ -149,29 +159,30 @@ if IS_ANDROID then
 									f_sy = f_sy * f.scale.y
 								end
 
-								local p_x_s = (x + pox) * f_sx
-								local p_y_s = (y + poy) * f_sy
+								local p_x_s = x * f_sx
+								local p_y_s = y * f_sy
+
 								r = -f.r * flipf + r
 
-								local final_x, final_y
+								-- local final_x, final_y
 								if f.r ~= 0 then
 									local cr = math.cos(-f.r)
 									local sr = math.sin(-f.r)
 									local p_x = p_x_s * cr - p_y_s * sr
 									local p_y = p_x_s * sr + p_y_s * cr
-									final_x = p_x + f.pos.x + f.offset.x
-									final_y = REF_H - (-p_y + f.pos.y + f.offset.y)
+
+									x = p_x + f.pos.x + f.offset.x
+									y = REF_H - (-p_y + f.pos.y + f.offset.y)
 								else
-									final_x = p_x_s + f.pos.x + f.offset.x
-									final_y = REF_H - (-p_y_s + f.pos.y + f.offset.y)
+									x = p_x_s + f.pos.x + f.offset.x
+									y = REF_H - (-p_y_s + f.pos.y + f.offset.y)
 								end
 
 								-- 视锥体剔除：直接用渲染坐标比较
 								local visible = true
+
 								if cull_bounds then
-									local w, h = ss.size[1] * math.abs(sx), ss.size[2] * math.abs(sy)
-									local hw, hh = w * 0.5, h * 0.5
-									visible = not (final_x + hw < cull_left or final_x - hw > cull_right or final_y + hh < cull_top or final_y - hh > cull_bottom)
+									visible = not (x + ss.size[1] * math.abs(sx) * 0.5 < cull_left or x - ss.size[1] * math.abs(sx) * 0.5 > cull_right or y + ss.size[2] * math.abs(sy) * 0.5 < cull_top or y - ss.size[2] * math.abs(sy) * 0.5 > cull_bottom)
 								end
 
 								if visible then
@@ -203,7 +214,7 @@ if IS_ANDROID then
 											G.setShader(f._shader)
 
 											if f.shader_args then
-												for k, v in pairs(f.shader_args) do
+												for k, v in ipairs(f.shader_args) do
 													f._shader:send(k, v)
 												end
 											end
@@ -212,18 +223,22 @@ if IS_ANDROID then
 										end
 									end
 
+									local cr, cg, cb = 1, 1, 1
+
 									if f.color then
-										r, g, b = f.color[1] / 255, f.color[2] / 255, f.color[3] / 255
+										cr, cg, cb = f.color[1] / 255, f.color[2] / 255, f.color[3] / 255
 									else
-										r, g, b = 1, 1, 1
-									end
-									a = f.alpha
-									if a ~= la or r ~= lr or g ~= lg or b ~= lb then
-										batch:setColor(r, g, b, a / 255)
-										lr, lg, lb, la = r, g, b, a
+										cr, cg, cb = 1, 1, 1
 									end
 
-									batch:add(ss.quad, final_x, final_y, -r, sx, sy, f.anchor.x * ss.size[1] - ss.trim[1], (1 - f.anchor.y) * ss.size[2] - ss.trim[2])
+									local ca = f.alpha * (alpha or 1)
+									if ca ~= la or cr ~= lr or cg ~= lg or cb ~= lb then
+										batch:setColor(cr, cg, cb, ca / 255)
+										lr, lg, lb, la = cr, cg, cb, ca
+									end
+
+									batch:add(ss.quad, x, y, r * flipf, sx, sy, 0.5 * ss.size[1] - ss.trim[1] - pox / ref_scale, 0.5 * ss.size[2] - ss.trim[2] - poy / ref_scale, kx, ky)
+
 									batch_count = batch_count + 1
 								end
 
@@ -236,18 +251,29 @@ if IS_ANDROID then
 					local ss = f.ss
 
 					-- 渲染坐标
-					local final_x = f.pos.x + f.offset.x
-					local final_y = REF_H - (f.pos.y + f.offset.y)
-
+					-- local final_x = f.pos.x + f.offset.x
+					-- local final_y = REF_H - (f.pos.y + f.offset.y)
+					local x = f.pos.x + f.offset.x
+					local y = REF_H - (f.pos.y + f.offset.y)
 					-- 视锥体剔除
 					local visible = true
+					ss = f.ss
+					local ref_scale = ss.ref_scale or 1
+					local sy = (f.flip_y and -1 or 1) * ref_scale
+					local sx = (f.flip_x and -1 or 1) * ref_scale
+					if f.scale then
+						sy = sy * f.scale.y
+						sx = sx * f.scale.x
+					end
+
 					if cull_bounds then
-						local ref_scale = ss.ref_scale or 1
-						local sx_abs = math.abs(f.scale and f.scale.x or 1) * ref_scale
-						local sy_abs = math.abs(f.scale and f.scale.y or 1) * ref_scale
-						local w, h = ss.size[1] * sx_abs, ss.size[2] * sy_abs
-						local hw, hh = w * 0.5, h * 0.5
-						visible = not (final_x + hw < cull_left or final_x - hw > cull_right or final_y + hh < cull_top or final_y - hh > cull_bottom)
+						-- local ref_scale = ss.ref_scale or 1
+						-- local sx_abs = math.abs(f.scale and f.scale.x or 1) * ref_scale
+						-- local sy_abs = math.abs(f.scale and f.scale.y or 1) * ref_scale
+						-- local w, h = ss.size[1] * sx_abs, ss.size[2] * sy_abs
+						-- local hw, hh = w * 0.5, h * 0.5
+						-- visible = not (final_x + hw < cull_left or final_x - hw > cull_right or final_y + hh < cull_top or final_y - hh > cull_bottom)
+						visible = not (x + ss.size[1] * math.abs(sx) * 0.5 < cull_left or x - ss.size[1] * math.abs(sx) * 0.5 > cull_right or y + ss.size[2] * math.abs(sy) * 0.5 < cull_top or y - ss.size[2] * math.abs(sy) * 0.5 > cull_bottom)
 					end
 
 					if visible then
@@ -277,7 +303,7 @@ if IS_ANDROID then
 								G.setShader(f._shader)
 
 								if f.shader_args then
-									for k, v in pairs(f.shader_args) do
+									for k, v in ipairs(f.shader_args) do
 										f._shader:send(k, v)
 									end
 								end
@@ -297,7 +323,8 @@ if IS_ANDROID then
 							lr, lg, lb, la = r, g, b, a
 						end
 
-						batch:add(RU.frame_draw_params(f))
+						-- batch:add(RU.frame_draw_params(f))
+						batch:add(ss.quad, x, y, -f.r, sx, sy, f.anchor.x * ss.size[1] - ss.trim[1], (1 - f.anchor.y) * ss.size[2] - ss.trim[2])
 						batch_count = batch_count + 1
 					end
 				end
@@ -357,19 +384,18 @@ else
 				local exo = EXO:get_exo_by_frame(f.exo_frame)
 				for part_idx, part in ipairs(f.exo_frame) do
 					do
-						local part_type, part_name_idx, alpha, x, y, sx, sy, r, kx, ky = unpack(part)
+						local part_type, part_name_idx, alpha, x, y, sx, sy, r, kx, ky = part[1], part[2], part[3], part[4], part[5], part[6], part[7], part[8], part[9], part[10]
 
 						if part.hidden then
 						-- block empty
 						else
 							if part_type == 8 then
-								local flipf = (f.flip_x and -1 or 1) * (f.flip_y and -1 or 1)
-
-								sy = sy * (f.flip_y and -1 or 1)
-								sx = sx * (f.flip_x and -1 or 1)
-
 								local f_sx = f.flip_x and -1 or 1
 								local f_sy = f.flip_y and -1 or 1
+								local flipf = f_sx * f_sy
+
+								sx = sx * f_sx
+								sy = sy * f_sy
 
 								if f.scale then
 									sy = sy * f.scale.y
@@ -413,7 +439,7 @@ else
 								goto label_6_0
 							end
 
-							local part_name, pox, poy = unpack(exo.parts[part_name_idx])
+							local part_name, pox, poy = exo.parts[part_name_idx][1], exo.parts[part_name_idx][2], exo.parts[part_name_idx][3]
 							local ss = I:s(part_name)
 
 							if batch_count == BATCH_SIZE or f._shader ~= current_shader or ss.atlas and ss.atlas ~= current_atlas then
@@ -454,7 +480,7 @@ else
 									G.setShader(f._shader)
 
 									if f.shader_args then
-										for k, v in pairs(f.shader_args) do
+										for k, v in ipairs(f.shader_args) do
 											f._shader:send(k, v)
 										end
 									end
@@ -477,15 +503,13 @@ else
 								lr, lg, lb, la = cr, cg, cb, ca
 							end
 
-							local quad = ss.quad
 							local ref_scale = ss.ref_scale or 1
-							local flipf = (f.flip_x and -1 or 1) * (f.flip_y and -1 or 1)
-
-							sy = sy * (f.flip_y and -1 or 1) * ref_scale
-							sx = sx * (f.flip_x and -1 or 1) * ref_scale
-
 							local f_sx = f.flip_x and -1 or 1
 							local f_sy = f.flip_y and -1 or 1
+							local flipf = f_sx * f_sy
+
+							sx = sx * f_sx * ref_scale
+							sy = sy * f_sy * ref_scale
 
 							if f.scale then
 								sy = sy * f.scale.y
@@ -497,20 +521,21 @@ else
 							local ox = 0.5 * ss.size[1] - ss.trim[1] - pox / ref_scale
 							local oy = 0.5 * ss.size[2] - ss.trim[2] - poy / ref_scale
 
-							if ss.textureRotated then
-								r = r - math.pi / 2
-								ox = 0.5 * ss.size[2] - ss.trim[4] + poy / ref_scale
-								oy = 0.5 * ss.size[1] - ss.trim[1] - pox / ref_scale
-								-- sy = xf.sx * (f.flip_y and -1 or 1) * ref_scale
-								-- sx = xf.sy * (f.flip_x and -1 or 1) * ref_scale
-								sy = sx * (f.flip_y and -1 or 1) * ref_scale
-								sx = sy * (f.flip_x and -1 or 1) * ref_scale
+							-- 暂无任何纹理使用 textureRotated，这个实际上是属于补丁，我们先禁用
+							-- if ss.textureRotated then
+							-- 	r = r - math.pi / 2
+							-- 	ox = 0.5 * ss.size[2] - ss.trim[4] + poy / ref_scale
+							-- 	oy = 0.5 * ss.size[1] - ss.trim[1] - pox / ref_scale
+							-- 	-- sy = xf.sx * (f.flip_y and -1 or 1) * ref_scale
+							-- 	-- sx = xf.sy * (f.flip_x and -1 or 1) * ref_scale
+							-- 	sy = sx * (f.flip_y and -1 or 1) * ref_scale
+							-- 	sx = sy * (f.flip_x and -1 or 1) * ref_scale
 
-								if f.scale then
-									sy = sy * f.scale.x
-									sx = sx * f.scale.y
-								end
-							end
+							-- 	if f.scale then
+							-- 		sy = sy * f.scale.x
+							-- 		sx = sx * f.scale.y
+							-- 	end
+							-- end
 
 							local p_x_s = x * f_sx
 							local p_y_s = y * f_sy
@@ -530,7 +555,7 @@ else
 								y = REF_H - (-p_y_s + f.pos.y + f.offset.y)
 							end
 
-							batch:add(quad, x, y, r * flipf, sx, sy, ox, oy, kx, ky)
+							batch:add(ss.quad, x, y, r * flipf, sx, sy, ox, oy, kx, ky)
 
 							batch_count = batch_count + 1
 						end
@@ -575,7 +600,7 @@ else
 						G.setShader(f._shader)
 
 						if f.shader_args then
-							for k, v in pairs(f.shader_args) do
+							for k, v in ipairs(f.shader_args) do
 								f._shader:send(k, v)
 							end
 						end
