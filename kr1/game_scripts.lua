@@ -1034,7 +1034,7 @@ function scripts.dracolich_plague_carrier.update(this, store)
 	m.max_speed = m.max_speed + math.random(0, m.max_speed_var)
 
 	local step = this.motion.real_speed * dt
-	local next_pos = P:node_pos(nav)
+	local next_pos = P:node_pos(nav.pi, nav.spi, nav.ni)
 
 	next_pos.y = next_pos.y + y_off
 
@@ -1080,7 +1080,7 @@ function scripts.dracolich_plague_carrier.update(this, store)
 
 			nav.ni = km.clamp(1, p_len, nav.ni)
 			nav.spi = km.zmod(nav.spi + math.random(1, 2), 3)
-			next_pos = P:node_pos(nav)
+			next_pos = P:node_pos(nav.pi, nav.spi, nav.ni)
 			next_pos.y = next_pos.y + y_off
 
 			U.set_destination(this, next_pos)
