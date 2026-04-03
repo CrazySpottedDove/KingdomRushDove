@@ -8920,12 +8920,12 @@ function scripts.boss_navira.update(this, store)
 		b.pos.y = b.pos.y + offset_y
 		b.bullet.from = V.vclone(b.pos)
 
-		if target.id then
-			b.bullet.to = V.vclone(target.pos)
-			b.bullet.target_id = target.id
-		else
+		if type(target) == "cdata" then
 			b.bullet.to = V.vclone(target)
 			b.bullet.target_id = nil
+		else
+			b.bullet.to = V.vclone(target.pos)
+			b.bullet.target_id = target.id
 		end
 
 		b.bullet.source_id = this.id
