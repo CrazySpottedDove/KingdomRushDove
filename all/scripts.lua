@@ -7619,8 +7619,8 @@ function scripts.mega_spawner.update(this, store)
 								spi = p_spi or 1,
 								ni = p_ni
 							}
-							p_from = P:node_pos(node)
-							p_to = P:node_pos(node)
+							p_from = P:node_pos(node.pi, node.spi, node.ni)
+							p_to = P:node_pos(node.pi, node.spi, node.ni)
 						else
 							log.error("SPAWN (%06.2f) - spawner_point path and to properties are both missing", ts)
 
