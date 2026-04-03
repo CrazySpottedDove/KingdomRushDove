@@ -1388,51 +1388,109 @@ function game:draw_path(rox, roy, gs)
 	G.setShader()
 end
 
-function game:draw_game()
-	perf.start("game_draw")
-	local d = self.store
+if IS_ANDROID then
+	function game:draw_game()
+		perf.start("game_draw")
+		local d = self.store
 
-	local frame_draw_params = RU.frame_draw_params
-	local draw_frames_range = RU.draw_frames_range
-	local gs = self.game_scale
+		local draw_frames_range = RU.draw_frames_range
+		local gs = self.game_scale
 
-	local c = self.camera
+		local c = self.camera
 
-	-- c:clamp()
+		local rox, roy = -(c.x * c.zoom - self.screen_w * 0.5), -(c.y * c.zoom - self.screen_h * 0.5)
+		gs = gs * c.zoom
 
-	local rox, roy = -(c.x * c.zoom - self.screen_w * 0.5), -(c.y * c.zoom - self.screen_h * 0.5)
-	gs = gs * c.zoom
+		if d.world_offset then
+			rox, roy = rox + d.world_offset.x, roy + d.world_offset.y
+		end
 
-	if d.world_offset then
-		rox, roy = rox + d.world_offset.x, roy + d.world_offset.y
+		-- 视锥体剔除边界（渲染坐标系）
+		-- screen_coord = render_coord * gs + ro
+		-- 可见范围：render_coord 在 [-ro/gs, (screen_size - ro)/gs]
+		local margin = 100 -- 边距防止边缘闪烁
+		local cull_bounds = self._cull_bounds
+		if not cull_bounds then
+			cull_bounds = {}
+			self._cull_bounds = cull_bounds
+		end
+		cull_bounds.left = -rox / gs - margin
+		cull_bounds.right = (self.screen_w - rox) / gs + margin
+		cull_bounds.top = -roy / gs - margin
+		cull_bounds.bottom = (self.screen_h - roy) / gs + margin
+
+		G.push()
+		G.translate(rox, roy)
+		G.scale(gs, gs)
+		local last_idx = draw_frames_range(d.render_frames, 1, Z_SCREEN_FIXED - 1, cull_bounds)
+		G.pop()
+
+		if self.shown_path then
+			self:draw_path(rox, roy, gs)
+		end
+
+		if d.night_mode then
+			self:draw_dark_foreground(rox, roy, gs)
+		end
+
+		G.push()
+		G.translate(self.game_ref_origin.x, self.game_ref_origin.y)
+		G.scale(self.game_scale, self.game_scale)
+		last_idx = draw_frames_range(d.render_frames, last_idx + 1, Z_GUI - 1)
+		G.pop()
+
+		perf.stop("game_draw")
+		perf.start("game_gui_draw")
+		self.game_gui.window:draw_child(self.game_gui.layer_gui)
+		perf.stop("game_gui_draw")
 	end
+else
+	function game:draw_game()
+		perf.start("game_draw")
+		local d = self.store
 
-	-- self:front_draw_debug(rox, roy, gs)
-	G.push()
-	G.translate(rox, roy)
-	G.scale(gs, gs)
-	local last_idx = draw_frames_range(d.render_frames, 1, Z_SCREEN_FIXED - 1)
-	G.pop()
+		local frame_draw_params = RU.frame_draw_params
+		local draw_frames_range = RU.draw_frames_range
+		local gs = self.game_scale
 
-	if self.DBG_DRAW_PATHS or self.shown_path then
-		self:draw_path(rox, roy, gs)
+		local c = self.camera
+
+		-- c:clamp()
+
+		local rox, roy = -(c.x * c.zoom - self.screen_w * 0.5), -(c.y * c.zoom - self.screen_h * 0.5)
+		gs = gs * c.zoom
+
+		if d.world_offset then
+			rox, roy = rox + d.world_offset.x, roy + d.world_offset.y
+		end
+
+		-- self:front_draw_debug(rox, roy, gs)
+		G.push()
+		G.translate(rox, roy)
+		G.scale(gs, gs)
+		local last_idx = draw_frames_range(d.render_frames, 1, Z_SCREEN_FIXED - 1)
+		G.pop()
+
+		if self.DBG_DRAW_PATHS or self.shown_path then
+			self:draw_path(rox, roy, gs)
+		end
+
+		if d.night_mode then
+			self:draw_dark_foreground(rox, roy, gs)
+		end
+
+		G.push()
+		G.translate(self.game_ref_origin.x, self.game_ref_origin.y)
+		G.scale(self.game_scale, self.game_scale)
+		last_idx = draw_frames_range(d.render_frames, last_idx + 1, Z_GUI - 1)
+		G.pop()
+
+		perf.stop("game_draw")
+		perf.start("game_gui_draw")
+		self.game_gui.window:draw_child(self.game_gui.layer_gui)
+		perf.stop("game_gui_draw")
+	-- self:after_draw_debug(rox, roy, gs)
 	end
-
-	if d.night_mode then
-		self:draw_dark_foreground(rox, roy, gs)
-	end
-
-	G.push()
-	G.translate(self.game_ref_origin.x, self.game_ref_origin.y)
-	G.scale(self.game_scale, self.game_scale)
-	last_idx = draw_frames_range(d.render_frames, last_idx + 1, Z_GUI - 1)
-	G.pop()
-
-	perf.stop("game_draw")
-	perf.start("game_gui_draw")
-	self.game_gui.window:draw_child(self.game_gui.layer_gui)
-	perf.stop("game_gui_draw")
--- self:after_draw_debug(rox, roy, gs)
 end
 
 return game

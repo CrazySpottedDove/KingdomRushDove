@@ -120,7 +120,8 @@ if [ -f "$LOVE_FILE" ] && [ -n "$old_fingerprint" ] && [ "$new_fingerprint" = "$
 fi
 
 # 收集待处理 DDS 列表（相对于工作目录）
-mapfile -d '' dds_files < <(find "$DDS_ASSETS_DIR" -type f -name "*.dds" -print0 || printf '')
+# mapfile -d '' dds_files < <(find "$DDS_ASSETS_DIR" -type f -name "*.dds" -print0 || printf '')
+mapfile -d '' dds_files < <(find "$DDS_ASSETS_DIR" -type f -name "*.dds" ! -name "*kr4*" -print0 || printf '')
 
 # 更可靠地计算数量
 dds_count=${#dds_files[@]}
@@ -169,6 +170,7 @@ if [ "$rebuild_love" -eq 1 ]; then
         "_assets/tmp_download/*"
         "lldebugger.lua"
         "kr1/data/waveconfigs/*"
+        # "*kr4*"
     )
     ZIP_EXCLUDES=()
     for pattern in "${EXCLUDES[@]}"; do
