@@ -11555,42 +11555,6 @@ return {
 		size = 15790,
 		hash = "66f64fc4"
 	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_rewards_disappear_var1_v1.ogg"] = {
-		size = 29442,
-		hash = "214dcbf7"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_rewards_disappear_var2_v1.ogg"] = {
-		size = 29446,
-		hash = "a6a45bb5"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_rewards_disappear_var3_v1.ogg"] = {
-		size = 30299,
-		hash = "8b6aa7bc"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_rewards_unlock_appear-stomp_v1.ogg"] = {
-		size = 26187,
-		hash = "cf4716ac"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_rewards_unlock_cardAppear_v1.ogg"] = {
-		size = 8852,
-		hash = "65896a0a"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_rewards_unlock_cardReveal_v1.ogg"] = {
-		size = 50590,
-		hash = "b55fcf94"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_rewards_unlock_glow_v1.ogg"] = {
-		size = 87693,
-		hash = "7f6d21c8"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_rewards_unlock_op1_v1.ogg"] = {
-		size = 50496,
-		hash = "dc571d38"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_ui_rewards_unlock_pre-glow_v1.ogg"] = {
-		size = 74773,
-		hash = "92d02188"
-	},
 	["kr1-desktop/sounds/files/kra_sfx_ui_stageDefeat_v1.ogg"] = {
 		size = 118504,
 		hash = "766cff84"

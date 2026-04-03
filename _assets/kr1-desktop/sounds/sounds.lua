@@ -4175,30 +4175,6 @@ return {
 		loop = false,
 		source_group = "GUI"
 	},
-	GUICardAppear = {
-		files = {"kra_sfx_ui_rewards_unlock_appear-stomp_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUICardPreGlow = {
-		files = {"kra_sfx_ui_rewards_unlock_glow_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUICardUnlock = {
-		files = {"kra_sfx_ui_rewards_unlock_cardReveal_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUICardUnlockFade = {
-		files = {"kra_sfx_ui_rewards_disappear_var1_v1.ogg", "kra_sfx_ui_rewards_disappear_var2_v1.ogg", "kra_sfx_ui_rewards_disappear_var3_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
 	GUICoins = {
 		files = {"Sound_Coins.ogg"},
 		gain = 1,
@@ -4366,24 +4342,6 @@ return {
 	},
 	GUIResetUpgrade = {
 		files = {"kra_sfx_ui_resetSkills_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIRewardUnlockCardAppear = {
-		files = {"kra_sfx_ui_rewards_unlock_cardAppear_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIRewardUnlockCardUnlock = {
-		files = {"kra_sfx_ui_rewards_unlock_op1_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "GUI"
-	},
-	GUIRewardUnlockPreGlow = {
-		files = {"kra_sfx_ui_rewards_unlock_pre-glow_v1.ogg"},
 		gain = 1,
 		loop = false,
 		source_group = "GUI"
