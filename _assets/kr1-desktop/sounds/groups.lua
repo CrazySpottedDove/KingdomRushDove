@@ -864,7 +864,6 @@ return {
 			"Vodoo_01c.ogg",
 			"Sound_QuestCompleted.ogg",
 			"Sound_Bomb1.ogg",
-			"inapp_gnome.ogg",
 			"pirate_taunt_2.ogg",
 			"necromancer_pestilence.ogg",
 			"Dante-01a.ogg",
@@ -913,7 +912,6 @@ return {
 			"kr_voice_necromancerslair_taunt01_c.ogg",
 			"Sound_FireballHit.ogg",
 			"Bladesinger_Ready[2]-01b.ogg",
-			"inapp_cash.ogg",
 			"Sound_EnemyExplode1.ogg",
 			"Sound_SoldiersFighting-04.ogg",
 			"kr_voice_tricannon_skill_b_var1a.ogg",
@@ -977,7 +975,6 @@ return {
 			"Monk_02b.ogg",
 			"Sound_NotificationSecondLevel.ogg",
 			"kr_voice_tricannon_taunt2_var1c.ogg",
-			"inapp_nuke_falling.ogg",
 			"kra_sfx_upgrade_favouriteCustomer_trigger_v1.ogg",
 			"kra_sfx_upgrade_displayOfTrueMight_linirea_trigger_v1.ogg",
 			"Sound_Sheep.ogg",
@@ -1024,7 +1021,6 @@ return {
 			"kr_voice_royalArchers_taunt_var1c.ogg",
 			"DruidHenge_Ready-01a.ogg",
 			"Sound_EnemyRocketeer.ogg",
-			"inapp_nuke.ogg",
 			"kra_sfx_upgrade_sealOfPunishment_trigger_var4_v1.ogg",
 			"kr_voice_grimson_taunt_b.ogg",
 			"kr_voice_raelyn_taunt3_var2b.ogg",
@@ -1151,14 +1147,12 @@ return {
 			"dwarfArcher_taunt_1.ogg",
 			"StoneDruid_Taunt-02b.ogg",
 			"hero_dragon_fireball_explode.ogg",
-			"inapp_hearts.ogg",
 			"Sound_ArrowRelease2.ogg",
 			"kra_sfx_easterEgg_interactionTap.ogg",
 			"Minotaur_04b.ogg",
 			"assassin_gold.ogg",
 			"Barbarian_Taunt2.ogg",
 			"Bonehart-02b_WET.ogg",
-			"inapp_chin.ogg",
 			"Sound_ArrowRelease3.ogg",
 			"Bladesinger_BladeDance[2]-01a.ogg",
 			"Sound_Teleport.ogg",
@@ -1190,7 +1184,6 @@ return {
 			"kr_voice_tricannon_taunt3_var1a.ogg",
 			"Reinforcements_Event1.ogg",
 			"assassin_taunt_gold.ogg",
-			"inapp_atfreezestart.ogg",
 			"Awok_02c.ogg",
 			"Arcane_Ready.ogg",
 			"Sound_GUIOpenTowerMenu.ogg",
@@ -1219,7 +1212,6 @@ return {
 			"canibal_zombie_one.ogg",
 			"Reinforcements_03c.ogg",
 			"Muskateer_Snipe.ogg",
-			"inapp_freeze.ogg",
 			"Sound_ArrowHit2.ogg",
 			"dwarfHero_taunt_confirm_1.ogg",
 			"templar_taunt_3.ogg",
@@ -1238,14 +1230,12 @@ return {
 			"dwarf_taunt_1.ogg",
 			"Drow_02c.ogg",
 			"Muskateer_Event2.ogg",
-			"inapp_gems.ogg",
 			"HighMage_Timelapse-01c.ogg",
 			"HighMage_ArcaneSentinel-01c.ogg",
 			"Durax_04c[wet].ogg",
 			"Barrack_Taunt1.ogg",
 			"savant_open_portal.ogg",
 			"kr_voice_darkarmyreinforcements_taunt03_b.ogg",
-			"inapp_atfreezeend.ogg",
 			"templar_arterialStrike.ogg",
 			"ArcaneArcher_Ready-01a.ogg",
 			"kr_voice_broden_select_b.ogg",
@@ -1950,36 +1940,7 @@ return {
 			"kra_sfx_dragons_hero_ultimate_op2_v_martin_end.ogg"
 		}
 	},
-	item_cluster_bomb = {
-		files = {"kra_sfx_inApps_clusterBomb_cast_v1.ogg", "kra_sfx_inApps_clusterBomb_smallBombs_v1.ogg"}
-	},
-	item_deaths_touch = {
-		files = {"kra_sfx_inApps_deathsTouch_cast_v1.ogg"}
-	},
-	item_loot_box = {
-		files = {"kra_sfx_inApps_lootBox_cast_v1.ogg"}
-	},
-	item_medical_kit = {
-		files = {"kra_sfx_inApps_medicalKit_cast_op1_v1.ogg", "kra_sfx_inApps_medicalKit_heartAdd_v1.ogg"}
-	},
-	item_portable_coil = {
-		files = {"kra_sfx_inApps_portableCoil_cast_v1.ogg", "kra_sfx_inApps_portableCoil_attack_var1_v1.ogg", "kra_sfx_inApps_portableCoil_attack_var2_v1.ogg", "kra_sfx_inApps_portableCoil_attack_var3_v1.ogg"}
-	},
-	item_scroll_of_spaceshift = {
-		files = {"kra_sfx_inApps_scrollOfSpaceshift_cast_v1.ogg", "kra_sfx_inApps_scrollOfSpaceshift_teleportIn_v1.ogg", "kra_sfx_inApps_scrollOfSpaceshift_teleportOut_v1.ogg"}
-	},
-	item_second_breath = {
-		files = {"kra_sfx_inApps_secondBreath_cast_v1.ogg"}
-	},
-	item_summon_blackburn = {
-		files = {"kra_sfx_inApps_helmOfBlackburn_cast.ogg", "kra_sfx_inApps_helmOfBlackburn_meleeAttack_var1_v1.ogg", "kra_sfx_inApps_helmOfBlackburn_meleeAttack_var2_v1.ogg", "kra_sfx_inApps_helmOfBlackburn_meleeAttack_var3_v1.ogg", "kra_sfx_inApps_helmOfBlackburn_rangedAttack_op2_v1.ogg"}
-	},
-	item_veznan_wrath = {
-		files = {"kr5_sfx_veznanwrath_appear_sinrisa_v1.ogg", "kr5_sfx_veznanwrath_initialburst_v1.ogg", "kr5_sfx_veznanwrath_flame_var1_v1.ogg", "kr5_sfx_veznanwrath_flame_var3_v1.ogg", "kr5_sfx_veznanwrath_flame_var4_v1.ogg"}
-	},
-	item_winter_age = {
-		files = {"kra_sfx_inApps_winterAge_cast_v1.ogg", "kra_sfx_inApps_winterAge_loop_v1.ogg", "kra_sfx_inApps_winterAge_release_v1.ogg"}
-	},
+
 	music_screen_credits = {
 		sounds = {"MusicCredits"}
 	},

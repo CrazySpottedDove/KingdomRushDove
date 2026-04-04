@@ -5331,46 +5331,6 @@ return {
 		size = 78194,
 		hash = "8e4fcc04"
 	},
-	["kr1-desktop/sounds/files/inapp_atfreezeend.ogg"] = {
-		size = 23945,
-		hash = "632a16a0"
-	},
-	["kr1-desktop/sounds/files/inapp_atfreezestart.ogg"] = {
-		size = 26201,
-		hash = "40f4358c"
-	},
-	["kr1-desktop/sounds/files/inapp_cash.ogg"] = {
-		size = 33730,
-		hash = "c43d8860"
-	},
-	["kr1-desktop/sounds/files/inapp_chin.ogg"] = {
-		size = 22972,
-		hash = "ec3d8141"
-	},
-	["kr1-desktop/sounds/files/inapp_freeze.ogg"] = {
-		size = 33183,
-		hash = "a9a8cb8c"
-	},
-	["kr1-desktop/sounds/files/inapp_gems.ogg"] = {
-		size = 23911,
-		hash = "40c87b08"
-	},
-	["kr1-desktop/sounds/files/inapp_gnome.ogg"] = {
-		size = 53910,
-		hash = "aff12804"
-	},
-	["kr1-desktop/sounds/files/inapp_hearts.ogg"] = {
-		size = 45540,
-		hash = "92401ce0"
-	},
-	["kr1-desktop/sounds/files/inapp_nuke.ogg"] = {
-		size = 172157,
-		hash = "56c8cf00"
-	},
-	["kr1-desktop/sounds/files/inapp_nuke_falling.ogg"] = {
-		size = 17487,
-		hash = "1ea2d431"
-	},
 	["kr1-desktop/sounds/files/indiana.ogg"] = {
 		size = 65807,
 		hash = "ddb6f8b4"
@@ -5842,26 +5802,6 @@ return {
 	["kr1-desktop/sounds/files/kr5_sfx_UIgate-open_op1.ogg"] = {
 		size = 44507,
 		hash = "c197ed2c"
-	},
-	["kr1-desktop/sounds/files/kr5_sfx_veznanwrath_appear_sinrisa_v1.ogg"] = {
-		size = 157265,
-		hash = "516963f0"
-	},
-	["kr1-desktop/sounds/files/kr5_sfx_veznanwrath_flame_var1_v1.ogg"] = {
-		size = 22105,
-		hash = "07948c6b"
-	},
-	["kr1-desktop/sounds/files/kr5_sfx_veznanwrath_flame_var3_v1.ogg"] = {
-		size = 22313,
-		hash = "320417e8"
-	},
-	["kr1-desktop/sounds/files/kr5_sfx_veznanwrath_flame_var4_v1.ogg"] = {
-		size = 22774,
-		hash = "a1188758"
-	},
-	["kr1-desktop/sounds/files/kr5_sfx_veznanwrath_initialburst_v1.ogg"] = {
-		size = 66372,
-		hash = "f2835c20"
 	},
 	["kr1-desktop/sounds/files/kr5_sfx_victorystars_3_v1.ogg"] = {
 		size = 57209,
@@ -9630,94 +9570,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_heroes_wildEruption_cast_v1.ogg"] = {
 		size = 97939,
 		hash = "e3fe2adc"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_clusterBomb_cast_v1.ogg"] = {
-		size = 31413,
-		hash = "75b94ce4"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_clusterBomb_smallBombs_v1.ogg"] = {
-		size = 36302,
-		hash = "d8207762"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_deathsTouch_cast_v1.ogg"] = {
-		size = 69519,
-		hash = "4bbaa53c"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_helmOfBlackburn_cast.ogg"] = {
-		size = 66124,
-		hash = "7a559d92"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_helmOfBlackburn_meleeAttack_var1_v1.ogg"] = {
-		size = 29846,
-		hash = "1ec37418"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_helmOfBlackburn_meleeAttack_var2_v1.ogg"] = {
-		size = 31733,
-		hash = "fbff47a8"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_helmOfBlackburn_meleeAttack_var3_v1.ogg"] = {
-		size = 31467,
-		hash = "78c931cc"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_helmOfBlackburn_rangedAttack_op2_v1.ogg"] = {
-		size = 66751,
-		hash = "ffe4abac"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_lootBox_cast_v1.ogg"] = {
-		size = 51361,
-		hash = "6d77d2fa"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_medicalKit_cast_op1_v1.ogg"] = {
-		size = 53235,
-		hash = "67228647"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_medicalKit_heartAdd_v1.ogg"] = {
-		size = 19895,
-		hash = "e46ed3c6"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_portableCoil_attack_var1_v1.ogg"] = {
-		size = 35576,
-		hash = "cbaf058c"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_portableCoil_attack_var2_v1.ogg"] = {
-		size = 36825,
-		hash = "17fa32e0"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_portableCoil_attack_var3_v1.ogg"] = {
-		size = 40236,
-		hash = "d608d368"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_portableCoil_cast_v1.ogg"] = {
-		size = 32262,
-		hash = "d2ba7b13"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_scrollOfSpaceshift_cast_v1.ogg"] = {
-		size = 56090,
-		hash = "ad61ac38"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_scrollOfSpaceshift_teleportIn_v1.ogg"] = {
-		size = 41077,
-		hash = "a9c7707d"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_scrollOfSpaceshift_teleportOut_v1.ogg"] = {
-		size = 42073,
-		hash = "adadbed9"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_secondBreath_cast_v1.ogg"] = {
-		size = 93472,
-		hash = "4948e4c0"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_winterAge_cast_v1.ogg"] = {
-		size = 62349,
-		hash = "157fe9b0"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_winterAge_loop_v1.ogg"] = {
-		size = 220147,
-		hash = "6f489610"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_inApps_winterAge_release_v1.ogg"] = {
-		size = 26766,
-		hash = "63e7fb28"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_spiders_bossfight_buff_charge_v1.ogg"] = {
 		size = 50806,
