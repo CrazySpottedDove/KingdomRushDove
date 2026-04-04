@@ -655,6 +655,7 @@ tt.unit.mod_offset = vec_2(0, ady(23))
 tt = RT("mod_holygrail", "mod_soldier_cooldown")
 tt.cooldown_factor = 0.7
 tt.modifier.duration = 8
+tt.modifier.allows_duplicate = true
 --#endregion
 --#region mod_blood_templar
 tt = RT("mod_blood_templar", "mod_blood")
