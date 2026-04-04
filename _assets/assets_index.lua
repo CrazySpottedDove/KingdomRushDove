@@ -5559,10 +5559,6 @@ return {
 		size = 44695,
 		hash = "8a327b3b"
 	},
-	["kr1-desktop/sounds/files/kr3_sfx_stonedruid_bouldersummon.ogg"] = {
-		size = 31339,
-		hash = "ce4a57d8"
-	},
 	["kr1-desktop/sounds/files/kr3_sfx_stonedruid_boulderthrow-op2.ogg"] = {
 		size = 24997,
 		hash = "176842d8"
@@ -6151,18 +6147,6 @@ return {
 		size = 28207,
 		hash = "0aa9ca98"
 	},
-	["kr1-desktop/sounds/files/kr_voice_darkarmyreinforcements_taunt01_a.ogg"] = {
-		size = 38786,
-		hash = "5f2d2b68"
-	},
-	["kr1-desktop/sounds/files/kr_voice_darkarmyreinforcements_taunt02_b.ogg"] = {
-		size = 31367,
-		hash = "1e6916d4"
-	},
-	["kr1-desktop/sounds/files/kr_voice_darkarmyreinforcements_taunt03_b.ogg"] = {
-		size = 22463,
-		hash = "12716ae8"
-	},
 	["kr1-desktop/sounds/files/kr_voice_darkknight_taunt01_d.ogg"] = {
 		size = 25221,
 		hash = "548f5488"
@@ -6390,18 +6374,6 @@ return {
 	["kr1-desktop/sounds/files/kr_voice_kratoa_taunt04_c.ogg"] = {
 		size = 37655,
 		hash = "45fc1d06"
-	},
-	["kr1-desktop/sounds/files/kr_voice_linireanreinforcements_taunt01_c.ogg"] = {
-		size = 26468,
-		hash = "6b69e503"
-	},
-	["kr1-desktop/sounds/files/kr_voice_linireanreinforcements_taunt02_c.ogg"] = {
-		size = 29149,
-		hash = "8eb27f5c"
-	},
-	["kr1-desktop/sounds/files/kr_voice_linireanreinforcements_taunt03_b.ogg"] = {
-		size = 42285,
-		hash = "9f692f20"
 	},
 	["kr1-desktop/sounds/files/kr_voice_lumenir_death_c.ogg"] = {
 		size = 41165,
@@ -11338,54 +11310,6 @@ return {
 	["kr1-desktop/sounds/files/kra_sfx_update1Ambient_wind_var4.ogg"] = {
 		size = 115663,
 		hash = "261e0a6a"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_upgrade_arcaneTeleporter_trigger_FullSeq_v1.ogg"] = {
-		size = 51407,
-		hash = "5e7cd69c"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_upgrade_arcaneTeleporter_trigger_IN_v1.ogg"] = {
-		size = 31304,
-		hash = "dfc67460"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_upgrade_arcaneTeleporter_trigger_OUT_v1.ogg"] = {
-		size = 37386,
-		hash = "d99a20ec"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_upgrade_displayOfTrueMight_darkArmy_trigger_var1_v1.ogg"] = {
-		size = 87625,
-		hash = "f0e83ad4"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_upgrade_displayOfTrueMight_linirea_trigger_v1.ogg"] = {
-		size = 70916,
-		hash = "7a9a4f6e"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_upgrade_favouriteCustomer_trigger_v1.ogg"] = {
-		size = 52234,
-		hash = "729b2d9c"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_upgrade_limitPushing_trigger_v1.ogg"] = {
-		size = 55768,
-		hash = "7be9bd10"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_upgrade_sealOfPunishment_trigger_var1_v1.ogg"] = {
-		size = 25303,
-		hash = "7c6bdac4"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_upgrade_sealOfPunishment_trigger_var2_v1.ogg"] = {
-		size = 21461,
-		hash = "407de7c8"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_upgrade_sealOfPunishment_trigger_var3_v1.ogg"] = {
-		size = 24033,
-		hash = "76c27a64"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_upgrade_sealOfPunishment_trigger_var4_v1.ogg"] = {
-		size = 29516,
-		hash = "79fdffbc"
-	},
-	["kr1-desktop/sounds/files/kra_sfx_upgrade_sealOfPunishment_trigger_var5_v1.ogg"] = {
-		size = 28303,
-		hash = "b0e7132a"
 	},
 	["kr1-desktop/sounds/files/kra_sfx_wukong_bdk_death_v1.ogg"] = {
 		size = 286385,
