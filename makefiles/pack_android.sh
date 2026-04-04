@@ -23,6 +23,19 @@ if ! command -v astcenc >/dev/null 2>&1; then
     exit 1
 fi
 
+# 安卓包音频压缩（只影响打包产物，不改动仓库源资源）
+AUDIO_COMPRESS_MODE="${AUDIO_COMPRESS_MODE:-1}"
+if [ "$AUDIO_COMPRESS_MODE" = "1" ]; then
+    if ! command -v ffmpeg >/dev/null 2>&1; then
+        echo "ERROR: ffmpeg not found, required for AUDIO_COMPRESS_MODE=1" >&2
+        exit 1
+    fi
+    if ! command -v ffprobe >/dev/null 2>&1; then
+        echo "ERROR: ffprobe not found, required for AUDIO_COMPRESS_MODE=1" >&2
+        exit 1
+    fi
+fi
+
 VERSION_FILE="./version.lua"
 # 可通过 VERSION_FILE 环境变量指定版本文件（可选）
 # VERSION_FILE=${VERSION_FILE:-}
@@ -59,12 +72,21 @@ if [ "$HD_MODE" -eq 1 ]; then
     OUTPUT_FINAL=$VERSION_DIR/KingdomRushDove-Android-HD-v${current_id}.apk
     CACHE_DIR=".versions/.android_image_cache_hd"
     CACHE_KEY="resize=100%|strip=1|astc=1|tool=$IM_CMD"
+    AUDIO_CACHE_DIR=".versions/.android_audio_cache_hd"
 else
     ARCHIVE_DIR=".versions/KingdomRushDove-Android-v${current_id}.zip"
     OUTPUT_FINAL=$VERSION_DIR/KingdomRushDove-Android-v${current_id}.apk
     CACHE_DIR=".versions/.android_image_cache"
     CACHE_KEY="resize=50%|strip=1|astc=1|tool=$IM_CMD"
+    AUDIO_CACHE_DIR=".versions/.android_audio_cache"
 fi
+
+AUDIO_Q_SFX="${AUDIO_Q_SFX:-3}"
+AUDIO_Q_BGM="${AUDIO_Q_BGM:-5}"
+AUDIO_BGM_MIN_DURATION="${AUDIO_BGM_MIN_DURATION:-25}"
+AUDIO_SFX_SKIP_KBPS="${AUDIO_SFX_SKIP_KBPS:-96}"
+AUDIO_BGM_SKIP_KBPS="${AUDIO_BGM_SKIP_KBPS:-144}"
+AUDIO_CACHE_KEY="cache_dir=$AUDIO_CACHE_DIR|q_sfx=$AUDIO_Q_SFX|q_bgm=$AUDIO_Q_BGM|bgm_min_duration=$AUDIO_BGM_MIN_DURATION|sfx_skip_kbps=$AUDIO_SFX_SKIP_KBPS|bgm_skip_kbps=$AUDIO_BGM_SKIP_KBPS"
 
 CACHE_KEY_FILE="$CACHE_DIR/.cache_key"
 LOVE_FILE="../Application/love-android/app/src/embed/assets/game.love"
@@ -84,6 +106,7 @@ fi
 calc_love_fingerprint() {
     {
         echo "cache_key=$CACHE_KEY"
+        echo "audio_compress=$AUDIO_COMPRESS_MODE|$AUDIO_CACHE_KEY"
         # .love 直接打包的源文件（排除项需与 zip 保持一致）
         find . \
             -path "./.git" -prune -o \
@@ -172,6 +195,10 @@ if [ "$rebuild_love" -eq 1 ]; then
         "kr1/data/waveconfigs/*"
         # "*kr4*"
     )
+    if [ "$AUDIO_COMPRESS_MODE" = "1" ]; then
+        # 音频将由压缩步骤单独追加，避免基础 zip 先打入原始 ogg 再替换。
+        EXCLUDES+=("_assets/kr1-desktop/sounds/files/*.ogg")
+    fi
     ZIP_EXCLUDES=()
     for pattern in "${EXCLUDES[@]}"; do
         ZIP_EXCLUDES+=("-x" "$pattern")
@@ -296,6 +323,22 @@ if [ "$rebuild_love" -eq 1 ]; then
         rm -rf "$ARCHIVE_DIR.tmp"
     else
         echo "WARNING: Font minification failed, using original fonts"
+    fi
+
+    if [ "$AUDIO_COMPRESS_MODE" = "1" ]; then
+        echo "Optimizing OGG audio for Android package..."
+        audio_tmpdir=$(mktemp -d)
+        AUDIO_CACHE_DIR="$AUDIO_CACHE_DIR" \
+        AUDIO_Q_SFX="$AUDIO_Q_SFX" \
+        AUDIO_Q_BGM="$AUDIO_Q_BGM" \
+        AUDIO_BGM_MIN_DURATION="$AUDIO_BGM_MIN_DURATION" \
+        AUDIO_SFX_SKIP_KBPS="$AUDIO_SFX_SKIP_KBPS" \
+        AUDIO_BGM_SKIP_KBPS="$AUDIO_BGM_SKIP_KBPS" \
+        bash makefiles/process_android_audio.sh "$audio_tmpdir" "./_assets/kr1-desktop/sounds/files"
+        (cd "$audio_tmpdir" && zip -r "$OLDPWD/$ARCHIVE_DIR" _assets/kr1-desktop/sounds/files -q)
+        rm -rf "$audio_tmpdir"
+    else
+        echo "Skipping Android audio optimization (AUDIO_COMPRESS_MODE=0)."
     fi
 
     # 生成 .love 文件（复制以保留 zip 备份）
