@@ -2150,7 +2150,6 @@ tt.attacks.list[2].cooldown = b.soldier.cooldown
 tt.attacks.list[2].retreat_duration = b.soldier.retreat_duration
 tt.sound_events.insert = i18n:cjk("TowerPandasTaunt", "TowerPandasTauntZH", nil, nil)
 tt.sound_events.change_rally_point = i18n:cjk("TowerPandasTaunt", "TowerPandasTauntZH", nil, nil)
-tt.sound_events.tower_room_select = i18n:cjk("TowerPandasTauntSelect", "TowerPandasTauntZHSelect", nil, nil)
 tt.ui.click_rect = r(-42, 0, 84, 70)
 tt.ui.click_rect_heights_by_soldier = {
 	70,
@@ -2511,7 +2510,6 @@ tt.spawn_time = 34
 tt.spawn_delay = 10
 tt.sound_events.insert = "TowerRocketGunnersTaunt"
 tt.sound_events.change_rally_point = "TowerRocketGunnersTaunt"
-tt.sound_events.tower_room_select = "TowerRocketGunnersTauntSelect"
 tt.spawn_sound = "TowerRocketGunnersSpawn"
 tt.powers.phosphoric = CC("power")
 tt.powers.phosphoric.price_base = b.soldier.phosphoric.price[1]
@@ -2909,7 +2907,6 @@ tt.main_script.update = scripts.tower_dwarf.update
 tt.main_script.remove = scripts.tower_barrack.remove
 tt.sound_events.insert = "TowerDwarfTaunt"
 tt.sound_events.change_rally_point = "TowerDwarfTaunt"
-tt.sound_events.tower_room_select = "TowerDwarfTauntSelect"
 tt.ui.click_rect = r(-42, 0, 84, 90)
 --#endregion
 --#region soldier_tower_dwarf_lvl4
@@ -3159,7 +3156,6 @@ tt.main_script.update = scripts.tower_ghost.update
 tt.main_script.remove = scripts.tower_barrack.remove
 tt.sound_events.insert = "TowerGhostTaunt"
 tt.sound_events.change_rally_point = "TowerGhostTaunt"
-tt.sound_events.tower_room_select = "TowerGhostTauntSelect"
 tt.sound_events.spawn_unit = "TowerGhostSpawnUnit"
 tt.ui.click_rect = r(-35, 0, 70, 65)
 --#endregion

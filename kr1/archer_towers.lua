@@ -1848,7 +1848,6 @@ tt.final_shot_fx = "fx_tower_ballista_final_shot"
 tt.tower_top_offset = v(0, 20)
 tt.turn_speed = b.turn_speed
 tt.sound_events.insert = "TowerBallistaTaunt"
-tt.sound_events.tower_room_select = "TowerBallistaTauntSelect"
 tt.ui.click_rect = r(-35, 0, 70, 90)
 tt.ui.click_rect_offset_y = -10
 --#endregion

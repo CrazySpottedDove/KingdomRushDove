@@ -7651,22 +7651,6 @@ return {
 		loop = false,
 		source_group = "SFX"
 	},
-	ReinforcementDarkArmyTaunt = {
-		files = {"kr_voice_darkarmyreinforcements_taunt01_a.ogg", "kr_voice_darkarmyreinforcements_taunt02_b.ogg", "kr_voice_darkarmyreinforcements_taunt03_b.ogg"},
-		gain = 0.6,
-		ignore = 1,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
-	ReinforcementLinireaTaunt = {
-		files = {"kr_voice_linireanreinforcements_taunt01_c.ogg", "kr_voice_linireanreinforcements_taunt02_c.ogg", "kr_voice_linireanreinforcements_taunt03_b.ogg"},
-		gain = 0.6,
-		ignore = 1,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
 	ReinforcementTaunt = {
 		files = {"Reinforcements_Event1.ogg", "Reinforcements_Event2.ogg", "Reinforcements_Event3.ogg", "Reinforcements_Event4.ogg"},
 		gain = 0.6,
@@ -11190,13 +11174,7 @@ return {
 		mode = "sequence",
 		source_group = "TAUNTS"
 	},
-	TowerArboreanEmissaryTauntSelect = {
-		files = {"kr_voice_arboreanemissary_taunt3_var1a.ogg"},
-		gain = 1,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
+
 	TowerArboreanEmissaryThornyGarden = {
 		files = {"kra_sfx_tower_arboreanEmissary_thornyGarden_spawn_var3_v1.ogg", "kra_sfx_tower_arboreanEmissary_thornyGarden_spawn_var2_v1.ogg", "kra_sfx_tower_arboreanEmissary_thornyGarden_spawn_var1_v1.ogg"},
 		gain = 0.9,
@@ -11262,13 +11240,7 @@ return {
 		mode = "sequence",
 		source_group = "TAUNTS"
 	},
-	TowerArcaneWizardTauntSelect = {
-		files = {"kr_voice_arcanewizard_taunt_var1c.ogg"},
-		gain = 0.8,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
+
 	TowerBallistaBasicAttack = {
 		files = {"kra_sfx_tower_ballistaOutpost_basicAttack_var1_v1.ogg", "kra_sfx_tower_ballistaOutpost_basicAttack_var2_v1.ogg", "kra_sfx_tower_ballistaOutpost_basicAttack_var3_v1.ogg", "kra_sfx_tower_ballistaOutpost_basicAttack_var4_v1.ogg", "kra_sfx_tower_ballistaOutpost_basicAttack_var5_v1.ogg"},
 		gain = 0.5,
@@ -11316,13 +11288,7 @@ return {
 		mode = "sequence",
 		source_group = "TAUNTS"
 	},
-	TowerBallistaTauntSelect = {
-		files = {"kr_voice_ballistaoutpost_taunt01_d.ogg"},
-		gain = 0.8,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
+
 	TowerBarracksBasic = {
 		files = {"kr3_sfx_basicbarracks_fight.ogg"},
 		gain = 0.3,
@@ -11389,13 +11355,7 @@ return {
 		mode = "sequence",
 		source_group = "TAUNTS"
 	},
-	TowerBarrelTauntSelect = {
-		files = {"kr_voice_battlebrewmasters_select_c.ogg"},
-		gain = 0.8,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
+
 	TowerBladesingerBladedance = {
 		files = {"kr3_sfx_bladesinger_bladedance_v2-op2.ogg"},
 		gain = 0.3,
@@ -11442,13 +11402,7 @@ return {
 		mode = "sequence",
 		source_group = "TAUNTS"
 	},
-	TowerDarkElfTauntSelect = {
-		files = {"kr_voice_twilightlongbows_select_b.ogg"},
-		gain = 0.8,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
+
 	TowerDarkElfThrillOfTheHuntCast = {
 		delay = 0.7,
 		files = {"kra_sfx_tower_twlightLongbows_thrillOfTheHunt_cast-travelOnly_v1.ogg"},
@@ -11505,13 +11459,7 @@ return {
 		mode = "sequence",
 		source_group = "TAUNTS"
 	},
-	TowerDemonPitTauntSelect = {
-		files = {"kr_voice_demonpit_taunt3_var1a.ogg"},
-		gain = 1,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
+
 	TowerDruidHengeBearAttack = {
 		files = {"kr3_sfx_druidhenge_bearattack_v4-op1.ogg"},
 		gain = 0.3,
@@ -11589,13 +11537,7 @@ return {
 		mode = "sequence",
 		source_group = "TAUNTS"
 	},
-	TowerDwarfTauntSelect = {
-		files = {"kr_voice_cannoneersquad_taunt-select_e.ogg"},
-		gain = 0.8,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
+
 	TowerDwarfUnitDeath = {
 		files = {"kra_sfx_towers_cannoneers_death_var1.ogg", "kra_sfx_towers_cannoneers_death_var2.ogg", "kra_sfx_towers_cannoneers_death_var3.ogg"},
 		gain = 0.8,
@@ -11666,13 +11608,7 @@ return {
 		mode = "sequence",
 		source_group = "TAUNTS"
 	},
-	TowerElvenStargazersTauntSelect = {
-		files = {"kr_voice_elvenstargazers_taunt01_d.ogg"},
-		gain = 1,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
+
 	TowerEntwoodClobber = {
 		files = {"kr3_sfx_tree_clobber_v2.ogg"},
 		gain = 0.8,
@@ -11761,13 +11697,7 @@ return {
 		mode = "sequence",
 		source_group = "TAUNTS"
 	},
-	TowerFlamespitterTauntSelect = {
-		files = {"kr_voice_dwarvenflamespitter_taunt01_c.ogg"},
-		gain = 1,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
+
 	TowerForestKeeperAncientSpear = {
 		files = {"kr3_sfx_forestkeeper_ancientoakspear_LOW_v1+3db.ogg"},
 		gain = 0.5,
@@ -11847,13 +11777,7 @@ return {
 		mode = "sequence",
 		source_group = "TAUNTS"
 	},
-	TowerGhostTauntSelect = {
-		files = {"kr_voice_grimwraiths_select_c.ogg"},
-		gain = 0.7,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
+
 	TowerGhostTeleport = {
 		delay = 0,
 		files = {"kra_sfx_tower_grimWraiths_teleport_out-in_v1.ogg"},
@@ -11959,13 +11883,7 @@ return {
 		mode = "sequence",
 		source_group = "TAUNTS"
 	},
-	TowerHermitToadTauntSelect = {
-		files = {"kr_voice_boghermit_build_a.ogg"},
-		gain = 0.8,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
+
 	TowerHermitToadTongue = {
 		files = {"kra_sfx_crocs_tower_tonge_shoot_v1.ogg"},
 		gain = 0.35,
@@ -12062,13 +11980,7 @@ return {
 		mode = "sequence",
 		source_group = "TAUNTS"
 	},
-	TowerNecromancerTauntSelect = {
-		files = {"kr_voice_necromancerslair_taunt01_c.ogg"},
-		gain = 0.8,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
+
 	TowerPaladinCovenantHealingPrayer = {
 		delay = 0.5,
 		files = {"kra_sfx_tower_paladinCovenant_skill_healingPrayer_v1.ogg"},
@@ -12102,13 +12014,7 @@ return {
 		mode = "sequence",
 		source_group = "TAUNTS"
 	},
-	TowerPaladinCovenantTauntSelect = {
-		files = {"kr_voice_paladincovenant_taunt3_var1a.ogg"},
-		gain = 0.8,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
+
 	TowerPaladinCovenantUnitDeath = {
 		files = {"kra_sfx_tower_paladinCovenant_unitDeath_var1_v1.ogg", "kra_sfx_tower_paladinCovenant_unitDeath_var2_v1.ogg", "kra_sfx_tower_paladinCovenant_unitDeath_var3_v1.ogg"},
 		gain = 1.5,
@@ -12158,13 +12064,7 @@ return {
 		mode = "sequence",
 		source_group = "TAUNTS"
 	},
-	TowerRayTauntSelect = {
-		files = {"kr_voice_eldrictchchannelers_select_[2]a.ogg"},
-		gain = 0.8,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
+
 	TowerRocketGunnersBasicAttack = {
 		files = {"kra_sfx_tower_rocketGunners_basicAttack_var1_1.ogg", "kra_sfx_tower_rocketGunners_basicAttack_var2_1.ogg", "kra_sfx_tower_rocketGunners_basicAttack_var3_1.ogg"},
 		gain = 0.8,
@@ -12230,13 +12130,7 @@ return {
 		mode = "sequence",
 		source_group = "TAUNTS"
 	},
-	TowerRocketGunnersTauntSelect = {
-		files = {"kr_voice_rocketgunners_taunt01_c.ogg"},
-		gain = 1,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
+
 	TowerRocketGunnersTouchdownTaunt = {
 		files = {"kr_voice_rocketgunners_touchdown_c.ogg"},
 		gain = 1,
@@ -12295,13 +12189,7 @@ return {
 		mode = "sequence",
 		source_group = "TAUNTS"
 	},
-	TowerRoyalArchersTauntSelect = {
-		files = {"kr_voice_royalArchers_taunt_var1c.ogg"},
-		gain = 0.8,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
+
 	TowerSandBasicAttackHit = {
 		files = {"kra_sfx_tower_duneSentinels_basicAttack_var1_v1.ogg", "kra_sfx_tower_duneSentinels_basicAttack_var2_v1.ogg", "kra_sfx_tower_duneSentinels_basicAttack_var3_v1.ogg", "kra_sfx_tower_duneSentinels_basicAttack_var4_v1.ogg", "kra_sfx_tower_duneSentinels_basicAttack_var5_v1.ogg"},
 		gain = 0.2,
@@ -12338,13 +12226,6 @@ return {
 		files = {"kr_voice_dunesentinels_select_e.ogg", "kr_voice_dunesentinels_taunt01_b.ogg", "kr_voice_dunesentinels_taunt02_d.ogg"},
 		gain = 0.7,
 		ignore = 1,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
-	TowerSandTauntSelect = {
-		files = {"kr_voice_dunesentinels_select_e.ogg"},
-		gain = 0.8,
 		loop = false,
 		mode = "sequence",
 		source_group = "TAUNTS"
@@ -12401,24 +12282,11 @@ return {
 		mode = "sequence",
 		source_group = "TAUNTS"
 	},
-	TowerSparkingGeodeTauntSelect = {
-		files = {"kr_voice_surgecolossus_taunt-select_c.ogg"},
-		gain = 0.7,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
 	TowerStoneDruidBoulderExplote = {
 		files = {"kr3_sfx_stonedruid_boulderexplosion.ogg"},
 		gain = 0.5,
 		loop = false,
 		source_group = "EXPLOSIONS"
-	},
-	TowerStoneDruidBoulderSummon = {
-		files = {"kr3_sfx_stonedruid_bouldersummon.ogg"},
-		gain = 0.3,
-		loop = false,
-		source_group = "BULLETS"
 	},
 	TowerStoneDruidBoulderThrow = {
 		files = {"kr3_sfx_stonedruid_boulderthrow-op2.ogg"},
@@ -12480,13 +12348,6 @@ return {
 		files = {"kr_voice_tricannon_taunt3_var1a.ogg", "kr_voice_tricannon_taunt2_var1c.ogg", "kr_voice_tricannon_taunt_var1a.ogg"},
 		gain = 0.7,
 		ignore = 1,
-		loop = false,
-		mode = "sequence",
-		source_group = "TAUNTS"
-	},
-	TowerTricannonTauntSelect = {
-		files = {"kr_voice_tricannon_taunt3_var1a.ogg"},
-		gain = 0.8,
 		loop = false,
 		mode = "sequence",
 		source_group = "TAUNTS"
@@ -12557,56 +12418,6 @@ return {
 	UndergroundAmbienceSound = {
 		files = {"ambience_underground_1.ogg", "ambience_underground_2.ogg"},
 		gain = 0.3,
-		loop = false,
-		mode = "random",
-		source_group = "SFX"
-	},
-	UpgradeArcaneTeleporterFull = {
-		files = {"kra_sfx_upgrade_arcaneTeleporter_trigger_FullSeq_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "SFX"
-	},
-	UpgradeArcaneTeleporterIn = {
-		files = {"kra_sfx_upgrade_arcaneTeleporter_trigger_IN_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "SFX"
-	},
-	UpgradeArcaneTeleporterOut = {
-		files = {"kra_sfx_upgrade_arcaneTeleporter_trigger_OUT_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "SFX"
-	},
-	UpgradeDisplayOfTrueMightDarkArmy = {
-		files = {"kra_sfx_upgrade_displayOfTrueMight_darkArmy_trigger_var1_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "SFX"
-	},
-	UpgradeDisplayOfTrueMightLinirea = {
-		files = {"kra_sfx_upgrade_displayOfTrueMight_linirea_trigger_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "SFX"
-	},
-	UpgradeFavoriteCustomer = {
-		files = {"kra_sfx_upgrade_favouriteCustomer_trigger_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "SFX"
-	},
-	UpgradeLimitPushing = {
-		files = {"kra_sfx_upgrade_limitPushing_trigger_v1.ogg"},
-		gain = 1,
-		loop = false,
-		source_group = "SFX"
-	},
-	UpgradeSealOfPunishmentHit = {
-		files = {"kra_sfx_upgrade_sealOfPunishment_trigger_var1_v1.ogg", "kra_sfx_upgrade_sealOfPunishment_trigger_var2_v1.ogg", "kra_sfx_upgrade_sealOfPunishment_trigger_var3_v1.ogg", "kra_sfx_upgrade_sealOfPunishment_trigger_var4_v1.ogg", "kra_sfx_upgrade_sealOfPunishment_trigger_var5_v1.ogg"},
-		gain = 1,
-		ignore = 0.5,
 		loop = false,
 		mode = "random",
 		source_group = "SFX"
@@ -12730,13 +12541,7 @@ return {
 		source_group = "TAUNTS",
 		files = {"kr_voice_pandatower_taunt01_f.ogg", "kr_voice_pandatower_taunt02_b.ogg", "kr_voice_pandatower_taunt03_c.ogg"}
 	},
-	TowerPandasTauntSelect = {
-		loop = false,
-		mode = "sequence",
-		gain = 0.8,
-		source_group = "TAUNTS",
-		files = {"kr_voice_pandatower_taunt01_f.ogg"}
-	},
+
 	TowerPandasSkillATaunt = {
 		loop = false,
 		gain = 0.7,
