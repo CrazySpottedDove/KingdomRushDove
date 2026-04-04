@@ -13597,7 +13597,7 @@ function scripts.tower_rocket_gunners.update(this, store)
 		if pow_p.changed then
 			pow_p.changed = nil
 
-			for _, s in pairs(b.soldiers) do
+			for _, s in ipairs(b.soldiers) do
 				s.powers.phosphoric.level = pow_p.level
 				s.powers.phosphoric.changed = true
 			end
@@ -13606,7 +13606,7 @@ function scripts.tower_rocket_gunners.update(this, store)
 		if pow_s.changed then
 			pow_s.changed = nil
 
-			for _, s in pairs(b.soldiers) do
+			for _, s in ipairs(b.soldiers) do
 				s.powers.sting_missiles.level = pow_s.level
 				s.powers.sting_missiles.changed = true
 			end
