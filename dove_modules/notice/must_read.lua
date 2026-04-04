@@ -35,21 +35,37 @@ local MUST_READ = {
 		back_btn_h = 36,
 		back_btn_x = 20,
 		back_btn_y = 20,
-		-- 题目卡片边距（确保UI元素可见）
-		card_margin_top = 80, -- 卡片上边距（确保返回按钮可见）
-		card_margin_bottom = 80, -- 卡片下边距
-		card_margin_left = 40, -- 卡片左边距
-		card_margin_right = 40, -- 卡片右边距
+		-- 题目卡片边距
+		card_margin_top = 80,
+		card_margin_bottom = 80,
+		card_margin_left = 40,
+		card_margin_right = 40,
 		card_max_w = 800, -- 卡片最大宽度
-		-- 选项
-		opt_h = 60, -- 减小选项高度以适配小屏幕
-		opt_spacing = 12, -- 减小间距
-		opt_y_offset = 160, -- 选项区域距离卡片顶部的距离
-		opt_padding = 20, -- 选项左右内边距
-		-- 题目文本区域
-		question_y_offset = 50, -- 题目文本距离卡片顶部的距离
-		question_padding = 25, -- 题目文本左右内边距
-		progress_y_offset = 15 -- 进度文本距离卡片顶部的距离
+		card_max_h = 600, -- 卡片最大高度
+		-- 布局模式切换阈值
+		aspect_ratio_threshold = 0.8, -- 宽高比>0.8时使用左右布局，≤0.8时垂直布局（只有非常窄的竖屏才用垂直）
+		-- 水平布局参数（横屏：手机横置、电脑等）
+		horizontal = {
+			left_ratio = 0.25, -- 左侧题目区域占55%（给题目更多空间）
+			divider_margin = 25, -- 分割线区域宽度
+			header_h = 45, -- 顶部进度区域高度
+			footer_h = 45, -- 底部提示区域高度
+			content_padding = 15 -- 内容区域内边距
+		},
+		-- 垂直布局参数（极窄竖屏）
+		vertical = {
+			header_ratio = 0.35, -- 头部占总高度35%
+			min_header_h = 90, -- 最小头部高度
+			footer_h = 50, -- 底部固定高度
+			content_padding = 15 -- 内容区域内边距
+		},
+		-- 选项参数
+		opt_max_h = 80, -- 选项最大高度
+		opt_spacing_ratio = 0.2, -- 间距占选项区域高度比例
+		opt_padding = 15, -- 选项左右内边距
+		-- 文本参数
+		question_padding = 20, -- 题目文本边距
+		progress_margin = 10 -- 进度文本上下边距
 	}
 }
 local utf8 = require("utf8")
@@ -595,47 +611,51 @@ function MUST_READ:mousepressed(x, y, button)
 		end
 
 		-- 检查选项点击
-		-- 1. 计算卡片基本尺寸和最小需求
+		-- 1. 计算卡片基本尺寸（与draw函数保持一致）
 		local available_w = w - self.ui.card_margin_left - self.ui.card_margin_right
 		local available_h = h - self.ui.card_margin_top - self.ui.card_margin_bottom
 		local card_w = math.min(self.ui.card_max_w, available_w)
-
-		-- 2. 计算最小内容高度需求
-		local min_header = 60 -- 进度20 + 题目40，最紧凑
-		local min_options = 85 -- 3个选项(25px) + 2个间距(5px) = 85px
-		local min_footer = 40 -- 底部提示文本
-		local min_needed = min_header + min_options + min_footer
-
-		-- 3. 确定实际卡片高度
-		local card_h = math.max(min_needed, math.min(available_h, 400)) -- 最小满足需求，最大400px
+		local card_h = math.min(self.ui.card_max_h, available_h)
 		local card_x = (w - card_w) / 2
 		local card_y = (h - card_h) / 2
 
-		-- 4. 根据实际卡片高度分配空间
-		local footer_space = 40 -- 底部固定40px
-		local remaining_space = card_h - footer_space
+		-- 2. 判断使用水平还是垂直布局
+		local aspect_ratio = card_w / card_h
+		local use_horizontal = aspect_ratio > self.ui.aspect_ratio_threshold
 
-		-- 头部和选项按比例分配剩余空间
-		local header_ratio = 0.3 -- 头部占30%
-		local header_height = math.max(60, remaining_space * header_ratio)
-		local opt_area_height = remaining_space - header_height
+		local opt_h, opt_spacing, opt_y, opt_x, opt_w
 
-		-- 5. 计算选项参数 - 确保第三个选项不超出底部
-		local total_spacing = math.min(20, opt_area_height * 0.2) -- 间距不超过选项区域的20%
-		local opt_h = (opt_area_height - total_spacing) / 3
-		local opt_spacing = total_spacing / 2
-		local opt_y_offset = header_height
+		if use_horizontal then
+			-- 水平布局（电脑端）
+			local hcfg = self.ui.horizontal
+			local left_w = math.floor(card_w * hcfg.left_ratio)
+			local right_w = card_w - left_w - hcfg.divider_margin
+			local right_x = card_x + left_w + hcfg.divider_margin
 
-		-- 验证第三个选项是否会超出卡片底部
-		local third_option_bottom = opt_y_offset + 2 * (opt_h + opt_spacing) + opt_h -- 第三个选项底部相对卡片顶部
-		local card_bottom_limit = card_h - 40 -- 卡片底部减去提示文本空间
+			local content_h = card_h - hcfg.header_h - hcfg.footer_h
+			local opt_area_h = content_h - hcfg.content_padding * 2
 
-		if third_option_bottom > card_bottom_limit then
-			-- 选项超出了，重新计算更紧凑的布局
-			local available_for_options = card_bottom_limit - opt_y_offset
-			total_spacing = math.min(10, available_for_options * 0.15) -- 减少间距
-			opt_h = (available_for_options - total_spacing) / 3
+			-- 选项计算
+			local total_spacing = opt_area_h * self.ui.opt_spacing_ratio
+			opt_h = math.min(self.ui.opt_max_h, (opt_area_h - total_spacing) / 3)
 			opt_spacing = total_spacing / 2
+			opt_y = card_y + hcfg.header_h + hcfg.content_padding
+			opt_x = right_x + self.ui.opt_padding
+			opt_w = right_w - self.ui.opt_padding * 2
+		else
+			-- 垂直布局（手机端）
+			local vcfg = self.ui.vertical
+			local header_h = math.max(vcfg.min_header_h, card_h * vcfg.header_ratio)
+			local content_h = card_h - header_h - vcfg.footer_h
+			local opt_area_h = content_h - vcfg.content_padding * 2
+
+			-- 选项计算
+			local total_spacing = opt_area_h * self.ui.opt_spacing_ratio
+			opt_h = math.min(self.ui.opt_max_h, (opt_area_h - total_spacing) / 3)
+			opt_spacing = total_spacing / 2
+			opt_y = card_y + header_h + vcfg.content_padding
+			opt_x = card_x + self.ui.opt_padding
+			opt_w = card_w - self.ui.opt_padding * 2
 		end
 
 		local q_idx = self.shuffled_questions[self.current_question]
@@ -643,11 +663,12 @@ function MUST_READ:mousepressed(x, y, button)
 		local shuffle_data = self.shuffled_options[q_idx]
 
 		-- 选项位置
-		local opt_y = card_y + opt_y_offset
+		local opt_start_y = opt_y
 
 		for i = 1, 3 do
-			local oy = opt_y + (i - 1) * (opt_h + opt_spacing)
-			if x >= card_x + self.ui.opt_padding and x <= card_x + card_w - self.ui.opt_padding and y >= oy and y <= oy + opt_h then
+			local oy = opt_start_y + (i - 1) * (opt_h + opt_spacing)
+			-- 使用统一的选项区域
+			if x >= opt_x and x <= opt_x + opt_w and y >= oy and y <= oy + opt_h then
 				-- 点击了选项
 				if i == shuffle_data.ans then
 					-- 答对了，不需要冷却，直接进入下一题
@@ -813,49 +834,71 @@ function MUST_READ:draw_quiz_mode(w, h)
 	love.graphics.setFont(small_font)
 	love.graphics.printf("← 返回阅读", back_x, back_y + (back_btn_h - small_font:getHeight()) / 2, back_btn_w, "center")
 
-	-- 题目卡片
-	-- 1. 计算卡片基本尺寸和最小需求
+	-- 题目卡片 - 响应式布局
+	-- 1. 计算卡片基本尺寸
 	local available_w = w - self.ui.card_margin_left - self.ui.card_margin_right
 	local available_h = h - self.ui.card_margin_top - self.ui.card_margin_bottom
 	local card_w = math.min(self.ui.card_max_w, available_w)
-
-	-- 2. 计算最小内容高度需求
-	local min_header = 60 -- 进度20 + 题目40，最紧凑
-	local min_options = 85 -- 3个选项(25px) + 2个间距(5px) = 85px
-	local min_footer = 40 -- 底部提示文本
-	local min_needed = min_header + min_options + min_footer
-
-	-- 3. 确定实际卡片高度
-	local card_h = math.max(min_needed, math.min(available_h, 400)) -- 最小满足需求，最大400px
+	local card_h = math.min(self.ui.card_max_h, available_h)
 	local card_x = (w - card_w) / 2
 	local card_y = (h - card_h) / 2
 
-	-- 4. 根据实际卡片高度分配空间
-	local footer_space = 40 -- 底部固定40px
-	local remaining_space = card_h - footer_space
+	-- 2. 判断使用水平还是垂直布局
+	local aspect_ratio = card_w / card_h
+	local use_horizontal = aspect_ratio > self.ui.aspect_ratio_threshold
 
-	-- 头部和选项按比例分配剩余空间
-	local header_ratio = 0.3 -- 头部占30%
-	local header_height = math.max(60, remaining_space * header_ratio)
-	local opt_area_height = remaining_space - header_height
-	local question_y_offset = math.min(40, header_height - 20) -- 题目位置
+	local opt_h, opt_spacing, opt_y, opt_x, opt_w, question_area_h, question_x, question_w, question_y
 
-	-- 5. 计算选项参数 - 确保第三个选项不超出底部
-	local total_spacing = math.min(20, opt_area_height * 0.2) -- 间距不超过选项区域的20%
-	local opt_h = (opt_area_height - total_spacing) / 3
-	local opt_spacing = total_spacing / 2
-	local opt_y_offset = header_height
+	if use_horizontal then
+		-- 水平布局（电脑端）
+		local hcfg = self.ui.horizontal
+		local left_w = math.floor(card_w * hcfg.left_ratio)
+		local right_w = card_w - left_w - hcfg.divider_margin
+		local left_x = card_x
+		local right_x = card_x + left_w + hcfg.divider_margin
 
-	-- 验证第三个选项是否会超出卡片底部
-	local third_option_bottom = opt_y_offset + 2 * (opt_h + opt_spacing) + opt_h -- 第三个选项底部相对卡片顶部
-	local card_bottom_limit = card_h - 40 -- 卡片底部减去提示文本空间
+		local content_h = card_h - hcfg.header_h - hcfg.footer_h
+		local opt_area_h = content_h - hcfg.content_padding * 2
 
-	if third_option_bottom > card_bottom_limit then
-		-- 选项超出了，重新计算更紧凑的布局
-		local available_for_options = card_bottom_limit - opt_y_offset
-		total_spacing = math.min(10, available_for_options * 0.15) -- 减少间距
-		opt_h = (available_for_options - total_spacing) / 3
+		-- 选项计算
+		local total_spacing = opt_area_h * self.ui.opt_spacing_ratio
+		opt_h = math.min(self.ui.opt_max_h, (opt_area_h - total_spacing) / 3)
 		opt_spacing = total_spacing / 2
+		opt_y = card_y + hcfg.header_h + hcfg.content_padding
+		opt_x = right_x + self.ui.opt_padding
+		opt_w = right_w - self.ui.opt_padding * 2
+		question_area_h = content_h
+
+		-- 题目区域（左侧）
+		question_x = left_x + self.ui.question_padding
+		question_w = left_w - self.ui.question_padding * 2
+		question_y = card_y + hcfg.header_h + hcfg.content_padding
+
+		-- 绘制分割线
+		love.graphics.setColor(0.4, 0.4, 0.4)
+		love.graphics.setLineWidth(1)
+		local divider_x = left_x + left_w + hcfg.divider_margin / 2
+		love.graphics.line(divider_x, card_y + hcfg.header_h, divider_x, card_y + card_h - hcfg.footer_h)
+	else
+		-- 垂直布局（手机端）
+		local vcfg = self.ui.vertical
+		local header_h = math.max(vcfg.min_header_h, card_h * vcfg.header_ratio)
+		local content_h = card_h - header_h - vcfg.footer_h
+		local opt_area_h = content_h - vcfg.content_padding * 2
+
+		-- 选项计算
+		local total_spacing = opt_area_h * self.ui.opt_spacing_ratio
+		opt_h = math.min(self.ui.opt_max_h, math.max(self.ui.opt_min_h, (opt_area_h - total_spacing) / 3))
+		opt_spacing = total_spacing / 2
+		opt_y = card_y + header_h + vcfg.content_padding
+		opt_x = card_x + self.ui.opt_padding
+		opt_w = card_w - self.ui.opt_padding * 2
+		question_area_h = header_h - self.ui.progress_margin * 2 - 30
+
+		-- 题目区域（顶部）
+		question_x = card_x + self.ui.question_padding
+		question_w = card_w - self.ui.question_padding * 2
+		question_y = card_y + 30 + self.ui.progress_margin
 	end
 
 	-- 卡片背景
@@ -870,32 +913,31 @@ function MUST_READ:draw_quiz_mode(w, h)
 	local question = quiz_bank[q_idx]
 	local shuffle_data = self.shuffled_options[q_idx]
 
-	-- 进度显示
+	-- 进度显示（顶部居中）
 	love.graphics.setColor(0.7, 0.7, 0.7)
 	love.graphics.setFont(small_font)
 	local progress_text = string.format("题目 %d / %d", self.current_question, #quiz_bank)
-	love.graphics.printf(progress_text, card_x, card_y + self.ui.progress_y_offset, card_w, "center")
+	love.graphics.printf(progress_text, card_x, card_y + self.ui.progress_margin, card_w, "center")
 
 	-- 题目文本
 	love.graphics.setColor(1, 1, 1)
-	-- 根据头部高度动态选择题目字体大小
+	-- 根据可用高度选择题目字体大小
 	local question_font
-	if header_height >= 100 then
+	if question_area_h >= 120 then
 		question_font = font -- 20px，正常大小
-	elseif header_height >= 80 then
+	elseif question_area_h >= 80 then
 		question_font = small_font -- 16px，中等大小
 	else
-		-- 头部空间很小，使用更小的字体
-		local font_size = math.max(14, math.floor(header_height * 0.25)) -- 字体大小约为头部高度的25%
+		-- 空间很小，使用更小的字体
+		local font_size = math.floor(question_area_h * 0.2)
 		question_font = require("lib.klove.font_db"):f("msyh", font_size)
 	end
 
 	love.graphics.setFont(question_font)
 	local q_text = string.format("Q%d: %s", self.current_question, question.q)
-	love.graphics.printf(q_text, card_x + self.ui.question_padding, card_y + question_y_offset, card_w - self.ui.question_padding * 2, "left")
+	love.graphics.printf(q_text, question_x, question_y, question_w, "left")
 
 	-- 选项
-	local opt_y = card_y + opt_y_offset
 	local current_time = love.timer.getTime()
 	local cooldown = 5 - (current_time - self.last_submit_time)
 
@@ -903,8 +945,8 @@ function MUST_READ:draw_quiz_mode(w, h)
 		local opt_idx = shuffle_data.order[i]
 		local opt_text = question.opts[opt_idx]
 		local oy = opt_y + (i - 1) * (opt_h + opt_spacing)
-		local ox = card_x + self.ui.opt_padding
-		local ow = card_w - self.ui.opt_padding * 2
+		local ox = opt_x
+		local ow = opt_w
 
 		-- 检查鼠标是否悬停在这个选项上
 		local is_hover = self.mouse_x >= ox and self.mouse_x <= ox + ow and self.mouse_y >= oy and self.mouse_y <= oy + opt_h
@@ -934,7 +976,8 @@ function MUST_READ:draw_quiz_mode(w, h)
 
 		-- 选项文本
 		love.graphics.setColor(1, 1, 1)
-		local label = string.format("%s. %s", string.char(64 + i), opt_text)
+		-- local label = string.format("%s. %s", string.char(64 + i), opt_text)
+		local label = opt_text
 
 		-- 根据选项高度动态选择字体大小
 		local text_font
@@ -944,7 +987,7 @@ function MUST_READ:draw_quiz_mode(w, h)
 			text_font = small_font -- 16px，中等大小
 		else
 			-- 选项很小，使用更小的字体
-			local font_size = math.max(12, math.floor(opt_h * 0.6)) -- 字体大小约为选项高度的60%
+			local font_size = math.floor(opt_h * 0.6) -- 字体大小约为选项高度的60%
 			text_font = require("lib.klove.font_db"):f("msyh", font_size)
 		end
 
