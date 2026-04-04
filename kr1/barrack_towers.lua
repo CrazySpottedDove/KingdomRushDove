@@ -603,13 +603,7 @@ tt.info.random_name_format = "SOLDIER_TEMPLAR_RANDOM_%i_NAME"
 tt.melee.attacks[1].damage_max = 40
 tt.melee.attacks[1].damage_min = 30
 tt.melee.attacks[1].shared_cooldown = true
-tt.melee.attacks[1].side_effect = function(this, store, attack, target)
-	this.revive.protect = this.revive.protect + 0.01
-
-	if target then
-		target.health.hp = target.health.hp - this.health.hp_max * 0.02 * this.powers.extralife.level * target.health.damage_factor
-	end
-end
+tt.melee.attacks[1].side_effect = scripts.soldier_templar.side_effect_1
 tt.melee.attacks[2] = CC("melee_attack")
 tt.melee.attacks[2].animation = "blood"
 tt.melee.attacks[2].chance = 0.25
@@ -626,14 +620,7 @@ tt.melee.attacks[2].shared_cooldown = true
 tt.melee.attacks[2].sound_hit = "TemplarArterial"
 tt.melee.attacks[2].vis_bans = bor(F_FLYING, F_CLIFF)
 tt.melee.attacks[2].vis_flags = bor(F_BLOCK, F_BLOOD)
-tt.melee.attacks[2].side_effect = function(this, store, attack, target)
-	this.revive.protect = this.revive.protect + 0.01
-
-	if target then
-		target.health.damage_factor = target.health.damage_factor * 1.033
-		target.health.hp = target.health.hp - this.health.hp_max * 0.03 * this.powers.extralife.level * target.health.damage_factor
-	end
-end
+tt.melee.attacks[2].side_effect = scripts.soldier_templar.side_effect_2
 tt.melee.arrived_slot_animation = "attack_wait"
 tt.melee.cooldown = 2 + fts(13)
 tt.melee.attacks[1].cooldown = tt.melee.cooldown

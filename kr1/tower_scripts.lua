@@ -86,6 +86,33 @@ local function apply_precision(b)
 	end
 end
 
+scripts.soldier_templar = {}
+
+function scripts.soldier_templar.side_effect_1(this, store, attack, target)
+	this.revive.protect = this.revive.protect + 0.01
+	if target then
+		local d = E:create_entity("damage")
+		d.source_id = this.id
+		d.target_id = target.id
+		d.value = math.ceil(this.health.hp_max * 0.02 * this.powers.extralife.level)
+		d.damage_type = DAMAGE_TRUE
+		queue_damage(store, d)
+	end
+end
+
+function scripts.soldier_templar.side_effect_2(this, store, attack, target)
+	this.revive.protect = this.revive.protect + 0.01
+	if target then
+		target.health.damage_factor = target.health.damage_factor * 1.035
+		local d = E:create_entity("damage")
+		d.source_id = this.id
+		d.target_id = target.id
+		d.value = math.ceil(this.health.hp_max * 0.03 * this.powers.extralife.level)
+		d.damage_type = DAMAGE_TRUE
+		queue_damage(store, d)
+	end
+end
+
 -- 矮人射手
 scripts.tower_archer_dwarf = {
 	get_info = function(this)
