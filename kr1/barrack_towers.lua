@@ -667,9 +667,7 @@ tt.dps.damage_inc = 10
 tt.dps.damage_every = 1
 
 local tower_assassin = RT("tower_assassin", "tower_barrack_1")
-
 AC(tower_assassin, "powers")
-
 tower_assassin.info.portrait = "kr2_info_portraits_towers_0008"
 tower_assassin.info.enc_icon = 20
 tower_assassin.tower.type = "assassin"
