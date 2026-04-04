@@ -8116,6 +8116,16 @@ function scripts.mod_lycanthropy.update(this, store)
 			return
 		end
 
+		local d = E:create_entity("damage")
+
+		d.damage_type = DAMAGE_EAT
+		d.source_id = this.id
+		d.target_id = target.id
+
+		queue_damage(store, d)
+
+		coroutine.yield()
+
 		S:queue(this.sound_events.transform)
 
 		local e = E:create_entity(this.moon.transform_name)
@@ -8144,14 +8154,6 @@ function scripts.mod_lycanthropy.update(this, store)
 		e.render.sprites[1].flip_x = target.render.sprites[1].flip_x
 
 		queue_insert(store, e)
-
-		local d = E:create_entity("damage")
-
-		d.damage_type = DAMAGE_EAT
-		d.source_id = this.id
-		d.target_id = target.id
-
-		queue_damage(store, d)
 
 		if target.enemy then
 			target.enemy.gold = 0
