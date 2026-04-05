@@ -2559,9 +2559,9 @@ return {
 		size = 1398256,
 		hash = "8bcf5fd8"
 	},
-	["kr1-desktop/sounds/files/29431171705-1-192.mp3"] = {
-		size = 439116,
-		hash = "4579ec24"
+	["kr1-desktop/sounds/files/29431171705-1-192.ogg"] = {
+		size = 306939,
+		hash = "7fe6f82c"
 	},
 	["kr1-desktop/sounds/files/33145294233-1-192.ogg"] = {
 		size = 6141922,
@@ -2727,9 +2727,9 @@ return {
 		size = 13337,
 		hash = "6c4a759a"
 	},
-	["kr1-desktop/sounds/files/Battle_Rising_Tides.mp3"] = {
-		size = 1849468,
-		hash = "d1b6e5e4"
+	["kr1-desktop/sounds/files/Battle_Rising_Tides.ogg"] = {
+		size = 1561123,
+		hash = "3383df22"
 	},
 	["kr1-desktop/sounds/files/Blacksurge_holdtower.ogg"] = {
 		size = 74978,
@@ -2879,13 +2879,13 @@ return {
 		size = 21167,
 		hash = "e2df7395"
 	},
-	["kr1-desktop/sounds/files/Desert_Battle.mp3"] = {
-		size = 1134828,
-		hash = "f271e3ca"
+	["kr1-desktop/sounds/files/Desert_Battle.ogg"] = {
+		size = 1117000,
+		hash = "4dfbb366"
 	},
-	["kr1-desktop/sounds/files/Desert_Prep.mp3"] = {
-		size = 1308209,
-		hash = "a9801e6b"
+	["kr1-desktop/sounds/files/Desert_Prep.ogg"] = {
+		size = 987968,
+		hash = "8b628060"
 	},
 	["kr1-desktop/sounds/files/Drow_01c.ogg"] = {
 		size = 16002,
@@ -3071,9 +3071,9 @@ return {
 		size = 32107,
 		hash = "c05d349a"
 	},
-	["kr1-desktop/sounds/files/Finalboss_prefight.mp3"] = {
-		size = 465744,
-		hash = "169a741c"
+	["kr1-desktop/sounds/files/Finalboss_prefight.ogg"] = {
+		size = 362413,
+		hash = "5866c4d1"
 	},
 	["kr1-desktop/sounds/files/ForestProtector_Ancient[2]-01c.ogg"] = {
 		size = 21314,
@@ -3211,17 +3211,17 @@ return {
 		size = 47296,
 		hash = "0f83c372"
 	},
-	["kr1-desktop/sounds/files/Halloween_Battle.mp3"] = {
-		size = 998836,
-		hash = "4b63a3fe"
+	["kr1-desktop/sounds/files/Halloween_Battle.ogg"] = {
+		size = 1246245,
+		hash = "2bb4abd0"
 	},
-	["kr1-desktop/sounds/files/Halloween_Moon.mp3"] = {
-		size = 341806,
-		hash = "4198588a"
+	["kr1-desktop/sounds/files/Halloween_Moon.ogg"] = {
+		size = 456354,
+		hash = "8b04330a"
 	},
-	["kr1-desktop/sounds/files/Halloween_PreBattle.mp3"] = {
-		size = 593863,
-		hash = "301e5c28"
+	["kr1-desktop/sounds/files/Halloween_PreBattle.ogg"] = {
+		size = 534919,
+		hash = "ff23ce48"
 	},
 	["kr1-desktop/sounds/files/HeadlessHorseman-03a_WET.ogg"] = {
 		size = 40474,
@@ -3311,13 +3311,13 @@ return {
 		size = 15429,
 		hash = "06dfe3f8"
 	},
-	["kr1-desktop/sounds/files/Jungle_Battle.mp3"] = {
-		size = 1177565,
-		hash = "de72ff68"
+	["kr1-desktop/sounds/files/Jungle_Battle.ogg"] = {
+		size = 906339,
+		hash = "abc65ccc"
 	},
-	["kr1-desktop/sounds/files/Jungle_Prep.mp3"] = {
-		size = 1373426,
-		hash = "0cc941ac"
+	["kr1-desktop/sounds/files/Jungle_Prep.ogg"] = {
+		size = 1022212,
+		hash = "2ff25a14"
 	},
 	["kr1-desktop/sounds/files/KRF_sfx_minotauro_ataquefuerte.ogg"] = {
 		size = 43053,
@@ -3555,9 +3555,9 @@ return {
 		size = 11874,
 		hash = "f66565f6"
 	},
-	["kr1-desktop/sounds/files/Map_Theme_1.mp3"] = {
-		size = 1226922,
-		hash = "439e9e82"
+	["kr1-desktop/sounds/files/Map_Theme_1.ogg"] = {
+		size = 902219,
+		hash = "7b4fb836"
 	},
 	["kr1-desktop/sounds/files/Minotaur_01b.ogg"] = {
 		size = 22387,
@@ -3767,9 +3767,9 @@ return {
 		size = 20222,
 		hash = "ab92f728"
 	},
-	["kr1-desktop/sounds/files/Prebattle_Rising_Tides.mp3"] = {
-		size = 1279544,
-		hash = "a3fdf464"
+	["kr1-desktop/sounds/files/Prebattle_Rising_Tides.ogg"] = {
+		size = 987980,
+		hash = "615aab84"
 	},
 	["kr1-desktop/sounds/files/PrinceDenas-confirm_01a.ogg"] = {
 		size = 24403,
@@ -4403,13 +4403,13 @@ return {
 		size = 40620,
 		hash = "65d36044"
 	},
-	["kr1-desktop/sounds/files/Underground_Battle.mp3"] = {
-		size = 1401600,
-		hash = "5a0d2c24"
+	["kr1-desktop/sounds/files/Underground_Battle.ogg"] = {
+		size = 1032881,
+		hash = "bef86430"
 	},
-	["kr1-desktop/sounds/files/Underground_Prep.mp3"] = {
-		size = 1287652,
-		hash = "b927570c"
+	["kr1-desktop/sounds/files/Underground_Prep.ogg"] = {
+		size = 870239,
+		hash = "a9f238ec"
 	},
 	["kr1-desktop/sounds/files/Vampiress-01c.ogg"] = {
 		size = 26047,
@@ -4467,9 +4467,9 @@ return {
 		size = 16109,
 		hash = "3f40aec8"
 	},
-	["kr1-desktop/sounds/files/Victory_Theme.mp3"] = {
-		size = 389113,
-		hash = "e3261340"
+	["kr1-desktop/sounds/files/Victory_Theme.ogg"] = {
+		size = 286337,
+		hash = "3f957254"
 	},
 	["kr1-desktop/sounds/files/Viking-01b.ogg"] = {
 		size = 32659,
@@ -4863,9 +4863,9 @@ return {
 		size = 55203,
 		hash = "8c0a6b68"
 	},
-	["kr1-desktop/sounds/files/boss_prefight.mp3"] = {
-		size = 554636,
-		hash = "a2eef900"
+	["kr1-desktop/sounds/files/boss_prefight.ogg"] = {
+		size = 398701,
+		hash = "01ff0258"
 	},
 	["kr1-desktop/sounds/files/boss_spawn.ogg"] = {
 		size = 72666,
@@ -12007,9 +12007,9 @@ return {
 		size = 81684,
 		hash = "e4771c7c"
 	},
-	["kr1-desktop/sounds/files/kre_bgmusic_map[master_25-08].mp3"] = {
-		size = 937416,
-		hash = "6b842dfc"
+	["kr1-desktop/sounds/files/kre_bgmusic_map[master_25-08].ogg"] = {
+		size = 1049133,
+		hash = "8cb42420"
 	},
 	["kr1-desktop/sounds/files/kre_sfx_achievement_mario.ogg"] = {
 		size = 19849,
@@ -12199,61 +12199,61 @@ return {
 		size = 52144,
 		hash = "37a46668"
 	},
-	["kr1-desktop/sounds/files/kro_bgmusic_bossfight_prebattle_v2[master_03-11].mp3"] = {
-		size = 266761,
-		hash = "50b83b68"
+	["kr1-desktop/sounds/files/kro_bgmusic_bossfight_prebattle_v2[master_03-11].ogg"] = {
+		size = 337220,
+		hash = "90117d08"
 	},
-	["kr1-desktop/sounds/files/kro_bgmusic_creditos[master].mp3"] = {
-		size = 1077972,
-		hash = "9884e9bc"
+	["kr1-desktop/sounds/files/kro_bgmusic_creditos[master].ogg"] = {
+		size = 1454903,
+		hash = "7bd3b40c"
 	},
-	["kr1-desktop/sounds/files/kro_bgmusic_t1_battle1_v4[master_03-11].mp3"] = {
-		size = 575607,
-		hash = "1cc3f331"
+	["kr1-desktop/sounds/files/kro_bgmusic_t1_battle1_v4[master_03-11].ogg"] = {
+		size = 805302,
+		hash = "c584e3b0"
 	},
-	["kr1-desktop/sounds/files/kro_bgmusic_t1_battle2[master_25-08].mp3"] = {
-		size = 965772,
-		hash = "6378ca38"
+	["kr1-desktop/sounds/files/kro_bgmusic_t1_battle2[master_25-08].ogg"] = {
+		size = 1109978,
+		hash = "cfb9c388"
 	},
-	["kr1-desktop/sounds/files/kro_bgmusic_t1_prebattle1_[master_25-08].mp3"] = {
-		size = 796053,
-		hash = "a603bfd0"
+	["kr1-desktop/sounds/files/kro_bgmusic_t1_prebattle1_[master_25-08].ogg"] = {
+		size = 866216,
+		hash = "44e1ea20"
 	},
-	["kr1-desktop/sounds/files/kro_bgmusic_t1_prebattle2[master_30-09].mp3"] = {
-		size = 894882,
-		hash = "1ea3affc"
+	["kr1-desktop/sounds/files/kro_bgmusic_t1_prebattle2[master_30-09].ogg"] = {
+		size = 1007965,
+		hash = "372ed618"
 	},
-	["kr1-desktop/sounds/files/kro_bgmusic_t2_battle1.mp3"] = {
-		size = 841742,
-		hash = "71bb76fc"
+	["kr1-desktop/sounds/files/kro_bgmusic_t2_battle1.ogg"] = {
+		size = 1187341,
+		hash = "efedbccc"
 	},
-	["kr1-desktop/sounds/files/kro_bgmusic_t2_battle2[master_03-09].mp3"] = {
-		size = 918651,
-		hash = "15614da0"
+	["kr1-desktop/sounds/files/kro_bgmusic_t2_battle2[master_03-09].ogg"] = {
+		size = 1095841,
+		hash = "5de3baa4"
 	},
-	["kr1-desktop/sounds/files/kro_bgmusic_t2_prebattle1[master_30-09].mp3"] = {
-		size = 1081698,
-		hash = "c587aff0"
+	["kr1-desktop/sounds/files/kro_bgmusic_t2_prebattle1[master_30-09].ogg"] = {
+		size = 1300038,
+		hash = "d769a73f"
 	},
-	["kr1-desktop/sounds/files/kro_bgmusic_t2_prebattle2[master_25-08].mp3"] = {
-		size = 827101,
-		hash = "359d6aba"
+	["kr1-desktop/sounds/files/kro_bgmusic_t2_prebattle2[master_25-08].ogg"] = {
+		size = 948074,
+		hash = "1c8d8e04"
 	},
-	["kr1-desktop/sounds/files/kro_bgmusic_t3_battle1[master_03-11].mp3"] = {
-		size = 799487,
-		hash = "3fb0fac8"
+	["kr1-desktop/sounds/files/kro_bgmusic_t3_battle1[master_03-11].ogg"] = {
+		size = 1127722,
+		hash = "bf7b50b8"
 	},
-	["kr1-desktop/sounds/files/kro_bgmusic_t3_battle2[master_30-10].mp3"] = {
-		size = 852925,
-		hash = "82270004"
+	["kr1-desktop/sounds/files/kro_bgmusic_t3_battle2[master_30-10].ogg"] = {
+		size = 1210215,
+		hash = "cdb301ee"
 	},
-	["kr1-desktop/sounds/files/kro_bgmusic_t3_prebattle1[master_01-11].mp3"] = {
-		size = 689852,
-		hash = "6d1ace64"
+	["kr1-desktop/sounds/files/kro_bgmusic_t3_prebattle1[master_01-11].ogg"] = {
+		size = 880078,
+		hash = "23500600"
 	},
-	["kr1-desktop/sounds/files/kro_bgmusic_t3_prebattle2[master_25-08].mp3"] = {
-		size = 805662,
-		hash = "d1dff520"
+	["kr1-desktop/sounds/files/kro_bgmusic_t3_prebattle2[master_25-08].ogg"] = {
+		size = 1088648,
+		hash = "5cf90f34"
 	},
 	["kr1-desktop/sounds/files/kro_sfx_ainyl_disable.ogg"] = {
 		size = 50765,
@@ -13331,29 +13331,29 @@ return {
 		size = 24347,
 		hash = "3418dd90"
 	},
-	["kr1-desktop/sounds/files/savage_music_desert_battle.mp3"] = {
-		size = 1266904,
-		hash = "7fc53c38"
+	["kr1-desktop/sounds/files/savage_music_desert_battle.ogg"] = {
+		size = 1014081,
+		hash = "3abe9086"
 	},
-	["kr1-desktop/sounds/files/savage_music_desert_preparation.mp3"] = {
-		size = 1279046,
-		hash = "fef6173c"
+	["kr1-desktop/sounds/files/savage_music_desert_preparation.ogg"] = {
+		size = 1115468,
+		hash = "ed10b7d0"
 	},
-	["kr1-desktop/sounds/files/savage_music_jungle_battle.mp3"] = {
-		size = 771738,
-		hash = "6d5a0914"
+	["kr1-desktop/sounds/files/savage_music_jungle_battle.ogg"] = {
+		size = 675471,
+		hash = "f535b788"
 	},
-	["kr1-desktop/sounds/files/savage_music_jungle_preparation.mp3"] = {
-		size = 1101815,
-		hash = "201610b4"
+	["kr1-desktop/sounds/files/savage_music_jungle_preparation.ogg"] = {
+		size = 856475,
+		hash = "ab0e8040"
 	},
-	["kr1-desktop/sounds/files/savage_music_underground_battle.mp3"] = {
-		size = 771707,
-		hash = "dadb8d1c"
+	["kr1-desktop/sounds/files/savage_music_underground_battle.ogg"] = {
+		size = 635646,
+		hash = "b54c0d8d"
 	},
-	["kr1-desktop/sounds/files/savage_music_underground_preparation.mp3"] = {
-		size = 867516,
-		hash = "26492714"
+	["kr1-desktop/sounds/files/savage_music_underground_preparation.ogg"] = {
+		size = 585007,
+		hash = "c9177cb8"
 	},
 	["kr1-desktop/sounds/files/savant_attack.ogg"] = {
 		size = 32562,

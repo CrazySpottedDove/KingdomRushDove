@@ -1121,308 +1121,308 @@ return {
 			stream = true
 		},
 		MusicBattlePrep_27 = {
-			files = {"savage_music_desert_preparation.mp3"},
+			files = {"savage_music_desert_preparation.ogg"},
 			gain = 0.4,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_28 = {
-			files = {"Desert_Prep.mp3"},
+			files = {"Desert_Prep.ogg"},
 			gain = 0.6,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_29 = {
-			files = {"savage_music_desert_preparation.mp3"},
+			files = {"savage_music_desert_preparation.ogg"},
 			gain = 0.4,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_30 = {
-			files = {"Desert_Prep.mp3"},
+			files = {"Desert_Prep.ogg"},
 			gain = 0.6,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_31 = {
-			files = {"savage_music_desert_preparation.mp3"},
+			files = {"savage_music_desert_preparation.ogg"},
 			gain = 0.4,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_32 = {
-			files = {"Desert_Prep.mp3"},
+			files = {"Desert_Prep.ogg"},
 			gain = 0.6,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_33 = {
-			files = {"savage_music_jungle_preparation.mp3"},
+			files = {"savage_music_jungle_preparation.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_34 = {
-			files = {"Jungle_Prep.mp3"},
+			files = {"Jungle_Prep.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_35 = {
-			files = {"savage_music_jungle_preparation.mp3"},
+			files = {"savage_music_jungle_preparation.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_36 = {
-			files = {"Jungle_Prep.mp3"},
+			files = {"Jungle_Prep.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_37 = {
-			files = {"savage_music_jungle_preparation.mp3"},
+			files = {"savage_music_jungle_preparation.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_38 = {
-			files = {"savage_music_underground_preparation.mp3"},
+			files = {"savage_music_underground_preparation.ogg"},
 			gain = 0.5,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_39 = {
-			files = {"Underground_Prep.mp3"},
+			files = {"Underground_Prep.ogg"},
 			gain = 0.6,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_40 = {
-			files = {"savage_music_underground_preparation.mp3"},
+			files = {"savage_music_underground_preparation.ogg"},
 			gain = 0.5,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_41 = {
-			files = {"Underground_Prep.mp3"},
+			files = {"Underground_Prep.ogg"},
 			gain = 0.6,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_42 = {
-			files = {"Prebattle_Rising_Tides.mp3"},
+			files = {"Prebattle_Rising_Tides.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_43 = {
-			files = {"Prebattle_Rising_Tides.mp3"},
+			files = {"Prebattle_Rising_Tides.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_44 = {
-			files = {"Prebattle_Rising_Tides.mp3"},
+			files = {"Prebattle_Rising_Tides.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_45 = {
-			files = {"Halloween_PreBattle.mp3"},
+			files = {"Halloween_PreBattle.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_46 = {
-			files = {"Halloween_PreBattle.mp3"},
+			files = {"Halloween_PreBattle.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_47 = {
-			files = {"Halloween_PreBattle.mp3"},
+			files = {"Halloween_PreBattle.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_48 = {
-			files = {"Underground_Prep.mp3"},
+			files = {"Underground_Prep.ogg"},
 			gain = 0.6,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_49 = {
-			files = {"kro_bgmusic_t1_prebattle1_[master_25-08].mp3"},
+			files = {"kro_bgmusic_t1_prebattle1_[master_25-08].ogg"},
 			gain = 0.6,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_50 = {
-			files = {"kro_bgmusic_t1_prebattle2[master_30-09].mp3"},
+			files = {"kro_bgmusic_t1_prebattle2[master_30-09].ogg"},
 			gain = 0.5,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_51 = {
-			files = {"kro_bgmusic_t1_prebattle1_[master_25-08].mp3"},
+			files = {"kro_bgmusic_t1_prebattle1_[master_25-08].ogg"},
 			gain = 0.6,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_52 = {
-			files = {"kro_bgmusic_t1_prebattle2[master_30-09].mp3"},
+			files = {"kro_bgmusic_t1_prebattle2[master_30-09].ogg"},
 			gain = 0.5,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_53 = {
-			files = {"kro_bgmusic_t1_prebattle1_[master_25-08].mp3"},
+			files = {"kro_bgmusic_t1_prebattle1_[master_25-08].ogg"},
 			gain = 0.6,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_54 = {
-			files = {"kro_bgmusic_t1_prebattle2[master_30-09].mp3"},
+			files = {"kro_bgmusic_t1_prebattle2[master_30-09].ogg"},
 			gain = 0.5,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_55 = {
-			files = {"kro_bgmusic_t2_prebattle1[master_30-09].mp3"},
+			files = {"kro_bgmusic_t2_prebattle1[master_30-09].ogg"},
 			gain = 0.5,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_56 = {
-			files = {"kro_bgmusic_t2_prebattle2[master_25-08].mp3"},
+			files = {"kro_bgmusic_t2_prebattle2[master_25-08].ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_57 = {
-			files = {"kro_bgmusic_t2_prebattle1[master_30-09].mp3"},
+			files = {"kro_bgmusic_t2_prebattle1[master_30-09].ogg"},
 			gain = 0.5,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_58 = {
-			files = {"kro_bgmusic_t2_prebattle2[master_25-08].mp3"},
+			files = {"kro_bgmusic_t2_prebattle2[master_25-08].ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_59 = {
-			files = {"kro_bgmusic_t2_prebattle1[master_30-09].mp3"},
+			files = {"kro_bgmusic_t2_prebattle1[master_30-09].ogg"},
 			gain = 0.5,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_60 = {
-			files = {"kro_bgmusic_t3_prebattle1[master_01-11].mp3"},
+			files = {"kro_bgmusic_t3_prebattle1[master_01-11].ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_61 = {
-			files = {"kro_bgmusic_t3_prebattle2[master_25-08].mp3"},
+			files = {"kro_bgmusic_t3_prebattle2[master_25-08].ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_62 = {
-			files = {"kro_bgmusic_t3_prebattle1[master_01-11].mp3"},
+			files = {"kro_bgmusic_t3_prebattle1[master_01-11].ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_63 = {
-			files = {"kro_bgmusic_t3_prebattle2[master_25-08].mp3"},
+			files = {"kro_bgmusic_t3_prebattle2[master_25-08].ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_64 = {
-			files = {"kro_bgmusic_t1_prebattle1_[master_25-08].mp3"},
+			files = {"kro_bgmusic_t1_prebattle1_[master_25-08].ogg"},
 			gain = 0.6,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_65 = {
-			files = {"kro_bgmusic_t1_prebattle2[master_30-09].mp3"},
+			files = {"kro_bgmusic_t1_prebattle2[master_30-09].ogg"},
 			gain = 0.5,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_66 = {
-			files = {"kro_bgmusic_t1_prebattle1_[master_25-08].mp3"},
+			files = {"kro_bgmusic_t1_prebattle1_[master_25-08].ogg"},
 			gain = 0.6,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_67 = {
-			files = {"kro_bgmusic_t1_prebattle1_[master_25-08].mp3"},
+			files = {"kro_bgmusic_t1_prebattle1_[master_25-08].ogg"},
 			gain = 0.6,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_68 = {
-			files = {"kro_bgmusic_t1_prebattle1_[master_25-08].mp3"},
+			files = {"kro_bgmusic_t1_prebattle1_[master_25-08].ogg"},
 			gain = 0.6,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_69 = {
-			files = {"kro_bgmusic_t2_prebattle1[master_30-09].mp3"},
+			files = {"kro_bgmusic_t2_prebattle1[master_30-09].ogg"},
 			gain = 0.5,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_70 = {
-			files = {"kro_bgmusic_t2_prebattle2[master_25-08].mp3"},
+			files = {"kro_bgmusic_t2_prebattle2[master_25-08].ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
@@ -1723,42 +1723,42 @@ return {
 			stream = true
 		},
 		MusicBattlePrep_2000 = {
-			files = {"savage_music_jungle_preparation.mp3"},
+			files = {"savage_music_jungle_preparation.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_2001 = {
-			files = {"Prebattle_Rising_Tides.mp3"},
+			files = {"Prebattle_Rising_Tides.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_2002 = {
-			files = {"Jungle_Prep.mp3"},
+			files = {"Jungle_Prep.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_2003 = {
-			files = {"29431171705-1-192.mp3"},
+			files = {"29431171705-1-192.ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_2004 = {
-			files = {"Desert_Prep.mp3"},
+			files = {"Desert_Prep.ogg"},
 			gain = 0.6,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattlePrep_3000 = {
-			files = {"kro_bgmusic_t3_prebattle1[master_01-11].mp3"},
+			files = {"kro_bgmusic_t3_prebattle1[master_01-11].ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
@@ -1954,308 +1954,308 @@ return {
 			stream = true
 		},
 		MusicBattle_27 = {
-			files = {"savage_music_desert_battle.mp3"},
+			files = {"savage_music_desert_battle.ogg"},
 			gain = 0.4,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_28 = {
-			files = {"Desert_Battle.mp3"},
+			files = {"Desert_Battle.ogg"},
 			gain = 0.4,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_29 = {
-			files = {"savage_music_desert_battle.mp3"},
+			files = {"savage_music_desert_battle.ogg"},
 			gain = 0.4,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_30 = {
-			files = {"Desert_Battle.mp3"},
+			files = {"Desert_Battle.ogg"},
 			gain = 0.4,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_31 = {
-			files = {"savage_music_desert_battle.mp3"},
+			files = {"savage_music_desert_battle.ogg"},
 			gain = 0.4,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_32 = {
-			files = {"Desert_Battle.mp3"},
+			files = {"Desert_Battle.ogg"},
 			gain = 0.4,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_33 = {
-			files = {"Jungle_Battle.mp3"},
+			files = {"Jungle_Battle.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_34 = {
-			files = {"savage_music_jungle_battle.mp3"},
+			files = {"savage_music_jungle_battle.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_35 = {
-			files = {"Jungle_Battle.mp3"},
+			files = {"Jungle_Battle.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_36 = {
-			files = {"savage_music_jungle_battle.mp3"},
+			files = {"savage_music_jungle_battle.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_37 = {
-			files = {"Jungle_Battle.mp3"},
+			files = {"Jungle_Battle.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_38 = {
-			files = {"savage_music_underground_battle.mp3"},
+			files = {"savage_music_underground_battle.ogg"},
 			gain = 0.6,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_39 = {
-			files = {"Underground_Battle.mp3"},
+			files = {"Underground_Battle.ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_40 = {
-			files = {"savage_music_underground_battle.mp3"},
+			files = {"savage_music_underground_battle.ogg"},
 			gain = 0.6,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_41 = {
-			files = {"Underground_Battle.mp3"},
+			files = {"Underground_Battle.ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_42 = {
-			files = {"Battle_Rising_Tides.mp3"},
+			files = {"Battle_Rising_Tides.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_43 = {
-			files = {"Battle_Rising_Tides.mp3"},
+			files = {"Battle_Rising_Tides.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_44 = {
-			files = {"Battle_Rising_Tides.mp3"},
+			files = {"Battle_Rising_Tides.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_45 = {
-			files = {"Halloween_Battle.mp3"},
+			files = {"Halloween_Battle.ogg"},
 			gain = 0.5,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_46 = {
-			files = {"Halloween_Battle.mp3"},
+			files = {"Halloween_Battle.ogg"},
 			gain = 0.5,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_47 = {
-			files = {"Halloween_Battle.mp3"},
+			files = {"Halloween_Battle.ogg"},
 			gain = 0.5,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_48 = {
-			files = {"Underground_Battle.mp3"},
+			files = {"Underground_Battle.ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_49 = {
-			files = {"kro_bgmusic_t1_battle1_v4[master_03-11].mp3"},
+			files = {"kro_bgmusic_t1_battle1_v4[master_03-11].ogg"},
 			gain = 0.2,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_50 = {
-			files = {"kro_bgmusic_t1_battle2[master_25-08].mp3"},
+			files = {"kro_bgmusic_t1_battle2[master_25-08].ogg"},
 			gain = 0.2,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_51 = {
-			files = {"kro_bgmusic_t1_battle1_v4[master_03-11].mp3"},
+			files = {"kro_bgmusic_t1_battle1_v4[master_03-11].ogg"},
 			gain = 0.2,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_52 = {
-			files = {"kro_bgmusic_t1_battle2[master_25-08].mp3"},
+			files = {"kro_bgmusic_t1_battle2[master_25-08].ogg"},
 			gain = 0.2,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_53 = {
-			files = {"kro_bgmusic_t1_battle1_v4[master_03-11].mp3"},
+			files = {"kro_bgmusic_t1_battle1_v4[master_03-11].ogg"},
 			gain = 0.2,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_54 = {
-			files = {"kro_bgmusic_t1_battle2[master_25-08].mp3"},
+			files = {"kro_bgmusic_t1_battle2[master_25-08].ogg"},
 			gain = 0.2,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_55 = {
-			files = {"kro_bgmusic_t2_battle1.mp3"},
+			files = {"kro_bgmusic_t2_battle1.ogg"},
 			gain = 0.2,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_56 = {
-			files = {"kro_bgmusic_t2_battle2[master_03-09].mp3"},
+			files = {"kro_bgmusic_t2_battle2[master_03-09].ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_57 = {
-			files = {"kro_bgmusic_t2_battle1.mp3"},
+			files = {"kro_bgmusic_t2_battle1.ogg"},
 			gain = 0.2,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_58 = {
-			files = {"kro_bgmusic_t2_battle2[master_03-09].mp3"},
+			files = {"kro_bgmusic_t2_battle2[master_03-09].ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_59 = {
-			files = {"kro_bgmusic_t2_battle1.mp3"},
+			files = {"kro_bgmusic_t2_battle1.ogg"},
 			gain = 0.2,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_60 = {
-			files = {"kro_bgmusic_t3_battle1[master_03-11].mp3"},
+			files = {"kro_bgmusic_t3_battle1[master_03-11].ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_61 = {
-			files = {"kro_bgmusic_t3_battle2[master_30-10].mp3"},
+			files = {"kro_bgmusic_t3_battle2[master_30-10].ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_62 = {
-			files = {"kro_bgmusic_t3_battle1[master_03-11].mp3"},
+			files = {"kro_bgmusic_t3_battle1[master_03-11].ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_63 = {
-			files = {"kro_bgmusic_t3_battle2[master_30-10].mp3"},
+			files = {"kro_bgmusic_t3_battle2[master_30-10].ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_64 = {
-			files = {"kro_bgmusic_t1_battle1_v4[master_03-11].mp3"},
+			files = {"kro_bgmusic_t1_battle1_v4[master_03-11].ogg"},
 			gain = 0.2,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_65 = {
-			files = {"kro_bgmusic_t1_battle2[master_25-08].mp3"},
+			files = {"kro_bgmusic_t1_battle2[master_25-08].ogg"},
 			gain = 0.2,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_66 = {
-			files = {"kro_bgmusic_t1_battle1_v4[master_03-11].mp3"},
+			files = {"kro_bgmusic_t1_battle1_v4[master_03-11].ogg"},
 			gain = 0.2,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_67 = {
-			files = {"kro_bgmusic_t1_battle1_v4[master_03-11].mp3"},
+			files = {"kro_bgmusic_t1_battle1_v4[master_03-11].ogg"},
 			gain = 0.2,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_68 = {
-			files = {"kro_bgmusic_t1_battle1_v4[master_03-11].mp3"},
+			files = {"kro_bgmusic_t1_battle1_v4[master_03-11].ogg"},
 			gain = 0.2,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_69 = {
-			files = {"kro_bgmusic_t2_battle1.mp3"},
+			files = {"kro_bgmusic_t2_battle1.ogg"},
 			gain = 0.2,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_70 = {
-			files = {"kro_bgmusic_t2_battle2[master_03-09].mp3"},
+			files = {"kro_bgmusic_t2_battle2[master_03-09].ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
@@ -2563,21 +2563,21 @@ return {
 			stream = true
 		},
 		MusicBattle_2000 = {
-			files = {"Jungle_Battle.mp3"},
+			files = {"Jungle_Battle.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_2001 = {
-			files = {"Battle_Rising_Tides.mp3"},
+			files = {"Battle_Rising_Tides.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_2002 = {
-			files = {"Jungle_Battle.mp3"},
+			files = {"Jungle_Battle.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
@@ -2591,14 +2591,14 @@ return {
 			stream = true
 		},
 		MusicBattle_2004 = {
-			files = {"savage_music_desert_battle.mp3"},
+			files = {"savage_music_desert_battle.ogg"},
 			gain = 0.4,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBattle_3000 = {
-			files = {"kro_bgmusic_t3_battle1[master_03-11].mp3"},
+			files = {"kro_bgmusic_t3_battle1[master_03-11].ogg"},
 			gain = 0.3,
 			loop = true,
 			source_group = "MUSIC",
@@ -2612,20 +2612,20 @@ return {
 			stream = true
 		},
 		MusicBossPreFight = {
-			files = {"boss_prefight.mp3"},
+			files = {"boss_prefight.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBossPreFight63 = {
-			files = {"kro_bgmusic_bossfight_prebattle_v2[master_03-11].mp3"},
+			files = {"kro_bgmusic_bossfight_prebattle_v2[master_03-11].ogg"},
 			gain = 0.7,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicBossPreFightEnd = {
-			files = {"Finalboss_prefight.mp3"},
+			files = {"Finalboss_prefight.ogg"},
 			gain = 0.7,
 			source_group = "MUSIC",
 			stream = true
@@ -2694,7 +2694,7 @@ return {
 			files = {"kr5_dlc2_bgmusic_bossBattle_v1.ogg"}
 		},
 		MusicCredits = {
-			files = {"kro_bgmusic_creditos[master].mp3"},
+			files = {"kro_bgmusic_creditos[master].ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
@@ -2708,13 +2708,13 @@ return {
 			stream = true
 		},
 		MusicEndVictory = {
-			files = {"Victory_Theme.mp3"},
+			files = {"Victory_Theme.ogg"},
 			gain = 0.7,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicHalloweenMoon = {
-			files = {"Halloween_Moon.mp3"},
+			files = {"Halloween_Moon.ogg"},
 			gain = 0.7,
 			loop = true,
 			source_group = "MUSIC",
@@ -2735,14 +2735,14 @@ return {
 			stream = true
 		},
 		MusicMap2 = {
-			files = {"Map_Theme_1.mp3"},
+			files = {"Map_Theme_1.ogg"},
 			gain = 0.6,
 			loop = true,
 			source_group = "MUSIC",
 			stream = true
 		},
 		MusicMap3 = {
-			files = {"kre_bgmusic_map[master_25-08].mp3"},
+			files = {"kre_bgmusic_map[master_25-08].ogg"},
 			gain = 0.6,
 			loop = true,
 			source_group = "MUSIC",
