@@ -26,7 +26,8 @@ function BossHealthBar:initialize(sw)
 	self.portrait = nil
 	self.portrait_ss = nil
 	self.hidden = true
-	self.entity = nil
+	self.entities = {}
+	self.prime_entity = nil
 	self.font = F:f("button", 12)
 	self.hp_lag = 1
 	self.time = 0
@@ -51,44 +52,32 @@ function BossHealthBar:initialize(sw)
 	return self
 end
 
+function BossHealthBar:set_entity_info(entity)
+	self.time = 0
+	self.health_percent = entity.health.hp / entity.health.hp_max
+	self.hp_lag = self.health_percent
+	self.portrait_ss = I:s(entity.info.portrait)
+	self.portrait = I:i(self.portrait_ss.atlas)
+	self.boss_name = _(entity.info.i18n_key and entity.info.i18n_key .. "_NAME" or string.upper(entity.template_name) .. "_NAME")
+end
+
+--- 将一个 boss 实体加入 boss_health_bar 的显示队列中。该实体必须已经在 store 中。
+---@param entity table
+---@param store table
 function BossHealthBar:enable_with(entity, store)
-	if not self.entity or (self.store and not self.store[self.entity.id]) or (self.entity.health.dead) then
-		self.entity = entity
-		self.hp_lag = 1
-		self.time = 0
-		self.health_percent = 1
-		self.portrait_ss = I:s(entity.info.portrait)
-		self.portrait = I:i(self.portrait_ss.atlas)
-		self.boss_name = _(entity.info.i18n_key and entity.info.i18n_key .. "_NAME" or string.upper(entity.template_name) .. "_NAME")
+	self.entities[#self.entities + 1] = entity
+	if not self.prime_entity then
+		self.prime_entity = entity
+		self:set_entity_info(entity)
 		-- 启动显示渐变动画
 		self:show()
 	end
+
 	self.store = store
 end
 
--- function BossHealthBar:set_entity(entity)
--- 	self.entity = entity
--- end
-
--- function BossHealthBar:set_portrait(portrait_ss, portrait)
--- 	self.portrait_ss = portrait_ss
--- 	self.portrait = portrait
--- end
-
--- function BossHealthBar:set_name(name)
--- 	self.boss_name = name
--- end
-
--- function BossHealthBar:enable()
--- 	self.hidden = false
--- end
-
--- function BossHealthBar:enabled()
--- 	return not self.hidden and self.entity ~= nil
--- end
-
 function BossHealthBar:_draw_self()
-	if self.hidden or not self.entity then
+	if self.hidden then
 		return
 	end
 
@@ -209,28 +198,60 @@ function BossHealthBar:_draw_self()
 	G.pop()
 end
 
-function BossHealthBar:update(dt)
-	-- 更新timer
-	timer:update(dt)
+--- 清理已经不存在的实体，并更新当前展示的实体
+function BossHealthBar:update_entity()
+	if self.store then
+		for i = #self.entities, 1, -1 do
+			local e = self.entities[i]
+			if not self.store.entities[e.id] then
+				table.remove(self.entities, i)
+			end
+		end
+		if #self.entities > 0 then
+			-- 优先选择第一个存活的实体作为展示对象
+			local found = false
+			for i = 1, #self.entities do
+				if not self.entities[i].health.dead then
+					found = true
+					local entity = self.entities[i]
 
-	if self.entity then
-		local health = self.entity.health
-		if not health or health.dead or not self.store.entities[self.entity.id] then
-			-- 寻找新的BOSS
-			local new_entity
-			for _, e in pairs(self.store.enemies) do
-				if not e.health.dead and e.enemy.lives_cost == 20 then
-					new_entity = e
+					if self.prime_entity ~= entity then
+						self:set_entity_info(entity)
+						-- 启动显示渐变动画
+						if not self.prime_entity then
+							self:show()
+							self.prime_entity = entity
+						else
+							self.prime_entity = entity
+						end
+					end
 					break
 				end
 			end
-			if new_entity then
-				self:enable_with(new_entity, self.store)
-				return
+			-- 如果没有找到存活的实体，则不展示
+			if not found and self.prime_entity then
+				self:hide()
+				self.prime_entity = nil
 			end
-			self:hide()
-			return
+		else
+			-- 如果没有实体了，不展示
+			if self.prime_entity then
+				self:hide()
+				self.prime_entity = nil
+			end
 		end
+	end
+
+end
+
+function BossHealthBar:update(dt)
+	-- 更新timer
+	timer:update(dt)
+	-- 更新显示的实体
+	self:update_entity()
+
+	if self.prime_entity then
+		local health = self.prime_entity.health
 
 		local old_health_percent = self.health_percent
 		self.health_percent = health.hp / health.hp_max
@@ -348,7 +369,6 @@ function BossHealthBar:hide()
 		self.is_animating = false
 		-- 清理hide timer组
 		self.active_timers.hide = {}
-		self.entity = nil
 	end)
 end
 
