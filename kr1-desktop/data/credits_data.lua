@@ -177,5 +177,11 @@ return {
 	{"LOVE framework / love2d.org"},
 	{"Alex Szpakowski (slime)"},
 	{"Sunnydaler"},
-	{""}
+	{""},
+	{_("CREDITS_TITLE_100"), "h1"},
+	{_("CREDITS_SUBTITLE_100"), "h3"},
+	{"时间滴答(Bilibili:时笺滴答，Github:CrazySpottedDove)"},
+	{"MC123ACD(Github:MC123ACD)"},
+	{"100ask (100ask@100ask.com)"},
+	{"MrEamonChan(Github:MrEamonChan)"}
 }
