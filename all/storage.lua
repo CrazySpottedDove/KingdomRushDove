@@ -360,9 +360,9 @@ function storage:save_slot(data_table, idx, should_sync)
 		return nil
 	end
 
-	if data_table then
-		data_table.version_string = version.string
-	end
+	-- if data_table then
+	-- 	data_table.version_string = version.string
+	-- end
 
 	log.debug("saving slot:%s should sync:%s", idx, should_sync)
 
