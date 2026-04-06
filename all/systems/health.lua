@@ -8,9 +8,463 @@ local E = require("entity_db")
 local signal = require("lib.hump.signal")
 local SU = require("script_utils")
 local U = require("utils")
+local ffi = require("ffi")
+local G = love.graphics
+local random = math.random
+local floor = math.floor
+
+ffi.cdef[[
+typedef struct {
+    float  x, y;
+    float  vx, vy;
+    float  r, g, b;
+    float  font_scale;
+    float  duration;
+    double ts;
+    int    alive;
+} DNum;
+]]
+
+local MAX_DNUMS = 300
+local dnum_pool = ffi.new("DNum[?]", MAX_DNUMS)
+local dnum_texts = {}
+local dnum_write_cur = 0
+local dnum_on_applied_impl
+local dnum_draw_impl
+
+for i = 0, MAX_DNUMS - 1 do
+	dnum_pool[i].alive = 0
+	dnum_texts[i] = ""
+end
+
+local function dnum_color(dtype)
+	if band(dtype, DAMAGE_INSTAKILL) ~= 0 then
+		return 1.0, 0.08, 0.08
+	elseif band(dtype, DAMAGE_POISON) ~= 0 then
+		return 0.2, 1.0, 0.2
+	elseif band(dtype, DAMAGE_ELECTRICAL) ~= 0 then
+		return 0.3, 0.7, 1.0
+	elseif band(dtype, DAMAGE_MAGICAL_EXPLOSION) ~= 0 then
+		return 1.0, 0.5, 0.8
+	elseif band(dtype, DAMAGE_MAGICAL) ~= 0 then
+		return 0.4, 0.5, 1.0
+	elseif band(dtype, DAMAGE_EXPLOSION) ~= 0 then
+		return 1.0, 0.45, 0.05
+	elseif band(dtype, DAMAGE_STAB) ~= 0 then
+		return 1.0, 1.0, 0.1
+	elseif band(dtype, DAMAGE_RUDE) ~= 0 then
+		return 0.9, 0.35, 0.2
+	elseif band(dtype, DAMAGE_SHOT) ~= 0 then
+		return 0.5, 0.85, 1.0
+	elseif band(dtype, DAMAGE_PHYSICAL) ~= 0 then
+		return 1.0, 0.88, 0.5
+	elseif band(dtype, DAMAGE_AGAINST_MAGIC_ARMOR) ~= 0 then
+		return 0.3, 0.4, 0.92
+	elseif band(dtype, DAMAGE_AGAINST_ARMOR) ~= 0 then
+		return 0.75, 0.75, 0.8
+	elseif band(dtype, DAMAGE_MIXED) ~= 0 then
+		return 0.0, 0.85, 0.85
+	elseif band(dtype, DAMAGE_TRUE) ~= 0 then
+		return 0.95, 0.95, 0.95
+	else
+		return 1.0, 0.88, 0.55
+	end
+end
+
+local function dnum_display_params(damage, hp_max)
+	local ratio = (hp_max > 0) and (damage / hp_max) or 0
+	local abs_score = damage * 0.001
+	local score = (math.min(ratio, 1) + math.min(abs_score, 1)) * 0.5
+	score = score ^ 0.7
+	local font_scale = 0.45 + score * 0.55
+	local duration = 0.70 + score * 0.70
+	local vy = -30 + score * (-25)
+	return font_scale, duration, vy
+end
+
+local dnum_set_color = G.setColor
+
+local function dnum_on_applied_disabled(store, d, target)
+	return
+end
+
+local function dnum_draw_disabled(g)
+	return
+end
+
+local function dnum_on_applied_enabled(store, d, target)
+	if not d.damage_applied or d.damage_applied <= 0 or not target or not target.pos then
+		return
+	end
+
+	local hp_max = target.health.hp_max
+	local font_scale, duration, vy = dnum_display_params(d.damage_applied, hp_max)
+
+	if d.damage_result and band(d.damage_result, DR_KILL) ~= 0 then
+		font_scale = font_scale * 1.25
+		duration = duration + 0.2
+	end
+
+	local r, g, b = dnum_color(d.damage_type or 0)
+
+	local world_y = target.pos.y
+	local unit = target.unit
+	if unit then
+		if unit.pop_offset then
+			world_y = world_y + unit.pop_offset.y
+		elseif unit.hit_offset then
+			world_y = world_y + unit.hit_offset.y
+		end
+	end
+
+	local slot = dnum_write_cur
+	dnum_write_cur = (dnum_write_cur + 1) % MAX_DNUMS
+
+	local n = dnum_pool[slot]
+	n.x = target.pos.x + (random() - 0.5) * 20
+	n.y = REF_H - world_y - 20
+	n.vx = (random() - 0.5) * 8
+	n.vy = vy - random() * 8
+	n.r = r
+	n.g = g
+	n.b = b
+	n.font_scale = font_scale
+	n.duration = duration
+	n.ts = store.tick_ts
+	n.alive = 1
+	dnum_texts[slot] = tostring(floor(d.damage_applied))
+end
+
+local function dnum_draw_enabled(g)
+	local now = g.store.tick_ts
+	local c = g.camera
+	local zoom = c and c.zoom or 1
+	local gs = g.game_scale * zoom
+	local rox = -(c.x * zoom - g.screen_w * 0.5)
+	local roy = -(c.y * zoom - g.screen_h * 0.5)
+
+	if g.store.world_offset then
+		rox = rox + g.store.world_offset.x
+		roy = roy + g.store.world_offset.y
+	end
+
+	local font = G.getFont()
+	for i = 0, MAX_DNUMS - 1 do
+		local n = dnum_pool[i]
+		if n.alive ~= 0 then
+			local t = now - n.ts
+			if t >= n.duration then
+				n.alive = 0
+			else
+				local alpha = 1 - t / n.duration
+				local fade = alpha < 0.4 and (alpha / 0.4) ^ 1.5 or 1
+				local wx = n.x + n.vx * t
+				local wy = n.y + n.vy * t + 12 * t * t
+				local sx = wx * gs + rox
+				local sy = wy * gs + roy
+				local fs = n.font_scale
+				if t < 0.12 then
+					fs = fs * (1 + 0.5 * (1 - t / 0.12))
+				end
+
+				local txt = dnum_texts[i]
+				local tw = font:getWidth(txt) * fs
+				local sx_c = floor(sx - tw * 0.5)
+				local sy_f = floor(sy)
+				G.push()
+				G.translate(sx_c, sy_f)
+				G.scale(fs, fs)
+				dnum_set_color(0, 0, 0, fade * 0.8)
+				G.print(txt, 1, 1)
+				G.print(txt, -1, 1)
+				G.print(txt, 0, 1)
+				dnum_set_color(n.r, n.g, n.b, fade)
+				G.print(txt, 0, 0)
+				G.pop()
+			end
+		end
+	end
+	dnum_set_color(1, 1, 1, 1)
+end
+
+dnum_on_applied_impl = dnum_on_applied_disabled
+dnum_draw_impl = dnum_draw_disabled
+
+local function dnum_init(store)
+	dnum_write_cur = 0
+	for i = 0, MAX_DNUMS - 1 do
+		dnum_pool[i].alive = 0
+		dnum_texts[i] = ""
+	end
+	if store.config.damage_numbers_enabled ~= false then
+		dnum_on_applied_impl = dnum_on_applied_enabled
+		dnum_draw_impl = dnum_draw_enabled
+	else
+		dnum_on_applied_impl = dnum_on_applied_disabled
+		dnum_draw_impl = dnum_draw_disabled
+	end
+	store.damage_numbers_draw = dnum_draw_impl
+end
+
+--- 从 damage.source_id 沿 modifier.source_id / bullet.source_id 追溯
+local function damage_trace_bullet_hints(s)
+	local b = s.bullet
+
+	if not b then
+		return ""
+	end
+
+	local bits = {}
+
+	if b.target_id then
+		bits[#bits + 1] = "btgt#" .. tostring(b.target_id)
+	end
+
+	if b.source_id then
+		bits[#bits + 1] = "bsrc#" .. tostring(b.source_id)
+	end
+
+	if #bits == 0 then
+		return ""
+	end
+
+	return "[" .. table.concat(bits, ",") .. "]"
+end
+
+local function damage_trace_format_source(store, d)
+	local entities = store.entities
+	local parts = {}
+	local sid = d.source_id
+
+	if not sid then
+		local o = "source_id=nil"
+
+		if d.damage_trace_origin and d.damage_trace_origin ~= "" then
+			o = o .. " || origin:" .. tostring(d.damage_trace_origin)
+		end
+
+		if d.damage_trace_extra and d.damage_trace_extra ~= "" then
+			o = o .. " || extra:" .. tostring(d.damage_trace_extra)
+		end
+
+		return o
+	end
+
+	local seen = {}
+	local depth = 0
+
+	while sid and depth < 12 do
+		if seen[sid] then
+			parts[#parts + 1] = string.format("(cycle#%s)", tostring(sid))
+
+			break
+		end
+
+		seen[sid] = true
+		depth = depth + 1
+
+		local s = entities[sid]
+
+		if not s then
+			parts[#parts + 1] = string.format("missing#%s", tostring(sid))
+
+			break
+		end
+
+		local tags = {}
+
+		if s.tower then
+			tags[#tags + 1] = "tower"
+		end
+
+		if s.modifier then
+			tags[#tags + 1] = "mod"
+		end
+
+		if s.bullet then
+			tags[#tags + 1] = "bullet"
+		end
+
+		local tag_str = #tags > 0 and ("[" .. table.concat(tags, ",") .. "]") or ""
+		local seg = string.format("%s%s#%s", s.template_name or "?", tag_str, tostring(sid))
+		local bh = damage_trace_bullet_hints(s)
+
+		if bh ~= "" then
+			seg = seg .. bh
+		end
+
+		parts[#parts + 1] = seg
+
+		if s.tower_ref and s.tower_ref.id then
+			local tw = s.tower_ref
+
+			parts[#parts + 1] = string.format("tower_ref=%s#%s", tw.template_name or "?", tostring(tw.id))
+		end
+
+		local next_id
+
+		if s.modifier and s.modifier.source_id then
+			next_id = s.modifier.source_id
+		elseif s.bullet and s.bullet.source_id then
+			next_id = s.bullet.source_id
+		else
+			break
+		end
+
+		sid = next_id
+	end
+
+	local out = table.concat(parts, " <- ")
+
+	if out ~= "" and not string.find(out, " <- ", 1, true) and entities[d.source_id] and entities[d.source_id].tower and d.damage_trace_origin ~= "tower_skill_endless" then
+		out = out .. " [hint:source is tower only; if unexpected, check modifier/bullet source_id or damage_trace_extra]"
+	end
+
+	if d.damage_trace_extra and d.damage_trace_extra ~= "" then
+		out = (out ~= "" and out .. " || " or "") .. "extra:" .. tostring(d.damage_trace_extra)
+	end
+
+	if d.damage_trace_origin and d.damage_trace_origin ~= "" then
+		out = (out ~= "" and out .. " || " or "") .. "origin:" .. tostring(d.damage_trace_origin)
+	end
+
+	return out
+end
+
+--- 是否纳入追溯：默认仅敌人；DEBUG_DAMAGE_TRACE_ALL_TARGETS 时含士兵/英雄等一切带 health 的实体
+local function damage_trace_include_target(e)
+	if not e or not e.health then
+		return false
+	end
+
+	if DEBUG_DAMAGE_TRACE_ALL_TARGETS then
+		return true
+	end
+
+	return e.enemy ~= nil
+end
+
+local function damage_trace_target_class(e)
+	if not e then
+		return "?"
+	end
+
+	if e.enemy then
+		return "enemy"
+	end
+
+	if e.hero then
+		return "hero"
+	end
+
+	if e.soldier then
+		return "soldier"
+	end
+
+	if e.tower then
+		return "tower"
+	end
+
+	return "unit"
+end
+
+local function damage_trace_investigate_print(store, target, d, val, branch)
+	if not DEBUG_DAMAGE_TRACE_INVESTIGATE then
+		return
+	end
+
+	if not damage_trace_include_target(target) then
+		return
+	end
+
+	if (branch == "hp" or branch == "eat") and (not val or val <= 0) then
+		return
+	end
+
+	local e = d.source_id and store.entities[d.source_id]
+	local snap = "src_entity=missing"
+
+	if e then
+		local twref = ""
+
+		if e.tower_ref and e.tower_ref.id then
+			twref = string.format(" twref=%s#%s", tostring(e.tower_ref.template_name), tostring(e.tower_ref.id))
+		end
+
+		snap = string.format("src_tpl=%s tw=%s bl=%s mod=%s ray_bullet_id=%s bullet.bsrc=%s bullet.btgt=%s%s", tostring(e.template_name), tostring(e.tower ~= nil), tostring(e.bullet ~= nil), tostring(e.modifier ~= nil), tostring(e.ray_source_bullet_id), tostring(e.bullet and e.bullet.source_id), tostring(e.bullet and e.bullet.target_id), twref)
+	end
+
+	print(string.format("[DAMAGE_INVESTIGATE] tick=%.3f branch=%s src_id=%s tgt_kind=%s tgt_id=%s tgt=%s val=%.1f dtype=0x%X origin=%s extra=%s | %s", store.tick_ts, branch, tostring(d.source_id), damage_trace_target_class(target), tostring(d.target_id), target.template_name or "?", val or 0, d.damage_type or 0, tostring(d.damage_trace_origin), tostring(d.damage_trace_extra), snap))
+
+	if e and e.tower and not d.damage_trace_origin then
+		print("[DAMAGE_INVESTIGATE] hint: source_id points to TOWER but damage_trace_origin is empty — 请搜 SU.create_attack_damage、mod_dps、无尽技能等")
+	end
+end
+
+--- branch: hp | eat | armor | magic_armor（覆盖 health 系统内各类伤害包）
+local function damage_trace_record_event(store, target, d, branch, val, hp_before, hp_after)
+	damage_trace_investigate_print(store, target, d, val, branch)
+
+	if not DEBUG_DAMAGE_TRACE or not damage_trace_include_target(target) then
+		return
+	end
+
+	local max_h = tonumber(DEBUG_DAMAGE_TRACE_HISTORY) or 32
+	local rec = {
+		tick_ts = store.tick_ts,
+		branch = branch,
+		dmg = val,
+		hp_before = hp_before,
+		hp_after = hp_after,
+		dmg_type = d.damage_type,
+		src = damage_trace_format_source(store, d),
+		damage_trace_extra = d.damage_trace_extra,
+		kill = (branch == "hp" or branch == "eat") and hp_before > 0 and hp_after <= 0 or false
+	}
+
+	target._damage_trace = target._damage_trace or {}
+	local t = target._damage_trace
+
+	t[#t + 1] = rec
+
+	while #t > max_h do
+		table.remove(t, 1)
+	end
+
+	if DEBUG_DAMAGE_TRACE_ALL_ENEMY_HITS then
+		local px = target.pos and target.pos.x or 0
+		local py = target.pos and target.pos.y or 0
+		local cls = damage_trace_target_class(target)
+
+		print(string.format("[DAMAGE_TRACE] %s %s#%s pos=(%.0f,%.0f) branch=%s val=%.1f hp %d->%d dtype=0x%X | %s", cls, target.template_name or "?", tostring(target.id), px, py, branch, val or 0, hp_before, hp_after, d.damage_type or 0, rec.src))
+	end
+end
+
+local function damage_trace_print_death(store, target)
+	if not DEBUG_DAMAGE_TRACE or not damage_trace_include_target(target) then
+		return
+	end
+
+	local t = target._damage_trace
+
+	if not t or #t == 0 then
+		return
+	end
+
+	local cls = damage_trace_target_class(target)
+
+	print(string.format("[DAMAGE_TRACE] ========== death %s %s#%s ==========", cls, target.template_name or "?", tostring(target.id)))
+
+	for i = 1, #t do
+		local r = t[i]
+
+		print(string.format("  [%d] tick=%.3f branch=%s val=%.1f hp %d->%d dtype=0x%X kill=%s | %s", i, r.tick_ts, tostring(r.branch), r.dmg, r.hp_before, r.hp_after, r.dmg_type or 0, tostring(r.kill), r.src))
+	end
+
+	print("[DAMAGE_TRACE] ========== end death trace ==========")
+end
 
 function M.register(sys)
-
 	local function queue_insert(store, e)
 		simulation:queue_insert_entity(e)
 	end
@@ -19,270 +473,13 @@ function M.register(sys)
 		simulation:queue_remove_entity(e)
 	end
 
-	--- 从 damage.source_id 沿 modifier.source_id / bullet.source_id 追溯
-	local function damage_trace_bullet_hints(s)
-		local b = s.bullet
-
-		if not b then
-			return ""
-		end
-
-		local bits = {}
-
-		if b.target_id then
-			bits[#bits + 1] = "btgt#" .. tostring(b.target_id)
-		end
-
-		if b.source_id then
-			bits[#bits + 1] = "bsrc#" .. tostring(b.source_id)
-		end
-
-		if #bits == 0 then
-			return ""
-		end
-
-		return "[" .. table.concat(bits, ",") .. "]"
-	end
-
-	local function damage_trace_format_source(store, d)
-		local entities = store.entities
-		local parts = {}
-		local sid = d.source_id
-
-		if not sid then
-			local o = "source_id=nil"
-
-			if d.damage_trace_origin and d.damage_trace_origin ~= "" then
-				o = o .. " || origin:" .. tostring(d.damage_trace_origin)
-			end
-
-			if d.damage_trace_extra and d.damage_trace_extra ~= "" then
-				o = o .. " || extra:" .. tostring(d.damage_trace_extra)
-			end
-
-			return o
-		end
-
-		local seen = {}
-		local depth = 0
-
-		while sid and depth < 12 do
-			if seen[sid] then
-				parts[#parts + 1] = string.format("(cycle#%s)", tostring(sid))
-
-				break
-			end
-
-			seen[sid] = true
-			depth = depth + 1
-
-			local s = entities[sid]
-
-			if not s then
-				parts[#parts + 1] = string.format("missing#%s", tostring(sid))
-
-				break
-			end
-
-			local tags = {}
-
-			if s.tower then
-				tags[#tags + 1] = "tower"
-			end
-
-			if s.modifier then
-				tags[#tags + 1] = "mod"
-			end
-
-			if s.bullet then
-				tags[#tags + 1] = "bullet"
-			end
-
-			local tag_str = #tags > 0 and ("[" .. table.concat(tags, ",") .. "]") or ""
-			local seg = string.format("%s%s#%s", s.template_name or "?", tag_str, tostring(sid))
-			local bh = damage_trace_bullet_hints(s)
-
-			if bh ~= "" then
-				seg = seg .. bh
-			end
-
-			parts[#parts + 1] = seg
-
-			if s.tower_ref and s.tower_ref.id then
-				local tw = s.tower_ref
-
-				parts[#parts + 1] = string.format("tower_ref=%s#%s", tw.template_name or "?", tostring(tw.id))
-			end
-
-			local next_id
-
-			if s.modifier and s.modifier.source_id then
-				next_id = s.modifier.source_id
-			elseif s.bullet and s.bullet.source_id then
-				next_id = s.bullet.source_id
-			else
-				break
-			end
-
-			sid = next_id
-		end
-
-		local out = table.concat(parts, " <- ")
-
-		if out ~= "" and not string.find(out, " <- ", 1, true) and entities[d.source_id] and entities[d.source_id].tower and d.damage_trace_origin ~= "tower_skill_endless" then
-			out = out .. " [hint:source is tower only; if unexpected, check modifier/bullet source_id or damage_trace_extra]"
-		end
-
-		if d.damage_trace_extra and d.damage_trace_extra ~= "" then
-			out = (out ~= "" and out .. " || " or "") .. "extra:" .. tostring(d.damage_trace_extra)
-		end
-
-		if d.damage_trace_origin and d.damage_trace_origin ~= "" then
-			out = (out ~= "" and out .. " || " or "") .. "origin:" .. tostring(d.damage_trace_origin)
-		end
-
-		return out
-	end
-
-	--- 是否纳入追溯：默认仅敌人；DEBUG_DAMAGE_TRACE_ALL_TARGETS 时含士兵/英雄等一切带 health 的实体
-	local function damage_trace_include_target(e)
-		if not e or not e.health then
-			return false
-		end
-
-		if DEBUG_DAMAGE_TRACE_ALL_TARGETS then
-			return true
-		end
-
-		return e.enemy ~= nil
-	end
-
-	local function damage_trace_target_class(e)
-		if not e then
-			return "?"
-		end
-
-		if e.enemy then
-			return "enemy"
-		end
-
-		if e.hero then
-			return "hero"
-		end
-
-		if e.soldier then
-			return "soldier"
-		end
-
-		if e.tower then
-			return "tower"
-		end
-
-		return "unit"
-	end
-
-	local function damage_trace_investigate_print(store, target, d, val, branch)
-		if not DEBUG_DAMAGE_TRACE_INVESTIGATE then
-			return
-		end
-
-		if not damage_trace_include_target(target) then
-			return
-		end
-
-		if (branch == "hp" or branch == "eat") and (not val or val <= 0) then
-			return
-		end
-
-		local e = d.source_id and store.entities[d.source_id]
-		local snap = "src_entity=missing"
-
-		if e then
-			local twref = ""
-
-			if e.tower_ref and e.tower_ref.id then
-				twref = string.format(" twref=%s#%s", tostring(e.tower_ref.template_name), tostring(e.tower_ref.id))
-			end
-
-			snap = string.format("src_tpl=%s tw=%s bl=%s mod=%s ray_bullet_id=%s bullet.bsrc=%s bullet.btgt=%s%s", tostring(e.template_name), tostring(e.tower ~= nil), tostring(e.bullet ~= nil), tostring(e.modifier ~= nil), tostring(e.ray_source_bullet_id), tostring(e.bullet and e.bullet.source_id), tostring(e.bullet and e.bullet.target_id), twref)
-		end
-
-		print(string.format("[DAMAGE_INVESTIGATE] tick=%.3f branch=%s src_id=%s tgt_kind=%s tgt_id=%s tgt=%s val=%.1f dtype=0x%X origin=%s extra=%s | %s", store.tick_ts, branch, tostring(d.source_id), damage_trace_target_class(target), tostring(d.target_id), target.template_name or "?", val or 0, d.damage_type or 0, tostring(d.damage_trace_origin), tostring(d.damage_trace_extra), snap))
-
-		if e and e.tower and not d.damage_trace_origin then
-			print("[DAMAGE_INVESTIGATE] hint: source_id points to TOWER but damage_trace_origin is empty — 请搜 SU.create_attack_damage、mod_dps、无尽技能等")
-		end
-	end
-
-	--- branch: hp | eat | armor | magic_armor（覆盖 health 系统内各类伤害包）
-	local function damage_trace_record_event(store, target, d, branch, val, hp_before, hp_after)
-		damage_trace_investigate_print(store, target, d, val, branch)
-
-		if not DEBUG_DAMAGE_TRACE or not damage_trace_include_target(target) then
-			return
-		end
-
-		local max_h = tonumber(DEBUG_DAMAGE_TRACE_HISTORY) or 32
-		local rec = {
-			tick_ts = store.tick_ts,
-			branch = branch,
-			dmg = val,
-			hp_before = hp_before,
-			hp_after = hp_after,
-			dmg_type = d.damage_type,
-			src = damage_trace_format_source(store, d),
-			damage_trace_extra = d.damage_trace_extra,
-			kill = (branch == "hp" or branch == "eat") and hp_before > 0 and hp_after <= 0 or false
-		}
-
-		target._damage_trace = target._damage_trace or {}
-		local t = target._damage_trace
-
-		t[#t + 1] = rec
-
-		while #t > max_h do
-			table.remove(t, 1)
-		end
-
-		if DEBUG_DAMAGE_TRACE_ALL_ENEMY_HITS then
-			local px = target.pos and target.pos.x or 0
-			local py = target.pos and target.pos.y or 0
-			local cls = damage_trace_target_class(target)
-
-			print(string.format("[DAMAGE_TRACE] %s %s#%s pos=(%.0f,%.0f) branch=%s val=%.1f hp %d->%d dtype=0x%X | %s", cls, target.template_name or "?", tostring(target.id), px, py, branch, val or 0, hp_before, hp_after, d.damage_type or 0, rec.src))
-		end
-	end
-
-	local function damage_trace_print_death(store, target)
-		if not DEBUG_DAMAGE_TRACE or not damage_trace_include_target(target) then
-			return
-		end
-
-		local t = target._damage_trace
-
-		if not t or #t == 0 then
-			return
-		end
-
-		local cls = damage_trace_target_class(target)
-
-		print(string.format("[DAMAGE_TRACE] ========== death %s %s#%s ==========", cls, target.template_name or "?", tostring(target.id)))
-
-		for i = 1, #t do
-			local r = t[i]
-
-			print(string.format("  [%d] tick=%.3f branch=%s val=%.1f hp %d->%d dtype=0x%X kill=%s | %s", i, r.tick_ts, tostring(r.branch), r.dmg, r.hp_before, r.hp_after, r.dmg_type or 0, tostring(r.kill), r.src))
-		end
-
-		print("[DAMAGE_TRACE] ========== end death trace ==========")
-	end
-
 	sys.health = {}
 	sys.health.name = "health"
 
 	function sys.health:init(store)
 		store.damage_queue = {}
 		store.damages_applied = {}
+		dnum_init(store)
 	end
 
 	function sys.health:on_insert(entity, store)
@@ -322,6 +519,7 @@ function M.register(sys)
 						h.hp = 0
 						damages_applied_count = damages_applied_count + 1
 						damages_applied[damages_applied_count] = d
+						dnum_on_applied_impl(store, d, e)
 					elseif band(d.damage_type, DAMAGE_ARMOR) ~= 0 then
 						SU.armor_dec(e, d.value)
 						d.damage_result = bor(d.damage_result, DR_ARMOR)
@@ -375,6 +573,7 @@ function M.register(sys)
 
 						damages_applied_count = damages_applied_count + 1
 						damages_applied[damages_applied_count] = d
+						dnum_on_applied_impl(store, d, e)
 					end
 
 					if starting_hp > 0 and h.hp <= 0 then
