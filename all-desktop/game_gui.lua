@@ -3048,8 +3048,8 @@ function InfoBar:update_stats()
 
 		sv.l_ranged_damage:set_image(ranged_damage_icon, V.v(sv.l_ranged_damage.size.x, sv.l_ranged_damage.size.y))
 
-		sv.l_armor.text = GU.armor_value_desc_detailed(stats.armor, band(stats.immune or 0, DAMAGE_PHYSICAL_GROUP) ~= 0)
-		sv.l_magic_armor.text = GU.armor_value_desc_detailed(stats.magic_armor, band(stats.immune or 0, DAMAGE_MAGICAL_GROUP) ~= 0)
+		sv.l_armor.text = GU.armor_value_desc_detailed(stats.armor, stats.immune == DAMAGE_PHYSICAL_GROUP)
+		sv.l_magic_armor.text = GU.armor_value_desc_detailed(stats.magic_armor, stats.immune == DAMAGE_MAGICAL_GROUP)
 		sv.l_lives.text = type(stats.lives) == "number" and stats.lives > 0 and stats.lives or "-"
 	elseif stats.type == STATS_TYPE_SOLDIER then
 		sv.b_hp.bar.scale.x = math.min(stats.hp / stats.hp_max, 1)
