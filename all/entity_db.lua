@@ -23,19 +23,6 @@ function entity_db:load()
 
 	-- 可以对 entities 做一个备份。因为 package.loaded 清空后，需要做的事情不只是表的复制，还有 lua 文件的解析。这么做就可以把解析的时间节省下来了。同时，备份只有这些模板文件的部分，这就允许外部通过钩子手动添加，不会导致问题。
 	if not self.entities_backup then
-		-- package.loaded.game_templates = nil
-		-- package.loaded.templates = nil
-		-- package.loaded.foundamental_towers = nil
-		-- package.loaded.mage_towers = nil
-		-- package.loaded.archer_towers = nil
-		-- package.loaded.engineer_towers = nil
-		-- package.loaded.heroes = nil
-		-- package.loaded.barrack_towers = nil
-		-- package.loaded.enemies = nil
-		-- package.loaded.boss = nil
-		-- package.loaded.hero_boss = nil
-		-- package.loaded["kr1.data.balance"] = nil
-
 		-- 不需要手动清空 package.loaded，因为只有第一次加载会执行这些 require 语句，之后就直接从备份复制了。
 		require("templates")
 		require("game_templates")
@@ -164,11 +151,6 @@ function entity_db:register_t(name, base)
 		return self.entities[name]
 	end
 
-	-- 通过这么做，允许重复加载时直接覆写原来的表，同样起到了数值重置的效果，而避免了克隆，从而提升了执行性能。
-	-- if self.entities[name] then
-	-- return self.entities[name]
-	-- end
-
 	local t
 
 	if base then
@@ -242,12 +224,6 @@ end
 ---@param t string 模板名
 function entity_db:create_entity(t)
 	local tpl = self.entities[t]
-
-	-- if type(t) == "string" then
-	-- 	tpl = self.entities[t]
-	-- else
-	-- 	tpl = t
-	-- end
 	if not tpl then
 		log.error("template %s not found", t)
 
@@ -274,12 +250,6 @@ end
 --- 获取对应实体模板
 ---@param t string 模板名
 function entity_db:get_template(t)
-	-- if type(t) == "string" then
-	-- 	tpl = self.entities[t]
-	-- else
-	-- 	tpl = t
-	-- end
-
 	-- 开发时才启用，发布时关闭。
 	-- if not self.entities[t] then
 	-- log.error("template %s not found", t)

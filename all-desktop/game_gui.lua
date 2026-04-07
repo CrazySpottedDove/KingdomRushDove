@@ -464,7 +464,8 @@ function game_gui:init(w, h, game)
 		comic_transition.hidden = true
 	end
 
-	local layer_gui = KView:new()
+	-- local layer_gui = KView:new()
+	local layer_gui = KVirtualView:new()
 
 	layer_gui.id = "layer_gui"
 	layer_gui.pos = v(0, 0)
@@ -472,7 +473,8 @@ function game_gui:init(w, h, game)
 	layer_gui.propagate_on_click = true
 	layer_gui.propagate_on_down = true
 
-	local layer_gui_game = KView:new()
+	-- local layer_gui_game = KView:new()
+	local layer_gui_game = KVirtualView:new()
 
 	layer_gui_game.id = "layer_gui_game"
 	layer_gui_game.pos = v(0, 0)
@@ -480,7 +482,8 @@ function game_gui:init(w, h, game)
 	layer_gui_game.propagate_on_click = true
 	layer_gui_game.propagate_on_down = true
 
-	local layer_gui_hud = KView:new()
+	-- local layer_gui_hud = KView:new()
+	local layer_gui_hud = KVirtualView:new()
 
 	layer_gui_hud.id = "layer_gui_hud"
 	layer_gui_hud.pos = v(0, 0)
@@ -488,7 +491,8 @@ function game_gui:init(w, h, game)
 	layer_gui_hud.propagate_on_click = true
 	layer_gui_hud.propagate_on_down = true
 
-	local layer_gui_top = KView:new()
+	-- local layer_gui_top = KView:new()
+	local layer_gui_top = KVirtualView:new()
 
 	layer_gui_top.id = "layer_gui_top"
 	layer_gui_top.pos = v(0, 0)
@@ -569,6 +573,22 @@ function game_gui:init(w, h, game)
 	-- 统一注册 signal
 	for name, handler in pairs(signals) do
 		signal.register(name, handler)
+	end
+
+-- DEBUG_USE
+-- self:enable_perf()
+end
+
+function game_gui:enable_perf()
+	for key, view in pairs(self) do
+		if type(view) == "table" then
+			if view.draw and type(view.draw) == "function" then
+				view.draw = perf.wrap(key .. "_draw", view.draw)
+			end
+			if view.update and type(view.update) == "function" then
+				view.update = perf.wrap(key .. "_update", view.update)
+			end
+		end
 	end
 end
 
@@ -1846,7 +1866,7 @@ function game_gui:set_boss(e)
 	self.boss_health_bar:enable_with(e, self.game.simulation.store)
 end
 
-SpeedStateIndicator = class("SpeedStateIndicator", KView)
+SpeedStateIndicator = class("SpeedStateIndicator", KVirtualView)
 
 function SpeedStateIndicator:initialize()
 	SpeedStateIndicator.super.initialize(self)
@@ -1876,15 +1896,16 @@ end
 
 function SpeedStateIndicator:update(dt)
 	local store = game_gui.game.store
-	local should_show = store.speed_factor ~= 1
 
-	if should_show ~= self.visible then
-		self.visible = should_show
-		self.hidden = not should_show
+	if store.speed_factor == 1 then
+		self.hidden = true
+		return
 	end
 
+	self.hidden = false
+
 	-- 更新文字和颜色效果
-	if should_show and store.speed_factor ~= self.last_speed_factor then
+	if store.speed_factor ~= self.last_speed_factor then
 		self.last_speed_factor = store.speed_factor
 
 		if store.speed_factor > 1 then
@@ -1895,12 +1916,10 @@ function SpeedStateIndicator:update(dt)
 	end
 
 	-- 动态颜色效果
-	if should_show then
-		local r = math.floor((math.sin(store.ts) + 1) * 127.5 + 127.5)
-		local g = math.floor((math.sin(store.ts + 2) + 1) * 127.5 + 127.5)
-		local b = math.floor((math.sin(store.ts + 4) + 1) * 127.5 + 127.5)
-		self.label.colors.text = {r, g, b, 180}
-	end
+	local r = math.floor((math.sin(store.ts) + 1) * 127.5 + 127.5)
+	local g = math.floor((math.sin(store.ts + 2) + 1) * 127.5 + 127.5)
+	local b = math.floor((math.sin(store.ts + 4) + 1) * 127.5 + 127.5)
+	self.label.colors.text = {r, g, b, 180}
 end
 
 TimeRewardFx = class("TimeRewardFx", KView)
@@ -3301,6 +3320,11 @@ function HudCountersView:initialize(level_mode)
 	self.lbl_lives_value = -1
 	self.lbl_gold_value = -1
 	self.lbl_wave_value = -1
+
+-- 启用文本缓存优化（这些Label文本频繁变化，但每次只绘制不变的缓存）
+-- lbl_lives:enable_text_cache()
+-- lbl_gold:enable_text_cache()
+-- lbl_wave:enable_text_cache()
 end
 
 function HudCountersView:update(dt)
@@ -5083,6 +5107,17 @@ function NotificationQueue:initialize(w, h)
 	self.clip = false
 	self.colors.background = {0, 0, 0, 0}
 	self.space_y = 10
+end
+
+-- 如果没有通知了就隐藏，事件驱动，不需要每帧更新
+-- 隐藏可以避免 draw 开销
+function NotificationQueue:update(dt)
+	if #self.children == 0 then
+		self.hidden = true
+	else
+		self.hidden = false
+	end
+	return
 end
 
 function NotificationQueue:add(id, force)

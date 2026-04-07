@@ -40,6 +40,19 @@ function perf.stop(name)
 	item.sum = item.sum + (love.timer.getTime() * 1000000 - item.start_time)
 end
 
+--- 记录某个函数耗时
+---@param name string
+---@param func function
+---@return function
+function perf.wrap(name, func)
+	return function(...)
+		perf.start(name)
+		local results = func(...)
+		perf.stop(name)
+		return results
+	end
+end
+
 --- 导出排序后的报告表格和总耗时（基于“本次测量”的耗时）
 --- @return table, number
 --- sorted_items: array{ name: string, time: number, percentage: number, avg_time: number }
