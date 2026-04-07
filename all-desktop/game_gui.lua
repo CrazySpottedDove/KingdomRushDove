@@ -2685,7 +2685,10 @@ function PowerButtonBlock:update(dt)
 		self:unblock()
 	end
 
-	PowerButtonBlock.super.update(self, dt)
+	-- 仅更新时间戳，阻断对子节点的通用 update 递归
+	if not self.animation or not self.animation.paused then
+		self.ts = self.ts + dt
+	end
 end
 
 HeroPortraitBlock = class("HeroPortraitBlock", KImageView)
@@ -2744,7 +2747,10 @@ function HeroPortraitBlock:update(dt)
 		self.start_looping_ts = game_gui.game.store.ts
 	end
 
-	HeroPortraitBlock.super.update(self, dt)
+	-- 仅更新时间戳，阻断对子节点的通用 update 递归
+	if not self.animation or not self.animation.paused then
+		self.ts = self.ts + dt
+	end
 end
 
 InfoBar = class("InfoBar", KImageView)
@@ -3892,7 +3898,6 @@ function VictoryParticles:initialize(w, h)
 end
 
 function VictoryParticles:update(dt)
-	VictoryParticles.super.update(self, dt)
 	self.ps:update(dt)
 end
 
@@ -4360,16 +4365,17 @@ function MousePointer:show_cross()
 end
 
 function MousePointer:update(dt)
-	if not self.hidden then
-		if not self.window then
-			self.window = self:get_window()
-		end
-
-		local x, y = self.window:get_mouse_position()
-
-		self.pos.x, self.pos.y = self.window:screen_to_view(x, y)
+	if self.hidden then
+		return
 	end
 
+	if not self.window then
+		self.window = self:get_window()
+	end
+
+	local x, y = self.window:get_mouse_position()
+
+	self.pos.x, self.pos.y = self.window:screen_to_view(x, y)
 	MousePointer.super.update(self, dt)
 end
 
@@ -6392,14 +6398,6 @@ function HeroMenu:hide()
 		self.tweening = false
 		self.tweeners = {}
 	end)}
-end
-
-function HeroMenu:update(dt)
-	HeroMenu.super.update(self, dt)
-
-	if self.hidden then
-		return
-	end
 end
 
 function HeroMenu:button_enter(button)
