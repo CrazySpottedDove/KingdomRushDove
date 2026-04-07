@@ -660,7 +660,82 @@ function sys.tween:on_insert(entity, store)
 	return true
 end
 
-function sys.tween:on_update(dt, ts, store)
+-- function sys.tween:on_update(dt, ts, store)
+-- 	perf.start("tween_system")
+-- 	local entities = store.entities_with_tween
+
+-- 	for _, e in pairs(entities) do
+-- 		if e.tween.disabled then
+-- 		-- block empty
+-- 		else
+-- 			local finished = true
+-- 			local sprites = e.render.sprites
+-- 			local tween = e.tween
+
+-- 			for _, tween_prop in ipairs(tween.props) do
+-- 				if tween_prop.disabled then
+-- 				-- block empty
+-- 				else
+-- 					local s = sprites[tween_prop.sprite_id]
+-- 					local keys = tween_prop.keys
+-- 					local ka = keys[1]
+-- 					local kb = keys[#keys]
+-- 					local start_time = ka[1]
+-- 					local end_time = kb[1]
+-- 					local duration = end_time - start_time
+-- 					local time = ts - (tween_prop.ts or tween.ts or s.ts)
+
+-- 					if tween_prop.time_offset then
+-- 						time = time + tween_prop.time_offset
+-- 					end
+
+-- 					if tween_prop.loop then
+-- 						time = time % duration
+-- 					end
+
+-- 					if tween.reverse and not tween_prop.ignore_reverse then
+-- 						time = duration - time
+-- 					end
+
+-- 					time = time < start_time and start_time or (time > end_time and end_time or time)
+
+-- 					for i = 2, #keys do
+-- 						local ki = keys[i]
+
+-- 						if time <= ki[1] then
+-- 							kb = ki
+-- 							ka = time == ki[1] and ki or keys[i - 1]
+
+-- 							break
+-- 						end
+-- 					end
+
+-- 					-- 直接通过 interp_fn 来进行插值计算和赋值，避免创建中间变量与小表的频繁创建，降低 gc 压力
+-- 					-- debug usage: 检查铁皮错误的运行时搞事情
+-- 					-- if not tween_prop.interp_fn then
+-- 					--     log.error("entity %s tween_prop %s has no interp_fn", e.template_name, tween_prop.name)
+-- 					-- end
+-- 					tween_prop.interp_fn(ka, kb, time, s, tween_prop.name)
+
+-- 					finished = finished and (tween_prop.loop or ka == kb)
+-- 				end
+-- 			end
+
+-- 			if finished then
+-- 				if tween.remove then
+-- 					queue_remove(store, e)
+-- 				end
+
+-- 				if tween.run_once then
+-- 					tween.disabled = true
+-- 				end
+-- 			end
+-- 		end
+-- 	end
+-- 	perf.stop("tween_system")
+-- end
+
+function sys.tween:on_render_update(dt, ts, store)
 	perf.start("tween_system")
 	local entities = store.entities_with_tween
 
@@ -870,10 +945,6 @@ function sys.render:on_insert(entity, store)
 			end
 
 			if not s.pos then
-				-- s.pos = {
-				-- x = entity.pos.x,
-				-- y = entity.pos.y
-				-- }
 				s.pos = V.v(entity.pos.x, entity.pos.y)
 				s._track_e = true
 			end
@@ -895,22 +966,10 @@ function sys.render:on_insert(entity, store)
 		local hbsize = self._hb_sizes[hb.type]
 		local fb = {
 			flip_x = false,
-			-- pos = {
-			-- x = 0,
-			-- y = 0
-			-- },
 			pos = V.vv(0),
 			r = 0,
 			alpha = 255,
-			-- anchor = {
-			-- x = 0,
-			-- y = 0
-			-- },
 			anchor = V.vv(0),
-			-- offset = {
-			-- x = hb.offset.x,
-			-- y = hb.offset.y
-			-- },
 			offset = V.v(hb.offset.x, hb.offset.y),
 			_draw_order = (hb.draw_order and 100000 * hb.draw_order + 1 or 200002) + entity.id,
 			z = Z_OBJECTS,
@@ -918,10 +977,6 @@ function sys.render:on_insert(entity, store)
 			ss = self._hb_ss,
 			color = hb.colors and hb.colors.bg or self._hb_colors.bg,
 			bar_width = hbsize.x,
-			-- scale = {
-			-- x = hbsize.x,
-			-- y = hbsize.y
-			-- }
 			scale = V.v(hbsize.x, hbsize.y)
 		}
 
@@ -929,22 +984,10 @@ function sys.render:on_insert(entity, store)
 
 		local ff = {
 			flip_x = false,
-			-- pos = {
-			-- x = 0,
-			-- y = 0
-			-- },
 			pos = V.vv(0),
 			r = 0,
 			alpha = 255,
-			-- anchor = {
-			-- x = 0,
-			-- y = 0
-			-- },
 			anchor = V.vv(0),
-			-- offset = {
-			-- x = hb.offset.x,
-			-- y = hb.offset.y
-			-- },
 			offset = V.v(hb.offset.x, hb.offset.y),
 			_draw_order = (hb.draw_order and 100000 * hb.draw_order + 2 or 200003) + entity.id,
 			z = Z_OBJECTS,
@@ -952,10 +995,6 @@ function sys.render:on_insert(entity, store)
 			ss = self._hb_ss,
 			color = hb.colors and hb.colors.fg or self._hb_colors.fg,
 			bar_width = hbsize.x,
-			-- scale = {
-			-- x = hbsize.x,
-			-- y = hbsize.y
-			-- }
 			scale = V.v(hbsize.x, hbsize.y)
 		}
 
@@ -973,22 +1012,10 @@ function sys.render:on_insert(entity, store)
 		if hb.black_bar_hp then
 			local fk = {
 				flip_x = false,
-				-- pos = {
-				-- x = 0,
-				-- y = 0
-				-- },
 				pos = V.vv(0),
 				r = 0,
 				alpha = 255,
-				-- anchor = {
-				-- x = 0,
-				-- y = 0
-				-- },
 				anchor = V.vv(0),
-				-- offset = {
-				-- x = hb.offset.x - hbsize.x * 0.5,
-				-- y = hb.offset.y
-				-- },
 				offset = V.v(hb.offset.x - hbsize.x * 0.5, hb.offset.y),
 				_draw_order = (hb.draw_order and 100000 * hb.draw_order or 200001) + entity.id,
 				z = Z_OBJECTS,
@@ -996,10 +1023,6 @@ function sys.render:on_insert(entity, store)
 				ss = self._hb_ss,
 				color = hb.colors and hb.colors.black or self._hb_colors.black,
 				bar_width = hbsize.x,
-				-- scale = {
-				-- x = hbsize.x,
-				-- y = hbsize.y
-				-- }
 				scale = V.v(hbsize.x, hbsize.y)
 			}
 
@@ -1034,7 +1057,189 @@ function sys.render:on_remove(entity, store)
 	return true
 end
 
-function sys.render:on_update(dt, ts, store)
+-- function sys.render:on_update(dt, ts, store)
+-- 	perf.start("render")
+-- 	local d = store
+-- 	local entities = d.entities_with_render
+-- 	local show_health_bar = store.config and store.config.show_health_bar
+
+-- 	for _, e in pairs(entities) do
+-- 		local sprites = e.render.sprites
+
+-- 		for i = 1, #sprites do
+-- 			local s = sprites[i]
+
+-- 			if s.ts > ts then
+-- 				s.hidden = true
+-- 				s._hidden_for_ts = true
+-- 			elseif s._hidden_for_ts then
+-- 				s.hidden = false
+-- 				s._hidden_for_ts = false
+-- 			end
+
+-- 			local last_runs = s.runs
+-- 			local fn
+
+-- 			if s.animation then
+-- 				A:generate_frames(s.animation)
+
+-- 				fn, s.runs, s.frame_idx = A:fni(s.animation, ts - s.ts + s.time_offset, s.loop, s.fps)
+-- 			elseif s.animated then
+-- 				fn, s.runs, s.frame_idx = A:fn(s.prefix and (s.prefix .. "_" .. s.name) or s.name, ts - s.ts + s.time_offset, s.loop, s.fps)
+-- 				s.frame_name = fn
+-- 			else
+-- 				s.runs = 0
+-- 				s.frame_idx = 1
+-- 				fn = s.name
+-- 			end
+
+-- 			if s.exo then
+-- 				local exo_frame = EXO:f(fn)
+
+-- 				if exo_frame then
+-- 					s.exo_frame = exo_frame
+
+-- 					-- local exo = exo_frame.exo
+
+-- 					-- s.exo = exo
+-- 					local exo = EXO:get_exo_by_frame(exo_frame)
+
+-- 					if s.exo_hide_prefix then
+-- 						for _, p in ipairs(exo_frame) do
+-- 							if p[1] == 1 then
+-- 								local pname = exo.parts[p[2]][1]
+
+-- 								p.hidden = false
+
+-- 								for _, prefix in ipairs(s.exo_hide_prefix) do
+-- 									if string.find(pname, prefix, 1, true) then
+-- 										p.hidden = true
+
+-- 										break
+-- 									end
+-- 								end
+-- 							end
+-- 						end
+-- 					end
+-- 				else
+-- 					-- fallback
+-- 					s.exo_frame = {}
+-- 				end
+-- 			else
+-- 				s.sync_flag = last_runs ~= s.runs
+-- 				s.ss = I:s(fn)
+
+-- 			-- 仅在开发时启用，用于检查美术资源
+-- 			-- if s.ss == nil then
+-- 			-- 	if s.animation and not MISSED_SS[s.animation] then
+-- 			-- 		log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+-- 			-- 		log.error("Animation name: %s", s.animation)
+-- 			-- 		MISSED_SS[s.animation] = true
+-- 			-- 	elseif s.animated and not MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] then
+-- 			-- 		log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+-- 			-- 		log.error("Animated prefix: %s", s.prefix)
+-- 			-- 		log.error("Animated name: %s", s.name)
+-- 			-- 		MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] = true
+-- 			-- 	elseif not MISSED_SS[s.name] then
+-- 			-- 		log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+-- 			-- 		log.error("Static sprite name: %s", s.name)
+-- 			-- 		MISSED_SS[s.name] = true
+-- 			-- 	end
+-- 			-- end
+-- 			end
+
+-- 			if s._track_e then
+-- 				s.pos.x, s.pos.y = e.pos.x, e.pos.y
+-- 			end
+
+-- 			if s.hide_after_runs and s.runs >= s.hide_after_runs then
+-- 				s.hidden = true
+-- 			end
+-- 		end
+
+-- 		if e.health_bar and show_health_bar then
+-- 			local hb = e.health_bar
+-- 			local fb = hb.frames[1]
+-- 			local ff = hb.frames[2]
+-- 			local fk = hb.black_bar_hp and hb.frames[3] or nil
+
+-- 			if hb.hidden or e.health.hp == e.health.hp_max then
+-- 				fb.hidden = true
+-- 				ff.hidden = true
+
+-- 				if fk then
+-- 					fk.hidden = true
+-- 				end
+-- 			else
+-- 				-- draw_order 属性在 insert 时即计算，我们要求后续永远不要出现操作 draw_order 的行为
+-- 				fb.hidden = false
+-- 				ff.hidden = false
+-- 				fb.pos.x, fb.pos.y = floor(e.pos.x), ceil(e.pos.y)
+-- 				ff.pos.x, ff.pos.y = fb.pos.x, fb.pos.y
+-- 				fb.offset.x, fb.offset.y = hb.offset.x - fb.bar_width * fb.ss.ref_scale * 0.5, hb.offset.y
+-- 				ff.offset.x, ff.offset.y = hb.offset.x - ff.bar_width * ff.ss.ref_scale * 0.5, hb.offset.y
+-- 				fb.z = hb.z or Z_OBJECTS
+-- 				ff.z = fb.z
+-- 				fb.sort_y_offset = hb.sort_y_offset
+-- 				ff.sort_y_offset = hb.sort_y_offset
+
+-- 				if fk then
+-- 					fk.hidden = false
+-- 					fk.pos.x, fk.pos.y = floor(e.pos.x), floor(e.pos.y)
+-- 					fk.offset.x, fk.offset.y = hb.offset.x - fk.bar_width * fk.ss.ref_scale * 0.5, hb.offset.y
+-- 					fk.z = hb.z or Z_OBJECTS
+-- 					fk.sort_y_offset = hb.sort_y_offset
+-- 					ff.scale.x = e.health.hp / hb.black_bar_hp * ff.bar_width
+-- 					fb.scale.x = e.health.hp_max / hb.black_bar_hp * fb.bar_width
+-- 				else
+-- 					if e.health.hp > e.health.hp_max then
+-- 						ff.scale.x = ff.bar_width
+-- 						ff.color = hb.colors and hb.colors.fg2 or self._hb_colors.fg2
+-- 					else
+-- 						ff.scale.x = e.health.hp / e.health.hp_max * ff.bar_width
+-- 						ff.color = hb.colors and hb.colors.fg or self._hb_colors.fg
+-- 					end
+-- 				end
+-- 			end
+-- 		end
+-- 	end
+
+-- 	-- FFI同步
+-- 	local render_frames = store.render_frames
+-- 	local render_frames_ffi = store.render_frames_ffi
+-- 	local n = 0
+
+-- 	for i = 1, #render_frames do
+-- 		local f = render_frames[i]
+
+-- 		if not f.marked_to_remove then
+-- 			local ffi_f = render_frames_ffi[n]
+
+-- 			ffi_f.z = f.z
+-- 			ffi_f.sort_y = f.sort_y or (f.sort_y_offset or 0) + f.pos.y
+-- 			ffi_f.draw_order = f._draw_order
+-- 			ffi_f.pos_x = f.pos.x
+-- 			ffi_f.lua_index = i
+-- 			n = n + 1
+-- 		end
+-- 	end
+
+-- 	lib_render_sort.ffi_sort(render_frames_ffi, store.render_frames_ffi_tmp, n)
+
+-- 	local new_frames = {}
+
+-- 	local i = 0
+-- 	while i < n do
+-- 		local ffi_f = render_frames_ffi[i]
+-- 		i = i + 1
+-- 		new_frames[i] = render_frames[ffi_f.lua_index]
+-- 	end
+
+-- 	store.render_frames = new_frames
+-- 	perf.stop("render")
+-- end
+
+function sys.render:on_render_update(dt, ts, store)
 	perf.start("render")
 	local d = store
 	local entities = d.entities_with_render

@@ -673,7 +673,8 @@ function game_gui:update(dt)
 			game_gui.swap_entity = nil
 		end
 
-		if game_gui.mode == GUI_MODE_IDLE or game_gui.mode == GUI_MODE_SWAP_TOWER then
+		-- if game_gui.mode == GUI_MODE_IDLE or game_gui.mode == GUI_MODE_SWAP_TOWER then
+		if game_gui.mode == GUI_MODE_SWAP_TOWER then
 			local x, y = game_gui.window:get_mouse_position()
 			local lx, ly = game_gui._last_mouse_pos_x, game_gui._last_mouse_pos_y
 
@@ -685,10 +686,8 @@ function game_gui:update(dt)
 				local lastt = game_gui.last_tower_hover
 
 				if ee and ee.tower and ee.tower.can_hover and ee ~= lastt then
-					-- game_gui:show_clickable_hover(ee)
 					self.last_tower_hover = ee
 				elseif lastt and (not ee or ee ~= lastt) then
-					-- game_gui:hide_clickable_hover()
 					self.last_tower_hover = nil
 				end
 			end
@@ -1303,45 +1302,6 @@ function game_gui:hide_wave_flags()
 		end
 
 		self.wave_flags = nil
-	end
-end
-
-function game_gui:show_clickable_hover(entity)
-	if game_gui.game.store.paused then
-		return
-	end
-
-	if self.last_tower_hover then
-		if self.last_tower_hover ~= entity then
-			self:hide_clickable_hover()
-		elseif self.clickable_hover_controller and not self.clickable_hover_controller.done then
-			return
-		end
-	end
-
-	if not entity or not game_gui.game.store.entities[entity.id] then
-		log.debug("clickable not in store. skipping hover")
-
-		return
-	end
-
-	self.last_tower_hover = entity
-
-	local h = E:create_entity("clickable_hover_circle_controller")
-
-	h.target = entity
-
-	self.game.simulation:insert_entity(h)
-
-	self.clickable_hover_controller = h
-
-	S:queue("GUIQuickMenuOver")
-end
-
-function game_gui:hide_clickable_hover()
-	if self.clickable_hover_controller then
-		self.clickable_hover_controller.done = true
-		self.clickable_hover_controller = nil
 	end
 end
 

@@ -15,7 +15,7 @@ function M.register(sys)
 	sys.timed = {}
 	sys.timed.name = "timed"
 
-	function sys.timed:on_update(dt, ts, store)
+	function sys.timed:on_render_update(dt, ts, store)
 		perf.start("timed")
 		local entities = store.entities_with_timed
 
@@ -26,7 +26,7 @@ function M.register(sys)
 			-- block empty
 			elseif s.ts == store.tick_ts then
 			-- block empty
-			elseif e.timed.runs and s.runs == e.timed.runs or e.timed.duration and store.tick_ts - s.ts > e.timed.duration then
+			elseif e.timed.runs and s.runs >= e.timed.runs or e.timed.duration and store.tick_ts - s.ts > e.timed.duration then
 				queue_remove(store, e)
 			end
 		end

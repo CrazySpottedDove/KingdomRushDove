@@ -373,6 +373,7 @@ function game:update(dt)
 
 	while d.to_gui > TICK_LENGTH do
 		d.to_gui = d.to_gui - TICK_LENGTH
+		self.simulation:render_update(TICK_LENGTH)
 		perf.start("game_gui:update")
 		self.game_gui:update(TICK_LENGTH)
 		perf.stop("game_gui:update")
