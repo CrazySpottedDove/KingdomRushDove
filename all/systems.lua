@@ -571,7 +571,7 @@ end
 
 function sys.tween:on_insert(entity, store)
 	if entity.tween then
-		for _, p in pairs(entity.tween.props) do
+		for _, p in ipairs(entity.tween.props) do
 			for _, n in pairs(p.keys) do
 				for i = 1, 2 do
 					if type(n[i]) == "string" then
@@ -672,7 +672,7 @@ function sys.tween:on_update(dt, ts, store)
 			local sprites = e.render.sprites
 			local tween = e.tween
 
-			for _, tween_prop in pairs(tween.props) do
+			for _, tween_prop in ipairs(tween.props) do
 				if tween_prop.disabled then
 				-- block empty
 				else

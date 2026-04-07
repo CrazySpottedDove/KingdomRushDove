@@ -16,9 +16,10 @@ end
 local pos = v(0, 0)
 E:register_c_ffi("pos", pos)
 
-local heading = E:register_c("heading")
-
-heading.angle = 0
+local heading = require("lib.heading")(1)
+E:register_c_ffi("heading", heading)
+-- local heading = E:register_c("heading")
+-- heading.angle = 0
 
 local health = E:register_c("health")
 
@@ -86,23 +87,26 @@ force_motion.max_v = nil
 force_motion.ramp_radius = nil
 force_motion.ramp_min_factor = 0.1
 force_motion.ramp_max_factor = 1
+
 local nav_path = require("lib.nav_path")(1, 1, 1, 1)
 E:register_c_ffi("nav_path", nav_path)
 
 -- local nav_path = E:register_c("nav_path")
-
 -- nav_path.pi = 1
 -- nav_path.spi = 1
 -- nav_path.ni = 1
 -- nav_path.dir = 1
 
-local nav_rally = E:register_c("nav_rally")
+local nav_rally = require("lib.nav_rally")(v(0, 0), v(0, 0), band(DAMAGE_ALL_TYPES, bnot(DAMAGE_POISON)), true, false)
+E:register_c_ffi("nav_rally", nav_rally)
 
-nav_rally.pos = v(0, 0)
-nav_rally.center = nil
-nav_rally.requires_node_nearby = true
-nav_rally.immune_to = band(DAMAGE_ALL_TYPES, bnot(DAMAGE_POISON))
-nav_rally.new = false
+-- local nav_rally = E:register_c("nav_rally")
+-- nav_rally.pos = v(0, 0)
+-- nav_rally.center = nil
+-- nav_rally.requires_node_nearby = true
+-- nav_rally.immune_to = band(DAMAGE_ALL_TYPES, bnot(DAMAGE_POISON))
+-- nav_rally.new = false
+
 local nav_grid = E:register_c("nav_grid")
 
 nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_ICE)
@@ -110,14 +114,7 @@ nav_grid.valid_terrains_dest = bor(TERRAIN_LAND, TERRAIN_ICE)
 nav_grid.waypoints = {}
 nav_grid.ignore_waypoints = nil
 
-local fade = E:register_c("fade")
-
-fade.duration = 0
-fade.after = 0
-fade.ts = 0
-
 local tween_prop = E:register_c("tween_prop")
-
 tween_prop.name = "alpha"
 tween_prop.disabled = nil
 tween_prop.ignore_reverse = nil

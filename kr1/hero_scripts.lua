@@ -28606,10 +28606,6 @@ function scripts.soldier_hero_wukong_zhu_apprentice.update(this, store)
 			SU.soldier_courage_upgrade(store, this)
 
 			while this.nav_rally.new do
-				if this.nav_rally.move_order then
-					U.y_wait(store, this.nav_rally.move_order * math.random() * 0.3)
-				end
-
 				if SU.y_hero_new_rally(store, this) then
 					goto label_895_0
 				end
@@ -36507,10 +36503,6 @@ function scripts.soldier_hero_lava_double_trouble.update(this, store, script)
 			SU.soldier_courage_upgrade(store, this)
 
 			while this.nav_rally.new do
-				if this.nav_rally.move_order then
-					U.y_wait(store, this.nav_rally.move_order * math.random() * 0.2)
-				end
-
 				if SU.y_hero_new_rally(store, this) then
 					goto label_1336_1
 				end

@@ -29561,10 +29561,6 @@ function scripts.soldier_stage_10_ymca.update(this, store)
 			SU.soldier_courage_upgrade(store, this)
 
 			while this.nav_rally.new do
-				if this.nav_rally.move_order then
-					U.y_wait(store, this.nav_rally.move_order * math.random() * 0.2)
-				end
-
 				if SU.y_hero_new_rally(store, this) then
 					goto label_1168_1
 				end
@@ -31165,7 +31161,8 @@ function scripts.soldier_stage_11_veznan_skill_soldiers.update(this, store)
 	U.y_wait(store, this.idle_time)
 
 	this.reinforcement.ts = store.tick_ts
-	this.nav_rally.center = nil
+	-- this.nav_rally.center = nil
+
 	this.nav_rally.pos = V.vclone(this.pos)
 
 	if this.sound_events and this.sound_events.raise then
@@ -31219,6 +31216,8 @@ function scripts.soldier_stage_11_veznan_skill_soldiers.update(this, store)
 
 			return
 		end
+
+		this.nav_rally.center = this.pos
 
 		if path_ni < -20 then
 			SU.y_soldier_death(store, this)
@@ -63554,7 +63553,8 @@ function scripts.stage_37_barrack_dragon_wardens.update(this, store, script)
 						for ii = 1, b.max_soldiers do
 							local ss = b.soldiers[ii]
 
-							if not ss or ss.health.dead and not store.entities[ss.id] or not ss.nav_rally.center then
+							-- if not ss or ss.health.dead and not store.entities[ss.id] or not ss.nav_rally.center then
+							if not ss or ss.health.dead and not store.entities[ss.id] then
 							-- block empty
 							else
 								amount_soldiers = amount_soldiers + 1
@@ -67587,10 +67587,6 @@ function scripts.soldier_warden_stage_40_island_stopped.update(this, store, scri
 			SU.soldier_courage_upgrade(store, this)
 
 			while this.nav_rally.new do
-				if this.nav_rally.move_order then
-					U.y_wait(store, this.nav_rally.move_order * math.random() * 0.3)
-				end
-
 				if SU.y_hero_new_rally(store, this) then
 					goto label_2582_1
 				end
@@ -72500,10 +72496,6 @@ function scripts.soldier_dragon_warden_warrior.update(this, store, script)
 			SU.soldier_courage_upgrade(store, this)
 
 			while this.nav_rally.new do
-				if this.nav_rally.move_order then
-					U.y_wait(store, this.nav_rally.move_order * math.random() * 0.3)
-				end
-
 				if SU.y_hero_new_rally(store, this) then
 					goto label_2457_1
 				end

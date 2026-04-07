@@ -2203,8 +2203,8 @@ tt.sound_events.death_args = {
 tt.info.portrait = "kr5_info_portraits_soldiers_0031"
 tt.info.random_name_format = nil
 tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_FEMALE"
-tt.nav_rally.delay_min = 0
-tt.nav_rally.delay_max = 0
+-- tt.nav_rally.delay_min = 0
+-- tt.nav_rally.delay_max = 0
 tt.death_go_back_delay = fts(25)
 tt.unit.fade_time_after_death = 1
 tt.main_script.insert = scripts.soldier_tower_pandas.insert
@@ -2279,8 +2279,8 @@ tt.sound_events.thunder = "TowerPandasSkillBolt"
 tt.sound_events.thunder_args = {
 	delay = fts(12)
 }
-tt.nav_rally.delay_min = 0.12
-tt.nav_rally.delay_max = 0.2
+-- tt.nav_rally.delay_min = 0.12
+-- tt.nav_rally.delay_max = 0.2
 --#endregion
 --#region soldier_tower_pandas_red_lvl4
 tt = RT("soldier_tower_pandas_red_lvl4", "soldier_tower_pandas_green_lvl4")
@@ -2330,8 +2330,8 @@ tt.sound_events.teleport = "TowerPandasSkillFire"
 tt.sound_events.teleport_args = {
 	delay = fts(12)
 }
-tt.nav_rally.delay_min = 0.05
-tt.nav_rally.delay_max = 0.07
+-- tt.nav_rally.delay_min = 0.05
+-- tt.nav_rally.delay_max = 0.07
 --#endregion
 --#region mod_soldier_tower_pandas_blue_stun
 tt = RT("mod_soldier_tower_pandas_blue_stun", "mod_stun")
@@ -2623,7 +2623,6 @@ tt.powers.sting_missiles.kill_hp_factor = b.soldier.sting_missiles.kill_hp_facto
 tt.ui.click_rect = r(-13, 7, 25, 27)
 tt.ui.click_rect_offset_y = 0
 tt.drag_line_origin_offset = vec_2(0, tt.flight_height)
-tt.nav_rally.delay_max = nil
 tt.spawn_fx = "fx_tower_rocket_gunners_take_off"
 tt.shadow_decal_t = "decal_soldier_tower_rocket_gunners_shadow"
 tt.land_fx = "fx_soldier_tower_rocket_gunners_land"
@@ -3706,7 +3705,6 @@ tt.health.armor = b.armor
 tt.health.hp_max = b.hp_max
 tt.health_bar.offset = v(0, 35)
 tt.health.dead_lifetime = 10
-tt.nav_rally.delay_max = nil
 tt.info.fn = scripts.soldier_priests_barrack.get_info
 tt.info.damage_icon = b.melee.damage_type == DAMAGE_MAGICAL and "magic" or nil
 -- TODO

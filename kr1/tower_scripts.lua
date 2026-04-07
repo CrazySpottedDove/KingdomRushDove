@@ -7011,7 +7011,7 @@ function scripts.soldier_tower_demon_pit.update(this, store)
 
 	this.reinforcement.ts = store.tick_ts
 	this.render.sprites[1].ts = store.tick_ts
-	this.nav_rally.center = nil
+	-- this.nav_rally.center = nil
 	this.nav_rally.pos = vclone(this.pos)
 
 	local tower = store.entities[this.source_id]
@@ -7138,6 +7138,7 @@ function scripts.soldier_tower_demon_pit.update(this, store)
 			return
 		end
 
+		this.nav_rally.center = this.pos
 		if this.unit.is_stunned then
 			SU.soldier_idle(store, this)
 
@@ -7254,7 +7255,7 @@ function scripts.big_guy_tower_demon_pit.update(this, store)
 	this.render.sprites[1].ts = store.tick_ts
 	this.melee.attacks[1].damage_max = this.damage_max[this.level]
 	this.melee.attacks[1].damage_min = this.damage_min[this.level]
-	this.nav_rally.center = nil
+	-- this.nav_rally.center = nil
 	this.nav_rally.pos = vclone(this.pos)
 
 	if this.sound_events and this.sound_events.raise then
@@ -7332,6 +7333,8 @@ function scripts.big_guy_tower_demon_pit.update(this, store)
 
 			return
 		end
+
+		this.nav_rally.center = this.pos
 
 		if path_ni < -20 then
 			SU.y_soldier_death(store, this)
@@ -13795,13 +13798,13 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 			U.unblock_target(store, this)
 			U.set_destination(this, r.pos)
 
-			if r.delay_max then
-				animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
+			-- if r.delay_max then
+			-- 	animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
 
-				if SU.y_soldier_wait(store, this, random() * r.delay_max) then
-					goto label_540_0
-				end
-			end
+			-- 	if SU.y_soldier_wait(store, this, random() * r.delay_max) then
+			-- 		goto label_540_0
+			-- 	end
+			-- end
 
 			local an, af = animation_name_facing_point(this, "walk", this.motion.dest)
 
@@ -16419,7 +16422,7 @@ scripts.soldier_paladin_rider = {}
 
 function scripts.soldier_paladin_rider.update(this, store)
 	while true do
-		if h.dead then
+		if this.health.dead then
 			SU.y_soldier_death(store, this)
 			U.y_wait(store, this.health.dead_lifetime)
 			queue_remove(store, this)
@@ -16886,17 +16889,17 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store)
 			U.unblock_target(store, this)
 			U.set_destination(this, r.pos)
 
-			if r.delay_max then
-				U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
+			-- if r.delay_max then
+			-- 	U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
 
-				local index = this.soldier.tower_soldier_idx or 0
-				local tower = store.entities[this.soldier.tower_id]
-				local total = tower and tower.barrack.max_soldiers or 1
+			-- 	local index = this.soldier.tower_soldier_idx or 0
+			-- 	local tower = store.entities[this.soldier.tower_id]
+			-- 	local total = tower and tower.barrack.max_soldiers or 1
 
-				if SU.y_soldier_wait(store, this, index / total * r.delay_max) then
-					goto label_972_0
-				end
-			end
+			-- 	if SU.y_soldier_wait(store, this, index / total * r.delay_max) then
+			-- 		goto label_972_0
+			-- 	end
+			-- end
 
 			local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
@@ -16927,19 +16930,19 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store)
 					break
 				end
 
-				if r._first_time then
-					r._first_time = false
+				-- if r._first_time then
+				-- 	r._first_time = false
 
-					local target = U.find_foremost_enemy_in_range_filter_on(r.center, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF), function(e)
-						return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
-					end)
+				-- 	local target = U.find_foremost_enemy_in_range_filter_on(r.center, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF), function(e)
+				-- 		return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
+				-- 	end)
 
-					if target then
-						out = false
+				-- 	if target then
+				-- 		out = false
 
-						break
-					end
-				end
+				-- 		break
+				-- 	end
+				-- end
 
 				U.walk(this, store.tick_length)
 				coroutine.yield()
@@ -19026,8 +19029,6 @@ function scripts.tower_dwarf.update(this, store)
 			for i, s in ipairs(b.soldiers) do
 				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, angle_offset)
 				s.nav_rally.new = true
-				s.nav_rally.group_index = i - 1
-				s.nav_rally.group_total = #b.soldiers
 				all_dead = all_dead and s.health.dead
 			end
 
@@ -19056,7 +19057,7 @@ function scripts.soldier_tower_dwarf.update(this, store)
 		this.vis._bans = nil
 	end
 
-	this.nav_rally._first_time = true
+	-- this.nav_rally._first_time = true
 
 	local function y_soldier_new_rally_break_attack(store, this, first_walk)
 		local r = this.nav_rally
@@ -19073,17 +19074,17 @@ function scripts.soldier_tower_dwarf.update(this, store)
 			U.unblock_target(store, this)
 			U.set_destination(this, r.pos)
 
-			if r.delay_max then
-				U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
+			-- if r.delay_max then
+			-- 	U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
 
-				local index = this.soldier.tower_soldier_idx or 0
-				local tower = store.entities[this.soldier.tower_id]
-				local total = tower and tower.barrack.max_soldiers or 1
+			-- 	local index = this.soldier.tower_soldier_idx or 0
+			-- 	local tower = store.entities[this.soldier.tower_id]
+			-- 	local total = tower and tower.barrack.max_soldiers or 1
 
-				if SU.y_soldier_wait(store, this, index / total * r.delay_max) then
-					goto label_1205_0
-				end
-			end
+			-- 	if SU.y_soldier_wait(store, this, index / total * r.delay_max) then
+			-- 		goto label_1205_0
+			-- 	end
+			-- end
 
 			local offset = V.v(r.pos.x - r.center.x, r.pos.y - r.center.y)
 			local old_center = V.v(this.pos.x - offset.x, this.pos.y - offset.y)
@@ -19106,19 +19107,19 @@ function scripts.soldier_tower_dwarf.update(this, store)
 						break
 					end
 
-					if r._first_time then
-						r._first_time = false
+					-- if r._first_time then
+					-- 	r._first_time = false
 
-						local target = U.find_foremost_enemy_in_range_filter_on(r.center, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF), function(e)
-							return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
-						end)
+					-- 	local target = U.find_foremost_enemy_in_range_filter_on(r.center, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF), function(e)
+					-- 		return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
+					-- 	end)
 
-						if target then
-							out = false
+					-- 	if target then
+					-- 		out = false
 
-							break
-						end
-					end
+					-- 		break
+					-- 	end
+					-- end
 
 					U.walk(this, store.tick_length)
 					coroutine.yield()
@@ -19452,7 +19453,7 @@ function scripts.tower_ghost.soldier_update(this, store)
 		this.vis._bans = nil
 	end
 
-	this.nav_rally._first_time = true
+	-- this.nav_rally._first_time = true
 
 	local _origin_dead_life_time = this.health.dead_lifetime
 
@@ -19471,17 +19472,17 @@ function scripts.tower_ghost.soldier_update(this, store)
 			U.unblock_target(store, this)
 			U.set_destination(this, r.pos)
 
-			if r.delay_max then
-				U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
+			-- if r.delay_max then
+			-- 	U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
 
-				local index = this.soldier.tower_soldier_idx or 0
-				local tower = store.entities[this.soldier.tower_id]
-				local total = tower and tower.barrack.max_soldiers or 1
+			-- 	local index = this.soldier.tower_soldier_idx or 0
+			-- 	local tower = store.entities[this.soldier.tower_id]
+			-- 	local total = tower and tower.barrack.max_soldiers or 1
 
-				if SU.y_soldier_wait(store, this, index / total * r.delay_max) then
-					goto label_970_0
-				end
-			end
+			-- 	if SU.y_soldier_wait(store, this, index / total * r.delay_max) then
+			-- 		goto label_970_0
+			-- 	end
+			-- end
 
 			local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
@@ -19506,19 +19507,19 @@ function scripts.tower_ghost.soldier_update(this, store)
 					r.new = false
 				end
 
-				if r._first_time then
-					r._first_time = false
+				-- if r._first_time then
+				-- 	r._first_time = false
 
-					local target = U.find_foremost_enemy_in_range_filter_on(r.center, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF), function(e)
-						return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
-					end)
+				-- 	local target = U.find_foremost_enemy_in_range_filter_on(r.center, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF), function(e)
+				-- 		return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
+				-- 	end)
 
-					if target then
-						out = false
+				-- 	if target then
+				-- 		out = false
 
-						break
-					end
-				end
+				-- 		break
+				-- 	end
+				-- end
 
 				U.walk(this, store.tick_length)
 				coroutine.yield()
@@ -21240,8 +21241,6 @@ function scripts.soldier_priests_barrack.update(this, store)
 						goto label_1140_1
 					end
 				end
-
-				this.nav_rally.delay_max = 0.25
 
 				if this.timed_actions then
 					brk, sta = SU.y_soldier_timed_actions(store, this)
