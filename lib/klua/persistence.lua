@@ -124,6 +124,9 @@ function refCount(objRefCount, item)
 	end
 end
 
+local ffi = require("ffi")
+local V = require("lib.klua.vector")
+
 writers = {
 	["nil"] = function(file, item)
 		file:write("nil")
@@ -152,7 +155,7 @@ writers = {
 			end
 
 			table.sort(keys, function(e1, e2)
-				te1, te2 = type(e1), type(e2)
+				local te1, te2 = type(e1), type(e2)
 
 				if te1 == "number" and te2 == "number" then
 					return e1 < e2
@@ -202,6 +205,11 @@ writers = {
 	end,
 	userdata = function(file, item)
 		file:write("nil --[[userdata]]\n")
+	end,
+	cdata = function(file, item)
+		if ffi.istype(V.metatype, item) then
+			file:write("{x = " .. item.x .. ", y = " .. item.y .. "}")
+		end
 	end
 }
 stringWriter = {}

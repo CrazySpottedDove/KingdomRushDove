@@ -159,4 +159,6 @@ function V.overlap(r1, r2)
 	return true
 end
 
+V.metatype = vec2_ct
+
 return V
