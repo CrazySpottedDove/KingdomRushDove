@@ -57,6 +57,8 @@ function sio:load_file(filename, force_load)
 	end
 
 	local env = {}
+	-- 所有的文件都可以访问klua.vector库，方便存储和读取向量数据
+	env.v = require("lib.klua.vector").v
 
 	setfenv(chunk, env)
 

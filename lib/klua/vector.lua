@@ -103,27 +103,6 @@ function V.r(x, y, w, h)
 	}
 end
 
--- function V.v(vx, vy)
--- 	return {
--- 		x = vx or 0,
--- 		y = vy or 0
--- 	}
--- end
-
--- function V.vv(vx)
--- 	return {
--- 		x = vx or 0,
--- 		y = vx or 0
--- 	}
--- end
-
--- function V.vclone(v)
--- 	return {
--- 		x = v.x,
--- 		y = v.y
--- 	}
--- end
-
 function V.veq(v1, v2)
 	return v1.x == v2.x and v1.y == v2.y
 end
@@ -139,13 +118,6 @@ end
 function V.csnap(x, y)
 	return math.ceil(x - 0.5), math.ceil(y - 0.5)
 end
-
--- function V.r(x, y, w, h)
--- 	return {
--- 		pos = V.v(x, y),
--- 		size = V.v(w, h)
--- 	}
--- end
 
 function V.is_inside(p, r)
 	return p.x >= r.pos.x and p.x <= r.pos.x + r.size.x and p.y >= r.pos.y and p.y <= r.pos.y + r.size.y

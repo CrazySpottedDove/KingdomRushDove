@@ -208,7 +208,7 @@ writers = {
 	end,
 	cdata = function(file, item)
 		if ffi.istype(V.metatype, item) then
-			file:write("{x = " .. item.x .. ", y = " .. item.y .. "}")
+			file:write("v(" .. item.x .. ", " .. item.y .. ")")
 		end
 	end
 }
