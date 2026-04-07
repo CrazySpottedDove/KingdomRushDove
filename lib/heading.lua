@@ -9,7 +9,7 @@ local heading_ct = ffi.typeof("heading")
 
 --- @class heading
 --- @field angle number = 0
-local heading_constructor = ffi.metatype(heading_ct, {
+ffi.metatype(heading_ct, {
 	__index = {
 		clone = function(self)
 			return heading_ct(self.angle)
@@ -17,4 +17,9 @@ local heading_constructor = ffi.metatype(heading_ct, {
 	}
 })
 
-return heading_constructor
+local heading = {
+	new = heading_ct,
+	ctype = heading_ct
+}
+
+return heading

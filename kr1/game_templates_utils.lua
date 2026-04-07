@@ -39,10 +39,10 @@ r = V.r
 function fts(v)
 	return v / FPS
 end
-local nav_path_constructor = require("lib.nav_path")
+local nav_path = require("lib.nav_path")
 
 function np(pi, spi, ni)
-	return nav_path_constructor(pi, spi, ni, 1)
+	return nav_path.new(pi, spi, ni, 1)
 end
 
 function d2r(d)

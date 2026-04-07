@@ -14,7 +14,7 @@ local vec2_ct = ffi.typeof("vec2")
 --- @class vec2
 --- @field x number
 --- @field y number
-local vec2_constructor = ffi.metatype("vec2", {
+ffi.metatype("vec2", {
 	__index = {
 		len2 = function(self)
 			return self.x * self.x + self.y * self.y
@@ -84,22 +84,20 @@ local vec2_constructor = ffi.metatype("vec2", {
 	end
 })
 
-function V.v(x, y)
-	return vec2_constructor(x, y)
-end
+V.v = vec2_ct
 
 function V.vv(x)
-	return vec2_constructor(x, x)
+	return vec2_ct(x, x)
 end
 
 function V.vclone(vec)
-	return vec2_constructor(vec.x, vec.y)
+	return vec2_ct(vec.x, vec.y)
 end
 
 function V.r(x, y, w, h)
 	return {
-		pos = vec2_constructor(x, y),
-		size = vec2_constructor(w, h)
+		pos = vec2_ct(x, y),
+		size = vec2_ct(w, h)
 	}
 end
 
