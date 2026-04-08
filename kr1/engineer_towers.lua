@@ -108,7 +108,6 @@ tt.render.sprites[1].scale = vec_1(1.1)
 
 --#region bomb_bfg_cluster
 tt = RT("bomb_bfg_cluster", "bullet")
-AC(tt, "sound_events")
 tt.bullet.damage_type = DAMAGE_NONE
 tt.bullet.flight_time = fts(29)
 tt.bullet.fragment_count = 1
@@ -448,7 +447,7 @@ decal_dwaarp_tower_scorched.render.sprites[1].z = Z_DECALS
 local decal_dwaarp_scorched_water = RT("decal_dwaarp_scorched_water", "decal_timed")
 
 decal_dwaarp_scorched_water.timed.duration = 3
-decal_dwaarp_scorched_water.timed.runs = nil
+decal_dwaarp_scorched_water.timed.runs = 1e+99
 decal_dwaarp_scorched_water.render.sprites[1].prefix = "towerdwaarp_sfx"
 decal_dwaarp_scorched_water.render.sprites[1].name = "vapor"
 decal_dwaarp_scorched_water.render.sprites[1].z = Z_OBJECTS
@@ -974,7 +973,7 @@ tt.main_script.update = scripts.druid_shooter_nature.update
 --#region soldier_druid_bear
 tt = RT("soldier_druid_bear", "soldier_militia")
 
-AC(tt, "melee", "count_group")
+AC(tt, "count_group")
 
 tt.count_group.name = "soldier_druid_bear"
 tt.count_group.type = COUNT_GROUP_CONCURRENT
@@ -1456,8 +1455,6 @@ tt.main_script.update = scripts.decal_tower_demon_pit_reload.update
 --#region decal_tower_demon_pit_demon_explosion_decal
 tt = RT("decal_tower_demon_pit_demon_explosion_decal", "decal_tween")
 
-AC(tt, "render", "tween")
-
 tt.render.sprites[1].name = "demon_pit_tower_demon_minion_explosion_decal"
 tt.render.sprites[1].animated = false
 tt.tween.props[1].name = "alpha"
@@ -1656,7 +1653,6 @@ tt.modifier.duration = b.basic_attack.stun_duration
 
 --#region bullet_tower_demon_pit_big_guy_lvl4
 tt = RT("bullet_tower_demon_pit_big_guy_lvl4", "bullet")
-AC(tt, "main_script")
 tt.bullet.flight_time = fts(31)
 tt.bullet.hit_payload = "big_guy_tower_demon_pit_lvl4"
 tt.sound_events.hit_water = nil
@@ -1954,7 +1950,7 @@ tt.modifier.vis_bans = bor(F_BOSS)
 -- 酒桶 BEGIN
 --#region tower_barrel_lvl4
 tt = RT("tower_barrel_lvl4", "tower")
-AC(tt, "attacks", "vis", "powers", "barrack")
+AC(tt, "attacks", "powers", "barrack")
 b = balance.towers.barrel
 tt.tower.type = "barrel"
 tt.tower.kind = TOWER_KIND_ENGINEER
@@ -2319,7 +2315,7 @@ tt.main_script.update = scripts.decal_tower_sparking_geode_burst_crystal.update
 --#region tower_sparking_geode_lvl4
 tt = RT("tower_sparking_geode_lvl4", "tower")
 b = balance.towers.sparking_geode
-AC(tt, "attacks", "vis", "powers")
+AC(tt, "attacks", "powers")
 tt.powers.crystalize = CC("power")
 tt.powers.crystalize.price_base = b.crystalize.price[1]
 tt.powers.crystalize.price_inc = b.crystalize.price[2]

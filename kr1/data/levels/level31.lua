@@ -38,7 +38,7 @@ self.locations=LU.load_locations(store,self)
 end
 function level:load(store)
 LU.insert_background(store,"Stage05_0001",Z_BACKGROUND)
-LU.insert_background(store,"Stage05_0002",Z_OBJECT,631)
+LU.insert_background(store,"Stage05_0002",Z_OBJECTS,631)
 LU.insert_defend_points(store,self.locations.exits,store.level_terrain_style)
 if store.level_mode==GAME_MODE_CAMPAIGN or store.level_mode==GAME_MODE_HEROIC then
 for _,h in pairs(self.locations.holders) do
@@ -122,7 +122,7 @@ end
 function level:y_cut_palms(store)
 local function cut_group(i)
 for _,palm in pairs(self.palm_tree_groups[i]) do
-palm.timed.disabled=nil
+palm.timed.runs=1
 U.animation_start(palm,"cut",nil,store.tick_ts,false)
 end
 S:queue("SpecialCutTrees")

@@ -168,7 +168,7 @@ end
 end
 local function cut_group(store,tree_groups,land_groups,i)
 for _,palm in pairs(tree_groups[i]) do
-palm.timed.disabled=nil
+palm.timed.runs=1
 U.animation_start(palm,"cut",nil,store.tick_ts,false)
 end
 S:queue("SpecialCutTrees")

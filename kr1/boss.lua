@@ -107,7 +107,7 @@ tt.sound_events.hit = "BombExplosionSound"
 --#region juggernaut_bomb_spawner
 tt = RT("juggernaut_bomb_spawner", "decal_scripted")
 
-AC(tt, "render", "spawner", "tween")
+AC(tt, "spawner", "tween")
 
 tt.main_script.update = scripts.enemies_spawner.update
 tt.render.sprites[1].anchor.y = 0.22
@@ -490,7 +490,7 @@ tt.health_judger = true
 --#region enemy_sarelgaz_egg
 tt = RT("enemy_sarelgaz_egg", "decal_scripted")
 
-AC(tt, "render", "spawner", "tween")
+AC(tt, "spawner", "tween")
 
 tt.main_script.update = scripts.enemies_spawner.update
 tt.render.sprites[1].anchor.y = 0.22
@@ -1425,7 +1425,7 @@ tt.render.sprites[1].name = "umbra_tower_remove"
 --#region umbra_portal
 tt = RT("umbra_portal", "decal_scripted")
 
-AC(tt, "render", "spawner")
+AC(tt, "spawner")
 
 tt.main_script.update = scripts.umbra_portal.update
 tt.render.sprites[1].prefix = "umbra_portal"
@@ -1481,9 +1481,7 @@ tt.vis.bans = bor(F_SKELETON)
 --#endregion
 --#region enemy_umbra_piece
 tt = RT("enemy_umbra_piece", "enemy")
-
-AC(tt, "melee", "timed")
-
+AC(tt, "melee")
 anchor_y = 0.21
 image_y = 70
 tt.enemy.gold = 90
@@ -1506,7 +1504,6 @@ tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].prefix = "enemy_umbra_piece"
 tt.sound_events.death = "DeathPuff"
 tt.sound_events.raise = "FrontiersFinalBossPiecesRespawn"
-tt.timed.disabled = true
 tt.ui.click_rect = r(-20, -5, 40, 50)
 tt.unit.blood_color = BLOOD_GRAY
 tt.unit.can_explode = false

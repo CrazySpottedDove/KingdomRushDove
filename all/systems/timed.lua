@@ -22,11 +22,14 @@ function M.register(sys)
 		for _, e in pairs(entities) do
 			local s = e.render.sprites[e.timed.sprite_id]
 
-			if e.timed.disabled then
-			-- block empty
-			elseif s.ts == store.tick_ts then
-			-- block empty
-			elseif e.timed.runs and s.runs >= e.timed.runs or e.timed.duration and store.tick_ts - s.ts > e.timed.duration then
+			-- if e.timed.disabled then
+			-- -- block empty
+			-- elseif s.ts == store.tick_ts then
+			-- -- block empty
+			-- elseif e.timed.runs and s.runs >= e.timed.runs or e.timed.duration and store.tick_ts - s.ts > e.timed.duration then
+			-- 	queue_remove(store, e)
+			-- end
+			if s.runs >= e.timed.runs or store.tick_ts - s.ts > e.timed.duration then
 				queue_remove(store, e)
 			end
 		end

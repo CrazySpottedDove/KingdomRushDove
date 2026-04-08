@@ -22,7 +22,7 @@ self.unlock_towers={"tower_pirate_watchtower"}
 end
 function level:load(store)
 LU.insert_background(store,"Stage16_0001",Z_BACKGROUND)
-LU.insert_background(store,"Stage16_0002",Z_OBJECT,616)
+LU.insert_background(store,"Stage16_0002",Z_OBJECTS,616)
 LU.insert_defend_points(store,self.locations.exits,store.level_terrain_style)
 for _,h in pairs(self.locations.holders) do
 if store.level_mode==GAME_MODE_CAMPAIGN and (h.id=="8" or h.id=="5") or store.level_mode==GAME_MODE_HEROIC and (h.id=="8" or h.id=="141") or store.level_mode==GAME_MODE_IRON and (h.id=="8" or h.id=="7" or h.id=="11") then

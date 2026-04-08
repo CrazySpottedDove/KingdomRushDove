@@ -207,16 +207,22 @@ function entity_db:add_comps(entity, ...)
 	-- 	return
 	-- end
 
-	for _, v in pairs({...}) do
-		if not self.components[v] then
-			log.error("component %s does not exist", v)
+	for _, v in ipairs({...}) do
+		-- if not self.components[v] then
+		-- 	log.error("component %s does not exist", v)
 
-			return
-		end
+		-- 	return
+		-- end
 
-		if not entity[v] then
-			entity[v] = copy(self.components[v])
-		end
+		-- DEBUG USE
+		-- if not entity[v] then
+		-- 	entity[v] = copy(self.components[v])
+		-- else
+		--     log.error("entity %s already has component %s", entity.template_name, v)
+		-- end
+
+		-- RELEASE VER
+		entity[v] = copy(self.components[v])
 	end
 end
 

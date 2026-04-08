@@ -32,7 +32,7 @@ require("game_templates_utils")
 --#region tower_ranger
 tt = RT("tower_ranger", "tower_archer_1")
 
-AC(tt, "attacks", "powers")
+AC(tt, "powers")
 
 image_y = 90
 tt.tower.type = "ranger"
@@ -155,7 +155,7 @@ tt.main_script.remove = scripts.mod_thorn.remove
 
 local tower_crossbow = RT("tower_crossbow", "tower_archer_1")
 
-AC(tower_crossbow, "attacks", "powers")
+AC(tower_crossbow, "powers")
 
 tower_crossbow.info.portrait = "kr2_info_portraits_towers_0009"
 tower_crossbow.info.enc_icon = 17
@@ -436,7 +436,7 @@ tt.render.sprites[1].alpha = 150
 --#region tower_musketeer
 tt = RT("tower_musketeer", "tower_archer_1")
 
-AC(tt, "attacks", "powers")
+AC(tt, "powers")
 
 image_y = 90
 tt.tower.type = "musketeer"
@@ -1088,7 +1088,7 @@ tt.particle_system.emission_rate = 30
 --#region mod_arrow_silver_mark
 tt = RT("mod_arrow_silver_mark", "modifier")
 
-AC(tt, "tween", "render", "sound_events", "count_group")
+AC(tt, "tween", "render", "count_group")
 
 tt.count_group.name = "mod_arrow_silver_mark"
 tt.count_group.type = COUNT_GROUP_CONCURRENT
@@ -1344,7 +1344,7 @@ tt.sound_open = "TowerDarkElfSupportBladesSpawn"
 --#region tower_sand_lvl4
 tt = RT("tower_sand_lvl4", "tower")
 
-AC(tt, "powers", "attacks", "vis")
+AC(tt, "powers", "attacks")
 
 b = balance.towers.sand
 tt.info.enc_icon = 18
@@ -1512,7 +1512,7 @@ tt.modifier.duration = b.slow_duration
 --#endregion
 --#region tower_royal_archers_lvl4
 tt = RT("tower_royal_archers_lvl4", "tower")
-AC(tt, "powers", "attacks", "vis")
+AC(tt, "powers", "attacks")
 b = balance.towers.royal_archers
 image_y = 90
 tt.info.portrait = "kr5_portraits_towers" .. "_0002"
@@ -1604,7 +1604,7 @@ tt.ui.click_rect = r(-35, 3, 73, 77)
 --#region tower_royal_archers_pow_rapacious_hunter_tamer
 tt = RT("tower_royal_archers_pow_rapacious_hunter_tamer", "decal_scripted")
 
-AC(tt, "pos", "main_script", "attacks")
+AC(tt, "attacks")
 
 b = balance.towers.royal_archers
 tt.render.sprites[1].prefix = "royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer"
@@ -1638,7 +1638,7 @@ tt.idle.animation = "idle_2"
 --#region tower_royal_archers_pow_rapacious_hunter_eagle
 tt = RT("tower_royal_archers_pow_rapacious_hunter_eagle", "decal_scripted")
 
-AC(tt, "pos", "main_script", "attacks", "force_motion", "tween", "sound_events")
+AC(tt, "attacks", "force_motion", "tween", "sound_events")
 
 b = balance.towers.royal_archers
 tt.flight_speed = 45

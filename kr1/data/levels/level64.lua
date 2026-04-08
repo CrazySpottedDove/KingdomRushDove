@@ -104,7 +104,7 @@ for i=1,bd.explosions do
 local fxs=LU.list_entities(store.entities,"fx_s16_burner_explosion",zone*10+i)
 for _,fx in pairs(fxs) do
 local delay=(i-1)*bd.explosions_delay
-fx.timed.disabled=nil
+fx.timed.runs=1
 fx.render.sprites[1].ts=store.tick_ts+delay
 fx.render.sprites[1].hidden=nil
 end

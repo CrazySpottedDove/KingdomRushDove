@@ -130,7 +130,6 @@ tween_prop.ts = nil
 -- Runtime fields (9): --   disabled, ignore_reverse, interp, interp_fn, keys, loop, name, sprite_id, ts
 
 local tween = E:register_c("tween")
-
 tween.props = {}
 tween.props[1] = E:clone_c("tween_prop")
 tween.remove = true
@@ -142,12 +141,10 @@ tween.ts = nil
 tween.random_ts = nil
 -- Runtime fields (3): --   props, remove, ts
 
-local timed = E:register_c("timed")
+local timed = require("lib.timed")
+E:register_c_ffi("timed", timed.new(1e+99, 1, 1))
+-- disabled 键被 dove 版删除，取而代之的是 runs = 1 / runs = 1e+99。
 
-timed.duration = nil
-timed.runs = 1
-timed.sprite_id = 1
-timed.disabled = nil
 local delayed_play = E:register_c("delayed_play")
 
 delayed_play.min_delay = 1

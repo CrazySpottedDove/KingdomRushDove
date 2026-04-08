@@ -879,6 +879,7 @@ function sys.render:on_insert(entity, store)
 			end
 
 			-- if not s.z then
+			--     log.error("看到请报告作者：Sprite %s of entity %s has no z, default to Z_OBJECTS", s.name, entity.template_name)
 			-- 	s.z = Z_OBJECTS
 			-- end
 

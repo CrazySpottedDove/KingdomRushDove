@@ -908,7 +908,7 @@ tt.sound_events.insert = "ShotgunSound"
 --#region enemy_spider_rotten_egg
 tt = RT("enemy_spider_rotten_egg", "decal_scripted")
 
-AC(tt, "render", "spawner", "tween")
+AC(tt, "spawner", "tween")
 
 tt.main_script.update = scripts.enemies_spawner.update
 tt.render.sprites[1].anchor.y = 0.22
@@ -999,16 +999,12 @@ tt.regen.ignore_freeze = false
 --#region aura_forest_troll_regen
 tt = RT("aura_forest_troll_regen", "aura_troll_regen")
 
-AC(tt, "regen")
-
 tt.main_script.update = scripts.aura_unit_regen.update
 tt.regen.cooldown = fts(4)
 tt.regen.health = 4
 --#endregion
 --#region aura_troll_axe_thrower_regen
 tt = RT("aura_troll_axe_thrower_regen", "aura_troll_regen")
-
-AC(tt, "regen")
 
 tt.main_script.update = scripts.aura_unit_regen.update
 tt.regen.cooldown = fts(6)
@@ -1131,8 +1127,6 @@ tt.aura.radius = 120
 --#endregion
 --#region aura_troll_skater_regen
 tt = RT("aura_troll_skater_regen", "aura_troll_regen")
-
-AC(tt, "regen")
 
 tt.regen.cooldown = fts(4)
 tt.regen.health = 1
@@ -1487,7 +1481,7 @@ tt.modifier.duration_heroes = 2
 --#region mod_blackburn_tower
 tt = RT("mod_blackburn_tower", "modifier")
 
-AC(tt, "render", "tween", "main_script")
+AC(tt, "render", "tween")
 
 tt.main_script.update = scripts.mod_blackburn_tower.update
 tt.modifier.duration = 4
@@ -2397,7 +2391,8 @@ tt.tween.props[1].keys = {{1, 255}, {3.5, 0}}
 --#endregion
 --#region decal_palm_tree
 tt = RT("decal_palm_tree", "decal_timed")
-tt.timed.disabled = true
+-- tt.timed.disabled = true
+tt.timed.runs = 1e+99
 tt.render.sprites[1].prefix = "decal_palm_tree"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].z = Z_OBJECTS
@@ -7036,7 +7031,7 @@ tt.tween.remove = false
 --#region mod_bloodsydian_warlock
 tt = RT("mod_bloodsydian_warlock", "modifier")
 
-AC(tt, "render", "spawner", "sound_events")
+AC(tt, "render", "spawner")
 
 tt.main_script.update = scripts.mod_bloodsydian_warlock.update
 tt.render.sprites[1].prefix = "bloodsydianGnoll_respawn"
@@ -7145,8 +7140,6 @@ tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}, {"this.modifier.duration-(10/3
 
 --#region mod_pixie_teleport
 tt = RT("mod_pixie_teleport", "mod_teleport_mage")
-
-AC(tt, "sound_events")
 
 tt.max_times_applied = nil
 tt.hold_time = fts(10)
@@ -7384,8 +7377,6 @@ tt.render.sprites[1].z = Z_DECALS
 --#endregion
 --#region overlay_power_thunder_flash
 tt = RT("overlay_power_thunder_flash", "decal_tween")
-
-AC(tt, "tween")
 
 image_y = 64
 tt.render.sprites[1].animated = false
@@ -7729,7 +7720,8 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].anchor.y = 0
 tt.render.sprites[1].scale = vec_2(1, 1)
-tt.timed.disabled = true
+-- tt.timed.disabled = true
+tt.timed.runs = 1e+99
 tt.editor.game_mode = 1
 tt.editor.tag = 1
 tt.editor.props = {{"render.sprites[1].scale", PT_COORDS}, {"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
@@ -7773,7 +7765,8 @@ tt = RT("fx_s04_tree_fire_1", "decal_timed")
 
 AC(tt, "editor")
 
-tt.timed.disabled = true
+-- tt.timed.disabled = true
+tt.timed.runs = 1e+99
 tt.render.sprites[1].name = "fx_s04_tree_fire_1"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].hidden = true
@@ -7929,8 +7922,6 @@ tt.render.sprites[1].z = Z_OBJECTS + 1
 --#endregion
 --#region decal_s06_boxed_boss
 tt = RT("decal_s06_boxed_boss", "decal_delayed_play")
-
-AC(tt, "editor")
 
 tt.delayed_play.min_delay = 5
 tt.delayed_play.min_delay = 10
@@ -8290,7 +8281,8 @@ tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].anchor.y = 0.3941176470588235
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].scale = vec_2(1, 1)
-tt.timed.disabled = true
+-- tt.timed.disabled = true
+tt.timed.runs = 1e+99
 tt.editor.game_mode = 1
 tt.editor.tag = 1
 tt.editor.props = {{"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
@@ -9053,7 +9045,7 @@ tt.tween.props[1].keys = {{0, 255}, {fts(20), 0}}
 --#region tower_holder_baby_ashbite
 tt = RT("tower_holder_baby_ashbite", "tower")
 
-AC(tt, "tower", "tower_holder", "pos", "render", "ui", "info", "tween")
+AC(tt, "tower_holder", "tween")
 
 tt.tower.level = 1
 tt.tower.type = "holder_baby_ashbite"
@@ -9200,8 +9192,6 @@ tt.render.sprites[1].animated = false
 --#endregion
 --#region decal_s15_finished_veznan
 tt = RT("decal_s15_finished_veznan", "decal_delayed_play")
-
-AC(tt, "editor")
 
 tt.render.sprites[1].prefix = "decal_s15_finished_veznan"
 tt.render.sprites[1].name = "idle"
@@ -9369,7 +9359,8 @@ tt = RT("fx_s16_burner_explosion", "decal_timed")
 
 AC(tt, "editor")
 
-tt.timed.disabled = true
+-- tt.timed.disabled = true
+tt.timed.runs = 1e+99
 tt.render.sprites[1].name = "fx_s16_burner_explosion"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].hidden = true
@@ -9404,7 +9395,7 @@ tt.editor.props = {{"spawner.name", PT_STRING}, {"spawner.pi", PT_NUMBER}}
 --#region gnoll_bush
 tt = RT("gnoll_bush", "decal_scripted")
 
-AC(tt, "nav_path", "motion", "main_script", "spawner", "unit")
+AC(tt, "nav_path", "motion", "spawner", "unit")
 
 tt.render.sprites[1].prefix = "gnollBush"
 tt.render.sprites[1].anchor.y = 0.3548387096774194
@@ -9460,7 +9451,7 @@ tt.walk_points = {
 --#region decal_gnoll_gnawer
 tt = RT("decal_gnoll_gnawer", "decal_scripted")
 
-AC(tt, "motion", "nav_grid", "motion", "tween")
+AC(tt, "motion", "nav_grid", "tween")
 
 tt.render.sprites[1].anchor = vec_2(0.5, 0.25)
 tt.render.sprites[1].prefix = "gnoll_gnawer"
@@ -9473,7 +9464,7 @@ tt.tween.props[1].keys = {{0, 255}, {1, 0}}
 --#region decal_baby_malik_slave
 tt = RT("decal_baby_malik_slave", "decal_scripted")
 
-AC(tt, "motion", "nav_grid", "motion")
+AC(tt, "motion", "nav_grid")
 
 tt.render.sprites[1].anchor.y = 0.184
 tt.render.sprites[1].prefix = "decal_baby_malik"
@@ -10332,7 +10323,7 @@ tt.render.sprites[1].prefix = "channeler_tower_lvl4_idle_shock_fx_"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].draw_order = 3
-tt.render.sprites[1].z = Z_OBJECT
+tt.render.sprites[1].z = Z_OBJECTS
 tt.main_script.update = scripts.fx_tower_ray_lvl4_shock.update
 tt.timed.runs = 1e+99
 --#endregion
@@ -10520,8 +10511,6 @@ tt.timed.runs = 1e+99
 --#region decal_tower_arcane_wizard_empowerment_preview
 tt = RT("decal_tower_arcane_wizard_empowerment_preview", "decal_tween")
 
-AC(tt, "render", "tween")
-
 tt.range_factor = 1
 tt.render.sprites[1].name = "arcane_wizard_tower_empowerment_indicator"
 tt.render.sprites[1].animated = false
@@ -10587,13 +10576,10 @@ tt.render.sprites[1].z = Z_DECALS
 --#endregion
 --#region fx_bullet_soldier_tower_rocket_gunners_sting_missiles_smoke
 tt = RT("fx_bullet_soldier_tower_rocket_gunners_sting_missiles_smoke", "fx")
-
 AC(tt, "tween")
-
+tt.timed = nil
 tt.render.sprites[1].name = "rocket_gunners_tower_sting_missiles_floor_decal_smoke_idle"
 tt.render.sprites[1].loop = true
-tt.timed.duration = 1e+99
-tt.timed.runs = 1e+99
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {3, 255}, {3.5, 0}}
 tt.tween.remove = true
@@ -10678,8 +10664,6 @@ tt.timed.duration = fts(10)
 --#endregion
 --#region s72_rotten_spawner
 tt = RT("s72_rotten_spawner", "s15_rotten_spawner")
-
-AC(tt, "main_script", "editor")
 
 tt.main_script.update = scripts.s15_rotten_spawner.update
 tt.entity = "enemy_rotten_tree"
@@ -11044,7 +11028,7 @@ tt.campfire_sprite_id = 3
 tt.tent_front_sprite_id = 4
 tt = E:register_t("decal_stage_01_elder_rune", "decal_click_play")
 
-E:add_comps(tt, "main_script", "click_play", "ui", "editor")
+E:add_comps(tt, "editor")
 
 tt.render.sprites[1].prefix = "Stage_1_rapido_elder_rune_1"
 tt.render.sprites[1].loop = true
@@ -11058,7 +11042,7 @@ tt.ui.can_click = true
 tt.ui.click_rect = r(-30, -30, 60, 60)
 tt = E:register_t("decal_stage_02_elder_rune", "decal_click_play")
 
-E:add_comps(tt, "main_script", "click_play", "ui", "editor")
+E:add_comps(tt, "editor")
 
 tt.render.sprites[1].prefix = "stage_2_rapido_elder_rune_2_fx"
 tt.render.sprites[1].loop = true
@@ -11086,8 +11070,6 @@ tt.render.sprites[1].name = "stage_2_rapido_elder_rune_2_0117"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].loop = false
 tt = E:register_t("decal_stage_02_fishing_link", "decal_click_play")
-
-E:add_comps(tt, "main_script", "click_play", "ui")
 
 tt.render.sprites[1].prefix = "fishing_link"
 tt.render.sprites[1].loop = true
@@ -11125,7 +11107,7 @@ tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].loop = true
 tt = E:register_t("decal_stage_02_lion_king", "decal_scripted")
 
-E:add_comps(tt, "main_script", "ui")
+E:add_comps(tt, "ui")
 
 for i = 1, 4 do
 	tt.render.sprites[i] = E:clone_c("sprite")
@@ -11148,7 +11130,7 @@ tt.max_cooldown_idle = 7
 tt.entity_light = "decal_stage_02_lion_king_light"
 tt = E:register_t("decal_stage_02_lion_king_light", "decal_scripted")
 
-E:add_comps(tt, "main_script", "ui", "tween")
+E:add_comps(tt, "ui", "tween")
 
 tt.render.sprites[1] = E:clone_c("sprite")
 tt.render.sprites[1].animated = false
@@ -11399,8 +11381,6 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt = E:register_t("decal_stage_03_fat_arborean", "decal_click_play")
 
-E:add_comps(tt, "main_script", "click_play", "ui")
-
 tt.render.sprites[1].prefix = "stage3_decos_gordito"
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].scale = vv(1.1)
@@ -11431,7 +11411,7 @@ tt.animations = {{"action", time_between_animations}, {"idle", time_between_anim
 tt.main_script.update = scripts.decal_scripted_loop_play.update
 tt = E:register_t("decal_stage_03_elder_rune", "decal_click_play")
 
-E:add_comps(tt, "main_script", "click_play", "ui", "editor")
+E:add_comps(tt, "editor")
 
 tt.render.sprites[1].prefix = "stage_3_decos_REF_elder_rune_3"
 tt.render.sprites[1].loop = true
@@ -11731,7 +11711,7 @@ tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_BACKGROUND_COVERS - 5
 tt = E:register_t("decal_stage_04_elder_rune", "decal_click_play")
 
-E:add_comps(tt, "main_script", "click_play", "ui", "editor")
+E:add_comps(tt, "editor")
 
 tt.render.sprites[1].prefix = "stage_4_elder_rune_4"
 tt.render.sprites[1].loop = true
@@ -11762,7 +11742,7 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].draw_order = 0
 tt = E:register_t("decal_stage_05_elder_rune", "decal_click_play")
 
-E:add_comps(tt, "main_script", "click_play", "ui", "editor")
+E:add_comps(tt, "editor")
 
 tt.render.sprites[1].prefix = "stage_5_elder_rune_5"
 tt.render.sprites[1].loop = true
@@ -12084,8 +12064,6 @@ tt.tween.props[1].keys = {{fts(10), 255}, {0.8, 255}, {1, 0}}
 tt.tween.props[1].loop = false
 tt.tween.props[1].sprite_id = 1
 tt = E:register_t("decal_werebeast_boss_shadow", "decal_tween")
-
-E:add_comps(tt, "render", "tween")
 
 tt.range_factor = 1
 -- tt.render.sprites[1].name = "werebeast_boss_shadow"
@@ -12713,7 +12691,7 @@ tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_DECALS
 
 tt = E:register_t("stage_06_door", "decal_scripted")
-E:add_comps(tt, "spawner", "render", "sound_events", "editor", "ui", "tween")
+E:add_comps(tt, "spawner", "sound_events", "editor", "ui", "tween")
 tt.main_script.update = scripts.decal_stage_06_door.update
 for i = 1, 4 do
 	tt.render.sprites[i] = E:clone_c("sprite")
@@ -12910,7 +12888,7 @@ E:add_comps(tt, "main_script")
 tt.main_script.update = scripts.controller_stage_06_minecraft_easter_egg.update
 
 tt = E:register_t("decal_stage_06_elder_rune", "decal_click_play")
-E:add_comps(tt, "main_script", "click_play", "ui", "editor")
+E:add_comps(tt, "editor")
 tt.render.sprites[1].prefix = "stage_6_elder_rune_6"
 tt.render.sprites[1].loop = true
 tt.main_script.update = scripts.decal_stage_06_elder_rune.update
@@ -13122,8 +13100,6 @@ tt = E:register_t("decal_stage_07_crow_clickable_4", "decal_stage_07_crow_clicka
 tt.render.sprites[1].prefix = "stage_7_crow4Def"
 tt.render.sprites[1].z = Z_FLYING_HEROES - 1
 tt = E:register_t("decal_stage_07_crow_clickable_5", "decal_stage_07_crow_clickable")
-
-E:add_comps(tt, "editor", "ui")
 
 tt.render.sprites[1].prefix = "stage_7_crow5Def"
 tt.render.sprites[1].flip_x = true
@@ -13931,7 +13907,7 @@ tt = E:register_t("decal_stage_12_mask_4", "decal_stage_12_mask_1")
 tt.render.sprites[1].name = "T3_12_mask_04"
 tt = E:register_t("decal_stage_12_windmill", "decal_click_pause")
 
-E:add_comps(tt, "ui", "tween")
+E:add_comps(tt, "tween")
 
 tt.render.sprites[1].prefix = "t3_windmillDef"
 tt.render.sprites[1].name = "loop"
@@ -13948,7 +13924,7 @@ tt.tween.props[1].keys = {{fts(0), v(0, 0)}, {fts(tt.tween_frecuency), v(0, tt.t
 tt.main_script.update = scripts.decal_stage_12_windmill.update
 tt = E:register_t("decal_stage_12_easter_egg_strangerthings", "decal")
 
-E:add_comps(tt, "pos", "render", "ui", "main_script")
+E:add_comps(tt, "ui", "main_script")
 
 tt.main_script.update = scripts.decal_stage_12_easter_egg_strangerthings.update
 tt.render.sprites[1].prefix = "stranger_thingsDef"
@@ -13974,7 +13950,7 @@ tt = E:register_t("decal_stage_13_glare", "decal_stage_12_glare")
 tt.render.sprites[1].prefix = "stage_13_glareDef"
 tt = E:register_t("decal_stage_14_easter_egg_rickmorty", "decal")
 
-E:add_comps(tt, "editor", "pos", "main_script", "render", "ui")
+E:add_comps(tt, "editor", "main_script", "ui")
 
 tt.main_script.update = scripts.decal_stage_14_easter_egg_rickmorty.update
 tt.render.sprites[1].prefix = "Rick1Def"
@@ -15925,7 +15901,6 @@ tt.sound_pre = "Stage15MydriasTentacleCircleCounter"
 tt.sound_grab = "Stage15MydriasTentacleCircle"
 
 tt = E:register_t("mod_stage_15_cult_leader_tower_stun", "mod_stun")
-E:add_comps(tt, "render")
 tt.modifier.duration = nil
 tt.render.sprites[1].prefix = "mutamydrias_fx_Mutamydrias_Tentacle"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
@@ -15975,7 +15950,7 @@ tt.render.sprites[2].z = Z_EFFECTS
 tt.render.sprites[2].loop = false
 
 tt = E:register_t("soldier_reinforcement_stage_15_denas", "soldier_militia")
-E:add_comps(tt, "melee", "nav_grid", "reinforcement", "tween")
+E:add_comps(tt, "nav_grid", "reinforcement", "tween")
 b = balance.specials.stage15_denas
 tt.health_bar.offset = v(0, 50)
 tt.health.armor = b.armor
@@ -16184,7 +16159,7 @@ tt.render.sprites[1].name = "idle"
 
 tt = E:register_t("tower_stage_17_weirdwood", "tower")
 b = balance.specials.towers.stage_17_weirdwood
-E:add_comps(tt, "attacks", "vis", "corruption_kr5")
+E:add_comps(tt, "attacks", "corruption_kr5")
 tt.tower.type = "weirdwood"
 tt.tower.level = 1
 tt.tower.kind = TOWER_KIND_ENGINEER
@@ -16230,7 +16205,7 @@ tt.sound_transform = "TowerWeirdwoodTransform"
 
 tt = E:register_t("tower_stage_18_elven_barrack", "tower")
 b = balance.specials.towers.stage_18_elven_barrack
-E:add_comps(tt, "vis", "barrack", "corruption_kr5")
+E:add_comps(tt, "barrack", "corruption_kr5")
 tt.tower.type = "tower_stage_18_elven_barrack"
 tt.tower.level = 1
 tt.tower.kind = TOWER_KIND_BARRACK
@@ -16541,7 +16516,7 @@ tt.range_factor = 1
 tt.render.sprites[1].prefix = "dust_cryptid_dust_fx"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].animated = true
-tt.render.sprites[1].z = Z_OBJECT
+tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].offset = v(0, 10)
 tt.render.sprites[1].fps = 30
@@ -16791,7 +16766,7 @@ tt.sound_bee_fly = "Stage20BeesFly"
 tt.sound_bee_throw = "Stage20BeesThrow"
 tt = E:register_t("tower_stage_20_arborean_barrack", "tower")
 b = balance.specials.towers.tower_stage_20_arborean_barrack
-E:add_comps(tt, "vis", "user_selection", "attacks")
+E:add_comps(tt, "user_selection", "attacks")
 tt.tower.type = "arborean_barrack"
 tt.tower.level = 1
 tt.tower.can_be_sold = false
@@ -16896,7 +16871,7 @@ tt.tween.disabled = false
 tt = E:register_t("tower_stage_20_arborean_watchtower", "tower")
 b = balance.specials.towers.stage_20_arborean_watchtower
 
-E:add_comps(tt, "attacks", "vis", "idle_flip")
+E:add_comps(tt, "attacks", "idle_flip")
 
 tt.tower.type = "weirdwood"
 tt.tower.level = 1
@@ -16980,7 +16955,7 @@ tt.tunnel_spawns[3] = {
 }
 tt = E:register_t("tower_stage_22_arborean_mages", "tower")
 b = balance.specials.towers.stage_22_arborean_mages_tower
-E:add_comps(tt, "attacks", "vis")
+E:add_comps(tt, "attacks")
 tt.tower.type = "weirdwood"
 tt.tower.level = 1
 tt.tower.can_be_sold = false
@@ -18342,7 +18317,7 @@ tt.render.sprites[1].name = "spawn"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_OBJECT
+tt.render.sprites[1].z = Z_OBJECTS
 tt = E:register_t("decal_stage_26_boss", "decal")
 
 E:add_comps(tt, "editor")
@@ -18795,7 +18770,7 @@ tt.render.sprites[1].prefix = "scrap_pile"
 tt.render.sprites[1].name = "in"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = true
-tt.render.sprites[1].z = Z_OBJECT
+tt.render.sprites[1].z = Z_OBJECTS
 tt.main_script.update = scripts.decal_scrap.update
 tt.duration = b.duration
 tt.tween.disabled = true
@@ -19371,8 +19346,6 @@ tt.render.sprites[tt.render.sid_animated].offset = v(5, 4)
 tt.render.sprites[tt.render.sid_animated].anchor = v(0.5, 0.973404255319149)
 tt = E:register_t("decal_achievement_a_coon_of_surprises_silksong", "decal_achievement_a_coon_of_surprises_fredo")
 
-E:add_comps(tt, "ui")
-
 tt.give_achievement = false
 tt.change_z_time = fts(36)
 tt.change_y_sort_offset = -400
@@ -19384,8 +19357,6 @@ tt.render.sprites[tt.render.sid_animated].name = "idle"
 tt.render.sprites[tt.render.sid_animated].offset = v(2, -30)
 tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
 tt = E:register_t("decal_achievement_a_coon_of_surprises_jarra", "decal_achievement_a_coon_of_surprises_fredo")
-
-E:add_comps(tt, "ui")
 
 tt.give_achievement = false
 tt.change_z_time = fts(32)
@@ -19399,8 +19370,6 @@ tt.render.sprites[tt.render.sid_animated].offset = v(-2, -22)
 tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
 tt = E:register_t("decal_achievement_a_coon_of_surprises_darkcrystal", "decal_achievement_a_coon_of_surprises_fredo")
 
-E:add_comps(tt, "ui")
-
 tt.give_achievement = false
 tt.change_z_time = fts(37)
 tt.change_y_sort_offset = -260
@@ -19413,8 +19382,6 @@ tt.render.sprites[tt.render.sid_animated].offset = v(0, 0)
 tt.render.sprites[tt.render.sid_animated].anchor = vv(0.5)
 tt = E:register_t("decal_achievement_a_coon_of_surprises_sheepy", "decal_achievement_a_coon_of_surprises_fredo")
 
-E:add_comps(tt, "ui")
-
 tt.give_achievement = false
 tt.change_z_time = fts(30)
 tt.change_y_sort_offset = -336
@@ -19426,8 +19393,6 @@ tt.render.sprites[tt.render.sid_animated].name = "idle"
 tt.render.sprites[tt.render.sid_animated].offset = v(0, 0)
 tt.render.sprites[tt.render.sid_animated].anchor = v(0.5, 0.5173913043478261)
 tt = E:register_t("decal_achievement_a_coon_of_surprises_arak", "decal_achievement_a_coon_of_surprises_fredo")
-
-E:add_comps(tt, "ui")
 
 tt.give_achievement = false
 tt.ui.click_rect = r(-20, -40, 62, 75)
@@ -20397,8 +20362,6 @@ tt.tween.props[3].keys_end = {{0, 255}, {0.2, 0}, {0.4, 0}}
 tt.tween.props[3].sprite_id = tt.render.sid_spawner
 tt = E:register_t("stage_33_lightning_strike_overlay", "decal_tween")
 
-E:add_comps(tt, "tween")
-
 image_y = 64
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "square_ffffff"
@@ -20463,7 +20426,7 @@ tt.events.list[1].name = "pond_spawn_water_spirit"
 tt.events.list[1].on_event = scripts.controller_stage_34_ponds_spawner.on_event
 tt = E:register_t("controller_boss_princess_iron_fan_waves", "decal_scripted")
 
-E:add_comps(tt, "main_script", "editor")
+E:add_comps(tt, "editor")
 
 b = balance.enemies.wukong.boss_princess
 tt.force_capture_hero = scripts.controller_boss_princess_iron_fan_waves.force_capture_hero
@@ -21015,7 +20978,7 @@ tt.render.sprites[1].exo = true
 tt = E:register_t("boss_princess_iron_fan_tower_debuff", "modifier")
 b = balance.enemies.wukong.boss_princess.waves.tower_curse
 
-E:add_comps(tt, "render", "sound_events")
+E:add_comps(tt, "render")
 
 tt.main_script.insert = scripts.boss_princess_iron_fan_tower_debuff.insert
 tt.main_script.update = scripts.boss_princess_iron_fan_tower_debuff.update
@@ -21293,7 +21256,6 @@ tt.offset_y_per_tower = {
 }
 tt = RT("mod_bull_king_stun", "mod_stun")
 b = balance.enemies.wukong.boss_bull_king.area_attack
-E:add_comps(tt, "render")
 tt.modifier.duration = b.stun_duration
 tt.main_script.insert = scripts.mod_bull_king_stun.insert
 tt.main_script.remove = scripts.mod_bull_king_stun.remove
@@ -21445,8 +21407,7 @@ tt.render.sprites[1].prefix = "stage_31_fire_CDef"
 
 for i = 1, 3 do
 	tt = E:register_t("stage_31_exo_forest_" .. i, "decal")
-
-	E:add_comps(tt, "editor", "editor_script")
+	AC(tt, "editor_script")
 
 	tt.render.sprites[1].prefix = "stage_31_forest_0" .. i .. "Def"
 	tt.render.sprites[1].name = "loop"
@@ -24946,7 +24907,7 @@ tt.small_rocks = {}
 tt = RT("tower_dragons_warden", "tower")
 b = balance.specials.towers.tower_dragons_warden
 
-E:add_comps(tt, "attacks", "vis", "powers", "idle_flip")
+E:add_comps(tt, "attacks", "powers", "idle_flip")
 
 tt.tower.type = "stage_37_tower_dragons_warden"
 tt.tower.level = 1
@@ -24995,7 +24956,7 @@ tt.ui.click_rect = r(-35, -15, 70, 70)
 
 tt = RT("tower_stage_38_dragon_wardens", "tower")
 b = balance.specials.stage_38_dragon_wardens
-E:add_comps(tt, "vis", "user_selection", "attacks", "events")
+E:add_comps(tt, "user_selection", "attacks", "events")
 tt.tower.type = "stage_38_tower_dragons_warden_barrack"
 tt.tower.level = 1
 tt.tower.can_be_sold = false
@@ -25185,7 +25146,7 @@ tt.sound_events.insert = "Stage38WardensGrowl"
 
 tt = RT("stage_37_barrack_dragon_wardens", "tower")
 b = balance.specials.stage_37_dragon_wardens
-E:add_comps(tt, "barrack", "vis")
+E:add_comps(tt, "barrack")
 tt.tower.type = "stage_37_barrack_dragon_wardens"
 tt.tower.level = 1
 tt.tower.kind = TOWER_KIND_BARRACK
@@ -25219,7 +25180,7 @@ tt.tower_respawn_time = b.respawn_time
 b = balance.specials.stage_37_dragon_wardens
 tt.controable = true
 tt.controable_other = true
-E:add_comps(tt, "reinforcement", "nav_grid", "tween", "regen")
+E:add_comps(tt, "reinforcement", "nav_grid", "tween")
 -- TODO: portrait missing
 tt.info.portrait = "kr5_info_portraits_soldiers_0032"
 tt.regen.cooldown = 1
@@ -25567,7 +25528,7 @@ E:add_comps(tt, "editor", "main_script")
 tt.main_script.update = scripts.controller_stage_38_cinematic.update
 
 tt = RT("stage_39_veins_tower_stun", "modifier")
-E:add_comps(tt, "render", "sound_events")
+E:add_comps(tt, "render")
 tt.main_script.insert = scripts.stage_39_veins_tower_stun.insert
 tt.main_script.update = scripts.stage_39_veins_tower_stun.update
 tt.main_script.remove = scripts.stage_39_veins_tower_stun.remove
@@ -25820,8 +25781,6 @@ tt.timed_attacks.list[tt.attack_units_index].mod_stun_wardens = "mod_boss_stage_
 tt.events.list[1].name = "stun_stage"
 tt.events.list[1].on_event = scripts.controller_stage_40_boss_shadow_waves.on_stun_stage
 tt = RT("decal_boss_40_waves_stun_towers", "decal_scripted")
-
-E:add_comps(tt, "pos")
 
 tt.main_script.insert = scripts.decal_boss_40_waves_stun_towers.insert
 tt.main_script.update = scripts.decal_boss_40_waves_stun_towers.update

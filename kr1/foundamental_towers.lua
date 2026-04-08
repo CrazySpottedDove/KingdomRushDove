@@ -733,7 +733,7 @@ local balance = require("kr1.data.balance")
 --#region tower_holder_blocked_elemental
 tt = RT("tower_holder_blocked_elemental", "tower")
 
-E:add_comps(tt, "tower", "tower_holder", "pos", "render", "ui", "info", "tween", "sound_events", "editor")
+E:add_comps(tt, "tower_holder", "tween")
 
 tt.tower.level = 1
 tt.tower.can_be_mod = false
@@ -754,7 +754,6 @@ tt.ui.click_rect = r(-40, -12, 80, 46)
 --#endregion
 --#region tower_holder_blocked_elemental_metal_b
 tt = RT("tower_holder_blocked_elemental_metal", "tower_holder_blocked_elemental")
-E:add_comps(tt, "main_script")
 b = balance.specials.terrain_8.elemental_holders.metal_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
@@ -794,7 +793,6 @@ tt.tween.props[1].loop = true
 ---龙魂宝壶 木
 --#region tower_holder_blocked_elemental_wood
 tt = RT("tower_holder_blocked_elemental_wood", "tower_holder_blocked_elemental")
-E:add_comps(tt, "main_script")
 b = balance.specials.terrain_8.elemental_holders.wooden_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
@@ -836,8 +834,6 @@ tt.tower_holder.unblock_price = 50
 --#region tower_holder_blocked_elemental_water_b
 tt = RT("tower_holder_blocked_elemental_water", "tower_holder_blocked_elemental")
 
-E:add_comps(tt, "main_script")
-
 b = balance.specials.terrain_8.elemental_holders.water_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
@@ -873,7 +869,6 @@ tt.tween.props[1].loop = true
 --#endregion
 --#region tower_holder_blocked_elemental_fire
 tt = RT("tower_holder_blocked_elemental_fire", "tower_holder_blocked_elemental")
-E:add_comps(tt, "main_script")
 b = balance.specials.terrain_8.elemental_holders.fire_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
@@ -910,8 +905,6 @@ tt.tween.props[1].loop = true
 --#region tower_holder_blocked_elemental_earth
 tt = RT("tower_holder_blocked_elemental_earth", "tower_holder_blocked_elemental")
 
-E:add_comps(tt, "main_script")
-
 b = balance.specials.terrain_8.elemental_holders.earth_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
@@ -947,8 +940,6 @@ tt.tween.props[1].loop = true
 --#endregion
 --#region tower_holder_elemental
 tt = RT("tower_holder_elemental", "tower_holder")
-
-E:add_comps(tt, "main_script")
 
 tt.main_script.update = scripts.tower_holder_elemental.update
 tt.main_script.remove = scripts.tower_holder_elemental.remove
@@ -1898,7 +1889,7 @@ tt.modifier.duration = 0.5
 tt.modifier.use_mod_offset = false
 tt = E:register_t("tower_stage_13_sunray", "tower")
 b = balance.specials.towers.stage_13_sunray
-E:add_comps(tt, "user_selection", "attacks", "editor")
+E:add_comps(tt, "user_selection", "attacks")
 tt.tower.type = "tower_stage_13_sunray"
 tt.tower.menu_offset = v(0, 45)
 tt.tower.can_be_sold = false

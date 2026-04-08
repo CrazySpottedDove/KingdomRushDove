@@ -140,7 +140,7 @@ local d=delay*i
 c.render.sprites[1].name="break"
 c.render.sprites[1].ts=store.tick_ts
 c.render.sprites[1].time_offset=-1*d
-c.timed.disabled=nil
+c.timed.runs=1
 local s=E:create_entity("decal_s09_crystal_debris")
 s.pos.x,s.pos.y=c.pos.x+c.debris_pos.x,c.pos.y+c.debris_pos.y
 U.animation_start(s,nil,nil,store.tick_ts+d+fts(7))

@@ -454,7 +454,7 @@ tt.timed_attacks.list[1].min_cooldown = 5
 --#region enemy_spider_bigger_egg
 tt = RT("enemy_spider_bigger_egg", "decal_scripted")
 
-AC(tt, "render", "spawner", "tween")
+AC(tt, "spawner", "tween")
 
 tt.main_script.update = scripts.enemies_spawner.update
 tt.render.sprites[1].anchor.y = 0.22
@@ -519,7 +519,7 @@ tt.vis.bans = bor(F_SKELETON, F_POISON)
 --#region enemy_spider_egg
 tt = RT("enemy_spider_egg", "decal_scripted")
 
-AC(tt, "render", "spawner", "tween")
+AC(tt, "spawner", "tween")
 
 tt.main_script.update = scripts.enemies_spawner.update
 tt.render.sprites[1].anchor.y = 0.22
@@ -3367,7 +3367,7 @@ tt.render.sprites[1].name = "bolt_munra_hit"
 --#region munra_sarcophagus
 tt = RT("munra_sarcophagus", "decal_scripted")
 
-AC(tt, "render", "spawner")
+AC(tt, "spawner")
 
 tt.main_script.update = scripts.enemies_spawner.update
 tt.render.sprites[1].anchor.y = 0.25
@@ -4016,7 +4016,7 @@ tt.vis.bans = bor(F_SKELETON, F_POISON)
 --#region jungle_spider_egg
 tt = RT("jungle_spider_egg", "decal_scripted")
 
-AC(tt, "render", "spawner", "tween")
+AC(tt, "spawner", "tween")
 
 tt.main_script.update = scripts.enemies_spawner.update
 tt.render.sprites[1].anchor.y = 0.22
@@ -4619,7 +4619,7 @@ tt.vis.flags = bor(tt.vis.flags, F_SPELLCASTER)
 --#region savant_portal
 tt = RT("savant_portal", "decal_scripted")
 
-AC(tt, "render", "spawner", "sound_events")
+AC(tt, "spawner", "sound_events")
 
 tt.main_script.update = scripts.savant_portal.update
 tt.render.sprites[1].anchor.y = 0.5
@@ -4794,7 +4794,7 @@ tt.vis.flags = bor(F_ENEMY, F_FLYING)
 --#region quetzal_egg
 tt = RT("quetzal_egg", "decal_scripted")
 
-AC(tt, "render", "spawner", "tween")
+AC(tt, "spawner", "tween")
 
 tt.main_script.update = scripts.enemies_spawner.update
 tt.render.sprites[1].anchor.y = 0.18
@@ -4938,8 +4938,6 @@ tt.sound_events.insert = "SaurianSavantAttack"
 --#endregion
 --#region bluegale_clouds_aura
 tt = RT("bluegale_clouds_aura", "aura")
-
-AC(tt, "sound_events")
 
 tt.main_script.insert = scripts.bluegale_clouds.insert
 tt.main_script.update = scripts.bluegale_clouds.update
@@ -7587,7 +7585,7 @@ tt.modifier.duration = fts(12)
 --#region enemy_sarelgaz_bigger_egg
 tt = RT("enemy_sarelgaz_bigger_egg", "decal_scripted")
 
-AC(tt, "render", "spawner", "tween")
+AC(tt, "spawner", "tween")
 
 tt.main_script.update = scripts.enemies_spawner.update
 tt.render.sprites[1].anchor.y = 0.22

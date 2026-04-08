@@ -343,7 +343,6 @@ tt.powers.cripple.name = "CRIPPLE"
 tt = RT("soldier_elf", "soldier_militia")
 
 AC(tt, "powers", "ranged")
-AC(tt, "ranged")
 
 image_y = 32
 anchor_y = 0.19
@@ -2469,7 +2468,7 @@ tt.sound_events.insert = "TowerPandasRangedBolt"
 --#region tower_rocket_gunners_lvl4
 tt = RT("tower_rocket_gunners_lvl4", "tower")
 b = balance.towers.rocket_gunners
-AC(tt, "barrack", "powers", "tower_upgrade_persistent_data")
+AC(tt, "barrack", "powers")
 tt.tower.type = "rocket_gunners"
 tt.tower.kind = TOWER_KIND_ARCHER
 tt.tower.level = 1
@@ -2861,7 +2860,7 @@ tt.main_script.update = scripts.mod_dps.update
 --#region tower_dwarf_lvl4
 tt = RT("tower_dwarf_lvl4", "tower")
 b = balance.towers.dwarf
-AC(tt, "barrack", "vis", "powers")
+AC(tt, "barrack", "powers")
 tt.powers.formation = CC("power")
 tt.powers.formation.price_base = b.formation.price[1]
 tt.powers.formation.price_inc = b.formation.price[2]
@@ -3115,7 +3114,7 @@ tt.bullet = "bolt_soul_soldier_tower_ghost"
 tt = RT("tower_ghost_lvl1", "tower")
 b = balance.towers.ghost
 
-AC(tt, "barrack", "vis", "tower_upgrade_persistent_data")
+AC(tt, "barrack")
 
 tt.tower.type = "ghost"
 tt.tower.kind = TOWER_KIND_BARRACK
@@ -3539,7 +3538,7 @@ tt.ui.click_rect = r(-42, 0, 84, 90)
 
 tt = E:register_t("tower_arborean_sentinels", "tower")
 b = balance.specials.towers.arborean_sentinels
-E:add_comps(tt, "vis", "barrack")
+E:add_comps(tt, "barrack")
 tt.tower.type = "tower_arborean_sentinels"
 tt.tower.level = 1
 tt.tower.kind = TOWER_KIND_BARRACK
@@ -3643,7 +3642,7 @@ tt.unit.price = b.barkshield.price
 
 tt = E:register_t("tower_stage_28_priests_barrack", "tower")
 b = balance.specials.towers.tower_stage_28_priests_barrack
-E:add_comps(tt, "vis", "barrack")
+E:add_comps(tt, "barrack")
 tt.tower.type = "tower_priests_barrack"
 tt.tower.level = 1
 tt.tower.kind = TOWER_KIND_BARRACK

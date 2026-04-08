@@ -29,7 +29,7 @@ require("game_templates_utils")
 
 --#region tower_arcane_wizard
 tt = RT("tower_arcane_wizard", "tower_mage_1")
-AC(tt, "attacks", "powers")
+AC(tt, "powers")
 image_y = 90
 tt.tower.type = "arcane_wizard"
 tt.tower.level = 1
@@ -175,7 +175,7 @@ end
 --#region tower_sorcerer
 tt = RT("tower_sorcerer", "tower_mage_1")
 
-AC(tt, "attacks", "powers", "barrack")
+AC(tt, "powers", "barrack")
 
 image_y = 74
 tt.tower.type = "sorcerer"
@@ -307,8 +307,6 @@ tt.polymorph.transfer_speed_factor = 1.25
 --#endregion
 --#region soldier_elemental
 tt = RT("soldier_elemental", "soldier_militia")
-
-AC(tt, "melee")
 
 image_y = 64
 anchor_y = 0.15384615384615385
@@ -741,7 +739,7 @@ mod_death_rider.main_script.update = scripts.mod_track_target.update
 --#region tower_sunray
 tt = RT("tower_sunray", "tower_mage_1")
 
-AC(tt, "powers", "attacks")
+AC(tt, "powers")
 
 tt.tower.level = 1
 tt.tower.type = "sunray"
@@ -1706,7 +1704,7 @@ tt.render.sprites[1].name = "necromancer_tower_death_rider_start_walk_FX_back_id
 
 --#region tower_necromancer_lvl4
 tt = RT("tower_necromancer_lvl4", "tower")
-AC(tt, "attacks", "tower_upgrade_persistent_data", "tween", "powers")
+AC(tt, "attacks", "tween", "powers")
 tt.tower.type = "necromancer_lvl4"
 tt.tower.level = 1
 tt.tower.price = b.price[4]
@@ -2056,7 +2054,7 @@ tt.main_script.remove = scripts.mod_track_target.remove
 --#region tower_ray_lvl4
 tt = RT("tower_ray_lvl4", "tower")
 local b = balance.towers.ray
-AC(tt, "attacks", "vis", "tween", "powers")
+AC(tt, "attacks", "tween", "powers")
 tt.tower.type = "ray"
 tt.info.enc_icon = 15
 tt.info.i18n_key = "TOWER_RAY_4"
@@ -2761,7 +2759,7 @@ tt.render.sprites[1] = nil
 --#region tower_arcane_wizard_lvl4
 tt = RT("tower_arcane_wizard_lvl4", "tower")
 
-AC(tt, "attacks", "powers", "vis")
+AC(tt, "attacks", "powers")
 
 b = balance.towers.arcane_wizard
 image_y = 90
@@ -3070,7 +3068,7 @@ tt.render.sprites[4].offset.y = 75
 --#region tower_hermit_toad_lvl4
 tt = RT("tower_hermit_toad_lvl4", "tower")
 b = balance.towers.hermit_toad
-AC(tt, "attacks", "vis", "idle_flip", "powers", "tower_upgrade_persistent_data")
+AC(tt, "attacks", "idle_flip", "powers")
 tt.tower_upgrade_persistent_data.current_mode = 0
 tt.tower_upgrade_persistent_data.max_current_mode = 1
 tt.tower.type = "hermit_toad"
@@ -3421,7 +3419,7 @@ tt.positions = {{{0, v(100, 0)}, {0.3, v(100, 50)}, {0.5, v(50, 0)}, {0.7, v(0, 
 
 --#region tower_arborean_emissary_lvl4
 tt = RT("tower_arborean_emissary_lvl4", "tower")
-AC(tt, "attacks", "powers", "vis")
+AC(tt, "attacks", "powers")
 b = balance.towers.arborean_emissary
 image_y = 90
 tt.tower.type = "arborean_emissary"
@@ -3651,7 +3649,7 @@ local b_dragons = balance.towers.dragons
 
 tt = RT("tower_dragons_lvl4", "tower")
 
-AC(tt, "attacks", "barrack", "vis", "user_selection", "powers")
+AC(tt, "attacks", "barrack", "user_selection", "powers")
 
 tt.tower.type = "dragons"
 tt.tower.kind = TOWER_KIND_MAGE

@@ -200,7 +200,7 @@ tt.render.sprites[1].draw_order = 2
 --#region soldier_gerald_paladin
 tt = RT("soldier_gerald_paladin", "soldier_militia")
 
-AC(tt, "reinforcement", "melee", "tween", "nav_grid")
+AC(tt, "reinforcement", "tween", "nav_grid")
 
 anchor_y = 0.15
 anchor_x = 0.5
@@ -1288,8 +1288,6 @@ tt.tween.remove = false
 --#region projectile_denas
 tt = RT("projectile_denas", "arrow")
 
-AC(tt, "sound_events")
-
 tt.bullet.flight_time = fts(20)
 tt.bullet.rotation_speed = 15 * FPS * math.pi / 180
 tt.bullet.damage_min = 11
@@ -1348,7 +1346,7 @@ tt.sound_events.insert = nil
 --#region denas_buff_aura
 tt = RT("denas_buff_aura", "aura")
 
-AC(tt, "main_script", "render", "tween")
+AC(tt, "render", "tween")
 
 tt.aura.duration = 1.63
 tt.entity = "denas_buffing_circle"
@@ -1480,7 +1478,7 @@ tt.timed_attacks.list[2].sound = "HeroVikingBearTransform"
 --#region soldier_ingvar_ancestor
 tt = RT("soldier_ingvar_ancestor", "soldier_militia")
 
-AC(tt, "reinforcement", "melee", "nav_grid")
+AC(tt, "reinforcement", "nav_grid")
 
 image_y = 60
 image_x = 72
@@ -4181,7 +4179,7 @@ tt.render.sprites[1].z = Z_OBJECTS
 --#region decal_kraken
 tt = RT("decal_kraken", "decal_scripted")
 
-AC(tt, "render", "sound_events")
+AC(tt, "sound_events")
 
 tt.main_script.update = scripts.decal_kraken.update
 tt.render.sprites[1].prefix = "kraken_water"
@@ -7611,7 +7609,7 @@ tt.sound_events.insert = "ElvesHeroLynnFateSealed"
 --#region mod_lynn_ultimate
 tt = RT("mod_lynn_ultimate", "modifier")
 
-AC(tt, "dps", "render", "tween", "dps")
+AC(tt, "dps", "render", "tween")
 
 tt.render.sprites[1].name = "mod_lynn_ultimate"
 tt.render.sprites[2] = CC("sprite")
@@ -8959,7 +8957,7 @@ tt.render.sprites[1].anchor.y = 0.11666666666666667
 --#region hero_arivan_ultimate
 tt = RT("hero_arivan_ultimate", "aura")
 
-AC(tt, "timed_attacks", "motion", "nav_path", "render", "sound_events")
+AC(tt, "timed_attacks", "motion", "nav_path", "render")
 
 tt.aura.duration = nil
 tt.aura.range_nodes = 60
@@ -11381,7 +11379,7 @@ tt.dps.damage_type = DAMAGE_POISON
 --#endregion
 --#region soldier_hero_hunter_beast
 tt = RT("soldier_hero_hunter_beast", "decal_scripted")
-AC(tt, "pos", "main_script", "attacks", "force_motion", "tween", "sound_events", "force_motion")
+AC(tt, "attacks", "force_motion", "tween", "sound_events")
 b = balance.heroes.hero_hunter.beasts
 tt.flight_height = 50
 tt.force_motion.max_a = 6000
@@ -11995,7 +11993,7 @@ tt.ultimate = {
 --#endregion
 --#region soldier_hero_space_elf_astral_reflection
 tt = RT("soldier_hero_space_elf_astral_reflection", "soldier_militia")
-AC(tt, "melee", "ranged", "reinforcement", "tween", "transfer")
+AC(tt, "ranged", "reinforcement", "tween", "transfer")
 b = balance.heroes.hero_space_elf
 tt.info.i18n_key = "HERO_SPACE_ELF_ASTRAL_REFLECTION_ENTITY"
 tt.info.enc_icon = 12
@@ -12230,7 +12228,7 @@ tt.offset_y_per_tower = {
 --#region mod_hero_space_elf_ultimate
 tt = RT("mod_hero_space_elf_ultimate", "modifier")
 b = balance.heroes.hero_space_elf
-AC(tt, "render", "tween", "track_kills", "sound_events")
+AC(tt, "render", "tween", "track_kills")
 tt.modifier.type = MOD_TYPE_TIMELAPSE
 tt.modifier.vis_flags = F_MOD
 tt.modifier.vis_bans = F_BOSS
@@ -12575,7 +12573,7 @@ tt.sound_events.insert = "HeroRaelynUltimateCast"
 --#region hero_raelyn_ultimate_entity
 tt = RT("hero_raelyn_ultimate_entity", "soldier_militia")
 
-AC(tt, "melee", "nav_grid", "reinforcement", "tween")
+AC(tt, "nav_grid", "reinforcement", "tween")
 
 b = balance.heroes.hero_raelyn
 tt.controable = true
@@ -13470,8 +13468,6 @@ tt.pulse_sound = "HeroDragonGemPowerConduitCrystal"
 --#endregion
 --#region mod_hero_dragon_gem_skill_stun
 tt = RT("mod_hero_dragon_gem_skill_stun", "mod_stun")
-
-AC(tt, "render")
 
 tt.modifier.duration = nil
 tt.render.sprites[1].prefix = "hero_evil_dragon_breath_crystal"
@@ -15244,8 +15240,6 @@ tt.sound = "HeroLumenirCelestialJudgementImpact"
 --#region mod_hero_lumenir_stun
 tt = RT("mod_hero_lumenir_stun", "mod_stun")
 
-AC(tt, "render")
-
 tt.modifier.duration = fts(23)
 --#endregion
 --#region mod_hero_lumenir_shield
@@ -15419,8 +15413,6 @@ tt.tween.remove = true
 --#region decal_hero_wukong_ranged_attack_staff_decal
 tt = RT("decal_hero_wukong_ranged_attack_staff_decal", "decal_tween")
 
-AC(tt, "tween")
-
 tt.render.sprites[1].name = "hero_wukong_weapon_decal_decal"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].loop = false
@@ -15483,7 +15475,7 @@ tt.info.i18n_key = "SOLDIER_HERO_WUKONG_HAIR_CLONES_2"
 --#endregion
 --#region soldier_hero_wukong_zhu_apprentice
 tt = RT("soldier_hero_wukong_zhu_apprentice", "soldier_militia")
-AC(tt, "melee", "nav_grid")
+AC(tt, "nav_grid")
 b = balance.heroes.hero_wukong.zhu_apprentice
 tt.info.i18n_key = "SOLDIER_ZHU_APPRENTICE"
 tt.info.enc_icon = 12
@@ -16582,7 +16574,7 @@ tt.main_script.insert = scripts.mod_track_target.insert
 tt.main_script.update = scripts.mod_hps.update
 tt = E:register_t("hero_muyrn_leaf_whirlwind_decal", "decal_scripted")
 
-E:add_comps(tt, "render", "sound_events")
+E:add_comps(tt, "sound_events")
 
 tt.main_script.update = scripts.hero_muyrn_leaf_whirlwind_decal.update
 tt.render.sprites[1].prefix = "hero_nyru_leaf_whirlwind"
@@ -19066,7 +19058,7 @@ tt.main_script.update = scripts.hero_lava_ultimate.update
 
 tt = RT("fx_explosion_hero_lava_double_trouble", "fx")
 tt.render.sprites[1].name = "hero_lava_ultimate_hit"
-tt.render.sprites[1].z = Z_OBJECT
+tt.render.sprites[1].z = Z_OBJECTS
 
 tt = RT("decal_ultimate_hero_lava", "decal_tween")
 tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
@@ -20401,7 +20393,7 @@ tt.spawn_bullet = "bullet_hero_dragon_sun_ultimate"
 -- hero main template
 tt = RT("hero_dragon_sun", "hero")
 b = balance.heroes.hero_dragon_sun
-AC(tt, "ranged", "timed_attacks", "tween", "nav_grid")
+AC(tt, "ranged", "timed_attacks", "tween")
 tt.hero.level_stats.armor = b.armor
 tt.hero.level_stats.hp_max = b.hp_max
 tt.hero.level_stats.ranged_damage_min = b.basic_attack.damage_min

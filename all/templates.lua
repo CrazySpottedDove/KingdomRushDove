@@ -322,8 +322,6 @@ shotgun.bullet.vis_flags = F_RANGED
 
 local bomb = E:register_t("bomb", "bullet")
 
-E:add_comps(bomb, "sound_events")
-
 bomb.bullet.flight_time = fts(31)
 bomb.bullet.rotation_speed = 20 * FPS * math.pi / 180
 bomb.bullet.hit_fx = "fx_explosion_small"

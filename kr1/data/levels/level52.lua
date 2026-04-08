@@ -115,12 +115,12 @@ for i,e in ipairs(trees) do
 e.render.sprites[1].name="burn"
 e.render.sprites[1].ts=store.tick_ts
 e.render.sprites[1].time_offset=-i*tree_delay
-e.timed.disabled=nil
+e.timed.runs=1
 end
 for i,e in ipairs(tree_fires) do
 e.render.sprites[1].hidden=false
 e.render.sprites[1].ts=store.tick_ts+i*tree_fire_delay
-e.timed.disabled=nil
+e.timed.runs=1
 end
 for i,e in ipairs(charcoals) do
 e.tween.disabled=nil

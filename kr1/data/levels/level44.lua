@@ -23,7 +23,7 @@ end
 end
 function level:load(store)
 LU.insert_background(store,"Stage18_0001",Z_BACKGROUND)
-LU.insert_background(store,"Stage18_0002",Z_OBJECT,370)
+LU.insert_background(store,"Stage18_0002",Z_OBJECTS,370)
 LU.insert_defend_points(store,self.locations.exits,store.level_terrain_style)
 local flags={{"decal_defense_flag_water",717,55},{"decal_defense_flag_water",863,55},{"decal_defense_flag",400,55},{"decal_defense_flag",549,55}}
 for _,f in pairs(flags) do
