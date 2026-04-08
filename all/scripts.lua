@@ -6717,6 +6717,10 @@ function scripts.mod_heal_on_kill.update(this, store)
 	local hok = this.heal_on_kill
 	local target = store.entities[m.target_id]
 
+	if not target then
+		queue_remove(store, this)
+	end
+
 	this.pos = target.pos
 
 	while true do

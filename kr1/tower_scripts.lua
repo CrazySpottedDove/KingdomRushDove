@@ -9413,27 +9413,28 @@ function scripts.tower_pandas.update(this, store)
 end
 
 function scripts.tower_pandas.remove(this, store)
-	for _, panda in pairs(this.pandas) do
-		if panda.status == "on_tower" then
-			local fx = E:create_entity("fx_tower_panda_disappear_wood")
+	-- 这里暂时注释，因为一级熊猫的美术资源被错误地删除了，导致这里的 fx 是无法渲染的。
+	-- for _, panda in pairs(this.pandas) do
+	-- 	if panda.status == "on_tower" then
+	-- 		local fx = E:create_entity("fx_tower_panda_disappear_wood")
 
-			fx.pos = vclone(this.pos)
-			fx.pos.x = fx.pos.x + this.render.sprites[panda.render].offset.x
+	-- 		fx.pos = vclone(this.pos)
+	-- 		fx.pos.x = fx.pos.x + this.render.sprites[panda.render].offset.x
 
-			if string.find(panda.soldier_type, "blue") then
-				fx.pos.y = fx.pos.y + 30
-			elseif string.find(panda.soldier_type, "red") then
-				fx.pos.y = fx.pos.y + 10
-			else
-				fx.pos.y = fx.pos.y + 0
-			end
+	-- 		if string.find(panda.soldier_type, "blue") then
+	-- 			fx.pos.y = fx.pos.y + 30
+	-- 		elseif string.find(panda.soldier_type, "red") then
+	-- 			fx.pos.y = fx.pos.y + 10
+	-- 		else
+	-- 			fx.pos.y = fx.pos.y + 0
+	-- 		end
 
-			fx.render.sprites[1].flip_x = random() > 0.5
-			fx.render.sprites[1].ts = store.tick_ts
+	-- 		fx.render.sprites[1].flip_x = random() > 0.5
+	-- 		fx.render.sprites[1].ts = store.tick_ts
 
-			queue_insert(store, fx)
-		end
-	end
+	-- 		queue_insert(store, fx)
+	-- 	end
+	-- end
 
 	this.pandas = {}
 
