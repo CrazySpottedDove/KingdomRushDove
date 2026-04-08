@@ -10529,8 +10529,6 @@ function scripts.mod_croc_boss_evolution_polymorph.insert(this, store)
 
 		queue_insert(store, entity_poly)
 
-		entity_poly.enemy.gems = target.enemy.gems
-		target.enemy.gems = 0
 		entity_poly.health.hp_healed = target.health.hp_healed or 0
 
 		local hp_start = target.health.hp

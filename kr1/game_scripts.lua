@@ -13721,12 +13721,10 @@ function scripts.enemy_mantaray.update(this, store)
 
 								if i == 1 then
 									e.enemy.gold = this.enemy.gold
-									e.enemy.gems = this.enemy.gems
 									e.pos.y = this.pos.y
 									e.nav_path.spi = this.nav_path.spi
 								else
 									e.enemy.gold = 0
-									e.enemy.gems = 0
 									e.pos.y = this.pos.y
 									e.nav_path.spi = km.zmod(this.nav_path.spi + math.random(1, 2), 3)
 								end
@@ -17983,13 +17981,11 @@ function scripts.mod_bloodsydian_warlock.update(this, store)
 		e.render.sprites[1].flip_x = target.render.sprites[1].flip_x
 		e.enemy.gold = target.enemy.gold
 		e.enemy.gold_bag = target.enemy.gold_bag
-		e.enemy.gems = target.enemy.gems
 
 		queue_insert(store, e)
 
 		target.enemy.gold = 0
 		target.enemy.gold_bag = 0
-		target.enemy.gems = 0
 	end
 
 	S:queue("ElvesCrystallizedGnoll")
@@ -18053,7 +18049,6 @@ function scripts.mod_dark_spitters.update(this, store)
 			e.render.sprites[1].name = "raise"
 			e.enemy.gold = 0
 			e.enemy.gold_bag = 0
-			e.enemy.gems = 0
 
 			queue_insert(store, e)
 
@@ -51944,7 +51939,6 @@ function scripts.enemy_citizen.insert(this, store)
 			new_citizen.pos = this.pos
 			new_citizen.nav_path = this.nav_path
 			new_citizen.spawn_data = this.spawn_data
-			new_citizen.enemy.gems = this.enemy.gems
 			new_citizen.motion.forced_waypoint = this.motion.forced_waypoint
 			new_citizen.custom_spawn_data = this.custom_spawn_data
 

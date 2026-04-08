@@ -468,7 +468,7 @@ function SU.do_death_spawns(store, this)
 			s.render.sprites[1].name = this.death_spawns.spawn_animation
 		end
 
-		if s.render and s.render.sprites[1] and this.render and this.render.sprites[1] then
+		if s.render and this.render then
 			s.render.sprites[1].flip_x = this.render.sprites[1].flip_x
 		end
 

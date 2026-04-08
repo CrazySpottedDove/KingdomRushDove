@@ -1157,6 +1157,30 @@ function wave_db:add_waves_to_groups(gwaves)
 	end
 end
 
+--- 列举当前关卡出怪数据库中所有通过正常出怪方式出现的敌人
+function wave_db:list_enemies()
+	local enemies = {}
+	for _, group in pairs(self.db.groups) do
+		for _, wave in pairs(group.waves) do
+			for _, spawn in pairs(wave.spawns) do
+				if spawn.creep then
+					enemies[spawn.creep] = true
+				end
+				if spawn.creep_aux then
+					enemies[spawn.creep_aux] = true
+				end
+			end
+		end
+	end
+	local enemy_list = {}
+	for enemy, _ in pairs(enemies) do
+		if E:get_template(enemy).enemy then
+			table.insert(enemy_list, enemy)
+		end
+	end
+	return enemy_list
+end
+
 function wave_db:groups()
 	return self.db.groups
 end

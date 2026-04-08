@@ -452,7 +452,6 @@ tower_upgrade_persistent_data.upgrade_functions = {}
 
 local enemy = E:register_c("enemy")
 
-enemy.name = nil
 enemy.can_do_magic = true
 enemy.can_accept_magic = true
 enemy.blockers = {}
@@ -463,7 +462,6 @@ enemy.valid_terrains = TERRAIN_LAND
 enemy.gold = 0
 enemy.gold_bag = 0
 enemy.lives_cost = 1
-enemy.gems = 0
 enemy.counts = {}
 enemy.remove_at_goal_line = true
 local soldier = E:register_c("soldier")
