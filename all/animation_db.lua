@@ -141,14 +141,14 @@ function animation_db:fn(animation_name, time_offset, loop, fps)
 
 	if not a then
 		if not animation_name and self.missing_animations["nil"] or self.missing_animations[animation_name] then
-			return nil
+			return nil, 0, nil
 		end
 
 		log.error("animation %s not found", animation_name)
 
 		self.missing_animations[animation_name or "nil"] = true
 
-		return nil
+		return nil, 0, nil
 	end
 
 	return self:fni(a, time_offset, loop, fps)
