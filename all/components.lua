@@ -254,7 +254,6 @@ local texts = E:register_c("texts")
 texts.list = {}
 texts.list[1] = E:clone_c("text")
 local particle_system = E:register_c("particle_system")
-
 particle_system.alphas = {255}
 particle_system.anchor = v(0.5, 0.5)
 particle_system.animated = false
@@ -289,6 +288,10 @@ particle_system.track_offset = nil
 particle_system.track_rotation = nil
 particle_system.ts_offset = 0
 particle_system.z = Z_BULLET_PARTICLES
+-- particle_system:on_insert 进行统一赋值
+particle_system.ts = 0
+particle_system.emit_ts = 0
+particle_system.last_pos = v(0, 0)
 -- frames, particles, particle_count 为私有属性，只允许在 system 中统一管理更新
 particle_system.frames = {}
 particle_system.particles = {}

@@ -1378,7 +1378,7 @@ scripts.missile_wizard = {
 
 			pss.particle_system.name = "missile_wizard_sparks" .. i
 			pss.particle_system.track_id = this.id
-			pss.particle_system.emit_ts = store.tick_ts + i / (3 * pss.particle_system.emission_rate)
+			pss.particle_system.ts_offset = i / (3 * pss.particle_system.emission_rate)
 
 			queue_insert(store, pss)
 		end

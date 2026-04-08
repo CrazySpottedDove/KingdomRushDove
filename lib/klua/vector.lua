@@ -34,6 +34,10 @@ ffi.metatype("vec2", {
 			self.x = x
 			self.y = y
 		end,
+		copy = function(self, other)
+			self.x = other.x
+			self.y = other.y
+		end,
 		dist = function(self, other)
 			local dx = self.x - other.x
 			local dy = self.y - other.y
