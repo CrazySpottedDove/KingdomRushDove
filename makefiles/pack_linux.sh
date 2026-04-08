@@ -16,7 +16,7 @@ fi
 echo "Current version id: $current_id"
 
 mkdir -p ".versions"
-ARCHIVE_DIR=".versions/KingdomRushDove-Linux-v${current_id}.zip"
+ARCHIVE_DIR=".versions/KingdomRushDove-Linux-Cycle2-v${current_id}.zip"
 TOPDIR="$(basename "$ARCHIVE_DIR" .zip)"  # love_env 改名为这个
 # 依赖检查
 if ! command -v zip >/dev/null 2>&1; then
