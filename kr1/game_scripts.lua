@@ -19137,7 +19137,7 @@ function scripts.aura_soldier_gryphon_guard_lower.update(this, store)
 			target.tween.reverse = false
 			target.tween.ts = store.tick_ts
 			target.nav_rally.pos = this.show_pos
-			target.nav_rally.center = this.show
+			target.nav_rally.center = this.show_pos
 			target.nav_rally.new = true
 
 			coroutine.yield()
