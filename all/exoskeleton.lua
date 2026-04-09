@@ -381,7 +381,7 @@ function EXO:load_animations_to_animation_db(exo)
 			}
 		end
 
-		A:generate_frames(db[name])
+		A:generate_frames(name)
 	end
 end
 

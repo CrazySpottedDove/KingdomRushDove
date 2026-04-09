@@ -105,8 +105,6 @@ local function name_scale(name, scale)
 	return string.format("%s-%.6f", name, scale)
 end
 
-local ffi = require("ffi")
-
 local _MAX_THREADS = calculate_thread_count()
 local _LOAD_IMAGE_THREAD_CODE = [[
 local cin,cout,th_i = ...
@@ -481,15 +479,10 @@ function image_db:preload_atlas(ref_scale, path, name)
 	end
 
 	local frames = FS.load(group_file)()
-	local unique_frames = {}
 	local image_names = {}
 
 	-- 为每一帧设置具体信息，并处理 alias
-	for _, v in pairs(frames) do
-		v.group = name_scale
-		-- Texture 中 x 坐标，Texture 中 y 坐标，宽度，高度，Texture 宽度，Texture 高度
-		v.quad = G.newQuad(v.f_quad[1], v.f_quad[2], v.f_quad[3], v.f_quad[4], v.a_size[1], v.a_size[2])
-
+	for k, v in pairs(frames) do
 		-- Android 端：自动选择实际存在的格式（ASTC > PNG > DDS）
 		if IS_ANDROID then
 			if v.a_name:match("%.dds$") then
@@ -516,28 +509,20 @@ function image_db:preload_atlas(ref_scale, path, name)
 
 		image_names[v.a_name] = true
 
-		-- 删除不再需要的信息，节省内存
-		v.a_size = nil
-		-- local a_size = ffi.new("int[2]")
-		-- a_size[0] = v.a_size[1]
-		-- a_size[1] = v.a_size[2]
-		-- v.a_size = a_size
-		v.atlas = remove_extension_fast(v.a_name)
-
-		-- 允许为帧也独立定义 ref_scale
-		v.ref_scale = ref_scale * (v.ref_scale or 1)
-
+		-- 我们重建 atlas 数据，除去了冗余数据，以做到内存占用的减少
+		self.db_atlas[k] = {
+			atlas = remove_extension_fast(v.a_name),
+			group = name_scale,
+			quad = G.newQuad(v.f_quad[1], v.f_quad[2], v.f_quad[3], v.f_quad[4], v.a_size[1], v.a_size[2]),
+			trim = {v.trim[1], v.trim[2]},
+			ref_scale = ref_scale * (v.ref_scale or 1),
+			size = {v.size[1], v.size[2]}
+		}
 		-- alias 只有指针
 		for i = 1, #v.alias do
-			unique_frames[v.alias[i]] = v
+			self.db_atlas[v.alias[i]] = self.db_atlas[k]
 		end
 	end
-
-	for k, v in pairs(unique_frames) do
-		frames[k] = v
-	end
-
-	self.db_atlas = table.merge(self.db_atlas, frames)
 
 	return image_names
 end
@@ -668,25 +653,40 @@ end
 ---@param group string 纹理组名称
 ---@param scale number 纹理参考缩放比例
 function image_db:add_image(name, image, group, scale)
+	--     self.db_atlas[k] = {
+	--     atlas = remove_extension_fast(v.a_name),
+	--     group = name_scale,
+	--     quad = G.newQuad(v.f_quad[1], v.f_quad[2], v.f_quad[3], v.f_quad[4], v.a_size[1], v.a_size[2]),
+	--     trim = {v.trim[1], v.trim[2]},
+	--     ref_scale = ref_scale * (v.ref_scale or 1),
+	--     size = {v.size[1], v.size[2]}
+	-- }
 	scale = scale or 1
 
 	local name_scale = string.format("%s-%.6f", group, scale)
 	local w, h = image:getDimensions()
-	local v = {}
+	-- local v = {}
 
-	v.size = {w, h}
-	v.trim = {0, 0, 0, 0}
-	v.a_name = name
-	-- v.a_size = {w, h}
-	-- local a_size = ffi.new("int[2]")
-	-- a_size[0] = w
-	-- a_size[1] = h
-	-- v.a_size = a_size
-	v.group = name_scale
-	v.quad = G.newQuad(0, 0, w, h, w, h)
-	v.atlas = name
-	v.ref_scale = scale
-	self.db_atlas[name] = v
+	-- v.size = {w, h}
+	-- v.trim = {0, 0}
+	-- -- v.a_name = name
+	-- -- v.a_size = {w, h}
+	-- -- local a_size = ffi.new("int[2]")
+	-- -- a_size[0] = w
+	-- -- a_size[1] = h
+	-- -- v.a_size = a_size
+	-- v.group = name_scale
+	-- v.quad = G.newQuad(0, 0, w, h, w, h)
+	-- v.atlas = name
+	-- v.ref_scale = scale
+	self.db_atlas[name] = {
+		atlas = name,
+		group = name_scale,
+		quad = G.newQuad(0, 0, w, h, w, h),
+		trim = {0, 0},
+		ref_scale = scale,
+		size = {w, h}
+	}
 	self.db_images[name] = {image, w, h}
 
 	if not self.atlas_uses[name_scale] then

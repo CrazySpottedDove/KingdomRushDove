@@ -136,7 +136,7 @@ end
 -- added: 预构建所有动画的帧数组 frames
 function animation_db:prebuild_frames()
 	for name, a in pairs(self.db) do
-		self:generate_frames(a)
+		self:generate_frames(name)
 	end
 end
 
@@ -160,7 +160,8 @@ function animation_db:fn(animation_name, time_offset, loop, fps)
 end
 
 -- 完成动画 frames 和 frame_names 的生成。所有从文件加载的动画都还处于不可用阶段，需要通过 generate_frames 来生成 frame_names 和 frame_count，以取得运行时的最高效率。
-function animation_db:generate_frames(a)
+function animation_db:generate_frames(name)
+	local a = self.db[name]
 	local frames = a.frames
 
 	if not frames then
@@ -222,11 +223,14 @@ function animation_db:generate_frames(a)
 		a.frame_count = frame_count
 	end
 
-	-- frame_names 可以完成 frames + prefix 的全部任务，且提供了更多信息。因此，原有数据可以被丢弃以节省内存
-	a.frames = nil
-	a.prefix = nil
-	a.from = nil
-	a.to = nil
+	-- 重建数据结构，除去了无效字段，减少内存开销
+	self.db[name] = {
+		frame_names = a.frame_names,
+		frame_count = a.frame_count
+	}
+
+	-- 解引用，避免占用内存
+	a.frame_names = nil
 end
 
 function animation_db:fni(animation, time_offset, loop, fps)
