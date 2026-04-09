@@ -6637,7 +6637,7 @@ tt.enemy.gold = 125
 tt.enemy.lives_cost = 3
 tt.enemy.melee_slot = vec_2(20, 0)
 tt.info.enc_icon = 25
-tt.info.portrait = "kr3_info_portraits_enemies_0037"
+tt.info.portrait = "kr3_info_portraits_enemies_0038"
 tt.health.armor = 0.9
 tt.health.hp_max = 4000
 tt.health_bar.offset = vec_2(0, 80)
@@ -6734,7 +6734,7 @@ tt = RT("enemy_drider", "enemy")
 AC(tt, "melee")
 
 tt.info.enc_icon = 20
-tt.info.portrait = "kr3_info_portraits_enemies_0035"
+tt.info.portrait = "kr3_info_portraits_enemies_0036"
 tt.enemy.gold = 50
 tt.enemy.melee_slot = vec_2(28, 0)
 tt.health.hp_max = 500
@@ -6763,13 +6763,12 @@ tt.melee.attacks[2].hit_time = fts(15)
 tt.melee.attacks[2].mod = "mod_drider_poison"
 tt.generation = 0
 --#endregion
+
 --#region enemy_mantaray
 tt = RT("enemy_mantaray", "enemy")
-
 AC(tt, "tween", "track_kills")
-
 tt.info.enc_icon = 28
-tt.info.portrait = "kr3_info_portraits_enemies_0038"
+tt.info.portrait = "kr3_info_portraits_enemies_0039"
 tt.enemy.gold = 15
 tt.enemy.max_blockers = 1
 tt.enemy.melee_slot = vec_2(17, 0)
@@ -6840,7 +6839,7 @@ tt = RT("enemy_razorboar", "enemy")
 AC(tt, "melee", "timed_attacks", "auras")
 
 tt.info.enc_icon = 23
-tt.info.portrait = "kr3_info_portraits_enemies_0034"
+tt.info.portrait = "kr3_info_portraits_enemies_0035"
 tt.auras.list[1] = CC("aura_attack")
 tt.auras.list[1].name = "aura_razorboar_rage"
 tt.auras.list[1].cooldown = 0
@@ -6951,7 +6950,7 @@ tt.health.magic_armor = 0.5
 tt.health_bar.offset = vec_2(0, 21)
 tt.info.i18n_key = "ENEMY_ARACHNOMANCER_SPIDER"
 tt.info.enc_icon = 30
-tt.info.portrait = "kr3_info_portraits_enemies_0036"
+tt.info.portrait = "kr3_info_portraits_enemies_0037"
 tt.motion.max_speed = 1.992 * FPS
 tt.render.sprites[1].anchor = vec_2(0.5, 0.15625)
 tt.render.sprites[1].prefix = "arachnomancer_spider"
