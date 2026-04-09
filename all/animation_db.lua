@@ -28,16 +28,16 @@ animation_db.tick_length = TICK_LENGTH
 animation_db.missing_animations = {}
 animation_db.loaded = false
 
-local number_format_cache = {}
-
-for i = 0, 9999 do
-	number_format_cache[i] = string.format("%04i", i)
-end
+local perf = require("dove_modules.perf.perf")
 
 function animation_db:load()
 	if self.loaded then
 		return
 	end
+
+	-- collectgarbage()
+	-- local before = collectgarbage("count")
+	-- perf.tmp_start("animation_db:load")
 
 	local function load_ani_file(f)
 		local ok, achunk = pcall(FS.load, f)
@@ -125,13 +125,16 @@ function animation_db:load()
 
 	self:prebuild_frames()
 
+-- perf.tmp_stop("animation_db:load")
+-- collectgarbage()
+-- local after = collectgarbage("count")
+-- print(string.format("animation_db:load memory usage before: %.2f KB, after: %.2f KB, diff: %.2f KB", before, after, after - before))
+
 -- self:save_to_file()
 end
 
 -- added: 预构建所有动画的帧数组 frames
 function animation_db:prebuild_frames()
-	self.prefix_s = {}
-
 	for name, a in pairs(self.db) do
 		self:generate_frames(a)
 	end
@@ -156,7 +159,7 @@ function animation_db:fn(animation_name, time_offset, loop, fps)
 	return self:fni(a, time_offset, loop, fps)
 end
 
--- 完成动画 frames 和 frame_names 的生成
+-- 完成动画 frames 和 frame_names 的生成。所有从文件加载的动画都还处于不可用阶段，需要通过 generate_frames 来生成 frame_names 和 frame_count，以取得运行时的最高效率。
 function animation_db:generate_frames(a)
 	local frames = a.frames
 
@@ -211,18 +214,19 @@ function animation_db:generate_frames(a)
 	end
 
 	if a.prefix and not a.frame_names then
-		if not self.prefix_s[a.prefix] then
-			self.prefix_s[a.prefix] = a.prefix .. "_"
-		end
-
-		local prefix_ = self.prefix_s[a.prefix]
-
 		a.frame_names = {}
-
-		for i = 1, #frames do
-			a.frame_names[i] = prefix_ .. (number_format_cache[frames[i]] or string.format("%04i", frames[i]))
+		local frame_count = #frames
+		for i = 1, frame_count do
+			a.frame_names[i] = a.prefix .. string.format("_%04i", frames[i])
 		end
+		a.frame_count = frame_count
 	end
+
+	-- frame_names 可以完成 frames + prefix 的全部任务，且提供了更多信息。因此，原有数据可以被丢弃以节省内存
+	a.frames = nil
+	a.prefix = nil
+	a.from = nil
+	a.to = nil
 end
 
 function animation_db:fni(animation, time_offset, loop, fps)
@@ -230,9 +234,10 @@ function animation_db:fni(animation, time_offset, loop, fps)
 
 	fps = fps or self.fps
 
-	local frames = a.frames
+	-- local frames = a.frames
 	local eps = 1e-09
-	local len = #frames
+	-- local len = #frames
+	local len = a.frame_count
 	local time_in_frames_plus_eps = time_offset * fps + eps
 	local next_elapsed = ceil(time_in_frames_plus_eps + self.tick_length * fps)
 	local runs = max(0, floor((next_elapsed - 1) / len))
@@ -264,16 +269,26 @@ function animation_db:duration(animation_name)
 		return nil
 	end
 
-	if not a.frames then
+	if not a.frame_names then
 		self:fni(a, 0, false)
 	end
 
-	return #a.frames / self.fps, #a.frames
+	return a.frame_count / self.fps, a.frame_count
 end
 
 function animation_db:save_to_file()
 	local storage = require("all.storage")
 	storage:write_lua("animation_db_dump.lua", self.db)
+end
+
+function animation_db:dump()
+	local animation_count = 0
+	local frame_count = 0
+	for k, v in pairs(self.db) do
+		animation_count = animation_count + 1
+		frame_count = frame_count + v.frame_count
+	end
+	print(string.format("animation count: %d, total frame count: %d", animation_count, frame_count))
 end
 
 return animation_db

@@ -75,6 +75,7 @@ function EXO:load()
 		end
 	end
 
+	-- A:dump()
 	self.exo_lists_to_load = {}
 end
 
@@ -372,11 +373,13 @@ function EXO:load_animations_to_animation_db(exo)
 	for _, animation in ipairs(exo.animations) do
 		local name = exo.name .. "_" .. animation.name
 
-		db[name] = {
-			from = 1,
-			to = #animation.frames,
-			prefix = name
-		}
+		if not db[name] then
+			db[name] = {
+				from = 1,
+				to = #animation.frames,
+				prefix = name
+			}
+		end
 
 		A:generate_frames(db[name])
 	end
