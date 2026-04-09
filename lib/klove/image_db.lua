@@ -105,6 +105,8 @@ local function name_scale(name, scale)
 	return string.format("%s-%.6f", name, scale)
 end
 
+local ffi = require("ffi")
+
 local _MAX_THREADS = calculate_thread_count()
 local _LOAD_IMAGE_THREAD_CODE = [[
 local cin,cout,th_i = ...
@@ -357,6 +359,7 @@ function image_db:queue_load_done()
 	self.queue_load_done_images = 0
 	self.image_name_queue = {}
 
+	-- self:save_to_file()
 	return true
 end
 
@@ -513,6 +516,12 @@ function image_db:preload_atlas(ref_scale, path, name)
 
 		image_names[v.a_name] = true
 
+		-- 删除不再需要的信息，节省内存
+		v.a_size = nil
+		-- local a_size = ffi.new("int[2]")
+		-- a_size[0] = v.a_size[1]
+		-- a_size[1] = v.a_size[2]
+		-- v.a_size = a_size
 		v.atlas = remove_extension_fast(v.a_name)
 
 		-- 允许为帧也独立定义 ref_scale
@@ -668,7 +677,11 @@ function image_db:add_image(name, image, group, scale)
 	v.size = {w, h}
 	v.trim = {0, 0, 0, 0}
 	v.a_name = name
-	v.a_size = {w, h}
+	-- v.a_size = {w, h}
+	-- local a_size = ffi.new("int[2]")
+	-- a_size[0] = w
+	-- a_size[1] = h
+	-- v.a_size = a_size
 	v.group = name_scale
 	v.quad = G.newQuad(0, 0, w, h, w, h)
 	v.atlas = name
@@ -734,6 +747,14 @@ function image_db:s(name, optional)
 	end
 
 	return s
+end
+
+function image_db:save_to_file()
+	local storage = require("all.storage")
+	storage:write_lua("image_db_DB_IMAGES.lua", self.db_images)
+	storage:write_lua("image_db_DB_ATLAS.lua", self.db_atlas)
+	storage:write_lua("image_db_ATLAS_USES.lua", self.atlas_uses)
+
 end
 
 return image_db

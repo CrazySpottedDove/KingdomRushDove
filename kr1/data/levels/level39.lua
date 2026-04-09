@@ -33,11 +33,11 @@ end
 end
 function level:load(store)
 LU.insert_background(store,"Stage13_0001",Z_BACKGROUND)
-LU.insert_background(store,"Stage13_0002",Z_BACKGROUND_COVERS,nil,-1)
+LU.insert_background(store,"Stage13_0002",Z_BACKGROUND_COVERS)
 LU.insert_background(store,"Stage13_0003",Z_OBJECTS,628)
 LU.insert_background(store,"Stage13_0004",Z_OBJECTS,584)
 LU.insert_background(store,"Stage13_0005",Z_OBJECTS,35)
-LU.insert_background(store,"Stage13_0006",Z_OBJECTS,155,-1)
+LU.insert_background(store,"Stage13_0006",Z_OBJECTS,155)
 LU.insert_defend_points(store,self.locations.exits,store.level_terrain_style)
 if store.level_mode==GAME_MODE_CAMPAIGN then
 for _,h in pairs(self.locations.holders) do

@@ -29,7 +29,7 @@ end
 end
 function level:load(store)
 LU.insert_background(store,"Stage22_0001",Z_BACKGROUND)
-LU.insert_background(store,"Stage22_0002",Z_BACKGROUND_COVERS,nil,-1)
+LU.insert_background(store,"Stage22_0002",Z_BACKGROUND_COVERS)
 LU.insert_defend_points(store,self.locations.exits,store.level_terrain_style)
 for _,h in pairs(self.locations.holders) do
 if store.level_mode==GAME_MODE_IRON and table.contains({"4","6","12"},h.id) or store.level_mode~=GAME_MODE_IRON and h.id=="16" then

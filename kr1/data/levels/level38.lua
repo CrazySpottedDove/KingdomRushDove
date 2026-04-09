@@ -34,7 +34,7 @@ end
 end
 function level:load(store)
 LU.insert_background(store,"Stage12_0001",Z_BACKGROUND)
-LU.insert_background(store,"Stage12_0005",Z_BACKGROUND_COVERS,nil,-4)
+LU.insert_background(store,"Stage12_0005",Z_BACKGROUND_COVERS)
 LU.insert_background(store,"Stage12_0002",Z_OBJECTS,548)
 LU.insert_background(store,"Stage12_0003",Z_OBJECTS,623)
 LU.insert_background(store,"Stage12_0004",Z_OBJECTS,354)

@@ -34,8 +34,8 @@ self.unlock_towers={"tower_barrack_dwarf","tower_archer_dwarf"}
 end
 function level:load(store)
 LU.insert_background(store,"Stage14_0001",Z_BACKGROUND)
-LU.insert_background(store,"Stage14_0002",Z_BACKGROUND_COVERS,nil,-1)
-LU.insert_background(store,"Stage14_0003",Z_OBJECTS,264,-1)
+LU.insert_background(store,"Stage14_0002",Z_BACKGROUND_COVERS,0)
+LU.insert_background(store,"Stage14_0003",Z_OBJECTS,264)
 if store.level_mode==GAME_MODE_CAMPAIGN then
 self.cave_closed=LU.insert_background(store,"Stage14_0004",Z_OBJECTS,263)
 end

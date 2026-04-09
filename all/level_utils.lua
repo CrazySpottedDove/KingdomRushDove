@@ -368,24 +368,6 @@ function LU.insert_background(store, name, z, sort_y, quad_trim)
 	e.render.sprites[1].z = z
 	e.render.sprites[1].sort_y = sort_y
 
-	if quad_trim then
-		local ss = I:s(e.render.sprites[1].name)
-		local t = ss.trim
-
-		t[1] = t[1] - quad_trim
-		t[2] = t[2] - quad_trim
-		t[3] = t[3] + 2 * quad_trim
-		t[4] = t[4] + 2 * quad_trim
-
-		local q = ss.f_quad
-
-		q[1] = q[1] - quad_trim
-		q[2] = q[2] - quad_trim
-		q[3] = q[3] + 2 * quad_trim
-		q[4] = q[4] + 2 * quad_trim
-		ss.quad = G.newQuad(q[1], q[2], q[3], q[4], ss.a_size[1], ss.a_size[2])
-	end
-
 	LU.queue_insert(store, e)
 
 	return e
