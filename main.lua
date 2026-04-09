@@ -632,12 +632,10 @@ function love.errorhandler(msg)
 					name = "Game"
 				end
 
-				local buttons = {"是", "否", "关闭并复制报错"}
+				local buttons = {"关闭并复制报错信息"}
 				local pressed = love.window.showMessageBox("关闭" .. name .. "?", "", buttons)
 
 				if pressed == 1 then
-					return 1
-				elseif pressed == 3 then
 					love.system.setClipboardText(pt .. p)
 					return 1
 				end
