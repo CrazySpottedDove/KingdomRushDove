@@ -2854,6 +2854,10 @@ end
 ---@param amount number
 function U.heal(target, amount)
 	local h = target.health
+	-- 目标拥有额外治疗，这里退出，避免生命值反而减小
+	if h.hp > h.hp_max then
+		return
+	end
 	h.hp = h.hp + amount
 	if h.hp > h.hp_max then
 		h.hp = h.hp_max

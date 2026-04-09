@@ -3915,14 +3915,14 @@ function scripts.mod_gerald_courage.insert(this, store)
 		SU.magic_armor_inc(target, buff.magic_armor_inc * m.level * 0.5)
 		SU.armor_inc(target, buff.armor_inc * m.level * 0.5)
 
-		target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp + heal * 0.5)
+		U.heal(target, heal * 0.5)
 
 		SU.damage_inc(target, buff.damage_inc * m.level + buff.damage_inc_base)
 	else
 		SU.magic_armor_inc(target, buff.magic_armor_inc * m.level)
 		SU.armor_inc(target, buff.armor_inc * m.level)
 
-		target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp + heal)
+		U.heal(target, heal)
 
 		SU.damage_inc(target, buff.damage_inc * m.level + buff.damage_inc_base)
 	end
