@@ -2984,6 +2984,9 @@ function U.is_soldiers_around_need_heal(soldiers, center, trigger_hp_factor, ran
 	return false
 end
 
+-- 我真没招了，写个黑名单算了
+local exclude_holder_sprites = table.to_map({"sasquash_frozen_0001"})
+
 --- 设置塔位地形样式
 --- @param e table 实体
 --- @param terrain_style string 塔位地形样式
@@ -3010,6 +3013,10 @@ function U.set_terrain_style(e, terrain_style)
 
 	-- 动画纹理不修改 sprite name
 	if e.render.sprites[1].animated then
+		return
+	end
+
+	if e.render.sprites[1].name and exclude_holder_sprites[e.render.sprites[1].name] then
 		return
 	end
 
