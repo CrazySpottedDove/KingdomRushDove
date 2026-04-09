@@ -124,6 +124,8 @@ function animation_db:load()
 	self.loaded = true
 
 	self:prebuild_frames()
+
+-- self:save_to_file()
 end
 
 -- added: 预构建所有动画的帧数组 frames
@@ -267,6 +269,11 @@ function animation_db:duration(animation_name)
 	end
 
 	return #a.frames / self.fps, #a.frames
+end
+
+function animation_db:save_to_file()
+	local storage = require("all.storage")
+	storage:write_lua("animation_db_dump.lua", self.db)
 end
 
 return animation_db

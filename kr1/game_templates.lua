@@ -11695,7 +11695,7 @@ E:add_comps(tt, "editor")
 
 tt.render.sprites[1].name = "Stage4_NEW_Topmask"
 tt.render.sprites[1].animated = false
-tt.render.sprites[1].z = Z_OBJECT_COVERS
+tt.render.sprites[1].z = Z_OBJECTS_COVERS
 tt.render.sprites[2] = E:clone_c("sprite")
 tt.render.sprites[2].name = "Stage4_NEW_Submask"
 tt.render.sprites[2].animated = false
