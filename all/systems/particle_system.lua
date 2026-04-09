@@ -34,11 +34,41 @@ function M.register(sys)
 	sys.particle_system = {}
 	sys.particle_system.name = "particle_system"
 
-	local phase_interp = function(values, phase, default)
-		if not values or #values == 0 then
-			return default
-		end
+	-- local phase_interp = function(values, phase, default)
+	-- 	if not values or #values == 0 then
+	-- 		return default
+	-- 	end
 
+	-- 	if #values == 1 then
+	-- 		return values[1]
+	-- 	end
+
+	-- 	local intervals = #values - 1
+	-- 	local interval = floor(phase * intervals)
+	-- 	local interval_phase = phase * intervals - interval
+	-- 	local a = values[interval + 1]
+	-- 	local b = values[interval + 2]
+	-- 	local ta = type(a)
+
+	-- 	if ta == "table" then
+	-- 		local out = {}
+
+	-- 		for i = 1, #a do
+	-- 			out[i] = a[i] + (b[i] - a[i]) * interval_phase
+	-- 		end
+
+	-- 		return out
+	-- 	elseif ta == "boolean" then
+	-- 		return a
+	-- 	elseif a ~= nil and b ~= nil then
+	-- 		return a + (b - a) * interval_phase
+	-- 	end
+
+	-- 	return default
+	-- end
+
+	-- 不负责做兜底检查，由调用者保证。就目前而言，没有发现需要 phase_interp 做除了 number 之外类型的插值的情况。因此，删除动态分支。
+	local phase_interp = function(values, phase)
 		if #values == 1 then
 			return values[1]
 		end
@@ -48,23 +78,7 @@ function M.register(sys)
 		local interval_phase = phase * intervals - interval
 		local a = values[interval + 1]
 		local b = values[interval + 2]
-		local ta = type(a)
-
-		if ta == "table" then
-			local out = {}
-
-			for i = 1, #a do
-				out[i] = a[i] + (b[i] - a[i]) * interval_phase
-			end
-
-			return out
-		elseif ta == "boolean" then
-			return a
-		elseif a ~= nil and b ~= nil then
-			return a + (b - a) * interval_phase
-		end
-
-		return default
+		return a + (b - a) * interval_phase
 	end
 
 	function sys.particle_system:init(store)
@@ -249,11 +263,23 @@ function M.register(sys)
 					f.pos.x, f.pos.y = p.pos_x, p.pos_y
 					p.r = p.r + p.spin * tp
 					f.r = p.r
-					f.scale.x, f.scale.y = phase_interp(ps.scales_x, phase, 1) * p.scale_x, phase_interp(ps.scales_y, phase, 1) * p.scale_y
-					f.alpha = phase_interp(ps.alphas, phase, 255)
+
+					if ps.scales_x then
+						f.scale.x = phase_interp(ps.scales_x, phase) * p.scale_x
+					else
+						f.scale.x = p.scale_x
+					end
+
+					if ps.scales_y then
+						f.scale.y = phase_interp(ps.scales_y, phase) * p.scale_y
+					else
+						f.scale.y = p.scale_y
+					end
+
+					f.alpha = phase_interp(ps.alphas, phase)
 
 					if ps.sort_y_offsets then
-						f.sort_y_offset = phase_interp(ps.sort_y_offsets, phase, 1)
+						f.sort_y_offset = phase_interp(ps.sort_y_offsets, phase)
 					end
 
 					if ps.color then
