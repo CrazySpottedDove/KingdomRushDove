@@ -80,7 +80,7 @@ if IS_ANDROID then
 			last_idx = i
 
 			if not f.hidden then
-				if f.exo then
+				if f.exo_frame then
 					local exo = EXO:get_exo_by_frame(f.exo_frame)
 					for part_idx, part in ipairs(f.exo_frame) do
 						do
@@ -380,7 +380,7 @@ else
 
 			if f.hidden then
 			-- block empty
-			elseif f.exo then
+			elseif f.exo_frame then
 				local exo = EXO:get_exo_by_frame(f.exo_frame)
 				for part_idx, part in ipairs(f.exo_frame) do
 					do

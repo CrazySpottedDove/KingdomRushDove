@@ -1024,10 +1024,6 @@ function sys.render:on_render_update(dt, ts, store)
 
 				if exo_frame then
 					s.exo_frame = exo_frame
-
-					-- local exo = exo_frame.exo
-
-					-- s.exo = exo
 					local exo = EXO:get_exo_by_frame(exo_frame)
 
 					if s.exo_hide_prefix then
@@ -1048,14 +1044,19 @@ function sys.render:on_render_update(dt, ts, store)
 						end
 					end
 				else
-					-- fallback
+					-- if not MISSED_SS[fn] then
+					-- 	-- fallback, 仅在开发时启用，用于检查美术资源
+					-- 	log.error("Failed to get EXO frame for entity %s, frame id: %d", e.template_name, i)
+					-- 	log.error("EXO name: %s", fn)
+					-- 	MISSED_SS[fn] = true
+					-- end
 					s.exo_frame = {}
 				end
 			else
 				s.sync_flag = last_runs ~= s.runs
 				s.ss = I:s(fn)
 
-			-- 仅在开发时启用，用于检查美术资源
+			-- -- 仅在开发时启用，用于检查美术资源
 			-- if s.ss == nil then
 			-- 	if s.animation and not MISSED_SS[s.animation] then
 			-- 		log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)

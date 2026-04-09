@@ -29684,7 +29684,7 @@ function scripts.controller_stage_11_cult_leader.update(this, store)
 				end
 
 				if not found then
-					local towers = table.filter(store.entities, function(k, v)
+					local towers = table.filter(store.towers, function(k, v)
 						return v.tower and not v.tower_holder and U.is_inside_ellipse(v.pos, available, radius_check_towers)
 					end)
 
@@ -29939,7 +29939,7 @@ function scripts.enemy_stage_11_cult_leader_illusion.update(this, store)
 
 	local function find_holders_in_range()
 		local attack = attack_chain
-		local holders = table.filter(store.entities, function(k, v)
+		local holders = table.filter(store.towers, function(k, v)
 			return v.tower and v.tower.type == "holder" and U.is_inside_ellipse(v.pos, this.pos, attack_chain.max_range) and (attack.min_range == 0 or not U.is_inside_ellipse(v.pos, this.pos, attack.min_range))
 		end)
 
@@ -29948,7 +29948,7 @@ function scripts.enemy_stage_11_cult_leader_illusion.update(this, store)
 
 	local function find_towers_in_range()
 		local attack = attack_chain
-		local towers = table.filter(store.entities, function(k, v)
+		local towers = table.filter(store.towers, function(k, v)
 			return not v.pending_removal and v.tower and not v.tower.blocked and (not attack.excluded_templates or not table.contains(attack.excluded_templates, v.template_name)) and U.is_inside_ellipse(v.pos, this.pos, attack_chain.max_range) and (attack.min_range == 0 or not U.is_inside_ellipse(v.pos, this.pos, attack.min_range)) and v.tower.can_be_mod
 		end)
 
