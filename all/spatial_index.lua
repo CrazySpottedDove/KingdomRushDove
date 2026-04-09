@@ -100,7 +100,7 @@ function spatial_index.on_update(dt)
 		local new_id_array_index = floor((e.pos.y - _y_min) * _cell_size_factor) * _cols + floor((e.pos.x - _x_min) * _cell_size_factor)
 
 		if new_id_array_index >= _max_size then
-			print("spatial_index.on_update: entity " .. e.template_name .. " out of bounds, position (" .. e.pos.x .. ", " .. e.pos.y .. ")")
+			error("spatial_index.on_update: entity " .. e.template_name .. " out of bounds, position (" .. e.pos.x .. ", " .. e.pos.y .. ")")
 
 			goto continue
 		end
