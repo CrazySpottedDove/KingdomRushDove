@@ -15,6 +15,9 @@ function entity_db:load()
 	self.last_id = 1
 	self.loaded = true
 
+	-- collectgarbage()
+	-- local before = collectgarbage("count")
+
 	-- components 是永远不会被外部修改的，因此完全不需要缓存，直接加载即可。
 	if not self.components then
 		self.components = {}
@@ -30,6 +33,10 @@ function entity_db:load()
 	else
 		self.entities = copy(self.entities_backup)
 	end
+
+-- collectgarbage()
+-- local after = collectgarbage("count")
+-- print(string.format("entity_db:load() 内存使用增加了 %.2f KB", after - before))
 
 -- self:report_status()
 -- self:test_tween()
