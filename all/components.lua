@@ -143,7 +143,7 @@ tween.random_ts = nil
 
 local timed = require("lib.timed")
 E:register_c_ffi("timed", timed.new(1e+99, 1, 1))
--- disabled 键被 dove 版删除，取而代之的是 runs = 1 / runs = 1e+99。
+-- disabled 键被 dove 版删除，取而代之的是 runs = 1 / runs = INT_MAX。
 
 local delayed_play = E:register_c("delayed_play")
 

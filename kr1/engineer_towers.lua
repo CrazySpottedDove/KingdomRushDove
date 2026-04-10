@@ -447,7 +447,7 @@ decal_dwaarp_tower_scorched.render.sprites[1].z = Z_DECALS
 local decal_dwaarp_scorched_water = RT("decal_dwaarp_scorched_water", "decal_timed")
 
 decal_dwaarp_scorched_water.timed.duration = 3
-decal_dwaarp_scorched_water.timed.runs = 1e+99
+decal_dwaarp_scorched_water.timed.runs = INT_MAX + 99
 decal_dwaarp_scorched_water.render.sprites[1].prefix = "towerdwaarp_sfx"
 decal_dwaarp_scorched_water.render.sprites[1].name = "vapor"
 decal_dwaarp_scorched_water.render.sprites[1].z = Z_OBJECTS

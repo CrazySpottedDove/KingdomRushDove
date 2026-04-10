@@ -492,9 +492,7 @@ archmage_shatter.damage_max = 0.035
 archmage_shatter.damage_type = bor(DAMAGE_MAGICAL_ARMOR, DAMAGE_NO_SHIELD_HIT)
 
 local tower_necromancer = RT("tower_necromancer", "tower")
-
 AC(tower_necromancer, "barrack", "attacks", "powers", "auras", "tween")
-
 tower_necromancer.tower.type = "necromancer"
 tower_necromancer.tower.level = 1
 tower_necromancer.tower.price = 275
@@ -564,6 +562,7 @@ tower_necromancer.skeletons_count = 0
 tower_necromancer.sound_events.insert = "NecromancerTauntReady"
 tower_necromancer.sound_events.change_rally_point = "DeathKnightTaunt"
 --#endregion
+
 --#region bolt_necromancer_tower
 tt = RT("bolt_necromancer_tower", "bolt")
 tt.render.sprites[1].prefix = "bolt_necromancer"
@@ -575,7 +574,6 @@ tt.bullet.pop = {"pop_sishh"}
 tt.sound_events.insert = "NecromancerBolt"
 
 local pestilence = RT("pestilence", "aura")
-
 pestilence.aura.mod = "mod_pestilence"
 pestilence.aura.duration = 3
 pestilence.aura.duration_inc = 1
@@ -588,9 +586,7 @@ pestilence.main_script.update = scripts.aura_apply_mod.update
 pestilence.sound_events.insert = "NecromancerPestilence"
 
 local ps_bolt_necromancer_trail = RT("ps_bolt_necromancer_trail")
-
 AC(ps_bolt_necromancer_trail, "pos", "particle_system")
-
 ps_bolt_necromancer_trail.particle_system.name = "proy_Necromancer_particle"
 ps_bolt_necromancer_trail.particle_system.animated = false
 ps_bolt_necromancer_trail.particle_system.particle_lifetime = {0.4, 1}
@@ -649,9 +645,7 @@ tt.sound_events.insert = "NecromancerSummon"
 --#endregion
 --#region soldier_death_rider
 tt = RT("soldier_death_rider", "soldier")
-
 AC(tt, "melee", "auras")
-
 tt.auras.list[1] = CC("aura_attack")
 tt.auras.list[1].cooldown = 0
 tt.auras.list[1].name = "death_rider_aura"
@@ -699,18 +693,13 @@ tt.min_health_for_knight = 416
 tt.max_skeletons_tower = 8
 
 local death_rider_aura = RT("death_rider_aura", "aura")
-
 AC(death_rider_aura, "render")
-
 death_rider_aura.aura.mod = "mod_death_rider"
 death_rider_aura.aura.cycle_time = 1
 death_rider_aura.aura.duration = -1
 death_rider_aura.aura.radius = 128
 death_rider_aura.aura.track_source = true
-
-local allowed_templates = table.keys(GS.wraith)
-
-death_rider_aura.aura.allowed_templates = allowed_templates
+death_rider_aura.aura.allowed_templates = table.keys(GS.wraith)
 death_rider_aura.aura.vis_bans = F_ENEMY
 death_rider_aura.aura.vis_flags = F_MOD
 death_rider_aura.main_script.insert = scripts.aura_apply_mod.insert
@@ -720,12 +709,10 @@ death_rider_aura.render.sprites[1].loop = true
 death_rider_aura.render.sprites[1].z = Z_DECALS
 
 local mod_death_rider = RT("mod_death_rider", "modifier")
-
 AC(mod_death_rider, "render")
-
 mod_death_rider.inflicted_damage_factor = 1.1
 mod_death_rider.inflicted_damage_factor_inc = 0.2
-mod_death_rider.extra_armor = 0.2
+mod_death_rider.extra_armor = 0.25
 mod_death_rider.extra_armor_inc = 0.05
 mod_death_rider.modifier.duration = 1
 mod_death_rider.modifier.use_mod_offset = false
@@ -2516,7 +2503,7 @@ tt.render.sprites[1].loop = true
 tt.render.sprites[1].scale = vec_2(1.5, 1.5)
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.timed.duration = fts(10)
-tt.timed.runs = 1e+99
+tt.timed.runs = INT_MAX + 99
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.1, 255}, {fts(5), 255}, {fts(10), 0}}
 tt.tween.remove = false
@@ -2527,7 +2514,7 @@ tt.render.sprites[1].name = "elven_stargazers_tower_event_horizon_idle"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.timed.duration = fts(32)
-tt.timed.runs = 1e+99
+tt.timed.runs = INT_MAX + 99
 --#endregion
 --#region fx_tower_stargazers_teleport_enemy_small
 tt = RT("fx_tower_stargazers_teleport_enemy_small", "fx")
@@ -2535,7 +2522,7 @@ tt.render.sprites[1].name = "elven_stargazers_tower_event_horizon_decal_idle"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.timed.duration = fts(32)
-tt.timed.runs = 1e+99
+tt.timed.runs = INT_MAX + 99
 --#endregion
 --#region fx_tower_stargazers_teleport_enemy_big
 tt = RT("fx_tower_stargazers_teleport_enemy_big", "fx")
@@ -2543,7 +2530,7 @@ tt.render.sprites[1].name = "elven_stargazers_tower_event_horizon_decal_big_idle
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.timed.duration = fts(32)
-tt.timed.runs = 1e+99
+tt.timed.runs = INT_MAX + 99
 --#endregion
 --#region fx_tower_elven_stargazers_ray_hit
 tt = RT("fx_tower_elven_stargazers_ray_hit", "fx")
@@ -2554,7 +2541,7 @@ tt.render.sprites[1].name = "elven_stargazers_tower_ray_end_end"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.timed.duration = fts(10)
-tt.timed.runs = 1e+99
+tt.timed.runs = INT_MAX + 99
 --#endregion
 --#region fx_tower_stargazers_death_star_hit
 tt = RT("fx_tower_stargazers_death_star_hit", "fx")

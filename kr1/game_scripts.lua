@@ -557,15 +557,7 @@ function scripts.mod_death_rider.insert(this, store)
 		return false
 	end
 
-	m.extra_armor = this.extra_armor + this.extra_armor_inc * level
-
-	if target.health.armor + m.extra_armor >= 1 then
-		m.extra_armor = m.extra_armor * 0.5
-
-		if target.health.armor + m.extra_armor >= 1 then
-			m.extra_armor = math.max(0, 0.95 - target.health.armor)
-		end
-	end
+	m.extra_armor = (1 - target.health.armor) * (this.extra_armor + this.extra_armor_inc * level)
 
 	SU.armor_inc(target, m.extra_armor)
 
@@ -3928,7 +3920,7 @@ function scripts.mod_gerald_courage.insert(this, store)
 	end
 
 	if this.render then
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.ts = store.tick_ts
 
 			if s.size_names then
