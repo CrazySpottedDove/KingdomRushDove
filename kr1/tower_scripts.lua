@@ -8061,7 +8061,7 @@ function scripts.mod_tower_necromancer_curse.insert(this, store)
 			return false
 		end
 
-		if target.unit and this.render then
+		if target.unit and target.render then
 			for i = 1, #this.render.sprites do
 				local s = this.render.sprites[i]
 
