@@ -150,6 +150,24 @@ function simulation:update(dt)
 		return
 	end
 
+	self:do_tick(dt)
+end
+
+function simulation:render_update(dt)
+	local d = self.store
+
+	if d.paused and not d.step then
+		return
+	end
+
+	for i = 1, self.systems_on_render_update_count do
+		self.systems_on_render_update[i]:on_render_update(dt, d.tick_ts, d)
+	end
+end
+
+function simulation:do_tick(dt)
+	local d = self.store
+
 	d.tick_ts = d.tick_ts + dt
 
 	-- 批量插入
@@ -187,59 +205,6 @@ function simulation:update(dt)
 		self.systems_on_update[i]:on_update(dt, d.tick_ts, d)
 	end
 end
-
-function simulation:render_update(dt)
-	local d = self.store
-
-	if d.paused and not d.step then
-		return
-	end
-
-	for i = 1, self.systems_on_render_update_count do
-		self.systems_on_render_update[i]:on_render_update(dt, d.tick_ts, d)
-	end
-end
-
--- function simulation:do_tick(dt)
--- 	local d = self.store
-
--- 	d.tick_ts = d.tick_ts + dt
-
--- 	-- 批量插入
--- 	local last_count = #d.pending_inserts
-
--- 	for i = last_count, 1, -1 do
--- 		self:insert_entity(d.pending_inserts[i])
--- 	end
-
--- 	-- 清理前 last_count 个元素
--- 	for i = 1, #d.pending_inserts - last_count do
--- 		d.pending_inserts[i] = d.pending_inserts[i + last_count]
--- 	end
-
--- 	for i = #d.pending_inserts, #d.pending_inserts - last_count + 1, -1 do
--- 		d.pending_inserts[i] = nil
--- 	end
-
--- 	last_count = #d.pending_removals
-
--- 	-- 批量移除
--- 	for i = last_count, 1, -1 do
--- 		self:remove_entity(d.pending_removals[i])
--- 	end
-
--- 	for i = 1, #d.pending_removals - last_count do
--- 		d.pending_removals[i] = d.pending_removals[i + last_count]
--- 	end
-
--- 	for i = #d.pending_removals, #d.pending_removals - last_count + 1, -1 do
--- 		d.pending_removals[i] = nil
--- 	end
-
--- 	for i = 1, self.systems_on_update_count do
--- 		self.systems_on_update[i]:on_update(dt, d.tick_ts, d)
--- 	end
--- end
 
 function simulation:queue_insert_entity(e)
 	if not e then
