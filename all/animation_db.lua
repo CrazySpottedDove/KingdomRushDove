@@ -159,7 +159,9 @@ function animation_db:fn(animation_name, time_offset, loop, fps)
 	return self:fni(a, time_offset, loop, fps)
 end
 
--- 完成动画 frames 和 frame_names 的生成。所有从文件加载的动画都还处于不可用阶段，需要通过 generate_frames 来生成 frame_names 和 frame_count，以取得运行时的最高效率。
+--- 完成动画 frames 和 frame_names 的生成。所有从文件加载的动画都还处于不可用阶段，需要通过 generate_frames 来生成 frame_names 和 frame_count，以取得运行时的最高效率。
+--- @param name string 动画名称
+--- 生成的结构：self.db[name] = {[1] = frame_count(int), [2] = frame_names(array of string)}
 function animation_db:generate_frames(name)
 	local a = self.db[name]
 	local frames = a.frames
@@ -214,23 +216,35 @@ function animation_db:generate_frames(name)
 		a.frames = frames
 	end
 
-	if a.prefix and not a.frame_names then
-		a.frame_names = {}
+	-- if a.prefix and not a.frame_names then
+	-- 	a.frame_names = {}
+	-- 	local frame_count = #frames
+	-- 	for i = 1, frame_count do
+	-- 		a.frame_names[i] = a.prefix .. string.format("_%04i", frames[i])
+	-- 	end
+	-- 	a.frame_count = frame_count
+	-- end
+
+	if a.prefix and not a[2] then
+		a[2] = {}
 		local frame_count = #frames
 		for i = 1, frame_count do
-			a.frame_names[i] = a.prefix .. string.format("_%04i", frames[i])
+			a[2][i] = a.prefix .. string.format("_%04i", frames[i])
 		end
-		a.frame_count = frame_count
+		a[1] = frame_count
 	end
 
 	-- 重建数据结构，除去了无效字段，减少内存开销
-	self.db[name] = {
-		frame_names = a.frame_names,
-		frame_count = a.frame_count
-	}
+	-- self.db[name] = {
+	-- frame_names = a.frame_names,
+	-- frame_count = a.frame_count
+	-- }
+
+	self.db[name] = {a[1], a[2]}
 
 	-- 解引用，避免占用内存
-	a.frame_names = nil
+	-- a.frame_names = nil
+	a[2] = nil
 end
 
 function animation_db:fni(animation, time_offset, loop, fps)
@@ -241,7 +255,8 @@ function animation_db:fni(animation, time_offset, loop, fps)
 	-- local frames = a.frames
 	local eps = 1e-09
 	-- local len = #frames
-	local len = a.frame_count
+	-- local len = a.frame_count
+	local len = a[1]
 	local time_in_frames_plus_eps = time_offset * fps + eps
 	local next_elapsed = ceil(time_in_frames_plus_eps + self.tick_length * fps)
 	local runs = max(0, floor((next_elapsed - 1) / len))
@@ -249,12 +264,14 @@ function animation_db:fni(animation, time_offset, loop, fps)
 	if loop then
 		local idx = floor(time_in_frames_plus_eps) % len + 1
 
-		return a.frame_names[idx], runs, idx
+		-- return a.frame_names[idx], runs, idx
+		return a[2][idx], runs, idx
 	else
 		local elapsed_frames = ceil(time_in_frames_plus_eps)
 		local idx = max(1, min(len, elapsed_frames))
 
-		return a.frame_names[idx], runs, idx
+		-- return a.frame_names[idx], runs, idx
+		return a[2][idx], runs, idx
 	end
 end
 
@@ -273,11 +290,13 @@ function animation_db:duration(animation_name)
 		return nil
 	end
 
-	if not a.frame_names then
+	-- if not a.frame_names then
+	if not a[2] then
 		self:fni(a, 0, false)
 	end
 
-	return a.frame_count / self.fps, a.frame_count
+	-- return a.frame_count / self.fps, a.frame_count
+	return a[1] / self.fps, a[1]
 end
 
 function animation_db:save_to_file()
@@ -290,7 +309,8 @@ function animation_db:dump()
 	local frame_count = 0
 	for k, v in pairs(self.db) do
 		animation_count = animation_count + 1
-		frame_count = frame_count + v.frame_count
+		-- frame_count = frame_count + v.frame_count
+		frame_count = frame_count + v[1]
 	end
 	print(string.format("animation count: %d, total frame count: %d", animation_count, frame_count))
 end
