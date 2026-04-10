@@ -35,13 +35,15 @@ function M.register(sys)
 	sys.wave_spawn.name = "wave_spawn"
 
 	local function spawner(store, wave, group_id)
-		log.debug("spawner thread(%s) for wave(%s) starting", coroutine.running(), tostring(wave))
-
 		local spawns = wave.spawns
 		local pi = wave.path_index
+		local spawn_multipier_min = math.floor(store.config.enemy_count_multiplier)
+		local spawn_multipier_max = math.ceil(store.config.enemy_count_multiplier)
+		local spawn_min_rate = spawn_multipier_max - store.config.enemy_count_multiplier
 
 		for i = 1, #spawns do
-			for count = 1, store.config.enemy_count_multiplier do
+			local spawn_multipier = math.random() < spawn_min_rate and spawn_multipier_min or spawn_multipier_max
+			for count = 1, spawn_multipier do
 				local current_count = 0
 				local current_creep
 				local s = spawns[i]
@@ -58,7 +60,7 @@ function M.register(sys)
 				end
 
 				for j = 1, s.max do
-					U.y_wait(store, fts(s.interval or 0) / store.config.enemy_count_multiplier)
+					U.y_wait(store, fts(s.interval or 0) / spawn_multipier)
 
 					if not current_creep then
 						current_creep = s.creep
@@ -83,7 +85,7 @@ function M.register(sys)
 				end
 
 				if s.max == 0 then
-					U.y_wait(store, fts(s.interval or 0) / store.config.enemy_count_multiplier)
+					U.y_wait(store, fts(s.interval or 0) / spawn_multipier)
 				end
 
 				local oes = s.on_end_signal
@@ -108,12 +110,11 @@ function M.register(sys)
 						end
 					end
 
-					U.y_wait(store, fts(interval_next) / store.config.enemy_count_multiplier)
+					U.y_wait(store, fts(interval_next) / spawn_multipier)
 				end
 			end
 		end
 
-		log.debug("spawner thread(%s) for wave(%s) about to finish", coroutine.running(), tostring(wave))
 		return true
 	end
 

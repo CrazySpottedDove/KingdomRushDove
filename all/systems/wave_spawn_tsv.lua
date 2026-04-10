@@ -147,11 +147,15 @@ function M.register(sys)
 
 	function sys.wave_spawn_tsv.cmd_fns.spawn(store, cmd, wave_name)
 		local wait_time = cmd.wait_time
-		local multiplier = store.config.enemy_count_multiplier
+		local spawn_multipier_min = math.floor(store.config.enemy_count_multiplier)
+		local spawn_multipier_max = math.ceil(store.config.enemy_count_multiplier)
+		local spawn_min_rate = spawn_multipier_max - store.config.enemy_count_multiplier
 
-		for count = 1, multiplier do
+		local spawn_multiplier = math.random() < spawn_min_rate and spawn_multipier_min or spawn_multipier_max
+
+		for count = 1, spawn_multiplier do
 			if wait_time and wait_time > 0 then
-				U.y_wait(store, wait_time / multiplier, function(store, wait_time)
+				U.y_wait(store, wait_time / spawn_multiplier, function(store, wait_time)
 					return store.force_next_wave
 				end)
 			end
