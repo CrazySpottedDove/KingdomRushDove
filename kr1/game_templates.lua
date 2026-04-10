@@ -2392,7 +2392,7 @@ tt.tween.props[1].keys = {{1, 255}, {3.5, 0}}
 --#region decal_palm_tree
 tt = RT("decal_palm_tree", "decal_timed")
 -- tt.timed.disabled = true
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 tt.render.sprites[1].prefix = "decal_palm_tree"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].z = Z_OBJECTS
@@ -7721,7 +7721,7 @@ tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].anchor.y = 0
 tt.render.sprites[1].scale = vec_2(1, 1)
 -- tt.timed.disabled = true
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 tt.editor.game_mode = 1
 tt.editor.tag = 1
 tt.editor.props = {{"render.sprites[1].scale", PT_COORDS}, {"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
@@ -7766,7 +7766,7 @@ tt = RT("fx_s04_tree_fire_1", "decal_timed")
 AC(tt, "editor")
 
 -- tt.timed.disabled = true
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 tt.render.sprites[1].name = "fx_s04_tree_fire_1"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].hidden = true
@@ -8282,7 +8282,7 @@ tt.render.sprites[1].anchor.y = 0.3941176470588235
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].scale = vec_2(1, 1)
 -- tt.timed.disabled = true
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 tt.editor.game_mode = 1
 tt.editor.tag = 1
 tt.editor.props = {{"editor.game_mode", PT_NUMBER}, {"editor.tag", PT_NUMBER}}
@@ -9360,7 +9360,7 @@ tt = RT("fx_s16_burner_explosion", "decal_timed")
 AC(tt, "editor")
 
 -- tt.timed.disabled = true
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 tt.render.sprites[1].name = "fx_s16_burner_explosion"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].hidden = true
@@ -10292,7 +10292,7 @@ tt.render.sprites[1].name = "channeler_tower_crystal_union_fx_run"
 tt = RT("fx_tower_ray_hit_source", "fx")
 tt.render.sprites[1].name = "channeler_tower_ray_start_loop"
 tt.render.sprites[1].loop = true
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 --#endregion
 --#region fx_tower_ray_crystal_union
 tt = RT("fx_tower_ray_crystal_union", "fx")
@@ -10325,7 +10325,7 @@ tt.render.sprites[1].loop = true
 tt.render.sprites[1].draw_order = 3
 tt.render.sprites[1].z = Z_OBJECTS
 tt.main_script.update = scripts.fx_tower_ray_lvl4_shock.update
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 --#endregion
 --#region moon_controller_s91
 tt = RT("moon_controller_s91", "moon_controller")
@@ -10475,7 +10475,7 @@ tt.render.sprites[1].loop = true
 tt.render.sprites[1].scale = vec_2(1.5, 1.5)
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.timed.duration = fts(25)
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.1, 255}, {fts(18), 255}, {fts(25), 0}}
 tt.tween.remove = false
@@ -10489,7 +10489,7 @@ tt.render.sprites[1].name = "arcane_wizard_tower_ray_end_idle"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.timed.duration = fts(10)
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 --#endregion
 --#region fx_tower_arcane_wizard_disintegrate_ray_hit_start
 tt = RT("fx_tower_arcane_wizard_disintegrate_ray_hit_start", "fx")
@@ -10497,7 +10497,7 @@ tt.render.sprites[1].name = "arcane_wizard_tower_lvl4_disintegration_ray_charge_
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.timed.duration = fts(37)
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 --#endregion
 --#region fx_tower_arcane_wizard_ray_disintegrate_hit
 tt = RT("fx_tower_arcane_wizard_ray_disintegrate_hit", "fx")
@@ -10506,7 +10506,7 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.render.sprites[1].fps = 25
 tt.timed.duration = fts(17)
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 --#endregion
 --#region decal_tower_arcane_wizard_empowerment_preview
 tt = RT("decal_tower_arcane_wizard_empowerment_preview", "decal_tween")
@@ -10627,7 +10627,7 @@ tt.render.sprites[1].animated = true
 tt.render.sprites[1].prefix = "dwarven_flamespitter_tower_flamethrower_fx"
 tt.render.sprites[1].name = "in"
 tt.render.sprites[1].z = Z_BULLETS
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 --#endregion
 --#region fx_bullet_tower_flamespitter_bomb_explosion
 tt = RT("fx_bullet_tower_flamespitter_bomb_explosion", "fx")
@@ -10759,7 +10759,7 @@ AC(tt, "tween")
 tt.render.sprites[1].name = "ballista_tower_missed_arrow"
 tt.render.sprites[1].z = Z_OBJECTS
 tt.timed.duration = 6
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {tt.timed.duration - 0.5, 255}, {tt.timed.duration, 0}}
 --#endregion
@@ -10776,7 +10776,7 @@ tt.render.sprites[1].name = "ballista_tower_missed_arrow_decal"
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].animated = false
 tt.timed.duration = 6
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {tt.timed.duration - 0.5, 255}, {tt.timed.duration, 0}}
 --#endregion
@@ -10790,7 +10790,7 @@ tt.render.sprites[1].name = "ballista_tower_junk_particle_floor"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_OBJECTS
 tt.timed.duration = fts(16)
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 --#endregion
 --#region fx_bullet_tower_ballista_bomb_explosion
 tt = RT("fx_bullet_tower_ballista_bomb_explosion", "fx")
@@ -15447,7 +15447,7 @@ E:add_comps(tt, "tween")
 tt.render.sprites[1].prefix = "veznan_wrath_instakill_fx"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].animated = true
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 tt.tween.props[1].keys = {{0, 255}, {fts(52), 255}, {fts(52) + fts(15), 0}}
 tt.tween.props[1].sprite_id = 1
 tt.tween.remove = true
@@ -15486,7 +15486,7 @@ b = balance.enemies.void_beyond.blinker.ranged_attack
 tt.render.sprites[1].name = "blinker_stun_fx_Idle"
 tt.render.sprites[1].loop = true
 tt.timed.duration = b.duration
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 tt = E:register_t("fx_enemy_blinker_attack_glare", "fx_enemy_blinker_attack")
 tt.render.sprites[1].name = "blinker_glare_fx_Idle"
 
@@ -18828,7 +18828,7 @@ tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].draw_order = 100
 tt.render.sprites[1].scale = vv(0.9, 0.9)
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 tt = E:register_t("fx_bullet_enemy_rolling_sentry", "fx")
 tt.render.sprites[1].name = "rolling_sentry_hit_fx_idle"
 tt = E:register_t("fx_boss_machinist_death_smoke", "fx")

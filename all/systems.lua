@@ -740,8 +740,8 @@ sys.render.name = "render"
 
 ffi.cdef[[
 typedef struct {
-    double sort_y;
-    double pos_x;
+    float sort_y;
+    float pos_x;
     int z;
     int draw_order;
     int lua_index;

@@ -5,7 +5,7 @@ ffi.cdef[[
 typedef struct {
     vec2 pos;
     vec2 center;
-    int immune_to;
+    int32_t immune_to;
     bool requires_node_nearby;
     bool new;
 } nav_rally;

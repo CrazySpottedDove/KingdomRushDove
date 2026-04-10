@@ -1,7 +1,7 @@
 local ffi = require("ffi")
 ffi.cdef[[
 typedef struct {
-    double angle;
+    float angle;
 } heading;
 ]]
 

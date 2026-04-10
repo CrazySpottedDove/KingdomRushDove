@@ -2503,7 +2503,7 @@ tt.render.sprites[1].loop = true
 tt.render.sprites[1].scale = vec_2(1.5, 1.5)
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.timed.duration = fts(10)
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.1, 255}, {fts(5), 255}, {fts(10), 0}}
 tt.tween.remove = false
@@ -2514,7 +2514,7 @@ tt.render.sprites[1].name = "elven_stargazers_tower_event_horizon_idle"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.timed.duration = fts(32)
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 --#endregion
 --#region fx_tower_stargazers_teleport_enemy_small
 tt = RT("fx_tower_stargazers_teleport_enemy_small", "fx")
@@ -2522,7 +2522,7 @@ tt.render.sprites[1].name = "elven_stargazers_tower_event_horizon_decal_idle"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.timed.duration = fts(32)
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 --#endregion
 --#region fx_tower_stargazers_teleport_enemy_big
 tt = RT("fx_tower_stargazers_teleport_enemy_big", "fx")
@@ -2530,7 +2530,7 @@ tt.render.sprites[1].name = "elven_stargazers_tower_event_horizon_decal_big_idle
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.timed.duration = fts(32)
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 --#endregion
 --#region fx_tower_elven_stargazers_ray_hit
 tt = RT("fx_tower_elven_stargazers_ray_hit", "fx")
@@ -2541,7 +2541,7 @@ tt.render.sprites[1].name = "elven_stargazers_tower_ray_end_end"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.timed.duration = fts(10)
-tt.timed.runs = INT_MAX + 99
+tt.timed.runs = INT_32_MAX
 --#endregion
 --#region fx_tower_stargazers_death_star_hit
 tt = RT("fx_tower_stargazers_death_star_hit", "fx")

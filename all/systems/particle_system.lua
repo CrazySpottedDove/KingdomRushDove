@@ -15,17 +15,17 @@ local sin = math.sin
 -- FFI Definition for particle_t
 ffi.cdef[[
     typedef struct {
-        double pos_x;
-        double pos_y;
-        double r;
-        double speed_x;
-        double speed_y;
-        double spin;
-        double scale_x;
-        double scale_y;
-        double ts;
-        double last_ts;
-        double lifetime;
+        float pos_x;
+        float pos_y;
+        float r;
+        float speed_x;
+        float speed_y;
+        float spin;
+        float scale_x;
+        float scale_y;
+        float ts;
+        float last_ts;
+        float lifetime;
         int name_idx;
     } particle_t;
 ]]

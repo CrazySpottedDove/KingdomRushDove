@@ -1,10 +1,10 @@
 local ffi = require("ffi")
 ffi.cdef[[
 typedef struct {
-    int pi;
-    int spi;
-    int ni;
-    int dir;
+    int16_t pi;
+    int16_t spi;
+    int16_t ni;
+    int16_t dir;
 } nav_path;
 ]]
 

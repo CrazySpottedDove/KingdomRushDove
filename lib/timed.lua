@@ -1,9 +1,9 @@
 local ffi = require("ffi")
 ffi.cdef[[
 typedef struct {
-    double duration;
+    float duration;
     int runs;
-    int sprite_id;
+    int16_t sprite_id;
 } timed;
 ]]
 
@@ -18,8 +18,8 @@ ffi.metatype(timed_ct, {
 })
 
 ---@class timed
----@field duration number = 1e99
----@field runs integer = 1(请使用 INT_MAX 来表示无限次，1e99 将导致数值溢出)
+---@field duration number = FLOAT_MAX
+---@field runs integer = 1(请使用 INT_32_MAX 来表示无限次，1e99 将导致数值溢出)
 ---@field sprite_id integer = 1
 local timed = {
 	new = timed_ct,
