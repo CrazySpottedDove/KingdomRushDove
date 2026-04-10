@@ -29,6 +29,7 @@ require("klove.kui")
 local kui_db = require("klove.kui_db")
 
 require("gg_views_custom")
+require("dove_modules.gui.numeric_keyboard_view")
 if not IS_ANDROID then
 	require("dove_modules.gui.mod_manager_view")
 end
@@ -678,6 +679,15 @@ function screen_map:init(w, h, done_callback)
 		self.mod_manager_view = ModManagerView:new(sw, sh)
 		self.window:add_child(self.mod_manager_view)
 	end
+
+	-- 数字键盘弹窗（安卓 + 电脑均可用）
+	self.numeric_keyboard = NumericKeyboardView:new(sw, sh)
+	self.numeric_keyboard.pos = v(0, 0)
+	local _smw = self.window
+	self.numeric_keyboard.responder_setter = function(view_or_nil)
+		_smw:set_responder(view_or_nil)
+	end
+	self.window:add_child(self.numeric_keyboard)
 
 	if self.generation == 1 then
 		S:queue("MusicMap1")
@@ -6579,18 +6589,19 @@ function EditableItem:on_click(button, vx, vy)
 		self.value = not self.value
 		self.parent:clear_focus()
 	elseif self._type == "number" then
-		screen_map.window:set_responder(self)
-		self.parent:clear_focus()
-		self:set_focused(true)
-
 		if IS_ANDROID then
-			local ix = self:view_to_view(vx, vy, self.parent)
-
-			if ix < self.pos.x + self.size.x / 2 then
-				self:set_value_lable(tostring(self.value - 1))
-			else
-				self:set_value_lable(tostring(self.value + 1))
-			end
+			-- 安卓端：弹出数字键盘让用户精确输入
+			local item = self
+			screen_map.numeric_keyboard:open(self.value, function(new_val)
+				if new_val ~= nil then
+					item:set_value_lable(tostring(new_val))
+				end
+			end)
+		else
+			-- 	-- 电脑端：直接键盘录入
+			screen_map.window:set_responder(self)
+			self.parent:clear_focus()
+			self:set_focused(true)
 		end
 
 	elseif self._type == "string" then
