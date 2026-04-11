@@ -854,8 +854,8 @@ scripts.hero_mirage = {
 
 			la.disabled = nil
 			la.instakill_chance = s.instakill_chance[s.level]
-			la.damage_min = s.level * la.damage_min
-			la.damage_max = s.level * la.damage_max
+			la.damage_min = s.damage_min[s.level]
+			la.damage_max = s.damage_max[s.level]
 		end)
 
 		this.health.hp = this.health.hp_max

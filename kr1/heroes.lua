@@ -2394,10 +2394,12 @@ tt.hero.skills.shadowdance.xp_level_steps = {
 tt.hero.skills.lethalstrike = CC("hero_skill")
 tt.hero.skills.lethalstrike.instakill_chance = {0.1, 0.17, 0.25}
 tt.hero.skills.lethalstrike.xp_gain_factor = 50
+tt.hero.skills.lethalstrike.damage_min = {100, 200, 300}
+tt.hero.skills.lethalstrike.damage_max = {100, 200, 300}
 tt.hero.skills.lethalstrike.xp_level_steps = {
 	[3] = 1,
 	[6] = 2,
-	[10] = 3
+	[9] = 3
 }
 tt.dodge.animation = "disappear"
 tt.dodge.chance = 0.3
