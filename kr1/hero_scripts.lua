@@ -13351,10 +13351,6 @@ function scripts.hero_arivan.update(this, store)
 			a = this.timed_attacks.list[2]
 			skill = this.hero.skills.stone_dance
 
-			if not a.disabled and #a.aura.stones == a.aura.max_stones then
-				a.ts = store.tick_ts
-			end
-
 			if ready_to_use_skill(a, store) and #a.aura.stones < a.aura.max_stones then
 				S:queue(a.sound)
 				U.animation_start(this, a.animation, nil, store.tick_ts)
