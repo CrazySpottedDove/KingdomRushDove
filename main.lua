@@ -528,6 +528,59 @@ local function get_error_stack(msg, layer)
 	return (debug.traceback("Error: " .. tostring(msg), 1 + (layer or 1)):gsub("\n[^\n]+$", ""))
 end
 
+-- 从 traceback 文本中归因出导致错误的插件。
+-- 规则：逐行（从最内层向外）扫描；
+--   若先遇到 mods/local/<dir>/ 帧再遇到 hook_utils.lua 帧，说明错误发生在插件自身代码中；
+--   若先遇到 hook_utils.lua 帧，说明错误发生在被插件钩子通过 next() 调用的原始函数中，不归因插件。
+local function find_mod_from_traceback(traceback)
+	if not traceback then
+		return nil
+	end
+
+	local first_mod_dir = nil
+	local first_mod_idx = nil
+	local first_hookutils_idx = nil
+	local idx = 0
+
+	for line in traceback:gmatch("[^\n]+") do
+		idx = idx + 1
+
+		if first_mod_dir == nil then
+			-- 兼容带或不带 "./" 前缀的路径
+			local dir = line:match("[/\\]mods[/\\]local[/\\]([^/\\]+)[/\\]") or line:match("mods[/\\]local[/\\]([^/\\]+)[/\\]")
+
+			if dir then
+				first_mod_dir = dir
+				first_mod_idx = idx
+			end
+		end
+
+		if first_hookutils_idx == nil and line:match("hook_utils%.lua") then
+			first_hookutils_idx = idx
+		end
+
+		if first_mod_dir and first_hookutils_idx then
+			break
+		end
+	end
+
+	if not first_mod_dir then
+		return nil
+	end
+
+	-- hook_utils 帧比插件帧更靠内层 → 错误在原始函数中，不归因插件
+	if first_hookutils_idx and first_hookutils_idx < first_mod_idx then
+		return nil
+	end
+
+	local config = MOD_REGISTRY and MOD_REGISTRY[first_mod_dir]
+	if config then
+		return string.format("%s  (%s)", config.name or first_mod_dir, config.entry or first_mod_dir)
+	end
+
+	return first_mod_dir
+end
+
 function love.errorhandler(msg)
 	local error_canvas = G.newCanvas(G.getWidth(), G.getHeight())
 	local last_canvas = G.getCanvas()
@@ -574,6 +627,12 @@ function love.errorhandler(msg)
 	table.insert(err, "\n\n\n\n\nError\n")
 
 	table.insert(err, msg .. "\n\n")
+
+	-- 归因：检查错误是否由某个插件导致（stack_msg 包含完整 traceback）
+	local blamed_mod = find_mod_from_traceback(stack_msg)
+	if blamed_mod then
+		table.insert(tip, string.format("插件导致崩溃：%s\n", blamed_mod))
+	end
 
 	for l in string.gmatch(trace, "(.-)\n") do
 		if not string.match(l, "boot.lua") then

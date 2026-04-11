@@ -51,6 +51,9 @@ end
 --- 初始化所有已启用的模组
 ---@return nil
 function mod_main:after_init()
+	-- 提前初始化，确保 errorhandler 归因时 MOD_REGISTRY 不为 nil
+	MOD_REGISTRY = {}
+
 	-- 正序增加模组路径
 	for i = 1, mod_db.mods_count do
 		local mod_data = mod_db.mods_datas[i]
@@ -83,6 +86,13 @@ function mod_main:after_init()
 		loaded_mod:init(mod_data)
 		-- 打印模组加载信息
 		print(mod_db.get_debug_info(mod_data.config))
+	end
+
+	-- 注册全局 mod 表，供 errorhandler 归因使用（目录名 → config）
+	MOD_REGISTRY = {}
+	for i = 1, mod_db.mods_count do
+		local mod_data = mod_db.mods_datas[i]
+		MOD_REGISTRY[mod_data.name] = mod_data.config
 	end
 
 	mod_hook:after_init()
