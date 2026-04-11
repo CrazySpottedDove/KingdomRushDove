@@ -6719,6 +6719,7 @@ function scripts.mod_heal_on_kill.update(this, store)
 
 	if not target then
 		queue_remove(store, this)
+		return
 	end
 
 	this.pos = target.pos

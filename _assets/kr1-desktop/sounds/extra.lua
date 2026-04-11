@@ -608,7 +608,7 @@ return {
 		},
 		ArrowSound = {
 			files = {"Sound_ArrowRelease2.ogg", "Sound_ArrowRelease3.ogg"},
-			gain = {0.65, 0.8},
+			gain = 0.725,
 			loop = false,
 			source_group = "BULLETS"
 		},
@@ -620,7 +620,7 @@ return {
 		},
 		AxeSound = {
 			files = {"Sound_BattleAxe.ogg"},
-			gain = {0.3, 0.5},
+			gain = 0.4,
 			loop = false,
 			source_group = "BULLETS"
 		},
@@ -640,7 +640,7 @@ return {
 		},
 		DeathBig = {
 			files = {"Sound_EnemyBigDead.ogg"},
-			gain = {0.6, 0.9},
+			gain = 0.75,
 			loop = false,
 			source_group = "DEATH"
 		},
@@ -658,7 +658,7 @@ return {
 		},
 		DeathSkeleton = {
 			files = {"Sound_EnemySkeletonBreak2.ogg"},
-			gain = {0.6, 0.9},
+			gain = 0.75,
 			loop = false,
 			source_group = "DEATH"
 		},
@@ -927,7 +927,7 @@ return {
 		},
 		MushroomPoof = {
 			files = {"KR_sfx_mushroomcreep_muerte_edit_vanzen.ogg"},
-			gain = {0.2, 0.3},
+			gain = 0.25,
 			loop = false,
 			source_group = "SFX"
 		},
@@ -2802,7 +2802,7 @@ return {
 		},
 		ShotgunSound = {
 			files = {"Sound_Shootgun.ogg"},
-			gain = {0.65, 0.8},
+			gain = 0.725,
 			loop = false,
 			source_group = "BULLETS"
 		},

@@ -3172,7 +3172,7 @@ tt.render.sprites[2].name = "decal_flying_shadow"
 tt.render.sprites[2].offset = vec_2(0, 0)
 tt.sound_events.new_node = "WaspTaunt"
 tt.sound_events.new_node_args = {
-	gain = {0.3, 0.6}
+	gain = 0.45
 }
 tt.sound_events.death = "DeathPuff"
 tt.ui.click_rect = r(-10, 34, 20, 20)
@@ -3213,7 +3213,7 @@ tt.render.sprites[2].name = "decal_flying_shadow"
 tt.render.sprites[2].offset = vec_2(0, 0)
 tt.sound_events.new_node = "WaspTaunt"
 tt.sound_events.new_node_args = {
-	gain = {0.3, 0.6}
+	gain = 0.45
 }
 tt.sound_events.death = "DeathPuff"
 tt.ui.click_rect = r(-15, 38, 30, 40)

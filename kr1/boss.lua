@@ -3520,8 +3520,8 @@ tt.hps.heal_every = 1
 tt = E:register_t("mod_slow_overseer", "modifier")
 tt.main_script.insert = scripts.mod_slow_overseer.insert
 tt.main_script.update = scripts.mod_slow_overseer.update
-tt._shader = "p_tint"
-tt._shader_args = {
+tt.shader = "p_tint"
+tt.shader_args = {
 	tint_factor = 0.5,
 	tint_color = {0.5, 0, 0.5, 1}
 }

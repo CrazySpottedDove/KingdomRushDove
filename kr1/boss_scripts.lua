@@ -8267,7 +8267,7 @@ function scripts.mod_slow_overseer.insert(this, store)
 		return false
 	end
 	SU.insert_tower_cooldown_buff(store.tick_ts, target, 1 / this.slow_factor)
-	U.entity_insert_shader(target, SH:get(this._shader), this._shader_args)
+	U.entity_insert_shader(target, SH:get(this.shader), this.shader_args)
 	return true
 end
 

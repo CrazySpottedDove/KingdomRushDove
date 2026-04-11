@@ -8467,6 +8467,10 @@ function scripts.pirate_watchtower_parrot.update(this, store)
 	sp.offset.y = this.flight_height
 
 	while true do
+		-- 由 owner 负责 remove 它，这里只进行退出
+		if not this.owner then
+			return
+		end
 		if store.tick_ts - ca.ts > ca.cooldown and not this.owner.tower.blocked then
 			local target = U.find_nearest_enemy(store, tpos(this.owner), 0, this.owner.attacks.range, ca.vis_flags, ca.vis_bans)
 

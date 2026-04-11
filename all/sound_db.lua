@@ -9,6 +9,40 @@ local LS = love.sound
 local FS = love.filesystem
 local sound_db = {}
 
+-- FFI：用紧凑 C 数组替代 2000+ 个散列 Lua 表，减少 GC 压力
+local ffi = require("ffi")
+ffi.cdef[[
+	typedef struct { float last_play_ts; int32_t every_counter; int32_t sequence; } SdSoundExtra;
+]]
+-- 随着 sound 变多手动调整。
+local _EXTRAS_CAP = 3072
+local _extras_arr = ffi.new("SdSoundExtra[?]", _EXTRAS_CAP) -- 零初始化
+local _extras_cnt = 0
+
+-- 请求对象池：重用 req 表，避免每次 queue() 堆分配
+local _req_pool = {}
+
+local function _get_req(id, opts, ts)
+	local n = #_req_pool
+	local req = _req_pool[n]
+	_req_pool[n] = nil
+	if req then
+		req.id = id
+		req.options = opts
+		req.qts = ts
+	else
+		req = {
+			id = id,
+			options = opts,
+			qts = ts
+		}
+	end
+	return req
+end
+
+-- play() 的临时 source_pool 列表，模块级避免每帧分配
+local _ps = {}
+
 sound_db.path = nil
 sound_db.sources = {}
 sound_db.source_uses = {}
@@ -19,7 +53,6 @@ sound_db.group_gains = {}
 sound_db.active_sources = {}
 sound_db.sound_extras = {}
 sound_db.ref_counters = {}
-sound_db.qts = 0
 sound_db.ts = 0
 sound_db.paused = false
 sound_db.global_source_mode = nil
@@ -127,7 +160,7 @@ function sound_db:init(path)
 	end
 
 	for id, sd in pairs(self.sounds) do
-		self.sound_extras[id] = {}
+		self:_precache_sound(id, sd)
 	end
 
 	if f_extra.groups then
@@ -159,6 +192,17 @@ function sound_db:init(path)
 			end
 		end
 	end
+-- print(_extras_cnt)
+end
+
+-- 预缓存 per-sound 热路径字段，在 init() 和 mod 懒初始化时调用。
+-- 只写 _ 前缀字段，不影响声音定义的公共字段。
+function sound_db:_precache_sound(id, sd)
+	local se = _extras_arr + _extras_cnt
+	_extras_cnt = _extras_cnt + 1
+	self.sound_extras[id] = se
+
+	sd._files_n = sd.files and #sd.files or 0
 end
 
 function sound_db:queue_load_done()
@@ -421,29 +465,27 @@ function sound_db:queue(id, options)
 		return
 	end
 
-	if not self.sounds[id] then
+	local sd = self.sounds[id]
+
+	if not sd then
 		log.error("SOUND WITH ID %s NOT FOUND", tostring(id))
-		-- 打印调用栈
 		log.error(debug.traceback())
 
 		return
 	end
 
-	local opts
-
-	if options then
-		opts = table.merge(self.sounds[id], options, true)
-	else
-		opts = self.sounds[id]
+	-- mod 在 init() 后动态注册的声音，首次入队时补做预缓存
+	if not sd._files_n then
+		self:_precache_sound(id, sd)
 	end
 
-	local req = {
-		id = id,
-		options = opts,
-		qts = self.ts
-	}
+	local opts = sd
 
-	table.insert(self.request_queue, req)
+	if options then
+		opts = table.merge(sd, options, true)
+	end
+
+	self.request_queue[#self.request_queue + 1] = _get_req(id, opts, self.ts)
 end
 
 -- 声音终止队列，有两种请求：{id}和{gid}，分别表示停止指定声音ID和停止指定声音组的所有声音
@@ -508,9 +550,7 @@ function sound_db:sound_is_playing(id)
 	local sd = sound_db.sounds[id]
 
 	if sd then
-		local gid = sd.source_group
-
-		for _, ast in pairs(self.active_sources[gid]) do
+		for _, ast in pairs(sd._active_ref) do
 			if ast.id == id then
 				return true
 			end
@@ -636,6 +676,8 @@ function sound_db:update(dt)
 		if not req.options.delay or now_ts - req.qts >= req.options.delay then
 			self:play(req)
 			table.remove(queue, i)
+			req.options = nil
+			_req_pool[#_req_pool + 1] = req
 		end
 	end
 
@@ -656,7 +698,7 @@ end
 function sound_db:play(request)
 	local options = request.options
 	local se = self.sound_extras[request.id]
-	local last_play_ts = se.last_play_ts or 0
+	local last_play_ts = se.last_play_ts -- FFI float，零初始化，无需 or 0
 	local play_due = true
 
 	if options.chance and math.random() >= options.chance then
@@ -665,14 +707,13 @@ function sound_db:play(request)
 
 	-- 如果设置了every选项，则每隔指定的请求次数才会播放一次
 	if options.every then
-		local every_counter = se.every_counter or 0
+		local every_counter = se.every_counter -- FFI int32，零初始化
 
 		if every_counter ~= 0 then
 			play_due = false
 		end
 
-		every_counter = (every_counter + 1) % options.every
-		se.every_counter = every_counter
+		se.every_counter = (every_counter + 1) % options.every
 	end
 
 	-- 如果设置了ignore选项，则在上次播放后指定的时间内再次请求播放同一声音时会被忽略
@@ -693,25 +734,42 @@ function sound_db:play(request)
 		self.ref_counters[request.id] = rc
 	end
 
-	local pools = {}
+	local n_ps = 0
 
 	if options.mode == "sequence" then
-		if not se.sequence then
+		-- FFI int32 零初始化为 0，用 == 0 代替 not 判断
+		if se.sequence == 0 then
 			se.sequence = 1
 		end
-		pools[#pools + 1] = self.sources[options.files[se.sequence]]
+		local src = self.sources[options.files[se.sequence]]
+		if src then
+			n_ps = 1
+			_ps[1] = src
+		end
 		se.sequence = se.sequence % #options.files + 1
 	elseif options.mode == "random" then
-		pools[#pools + 1] = self.sources[options.files[math.random(1, #options.files)]]
+		local src = self.sources[options.files[math.random(1, #options.files)]]
+		if src then
+			n_ps = 1
+			_ps[1] = src
+		end
 	elseif options.mode == "concurrent" then
 		for _, f in ipairs(options.files) do
-			pools[#pools + 1] = self.sources[f]
+			local src = self.sources[f]
+			if src then
+				n_ps = n_ps + 1
+				_ps[n_ps] = src
+			end
 		end
 	else
-		pools[#pools + 1] = self.sources[options.files[1]]
+		local src = self.sources[options.files[1]]
+		if src then
+			n_ps = 1
+			_ps[1] = src
+		end
 	end
 
-	if not pools or #pools == 0 then
+	if n_ps == 0 then
 		if not self.missing_sources_warned[request.id] then
 			self.missing_sources_warned[request.id] = true
 			-- 同一声音缺资源只记录一次，避免重复刷屏。
@@ -722,10 +780,15 @@ function sound_db:play(request)
 	end
 
 	if play_due then
-		for i = 1, #pools do
-			self:_play(request, pools[i])
+		for i = 1, n_ps do
+			self:_play(request, _ps[i])
+			_ps[i] = nil
 		end
 		se.last_play_ts = self.ts
+	else
+		for i = 1, n_ps do
+			_ps[i] = nil
+		end
 	end
 end
 
@@ -765,16 +828,14 @@ end
 
 function sound_db:_play(request, source_pool)
 	local opts = request.options
-	local se = self.sound_extras[request.id]
-	local active_sources = self.active_sources
+	local active_list = self.active_sources[opts.source_group]
 
-	if not active_sources[opts.source_group] then
+	if not active_list then
 		log.error("SOUND %s group %s not found", request.id, opts.source_group)
 
 		return
 	end
 
-	local active = #active_sources[opts.source_group]
 	local max = self.source_groups[opts.source_group].max_sources
 	local source
 
@@ -784,31 +845,20 @@ function sound_db:_play(request, source_pool)
 		return
 	end
 
-	if active < max then
+	if #active_list < max then
 		source = get_or_create_source(source_pool)
 	else
-		local ste_idx = soon_to_stop_source(active_sources[opts.source_group])
-		local ste_ast = active_sources[opts.source_group][ste_idx]
+		local ste_idx = soon_to_stop_source(active_list)
+		local ste_ast = active_list[ste_idx]
 
 		ste_ast.source:stop()
 
-		table.remove(active_sources[opts.source_group], ste_idx)
+		table.remove(active_list, ste_idx)
 
 		source = get_or_create_source(source_pool)
 	end
 
-	local vol = 1
-
-	if opts.gain then
-		if type(opts.gain) == "number" then
-			vol = opts.gain
-		elseif type(opts.gain) == "table" then
-			local min, max = opts.gain[1], opts.gain[2]
-
-			vol = min + (max - min) * math.random()
-		end
-	end
-
+	local vol = opts.gain or 1
 	local ref_vol = vol
 	local group_gain = sound_db.group_gains[opts.source_group]
 
@@ -836,7 +886,7 @@ function sound_db:_play(request, source_pool)
 			ref_vol = ref_vol
 		}
 
-		table.insert(active_sources[opts.source_group], ast)
+		active_list[#active_list + 1] = ast
 	else
 		log.error("source:play() failed! source: %s sound_id: %s", tostring(source), request.id)
 	end

@@ -214,7 +214,7 @@ if IS_ANDROID then
 											G.setShader(f._shader)
 
 											if f.shader_args then
-												for k, v in ipairs(f.shader_args) do
+												for k, v in pairs(f.shader_args) do
 													f._shader:send(k, v)
 												end
 											end
@@ -303,7 +303,7 @@ if IS_ANDROID then
 								G.setShader(f._shader)
 
 								if f.shader_args then
-									for k, v in ipairs(f.shader_args) do
+									for k, v in pairs(f.shader_args) do
 										f._shader:send(k, v)
 									end
 								end
@@ -480,7 +480,7 @@ else
 									G.setShader(f._shader)
 
 									if f.shader_args then
-										for k, v in ipairs(f.shader_args) do
+										for k, v in pairs(f.shader_args) do
 											f._shader:send(k, v)
 										end
 									end
@@ -600,7 +600,7 @@ else
 						G.setShader(f._shader)
 
 						if f.shader_args then
-							for k, v in ipairs(f.shader_args) do
+							for k, v in pairs(f.shader_args) do
 								f._shader:send(k, v)
 							end
 						end
