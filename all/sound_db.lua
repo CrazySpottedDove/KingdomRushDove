@@ -550,7 +550,9 @@ function sound_db:sound_is_playing(id)
 	local sd = sound_db.sounds[id]
 
 	if sd then
-		for _, ast in pairs(sd._active_ref) do
+		local gid = sd.source_group
+
+		for _, ast in pairs(self.active_sources[gid]) do
 			if ast.id == id then
 				return true
 			end
