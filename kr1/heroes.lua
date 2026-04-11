@@ -2366,9 +2366,9 @@ tt.hero.skills.precision.xp_level_steps = {
 	[7] = 3
 }
 tt.hero.skills.shadowdodge = CC("hero_skill")
-tt.hero.skills.shadowdodge.dodge_chance = {0.4, 0.52, 0.64}
+tt.hero.skills.shadowdodge.dodge_chance = {0.5, 0.6, 0.7}
 tt.hero.skills.shadowdodge.reward_shadowdance = {0.6, 0.8, 1.0}
-tt.hero.skills.shadowdodge.reward_lethalstrike = {0.06, 0.1, 0.14}
+tt.hero.skills.shadowdodge.reward_lethalstrike = {0.06, 0.12, 0.18}
 tt.hero.skills.shadowdodge.xp_level_steps = {
 	[1] = 1,
 	[4] = 2,
@@ -2376,7 +2376,7 @@ tt.hero.skills.shadowdodge.xp_level_steps = {
 }
 tt.hero.skills.shadowdodge.lifespan = {1.2, 1.4, 1.6}
 tt.hero.skills.swiftness = CC("hero_skill")
-tt.hero.skills.swiftness.max_speed_factor = {1.3, 1.3, 1.3}
+tt.hero.skills.swiftness.max_speed_factor = {1.4, 1.3, 1.2}
 tt.hero.skills.swiftness.fps_factor = {1.1, 1.09, 1.08}
 tt.hero.skills.swiftness.xp_level_steps = {
 	[1] = 1,
@@ -2402,7 +2402,7 @@ tt.hero.skills.lethalstrike.xp_level_steps = {
 	[9] = 3
 }
 tt.dodge.animation = "disappear"
-tt.dodge.chance = 0.3
+tt.dodge.chance = 0.5
 tt.dodge.ranged = true
 tt.reward_shadowdance = 0.6
 tt.reward_lethalstrike = 0.06
