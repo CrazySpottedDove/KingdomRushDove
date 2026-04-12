@@ -13696,6 +13696,7 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.fn_level_up = scripts.hero_witch.level_up
 tt.info.hero_portrait = "kr5_hero_portraits_0013"
 tt.info.i18n_key = "HERO_WITCH"
+tt.info.fn = scripts.hero_witch.get_info
 tt.info.portrait = "kr5_info_portraits_heroes_0013"
 tt.main_script.insert = scripts.hero_witch.insert
 tt.main_script.update = scripts.hero_witch.update

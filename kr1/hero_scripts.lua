@@ -23916,6 +23916,13 @@ end
 
 scripts.hero_witch = {}
 
+function scripts.hero_witch.get_info(this)
+	local info = scripts.hero_basic.get_info(this)
+	info.ranged_damage_max = info.ranged_damage_max * 2
+	info.ranged_damage_min = info.ranged_damage_min * 2
+	return info
+end
+
 function scripts.hero_witch.level_up(this, store, initial)
 	local hl, ls = level_up_basic(this)
 

@@ -4,7 +4,7 @@ LOVE:=$(shell cat $(MAKE_FILE_DIR)/.love_dir)
 WINDOWS_DIR_WIN:=$(shell wslpath -w "$(WINDOWS_DIR)")
 MAIN_VERSION_COMMIT_HASH_FILE := $(MAKE_FILE_DIR)/.main_version_commit_hash
 CURRENT_ID=$(shell awk -F'"' '/version\.id[ ]*=/ {print $$2}' "./version.lua" | head -n 1)
-.PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check gen_waves android windows
+.PHONY: all debug package repackage sync branch master index upload download main_version_jump assets_check gen_waves android windows publish publish_retry
 
 all: _examine_dir_map sync
 	cd "$(WINDOWS_DIR)" && $(LOVE) "$(WINDOWS_DIR_WIN)"
@@ -94,6 +94,12 @@ android_quick:
 linux_quick:
 	@bash $(MAKE_FILE_DIR)/package.sh
 	bash $(MAKE_FILE_DIR)/pack_linux.sh quick
+
+publish:
+	JOBS=8 bash $(MAKE_FILE_DIR)/publish_parallel.sh
+
+publish_retry:
+	JOBS=8 bash $(MAKE_FILE_DIR)/publish_parallel.sh upload-only
 
 android_build:
 # 	@bash $(MAKE_FILE_DIR)/package.sh

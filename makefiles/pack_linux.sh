@@ -18,6 +18,16 @@ echo "Current version id: $current_id"
 mkdir -p ".versions"
 ARCHIVE_DIR=".versions/KingdomRushDove-Linux-Cycle2-v${current_id}.zip"
 TOPDIR="$(basename "$ARCHIVE_DIR" .zip)"  # love_env 改名为这个
+
+QUICK_MODE=0
+NO_UPLOAD_MODE=0
+for arg in "$@"; do
+    case "$arg" in
+        quick) QUICK_MODE=1 ;;
+        no-upload) NO_UPLOAD_MODE=1 ;;
+    esac
+done
+
 # 依赖检查
 if ! command -v zip >/dev/null 2>&1; then
     echo "ERROR: zip not found" >&2
@@ -59,6 +69,7 @@ rsync -a \
     --exclude='all/librender_sort.dll' \
     --exclude='mods/local/' \
     --exclude='.plugins/' \
+    --exclude='config.json' \
     ./ "$DEST_DIR/"
 
 echo "Creating archive -> $ARCHIVE_DIR"
@@ -74,8 +85,13 @@ rm -rf "$STAGE_DIR"
 
 echo "Packed -> $ARCHIVE_DIR"
 
+if [ "$NO_UPLOAD_MODE" = "1" ]; then
+    echo "Build complete, skipping upload as per argument."
+    exit 0
+fi
+
 # 如果传入了参数 quick，则使用内网 scp 传输
-if [ "${1:-}" = "quick" ]; then
+if [ "$QUICK_MODE" = "1" ]; then
     scp -P 60001 "$ARCHIVE_DIR" dove@10.112.99.5:/srv/files/王国保卫战Dove版-Linux端/
 else
     scp -P 60001 "$ARCHIVE_DIR" dove@krdovedownload6.crazyspotteddove.top:/srv/files/王国保卫战Dove版-Linux端/

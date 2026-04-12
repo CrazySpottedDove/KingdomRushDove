@@ -53,3 +53,4 @@ client
 .gdb_history
 mods/local
 .plugins/
+config.json
