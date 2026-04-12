@@ -32003,7 +32003,7 @@ function scripts.controller_terrain_3_stage_15_glare.update(this, store)
 			for i = 1, #this.eyes do
 				while store.tick_ts - start_ts < delay - 2 * (#this.eyes - i) do
 					if last_phase ~= this.phase then
-						goto label_1236_0
+						goto label_1236_skip
 					end
 
 					coroutine.yield()
@@ -32075,6 +32075,8 @@ function scripts.controller_terrain_3_stage_15_glare.update(this, store)
 			queue_remove(store, aura)
 			U.y_animation_play(decal, "out", nil, store.tick_ts)
 			queue_remove(store, decal)
+
+			::label_1236_skip::
 		end
 
 		coroutine.yield()
@@ -33373,14 +33375,6 @@ function scripts.aura_stage_15_cult_leader_tower_stun.update(this, store)
 	local cycles_count = 0
 	local victims_count = 0
 
-	if this.aura.track_source and this.aura.source_id then
-		local te = store.entities[this.aura.source_id]
-
-		if te and te.pos then
-			this.pos = te.pos
-		end
-	end
-
 	last_hit_ts = store.tick_ts - this.aura.cycle_time
 
 	if this.aura.apply_delay then
@@ -33415,46 +33409,6 @@ function scripts.aura_stage_15_cult_leader_tower_stun.update(this, store)
 
 		if this.aura.stop_on_max_count and this.aura.max_count and victims_count >= this.aura.max_count then
 			break
-		end
-
-		if this.aura.track_source and this.aura.source_id then
-			local te = store.entities[this.aura.source_id]
-
-			if not te or te.health and te.health.dead and not this.aura.track_dead then
-				break
-			end
-		end
-
-		if this.aura.requires_magic then
-			local te = store.entities[this.aura.source_id]
-
-			if not te or not te.enemy then
-				goto label_1273_0
-			end
-
-			if this.render then
-				this.render.sprites[1].hidden = not te.enemy.can_do_magic
-			end
-
-			if not te.enemy.can_do_magic then
-				goto label_1273_0
-			end
-		end
-
-		if this.aura.source_vis_flags and this.aura.source_id then
-			local te = store.entities[this.aura.source_id]
-
-			if te and te.vis and band(te.vis.bans, this.aura.source_vis_flags) ~= 0 then
-				goto label_1273_0
-			end
-		end
-
-		if this.aura.requires_alive_source and this.aura.source_id then
-			local te = store.entities[this.aura.source_id]
-
-			if te and te.health and te.health.dead then
-				goto label_1273_0
-			end
 		end
 
 		if already_applied_mod or not (store.tick_ts - last_hit_ts >= this.aura.cycle_time) or this.aura.apply_duration and first_hit_ts and store.tick_ts - first_hit_ts > this.aura.apply_duration then
@@ -33565,9 +33519,6 @@ function scripts.mod_stage_15_cult_leader_tower_stun.remove(this, store)
 
 	if target then
 		SU.stun_dec(target)
-		log.paranoid("mod_stun.remove (%s)-%s for target (%s)-%s", this.id, this.template_name, target.id, target.template_name)
-	else
-		log.paranoid("mod_stun.remove target is nil for id %s", this.modifier.target_id)
 	end
 
 	return true

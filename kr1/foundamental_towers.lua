@@ -127,7 +127,7 @@ tt.render.sprites[1].name = "build_terrain_blocked_0001"
 -- tt.render.sprites[1].name = "build_terrain_blocked_%04i"
 tt.render.sprites[1].offset = vec_2(0, 17)
 tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[2] = CC("sprite")
+-- tt.render.sprites[2] = CC("sprite")
 tt.ui.click_rect = r(-40, -12, 80, 46)
 tt.sound_events.remove = "GUITowerSell"
 --#endregion
