@@ -2965,7 +2965,9 @@ function U.soldier_revive(soldier)
 	soldier.health.dead = false
 	soldier.health.hp = soldier.health.hp_max
 	soldier.health_bar.hidden = nil
-	soldier.ui.can_select = true
+	if soldier.ui then
+		soldier.ui.can_select = true
+	end
 	if soldier.unit.hide_during_death then
 		soldier.unit.hide_during_death = nil
 		U.sprites_show(soldier)

@@ -4343,7 +4343,7 @@ scripts.hero_priest = {
 
 							local count = 0
 
-							for _, s in pairs(targets) do
+							for _, s in ipairs(targets) do
 								-- 复活
 								if s.health.dead and not s.unit.hide_during_death and (math.random() < a.revive_chance) and not s.reinforcement and not s.hero and not U.is_wraith(s.template_name) then
 									U.soldier_revive(s)
