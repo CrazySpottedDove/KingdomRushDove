@@ -177,7 +177,7 @@ local holder_blocked_names = {
 }
 
 -- 遍历注册所有 blocked 塔位
-for name, data in pairs(holder_blocked_names) do
+for name, data in ipairs(holder_blocked_names) do
 	local tt = E:register_t(name, "tower_holder_blocked")
 	tt.tower_holder.unblock_price = data.unblock_price
 	tt.tower.terrain_style = data.terrain_style

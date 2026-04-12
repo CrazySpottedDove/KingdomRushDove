@@ -661,9 +661,7 @@ tt.sound_events.insert = "AxeSound"
 --#endregion
 --#region tower_pirate_watchtower
 tt = RT("tower_pirate_watchtower", "tower_archer_1")
-
 AC(tt, "powers")
-
 tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].animation = "shoot"
 tt.attacks.list[1].bullet = "pirate_watchtower_shotgun"
@@ -682,10 +680,17 @@ tt.powers.reduce_cooldown.price_inc = 40
 tt.powers.reduce_cooldown.enc_icon = 24
 tt.powers.reduce_cooldown.values = {2.2, 1.5, 1}
 tt.powers.parrot = CC("power")
-tt.powers.parrot.price_base = 250
-tt.powers.parrot.price_inc = 250
+tt.powers.parrot.price_base = 150
+tt.powers.parrot.price_inc = 150
 tt.powers.parrot.enc_icon = 25
 tt.powers.parrot.max_level = 3
+tt.powers.watcher = CC("power")
+tt.powers.watcher.price_base = 200
+tt.powers.watcher.price_inc = 200
+tt.powers.watcher.enc_icon = 24
+tt.powers.watcher.range = 250
+tt.powers.watcher.ts = 0
+tt.powers.watcher.cooldown = 1
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "pirateTower"
 tt.render.sprites[1].offset = vec_2(0, 18)
@@ -724,11 +729,10 @@ tt.bullet.miss_fx_water = "fx_splash_small"
 tt.bullet.start_fx = "fx_rifle_smoke"
 tt.sound_events.insert = "ShotgunSound"
 --#endregion
+
 --#region pirate_watchtower_parrot
 tt = RT("pirate_watchtower_parrot", "decal_scripted")
-
 AC(tt, "force_motion", "custom_attack")
-
 anchor_y = 0.5
 image_y = 30
 tt.flight_height = 60
@@ -759,12 +763,13 @@ tt.render.sprites[2].name = "decal_flying_shadow"
 tt.render.sprites[2].offset = vec_2(0, 0)
 tt.owner = nil
 --#endregion
+
 --#region pirate_watchtower_bomb
 tt = RT("pirate_watchtower_bomb", "bomb")
 tt.bullet.flight_time = fts(10)
 tt.bullet.rotation_speed = 0
-tt.bullet.damage_max = 44
-tt.bullet.damage_min = 22
+tt.bullet.damage_max = 26
+tt.bullet.damage_min = 13
 tt.bullet.hide_radius = nil
 tt.bullet.mod = "mod_pirate_watchtower_bomb"
 tt.render.sprites[1].name = "pirateTower_bomb"
@@ -773,6 +778,44 @@ tt.sound_events.insert = nil
 --#region mod_pirate_watchtower_bomb
 tt = RT("mod_pirate_watchtower_bomb", "mod_stun")
 tt.modifier.duration = 0.3
+--#endregion
+--#region mod_pirate_watcher
+local mod_pirate_watcher = RT("mod_pirate_watcher", "modifier")
+AC(mod_pirate_watcher, "render", "tween")
+mod_pirate_watcher.range_factor = 1.0
+mod_pirate_watcher.range_factor_inc = 0.10
+mod_pirate_watcher.main_script.insert = scripts.mod_pirate_watcher.insert
+mod_pirate_watcher.main_script.remove = scripts.mod_pirate_watcher.remove
+mod_pirate_watcher.modifier.duration = 1e+99
+mod_pirate_watcher.modifier.use_mod_offset = false
+mod_pirate_watcher.tween.remove = false
+mod_pirate_watcher.tween.props[1].name = "alpha"
+mod_pirate_watcher.tween.props[1].keys = {{0, 0}, {0.5, 255}}
+mod_pirate_watcher.render.sprites[1].name = "CossbowHunter_towerBuff"
+mod_pirate_watcher.render.sprites[1].animated = false
+mod_pirate_watcher.render.sprites[1].anchor.y = 0.21
+mod_pirate_watcher.render.sprites[1].z = Z_TOWER_BASES + 1
+mod_pirate_watcher.render.sprites[1].shader = "p_tint"
+mod_pirate_watcher.render.sprites[1].shader_args = {
+	tint_color = {0.20, 0.78, 0.31, 1},
+	tint_factor = 0.9
+}
+--#endregion
+--#region decal_pirate_watcher_preview
+local decal_pirate_watcher_preview = RT("decal_pirate_watcher_preview", "decal_tween")
+decal_pirate_watcher_preview.render.sprites[1].name = "CrossbowHunterDecalDotted"
+decal_pirate_watcher_preview.render.sprites[1].animated = false
+decal_pirate_watcher_preview.render.sprites[1].anchor = vec_2(0.5, 0.32)
+decal_pirate_watcher_preview.render.sprites[1].offset.y = 0
+decal_pirate_watcher_preview.render.sprites[1].shader = "p_tint"
+decal_pirate_watcher_preview.render.sprites[1].shader_args = {
+	tint_color = {0.20, 0.78, 0.31, 1},
+	tint_factor = 0.9
+}
+decal_pirate_watcher_preview.tween.remove = false
+decal_pirate_watcher_preview.tween.props[1].name = "scale"
+decal_pirate_watcher_preview.tween.props[1].loop = true
+decal_pirate_watcher_preview.tween.props[1].keys = {{0, vec_2(1, 1)}, {0.25, vec_2(1.15, 1.15)}, {0.5, vec_2(1, 1)}}
 --#endregion
 --#region tower_arcane
 tt = RT("tower_arcane", "tower")

@@ -135,6 +135,31 @@ function scripts.mod_crossbow_eagle.remove(this, store)
 	return true
 end
 
+scripts.mod_pirate_watcher = {}
+
+function scripts.mod_pirate_watcher.insert(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+
+	if not target or not target.tower then
+		return false
+	end
+
+	SU.insert_tower_range_buff(target, this.range_factor + m.level * this.range_factor_inc, true)
+	signal.emit("mod-applied", this, target)
+
+	return true
+end
+
+function scripts.mod_pirate_watcher.remove(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+
+	SU.remove_tower_range_buff(target, this.range_factor + m.level * this.range_factor_inc, true)
+
+	return true
+end
+
 scripts.aura_totem = {}
 
 function scripts.aura_totem.update(this, store)
@@ -8477,7 +8502,6 @@ function scripts.pirate_watchtower_parrot.update(this, store)
 			if not target then
 				SU.delay_attack(store, ca, 0.13333333333333333)
 			else
-				log.debug("fly to get bomb")
 				U.animation_start(this, "fly", nil, store.tick_ts, true)
 
 				dest.x, dest.y = this.bombs_pos.x, this.bombs_pos.y
@@ -8485,7 +8509,7 @@ function scripts.pirate_watchtower_parrot.update(this, store)
 				local dist = V.dist(this.pos.x, this.pos.y, dest.x, dest.y)
 
 				while dist > 10 do
-					force_move_step(dest, this.flight_speed_busy, this.ramp_dist_busy)
+					force_move_step(dest, this.flight_speed_busy)
 					coroutine.yield()
 
 					target = store.entities[target.id]
@@ -8499,7 +8523,6 @@ function scripts.pirate_watchtower_parrot.update(this, store)
 					dist = V.dist(this.pos.x, this.pos.y, dest.x, dest.y)
 				end
 
-				log.debug("carry bomb")
 				U.animation_start(this, "carry", nil, store.tick_ts, true)
 
 				dest.x, dest.y = target.pos.x, target.pos.y
@@ -8512,8 +8535,6 @@ function scripts.pirate_watchtower_parrot.update(this, store)
 					dest.x, dest.y = target.pos.x, target.pos.y
 					dist = V.dist(this.pos.x, this.pos.y, dest.x, dest.y)
 				end
-
-				log.debug("drop bomb")
 
 				local e = E:create_entity(ca.bullet)
 
@@ -8528,7 +8549,19 @@ function scripts.pirate_watchtower_parrot.update(this, store)
 
 				e.bullet.to = V.vclone(t_pos)
 				ca.ts = store.tick_ts
+				fm.v.x, fm.v.y = 0, 0
+				fm.a.x, fm.a.y = 0, 0
 				dest.x, dest.y = this.idle_pos.x, this.idle_pos.y
+
+				local rdist = V.dist(this.pos.x, this.pos.y, dest.x, dest.y)
+
+				U.animation_start(this, "fly", nil, store.tick_ts, true)
+
+				while rdist > 20 do
+					force_move_step(dest, this.flight_speed_busy)
+					coroutine.yield()
+					rdist = V.dist(this.pos.x, this.pos.y, dest.x, dest.y)
+				end
 			end
 		end
 

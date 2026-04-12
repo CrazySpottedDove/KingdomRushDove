@@ -1082,6 +1082,18 @@ scripts.tower_pirate_watchtower = {
 
 		SU.queue_remove_clean_table(store, this.parrots)
 
+		local watcher_mods = table.filter(store.modifiers, function(_, e)
+			return e.template_name == "mod_pirate_watcher" and e.modifier.source_id == this.id
+		end)
+
+		for _, m in pairs(watcher_mods) do
+			queue_remove(store, m)
+		end
+
+		if this.watcher_previews then
+			SU.queue_remove_clean_table(store, this.watcher_previews)
+		end
+
 		return true
 	end,
 	update = function(this, store)
@@ -1089,15 +1101,63 @@ scripts.tower_pirate_watchtower = {
 		local a = this.attacks.list[1]
 		local pow_c = this.powers.reduce_cooldown
 		local pow_p = this.powers.parrot
+		local pow_w = this.powers.watcher
 		local shooter_sid = 3
 		local last_target_pos = v(0, 0)
 		local tpos = tpos(this)
 		local tw = this.tower
 
+		this.watcher_previews = nil
+
+		local watcher_previews_level
+
 		while true do
 			if this.tower.blocked then
+				if this.watcher_previews then
+					SU.queue_remove_clean_table(store, this.watcher_previews)
+					this.watcher_previews = nil
+				end
 			-- block empty
 			else
+				if this.ui.hover_active and this.ui.args == "watcher" and (not this.watcher_previews or watcher_previews_level ~= pow_w.level) then
+					if this.watcher_previews then
+						for _, decal in pairs(this.watcher_previews) do
+							queue_remove(store, decal)
+						end
+					end
+
+					this.watcher_previews = {}
+					watcher_previews_level = pow_w.level
+
+					local mods = table.filter(store.modifiers, function(_, e)
+						return e.modifier and e.modifier.source_id == this.id
+					end)
+					local modded_ids = {}
+
+					for _, m in pairs(mods) do
+						table.insert(modded_ids, m.modifier.target_id)
+					end
+
+					local targets = table.filter(store.towers, function(_, e)
+						return e.tower.can_be_mod and not table.contains(modded_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, pow_w.range)
+					end)
+
+					for _, target in pairs(targets) do
+						local decal = E:create_entity("decal_pirate_watcher_preview")
+
+						decal.pos = target.pos
+						decal.render.sprites[1].ts = store.tick_ts
+
+						queue_insert(store, decal)
+						table.insert(this.watcher_previews, decal)
+					end
+				elseif this.watcher_previews and (not this.ui.hover_active or this.ui.args ~= "watcher") then
+					for _, decal in pairs(this.watcher_previews) do
+						queue_remove(store, decal)
+					end
+
+					this.watcher_previews = nil
+				end
 				if pow_c.changed then
 					pow_c.changed = nil
 					a.cooldown = pow_c.values[pow_c.level]
@@ -1119,6 +1179,43 @@ scripts.tower_pirate_watchtower = {
 					end
 				end
 
+				if pow_w.changed then
+					pow_w.changed = nil
+					pow_w.ts = store.tick_ts - pow_w.cooldown
+
+					local old_mods = table.filter(store.modifiers, function(_, e)
+						return e.template_name == "mod_pirate_watcher" and e.modifier.source_id == this.id
+					end)
+
+					for _, m in ipairs(old_mods) do
+						queue_remove(store, m)
+					end
+				end
+
+				if pow_w.level > 0 and ready_to_use_power(pow_w, pow_w, store) then
+					pow_w.ts = store.tick_ts
+
+					local existing = table.filter(store.modifiers, function(_, e)
+						return e.template_name == "mod_pirate_watcher" and e.modifier.source_id == this.id
+					end)
+					local busy_ids = table.map(existing, function(_, v)
+						return v.modifier.target_id
+					end)
+					local towers = table.filter(store.towers, function(_, e)
+						return e.tower.can_be_mod and not table.contains(busy_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, pow_w.range)
+					end)
+
+					for _, tower in ipairs(towers) do
+						local new_mod = E:create_entity("mod_pirate_watcher")
+
+						new_mod.modifier.level = pow_w.level
+						new_mod.modifier.target_id = tower.id
+						new_mod.modifier.source_id = this.id
+						new_mod.pos = tower.pos
+
+						queue_insert(store, new_mod)
+					end
+				end
 				if ready_to_attack(a, store, tw.cooldown_factor) then
 					local enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, at.range, a.vis_flags, a.vis_bans)
 

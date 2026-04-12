@@ -1424,7 +1424,7 @@ return {
 	pirate_watchtower = {{M(tpl.upgrade_power, {
 		action_arg = "reduce_cooldown",
 		image = "special_icons_0045",
-		place = 1,
+		place = 5,
 		sounds = {"PirateTowerTaunt1"},
 		tt_phrase = _("TOWER_PIRATE_WATCHTOWER_REDUCE_COOLDOWN_NOTE"),
 		tt_list = {{
@@ -1440,7 +1440,7 @@ return {
 	}), M(tpl.upgrade_power, {
 		action_arg = "parrot",
 		image = "special_icons_0046",
-		place = 2,
+		place = 6,
 		sounds = {"PirateTowerTaunt2"},
 		tt_phrase = _("TOWER_PIRATE_WATCHTOWER_PARROT_NOTE"),
 		tt_list = {{
@@ -1452,6 +1452,22 @@ return {
 		}, {
 			tt_title = _("TOWER_PIRATE_WATCHTOWER_PARROT_NAME_3"),
 			tt_desc = _("TOWER_PIRATE_WATCHTOWER_PARROT_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "watcher",
+		image = "kr5_special_icons_0004",
+		place = 7,
+		sounds = {"PirateTowerTaunt2"},
+		tt_phrase = _("TOWER_PIRATE_WATCHTOWER_WATCHER_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_PIRATE_WATCHTOWER_WATCHER_NAME_1"),
+			tt_desc = _("TOWER_PIRATE_WATCHTOWER_WATCHER_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_PIRATE_WATCHTOWER_WATCHER_NAME_2"),
+			tt_desc = _("TOWER_PIRATE_WATCHTOWER_WATCHER_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_PIRATE_WATCHTOWER_WATCHER_NAME_3"),
+			tt_desc = _("TOWER_PIRATE_WATCHTOWER_WATCHER_DESCRIPTION_3")
 		}}
 	}), tpl.sell}},
 	holder_neptune = {{M(tpl.upgrade, {
