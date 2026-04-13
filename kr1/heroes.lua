@@ -2126,11 +2126,10 @@ tt = RT("mod_hero_thor_stun", "mod_stun")
 tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
 --#endregion
+
 --#region hero_10yr
 tt = RT("hero_10yr", "hero")
-
 AC(tt, "melee", "timed_attacks", "teleport")
-
 anchor_y = 0.20161290322580644
 anchor_x = 0.5
 image_y = 116
@@ -2277,6 +2276,9 @@ tt.timed_attacks.list[3].sound_short = "TenShiBuffedBombAttack"
 tt.timed_attacks.list[3].sound_long = "TenShiBuffedBombAttackLong"
 tt.timed_attacks.list[3].sound = tt.timed_attacks.list[3].sound_short
 tt.timed_attacks.list[3].xp_from_skill = "buffed"
+tt.timed_attacks.list[4] = table.deepclone(tt.timed_attacks.list[1])
+tt.timed_attacks.list[4].cooldown = 46
+tt.timed_attacks.list[4].entity = "aura_10yr_giant_fireball"
 --#endregion
 --#region aura_10yr_fireball
 tt = RT("aura_10yr_fireball", "aura")
@@ -2284,11 +2286,16 @@ tt.main_script.update = scripts.aura_10yr_fireball.update
 tt.aura.entity = "fireball_10yr"
 tt.aura.delay = fts(15)
 tt.aura.loops = nil
-tt.aura.min_range = E:get_template("hero_10yr").timed_attacks.list[1].min_range
 tt.aura.max_range = E:get_template("hero_10yr").timed_attacks.list[1].max_range
 tt.aura.vis_flags = E:get_template("hero_10yr").timed_attacks.list[1].vis_flags
 tt.aura.vis_bans = E:get_template("hero_10yr").timed_attacks.list[1].vis_bans
 --#endregion
+
+tt = RT("aura_10yr_giant_fireball", "aura_10yr_fireball")
+tt.aura.entity = "giant_fireball_10yr"
+tt.aura.loops = 1
+tt.aura.delay = fts(20)
+
 --#region fireball_10yr
 tt = RT("fireball_10yr", "bullet")
 tt.bullet.min_speed = 24 * FPS
@@ -2307,6 +2314,16 @@ tt.scorch_earth = false
 tt.sound_events.insert = "FireballRelease"
 tt.sound_events.hit = "FireballHit"
 --#endregion
+
+tt = RT("giant_fireball_10yr", "fireball_10yr")
+tt.bullet.min_speed = 8 * FPS
+tt.bullet.max_speed = 8 * FPS
+tt.bullet.damage_radius = 120
+tt.bullet.damage_min = 60
+tt.bullet.damage_max = 120
+tt.main_script.update = scripts.power_giant_fireball_10yr.update
+tt.render.sprites[1].scale = vv(2)
+
 --#region aura_10yr_bomb
 tt = RT("aura_10yr_bomb", "aura")
 tt.aura.fx = "decal_10yr_spike"

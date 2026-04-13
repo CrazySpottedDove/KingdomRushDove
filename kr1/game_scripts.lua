@@ -3358,11 +3358,12 @@ function scripts.aura_10yr_fireball.update(this, store)
 		end
 
 		for i = 1, a.loops do
-			local target = U.detect_foremost_enemy_in_range_filter_off(owner.pos, a.max_range, a.vis_flags, a.vis_bans)
+			-- local target = U.detect_foremost_enemy_in_range_filter_off(owner.pos, a.max_range, a.vis_flags, a.vis_bans)
+			local target, _, pred_pos = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(owner.pos, a.max_range, bdt, a.vis_flags, a.vis_bans, E:get_template(a.entity).bullet.damage_radius)
 			local b = E:create_entity(a.entity)
 
 			if target then
-				local pred_pos = U.calculate_enemy_ffe_pos(target, bdt)
+				-- local pred_pos = U.calculate_enemy_ffe_pos(target, bdt)
 				local dh = start_y - pred_pos.y
 				local dx = dh * 0.4
 

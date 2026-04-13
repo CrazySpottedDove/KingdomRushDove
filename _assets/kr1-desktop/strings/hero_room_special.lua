@@ -674,7 +674,7 @@ cycle_time = b.aura.cycle_time
 
 get_damage(b.aura, 2)
 
-map["火焰冲刺"] = str(cooldown_str(), "天十感召天地，召唤", loop, "枚火球，每枚火球对", radius, "范围内敌人造成", damage_str(1), "。火球落地后产生焦土，每隔", cycle_time, "秒对", radius_2, "范围内敌人造成", damage_str(2), "，持续", duration, "秒。")
+map["火焰冲刺"] = str(cooldown_str(), "天十感召天地，召唤", loop, "枚火球，每枚火球对", radius, "范围内敌人造成", damage_str(1), "。火球落地后产生焦土，每隔", cycle_time, "秒对", radius_2, "范围内敌人造成", damage_str(2), "，持续", duration, "秒。每隔双倍冷却，天十还会释放一次本技能的增强版本，召唤一坨两倍大小的火球。")
 
 set_hero("hero_alric")
 set_skill(h.hero.skills.flurry)

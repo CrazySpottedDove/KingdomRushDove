@@ -2006,6 +2006,8 @@ end
 tt = RT("aura_eb_10yr_fireball", "aura_10yr_fireball")
 tt.aura.entity = "fireball_eb_10yr"
 tt.aura.loops = 5
+tt.aura.vis_flags = F_RANGED
+tt.aura.vis_bans = F_FLYING
 tt.main_script.update = function(this, store)
 	local start_y = store.visible_coords and store.visible_coords.top or REF_H
 	local bdt

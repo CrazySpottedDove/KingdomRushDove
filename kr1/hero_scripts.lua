@@ -7151,6 +7151,17 @@ scripts.hero_10yr = {
 			if s.level >= 2 then
 				bt.scorch_earth = true
 			end
+
+			a = this.timed_attacks.list[4]
+			a.disabled = nil
+			au = E:get_template(a.entity)
+			bt = E:get_template(au.aura.entity)
+			bt.bullet.damage_min = s.damage_min[s.level] * s.loops[s.level]
+			bt.bullet.damage_max = s.damage_max[s.level] * s.loops[s.level]
+
+			if s.level >= 2 then
+				bt.scorch_earth = true
+			end
 		end)
 		upgrade_skill(this, "buffed", function(this, s)
 			local a = this.timed_attacks.list[2]
@@ -7187,6 +7198,7 @@ scripts.hero_10yr = {
 		local ra = this.timed_attacks.list[1]
 		local ba = this.timed_attacks.list[2]
 		local bma = this.timed_attacks.list[3]
+		local giant_ra = this.timed_attacks.list[4]
 		local a, skill, brk, sta
 
 		local function go_buffed()
@@ -7284,6 +7296,68 @@ scripts.hero_10yr = {
 				end
 
 				a = ra
+				skill = this.hero.skills.rain
+
+				if ready_to_use_skill(a, store) then
+					local start_ts, bdy, bdt, au
+					local fired_aura = false
+					local targets = U.find_enemies_between_range_filter_off(this.pos, a.min_range, a.trigger_range, a.vis_flags, a.vis_bans)
+
+					if not targets then
+						SU.delay_attack(store, a, 0.2)
+					else
+						if this.is_buffed then
+							local compensation = (ba.duration - (store.tick_ts - ba.ts)) / ba.duration * ba.cooldown
+
+							go_normal()
+
+							ba.ts = ba.ts - compensation
+						end
+
+						S:queue(a.sound_start)
+						U.animation_start(this, a.animations[1], nil, store.tick_ts, false)
+
+						while not U.animation_finished(this) do
+							if SU.hero_interrupted(this) then
+								goto label_90_0
+							end
+
+							coroutine.yield()
+						end
+
+						start_ts = store.tick_ts
+
+						U.animation_start(this, a.animations[2], nil, store.tick_ts, false)
+
+						while not U.animation_finished(this) do
+							if SU.hero_interrupted(this) then
+								goto label_90_0
+							end
+
+							coroutine.yield()
+						end
+
+						au = E:create_entity(a.entity)
+						au.aura.source_id = this.id
+
+						queue_insert(store, au)
+
+						fired_aura = true
+
+						::label_90_0::
+
+						if fired_aura then
+							a.ts = start_ts
+
+							SU.hero_gain_xp_from_skill(this, skill)
+						end
+
+						S:queue(a.sound_end)
+						U.y_animation_play(this, a.animations[3], nil, store.tick_ts, 1)
+					end
+				end
+
+				a = giant_ra
 				skill = this.hero.skills.rain
 
 				if ready_to_use_skill(a, store) then
@@ -7525,6 +7599,129 @@ scripts.power_fireball_10yr = {
 		queue_remove(store, this)
 	end
 }
+
+scripts.power_giant_fireball_10yr = {
+	update = function(this, store)
+		local b = this.bullet
+		local mspeed = 5 * FPS
+		local particle = E:create_entity("ps_power_fireball")
+
+		particle.particle_system.track_id = this.id
+		particle.particle_system.scale_var[1] = particle.particle_system.scale_var[1] * 2
+		particle.particle_system.scale_var[2] = particle.particle_system.scale_var[2] * 2
+
+		queue_insert(store, particle)
+
+		local shadow = E:create_entity("decal_fireball_shadow")
+
+		shadow.pos.x, shadow.pos.y = b.to.x, b.to.y
+		shadow.render.sprites[1].ts = store.tick_ts
+		shadow.render.sprites[1].scale = V.vv(2)
+
+		queue_insert(store, shadow)
+
+		local shadow_tracks = b.from.x ~= b.to.x
+
+		while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
+			mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
+			mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
+			b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
+			this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
+			this.render.sprites[1].r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
+
+			if shadow_tracks then
+				shadow.pos.x = this.pos.x
+			end
+
+			coroutine.yield()
+		end
+
+		this.pos.x, this.pos.y = b.to.x, b.to.y
+		particle.particle_system.source_lifetime = 0
+
+		local enemies = table.filter(store.enemies, function(k, v)
+			return not v.health.dead and band(v.vis.flags, b.damage_bans) == 0 and band(v.vis.bans, b.damage_flags) == 0 and U.is_inside_ellipse(v.pos, b.to, b.damage_radius)
+		end)
+		local damage_value = math.ceil(b.damage_factor * math.random(b.damage_min, b.damage_max))
+
+		for _, enemy in pairs(enemies) do
+			local d = E:create_entity("damage")
+
+			d.source_id = this.id
+			d.target_id = enemy.id
+			d.value = damage_value
+			d.damage_type = b.damage_type
+
+			queue_damage(store, d)
+		end
+
+		S:queue(this.sound_events.hit)
+
+		local cell_type = GR:cell_type(b.to.x, b.to.y)
+
+		if band(cell_type, TERRAIN_WATER) ~= 0 then
+			local fx = E:create_entity("fx_explosion_water")
+
+			fx.pos.x, fx.pos.y = b.to.x, b.to.y
+			fx.render.sprites[1].ts = store.tick_ts
+			fx.render.sprites[1].scale = V.vv(2)
+			queue_insert(store, fx)
+
+			if this.scorch_earth then
+				local scorched = E:create_entity("power_scorched_water")
+
+				scorched.pos.x, scorched.pos.y = b.to.x, b.to.y
+				scorched.render.sprites[1].scale = V.vv(2)
+				scorched.aura.radius = scorched.aura.radius * 2
+
+				for i = 1, #scorched.render.sprites do
+					scorched.render.sprites[i].ts = store.tick_ts
+				end
+
+				queue_insert(store, scorched)
+			end
+		else
+			if b.hit_decal then
+				local decal = E:create_entity(b.hit_decal)
+
+				decal.pos = V.vclone(b.to)
+				decal.render.sprites[1].ts = store.tick_ts
+				decal.render.sprites[1].scale = V.vv(2)
+
+				queue_insert(store, decal)
+			end
+
+			if b.hit_fx then
+				local fx = E:create_entity(b.hit_fx)
+
+				fx.pos.x, fx.pos.y = b.to.x, b.to.y
+				fx.render.sprites[1].ts = store.tick_ts
+				fx.render.sprites[1].scale = V.vv(2)
+
+				queue_insert(store, fx)
+			end
+
+			if this.scorch_earth then
+				local scorched = E:create_entity("power_scorched_earth")
+
+				scorched.pos.x, scorched.pos.y = b.to.x, b.to.y
+
+				for i = 1, #scorched.render.sprites do
+					scorched.render.sprites[i].ts = store.tick_ts
+				end
+
+				scorched.render.sprites[1].scale = V.vv(2)
+				scorched.aura.radius = scorched.aura.radius * 2
+
+				queue_insert(store, scorched)
+			end
+		end
+
+		queue_remove(store, shadow)
+		queue_remove(store, this)
+	end
+}
+
 -- 红龙
 scripts.hero_dragon = {
 	level_up = function(this, store)
