@@ -577,7 +577,7 @@ set_skill(h.hero.skills.rage)
 
 damage_buff = s.rage_max[max_lvl]
 factor = s.unyield_max[max_lvl]
-map["复仇怒火"] = str("鬼侍的复仇之火永恒燃烧，无视恶魔的爆炸，并在受伤时提升伤害与免伤，最多提高", damage_buff, "点伤害与", factor * 100, "%伤害减免。")
+map["复仇怒火"] = str("鬼侍的复仇之火永恒燃烧，无视恶魔的爆炸，并在受伤时提升伤害与免伤，最多提高", damage_buff, "点伤害与", factor * 100, "%伤害减免。每当鬼侍受到伤害，普攻和灭魂斩的冷却减少0.5秒，千本刃的冷却减少1秒。")
 
 set_hero("hero_thor")
 set_skill(h.hero.skills.thunderclap)

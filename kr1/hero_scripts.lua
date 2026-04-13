@@ -6897,7 +6897,7 @@ scripts.hero_oni = {
 		end
 
 		if this.melee.attacks[1].ts then
-			this.melee.attacks[1].ts = this.melee.attacks[1].ts - 0.1
+			this.melee.attacks[1].ts = this.melee.attacks[1].ts - 0.5
 		end
 
 		return true
@@ -6983,7 +6983,7 @@ scripts.hero_oni = {
 
 							local hit_center = V.vclone(this.pos)
 
-							for _, s in pairs(a.torment_swords) do
+							for _, s in ipairs(a.torment_swords) do
 								local d, r, c = unpack(s)
 
 								spawn_swords(c, hit_center, r, math.random(0, 2) * math.pi, d)
@@ -6991,7 +6991,7 @@ scripts.hero_oni = {
 
 							U.y_wait(store, a.damage_delay)
 
-							for _, target in pairs(targets) do
+							for _, target in ipairs(targets) do
 								local d = SU.create_attack_damage(a, target.id, this)
 
 								if target.is_demon then

@@ -2148,7 +2148,7 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 
 		local hit_times = attack.hit_times and attack.hit_times or {attack.hit_time}
 
-		for _, ht in pairs(hit_times) do
+		for _, ht in ipairs(hit_times) do
 			while ht > store.tick_ts - loop_ts do
 				if this.unit.is_stunned then
 					goto label_70_0
@@ -2170,7 +2170,7 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 			attack.ts = start_ts
 
 			if attack.shared_cooldown then
-				for _, aa in pairs(this.melee.attacks) do
+				for _, aa in ipairs(this.melee.attacks) do
 					if aa ~= attack and aa.shared_cooldown then
 						aa.ts = attack.ts
 					end
@@ -2182,7 +2182,7 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 			end
 
 			if attack.cooldown_group then
-				for _, aa in pairs(this.melee.attacks) do
+				for _, aa in ipairs(this.melee.attacks) do
 					if aa ~= attack and aa.cooldown_group == attack.cooldown_group then
 						aa.ts = attack.ts
 					end

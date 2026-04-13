@@ -15229,7 +15229,7 @@ return {
 		hero_oni_attack = {
 			from = 17,
 			prefix = "hero_oni",
-			to = 45
+			to = 44
 		},
 		hero_oni_death = {
 			from = 179,
@@ -15264,7 +15264,7 @@ return {
 		hero_oni_torment = {
 			from = 45,
 			prefix = "hero_oni",
-			to = 112
+			to = 105
 		},
 		hero_phoenix_attack = {
 			from = 19,
