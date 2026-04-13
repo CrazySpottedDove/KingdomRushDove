@@ -6055,7 +6055,7 @@ function scripts.hero_elora.update(this, store)
 			skill = this.hero.skills.ice_storm
 
 			if not a.disabled and store.tick_ts - a.ts > a.cooldown then
-				local target = U.find_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, nil, a.vis_flags, a.vis_bans)
+				local target = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range, a.cast_time, a.vis_flags, a.vis_bans)
 
 				if not target then
 					SU.delay_attack(store, a, 0.13333333333333333)
@@ -6116,7 +6116,7 @@ function scripts.hero_elora.update(this, store)
 			skill = this.hero.skills.chill
 
 			if not a.disabled and store.tick_ts - a.ts > a.cooldown then
-				local target = U.find_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, nil, a.vis_flags, a.vis_bans)
+				local target = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range, a.cast_time, a.vis_flags, a.vis_bans)
 
 				if not target then
 					SU.delay_attack(store, a, 0.13333333333333333)
