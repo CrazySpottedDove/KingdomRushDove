@@ -1627,32 +1627,32 @@ local function calc_mixed_protection(armor, magic_armor)
 	end
 end
 
-function U.calc_protection(health, damage_type)
+function U.calc_protection(health, d)
 	local protection = 0
 
-	if band(damage_type, DAMAGE_POISON) ~= 0 then
+	if band(d.damage_type, DAMAGE_POISON) ~= 0 then
 		protection = health.poison_armor
-	elseif band(damage_type, DAMAGE_TRUE) ~= 0 then
+	elseif band(d.damage_type, DAMAGE_TRUE) ~= 0 then
 		protection = 0
-	elseif band(damage_type, DAMAGE_PHYSICAL) ~= 0 or band(damage_type, DAMAGE_AGAINST_ARMOR) ~= 0 then
-		protection = health.armor
-	elseif band(damage_type, DAMAGE_MAGICAL) ~= 0 or band(damage_type, DAMAGE_AGAINST_MAGIC_ARMOR) ~= 0 then
-		protection = health.magic_armor
-	elseif band(damage_type, DAMAGE_MAGICAL_EXPLOSION) ~= 0 then
-		protection = calc_explosion_protection(health.magic_armor)
-	elseif band(damage_type, DAMAGE_DISINTEGRATE) ~= 0 then
+	elseif band(d.damage_type, DAMAGE_PHYSICAL) ~= 0 or band(d.damage_type, DAMAGE_AGAINST_ARMOR) ~= 0 then
+		protection = health.armor - d.reduce_armor
+	elseif band(d.damage_type, DAMAGE_MAGICAL) ~= 0 or band(d.damage_type, DAMAGE_AGAINST_MAGIC_ARMOR) ~= 0 then
+		protection = health.magic_armor - d.reduce_magic_armor
+	elseif band(d.damage_type, DAMAGE_MAGICAL_EXPLOSION) ~= 0 then
+		protection = calc_explosion_protection(health.magic_armor - d.reduce_magic_armor)
+	elseif band(d.damage_type, DAMAGE_DISINTEGRATE) ~= 0 then
 		protection = 0
-	elseif band(damage_type, bor(DAMAGE_EXPLOSION, DAMAGE_RUDE)) ~= 0 then
-		protection = calc_explosion_protection(health.armor)
-	elseif band(damage_type, DAMAGE_ELECTRICAL) ~= 0 then
-		protection = health.armor * 0.5
-	elseif band(damage_type, DAMAGE_SHOT) ~= 0 then
-		protection = health.armor * 0.7
-	elseif band(damage_type, DAMAGE_STAB) ~= 0 then
-		protection = calc_stab_protection(health.armor)
-	elseif band(damage_type, DAMAGE_MIXED) ~= 0 then
-		protection = calc_mixed_protection(health.armor, health.magic_armor)
-	elseif damage_type == DAMAGE_NONE then
+	elseif band(d.damage_type, bor(DAMAGE_EXPLOSION, DAMAGE_RUDE)) ~= 0 then
+		protection = calc_explosion_protection(health.armor - d.reduce_armor)
+	elseif band(d.damage_type, DAMAGE_ELECTRICAL) ~= 0 then
+		protection = (health.armor - d.reduce_armor) * 0.5
+	elseif band(d.damage_type, DAMAGE_SHOT) ~= 0 then
+		protection = (health.armor - d.reduce_armor) * 0.7
+	elseif band(d.damage_type, DAMAGE_STAB) ~= 0 then
+		protection = calc_stab_protection(health.armor - d.reduce_armor)
+	elseif band(d.damage_type, DAMAGE_MIXED) ~= 0 then
+		protection = calc_mixed_protection(health.armor - d.reduce_armor, health.magic_armor - d.reduce_magic_armor)
+	elseif d.damage_type == DAMAGE_NONE then
 		protection = 1
 	end
 
@@ -1672,7 +1672,7 @@ function U.predict_damage(entity, damage)
 		end
 	end
 
-	local protection = U.calc_protection(entity.health, damage.damage_type)
+	local protection = U.calc_protection(entity.health, damage)
 
 	for i = 1, #damage.hooks do
 		damage.hooks[i](entity, damage, protection)
