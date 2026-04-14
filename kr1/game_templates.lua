@@ -12080,7 +12080,8 @@ tt.main_script.insert = scripts.instant_heal_mod.insert
 tt.main_script.update = scripts.mod_track_target.update
 tt.modifier.bans = {}
 tt.modifier.duration = 1
-tt.render.sprites[1].name = "instant_heal_mod_fx"
+-- 原素材：instant_heal_mod_fx，暂用这个代替
+tt.render.sprites[1].name = "amazona_healing"
 tt = E:register_t("mod_stage_guardian_tree_wave_of_roots_stun", "modifier")
 
 E:add_comps(tt, "render")

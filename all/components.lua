@@ -1031,13 +1031,13 @@ bullet.vis_flags = 0
 bullet.xp_gain_factor = nil
 bullet.speed = v(0, 0)
 bullet.ts = nil
-local spell = E:register_c("spell")
 
+local spell = E:register_c("spell")
 spell.target_id = nil
 spell.source_id = nil
 spell.ts = nil
-local aura = E:register_c("aura")
 
+local aura = E:register_c("aura")
 aura.duration = 0
 aura.duration_inc = 0
 aura.radius = 0
@@ -1064,8 +1064,8 @@ aura.ts = 0
 aura.use_mod_offset = true
 aura.xp_dest_id = nil
 aura.xp_gain_factor = nil
-local sound_events = E:register_c("sound_events")
 
+local sound_events = E:register_c("sound_events")
 sound_events.mute_on_level_insert = nil
 sound_events.insert = nil
 sound_events.remove = nil

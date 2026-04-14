@@ -1580,6 +1580,7 @@ tt.main_script.update = scripts.decal_elemental_wood_holder_root_dragon.update
 tt = E:register_t("decal_elemental_water_holder_root_dragon_kill", "decal_elemental_water_holder_root_dragon")
 tt.render.sprites[1].prefix = "stage33_water_dragonflyDef"
 tt.only_in = true
+
 tt = E:register_t("aura_elemental_water_healing", "aura")
 b = balance.specials.terrain_8.elemental_holders.water_holder
 tt.aura.duration = 1e+99
@@ -1592,11 +1593,10 @@ tt.main_script.update = scripts.aura_elemental_water_healing.update
 tt.main_script.remove = scripts.aura_apply_mod.remove
 tt.heal_fx = "fx_elemental_water_holder_healing"
 tt.min_health_factor = b.healing.min_health_factor
+
 tt = E:register_t("mod_elemental_water_heal", "modifier")
 b = balance.specials.terrain_8.elemental_holders.water_holder
-
 E:add_comps(tt, "hps", "render")
-
 tt.modifier.duration = b.healing.duration
 tt.modifier.resets_same = true
 tt.hps.heal_min = b.healing.heal_min
@@ -1604,7 +1604,8 @@ tt.hps.heal_max = b.healing.heal_max
 tt.hps.heal_every = b.healing.heal_every
 tt.main_script.insert = scripts.mod_hps.insert
 tt.main_script.update = scripts.mod_hps.update
-tt.render.sprites[1].name = "instant_heal_mod_fx"
+-- 原素材：instant_heal_mod_fx，暂用这个代替
+tt.render.sprites[1].name = "amazona_healing"
 tt.render.sprites[1].sort_y_offset = -3
 
 tt = RT("controller_elemental_earth")

@@ -23,26 +23,6 @@ local V = require("lib.klua.vector")
 local v = V.v
 local vv = V.vv
 local r = V.r
--- local function v(v1, v2)
--- 	return {
--- 		x = v1,
--- 		y = v2
--- 	}
--- end
-
--- local function vv(v1)
--- 	return {
--- 		x = v1,
--- 		y = v1
--- 	}
--- end
-
--- local function r(x, y, w, h)
--- 	return {
--- 		pos = v(x, y),
--- 		size = v(w, h)
--- 	}
--- end
 
 local function fts(v)
 	return v / FPS
@@ -50,15 +30,6 @@ end
 
 local function ady(v)
 	return v - anchor_y * image_y
-end
-
-local function np(pi, spi, ni)
-	return {
-		dir = 1,
-		pi = pi,
-		spi = spi,
-		ni = ni
-	}
 end
 
 local damage = E:register_t("damage")

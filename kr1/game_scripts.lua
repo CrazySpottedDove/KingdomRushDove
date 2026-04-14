@@ -24098,120 +24098,39 @@ end
 scripts.aura_elemental_water_healing = {}
 
 function scripts.aura_elemental_water_healing.update(this, store)
-	local first_hit_ts
 	local last_hit_ts = 0
-	local cycles_count = 0
 	local victims_count = 0
-
-	if this.aura.track_source and this.aura.source_id then
-		local te = store.entities[this.aura.source_id]
-
-		if te and te.pos then
-			this.pos = te.pos
-		end
-	end
 
 	last_hit_ts = store.tick_ts - this.aura.cycle_time
 
-	if this.aura.apply_delay then
-		last_hit_ts = last_hit_ts + this.aura.apply_delay
-	end
+	local mods = this.aura.mods or {this.aura.mod}
 
 	while true do
 		if this.interrupt then
 			last_hit_ts = 1e+99
 		end
 
-		if this.aura.cycles and cycles_count >= this.aura.cycles or this.aura.duration >= 0 and store.tick_ts - this.aura.ts > this.actual_duration then
-			break
-		end
-
-		if this.aura.stop_on_max_count and this.aura.max_count and victims_count >= this.aura.max_count then
-			break
-		end
-
-		if this.aura.track_source and this.aura.source_id then
-			local te = store.entities[this.aura.source_id]
-
-			if not te or te.health and te.health.dead and not this.aura.track_dead then
-				break
-			end
-		end
-
-		if this.aura.requires_magic then
-			local te = store.entities[this.aura.source_id]
-
-			if not te or not te.enemy then
-				goto label_2133_0
-			end
-
-			if this.render then
-				this.render.sprites[1].hidden = not te.enemy.can_do_magic
-			end
-
-			if not te.enemy.can_do_magic then
-				goto label_2133_0
-			end
-		end
-
-		if this.aura.source_vis_flags and this.aura.source_id then
-			local te = store.entities[this.aura.source_id]
-
-			if te and te.vis and band(te.vis.bans, this.aura.source_vis_flags) ~= 0 then
-				goto label_2133_0
-			end
-		end
-
-		if this.aura.requires_alive_source and this.aura.source_id then
-			local te = store.entities[this.aura.source_id]
-
-			if te and te.health and te.health.dead then
-				goto label_2133_0
-			end
-		end
-
-		if not (store.tick_ts - last_hit_ts >= this.aura.cycle_time) or this.aura.apply_duration and first_hit_ts and store.tick_ts - first_hit_ts > this.aura.apply_duration then
+		if not (store.tick_ts - last_hit_ts >= this.aura.cycle_time) then
 		-- block empty
 		else
-			if this.render and this.aura.cast_resets_sprite_id then
-				this.render.sprites[this.aura.cast_resets_sprite_id].ts = store.tick_ts
-			end
-
-			first_hit_ts = first_hit_ts or store.tick_ts
 			last_hit_ts = store.tick_ts
-			cycles_count = cycles_count + 1
 
-			local targets = table.filter(store.entities, function(k, v)
-				return v.unit and v.vis and v.health and not v.health.dead and v.health.hp / v.health.hp_max < this.min_health_factor and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= v.id)
+			local targets = table.filter(store.soldiers, function(k, v)
+				return not v.health.dead and v.health.hp / v.health.hp_max < this.min_health_factor and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius)
 			end)
 			local old_victims_count = victims_count
 
 			for i, target in ipairs(targets) do
-				if this.aura.targets_per_cycle and i > this.aura.targets_per_cycle then
-					break
-				end
-
-				if this.aura.max_count and victims_count >= this.aura.max_count then
-					break
-				end
-
-				local mods = this.aura.mods or {this.aura.mod}
-
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local new_mod = E:create_entity(mod_name)
 
 					new_mod.modifier.level = this.aura.level
 					new_mod.modifier.target_id = target.id
 					new_mod.modifier.source_id = this.id
 
-					if this.aura.hide_source_fx and target.id == this.aura.source_id then
-						new_mod.render = nil
-					end
-
 					queue_insert(store, new_mod)
-
-					victims_count = victims_count + 1
 				end
+				victims_count = victims_count + 1
 			end
 
 			if old_victims_count < victims_count then
