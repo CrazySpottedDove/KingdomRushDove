@@ -1,9 +1,111 @@
-local data={max_waves=6,initial_cash=1200,initial_interval=1500,final_interval=2500,paths={1,2,3,4,5,6,7,8,9},path_active_map={[1]={1},[2]={3,8},[3]={2,7},[4]={1,4,9},[5]={2,6,7,8},[6]={1,3,5,6,8,9}},path_weight_map={[1]=2,[2]=4,[3]=4,[4]=3,[5]=3,[6]=4,[7]=3,[8]=2,[9]=3},path_enemy_map={[1]={"enemy_bouncer","enemy_desert_raider","enemy_immortal","enemy_tremor"},[2]={"enemy_bouncer","enemy_desert_raider","enemy_desert_wolf_small","enemy_desert_wolf","enemy_executioner","enemy_immortal","enemy_wasp_queen"},[3]={"enemy_bouncer","enemy_desert_raider","enemy_desert_wolf_small","enemy_desert_wolf","enemy_executioner","enemy_immortal","enemy_munra","enemy_wasp"},[4]={"enemy_bouncer","enemy_desert_raider","enemy_desert_wolf_small","enemy_desert_wolf","enemy_executioner","enemy_immortal"},[5]={"enemy_bouncer","enemy_desert_raider","enemy_desert_wolf_small","enemy_desert_wolf","enemy_immortal","enemy_munra","enemy_desert_spider"},[6]={"enemy_bouncer","enemy_desert_raider","enemy_desert_wolf_small","enemy_desert_wolf","enemy_executioner","enemy_immortal","enemy_munra","enemy_tremor","enemy_desert_archer","enemy_wasp"},[7]={"enemy_bouncer","enemy_wasp","enemy_wasp_queen","enemy_scorpion","enemy_executioner","enemy_desert_spider"},[8]={"enemy_fallen","enemy_wasp_queen","enemy_scorpion","enemy_tremor"},[9]={"enemy_fallen","enemy_wasp_queen","enemy_scorpion","enemy_tremor","enemy_munra","enemy_desert_spider"}},enemy_weight_map={["enemy_bouncer"]=1,["enemy_desert_raider"]=3,["enemy_desert_wolf_small"]=1.5,["enemy_desert_wolf"]=3,["enemy_immortal"]=7,["enemy_fallen"]=3,["enemy_desert_archer"]=4,["enemy_scorpion"]=8,["enemy_tremor"]=2.5,["enemy_wasp"]=2.5,["enemy_wasp_queen"]=7,["enemy_executioner"]=12,["enemy_munra"]=15,["enemy_desert_spider"]=10},enemy_comeout_wave_map={["enemy_bouncer"]=1,["enemy_desert_raider"]=1,["enemy_desert_wolf_small"]=1,["enemy_desert_wolf"]=2,["enemy_fallen"]=2,["enemy_tremor"]=2,["enemy_immortal"]=3,["enemy_wasp"]=3,["enemy_desert_archer"]=3,["enemy_desert_spider"]=4,["enemy_wasp_queen"]=4,["enemy_scorpion"]=5,["enemy_executioner"]=5,["enemy_munra"]=6},enemy_delete_wave_map={[1]={[4]={"enemy_bouncer"}},[2]={[4]={"enemy_bouncer"},[5]={"enemy_desert_raider"}},[3]={[4]={"enemy_bouncer"},[5]={"enemy_desert_raider"}},[4]={[5]={"enemy_bouncer","enemy_desert_wolf_small"}},[5]={[5]={"enemy_bouncer"}},[6]={[5]={"enemy_bouncer","enemy_desert_raider"}},[7]={[4]={"enemy_bouncer"}},[8]={},[9]={}},wave_weight_function=function(wave_number,total_gold)
-return (70+(total_gold^0.75)/14+wave_number^3.0)*0.65
-end,interval_function=function(weight,e,wave_number)
-local base=55+160*math.log(weight)
-local speed_factor=20/(e.motion.max_speed or 1)
-local wave_factor=1-math.min(wave_number/8,0.55)
-return base*speed_factor*wave_factor
-end,interval_next_factor=0.15,min_spawn_weight=2,max_spawn_weight=22,gap_count_range={1,2,3},wave_max_types=4}
+local data = {
+	max_waves = 6,
+	initial_cash = 1200,
+	initial_interval = 1500,
+	final_interval = 2500,
+	paths = {1, 2, 3, 4, 5, 6, 7, 8, 9},
+	path_active_map = {
+		[1] = {1},
+		[2] = {3, 8},
+		[3] = {2, 7},
+		[4] = {1, 4, 9},
+		[5] = {2, 6, 7, 8},
+		[6] = {1, 3, 5, 6, 8, 9}
+	},
+	path_weight_map = {
+		[1] = 2,
+		[2] = 4,
+		[3] = 4,
+		[4] = 3,
+		[5] = 3,
+		[6] = 4,
+		[7] = 3,
+		[8] = 2,
+		[9] = 3
+	},
+	path_enemy_map = {
+		[1] = {"enemy_bouncer", "enemy_desert_raider", "enemy_immortal", "enemy_tremor"},
+		[2] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_wasp_queen"},
+		[3] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_munra", "enemy_wasp"},
+		[4] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal"},
+		[5] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_immortal", "enemy_munra", "enemy_desert_spider"},
+		[6] = {"enemy_bouncer", "enemy_desert_raider", "enemy_desert_wolf_small", "enemy_desert_wolf", "enemy_executioner", "enemy_immortal", "enemy_munra", "enemy_tremor", "enemy_desert_archer", "enemy_wasp"},
+		[7] = {"enemy_bouncer", "enemy_wasp", "enemy_wasp_queen", "enemy_scorpion", "enemy_executioner", "enemy_desert_spider"},
+		[8] = {"enemy_fallen", "enemy_wasp_queen", "enemy_scorpion", "enemy_tremor"},
+		[9] = {"enemy_fallen", "enemy_wasp_queen", "enemy_scorpion", "enemy_tremor", "enemy_munra", "enemy_desert_spider"}
+	},
+	enemy_weight_map = {
+		["enemy_bouncer"] = 1,
+		["enemy_desert_raider"] = 3,
+		["enemy_desert_wolf_small"] = 1.5,
+		["enemy_desert_wolf"] = 3,
+		["enemy_immortal"] = 7,
+		["enemy_fallen"] = 3,
+		["enemy_desert_archer"] = 4,
+		["enemy_scorpion"] = 8,
+		["enemy_tremor"] = 2.5,
+		["enemy_wasp"] = 2.5,
+		["enemy_wasp_queen"] = 7,
+		["enemy_executioner"] = 12,
+		["enemy_munra"] = 15,
+		["enemy_desert_spider"] = 10
+	},
+	enemy_comeout_wave_map = {
+		["enemy_bouncer"] = 1,
+		["enemy_desert_raider"] = 1,
+		["enemy_desert_wolf_small"] = 1,
+		["enemy_desert_wolf"] = 2,
+		["enemy_fallen"] = 2,
+		["enemy_tremor"] = 2,
+		["enemy_immortal"] = 3,
+		["enemy_wasp"] = 3,
+		["enemy_desert_archer"] = 3,
+		["enemy_desert_spider"] = 4,
+		["enemy_wasp_queen"] = 4,
+		["enemy_scorpion"] = 5,
+		["enemy_executioner"] = 5,
+		["enemy_munra"] = 6
+	},
+	enemy_delete_wave_map = {
+		[1] = {
+			[4] = {"enemy_bouncer"}
+		},
+		[2] = {
+			[4] = {"enemy_bouncer"},
+			[5] = {"enemy_desert_raider"}
+		},
+		[3] = {
+			[4] = {"enemy_bouncer"},
+			[5] = {"enemy_desert_raider"}
+		},
+		[4] = {
+			[5] = {"enemy_bouncer", "enemy_desert_wolf_small"}
+		},
+		[5] = {
+			[5] = {"enemy_bouncer"}
+		},
+		[6] = {
+			[5] = {"enemy_bouncer", "enemy_desert_raider"}
+		},
+		[7] = {
+			[4] = {"enemy_bouncer"}
+		},
+		[8] = {},
+		[9] = {}
+	},
+	wave_weight_function = function(wave_number, total_gold)
+		return (70 + (total_gold ^ 0.75) / 14 + wave_number ^ 3.0) * 0.65
+	end,
+	interval_function = function(weight, e, wave_number)
+		local base = 55 + 160 * math.log(weight)
+		local speed_factor = 20 / (e.motion.max_speed or 1)
+		local wave_factor = 1 - math.min(wave_number / 8, 0.55)
+		return base * speed_factor * wave_factor
+	end,
+	interval_next_factor = 0.15,
+	min_spawn_weight = 2,
+	max_spawn_weight = 22,
+	gap_count_range = {1, 2, 3},
+	wave_max_types = 4
+}
 return data

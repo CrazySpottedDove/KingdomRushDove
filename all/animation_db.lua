@@ -37,7 +37,7 @@ local function frame_suffix(frame)
 end
 
 --- 私有方法，从原始的动画定义表 a 中提取出需要的字段，返回实际运行时使用的数据格式 {frame_count, frame_names}
-local function extract_frame_from(a)
+function animation_db.extract_frame_from(a)
 	local prefix = a.prefix
 	local frame_names = {}
 	local frame_count = 0
@@ -96,7 +96,9 @@ function animation_db:load()
 		return
 	end
 
-	perf.tmp_start("animation_db:load")
+	local extract_frame_from = animation_db.extract_frame_from
+
+	-- perf.tmp_start("animation_db:load")
 	self.tick_length = TICK_LENGTH
 	self.db = {}
 
@@ -112,13 +114,9 @@ function animation_db:load()
 		assert(false, string.format("Failed to eval animation chunk for file:%s", animation_file, atable))
 	end
 
-	if not atable then
-		assert(false, string.format("Failed to load animation file %s. Could not find .animations", animation_file))
-	end
-
 	for k, v in pairs(atable) do
 		-- 处理 layerX 的特殊语法糖，生成对应的 layer1, layer2, ... 的动画定义
-		if v.layer_from and v.layer_to and v.layer_prefix then
+		if v.layer_prefix then
 			for i = v.layer_from, v.layer_to do
 				local nk = string.gsub(k, "layerX", "layer" .. i)
 				local nv = {
@@ -139,16 +137,7 @@ function animation_db:load()
 	end
 
 	self.loaded = true
-	perf.tmp_stop("animation_db:load")
-end
-
--- added: 预构建所有动画的帧数组 frames
-function animation_db:prebuild_frames()
-	local generate_frames = self.generate_frames
-
-	for name in pairs(self.db) do
-		generate_frames(self, name)
-	end
+-- perf.tmp_stop("animation_db:load")
 end
 
 -- 完成从动画名称到具体帧名（如soldier_0001）的转换
@@ -170,6 +159,7 @@ function animation_db:fn(animation_name, time_offset, loop, fps)
 	return self:fni(a, time_offset, loop, fps)
 end
 
+--- DEPRECATED: 该方法已废弃，建议使用 extrace_frame_from 来直接从原始定义表中提取出 frame_count 和 frame_names。此处保留以提供部分插件代码的兼容性。
 --- 完成动画 frames 和 frame_names 的生成。所有从文件加载的动画都还处于不可用阶段，需要通过 generate_frames 来生成 frame_names 和 frame_count，以取得运行时的最高效率。
 --- @param name string 动画名称，该动画应当在 animation_db 中已经有旧格式的定义
 --- 生成的结构：self.db[name] = {[1] = frame_count(int), [2] = frame_names(array of string)}
@@ -195,12 +185,12 @@ function animation_db:generate_frames(name)
 
 				for frame = from, to, inc do
 					frame_count = frame_count + 1
-					frame_names[frame_count] = prefix .. frame_suffix(frame)
+					frame_names[frame_count] = prefix .. string.format("_%04i", frame)
 				end
 			else
 				for j = 1, #range do
 					frame_count = frame_count + 1
-					frame_names[frame_count] = prefix .. frame_suffix(range[j])
+					frame_names[frame_count] = prefix .. string.format("_%04i", range[j])
 				end
 			end
 		end
@@ -209,7 +199,7 @@ function animation_db:generate_frames(name)
 			local pre = a.pre
 			for i = 1, #pre do
 				frame_count = frame_count + 1
-				frame_names[frame_count] = prefix .. frame_suffix(pre[i])
+				frame_names[frame_count] = prefix .. string.format("_%04i", pre[i])
 			end
 		end
 
@@ -218,7 +208,7 @@ function animation_db:generate_frames(name)
 
 			for frame = a.from, a.to, inc do
 				frame_count = frame_count + 1
-				frame_names[frame_count] = prefix .. frame_suffix(frame)
+				frame_names[frame_count] = prefix .. string.format("_%04i", frame)
 			end
 		end
 
@@ -226,7 +216,7 @@ function animation_db:generate_frames(name)
 			local post = a.post
 			for i = 1, #post do
 				frame_count = frame_count + 1
-				frame_names[frame_count] = prefix .. frame_suffix(post[i])
+				frame_names[frame_count] = prefix .. string.format("_%04i", post[i])
 			end
 		end
 	end
@@ -239,10 +229,7 @@ function animation_db:fni(animation, time_offset, loop, fps)
 
 	fps = fps or self.fps
 
-	-- local frames = a.frames
 	local eps = 1e-09
-	-- local len = #frames
-	-- local len = a.frame_count
 	local len = a[1]
 	local time_in_frames_plus_eps = time_offset * fps + eps
 	local next_elapsed = ceil(time_in_frames_plus_eps + self.tick_length * fps)
@@ -251,13 +238,11 @@ function animation_db:fni(animation, time_offset, loop, fps)
 	if loop then
 		local idx = floor(time_in_frames_plus_eps) % len + 1
 
-		-- return a.frame_names[idx], runs, idx
 		return a[2][idx], runs, idx
 	else
 		local elapsed_frames = ceil(time_in_frames_plus_eps)
 		local idx = max(1, min(len, elapsed_frames))
 
-		-- return a.frame_names[idx], runs, idx
 		return a[2][idx], runs, idx
 	end
 end
@@ -277,12 +262,10 @@ function animation_db:duration(animation_name)
 		return nil
 	end
 
-	-- if not a.frame_names then
 	if not a[2] then
 		self:fni(a, 0, false)
 	end
 
-	-- return a.frame_count / self.fps, a.frame_count
 	return a[1] / self.fps, a[1]
 end
 
@@ -296,7 +279,6 @@ function animation_db:dump()
 	local frame_count = 0
 	for k, v in pairs(self.db) do
 		animation_count = animation_count + 1
-		-- frame_count = frame_count + v.frame_count
 		frame_count = frame_count + v[1]
 	end
 	print(string.format("animation count: %d, total frame count: %d", animation_count, frame_count))
