@@ -15,26 +15,6 @@ local V = require("lib.klua.vector")
 vec_2 = V.v
 vec_1 = V.vv
 r = V.r
--- function vec_2(v1, v2)
--- 	return {
--- 		x = v1,
--- 		y = v2
--- 	}
--- end
-
--- function vec_1(v1)
--- 	return {
--- 		x = v1,
--- 		y = v1
--- 	}
--- end
-
--- function r(x, y, w, h)
--- 	return {
--- 		pos = vec_2(x, y),
--- 		size = vec_2(w, h)
--- 	}
--- end
 
 function fts(v)
 	return v / FPS

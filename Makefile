@@ -119,3 +119,6 @@ format:
 add:
 	dlfmt --json-task ./dlfmt_task.json
 	git add .
+
+compile_animations:
+	luajit ./scripts/compile_game_animations.lua

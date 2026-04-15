@@ -194,6 +194,7 @@ if [ "$rebuild_love" -eq 1 ]; then
         "lldebugger.lua"
         "kr1/data/waveconfigs/*"
         "config.json"
+        "kr1/data/game_animations.lua"
         # "*kr4*"
     )
     if [ "$AUDIO_COMPRESS_MODE" = "1" ]; then

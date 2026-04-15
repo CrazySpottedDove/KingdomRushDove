@@ -6,7 +6,10 @@
 			"exclude": [
 				"_assets/kr1-desktop/images/fullhd",
 				"_assets/kr1-desktop/sounds",
-				"kr1/data",
+				"kr1/data/exoskeletons",
+				"kr1/data/levels",
+				"kr1/data/waves",
+				"kr1/data/waveconfigs",
 				".versions"
 			]
 		},
@@ -20,7 +23,19 @@
 		},
 		{
 			"type": "compress",
-			"directory": "kr1/data"
+			"directory": "kr1/data/exoskeletons"
+		},
+		{
+			"type": "compress",
+			"directory": "kr1/data/levels"
+		},
+		{
+			"type": "compress",
+			"directory": "kr1/data/waves"
+		},
+		{
+			"type": "compress",
+			"directory": "kr1/data/waveconfigs"
 		}
 	],
 	"params": {

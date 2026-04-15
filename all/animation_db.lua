@@ -23,20 +23,8 @@ animation_db.missing_animations = {}
 animation_db.loaded = false
 
 local perf = require("dove_modules.perf.perf")
-local frame_suffix_cache = {}
 
-local function frame_suffix(frame)
-	local suffix = frame_suffix_cache[frame]
-
-	if not suffix then
-		suffix = string.format("_%04i", frame)
-		frame_suffix_cache[frame] = suffix
-	end
-
-	return suffix
-end
-
---- 私有方法，从原始的动画定义表 a 中提取出需要的字段，返回实际运行时使用的数据格式 {frame_count, frame_names}
+--- 从原始的动画定义表 a 中提取出需要的字段，返回实际运行时使用的数据格式 {frame_count, frame_names}
 function animation_db.extract_frame_from(a)
 	local prefix = a.prefix
 	local frame_names = {}
@@ -95,49 +83,9 @@ function animation_db:load()
 	if self.loaded then
 		return
 	end
-
-	local extract_frame_from = animation_db.extract_frame_from
-
-	-- perf.tmp_start("animation_db:load")
 	self.tick_length = TICK_LENGTH
-	self.db = {}
-
-	local animation_file = KR_PATH_GAME .. "/data/game_animations.lua"
-	local achunk, load_err = FS.load(animation_file)
-	if not achunk then
-		assert(false, string.format("Failed to load animation file %s.\n%s", animation_file, load_err))
-	end
-
-	local ok, atable = pcall(achunk)
-
-	if not ok then
-		assert(false, string.format("Failed to eval animation chunk for file:%s", animation_file, atable))
-	end
-
-	for k, v in pairs(atable) do
-		-- 处理 layerX 的特殊语法糖，生成对应的 layer1, layer2, ... 的动画定义
-		if v.layer_prefix then
-			for i = v.layer_from, v.layer_to do
-				local nk = string.gsub(k, "layerX", "layer" .. i)
-				local nv = {
-					pre = v.pre,
-					post = v.post,
-					from = v.from,
-					to = v.to,
-					ranges = v.ranges,
-					frames = v.frames,
-					prefix = string.format(v.layer_prefix, i)
-				}
-
-				self.db[nk] = extract_frame_from(nv)
-			end
-		else
-			self.db[k] = extract_frame_from(v)
-		end
-	end
-
+	self.db = FS.load(KR_PATH_GAME .. "/data/game_animations_compiled.luac")()
 	self.loaded = true
--- perf.tmp_stop("animation_db:load")
 end
 
 -- 完成从动画名称到具体帧名（如soldier_0001）的转换

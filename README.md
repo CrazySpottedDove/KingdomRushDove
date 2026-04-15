@@ -108,3 +108,4 @@ server  ssh://dove@10.112.99.5:60001/srv/git/KingdomRushDove.git (push)
 - KView 中的 `alpha` 是归一化的。
 - 为了性能考虑，dove 版中，render 只拥有 sprites，frames 的功能全部都合并了进去，以避免每帧大量的拷贝开销。
 - scripts 的 require 关系：scripts->endless_scripts->hero_scripts->tower_scripts->boss_scripts，这是为了满足插件的正常跳转功能，并不是随便设计成这样的。endless_scripts 在同一张 `scripts` 表上扩展无尽模式相关脚本；之后如果还要拆分逻辑，也需要这样链式插入。
+- 为了提高加载效率，游戏在运行时只加载 `game_animations_compiled.lua`。如果对 `game_animations.lua` 进行了修改，请使用 `make compile_animations` 编译它。
