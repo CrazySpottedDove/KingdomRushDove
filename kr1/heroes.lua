@@ -11082,7 +11082,7 @@ tt.hero.skills.sharp_claws.xp_level_steps = {
 	[7] = 3
 }
 tt.hero.skills.kings_roar = CC("hero_skill")
-tt.hero.skills.kings_roar.stun_duration = {1, 2, 3}
+tt.hero.skills.kings_roar.stun_duration = {2, 2.75, 3.5}
 tt.hero.skills.kings_roar.xp_gain = {100, 120, 150}
 tt.hero.skills.kings_roar.xp_level_steps = {
 	[3] = 1,
@@ -11097,7 +11097,7 @@ tt.hero.skills.lions_fur.xp_level_steps = {
 	[7] = 3
 }
 tt.hero.skills.grievous_bites = CC("hero_skill")
-tt.hero.skills.grievous_bites.damage = {30, 65, 100}
+tt.hero.skills.grievous_bites.damage = {35, 70, 105}
 tt.hero.skills.grievous_bites.xp_gain = {30, 60, 90}
 tt.hero.skills.grievous_bites.xp_level_steps = {
 	[2] = 1,
