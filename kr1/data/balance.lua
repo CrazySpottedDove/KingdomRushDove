@@ -102,7 +102,7 @@ local heroes = {
 			min_targets = 3,
 			damage_radius = 50,
 			stun_duration = 3,
-			cooldown = {18, 18, 18},
+			cooldown = {17, 17, 17},
 			damage_type = DAMAGE_PHYSICAL,
 			damage_max = {19, 32, 39},
 			damage_min = {13, 18, 23},
@@ -112,7 +112,7 @@ local heroes = {
 		hair_clones = {
 			max_range = 160,
 			min_targets = 2,
-			cooldown = {25, 23, 21},
+			cooldown = {24, 22, 20},
 			xp_gain = {160, 320, 480},
 			soldier = {
 				max_speed = 60,
@@ -150,7 +150,7 @@ local heroes = {
 			}
 		},
 		giant_staff = {
-			cooldown = {53, 50, 46},
+			cooldown = {50.5, 47.5, 44},
 			xp_gain = {160, 320, 480},
 			area_damage = {
 				damage_radius = 90,
@@ -160,7 +160,7 @@ local heroes = {
 			}
 		},
 		ultimate = {
-			cooldown = {43, 43, 43, 43},
+			cooldown = {42, 42, 42, 42},
 			damage_total = {260, 390, 520, 650},
 			damage_type = DAMAGE_TRUE,
 			slow_duration = {3, 3.5, 4, 4.5},
