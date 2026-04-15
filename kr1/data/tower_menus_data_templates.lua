@@ -1,103 +1,14 @@
-local scripts = require("kr1.data.tower_menus_data_scripts")
-local merge = scripts.merge
-local templates = {}
-templates.common_upgrade = {
-	action_arg = nil,
-	action = "tw_upgrade",
-	halo = "glow_ico_main",
-	image = "main_icons_0005",
-	place = 5,
-	tt_title = nil,
-	tt_desc = nil
-}
-templates.upgrade = {
-	action_arg = nil,
-	action = "tw_upgrade",
-	halo = "glow_ico_main",
-	image = nil,
-	place = nil,
-	preview = nil,
-	tt_title = nil,
-	tt_desc = nil
-}
-templates.upgrade_power = {
-	action_arg = nil,
-	action = "upgrade_power",
-	image = nil,
-	place = nil,
-	halo = "glow_ico_special",
-	sounds = {},
-	tt_phrase = nil,
-	tt_list = {{
-		tt_title = nil,
-		tt_desc = nil
-	}, {
-		tt_title = nil,
-		tt_desc = nil
-	}, {
-		tt_title = nil,
-		tt_desc = nil
-	}}
-}
-templates.buy_soldier = {
-	action = "tw_buy_soldier",
-	action_arg = nil,
-	halo = "glow_ico_main",
-	image = nil,
-	place = 5,
-	tt_title = nil,
-	tt_desc = nil
-}
-templates.buy_attack = {
-	action = "tw_buy_attack",
-	action_arg = nil,
-	halo = "glow_ico_main",
-	image = nil,
-	place = 5,
-	tt_title = nil,
-	tt_desc = nil
-}
-templates.sell = {
-	action = "tw_sell",
-	halo = "glow_ico_sell",
-	image = "ico_sell_0001",
-	place = 9
-}
-templates.rally = {
-	action = "tw_rally",
-	halo = "glow_ico_sub",
-	image = "sub_icons_0001",
-	place = 8
-}
-templates.point = {
-	action = "tw_point",
-	halo = "glow_ico_sub",
-	image = "sub_icons_0002",
-	place = 8
-}
-templates.change_mode = {
-	halo = "quickmenu_action_icons_0001_hover",
-	action = "tw_change_mode",
-	image = nil,
-	image_mode0 = nil,
-	image_mode1 = nil,
-	place = 3,
-	tt_title_mode0 = nil,
-	tt_desc_mode0 = nil,
-	tt_phrase_mode0 = nil,
-	tt_title_mode1 = nil,
-	tt_desc_mode1 = nil,
-	tt_phrase_mode1 = nil,
-	sounds = nil
-}
-templates.unblock = {
-	check = "main_icons_0019",
-	action_arg = nil,
-	action = "tw_unblock",
-	halo = "glow_ico_main",
-	image = nil,
-	place = 5,
-	tt_title = nil,
-	tt_desc = nil
-}
+local scripts=require("kr1.data.tower_menus_data_scripts")
+local merge=scripts.merge
+local templates={}
+templates.common_upgrade={action_arg=nil,action="tw_upgrade",halo="glow_ico_main",image="main_icons_0005",place=5,tt_title=nil,tt_desc=nil}
+templates.upgrade={action_arg=nil,action="tw_upgrade",halo="glow_ico_main",image=nil,place=nil,preview=nil,tt_title=nil,tt_desc=nil}
+templates.upgrade_power={action_arg=nil,action="upgrade_power",image=nil,place=nil,halo="glow_ico_special",sounds={},tt_phrase=nil,tt_list={{tt_title=nil,tt_desc=nil},{tt_title=nil,tt_desc=nil},{tt_title=nil,tt_desc=nil}}}
+templates.buy_soldier={action="tw_buy_soldier",action_arg=nil,halo="glow_ico_main",image=nil,place=5,tt_title=nil,tt_desc=nil}
+templates.buy_attack={action="tw_buy_attack",action_arg=nil,halo="glow_ico_main",image=nil,place=5,tt_title=nil,tt_desc=nil}
+templates.sell={action="tw_sell",halo="glow_ico_sell",image="ico_sell_0001",place=9}
+templates.rally={action="tw_rally",halo="glow_ico_sub",image="sub_icons_0001",place=8}
+templates.point={action="tw_point",halo="glow_ico_sub",image="sub_icons_0002",place=8}
+templates.change_mode={halo="quickmenu_action_icons_0001_hover",action="tw_change_mode",image=nil,image_mode0=nil,image_mode1=nil,place=3,tt_title_mode0=nil,tt_desc_mode0=nil,tt_phrase_mode0=nil,tt_title_mode1=nil,tt_desc_mode1=nil,tt_phrase_mode1=nil,sounds=nil}
+templates.unblock={check="main_icons_0019",action_arg=nil,action="tw_unblock",halo="glow_ico_main",image=nil,place=5,tt_title=nil,tt_desc=nil}
 return templates
