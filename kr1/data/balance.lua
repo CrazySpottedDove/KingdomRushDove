@@ -1368,7 +1368,7 @@ local heroes = {
 			nodes_teleport = 50,
 			nodes_limit = 20,
 			cooldown = {27, 27, 27, 27},
-			duration = {2, 3, 4, 5},
+			duration = {3, 4, 5, 6},
 			max_targets = {4, 6, 8, 10}
 		}
 	},
