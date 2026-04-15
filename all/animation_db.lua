@@ -12,12 +12,6 @@ local floor = math.floor
 local max = math.max
 local min = math.min
 
-local function is_file(path)
-	local info = love.filesystem.getInfo(path)
-
-	return info and info.type == "file"
-end
-
 require("all.constants")
 
 local animation_db = {}
@@ -29,70 +23,101 @@ animation_db.missing_animations = {}
 animation_db.loaded = false
 
 local perf = require("dove_modules.perf.perf")
+local frame_suffix_cache = {}
+
+local function frame_suffix(frame)
+	local suffix = frame_suffix_cache[frame]
+
+	if not suffix then
+		suffix = string.format("_%04i", frame)
+		frame_suffix_cache[frame] = suffix
+	end
+
+	return suffix
+end
+
+--- 私有方法，从原始的动画定义表 a 中提取出需要的字段，返回实际运行时使用的数据格式 {frame_count, frame_names}
+local function extract_frame_from(a)
+	local prefix = a.prefix
+	local frame_names = {}
+	local frame_count = 0
+
+	if a.ranges then
+		for i = 1, #a.ranges do
+			local range = a.ranges[i]
+
+			if #range == 2 then
+				local from = range[1]
+				local to = range[2]
+				local inc = to < from and -1 or 1
+
+				for frame = from, to, inc do
+					frame_count = frame_count + 1
+					frame_names[frame_count] = prefix .. frame_suffix(frame)
+				end
+			else
+				for j = 1, #range do
+					frame_count = frame_count + 1
+					frame_names[frame_count] = prefix .. frame_suffix(range[j])
+				end
+			end
+		end
+	else
+		if a.pre then
+			local pre = a.pre
+			for i = 1, #pre do
+				frame_count = frame_count + 1
+				frame_names[frame_count] = prefix .. frame_suffix(pre[i])
+			end
+		end
+
+		if a.from and a.to then
+			local inc = a.from > a.to and -1 or 1
+
+			for frame = a.from, a.to, inc do
+				frame_count = frame_count + 1
+				frame_names[frame_count] = prefix .. frame_suffix(frame)
+			end
+		end
+
+		if a.post then
+			local post = a.post
+			for i = 1, #post do
+				frame_count = frame_count + 1
+				frame_names[frame_count] = prefix .. frame_suffix(post[i])
+			end
+		end
+	end
+	return {frame_count, frame_names}
+end
 
 function animation_db:load()
 	if self.loaded then
 		return
 	end
 
-	-- collectgarbage()
-	-- local before = collectgarbage("count")
-	-- perf.tmp_start("animation_db:load")
-
-	local function load_ani_file(f)
-		local ok, achunk = pcall(FS.load, f)
-
-		if not ok then
-			assert(false, string.format("Failed to load animation file %s.\n%s", f, achunk))
-		end
-
-		local ok, atable = pcall(achunk)
-
-		if not ok then
-			assert(false, string.format("Failed to eval animation chunk for file:%s", f, atable))
-		end
-
-		if not atable then
-			assert(false, string.format("Failed to load animation file %s. Could not find .animations", f))
-		end
-
-		if atable.animations then
-			atable = atable.animations
-		end
-
-		for k, v in pairs(atable) do
-			if self.db[k] then
-				log.error("Animation %s already exists. Not loading it from file %s", k, f)
-			-- assert(false, string.format("Animation %s already exists. Not loading it from file %s", k, f))
-			else
-				self.db[k] = v
-			end
-		end
-	end
+	perf.tmp_start("animation_db:load")
 	self.tick_length = TICK_LENGTH
 	self.db = {}
 
-	local f = string.format("%s/data/game_animations.lua", KR_PATH_GAME)
-
-	load_ani_file(f)
-
-	local path = string.format("%s/data/animations", KR_PATH_GAME)
-	local files = FS.getDirectoryItems(path)
-
-	for i = 1, #files do
-		local name = files[i]
-		local f = path .. "/" .. name
-
-		if is_file(f) and string.match(f, ".lua$") then
-			load_ani_file(f)
-		end
+	local animation_file = KR_PATH_GAME .. "/data/game_animations.lua"
+	local achunk, load_err = FS.load(animation_file)
+	if not achunk then
+		assert(false, string.format("Failed to load animation file %s.\n%s", animation_file, load_err))
 	end
 
-	local expanded_keys = {}
-	local deleted_keys = {}
-	local next_deleted_index = 1
+	local ok, atable = pcall(achunk)
 
-	for k, v in pairs(self.db) do
+	if not ok then
+		assert(false, string.format("Failed to eval animation chunk for file:%s", animation_file, atable))
+	end
+
+	if not atable then
+		assert(false, string.format("Failed to load animation file %s. Could not find .animations", animation_file))
+	end
+
+	for k, v in pairs(atable) do
+		-- 处理 layerX 的特殊语法糖，生成对应的 layer1, layer2, ... 的动画定义
 		if v.layer_from and v.layer_to and v.layer_prefix then
 			for i = v.layer_from, v.layer_to do
 				local nk = string.gsub(k, "layerX", "layer" .. i)
@@ -106,37 +131,23 @@ function animation_db:load()
 					prefix = string.format(v.layer_prefix, i)
 				}
 
-				expanded_keys[nk] = nv
-				deleted_keys[next_deleted_index] = k
-				next_deleted_index = next_deleted_index + 1
+				self.db[nk] = extract_frame_from(nv)
 			end
+		else
+			self.db[k] = extract_frame_from(v)
 		end
 	end
 
-	for i = 1, next_deleted_index - 1 do
-		self.db[deleted_keys[i]] = nil
-	end
-
-	for k, v in pairs(expanded_keys) do
-		self.db[k] = v
-	end
-
 	self.loaded = true
-
-	self:prebuild_frames()
-
--- perf.tmp_stop("animation_db:load")
--- collectgarbage()
--- local after = collectgarbage("count")
--- print(string.format("animation_db:load memory usage before: %.2f KB, after: %.2f KB, diff: %.2f KB", before, after, after - before))
-
--- self:save_to_file()
+	perf.tmp_stop("animation_db:load")
 end
 
 -- added: 预构建所有动画的帧数组 frames
 function animation_db:prebuild_frames()
-	for name, a in pairs(self.db) do
-		self:generate_frames(name)
+	local generate_frames = self.generate_frames
+
+	for name in pairs(self.db) do
+		generate_frames(self, name)
 	end
 end
 
@@ -160,91 +171,67 @@ function animation_db:fn(animation_name, time_offset, loop, fps)
 end
 
 --- 完成动画 frames 和 frame_names 的生成。所有从文件加载的动画都还处于不可用阶段，需要通过 generate_frames 来生成 frame_names 和 frame_count，以取得运行时的最高效率。
---- @param name string 动画名称
+--- @param name string 动画名称，该动画应当在 animation_db 中已经有旧格式的定义
 --- 生成的结构：self.db[name] = {[1] = frame_count(int), [2] = frame_names(array of string)}
 function animation_db:generate_frames(name)
 	local a = self.db[name]
-	local frames = a.frames
 
-	if not frames then
-		frames = {}
+	if a[1] then
+		return
+	end
 
-		if a.ranges then
-			for _, range in pairs(a.ranges) do
-				if #range == 2 then
-					local from = range[1]
-					local to = range[2]
-					local inc = to < from and -1 or 1
+	local prefix = a.prefix
+	local frame_names = {}
+	local frame_count = 0
 
-					for i = from, to, inc do
-						frames[#frames + 1] = i
-					end
-				else
-					local start_idx = #frames
+	if a.ranges then
+		for i = 1, #a.ranges do
+			local range = a.ranges[i]
 
-					for i = 1, #range do
-						frames[start_idx + i] = range[i]
-					end
+			if #range == 2 then
+				local from = range[1]
+				local to = range[2]
+				local inc = to < from and -1 or 1
+
+				for frame = from, to, inc do
+					frame_count = frame_count + 1
+					frame_names[frame_count] = prefix .. frame_suffix(frame)
 				end
-			end
-		else
-			if a.pre then
-				local start_idx = #frames
-
-				for i = 1, #a.pre do
-					frames[start_idx + i] = a.pre[i]
-				end
-			end
-
-			if a.from and a.to then
-				local inc = a.from > a.to and -1 or 1
-
-				for i = a.from, a.to, inc do
-					frames[#frames + 1] = i
-				end
-			end
-
-			if a.post then
-				local start_idx = #frames
-
-				for i = 1, #a.post do
-					frames[start_idx + i] = a.post[i]
+			else
+				for j = 1, #range do
+					frame_count = frame_count + 1
+					frame_names[frame_count] = prefix .. frame_suffix(range[j])
 				end
 			end
 		end
-
-		a.frames = frames
-	end
-
-	-- if a.prefix and not a.frame_names then
-	-- 	a.frame_names = {}
-	-- 	local frame_count = #frames
-	-- 	for i = 1, frame_count do
-	-- 		a.frame_names[i] = a.prefix .. string.format("_%04i", frames[i])
-	-- 	end
-	-- 	a.frame_count = frame_count
-	-- end
-
-	if a.prefix and not a[2] then
-		a[2] = {}
-		local frame_count = #frames
-		for i = 1, frame_count do
-			a[2][i] = a.prefix .. string.format("_%04i", frames[i])
+	else
+		if a.pre then
+			local pre = a.pre
+			for i = 1, #pre do
+				frame_count = frame_count + 1
+				frame_names[frame_count] = prefix .. frame_suffix(pre[i])
+			end
 		end
-		a[1] = frame_count
+
+		if a.from and a.to then
+			local inc = a.from > a.to and -1 or 1
+
+			for frame = a.from, a.to, inc do
+				frame_count = frame_count + 1
+				frame_names[frame_count] = prefix .. frame_suffix(frame)
+			end
+		end
+
+		if a.post then
+			local post = a.post
+			for i = 1, #post do
+				frame_count = frame_count + 1
+				frame_names[frame_count] = prefix .. frame_suffix(post[i])
+			end
+		end
 	end
 
-	-- 重建数据结构，除去了无效字段，减少内存开销
-	-- self.db[name] = {
-	-- frame_names = a.frame_names,
-	-- frame_count = a.frame_count
-	-- }
-
-	self.db[name] = {a[1], a[2]}
-
-	-- 解引用，避免占用内存
-	-- a.frame_names = nil
-	a[2] = nil
+	self.db[name] = {frame_count, frame_names}
 end
 
 function animation_db:fni(animation, time_offset, loop, fps)
