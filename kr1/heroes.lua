@@ -11296,7 +11296,7 @@ tt.hero.skills.berserker.xp_level_steps = {
 	[7] = 3,
 	[10] = 4
 }
-tt.hero.skills.berserker.factor = {0.5, 0.4, 0.3, 0.2}
+tt.hero.skills.berserker.factor = {0.45, 0.36, 0.27, 0.18}
 tt.health.armor = 0
 tt.health.dead_lifetime = 15
 tt.health.hp_max = 545
