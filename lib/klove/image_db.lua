@@ -241,6 +241,7 @@ function image_db:queue_load_done()
 
 	::label_3_0::
 
+	-- perf.tmp_start("preload_atlas")
 	for i = 1, #self.load_queue do
 		local item = table.remove(self.load_queue, 1)
 		local ref_scale, path, name = unpack(item)
@@ -254,6 +255,7 @@ function image_db:queue_load_done()
 			end
 		end
 	end
+	-- perf.tmp_stop("preload_atlas")
 
 	if #self.threads == 0 then
 		for i = 1, math.min(#self.image_name_queue, _MAX_THREADS) do
@@ -458,6 +460,7 @@ end
 ---@param name string 图像组名称（不含.lua后缀）
 ---@return table|nil 所有待加载的图像名称 map<string, boolean>
 function image_db:preload_atlas(ref_scale, path, name)
+	ref_scale = ref_scale or 1
 	local name_scale = string.format("%s-%.6f", name, ref_scale)
 
 	if self.atlas_uses[name_scale] then
@@ -468,17 +471,17 @@ function image_db:preload_atlas(ref_scale, path, name)
 
 	self.atlas_uses[name_scale] = 1
 	self.progress = 0
-	ref_scale = ref_scale or 1
 
 	local group_file = path .. "/" .. name .. ".lua"
 
-	if not is_file(group_file) then
-		log.error("atlas file %s not found for %s/%s", group_file, path, name)
+	-- if not is_file(group_file) then
+	-- log.error("atlas file %s not found for %s/%s", group_file, path, name)
 
-		return
-	end
-
+	-- return
+	-- end
+	-- perf.tmp_start("preload_atlas_load_group_file")
 	local frames = FS.load(group_file)()
+	-- perf.tmp_stop("preload_atlas_load_group_file")
 	local image_names = {}
 
 	-- 为每一帧设置具体信息，并处理 alias
@@ -701,7 +704,7 @@ function image_db:remove_image(name)
 	self.db_atlas[name] = nil
 end
 
-function image_db:i(name, optional)
+function image_db:i(name)
 	local i = self.db_images[name]
 
 	if self.db_images[name] then
@@ -719,9 +722,9 @@ function image_db:i(name, optional)
 			return nil
 		end
 
-		if not optional then
-			log.error("Image %s not found in the images db\n%s", name, self:get_short_stats())
-		end
+		-- if not optional then
+		log.error("Image %s not found in the images db\n%s", name, self:get_short_stats())
+		-- end
 
 		self.missing_images[name or "nil"] = true
 
@@ -729,7 +732,7 @@ function image_db:i(name, optional)
 	end
 end
 
-function image_db:s(name, optional)
+function image_db:s(name)
 	local s = self.db_atlas[name]
 
 	if not s then
@@ -737,9 +740,9 @@ function image_db:s(name, optional)
 			return nil
 		end
 
-		if not optional then
-			log.error("Sprite %s was not found in the atlas db.\n%s", name, self:get_short_stats())
-		end
+		-- if not optional then
+		log.error("Sprite %s was not found in the atlas db.\n%s", name, self:get_short_stats())
+		-- end
 
 		self.missing_sprites[name or "nil"] = true
 
