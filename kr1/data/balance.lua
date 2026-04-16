@@ -5774,7 +5774,7 @@ local towers = {
 			range = 10,
 			damage = 7
 		},
-		rally_range = {130, 145, 160, 175},
+		rally_range = {130, 145, 160, 180},
 		sting_missiles = {
 			cooldown = {16, 16, 16}
 		},
@@ -5783,36 +5783,36 @@ local towers = {
 			dead_lifetime = 10,
 			speed_ground = 75,
 			armor = {0.1, 0.15, 0.2, 0.5},
-			hp = {30, 50, 70, 100},
+			hp = {30, 50, 70, 105},
 			regen_hp = {5, 8, 11, 15},
 			melee_attack = {
-				cooldown = 2,
+				cooldown = 1.8,
 				range = 72,
-				damage_max = {8, 19, 36, 60},
-				damage_min = {5, 13, 24, 40}
+				damage_max = {8, 19, 36, 54},
+				damage_min = {5, 13, 24, 36}
 			},
 			ranged_attack = {
-				cooldown = 2,
-				max_range = {150, 150, 150, 165},
+				cooldown = 1.8,
+				max_range = {150, 150, 150, 170},
 				min_range = {10, 10, 10, 10},
-				damage_max = {7, 18, 34, 60},
-				damage_min = {5, 12, 22, 40}
+				damage_max = {7, 18, 34, 54},
+				damage_min = {5, 12, 22, 36}
 			},
 			phosphoric = {
-				damage_radius = 55,
+				damage_radius = 60,
 				price = {250, 100, 100},
 				armor_reduction = {0.01, 0.02, 0.03},
 				damage_area_max = {
-					[0] = 18,
-					[1] = 18,
-					[2] = 24,
-					[3] = 30
+					[0] = 17,
+					[1] = 17,
+					[2] = 22,
+					[3] = 27
 				},
 				damage_area_min = {
-					[0] = 12,
-					[1] = 14,
-					[2] = 19,
-					[3] = 24
+					[0] = 13,
+					[1] = 13,
+					[2] = 18,
+					[3] = 22
 				},
 				damage_factor = {1, 1, 1},
 				damage_type = DAMAGE_AGAINST_ARMOR,
