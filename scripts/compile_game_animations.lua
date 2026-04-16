@@ -176,6 +176,13 @@ local function extract_frame_from(a)
 				frame_names[frame_count] = prefix .. frame_suffix(a.post[i])
 			end
 		end
+
+		if a.frames then
+			for i = 1, #a.frames do
+				frame_count = frame_count + 1
+				frame_names[frame_count] = prefix .. frame_suffix(a.frames[i])
+			end
+		end
 	end
 
 	return {frame_count, frame_names}
