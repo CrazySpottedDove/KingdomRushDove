@@ -122,3 +122,8 @@ add:
 
 compile_animations:
 	luajit ./scripts/compile_game_animations.lua
+
+compile_atlas:
+	luajit ./scripts/compile_image_atlas.lua
+
+compile: compile_animations compile_atlas

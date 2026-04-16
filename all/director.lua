@@ -534,7 +534,7 @@ function director:load_texture_groups(groups, texture_size, ref_height, queue, i
 		if queue then
 			I:queue_load_atlas(scale, texture_path, group)
 		else
-			I:load_atlas(scale, texture_path, group)
+			I:load_atlas_new(scale, texture_path, group)
 		end
 	end
 end

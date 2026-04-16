@@ -41,12 +41,12 @@ function animation_db.extract_frame_from(a)
 
 				for frame = from, to, inc do
 					frame_count = frame_count + 1
-					frame_names[frame_count] = prefix .. frame_suffix(frame)
+					frame_names[frame_count] = prefix .. string.format("_%04i", frame)
 				end
 			else
 				for j = 1, #range do
 					frame_count = frame_count + 1
-					frame_names[frame_count] = prefix .. frame_suffix(range[j])
+					frame_names[frame_count] = prefix .. string.format("_%04i", range[j])
 				end
 			end
 		end
@@ -55,7 +55,7 @@ function animation_db.extract_frame_from(a)
 			local pre = a.pre
 			for i = 1, #pre do
 				frame_count = frame_count + 1
-				frame_names[frame_count] = prefix .. frame_suffix(pre[i])
+				frame_names[frame_count] = prefix .. string.format("_%04i", pre[i])
 			end
 		end
 
@@ -64,7 +64,7 @@ function animation_db.extract_frame_from(a)
 
 			for frame = a.from, a.to, inc do
 				frame_count = frame_count + 1
-				frame_names[frame_count] = prefix .. frame_suffix(frame)
+				frame_names[frame_count] = prefix .. string.format("_%04i", frame)
 			end
 		end
 
@@ -72,10 +72,11 @@ function animation_db.extract_frame_from(a)
 			local post = a.post
 			for i = 1, #post do
 				frame_count = frame_count + 1
-				frame_names[frame_count] = prefix .. frame_suffix(post[i])
+				frame_names[frame_count] = prefix .. string.format("_%04i", post[i])
 			end
 		end
 	end
+
 	return {frame_count, frame_names}
 end
 

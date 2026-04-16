@@ -11,17 +11,8 @@ end
 
 require("lib.klua.table")
 require("lib.klua.dump")
-local function table_to_map(t)
-	local m = {}
 
-	for _, v in pairs(t) do
-		m[v] = true
-	end
-
-	return m
-end
-
-local persistent_textures = table_to_map({
+local persistent_textures = table.to_map({
 	"go_decals",
 	"go_enemies_common",
 	"go_towers_group1",
@@ -241,11 +232,11 @@ function image_db:queue_load_done()
 
 	::label_3_0::
 
-	-- perf.tmp_start("preload_atlas")
+	perf.tmp_start("preload_atlas")
 	for i = 1, #self.load_queue do
 		local item = table.remove(self.load_queue, 1)
 		local ref_scale, path, name = unpack(item)
-		local image_names = self:preload_atlas(ref_scale, path, name)
+		local image_names = self:preload_atlas_from_bytecode(ref_scale, path, name)
 
 		if image_names then
 			for n in pairs(image_names) do
@@ -255,7 +246,7 @@ function image_db:queue_load_done()
 			end
 		end
 	end
-	-- perf.tmp_stop("preload_atlas")
+	perf.tmp_stop("preload_atlas")
 
 	if #self.threads == 0 then
 		for i = 1, math.min(#self.image_name_queue, _MAX_THREADS) do
@@ -473,15 +464,7 @@ function image_db:preload_atlas(ref_scale, path, name)
 	self.progress = 0
 
 	local group_file = path .. "/" .. name .. ".lua"
-
-	-- if not is_file(group_file) then
-	-- log.error("atlas file %s not found for %s/%s", group_file, path, name)
-
-	-- return
-	-- end
-	-- perf.tmp_start("preload_atlas_load_group_file")
 	local frames = FS.load(group_file)()
-	-- perf.tmp_stop("preload_atlas_load_group_file")
 	local image_names = {}
 
 	-- 为每一帧设置具体信息，并处理 alias
@@ -530,7 +513,53 @@ function image_db:preload_atlas(ref_scale, path, name)
 	return image_names
 end
 
---- 加载一张图像资源，用于少量、临时的图像加载
+--- 加载图像组的全部帧信息，但不加载图像资源。帧信息实现了帧到纹理的映射。
+--- 使用了预编译的数据，格式见 scripts/compile_image_atlas.lua
+---@param ref_scale number 图像组的渲染比例
+---@param path string 图像组父目录路径
+---@param name string 图像组名称（不含.lua后缀）
+---@return table|nil 所有待加载的图像名称 map<string, boolean>
+function image_db:preload_atlas_from_bytecode(ref_scale, path, name)
+	ref_scale = ref_scale or 1
+	local name_scale = string.format("%s-%.6f", name, ref_scale)
+
+	if self.atlas_uses[name_scale] then
+		self.atlas_uses[name_scale] = self.atlas_uses[name_scale] + 1
+
+		return
+	end
+
+	self.atlas_uses[name_scale] = 1
+	self.progress = 0
+
+	local group_file = path .. "/" .. name .. (IS_ANDROID and ".aluac" or ".luac")
+
+	local info = FS.load(group_file)()
+	local image_names = {}
+
+	for i = 1, info.count do
+		local v = info.values[i]
+		image_names[v[1]] = true
+		self.db_atlas[info.keys[i]] = {
+			atlas = remove_extension_fast(v[1]),
+			group = name_scale,
+			quad = G.newQuad(v[2][1], v[2][2], v[2][3], v[2][4], v[2][5], v[2][6]),
+			trim = v[3],
+			ref_scale = ref_scale * v[4],
+			size = v[5]
+		}
+		-- alias
+		if v[6] then
+			for j = 1, #v[6] do
+				self.db_atlas[v[6][j]] = self.db_atlas[info.keys[i]]
+			end
+		end
+	end
+
+	return image_names
+end
+
+--- [[DEPRECATED]] 加载一张图像资源，用于少量、临时的图像加载。建议使用 load_atlas_new 以利用预编译的图像列表，提高加载性能。该接口用于保证现有插件的兼容性，但不建议在新开发中使用。
 ---@param ref_scale number 图像的渲染比例
 ---@param path string 图像父目录路径
 ---@param name string 图像组名称（不含.lua后缀）
@@ -540,6 +569,34 @@ function image_db:load_atlas(ref_scale, path, name)
 	end
 
 	local image_names = self:preload_atlas(ref_scale, path, name)
+
+	if not image_names then
+		return
+	end
+
+	local i = 0
+
+	for fn in pairs(image_names) do
+		i = i + 1
+
+		local key, im, w, h = image_db:load_image_file(fn, path)
+
+		self.db_images[key] = {im, w, h}
+	end
+
+	self.progress = 1
+end
+
+--- 加载一张图像资源，用于少量、临时的图像加载
+---@param ref_scale number 图像的渲染比例
+---@param path string 图像父目录路径
+---@param name string 图像组名称（不含.lua后缀）
+function image_db:load_atlas_new(ref_scale, path, name)
+	if persistent_textures[name] and self.atlas_uses[name_scale(name, ref_scale)] then
+		return
+	end
+
+	local image_names = self:preload_atlas_from_bytecode(ref_scale, path, name)
 
 	if not image_names then
 		return

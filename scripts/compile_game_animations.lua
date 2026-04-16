@@ -25,94 +25,47 @@ local function load_table_from_file(filename)
 	return tbl
 end
 
-local function is_identifier(str)
-	return type(str) == "string" and str:match("^[A-Za-z_][A-Za-z0-9_]*$") ~= nil
-end
+local function append_serialized(buf, v)
+	local tv = type(v)
 
-local function is_array(tbl)
-	if type(tbl) ~= "table" then
-		return false
-	end
+	if tv == "table" then
+		buf[#buf + 1] = "{"
+		local n = #v
+		local first = true
 
-	local i = 0
-
-	for _ in pairs(tbl) do
-		i = i + 1
-
-		if tbl[i] == nil then
-			return false
-		end
-	end
-
-	return true
-end
-
-local function serialize(tbl, indent)
-	indent = indent or ""
-
-	local lines = {}
-
-	lines[#lines + 1] = "{"
-
-	if is_array(tbl) then
-		for i = 1, #tbl do
-			local v = tbl[i]
-			local val_str
-
-			if type(v) == "table" then
-				val_str = serialize(v, indent .. "    ")
-			elseif type(v) == "string" then
-				local s = v:gsub("\n", "\\n")
-				val_str = string.format("%q", s)
-				val_str = val_str:gsub("\\\\n", "\\n")
-			else
-				val_str = tostring(v)
+		for i = 1, n do
+			if not first then
+				buf[#buf + 1] = ","
 			end
-
-			lines[#lines + 1] = string.format("%s    %s,", indent, val_str)
+			first = false
+			append_serialized(buf, v[i])
 		end
+
+		for k, vv in pairs(v) do
+			if type(k) ~= "number" or k < 1 or k > n or k % 1 ~= 0 then
+				if not first then
+					buf[#buf + 1] = ","
+				end
+				first = false
+				buf[#buf + 1] = "["
+				buf[#buf + 1] = string.format("%q", k)
+				buf[#buf + 1] = "]="
+				append_serialized(buf, vv)
+			end
+		end
+
+		buf[#buf + 1] = "}"
+	elseif tv == "string" then
+		buf[#buf + 1] = string.format("%q", v)
 	else
-		local keys = {}
-
-		for k in pairs(tbl) do
-			keys[#keys + 1] = k
-		end
-
-		table.sort(keys, function(a, b)
-			return tostring(a) < tostring(b)
-		end)
-
-		for _, k in ipairs(keys) do
-			local v = tbl[k]
-			local key_str
-
-			if is_identifier(k) then
-				key_str = k
-			elseif type(k) == "string" then
-				key_str = string.format("[%q]", k)
-			else
-				key_str = string.format("[%s]", tostring(k))
-			end
-
-			local val_str
-
-			if type(v) == "table" then
-				val_str = serialize(v, indent .. "    ")
-			elseif type(v) == "string" then
-				local s = v:gsub("\n", "\\n")
-				val_str = string.format("%q", s)
-				val_str = val_str:gsub("\\\\n", "\\n")
-			else
-				val_str = tostring(v)
-			end
-
-			lines[#lines + 1] = string.format("%s    %s = %s,", indent, key_str, val_str)
-		end
+		buf[#buf + 1] = tostring(v)
 	end
+end
 
-	lines[#lines + 1] = indent .. "}"
-
-	return table.concat(lines, "\n")
+local function serialize(tbl)
+	local out = {}
+	append_serialized(out, tbl)
+	return table.concat(out)
 end
 
 local frame_suffix_cache = {}
@@ -230,7 +183,7 @@ for k, v in pairs(src) do
 	end
 end
 
-local source_lua = "return " .. serialize(compiled, "") .. "\n"
+local source_lua = "return " .. serialize(compiled)
 local compile_loader = loadstring or load
 local chunk, chunk_err = compile_loader(source_lua, "@" .. output_luac_file)
 

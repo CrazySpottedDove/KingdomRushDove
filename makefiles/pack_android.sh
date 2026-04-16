@@ -195,6 +195,9 @@ if [ "$rebuild_love" -eq 1 ]; then
         "kr1/data/waveconfigs/*"
         "config.json"
         "kr1/data/game_animations.lua"
+        "_assets/kr1-desktop/images/fullhd/*.lua"
+        "_assets/kr1-desktop/images/fullhd/*.luac"
+        "_assets/kr1-desktop/images/fullhd/*.png"
         # "*kr4*"
     )
     if [ "$AUDIO_COMPRESS_MODE" = "1" ]; then
