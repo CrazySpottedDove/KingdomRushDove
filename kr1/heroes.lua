@@ -5119,7 +5119,7 @@ tt.dps.damage_inc = 5
 --#region mod_vampiress_gain
 tt = RT("mod_vampiress_gain", "modifier")
 tt.gain = {
-	damage = 0.7,
+	damage = 0.8,
 	hp = 2,
 	magic_armor = 0.004,
 	armor = 0.002,
