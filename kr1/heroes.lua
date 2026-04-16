@@ -7279,8 +7279,8 @@ AC(tt, "melee", "timed_attacks")
 
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {330, 352, 374, 396, 418, 440, 462, 484, 504, 528}
-tt.hero.level_stats.melee_damage_max = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
-tt.hero.level_stats.melee_damage_min = {6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
+tt.hero.level_stats.melee_damage_max = {11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
+tt.hero.level_stats.melee_damage_min = {7, 8, 9, 10, 11, 12, 13, 14, 15, 16}
 tt.hero.skills.blade = CC("hero_skill")
 tt.hero.skills.blade.damage = {60, 100, 140}
 tt.hero.skills.blade.instakill_chance = {0.015, 0.03, 0.045}
