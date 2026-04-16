@@ -67,6 +67,7 @@ rsync -a \
     --exclude='launch.bat' \
     --exclude='存档位置.lnk' \
     --exclude='all/librender_sort.dll' \
+    --exclude='*.aluac' \
     --exclude='mods/local/' \
     --exclude='.plugins/' \
     --exclude='config.json' \

@@ -76,6 +76,7 @@ rsync -a \
     --exclude='.gdb_history' \
     --exclude='https.so' \
     --exclude='all/librender_sort.so' \
+    --exclude='*.aluac' \
     --exclude='mods/local/' \
     --exclude='.plugins/' \
     --exclude='config.json' \
