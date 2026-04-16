@@ -8719,7 +8719,7 @@ tt.hero.skills.seal_of_fire.xp_level_steps = {
 }
 tt.hero.skills.stone_dance = CC("hero_skill")
 tt.hero.skills.stone_dance.count = {1, 2, 3}
-tt.hero.skills.stone_dance.stone_extra = {10, 15, 20}
+tt.hero.skills.stone_dance.stone_extra = {12, 17, 22}
 tt.hero.skills.stone_dance.xp_level_steps = {
 	[1] = 1,
 	[4] = 2,
@@ -8727,10 +8727,10 @@ tt.hero.skills.stone_dance.xp_level_steps = {
 }
 tt.hero.skills.ultimate = CC("hero_skill")
 tt.hero.skills.ultimate.controller_name = "hero_arivan_ultimate"
-tt.hero.skills.ultimate.damage = {6, 7, 8, 10}
-tt.hero.skills.ultimate.duration = {3, 6, 8, 10}
-tt.hero.skills.ultimate.freeze_chance = {0.2, 0.4, 0.6, 0.8}
-tt.hero.skills.ultimate.freeze_duration = {0.5, 1, 1.5, 2}
+tt.hero.skills.ultimate.damage = {7, 8, 9, 10}
+tt.hero.skills.ultimate.duration = {5.5, 7, 8.5, 10}
+tt.hero.skills.ultimate.freeze_chance = {0.5, 0.6, 0.7, 0.8}
+tt.hero.skills.ultimate.freeze_duration = {1.25, 1.5, 1.75, 2}
 tt.hero.skills.ultimate.xp_gain_factor = 64
 tt.hero.skills.ultimate.xp_level_steps = {
 	[1] = 1,
@@ -8738,7 +8738,7 @@ tt.hero.skills.ultimate.xp_level_steps = {
 	[7] = 3,
 	[10] = 4
 }
-tt.hero.skills.ultimate.lightning_chance = {0, 0.5, 0.65, 0.8}
+tt.hero.skills.ultimate.lightning_chance = {0.35, 0.5, 0.65, 0.8}
 tt.hero.skills.ultimate.lightning_cooldown = {fts(30), fts(30), fts(24), fts(21)}
 tt.health.dead_lifetime = 15
 tt.health.on_damage = scripts.hero_arivan.on_damage
@@ -8966,7 +8966,7 @@ tt.tween.props[1].name = "offset"
 tt.tween.props[1].keys = {{0, vec_2(0, 0)}, {0.5, vec_2(0, 3)}, {1, vec_2(0, 0)}, {1.5, vec_2(0, -3)}, {2, vec_2(0, 0)}}
 tt.tween.props[1].loop = true
 tt.tween.remove = false
-tt.hp = 60
+tt.hp = 75
 --#endregion
 --#region fx_arivan_stone_explosion
 tt = RT("fx_arivan_stone_explosion", "fx")
