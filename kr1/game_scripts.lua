@@ -32883,7 +32883,7 @@ function scripts.aura_controller_stage_14_amalgam.update(this, store)
 			last_hit_ts = store.tick_ts
 			cycles_count = cycles_count + 1
 
-			local targets = table.filter(store.entities, function(k, v)
+			local targets = table.filter(store.enemies, function(k, v)
 				return v.unit and v.health and not v.health.dead and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name))
 			end)
 
@@ -32914,7 +32914,7 @@ function scripts.aura_stage_14_prevent_polymorph.update(this, store)
 			last_hit_ts = store.tick_ts
 			cycles_count = cycles_count + 1
 
-			local targets = table.filter(store.entities, function(k, v)
+			local targets = table.filter(store.enemies, function(k, v)
 				return v.unit and v.health and not v.health.dead and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and not U.flag_has(v.vis.bans, F_POLYMORPH) and (v.nav_path.pi == 2 or v.nav_path.pi == 3) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name))
 			end)
 
@@ -33387,7 +33387,7 @@ function scripts.aura_stage_15_cult_leader_tower_stun.update(this, store)
 			last_hit_ts = store.tick_ts
 			cycles_count = cycles_count + 1
 
-			local targets = table.filter(store.entities, function(k, v)
+			local targets = table.filter(store.soldiers, function(k, v)
 				return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= v.id)
 			end)
 
@@ -34474,7 +34474,7 @@ function scripts.enemy_bear_vanguard.update(this, store)
 
 	while true do
 		if this.health.dead then
-			local bears = table.filter(store.entities, function(k, v)
+			local bears = table.filter(store.enemies, function(k, v)
 				return v.health and not v.health.dead and U.is_inside_ellipse(v.pos, this.pos, this.wrath_of_the_fallen.radius) and v.template_name == this.template_name
 			end)
 
@@ -35590,7 +35590,7 @@ function scripts.enemy_crystal_golem.update(this, store)
 
 				this.motion.max_speed = this.motion._max_speed
 
-				local holder = table.filter(store.entities, function(_, v)
+				local holder = table.filter(store.towers, function(_, v)
 					return v.tower and v.tower.holder_id == this.activate_holder
 				end)[1]
 
@@ -35831,7 +35831,7 @@ function scripts.enemy_mindless_husk.update(this, store)
 		if this.health.dead then
 			local can_spawn = band(this.health.last_damage_types, bor(DAMAGE_EAT, DAMAGE_NO_SPAWNS, DAMAGE_INSTAKILL)) == 0
 			local nodes_to_end = P:get_end_node(this.nav_path.pi) - this.nav_path.ni
-			local enemies_left = table.filter(store.entities, function(_, e)
+			local enemies_left = table.filter(store.enemies, function(_, e)
 				return e.main_script and (e.main_script.co or e.main_script.runs > 0) and (e.enemy and e.health and not e.health.dead or e.enemy and e.death_spawns or e.spawner and not e.spawner.eternal or e.picked_enemies and #e.picked_enemies > 0 or e.tunnel and #e.tunnel.picked_enemies > 0) and e.id ~= this.id
 			end)
 
@@ -44160,7 +44160,7 @@ function scripts.controller_stage_25_tunnel_glow.update(this, store)
 	local on = false
 
 	local function find_enemies(range)
-		local enemies = table.filter(store.entities, function(k, v)
+		local enemies = table.filter(store.enemies, function(k, v)
 			return not v.pending_removal and v.enemy and v.nav_path and v.nav_path.pi == 1 and v.health and not v.health.dead and U.is_inside_ellipse(v.pos, this.pos, range)
 		end)
 
