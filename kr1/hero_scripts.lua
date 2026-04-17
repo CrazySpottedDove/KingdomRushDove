@@ -2132,7 +2132,7 @@ scripts.hero_bolin = {
 							U.animation_start(this, an, af, store.tick_ts, 1)
 							U.set_destination(this, this.pos)
 
-							for si, st in pairs(a.shoot_times) do
+							for si, st in ipairs(a.shoot_times) do
 								if U.y_wait(store, a.shoot_times[si], function()
 									return SU.hero_interrupted(this)
 								end) then
@@ -2173,7 +2173,7 @@ scripts.hero_bolin = {
 									b.pos = V.vclone(this.pos)
 									b.bullet.damage_type = a.damage_type
 
-									if a.chance then
+									if a == this.timed_attacks.list[4] then
 										b.bullet.damage_min = b.bullet.damage_max
 										b.bullet.pop = {"pop_splat"}
 									end

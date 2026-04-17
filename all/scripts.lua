@@ -1178,12 +1178,15 @@ function scripts.soldier_barrack.get_info(this)
 		end
 	end
 
-	if not ranged_damage_type and this.timed_attacks and this.timed_attacks.list[1].bullet then
+	if not ranged_damage_type and this.timed_attacks then
 		for _, a in ipairs(this.timed_attacks.list) do
 			if a.bullet and not a.disabled then
 				local b = E:get_template(a.bullet)
 				if b.bullet and b.bullet.damage_min and b.bullet.damage_max then
 					ranged_min, ranged_max = (b.bullet.damage_min + this.unit.damage_buff) * this.unit.damage_factor, (b.bullet.damage_max + this.unit.damage_buff) * this.unit.damage_factor
+					if a.shoot_times then
+						ranged_min, ranged_max = ranged_min * #a.shoot_times, ranged_max * #a.shoot_times
+					end
 					ranged_damage_type = b.bullet.damage_type
 					ranged_cooldown = a.cooldown
 					if ranged_cooldown then
