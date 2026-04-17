@@ -534,7 +534,16 @@ function image_db:preload_atlas_from_bytecode(ref_scale, path, name)
 
 	local group_file = path .. "/" .. name .. (IS_ANDROID and ".aluac" or ".luac")
 
-	local info = FS.load(group_file)()
+	-- 使用 pcall 进行保护，避免加载不存在的资源文件。如果不存在，报错提醒。
+	-- local info = FS.load(group_file)()
+	local success, chunk = pcall(FS.load, group_file)
+	if not success or type(chunk) ~= "function" then
+		log.error("Failed to load atlas bytecode: %s. Error: %s", group_file, chunk)
+		return {}
+	end
+
+	local info = chunk()
+
 	local image_names = {}
 
 	for i = 1, info.count do

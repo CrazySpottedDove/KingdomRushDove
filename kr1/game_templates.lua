@@ -7427,7 +7427,7 @@ tt.render.sprites[1].scale = vec_2(0.6, 0.6)
 --#endregion
 --#region decal_jumping_fish
 tt = RT("decal_jumping_fish", "decal_delayed_play")
-tt.render.sprites[1].prefix = "decal_fish"
+tt.render.sprites[1].prefix = "decal_elves_fish"
 tt.render.sprites[1].name = "jump"
 tt.render.sprites[1].hidden = true
 tt.render.sprites[1].z = Z_DECALS + 1

@@ -8623,6 +8623,11 @@ return {
 		prefix = "fish",
 		to = 22
 	},
+	decal_elves_fish_jump = {
+		from = 1,
+		prefix = "stage1_fish",
+		to = 22
+	},
 	decal_flaming_path_fire = {
 		from = 1,
 		prefix = "phoenix_hero_towerBurn_towerFire",
