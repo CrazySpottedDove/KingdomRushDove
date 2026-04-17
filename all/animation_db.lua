@@ -85,7 +85,7 @@ function animation_db:load()
 		return
 	end
 	self.tick_length = TICK_LENGTH
-	self.db = FS.load(KR_PATH_GAME .. "/data/game_animations_compiled.luac")()
+	self.db = FS.load(KR_PATH_GAME .. "/data/game_animations.luac")()
 	self.loaded = true
 end
 

@@ -1,5 +1,5 @@
 local input_file = arg[1] or "kr1/data/game_animations.lua"
-local output_luac_file = arg[2] or "kr1/data/game_animations_compiled.luac"
+local output_luac_file = arg[2] or "kr1/data/game_animations.luac"
 
 local function load_table_from_file(filename)
 	local chunk, err = loadfile(filename)

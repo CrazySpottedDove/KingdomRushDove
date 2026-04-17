@@ -98,7 +98,6 @@ local function compile_table(tbl, force_astc)
 	for k, v in pairs(tbl) do
 		out.keys[index] = k
 		out.values[index] = minimize_frame(v, force_astc)
-		-- out[k] = minimize_frame(v, force_astc)
 		index = index + 1
 	end
 	index = index - 1
