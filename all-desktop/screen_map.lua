@@ -3787,7 +3787,7 @@ EncyclopediaView = class("EncyclopediaView", PopUpView)
 function EncyclopediaView:initialize(sw, sh)
 	PopUpView.initialize(self, V.v(sw, sh))
 
-	self.scale = vec_1(1.2)
+	self.scale = V.vv(1.2)
 	self.back = KView:new(V.v(sw, sh))
 	self.back.pos = v(0, 0)
 	self.back.anchor = v(sw / 2, sh / 2)

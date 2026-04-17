@@ -232,7 +232,7 @@ function image_db:queue_load_done()
 
 	::label_3_0::
 
-	perf.tmp_start("preload_atlas")
+	-- perf.tmp_start("preload_atlas")
 	for i = 1, #self.load_queue do
 		local item = table.remove(self.load_queue, 1)
 		local ref_scale, path, name = unpack(item)
@@ -246,7 +246,7 @@ function image_db:queue_load_done()
 			end
 		end
 	end
-	perf.tmp_stop("preload_atlas")
+	-- perf.tmp_stop("preload_atlas")
 
 	if #self.threads == 0 then
 		for i = 1, math.min(#self.image_name_queue, _MAX_THREADS) do
