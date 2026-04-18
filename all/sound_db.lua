@@ -167,10 +167,10 @@ function sound_db:init(path)
 		for k, v in pairs(f_extra.groups) do
 			if v.append then
 				if v.sounds then
-					for _, s in pairs(v.sounds) do
+					for _, s in ipairs(v.sounds) do
 						local sound = self.sounds[s]
 
-						for _, f in pairs(sound.files) do
+						for _, f in ipairs(sound.files) do
 							if not table.contains(self.groups[k].files, f) then
 								table.insert(self.groups[k].files, f)
 							end
@@ -179,7 +179,7 @@ function sound_db:init(path)
 				end
 
 				if v.files then
-					for _, f in pairs(v.files) do
+					for _, f in ipairs(v.files) do
 						if not table.contains(self.groups[k].files, f) then
 							table.insert(self.groups[k].files, f)
 						end
