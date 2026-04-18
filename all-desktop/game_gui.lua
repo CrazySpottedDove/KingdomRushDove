@@ -2166,6 +2166,9 @@ function HeroPortrait:on_exit()
 end
 
 function HeroPortrait:on_click(button, x, y)
+	if button ~= 1 then
+		return
+	end
 	local e = game_gui:entity_by_id(self.hero_id)
 
 	if e == game_gui.selected_entity then
