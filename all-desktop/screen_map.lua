@@ -24,6 +24,7 @@ local utf8 = require("utf8")
 local achievements_data, map_data
 local tower_menus_data = require("kr1.data.tower_menus_data")
 local R = require("all.restart")
+local perf = require("dove_modules.perf.perf")
 require("klove.kui")
 
 local kui_db = require("klove.kui_db")
@@ -87,6 +88,69 @@ local function get_hero_index(hero_name)
 	return nil
 end
 
+local map_points_cache = {}
+
+local function get_map_points_for_generation(generation)
+	local cached = map_points_cache[generation]
+	if cached then
+		return cached
+	end
+
+	local points_data
+	if generation == 1 then
+		points_data = require("data.map_points")
+	elseif generation == 2 then
+		points_data = require("data.map_points2")
+	elseif generation == 3 then
+		points_data = require("data.map_points3")
+	elseif generation == 5 then
+		points_data = require("data.map_points5")
+	end
+
+	local points_by_level = {}
+	local points = points_data and points_data.points
+
+	if points then
+		if not points_data._points_indexed then
+			table.sort(points, function(e1, e2)
+				local e1l, e2l = tonumber(e1.level), tonumber(e2.level)
+				local e1p, e2p = tonumber(e1.id), tonumber(e2.id)
+
+				if e1l == e2l then
+					return e1p < e2p
+				else
+					return e1l < e2l
+				end
+			end)
+			points_data._points_indexed = true
+		end
+
+		for _, p in ipairs(points) do
+			local level = tonumber(p.level)
+			local level_points = points_by_level[level]
+
+			if not level_points then
+				level_points = {}
+				points_by_level[level] = level_points
+			end
+
+			level_points[#level_points + 1] = {
+				pos = p.pos,
+				water = p.water
+			}
+		end
+	end
+
+	cached = {
+		points = points_by_level,
+		flags = points_data and points_data.flags or {},
+		endless_flags = points_data and points_data.endless_flags or {}
+	}
+	map_points_cache[generation] = cached
+
+	return cached
+end
+
 -- 判断是否为额外关卡
 local function is_extra_level(level, num)
 	local e = "extra_level" .. num
@@ -101,6 +165,8 @@ screen_map.signal_handlers = {}
 local scroll_hotpot_width = 100
 
 function screen_map:init(w, h, done_callback)
+	-- perf.tmp_start("screen_map_init")
+	E:ensure_loaded()
 	self.done_callback = done_callback
 	self.original_w, self.original_h = w, h
 	local sw, sh, scale, origin = SU.clamp_window_aspect(w, h, self.ref_w, self.ref_h)
@@ -116,80 +182,13 @@ function screen_map:init(w, h, done_callback)
 	GGLabel.static.font_scale = scale
 	GGLabel.static.ref_h = self.ref_h
 
-	if DEBUG then
-		package.loaded["data.achievements_data"] = nil
-		package.loaded["data.map_data"] = nil
-		package.loaded.map_decos_functions = nil
-	end
-
 	achievements_data = require("data.achievements_data")
 	map_data = require("data.map_data")
 	screen_map.hero_data = map_data.hero_data
 	screen_map.tower_data = map_data.tower_data
 	screen_map.level_data = map_data.level_data
 
-	E:ensure_loaded()
-
-	local points_data
-	if self.generation == 1 then
-		points_data = require("data.map_points")
-	elseif self.generation == 2 then
-		points_data = require("data.map_points2")
-	elseif self.generation == 3 then
-		points_data = require("data.map_points3")
-	elseif self.generation == 5 then
-		points_data = require("data.map_points5")
-	end
-
-	local ppl = {}
-	if self.kr5_map == true then
-		local ppl_points = {}
-		if points_data.points and points_data.points[1] and points_data.points[1].children then
-			for i = 1, #points_data.points - 6 do
-				for j = 1, #points_data.points[i].children do
-					local new_pos = v(points_data.points[i].pos.x * points_data.RATE_X + points_data.OFFSET_X + points_data.points[i].children[j].pos.x * points_data.RATE_X + points_data.OFFSET_X1, points_data.points[i].pos.y * points_data.RATE_Y + points_data.OFFSET_Y + points_data.points[i].children[j].pos.y * points_data.RATE_Y + points_data.OFFSET_Y1)
-					local p = {
-						id = #points_data.points[i].children[j].id,
-						level = #points_data.points[i].id,
-						pos = new_pos
-					}
-					table.insert(ppl_points, p)
-				end
-			end
-
-			points_data.points = ppl_points
-		end
-	end
-	if points_data.points then
-		table.sort(points_data.points, function(e1, e2)
-			local e1l, e2l = tonumber(e1.level), tonumber(e2.level)
-			local e1p, e2p = tonumber(e1.id), tonumber(e2.id)
-
-			if e1l == e2l then
-				return e1p < e2p
-			else
-				return e1l < e2l
-			end
-		end)
-
-		for _, p in ipairs(points_data.points) do
-			local l = tonumber(p.level)
-
-			if not ppl[l] then
-				ppl[l] = {}
-			end
-
-			table.insert(ppl[l], {
-				pos = p.pos,
-				water = p.water
-			})
-		end
-	end
-
-	self.map_points = {}
-	self.map_points.points = ppl
-	self.map_points.flags = points_data.flags
-	self.map_points.endless_flags = points_data.endless_flags
+	self.map_points = get_map_points_for_generation(self.generation)
 	self.user_data = storage:load_slot()
 	self.unlock_data = {}
 	self.unlock_data.unlocked_levels = {}
@@ -347,7 +346,7 @@ function screen_map:init(w, h, done_callback)
 
 	function o_button.on_click(this, button, x, y)
 		S:queue("GUIButtonCommon")
-		self.option_panel:show()
+		self:ensure_option_panel():show()
 	end
 
 	self.window:add_child(o_button)
@@ -359,7 +358,7 @@ function screen_map:init(w, h, done_callback)
 
 	function a_button.on_click(this, button, x, y)
 		S:queue("GUIButtonCommon")
-		self.achievements:show()
+		self:ensure_achievements_view():show()
 	end
 
 	a_button.label.pos = v(50, 121)
@@ -381,7 +380,7 @@ function screen_map:init(w, h, done_callback)
 
 	function e_button.on_click(this, button, x, y)
 		S:queue("GUIButtonCommon")
-		self.encyclopedia:show()
+		self:ensure_encyclopedia_view():show()
 	end
 
 	e_button.label.pos = v(50, 121)
@@ -430,7 +429,7 @@ function screen_map:init(w, h, done_callback)
 
 	function u_button.on_click(this, button, x, y)
 		S:queue("GUIButtonCommon")
-		self.upgrades:show()
+		self:ensure_upgrades_view():show()
 
 		if self.upgradeTip then
 			self.upgradeTip.hidden = true
@@ -447,7 +446,7 @@ function screen_map:init(w, h, done_callback)
 
 	self.window:add_child(u_button)
 
-	if DBG_SHOW_BALLOONS or self.unlock_data.new_level == 2 then
+	if self.unlock_data.new_level == 2 then
 		self.upgradeTip = KImageView:new("mapBaloon_buyUpgrade_notxt")
 		self.upgradeTip.anchor = v(self.upgradeTip.size.x / 2, self.upgradeTip.size.y)
 		self.upgradeTip.pos = v(e_button.pos.x - 120, sh - 160)
@@ -509,7 +508,7 @@ function screen_map:init(w, h, done_callback)
 
 	function h_button.on_click(this, button, x, y)
 		S:queue("GUIButtonCommon")
-		self.hero_room:show()
+		self:ensure_hero_room_view():show()
 
 		if self.heroTip then
 			self.heroTip.hidden = true
@@ -566,10 +565,6 @@ function screen_map:init(w, h, done_callback)
 	self.hero_icon_portrait_2.propagate_on_up = true
 	self.hero_icon_portrait_2.hidden = true
 
-	if self.user_data.heroes.selected then
-		self.hero_icon_portrait.hidden = false
-	end
-
 	h_button:add_child(self.hero_icon_portrait)
 	h_button:add_child(self.hero_icon_portrait_2)
 
@@ -595,6 +590,8 @@ function screen_map:init(w, h, done_callback)
 	self.skill_star:add_child(points_label)
 
 	self.skill_label = points_label
+	self:refresh_upgrade_button_state()
+	self:refresh_hero_button_state()
 
 	local map_counters = GG9View:new_from_table(kui_db:get_table("map_counters_view", {
 		ref_h = self.ref_h,
@@ -606,79 +603,10 @@ function screen_map:init(w, h, done_callback)
 
 	wid("map_counters_stars").text = string.format("%s/%s", screen_map.total_stars, GS.max_stars)
 
-	local upgrades_view_scale = 1.2
-	local upgrades = UpgradesView:new(sw, sh)
-
-	upgrades.scale = v(upgrades_view_scale, upgrades_view_scale)
-	upgrades.pos = v((1 - upgrades_view_scale) * 0.5 * sw, (1 - upgrades_view_scale) * 0.5 * sh)
-
-	self.window:add_child(upgrades)
-
-	self.upgrades = upgrades
-
-	self.upgrades:set_init_values(screen_map.total_stars, screen_map.user_data.upgrades)
-
-	local encyclopedia = EncyclopediaView:new(sw, sh)
-
-	-- encyclopedia.pos = v(0, 0)
-	encyclopedia.pos = v(-sw * 0.1, -sh * 0.1)
-	self.encyclopedia = encyclopedia
-
-	self.window:add_child(encyclopedia)
-
-	local hero_room
-	local ctx = {}
-
-	ctx.ref_h = self.ref_h
-
-	function ctx.cjk(default, zh, ja, kr)
-		return i18n.cjk(i18n, default, zh, ja, kr)
-	end
-
-	local tt = kui_db:get_table("hero_room_view", ctx)
-
-	hero_room = HeroRoomViewKR1:new_from_table(tt)
-	hero_room.pos = v((sw - hero_room.size.x * hero_room.scale.x) / 2, (sh - hero_room.size.y * hero_room.scale.y) / 2)
-
-	self.hero_room = hero_room
-
-	self.window:add_child(hero_room)
-
 	self.difficulty_view = DifficultyView:new(sw, sh)
 	self.difficulty_view.pos = v(0, 0)
 
 	self.window:add_child(self.difficulty_view)
-
-	self.option_panel = OptionsView:new(sw, sh)
-	self.option_panel.pos = v(0, 0)
-
-	self.window:add_child(self.option_panel)
-
-	self.achievements = AchievementsView:new(sw, sh)
-	self.achievements.pos = v(0, 0)
-
-	self.window:add_child(self.achievements)
-
-	self.config_panel_view = ConfigPanelView:new(sw, sh)
-	self.config_panel_view.pos = v(0, 0)
-
-	self.window:add_child(self.config_panel_view)
-
-	self.criket_panel_view = CriketPanelView:new(sw, sh)
-	self.criket_panel_view.pos = v(0, 0)
-
-	self.window:add_child(self.criket_panel_view)
-
-	self.keyset_panel_view = KeysetPanelView:new(sw, sh)
-	self.window:add_child(self.keyset_panel_view)
-
-	self.launch_options_panel_view = LaunchOptionsPanelView:new(sw, sh)
-	self.window:add_child(self.launch_options_panel_view)
-
-	if not IS_ANDROID then
-		self.mod_manager_view = ModManagerView:new(sw, sh)
-		self.window:add_child(self.mod_manager_view)
-	end
 
 	-- 数字键盘弹窗（安卓 + 电脑均可用）
 	self.numeric_keyboard = NumericKeyboardView:new(sw, sh)
@@ -708,6 +636,262 @@ function screen_map:init(w, h, done_callback)
 	if self.user_data.difficulty == nil or DEBUG_SHOW_DIFFICULTY then
 		self.difficulty_view:show()
 	end
+-- perf.tmp_stop("screen_map_init")
+end
+
+function screen_map:normalize_selected_heroes()
+	if not self.user_data.heroes then
+		self.user_data.heroes = {
+			selected = {}
+		}
+		return
+	end
+
+	local heroes = self.user_data.heroes
+
+	if not heroes.selected then
+		heroes.selected = {}
+	elseif type(heroes.selected) ~= "table" then
+		heroes.selected = {heroes.selected}
+	end
+
+	local valid = {}
+	for _, selected_name in pairs(heroes.selected) do
+		if selected_name and get_hero_index(selected_name) then
+			table.insert(valid, selected_name)
+		end
+	end
+	heroes.selected = valid
+end
+
+function screen_map:refresh_upgrade_button_state()
+	local list_id = self.user_data.upgrade_list_id or 1
+	local upgrade_list = UPGR.list[list_id] or UPGR.list[1]
+	local bought_levels = self.user_data.upgrades or {}
+	local spent_stars = 0
+	local max_upgrade_stars = 0
+
+	for _, upgrade in pairs(upgrade_list) do
+		max_upgrade_stars = max_upgrade_stars + upgrade.price
+		if (bought_levels[upgrade.class] or 0) >= upgrade.level then
+			spent_stars = spent_stars + upgrade.price
+		end
+	end
+
+	local available_stars = math.max(0, math.min(self.total_stars, max_upgrade_stars) - spent_stars)
+	self.upgrade_star.hidden = available_stars == 0
+	self.upgrade_points.text = available_stars
+	self.upgrade_points.hidden = available_stars == 0
+end
+
+function screen_map:refresh_hero_button_state()
+	self:normalize_selected_heroes()
+
+	local p1 = self.hero_icon_portrait
+	local p2 = self.hero_icon_portrait_2
+	local W = self.hero_portrait_width
+	local H = self.hero_portrait_height
+	local selected = self.user_data.heroes.selected
+
+	if #selected == 0 then
+		p1:set_image("mapButtons_portrait_hero_0000")
+		p1.image_scale = 1
+		p1.clip = false
+		p1.clip_fn = nil
+		p1.size.x = W
+		p1.image_offset = nil
+		p1.pos.x = 0
+		p1.pos.y = 0
+		p1.hidden = false
+		p2.hidden = true
+	elseif #selected == 1 then
+		local hd = self.hero_data[get_hero_index(selected[1])]
+		local img = U.splicing_from_kr(hd.from_kr, string.format("mapButtons_portrait_hero_%04i", hd.icon))
+
+		p1:set_image(img)
+		p1.image_scale = 1
+		p1.clip = false
+		p1.clip_fn = nil
+		p1.size.x = W
+		p1.image_offset = nil
+		p1.pos.x = 0
+		p1.pos.y = 0
+		p1.hidden = false
+		p2.hidden = true
+	else
+		local hd1 = self.hero_data[get_hero_index(selected[1])]
+		local hd2 = self.hero_data[get_hero_index(selected[2])]
+		local img1 = U.splicing_from_kr(hd1.from_kr, string.format("mapButtons_portrait_hero_%04i", hd1.icon))
+		local img2 = U.splicing_from_kr(hd2.from_kr, string.format("mapButtons_portrait_hero_%04i", hd2.icon))
+		local d = W / 5
+
+		p1:set_image(img1)
+		p1.image_scale = 1
+		p1.clip = true
+		p1.size.x = W
+		p1.image_offset = nil
+		p1.pos.x = 0
+		p1.pos.y = 0
+		p1.clip_fn = function()
+			G.polygon("fill", 0, 0, W / 2 + d, 0, W / 2 - d, H, 0, H)
+		end
+		p1.hidden = false
+
+		p2:set_image(img2)
+		p2.image_scale = 1
+		p2.clip = true
+		p2.size.x = W
+		p2.image_offset = nil
+		p2.pos.x = 0
+		p2.pos.y = 0
+		p2.clip_fn = function()
+			G.polygon("fill", W / 2 + d, 0, W, 0, W, H, W / 2 - d, H)
+		end
+		p2.hidden = false
+	end
+end
+
+function screen_map:ensure_upgrades_view()
+	if self.upgrades then
+		return self.upgrades
+	end
+
+	local upgrades_view_scale = 1.2
+	local upgrades = UpgradesView:new(self.sw, self.sh)
+	upgrades.scale = v(upgrades_view_scale, upgrades_view_scale)
+	upgrades.pos = v((1 - upgrades_view_scale) * 0.5 * self.sw, (1 - upgrades_view_scale) * 0.5 * self.sh)
+	self.window:add_child(upgrades)
+	upgrades:set_init_values(screen_map.total_stars, screen_map.user_data.upgrades)
+	self.upgrades = upgrades
+
+	return upgrades
+end
+
+function screen_map:ensure_encyclopedia_view()
+	if self.encyclopedia then
+		return self.encyclopedia
+	end
+
+	local encyclopedia = EncyclopediaView:new(self.sw, self.sh)
+	encyclopedia.pos = v(-self.sw * 0.1, -self.sh * 0.1)
+	self.window:add_child(encyclopedia)
+	self.encyclopedia = encyclopedia
+
+	return encyclopedia
+end
+
+function screen_map:ensure_hero_room_view()
+	if self.hero_room then
+		return self.hero_room
+	end
+
+	local ctx = {
+		ref_h = self.ref_h
+	}
+
+	function ctx.cjk(default, zh, ja, kr)
+		return i18n.cjk(i18n, default, zh, ja, kr)
+	end
+
+	local tt = kui_db:get_table("hero_room_view", ctx)
+	local hero_room = HeroRoomViewKR1:new_from_table(tt)
+	hero_room.pos = v((self.sw - hero_room.size.x * hero_room.scale.x) / 2, (self.sh - hero_room.size.y * hero_room.scale.y) / 2)
+	self.window:add_child(hero_room)
+	self.hero_room = hero_room
+
+	return hero_room
+end
+
+function screen_map:ensure_option_panel()
+	if self.option_panel then
+		return self.option_panel
+	end
+
+	local option_panel = OptionsView:new(self.sw, self.sh)
+	option_panel.pos = v(0, 0)
+	self.window:add_child(option_panel)
+	self.option_panel = option_panel
+
+	return option_panel
+end
+
+function screen_map:ensure_achievements_view()
+	if self.achievements then
+		return self.achievements
+	end
+
+	local achievements = AchievementsView:new(self.sw, self.sh)
+	achievements.pos = v(0, 0)
+	self.window:add_child(achievements)
+	self.achievements = achievements
+
+	return achievements
+end
+
+function screen_map:ensure_config_panel_view()
+	if self.config_panel_view then
+		return self.config_panel_view
+	end
+
+	local config_panel_view = ConfigPanelView:new(self.sw, self.sh)
+	config_panel_view.pos = v(0, 0)
+	self.window:add_child(config_panel_view)
+	self.config_panel_view = config_panel_view
+
+	return config_panel_view
+end
+
+function screen_map:ensure_criket_panel_view()
+	if self.criket_panel_view then
+		return self.criket_panel_view
+	end
+
+	local criket_panel_view = CriketPanelView:new(self.sw, self.sh)
+	criket_panel_view.pos = v(0, 0)
+	self.window:add_child(criket_panel_view)
+	self.criket_panel_view = criket_panel_view
+
+	return criket_panel_view
+end
+
+function screen_map:ensure_keyset_panel_view()
+	if self.keyset_panel_view then
+		return self.keyset_panel_view
+	end
+
+	local keyset_panel_view = KeysetPanelView:new(self.sw, self.sh)
+	self.window:add_child(keyset_panel_view)
+	self.keyset_panel_view = keyset_panel_view
+
+	return keyset_panel_view
+end
+
+function screen_map:ensure_launch_options_panel_view()
+	if self.launch_options_panel_view then
+		return self.launch_options_panel_view
+	end
+
+	local launch_options_panel_view = LaunchOptionsPanelView:new(self.sw, self.sh)
+	self.window:add_child(launch_options_panel_view)
+	self.launch_options_panel_view = launch_options_panel_view
+
+	return launch_options_panel_view
+end
+
+function screen_map:ensure_mod_manager_view()
+	if IS_ANDROID then
+		return nil
+	end
+
+	if self.mod_manager_view then
+		return self.mod_manager_view
+	end
+
+	local mod_manager_view = ModManagerView:new(self.sw, self.sh)
+	self.window:add_child(mod_manager_view)
+	self.mod_manager_view = mod_manager_view
+
+	return mod_manager_view
 end
 
 function screen_map:destroy()
@@ -801,48 +985,48 @@ function screen_map:keypressed(key, isrepeat)
 			self.level_select:hide()
 
 			return true
-		elseif not self.hero_room.hidden then
+		elseif self.hero_room and not self.hero_room.hidden then
 			self.hero_room:hide()
 
 			return true
-		elseif not self.upgrades.hidden then
+		elseif self.upgrades and not self.upgrades.hidden then
 			self.upgrades:hide()
 
 			return true
-		elseif not self.encyclopedia.hidden then
+		elseif self.encyclopedia and not self.encyclopedia.hidden then
 			self.encyclopedia:hide()
 
 			return true
-		elseif not self.achievements.hidden then
+		elseif self.achievements and not self.achievements.hidden then
 			self.achievements:hide()
 
 			return true
 		elseif not self.difficulty_view.hidden then
 			-- block empty
 			return true
-		elseif not self.option_panel.hidden then
+		elseif self.option_panel and not self.option_panel.hidden then
 			self.option_panel:hide()
 
 			return true
-		elseif not self.config_panel_view.hidden then
+		elseif self.config_panel_view and not self.config_panel_view.hidden then
 			self.config_panel_view:hide()
 
 			return true
-		elseif not self.criket_panel_view.hidden then
+		elseif self.criket_panel_view and not self.criket_panel_view.hidden then
 			self.criket_panel_view:hide()
 
 			return true
-		elseif not self.keyset_panel_view.hidden then
+		elseif self.keyset_panel_view and not self.keyset_panel_view.hidden then
 			self.keyset_panel_view:hide()
 
 			return true
-		elseif not self.launch_options_panel_view.hidden then
+		elseif self.launch_options_panel_view and not self.launch_options_panel_view.hidden then
 			self.launch_options_panel_view:hide()
 
 			return true
 		end
 		if not IS_ANDROID then
-			if not self.mod_manager_view.hidden then
+			if self.mod_manager_view and not self.mod_manager_view.hidden then
 				self.mod_manager_view:hide()
 
 				return true
@@ -854,11 +1038,11 @@ function screen_map:keypressed(key, isrepeat)
 
 	if key == "escape" then
 		if not hide_others() then
-			self.option_panel:show()
+			self:ensure_option_panel():show()
 		end
 	end
 
-	if key == "tab" and not self.hero_room.hidden then
+	if key == "tab" and self.hero_room and not self.hero_room.hidden then
 		self.hero_room:tab_focus()
 		return
 	end
@@ -871,13 +1055,13 @@ function screen_map:keypressed(key, isrepeat)
 
 	if key == "f1" then
 		hide_others()
-		self.config_panel_view:show()
+		self:ensure_config_panel_view():show()
 	elseif key == "f2" then
 		hide_others()
-		self.criket_panel_view:show()
+		self:ensure_criket_panel_view():show()
 	elseif key == "f3" and not IS_ANDROID then
 		hide_others()
-		self.mod_manager_view:show()
+		self:ensure_mod_manager_view():show()
 	elseif key == "1" then
 		if self.generation ~= 1 then
 			hide_others()
@@ -900,10 +1084,10 @@ function screen_map:keypressed(key, isrepeat)
 		end
 	elseif key == "k" then
 		hide_others()
-		self.keyset_panel_view:show()
+		self:ensure_keyset_panel_view():show()
 	elseif key == "l" then
 		hide_others()
-		self.launch_options_panel_view:show()
+		self:ensure_launch_options_panel_view():show()
 	elseif key == "w" then
 		if self.map_view.pos.y ~= 0 then
 			if self.map_tween_handle then
@@ -3168,6 +3352,7 @@ end
 UpgradesView = class("UpgradesView", PopUpView)
 
 function UpgradesView:initialize(sw, sh)
+	-- perf.tmp_start("UpgradesView:initialize")
 	PopUpView.initialize(self, V.v(sw, sh))
 
 	self.back = KImageView:new("Upgrades_BG_notxt")
@@ -3339,6 +3524,7 @@ function UpgradesView:initialize(sw, sh)
 	screen_map.upgrade_star.hidden = l_stars_num == 0
 	screen_map.upgrade_points.text = l_stars_num
 	screen_map.upgrade_points.hidden = l_stars_num == 0
+-- perf.tmp_stop("UpgradesView:initialize")
 end
 
 function UpgradesView:set_tip_panel(title, desc, price)
@@ -3785,6 +3971,7 @@ end
 EncyclopediaView = class("EncyclopediaView", PopUpView)
 
 function EncyclopediaView:initialize(sw, sh)
+	-- perf.tmp_start("EncyclopediaView:initialize")
 	PopUpView.initialize(self, V.v(sw, sh))
 
 	self.scale = V.vv(1.2)
@@ -3898,6 +4085,7 @@ function EncyclopediaView:initialize(sw, sh)
 		S:queue("GUIButtonCommon")
 		self:hide()
 	end
+-- perf.tmp_stop("EncyclopediaView:initialize")
 end
 function EncyclopediaView:show()
 	EncyclopediaView.super.show(self)
@@ -5078,10 +5266,12 @@ function HeroRoomViewKR1:get_finished_levels()
 end
 
 function HeroRoomViewKR1:initialize(size)
+	-- perf.tmp_start("HeroRoomViewKR1:initialize")
 	HeroRoomViewKR1.super.initialize(self, size)
 
 	local ht = self:get_child_by_id("hero_thumbs")
 	local finished_levels = self:get_finished_levels()
+	self.finished_levels = finished_levels
 	local single_hero_thumb_x_size
 	local scale = V.v(0.625, 0.625)
 	local per_row = 7
@@ -5213,10 +5403,6 @@ function HeroRoomViewKR1:initialize(size)
 		return overlay
 	end
 
-	-- 调用时使用更柔和的颜色
-	self.check_image_1 = create_slot_indicator(1, {220, 80, 80, 180}) -- 更亮的红色
-	self.check_image_2 = create_slot_indicator(2, {80, 120, 220, 180}) -- 更亮的蓝色
-
 	self.check_image_1 = create_slot_indicator(1, {200, 50, 50, 80})
 	self.check_image_2 = create_slot_indicator(2, {50, 50, 200, 80})
 	self.border_image = create_select_view("hero_room_thumbs_select_0000")
@@ -5252,94 +5438,21 @@ function HeroRoomViewKR1:initialize(size)
 	self.back = self:get_child_by_id("back")
 	self:get_child_by_id("done_button").on_click = self:get_child_by_id("close_button").on_click
 
-	-- 适配原版存档
-	if type(screen_map.user_data.heroes.selected) ~= "table" then
-		screen_map.user_data.heroes.selected = {screen_map.user_data.heroes.selected}
-	end
-
+	screen_map:normalize_selected_heroes()
 	local selected_names = screen_map.user_data.heroes.selected
+	local shown_name = selected_names[1] or "hero_gerald"
 
 	for _, selected_name in pairs(selected_names) do
-		if selected_name and not get_hero_index(selected_name) then
-			selected_name = nil
-		end
-
-		self:show_hero(selected_name or "hero_gerald")
-
-		if selected_name then
-			self:select_hero(selected_name, true)
-		end
+		self:select_hero(selected_name, true)
 	end
 
+	self:show_hero(shown_name)
 	self:update_portrait_display()
+-- perf.tmp_stop("HeroRoomViewKR1:initialize")
 end
 
 function HeroRoomViewKR1:update_portrait_display()
-	local sel = screen_map.user_data.heroes.selected
-	local p1 = screen_map.hero_icon_portrait
-	local p2 = screen_map.hero_icon_portrait_2
-	local W = screen_map.hero_portrait_width
-	local H = screen_map.hero_portrait_height
-
-	if not sel or #sel == 0 then
-		p1:set_image("mapButtons_portrait_hero_0000")
-		p1.image_scale = 1
-		p1.clip = false
-		p1.clip_fn = nil
-		p1.size.x = W
-		p1.image_offset = nil
-		p1.pos.x = 0
-		p1.pos.y = 0
-		p1.hidden = false
-		p2.hidden = true
-	elseif #sel == 1 then
-		local hd = screen_map.hero_data[get_hero_index(sel[1])]
-		local img = U.splicing_from_kr(hd.from_kr, string.format("mapButtons_portrait_hero_%04i", hd.icon))
-
-		p1:set_image(img)
-		p1.image_scale = 1
-		p1.clip = false
-		p1.clip_fn = nil
-		p1.size.x = W
-		p1.image_offset = nil
-		p1.pos.x = 0
-		p1.pos.y = 0
-		p1.hidden = false
-		p2.hidden = true
-	else
-		-- 两名英雄：对角线切割，p1 显示左上半区，p2 显示右下半区
-		-- 对角线从 (W/2+d, 0) 到 (W/2-d, H)，斜向左倾，避免生硬直切
-		local hd1 = screen_map.hero_data[get_hero_index(sel[1])]
-		local hd2 = screen_map.hero_data[get_hero_index(sel[2])]
-		local img1 = U.splicing_from_kr(hd1.from_kr, string.format("mapButtons_portrait_hero_%04i", hd1.icon))
-		local img2 = U.splicing_from_kr(hd2.from_kr, string.format("mapButtons_portrait_hero_%04i", hd2.icon))
-		local d = W / 5 -- 对角线偏移量（像素），值越大斜度越大
-
-		p1:set_image(img1)
-		p1.image_scale = 1
-		p1.clip = true
-		p1.size.x = W
-		p1.image_offset = nil
-		p1.pos.x = 0
-		p1.pos.y = 0
-		p1.clip_fn = function()
-			G.polygon("fill", 0, 0, W / 2 + d, 0, W / 2 - d, H, 0, H)
-		end
-		p1.hidden = false
-
-		-- p2 与 p1 重叠放置（同为 pos.x=0），各自的 clip_fn 保证不互相遮挡
-		p2:set_image(img2)
-		p2.image_scale = 1
-		p2.clip = true
-		p2.size.x = W
-		p2.image_offset = nil
-		p2.pos.x = 0
-		p2.pos.y = 0
-		p2.clip_fn = function()
-			G.polygon("fill", W / 2 + d, 0, W, 0, W, H, W / 2 - d, H)
-		end
-		p2.hidden = false
-	end
+	screen_map:refresh_hero_button_state()
 end
 
 function HeroRoomViewKR1:show_hero(name)
@@ -5372,7 +5485,7 @@ function HeroRoomViewKR1:show_hero(name)
 	local ll = self:get_child_by_id("hero_room_sel_locked")
 	local bs = self:get_child_by_id("hero_room_sel_select")
 	local bd = self:get_child_by_id("hero_room_sel_deselect")
-	local finished_levels = self:get_finished_levels()
+	local finished_levels = self.finished_levels
 
 	if not finished_levels[hd.available_level] then
 		ll.hidden = false
