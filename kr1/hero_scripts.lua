@@ -32993,10 +32993,6 @@ function scripts.controller_hero_dragon_arb_passive.update(this, store)
 		end)
 	end
 
-	this.root_zones_dequeue = {}
-	this.root_zones_queue = {}
-	this.root_zones = {}
-
 	local zone_last_id = 1
 
 	local function insert_root_zone(pos)

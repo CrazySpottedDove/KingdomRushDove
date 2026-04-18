@@ -17554,15 +17554,16 @@ tt.entity_t = {{"soldier_hero_dragon_arb_spawn_lvl1", "soldier_hero_dragon_arb_s
 
 tt = E:register_t("controller_hero_dragon_arb_passive")
 b = balance.heroes.hero_dragon_arb.passive_plant_zones
-
 E:add_comps(tt, "main_script")
-
 tt.main_script.update = scripts.controller_hero_dragon_arb_passive.update
 tt.plant_decal = "decal_hero_dragon_arb_passive_plant"
 tt.aura_slow = "aura_hero_dragon_arb_passive_slow"
 tt.zones_duration = b.zone_duration
 tt.zones_radius = b.radius
 tt.zone_expansion_cooldown = b.expansion_cooldown
+tt.root_zones_dequeue = {}
+tt.root_zones_queue = {}
+tt.root_zones = {}
 
 tt = RT("fx_hero_builder_melee_attack_hit", "fx")
 tt.render.sprites[1].name = "hero_obdul_basic_attack_hit"
