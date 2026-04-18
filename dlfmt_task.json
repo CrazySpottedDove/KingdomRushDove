@@ -10,6 +10,8 @@
 				"kr1/data/levels",
 				"kr1/data/waves",
 				"kr1/data/waveconfigs",
+				"kr1-desktop/data",
+				"all-desktop/data",
 				".versions"
 			]
 		},
@@ -36,6 +38,14 @@
 		{
 			"type": "compress",
 			"directory": "kr1/data/waveconfigs"
+		},
+		{
+			"type": "compress",
+			"directory": "kr1-desktop/data"
+		},
+		{
+			"type": "compress",
+			"directory": "all-desktop/data"
 		}
 	],
 	"params": {
