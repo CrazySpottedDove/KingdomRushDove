@@ -47,7 +47,7 @@ function simulation:init(store, system_names)
 
 	local systems_order = {}
 
-	for _, name in pairs(system_names) do
+	for _, name in ipairs(system_names) do
 		if not S[name] then
 		-- log.error("System named %s not found", name)
 		else
