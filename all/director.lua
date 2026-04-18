@@ -36,14 +36,14 @@ director = {}
 director.item_props = director_data.item_props
 
 function director:init(params)
-	perf.tmp_start("kui_db_init")
+	-- perf.tmp_start("kui_db_init")
 	KDB:init(KR_PATH_GAME_TARGET .. "/data/kui_templates" .. ";" .. KR_PATH_ALL_TARGET .. "/data/kui_templates", DEBUG)
-	perf.tmp_stop("kui_db_init")
-	perf.tmp_start("shader_db_init")
+	-- perf.tmp_stop("kui_db_init")
+	-- perf.tmp_start("shader_db_init")
 	SH:init(KR_PATH_ASSETS_ALL_TARGET .. "/shaders", true)
-	perf.tmp_stop("shader_db_init")
+	-- perf.tmp_stop("shader_db_init")
 
-	perf.tmp_start("sound_db_init")
+	-- perf.tmp_start("sound_db_init")
 	local sound_paths = {{
 		path = KR_PATH_ASSETS_GAME_TARGET
 	}}
@@ -57,19 +57,19 @@ function director:init(params)
 			break
 		end
 	end
-	perf.tmp_stop("sound_db_init")
+	-- perf.tmp_stop("sound_db_init")
 
 	I.use_canvas = params.image_db_uses_canvas
 
-	perf.tmp_start("achivements_init")
+	-- perf.tmp_start("achivements_init")
 	AC:init()
-	perf.tmp_stop("achivements_init")
+	-- perf.tmp_stop("achivements_init")
 
 	self.params = params
 
-	perf.tmp_start("director_reset_screen_params")
+	-- perf.tmp_start("director_reset_screen_params")
 	self:reset_screen_params()
-	perf.tmp_stop("director_reset_screen_params")
+	-- perf.tmp_stop("director_reset_screen_params")
 
 	if params.locale then
 		main:set_locale(params.locale)
@@ -115,7 +115,7 @@ function director:init(params)
 		end
 	end
 
-	perf.tmp_start("director_init_cursor")
+	-- perf.tmp_start("director_init_cursor")
 	if params.screen == "game_editor" then
 		local c = love.mouse.newCursor(KR_PATH_ASSETS_ALL_TARGET .. "/cursors/crosshair.png", 16, 16)
 
@@ -132,7 +132,7 @@ function director:init(params)
 
 		love.mouse.setCursor(self.cursor_up)
 	end
-	perf.tmp_stop("director_init_cursor")
+-- perf.tmp_stop("director_init_cursor")
 end
 
 function director:quit()
