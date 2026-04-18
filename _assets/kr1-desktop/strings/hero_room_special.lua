@@ -12,7 +12,9 @@ local damage_type_map = {
 	[DAMAGE_ELECTRICAL] = "雷电伤害",
 	[DAMAGE_MIXED] = "物法混合伤害",
 	[DAMAGE_SHOT] = "枪击伤害",
-	[DAMAGE_POISON] = "剧毒伤害"
+	[DAMAGE_POISON] = "剧毒伤害",
+	[DAMAGE_AGAINST_ARMOR] = "破甲伤害",
+	[DAMAGE_AGAINST_MAGIC_ARMOR] = "破魔伤害"
 }
 local bit = require("bit")
 local band = bit.band
