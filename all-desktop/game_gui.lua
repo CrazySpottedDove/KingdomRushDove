@@ -1262,27 +1262,41 @@ function game_gui:show_wave_flags(group)
 
 	local store = self.game.store
 	local flags_positions = store.level.locations.entrances
+	local duration = group.group_idx > 1 and group.interval / FPS or nil
 
 	if not flags_positions then
 		return
 	end
 
-	for _, w in pairs(group.waves) do
-		local item = flags_positions[w.path_index]
+	local path_flags = {}
+	local ordered_path_indices = {}
 
-		if item and P:is_path_active(w.path_index) then
-			local duration = group.group_idx > 1 and group.interval / FPS or nil
-			local incoming_report = GU.incoming_wave_report(group, w.path_index, self.game.store.level_mode)
+	for _, w in ipairs(group.waves) do
+		local path_index = w.path_index
+		local flag_data = path_flags[path_index]
+
+		if flag_data then
+			flag_data.some_flying = flag_data.some_flying or w.some_flying
+		else
+			path_flags[path_index] = {
+				some_flying = w.some_flying
+			}
+			table.insert(ordered_path_indices, path_index)
+		end
+	end
+
+	for _, path_index in ipairs(ordered_path_indices) do
+		local item = flags_positions[path_index]
+
+		if item and P:is_path_active(path_index) then
+			local incoming_report = GU.incoming_wave_report(group, path_index, self.game.store.level_mode)
 
 			if incoming_report and #incoming_report > 0 then
-				-- 创建WaveFlag并传入世界坐标
-				local wf = WaveFlag:new(w.some_flying, duration, incoming_report, w.path_index, item.pos)
+				local wf = WaveFlag:new(path_flags[path_index].some_flying, duration, incoming_report, path_index, item.pos)
 
-				-- 设置指针方向（不会再改变）
 				wf.pointer.r = item.r - math.pi * 0.5
 				wf.hidden = false
 
-				-- 初始位置将在update中通过g2u计算
 				local init_x, init_y = self:g2u(item.pos)
 				wf.pos.x = init_x
 				wf.pos.y = init_y
