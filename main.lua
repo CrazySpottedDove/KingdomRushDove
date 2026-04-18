@@ -469,9 +469,24 @@ function love.resize(w, h)
 	end
 end
 
+local S = require("sound_db")
+
 function love.focus(focus)
 	if main.handler.focus then
 		main.handler:focus(focus)
+	end
+	if not focus then
+		main.backgrounded = true
+		if not main.audio_paused_by_background then
+			S:pause()
+			main.audio_paused_by_background = true
+		end
+	else
+		main.backgrounded = false
+		if main.audio_paused_by_background then
+			S:resume()
+			main.audio_paused_by_background = false
+		end
 	end
 end
 
@@ -498,28 +513,34 @@ function love.run()
 			love.handlers[name](a, b, c, d, e, f)
 		end
 
-		dt = love.timer.step()
-		updated = love.update(dt)
-
-		G.clear()
-		G.origin()
-
-		-- perf.start("draw")
-		love.draw()
-		-- perf.stop("draw")
-		if updated then
-			perf_ui.sync_data()
-			perf.reset()
-		end
-		perf_ui.draw()
-
-		G.present()
-
-		if main.handler.limit_fps then
-			main.handler:limit_fps()
-		else
+		if main.backgrounded then
+			love.timer.step()
 			collectgarbage("step")
-			love.timer.sleep(0.001)
+			love.timer.sleep(0.1)
+		else
+			dt = love.timer.step()
+			updated = love.update(dt)
+
+			G.clear()
+			G.origin()
+
+			-- perf.start("draw")
+			love.draw()
+			-- perf.stop("draw")
+			if updated then
+				perf_ui.sync_data()
+				perf.reset()
+			end
+			perf_ui.draw()
+
+			G.present()
+
+			if main.handler.limit_fps then
+				main.handler:limit_fps()
+			else
+				collectgarbage("step")
+				love.timer.sleep(0.001)
+			end
 		end
 	end
 end
