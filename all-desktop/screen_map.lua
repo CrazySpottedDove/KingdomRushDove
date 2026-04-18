@@ -6736,13 +6736,14 @@ function EditableItem:on_click(button, vx, vy)
 		if IS_ANDROID then
 			-- 安卓端：弹出数字键盘让用户精确输入
 			local item = self
+			screen_map.numeric_keyboard:order_to_front()
 			screen_map.numeric_keyboard:open(self.value, function(new_val)
 				if new_val ~= nil then
 					item:set_value_lable(tostring(new_val))
 				end
 			end)
 		else
-			-- 	-- 电脑端：直接键盘录入
+			-- 电脑端：直接键盘录入
 			screen_map.window:set_responder(self)
 			self.parent:clear_focus()
 			self:set_focused(true)
