@@ -5,7 +5,7 @@ local serpent = require("serpent")
 require("lib.klua.string")
 
 local kui_db = {}
-
+local V = require("lib.klua.vector")
 function kui_db:init(templates_path, reload)
 	self.path = templates_path
 	self.paths = string.split(templates_path, ";")
@@ -95,23 +95,25 @@ function kui_db:get_table(name, ctx)
 
 	env.ctx = ctx
 
-	function env.v(x, y)
-		return {
-			x = x,
-			y = y
-		}
-	end
+	env.v = V.v
+	-- function env.v(x, y)
+	-- 	return {
+	-- 		x = x,
+	-- 		y = y
+	-- 	}
+	-- end
 
 	function env.rad(a)
 		return a * math.pi / 180
 	end
 
-	function env.r(x, y, w, h)
-		return {
-			pos = env.v(x, y),
-			size = env.v(w, h)
-		}
-	end
+	env.r = V.r
+	-- function env.r(x, y, w, h)
+	-- return {
+	-- pos = env.v(x, y),
+	-- size = env.v(w, h)
+	-- }
+	-- end
 
 	env.string = string
 	env.math = math

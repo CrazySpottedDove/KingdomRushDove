@@ -1,12 +1,7 @@
 local E = require("entity_db")
 local U = require("utils")
-
-local function vv(x)
-	return {
-		x = x,
-		y = x
-	}
-end
+local V = require("lib.klua.vector")
+local vv = V.vv
 
 local function patch_rain_count_inc(level, ctx)
 	local controller = E:get_template("power_fireball_control")
