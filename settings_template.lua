@@ -21,5 +21,6 @@ return {
 		skip_slot = false
 	},
 	last_slot_idx = 1,
+	hud_scale = 1,
 	tmp_restart = false
 }

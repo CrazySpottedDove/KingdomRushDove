@@ -233,6 +233,31 @@ function storage:save_keyset(key_shortcuts)
 	end
 end
 
+function storage:load_ui_settings()
+	local ui_settings = self:load_lua("ui_settings.lua", true)
+	local default_ui_settings = require("patches.ui_settings_template")
+	if not ui_settings then
+		ui_settings = default_ui_settings
+
+		self:save_ui_settings(ui_settings)
+	else
+		for k, v in pairs(default_ui_settings) do
+			if not ui_settings[k] or type(ui_settings[k]) ~= type(v) then
+				ui_settings[k] = v
+			end
+		end
+	end
+
+	return ui_settings
+end
+
+function storage:save_ui_settings(ui_settings)
+	local success = self:write_lua("ui_settings.lua", ui_settings)
+	if not success then
+		log.error("Error saving ui_settings.lua")
+	end
+end
+
 function storage:save_config(config)
 	local success = self:write_lua("config.lua", config)
 

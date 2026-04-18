@@ -866,6 +866,18 @@ function screen_map:ensure_keyset_panel_view()
 	return keyset_panel_view
 end
 
+function screen_map:ensure_ui_settings_panel_view()
+	if self.ui_settings_panel_view then
+		return self.ui_settings_panel_view
+	end
+
+	local ui_settings_panel_view = UISettingsPanelView:new(self.sw, self.sh)
+	self.window:add_child(ui_settings_panel_view)
+	self.ui_settings_panel_view = ui_settings_panel_view
+
+	return ui_settings_panel_view
+end
+
 function screen_map:ensure_launch_options_panel_view()
 	if self.launch_options_panel_view then
 		return self.launch_options_panel_view
@@ -1024,6 +1036,10 @@ function screen_map:keypressed(key, isrepeat)
 			self.launch_options_panel_view:hide()
 
 			return true
+		elseif self.ui_settings_panel_view and not self.ui_settings_panel_view.hidden then
+			self.ui_settings_panel_view:hidden()
+
+			return true
 		end
 		if not IS_ANDROID then
 			if self.mod_manager_view and not self.mod_manager_view.hidden then
@@ -1062,6 +1078,9 @@ function screen_map:keypressed(key, isrepeat)
 	elseif key == "f3" and not IS_ANDROID then
 		hide_others()
 		self:ensure_mod_manager_view():show()
+	elseif key == "f4" then
+		hide_others()
+		self:ensure_ui_settings_panel_view():show()
 	elseif key == "1" then
 		if self.generation ~= 1 then
 			hide_others()
@@ -5890,7 +5909,7 @@ function OptionsView:initialize(sw, sh)
 	function config_button.on_click()
 		S:queue("GUIButtonCommon")
 		screen_map.option_panel:hide()
-		screen_map.config_panel_view:show()
+		screen_map:ensure_config_panel_view():show()
 	end
 	self.back:add_child(config_button)
 
@@ -5902,7 +5921,7 @@ function OptionsView:initialize(sw, sh)
 	function keyset_button.on_click()
 		S:queue("GUIButtonCommon")
 		screen_map.option_panel:hide()
-		screen_map.keyset_panel_view:show()
+		screen_map:ensure_keyset_panel_view():show()
 	end
 	self.back:add_child(keyset_button)
 
@@ -5914,7 +5933,7 @@ function OptionsView:initialize(sw, sh)
 	function launch_options_button.on_click()
 		S:queue("GUIButtonCommon")
 		screen_map.option_panel:hide()
-		screen_map.launch_options_panel_view:show()
+		screen_map:ensure_launch_options_panel_view():show()
 	end
 	self.back:add_child(launch_options_button)
 
@@ -5927,7 +5946,7 @@ function OptionsView:initialize(sw, sh)
 		function mod_manager_button.on_click()
 			S:queue("GUIButtonCommon")
 			screen_map.option_panel:hide()
-			screen_map.mod_manager_view:show()
+			screen_map:ensure_mod_manager_view():show()
 		end
 		self.back:add_child(mod_manager_button)
 	end
@@ -5954,6 +5973,18 @@ function OptionsView:initialize(sw, sh)
 		love.system.openURL("https://krdovedownload4.crazyspotteddove.top/history")
 	end
 	self.back:add_child(history_button)
+
+	button_height = button_height + 100
+	local ui_settings_button = GGOptionsButton:new("UI设置")
+	ui_settings_button:set_anchor_to_center()
+	ui_settings_button.pos.x = self.back.size.x + 75
+	ui_settings_button.pos.y = button_height
+	function ui_settings_button.on_click()
+		S:queue("GUIButtonCommon")
+		screen_map.option_panel:hide()
+		screen_map:ensure_ui_settings_panel_view():show()
+	end
+	self.back:add_child(ui_settings_button)
 
 	self.difficulty_idx = screen_map.user_data.difficulty
 
@@ -7070,6 +7101,30 @@ function LaunchOptionsPanelView:save()
 	end
 
 	storage:save_settings(main.params)
+end
+
+UISettingsPanelView = class("UIPanelView", EditablePanelView)
+
+function UISettingsPanelView:initialize(sw, sh)
+	EditablePanelView.initialize(self, sw, sh, "UI设置")
+	self:set_key_label_map({
+		hud_scale = "局内技能按钮缩放"
+	})
+end
+
+function UISettingsPanelView:load()
+	local ui_settings = storage:load_ui_settings()
+	self.data_group:set_all_data(ui_settings)
+end
+
+function UISettingsPanelView:save()
+	local ui_settings = storage:load_ui_settings()
+
+	for k, v in pairs(self.data_group:get_all_data()) do
+		ui_settings[k] = v
+	end
+
+	storage:save_ui_settings(ui_settings)
 end
 
 return screen_map
