@@ -70191,7 +70191,7 @@ function scripts.enemy_basic_shadow.update(this, store, script)
 				smoke_ps.particle_system.emit = false
 			end
 
-			if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, break_fn, break_fn) then
+			if not SU.y_enemy_mixed_walk_melee_ranged(store, this, true, break_fn, break_fn) then
 			-- block empty
 			else
 				coroutine.yield()
