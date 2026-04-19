@@ -469,55 +469,112 @@ function love.resize(w, h)
 	end
 end
 
-local S = require("sound_db")
-
-function love.focus(focus)
-	if main.handler.focus then
-		main.handler:focus(focus)
-	end
-	if not focus then
-		main.backgrounded = true
-		if not main.audio_paused_by_background then
-			S:pause()
-			main.audio_paused_by_background = true
-		end
-	else
-		main.backgrounded = false
-		if main.audio_paused_by_background then
-			S:resume()
-			main.audio_paused_by_background = false
-		end
-	end
-end
-
 local perf_ui = require("dove_modules.perf.perf_ui")
-function love.run()
-	love.math.setRandomSeed(os.time())
 
-	load(arg)
+if IS_ANDROID then
+	local S = require("sound_db")
 
-	love.timer.step()
+	function love.focus(focus)
+		if main.handler.focus then
+			main.handler:focus(focus)
+		end
+		if not focus then
+			main.backgrounded = true
+			if not main.audio_paused_by_background then
+				S:pause()
+				main.audio_paused_by_background = true
+			end
+		else
+			main.backgrounded = false
+			if main.audio_paused_by_background then
+				S:resume()
+				main.audio_paused_by_background = false
+			end
+		end
+	end
 
-	local dt = 0
-	local updated = false
+	function love.run()
+		love.math.setRandomSeed(os.time())
 
-	return function()
-		love.event.pump()
+		load(arg)
 
-		for name, a, b, c, d, e, f in love.event.poll() do
-			if name == "quit" then
-				close_log()
-				return a or 0
+		love.timer.step()
+
+		local dt = 0
+		local updated = false
+
+		return function()
+			love.event.pump()
+
+			for name, a, b, c, d, e, f in love.event.poll() do
+				if name == "quit" then
+					close_log()
+					return a or 0
+				end
+
+				love.handlers[name](a, b, c, d, e, f)
 			end
 
-			love.handlers[name](a, b, c, d, e, f)
-		end
+			if main.backgrounded then
+				love.timer.step()
+				collectgarbage("step")
+				love.timer.sleep(0.1)
+			else
+				dt = love.timer.step()
+				updated = love.update(dt)
 
-		if main.backgrounded then
-			love.timer.step()
-			collectgarbage("step")
-			love.timer.sleep(0.1)
-		else
+				G.clear()
+				G.origin()
+
+				-- perf.start("draw")
+				love.draw()
+				-- perf.stop("draw")
+				if updated then
+					perf_ui.sync_data()
+					perf.reset()
+				end
+				perf_ui.draw()
+
+				G.present()
+
+				if main.handler.limit_fps then
+					main.handler:limit_fps()
+				else
+					collectgarbage("step")
+					love.timer.sleep(0.001)
+				end
+			end
+		end
+	end
+else
+	function love.focus(focus)
+		if main.handler.focus then
+			main.handler:focus(focus)
+		end
+	end
+
+	function love.run()
+		love.math.setRandomSeed(os.time())
+
+		load(arg)
+
+		love.timer.step()
+
+		local dt = 0
+		local updated = false
+
+		return function()
+			love.event.pump()
+
+			for name, a, b, c, d, e, f in love.event.poll() do
+				if name == "quit" then
+					close_log()
+					return a or 0
+				end
+
+				love.handlers[name](a, b, c, d, e, f)
+			end
+
 			dt = love.timer.step()
 			updated = love.update(dt)
 
