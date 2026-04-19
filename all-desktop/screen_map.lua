@@ -176,6 +176,10 @@ screen_map.signal_handlers = {}
 
 local scroll_hotpot_width = 100
 
+local function should_block_map_scroll(this)
+	return (this.level_select and not this.level_select.hidden) or (this.hero_room and not this.hero_room.hidden) or (this.upgrades and not this.upgrades.hidden) or (this.encyclopedia and not this.encyclopedia.hidden) or (this.achievements and not this.achievements.hidden) or (this.option_panel and not this.option_panel.hidden) or (this.config_panel_view and not this.config_panel_view.hidden) or (this.criket_panel_view and not this.criket_panel_view.hidden) or (this.keyset_panel_view and not this.keyset_panel_view.hidden) or (this.launch_options_panel_view and not this.launch_options_panel_view.hidden) or (this.ui_settings_panel_view and not this.ui_settings_panel_view.hidden) or (this.mod_manager_view and not this.mod_manager_view.hidden)
+end
+
 function screen_map:init(w, h, done_callback)
 	-- perf.tmp_start("screen_map_init")
 	E:ensure_loaded()
@@ -288,11 +292,15 @@ function screen_map:init(w, h, done_callback)
 		map_scroll_hotspots_l.pos = v(0, sh / 2)
 
 		function map_scroll_hotspots_l.on_enter()
-			map.scrolling_dir = 1
+			if self.map_view then
+				self.map_view.scrolling_dir = 1
+			end
 		end
 
 		function map_scroll_hotspots_l.on_exit()
-			map.scrolling_dir = 0
+			if self.map_view then
+				self.map_view.scrolling_dir = 0
+			end
 		end
 
 		self.window:add_child(map_scroll_hotspots_l)
@@ -305,11 +313,15 @@ function screen_map:init(w, h, done_callback)
 		map_scroll_hotspots_r.pos = v(sw, sh / 2)
 
 		function map_scroll_hotspots_r.on_enter()
-			map.scrolling_dir = -1
+			if self.map_view then
+				self.map_view.scrolling_dir = -1
+			end
 		end
 
 		function map_scroll_hotspots_r.on_exit()
-			map.scrolling_dir = 0
+			if self.map_view then
+				self.map_view.scrolling_dir = 0
+			end
 		end
 
 		self.window:add_child(map_scroll_hotspots_r)
@@ -323,11 +335,15 @@ function screen_map:init(w, h, done_callback)
 		map_scroll_hotspots_u.pos = v(sw / 2, 0)
 
 		function map_scroll_hotspots_u.on_enter()
-			map.scrolling_dir = 2
+			if self.map_view then
+				self.map_view.scrolling_dir = 2
+			end
 		end
 
 		function map_scroll_hotspots_u.on_exit()
-			map.scrolling_dir = 0
+			if self.map_view then
+				self.map_view.scrolling_dir = 0
+			end
 		end
 
 		self.window:add_child(map_scroll_hotspots_u)
@@ -340,11 +356,15 @@ function screen_map:init(w, h, done_callback)
 		map_scroll_hotspots_d.pos = v(sw / 2, sh)
 
 		function map_scroll_hotspots_d.on_enter()
-			map.scrolling_dir = -2
+			if self.map_view then
+				self.map_view.scrolling_dir = -2
+			end
 		end
 
 		function map_scroll_hotspots_d.on_exit()
-			map.scrolling_dir = 0
+			if self.map_view then
+				self.map_view.scrolling_dir = 0
+			end
 		end
 
 		self.window:add_child(map_scroll_hotspots_d)
@@ -1343,6 +1363,36 @@ end
 
 function screen_map:wheelmoved(x, y)
 	self.window:wheelmoved(x, y)
+
+	if IS_ANDROID or should_block_map_scroll(self) or self.window.responder or not self.map_view then
+		return
+	end
+
+	if self.map_tween_handle then
+		timer:cancel(self.map_tween_handle)
+		self.map_tween_handle = nil
+	end
+
+	self.map_view.scrolling_dir = 0
+
+	local step = 90
+	local dx = x
+	local dy = y
+
+	if (love.keyboard.isDown("lshift") or love.keyboard.isDown("rshift")) and dx == 0 then
+		dx = dy
+		dy = 0
+	end
+
+	if dy ~= 0 then
+		local min_y = self.map_view.screen_h - self.map_view.size.y
+		self.map_view.pos.y = km.clamp(min_y, 0, self.map_view.pos.y + dy * step)
+	end
+
+	if dx ~= 0 then
+		local min_x = self.map_view.screen_w - self.map_view.size.x
+		self.map_view.pos.x = km.clamp(min_x, 0, self.map_view.pos.x - dx * step)
+	end
 end
 
 function screen_map:keyreleased(key)
