@@ -15,10 +15,13 @@ local mod_paths = require("mod_paths")
 require("gg_views_custom")
 
 local PANEL_MIN_W = 900
-local PANEL_MAX_W = 1020
+local PANEL_MAX_W = 10000
+-- local PANEL_MAX_W = 1020
 local PANEL_MIN_H = 730
-local PANEL_MAX_H = 800
-local PANEL_MARGIN = 36
+-- local PANEL_MAX_H = 800
+local PANEL_MAX_H = 10000
+-- local PANEL_MARGIN = 36
+local PANEL_MARGIN = 60
 local ROW_H = 156
 local ROW_PAD = 16
 local ACCENT_W = 6
@@ -451,6 +454,16 @@ local function safe_label_desc(s)
 	return s
 end
 
+local function clamp(v, lo, hi)
+	if v < lo then
+		return lo
+	end
+	if v > hi then
+		return hi
+	end
+	return v
+end
+
 local function in_game_version(plugin)
 	local gv = plugin.game_version
 	if type(gv) ~= "table" then
@@ -538,12 +551,14 @@ end
 
 ModToggleButton = class("ModToggleButton", KButton)
 
-function ModToggleButton:initialize(initial_value)
+function ModToggleButton:initialize(initial_value, size)
 	local rs = GGLabel.static.ref_h / REF_H
-	KButton.initialize(self, V.v(84, 36))
+	local w = size and size.x or 84
+	local h = size and size.y or 36
+	KButton.initialize(self, V.v(w, h))
 	self.shape = {
 		name = "rectangle",
-		args = {"fill", 0, 0, 84, 36, 9, 9}
+		args = {"fill", 0, 0, w, h, 9, 9}
 	}
 	self.value = initial_value ~= false
 	self._hover = false
@@ -607,7 +622,19 @@ function ModItemRow:initialize(opts, row_w)
 	}
 
 	local rs = GGLabel.static.ref_h / REF_H
-	local text_w = row_w - ACCENT_W - ROW_PAD - 344
+	local action_size = opts and opts.action_button_size or nil
+	local action_w = action_size and action_size.x or 122
+	local action_h = action_size and action_size.y or 34
+	local action_gap = opts and opts.action_button_gap or 10
+	local toggle_size = opts and opts.toggle_size or nil
+	local toggle_w = toggle_size and toggle_size.x or 84
+	local toggle_h = toggle_size and toggle_size.y or 36
+	local right_pad = opts and opts.right_pad or (IS_ANDROID and 30 or 24)
+	local action_col_w = math.max(toggle_w, action_w * 2 + action_gap)
+	local action_col_left = row_w - right_pad - action_col_w
+	local status_w = clamp(opts and opts.status_width or action_col_w, 180, action_col_w)
+	local status_x = row_w - right_pad - status_w
+	local text_w = math.max(220, action_col_left - (ACCENT_W + ROW_PAD) - 12)
 
 	local accent = KView:new(V.v(ACCENT_W, ROW_H - 1))
 	accent.pos = V.v(0, 0)
@@ -651,7 +678,9 @@ function ModItemRow:initialize(opts, row_w)
 	desc_lbl.pos = V.v(ACCENT_W + ROW_PAD, 62)
 	self:add_child(desc_lbl)
 
-	local status_lbl = GGLabel:new(V.v(300, 22))
+	local status_y = 8
+	local status_h = 22
+	local status_lbl = GGLabel:new(V.v(status_w, status_h))
 	status_lbl.font_name = "body"
 	status_lbl.font_size = 12 * rs
 	status_lbl.text_align = "right"
@@ -660,18 +689,21 @@ function ModItemRow:initialize(opts, row_w)
 	status_lbl.text = safe_tostring(self.opts.status or "")
 	status_lbl.fit_lines = 1
 	status_lbl.fit_size = true
-	status_lbl.pos = V.v(row_w - 312, 8)
+	status_lbl.pos = V.v(status_x, status_y)
 	self:add_child(status_lbl)
 
-	local action_y = 108
-	local action_w = 122
-	local action_gap = 10
-	local action_right = row_w - 20
+	local action_bottom_margin = opts and opts.action_bottom_margin or 16
+	local action_top_min_y = 104
+	local toggle_bottom = 0
+	local action_right = row_w - right_pad
 	local primary_x = action_right - action_w
 	local secondary_x = primary_x - action_w - action_gap
 	if self.opts.show_toggle then
-		local toggle = ModToggleButton:new(self.opts.enabled ~= false)
-		toggle.pos = V.v(row_w - 62, 56)
+		local toggle = ModToggleButton:new(self.opts.enabled ~= false, V.v(toggle_w, clamp(toggle_h, 36, 44)))
+		local toggle_top_margin = opts and opts.toggle_top_margin or 16
+		local toggle_top = math.max(toggle_top_margin, status_y + status_h + 14)
+		toggle_bottom = toggle_top + toggle.size.y
+		toggle.pos = V.v(row_w - right_pad - toggle_w / 2, toggle_top + toggle.size.y / 2)
 		toggle.anchor = V.v(toggle.size.x / 2, toggle.size.y / 2)
 		toggle.on_change = function(_, v)
 			if self.opts.on_toggle then
@@ -684,9 +716,14 @@ function ModItemRow:initialize(opts, row_w)
 	else
 		self:_refresh_accent(true)
 	end
+	action_top_min_y = math.max(action_top_min_y, toggle_bottom + 4)
+	local action_h_min = 28
+	local action_h_max = math.max(action_h_min, ROW_H - action_top_min_y - action_bottom_margin)
+	action_h = clamp(action_h, action_h_min, action_h_max)
+	local action_y = ROW_H - action_h - action_bottom_margin
 
 	if self.opts.secondary_text then
-		local secondary = ModActionButton:new(self.opts.secondary_text, V.v(122, 34))
+		local secondary = ModActionButton:new(self.opts.secondary_text, V.v(action_w, action_h))
 		secondary.pos = V.v(secondary_x, action_y)
 		secondary.on_press = function()
 			if self.opts.on_secondary then
@@ -698,7 +735,7 @@ function ModItemRow:initialize(opts, row_w)
 	end
 
 	if self.opts.primary_text then
-		local primary = ModActionButton:new(self.opts.primary_text, V.v(122, 34))
+		local primary = ModActionButton:new(self.opts.primary_text, V.v(action_w, action_h))
 		primary.pos = V.v(primary_x, action_y)
 		primary.on_press = function()
 			if self.opts.on_primary then
@@ -753,13 +790,39 @@ function ModManagerView:initialize(sw, sh)
 	local panel_h = math.min(PANEL_MAX_H, sh - PANEL_MARGIN)
 	panel_h = math.max(PANEL_MIN_H, panel_h)
 	panel_h = math.min(panel_h, sh - 12)
-	local list_top_y = LIST_TOP_Y
+	local ui_scale = math.max(panel_w / PANEL_MIN_W, panel_h / PANEL_MIN_H)
+	local touch_scale = clamp(ui_scale * (IS_ANDROID and 1.12 or 1.0), 1.0, 1.35)
+	local header_btn_w = math.floor(132 * touch_scale + 0.5)
+	local header_btn_h = math.floor(30 * touch_scale + 0.5)
+	local header_btn_gap = math.floor(10 * touch_scale + 0.5)
+	local pager_btn_w = math.floor(90 * touch_scale + 0.5)
+	local pager_btn_h = math.floor(24 * touch_scale + 0.5)
+	local pager_page_w = math.floor(100 * touch_scale + 0.5)
+	local hint_h = math.max(math.floor(20 * touch_scale + 0.5), pager_btn_h + 4)
+	local global_label_y = 56
+	local global_label_h = 28
+	local global_toggle_w = clamp(math.floor(92 * touch_scale + 0.5), 84, 120)
+	local global_toggle_h = clamp(math.floor(40 * touch_scale + 0.5), 36, 42)
+	local global_toggle_center_y = global_label_y + math.floor(global_label_h / 2) + 2
+	local global_row_bottom = math.max(global_label_y + global_label_h, global_toggle_center_y + math.floor(global_toggle_h / 2))
+	local header_top_gap = clamp(math.floor(16 * touch_scale + 0.5), 14, 24)
+	local header_top_y = global_row_bottom + header_top_gap
+	local header_row_gap = math.max(6, math.floor(6 * touch_scale + 0.5))
+	local header_row2_y = header_top_y + header_btn_h + header_row_gap
+	local sep_y = header_row2_y + header_btn_h + 6
+	local hint_y = sep_y + 4
+	local pager_y = hint_y + math.max(0, math.floor((hint_h - pager_btn_h) / 2))
+	local list_top_y = math.max(LIST_TOP_Y, hint_y + hint_h + 10)
 	local footer_y = panel_h - 44
 	local scroll_h = math.max(260, footer_y - list_top_y - 14)
-	local header_btn_w = 132
-	local header_btn_h = 30
-	local header_btn_gap = 10
 	local header_group_x = panel_w - 20 - (header_btn_w * 3 + header_btn_gap * 2)
+	self._row_action_button_size = V.v(clamp(math.floor(122 * touch_scale + 0.5), 122, 160), clamp(math.floor(34 * touch_scale + 0.5), 34, 38))
+	self._row_toggle_size = V.v(clamp(math.floor(84 * touch_scale + 0.5), 84, 110), clamp(math.floor(36 * touch_scale + 0.5), 36, 44))
+	self._row_status_width = clamp(math.floor(300 * touch_scale + 0.5), 300, 380)
+	local row_right_pad = math.floor((IS_ANDROID and 30 or 26) * touch_scale + 0.5)
+	self._row_right_pad = clamp(row_right_pad, IS_ANDROID and 32 or 28, IS_ANDROID and 44 or 38)
+	self._row_action_bottom_margin = clamp(math.floor(18 * touch_scale + 0.5), 18, 26)
+	self._row_toggle_top_margin = clamp(math.floor(18 * touch_scale + 0.5), 18, 26)
 
 	self.mode = "local"
 	self.sort_idx = 1
@@ -800,20 +863,20 @@ function ModManagerView:initialize(sw, sh)
 	header.pos = V.v(20, 14)
 	self.back:add_child(header)
 
-	local global_lbl = GGOptionsLabel:new(V.v(300, 28))
+	local global_lbl = GGOptionsLabel:new(V.v(300, global_label_h))
 	global_lbl.text = "启用模组加载器"
 	global_lbl.text_align = "left"
 	global_lbl.vertical_align = "middle"
-	global_lbl.pos = V.v(20, 56)
+	global_lbl.pos = V.v(20, global_label_y)
 	self.back:add_child(global_lbl)
 
-	self.global_toggle = ModToggleButton:new(false)
+	self.global_toggle = ModToggleButton:new(false, V.v(global_toggle_w, global_toggle_h))
 	self.global_toggle.anchor = V.v(self.global_toggle.size.x / 2, self.global_toggle.size.y / 2)
-	self.global_toggle.pos = V.v(panel_w - 66, 72)
+	self.global_toggle.pos = V.v(panel_w - 24 - self.global_toggle.size.x / 2, global_toggle_center_y)
 	self.back:add_child(self.global_toggle)
 
 	self.mode_btn = ModActionButton:new("视图：本地", V.v(header_btn_w, header_btn_h))
-	self.mode_btn.pos = V.v(header_group_x, 96)
+	self.mode_btn.pos = V.v(header_group_x, header_top_y)
 	self.mode_btn.on_press = function()
 		local prev_mode = self.mode
 		self.mode = (self.mode == "local") and "store" or "local"
@@ -829,7 +892,7 @@ function ModManagerView:initialize(sw, sh)
 	self.back:add_child(self.mode_btn)
 
 	self.sort_btn = ModActionButton:new("排序：最热", V.v(header_btn_w, header_btn_h))
-	self.sort_btn.pos = V.v(header_group_x + header_btn_w + header_btn_gap, 96)
+	self.sort_btn.pos = V.v(header_group_x + header_btn_w + header_btn_gap, header_top_y)
 	self.sort_btn.on_press = function()
 		self.sort_idx = self.sort_idx % #SORT_OPTIONS + 1
 		self.store_page = 1
@@ -843,7 +906,7 @@ function ModManagerView:initialize(sw, sh)
 	self.back:add_child(self.sort_btn)
 
 	self.category_btn = ModActionButton:new("分类：全部", V.v(header_btn_w, header_btn_h))
-	self.category_btn.pos = V.v(header_group_x + (header_btn_w + header_btn_gap) * 2, 96)
+	self.category_btn.pos = V.v(header_group_x + (header_btn_w + header_btn_gap) * 2, header_top_y)
 	self.category_btn.on_press = function()
 		self.category_idx = self.category_idx % #CATEGORY_OPTIONS + 1
 		self.store_page = 1
@@ -857,7 +920,7 @@ function ModManagerView:initialize(sw, sh)
 	self.back:add_child(self.category_btn)
 
 	self.refresh_btn = ModActionButton:new("刷新商店", V.v(header_btn_w, header_btn_h))
-	self.refresh_btn.pos = V.v(header_group_x, 132)
+	self.refresh_btn.pos = V.v(header_group_x, header_row2_y)
 	self.refresh_btn.on_press = function()
 		if self.mode == "store" then
 			self:_start_task("刷新商店列表", function()
@@ -872,7 +935,7 @@ function ModManagerView:initialize(sw, sh)
 	self.back:add_child(self.refresh_btn)
 
 	self.update_all_btn = ModActionButton:new("一键更新全部", V.v(header_btn_w, header_btn_h))
-	self.update_all_btn.pos = V.v(header_group_x + header_btn_w + header_btn_gap, 132)
+	self.update_all_btn.pos = V.v(header_group_x + header_btn_w + header_btn_gap, header_row2_y)
 	self.update_all_btn.on_press = function()
 		self:_start_task("一键更新插件", function()
 			return self:_update_all_plugins()
@@ -880,15 +943,12 @@ function ModManagerView:initialize(sw, sh)
 	end
 	self.back:add_child(self.update_all_btn)
 
-	local pager_btn_w = 90
-	local pager_page_w = 100
 	local pager_gap = 10
-	local pager_y = 174
 	local pager_next_x = panel_w - 20 - pager_btn_w
 	local pager_page_x = pager_next_x - pager_gap - pager_page_w
 	local pager_prev_x = pager_page_x - pager_gap - pager_btn_w
 
-	self.prev_page_btn = ModActionButton:new("上一页", V.v(90, 24))
+	self.prev_page_btn = ModActionButton:new("上一页", V.v(pager_btn_w, pager_btn_h))
 	self.prev_page_btn.pos = V.v(pager_prev_x, pager_y)
 	self.prev_page_btn.on_press = function()
 		if self.mode ~= "store" or self.store_page <= 1 then
@@ -903,19 +963,19 @@ function ModManagerView:initialize(sw, sh)
 
 	local sep = KView:new(V.v(panel_w - 40, 1))
 	sep.colors.background = {95, 75, 40, 255}
-	sep.pos = V.v(20, 168)
+	sep.pos = V.v(20, sep_y)
 	self.back:add_child(sep)
 
-	self.hint_lbl = GGLabel:new(V.v(panel_w - 40, 20))
+	self.hint_lbl = GGLabel:new(V.v(panel_w - 40, hint_h))
 	self.hint_lbl.font_name = "body"
 	self.hint_lbl.font_size = 12 * rs
 	self.hint_lbl.text_align = "left"
 	self.hint_lbl.colors.text = {214, 193, 144, 255}
-	self.hint_lbl.pos = V.v(20, 172)
+	self.hint_lbl.pos = V.v(20, hint_y)
 	self.hint_lbl.text = self._status_text
 	self.back:add_child(self.hint_lbl)
 
-	self.page_lbl = GGLabel:new(V.v(100, 20))
+	self.page_lbl = GGLabel:new(V.v(pager_page_w, pager_btn_h))
 	self.page_lbl.font_name = "body"
 	self.page_lbl.font_size = 12 * rs
 	self.page_lbl.text_align = "center"
@@ -923,10 +983,10 @@ function ModManagerView:initialize(sw, sh)
 	self.page_lbl.fit_lines = 1
 	self.page_lbl.fit_size = true
 	self.page_lbl.colors.text = {232, 214, 166, 255}
-	self.page_lbl.pos = V.v(pager_page_x, pager_y + 2)
+	self.page_lbl.pos = V.v(pager_page_x, pager_y)
 	self.back:add_child(self.page_lbl)
 
-	self.next_page_btn = ModActionButton:new("下一页", V.v(90, 24))
+	self.next_page_btn = ModActionButton:new("下一页", V.v(pager_btn_w, pager_btn_h))
 	self.next_page_btn.pos = V.v(pager_next_x, pager_y)
 	self.next_page_btn.on_press = function()
 		if self.mode ~= "store" or self.store_page >= self.store_total_pages then
@@ -991,8 +1051,10 @@ function ModManagerView:initialize(sw, sh)
 	}
 	self.progress_bg:add_child(self.progress_fill)
 
-	self.task_cancel_btn = ModActionButton:new("断开请求", V.v(110, 28))
-	self.task_cancel_btn.pos = V.v(self.task_dialog.size.x - 122, 110)
+	local task_btn_w = clamp(math.floor(110 * touch_scale + 0.5), 110, 150)
+	local task_btn_h = clamp(math.floor(28 * touch_scale + 0.5), 28, 34)
+	self.task_cancel_btn = ModActionButton:new("断开请求", V.v(task_btn_w, task_btn_h))
+	self.task_cancel_btn.pos = V.v(self.task_dialog.size.x - task_btn_w - 12, self.task_dialog.size.y - task_btn_h - 12)
 	self.task_cancel_btn.on_press = function()
 		self._cancel_requested = true
 		self:_set_status("已请求断连，正在停止当前网络操作…", nil)
@@ -1005,6 +1067,8 @@ function ModManagerView:initialize(sw, sh)
 	self.mod_list.scroll_amount = ROW_H
 	self.mod_list.colors.scroller_background = {45, 36, 22, 200}
 	self.mod_list.colors.scroller_foreground = {110, 90, 50, 255}
+	-- 加宽滑块
+	self.mod_list.scroller_width = 24
 	self.back:add_child(self.mod_list)
 
 	local y_btn = footer_y
@@ -1712,6 +1776,12 @@ function ModManagerView:_render_local_list()
 			desc = cfg.desc or "",
 			status = status,
 			show_toggle = true,
+			action_button_size = self._row_action_button_size,
+			toggle_size = self._row_toggle_size,
+			status_width = self._row_status_width,
+			right_pad = self._row_right_pad,
+			action_bottom_margin = self._row_action_bottom_margin,
+			toggle_top_margin = self._row_toggle_top_margin,
 			enabled = cfg.enabled ~= false,
 			on_toggle = function(v)
 				cfg.enabled = v
@@ -1754,6 +1824,10 @@ function ModManagerView:_render_store_list()
 			desc = item.desc or "",
 			status = status,
 			show_toggle = false,
+			action_button_size = self._row_action_button_size,
+			status_width = self._row_status_width,
+			right_pad = self._row_right_pad,
+			action_bottom_margin = self._row_action_bottom_margin,
 			primary_text = primary_text,
 			secondary_text = installed and "删除" or nil,
 			on_primary = function()

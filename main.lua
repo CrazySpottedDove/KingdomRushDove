@@ -567,8 +567,7 @@ local function find_mod_from_traceback(traceback)
 		idx = idx + 1
 
 		if first_mod_dir == nil then
-			-- 兼容新插件路径 plugins/<dir>/ 与旧路径 mods/local/<dir>/
-			local dir = line:match("[/\\]plugins[/\\]([^/\\]+)[/\\]") or line:match("plugins[/\\]([^/\\]+)[/\\]") or line:match("[/\\]mods[/\\]local[/\\]([^/\\]+)[/\\]") or line:match("mods[/\\]local[/\\]([^/\\]+)[/\\]")
+			local dir = line:match("[/\\]plugins[/\\]([^/\\]+)[/\\]") or line:match("plugins[/\\]([^/\\]+)[/\\]")
 
 			if dir then
 				first_mod_dir = dir
