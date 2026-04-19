@@ -151,6 +151,18 @@ local function get_map_points_for_generation(generation)
 	return cached
 end
 
+local function queue_generation_music(generation)
+	if generation == 1 then
+		S:queue("MusicMap1")
+	elseif generation == 2 then
+		S:queue("MusicMap2")
+	elseif generation == 3 then
+		S:queue("MusicMap3")
+	elseif generation == 5 then
+		S:queue("MusicMap5")
+	end
+end
+
 -- 判断是否为额外关卡
 local function is_extra_level(level, num)
 	local e = "extra_level" .. num
@@ -617,15 +629,7 @@ function screen_map:init(w, h, done_callback)
 	end
 	self.window:add_child(self.numeric_keyboard)
 
-	if self.generation == 1 then
-		S:queue("MusicMap1")
-	elseif self.generation == 2 then
-		S:queue("MusicMap2")
-	elseif self.generation == 3 then
-		S:queue("MusicMap3")
-	elseif self.generation == 5 then
-		S:queue("MusicMap5")
-	end
+	queue_generation_music(self.generation)
 
 	self.stime = 0
 
@@ -969,6 +973,36 @@ function screen_map:change_generation(i)
 	local large_scale_x = self.window.scale.x * 1.05
 	local large_scale_y = self.window.scale.y * 1.05
 
+	local function reload_generation()
+		self.map_points = get_map_points_for_generation(self.generation)
+		self.unlock_data = {
+			unlocked_levels = {}
+		}
+		U.unlock_next_levels_in_ranges(self.unlock_data, self.user_data.levels, GS, self.generation)
+
+		if self.map_tween_handle then
+			timer:cancel(self.map_tween_handle)
+			self.map_tween_handle = nil
+		end
+
+		if self.level_select and not self.level_select.hidden then
+			self.level_select:hide()
+		end
+
+		local old_map_view = self.map_view
+		local old_order = old_map_view and old_map_view:get_order() or 1
+		local new_map_view = MapView:new(self.sw, self.sh)
+
+		self.window:add_child(new_map_view, old_order)
+
+		if old_map_view then
+			self.window:remove_child(old_map_view)
+		end
+
+		self.map_view = new_map_view
+		queue_generation_music(self.generation)
+	end
+
 	timer:tween(0.4, self.window, {
 		alpha = 0,
 		scale = {
@@ -976,7 +1010,7 @@ function screen_map:change_generation(i)
 			y = small_scale_y
 		}
 	}, "out-quad", function()
-		screen_map:init(self.original_w, self.original_h, self.done_callback)
+		reload_generation()
 		self.window.alpha = 0
 		self.window.scale = v(large_scale_x, large_scale_y)
 		timer:tween(0.4, self.window, {
