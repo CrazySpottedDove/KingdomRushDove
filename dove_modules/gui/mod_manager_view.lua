@@ -1148,7 +1148,7 @@ function ModManagerView:_refresh_header_buttons()
 	self.next_page_btn:set_enabled(in_store and not task_running and self.store_page < self.store_total_pages)
 	self.page_lbl.text = string.format("第%d/%d页", self.store_page, self.store_total_pages)
 	self.task_cancel_btn:set_enabled(task_running)
-	self.update_all_btn:set_enabled(not self._active_task and self.mode == "store")
+	self.update_all_btn:set_enabled(not task_running)
 end
 
 function ModManagerView:_set_status(text, progress)
@@ -1678,13 +1678,28 @@ end
 
 function ModManagerView:_update_all_plugins()
 	self._cancel_requested = false
-	if not next(self.remote_by_entry) then
-		local ok, err = self:_fetch_store_list()
+	self:_reload_local_mods()
+	if #self.local_mods == 0 then
+		self:_set_status("本地没有已安装插件", 0)
+		return true, nil
+	end
+	local need_remote_lookup = not next(self._remote_entry_cache)
+	if not need_remote_lookup then
+		for _, mod_data in ipairs(self.local_mods) do
+			local entry = safe_tostring(mod_data.entry)
+			if entry ~= "" and not self._remote_entry_cache[entry] then
+				need_remote_lookup = true
+				break
+			end
+		end
+	end
+	if need_remote_lookup then
+		local ok, err = self:_fetch_remote_entries_for_local()
 		if not ok then
 			return false, err
 		end
 	end
-	self:_reload_local_mods()
+	self.remote_by_entry = self._remote_entry_cache
 	local pending = {}
 	for _, mod_data in ipairs(self.local_mods) do
 		local remote = self.remote_by_entry[mod_data.entry]
