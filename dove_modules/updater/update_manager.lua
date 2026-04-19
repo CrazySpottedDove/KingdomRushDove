@@ -727,7 +727,7 @@ local function diff_assets()
 	log_info("资源索引下载完成")
 
 	local remote_assets_index = loadstring(index_content)()
-	local local_assets_index = dofile("_assets/assets_index.lua")
+	local local_assets_index = love.filesystem.load("_assets/assets_index.lua")()
 
 	local added_or_modified = {}
 	for file, info in pairs(remote_assets_index) do
