@@ -1,8 +1,8 @@
 -- chunkname: @./mods/all/mod_db.lua
 local log = require("lib.klua.log"):new("mod_db")
 local mod_utils = require("mod_utils")
-local mod_main_config = require("mods.local.mod_main_config")
 local FS = love.filesystem
+local mod_paths = require("mod_paths")
 local mod_db = {}
 
 function mod_db:init()
@@ -84,17 +84,18 @@ end
 ---@return table 升序排序的表
 function mod_db.check_get_available_mods()
 	local mods_datas = {}
-	local mod_subdirs = mod_utils.get_subdirs("mods/local", true, function(name, path)
+	local mod_main_config = mod_paths.load_main_config()
+	local mod_subdirs = mod_utils.get_subdirs(mod_paths.LOCAL_MODS_DIR, true, function(name, path)
 		return not table.contains(mod_main_config.not_mod_path, name)
 	end)
 
 	for i = 1, #mod_subdirs do
 		local mod_data = mod_subdirs[i]
 		-- 加载模组配置文件
-		local success, config = pcall(require, string.format("%s%s.config", mod_main_config.ppref, mod_data.path))
-
-		if not success then
+		local config, load_err = mod_paths.load_lua_table(mod_data.path .. "/config.lua")
+		if not config then
 			log.error("Failed to load config.lua for mod: %s", mod_data.name)
+			log.error("Reason: %s", tostring(load_err))
 
 			goto continue
 		end
@@ -113,6 +114,7 @@ function mod_db.check_get_available_mods()
 		end
 
 		mod_data.priority = config.priority or 0
+		mod_data.entry = config.entry or mod_data.name
 		mod_data.config = config
 
 		table.insert(mods_datas, mod_data)

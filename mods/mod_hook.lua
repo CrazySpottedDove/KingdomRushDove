@@ -10,6 +10,7 @@ local hook_utils = require("hook_utils")
 local mod_db = require("mod_db")
 local HOOK = hook_utils.HOOK
 local A
+local raw_image_load_atlas = nil
 
 if IS_KR5 then
 	A = require("klove.animation_db")
@@ -25,6 +26,7 @@ end
 
 function hook:after_init()
 	-- HOOK(A, "fni", self.A.fni)
+	raw_image_load_atlas = I.load_atlas
 	HOOK(I, "load_atlas", self.I.load_atlas)
 	HOOK(I, "queue_load_atlas", self.I.queue_load_atlas)
 	HOOK(S, "load_group", self.S.load_group)
@@ -98,8 +100,14 @@ function hook.I.queue_load_atlas(queue_load_atlas, self, ref_scale, path, name)
 					self.load_queue[k] = nil
 				end
 
-				queue_load_atlas(self, ref_scale, images_path, name)
-				log.info("Found atlas override %s in mod %s", lua_file, mod_data.name)
+				if IS_ANDROID and raw_image_load_atlas then
+					-- Android 下强制走 .lua atlas 加载路径，让 image_db 的格式回退逻辑生效（ASTC/PNG/JPG）
+					raw_image_load_atlas(self, ref_scale, images_path, name, false)
+					log.info("Found atlas override %s in mod %s (android lua fallback)", lua_file, mod_data.name)
+				else
+					queue_load_atlas(self, ref_scale, images_path, name)
+					log.info("Found atlas override %s in mod %s", lua_file, mod_data.name)
+				end
 			end
 		end
 	end

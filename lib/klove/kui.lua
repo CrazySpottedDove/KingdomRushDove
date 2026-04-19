@@ -1979,7 +1979,7 @@ end
 
 KScrollList = class("KScrollList", KView)
 
-KScrollList:append_serialize_keys("scroll_amount", "scroll_acceleration", "scroller_width", "scroller_margin", "scroller_hidden")
+KScrollList:append_serialize_keys("scroll_amount", "scroll_acceleration", "scroller_width", "scroller_margin", "scroller_hidden", "drag_scroll_threshold")
 
 function KScrollList:initialize(size)
 	log.debug("KScrollList")
@@ -1991,6 +1991,7 @@ function KScrollList:initialize(size)
 	self.scroller_width = 16
 	self.scroller_margin = 4
 	self.scroller_hidden = false
+	self.drag_scroll_threshold = 0
 
 	KView.initialize(self, size)
 
@@ -2084,8 +2085,18 @@ function KScrollList:update(dt)
 	local mx, my, any_button_down = self:get_window():get_mouse_position()
 	local wx, wy = self:screen_to_view(mx, my)
 
+	if not any_button_down and self._down_y then
+		-- 兜底：当抬手事件未命中列表时，避免拖拽状态泄漏到下一次点击
+		self._down_y = nil
+		self._drag_in_scroller = nil
+		self._scroll_origin_start = nil
+	end
+
 	if any_button_down and self._down_y then
 		local a = wy - self._down_y
+		if math.abs(a) <= self.drag_scroll_threshold then
+			return
+		end
 
 		if self._drag_in_scroller then
 			-- 滚动条拖拽：比例 1:1 平滑映射到内容滚动量
@@ -2130,6 +2141,8 @@ function KScrollList:on_up(button, x, y)
 	log.debug()
 
 	self._down_y = nil
+	self._drag_in_scroller = nil
+	self._scroll_origin_start = nil
 end
 
 function KScrollList:on_exit()

@@ -2,7 +2,7 @@
 local log = require("lib.klua.log"):new("mod_utils")
 local FS = love.filesystem
 local hook_utils = require("hook_utils")
-local mod_main_config = require("mods.local.mod_main_config")
+local mod_paths = require("mod_paths")
 local A
 
 if IS_KR5 then
@@ -21,6 +21,9 @@ local mod_utils = {}
 ---@param filter_fn function 过滤函数
 ---@return table 包含子目录信息的表
 function mod_utils.get_subdirs(path, is_mods, filter_fn)
+	local mod_main_config = mod_paths.load_main_config()
+	local ignored_path = mod_main_config.ignored_path or {}
+
 	-- 获取目录下所有文件和子目录
 	local files = FS.getDirectoryItems(path)
 
@@ -47,7 +50,7 @@ function mod_utils.get_subdirs(path, is_mods, filter_fn)
 		local filepath = path .. "/" .. file
 
 		-- 过滤
-		if (not filter_fn or filter_fn(file, filepath)) and not table.contains(mod_main_config.ignored_path, file) and FS.isDirectory(filepath) then
+		if (not filter_fn or filter_fn(file, filepath)) and not table.contains(ignored_path, file) and FS.isDirectory(filepath) then
 			local file_data = {
 				name = file,
 				path = filepath,
@@ -55,7 +58,7 @@ function mod_utils.get_subdirs(path, is_mods, filter_fn)
 			}
 
 			if is_mods then
-				local check_paths = mod_main_config.check_paths
+				local check_paths = mod_main_config.check_paths or {}
 
 				for i = 1, #check_paths do
 					local check_path = check_paths[i]

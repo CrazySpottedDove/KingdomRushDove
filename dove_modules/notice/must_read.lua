@@ -277,7 +277,7 @@ local pc_only_quiz = {
 	},
 	{
 		q = "插件文件夹应该放置在哪里？",
-		opts = {"KingdomRushDove/mods/local", "KingdomRushDove/plugins", "根目录"},
+		opts = {"存档目录/plugins", "KingdomRushDove/mods/local", "根目录"},
 		ans = 1
 	},
 	{

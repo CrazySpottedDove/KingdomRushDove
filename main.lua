@@ -90,7 +90,7 @@ local search_roots = {
 	string.format("_assets/%s-%s", KR_GAME, KR_TARGET),
 	"mods",
 	"mods/all",
-	"mods/local"
+	"plugins"
 }
 
 -- 从 roots 生成 require 路径字符串
@@ -248,11 +248,11 @@ local loader
 local function load_director()
 	local director = require("director")
 	main.handler = director
-	if IS_ANDROID then
-		director:init(main.params)
-	else
-		require("mods.mod_main"):init(director)
-	end
+	-- if IS_ANDROID then
+	-- director:init(main.params)
+	-- else
+	require("mods.mod_main"):init(director)
+-- end
 end
 
 local function load_update_manager()
@@ -567,8 +567,8 @@ local function find_mod_from_traceback(traceback)
 		idx = idx + 1
 
 		if first_mod_dir == nil then
-			-- 兼容带或不带 "./" 前缀的路径
-			local dir = line:match("[/\\]mods[/\\]local[/\\]([^/\\]+)[/\\]") or line:match("mods[/\\]local[/\\]([^/\\]+)[/\\]")
+			-- 兼容新插件路径 plugins/<dir>/ 与旧路径 mods/local/<dir>/
+			local dir = line:match("[/\\]plugins[/\\]([^/\\]+)[/\\]") or line:match("plugins[/\\]([^/\\]+)[/\\]") or line:match("[/\\]mods[/\\]local[/\\]([^/\\]+)[/\\]") or line:match("mods[/\\]local[/\\]([^/\\]+)[/\\]")
 
 			if dir then
 				first_mod_dir = dir
@@ -600,6 +600,87 @@ local function find_mod_from_traceback(traceback)
 	end
 
 	return first_mod_dir
+end
+
+local function find_mod_dir_from_traceback(traceback)
+	if not traceback then
+		return nil
+	end
+
+	local first_mod_dir = nil
+	local first_mod_idx = nil
+	local first_hookutils_idx = nil
+	local idx = 0
+
+	for line in traceback:gmatch("[^\n]+") do
+		idx = idx + 1
+
+		if first_mod_dir == nil then
+			local dir = line:match("[/\\]plugins[/\\]([^/\\]+)[/\\]") or line:match("plugins[/\\]([^/\\]+)[/\\]") or line:match("[/\\]mods[/\\]local[/\\]([^/\\]+)[/\\]") or line:match("mods[/\\]local[/\\]([^/\\]+)[/\\]")
+
+			if dir then
+				first_mod_dir = dir
+				first_mod_idx = idx
+			end
+		end
+
+		if first_hookutils_idx == nil and line:match("hook_utils%.lua") then
+			first_hookutils_idx = idx
+		end
+
+		if first_mod_dir and first_hookutils_idx then
+			break
+		end
+	end
+
+	if not first_mod_dir then
+		return nil
+	end
+
+	if first_hookutils_idx and first_hookutils_idx < first_mod_idx then
+		return nil
+	end
+
+	return first_mod_dir
+end
+
+local function auto_disable_crashing_mod(traceback)
+	local mod_dir = find_mod_dir_from_traceback(traceback)
+	if not mod_dir then
+		return nil, nil
+	end
+
+	local cfg_path = "plugins/" .. mod_dir .. "/config.lua"
+	if not love.filesystem.getInfo(cfg_path, "file") then
+		return mod_dir, false
+	end
+
+	local chunk, err = love.filesystem.load(cfg_path)
+	if not chunk then
+		log.error("auto_disable_crashing_mod: load failed for %s: %s", cfg_path, tostring(err))
+		return mod_dir, false
+	end
+
+	local ok, cfg = pcall(chunk)
+	if not ok or type(cfg) ~= "table" then
+		log.error("auto_disable_crashing_mod: invalid config for %s", cfg_path)
+		return mod_dir, false
+	end
+
+	if cfg.enabled == false then
+		return mod_dir, true
+	end
+
+	cfg.enabled = false
+	local persistence = require("lib.klua.persistence")
+	local written = love.filesystem.write(cfg_path, persistence.serialize_to_string(cfg))
+	if not written then
+		log.error("auto_disable_crashing_mod: write failed for %s", cfg_path)
+		return mod_dir, false
+	end
+
+	log.error("auto_disable_crashing_mod: disabled mod %s after crash", mod_dir)
+	return mod_dir, true
 end
 
 function love.errorhandler(msg)
@@ -653,6 +734,10 @@ function love.errorhandler(msg)
 	local blamed_mod = find_mod_from_traceback(stack_msg)
 	if blamed_mod then
 		table.insert(tip, string.format("插件导致崩溃：%s\n", blamed_mod))
+	end
+	local disabled_mod_dir, disabled_ok = auto_disable_crashing_mod(stack_msg)
+	if disabled_mod_dir and disabled_ok then
+		table.insert(tip, string.format("已自动禁用崩溃插件：%s\n重启游戏后将跳过该插件。", disabled_mod_dir))
 	end
 
 	for l in string.gmatch(trace, "(.-)\n") do

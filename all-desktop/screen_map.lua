@@ -31,9 +31,9 @@ local kui_db = require("klove.kui_db")
 
 require("gg_views_custom")
 require("dove_modules.gui.numeric_keyboard_view")
-if not IS_ANDROID then
-	require("dove_modules.gui.mod_manager_view")
-end
+-- if not IS_ANDROID then
+require("dove_modules.gui.mod_manager_view")
+-- end
 
 local IS_KR1 = true
 
@@ -891,9 +891,9 @@ function screen_map:ensure_launch_options_panel_view()
 end
 
 function screen_map:ensure_mod_manager_view()
-	if IS_ANDROID then
-		return nil
-	end
+	-- if IS_ANDROID then
+	-- 	return nil
+	-- end
 
 	if self.mod_manager_view then
 		return self.mod_manager_view
@@ -1040,14 +1040,14 @@ function screen_map:keypressed(key, isrepeat)
 			self.ui_settings_panel_view:hidden()
 
 			return true
-		end
-		if not IS_ANDROID then
-			if self.mod_manager_view and not self.mod_manager_view.hidden then
-				self.mod_manager_view:hide()
+		-- end
+		-- if not IS_ANDROID then
+		elseif self.mod_manager_view and not self.mod_manager_view.hidden then
+			self.mod_manager_view:hide()
 
-				return true
-			end
+			return true
 		end
+		-- end
 
 		return false
 	end
@@ -1075,7 +1075,8 @@ function screen_map:keypressed(key, isrepeat)
 	elseif key == "f2" then
 		hide_others()
 		self:ensure_criket_panel_view():show()
-	elseif key == "f3" and not IS_ANDROID then
+	-- elseif key == "f3" and not IS_ANDROID then
+	elseif key == "f3" then
 		hide_others()
 		self:ensure_mod_manager_view():show()
 	elseif key == "f4" then
@@ -1331,8 +1332,16 @@ if IS_ANDROID then
 	local touch_total_delta_x = 0
 	local TOUCH_SCROLL_THRESHOLD = 15 -- 滑动阈值，像素
 	local TOUCH_SCROLL_SENSITIVITY = 2.25 -- 灵敏度系数，0.5~1.0之间
+	local function should_block_map_touch(this)
+		return (this.mod_manager_view and not this.mod_manager_view.hidden) or (this.hero_room and not this.hero_room.hidden)
+	end
 
 	function screen_map:touchpressed(id, x, y, dx, dy, pressure)
+		self.window:touchpressed(id, x, y, dx, dy, pressure)
+		if should_block_map_touch(self) then
+			touch_scrolling = false
+			return
+		end
 		touch_last_y = y
 		touch_scrolling = true
 		touch_total_delta_y = 0
@@ -1341,6 +1350,10 @@ if IS_ANDROID then
 	end
 
 	function screen_map:touchmoved(id, x, y, dx, dy, pressure)
+		self.window:touchmoved(id, x, y, dx, dy, pressure)
+		if should_block_map_touch(self) then
+			return
+		end
 		if touch_scrolling then
 			local delta_y = y - touch_last_y
 			touch_last_y = y
@@ -1379,6 +1392,7 @@ if IS_ANDROID then
 	end
 
 	function screen_map:touchreleased(id, x, y, dx, dy, pressure)
+		self.window:touchreleased(id, x, y, dx, dy, pressure)
 		touch_scrolling = false
 	end
 end
@@ -5937,19 +5951,19 @@ function OptionsView:initialize(sw, sh)
 	end
 	self.back:add_child(launch_options_button)
 
-	if not IS_ANDROID then
-		button_height = button_height + 100
-		local mod_manager_button = GGOptionsButton:new("模组管理器")
-		mod_manager_button:set_anchor_to_center()
-		mod_manager_button.pos.x = -75
-		mod_manager_button.pos.y = button_height
-		function mod_manager_button.on_click()
-			S:queue("GUIButtonCommon")
-			screen_map.option_panel:hide()
-			screen_map:ensure_mod_manager_view():show()
-		end
-		self.back:add_child(mod_manager_button)
+	-- if not IS_ANDROID then
+	button_height = button_height + 100
+	local mod_manager_button = GGOptionsButton:new("模组管理器")
+	mod_manager_button:set_anchor_to_center()
+	mod_manager_button.pos.x = -75
+	mod_manager_button.pos.y = button_height
+	function mod_manager_button.on_click()
+		S:queue("GUIButtonCommon")
+		screen_map.option_panel:hide()
+		screen_map:ensure_mod_manager_view():show()
 	end
+	self.back:add_child(mod_manager_button)
+	-- end
 
 	button_height = button_height + 100
 	local restart_button = GGOptionsButton:new("重启游戏")

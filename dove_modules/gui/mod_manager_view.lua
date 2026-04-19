@@ -1,5 +1,5 @@
 -- chunkname: @./all-desktop/mod_manager_view.lua
--- 模组管理器 GUI
+-- 模组管理器 + 插件商店（游戏内）
 local log = require("lib.klua.log"):new("mod_manager_view")
 local class = require("middleclass")
 local V = require("lib.klua.vector")
@@ -7,191 +7,731 @@ local G = love.graphics
 local FS = love.filesystem
 local S = require("sound_db")
 local restart = require("all.restart")
+local storage = require("all.storage")
+local json = require("lib.json")
+local persistence = require("lib.klua.persistence")
+local mod_paths = require("mod_paths")
 
-require("gg_views_custom") -- PopUpView, GGOptionsButton, GGPanelHeader, GGLabel 等
+require("gg_views_custom")
 
-local PANEL_W = 860
-local PANEL_H = 700
-local SCROLL_H = 470
-local ROW_H = 140
-local ROW_PAD = 16 -- 行内左边距
-local ACCENT_W = 6 -- 行左侧启用/禁用强调色条宽度
+local PANEL_MIN_W = 900
+local PANEL_MAX_W = 1020
+local PANEL_MIN_H = 730
+local PANEL_MAX_H = 800
+local PANEL_MARGIN = 36
+local ROW_H = 156
+local ROW_PAD = 16
+local ACCENT_W = 6
+local LIST_TOP_Y = 208
+local STORE_PAGE_SIZE = 20
+
+local STORE_BACKUP_SITES = {"https://krdovedownload6.crazyspotteddove.top:52000/", "https://krdovedownload4.crazyspotteddove.top/"}
+
+local CATEGORY_OPTIONS = {{
+	label = "全部",
+	value = "all"
+}, {
+	label = "玩法",
+	value = "gameplay"
+}, {
+	label = "防御塔",
+	value = "tower"
+}, {
+	label = "英雄",
+	value = "hero"
+}, {
+	label = "显示",
+	value = "display"
+}, {
+	label = "敌人",
+	value = "enemy"
+}, {
+	label = "其它",
+	value = "other"
+}}
+
+local SORT_OPTIONS = {{
+	label = "最热门",
+	value = "hot"
+}, {
+	label = "下载最多",
+	value = "downloads"
+}, {
+	label = "最新",
+	value = "newest"
+}}
+local invalid_utf8_fix_count = 0
+
+local HTTP_WORKER = [[
+local https = require("https")
+local req_ch = love.thread.getChannel("mod_store_http_req")
+local resp_ch = love.thread.getChannel("mod_store_http_resp")
+while true do
+	local req = req_ch:demand()
+	if req == "quit" then
+		break
+	end
+	local ok, code, body, headers = pcall(https.request, req.url, req.options)
+	if ok then
+		resp_ch:push({
+			id = req.id,
+			code = code,
+			body = body,
+			headers = headers or {}
+		})
+	else
+		resp_ch:push({
+			id = req.id,
+			code = 0,
+			body = tostring(code),
+			headers = {}
+		})
+	end
+end
+]]
+
+local function trim(s)
+	return type(s) == "string" and s:match("^%s*(.-)%s*$") or s
+end
+
+local function hex_context(s, pos, radius)
+	pos = math.max(1, pos or 1)
+	radius = radius or 8
+	local from_i = math.max(1, pos - radius)
+	local to_i = math.min(#s, pos + radius)
+	local parts = {}
+	for i = from_i, to_i do
+		parts[#parts + 1] = string.format("%02X", s:byte(i))
+	end
+	return table.concat(parts, " ")
+end
+
+local function safe_tostring(v)
+	if v == nil then
+		return ""
+	end
+
+	local original = tostring(v)
+	local s = original:gsub("%z", "")
+	local out = {}
+	local i = 1
+	local n = #s
+	local first_invalid_pos = nil
+
+	while i <= n do
+		local b1 = s:byte(i)
+
+		if b1 < 0x80 then
+			out[#out + 1] = string.char(b1)
+			i = i + 1
+		elseif b1 >= 0xC2 and b1 <= 0xDF then
+			local b2 = s:byte(i + 1)
+			if b2 and b2 >= 0x80 and b2 <= 0xBF then
+				out[#out + 1] = s:sub(i, i + 1)
+				i = i + 2
+			else
+				out[#out + 1] = "?"
+				first_invalid_pos = first_invalid_pos or i
+				i = i + 1
+			end
+		elseif b1 == 0xE0 then
+			local b2, b3 = s:byte(i + 1), s:byte(i + 2)
+			if b2 and b3 and b2 >= 0xA0 and b2 <= 0xBF and b3 >= 0x80 and b3 <= 0xBF then
+				out[#out + 1] = s:sub(i, i + 2)
+				i = i + 3
+			else
+				out[#out + 1] = "?"
+				first_invalid_pos = first_invalid_pos or i
+				i = i + 1
+			end
+		elseif (b1 >= 0xE1 and b1 <= 0xEC) or (b1 >= 0xEE and b1 <= 0xEF) then
+			local b2, b3 = s:byte(i + 1), s:byte(i + 2)
+			if b2 and b3 and b2 >= 0x80 and b2 <= 0xBF and b3 >= 0x80 and b3 <= 0xBF then
+				out[#out + 1] = s:sub(i, i + 2)
+				i = i + 3
+			else
+				out[#out + 1] = "?"
+				first_invalid_pos = first_invalid_pos or i
+				i = i + 1
+			end
+		elseif b1 == 0xED then
+			local b2, b3 = s:byte(i + 1), s:byte(i + 2)
+			if b2 and b3 and b2 >= 0x80 and b2 <= 0x9F and b3 >= 0x80 and b3 <= 0xBF then
+				out[#out + 1] = s:sub(i, i + 2)
+				i = i + 3
+			else
+				out[#out + 1] = "?"
+				first_invalid_pos = first_invalid_pos or i
+				i = i + 1
+			end
+		elseif b1 == 0xF0 then
+			local b2, b3, b4 = s:byte(i + 1), s:byte(i + 2), s:byte(i + 3)
+			if b2 and b3 and b4 and b2 >= 0x90 and b2 <= 0xBF and b3 >= 0x80 and b3 <= 0xBF and b4 >= 0x80 and b4 <= 0xBF then
+				out[#out + 1] = s:sub(i, i + 3)
+				i = i + 4
+			else
+				out[#out + 1] = "?"
+				first_invalid_pos = first_invalid_pos or i
+				i = i + 1
+			end
+		elseif b1 >= 0xF1 and b1 <= 0xF3 then
+			local b2, b3, b4 = s:byte(i + 1), s:byte(i + 2), s:byte(i + 3)
+			if b2 and b3 and b4 and b2 >= 0x80 and b2 <= 0xBF and b3 >= 0x80 and b3 <= 0xBF and b4 >= 0x80 and b4 <= 0xBF then
+				out[#out + 1] = s:sub(i, i + 3)
+				i = i + 4
+			else
+				out[#out + 1] = "?"
+				i = i + 1
+			end
+		elseif b1 == 0xF4 then
+			local b2, b3, b4 = s:byte(i + 1), s:byte(i + 2), s:byte(i + 3)
+			if b2 and b3 and b4 and b2 >= 0x80 and b2 <= 0x8F and b3 >= 0x80 and b3 <= 0xBF and b4 >= 0x80 and b4 <= 0xBF then
+				out[#out + 1] = s:sub(i, i + 3)
+				i = i + 4
+			else
+				out[#out + 1] = "?"
+				first_invalid_pos = first_invalid_pos or i
+				i = i + 1
+			end
+		else
+			out[#out + 1] = "?"
+			first_invalid_pos = first_invalid_pos or i
+			i = i + 1
+		end
+	end
+
+	local cleaned = table.concat(out)
+	if cleaned ~= original and invalid_utf8_fix_count < 10 then
+		invalid_utf8_fix_count = invalid_utf8_fix_count + 1
+		print(string.format("[mod_manager_view] 非法UTF-8已清洗（样本%d，首个非法字节位置=%d，字节上下文=%s）", invalid_utf8_fix_count, first_invalid_pos or -1, hex_context(s, first_invalid_pos or 1, 10)))
+		print("[mod_manager_view] 清洗后文本: " .. cleaned)
+	end
+	return cleaned
+end
+
+local function norm_version(v)
+	return trim(safe_tostring(v))
+end
+
+local function has_update(local_version, remote_version)
+	return norm_version(local_version) ~= "" and norm_version(remote_version) ~= "" and norm_version(local_version) ~= norm_version(remote_version)
+end
+
+local function sanitize_zip_path(path)
+	if not path or path == "" then
+		return nil
+	end
+	path = path:gsub("\\", "/")
+	path = path:gsub("^/+", "")
+	if path:find("^%.%./") or path:find("/%.%./") or path:find("%.%.%z") then
+		return nil
+	end
+	if path:find("^%a:[/\\]") then
+		return nil
+	end
+	return path
+end
+
+local function split_path(path)
+	local out = {}
+	for seg in path:gmatch("[^/]+") do
+		out[#out + 1] = seg
+	end
+	return out
+end
+
+local function ensure_parent_dirs(path)
+	local parts = split_path(path)
+	if #parts <= 1 then
+		return true
+	end
+	local current = parts[1]
+	for i = 2, #parts - 1 do
+		current = current .. "/" .. parts[i]
+		if not FS.getInfo(current, "directory") then
+			FS.createDirectory(current)
+		end
+	end
+	return true
+end
+
+local function remove_dir_recursive(path)
+	local info = FS.getInfo(path)
+	if not info then
+		return true
+	end
+	if info.type == "file" then
+		return FS.remove(path)
+	end
+	local items = FS.getDirectoryItems(path) or {}
+	for _, name in ipairs(items) do
+		remove_dir_recursive(path .. "/" .. name)
+	end
+	return FS.remove(path)
+end
+
+local function copy_dir_recursive(src_dir, dst_dir)
+	if not FS.getInfo(dst_dir, "directory") then
+		FS.createDirectory(dst_dir)
+	end
+	local items = FS.getDirectoryItems(src_dir) or {}
+	for _, name in ipairs(items) do
+		local src_path = src_dir .. "/" .. name
+		local dst_path = dst_dir .. "/" .. name
+		local info = FS.getInfo(src_path)
+		if info then
+			if info.type == "directory" then
+				copy_dir_recursive(src_path, dst_path)
+			else
+				FS.write(dst_path, FS.read(src_path) or "")
+			end
+		end
+	end
+	return true
+end
+
+local function basename(path)
+	return (path:match("([^/]+)$") or path)
+end
+
+local function le_u16(s, i)
+	local b1, b2 = s:byte(i, i + 1)
+	if not b1 or not b2 then
+		return nil
+	end
+	return b1 + b2 * 256
+end
+
+local function le_u32(s, i)
+	local b1, b2, b3, b4 = s:byte(i, i + 3)
+	if not b1 or not b2 or not b3 or not b4 then
+		return nil
+	end
+	return b1 + b2 * 256 + b3 * 65536 + b4 * 16777216
+end
+
+local function find_eocd(zip_data)
+	local sig = string.char(0x50, 0x4b, 0x05, 0x06)
+	local start = math.max(1, #zip_data - 65557)
+	for i = #zip_data - 3, start, -1 do
+		if zip_data:sub(i, i + 3) == sig then
+			return i
+		end
+	end
+	return nil
+end
+
+local function unzip_to_dir(zip_data, output_dir)
+	local eocd_pos = find_eocd(zip_data)
+	if not eocd_pos then
+		return false, "zip 缺少 EOCD 结构"
+	end
+	local cd_count = le_u16(zip_data, eocd_pos + 10)
+	local cd_offset = le_u32(zip_data, eocd_pos + 16)
+	if not cd_count or not cd_offset then
+		return false, "zip EOCD 字段非法"
+	end
+
+	local pos = cd_offset + 1
+	for _ = 1, cd_count do
+		if zip_data:sub(pos, pos + 3) ~= string.char(0x50, 0x4b, 0x01, 0x02) then
+			return false, "zip 中央目录头非法"
+		end
+		local method = le_u16(zip_data, pos + 10)
+		local comp_size = le_u32(zip_data, pos + 20)
+		local uncomp_size = le_u32(zip_data, pos + 24)
+		local name_len = le_u16(zip_data, pos + 28)
+		local extra_len = le_u16(zip_data, pos + 30)
+		local comment_len = le_u16(zip_data, pos + 32)
+		local local_offset = le_u32(zip_data, pos + 42)
+		if not method or not comp_size or not uncomp_size or not name_len or not extra_len or not comment_len or not local_offset then
+			return false, "zip 中央目录字段非法"
+		end
+		local name_start = pos + 46
+		local name = zip_data:sub(name_start, name_start + name_len - 1)
+		local safe_name = sanitize_zip_path(name)
+		pos = name_start + name_len + extra_len + comment_len
+
+		if safe_name and not safe_name:match("/$") then
+			local local_pos = local_offset + 1
+			if zip_data:sub(local_pos, local_pos + 3) ~= string.char(0x50, 0x4b, 0x03, 0x04) then
+				return false, "zip 本地头非法"
+			end
+			local local_name_len = le_u16(zip_data, local_pos + 26)
+			local local_extra_len = le_u16(zip_data, local_pos + 28)
+			if not local_name_len or not local_extra_len then
+				return false, "zip 本地头字段非法"
+			end
+			local data_start = local_pos + 30 + local_name_len + local_extra_len
+			local comp_data = zip_data:sub(data_start, data_start + comp_size - 1)
+			local out_data
+			if method == 0 then
+				out_data = comp_data
+			elseif method == 8 then
+				local ok, decompressed = pcall(love.data.decompress, "string", "deflate", comp_data)
+				if not ok then
+					return false, "zip 解压失败: " .. tostring(decompressed)
+				end
+				out_data = decompressed
+			else
+				return false, "zip 不支持的压缩方式: " .. tostring(method)
+			end
+			if uncomp_size and #out_data ~= uncomp_size then
+				return false, "zip 文件大小校验失败: " .. safe_name
+			end
+
+			local out_path = output_dir .. "/" .. safe_name
+			ensure_parent_dirs(out_path)
+			local ok = FS.write(out_path, out_data)
+			if not ok then
+				return false, "写入失败: " .. out_path
+			end
+		end
+	end
+
+	return true, nil
+end
+
+local function url_encode(str)
+	return (str:gsub("([^%w%-%.%_%~%/])", function(c)
+		return string.format("%%%02X", string.byte(c))
+	end))
+end
+
+local function parse_content_range(h)
+	if not h then
+		return nil
+	end
+	local _, _, total = h:match("bytes%s+(%d+)%-(%d+)/(%d+)")
+	return tonumber(total)
+end
+
+local function normalize_headers(h)
+	local out = {}
+	for k, v in pairs(h or {}) do
+		out[string.lower(k)] = v
+	end
+	return out
+end
+
+local function utf8_truncate_by_bytes(s, max_bytes)
+	if #s <= max_bytes then
+		return s
+	end
+	local i = 1
+	local last_ok = 0
+	local n = #s
+	while i <= n do
+		local b = s:byte(i)
+		local step = 1
+		if b >= 0xF0 then
+			step = 4
+		elseif b >= 0xE0 then
+			step = 3
+		elseif b >= 0xC0 then
+			step = 2
+		end
+		if i + step - 1 > max_bytes then
+			break
+		end
+		last_ok = i + step - 1
+		i = i + step
+	end
+	if last_ok <= 0 then
+		return ""
+	end
+	return s:sub(1, last_ok)
+end
+
+local function safe_label_desc(s)
+	s = safe_tostring(s)
+	if #s > 130 then
+		return utf8_truncate_by_bytes(s, 127) .. "..."
+	end
+	return s
+end
+
+local function in_game_version(plugin)
+	local gv = plugin.game_version
+	if type(gv) ~= "table" then
+		return true
+	end
+	if #gv == 0 then
+		return true
+	end
+	return table.contains(gv, KR_GAME)
+end
 
 -- ─────────────────────────────────────────────
--- 简单开关按钮：无需图片，用彩色文字表示状态
+-- 基础按钮
 -- ─────────────────────────────────────────────
+ModActionButton = class("ModActionButton", KButton)
+
+function ModActionButton:initialize(text, size)
+	local rs = GGLabel.static.ref_h / REF_H
+	local w = size and size.x or 110
+	local h = size and size.y or 34
+	KButton.initialize(self, V.v(w, h))
+	self.text = ""
+	self._text = safe_tostring(text or "")
+	self.enabled = true
+	self._hover = false
+	self.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, w, h, 8, 8}
+	}
+	self._label = GGLabel:new(self.size)
+	self._label.font_name = "body"
+	self._label.font_size = 13 * rs
+	self._label.text_align = "center"
+	self._label.vertical_align = "middle"
+	self._label.fit_lines = 1
+	self._label.fit_size = true
+	self._label.propagate_on_click = true
+	self:add_child(self._label)
+	self:_refresh()
+end
+
+function ModActionButton:set_text(text)
+	self._text = safe_tostring(text)
+	self:_refresh()
+end
+
+function ModActionButton:set_enabled(v)
+	self.enabled = v ~= false
+	self:_refresh()
+end
+
+function ModActionButton:_refresh()
+	if not self.enabled then
+		self.colors.background = {88, 78, 64, 180}
+		self._label.colors.text = {160, 150, 130, 220}
+	elseif self._hover then
+		self.colors.background = {161, 122, 45, 245}
+		self._label.colors.text = {255, 240, 190, 255}
+	else
+		self.colors.background = {134, 101, 36, 220}
+		self._label.colors.text = {236, 220, 175, 255}
+	end
+	self._label.text = self._text
+end
+
+function ModActionButton:on_enter()
+	self._hover = true
+	self:_refresh()
+end
+
+function ModActionButton:on_exit()
+	self._hover = false
+	self:_refresh()
+end
+
+function ModActionButton:on_click()
+	if not self.enabled then
+		return
+	end
+	S:queue("GUIButtonCommon")
+	if self.on_press then
+		self:on_press()
+	end
+end
+
 ModToggleButton = class("ModToggleButton", KButton)
 
 function ModToggleButton:initialize(initial_value)
 	local rs = GGLabel.static.ref_h / REF_H
-
-	KButton.initialize(self, V.v(80, 36))
+	KButton.initialize(self, V.v(84, 36))
 	self.shape = {
 		name = "rectangle",
-		args = {"fill", 0, 0, 80, 36, 10, 10}
+		args = {"fill", 0, 0, 84, 36, 9, 9}
 	}
-
 	self.value = initial_value ~= false
-	self.propagate_on_up = false
-	self.propagate_on_down = false
-	self.propagate_on_click = false
-
-	self._text_label = GGLabel:new(self.size)
-	self._text_label.font_name = "body"
-	self._text_label.font_size = 16 * rs
-	self._text_label.text_align = "center"
-	self._text_label.vertical_align = "middle"
-	self._text_label.propagate_on_up = true
-	self._text_label.propagate_on_down = true
-	self._text_label.propagate_on_click = true
-	self._is_hovered = false
-	self:add_child(self._text_label)
+	self._hover = false
+	self._label = GGLabel:new(self.size)
+	self._label.font_name = "body"
+	self._label.font_size = 16 * rs
+	self._label.text_align = "center"
+	self._label.vertical_align = "middle"
+	self._label.propagate_on_click = true
+	self:add_child(self._label)
 	self:_refresh()
-end
-
-function ModToggleButton:_refresh()
-	if self.value then
-		if self._is_hovered then
-			self.colors.background = {55, 180, 85, 245}
-		else
-			self.colors.background = {35, 148, 68, 215}
-		end
-		self._text_label.colors.text = {195, 255, 178, 255}
-		self._text_label.text = "启用"
-	else
-		if self._is_hovered then
-			self.colors.background = {178, 55, 55, 245}
-		else
-			self.colors.background = {148, 38, 38, 215}
-		end
-		self._text_label.colors.text = {255, 178, 155, 255}
-		self._text_label.text = "禁用"
-	end
-end
-
-function ModToggleButton:on_click(button, x, y)
-	S:queue("GUIButtonCommon")
-	self:set_value(not self.value)
 end
 
 function ModToggleButton:set_value(v)
 	self.value = v
 	self:_refresh()
-
 	if self.on_change then
 		self:on_change(v)
 	end
 end
 
+function ModToggleButton:_refresh()
+	if self.value then
+		self.colors.background = self._hover and {58, 183, 90, 245} or {35, 148, 68, 215}
+		self._label.colors.text = {195, 255, 178, 255}
+		self._label.text = "启用"
+	else
+		self.colors.background = self._hover and {178, 55, 55, 245} or {148, 38, 38, 215}
+		self._label.colors.text = {255, 178, 155, 255}
+		self._label.text = "禁用"
+	end
+end
+
 function ModToggleButton:on_enter()
-	self._is_hovered = true
+	self._hover = true
 	self:_refresh()
 end
 
 function ModToggleButton:on_exit()
-	self._is_hovered = false
+	self._hover = false
 	self:_refresh()
 end
 
--- ─────────────────────────────────────────────
--- 单个模组行
--- ─────────────────────────────────────────────
+function ModToggleButton:on_click()
+	S:queue("GUIButtonCommon")
+	self:set_value(not self.value)
+end
+
 ModItemRow = class("ModItemRow", KView)
 
-function ModItemRow:initialize(mod_data, row_w)
-	row_w = row_w or 640
+function ModItemRow:initialize(opts, row_w)
+	row_w = row_w or 760
 	KView.initialize(self, V.v(row_w, ROW_H))
-
-	self.mod_data = mod_data
+	self.opts = opts or {}
 	self._base_bg = {24, 18, 12, 210}
 	self._hover_bg = {40, 30, 18, 230}
 	self.colors.background = {self._base_bg[1], self._base_bg[2], self._base_bg[3], self._base_bg[4]}
 	self.shape = {
 		name = "rectangle",
-		args = {"fill", 0, 0, row_w, ROW_H, 15, 15}
+		args = {"fill", 0, 0, row_w, ROW_H, 14, 14}
 	}
 
-	local cfg = mod_data.config or {}
 	local rs = GGLabel.static.ref_h / REF_H
-	local text_w = row_w - ACCENT_W - ROW_PAD - 118 -- 左色条 + 左边距 + 右侧按钮区域
+	local text_w = row_w - ACCENT_W - ROW_PAD - 344
 
-	-- 左侧启用/禁用强调色条
 	local accent = KView:new(V.v(ACCENT_W, ROW_H - 1))
 	accent.pos = V.v(0, 0)
 	self:add_child(accent)
 	self._accent = accent
 
-	-- 模组名称
 	local name_lbl = GGLabel:new(V.v(text_w, 26))
 	name_lbl.font_name = "h"
 	name_lbl.font_size = 16 * rs
 	name_lbl.text_align = "left"
 	name_lbl.vertical_align = "middle"
 	name_lbl.colors.text = {238, 218, 162, 255}
-	name_lbl.text = cfg.name or mod_data.name or "?"
+	name_lbl.text = safe_tostring(self.opts.title or "?")
 	name_lbl.fit_lines = 1
-	name_lbl.line_height = 1
-	name_lbl.pos = V.v(ACCENT_W + ROW_PAD, 10)
 	name_lbl.fit_size = true
+	name_lbl.pos = V.v(ACCENT_W + ROW_PAD, 10)
 	self:add_child(name_lbl)
 
-	-- 版本 + 作者
-	local meta_lbl = GGLabel:new(V.v(text_w, 20))
+	local meta_lbl = GGLabel:new(V.v(text_w, 22))
 	meta_lbl.font_name = "body"
 	meta_lbl.font_size = 13 * rs
 	meta_lbl.text_align = "left"
 	meta_lbl.vertical_align = "middle"
 	meta_lbl.colors.text = {175, 162, 122, 255}
-	meta_lbl.line_height = 1
+	meta_lbl.text = safe_tostring(self.opts.meta or "")
+	meta_lbl.fit_lines = 1
 	meta_lbl.fit_size = true
-	local ver = cfg.version and ("v" .. cfg.version) or ""
-	local by = cfg.by and ("作者: " .. cfg.by) or ""
-	meta_lbl.text = ver .. (ver ~= "" and by ~= "" and "  " or "") .. by
 	meta_lbl.pos = V.v(ACCENT_W + ROW_PAD, 38)
 	self:add_child(meta_lbl)
 
-	-- 描述
-	local desc_lbl = GGLabel:new(V.v(text_w, 56))
+	local desc_lbl = GGLabel:new(V.v(text_w, 62))
 	desc_lbl.font_name = "body"
-	desc_lbl.fit_size = true
-	desc_lbl.line_height = 1.3
 	desc_lbl.font_size = 12 * rs
 	desc_lbl.text_align = "left"
 	desc_lbl.vertical_align = "top"
 	desc_lbl.colors.text = {148, 140, 116, 255}
-	desc_lbl.text = cfg.desc or ""
+	desc_lbl.text = safe_label_desc(self.opts.desc or "")
 	desc_lbl.fit_lines = 3
+	desc_lbl.line_height = 1.25
+	desc_lbl.fit_size = true
 	desc_lbl.pos = V.v(ACCENT_W + ROW_PAD, 62)
 	self:add_child(desc_lbl)
 
-	-- 开关按钮（右侧居中）
-	local toggle = ModToggleButton:new(cfg.enabled ~= false)
-	toggle.anchor = V.v(toggle.size.x / 2, toggle.size.y / 2)
-	toggle.pos = V.v(row_w - 52, ROW_H / 2)
-	self:add_child(toggle)
-	self.toggle = toggle
+	local status_lbl = GGLabel:new(V.v(300, 22))
+	status_lbl.font_name = "body"
+	status_lbl.font_size = 12 * rs
+	status_lbl.text_align = "right"
+	status_lbl.vertical_align = "middle"
+	status_lbl.colors.text = {242, 211, 121, 255}
+	status_lbl.text = safe_tostring(self.opts.status or "")
+	status_lbl.fit_lines = 1
+	status_lbl.fit_size = true
+	status_lbl.pos = V.v(row_w - 312, 8)
+	self:add_child(status_lbl)
 
-	-- 当开关状态变化时同步刷新强调色条
-	local row_self = self
-	toggle.on_change = function(t, v)
-		row_self:_refresh_accent()
+	local action_y = 108
+	local action_w = 122
+	local action_gap = 10
+	local action_right = row_w - 20
+	local primary_x = action_right - action_w
+	local secondary_x = primary_x - action_w - action_gap
+	if self.opts.show_toggle then
+		local toggle = ModToggleButton:new(self.opts.enabled ~= false)
+		toggle.pos = V.v(row_w - 62, 56)
+		toggle.anchor = V.v(toggle.size.x / 2, toggle.size.y / 2)
+		toggle.on_change = function(_, v)
+			if self.opts.on_toggle then
+				self.opts.on_toggle(v)
+			end
+			self:_refresh_accent(v)
+		end
+		self:add_child(toggle)
+		self.toggle = toggle
+	else
+		self:_refresh_accent(true)
 	end
 
-	-- 分隔线
+	if self.opts.secondary_text then
+		local secondary = ModActionButton:new(self.opts.secondary_text, V.v(122, 34))
+		secondary.pos = V.v(secondary_x, action_y)
+		secondary.on_press = function()
+			if self.opts.on_secondary then
+				self.opts.on_secondary()
+			end
+		end
+		self:add_child(secondary)
+		self.secondary_btn = secondary
+	end
+
+	if self.opts.primary_text then
+		local primary = ModActionButton:new(self.opts.primary_text, V.v(122, 34))
+		primary.pos = V.v(primary_x, action_y)
+		primary.on_press = function()
+			if self.opts.on_primary then
+				self.opts.on_primary()
+			end
+		end
+		self:add_child(primary)
+		self.primary_btn = primary
+	elseif self.secondary_btn then
+		-- 仅一个操作按钮时靠右对齐，避免视觉漂移到中间区域
+		self.secondary_btn.pos = V.v(primary_x, action_y)
+	end
+
 	local sep = KView:new(V.v(row_w, 1))
 	sep.colors.background = {65, 50, 30, 200}
 	sep.pos = V.v(0, ROW_H - 1)
 	self:add_child(sep)
 
-	self:_refresh_accent()
+	if self.toggle then
+		self:_refresh_accent(self.toggle.value)
+	end
 end
 
-function ModItemRow:_refresh_accent()
-	if self.toggle.value then
+function ModItemRow:_refresh_accent(enabled)
+	if enabled then
 		self._accent.colors.background = {55, 185, 80, 235}
 	else
 		self._accent.colors.background = {185, 50, 45, 210}
 	end
+end
+
+function ModItemRow:is_enabled()
+	return self.toggle and self.toggle.value or true
 end
 
 function ModItemRow:on_enter()
@@ -202,357 +742,1147 @@ function ModItemRow:on_exit()
 	self.colors.background = {self._base_bg[1], self._base_bg[2], self._base_bg[3], self._base_bg[4]}
 end
 
-function ModItemRow:is_enabled()
-	return self.toggle.value
-end
-
--- ─────────────────────────────────────────────
--- 主面板
--- ─────────────────────────────────────────────
 ModManagerView = class("ModManagerView", PopUpView)
 
 function ModManagerView:initialize(sw, sh)
 	PopUpView.initialize(self, V.v(sw, sh))
-
 	local rs = GGLabel.static.ref_h / REF_H
+	local panel_w = math.min(PANEL_MAX_W, sw - PANEL_MARGIN)
+	panel_w = math.max(PANEL_MIN_W, panel_w)
+	panel_w = math.min(panel_w, sw - 12)
+	local panel_h = math.min(PANEL_MAX_H, sh - PANEL_MARGIN)
+	panel_h = math.max(PANEL_MIN_H, panel_h)
+	panel_h = math.min(panel_h, sh - 12)
+	local list_top_y = LIST_TOP_Y
+	local footer_y = panel_h - 44
+	local scroll_h = math.max(260, footer_y - list_top_y - 14)
+	local header_btn_w = 132
+	local header_btn_h = 30
+	local header_btn_gap = 10
+	local header_group_x = panel_w - 20 - (header_btn_w * 3 + header_btn_gap * 2)
 
-	-- 背景面板（深色矩形）
-	self.back = KView:new(V.v(PANEL_W, PANEL_H))
+	self.mode = "local"
+	self.sort_idx = 1
+	self.category_idx = 1
+	self.store_page = 1
+	self.store_total_pages = 1
+	self.store_items = {}
+	self._store_page_cache = {}
+	self._remote_entry_cache = {}
+	self._remote_lookup_done = false
+	self.remote_by_entry = self._remote_entry_cache
+	self.local_mods = {}
+	self.local_by_entry = {}
+	self.local_by_name = {}
+	self._mod_rows = {}
+	self._progress_target = 0
+	self._progress_value = 0
+	self._status_text = "点击“刷新商店”加载插件列表"
+	self._cancel_requested = false
+	self._request_id = 0
+	self._active_task = nil
+	self._task_result = nil
+	self._selected_site = nil
+	self._active_download_name = ""
+	self._http_thread = nil
+
+	self.back = KView:new(V.v(panel_w, panel_h))
 	self.back.colors.background = {47, 34, 6, 226}
-	self.back.anchor = V.v(PANEL_W / 2, PANEL_H / 2)
+	self.back.anchor = V.v(panel_w / 2, panel_h / 2)
 	self.back.pos = V.v(sw / 2, sh / 2)
 	self.back.shape = {
 		name = "rectangle",
-		args = {"fill", 0, 0, PANEL_W, PANEL_H, 20, 20}
+		args = {"fill", 0, 0, panel_w, panel_h, 20, 20}
 	}
 	self:add_child(self.back)
 
-	-- ── 标题 ──
-	local header = GGPanelHeader:new("模组管理器", PANEL_W - 40)
+	local header = GGPanelHeader:new("模组管理器 / 插件商店", panel_w - 40)
 	header.pos = V.v(20, 14)
 	self.back:add_child(header)
 
-	-- ── 总开关行 ──
-	local global_lbl = GGOptionsLabel:new(V.v(280, 28))
+	local global_lbl = GGOptionsLabel:new(V.v(300, 28))
 	global_lbl.text = "启用模组加载器"
 	global_lbl.text_align = "left"
 	global_lbl.vertical_align = "middle"
 	global_lbl.pos = V.v(20, 56)
 	self.back:add_child(global_lbl)
 
-	local global_toggle = ModToggleButton:new(false)
-	global_toggle.anchor = V.v(global_toggle.size.x / 2, global_toggle.size.y / 2)
-	global_toggle.pos = V.v(PANEL_W - 54, 72)
-	self.back:add_child(global_toggle)
-	self.global_toggle = global_toggle
+	self.global_toggle = ModToggleButton:new(false)
+	self.global_toggle.anchor = V.v(self.global_toggle.size.x / 2, self.global_toggle.size.y / 2)
+	self.global_toggle.pos = V.v(panel_w - 66, 72)
+	self.back:add_child(self.global_toggle)
 
-	-- 分隔线
-	local sep1 = KView:new(V.v(PANEL_W - 40, 1))
-	sep1.colors.background = {95, 75, 40, 255}
-	sep1.pos = V.v(20, 96)
-	self.back:add_child(sep1)
+	self.mode_btn = ModActionButton:new("视图：本地", V.v(header_btn_w, header_btn_h))
+	self.mode_btn.pos = V.v(header_group_x, 96)
+	self.mode_btn.on_press = function()
+		local prev_mode = self.mode
+		self.mode = (self.mode == "local") and "store" or "local"
+		self:_refresh_header_buttons()
+		self:_render_current_list()
+		if prev_mode ~= "store" and self.mode == "store" and #self.store_items == 0 and not self._active_task then
+			self.store_page = 1
+			self:_start_task("刷新商店列表", function()
+				return self:_fetch_store_list()
+			end)
+		end
+	end
+	self.back:add_child(self.mode_btn)
 
-	-- 提示文字
-	local hint_height = 20
-	local hint_lbl = GGLabel:new(V.v(PANEL_W - 40, 20))
-	hint_lbl.font_name = "body"
-	hint_lbl.font_size = 12 * rs
-	hint_lbl.text_align = "left"
-	hint_lbl.colors.text = {140, 130, 100, 255}
-	hint_lbl.text = [[点击“保存并重启”以应用更改]]
-	hint_lbl.pos = V.v(20, 100)
-	self.back:add_child(hint_lbl)
+	self.sort_btn = ModActionButton:new("排序：最热", V.v(header_btn_w, header_btn_h))
+	self.sort_btn.pos = V.v(header_group_x + header_btn_w + header_btn_gap, 96)
+	self.sort_btn.on_press = function()
+		self.sort_idx = self.sort_idx % #SORT_OPTIONS + 1
+		self.store_page = 1
+		self:_refresh_header_buttons()
+		if self.mode == "store" then
+			self:_start_task("刷新商店列表", function()
+				return self:_fetch_store_list()
+			end)
+		end
+	end
+	self.back:add_child(self.sort_btn)
 
-	-- ── 模组列表 ──
-	local list_pos_y = 100 + hint_height + 15
-	local list = KScrollList:new(V.v(PANEL_W - 40, SCROLL_H))
-	list.pos = V.v(20, list_pos_y)
-	list.scroll_amount = ROW_H
-	list.colors.scroller_background = {45, 36, 22, 200}
-	list.colors.scroller_foreground = {110, 90, 50, 255}
-	list.propagate_on_up = true
-	list.propagate_on_down = true
-	self.back:add_child(list)
-	self.mod_list = list
+	self.category_btn = ModActionButton:new("分类：全部", V.v(header_btn_w, header_btn_h))
+	self.category_btn.pos = V.v(header_group_x + (header_btn_w + header_btn_gap) * 2, 96)
+	self.category_btn.on_press = function()
+		self.category_idx = self.category_idx % #CATEGORY_OPTIONS + 1
+		self.store_page = 1
+		self:_refresh_header_buttons()
+		if self.mode == "store" then
+			self:_start_task("刷新商店列表", function()
+				return self:_fetch_store_list()
+			end)
+		end
+	end
+	self.back:add_child(self.category_btn)
 
-	-- ── 保存并关闭 按钮 ──
-	local y_btn = list_pos_y + SCROLL_H + hint_height
+	self.refresh_btn = ModActionButton:new("刷新商店", V.v(header_btn_w, header_btn_h))
+	self.refresh_btn.pos = V.v(header_group_x, 132)
+	self.refresh_btn.on_press = function()
+		if self.mode == "store" then
+			self:_start_task("刷新商店列表", function()
+				return self:_fetch_store_list()
+			end)
+		else
+			self:_start_task("查询远端条目", function()
+				return self:_fetch_remote_entries_for_local()
+			end)
+		end
+	end
+	self.back:add_child(self.refresh_btn)
 
+	self.update_all_btn = ModActionButton:new("一键更新全部", V.v(header_btn_w, header_btn_h))
+	self.update_all_btn.pos = V.v(header_group_x + header_btn_w + header_btn_gap, 132)
+	self.update_all_btn.on_press = function()
+		self:_start_task("一键更新插件", function()
+			return self:_update_all_plugins()
+		end)
+	end
+	self.back:add_child(self.update_all_btn)
+
+	local pager_btn_w = 90
+	local pager_page_w = 100
+	local pager_gap = 10
+	local pager_y = 174
+	local pager_next_x = panel_w - 20 - pager_btn_w
+	local pager_page_x = pager_next_x - pager_gap - pager_page_w
+	local pager_prev_x = pager_page_x - pager_gap - pager_btn_w
+
+	self.prev_page_btn = ModActionButton:new("上一页", V.v(90, 24))
+	self.prev_page_btn.pos = V.v(pager_prev_x, pager_y)
+	self.prev_page_btn.on_press = function()
+		if self.mode ~= "store" or self.store_page <= 1 then
+			return
+		end
+		self.store_page = self.store_page - 1
+		self:_start_task("翻页刷新", function()
+			return self:_fetch_store_list()
+		end)
+	end
+	self.back:add_child(self.prev_page_btn)
+
+	local sep = KView:new(V.v(panel_w - 40, 1))
+	sep.colors.background = {95, 75, 40, 255}
+	sep.pos = V.v(20, 168)
+	self.back:add_child(sep)
+
+	self.hint_lbl = GGLabel:new(V.v(panel_w - 40, 20))
+	self.hint_lbl.font_name = "body"
+	self.hint_lbl.font_size = 12 * rs
+	self.hint_lbl.text_align = "left"
+	self.hint_lbl.colors.text = {214, 193, 144, 255}
+	self.hint_lbl.pos = V.v(20, 172)
+	self.hint_lbl.text = self._status_text
+	self.back:add_child(self.hint_lbl)
+
+	self.page_lbl = GGLabel:new(V.v(100, 20))
+	self.page_lbl.font_name = "body"
+	self.page_lbl.font_size = 12 * rs
+	self.page_lbl.text_align = "center"
+	self.page_lbl.vertical_align = "middle"
+	self.page_lbl.fit_lines = 1
+	self.page_lbl.fit_size = true
+	self.page_lbl.colors.text = {232, 214, 166, 255}
+	self.page_lbl.pos = V.v(pager_page_x, pager_y + 2)
+	self.back:add_child(self.page_lbl)
+
+	self.next_page_btn = ModActionButton:new("下一页", V.v(90, 24))
+	self.next_page_btn.pos = V.v(pager_next_x, pager_y)
+	self.next_page_btn.on_press = function()
+		if self.mode ~= "store" or self.store_page >= self.store_total_pages then
+			return
+		end
+		self.store_page = self.store_page + 1
+		self:_start_task("翻页刷新", function()
+			return self:_fetch_store_list()
+		end)
+	end
+	self.back:add_child(self.next_page_btn)
+
+	self.task_dialog = KView:new(V.v(math.min(560, panel_w - 80), 150))
+	self.task_dialog.anchor = V.v(self.task_dialog.size.x / 2, self.task_dialog.size.y / 2)
+	self.task_dialog.pos = V.v(panel_w / 2, panel_h / 2)
+	self.task_dialog.colors.background = {30, 21, 9, 235}
+	self.task_dialog.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, self.task_dialog.size.x, self.task_dialog.size.y, 12, 12}
+	}
+	self.task_dialog.hidden = true
+	self.back:add_child(self.task_dialog)
+
+	self.task_title_lbl = GGLabel:new(V.v(self.task_dialog.size.x - 24, 24))
+	self.task_title_lbl.font_name = "h"
+	self.task_title_lbl.font_size = 15 * rs
+	self.task_title_lbl.text_align = "left"
+	self.task_title_lbl.vertical_align = "middle"
+	self.task_title_lbl.colors.text = {244, 221, 165, 255}
+	self.task_title_lbl.text = "网络任务进行中"
+	self.task_title_lbl.pos = V.v(12, 10)
+	self.task_dialog:add_child(self.task_title_lbl)
+
+	self.task_status_lbl = GGLabel:new(V.v(self.task_dialog.size.x - 24, 48))
+	self.task_status_lbl.font_name = "body"
+	self.task_status_lbl.font_size = 12 * rs
+	self.task_status_lbl.text_align = "left"
+	self.task_status_lbl.vertical_align = "top"
+	self.task_status_lbl.fit_lines = 2
+	self.task_status_lbl.fit_size = true
+	self.task_status_lbl.line_height = 1.2
+	self.task_status_lbl.colors.text = {223, 202, 152, 255}
+	self.task_status_lbl.text = self._status_text
+	self.task_status_lbl.pos = V.v(12, 36)
+	self.task_dialog:add_child(self.task_status_lbl)
+
+	self.progress_bg = KView:new(V.v(self.task_dialog.size.x - 24, 10))
+	self.progress_bg.colors.background = {75, 62, 34, 210}
+	self.progress_bg.pos = V.v(12, 90)
+	self.progress_bg.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, self.progress_bg.size.x, 10, 6, 6}
+	}
+	self.task_dialog:add_child(self.progress_bg)
+
+	self.progress_fill = KView:new(V.v(0, 10))
+	self.progress_fill.colors.background = {227, 190, 68, 235}
+	self.progress_fill.pos = V.v(0, 0)
+	self.progress_fill.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, 0, 10, 6, 6}
+	}
+	self.progress_bg:add_child(self.progress_fill)
+
+	self.task_cancel_btn = ModActionButton:new("断开请求", V.v(110, 28))
+	self.task_cancel_btn.pos = V.v(self.task_dialog.size.x - 122, 110)
+	self.task_cancel_btn.on_press = function()
+		self._cancel_requested = true
+		self:_set_status("已请求断连，正在停止当前网络操作…", nil)
+	end
+	self.task_dialog:add_child(self.task_cancel_btn)
+
+	self.mod_list = KScrollList:new(V.v(panel_w - 40, scroll_h))
+	self.mod_list.pos = V.v(20, list_top_y)
+	self.mod_list.drag_scroll_threshold = IS_ANDROID and 20 or 6
+	self.mod_list.scroll_amount = ROW_H
+	self.mod_list.colors.scroller_background = {45, 36, 22, 200}
+	self.mod_list.colors.scroller_foreground = {110, 90, 50, 255}
+	self.back:add_child(self.mod_list)
+
+	local y_btn = footer_y
 	local save_btn = GGOptionsButton:new("保存并重启")
 	save_btn:set_anchor_to_center()
-	save_btn.pos = V.v(PANEL_W / 4, y_btn)
-
-	local market_btn = GGOptionsButton:new("前往插件商店")
-	market_btn:set_anchor_to_center()
-	market_btn.pos = V.v(PANEL_W * 3 / 4, y_btn)
-
-	local this = self
-	function save_btn.on_click()
+	save_btn.pos = V.v(panel_w / 3, y_btn)
+	self.back:add_child(save_btn)
+	save_btn.on_click = function()
 		S:queue("GUIButtonCommon")
-		this:save()
+		self:save()
+		self:_stop_http_thread()
 		restart.tmp()
 	end
 
-	self.back:add_child(save_btn)
-
-	function market_btn.on_click()
+	local shop_btn = GGOptionsButton:new("浏览器商店")
+	shop_btn:set_anchor_to_center()
+	shop_btn.pos = V.v(panel_w * 2 / 3, y_btn)
+	self.back:add_child(shop_btn)
+	shop_btn.on_click = function()
 		S:queue("GUIButtonCommon")
-		love.system.openURL("https://krdovedownload4.crazyspotteddove.top/plugins")
+		love.system.openURL((self._selected_site or (main and main.params and main.params.update_last_site) or STORE_BACKUP_SITES[1]):gsub("/+$", "") .. "/plugins")
 	end
-	self.back:add_child(market_btn)
 
 	local close_btn = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
-	close_btn.pos = V.v(PANEL_W - 20, 20)
+	close_btn.pos = V.v(panel_w - 20, 20)
 	close_btn:set_anchor_to_center()
 	self.back:add_child(close_btn)
-
-	function close_btn.on_click()
+	close_btn.on_click = function()
 		S:queue("GUIButtonCommon")
-		this:hide()
+		self:hide()
 	end
 
-	self._mod_rows = {}
+	self.task_dialog:order_to_front()
+	self:_refresh_header_buttons()
+	self:_start_http_thread()
 end
 
--- 从磁盘重新读取 mod_main_config，返回配置表（不经过 require 缓存）
-function ModManagerView:_read_main_config()
-	-- 优先读保存目录（覆盖源文件），再读源目录
-	local str = FS.read("mods/local/mod_main_config.lua")
-
-	if not str then
-		return nil
-	end
-
-	local chunk, err = loadstring(str)
-
-	if not chunk then
-		log.error("解析 mod_main_config.lua 失败: %s", tostring(err))
-
-		return nil
-	end
-
-	local ok, result = pcall(chunk)
-
-	return ok and result or nil
-end
-
--- 从磁盘读取某个模组的 config.lua
-function ModManagerView:_read_mod_config(path)
-	local str = FS.read(path)
-
-	if not str then
-		return nil
-	end
-
-	local chunk, err = loadstring(str)
-
-	if not chunk then
-		return nil
-	end
-
-	local ok, result = pcall(chunk)
-
-	return ok and result or nil
-end
-
--- 序列化 mod_main_config 到字符串
-function ModManagerView:_serialize_main_config(cfg)
-	local lines = {"return {"}
-
-	lines[#lines + 1] = "\tenabled = " .. tostring(cfg.enabled) .. ","
-
-	if cfg.not_mod_path then
-		local items = {}
-
-		for _, v in ipairs(cfg.not_mod_path) do
-			table.insert(items, string.format("%q", v))
-		end
-
-		lines[#lines + 1] = "\tnot_mod_path = {" .. table.concat(items, ", ") .. "},"
-	end
-
-	if cfg.ignored_path then
-		local items = {}
-
-		for _, v in ipairs(cfg.ignored_path) do
-			table.insert(items, string.format("%q", v))
-		end
-
-		lines[#lines + 1] = "\tignored_path = {" .. table.concat(items, ", ") .. "},"
-	end
-
-	if cfg.ppref ~= nil then
-		lines[#lines + 1] = "\tppref = " .. string.format("%q", cfg.ppref) .. ","
-	end
-
-	if cfg.check_paths then
-		local items = {}
-
-		for _, v in ipairs(cfg.check_paths) do
-			table.insert(items, string.format("%q", v))
-		end
-
-		lines[#lines + 1] = "\tcheck_paths = {" .. table.concat(items, ", ") .. "},"
-	end
-
-	lines[#lines + 1] = "}"
-
-	return table.concat(lines, "\n")
-end
-
--- 序列化 mod config.lua 到字符串
-function ModManagerView:_serialize_mod_config(cfg)
-	local lines = {"return {"}
-
-	local function write_val(k, v)
-		if type(v) == "string" then
-			lines[#lines + 1] = string.format("\t%s = %q,", k, v)
-		elseif type(v) == "boolean" then
-			lines[#lines + 1] = string.format("\t%s = %s,", k, tostring(v))
-		elseif type(v) == "number" then
-			lines[#lines + 1] = string.format("\t%s = %s,", k, tostring(v))
-		elseif type(v) == "table" then
-			local items = {}
-
-			for _, item in ipairs(v) do
-				table.insert(items, string.format("%q", tostring(item)))
-			end
-
-			lines[#lines + 1] = string.format("\t%s = {%s},", k, table.concat(items, ", "))
-		end
-	end
-
-	-- 按固定顺序写出，保持可读性
-	local ordered = {"name", "version", "game_version", "desc", "url", "by", "enabled", "priority"}
-	local written = {}
-
-	for _, k in ipairs(ordered) do
-		if cfg[k] ~= nil then
-			write_val(k, cfg[k])
-			written[k] = true
-		end
-	end
-
-	-- 写出其余键
-	for k, v in pairs(cfg) do
-		if not written[k] then
-			write_val(k, v)
-		end
-	end
-
-	lines[#lines + 1] = "}"
-
-	return table.concat(lines, "\n")
-end
-
--- 重新加载模组列表到滚动列表
-function ModManagerView:_reload_list()
-	self.mod_list:clear_rows()
-	self._mod_rows = {}
-
-	local mods_dir = "mods/local"
-
-	-- 读取 not_mod_path 排除项（先尝试磁盘，再 require）
-	local not_mod_path = {"mod_template", "all"}
-	local disk_cfg = self:_read_main_config()
-
-	if disk_cfg then
-		not_mod_path = disk_cfg.not_mod_path or not_mod_path
-		self.global_toggle:set_value(disk_cfg.enabled ~= false)
-	else
-		local ok, mmc = pcall(require, "mods.local.mod_main_config")
-
-		if ok and mmc then
-			not_mod_path = mmc.not_mod_path or not_mod_path
-			self.global_toggle:set_value(mmc.enabled ~= false)
-		end
-	end
-
-	local items = FS.getDirectoryItems(mods_dir)
-
-	if not items then
+function ModManagerView:_start_http_thread()
+	if self._http_thread then
 		return
 	end
+	local req_ch = love.thread.getChannel("mod_store_http_req")
+	local resp_ch = love.thread.getChannel("mod_store_http_resp")
+	while req_ch:getCount() > 0 do
+		req_ch:pop()
+	end
+	while resp_ch:getCount() > 0 do
+		resp_ch:pop()
+	end
+	self._http_thread = love.thread.newThread(HTTP_WORKER)
+	self._http_thread:start()
+end
 
+function ModManagerView:_stop_http_thread()
+	if not self._http_thread then
+		return
+	end
+	love.thread.getChannel("mod_store_http_req"):push("quit")
+	self._http_thread:wait()
+	self._http_thread = nil
+end
+
+function ModManagerView:_refresh_header_buttons()
+	self.mode_btn:set_text(self.mode == "local" and "视图：本地" or "视图：商店")
+	self.sort_btn:set_text("排序：" .. SORT_OPTIONS[self.sort_idx].label)
+	self.category_btn:set_text("分类：" .. CATEGORY_OPTIONS[self.category_idx].label)
+	local in_store = self.mode == "store"
+	local task_running = self._active_task ~= nil
+	self.refresh_btn:set_text(in_store and "刷新商店" or "查询远端")
+	self.sort_btn:set_enabled(in_store and not self._active_task)
+	self.category_btn:set_enabled(in_store and not self._active_task)
+	self.refresh_btn:set_enabled(not self._active_task)
+	self.prev_page_btn.hidden = not in_store
+	self.page_lbl.hidden = not in_store
+	self.next_page_btn.hidden = not in_store
+	self.prev_page_btn:set_enabled(in_store and not task_running and self.store_page > 1)
+	self.next_page_btn:set_enabled(in_store and not task_running and self.store_page < self.store_total_pages)
+	self.page_lbl.text = string.format("第%d/%d页", self.store_page, self.store_total_pages)
+	self.task_cancel_btn:set_enabled(task_running)
+	self.update_all_btn:set_enabled(not self._active_task and self.mode == "store")
+end
+
+function ModManagerView:_set_status(text, progress)
+	self._status_text = safe_tostring(text or "")
+	self.hint_lbl.text = self._status_text
+	if self.task_status_lbl then
+		self.task_status_lbl.text = self._status_text
+	end
+	if progress == nil then
+		self._progress_target = self._progress_target
+	else
+		self._progress_target = math.max(0, math.min(100, progress))
+	end
+end
+
+function ModManagerView:_set_progress(progress)
+	if progress == nil then
+		return
+	end
+	self._progress_target = math.max(0, math.min(100, progress))
+end
+
+function ModManagerView:_render_progress()
+	self._progress_value = self._progress_value + (self._progress_target - self._progress_value) * 0.2
+	local w = (self.progress_bg.size.x) * (self._progress_value / 100)
+	self.progress_fill.shape.args[4] = w
+	self.progress_fill.size = V.v(w, self.progress_fill.size.y)
+end
+
+function ModManagerView:_serialize_lua(tbl)
+	return persistence.serialize_to_string(tbl)
+end
+
+function ModManagerView:_read_lua_table(path)
+	local chunk, err = FS.load(path)
+	if not chunk then
+		return nil, err
+	end
+	local ok, result = pcall(chunk)
+	if not ok then
+		return nil, result
+	end
+	if type(result) ~= "table" then
+		return nil, "not table"
+	end
+	return result, nil
+end
+
+function ModManagerView:_read_main_config()
+	local cfg = mod_paths.load_main_config()
+	return cfg
+end
+
+function ModManagerView:_write_main_config(cfg)
+	local str = self:_serialize_lua(cfg)
+	return FS.write(mod_paths.MAIN_CONFIG_PATH, str)
+end
+
+function ModManagerView:_read_mod_config(path)
+	return self:_read_lua_table(path)
+end
+
+function ModManagerView:_write_mod_config(path, cfg)
+	return FS.write(path, self:_serialize_lua(cfg))
+end
+
+function ModManagerView:_get_candidate_sites()
+	local params = main and main.params or {}
+	local last = params and params.update_last_site or STORE_BACKUP_SITES[1]
+	local sites = {last}
+	for _, site in ipairs(STORE_BACKUP_SITES) do
+		if site ~= last then
+			sites[#sites + 1] = site
+		end
+	end
+	return sites
+end
+
+function ModManagerView:_request(url, options, timeout_sec)
+	timeout_sec = timeout_sec or 20
+	self._request_id = self._request_id + 1
+	local req_id = self._request_id
+	local req_ch = love.thread.getChannel("mod_store_http_req")
+	local resp_ch = love.thread.getChannel("mod_store_http_resp")
+	req_ch:push({
+		id = req_id,
+		url = url,
+		options = options
+	})
+
+	local start_t = love.timer.getTime()
+	while true do
+		if self._cancel_requested then
+			return nil, "cancelled"
+		end
+		if love.timer.getTime() - start_t > timeout_sec then
+			return nil, "timeout"
+		end
+		while resp_ch:getCount() > 0 do
+			local resp = resp_ch:pop()
+			if resp and resp.id == req_id then
+				return resp, nil
+			end
+		end
+		coroutine.yield()
+	end
+end
+
+function ModManagerView:_select_store_base_url()
+	if self._selected_site and self._selected_site ~= "" then
+		return self._selected_site:gsub("/+$", "") .. "/plugins"
+	end
+	local candidates = self:_get_candidate_sites()
+	for i, site in ipairs(candidates) do
+		self:_set_status(string.format("正在选择插件商店地址（%d/%d）：%s", i, #candidates, site), 0)
+		local test_url = site:gsub("/+$", "") .. "/plugins/list?page=1&page_size=1&sort=hot&category=all"
+		local resp, err = self:_request(test_url, {
+			method = "GET"
+		}, 10)
+		if err then
+			self:_set_status("地址不可用：" .. site .. "（" .. err .. "）", 0)
+		elseif tonumber(resp.code) == 200 then
+			self._selected_site = site
+			local params = main and main.params
+			if params and params.update_last_site ~= site then
+				params.update_last_site = site
+				storage:save_settings(params)
+			end
+			self:_set_status("已选中插件商店地址：" .. site, 0)
+			return site:gsub("/+$", "") .. "/plugins"
+		else
+			self:_set_status("地址不可用：" .. site .. "（HTTP " .. tostring(resp.code) .. "）", 0)
+		end
+	end
+	return nil
+end
+
+function ModManagerView:_store_cache_key(base, sort_val, category_val, page, page_size)
+	return table.concat({base or "", sort_val or "", category_val or "", tostring(page or 1), tostring(page_size or STORE_PAGE_SIZE)}, "::")
+end
+
+function ModManagerView:_decode_store_page(body, fallback_page)
+	local items = body.items or {}
+	local filtered = {}
+	local by_entry = {}
+	for _, item in ipairs(items) do
+		if in_game_version(item) then
+			filtered[#filtered + 1] = item
+			if item.entry and not by_entry[item.entry] then
+				by_entry[item.entry] = item
+			end
+		end
+	end
+
+	local page = math.max(1, tonumber(body.page or body.current_page) or fallback_page or 1)
+	local total = tonumber(body.total or body.total_count or body.count)
+	local total_pages = tonumber(body.total_pages or body.page_count)
+	local page_size = tonumber(body.page_size or body.per_page or body.limit) or STORE_PAGE_SIZE
+	local has_more = body.has_more
+	if has_more == nil then
+		has_more = body.has_next
+	end
+	if type(has_more) ~= "boolean" then
+		has_more = #items >= page_size
+	end
+
+	if total_pages and total_pages > 0 then
+		total_pages = math.max(1, math.floor(total_pages))
+	elseif total and total > 0 then
+		total_pages = math.max(1, math.ceil(total / math.max(1, page_size)))
+	else
+		total_pages = math.max(page, has_more and (page + 1) or page)
+	end
+
+	return {
+		items = filtered,
+		by_entry = by_entry,
+		page = math.min(page, total_pages),
+		total_pages = total_pages,
+		page_size = page_size,
+		has_more = has_more
+	}
+end
+
+function ModManagerView:_get_store_page(base, sort_val, category_val, page, use_cache)
+	local key = self:_store_cache_key(base, sort_val, category_val, page, STORE_PAGE_SIZE)
+	if use_cache ~= false and self._store_page_cache[key] then
+		return true, self._store_page_cache[key], true
+	end
+
+	local url = string.format("%s/list?page=%d&page_size=%d&sort=%s&category=%s", base, page, STORE_PAGE_SIZE, sort_val, category_val)
+	local resp, err = self:_request(url, {
+		method = "GET"
+	}, 20)
+	if err then
+		return false, "拉取插件列表失败：" .. err, false
+	end
+	if tonumber(resp.code) ~= 200 then
+		return false, "拉取插件列表失败：HTTP " .. tostring(resp.code), false
+	end
+	local ok, body = pcall(json.decode, resp.body)
+	if not ok or type(body) ~= "table" then
+		return false, "插件列表解析失败", false
+	end
+
+	local parsed = self:_decode_store_page(body, page)
+	self._store_page_cache[key] = parsed
+	return true, parsed, false
+end
+
+function ModManagerView:_fetch_store_list()
+	self._cancel_requested = false
+	local base = self:_select_store_base_url()
+	if not base then
+		return false, "没有可用插件商店地址"
+	end
+	local sort_val = SORT_OPTIONS[self.sort_idx].value
+	local category_val = CATEGORY_OPTIONS[self.category_idx].value
+	local page = math.max(1, tonumber(self.store_page) or 1)
+	self:_set_status(string.format("正在刷新插件商店（第 %d 页）…", page), 5)
+	local ok, page_data_or_err = self:_get_store_page(base, sort_val, category_val, page, true)
+	if not ok then
+		return false, page_data_or_err
+	end
+	local page_data = page_data_or_err
+	self.store_page = page_data.page
+	self.store_total_pages = page_data.total_pages
+	self.store_items = page_data.items
+	for entry, item in pairs(page_data.by_entry or {}) do
+		self._remote_entry_cache[entry] = item
+	end
+	self.remote_by_entry = self._remote_entry_cache
+	self:_set_status(string.format("插件商店第 %d 页已刷新：%d 项", self.store_page, #self.store_items), 100)
+	self:_reload_local_mods()
+	self:_render_current_list()
+	return true, nil
+end
+
+function ModManagerView:_fetch_remote_entries_for_local()
+	self._cancel_requested = false
+	self:_reload_local_mods()
+	if #self.local_mods == 0 then
+		self.remote_by_entry = self._remote_entry_cache
+		self._remote_lookup_done = true
+		self:_set_status("本地没有已安装插件", 0)
+		self:_render_current_list()
+		return true, nil
+	end
+
+	local base = self:_select_store_base_url()
+	if not base then
+		return false, "没有可用插件商店地址"
+	end
+
+	local target_entries = {}
+	local total_targets = 0
+	for _, mod_data in ipairs(self.local_mods) do
+		local entry = safe_tostring(mod_data.entry)
+		if entry ~= "" then
+			if not target_entries[entry] then
+				total_targets = total_targets + 1
+			end
+			target_entries[entry] = true
+		end
+	end
+	if total_targets == 0 then
+		self._remote_lookup_done = true
+		self:_set_status("本地插件缺少可匹配的 entry 字段", 0)
+		self:_render_current_list()
+		return true, nil
+	end
+
+	local found_count = 0
+	for entry, _ in pairs(target_entries) do
+		if self._remote_entry_cache[entry] then
+			found_count = found_count + 1
+		end
+	end
+	local sort_val = SORT_OPTIONS[self.sort_idx].value
+	local category_val = "all"
+	local page = 1
+	while true do
+		if self._cancel_requested then
+			return false, "cancelled"
+		end
+		local ok, page_data_or_err = self:_get_store_page(base, sort_val, category_val, page, true)
+		if not ok then
+			return false, page_data_or_err
+		end
+		local page_data = page_data_or_err
+		for entry, item in pairs(page_data.by_entry) do
+			if target_entries[entry] and not self._remote_entry_cache[entry] then
+				self._remote_entry_cache[entry] = item
+				found_count = found_count + 1
+			end
+		end
+		self:_set_status(string.format("正在查询远端条目… 第 %d 页（已匹配 %d/%d）", page, found_count, total_targets), 5)
+		if found_count >= total_targets then
+			break
+		end
+		if page >= page_data.total_pages then
+			break
+		end
+		page = page + 1
+		coroutine.yield()
+	end
+
+	self.remote_by_entry = self._remote_entry_cache
+	self._remote_lookup_done = true
+	self:_reload_local_mods()
+	self:_render_current_list()
+	if found_count >= total_targets then
+		self:_set_status(string.format("远端条目查询完成：已匹配 %d/%d", found_count, total_targets), 100)
+	else
+		self:_set_status(string.format("远端条目查询完成：已匹配 %d/%d，仍有缺失", found_count, total_targets), 100)
+	end
+	return true, nil
+end
+
+function ModManagerView:_reload_local_mods()
+	mod_paths.ensure_storage_ready()
+	local cfg = self:_read_main_config()
+	self.global_toggle:set_value(cfg.enabled ~= false)
+
+	self.local_mods = {}
+	self.local_by_entry = {}
+	self.local_by_name = {}
+
+	local mods_dir = mod_paths.LOCAL_MODS_DIR
+	local not_mod_path = cfg.not_mod_path or {"mod_template", "all"}
+	local items = FS.getDirectoryItems(mods_dir) or {}
 	for _, name in ipairs(items) do
 		if not table.contains(not_mod_path, name) then
 			local dir_path = mods_dir .. "/" .. name
-
-			if FS.isDirectory(dir_path) then
+			if FS.getInfo(dir_path, "directory") then
 				local config_path = dir_path .. "/config.lua"
-				local cfg = self:_read_mod_config(config_path)
-
-				if cfg then
+				local mc = self:_read_mod_config(config_path)
+				if mc then
 					local mod_data = {
 						name = name,
 						path = dir_path,
 						config_path = config_path,
-						config = cfg
+						config = mc,
+						entry = mc.entry or name
 					}
-					local list_w = self.mod_list.size.x - self.mod_list.scroller_width - 2 * self.mod_list.scroller_margin - 4
-					local row = ModItemRow:new(mod_data, list_w)
-
-					self.mod_list:add_row(row)
-					-- 行间间隔
-					local gap = KView:new(V.v(list_w, 10))
-					self.mod_list:add_row(gap)
-					table.insert(self._mod_rows, row)
+					self.local_mods[#self.local_mods + 1] = mod_data
+					self.local_by_name[name] = mod_data
+					self.local_by_entry[mod_data.entry] = mod_data
 				end
 			end
+		end
+	end
+	table.sort(self.local_mods, function(a, b)
+		return (a.config.priority or 0) < (b.config.priority or 0)
+	end)
+end
+
+function ModManagerView:_delete_local_mod_by_name(mod_name)
+	local mod_data = self.local_by_name[mod_name]
+	if not mod_data then
+		return false, "本地插件不存在"
+	end
+	local ok = remove_dir_recursive(mod_data.path)
+	if not ok then
+		return false, "删除失败：" .. mod_data.path
+	end
+	self:_reload_local_mods()
+	self:_render_current_list()
+	return true, nil
+end
+
+function ModManagerView:_download_zip(item)
+	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
+	if not base then
+		return nil, "无法选择插件商店地址"
+	end
+	local filename = item.filename
+	if not filename or filename == "" then
+		return nil, "插件缺少下载文件名"
+	end
+	local url = base .. "/download/" .. url_encode(filename)
+	local chunk_size = 256 * 1024
+	local chunks = {}
+	local downloaded = 0
+	local total = nil
+	self._active_download_name = item.name or item.entry or filename
+
+	while not total or downloaded < total do
+		if self._cancel_requested then
+			return nil, "cancelled"
+		end
+		local end_pos
+		if total then
+			end_pos = math.min(downloaded + chunk_size - 1, total - 1)
+		else
+			end_pos = downloaded + chunk_size - 1
+		end
+		local resp, err = self:_request(url, {
+			method = "GET",
+			headers = {
+				["Range"] = string.format("bytes=%d-%d", downloaded, end_pos)
+			}
+		}, 20)
+		if err then
+			return nil, "下载失败：" .. err
+		end
+		local code = tonumber(resp.code)
+		if code ~= 206 and code ~= 200 then
+			return nil, "下载失败：HTTP " .. tostring(resp.code)
+		end
+
+		local headers = normalize_headers(resp.headers)
+		if not total then
+			total = parse_content_range(headers["content-range"]) or tonumber(headers["content-length"])
+			if total and code == 200 then
+				total = #resp.body
+			end
+		end
+		local body = resp.body or ""
+		chunks[#chunks + 1] = body
+		downloaded = downloaded + #body
+
+		local percent = total and (downloaded * 100 / math.max(total, 1)) or 0
+		self:_set_status(string.format("下载插件中：%s  %.1f%%", self._active_download_name, percent), percent)
+
+		if code == 200 then
+			break
+		end
+		if #body == 0 then
+			return nil, "下载返回空数据"
+		end
+	end
+
+	if total and downloaded ~= total then
+		return nil, "下载不完整"
+	end
+	return table.concat(chunks), nil
+end
+
+function ModManagerView:_collect_mod_root_candidates(base_dir)
+	local candidates = {}
+	local visited = {}
+
+	local function walk(dir, depth)
+		if depth > 4 or visited[dir] then
+			return
+		end
+		visited[dir] = true
+		if FS.getInfo(dir .. "/config.lua", "file") then
+			candidates[#candidates + 1] = dir
+		end
+		for _, name in ipairs(FS.getDirectoryItems(dir) or {}) do
+			local child = dir .. "/" .. name
+			if FS.getInfo(child, "directory") then
+				walk(child, depth + 1)
+			end
+		end
+	end
+
+	walk(base_dir, 0)
+	return candidates
+end
+
+function ModManagerView:_install_plugin(item, is_update)
+	self._cancel_requested = false
+	self:_set_status((is_update and "正在更新插件：" or "正在安装插件：") .. (item.name or item.entry or "?"), 0)
+	local zip_data, err = self:_download_zip(item)
+	if not zip_data then
+		return false, err
+	end
+	if self._cancel_requested then
+		return false, "cancelled"
+	end
+
+	local entry = safe_tostring(item.entry or "")
+	local stage_root = "tmp/mod_store_stage/" .. (entry ~= "" and entry or ("pkg_" .. tostring(os.time())))
+	remove_dir_recursive("tmp/mod_store_stage")
+	FS.createDirectory("tmp")
+	FS.createDirectory("tmp/mod_store_stage")
+	FS.createDirectory(stage_root)
+
+	self:_set_status("正在解压插件：" .. (item.name or item.entry or "?"), 92)
+	local ok, unzip_err = unzip_to_dir(zip_data, stage_root)
+	if not ok then
+		return false, unzip_err
+	end
+
+	local candidates = self:_collect_mod_root_candidates(stage_root)
+	local selected_dir = nil
+	for _, c in ipairs(candidates) do
+		local cfg = self:_read_mod_config(c .. "/config.lua")
+		local c_entry = cfg and safe_tostring(cfg.entry or "")
+		if entry ~= "" and (c_entry == entry or basename(c) == entry) then
+			selected_dir = c
+			break
+		end
+	end
+	if not selected_dir and #candidates == 1 then
+		selected_dir = candidates[1]
+	end
+	if not selected_dir and entry ~= "" and FS.getInfo(stage_root .. "/" .. entry, "directory") then
+		selected_dir = stage_root .. "/" .. entry
+	end
+	if not selected_dir then
+		return false, "安装包结构无法识别（未找到有效插件目录）"
+	end
+
+	local target_name = (entry ~= "" and entry) or basename(selected_dir)
+	local target_dir = mod_paths.LOCAL_MODS_DIR .. "/" .. target_name
+	remove_dir_recursive(target_dir)
+	copy_dir_recursive(selected_dir, target_dir)
+	remove_dir_recursive("tmp/mod_store_stage")
+
+	self:_reload_local_mods()
+	self:_render_current_list()
+	self:_set_status((is_update and "插件更新完成：" or "插件安装完成：") .. (item.name or item.entry or "?"), 100)
+	self._active_download_name = ""
+	return true, nil
+end
+
+function ModManagerView:_install_or_update_item(item)
+	local local_mod = self.local_by_entry[item.entry]
+	local need_update = local_mod and has_update(local_mod.config.version, item.version)
+	local is_update = need_update == true
+	return self:_install_plugin(item, is_update)
+end
+
+function ModManagerView:_update_all_plugins()
+	self._cancel_requested = false
+	if not next(self.remote_by_entry) then
+		local ok, err = self:_fetch_store_list()
+		if not ok then
+			return false, err
+		end
+	end
+	self:_reload_local_mods()
+	local pending = {}
+	for _, mod_data in ipairs(self.local_mods) do
+		local remote = self.remote_by_entry[mod_data.entry]
+		if remote and has_update(mod_data.config.version, remote.version) then
+			pending[#pending + 1] = {
+				local_mod = mod_data,
+				remote = remote
+			}
+		end
+	end
+	if #pending == 0 then
+		self:_set_status("没有可更新的插件", 0)
+		return true, nil
+	end
+	for i, row in ipairs(pending) do
+		if self._cancel_requested then
+			return false, "cancelled"
+		end
+		self:_set_status(string.format("一键更新（%d/%d）：%s", i, #pending, row.remote.name or row.remote.entry), (i - 1) * 100 / #pending)
+		local ok, err = self:_install_plugin(row.remote, true)
+		if not ok then
+			return false, err
+		end
+		coroutine.yield()
+	end
+	self:_set_status(string.format("一键更新完成，共 %d 个插件", #pending), 100)
+	return true, nil
+end
+
+function ModManagerView:_start_task(name, fn)
+	if self._active_task then
+		return
+	end
+	self._cancel_requested = false
+	self._task_result = nil
+	self:_set_status("正在处理：" .. name, 0)
+	self.task_dialog:order_to_front()
+	self.task_dialog.hidden = false
+	self._active_task = coroutine.create(function()
+		local ok, err = fn()
+		return {
+			ok = ok,
+			err = err
+		}
+	end)
+	self:_refresh_header_buttons()
+end
+
+function ModManagerView:_render_local_list()
+	self.mod_list:clear_rows()
+	self._mod_rows = {}
+	local list_w = self.mod_list.size.x - self.mod_list.scroller_width - 2 * self.mod_list.scroller_margin - 4
+	for _, mod_data in ipairs(self.local_mods) do
+		local cfg = mod_data.config or {}
+		local remote = self.remote_by_entry[mod_data.entry]
+		local status = ""
+		local primary_text, secondary_text
+		local on_primary, on_secondary
+
+		if remote and has_update(cfg.version, remote.version) then
+			status = string.format("可更新：v%s → v%s", safe_tostring(cfg.version), safe_tostring(remote.version))
+			primary_text = "更新"
+			on_primary = function()
+				self:_start_task("更新插件", function()
+					return self:_install_plugin(remote, true)
+				end)
+			end
+		elseif remote then
+			status = "已是最新版本"
+		else
+			status = self._remote_lookup_done and "未在商店中找到远端条目" or "未查询远端条目（点“查询远端”）"
+		end
+		secondary_text = "删除"
+		on_secondary = function()
+			self:_start_task("删除插件", function()
+				local ok, err = self:_delete_local_mod_by_name(mod_data.name)
+				if ok then
+					self:_set_status("已删除插件：" .. mod_data.name, 0)
+					return true, nil
+				end
+				return false, err
+			end)
+		end
+
+		local row = ModItemRow:new({
+			mod_data = mod_data,
+			title = cfg.name or mod_data.name,
+			meta = string.format("本地版本 v%s  作者: %s", safe_tostring(cfg.version), safe_tostring(cfg.by)),
+			desc = cfg.desc or "",
+			status = status,
+			show_toggle = true,
+			enabled = cfg.enabled ~= false,
+			on_toggle = function(v)
+				cfg.enabled = v
+			end,
+			primary_text = primary_text,
+			secondary_text = secondary_text,
+			on_primary = on_primary,
+			on_secondary = on_secondary
+		}, list_w)
+		self.mod_list:add_row(row)
+		self.mod_list:add_row(KView:new(V.v(list_w, 10)))
+		self._mod_rows[#self._mod_rows + 1] = row
+	end
+end
+
+function ModManagerView:_render_store_list()
+	self.mod_list:clear_rows()
+	local list_w = self.mod_list.size.x - self.mod_list.scroller_width - 2 * self.mod_list.scroller_margin - 4
+	for _, item in ipairs(self.store_items) do
+		local local_mod = self.local_by_entry[item.entry] or self.local_by_name[item.entry]
+		local installed = local_mod ~= nil
+		local needs_update = installed and has_update(local_mod.config.version, item.version)
+		local status
+		local primary_text = "安装"
+		if installed then
+			if needs_update then
+				status = string.format("已安装：v%s（可更新到 v%s）", safe_tostring(local_mod.config.version), safe_tostring(item.version))
+				primary_text = "更新"
+			else
+				status = "已安装且最新"
+				primary_text = "重装"
+			end
+		else
+			status = "未安装"
+		end
+
+		local row = ModItemRow:new({
+			title = item.name or item.entry or "?",
+			meta = string.format("v%s  下载:%s  作者:%s", safe_tostring(item.version), safe_tostring(item.downloads), safe_tostring(item.by)),
+			desc = item.desc or "",
+			status = status,
+			show_toggle = false,
+			primary_text = primary_text,
+			secondary_text = installed and "删除" or nil,
+			on_primary = function()
+				self:_start_task("安装插件", function()
+					return self:_install_or_update_item(item)
+				end)
+			end,
+			on_secondary = installed and function()
+				self:_start_task("删除插件", function()
+					local ok, err = self:_delete_local_mod_by_name(local_mod.name)
+					if ok then
+						self:_set_status("已删除插件：" .. local_mod.name, 0)
+						return true, nil
+					end
+					return false, err
+				end)
+			end or nil
+		}, list_w)
+		self.mod_list:add_row(row)
+		self.mod_list:add_row(KView:new(V.v(list_w, 10)))
+	end
+end
+
+function ModManagerView:_render_current_list()
+	if self.mode == "store" then
+		self:_render_store_list()
+	else
+		self:_render_local_list()
+	end
+	self:_sanitize_view_texts(self.back)
+	self:_refresh_header_buttons()
+end
+
+function ModManagerView:_sanitize_view_texts(view)
+	if not view then
+		return
+	end
+	if type(view.text) == "string" then
+		view.text = safe_tostring(view.text)
+	end
+	if type(view._text) == "string" then
+		view._text = safe_tostring(view._text)
+	end
+	local children = view.children
+	if type(children) == "table" then
+		for _, child in pairs(children) do
+			self:_sanitize_view_texts(child)
 		end
 	end
 end
 
 function ModManagerView:show()
-	self:_reload_list()
+	mod_paths.ensure_storage_ready()
+	self:_start_http_thread()
+	self:_reload_local_mods()
+	self:_render_current_list()
+	self.task_dialog.hidden = true
+	self:_set_status("切换到商店视图后会自动拉取第一页", 0)
+	self:_sanitize_view_texts(self.back)
 	ModManagerView.super.show(self)
 end
 
-local function write_file(file_path, content)
-	local f, err = io.open(file_path, "wb")
-	if not f then
-		return false, err
-	end
-	f:write(content)
-	f:close()
-	return true, nil
+function ModManagerView:hide()
+	self._cancel_requested = true
+	self:_stop_http_thread()
+	ModManagerView.super.hide(self)
 end
 
--- 将当前设置写入磁盘（save dir 覆盖）
-function ModManagerView:save()
-	-- 1. 保存总开关
-	local disk_cfg = self:_read_main_config()
-	local ok, mmc = pcall(require, "mods.local.mod_main_config")
-	local base_cfg = (disk_cfg ~= nil) and disk_cfg or (ok and mmc) or {
-		enabled = false
-	}
-	base_cfg.enabled = self.global_toggle.value
+function ModManagerView:update(dt)
+	ModManagerView.super.update(self, dt)
+	self:_sanitize_view_texts(self.back)
+	self:_render_progress()
+	if not self._active_task then
+		self.task_dialog.hidden = true
+		return
+	end
+	local ok, result = coroutine.resume(self._active_task)
+	if not ok then
+		self._active_task = nil
+		self.task_dialog.hidden = true
+		self:_set_status("操作失败：" .. tostring(result), 0)
+		log.error("mod manager task failed: %s", tostring(result))
+		self:_refresh_header_buttons()
+		return
+	end
+	if coroutine.status(self._active_task) == "dead" then
+		self._active_task = nil
+		self.task_dialog.hidden = true
+		self._task_result = result
+		if result and result.ok then
+			if self._cancel_requested then
+				self:_set_status("操作已断开", 0)
+			end
+		else
+			self:_set_status("操作失败：" .. tostring(result and result.err or "unknown"), 0)
+		end
+		self._cancel_requested = false
+		self:_refresh_header_buttons()
+	end
+end
 
-	local str = self:_serialize_main_config(base_cfg)
-	local write_success, err = write_file("mods/local/mod_main_config.lua", str)
-	if not write_success then
-		log.error("写入 mods/local/mod_main_config.lua 失败: %s", tostring(err))
+function ModManagerView:save()
+	local base_cfg = self:_read_main_config()
+	base_cfg.enabled = self.global_toggle.value
+	local ok = self:_write_main_config(base_cfg)
+	if not ok then
+		log.error("写入 %s 失败", mod_paths.MAIN_CONFIG_PATH)
 	end
 
-	-- 2. 保存各模组启用状态
 	for _, row in ipairs(self._mod_rows) do
-		local cfg = row.mod_data.config
-
-		if cfg then
-			local new_cfg = {}
-
+		local mod_data = row.opts and row.opts.mod_data
+		if mod_data and row.toggle then
+			local cfg = mod_data.config
+			local enabled = row:is_enabled()
+			local out = {}
 			for k, v in pairs(cfg) do
-				new_cfg[k] = v
+				out[k] = v
 			end
-
-			new_cfg.enabled = row:is_enabled()
-
-			local out = self:_serialize_mod_config(new_cfg)
-
-			write_success, err = write_file(row.mod_data.config_path, out)
-			if not write_success then
-				log.error("写入 %s 失败: %s", row.mod_data.config_path, tostring(err))
+			out.enabled = enabled
+			local wok = self:_write_mod_config(mod_data.config_path, out)
+			if not wok then
+				log.error("写入 %s 失败", mod_data.config_path)
 			end
 		end
 	end
 end
+
+function ModManagerView:destroy()
+	self:_stop_http_thread()
+end
+
+return ModManagerView
