@@ -10,7 +10,7 @@ SCP_PORT="${SCP_PORT:-60001}"
 SCP_USER="${SCP_USER:-dove}"
 SCP_HOST_PUBLIC="${SCP_HOST_PUBLIC:-krdovedownload6.crazyspotteddove.top}"
 SCP_HOST_LAN="${SCP_HOST_LAN:-10.112.99.5}"
-PUBLISH_QUICK="${PUBLISH_QUICK:-0}"
+PUBLISH_QUICK="${PUBLISH_QUICK:-1}"
 
 SERVER_DIR_ANDROID="${SERVER_DIR_ANDROID:-/srv/files/王国保卫战Dove版-安卓端/}"
 SERVER_DIR_WINDOWS="${SERVER_DIR_WINDOWS:-/srv/files/王国保卫战Dove版-Windows端/}"

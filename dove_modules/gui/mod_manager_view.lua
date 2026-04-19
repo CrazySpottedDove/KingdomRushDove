@@ -1863,20 +1863,16 @@ function ModManagerView:save()
 		log.error("写入 %s 失败", mod_paths.MAIN_CONFIG_PATH)
 	end
 
-	for _, row in ipairs(self._mod_rows) do
-		local mod_data = row.opts and row.opts.mod_data
-		if mod_data and row.toggle then
-			local cfg = mod_data.config
-			local enabled = row:is_enabled()
-			local out = {}
-			for k, v in pairs(cfg) do
-				out[k] = v
-			end
-			out.enabled = enabled
-			local wok = self:_write_mod_config(mod_data.config_path, out)
-			if not wok then
-				log.error("写入 %s 失败", mod_data.config_path)
-			end
+	for _, mod_data in ipairs(self.local_mods) do
+		local cfg = mod_data.config or {}
+		local out = {}
+		for k, v in pairs(cfg) do
+			out[k] = v
+		end
+		out.enabled = cfg.enabled ~= false
+		local wok = self:_write_mod_config(mod_data.config_path, out)
+		if not wok then
+			log.error("写入 %s 失败", mod_data.config_path)
 		end
 	end
 end
