@@ -18401,13 +18401,15 @@ function scripts.tower_sparking_geode.update(this, store)
 					U.animation_start(this, a_basic.animation_loop, nil, store.tick_ts, true, 5)
 					U.animation_start(this, "loop", nil, store.tick_ts, true, 6)
 
-					local enemies = U.find_enemies_in_range_filter_off(tpos(this), a.range, a_basic.vis_flags, a_basic.vis_bans)
+					-- local enemies = U.find_enemies_in_range_filter_off(tpos(this), a.range, a_basic.vis_flags, a_basic.vis_bans)
+					local _, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false, a_basic.vis_flags, a_basic.vis_bans)
 					local shot_i = 1
 
 					-- 电涌巨像进入持续攻击状态
 					while not a_basic_break() do
 						if enemies then
-							enemy = table.random(enemies)
+							-- enemy = table.random(enemies)
+							enemy = enemies[1]
 						end
 
 						local bullet = E:create_entity(a_basic.bullet)
