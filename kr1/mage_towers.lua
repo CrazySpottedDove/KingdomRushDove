@@ -248,7 +248,7 @@ tt.attacks.list[2].vis_flags = bor(F_MOD, F_RANGED, F_POLYMORPH, F_INSTAKILL)
 --#region bolt_sorcerer
 tt = RT("bolt_sorcerer", "bolt")
 tt.bullet.damage_max = 60
-tt.bullet.damage_min = 25
+tt.bullet.damage_min = 30
 tt.bullet.hit_fx = "fx_bolt_sorcerer_hit"
 tt.bullet.max_speed = 600
 tt.bullet.mods = {"mod_sorcerer_curse_dps", "mod_sorcerer_curse_armor"}
