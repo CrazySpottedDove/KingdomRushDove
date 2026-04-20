@@ -2025,7 +2025,7 @@ tt.main_script.update = function(this, store)
 		end
 
 		for i = 1, a.loops do
-			local target = U.find_nearest_soldier(store.soldiers or store.entities, owner.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
+			local target = U.find_nearest_soldier(store.soldiers or store.entities, owner.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 			local b = E:create_entity(a.entity)
 
 			if target then
