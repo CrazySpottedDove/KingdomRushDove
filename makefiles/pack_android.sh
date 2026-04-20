@@ -148,7 +148,7 @@ fi
 
 # 收集待处理 DDS 列表（相对于工作目录）
 # mapfile -d '' dds_files < <(find "$DDS_ASSETS_DIR" -type f -name "*.dds" -print0 || printf '')
-mapfile -d '' dds_files < <(find "$DDS_ASSETS_DIR" -type f -name "*.dds" ! -name "*kr4*" -print0 || printf '')
+mapfile -d '' dds_files < <(find "$DDS_ASSETS_DIR" -type f -name "*.dds" -print0 || printf '')
 
 # 更可靠地计算数量
 dds_count=${#dds_files[@]}
@@ -207,7 +207,6 @@ if [ "$rebuild_love" -eq 1 ]; then
         "_assets/kr1-desktop/images/fullhd/*.lua"
         "_assets/kr1-desktop/images/fullhd/*.luac"
         "_assets/kr1-desktop/images/fullhd/*.png"
-        # "*kr4*"
     )
     if [ "$AUDIO_COMPRESS_MODE" = "1" ]; then
         # 音频将由压缩步骤单独写入 staging，避免先拷贝原始 ogg。
