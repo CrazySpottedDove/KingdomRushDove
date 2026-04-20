@@ -49725,5 +49725,491 @@ return {
 		from = 118,
 		prefix = "zealot",
 		to = 141
+	},
+	--弓箭手lvl4
+	tower_shadow_archer_shooter_idle = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		from = 1,
+		to = 1
+	},
+	tower_shadow_archer_shooter_shootDown = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		from = 2,
+		to = 22
+	},
+	tower_shadow_archer_shooter_idleUp = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		from = 23,
+		to = 23
+	},
+	tower_shadow_archer_shooter_shootUp = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		from = 24,
+		to = 44
+	},
+	tower_shadow_archer_shooter_teleportOut = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		from = 45,
+		to = 65
+	},
+	tower_shadow_archer_shooter_teleportIn = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		from = 66,
+		to = 86
+	},
+	tower_shadow_archer_shooter_teleportInAttack = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		from = 87,
+		to = 115
+	},
+	tower_shadow_archer_shooter_teleportOutAttack = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		from = 116,
+		to = 130
+	},
+	tower_shadow_archer_shooter_shootSpecialDown = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		from = 131,
+		to = 151
+	},
+	tower_shadow_archer_shooter_shootSpecialUp = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		from = 152,
+		to = 172
+	},
+	mod_arrow_shadow_mark_run = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4_shadow_modifier",
+		from = 1,
+		to = 24
+	},
+	--乌鸦
+	darkarmy_archer_tower_crow_lvl4_bloodRed = {
+		prefix = "darkarmy_archer_tower_crow_lvl4_bloodRed",
+		from = 1,
+		to = 16
+	},
+	darkarmy_archer_tower_crow_lvl4_respawn = {
+		prefix = "darkarmy_archer_tower_crow_lvl4",
+		from = 1,
+		to = 18
+	},
+	darkarmy_archer_tower_crow_lvl4_idle = {
+		prefix = "darkarmy_archer_tower_crow_lvl4",
+		from = 19,
+		to = 30
+	},
+	darkarmy_archer_tower_crow_lvl4_fly = {
+		prefix = "darkarmy_archer_tower_crow_lvl4",
+		from = 19,
+		to = 30
+	},
+	darkarmy_archer_tower_crow_lvl4_carry = {
+		prefix = "darkarmy_archer_tower_crow_lvl4",
+		from = 31,
+		to = 44
+	},
+	--箭
+	darkarmy_archer_arrow_travel = {
+		prefix = "darkarmy_archer_arrow",
+		from = 1,
+		to = 4
+	},
+	darkarmy_archer_arrow_lvl4_travel = {
+		prefix = "darkarmy_archer_arrow_lvl4",
+		from = 1,
+		to = 4
+	},
+	arrow_shadow_mark_travel = {
+		prefix = "darkarmy_archer_arrow_special",
+		from = 1,
+		to = 1
+	},
+	darkarmy_archer_arrow_special_hit = {
+		prefix = "darkarmy_archer_arrow_special",
+		from = 2,
+		to = 8
+	},
+	--箭尾焰
+	arrow_shadow_mark_smoke_run = {
+		prefix = "darkarmy_archer_arrow_smoke",
+		from = 1,
+		to = 4
+	},
+	--流血效果
+	darkarmy_archer_tower_arrow_lvl4_blood_red = {
+		prefix = "darkarmy_archer_tower_crow_lvl4_bloodRed",
+		from = 1,
+		to = 11
+	},
+	-- shadow_crow_idle = {
+	-- 	prefix = "shadow_crow",
+	-- 	to = 10,
+	-- 	from = 1
+	-- },
+	-- shadow_crow_fly = {
+	-- 	prefix = "shadow_crow",
+	-- 	to = 10,
+	-- 	from = 1
+	-- },
+	-- shadow_crow_carry = {
+	-- 	prefix = "shadow_crow",
+	-- 	to = 30,
+	-- 	from = 11
+	-- },
+	shadow_crow_bloodRed = {
+		prefix = "darkarmy_archer_tower_crow_lvl4_bloodRed",
+		from = 1,
+		to = 16
+	},
+	shadow_crow_respawn = {
+		prefix = "darkarmy_archer_tower_crow_lvl4",
+		from = 1,
+		to = 18
+	},
+	shadow_crow_idle = {
+		prefix = "darkarmy_archer_tower_crow_lvl4",
+		from = 19,
+		to = 30
+	},
+	shadow_crow_fly = {
+		prefix = "darkarmy_archer_tower_crow_lvl4",
+		from = 19,
+		to = 30
+	},
+	shadow_crow_carry = {
+		prefix = "darkarmy_archer_tower_crow_lvl4",
+		from = 31,
+		to = 44
+	},
+	arrow_shadow_mark_particle_1 = {
+		prefix = "archer_shadow_mark_particle1",
+		to = 24,
+		from = 1
+	},
+	arrow_shadow_mark_smoke = {
+		prefix = "shadow_mark_smoke",
+		to = 1,
+		from = 1
+	},
+	arrow_shadow_smoke = {
+		prefix = "darkarmy_archer_arrow_smoke",
+		to = 10,
+		from = 1
+	},
+	tower_shadow_archer_shooter_idleDown = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		to = 1,
+		from = 1
+	},
+	tower_shadow_archer_shooter_idleUp = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		to = 1,
+		from = 1
+	},
+	tower_shadow_archer_shooter_shootDown = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		to = 16,
+		from = 2
+	},
+	tower_shadow_archer_shooter_shootUp = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		to = 16,
+		from = 2
+	},
+	tower_shadow_archer_shooter_shootShortDown = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		to = 16,
+		from = 2
+	},
+	tower_shadow_archer_shooter_shootShortUp = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		to = 16,
+		from = 2
+	},
+	tower_shadow_archer_shooter_shootSpecialDown = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		frames = {
+			17,
+			18,
+			19,
+			20,
+			21,
+			22,
+			23,
+			24,
+			25,
+			26,
+			27,
+			28,
+			29,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30
+		}
+	},
+	tower_shadow_archer_shooter_shootSpecialUp = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		frames = {
+			17,
+			18,
+			19,
+			20,
+			21,
+			22,
+			23,
+			24,
+			25,
+			26,
+			27,
+			28,
+			29,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30
+		}
+	},
+	tower_shadow_archer_shooter_shootSpecialShortDown = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		frames = {
+			17,
+			18,
+			19,
+			20,
+			21,
+			22,
+			23,
+			24,
+			25,
+			26,
+			27,
+			28,
+			29,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30
+		}
+	},
+	tower_shadow_archer_shooter_shootSpecialShortUp = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		frames = {
+			17,
+			18,
+			19,
+			20,
+			21,
+			22,
+			23,
+			24,
+			25,
+			26,
+			27,
+			28,
+			29,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30,
+			30
+		}
+	},
+	tower_shadow_archer_shooter_instakillDown = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		frames = {
+			31,
+			32,
+			33,
+			34,
+			35,
+			36,
+			37,
+			38,
+			39,
+			40,
+			41,
+			42,
+			43,
+			44,
+			45,
+			46,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			47,
+			48,
+			49,
+			50,
+			51,
+			52,
+			53,
+			54,
+			55,
+			56,
+			57,
+			58,
+			59,
+			60,
+			61,
+			62,
+			63
+		}
+	},
+	tower_shadow_archer_shooter_instakillUp = {
+		prefix = "darkarmy_archer_tower_shooter_lvl4",
+		frames = {
+			31,
+			32,
+			33,
+			34,
+			35,
+			36,
+			37,
+			38,
+			39,
+			40,
+			41,
+			42,
+			43,
+			44,
+			45,
+			46,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			64,
+			47,
+			48,
+			49,
+			50,
+			51,
+			52,
+			53,
+			54,
+			55,
+			56,
+			57,
+			58,
+			59,
+			60,
+			61,
+			62,
+			63
+		}
 	}
 }

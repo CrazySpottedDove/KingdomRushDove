@@ -55,7 +55,8 @@ game.required_textures = {
 	"go_towers_paladin_covenant",
 	"go_towers_arborean_emissary",
 	"go_towers_dragons",
-	"tower_holders"
+	"tower_holders",
+	"kr4_dark_army_tower_archer"
 }
 game.ref_h = REF_H
 game.ref_w = REF_W
@@ -84,7 +85,8 @@ game.required_sounds = {
 	"tower_ghost",
 	"tower_paladin_covenant",
 	"tower_arborean_emissary",
-	"tower_dragons"
+	"tower_dragons",
+	"tower_shadow_archer"
 }
 game.simulation_systems = {
 	"level",

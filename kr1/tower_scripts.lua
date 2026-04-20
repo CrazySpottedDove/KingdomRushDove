@@ -22530,4 +22530,400 @@ function scripts.mod_faerie_dragon_slow.insert(this, store)
 end
 
 --#endregion tower_dragons_lvl4
+
+-- 黑弓 Begin
+
+scripts.tower_shadow_archer = {}
+
+function scripts.tower_shadow_archer.remove(this, store)
+	for i = 1, #this.crows do
+		this.crows[i].owner = nil
+		queue_remove(store, this.crows[i])
+	end
+
+	return true
+end
+
+function scripts.tower_shadow_archer.update(this, store)
+	local a = this.attacks
+	local aa = this.attacks.list[1]
+	local as = this.attacks.list[2]
+	local am = this.attacks.list[3]
+	local pow_s = this.powers.blade
+	local pow_m = this.powers.mark
+	local pow_c = this.powers.crow
+	local tpos = tpos(this)
+	local sid = 3
+
+	local function y_do_shot(attack, enemy, level)
+		S:queue(attack.sound, attack.sound_args)
+
+		local soffset = this.render.sprites[sid].offset
+		local an, af, ai = U.animation_name_facing_point(this, attack.animation, enemy.pos, sid, soffset)
+
+		U.animation_start(this, an, af, store.tick_ts, false, sid)
+
+		local shoot_time = attack.shoot_time
+
+		U.y_wait(store, shoot_time * this.tower.cooldown_factor)
+
+		if enemy.health.dead then
+			enemy = U.refind_foremost_enemy(enemy, store, attack.vis_flags, attack.vis_bans)
+		end
+
+		local boffset = attack.bullet_start_offset[ai]
+		local b = E:create_entity(attack.bullet)
+
+		b.pos.x = this.pos.x + soffset.x + boffset.x * (af and -1 or 1)
+		b.pos.y = this.pos.y + soffset.y + boffset.y
+		b.bullet.from = V.vclone(b.pos)
+		b.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
+		b.bullet.target_id = enemy.id
+		b.bullet.level = level
+		b.bullet.damage_factor = this.tower.damage_factor
+
+		queue_insert(store, b)
+
+		if attack.shot_fx then
+			local fx = E:create_entity(attack.shot_fx)
+
+			fx.pos.x, fx.pos.y = b.bullet.from.x, b.bullet.from.y
+
+			local bb = b.bullet
+
+			if bb.to.x > this.pos.x then
+				fx.render.sprites[1].offset = v(5, 0)
+			else
+				fx.render.sprites[1].offset = v(-5, 0)
+			end
+			fx.render.sprites[1].r = V.angleTo(bb.to.x - bb.from.x, bb.to.y - bb.from.y)
+			fx.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, fx)
+		end
+
+		U.y_animation_wait(this, sid)
+
+		an, af = U.animation_name_facing_point(this, "idle", enemy.pos, sid, soffset)
+
+		U.animation_start(this, an, af, store.tick_ts, true, sid)
+	end
+
+	aa.ts = store.tick_ts
+
+	while true do
+		if this.tower.blocked then
+			coroutine.yield()
+		else
+			if pow_m.changed then
+				pow_m.changed = nil
+
+				if pow_m.level == 1 then
+					am.ts = store.tick_ts
+				end
+			end
+
+			if pow_s.changed then
+				pow_s.changed = nil
+
+				if pow_s.level == 1 then
+					as.ts = store.tick_ts
+				end
+				as.cooldown = as.cooldowns[pow_s.level]
+			end
+
+			if pow_c.changed then
+				pow_c.changed = nil
+				this.render.sprites[4].disabled = nil
+				for i = 1, pow_c.level - #this.crows do
+					local e = E:create_entity("shadow_crow")
+
+					e.pos = V.vclone(this.pos)
+					e.idle_pos = V.v(this.pos.x + 20, this.pos.y)
+
+					queue_insert(store, e)
+					table.insert(this.crows, e)
+
+					e.owner = this
+					e.owner_idx = #this.crows
+				end
+			end
+		end
+
+		if ready_to_use_power(pow_s, as, store, this.tower.cooldown_factor) then
+			local enemy = U.find_first_enemy_in_range_filter_off(tpos, a.range, as.vis_flags, as.vis_bans)
+			if enemy then
+				as.ts = store.tick_ts
+				S:queue(as.sound)
+				local shooter = this.render.sprites[sid]
+				local soffset = this.render.sprites[sid].offset
+				local ani, flip = U.animation_name_facing_point(this, "teleportOut", enemy.pos, sid, soffset)
+				U.y_animation_play(this, ani, flip, store.tick_ts, false, sid)
+				local enemies = U.find_enemies_in_range_filter_off(tpos, a.range, as.vis_flags, as.vis_bans)
+				if enemies then
+					table.sort(enemies, function(e1, e2)
+						if U.enemy_is_silent_target(e1) and not U.enemy_is_silent_target(e2) then
+							return true
+						end
+						if not U.enemy_is_silent_target(e1) and U.enemy_is_silent_target(e2) then
+							return false
+						end
+						if e1.health.hp > e2.health.hp then
+							return true
+						end
+						return false
+					end)
+
+					enemy = nil
+					for i = 1, #enemies do
+						if not enemies[i]._tower_shadow_archer_to_kill then
+							enemy = enemies[i]
+							break
+						end
+					end
+
+					if enemy then
+						enemy._tower_shadow_archer_to_kill = true
+						SU.stun_inc(enemy)
+						S:queue("TowerShadowInstakill")
+						local lpos, lflip = U.melee_slot_position({
+							soldier = {
+								melee_slot_offset = v(0, 0)
+							}
+						}, enemy, 1, true)
+						shooter.offset = v(lpos.x - shooter.pos.x, lpos.y - shooter.pos.y + 18)
+						U.animation_start(this, "teleportInAttack", lflip, store.tick_ts, false, sid)
+						U.y_wait(store, as.shoot_time * this.tower.cooldown_factor)
+
+						local d = E:create_entity("damage")
+						d.source_id = this.id
+						d.target_id = enemy.id
+						d.damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_FX_NOT_EXPLODE)
+						queue_damage(store, d)
+
+						U.y_animation_wait(this, sid)
+						SU.stun_dec(enemy)
+						U.y_animation_play(this, "teleportOutAttack", lflip, store.tick_ts, false, sid)
+						this.render.sprites[sid].offset = soffset
+						enemy._tower_shadow_archer_to_kill = nil
+					else
+						as.ts = as.ts + fts(10)
+					end
+				end
+
+				U.y_animation_play(this, "teleportIn", flip, store.tick_ts, false, sid)
+				U.animation_start(this, "idle", flip, store.tick_ts, false, sid)
+			else
+				as.ts = as.ts + fts(10)
+			end
+		end
+
+		if ready_to_use_power(pow_m, am, store, this.tower.cooldown_factor) then
+			local enemy = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, false, am.vis_flags, am.vis_bans, function(e)
+				return not U.has_modifier(store, e, "mod_arrow_shadow_mark") and e.health.hp >= 1000
+			end)
+
+			if enemy then
+				am.ts = store.tick_ts
+				y_do_shot(am, enemy, pow_m.level)
+			else
+				am.ts = am.ts + fts(10)
+			end
+		end
+
+		if ready_to_attack(aa, store, this.tower.cooldown_factor) then
+			local enemy = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, false, aa.vis_flags, aa.vis_bans)
+
+			if enemy then
+				aa.ts = store.tick_ts
+				y_do_shot(aa, enemy, 0)
+			else
+				aa.ts = aa.ts + fts(10)
+			end
+		end
+
+		if store.tick_ts - aa.ts > this.tower.long_idle_cooldown then
+			local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos, sid)
+
+			U.animation_start(this, an, af, store.tick_ts, true, sid)
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.shadow_crow = {}
+
+function scripts.shadow_crow.update(this, store)
+	local sp = this.render.sprites[1]
+	local fm = this.force_motion
+	local ca = this.custom_attack
+	local dest = V.vclone(this.idle_pos)
+	local mytarget = nil
+
+	local function force_move_step(dest, max_speed, ramp_radius, accel_cap)
+		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
+		local dist = V.len(dx, dy)
+		local df = 1
+		local ac = accel_cap or 900
+
+		if ramp_radius and ramp_radius > 0 and dist <= ramp_radius then
+			df = math.max(dist / ramp_radius, 0.1)
+		end
+
+		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(ac, V.mul(10 * df, dx, dy)))
+		fm.v.x, fm.v.y = V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y))
+		fm.v.x, fm.v.y = V.trim(max_speed, fm.v.x, fm.v.y)
+		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
+		fm.a.x, fm.a.y = V.mul(-0.05 / store.tick_length, fm.v.x, fm.v.y)
+		sp.flip_x = this.pos.x < dest.x
+	end
+
+	sp.offset.y = this.flight_height
+
+	while true do
+		if not this.owner then
+			queue_remove(store, this)
+			return
+		end
+
+		if mytarget and mytarget.health.dead then
+			mytarget = nil
+		end
+
+		if mytarget and V.dist(mytarget.pos.x, mytarget.pos.y, this.idle_pos.x, this.idle_pos.y) > this.owner.attacks.range then
+			mytarget = nil
+		end
+
+		if not mytarget then
+			mytarget = U.find_nearest_enemy(store.entities, tpos(this.owner), 0, this.owner.attacks.range, ca.vis_flags, ca.vis_bans)
+		end
+
+		if mytarget and not this.owner.tower.blocked then
+			local target = store.entities[mytarget.id]
+
+			if not target or target.health.dead then
+				mytarget = nil
+			else
+				local dist = V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y)
+				local target_speed = target.motion and target.motion.max_speed or 0
+				local effective_chase_speed = math.max(this.flight_speed_busy - target_speed * 0.5, this.flight_speed_busy * 0.3)
+				local lead_time = math.max(0.06, math.min(dist / effective_chase_speed, 0.6)) * 1.8
+				local pred_pos
+
+				if target.motion and target.motion.v then
+					local px, py = V.add(target.pos.x, target.pos.y, V.mul(lead_time, target.motion.v.x, target.motion.v.y))
+					pred_pos = V.v(px, py)
+				else
+					pred_pos = P:predict_enemy_pos(target, lead_time)
+				end
+
+				dest.x, dest.y = pred_pos.x, pred_pos.y
+				U.animation_start(this, "fly", nil, store.tick_ts, true)
+				force_move_step(dest, this.flight_speed_busy, this.ramp_dist_busy, 4200)
+
+				local bite_dist2 = V.dist2(this.pos.x, this.pos.y, target.pos.x, target.pos.y)
+
+				if ready_to_attack(ca, store, this.owner.tower.cooldown_factor) and bite_dist2 <= 2304 then
+					U.animation_start(this, "carry", nil, store.tick_ts, true)
+
+					local d = E:create_entity("damage")
+					d.source_id = this.id
+					d.target_id = target.id
+					d.value = math.random(ca.damage_min, ca.damage_max) * this.owner.tower.damage_factor
+					d.damage_type = ca.damage_type
+					queue_damage(store, d)
+
+					d = E:create_entity("damage")
+					d.source_id = this.id
+					d.target_id = target.id
+					d.value = this.damage_armor
+					d.damage_type = DAMAGE_ARMOR
+					queue_damage(store, d)
+
+					ca.ts = store.tick_ts
+					if this.custom_attack.sound_chance > math.random() then
+						S:queue(this.custom_attack.sound)
+					end
+				end
+			end
+		end
+
+		if not mytarget then
+			dest.x, dest.y = this.idle_pos.x, this.idle_pos.y
+			U.animation_start(this, "fly", nil, store.tick_ts, true)
+			force_move_step(dest, this.flight_speed_idle, this.ramp_dist_idle, 700)
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.mod_arrow_shadow_mark = {}
+
+function scripts.mod_arrow_shadow_mark.insert(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+
+	if not target or target.health.dead or not target.unit then
+		return false
+	end
+
+	if band(target.vis.flags, F_FLYING) ~= 0 then
+		this.render.sprites[1].offset = this.custom_offsets.flying
+	end
+
+	m.received_damage_factor = m.received_damage_factors[m.level]
+	m.duration = m.durations[m.level]
+
+	target.health.damage_factor = target.health.damage_factor * m.received_damage_factor
+
+	signal.emit("mod-applied", this, target)
+
+	return true
+end
+
+function scripts.mod_arrow_shadow_mark.update(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+
+	if not target then
+		queue_remove(store, this)
+
+		return
+	end
+
+	this.pos.x, this.pos.y = target.pos.x, target.pos.y
+
+	m.ts = store.tick_ts
+
+	while true do
+		target = store.entities[m.target_id]
+
+		if not target or target.health.dead or store.tick_ts - m.ts > m.duration then
+
+			queue_remove(store, this)
+
+			return
+		end
+
+		this.pos.x, this.pos.y = target.pos.x, target.pos.y
+
+		coroutine.yield()
+	end
+end
+
+function scripts.mod_arrow_shadow_mark.remove(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+
+	if target then
+		target.health.damage_factor = target.health.damage_factor / m.received_damage_factor
+	end
+
+	return true
+end
+
+-- 黑弓 End
+
 return scripts

@@ -984,7 +984,9 @@ upgrades.arrows = {
 	"bullet_tower_ballista_lvl4",
 	"bullet_tower_ballista_skill_final_shot",
 	"arrow_hero_vesper_long_arrow",
-	"arrow_hero_vesper_short_arrow"
+	"arrow_hero_vesper_short_arrow",
+	"arrow_tower_shadow_archer",
+	"arrow_tower_shadow_archer_mark"
 }
 
 upgrades.soldiers = {

@@ -385,6 +385,13 @@ return {
 			tt_title = _("TOWER_BALLISTA_NAME"),
 			tt_desc = _("TOWER_BALLISTA_1_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_shadow_archer",
+			image = "kr4_main_icons_0001",
+			place = 19,
+			tt_title = _("TOWER_SHADOW_ARCHER_NAME"),
+			tt_desc = _("TOWER_SHADOW_ARCHER_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	barrack = {{M(tpl.common_upgrade, {
@@ -2948,5 +2955,54 @@ return {
 		place = 5,
 		tt_title = _("SPECIAL_REPAIR_STAGE_40_NAME"),
 		tt_desc = _("SPECIAL_REPAIR_STAGE_40_DESCRIPTION")
-	}}}
+	}}},
+	shadow_archer = {{M(tpl.upgrade_power, {
+		action_arg = "mark",
+		image = "kr4_special_icons_0019",
+		place = 6,
+		sounds = {"ShadowArcherMarkTaunt"},
+		tt_phrase = _("TOWER_SHADOW_ARCHER_MARK_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SHADOW_ARCHER_MARK_NAME_1"),
+			tt_desc = _("TOWER_SHADOW_ARCHER_MARK_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SHADOW_ARCHER_MARK_NAME_2"),
+			tt_desc = _("TOWER_SHADOW_ARCHER_MARK_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_SHADOW_ARCHER_MARK_NAME_3"),
+			tt_desc = _("TOWER_SHADOW_ARCHER_MARK_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "blade",
+		image = "kr4_special_icons_0018",
+		place = 5,
+		sounds = {"ShadowArcherBladeTaunt"},
+		tt_phrase = _("TOWER_SHADOW_ARCHER_BLADE_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SHADOW_ARCHER_BLADE_NAME_1"),
+			tt_desc = _("TOWER_SHADOW_ARCHER_BLADE_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SHADOW_ARCHER_BLADE_NAME_2"),
+			tt_desc = _("TOWER_SHADOW_ARCHER_BLADE_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_SHADOW_ARCHER_BLADE_NAME_3"),
+			tt_desc = _("TOWER_SHADOW_ARCHER_BLADE_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "crow",
+		place = 7,
+		image = "kr4_special_icons_0020",
+		sounds = {"ShadowArcherCrowTaunt"},
+		tt_phrase = _("TOWER_SHADOW_ARCHER_CROW_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SHADOW_ARCHER_CROW_NAME_1"),
+			tt_desc = _("TOWER_SHADOW_ARCHER_CROW_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SHADOW_ARCHER_CROW_NAME_2"),
+			tt_desc = _("TOWER_SHADOW_ARCHER_CROW_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_SHADOW_ARCHER_CROW_NAME_3"),
+			tt_desc = _("TOWER_SHADOW_ARCHER_CROW_DESCRIPTION_3")
+		}}
+	}), tpl.sell}}
 }
