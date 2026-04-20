@@ -680,7 +680,7 @@ function screen_map:normalize_selected_heroes()
 	end
 
 	local valid = {}
-	for _, selected_name in pairs(heroes.selected) do
+	for _, selected_name in ipairs(heroes.selected) do
 		if selected_name and get_hero_index(selected_name) then
 			table.insert(valid, selected_name)
 		end
@@ -5559,7 +5559,7 @@ function HeroRoomViewKR1:initialize(size)
 	local selected_names = screen_map.user_data.heroes.selected
 	local shown_name = selected_names[1] or "hero_gerald"
 
-	for _, selected_name in pairs(selected_names) do
+	for _, selected_name in ipairs(selected_names) do
 		self:select_hero(selected_name, true)
 	end
 
@@ -5614,7 +5614,7 @@ function HeroRoomViewKR1:show_hero(name)
 		bs.hidden = false
 		bd.hidden = true
 
-		for _, hero in pairs(screen_map.user_data.heroes.selected) do
+		for _, hero in ipairs(screen_map.user_data.heroes.selected) do
 			if hero == name then
 				bs.hidden = true
 				bd.hidden = false
@@ -5645,7 +5645,7 @@ function HeroRoomViewKR1:deselect_hero(name)
 
 	local last_hero_num = #screen_map.user_data.heroes.selected
 
-	for i, hero in pairs(screen_map.user_data.heroes.selected) do
+	for i, hero in ipairs(screen_map.user_data.heroes.selected) do
 		if hero == name then
 			table.remove(screen_map.user_data.heroes.selected, i)
 
@@ -5715,7 +5715,7 @@ function HeroRoomViewKR1:select_hero(name, silent)
 			return
 		end
 	else
-		for i, hero in pairs(screen_map.user_data.heroes.selected) do
+		for i, hero in ipairs(screen_map.user_data.heroes.selected) do
 			if hero == name then
 				if silent then
 					if i == 1 then
