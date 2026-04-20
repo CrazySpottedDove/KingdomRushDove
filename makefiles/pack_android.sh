@@ -6,6 +6,10 @@ if ! command -v zip >/dev/null 2>&1; then
     echo "ERROR: zip not found" >&2
     exit 1
 fi
+if ! command -v rsync >/dev/null 2>&1; then
+    echo "ERROR: rsync not found" >&2
+    exit 1
+fi
 
 # 选择 ImageMagick 命令：优先 magick，再用 convert
 if command -v magick >/dev/null 2>&1; then
@@ -153,7 +157,12 @@ if [ "$rebuild_love" -eq 1 ]; then
     # 生成 Android 专用渲染排序库，避免与 Linux 同名库混用
     # bash makefiles/build_render_sort_android.sh
 
-    echo "Creating base archive (excluding PNGs) -> $ARCHIVE_DIR"
+    pack_tmp_root=$(mktemp -d)
+    trap 'rm -rf "$pack_tmp_root"' EXIT
+    stage_dir="$pack_tmp_root/stage"
+    mkdir -p "$stage_dir"
+
+    echo "Staging package files -> $stage_dir"
 
     EXCLUDES=(
         "*.dds"
@@ -201,14 +210,14 @@ if [ "$rebuild_love" -eq 1 ]; then
         # "*kr4*"
     )
     if [ "$AUDIO_COMPRESS_MODE" = "1" ]; then
-        # 音频将由压缩步骤单独追加，避免基础 zip 先打入原始 ogg 再替换。
+        # 音频将由压缩步骤单独写入 staging，避免先拷贝原始 ogg。
         EXCLUDES+=("_assets/kr1-desktop/sounds/files/*.ogg")
     fi
-    ZIP_EXCLUDES=()
+    RSYNC_EXCLUDES=()
     for pattern in "${EXCLUDES[@]}"; do
-        ZIP_EXCLUDES+=("-x" "$pattern")
+        RSYNC_EXCLUDES+=("--exclude=$pattern")
     done
-    zip -r "$ARCHIVE_DIR" . "${ZIP_EXCLUDES[@]}" -q
+    rsync -a --delete "${RSYNC_EXCLUDES[@]}" ./ "$stage_dir"/
 
     # 分析图像大小，生成缩放映射
     echo "Analyzing image sizes from Lua definitions..."
@@ -217,16 +226,12 @@ if [ "$rebuild_love" -eq 1 ]; then
         echo "WARNING: Failed to analyze image sizes, using heuristic method"
     fi
 
-    # 创建临时目录用于放置缩放后的 png，保留相对路径
-    tempdir=$(mktemp -d)
-    trap 'rm -rf "$tempdir"' EXIT
-
     if [ "$dds_count" -eq 0 ]; then
         echo "No DDS files found in $DDS_ASSETS_DIR."
     else
         echo "Processing $dds_count DDS files with $JOBS jobs (incremental cache enabled)..."
 
-        export IM_CMD tempdir CACHE_DIR RESIZE_MAP_FILE HD_MODE
+        export IM_CMD stage_dir CACHE_DIR RESIZE_MAP_FILE HD_MODE
 
         # 并行增量处理 DDS -> ASTC
         # 命中缓存：直接拷贝缓存结果；未命中：转换后写入缓存并拷贝
@@ -247,7 +252,7 @@ if [ "$rebuild_love" -eq 1 ]; then
             base_name_only="$(basename "$base_name")"
 
             cache_file="$CACHE_DIR/${base_name}.astc"
-            dest="$tempdir/${base_name}.astc"
+            dest="$stage_dir/${base_name}.astc"
 
             mkdir -p "$(dirname "$dest")"
             mkdir -p "$(dirname "$cache_file")"
@@ -263,7 +268,7 @@ if [ "$rebuild_love" -eq 1 ]; then
                     "$IM_CMD" "$src" -strip "png:$temp_png" 2>/dev/null
                 fi
 
-                astcenc -cs "$temp_png" "$cache_file" 8x8 -fast -silent 2>/dev/null
+                astcenc -cs "$temp_png" "$cache_file" 8x8 -thorough -silent 2>/dev/null
                 rm -f "$temp_png"
                 cp -f "$cache_file" "$dest"
             fi
@@ -279,7 +284,7 @@ if [ "$rebuild_love" -eq 1 ]; then
                 base_name="${rel%.png}"
 
                 cache_file="$CACHE_DIR/${base_name}.astc"
-                dest="$tempdir/${base_name}.astc"
+                dest="$stage_dir/${base_name}.astc"
 
                 mkdir -p "$(dirname "$dest")"
                 mkdir -p "$(dirname "$cache_file")"
@@ -287,52 +292,34 @@ if [ "$rebuild_love" -eq 1 ]; then
                 if [ -f "$cache_file" ] && [ "$cache_file" -nt "$src" ]; then
                     cp -f "$cache_file" "$dest"
                 else
-                    astcenc -cs "$src" "$cache_file" 8x8 -fast -silent 2>/dev/null
+                    astcenc -cs "$src" "$cache_file" 8x8 -thorough -silent 2>/dev/null
                     cp -f "$cache_file" "$dest"
                 fi
             ' _ {}
         fi
 
-        processed=$(find "$tempdir" -type f \( -name "*.astc" -o -name "*.png" \) 2>/dev/null | wc -l || echo 0)
-        astc_count=$(find "$tempdir" -type f -name "*.astc" 2>/dev/null | wc -l || echo 0)
+        dds_stage_root="$stage_dir/${DDS_ASSETS_DIR#./}"
+        processed=$(find "$dds_stage_root" -type f -name "*.astc" 2>/dev/null | wc -l || echo 0)
+        astc_count="$processed"
         printf "[IMAGE] %d/%d processed (ASTC: %d, PNG: %d).\n" "$processed" "$dds_count" "$astc_count" "$((processed - astc_count))"
-    fi
-
-    # 把处理好的图片（ASTC/PNG）按相对路径追加到已有 zip 中
-    if [ -d "$tempdir" ] && [ "$(find "$tempdir" -type f | wc -l)" -gt 0 ]; then
-        echo "Appending processed images to archive..."
-        pushd "$tempdir" >/dev/null
-        zip -r "$OLDPWD/$ARCHIVE_DIR" . -q
-        popd >/dev/null
-    else
-        echo "No processed images to append."
     fi
 
     # 压缩字体文件
     echo "Minifying fonts for Android..."
     if bash makefiles/minify_font.sh; then
-        echo "Replacing fonts in archive with minified versions..."
-        # 在临时目录中创建正确的目录结构
-        mkdir -p "$ARCHIVE_DIR.tmp/_assets/all-desktop/fonts"
-        cp tmp/msyh_minify.ttc "$ARCHIVE_DIR.tmp/_assets/all-desktop/fonts/msyh.ttc"
-        cp tmp/msyhbd_minify.ttc "$ARCHIVE_DIR.tmp/_assets/all-desktop/fonts/msyhbd.ttc"
-        cp tmp/JIMOJW_minify.ttf "$ARCHIVE_DIR.tmp/_assets/all-desktop/fonts/JIMOJW.ttf"
-
-        # 从 zip 中删除原始字体文件
-        zip -d "$ARCHIVE_DIR" "_assets/all-desktop/fonts/msyh.ttc" -q 2>/dev/null || true
-        zip -d "$ARCHIVE_DIR" "_assets/all-desktop/fonts/msyhbd.ttc" -q 2>/dev/null || true
-        zip -d "$ARCHIVE_DIR" "_assets/all-desktop/fonts/JIMOJW.ttf" -q 2>/dev/null || true
-
-        # 添加新的字体文件到正确的位置
-        (cd "$ARCHIVE_DIR.tmp" && zip -r "$OLDPWD/$ARCHIVE_DIR" _assets/all-desktop/fonts -q)
-        rm -rf "$ARCHIVE_DIR.tmp"
+        echo "Replacing fonts in staging with minified versions..."
+        mkdir -p "$stage_dir/_assets/all-desktop/fonts"
+        cp tmp/msyh_minify.ttc "$stage_dir/_assets/all-desktop/fonts/msyh.ttc"
+        cp tmp/msyhbd_minify.ttc "$stage_dir/_assets/all-desktop/fonts/msyhbd.ttc"
+        cp tmp/JIMOJW_minify.ttf "$stage_dir/_assets/all-desktop/fonts/JIMOJW.ttf"
     else
         echo "WARNING: Font minification failed, using original fonts"
     fi
 
     if [ "$AUDIO_COMPRESS_MODE" = "1" ]; then
         echo "Optimizing OGG audio for Android package..."
-        audio_tmpdir=$(mktemp -d)
+        audio_tmpdir="$pack_tmp_root/audio"
+        mkdir -p "$audio_tmpdir"
         AUDIO_CACHE_DIR="$AUDIO_CACHE_DIR" \
         AUDIO_Q_SFX="$AUDIO_Q_SFX" \
         AUDIO_Q_BGM="$AUDIO_Q_BGM" \
@@ -340,11 +327,19 @@ if [ "$rebuild_love" -eq 1 ]; then
         AUDIO_SFX_SKIP_KBPS="$AUDIO_SFX_SKIP_KBPS" \
         AUDIO_BGM_SKIP_KBPS="$AUDIO_BGM_SKIP_KBPS" \
         bash makefiles/process_android_audio.sh "$audio_tmpdir" "./_assets/kr1-desktop/sounds/files"
-        (cd "$audio_tmpdir" && zip -r "$OLDPWD/$ARCHIVE_DIR" _assets/kr1-desktop/sounds/files -q)
-        rm -rf "$audio_tmpdir"
+        mkdir -p "$stage_dir/_assets/kr1-desktop/sounds/files"
+        rsync -a "$audio_tmpdir/_assets/kr1-desktop/sounds/files/" "$stage_dir/_assets/kr1-desktop/sounds/files/"
     else
         echo "Skipping Android audio optimization (AUDIO_COMPRESS_MODE=0)."
     fi
+
+    echo "Creating final archive -> $ARCHIVE_DIR"
+    rm -f "$ARCHIVE_DIR"
+    # 仅打包文件，避免把 staging 里的空目录写入 zip。
+    (
+        cd "$stage_dir"
+        find . -type f | LC_ALL=C sort | zip -X "$OLDPWD/$ARCHIVE_DIR" -@ -q
+    )
 
     # 生成 .love 文件（复制以保留 zip 备份）
     mv "$ARCHIVE_DIR" "$LOVE_FILE"

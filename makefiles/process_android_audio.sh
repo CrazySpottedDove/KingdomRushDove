@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 set -euo pipefail
 
 OUT_DIR="${1:?Usage: process_android_audio.sh <out_dir> [source_sound_dir]}"
