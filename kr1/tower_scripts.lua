@@ -22732,7 +22732,7 @@ function scripts.tower_shadow_archer.update(this, store)
 		end
 
 		if ready_to_attack(aa, store, this.tower.cooldown_factor) then
-			local enemy = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, false, aa.vis_flags, aa.vis_bans)
+			local enemy = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, a.range, aa.vis_flags, aa.vis_bans)
 
 			if enemy then
 				aa.ts = store.tick_ts
