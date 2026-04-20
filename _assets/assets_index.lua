@@ -5611,6 +5611,54 @@ return {
 		size = 65549,
 		hash = "702af95c"
 	},
+	["kr1-desktop/sounds/files/kr4_dark_army_archer_backstab_poof.ogg"] = {
+		size = 5773,
+		hash = "9c5bfc88"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_archer_backstab_stab.ogg"] = {
+		size = 15440,
+		hash = "7b92b0f9"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_archer_backstab_upg.ogg"] = {
+		size = 11426,
+		hash = "fc66d22c"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_archer_crows_nest_attack1.ogg"] = {
+		size = 10615,
+		hash = "dfa12994"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_archer_crows_nest_attack2.ogg"] = {
+		size = 8882,
+		hash = "4cb71da8"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_archer_crows_nest_upg.ogg"] = {
+		size = 7594,
+		hash = "1dc03593"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_archer_shadow_mark.ogg"] = {
+		size = 9612,
+		hash = "3e1a4134"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_archer_shadow_mark_upg.ogg"] = {
+		size = 10985,
+		hash = "debb4f08"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_archer_taunt_1.ogg"] = {
+		size = 12560,
+		hash = "728cbcca"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_archer_taunt_2.ogg"] = {
+		size = 11434,
+		hash = "7b6b4a70"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_archer_taunt_3.ogg"] = {
+		size = 10961,
+		hash = "7f9c7cf4"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_archer_taunt_4.ogg"] = {
+		size = 12403,
+		hash = "5578f150"
+	},
 	["kr1-desktop/sounds/files/kr4_flag_glow.ogg"] = {
 		size = 13700,
 		hash = "c3a0fa48"
