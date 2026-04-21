@@ -22807,11 +22807,7 @@ function scripts.shadow_crow.update(this, store)
 			return
 		end
 
-		if mytarget and (mytarget.health.dead or mytarget.health.armor <= 0) then
-			mytarget = nil
-		end
-
-		if mytarget and V.dist(mytarget.pos.x, mytarget.pos.y, this.idle_pos.x, this.idle_pos.y) > this.owner.attacks.range * 1.2 then
+		if mytarget and (mytarget.health.dead or mytarget.health.armor <= 0 or not store.entities[mytarget.id] or this.idle_pos:dist2(mytarget.pos) > this.owner.attacks.range * 1.44 * this.owner.attacks.range) then
 			mytarget = nil
 		end
 
@@ -22896,7 +22892,7 @@ function scripts.shadow_crow.update(this, store)
 		end
 
 		if not mytarget then
-			dest.x, dest.y = this.idle_pos.x, this.idle_pos.y
+			dest:copy(this.idle_pos)
 			U.animation_start(this, "fly", nil, store.tick_ts, true)
 			force_move_step(dest, this.flight_speed_idle, this.ramp_dist_idle, 700)
 		end
