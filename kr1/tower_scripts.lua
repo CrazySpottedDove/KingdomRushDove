@@ -22812,6 +22812,8 @@ function scripts.shadow_crow.update(this, store)
 					return this.pos:dist2(e1.pos) < this.pos:dist2(e2.pos)
 				end)
 				mytarget = enemies[1]
+			else
+				ca.ts = ca.ts + fts(5)
 			end
 		end
 
