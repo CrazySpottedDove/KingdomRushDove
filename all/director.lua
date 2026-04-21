@@ -377,9 +377,9 @@ function director:queue_load_item_named(name, force_reload)
 			level_idx = self.next_item_args.level_idx
 		end
 
-		if loading.update_required_textures then
-			loading:update_required_textures(name, level_idx)
-		end
+		-- if loading.update_required_textures then
+		-- 	loading:update_required_textures(name, level_idx)
+		-- end
 
 		self:load_texture_groups(loading.required_textures, self.params.texture_size, loading.ref_res, false)
 
@@ -419,7 +419,7 @@ function director:queue_load_item_named(name, force_reload)
 		local item = _require("screen_comics")
 
 		item.item_name = "comics"
-		item.required_textures = {"loading_common", "kr3_comic", "kr2_comic"}
+		item.required_textures = {"kr3_comic", "kr2_comic"}
 		item.comic_data = love.filesystem.read(KR_PATH_GAME_TARGET .. string.format("/data/comics/%02i.csv", comic_idx))
 
 		self:load_texture_groups(replace_locale(item.required_textures), self.params.texture_size, item.ref_res, true)

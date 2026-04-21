@@ -7,7 +7,7 @@ local screen_credits = require("screen_credits")
 local screen = {}
 
 screen.required_sounds = {"common", "music_screen_kr2_end"}
-screen.required_textures = {"loading_common", "screen_credits", "kr2_comic"}
+screen.required_textures = {"screen_credits", "kr2_comic"}
 screen.ref_h = GUI_REF_H
 
 screen.ref_res = TEXTURE_SIZE_ALIAS.ipad

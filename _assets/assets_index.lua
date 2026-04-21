@@ -2443,26 +2443,6 @@ return {
 		size = 17283252,
 		hash = "1bbaacd0"
 	},
-	["kr1-desktop/images/fullhd/loading_blackburn-1.dds"] = {
-		size = 2073728,
-		hash = "f8af5ac8"
-	},
-	["kr1-desktop/images/fullhd/loading_common-1.dds"] = {
-		size = 1398288,
-		hash = "abcc1100"
-	},
-	["kr1-desktop/images/fullhd/loading_grass-1.dds"] = {
-		size = 8294528,
-		hash = "c8e2bc70"
-	},
-	["kr1-desktop/images/fullhd/loading_ice-1.dds"] = {
-		size = 8294528,
-		hash = "ecdd9854"
-	},
-	["kr1-desktop/images/fullhd/loading_wasteland-1.dds"] = {
-		size = 8294528,
-		hash = "9898439c"
-	},
 	["kr1-desktop/images/fullhd/screen_credits-1.dds"] = {
 		size = 5592560,
 		hash = "8acda32d"
