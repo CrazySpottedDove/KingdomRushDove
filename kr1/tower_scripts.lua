@@ -22785,6 +22785,8 @@ function scripts.shadow_crow.update(this, store)
 
 	sp.offset.y = this.flight_height
 
+	local search_ts = store.tick_ts
+
 	while true do
 		if not this.owner then
 			queue_remove(store, this)
@@ -22799,7 +22801,8 @@ function scripts.shadow_crow.update(this, store)
 			mytarget = nil
 		end
 
-		if not mytarget then
+		if not mytarget and search_ts < store.tick_ts then
+			search_ts = store.tick_ts
 			local enemies = U.find_enemies_in_range_filter_off(tpos(this.owner), this.owner.attacks.range * 1.2, ca.vis_flags, ca.vis_bans)
 			if enemies then
 				table.sort(enemies, function(e1, e2)
@@ -22813,7 +22816,7 @@ function scripts.shadow_crow.update(this, store)
 				end)
 				mytarget = enemies[1]
 			else
-				ca.ts = ca.ts + fts(5)
+				search_ts = search_ts + fts(5)
 			end
 		end
 
