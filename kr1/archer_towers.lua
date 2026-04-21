@@ -1996,9 +1996,6 @@ tt.modifier.duration = 0.5
 --#endregion
 
 -- 暗影弓手
-tt = E:register_t("fx_arrow_shadow_shot", "fx")
-tt.render.sprites[1].name = "arrow_shadow_smoke"
-
 tt = E:register_t("tower_shadow_archer", "tower_archer_1")
 E:add_comps(tt, "powers")
 image_y = 90
@@ -2065,7 +2062,6 @@ tt.render.sprites[3].angles = {
 	idle = {"idleUp", "idleDown"},
 	shoot = {"shootUp", "shootDown"},
 	mark = {"shootSpecialUp", "shootSpecialDown"}
--- sentence = {"instakillUp", "instakillDown"}
 }
 tt.render.sprites[3].offset = v(-5, 57)
 tt.render.sprites[4] = E:clone_c("sprite")
@@ -2114,10 +2110,6 @@ tt.render.sprites[2].name = "decal_flying_shadow"
 tt.render.sprites[2].offset = v(0, 0)
 tt.owner = nil
 
-tt = E:register_t("fx_crow_attack_hit", "fx")
-tt.render.sprites[1].name = "shadow_crow_bloodRed"
-tt.render.sprites[1].offset = v(0, 0)
-
 tt = E:register_t("arrow_tower_shadow_archer", "arrow")
 tt.bullet.flight_time = fts(8)
 tt.bullet.flight_time_factor = fts(0.009)
@@ -2126,7 +2118,39 @@ tt.bullet.damage_max = 41
 tt.bullet.damage_min = 29
 tt.render.sprites[1].name = "darkarmy_archer_arrow_0001"
 tt.render.sprites[1].scale = v(-1, 1)
-tt.main_script.update = scripts.arrow.update
+
+tt = E:register_t("arrow_tower_shadow_archer_mark", "arrow_tower_shadow_archer")
+tt.bullet.mod = "mod_arrow_shadow_mark"
+tt.bullet.particles_name = "ps_shadow_mark_trail"
+tt.render.sprites[1].name = "arrow_shadow_mark_travel"
+tt.render.sprites[1].scale = v(-1, -1)
+tt.render.sprites[1].offset = v(3, 0)
+tt.render.sprites[1].animated = true
+
+tt = E:register_t("mod_arrow_shadow_mark", "modifier")
+E:add_comps(tt, "render")
+tt.modifier.received_damage_factors = {1.3, 1.6, 2}
+tt.modifier.received_damage_factor = tt.modifier.received_damage_factors[1]
+tt.main_script.insert = scripts.mod_arrow_shadow_mark.insert
+tt.main_script.update = scripts.mod_arrow_shadow_mark.update
+tt.main_script.remove = scripts.mod_arrow_shadow_mark.remove
+tt.modifier.durations = {5, 6, 7}
+tt.modifier.duration = tt.modifier.durations[1]
+tt.custom_offsets = {
+	flying = v(0, 32)
+}
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].name = "mod_arrow_shadow_mark_run"
+tt.render.sprites[1].offset = v(0, 0)
+tt.render.sprites[1].anchor.y = 0.24
+tt.render.sprites[1].z = Z_EFFECTS
+
+tt = E:register_t("fx_arrow_shadow_shot", "fx")
+tt.render.sprites[1].name = "arrow_shadow_smoke"
+
+tt = E:register_t("fx_crow_attack_hit", "fx")
+tt.render.sprites[1].name = "shadow_crow_bloodRed"
+tt.render.sprites[1].offset = v(0, 0)
 
 tt = RT("ps_shadow_mark_trail", "particle_system")
 tt.particle_system.alphas = {255, 0}
@@ -2140,32 +2164,3 @@ tt.particle_system.rotation_spread = math.pi
 tt.particle_system.scale_var = {1, 0.8}
 tt.particle_system.scales_x = {1, 1}
 tt.particle_system.scales_y = {1, 1}
-
-tt = E:register_t("arrow_tower_shadow_archer_mark", "arrow_tower_shadow_archer")
-tt.bullet.mod = "mod_arrow_shadow_mark"
-tt.bullet.particles_name = "ps_shadow_mark_trail"
-tt.render.sprites[1].name = "arrow_shadow_mark_travel"
-tt.render.sprites[1].scale = v(-1, -1)
-tt.render.sprites[1].offset = v(3, 0)
-tt.render.sprites[1].animated = true
-tt.sound_events.insert = nil
-
-tt = E:register_t("mod_arrow_shadow_mark", "modifier")
-E:add_comps(tt, "render", "sound_events")
-tt.modifier.received_damage_factors = {1.3, 1.6, 2}
-tt.modifier.received_damage_factor = tt.modifier.received_damage_factors[1]
-tt.main_script.insert = scripts.mod_arrow_shadow_mark.insert
-tt.main_script.update = scripts.mod_arrow_shadow_mark.update
-tt.main_script.remove = scripts.mod_arrow_shadow_mark.remove
-tt.modifier.durations = {5, 6, 7}
-tt.modifier.duration = tt.modifier.durations[1]
-tt.custom_offsets = {
-	flying = v(0, 32),
-	enemy_goblin_balloon = v(0, 75)
-}
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].name = "mod_arrow_shadow_mark_run"
-tt.render.sprites[1].offset = v(0, 0)
-tt.render.sprites[1].anchor.y = 0.24
-tt.render.sprites[1].z = Z_EFFECTS
-tt.sound_events.insert = nil

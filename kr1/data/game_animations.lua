@@ -49749,13 +49749,17 @@ return {
 	},
 	tower_shadow_archer_shooter_teleportOut = {
 		prefix = "darkarmy_archer_tower_shooter_lvl4",
-		from = 45,
-		to = 65
+		-- from = 45,
+		from = 46,
+		-- to = 65
+		to = 64
 	},
 	tower_shadow_archer_shooter_teleportIn = {
 		prefix = "darkarmy_archer_tower_shooter_lvl4",
-		from = 66,
-		to = 86
+		-- from = 66,
+		from = 67,
+		-- to = 86
+		to = 85
 	},
 	tower_shadow_archer_shooter_teleportInAttack = {
 		prefix = "darkarmy_archer_tower_shooter_lvl4",
@@ -49782,43 +49786,6 @@ return {
 		from = 1,
 		to = 24
 	},
-	--乌鸦
-	darkarmy_archer_tower_crow_lvl4_bloodRed = {
-		prefix = "darkarmy_archer_tower_crow_lvl4_bloodRed",
-		from = 1,
-		to = 16
-	},
-	darkarmy_archer_tower_crow_lvl4_respawn = {
-		prefix = "darkarmy_archer_tower_crow_lvl4",
-		from = 1,
-		to = 18
-	},
-	darkarmy_archer_tower_crow_lvl4_idle = {
-		prefix = "darkarmy_archer_tower_crow_lvl4",
-		from = 19,
-		to = 30
-	},
-	darkarmy_archer_tower_crow_lvl4_fly = {
-		prefix = "darkarmy_archer_tower_crow_lvl4",
-		from = 19,
-		to = 30
-	},
-	darkarmy_archer_tower_crow_lvl4_carry = {
-		prefix = "darkarmy_archer_tower_crow_lvl4",
-		from = 31,
-		to = 44
-	},
-	--箭
-	darkarmy_archer_arrow_travel = {
-		prefix = "darkarmy_archer_arrow",
-		from = 1,
-		to = 4
-	},
-	darkarmy_archer_arrow_lvl4_travel = {
-		prefix = "darkarmy_archer_arrow_lvl4",
-		from = 1,
-		to = 4
-	},
 	arrow_shadow_mark_travel = {
 		prefix = "darkarmy_archer_arrow_special",
 		from = 1,
@@ -49834,12 +49801,6 @@ return {
 		prefix = "darkarmy_archer_arrow_smoke",
 		from = 1,
 		to = 4
-	},
-	--流血效果
-	darkarmy_archer_tower_arrow_lvl4_blood_red = {
-		prefix = "darkarmy_archer_tower_crow_lvl4_bloodRed",
-		from = 1,
-		to = 11
 	},
 	shadow_crow_bloodRed = {
 		prefix = "darkarmy_archer_tower_crow_lvl4_bloodRed",

@@ -6928,8 +6928,8 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	TOWER_SHADOW_ARCHER_MARK_NAME_1 = "暗影印记",
 	TOWER_SHADOW_ARCHER_MARK_NAME_2 = "暗影印记II",
 	TOWER_SHADOW_ARCHER_MARK_NAME_3 = "暗影印记III",
-	TOWER_SHADOW_ARCHER_MARK_DESCRIPTION_1 = "每隔18秒向一名生命值不低于1000的敌人射出一支标记箭，令敌人获得1.4倍易伤，持续5秒。",
-	TOWER_SHADOW_ARCHER_MARK_DESCRIPTION_2 = "每隔18秒向一名生命值不低于1000的敌人射出一支标记箭，令敌人获得1.7倍易伤，持续6秒。",
-	TOWER_SHADOW_ARCHER_MARK_DESCRIPTION_3 = "每隔18秒向一名生命值不低于1000的敌人射出一支标记箭，令敌人获得2倍易伤，持续7秒。",
+	TOWER_SHADOW_ARCHER_MARK_DESCRIPTION_1 = "每隔18秒向一名敌人射出一支标记箭，令敌人获得1.4倍易伤，持续5秒。该技能优先对生命值高于1000的敌人释放。",
+	TOWER_SHADOW_ARCHER_MARK_DESCRIPTION_2 = "每隔18秒向一名敌人射出一支标记箭，令敌人获得1.7倍易伤，持续6秒。该技能优先对生命值高于1000的敌人释放。",
+	TOWER_SHADOW_ARCHER_MARK_DESCRIPTION_3 = "每隔18秒向一名敌人射出一支标记箭，令敌人获得2倍易伤，持续7秒。该技能优先对生命值高于1000的敌人释放。",
 	TOWER_SHADOW_ARCHER_MARK_NOTE = "你的命运早已注定。"
 }

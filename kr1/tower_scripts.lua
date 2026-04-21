@@ -22686,7 +22686,6 @@ function scripts.tower_shadow_archer.update(this, store)
 					end
 
 					if enemy then
-						as.ts = start_ts
 						enemy._tower_shadow_archer_to_kill = true
 						SU.stun_inc(enemy)
 						S:queue("TowerShadowInstakill")
@@ -22699,11 +22698,17 @@ function scripts.tower_shadow_archer.update(this, store)
 						U.animation_start(this, "teleportInAttack", lflip, store.tick_ts, false, sid)
 						U.y_wait(store, as.shoot_time * this.tower.cooldown_factor)
 
-						local d = E:create_entity("damage")
-						d.source_id = this.id
-						d.target_id = enemy.id
-						d.damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_FX_NOT_EXPLODE)
-						queue_damage(store, d)
+						if not enemy.health.dead then
+							local d = E:create_entity("damage")
+							d.source_id = this.id
+							d.target_id = enemy.id
+							d.damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_FX_EXPLODE)
+							queue_damage(store, d)
+
+							as.ts = start_ts
+						else
+							as.ts = as.ts + 5
+						end
 
 						U.y_animation_wait(this, sid)
 						SU.stun_dec(enemy)
@@ -22723,9 +22728,18 @@ function scripts.tower_shadow_archer.update(this, store)
 		end
 
 		if ready_to_use_power(pow_m, am, store, this.tower.cooldown_factor) then
-			local enemy = U.find_foremost_enemy_in_range_filter_on(tpos, a.range, false, am.vis_flags, am.vis_bans, function(e)
-				return not U.has_modifier(store, e, "mod_arrow_shadow_mark") and e.health.hp >= 1000
+			local enemy, enemies = U.find_foremost_enemy_in_range_filter_on(tpos, a.range, false, am.vis_flags, am.vis_bans, function(e)
+				return not U.has_modifier(store, e, "mod_arrow_shadow_mark")
 			end)
+
+			if enemies then
+				for i = 1, #enemies do
+					if enemies[i].health.hp >= 1000 then
+						enemy = enemies[i]
+						break
+					end
+				end
+			end
 
 			if enemy then
 				am.ts = store.tick_ts
