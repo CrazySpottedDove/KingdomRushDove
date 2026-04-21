@@ -22650,120 +22650,120 @@ function scripts.tower_shadow_archer.update(this, store)
 					e.owner = this
 				end
 			end
-		end
 
-		if ready_to_use_power(pow_s, as, store, this.tower.cooldown_factor) then
-			local enemy = U.find_first_enemy_in_range_filter_off(tpos, a.range, as.vis_flags, as.vis_bans)
-			if enemy then
-				local start_ts = store.tick_ts
-				S:queue(as.sound)
-				local shooter = this.render.sprites[sid]
-				local soffset = this.render.sprites[sid].offset
-				local ani, flip = U.animation_name_facing_point(this, "teleportOut", enemy.pos, sid, soffset)
-				U.y_animation_play(this, ani, flip, store.tick_ts, false, sid)
-				local enemies = U.find_enemies_in_range_filter_off(tpos, a.range, as.vis_flags, as.vis_bans)
+			if ready_to_use_power(pow_s, as, store, this.tower.cooldown_factor) then
+				local enemy = U.find_first_enemy_in_range_filter_off(tpos, a.range, as.vis_flags, as.vis_bans)
+				if enemy then
+					local start_ts = store.tick_ts
+					S:queue(as.sound)
+					local shooter = this.render.sprites[sid]
+					local soffset = this.render.sprites[sid].offset
+					local ani, flip = U.animation_name_facing_point(this, "teleportOut", enemy.pos, sid, soffset)
+					U.y_animation_play(this, ani, flip, store.tick_ts, false, sid)
+					local enemies = U.find_enemies_in_range_filter_off(tpos, a.range, as.vis_flags, as.vis_bans)
+
+					if enemies then
+						table.sort(enemies, function(e1, e2)
+							if U.enemy_is_silent_target(e1) and not U.enemy_is_silent_target(e2) then
+								return true
+							end
+							if not U.enemy_is_silent_target(e1) and U.enemy_is_silent_target(e2) then
+								return false
+							end
+							if e1.health.hp > e2.health.hp then
+								return true
+							end
+							return false
+						end)
+
+						enemy = nil
+						for i = 1, #enemies do
+							if not enemies[i]._tower_shadow_archer_to_kill then
+								enemy = enemies[i]
+								break
+							end
+						end
+
+						if enemy then
+							enemy._tower_shadow_archer_to_kill = true
+							SU.stun_inc(enemy)
+							S:queue("TowerShadowInstakill")
+							local lpos, lflip = U.melee_slot_position({
+								soldier = {
+									melee_slot_offset = v(0, 0)
+								}
+							}, enemy, 1, true)
+							shooter.offset = v(lpos.x - shooter.pos.x, lpos.y - shooter.pos.y + 18)
+							U.animation_start(this, "teleportInAttack", lflip, store.tick_ts, false, sid)
+							U.y_wait(store, as.shoot_time * this.tower.cooldown_factor)
+
+							if not enemy.health.dead then
+								local d = E:create_entity("damage")
+								d.source_id = this.id
+								d.target_id = enemy.id
+								d.damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_FX_EXPLODE)
+								queue_damage(store, d)
+
+								as.ts = start_ts
+							else
+								as.ts = as.ts + 5
+							end
+
+							U.y_animation_wait(this, sid)
+							SU.stun_dec(enemy)
+							U.y_animation_play(this, "teleportOutAttack", lflip, store.tick_ts, false, sid)
+							this.render.sprites[sid].offset = soffset
+							enemy._tower_shadow_archer_to_kill = nil
+						else
+							as.ts = as.ts + fts(10)
+						end
+					end
+
+					U.y_animation_play(this, "teleportIn", flip, store.tick_ts, false, sid)
+					U.animation_start(this, "idle", flip, store.tick_ts, false, sid)
+				else
+					as.ts = as.ts + fts(10)
+				end
+			end
+
+			if ready_to_use_power(pow_m, am, store, this.tower.cooldown_factor) then
+				local enemy, enemies = U.find_foremost_enemy_in_range_filter_on(tpos, a.range, false, am.vis_flags, am.vis_bans, function(e)
+					return not U.has_modifier(store, e, "mod_arrow_shadow_mark")
+				end)
 
 				if enemies then
-					table.sort(enemies, function(e1, e2)
-						if U.enemy_is_silent_target(e1) and not U.enemy_is_silent_target(e2) then
-							return true
-						end
-						if not U.enemy_is_silent_target(e1) and U.enemy_is_silent_target(e2) then
-							return false
-						end
-						if e1.health.hp > e2.health.hp then
-							return true
-						end
-						return false
-					end)
-
-					enemy = nil
 					for i = 1, #enemies do
-						if not enemies[i]._tower_shadow_archer_to_kill then
+						if enemies[i].health.hp >= 1000 then
 							enemy = enemies[i]
 							break
 						end
 					end
-
-					if enemy then
-						enemy._tower_shadow_archer_to_kill = true
-						SU.stun_inc(enemy)
-						S:queue("TowerShadowInstakill")
-						local lpos, lflip = U.melee_slot_position({
-							soldier = {
-								melee_slot_offset = v(0, 0)
-							}
-						}, enemy, 1, true)
-						shooter.offset = v(lpos.x - shooter.pos.x, lpos.y - shooter.pos.y + 18)
-						U.animation_start(this, "teleportInAttack", lflip, store.tick_ts, false, sid)
-						U.y_wait(store, as.shoot_time * this.tower.cooldown_factor)
-
-						if not enemy.health.dead then
-							local d = E:create_entity("damage")
-							d.source_id = this.id
-							d.target_id = enemy.id
-							d.damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_FX_EXPLODE)
-							queue_damage(store, d)
-
-							as.ts = start_ts
-						else
-							as.ts = as.ts + 5
-						end
-
-						U.y_animation_wait(this, sid)
-						SU.stun_dec(enemy)
-						U.y_animation_play(this, "teleportOutAttack", lflip, store.tick_ts, false, sid)
-						this.render.sprites[sid].offset = soffset
-						enemy._tower_shadow_archer_to_kill = nil
-					else
-						as.ts = as.ts + fts(10)
-					end
 				end
 
-				U.y_animation_play(this, "teleportIn", flip, store.tick_ts, false, sid)
-				U.animation_start(this, "idle", flip, store.tick_ts, false, sid)
-			else
-				as.ts = as.ts + fts(10)
-			end
-		end
-
-		if ready_to_use_power(pow_m, am, store, this.tower.cooldown_factor) then
-			local enemy, enemies = U.find_foremost_enemy_in_range_filter_on(tpos, a.range, false, am.vis_flags, am.vis_bans, function(e)
-				return not U.has_modifier(store, e, "mod_arrow_shadow_mark")
-			end)
-
-			if enemies then
-				for i = 1, #enemies do
-					if enemies[i].health.hp >= 1000 then
-						enemy = enemies[i]
-						break
-					end
+				if enemy then
+					am.ts = store.tick_ts
+					y_do_shot(am, enemy, pow_m.level)
+				else
+					am.ts = am.ts + fts(10)
 				end
 			end
 
-			if enemy then
-				am.ts = store.tick_ts
-				y_do_shot(am, enemy, pow_m.level)
-			else
-				am.ts = am.ts + fts(10)
+			if ready_to_attack(aa, store, this.tower.cooldown_factor) then
+				local enemy = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, a.range, aa.vis_flags, aa.vis_bans)
+
+				if enemy then
+					aa.ts = store.tick_ts
+					y_do_shot(aa, enemy, 0)
+				else
+					aa.ts = aa.ts + fts(10)
+				end
 			end
-		end
 
-		if ready_to_attack(aa, store, this.tower.cooldown_factor) then
-			local enemy = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, a.range, aa.vis_flags, aa.vis_bans)
+			if store.tick_ts - aa.ts > this.tower.long_idle_cooldown then
+				local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos, sid)
 
-			if enemy then
-				aa.ts = store.tick_ts
-				y_do_shot(aa, enemy, 0)
-			else
-				aa.ts = aa.ts + fts(10)
+				U.animation_start(this, an, af, store.tick_ts, true, sid)
 			end
-		end
-
-		if store.tick_ts - aa.ts > this.tower.long_idle_cooldown then
-			local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos, sid)
-
-			U.animation_start(this, an, af, store.tick_ts, true, sid)
 		end
 
 		coroutine.yield()
