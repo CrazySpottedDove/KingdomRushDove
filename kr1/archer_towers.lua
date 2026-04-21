@@ -1995,6 +1995,7 @@ tt.modifier.duration = 0.5
 
 --#endregion
 
+-- 暗影弓手
 tt = E:register_t("fx_arrow_shadow_shot", "fx")
 tt.render.sprites[1].name = "arrow_shadow_smoke"
 
@@ -2036,6 +2037,7 @@ tt.attacks.list[3].sound = "TowerShadowMarkShot"
 tt.attacks.list[3].sound_args = {
 	delay = fts(15)
 }
+
 tt.attacks.list[3].vis_flags = bor(F_RANGED)
 tt.attacks.list[3].vis_bans = bor(F_FRIEND)
 tt.info.portrait = "kr4_info_portraits_towers_0001"
@@ -2089,7 +2091,7 @@ tt.flight_speed_idle = 180
 tt.ramp_dist_idle = 60
 tt.flight_speed_busy = 1200
 tt.ramp_dist_busy = 0
-tt.idle_pos = nil
+tt.idle_pos = v(0, 0)
 tt.main_script.update = scripts.shadow_crow.update
 tt.custom_attack = E:clone_c("custom_attack")
 tt.custom_attack.min_range = 10
@@ -2102,6 +2104,7 @@ tt.custom_attack.vis_flags = F_RANGED
 tt.custom_attack.vis_bans = 0
 tt.custom_attack.sound_chance = 0.3
 tt.custom_attack.sound = "ShadowArcherCrowAttack"
+tt.custom_attack.hit_fx = "fx_crow_attack_hit"
 tt.damage_armor = 0.01
 tt.render.sprites[1].anchor.y = anchor_y
 tt.render.sprites[1].prefix = "shadow_crow"
@@ -2115,6 +2118,10 @@ tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "decal_flying_shadow"
 tt.render.sprites[2].offset = v(0, 0)
 tt.owner = nil
+
+tt = E:register_t("fx_crow_attack_hit", "fx")
+tt.render.sprites[1].name = "shadow_crow_bloodRed"
+tt.render.sprites[1].offset = v(0, 0)
 
 tt = E:register_t("arrow_tower_shadow_archer", "arrow")
 tt.bullet.flight_time = fts(8)

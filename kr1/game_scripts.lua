@@ -72901,7 +72901,7 @@ function scripts.decal_boss_40_waves_stun_towers.update(this, store)
 		target = store.entities[this.target_id]
 
 		if not target and this.holder_id then
-			for _, e in pairs(store.entities) do
+			for _, e in pairs(store.towers) do
 				if e.tower and e.tower.holder_id == this.holder_id then
 					target = e
 
@@ -72923,14 +72923,17 @@ function scripts.decal_boss_40_waves_stun_towers.update(this, store)
 	find_target()
 
 	local target_offset = V.v(0, 10)
+	local target_hit_pos = V.v(0, 0)
 	local scale = 1
 
-	if target.unit then
-		target_offset = V.v(target.unit.hit_offset.x, target.unit.hit_offset.y)
-		scale = 0.75
+	if target then
+		if target.unit then
+			target_offset:copy(target.unit.hit_offset)
+			scale = 0.75
+		end
+		target_hit_pos:copy(target.pos)
+		target_hit_pos:add(target_offset)
 	end
-
-	local target_hit_pos = V.v(target.pos.x + target_offset.x, target.pos.y + target_offset.y)
 
 	scale = scale * (0.94 + 0.06 * math.random())
 	this.render.sprites[1].scale = V.vv(scale)

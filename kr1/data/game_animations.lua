@@ -49841,21 +49841,6 @@ return {
 		from = 1,
 		to = 11
 	},
-	-- shadow_crow_idle = {
-	-- 	prefix = "shadow_crow",
-	-- 	to = 10,
-	-- 	from = 1
-	-- },
-	-- shadow_crow_fly = {
-	-- 	prefix = "shadow_crow",
-	-- 	to = 10,
-	-- 	from = 1
-	-- },
-	-- shadow_crow_carry = {
-	-- 	prefix = "shadow_crow",
-	-- 	to = 30,
-	-- 	from = 11
-	-- },
 	shadow_crow_bloodRed = {
 		prefix = "darkarmy_archer_tower_crow_lvl4_bloodRed",
 		from = 1,

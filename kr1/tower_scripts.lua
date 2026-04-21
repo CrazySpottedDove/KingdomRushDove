@@ -22640,14 +22640,14 @@ function scripts.tower_shadow_archer.update(this, store)
 				for i = 1, pow_c.level - #this.crows do
 					local e = E:create_entity("shadow_crow")
 
-					e.pos = V.vclone(this.pos)
-					e.idle_pos = V.v(this.pos.x + 20, this.pos.y)
+					local theta = 2 * math.pi * (pow_c.max_level - #this.crows) / pow_c.max_level
+					e.idle_pos:set(this.pos.x + 35 + 10 * math.cos(theta), this.pos.y + 10 * math.sin(theta))
+					e.pos:copy(e.idle_pos)
 
 					queue_insert(store, e)
 					table.insert(this.crows, e)
 
 					e.owner = this
-					e.owner_idx = #this.crows
 				end
 			end
 		end
@@ -22655,13 +22655,14 @@ function scripts.tower_shadow_archer.update(this, store)
 		if ready_to_use_power(pow_s, as, store, this.tower.cooldown_factor) then
 			local enemy = U.find_first_enemy_in_range_filter_off(tpos, a.range, as.vis_flags, as.vis_bans)
 			if enemy then
-				as.ts = store.tick_ts
+				local start_ts = store.tick_ts
 				S:queue(as.sound)
 				local shooter = this.render.sprites[sid]
 				local soffset = this.render.sprites[sid].offset
 				local ani, flip = U.animation_name_facing_point(this, "teleportOut", enemy.pos, sid, soffset)
 				U.y_animation_play(this, ani, flip, store.tick_ts, false, sid)
 				local enemies = U.find_enemies_in_range_filter_off(tpos, a.range, as.vis_flags, as.vis_bans)
+
 				if enemies then
 					table.sort(enemies, function(e1, e2)
 						if U.enemy_is_silent_target(e1) and not U.enemy_is_silent_target(e2) then
@@ -22685,6 +22686,7 @@ function scripts.tower_shadow_archer.update(this, store)
 					end
 
 					if enemy then
+						as.ts = start_ts
 						enemy._tower_shadow_archer_to_kill = true
 						SU.stun_inc(enemy)
 						S:queue("TowerShadowInstakill")
@@ -22721,7 +22723,7 @@ function scripts.tower_shadow_archer.update(this, store)
 		end
 
 		if ready_to_use_power(pow_m, am, store, this.tower.cooldown_factor) then
-			local enemy = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, false, am.vis_flags, am.vis_bans, function(e)
+			local enemy = U.find_foremost_enemy_in_range_filter_on(tpos, a.range, false, am.vis_flags, am.vis_bans, function(e)
 				return not U.has_modifier(store, e, "mod_arrow_shadow_mark") and e.health.hp >= 1000
 			end)
 
@@ -22789,64 +22791,87 @@ function scripts.shadow_crow.update(this, store)
 			return
 		end
 
-		if mytarget and mytarget.health.dead then
+		if mytarget and (mytarget.health.dead or mytarget.health.armor <= 0) then
 			mytarget = nil
 		end
 
-		if mytarget and V.dist(mytarget.pos.x, mytarget.pos.y, this.idle_pos.x, this.idle_pos.y) > this.owner.attacks.range then
+		if mytarget and V.dist(mytarget.pos.x, mytarget.pos.y, this.idle_pos.x, this.idle_pos.y) > this.owner.attacks.range * 1.2 then
 			mytarget = nil
 		end
 
 		if not mytarget then
-			mytarget = U.find_nearest_enemy(store.entities, tpos(this.owner), 0, this.owner.attacks.range, ca.vis_flags, ca.vis_bans)
+			local enemies = U.find_enemies_in_range_filter_off(tpos(this.owner), this.owner.attacks.range * 1.2, ca.vis_flags, ca.vis_bans)
+			if enemies then
+				table.sort(enemies, function(e1, e2)
+					if e1.health.armor > 0 and e2.health.armor <= 0 then
+						return true
+					end
+					if e1.health.armor <= 0 and e2.health.armor > 0 then
+						return false
+					end
+					return this.pos:dist2(e1.pos) < this.pos:dist2(e2.pos)
+				end)
+				mytarget = enemies[1]
+			end
 		end
 
 		if mytarget and not this.owner.tower.blocked then
 			local target = store.entities[mytarget.id]
 
-			if not target or target.health.dead then
-				mytarget = nil
-			else
-				local dist = V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y)
-				local target_speed = target.motion and target.motion.max_speed or 0
-				local effective_chase_speed = math.max(this.flight_speed_busy - target_speed * 0.5, this.flight_speed_busy * 0.3)
-				local lead_time = math.max(0.06, math.min(dist / effective_chase_speed, 0.6)) * 1.8
-				local pred_pos
+			local dist = V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y)
+			local target_speed = target.motion and target.motion.max_speed or 0
+			local effective_chase_speed = math.max(this.flight_speed_busy - target_speed * 0.5, this.flight_speed_busy * 0.3)
+			local lead_time = math.max(0.06, math.min(dist / effective_chase_speed, 0.6)) * 1.8
 
-				if target.motion and target.motion.v then
-					local px, py = V.add(target.pos.x, target.pos.y, V.mul(lead_time, target.motion.v.x, target.motion.v.y))
-					pred_pos = V.v(px, py)
-				else
-					pred_pos = P:predict_enemy_pos(target, lead_time)
+			if target.motion and target.motion.speed then
+				dest:copy(target.pos)
+				dest:scalar_add(target.motion.speed.x * lead_time, target.motion.speed.y * lead_time)
+			else
+				dest:copy(P:predict_enemy_pos(target, lead_time))
+			end
+
+			local random_theta = U.frandom(0, 2 * math.pi)
+			dest:scalar_add(10 * math.cos(random_theta), 10 * math.sin(random_theta))
+
+			U.animation_start(this, "fly", nil, store.tick_ts, true)
+			force_move_step(dest, this.flight_speed_busy, this.ramp_dist_busy, 4200)
+
+			if not this.owner then
+				queue_remove(store, this)
+				return
+			end
+
+			if ready_to_attack(ca, store, this.owner.tower.cooldown_factor) and this.pos:dist2(target.pos) <= 2500 then
+				U.animation_start(this, "carry", nil, store.tick_ts, true)
+
+				local d = E:create_entity("damage")
+				d.source_id = this.id
+				d.target_id = target.id
+				d.value = math.random(ca.damage_min, ca.damage_max) * this.owner.tower.damage_factor
+				d.damage_type = ca.damage_type
+				queue_damage(store, d)
+
+				d = E:create_entity("damage")
+				d.source_id = this.id
+				d.target_id = target.id
+				d.value = this.damage_armor
+				d.damage_type = DAMAGE_ARMOR
+				queue_damage(store, d)
+
+				ca.ts = store.tick_ts
+
+				local fx = E:create_entity(ca.hit_fx)
+				fx.pos:copy(target.pos)
+
+				if target.unit and target.unit.hit_offset then
+					fx.pos:add(target.unit.hit_offset)
 				end
 
-				dest.x, dest.y = pred_pos.x, pred_pos.y
-				U.animation_start(this, "fly", nil, store.tick_ts, true)
-				force_move_step(dest, this.flight_speed_busy, this.ramp_dist_busy, 4200)
+				fx.render.sprites[1].ts = store.tick_ts
+				queue_insert(store, fx)
 
-				local bite_dist2 = V.dist2(this.pos.x, this.pos.y, target.pos.x, target.pos.y)
-
-				if ready_to_attack(ca, store, this.owner.tower.cooldown_factor) and bite_dist2 <= 2304 then
-					U.animation_start(this, "carry", nil, store.tick_ts, true)
-
-					local d = E:create_entity("damage")
-					d.source_id = this.id
-					d.target_id = target.id
-					d.value = math.random(ca.damage_min, ca.damage_max) * this.owner.tower.damage_factor
-					d.damage_type = ca.damage_type
-					queue_damage(store, d)
-
-					d = E:create_entity("damage")
-					d.source_id = this.id
-					d.target_id = target.id
-					d.value = this.damage_armor
-					d.damage_type = DAMAGE_ARMOR
-					queue_damage(store, d)
-
-					ca.ts = store.tick_ts
-					if this.custom_attack.sound_chance > math.random() then
-						S:queue(this.custom_attack.sound)
-					end
+				if this.custom_attack.sound_chance > math.random() then
+					S:queue(this.custom_attack.sound)
 				end
 			end
 		end
