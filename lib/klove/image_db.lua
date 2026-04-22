@@ -721,32 +721,11 @@ end
 ---@param group string 纹理组名称
 ---@param scale number 纹理参考缩放比例
 function image_db:add_image(name, image, group, scale)
-	--     self.db_atlas[k] = {
-	--     atlas = remove_extension_fast(v.a_name),
-	--     group = name_scale,
-	--     quad = G.newQuad(v.f_quad[1], v.f_quad[2], v.f_quad[3], v.f_quad[4], v.a_size[1], v.a_size[2]),
-	--     trim = {v.trim[1], v.trim[2]},
-	--     ref_scale = ref_scale * (v.ref_scale or 1),
-	--     size = {v.size[1], v.size[2]}
-	-- }
 	scale = scale or 1
 
 	local name_scale = string.format("%s-%.6f", group, scale)
 	local w, h = image:getDimensions()
-	-- local v = {}
 
-	-- v.size = {w, h}
-	-- v.trim = {0, 0}
-	-- -- v.a_name = name
-	-- -- v.a_size = {w, h}
-	-- -- local a_size = ffi.new("int[2]")
-	-- -- a_size[0] = w
-	-- -- a_size[1] = h
-	-- -- v.a_size = a_size
-	-- v.group = name_scale
-	-- v.quad = G.newQuad(0, 0, w, h, w, h)
-	-- v.atlas = name
-	-- v.ref_scale = scale
 	self.db_atlas[name] = {
 		atlas = name,
 		group = name_scale,

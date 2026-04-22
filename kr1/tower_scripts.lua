@@ -16766,40 +16766,6 @@ function scripts.tower_barrel.update(this, store)
 	end
 end
 
-scripts.mod_bullet_tower_barrel = {}
-
-function scripts.mod_bullet_tower_barrel.insert(this, store)
-	local target = store.entities[this.modifier.target_id]
-
-	if not target or not target.health or target.health.dead then
-		return false
-	end
-
-	target.unit.damage_factor = target.unit.damage_factor * (1 - this.damage_reduction)
-
-	for _, s in pairs(this.render.sprites) do
-		s.ts = store.tick_ts
-
-		if s.size_names then
-			s.prefix = s.size_names[target.unit.size]
-		end
-	end
-
-	signal.emit("mod-applied", this, target)
-
-	return true
-end
-
-function scripts.mod_bullet_tower_barrel.remove(this, store)
-	local target = store.entities[this.modifier.target_id]
-
-	if target then
-		target.unit.damage_factor = target.unit.damage_factor / (1 - this.damage_reduction)
-	end
-
-	return true
-end
-
 scripts.aura_bullet_tower_barrel_skill_barrel = {}
 
 function scripts.aura_bullet_tower_barrel_skill_barrel.update(this, store)
@@ -22967,5 +22933,462 @@ function scripts.mod_arrow_shadow_mark.remove(this, store)
 end
 
 -- 黑弓 End
+
+-- 腐森 Begin
+--腐朽森林
+scripts.tower_rotten_forest = {}
+
+function scripts.tower_rotten_forest.get_info(this)
+	local mod_damage = E:get_template("mod_tower_rotten_forest_burst_damage")
+	local aura_damage = E:get_template("aura_tower_rotten_forest_spike_burst")
+
+	return {
+		type = STATS_TYPE_TOWER,
+		damage_min = mod_damage.dps.damage_min * this.tower.damage_factor,
+		damage_max = mod_damage.dps.damage_max * this.tower.damage_factor,
+		damage_type = mod_damage.dps.damage_type,
+		range = this.attacks.range,
+		cooldown = aura_damage.aura.cycle_time * this.tower.cooldown_factor
+	}
+end
+
+function scripts.tower_rotten_forest.insert(this, store, script)
+	local e = E:create_entity(this.auras.list[1].name)
+	e.pos = V.vclone(this.pos)
+	e.aura.source_id = this.id
+	e.aura.ts = store.tick_ts
+	e.owner = this
+	this.aura1 = e
+
+	for _, p in ipairs(U.get_path_fx_points(this)) do
+		local smoke = E:create_entity("decal_rotten_forest_smoke")
+		smoke.pos:copy(p.pos)
+		table.insert(this.aura_list1, smoke)
+		queue_insert(store, smoke)
+	end
+
+	queue_insert(store, e)
+
+	if this.powers.fog.level >= 1 then
+		local e = E:create_entity(this.auras.list[2].name)
+		e.pos:copy(this.pos)
+		e.aura.level = this.powers.fog.level
+		e.aura.source_id = this.id
+		e.aura.ts = store.tick_ts
+		this.aura2 = e
+
+		queue_insert(store, e)
+
+		for _, p in ipairs(U.get_path_fx_points(this)) do
+			local fog = E:create_entity("decal_rotten_forest_fog")
+			fog.pos:copy(p.pos)
+			fog.render.sprites[1].ts = store.tick_ts
+			table.insert(this.aura_list2, fog)
+			queue_insert(store, fog)
+		end
+	end
+
+	return true
+end
+
+function scripts.tower_rotten_forest.update(this, store, script)
+	local a = this.attacks
+	local a_tree = this.attacks.list[1]
+	local warp_sid = 3
+	local pow_w = this.powers.warp
+	local pow_t = this.powers.tree
+	local pow_f = this.powers.fog
+	local last_ts = store.tick_ts
+	local tpos = tpos(this)
+
+	-- 用于同步特效与 aura 生效范围
+	local last_range = 0
+
+	while true do
+		if this.tower.blocked then
+			coroutine.yield()
+		else
+			if pow_w.changed then
+				pow_w.changed = nil
+				this.render.sprites[warp_sid].hidden = false
+
+				local ta = E:create_entity(pow_w.aura)
+				ta.aura.source_id = this.id
+				ta.pos = tpos
+
+				queue_insert(store, ta)
+			end
+			if pow_t.changed then
+				a_tree.disabled = false
+				a_tree.cooldown = pow_t.cooldown + pow_t.cooldown_inc * pow_t.level
+			end
+			if pow_f.changed then
+				if not this.aura2 then
+					local e = E:create_entity(this.auras.list[2].name)
+					e.pos:copy(this.pos)
+					e.aura.level = this.powers.fog.level
+					e.aura.source_id = this.id
+					e.aura.ts = store.tick_ts
+					this.aura2 = e
+
+					queue_insert(store, e)
+
+					for _, p in ipairs(U.get_path_fx_points(this)) do
+						local fog = E:create_entity("decal_rotten_forest_fog")
+						fog.pos:copy(p.pos)
+						fog.render.sprites[1].ts = store.tick_ts
+						table.insert(this.aura_list2, fog)
+						queue_insert(store, fog)
+					end
+				end
+
+				this.aura2.aura.level = pow_f.level
+			end
+
+			-- 同步范围
+			if last_range ~= a.range then
+				last_range = a.range
+
+				this.aura1.aura.radius = last_range
+				for i = #this.aura_list1, 1, -1 do
+					queue_remove(store, this.aura_list1[i])
+					this.aura_list1[i] = nil
+				end
+				for _, p in ipairs(U.get_path_fx_points(this)) do
+					local smoke = E:create_entity("decal_rotten_forest_smoke")
+					smoke.pos:copy(p.pos)
+					table.insert(this.aura_list1, smoke)
+					queue_insert(store, smoke)
+				end
+
+				if this.aura2 then
+					this.aura2.aura.radius = last_range
+					for i = #this.aura_list2, 1, -1 do
+						queue_remove(store, this.aura_list2[i])
+						this.aura_list2[i] = nil
+					end
+					for _, p in ipairs(U.get_path_fx_points(this)) do
+						local fog = E:create_entity("decal_rotten_forest_fog")
+						fog.pos:copy(p.pos)
+						fog.render.sprites[1].ts = store.tick_ts
+						table.insert(this.aura_list2, fog)
+						queue_insert(store, fog)
+					end
+				end
+			end
+
+			-- 召唤树
+			if ready_to_use_power(pow_t, a_tree, store, this.tower.cooldown_factor) then
+				local enemy = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, false, a_tree.vis_flags, a_tree.vis_bans)
+				if not enemy then
+					a_tree.ts = a_tree.ts + 0.3
+				else
+					a_tree.ts = store.tick_ts
+					for i = 1, 2 do
+						local entity = E:create_entity(a_tree.entity)
+						local pred_pos = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, enemy.nav_path.ni)
+						entity.default_rally_pos = pred_pos
+						entity.pos = pred_pos
+
+						queue_insert(store, entity)
+					end
+				end
+			end
+
+			coroutine.yield()
+		end
+	end
+end
+
+function scripts.tower_rotten_forest.remove(this, store, script)
+	queue_remove(store, this.aura1)
+	for i = #this.aura_list1, 1, -1 do
+		queue_remove(store, this.aura_list1[i])
+		this.aura_list1[i] = nil
+	end
+
+	if this.aura2 then
+		queue_remove(store, this.aura2)
+		for i = #this.aura_list2, 1, -1 do
+			queue_remove(store, this.aura_list2[i])
+			this.aura_list2[i] = nil
+		end
+	end
+
+	return true
+end
+
+-- 腐森普攻 aura
+scripts.aura_tower_rotten_forest_spike_burst = {}
+
+function scripts.aura_tower_rotten_forest_spike_burst.insert(this, store, script)
+	this.aura.ts = store.tick_ts
+	return true
+end
+
+function scripts.aura_tower_rotten_forest_spike_burst.update(this, store, script)
+	local last_hit_ts = 0
+
+	last_hit_ts = store.tick_ts - this.aura.cycle_time
+	local mods = this.aura.mods
+
+	while true do
+		if store.tick_ts - last_hit_ts <= this.aura.cycle_time * this.owner.tower.cooldown_factor then
+		-- block empty
+		else
+			local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
+
+			last_hit_ts = store.tick_ts
+
+			if targets then
+				for i = 1, #targets do
+					local target = targets[i]
+					for j = 1, #mods do
+						local new_mod = E:create_entity(mods[j])
+						new_mod.modifier.level = this.aura.level
+						new_mod.modifier.target_id = target.id
+						new_mod.modifier.source_id = this.id
+						new_mod.modifier.damage_factor = this.aura.damage_factor
+						queue_insert(store, new_mod)
+					end
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.aura_rotten_forest_thorn = {}
+
+function scripts.aura_rotten_forest_thorn.update(this, store)
+	local a = this.aura
+	a.ts = store.tick_ts
+
+	while true do
+		local owner = store.entities[a.source_id]
+
+		if not owner then
+			break
+		end
+
+		if owner.tower.blocked then
+		-- block empty
+		elseif ready_to_attack(a, store, owner.tower.cooldown_factor) then
+			local targets = U.find_enemies_in_range_filter_off(this.pos, owner.attacks.range, a.vis_flags, a.vis_bans)
+
+			if not targets or #targets < a.min_count then
+				a.ts = a.ts + 0.3
+			else
+				a.ts = store.tick_ts
+
+				S:queue(a.hit_sound)
+
+				for i = 1, math.min(#targets, a.max_count + a.max_count_inc * owner.powers.warp.level) do
+					local e = targets[i]
+					local m = E:create_entity(a.mod)
+
+					m.modifier.target_id = e.id
+					m.modifier.source_id = this.id
+					m.modifier.damage_factor = owner.tower.damage_factor
+					m.modifier.level = owner.powers.warp.level
+					m.modifier.duration = m.modifier.duration + m.modifier.duration_inc * owner.powers.warp.level
+
+					queue_insert(store, m)
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.aura_tower_rotten_forest_fog = {}
+
+function scripts.aura_tower_rotten_forest_fog.insert(this, store, script)
+	this.aura.ts = store.tick_ts
+
+	return true
+end
+
+function scripts.aura_tower_rotten_forest_fog.update(this, store, script)
+	local last_hit_ts = 0
+
+	last_hit_ts = store.tick_ts - this.aura.cycle_time
+	local mods = this.aura.mods
+
+	while true do
+		if store.tick_ts - last_hit_ts < this.aura.cycle_time then
+		-- block empty
+		else
+			last_hit_ts = store.tick_ts
+
+			local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
+
+			if targets then
+				for i, target in ipairs(targets) do
+					for _, mod_name in ipairs(mods) do
+						local new_mod = E:create_entity(mod_name)
+
+						new_mod.modifier.level = this.aura.level
+						new_mod.modifier.target_id = target.id
+						new_mod.modifier.source_id = this.id
+						new_mod.modifier.damage_factor = this.aura.damage_factor
+
+						queue_insert(store, new_mod)
+					end
+				end
+			end
+		end
+
+		::label_1060_0::
+
+		coroutine.yield()
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.decal_rotten_forest_smoke = {}
+
+function scripts.decal_rotten_forest_smoke.update(this, store, script)
+	U.animation_start(this, "intro", nil, store.tick_ts, false)
+	U.y_wait(store, fts(6))
+	U.animation_start(this, "idle", nil, store.tick_ts, true, 2)
+	U.y_wait(store, fts(5))
+	U.animation_start(this, "idle", nil, store.tick_ts, true, 1)
+	local range = 52
+	local vis_flags = F_MOD
+	local vis_bans = bor(F_FLYING, F_BOSS)
+	while true do
+		local current = this.render.sprites[2].name
+
+		if not U.find_first_enemy_in_range_filter_off(this.pos, range, vis_flags, vis_bans) then
+			if current == "loop" then
+				U.y_animation_play(this, "out", nil, store.tick_ts, false, 2)
+				U.animation_start(this, "idle", nil, store.tick_ts, true, 2)
+			end
+		elseif current == "idle" then
+			U.y_animation_play(this, "introLoop", nil, store.tick_ts, false, 2)
+			U.animation_start(this, "loop", nil, store.tick_ts, true, 2)
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.soldier_rotten_forest_tree = {}
+
+function scripts.soldier_rotten_forest_tree.insert(this, store)
+	local m = E:create_entity("mod_soldier_rotten_forest_tree_lose_hp")
+	m.modifier.target_id = this.id
+	m.modifier.source_id = this.id
+	queue_insert(store, m)
+	return true
+end
+
+function scripts.soldier_rotten_forest_tree.update(this, store)
+	local brk, stam
+
+	this.render.sprites[1].ts = store.tick_ts
+	this.nav_rally.pos = V.vclone(this.pos)
+
+	if this.vis._bans then
+		this.vis.bans = this.vis._bans
+		this.vis._bans = nil
+	end
+
+	if this.sound_events and this.sound_events.raise then
+		S:queue(this.sound_events.raise)
+	end
+
+	this.health_bar.hidden = true
+
+	U.y_animation_play(this, "spawn", nil, store.tick_ts, 1)
+
+	if not this.health.dead then
+		this.health_bar.hidden = nil
+	end
+
+	local starting_pos = V.vclone(this.pos)
+
+	this.nav_rally.pos = starting_pos
+
+	local patrol_pos = V.vclone(this.pos)
+
+	patrol_pos.x, patrol_pos.y = patrol_pos.x + this.patrol_pos_offset.x, patrol_pos.y + this.patrol_pos_offset.y
+
+	local nearest_node = P:nearest_nodes(patrol_pos.x, patrol_pos.y, nil, nil, false)[1]
+	local pi, spi, ni = unpack(nearest_node)
+	local npos = P:node_pos(pi, spi, ni)
+	local patrol_pos_2 = V.vclone(this.pos)
+
+	patrol_pos_2.x, patrol_pos_2.y = patrol_pos_2.x - this.patrol_pos_offset.x, patrol_pos_2.y - this.patrol_pos_offset.y
+
+	local nearest_node = P:nearest_nodes(patrol_pos_2.x, patrol_pos_2.y, nil, nil, false)[1]
+	local pi, spi, ni = unpack(nearest_node)
+	local npos_2 = P:node_pos(pi, spi, ni)
+
+	if V.dist2(patrol_pos.x, patrol_pos.y, npos.x, npos.y) > V.dist2(patrol_pos_2.x, patrol_pos_2.y, npos_2.x, npos_2.y) then
+		patrol_pos = V.vclone(patrol_pos_2)
+	end
+
+	local idle_ts = store.tick_ts
+	local patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
+
+	while true do
+		if this.health.dead then
+			U.y_animation_play(this, "death", nil, store.tick_ts, 1)
+
+			queue_remove(store, this)
+			return
+		end
+
+		this.nav_rally.center = this.pos
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+
+			idle_ts = store.tick_ts
+			patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
+		else
+
+			brk, stam = SU.y_soldier_melee_block_and_attacks(store, this)
+
+			if brk or stam == A_DONE or stam == A_IN_COOLDOWN and not this.melee.continue_in_cooldown then
+				idle_ts = store.tick_ts
+				patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
+
+				goto label_706_0
+			end
+
+			if SU.soldier_go_back_step(store, this) then
+			-- block empty
+			else
+				SU.soldier_idle(store, this)
+				SU.soldier_regen(store, this)
+
+				if patrol_cd < store.tick_ts - idle_ts then
+					if this.nav_rally.pos == starting_pos then
+						this.nav_rally.pos = patrol_pos
+					else
+						this.nav_rally.pos = starting_pos
+					end
+
+					idle_ts = store.tick_ts
+					patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
+				end
+			end
+		end
+
+		::label_706_0::
+
+		coroutine.yield()
+	end
+end
+-- 腐森 End
 
 return scripts

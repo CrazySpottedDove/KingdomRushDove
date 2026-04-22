@@ -1172,7 +1172,8 @@ upgrades.engineer_advanced_tower = {
 	"tower_demon_pit_lvl4",
 	"tower_flamespitter_lvl4",
 	"tower_barrel_lvl4",
-	"tower_sparking_geode_lvl4"
+	"tower_sparking_geode_lvl4",
+	"tower_rotten_forest"
 }
 
 local fps_based_keys = {
@@ -1705,6 +1706,8 @@ function upgrades:patch_templates(max_level)
 		T("mod_ray_frankenstein").dps.damage_max = math.floor(T("mod_ray_frankenstein").dps.damage_max * u.damage_factor)
 		T("tower_flamespitter_lvl4").attacks.list[1].damage_min = math.floor(T("tower_flamespitter_lvl4").attacks.list[1].damage_min * u.damage_factor)
 		T("tower_flamespitter_lvl4").attacks.list[1].damage_max = math.floor(T("tower_flamespitter_lvl4").attacks.list[1].damage_max * u.damage_factor)
+		T("mod_tower_rotten_forest_burst_damage").dps.damage_min = math.floor(T("mod_tower_rotten_forest_burst_damage").dps.damage_min * u.damage_factor)
+		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = math.floor(T("mod_tower_rotten_forest_burst_damage").dps.damage_max * u.damage_factor)
 	end
 
 	u = self:get_upgrade("engineer_range_finder")
@@ -1756,6 +1759,7 @@ function upgrades:patch_templates(max_level)
 				end
 			end
 		end
+		T("tower_rotten_forest").attacks.range = math.ceil(T("tower_rotten_forest").attacks.range * u.radius_factor)
 	end
 
 	u = self:get_upgrade("engineer_field_logistics")
@@ -1780,7 +1784,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("engineer_gnomish_tinkering")
 
 	if u then
-		for _, a in pairs({T("tower_dwaarp").attacks.list[2], T("tower_dwaarp").attacks.list[3], T("soldier_mecha").attacks.list[2], T("soldier_mecha").attacks.list[3], T("druid_shooter_sylvan").attacks.list[1], T("tower_entwood").attacks.list[3], T("tower_entwood").attacks.list[2], T("tower_dwaarp").attacks.list[3]}) do
+		for _, a in ipairs({T("tower_dwaarp").attacks.list[2], T("tower_dwaarp").attacks.list[3], T("soldier_mecha").attacks.list[2], T("soldier_mecha").attacks.list[3], T("druid_shooter_sylvan").attacks.list[1], T("tower_entwood").attacks.list[3], T("tower_entwood").attacks.list[2], T("tower_dwaarp").attacks.list[3]}) do
 			a.cooldown = a.cooldown * u.cooldown_factor
 		end
 
@@ -1830,6 +1834,23 @@ function upgrades:patch_templates(max_level)
 		at.cooldown[1] = at.cooldown[1] * u.cooldown_factor
 		at.cooldown[2] = at.cooldown[2] * u.cooldown_factor
 		at.cooldown[3] = at.cooldown[3] * u.cooldown_factor
+		at = T("tower_sparking_geode_lvl4").powers.crystalize
+		for i = 1, #at.cooldown do
+			at.cooldown[i] = at.cooldown[i] * u.cooldown_factor
+		end
+		at = T("tower_sparking_geode_lvl4").powers.spike_burst
+		for i = 1, #at.cooldown do
+			at.cooldown[i] = at.cooldown[i] * u.cooldown_factor
+		end
+		at = T("tower_rotten_forest").powers.tree
+		at.cooldown = at.cooldown * u.cooldown_factor
+		at.cooldown_inc = at.cooldown_inc * u.cooldown_factor
+	end
+
+	u = self:get_upgrade("engineer_efficiency")
+	if u then
+		T("mod_tower_rotten_forest_burst_damage").dps.damage_min = math.ceil(T("mod_tower_rotten_forest_burst_damage").dps.damage_min * 1.25)
+		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = math.ceil(T("mod_tower_rotten_forest_burst_damage").dps.damage_max * 1.25)
 	end
 
 	if self.list_id == 1 or self.list_id == 2 then

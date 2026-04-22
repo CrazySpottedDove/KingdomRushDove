@@ -290,6 +290,14 @@ return {
 			tt_title = _("TOWER_SPARKING_GEODE_1_NAME"),
 			tt_desc = _("TOWER_SPARKING_GEODE_1_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_rotten_forest",
+			image = "kr4_main_icons_0012",
+			type = "rotten_forest",
+			place = 19,
+			tt_title = _("TOWER_ROTTEN_FOREST_NAME"),
+			tt_desc = _("TOWER_ROTTEN_FOREST_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	archer = {{M(tpl.common_upgrade, {
@@ -3004,5 +3012,43 @@ return {
 			tt_title = _("TOWER_SHADOW_ARCHER_CROW_NAME_3"),
 			tt_desc = _("TOWER_SHADOW_ARCHER_CROW_DESCRIPTION_3")
 		}}
+	}), tpl.sell}},
+	rotten_forest = {{M(tpl.upgrade_power, {
+		action_arg = "tree",
+		sounds = {"RottenForestSkillATaunt"},
+		place = 6,
+		image = "kr4_special_icons_0049",
+		tt_phrase = _("TOWER_ROTTEN_FOREST_TREE_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ROTTEN_FOREST_TREE_NAME_1"),
+			tt_desc = _("TOWER_ROTTEN_FOREST_TREE_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ROTTEN_FOREST_TREE_NAME_2"),
+			tt_desc = _("TOWER_ROTTEN_FOREST_TREE_DESCRIPTION_2")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "warp",
+		sounds = {"RottenForestSkillBTaunt"},
+		place = 5,
+		image = "kr4_special_icons_0047",
+		tt_phrase = _("TOWER_ROTTEN_FOREST_WARP_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ROTTEN_FOREST_WARP_NAME_1"),
+			tt_desc = _("TOWER_ROTTEN_FOREST_WARP_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ROTTEN_FOREST_WARP_NAME_2"),
+			tt_desc = _("TOWER_ROTTEN_FOREST_WARP_DESCRIPTION_2")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "fog",
+		sounds = {"RottenForestSkillCTaunt"},
+		place = 7,
+		image = "kr4_special_icons_0048",
+		tt_phrase = _("TOWER_ROTTEN_FOREST_FOG_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ROTTEN_FOREST_FOG_NAME_1"),
+			tt_desc = _("TOWER_ROTTEN_FOREST_FOG_DESCRIPTION_1")
+		}}
 	}), tpl.sell}}
+
 }

@@ -2218,8 +2218,8 @@ tt.modifier.vis_flags = F_MOD
 tt.modifier.type = MOD_TYPE_POISON
 tt.modifier.resets_same = true
 tt.modifier.replaces_lower = true
-tt.main_script.insert = scripts.mod_bullet_tower_barrel.insert
-tt.main_script.remove = scripts.mod_bullet_tower_barrel.remove
+tt.main_script.insert = scripts.mod_damage_reduction.insert
+tt.main_script.remove = scripts.mod_damage_reduction.remove
 tt.main_script.update = scripts.mod_track_target.update
 tt.render.sprites[1].prefix = "barrel_tower_projectile_mod"
 tt.render.sprites[1].name = "idle"
@@ -2523,5 +2523,209 @@ tt.dps.damage_max = b.damage_max
 tt.dps.damage_type = b.damage_type
 tt.main_script.insert = scripts.mod_tower_sparking_geode_burst_damage.insert
 tt.main_script.update = scripts.mod_dps.update
-
 --#endregion
+
+-- 腐森
+tt = E:register_t("tower_rotten_forest", "tower")
+E:add_comps(tt, "attacks", "powers", "auras")
+tt.tower.type = "rotten_forest"
+tt.tower.level = 1
+tt.tower.price = 220
+tt.tower.menu_offset = v(0, 19)
+tt.aura1 = nil
+tt.aura2 = nil
+tt.aura_list1 = {}
+tt.aura_list2 = {}
+tt.info.fn = scripts.tower_rotten_forest.get_info
+tt.info.portrait = "kr4_info_portraits_towers_0012"
+tt.info.enc_icon = 9
+tt.main_script.insert = scripts.tower_rotten_forest.insert
+tt.main_script.update = scripts.tower_rotten_forest.update
+tt.main_script.remove = scripts.tower_rotten_forest.remove
+tt.attacks.range = 186
+tt.sound_events.insert = "RottenForestTaunt"
+tt.ui.click_rect = r(-37, -6, 74, 62)
+tt.attacks.list[1] = E:clone_c("custom_attack")
+tt.attacks.list[1].cooldown = 23
+tt.attacks.list[1].cast_time = 0.6
+tt.attacks.list[1].entity = "soldier_rotten_forest_tree"
+tt.attacks.list[1].spawn_offset = v(25, 0)
+tt.attacks.list[1].range = 186
+tt.attacks.list[1].disabled = true
+tt.attacks.list[1].vis_flags = F_BLOCK
+tt.attacks.list[1].vis_bans = bor(F_FLYING)
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "rotten_forest_tower_floor"
+tt.render.sprites[1].offset = v(0, 15)
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].name = "rotten_forest_tower_idle"
+tt.render.sprites[2].offset = v(0, 30)
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].name = "rotten_forest_tower_mist_run"
+tt.render.sprites[3].offset = v(0, 30)
+tt.auras.list[1] = E:clone_c("aura_attack")
+tt.auras.list[1].name = "aura_tower_rotten_forest_spike_burst"
+tt.auras.list[1].cooldown = 0
+tt.auras.list[2] = E:clone_c("aura_attack")
+tt.auras.list[2].name = "aura_tower_rotten_forest_fog"
+tt.auras.list[2].cooldown = 0
+tt.powers.fog = CC("power")
+tt.powers.fog.price_base = 150
+tt.powers.fog.price_inc = 150
+tt.powers.fog.max_level = 1
+tt.powers.warp = CC("power")
+tt.powers.warp.price_base = 160
+tt.powers.warp.price_inc = 160
+tt.powers.warp.max_level = 2
+tt.powers.warp.aura = "aura_rotten_forest_thorn"
+tt.powers.tree = CC("power")
+tt.powers.tree.price_base = 200
+tt.powers.tree.price_inc = 100
+tt.powers.tree.max_level = 2
+tt.powers.tree.cooldown = 23
+tt.powers.tree.cooldown_inc = -5
+
+tt = RT("mod_rf_thorn", "modifier")
+AC(tt, "render")
+tt.animation_start = "thorn"
+tt.animation_end = "thornFree"
+tt.modifier.duration = 0
+tt.modifier.duration_inc = 3
+tt.modifier.type = MOD_TYPE_FREEZE
+tt.modifier.vis_flags = bor(F_THORN, F_MOD, F_STUN)
+tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
+tt.damage_min = 0
+tt.damage_max = 0
+tt.damage_type = DAMAGE_PHYSICAL
+tt.damage_every = 1
+tt.render.sprites[1].prefix = "rotten_forest_towers_root"
+tt.render.sprites[1].name = "start"
+tt.render.sprites[1].size_prefixes = {"rotten_forest_towers_root", "rotten_forest_towers_root", "rotten_forest_towers_root"}
+tt.render.sprites[1].size_scales = {vv(1.0), vv(1.3), vv(1.8)}
+tt.render.sprites[1].anchor.y = 0.22
+tt.main_script.insert = scripts.mod_thorn.insert
+tt.main_script.update = scripts.mod_thorn.update
+tt.main_script.remove = scripts.mod_thorn.remove
+
+tt = RT("aura_rotten_forest_thorn", "aura")
+tt.aura.mod = "mod_rf_thorn"
+tt.aura.duration = -1
+tt.aura.radius = 200
+tt.aura.vis_flags = bor(F_THORN, F_MOD)
+tt.aura.vis_bans = bor(F_FLYING, F_BOSS)
+tt.aura.cooldown = 15
+tt.aura.max_count = 5
+tt.aura.max_count_inc = 0
+tt.aura.min_count = 2
+tt.aura.hit_time = fts(17)
+tt.aura.hit_sound = "ThornSound"
+tt.main_script.update = scripts.aura_rotten_forest_thorn.update
+
+tt = E:register_t("decal_rotten_forest_smoke", "decal_scripted")
+E:add_comps(tt, "render")
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "rotten_forest_tower_decal_floor"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "rotten_forest_tower_decal"
+tt.render.sprites[2].name = "idle"
+tt.render.sprites[2].loop = true
+tt.render.sprites[2].z = Z_DECALS
+tt.main_script.update = scripts.decal_rotten_forest_smoke.update
+
+tt = E:register_t("decal_rotten_forest_fog", "decal")
+E:add_comps(tt, "render")
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "rotten_forest_tower_fog"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_DECALS
+
+tt = E:register_t("aura_tower_rotten_forest_spike_burst", "aura")
+tt.aura.mods = {"mod_tower_rotten_forest_burst_slow", "mod_tower_rotten_forest_burst_damage"}
+tt.aura.radius = 186 -- 跟随防御塔
+tt.aura.vis_flags = bor(F_MOD)
+tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
+tt.aura.duration = 1e+99
+tt.aura.cycle_time = 0.4
+tt.distance_between_crystals = {115, 110, 70}
+tt.main_script.insert = scripts.aura_tower_rotten_forest_spike_burst.insert
+tt.main_script.update = scripts.aura_tower_rotten_forest_spike_burst.update
+
+tt = E:register_t("aura_tower_rotten_forest_fog", "aura")
+tt.aura.mods = {"mod_tower_rotten_forest_fog_slow", "mod_tower_rotten_forest_fog_miss"}
+tt.aura.radius = 186 -- 跟随防御塔
+tt.aura.vis_flags = bor(F_MOD)
+tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
+tt.aura.duration = 1e+99
+tt.aura.cycle_time = 0.4
+tt.distance_between_crystals = {115, 110, 70}
+tt.main_script.insert = scripts.aura_tower_rotten_forest_fog.insert
+tt.main_script.update = scripts.aura_tower_rotten_forest_fog.update
+
+tt = E:register_t("mod_tower_rotten_forest_fog_slow", "mod_slow")
+tt.modifier.duration = 0.4 + fts(1)
+tt.slow.factor = 0.9
+
+tt = E:register_t("mod_tower_rotten_forest_fog_miss", "modifier")
+tt.modifier.duration = 0.4 + fts(1)
+tt.modifier.vis_flags = F_MOD
+tt.modifier.level = 1
+tt.damage_reduction = 0.25
+tt.main_script.insert = scripts.mod_damage_reduction.insert
+tt.main_script.remove = scripts.mod_damage_reduction.remove
+tt.main_script.update = scripts.mod_track_target.update
+
+tt = E:register_t("mod_tower_rotten_forest_burst_slow", "mod_slow")
+tt.modifier.duration = 0.4 + fts(1)
+tt.slow.factor = 0.7
+
+tt = E:register_t("mod_tower_rotten_forest_burst_damage", "modifier")
+E:add_comps(tt, "dps")
+tt.modifier.duration = 0.4
+tt.modifier.vis_bans = bor(F_FLYING)
+tt.modifier.allows_duplicates = true
+tt.dps.damage_every = 0.4
+tt.dps.damage_min = 7
+tt.dps.damage_max = 7
+tt.dps.damage_type = DAMAGE_PHYSICAL
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+
+tt = E:register_t("soldier_rotten_forest_tree", "soldier_militia")
+tt.info.portrait = "kr4_info_portraits_soldiers_0019"
+tt.main_script.insert = scripts.soldier_rotten_forest_tree.insert
+tt.main_script.update = scripts.soldier_rotten_forest_tree.update
+tt.health.armor = 0
+tt.health.hp_max = 260
+tt.regen.health = 0
+tt.regen.cooldown = 1
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_max = 24
+tt.melee.attacks[1].damage_min = 16
+tt.melee.range = 60
+tt.health_bar.offset = v(0, 40)
+tt.render.sprites[1].prefix = "rotten_forest_towers_spawn"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "rotten_forest_towers_spawn_shadow"
+tt.render.sprites[2].anchor.y = 0.2
+tt.render.sprites[2].offset = v(0, 0)
+tt.render.sprites[2].z = Z_DECALS + 1
+tt.patrol_pos_offset = v(15, 10)
+tt.patrol_min_cd = 3
+tt.patrol_max_cd = 6
+
+tt = E:register_t("mod_soldier_rotten_forest_tree_lose_hp", "modifier")
+AC(tt, "dps")
+tt.dps.damage_every = 0.2
+tt.dps.damage_min = 5
+tt.dps.damage_max = 5
+tt.dps.damage_type = DAMAGE_TRUE
+tt.modifier.duration = 1e30
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+

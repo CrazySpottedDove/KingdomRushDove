@@ -3561,12 +3561,6 @@ function scripts.mod_thorn.update(this, store)
 		return
 	end
 
-	-- if this.max_times_applied then
-	--     if not target.enemy.counts.mod_thorn then
-	--         target.enemy.counts.mod_thorn = 0
-	--     end
-	--     target.enemy.counts.mod_thorn = target.enemy.counts.mod_thorn + 1
-	-- end
 	this.pos = target.pos
 
 	local target_flip = target.render.sprites[1].flip_x

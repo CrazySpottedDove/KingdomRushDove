@@ -5647,6 +5647,42 @@ return {
 		size = 10615,
 		hash = "97658a72"
 	},
+	["kr1-desktop/sounds/files/kr4_rotten_forest_attack.ogg"] = {
+		size = 11965,
+		hash = "6f5698aa"
+	},
+	["kr1-desktop/sounds/files/kr4_rotten_forest_branches_upg.ogg"] = {
+		size = 13907,
+		hash = "89335ed8"
+	},
+	["kr1-desktop/sounds/files/kr4_rotten_forest_build_taunt_1.ogg"] = {
+		size = 12344,
+		hash = "2838fd04"
+	},
+	["kr1-desktop/sounds/files/kr4_rotten_forest_build_taunt_2.ogg"] = {
+		size = 13364,
+		hash = "c0885c92"
+	},
+	["kr1-desktop/sounds/files/kr4_rotten_forest_build_taunt_3.ogg"] = {
+		size = 13830,
+		hash = "8348102d"
+	},
+	["kr1-desktop/sounds/files/kr4_rotten_forest_build_taunt_4.ogg"] = {
+		size = 13716,
+		hash = "46ae514b"
+	},
+	["kr1-desktop/sounds/files/kr4_rotten_forest_ents_upg.ogg"] = {
+		size = 10179,
+		hash = "abb5a75d"
+	},
+	["kr1-desktop/sounds/files/kr4_rotten_forest_mist_upg.ogg"] = {
+		size = 14713,
+		hash = "3d8d02b4"
+	},
+	["kr1-desktop/sounds/files/kr4_rotten_forest_rootsevil.ogg"] = {
+		size = 6365,
+		hash = "e78582e0"
+	},
 	["kr1-desktop/sounds/files/kr4_sfx_erudite_shot_op1_var1_v1.ogg"] = {
 		size = 43135,
 		hash = "a177fbd4"

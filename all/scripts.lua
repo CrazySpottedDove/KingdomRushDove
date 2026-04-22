@@ -9656,4 +9656,40 @@ function scripts.mod_tower_decal.remove(this, store)
 	return true
 end
 
+scripts.mod_damage_reduction = {}
+
+function scripts.mod_damage_reduction.insert(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if not target or not target.health or target.health.dead then
+		return false
+	end
+
+	target.unit.damage_factor = target.unit.damage_factor * (1 - this.damage_reduction)
+
+	if this.render then
+		for _, s in ipairs(this.render.sprites) do
+			s.ts = store.tick_ts
+
+			if s.size_names then
+				s.prefix = s.size_names[target.unit.size]
+			end
+		end
+	end
+
+	signal.emit("mod-applied", this, target)
+
+	return true
+end
+
+function scripts.mod_damage_reduction.remove(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if target then
+		target.unit.damage_factor = target.unit.damage_factor / (1 - this.damage_reduction)
+	end
+
+	return true
+end
+
 return scripts
