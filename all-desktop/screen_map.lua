@@ -1091,7 +1091,7 @@ function screen_map:keypressed(key, isrepeat)
 
 			return true
 		elseif self.ui_settings_panel_view and not self.ui_settings_panel_view.hidden then
-			self.ui_settings_panel_view:hidden()
+			self.ui_settings_panel_view:hide()
 
 			return true
 		-- end
