@@ -1700,6 +1700,8 @@ function upgrades:patch_templates(max_level)
 			T(n).bullet.damage_max = math.ceil(T(n).bullet.damage_max * u.damage_factor)
 		end
 
+		T("tower_dwaarp").attacks.list[1].damage_min = math.floor(T("tower_dwaarp").attacks.list[1].damage_min * u.damage_factor)
+		T("tower_dwaarp").attacks.list[1].damage_max = math.floor(T("tower_dwaarp").attacks.list[1].damage_max * u.damage_factor)
 		T("ray_tesla").bounce_damage_min = math.floor(T("ray_tesla").bounce_damage_min * u.damage_factor)
 		T("ray_tesla").bounce_damage_max = math.floor(T("ray_tesla").bounce_damage_max * u.damage_factor)
 		T("mod_ray_frankenstein").dps.damage_min = math.floor(T("mod_ray_frankenstein").dps.damage_min * u.damage_factor)
@@ -1849,8 +1851,8 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("engineer_efficiency")
 	if u then
-		T("mod_tower_rotten_forest_burst_damage").dps.damage_min = math.ceil(T("mod_tower_rotten_forest_burst_damage").dps.damage_min * 1.25)
-		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = math.ceil(T("mod_tower_rotten_forest_burst_damage").dps.damage_max * 1.25)
+		T("mod_tower_rotten_forest_burst_damage").dps.damage_min = math.floor(T("mod_tower_rotten_forest_burst_damage").dps.damage_min * 1.25)
+		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = math.floor(T("mod_tower_rotten_forest_burst_damage").dps.damage_max * 1.25)
 	end
 
 	if self.list_id == 1 or self.list_id == 2 then

@@ -23261,7 +23261,7 @@ function scripts.decal_rotten_forest_smoke.update(this, store, script)
 	U.animation_start(this, "idle", nil, store.tick_ts, true, 2)
 	U.y_wait(store, fts(5))
 	U.animation_start(this, "idle", nil, store.tick_ts, true, 1)
-	local range = 52
+	local range = 50
 	local vis_flags = F_MOD
 	local vis_bans = bor(F_FLYING, F_BOSS)
 	while true do
