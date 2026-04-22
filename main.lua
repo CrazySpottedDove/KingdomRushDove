@@ -608,8 +608,33 @@ end
 
 -- 从 traceback 文本中归因出导致错误的插件。
 -- 规则：逐行（从最内层向外）扫描；
---   若先遇到 mods/local/<dir>/ 帧再遇到 hook_utils.lua 帧，说明错误发生在插件自身代码中；
+--   若先遇到某个插件 entry 对应的帧再遇到 hook_utils.lua 帧，说明错误发生在插件自身代码中；
 --   若先遇到 hook_utils.lua 帧，说明错误发生在被插件钩子通过 next() 调用的原始函数中，不归因插件。
+local function escape_lua_pattern(s)
+	return (tostring(s):gsub("([%(%)%.%%%+%-%*%?%[%]%^%$])", "%%%1"))
+end
+
+local function find_mod_dir_by_entry_in_line(line)
+	if type(line) ~= "string" or type(MOD_REGISTRY) ~= "table" then
+		return nil
+	end
+
+	local padded_line = " " .. line .. " "
+
+	for mod_dir, config in pairs(MOD_REGISTRY) do
+		local entry = (type(config) == "table" and config.entry) or mod_dir
+		if type(entry) == "string" and entry ~= "" then
+			local escaped_entry = escape_lua_pattern(entry)
+			local token_pattern = "[^%w_]" .. escaped_entry .. "[^%w_]"
+			if padded_line:match(token_pattern) then
+				return mod_dir
+			end
+		end
+	end
+
+	return nil
+end
+
 local function find_mod_from_traceback(traceback)
 	if not traceback then
 		return nil
@@ -624,7 +649,7 @@ local function find_mod_from_traceback(traceback)
 		idx = idx + 1
 
 		if first_mod_dir == nil then
-			local dir = line:match("[/\\]plugins[/\\]([^/\\]+)[/\\]") or line:match("plugins[/\\]([^/\\]+)[/\\]")
+			local dir = find_mod_dir_by_entry_in_line(line)
 
 			if dir then
 				first_mod_dir = dir
@@ -672,7 +697,10 @@ local function find_mod_dir_from_traceback(traceback)
 		idx = idx + 1
 
 		if first_mod_dir == nil then
-			local dir = line:match("[/\\]plugins[/\\]([^/\\]+)[/\\]") or line:match("plugins[/\\]([^/\\]+)[/\\]") or line:match("[/\\]mods[/\\]local[/\\]([^/\\]+)[/\\]") or line:match("mods[/\\]local[/\\]([^/\\]+)[/\\]")
+			local dir = find_mod_dir_by_entry_in_line(line)
+			if not dir then
+				dir = line:match("[/\\]plugins[/\\]([^/\\]+)[/\\]") or line:match("plugins[/\\]([^/\\]+)[/\\]") or line:match("[/\\]mods[/\\]local[/\\]([^/\\]+)[/\\]") or line:match("mods[/\\]local[/\\]([^/\\]+)[/\\]")
+			end
 
 			if dir then
 				first_mod_dir = dir
@@ -820,12 +848,18 @@ function love.errorhandler(msg)
 	p = string.gsub(p, "%[string \"(.-)\"%]", "%1")
 
 	local pos = love.window.toPixels(70)
+	local text_width = G.getWidth() - pos
+
+	G.clear(G.getBackgroundColor())
+
+	local _, tip_wrapped = cn_font:getWrap(pt, text_width)
+	local tip_height = cn_font:getHeight() * #tip_wrapped + love.window.toPixels(16)
+
+	G.setFont(cn_font)
+	G.printf(pt, pos, pos, text_width)
 
 	G.setFont(font)
-	G.clear(G.getBackgroundColor())
-	G.printf(p, pos, pos, G.getWidth() - pos)
-	G.setFont(cn_font)
-	G.printf(pt, pos, pos, G.getWidth() - pos)
+	G.printf(p, pos, pos + tip_height, text_width)
 	G.present()
 
 	local show_last = true
