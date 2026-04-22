@@ -2714,6 +2714,7 @@ tt.render.sprites[2].name = "rotten_forest_towers_spawn_shadow"
 tt.render.sprites[2].anchor.y = 0.2
 tt.render.sprites[2].offset = v(0, 0)
 tt.render.sprites[2].z = Z_DECALS + 1
+tt.vis.bans = bor(tt.vis.bans, F_SKELETON)
 tt.patrol_pos_offset = v(15, 10)
 tt.patrol_min_cd = 3
 tt.patrol_max_cd = 6
