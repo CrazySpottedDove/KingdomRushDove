@@ -2347,16 +2347,14 @@ tt.sound_events.death = "EnemySheepDeath"
 tt.ui.click_rect = r(-18, tt.flight_height - 2, 36, 23)
 tt.vis.flags = bor(F_ENEMY, F_FLYING)
 --#endregion
---#region bullet_tower_ray_lvl1
-tt = RT("bullet_tower_ray_lvl1", "bullet")
 
+tt = RT("bullet_tower_ray_lvl4", "bullet")
 local b = balance.towers.ray.basic_attack
-
 tt.explosion_radius = b.explosion_radius
 tt.explosion_factor = b.explosion_factor
 tt.bullet.damage_type = DAMAGE_MAGICAL
-tt.bullet.damage_min = b.damage_min[1]
-tt.bullet.damage_max = b.damage_max[1]
+tt.bullet.damage_min = b.damage_min[4]
+tt.bullet.damage_max = b.damage_max[4]
 tt.bullet.hit_time = fts(2)
 tt.bullet.out_start_fx = "fx_tower_ray_hit_start"
 tt.bullet.out_fx = "fx_tower_ray_hit_source"
@@ -2374,27 +2372,10 @@ tt.track_target = true
 tt.ray_duration = b.duration
 tt.damage_mult = 1
 tt.vis_flags = F_RANGED
---#endregion
---#region bullet_tower_ray_lvl2
-tt = RT("bullet_tower_ray_lvl2", "bullet_tower_ray_lvl1")
-tt.bullet.damage_min = b.damage_min[2]
-tt.bullet.damage_max = b.damage_max[2]
---#endregion
---#region bullet_tower_ray_lvl3
-tt = RT("bullet_tower_ray_lvl3", "bullet_tower_ray_lvl1")
-tt.bullet.damage_min = b.damage_min[3]
-tt.bullet.damage_max = b.damage_max[3]
---#endregion
---#region bullet_tower_ray_lvl4
-tt = RT("bullet_tower_ray_lvl4", "bullet_tower_ray_lvl1")
-tt.bullet.damage_min = b.damage_min[4]
-tt.bullet.damage_max = b.damage_max[4]
---#endregion
+
 --#region bullet_tower_ray_chain
 tt = RT("bullet_tower_ray_chain", "bullet_tower_ray_lvl4")
-
 local b = balance.towers.ray
-
 -- 连锁伤害倍率由局内 ac.damage_mult（升级等级）与 tower_scripts 在发射时写入；
 -- 勿置 nil，否则 this.damage_mult 在脚本里参与运算会报错。
 tt.max_enemies = b.skill_chain.max_enemies
@@ -2404,12 +2385,11 @@ tt.chain_range = b.skill_chain.chain_range
 tt.chain_range_to_stay = tt.chain_range + b.basic_attack.extra_range_to_stay
 tt.vis_bans = bor(F_NIGHTMARE)
 --#endregion
+
 --#region bullet_tower_ray_sheep
 tt = RT("bullet_tower_ray_sheep", "bolt")
 b = balance.towers.ray.skill_sheep
-
 AC(tt, "force_motion")
-
 tt.render.sprites[1].hidden = true
 tt.height_attack = 70
 tt.initial_vel_y = 50
@@ -2442,11 +2422,10 @@ tt.sheep_t = "enemy_tower_ray_sheep"
 tt.sheep_flying_t = "enemy_tower_ray_sheep_flying"
 tt.sheep_hp_mult = b.sheep.hp_mult
 --#endregion
+
 --#region mod_tower_ray_damage
 tt = RT("mod_tower_ray_damage", "modifier")
-
 AC(tt, "render", "dps", "tween")
-
 b = balance.towers.ray.basic_attack
 tt.dps.damage_min = b.damage_min[4]
 tt.dps.damage_max = b.damage_max[4]
@@ -2469,14 +2448,14 @@ tt.tween.remove = true
 tt.tween.disabled = true
 tt.modifier.allows_duplicates = true
 --#endregion
+
 --#region mod_tower_ray_slow
 tt = RT("mod_tower_ray_slow", "mod_slow")
 b = balance.towers.ray.basic_attack
 tt.slow.factor = b.slow.factor
 tt.modifier.duration = b.duration
--- tt.main_script.insert = scripts.mod_tower_ray_slow.insert
--- tt.main_script.remove = scripts.mod_tower_ray_slow.remove
 -- 红法 END
+
 -- 观星 BEGIN
 --#endregion
 --#region ps_stargazers_death_star_trail
@@ -3040,17 +3019,6 @@ tt = RT("hermit_toad_tower_shadow", "decal")
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "hermit_toad_tower_shadow"
 tt.render.sprites[1].z = Z_DECALS
---#endregion
---#region tower_build_hermit_toad
-tt = RT("tower_build_hermit_toad", "tower_build")
-tt.build_name = "tower_hermit_toad_lvl1"
-tt.render.sprites[1].name = "terrains_%04i"
-tt.render.sprites[1].offset = v(0, 0)
-tt.render.sprites[1].hidden = true
-tt.render.sprites[2].name = "hermit_toad_tower_construction"
-tt.render.sprites[2].offset = v(0, 5)
-tt.render.sprites[3].offset.y = 75
-tt.render.sprites[4].offset.y = 75
 --#endregion
 --#region tower_hermit_toad_lvl4
 tt = RT("tower_hermit_toad_lvl4", "tower")

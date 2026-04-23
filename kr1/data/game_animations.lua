@@ -1739,69 +1739,6 @@ return {
 		prefix = "arborean_emissary_hit",
 		to = 19
 	},
-	arborean_emissary_lvl1_tower_layerX_attack = {
-		from = 50,
-		layer_from = 1,
-		layer_prefix = "arborean_emissary_lvl1_tower_layer%i",
-		layer_to = 3,
-		to = 100
-	},
-	arborean_emissary_lvl1_tower_layerX_idle = {
-		from = 1,
-		layer_from = 1,
-		layer_prefix = "arborean_emissary_lvl1_tower_layer%i",
-		layer_to = 3,
-		to = 1
-	},
-	arborean_emissary_lvl1_tower_layerX_idle_2 = {
-		from = 2,
-		layer_from = 1,
-		layer_prefix = "arborean_emissary_lvl1_tower_layer%i",
-		layer_to = 3,
-		to = 49
-	},
-	arborean_emissary_lvl2_tower_layerX_attack = {
-		from = 50,
-		layer_from = 1,
-		layer_prefix = "arborean_emissary_lvl2_tower_layer%i",
-		layer_to = 3,
-		to = 100
-	},
-	arborean_emissary_lvl2_tower_layerX_idle = {
-		from = 1,
-		layer_from = 1,
-		layer_prefix = "arborean_emissary_lvl2_tower_layer%i",
-		layer_to = 3,
-		to = 1
-	},
-	arborean_emissary_lvl2_tower_layerX_idle_2 = {
-		from = 2,
-		layer_from = 1,
-		layer_prefix = "arborean_emissary_lvl2_tower_layer%i",
-		layer_to = 3,
-		to = 49
-	},
-	arborean_emissary_lvl3_tower_layerX_attack = {
-		from = 50,
-		layer_from = 1,
-		layer_prefix = "arborean_emissary_lvl3_tower_layer%i",
-		layer_to = 3,
-		to = 100
-	},
-	arborean_emissary_lvl3_tower_layerX_idle = {
-		from = 1,
-		layer_from = 1,
-		layer_prefix = "arborean_emissary_lvl3_tower_layer%i",
-		layer_to = 3,
-		to = 1
-	},
-	arborean_emissary_lvl3_tower_layerX_idle_2 = {
-		from = 2,
-		layer_from = 1,
-		layer_prefix = "arborean_emissary_lvl3_tower_layer%i",
-		layer_to = 3,
-		to = 49
-	},
 	arborean_emissary_lvl4_tower_layerX_attack = {
 		from = 78,
 		layer_from = 1,
@@ -2109,11 +2046,6 @@ return {
 		prefix = "archer_arcane_sleep_z",
 		to = 50
 	},
-	arcane_wizard_tower_build = {
-		from = 1,
-		prefix = "arcane_wizard_tower_build",
-		to = 1
-	},
 	arcane_wizard_tower_empowerment_decal = {
 		from = 1,
 		prefix = "arcane_wizard_tower_empowerment_decal",
@@ -2128,90 +2060,6 @@ return {
 		from = 1,
 		prefix = "arcane_wizard_tower_empowerment_particles",
 		to = 30
-	},
-	arcane_wizard_tower_lvl1_tower_layerX_attack = {
-		from = 3,
-		layer_from = 1,
-		layer_prefix = "arcane_wizard_tower_lvl1_tower_layer%i",
-		layer_to = 5,
-		to = 44
-	},
-	arcane_wizard_tower_lvl1_tower_layerX_attack_back = {
-		from = 45,
-		layer_from = 1,
-		layer_prefix = "arcane_wizard_tower_lvl1_tower_layer%i",
-		layer_to = 5,
-		to = 86
-	},
-	arcane_wizard_tower_lvl1_tower_layerX_idle = {
-		from = 1,
-		layer_from = 1,
-		layer_prefix = "arcane_wizard_tower_lvl1_tower_layer%i",
-		layer_to = 5,
-		to = 1
-	},
-	arcane_wizard_tower_lvl1_tower_layerX_idle_back = {
-		from = 2,
-		layer_from = 1,
-		layer_prefix = "arcane_wizard_tower_lvl1_tower_layer%i",
-		layer_to = 5,
-		to = 2
-	},
-	arcane_wizard_tower_lvl2_tower_layerX_attack = {
-		from = 3,
-		layer_from = 1,
-		layer_prefix = "arcane_wizard_tower_lvl2_tower_layer%i",
-		layer_to = 10,
-		to = 44
-	},
-	arcane_wizard_tower_lvl2_tower_layerX_attack_back = {
-		from = 45,
-		layer_from = 1,
-		layer_prefix = "arcane_wizard_tower_lvl2_tower_layer%i",
-		layer_to = 10,
-		to = 86
-	},
-	arcane_wizard_tower_lvl2_tower_layerX_idle = {
-		from = 1,
-		layer_from = 1,
-		layer_prefix = "arcane_wizard_tower_lvl2_tower_layer%i",
-		layer_to = 10,
-		to = 1
-	},
-	arcane_wizard_tower_lvl2_tower_layerX_idle_back = {
-		from = 2,
-		layer_from = 1,
-		layer_prefix = "arcane_wizard_tower_lvl2_tower_layer%i",
-		layer_to = 10,
-		to = 2
-	},
-	arcane_wizard_tower_lvl3_tower_layerX_attack = {
-		from = 3,
-		layer_from = 1,
-		layer_prefix = "arcane_wizard_tower_lvl3_tower_layer%i",
-		layer_to = 6,
-		to = 44
-	},
-	arcane_wizard_tower_lvl3_tower_layerX_attack_back = {
-		from = 45,
-		layer_from = 1,
-		layer_prefix = "arcane_wizard_tower_lvl3_tower_layer%i",
-		layer_to = 6,
-		to = 86
-	},
-	arcane_wizard_tower_lvl3_tower_layerX_idle = {
-		from = 1,
-		layer_from = 1,
-		layer_prefix = "arcane_wizard_tower_lvl3_tower_layer%i",
-		layer_to = 6,
-		to = 1
-	},
-	arcane_wizard_tower_lvl3_tower_layerX_idle_back = {
-		from = 2,
-		layer_from = 1,
-		layer_prefix = "arcane_wizard_tower_lvl3_tower_layer%i",
-		layer_to = 6,
-		to = 2
 	},
 	arcane_wizard_tower_lvl4_disintegration_dirt_big_idle = {
 		from = 1,
@@ -2298,11 +2146,6 @@ return {
 		layer_prefix = "arcane_wizard_tower_lvl4_tower_layer%i",
 		layer_to = 8,
 		to = 290
-	},
-	arcane_wizard_tower_preview = {
-		from = 1,
-		prefix = "arcane_wizard_tower_preview",
-		to = 1
 	},
 	arcane_wizard_tower_ray_end_idle = {
 		from = 1,
@@ -2829,367 +2672,6 @@ return {
 		prefix = "ballista_tower_junk_particle_projectile_2",
 		to = 11
 	},
-	ballista_tower_lvl123_tower_goblin_ability1 = {
-		from = 2,
-		prefix = "ballista_tower_lvl123_tower_goblin",
-		to = 8
-	},
-	ballista_tower_lvl123_tower_goblin_idle_1_1 = {
-		from = 1,
-		prefix = "ballista_tower_lvl123_tower_goblin",
-		to = 1
-	},
-	ballista_tower_lvl1_tower_layerX_ability1 = {
-		from = 2,
-		layer_from = 1,
-		layer_prefix = "ballista_tower_lvl1_tower_layer%i",
-		layer_to = 3,
-		to = 9
-	},
-	ballista_tower_lvl1_tower_layerX_ability2 = {
-		from = 10,
-		layer_from = 1,
-		layer_prefix = "ballista_tower_lvl1_tower_layer%i",
-		layer_to = 3,
-		to = 17
-	},
-	ballista_tower_lvl1_tower_layerX_ability3 = {
-		from = 18,
-		layer_from = 1,
-		layer_prefix = "ballista_tower_lvl1_tower_layer%i",
-		layer_to = 3,
-		to = 25
-	},
-	ballista_tower_lvl1_tower_layerX_ability4 = {
-		from = 26,
-		layer_from = 1,
-		layer_prefix = "ballista_tower_lvl1_tower_layer%i",
-		layer_to = 3,
-		to = 33
-	},
-	ballista_tower_lvl1_tower_layerX_ability5 = {
-		from = 34,
-		layer_from = 1,
-		layer_prefix = "ballista_tower_lvl1_tower_layer%i",
-		layer_to = 3,
-		to = 49
-	},
-	ballista_tower_lvl1_tower_layerX_idle_1_1 = {
-		from = 1,
-		layer_from = 1,
-		layer_prefix = "ballista_tower_lvl1_tower_layer%i",
-		layer_to = 3,
-		to = 1
-	},
-	ballista_tower_lvl1_tower_top_ability1_loop_1_1 = {
-		from = 2,
-		prefix = "ballista_tower_lvl1_tower_top",
-		to = 9
-	},
-	ballista_tower_lvl1_tower_top_ability1_loop_1_2 = {
-		from = 16,
-		prefix = "ballista_tower_lvl1_tower_top",
-		to = 23
-	},
-	ballista_tower_lvl1_tower_top_ability1_loop_1_3 = {
-		from = 30,
-		prefix = "ballista_tower_lvl1_tower_top",
-		to = 37
-	},
-	ballista_tower_lvl1_tower_top_ability1_loop_1_4 = {
-		from = 44,
-		prefix = "ballista_tower_lvl1_tower_top",
-		to = 51
-	},
-	ballista_tower_lvl1_tower_top_ability1_loop_1_5 = {
-		from = 58,
-		prefix = "ballista_tower_lvl1_tower_top",
-		to = 65
-	},
-	ballista_tower_lvl1_tower_top_ability1_out_1_1 = {
-		from = 10,
-		prefix = "ballista_tower_lvl1_tower_top",
-		to = 14
-	},
-	ballista_tower_lvl1_tower_top_ability1_out_1_2 = {
-		from = 24,
-		prefix = "ballista_tower_lvl1_tower_top",
-		to = 28
-	},
-	ballista_tower_lvl1_tower_top_ability1_out_1_3 = {
-		from = 38,
-		prefix = "ballista_tower_lvl1_tower_top",
-		to = 42
-	},
-	ballista_tower_lvl1_tower_top_ability1_out_1_4 = {
-		from = 52,
-		prefix = "ballista_tower_lvl1_tower_top",
-		to = 56
-	},
-	ballista_tower_lvl1_tower_top_ability1_out_1_5 = {
-		from = 66,
-		prefix = "ballista_tower_lvl1_tower_top",
-		to = 70
-	},
-	ballista_tower_lvl1_tower_top_idle_1_1 = {
-		from = 1,
-		prefix = "ballista_tower_lvl1_tower_top",
-		to = 1
-	},
-	ballista_tower_lvl1_tower_top_idle_1_2 = {
-		from = 15,
-		prefix = "ballista_tower_lvl1_tower_top",
-		to = 15
-	},
-	ballista_tower_lvl1_tower_top_idle_1_3 = {
-		from = 29,
-		prefix = "ballista_tower_lvl1_tower_top",
-		to = 29
-	},
-	ballista_tower_lvl1_tower_top_idle_1_4 = {
-		from = 43,
-		prefix = "ballista_tower_lvl1_tower_top",
-		to = 43
-	},
-	ballista_tower_lvl1_tower_top_idle_1_5 = {
-		from = 57,
-		prefix = "ballista_tower_lvl1_tower_top",
-		to = 57
-	},
-	ballista_tower_lvl2_tower_layerX_ability1 = {
-		from = 2,
-		layer_from = 1,
-		layer_prefix = "ballista_tower_lvl2_tower_layer%i",
-		layer_to = 3,
-		to = 9
-	},
-	ballista_tower_lvl2_tower_layerX_ability2 = {
-		from = 10,
-		layer_from = 1,
-		layer_prefix = "ballista_tower_lvl2_tower_layer%i",
-		layer_to = 3,
-		to = 17
-	},
-	ballista_tower_lvl2_tower_layerX_ability3 = {
-		from = 18,
-		layer_from = 1,
-		layer_prefix = "ballista_tower_lvl2_tower_layer%i",
-		layer_to = 3,
-		to = 25
-	},
-	ballista_tower_lvl2_tower_layerX_ability4 = {
-		from = 26,
-		layer_from = 1,
-		layer_prefix = "ballista_tower_lvl2_tower_layer%i",
-		layer_to = 3,
-		to = 33
-	},
-	ballista_tower_lvl2_tower_layerX_ability5 = {
-		from = 34,
-		layer_from = 1,
-		layer_prefix = "ballista_tower_lvl2_tower_layer%i",
-		layer_to = 3,
-		to = 49
-	},
-	ballista_tower_lvl2_tower_layerX_idle_1_1 = {
-		from = 1,
-		layer_from = 1,
-		layer_prefix = "ballista_tower_lvl2_tower_layer%i",
-		layer_to = 3,
-		to = 1
-	},
-	ballista_tower_lvl2_tower_top_ability1_loop_1_1 = {
-		from = 2,
-		prefix = "ballista_tower_lvl2_tower_top",
-		to = 9
-	},
-	ballista_tower_lvl2_tower_top_ability1_loop_1_2 = {
-		from = 16,
-		prefix = "ballista_tower_lvl2_tower_top",
-		to = 23
-	},
-	ballista_tower_lvl2_tower_top_ability1_loop_1_3 = {
-		from = 30,
-		prefix = "ballista_tower_lvl2_tower_top",
-		to = 37
-	},
-	ballista_tower_lvl2_tower_top_ability1_loop_1_4 = {
-		from = 44,
-		prefix = "ballista_tower_lvl2_tower_top",
-		to = 51
-	},
-	ballista_tower_lvl2_tower_top_ability1_loop_1_5 = {
-		from = 58,
-		prefix = "ballista_tower_lvl2_tower_top",
-		to = 65
-	},
-	ballista_tower_lvl2_tower_top_ability1_out_1_1 = {
-		from = 10,
-		prefix = "ballista_tower_lvl2_tower_top",
-		to = 14
-	},
-	ballista_tower_lvl2_tower_top_ability1_out_1_2 = {
-		from = 24,
-		prefix = "ballista_tower_lvl2_tower_top",
-		to = 28
-	},
-	ballista_tower_lvl2_tower_top_ability1_out_1_3 = {
-		from = 38,
-		prefix = "ballista_tower_lvl2_tower_top",
-		to = 42
-	},
-	ballista_tower_lvl2_tower_top_ability1_out_1_4 = {
-		from = 52,
-		prefix = "ballista_tower_lvl2_tower_top",
-		to = 56
-	},
-	ballista_tower_lvl2_tower_top_ability1_out_1_5 = {
-		from = 66,
-		prefix = "ballista_tower_lvl2_tower_top",
-		to = 70
-	},
-	ballista_tower_lvl2_tower_top_idle_1_1 = {
-		from = 1,
-		prefix = "ballista_tower_lvl2_tower_top",
-		to = 1
-	},
-	ballista_tower_lvl2_tower_top_idle_1_2 = {
-		from = 15,
-		prefix = "ballista_tower_lvl2_tower_top",
-		to = 15
-	},
-	ballista_tower_lvl2_tower_top_idle_1_3 = {
-		from = 29,
-		prefix = "ballista_tower_lvl2_tower_top",
-		to = 29
-	},
-	ballista_tower_lvl2_tower_top_idle_1_4 = {
-		from = 43,
-		prefix = "ballista_tower_lvl2_tower_top",
-		to = 43
-	},
-	ballista_tower_lvl2_tower_top_idle_1_5 = {
-		from = 57,
-		prefix = "ballista_tower_lvl2_tower_top",
-		to = 57
-	},
-	ballista_tower_lvl3_tower_base_layerX_ability1 = {
-		from = 2,
-		layer_from = 1,
-		layer_prefix = "ballista_tower_lvl3_tower_base_layer%i",
-		layer_to = 3,
-		to = 9
-	},
-	ballista_tower_lvl3_tower_base_layerX_ability2 = {
-		from = 10,
-		layer_from = 1,
-		layer_prefix = "ballista_tower_lvl3_tower_base_layer%i",
-		layer_to = 3,
-		to = 17
-	},
-	ballista_tower_lvl3_tower_base_layerX_ability3 = {
-		from = 18,
-		layer_from = 1,
-		layer_prefix = "ballista_tower_lvl3_tower_base_layer%i",
-		layer_to = 3,
-		to = 25
-	},
-	ballista_tower_lvl3_tower_base_layerX_ability4 = {
-		from = 26,
-		layer_from = 1,
-		layer_prefix = "ballista_tower_lvl3_tower_base_layer%i",
-		layer_to = 3,
-		to = 33
-	},
-	ballista_tower_lvl3_tower_base_layerX_ability5 = {
-		from = 34,
-		layer_from = 1,
-		layer_prefix = "ballista_tower_lvl3_tower_base_layer%i",
-		layer_to = 3,
-		to = 49
-	},
-	ballista_tower_lvl3_tower_base_layerX_idle_1_1 = {
-		from = 1,
-		layer_from = 1,
-		layer_prefix = "ballista_tower_lvl3_tower_base_layer%i",
-		layer_to = 3,
-		to = 1
-	},
-	ballista_tower_lvl3_tower_top_ability1_loop_1_1 = {
-		from = 2,
-		prefix = "ballista_tower_lvl3_tower_top",
-		to = 9
-	},
-	ballista_tower_lvl3_tower_top_ability1_loop_1_2 = {
-		from = 16,
-		prefix = "ballista_tower_lvl3_tower_top",
-		to = 23
-	},
-	ballista_tower_lvl3_tower_top_ability1_loop_1_3 = {
-		from = 30,
-		prefix = "ballista_tower_lvl3_tower_top",
-		to = 37
-	},
-	ballista_tower_lvl3_tower_top_ability1_loop_1_4 = {
-		from = 44,
-		prefix = "ballista_tower_lvl3_tower_top",
-		to = 51
-	},
-	ballista_tower_lvl3_tower_top_ability1_loop_1_5 = {
-		from = 58,
-		prefix = "ballista_tower_lvl3_tower_top",
-		to = 65
-	},
-	ballista_tower_lvl3_tower_top_ability1_out_1_1 = {
-		from = 10,
-		prefix = "ballista_tower_lvl3_tower_top",
-		to = 14
-	},
-	ballista_tower_lvl3_tower_top_ability1_out_1_2 = {
-		from = 24,
-		prefix = "ballista_tower_lvl3_tower_top",
-		to = 28
-	},
-	ballista_tower_lvl3_tower_top_ability1_out_1_3 = {
-		from = 38,
-		prefix = "ballista_tower_lvl3_tower_top",
-		to = 42
-	},
-	ballista_tower_lvl3_tower_top_ability1_out_1_4 = {
-		from = 52,
-		prefix = "ballista_tower_lvl3_tower_top",
-		to = 56
-	},
-	ballista_tower_lvl3_tower_top_ability1_out_1_5 = {
-		from = 66,
-		prefix = "ballista_tower_lvl3_tower_top",
-		to = 70
-	},
-	ballista_tower_lvl3_tower_top_idle_1_1 = {
-		from = 1,
-		prefix = "ballista_tower_lvl3_tower_top",
-		to = 1
-	},
-	ballista_tower_lvl3_tower_top_idle_1_2 = {
-		from = 15,
-		prefix = "ballista_tower_lvl3_tower_top",
-		to = 15
-	},
-	ballista_tower_lvl3_tower_top_idle_1_3 = {
-		from = 29,
-		prefix = "ballista_tower_lvl3_tower_top",
-		to = 29
-	},
-	ballista_tower_lvl3_tower_top_idle_1_4 = {
-		from = 43,
-		prefix = "ballista_tower_lvl3_tower_top",
-		to = 43
-	},
-	ballista_tower_lvl3_tower_top_idle_1_5 = {
-		from = 57,
-		prefix = "ballista_tower_lvl3_tower_top",
-		to = 57
-	},
 	ballista_tower_lvl4_tower_base_layerX_ability1 = {
 		from = 2,
 		layer_from = 1,
@@ -3356,11 +2838,6 @@ return {
 		from = 1,
 		prefix = "ballista_tower_missed_arrow_dust",
 		to = 16
-	},
-	ballista_tower_preview_idle_1_1 = {
-		from = 1,
-		prefix = "ballista_tower_preview",
-		to = 1
 	},
 	ballista_tower_special_arrow_fx_idle = {
 		from = 1,
@@ -3602,86 +3079,6 @@ return {
 		prefix = "barrel_tower_berserker_unit",
 		to = 40
 	},
-	barrel_tower_build = {
-		from = 1,
-		prefix = "barrel_tower_build",
-		to = 1
-	},
-	barrel_tower_lvl1_tower = {
-		from = 1,
-		prefix = "barrel_tower_lvl1_tower",
-		to = 1
-	},
-	barrel_tower_lvl1_tower_flow_idle = {
-		from = 1,
-		prefix = "barrel_tower_lvl1_tower_flow",
-		to = 8
-	},
-	barrel_tower_lvl1_tower_tube = {
-		from = 1,
-		prefix = "barrel_tower_lvl1_tower_tube",
-		to = 1
-	},
-	barrel_tower_lvl1_viking_attack = {
-		from = 2,
-		prefix = "barrel_tower_lvl1_viking",
-		to = 55
-	},
-	barrel_tower_lvl1_viking_idle = {
-		from = 1,
-		prefix = "barrel_tower_lvl1_viking",
-		to = 1
-	},
-	barrel_tower_lvl2_tower = {
-		from = 1,
-		prefix = "barrel_tower_lvl2_tower",
-		to = 1
-	},
-	barrel_tower_lvl2_tower_flow_idle = {
-		from = 1,
-		prefix = "barrel_tower_lvl2_tower_flow",
-		to = 8
-	},
-	barrel_tower_lvl2_tower_tube = {
-		from = 1,
-		prefix = "barrel_tower_lvl2_tower_tube",
-		to = 1
-	},
-	barrel_tower_lvl2_viking_attack = {
-		from = 2,
-		prefix = "barrel_tower_lvl2_viking",
-		to = 55
-	},
-	barrel_tower_lvl2_viking_idle = {
-		from = 1,
-		prefix = "barrel_tower_lvl2_viking",
-		to = 1
-	},
-	barrel_tower_lvl3_tower = {
-		from = 1,
-		prefix = "barrel_tower_lvl3_tower",
-		to = 1
-	},
-	barrel_tower_lvl3_tower_flow_idle = {
-		from = 1,
-		prefix = "barrel_tower_lvl3_tower_flow",
-		to = 8
-	},
-	barrel_tower_lvl3_tower_tube = {
-		from = 1,
-		prefix = "barrel_tower_lvl3_tower_tube",
-		to = 1
-	},
-	barrel_tower_lvl3_viking_attack = {
-		from = 2,
-		prefix = "barrel_tower_lvl3_viking",
-		to = 55
-	},
-	barrel_tower_lvl3_viking_idle = {
-		from = 1,
-		prefix = "barrel_tower_lvl3_viking",
-		to = 1
-	},
 	barrel_tower_lvl4_bad_barrel_bubbles_fx_loop = {
 		from = 1,
 		prefix = "barrel_tower_lvl4_bad_barrel_bubbles_fx",
@@ -3765,11 +3162,6 @@ return {
 	barrel_tower_lvl4_viking_idle = {
 		from = 1,
 		prefix = "barrel_tower_lvl4_viking",
-		to = 1
-	},
-	barrel_tower_preview = {
-		from = 1,
-		prefix = "barrel_tower_preview",
 		to = 1
 	},
 	barrel_tower_projectile_hit_fx_decal_idle = {
@@ -5701,11 +5093,6 @@ return {
 		prefix = "catapult-f",
 		to = 97
 	},
-	channeler_tower_build = {
-		from = 1,
-		prefix = "channeler_tower_build",
-		to = 1
-	},
 	channeler_tower_crystal_full_idle = {
 		from = 1,
 		prefix = "channeler_tower_crystal_full",
@@ -5715,281 +5102,6 @@ return {
 		from = 1,
 		prefix = "channeler_tower_crystal_union_fx",
 		to = 21
-	},
-	channeler_tower_lvl1_2_3_crystal_a_break = {
-		from = 11,
-		prefix = "channeler_tower_lvl1_2_3_crystal_a",
-		to = 19
-	},
-	channeler_tower_lvl1_2_3_crystal_a_idle = {
-		from = 1,
-		prefix = "channeler_tower_lvl1_2_3_crystal_a",
-		to = 1
-	},
-	channeler_tower_lvl1_2_3_crystal_a_union = {
-		from = 2,
-		prefix = "channeler_tower_lvl1_2_3_crystal_a",
-		to = 10
-	},
-	channeler_tower_lvl1_2_3_crystal_b_break = {
-		from = 11,
-		prefix = "channeler_tower_lvl1_2_3_crystal_b",
-		to = 19
-	},
-	channeler_tower_lvl1_2_3_crystal_b_idle = {
-		from = 1,
-		prefix = "channeler_tower_lvl1_2_3_crystal_b",
-		to = 1
-	},
-	channeler_tower_lvl1_2_3_crystal_b_union = {
-		from = 2,
-		prefix = "channeler_tower_lvl1_2_3_crystal_b",
-		to = 10
-	},
-	channeler_tower_lvl1_2_3_crystal_c_break = {
-		from = 11,
-		prefix = "channeler_tower_lvl1_2_3_crystal_c",
-		to = 19
-	},
-	channeler_tower_lvl1_2_3_crystal_c_idle = {
-		from = 1,
-		prefix = "channeler_tower_lvl1_2_3_crystal_c",
-		to = 1
-	},
-	channeler_tower_lvl1_2_3_crystal_c_union = {
-		from = 2,
-		prefix = "channeler_tower_lvl1_2_3_crystal_c",
-		to = 10
-	},
-	channeler_tower_lvl1_2_3_crystal_d_break = {
-		from = 11,
-		prefix = "channeler_tower_lvl1_2_3_crystal_d",
-		to = 19
-	},
-	channeler_tower_lvl1_2_3_crystal_d_idle = {
-		from = 1,
-		prefix = "channeler_tower_lvl1_2_3_crystal_d",
-		to = 1
-	},
-	channeler_tower_lvl1_2_3_crystal_d_union = {
-		from = 2,
-		prefix = "channeler_tower_lvl1_2_3_crystal_d",
-		to = 10
-	},
-	channeler_tower_lvl1_2_3_crystal_e_break = {
-		from = 11,
-		prefix = "channeler_tower_lvl1_2_3_crystal_e",
-		to = 19
-	},
-	channeler_tower_lvl1_2_3_crystal_e_idle = {
-		from = 1,
-		prefix = "channeler_tower_lvl1_2_3_crystal_e",
-		to = 1
-	},
-	channeler_tower_lvl1_2_3_crystal_e_union = {
-		from = 2,
-		prefix = "channeler_tower_lvl1_2_3_crystal_e",
-		to = 10
-	},
-	channeler_tower_lvl1_2_3_crystal_f_break = {
-		from = 11,
-		prefix = "channeler_tower_lvl1_2_3_crystal_f",
-		to = 19
-	},
-	channeler_tower_lvl1_2_3_crystal_f_idle = {
-		from = 1,
-		prefix = "channeler_tower_lvl1_2_3_crystal_f",
-		to = 1
-	},
-	channeler_tower_lvl1_2_3_crystal_f_union = {
-		from = 2,
-		prefix = "channeler_tower_lvl1_2_3_crystal_f",
-		to = 10
-	},
-	channeler_tower_lvl1_mage_attack_back_end = {
-		from = 151,
-		prefix = "channeler_tower_lvl1_mage",
-		to = 160
-	},
-	channeler_tower_lvl1_mage_attack_back_loop = {
-		from = 139,
-		prefix = "channeler_tower_lvl1_mage",
-		to = 150
-	},
-	channeler_tower_lvl1_mage_attack_back_start = {
-		from = 129,
-		prefix = "channeler_tower_lvl1_mage",
-		to = 138
-	},
-	channeler_tower_lvl1_mage_attack_end = {
-		from = 71,
-		prefix = "channeler_tower_lvl1_mage",
-		to = 80
-	},
-	channeler_tower_lvl1_mage_attack_loop = {
-		from = 59,
-		prefix = "channeler_tower_lvl1_mage",
-		to = 70
-	},
-	channeler_tower_lvl1_mage_attack_start = {
-		from = 49,
-		prefix = "channeler_tower_lvl1_mage",
-		to = 58
-	},
-	channeler_tower_lvl1_mage_idle = {
-		from = 1,
-		prefix = "channeler_tower_lvl1_mage",
-		to = 48
-	},
-	channeler_tower_lvl1_mage_idle_back = {
-		from = 81,
-		prefix = "channeler_tower_lvl1_mage",
-		to = 128
-	},
-	channeler_tower_lvl1_rune_glow_glow_end = {
-		from = 6,
-		prefix = "channeler_tower_lvl1_rune_glow",
-		to = 9
-	},
-	channeler_tower_lvl1_rune_glow_glow_start = {
-		from = 1,
-		prefix = "channeler_tower_lvl1_rune_glow",
-		to = 4
-	},
-	channeler_tower_lvl1_rune_glow_idle = {
-		from = 5,
-		prefix = "channeler_tower_lvl1_rune_glow",
-		to = 5
-	},
-	channeler_tower_lvl1_tower = {
-		from = 1,
-		prefix = "channeler_tower_lvl1_tower",
-		to = 1
-	},
-	channeler_tower_lvl2_mage_attack_back_end = {
-		from = 151,
-		prefix = "channeler_tower_lvl2_mage",
-		to = 160
-	},
-	channeler_tower_lvl2_mage_attack_back_loop = {
-		from = 139,
-		prefix = "channeler_tower_lvl2_mage",
-		to = 150
-	},
-	channeler_tower_lvl2_mage_attack_back_start = {
-		from = 129,
-		prefix = "channeler_tower_lvl2_mage",
-		to = 138
-	},
-	channeler_tower_lvl2_mage_attack_end = {
-		from = 71,
-		prefix = "channeler_tower_lvl2_mage",
-		to = 80
-	},
-	channeler_tower_lvl2_mage_attack_loop = {
-		from = 59,
-		prefix = "channeler_tower_lvl2_mage",
-		to = 70
-	},
-	channeler_tower_lvl2_mage_attack_start = {
-		from = 49,
-		prefix = "channeler_tower_lvl2_mage",
-		to = 58
-	},
-	channeler_tower_lvl2_mage_idle = {
-		from = 1,
-		prefix = "channeler_tower_lvl2_mage",
-		to = 48
-	},
-	channeler_tower_lvl2_mage_idle_back = {
-		from = 81,
-		prefix = "channeler_tower_lvl2_mage",
-		to = 128
-	},
-	channeler_tower_lvl2_rune_glow_glow_end = {
-		from = 6,
-		prefix = "channeler_tower_lvl2_rune_glow",
-		to = 9
-	},
-	channeler_tower_lvl2_rune_glow_glow_start = {
-		from = 1,
-		prefix = "channeler_tower_lvl2_rune_glow",
-		to = 4
-	},
-	channeler_tower_lvl2_rune_glow_idle = {
-		from = 5,
-		prefix = "channeler_tower_lvl2_rune_glow",
-		to = 5
-	},
-	channeler_tower_lvl2_stone_a = {
-		from = 1,
-		prefix = "channeler_tower_lvl2_stone_a",
-		to = 1
-	},
-	channeler_tower_lvl2_stone_b = {
-		from = 1,
-		prefix = "channeler_tower_lvl2_stone_b",
-		to = 1
-	},
-	channeler_tower_lvl2_stone_c = {
-		from = 1,
-		prefix = "channeler_tower_lvl2_stone_c",
-		to = 1
-	},
-	channeler_tower_lvl2_stone_d = {
-		from = 1,
-		prefix = "channeler_tower_lvl2_stone_d",
-		to = 1
-	},
-	channeler_tower_lvl2_stone_e = {
-		from = 1,
-		prefix = "channeler_tower_lvl2_stone_e",
-		to = 1
-	},
-	channeler_tower_lvl2_tower = {
-		from = 1,
-		prefix = "channeler_tower_lvl2_tower",
-		to = 1
-	},
-	channeler_tower_lvl3_mage_attack_back_end = {
-		from = 151,
-		prefix = "channeler_tower_lvl3_mage",
-		to = 160
-	},
-	channeler_tower_lvl3_mage_attack_back_loop = {
-		from = 139,
-		prefix = "channeler_tower_lvl3_mage",
-		to = 150
-	},
-	channeler_tower_lvl3_mage_attack_back_start = {
-		from = 129,
-		prefix = "channeler_tower_lvl3_mage",
-		to = 138
-	},
-	channeler_tower_lvl3_mage_attack_end = {
-		from = 71,
-		prefix = "channeler_tower_lvl3_mage",
-		to = 80
-	},
-	channeler_tower_lvl3_mage_attack_loop = {
-		from = 59,
-		prefix = "channeler_tower_lvl3_mage",
-		to = 70
-	},
-	channeler_tower_lvl3_mage_attack_start = {
-		from = 49,
-		prefix = "channeler_tower_lvl3_mage",
-		to = 58
-	},
-	channeler_tower_lvl3_mage_idle = {
-		from = 1,
-		prefix = "channeler_tower_lvl3_mage",
-		to = 48
-	},
-	channeler_tower_lvl3_mage_idle_back = {
-		from = 81,
-		prefix = "channeler_tower_lvl3_mage",
-		to = 128
 	},
 	channeler_tower_lvl3_rune_glow_glow_end = {
 		from = 6,
@@ -6005,41 +5117,6 @@ return {
 		from = 5,
 		prefix = "channeler_tower_lvl3_rune_glow",
 		to = 5
-	},
-	channeler_tower_lvl3_stone_a = {
-		from = 1,
-		prefix = "channeler_tower_lvl3_stone_a",
-		to = 1
-	},
-	channeler_tower_lvl3_stone_b = {
-		from = 1,
-		prefix = "channeler_tower_lvl3_stone_b",
-		to = 1
-	},
-	channeler_tower_lvl3_stone_c = {
-		from = 1,
-		prefix = "channeler_tower_lvl3_stone_c",
-		to = 1
-	},
-	channeler_tower_lvl3_stone_d = {
-		from = 1,
-		prefix = "channeler_tower_lvl3_stone_d",
-		to = 1
-	},
-	channeler_tower_lvl3_stone_e = {
-		from = 1,
-		prefix = "channeler_tower_lvl3_stone_e",
-		to = 1
-	},
-	channeler_tower_lvl3_stone_f = {
-		from = 1,
-		prefix = "channeler_tower_lvl3_stone_f",
-		to = 1
-	},
-	channeler_tower_lvl3_tower = {
-		from = 1,
-		prefix = "channeler_tower_lvl3_tower",
-		to = 1
 	},
 	channeler_tower_lvl4_crystal_a_break = {
 		from = 11,
@@ -6385,11 +5462,6 @@ return {
 		from = 1,
 		prefix = "channeler_tower_mutation_tower_fx",
 		to = 21
-	},
-	channeler_tower_preview = {
-		from = 1,
-		prefix = "channeler_tower_preview",
-		to = 1
 	},
 	channeler_tower_ray_end_loop = {
 		from = 1,
@@ -7562,66 +6634,6 @@ return {
 		from = 23,
 		prefix = "dante",
 		to = 44
-	},
-	dark_army_soldier_knight_lvl1_attack = {
-		from = 8,
-		prefix = "darkarmy_soldier_lvl1",
-		to = 24
-	},
-	dark_army_soldier_knight_lvl1_death = {
-		from = 25,
-		prefix = "darkarmy_soldier_lvl1",
-		to = 35
-	},
-	dark_army_soldier_knight_lvl1_idle = {
-		from = 1,
-		prefix = "darkarmy_soldier_lvl1",
-		to = 1
-	},
-	dark_army_soldier_knight_lvl1_walk = {
-		from = 2,
-		prefix = "darkarmy_soldier_lvl1",
-		to = 7
-	},
-	dark_army_soldier_knight_lvl2_attack = {
-		from = 8,
-		prefix = "darkarmy_soldier_lvl2",
-		to = 24
-	},
-	dark_army_soldier_knight_lvl2_death = {
-		from = 25,
-		prefix = "darkarmy_soldier_lvl2",
-		to = 35
-	},
-	dark_army_soldier_knight_lvl2_idle = {
-		from = 1,
-		prefix = "darkarmy_soldier_lvl2",
-		to = 1
-	},
-	dark_army_soldier_knight_lvl2_walk = {
-		from = 2,
-		prefix = "darkarmy_soldier_lvl2",
-		to = 7
-	},
-	dark_army_soldier_knight_lvl3_attack = {
-		from = 9,
-		prefix = "darkarmy_soldier_lvl3",
-		to = 25
-	},
-	dark_army_soldier_knight_lvl3_death = {
-		from = 26,
-		prefix = "darkarmy_soldier_lvl3",
-		to = 38
-	},
-	dark_army_soldier_knight_lvl3_idle = {
-		from = 1,
-		prefix = "darkarmy_soldier_lvl3",
-		to = 1
-	},
-	dark_army_soldier_knight_lvl3_walk = {
-		from = 2,
-		prefix = "darkarmy_soldier_lvl3",
-		to = 8
 	},
 	dark_spitters_attack = {
 		from = 132,
@@ -10885,11 +9897,6 @@ return {
 		prefix = "demon_minotaur_unit",
 		to = 98
 	},
-	demon_pit_tower_build = {
-		from = 1,
-		prefix = "demon_pit_tower_build",
-		to = 1
-	},
 	demon_pit_tower_demon_big_guy_attack = {
 		from = 26,
 		prefix = "demon_pit_tower_demon_big_guy",
@@ -10980,131 +9987,6 @@ return {
 		prefix = "demon_pit_tower_demon_projectile_particle",
 		to = 7
 	},
-	demon_pit_tower_lvl1_tower_base_idle = {
-		from = 1,
-		prefix = "demon_pit_tower_lvl1_tower_base",
-		to = 1
-	},
-	demon_pit_tower_lvl1_tower_base_splash = {
-		from = 2,
-		prefix = "demon_pit_tower_lvl1_tower_base",
-		to = 7
-	},
-	demon_pit_tower_lvl1_tower_bubbles_idle = {
-		from = 1,
-		prefix = "demon_pit_tower_lvl1_tower_bubbles",
-		to = 20
-	},
-	demon_pit_tower_lvl1_tower_demon_reload_reload_1 = {
-		from = 1,
-		prefix = "demon_pit_tower_lvl1_tower_demon_reload",
-		to = 10
-	},
-	demon_pit_tower_lvl1_tower_demons_attack = {
-		from = 2,
-		prefix = "demon_pit_tower_lvl1_tower_demons",
-		to = 83
-	},
-	demon_pit_tower_lvl1_tower_demons_idle = {
-		from = 1,
-		prefix = "demon_pit_tower_lvl1_tower_demons",
-		to = 1
-	},
-	demon_pit_tower_lvl1_tower_demons_reload_2 = {
-		from = 84,
-		prefix = "demon_pit_tower_lvl1_tower_demons",
-		to = 95
-	},
-	demon_pit_tower_lvl2_tower_base_idle = {
-		from = 1,
-		prefix = "demon_pit_tower_lvl2_tower_base",
-		to = 1
-	},
-	demon_pit_tower_lvl2_tower_base_splash = {
-		from = 2,
-		prefix = "demon_pit_tower_lvl2_tower_base",
-		to = 7
-	},
-	demon_pit_tower_lvl2_tower_bubbles_idle = {
-		from = 1,
-		prefix = "demon_pit_tower_lvl2_tower_bulbbles",
-		to = 20
-	},
-	demon_pit_tower_lvl2_tower_demons_attack = {
-		from = 2,
-		prefix = "demon_pit_tower_lvl2_tower_demons",
-		to = 83
-	},
-	demon_pit_tower_lvl2_tower_demons_idle = {
-		from = 1,
-		prefix = "demon_pit_tower_lvl2_tower_demons",
-		to = 1
-	},
-	demon_pit_tower_lvl2_tower_demons_reload_2 = {
-		from = 84,
-		prefix = "demon_pit_tower_lvl2_tower_demons",
-		to = 95
-	},
-	demon_pit_tower_lvl2_tower_front_idle = {
-		from = 1,
-		prefix = "demon_pit_tower_lvl2_tower_front",
-		to = 1
-	},
-	demon_pit_tower_lvl2_tower_front_splash = {
-		from = 2,
-		prefix = "demon_pit_tower_lvl2_tower_front",
-		to = 7
-	},
-	demon_pit_tower_lvl2_tower_reload_reload_1 = {
-		from = 1,
-		prefix = "demon_pit_tower_lvl2_tower_reload",
-		to = 10
-	},
-	demon_pit_tower_lvl3_tower_base_idle = {
-		from = 1,
-		prefix = "demon_pit_tower_lvl3_tower_base",
-		to = 1
-	},
-	demon_pit_tower_lvl3_tower_base_splash = {
-		from = 2,
-		prefix = "demon_pit_tower_lvl3_tower_base",
-		to = 7
-	},
-	demon_pit_tower_lvl3_tower_bubbles_idle = {
-		from = 1,
-		prefix = "demon_pit_tower_lvl3_tower_bubbles",
-		to = 20
-	},
-	demon_pit_tower_lvl3_tower_demons_attack = {
-		from = 2,
-		prefix = "demon_pit_tower_lvl3_tower_demons",
-		to = 83
-	},
-	demon_pit_tower_lvl3_tower_demons_idle = {
-		from = 1,
-		prefix = "demon_pit_tower_lvl3_tower_demons",
-		to = 1
-	},
-	demon_pit_tower_lvl3_tower_demons_reload_2 = {
-		from = 84,
-		prefix = "demon_pit_tower_lvl3_tower_demons",
-		to = 95
-	},
-	demon_pit_tower_lvl3_tower_front_idle = {
-		from = 1,
-		prefix = "demon_pit_tower_lvl3_tower_front",
-		to = 1
-	},
-	demon_pit_tower_lvl3_tower_front_splash = {
-		from = 2,
-		prefix = "demon_pit_tower_lvl3_tower_front",
-		to = 7
-	},
-	demon_pit_tower_lvl3_tower_reload_reload_1 = {
-		from = 1,
-		prefix = "demon_pit_tower_lvl3_tower_reload",
-		to = 10
-	},
 	demon_pit_tower_lvl4_tower_base_idle = {
 		from = 1,
 		prefix = "demon_pit_tower_lvl4_tower_base",
@@ -11184,11 +10066,6 @@ return {
 		from = 1,
 		prefix = "demon_pit_tower_lvl4_tower_reload",
 		to = 10
-	},
-	demon_pit_tower_preview = {
-		from = 1,
-		prefix = "demon_pit_tower_preview",
-		to = 1
 	},
 	denas_character_attack = {
 		from = 1,
@@ -11490,66 +10367,6 @@ return {
 		prefix = "dlc_dragons_tower_decal_stun",
 		to = 42
 	},
-	dlc_dragons_tower_drake_lvl1_attack = {
-		from = 39,
-		prefix = "dlc_dragons_tower_drake_lvl1",
-		to = 59
-	},
-	dlc_dragons_tower_drake_lvl1_fly = {
-		from = 21,
-		prefix = "dlc_dragons_tower_drake_lvl1",
-		to = 38
-	},
-	dlc_dragons_tower_drake_lvl1_idle = {
-		from = 21,
-		prefix = "dlc_dragons_tower_drake_lvl1",
-		to = 38
-	},
-	dlc_dragons_tower_drake_lvl1_spawn = {
-		from = 1,
-		prefix = "dlc_dragons_tower_drake_lvl1",
-		to = 20
-	},
-	dlc_dragons_tower_drake_lvl2_attack = {
-		from = 39,
-		prefix = "dlc_dragons_tower_drake_lvl2",
-		to = 59
-	},
-	dlc_dragons_tower_drake_lvl2_fly = {
-		from = 21,
-		prefix = "dlc_dragons_tower_drake_lvl2",
-		to = 38
-	},
-	dlc_dragons_tower_drake_lvl2_idle = {
-		from = 21,
-		prefix = "dlc_dragons_tower_drake_lvl2",
-		to = 38
-	},
-	dlc_dragons_tower_drake_lvl2_spawn = {
-		from = 1,
-		prefix = "dlc_dragons_tower_drake_lvl2",
-		to = 20
-	},
-	dlc_dragons_tower_drake_lvl3_attack = {
-		from = 39,
-		prefix = "dlc_dragons_tower_drake_lvl3",
-		to = 59
-	},
-	dlc_dragons_tower_drake_lvl3_fly = {
-		from = 21,
-		prefix = "dlc_dragons_tower_drake_lvl3",
-		to = 38
-	},
-	dlc_dragons_tower_drake_lvl3_idle = {
-		from = 21,
-		prefix = "dlc_dragons_tower_drake_lvl3",
-		to = 38
-	},
-	dlc_dragons_tower_drake_lvl3_spawn = {
-		from = 1,
-		prefix = "dlc_dragons_tower_drake_lvl3",
-		to = 20
-	},
 	dlc_dragons_tower_drake_lvl4_attack = {
 		from = 39,
 		prefix = "dlc_dragons_tower_drake_lvl4",
@@ -11645,30 +10462,10 @@ return {
 		prefix = "dlc_dragons_tower_modifire_drake_attack",
 		to = 20
 	},
-	dlc_dragons_tower_preview_run = {
-		from = 1,
-		prefix = "dlc_dragons_tower_preview",
-		to = 1
-	},
 	dlc_dragons_tower_projectil_skill_shoot_run = {
 		from = 1,
 		prefix = "dlc_dragons_tower_projectil_skill_shoot",
 		to = 12
-	},
-	dlc_dragons_tower_respiracion_lvl1_run = {
-		from = 1,
-		prefix = "dlc_dragons_tower_respiracion_lvl1",
-		to = 14
-	},
-	dlc_dragons_tower_respiracion_lvl2_run = {
-		from = 1,
-		prefix = "dlc_dragons_tower_respiracion_lvl2",
-		to = 14
-	},
-	dlc_dragons_tower_respiracion_lvl3_run = {
-		from = 1,
-		prefix = "dlc_dragons_tower_respiracion_lvl3",
-		to = 14
 	},
 	dlc_dragons_tower_respiracion_lvl4_fuego_run = {
 		from = 1,
@@ -11679,66 +10476,6 @@ return {
 		from = 1,
 		prefix = "dlc_dragons_tower_respiracion_lvl4",
 		to = 14
-	},
-	dlc_dragons_tower_tower_lvl1_idle = {
-		from = 1,
-		prefix = "dlc_dragons_tower_tower_lvl1",
-		to = 82
-	},
-	dlc_dragons_tower_tower_lvl1_tap_in = {
-		from = 83,
-		prefix = "dlc_dragons_tower_tower_lvl1",
-		to = 104
-	},
-	dlc_dragons_tower_tower_lvl1_tap_loop = {
-		from = 105,
-		prefix = "dlc_dragons_tower_tower_lvl1",
-		to = 105
-	},
-	dlc_dragons_tower_tower_lvl1_tap_out = {
-		from = 106,
-		prefix = "dlc_dragons_tower_tower_lvl1",
-		to = 127
-	},
-	dlc_dragons_tower_tower_lvl2_idle = {
-		from = 1,
-		prefix = "dlc_dragons_tower_tower_lvl2",
-		to = 82
-	},
-	dlc_dragons_tower_tower_lvl2_tap_in = {
-		from = 83,
-		prefix = "dlc_dragons_tower_tower_lvl2",
-		to = 104
-	},
-	dlc_dragons_tower_tower_lvl2_tap_loop = {
-		from = 105,
-		prefix = "dlc_dragons_tower_tower_lvl2",
-		to = 105
-	},
-	dlc_dragons_tower_tower_lvl2_tap_out = {
-		from = 106,
-		prefix = "dlc_dragons_tower_tower_lvl2",
-		to = 127
-	},
-	dlc_dragons_tower_tower_lvl3_idle = {
-		from = 1,
-		prefix = "dlc_dragons_tower_tower_lvl3",
-		to = 82
-	},
-	dlc_dragons_tower_tower_lvl3_tap_in = {
-		from = 83,
-		prefix = "dlc_dragons_tower_tower_lvl3",
-		to = 104
-	},
-	dlc_dragons_tower_tower_lvl3_tap_loop = {
-		from = 105,
-		prefix = "dlc_dragons_tower_tower_lvl3",
-		to = 105
-	},
-	dlc_dragons_tower_tower_lvl3_tap_out = {
-		from = 106,
-		prefix = "dlc_dragons_tower_tower_lvl3",
-		to = 127
 	},
 	dlc_dragons_tower_tower_lvl4_idle = {
 		from = 1,
@@ -12400,11 +11137,6 @@ return {
 		prefix = "dwarven_flamespitter_tower_blazing_trail_projectile_particle",
 		to = 8
 	},
-	dwarven_flamespitter_tower_build = {
-		from = 1,
-		prefix = "dwarven_flamespitter_tower_build",
-		to = 1
-	},
 	dwarven_flamespitter_tower_burn_big_idle = {
 		from = 1,
 		prefix = "dwarven_flamespitter_tower_burn_big",
@@ -12429,181 +11161,6 @@ return {
 		from = 18,
 		prefix = "dwarven_flamespitter_tower_flamethrower_fx",
 		to = 41
-	},
-	dwarven_flamespitter_tower_lvl123_dude_attack = {
-		from = 2,
-		prefix = "dwarven_flamespitter_tower_lvl123_dude",
-		to = 46
-	},
-	dwarven_flamespitter_tower_lvl123_dude_idle = {
-		from = 1,
-		prefix = "dwarven_flamespitter_tower_lvl123_dude",
-		to = 1
-	},
-	dwarven_flamespitter_tower_lvl1_cannon_attack_diagonal_down = {
-		from = 48,
-		prefix = "dwarven_flamespitter_tower_lvl1_cannon",
-		to = 92
-	},
-	dwarven_flamespitter_tower_lvl1_cannon_attack_diagonal_up = {
-		from = 186,
-		prefix = "dwarven_flamespitter_tower_lvl1_cannon",
-		to = 230
-	},
-	dwarven_flamespitter_tower_lvl1_cannon_attack_down = {
-		from = 94,
-		prefix = "dwarven_flamespitter_tower_lvl1_cannon",
-		to = 138
-	},
-	dwarven_flamespitter_tower_lvl1_cannon_attack_side = {
-		from = 2,
-		prefix = "dwarven_flamespitter_tower_lvl1_cannon",
-		to = 46
-	},
-	dwarven_flamespitter_tower_lvl1_cannon_attack_up = {
-		from = 140,
-		prefix = "dwarven_flamespitter_tower_lvl1_cannon",
-		to = 184
-	},
-	dwarven_flamespitter_tower_lvl1_cannon_idle_diagonal_down = {
-		from = 47,
-		prefix = "dwarven_flamespitter_tower_lvl1_cannon",
-		to = 47
-	},
-	dwarven_flamespitter_tower_lvl1_cannon_idle_diagonal_up = {
-		from = 185,
-		prefix = "dwarven_flamespitter_tower_lvl1_cannon",
-		to = 185
-	},
-	dwarven_flamespitter_tower_lvl1_cannon_idle_down = {
-		from = 93,
-		prefix = "dwarven_flamespitter_tower_lvl1_cannon",
-		to = 93
-	},
-	dwarven_flamespitter_tower_lvl1_cannon_idle_side = {
-		from = 1,
-		prefix = "dwarven_flamespitter_tower_lvl1_cannon",
-		to = 1
-	},
-	dwarven_flamespitter_tower_lvl1_cannon_idle_up = {
-		from = 139,
-		prefix = "dwarven_flamespitter_tower_lvl1_cannon",
-		to = 139
-	},
-	dwarven_flamespitter_tower_lvl1_tower_idle = {
-		from = 1,
-		prefix = "dwarven_flamespitter_tower_lvl1_tower",
-		to = 1
-	},
-	dwarven_flamespitter_tower_lvl2_cannon_attack_diagonal_down = {
-		from = 48,
-		prefix = "dwarven_flamespitter_tower_lvl2_cannon",
-		to = 92
-	},
-	dwarven_flamespitter_tower_lvl2_cannon_attack_diagonal_up = {
-		from = 186,
-		prefix = "dwarven_flamespitter_tower_lvl2_cannon",
-		to = 230
-	},
-	dwarven_flamespitter_tower_lvl2_cannon_attack_down = {
-		from = 94,
-		prefix = "dwarven_flamespitter_tower_lvl2_cannon",
-		to = 138
-	},
-	dwarven_flamespitter_tower_lvl2_cannon_attack_side = {
-		from = 2,
-		prefix = "dwarven_flamespitter_tower_lvl2_cannon",
-		to = 46
-	},
-	dwarven_flamespitter_tower_lvl2_cannon_attack_up = {
-		from = 140,
-		prefix = "dwarven_flamespitter_tower_lvl2_cannon",
-		to = 184
-	},
-	dwarven_flamespitter_tower_lvl2_cannon_idle_diagonal_down = {
-		from = 47,
-		prefix = "dwarven_flamespitter_tower_lvl2_cannon",
-		to = 47
-	},
-	dwarven_flamespitter_tower_lvl2_cannon_idle_diagonal_up = {
-		from = 185,
-		prefix = "dwarven_flamespitter_tower_lvl2_cannon",
-		to = 185
-	},
-	dwarven_flamespitter_tower_lvl2_cannon_idle_down = {
-		from = 93,
-		prefix = "dwarven_flamespitter_tower_lvl2_cannon",
-		to = 93
-	},
-	dwarven_flamespitter_tower_lvl2_cannon_idle_side = {
-		from = 1,
-		prefix = "dwarven_flamespitter_tower_lvl2_cannon",
-		to = 1
-	},
-	dwarven_flamespitter_tower_lvl2_cannon_idle_up = {
-		from = 139,
-		prefix = "dwarven_flamespitter_tower_lvl2_cannon",
-		to = 139
-	},
-	dwarven_flamespitter_tower_lvl2_tower_idle = {
-		from = 1,
-		prefix = "dwarven_flamespitter_tower_lvl2_tower",
-		to = 1
-	},
-	dwarven_flamespitter_tower_lvl3_cannon_attack_diagonal_down = {
-		from = 48,
-		prefix = "dwarven_flamespitter_tower_lvl3_cannon",
-		to = 92
-	},
-	dwarven_flamespitter_tower_lvl3_cannon_attack_diagonal_up = {
-		from = 186,
-		prefix = "dwarven_flamespitter_tower_lvl3_cannon",
-		to = 230
-	},
-	dwarven_flamespitter_tower_lvl3_cannon_attack_down = {
-		from = 94,
-		prefix = "dwarven_flamespitter_tower_lvl3_cannon",
-		to = 138
-	},
-	dwarven_flamespitter_tower_lvl3_cannon_attack_side = {
-		from = 2,
-		prefix = "dwarven_flamespitter_tower_lvl3_cannon",
-		to = 46
-	},
-	dwarven_flamespitter_tower_lvl3_cannon_attack_up = {
-		from = 140,
-		prefix = "dwarven_flamespitter_tower_lvl3_cannon",
-		to = 184
-	},
-	dwarven_flamespitter_tower_lvl3_cannon_idle_diagonal_down = {
-		from = 47,
-		prefix = "dwarven_flamespitter_tower_lvl3_cannon",
-		to = 47
-	},
-	dwarven_flamespitter_tower_lvl3_cannon_idle_diagonal_up = {
-		from = 185,
-		prefix = "dwarven_flamespitter_tower_lvl3_cannon",
-		to = 185
-	},
-	dwarven_flamespitter_tower_lvl3_cannon_idle_down = {
-		from = 93,
-		prefix = "dwarven_flamespitter_tower_lvl3_cannon",
-		to = 93
-	},
-	dwarven_flamespitter_tower_lvl3_cannon_idle_side = {
-		from = 1,
-		prefix = "dwarven_flamespitter_tower_lvl3_cannon",
-		to = 1
-	},
-	dwarven_flamespitter_tower_lvl3_cannon_idle_up = {
-		from = 139,
-		prefix = "dwarven_flamespitter_tower_lvl3_cannon",
-		to = 139
-	},
-	dwarven_flamespitter_tower_lvl3_tower_idle = {
-		from = 1,
-		prefix = "dwarven_flamespitter_tower_lvl3_tower",
-		to = 1
 	},
 	dwarven_flamespitter_tower_lvl4_cannon_attack_diagonal_down = {
 		from = 48,
@@ -12708,11 +11265,6 @@ return {
 	dwarven_flamespitter_tower_lvl4_tower_idle = {
 		from = 1,
 		prefix = "dwarven_flamespitter_tower_lvl4_tower",
-		to = 1
-	},
-	dwarven_flamespitter_tower_preview = {
-		from = 1,
-		prefix = "dwarven_flamespitter_tower_preview",
 		to = 1
 	},
 	dwarven_flamespitter_tower_scorching_torches_fx_idle = {
@@ -14259,11 +12811,6 @@ return {
 		prefix = "elven_barracks_tower_door",
 		to = 6
 	},
-	elven_stargazers_tower_build = {
-		from = 1,
-		prefix = "elven_stargazers_tower_build",
-		to = 1
-	},
 	elven_stargazers_tower_event_horizon_decal_big_idle = {
 		from = 1,
 		prefix = "elven_stargazers_tower_event_horizon_decal_big",
@@ -14283,210 +12830,6 @@ return {
 		from = 1,
 		prefix = "elven_stargazers_tower_event_horizon_tower_fx",
 		to = 64
-	},
-	elven_stargazers_tower_lvl1_elf_attack_in = {
-		from = 2,
-		prefix = "elven_stargazers_tower_lvl1_elf",
-		to = 15
-	},
-	elven_stargazers_tower_lvl1_elf_attack_in_back = {
-		from = 31,
-		prefix = "elven_stargazers_tower_lvl1_elf",
-		to = 44
-	},
-	elven_stargazers_tower_lvl1_elf_attack_loop = {
-		from = 16,
-		prefix = "elven_stargazers_tower_lvl1_elf",
-		to = 19
-	},
-	elven_stargazers_tower_lvl1_elf_attack_loop_back = {
-		from = 45,
-		prefix = "elven_stargazers_tower_lvl1_elf",
-		to = 48
-	},
-	elven_stargazers_tower_lvl1_elf_attack_out = {
-		from = 20,
-		prefix = "elven_stargazers_tower_lvl1_elf",
-		to = 29
-	},
-	elven_stargazers_tower_lvl1_elf_attack_out_back = {
-		from = 49,
-		prefix = "elven_stargazers_tower_lvl1_elf",
-		to = 58
-	},
-	elven_stargazers_tower_lvl1_elf_idle = {
-		from = 1,
-		prefix = "elven_stargazers_tower_lvl1_elf",
-		to = 1
-	},
-	elven_stargazers_tower_lvl1_elf_idle_back = {
-		from = 30,
-		prefix = "elven_stargazers_tower_lvl1_elf",
-		to = 30
-	},
-	elven_stargazers_tower_lvl1_tower_layerX_atack_loop = {
-		from = 8,
-		layer_from = 1,
-		layer_prefix = "elven_stargazers_tower_lvl1_tower_layer%i",
-		layer_to = 3,
-		to = 8
-	},
-	elven_stargazers_tower_lvl1_tower_layerX_attack_in = {
-		from = 2,
-		layer_from = 1,
-		layer_prefix = "elven_stargazers_tower_lvl1_tower_layer%i",
-		layer_to = 3,
-		to = 7
-	},
-	elven_stargazers_tower_lvl1_tower_layerX_attack_out = {
-		from = 9,
-		layer_from = 1,
-		layer_prefix = "elven_stargazers_tower_lvl1_tower_layer%i",
-		layer_to = 3,
-		to = 22
-	},
-	elven_stargazers_tower_lvl1_tower_layerX_idle = {
-		from = 1,
-		layer_from = 1,
-		layer_prefix = "elven_stargazers_tower_lvl1_tower_layer%i",
-		layer_to = 3,
-		to = 1
-	},
-	elven_stargazers_tower_lvl2_elf_attack_in = {
-		from = 2,
-		prefix = "elven_stargazers_tower_lvl2_elf",
-		to = 15
-	},
-	elven_stargazers_tower_lvl2_elf_attack_in_back = {
-		from = 31,
-		prefix = "elven_stargazers_tower_lvl2_elf",
-		to = 44
-	},
-	elven_stargazers_tower_lvl2_elf_attack_loop = {
-		from = 16,
-		prefix = "elven_stargazers_tower_lvl2_elf",
-		to = 19
-	},
-	elven_stargazers_tower_lvl2_elf_attack_loop_back = {
-		from = 45,
-		prefix = "elven_stargazers_tower_lvl2_elf",
-		to = 48
-	},
-	elven_stargazers_tower_lvl2_elf_attack_out = {
-		from = 20,
-		prefix = "elven_stargazers_tower_lvl2_elf",
-		to = 29
-	},
-	elven_stargazers_tower_lvl2_elf_attack_out_back = {
-		from = 49,
-		prefix = "elven_stargazers_tower_lvl2_elf",
-		to = 58
-	},
-	elven_stargazers_tower_lvl2_elf_idle = {
-		from = 1,
-		prefix = "elven_stargazers_tower_lvl2_elf",
-		to = 1
-	},
-	elven_stargazers_tower_lvl2_elf_idle_back = {
-		from = 30,
-		prefix = "elven_stargazers_tower_lvl2_elf",
-		to = 30
-	},
-	elven_stargazers_tower_lvl2_tower_layerX_atack_loop = {
-		from = 10,
-		layer_from = 1,
-		layer_prefix = "elven_stargazers_tower_lvl2_tower_layer%i",
-		layer_to = 3,
-		to = 10
-	},
-	elven_stargazers_tower_lvl2_tower_layerX_attack_in = {
-		from = 2,
-		layer_from = 1,
-		layer_prefix = "elven_stargazers_tower_lvl2_tower_layer%i",
-		layer_to = 3,
-		to = 9
-	},
-	elven_stargazers_tower_lvl2_tower_layerX_attack_out = {
-		from = 11,
-		layer_from = 1,
-		layer_prefix = "elven_stargazers_tower_lvl2_tower_layer%i",
-		layer_to = 3,
-		to = 22
-	},
-	elven_stargazers_tower_lvl2_tower_layerX_idle = {
-		from = 1,
-		layer_from = 1,
-		layer_prefix = "elven_stargazers_tower_lvl2_tower_layer%i",
-		layer_to = 3,
-		to = 1
-	},
-	elven_stargazers_tower_lvl3_elf_attack_in = {
-		from = 2,
-		prefix = "elven_stargazers_tower_lvl3_elf",
-		to = 15
-	},
-	elven_stargazers_tower_lvl3_elf_attack_in_back = {
-		from = 31,
-		prefix = "elven_stargazers_tower_lvl3_elf",
-		to = 44
-	},
-	elven_stargazers_tower_lvl3_elf_attack_loop = {
-		from = 16,
-		prefix = "elven_stargazers_tower_lvl3_elf",
-		to = 19
-	},
-	elven_stargazers_tower_lvl3_elf_attack_loop_back = {
-		from = 45,
-		prefix = "elven_stargazers_tower_lvl3_elf",
-		to = 48
-	},
-	elven_stargazers_tower_lvl3_elf_attack_out = {
-		from = 20,
-		prefix = "elven_stargazers_tower_lvl3_elf",
-		to = 29
-	},
-	elven_stargazers_tower_lvl3_elf_attack_out_back = {
-		from = 49,
-		prefix = "elven_stargazers_tower_lvl3_elf",
-		to = 58
-	},
-	elven_stargazers_tower_lvl3_elf_idle = {
-		from = 1,
-		prefix = "elven_stargazers_tower_lvl3_elf",
-		to = 1
-	},
-	elven_stargazers_tower_lvl3_elf_idle_back = {
-		from = 30,
-		prefix = "elven_stargazers_tower_lvl3_elf",
-		to = 30
-	},
-	elven_stargazers_tower_lvl3_tower_layerX_atack_loop = {
-		from = 20,
-		layer_from = 1,
-		layer_prefix = "elven_stargazers_tower_lvl3_tower_layer%i",
-		layer_to = 6,
-		to = 20
-	},
-	elven_stargazers_tower_lvl3_tower_layerX_attack_in = {
-		from = 2,
-		layer_from = 1,
-		layer_prefix = "elven_stargazers_tower_lvl3_tower_layer%i",
-		layer_to = 6,
-		to = 19
-	},
-	elven_stargazers_tower_lvl3_tower_layerX_attack_out = {
-		from = 21,
-		layer_from = 1,
-		layer_prefix = "elven_stargazers_tower_lvl3_tower_layer%i",
-		layer_to = 6,
-		to = 38
-	},
-	elven_stargazers_tower_lvl3_tower_layerX_idle = {
-		from = 1,
-		layer_from = 1,
-		layer_prefix = "elven_stargazers_tower_lvl3_tower_layer%i",
-		layer_to = 6,
-		to = 1
 	},
 	elven_stargazers_tower_lvl4_elf_attack_in = {
 		from = 2,
@@ -14581,11 +12924,6 @@ return {
 		prefix = "elven_stargazers_tower_mark",
 		to = 15
 	},
-	elven_stargazers_tower_preview = {
-		from = 1,
-		prefix = "elven_stargazers_tower_preview",
-		to = 1
-	},
 	elven_stargazers_tower_ray_end_end = {
 		from = 13,
 		prefix = "elven_stargazers_tower_ray_end",
@@ -14600,21 +12938,6 @@ return {
 		from = 1,
 		prefix = "elven_stargazers_tower_ray",
 		to = 33
-	},
-	elven_stargazers_tower_ray_start_lvl3_lvl2_lvl1_end = {
-		from = 22,
-		prefix = "elven_stargazers_tower_ray_start_lvl3_lvl2_lvl1",
-		to = 33
-	},
-	elven_stargazers_tower_ray_start_lvl3_lvl2_lvl1_loop = {
-		from = 11,
-		prefix = "elven_stargazers_tower_ray_start_lvl3_lvl2_lvl1",
-		to = 21
-	},
-	elven_stargazers_tower_ray_start_lvl3_lvl2_lvl1_start = {
-		from = 1,
-		prefix = "elven_stargazers_tower_ray_start_lvl3_lvl2_lvl1",
-		to = 10
 	},
 	elven_stargazers_tower_ray_start_lvl4_end = {
 		from = 22,
@@ -21894,150 +20217,10 @@ return {
 		prefix = "ghost_tower_buff_skill_front",
 		to = 16
 	},
-	ghost_tower_build = {
-		from = 1,
-		prefix = "ghost_tower_build",
-		to = 1
-	},
 	ghost_tower_hit_fx_idle = {
 		from = 1,
 		prefix = "ghost_tower_hit_fx",
 		to = 6
-	},
-	ghost_tower_lvl1_tower = {
-		from = 1,
-		prefix = "ghost_tower_lvl1_tower",
-		to = 1
-	},
-	ghost_tower_lvl1_tower_shadow_fx_idle = {
-		from = 1,
-		prefix = "ghost_tower_lvl1_tower_shadow_fx",
-		to = 36
-	},
-	ghost_tower_lvl1_tower_spawn_fx_idle = {
-		from = 1,
-		prefix = "ghost_tower_lvl1_tower_spawn_fx",
-		to = 16
-	},
-	ghost_tower_lvl1_unit_attack = {
-		from = 49,
-		prefix = "ghost_tower_lvl1_unit",
-		to = 75
-	},
-	ghost_tower_lvl1_unit_death = {
-		from = 76,
-		prefix = "ghost_tower_lvl1_unit",
-		to = 109
-	},
-	ghost_tower_lvl1_unit_idle = {
-		from = 1,
-		prefix = "ghost_tower_lvl1_unit",
-		to = 24
-	},
-	ghost_tower_lvl1_unit_out = {
-		from = 110,
-		prefix = "ghost_tower_lvl1_unit",
-		to = 139
-	},
-	ghost_tower_lvl1_unit_running = {
-		from = 25,
-		prefix = "ghost_tower_lvl1_unit",
-		to = 48
-	},
-	ghost_tower_lvl1_unit_spawn = {
-		from = 140,
-		prefix = "ghost_tower_lvl1_unit",
-		to = 145
-	},
-	ghost_tower_lvl2_tower = {
-		from = 1,
-		prefix = "ghost_tower_lvl2_tower",
-		to = 1
-	},
-	ghost_tower_lvl2_tower_shadow_fx_idle = {
-		from = 1,
-		prefix = "ghost_tower_lvl2_tower_shadow_fx",
-		to = 36
-	},
-	ghost_tower_lvl2_tower_spawn_fx_idle = {
-		from = 1,
-		prefix = "ghost_tower_lvl2_tower_spawn_fx",
-		to = 16
-	},
-	ghost_tower_lvl2_unit_attack = {
-		from = 49,
-		prefix = "ghost_tower_lvl2_unit",
-		to = 75
-	},
-	ghost_tower_lvl2_unit_death = {
-		from = 76,
-		prefix = "ghost_tower_lvl2_unit",
-		to = 109
-	},
-	ghost_tower_lvl2_unit_idle = {
-		from = 1,
-		prefix = "ghost_tower_lvl2_unit",
-		to = 24
-	},
-	ghost_tower_lvl2_unit_out = {
-		from = 110,
-		prefix = "ghost_tower_lvl2_unit",
-		to = 139
-	},
-	ghost_tower_lvl2_unit_running = {
-		from = 25,
-		prefix = "ghost_tower_lvl2_unit",
-		to = 48
-	},
-	ghost_tower_lvl2_unit_spawn = {
-		from = 140,
-		prefix = "ghost_tower_lvl2_unit",
-		to = 145
-	},
-	ghost_tower_lvl3_tower = {
-		from = 1,
-		prefix = "ghost_tower_lvl3_tower",
-		to = 1
-	},
-	ghost_tower_lvl3_tower_shadow_fx_idle = {
-		from = 1,
-		prefix = "ghost_tower_lvl3_tower_shadow_fx",
-		to = 36
-	},
-	ghost_tower_lvl3_tower_spawn_fx_idle = {
-		from = 1,
-		prefix = "ghost_tower_lvl3_tower_spawn_fx",
-		to = 16
-	},
-	ghost_tower_lvl3_unit_attack = {
-		from = 49,
-		prefix = "ghost_tower_lvl3_unit",
-		to = 75
-	},
-	ghost_tower_lvl3_unit_death = {
-		from = 76,
-		prefix = "ghost_tower_lvl3_unit",
-		to = 109
-	},
-	ghost_tower_lvl3_unit_idle = {
-		from = 1,
-		prefix = "ghost_tower_lvl3_unit",
-		to = 24
-	},
-	ghost_tower_lvl3_unit_out = {
-		from = 110,
-		prefix = "ghost_tower_lvl3_unit",
-		to = 139
-	},
-	ghost_tower_lvl3_unit_running = {
-		from = 25,
-		prefix = "ghost_tower_lvl3_unit",
-		to = 48
-	},
-	ghost_tower_lvl3_unit_spawn = {
-		from = 140,
-		prefix = "ghost_tower_lvl3_unit",
-		to = 145
 	},
 	ghost_tower_lvl4_tower = {
 		from = 1,
@@ -22083,11 +20266,6 @@ return {
 		from = 140,
 		prefix = "ghost_tower_lvl4_unit",
 		to = 145
-	},
-	ghost_tower_preview = {
-		from = 1,
-		prefix = "ghost_tower_preview",
-		to = 1
 	},
 	ghost_tower_soul_skill_enemy_fx_big_loop = {
 		from = 1,
@@ -24512,11 +22690,6 @@ return {
 		from = 2,
 		prefix = "hermit_toad_tower_pond",
 		to = 2
-	},
-	hermit_toad_tower_preview_run = {
-		from = 1,
-		prefix = "hermit_toad_tower_preview",
-		to = 1
 	},
 	hermit_toad_tower_projectile2_run = {
 		from = 1,
@@ -34515,11 +32688,6 @@ return {
 		prefix = "necromancer_tower_bone_golem",
 		to = 25
 	},
-	necromancer_tower_build = {
-		from = 1,
-		prefix = "necromancer_tower_build",
-		to = 1
-	},
 	necromancer_tower_curse_big_idle = {
 		from = 1,
 		prefix = "necromancer_tower_curse_big",
@@ -34589,121 +32757,6 @@ return {
 		from = 37,
 		prefix = "necromancer_tower_death_rider",
 		to = 46
-	},
-	necromancer_tower_lvl1_necromancer_attack = {
-		from = 49,
-		prefix = "necromancer_tower_lvl1_necromancer",
-		to = 86
-	},
-	necromancer_tower_lvl1_necromancer_attack_back = {
-		from = 87,
-		prefix = "necromancer_tower_lvl1_necromancer",
-		to = 124
-	},
-	necromancer_tower_lvl1_necromancer_idle = {
-		from = 1,
-		prefix = "necromancer_tower_lvl1_necromancer",
-		to = 10
-	},
-	necromancer_tower_lvl1_necromancer_idle_back = {
-		from = 125,
-		prefix = "necromancer_tower_lvl1_necromancer",
-		to = 134
-	},
-	necromancer_tower_lvl1_necromancer_skull_spawn = {
-		from = 11,
-		prefix = "necromancer_tower_lvl1_necromancer",
-		to = 48
-	},
-	necromancer_tower_lvl1_tower = {
-		from = 1,
-		prefix = "necromancer_tower_lvl1_tower",
-		to = 1
-	},
-	necromancer_tower_lvl1_tower_FX_tower_FX_attack = {
-		from = 1,
-		prefix = "necromancer_tower_lvl1_tower_FX",
-		to = 16
-	},
-	necromancer_tower_lvl2_necromancer_attack = {
-		from = 49,
-		prefix = "necromancer_tower_lvl2_necromancer",
-		to = 86
-	},
-	necromancer_tower_lvl2_necromancer_attack_back = {
-		from = 87,
-		prefix = "necromancer_tower_lvl2_necromancer",
-		to = 124
-	},
-	necromancer_tower_lvl2_necromancer_idle = {
-		from = 1,
-		prefix = "necromancer_tower_lvl2_necromancer",
-		to = 10
-	},
-	necromancer_tower_lvl2_necromancer_idle_back = {
-		from = 125,
-		prefix = "necromancer_tower_lvl2_necromancer",
-		to = 134
-	},
-	necromancer_tower_lvl2_necromancer_skull_spawn = {
-		from = 11,
-		prefix = "necromancer_tower_lvl2_necromancer",
-		to = 48
-	},
-	necromancer_tower_lvl2_tower = {
-		from = 1,
-		prefix = "necromancer_tower_lvl2_tower",
-		to = 1
-	},
-	necromancer_tower_lvl2_tower_FX_tower_FX_attack = {
-		from = 24,
-		prefix = "necromancer_tower_lvl2_tower_FX",
-		to = 39
-	},
-	necromancer_tower_lvl2_tower_FX_tower_FX_skull_spawn = {
-		from = 1,
-		prefix = "necromancer_tower_lvl2_tower_FX",
-		to = 23
-	},
-	necromancer_tower_lvl3_necromancer_attack = {
-		from = 49,
-		prefix = "necromancer_tower_lvl3_necromancer",
-		to = 86
-	},
-	necromancer_tower_lvl3_necromancer_attack_back = {
-		from = 87,
-		prefix = "necromancer_tower_lvl3_necromancer",
-		to = 124
-	},
-	necromancer_tower_lvl3_necromancer_idle = {
-		from = 1,
-		prefix = "necromancer_tower_lvl3_necromancer",
-		to = 10
-	},
-	necromancer_tower_lvl3_necromancer_idle_back = {
-		from = 125,
-		prefix = "necromancer_tower_lvl3_necromancer",
-		to = 134
-	},
-	necromancer_tower_lvl3_necromancer_skull_spawn = {
-		from = 11,
-		prefix = "necromancer_tower_lvl3_necromancer",
-		to = 48
-	},
-	necromancer_tower_lvl3_tower = {
-		from = 1,
-		prefix = "necromancer_tower_lvl3_tower",
-		to = 1
-	},
-	necromancer_tower_lvl3_tower_FX_tower_FX_attack = {
-		from = 24,
-		prefix = "necromancer_tower_lvl3_tower_FX",
-		to = 39
-	},
-	necromancer_tower_lvl3_tower_FX_tower_FX_skull_spawn = {
-		from = 1,
-		prefix = "necromancer_tower_lvl3_tower_FX",
-		to = 23
 	},
 	necromancer_tower_lvl4_necromancer_attack = {
 		from = 49,
@@ -34789,11 +32842,6 @@ return {
 		from = 1,
 		prefix = "necromancer_tower_mark_of_silence_totem",
 		to = 31
-	},
-	necromancer_tower_preview = {
-		from = 1,
-		prefix = "necromancer_tower_preview",
-		to = 1
 	},
 	necromancer_tower_revive_big_idle = {
 		from = 1,
@@ -35265,36 +33313,6 @@ return {
 		prefix = "palace_guard_creep",
 		to = 61
 	},
-	paladin_covenant_build = {
-		from = 1,
-		prefix = "paladin_covenant_build",
-		to = 1
-	},
-	paladin_covenant_lvl1 = {
-		from = 1,
-		prefix = "paladin_covenant_lvl1",
-		to = 1
-	},
-	paladin_covenant_lvl123_door_close = {
-		from = 11,
-		prefix = "paladin_covenant_lvl123_door",
-		to = 18
-	},
-	paladin_covenant_lvl123_door_open = {
-		from = 1,
-		prefix = "paladin_covenant_lvl123_door",
-		to = 10
-	},
-	paladin_covenant_lvl2 = {
-		from = 1,
-		prefix = "paladin_covenant_lvl2",
-		to = 1
-	},
-	paladin_covenant_lvl3 = {
-		from = 1,
-		prefix = "paladin_covenant_lvl3",
-		to = 1
-	},
 	paladin_covenant_lvl4 = {
 		from = 1,
 		prefix = "paladin_covenant_lvl4",
@@ -35314,11 +33332,6 @@ return {
 		from = 1,
 		prefix = "paladin_covenant_lvl4_flag",
 		to = 22
-	},
-	paladin_covenant_preview = {
-		from = 1,
-		prefix = "paladin_covenant_preview",
-		to = 1
 	},
 	paladin_soldier_lvl4_attack01 = {
 		from = 24,
@@ -35364,81 +33377,6 @@ return {
 		from = 3,
 		prefix = "paladin_soldiers_lvl4",
 		to = 23
-	},
-	paladin_soldiers_lvl1_attack = {
-		from = 19,
-		prefix = "paladin_soldiers_lvl1",
-		to = 35
-	},
-	paladin_soldiers_lvl1_death = {
-		from = 36,
-		prefix = "paladin_soldiers_lvl1",
-		to = 54
-	},
-	paladin_soldiers_lvl1_idle = {
-		from = 1,
-		prefix = "paladin_soldiers_lvl1",
-		to = 1
-	},
-	paladin_soldiers_lvl1_idle2 = {
-		from = 2,
-		prefix = "paladin_soldiers_lvl1",
-		to = 2
-	},
-	paladin_soldiers_lvl1_running = {
-		from = 3,
-		prefix = "paladin_soldiers_lvl1",
-		to = 18
-	},
-	paladin_soldiers_lvl2_attack = {
-		from = 19,
-		prefix = "paladin_soldiers_lvl2",
-		to = 35
-	},
-	paladin_soldiers_lvl2_death = {
-		from = 36,
-		prefix = "paladin_soldiers_lvl2",
-		to = 54
-	},
-	paladin_soldiers_lvl2_idle = {
-		from = 1,
-		prefix = "paladin_soldiers_lvl2",
-		to = 1
-	},
-	paladin_soldiers_lvl2_idle2 = {
-		from = 2,
-		prefix = "paladin_soldiers_lvl2",
-		to = 2
-	},
-	paladin_soldiers_lvl2_running = {
-		from = 3,
-		prefix = "paladin_soldiers_lvl2",
-		to = 18
-	},
-	paladin_soldiers_lvl3_attack = {
-		from = 19,
-		prefix = "paladin_soldiers_lvl3",
-		to = 35
-	},
-	paladin_soldiers_lvl3_death = {
-		from = 36,
-		prefix = "paladin_soldiers_lvl3",
-		to = 54
-	},
-	paladin_soldiers_lvl3_idle = {
-		from = 1,
-		prefix = "paladin_soldiers_lvl3",
-		to = 1
-	},
-	paladin_soldiers_lvl3_idle2 = {
-		from = 2,
-		prefix = "paladin_soldiers_lvl3",
-		to = 2
-	},
-	paladin_soldiers_lvl3_running = {
-		from = 3,
-		prefix = "paladin_soldiers_lvl3",
-		to = 18
 	},
 	paladin_soldiers_lvl4_captain_armor_buff = {
 		from = 1,
@@ -37563,11 +35501,6 @@ return {
 		layer_to = 5,
 		to = 1
 	},
-	rocket_gunners_tower_build = {
-		from = 1,
-		prefix = "rocket_gunners_tower_build",
-		to = 1
-	},
 	rocket_gunners_tower_gunner_shadow = {
 		from = 1,
 		prefix = "rocket_gunners_tower_gunner_shadow",
@@ -37587,246 +35520,6 @@ return {
 		from = 1,
 		prefix = "rocket_gunners_tower_landing_fx",
 		to = 15
-	},
-	rocket_gunners_tower_lvl1_gunner_attack_air = {
-		from = 34,
-		prefix = "rocket_gunners_tower_lvl1_gunner",
-		to = 55
-	},
-	rocket_gunners_tower_lvl1_gunner_attack_air_back = {
-		from = 56,
-		prefix = "rocket_gunners_tower_lvl1_gunner",
-		to = 77
-	},
-	rocket_gunners_tower_lvl1_gunner_attack_floor = {
-		from = 78,
-		prefix = "rocket_gunners_tower_lvl1_gunner",
-		to = 99
-	},
-	rocket_gunners_tower_lvl1_gunner_attack_floor_back = {
-		from = 100,
-		prefix = "rocket_gunners_tower_lvl1_gunner",
-		to = 121
-	},
-	rocket_gunners_tower_lvl1_gunner_death = {
-		from = 182,
-		prefix = "rocket_gunners_tower_lvl1_gunner",
-		to = 227
-	},
-	rocket_gunners_tower_lvl1_gunner_death_air = {
-		from = 152,
-		prefix = "rocket_gunners_tower_lvl1_gunner",
-		to = 181
-	},
-	rocket_gunners_tower_lvl1_gunner_death_floor = {
-		from = 182,
-		prefix = "rocket_gunners_tower_lvl1_gunner",
-		to = 227
-	},
-	rocket_gunners_tower_lvl1_gunner_idle_air = {
-		from = 1,
-		prefix = "rocket_gunners_tower_lvl1_gunner",
-		to = 24
-	},
-	rocket_gunners_tower_lvl1_gunner_idle_air_back = {
-		from = 25,
-		prefix = "rocket_gunners_tower_lvl1_gunner",
-		to = 32
-	},
-	rocket_gunners_tower_lvl1_gunner_idle_floor = {
-		from = 33,
-		prefix = "rocket_gunners_tower_lvl1_gunner",
-		to = 33
-	},
-	rocket_gunners_tower_lvl1_gunner_idle_floor_back = {
-		from = 121,
-		prefix = "rocket_gunners_tower_lvl1_gunner",
-		to = 121
-	},
-	rocket_gunners_tower_lvl1_gunner_landing = {
-		from = 142,
-		prefix = "rocket_gunners_tower_lvl1_gunner",
-		to = 145
-	},
-	rocket_gunners_tower_lvl1_gunner_take_off = {
-		from = 146,
-		prefix = "rocket_gunners_tower_lvl1_gunner",
-		to = 151
-	},
-	rocket_gunners_tower_lvl1_gunner_walk = {
-		from = 122,
-		prefix = "rocket_gunners_tower_lvl1_gunner",
-		to = 141
-	},
-	rocket_gunners_tower_lvl1_tower_idle = {
-		from = 1,
-		prefix = "rocket_gunners_tower_lvl1_tower",
-		to = 1
-	},
-	rocket_gunners_tower_lvl1_tower_spawn = {
-		from = 2,
-		prefix = "rocket_gunners_tower_lvl1_tower",
-		to = 62
-	},
-	rocket_gunners_tower_lvl2_gunner_attack_air = {
-		from = 34,
-		prefix = "rocket_gunners_tower_lvl2_gunner",
-		to = 55
-	},
-	rocket_gunners_tower_lvl2_gunner_attack_air_back = {
-		from = 56,
-		prefix = "rocket_gunners_tower_lvl2_gunner",
-		to = 77
-	},
-	rocket_gunners_tower_lvl2_gunner_attack_floor = {
-		from = 78,
-		prefix = "rocket_gunners_tower_lvl2_gunner",
-		to = 99
-	},
-	rocket_gunners_tower_lvl2_gunner_attack_floor_back = {
-		from = 100,
-		prefix = "rocket_gunners_tower_lvl2_gunner",
-		to = 121
-	},
-	rocket_gunners_tower_lvl2_gunner_death = {
-		from = 182,
-		prefix = "rocket_gunners_tower_lvl2_gunner",
-		to = 227
-	},
-	rocket_gunners_tower_lvl2_gunner_death_air = {
-		from = 152,
-		prefix = "rocket_gunners_tower_lvl2_gunner",
-		to = 181
-	},
-	rocket_gunners_tower_lvl2_gunner_death_floor = {
-		from = 182,
-		prefix = "rocket_gunners_tower_lvl2_gunner",
-		to = 227
-	},
-	rocket_gunners_tower_lvl2_gunner_idle_air = {
-		from = 1,
-		prefix = "rocket_gunners_tower_lvl2_gunner",
-		to = 24
-	},
-	rocket_gunners_tower_lvl2_gunner_idle_air_back = {
-		from = 25,
-		prefix = "rocket_gunners_tower_lvl2_gunner",
-		to = 32
-	},
-	rocket_gunners_tower_lvl2_gunner_idle_floor = {
-		from = 33,
-		prefix = "rocket_gunners_tower_lvl2_gunner",
-		to = 33
-	},
-	rocket_gunners_tower_lvl2_gunner_idle_floor_back = {
-		from = 121,
-		prefix = "rocket_gunners_tower_lvl2_gunner",
-		to = 121
-	},
-	rocket_gunners_tower_lvl2_gunner_landing = {
-		from = 142,
-		prefix = "rocket_gunners_tower_lvl2_gunner",
-		to = 145
-	},
-	rocket_gunners_tower_lvl2_gunner_take_off = {
-		from = 146,
-		prefix = "rocket_gunners_tower_lvl2_gunner",
-		to = 151
-	},
-	rocket_gunners_tower_lvl2_gunner_walk = {
-		from = 122,
-		prefix = "rocket_gunners_tower_lvl2_gunner",
-		to = 141
-	},
-	rocket_gunners_tower_lvl2_tower_idle = {
-		from = 1,
-		prefix = "rocket_gunners_tower_lvl2_tower",
-		to = 1
-	},
-	rocket_gunners_tower_lvl2_tower_spawn = {
-		from = 2,
-		prefix = "rocket_gunners_tower_lvl2_tower",
-		to = 62
-	},
-	rocket_gunners_tower_lvl3_gunner_attack_air = {
-		from = 34,
-		prefix = "rocket_gunners_tower_lvl3_gunner",
-		to = 55
-	},
-	rocket_gunners_tower_lvl3_gunner_attack_air_back = {
-		from = 56,
-		prefix = "rocket_gunners_tower_lvl3_gunner",
-		to = 77
-	},
-	rocket_gunners_tower_lvl3_gunner_attack_floor = {
-		from = 78,
-		prefix = "rocket_gunners_tower_lvl3_gunner",
-		to = 99
-	},
-	rocket_gunners_tower_lvl3_gunner_attack_floor_back = {
-		from = 100,
-		prefix = "rocket_gunners_tower_lvl3_gunner",
-		to = 121
-	},
-	rocket_gunners_tower_lvl3_gunner_death = {
-		from = 182,
-		prefix = "rocket_gunners_tower_lvl3_gunner",
-		to = 227
-	},
-	rocket_gunners_tower_lvl3_gunner_death_air = {
-		from = 152,
-		prefix = "rocket_gunners_tower_lvl3_gunner",
-		to = 181
-	},
-	rocket_gunners_tower_lvl3_gunner_death_floor = {
-		from = 182,
-		prefix = "rocket_gunners_tower_lvl3_gunner",
-		to = 227
-	},
-	rocket_gunners_tower_lvl3_gunner_idle_air = {
-		from = 1,
-		prefix = "rocket_gunners_tower_lvl3_gunner",
-		to = 24
-	},
-	rocket_gunners_tower_lvl3_gunner_idle_air_back = {
-		from = 25,
-		prefix = "rocket_gunners_tower_lvl3_gunner",
-		to = 32
-	},
-	rocket_gunners_tower_lvl3_gunner_idle_floor = {
-		from = 33,
-		prefix = "rocket_gunners_tower_lvl3_gunner",
-		to = 33
-	},
-	rocket_gunners_tower_lvl3_gunner_idle_floor_back = {
-		from = 121,
-		prefix = "rocket_gunners_tower_lvl3_gunner",
-		to = 121
-	},
-	rocket_gunners_tower_lvl3_gunner_landing = {
-		from = 142,
-		prefix = "rocket_gunners_tower_lvl3_gunner",
-		to = 145
-	},
-	rocket_gunners_tower_lvl3_gunner_take_off = {
-		from = 146,
-		prefix = "rocket_gunners_tower_lvl3_gunner",
-		to = 151
-	},
-	rocket_gunners_tower_lvl3_gunner_walk = {
-		from = 122,
-		prefix = "rocket_gunners_tower_lvl3_gunner",
-		to = 141
-	},
-	rocket_gunners_tower_lvl3_tower_idle = {
-		from = 1,
-		prefix = "rocket_gunners_tower_lvl3_tower",
-		to = 1
-	},
-	rocket_gunners_tower_lvl3_tower_spawn = {
-		from = 2,
-		prefix = "rocket_gunners_tower_lvl3_tower",
-		to = 62
 	},
 	rocket_gunners_tower_lvl4_gunner_attack_air = {
 		from = 34,
@@ -37963,11 +35656,6 @@ return {
 		prefix = "rocket_gunners_tower_phosphoric_coating_trace",
 		to = 2
 	},
-	rocket_gunners_tower_preview = {
-		from = 1,
-		prefix = "rocket_gunners_tower_preview",
-		to = 1
-	},
 	rocket_gunners_tower_reticle_idle = {
 		from = 9,
 		prefix = "rocket_gunners_tower_reticle",
@@ -38002,21 +35690,6 @@ return {
 		from = 1,
 		prefix = "rocket_gunners_tower_take_off_fx",
 		to = 17
-	},
-	rod_dragon_fire_end = {
-		from = 13,
-		prefix = "rodOfDragonfire_totem",
-		to = 41
-	},
-	rod_dragon_fire_flame = {
-		from = 1,
-		prefix = "rodOfDragonfire_totem_fire",
-		to = 10
-	},
-	rod_dragon_fire_start = {
-		from = 1,
-		prefix = "rodOfDragonfire_totem",
-		to = 12
 	},
 	rolling_sentry_creep_attack_loop_back = {
 		from = 108,
@@ -38153,51 +35826,6 @@ return {
 		prefix = "rottenfang_hyena",
 		to = 61
 	},
-	royal_archer_tower_build = {
-		from = 1,
-		prefix = "royal_archer_tower_build",
-		to = 1
-	},
-	royal_archer_tower_lvl1_arrow_idle_1 = {
-		from = 1,
-		prefix = "royal_archer_tower_lvl1_arrow",
-		to = 1
-	},
-	royal_archer_tower_lvl1_arrow_idle_2 = {
-		from = 2,
-		prefix = "royal_archer_tower_lvl1_arrow",
-		to = 2
-	},
-	royal_archer_tower_lvl1_tower = {
-		from = 1,
-		prefix = "royal_archer_tower_lvl1_tower",
-		to = 1
-	},
-	royal_archer_tower_lvl1_tower_front = {
-		from = 1,
-		prefix = "royal_archer_tower_lvl1_tower_front",
-		to = 1
-	},
-	royal_archer_tower_lvl2_tower = {
-		from = 1,
-		prefix = "royal_archer_tower_lvl2_tower",
-		to = 1
-	},
-	royal_archer_tower_lvl2_tower_front = {
-		from = 1,
-		prefix = "royal_archer_tower_lvl2_tower_front",
-		to = 1
-	},
-	royal_archer_tower_lvl3_tower = {
-		from = 1,
-		prefix = "royal_archer_tower_lvl3_tower",
-		to = 1
-	},
-	royal_archer_tower_lvl3_tower_front = {
-		from = 1,
-		prefix = "royal_archer_tower_lvl3_tower_front",
-		to = 1
-	},
 	royal_archer_tower_lvl4_arrow_armor_piercer_idle_1 = {
 		from = 1,
 		prefix = "royal_archer_tower_lvl4_arrow_armor_piercer",
@@ -38237,71 +35865,6 @@ return {
 		from = 1,
 		prefix = "royal_archer_tower_lvl4_tower_rapacious_hunter_base",
 		to = 1
-	},
-	royal_archer_tower_preview = {
-		from = 1,
-		prefix = "royal_archer_tower_preview",
-		to = 1
-	},
-	royal_archer_tower_royal_archer_lvl1_attack_1 = {
-		from = 2,
-		prefix = "royal_archer_tower_royal_archer_lvl1",
-		to = 20
-	},
-	royal_archer_tower_royal_archer_lvl1_attack_2 = {
-		from = 22,
-		prefix = "royal_archer_tower_royal_archer_lvl1",
-		to = 40
-	},
-	royal_archer_tower_royal_archer_lvl1_idle_1 = {
-		from = 1,
-		prefix = "royal_archer_tower_royal_archer_lvl1",
-		to = 1
-	},
-	royal_archer_tower_royal_archer_lvl1_idle_2 = {
-		from = 21,
-		prefix = "royal_archer_tower_royal_archer_lvl1",
-		to = 21
-	},
-	royal_archer_tower_royal_archer_lvl2_attack_1 = {
-		from = 2,
-		prefix = "royal_archer_tower_royal_archer_lvl2",
-		to = 20
-	},
-	royal_archer_tower_royal_archer_lvl2_attack_2 = {
-		from = 22,
-		prefix = "royal_archer_tower_royal_archer_lvl2",
-		to = 40
-	},
-	royal_archer_tower_royal_archer_lvl2_idle_1 = {
-		from = 1,
-		prefix = "royal_archer_tower_royal_archer_lvl2",
-		to = 1
-	},
-	royal_archer_tower_royal_archer_lvl2_idle_2 = {
-		from = 21,
-		prefix = "royal_archer_tower_royal_archer_lvl2",
-		to = 21
-	},
-	royal_archer_tower_royal_archer_lvl3_attack_1 = {
-		from = 2,
-		prefix = "royal_archer_tower_royal_archer_lvl3",
-		to = 20
-	},
-	royal_archer_tower_royal_archer_lvl3_attack_2 = {
-		from = 22,
-		prefix = "royal_archer_tower_royal_archer_lvl3",
-		to = 40
-	},
-	royal_archer_tower_royal_archer_lvl3_idle_1 = {
-		from = 1,
-		prefix = "royal_archer_tower_royal_archer_lvl3",
-		to = 1
-	},
-	royal_archer_tower_royal_archer_lvl3_idle_2 = {
-		from = 21,
-		prefix = "royal_archer_tower_royal_archer_lvl3",
-		to = 21
 	},
 	royal_archer_tower_royal_archer_lvl4_armor_breaker_hit_fx_armor_breaker_hit_fx = {
 		from = 1,
@@ -41406,11 +38969,6 @@ return {
 		prefix = "souldrain",
 		to = 9
 	},
-	sparking_geode_base_lvl1_idle = {
-		from = 1,
-		prefix = "sparking_geode_base_lvl1",
-		to = 1
-	},
 	sparking_geode_base_off_anim = {
 		from = 27,
 		prefix = "sparking_geode_base",
@@ -41521,11 +39079,6 @@ return {
 		prefix = "sparking_geode_modifier",
 		to = 6
 	},
-	sparking_geode_preview_run = {
-		from = 1,
-		prefix = "sparking_geode_preview",
-		to = 1
-	},
 	sparking_geode_ray_rebote_hit = {
 		from = 4,
 		prefix = "sparking_geode_longray_decal_up",
@@ -41555,66 +39108,6 @@ return {
 		from = 57,
 		prefix = "sparking_geode_tower_attack_fx",
 		to = 81
-	},
-	sparking_geode_tower_lvl1_attack_in = {
-		from = 39,
-		prefix = "sparking_geode_tower_lvl1",
-		to = 62
-	},
-	sparking_geode_tower_lvl1_attack_loop = {
-		from = 63,
-		prefix = "sparking_geode_tower_lvl1",
-		to = 94
-	},
-	sparking_geode_tower_lvl1_attack_out = {
-		from = 95,
-		prefix = "sparking_geode_tower_lvl1",
-		to = 118
-	},
-	sparking_geode_tower_lvl1_idleup = {
-		from = 1,
-		prefix = "sparking_geode_tower_lvl1",
-		to = 38
-	},
-	sparking_geode_tower_lvl2_attack_in = {
-		from = 39,
-		prefix = "sparking_geode_tower_lvl2",
-		to = 62
-	},
-	sparking_geode_tower_lvl2_attack_loop = {
-		from = 63,
-		prefix = "sparking_geode_tower_lvl2",
-		to = 94
-	},
-	sparking_geode_tower_lvl2_attack_out = {
-		from = 95,
-		prefix = "sparking_geode_tower_lvl2",
-		to = 118
-	},
-	sparking_geode_tower_lvl2_idleup = {
-		from = 1,
-		prefix = "sparking_geode_tower_lvl2",
-		to = 38
-	},
-	sparking_geode_tower_lvl3_attack_in = {
-		from = 39,
-		prefix = "sparking_geode_tower_lvl3",
-		to = 62
-	},
-	sparking_geode_tower_lvl3_attack_loop = {
-		from = 63,
-		prefix = "sparking_geode_tower_lvl3",
-		to = 94
-	},
-	sparking_geode_tower_lvl3_attack_out = {
-		from = 95,
-		prefix = "sparking_geode_tower_lvl3",
-		to = 118
-	},
-	sparking_geode_tower_lvl3_idleup = {
-		from = 1,
-		prefix = "sparking_geode_tower_lvl3",
-		to = 38
 	},
 	sparking_geode_tower_lvl4_attack_in = {
 		from = 37,
@@ -44582,11 +42075,6 @@ return {
 		prefix = "tower_dwarf_attack_2_hit",
 		to = 6
 	},
-	tower_dwarf_build = {
-		from = 1,
-		prefix = "tower_dwarf_build",
-		to = 1
-	},
 	tower_dwarf_dwarf_jump = {
 		from = 1,
 		prefix = "tower_dwarf_dwarf_jump",
@@ -44596,141 +42084,6 @@ return {
 		from = 1,
 		prefix = "tower_dwarf_dwarf_jump_lvl_4",
 		to = 1
-	},
-	tower_dwarf_dwarf_lvl1_attack_1_down = {
-		from = 123,
-		prefix = "tower_dwarf_dwarf_lvl1",
-		to = 162
-	},
-	tower_dwarf_dwarf_lvl1_attack_1_front = {
-		from = 83,
-		prefix = "tower_dwarf_dwarf_lvl1",
-		to = 122
-	},
-	tower_dwarf_dwarf_lvl1_attack_1_up = {
-		from = 43,
-		prefix = "tower_dwarf_dwarf_lvl1",
-		to = 82
-	},
-	tower_dwarf_dwarf_lvl1_attack_2 = {
-		from = 163,
-		prefix = "tower_dwarf_dwarf_lvl1",
-		to = 204
-	},
-	tower_dwarf_dwarf_lvl1_death = {
-		from = 205,
-		prefix = "tower_dwarf_dwarf_lvl1",
-		to = 230
-	},
-	tower_dwarf_dwarf_lvl1_idle = {
-		from = 1,
-		prefix = "tower_dwarf_dwarf_lvl1",
-		to = 1
-	},
-	tower_dwarf_dwarf_lvl1_jump_in = {
-		from = 18,
-		prefix = "tower_dwarf_dwarf_lvl1",
-		to = 31
-	},
-	tower_dwarf_dwarf_lvl1_jump_out = {
-		from = 32,
-		prefix = "tower_dwarf_dwarf_lvl1",
-		to = 42
-	},
-	tower_dwarf_dwarf_lvl1_walk = {
-		from = 2,
-		prefix = "tower_dwarf_dwarf_lvl1",
-		to = 17
-	},
-	tower_dwarf_dwarf_lvl2_attack_1_down = {
-		from = 123,
-		prefix = "tower_dwarf_dwarf_lvl2",
-		to = 162
-	},
-	tower_dwarf_dwarf_lvl2_attack_1_front = {
-		from = 83,
-		prefix = "tower_dwarf_dwarf_lvl2",
-		to = 122
-	},
-	tower_dwarf_dwarf_lvl2_attack_1_up = {
-		from = 43,
-		prefix = "tower_dwarf_dwarf_lvl2",
-		to = 82
-	},
-	tower_dwarf_dwarf_lvl2_attack_2 = {
-		from = 163,
-		prefix = "tower_dwarf_dwarf_lvl2",
-		to = 204
-	},
-	tower_dwarf_dwarf_lvl2_death = {
-		from = 205,
-		prefix = "tower_dwarf_dwarf_lvl2",
-		to = 230
-	},
-	tower_dwarf_dwarf_lvl2_idle = {
-		from = 1,
-		prefix = "tower_dwarf_dwarf_lvl2",
-		to = 1
-	},
-	tower_dwarf_dwarf_lvl2_jump_in = {
-		from = 18,
-		prefix = "tower_dwarf_dwarf_lvl2",
-		to = 31
-	},
-	tower_dwarf_dwarf_lvl2_jump_out = {
-		from = 32,
-		prefix = "tower_dwarf_dwarf_lvl2",
-		to = 42
-	},
-	tower_dwarf_dwarf_lvl2_walk = {
-		from = 2,
-		prefix = "tower_dwarf_dwarf_lvl2",
-		to = 17
-	},
-	tower_dwarf_dwarf_lvl3_attack_1_down = {
-		from = 123,
-		prefix = "tower_dwarf_dwarf_lvl3",
-		to = 162
-	},
-	tower_dwarf_dwarf_lvl3_attack_1_front = {
-		from = 83,
-		prefix = "tower_dwarf_dwarf_lvl3",
-		to = 122
-	},
-	tower_dwarf_dwarf_lvl3_attack_1_up = {
-		from = 43,
-		prefix = "tower_dwarf_dwarf_lvl3",
-		to = 82
-	},
-	tower_dwarf_dwarf_lvl3_attack_2 = {
-		from = 163,
-		prefix = "tower_dwarf_dwarf_lvl3",
-		to = 204
-	},
-	tower_dwarf_dwarf_lvl3_death = {
-		from = 205,
-		prefix = "tower_dwarf_dwarf_lvl3",
-		to = 230
-	},
-	tower_dwarf_dwarf_lvl3_idle = {
-		from = 1,
-		prefix = "tower_dwarf_dwarf_lvl3",
-		to = 1
-	},
-	tower_dwarf_dwarf_lvl3_jump_in = {
-		from = 18,
-		prefix = "tower_dwarf_dwarf_lvl3",
-		to = 31
-	},
-	tower_dwarf_dwarf_lvl3_jump_out = {
-		from = 32,
-		prefix = "tower_dwarf_dwarf_lvl3",
-		to = 42
-	},
-	tower_dwarf_dwarf_lvl3_walk = {
-		from = 2,
-		prefix = "tower_dwarf_dwarf_lvl3",
-		to = 17
 	},
 	tower_dwarf_dwarf_lvl4_attack_1_down = {
 		from = 126,
@@ -44802,31 +42155,6 @@ return {
 		prefix = "tower_dwarf_jump_explosion_lvl4",
 		to = 19
 	},
-	tower_dwarf_lvl1 = {
-		from = 1,
-		prefix = "tower_dwarf_lvl1",
-		to = 1
-	},
-	tower_dwarf_lvl123_door_close = {
-		from = 11,
-		prefix = "tower_dwarf_lvl123_door",
-		to = 20
-	},
-	tower_dwarf_lvl123_door_open = {
-		from = 1,
-		prefix = "tower_dwarf_lvl123_door",
-		to = 10
-	},
-	tower_dwarf_lvl2 = {
-		from = 1,
-		prefix = "tower_dwarf_lvl2",
-		to = 1
-	},
-	tower_dwarf_lvl3 = {
-		from = 1,
-		prefix = "tower_dwarf_lvl3",
-		to = 1
-	},
 	tower_dwarf_lvl4 = {
 		from = 1,
 		prefix = "tower_dwarf_lvl4",
@@ -44841,11 +42169,6 @@ return {
 		from = 1,
 		prefix = "tower_dwarf_lvl4_door",
 		to = 10
-	},
-	tower_dwarf_preview = {
-		from = 1,
-		prefix = "tower_dwarf_preview",
-		to = 1
 	},
 	tower_dwarf_skill_explosion_decal = {
 		from = 1,
@@ -45505,156 +42828,6 @@ return {
 		prefix = "tower_pandas_lighting_sky",
 		to = 24
 	},
-	tower_pandas_panda_blue_lvl1_attack = {
-		from = 22,
-		prefix = "tower_pandas_panda_blue_lvl1",
-		to = 43
-	},
-	tower_pandas_panda_blue_lvl1_death = {
-		from = 44,
-		prefix = "tower_pandas_panda_blue_lvl1",
-		to = 87
-	},
-	tower_pandas_panda_blue_lvl1_idle = {
-		from = 1,
-		prefix = "tower_pandas_panda_blue_lvl1",
-		to = 1
-	},
-	tower_pandas_panda_blue_lvl1_idle_tower = {
-		from = 118,
-		prefix = "tower_pandas_panda_blue_lvl1",
-		to = 118
-	},
-	tower_pandas_panda_blue_lvl1_scape_end = {
-		from = 100,
-		prefix = "tower_pandas_panda_blue_lvl1",
-		to = 117
-	},
-	tower_pandas_panda_blue_lvl1_scape_loop = {
-		from = 88,
-		prefix = "tower_pandas_panda_blue_lvl1",
-		to = 99
-	},
-	tower_pandas_panda_blue_lvl1_spawn_end = {
-		from = 157,
-		prefix = "tower_pandas_panda_blue_lvl1",
-		to = 177
-	},
-	tower_pandas_panda_blue_lvl1_spawn_in = {
-		from = 147,
-		prefix = "tower_pandas_panda_blue_lvl1",
-		to = 156
-	},
-	tower_pandas_panda_blue_lvl1_spell = {
-		from = 119,
-		prefix = "tower_pandas_panda_blue_lvl1",
-		to = 146
-	},
-	tower_pandas_panda_blue_lvl1_walk = {
-		from = 2,
-		prefix = "tower_pandas_panda_blue_lvl1",
-		to = 21
-	},
-	tower_pandas_panda_blue_lvl2_attack = {
-		from = 22,
-		prefix = "tower_pandas_panda_blue_lvl2",
-		to = 43
-	},
-	tower_pandas_panda_blue_lvl2_death = {
-		from = 44,
-		prefix = "tower_pandas_panda_blue_lvl2",
-		to = 87
-	},
-	tower_pandas_panda_blue_lvl2_idle = {
-		from = 1,
-		prefix = "tower_pandas_panda_blue_lvl2",
-		to = 1
-	},
-	tower_pandas_panda_blue_lvl2_idle_tower = {
-		from = 118,
-		prefix = "tower_pandas_panda_blue_lvl2",
-		to = 118
-	},
-	tower_pandas_panda_blue_lvl2_scape_end = {
-		from = 100,
-		prefix = "tower_pandas_panda_blue_lvl2",
-		to = 117
-	},
-	tower_pandas_panda_blue_lvl2_scape_loop = {
-		from = 88,
-		prefix = "tower_pandas_panda_blue_lvl2",
-		to = 99
-	},
-	tower_pandas_panda_blue_lvl2_spawn_end = {
-		from = 157,
-		prefix = "tower_pandas_panda_blue_lvl2",
-		to = 177
-	},
-	tower_pandas_panda_blue_lvl2_spawn_in = {
-		from = 147,
-		prefix = "tower_pandas_panda_blue_lvl2",
-		to = 156
-	},
-	tower_pandas_panda_blue_lvl2_spell = {
-		from = 119,
-		prefix = "tower_pandas_panda_blue_lvl2",
-		to = 146
-	},
-	tower_pandas_panda_blue_lvl2_walk = {
-		from = 2,
-		prefix = "tower_pandas_panda_blue_lvl2",
-		to = 21
-	},
-	tower_pandas_panda_blue_lvl3_attack = {
-		from = 22,
-		prefix = "tower_pandas_panda_blue_lvl3",
-		to = 43
-	},
-	tower_pandas_panda_blue_lvl3_death = {
-		from = 44,
-		prefix = "tower_pandas_panda_blue_lvl3",
-		to = 87
-	},
-	tower_pandas_panda_blue_lvl3_idle = {
-		from = 1,
-		prefix = "tower_pandas_panda_blue_lvl3",
-		to = 1
-	},
-	tower_pandas_panda_blue_lvl3_idle_tower = {
-		from = 118,
-		prefix = "tower_pandas_panda_blue_lvl3",
-		to = 118
-	},
-	tower_pandas_panda_blue_lvl3_scape_end = {
-		from = 100,
-		prefix = "tower_pandas_panda_blue_lvl3",
-		to = 117
-	},
-	tower_pandas_panda_blue_lvl3_scape_loop = {
-		from = 88,
-		prefix = "tower_pandas_panda_blue_lvl3",
-		to = 99
-	},
-	tower_pandas_panda_blue_lvl3_spawn_end = {
-		from = 157,
-		prefix = "tower_pandas_panda_blue_lvl3",
-		to = 176
-	},
-	tower_pandas_panda_blue_lvl3_spawn_in = {
-		from = 147,
-		prefix = "tower_pandas_panda_blue_lvl3",
-		to = 156
-	},
-	tower_pandas_panda_blue_lvl3_spell = {
-		from = 119,
-		prefix = "tower_pandas_panda_blue_lvl3",
-		to = 146
-	},
-	tower_pandas_panda_blue_lvl3_walk = {
-		from = 2,
-		prefix = "tower_pandas_panda_blue_lvl3",
-		to = 21
-	},
 	tower_pandas_panda_blue_lvl4_attack = {
 		from = 22,
 		prefix = "tower_pandas_panda_blue_lvl4",
@@ -45710,156 +42883,6 @@ return {
 		prefix = "tower_pandas_panda_blue_lvl4",
 		to = 21
 	},
-	tower_pandas_panda_green_lvl1_attack = {
-		from = 22,
-		prefix = "tower_pandas_panda_green_lvl1",
-		to = 43
-	},
-	tower_pandas_panda_green_lvl1_death = {
-		from = 44,
-		prefix = "tower_pandas_panda_green_lvl1",
-		to = 87
-	},
-	tower_pandas_panda_green_lvl1_idle = {
-		from = 1,
-		prefix = "tower_pandas_panda_green_lvl1",
-		to = 1
-	},
-	tower_pandas_panda_green_lvl1_idle_tower = {
-		from = 118,
-		prefix = "tower_pandas_panda_green_lvl1",
-		to = 118
-	},
-	tower_pandas_panda_green_lvl1_scape_end = {
-		from = 100,
-		prefix = "tower_pandas_panda_green_lvl1",
-		to = 117
-	},
-	tower_pandas_panda_green_lvl1_scape_loop = {
-		from = 88,
-		prefix = "tower_pandas_panda_green_lvl1",
-		to = 99
-	},
-	tower_pandas_panda_green_lvl1_spawn_end = {
-		from = 157,
-		prefix = "tower_pandas_panda_green_lvl1",
-		to = 177
-	},
-	tower_pandas_panda_green_lvl1_spawn_in = {
-		from = 147,
-		prefix = "tower_pandas_panda_green_lvl1",
-		to = 156
-	},
-	tower_pandas_panda_green_lvl1_spell = {
-		from = 119,
-		prefix = "tower_pandas_panda_green_lvl1",
-		to = 146
-	},
-	tower_pandas_panda_green_lvl1_walk = {
-		from = 2,
-		prefix = "tower_pandas_panda_green_lvl1",
-		to = 21
-	},
-	tower_pandas_panda_green_lvl2_attack = {
-		from = 22,
-		prefix = "tower_pandas_panda_green_lvl2",
-		to = 43
-	},
-	tower_pandas_panda_green_lvl2_death = {
-		from = 44,
-		prefix = "tower_pandas_panda_green_lvl2",
-		to = 87
-	},
-	tower_pandas_panda_green_lvl2_idle = {
-		from = 1,
-		prefix = "tower_pandas_panda_green_lvl2",
-		to = 1
-	},
-	tower_pandas_panda_green_lvl2_idle_tower = {
-		from = 118,
-		prefix = "tower_pandas_panda_green_lvl2",
-		to = 118
-	},
-	tower_pandas_panda_green_lvl2_scape_end = {
-		from = 100,
-		prefix = "tower_pandas_panda_green_lvl2",
-		to = 117
-	},
-	tower_pandas_panda_green_lvl2_scape_loop = {
-		from = 88,
-		prefix = "tower_pandas_panda_green_lvl2",
-		to = 99
-	},
-	tower_pandas_panda_green_lvl2_spawn_end = {
-		from = 157,
-		prefix = "tower_pandas_panda_green_lvl2",
-		to = 176
-	},
-	tower_pandas_panda_green_lvl2_spawn_in = {
-		from = 147,
-		prefix = "tower_pandas_panda_green_lvl2",
-		to = 156
-	},
-	tower_pandas_panda_green_lvl2_spell = {
-		from = 119,
-		prefix = "tower_pandas_panda_green_lvl2",
-		to = 146
-	},
-	tower_pandas_panda_green_lvl2_walk = {
-		from = 2,
-		prefix = "tower_pandas_panda_green_lvl2",
-		to = 21
-	},
-	tower_pandas_panda_green_lvl3_attack = {
-		from = 22,
-		prefix = "tower_pandas_panda_green_lvl3",
-		to = 43
-	},
-	tower_pandas_panda_green_lvl3_death = {
-		from = 44,
-		prefix = "tower_pandas_panda_green_lvl3",
-		to = 87
-	},
-	tower_pandas_panda_green_lvl3_idle = {
-		from = 1,
-		prefix = "tower_pandas_panda_green_lvl3",
-		to = 1
-	},
-	tower_pandas_panda_green_lvl3_idle_tower = {
-		from = 118,
-		prefix = "tower_pandas_panda_green_lvl3",
-		to = 118
-	},
-	tower_pandas_panda_green_lvl3_scape_end = {
-		from = 100,
-		prefix = "tower_pandas_panda_green_lvl3",
-		to = 117
-	},
-	tower_pandas_panda_green_lvl3_scape_loop = {
-		from = 88,
-		prefix = "tower_pandas_panda_green_lvl3",
-		to = 99
-	},
-	tower_pandas_panda_green_lvl3_spawn_end = {
-		from = 157,
-		prefix = "tower_pandas_panda_green_lvl3",
-		to = 176
-	},
-	tower_pandas_panda_green_lvl3_spawn_in = {
-		from = 147,
-		prefix = "tower_pandas_panda_green_lvl3",
-		to = 156
-	},
-	tower_pandas_panda_green_lvl3_spell = {
-		from = 119,
-		prefix = "tower_pandas_panda_green_lvl3",
-		to = 146
-	},
-	tower_pandas_panda_green_lvl3_walk = {
-		from = 2,
-		prefix = "tower_pandas_panda_green_lvl3",
-		to = 21
-	},
 	tower_pandas_panda_green_lvl4_attack = {
 		from = 22,
 		prefix = "tower_pandas_panda_green_lvl4",
@@ -45913,156 +42936,6 @@ return {
 	tower_pandas_panda_green_lvl4_walk = {
 		from = 2,
 		prefix = "tower_pandas_panda_green_lvl4",
-		to = 21
-	},
-	tower_pandas_panda_red_lvl1_attack = {
-		from = 22,
-		prefix = "tower_pandas_panda_red_lvl1",
-		to = 43
-	},
-	tower_pandas_panda_red_lvl1_death = {
-		from = 44,
-		prefix = "tower_pandas_panda_red_lvl1",
-		to = 87
-	},
-	tower_pandas_panda_red_lvl1_idle = {
-		from = 1,
-		prefix = "tower_pandas_panda_red_lvl1",
-		to = 1
-	},
-	tower_pandas_panda_red_lvl1_idle_torre = {
-		from = 118,
-		prefix = "tower_pandas_panda_red_lvl1",
-		to = 118
-	},
-	tower_pandas_panda_red_lvl1_scape_end = {
-		from = 100,
-		prefix = "tower_pandas_panda_red_lvl1",
-		to = 117
-	},
-	tower_pandas_panda_red_lvl1_scape_loop = {
-		from = 88,
-		prefix = "tower_pandas_panda_red_lvl1",
-		to = 99
-	},
-	tower_pandas_panda_red_lvl1_spawn_end = {
-		from = 157,
-		prefix = "tower_pandas_panda_red_lvl1",
-		to = 177
-	},
-	tower_pandas_panda_red_lvl1_spawn_in = {
-		from = 147,
-		prefix = "tower_pandas_panda_red_lvl1",
-		to = 156
-	},
-	tower_pandas_panda_red_lvl1_spell = {
-		from = 119,
-		prefix = "tower_pandas_panda_red_lvl1",
-		to = 146
-	},
-	tower_pandas_panda_red_lvl1_walk = {
-		from = 2,
-		prefix = "tower_pandas_panda_red_lvl1",
-		to = 21
-	},
-	tower_pandas_panda_red_lvl2_attack = {
-		from = 22,
-		prefix = "tower_pandas_panda_red_lvl2",
-		to = 43
-	},
-	tower_pandas_panda_red_lvl2_death = {
-		from = 44,
-		prefix = "tower_pandas_panda_red_lvl2",
-		to = 87
-	},
-	tower_pandas_panda_red_lvl2_idle = {
-		from = 1,
-		prefix = "tower_pandas_panda_red_lvl2",
-		to = 1
-	},
-	tower_pandas_panda_red_lvl2_idle_torre = {
-		from = 118,
-		prefix = "tower_pandas_panda_red_lvl2",
-		to = 118
-	},
-	tower_pandas_panda_red_lvl2_scape_end = {
-		from = 100,
-		prefix = "tower_pandas_panda_red_lvl2",
-		to = 117
-	},
-	tower_pandas_panda_red_lvl2_scape_loop = {
-		from = 88,
-		prefix = "tower_pandas_panda_red_lvl2",
-		to = 99
-	},
-	tower_pandas_panda_red_lvl2_spawn_end = {
-		from = 157,
-		prefix = "tower_pandas_panda_red_lvl2",
-		to = 176
-	},
-	tower_pandas_panda_red_lvl2_spawn_in = {
-		from = 147,
-		prefix = "tower_pandas_panda_red_lvl2",
-		to = 156
-	},
-	tower_pandas_panda_red_lvl2_spell = {
-		from = 119,
-		prefix = "tower_pandas_panda_red_lvl2",
-		to = 146
-	},
-	tower_pandas_panda_red_lvl2_walk = {
-		from = 2,
-		prefix = "tower_pandas_panda_red_lvl2",
-		to = 21
-	},
-	tower_pandas_panda_red_lvl3_attack = {
-		from = 22,
-		prefix = "tower_pandas_panda_red_lvl3",
-		to = 43
-	},
-	tower_pandas_panda_red_lvl3_death = {
-		from = 44,
-		prefix = "tower_pandas_panda_red_lvl3",
-		to = 87
-	},
-	tower_pandas_panda_red_lvl3_idle = {
-		from = 1,
-		prefix = "tower_pandas_panda_red_lvl3",
-		to = 1
-	},
-	tower_pandas_panda_red_lvl3_idle_torre = {
-		from = 118,
-		prefix = "tower_pandas_panda_red_lvl3",
-		to = 118
-	},
-	tower_pandas_panda_red_lvl3_scape_end = {
-		from = 100,
-		prefix = "tower_pandas_panda_red_lvl3",
-		to = 117
-	},
-	tower_pandas_panda_red_lvl3_scape_loop = {
-		from = 88,
-		prefix = "tower_pandas_panda_red_lvl3",
-		to = 99
-	},
-	tower_pandas_panda_red_lvl3_spawn_end = {
-		from = 157,
-		prefix = "tower_pandas_panda_red_lvl3",
-		to = 176
-	},
-	tower_pandas_panda_red_lvl3_spawn_in = {
-		from = 147,
-		prefix = "tower_pandas_panda_red_lvl3",
-		to = 156
-	},
-	tower_pandas_panda_red_lvl3_spell = {
-		from = 119,
-		prefix = "tower_pandas_panda_red_lvl3",
-		to = 146
-	},
-	tower_pandas_panda_red_lvl3_walk = {
-		from = 2,
-		prefix = "tower_pandas_panda_red_lvl3",
 		to = 21
 	},
 	tower_pandas_panda_red_lvl4_attack = {
@@ -46175,26 +43048,6 @@ return {
 		prefix = "tower_pandas_target_ray",
 		to = 16
 	},
-	tower_pandas_tower_build_idle = {
-		from = 1,
-		prefix = "tower_pandas_tower_build",
-		to = 1
-	},
-	tower_pandas_tower_lvl_01_idle = {
-		from = 1,
-		prefix = "tower_pandas_tower_lvl_01",
-		to = 1
-	},
-	tower_pandas_tower_lvl_02_idle = {
-		from = 1,
-		prefix = "tower_pandas_tower_lvl_02",
-		to = 1
-	},
-	tower_pandas_tower_lvl_03_idle = {
-		from = 1,
-		prefix = "tower_pandas_tower_lvl_03",
-		to = 1
-	},
 	tower_pandas_tower_lvl_04_idle = {
 		from = 1,
 		prefix = "tower_pandas_tower_lvl_04",
@@ -46283,96 +43136,6 @@ return {
 	tower_sand_build = {
 		from = 1,
 		prefix = "tower_sand_build",
-		to = 1
-	},
-	tower_sand_lvl1_particle_idle = {
-		from = 1,
-		prefix = "tower_sand_lvl1_particle",
-		to = 7
-	},
-	tower_sand_lvl1_projectile_idle = {
-		from = 1,
-		prefix = "tower_sand_lvl1_projectile",
-		to = 3
-	},
-	tower_sand_lvl1_sentinel_attack = {
-		from = 2,
-		prefix = "tower_sand_lvl1_sentinel",
-		to = 25
-	},
-	tower_sand_lvl1_sentinel_attack_back = {
-		from = 27,
-		prefix = "tower_sand_lvl1_sentinel",
-		to = 50
-	},
-	tower_sand_lvl1_sentinel_idle = {
-		from = 1,
-		prefix = "tower_sand_lvl1_sentinel",
-		to = 1
-	},
-	tower_sand_lvl1_sentinel_idle_back = {
-		from = 26,
-		prefix = "tower_sand_lvl1_sentinel",
-		to = 26
-	},
-	tower_sand_lvl1_tower_front_idle = {
-		from = 1,
-		prefix = "tower_sand_lvl1_tower_front",
-		to = 1
-	},
-	tower_sand_lvl1_tower_idle = {
-		from = 1,
-		prefix = "tower_sand_lvl1_tower",
-		to = 1
-	},
-	tower_sand_lvl2_sentinel_attack = {
-		from = 2,
-		prefix = "tower_sand_lvl2_sentinel",
-		to = 25
-	},
-	tower_sand_lvl2_sentinel_attack_back = {
-		from = 27,
-		prefix = "tower_sand_lvl2_sentinel",
-		to = 50
-	},
-	tower_sand_lvl2_sentinel_idle = {
-		from = 1,
-		prefix = "tower_sand_lvl2_sentinel",
-		to = 1
-	},
-	tower_sand_lvl2_sentinel_idle_back = {
-		from = 26,
-		prefix = "tower_sand_lvl2_sentinel",
-		to = 26
-	},
-	tower_sand_lvl2_tower = {
-		from = 1,
-		prefix = "tower_sand_lvl2_tower",
-		to = 1
-	},
-	tower_sand_lvl3_sentinel_attack = {
-		from = 2,
-		prefix = "tower_sand_lvl3_sentinel",
-		to = 25
-	},
-	tower_sand_lvl3_sentinel_attack_back = {
-		from = 27,
-		prefix = "tower_sand_lvl3_sentinel",
-		to = 50
-	},
-	tower_sand_lvl3_sentinel_idle = {
-		from = 1,
-		prefix = "tower_sand_lvl3_sentinel",
-		to = 1
-	},
-	tower_sand_lvl3_sentinel_idle_back = {
-		from = 26,
-		prefix = "tower_sand_lvl3_sentinel",
-		to = 26
-	},
-	tower_sand_lvl3_tower_idle = {
-		from = 1,
-		prefix = "tower_sand_lvl3_tower",
 		to = 1
 	},
 	tower_sand_lvl4_particle_idle = {
@@ -46474,11 +43237,6 @@ return {
 		from = 2,
 		prefix = "tower_sand_lvl4_tower",
 		to = 53
-	},
-	tower_sand_preview = {
-		from = 1,
-		prefix = "tower_sand_preview",
-		to = 1
 	},
 	tower_sasquash_frozen = {
 		from = 1,
@@ -47453,48 +44211,6 @@ return {
 		from = 1,
 		prefix = "trees_heart_of_the_arborean_tap_sign",
 		to = 7
-	},
-	tricannon_tower_lvl1_tower_layerX_attack = {
-		from = 2,
-		layer_from = 1,
-		layer_prefix = "tricannon_tower_lvl1_tower_layer%i",
-		layer_to = 7,
-		to = 58
-	},
-	tricannon_tower_lvl1_tower_layerX_idle = {
-		from = 1,
-		layer_from = 1,
-		layer_prefix = "tricannon_tower_lvl1_tower_layer%i",
-		layer_to = 7,
-		to = 1
-	},
-	tricannon_tower_lvl2_tower_layerX_attack = {
-		from = 2,
-		layer_from = 1,
-		layer_prefix = "tricannon_tower_lvl2_tower_layer%i",
-		layer_to = 7,
-		to = 58
-	},
-	tricannon_tower_lvl2_tower_layerX_idle = {
-		from = 1,
-		layer_from = 1,
-		layer_prefix = "tricannon_tower_lvl2_tower_layer%i",
-		layer_to = 7,
-		to = 1
-	},
-	tricannon_tower_lvl3_tower_layerX_attack = {
-		from = 2,
-		layer_from = 1,
-		layer_prefix = "tricannon_tower_lvl3_tower_layer%i",
-		layer_to = 7,
-		to = 58
-	},
-	tricannon_tower_lvl3_tower_layerX_idle = {
-		from = 1,
-		layer_from = 1,
-		layer_prefix = "tricannon_tower_lvl3_tower_layer%i",
-		layer_to = 7,
-		to = 1
 	},
 	tricannon_tower_lvl4_particle = {
 		from = 1,

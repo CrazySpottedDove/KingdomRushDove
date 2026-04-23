@@ -2403,10 +2403,12 @@ tt.render.sprites[3] = CC("sprite")
 tt.render.sprites[3].prefix = "sparking_geode_base"
 tt.render.sprites[3].name = "idleup"
 tt.render.sprites[3].scale = vv(1)
+-- 贴图丢失，暂时隐藏
 tt.render.sid_base_front_rocks = 4
 tt.render.sprites[4] = CC("sprite")
 tt.render.sprites[4].animated = false
 tt.render.sprites[4].name = "sparking_geode_base_lvl1"
+tt.render.sprites[4].hidden = true
 tt.render.sid_geode = 5
 tt.render.sprites[5] = CC("sprite")
 tt.render.sprites[5].prefix = "sparking_geode_tower_lvl4"

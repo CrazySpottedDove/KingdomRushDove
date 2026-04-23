@@ -2831,16 +2831,6 @@ tt.render.sprites[1].name = "fx"
 tt.render.sprites[1].animated = true
 tt.timed.duration = fts(20)
 --#endregion
---#region tower_build_dwarf
-tt = RT("tower_build_dwarf", "tower_build")
-tt.build_name = "tower_dwarf_lvl1"
-tt.render.sprites[1].name = "terrain_barrack_%04i"
-tt.render.sprites[1].offset = v(0, 15)
-tt.render.sprites[2].name = "tower_dwarf_build"
-tt.render.sprites[2].offset = v(0, 10)
-tt.render.sprites[3].offset.y = 62
-tt.render.sprites[4].offset.y = 62
---#endregion
 --#region mod_aura_bullet_soldier_tower_dwarf
 tt = RT("mod_aura_bullet_soldier_tower_dwarf", "modifier")
 b = balance.towers.dwarf.incendiary_ammo.burn
@@ -3110,44 +3100,42 @@ tt.delay = fts(16)
 tt.radius = b.range
 tt.bullet = "bolt_soul_soldier_tower_ghost"
 --#endregion
---#region tower_ghost_lvl1
-tt = RT("tower_ghost_lvl1", "tower")
+
+--#region tower_ghost_lvl4
+tt = RT("tower_ghost_lvl4", "tower")
+AC(tt, "powers", "barrack")
 b = balance.towers.ghost
-
-AC(tt, "barrack")
-
 tt.tower.type = "ghost"
 tt.tower.kind = TOWER_KIND_BARRACK
 tt.tower.level = 1
-tt.tower.price = b.price[1]
-tt.tower.menu_offset = v(0, 20)
+tt.tower.price = b.price[4]
+tt.tower.menu_offset = v(0, 30)
 tt.info.fn = scripts.tower_ghost.get_info
-tt.info.i18n_key = "TOWER_GHOST_1"
+tt.info.i18n_key = "TOWER_GHOST_4"
 tt.info.portrait = "kr5_portraits_towers_0016"
-tt.info.enc_icon = 57
-tt.info.room_portrait = "quickmenu_main_icons_main_icons_0015_0001"
+tt.user_selection_func = scripts.tower_ghost.user_selection_func
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_barrack_%04i"
 tt.render.sprites[1].offset = v(0, 15)
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
-tt.render.sprites[2].name = "ghost_tower_lvl1_tower"
-tt.render.sprites[2].offset = v(0, 15)
+tt.render.sprites[2].name = "ghost_tower_lvl4_tower"
+tt.render.sprites[2].offset = v(0, 18)
 tt.render.sprites[3] = CC("sprite")
-tt.render.sprites[3].prefix = "ghost_tower_lvl1_tower_shadow_fx"
+tt.render.sprites[3].prefix = "ghost_tower_lvl4_tower_shadow_fx"
+tt.render.sprites[3].offset = v(0, 16)
 tt.render.sprites[3].name = "idle"
 tt.render.sprites[3].loop = true
-tt.render.sprites[3].offset = v(0, 15)
 tt.render.sprites[3].fps = 20
 tt.render.sprites[4] = CC("sprite")
-tt.render.sprites[4].prefix = "ghost_tower_lvl1_tower_spawn_fx"
+tt.render.sprites[4].prefix = "ghost_tower_lvl4_tower_spawn_fx"
+tt.render.sprites[4].offset = v(0, 18)
 tt.render.sprites[4].name = "idle"
 tt.render.sprites[4].loop = false
 tt.render.sprites[4].hidden = true
-tt.render.sprites[4].offset = v(2, 15)
-tt.barrack.soldier_type = "soldier_tower_ghost_lvl1"
+tt.barrack.soldier_type = "soldier_tower_ghost_lvl4"
 tt.barrack.rally_range = b.rally_range
-tt.barrack.respawn_offset = v(0, 15)
+tt.barrack.respawn_offset = v(0, 40)
 tt.barrack.max_soldiers = b.max_soldiers
 tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.update = scripts.tower_ghost.update
@@ -3155,44 +3143,17 @@ tt.main_script.remove = scripts.tower_barrack.remove
 tt.sound_events.insert = "TowerGhostTaunt"
 tt.sound_events.change_rally_point = "TowerGhostTaunt"
 tt.sound_events.spawn_unit = "TowerGhostSpawnUnit"
-tt.ui.click_rect = r(-35, 0, 70, 65)
---#endregion
---#region tower_ghost_lvl4
-tt = RT("tower_ghost_lvl4", "tower_ghost_lvl1")
-
-AC(tt, "powers")
-
-b = balance.towers.ghost
--- tt.cannot_be_swappeds = table.merge(U.get_all_holder(), {
--- 	"tower_ghost_lvl4"
--- })
-tt.cannot_be_swappeds = {"tower_holder_elemental_wood", "tower_holder_elemental_wood_enhance", "tower_holder_elemental_fire", "tower_holder_elemental_water", "tower_holder_elemental_earth", "tower_holder_elemental_metal"}
-tt.tower_upgrade_persistent_data.current_mode = 0
-tt.tower_upgrade_persistent_data.max_current_mode = 0
-tt.tower.level = 1
-tt.tower.price = b.price[4]
-tt.info.i18n_key = "TOWER_GHOST_4"
-tt.info.enc_icon = 60
-tt.user_selection_func = scripts.tower_ghost.user_selection_func
-tt.barrack.respawn_offset = v(0, 40)
-tt.tower.menu_offset = v(0, 30)
-tt.barrack.soldier_type = "soldier_tower_ghost_lvl4"
-tt.render.sprites[2].name = "ghost_tower_lvl4_tower"
-tt.render.sprites[2].offset = v(0, 18)
-tt.render.sprites[3].prefix = "ghost_tower_lvl4_tower_shadow_fx"
-tt.render.sprites[3].offset = v(0, 16)
-tt.render.sprites[4].prefix = "ghost_tower_lvl4_tower_spawn_fx"
-tt.render.sprites[4].offset = v(0, 18)
 tt.ui.click_rect = r(-35, 0, 70, 90)
 tt.powers.extra_damage = CC("power")
 tt.powers.extra_damage.price_base = b.extra_damage.price[2]
 tt.powers.extra_damage.price_inc = b.extra_damage.price[3]
-tt.powers.extra_damage.enc_icon = 25
 tt.powers.soul_attack = CC("power")
 tt.powers.soul_attack.price_base = b.soul_attack.price[2]
 tt.powers.soul_attack.price_inc = b.soul_attack.price[3]
-tt.powers.soul_attack.enc_icon = 26
---#endregion
+tt.cannot_be_swappeds = {"tower_holder_elemental_wood", "tower_holder_elemental_wood_enhance", "tower_holder_elemental_fire", "tower_holder_elemental_water", "tower_holder_elemental_earth", "tower_holder_elemental_metal"}
+tt.tower_upgrade_persistent_data.current_mode = 0
+tt.tower_upgrade_persistent_data.max_current_mode = 0
+
 --#region bolt_soul_soldier_tower_ghost
 tt = RT("bolt_soul_soldier_tower_ghost", "bolt")
 b = balance.towers.ghost.soul_attack
