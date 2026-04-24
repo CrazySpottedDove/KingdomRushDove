@@ -37025,7 +37025,7 @@ function scripts.hero_spider.update(this, store)
 				if this.soldier.target_id == nil then
 					SU.delay_attack(store, a, fts(5))
 				elseif not this.motion.arrived then
-					SU.delay_attack(store, a, fts(5))
+				-- SU.delay_attack(store, a, fts(5))
 				else
 					local target = store.entities[this.soldier.target_id]
 
@@ -37041,9 +37041,7 @@ function scripts.hero_spider.update(this, store)
 						elseif not target.unit.is_stunned then
 							SU.delay_attack(store, a, fts(5))
 						else
-							local health_to_compare = a.use_current_health_instead_of_max and target.health.hp or target.health.hp_max
-
-							if health_to_compare > a.life_threshold then
+							if target.health.hp > a.life_threshold then
 								SU.delay_attack(store, a, fts(5))
 							else
 								last_ts = store.tick_ts
@@ -37070,72 +37068,6 @@ function scripts.hero_spider.update(this, store)
 							end
 						end
 					end
-				end
-			end
-
-			a = this.timed_attacks.list[2]
-			skill = this.hero.skills.area_attack
-
-			if not a.disabled and store.tick_ts - a.ts > a.cooldown and store.tick_ts - last_ts > a.min_cooldown then
-				local target, targets, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, a.damage_radius, 0, a.vis_flags, a.vis_bans_trigger)
-
-				if not targets or #targets < a.min_targets or not pred_pos then
-					SU.delay_attack(store, a, fts(10))
-				else
-					local start_ts = store.tick_ts
-					local an, af = U.animation_name_facing_point(this, a.animation, pred_pos)
-
-					U.animation_start(this, an, af, store.tick_ts, 1, nil)
-					S:queue(a.sound)
-
-					if SU.y_hero_wait(store, this, a.cast_time) then
-						goto label_1340_1
-					end
-
-					local target, targets, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, a.damage_radius, 0, a.vis_flags, a.vis_bans_damage)
-
-					if target and targets then
-						for _, enemy in ipairs(targets) do
-							if enemy and not enemy.dead then
-								local d = E:create_entity("damage")
-
-								d.damage_type = a.damage_type
-								d.value = math.random(a.damage_min[skill.level], a.damage_max[skill.level])
-								d.source_id = this.id
-								d.target_id = enemy.id
-
-								queue_damage(store, d)
-
-								local mod = E:create_entity(a.mod)
-
-								mod.modifier.target_id = enemy.id
-								mod.modifier.source_id = this.id
-								mod.modifier.duration = fts(skill.stun_time[skill.level])
-
-								queue_insert(store, mod)
-
-								local decal = E:create_entity(a.hit_decal)
-
-								decal.pos = V.vclone(this.pos)
-								decal.render.sprites[1].ts = store.tick_ts
-
-								queue_insert(store, decal)
-							end
-						end
-					end
-
-					SU.y_hero_animation_wait(this)
-
-					a.ts = start_ts
-					last_ts = a.ts
-
-					SU.hero_gain_xp_from_skill(this, skill)
-
-					if not this.timed_attacks.list[4].disabled and this.timed_attacks.list[4].cooldown - (store.tick_ts - this.timed_attacks.list[4].ts) < 1 then
-						this.timed_attacks.list[4].ts = store.tick_ts - this.timed_attacks.list[4].cooldown + 1
-					end
-
-					goto label_1340_1
 				end
 			end
 
@@ -37271,7 +37203,72 @@ function scripts.hero_spider.update(this, store)
 			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
 			if brk or sta ~= A_NO_TARGET then
-			-- block empty
+				-- block empty
+				a = this.timed_attacks.list[2]
+				skill = this.hero.skills.area_attack
+
+				if not a.disabled and store.tick_ts - a.ts > a.cooldown and store.tick_ts - last_ts > a.min_cooldown then
+					local target, targets, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, a.damage_radius, 0, a.vis_flags, a.vis_bans_trigger)
+
+					if not targets or #targets < a.min_targets or not pred_pos then
+						SU.delay_attack(store, a, fts(10))
+					else
+						local start_ts = store.tick_ts
+						local an, af = U.animation_name_facing_point(this, a.animation, pred_pos)
+
+						U.animation_start(this, an, af, store.tick_ts, 1, nil)
+						S:queue(a.sound)
+
+						if SU.y_hero_wait(store, this, a.cast_time) then
+							goto label_1340_1
+						end
+
+						local target, targets, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, a.damage_radius, 0, a.vis_flags, a.vis_bans_damage)
+
+						if target and targets then
+							for _, enemy in ipairs(targets) do
+								if enemy and not enemy.dead then
+									local d = E:create_entity("damage")
+
+									d.damage_type = a.damage_type
+									d.value = math.random(a.damage_min[skill.level], a.damage_max[skill.level])
+									d.source_id = this.id
+									d.target_id = enemy.id
+
+									queue_damage(store, d)
+
+									local mod = E:create_entity(a.mod)
+
+									mod.modifier.target_id = enemy.id
+									mod.modifier.source_id = this.id
+									mod.modifier.duration = fts(skill.stun_time[skill.level])
+
+									queue_insert(store, mod)
+
+									local decal = E:create_entity(a.hit_decal)
+
+									decal.pos = V.vclone(this.pos)
+									decal.render.sprites[1].ts = store.tick_ts
+
+									queue_insert(store, decal)
+								end
+							end
+						end
+
+						SU.y_hero_animation_wait(this)
+
+						a.ts = start_ts
+						last_ts = a.ts
+
+						SU.hero_gain_xp_from_skill(this, skill)
+
+						if not this.timed_attacks.list[4].disabled and this.timed_attacks.list[4].cooldown - (store.tick_ts - this.timed_attacks.list[4].ts) < 1 then
+							this.timed_attacks.list[4].ts = store.tick_ts - this.timed_attacks.list[4].cooldown + 1
+						end
+
+						goto label_1340_1
+					end
+				end
 			else
 				brk, sta = SU.y_soldier_ranged_attacks(store, this)
 

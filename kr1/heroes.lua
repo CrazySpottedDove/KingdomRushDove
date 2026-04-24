@@ -19374,7 +19374,6 @@ tt.timed_attacks.list[1].enemy_move_offset = v(10, 40)
 tt.timed_attacks.list[1].mod = "mod_hero_spider_skill_instakill_melee"
 tt.timed_attacks.list[1].life_threshold = nil
 tt.timed_attacks.list[1].sound = "HeroRobotUppercutCast"
-tt.timed_attacks.list[1].use_current_health_instead_of_max = b.instakill_melee.use_current_health_instead_of_max
 tt.timed_attacks.list[2] = CC("custom_attack")
 tt.timed_attacks.list[2].animation = "ability1"
 tt.timed_attacks.list[2].cooldown = nil
