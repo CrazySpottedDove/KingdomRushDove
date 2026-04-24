@@ -22828,6 +22828,10 @@ function scripts.moon_controller_s72.update(this, store)
 	end
 
 	while true do
+		if store.boss_killed then
+			-- no remove
+			return
+		end
 		while store.tick_ts - time < inactive_time do
 			coroutine.yield()
 		end

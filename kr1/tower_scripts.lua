@@ -243,18 +243,46 @@ scripts.tower_ranger = {
 	update = function(this, store)
 		local shooter_sids = {3, 4}
 		local shooter_idx = 2
-		local druid_sid = 5
+		-- local druid_sid = 5
 		local a = this.attacks
 		local aa = this.attacks.list[1]
 		local pow_p = this.powers.poison
 		local pow_t = this.powers.thorn
 
-		this.bullet = E:create_entity(this.attacks.list[1].bullet)
+		-- 防御塔的攻击子弹备份
+		local attack_bullet = E:create_entity(this.attacks.list[1].bullet)
+
 		aa.ts = store.tick_ts
 
 		local tpos = tpos(this)
 		local tw = this.tower
 		local sprites = this.render.sprites
+
+		local attacked_enemies_id = {}
+		local attacked_enemies_ts = {}
+
+		local function enemy_is_going_to_be_poisoned(enemy)
+			for i = 1, #attacked_enemies_id do
+				if attacked_enemies_id[i] == enemy.id and store.tick_ts - attacked_enemies_ts[i] < attack_bullet.bullet.flight_time then
+					return true
+				end
+			end
+			return false
+		end
+
+		local function clear_attacked_enemies()
+			for i = #attacked_enemies_id, 1, -1 do
+				if store.tick_ts - attacked_enemies_ts[i] >= attack_bullet.bullet.flight_time then
+					table.remove(attacked_enemies_id, i)
+					table.remove(attacked_enemies_ts, i)
+				end
+			end
+		end
+
+		local function add_attacked_enemy(enemy)
+			table.insert(attacked_enemies_id, enemy.id)
+			table.insert(attacked_enemies_ts, store.tick_ts + aa.shoot_time * this.tower.cooldown_factor)
+		end
 
 		local function shot_animation(attack, shooter_idx, enemy)
 			local ssid = shooter_sids[shooter_idx]
@@ -273,7 +301,7 @@ scripts.tower_ranger = {
 			local shooting_right = tpos.x < enemy.pos.x
 			local soffset = sprites[ssid].offset
 			local boffset = attack.bullet_start_offset[shooting_up and 1 or 2]
-			local b = E:clone_entity(this.bullet)
+			local b = E:clone_entity(attack_bullet)
 
 			b.pos.x = this.pos.x + soffset.x + boffset.x * (shooting_right and 1 or -1)
 			b.pos.y = this.pos.y + soffset.y + boffset.y
@@ -291,26 +319,25 @@ scripts.tower_ranger = {
 			if this.tower.blocked then
 				coroutine.yield()
 			else
-				for k, pow in pairs(this.powers) do
-					if pow.changed then
-						pow.changed = nil
-
-						if pow == pow_p and not pow_p.applied then
-							pow_p.applied = true
-
-							for i = 1, #pow_p.mods do
-								U.append_mod(this.bullet.bullet, pow_p.mods[i])
-							end
-						elseif pow == pow_t and sprites[druid_sid].hidden then
-							sprites[druid_sid].hidden = false
-
-							local ta = E:create_entity(pow_t.aura)
-
-							ta.aura.source_id = this.id
-							ta.pos = tpos
-
-							queue_insert(store, ta)
+				if pow_p.changed then
+					pow_p.changed = nil
+					if not pow_p.applied then
+						pow_p.applied = true
+						for i = 1, #pow_p.mods do
+							U.append_mod(attack_bullet.bullet, pow_p.mods[i])
 						end
+					end
+				end
+
+				if pow_t.changed then
+					pow_t.changed = nil
+
+					if sprites[5].hidden then
+						sprites[5].hidden = false
+						local ta = E:create_entity(pow_t.aura)
+						ta.aura.source_id = this.id
+						ta.pos = tpos
+						queue_insert(store, ta)
 					end
 				end
 
@@ -322,11 +349,15 @@ scripts.tower_ranger = {
 					-- block empty
 					else
 						if pow_p.level > 0 then
+							-- 利用攻击驱动攻击过的敌人的移除
+							clear_attacked_enemies()
 							for _, e in ipairs(enemies) do
-								if not U.flag_has(e.vis.bans, F_POISON) and not U.has_modifiers(store, e, pow_p.mods[1]) then
-									enemy = e
-
-									break
+								if not U.flag_has(e.vis.bans, F_POISON) then
+									if (not U.has_modifiers(store, e, pow_p.mods[1])) and (not enemy_is_going_to_be_poisoned(e)) then
+										enemy = e
+										add_attacked_enemy(enemy)
+										break
+									end
 								end
 							end
 						end
@@ -336,20 +367,21 @@ scripts.tower_ranger = {
 
 						local idle_an, idle_af = shot_animation(aa, shooter_idx, enemy)
 
-						y_wait(store, aa.shoot_time)
+						y_wait(store, aa.shoot_time * this.tower.cooldown_factor)
 
 						if enemy.health.dead then
 							enemy = U.refind_foremost_enemy(enemy, store, aa.vis_flags, aa.vis_bans)
 						end
 
 						shot_bullet(aa, shooter_idx, enemy, pow_p.level)
+
 						y_animation_wait(this, shooter_sids[shooter_idx])
 						animation_start(this, idle_an, idle_af, store.tick_ts, false, shooter_sids[shooter_idx])
 					end
 				end
 
 				if store.tick_ts - aa.ts > tw.long_idle_cooldown then
-					for _, sid in pairs(shooter_sids) do
+					for _, sid in ipairs(shooter_sids) do
 						local an, af = animation_name_facing_point(this, "idle", tw.long_idle_pos, sid)
 
 						animation_start(this, an, af, store.tick_ts, -1, sid)
@@ -359,6 +391,9 @@ scripts.tower_ranger = {
 				coroutine.yield()
 			end
 		end
+	end,
+	remove = function(this, store)
+		this.render.sprites[5].hidden = true
 	end
 }
 -- 火枪

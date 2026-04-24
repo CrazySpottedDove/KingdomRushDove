@@ -76,13 +76,13 @@ tt.render.sprites[5].name = "idle"
 tt.render.sprites[5].hidden = true
 tt.render.sprites[5].offset = vec_2(31, 15)
 tt.main_script.update = scripts.tower_ranger.update
+tt.main_script.remove = scripts.tower_ranger.remove
 tt.attacks.range = 200
 tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].animation = "shoot"
 tt.attacks.list[1].bullet = "arrow_ranger"
 tt.attacks.list[1].cooldown = 0.39
 tt.attacks.list[1].shoot_time = fts(4)
-tt.attacks.list[1].shooters_delay = 0.1
 tt.attacks.list[1].bullet_start_offset = {vec_2(8, 4), vec_2(4, -5)}
 tt.sound_events.insert = "ArcherRangerTaunt"
 --#endregion

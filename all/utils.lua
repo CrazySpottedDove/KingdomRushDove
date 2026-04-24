@@ -2202,25 +2202,25 @@ function U.function_append(f1, f2)
 	end
 end
 
----追加mod
----@param entity table 实体
+---在域上追加mod
+---@param entity table 域
 ---@param mod_name string mod名称
-function U.append_mod(entity, mod_name)
-	if entity.mod then
-		if type(entity.mod) == "table" then
-			entity.mods = entity.mod
+function U.append_mod(field, mod_name)
+	if field.mod then
+		if type(field.mod) == "table" then
+			field.mods = field.mod
 
-			table.insert(entity.mods, mod_name)
+			table.insert(field.mods, mod_name)
 
-			entity.mod = nil
+			field.mod = nil
 		else
-			entity.mods = {entity.mod, mod_name}
-			entity.mod = nil
+			field.mods = {field.mod, mod_name}
+			field.mod = nil
 		end
 	else
-		entity.mods = entity.mods or {}
+		field.mods = field.mods or {}
 
-		table.insert(entity.mods, mod_name)
+		table.insert(field.mods, mod_name)
 	end
 end
 
