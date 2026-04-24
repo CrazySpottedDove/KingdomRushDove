@@ -19356,7 +19356,6 @@ tt.info.fn = scripts.hero_basic.get_info
 tt.info.hero_portrait = "kr5_hero_portraits_0017"
 tt.info.i18n_key = "HERO_SPIDER"
 tt.info.portrait = "kr5_info_portraits_heroes_0017"
-tt.info.damage_icon = "magic"
 tt.main_script.insert = scripts.hero_spider.insert
 tt.main_script.update = scripts.hero_spider.update
 tt.motion.max_speed = b.speed
@@ -19460,7 +19459,6 @@ tt.ranged.attacks[1].shoot_time = fts(17)
 tt.ranged.attacks[1].vis_bans = bor(F_WATER, F_NIGHTMARE)
 tt.ranged.attacks[1].vis_flags = bor(F_RANGED)
 tt.ranged.attacks[1].xp_gain_factor = b.basic_ranged.xp_gain_factor
-tt.ranged.attacks[1].basic_attack = true
 
 tt = RT("mod_hero_spider_tunneling_stun", "mod_stun")
 tt.modifier.duration = balance.heroes.hero_spider.tunneling.stun_duration
