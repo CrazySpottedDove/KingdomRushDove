@@ -36875,22 +36875,20 @@ function scripts.hero_spider.update(this, store)
 				local an, af = U.animation_name_facing_point(this, tp.animations[1], r.pos)
 
 				U.animation_start(this, an, af, store.tick_ts, 1, nil)
-				U.y_wait(store, fts(16))
+				U.y_wait(store, fts(8))
 				S:queue(tp.sound_in)
 
-				if tp.fx_out then
-					local fx = E:create_entity(tp.fx_out)
+				local fx = E:create_entity(tp.fx_out)
 
-					fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
-					fx.render.sprites[1].ts = store.tick_ts
-					fx.render.sprites[2].ts = store.tick_ts
+				fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
+				fx.render.sprites[1].ts = store.tick_ts
+				fx.render.sprites[2].ts = store.tick_ts
 
-					if fx.tween then
-						fx.tween.ts = store.tick_ts
-					end
-
-					queue_insert(store, fx)
+				if fx.tween then
+					fx.tween.ts = store.tick_ts
 				end
+
+				queue_insert(store, fx)
 
 				SU.y_hero_animation_wait(this)
 
@@ -36927,19 +36925,17 @@ function scripts.hero_spider.update(this, store)
 
 				this.motion.speed.x, this.motion.speed.y = 0, 0
 
-				if tp.fx_in then
-					local fx = E:create_entity(tp.fx_in)
+				local fx = E:create_entity(tp.fx_in)
 
-					fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
-					fx.render.sprites[1].ts = store.tick_ts
-					fx.render.sprites[2].ts = store.tick_ts
+				fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
+				fx.render.sprites[1].ts = store.tick_ts
+				fx.render.sprites[2].ts = store.tick_ts
 
-					if fx.tween then
-						fx.tween.ts = store.tick_ts
-					end
-
-					queue_insert(store, fx)
+				if fx.tween then
+					fx.tween.ts = store.tick_ts
 				end
+
+				queue_insert(store, fx)
 
 				S:queue(tp.sound_out)
 
