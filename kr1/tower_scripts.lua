@@ -23012,6 +23012,7 @@ function scripts.tower_rotten_forest.insert(this, store, script)
 		e.aura.level = this.powers.fog.level
 		e.aura.source_id = this.id
 		e.aura.ts = store.tick_ts
+		e.owner = this
 		this.aura2 = e
 
 		queue_insert(store, e)
