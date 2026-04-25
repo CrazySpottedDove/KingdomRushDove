@@ -2351,7 +2351,9 @@ tt.motion.max_speed = 27
 tt.regen.health = 30
 tt.regen.cooldown = 2
 tt.render.sprites[1].anchor = v(0.52, 0.15)
-tt.render.sprites[1].angles = {walk = {"running"}}
+tt.render.sprites[1].angles = {
+	walk = {"running"}
+}
 tt.render.sprites[1].name = "raise"
 tt.render.sprites[1].prefix = "boneflingers_golem"
 tt.render.sprites[2] = E:clone_c("sprite")

@@ -59,7 +59,8 @@ game.required_textures = {
 	"kr4_dark_army_tower_archer",
 	"kr4_rotten_forest_tower",
 	"kr4_ember_lords_tower_mage",
-	"kr4_fallen_ones_bone_flingers"}
+	"kr4_fallen_ones_bone_flingers"
+}
 game.ref_h = REF_H
 game.ref_w = REF_W
 game.ref_res = TEXTURE_SIZE_ALIAS.ipad
@@ -91,7 +92,8 @@ game.required_sounds = {
 	"tower_shadow_archer",
 	"tower_rotten_forest",
 	"tower_infernal_mage",
-	"tower_bone_flingers"}
+	"tower_bone_flingers"
+}
 game.simulation_systems = {
 	"level",
 	"wave_spawn",

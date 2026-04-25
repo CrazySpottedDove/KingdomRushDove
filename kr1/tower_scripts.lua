@@ -23433,7 +23433,6 @@ function scripts.soldier_rotten_forest_tree.update(this, store)
 end
 -- 腐森 End
 
-
 -- 炼狱法师 Begin
 scripts.tower_infernal_mage = {}
 
@@ -24173,6 +24172,5 @@ function scripts.enemies_skelespawner_bone_flingers.update(this, store)
 
 	queue_remove(store, this)
 end
-
 
 return scripts

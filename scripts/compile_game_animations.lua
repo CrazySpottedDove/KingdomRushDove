@@ -182,7 +182,7 @@ for k, v in pairs(src) do
 		end
 	end
 end
-
+local source_lua = "return " .. serialize(compiled)
 local compile_loader = loadstring or load
 local chunk, chunk_err = compile_loader(source_lua, "@" .. output_luac_file)
 
@@ -191,7 +191,6 @@ if not chunk then
 end
 
 local bytecode = string.dump(chunk)
-local source_lua = "return " .. serialize(compiled)
 local luac_file = assert(io.open(output_luac_file, "wb"))
 luac_file:write(bytecode)
 luac_file:close()
