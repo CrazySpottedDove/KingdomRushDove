@@ -1635,6 +1635,9 @@ function upgrades:patch_templates(max_level)
 		for k, v in pairs(d) do
 			d[k] = math.ceil(v * u.damage_factor)
 		end
+
+		T("mod_lava_infernal_mage").dps.damage_min = math.ceil(T("mod_lava_infernal_mage").dps.damage_min * u.damage_factor)
+		T("mod_lava_infernal_mage").dps.damage_max = math.ceil(T("mod_lava_infernal_mage").dps.damage_max * u.damage_factor)
 	end
 
 	u = self:get_upgrade("mage_arcane_spell")
@@ -1655,6 +1658,9 @@ function upgrades:patch_templates(max_level)
 		for k, v in pairs(d) do
 			d[k] = math.ceil(v * u.damage_factor)
 		end
+
+		T("mod_lava_infernal_mage").dps.damage_min = math.ceil(T("mod_lava_infernal_mage").dps.damage_min * u.damage_factor)
+		T("mod_lava_infernal_mage").dps.damage_max = math.ceil(T("mod_lava_infernal_mage").dps.damage_max * u.damage_factor)
 	end
 
 	u = self:get_upgrade("mage_power")
@@ -1675,6 +1681,9 @@ function upgrades:patch_templates(max_level)
 		for k, v in pairs(d) do
 			d[k] = math.ceil(v * u.damage_factor)
 		end
+
+		T("mod_lava_infernal_mage").dps.damage_min = math.ceil(T("mod_lava_infernal_mage").dps.damage_min * u.damage_factor)
+		T("mod_lava_infernal_mage").dps.damage_max = math.ceil(T("mod_lava_infernal_mage").dps.damage_max * u.damage_factor)
 	end
 
 	u = self:get_upgrade("mage_slow_curse")

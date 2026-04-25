@@ -30,6 +30,8 @@ function M.register(sys)
 			local dps = E:get_template("mod_ray_arcane").dps
 			local bullet_ray_high_elven = E:get_template("ray_high_elven_sentinel").bullet
 			local modifier_pixie = E:get_template("mod_pixie_pickpocket").modifier
+			local dps_infernal_mage = E:get_template("mod_lava_infernal_mage").dps
+
 			local f = u.damage_factors[km.clamp(1, #u.damage_factors, #existing_towers + 1)]
 
 			for _, bn in ipairs(mage_bullet_names) do
@@ -80,6 +82,14 @@ function M.register(sys)
 			for i = 1, 3 do
 				arcane5_disintegrate.boss_damage_config[i] = ceil(arcane5_disintegrate._origin_damage_config[i] * f)
 			end
+
+			if not dps_infernal_mage._orig_damage_min then
+				dps_infernal_mage._orig_damage_min = dps_infernal_mage.damage_min
+				dps_infernal_mage._orig_damage_max = dps_infernal_mage.damage_max
+			end
+
+			dps_infernal_mage.damage_min = ceil(dps_infernal_mage._orig_damage_min * f)
+			dps_infernal_mage.damage_max = ceil(dps_infernal_mage._orig_damage_max * f)
 		end
 
 		return true
@@ -96,6 +106,7 @@ function M.register(sys)
 			local dps = E:get_template("mod_ray_arcane").dps
 			local bullet_ray_high_elven = E:get_template("ray_high_elven_sentinel").bullet
 			local modifier_pixie = E:get_template("mod_pixie_pickpocket").modifier
+			local dps_infernal_mage = E:get_template("mod_lava_infernal_mage").dps
 			local f = u.damage_factors[km.clamp(1, #u.damage_factors, #existing_towers - 1)]
 
 			for _, bn in ipairs(mage_bullet_names) do
@@ -117,6 +128,9 @@ function M.register(sys)
 			for i = 1, 3 do
 				arcane5_disintegrate.boss_damage_config[i] = ceil(arcane5_disintegrate._origin_damage_config[i] * f)
 			end
+
+			dps_infernal_mage.damage_min = ceil(dps_infernal_mage._orig_damage_min * f)
+			dps_infernal_mage.damage_max = ceil(dps_infernal_mage._orig_damage_max * f)
 		end
 
 		return true
