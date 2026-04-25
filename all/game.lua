@@ -57,7 +57,8 @@ game.required_textures = {
 	"go_towers_dragons",
 	"tower_holders",
 	"kr4_dark_army_tower_archer",
-	"kr4_rotten_forest_tower"
+	"kr4_rotten_forest_tower",
+	"kr4_ember_lords_tower_mage"
 }
 game.ref_h = REF_H
 game.ref_w = REF_W
@@ -88,7 +89,8 @@ game.required_sounds = {
 	"tower_arborean_emissary",
 	"tower_dragons",
 	"tower_shadow_archer",
-	"tower_rotten_forest"
+	"tower_rotten_forest",
+	"tower_infernal_mage"
 }
 game.simulation_systems = {
 	"level",

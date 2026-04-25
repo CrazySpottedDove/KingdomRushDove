@@ -4599,7 +4599,7 @@ function scripts.aura_apply_mod.insert(this, store)
 	this.aura.ts = store.tick_ts
 
 	if this.render then
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.ts = store.tick_ts
 		end
 	end

@@ -11853,6 +11853,7 @@ function scripts.tower_stargazers.update(this, store)
 						U.sprites_show(enemy, nil, nil, true)
 
 						enemy.vis.bans = U.flag_clear(enemy.vis.bans, F_TELEPORT)
+						U.unblock_all(store, enemy)
 
 						table.remove(this.teleport_targets, i)
 
@@ -23428,5 +23429,297 @@ function scripts.soldier_rotten_forest_tree.update(this, store)
 	end
 end
 -- 腐森 End
+
+-- 炼狱法师 Begin
+scripts.tower_infernal_mage = {}
+
+function scripts.tower_infernal_mage.update(this, store)
+	local tower_sid = 2
+	local shooter_sid = 3
+	local teleport_sid = 4
+	local curse_sid = 5
+	local a = this.attacks
+	local ar = this.attacks.list[1]
+	local ad = this.attacks.list[2]
+	local at = this.attacks.list[3]
+	local ac = this.attacks.list[4]
+	local pow_d = this.powers.fissure
+	local pow_t = this.powers.teleport
+	local pow_c = this.powers.curse
+	local last_ts = store.tick_ts
+	local tpos = tpos(this)
+
+	ar.ts = store.tick_ts
+
+	local function do_shoot_animation(aa, enemy)
+		last_ts = store.tick_ts
+		local soffset = this.render.sprites[shooter_sid].offset
+		local an, af, ai = U.animation_name_facing_point(this, aa.animation, enemy.pos, shooter_sid, soffset)
+		U.animation_start(this, an, af, store.tick_ts, false, shooter_sid)
+		if aa == at then
+			this.render.sprites[teleport_sid].ts = store.tick_ts
+		elseif aa == ac then
+			this.render.sprites[curse_sid].ts = store.tick_ts
+		end
+		U.y_wait(store, aa.shoot_time * this.tower.cooldown_factor)
+		return af
+	end
+
+	local function curse_filter_fn(e)
+		return not table.contains(ac.excluded_templates, e.template_name) and not SU.has_modifiers(store, e, "mod_infernal_curse_armor") and not SU.has_modifiers(store, e, "mod_infernal_curse_magic_armor") and (e.health.armor > 0 or e.health.magic_armor > 0)
+	end
+
+	local function teleport_filter_fn(e)
+		return e.nav_path.ni >= at.min_nodes
+	end
+
+	while true do
+		if this.tower.blocked then
+			coroutine.yield()
+		else
+			if pow_d.changed then
+				pow_d.changed = nil
+				if pow_d.level == 1 then
+					ad.ts = store.tick_ts
+				end
+				ad.cooldown = pow_d.cooldown_base + pow_d.cooldown_inc * pow_d.level
+			end
+			if pow_t.changed then
+				pow_t.changed = nil
+				if pow_t.level == 1 then
+					at.ts = store.tick_ts
+				end
+			end
+			if pow_c.changed then
+				pow_c.changed = nil
+				if pow_c.level == 1 then
+					ac.ts = store.tick_ts
+				end
+			end
+
+			-- 优先级：首先尝试使用削减法抗，然后再打伤害，然后普攻，最后使用传送
+			if ready_to_use_power(pow_c, ac, store, this.tower.cooldown_factor) then
+				local enemy = U.find_first_enemy_in_range_filter_on(tpos, a.range, ac.vis_flags, ac.vis_bans, curse_filter_fn)
+				if not enemy then
+					ac.ts = ac.ts + 0.3
+				else
+					do_shoot_animation(ac, enemy)
+
+					local enemies = U.find_enemies_in_range_filter_on(tpos, a.range, ac.vis_flags, ac.vis_bans, curse_filter_fn)
+
+					if enemies then
+						ac.ts = last_ts
+
+						-- 选择其中护甲和魔抗之和最大的敌人
+						local armor_sum = 0
+						for i = 1, #enemies do
+							local enemy = enemies[i]
+							local this_armor_sum = enemy.health.armor + enemy.health.magic_armor
+							if this_armor_sum > armor_sum then
+								enemy = enemies[i]
+								armor_sum = this_armor_sum
+							end
+						end
+						local aura_curse = E:create_entity(ac.aura)
+						aura_curse.pos:copy(U.calculate_enemy_ffe_pos(enemy, ac.node_prediction))
+						aura_curse.aura.target_id = enemy.id
+						aura_curse.aura.source_id = this.id
+						aura_curse.aura.level = pow_c.level
+						aura_curse.aura.damage_factor = this.tower.damage_factor
+						queue_insert(store, aura_curse)
+					end
+
+					U.y_animation_wait(this, shooter_sid, 1)
+				end
+			end
+
+			if ready_to_use_power(pow_d, ad, store, this.tower.cooldown_factor) then
+				local enemy = U.find_first_enemy_in_range_filter_off(tpos, a.range, ad.vis_flags, ad.vis_bans)
+				if not enemy then
+					ad.ts = ad.ts + 0.3
+				else
+					do_shoot_animation(ad, enemy)
+
+					local enemies = U.find_enemies_in_range_filter_off(tpos, a.range, ad.vis_flags, ad.vis_bans)
+
+					if enemies then
+						ad.ts = last_ts
+
+						-- 优先攻击魔抗最低的敌人
+						local enemy = table.find_best(enemies, function(e)
+							return -e.health.magic_armor
+						end)
+
+						local bft = 0
+						for i = 1, ad.loops do
+							local aura_lava = E:create_entity(ad.aura)
+							aura_lava.pos:set(enemy.pos.x + math.random(ad.max_spread * -1, ad.max_spread), enemy.pos.y + math.random(ad.max_spread * -1, ad.max_spread))
+							aura_lava.aura.damage_min = pow_d.damage_min[pow_d.level]
+							aura_lava.aura.damage_max = pow_d.damage_max[pow_d.level]
+							aura_lava.aura.level = pow_d.level
+							aura_lava.target_id = enemy.id
+							aura_lava.aura.damage_factor = this.tower.damage_factor
+							queue_insert(store, aura_lava)
+							U.y_wait(store, fts(2) * this.tower.cooldown_factor)
+						end
+
+						S:queue(ad.sound)
+					end
+
+					U.y_animation_wait(this, shooter_sid, 1)
+				end
+			end
+
+			if ready_to_attack(ar, store, this.tower.cooldown_factor) then
+				local enemy = U.find_first_enemy_in_range_filter_off(tpos, a.range, ar.vis_flags, ar.vis_bans)
+
+				if not enemy then
+					ar.ts = ar.ts + 0.3
+				else
+					local flip_x = do_shoot_animation(ar, enemy)
+
+					local shoot_enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, ar.node_prediction, ar.vis_flags, ar.vis_bans)
+
+					if enemies then
+						for i = 2, #enemies do
+							local e = enemies[i]
+							if not U.has_modifier(store, e, "mod_lava_infernal_mage") then
+								shoot_enemy = e
+								break
+							end
+						end
+					end
+
+					if shoot_enemy then
+						enemy = shoot_enemy
+					end
+
+					ar.ts = last_ts
+
+					local b = E:create_entity(ar.bullet)
+					b.pos.x, b.pos.y = this.pos.x + ar.bullet_start_offset.x * (flip_x and -1 or 1), this.pos.y + ar.bullet_start_offset.y
+					b.bullet.from:copy(b.pos)
+					b.bullet.to:copy(enemy.pos)
+					b.bullet.target_id = enemy.id
+					b.bullet.source_id = this.id
+					b.bullet.damage_factor = this.tower.damage_factor
+
+					queue_insert(store, b)
+
+					U.y_animation_wait(this, shooter_sid, 1)
+				end
+			end
+
+			if ready_to_use_power(pow_t, at, store, this.tower.cooldown_factor) then
+				local enemy = U.find_first_enemy_in_range_filter_on(tpos, a.range, at.vis_flags, at.vis_bans, teleport_filter_fn)
+				if not enemy then
+					at.ts = at.ts + 0.3
+				else
+					do_shoot_animation(at, enemy)
+
+					local enemy, _, pred_pos = U.find_foremost_enemy_with_max_coverage_in_range_filter_on(tpos, a.range, at.node_prediction, at.vis_flags, at.vis_bans, E:get_template("aura_teleport_infernal").aura.radius, teleport_filter_fn)
+
+					if enemy then
+						at.ts = last_ts
+
+						local aura_teleport = E:create_entity(at.aura)
+						aura_teleport.pos = pred_pos
+						aura_teleport.aura.damage_factor = this.tower.damage_factor
+						aura_teleport.aura.target_id = enemy.id
+						aura_teleport.aura.source_id = this.id
+						aura_teleport.aura.level = pow_t.level
+						aura_teleport.max_count = pow_t.max_count[pow_t.level]
+
+						queue_insert(store, aura_teleport)
+					end
+					U.y_animation_wait(this, shooter_sid, 1)
+				end
+			end
+
+			::attack_logic_end::
+
+			if store.tick_ts - last_ts > this.tower.long_idle_cooldown then
+				local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos, shooter_sid)
+
+				U.animation_start(this, an, af, store.tick_ts, true, shooter_sid)
+			end
+
+			coroutine.yield()
+		end
+	end
+end
+
+scripts.aura_lava_fissure = {}
+
+function scripts.aura_lava_fissure.update(this, store)
+	local a = this.aura
+	local source = store.entities[this.source_id]
+	local rand = math.random(1, 3)
+
+	if rand == 1 then
+		this.render.sprites[1].name = "1"
+	elseif rand == 2 then
+		this.render.sprites[1].name = "2"
+	else
+		this.render.sprites[1].name = "3"
+	end
+
+	local target = store.entities[this.target_id]
+
+	local targets = U.find_enemies_in_range_filter_off(this.pos, a.radius, a.vis_flags, a.vis_bans)
+
+	if targets then
+		for _, e in ipairs(targets) do
+			local d = E:create_entity("damage")
+
+			d.damage_type = a.damage_type
+			d.value = math.random(a.damage_min, a.damage_max) * a.damage_factor
+			d.target_id = e.id
+			d.source_id = this.id
+
+			queue_damage(store, d)
+		end
+	end
+
+	if target and not target.health.dead and band(target.vis.flags, F_FLYING) == 0 then
+		local decal = E:create_entity("decal_lords_mage")
+
+		decal.pos.x, decal.pos.y = target.pos.x, target.pos.y
+		decal.tween.ts = store.tick_ts
+
+		queue_insert(store, decal)
+	end
+
+	U.y_animation_play(this, nil, nil, store.tick_ts, 1)
+
+	queue_remove(store, this)
+end
+
+scripts.mod_infernal_curse = {}
+
+function scripts.mod_infernal_curse.insert(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if not target or target.health.dead or target.enemy and not target.enemy.can_accept_magic then
+		return false
+	end
+
+	if band(this.modifier.vis_flags, target.vis.bans) ~= 0 or band(this.modifier.vis_bans, target.vis.flags) ~= 0 then
+		return false
+	end
+
+	local buff = this.armor_buff
+	local inc = this.factor_config[this.modifier.level]
+
+	SU.magic_armor_inc(target, inc)
+	SU.armor_inc(target, inc)
+
+	buff._total_factor = inc
+
+	signal.emit("mod-applied", this, target)
+
+	return true
+end
+-- 炼狱法师 End
 
 return scripts

@@ -5639,6 +5639,46 @@ return {
 		size = 12403,
 		hash = "5578f150"
 	},
+	["kr1-desktop/sounds/files/kr4_ember_lords_mage_affliction.ogg"] = {
+		size = 13452,
+		hash = "e64c7d6c"
+	},
+	["kr1-desktop/sounds/files/kr4_ember_lords_mage_affliction_upg.ogg"] = {
+		size = 11156,
+		hash = "36eb4077"
+	},
+	["kr1-desktop/sounds/files/kr4_ember_lords_mage_attack.ogg"] = {
+		size = 6437,
+		hash = "6dac8f80"
+	},
+	["kr1-desktop/sounds/files/kr4_ember_lords_mage_infernal_teleport_upg.ogg"] = {
+		size = 10103,
+		hash = "dffa5bc6"
+	},
+	["kr1-desktop/sounds/files/kr4_ember_lords_mage_overcharge.ogg"] = {
+		size = 14956,
+		hash = "af6cba74"
+	},
+	["kr1-desktop/sounds/files/kr4_ember_lords_mage_overcharge_upg.ogg"] = {
+		size = 12127,
+		hash = "9ecf6487"
+	},
+	["kr1-desktop/sounds/files/kr4_ember_lords_mage_taunt_1.ogg"] = {
+		size = 9973,
+		hash = "bb25331c"
+	},
+	["kr1-desktop/sounds/files/kr4_ember_lords_mage_taunt_2.ogg"] = {
+		size = 11035,
+		hash = "c9d29d1d"
+	},
+	["kr1-desktop/sounds/files/kr4_ember_lords_mage_taunt_3.ogg"] = {
+		size = 10153,
+		hash = "56ec4a0c"
+	},
+	["kr1-desktop/sounds/files/kr4_ember_lords_mage_taunt_4.ogg"] = {
+		size = 11555,
+		hash = "33b27b2c"
+	},
 	["kr1-desktop/sounds/files/kr4_flag_glow.ogg"] = {
 		size = 13700,
 		hash = "c3a0fa48"

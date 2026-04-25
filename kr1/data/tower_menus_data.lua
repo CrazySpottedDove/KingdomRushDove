@@ -194,6 +194,14 @@ return {
 			tt_title = _("TOWER_DRAGONS_NAME"),
 			tt_desc = _("TOWER_DRAGONS_4_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_infernal_mage",
+			image = "kr4_main_icons_0003",
+			type = "infernal_mage",
+			place = 23,
+			tt_title = _("TOWER_INFERNAL_MAGE_NAME"),
+			tt_desc = _("TOWER_INFERNAL_MAGE_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	engineer = {{M(tpl.common_upgrade, {
@@ -3049,6 +3057,51 @@ return {
 			tt_title = _("TOWER_ROTTEN_FOREST_FOG_NAME_1"),
 			tt_desc = _("TOWER_ROTTEN_FOREST_FOG_DESCRIPTION_1")
 		}}
+	}), tpl.sell}},
+	infernal_mage = {{M(tpl.upgrade_power, {
+		action_arg = "curse",
+		image = "kr4_special_icons_0022",
+		place = 6,
+		sounds = {"InfernalMageCurseTaunt"},
+		tt_phrase = _("TOWER_INFERNAL_MAGE_CURSE_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_INFERNAL_MAGE_CURSE_NAME_1"),
+			tt_desc = _("TOWER_INFERNAL_MAGE_CURSE_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_INFERNAL_MAGE_CURSE_NAME_2"),
+			tt_desc = _("TOWER_INFERNAL_MAGE_CURSE_DESCRIPTION_2")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "fissure",
+		image = "kr4_special_icons_0021",
+		place = 5,
+		sounds = {"InfernalMageFissureTaunt"},
+		tt_phrase = _("TOWER_INFERNAL_MAGE_FISSURE_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_INFERNAL_MAGE_FISSURE_NAME_1"),
+			tt_desc = _("TOWER_INFERNAL_MAGE_FISSURE_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_INFERNAL_MAGE_FISSURE_NAME_2"),
+			tt_desc = _("TOWER_INFERNAL_MAGE_FISSURE_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_INFERNAL_MAGE_FISSURE_NAME_3"),
+			tt_desc = _("TOWER_INFERNAL_MAGE_FISSURE_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "teleport",
+		image = "kr4_special_icons_0023",
+		place = 7,
+		sounds = {"InfernalMageTeleportTaunt"},
+		tt_phrase = _("TOWER_INFERNAL_MAGE_TELEPORT_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_INFERNAL_MAGE_TELEPORT_NAME_1"),
+			tt_desc = _("TOWER_INFERNAL_MAGE_TELEPORT_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_INFERNAL_MAGE_TELEPORT_NAME_2"),
+			tt_desc = _("TOWER_INFERNAL_MAGE_TELEPORT_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_INFERNAL_MAGE_TELEPORT_NAME_3"),
+			tt_desc = _("TOWER_INFERNAL_MAGE_TELEPORT_DESCRIPTION_3")
+		}}
 	}), tpl.sell}}
-
 }

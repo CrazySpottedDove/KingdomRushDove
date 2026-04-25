@@ -46732,5 +46732,337 @@ return {
 		prefix = "rotten_forest_towers_spawn",
 		from = 91,
 		to = 136
+	},
+	ember_lords_mage_tower_shooter_idle = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4",
+		from = 1,
+		to = 1
+	},
+	ember_lords_mage_tower_shooter_shootDownLeft = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4",
+		-- from = 2,
+		-- to = 23
+		-- to = 21
+		frames = {
+			2,
+			3,
+			4,
+			5,
+			6,
+			7,
+			8,
+			9,
+			10,
+			11,
+			12,
+			13,
+			14,
+			15,
+			16,
+			17,
+			18,
+			19,
+			20,
+			21,
+			22,
+			23,
+			1
+		}
+	},
+	ember_lords_mage_tower_shooter_shootDownRight = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4",
+		-- from = 24,
+		-- to = 45
+		-- to = 43
+		frames = {
+			24,
+			25,
+			26,
+			27,
+			28,
+			29,
+			30,
+			31,
+			32,
+			33,
+			34,
+			35,
+			36,
+			37,
+			38,
+			39,
+			40,
+			41,
+			42,
+			43,
+			44,
+			45,
+			1
+		}
+	},
+	ember_lords_mage_tower_shooter_idleUp = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4",
+		from = 46,
+		to = 46
+	},
+	ember_lords_mage_tower_shooter_shootUpLeft = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4",
+		-- from = 47,
+		-- to = 70
+		-- to = 68
+		frames = {
+			47,
+			48,
+			49,
+			50,
+			51,
+			52,
+			53,
+			54,
+			55,
+			56,
+			57,
+			58,
+			59,
+			60,
+			61,
+			62,
+			63,
+			64,
+			65,
+			66,
+			67,
+			68,
+			69,
+			70,
+			46
+		}
+	},
+	ember_lords_mage_tower_shooter_shootUpRight = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4",
+		-- from = 71,
+		-- to = 94
+		-- to = 92
+		frames = {
+			71,
+			72,
+			73,
+			74,
+			75,
+			76,
+			77,
+			78,
+			79,
+			80,
+			81,
+			82,
+			83,
+			84,
+			85,
+			86,
+			87,
+			88,
+			89,
+			90,
+			91,
+			92,
+			93,
+			94,
+			46
+		}
+	},
+	ember_lords_mage_tower_shooter_afflictionDown = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4",
+		from = 95,
+		to = 125
+	},
+	ember_lords_mage_tower_shooter_afflictionUp = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4",
+		from = 126,
+		to = 156
+	},
+	ember_lords_mage_tower_shooter_overchargeDown = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4",
+		from = 157,
+		to = 226
+	},
+	ember_lords_mage_tower_shooter_overchargeUp = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4",
+		from = 227,
+		to = 296
+	},
+	ember_lords_mage_tower_shooter_teleportDown = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4",
+		from = 297,
+		to = 328
+	},
+	ember_lords_mage_tower_shooter_teleportUp = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4",
+		from = 329,
+		to = 360
+	},
+	--affliction
+	ember_lords_mage_tower_shooter_affliction_floor_sign_run = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4_affliction_floor_sign",
+		from = 1,
+		to = 28
+	},
+	ember_lords_mage_tower_shooter_affliction_modifier_run = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4_affliction_modifier",
+		from = 1,
+		to = 26
+	},
+	--overcharge
+	ember_lords_mage_tower_shooter_overcharge_decal_1 = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4_overcharge_decal_1",
+		from = 1,
+		to = 57
+	},
+	ember_lords_mage_tower_shooter_overcharge_decal_2 = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4_overcharge_decal_2",
+		from = 1,
+		to = 57
+	},
+	ember_lords_mage_tower_shooter_overcharge_decal_3 = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4_overcharge_decal_3",
+		from = 1,
+		to = 57
+	},
+	ember_lords_mage_tower_shooter_overcharge_meteor_1 = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_1",
+		from = 1,
+		to = 20
+	},
+	ember_lords_mage_tower_shooter_overcharge_meteor_2 = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_2",
+		from = 1,
+		to = 20
+	},
+	ember_lords_mage_tower_shooter_overcharge_meteor_3 = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4_overcharge_meteor_3",
+		from = 1,
+		to = 20
+	},
+	--proyectile普攻魔法弹、尾焰、打击效果
+	ember_lords_mage_tower_shooter_proyectile_flying = {
+		prefix = "ember_lords_mage_tower_bolt",
+		from = 1,
+		to = 10
+	},
+	ember_lords_mage_tower_shooter_proyectile_hit = {
+		prefix = "ember_lords_mage_tower_bolt",
+		from = 11,
+		to = 22
+	},
+	ember_lords_mage_tower_bolt_particle_run = {
+		prefix = "ember_lords_mage_tower_bolt_particle",
+		from = 1,
+		to = 10
+	},
+	ember_lords_mage_tower_shooter_proyectile_flying = {
+		prefix = "ember_lords_mage_tower_bolt_lvl4",
+		from = 1,
+		to = 10
+	},
+	ember_lords_mage_tower_shooter_proyectile_hit = {
+		prefix = "ember_lords_mage_tower_bolt_lvl4",
+		from = 11,
+		to = 22
+	},
+	ember_lords_mage_tower_bolt_particle_run = {
+		prefix = "ember_lords_mage_tower_bolt_particle_lvl4",
+		from = 1,
+		to = 10
+	},
+	--teleport
+	ember_lords_mage_tower_shooter_teleport_effect_in = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4_teleport_effect",
+		from = 1,
+		to = 10
+	},
+	ember_lords_mage_tower_shooter_teleport_effect_out = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4_teleport_effect",
+		from = 1,
+		to = 10
+	},
+	ember_lords_mage_tower_shooter_teleport_decal_run = {
+		prefix = "ember_lords_mage_tower_shooter_lvl4_teleport_decal",
+		from = 1,
+		to = 28
+	},
+	ember_lords_mage_tower_layer1_idle = {
+		prefix = "ember_lords_mage_tower_lvl4_layer1",
+		from = 1,
+		to = 1
+	},
+	ember_lords_mage_tower_layer1_shoot = {
+		prefix = "ember_lords_mage_tower_lvl4_layer1",
+		from = 1,
+		to = 1
+	},
+	ember_lords_mage_tower_layer1_teleport = {
+		prefix = "ember_lords_mage_tower_lvl4_layer1",
+		from = 2,
+		to = 27
+	},
+	ember_lords_mage_tower_layer1_affliction = {
+		prefix = "ember_lords_mage_tower_lvl4_layer1",
+		from = 28,
+		to = 52
+	},
+	ember_lords_mage_tower_layer1_overcharge = {
+		prefix = "ember_lords_mage_tower_lvl4_layer1",
+		from = 28,
+		to = 52
+	},
+	ember_lords_mage_tower_layer2_idle = {
+		prefix = "ember_lords_mage_tower_lvl4_layer2",
+		from = 1,
+		to = 1
+	},
+	ember_lords_mage_tower_layer2_shoot = {
+		prefix = "ember_lords_mage_tower_lvl4_layer2",
+		from = 1,
+		to = 1
+	},
+	ember_lords_mage_tower_layer2_teleport = {
+		prefix = "ember_lords_mage_tower_lvl4_layer2",
+		from = 2,
+		to = 27
+	},
+	ember_lords_mage_tower_layer2_affliction = {
+		prefix = "ember_lords_mage_tower_lvl4_layer2",
+		from = 28,
+		to = 52
+	},
+	ember_lords_mage_tower_layer2_overcharge = {
+		prefix = "ember_lords_mage_tower_lvl4_layer2",
+		from = 28,
+		to = 52
+	},
+	ember_lords_mage_tower_layer3_idle = {
+		prefix = "ember_lords_mage_tower_lvl4_layer3",
+		from = 1,
+		to = 1
+	},
+	ember_lords_mage_tower_layer3_shoot = {
+		prefix = "ember_lords_mage_tower_lvl4_layer3",
+		from = 1,
+		to = 1
+	},
+	ember_lords_mage_tower_layer3_teleport = {
+		prefix = "ember_lords_mage_tower_lvl4_layer3",
+		from = 2,
+		to = 27
+	},
+	ember_lords_mage_tower_layer3_affliction = {
+		prefix = "ember_lords_mage_tower_lvl4_layer3",
+		from = 28,
+		to = 52
+	},
+	ember_lords_mage_tower_layer3_overcharge = {
+		prefix = "ember_lords_mage_tower_lvl4_layer3",
+		from = 28,
+		to = 52
 	}
 }

@@ -306,3 +306,20 @@ function table.to_map(t)
 
 	return m
 end
+
+--- 在数组中找到满足条件的最佳元素。
+--- @param t table 数组。保证长度 > 0。
+--- @param rule function(v) 返回一个数值，数值越大表示越好。
+function table.find_best(t, rule)
+	local best_candidate = t[1]
+	local best_score = rule(best_candidate)
+	for i = 2, #t do
+		local candidate = t[i]
+
+		if rule(candidate) > best_score then
+			best_candidate = candidate
+		end
+	end
+
+	return best_candidate
+end
