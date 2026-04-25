@@ -42562,14 +42562,15 @@ function scripts.controller_stage_23_roboboots.update(this, store)
 				for index, wave_data in ipairs(current_wave_data) do
 					if wave_data then
 						local leg_index = wave_data.leg
+
 						local current_leg = legs_data[leg_index]
 
 						if current_leg.state == BOOT_STATE_OPEN then
-							current_leg.next_ts = start_wave_ts + wave_data.timings[1][2]
+							current_leg.next_ts = start_wave_ts + wave_data.timings[1][2] or 0
 
 							log.info("BOOT_STATE_OPEN " .. current_leg.next_ts)
 						else
-							current_leg.next_ts = start_wave_ts + wave_data.timings[1][1]
+							current_leg.next_ts = start_wave_ts + wave_data.timings[1][1] or 0
 
 							log.info("BOOT_STATE_CLOSE " .. current_leg.next_ts)
 						end
@@ -67679,7 +67680,7 @@ function scripts.mod_stage_40_boss_feet_death.update(this, store)
 	if hero.tombstone_show_time then
 		local tombstone
 
-		U.y_wait(hero.tombstone_show_time)
+		U.y_wait(store, hero.tombstone_show_time)
 
 		while store.tick_ts - death_ts < hero.tombstone_show_time do
 			coroutine.yield()
