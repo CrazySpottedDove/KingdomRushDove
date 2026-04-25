@@ -22541,9 +22541,10 @@ end
 scripts.tower_shadow_archer = {}
 
 function scripts.tower_shadow_archer.remove(this, store)
-	for i = 1, #this.crows do
+	for i = #this.crows, 1, -1 do
 		this.crows[i].owner = nil
 		queue_remove(store, this.crows[i])
+		this.crows[i] = nil
 	end
 
 	return true
