@@ -23151,6 +23151,8 @@ function scripts.tower_rotten_forest.remove(this, store, script)
 		end
 	end
 
+	this._fx_point_range = nil
+
 	return true
 end
 
