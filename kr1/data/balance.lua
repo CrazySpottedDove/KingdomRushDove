@@ -5919,8 +5919,8 @@ local towers = {
 			damage_type = DAMAGE_PHYSICAL
 		},
 		skill_final_shot = {
-			s_stun = 2,
-			stun_time = 60,
+			s_stun = 1.9,
+			stun_time = 57,
 			price = {300, 200, 200},
 			cooldown = {4, 4, 4},
 			damage_factor = {1.5, 2.1, 2.7},
