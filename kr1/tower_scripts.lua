@@ -394,6 +394,7 @@ scripts.tower_ranger = {
 	end,
 	remove = function(this, store)
 		this.render.sprites[5].hidden = true
+		return true
 	end
 }
 -- 火枪
