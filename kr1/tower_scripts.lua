@@ -23433,6 +23433,7 @@ function scripts.soldier_rotten_forest_tree.update(this, store)
 end
 -- 腐森 End
 
+
 -- 炼狱法师 Begin
 scripts.tower_infernal_mage = {}
 
@@ -23724,5 +23725,454 @@ function scripts.mod_infernal_curse.insert(this, store)
 	return true
 end
 -- 炼狱法师 End
+
+-- 掷骨者 Begin
+scripts.tower_bone_flingers = {}
+
+function scripts.tower_bone_flingers.get_info(this)
+	local a = this.attacks.list[1]
+	local b = E:get_template(this.attacks.list[1].bullet)
+	local min, max = b.bullet.damage_min, b.bullet.damage_max
+	local pow_m = this.powers.milk
+
+	if pow_m and pow_m.level > 0 then
+		min = min + pow_m.damage_inc[pow_m.level]
+		max = max + pow_m.damage_inc[pow_m.level]
+	end
+
+	min, max = math.ceil(min * this.tower.damage_factor), math.ceil(max * this.tower.damage_factor)
+
+	return {
+		type = STATS_TYPE_TOWER,
+		damage_min = min,
+		damage_max = max,
+		range = this.attacks.range,
+		cooldown = a.cooldown
+	}
+end
+
+function scripts.tower_bone_flingers.insert(this, store)
+	return true
+end
+
+function scripts.tower_bone_flingers.remove(this, store)
+	local bar = this.barrack
+
+	for i = 1, #bar.soldiers do
+		local s = bar.soldiers[i]
+		if s then
+			queue_remove(store, s)
+		end
+	end
+
+	return true
+end
+
+function scripts.tower_bone_flingers.update(this, store)
+	local last_target_pos = V.v(0, 0)
+	local shots_count = 0
+	local shooter_sprite_ids = {3, 4}
+	local a = this.attacks
+	local aa = this.attacks.list[1]
+	local shooter_count = #aa.bullet_start_offset
+	local formation_offset = -0.4
+	local soldier_added = false
+	local bar = this.barrack
+	local pow_g = this.powers and this.powers.golem
+	local last_soldier_pos = {}
+	local skeletonts = 0
+	local pow_s = this.powers and this.powers.skeleton
+	local as = #this.attacks.list >= 2 and this.attacks.list[2] or nil
+	local pow_m = this.powers and this.powers.milk
+	local bones_small = {"boneflingers_shooter_proyectiles_0001", "boneflingers_shooter_proyectiles_0002", "boneflingers_shooter_proyectiles_0003", "boneflingers_shooter_proyectiles_0004"}
+	local decals_small = {"boneflingers_shooter_proyectiles_decals_0001", "boneflingers_shooter_proyectiles_decals_0002", "boneflingers_shooter_proyectiles_decals_0003", "boneflingers_shooter_proyectiles_decals_0004"}
+	local bones_big = {"boneflingers_shooter_proyectiles_big_0001", "boneflingers_shooter_proyectiles_big_0002", "boneflingers_shooter_proyectiles_big_0003", "boneflingers_shooter_proyectiles_big_0004", "boneflingers_shooter_proyectiles_big_0005", "boneflingers_shooter_proyectiles_big_0006", "boneflingers_shooter_proyectiles_big_0007", "boneflingers_shooter_proyectiles_big_0008", "boneflingers_shooter_proyectiles_big_0009"}
+	local decals_big = {"boneflingers_shooter_proyectiles_big_decals_0001", "boneflingers_shooter_proyectiles_big_decals_0002", "boneflingers_shooter_proyectiles_big_decals_0003", "boneflingers_shooter_proyectiles_big_decals_0004", "boneflingers_shooter_proyectiles_big_decals_0005", "boneflingers_shooter_proyectiles_big_decals_0006", "boneflingers_shooter_proyectiles_big_decals_0007", "boneflingers_shooter_proyectiles_big_decals_0008", "boneflingers_shooter_proyectiles_big_decals_0009"}
+
+	aa.ts = store.tick_ts
+
+	while true do
+		if not this.tower.blocked then
+			if pow_m and pow_m.changed then
+				pow_m.changed = nil
+			end
+
+			if pow_g and pow_g.changed then
+				pow_g.changed = nil
+				this.barrack.max_soldiers = pow_g.level
+			end
+
+			if pow_s and as and pow_s.changed then
+				pow_s.changed = nil
+				as.disabled = false
+				-- 防止多塔同帧解锁后完全同步施法，给一点随机偏移分散峰值
+				skeletonts = store.tick_ts + fts(math.random(0, 12))
+			end
+
+			if pow_s and pow_s.level > 0 and as and not as.disabled and store.tick_ts - skeletonts > pow_s.cooldown[pow_s.level] then
+				skeletonts = store.tick_ts
+				local skelet = pow_s.level == 1 and "bone_flingers_skelebomb" or "bone_flingers_skelebomb2"
+
+				local enemy = U.find_random_enemy(store.entities, tpos(this), 0, a.range, pow_s.vis_flags, pow_s.vis_bans)
+				local b = E:create_entity(skelet)
+				local r = a.range
+				local angle = 2 * math.pi * math.random(1, 24) / 24
+
+				b.pos.x, b.pos.y = this.pos.x, this.pos.y
+				b.bullet.damage_factor = this.tower.damage_factor
+				b.bullet.from = V.vclone(b.pos)
+				b.bullet.target_id = enemy and enemy.id or nil
+
+				if not enemy then
+					b.bullet.to = U.point_on_ellipse(this.pos, r, angle)
+					while GR:cell_is(b.bullet.to.x, b.bullet.to.y, TERRAIN_NOWALK) do
+						angle = 2 * math.pi * math.random(1, 24) / 24
+						b.bullet.to = U.point_on_ellipse(this.pos, r, angle)
+						coroutine.yield()
+					end
+				else
+					b.bullet.to = U.calculate_enemy_ffe_pos(enemy, as.node_prediction)
+
+					local m = E:create_entity("mod_stun")
+					m.modifier.target_id = enemy.id
+					m.modifier.source_id = this.id
+					m.modifier.duration = fts(60)
+					queue_insert(store, m)
+				end
+
+				b.bullet.level = pow_s.level
+				queue_insert(store, b)
+				-- 给下一轮加轻微抖动，减少大规模同帧召唤卡顿
+				skeletonts = skeletonts + fts(math.random(0, 8))
+			end
+
+			soldier_added = false
+			for i = 1, bar.max_soldiers do
+				local s = bar.soldiers[i]
+
+				if s and s.health.dead then
+					last_soldier_pos[i] = s.pos
+				end
+
+				if not s or (s.health.dead and not store.entities[s.id]) then
+					if not this.barrack.rally_pos and this.tower.default_rally_pos then
+						this.barrack.rally_pos = V.vclone(this.tower.default_rally_pos)
+					end
+
+					s = E:create_entity(bar.soldier_type)
+					s.soldier.tower_id = this.id
+					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, bar, bar.max_soldiers, formation_offset)
+					s.pos = last_soldier_pos[i] or V.vclone(s.nav_rally.pos)
+					s.nav_rally.new = true
+
+					queue_insert(store, s)
+					bar.soldiers[i] = s
+
+					signal.emit("tower-spawn", this, s)
+					soldier_added = true
+				end
+			end
+
+			if soldier_added then
+				for i = 1, #bar.soldiers do
+					local s = bar.soldiers[i]
+					if s then
+						s.nav_rally.new = true
+					end
+				end
+			end
+
+			if bar.rally_new then
+				formation_offset = -0.4
+				bar.rally_new = false
+				signal.emit("rally-point-changed", this)
+
+				local all_dead = true
+				for i = 1, #bar.soldiers do
+					local s = bar.soldiers[i]
+					if s then
+						s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, bar, bar.max_soldiers, formation_offset)
+						s.nav_rally.new = true
+						all_dead = all_dead and s.health.dead
+					end
+				end
+
+				if not all_dead and this.sound_events.change_rally_point then
+					S:queue(this.sound_events.change_rally_point)
+				end
+			end
+
+			if store.tick_ts - aa.ts > aa.cooldown then
+				local enemy = U.find_random_enemy(store.entities, tpos(this), 0, a.range, aa.vis_flags, aa.vis_bans)
+				if enemy then
+					aa.ts = store.tick_ts
+					shots_count = shots_count + 1
+					last_target_pos.x, last_target_pos.y = enemy.pos.x, enemy.pos.y
+
+					local shooter_idx = (shots_count - 1) % shooter_count + 1
+					local shooter_sid = shooter_sprite_ids[shooter_idx]
+					local start_offset = aa.bullet_start_offset[shooter_idx]
+					local an, af = U.animation_name_facing_point(this, aa.animation, enemy.pos, shooter_sid, start_offset)
+
+					U.animation_start(this, an, af, store.tick_ts, true, shooter_sid)
+
+					while store.tick_ts - aa.ts < aa.shoot_time do
+						coroutine.yield()
+					end
+
+					local b1 = E:create_entity(aa.bullet)
+
+					if pow_m and pow_m.level > 0 then
+						local from_idx = 1
+						local to_idx = 3
+						if pow_m.level == 2 then
+							from_idx, to_idx = 4, 6
+						elseif pow_m.level == 3 then
+							from_idx, to_idx = 7, 9
+						end
+						local bone_shape = math.random(from_idx, to_idx)
+						b1.render.sprites[1].name = bones_big[bone_shape]
+						b1.bullet.miss_decal = decals_big[bone_shape]
+						b1.bullet.damage_min = b1.bullet.damage_min + pow_m.damage_inc[pow_m.level]
+						b1.bullet.damage_max = b1.bullet.damage_max + pow_m.damage_inc[pow_m.level]
+					else
+						local bone_shape = math.random(1, 4)
+						b1.render.sprites[1].name = bones_small[bone_shape]
+						b1.bullet.miss_decal = decals_small[bone_shape]
+					end
+
+					b1.pos.x, b1.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
+					b1.bullet.damage_factor = this.tower.damage_factor
+					b1.bullet.from = V.vclone(b1.pos)
+					b1.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
+					b1.bullet.target_id = enemy.id
+
+					queue_insert(store, b1)
+
+					while not U.animation_finished(this, shooter_sid) do
+						coroutine.yield()
+					end
+
+					an, af = U.animation_name_facing_point(this, "idle", last_target_pos, shooter_sid, start_offset)
+					U.animation_start(this, an, af, store.tick_ts, true, shooter_sid)
+				end
+			end
+
+			if store.tick_ts - aa.ts > this.tower.long_idle_cooldown then
+				for i = 1, #shooter_sprite_ids do
+					local sid = shooter_sprite_ids[i]
+					local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos, sid)
+					U.animation_start(this, an, af, store.tick_ts, true, sid)
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.soldier_flingers_skeleton = {}
+
+function scripts.soldier_flingers_skeleton.get_info(this)
+	local t = scripts.soldier_barrack.get_info(this)
+	t.respawn = nil
+
+	return t
+end
+
+function scripts.soldier_flingers_skeleton.insert(this, store)
+	this.melee.order = U.attack_order(this.melee.attacks)
+
+	local node_offset = math.random(3, 6)
+	this.nav_path.ni = this.nav_path.ni + node_offset
+	if not P:is_path_active(this.nav_path.pi) then
+		this.nav_path.pi = 9
+	end
+
+	this.pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
+	if not this.pos then
+		return false
+	end
+
+	return true
+end
+
+function scripts.soldier_flingers_skeleton.update(this, store)
+	local attack = this.melee.attacks[1]
+	local target
+	local next_pos = V.vclone(this.pos)
+	local brk, sta, nearest
+
+	U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
+
+	while true do
+		if this.health.dead then
+			this.health.hp = 0
+			SU.y_soldier_death(store, this)
+			queue_remove(store, this)
+			return
+		end
+
+		if this.unit.is_stunned then
+			U.animation_start(this, "idle", nil, store.tick_ts, true)
+		else
+			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+			if not brk and sta == A_NO_TARGET then
+				nearest = P:nearest_nodes(this.pos.x, this.pos.y, {this.nav_path.pi}, {this.nav_path.spi})
+				if nearest and nearest[1] and nearest[1][3] < this.nav_path.ni then
+					this.nav_path.ni = nearest[1][3]
+				end
+
+				while next_pos and not target and not this.health.dead and not this.unit.is_stunned do
+					U.set_destination(this, next_pos)
+					local an, af = U.animation_name_facing_point(this, "running", this.motion.dest)
+					U.animation_start(this, an, af, store.tick_ts, true)
+					U.walk(this, store.tick_length)
+					coroutine.yield()
+
+					target = U.find_foremost_enemy(store.entities, this.pos, 0, this.melee.range, false, attack.vis_flags, attack.vis_bans)
+					next_pos = P:next_entity_node(this, store.tick_length)
+				end
+
+				target = nil
+				if this.health.dead or not next_pos then
+					this.health.hp = 0
+					U.y_animation_play(this, "death", nil, store.tick_ts, 1)
+					queue_remove(store, this)
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.skeleflingerbomb = {}
+
+function scripts.skeleflingerbomb.update(this, store)
+	local b = this.bullet
+	this.render.sprites[1].r = 20 * math.pi / 180 * (b.to.x > b.from.x and 1 or -1)
+
+	while store.tick_ts - b.ts < b.flight_time do
+		b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
+		this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
+
+		if b.align_with_trajectory then
+			this.render.sprites[1].r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
+		elseif b.rotation_speed then
+			this.render.sprites[1].r = this.render.sprites[1].r + b.rotation_speed * store.tick_length
+		end
+
+		if b.hide_radius then
+			this.render.sprites[1].hidden = V.dist(this.pos.x, this.pos.y, b.from.x, b.from.y) < b.hide_radius or V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) < b.hide_radius
+		end
+
+		coroutine.yield()
+	end
+
+	local dest = b.to
+	for i = 1, b.fragment_count do
+		local bf_dest = U.point_on_ellipse(dest, 25, 2 * math.pi * i / b.fragment_count)
+
+		bf_dest.x = bf_dest.x + U.frandom(-b.fragment_pos_spread.x, b.fragment_pos_spread.x)
+		bf_dest.y = bf_dest.y + U.frandom(-b.fragment_pos_spread.y, b.fragment_pos_spread.y)
+
+		local bf = E:create_entity(b.fragment_name)
+		bf.bullet.from = V.vclone(this.pos)
+		bf.bullet.to = bf_dest
+		bf.bullet.flight_time = bf.bullet.flight_time + fts(i) * math.random(1, 2)
+		bf.render.sprites[1].r = 100 * math.random() * (math.pi / 180)
+		bf.bullet.level = this.bullet.level
+
+		queue_insert(store, bf)
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.enemies_skelespawner = {}
+
+function scripts.enemies_skelespawner.update(this, store)
+	local sp = this.spawner
+	local nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
+
+	if #nodes < 1 then
+		queue_remove(store, this)
+		return
+	end
+
+	local node = nodes[1]
+	sp.pi, sp.spi, sp.ni = node[1], node[2], node[3]
+
+	for i = 1, sp.count do
+		local e_spi = sp.spi
+
+		if sp.allowed_subpaths and #sp.allowed_subpaths > 0 then
+			if sp.random_subpath then
+				e_spi = sp.allowed_subpaths[math.random(1, #sp.allowed_subpaths)]
+			else
+				e_spi = sp.allowed_subpaths[(i - 1) % #sp.allowed_subpaths + 1]
+			end
+		end
+
+		local e = E:create_entity(sp.entity)
+		e.pos = P:node_pos(sp.pi, e_spi, sp.ni + sp.node_offset)
+		e.nav_path.pi = sp.pi
+		e.nav_path.spi = e_spi
+		e.nav_path.ni = sp.ni + sp.node_offset
+		e.nav_rally.center.x, e.nav_rally.center.y = e.pos.x, e.pos.y
+		e.nav_rally.pos.x, e.nav_rally.pos.y = e.pos.x, e.pos.y
+
+		queue_insert(store, e)
+	end
+
+	queue_remove(store, this)
+end
+-- 掷骨者 End
+
+scripts.enemies_skelespawner_bone_flingers = {}
+
+function scripts.enemies_skelespawner_bone_flingers.update(this, store)
+	local sp = this.spawner
+	local nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
+
+	if #nodes < 1 then
+		queue_remove(store, this)
+		return
+	end
+
+	-- 共线路段会返回多条子路节点：取 spi 最大的那条
+	local node = nodes[1]
+	for i = 2, #nodes do
+		local n = nodes[i]
+		if n[1] == node[1] and n[3] == node[3] and n[2] > node[2] then
+			node = n
+		end
+	end
+
+	sp.pi, sp.spi, sp.ni = node[1], node[2], node[3]
+
+	for i = 1, sp.count do
+		local e_spi = sp.spi
+
+		if sp.allowed_subpaths and #sp.allowed_subpaths > 0 then
+			-- 这里不做随机：按上面规则已决定子路
+			e_spi = sp.allowed_subpaths[(e_spi - 1) % #sp.allowed_subpaths + 1]
+		end
+
+		local e = E:create_entity(sp.entity)
+		e.pos = P:node_pos(sp.pi, e_spi, sp.ni + sp.node_offset)
+		e.nav_path.pi = sp.pi
+		e.nav_path.spi = e_spi
+		e.nav_path.ni = sp.ni + sp.node_offset
+		e.nav_rally.center.x, e.nav_rally.center.y = e.pos.x, e.pos.y
+		e.nav_rally.pos.x, e.nav_rally.pos.y = e.pos.x, e.pos.y
+
+		queue_insert(store, e)
+	end
+
+	queue_remove(store, this)
+end
+
 
 return scripts

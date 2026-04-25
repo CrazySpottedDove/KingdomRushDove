@@ -986,7 +986,9 @@ upgrades.arrows = {
 	"arrow_hero_vesper_long_arrow",
 	"arrow_hero_vesper_short_arrow",
 	"arrow_tower_shadow_archer",
-	"arrow_tower_shadow_archer_mark"
+	"arrow_tower_shadow_archer_mark",
+	"bone_flingers_bone",
+	"bone_flingers_bone_golem"
 }
 
 upgrades.soldiers = {
@@ -1024,7 +1026,10 @@ upgrades.soldiers = {
 	"soldier_tower_rocket_gunners_lvl4",
 	"soldier_tower_ghost_lvl4",
 	"soldier_tower_dwarf_lvl4",
-	"tower_paladin_covenant_soldier_lvl4"
+	"tower_paladin_covenant_soldier_lvl4",
+	"soldier_bone_golem",
+	"soldier_flingers_skeleton",
+	"soldier_flingers_skeleton_warrior"
 }
 
 upgrades.barrack_soldiers = {
@@ -1083,10 +1088,11 @@ upgrades.towers_with_barrack = {
 	"tower_ghost_lvl4",
 	"tower_dwarf_lvl4",
 	"tower_barrel_lvl4",
-	"tower_paladin_covenant_lvl4"
+	"tower_paladin_covenant_lvl4",
+	"tower_bone_flingers"
 }
 
-upgrades.non_barrack_towers_with_barrack_attribute = {"tower_sorcerer", "tower_mech", "tower_necromancer", "tower_frankenstein", "tower_druid", "tower_dark_elf_lvl4"}
+upgrades.non_barrack_towers_with_barrack_attribute = {"tower_sorcerer", "tower_mech", "tower_necromancer", "tower_frankenstein", "tower_druid", "tower_dark_elf_lvl4", "tower_bone_flingers"}
 
 upgrades.mage_towers = GS.mage_towers
 

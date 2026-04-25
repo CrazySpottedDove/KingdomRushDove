@@ -183,17 +183,13 @@ for k, v in pairs(src) do
 	end
 end
 
+-- 注意：这里输出的是「源码」而不是 bytecode。
+-- bytecode 会被编译器版本锁死（Lua5.4 / LuaJIT / Lua5.1 不兼容），
+-- 直接导致运行时报 "cannot load incompatible bytecode"。
+-- 源码由运行时的 Lua 编译，兼容性最好，加载代价也基本能接受（只在启动时）。
 local source_lua = "return " .. serialize(compiled)
-local compile_loader = loadstring or load
-local chunk, chunk_err = compile_loader(source_lua, "@" .. output_luac_file)
-
-if not chunk then
-	error("Failed to compile generated lua chunk:\n" .. tostring(chunk_err))
-end
-
-local bytecode = string.dump(chunk)
 local luac_file = assert(io.open(output_luac_file, "wb"))
-luac_file:write(bytecode)
+luac_file:write(source_lua)
 luac_file:close()
 
 print(string.format("Compiled %d source animations into %d runtime animations.", source_count, compiled_count))

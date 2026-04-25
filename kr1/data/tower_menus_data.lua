@@ -408,6 +408,13 @@ return {
 			tt_title = _("TOWER_SHADOW_ARCHER_NAME"),
 			tt_desc = _("TOWER_SHADOW_ARCHER_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_bone_flingers",
+			image = "kr4_main_icons_0009",
+			place = 20,
+			tt_title = _("TOWER_BONE_FLINGERS_NAME"),
+			tt_desc = _("TOWER_BONE_FLINGERS_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	barrack = {{M(tpl.common_upgrade, {
@@ -3021,6 +3028,46 @@ return {
 			tt_desc = _("TOWER_SHADOW_ARCHER_CROW_DESCRIPTION_3")
 		}}
 	}), tpl.sell}},
+	bone_flingers = {{M(tpl.upgrade_power, {
+		action_arg = "skeleton",
+		image = "kr4_special_icons_0037",
+		place = 6,
+		sounds = {"BoneFlingersSkeletonTaunt"},
+		tt_phrase = _("TOWER_BONE_FLINGERS_SKELETON_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_BONE_FLINGERS_SKELETON_NAME_1"),
+			tt_desc = _("TOWER_BONE_FLINGERS_SKELETON_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_BONE_FLINGERS_SKELETON_NAME_2"),
+			tt_desc = _("TOWER_BONE_FLINGERS_SKELETON_DESCRIPTION_2")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "milk",
+		image = "kr4_special_icons_0038",
+		place = 5,
+		sounds = {"BoneFlingersMilkTaunt"},
+		tt_phrase = _("TOWER_BONE_FLINGERS_MILK_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_BONE_FLINGERS_MILK_NAME_1"),
+			tt_desc = _("TOWER_BONE_FLINGERS_MILK_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_BONE_FLINGERS_MILK_NAME_2"),
+			tt_desc = _("TOWER_BONE_FLINGERS_MILK_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_BONE_FLINGERS_MILK_NAME_3"),
+			tt_desc = _("TOWER_BONE_FLINGERS_MILK_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "golem",
+		image = "kr4_special_icons_0036",
+		place = 7,
+		sounds = {"BoneFlingersGolemTaunt"},
+		tt_phrase = _("TOWER_BONE_FLINGERS_GOLEM_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_BONE_FLINGERS_GOLEM_NAME_1"),
+			tt_desc = _("TOWER_BONE_FLINGERS_GOLEM_DESCRIPTION_1")
+		}}
+	}), tpl.rally, tpl.sell}},
 	rotten_forest = {{M(tpl.upgrade_power, {
 		action_arg = "tree",
 		sounds = {"RottenForestSkillATaunt"},

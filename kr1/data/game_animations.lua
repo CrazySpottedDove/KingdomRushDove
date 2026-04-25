@@ -46640,6 +46640,132 @@ return {
 			30
 		}
 	},
+	--掷骨者
+	bone_flingers_idle = {
+		prefix = "boneflingers_tower_lvl4",
+		from = 1,
+		to = 1
+	},
+	bone_flingers_shoot = {
+		prefix = "boneflingers_tower_lvl4",
+		from = 1,
+		to = 1
+	},
+	boneflingers_shooter_idleDown = {
+		prefix = "boneflingers_shooter",
+		from = 1,
+		to = 1
+	},
+	boneflingers_shooter_shootingDown = {
+		prefix = "boneflingers_shooter",
+		from = 2,
+		to = 16
+	},
+	boneflingers_shooter_idleUp = {
+		prefix = "boneflingers_shooter",
+		from = 17,
+		to = 17
+	},
+	boneflingers_shooter_shootingUp = {
+		prefix = "boneflingers_shooter",
+		from = 18,
+		to = 32
+	},
+	boneflingers_golem_idle = {
+		prefix = "boneflingers_tower_lvl4_golem",
+		from = 1,
+		to = 1
+	},
+	boneflingers_golem_running = {
+		prefix = "boneflingers_tower_lvl4_golem",
+		from = 2,
+		to = 25
+	},
+	boneflingers_golem_attack = {
+		prefix = "boneflingers_tower_lvl4_golem",
+		from = 26,
+		to = 58
+	},
+	boneflingers_golem_shoot = {
+		prefix = "boneflingers_tower_lvl4_golem",
+		from = 59,
+		to = 71
+	},
+	boneflingers_golem_death = {
+		prefix = "boneflingers_tower_lvl4_golem",
+		from = 72,
+		to = 111
+	},
+	boneflingers_golem_respawn = {
+		prefix = "boneflingers_tower_lvl4_golem",
+		from = 112,
+		to = 144
+	},
+	boneflingers_golem_raise = {
+		prefix = "boneflingers_tower_lvl4_golem",
+		from = 145,
+		to = 229
+	},
+	boneflingers_skeleton_raise = {
+		prefix = "boneflingers_tower_lvl4_skeleton",
+		from = 1,
+		to = 62
+	},
+	boneflingers_skeleton_idle = {
+		prefix = "boneflingers_tower_lvl4_skeleton",
+		from = 63,
+		to = 63
+	},
+	boneflingers_skeleton_running = {
+		prefix = "boneflingers_tower_lvl4_skeleton",
+		from = 64,
+		to = 87
+	},
+	boneflingers_skeleton_walk = {
+		prefix = "boneflingers_tower_lvl4_skeleton",
+		from = 64,
+		to = 87
+	},
+	boneflingers_skeleton_attack = {
+		prefix = "boneflingers_tower_lvl4_skeleton",
+		from = 88,
+		to = 106
+	},
+	boneflingers_skeleton_death = {
+		prefix = "boneflingers_tower_lvl4_skeleton",
+		from = 107,
+		to = 128
+	},
+	boneflingers_skeletonwarrior_raise = {
+		prefix = "boneflingers_tower_lvl4_skeletonwarrior",
+		from = 1,
+		to = 62
+	},
+	boneflingers_skeletonwarrior_idle = {
+		prefix = "boneflingers_tower_lvl4_skeletonwarrior",
+		from = 63,
+		to = 63
+	},
+	boneflingers_skeletonwarrior_running = {
+		prefix = "boneflingers_tower_lvl4_skeletonwarrior",
+		from = 64,
+		to = 87
+	},
+	boneflingers_skeletonwarrior_walk = {
+		prefix = "boneflingers_tower_lvl4_skeletonwarrior",
+		from = 64,
+		to = 87
+	},
+	boneflingers_skeletonwarrior_attack = {
+		prefix = "boneflingers_tower_lvl4_skeletonwarrior",
+		from = 88,
+		to = 106
+	},
+	boneflingers_skeletonwarrior_death = {
+		prefix = "boneflingers_tower_lvl4_skeletonwarrior",
+		from = 107,
+		to = 128
+	},
 	--普攻及地面雾气
 	rotten_forest_tower_decal_floor_intro = {
 		prefix = "rotten_forest_tower_decal_floor",
