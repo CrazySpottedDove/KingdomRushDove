@@ -23066,6 +23066,7 @@ function scripts.tower_rotten_forest.update(this, store, script)
 					e.aura.level = this.powers.fog.level
 					e.aura.source_id = this.id
 					e.aura.ts = store.tick_ts
+					e.owner = this
 					this.aura2 = e
 
 					queue_insert(store, e)
@@ -23187,7 +23188,7 @@ function scripts.aura_tower_rotten_forest_spike_burst.update(this, store, script
 						new_mod.modifier.level = this.aura.level
 						new_mod.modifier.target_id = target.id
 						new_mod.modifier.source_id = this.id
-						new_mod.modifier.damage_factor = this.aura.damage_factor
+						new_mod.modifier.damage_factor = this.owner.tower.damage_factor
 						queue_insert(store, new_mod)
 					end
 				end
@@ -23276,7 +23277,7 @@ function scripts.aura_tower_rotten_forest_fog.update(this, store, script)
 						new_mod.modifier.level = this.aura.level
 						new_mod.modifier.target_id = target.id
 						new_mod.modifier.source_id = this.id
-						new_mod.modifier.damage_factor = this.aura.damage_factor
+						new_mod.modifier.damage_factor = this.owner.tower.damage_factor
 
 						queue_insert(store, new_mod)
 					end
