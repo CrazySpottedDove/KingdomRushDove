@@ -23804,8 +23804,8 @@ function scripts.tower_bone_flingers.update(this, store)
 			if pow_s.changed then
 				pow_s.changed = nil
 				as.disabled = false
-				-- 技能解锁后从当前时刻重新计时，避免晚建塔时秒刷第一只。
-				as.ts = as.ts + fts(math.random(0, 6))
+				as.cooldown = pow_s.cooldown[pow_s.level]
+				as.ts = as.ts + fts(math.random(-6, 6))
 			end
 
 			if ready_to_use_power(pow_s, as, store, this.tower.cooldown_factor) then
@@ -24009,16 +24009,20 @@ end
 function scripts.soldier_flingers_skeleton.update(this, store)
 	local attack = this.melee.attacks[1]
 	local target
-	local next_pos = V.vclone(this.pos)
+	local next_pos = P:next_entity_node(this, store.tick_length)
 	local brk, sta, nearest
+
+	local function kill_self()
+		this.health.hp = 0
+		SU.y_soldier_death(store, this)
+		queue_remove(store, this)
+	end
 
 	U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
 
 	while true do
 		if this.health.dead or (not U.has_valid_rally_node_nearby(this.pos)) then
-			this.health.hp = 0
-			SU.y_soldier_death(store, this)
-			queue_remove(store, this)
+			kill_self()
 			return
 		end
 
@@ -24050,9 +24054,7 @@ function scripts.soldier_flingers_skeleton.update(this, store)
 
 				target = nil
 				if this.health.dead or (not next_pos) or (not U.has_valid_rally_node_nearby(this.pos)) then
-					this.health.hp = 0
-					U.y_animation_play(this, "death", nil, store.tick_ts, 1)
-					queue_remove(store, this)
+					kill_self()
 					return
 				end
 			end
