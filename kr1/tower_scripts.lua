@@ -23680,6 +23680,369 @@ function scripts.mod_infernal_curse.insert(this, store)
 end
 -- 炼狱法师 End
 
+-- 兽人勇士巢穴 Begin
+scripts.tower_orc_warriors_den = {}
+
+function scripts.tower_orc_warriors_den.get_info(this)
+	local s = E:get_template("soldier_orc_warrior")
+	local o = scripts.tower_barrack.get_info(this)
+	local pow_b = this.powers.bloodlust
+
+	o.respawn = s.health.dead_lifetime
+	o.hp_max = s.health.hp_max
+	o.damage_min = s.melee.attacks[1].damage_min
+	o.damage_max = s.melee.attacks[1].damage_max
+	o.armor = s.health.armor
+
+	if pow_b.level > 0 then
+		o.damage_min = math.floor(o.damage_min * pow_b.damage_factor[pow_b.level])
+		o.damage_max = math.ceil(o.damage_max * pow_b.damage_factor[pow_b.level])
+	end
+
+	return o
+end
+
+function scripts.tower_orc_warriors_den.update(this, store)
+	local b = this.barrack
+	local door_sid = 3
+	local pow_p = this.powers.promotion
+
+	local function spawn_captain_at(i, old)
+		local s = E:create_entity("soldier_orc_warrior_captain")
+		s.soldier.tower_id = this.id
+		s.pos = V.vclone(old.pos)
+		s.nav_rally.pos, s.nav_rally.center = old.nav_rally.pos, old.nav_rally.center
+		s.nav_rally.new = true
+
+		for pn, p in pairs(this.powers) do
+			local sp = s.powers[pn]
+			if sp then
+				sp.level = p.level
+			end
+		end
+
+		queue_insert(store, s)
+		queue_remove(store, old)
+		b.soldiers[i] = s
+
+		-- 只播本体 sprite 的 spawn，rage 层在 spawn 期间先关掉动画避免误触。
+		local rage = s.render.sprites[3]
+		if rage then
+			rage.hidden = true
+		end
+
+		U.animation_start(s, "spawn", nil, store.tick_ts, 1, 1)
+		s.orc_spawn_lock = true
+
+		local wk = s.render.sprites[4]
+		if wk then
+			wk.hidden = nil
+			wk.ts = store.tick_ts
+			wk.runs = 0
+			wk.name = "run"
+			wk.loop = true
+		end
+
+		signal.emit("tower-spawn", this, s)
+	end
+
+	while true do
+		for pn, p in pairs(this.powers) do
+			if p.changed then
+				p.changed = nil
+				for i = 1, b.max_soldiers do
+					local s = b.soldiers[i]
+					if s and s.powers[pn] then
+						s.powers[pn].level = p.level
+						s.powers[pn].changed = true
+					end
+				end
+
+				if pn == "promotion" and p.level > 0 then
+					local s = b.soldiers[1]
+					if s and not s.health.dead and s.template_name ~= "soldier_orc_warrior_captain" then
+						S:queue("TowerOrcWarriorsDenUnitSwap")
+						spawn_captain_at(1, s)
+					end
+				end
+			end
+		end
+
+		if not this.tower.blocked then
+			for i = 1, b.max_soldiers do
+				local s = b.soldiers[i]
+
+				if not s or (s.health.dead and not store.entities[s.id]) then
+					if not b.door_open then
+						S:queue("GUITowerOpenDoor")
+						U.animation_start(this, "open", nil, store.tick_ts, 1, door_sid)
+						while not U.animation_finished(this, door_sid) do
+							coroutine.yield()
+						end
+						b.door_open = true
+						b.door_open_ts = store.tick_ts
+					end
+
+					if pow_p.level > 0 and i == 1 then
+						s = E:create_entity("soldier_orc_warrior_captain")
+					else
+						s = E:create_entity(b.soldier_type)
+					end
+					s.soldier.tower_id = this.id
+					s.pos = V.v(this.pos.x + b.respawn_offset.x, this.pos.y + b.respawn_offset.y)
+					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+					s.nav_rally.new = true
+
+					for pn, p in pairs(this.powers) do
+						local sp = s.powers[pn]
+						if sp then
+							sp.level = p.level
+						end
+					end
+
+					queue_insert(store, s)
+					b.soldiers[i] = s
+					signal.emit("tower-spawn", this, s)
+				end
+			end
+		end
+
+		if b.door_open and store.tick_ts - b.door_open_ts > b.door_hold_time then
+			U.animation_start(this, "close", nil, store.tick_ts, 1, door_sid)
+			while not U.animation_finished(this, door_sid) do
+				coroutine.yield()
+			end
+			b.door_open = false
+		end
+
+		if b.rally_new then
+			b.rally_new = false
+			signal.emit("rally-point-changed", this)
+			local all_dead = true
+			for i = 1, b.max_soldiers do
+				local s = b.soldiers[i]
+				if s then
+					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+					s.nav_rally.new = true
+					all_dead = all_dead and s.health.dead
+				end
+			end
+			if not all_dead and this.sound_events.change_rally_point then
+				S:queue(this.sound_events.change_rally_point)
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.soldier_orc_warrior = {}
+
+local function get_orc_base_template(this)
+	if this.template_name == "soldier_orc_warrior_captain" then
+		return E:get_template("soldier_orc_warrior_captain")
+	else
+		return E:get_template("soldier_orc_warrior")
+	end
+end
+
+local function refresh_orc_bloodlust_damage(this, store)
+	local ba = this.melee.attacks[1]
+	local base = get_orc_base_template(this)
+	local min_base = base.melee.attacks[1].damage_min
+	local max_base = base.melee.attacks[1].damage_max
+	local b = this.powers.bloodlust
+
+	if this.template_name == "soldier_orc_warrior_captain" then
+		local tower = store and store.entities and store.entities[this.soldier.tower_id]
+		if tower and tower.powers and tower.powers.promotion then
+			min_base = tower.powers.promotion.damage_min
+			max_base = tower.powers.promotion.damage_max
+		end
+	end
+
+	-- dove 口径：直接提高面板伤害（常驻），特效按“拦截成立”开关。
+	if b.level > 0 then
+		ba.damage_min = math.floor(min_base * b.damage_factor[b.level])
+		ba.damage_max = math.ceil(max_base * b.damage_factor[b.level])
+	else
+		ba.damage_min = min_base
+		ba.damage_max = max_base
+	end
+end
+
+function scripts.soldier_orc_warrior.on_power_upgrade(this, pow, pn)
+	if pn == "bloodlust" then
+		-- bloodlust 现在是常驻面板增伤，升级时直接重算一次即可。
+		refresh_orc_bloodlust_damage(this, nil)
+
+		this.render.sprites[3].hidden = this.powers.bloodlust.level == 0
+	elseif pn == "seal" then
+		local base = get_orc_base_template(this)
+		local s = this.powers.seal
+
+		if s.level > 0 then
+			this.regen.health = base.regen.health + s.heal_inc[s.level] * base.regen.cooldown
+		else
+			this.regen.health = base.regen.health
+		end
+	end
+end
+
+function scripts.soldier_orc_warrior.insert(this, store)
+	if not scripts.soldier_barrack.insert(this, store) then
+		return false
+	end
+
+	this.orc_seal_ts = store.tick_ts
+
+	local p = this.powers.seal
+	if p.level > 0 then
+		local base = get_orc_base_template(this)
+		this.regen.health = base.regen.health + p.heal_inc[p.level] * base.regen.cooldown
+	end
+	refresh_orc_bloodlust_damage(this, store)
+
+	return true
+end
+
+function scripts.soldier_orc_warrior.update(this, store)
+	local brk, sta
+
+	if this.vis._bans then
+		this.vis.bans = this.vis._bans
+		this.vis._bans = nil
+	end
+
+	if this.render.sprites[1].name == "raise" then
+		this.health_bar.hidden = true
+		U.animation_start(this, "raise", nil, store.tick_ts, 1)
+
+		while not U.animation_finished(this) and not this.health.dead do
+			coroutine.yield()
+		end
+
+		if not this.health.dead then
+			this.health_bar.hidden = nil
+		end
+	end
+
+	while true do
+		for pn, p in pairs(this.powers) do
+			if p.changed then
+				p.changed = nil
+				SU.soldier_power_upgrade(this, pn)
+				local base = get_orc_base_template(this)
+
+				if pn == "bloodlust" then
+					refresh_orc_bloodlust_damage(this, store)
+				elseif pn == "seal" then
+					if p.level > 0 then
+						this.regen.health = base.regen.health + p.heal_inc[p.level] * base.regen.cooldown
+					else
+						this.regen.health = base.regen.health
+					end
+				end
+			end
+		end
+
+		local rage = this.render.sprites[3]
+		local rage_show = false
+		if this.powers.bloodlust.level > 0 and not this.health.dead then
+			local tid = this.soldier.target_id
+			local target = tid and store.entities[tid] or nil
+			if target and target.enemy and target.enemy.blockers then
+				local bs = target.enemy.blockers
+				for i = 1, #bs do
+					if bs[i] == this.id then
+						rage_show = true
+						break
+					end
+				end
+			end
+		end
+		if rage_show and rage.hidden then
+			-- 从隐藏到显示时刷新一次时间戳，避免 spawn/idle 流程后 ts 没被正确拉起导致看起来“没动画”。
+			rage.ts = store.tick_ts
+			rage.runs = 0
+		end
+		rage.hidden = not rage_show
+		if not this.orc_spawn_lock and not rage.animated then
+			rage.animated = true
+		end
+		local sp = this.powers.seal
+		local wk = this.render.sprites[4]
+
+		if this.orc_spawn_lock and not U.animation_finished(this, 1) then
+			if wk then
+				wk.hidden = nil
+			end
+			goto label_orc_1
+		end
+		this.orc_spawn_lock = nil
+
+		if wk and not wk.hidden then
+			wk.hidden = true
+		end
+
+		if this.cloak and this.soldier.target_id then
+			this.vis.flags = band(this.vis.flags, bnot(this.cloak.flags))
+			this.vis.bans = band(this.vis.bans, bnot(this.cloak.bans))
+			this.render.sprites[1].alpha = 255
+		end
+
+		if not this.health.dead or SU.y_soldier_revive(store, this) then
+		-- block empty
+		else
+			SU.y_soldier_death(store, this)
+			return
+		end
+
+		-- KRV 的 seal_of_blood 是战斗中也会跳的回血，这里按 1s tick 做等价实现。
+		if sp and sp.level > 0 and this.soldier.target_id and store.tick_ts - this.orc_seal_ts >= 1 then
+			this.orc_seal_ts = store.tick_ts
+			local hp = this.health.hp + sp.heal_inc[sp.level]
+			if hp > this.health.hp_max then
+				hp = this.health.hp_max
+			end
+			this.health.hp = hp
+		end
+
+		scripts.soldier_revive_resist(this, store)
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			if SU.go_to_forced_waypoint(this, store) then
+			-- block empty
+			else
+				while this.nav_rally.new do
+					if SU.y_soldier_new_rally(store, this) then
+						goto label_orc_1
+					end
+				end
+
+				brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+				if brk or sta ~= A_NO_TARGET then
+					goto label_orc_1
+				end
+
+				if SU.soldier_go_back_step(store, this) then
+				-- block empty
+				else
+					SU.soldier_idle(store, this)
+					SU.soldier_regen(store, this)
+				end
+			end
+		end
+
+		::label_orc_1::
+		coroutine.yield()
+	end
+end
+
+-- 兽人勇士巢穴 End
+
 -- 掷骨者 Begin
 scripts.tower_bone_flingers = {}
 

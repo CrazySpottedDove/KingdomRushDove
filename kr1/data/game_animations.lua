@@ -47190,5 +47190,95 @@ return {
 		prefix = "ember_lords_mage_tower_lvl4_layer3",
 		from = 28,
 		to = 52
+	},
+	warmongers_barrack_towers_lvl4_layer2_close = {
+		prefix = "warmongers_barrack_towers_lvl4_layer2",
+		from = 5,
+		to = 7
+	},
+	warmongers_barrack_towers_lvl4_layer2_open = {
+		prefix = "warmongers_barrack_towers_lvl4_layer2",
+		from = 2,
+		to = 4
+	},
+	warmongers_soldier_orc_lvl4_idle = {
+		prefix = "warmongers_soldier_orc_lvl4",
+		from = 1,
+		to = 1
+	},
+	warmongers_soldier_orc_lvl4_walk = {
+		prefix = "warmongers_soldier_orc_lvl4",
+		from = 2,
+		to = 17
+	},
+	warmongers_soldier_orc_lvl4_running = {
+		prefix = "warmongers_soldier_orc_lvl4",
+		from = 2,
+		to = 17
+	},
+	warmongers_soldier_orc_lvl4_attack = {
+		prefix = "warmongers_soldier_orc_lvl4",
+		from = 18,
+		to = 39
+	},
+	warmongers_soldier_orc_lvl4_death = {
+		prefix = "warmongers_soldier_orc_lvl4",
+		from = 40,
+		to = 55
+	},
+	warmongers_soldier_orc_captain_idle = {
+		prefix = "warmongers_soldier_orc_captain",
+		from = 1,
+		to = 1
+	},
+	warmongers_soldier_orc_captain_walk = {
+		prefix = "warmongers_soldier_orc_captain",
+		from = 2,
+		to = 17
+	},
+	warmongers_soldier_orc_captain_running = {
+		prefix = "warmongers_soldier_orc_captain",
+		from = 2,
+		to = 17
+	},
+	warmongers_soldier_orc_captain_attack = {
+		prefix = "warmongers_soldier_orc_captain",
+		from = 18,
+		to = 39
+	},
+	warmongers_soldier_orc_captain_death = {
+		prefix = "warmongers_soldier_orc_captain",
+		from = 40,
+		to = 54
+	},
+	warmongers_soldier_orc_captain_spawn = {
+		prefix = "warmongers_soldier_orc_captain",
+		from = 55,
+		to = 88
+	},
+	warmongers_soldier_orc_captain_weakness_big_run = {
+		prefix = "warmongers_soldier_orc_captain_weakness_big",
+		from = 1,
+		to = 9
+	},
+	warmongers_soldier_orc_captain_rage_idle = {
+		prefix = "warmongers_soldier_orc_captain_rage",
+		from = 1,
+		to = 16
+	},
+	warmongers_soldier_orc_captain_rage_running = {
+		prefix = "warmongers_soldier_orc_captain_rage",
+		from = 1,
+		to = 16
+	},
+	warmongers_soldier_orc_captain_rage_attack = {
+		prefix = "warmongers_soldier_orc_captain_rage",
+		from = 1,
+		to = 16
+	},
+	warmongers_soldier_orc_captain_rage_death = {
+		prefix = "warmongers_soldier_orc_captain_rage",
+		from = 1,
+		to = 16
 	}
 }

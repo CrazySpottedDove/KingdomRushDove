@@ -2412,6 +2412,8 @@ function SU.y_soldier_do_single_melee_attack(store, this, target, attack)
 			queue_damage(store, d)
 		end
 
+		-- warmongers 血怒窗口由接敌逻辑刷新（见 soldier_orc_warrior.update），这里不重复刷。
+
 		if attack.mod then
 			local mod = E:create_entity(attack.mod)
 

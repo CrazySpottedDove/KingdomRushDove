@@ -1203,6 +1203,136 @@ tt.tower.price = 185
 tt.tower.type = "forest"
 --#endregion
 
+--#region tower_orc_warriors_den
+tt = RT("tower_orc_warriors_den", "tower_barrack_1")
+AC(tt, "powers")
+tt.info.fn = function(this)
+	return scripts.tower_orc_warriors_den.get_info(this)
+end
+tt.info.i18n_key = "TOWER_ORC_WARRIORS_DEN"
+tt.info.enc_icon = 3
+tt.info.portrait = "kr4_info_portraits_towers_0002"
+tt.tower.type = "orc_warriors_den"
+tt.tower.price = 230
+tt.barrack.rally_range = 290
+tt.barrack.soldier_type = "soldier_orc_warrior"
+tt.powers.bloodlust = CC("power")
+tt.powers.bloodlust.price_base = 180
+tt.powers.bloodlust.price_inc = 180
+tt.powers.bloodlust.max_level = 2
+tt.powers.bloodlust.enc_icon = 4
+tt.powers.bloodlust.damage_factor = {1.4, 1.8}
+tt.powers.bloodlust.name = "BLOODLUST"
+tt.powers.promotion = CC("power")
+tt.powers.promotion.price_base = 150
+tt.powers.promotion.price_inc = 150
+tt.powers.promotion.max_level = 1
+tt.powers.promotion.enc_icon = 5
+tt.powers.promotion.regen = 30
+tt.powers.promotion.damage_min = 16
+tt.powers.promotion.damage_max = 23
+tt.powers.promotion.hp_max = 300
+tt.powers.promotion.armor = 0.5
+tt.powers.seal = CC("power")
+tt.powers.seal.price_base = 120
+tt.powers.seal.price_inc = 120
+tt.powers.seal.max_level = 2
+tt.powers.seal.enc_icon = 6
+tt.powers.seal.heal_inc = {5, 10}
+tt.render.sprites[1].name = "terrain_barrack_%04i"
+tt.render.sprites[1].offset = vec_2(0, 13)
+tt.render.sprites[2].name = "warmongers_barrack_towers_lvl4_layer1_0001"
+tt.render.sprites[2].offset = vec_2(0, 33)
+tt.render.sprites[3].prefix = "warmongers_barrack_towers_lvl4_layer2"
+tt.render.sprites[3].offset = vec_2(0, 33)
+tt.render.sprites[3].name = "close"
+tt.render.sprites[3].loop = false
+tt.sound_events.insert = "TowerOrcWarriorsDenTaunt"
+tt.sound_events.change_rally_point = "TowerOrcWarriorsDenTaunt"
+tt.main_script.update = function(this, store)
+	return scripts.tower_orc_warriors_den.update(this, store)
+end
+--#endregion
+
+--#region soldier_orc_warrior
+tt = RT("soldier_orc_warrior", "soldier_militia")
+AC(tt, "powers")
+tt.health.armor = 0.2
+tt.health.dead_lifetime = 10
+tt.health.hp_max = 200
+tt.health_bar.offset = vec_2(0, 30)
+tt.info.portrait = "kr4_info_portraits_soldiers_0001"
+tt.info.i18n_key = "SOLDIER_ORC_WARRIOR"
+tt.info.random_name_count = 10
+tt.info.random_name_format = "SOLDIER_ORC_WARRIOR_RANDOM_%i_NAME"
+tt.main_script.insert = function(this, store)
+	return scripts.soldier_orc_warrior.insert(this, store)
+end
+tt.main_script.update = scripts.soldier_orc_warrior.update
+tt.motion.max_speed = 75
+tt.melee.attacks[1].animation = "attack"
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_min = 11
+tt.melee.attacks[1].damage_max = 16
+tt.melee.attacks[1].power_name = "bloodlust"
+tt.melee.attacks[1].forced_cooldown = true
+tt.melee.attacks[1].sound = "MeleeSword"
+tt.melee.forced_cooldown = tt.melee.attacks[1].cooldown
+tt.melee.range = 60
+tt.regen.health = 20
+tt.regen.cooldown = 2
+tt.powers.seal = CC("power")
+tt.powers.seal.heal_inc = {5, 10}
+tt.powers.bloodlust = CC("power")
+tt.powers.bloodlust.damage_factor = {1.4, 1.8}
+tt.powers.seal.on_power_upgrade = scripts.soldier_orc_warrior.on_power_upgrade
+tt.powers.bloodlust.on_power_upgrade = scripts.soldier_orc_warrior.on_power_upgrade
+tt.render.sprites[1].prefix = "warmongers_soldier_orc_lvl4"
+tt.render.sprites[1].anchor.y = 0.25
+tt.render.sprites[1].offset = vec_2(0, 6)
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].is_shadow = true
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "warmongers_soldier_orc_lvl4_shadow"
+tt.render.sprites[2].anchor.y = 0.142
+tt.render.sprites[2].offset = vec_2(0, 0)
+tt.render.sprites[2].z = Z_DECALS + 1
+tt.render.sprites[3] = CC("sprite")
+tt.render.sprites[3].animated = true
+tt.render.sprites[3].prefix = "warmongers_soldier_orc_captain_rage"
+tt.render.sprites[3].name = "running"
+tt.render.sprites[3].loop = true
+tt.render.sprites[3].loop_forced = true
+tt.render.sprites[3].anchor.y = 0.337
+tt.render.sprites[3].offset = vec_2(0, 6)
+tt.render.sprites[3].z = Z_DECALS
+tt.render.sprites[3].hidden = true
+tt.soldier.melee_slot_offset = vec_2(5, 0)
+tt.unit.mod_offset = vec_2(0, 14)
+--#endregion
+
+--#region soldier_orc_warrior_captain
+tt = RT("soldier_orc_warrior_captain", "soldier_orc_warrior")
+tt.info.i18n_key = "SOLDIER_ORC_WARRIOR_CAPTAIN"
+tt.info.random_name_format = nil
+tt.health.hp_max = 300
+tt.health.armor = 0.5
+tt.regen.health = 30
+tt.melee.attacks[1].damage_min = 16
+tt.melee.attacks[1].damage_max = 23
+tt.render.sprites[1].prefix = "warmongers_soldier_orc_captain"
+tt.render.sprites[2].name = "warmongers_soldier_orc_captain_shadow"
+tt.render.sprites[4] = CC("sprite")
+tt.render.sprites[4].animated = true
+tt.render.sprites[4].prefix = "warmongers_soldier_orc_captain_weakness_big"
+tt.render.sprites[4].name = "run"
+tt.render.sprites[4].loop = true
+tt.render.sprites[4].ignore_start = true
+tt.render.sprites[4].hidden = true
+tt.render.sprites[4].offset = vec_2(0, 20)
+tt.render.sprites[4].z = Z_DECALS + 2
+--#endregion
+
 --#region soldier_blade
 tt = RT("soldier_blade", "soldier_barrack_1")
 AC(tt, "powers", "dodge", "timed_attacks")

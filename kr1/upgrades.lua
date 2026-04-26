@@ -1029,7 +1029,9 @@ upgrades.soldiers = {
 	"tower_paladin_covenant_soldier_lvl4",
 	"soldier_bone_golem",
 	"soldier_flingers_skeleton",
-	"soldier_flingers_skeleton_warrior"
+	"soldier_flingers_skeleton_warrior",
+	"soldier_orc_warrior",
+	"soldier_orc_warrior_captain"
 }
 
 upgrades.barrack_soldiers = {
@@ -1056,7 +1058,9 @@ upgrades.barrack_soldiers = {
 	"soldier_tower_rocket_gunners_lvl4",
 	"soldier_tower_ghost_lvl4",
 	"soldier_tower_dwarf_lvl4",
-	"tower_paladin_covenant_soldier_lvl4"
+	"tower_paladin_covenant_soldier_lvl4",
+	"soldier_orc_warrior",
+	"soldier_orc_warrior_captain"
 }
 
 upgrades.towers_with_barrack = {
@@ -1089,7 +1093,8 @@ upgrades.towers_with_barrack = {
 	"tower_dwarf_lvl4",
 	"tower_barrel_lvl4",
 	"tower_paladin_covenant_lvl4",
-	"tower_bone_flingers"
+	"tower_bone_flingers",
+	"tower_orc_warriors_den"
 }
 
 upgrades.non_barrack_towers_with_barrack_attribute = {"tower_sorcerer", "tower_mech", "tower_necromancer", "tower_frankenstein", "tower_druid", "tower_dark_elf_lvl4", "tower_bone_flingers"}

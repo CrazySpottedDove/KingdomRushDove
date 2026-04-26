@@ -563,6 +563,14 @@ return {
 			tt_title = _("TOWER_PALADIN_COVENANT_1_NAME"),
 			tt_desc = _("TOWER_PALADIN_COVENANT_1_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_orc_warriors_den",
+			type = "orc_warriors_den",
+			image = "kr4_main_icons_0002",
+			place = 26,
+			tt_title = _("TOWER_ORC_WARRIORS_DEN_NAME"),
+			tt_desc = _("TOWER_ORC_WARRIORS_DEN_DESCRIPTION")
+		}),
 		tpl.rally,
 		tpl.sell
 	}},
@@ -1084,6 +1092,43 @@ return {
 		}, {
 			tt_title = _("TOWER_BARBARIANS_THROWING_AXES_NAME_3"),
 			tt_desc = _("TOWER_BARBARIANS_THROWING_AXES_DESCRIPTION_3")
+		}}
+	}), tpl.rally, tpl.sell}},
+	orc_warriors_den = {{M(tpl.upgrade_power, {
+		action_arg = "bloodlust",
+		image = "kr4_special_icons_0004",
+		place = 5,
+		sounds = {"TowerOrcWarriorsDenBattlewits"},
+		tt_phrase = _("TOWER_ORC_WARRIORS_DEN_BLOODLUST_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ORC_WARRIORS_DEN_BLOODLUST_NAME_1"),
+			tt_desc = _("TOWER_ORC_WARRIORS_DEN_BLOODLUST_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ORC_WARRIORS_DEN_BLOODLUST_NAME_2"),
+			tt_desc = _("TOWER_ORC_WARRIORS_DEN_BLOODLUST_DESCRIPTION_2")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "promotion",
+		image = "kr4_special_icons_0005",
+		place = 6,
+		sounds = {"GUIBuyUpgrade", "TowerOrcWarriorsDenPromotion"},
+		tt_phrase = _("TOWER_ORC_WARRIORS_DEN_PROMOTION_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ORC_WARRIORS_DEN_PROMOTION_NAME_1"),
+			tt_desc = _("TOWER_ORC_WARRIORS_DEN_PROMOTION_DESCRIPTION_1")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "seal",
+		image = "kr4_special_icons_0006",
+		place = 7,
+		sounds = {"GUIBuyUpgrade", "TowerOrcWarriorsDenSealOfBlood"},
+		tt_phrase = _("TOWER_ORC_WARRIORS_DEN_SEAL_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ORC_WARRIORS_DEN_SEAL_NAME_1"),
+			tt_desc = _("TOWER_ORC_WARRIORS_DEN_SEAL_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ORC_WARRIORS_DEN_SEAL_NAME_2"),
+			tt_desc = _("TOWER_ORC_WARRIORS_DEN_SEAL_DESCRIPTION_2")
 		}}
 	}), tpl.rally, tpl.sell}},
 	holder_elf = {{M(tpl.upgrade, {

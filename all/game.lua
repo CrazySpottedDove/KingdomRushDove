@@ -59,7 +59,8 @@ game.required_textures = {
 	"kr4_dark_army_tower_archer",
 	"kr4_rotten_forest_tower",
 	"kr4_ember_lords_tower_mage",
-	"kr4_fallen_ones_bone_flingers"
+	"kr4_fallen_ones_bone_flingers",
+	"kr4_warmongers_tower_barrack"
 }
 game.ref_h = REF_H
 game.ref_w = REF_W
