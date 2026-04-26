@@ -24007,22 +24007,26 @@ function scripts.soldier_flingers_skeleton.insert(this, store)
 end
 
 function scripts.soldier_flingers_skeleton.update(this, store)
-	local attack = this.melee.attacks[1]
-	local target
 	local next_pos = P:next_entity_node(this, store.tick_length)
-	local brk, sta, nearest
+	local brk, sta
 
-	local function kill_self()
-		this.health.hp = 0
-		SU.y_soldier_death(store, this)
-		queue_remove(store, this)
+	-- 出土前，先索敌，有敌人的话就让敌人等它爬起来
+	do
+		local target = SU.soldier_pick_melee_target(store, this)
+		if target then
+			U.block_enemy(store, this, target)
+			local slot_pos, _, _ = U.melee_slot_position(this, target)
+			U.set_destination(this, slot_pos)
+		end
 	end
 
 	U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
 
 	while true do
-		if this.health.dead or (not U.has_valid_rally_node_nearby(this.pos)) then
-			kill_self()
+		if this.health.dead or (not U.has_valid_rally_node_nearby(this.pos)) or not next_pos then
+			this.health.hp = 0
+			SU.y_soldier_death(store, this)
+			queue_remove(store, this)
 			return
 		end
 
@@ -24030,33 +24034,18 @@ function scripts.soldier_flingers_skeleton.update(this, store)
 			U.animation_start(this, "idle", nil, store.tick_ts, true)
 		else
 			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+			-- 没有目标，尝试继续行走
 			if not brk and sta == A_NO_TARGET then
-				nearest = P:nearest_nodes(this.pos.x, this.pos.y, {this.nav_path.pi}, {this.nav_path.spi})
-				if nearest and nearest[1] and nearest[1][3] < this.nav_path.ni then
-					this.nav_path.ni = nearest[1][3]
-				end
+				U.set_destination(this, next_pos)
+				next_pos = P:next_entity_node(this, store.tick_length)
+				local an, af = U.animation_name_facing_point(this, "running", this.motion.dest)
+				U.animation_start(this, an, af, store.tick_ts, true)
+				U.walk(this, store.tick_length)
 
-				while next_pos and not target and not this.health.dead and not this.unit.is_stunned and U.has_valid_rally_node_nearby(this.pos) do
-					U.set_destination(this, next_pos)
-					local an, af = U.animation_name_facing_point(this, "running", this.motion.dest)
-					U.animation_start(this, an, af, store.tick_ts, true)
-					U.walk(this, store.tick_length)
-
-					-- 同步集结点，避免不索敌
-					this.nav_rally.pos:copy(this.pos)
-					this.nav_rally.center:copy(this.pos)
-
-					coroutine.yield()
-
-					target = U.find_foremost_enemy(store.entities, this.pos, 0, this.melee.range, false, attack.vis_flags, attack.vis_bans)
-					next_pos = P:next_entity_node(this, store.tick_length)
-				end
-
-				target = nil
-				if this.health.dead or (not next_pos) or (not U.has_valid_rally_node_nearby(this.pos)) then
-					kill_self()
-					return
-				end
+				-- 同步集结点，避免不索敌
+				this.nav_rally.pos:copy(this.pos)
+				this.nav_rally.center:copy(this.pos)
 			end
 		end
 
