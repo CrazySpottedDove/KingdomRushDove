@@ -57242,8 +57242,6 @@ function scripts.mod_boss_princess_iron_fan_stun_heroes.update(this, store)
 		target.health_bar.hidden = true
 	end
 
-	this.hidden_particles = {}
-
 	for k, v in pairs(store.entities) do
 		if v.particle_system and v.particle_system.track_id == m.target_id and v.particle_system.emit then
 			table.insert(this.hidden_particles, v.id)

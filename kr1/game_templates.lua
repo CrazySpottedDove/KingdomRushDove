@@ -20895,11 +20895,10 @@ tt = E:register_t("decal_boss_princess_iron_fan_stun_heroes_bossfight", "decal_b
 b = balance.enemies.wukong.boss_princess.bossfight.stun_hero
 tt.stun_mod = "mod_boss_princess_iron_fan_stun_heroes_bossfight"
 tt = E:register_t("mod_boss_princess_iron_fan_stun_heroes_waves", "mod_stun")
-
 E:add_comps(tt, "tween")
-
 b = balance.enemies.wukong.boss_princess.waves.stun_hero
 tt.modifier.duration = b.DURATION
+tt.hidden_particles = {}
 tt.main_script.insert = scripts.mod_boss_princess_iron_fan_stun_heroes.insert
 tt.main_script.update = scripts.mod_boss_princess_iron_fan_stun_heroes.update
 tt.main_script.remove = scripts.mod_boss_princess_iron_fan_stun_heroes.remove
