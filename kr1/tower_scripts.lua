@@ -23745,6 +23745,50 @@ function scripts.tower_bone_flingers.update(this, store)
 		return U.has_valid_rally_node_nearby(e.pos)
 	end
 
+	local function pick_spawn_node_max_spi(pos)
+		local nodes = P:nearest_nodes(pos.x, pos.y, nil, nil, true)
+		if not nodes or #nodes < 1 then
+			return nil
+		end
+
+		-- 共线路段这里会给多条子路，按作者口径固定吃编号最大的那条。
+		local node = nodes[1]
+		for i = 2, #nodes do
+			local n = nodes[i]
+			if n[1] == node[1] and n[3] == node[3] and n[2] > node[2] then
+				node = n
+			end
+		end
+
+		return node
+	end
+
+	local function spawn_walking_skeleton(spawn_pos, entity_name)
+		local node = pick_spawn_node_max_spi(spawn_pos)
+		if not node then
+			return false
+		end
+
+		local pi, spi, ni = node[1], node[2], node[3]
+		local e = E:create_entity(entity_name)
+		local e_pos = P:node_pos(pi, spi, ni)
+		if not e_pos then
+			return false
+		end
+
+		-- 这里直接落在路径节点，别再走中转壳，不然后面看代码只会更绕。
+		e.pos.x, e.pos.y = e_pos.x, e_pos.y
+		e.nav_path.pi = pi
+		e.nav_path.spi = spi
+		e.nav_path.ni = ni
+		e.nav_rally.center.x, e.nav_rally.center.y = e_pos.x, e_pos.y
+		e.nav_rally.pos.x, e.nav_rally.pos.y = e_pos.x, e_pos.y
+		e.unit.damage_factor = this.tower.damage_factor
+
+		queue_insert(store, e)
+		return true
+	end
+
 	while true do
 		if not this.tower.blocked then
 			if pow_m.changed then
@@ -23759,35 +23803,29 @@ function scripts.tower_bone_flingers.update(this, store)
 			if pow_s.changed then
 				pow_s.changed = nil
 				as.disabled = false
-				as.ts = as.ts + fts(math.random(-6, 6))
+				-- 技能解锁后从当前时刻重新计时，避免晚建塔时秒刷第一只。
+				as.ts = store.tick_ts + fts(math.random(0, 6))
 			end
 
 			if ready_to_use_power(pow_s, as, store, this.tower.cooldown_factor) then
 				as.ts = store.tick_ts
 
-				local spawner_name = pow_s.level == 1 and "bone_flingers_skelespawn" or "bone_flingers_skelespawn2"
+				local sk_name = pow_s.level == 1 and "soldier_flingers_skeleton" or "soldier_flingers_skeleton_warrior"
 
 				local enemy = U.find_random_enemy(store.entities, tpos, 0, a.range, pow_s.vis_flags, pow_s.vis_bans, spawn_filter_fn)
-
-				local spawner = E:create_entity(spawner_name)
-				spawner.damage_factor = this.tower.damage_factor
+				local spawn_pos
 
 				if not enemy then
-					-- 选择最近的合法驻扎点
-					-- local nodes = P:nearest_nodes(tpos.x, tpos.y, nil, {1, 2, 3}, NF_RALLY)
-					-- for i = 1, #nodes do
-					-- 	local node_pos = P:node_pos(nodes[i][1], nodes[i][2], nodes[i][3])
-					-- 	if U.has_valid_rally_node_nearby(node_pos) then
-					-- 		spawner.pos:copy(node_pos)
-					-- 		break
-					-- 	end
-					-- end
-					spawner.pos = U.get_nearest_valid_rally_pos(tpos)
+					-- 没目标就找最近合法驻扎点，避免刷到无效地形直接暴毙。
+					spawn_pos = U.get_nearest_valid_rally_pos(tpos)
 				else
-					spawner.pos:copy(U.calculate_enemy_ffe_pos(enemy, as.node_prediction))
+					-- 有目标按敌前预测点落位，这个是 KR4 行尸走肉的核心手感。
+					spawn_pos = U.calculate_enemy_ffe_pos(enemy, as.node_prediction)
 				end
 
-				queue_insert(store, spawner)
+				if spawn_pos then
+					spawn_walking_skeleton(spawn_pos, sk_name)
+				end
 			end
 
 			soldier_added = false
@@ -24021,51 +24059,6 @@ function scripts.soldier_flingers_skeleton.update(this, store)
 
 		coroutine.yield()
 	end
-end
-
-scripts.skelespawner_bone_flingers = {}
-
-function scripts.skelespawner_bone_flingers.update(this, store)
-	local sp = this.spawner
-	local nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
-
-	if #nodes < 1 then
-		queue_remove(store, this)
-		return
-	end
-
-	-- 共线路段会返回多条子路节点：取 spi 最大的那条
-	local node = nodes[1]
-	for i = 2, #nodes do
-		local n = nodes[i]
-		if n[1] == node[1] and n[3] == node[3] and n[2] > node[2] then
-			node = n
-		end
-	end
-
-	sp.pi, sp.spi, sp.ni = node[1], node[2], node[3]
-
-	for i = 1, sp.count do
-		local e_spi = sp.spi
-
-		if sp.allowed_subpaths and #sp.allowed_subpaths > 0 then
-			-- 这里不做随机：按上面规则已决定子路
-			e_spi = sp.allowed_subpaths[(e_spi - 1) % #sp.allowed_subpaths + 1]
-		end
-
-		local e = E:create_entity(sp.entity)
-		e.pos = P:node_pos(sp.pi, e_spi, sp.ni + sp.node_offset)
-		e.nav_path.pi = sp.pi
-		e.nav_path.spi = e_spi
-		e.nav_path.ni = sp.ni + sp.node_offset
-		e.nav_rally.center.x, e.nav_rally.center.y = e.pos.x, e.pos.y
-		e.nav_rally.pos.x, e.nav_rally.pos.y = e.pos.x, e.pos.y
-		e.unit.damage_factor = this.damage_factor
-
-		queue_insert(store, e)
-	end
-
-	queue_remove(store, this)
 end
 
 -- 掷骨者 End

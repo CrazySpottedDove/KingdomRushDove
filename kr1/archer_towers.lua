@@ -2184,7 +2184,8 @@ tt.attacks.list[1].cooldown = 0.6
 tt.attacks.list[1].shoot_time = fts(7)
 tt.attacks.list[1].bullet_start_offset = {v(-9, 65), v(17, 59)}
 tt.attacks.list[2] = E:clone_c("bullet_attack")
-tt.attacks.list[2].bullet = "bone_flingers_skelebomb"
+-- 行尸走肉不走旧弹道链，触发逻辑在塔脚本里直接召唤。
+tt.attacks.list[2].bullet = nil
 tt.attacks.list[2].cooldown = 16
 tt.attacks.list[2].disabled = true
 tt.attacks.list[2].vis_flags = bor(F_BLOCK)
@@ -2238,21 +2239,6 @@ tt.render.sprites[4].angles = {
 tt.render.sprites[4].offset = v(17, 45)
 tt.sound_events.insert = "BoneFlingersTaunt"
 tt.sound_events.change_rally_point = nil
-
-tt = RT("bone_flingers_skelespawn")
-E:add_comps(tt, "spawner", "pos", "main_script")
-tt.main_script.update = scripts.skelespawner_bone_flingers.update
-tt.spawner.count = 1
-tt.spawner.cycle_time = fts(6)
-tt.spawner.entity = "soldier_flingers_skeleton"
-tt.spawner.keep_gold = false
-tt.spawner.node_offset = 0
-tt.spawner.pos_offset = v(0, 0)
-tt.spawner.allowed_subpaths = {1, 2, 3}
-tt.spawner.random_subpath = false
-
-tt = RT("bone_flingers_skelespawn2", "bone_flingers_skelespawn")
-tt.spawner.entity = "soldier_flingers_skeleton_warrior"
 
 tt = E:register_t("bone_flingers_bone", "arrow")
 tt.render.sprites[1].name = "boneflingers_shooter_proyectiles_0004"
