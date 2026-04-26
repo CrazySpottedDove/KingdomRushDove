@@ -136,7 +136,7 @@ function SU.remove_auras(store, entity)
 		return v.aura.track_source and v.aura.source_id == entity.id
 	end)
 
-	for _, a in pairs(auras) do
+	for _, a in ipairs(auras) do
 		queue_remove(store, a)
 	end
 end
@@ -195,7 +195,7 @@ function SU.hide_auras(store, entity, keep)
 		return v.aura.track_source and v.aura.source_id == entity.id
 	end)
 
-	for _, a in pairs(auras) do
+	for _, a in ipairs(auras) do
 		U.sprites_hide(a, nil, nil, keep)
 	end
 end
@@ -210,7 +210,7 @@ function SU.show_auras(store, entity, restore)
 		return v.aura.track_source and v.aura.source_id == entity.id
 	end)
 
-	for _, a in pairs(auras) do
+	for _, a in ipairs(auras) do
 		U.sprites_show(a, nil, nil, restore)
 	end
 end
@@ -520,7 +520,7 @@ function SU.insert_sprite(store, name, pos, flip_x, ts_offset)
 	e.pos.x, e.pos.y = pos.x, pos.y
 
 	if e.render then
-		for _, s in pairs(e.render.sprites) do
+		for _, s in ipairs(e.render.sprites) do
 			s.ts = store.tick_ts + (ts_offset or 0)
 			s.flip_x = flip_x
 		end
@@ -1116,7 +1116,7 @@ function SU.y_hero_death_and_respawn(store, this)
 		local targets = U.find_enemies_in_range_filter_off(this.pos, sd.damage_radius, sd.vis_flags, sd.vis_bans)
 
 		if targets then
-			for _, t in pairs(targets) do
+			for _, t in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.damage_type = sd.damage_type
@@ -1178,7 +1178,7 @@ function SU.y_hero_death_and_respawn(store, this)
 	end
 
 	if this.unit.hide_after_death then
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.hidden = true
 		end
 	end
@@ -1195,7 +1195,7 @@ function SU.y_hero_death_and_respawn(store, this)
 
 		queue_insert(store, tombstone)
 
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.hidden = true
 		end
 	end
@@ -1217,7 +1217,7 @@ function SU.y_hero_death_and_respawn(store, this)
 		this.nav_rally.new = false
 	end
 
-	for _, s in pairs(this.render.sprites) do
+	for _, s in ipairs(this.render.sprites) do
 		s.hidden = false
 	end
 
@@ -1457,7 +1457,7 @@ function SU.y_soldier_death(store, this)
 	end
 
 	if this.unit.hide_during_death or this.unit.hide_after_death then
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.hidden = true
 		end
 	end
@@ -1487,7 +1487,7 @@ function SU.y_soldier_do_loopable_ranged_attack(store, this, target, attack)
 
 		U.animation_start_group(this, an, af, store.tick_ts, false, attack.sprite_group)
 
-		for si, st in pairs(attack.shoot_times) do
+		for si, st in ipairs(attack.shoot_times) do
 			while st > store.tick_ts - U.get_animation_ts(this, attack.sprite_group) do
 				if this.unit.is_stunned then
 					goto label_59_0
@@ -1714,7 +1714,7 @@ function SU.soldier_pick_ranged_target_and_attack(store, this)
 	local awaiting_target
 	local target
 
-	for _, i in pairs(r.order) do
+	for _, i in ipairs(r.order) do
 		local a = r.attacks[i]
 
 		if a.disabled then
@@ -1782,7 +1782,7 @@ function SU.y_soldier_ranged_attacks(store, this)
 		attack.ts = start_ts
 
 		if attack.shared_cooldown then
-			for _, aa in pairs(this.ranged.attacks) do
+			for _, aa in ipairs(this.ranged.attacks) do
 				if aa ~= attack and aa.shared_cooldown then
 					aa.ts = attack.ts
 				end
@@ -1851,7 +1851,7 @@ end
 ---@return boolean 是否提前结束, number 状态码
 ---@desc 状态码：A_NO_TARGET(1) 无目标, A_IN_COOLDOWN(2) 冷却中, A_DONE(3) 完成
 function SU.y_soldier_timed_actions(store, this)
-	for _, a in pairs(this.timed_actions.list) do
+	for _, a in ipairs(this.timed_actions.list) do
 		if a.disabled or store.tick_ts - a.ts < a.cooldown then
 		-- block empty
 		elseif a.fn_can and not a.fn_can(this, store, a) then
@@ -1930,7 +1930,7 @@ end
 ---@return boolean 是否提前结束, number 状态码
 ---@desc 状态码：A_NO_TARGET(1) 无目标, A_IN_COOLDOWN(2) 冷却中, A_DONE(3) 完成
 function SU.y_soldier_timed_attacks(store, this)
-	for _, a in pairs(this.timed_attacks.list) do
+	for _, a in ipairs(this.timed_attacks.list) do
 		if a.disabled or store.tick_ts - a.ts < a.cooldown then
 		-- block empty
 		else
@@ -1991,7 +1991,7 @@ function SU.y_soldier_do_single_area_attack(store, this, target, attack)
 	attack.ts = start_ts
 
 	if attack.shared_cooldown then
-		for _, aa in pairs(this.melee.attacks) do
+		for _, aa in ipairs(this.melee.attacks) do
 			if aa ~= attack and aa.shared_cooldown then
 				aa.ts = attack.ts
 			end
@@ -2003,7 +2003,7 @@ function SU.y_soldier_do_single_area_attack(store, this, target, attack)
 	end
 
 	if attack.cooldown_group then
-		for _, aa in pairs(this.melee.attacks) do
+		for _, aa in ipairs(this.melee.attacks) do
 			if aa ~= attack and aa.cooldown_group == attack.cooldown_group then
 				aa.ts = attack.ts
 			end
@@ -2199,7 +2199,7 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 
 				local targets = U.find_enemies_in_range_filter_off(hit_pos, attack.damage_radius, attack.damage_flags, attack.damage_bans) or {}
 
-				for _, e in pairs(targets) do
+				for _, e in ipairs(targets) do
 					local d = E:create_entity("damage")
 
 					d.source_id = this.id
@@ -2357,7 +2357,7 @@ function SU.y_soldier_do_single_melee_attack(store, this, target, attack)
 	attack.ts = start_ts
 
 	if attack.shared_cooldown then
-		for _, aa in pairs(this.melee.attacks) do
+		for _, aa in ipairs(this.melee.attacks) do
 			if aa ~= attack and aa.shared_cooldown then
 				aa.ts = attack.ts
 			end
@@ -2369,7 +2369,7 @@ function SU.y_soldier_do_single_melee_attack(store, this, target, attack)
 	end
 
 	if attack.cooldown_group then
-		for _, aa in pairs(this.melee.attacks) do
+		for _, aa in ipairs(this.melee.attacks) do
 			if aa ~= attack and aa.cooldown_group == attack.cooldown_group then
 				aa.ts = attack.ts
 			end
@@ -2425,7 +2425,7 @@ function SU.y_soldier_do_single_melee_attack(store, this, target, attack)
 		end
 
 		if attack.mods then
-			for _, m in pairs(attack.mods) do
+			for _, m in ipairs(attack.mods) do
 				local mod = E:create_entity(m)
 
 				mod.modifier.ts = store.tick_ts
@@ -2623,7 +2623,7 @@ function SU.soldier_pick_melee_attack(store, this, target)
 
 		return this.dodge.counter_attack
 	else
-		for _, i in pairs(this.melee.order) do
+		for _, i in ipairs(this.melee.order) do
 			do
 				local a = this.melee.attacks[i]
 				local cooldown = 0
@@ -2827,7 +2827,7 @@ function SU.soldier_power_upgrade(this, power_name)
 	end
 
 	if this.ranged then
-		for _, a in pairs(this.ranged.attacks) do
+		for _, a in ipairs(this.ranged.attacks) do
 			if a.power_name == pn then
 				a.level = a.level + 1
 
@@ -2854,7 +2854,7 @@ function SU.soldier_power_upgrade(this, power_name)
 		local min_cooldown = 1e+99
 		local cooldown_changed = false
 
-		for _, a in pairs(this.melee.attacks) do
+		for _, a in ipairs(this.melee.attacks) do
 			if a.power_name == pn then
 				a.level = a.level + 1
 
@@ -2894,7 +2894,7 @@ function SU.soldier_power_upgrade(this, power_name)
 	end
 
 	if this.timed_actions then
-		for _, a in pairs(this.timed_actions.list) do
+		for _, a in ipairs(this.timed_actions.list) do
 			if a.power_name == pn then
 				if a.level then
 					a.level = a.level + 1
@@ -2908,7 +2908,7 @@ function SU.soldier_power_upgrade(this, power_name)
 	end
 
 	if this.timed_attacks then
-		for _, a in pairs(this.timed_attacks.list) do
+		for _, a in ipairs(this.timed_attacks.list) do
 			if a.power_name == pn then
 				if a.level then
 					a.level = a.level + 1
@@ -2993,7 +2993,7 @@ end
 ---@param soldier table 士兵实体
 ---@return boolean 是否可攻击
 function SU.can_range_soldier(store, this, soldier)
-	for _, ar in pairs(this.ranged.attacks) do
+	for _, ar in ipairs(this.ranged.attacks) do
 		if (ar.hold_advance or store.tick_ts - ar.ts > ar.cooldown) and not this.health.dead and not this.unit.is_stunned and not soldier.health.dead and store.entities[soldier.id] and band(soldier.vis.bans, ar.vis_flags) == 0 and band(soldier.vis.flags, ar.vis_bans) == 0 and U.is_inside_ellipse(soldier.pos, this.pos, ar.max_range) and (ar.min_range == 0 or not U.is_inside_ellipse(soldier.pos, this.pos, ar.min_range)) and (this.enemy.can_do_magic) then
 			return true
 		end
@@ -3365,7 +3365,7 @@ function SU.y_enemy_death(store, this)
 	end
 
 	if this.unit.hide_during_death or this.unit.hide_after_death then
-		for _, s in pairs(this.render.sprites) do
+		for _, s in ipairs(this.render.sprites) do
 			s.hidden = true
 		end
 	end
@@ -3458,7 +3458,7 @@ function SU.y_enemy_walk_until_blocked(store, this, ignore_soldiers, func)
 		local node_valid = P:is_node_valid(this.nav_path.pi, this.nav_path.ni)
 
 		if node_valid and not ignore_soldiers and this.ranged then
-			for _, a in pairs(this.ranged.attacks) do
+			for _, a in ipairs(this.ranged.attacks) do
 				if not a.disabled and (this.enemy.can_do_magic) and (a.hold_advance or store.tick_ts - a.ts > a.cooldown) then
 					ranged = U.find_nearest_soldier(store.soldiers, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
@@ -3552,7 +3552,7 @@ function SU.y_enemy_do_ranged_attack(store, this, target, attack)
 	end
 
 	if targets then
-		for index, target in pairs(targets) do
+		for index, target in ipairs(targets) do
 			if index > target_num then
 				break
 			end
@@ -3625,7 +3625,7 @@ function SU.y_enemy_do_loopable_ranged_attack(store, this, target, attack)
 
 		local shoot_times = attack.shoot_times or {attack.shoot_time}
 
-		for si, st in pairs(shoot_times) do
+		for si, st in ipairs(shoot_times) do
 			while st > store.tick_ts - this.render.sprites[1].ts do
 				if this.unit.is_stunned and not attack.ignore_stun then
 					goto label_99_0
@@ -3715,7 +3715,7 @@ function SU.y_enemy_range_attacks(store, this, target)
 			if math.random() >= ar.chance then
 			-- block empty
 			else
-				for _, aa in pairs(this.ranged.attacks) do
+				for _, aa in ipairs(this.ranged.attacks) do
 					if aa ~= ar and aa.shared_cooldown then
 						aa.ts = ar.ts
 					end
@@ -3759,7 +3759,7 @@ function SU.y_enemy_melee_attacks(store, this, target)
 			if math.random() >= ma.chance then
 			-- block empty
 			else
-				for _, aa in pairs(this.melee.attacks) do
+				for _, aa in ipairs(this.melee.attacks) do
 					if aa ~= ma and aa.shared_cooldown then
 						aa.ts = ma.ts
 					end
@@ -4187,7 +4187,7 @@ end
 ---@param factor number 帧率缩放系数，factor > 1 表示加快动画，factor < 1 表示减慢动画
 function SU.change_fps(ts, entity, factor)
 	if entity.render then
-		for _, s in pairs(entity.render.sprites) do
+		for _, s in ipairs(entity.render.sprites) do
 			if not s._origin_fps then
 				if not s.fps then
 					s._origin_fps = FPS
@@ -4472,7 +4472,7 @@ function SU.queue_remove_clean_table(store, tbl)
 		table.insert(keys, k)
 	end
 
-	for _, k in pairs(keys) do
+	for _, k in ipairs(keys) do
 		queue_remove(store, tbl[k])
 
 		tbl[k] = nil
