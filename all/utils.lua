@@ -3094,4 +3094,17 @@ function U.get_path_fx_points(this)
 	return points
 end
 
+--- 获取全图范围内，离某个位置最近的可用集结点位置
+---@param pos table
+---@return table? 可用集结点位置
+function U.get_nearest_valid_rally_pos(pos)
+	local nodes = P:nearest_nodes(pos.x, pos.y, nil, {1, 2, 3}, NF_RALLY)
+	for i = 1, #nodes do
+		local node_pos = P:node_pos(nodes[i][1], nodes[i][2], nodes[i][3], true)
+		if U.has_valid_rally_node_nearby(node_pos) then
+			return node_pos:clone()
+		end
+	end
+end
+
 return U
