@@ -6973,13 +6973,6 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	TOWER_INFERNAL_MAGE_FISSURE_DESCRIPTION_1 = "每隔20秒，在35范围内随机召唤8个岩浆裂隙，每个造成40-70点法术伤害。",
 	TOWER_INFERNAL_MAGE_FISSURE_DESCRIPTION_2 = "每隔18秒，在35范围内随机召唤8个岩浆裂隙，每个造成70-100点法术伤害。",
 	TOWER_INFERNAL_MAGE_FISSURE_DESCRIPTION_3 = "每隔16秒，在35范围内随机召唤8个岩浆裂隙，每个造成100-130点法术伤害。",
-<<<<<<< Updated upstream
-	TOWER_INFERNAL_MAGE_CURSE_NAME_1 = "灼心符文",
-	TOWER_INFERNAL_MAGE_CURSE_NAME_2 = "灼心符文II",
-	TOWER_INFERNAL_MAGE_CURSE_NOTE = "在烈火中挣扎吧！",
-	TOWER_INFERNAL_MAGE_CURSE_DESCRIPTION_1 = "每隔12秒，诅咒60范围内的敌人，使他们每行动2点距离，就受到1点真实伤害，并烧伤他们。",
-	TOWER_INFERNAL_MAGE_CURSE_DESCRIPTION_2 = "每隔12秒，诅咒60范围内的敌人，使他们每行动1点距离，就受到1点真实伤害，并烧伤他们。"
-=======
 	TOWER_INFERNAL_MAGE_CURSE_NAME_1 = "焚甲符文",
 	TOWER_INFERNAL_MAGE_CURSE_NAME_2 = "焚甲符文II",
 	TOWER_INFERNAL_MAGE_CURSE_NAME_3 = "焚甲符文III",
@@ -7016,5 +7009,4 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	SOLDIER_ORC_WARRIOR_RANDOM_8_NAME = "恩贡",
 	SOLDIER_ORC_WARRIOR_RANDOM_9_NAME = "布洛克",
 	SOLDIER_ORC_WARRIOR_RANDOM_10_NAME = "哥泰格"
->>>>>>> Stashed changes
 }
