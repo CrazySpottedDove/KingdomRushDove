@@ -23784,6 +23784,7 @@ function scripts.tower_bone_flingers.update(this, store)
 		e.nav_rally.center.x, e.nav_rally.center.y = e_pos.x, e_pos.y
 		e.nav_rally.pos.x, e.nav_rally.pos.y = e_pos.x, e_pos.y
 		e.unit.damage_factor = this.tower.damage_factor
+		e.unit.cooldown_factor = this.tower.cooldown_factor
 
 		queue_insert(store, e)
 		return true
@@ -23804,7 +23805,7 @@ function scripts.tower_bone_flingers.update(this, store)
 				pow_s.changed = nil
 				as.disabled = false
 				-- 技能解锁后从当前时刻重新计时，避免晚建塔时秒刷第一只。
-				as.ts = store.tick_ts + fts(math.random(0, 6))
+				as.ts = as.ts + fts(math.random(0, 6))
 			end
 
 			if ready_to_use_power(pow_s, as, store, this.tower.cooldown_factor) then

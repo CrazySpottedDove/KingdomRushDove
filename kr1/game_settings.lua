@@ -1237,8 +1237,8 @@ GS.wraith = {
 	soldier_tower_necromancer_skeleton_lvl4 = true,
 	soldier_tower_necromancer_skeleton_golem_lvl4 = true,
 	soldier_dragon_bone_ultimate_dog = true,
-	soldier_fligners_skeleton = true,
-	soldier_fligners_skeleton_warrior = true,
+	soldier_flingers_skeleton = true,
+	soldier_flingers_skeleton_warrior = true,
 	soldier_bone_golem = true
 }
 
