@@ -24317,10 +24317,9 @@ tt.render.sprites[1].animated = true
 tt.render.sprites[1].sort_y_offset = 0
 tt.render.sprites[1].z = Z_BACKGROUND_BETWEEN
 tt.destroy = scripts.decal_stage_37_bridge.destroy
+
 tt = RT("decal_stage_36_easter_egg_spyro", "decal_scripted")
-
 E:add_comps(tt, "ui", "editor")
-
 tt.main_script.insert = scripts.decal_stage_36_easter_egg_spyro.insert
 tt.main_script.update = scripts.decal_stage_36_easter_egg_spyro.update
 tt.render.sprites[1].prefix = "spyro_me_creep"
@@ -24338,10 +24337,13 @@ tt.stay_island = {
 	[2] = 4
 }
 tt.ui.click_rect = r(-40, -20, 80, 80)
+
+tt = RT("fx_spyro_smoke", "fx")
+tt.render.sprites[1].name = "spyro_me_fx_humo_run"
+tt.render.sprites[1].offset = v(0, -10)
+
 tt = RT("decal_stage_36_easter_egg_ranger_verde", "decal_scripted")
-
 E:add_comps(tt, "ui", "editor")
-
 tt.main_script.update = scripts.decal_stage_36_easter_egg_ranger_verde.update
 tt.render.sprites[1].prefix = "ranger_verde_character"
 tt.render.sprites[1].name = "idle1"
