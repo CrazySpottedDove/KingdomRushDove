@@ -23422,7 +23422,7 @@ function scripts.tower_infernal_mage.update(this, store)
 	end
 
 	local function curse_filter_fn(e)
-		return not table.contains(ac.excluded_templates, e.template_name) and not SU.has_modifiers(store, e, "mod_infernal_curse_armor") and not SU.has_modifiers(store, e, "mod_infernal_curse_magic_armor") and (e.health.armor > 0 or e.health.magic_armor > 0)
+		return not SU.has_modifiers(store, e, "mod_infernal_curse_effect")
 	end
 
 	local function teleport_filter_fn(e)
@@ -23453,7 +23453,7 @@ function scripts.tower_infernal_mage.update(this, store)
 				end
 			end
 
-			-- 优先级：首先尝试使用削减法抗，然后再打伤害，然后普攻，最后使用传送
+			-- 优先级：首先尝试使用诅咒，然后再打伤害，然后普攻，最后使用传送
 			if ready_to_use_power(pow_c, ac, store, this.tower.cooldown_factor) then
 				local enemy = U.find_first_enemy_in_range_filter_on(tpos, a.range, ac.vis_flags, ac.vis_bans, curse_filter_fn)
 				if not enemy then
@@ -23463,19 +23463,21 @@ function scripts.tower_infernal_mage.update(this, store)
 
 					local enemies = U.find_enemies_in_range_filter_on(tpos, a.range, ac.vis_flags, ac.vis_bans, curse_filter_fn)
 
-					if enemies then
+					enemy = U.find_foremost_enemy_with_max_coverage_in_range_filter_on(tpos, a.range, ac.node_prediction, ac.vis_flags, ac.vis_bans, E:get_template(ac.aura).aura.radius, curse_filter_fn)
+
+					if enemy then
 						ac.ts = last_ts
 
 						-- 选择其中护甲和魔抗之和最大的敌人
-						local armor_sum = 0
-						for i = 1, #enemies do
-							local enemy = enemies[i]
-							local this_armor_sum = enemy.health.armor + enemy.health.magic_armor
-							if this_armor_sum > armor_sum then
-								enemy = enemies[i]
-								armor_sum = this_armor_sum
-							end
-						end
+						-- local armor_sum = 0
+						-- for i = 1, #enemies do
+						-- 	local enemy = enemies[i]
+						-- 	local this_armor_sum = enemy.health.armor + enemy.health.magic_armor
+						-- 	if this_armor_sum > armor_sum then
+						-- 		enemy = enemies[i]
+						-- 		armor_sum = this_armor_sum
+						-- 	end
+						-- end
 						local aura_curse = E:create_entity(ac.aura)
 						aura_curse.pos:copy(U.calculate_enemy_ffe_pos(enemy, ac.node_prediction))
 						aura_curse.aura.target_id = enemy.id

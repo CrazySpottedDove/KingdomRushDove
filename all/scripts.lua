@@ -9692,4 +9692,54 @@ function scripts.mod_damage_reduction.remove(this, store)
 	return true
 end
 
+scripts.mod_do_damage_by_movement = {}
+
+function scripts.mod_do_damage_by_movement.insert(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if not target or target.health.dead then
+		return false
+	end
+
+	this.pos:copy(target.pos)
+	this.damage_cache = E:create_entity("damage")
+	this.damage_cache.damage_type = this.damage_type
+	this.damage_cache.source_id = this.id
+	this.damage_cache.target_id = target.id
+	this.damage_cache.value = this.damage_per_distance + this.damage_per_distance_inc * this.modifier.level
+
+	this.modifier.ts = store.tick_ts
+
+	return true
+end
+
+function scripts.mod_do_damage_by_movement.update(this, store)
+	while true do
+		if store.tick_ts - this.modifier.ts > this.modifier.duration then
+			queue_remove(store, this)
+
+			return
+		end
+
+		local target = store.entities[this.modifier.target_id]
+
+		if not target or target.health.dead then
+			queue_remove(store, this)
+
+			return
+		end
+
+		local dist = this.pos:dist(target.pos)
+
+		if dist * this.damage_cache.value > 1 then
+			local d = table.deepclone(this.damage_cache)
+			d.value = d.value * dist * this.modifier.damage_factor
+			queue_damage(store, d)
+			this.pos:copy(target.pos)
+		end
+
+		coroutine.yield()
+	end
+end
+
 return scripts

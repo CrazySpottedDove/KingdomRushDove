@@ -1215,3 +1215,12 @@ tt = E:register_t("abstract_fx_mod_in_hit_pos", "modifier")
 E:add_comps(tt, "render")
 tt.main_script.update = scripts.mod_fx_in_hit_pos.update
 tt.multi_sprite_fx_update = scripts.multi_sprite_fx.update
+
+tt = E:register_t("mod_do_damage_by_movement", "modifier")
+tt.main_script.insert = scripts.mod_do_damage_by_movement.insert
+tt.main_script.update = scripts.mod_do_damage_by_movement.update
+tt.damage_type = DAMAGE_TRUE
+tt.damage_per_distance = 1
+tt.damage_per_distance_inc = 0
+tt.modifier.duration = 6
+tt.modifier.vis_flags = F_MOD

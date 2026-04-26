@@ -3953,7 +3953,7 @@ tt.sound_events.insert = "TeleporthSound"
 
 tt = RT("aura_curse_infernal", "aura")
 AC(tt, "render")
-tt.aura.mods = {"mod_infernal_curse", "mod_lava_infernal_mage"}
+tt.aura.mods = {"mod_infernal_curse_visual", "mod_lava_infernal_mage", "mod_infernal_curse_effect"}
 tt.aura.duration = fts(23)
 tt.aura.apply_delay = fts(5)
 tt.aura.apply_duration = fts(10)
@@ -3970,19 +3970,25 @@ tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].anchor.y = 0.375
 tt.sound_events.insert = "InfernalMageCurse"
 
-tt = RT("mod_infernal_curse", "modifier")
+tt = RT("mod_infernal_curse_visual", "modifier")
 AC(tt, "armor_buff", "render")
 tt.modifier.duration = 6
 tt.modifier.vis_flags = F_MOD
-tt.armor_buff.both = true
-tt.armor_buff.max_factor = -0.3
-tt.factor_config = {-0.3, -0.6}
-tt.main_script.insert = scripts.mod_infernal_curse.insert
-tt.main_script.remove = scripts.mod_armor_buff.remove
+-- tt.armor_buff.both = true
+-- tt.armor_buff.max_factor = -0.3
+-- tt.factor_config = {-0.3, -0.6}
+-- tt.main_script.insert = scripts.mod_infernal_curse.insert
+-- tt.main_script.remove = scripts.mod_armor_buff.remove
+tt.main_script.insert = scripts.mod_track_target.insert
 tt.main_script.update = scripts.mod_track_target.update
 tt.render.sprites[1].name = "ember_lords_mage_tower_shooter_affliction_modifier_run"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].animated = true
+
+tt = RT("mod_infernal_curse_effect", "mod_do_damage_by_movement")
+tt.damage_per_distance = 0
+tt.damage_per_distance_inc = 0.5
+tt.modifier.duration = 6
 
 tt = RT("fx_teleport_infernal", "fx")
 tt.render.sprites[1].anchor.y = 0.5
