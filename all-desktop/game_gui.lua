@@ -776,6 +776,20 @@ function game_gui:build_random_towers()
 	end
 end
 
+function game_gui:toggle_reinforce_mode()
+	if #self.selected_controables > 0 then
+		self:deselect_controables()
+	else
+		for _, e in pairs(self.game.simulation.store.soldiers) do
+			if e.controable and not e.health.dead and not e.controable_other then
+				self:select_controable(e)
+			end
+		end
+
+		self:set_mode(GUI_MODE_RALLY_CONTROABLES)
+	end
+end
+
 function game_gui:keypressed(key, isrepeat)
 	if isrepeat then
 		return
@@ -935,17 +949,7 @@ function game_gui:keypressed(key, isrepeat)
 			end
 		end
 	elseif ks.reinforce == key then
-		if #self.selected_controables > 0 then
-			self:deselect_controables()
-		else
-			for _, e in pairs(self.game.simulation.store.soldiers) do
-				if e.controable and not e.health.dead and not e.controable_other then
-					self:select_controable(e)
-				end
-			end
-
-			self:set_mode(GUI_MODE_RALLY_CONTROABLES)
-		end
+		self:toggle_reinforce_mode()
 	elseif ks.reinforce_other == key then
 		if #self.selected_controables > 0 then
 			self:deselect_controables()
@@ -2486,45 +2490,6 @@ function Power1Button:initialize()
 		}
 	end
 
-	-- self.animations = {
-	-- 	default = {
-	-- 		to = 1,
-	-- 		prefix = "fire",
-	-- 		from = 1
-	-- 	},
-	-- 	highlighted = {
-	-- 		to = 2,
-	-- 		prefix = "fire",
-	-- 		from = 2
-	-- 	},
-	-- 	cooldown = {
-	-- 		to = 1,
-	-- 		prefix = "fire",
-	-- 		from = 1
-	-- 	},
-	-- 	locked = {
-	-- 		to = 30,
-	-- 		prefix = "fire_ready",
-	-- 		from = 30
-	-- 	},
-	-- 	unlocked = {
-	-- 		to = 44,
-	-- 		prefix = "fire_ready",
-	-- 		from = 30
-	-- 	},
-	-- 	selected = {
-	-- 		to = 29,
-	-- 		prefix = "fire_ready",
-	-- 		from = 29
-	-- 	},
-	-- 	ready = {
-	-- 		to = 28,
-	-- 		prefix = "fire_ready",
-	-- 		from = 1,
-	-- 		post = {1}
-	-- 	}
-	-- }
-
 	self.selected_gui_mode = GUI_MODE_POWER_1
 
 	self:set_mode("locked")
@@ -2597,6 +2562,25 @@ function Power2Button:initialize()
 	self.selected_gui_mode = GUI_MODE_POWER_2
 
 	self:set_mode("locked")
+end
+
+function Power2Button:set_mode(mode)
+	Power2Button.super.set_mode(self, mode)
+
+	-- 安卓端：援军冷却时仍允许点击按钮（用于进入“调集所有援军”模式）
+	if IS_ANDROID and mode == "cooldown" then
+		self:enable()
+		self:apply_disabled_tint()
+	end
+end
+
+function Power2Button:on_click(button, x, y)
+	if IS_ANDROID and self.mode == "cooldown" then
+		game_gui:toggle_reinforce_mode()
+		return false
+	end
+
+	return Power2Button.super.on_click(self, button, x, y)
 end
 
 function Power2Button:fire(wx, wy)
