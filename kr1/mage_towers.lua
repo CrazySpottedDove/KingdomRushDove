@@ -3959,7 +3959,7 @@ tt.aura.apply_delay = fts(5)
 tt.aura.apply_duration = fts(10)
 tt.aura.max_count = 100
 tt.aura.cycle_time = fts(2)
-tt.aura.radius = 60
+tt.aura.radius = 75
 tt.aura.vis_flags = bor(F_RANGED, F_MOD)
 tt.aura.vis_bans = bor(F_FRIEND, F_HERO, F_FREEZE)
 tt.main_script.insert = scripts.aura_apply_mod.insert
@@ -4001,21 +4001,6 @@ tt.modifier.vis_flags = bor(F_MOD, F_TELEPORT)
 tt.nodes_offset_min = -18
 tt.nodes_offset_max = -18
 tt.nodes_offset_inc = 0
-
-tt = RT("ps_bolt_infernal_mage", "particle_system")
-tt.particle_system.alphas = {255, 0}
-tt.particle_system.animated = true
-tt.particle_system.emit_area_spread = v(6, 6)
-tt.particle_system.emission_rate = 60
-tt.particle_system.name = "ember_lords_mage_tower_bolt_particle_run"
-tt.particle_system.particle_lifetime = {fts(10), fts(10)}
-tt.particle_system.rotation_spread = math.pi
-tt.particle_system.scale_var = {1, 0.8}
-tt.particle_system.scales_x = {1, 1}
-tt.particle_system.scales_y = {1, 1}
-
-tt = RT("fx_bolt_infernal_mage_hit", "fx")
-tt.render.sprites[1].name = "ember_lords_mage_tower_shooter_proyectile_hit"
 
 tt = RT("ps_bolt_infernal_mage", "particle_system")
 tt.particle_system.alphas = {255, 0}
