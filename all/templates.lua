@@ -1207,9 +1207,9 @@ tt.skip_modifiers = {}
 tt.skip_auras = {}
 tt.handle_stun = true
 tt.skip_hide_modifier_self = true
-tt.allows_duplicates = false
-tt.replaces_lower = false
-tt.resets_same = false
+tt.modifier.allows_duplicates = false
+tt.modifier.replaces_lower = false
+tt.modifier.resets_same = false
 
 tt = E:register_t("abstract_fx_mod_in_hit_pos", "modifier")
 E:add_comps(tt, "render")
