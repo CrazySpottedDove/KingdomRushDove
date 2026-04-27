@@ -25,7 +25,8 @@ ffi.metatype("vec2", {
 		-- 不检查零向量，请调用者保证。
 		normalize = function(self)
 			local length = math.sqrt(self.x * self.x + self.y * self.y)
-			return vec2_ct(self.x / length, self.y / length)
+			self.x = self.x / length
+			self.y = self.y / length
 		end,
 		clone = function(self)
 			return vec2_ct(self.x, self.y)

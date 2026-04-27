@@ -2287,6 +2287,7 @@ function PowerButton:initialize(default_image, mask_image)
 	cv.pos = v(9, 10 + cv.size.y)
 	cv.colors.background = {0, 0, 0, 150}
 	cv.hidden = true
+	cv.propagate_on_click = true
 
 	self:add_child(cv)
 
@@ -5738,8 +5739,6 @@ function PickView:on_down(button, x, y)
 
 	if button == 1 then
 		if game_gui.mode == GUI_MODE_RALLY_TOWER then
-			log.debug("set rally point. view:%s,%s -> game:%s,%s", x, y, wx, wy)
-
 			local e = game_gui.selected_entity
 
 			if not e.barrack then
@@ -5747,18 +5746,39 @@ function PickView:on_down(button, x, y)
 			end
 
 			local b = e.barrack
-			local rc = V.v(V.add(e.pos.x, e.pos.y, e.tower.range_offset.x, e.tower.range_offset.y))
+			local target_pos = V.v(wx, wy)
+			local rally_center = V.v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y)
 
-			if U.is_inside_ellipse(v(wx, wy), rc, b.rally_range) and (b.rally_anywhere or P:valid_node_nearby(wx, wy, nil, NF_RALLY) and GR:cell_is_only(wx, wy, b.rally_terrains)) then
+			local found_valid_rally_pos = false
+
+			if U.is_inside_ellipse(target_pos, rally_center, b.rally_range) and (b.rally_anywhere or P:valid_node_nearby(target_pos.x, target_pos.y, nil, NF_RALLY) and GR:cell_is_only(target_pos.x, target_pos.y, b.rally_terrains)) then
+				found_valid_rally_pos = true
+			else
+				-- 优化体验：尝试在这个方向上找到满足条件的最远点，并进行调集。如果还是无法调集，则显示无法调集。
+				local direction = target_pos - rally_center
+				if not U.is_inside_ellipse(target_pos, rally_center, b.rally_range) then
+					direction:normalize()
+					direction:scalar_mul(b.rally_range)
+				end
+
+				for i = 99, 1, -1 do
+					local factor = i / 100
+					target_pos:set(rally_center.x + factor * direction.x, rally_center.y + factor * direction.y)
+					if U.is_inside_ellipse(target_pos, rally_center, b.rally_range) and (b.rally_anywhere or P:valid_node_nearby(target_pos.x, target_pos.y, nil, NF_RALLY) and GR:cell_is_only(target_pos.x, target_pos.y, b.rally_terrains)) then
+						found_valid_rally_pos = true
+						break
+					end
+				end
+			end
+
+			if found_valid_rally_pos then
 				S:queue("GUIPlaceRallyPoint")
 
-				e.barrack.rally_pos = v(wx, wy)
+				e.barrack.rally_pos = target_pos
 				e.barrack.rally_new = true
-
-				game_gui:show_rally_flag(x, y)
+				game_gui:show_rally_flag(game_gui:g2u(target_pos))
 				game_gui:hide_rally_range()
 				game_gui:deselect_entity()
-				log.debug("entity barrack.rally_pos to %s", e.barrack.rally_pos)
 			else
 				game_gui:show_invalid_point_cross(x, y)
 			end
