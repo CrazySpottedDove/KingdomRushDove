@@ -153,54 +153,6 @@ function hook.S.init(init, self, path, overrides)
 
 			log.info("Found sound's groups override in mod %s", mod_data.name)
 		end
-
-		local extra_path = mod_data.check_paths["/_assets/sounds/extra.lua"]
-
-		if extra_path then
-			local f_extra
-
-			f_extra = FS.load(extra_path)()
-
-			if f_extra and f_extra.sounds then
-				for k, v in pairs(f_extra.sounds) do
-					self.sounds[k] = v
-				end
-			end
-
-			for id, sd in pairs(self.sounds) do
-				self.sound_extras[id] = {}
-			end
-
-			if f_extra and f_extra.groups then
-				for k, v in pairs(f_extra.groups) do
-					if v.append then
-						if v.sounds then
-							for _, s in pairs(v.sounds) do
-								local sound = self.sounds[s]
-
-								for _, f in pairs(sound.files) do
-									if not table.contains(self.groups[k].files, f) then
-										table.insert(self.groups[k].files, f)
-									end
-								end
-							end
-						end
-
-						if v.files then
-							for _, f in pairs(v.files) do
-								if not table.contains(self.groups[k].files, f) then
-									table.insert(self.groups[k].files, f)
-								end
-							end
-						end
-					elseif v.alias then
-						self.groups[k] = self.groups[v.alias]
-					else
-						self.groups[k] = v
-					end
-				end
-			end
-		end
 	end
 end
 

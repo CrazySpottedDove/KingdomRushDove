@@ -994,7 +994,6 @@ tt.main_script.update = scripts.aura_unit_regen.update
 tt.regen.cooldown = fts(6)
 tt.regen.health = 1
 tt.regen.ignore_stun = true
-tt.regen.ignore_freeze = false
 --#endregion
 --#region aura_forest_troll_regen
 tt = RT("aura_forest_troll_regen", "aura_troll_regen")
@@ -1075,7 +1074,6 @@ tt.main_script.update = scripts.aura_unit_regen.update
 tt.regen.cooldown = fts(2)
 tt.regen.health = 1
 tt.regen.ignore_stun = false
-tt.regen.ignore_freeze = false
 --#endregion
 --#region aura_flareon_death
 tt = RT("aura_flareon_death", "aura_demon_death")
@@ -6198,7 +6196,6 @@ AC(tt, "regen")
 
 tt.main_script.update = scripts.aura_unit_regen.update
 tt.regen.ignore_stun = true
-tt.regen.ignore_freeze = false
 tt.regen.cooldown = fts(5)
 tt.regen.health = 4
 --#endregion
@@ -6283,7 +6280,6 @@ tt.main_script.update = scripts.aura_unit_regen.update
 tt.regen.cooldown = fts(5)
 tt.regen.health = 5
 tt.regen.ignore_stun = true
-tt.regen.ignore_freeze = false
 --#endregion
 --#region aura_ogre_magi_shield
 tt = RT("aura_ogre_magi_shield", "aura")

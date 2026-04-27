@@ -5781,35 +5781,35 @@ return {
 	},
 	["kr1-desktop/sounds/files/kr4_warmonger_barrack_battlewits_upg.ogg"] = {
 		size = 9086,
-		hash = "893e9b9b"
+		hash = "5f2f1e3c"
 	},
 	["kr1-desktop/sounds/files/kr4_warmonger_barrack_promotion_upg.ogg"] = {
 		size = 11804,
-		hash = "8b7a675a"
+		hash = "cd87beea"
 	},
 	["kr1-desktop/sounds/files/kr4_warmonger_barrack_seal_of_blood_upg.ogg"] = {
 		size = 11420,
-		hash = "8ffeedda"
+		hash = "77960284"
 	},
 	["kr1-desktop/sounds/files/kr4_warmonger_barrack_taunt_1.ogg"] = {
 		size = 11341,
-		hash = "20b5d585"
+		hash = "659371c4"
 	},
 	["kr1-desktop/sounds/files/kr4_warmonger_barrack_taunt_2.ogg"] = {
 		size = 9427,
-		hash = "c88f0f72"
+		hash = "94542c00"
 	},
 	["kr1-desktop/sounds/files/kr4_warmonger_barrack_taunt_3.ogg"] = {
 		size = 10499,
-		hash = "a845fdbe"
+		hash = "cae3f3d2"
 	},
 	["kr1-desktop/sounds/files/kr4_warmonger_barrack_taunt_4.ogg"] = {
 		size = 12710,
-		hash = "7c2dd8e6"
+		hash = "46146ee6"
 	},
 	["kr1-desktop/sounds/files/kr4_warmonger_barrack_unitSwap_upg.ogg"] = {
 		size = 12085,
-		hash = "417fac78"
+		hash = "841c5aec"
 	},
 	["kr1-desktop/sounds/files/kr5_bgmusic_atlas_v1.ogg"] = {
 		size = 2095879,

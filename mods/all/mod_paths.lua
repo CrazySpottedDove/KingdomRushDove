@@ -64,7 +64,7 @@ function mod_paths.load_main_config()
 		not_mod_path = {"mod_template", "all"},
 		ignored_path = {"_assets"},
 		ppref = "",
-		check_paths = {"/_assets/images", "/_assets/sounds/settings.lua", "/_assets/sounds/sounds.lua", "/_assets/sounds/groups.lua", "/_assets/sounds/extra.lua", "/_assets/sounds/files", "/data/levels", "/data/waves"}
+		check_paths = {"/_assets/images", "/_assets/sounds/settings.lua", "/_assets/sounds/sounds.lua", "/_assets/sounds/groups.lua", "/_assets/sounds/files", "/data/levels", "/data/waves"}
 	}
 end
 

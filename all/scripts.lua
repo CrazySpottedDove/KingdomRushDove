@@ -4870,9 +4870,6 @@ function scripts.aura_unit_regen.update(this, store)
 		return
 	end
 
-	local regen_cooldown = target.regen and target.regen.cooldown or this.regen.cooldown
-	local regen_health = target.regen and target.regen.health or this.regen.health
-
 	while true do
 		local target = store.entities[this.aura.source_id]
 
@@ -4889,11 +4886,11 @@ function scripts.aura_unit_regen.update(this, store)
 		end
 
 		do
-			if regen_cooldown <= store.tick_ts - this.aura.ts then
-				this.aura.ts = this.aura.ts + regen_cooldown
+			if this.regen.cooldown <= store.tick_ts - this.aura.ts then
+				this.aura.ts = this.aura.ts + this.regen.cooldown
 
-				if (this.regen.ignore_stun or not target.unit.is_stunned) and (this.regen.ignore_freeze or not U.has_modifier_types(store, target, MOD_TYPE_FREEZE)) and (this.regen.ignore_mods or not U.flag_has(target.vis.bans, F_MOD)) then
-					target.health.hp = target.health.hp + regen_health
+				if (this.regen.ignore_stun or not target.unit.is_stunned) and (this.regen.ignore_mods or not U.flag_has(target.vis.bans, F_MOD)) then
+					target.health.hp = target.health.hp + this.regen.health
 					target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp)
 				end
 			end

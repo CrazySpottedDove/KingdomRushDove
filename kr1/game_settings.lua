@@ -85,7 +85,7 @@ GS.barrack_towers = {
 	"tower_dwarf_lvl4",
 	"tower_rocket_gunners_lvl4",
 	"tower_paladin_covenant_lvl4",
-	"tower_orc_warriors_den"
+	"tower_orc_warriors"
 }
 GS.advanced_towers = {}
 for i = 4, #GS.archer_towers do

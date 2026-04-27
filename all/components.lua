@@ -59,7 +59,6 @@ local regen = E:register_c("regen")
 regen.health = nil
 regen.cooldown = 0
 regen.ignore_stun = nil
-regen.ignore_freeze = nil
 regen.ts_counter = 0
 regen.last_hit_standoff_time = 2
 regen.last_hit_ts = 0

@@ -93,7 +93,8 @@ game.required_sounds = {
 	"tower_shadow_archer",
 	"tower_rotten_forest",
 	"tower_infernal_mage",
-	"tower_bone_flingers"
+	"tower_bone_flingers",
+	"tower_orc_warriors"
 }
 game.simulation_systems = {
 	"level",

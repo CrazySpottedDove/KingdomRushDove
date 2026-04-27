@@ -151,46 +151,8 @@ function sound_db:init(path)
 
 	self.groups = f_groups
 
-	local f_extra = FS.load(path .. "/extra.lua")()
-
-	if f_extra.sounds then
-		for k, v in pairs(f_extra.sounds) do
-			self.sounds[k] = v
-		end
-	end
-
 	for id, sd in pairs(self.sounds) do
 		self:_precache_sound(id, sd)
-	end
-
-	if f_extra.groups then
-		for k, v in pairs(f_extra.groups) do
-			if v.append then
-				if v.sounds then
-					for _, s in ipairs(v.sounds) do
-						local sound = self.sounds[s]
-
-						for _, f in ipairs(sound.files) do
-							if not table.contains(self.groups[k].files, f) then
-								table.insert(self.groups[k].files, f)
-							end
-						end
-					end
-				end
-
-				if v.files then
-					for _, f in ipairs(v.files) do
-						if not table.contains(self.groups[k].files, f) then
-							table.insert(self.groups[k].files, f)
-						end
-					end
-				end
-			elseif v.alias then
-				self.groups[k] = self.groups[v.alias]
-			else
-				self.groups[k] = v
-			end
-		end
 	end
 -- print(_extras_cnt)
 end
@@ -895,4 +857,3 @@ function sound_db:_play(request, source_pool)
 end
 
 return sound_db
-

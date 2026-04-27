@@ -19528,18 +19528,6 @@ function scripts.tower_ghost.soldier_update(this, store)
 			U.unblock_target(store, this)
 			U.set_destination(this, r.pos)
 
-			-- if r.delay_max then
-			-- 	U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
-
-			-- 	local index = this.soldier.tower_soldier_idx or 0
-			-- 	local tower = store.entities[this.soldier.tower_id]
-			-- 	local total = tower and tower.barrack.max_soldiers or 1
-
-			-- 	if SU.y_soldier_wait(store, this, index / total * r.delay_max) then
-			-- 		goto label_970_0
-			-- 	end
-			-- end
-
 			local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
 			U.animation_start(this, an, af, store.tick_ts, -1)
@@ -19562,20 +19550,6 @@ function scripts.tower_ghost.soldier_update(this, store)
 
 					r.new = false
 				end
-
-				-- if r._first_time then
-				-- 	r._first_time = false
-
-				-- 	local target = U.find_foremost_enemy_in_range_filter_on(r.center, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF), function(e)
-				-- 		return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
-				-- 	end)
-
-				-- 	if target then
-				-- 		out = false
-
-				-- 		break
-				-- 	end
-				-- end
 
 				U.walk(this, store.tick_length)
 				coroutine.yield()
@@ -22541,6 +22515,8 @@ function scripts.tower_shadow_archer.update(this, store)
 		b.bullet.level = level
 		b.bullet.damage_factor = this.tower.damage_factor
 
+		apply_precision(b)
+
 		queue_insert(store, b)
 
 		if attack.shot_fx then
@@ -23468,16 +23444,6 @@ function scripts.tower_infernal_mage.update(this, store)
 					if enemy then
 						ac.ts = last_ts
 
-						-- 选择其中护甲和魔抗之和最大的敌人
-						-- local armor_sum = 0
-						-- for i = 1, #enemies do
-						-- 	local enemy = enemies[i]
-						-- 	local this_armor_sum = enemy.health.armor + enemy.health.magic_armor
-						-- 	if this_armor_sum > armor_sum then
-						-- 		enemy = enemies[i]
-						-- 		armor_sum = this_armor_sum
-						-- 	end
-						-- end
 						local aura_curse = E:create_entity(ac.aura)
 						aura_curse.pos:copy(U.calculate_enemy_ffe_pos(enemy, ac.node_prediction))
 						aura_curse.aura.target_id = enemy.id
@@ -23652,57 +23618,12 @@ function scripts.aura_lava_fissure.update(this, store)
 
 	queue_remove(store, this)
 end
-
-scripts.mod_infernal_curse = {}
-
-function scripts.mod_infernal_curse.insert(this, store)
-	local target = store.entities[this.modifier.target_id]
-
-	if not target or target.health.dead or target.enemy and not target.enemy.can_accept_magic then
-		return false
-	end
-
-	if band(this.modifier.vis_flags, target.vis.bans) ~= 0 or band(this.modifier.vis_bans, target.vis.flags) ~= 0 then
-		return false
-	end
-
-	local buff = this.armor_buff
-	local inc = this.factor_config[this.modifier.level]
-
-	SU.magic_armor_inc(target, inc)
-	SU.armor_inc(target, inc)
-
-	buff._total_factor = inc
-
-	signal.emit("mod-applied", this, target)
-
-	return true
-end
 -- 炼狱法师 End
 
 -- 兽人勇士巢穴 Begin
-scripts.tower_orc_warriors_den = {}
+scripts.tower_orc_warriors = {}
 
-function scripts.tower_orc_warriors_den.get_info(this)
-	local s = E:get_template("soldier_orc_warrior")
-	local o = scripts.tower_barrack.get_info(this)
-	local pow_b = this.powers.bloodlust
-
-	o.respawn = s.health.dead_lifetime
-	o.hp_max = s.health.hp_max
-	o.damage_min = s.melee.attacks[1].damage_min
-	o.damage_max = s.melee.attacks[1].damage_max
-	o.armor = s.health.armor
-
-	if pow_b.level > 0 then
-		o.damage_min = math.floor(o.damage_min * pow_b.damage_factor[pow_b.level])
-		o.damage_max = math.ceil(o.damage_max * pow_b.damage_factor[pow_b.level])
-	end
-
-	return o
-end
-
-function scripts.tower_orc_warriors_den.update(this, store)
+function scripts.tower_orc_warriors.update(this, store)
 	local b = this.barrack
 	local door_sid = 3
 	local pow_p = this.powers.promotion
@@ -23710,38 +23631,19 @@ function scripts.tower_orc_warriors_den.update(this, store)
 	local function spawn_captain_at(i, old)
 		local s = E:create_entity("soldier_orc_warrior_captain")
 		s.soldier.tower_id = this.id
-		s.pos = V.vclone(old.pos)
+		s.pos:copy(old.pos)
 		s.nav_rally.pos, s.nav_rally.center = old.nav_rally.pos, old.nav_rally.center
 		s.nav_rally.new = true
 
-		for pn, p in pairs(this.powers) do
-			local sp = s.powers[pn]
-			if sp then
-				sp.level = p.level
-			end
+		for pn, p in pairs(old.powers) do
+			s.powers[pn].level = p.level
 		end
+
+		U.soldier_inherit_tower_buff_factor(s, this)
 
 		queue_insert(store, s)
 		queue_remove(store, old)
 		b.soldiers[i] = s
-
-		-- 只播本体 sprite 的 spawn，rage 层在 spawn 期间先关掉动画避免误触。
-		local rage = s.render.sprites[3]
-		if rage then
-			rage.hidden = true
-		end
-
-		U.animation_start(s, "spawn", nil, store.tick_ts, 1, 1)
-		s.orc_spawn_lock = true
-
-		local wk = s.render.sprites[4]
-		if wk then
-			wk.hidden = nil
-			wk.ts = store.tick_ts
-			wk.runs = 0
-			wk.name = "run"
-			wk.loop = true
-		end
 
 		signal.emit("tower-spawn", this, s)
 	end
@@ -23752,13 +23654,26 @@ function scripts.tower_orc_warriors_den.update(this, store)
 				p.changed = nil
 				for i = 1, b.max_soldiers do
 					local s = b.soldiers[i]
-					if s and s.powers[pn] then
-						s.powers[pn].level = p.level
-						s.powers[pn].changed = true
+					if s then
+						if s.powers[pn] then
+							s.powers[pn].level = p.level
+							s.powers[pn].changed = true
+						end
 					end
 				end
 
-				if pn == "promotion" and p.level > 0 then
+				if pn == "bloodlust" then
+					this.tower.damage_factor = this.tower.damage_factor * p.damage_factor[p.level] / p.last_damage_factor
+					for i = 1, b.max_soldiers do
+						local s = b.soldiers[i]
+						if s and not s.health.dead then
+							s.unit.damage_factor = s.unit.damage_factor * p.damage_factor[p.level] / p.last_damage_factor
+						end
+					end
+					p.last_damage_factor = p.damage_factor[p.level]
+				end
+
+				if pn == "promotion" then
 					local s = b.soldiers[1]
 					if s and not s.health.dead and s.template_name ~= "soldier_orc_warrior_captain" then
 						S:queue("TowerOrcWarriorsDenUnitSwap")
@@ -23789,17 +23704,20 @@ function scripts.tower_orc_warriors_den.update(this, store)
 						s = E:create_entity(b.soldier_type)
 					end
 					s.soldier.tower_id = this.id
-					s.pos = V.v(this.pos.x + b.respawn_offset.x, this.pos.y + b.respawn_offset.y)
+					s.pos:set(this.pos.x + b.respawn_offset.x, this.pos.y + b.respawn_offset.y)
 					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
 					s.nav_rally.new = true
 
 					for pn, p in pairs(this.powers) do
-						local sp = s.powers[pn]
-						if sp then
-							sp.level = p.level
+						if s.powers[pn] then
+							s.powers[pn].level = p.level
+							if p.level > 0 then
+								s.powers[pn].changed = true
+							end
 						end
 					end
 
+					U.soldier_inherit_tower_buff_factor(s, this)
 					queue_insert(store, s)
 					b.soldiers[i] = s
 					signal.emit("tower-spawn", this, s)
@@ -23838,74 +23756,6 @@ end
 
 scripts.soldier_orc_warrior = {}
 
-local function get_orc_base_template(this)
-	if this.template_name == "soldier_orc_warrior_captain" then
-		return E:get_template("soldier_orc_warrior_captain")
-	else
-		return E:get_template("soldier_orc_warrior")
-	end
-end
-
-local function refresh_orc_bloodlust_damage(this, store)
-	local ba = this.melee.attacks[1]
-	local base = get_orc_base_template(this)
-	local min_base = base.melee.attacks[1].damage_min
-	local max_base = base.melee.attacks[1].damage_max
-	local b = this.powers.bloodlust
-
-	if this.template_name == "soldier_orc_warrior_captain" then
-		local tower = store and store.entities and store.entities[this.soldier.tower_id]
-		if tower and tower.powers and tower.powers.promotion then
-			min_base = tower.powers.promotion.damage_min
-			max_base = tower.powers.promotion.damage_max
-		end
-	end
-
-	-- dove 口径：直接提高面板伤害（常驻），特效按“拦截成立”开关。
-	if b.level > 0 then
-		ba.damage_min = math.floor(min_base * b.damage_factor[b.level])
-		ba.damage_max = math.ceil(max_base * b.damage_factor[b.level])
-	else
-		ba.damage_min = min_base
-		ba.damage_max = max_base
-	end
-end
-
-function scripts.soldier_orc_warrior.on_power_upgrade(this, pow, pn)
-	if pn == "bloodlust" then
-		-- bloodlust 现在是常驻面板增伤，升级时直接重算一次即可。
-		refresh_orc_bloodlust_damage(this, nil)
-
-		this.render.sprites[3].hidden = this.powers.bloodlust.level == 0
-	elseif pn == "seal" then
-		local base = get_orc_base_template(this)
-		local s = this.powers.seal
-
-		if s.level > 0 then
-			this.regen.health = base.regen.health + s.heal_inc[s.level] * base.regen.cooldown
-		else
-			this.regen.health = base.regen.health
-		end
-	end
-end
-
-function scripts.soldier_orc_warrior.insert(this, store)
-	if not scripts.soldier_barrack.insert(this, store) then
-		return false
-	end
-
-	this.orc_seal_ts = store.tick_ts
-
-	local p = this.powers.seal
-	if p.level > 0 then
-		local base = get_orc_base_template(this)
-		this.regen.health = base.regen.health + p.heal_inc[p.level] * base.regen.cooldown
-	end
-	refresh_orc_bloodlust_damage(this, store)
-
-	return true
-end
-
 function scripts.soldier_orc_warrior.update(this, store)
 	local brk, sta
 
@@ -23914,101 +23764,35 @@ function scripts.soldier_orc_warrior.update(this, store)
 		this.vis._bans = nil
 	end
 
-	if this.render.sprites[1].name == "raise" then
-		this.health_bar.hidden = true
-		U.animation_start(this, "raise", nil, store.tick_ts, 1)
-
-		while not U.animation_finished(this) and not this.health.dead do
-			coroutine.yield()
-		end
-
-		if not this.health.dead then
-			this.health_bar.hidden = nil
-		end
-	end
-
 	while true do
 		for pn, p in pairs(this.powers) do
 			if p.changed then
 				p.changed = nil
-				SU.soldier_power_upgrade(this, pn)
-				local base = get_orc_base_template(this)
 
-				if pn == "bloodlust" then
-					refresh_orc_bloodlust_damage(this, store)
-				elseif pn == "seal" then
-					if p.level > 0 then
-						this.regen.health = base.regen.health + p.heal_inc[p.level] * base.regen.cooldown
+				if pn == "seal" then
+					if not this._aura_regen then
+						local a = E:create_entity("aura_soldier_orc_warrior_regen")
+						a.aura.target_id = this.id
+						a.aura.source_id = this.id
+						a.regen.health = p.heal[p.level] * a.regen.cooldown
+						queue_insert(store, a)
 					else
-						this.regen.health = base.regen.health
+						this._aura_regen.regen.health = p.heal[p.level] * this._aura_regen.regen.cooldown
 					end
 				end
 			end
 		end
 
-		local rage = this.render.sprites[3]
-		local rage_show = false
-		if this.powers.bloodlust.level > 0 and not this.health.dead then
-			local tid = this.soldier.target_id
-			local target = tid and store.entities[tid] or nil
-			if target and target.enemy and target.enemy.blockers then
-				local bs = target.enemy.blockers
-				for i = 1, #bs do
-					if bs[i] == this.id then
-						rage_show = true
-						break
-					end
-				end
-			end
-		end
-		if rage_show and rage.hidden then
-			-- 从隐藏到显示时刷新一次时间戳，避免 spawn/idle 流程后 ts 没被正确拉起导致看起来“没动画”。
-			rage.ts = store.tick_ts
-			rage.runs = 0
-		end
-		rage.hidden = not rage_show
-		if not this.orc_spawn_lock and not rage.animated then
-			rage.animated = true
-		end
-		local sp = this.powers.seal
-		local wk = this.render.sprites[4]
-
-		if this.orc_spawn_lock and not U.animation_finished(this, 1) then
-			if wk then
-				wk.hidden = nil
-			end
-			goto label_orc_1
-		end
-		this.orc_spawn_lock = nil
-
-		if wk and not wk.hidden then
-			wk.hidden = true
-		end
-
-		if this.cloak and this.soldier.target_id then
-			this.vis.flags = band(this.vis.flags, bnot(this.cloak.flags))
-			this.vis.bans = band(this.vis.bans, bnot(this.cloak.bans))
-			this.render.sprites[1].alpha = 255
-		end
-
-		if not this.health.dead or SU.y_soldier_revive(store, this) then
-		-- block empty
-		else
+		if this.health.dead then
+			this.render.sprites[3].hidden = true
 			SU.y_soldier_death(store, this)
+
 			return
-		end
-
-		-- KRV 的 seal_of_blood 是战斗中也会跳的回血，这里按 1s tick 做等价实现。
-		if sp and sp.level > 0 and this.soldier.target_id and store.tick_ts - this.orc_seal_ts >= 1 then
-			this.orc_seal_ts = store.tick_ts
-			local hp = this.health.hp + sp.heal_inc[sp.level]
-			if hp > this.health.hp_max then
-				hp = this.health.hp_max
+		else
+			if this.powers.bloodlust.level > 0 then
+				this.render.sprites[3].hidden = false
 			end
-			this.health.hp = hp
 		end
-
-		scripts.soldier_revive_resist(this, store)
 
 		if this.unit.is_stunned then
 			SU.soldier_idle(store, this)
@@ -24019,6 +23803,37 @@ function scripts.soldier_orc_warrior.update(this, store)
 				while this.nav_rally.new do
 					if SU.y_soldier_new_rally(store, this) then
 						goto label_orc_1
+					end
+				end
+
+				if this.timed_attacks then
+					if ready_to_attack(this.timed_attacks.list[1], store) then
+						local a = this.timed_attacks.list[1]
+
+						local enemy = U.find_first_enemy_in_range_filter_off(this.pos, a.trigger_range, a.vis_flags, a.vis_bans)
+
+						if not enemy then
+							a.ts = a.ts + 0.3
+						else
+							local start_ts = store.tick_ts
+
+							U.animation_start(this, a.animation, nil, store.tick_ts, 1, 1)
+
+							if not SU.y_soldier_wait(store, this, a.cast_time) then
+								a.ts = start_ts
+								local enemies = U.find_enemies_in_range_filter_off(this.pos, a.range, a.vis_flags, a.vis_bans)
+								if enemies then
+									for i = 1, #enemies do
+										local m = E:create_entity(a.mod)
+										m.modifier.target_id = enemies[i].id
+										m.modifier.source_id = this.id
+										queue_insert(store, m)
+									end
+								end
+							end
+
+							U.y_animation_wait(this, 1, 1)
+						end
 					end
 				end
 
@@ -24064,7 +23879,7 @@ function scripts.tower_bone_flingers.get_info(this)
 		damage_min = min,
 		damage_max = max,
 		range = this.attacks.range,
-		cooldown = a.cooldown
+		cooldown = a.cooldown * this.tower.cooldown_factor
 	}
 end
 
@@ -24148,8 +23963,7 @@ function scripts.tower_bone_flingers.update(this, store)
 		e.nav_path.ni = ni
 		e.nav_rally.center.x, e.nav_rally.center.y = e_pos.x, e_pos.y
 		e.nav_rally.pos.x, e.nav_rally.pos.y = e_pos.x, e_pos.y
-		e.unit.damage_factor = this.tower.damage_factor
-		e.unit.cooldown_factor = this.tower.cooldown_factor
+		U.soldier_inherit_tower_buff_factor(e, this)
 
 		queue_insert(store, e)
 		return true
@@ -24212,6 +24026,7 @@ function scripts.tower_bone_flingers.update(this, store)
 					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, barrack, barrack.max_soldiers, formation_offset)
 					s.pos = last_soldier_pos[i] or V.vclone(s.nav_rally.pos)
 					s.nav_rally.new = true
+					U.soldier_inherit_tower_buff_factor(s, this)
 
 					queue_insert(store, s)
 					barrack.soldiers[i] = s
@@ -24316,6 +24131,8 @@ function scripts.tower_bone_flingers.update(this, store)
 					b1.bullet.from:copy(b1.pos)
 					b1.bullet.to:set(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 					b1.bullet.target_id = enemy.id
+
+					apply_precision(b1)
 
 					queue_insert(store, b1)
 

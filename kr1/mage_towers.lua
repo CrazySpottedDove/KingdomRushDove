@@ -3971,14 +3971,9 @@ tt.render.sprites[1].anchor.y = 0.375
 tt.sound_events.insert = "InfernalMageCurse"
 
 tt = RT("mod_infernal_curse_visual", "modifier")
-AC(tt, "armor_buff", "render")
+AC(tt, "render")
 tt.modifier.duration = 6
 tt.modifier.vis_flags = F_MOD
--- tt.armor_buff.both = true
--- tt.armor_buff.max_factor = -0.3
--- tt.factor_config = {-0.3, -0.6}
--- tt.main_script.insert = scripts.mod_infernal_curse.insert
--- tt.main_script.remove = scripts.mod_armor_buff.remove
 tt.main_script.insert = scripts.mod_track_target.insert
 tt.main_script.update = scripts.mod_track_target.update
 tt.render.sprites[1].name = "ember_lords_mage_tower_shooter_affliction_modifier_run"

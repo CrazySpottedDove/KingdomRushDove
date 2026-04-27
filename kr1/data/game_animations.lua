@@ -47251,13 +47251,19 @@ return {
 		from = 40,
 		to = 54
 	},
-	warmongers_soldier_orc_captain_spawn = {
+	warmongers_soldier_orc_captain_roar = {
 		prefix = "warmongers_soldier_orc_captain",
 		from = 55,
 		to = 88
 	},
-	warmongers_soldier_orc_captain_weakness_big_run = {
+	-- 废案：兽人队长的虚弱技能
+	warmongers_soldier_orc_captain_weakness_big = {
 		prefix = "warmongers_soldier_orc_captain_weakness_big",
+		from = 1,
+		to = 9
+	},
+	warmongers_soldier_orc_captain_weakness_small = {
+		prefix = "warmongers_soldier_orc_captain_weakness_small",
 		from = 1,
 		to = 9
 	},
@@ -47280,5 +47286,15 @@ return {
 		prefix = "warmongers_soldier_orc_captain_rage",
 		from = 1,
 		to = 16
+	},
+	Stage17_waterFall = {
+		prefix = "Stage17_waterFall",
+		to = 9,
+		from = 1
+	},
+	Stage17_waterFall_waves = {
+		prefix = "Stage17_waterFall_waves",
+		to = 27,
+		from = 1
 	}
 }

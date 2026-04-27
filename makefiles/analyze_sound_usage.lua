@@ -39,35 +39,6 @@ local function collect_referenced_files()
 		print("Warning: Failed to load " .. sounds_def_path)
 	end
 
-	-- 加载 extra.lua（如果有额外的声音定义）
-	-- extra.lua 有特殊结构：包含 groups 和 sounds 两个部分
-	local extra_path = SOUNDS_DIR .. "/extra.lua"
-	ok, sounds = pcall(dofile, extra_path)
-	if ok and sounds then
-		-- 处理 sounds 部分
-		if sounds.sounds then
-			for sound_name, sound_data in pairs(sounds.sounds) do
-				if sound_data.files then
-					for _, filename in ipairs(sound_data.files) do
-						referenced[filename] = true
-					end
-				end
-			end
-		end
-		-- 处理 groups 部分（可能包含 files 字段）
-		if sounds.groups then
-			for group_name, group_data in pairs(sounds.groups) do
-				if group_data.files then
-					for _, filename in ipairs(group_data.files) do
-						referenced[filename] = true
-					end
-				end
-			end
-		end
-	else
-		print("Warning: Failed to load " .. extra_path)
-	end
-
 	-- 加载 groups.lua（如果有声音组定义）
 	local groups_path = SOUNDS_DIR .. "/groups.lua"
 	ok, groups = pcall(dofile, groups_path)

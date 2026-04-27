@@ -1094,7 +1094,7 @@ upgrades.towers_with_barrack = {
 	"tower_barrel_lvl4",
 	"tower_paladin_covenant_lvl4",
 	"tower_bone_flingers",
-	"tower_orc_warriors_den"
+	"tower_orc_warriors"
 }
 
 upgrades.non_barrack_towers_with_barrack_attribute = {"tower_sorcerer", "tower_mech", "tower_necromancer", "tower_frankenstein", "tower_druid", "tower_dark_elf_lvl4", "tower_bone_flingers"}

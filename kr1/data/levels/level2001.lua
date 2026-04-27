@@ -69,12 +69,14 @@ P:add_invalid_range(i,1,11)
 end
 local e
 e=E:create_entity("decal")
-e.render.sprites[1].animation={prefix="Stage17_waterFall",to=9,from=1}
+e.render.sprites[1].prefix=nil
+e.render.sprites[1].name="Stage17_waterFall"
 e.render.sprites[1].z=Z_DECALS
 e.pos.x,e.pos.y=447,737
 LU.queue_insert(store,e)
 e=E:create_entity("decal")
-e.render.sprites[1].animation={prefix="Stage17_waterFall_waves",to=27,from=1}
+e.render.sprites[1].prefix=nil
+e.render.sprites[1].name="Stage17_waterFall_waves"
 e.render.sprites[1].z=Z_DECALS
 e.pos.x,e.pos.y=447,737
 LU.queue_insert(store,e)
