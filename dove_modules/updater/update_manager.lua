@@ -422,6 +422,30 @@ local function calculate_backoff(retry_count, error_type)
 	return math.floor(backoff)
 end
 
+-- 校验分块响应；返回是否有效，以及下载后总长度（nil 表示不更新）
+local function validate_chunk_response(code, body, headers, chunk_start, chunk_end, total_size, current_size)
+	if code == 206 then
+		local range_start, range_end, range_total = parse_content_range(headers and headers["content-range"])
+		local expected_len = chunk_end - chunk_start + 1
+		if range_start ~= chunk_start or range_end ~= chunk_end or range_total ~= total_size or #body ~= expected_len then
+			log_error(string.format("分块响应异常：请求 %d-%d，收到 %s，长度 %d", chunk_start, chunk_end, tostring(headers and headers["content-range"]), #body))
+			return false, nil
+		end
+		return true, current_size + #body
+	end
+
+	if code == 200 then
+		-- 某些代理会忽略 Range 返回整文件；仅接受完整文件长度，且按覆盖处理。
+		if #body == total_size then
+			return true, total_size
+		end
+		log_error(string.format("分块响应异常：Range 请求返回 200 但长度不符（%d vs %d）", #body, total_size))
+		return false, nil
+	end
+
+	return false, nil
+end
+
 -- 【核心函数】分块下载到真实文件系统（支持断点续传）
 -- 使用自适应块大小
 local function download_to_file_chunked(url_base, file_param, real_path)
@@ -480,13 +504,17 @@ local function download_to_file_chunked(url_base, file_param, real_path)
 	if f_check then
 		downloaded_size = f_check:seek("end")
 		f_check:close()
+		if downloaded_size > total_size then
+			log_info(string.format("检测到异常续传文件（%d > %d），自动重置重下", downloaded_size, total_size))
+			os.remove(part_path)
+			downloaded_size = 0
+		end
 		if downloaded_size > 0 then
 			log_info(string.format("续传 %.2f/%.2f MB", downloaded_size / 1024 / 1024, total_size / 1024 / 1024))
 		end
 	end
 
 	-- 分块下载
-	local file_retries = 0
 	while downloaded_size < total_size do
 		-- 计算本块的范围
 		local chunk_start = downloaded_size
@@ -504,24 +532,30 @@ local function download_to_file_chunked(url_base, file_param, real_path)
 			}, DOWNLOAD_CONFIG.chunk_timeout)
 
 			if code == 206 or code == 200 then
-				-- 成功！写入文件
-				local wf = io.open(part_path, "ab")
-				if not wf then
-					log_error("无法打开文件写入")
-					return false
+				local ok_resp, new_size = validate_chunk_response(code, body, headers, chunk_start, chunk_end, total_size, downloaded_size)
+				if ok_resp then
+					local write_mode = code == 200 and "wb" or "ab"
+					local wf = io.open(part_path, write_mode)
+					if not wf then
+						log_error("无法打开文件写入")
+						return false
+					end
+					wf:write(body)
+					wf:close()
+
+					downloaded_size = new_size
+
+					-- 更新进度（传递字节信息用于 UI）
+					local percent = downloaded_size * 100.0 / total_size
+					update_progress(percent, true, downloaded_size, total_size)
+
+					chunk_success = true
+					break
 				end
-				wf:write(body)
-				wf:close()
+				code = 0 -- 响应内容非法，按可重试网络错误处理
+			end
 
-				downloaded_size = downloaded_size + #body
-
-				-- 更新进度（传递字节信息用于 UI）
-				local percent = downloaded_size * 100.0 / total_size
-				update_progress(percent, true, downloaded_size, total_size)
-
-				chunk_success = true
-				break
-			else
+			if not chunk_success then
 				-- 失败，判断是否重试
 				local should_retry_flag, error_type = should_retry_error(code, chunk_retries)
 
@@ -629,6 +663,12 @@ local function download_to_lovefs_chunked(url_base, file_param, fs_path)
 	-- 检查已下载
 	local existing = FS.read(part_path) or ""
 	local downloaded_size = #existing
+	if downloaded_size > total_size then
+		log_info(string.format("检测到异常续传文件（%d > %d），自动重置重下", downloaded_size, total_size))
+		FS.remove(part_path)
+		existing = ""
+		downloaded_size = 0
+	end
 
 	if downloaded_size > 0 then
 		log_info(string.format("续传 %.2f/%.2f KB", downloaded_size / 1024, total_size / 1024))
@@ -651,17 +691,27 @@ local function download_to_lovefs_chunked(url_base, file_param, fs_path)
 			}, DOWNLOAD_CONFIG.chunk_timeout)
 
 			if code == 206 or code == 200 then
-				existing = existing .. body
-				FS.write(part_path, existing)
-				downloaded_size = #existing
+				local ok_resp, new_size = validate_chunk_response(code, body, headers, chunk_start, chunk_end, total_size, downloaded_size)
+				if ok_resp then
+					if code == 200 then
+						existing = body
+					else
+						existing = existing .. body
+					end
+					FS.write(part_path, existing)
+					downloaded_size = new_size
 
-				-- 更新进度（传递字节信息用于 UI）
-				local percent = downloaded_size * 100.0 / total_size
-				update_progress(percent, true, downloaded_size, total_size)
+					-- 更新进度（传递字节信息用于 UI）
+					local percent = downloaded_size * 100.0 / total_size
+					update_progress(percent, true, downloaded_size, total_size)
 
-				chunk_success = true
-				break
-			else
+					chunk_success = true
+					break
+				end
+				code = 0 -- 响应内容非法，按可重试网络错误处理
+			end
+
+			if not chunk_success then
 				local should_retry_flag, error_type = should_retry_error(code, chunk_retries)
 
 				if not should_retry_flag then
