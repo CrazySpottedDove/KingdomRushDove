@@ -5831,26 +5831,6 @@ return {
 		size = 11420,
 		hash = "77960284"
 	},
-	["kr1-desktop/sounds/files/kr4_warmonger_barrack_taunt_1.ogg"] = {
-		size = 11341,
-		hash = "659371c4"
-	},
-	["kr1-desktop/sounds/files/kr4_warmonger_barrack_taunt_2.ogg"] = {
-		size = 9427,
-		hash = "94542c00"
-	},
-	["kr1-desktop/sounds/files/kr4_warmonger_barrack_taunt_3.ogg"] = {
-		size = 10499,
-		hash = "cae3f3d2"
-	},
-	["kr1-desktop/sounds/files/kr4_warmonger_barrack_taunt_4.ogg"] = {
-		size = 12710,
-		hash = "46146ee6"
-	},
-	["kr1-desktop/sounds/files/kr4_warmonger_barrack_unitSwap_upg.ogg"] = {
-		size = 12085,
-		hash = "841c5aec"
-	},
 	["kr1-desktop/sounds/files/kr5_bgmusic_atlas_v1.ogg"] = {
 		size = 2095879,
 		hash = "40d75d80"
