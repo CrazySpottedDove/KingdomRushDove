@@ -268,10 +268,7 @@ function U.point_on_ellipse(center, a, angle, aspect)
 
 	local b = a * aspect
 
-	return {
-		x = center.x + a * cos(angle),
-		y = center.y + b * sin(angle)
-	}
+	return V.v(center.x + a * cos(angle), center.y + b * sin(angle))
 end
 
 ---计算点在椭圆内的距离因子
