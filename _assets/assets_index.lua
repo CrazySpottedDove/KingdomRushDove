@@ -5679,6 +5679,46 @@ return {
 		size = 11555,
 		hash = "33b27b2c"
 	},
+	["kr1-desktop/sounds/files/kr4_dark_army_barrack_armor_of_thorns_upg.ogg"] = {
+		size = 11290,
+		hash = "e72834e2"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_barrack_brutal_strike.ogg"] = {
+		size = 12645,
+		hash = "7e904191"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_barrack_brutal_strike_hit.ogg"] = {
+		size = 22017,
+		hash = "4133d16d"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_barrack_brutal_strike_upg.ogg"] = {
+		size = 12269,
+		hash = "77212085"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_barrack_impervious.ogg"] = {
+		size = 15230,
+		hash = "817c5c33"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_barrack_impervious_upg.ogg"] = {
+		size = 10337,
+		hash = "84a9824c"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_barrack_taunt_1.ogg"] = {
+		size = 13024,
+		hash = "34f39a50"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_barrack_taunt_2.ogg"] = {
+		size = 11827,
+		hash = "931c64e1"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_barrack_taunt_3.ogg"] = {
+		size = 10735,
+		hash = "f8c527a8"
+	},
+	["kr1-desktop/sounds/files/kr4_dark_army_barrack_taunt_4.ogg"] = {
+		size = 11785,
+		hash = "cf459482"
+	},
 	["kr1-desktop/sounds/files/kr4_fallen_ones_bone_flingers_bone_golem_upg.ogg"] = {
 		size = 14575,
 		hash = "5eb864a4"

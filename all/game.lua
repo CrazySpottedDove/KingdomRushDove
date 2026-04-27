@@ -60,7 +60,8 @@ game.required_textures = {
 	"kr4_rotten_forest_tower",
 	"kr4_ember_lords_tower_mage",
 	"kr4_fallen_ones_bone_flingers",
-	"kr4_warmongers_tower_barrack"
+	"kr4_warmongers_tower_barrack",
+	"kr4_dark_army_tower_barrack"
 }
 game.ref_h = REF_H
 game.ref_w = REF_W
@@ -94,7 +95,8 @@ game.required_sounds = {
 	"tower_rotten_forest",
 	"tower_infernal_mage",
 	"tower_bone_flingers",
-	"tower_orc_warriors"
+	"tower_orc_warriors",
+	"tower_dark_knights"
 }
 game.simulation_systems = {
 	"level",

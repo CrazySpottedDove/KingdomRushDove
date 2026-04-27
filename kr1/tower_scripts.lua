@@ -23858,6 +23858,255 @@ end
 
 -- 兽人勇士巢穴 End
 
+-- 黑暗骑士 Begin
+scripts.tower_dark_knights = {}
+
+function scripts.tower_dark_knights.update(this, store)
+	local b = this.barrack
+	local door_sid = 3
+	local function sync_power_to_soldiers(pn, level)
+		for i = 1, b.max_soldiers do
+			local s = b.soldiers[i]
+			if s and s.powers[pn] then
+				s.powers[pn].level = level
+				s.powers[pn].changed = true
+			end
+		end
+	end
+
+	while true do
+		local p_instakill = this.powers.instakill
+		if p_instakill.changed then
+			p_instakill.changed = nil
+			sync_power_to_soldiers("instakill", p_instakill.level)
+		end
+
+		local p_spike = this.powers.spike
+		if p_spike.changed then
+			p_spike.changed = nil
+			sync_power_to_soldiers("spike", p_spike.level)
+		end
+
+		local p_shield = this.powers.shield
+		if p_shield.changed then
+			p_shield.changed = nil
+			sync_power_to_soldiers("shield", p_shield.level)
+		end
+
+		if not this.tower.blocked then
+			for i = 1, b.max_soldiers do
+				local s = b.soldiers[i]
+				if not s or (s.health.dead and not store.entities[s.id]) then
+					if not b.door_open then
+						S:queue("GUITowerOpenDoor")
+						U.animation_start(this, "open", nil, store.tick_ts, 1, door_sid)
+						while not U.animation_finished(this, door_sid) do
+							coroutine.yield()
+						end
+						b.door_open = true
+						b.door_open_ts = store.tick_ts
+					end
+
+					s = E:create_entity(b.soldier_type)
+					s.soldier.tower_id = this.id
+					s.pos:set(this.pos.x + b.respawn_offset.x, this.pos.y + b.respawn_offset.y)
+					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+					s.nav_rally.new = true
+
+					local sp = s.powers
+					local tp = this.powers
+					sp.instakill.level = tp.instakill.level
+					sp.spike.level = tp.spike.level
+					sp.shield.level = tp.shield.level
+					if tp.instakill.level > 0 then
+						sp.instakill.changed = true
+					end
+					if tp.spike.level > 0 then
+						sp.spike.changed = true
+					end
+					if tp.shield.level > 0 then
+						sp.shield.changed = true
+					end
+
+					U.soldier_inherit_tower_buff_factor(s, this)
+					queue_insert(store, s)
+					b.soldiers[i] = s
+					signal.emit("tower-spawn", this, s)
+				end
+			end
+		end
+
+		if b.door_open and store.tick_ts - b.door_open_ts > b.door_hold_time then
+			U.animation_start(this, "close", nil, store.tick_ts, 1, door_sid)
+			while not U.animation_finished(this, door_sid) do
+				coroutine.yield()
+			end
+			b.door_open = false
+		end
+
+		if b.rally_new then
+			b.rally_new = false
+			signal.emit("rally-point-changed", this)
+
+			local all_dead = true
+			for i = 1, b.max_soldiers do
+				local s = b.soldiers[i]
+				if s then
+					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+					s.nav_rally.new = true
+					all_dead = all_dead and s.health.dead
+				end
+			end
+
+			if not all_dead and this.sound_events.change_rally_point then
+				S:queue(this.sound_events.change_rally_point)
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.soldier_dark_knight = {}
+
+function scripts.soldier_dark_knight.on_damage(this, store, damage)
+	return true
+end
+
+function scripts.soldier_dark_knight.insert(this, store)
+	if not scripts.soldier_barrack.insert(this, store) then
+		return false
+	end
+
+	-- 首帧把三层都对齐到 idle，避免出生时沿用到不存在的旧动画名导致层错位
+	for i = 1, 3 do
+		local s = this.render.sprites[i]
+		s.name = "idle"
+		s.ts = store.tick_ts
+	end
+
+	local p = this.powers.spike
+	if p and p.level > 0 then
+		this.health.dark_spiked_armor = p.dark_spiked_armor[p.level]
+	end
+
+	return true
+end
+
+function scripts.soldier_dark_knight.update(this, store)
+	local brk, sta
+	local function sync_flip()
+		local f = this.render.sprites[1].flip_x
+		this.render.sprites[2].flip_x = f
+		this.render.sprites[3].flip_x = f
+	end
+	local function target_is_melee_locked(t)
+		return t and t.health and not t.health.dead and t.enemy and table.contains(t.enemy.blockers, this.id)
+	end
+
+	while true do
+		local p_instakill = this.powers.instakill
+		if p_instakill.changed then
+			p_instakill.changed = nil
+			SU.soldier_power_upgrade(this, "instakill")
+			local atk = this.melee.attacks[2]
+			atk.disabled = p_instakill.level < 1
+			atk.chance = atk.chance_inc * p_instakill.level
+		end
+
+		local p_spike = this.powers.spike
+		if p_spike.changed then
+			p_spike.changed = nil
+			SU.soldier_power_upgrade(this, "spike")
+			this.health.dark_spiked_armor = p_spike.level > 0 and p_spike.dark_spiked_armor[p_spike.level] or 0
+		end
+
+		local p_shield = this.powers.shield
+		if p_shield.changed then
+			p_shield.changed = nil
+			SU.soldier_power_upgrade(this, "shield")
+		end
+
+		if this.health.dead then
+			SU.y_soldier_death(store, this)
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+			sync_flip()
+			goto dark_knight_continue
+		end
+
+		if this.dodge then
+			local shield = this.dodge.shield
+			local pow = this.powers[this.dodge.power_name]
+			local target = this.soldier.target_id and store.entities[this.soldier.target_id]
+
+			if pow and pow.level > 0 and target_is_melee_locked(target) and this.motion.arrived and store.tick_ts - shield.ts > shield.cooldown and band(shield.vis_bans, target.vis.flags) == 0 then
+				local start_ts = store.tick_ts
+				local interrupted = false
+				shield.ts = store.tick_ts
+				this.health.ignore_damage = true
+				S:queue(shield.sound)
+				U.y_animation_play(this, shield.animation_start, nil, store.tick_ts, 1)
+				U.y_wait(store, shield.hit_time)
+				U.y_animation_play(this, "imperviousStop", nil, store.tick_ts, 1)
+
+				while store.tick_ts - start_ts < shield.duration do
+					if this.nav_rally.new then
+						interrupted = true
+						break
+					end
+
+					local cur = this.soldier.target_id and store.entities[this.soldier.target_id]
+					if not target_is_melee_locked(cur) then
+						interrupted = true
+						break
+					end
+
+					coroutine.yield()
+				end
+
+				this.health.ignore_damage = false
+				U.y_animation_play(this, shield.animation_end, nil, store.tick_ts, 1)
+
+				if interrupted then
+					goto dark_knight_continue
+				end
+			end
+		end
+
+		if SU.go_to_forced_waypoint(this, store) then
+			goto dark_knight_continue
+		end
+
+		while this.nav_rally.new do
+			if SU.y_soldier_new_rally(store, this) then
+				goto dark_knight_continue
+			end
+		end
+
+		brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+		if brk or sta ~= A_NO_TARGET then
+			goto dark_knight_continue
+		end
+
+		if SU.soldier_go_back_step(store, this) then
+			goto dark_knight_continue
+		end
+
+		SU.soldier_idle(store, this)
+		sync_flip()
+		SU.soldier_regen(store, this)
+
+		::dark_knight_continue::
+		coroutine.yield()
+	end
+end
+
+-- 黑暗骑士 End
+
 -- 掷骨者 Begin
 scripts.tower_bone_flingers = {}
 

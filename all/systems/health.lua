@@ -92,6 +92,24 @@ local function dnum_draw_disabled(g)
 	return
 end
 
+local function queue_dark_spike_damage(entities, new_damage_queue, e, h, d)
+	if not (h.dark_spiked_armor and h.dark_spiked_armor > 0 and e.soldier and d.source_id and e.soldier.target_id == d.source_id) then
+		return
+	end
+
+	local t = entities[d.source_id]
+	if not (t and t.health and not t.health.dead) then
+		return
+	end
+
+	local sad = E:create_entity("damage")
+	sad.damage_type = h.dark_damage_type or DAMAGE_PHYSICAL
+	sad.value = h.dark_spiked_armor
+	sad.source_id = e.id
+	sad.target_id = t.id
+	new_damage_queue[#new_damage_queue + 1] = sad
+end
+
 local function dnum_on_applied_enabled(store, d, target)
 	if not d.damage_applied or d.damage_applied <= 0 or not target or not target.pos then
 		return
@@ -505,6 +523,11 @@ function M.register(sys)
 			if e then
 				local h = e.health
 
+				-- KRV 黑骑士：开盾无敌时也能靠荆棘持续反打
+				if h.ignore_damage then
+					queue_dark_spike_damage(entities, new_damage_queue, e, h, d)
+				end
+
 				if not (h.dead or band(h.immune_to, d.damage_type) ~= 0 or h.ignore_damage or h.on_damage and not h.on_damage(e, store, d)) then
 					local starting_hp = h.hp
 
@@ -570,6 +593,8 @@ function M.register(sys)
 								new_damage_queue[#new_damage_queue + 1] = sad
 							end
 						end
+
+						queue_dark_spike_damage(entities, new_damage_queue, e, h, d)
 
 						damages_applied_count = damages_applied_count + 1
 						damages_applied[damages_applied_count] = d

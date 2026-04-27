@@ -571,6 +571,14 @@ return {
 			tt_title = _("TOWER_ORC_WARRIORS_NAME"),
 			tt_desc = _("TOWER_ORC_WARRIORS_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_dark_knights",
+			type = "dark_knights",
+			image = "kr4_main_icons_0005",
+			place = 27,
+			tt_title = _("TOWER_DARK_KNIGHTS_NAME"),
+			tt_desc = _("TOWER_DARK_KNIGHTS_DESCRIPTION")
+		}),
 		tpl.rally,
 		tpl.sell
 	}},
@@ -3198,5 +3206,48 @@ return {
 			tt_title = _("TOWER_INFERNAL_MAGE_TELEPORT_NAME_3"),
 			tt_desc = _("TOWER_INFERNAL_MAGE_TELEPORT_DESCRIPTION_3")
 		}}
-	}), tpl.sell}}
+	}), tpl.sell}},
+	dark_knights = {{M(tpl.upgrade_power, {
+		action_arg = "instakill",
+		image = "kr4_special_icons_0028",
+		place = 6,
+		sounds = {"TowerDarkKnightsInstakillTaunt"},
+		tt_phrase = _("TOWER_DARK_KNIGHTS_INSTAKILL_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_DARK_KNIGHTS_INSTAKILL_NAME_1"),
+			tt_desc = _("TOWER_DARK_KNIGHTS_INSTAKILL_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_DARK_KNIGHTS_INSTAKILL_NAME_2"),
+			tt_desc = _("TOWER_DARK_KNIGHTS_INSTAKILL_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_DARK_KNIGHTS_INSTAKILL_NAME_3"),
+			tt_desc = _("TOWER_DARK_KNIGHTS_INSTAKILL_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "spike",
+		image = "kr4_special_icons_0029",
+		place = 5,
+		sounds = {"TowerDarkKnightsSpikeTaunt"},
+		tt_phrase = _("TOWER_DARK_KNIGHTS_SPIKE_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_DARK_KNIGHTS_SPIKE_NAME_1"),
+			tt_desc = _("TOWER_DARK_KNIGHTS_SPIKE_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_DARK_KNIGHTS_SPIKE_NAME_2"),
+			tt_desc = _("TOWER_DARK_KNIGHTS_SPIKE_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_DARK_KNIGHTS_SPIKE_NAME_3"),
+			tt_desc = _("TOWER_DARK_KNIGHTS_SPIKE_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "shield",
+		image = "kr4_special_icons_0027",
+		place = 7,
+		sounds = {"TowerDarkKnightsShieldTaunt"},
+		tt_phrase = _("TOWER_DARK_KNIGHTS_SHIELD_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_DARK_KNIGHTS_SHIELD_NAME_1"),
+			tt_desc = _("TOWER_DARK_KNIGHTS_SHIELD_DESCRIPTION_1")
+		}}
+	}), tpl.rally, tpl.sell}}
 }

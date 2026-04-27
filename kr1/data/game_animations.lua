@@ -6715,6 +6715,11 @@ return {
 		prefix = "darkarmy_soldier_lvl4_layer1",
 		to = 22
 	},
+	darkarmy_soldier_lvl4_layer1_running = {
+		from = 2,
+		prefix = "darkarmy_soldier_lvl4_layer1",
+		to = 22
+	},
 	darkarmy_soldier_lvl4_layer2_attack = {
 		from = 23,
 		prefix = "darkarmy_soldier_lvl4_layer2",
@@ -6755,6 +6760,11 @@ return {
 		prefix = "darkarmy_soldier_lvl4_layer2",
 		to = 22
 	},
+	darkarmy_soldier_lvl4_layer2_running = {
+		from = 2,
+		prefix = "darkarmy_soldier_lvl4_layer2",
+		to = 22
+	},
 	darkarmy_soldier_lvl4_layer3_attack = {
 		from = 23,
 		prefix = "darkarmy_soldier_lvl4_layer3",
@@ -6791,6 +6801,11 @@ return {
 		to = 195
 	},
 	darkarmy_soldier_lvl4_layer3_walk = {
+		from = 2,
+		prefix = "darkarmy_soldier_lvl4_layer3",
+		to = 22
+	},
+	darkarmy_soldier_lvl4_layer3_running = {
 		from = 2,
 		prefix = "darkarmy_soldier_lvl4_layer3",
 		to = 22
@@ -47190,6 +47205,26 @@ return {
 		prefix = "ember_lords_mage_tower_lvl4_layer3",
 		from = 28,
 		to = 52
+	},
+	darkarmy_barrack_tower_lvl4_layer1_idle = {
+		prefix = "darkarmy_barrack_tower_lvl4_layer1",
+		from = 1,
+		to = 1
+	},
+	darkarmy_barrack_tower_lvl4_layer2_idle = {
+		prefix = "darkarmy_barrack_tower_lvl4_layer2",
+		from = 1,
+		to = 1
+	},
+	darkarmy_barrack_tower_lvl4_layer2_open = {
+		prefix = "darkarmy_barrack_tower_lvl4_layer2",
+		from = 1,
+		to = 14
+	},
+	darkarmy_barrack_tower_lvl4_layer2_close = {
+		prefix = "darkarmy_barrack_tower_lvl4_layer2",
+		from = 14,
+		to = 1
 	},
 	warmongers_barrack_towers_lvl4_layer2_close = {
 		prefix = "warmongers_barrack_towers_lvl4_layer2",

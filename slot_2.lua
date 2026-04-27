@@ -1170,6 +1170,7 @@ local obj1 = {
 		["tower_rotten_forest"] = true,
 		["tower_infernal_mage"] = true,
 		["tower_orc_warriors"] = true,
+		["tower_dark_knights"] = true,
 		["boss_bull_king"] = true,
 		["boss_corrupted_denas"] = true,
 		["boss_crocs_lvl1"] = true,
