@@ -3957,7 +3957,7 @@ tt = RT("soldier_dark_knight", "soldier_militia")
 AC(tt, "powers", "dodge")
 tt.health.armor = 0.65
 tt.health.dead_lifetime = 8
-tt.health.hp_max = 275
+tt.health.hp_max = 300
 AC(tt.health, "constant_spiked_armor")
 tt.health_bar.offset = vec_2(0, 35)
 tt.info.portrait = "kr4_info_portraits_soldiers_0002"
