@@ -8682,10 +8682,11 @@ function scripts.arrow5_fixed_height.insert(this, store)
 	return scripts.arrow.insert(this, store)
 end
 
+scripts.mod_attract = {}
+
 -- 敌人被某个源吸引，直接朝着这个源行走，不做任何其它事情。这种敌人必须保证处于无法被拦截状态
 -- 敌人需实现 walk 动画
-scripts.enemy_attracted = {}
-scripts.enemy_attracted.update = function(this, store)
+local function enemy_attracted_logic(this, store)
 	local this_pos = this.pos
 	-- 这里使用引用，不具体到数值，是为了之后可能的 attract_pos 动态变化拓展做准备
 	local attract_pos = this._attract_pos
@@ -8697,9 +8698,12 @@ scripts.enemy_attracted.update = function(this, store)
 	local d_angle = math.pi / 180
 
 	while true do
+		if this._attract_pos == nil then
+			-- 失去吸引点了，说明这个状态被强制移除了，直接结束
+			return
+		end
 		if this.health.dead then
-			SU.y_enemy_death(store, this)
-
+			-- 死亡的事情，交给原逻辑处理
 			return
 		end
 
@@ -8729,7 +8733,15 @@ scripts.enemy_attracted.update = function(this, store)
 	end
 end
 
-scripts.mod_attract = {}
+local function enemy_attracted_on_return(this, store)
+	U.bans_remove(this.vis, F_BLOCK)
+
+	local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {this.nav_path.pi}, {this.nav_path.spi})
+
+	if nodes and nodes[1] then
+		this.nav_path.pi, this.nav_path.spi, this.nav_path.ni = unpack(nodes[1], 1, 3)
+	end
+end
 
 function scripts.mod_attract.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
@@ -8738,16 +8750,13 @@ function scripts.mod_attract.insert(this, store)
 		return false
 	end
 
+	if not U.overwrite_main_script(target, enemy_attracted_logic, enemy_attracted_on_return) then
+		return false
+	end
+
 	-- _attract_pos 是 this.pos 的只读引用!
 	target._attract_pos = this.pos
 	target._attract_radius = this.attract_radius * (0.05 + 0.95 * math.random())
-
-	if not target.main_script.origin_update then
-		target.main_script.origin_update = target.main_script.update
-	end
-
-	target.main_script.update = scripts.enemy_attracted.update
-	target.main_script.co = coroutine.create(target.main_script.update)
 
 	U.bans_add(target.vis, F_BLOCK)
 	U.unblock_all(store, target)
@@ -8764,16 +8773,6 @@ function scripts.mod_attract.remove(this, store)
 
 	target._attract_pos = nil
 	target._attract_radius = nil
-	target.main_script.update = target.main_script.origin_update
-	target.main_script.co = coroutine.create(target.main_script.update)
-
-	U.bans_remove(target.vis, F_BLOCK)
-
-	local nodes = P:nearest_nodes(target.pos.x, target.pos.y, {target.nav_path.pi}, {target.nav_path.spi})
-
-	if nodes and nodes[1] then
-		target.nav_path.pi, target.nav_path.spi, target.nav_path.ni = unpack(nodes[1], 1, 3)
-	end
 
 	return true
 end

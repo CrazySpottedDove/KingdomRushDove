@@ -21,6 +21,9 @@ E:register_c_ffi("heading", heading.new(1))
 -- local heading = E:register_c("heading")
 -- heading.angle = 0
 
+local constant_spiked_armor = require("lib.constant_spiked_armor")
+E:register_c_ffi("constant_spiked_armor", constant_spiked_armor.new(0, DAMAGE_PHYSICAL))
+
 local health = E:register_c("health")
 
 health.hp_max = 10
@@ -36,6 +39,7 @@ health.armor = 0
 health.magic_armor = 0
 health.poison_armor = 0
 health.spiked_armor = 0
+health.constant_spiked_armor = nil
 health.damage_factor = 1
 health.damage_factor_magical = 1
 health.immune_to = 0

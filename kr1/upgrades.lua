@@ -1031,7 +1031,8 @@ upgrades.soldiers = {
 	"soldier_flingers_skeleton",
 	"soldier_flingers_skeleton_warrior",
 	"soldier_orc_warrior",
-	"soldier_orc_warrior_captain"
+	"soldier_orc_warrior_captain",
+	"soldier_dark_knight"
 }
 
 upgrades.barrack_soldiers = {
@@ -1060,7 +1061,8 @@ upgrades.barrack_soldiers = {
 	"soldier_tower_dwarf_lvl4",
 	"tower_paladin_covenant_soldier_lvl4",
 	"soldier_orc_warrior",
-	"soldier_orc_warrior_captain"
+	"soldier_orc_warrior_captain",
+	"soldier_dark_knight"
 }
 
 upgrades.towers_with_barrack = {

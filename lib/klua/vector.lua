@@ -78,6 +78,10 @@ ffi.metatype("vec2", {
 		scalar_sub = function(self, x, y)
 			self.x = self.x - x
 			self.y = self.y - y
+		end,
+		-- 相同
+		equals = function(self, other)
+			return self.x == other.x and self.y == other.y
 		end
 	},
 	-- 返回新的向量

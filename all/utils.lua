@@ -1422,13 +1422,15 @@ function U.melee_slot_enemy_position(enemy, soldier, rank, back)
 		y_off = 6
 	end
 
-	local enemy_on_the_right = abs(km.signed_unroll(enemy.heading.angle)) > PI * 0.5
+	local enemy_on_the_right = not soldier.render.sprites[1].flip_x
+
+	-- local enemy_on_the_right = abs(km.signed_unroll(enemy.heading.angle)) > PI * 0.5
 
 	if back then
 		enemy_on_the_right = not enemy_on_the_right
 	end
 
-	local enemy_pos = V.v(soldier.pos.x + (soldier.soldier.melee_slot.x + x_off + enemy.enemy.melee_slot_offset.x) * (enemy_on_the_right and 1 or -1), soldier.pos.y + soldier.soldier.melee_slot.y + y_off + enemy.enemy.melee_slot_offset.y)
+	local enemy_pos = V.v(soldier.pos.x + (soldier.soldier.melee_slot_offset.x + x_off + enemy.enemy.melee_slot.x) * (enemy_on_the_right and 1 or -1), soldier.pos.y + soldier.soldier.melee_slot_offset.y + y_off + enemy.enemy.melee_slot.y)
 
 	return enemy_pos, enemy_on_the_right
 end
@@ -3102,6 +3104,34 @@ function U.get_nearest_valid_rally_pos(pos)
 			return node_pos:clone()
 		end
 	end
+end
+
+--- 运行时切换一个单位的执行脚本
+---@param entity table 实体
+---@param new_script function 新的执行脚本，函数签名为 function(this, store
+---@param on_new_script_return function? 可选参数，在 new_script 结束时调用，函数签名同 new_script
+--- @return boolean 是否成功切换
+function U.overwrite_main_script(entity, new_script, on_new_script_return)
+	-- 只允许出现一个强制执行逻辑
+	if entity._main_script_overwritten then
+		return false
+	end
+
+	entity._main_script_overwritten = true
+
+	local script_wrapper = function(this, store)
+		-- 在原协程头插入新的逻辑。当新的逻辑结束时，自然退出，协程继续执行原有逻辑
+		new_script(this, store)
+		if on_new_script_return then
+			on_new_script_return(this, store)
+		end
+		entity._main_script_overwritten = nil
+		entity.main_script.update(this, store)
+	end
+
+	entity.main_script.co = coroutine.create(script_wrapper)
+
+	return true
 end
 
 return U

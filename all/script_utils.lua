@@ -4807,4 +4807,94 @@ function SU.spawn_fx(template, pos, store)
 	return fx
 end
 
+-- 受到嘲讽吸引的敌人的更新逻辑。保证调用该方法的敌人有 melee 域
+local function enemy_mocked_logic(this, store)
+	-- 嘲讽源解除嘲讽，退出
+	if not this._mock_source_id then
+		return
+	end
+	-- 嘲讽源死亡或离开游戏，退出
+	local source = store.entities[this._mock_source_id]
+	if not source or source.health.dead then
+		return
+	end
+
+	-- 逻辑上，让敌人被嘲讽源拦截，以使相关函数正常工作
+	if not table.contains(this.enemy.blockers, source.id) then
+		this.enemy.blockers[1] = source.id
+	end
+
+	while true do
+		-- 嘲讽源解除嘲讽，退出
+		if not this._mock_source_id then
+			return
+		end
+		-- 嘲讽源死亡或离开游戏，退出
+		local source = store.entities[this._mock_source_id]
+		if not source or source.health.dead then
+			return
+		end
+		-- 敌人死亡，退出
+		if this.health.dead then
+			-- 具体怎么死的，交给原逻辑
+			return
+		end
+
+		if not this.unit.is_stunned then
+			local destination, flip_x = U.melee_slot_enemy_position(this, source, 1)
+			if not (destination:equals(this.pos)) then
+				U.set_destination(this, destination)
+				local an, af = U.animation_name_facing_point(this, "walk", destination)
+				U.animation_start(this, an, af, store.tick_ts, true)
+				U.walk(this, store.tick_length)
+				-- 还需要更新敌人的 nav_path
+				local nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, {this.nav_path.pi}, {this.nav_path.spi}, true)
+				this.nav_path.ni = nearest_nodes[1][3]
+				coroutine.yield()
+				this.motion.speed.x = 0
+				this.motion.speed.y = 0
+			else
+				this.motion.arrived = true
+				U.animation_start(this, "idle", flip_x, store.tick_ts, true)
+				-- 让敌人只会傻乎乎地近战普攻
+				SU.y_enemy_melee_attacks(store, this, source)
+			end
+
+			coroutine.yield()
+		else
+			SU.y_enemy_stun(store, this)
+		end
+	end
+end
+
+function SU.is_valid_mock_target(target)
+	return target.melee and band(target.vis.flags, bor(F_BOSS, F_FLYING)) == 0 and band(target.vis.bans, F_BLOCK) == 0 and not target._main_script_overwritten
+end
+
+--- 嘲讽一个敌人，需要保证敌人有 melee 属性
+---@param store any
+---@param this any
+---@param target any
+---@return boolean 是否成功嘲讽
+function SU.mock_enemy(this, target)
+	if U.overwrite_main_script(target, enemy_mocked_logic) then
+		target._mock_source_id = this.id
+
+		return true
+	end
+	return false
+end
+
+function SU.unmock_enemy(target)
+	for i = 1, #target.enemy.blockers do
+		if target.enemy.blockers[i] == target._mock_source_id then
+			table.remove(target.enemy.blockers, i)
+
+			break
+		end
+	end
+
+	target._mock_source_id = nil
+end
+
 return SU

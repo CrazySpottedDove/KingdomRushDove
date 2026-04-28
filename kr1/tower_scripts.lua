@@ -23986,42 +23986,62 @@ function scripts.soldier_dark_knight.insert(this, store)
 	end
 
 	local p = this.powers.spike
-	if p and p.level > 0 then
-		this.health.dark_spiked_armor = p.dark_spiked_armor[p.level]
+	if p.level > 0 then
+		this.health.constant_spiked_armor.value = p.spiked_armor_inc * p.level
 	end
 
 	return true
 end
 
 function scripts.soldier_dark_knight.update(this, store)
+	if this.vis._bans then
+		this.vis.bans = this.vis._bans
+	end
+
 	local brk, sta
 	local function sync_flip()
 		local f = this.render.sprites[1].flip_x
 		this.render.sprites[2].flip_x = f
 		this.render.sprites[3].flip_x = f
 	end
-	local function target_is_melee_locked(t)
-		return t and t.health and not t.health.dead and t.enemy and table.contains(t.enemy.blockers, this.id)
+
+	local p_instakill = this.powers.instakill
+	local p_spike = this.powers.spike
+	local p_shield = this.powers.shield
+	local shield_attack = this.dodge.shield
+
+	local mocked_targets = {}
+	local function do_mock()
+		local enemies = U.find_enemies_in_range_filter_on(this.pos, shield_attack.range, shield_attack.vis_flags, shield_attack.vis_bans, SU.is_valid_mock_target)
+		if enemies then
+			for i = 1, #enemies do
+				if not table.contains(mocked_targets, enemies[i]) then
+					SU.mock_enemy(this, enemies[i])
+					mocked_targets[#mocked_targets + 1] = enemies[i]
+					this.melee.attacks[2].chance = this.melee.attacks[2].chance + shield_attack.instakill_chance_inc
+				end
+			end
+		end
 	end
 
 	while true do
-		local p_instakill = this.powers.instakill
 		if p_instakill.changed then
 			p_instakill.changed = nil
 			SU.soldier_power_upgrade(this, "instakill")
 			local atk = this.melee.attacks[2]
 			atk.disabled = p_instakill.level < 1
-			atk.chance = atk.chance_inc * p_instakill.level
+			atk.base_chance = atk.chance_inc * p_instakill.level
+			if atk.chance < atk.base_chance then
+				atk.chance = atk.base_chance
+			end
 		end
 
-		local p_spike = this.powers.spike
 		if p_spike.changed then
 			p_spike.changed = nil
 			SU.soldier_power_upgrade(this, "spike")
-			this.health.dark_spiked_armor = p_spike.level > 0 and p_spike.dark_spiked_armor[p_spike.level] or 0
+			this.health.constant_spiked_armor.value = p_spike.spiked_armor_inc * p_spike.level
 		end
 
-		local p_shield = this.powers.shield
 		if p_shield.changed then
 			p_shield.changed = nil
 			SU.soldier_power_upgrade(this, "shield")
@@ -24038,47 +24058,58 @@ function scripts.soldier_dark_knight.update(this, store)
 			goto dark_knight_continue
 		end
 
-		if this.dodge then
-			local shield = this.dodge.shield
-			local pow = this.powers[this.dodge.power_name]
-			local target = this.soldier.target_id and store.entities[this.soldier.target_id]
+		if ready_to_use_power(p_shield, shield_attack, store) then
+			if U.find_first_enemy_in_range_filter_on(this.pos, shield_attack.range, shield_attack.vis_flags, shield_attack.vis_bans, SU.is_valid_mock_target) then
+				this.health.damage_factor = this.health.damage_factor * shield_attack.damage_factor
 
-			if pow and pow.level > 0 and target_is_melee_locked(target) and this.motion.arrived and store.tick_ts - shield.ts > shield.cooldown and band(shield.vis_bans, target.vis.flags) == 0 then
-				local start_ts = store.tick_ts
-				local interrupted = false
-				shield.ts = store.tick_ts
-				this.health.ignore_damage = true
-				S:queue(shield.sound)
-				U.y_animation_play(this, shield.animation_start, nil, store.tick_ts, 1)
-				U.y_wait(store, shield.hit_time)
+				shield_attack.ts = store.tick_ts
+				S:queue(shield_attack.sound)
+				do_mock()
+				U.y_animation_play(this, shield_attack.animation_start, nil, store.tick_ts, 1)
+				do_mock()
+				U.y_wait(store, shield_attack.hit_time)
+				do_mock()
 				U.y_animation_play(this, "imperviousStop", nil, store.tick_ts, 1)
+				do_mock()
 
-				while store.tick_ts - start_ts < shield.duration do
+				local last_mock_ts = store.tick_ts
+				local start_ts = store.tick_ts
+
+				while store.tick_ts - start_ts < shield_attack.duration do
 					if this.nav_rally.new then
-						interrupted = true
 						break
 					end
 
-					local cur = this.soldier.target_id and store.entities[this.soldier.target_id]
-					if not target_is_melee_locked(cur) then
-						interrupted = true
-						break
+					if store.tick_ts - last_mock_ts > 0.1 then
+						last_mock_ts = store.tick_ts
+						do_mock()
 					end
 
 					coroutine.yield()
 				end
 
-				this.health.ignore_damage = false
-				U.y_animation_play(this, shield.animation_end, nil, store.tick_ts, 1)
-
-				if interrupted then
-					goto dark_knight_continue
+				local enemy_continue_to_block
+				if not this.nav_rally.new and #mocked_targets > 0 and not this.soldier.target_id then
+					enemy_continue_to_block = table.find_best(mocked_targets, function(e)
+						return e.health.hp
+					end)
 				end
-			end
-		end
 
-		if SU.go_to_forced_waypoint(this, store) then
-			goto dark_knight_continue
+				for i = #mocked_targets, 1, -1 do
+					SU.unmock_enemy(mocked_targets[i])
+					mocked_targets[i] = nil
+				end
+
+				if enemy_continue_to_block then
+					U.block_enemy(store, this, enemy_continue_to_block)
+				end
+
+				U.y_animation_play(this, shield_attack.animation_end, nil, store.tick_ts, 1)
+
+				this.health.damage_factor = this.health.damage_factor / shield_attack.damage_factor
+			else
+				shield_attack.ts = store.tick_ts + 0.3
+			end
 		end
 
 		while this.nav_rally.new do

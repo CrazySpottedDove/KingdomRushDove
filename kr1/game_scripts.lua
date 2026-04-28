@@ -11467,6 +11467,8 @@ function scripts.soldier_drow.insert(this, store)
 				for level = 1, p.level do
 					this.health.spiked_armor = this.health.spiked_armor + p.spiked_armor_inc
 				end
+				this.health.spiked_armor = this.health.spiked_armor + p.spiked_armor_inc * (p.level - p.last_level)
+				p.last_level = p.level
 			end
 		end
 
@@ -11502,7 +11504,8 @@ function scripts.soldier_drow.update(this, store)
 				end
 
 				if pn == "blade_mail" then
-					this.health.spiked_armor = p.spiked_armor_inc + this.health.spiked_armor
+					this.health.spiked_armor = this.health.spiked_armor - p.spiked_armor_inc * (p.level - p.last_level)
+					p.last_level = p.level
 					aura.hidden = nil
 				end
 			end
