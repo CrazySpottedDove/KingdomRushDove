@@ -576,7 +576,7 @@ function sys.tween:on_insert(entity, store)
 			for j = 1, #p.keys do
 				local n = p.keys[j]
 				for k = 1, 2 do
-					if type(n[i]) == "string" then
+					if type(n[k]) == "string" then
 						local nf = loadstring("return " .. n[k])
 						local env = {}
 
