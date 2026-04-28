@@ -59,12 +59,12 @@ function path_db:collect_connect_info()
 		self.path_connections_spi_to_ni[from_key] = {}
 		for spi, subpath in ipairs(from_path) do
 			local last_node = subpath[#subpath]
-			local _, newspi, newni, dist = unpack(self:nearest_nodes(last_node.x, last_node.y, {to_key}, {spi})[1])
+			local nearest_node = self:nearest_nodes(last_node.x, last_node.y, {to_key}, {spi})[1]
 
-			if dist > PATH_POINTS_DISTANCE * 4 then
+			if nearest_node[4] > PATH_POINTS_DISTANCE * 4 then
 				self.path_connections_spi_to_ni[from_key][spi] = 1
 			else
-				self.path_connections_spi_to_ni[from_key][spi] = newni
+				self.path_connections_spi_to_ni[from_key][spi] = nearest_node[3]
 			end
 		end
 	end
@@ -195,7 +195,7 @@ function path_db:path(index, subindex)
 	return self.paths[index][subindex]
 end
 
-function path_db:path_width(index, subindex, nodeindex)
+function path_db:path_width(index)
 	return self.path_widths[index] or 42
 end
 
@@ -234,19 +234,11 @@ function path_db:set_visible_end_node(pi, node)
 end
 
 function path_db:get_visible_start_node(pi)
-	local ni = self.visible_path_start_node[pi]
-
-	ni = ni or 1
-
-	return ni
+	return self.visible_path_start_node[pi] or 1
 end
 
 function path_db:get_visible_end_node(pi)
-	local ni = self.visible_path_end_node[pi]
-
-	ni = ni or #self.paths[pi]
-
-	return ni
+	return self.visible_path_end_node[pi] or #self.paths[pi]
 end
 
 function path_db:set_start_node(pi, ni)
@@ -336,49 +328,78 @@ function path_db:point_within_distance(x, y, dist)
 	return false
 end
 
---- 查找距离指定点 (x, y) 最近的路径节点列表（可筛选路径、子路径、有效性等）。
+--- 查找距离指定点 (x, y) 最近的路径节点列表（可筛选路径、子路径、有效性等）。该函数可能开销较大，请合理使用。
 ---@param x number 目标点的x坐标
 ---@param y number 目标点的y坐标
 ---@param path_indexes table|nil 可选，只在这些路径索引中查找（如 {1,2,3}），nil表示全部路径
 ---@param subpath_indexes table|nil 可选，只在这些子路径索引中查找（如 {1,2,3}），nil表示只查找第1条子路径
 ---@param valid_only boolean|nil 可选，true时只查找激活且有效的路径节点
 ---@param flags number|nil 可选，节点有效性判定时用到的标志位
----@return table nodes 按距离升序排列的最近节点列表，每个元素为 {pi, spi, ni, dist}
+---@return table nodes 按距离升序排列的最近节点列表，每个元素为 {pi, spi, ni, dist}，且每个主路径只返回一个点。
 function path_db:nearest_nodes(x, y, path_indexes, subpath_indexes, valid_only, flags)
 	local nodes = {}
 
-	for pi = 1, #self.paths do
-		if path_indexes and not table.contains(path_indexes, pi) then
-		-- block empty
-		else
-			subpath_indexes = subpath_indexes or {1}
+	local paths = self.paths
 
-			if valid_only and not self:is_path_active(pi) then
-			-- block empty
-			else
-				local n_dist = 9e+99
+	if path_indexes then
+		paths = {}
+		for i = 1, #path_indexes do
+			paths[i] = self.paths[path_indexes[i]]
+		end
+	end
+
+	subpath_indexes = subpath_indexes or {1}
+
+	if valid_only then
+		for pi = 1, #paths do
+			if self:is_path_active(pi) then
+				local n_dist2 = 1e10
 				local n_ni, n_spi
 
-				for _, spi in pairs(subpath_indexes) do
-					local nodes = self.paths[pi][spi]
-
-					for ni = 1, #nodes do
-						local o = nodes[ni]
-						local dist = V.dist(o.x, o.y, x, y)
-
-						if dist < n_dist and (not valid_only or self:is_node_valid(pi, ni, flags)) then
-							n_dist = dist
+				for i = 1, #subpath_indexes do
+					local spi = subpath_indexes[i]
+					local nodes_of_this_subpath = paths[pi][spi]
+					for ni = 1, #nodes_of_this_subpath do
+						local node = nodes_of_this_subpath[ni]
+						local dx = node.x - x
+						local dy = node.y - y
+						local dist2 = dx * dx + dy * dy
+						if dist2 < n_dist2 and self:is_node_valid(pi, ni, flags) then
 							n_ni = ni
 							n_spi = spi
+							n_dist2 = dist2
 						end
 					end
 				end
 
-				if not n_ni then
-					log.debug("nearest node is nil for path %s", pi)
-				else
-					table.insert(nodes, {pi, n_spi, n_ni, n_dist})
+				if n_ni then
+					nodes[#nodes + 1] = {pi, n_spi, n_ni, math.sqrt(n_dist2)}
 				end
+			end
+		end
+	else
+		for pi = 1, #paths do
+			local n_dist2 = 1e10
+			local n_ni, n_spi
+
+			for i = 1, #subpath_indexes do
+				local spi = subpath_indexes[i]
+				local nodes_of_this_subpath = paths[pi][spi]
+				for ni = 1, #nodes_of_this_subpath do
+					local node = nodes_of_this_subpath[ni]
+					local dx = node.x - x
+					local dy = node.y - y
+					local dist2 = dx * dx + dy * dy
+					if dist2 < n_dist2 then
+						n_ni = ni
+						n_spi = spi
+						n_dist2 = dist2
+					end
+				end
+			end
+
+			if n_ni then
+				nodes[#nodes + 1] = {pi, n_spi, n_ni, math.sqrt(n_dist2)}
 			end
 		end
 	end
@@ -436,13 +457,13 @@ function path_db:remove_invalid_range(index, from, to)
 end
 
 function path_db:is_node_valid(pi, ni, flags)
-	local path = self:path(pi, 1)
+	local path = self.paths[pi][1]
 
 	if ni <= 0 or ni >= #path + 1 then
 		return false
 	end
 
-	if not self:is_path_active(pi) then
+	if not self.active_paths[pi] then
 		return false
 	end
 
@@ -463,32 +484,18 @@ end
 
 function path_db:get_valid_nodes(pi, flags)
 	local node_idxs = {}
-	local path = self:path(pi)
+	local path = self.paths[pi][1]
+	local next_insert_idx = 1
 
 	for i = 1, #path do
 		if self:is_node_valid(pi, i, flags) then
-			table.insert(node_idxs, i)
+			node_idxs[next_insert_idx] = i
+			next_insert_idx = next_insert_idx + 1
 		end
 	end
 
 	return node_idxs
 end
-
--- function path_db:valid_node_nearby(x, y, path_width_factor, flags)
--- 	path_width_factor = path_width_factor or 1
-
--- 	local nodes = self:nearest_nodes(x, y)
-
--- 	for _, n in pairs(nodes) do
--- 		local pi, spi, ni, dist = unpack(n)
-
--- 		if dist < path_width_factor * self:path_width(pi, spi, ni) and self:is_node_valid(pi, ni, flags) then
--- 			return true
--- 		end
--- 	end
-
--- 	return false
--- end
 
 function path_db:valid_node_nearby(x, y, path_width_factor, flags)
 	path_width_factor = path_width_factor or 1
@@ -497,7 +504,7 @@ function path_db:valid_node_nearby(x, y, path_width_factor, flags)
 		for ni = 1, #path do
 			local node = path[ni]
 			local dist = V.dist(node.x, node.y, x, y)
-			if dist < path_width_factor * self:path_width(pi, 1, ni) and self:is_node_valid(pi, ni, flags) then
+			if dist < path_width_factor * self:path_width(pi) and self:is_node_valid(pi, ni, flags) then
 				return true
 			end
 		end
@@ -516,14 +523,6 @@ function path_db:next_entity_node(e, dt)
 
 		if n.ni < 1 or n.ni > #path then
 			if self.path_connections[n.pi] and n.dir > 0 then
-				-- n.prev_pis = n.prev_pis or {}
-
-				-- table.insert(n.prev_pis, n.pi)
-
-				-- local newpi, newspi, newni, dist
-
-				-- newpi = self.path_connections[n.pi]
-				-- newpi, newspi, newni, dist = unpack(self:nearest_nodes(e.pos.x, e.pos.y, {newpi})[1])
 				local newni = self.path_connections_spi_to_ni[n.pi][n.spi]
 
 				n.pi = self.path_connections[n.pi]
@@ -557,7 +556,7 @@ function path_db:predict_enemy_node_advance(e, flight_time)
 
 	local speed = V.len(e.motion.speed.x, e.motion.speed.y)
 	local node_offset = math.ceil(flight_time * speed / average_node_dist)
-	local path = self:path(e.nav_path.pi)
+	local path = self.paths[e.nav_path.pi][1]
 
 	return km.clamp(0, #path - e.nav_path.ni, node_offset)
 end
@@ -639,7 +638,7 @@ function path_db:get_random_position(margin, valid_terrains, node_flags, margin_
 end
 
 function path_db:get_next_pi(pi)
-	return self.path_connections and self.path_connections[pi]
+	return self.path_connections[pi]
 end
 
 function path_db:get_connected_paths(pi)
@@ -647,7 +646,7 @@ function path_db:get_connected_paths(pi)
 	local next_pi = pi
 
 	repeat
-		next_pi = self.path_connections and self.path_connections[next_pi]
+		next_pi = self.path_connections[next_pi]
 
 		if next_pi then
 			table.insert(out, next_pi)
@@ -661,6 +660,7 @@ function path_db:get_all_valid_pos(x, y, min_distance, max_distance, valid_terra
 	valid_terrains = valid_terrains or TERRAIN_ALL_MASK
 
 	local nodes = {}
+	local next_insert_idx = 1
 
 	for pi = 1, #self.paths do
 		for spi = 1, 3 do
@@ -672,7 +672,8 @@ function path_db:get_all_valid_pos(x, y, min_distance, max_distance, valid_terra
 				local t = GR:cell_type(o.x, o.y)
 
 				if bit.band(bit.bnot(valid_terrains), t) == 0 and d < max_distance and min_distance < d and self:is_node_valid(pi, ni, flags) and (not filter_func or filter_func(o.x, o.y)) then
-					table.insert(nodes, o)
+					nodes[next_insert_idx] = o
+					next_insert_idx = next_insert_idx + 1
 				end
 			end
 		end
