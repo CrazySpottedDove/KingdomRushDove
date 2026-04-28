@@ -339,26 +339,25 @@ end
 function path_db:nearest_nodes(x, y, path_indexes, subpath_indexes, valid_only, flags)
 	local nodes = {}
 
-	local paths = self.paths
-
-	if path_indexes then
-		paths = {}
-		for i = 1, #path_indexes do
-			paths[i] = self.paths[path_indexes[i]]
+	if not path_indexes then
+		path_indexes = {}
+		for i = 1, #self.paths do
+			path_indexes[i] = i
 		end
 	end
 
 	subpath_indexes = subpath_indexes or {1}
 
 	if valid_only then
-		for pi = 1, #paths do
+		for _pi = 1, #path_indexes do
+			local pi = path_indexes[_pi]
 			if self:is_path_active(pi) then
 				local n_dist2 = 1e10
 				local n_ni, n_spi
 
 				for i = 1, #subpath_indexes do
 					local spi = subpath_indexes[i]
-					local nodes_of_this_subpath = paths[pi][spi]
+					local nodes_of_this_subpath = self.paths[pi][spi]
 					for ni = 1, #nodes_of_this_subpath do
 						local node = nodes_of_this_subpath[ni]
 						local dx = node.x - x
@@ -378,13 +377,14 @@ function path_db:nearest_nodes(x, y, path_indexes, subpath_indexes, valid_only, 
 			end
 		end
 	else
-		for pi = 1, #paths do
+		for _pi = 1, #path_indexes do
+			local pi = path_indexes[_pi]
 			local n_dist2 = 1e10
 			local n_ni, n_spi
 
 			for i = 1, #subpath_indexes do
 				local spi = subpath_indexes[i]
-				local nodes_of_this_subpath = paths[pi][spi]
+				local nodes_of_this_subpath = self.paths[pi][spi]
 				for ni = 1, #nodes_of_this_subpath do
 					local node = nodes_of_this_subpath[ni]
 					local dx = node.x - x
