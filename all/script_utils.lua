@@ -2600,6 +2600,11 @@ function SU.soldier_move_to_slot_step(store, this, target)
 		U.animation_start(this, an, af, store.tick_ts, -1)
 
 		if U.walk(this, store.tick_length) then
+			local target_is_moving = target.motion and not target.motion.arrived
+			if target_is_moving then
+				return true
+			end
+
 			local ani = this.melee and this.melee.arrived_slot_animation or "idle"
 
 			an, af = U.animation_name_facing_point(this, ani, target.pos)
