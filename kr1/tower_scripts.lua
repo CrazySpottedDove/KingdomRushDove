@@ -24080,12 +24080,7 @@ function scripts.soldier_dark_knight.update(this, store)
 						break
 					end
 					if this.health.dead then
-						SU.y_soldier_death(store, this)
-						for i = #mocked_targets, 1, -1 do
-							SU.unmock_enemy(mocked_targets[i])
-							mocked_targets[i] = nil
-						end
-						return
+						break
 					end
 
 					if store.tick_ts - last_mock_ts > 0.1 then
@@ -24094,6 +24089,15 @@ function scripts.soldier_dark_knight.update(this, store)
 					end
 
 					coroutine.yield()
+				end
+
+				if this.health.dead then
+					SU.y_soldier_death(store, this)
+					for i = #mocked_targets, 1, -1 do
+						SU.unmock_enemy(mocked_targets[i])
+						mocked_targets[i] = nil
+					end
+					return
 				end
 
 				local enemy_continue_to_block
