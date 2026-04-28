@@ -24079,6 +24079,10 @@ function scripts.soldier_dark_knight.update(this, store)
 					if this.nav_rally.new then
 						break
 					end
+					if this.health.dead then
+						SU.y_soldier_death(store, this)
+						return
+					end
 
 					if store.tick_ts - last_mock_ts > 0.1 then
 						last_mock_ts = store.tick_ts
