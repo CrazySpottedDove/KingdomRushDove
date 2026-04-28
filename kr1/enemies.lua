@@ -11423,6 +11423,7 @@ tt.melee.attacks[1].hit_time = fts(13)
 tt.melee.attacks[1].aura_offset = v(b.basic_attack.flame.radius, 0)
 tt.melee.attacks[1].vis_bans = 0
 tt.melee.attacks[1].vis_flags = bor(F_AREA, F_BURN, F_ENEMY)
+tt.melee.attacks[1].chance = 1
 tt.motion.max_speed = b.speed
 tt.render.sprites[1].prefix = "brute_welder_creep"
 tt.render.sprites[1].angles.walk = {"walk", "walk_back", "walk_front"}
