@@ -24081,6 +24081,10 @@ function scripts.soldier_dark_knight.update(this, store)
 					end
 					if this.health.dead then
 						SU.y_soldier_death(store, this)
+						for i = #mocked_targets, 1, -1 do
+							SU.unmock_enemy(mocked_targets[i])
+							mocked_targets[i] = nil
+						end
 						return
 					end
 
