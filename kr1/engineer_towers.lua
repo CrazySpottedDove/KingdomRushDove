@@ -2623,7 +2623,7 @@ tt.aura.hit_sound = "ThornSound"
 tt.main_script.update = scripts.aura_rotten_forest_thorn.update
 
 tt = E:register_t("decal_rotten_forest_smoke", "decal_scripted")
-E:add_comps(tt, "render")
+E:add_comps(tt, "render", "tween")
 tt.render.sprites[1] = E:clone_c("sprite")
 tt.render.sprites[1].prefix = "rotten_forest_tower_decal_floor"
 tt.render.sprites[1].name = "idle"
@@ -2635,14 +2635,22 @@ tt.render.sprites[2].name = "idle"
 tt.render.sprites[2].loop = true
 tt.render.sprites[2].z = Z_DECALS
 tt.main_script.update = scripts.decal_rotten_forest_smoke.update
+tt.tween.remove = false
+tt.tween.props[1].keys = {{0, 0}, {1, 255}}
+tt.tween.props[2] = table.deepclone(tt.tween.props[1])
+tt.tween.props[2].sprite_id = 2
+tt.tween.run_once = true
 
 tt = E:register_t("decal_rotten_forest_fog", "decal")
-E:add_comps(tt, "render")
+E:add_comps(tt, "render", "tween")
 tt.render.sprites[1] = E:clone_c("sprite")
 tt.render.sprites[1].prefix = "rotten_forest_tower_fog"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_DECALS
+tt.tween.remove = false
+tt.tween.props[1].keys = {{0, 0}, {1, 255}}
+tt.tween.run_once = true
 
 tt = E:register_t("aura_tower_rotten_forest_spike_burst", "aura")
 tt.aura.mods = {"mod_tower_rotten_forest_burst_slow", "mod_tower_rotten_forest_burst_damage"}

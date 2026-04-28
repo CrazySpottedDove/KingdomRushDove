@@ -23020,7 +23020,12 @@ function scripts.tower_rotten_forest.update(this, store, script)
 
 				this.aura1.aura.radius = last_range
 				for i = #this.aura_list1, 1, -1 do
-					queue_remove(store, this.aura_list1[i])
+					this.aura_list1[i].tween.props[1].ts = store.tick_ts
+					this.aura_list1[i].tween.props[2].ts = store.tick_ts
+					this.aura_list1[i].tween.reverse = true
+					this.aura_list1[i].tween.disabled = false
+					this.aura_list1[i].tween.run_once = false
+					this.aura_list1[i].tween.remove = true
 					this.aura_list1[i] = nil
 				end
 				for _, p in ipairs(U.get_path_fx_points(this)) do
@@ -23033,7 +23038,11 @@ function scripts.tower_rotten_forest.update(this, store, script)
 				if this.aura2 then
 					this.aura2.aura.radius = last_range
 					for i = #this.aura_list2, 1, -1 do
-						queue_remove(store, this.aura_list2[i])
+						this.aura_list2[i].tween.props[1].ts = store.tick_ts
+						this.aura_list2[i].tween.reverse = true
+						this.aura_list2[i].tween.disabled = false
+						this.aura_list2[i].tween.run_once = false
+						this.aura_list2[i].tween.remove = true
 						this.aura_list2[i] = nil
 					end
 					for _, p in ipairs(U.get_path_fx_points(this)) do
@@ -23072,14 +23081,23 @@ end
 function scripts.tower_rotten_forest.remove(this, store, script)
 	queue_remove(store, this.aura1)
 	for i = #this.aura_list1, 1, -1 do
-		queue_remove(store, this.aura_list1[i])
+		this.aura_list1[i].tween.props[1].ts = store.tick_ts
+		this.aura_list1[i].tween.props[2].ts = store.tick_ts
+		this.aura_list1[i].tween.reverse = true
+		this.aura_list1[i].tween.disabled = false
+		this.aura_list1[i].tween.run_once = false
+		this.aura_list1[i].tween.remove = true
 		this.aura_list1[i] = nil
 	end
 
 	if this.aura2 then
 		queue_remove(store, this.aura2)
 		for i = #this.aura_list2, 1, -1 do
-			queue_remove(store, this.aura_list2[i])
+			this.aura_list2[i].tween.props[1].ts = store.tick_ts
+			this.aura_list2[i].tween.reverse = true
+			this.aura_list2[i].tween.disabled = false
+			this.aura_list2[i].tween.run_once = false
+			this.aura_list2[i].tween.remove = true
 			this.aura_list2[i] = nil
 		end
 	end

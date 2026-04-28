@@ -571,11 +571,13 @@ end
 
 function sys.tween:on_insert(entity, store)
 	if entity.tween then
-		for _, p in ipairs(entity.tween.props) do
-			for _, n in ipairs(p.keys) do
-				for i = 1, 2 do
+		for i = 1, #entity.tween.props do
+			local p = entity.tween.props[i]
+			for j = 1, #p.keys do
+				local n = p.keys[j]
+				for k = 1, 2 do
 					if type(n[i]) == "string" then
-						local nf = loadstring("return " .. n[i])
+						local nf = loadstring("return " .. n[k])
 						local env = {}
 
 						env.this = entity
@@ -672,7 +674,8 @@ function sys.tween:on_render_update(dt, ts, store)
 			local sprites = e.render.sprites
 			local tween = e.tween
 
-			for _, tween_prop in ipairs(tween.props) do
+			for i = 1, #tween.props do
+				local tween_prop = tween.props[i]
 				if tween_prop.disabled then
 				-- block empty
 				else
@@ -693,11 +696,34 @@ function sys.tween:on_render_update(dt, ts, store)
 						time = time % duration
 					end
 
+					-- 这里，finished 需要依据不同的 reverse 行为进行调整。为了减少代码执行量，我们可以在这里提前 finished 的判断
 					if tween.reverse and not tween_prop.ignore_reverse then
 						time = duration - time
-					end
+						if time <= start_time then
+							-- 结束
+							time = start_time
+						else
+							if time > end_time then
+								-- 还未开始
+								time = end_time
+							end
 
-					time = time < start_time and start_time or (time > end_time and end_time or time)
+							-- 进行中
+							finished = finished and tween_prop.loop
+						end
+					else
+						if time >= end_time then
+							time = end_time
+						else
+							if time < start_time then
+								-- 还未开始
+								time = start_time
+							end
+
+							-- 进行中
+							finished = finished and tween_prop.loop
+						end
+					end
 
 					for i = 2, #keys do
 						local ki = keys[i]
@@ -717,7 +743,8 @@ function sys.tween:on_render_update(dt, ts, store)
 					-- end
 					tween_prop.interp_fn(ka, kb, time, s, tween_prop.name)
 
-					finished = finished and (tween_prop.loop or ka == kb)
+				-- 该逻辑已提前，避免再次判断 reverse
+				-- finished = finished and (tween_prop.loop or ka == kb)
 				end
 			end
 
@@ -1031,14 +1058,15 @@ function sys.render:on_render_update(dt, ts, store)
 					local exo = EXO:get_exo_by_frame(exo_frame)
 
 					if s.exo_hide_prefix then
-						for _, p in ipairs(exo_frame) do
+						for i = 1, #exo_frame do
+							local p = exo_frame[i]
 							if p[1] == 1 then
 								local pname = exo.parts[p[2]][1]
 
 								p.hidden = false
 
-								for _, prefix in ipairs(s.exo_hide_prefix) do
-									if string.find(pname, prefix, 1, true) then
+								for j = 1, #s.exo_hide_prefix do
+									if string.find(pname, s.exo_hide_prefix[j], 1, true) then
 										p.hidden = true
 
 										break
