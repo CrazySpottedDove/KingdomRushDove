@@ -176,10 +176,7 @@ for _, path in ipairs(list_files(assets_dir)) do
 	if ext and allowed_exts[ext:lower()] then
 		local relpath = to_relpath(path, assets_dir)
 
-		assets[relpath] = {
-			size = file_size(path),
-			hash = file_hash(path)
-		}
+		assets[relpath] = {file_size(path), file_hash(path)}
 	end
 end
 
@@ -205,7 +202,7 @@ f:write("return {\n")
 for _, path in ipairs(paths) do
 	local info = assets[path]
 
-	f:write(string.format('    ["%s"] = { size = %d, hash = "%s" },\n', path, info.size, info.hash))
+	f:write(string.format('    ["%s"] = {%d, "%s"},\n', path, info[1], info[2]))
 end
 
 f:write("}\n")

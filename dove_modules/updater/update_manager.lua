@@ -785,10 +785,22 @@ local function diff_assets()
 		if not local_info then
 			added_or_modified[#added_or_modified + 1] = file
 		else
-			if not local_info.hash then
-				local_info.hash = file_hash("_assets/" .. file)
+			if not local_info[2] then
+				local_info[2] = file_hash("_assets/" .. file)
 			end
-			if local_info.size ~= info.size or local_info.hash ~= info.hash then
+
+			-- TODO: 数个版本后，可删去本兼容性代码
+			if not local_info[1] then
+				local_info[1] = local_info.size
+			end
+			if not info[1] then
+				info[1] = info.size
+			end
+			if not info[2] then
+				info[2] = info.hash
+			end
+
+			if local_info[1] ~= info[1] or local_info[2] ~= info[2] then
 				added_or_modified[#added_or_modified + 1] = file
 			end
 		end

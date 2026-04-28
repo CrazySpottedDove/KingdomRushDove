@@ -46,6 +46,10 @@
 		{
 			"type": "compress",
 			"directory": "all-desktop/data"
+		},
+		{
+			"type": "compress",
+			"file": "_assets/assets_index.lua"
 		}
 	],
 	"params": {
