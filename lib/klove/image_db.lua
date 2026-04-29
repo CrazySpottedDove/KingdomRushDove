@@ -12,7 +12,9 @@ end
 require("lib.klua.table")
 require("lib.klua.dump")
 
+-- 缓存纹理，这些纹理只要进局内肯定会需要加载，就不重复加载卸载了
 local persistent_textures = table.to_map({
+	-- game
 	"go_decals",
 	"go_enemies_common",
 	"go_towers_group1",
@@ -42,8 +44,24 @@ local persistent_textures = table.to_map({
 	"go_towers_ghost",
 	"go_towers_paladin_covenant",
 	"go_towers_arborean_emissary",
+	"go_towers_dragons",
+	"tower_holders",
+	"kr4_dark_army_tower_archer",
+	"kr4_rotten_forest_tower",
+	"kr4_ember_lords_tower_mage",
+	"kr4_fallen_ones_bone_flingers",
+	"kr4_warmongers_tower_barrack",
+	"kr4_dark_army_tower_barrack",
+	-- game_gui
+	"gui_common",
 	"gui_ico",
-	"go_towers_dragons"
+	"gui_portraits",
+	"achievements",
+	"encyclopedia_creeps",
+	"gui_notifications",
+	"gui_notifications_bg",
+	"ballon",
+	"view_options"
 })
 
 local km = require("lib.klua.macros")

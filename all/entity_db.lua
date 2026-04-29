@@ -42,10 +42,14 @@ function entity_db:load()
 -- self:test_tween()
 end
 
+--- 确认 entity_db 已加载
+--- @return boolean (true: 执行加载逻辑；false: 已加载)
 function entity_db:ensure_loaded()
 	if not self.loaded then
 		self:load()
+		return true
 	end
+	return false
 end
 
 function entity_db:test_tween()

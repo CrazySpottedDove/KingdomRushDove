@@ -128,7 +128,7 @@ game.simulation_systems = {
 	"wave_generator"
 }
 
-function game:init(screen_w, screen_h, done_callback)
+local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_done)
 	self.dash_start_offset = 0
 	self.screen_w = screen_w
 	self.screen_h = screen_h
@@ -222,24 +222,48 @@ function game:init(screen_w, screen_h, done_callback)
 
 	RU.init()
 
+	coroutine.yield()
+
 	self.store.ephemeral = {}
 
 	simulation:init(self.store, self.simulation_systems)
 
 	self.simulation = simulation
 
-	game_gui:init(screen_w, screen_h, self)
+	coroutine.yield()
 
-	self.game_gui = game_gui
+	-- 该部分会需求资源，因此放在 delayed init 中
+	-- game_gui:init(screen_w, screen_h, self)
+	-- coroutine.yield()
+	-- self.game_gui = game_gui
 	-- 允许 store 层影响 game_gui
-	self.store.game_gui = game_gui
+	-- self.store.game_gui = game_gui
 
-	if not self.store.level.show_comic_idx or self.store.level_mode ~= GAME_MODE_CAMPAIGN then
-		S:queue(string.format("MusicBattlePrep_%02d", self.store.level_idx))
-	end
+	-- if not self.store.level.show_comic_idx or self.store.level_mode ~= GAME_MODE_CAMPAIGN then
+	-- S:queue(string.format("MusicBattlePrep_%02d", self.store.level_idx))
+	-- end
 
 	self:init_debug()
 	signal.emit("game-start", self.store)
+end
+
+-- function game:init(screen_w, screen_h, done_callback)
+-- 	game_init_impl(self, screen_w, screen_h, done_callback)
+-- end
+
+function game:init_coro(screen_w, screen_h, done_callback)
+	return coroutine.create(function()
+		game_init_impl(self, screen_w, screen_h, done_callback)
+	end)
+end
+
+function game:init_delayed(screen_w, screen_h)
+	game_gui:init(screen_w, screen_h, self)
+	self.game_gui = game_gui
+	self.store.game_gui = game_gui
+	if not self.store.level.show_comic_idx or self.store.level_mode ~= GAME_MODE_CAMPAIGN then
+		S:queue(string.format("MusicBattlePrep_%02d", self.store.level_idx))
+	end
 end
 
 if DEBUG then

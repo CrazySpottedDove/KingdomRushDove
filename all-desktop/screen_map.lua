@@ -180,11 +180,86 @@ local function should_block_map_scroll(this)
 	return (this.level_select and not this.level_select.hidden) or (this.hero_room and not this.hero_room.hidden) or (this.upgrades and not this.upgrades.hidden) or (this.encyclopedia and not this.encyclopedia.hidden) or (this.achievements and not this.achievements.hidden) or (this.option_panel and not this.option_panel.hidden) or (this.config_panel_view and not this.config_panel_view.hidden) or (this.criket_panel_view and not this.criket_panel_view.hidden) or (this.keyset_panel_view and not this.keyset_panel_view.hidden) or (this.launch_options_panel_view and not this.launch_options_panel_view.hidden) or (this.ui_settings_panel_view and not this.ui_settings_panel_view.hidden) or (this.mod_manager_view and not this.mod_manager_view.hidden)
 end
 
-function screen_map:init(w, h, done_callback)
+function screen_map:init_coro(w, h, done_callback)
+	return coroutine.create(function()
+		self.done_callback = done_callback
+		self.original_w, self.original_h = w, h
+
+		achievements_data = require("data.achievements_data")
+		map_data = require("data.map_data")
+		screen_map.hero_data = map_data.hero_data
+		screen_map.tower_data = map_data.tower_data
+		screen_map.level_data = map_data.level_data
+
+		self.map_points = get_map_points_for_generation(self.generation)
+		self.user_data = storage:load_slot()
+		self.unlock_data = {}
+		self.unlock_data.unlocked_levels = {}
+
+		local levels = self.user_data.levels
+		local victory = self.user_data.last_victory
+
+		if victory then
+			local level = levels[victory.level_idx]
+
+			if not level then
+				log.error("victory level %s was not shown in map before. ignoring victory", victory.level_idx)
+			else
+				if victory.level_mode == GAME_MODE_CAMPAIGN then
+					if not level[GAME_MODE_CAMPAIGN] then
+						level.stars = victory.stars
+						self.unlock_data.show_stars_level = victory.level_idx
+						self.unlock_data.star_count_before = 0
+
+						if victory.level_idx < GS["last_level" .. self.generation] and not levels[victory.level_idx + 1] then
+							levels[victory.level_idx + 1] = {}
+							self.unlock_data.new_level = victory.level_idx + 1
+							self.unlock_data.last_finished_level = victory.level_idx
+
+							table.insert(self.unlock_data.unlocked_levels, self.unlock_data.new_level)
+						end
+					elseif victory.stars > level.stars then
+						self.unlock_data.show_stars_level = victory.level_idx
+						self.unlock_data.star_count_before = level.stars
+						level.stars = victory.stars
+					end
+				elseif victory.level_mode == GAME_MODE_HEROIC then
+					self.unlock_data.heroic_level = not level[GAME_MODE_HEROIC] and victory.level_idx or nil
+				elseif victory.level_mode == GAME_MODE_IRON then
+					self.unlock_data.iron_level = not level[GAME_MODE_IRON] and victory.level_idx or nil
+				end
+
+				level[victory.level_mode] = math.max(victory.level_difficulty, level[victory.level_mode] or 0)
+			end
+
+			if self.user_data.locked_towers then
+				for _, tower in pairs(self.user_data.last_victory.unlock_towers) do
+					table.removeobject(self.user_data.locked_towers, tower)
+				end
+			end
+
+			self.user_data.last_victory = nil
+
+			storage:save_slot(self.user_data)
+		elseif #self.user_data.levels == 0 then
+			self.unlock_data.unlocked_levels = {1}
+			levels[1] = {}
+
+			storage:save_slot(self.user_data)
+		end
+
+		if U.unlock_next_levels_in_ranges(self.unlock_data, levels, GS, self.generation) then
+			storage:save_slot(self.user_data)
+		end
+
+		self.total_stars = U.count_stars(self.user_data)
+		coroutine.yield()
+		E:ensure_loaded()
+	end)
+end
+
+function screen_map:init_delayed(w, h)
 	-- perf.tmp_start("screen_map_init")
-	E:ensure_loaded()
-	self.done_callback = done_callback
-	self.original_w, self.original_h = w, h
 	local sw, sh, scale, origin = SU.clamp_window_aspect(w, h, self.ref_w, self.ref_h)
 
 	self.sw, self.sh = sw, sh
@@ -197,75 +272,6 @@ function screen_map:init(w, h, done_callback)
 	self.window = window
 	GGLabel.static.font_scale = scale
 	GGLabel.static.ref_h = self.ref_h
-
-	achievements_data = require("data.achievements_data")
-	map_data = require("data.map_data")
-	screen_map.hero_data = map_data.hero_data
-	screen_map.tower_data = map_data.tower_data
-	screen_map.level_data = map_data.level_data
-
-	self.map_points = get_map_points_for_generation(self.generation)
-	self.user_data = storage:load_slot()
-	self.unlock_data = {}
-	self.unlock_data.unlocked_levels = {}
-
-	local levels = self.user_data.levels
-	local victory = self.user_data.last_victory
-
-	if victory then
-		local level = levels[victory.level_idx]
-
-		if not level then
-			log.error("victory level %s was not shown in map before. ignoring victory", victory.level_idx)
-		else
-			if victory.level_mode == GAME_MODE_CAMPAIGN then
-				if not level[GAME_MODE_CAMPAIGN] then
-					level.stars = victory.stars
-					self.unlock_data.show_stars_level = victory.level_idx
-					self.unlock_data.star_count_before = 0
-
-					if victory.level_idx < GS["last_level" .. self.generation] and not levels[victory.level_idx + 1] then
-						levels[victory.level_idx + 1] = {}
-						self.unlock_data.new_level = victory.level_idx + 1
-						self.unlock_data.last_finished_level = victory.level_idx
-
-						table.insert(self.unlock_data.unlocked_levels, self.unlock_data.new_level)
-					end
-				elseif victory.stars > level.stars then
-					self.unlock_data.show_stars_level = victory.level_idx
-					self.unlock_data.star_count_before = level.stars
-					level.stars = victory.stars
-				end
-			elseif victory.level_mode == GAME_MODE_HEROIC then
-				self.unlock_data.heroic_level = not level[GAME_MODE_HEROIC] and victory.level_idx or nil
-			elseif victory.level_mode == GAME_MODE_IRON then
-				self.unlock_data.iron_level = not level[GAME_MODE_IRON] and victory.level_idx or nil
-			end
-
-			level[victory.level_mode] = math.max(victory.level_difficulty, level[victory.level_mode] or 0)
-		end
-
-		if self.user_data.locked_towers then
-			for _, tower in pairs(self.user_data.last_victory.unlock_towers) do
-				table.removeobject(self.user_data.locked_towers, tower)
-			end
-		end
-
-		self.user_data.last_victory = nil
-
-		storage:save_slot(self.user_data)
-	elseif #self.user_data.levels == 0 then
-		self.unlock_data.unlocked_levels = {1}
-		levels[1] = {}
-
-		storage:save_slot(self.user_data)
-	end
-
-	if U.unlock_next_levels_in_ranges(self.unlock_data, levels, GS, self.generation) then
-		storage:save_slot(self.user_data)
-	end
-
-	self.total_stars = U.count_stars(self.user_data)
 
 	local map = MapView:new(sw, sh)
 
@@ -559,7 +565,7 @@ function screen_map:init(w, h, done_callback)
 
 	self.hero_but = h_button
 
-	local hero_unlock_levels = table.map(screen_map.hero_data, function(k, v)
+	local hero_unlock_levels = table.map(self.hero_data, function(k, v)
 		return v.available_level
 	end)
 
@@ -627,13 +633,12 @@ function screen_map:init(w, h, done_callback)
 
 	local map_counters = GG9View:new_from_table(kui_db:get_table("map_counters_view", {
 		ref_h = self.ref_h,
-		sw = self.sw,
-		premium = self.is_premium
+		sw = self.sw
 	}))
 
 	self.window:add_child(map_counters)
 
-	wid("map_counters_stars").text = string.format("%s/%s", screen_map.total_stars, GS.max_stars)
+	wid("map_counters_stars").text = string.format("%s/%s", self.total_stars, GS.max_stars)
 
 	self.difficulty_view = DifficultyView:new(sw, sh)
 	self.difficulty_view.pos = v(0, 0)

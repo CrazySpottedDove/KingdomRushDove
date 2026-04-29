@@ -343,12 +343,8 @@ function director:unload_item(item)
 	end
 end
 
-function director:queue_load_item_named(name, force_reload)
-	local function _require(name, force)
-		if force_reload or force then
-			package.loaded[name] = nil
-		end
-
+function director:queue_load_item_named(name)
+	local function _require(name)
 		local r = require(name)
 
 		r.locale_at_requirement = i18n.current_locale
@@ -369,17 +365,6 @@ function director:queue_load_item_named(name, force_reload)
 
 	if show_loading then
 		local loading = _require("screen_loading")
-		local level_idx
-
-		if game and game.store and game.store.level_idx then
-			level_idx = game.store.level_idx
-		elseif self.next_item_args then
-			level_idx = self.next_item_args.level_idx
-		end
-
-		-- if loading.update_required_textures then
-		-- 	loading:update_required_textures(name, level_idx)
-		-- end
 
 		self:load_texture_groups(loading.required_textures, self.params.texture_size, loading.ref_res, false)
 
@@ -387,15 +372,28 @@ function director:queue_load_item_named(name, force_reload)
 			self:load_sound_groups(loading.required_sounds)
 		end
 
-		loading:init(self.params.width, self.params.height)
-		loading:close()
+		-- 添加 init 协程的支持
+		local init_coro
+		if name == "game" then
+			init_coro = _require("game"):init_coro(self.params.width, self.params.height, function(outcome)
+				self:item_done_callback("game", outcome)
+			end)
+			self.queued_item_init_co = init_coro
+		elseif name == "map" then
+			init_coro = _require("screen_map"):init_coro(self.params.width, self.params.height, function(outcome)
+				self:item_done_callback("map", outcome)
+			end)
+			self.queued_item_init_co = init_coro
+		end
+
+		loading:init(self.params.width, self.params.height, self)
 
 		self.queue_unload_item = self.active_item
 		self.active_item = loading
 	end
 
 	if props.type == "screen" then
-		local item = _require(props.src, self.next_item_args and self.next_item_args.force_reload)
+		local item = _require(props.src)
 
 		item.item_name = name
 		item.args = self.next_item_args
@@ -504,7 +502,7 @@ function director:queue_load_item_named(name, force_reload)
 
 			self:load_texture_groups(replace_locale(item.required_textures), self.params.texture_size, item.ref_res, true, "comic")
 
-			self.queued_item = item
+			-- self.queued_item = item
 			item.game_item = game
 			self.queued_item = game
 		else
@@ -570,16 +568,18 @@ function director:update(dt)
 	perf.start("Sound.update")
 	S:update(dt)
 	perf.stop("Sound.update")
-	if self.next_item_name then
-		self:queue_load_item_named(self.next_item_name, self.force_reload)
 
+	-- 发现有 next_item_name，说明当前 item 发出了切换请求。因此，把 next_item_name 放入加载队列中
+	if self.next_item_name then
 		self.queued_item_init = false
-		self.queued_item_first_draw = false
+		self.queued_item_init_co = nil
 		self.last_item_name = self.next_item_name
 		self.next_item_name = nil
-		self.force_reload = nil
+
+		self:queue_load_item_named(self.last_item_name)
 	end
 
+	-- 更新活跃的 item
 	if self.active_item then
 		local active_item = self.active_item
 
@@ -619,7 +619,6 @@ function director:update(dt)
 
 					self.queued_item.done_callback_called = nil
 					self.queued_item_init = true
-					self.queued_item_first_draw = false
 
 					self.queued_item:update(2 * TICK_LENGTH)
 
@@ -628,10 +627,6 @@ function director:update(dt)
 
 				if ai then
 					if ai.transition_state == "closing" then
-						goto label_14_0
-					elseif ai.transition_state == "closed" and self.queued_item_first_draw then
-						ai:open()
-
 						goto label_14_0
 					elseif ai.transition_state == "opening" then
 						goto label_14_0
@@ -678,8 +673,6 @@ function director:draw()
 			self.queue_unload_item:draw()
 		elseif self.queued_item and self.queued_item_init then
 			self.queued_item:draw()
-
-			self.queued_item_first_draw = true
 		end
 
 		ai:draw()
@@ -729,20 +722,6 @@ end
 function director:keypressed(key, isrepeat)
 	if key == "tab" and love.window.getFullscreen() and love.system.getOS() == "OS X" and (love.keyboard.isDown("lgui") or love.keyboard.isDown("rgui")) then
 		love.window.minimize()
-
-		return
-	end
-
-	if DEBUG and key == "r" and love.keyboard.isDown("lshift") and not isrepeat then
-		if self.active_item and self.active_item.item_name == "game" then
-			log.error("FORCING RELOAD OF GUI ONLY")
-			game:reload_gui()
-		else
-			log.error("FORCING RELOAD OF %s", self.last_item_name)
-
-			self.force_reload = true
-			self.next_item_name = self.last_item_name
-		end
 
 		return
 	end

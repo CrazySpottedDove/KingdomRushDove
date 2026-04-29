@@ -88,7 +88,11 @@ function simulation:init(store, system_names)
 	local system_ids_to_remove = {}
 
 	for i, s in ipairs(systems_order) do
-		if s.init then
+		if s.init_coroutined then
+			if s:init_coroutined(self.store) == "skip" then
+				system_ids_to_remove[#system_ids_to_remove + 1] = i
+			end
+		elseif s.init then
 			if s:init(self.store) == "skip" then
 				system_ids_to_remove[#system_ids_to_remove + 1] = i
 			end

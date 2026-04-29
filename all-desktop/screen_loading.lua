@@ -100,28 +100,25 @@ local function draw_pixel_dove(x, y, scale, phase, alpha)
 	end
 end
 
-function screen:init(w, h)
+-- 允许 director 在初始化 screen 时为其传入一个协程，screen 可以在加载过程中执行协程代码，从而在等待加载资源的同时完成一些初始化任务
+function screen:init(w, h, director_ref)
 	self.hold_enabled = true
 	self.progress = 0
 	self.progress_display = 0
 	self.anim_t = 0
-	self.fade_alpha = 0
-	self.timer = Timer()
 	self.font_title = F:f("msyh", 34)
 	self.font_percent = F:f("msyh", 28)
 	self.font_tip = F:f("msyh", 20)
 	self.tip = _(string.format("TIP_%i", math.random(1, GS.gameplay_tips_count)))
-	self.timer:tween(2, self, {
-		fade_alpha = 1
-	}, "out-quad")
+	self.director_ref = director_ref
+	self.w = w
+	self.h = h
 end
 
 function screen:destroy()
 	self.progress = nil
 	self.progress_display = nil
 	self.anim_t = nil
-	self.fade_alpha = nil
-	self.timer = nil
 	self.font_title = nil
 	self.font_percent = nil
 	self.font_tip = nil
@@ -133,14 +130,37 @@ function screen:update(dt)
 		self.timer:update(dt)
 	end
 
+	if self.director_ref.queued_item_init_co and coroutine.status(self.director_ref.queued_item_init_co) ~= "dead" then
+		local ok, err = coroutine.resume(self.director_ref.queued_item_init_co)
+		if not ok then
+			error("Error in loading coroutine: " .. tostring(err))
+		end
+	end
+
 	self.anim_t = self.anim_t + dt
 	self.progress = km.clamp(0, 1, 0.6 * I.progress + 0.4 * S.progress)
 	self.progress_display = self.progress_display + (self.progress - self.progress_display) * math.min(dt * 7, 1)
 
+	local init_coro = self.director_ref.queued_item_init_co
+
 	if I:queue_load_done() and S:queue_load_done() then
-		self.progress = 1
-		self.progress_display = 1
-		self.hold_enabled = false
+		-- 如果有初始化工作被分配到 screen_loading 阶段的话，也要求初始化工作完成。
+		if not init_coro then
+			self.hold_enabled = false
+			self.progress = 1
+			self.progress_display = 1
+		-- I.log_banned = false
+		elseif coroutine.status(init_coro) == "dead" then
+			self.hold_enabled = false
+			self.progress = 1
+			self.progress_display = 1
+			self.director_ref.queued_item:init_delayed(self.w, self.h)
+			self.director_ref.queued_item_init = true
+			self.director_ref.queued_item.done_callback_called = nil
+		else
+			self.progress = 0.99
+			self.progress_display = 0.99
+		end
 	end
 
 	return true
@@ -149,10 +169,7 @@ end
 function screen:draw()
 	local g = love.graphics
 	local w, h = g.getDimensions()
-	local tween_alpha = self.fade_alpha or 1
-	-- 进度兜底：即使淡入补间未结束，加载接近完成时也避免半透明叠到游戏画面。
-	local progress_alpha = km.clamp(0, 1, self.progress_display)
-	local a = math.max(tween_alpha, progress_alpha)
+	local a = 1
 	local old_font = g.getFont()
 	local font_title = self.font_title or old_font
 	local font_percent = self.font_percent or old_font
@@ -220,10 +237,6 @@ function screen:keypressed(key, isrepeat)
 end
 
 function screen:mousepressed(x, y, button)
-	return
-end
-
-function screen:close()
 	return
 end
 
