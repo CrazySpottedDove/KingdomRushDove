@@ -6923,7 +6923,6 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
 		sfx.pos.x, sfx.pos.y = b.to.x, b.to.y
 		sfx.render.sprites[1].ts = store.tick_ts
 		sfx.render.sprites[1].runs = 0
-
 		if target and sfx.render.sprites[1].size_names then
 			sfx.render.sprites[1].name = sfx.render.sprites[1].size_names[target.unit.size]
 		end
@@ -23637,6 +23636,548 @@ function scripts.aura_lava_fissure.update(this, store)
 	queue_remove(store, this)
 end
 -- 炼狱法师 End
+
+-- 兽人萨满 Begin
+scripts.tower_orc_shaman = {}
+
+scripts.aura_orc_shaman_healing_roots = {}
+
+function scripts.aura_orc_shaman_healing_roots.insert(this, store)
+	this.aura.ts = store.tick_ts
+
+	if this.render then
+		local ss = this.render.sprites
+		for i = 1, #ss do
+			ss[i].ts = store.tick_ts
+		end
+	end
+
+	return true
+end
+
+function scripts.aura_orc_shaman_healing_roots.update(this, store)
+	local a = this.aura
+	local last_hit_ts = store.tick_ts - a.cycle_time
+	local max_count = a.max_count or 0
+	local mod_name = a.mod
+	local selected_targets = {}
+	local selected_factors = {}
+
+	U.animation_start(this, "in", nil, store.tick_ts, false, 1)
+
+	while true do
+		if this.interrupt then
+			break
+		end
+
+		if a.source_id then
+			local src = store.entities[a.source_id]
+			if not src or (src.health and src.health.dead) then
+				break
+			end
+		end
+
+		if U.animation_finished(this, 1) and this.render.sprites[1].name ~= "run" then
+			U.animation_start(this, "run", nil, store.tick_ts, true, 1)
+		end
+
+		if a.duration >= 0 and store.tick_ts - a.ts > a.duration then
+			break
+		end
+
+		if store.tick_ts - last_hit_ts >= a.cycle_time then
+			last_hit_ts = store.tick_ts
+
+			local targets = U.find_soldiers_in_range(store.entities, this.pos, 0, a.radius, a.vis_flags, a.vis_bans, function(e)
+				return e.soldier and e.health and not e.health.dead and e.health.hp < e.health.hp_max
+			end)
+
+			if targets then
+				local limit = max_count > 0 and max_count or #targets
+				local cnt = 0
+
+				for i = 1, #targets do
+					local t = targets[i]
+					local factor = t.health.hp / t.health.hp_max
+					local pos = cnt + 1
+
+					for j = 1, cnt do
+						if factor < selected_factors[j] then
+							pos = j
+							break
+						end
+					end
+
+					if pos <= limit then
+						if cnt < limit then
+							cnt = cnt + 1
+						end
+
+						for j = cnt, pos + 1, -1 do
+							selected_targets[j] = selected_targets[j - 1]
+							selected_factors[j] = selected_factors[j - 1]
+						end
+
+						selected_targets[pos] = t
+						selected_factors[pos] = factor
+					end
+				end
+
+				for i = 1, cnt do
+					local t = selected_targets[i]
+					local m = E:create_entity(mod_name)
+					m.modifier.target_id = t.id
+					m.modifier.source_id = a.source_id or this.id
+					m.modifier.level = a.level
+					if m.hps and a.heal_inc then
+						m.hps.heal_inc = a.heal_inc
+					end
+					queue_insert(store, m)
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+
+	U.animation_start(this, "out", nil, store.tick_ts, false, 1)
+	U.y_animation_wait(this, 1, 1)
+	queue_remove(store, this)
+end
+
+function scripts.tower_orc_shaman.update(this, store)
+	local shooter_sid = 3
+	local a = this.attacks
+	local ba = a.list[1]
+	local va = a.list[2]
+	local ma = a.list[3]
+	local pow_s = this.powers.shock
+	local pow_m = this.powers.meteor
+	local pow_v = this.powers.vines
+	local last_ts = store.tick_ts
+	local tpos = tpos(this)
+	local meteor_base_loops = ma.loops
+
+	ba.ts = store.tick_ts
+	this.render.sprites[5].ts = store.tick_ts
+	this.render.sprites[6].ts = store.tick_ts + fts(2)
+	this.render.sprites[7].ts = store.tick_ts + fts(4)
+	this.render.sprites[8].ts = store.tick_ts + fts(6)
+
+	-- 读档/重开时 meteor/vines 的冷却 ts 可能没被写入。
+	-- ready_to_use_power() 会直接用 ma.ts/va.ts 参与比较，所以这里补齐为当前 tick。
+	if pow_m.level > 0 and ma.ts == nil then
+		ma.ts = store.tick_ts
+	end
+	if pow_v.level > 0 and va.ts == nil then
+		va.ts = store.tick_ts
+	end
+
+	local function find_soldier_pair(entities, origin, max_range, pair_range, flags, bans, filter_fn)
+		local soldiers = U.find_soldiers_in_range(entities, origin, 0, max_range, flags, bans, filter_fn)
+
+		if not soldiers or #soldiers == 0 then
+			return nil
+		end
+
+		-- 触发锚点只要求自身满足 filter_fn（例如血量<50%）；
+		-- 成团判定看周围友军数量，不要求“第二个也必须低血，原版过于严格，放不出来技能”。
+		local best, best_id = nil, 1 / 0
+		for i = 1, #soldiers do
+			local s1 = soldiers[i]
+			if s1.id < best_id then
+				local nearby = U.find_soldiers_in_range(entities, s1.pos, 0, pair_range, flags, bans)
+				if nearby and #nearby >= 2 then
+					best = s1
+					best_id = s1.id
+				end
+			end
+		end
+
+		return best
+	end
+
+	local function do_shoot_animation(aa, target)
+		last_ts = store.tick_ts
+
+		local an, af = U.animation_name_facing_point(this, aa.animation, target.pos, shooter_sid, this.render.sprites[shooter_sid].offset)
+
+		U.animation_start(this, an, af, store.tick_ts, false, shooter_sid)
+		U.y_wait(store, aa.shoot_time * this.tower.cooldown_factor)
+
+		return af
+	end
+
+	while true do
+		if this.tower.blocked then
+			coroutine.yield()
+		else
+			if pow_m.changed then
+				pow_m.changed = nil
+
+				if pow_m.level == 1 then
+					ma.ts = store.tick_ts
+				end
+			end
+
+			if pow_m.level > 0 then
+				ma.loops = meteor_base_loops + ma.loops_inc * pow_m.level
+			else
+				ma.loops = meteor_base_loops
+			end
+
+			if pow_v.changed then
+				pow_v.changed = nil
+				if pow_v.level == 1 then
+					va.ts = store.tick_ts
+				end
+			end
+
+			if pow_s.changed then
+				pow_s.changed = nil
+			end
+
+			if ready_to_attack(ba, store, this.tower.cooldown_factor) then
+				local target = U.find_first_enemy_in_range_filter_off(tpos, a.range, ba.vis_flags, ba.vis_bans)
+
+				if not target then
+					ba.ts = ba.ts + 0.3
+				else
+					local flip_x = do_shoot_animation(ba, target)
+					local shot_target = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, ba.node_prediction, ba.vis_flags, ba.vis_bans)
+
+					if shot_target then
+						ba.ts = last_ts
+						local b = E:create_entity(ba.bullet)
+
+						b.pos.x = this.pos.x + ba.bullet_start_offset.x * (flip_x and -1 or 1)
+						b.pos.y = this.pos.y + ba.bullet_start_offset.y
+						b.bullet.from:copy(b.pos)
+						b.bullet.to.x = shot_target.pos.x
+						b.bullet.to.y = shot_target.pos.y + (shot_target.unit and shot_target.unit.hit_offset and shot_target.unit.hit_offset.y or 0) - 8
+						b.bullet.target_id = shot_target.id
+						b.bullet.source_id = this.id
+						b.bullet.damage_factor = this.tower.damage_factor
+
+						if pow_s.level > 0 and pow_s.chance and pow_s.chance[pow_s.level] then
+							if math.random() < pow_s.chance[pow_s.level] then
+								local shock = E:create_entity(ba.payload_bullet)
+								shock.bullet.level = pow_s.level
+								shock.bullet.init_target_id = shot_target.id
+								shock.bullet.source_id = this.id
+								shock.bullet.damage_min = pow_s.damage_min[pow_s.level]
+								shock.bullet.damage_max = pow_s.damage_max[pow_s.level]
+								shock.bullet.damage_factor = this.tower.damage_factor
+								b.bullet.payload = shock
+							end
+						end
+
+						queue_insert(store, b)
+					end
+
+					U.y_animation_wait(this, shooter_sid, 1)
+				end
+			end
+
+			if pow_m.level > 0 and ready_to_use_power(pow_m, ma, store, this.tower.cooldown_factor) then
+				local target = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, a.range, 0, ma.vis_flags, ma.vis_bans, ma.target_range)
+
+				if not target then
+					ma.ts = ma.ts + 0.3
+				else
+					local in_cluster = U.find_enemies_in_range_filter_off(target.pos, ma.target_range, ma.vis_flags, ma.vis_bans)
+					if not in_cluster or #in_cluster < 2 then
+						ma.ts = ma.ts + 0.3
+					else
+						S:queue("OrcShamanMeteoritesUpgrade", {
+							delay = 0.3,
+							files = {"kr4_warmonger_mage_meteorshower_preimpact.ogg"}
+						})
+						do_shoot_animation(ma, target)
+						ma.ts = last_ts
+
+						for i = 1, ma.loops do
+							local b = E:create_entity(ma.bullet)
+							local btox = target.pos.x + math.random(ma.max_spread * -1, ma.max_spread)
+							local btoy = target.pos.y + math.random(ma.max_spread * -1, ma.max_spread)
+
+							b.bullet.to = v(btox, btoy)
+							b.pos.x, b.pos.y = b.bullet.to.x + 100, b.bullet.to.y + 200
+							b.bullet.from:copy(b.pos)
+							b.bullet.level = pow_m.level
+							b.bullet.target_id = target.id
+							b.bullet.source_id = this.id
+							b.bullet.damage_factor = this.tower.damage_factor
+							b.render.sprites[1].ts = store.tick_ts
+
+							queue_insert(store, b)
+							U.y_wait(store, fts(6) * this.tower.cooldown_factor)
+						end
+
+						U.y_animation_wait(this, shooter_sid, 1)
+					end
+				end
+			end
+
+			if pow_v.level > 0 and ready_to_use_power(pow_v, va, store, this.tower.cooldown_factor) then
+				local target = find_soldier_pair(store.entities, tpos, va.range, va.target_range, va.vis_flags, va.vis_bans, function(e)
+					return e.soldier and e.health and not e.health.dead and e.health.hp < e.health.hp_max * va.min_health_factor
+				end)
+
+				if not target then
+					va.ts = va.ts + 0.3
+				else
+					S:queue("OrcShamanHealingRoots", {
+						delay = 0.3
+					})
+					do_shoot_animation(va, target)
+
+					local aura = E:create_entity(va.aura)
+					aura.pos:copy(target.pos)
+					aura.aura.level = pow_v.level
+					aura.aura.source_id = this.id
+					aura.aura.heal_inc = pow_v.heal_inc
+					aura.aura.damage_factor = this.tower.damage_factor
+					queue_insert(store, aura)
+					va.ts = last_ts
+
+					U.y_animation_wait(this, shooter_sid, 1)
+				end
+			end
+
+			if store.tick_ts - last_ts > this.tower.long_idle_cooldown then
+				local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos, shooter_sid)
+				U.animation_start(this, an, af, store.tick_ts, true, shooter_sid)
+			end
+
+			coroutine.yield()
+		end
+	end
+end
+
+scripts.bullet_orc_shaman_shock = {}
+
+function scripts.bullet_orc_shaman_shock.update(this, store)
+	local b = this.bullet
+	local explode_pos = vclone(this.pos)
+	local dmin = b.damage_min or 0
+	local dmax = b.damage_max or 0
+
+	U.animation_start(this, "hit", nil, store.tick_ts, 1)
+
+	local enemies = U.find_enemies_in_range_filter_off(explode_pos, b.damage_radius, b.damage_flags, b.damage_bans)
+
+	if enemies then
+		for i = 1, #enemies do
+			local enemy = enemies[i]
+			if enemy.id ~= b.init_target_id then
+				local d = E:create_entity("damage")
+				d.source_id = b.source_id or this.id
+				d.target_id = enemy.id
+				d.value = math.ceil(U.frandom(dmin, dmax) * (b.damage_factor or 1))
+				d.damage_type = b.damage_type
+				queue_damage(store, d)
+			end
+		end
+	end
+
+	U.y_animation_wait(this, nil, 1)
+	queue_remove(store, this)
+end
+
+-- 普攻 bolt 的命中特效需要：贴 hit_offset + 锁死角度 + 只重播 ray_hit 层。
+-- 这段放在塔脚本里，避免去碰 all/scripts.lua 的公共 bolt.update。
+scripts.bolt_orc_shaman = {}
+
+function scripts.bolt_orc_shaman.update(this, store)
+	local b = this.bullet
+	local s = this.render.sprites[1]
+	local mspeed = b.min_speed
+	local target, ps
+	local new_target = false
+	local target_invalid = false
+
+	if b.particles_name then
+		ps = E:create_entity(b.particles_name)
+		ps.particle_system.track_id = this.id
+		queue_insert(store, ps)
+	end
+
+	::label_75_0::
+
+	if b.store and not b.target_id then
+		S:queue(this.sound_events.summon)
+
+		s.z = Z_OBJECTS
+		s.sort_y_offset = b.store_sort_y_offset
+
+		U.animation_start(this, "idle", nil, store.tick_ts, true)
+
+		if ps then
+			ps.particle_system.emit = false
+		end
+	else
+		S:queue(this.sound_events.travel)
+
+		s.z = Z_BULLETS
+		s.sort_y_offset = nil
+
+		U.animation_start(this, "flying", nil, store.tick_ts, s.loop)
+
+		if ps then
+			ps.particle_system.emit = true
+		end
+	end
+
+	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
+		coroutine.yield()
+
+		if not target_invalid then
+			target = store.entities[b.target_id]
+		end
+
+		if target and not new_target then
+			local tpx, tpy = target.pos.x, target.pos.y
+
+			if not b.ignore_hit_offset then
+				tpx, tpy = tpx + target.unit.hit_offset.x, tpy + target.unit.hit_offset.y
+			end
+
+			local d = math.max(math.abs(tpx - b.to.x), math.abs(tpy - b.to.y))
+
+			if d > b.max_track_distance or band(target.vis.bans, F_RANGED) ~= 0 then
+				target_invalid = true
+				target = nil
+			end
+		end
+
+		if target and target.health and not target.health.dead then
+			if b.ignore_hit_offset then
+				b.to.x, b.to.y = target.pos.x, target.pos.y
+			else
+				b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
+			end
+
+			new_target = false
+		end
+
+		mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
+		mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
+		b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
+		this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
+
+		if not b.ignore_rotation then
+			s.r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
+		end
+
+		if ps then
+			ps.particle_system.emit_direction = s.r
+		end
+	end
+
+	while b.store and not b.target_id do
+		coroutine.yield()
+
+		if b.target_id then
+			mspeed = b.min_speed
+			new_target = true
+			goto label_75_0
+		end
+	end
+
+	this.pos.x, this.pos.y = b.to.x, b.to.y
+
+	if target and not target.health.dead then
+		local d = SU.create_bullet_damage(b, target.id, this.id)
+		queue_damage(store, d)
+
+		if b.mod or b.mods then
+			local mods = b.mods or {b.mod}
+
+			for i = 1, #mods do
+				local mod_name = mods[i]
+				local m = E:create_entity(mod_name)
+				m.modifier.target_id = b.target_id
+				m.modifier.level = b.level
+				queue_insert(store, m)
+			end
+		end
+
+		if b.hit_payload then
+			local hp = b.hit_payload
+			hp.pos.x, hp.pos.y = this.pos.x, this.pos.y
+			queue_insert(store, hp)
+		end
+	end
+
+	if b.payload then
+		local hp = b.payload
+		-- Electroshock 这段在 KRV 里使用了额外的 destination_offset(y = -8) 来落回地面，
+		-- 而我们 bolt_orc_shaman 的 b.to 在跟踪阶段会覆盖掉这份 y 修正。
+		-- 所以：只对 payload = bolt_orc_shaman_shock 做落点 y 修正，避免影响普攻两道闪电。
+		if hp.template_name == "bolt_orc_shaman_shock" and target and target.unit and target.unit.hit_offset then
+			hp.pos.x = target.pos.x
+			hp.pos.y = target.pos.y + target.unit.hit_offset.y - 8
+		else
+			hp.pos.x, hp.pos.y = b.to.x, b.to.y
+		end
+		queue_insert(store, hp)
+	end
+
+	if b.hit_fx then
+		local sfx = E:create_entity(b.hit_fx)
+		local r = math.pi * 1.5
+
+		-- 口径：让整个命中特效整体落在 b.to（脚底/地面），
+		-- 然后只把两道闪电层（sprites[1]/[2]）再额外往上抬回 hit_offset，
+		-- 这样 electroshock（sprites[3]）就会留在地面，不跟着敌人头顶走。
+		sfx.pos.x, sfx.pos.y = b.to.x, b.to.y
+
+		local ho
+		if target and target.unit and target.unit.hit_offset then
+			ho = target.unit.hit_offset
+		end
+
+		sfx.render.sprites[1].ts = store.tick_ts
+		sfx.render.sprites[1].runs = 0
+
+		if sfx.render.sprites[2] then
+			sfx.render.sprites[2].ts = store.tick_ts
+			sfx.render.sprites[2].runs = 0
+		end
+
+		-- 这层命中贴图看起来很像血花，萨满普攻只保留电击表现。
+		if sfx.render.sprites[4] then
+			sfx.render.sprites[4].hidden = true
+		end
+
+		if ho then
+			local sp1 = sfx.render.sprites[1]
+			local sp2 = sfx.render.sprites[2]
+			if sp1 and sp1.offset then
+				sp1.offset.x = sp1.offset.x + ho.x
+				sp1.offset.y = sp1.offset.y + ho.y
+			end
+			if sp2 and sp2.offset then
+				sp2.offset.x = sp2.offset.x + ho.x
+				sp2.offset.y = sp2.offset.y + ho.y
+			end
+		end
+
+		for i = 1, #sfx.render.sprites do
+			sfx.render.sprites[i].r = r
+		end
+
+		if target and sfx.render.sprites[1].size_names then
+			sfx.render.sprites[1].name = sfx.render.sprites[1].size_names[target.unit.size]
+		end
+
+		queue_insert(store, sfx)
+	end
+
+	queue_remove(store, this)
+end
+-- 兽人萨满 End
 
 -- 兽人勇士巢穴 Begin
 scripts.tower_orc_warriors = {}

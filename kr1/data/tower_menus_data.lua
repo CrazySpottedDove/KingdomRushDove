@@ -202,6 +202,14 @@ return {
 			tt_title = _("TOWER_INFERNAL_MAGE_NAME"),
 			tt_desc = _("TOWER_INFERNAL_MAGE_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_orc_shaman",
+			image = "kr4_main_icons_0014",
+			type = "orc_shaman",
+			place = 24,
+			tt_title = _("TOWER_ORC_SHAMAN_NAME"),
+			tt_desc = _("TOWER_ORC_SHAMAN_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	engineer = {{M(tpl.common_upgrade, {
@@ -3205,6 +3213,55 @@ return {
 		}, {
 			tt_title = _("TOWER_INFERNAL_MAGE_TELEPORT_NAME_3"),
 			tt_desc = _("TOWER_INFERNAL_MAGE_TELEPORT_DESCRIPTION_3")
+		}}
+	}), tpl.sell}},
+	orc_shaman = {{M(tpl.upgrade_power, {
+		action_arg = "vines",
+		image = "kr4_special_icons_0001",
+		place = 6,
+		sounds = {"OrcShamanHealingRoots"},
+		tt_phrase = _("TOWER_ORC_SHAMAN_VINES_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ORC_SHAMAN_VINES_NAME_1"),
+			tt_desc = _("TOWER_ORC_SHAMAN_VINES_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ORC_SHAMAN_VINES_NAME_2"),
+			tt_desc = _("TOWER_ORC_SHAMAN_VINES_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_ORC_SHAMAN_VINES_NAME_3"),
+			tt_desc = _("TOWER_ORC_SHAMAN_VINES_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "meteor",
+		image = "kr4_special_icons_0002",
+		place = 5,
+		sounds = {"OrcShamanMeteoritesUpgrade"},
+		tt_phrase = _("TOWER_ORC_SHAMAN_METEOR_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ORC_SHAMAN_METEOR_NAME_1"),
+			tt_desc = _("TOWER_ORC_SHAMAN_METEOR_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ORC_SHAMAN_METEOR_NAME_2"),
+			tt_desc = _("TOWER_ORC_SHAMAN_METEOR_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_ORC_SHAMAN_METEOR_NAME_3"),
+			tt_desc = _("TOWER_ORC_SHAMAN_METEOR_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "shock",
+		image = "kr4_special_icons_0003",
+		place = 7,
+		sounds = {"OrcShamanElectroshockUpgrade"},
+		tt_phrase = _("TOWER_ORC_SHAMAN_SHOCK_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ORC_SHAMAN_SHOCK_NAME_1"),
+			tt_desc = _("TOWER_ORC_SHAMAN_SHOCK_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ORC_SHAMAN_SHOCK_NAME_2"),
+			tt_desc = _("TOWER_ORC_SHAMAN_SHOCK_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_ORC_SHAMAN_SHOCK_NAME_3"),
+			tt_desc = _("TOWER_ORC_SHAMAN_SHOCK_DESCRIPTION_3")
 		}}
 	}), tpl.sell}},
 	dark_knights = {{M(tpl.upgrade_power, {

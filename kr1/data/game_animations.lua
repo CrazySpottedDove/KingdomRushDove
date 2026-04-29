@@ -47322,6 +47322,151 @@ return {
 		from = 1,
 		to = 16
 	},
+	warmongers_mage_towers_lvl4_layer1_idle = {
+		prefix = "warmongers_mage_tower_lvl4_layer1",
+		from = 1,
+		to = 1
+	},
+	warmongers_mage_towers_lvl4_layer1_shoot = {
+		prefix = "warmongers_mage_tower_lvl4_layer1",
+		from = 2,
+		to = 42
+	},
+	warmongers_mage_towers_lvl4_layer2_idle = {
+		prefix = "warmongers_mage_tower_lvl4_layer2",
+		from = 1,
+		to = 1
+	},
+	warmongers_mage_towers_lvl4_layer2_shoot = {
+		prefix = "warmongers_mage_tower_lvl4_layer2",
+		from = 2,
+		to = 42
+	},
+	warmongers_mage_towers_fire_idle = {
+		prefix = "warmongers_mage_towers_fire",
+		from = 1,
+		to = 12
+	},
+	warmongers_mage_tower_shooter_lvl4_idleDown = {
+		prefix = "warmongers_mage_tower_shooter_lvl4",
+		from = 1,
+		to = 1
+	},
+	warmongers_mage_tower_shooter_lvl4_idle = {
+		prefix = "warmongers_mage_tower_shooter_lvl4",
+		from = 1,
+		to = 1
+	},
+	warmongers_mage_tower_shooter_lvl4_idleUp = {
+		prefix = "warmongers_mage_tower_shooter_lvl4",
+		from = 30,
+		to = 30
+	},
+	warmongers_mage_tower_shooter_lvl4_shootDown = {
+		prefix = "warmongers_mage_tower_shooter_lvl4",
+		from = 2,
+		to = 29
+	},
+	warmongers_mage_tower_shooter_lvl4_shootUp = {
+		prefix = "warmongers_mage_tower_shooter_lvl4",
+		from = 31,
+		to = 58
+	},
+	warmongers_mage_tower_shooter_lvl4_meteoritesDown = {
+		prefix = "warmongers_mage_tower_shooter_lvl4",
+		from = 59,
+		to = 88
+	},
+	warmongers_mage_tower_shooter_lvl4_meteoritesUp = {
+		prefix = "warmongers_mage_tower_shooter_lvl4",
+		from = 89,
+		to = 118
+	},
+	warmongers_mage_tower_shooter_lvl4_healingRootsDown = {
+		prefix = "warmongers_mage_tower_shooter_lvl4",
+		from = 119,
+		to = 160
+	},
+	warmongers_mage_tower_shooter_lvl4_healingRootsUp = {
+		prefix = "warmongers_mage_tower_shooter_lvl4",
+		from = 161,
+		to = 201
+	},
+	warmongers_mage_tower_shooter_healingRoots_run = {
+		prefix = "warmongers_mage_tower_shooter_healingRoots",
+		from = 21,
+		to = 21
+	},
+	warmongers_mage_tower_shooter_healingRoots_in = {
+		prefix = "warmongers_mage_tower_shooter_healingRoots",
+		from = 1,
+		to = 20
+	},
+	warmongers_mage_tower_shooter_healingRoots_out = {
+		prefix = "warmongers_mage_tower_shooter_healingRoots",
+		from = 22,
+		to = 47
+	},
+	warmongers_mage_tower_shooter_healingRoots_particles_run = {
+		prefix = "warmongers_mage_tower_shooter_healingRoots_particles",
+		from = 1,
+		to = 25
+	},
+	warmongers_mage_tower_shooter_healingRoots_healeffect_run = {
+		prefix = "warmongers_mage_tower_shooter_healingRoots_healeffect",
+		from = 1,
+		to = 26
+	},
+	warmongers_mage_tower_electroshock_hit = {
+		prefix = "warmongers_mage_tower_electroshock",
+		from = 1,
+		to = 25
+	},
+	warmongers_mage_tower_ray_travel = {
+		prefix = "warmongers_mage_tower_ray",
+		from = 1,
+		to = 19
+	},
+	warmongers_mage_tower_ray_flying = {
+		prefix = "warmongers_mage_tower_ray",
+		from = 1,
+		to = 19
+	},
+	mageHit_run = {
+		prefix = "warmongers_mage_tower_shooter_proyectile_hit",
+		from = 1,
+		to = 9
+	},
+	warmongers_mage_tower_shooter_proyectile_hit_run = {
+		prefix = "warmongers_mage_tower_shooter_proyectile_hit",
+		from = 1,
+		to = 9
+	},
+	warmongers_mage_tower_ray_hit_run = {
+		prefix = "warmongers_mage_tower_ray_hit",
+		from = 1,
+		to = 10
+	},
+	warmongers_mage_tower_ray_modifier_run_loop = {
+		prefix = "warmongers_mage_tower_ray_modifier",
+		from = 1,
+		to = 6
+	},
+	warmongers_mage_tower_ray_modifier_loop = {
+		prefix = "warmongers_mage_tower_ray_modifier",
+		from = 1,
+		to = 6
+	},
+	warmongers_mage_tower_meteorite_lvl4_start = {
+		prefix = "warmongers_mage_tower_meteorite_lvl4",
+		from = 1,
+		to = 10
+	},
+	warmongers_mage_tower_lvl4_explotion_run = {
+		prefix = "warmongers_mage_tower_lvl4_explotion",
+		from = 1,
+		to = 19
+	},
 	Stage17_waterFall = {
 		prefix = "Stage17_waterFall",
 		to = 9,

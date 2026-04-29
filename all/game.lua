@@ -59,6 +59,7 @@ game.required_textures = {
 	"kr4_dark_army_tower_archer",
 	"kr4_rotten_forest_tower",
 	"kr4_ember_lords_tower_mage",
+	"kr4_warmongers_tower_mage",
 	"kr4_fallen_ones_bone_flingers",
 	"kr4_warmongers_tower_barrack",
 	"kr4_dark_army_tower_barrack"
@@ -94,6 +95,7 @@ game.required_sounds = {
 	"tower_shadow_archer",
 	"tower_rotten_forest",
 	"tower_infernal_mage",
+	"tower_orc_shaman",
 	"tower_bone_flingers",
 	"tower_orc_warriors",
 	"tower_dark_knights"
