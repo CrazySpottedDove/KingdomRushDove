@@ -154,7 +154,8 @@ function screen:update(dt)
 			self.hold_enabled = false
 			self.progress = 1
 			self.progress_display = 1
-			self.director_ref.queued_item:init_delayed(self.w, self.h)
+			-- 执行剩余的必须在资源加载完后执行的 init 工作
+			self.director_ref.queued_item:init(self.w, self.h)
 			self.director_ref.queued_item_init = true
 			self.director_ref.queued_item.done_callback_called = nil
 		else

@@ -180,12 +180,6 @@ local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_d
 	self.camera.min_zoom = aspect > 1.7777777777777777 and math.min(screen_w, MAX_SCREEN_ASPECT * screen_h) / (visible_w * self.game_scale) or 1
 	self.camera.max_zoom = 2.5
 
-	-- 打印所有 window, camera 参数
-	-- print( "screen_w:", screen_w, "screen_h:", screen_h, "game_scale:", self.game_scale)
-	-- print( "camera.ww:", self.camera.ww, "camera.wh:", self.camera.wh, "camera.wl:", self.camera.wl, "camera.wr:", self.camera.wr, "camera.wt:", self.camera.wt, "camera.wb:", self.camera.wb, "camera.zoom:", self.camera.zoom, "camera.min_zoom:", self.camera.min_zoom, "camera.max_zoom:", self.camera.max_zoom)
-	-- print( "game_ref_origin:", self.game_ref_origin.x, self.game_ref_origin.y)
-	-- print( "visible_coords:", self.store.visible_coords.left, self.store.visible_coords.top, self.store.visible_coords.right, self.store.visible_coords.bottom)
-
 	function self.camera:clamp()
 		self.zoom = km.clamp(self.min_zoom, self.max_zoom, self.zoom)
 		self.x = km.clamp(self.wl + self.ww * self.min_zoom / (2 * self.zoom), self.wr - self.ww * self.min_zoom / (2 * self.zoom), self.x)
@@ -232,24 +226,9 @@ local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_d
 
 	coroutine.yield()
 
-	-- 该部分会需求资源，因此放在 delayed init 中
-	-- game_gui:init(screen_w, screen_h, self)
-	-- coroutine.yield()
-	-- self.game_gui = game_gui
-	-- 允许 store 层影响 game_gui
-	-- self.store.game_gui = game_gui
-
-	-- if not self.store.level.show_comic_idx or self.store.level_mode ~= GAME_MODE_CAMPAIGN then
-	-- S:queue(string.format("MusicBattlePrep_%02d", self.store.level_idx))
-	-- end
-
 	self:init_debug()
 	signal.emit("game-start", self.store)
 end
-
--- function game:init(screen_w, screen_h, done_callback)
--- 	game_init_impl(self, screen_w, screen_h, done_callback)
--- end
 
 function game:init_coro(screen_w, screen_h, done_callback)
 	return coroutine.create(function()
@@ -257,7 +236,8 @@ function game:init_coro(screen_w, screen_h, done_callback)
 	end)
 end
 
-function game:init_delayed(screen_w, screen_h)
+-- 逻辑任务移交 init_coro
+function game:init(screen_w, screen_h)
 	game_gui:init(screen_w, screen_h, self)
 	self.game_gui = game_gui
 	self.store.game_gui = game_gui

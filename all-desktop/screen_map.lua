@@ -258,8 +258,7 @@ function screen_map:init_coro(w, h, done_callback)
 	end)
 end
 
-function screen_map:init_delayed(w, h)
-	-- perf.tmp_start("screen_map_init")
+function screen_map:init(w, h)
 	local sw, sh, scale, origin = SU.clamp_window_aspect(w, h, self.ref_w, self.ref_h)
 
 	self.sw, self.sh = sw, sh
