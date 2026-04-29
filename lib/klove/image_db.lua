@@ -60,8 +60,8 @@ local persistent_textures = table.to_map({
 	"encyclopedia_creeps",
 	"gui_notifications",
 	"gui_notifications_bg",
-	"ballon",
-	"view_options"
+	"ballon"
+-- TODO: view_options 不可加入该缓存列表，因为两个scene的scale不一样，目前暂未处理
 })
 
 local km = require("lib.klua.macros")

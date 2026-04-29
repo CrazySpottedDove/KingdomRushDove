@@ -270,6 +270,7 @@ function screen_map:init_delayed(w, h)
 	window.origin = origin
 	window.timer = timer
 	self.window = window
+
 	GGLabel.static.font_scale = scale
 	GGLabel.static.ref_h = self.ref_h
 

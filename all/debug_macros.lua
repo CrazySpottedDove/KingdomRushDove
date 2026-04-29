@@ -128,18 +128,23 @@ local function serialize_impl(t, indent, printed, out)
 
 			for i, k in ipairs(keys) do
 				local v = t[k]
-				local key_str
 
-				if type(k) == "string" and is_identifier(k) then
-					key_str = k
-
-					out:write(indent .. "  " .. key_str .. " = ")
+				-- 特殊类型不输出
+				if type(v) == "function" or type(v) == "userdata" or type(v) == "thread" then
 				else
-					out:write(indent .. "  [" .. (type(k) == "string" and escape_string(k) or tostring(k)) .. "] = ")
-				end
+					local key_str
 
-				serialize_impl(v, indent .. "  ", printed, out)
-				out:write(",\n")
+					if type(k) == "string" and is_identifier(k) then
+						key_str = k
+
+						out:write(indent .. "  " .. key_str .. " = ")
+					else
+						out:write(indent .. [[ ["]] .. (type(k) == "string" and escape_string(k) or tostring(k)) .. [["] = ]])
+					end
+
+					serialize_impl(v, indent .. "  ", printed, out)
+					out:write(",\n")
+				end
 			end
 
 			out:write(indent .. "}")
@@ -154,8 +159,11 @@ local function serialize_impl(t, indent, printed, out)
 		out:write(tostring(t))
 
 		return
-	else
-		-- function / userdata / thread / other -> serialize to a quoted marker so result is valid lua
+	-- TODO: 现在只支持 vector，否则会报错
+	elseif tp == "cdata" then
+		out:write("{v(" .. t.x .. ", " .. t.y .. ")}")
+		return
+	else -- function / userdata / thread / other -> serialize to a quoted marker so result is valid lua
 		local mark = value_marker(t)
 
 		out:write(escape_string(mark))
