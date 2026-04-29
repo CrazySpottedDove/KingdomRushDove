@@ -244,7 +244,7 @@ local heroes = {
 			xp_gain = {200, 400, 600},
 			range_factor = {1.04, 1.06, 1.08},
 			damage_factor = {1.04, 1.06, 1.08},
-			cooldown_factor = {1.04, 1.06, 1.08},
+			cooldown_factor = {0.96, 0.94, 0.92},
 			s_range_factor = {0.1, 0.12, 0.15}
 		},
 		ultimate = {

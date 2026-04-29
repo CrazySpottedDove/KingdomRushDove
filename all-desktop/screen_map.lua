@@ -4373,36 +4373,6 @@ function EncyclopediaView:create_tower(icon, pos, information, enabled)
 			self:tower_clicked(information, pos)
 		end
 	end
--- if screen_map.user_data.seen[screen_map.tower_data[information].name] then
--- 	local tower = KButton:new()
-
--- 	tower:set_image(icon)
-
--- 	tower.anchor = v(tower.size.x / 2, tower.size.y / 2)
--- 	tower.pos = pos
-
--- 	self.towers:add_child(tower)
-
--- 	function tower.on_enter()
--- 		self:update_over_sprite(tower.pos)
--- 	end
-
--- 	function tower.on_exit()
--- 		self:remove_over_sprite()
--- 	end
-
--- 	function tower.on_click()
--- 		S:queue("GUINotificationPaperOver")
--- 		self:tower_clicked(information, pos)
--- 	end
--- else
--- 	local tower = KImageView:new("encyclopedia_tower_thumbs_lock")
-
--- 	tower.anchor = v(tower.size.x / 2, tower.size.y / 2)
--- 	tower.pos = pos
-
--- 	self.towers:add_child(tower)
--- end
 end
 
 function EncyclopediaView:update_over_sprite(pos)
