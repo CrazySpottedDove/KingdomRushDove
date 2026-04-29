@@ -6089,6 +6089,30 @@ function OptionsView:initialize(sw, sh)
 	end
 	self.back:add_child(ui_settings_button)
 
+	button_height = button_height + 100
+	local fps_button = GGOptionsButton:new("帧率:" .. main.params.fps)
+	fps_button:set_anchor_to_center()
+	fps_button.pos.x = self.back.size.x + 75
+	fps_button.pos.y = button_height
+	fps_button.fps_options = {30, 60, 90, 120, 144}
+	fps_button.current_fps_index = 1
+	for i, fps in ipairs(fps_button.fps_options) do
+		if main.params.fps == fps then
+			fps_button.current_fps_index = i
+			break
+		end
+	end
+	function fps_button.on_click()
+		S:queue("GUIButtonCommon")
+		fps_button.current_fps_index = fps_button.current_fps_index % #fps_button.fps_options + 1
+		local new_fps = fps_button.fps_options[fps_button.current_fps_index]
+		main.params.fps = new_fps
+		DRAW_FPS = new_fps
+		TICK_LENGTH = 1 / new_fps
+		fps_button.label.text = "帧率:" .. new_fps
+	end
+	self.back:add_child(fps_button)
+
 	self.difficulty_idx = screen_map.user_data.difficulty
 
 	if not self.difficulty_idx then

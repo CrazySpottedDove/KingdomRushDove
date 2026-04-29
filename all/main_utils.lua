@@ -155,13 +155,16 @@ function mu.apply_params(params, game_name, game_target, game_platform)
 	TICK_LENGTH = 1 / DRAW_FPS
 	SOUND_POOL_SIZE_FACTOR = params.sound_pool_size
 
-	love.window.setMode(params.width, params.height, {
-		centered = false,
-		fullscreen = params.fullscreen,
-		vsync = params.vsync,
-		msaa = params.msaa,
-		highdpi = params.highdpi
-	})
+	-- 安卓端禁止自定义参数
+	if not IS_ANDROID then
+		love.window.setMode(params.width, params.height, {
+			centered = false,
+			fullscreen = params.fullscreen,
+			vsync = params.vsync,
+			msaa = params.msaa,
+			highdpi = params.highdpi
+		})
+	end
 
 	local aw, ah = love.graphics.getDimensions()
 

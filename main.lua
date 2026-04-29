@@ -248,11 +248,7 @@ local loader
 local function load_director()
 	local director = require("director")
 	main.handler = director
-	-- if IS_ANDROID then
-	-- director:init(main.params)
-	-- else
 	require("mods.mod_main"):init(director)
--- end
 end
 
 local function load_update_manager()
@@ -277,19 +273,7 @@ end
 local function load_app_settings()
 	local settings = require("screen_settings")
 
-	local w, h = love.window.getDesktopDimensions()
-
-	love.window.setMode(w, h, {
-		centered = false,
-		vsync = false
-	})
-
-	local aw, ah = G.getDimensions()
-
-	-- 安卓端尺寸适配
-	if aw and ah and (aw ~= w or ah ~= h) then
-		w, h = aw, ah
-	end
+	local w, h = G.getDimensions()
 
 	local function done_cb()
 		storage:save_settings(main.params)
@@ -324,7 +308,8 @@ function loader:load()
 		if launch_options.skip_must_read then
 			table.removeobject(self.items, "must_read")
 		end
-		if launch_options.skip_settings then
+		-- 安卓端禁用设置界面，因为也没啥自由度，而且画出来老是有问题
+		if launch_options.skip_settings or IS_ANDROID then
 			table.removeobject(self.items, "settings")
 			MU.apply_params(main.params, KR_GAME, KR_TARGET, KR_PLATFORM)
 		end
@@ -341,6 +326,22 @@ function loader:load_next()
 end
 
 local function load(arg)
+	local w, h = love.window.getDesktopDimensions()
+
+	-- 安卓端强制全屏游戏
+	if IS_ANDROID then
+		love.window.setMode(w, h, {
+			centered = false,
+			vsync = false,
+			fullscreen = true
+		})
+	else
+		love.window.setMode(w, h, {
+			centered = false,
+			vsync = false
+		})
+	end
+
 	if love.filesystem.isFused() and not love.filesystem.getInfo(KR_PATH_ALL_TARGET) then
 		log.info("")
 		log.info("mounting asset files...")

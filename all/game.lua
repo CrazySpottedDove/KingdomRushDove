@@ -129,6 +129,7 @@ game.simulation_systems = {
 }
 
 local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_done)
+	self.tick_length_limit = TICK_LENGTH * 1.1
 	self.dash_start_offset = 0
 	self.screen_w = screen_w
 	self.screen_h = screen_h
@@ -337,7 +338,6 @@ function game:init_debug()
 	self.dbg_active_pi = 1
 end
 
-local tick_length_limit = TICK_LENGTH * 1.1
 local click_state = {
 	active = false,
 	press_time = 0,
@@ -367,8 +367,8 @@ function game:update(dt)
 
 	local d = self.simulation.store
 
-	if dt > tick_length_limit then
-		dt = tick_length_limit
+	if dt > self.tick_length_limit then
+		dt = self.tick_length_limit
 	end
 
 	d.dt = dt * d.speed_factor
