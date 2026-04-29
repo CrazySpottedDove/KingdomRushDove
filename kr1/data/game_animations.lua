@@ -47422,12 +47422,7 @@ return {
 		from = 1,
 		to = 25
 	},
-	warmongers_mage_tower_ray_travel = {
-		prefix = "warmongers_mage_tower_ray",
-		from = 1,
-		to = 19
-	},
-	warmongers_mage_tower_ray_flying = {
+	warmongers_mage_tower_ray_run = {
 		prefix = "warmongers_mage_tower_ray",
 		from = 1,
 		to = 19
