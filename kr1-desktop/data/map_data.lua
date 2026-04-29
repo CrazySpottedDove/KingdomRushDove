@@ -1,4 +1,4 @@
-﻿local V=require("lib.klua.vector")
+local V=require("lib.klua.vector")
 local v=V.v
 local r=V.r
 local deco_fn=require("map_decos_functions")
