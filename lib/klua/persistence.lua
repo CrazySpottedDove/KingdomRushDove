@@ -171,12 +171,16 @@ writers = {
 			for _, k in pairs(keys) do
 				local v = item[k]
 
-				writeIndent(file, level + 1)
-				file:write("[")
-				write(file, k, level + 1, objRefNames)
-				file:write("] = ")
-				write(file, v, level + 1, objRefNames)
-				file:write(";\n")
+				local value_type = type(v)
+
+				if value_type ~= "function" and value_type ~= "thread" and value_type ~= "userdata" then
+					writeIndent(file, level + 1)
+					file:write("[")
+					write(file, k, level + 1, objRefNames)
+					file:write("] = ")
+					write(file, v, level + 1, objRefNames)
+					file:write(";\n")
+				end
 			end
 
 			writeIndent(file, level)

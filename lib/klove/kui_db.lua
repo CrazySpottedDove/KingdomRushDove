@@ -96,24 +96,12 @@ function kui_db:get_table(name, ctx)
 	env.ctx = ctx
 
 	env.v = V.v
-	-- function env.v(x, y)
-	-- 	return {
-	-- 		x = x,
-	-- 		y = y
-	-- 	}
-	-- end
 
 	function env.rad(a)
 		return a * math.pi / 180
 	end
 
 	env.r = V.r
-	-- function env.r(x, y, w, h)
-	-- return {
-	-- pos = env.v(x, y),
-	-- size = env.v(w, h)
-	-- }
-	-- end
 
 	env.string = string
 	env.math = math

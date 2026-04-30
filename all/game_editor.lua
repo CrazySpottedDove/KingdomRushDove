@@ -865,6 +865,9 @@ end
 ---@param data table
 ---@param keys table
 local function clear_key(data, keys)
+	for _, key in ipairs(keys) do
+		data[key] = nil
+	end
 	for k, v in pairs(data) do
 		if type(v) == "table" then
 			for _, key in ipairs(keys) do
@@ -942,7 +945,7 @@ function editor:save_data()
 end
 
 function editor:save_curves()
-	local fn = "game_editor/data/levels" .. self.store.level_name .. "_paths.lua"
+	local fn = "game_editor/data/levels/" .. self.store.level_name .. "_paths.lua"
 	local t = {
 		connections = P.path_connections,
 		curves = P.path_curves,
@@ -957,12 +960,14 @@ end
 
 function editor:save_grid()
 	local fn = "game_editor/data/levels/" .. self.store.level_name .. "_grid.lua"
-	storage:write_lua(fn, GR)
+	local data = table.deepclone(GR)
+	clear_key(data, {"cell_size", "cell_type_names", "grid_colors", "grid_h", "grid_w", "waypoints_cache"})
+	storage:write_lua(fn, data)
 end
 
 --- 将当前 store 对应的关卡数据全部保存
 function editor:level_save()
-	log.info("Saving level: %s", s.level_name)
+	log.info("Saving level: %s", self.store.level_name)
 	self:save_curves()
 	self:save_grid()
 	self:save_data()
