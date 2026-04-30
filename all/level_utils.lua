@@ -31,6 +31,7 @@ function LU.queue_remove(store, e)
 	simulation:queue_remove_entity(e)
 end
 
+-- 动态属性访问，支持多层级属性（如 a.b.c.d）
 function LU.eval_get_prop(e, expr)
 	local f = loadstring("return e." .. expr)
 	local env = {}
@@ -42,6 +43,7 @@ function LU.eval_get_prop(e, expr)
 	return f()
 end
 
+-- 动态设置属性，支持多层级属性（如 a.b.c.d）
 function LU.eval_set_prop(e, prop_name, value)
 	log.error("prop_name:%s prop_value:%s", prop_name, value)
 
@@ -62,17 +64,20 @@ function LU.eval_set_prop(e, prop_name, value)
 	f()
 end
 
+--- 加载关卡
+--- @param store table
+--- @param name string 关卡名称
 function LU.load_level(store, name)
 	local level
-	local fn = KR_PATH_GAME .. "/data/levels/" .. name .. ".lua"
+	local fn = "data/levels/" .. name .. ".lua"
 
-	if not is_file(fn) then
+	local f, err = love.filesystem.loadWithPreference(fn, {"game_editor", KR_PATH_GAME})
+
+	if not f then
 		log.debug("Level file does not exist for %s", fn)
 
 		level = {}
 	else
-		local f, err = love.filesystem.load(fn)
-
 		if err then
 			log.error("Error loading level %s: %s", fn, err)
 
@@ -88,7 +93,7 @@ function LU.load_level(store, name)
 	if level.data then
 		store.level_terrain_style = level.data.level_terrain_style
 
-		for _, n in pairs({
+		for _, n in ipairs({
 			"required_textures",
 			"required_sounds",
 			"required_exoskeletons",
@@ -118,11 +123,12 @@ function LU.load_level(store, name)
 	return level
 end
 
+--- 读取单个关卡文件，返回数据
 function LU.eval_file(filename)
-	local f, err = love.filesystem.load(filename)
+	local f, err = love.filesystem.loadWithPreference(filename, {"game_editor", KR_PATH_GAME})
 
 	if err then
-		log.info("Error loading file %s: %s", fullname, err)
+		log.info("Error loading file %s: %s", filename, err)
 
 		return nil, err
 	end
@@ -155,12 +161,14 @@ function LU.eval_file(filename)
 	return data
 end
 
+--- 加载 level_data
+---@param store table
 function LU.load_data(store)
-	local fn = KR_PATH_GAME .. "/data/levels/" .. store.level_name .. "_data.lua"
+	local fn = "data/levels/" .. store.level_name .. "_data.lua"
 	local data = LU.eval_file(fn)
 
 	if not data then
-		log.error("Level data file %s could not be loaded", fn)
+		log.info("Level data file %s could not be loaded", fn)
 
 		return nil
 	end
@@ -181,9 +189,16 @@ function LU.load_data(store)
 	return data
 end
 
+--- 加载 level_loc
+---@param store table
 function LU.load_locations(store)
-	local fn = KR_PATH_GAME .. "/data/levels/" .. store.level_name .. "_loc.lua"
-	local f, err = love.filesystem.load(fn)
+	local fn = "data/levels/" .. store.level_name .. "_loc.lua"
+	local f, err = love.filesystem.loadWithPreference(fn, {"game_editor", KR_PATH_GAME})
+
+	if not f then
+		log.info("Level locations file does not exist for %s", fn)
+		return nil
+	end
 
 	if err then
 		log.info("Level has no locations file %s: %s", fn, err)
@@ -209,6 +224,7 @@ function LU.load_locations(store)
 	return l
 end
 
+--- 将加载的数据中的实体插入到游戏中
 function LU.insert_entities(store, items, store_back_references)
 	if store_back_references then
 		items._idx = {}

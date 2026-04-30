@@ -17,45 +17,57 @@ end
 love.filesystem.setIdentity(version.identity)
 IS_ANDROID = love.system.getOS() == "Android"
 
-local perf = require("dove_modules.perf.perf")
-do
-	love.graphics.setColor_old = function(r, g, b, a)
-		if type(r) == "table" then
-			-- 支持 table 形式
-			if r[1] and r[1] > 1 then
-				r[1] = r[1] / 255
-			end
-
-			if r[2] and r[2] > 1 then
-				r[2] = r[2] / 255
-			end
-
-			if r[3] and r[3] > 1 then
-				r[3] = r[3] / 255
-			end
-
-			if r[4] and r[4] > 1 then
-				r[4] = r[4] / 255
-			end
-			love.graphics.setColor(r)
-		else
-			if r and r > 1 then
-				r = r / 255
-			end
-
-			if g and g > 1 then
-				g = g / 255
-			end
-
-			if b and b > 1 then
-				b = b / 255
-			end
-
-			if a and a > 1 then
-				a = a / 255
-			end
-			love.graphics.setColor(r, g, b, a)
+--- 调用 love.filesystem 来加载文件，但是在 prefixs 中进行逐个尝试，返回最先找到的文件
+---@param filename string
+---@param prefixs table
+---@return function|nil, string|nil
+function love.filesystem.loadWithPreference(filename, prefixs)
+	for i = 1, #prefixs do
+		local path = prefixs[i] .. "/" .. filename
+		local info = love.filesystem.getInfo(path)
+		if info and info.type == "file" then
+			return love.filesystem.load(path)
 		end
+	end
+end
+
+local perf = require("dove_modules.perf.perf")
+love.graphics.setColor_old = function(r, g, b, a)
+	if type(r) == "table" then
+		-- 支持 table 形式
+		if r[1] and r[1] > 1 then
+			r[1] = r[1] / 255
+		end
+
+		if r[2] and r[2] > 1 then
+			r[2] = r[2] / 255
+		end
+
+		if r[3] and r[3] > 1 then
+			r[3] = r[3] / 255
+		end
+
+		if r[4] and r[4] > 1 then
+			r[4] = r[4] / 255
+		end
+		love.graphics.setColor(r)
+	else
+		if r and r > 1 then
+			r = r / 255
+		end
+
+		if g and g > 1 then
+			g = g / 255
+		end
+
+		if b and b > 1 then
+			b = b / 255
+		end
+
+		if a and a > 1 then
+			a = a / 255
+		end
+		love.graphics.setColor(r, g, b, a)
 	end
 end
 
@@ -79,7 +91,6 @@ local base_dir = norm_path(love.filesystem.getSourceBaseDirectory())
 -- 统一定义所有搜索路径根目录
 local search_roots = {
 	"", -- 当前目录
-	"src",
 	"lib",
 	"all",
 	string.format("all-%s", KR_TARGET),

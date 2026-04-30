@@ -55,3 +55,4 @@ mods/local
 .plugins/
 config.json
 *.aluac
+.zed/

@@ -73,10 +73,14 @@ end
 function grid_db:load(name)
 	self.waypoints_cache = {}
 
-	local fn = KR_PATH_GAME .. "/data/levels/" .. name .. "_grid.lua"
-	local f, err = love.filesystem.load(fn)
+	local fn = "data/levels/" .. name .. "_grid.lua"
+	local f, err = love.filesystem.loadWithPreference(fn, {"game_editor", KR_PATH_GAME})
 
-	if not err then
+	if not f then
+		log.error("File %s doesn't exist - error: %s", fn, err)
+
+		return false
+	elseif not err then
 		local file_data = f()
 
 		self.grid = file_data.grid
@@ -90,32 +94,6 @@ function grid_db:load(name)
 		log.error("Failed to load %s - error: %s", fn, err)
 
 		return false
-	end
-end
-
-if DEBUG then
-	function grid_db:save(name)
-		local filename = KR_FULLPATH_BASE .. "/" .. KR_PATH_GAME .. "/data/levels/" .. name .. "_grid.lua"
-		local f = io.open(filename, "w")
-
-		f:write("return {\n")
-		f:write(string.format("ox=%s, oy=%s,\n", self.ox, self.oy))
-		f:write("grid={\n")
-
-		for i = 1, #self.grid do
-			f:write("{")
-
-			for j = 1, #self.grid[i] do
-				f:write(string.format("%s,", self.grid[i][j]))
-			end
-
-			f:write("},")
-		end
-
-		f:write("}")
-		f:write("}\n")
-		f:flush()
-		f:close()
 	end
 end
 

@@ -1177,7 +1177,6 @@ function screen_map:keypressed(key, isrepeat)
 				y = 0
 			}, "out-quad")
 		end
-
 	elseif key == "a" then
 		if self.map_view.pos.x ~= 0 then
 			if self.map_tween_handle then
@@ -4207,8 +4206,10 @@ function EncyclopediaView:initialize(sw, sh)
 		S:queue("GUIButtonCommon")
 		self:hide()
 	end
+
 -- perf.tmp_stop("EncyclopediaView:initialize")
 end
+
 function EncyclopediaView:show()
 	EncyclopediaView.super.show(self)
 
@@ -6014,6 +6015,7 @@ function OptionsView:initialize(sw, sh)
 		screen_map.option_panel:hide()
 		screen_map:ensure_config_panel_view():show()
 	end
+
 	self.back:add_child(config_button)
 
 	button_height = button_height + 100
@@ -6026,6 +6028,7 @@ function OptionsView:initialize(sw, sh)
 		screen_map.option_panel:hide()
 		screen_map:ensure_keyset_panel_view():show()
 	end
+
 	self.back:add_child(keyset_button)
 
 	button_height = button_height + 100
@@ -6038,6 +6041,7 @@ function OptionsView:initialize(sw, sh)
 		screen_map.option_panel:hide()
 		screen_map:ensure_launch_options_panel_view():show()
 	end
+
 	self.back:add_child(launch_options_button)
 
 	-- if not IS_ANDROID then
@@ -6051,6 +6055,7 @@ function OptionsView:initialize(sw, sh)
 		screen_map.option_panel:hide()
 		screen_map:ensure_mod_manager_view():show()
 	end
+
 	self.back:add_child(mod_manager_button)
 	-- end
 
@@ -6064,6 +6069,7 @@ function OptionsView:initialize(sw, sh)
 
 		R.full()
 	end
+
 	self.back:add_child(restart_button)
 
 	button_height = 100
@@ -6075,6 +6081,7 @@ function OptionsView:initialize(sw, sh)
 		S:queue("GUIButtonCommon")
 		love.system.openURL("https://krdovedownload4.crazyspotteddove.top/history")
 	end
+
 	self.back:add_child(history_button)
 
 	button_height = button_height + 100
@@ -6087,6 +6094,7 @@ function OptionsView:initialize(sw, sh)
 		screen_map.option_panel:hide()
 		screen_map:ensure_ui_settings_panel_view():show()
 	end
+
 	self.back:add_child(ui_settings_button)
 
 	button_height = button_height + 100
@@ -6111,7 +6119,41 @@ function OptionsView:initialize(sw, sh)
 		TICK_LENGTH = 1 / new_fps
 		fps_button.label.text = "帧率:" .. new_fps
 	end
+
 	self.back:add_child(fps_button)
+
+	if not IS_ANDROID then
+		button_height = button_height + 100
+		local custom_map_button = GGOptionsButton:new("自定义地图")
+		custom_map_button:set_anchor_to_center()
+		custom_map_button.pos.x = -75
+		custom_map_button.pos.y = button_height
+		function custom_map_button.on_click()
+			S:queue("GUIButtonCommon")
+			local CustomMapBrowser = require("game_editor_custom_map_browser")
+			local view = CustomMapBrowser:new(screen_map.sw, screen_map.sh, function(outcome)
+				screen_map.option_panel:hide()
+				screen_map.done_callback(outcome)
+			end)
+			screen_map.window:add_child(view)
+			view:show()
+		end
+		self.back:add_child(custom_map_button)
+
+		button_height = button_height + 100
+		local editor_button = GGOptionsButton:new("地图编辑器")
+		editor_button:set_anchor_to_center()
+		editor_button.pos.x = -75
+		editor_button.pos.y = button_height
+		function editor_button.on_click()
+			S:queue("GUIButtonCommon")
+			screen_map.done_callback({
+				next_item_name = "game_editor"
+			})
+		end
+
+		self.back:add_child(editor_button)
+	end
 
 	self.difficulty_idx = screen_map.user_data.difficulty
 
@@ -6875,7 +6917,6 @@ function EditableItem:on_click(button, vx, vy)
 			self.parent:clear_focus()
 			self:set_focused(true)
 		end
-
 	elseif self._type == "string" then
 		screen_map.window:set_responder(self)
 		self.parent:clear_focus()

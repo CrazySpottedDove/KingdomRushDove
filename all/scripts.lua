@@ -7398,15 +7398,15 @@ scripts.mega_spawner = {}
 
 function scripts.mega_spawner.insert(this, store)
 	if this.load_file then
-		local fn = KR_PATH_GAME .. "/data/levels/" .. this.load_file .. ".lua"
+		local fn = "data/levels/" .. this.load_file .. ".lua"
 
-		if not is_file(fn) then
+		local f, err = love.filesystem.loadWithPreference(fn, {"game_editor", KR_PATH_GAME})
+
+		if not f then
 			log.error("mega_spawner load_file does not exist: %s", this.load_file)
 
 			return false
 		end
-
-		local f, err = love.filesystem.load(fn)
 
 		if err then
 			log.error("mega_spawner load error: %s, %s", fn, err)
@@ -7730,7 +7730,7 @@ scripts.taunts_controller = {}
 
 function scripts.taunts_controller.insert(this, store)
 	if this.load_file then
-		local fn = KR_PATH_GAME .. "/data/levels/" .. this.load_file .. ".lua"
+		local fn = "data/levels/" .. this.load_file .. ".lua"
 		local data, err = LU.eval_file(fn)
 
 		if not data then

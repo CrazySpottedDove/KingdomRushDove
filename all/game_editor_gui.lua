@@ -21,12 +21,14 @@ local GS = require("kr1.game_settings")
 local G = love.graphics
 
 require("all.constants")
+local timer = require("hump.timer").new()
 
 if DEBUG then
 	package.loaded.game_editor_classes = nil
 end
 
 require("game_editor_classes")
+-- require("gg_views_custom")
 
 local NODE_SELECTION_WINDOW = 8
 
@@ -78,14 +80,17 @@ function gui:init(w, h, editor)
 
 	window.scale = V.v(self.scale, self.scale)
 	window.size = V.v(self.sw, self.sh)
+	window.timer = timer
 	self.window = window
 	wid("picker").size = V.v(self.sw, self.sh)
 	wid("picker").gui = self
 	wid("tools_save").on_click = function()
-		editor:level_save(wid("tools_level_name").value, wid("tools_game_mode").value)
+		-- editor:level_save(wid("tools_level_name").value, wid("tools_game_mode").value)
+		editor:level_save()
+	-- gui:show_save_notification("保存成功!")
 	end
 	wid("tools_load").on_click = function()
-		editor:level_load(wid("tools_level_name").value, wid("tools_game_mode").value)
+		editor:load_level(wid("tools_level_name").value, wid("tools_game_mode").value)
 	end
 	wid("tools_undo").on_click = function()
 		self:undo()
@@ -126,6 +131,143 @@ function gui:init(w, h, editor)
 	if gui.editor.safe_frame_visible then
 		wid("tg_safe_frame"):activate()
 	end
+
+	-- -- 预加载出怪编辑器模块
+	-- local WaveEditorView = require("game_editor_wave_editor")
+	-- self._WaveEditorView = WaveEditorView
+
+	-- -- 添加塔位快速放置区到实体面板
+	-- do
+	-- 	local entities_view = wid("entities")
+	-- 	local entities_layout = entities_view.children[3] -- KELayout is the 3rd child
+	-- 	-- 找到 entities_deselected 并在其后添加塔位区
+	-- 	local deselected_layout = wid("entities_deselected")
+	-- 	if deselected_layout then
+	-- 		local holder_sep = KESep:new("塔位")
+	-- 		deselected_layout:add_child(holder_sep)
+
+	-- 		local holder_hint = KEButton:new("点击放置塔位")
+	-- 		holder_hint.id = "entities_holder_hint"
+	-- 		holder_hint.size = V.v(180, 20)
+	-- 		holder_hint.text_offset = V.v(0, (20 - KE_CONST.font_size) / 2)
+	-- 		function holder_hint.on_click()
+	-- 			-- 插入一个默认的 tower_holder
+	-- 			gui:insert_tower_holder()
+	-- 		end
+
+	-- 		deselected_layout:add_child(holder_hint)
+
+	-- 		-- 塔位模板列表
+	-- 		local holder_list = KEList:new(V.v(180, 60))
+	-- 		holder_list.id = "entities_holder_list"
+	-- 		holder_list.hidden = true
+	-- 		deselected_layout:add_child(holder_list)
+
+	-- 		-- 刷新塔位列表按钮
+	-- 		local refresh_btn = KEButton:new("刷新塔位列表")
+	-- 		refresh_btn.id = "entities_refresh_holders"
+	-- 		refresh_btn.size = V.v(180, 20)
+	-- 		refresh_btn.text_offset = V.v(0, (20 - KE_CONST.font_size) / 2)
+	-- 		function refresh_btn.on_click()
+	-- 			gui:refresh_holder_list()
+	-- 		end
+
+	-- 		deselected_layout:add_child(refresh_btn)
+
+	-- 		deselected_layout:update_layout()
+	-- 	end
+	-- end
+
+	-- -- 添加"背景图"、"帮助文档"、"出怪编辑"和"返回地图"按钮到工具面板底部
+	-- do
+	-- 	local tools_view = wid("tools")
+	-- 	local tools_layout = tools_view.children[3] -- KELayout is the 3rd child
+	-- 	if tools_layout then
+	-- 		-- 新建关卡按钮
+	-- 		local new_level_btn = KEButton:new("新建关卡")
+	-- 		new_level_btn.id = "tools_new_level"
+	-- 		new_level_btn.size = V.v(180, 20)
+	-- 		new_level_btn.text_offset = V.v(0, (20 - KE_CONST.font_size) / 2)
+	-- 		new_level_btn.colors.background = {0, 80, 40, 200}
+	-- 		function new_level_btn.on_click()
+	-- 			gui.editor:create_new_level()
+	-- 		end
+
+	-- 		tools_layout:add_child(new_level_btn)
+
+	-- 		local sep = KESep:new("资源")
+	-- 		tools_layout:add_child(sep)
+
+	-- 		local bg_btn = KEButton:new("加载背景图(拖入PNG)")
+	-- 		bg_btn.id = "tools_bg_image"
+	-- 		bg_btn.size = V.v(180, 20)
+	-- 		bg_btn.text_offset = V.v(0, (20 - KE_CONST.font_size) / 2)
+	-- 		function bg_btn.on_click()
+	-- 			gui:show_bg_prompt()
+	-- 		end
+
+	-- 		tools_layout:add_child(bg_btn)
+
+	-- 		local wave_btn = KEButton:new("出怪编辑")
+	-- 		wave_btn.id = "tools_wave_editor"
+	-- 		wave_btn.size = V.v(180, 20)
+	-- 		wave_btn.text_offset = V.v(0, (20 - KE_CONST.font_size) / 2)
+	-- 		function wave_btn.on_click()
+	-- 			gui:show_wave_editor()
+	-- 		end
+
+	-- 		tools_layout:add_child(wave_btn)
+
+	-- 		local wave_cfg_btn = KEButton:new("出怪配置")
+	-- 		wave_cfg_btn.id = "tools_wave_config"
+	-- 		wave_cfg_btn.size = V.v(180, 20)
+	-- 		wave_cfg_btn.text_offset = V.v(0, (20 - KE_CONST.font_size) / 2)
+	-- 		function wave_cfg_btn.on_click()
+	-- 			gui:show_wave_config()
+	-- 		end
+
+	-- 		tools_layout:add_child(wave_cfg_btn)
+
+	-- 		local export_btn = KEButton:new("导出地图")
+	-- 		export_btn.id = "tools_export"
+	-- 		export_btn.size = V.v(180, 20)
+	-- 		export_btn.text_offset = V.v(0, (20 - KE_CONST.font_size) / 2)
+	-- 		function export_btn.on_click()
+	-- 			gui:show_export_view()
+	-- 		end
+
+	-- 		tools_layout:add_child(export_btn)
+
+	-- 		local sep2 = KESep:new("导航")
+	-- 		tools_layout:add_child(sep2)
+
+	-- 		local help_btn = KEButton:new("帮助文档")
+	-- 		help_btn.id = "tools_help"
+	-- 		help_btn.size = V.v(180, 20)
+	-- 		help_btn.text_offset = V.v(0, (20 - KE_CONST.font_size) / 2)
+	-- 		function help_btn.on_click()
+	-- 			gui:show_help_view()
+	-- 		end
+
+	-- 		tools_layout:add_child(help_btn)
+
+	-- 		local back_btn = KEButton:new("返回地图")
+	-- 		back_btn.id = "tools_back_to_map"
+	-- 		back_btn.size = V.v(180, 20)
+	-- 		back_btn.text_offset = V.v(0, (20 - KE_CONST.font_size) / 2)
+	-- 		function back_btn.on_click()
+	-- 			if gui.editor.done_callback then
+	-- 				gui.editor.done_callback({
+	-- 					next_item_name = "map"
+	-- 				})
+	-- 			end
+	-- 		end
+
+	-- 		tools_layout:add_child(back_btn)
+
+	-- 		tools_layout:update_layout()
+	-- 	end
+	-- end
 
 	wid("cell_info").update = function(this, dt)
 		self:grid_cell_info_update(this, dt)
@@ -345,6 +487,11 @@ function gui:init(w, h, editor)
 
 	wid("tools_level_name"):update()
 	wid("entities_insert_template"):set_value("tower_holder")
+
+-- -- 最后应用主题/反馈/布局（确保所有动态元素已创建完毕）
+-- gui:apply_dark_theme()
+-- gui:enhance_button_feedback()
+-- gui:fix_panel_layout()
 end
 
 function gui:destroy()
@@ -355,6 +502,19 @@ end
 
 function gui:update(dt)
 	self.window:update(dt)
+	-- 更新 hump timer（PopUpView 动画需要）
+	self.window.timer:update(dt)
+
+-- -- 自动消失保存通知
+-- if self._save_notification and self._save_notification_ts then
+-- 	if love.timer.getTime() - self._save_notification_ts > 2.5 then
+-- 		local notif = self._save_notification
+-- 		notif.hidden = true -- KView 没有 hide()，用 hidden 控制
+-- 		self.window:remove_child(notif)
+-- 		self._save_notification = nil
+-- 		self._save_notification_ts = nil
+-- 	end
+-- end
 end
 
 function gui:draw()
@@ -391,7 +551,131 @@ end
 
 function gui:wheelmoved(dx, dy)
 	self.window:wheelmoved(dx, dy)
+-- -- 转发到工具面板的滚轮（内容超出时滚动）
+-- local tools = wid("tools")
+-- if tools and tools.on_scroll and not self:is_any_popup_open() then
+-- 	tools:on_scroll(dy)
+-- end
+-- -- 通用：转发滚轮到所有可见的子 PopUpView（出怪编辑器 / 预览 / 配置编辑器等）
+-- local popups = {{
+-- 	v = self._wave_editor,
+-- 	fn = "_on_scroll"
+-- }, {
+-- 	v = self._wave_config_view,
+-- 	fn = "_on_scroll"
+-- }, {
+-- 	v = self._preview_editor,
+-- 	fn = "_on_scroll"
+-- }}
+-- for _, p in ipairs(popups) do
+-- 	if p.v and not p.v.hidden then
+-- 		local method = p.v[p.fn]
+-- 		if method then
+-- 			method(p.v, dy)
+-- 		end
+-- 	end
+-- end
+-- -- 转发到帮助文档的滚轮事件
+-- if self._help_view and not self._help_view.hidden and self._help_view._on_scroll then
+-- 	self._help_view._on_scroll(dy)
+-- end
 end
+
+-- function gui:is_any_popup_open()
+-- 	return (self._help_view and not self._help_view.hidden) or (self._wave_editor and not self._wave_editor.hidden)
+-- end
+
+-- function gui:show_bg_prompt()
+-- 	if self._bg_prompt then
+-- 		self._bg_prompt.hidden = not self._bg_prompt.hidden
+-- 		gui.editor.waiting_for_bg = not self._bg_prompt.hidden
+-- 		return
+-- 	end
+
+-- 	local pw, ph = 400, 200
+-- 	local panel = KView:new(V.v(pw, ph))
+-- 	panel.colors.background = {22, 28, 42, 255}
+-- 	panel.anchor = V.v(pw / 2, ph / 2)
+-- 	panel.pos = V.v(self.sw / 2, self.sh / 2)
+-- 	self.window:add_child(panel)
+-- 	self._bg_prompt = panel
+
+-- 	local title = KLabel:new(V.v(pw, 36))
+-- 	title.text = "加载背景图片"
+-- 	title.text_align = "center"
+-- 	title.vertical_align = "middle"
+-- 	title.colors.background = {26, 33, 50, 255}
+-- 	title.colors.text = {195, 148, 38, 255}
+-- 	title.font_size = 16
+-- 	title.font_name = KE_CONST.font_name
+-- 	title.pos = V.v(0, 0)
+-- 	panel:add_child(title)
+
+-- 	local hint = KLabel:new(V.v(pw - 40, 60))
+-- 	hint.pos = V.v(20, 50)
+-- 	hint.text = "请将 PNG 图片文件\n从文件管理器拖入此窗口"
+-- 	hint.text_align = "center"
+-- 	hint.colors.text = {205, 218, 248, 255}
+-- 	hint.font_size = 14
+-- 	hint.font_name = KE_CONST.font_name
+-- 	hint.line_height = 1.5
+-- 	panel:add_child(hint)
+
+-- 	local cancel_btn = KEButton:new("取消")
+-- 	cancel_btn.size = V.v(100, 28)
+-- 	cancel_btn.pos = V.v(pw / 2 - 50, ph - 45)
+-- 	function cancel_btn.on_click()
+-- 		panel.hidden = true
+-- 		gui.editor.waiting_for_bg = false
+-- 	end
+
+-- 	panel:add_child(cancel_btn)
+
+-- 	gui.editor.waiting_for_bg = true
+-- end
+
+-- function gui:show_wave_editor()
+-- 	if not self.editor.store.level then
+-- 		self:show_save_notification("请先加载一个关卡")
+-- 		return
+-- 	end
+
+-- 	if self._wave_editor and not self._wave_editor.hidden then
+-- 		self._wave_editor.hidden = true
+-- 		return
+-- 	end
+
+-- 	local WaveEditorView = self._WaveEditorView or require("game_editor_wave_editor")
+-- 	local view = WaveEditorView:new(self.sw, self.sh, self.editor)
+-- 	self.window:add_child(view)
+-- 	self._wave_editor = view
+-- 	view:show()
+-- end
+
+-- function gui:show_wave_config()
+-- 	if not self.editor.store.level then
+-- 		self:show_save_notification("请先加载一个关卡")
+-- 		return
+-- 	end
+
+-- 	local WaveConfigView = require("game_editor_wave_config")
+-- 	local view = WaveConfigView:new(self.sw, self.sh, self.editor)
+-- 	self.window:add_child(view)
+-- 	self._wave_config_view = view -- 保存引用以便滚轮转发
+-- 	view:show()
+-- end
+
+-- function gui:show_export_view()
+-- 	if not self.editor.store.level then
+-- 		self:show_save_notification("请先加载一个关卡")
+-- 		return
+-- 	end
+
+-- 	local EditorExportView = require("game_editor_export")
+-- 	local view = EditorExportView:new(self.sw, self.sh, self.editor)
+-- 	self.window:add_child(view)
+-- 	view:show()
+-- end
 
 function gui:g2u(p, snap)
 	local sx = (p.x * self.editor.game_scale + self.editor.game_ref_origin.x - self.window.origin.x) / self.scale
@@ -411,17 +695,274 @@ function gui:u2g(s)
 	return px, py
 end
 
+-- function gui:enhance_button_feedback()
+-- 	-- 为所有按钮增加悬浮样式切换（通过 id 模式匹配 + class 检测）
+-- 	local function enhance_recursive(view)
+-- 		if not view then
+-- 			return
+-- 		end
+-- 		-- 检测是否为按钮：通过 class 或者 id 特征判断
+-- 		local is_button = false
+-- 		if view.class then
+-- 			local cn = tostring(view.class)
+-- 			is_button = cn:find("KEButton") or cn:find("KButton") or cn:find("KImageButton")
+-- 		end
+-- 		-- 分隔符也要有反馈
+-- 		if not is_button and view.class then
+-- 			local cn = tostring(view.class)
+-- 			is_button = cn:find("KESep")
+-- 		end
+
+-- 		-- 也检测 id 特征（有些按钮可能 class 信息丢失）
+-- 		if not is_button and view.id then
+-- 			local id = view.id
+-- 			is_button = id:match("^tools_") or id:match("^paint_") or id:match("^path_") or id:match("^nav_") or id:match("^entities_") or id:match("^brush_") or id:match("^tg_") or id:match("^grid_") or id == "tools_close"
+-- 		end
+
+-- 		if is_button and view.colors then
+-- 			-- 保存原始颜色
+-- 			local orig_bg = view.colors.background and {unpack(view.colors.background)} or nil
+
+-- 			local orig_enter = view.on_enter
+-- 			view.on_enter = function(self)
+-- 				if orig_enter then
+-- 					orig_enter(self)
+-- 				end
+-- 				if not self.active then
+-- 					self.colors.background = {58, 130, 220, 200}
+-- 				end
+-- 			end
+
+-- 			local orig_exit = view.on_exit
+-- 			view.on_exit = function(self)
+-- 				if orig_exit then
+-- 					orig_exit(self)
+-- 				end
+-- 				if not self.active then
+-- 					self.colors.background = orig_bg or {36, 46, 68, 200}
+-- 				end
+-- 			end
+-- 		end
+-- 		if view.children then
+-- 			for _, child in pairs(view.children) do
+-- 				enhance_recursive(child)
+-- 			end
+-- 		end
+-- 	end
+
+-- 	enhance_recursive(self.window)
+-- end
+
+-- function gui:fix_panel_layout()
+-- 	local tools = wid("tools")
+-- 	if not tools then
+-- 		return
+-- 	end
+
+-- 	-- 强制靠左
+-- 	tools.pos = V.v(0, 0)
+
+-- 	-- 展平所有子元素的宽度：KELayout 及其子孙中所有宽度为 KE_CONST.PROP_W 的项
+-- 	local function widen_recursive(view, new_w)
+-- 		if not view then
+-- 			return
+-- 		end
+-- 		if view.size and math.abs(view.size.x - KE_CONST.PROP_W) < 1 then
+-- 			view.size = V.v(new_w, view.size.y)
+-- 		end
+-- 		if view.children then
+-- 			for _, c in pairs(view.children) do
+-- 				widen_recursive(c, new_w)
+-- 			end
+-- 		end
+-- 	end
+-- 	-- 先把宽度展宽（从 180 → 200），并让 layout 居于标题下方
+-- 	-- 同时把 tools_title 下移，避免和坐标重叠
+-- 	local tools_title = wid("tools_title")
+-- 	if tools_title then
+-- 		tools_title.pos = V.v(15, 4)
+-- 		tools_title.size = V.v(200, 18)
+-- 	end
+-- 	for _, child in pairs(tools.children) do
+-- 		if child.class and tostring(child.class):find("KELayout") then
+-- 			widen_recursive(child, 200)
+-- 			child.pos = V.v(15, 42) -- y: 给标题(0-22)和坐标(22-44)留空间
+-- 			child:update_layout()
+-- 		end
+-- 	end
+
+-- 	-- 计算工具面板所需高度：遍历所有子元素，取其底部的最大值
+-- 	-- 先让 layout 自算出最终高度
+-- 	local function calc_bottom(view)
+-- 		if not view then
+-- 			return 0
+-- 		end
+-- 		return (view.pos.y or 0) + (view.size.y or 0)
+-- 	end
+-- 	local max_bottom = 0
+-- 	for _, child in pairs(tools.children) do
+-- 		local b = calc_bottom(child)
+-- 		if b > max_bottom then
+-- 			max_bottom = b
+-- 		end
+-- 	end
+-- 	local need_h = max_bottom + 10 -- 底部 padding
+
+-- 	-- 上限：屏幕高度减去顶部/底部边距
+-- 	local max_h = self.sh - 40
+-- 	local final_h = math.min(need_h, max_h)
+-- 	tools.size = V.v(230, final_h)
+
+-- 	-- 如果内容超出可见区域，添加滚动支持
+-- 	if need_h > max_h then
+-- 		tools.clip = true
+-- 		-- 将工具面板包装为可滚动
+-- 		local scroll_offset = 0
+-- 		tools._update_scroll = nil
+
+-- 		-- 把内部 KELayout 做滚动偏移
+-- 		for _, child in pairs(tools.children) do
+-- 			if child.class and tostring(child.class):find("KELayout") then
+-- 				local layout = child
+-- 				local orig_y = layout.pos.y
+-- 				tools.scroll_layout = layout
+-- 				tools.scroll_orig_y = orig_y
+
+-- 				-- 注册滚轮处理
+-- 				function tools:on_scroll(dy)
+-- 					local max_off = math.max(0, need_h - max_h)
+-- 					scroll_offset = km.clamp(0, max_off, scroll_offset - dy * 30)
+-- 					layout.pos = V.v(layout.pos.x, orig_y - scroll_offset)
+-- 				end
+-- 			end
+-- 		end
+-- 	end
+
+-- 	-- 其他面板靠左上排列
+-- 	local panel_names = {"general", "entities", "paths", "grid", "nav"}
+-- 	local panel_x = 230
+-- 	for _, name in ipairs(panel_names) do
+-- 		local panel = wid(name)
+-- 		if panel then
+-- 			panel.pos = V.v(panel_x, panel.pos.y or 100)
+-- 			panel_x = panel_x + 10
+-- 		end
+-- 	end
+-- end
+
+-- function gui:apply_dark_theme()
+-- 	-- 深色策略游戏配色方案
+-- 	local panel_bg = {26, 33, 50, 255} -- 面板背景
+-- 	local title_bg = {30, 38, 56, 255} -- 标题栏
+-- 	local text_color = {205, 218, 248, 255} -- 文字颜色
+-- 	local accent = {195, 148, 38, 255} -- 金色装饰
+
+-- 	-- 判断颜色是否为默认黑色（尚未被主题处理过）
+-- 	local function is_black_or_nil(c)
+-- 		if not c then
+-- 			return true
+-- 		end
+-- 		return c[1] == 0 and c[2] == 0 and c[3] == 0
+-- 	end
+
+-- 	-- 递归应用配色
+-- 	local function apply_theme_to_view(view, depth)
+-- 		if not view then
+-- 			return
+-- 		end
+-- 		depth = depth or 0
+
+-- 		local id = view.id or ""
+-- 		local cn = tostring(view.class or "")
+-- 		local is_label = cn:find("KLabel") or cn:find("KEProp") or cn:find("KEPropNum") or cn:find("KEPropCoords") or cn:find("KENum") or cn:find("KEEnum") or cn:find("KEList") or cn:find("KEPointerPos") or cn:find("KECellInfo")
+-- 		local is_btn = cn:find("KButton") or cn:find("KEButton") or cn:find("KImageButton")
+-- 		local is_sep = cn:find("KESep")
+
+-- 		-- 主面板背景色
+-- 		if id == "tools" or id == "general" or id == "entities" or id == "paths" or id == "grid" or id == "nav" then
+-- 			view.colors.background = panel_bg
+-- 		end
+
+-- 		-- 标题栏（面板标题 + tools_title）
+-- 		if id and (id:match("_title$") or id:match("^tools_title")) then
+-- 			view.colors.background = title_bg
+-- 			if view.colors then
+-- 				view.colors.text = accent
+-- 			end
+-- 		end
+
+-- 		-- 关闭按钮
+-- 		if id and id:match("_close$") then
+-- 			view.colors.background = {120, 50, 50, 255}
+-- 			if view.colors then
+-- 				view.colors.text = {255, 255, 255, 255}
+-- 			end
+-- 		end
+
+-- 		-- 分隔符标题
+-- 		if is_sep then
+-- 			view.colors.background = {20, 25, 40, 255}
+-- 			if view.colors then
+-- 				view.colors.text = accent
+-- 			end
+-- 		end
+
+-- 		-- ★ 关键修复：对所有 KLabel/KButton 默认设置浅色文字（如果还是黑色）
+-- 		if view.colors then
+-- 			if is_label and is_black_or_nil(view.colors.text) then
+-- 				view.colors.text = text_color
+-- 			end
+-- 			if is_btn and is_black_or_nil(view.colors.text) then
+-- 				view.colors.text = {255, 255, 255, 255}
+-- 			end
+-- 		end
+
+-- 		-- 递归子元素
+-- 		if view.children then
+-- 			for _, child in pairs(view.children) do
+-- 				apply_theme_to_view(child, depth + 1)
+-- 			end
+-- 		end
+-- 	end
+
+-- 	apply_theme_to_view(self.window)
+
+-- 	-- 第二轮：修复 KELayout 子元素中 KEProp 等的内部标签（KLabel 在 KEProp 内部的 children 里）
+-- 	local function fix_inner_labels(view)
+-- 		if not view then
+-- 			return
+-- 		end
+-- 		if view.colors and view.class then
+-- 			local cn = tostring(view.class)
+-- 			-- KLabel 如果还是黑色，强制设为浅色
+-- 			if cn:find("KLabel") then
+-- 				if not view.colors.text or (view.colors.text[1] == 0 and view.colors.text[2] == 0 and view.colors.text[3] == 0) then
+-- 					view.colors.text = text_color
+-- 				end
+-- 			end
+-- 		end
+-- 		if view.children then
+-- 			for _, child in pairs(view.children) do
+-- 				fix_inner_labels(child)
+-- 			end
+-- 		end
+-- 	end
+-- 	fix_inner_labels(self.window)
+-- end
+
 function gui:level_loaded(level_idx)
 	wid("tools_level_name"):set_value(level_idx)
 	self:update_grid_tool()
 	self:refresh_nav_tool()
+-- self:refresh_holder_list()
 end
 
 function gui:pointer_pos_label_update(this, dt)
 	local x, y = love.mouse.getPosition()
-
 	x, y = self:u2g(V.v(x, y))
 	this.lt.text = string.format("%s,%s", x, y)
+-- this.lt.colors.text = {180, 220, 255, 255}
+-- this.lt.font_name = "infobar_stats" -- 中文环境下用 msyh
 end
 
 function gui:hide_tool(name)
@@ -499,6 +1040,18 @@ function gui:deselect_tool(name)
 	if v.children[2] then
 		v.children[2].colors.background = {220, 220, 220, 255}
 	end
+	-- -- 面板标题恢复默认
+	-- local title = v and v.children[2]
+	-- if title then
+	-- 	title.colors.background = {30, 38, 56, 255}
+	-- 	title.colors.text = {195, 148, 38, 255}
+	-- end
+
+	-- -- 对应工具按钮取消激活
+	-- local btn = wid("tools_" .. name)
+	-- if btn then
+	-- 	btn:deactivate()
+	-- end
 
 	if name == "grid" then
 		self.editor.grid_brush = nil
@@ -519,6 +1072,18 @@ function gui:select_tool(name)
 	if v.children[2] then
 		v.children[2].colors.background = {255, 255, 200, 255}
 	end
+	-- -- 面板标题高亮为蓝色（选中状态）
+	-- local title = v and v.children[2]
+	-- if title then
+	-- 	title.colors.background = {58, 130, 220, 255}
+	-- 	title.colors.text = {255, 255, 255, 255}
+	-- end
+
+	-- -- 对应工具按钮激活
+	-- local btn = wid("tools_" .. name)
+	-- if btn then
+	-- 	btn:activate()
+	-- end
 
 	if name == "entities" and not self.editor.entities_selected then
 		self.window:set_responder(wid("entities_insert_template"))
@@ -594,6 +1159,15 @@ function gui:undo()
 end
 
 function gui:grid_cell_info_update(this, dt)
+	-- if not GR or not GR.grid or #GR.grid == 0 then
+	-- 	if this.lt then
+	-- 		this.lt.text = "-"
+	-- 	end
+	-- 	if this.gt then
+	-- 		this.gt.text = "未加载"
+	-- 	end
+	-- 	return
+	-- end
 	local x, y = love.mouse.getPosition()
 	local wx, wy = self:u2g(V.v(x, y))
 	local ct, i, j = GR:cell_type(wx, wy)
@@ -1018,7 +1592,7 @@ function gui:search_entity_suggestions()
 
 			l.text_align = "left"
 			l.text = tn
-			l.font_name = "DroidSansMono"
+			l.font_name = "body"
 			l.font_size = 8
 
 			function l.on_click()
@@ -1550,6 +2124,306 @@ function gui.renumber_holders()
 	gui.clear_nav_all()
 	gui.editor:sanitize_nav_mesh(gui.editor.store.level.nav_mesh)
 end
+
+-- function gui:insert_tower_holder(template_name)
+-- 	local tn = template_name or "tower_holder_grass"
+-- 	local template = E:get_template(tn)
+-- 	if not template then
+-- 		-- 如果指定模板不存在，尝试搜索所有 holder
+-- 		gui:refresh_holder_list()
+-- 		gui:show_save_notification("未找到模板: " .. tn .. ", 请从列表中选择")
+-- 		return
+-- 	end
+
+-- 	local e = E:create_entity(tn)
+-- 	-- 在屏幕中央稍微偏移放置
+-- 	local cx, cy = REF_W / 2, REF_H / 2
+-- 	-- 查找已存在的同类型 holder，在它们下方偏移
+-- 	local offset = 0
+-- 	for _, ee in pairs(gui.editor.store.entities) do
+-- 		if ee.template_name == tn and ee.pos then
+-- 			offset = offset + 60
+-- 		end
+-- 	end
+
+-- 	e.pos.x = cx
+-- 	e.pos.y = cy - 100 + offset
+
+-- 	-- 自动分配 nav_mesh_id
+-- 	if e.ui then
+-- 		local max_id = 0
+-- 		for _, ee in pairs(gui.editor.store.entities) do
+-- 			if ee.ui and ee.ui.nav_mesh_id then
+-- 				local id = tonumber(ee.ui.nav_mesh_id)
+-- 				if id and id > max_id then
+-- 					max_id = id
+-- 				end
+-- 			end
+-- 		end
+-- 		e.ui.nav_mesh_id = tostring(max_id + 1)
+-- 	end
+
+-- 	queue_insert(gui.editor.store, e)
+-- 	gui.editor.entities_dirty = true
+-- 	gui:show_save_notification("已放置: " .. tn)
+-- end
+
+-- function gui:refresh_holder_list()
+-- 	local list = wid("entities_holder_list")
+-- 	if not list then
+-- 		return
+-- 	end
+
+-- 	list:clear_rows()
+-- 	list.hidden = false
+
+-- 	-- 真正的通用塔位模板是 tower_holder_<地形> 系列
+-- 	-- 排除 tower_holder_blocked_*（被阻挡的塔位）和 tower_*_holder（特定英雄的）
+-- 	local results = {}
+-- 	for k, _ in pairs(E.entities) do
+-- 		-- 匹配 tower_holder_<name> 但不匹配 tower_holder_blocked_*
+-- 		if string.find(k, "^tower_holder_") and not string.find(k, "^tower_holder_blocked_") then
+-- 			-- 检查是否包含 tower_holder 组件
+-- 			local template = E:get_template(k)
+-- 			if template and template.tower_holder then
+-- 				table.insert(results, k)
+-- 			end
+-- 		end
+-- 	end
+-- 	table.sort(results)
+
+-- 	-- 限制数量避免界面过长
+-- 	local max_results = math.min(#results, 30)
+-- 	for i = 1, max_results do
+-- 		local tn = results[i]
+-- 		if tn then
+-- 			local l = KLabel:new(V.v(list.size.x, 18))
+-- 			l.text_align = "left"
+-- 			l.text = tn
+-- 			l.font_name = KE_CONST.font_name
+-- 			l.font_size = 8
+-- 			l.colors.background = {0, 0, 0, 20}
+
+-- 			function l.on_click()
+-- 				gui:insert_tower_holder(tn)
+-- 				gui:show_save_notification("已放置: " .. tn)
+-- 			end
+
+-- 			list:add_row(l)
+-- 		end
+-- 	end
+
+-- 	if #results == 0 then
+-- 		local l = KLabel:new(V.v(list.size.x, 18))
+-- 		l.text_align = "left"
+-- 		l.text = "无通用塔位模板"
+-- 		l.font_name = KE_CONST.font_name
+-- 		l.font_size = 8
+-- 		list:add_row(l)
+-- 	end
+
+-- 	gui:show_save_notification("找到 " .. #results .. " 个通用塔位模板")
+-- end
+
+-- function gui:show_save_notification(text)
+-- 	-- 如果已有通知视图，移除旧的
+-- 	if self._save_notification then
+-- 		self._save_notification.hidden = true
+-- 		self.window:remove_child(self._save_notification)
+-- 		self._save_notification = nil
+-- 	end
+
+-- 	local notif = KView:new(V.v(300, 60))
+-- 	notif.colors.background = {0, 120, 0, 220} -- 深绿色背景
+-- 	notif.pos = V.v(self.sw / 2 - 150, 80)
+-- 	notif.anchor = V.v(0, 0)
+
+-- 	local label = KLabel:new(V.v(300, 60))
+-- 	label.text = text
+-- 	label.text_align = "center"
+-- 	label.vertical_align = "middle"
+-- 	label.font_name = KE_CONST.font_name
+-- 	label.font_size = 16
+-- 	label.colors.text = {255, 255, 255, 255}
+-- 	notif:add_child(label)
+
+-- 	self.window:add_child(notif)
+-- 	self._save_notification = notif
+-- 	self._save_notification_ts = love.timer.getTime() -- 记录创建时间
+-- end
+
+-- function gui:show_help_view()
+-- 	if self._help_view then
+-- 		-- 切换可见状态（KView 没有 show/hide 方法，用 hidden 控制）
+-- 		self._help_view.hidden = not self._help_view.hidden
+-- 		return
+-- 	end
+
+-- 	local hw, hh = 800, 600
+-- 	-- 不使用 PopUpView（避免 timer 依赖），直接用 KView 做遮罩
+-- 	local help_view = KView:new(V.v(self.sw, self.sh))
+-- 	help_view.pos = V.v(0, 0)
+-- 	help_view.colors.background = {0, 0, 0, 160}
+-- 	help_view.hidden = true
+
+-- 	-- 主面板
+-- 	local panel = KView:new(V.v(hw, hh))
+-- 	panel.colors.background = {22, 28, 42, 255} -- 深色面板
+-- 	panel.anchor = V.v(hw / 2, hh / 2)
+-- 	panel.pos = V.v(self.sw / 2, self.sh / 2)
+
+-- 	-- 标题
+-- 	local title = KLabel:new(V.v(hw, 40))
+-- 	title.text = "地图编辑器帮助文档"
+-- 	title.text_align = "center"
+-- 	title.vertical_align = "middle"
+-- 	title.font_name = KE_CONST.font_name
+-- 	title.font_size = 20
+-- 	title.colors.text = {238, 244, 255, 255}
+-- 	title.colors.background = {26, 33, 50, 255}
+-- 	title.pos = V.v(0, 0)
+-- 	panel:add_child(title)
+
+-- 	-- 关闭按钮
+-- 	local close_btn = KButton:new(V.v(30, 30))
+-- 	close_btn.text = "X"
+-- 	close_btn.pos = V.v(hw - 35, 5)
+-- 	close_btn.colors.background = {120, 120, 120, 255}
+-- 	close_btn.colors.text = {255, 255, 255, 255}
+-- 	function close_btn.on_click()
+-- 		help_view.hidden = true
+-- 	end
+
+-- 	panel:add_child(close_btn)
+
+-- 	-- 文本内容（可滚动区域）
+-- 	local content_text = [[
+-- 地图编辑器使用说明
+
+-- --- 基本操作 ---
+-- - 左键点击工具按钮切换编辑模式
+-- - 每个工具面板可拖拽移动位置
+-- - 使用快捷键可快速切换工具
+
+-- --- 关卡管理 (Level) ---
+-- - 关卡编号：输入要编辑的关卡数字
+-- - 游戏模式：1=战役 2=英雄 3=铁人
+-- - 保存：保存当前编辑到关卡文件
+-- - 加载：加载已有关卡数据
+-- - 撤销：撤销上一步操作
+
+-- --- 实体编辑 (Entities) ---
+-- - 在实体面板输入模板名后点击"插入实体"
+-- - 常用模板：tower_holder（塔位）
+-- - 左键点击世界中的实体进行选择
+-- - 选中后可修改属性或删除
+
+-- --- 路径编辑 (Paths) ---
+-- - 创建新路径后，拖动节点调整路径
+-- - 节点由贝塞尔曲线控制
+-- - 细分路径：在选中节点处插入新节点
+-- - 扩充路径：在路径末端延长
+-- - 每条路径可设置宽度、活跃状态、连接关系
+
+-- --- 网格编辑 (Grid) ---
+-- 网格用于标记地形，影响敌人行走和塔位放置：
+-- - 陆地 (Land)：可放置塔，可行走
+-- - 水域 (Water)：不可放置塔，不可行走
+-- - 悬崖 (Cliff)：不可放置塔，不可行走
+-- - 浅滩 (Shallow)：水域中的可通行区域
+-- - 无法行走 (NoWalk)：强制禁止行走
+-- - 仙子 (Faerie)：特殊飞行单位互动
+-- - 冰面 (Ice)：影响移动速度
+-- - 飞行不可行走：仅对飞行单位生效
+
+-- --- 导航网格 (Nav) ---
+-- - 用于控制塔的寻路方向
+-- - 每个塔位需要分配方向ID
+-- - 上/左/右/下 分别对应不同的路径方向
+
+-- --- 快捷键 ---
+-- 在网格模式下：
+--   +/- 调整笔刷大小
+--   Q 无地形  E 陆地  W 水域  C 悬崖
+--   S 浅滩  D 无法行走  F 仙子  G 冰面
+
+-- 在实体模式下：
+--   方向键 移动选中的实体
+--   ESC 取消选择
+
+-- 在路径模式下：
+--   方向键 移动选中的节点
+--   V 预览子路径
+--   Delete/Backspace 删除节点
+-- ]]
+
+-- 	-- 滚动容器
+-- 	local scroll_h = hh - 110
+-- 	local scroll_view = KView:new(V.v(hw - 20, scroll_h))
+-- 	scroll_view.pos = V.v(10, 46)
+-- 	scroll_view.colors.background = {0, 0, 0, 0}
+-- 	scroll_view.clip = true
+-- 	panel:add_child(scroll_view)
+-- 	help_view._scroll_view = scroll_view
+
+-- 	-- 滚动中的内容
+-- 	local content = KLabel:new(V.v(hw - 40, 0))
+-- 	content.text = content_text
+-- 	content.text_align = "left"
+-- 	content.vertical_align = "top"
+-- 	content.font_name = KE_CONST.font_name
+-- 	content.font_size = 12
+-- 	content.colors.text = {205, 218, 248, 255}
+-- 	content.pos = V.v(0, 0)
+-- 	content.line_height = 1.3
+-- 	scroll_view:add_child(content)
+
+-- 	-- 计算内容实际高度：按文本行数估算
+-- 	local function count_text_lines(text)
+-- 		local count = 0
+-- 		for line in text:gmatch("[^\n]+") do
+-- 			count = count + 1
+-- 		end
+-- 		return count
+-- 	end
+-- 	local line_h = (content.font_size or 12) * (content.line_height or 1.5)
+-- 	local total_lines = count_text_lines(content_text)
+-- 	local content_h = total_lines * line_h + 40
+-- 	content.size = V.v(hw - 55, math.max(scroll_h, content_h))
+
+-- 	-- 滚动条
+-- 	local scrollbar_w = 6
+-- 	local scrollbar = KView:new(V.v(scrollbar_w, scroll_h))
+-- 	scrollbar.pos = V.v(hw - 25, 0)
+-- 	scrollbar.colors.background = {40, 50, 70, 200}
+-- 	scroll_view:add_child(scrollbar)
+
+-- 	local scrollbar_fill = KView:new(V.v(scrollbar_w, scroll_h))
+-- 	scrollbar_fill.pos = V.v(0, 0)
+-- 	scrollbar_fill.colors.background = {100, 140, 220, 200}
+-- 	scrollbar:add_child(scrollbar_fill)
+
+-- 	-- 滚轮事件
+-- 	local content_scroll_y = 0
+-- 	help_view._on_scroll = function(dy)
+-- 		local max_scroll = math.max(0, content.size.y - scroll_h)
+-- 		content_scroll_y = km.clamp(0, max_scroll, content_scroll_y - dy * 40)
+-- 		content.pos = V.v(0, -content_scroll_y)
+-- 		-- 更新滚动条位置
+-- 		local fill_ratio = scroll_h / math.max(scroll_h, content.size.y)
+-- 		local fill_h = scroll_h * fill_ratio
+-- 		local fill_pos = (scroll_h - fill_h) * (content_scroll_y / math.max(1, max_scroll))
+-- 		scrollbar_fill.size = V.v(scrollbar_w, fill_h)
+-- 		scrollbar_fill.pos = V.v(0, fill_pos)
+-- 	end
+-- 	-- 初始更新滚动条
+-- 	help_view._on_scroll(0)
+
+-- 	help_view:add_child(panel)
+-- 	self.window:add_child(help_view)
+-- 	self._help_view = help_view
+-- 	help_view.hidden = false -- KView 直接设置 hidden（不使用 PopUpView 的动画 show）
+-- end
 
 function gui.adds_missing_numbers()
 	local last_id = 0

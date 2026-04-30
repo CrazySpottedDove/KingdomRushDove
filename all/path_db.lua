@@ -24,8 +24,9 @@ path_db.average_node_dist = 6
 
 local function load_file_by_name(name)
 	local data
-	local fn = KR_PATH_GAME .. "/data/levels/" .. name .. "_paths.lua"
-	if not is_file(fn) then
+	local fn = "data/levels/" .. name .. "_paths.lua"
+	local f, err = love.filesystem.loadWithPreference(fn, {"game_editor", KR_PATH_GAME})
+	if not f then
 		log.debug("Level paths file does not exist for %s", fn)
 
 		data = {
@@ -35,8 +36,6 @@ local function load_file_by_name(name)
 			active = {}
 		}
 	else
-		local f, err = love.filesystem.load(fn)
-
 		if err then
 			log.error("Error loading path curves for %s: %s", fn, err)
 
@@ -49,6 +48,7 @@ local function load_file_by_name(name)
 		setfenv(f, env)
 		data = f()
 	end
+
 	return data
 end
 

@@ -1,6 +1,7 @@
--- chunkname: @./all/game_editor.lua
-local log = require("lib.klua.log"):new("game")
+-- Dove 版地图编辑器：提供给玩家自行编辑地图的功能！
 
+local log = require("lib.klua.log"):new("game")
+local storage = require("all.storage")
 log:set_level("debug")
 
 require("lib.klua.dump")
@@ -20,6 +21,7 @@ local P = require("path_db")
 local SU = require("screen_utils")
 local GR = require("grid_db")
 local LU = require("level_utils")
+local GEU = require("game_editor_utils")
 local sys = require("systems")
 
 simulation = require("simulation")
@@ -40,114 +42,55 @@ require("all.constants")
 BATCH_SIZE = 1000
 DEFAULT_PATH_WIDTH = 40
 editor = {}
-editor.required_textures = {"tower_holders", "go_decals", "go_towers_group1", "go_editor", "go_towers_group2", "go_towers_group3", "go_towers_group4", "go_towers_group5", "go_towers_group6"}
+-- 为了显示，加载这些纹理
+editor.required_textures = {
+	"tower_holders",
+	"go_decals",
+	"go_towers_group1",
+	"go_editor",
+	"go_towers_group2",
+	"go_towers_group3",
+	"go_towers_group4",
+	"go_towers_group5",
+	"go_towers_group6",
+	"go_towers_pandas",
+	"go_towers_dark_elf",
+	"go_towers_tricannon",
+	"go_towers_demon_pit",
+	"go_towers_necromancer",
+	"go_towers_ray",
+	"go_towers_elven_stargazers",
+	"go_towers_sand",
+	"go_towers_royal_archers",
+	"go_towers_arcane_wizard",
+	"go_towers_rocket_gunners",
+	"go_towers_flamespitter",
+	"go_towers_ballista",
+	"go_towers_barrel",
+	"go_towers_hermit_toad",
+	"go_towers_sparking_geode",
+	"go_towers_dwarf",
+	"go_towers_ghost",
+	"go_towers_paladin_covenant",
+	"go_towers_arborean_emissary",
+	"go_towers_dragons",
+	"kr4_dark_army_tower_archer",
+	"kr4_rotten_forest_tower",
+	"kr4_ember_lords_tower_mage",
+	"kr4_warmongers_tower_mage",
+	"kr4_fallen_ones_bone_flingers",
+	"kr4_warmongers_tower_barrack",
+	"kr4_dark_army_tower_barrack"
+}
 editor.ref_h = REF_H
 editor.ref_w = REF_W
 editor.ref_res = TEXTURE_SIZE_ALIAS.ipad
 editor.simulation_systems = {"editor_overrides", "editor_script", "render", "last_hook"}
 
-function editor:save_data(data, name)
-	local fn = KR_FULLPATH_BASE .. "/" .. KR_PATH_GAME .. "/data/levels/" .. name .. "_data.lua"
-
-	local function custom_sort(k, o)
-		local function sort_table(a, b)
-			if a == "template" then
-				return true
-			elseif b == "template" then
-				return false
-			elseif type(a) == "number" and type(b) == "number" then
-				if type(o[a]) == "table" and type(o[b]) == "table" and o[a].template and o[b].template then
-					if o[a].template == o[b].template and o[a].pos and o[b].pos then
-						if o[a].pos.y == o[b].pos.y then
-							if o[a].pos.x == o[b].pos.x then
-								if o[a]["editor.game_mode"] and o[b]["editor.game_mode"] then
-									return o[a]["editor.game_mode"] < o[b]["editor.game_mode"]
-								elseif o[a]["tunnel.name"] and o[b]["tunnel.name"] then
-									return o[a]["tunnel.name"] < o[b]["tunnel.name"]
-								else
-									return o[a].pos.x < o[b].pos.x
-								end
-							else
-								return o[a].pos.x < o[b].pos.x
-							end
-						else
-							return o[a].pos.y < o[b].pos.y
-						end
-					else
-						return o[a].template < o[b].template
-					end
-				else
-					return a < b
-				end
-			else
-				return tostring(a) < tostring(b)
-			end
-		end
-
-		table.sort(k, sort_table)
-	end
-
-	local str = serpent.block(data, {
-		indent = "    ",
-		comment = false,
-		sortkeys = custom_sort,
-		keyignore = {
-			_idx = true,
-			_id = true,
-			_before_ov = true,
-			locations = true,
-			frames = true
-		}
-	})
-	local out = "return " .. str .. "\n"
-	local f = io.open(fn, "w")
-
-	f:write(out)
-	f:flush()
-	f:close()
-end
-
-function editor:save_curves(name)
-	local fn = KR_FULLPATH_BASE .. "/" .. KR_PATH_GAME .. "/data/levels/" .. name .. "_paths.lua"
-	local t = {
-		connections = P.path_connections,
-		curves = P.path_curves,
-		paths = P:generate_paths(),
-		active = P.active_paths
-	}
-	local str = serpent.block(t, {
-		indent = "    ",
-		comment = false,
-		sortkeys = true,
-		keyignore = {
-			beziers = true
-		}
-	})
-	local out = "return " .. str .. "\n"
-	local dir = fn:match("(.+)/[^/]+$")
-
-	if dir then
-		os.execute("mkdir \"" .. dir .. "\"")
-	end
-
-	local f = io.open(fn, "w")
-
-	f:write(out)
-	f:flush()
-	f:close()
-end
-
-function editor:init(screen_w, screen_h, done_callback)
-	self.screen_w = screen_w
-	self.screen_h = screen_h
-	self.done_callback = done_callback
-	-- self.game_scale = self.ref_h / TEXTURE_SIZE_ALIAS[self.args.texture_size]
-	self.game_scale = self.ref_h / TEXTURE_SIZE_ALIAS["ipad"]
-	self.game_scale = self.game_scale / (tsf and tsf.game_editor or 1)
-	self.game_ref_origin = V.v((screen_w - self.ref_w * self.game_scale) / 2, (screen_h - self.ref_h * self.game_scale) / 2)
-
-	RU.init()
-
+-- 加载某一个关卡。查找顺序：编辑器目录 → 游戏目录 → 初始化空白关卡
+function editor:load_level(idx, mode)
+	self.undo_stack = {}
+	self.undo_active = false
 	self.store = {}
 
 	local systems = self.simulation_systems
@@ -155,12 +98,140 @@ function editor:init(screen_w, screen_h, done_callback)
 	simulation:init(self.store, systems, self.simulation_systems, TICK_LENGTH)
 
 	self.simulation = simulation
+
+	A:load()
+	E:ensure_loaded()
+
+	local s = self.store
+
+	-- 如果没有 idx，我们应该找到一个合适的关卡序号，并创建一个新的关卡
+	if not idx then
+		-- 获取一个合适的关卡序号
+		idx = GEU.find_min_editor_index() - 1
+		s.level_idx = idx
+		s.level_name = "level" .. string.format("%02i", idx)
+		s.level_mode = mode
+		s.level_difficulty = DIFFICULTY_EASY
+		s.level = {
+			data = {
+				locked_hero = false,
+				level_terrain_style = "tower_holder_grass",
+				max_upgrade_level = 6,
+				entities_list = {},
+				invalid_path_ranges = {},
+				level_mode_overrides = {{}, {}, {}},
+				nav_mesh = {},
+				required_sounds = {},
+				required_textures = {},
+				required_exoskeletons = {}
+			},
+			unlock_towers = {},
+			locked_towers = {}
+		}
+		for _, n in ipairs({
+			"required_textures",
+			"required_sounds",
+			"required_exoskeletons",
+			"locked_hero",
+			"locked_powers",
+			"locked_towers",
+			"max_upgrade_level",
+			"custom_spawn_pos",
+			"show_comic_idx",
+			"nav_mesh",
+			"unlock_towers",
+			"custom_start_pos",
+			"ignore_walk_backwards_paths"
+		}) do
+			s.level[n] = s.level.data[n]
+		end
+	else
+		-- 不需要区分来自 game_editor 目录还是游戏目录，直接进行加载。默认情况下，会先从 game_editor 加载，然后才是从游戏目录加载。
+		s.level_idx = idx
+		s.level_name = "level" .. string.format("%02i", idx)
+		s.level_mode = mode
+		s.level_difficulty = DIFFICULTY_EASY
+		s.level = LU.load_level(s, s.level_name, true)
+		director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
+
+		if s.level.data then
+			LU.insert_entities(self.store, s.level.data.entities_list, true)
+
+			if s.level.data.required_exoskeletons then
+				EXO:load(s.level.data.required_exoskeletons)
+			end
+		end
+
+		if not s.level.nav_mesh then
+			s.level.nav_mesh = {}
+
+			if not s.level.data then
+				s.level.data = {}
+			end
+
+			s.level.data.nav_mesh = s.level.nav_mesh
+		end
+
+		if s.level.load then
+			P.add_invalid_range = function()
+			end
+
+			s.level:load(s)
+		end
+	end
+
+	-- 尝试加载网格
+	if not GR:load(s.level_name) then
+		local gox, goy = -192, 0
+		local bgw, bgh = 1408, 768
+		local gw, gh = math.ceil(bgw / GR.cell_size), math.ceil(bgh / GR.cell_size)
+
+		GR:init_grid(gw, gh, gox, goy, GR.cell_size)
+	end
+
+	P:load_curves(s.level_name)
+
+	self.entities_dirty = true
+
+	self.grid_dirty = true
+
+	self.path_curves = P.path_curves
+	self.path_connections = P.path_connections
+	self.active_paths = P.active_paths
+
+	self:update_curves()
+
+	self.paths_dirty = true
+
+	self.simulation:update(0.03333333333333333)
+
+	self.nav_entity_selected = nil
+
+	self:sanitize_nav_mesh(s.level.nav_mesh)
+
+	self.nav_dirty = true
 	self.undo_stack = {}
-	self.undo_active = false
+	self.undo_active = true
+
+	self.gui:level_loaded(idx)
+end
+
+function editor:init(screen_w, screen_h, done_callback)
+	self.screen_w = screen_w
+	self.screen_h = screen_h
+	self.done_callback = done_callback
+	self.game_scale = self.ref_h / TEXTURE_SIZE_ALIAS["ipad"]
+	self.game_ref_origin = V.v((screen_w - self.ref_w * self.game_scale) / 2, (screen_h - self.ref_h * self.game_scale) / 2)
+
+	RU.init()
 
 	game_editor_gui:init(screen_w, screen_h, self)
-
 	self.gui = game_editor_gui
+
+	local level_idx = self.args and self.args.level_idx
+	local level_mode = (self.args and self.args.level_mode) or GAME_MODE_CAMPAIGN
+	self:load_level(level_idx, level_mode)
+
 	self.paths_visible = false
 	self.grid_visible = false
 	self.nav_visible = false
@@ -169,9 +240,76 @@ function editor:init(screen_w, screen_h, done_callback)
 		x = 0,
 		y = 0
 	}
+
+	-- 设置文件拖入处理器
+	self._orig_filedropped = love.filedropped
+	love.filedropped = function(file)
+		self:filedropped(file)
+	end
+end
+
+-- 在指定路径末尾添加平滑点（自动计算贝塞尔控制点）
+function editor:add_smooth_point(pi, x, y)
+	if not self.path_curves[pi] then
+		return
+	end
+	local path = self.path_curves[pi]
+	local nodes = path.nodes
+	local widths = path.widths
+
+	if #nodes == 0 then
+		-- 第一个点：创建简单的直线段
+		nodes[1] = V.v(x, y)
+		widths[1] = DEFAULT_PATH_WIDTH
+		return
+	end
+
+	local prev = nodes[#nodes]
+	-- 创建新 Bezier 段：前一点 → 新点，控制点沿切线方向延伸
+	local dx, dy = x - prev.x, y - prev.y
+	local dist = math.sqrt(dx * dx + dy * dy) or 1
+	local h1x = prev.x + dx * 0.33
+	local h1y = prev.y + dy * 0.33
+	local h2x = x - dx * 0.33
+	local h2y = y - dy * 0.33
+
+	-- 如果有更早的点，调整 h1 使曲线更平滑
+	if #nodes >= 4 then
+		local pp = nodes[#nodes - 3]
+		local pdx = prev.x - pp.x
+		local pdy = prev.y - pp.y
+		local pdist = math.sqrt(pdx * pdx + pdy * pdy) or 1
+		-- 混合方向和切线
+		h1x = prev.x + (dx / dist + pdx / pdist) * dist * 0.2
+		h1y = prev.y + (dy / dist + pdy / pdist) * dist * 0.2
+	end
+
+	-- 添加控制点和终点
+	table.insert(nodes, V.v(h1x, h1y))
+	table.insert(nodes, V.v(h2x, h2y))
+	table.insert(nodes, V.v(x, y))
+	table.insert(widths, widths[#widths])
+
+	self:update_curves()
+end
+
+-- 清除路径所有点后重新打点
+function editor:clear_path_points(pi)
+	if not self.path_curves[pi] then
+		return
+	end
+	local path = self.path_curves[pi]
+	path.nodes = {}
+	path.widths = {}
+	self:update_curves()
 end
 
 function editor:destroy()
+	-- 恢复原始的 filedropped 处理器
+	if self._orig_filedropped then
+		love.filedropped = self._orig_filedropped
+	end
+
 	self.gui:destroy()
 
 	self.gui = nil
@@ -180,14 +318,6 @@ function editor:destroy()
 end
 
 function editor:update(dt)
-	if self.args and self.args.custom then
-		local level_idx = self.args.custom
-
-		self:level_load(level_idx, 1)
-
-		self.args = nil
-	end
-
 	self.simulation:update(dt)
 	self.gui:update(dt)
 	return true
@@ -217,8 +347,92 @@ function editor:wheelmoved(dx, dy)
 	self.gui:wheelmoved(dx, dy)
 end
 
+-- 允许玩家通过拖放 PNG 文件来设置背景图（将它作为一个decal_background实体加入到游戏中，从而实现对它的渲染）
+function editor:filedropped(file)
+	if not file then
+		return
+	end
+
+	local filename = file:getFilename()
+	if not filename then
+		return
+	end
+
+	-- 只接受 PNG 文件
+	local ext = filename:match("%.([%w_]+)$")
+	if not ext or ext:lower() ~= "png" then
+		log.error("当前只支持将png文件作为地图背景！")
+		return
+	end
+
+	-- 读取文件到内存，绕过 LÖVE 文件系统沙箱
+	local ok = file:open("r")
+	if not ok then
+		log.error("Editor: could not open dropped file: %s", filename)
+		return
+	end
+	local content = file:read()
+	file:close()
+
+	if not content or content == "" then
+		log.error("Editor: empty file: %s", filename)
+		return
+	end
+
+	-- 用 FileData 包装二进制数据，再创建 ImageData（绕过 OS 路径限制）
+	local file_data = love.filesystem.newFileData(content, "bg_temp.png")
+	if not file_data then
+		log.error("Editor: could not create FileData")
+		return
+	end
+	local img_data = love.image.newImageData(file_data)
+
+	-- 将该图片的纹理上传到 ImageDB 中
+	I:add_image(filename, img_data, "game_editor")
+
+	-- 创建一个 decal_background 实体并加入 store 中
+	local bg_entity = E:create_entity("decal_background")
+	bg_entity.render.sprites[1].name = filename
+	bg_entity.render.sprites[1].z = Z_BACKGROUND
+	self.simulation:queue_insert_entity(bg_entity)
+
+	-- 关闭背景提示面板
+	if self.gui._bg_prompt then
+		self.gui._bg_prompt.hidden = true
+	end
+
+	self.gui:show_save_notification("背景图已加载: " .. (filename:match("([^/\\]+)$") or filename))
+end
+
 function editor:draw()
-	love.graphics.print("Memory: " .. collectgarbage("count") .. " KB", 10, 10)
+	-- 实时显示当前的内存占用
+	love.graphics.print("Memory: " .. collectgarbage("count") / 1024 .. " MiB", 10, 10)
+
+	-- -- 绘制背景图片（如果有）
+	-- -- 注意：游戏世界使用 Y 轴向上，但背景图应正常显示（Y 轴向下）
+	-- -- 因此背景图在屏幕坐标系中绘制，不经过 Y 翻转
+	-- if self.bg_image then
+	-- 	local rox, roy = self.game_ref_origin.x, self.game_ref_origin.y
+	-- 	local gs = self.game_scale
+	-- 	G.push()
+	-- 	G.translate(rox, roy) -- 屏幕左上角
+	-- 	G.scale(gs, gs) -- 只做缩放，不做 Y 翻转
+	-- 	G.setColor(1, 1, 1, 1)
+	-- 	G.draw(self.bg_image, 0, 0, 0, REF_W / self.bg_image:getWidth(), REF_H / self.bg_image:getHeight())
+	-- 	G.pop()
+	-- end
+
+	-- -- 显示等待背景图提示
+	-- if self.waiting_for_bg then
+	-- 	G.push()
+	-- 	G.setColor(1, 1, 1, 1)
+	-- 	-- 计算居中位置（考虑 ref 坐标系）
+	-- 	local text = "请将PNG图片拖入窗口作为背景图"
+	-- 	local font = G.getFont()
+	-- 	local text_w = font:getWidth(text)
+	-- 	G.print(text, self.screen_w / 2 - text_w / 2, self.screen_h / 2)
+	-- 	G.pop()
+	-- end
 
 	local rox, roy = self.game_ref_origin.x, self.game_ref_origin.y
 	local gs = self.game_scale
@@ -235,6 +449,7 @@ function editor:draw()
 	local color_width = {255, 255, 0, 255}
 	local color_selected = {255, 150, 150, 255}
 
+	-- 更新路径 canvas
 	if self.paths_visible and (not self.paths_canvas or self.paths_dirty) then
 		self.paths_dirty = nil
 
@@ -340,6 +555,7 @@ function editor:draw()
 		G.pop()
 	end
 
+	-- 更新网格 canvas
 	if self.grid_visible and (not self.grid_canvas or self.grid_dirty) then
 		self.grid_dirty = nil
 
@@ -366,6 +582,7 @@ function editor:draw()
 		G.pop()
 	end
 
+	-- 更新实体 canvas
 	if self.entities_visible and (not self.entities_canvas or self.entities_dirty) then
 		self.entities_dirty = nil
 
@@ -405,6 +622,7 @@ function editor:draw()
 		G.pop()
 	end
 
+	-- 更新导航网格 canvas
 	if self.nav_visible and (not self.nav_canvas or self.nav_dirty) then
 		self.nav_dirty = nil
 
@@ -546,6 +764,7 @@ function editor:draw()
 		G.pop()
 	end
 
+	-- 绘制实体对应的帧
 	G.push()
 	G.translate(self.gui.window.pos.x, self.gui.window.pos.y)
 	G.push()
@@ -556,6 +775,7 @@ function editor:draw()
 
 	G.pop()
 
+	-- 绘制路径
 	if self.paths_visible then
 		G.draw(self.paths_canvas)
 
@@ -584,6 +804,7 @@ function editor:draw()
 		end
 	end
 
+	-- 绘制网格
 	if self.grid_visible then
 		G.setColor(1, 1, 1, 0.392)
 		G.draw(self.grid_canvas)
@@ -608,12 +829,14 @@ function editor:draw()
 		end
 	end
 
+	-- 绘制实体
 	if self.entities_visible then
 		G.setColor(1, 1, 1, 1)
 		G.draw(self.entities_canvas)
 		G.setColor(1, 1, 1, 1)
 	end
 
+	-- 绘制导航网格
 	if self.nav_visible then
 		G.setColor(1, 1, 1, 1)
 		G.draw(self.nav_canvas)
@@ -631,127 +854,25 @@ function editor:draw()
 	G.pop()
 	G.setLineWidth(1)
 	G.setColor(1, 1, 1, 1)
+	-- 绘制 GUI
 	self.gui.window:draw()
 	G.pop()
 end
 
-function editor:level_save(idx, mode)
-	if not idx then
-		return
-	end
+-- SAVE BEGIN
 
-	local s = self.store
-	local ss
-
-	s.level_idx = idx
-	s.level_name = "level" .. string.format("%02i", idx)
-
-	log.debug("saving level %s", idx)
-	self:save_curves(s.level_name)
-	GR:save(s.level_name)
-	self:serialize_level(s)
-
-	ss = table.deepclone(s.level.data)
-
-	self:save_data(ss, s.level_name)
-end
-
-function editor:level_load(idx, mode)
-	log.debug("loading level %s", idx)
-
-	self.undo_active = false
-	self.store = {}
-
-	local systems = self.simulation_systems
-
-	simulation:init(self.store, systems, self.simulation_systems, TICK_LENGTH)
-
-	self.simulation = simulation
-
-	A:load()
-	E:load()
-
-	local s = self.store
-
-	s.level_idx = idx
-	s.level_name = "level" .. string.format("%02i", idx)
-	s.level_mode = mode
-	s.level_difficulty = DIFFICULTY_EASY
-	s.level = LU.load_level(s, s.level_name, true)
-
-	director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
-	if s.level.data then
-		LU.insert_entities(self.store, s.level.data.entities_list, true)
-
-		if s.level.data.required_exoskeletons then
-			EXO:load(s.level.data.required_exoskeletons)
+--- 清理 data table 中所有的需忽略的键值对
+---@param data table
+---@param keys table
+local function clear_key(data, keys)
+	for k, v in pairs(data) do
+		if type(v) == "table" then
+			for _, key in ipairs(keys) do
+				v[key] = nil
+			end
+			clear_key(v, keys)
 		end
 	end
-
-	self.entities_dirty = true
-
-	if not GR:load(s.level_name) then
-		local gox, goy = -192, 0
-		local bgw, bgh = 1408, 768
-		local gw, gh = math.ceil(bgw / GR.cell_size), math.ceil(bgh / GR.cell_size)
-
-		GR:init_grid(gw, gh, gox, goy, GR.cell_size)
-	end
-
-	self.grid_dirty = true
-
-	P:load_curves(s.level_name)
-
-	self.path_curves = P.path_curves
-	self.path_connections = P.path_connections
-	self.active_paths = P.active_paths
-
-	self:update_curves()
-
-	self.paths_dirty = true
-
-	self.simulation:update(0.03333333333333333)
-
-	self.nav_entity_selected = nil
-
-	if not s.level.nav_mesh then
-		s.level.nav_mesh = {}
-
-		if not s.level.data then
-			s.level.data = {}
-		end
-
-		s.level.data.nav_mesh = s.level.nav_mesh
-	end
-
-	self:sanitize_nav_mesh(s.level.nav_mesh)
-
-	self.nav_dirty = true
-	self.undo_stack = {}
-	self.undo_active = true
-
-	if s.level.load then
-		P.add_invalid_range = function()
-		end
-
-		s.level:load(s)
-	end
-
-	self.gui:level_loaded(idx)
-end
-
-function editor:entities_at_pos(wx, wy, size)
-	local found = {}
-
-	for _, e in pairs(self.store.entities) do
-		local select_size = size or 4
-
-		if e.pos and wx > e.pos.x - select_size and wx < e.pos.x + select_size and wy > e.pos.y - select_size and wy < e.pos.y + select_size then
-			table.insert(found, e)
-		end
-	end
-
-	return found
 end
 
 function editor:serialize_entity(e)
@@ -776,7 +897,10 @@ function editor:serialize_entity(e)
 	return t
 end
 
-function editor:serialize_level(store)
+--- 根据当前的 store 内容，序列化到 store.level.data 中
+---@param store any
+function editor:serialize_level()
+	local store = self.store
 	local list = store.level.data.entities_list
 
 	for _, e in pairs(store.entities) do
@@ -807,6 +931,57 @@ function editor:serialize_level(store)
 			end
 		end
 	end
+end
+
+function editor:save_data()
+	local fn = "game_editor/data/levels/" .. self.store.level_name .. "_data.lua"
+	self:serialize_level()
+	local data = table.deepclone(self.store.level.data)
+	clear_key(data, {"_idx", "_id", "_before_ov", "locations", "frames"})
+	storage:write_lua(fn, data)
+end
+
+function editor:save_curves()
+	local fn = "game_editor/data/levels" .. self.store.level_name .. "_paths.lua"
+	local t = {
+		connections = P.path_connections,
+		curves = P.path_curves,
+		paths = P:generate_paths(),
+		active = P.active_paths
+	}
+	t = table.deepclone(t)
+	clear_key(t, {"beziers"})
+
+	storage:write_lua(fn, t)
+end
+
+function editor:save_grid()
+	local fn = "game_editor/data/levels/" .. self.store.level_name .. "_grid.lua"
+	storage:write_lua(fn, GR)
+end
+
+--- 将当前 store 对应的关卡数据全部保存
+function editor:level_save()
+	log.info("Saving level: %s", s.level_name)
+	self:save_curves()
+	self:save_grid()
+	self:save_data()
+end
+
+-- SAVE END
+
+function editor:entities_at_pos(wx, wy, size)
+	local found = {}
+
+	for _, e in pairs(self.store.entities) do
+		local select_size = size or 4
+
+		if e.pos and wx > e.pos.x - select_size and wx < e.pos.x + select_size and wy > e.pos.y - select_size and wy < e.pos.y + select_size then
+			table.insert(found, e)
+		end
+	end
+
+	return found
 end
 
 function editor:undo_push_entity(from_drag, eid, ...)

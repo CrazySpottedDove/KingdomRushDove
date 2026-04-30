@@ -18105,7 +18105,7 @@ scripts.mactans_controller = {}
 
 function scripts.mactans_controller.insert(this, store)
 	if this.load_file then
-		local fn = KR_PATH_GAME .. "/data/levels/" .. this.load_file .. ".lua"
+		local fn = "data/levels/" .. this.load_file .. ".lua"
 		local data, err = LU.eval_file(fn)
 
 		if not data then

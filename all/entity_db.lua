@@ -336,12 +336,24 @@ end
 
 function entity_db:search_entity(p)
 	local results = {}
+	local pattern = string.lower(p)
 
 	for k, e in pairs(self.entities) do
-		if string.match(k, p) then
+		if string.match(string.lower(k), pattern) then
 			table.insert(results, k)
 		end
 	end
+
+	-- 按匹配分数排序：前缀匹配 > 包含匹配
+	table.sort(results, function(a, b)
+		local la, lb = string.lower(a), string.lower(b)
+		local pa = string.find(la, pattern, 1, true) == 1 and 0 or 1
+		local pb = string.find(lb, pattern, 1, true) == 1 and 0 or 1
+		if pa ~= pb then
+			return pa < pb
+		end
+		return #a < #b
+	end)
 
 	return results
 end
