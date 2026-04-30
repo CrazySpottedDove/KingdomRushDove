@@ -24,6 +24,68 @@ KE_CONST.PROP_NUM_BTN_W = 18
 KE_CONST.PROP_NUM_SEP = 2
 KE_CONST.font_name = "infobar_name"
 KE_CONST.font_size = 12
+
+local function find_window(view)
+	local p = view
+
+	while p do
+		if p.class and p.class.name == "KWindow" then
+			return p
+		end
+
+		p = p.parent
+	end
+
+	return nil
+end
+
+local function focus_input(view)
+	local window = find_window(view)
+
+	if not window then
+		return
+	end
+
+	local prev = window.responder
+
+	if prev and prev ~= view and prev.set_input_focused then
+		prev:set_input_focused(false)
+	end
+
+	window:set_responder(view)
+
+	if view.set_input_focused then
+		view:set_input_focused(true)
+	end
+end
+
+local function blur_input(view)
+	local window = find_window(view)
+
+	if view.set_input_focused then
+		view:set_input_focused(false)
+	end
+
+	if window and window.responder == view then
+		window:set_responder()
+	end
+end
+
+local function label_text_width(label)
+	if not label then
+		return 0
+	end
+
+	if label._load_font then
+		label:_load_font()
+	end
+
+	if label.font and label.font.getWidth then
+		return label.font:getWidth(label.text or "")
+	end
+
+	return 0
+end
 KELayout = class("KELayout", KView)
 KELayout.static.init_arg_names = {"style", "separation"}
 KELayout.static.serialize_children = true
@@ -79,15 +141,17 @@ KENum.static.serialize_children = false
 function KENum:initialize(style, value, step)
 	KView.initialize(self)
 
-	self.value = value or 0
+	self.value = tonumber(value) or 0
+	self.editing_text = tostring(self.value)
+	self.is_focused = false
+	self.is_hovered = false
+	self.cursor_blink_time = 0
 	self.step = step or 1
-	self.shift_mult = 10
-	self.ctrl_mult = 0.1
 
-	local w = KE_CONST.PROP_W - KE_CONST.PROP_NUM_BTN_W
+	local w = KE_CONST.PROP_W
 
 	if style == "half" then
-		w = KE_CONST.PROP_W / 2 - KE_CONST.PROP_NUM_BTN_W - 2 * KE_CONST.PROP_NUM_SEP
+		w = KE_CONST.PROP_W * 0.5 - KE_CONST.PROP_NUM_SEP * 0.5
 	end
 
 	local lv = KLabel:new(V.v(w, KE_CONST.PROP_H))
@@ -102,64 +166,166 @@ function KENum:initialize(style, value, step)
 
 	self.lv = lv
 
-	local lb = KButton:new(V.v(KE_CONST.PROP_NUM_BTN_W, KE_CONST.PROP_H / 2 - KE_CONST.PROP_NUM_SEP))
+	local input_border = KView:new(V.v(lv.size.x + 2, lv.size.y + 2))
+	input_border.pos = V.v(lv.pos.x - 1, lv.pos.y - 1)
+	input_border.colors.background = {0, 0, 0, 0}
+	input_border.hidden = true
+	input_border.propagate_on_click = true
 
-	lb.text = "+"
-	lb.pos = V.v(lv.pos.x + lv.size.x + KE_CONST.PROP_NUM_SEP, 0)
-	lb.colors.background = {0, 0, 0, 20}
+	self:add_child(input_border)
 
-	function lb.on_click()
-		local m = 1
+	self.input_border = input_border
 
-		if love.keyboard.isDown("lshift", "rshift") then
-			m = self.shift_mult
-		end
+	local cursor = KView:new(V.v(2, lv.size.y - 6))
+	cursor.pos = V.v(lv.pos.x + 4, lv.pos.y + 3)
+	cursor.colors.background = {255, 255, 255, 255}
+	cursor.hidden = true
+	cursor.propagate_on_click = true
 
-		if love.keyboard.isDown("lctrl", "rctrl") then
-			m = self.ctrl_mult
-		end
+	self:add_child(cursor)
 
-		self:set_value(self.value + m * self.step)
-	end
-
-	self:add_child(lb)
-
-	local lb = KButton:new(V.v(KE_CONST.PROP_NUM_BTN_W, KE_CONST.PROP_H / 2 - KE_CONST.PROP_NUM_SEP))
-
-	lb.text = "-"
-	lb.pos = V.v(lv.pos.x + lv.size.x + KE_CONST.PROP_NUM_SEP, KE_CONST.PROP_H / 2)
-	lb.colors.background = {0, 0, 0, 20}
-
-	function lb.on_click()
-		local m = 1
-
-		if love.keyboard.isDown("lshift", "rshift") then
-			m = self.shift_mult
-		end
-
-		if love.keyboard.isDown("lctrl", "rctrl") then
-			m = self.ctrl_mult
-		end
-
-		self:set_value(self.value - m * self.step)
-	end
-
-	self:add_child(lb)
-
-	self.size = V.v(lb.pos.x + lb.size.x, KE_CONST.PROP_H)
+	self.cursor = cursor
+	self.size = V.v(lv.size.x, KE_CONST.PROP_H)
+	self:update_visual_state()
 end
 
-function KENum:update()
-	self.lv.text = string.format("%.2f", self.value)
+function KENum:update(dt)
+	if self.is_focused then
+		self.cursor_blink_time = self.cursor_blink_time + (dt or 1 / 60)
+		self.cursor.hidden = math.floor(self.cursor_blink_time * 2) % 2 == 1
+	else
+		self.cursor.hidden = true
+		self.editing_text = tostring(self.value)
+	end
+
+	if self.is_focused then
+		self.lv.text = self.editing_text
+	else
+		local n = tonumber(self.value) or 0
+		self.value = n
+		self.lv.text = string.format("%.2f", n)
+	end
+
+	local text_width = label_text_width(self.lv)
+
+	self.cursor.pos.x = self.lv.pos.x + 4 + text_width
+	self:update_visual_state()
 end
 
 function KENum:set_value(value, silent)
-	self.value = value
+	self.value = tonumber(value) or 0
 
-	self:update()
+	self:update(0)
 
 	if self.on_change and not silent then
 		self:on_change()
+	end
+end
+
+function KENum:update_visual_state()
+	if self.is_focused then
+		self.lv.colors.background = {80, 70, 30, 140}
+		self.input_border.hidden = false
+	elseif self.is_hovered then
+		self.lv.colors.background = {40, 40, 40, 70}
+		self.input_border.hidden = true
+	else
+		self.lv.colors.background = {0, 0, 0, 20}
+		self.input_border.hidden = true
+	end
+end
+
+function KENum:set_input_focused(focused)
+	self.is_focused = focused
+	self.cursor_blink_time = 0
+
+	if focused then
+		self.editing_text = tostring(self.value)
+	end
+
+	self:update(0)
+end
+
+function KENum:on_click()
+	focus_input(self)
+
+	return true
+end
+
+function KENum:on_enter()
+	self.is_hovered = true
+	self:update_visual_state()
+end
+
+function KENum:on_exit()
+	self.is_hovered = false
+	self:update_visual_state()
+end
+
+function KENum:on_textinput(t)
+	if not self.is_focused then
+		return
+	end
+
+	if not string.match(t, "[%d%.%-]") then
+		return true
+	end
+
+	self.editing_text = self.editing_text .. t
+
+	local num = tonumber(self.editing_text)
+
+	if num then
+		self.value = num
+
+		if self.on_change then
+			self:on_change()
+		end
+	end
+
+	self:update(0)
+
+	return true
+end
+
+function KENum:on_keypressed(key)
+	if not self.is_focused then
+		return
+	end
+
+	if key == "backspace" then
+		local text = self.editing_text
+		local byteoffset = utf8.offset(text, -1)
+
+		if byteoffset then
+			if byteoffset > 1 then
+				self.editing_text = string.sub(text, 1, byteoffset - 1)
+			else
+				self.editing_text = ""
+			end
+		else
+			self.editing_text = ""
+		end
+
+		local num = tonumber(self.editing_text)
+
+		if num then
+			self.value = num
+
+			if self.on_change then
+				self:on_change()
+			end
+		end
+
+		self:update(0)
+		return true
+	elseif key == "delete" then
+		self.editing_text = ""
+		self:update(0)
+		return true
+	elseif key == "return" or key == "escape" then
+		blur_input(self)
+		return true
 	end
 end
 
@@ -172,11 +338,15 @@ function KEEnum:initialize(style, list, index)
 
 	self.index = index
 	self.list = list or {}
+	self.is_focused = false
+	self.is_hovered = false
+	self.cursor_blink_time = 0
+	self.editing_text = self.index and tostring(self.index) or ""
 
-	local w = KE_CONST.PROP_W - KE_CONST.PROP_NUM_BTN_W
+	local w = KE_CONST.PROP_W
 
 	if style == "half" then
-		w = KE_CONST.PROP_W / 2 - KE_CONST.PROP_NUM_BTN_W - 2 * KE_CONST.PROP_NUM_SEP
+		w = KE_CONST.PROP_W * 0.5 - KE_CONST.PROP_NUM_SEP * 0.5
 	end
 
 	local lv = KLabel:new(V.v(w, KE_CONST.PROP_H))
@@ -191,35 +361,44 @@ function KEEnum:initialize(style, list, index)
 
 	self.lv = lv
 
-	local lb = KButton:new(V.v(KE_CONST.PROP_NUM_BTN_W, KE_CONST.PROP_H / 2 - KE_CONST.PROP_NUM_SEP))
+	local input_border = KView:new(V.v(lv.size.x + 2, lv.size.y + 2))
+	input_border.pos = V.v(lv.pos.x - 1, lv.pos.y - 1)
+	input_border.colors.background = {0, 0, 0, 0}
+	input_border.hidden = true
+	input_border.propagate_on_click = true
 
-	lb.text = "+"
-	lb.pos = V.v(lv.pos.x + lv.size.x + KE_CONST.PROP_NUM_SEP, 0)
-	lb.colors.background = {0, 0, 0, 20}
+	self:add_child(input_border)
 
-	function lb.on_click()
-		self:set_value((self.index or 0) + 1)
-	end
+	self.input_border = input_border
 
-	self:add_child(lb)
+	local cursor = KView:new(V.v(2, lv.size.y - 6))
+	cursor.pos = V.v(lv.pos.x + 4, lv.pos.y + 3)
+	cursor.colors.background = {255, 255, 255, 255}
+	cursor.hidden = true
+	cursor.propagate_on_click = true
 
-	local lb = KButton:new(V.v(KE_CONST.PROP_NUM_BTN_W, KE_CONST.PROP_H / 2 - KE_CONST.PROP_NUM_SEP))
+	self:add_child(cursor)
 
-	lb.text = "-"
-	lb.pos = V.v(lv.pos.x + lv.size.x + KE_CONST.PROP_NUM_SEP, KE_CONST.PROP_H / 2)
-	lb.colors.background = {0, 0, 0, 20}
-
-	function lb.on_click()
-		self:set_value((self.index or 0) - 1)
-	end
-
-	self:add_child(lb)
-
-	self.size = V.v(lb.pos.x + lb.size.x, KE_CONST.PROP_H)
+	self.cursor = cursor
+	self.size = V.v(lv.size.x, KE_CONST.PROP_H)
+	self:update_visual_state()
 end
 
-function KEEnum:update()
-	self.lv.text = string.format("%s", self.index and self.list[self.index] or "-")
+function KEEnum:update(dt)
+	if self.is_focused then
+		self.cursor_blink_time = self.cursor_blink_time + (dt or 1 / 60)
+		self.cursor.hidden = math.floor(self.cursor_blink_time * 2) % 2 == 1
+		self.lv.text = self.editing_text
+	else
+		self.cursor.hidden = true
+		self.editing_text = self.index and tostring(self.index) or ""
+		self.lv.text = string.format("%s", self.index and self.list[self.index] or "-")
+	end
+
+	local text_width = label_text_width(self.lv)
+
+	self.cursor.pos.x = self.lv.pos.x + 4 + text_width
+	self:update_visual_state()
 end
 
 function KEEnum:set_value(index, silent)
@@ -237,10 +416,106 @@ function KEEnum:set_value(index, silent)
 		self.index = index
 	end
 
-	self:update()
+	self:update(0)
 
 	if self.on_change and not silent then
 		self:on_change()
+	end
+end
+
+function KEEnum:update_visual_state()
+	if self.is_focused then
+		self.lv.colors.background = {80, 70, 30, 140}
+		self.input_border.hidden = false
+	elseif self.is_hovered then
+		self.lv.colors.background = {40, 40, 40, 70}
+		self.input_border.hidden = true
+	else
+		self.lv.colors.background = {0, 0, 0, 20}
+		self.input_border.hidden = true
+	end
+end
+
+function KEEnum:set_input_focused(focused)
+	self.is_focused = focused
+	self.cursor_blink_time = 0
+	self.editing_text = self.index and tostring(self.index) or ""
+	self:update(0)
+end
+
+function KEEnum:on_click()
+	focus_input(self)
+
+	return true
+end
+
+function KEEnum:on_enter()
+	self.is_hovered = true
+	self:update_visual_state()
+end
+
+function KEEnum:on_exit()
+	self.is_hovered = false
+	self:update_visual_state()
+end
+
+function KEEnum:on_textinput(t)
+	if not self.is_focused then
+		return
+	end
+
+	if not string.match(t, "[%d%-]") then
+		return true
+	end
+
+	self.editing_text = self.editing_text .. t
+
+	local idx = tonumber(self.editing_text)
+
+	if idx then
+		self:set_value(idx)
+	else
+		self:update(0)
+	end
+
+	return true
+end
+
+function KEEnum:on_keypressed(key)
+	if not self.is_focused then
+		return
+	end
+
+	if key == "backspace" then
+		local text = self.editing_text
+		local byteoffset = utf8.offset(text, -1)
+
+		if byteoffset then
+			if byteoffset > 1 then
+				self.editing_text = string.sub(text, 1, byteoffset - 1)
+			else
+				self.editing_text = ""
+			end
+		else
+			self.editing_text = ""
+		end
+
+		local idx = tonumber(self.editing_text)
+
+		if idx then
+			self:set_value(idx)
+		else
+			self:update(0)
+		end
+
+		return true
+	elseif key == "delete" then
+		self.editing_text = ""
+		self:update(0)
+		return true
+	elseif key == "return" or key == "escape" then
+		blur_input(self)
+		return true
 	end
 end
 
@@ -260,6 +535,8 @@ function KEList:initialize(size)
 	end
 
 	KScrollList.initialize(self, size)
+	self.scroll_amount = 24
+	self.scroll_acceleration = 3
 
 	if not self.colors.background then
 		self.colors.background = {0, 0, 0, 30}
@@ -275,7 +552,11 @@ function KEProp:initialize(title, value, editable)
 
 	self.value = value or ""
 	self.editable = editable
+	self.is_focused = false
+	self.is_hovered = false
+	self.cursor_blink_time = 0
 	self.prop_type = PT_STRING
+	self.defer_change = false
 
 	local h = 0
 	local lt = KLabel:new(V.v(KE_CONST.PROP_W, KE_CONST.PROP_H))
@@ -304,27 +585,109 @@ function KEProp:initialize(title, value, editable)
 	self:add_child(lv)
 
 	self.lv = lv
+
+	local input_border = KView:new(V.v(lv.size.x + 2, lv.size.y + 2))
+	input_border.pos = V.v(lv.pos.x - 1, lv.pos.y - 1)
+	input_border.colors.background = {0, 0, 0, 0}
+	input_border.hidden = true
+	input_border.propagate_on_click = true
+
+	self:add_child(input_border)
+
+	self.input_border = input_border
+
+	local cursor = KView:new(V.v(2, lv.size.y - 6))
+	cursor.pos = V.v(lv.pos.x + 4, lv.pos.y + 3)
+	cursor.colors.background = {255, 255, 255, 255}
+	cursor.hidden = true
+	cursor.propagate_on_click = true
+
+	self:add_child(cursor)
+
+	self.cursor = cursor
 	h = h + lv.size.y
 	self.size = V.v(lt.size.x, h)
+	self:update_visual_state()
 end
 
 function KEProp:update(dt)
-	return
+	if self.is_focused then
+		self.cursor_blink_time = self.cursor_blink_time + dt
+		self.cursor.hidden = math.floor(self.cursor_blink_time * 2) % 2 == 1
+	else
+		self.cursor.hidden = true
+	end
+
+	local text_width = label_text_width(self.lv)
+
+	self.cursor.pos.x = self.lv.pos.x + 4 + text_width
 end
 
 function KEProp:set_value(value, silent)
 	self.value = value
 	self.lv.text = value
 
-	self:update()
+	self:update(0)
+	self:update_visual_state()
 
-	if self.on_change and not silent then
+	if self.on_change and not silent and not (self.defer_change and self.is_focused) then
 		self:on_change()
 	end
 end
 
-function KEProp:on_textinput(t)
+function KEProp:update_visual_state()
 	if not self.editable then
+		self.input_border.hidden = true
+		self.cursor.hidden = true
+		return
+	end
+
+	if self.is_focused then
+		self.lv.colors.background = {80, 70, 30, 140}
+		self.input_border.hidden = false
+	elseif self.is_hovered then
+		self.lv.colors.background = {40, 40, 40, 70}
+		self.input_border.hidden = true
+	else
+		self.lv.colors.background = {0, 0, 0, 20}
+		self.input_border.hidden = true
+	end
+end
+
+function KEProp:set_input_focused(focused)
+	local was_focused = self.is_focused
+	self.is_focused = focused
+	self.cursor_blink_time = 0
+	self:update_visual_state()
+	self:update(0)
+
+	if was_focused and not focused and self.defer_change and self.on_change then
+		self:on_change()
+	end
+end
+
+function KEProp:on_click()
+	if not self.editable then
+		return
+	end
+
+	focus_input(self)
+
+	return true
+end
+
+function KEProp:on_enter()
+	self.is_hovered = true
+	self:update_visual_state()
+end
+
+function KEProp:on_exit()
+	self.is_hovered = false
+	self:update_visual_state()
+end
+
+function KEProp:on_textinput(t)
+	if not self.editable or not self.is_focused then
 		return
 	end
 
@@ -334,7 +697,7 @@ function KEProp:on_textinput(t)
 end
 
 function KEProp:on_keypressed(key)
-	if not self.editable then
+	if not self.editable or not self.is_focused then
 		return
 	end
 
@@ -347,8 +710,13 @@ function KEProp:on_keypressed(key)
 
 			self:set_value(text)
 		end
+		return true
 	elseif key == "delete" then
 		self:set_value("")
+		return true
+	elseif key == "return" or key == "escape" then
+		blur_input(self)
+		return true
 	end
 end
 
@@ -381,7 +749,7 @@ function KEPropNum:initialize(title, value, step)
 	lv.pos = V.v(KE_CONST.PROP_OX, KE_CONST.PROP_H)
 
 	function lv.on_change(this)
-		self:update()
+		self:update(0)
 
 		if self.on_change then
 			self:on_change()
@@ -402,7 +770,7 @@ end
 
 function KEPropNum:set_value(value, silent)
 	self.lv:set_value(value, true)
-	self:update()
+	self:update(0)
 
 	if self.on_change and not silent then
 		self:on_change()
@@ -449,7 +817,7 @@ function KEPropCoords:initialize(title, value, step)
 	self:add_child(lv2)
 
 	function lv1.on_change(this)
-		self:update()
+		self:update(0)
 
 		if self.on_change then
 			self:on_change()
@@ -468,7 +836,7 @@ end
 function KEPropCoords:set_value(value, silent)
 	self.lv1:set_value(value.x, true)
 	self.lv2:set_value(value.y, true)
-	self:update()
+	self:update(0)
 
 	if self.on_change and not silent then
 		self:on_change()
@@ -602,6 +970,7 @@ function KEPointerPos:initialize(size)
 	self:add_child(lt)
 
 	self.lt = lt
+	self.size = V.v(lt.size.x, lt.size.y)
 end
 
 KECellInfo = class("KECellInfo", KView)

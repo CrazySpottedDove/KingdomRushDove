@@ -45,8 +45,6 @@ end
 
 -- 动态设置属性，支持多层级属性（如 a.b.c.d）
 function LU.eval_set_prop(e, prop_name, value)
-	log.error("prop_name:%s prop_value:%s", prop_name, value)
-
 	local repr
 
 	if type(value) == "string" then

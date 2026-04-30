@@ -31,12 +31,17 @@ end
 ---@param handler function 钩子处理器
 ---@param priority integer 优先级
 function hook_utils.HOOK(obj, fn_name, handler, priority)
-	priority = priority or 0
+	if not obj then
+		log.error("尝试添加钩子到一个空对象!")
+		return
+	end
 
 	if not obj[fn_name] then
 		log.error("尝试添加钩子到不存在的函数%s!", fn_name)
 		return
 	end
+
+	priority = priority or 0
 
 	-- 步骤1: 检查对象是否已经初始化钩子系统
 	if not obj.__hooks then

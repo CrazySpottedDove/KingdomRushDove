@@ -76,9 +76,25 @@ function getfulldump(t, level, i)
 		end
 	end
 
-	retstr = "self: \t" .. tostring(t) .. "\n"
+	local ttype = type(t)
+	local function value_to_string(v)
+		if type(v) == "cdata" then
+			local okx, x = pcall(function()
+				return v.x
+			end)
+			local oky, y = pcall(function()
+				return v.y
+			end)
+			if okx and oky and type(x) == "number" and type(y) == "number" then
+				return string.format("vec2(%.3f, %.3f)", x, y)
+			end
+		end
+		return tostring(v)
+	end
 
-	if t ~= nil then
+	retstr = "self: \t" .. value_to_string(t) .. "\n"
+
+	if t ~= nil and ttype == "table" then
 		_dump(t, i)
 	end
 

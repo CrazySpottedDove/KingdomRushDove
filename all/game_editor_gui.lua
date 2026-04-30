@@ -42,6 +42,34 @@ local function wid(id)
 	return gui.window:get_child_by_id(id)
 end
 
+local function set_gui_responder(window, view)
+	local prev = window.responder
+
+	if prev and prev ~= view and prev.set_input_focused then
+		prev:set_input_focused(false)
+	end
+
+	window:set_responder(view)
+
+	if view and view.set_input_focused then
+		view:set_input_focused(true)
+	end
+end
+
+local function is_kbutton_instance(view)
+	local c = view and view.class
+
+	while c do
+		if c.name == "KButton" then
+			return true
+		end
+
+		c = c.super
+	end
+
+	return false
+end
+
 ---计算两个坐标之差的绝对值是否小于给定值
 ---@param axi1 table 坐标1
 ---@param axi2 table 坐标2
@@ -68,7 +96,7 @@ function gui:init(w, h, editor)
 	self.sh = h
 	self.scale = 1
 	self.active_tool = nil
-	self.tool_names = {"general", "entities", "paths", "grid", "nav"}
+	self.tool_names = {"entities", "paths", "grid"}
 	self.settings = {}
 	self.settings.grid = {}
 	self.settings.grid.brush_size = 1
@@ -82,12 +110,47 @@ function gui:init(w, h, editor)
 	window.size = V.v(self.sw, self.sh)
 	window.timer = timer
 	self.window = window
+
+	local general_btn = wid("tools_general")
+	if general_btn and general_btn.parent then
+		general_btn.parent:remove_child(general_btn)
+	end
+
+	local general_panel = wid("general")
+	if general_panel and general_panel.parent then
+		general_panel.parent:remove_child(general_panel)
+	end
+
+	local safe_frame_btn = wid("tg_safe_frame")
+	if safe_frame_btn and safe_frame_btn.parent then
+		safe_frame_btn.parent:remove_child(safe_frame_btn)
+	end
+
+	-- 暂时停用“方向键导航”工具，仅保留底层逻辑代码
+	local nav_btn = wid("tools_nav")
+	if nav_btn and nav_btn.parent then
+		nav_btn.parent:remove_child(nav_btn)
+	end
+
+	local nav_panel = wid("nav")
+	if nav_panel then
+		nav_panel.hidden = true
+	end
+
+	self:compact_tools_panel()
+	self:compact_entities_panel()
+	self:add_back_to_map_button()
+	self:apply_fixed_tool_layout()
+
 	wid("picker").size = V.v(self.sw, self.sh)
 	wid("picker").gui = self
 	wid("tools_save").on_click = function()
-		-- editor:level_save(wid("tools_level_name").value, wid("tools_game_mode").value)
-		editor:level_save()
-	-- gui:show_save_notification("保存成功!")
+		local ok = editor:level_save()
+		if ok then
+			self:show_save_notification("保存成功", true)
+		else
+			self:show_save_notification("保存失败", false)
+		end
 	end
 	wid("tools_load").on_click = function()
 		editor:load_level(wid("tools_level_name").value, wid("tools_game_mode").value)
@@ -116,20 +179,6 @@ function gui:init(w, h, editor)
 		wid(n .. "_close").on_click = function()
 			self:hide_tool(n)
 		end
-	end
-
-	wid("tg_safe_frame").on_click = function()
-		gui.editor.safe_frame_visible = not gui.editor.safe_frame_visible
-
-		if gui.editor.safe_frame_visible then
-			wid("tg_safe_frame"):activate()
-		else
-			wid("tg_safe_frame"):deactivate()
-		end
-	end
-
-	if gui.editor.safe_frame_visible then
-		wid("tg_safe_frame"):activate()
 	end
 
 	-- -- 预加载出怪编辑器模块
@@ -346,12 +395,6 @@ function gui:init(w, h, editor)
 			self:toggle_grid_paint_flag(TERRAIN_ICE)
 		end
 	}
-	wid("entities_show").on_click = function()
-		gui:show_template()
-	end
-	wid("entities_hide").on_click = function()
-		gui:hide_template()
-	end
 	wid("entities_insert").on_click = function()
 		gui:insert_entity()
 	end
@@ -397,6 +440,26 @@ function gui:init(w, h, editor)
 	wid("path_move_down").on_click = function(this)
 		gui:move_path(1)
 	end
+	local move_up_btn = wid("path_move_up")
+	if move_up_btn and move_up_btn.parent then
+		local row = move_up_btn.parent
+		row:remove_child(move_up_btn)
+		if #row.children == 0 and row.parent then
+			row.parent:remove_child(row)
+		else
+			row:update_layout()
+		end
+	end
+	local move_down_btn = wid("path_move_down")
+	if move_down_btn and move_down_btn.parent then
+		local row = move_down_btn.parent
+		row:remove_child(move_down_btn)
+		if #row.children == 0 and row.parent then
+			row.parent:remove_child(row)
+		else
+			row:update_layout()
+		end
+	end
 	wid("path_duplicate").on_click = function(this)
 		gui:duplicate_path()
 	end
@@ -415,18 +478,39 @@ function gui:init(w, h, editor)
 	wid("path_node_pos").on_change = function(this)
 		gui:path_node_pos_change(this)
 	end
+	wid("path_node_id").editable = true
+	wid("path_node_id").defer_change = true
+	wid("path_node_id").on_change = function(this)
+		gui:path_node_id_change(this)
+	end
 	wid("path_node_width").on_change = function(this)
 		gui:path_node_width_change(this)
 	end
 	wid("path_node_extend").on_click = function(this)
-		gui:path_node_modify(this)
+		gui:path_node_add(this)
 	end
-	wid("path_node_subdivide").on_click = function(this)
-		gui:path_node_modify(this)
+	wid("path_node_extend").text = "添加节点(A)"
+	wid("path_node_extend").text_align = "center"
+	wid("path_node_extend").font_size = KE_CONST.font_size
+	local subdivide_btn = wid("path_node_subdivide")
+	if subdivide_btn and subdivide_btn.parent then
+		local row = subdivide_btn.parent
+		row:remove_child(subdivide_btn)
+		row:update_layout()
 	end
+	wid("path_node_extend").size = V.v(KE_CONST.PROP_W, KE_CONST.PROP_H)
+	wid("path_node_extend").text_offset = V.v(0, (KE_CONST.PROP_H - KE_CONST.font_size) / 2)
+	local list_section = wid("paths_list_section")
+	if list_section then
+		list_section:update_layout()
+	end
+	wid("paths_node_selected"):update_layout()
+	wid("paths_props"):update_layout()
 	wid("path_node_remove").on_click = function(this)
 		gui:path_node_remove(this)
 	end
+	wid("path_node_remove").text = "移除(D)"
+	wid("path_node_remove").text_offset = V.v(0, (KE_CONST.PROP_H - KE_CONST.font_size) / 2)
 	self.tool_shortcuts.paths = {
 		up = function()
 			self:path_nodes_move(0, 1, true)
@@ -440,11 +524,11 @@ function gui:init(w, h, editor)
 		right = function()
 			self:path_nodes_move(1, 0, true)
 		end,
-		delete = function()
+		d = function()
 			self:path_node_remove()
 		end,
-		backspace = function()
-			self:path_node_remove()
+		a = function()
+			self:path_node_add()
 		end,
 		v = function()
 			self:preview_path()
@@ -487,11 +571,270 @@ function gui:init(w, h, editor)
 
 	wid("tools_level_name"):update()
 	wid("entities_insert_template"):set_value("tower_holder")
+	self:enhance_button_feedback()
 
 -- -- 最后应用主题/反馈/布局（确保所有动态元素已创建完毕）
 -- gui:apply_dark_theme()
 -- gui:enhance_button_feedback()
 -- gui:fix_panel_layout()
+end
+
+function gui:compact_tools_panel()
+	local tools = wid("tools")
+	if not tools or not tools.children then
+		return
+	end
+
+	local layout = tools.children[3]
+	if not layout or not layout.children then
+		return
+	end
+
+	for i = #layout.children, 1, -1 do
+		local c = layout.children[i]
+		if c and c.isInstanceOf and c:isInstanceOf(KESep) and (c.text == "Level" or c.text == "Tools" or c.text == "Toggles") then
+			layout:remove_child(c)
+		end
+	end
+
+	layout:update_layout()
+end
+
+function gui:add_back_to_map_button()
+	local tools = wid("tools")
+	local layout = tools and tools.children and tools.children[3]
+	if not layout then
+		return
+	end
+
+	if wid("tools_back_to_map") then
+		return
+	end
+
+	local back_btn = KEButton:new("返回地图")
+	back_btn.id = "tools_back_to_map"
+	back_btn.size = V.v(KE_CONST.PROP_W, KE_CONST.PROP_H)
+	back_btn.text_offset = V.v(0, (KE_CONST.PROP_H - KE_CONST.font_size) / 2)
+
+	function back_btn.on_click()
+		if gui.editor and gui.editor.done_callback then
+			gui.editor.done_callback({
+				next_item_name = "map"
+			})
+		else
+			gui:show_save_notification("无法返回地图", false)
+		end
+	end
+
+	layout:add_child(back_btn)
+	layout:update_layout()
+end
+
+function gui:compact_entities_panel()
+	local entities_deselected = wid("entities_deselected")
+	if not entities_deselected or not entities_deselected.children then
+		return
+	end
+
+	local show_btn = wid("entities_show")
+	if show_btn and show_btn.parent then
+		local row = show_btn.parent
+		row:remove_child(show_btn)
+		if #row.children == 0 and row.parent then
+			row.parent:remove_child(row)
+		end
+	end
+
+	local hide_btn = wid("entities_hide")
+	if hide_btn and hide_btn.parent then
+		local row = hide_btn.parent
+		row:remove_child(hide_btn)
+		if #row.children == 0 and row.parent then
+			row.parent:remove_child(row)
+		end
+	end
+
+	entities_deselected:update_layout()
+end
+
+function gui:apply_fixed_tool_layout()
+	local tools = wid("tools")
+	local entities = wid("entities")
+	local paths = wid("paths")
+	local grid = wid("grid")
+	local nav = wid("nav")
+
+	if not tools then
+		return
+	end
+
+	local margin_x = 28
+	local margin_y = 88
+	local gap_x = 18
+	local right_x = margin_x + tools.size.x + gap_x
+
+	tools.can_drag = false
+	tools.pos = V.v(margin_x, margin_y)
+
+	if entities then
+		entities.can_drag = false
+		entities.pos = V.v(right_x, margin_y)
+	end
+
+	if paths then
+		paths.can_drag = false
+		paths.pos = V.v(right_x, margin_y)
+	end
+
+	if grid then
+		grid.can_drag = false
+		grid.pos = V.v(right_x, margin_y)
+	end
+
+	if nav then
+		nav.can_drag = false
+	end
+end
+
+function gui:enhance_button_feedback()
+	local function clone_color(c)
+		return c and {c[1], c[2], c[3], c[4]} or nil
+	end
+
+	local function resolve_visual(v)
+		local f = v._btn_feedback
+		local active = v.active == true or v.value == true
+
+		if v._btn_feedback_pressed then
+			return f.pressed
+		elseif active then
+			return v._btn_feedback_hovered and f.active_hover or f.active
+		else
+			return v._btn_feedback_hovered and f.hover or f.normal
+		end
+	end
+
+	local function apply_visual(v)
+		local visual = resolve_visual(v)
+
+		if visual and v.colors then
+			v.colors.background = clone_color(visual)
+		end
+	end
+
+	local function hook_button(v)
+		if not is_kbutton_instance(v) then
+			return
+		end
+
+		if not v.colors then
+			v.colors = {}
+		end
+
+		local normal = clone_color(v.colors.background) or {0, 0, 0, 40}
+		local alpha = normal[4] or 255
+
+		v._btn_feedback = {
+			normal = normal,
+			hover = {math.min(255, normal[1] + 34), math.min(255, normal[2] + 34), math.min(255, normal[3] + 34), alpha},
+			active = {math.min(255, normal[1] + 72), math.min(255, normal[2] + 72), math.min(255, normal[3] + 24), alpha},
+			active_hover = {math.min(255, normal[1] + 96), math.min(255, normal[2] + 96), math.min(255, normal[3] + 48), alpha},
+			pressed = {math.max(0, normal[1] - 18), math.max(0, normal[2] - 18), math.max(0, normal[3] - 18), alpha}
+		}
+		v._btn_feedback_hovered = false
+		v._btn_feedback_pressed = false
+		v._btn_feedback_scale = V.v(v.scale.x, v.scale.y)
+
+		local orig_enter = v.on_enter
+		v.on_enter = function(self, ...)
+			self._btn_feedback_hovered = true
+			apply_visual(self)
+
+			if orig_enter then
+				return orig_enter(self, ...)
+			end
+		end
+
+		local orig_exit = v.on_exit
+		v.on_exit = function(self, ...)
+			self._btn_feedback_hovered = false
+			self._btn_feedback_pressed = false
+			if self._btn_feedback_tween and gui.window and gui.window.timer then
+				gui.window.timer:cancel(self._btn_feedback_tween)
+				self._btn_feedback_tween = nil
+			end
+			self.scale = V.v(self._btn_feedback_scale.x, self._btn_feedback_scale.y)
+			apply_visual(self)
+
+			if orig_exit then
+				return orig_exit(self, ...)
+			end
+		end
+
+		local orig_down = v.on_down
+		v.on_down = function(self, ...)
+			self._btn_feedback_pressed = true
+			local tx, ty = self._btn_feedback_scale.x * 0.96, self._btn_feedback_scale.y * 0.96
+
+			if gui.window and gui.window.timer and gui.window.timer.tween then
+				if self._btn_feedback_tween then
+					gui.window.timer:cancel(self._btn_feedback_tween)
+				end
+
+				self._btn_feedback_tween = gui.window.timer:tween(0.06, self.scale, {
+					x = tx,
+					y = ty
+				}, "out-quad")
+			else
+				self.scale = V.v(tx, ty)
+			end
+
+			apply_visual(self)
+
+			if orig_down then
+				return orig_down(self, ...)
+			end
+		end
+
+		local orig_up = v.on_up
+		v.on_up = function(self, ...)
+			self._btn_feedback_pressed = false
+			local tx, ty = self._btn_feedback_scale.x, self._btn_feedback_scale.y
+
+			if gui.window and gui.window.timer and gui.window.timer.tween then
+				if self._btn_feedback_tween then
+					gui.window.timer:cancel(self._btn_feedback_tween)
+				end
+
+				self._btn_feedback_tween = gui.window.timer:tween(0.08, self.scale, {
+					x = tx,
+					y = ty
+				}, "out-back")
+			else
+				self.scale = V.v(tx, ty)
+			end
+
+			apply_visual(self)
+
+			if orig_up then
+				return orig_up(self, ...)
+			end
+		end
+
+		apply_visual(v)
+	end
+
+	local function walk(v)
+		hook_button(v)
+
+		if v.children then
+			for _, c in pairs(v.children) do
+				walk(c)
+			end
+		end
+	end
+
+	walk(self.window)
 end
 
 function gui:destroy()
@@ -505,16 +848,15 @@ function gui:update(dt)
 	-- 更新 hump timer（PopUpView 动画需要）
 	self.window.timer:update(dt)
 
--- -- 自动消失保存通知
--- if self._save_notification and self._save_notification_ts then
--- 	if love.timer.getTime() - self._save_notification_ts > 2.5 then
--- 		local notif = self._save_notification
--- 		notif.hidden = true -- KView 没有 hide()，用 hidden 控制
--- 		self.window:remove_child(notif)
--- 		self._save_notification = nil
--- 		self._save_notification_ts = nil
--- 	end
--- end
+	if self._save_notification and self._save_notification_ts then
+		if love.timer.getTime() - self._save_notification_ts > 2.5 then
+			local notif = self._save_notification
+			notif.hidden = true
+			self.window:remove_child(notif)
+			self._save_notification = nil
+			self._save_notification_ts = nil
+		end
+	end
 end
 
 function gui:draw()
@@ -526,7 +868,12 @@ function gui:keypressed(key, isrepeat)
 end
 
 function gui:keyreleased(key)
-	if self.window:keyreleased(key, isrepeat) then
+	local responder = self.window and self.window.responder
+	if responder and responder.is_focused then
+		return
+	end
+
+	if self.window:keyreleased(key) then
 		return
 	elseif self.tool_shortcuts then
 		local shortcuts = self.tool_shortcuts[self.active_tool]
@@ -542,6 +889,10 @@ function gui:textinput(t)
 end
 
 function gui:mousepressed(x, y, button)
+	if button == 2 and self.active_tool == "entities" and self.editor.entities_selected then
+		self:select_entity(nil)
+	end
+
 	self.window:mousepressed(x, y, button)
 end
 
@@ -952,6 +1303,7 @@ end
 
 function gui:level_loaded(level_idx)
 	wid("tools_level_name"):set_value(level_idx)
+	self:update_paths_list()
 	self:update_grid_tool()
 	self:refresh_nav_tool()
 -- self:refresh_holder_list()
@@ -998,6 +1350,15 @@ function gui:show_tool(name)
 
 	local v = self.window:get_child_by_id(name)
 
+	for _, n in pairs(self.tool_names) do
+		if n ~= name then
+			local ov = self.window:get_child_by_id(n)
+			if ov and not ov.hidden then
+				self:hide_tool(n)
+			end
+		end
+	end
+
 	v.hidden = nil
 
 	self:select_tool(name)
@@ -1020,6 +1381,8 @@ function gui:show_tool(name)
 		self.editor.nav_visible = true
 		self.editor.nav_dirty = true
 	end
+
+	self:apply_fixed_tool_layout()
 end
 
 function gui:toggle_tool(name)
@@ -1033,7 +1396,7 @@ function gui:toggle_tool(name)
 end
 
 function gui:deselect_tool(name)
-	self.window:set_responder()
+	set_gui_responder(self.window)
 
 	local v = self.window:get_child_by_id(name)
 
@@ -1086,16 +1449,21 @@ function gui:select_tool(name)
 	-- end
 
 	if name == "entities" and not self.editor.entities_selected then
-		self.window:set_responder(wid("entities_insert_template"))
+		set_gui_responder(self.window, wid("entities_insert_template"))
 	end
 end
 
 function gui:click_tool(btn, x, y)
 	local wx, wy = gui:u2g(V.v(x, y))
 
-	if self.active_tool == "grid" then
+	if self.active_tool == "grid" and not wid("grid").hidden then
 		self:grid_paint(wx, wy, btn)
-	elseif self.active_tool == "entities" then
+	elseif self.active_tool == "entities" and not wid("entities").hidden then
+		if btn == 2 then
+			self:select_entity(nil)
+			return
+		end
+
 		local cb = self.select_entity
 
 		self:entities_select(wx, wy, cb, 12)
@@ -1109,15 +1477,16 @@ end
 function gui:down_tool(btn, x, y)
 	local wx, wy = gui:u2g(V.v(x, y))
 
-	if self.active_tool == "paths" then
-		if btn == 2 and self.path_nodes_selected then
-			self:path_node_modify(nil, wx, wy)
-		else
-			local selected = self:path_nodes_select(wx, wy)
+	if self.active_tool == "paths" and not wid("paths").hidden then
+		if btn == 2 then
+			self:select_node()
+			return
+		end
 
-			if not selected then
-			-- block empty
-			end
+		local selected = self:path_nodes_select(wx, wy)
+
+		if not selected then
+		-- block empty
 		end
 	end
 end
@@ -1131,7 +1500,7 @@ end
 function gui:move_tool(x, y, down)
 	local wx, wy = gui:u2g(V.v(x, y))
 
-	if self.active_tool == "grid" then
+	if self.active_tool == "grid" and not wid("grid").hidden then
 		self.editor.tool_pointer.tool = "grid"
 		self.editor.tool_pointer.x = wx
 		self.editor.tool_pointer.y = wy
@@ -1140,11 +1509,11 @@ function gui:move_tool(x, y, down)
 		if down then
 			self:grid_paint(wx, wy, down)
 		end
-	elseif self.active_tool == "entities" then
+	elseif self.active_tool == "entities" and not wid("entities").hidden then
 		if down and self.editor.entities_selected then
 			self:entities_move(wx, wy)
 		end
-	elseif self.active_tool == "paths" then
+	elseif self.active_tool == "paths" and not wid("paths").hidden then
 		if down and self.path_nodes_selected then
 			self:path_nodes_move(wx, wy)
 		end
@@ -1256,7 +1625,7 @@ function gui:grid_paint(wx, wy, btn)
 end
 
 function gui:update_grid_prop(prop_view)
-	prop_name = prop_view.prop_name
+	local prop_name = prop_view.prop_name
 
 	if prop_name == "grid_size" then
 		GR:set_grid_size(prop_view.value.x, prop_view.value.y)
@@ -1372,13 +1741,13 @@ function gui:select_entity(e)
 			cv:update_layout()
 		end
 
-		self.window:set_responder()
+		set_gui_responder(self.window)
 	else
 		self.editor.entities_selected = nil
 		vs.hidden = true
 		vd.hidden = false
 
-		self.window:set_responder(wid("entities_insert_template"))
+		set_gui_responder(self.window, wid("entities_insert_template"))
 	end
 
 	self.editor.entities_dirty = true
@@ -1491,6 +1860,32 @@ function gui:show_template()
 	end
 
 	self.editor.entities_dirty = true
+end
+
+function gui:show_save_notification(text, is_success)
+	if self._save_notification then
+		self._save_notification.hidden = true
+		self.window:remove_child(self._save_notification)
+		self._save_notification = nil
+	end
+
+	local notif = KView:new(V.v(320, 44))
+	notif.colors.background = is_success and {28, 125, 66, 230} or {170, 64, 64, 230}
+	notif.pos = V.v(math.floor((self.sw - 320) / 2), 72)
+	notif.anchor = V.v(0, 0)
+
+	local label = KLabel:new(V.v(320, 44))
+	label.text = text
+	label.text_align = "center"
+	label.font_name = KE_CONST.font_name
+	label.font_size = KE_CONST.font_size
+	label.text_offset = V.v(0, 13)
+	label.colors.text = {255, 255, 255, 255}
+	notif:add_child(label)
+
+	self.window:add_child(notif)
+	self._save_notification = notif
+	self._save_notification_ts = love.timer.getTime()
 end
 
 function gui:insert_entity()
@@ -1619,7 +2014,7 @@ function gui:update_paths_list()
 		local l = KLabel:new(V.v(list.size.x, 20))
 
 		l.text_align = "left"
-		l.text = i
+		l.text = tostring(i)
 
 		function l.on_click()
 			self:select_node(i, 1)
@@ -1686,7 +2081,7 @@ function gui:path_nodes_select(x, y, w, h)
 	local sel = {}
 
 	for pi, path in ipairs(self.editor.path_curves) do
-		if lpi == pi then
+		if not lpi or lpi == pi then
 			local n = path.nodes
 
 			for ni = 1, #n do
@@ -1743,7 +2138,7 @@ function gui:show_path_node(pi, ni)
 	end
 
 	wid("path_connects_to"):set_value(cpi)
-	wid("path_node_id"):set_value(ni .. " / " .. node_type)
+	wid("path_node_id"):set_value(tostring(ni), true)
 	wid("path_node_pos"):set_value(p, true)
 
 	if node_width then
@@ -1755,6 +2150,25 @@ function gui:show_path_node(pi, ni)
 
 	wid("paths_node_selected"):update_layout()
 	wid("paths_props"):update_layout()
+end
+
+function gui:path_node_id_change(prop_view)
+	if not self.path_nodes_selected or #self.path_nodes_selected < 1 then
+		return
+	end
+
+	local pi = self.path_nodes_selected[1][1]
+	local path = self.editor.path_curves[pi]
+	if not path or not path.nodes or #path.nodes == 0 then
+		return
+	end
+
+	local ni = tonumber(prop_view.value)
+	if not ni or not path.nodes[ni] then
+		ni = 1
+	end
+
+	self:select_node(pi, ni)
 end
 
 function gui:path_connects_to_change(prop_view)
@@ -1856,6 +2270,30 @@ function gui:path_node_modify(view, x, y)
 			self:show_path_node(pi, nni)
 		end
 	end
+end
+
+function gui:path_node_add(view, x, y)
+	local pi = self.editor.path_selected
+
+	if not pi and self.path_nodes_selected and self.path_nodes_selected[1] then
+		pi = self.path_nodes_selected[1][1]
+	end
+
+	if not pi or not self.editor.path_curves[pi] then
+		pi = self.editor:create_path()
+		self.editor:clear_path_points(pi)
+		self:update_paths_list()
+	end
+
+	local mx, my = love.mouse.getPosition()
+	local wp = self:u2g(V.v(mx, my))
+
+	self.editor:add_smooth_point(pi, wp.x, wp.y)
+
+	local path = self.editor.path_curves[pi]
+	local ni = path and path.nodes and #path.nodes or 1
+
+	self:select_node(pi, ni)
 end
 
 function gui:path_node_remove(view)

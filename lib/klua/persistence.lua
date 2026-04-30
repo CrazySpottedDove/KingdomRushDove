@@ -170,7 +170,7 @@ writers = {
 
 			for _, k in pairs(keys) do
 				local v = item[k]
-
+				-- 我们暂时不序列化这些无法序列化的类型
 				local value_type = type(v)
 
 				if value_type ~= "function" and value_type ~= "thread" and value_type ~= "userdata" then

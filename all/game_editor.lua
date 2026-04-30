@@ -319,6 +319,7 @@ end
 
 function editor:update(dt)
 	self.simulation:update(dt)
+	self.simulation:render_update(dt)
 	self.gui:update(dt)
 	return true
 end
@@ -386,9 +387,15 @@ function editor:filedropped(file)
 		return
 	end
 	local img_data = love.image.newImageData(file_data)
+	local img = G.newImage(img_data)
+
+	if not img then
+		log.error("Editor: could not create Image from dropped file: %s", filename)
+		return
+	end
 
 	-- 将该图片的纹理上传到 ImageDB 中
-	I:add_image(filename, img_data, "game_editor")
+	I:add_image(filename, img, "game_editor")
 
 	-- 创建一个 decal_background 实体并加入 store 中
 	local bg_entity = E:create_entity("decal_background")
@@ -401,38 +408,12 @@ function editor:filedropped(file)
 		self.gui._bg_prompt.hidden = true
 	end
 
-	self.gui:show_save_notification("背景图已加载: " .. (filename:match("([^/\\]+)$") or filename))
+	self.gui:show_save_notification("背景图已加载: " .. (filename:match("([^/\\]+)$") or filename), true)
 end
 
 function editor:draw()
 	-- 实时显示当前的内存占用
 	love.graphics.print("Memory: " .. collectgarbage("count") / 1024 .. " MiB", 10, 10)
-
-	-- -- 绘制背景图片（如果有）
-	-- -- 注意：游戏世界使用 Y 轴向上，但背景图应正常显示（Y 轴向下）
-	-- -- 因此背景图在屏幕坐标系中绘制，不经过 Y 翻转
-	-- if self.bg_image then
-	-- 	local rox, roy = self.game_ref_origin.x, self.game_ref_origin.y
-	-- 	local gs = self.game_scale
-	-- 	G.push()
-	-- 	G.translate(rox, roy) -- 屏幕左上角
-	-- 	G.scale(gs, gs) -- 只做缩放，不做 Y 翻转
-	-- 	G.setColor(1, 1, 1, 1)
-	-- 	G.draw(self.bg_image, 0, 0, 0, REF_W / self.bg_image:getWidth(), REF_H / self.bg_image:getHeight())
-	-- 	G.pop()
-	-- end
-
-	-- -- 显示等待背景图提示
-	-- if self.waiting_for_bg then
-	-- 	G.push()
-	-- 	G.setColor(1, 1, 1, 1)
-	-- 	-- 计算居中位置（考虑 ref 坐标系）
-	-- 	local text = "请将PNG图片拖入窗口作为背景图"
-	-- 	local font = G.getFont()
-	-- 	local text_w = font:getWidth(text)
-	-- 	G.print(text, self.screen_w / 2 - text_w / 2, self.screen_h / 2)
-	-- 	G.pop()
-	-- end
 
 	local rox, roy = self.game_ref_origin.x, self.game_ref_origin.y
 	local gs = self.game_scale
@@ -462,41 +443,13 @@ function editor:draw()
 		G.setCanvas(self.paths_canvas)
 
 		for pi, path in ipairs(self.path_curves) do
-			local w1 = path.widths[1]
-
 			for i, bezier in ipairs(path.beziers) do
 				G.setLineWidth(pi == self.path_selected and curve_selected_w or curve_w)
 				G.setColor_old(self.path_selected == pi and color_curve_sel or color_curve)
 				G.line(bezier:render())
 
 				local p1x, p1y = bezier:getControlPoint(1)
-				local p2x, p2y = bezier:getControlPoint(2)
-				local p3x, p3y = bezier:getControlPoint(3)
 				local p4x, p4y = bezier:getControlPoint(4)
-				local w4 = path.widths[i + 1]
-
-				if self.path_selected == pi then
-					G.setLineWidth(width_w)
-					G.setColor_old(color_width)
-
-					if i == 1 then
-						local n1x, n1y = V.mul(w1 / 2, V.rotate(km.pi_2, V.normalize(p2x - p1x, p2y - p1y)))
-
-						G.line(p1x, p1y, p1x + n1x, p1y + n1y)
-						G.line(p1x, p1y, p1x - n1x, p1y - n1y)
-					end
-
-					local n4x, n4y = V.mul(w4 / 2, V.rotate(km.pi_2, V.normalize(p4x - p3x, p4y - p3y)))
-
-					G.line(p4x, p4y, p4x + n4x, p4y + n4y)
-					G.line(p4x, p4y, p4x + -n4x, p4y - n4y)
-					G.setLineWidth(1)
-					G.setColor_old(color_handle)
-					G.line(p1x, p1y, p2x, p2y)
-					G.line(p3x, p3y, p4x, p4y)
-					G.circle("fill", p2x, p2y, node_w / 2, 8)
-					G.circle("fill", p3x, p3y, node_w / 2, 8)
-				end
 			end
 
 			local fnt = G.getFont()
@@ -941,7 +894,7 @@ function editor:save_data()
 	self:serialize_level()
 	local data = table.deepclone(self.store.level.data)
 	clear_key(data, {"_idx", "_id", "_before_ov", "locations", "frames"})
-	storage:write_lua(fn, data)
+	return storage:write_lua(fn, data)
 end
 
 function editor:save_curves()
@@ -955,22 +908,24 @@ function editor:save_curves()
 	t = table.deepclone(t)
 	clear_key(t, {"beziers"})
 
-	storage:write_lua(fn, t)
+	return storage:write_lua(fn, t)
 end
 
 function editor:save_grid()
 	local fn = "game_editor/data/levels/" .. self.store.level_name .. "_grid.lua"
 	local data = table.deepclone(GR)
 	clear_key(data, {"cell_size", "cell_type_names", "grid_colors", "grid_h", "grid_w", "waypoints_cache"})
-	storage:write_lua(fn, data)
+	return storage:write_lua(fn, data)
 end
 
 --- 将当前 store 对应的关卡数据全部保存
 function editor:level_save()
 	log.info("Saving level: %s", self.store.level_name)
-	self:save_curves()
-	self:save_grid()
-	self:save_data()
+	local ok_curves = self:save_curves()
+	local ok_grid = self:save_grid()
+	local ok_data = self:save_data()
+
+	return ok_curves and ok_grid and ok_data
 end
 
 -- SAVE END
