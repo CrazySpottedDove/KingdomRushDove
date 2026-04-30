@@ -6126,7 +6126,7 @@ function OptionsView:initialize(sw, sh)
 		button_height = button_height + 100
 		local custom_map_button = GGOptionsButton:new("自定义地图")
 		custom_map_button:set_anchor_to_center()
-		custom_map_button.pos.x = -75
+		custom_map_button.pos.x = self.back.size.x + 75
 		custom_map_button.pos.y = button_height
 		function custom_map_button.on_click()
 			S:queue("GUIButtonCommon")
@@ -6143,7 +6143,7 @@ function OptionsView:initialize(sw, sh)
 		button_height = button_height + 100
 		local editor_button = GGOptionsButton:new("地图编辑器")
 		editor_button:set_anchor_to_center()
-		editor_button.pos.x = -75
+		editor_button.pos.x = self.back.size.x + 75
 		editor_button.pos.y = button_height
 		function editor_button.on_click()
 			S:queue("GUIButtonCommon")
