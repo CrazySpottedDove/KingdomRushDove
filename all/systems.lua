@@ -43,31 +43,6 @@ require("all.constants")
 
 local ffi = require("ffi")
 local EXO = require("all.exoskeleton")
-local persistence = require("lib.klua.persistence")
-local FS = love.filesystem
-
-local CUSTOM_SAVE_FILE = "custom_slot.lua"
-
-local function load_custom_progress()
-	local f = FS.load(CUSTOM_SAVE_FILE)
-	if not f then
-		return {
-			maps = {}
-		}
-	end
-	local ok, data = pcall(f)
-	if not ok or type(data) ~= "table" then
-		return {
-			maps = {}
-		}
-	end
-	data.maps = data.maps or {}
-	return data
-end
-
-local function save_custom_progress(data)
-	FS.write(CUSTOM_SAVE_FILE, "return " .. persistence.serialize_to_string(data) .. "\n")
-end
 
 local function queue_insert(store, e)
 	simulation:queue_insert_entity(e)
@@ -579,20 +554,12 @@ function sys.level:on_update(dt, ts, store)
 			store.defeat_count = (store.defeat_count or 0) + 1
 
 			local slot = storage:load_slot()
-			if store.custom_map_entry then
-				local custom = load_custom_progress()
-				local map_data = custom.maps[store.custom_map_entry] or {}
-				custom.maps[store.custom_map_entry] = map_data
-				save_custom_progress(custom)
-			else
-				slot.last_victory = nil
-			end
+
+			slot.last_victory = nil
 
 			signal.emit("game-defeat", store)
 			signal.emit("game-defeat-after", store)
-			if not store.custom_map_entry then
-				storage:save_slot(slot, nil, true)
-			end
+			storage:save_slot(slot, nil, true)
 		elseif store.level.run_complete and store.waves_finished and not LU.has_alive_enemies(store) then
 			if store.criket and store.criket.on then
 				local stars = 3
@@ -641,32 +608,18 @@ function sys.level:on_update(dt, ts, store)
 			}
 
 			local slot = storage:load_slot()
-			if store.custom_map_entry then
-				local custom = load_custom_progress()
-				local map_data = custom.maps[store.custom_map_entry] or {}
-				map_data.stars = math.max(tonumber(map_data.stars) or 0, stars)
-				if store.level_mode == GAME_MODE_HEROIC then
-					map_data.heroic = true
-				elseif store.level_mode == GAME_MODE_IRON then
-					map_data.iron = true
-				end
-				custom.maps[store.custom_map_entry] = map_data
-				save_custom_progress(custom)
-			else
-				slot.last_victory = {
-					level_idx = store.level_idx,
-					level_difficulty = store.level_difficulty,
-					level_mode = store.level_mode,
-					stars = stars,
-					unlock_towers = store.level.unlock_towers
-				}
-			end
+
+			slot.last_victory = {
+				level_idx = store.level_idx,
+				level_difficulty = store.level_difficulty,
+				level_mode = store.level_mode,
+				stars = stars,
+				unlock_towers = store.level.unlock_towers
+			}
 
 			signal.emit("game-victory", store)
 			signal.emit("game-victory-after", store)
-			if not store.custom_map_entry then
-				storage:save_slot(slot, nil, true)
-			end
+			storage:save_slot(slot, nil, true)
 		end
 	end
 	perf.stop("level")

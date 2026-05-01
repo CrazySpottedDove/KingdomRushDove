@@ -189,9 +189,19 @@ function WaveConfigView:initialize(sw, sh, editor)
 	hook_button_feedback(gen_btn)
 	panel:add_child(gen_btn)
 
+	local save_wave_btn = KEButton:new("保存出怪")
+	save_wave_btn.size = v(120, 30)
+	save_wave_btn.pos = v(288, ph - 44)
+	save_wave_btn.colors.background = C.button
+	function save_wave_btn.on_click()
+		self:_save_waves()
+	end
+	hook_button_feedback(save_wave_btn)
+	panel:add_child(save_wave_btn)
+
 	local preview_btn = KEButton:new("出怪预览")
 	preview_btn.size = v(120, 30)
-	preview_btn.pos = v(288, ph - 44)
+	preview_btn.pos = v(422, ph - 44)
 	preview_btn.colors.background = C.button
 	function preview_btn.on_click()
 		self:_show_preview()
@@ -201,7 +211,7 @@ function WaveConfigView:initialize(sw, sh, editor)
 
 	local add_group_btn = KEButton:new("+ 新增波")
 	add_group_btn.size = v(120, 30)
-	add_group_btn.pos = v(422, ph - 44)
+	add_group_btn.pos = v(556, ph - 44)
 	function add_group_btn.on_click()
 		self:_append_group()
 	end
@@ -210,7 +220,7 @@ function WaveConfigView:initialize(sw, sh, editor)
 
 	local glossary_btn = KEButton:new("怪物一览表")
 	glossary_btn.size = v(130, 30)
-	glossary_btn.pos = v(556, ph - 44)
+	glossary_btn.pos = v(690, ph - 44)
 	function glossary_btn.on_click()
 		self:_show_enemy_glossary()
 	end
@@ -463,6 +473,23 @@ end
 
 function WaveConfigView:_generate_waves()
 	local cfg = self:_read_config_from_form()
+	self.config = cfg
+	self._generated_waves = {
+		lives = cfg.lives,
+		cash = cfg.cash,
+		groups = {}
+	}
+	for _, group in ipairs(cfg.groups) do
+		self._generated_waves.groups[#self._generated_waves.groups + 1] = interface.generate_group(group)
+	end
+	self.editor.wave_data = table.deepclone(self._generated_waves)
+	self.editor:refresh_required_assets()
+	self.editor.gui:show_save_notification("生成出怪成功", true)
+end
+
+function WaveConfigView:_save_waves()
+	local cfg = self:_read_config_from_form()
+	self.config = cfg
 	local result = {
 		lives = cfg.lives,
 		cash = cfg.cash,
@@ -475,31 +502,32 @@ function WaveConfigView:_generate_waves()
 	self._generated_waves = result
 	local rel = wave_rel_path(self.level_idx, self.level_mode)
 	love.filesystem.createDirectory("game_editor/data/waves")
-	love.filesystem.write(rel, "return " .. serpent.block(result, {
+	local ok = love.filesystem.write(rel, "return " .. serpent.block(result, {
 		indent = "    ",
 		comment = false,
 		sortkeys = false
 	}) .. "\n")
-	self.editor.gui:show_save_notification("生成出怪成功", true)
+	if ok then
+		self.editor.wave_data = table.deepclone(result)
+		self.editor:refresh_required_assets()
+		self.editor.gui:show_save_notification("出怪文件已保存", true)
+	else
+		self.editor.gui:show_save_notification("出怪文件保存失败", false)
+	end
 end
 
 function WaveConfigView:_show_preview()
 	local WaveEditorView = require("game_editor_wave_editor")
-	local source = self._generated_waves
-	if not source then
-		source = load_lua_table_with_pref(string.format("data/waves/level%02d_waves_%s.lua", self.level_idx, mode_suffix_of(self.level_mode)))
+	local cfg = self:_read_config_from_form()
+	local source = {
+		lives = cfg.lives,
+		cash = cfg.cash,
+		groups = {}
+	}
+	for _, group in ipairs(cfg.groups) do
+		source.groups[#source.groups + 1] = interface.generate_group(group)
 	end
-	if not source then
-		local cfg = self:_read_config_from_form()
-		source = {
-			lives = cfg.lives,
-			cash = cfg.cash,
-			groups = {}
-		}
-		for _, group in ipairs(cfg.groups) do
-			source.groups[#source.groups + 1] = interface.generate_group(group)
-		end
-	end
+	self._generated_waves = table.deepclone(source)
 	local preview = WaveEditorView:new(self.editor.gui.sw, self.editor.gui.sh, self.editor, {
 		wave_data = table.deepclone(source),
 		level_idx = self.level_idx,

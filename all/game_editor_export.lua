@@ -13,23 +13,38 @@ local EXPORT_ROOT = "game_editor/plugins"
 local CUSTOM_SAVE_FILE = "custom_slot.lua"
 
 local C = {
-	bg = {16, 20, 32, 255},
-	panel = {26, 33, 50, 255},
-	text = {205, 218, 248, 255},
-	accent = {195, 148, 38, 255},
-	input_bg = {22, 28, 42, 255}
+	overlay = {20, 18, 14, 150},
+	bg = {198, 177, 126, 255},
+	panel = {111, 82, 36, 255},
+	text = {58, 41, 20, 255},
+	subtle = {93, 70, 38, 255},
+	accent = {155, 107, 28, 255},
+	input_bg = {242, 231, 202, 255},
+	input_focus = {255, 245, 214, 255},
+	input_border = {166, 127, 54, 255},
+	button = {101, 139, 66, 255}
 }
 
 local function load_lua_table(path)
 	local ok_load, chunk_or_err = pcall(FS.load, path)
-	if not ok_load or not chunk_or_err then
+	if not ok_load or not chunk_or_err or type(chunk_or_err) ~= "function" then
 		return nil
 	end
 	local ok_exec, data = pcall(chunk_or_err)
-	if not ok_exec or type(data) ~= "table" then
-		return nil
+	if ok_exec and type(data) == "table" then
+		return data
 	end
-	return data
+	local content = FS.read(path)
+	if type(content) == "string" and content ~= "" then
+		local wrapped = loadstring("return " .. content, "@" .. path .. "(wrapped)")
+		if wrapped then
+			local ok_wrap, wrapped_data = pcall(wrapped)
+			if ok_wrap and type(wrapped_data) == "table" then
+				return wrapped_data
+			end
+		end
+	end
+	return nil
 end
 
 local function sanitize_entry(s)
@@ -64,19 +79,16 @@ function EditorExportView.scan_custom_maps()
 
 	for _, entry in ipairs(dirs) do
 		local cfg_path = EXPORT_ROOT .. "/" .. entry .. "/config.lua"
-		local f = FS.load(cfg_path)
-		if f then
-			local ok_cfg, cfg = pcall(f)
-			if ok_cfg and type(cfg) == "table" then
-				cfg.entry = cfg.entry or entry
-				cfg.map_id = cfg.entry
-				cfg.level_name = cfg.level_name or string.format("level%02d", tonumber(cfg.level_idx) or 1)
-				local waves_root = EXPORT_ROOT .. "/" .. entry .. "/data/waves/"
-				cfg.has_campaign = FS.getInfo(waves_root .. cfg.level_name .. "_waves_campaign.lua") ~= nil
-				cfg.has_heroic = FS.getInfo(waves_root .. cfg.level_name .. "_waves_heroic.lua") ~= nil
-				cfg.has_iron = FS.getInfo(waves_root .. cfg.level_name .. "_waves_iron.lua") ~= nil
-				maps[#maps + 1] = cfg
-			end
+		local cfg = load_lua_table(cfg_path)
+		if type(cfg) == "table" then
+			cfg.entry = cfg.entry or entry
+			cfg.map_id = cfg.entry
+			cfg.level_name = cfg.level_name or string.format("level%02d", tonumber(cfg.level_idx) or 1)
+			local waves_root = EXPORT_ROOT .. "/" .. entry .. "/data/waves/"
+			cfg.has_campaign = FS.getInfo(waves_root .. cfg.level_name .. "_waves_campaign.lua") ~= nil
+			cfg.has_heroic = FS.getInfo(waves_root .. cfg.level_name .. "_waves_heroic.lua") ~= nil
+			cfg.has_iron = FS.getInfo(waves_root .. cfg.level_name .. "_waves_iron.lua") ~= nil
+			maps[#maps + 1] = cfg
 		end
 	end
 
@@ -102,39 +114,44 @@ function EditorExportView.save_custom_save(data)
 		maps = {}
 	}
 	data.maps = data.maps or {}
-	FS.write(CUSTOM_SAVE_FILE, serpent.block(data, {
+	FS.write(CUSTOM_SAVE_FILE, "return " .. serpent.block(data, {
 		indent = "    ",
 		sortkeys = true,
 		comment = false
-	}))
+	}) .. "\n")
 end
 
 function EditorExportView:initialize(sw, sh, editor)
 	PopUpView.initialize(self, V.v(sw, sh))
-	self.colors.background = {0, 0, 0, 160}
+	self.colors.background = C.overlay
 	self.editor = editor
 	self.level_idx = editor.store.level_idx or 1
 
-	local pw, ph = 680, 460
+	local pw, ph = 860, 620
 	local panel = KView:new(V.v(pw, ph))
 	panel.colors.background = C.bg
 	panel.anchor = v(pw / 2, ph / 2)
 	panel.pos = v(sw / 2, sh / 2)
+	panel.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, pw, ph, 16, 16}
+	}
 	self:add_child(panel)
+	self.panel = panel
 
-	local title = KLabel:new(V.v(pw, 36))
+	local title = KLabel:new(V.v(pw, 54))
 	title.text = "导出地图插件"
 	title.text_align = "center"
 	title.vertical_align = "middle"
-	title.colors.text = {238, 244, 255, 255}
+	title.colors.text = {251, 240, 214, 255}
 	title.colors.background = C.panel
-	title.font_size = 16
-	title.font_name = KE_CONST.font_name
+	title.font_size = 22
+	title.font_name = "h"
 	panel:add_child(title)
 
 	local close_btn = KButton:new(V.v(30, 30))
 	close_btn.text = "X"
-	close_btn.pos = v(pw - 35, 5)
+	close_btn.pos = v(pw - 40, 12)
 	close_btn.colors.background = {120, 50, 50, 255}
 	close_btn.colors.text = {255, 255, 255, 255}
 	function close_btn.on_click()
@@ -142,44 +159,62 @@ function EditorExportView:initialize(sw, sh, editor)
 	end
 	panel:add_child(close_btn)
 
-	local fy, fh, lw, mx = 52, 30, 130, 20
-	local iw = pw - lw - mx * 2 - 10
+	local level_name = self.editor.store.level_name or string.format("level%02d", self.level_idx)
+	local fy, fh, lw, mx = 78, 34, 142, 28
+	local col_gap = 28
+	local iw = math.floor((pw - mx * 2 - lw * 2 - col_gap - 20) / 2)
 
-	local function add_field(label_text, default_text)
-		local lbl = KLabel:new(V.v(lw, fh))
-		lbl.pos = v(mx, fy)
-		lbl.text = label_text
-		lbl.text_align = "right"
-		lbl.colors.text = C.accent
-		lbl.font_size = 13
-		lbl.font_name = KE_CONST.font_name
-		lbl.vertical_align = "middle"
-		panel:add_child(lbl)
-		local input = self:_create_text_input(panel, mx + lw + 10, fy, iw, fh, default_text)
-		fy = fy + fh + 8
-		return input
+	local function add_field(label_text, default_text, x, y)
+		local prop = KEProp:new(label_text, tostring(default_text or ""), true)
+		prop.pos = v(x, y)
+		prop.size = v(lw + 10 + iw, fh)
+		panel:add_child(prop)
+		return prop
 	end
 
-	self._name_input = add_field("地图名称:", "我的自定义地图")
-	self._entry_input = add_field("唯一标识(entry):", "my_custom_map")
-	self._author_input = add_field("作者:", "匿名")
-	self._version_input = add_field("版本:", "1.0")
-	self._desc_input = add_field("描述:", "一张玩家自制地图")
+	local left_x = mx
+	local right_x = mx + lw + 10 + iw + col_gap - (lw + 10)
+	self._name_input = add_field("地图名称:", "我的自定义地图", left_x, fy)
+	self._entry_input = add_field("唯一标识:", "my_custom_map", right_x, fy)
+	fy = fy + fh + 10
+	self._author_input = add_field("作者:", "匿名", left_x, fy)
+	self._version_input = add_field("版本:", "1.0", right_x, fy)
+	fy = fy + fh + 10
+	self._category_input = add_field("分类:", "level", left_x, fy)
+	self._priority_input = add_field("优先级:", "0", right_x, fy)
+	fy = fy + fh + 10
+	self._url_input = add_field("发布链接:", "", left_x, fy)
+	self._url_input.size = v(pw - mx * 2, fh)
+	self._url_input.lt.size = v(pw - mx * 2, self._url_input.lt.size.y)
+	self._url_input.lv.size = v(pw - mx * 2, self._url_input.lv.size.y)
+	self._url_input.input_border.size = v(pw - mx * 2 + 2, self._url_input.input_border.size.y)
+	fy = fy + fh + 10
+	self._desc_input = add_field("描述:", "一张玩家自制地图", left_x, fy)
+	self._desc_input.size = v(pw - mx * 2, fh)
+	self._desc_input.lt.size = v(pw - mx * 2, self._desc_input.lt.size.y)
+	self._desc_input.lv.size = v(pw - mx * 2, self._desc_input.lv.size.y)
+	self._desc_input.input_border.size = v(pw - mx * 2 + 2, self._desc_input.input_border.size.y)
+	fy = fy + fh + 18
 
-	local info_lbl = KLabel:new(V.v(pw - 40, 70))
-	info_lbl.pos = v(20, fy + 4)
-	info_lbl.text = "导出路径固定为: game_editor/plugins/$entry/config.lua\n会同时导出关卡文件、路径、网格，campaign 出怪缺失时自动生成空占位文件。"
+	local info_lbl = KLabel:new(V.v(pw - 56, 148))
+	info_lbl.pos = v(28, fy)
+	info_lbl.text = string.format("导出目录：game_editor/plugins/$entry/\n关卡标识：%s\n配置格式遵循 mods/mod_template/config.lua，并附加 level_name / 背景图 / 音乐字段。\n若 campaign 出怪不存在，会自动生成空占位文件。", level_name)
 	info_lbl.text_align = "left"
 	info_lbl.colors.text = C.text
 	info_lbl.font_size = 12
-	info_lbl.font_name = KE_CONST.font_name
+	info_lbl.font_name = "body"
 	info_lbl.line_height = 1.3
+	info_lbl.colors.background = {232, 220, 188, 140}
+	info_lbl.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, info_lbl.size.x, info_lbl.size.y, 12, 12}
+	}
 	panel:add_child(info_lbl)
 
 	local export_btn = KEButton:new("导出插件")
 	export_btn.size = v(170, 32)
-	export_btn.pos = v(20, ph - 50)
-	export_btn.colors.background = {0, 80, 0, 220}
+	export_btn.pos = v(28, ph - 58)
+	export_btn.colors.background = C.button
 	function export_btn.on_click()
 		self:_do_export()
 	end
@@ -187,65 +222,11 @@ function EditorExportView:initialize(sw, sh, editor)
 
 	local cancel_btn = KEButton:new("取消")
 	cancel_btn.size = v(100, 32)
-	cancel_btn.pos = v(pw - 120, ph - 50)
+	cancel_btn.pos = v(pw - 128, ph - 58)
 	function cancel_btn.on_click()
 		self:hide()
 	end
 	panel:add_child(cancel_btn)
-end
-
-function EditorExportView:_create_text_input(parent, x, y, w, h, default_text)
-	local container = KView:new(V.v(w, h))
-	container.pos = v(x, y)
-	container.colors.background = C.input_bg
-	local label = KLabel:new(V.v(w - 8, h))
-	label.pos = v(6, 0)
-	label.text = default_text or ""
-	label.text_align = "left"
-	label.colors.text = C.text
-	label.font_size = 12
-	label.font_name = KE_CONST.font_name
-	label.vertical_align = "middle"
-	container:add_child(label)
-	container.get_text = function()
-		return label.text
-	end
-	container.set_text = function(this, t)
-		label.text = t
-	end
-	container.set_focus = function(this, focused)
-		this.focused = focused
-		this.colors.background = focused and {40, 60, 96, 255} or C.input_bg
-	end
-	function container.on_click()
-		if self._active_input and self._active_input.set_focus then
-			self._active_input:set_focus(false)
-		end
-		self._active_input = container
-		container:set_focus(true)
-	end
-	parent:add_child(container)
-	return container
-end
-
-function EditorExportView:textinput(t)
-	if self._active_input and self._active_input.get_text and self._active_input.set_text then
-		local old = self._active_input:get_text() or ""
-		self._active_input:set_text(old .. t)
-	end
-end
-
-function EditorExportView:keyreleased(key)
-	if not self._active_input then
-		return
-	end
-	if key == "backspace" then
-		local old = self._active_input:get_text() or ""
-		self._active_input:set_text(old:sub(1, math.max(0, #old - 1)))
-	elseif key == "return" or key == "kpenter" or key == "escape" then
-		self._active_input:set_focus(false)
-		self._active_input = nil
-	end
 end
 
 function EditorExportView:_copy_into_plugin(rel_src, abs_src, rel_dst)
@@ -259,11 +240,14 @@ end
 
 function EditorExportView:_do_export()
 	local level_name = self.editor.store.level_name or string.format("level%02d", self.level_idx)
-	local name = self._name_input:get_text()
-	local entry = sanitize_entry(self._entry_input:get_text())
-	local author = self._author_input:get_text()
-	local version = self._version_input:get_text()
-	local desc = self._desc_input:get_text()
+	local name = tostring(self._name_input.value or "")
+	local entry = sanitize_entry(self._entry_input.value or "")
+	local author = tostring(self._author_input.value or "")
+	local version = tostring(self._version_input.value or "")
+	local desc = tostring(self._desc_input.value or "")
+	local url = tostring(self._url_input and self._url_input.value or "")
+	local category = sanitize_entry(self._category_input and self._category_input.value or "")
+	local priority = tonumber(self._priority_input and self._priority_input.value or "") or 0
 	local ok_snapshot = self.editor:level_save()
 
 	if name == "" then
@@ -292,10 +276,13 @@ function EditorExportView:_do_export()
 		by = author ~= "" and author or "匿名",
 		version = version ~= "" and version or "1.0",
 		desc = desc or "",
+		url = url ~= "" and url or "",
+		category = category ~= "" and category or "level",
+		game_version = {KR_GAME},
 		level_idx = self.level_idx,
 		level_name = level_name,
 		enabled = true,
-		priority = 0
+		priority = priority
 	}
 
 	local abs_base = KR_FULLPATH_BASE .. "/" .. KR_PATH_GAME .. "/data"
@@ -311,9 +298,6 @@ function EditorExportView:_do_export()
 	end
 	local has_heroic = self:_copy_into_plugin("game_editor/data/waves/" .. level_name .. "_waves_heroic.lua", abs_base .. "/waves/" .. level_name .. "_waves_heroic.lua", waves_dir .. "/" .. level_name .. "_waves_heroic.lua")
 	local has_iron = self:_copy_into_plugin("game_editor/data/waves/" .. level_name .. "_waves_iron.lua", abs_base .. "/waves/" .. level_name .. "_waves_iron.lua", waves_dir .. "/" .. level_name .. "_waves_iron.lua")
-	cfg.has_campaign = has_campaign
-	cfg.has_heroic = has_heroic
-	cfg.has_iron = has_iron
 
 	local resources = self.editor.store.level and self.editor.store.level.data and self.editor.store.level.data.custom_resources or {}
 

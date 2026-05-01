@@ -33,49 +33,6 @@ local function replace_locale(list, locale)
 	return out
 end
 
-local function resolve_custom_level_resources(store, args)
-	local data_resources = store.level and store.level.data and store.level.data.custom_resources or {}
-
-	return {
-		background = args.custom_map_bg_image and {
-			path = args.custom_map_bg_image,
-			sprite = args.custom_map_bg_sprite
-		} or data_resources.background,
-		battle_prep_music = args.custom_map_battle_prep_music and {
-			path = args.custom_map_battle_prep_music
-		} or data_resources.battle_prep_music,
-		battle_music = args.custom_map_battle_music and {
-			path = args.custom_map_battle_music
-		} or data_resources.battle_music
-	}
-end
-
-local function apply_custom_level_resources(store, args)
-	local resources = resolve_custom_level_resources(store, args)
-	local custom_id_prefix = args.custom_map_entry and "custom_map" or "custom_editor"
-
-	if resources.background and resources.background.path and resources.background.sprite then
-		local ok_img = GEU.register_runtime_image(resources.background.path, resources.background.sprite, "game")
-		if not ok_img then
-			log.error("failed to load custom bg image: %s", tostring(resources.background.path))
-		end
-	end
-
-	if resources.battle_prep_music and resources.battle_prep_music.path then
-		local sound_id = resources.battle_prep_music.sound_id or string.format("%s_%s_battle_prep", custom_id_prefix, args.custom_map_entry or store.level_name)
-		if GEU.register_runtime_music(resources.battle_prep_music.path, sound_id) then
-			store.custom_music.battle_prep = sound_id
-		end
-	end
-
-	if resources.battle_music and resources.battle_music.path then
-		local sound_id = resources.battle_music.sound_id or string.format("%s_%s_battle", custom_id_prefix, args.custom_map_entry or store.level_name)
-		if GEU.register_runtime_music(resources.battle_music.path, sound_id) then
-			store.custom_music.battle = sound_id
-		end
-	end
-end
-
 director = {}
 director.item_props = director_data.item_props
 
@@ -479,22 +436,13 @@ function director:queue_load_item_named(name)
 
 		game.store = {}
 		game.store.level_idx = args.level_idx
-		game.store.level_name = args.custom_map_level_name or ("level" .. string.format("%02i", args.level_idx))
+		game.store.level_name = "level" .. string.format("%02i", args.level_idx)
 		game.store.level_mode = args.level_mode
 		game.store.level_difficulty = args.level_difficulty
 		game.store.screen_scale = self:get_texture_scale("game", REF_H)
 		game.store.texture_size = self.params.texture_size
-		game.store.custom_map_entry = args.custom_map_entry
-		game.store.custom_music = {}
-		_G.CUSTOM_MAP_ROOT = args.custom_map_root
-		if args.custom_map_return_to == "custom_map" then
-			game.store.custom_game_outcome = {
-				next_item_name = "custom_map"
-			}
-		end
 		game.store.level = LU.load_level(game.store, game.store.level_name)
 		game.store.config = storage:load_config()
-		apply_custom_level_resources(game.store, args)
 
 		if game.store.config.endless then
 			game.store.level_mode_override = GAME_MODE_ENDLESS
@@ -551,7 +499,6 @@ function director:queue_load_item_named(name)
 			item.item_name = "comics"
 			item.required_textures = {"comic_" .. comic_idx}
 			item.level_idx = game.store.level_idx
-			item.custom_music_battle_prep = game.store.custom_music and game.store.custom_music.battle_prep
 			item.comic_data = love.filesystem.read(KR_PATH_GAME_TARGET .. string.format("/data/comics/%02i.csv", comic_idx))
 
 			self:load_texture_groups(replace_locale(item.required_textures), self.params.texture_size, item.ref_res, true, "comic")

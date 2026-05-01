@@ -53,7 +53,25 @@ end
 local function generate_wave(config_wave)
 	-- 1. 根据金币总量，随机地生成一个数量列表，每个数量对应一个敌人类型
 	local gold = config_wave.gold
-	local enemies = config_wave.enemies
+	local enemies = {}
+	local entities = E.entities or {}
+	for _, raw_name in ipairs(config_wave.enemies or {}) do
+		if type(raw_name) == "string" and raw_name ~= "" then
+			local name = raw_name
+			if not entities[name] then
+				local prefixed = "enemy_" .. raw_name
+				if entities[prefixed] then
+					name = prefixed
+				end
+			end
+			if entities[name] then
+				enemies[#enemies + 1] = name
+			end
+		end
+	end
+	if #enemies == 0 then
+		enemies = {"enemy_goblin"}
+	end
 	local enemy_count = #enemies
 
 	if enemy_count == 0 or gold == 0 then
@@ -76,7 +94,7 @@ local function generate_wave(config_wave)
 	local not_free_enemy_count = 0
 	for i = 1, enemy_count do
 		local e = E:get_template(enemies[i])
-		if e.enemy.gold > 0 then
+		if e and e.enemy and e.enemy.gold > 0 then
 			not_free_enemy_count = not_free_enemy_count + 1
 		end
 	end
@@ -89,14 +107,14 @@ local function generate_wave(config_wave)
 	else
 		for i = 1, enemy_count do
 			local e = E:get_template(enemies[i])
-			if e.enemy.gold > 0 then
+			if e and e.enemy and e.enemy.gold > 0 then
 				counts[i] = counts[i] + math.ceil(golds[i] / e.enemy.gold)
 			else
 				counts[i] = math.random(0, math.ceil(gold / 10))
 				-- 把它的金币分配平均分给所有其它敌人
 				for j = 1, enemy_count do
 					local e2 = E:get_template(enemies[j])
-					if e2.enemy.gold > 0 then
+					if e2 and e2.enemy and e2.enemy.gold > 0 then
 						counts[j] = counts[j] + math.ceil(golds[i] / not_free_enemy_count / e2.enemy.gold)
 					end
 				end

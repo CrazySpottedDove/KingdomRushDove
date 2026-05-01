@@ -6123,19 +6123,20 @@ function OptionsView:initialize(sw, sh)
 	self.back:add_child(fps_button)
 
 	if not IS_ANDROID then
-		button_height = button_height + 100
-		local custom_map_button = GGOptionsButton:new("自定义地图")
-		custom_map_button:set_anchor_to_center()
-		custom_map_button.pos.x = self.back.size.x + 75
-		custom_map_button.pos.y = button_height
-		function custom_map_button.on_click()
-			S:queue("GUIButtonCommon")
-			screen_map.option_panel:hide()
-			screen_map.done_callback({
-				next_item_name = "custom_map"
-			})
-		end
-		self.back:add_child(custom_map_button)
+		-- 功能过于不完善，暂不开放
+		-- button_height = button_height + 100
+		-- local custom_map_button = GGOptionsButton:new("自定义地图")
+		-- custom_map_button:set_anchor_to_center()
+		-- custom_map_button.pos.x = self.back.size.x + 75
+		-- custom_map_button.pos.y = button_height
+		-- function custom_map_button.on_click()
+		-- 	S:queue("GUIButtonCommon")
+		-- 	screen_map.option_panel:hide()
+		-- 	screen_map.done_callback({
+		-- 		next_item_name = "custom_map"
+		-- 	})
+		-- end
+		-- self.back:add_child(custom_map_button)
 
 		button_height = button_height + 100
 		local editor_button = GGOptionsButton:new("地图编辑器")

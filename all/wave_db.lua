@@ -678,16 +678,6 @@ function wave_db:get_next_cmd(wave_name)
 	return next_cmd, next_idx
 end
 
-local function resolve_wave_sources(level_name, suffix)
-	if _G.CUSTOM_MAP_ROOT then
-		local base = string.format("%s/data/waves/%s_waves_%s", _G.CUSTOM_MAP_ROOT, level_name, suffix)
-		return {base}
-	end
-	local editor_base = string.format("game_editor/data/waves/%s_waves_%s", level_name, suffix)
-	local game_base = string.format("%s/data/waves/%s_waves_%s", KR_PATH_GAME, level_name, suffix)
-	return {editor_base, game_base}
-end
-
 function wave_db:load_tsv(level_name, game_mode, wave_ss_data)
 	self.parse_errors = nil
 
@@ -697,24 +687,22 @@ function wave_db:load_tsv(level_name, game_mode, wave_ss_data)
 		rows = tsv.parse_tsv(wave_ss_data)
 	else
 		local suffix = gms[game_mode]
-		local selected_wf
-		for _, base in ipairs(resolve_wave_sources(level_name, suffix)) do
-			local wf = string.format("%s.tsv", base)
-			if is_file(wf) then
-				selected_wf = wf
-				break
-			end
-		end
-		if not selected_wf then
-			log.info("wave file in tsv format not found for level:%s mode:%s", level_name, suffix)
+		local suffix = gms[game_mode]
+		local wn = string.format("%s/data/waves/%s_waves_%s", KR_PATH_GAME, level_name, suffix)
+		local wf = string.format("%s.tsv", wn)
+
+		if not is_file(wf) then
+			log.info("wave file in tsv format not found: %s", wf)
+
 			return
 		end
 
-		log.debug("Loading %s", selected_wf)
-		rows = tsv.load(selected_wf)
+		log.debug("Loading %s", wn)
+
+		rows = tsv.load(wf)
 
 		if not rows or #rows == 0 then
-			log_e("Failed to load %s", selected_wf)
+			log_e("Failed to load %s", wf)
 
 			return
 		end
@@ -880,61 +868,32 @@ function wave_db:load_lua(level_name, game_mode, endless)
 	self.is_endless = endless
 
 	local suffix = gms[game_mode]
-	local wn
-	local wf
-	for _, base in ipairs(resolve_wave_sources(level_name, suffix)) do
-		local candidate = string.format("%s.lua", base)
-		if is_file(candidate) then
-			wn = base
-			wf = candidate
-			break
-		end
-	end
-	if not wf then
-		log.error("wave file not found for level:%s mode:%s", level_name, suffix)
+
+	local filename = string.format("data/waves/%s_waves_%s.lua", level_name, suffix)
+	local f, err = love.filesystem.loadWithPreference(filename, {"game_editor", KR_PATH_GAME})
+	if not f then
+		log.error("No wave file found for level %s and game mode %s. Tried to load %s. Error: %s", level_name, game_mode, filename, err)
 		return
 	end
 
-	log.debug("Loading %s", wn)
-	local ok, wchunk = pcall(FS.load, wf)
-	if not ok then
-		log.error("Failed to load %s: error: %s", wf, wchunk)
+	if err then
+		log.error("Failed to load wave file %s: %s", filename, err)
 		return
 	end
 
-	local ok, wtable = pcall(wchunk)
-
-	if not ok then
-		log.error("Failed to eval chunk for %s: error: %s", wf, wtable)
-
-		return
-	end
+	local wtable = f()
 
 	wave_db.db = wtable
 
-	local wen = string.format("%s_extra", wn)
-	local wef = string.format("%s.lua", wen)
-
-	if is_file(wef) then
-		log.info("Found extra waves: %s", wef)
-
-		local ok, wchunk = pcall(FS.load, wef)
-
-		if not ok then
-			log.error("Failed to load %s: error: %s", wef, wchunk)
-
-			return
+	local extra_filename = string.format("data/waves/%s_waves_%s_extra.lua", level_name, suffix)
+	f, err = love.filesystem.loadWithPreference(extra_filename, {"game_editor", KR_PATH_GAME})
+	if f then
+		if err then
+			log.error("Failed to load extra wave file %s: %s", extra_filename, err)
+		else
+			local extra_wtable = f()
+			self:add_waves_to_groups(extra_wtable)
 		end
-
-		local ok, extraw = pcall(wchunk)
-
-		if not ok then
-			log.error("Failed to eval extra waves chunk for %s: error: %s", wef, extraw)
-
-			return
-		end
-
-		self:add_waves_to_groups(extraw)
 	end
 
 	if endless then

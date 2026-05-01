@@ -226,9 +226,7 @@ function screen_comics:init(w, h, done_callback)
 		end)
 	end
 
-	if self.custom_music_battle_prep then
-		S:queue(self.custom_music_battle_prep)
-	elseif self.level_idx then
+	if self.level_idx then
 		S:queue(string.format("MusicBattlePrep_%02d", self.level_idx))
 	end
 end

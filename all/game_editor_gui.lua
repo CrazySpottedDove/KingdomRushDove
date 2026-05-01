@@ -558,24 +558,25 @@ function gui:add_extension_tools_buttons()
 	add_btn("tools_wave_preview", "出怪预览", function()
 		self:show_wave_editor()
 	end)
-	add_btn("tools_import_bg", "导入背景图", function()
-		local next_mode = self.editor.drop_import_mode == "background" and nil or "background"
-		self.editor:set_drop_import_mode(next_mode)
-		self:show_save_notification(next_mode and "已进入背景图拖拽模式，请拖入 PNG 文件" or "已取消背景图拖拽模式", next_mode ~= nil)
-	end)
-	add_btn("tools_import_battle_prep_music", "导入备战音乐", function()
-		local next_mode = self.editor.drop_import_mode == "battle_prep_music" and nil or "battle_prep_music"
-		self.editor:set_drop_import_mode(next_mode)
-		self:show_save_notification(next_mode and "已进入备战音乐拖拽模式，请拖入 OGG / MP3 / WAV" or "已取消备战音乐拖拽模式", next_mode ~= nil)
-	end)
-	add_btn("tools_import_battle_music", "导入战斗音乐", function()
-		local next_mode = self.editor.drop_import_mode == "battle_music" and nil or "battle_music"
-		self.editor:set_drop_import_mode(next_mode)
-		self:show_save_notification(next_mode and "已进入战斗音乐拖拽模式，请拖入 OGG / MP3 / WAV" or "已取消战斗音乐拖拽模式", next_mode ~= nil)
-	end)
-	add_btn("tools_export_plugin", "导出插件", function()
-		self:show_export_view()
-	end)
+	-- TODO: 确认效果，审查逻辑
+	-- add_btn("tools_import_bg", "导入背景图", function()
+	-- 	local next_mode = self.editor.drop_import_mode == "background" and nil or "background"
+	-- 	self.editor:set_drop_import_mode(next_mode)
+	-- 	self:show_save_notification(next_mode and "已进入背景图拖拽模式，请拖入 PNG 文件" or "已取消背景图拖拽模式", next_mode ~= nil)
+	-- end)
+	-- add_btn("tools_import_battle_prep_music", "导入备战音乐", function()
+	-- 	local next_mode = self.editor.drop_import_mode == "battle_prep_music" and nil or "battle_prep_music"
+	-- 	self.editor:set_drop_import_mode(next_mode)
+	-- 	self:show_save_notification(next_mode and "已进入备战音乐拖拽模式，请拖入 OGG / MP3 / WAV" or "已取消备战音乐拖拽模式", next_mode ~= nil)
+	-- end)
+	-- add_btn("tools_import_battle_music", "导入战斗音乐", function()
+	-- 	local next_mode = self.editor.drop_import_mode == "battle_music" and nil or "battle_music"
+	-- 	self.editor:set_drop_import_mode(next_mode)
+	-- 	self:show_save_notification(next_mode and "已进入战斗音乐拖拽模式，请拖入 OGG / MP3 / WAV" or "已取消战斗音乐拖拽模式", next_mode ~= nil)
+	-- end)
+	-- add_btn("tools_export_plugin", "导出插件", function()
+	-- self:show_export_view()
+	-- end)
 	layout:update_layout()
 	self:update_drop_import_buttons()
 end

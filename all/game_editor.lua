@@ -213,6 +213,7 @@ local CUSTOM_IMPORT_BATTLE = "battle_music"
 local CUSTOM_IMPORT_BATTLE_PREP = "battle_prep_music"
 
 local _texture_group_lookup = {}
+local _animation_group_lookup = {}
 local _sound_group_lookup = nil
 
 local function ensure_custom_asset_dirs()
@@ -322,11 +323,44 @@ local function sound_group_lookup()
 	return lookup
 end
 
-local function append_unique_sorted(existing_list, derived_map)
-	for _, existing in ipairs(existing_list or {}) do
-		derived_map[existing] = true
+local function animation_group_lookup(texture_lookup)
+	if _animation_group_lookup[texture_lookup] then
+		return _animation_group_lookup[texture_lookup]
 	end
 
+	A:load()
+
+	local lookup = {}
+
+	for animation_name, animation in pairs(A.db or {}) do
+		local frames = animation
+
+		if not frames[1] and animation.prefix then
+			frames = A.extract_frame_from(animation)
+		end
+
+		if frames and frames[2] then
+			local groups = {}
+
+			for _, frame_name in ipairs(frames[2]) do
+				local group = texture_lookup[frame_name]
+				if group then
+					groups[group] = true
+				end
+			end
+
+			if next(groups) then
+				lookup[animation_name] = groups
+			end
+		end
+	end
+
+	_animation_group_lookup[texture_lookup] = lookup
+
+	return lookup
+end
+
+local function sorted_keys(derived_map)
 	local out = {}
 	for value in pairs(derived_map) do
 		out[#out + 1] = value
@@ -407,6 +441,13 @@ local function collect_resource_refs(value, ctx, visited)
 			end
 		end
 
+		local animation_groups = ctx.animation_lookup[value]
+		if animation_groups then
+			for group_name in pairs(animation_groups) do
+				ctx.textures[group_name] = true
+			end
+		end
+
 		return
 	elseif tv ~= "table" then
 		return
@@ -428,6 +469,21 @@ end
 
 local function gather_wave_enemy_templates(wave_data)
 	local names = {}
+	E:ensure_loaded()
+	local entities = E.entities or {}
+	local function add_enemy_name(name)
+		if type(name) ~= "string" or name == "" then
+			return
+		end
+		if entities[name] then
+			names[name] = true
+			return
+		end
+		local prefixed = "enemy_" .. name
+		if entities[prefixed] then
+			names[prefixed] = true
+		end
+	end
 
 	if type(wave_data) ~= "table" or type(wave_data.groups) ~= "table" then
 		return names
@@ -436,10 +492,18 @@ local function gather_wave_enemy_templates(wave_data)
 	for _, group in ipairs(wave_data.groups) do
 		if type(group) == "table" and type(group.waves) == "table" then
 			for _, wave in ipairs(group.waves) do
-				if type(wave) == "table" and type(wave.enemies) == "table" then
-					for _, enemy_name in ipairs(wave.enemies) do
-						if type(enemy_name) == "string" then
-							names[enemy_name] = true
+				if type(wave) == "table" then
+					if type(wave.enemies) == "table" then
+						for _, enemy_name in ipairs(wave.enemies) do
+							add_enemy_name(enemy_name)
+						end
+					end
+					if type(wave.spawns) == "table" then
+						for _, spawn in ipairs(wave.spawns) do
+							if type(spawn) == "table" then
+								add_enemy_name(spawn.creep)
+								add_enemy_name(spawn.creep_aux)
+							end
 						end
 					end
 				end
@@ -553,11 +617,13 @@ function editor:refresh_required_assets()
 	local exo_map = {}
 	local ctx = {
 		texture_lookup = texture_group_lookup(director and director.params and director.params.texture_size),
+		animation_lookup = nil,
 		sound_lookup = sound_group_lookup(),
 		textures = texture_map,
 		sounds = sound_map,
 		exos = exo_map
 	}
+	ctx.animation_lookup = animation_group_lookup(ctx.texture_lookup)
 
 	for _, e in pairs(self.store.entities or {}) do
 		collect_resource_refs(e, ctx, {})
@@ -571,9 +637,9 @@ function editor:refresh_required_assets()
 		end
 	end
 
-	data.required_textures = append_unique_sorted(data.required_textures or {}, texture_map)
-	data.required_sounds = append_unique_sorted(data.required_sounds or {}, sound_map)
-	data.required_exoskeletons = append_unique_sorted(data.required_exoskeletons or {}, exo_map)
+	data.required_textures = sorted_keys(texture_map)
+	data.required_sounds = sorted_keys(sound_map)
+	data.required_exoskeletons = sorted_keys(exo_map)
 	level.required_textures = table.deepclone(data.required_textures)
 	level.required_sounds = table.deepclone(data.required_sounds)
 	level.required_exoskeletons = table.deepclone(data.required_exoskeletons)

@@ -1618,11 +1618,7 @@ function game_gui:victory()
 
 	self:deselect_all()
 
-	if self.game.store.custom_game_outcome then
-		self.game.done_callback(self.game.store.custom_game_outcome)
-	else
-		self.victoryview:show()
-	end
+	self.victoryview:show()
 end
 
 function game_gui:go_to_map()
