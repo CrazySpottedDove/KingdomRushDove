@@ -6862,7 +6862,9 @@ function scripts.enemy_headless_horseman.update(this, store)
 	this.health_bar.hidden = true
 	this.vis.bans = F_ALL
 
-	U.y_animation_play(this, "rise", this.pos.x > this.motion.forced_waypoint.x, store.tick_ts, 1)
+	if this.motion.forced_waypoint then
+		U.y_animation_play(this, "rise", this.pos.x > this.motion.forced_waypoint.x, store.tick_ts, 1)
+	end
 
 	while SU.y_enemy_walk_step(store, this) do
 	-- block empty

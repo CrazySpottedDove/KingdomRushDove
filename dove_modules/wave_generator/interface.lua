@@ -175,3 +175,4 @@ function interface.generate_group(config_group)
 	}
 end
 
+return interface
