@@ -790,6 +790,22 @@ local function auto_disable_crashing_mod(traceback)
 	return mod_dir, true
 end
 
+local function disabled_all_mods()
+	-- 只要把模组管理器的总开关关闭即可
+	local cfg_path = "plugins/mod_main_config.lua"
+	if not love.filesystem.getInfo(cfg_path, "file") then
+		return false
+	end
+	local chunk, err = love.filesystem.load(cfg_path)
+	local ok, cfg = pcall(chunk)
+	if cfg.enabled == true then
+		cfg.enabled = false
+		storage:write_lua(cfg_path, cfg)
+		return true
+	end
+	return false
+end
+
 function love.errorhandler(msg)
 	local error_canvas = G.newCanvas(G.getWidth(), G.getHeight())
 	local last_canvas = G.getCanvas()
@@ -842,9 +858,17 @@ function love.errorhandler(msg)
 	if blamed_mod then
 		table.insert(tip, string.format("插件导致崩溃：%s\n", blamed_mod))
 	end
-	local disabled_mod_dir, disabled_ok = auto_disable_crashing_mod(stack_msg)
-	if disabled_mod_dir and disabled_ok then
-		table.insert(tip, string.format("已自动禁用崩溃插件：%s\n重启游戏后将跳过该插件。", disabled_mod_dir))
+
+	-- 某个没被定位的插件导致了游戏进都进不去，采用保守措施，把所有插件全都禁用
+	if not blamed_mod and not main.screen_map_entered then
+		if disabled_all_mods() then
+			table.insert(tip, "检测到未知插件导致崩溃，已自动禁用所有插件。\n重启游戏后将跳过所有插件。")
+		end
+	else
+		local disabled_mod_dir, disabled_ok = auto_disable_crashing_mod(stack_msg)
+		if disabled_mod_dir and disabled_ok then
+			table.insert(tip, string.format("已自动禁用崩溃插件：%s\n重启游戏后将跳过该插件。", disabled_mod_dir))
+		end
 	end
 
 	for l in string.gmatch(trace, "(.-)\n") do

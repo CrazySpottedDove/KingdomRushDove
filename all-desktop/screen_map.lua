@@ -665,6 +665,8 @@ function screen_map:init(w, h)
 	if self.user_data.difficulty == nil or DEBUG_SHOW_DIFFICULTY then
 		self.difficulty_view:show()
 	end
+
+	main.screen_map_entered = true
 -- perf.tmp_stop("screen_map_init")
 end
 
