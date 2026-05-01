@@ -11,6 +11,80 @@ function interface.config_default()
 	return table.deepclone(config_template)
 end
 
+function interface.validate_config(config)
+	if type(config) ~= "table" then
+		return false, "Config must be a table."
+	end
+
+	if type(config.groups) ~= "table" then
+		return false, "Groups must be a table."
+	end
+
+	if type(config.lives) ~= "number" or config.lives < 0 then
+		return false, "Lives must be a non-negative number."
+	end
+
+	if type(config.cash) ~= "number" or config.cash < 0 then
+		return false, "Gold must be a non-negative number."
+	end
+
+	for i, group in ipairs(config.groups) do
+		local valid, err = interface.validate_group(group)
+		if not valid then
+			return false, string.format("Group %d: %s", i, err)
+		end
+	end
+
+	return true
+end
+
+--- 检查 group 是否合法
+---@param group table
+---@return boolean
+function interface.validate_group(group)
+	if type(group) ~= "table" then
+		return false, "Config must be a table."
+	end
+
+	if type(group.interval) ~= "number" or group.interval < 0 then
+		return false, "Interval must not be a negative number."
+	end
+
+	if type(group.total_gold) ~= "number" or group.total_gold < 0 then
+		return false, "Total gold must be a non-negative number."
+	end
+
+	if type(group.waves) ~= "table" then
+		return false, "Waves must be a table."
+	end
+
+	for i, wave in ipairs(group.waves) do
+		if type(wave.delay) ~= "number" or wave.delay < 0 then
+			return false, string.format("Wave %d: Delay must be a non-negative number.", i)
+		end
+
+		if type(wave.rest) ~= "number" or wave.rest < 0 then
+			return false, string.format("Wave %d: Rest must be a non-negative number.", i)
+		end
+
+		if type(wave.path_index) ~= "number" or wave.path_index < 1 then
+			return false, string.format("Wave %d: Path index must be a positive number.", i)
+		end
+
+		if type(wave.enemies) ~= "table" then
+			return false, string.format("Wave %d: Enemies must be a table.", i)
+		end
+
+		for j, enemy in ipairs(wave.enemies) do
+			if type(enemy) ~= "string" or enemy == "" then
+				return false, string.format("Wave %d: Enemy %d must be a non-empty string.", i, j)
+			end
+		end
+	end
+
+	return true
+end
+
 local function distribute_total_amount_to_groups_randomly(total, n, min_each)
 	min_each = tonumber(min_each) or 0
 	local result = {}

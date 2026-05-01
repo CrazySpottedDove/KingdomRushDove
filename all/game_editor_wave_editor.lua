@@ -4,16 +4,9 @@ require("gg_views_custom")
 local V = require("lib.klua.vector")
 local v = V.v
 local G = love.graphics
-local serpent = require("serpent")
 local E = require("entity_db")
 
 local WaveEditorView = class("WaveEditorView", PopUpView)
-
-local MODE_SUFFIX = {
-	[GAME_MODE_CAMPAIGN] = "campaign",
-	[GAME_MODE_HEROIC] = "heroic",
-	[GAME_MODE_IRON] = "iron"
-}
 
 local C = {
 	bg = {248, 248, 248, 255},
@@ -22,26 +15,6 @@ local C = {
 	border = {180, 180, 180, 255},
 	button = {226, 226, 226, 255}
 }
-
-local function mode_suffix_of(mode)
-	return MODE_SUFFIX[mode] or "campaign"
-end
-
-local function wave_rel_path(level_idx, level_mode)
-	return string.format("game_editor/data/waves/level%02d_waves_%s.lua", level_idx, mode_suffix_of(level_mode))
-end
-
-local function load_lua_table_with_pref(filename)
-	local f = love.filesystem.loadWithPreference(filename, {"game_editor", KR_PATH_GAME})
-	if not f then
-		return nil
-	end
-	local ok, data = pcall(f)
-	if ok and type(data) == "table" then
-		return data
-	end
-	return nil
-end
 
 local function enemy_display(template_name, tpl)
 	local key = tpl and tpl.info and tpl.info.i18n_key
@@ -83,7 +56,6 @@ function WaveEditorView:initialize(sw, sh, editor, opts)
 	self.editor = editor
 	self.level_idx = (opts and opts.level_idx) or (editor.store.level_idx or 1)
 	self.level_mode = (opts and opts.level_mode) or (editor.store.level_mode or GAME_MODE_CAMPAIGN)
-	self.wave_data = (opts and opts.wave_data) or self:_load_wave_data()
 	self._rows = {}
 	self._scroll = 0
 	self._enemy_suggest = nil
@@ -174,19 +146,19 @@ function WaveEditorView:_build_side_panel()
 	self.side:remove_children()
 	local y = 8
 
-	self.p_lives = self:_create_prop("生命值(lives)", self.wave_data.lives or 20)
+	self.p_lives = self:_create_prop("生命值(lives)", self.editor.wave_data.lives or 20)
 	self.p_lives.pos = v(8, y)
 	self.side:add_child(self.p_lives)
 	self.p_lives.on_change = function()
-		self.wave_data.lives = tonumber(self.p_lives.value) or self.wave_data.lives
+		self.editor.wave_data.lives = tonumber(self.p_lives.value) or self.editor.wave_data.lives
 	end
 	y = y + 46
 
-	self.p_cash = self:_create_prop("初始金币(cash)", self.wave_data.cash or 800)
+	self.p_cash = self:_create_prop("初始金币(cash)", self.editor.wave_data.cash or 800)
 	self.p_cash.pos = v(8, y)
 	self.side:add_child(self.p_cash)
 	self.p_cash.on_change = function()
-		self.wave_data.cash = tonumber(self.p_cash.value) or self.wave_data.cash
+		self.editor.wave_data.cash = tonumber(self.p_cash.value) or self.editor.wave_data.cash
 	end
 	y = y + 54
 
@@ -318,18 +290,6 @@ function WaveEditorView:_bind_spawn_prop_keys(prop)
 	end
 end
 
-function WaveEditorView:_load_wave_data()
-	local data = load_lua_table_with_pref(string.format("data/waves/level%02d_waves_%s.lua", self.level_idx, mode_suffix_of(self.level_mode)))
-	if type(data) == "table" and type(data.groups) == "table" then
-		return data
-	end
-	return {
-		lives = 20,
-		cash = 800,
-		groups = {}
-	}
-end
-
 function WaveEditorView:_rebuild_rows()
 	self.list_content:remove_children()
 	self._rows = {}
@@ -394,7 +354,7 @@ function WaveEditorView:_rebuild_rows()
 		hx = hx + c.w
 	end
 
-	for gi, group in ipairs(self.wave_data.groups or {}) do
+	for gi, group in ipairs(self.editor.wave_data.groups or {}) do
 		for wi, wave in ipairs(group.waves or {}) do
 			for si, spawn in ipairs(wave.spawns or {}) do
 				local is_selected = self._selected and self._selected.group == group and self._selected.wave == wave and self._selected.spawn == spawn
@@ -455,16 +415,10 @@ function WaveEditorView:_save_wave_data()
 		self._selected.spawn.interval = tonumber(self.p_spawn_interval.value) or self._selected.spawn.interval
 		self._selected.spawn.interval_next = tonumber(self.p_spawn_interval_next.value) or self._selected.spawn.interval_next
 	end
-	self.wave_data.lives = tonumber(self.p_lives.value) or self.wave_data.lives
-	self.wave_data.cash = tonumber(self.p_cash.value) or self.wave_data.cash
-	local rel = wave_rel_path(self.level_idx, self.level_mode)
-	love.filesystem.createDirectory("game_editor/data/waves")
-	local out = "return " .. serpent.block(self.wave_data, {
-		indent = "    ",
-		comment = false,
-		sortkeys = false
-	}) .. "\n"
-	if love.filesystem.write(rel, out) then
+	self.editor.wave_data.lives = tonumber(self.p_lives.value) or self.editor.wave_data.lives
+	self.editor.wave_data.cash = tonumber(self.p_cash.value) or self.editor.wave_data.cash
+
+	if self.editor:save_wave_assets() then
 		self.editor.gui:show_save_notification("出怪文件已保存", true)
 	else
 		self.editor.gui:show_save_notification("出怪文件保存失败", false)

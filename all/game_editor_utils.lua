@@ -194,8 +194,8 @@ function GEU.find_min_editor_index()
 	local files = love.filesystem.getDirectoryItems(LEVELS_DIR)
 	local min_idx = 10000
 	for _, f in ipairs(files) do
-		-- 匹配 level%04d.lua（不匹配 _data, _grid, _paths 后缀）
-		local idx = tonumber(f:match("^level(%d+)%.lua$"))
+		-- 匹配 level%02d_paths.lua（不匹配 _data, _grid, _paths 后缀）
+		local idx = f:match("^level(%d%d%d%d)_paths%.lua$")
 		if idx then
 			if idx < min_idx and idx > 9000 then
 				min_idx = idx

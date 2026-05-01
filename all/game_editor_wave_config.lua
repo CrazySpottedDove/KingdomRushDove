@@ -5,17 +5,10 @@ require("lib.klua.table")
 local V = require("lib.klua.vector")
 local v = V.v
 local G = love.graphics
-local serpent = require("serpent")
 local interface = require("dove_modules.wave_generator.interface")
 local E = require("entity_db")
 
 local WaveConfigView = class("WaveConfigView", PopUpView)
-
-local MODE_SUFFIX = {
-	[GAME_MODE_CAMPAIGN] = "campaign",
-	[GAME_MODE_HEROIC] = "heroic",
-	[GAME_MODE_IRON] = "iron"
-}
 
 local C = {
 	bg = {248, 248, 248, 255},
@@ -24,30 +17,6 @@ local C = {
 	border = {180, 180, 180, 255},
 	button = {225, 225, 225, 255}
 }
-
-local function mode_suffix_of(mode)
-	return MODE_SUFFIX[mode]
-end
-
-local function config_rel_path(level_idx, level_mode)
-	return string.format("game_editor/data/waveconfigs/level%02d_waves_%s_config.lua", level_idx, mode_suffix_of(level_mode))
-end
-
-local function wave_rel_path(level_idx, level_mode)
-	return string.format("game_editor/data/waves/level%02d_waves_%s.lua", level_idx, mode_suffix_of(level_mode))
-end
-
-local function load_lua_table_with_pref(filename)
-	local f = love.filesystem.loadWithPreference(filename, {"game_editor", KR_PATH_GAME})
-	if not f then
-		return nil
-	end
-	local ok, data = pcall(f)
-	if ok and type(data) == "table" then
-		return data
-	end
-	return nil
-end
 
 local function enemy_name_label(template_name, tpl)
 	local i18n_key = tpl and tpl.info and tpl.info.i18n_key
@@ -96,9 +65,10 @@ function WaveConfigView:initialize(sw, sh, editor)
 	self.level_idx = editor.store.level_idx
 	self.level_mode = editor.store.level_mode
 	self.level_name = editor.store.level_name
-	self.config = self:_load_config()
+	if type(editor.wave_config) ~= "table" or type(editor.wave_config.groups) ~= "table" then
+		editor.wave_config = interface.config_default()
+	end
 	self._scroll = 0
-	self._generated_waves = nil
 	self._enemy_rows = nil
 	self._active_enemy_prop = nil
 
@@ -228,6 +198,13 @@ function WaveConfigView:initialize(sw, sh, editor)
 	panel:add_child(glossary_btn)
 end
 
+function WaveConfigView:_editor_wave_config()
+	if type(self.editor.wave_config) ~= "table" or type(self.editor.wave_config.groups) ~= "table" then
+		self.editor.wave_config = interface.config_default()
+	end
+	return self.editor.wave_config
+end
+
 function WaveConfigView:_bind_enemy_prop_keys(prop)
 	local owner = self
 	function prop.on_keypressed(this, key)
@@ -262,21 +239,22 @@ function WaveConfigView:_build_form()
 	self._fields = {
 		groups = {}
 	}
+	local config = self:_editor_wave_config()
 
 	local y = 8
 
-	local lives = self:_create_prop("生命值(lives)", self.config.lives or 20)
+	local lives = self:_create_prop("生命值(lives)", config.lives or 20)
 	lives.pos = v(10, y)
 	self._content:add_child(lives)
 	self._fields.lives = lives
 
-	local cash = self:_create_prop("初始金币(cash)", self.config.cash or 800)
+	local cash = self:_create_prop("初始金币(cash)", config.cash or 800)
 	cash.pos = v(220, y)
 	self._content:add_child(cash)
 	self._fields.cash = cash
 	y = y + 46
 
-	for gi, group in ipairs(self.config.groups or {}) do
+	for gi, group in ipairs(config.groups or {}) do
 		local sep = KLabel:new(V.v(self._content_view.size.x - 20, 24))
 		sep.pos = v(10, y)
 		sep.text = string.format("第 %d 波", gi)
@@ -410,15 +388,6 @@ function WaveConfigView:_build_form()
 	self:_refresh_scrollbar()
 end
 
-function WaveConfigView:_load_config()
-	local cfg = load_lua_table_with_pref(string.format("data/waveconfigs/level%02d_waves_%s_config.lua", self.level_idx, mode_suffix_of(self.level_mode)))
-	if type(cfg) == "table" and type(cfg.groups) == "table" then
-		return cfg
-	end
-
-	return interface.config_default()
-end
-
 function WaveConfigView:_read_config_from_form()
 	local cfg = {
 		lives = tonumber(self._fields.lives.value) or 20,
@@ -457,14 +426,8 @@ end
 
 function WaveConfigView:_save_config()
 	local cfg = self:_read_config_from_form()
-	local rel = config_rel_path(self.level_idx, self.level_mode)
-	love.filesystem.createDirectory("game_editor/data/waveconfigs")
-	local out = "return " .. serpent.block(cfg, {
-		indent = "    ",
-		comment = false,
-		sortkeys = false
-	}) .. "\n"
-	if love.filesystem.write(rel, out) then
+	self.editor.wave_config = cfg
+	if self.editor:save_wave_assets() then
 		self.editor.gui:show_save_notification("出怪配置已保存", true)
 	else
 		self.editor.gui:show_save_notification("出怪配置保存失败", false)
@@ -473,43 +436,16 @@ end
 
 function WaveConfigView:_generate_waves()
 	local cfg = self:_read_config_from_form()
-	self.config = cfg
-	self._generated_waves = {
-		lives = cfg.lives,
-		cash = cfg.cash,
-		groups = {}
-	}
-	for _, group in ipairs(cfg.groups) do
-		self._generated_waves.groups[#self._generated_waves.groups + 1] = interface.generate_group(group)
-	end
-	self.editor.wave_data = table.deepclone(self._generated_waves)
-	self.editor:refresh_required_assets()
+	self.editor.wave_config = cfg
+	self.editor.wave_data = self.editor:generate_wave_data_from_config(self.editor.wave_config)
 	self.editor.gui:show_save_notification("生成出怪成功", true)
 end
 
 function WaveConfigView:_save_waves()
 	local cfg = self:_read_config_from_form()
-	self.config = cfg
-	local result = {
-		lives = cfg.lives,
-		cash = cfg.cash,
-		groups = {}
-	}
-
-	for _, group in ipairs(cfg.groups) do
-		result.groups[#result.groups + 1] = interface.generate_group(group)
-	end
-	self._generated_waves = result
-	local rel = wave_rel_path(self.level_idx, self.level_mode)
-	love.filesystem.createDirectory("game_editor/data/waves")
-	local ok = love.filesystem.write(rel, "return " .. serpent.block(result, {
-		indent = "    ",
-		comment = false,
-		sortkeys = false
-	}) .. "\n")
-	if ok then
-		self.editor.wave_data = table.deepclone(result)
-		self.editor:refresh_required_assets()
+	self.editor.wave_config = cfg
+	self.editor.wave_data = self.editor:generate_wave_data_from_config(self.editor.wave_config)
+	if self.editor:save_wave_assets() then
 		self.editor.gui:show_save_notification("出怪文件已保存", true)
 	else
 		self.editor.gui:show_save_notification("出怪文件保存失败", false)
@@ -519,17 +455,9 @@ end
 function WaveConfigView:_show_preview()
 	local WaveEditorView = require("game_editor_wave_editor")
 	local cfg = self:_read_config_from_form()
-	local source = {
-		lives = cfg.lives,
-		cash = cfg.cash,
-		groups = {}
-	}
-	for _, group in ipairs(cfg.groups) do
-		source.groups[#source.groups + 1] = interface.generate_group(group)
-	end
-	self._generated_waves = table.deepclone(source)
+	self.editor.wave_config = cfg
+	self.editor.wave_data = self.editor:generate_wave_data_from_config(self.editor.wave_config)
 	local preview = WaveEditorView:new(self.editor.gui.sw, self.editor.gui.sh, self.editor, {
-		wave_data = table.deepclone(source),
 		level_idx = self.level_idx,
 		level_mode = self.level_mode
 	})
@@ -587,22 +515,25 @@ function WaveConfigView:_append_group()
 			enemies = {"enemy_goblin"}
 		}}
 	}
-	self.config = cfg
+	self.editor.wave_config = cfg
 	self:_build_form()
 end
 
 function WaveConfigView:_remove_group(gi)
-	if not self.config.groups or #self.config.groups <= 1 then
+	self.editor.wave_config = self:_read_config_from_form()
+	local config = self:_editor_wave_config()
+	if not config.groups or #config.groups <= 1 then
 		self.editor.gui:show_save_notification("至少保留 1 个波次", false)
 		return
 	end
-	table.remove(self.config.groups, gi)
+	table.remove(config.groups, gi)
 	self:_build_form()
 end
 
 function WaveConfigView:_append_wave(gi)
-	self.config = self:_read_config_from_form()
-	local group = self.config.groups[gi]
+	self.editor.wave_config = self:_read_config_from_form()
+	local config = self:_editor_wave_config()
+	local group = config.groups[gi]
 	group.waves[#group.waves + 1] = {
 		delay = 0,
 		rest = 5,
@@ -613,8 +544,9 @@ function WaveConfigView:_append_wave(gi)
 end
 
 function WaveConfigView:_remove_wave(gi, wi)
-	self.config = self:_read_config_from_form()
-	local group = self.config.groups[gi]
+	self.editor.wave_config = self:_read_config_from_form()
+	local config = self:_editor_wave_config()
+	local group = config.groups[gi]
 	if not group or #group.waves <= 1 then
 		self.editor.gui:show_save_notification("每个波至少保留 1 个子波", false)
 		return
@@ -624,8 +556,9 @@ function WaveConfigView:_remove_wave(gi, wi)
 end
 
 function WaveConfigView:_append_enemy(gi, wi)
-	self.config = self:_read_config_from_form()
-	local wave = self.config.groups[gi] and self.config.groups[gi].waves[wi]
+	self.editor.wave_config = self:_read_config_from_form()
+	local config = self:_editor_wave_config()
+	local wave = config.groups[gi] and config.groups[gi].waves[wi]
 	if not wave then
 		return
 	end
@@ -634,8 +567,9 @@ function WaveConfigView:_append_enemy(gi, wi)
 end
 
 function WaveConfigView:_remove_enemy(gi, wi, ei)
-	self.config = self:_read_config_from_form()
-	local wave = self.config.groups[gi] and self.config.groups[gi].waves[wi]
+	self.editor.wave_config = self:_read_config_from_form()
+	local config = self:_editor_wave_config()
+	local wave = config.groups[gi] and config.groups[gi].waves[wi]
 	if not wave or #wave.enemies <= 1 then
 		self.editor.gui:show_save_notification("每个子波至少保留 1 个敌人种类", false)
 		return

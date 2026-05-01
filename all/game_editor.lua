@@ -24,6 +24,7 @@ local GR = require("grid_db")
 local LU = require("level_utils")
 local GEU = require("game_editor_utils")
 local sys = require("systems")
+local W = require("wave_db")
 local wave_gen_interface = require("dove_modules.wave_generator.interface")
 
 simulation = require("simulation")
@@ -134,67 +135,29 @@ local function load_lua_table_with_pref(path)
 end
 
 local function sanitize_wave_config(raw)
-	local cfg = type(raw) == "table" and table.deepclone(raw) or wave_gen_interface.config_default()
-	if type(cfg.groups) ~= "table" then
-		cfg.groups = {}
+	local ok, err = wave_gen_interface.validate_config(raw)
+	if not ok then
+		log.error("Invalid wave config, using default config instead: %s", err)
+		return wave_gen_interface.config_default()
 	end
-	cfg.lives = tonumber(cfg.lives) or 20
-	cfg.cash = tonumber(cfg.cash) or 800
-	if #cfg.groups == 0 then
-		cfg.groups = wave_gen_interface.config_default().groups
-	end
-	for gi = #cfg.groups, 1, -1 do
-		local group = cfg.groups[gi]
-		if type(group) ~= "table" then
-			table.remove(cfg.groups, gi)
-		else
-			group.interval = tonumber(group.interval) or 30
-			group.total_gold = tonumber(group.total_gold) or 300
-			if type(group.waves) ~= "table" or #group.waves == 0 then
-				group.waves = {{
-					delay = 0,
-					rest = 5,
-					path_index = 1,
-					enemies = {"enemy_goblin"}
-				}}
-			end
-			for wi = #group.waves, 1, -1 do
-				local wave = group.waves[wi]
-				if type(wave) ~= "table" then
-					table.remove(group.waves, wi)
-				else
-					wave.delay = tonumber(wave.delay) or 0
-					wave.rest = tonumber(wave.rest) or 0
-					wave.path_index = tonumber(wave.path_index) or 1
-					if type(wave.enemies) ~= "table" or #wave.enemies == 0 then
-						wave.enemies = {"enemy_goblin"}
-					end
-				end
-			end
-		end
-	end
-	if #cfg.groups == 0 then
-		cfg.groups = wave_gen_interface.config_default().groups
-	end
-	return cfg
+	return raw
 end
 
 local function sanitize_wave_data(raw, fallback_cfg)
-	local data = type(raw) == "table" and table.deepclone(raw) or nil
+	local data = type(raw) == "table" and raw or nil
 	if not data or type(data.groups) ~= "table" then
-		local cfg = sanitize_wave_config(fallback_cfg)
 		data = {
-			lives = cfg.lives,
-			cash = cfg.cash,
+			lives = fallback_cfg.lives,
+			cash = fallback_cfg.cash,
 			groups = {}
 		}
-		for _, group in ipairs(cfg.groups) do
+		for _, group in ipairs(fallback_cfg.groups) do
 			data.groups[#data.groups + 1] = wave_gen_interface.generate_group(group)
 		end
 		return data
 	end
-	data.lives = tonumber(data.lives) or ((fallback_cfg and fallback_cfg.lives) or 20)
-	data.cash = tonumber(data.cash) or ((fallback_cfg and fallback_cfg.cash) or 800)
+	data.lives = tonumber(data.lives) or fallback_cfg.lives
+	data.cash = tonumber(data.cash) or fallback_cfg.cash
 	return data
 end
 
@@ -206,159 +169,159 @@ local function save_lua_table(path, data)
 	return storage:write_lua(path, data)
 end
 
-local CUSTOM_IMAGES_DIR = "game_editor/assets/images"
-local CUSTOM_SOUNDS_DIR = "game_editor/assets/sounds"
-local CUSTOM_IMPORT_BG = "background"
-local CUSTOM_IMPORT_BATTLE = "battle_music"
-local CUSTOM_IMPORT_BATTLE_PREP = "battle_prep_music"
+-- local CUSTOM_IMAGES_DIR = "game_editor/assets/images"
+-- local CUSTOM_SOUNDS_DIR = "game_editor/assets/sounds"
+-- local CUSTOM_IMPORT_BG = "background"
+-- local CUSTOM_IMPORT_BATTLE = "battle_music"
+-- local CUSTOM_IMPORT_BATTLE_PREP = "battle_prep_music"
 
-local _texture_group_lookup = {}
-local _animation_group_lookup = {}
-local _sound_group_lookup = nil
+-- local _texture_group_lookup = {}
+-- local _animation_group_lookup = {}
+-- local _sound_group_lookup = nil
 
-local function ensure_custom_asset_dirs()
-	love.filesystem.createDirectory("game_editor/assets")
-	love.filesystem.createDirectory(CUSTOM_IMAGES_DIR)
-	love.filesystem.createDirectory(CUSTOM_SOUNDS_DIR)
-end
+-- local function ensure_custom_asset_dirs()
+-- 	love.filesystem.createDirectory("game_editor/assets")
+-- 	love.filesystem.createDirectory(CUSTOM_IMAGES_DIR)
+-- 	love.filesystem.createDirectory(CUSTOM_SOUNDS_DIR)
+-- end
 
-local function sanitize_filename(name)
-	return (name or "asset"):gsub("[^%w%._%-]", "_")
-end
+-- local function sanitize_filename(name)
+-- 	return (name or "asset"):gsub("[^%w%._%-]", "_")
+-- end
 
-local function strip_extension(filename)
-	return filename and (filename:match("(.+)%.[^.]+$") or filename) or "asset"
-end
+-- local function strip_extension(filename)
+-- 	return filename and (filename:match("(.+)%.[^.]+$") or filename) or "asset"
+-- end
 
-local function custom_resource_table(level_data)
-	level_data.custom_resources = level_data.custom_resources or {}
-	return level_data.custom_resources
-end
+-- local function custom_resource_table(level_data)
+-- 	level_data.custom_resources = level_data.custom_resources or {}
+-- 	return level_data.custom_resources
+-- end
 
-local function custom_sound_id(level_name, kind)
-	return string.format("custom_%s_%s", level_name or "level", kind)
-end
+-- local function custom_sound_id(level_name, kind)
+-- 	return string.format("custom_%s_%s", level_name or "level", kind)
+-- end
 
-local function texture_group_lookup(texture_size)
-	local size = texture_size or TEXTURE_SIZE_ALIAS.fullhd
-	if _texture_group_lookup[size] then
-		return _texture_group_lookup[size]
-	end
+-- local function texture_group_lookup(texture_size)
+-- 	local size = texture_size or TEXTURE_SIZE_ALIAS.fullhd
+-- 	if _texture_group_lookup[size] then
+-- 		return _texture_group_lookup[size]
+-- 	end
 
-	local lookup = {}
-	local root = KR_PATH_ASSETS_GAME_TARGET .. "/images/" .. size
-	local ok, items = pcall(love.filesystem.getDirectoryItems, root)
+-- 	local lookup = {}
+-- 	local root = KR_PATH_ASSETS_GAME_TARGET .. "/images/" .. size
+-- 	local ok, items = pcall(love.filesystem.getDirectoryItems, root)
 
-	if ok and items then
-		local selected = {}
+-- 	if ok and items then
+-- 		local selected = {}
 
-		for _, item in ipairs(items) do
-			local group
+-- 		for _, item in ipairs(items) do
+-- 			local group
 
-			if item:match("%.luac$") then
-				group = item:gsub("%.luac$", "")
-				selected[group] = selected[group] or item
-			elseif item:match("%.aluac$") then
-				group = item:gsub("%.aluac$", "")
-				selected[group] = selected[group] or item
-			elseif item:match("%.lua$") then
-				group = item:gsub("%.lua$", "")
-				selected[group] = selected[group] or item
-			end
-		end
+-- 			if item:match("%.luac$") then
+-- 				group = item:gsub("%.luac$", "")
+-- 				selected[group] = selected[group] or item
+-- 			elseif item:match("%.aluac$") then
+-- 				group = item:gsub("%.aluac$", "")
+-- 				selected[group] = selected[group] or item
+-- 			elseif item:match("%.lua$") then
+-- 				group = item:gsub("%.lua$", "")
+-- 				selected[group] = selected[group] or item
+-- 			end
+-- 		end
 
-		for group, item in pairs(selected) do
-			local chunk = love.filesystem.load(root .. "/" .. item)
-			if chunk then
-				local ok_info, info = pcall(chunk)
-				if ok_info and type(info) == "table" then
-					if info.count and info.keys and info.values then
-						for i = 1, info.count do
-							local key = info.keys[i]
-							local value = info.values[i]
+-- 		for group, item in pairs(selected) do
+-- 			local chunk = love.filesystem.load(root .. "/" .. item)
+-- 			if chunk then
+-- 				local ok_info, info = pcall(chunk)
+-- 				if ok_info and type(info) == "table" then
+-- 					if info.count and info.keys and info.values then
+-- 						for i = 1, info.count do
+-- 							local key = info.keys[i]
+-- 							local value = info.values[i]
 
-							lookup[key] = group
-							if value and value[6] then
-								for _, alias in ipairs(value[6]) do
-									lookup[alias] = group
-								end
-							end
-						end
-					else
-						for key, value in pairs(info) do
-							lookup[key] = group
-							if value and value.alias then
-								for _, alias in ipairs(value.alias) do
-									lookup[alias] = group
-								end
-							end
-						end
-					end
-				end
-			end
-		end
-	end
+-- 							lookup[key] = group
+-- 							if value and value[6] then
+-- 								for _, alias in ipairs(value[6]) do
+-- 									lookup[alias] = group
+-- 								end
+-- 							end
+-- 						end
+-- 					else
+-- 						for key, value in pairs(info) do
+-- 							lookup[key] = group
+-- 							if value and value.alias then
+-- 								for _, alias in ipairs(value.alias) do
+-- 									lookup[alias] = group
+-- 								end
+-- 							end
+-- 						end
+-- 					end
+-- 				end
+-- 			end
+-- 		end
+-- 	end
 
-	_texture_group_lookup[size] = lookup
-	return lookup
-end
+-- 	_texture_group_lookup[size] = lookup
+-- 	return lookup
+-- end
 
-local function sound_group_lookup()
-	if _sound_group_lookup then
-		return _sound_group_lookup
-	end
+-- local function sound_group_lookup()
+-- 	if _sound_group_lookup then
+-- 		return _sound_group_lookup
+-- 	end
 
-	local lookup = {}
+-- 	local lookup = {}
 
-	for group_name, group in pairs(S.groups or {}) do
-		if group.sounds then
-			for _, sound_id in pairs(group.sounds) do
-				lookup[sound_id] = lookup[sound_id] or {}
-				lookup[sound_id][group_name] = true
-			end
-		end
-	end
+-- 	for group_name, group in pairs(S.groups or {}) do
+-- 		if group.sounds then
+-- 			for _, sound_id in pairs(group.sounds) do
+-- 				lookup[sound_id] = lookup[sound_id] or {}
+-- 				lookup[sound_id][group_name] = true
+-- 			end
+-- 		end
+-- 	end
 
-	_sound_group_lookup = lookup
-	return lookup
-end
+-- 	_sound_group_lookup = lookup
+-- 	return lookup
+-- end
 
-local function animation_group_lookup(texture_lookup)
-	if _animation_group_lookup[texture_lookup] then
-		return _animation_group_lookup[texture_lookup]
-	end
+-- local function animation_group_lookup(texture_lookup)
+-- 	if _animation_group_lookup[texture_lookup] then
+-- 		return _animation_group_lookup[texture_lookup]
+-- 	end
 
-	A:load()
+-- 	A:load()
 
-	local lookup = {}
+-- 	local lookup = {}
 
-	for animation_name, animation in pairs(A.db or {}) do
-		local frames = animation
+-- 	for animation_name, animation in pairs(A.db or {}) do
+-- 		local frames = animation
 
-		if not frames[1] and animation.prefix then
-			frames = A.extract_frame_from(animation)
-		end
+-- 		if not frames[1] and animation.prefix then
+-- 			frames = A.extract_frame_from(animation)
+-- 		end
 
-		if frames and frames[2] then
-			local groups = {}
+-- 		if frames and frames[2] then
+-- 			local groups = {}
 
-			for _, frame_name in ipairs(frames[2]) do
-				local group = texture_lookup[frame_name]
-				if group then
-					groups[group] = true
-				end
-			end
+-- 			for _, frame_name in ipairs(frames[2]) do
+-- 				local group = texture_lookup[frame_name]
+-- 				if group then
+-- 					groups[group] = true
+-- 				end
+-- 			end
 
-			if next(groups) then
-				lookup[animation_name] = groups
-			end
-		end
-	end
+-- 			if next(groups) then
+-- 				lookup[animation_name] = groups
+-- 			end
+-- 		end
+-- 	end
 
-	_animation_group_lookup[texture_lookup] = lookup
+-- 	_animation_group_lookup[texture_lookup] = lookup
 
-	return lookup
-end
+-- 	return lookup
+-- end
 
 local function sorted_keys(derived_map)
 	local out = {}
@@ -370,102 +333,102 @@ local function sorted_keys(derived_map)
 	return out
 end
 
-local function register_custom_image(rel_path, sprite_name, group_name)
-	if not rel_path or not sprite_name then
-		return false
-	end
+-- local function register_custom_image(rel_path, sprite_name, group_name)
+-- 	if not rel_path or not sprite_name then
+-- 		return false
+-- 	end
 
-	local ok_img, img_data = pcall(love.image.newImageData, rel_path)
-	if not ok_img or not img_data then
-		return false
-	end
+-- 	local ok_img, img_data = pcall(love.image.newImageData, rel_path)
+-- 	if not ok_img or not img_data then
+-- 		return false
+-- 	end
 
-	local img = G.newImage(img_data)
-	if not img then
-		return false
-	end
+-- 	local img = G.newImage(img_data)
+-- 	if not img then
+-- 		return false
+-- 	end
 
-	I:add_image(sprite_name, img, group_name or "game_editor")
+-- 	I:add_image(sprite_name, img, group_name or "game_editor")
 
-	return true, img
-end
+-- 	return true, img
+-- end
 
-local function register_custom_sound(rel_path, sound_id)
-	if not rel_path or not sound_id then
-		return false
-	end
+-- local function register_custom_sound(rel_path, sound_id)
+-- 	if not rel_path or not sound_id then
+-- 		return false
+-- 	end
 
-	local ok_src, src = pcall(love.audio.newSource, rel_path, "stream")
-	if not ok_src or not src then
-		return false
-	end
+-- 	local ok_src, src = pcall(love.audio.newSource, rel_path, "stream")
+-- 	if not ok_src or not src then
+-- 		return false
+-- 	end
 
-	local file_key = sound_id .. "__file"
-	S.sources[file_key] = {src}
-	S.source_uses[file_key] = 1
-	S.sounds[sound_id] = {
-		files = {
-			[1] = file_key
-		},
-		gain = 0.6,
-		loop = true,
-		source_group = "MUSIC",
-		stream = true
-	}
+-- 	local file_key = sound_id .. "__file"
+-- 	S.sources[file_key] = {src}
+-- 	S.source_uses[file_key] = 1
+-- 	S.sounds[sound_id] = {
+-- 		files = {
+-- 			[1] = file_key
+-- 		},
+-- 		gain = 0.6,
+-- 		loop = true,
+-- 		source_group = "MUSIC",
+-- 		stream = true
+-- 	}
 
-	if not S.sound_extras[sound_id] then
-		S:_precache_sound(sound_id, S.sounds[sound_id])
-	end
+-- 	if not S.sound_extras[sound_id] then
+-- 		S:_precache_sound(sound_id, S.sounds[sound_id])
+-- 	end
 
-	return true
-end
+-- 	return true
+-- end
 
-local function collect_resource_refs(value, ctx, visited)
-	local tv = type(value)
+-- local function collect_resource_refs(value, ctx, visited)
+-- 	local tv = type(value)
 
-	if tv == "string" then
-		local sprite_group = ctx.texture_lookup[value]
+-- 	if tv == "string" then
+-- 		local sprite_group = ctx.texture_lookup[value]
 
-		if not sprite_group and value:match("^[%w_%-]+$") then
-			sprite_group = ctx.texture_lookup[value .. "_0001"]
-		end
+-- 		if not sprite_group and value:match("^[%w_%-]+$") then
+-- 			sprite_group = ctx.texture_lookup[value .. "_0001"]
+-- 		end
 
-		if sprite_group and not sprite_group:match("^game_editor") then
-			ctx.textures[sprite_group] = true
-		end
+-- 		if sprite_group and not sprite_group:match("^game_editor") then
+-- 			ctx.textures[sprite_group] = true
+-- 		end
 
-		local sound_groups = ctx.sound_lookup[value]
-		if sound_groups then
-			for group_name in pairs(sound_groups) do
-				ctx.sounds[group_name] = true
-			end
-		end
+-- 		local sound_groups = ctx.sound_lookup[value]
+-- 		if sound_groups then
+-- 			for group_name in pairs(sound_groups) do
+-- 				ctx.sounds[group_name] = true
+-- 			end
+-- 		end
 
-		local animation_groups = ctx.animation_lookup[value]
-		if animation_groups then
-			for group_name in pairs(animation_groups) do
-				ctx.textures[group_name] = true
-			end
-		end
+-- 		local animation_groups = ctx.animation_lookup[value]
+-- 		if animation_groups then
+-- 			for group_name in pairs(animation_groups) do
+-- 				ctx.textures[group_name] = true
+-- 			end
+-- 		end
 
-		return
-	elseif tv ~= "table" then
-		return
-	end
+-- 		return
+-- 	elseif tv ~= "table" then
+-- 		return
+-- 	end
 
-	if visited[value] then
-		return
-	end
-	visited[value] = true
+-- 	if visited[value] then
+-- 		return
+-- 	end
+-- 	visited[value] = true
 
-	if value.exo and type(value.prefix) == "string" then
-		ctx.exos[value.prefix] = true
-	end
+-- 	if value.exo and type(value.prefix) == "string" then
+-- 		ctx.exos[value.prefix] = true
+-- 	end
 
-	for _, child in pairs(value) do
-		collect_resource_refs(child, ctx, visited)
-	end
-end
+-- 	for _, child in pairs(value) do
+-- 		collect_resource_refs(child, ctx, visited)
+-- 	end
+-- end
 
 local function gather_wave_enemy_templates(wave_data)
 	local names = {}
@@ -514,136 +477,137 @@ local function gather_wave_enemy_templates(wave_data)
 	return names
 end
 
-function editor:current_custom_music_ids()
-	local level_name = self.store and self.store.level_name or "level"
+-- function editor:current_custom_music_ids()
+-- 	local level_name = self.store and self.store.level_name or "level"
 
-	return {
-		[CUSTOM_IMPORT_BATTLE] = custom_sound_id(level_name, "battle"),
-		[CUSTOM_IMPORT_BATTLE_PREP] = custom_sound_id(level_name, "battle_prep")
-	}
-end
+-- 	return {
+-- 		[CUSTOM_IMPORT_BATTLE] = custom_sound_id(level_name, "battle"),
+-- 		[CUSTOM_IMPORT_BATTLE_PREP] = custom_sound_id(level_name, "battle_prep")
+-- 	}
+-- end
 
-function editor:set_drop_import_mode(mode)
-	self.drop_import_mode = mode
+-- function editor:set_drop_import_mode(mode)
+-- 	self.drop_import_mode = mode
 
-	if self.gui and self.gui.update_drop_import_buttons then
-		self.gui:update_drop_import_buttons()
-	end
-end
+-- 	if self.gui and self.gui.update_drop_import_buttons then
+-- 		self.gui:update_drop_import_buttons()
+-- 	end
+-- end
 
-function editor:load_custom_resources()
-	local level = self.store and self.store.level
-	local data = level and level.data
+-- function editor:load_custom_resources()
+-- 	local level = self.store and self.store.level
+-- 	local data = level and level.data
 
-	if not data then
-		return
-	end
+-- 	if not data then
+-- 		return
+-- 	end
 
-	local resources = custom_resource_table(data)
-	self.last_dropped_bg = nil
-	self.custom_music = {}
+-- 	local resources = custom_resource_table(data)
+-- 	self.last_dropped_bg = nil
+-- 	self.custom_music = {}
 
-	if resources.background and resources.background.path and resources.background.sprite then
-		local ok, img = register_custom_image(resources.background.path, resources.background.sprite, "game_editor")
+-- 	if resources.background and resources.background.path and resources.background.sprite then
+-- 		local ok, img = register_custom_image(resources.background.path, resources.background.sprite, "game_editor")
 
-		if ok then
-			self.last_dropped_bg = table.deepclone(resources.background)
+-- 		if ok then
+-- 			self.last_dropped_bg = table.deepclone(resources.background)
 
-			local imported = false
-			for _, e in ipairs(data.entities_list or {}) do
-				local sprite = e.render and e.render.sprites and e.render.sprites[1]
-				if e.template_name == "decal_background" and sprite and sprite.name == resources.background.sprite then
-					imported = true
-					break
-				end
-			end
+-- 			local imported = false
+-- 			for _, e in ipairs(data.entities_list or {}) do
+-- 				local sprite = e.render and e.render.sprites and e.render.sprites[1]
+-- 				if e.template_name == "decal_background" and sprite and sprite.name == resources.background.sprite then
+-- 					imported = true
+-- 					break
+-- 				end
+-- 			end
 
-			for _, e in pairs(self.store.entities or {}) do
-				local sprite = e.render and e.render.sprites and e.render.sprites[1]
-				if e.template_name == "decal_background" and sprite and sprite.name == resources.background.sprite then
-					imported = true
-					break
-				end
-			end
+-- 			for _, e in pairs(self.store.entities or {}) do
+-- 				local sprite = e.render and e.render.sprites and e.render.sprites[1]
+-- 				if e.template_name == "decal_background" and sprite and sprite.name == resources.background.sprite then
+-- 					imported = true
+-- 					break
+-- 				end
+-- 			end
 
-			if not imported and img then
-				local bg_entity = E:create_entity("decal_background")
-				bg_entity.render.sprites[1].name = resources.background.sprite
-				bg_entity.render.sprites[1].z = Z_BACKGROUND
+-- 			if not imported and img then
+-- 				local bg_entity = E:create_entity("decal_background")
+-- 				bg_entity.render.sprites[1].name = resources.background.sprite
+-- 				bg_entity.render.sprites[1].z = Z_BACKGROUND
 
-				local iw, ih = img:getWidth(), img:getHeight()
-				if iw > 0 and ih > 0 then
-					bg_entity.render.sprites[1].scale = V.v(self.ref_w / iw, self.ref_h / ih)
-				end
+-- 				local iw, ih = img:getWidth(), img:getHeight()
+-- 				if iw > 0 and ih > 0 then
+-- 					bg_entity.render.sprites[1].scale = V.v(self.ref_w / iw, self.ref_h / ih)
+-- 				end
 
-				self.simulation:queue_insert_entity(bg_entity)
-			end
-		end
-	end
+-- 				self.simulation:queue_insert_entity(bg_entity)
+-- 			end
+-- 		end
+-- 	end
 
-	local music_ids = self:current_custom_music_ids()
+-- 	local music_ids = self:current_custom_music_ids()
 
-	if resources[CUSTOM_IMPORT_BATTLE] and resources[CUSTOM_IMPORT_BATTLE].path then
-		if register_custom_sound(resources[CUSTOM_IMPORT_BATTLE].path, music_ids[CUSTOM_IMPORT_BATTLE]) then
-			self.custom_music[CUSTOM_IMPORT_BATTLE] = {
-				path = resources[CUSTOM_IMPORT_BATTLE].path,
-				filename = resources[CUSTOM_IMPORT_BATTLE].filename,
-				sound_id = music_ids[CUSTOM_IMPORT_BATTLE]
-			}
-		end
-	end
+-- 	if resources[CUSTOM_IMPORT_BATTLE] and resources[CUSTOM_IMPORT_BATTLE].path then
+-- 		if register_custom_sound(resources[CUSTOM_IMPORT_BATTLE].path, music_ids[CUSTOM_IMPORT_BATTLE]) then
+-- 			self.custom_music[CUSTOM_IMPORT_BATTLE] = {
+-- 				path = resources[CUSTOM_IMPORT_BATTLE].path,
+-- 				filename = resources[CUSTOM_IMPORT_BATTLE].filename,
+-- 				sound_id = music_ids[CUSTOM_IMPORT_BATTLE]
+-- 			}
+-- 		end
+-- 	end
 
-	if resources[CUSTOM_IMPORT_BATTLE_PREP] and resources[CUSTOM_IMPORT_BATTLE_PREP].path then
-		if register_custom_sound(resources[CUSTOM_IMPORT_BATTLE_PREP].path, music_ids[CUSTOM_IMPORT_BATTLE_PREP]) then
-			self.custom_music[CUSTOM_IMPORT_BATTLE_PREP] = {
-				path = resources[CUSTOM_IMPORT_BATTLE_PREP].path,
-				filename = resources[CUSTOM_IMPORT_BATTLE_PREP].filename,
-				sound_id = music_ids[CUSTOM_IMPORT_BATTLE_PREP]
-			}
-		end
-	end
-end
+-- 	if resources[CUSTOM_IMPORT_BATTLE_PREP] and resources[CUSTOM_IMPORT_BATTLE_PREP].path then
+-- 		if register_custom_sound(resources[CUSTOM_IMPORT_BATTLE_PREP].path, music_ids[CUSTOM_IMPORT_BATTLE_PREP]) then
+-- 			self.custom_music[CUSTOM_IMPORT_BATTLE_PREP] = {
+-- 				path = resources[CUSTOM_IMPORT_BATTLE_PREP].path,
+-- 				filename = resources[CUSTOM_IMPORT_BATTLE_PREP].filename,
+-- 				sound_id = music_ids[CUSTOM_IMPORT_BATTLE_PREP]
+-- 			}
+-- 		end
+-- 	end
+-- end
 
-function editor:refresh_required_assets()
-	local level = self.store.level
-	local data = level and level.data
+-- -- TODO: 该方法存在实现错误，暂不调用，不推断关卡所需资源，先交给玩家考虑这件事情。
+-- function editor:refresh_required_assets()
+-- 	local level = self.store.level
+-- 	local data = level and level.data
 
-	if not level or not data then
-		return
-	end
+-- 	if not level or not data then
+-- 		return
+-- 	end
 
-	local texture_map = {}
-	local sound_map = {}
-	local exo_map = {}
-	local ctx = {
-		texture_lookup = texture_group_lookup(director and director.params and director.params.texture_size),
-		animation_lookup = nil,
-		sound_lookup = sound_group_lookup(),
-		textures = texture_map,
-		sounds = sound_map,
-		exos = exo_map
-	}
-	ctx.animation_lookup = animation_group_lookup(ctx.texture_lookup)
+-- 	local texture_map = {}
+-- 	local sound_map = {}
+-- 	local exo_map = {}
+-- 	local ctx = {
+-- 		texture_lookup = texture_group_lookup(director and director.params and director.params.texture_size),
+-- 		animation_lookup = nil,
+-- 		sound_lookup = sound_group_lookup(),
+-- 		textures = texture_map,
+-- 		sounds = sound_map,
+-- 		exos = exo_map
+-- 	}
+-- 	ctx.animation_lookup = animation_group_lookup(ctx.texture_lookup)
 
-	for _, e in pairs(self.store.entities or {}) do
-		collect_resource_refs(e, ctx, {})
-	end
+-- 	for _, e in pairs(self.store.entities or {}) do
+-- 		collect_resource_refs(e, ctx, {})
+-- 	end
 
-	local waves = self.wave_data or load_lua_table_with_pref(wave_rel(self.store.level_name, self.store.level_mode))
-	for enemy_name in pairs(gather_wave_enemy_templates(waves)) do
-		local ok_enemy, enemy = pcall(E.create_entity, E, enemy_name)
-		if ok_enemy and type(enemy) == "table" then
-			collect_resource_refs(enemy, ctx, {})
-		end
-	end
+-- 	local waves = self.wave_data or load_lua_table_with_pref(wave_rel(self.store.level_name, self.store.level_mode))
+-- 	for enemy_name in pairs(gather_wave_enemy_templates(waves)) do
+-- 		local ok_enemy, enemy = pcall(E.create_entity, E, enemy_name)
+-- 		if ok_enemy and type(enemy) == "table" then
+-- 			collect_resource_refs(enemy, ctx, {})
+-- 		end
+-- 	end
 
-	data.required_textures = sorted_keys(texture_map)
-	data.required_sounds = sorted_keys(sound_map)
-	data.required_exoskeletons = sorted_keys(exo_map)
-	level.required_textures = table.deepclone(data.required_textures)
-	level.required_sounds = table.deepclone(data.required_sounds)
-	level.required_exoskeletons = table.deepclone(data.required_exoskeletons)
-end
+-- 	data.required_textures = sorted_keys(texture_map)
+-- 	data.required_sounds = sorted_keys(sound_map)
+-- 	data.required_exoskeletons = sorted_keys(exo_map)
+-- 	level.required_textures = table.deepclone(data.required_textures)
+-- 	level.required_sounds = table.deepclone(data.required_sounds)
+-- 	level.required_exoskeletons = table.deepclone(data.required_exoskeletons)
+-- end
 
 -- 加载某一个关卡。查找顺序：编辑器目录 → 游戏目录 → 初始化空白关卡
 function editor:load_level(idx, mode)
@@ -714,13 +678,13 @@ function editor:load_level(idx, mode)
 		if not s.level.data then
 			s.level.data = {}
 		end
-		custom_resource_table(s.level.data)
+		-- custom_resource_table(s.level.data)
 		director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
 		if s.level.required_exoskeletons then
 			EXO:queue_load(s.level.required_exoskeletons)
 			EXO:load()
 		end
-		self:load_custom_resources()
+		-- self:load_custom_resources()
 
 		if s.level.data then
 			LU.insert_entities(self.store, s.level.data.entities_list, true)
@@ -788,12 +752,27 @@ end
 function editor:load_wave_assets()
 	local level_name = self.store.level_name
 	local mode = self.store.level_mode
-	local cfg_path = wave_cfg_rel(level_name, mode)
-	local wave_path = wave_rel(level_name, mode)
+	local cfg_path = string.format("data/waveconfigs/%s_waves_%s_config.lua", level_name, mode_suffix(mode))
+	local wave_path = string.format("data/waves/%s_waves_%s.lua", level_name, mode_suffix(mode))
 	local cfg_raw = load_lua_table_with_pref(cfg_path)
-	self.wave_config = sanitize_wave_config(cfg_raw)
 	local wave_raw = load_lua_table_with_pref(wave_path)
+	self.wave_config = sanitize_wave_config(cfg_raw)
 	self.wave_data = sanitize_wave_data(wave_raw, self.wave_config)
+end
+
+function editor:generate_wave_data_from_config(config)
+	local cfg = sanitize_wave_config(config)
+	local data = {
+		lives = cfg.lives,
+		cash = cfg.cash,
+		groups = {}
+	}
+
+	for _, group in ipairs(cfg.groups) do
+		data.groups[#data.groups + 1] = wave_gen_interface.generate_group(group)
+	end
+
+	return data
 end
 
 function editor:save_wave_assets()
@@ -801,14 +780,10 @@ function editor:save_wave_assets()
 	local mode = self.store.level_mode
 	local cfg_path = wave_cfg_rel(level_name, mode)
 	local wave_path = wave_rel(level_name, mode)
-	local cfg_raw = load_lua_table_with_pref(cfg_path) or self.wave_config
-	local cfg = sanitize_wave_config(cfg_raw)
-	local wave_raw = load_lua_table_with_pref(wave_path) or self.wave_data
-	local waves = sanitize_wave_data(wave_raw, cfg)
-	local ok_cfg = save_lua_table(cfg_path, cfg)
-	local ok_waves = save_lua_table(wave_path, waves)
-	self.wave_config = cfg
-	self.wave_data = waves
+	self.wave_config = sanitize_wave_config(self.wave_config)
+	self.wave_data = sanitize_wave_data(self.wave_data, self.wave_config)
+	local ok_cfg = save_lua_table(cfg_path, self.wave_config)
+	local ok_waves = save_lua_table(wave_path, self.wave_data)
 	return ok_cfg and ok_waves
 end
 
@@ -995,136 +970,136 @@ end
 
 -- 资源导入通过工具栏显式进入拖拽模式后才生效，避免用户误触。
 function editor:filedropped(file)
-	if not file then
-		return
-	end
+-- if not file then
+-- 	return
+-- end
 
-	if not self.drop_import_mode then
-		if self.gui then
-			self.gui:show_save_notification("请先点击工具栏中的资源导入按钮，再拖入背景图或音乐文件", false)
-		end
-		return
-	end
+-- if not self.drop_import_mode then
+-- 	if self.gui then
+-- 		self.gui:show_save_notification("请先点击工具栏中的资源导入按钮，再拖入背景图或音乐文件", false)
+-- 	end
+-- 	return
+-- end
 
-	local filename = file:getFilename()
-	if not filename then
-		return
-	end
-	local basename = filename:match("([^/\\]+)$") or filename
-	local safe_basename = sanitize_filename(basename)
-	local ext = filename:match("%.([%w_]+)$")
-	ext = ext and ext:lower() or nil
+-- local filename = file:getFilename()
+-- if not filename then
+-- 	return
+-- end
+-- local basename = filename:match("([^/\\]+)$") or filename
+-- local safe_basename = sanitize_filename(basename)
+-- local ext = filename:match("%.([%w_]+)$")
+-- ext = ext and ext:lower() or nil
 
-	-- 读取文件到内存，绕过 LÖVE 文件系统沙箱
-	local ok = file:open("r")
-	if not ok then
-		log.error("Editor: could not open dropped file: %s", filename)
-		return
-	end
-	local content = file:read()
-	file:close()
+-- -- 读取文件到内存，绕过 LÖVE 文件系统沙箱
+-- local ok = file:open("r")
+-- if not ok then
+-- 	log.error("Editor: could not open dropped file: %s", filename)
+-- 	return
+-- end
+-- local content = file:read()
+-- file:close()
 
-	if not content or content == "" then
-		log.error("Editor: empty file: %s", filename)
-		return
-	end
+-- if not content or content == "" then
+-- 	log.error("Editor: empty file: %s", filename)
+-- 	return
+-- end
 
-	local level_name = self.store and self.store.level_name or "level"
-	local resources = custom_resource_table(self.store.level.data)
-	local import_mode = self.drop_import_mode
-	local music_ids = self:current_custom_music_ids()
+-- local level_name = self.store and self.store.level_name or "level"
+-- local resources = custom_resource_table(self.store.level.data)
+-- local import_mode = self.drop_import_mode
+-- local music_ids = self:current_custom_music_ids()
 
-	ensure_custom_asset_dirs()
+-- ensure_custom_asset_dirs()
 
-	if import_mode == CUSTOM_IMPORT_BG then
-		if ext ~= "png" then
-			self.gui:show_save_notification("背景图目前只支持 PNG", false)
-			return
-		end
+-- if import_mode == CUSTOM_IMPORT_BG then
+-- 	if ext ~= "png" then
+-- 		self.gui:show_save_notification("背景图目前只支持 PNG", false)
+-- 		return
+-- 	end
 
-		local sprite_name = string.format("%s__bg__%s", level_name, strip_extension(safe_basename))
-		local rel_asset_path = string.format("%s/%s.png", CUSTOM_IMAGES_DIR, sprite_name)
-		local file_data = love.filesystem.newFileData(content, "bg_temp.png")
-		if not file_data then
-			log.error("Editor: could not create FileData")
-			return
-		end
-		local img_data = love.image.newImageData(file_data)
-		local img = G.newImage(img_data)
+-- 	local sprite_name = string.format("%s__bg__%s", level_name, strip_extension(safe_basename))
+-- 	local rel_asset_path = string.format("%s/%s.png", CUSTOM_IMAGES_DIR, sprite_name)
+-- 	local file_data = love.filesystem.newFileData(content, "bg_temp.png")
+-- 	if not file_data then
+-- 		log.error("Editor: could not create FileData")
+-- 		return
+-- 	end
+-- 	local img_data = love.image.newImageData(file_data)
+-- 	local img = G.newImage(img_data)
 
-		if not img then
-			log.error("Editor: could not create Image from dropped file: %s", filename)
-			return
-		end
+-- 	if not img then
+-- 		log.error("Editor: could not create Image from dropped file: %s", filename)
+-- 		return
+-- 	end
 
-		love.filesystem.write(rel_asset_path, content)
-		I:add_image(sprite_name, img, "game_editor")
+-- 	love.filesystem.write(rel_asset_path, content)
+-- 	I:add_image(sprite_name, img, "game_editor")
 
-		local previous = resources.background and resources.background.sprite
-		local replaced = false
-		for _, e in pairs(self.store.entities or {}) do
-			local sprite = e.render and e.render.sprites and e.render.sprites[1]
-			if e.template_name == "decal_background" and sprite and previous and sprite.name == previous then
-				sprite.name = sprite_name
-				local iw, ih = img:getWidth(), img:getHeight()
-				if iw > 0 and ih > 0 then
-					sprite.scale = V.v(self.ref_w / iw, self.ref_h / ih)
-				end
-				replaced = true
-				break
-			end
-		end
+-- 	local previous = resources.background and resources.background.sprite
+-- 	local replaced = false
+-- 	for _, e in pairs(self.store.entities or {}) do
+-- 		local sprite = e.render and e.render.sprites and e.render.sprites[1]
+-- 		if e.template_name == "decal_background" and sprite and previous and sprite.name == previous then
+-- 			sprite.name = sprite_name
+-- 			local iw, ih = img:getWidth(), img:getHeight()
+-- 			if iw > 0 and ih > 0 then
+-- 				sprite.scale = V.v(self.ref_w / iw, self.ref_h / ih)
+-- 			end
+-- 			replaced = true
+-- 			break
+-- 		end
+-- 	end
 
-		if not replaced then
-			local bg_entity = E:create_entity("decal_background")
-			bg_entity.render.sprites[1].name = sprite_name
-			bg_entity.render.sprites[1].z = Z_BACKGROUND
-			local iw, ih = img:getWidth(), img:getHeight()
-			if iw > 0 and ih > 0 then
-				bg_entity.render.sprites[1].scale = V.v(self.ref_w / iw, self.ref_h / ih)
-			end
-			self.simulation:queue_insert_entity(bg_entity)
-		end
+-- 	if not replaced then
+-- 		local bg_entity = E:create_entity("decal_background")
+-- 		bg_entity.render.sprites[1].name = sprite_name
+-- 		bg_entity.render.sprites[1].z = Z_BACKGROUND
+-- 		local iw, ih = img:getWidth(), img:getHeight()
+-- 		if iw > 0 and ih > 0 then
+-- 			bg_entity.render.sprites[1].scale = V.v(self.ref_w / iw, self.ref_h / ih)
+-- 		end
+-- 		self.simulation:queue_insert_entity(bg_entity)
+-- 	end
 
-		resources.background = {
-			filename = sprite_name .. ".png",
-			path = rel_asset_path,
-			sprite = sprite_name
-		}
-		self.last_dropped_bg = table.deepclone(resources.background)
+-- 	resources.background = {
+-- 		filename = sprite_name .. ".png",
+-- 		path = rel_asset_path,
+-- 		sprite = sprite_name
+-- 	}
+-- 	self.last_dropped_bg = table.deepclone(resources.background)
 
-		if self.gui._bg_prompt then
-			self.gui._bg_prompt.hidden = true
-		end
+-- 	if self.gui._bg_prompt then
+-- 		self.gui._bg_prompt.hidden = true
+-- 	end
 
-		self.gui:show_save_notification("背景图已导入: " .. safe_basename, true)
-	elseif import_mode == CUSTOM_IMPORT_BATTLE or import_mode == CUSTOM_IMPORT_BATTLE_PREP then
-		if ext ~= "ogg" and ext ~= "mp3" and ext ~= "wav" then
-			self.gui:show_save_notification("音乐目前支持 OGG / MP3 / WAV", false)
-			return
-		end
+-- 	self.gui:show_save_notification("背景图已导入: " .. safe_basename, true)
+-- elseif import_mode == CUSTOM_IMPORT_BATTLE or import_mode == CUSTOM_IMPORT_BATTLE_PREP then
+-- 	if ext ~= "ogg" and ext ~= "mp3" and ext ~= "wav" then
+-- 		self.gui:show_save_notification("音乐目前支持 OGG / MP3 / WAV", false)
+-- 		return
+-- 	end
 
-		local asset_base = string.format("%s__%s__%s", level_name, import_mode, strip_extension(safe_basename))
-		local rel_asset_path = string.format("%s/%s.%s", CUSTOM_SOUNDS_DIR, asset_base, ext)
-		love.filesystem.write(rel_asset_path, content)
+-- 	local asset_base = string.format("%s__%s__%s", level_name, import_mode, strip_extension(safe_basename))
+-- 	local rel_asset_path = string.format("%s/%s.%s", CUSTOM_SOUNDS_DIR, asset_base, ext)
+-- 	love.filesystem.write(rel_asset_path, content)
 
-		local sound_id = music_ids[import_mode]
-		if not register_custom_sound(rel_asset_path, sound_id) then
-			self.gui:show_save_notification("音乐导入失败: " .. safe_basename, false)
-			return
-		end
+-- 	local sound_id = music_ids[import_mode]
+-- 	if not register_custom_sound(rel_asset_path, sound_id) then
+-- 		self.gui:show_save_notification("音乐导入失败: " .. safe_basename, false)
+-- 		return
+-- 	end
 
-		resources[import_mode] = {
-			filename = asset_base .. "." .. ext,
-			path = rel_asset_path,
-			sound_id = sound_id
-		}
-		self.custom_music = self.custom_music or {}
-		self.custom_music[import_mode] = table.deepclone(resources[import_mode])
-		self.gui:show_save_notification((import_mode == CUSTOM_IMPORT_BATTLE and "战斗音乐" or "备战音乐") .. "已导入: " .. safe_basename, true)
-	end
+-- 	resources[import_mode] = {
+-- 		filename = asset_base .. "." .. ext,
+-- 		path = rel_asset_path,
+-- 		sound_id = sound_id
+-- 	}
+-- 	self.custom_music = self.custom_music or {}
+-- 	self.custom_music[import_mode] = table.deepclone(resources[import_mode])
+-- 	self.gui:show_save_notification((import_mode == CUSTOM_IMPORT_BATTLE and "战斗音乐" or "备战音乐") .. "已导入: " .. safe_basename, true)
+-- end
 
-	self:set_drop_import_mode(nil)
+-- self:set_drop_import_mode(nil)
 end
 
 function editor:draw()
@@ -1632,7 +1607,7 @@ end
 
 function editor:save_data()
 	local fn = "game_editor/data/levels/" .. self.store.level_name .. "_data.lua"
-	self:refresh_required_assets()
+	-- self:refresh_required_assets()
 	self:serialize_level()
 	local data = table.deepclone(self.store.level.data)
 	clear_key(data, {"_idx", "_id", "_before_ov", "locations", "frames"})
