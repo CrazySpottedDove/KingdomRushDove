@@ -61,7 +61,7 @@ function grid_db:init_grid(w, h, ox, oy, cell_size)
 		grid[i] = {}
 
 		for j = 1, h do
-			grid[i][j] = TERRAIN_NONE
+			grid[i][j] = TERRAIN_LAND
 		end
 	end
 

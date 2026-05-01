@@ -19,6 +19,8 @@ local P = require("path_db")
 local GR = require("grid_db")
 local GS = require("kr1.game_settings")
 local G = love.graphics
+local bit = require("bit")
+local band = bit.band
 
 require("all.constants")
 local timer = require("hump.timer").new()
@@ -70,6 +72,34 @@ local function is_kbutton_instance(view)
 	return false
 end
 
+local function fit_button_text(btn, min_font_size)
+	if not btn or not btn.size then
+		return
+	end
+
+	min_font_size = min_font_size or 7
+	btn.text_size = V.v(btn.size.x, btn.size.y)
+	btn.text_align = "center"
+
+	local font_size = btn.font_size or KE_CONST.font_size
+	local target_w = btn.size.x - 8
+
+	while font_size > min_font_size do
+		btn.font_size = font_size
+		if btn._load_font then
+			btn:_load_font()
+		end
+		local w = btn.font and btn.font.getWidth and btn.font:getWidth(btn.text or "") or 0
+		if w <= target_w then
+			break
+		end
+		font_size = font_size - 1
+	end
+
+	btn.font_size = font_size
+	btn.text_offset = V.v(0, math.floor((btn.size.y - btn.font_size) / 2))
+end
+
 ---计算两个坐标之差的绝对值是否小于给定值
 ---@param axi1 table 坐标1
 ---@param axi2 table 坐标2
@@ -101,6 +131,8 @@ function gui:init(w, h, editor)
 	self.settings.grid = {}
 	self.settings.grid.brush_size = 1
 	self.settings.grid.paint = TERRAIN_NONE
+	self.settings.grid.show_terrain = true
+	self.settings.grid.show_tags = true
 	self.tool_shortcuts = {}
 
 	local tt = kui_db:get_table("game_editor_gui")
@@ -363,6 +395,7 @@ function gui:init(w, h, editor)
 	wid("grid_offset").on_change = function(this)
 		self:update_grid_prop(this)
 	end
+	self:ensure_grid_layer_toggle_buttons()
 	self.tool_shortcuts.grid = {
 		["-"] = function()
 			self:grid_brush_size_change(-2)
@@ -395,9 +428,8 @@ function gui:init(w, h, editor)
 			self:toggle_grid_paint_flag(TERRAIN_ICE)
 		end
 	}
-	wid("entities_insert").on_click = function()
-		gui:insert_entity()
-	end
+	wid("entities_insert").on_click = nil
+	wid("entities_insert").text = "插入实体(A) [仅快捷键]"
 	wid("entities_search").on_click = function()
 		gui:search_entity_suggestions()
 	end
@@ -408,6 +440,7 @@ function gui:init(w, h, editor)
 	wid("entities_delete").on_click = function()
 		gui:delete_entity()
 	end
+	wid("entities_delete").text = "删除实体(D)"
 	wid("entities_pos").on_change = function(this)
 		gui:update_entity_prop(this)
 	end
@@ -423,6 +456,12 @@ function gui:init(w, h, editor)
 		end,
 		right = function()
 			self:move_entity("right")
+		end,
+		a = function()
+			self:insert_entity()
+		end,
+		d = function()
+			self:delete_entity()
 		end,
 		escape = function()
 			self:select_entity(nil)
@@ -486,20 +525,24 @@ function gui:init(w, h, editor)
 	wid("path_node_width").on_change = function(this)
 		gui:path_node_width_change(this)
 	end
-	wid("path_node_extend").on_click = function(this)
-		gui:path_node_add(this)
-	end
-	wid("path_node_extend").text = "添加节点(A)"
-	wid("path_node_extend").text_align = "center"
+	wid("path_node_extend").on_click = nil
+	wid("path_node_extend").text = "添加节点(A) [仅快捷键]"
 	wid("path_node_extend").font_size = KE_CONST.font_size
+	local path_node_row = wid("path_node_extend").parent
+	if path_node_row and path_node_row.style == "horizontal" then
+		path_node_row.style = "vertical"
+		path_node_row:update_layout()
+	end
 	local subdivide_btn = wid("path_node_subdivide")
-	if subdivide_btn and subdivide_btn.parent then
-		local row = subdivide_btn.parent
-		row:remove_child(subdivide_btn)
-		row:update_layout()
+	if subdivide_btn then
+		subdivide_btn.on_click = nil
+		subdivide_btn.text = "细分路径(W) [仅快捷键]"
+		subdivide_btn.font_size = KE_CONST.font_size
+		subdivide_btn.size = V.v(KE_CONST.PROP_W, KE_CONST.PROP_H)
+		fit_button_text(subdivide_btn)
 	end
 	wid("path_node_extend").size = V.v(KE_CONST.PROP_W, KE_CONST.PROP_H)
-	wid("path_node_extend").text_offset = V.v(0, (KE_CONST.PROP_H - KE_CONST.font_size) / 2)
+	fit_button_text(wid("path_node_extend"))
 	local list_section = wid("paths_list_section")
 	if list_section then
 		list_section:update_layout()
@@ -529,6 +572,9 @@ function gui:init(w, h, editor)
 		end,
 		a = function()
 			self:path_node_add()
+		end,
+		w = function()
+			self:path_node_subdivide_at_mouse()
 		end,
 		v = function()
 			self:preview_path()
@@ -870,7 +916,14 @@ end
 function gui:keyreleased(key)
 	local responder = self.window and self.window.responder
 	if responder and responder.is_focused then
-		return
+		if key == "return" or key == "kpenter" or key == "escape" then
+			if responder.set_input_focused then
+				responder:set_input_focused(false)
+			end
+			self.window:set_responder()
+		else
+			return
+		end
 	end
 
 	if self.window:keyreleased(key) then
@@ -1448,8 +1501,8 @@ function gui:select_tool(name)
 	-- 	btn:activate()
 	-- end
 
-	if name == "entities" and not self.editor.entities_selected then
-		set_gui_responder(self.window, wid("entities_insert_template"))
+	if name == "entities" then
+		set_gui_responder(self.window)
 	end
 end
 
@@ -1479,11 +1532,13 @@ function gui:down_tool(btn, x, y)
 
 	if self.active_tool == "paths" and not wid("paths").hidden then
 		if btn == 2 then
+			self.path_dragging = false
 			self:select_node()
 			return
 		end
 
 		local selected = self:path_nodes_select(wx, wy)
+		self.path_dragging = selected and btn == 1
 
 		if not selected then
 		-- block empty
@@ -1493,7 +1548,7 @@ end
 
 function gui:up_tool(btn, x, y)
 	if self.active_tool == "paths" then
-	-- block empty
+		self.path_dragging = false
 	end
 end
 
@@ -1514,7 +1569,7 @@ function gui:move_tool(x, y, down)
 			self:entities_move(wx, wy)
 		end
 	elseif self.active_tool == "paths" and not wid("paths").hidden then
-		if down and self.path_nodes_selected then
+		if down and self.path_dragging and self.path_nodes_selected then
 			self:path_nodes_move(wx, wy)
 		end
 	else
@@ -1524,7 +1579,15 @@ end
 
 function gui:undo()
 	self:select_entity()
+	self:select_node()
 	self.editor:undo_pop()
+
+	if self.active_tool == "paths" then
+		self:update_paths_list()
+		self:show_path_node()
+	elseif self.active_tool == "grid" then
+		self:update_grid_tool()
+	end
 end
 
 function gui:grid_cell_info_update(this, dt)
@@ -1540,9 +1603,36 @@ function gui:grid_cell_info_update(this, dt)
 	local x, y = love.mouse.getPosition()
 	local wx, wy = self:u2g(V.v(x, y))
 	local ct, i, j = GR:cell_type(wx, wy)
+	local terrain = band(ct, TERRAIN_TYPES_MASK)
+	local terrain_name = ({
+		[TERRAIN_NONE] = "无",
+		[TERRAIN_LAND] = "陆地",
+		[TERRAIN_WATER] = "水",
+		[TERRAIN_CLIFF] = "悬崖"
+	})[terrain] or "未知"
+	local tags = {}
+
+	if band(ct, TERRAIN_NOWALK) ~= 0 then
+		tags[#tags + 1] = "禁行"
+	end
+	if band(ct, TERRAIN_SHALLOW) ~= 0 then
+		tags[#tags + 1] = "浅滩"
+	end
+	if band(ct, TERRAIN_FAERIE) ~= 0 then
+		tags[#tags + 1] = "仙子"
+	end
+	if band(ct, TERRAIN_ICE) ~= 0 then
+		tags[#tags + 1] = "冰"
+	end
+	if band(ct, TERRAIN_FLYING_NOWALK) ~= 0 then
+		tags[#tags + 1] = "禁飞"
+	end
+	if #tags == 0 then
+		tags[1] = "无"
+	end
 
 	this.lt.text = string.format("%s,%s", i, j)
-	this.gt.text = GR:print_cell(ct)
+	this.gt.text = string.format("%s|%s", terrain_name, table.concat(tags, "+"))
 end
 
 function gui:set_grid_paint_type(type)
@@ -1604,6 +1694,9 @@ function gui:grid_paint(wx, wy, btn)
 	local s = self.settings.grid
 	local bw = (s.brush_size - 1) / 2
 	local temp_brush = s.paint
+	local picker = wid("picker")
+
+	self.editor:undo_push_grid(picker and picker.tracking)
 
 	if btn == "2" then
 		local f = TERRAIN_NOWALK
@@ -1626,6 +1719,7 @@ end
 
 function gui:update_grid_prop(prop_view)
 	local prop_name = prop_view.prop_name
+	self.editor:undo_push_grid(false)
 
 	if prop_name == "grid_size" then
 		GR:set_grid_size(prop_view.value.x, prop_view.value.y)
@@ -1636,9 +1730,81 @@ function gui:update_grid_prop(prop_view)
 	self.editor.grid_dirty = true
 end
 
+function gui:ensure_grid_layer_toggle_buttons()
+	local grid_view = wid("grid")
+	local layout = grid_view and grid_view.children and grid_view.children[3]
+	if not layout or wid("grid_show_mode") then
+		return
+	end
+
+	for i = #layout.children, 1, -1 do
+		local c = layout.children[i]
+		if c and c.class and c.class.name == "KESep" and c.text == "网格" then
+			layout:remove_child(c)
+			break
+		end
+	end
+
+	local row = KELayout:new("vertical")
+	row.size = V.v(KE_CONST.PROP_W, KE_CONST.PROP_H)
+	row.separation = V.v(0, 0)
+
+	local mode_btn = KEButton:new("显示：地形和标签")
+	mode_btn.id = "grid_show_mode"
+	mode_btn.size = V.v(KE_CONST.PROP_W, KE_CONST.PROP_H)
+	mode_btn.text_size = V.v(KE_CONST.PROP_W, KE_CONST.PROP_H)
+	mode_btn.text_offset = V.v(0, (KE_CONST.PROP_H - KE_CONST.font_size) / 2)
+	mode_btn.text_align = "center"
+	fit_button_text(mode_btn)
+	row:add_child(mode_btn)
+
+	layout:add_child(row)
+
+	mode_btn.on_click = function()
+		local st = self.settings.grid.show_terrain
+		local sg = self.settings.grid.show_tags
+		if st and sg then
+			self.settings.grid.show_terrain = true
+			self.settings.grid.show_tags = false
+		elseif st then
+			self.settings.grid.show_terrain = false
+			self.settings.grid.show_tags = true
+		else
+			self.settings.grid.show_terrain = true
+			self.settings.grid.show_tags = true
+		end
+		self:update_grid_layer_toggle_state()
+		self.editor.grid_dirty = true
+	end
+
+	layout:update_layout()
+	self:update_grid_layer_toggle_state()
+end
+
+function gui:update_grid_layer_toggle_state()
+	local mode_btn = wid("grid_show_mode")
+	if mode_btn then
+		local st = self.settings.grid.show_terrain
+		local sg = self.settings.grid.show_tags
+		if st and sg then
+			mode_btn.text = "显示：地形和标签"
+		elseif st then
+			mode_btn.text = "显示：仅地形"
+		elseif sg then
+			mode_btn.text = "显示：仅标签"
+		else
+			mode_btn.text = "显示：地形和标签"
+			self.settings.grid.show_terrain = true
+			self.settings.grid.show_tags = true
+		end
+		mode_btn:activate()
+	end
+end
+
 function gui:update_grid_tool()
 	wid("grid_size"):set_value(V.v(GR.grid_w, GR.grid_h), true)
 	wid("grid_offset"):set_value(V.v(GR.ox, GR.oy), true)
+	self:update_grid_layer_toggle_state()
 end
 
 function gui:refresh_nav_tool()
@@ -1747,7 +1913,7 @@ function gui:select_entity(e)
 		vs.hidden = true
 		vd.hidden = false
 
-		set_gui_responder(self.window, wid("entities_insert_template"))
+		set_gui_responder(self.window)
 	end
 
 	self.editor.entities_dirty = true
@@ -1892,14 +2058,20 @@ function gui:insert_entity()
 	local template = wid("entities_insert_template").value
 
 	if not template or not E:get_template(template) then
+		self:show_save_notification("模板不存在，无法插入", false)
 		return
 	end
 
 	local e = E:create_entity(template)
+	local mx, my = love.mouse.getPosition()
+	local wx, wy = self:u2g(V.v(mx, my))
 
-	e.pos.x, e.pos.y = REF_W / 2, REF_H / 2 - 50
+	e.pos.x, e.pos.y = wx, wy
 
+	self.editor:undo_push_entity_insert(e.id)
 	LU.queue_insert(self.editor.store, e)
+	self.editor.entities_dirty = true
+	self:select_entity(e)
 end
 
 function gui:delete_entity()
@@ -1915,14 +2087,27 @@ function gui:delete_entity()
 		return
 	end
 
+	self.editor:undo_push_entity_delete(e)
 	LU.queue_remove(self.editor.store, e)
 
 	local list = self.editor.store.level.data.entities_list
-	local le = list._idx[e.id]
+	if list then
+		if not list._idx then
+			list._idx = {}
+			for _, item in pairs(list) do
+				local iid = item and (item._id or item.id)
+				if iid then
+					list._idx[iid] = item
+				end
+			end
+		end
 
-	table.removeobject(list, le)
-
-	list._idx[e.id] = nil
+		local le = list._idx[e.id]
+		if le then
+			table.removeobject(list, le)
+			list._idx[e.id] = nil
+		end
+	end
 
 	self:select_entity(nil)
 end
@@ -2053,6 +2238,7 @@ function gui:select_node(pi, ni, add)
 		self.editor.path_selected = pi
 	else
 		self.path_nodes_selected = nil
+		self.path_dragging = false
 
 		self:show_path_node()
 	-- self.editor.path_selected = nil
@@ -2084,7 +2270,7 @@ function gui:path_nodes_select(x, y, w, h)
 		if not lpi or lpi == pi then
 			local n = path.nodes
 
-			for ni = 1, #n do
+			for ni = 1, #n, 3 do
 				if V.is_inside(n[ni], r) then
 					self:select_node(pi, ni, true)
 				end
@@ -2138,7 +2324,8 @@ function gui:show_path_node(pi, ni)
 	end
 
 	wid("path_connects_to"):set_value(cpi)
-	wid("path_node_id"):set_value(tostring(ni), true)
+	local knot_idx = math.floor((ni - 1) / 3) + 1
+	wid("path_node_id"):set_value(tostring(knot_idx), true)
 	wid("path_node_pos"):set_value(p, true)
 
 	if node_width then
@@ -2163,8 +2350,13 @@ function gui:path_node_id_change(prop_view)
 		return
 	end
 
-	local ni = tonumber(prop_view.value)
-	if not ni or not path.nodes[ni] then
+	local knot_idx = tonumber(prop_view.value)
+	if not knot_idx then
+		knot_idx = 1
+	end
+
+	local ni = (math.floor(knot_idx) - 1) * 3 + 1
+	if ni < 1 or not path.nodes[ni] then
 		ni = 1
 	end
 
@@ -2179,8 +2371,17 @@ function gui:path_connects_to_change(prop_view)
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
+	local cpi = prop_view.value
+	local current = self.editor.path_connections and self.editor.path_connections[pi] or nil
+	if cpi < 1 or cpi > #self.editor.path_curves then
+		cpi = nil
+	end
+	if current == cpi then
+		return
+	end
 
-	self.editor:set_path_connection(pi, prop_view.value)
+	self.editor:undo_push_paths(false)
+	self.editor:set_path_connection(pi, cpi or -1)
 end
 
 function gui:path_active_change(prop_view)
@@ -2191,7 +2392,12 @@ function gui:path_active_change(prop_view)
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
+	local current = self.editor.active_paths and self.editor.active_paths[pi]
+	if current == prop_view.value then
+		return
+	end
 
+	self.editor:undo_push_paths(false)
 	self.editor:set_path_active(pi, prop_view.value)
 end
 
@@ -2203,7 +2409,11 @@ function gui:path_node_pos_change(prop_view)
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
+	if (ni - 1) % 3 ~= 0 then
+		return
+	end
 
+	self.editor:undo_push_paths(false)
 	self.editor:set_node_pos(pi, ni, prop_view.value.x, prop_view.value.y)
 end
 
@@ -2214,6 +2424,7 @@ function gui:path_node_width_change(view)
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
 
+	self.editor:undo_push_paths(false)
 	self.editor:set_node_width(pi, ni, view.value)
 end
 
@@ -2224,19 +2435,29 @@ function gui:path_nodes_move(x, y, delta)
 		return
 	end
 
+	local picker = wid("picker")
+	self.editor:undo_push_paths(delta and false or (picker and picker.tracking))
+
 	if delta then
 		local step = love.keyboard.isDown("lshift", "rshift") and 10 or 1
 
 		for _, item in pairs(self.path_nodes_selected) do
 			local pi, ni = unpack(item)
+			if (ni - 1) % 3 ~= 0 then
+				goto continue
+			end
 			local n = self.editor.path_curves[pi].nodes[ni]
 			local nx, ny = n.x + x * step, n.y + y * step
 
 			self.editor:set_node_pos(pi, ni, nx, ny)
 			wid("path_node_pos"):set_value(V.v(nx, ny), true)
+			::continue::
 		end
 	else
 		local pi, ni = unpack(self.path_nodes_selected[1])
+		if (ni - 1) % 3 ~= 0 then
+			return
+		end
 
 		self.editor:set_node_pos(pi, ni, x, y)
 		wid("path_node_pos"):set_value(V.v(x, y), true)
@@ -2279,6 +2500,8 @@ function gui:path_node_add(view, x, y)
 		pi = self.path_nodes_selected[1][1]
 	end
 
+	self.editor:undo_push_paths(false)
+
 	if not pi or not self.editor.path_curves[pi] then
 		pi = self.editor:create_path()
 		self.editor:clear_path_points(pi)
@@ -2286,14 +2509,48 @@ function gui:path_node_add(view, x, y)
 	end
 
 	local mx, my = love.mouse.getPosition()
-	local wp = self:u2g(V.v(mx, my))
+	-- u2g 返回两个独立数值 px, py，不是向量
+	local wpx, wpy = self:u2g(V.v(mx, my))
 
-	self.editor:add_smooth_point(pi, wp.x, wp.y)
+	self.editor:add_smooth_point(pi, wpx, wpy)
 
 	local path = self.editor.path_curves[pi]
 	local ni = path and path.nodes and #path.nodes or 1
 
 	self:select_node(pi, ni)
+end
+
+function gui:path_node_subdivide_at_mouse()
+	if not self.path_nodes_selected or #self.path_nodes_selected ~= 1 then
+		self:show_save_notification("请先选中一个路径点")
+		return
+	end
+
+	local pi, ni = unpack(self.path_nodes_selected[1])
+	local path = self.editor.path_curves[pi]
+	if not path or not path.user_points then
+		return
+	end
+
+	-- 找到选中节点对应的 knot 索引
+	local knot_idx = (ni - 1) / 3 + 1
+	if knot_idx < 1 or knot_idx > #path.user_points then
+		return
+	end
+
+	-- 在选中 knot 和下一个 knot 之间插入新点（鼠标位置）
+	local mx, my = love.mouse.getPosition()
+	local wpx, wpy = self:u2g(V.v(mx, my))
+	self.editor:undo_push_paths(false)
+	table.insert(path.user_points, knot_idx + 1, {
+		x = wpx,
+		y = wpy
+	})
+	self.editor:recalc_smooth_control_points(pi, path.user_points)
+
+	-- 选中新插入的点
+	local new_ni = knot_idx * 3 + 1 -- 新 knot 在 nodes 中的索引
+	self:select_node(pi, new_ni)
 end
 
 function gui:path_node_remove(view)
@@ -2302,9 +2559,40 @@ function gui:path_node_remove(view)
 	end
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
+	local path = self.editor.path_curves[pi]
+	if not path then
+		return
+	end
 
-	self.editor:remove_path_node(pi, ni)
-	self:show_path_node()
+	if not path.user_points or #path.user_points == 0 then
+		path.user_points = {}
+		for i = 1, #path.nodes, 3 do
+			local p = path.nodes[i]
+			if p then
+				table.insert(path.user_points, {
+					x = p.x,
+					y = p.y
+				})
+			end
+		end
+	end
+
+	local knot_idx = math.floor((ni - 1) / 3) + 1
+	if knot_idx < 1 or knot_idx > #path.user_points then
+		return
+	end
+
+	if #path.user_points <= 2 then
+		return
+	end
+
+	self.editor:undo_push_paths(false)
+	table.remove(path.user_points, knot_idx)
+	self.editor:recalc_smooth_control_points(pi, path.user_points)
+
+	local next_idx = math.min(knot_idx, #path.user_points)
+	local next_ni = (next_idx - 1) * 3 + 1
+	self:select_node(pi, next_ni)
 end
 
 function gui:flip_path()
@@ -2314,6 +2602,7 @@ function gui:flip_path()
 
 	local pi, ni = unpack(self.path_nodes_selected[1])
 
+	self.editor:undo_push_paths(false)
 	self.editor:flip_path(pi)
 
 	self.path_nodes_selected = {{pi, 1}}
@@ -2332,12 +2621,14 @@ function gui:move_path(inc)
 		return
 	end
 
+	self.editor:undo_push_paths(false)
 	self.editor:change_path_idx(pi, pi + inc)
 	self:update_paths_list()
 	self:select_node(pi + inc, 1)
 end
 
 function gui:create_path()
+	self.editor:undo_push_paths(false)
 	local pi = self.editor:create_path()
 
 	self:update_paths_list()
@@ -2349,6 +2640,7 @@ function gui:duplicate_path()
 		return
 	end
 
+	self.editor:undo_push_paths(false)
 	local pi, ni = unpack(self.path_nodes_selected[1])
 	local npi = self.editor:duplicate_path(pi)
 
@@ -2361,6 +2653,7 @@ function gui:remove_path()
 		return
 	end
 
+	self.editor:undo_push_paths(false)
 	local pi, ni = unpack(self.path_nodes_selected[1])
 
 	self.editor:remove_path(pi)

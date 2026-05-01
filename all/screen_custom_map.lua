@@ -1,0 +1,17 @@
+-- 该 scene 用于展示所有通过插件安装导入的玩家自定义地图，并提供游玩入口。
+-- 首先，我们定义地图插件的标准目录结构：
+-- - plugins/$entry/config.lua(插件配置文件)
+-- - plugins/$entry/data/levels/level$num.lua(可选，关卡初始化脚本)
+-- - plugins/$entry/data/levels/level$num_data.lua(可选，关卡数据文件)
+-- - plugins/$entry/data/levels/level$num_paths.lua(路径数据文件)
+-- - plugins/$entry/data/levels/level$num_grid.lua(可选，关卡元数据文件，包含地图名称、作者、版本等信息)
+-- - plugins/$entry/data/waves/level$num_waves_campaign.lua(必选，战役模式出怪文件)
+-- - plugins/$entry/data/waves/level$num_waves_heroic.lua(可选，英雄模式出怪文件)
+-- - plugins/$entry/data/waves/level$num_waves_iron.lua(可选，钢铁模式出怪文件)
+-- - plugins/$entry/assets/images/... (可选，地图相关的美术资源，需要包含.lua文件和配套的美术，并由我们手动实现加载逻辑)
+-- - plugins/$entry/assets/sounds/... (可选，地图相关的音频资源，需要包含.lua文件和配套的音频，并由我们手动实现加载逻辑)
+-- - plugins/$entry/assets/strings/... (地图相关的文本资源，在 .lua 文件中定义文本键值对，由我们手动实现加载逻辑。这里主要提供关卡的名称，关卡的介绍等文本内容的本地化支持。当然，也不排除有的关卡插件会自定义敌人，这时，这些敌人的文本也应该被添加。)
+-- 需要注意的是，不同的插件中，完全有可能出现 $num 冲突的情况。因此，在本文件中，我们并不将 $num 作为索引，而是将 $entry 作为索引。
+-- 在视觉上，本界面以卡片列表的形式展示每个自定义地图，卡片上显示地图名称、作者、版本和简介，并提供一个“游玩”按钮。当鼠标悬浮在卡片上时，卡片应当有一个悬浮动画效果。点击游玩按钮时，进入进一步的模式选择界面，这可以参考 screen_map 中的 LevelSelectView。不过，应当注意，我们需要检查插件是否支持了英雄或钢铁模式。如果没有，就不应该出现对应的选择按钮。
+-- 确定进入关卡后，跳转到 game 场景。
+-- 需要注意的是，game 场景中用到的 system，里面可能有些初始化逻辑没有和插件这种特殊路径做适配。我们可以选择进行适配，也可以选择直接写一个新的 system 来专门处理自定义地图的加载和运行。无论如何，我们都需要确保自定义地图的资源能够正确加载。

@@ -36,8 +36,28 @@ end
 local game_editor_gui = require("game_editor_gui")
 local G = love.graphics
 local bit = require("bit")
+local band = bit.band
 
 require("all.constants")
+
+-- 网格地形底色（terrain type）
+-- NONE: 黑, LAND: 绿, WATER: 蓝, CLIFF: 红
+local GRID_TERRAIN_COLORS = {
+	[TERRAIN_NONE] = {0, 0, 0, 255},
+	[TERRAIN_LAND] = {0, 100, 0, 255},
+	[TERRAIN_WATER] = {0, 0, 100, 255},
+	[TERRAIN_CLIFF] = {100, 0, 0, 255}
+}
+
+-- 网格标签叠加色（terrain flags）
+-- NOWALK: 红, SHALLOW: 浅蓝, FAERIE: 橙, ICE: 灰, FLYING_NOWALK: 紫
+local GRID_FLAG_COLORS = {
+	[TERRAIN_NOWALK] = {255, 64, 64},
+	[TERRAIN_SHALLOW] = {80, 160, 255},
+	[TERRAIN_FAERIE] = {255, 150, 80},
+	[TERRAIN_ICE] = {200, 200, 200},
+	[TERRAIN_FLYING_NOWALK] = {180, 80, 255}
+}
 
 BATCH_SIZE = 1000
 DEFAULT_PATH_WIDTH = 40
@@ -153,6 +173,10 @@ function editor:load_level(idx, mode)
 		s.level_difficulty = DIFFICULTY_EASY
 		s.level = LU.load_level(s, s.level_name, true)
 		director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
+		if s.level.required_exoskeletons then
+			EXO:queue_load(s.level.required_exoskeletons)
+			EXO:load()
+		end
 
 		if s.level.data then
 			LU.insert_entities(self.store, s.level.data.entities_list, true)
@@ -248,52 +272,98 @@ function editor:init(screen_w, screen_h, done_callback)
 	end
 end
 
--- 在指定路径末尾添加平滑点（自动计算贝塞尔控制点）
+-- 根据用户撒的点（knots 列表）重建整条 Bezier 曲线
+-- knots: {{x,y}, {x,y}, ...} 用户点的坐标列表
+function editor:recalc_smooth_control_points(pi, knots)
+	local path = self.path_curves[pi]
+	if not path then
+		return
+	end
+	if not knots then
+		return
+	end
+
+	local n = #knots
+	if n < 2 then
+		return
+	end
+
+	local old_widths = path.widths
+	path.nodes = {}
+	path.widths = {}
+
+	-- Catmull-Rom → Bezier：对于相邻 knot i→i+1
+	--   h1 = Ki + (Ki+1 - Ki-1) / 6
+	--   h2 = Ki+1 - (Ki+2 - Ki) / 6
+	local function K(i)
+		if i < 1 then
+			i = 1
+		end
+		if i > n then
+			i = n
+		end
+		return knots[i]
+	end
+
+	for i = 1, n - 1 do
+		local k0, k1, k2, k3 = K(i - 1), K(i), K(i + 1), K(i + 2)
+		local h1x = k1.x + (k2.x - k0.x) / 6
+		local h1y = k1.y + (k2.y - k0.y) / 6
+		local h2x = k2.x - (k3.x - k1.x) / 6
+		local h2y = k2.y - (k3.y - k1.y) / 6
+
+		path.nodes[#path.nodes + 1] = V.v(k1.x, k1.y)
+		path.nodes[#path.nodes + 1] = V.v(h1x, h1y)
+		path.nodes[#path.nodes + 1] = V.v(h2x, h2y)
+		path.widths[#path.widths + 1] = old_widths[i] or DEFAULT_PATH_WIDTH
+	end
+	-- 末尾补一个宽度值，供 generate_paths 访问 widths[bi+1]
+	path.widths[#path.widths + 1] = path.widths[#path.widths] or DEFAULT_PATH_WIDTH
+	-- 最后一个 knot
+	path.nodes[#path.nodes + 1] = V.v(knots[n].x, knots[n].y)
+
+	self:update_curves()
+	self.paths_dirty = true
+end
+
+local function ensure_path_user_points(path)
+	if path.user_points and #path.user_points > 0 then
+		return path.user_points
+	end
+
+	path.user_points = {}
+
+	for i = 1, #path.nodes, 3 do
+		local p = path.nodes[i]
+		if p then
+			path.user_points[#path.user_points + 1] = {
+				x = p.x,
+				y = p.y
+			}
+		end
+	end
+
+	return path.user_points
+end
+
+-- 在指定路径末尾添加平滑点（用户撒点 → Catmull-Rom 样条）
 function editor:add_smooth_point(pi, x, y)
 	if not self.path_curves[pi] then
 		return
 	end
 	local path = self.path_curves[pi]
-	local nodes = path.nodes
-	local widths = path.widths
 
-	if #nodes == 0 then
-		-- 第一个点：创建简单的直线段
-		nodes[1] = V.v(x, y)
-		widths[1] = DEFAULT_PATH_WIDTH
-		return
-	end
+	-- 维护用户撒的点列表：首次使用时从现有 nodes 中提取 knot
+	ensure_path_user_points(path)
+	path.user_points[#path.user_points + 1] = {
+		x = x,
+		y = y
+	}
 
-	local prev = nodes[#nodes]
-	-- 创建新 Bezier 段：前一点 → 新点，控制点沿切线方向延伸
-	local dx, dy = x - prev.x, y - prev.y
-	local dist = math.sqrt(dx * dx + dy * dy) or 1
-	local h1x = prev.x + dx * 0.33
-	local h1y = prev.y + dy * 0.33
-	local h2x = x - dx * 0.33
-	local h2y = y - dy * 0.33
-
-	-- 如果有更早的点，调整 h1 使曲线更平滑
-	if #nodes >= 4 then
-		local pp = nodes[#nodes - 3]
-		local pdx = prev.x - pp.x
-		local pdy = prev.y - pp.y
-		local pdist = math.sqrt(pdx * pdx + pdy * pdy) or 1
-		-- 混合方向和切线
-		h1x = prev.x + (dx / dist + pdx / pdist) * dist * 0.2
-		h1y = prev.y + (dy / dist + pdy / pdist) * dist * 0.2
-	end
-
-	-- 添加控制点和终点
-	table.insert(nodes, V.v(h1x, h1y))
-	table.insert(nodes, V.v(h2x, h2y))
-	table.insert(nodes, V.v(x, y))
-	table.insert(widths, widths[#widths])
-
-	self:update_curves()
+	-- 用全部用户点重建曲线
+	self:recalc_smooth_control_points(pi, path.user_points)
 end
 
--- 清除路径所有点后重新打点
 function editor:clear_path_points(pi)
 	if not self.path_curves[pi] then
 		return
@@ -301,6 +371,7 @@ function editor:clear_path_points(pi)
 	local path = self.path_curves[pi]
 	path.nodes = {}
 	path.widths = {}
+	path.user_points = {}
 	self:update_curves()
 end
 
@@ -401,6 +472,11 @@ function editor:filedropped(file)
 	local bg_entity = E:create_entity("decal_background")
 	bg_entity.render.sprites[1].name = filename
 	bg_entity.render.sprites[1].z = Z_BACKGROUND
+	-- 将拖拽图片缩放到编辑器参考地图尺寸，避免导入后尺寸不匹配
+	local iw, ih = img:getWidth(), img:getHeight()
+	if iw > 0 and ih > 0 then
+		bg_entity.render.sprites[1].scale = V.v(self.ref_w / iw, self.ref_h / ih)
+	end
 	self.simulation:queue_insert_entity(bg_entity)
 
 	-- 关闭背景提示面板
@@ -521,12 +597,33 @@ function editor:draw()
 
 		G.setCanvas(self.grid_canvas)
 
+		local show_terrain = self.gui and self.gui.settings and self.gui.settings.grid and self.gui.settings.grid.show_terrain
+		local show_tags = self.gui and self.gui.settings and self.gui.settings.grid and self.gui.settings.grid.show_tags
+		show_terrain = show_terrain ~= false
+		show_tags = show_tags ~= false
+
 		for i = 1, #GR.grid do
 			for j = 1, #GR.grid[i] do
 				local t = GR.grid[i][j]
+				local x = (i - 1) * GR.cell_size
+				local y = (j - 1) * GR.cell_size
 
-				G.setColor_old(GR.grid_colors[t] or {100, 100, 100})
-				G.rectangle("fill", (i - 1) * GR.cell_size, (j - 1) * GR.cell_size, GR.cell_size, GR.cell_size)
+				if show_terrain then
+					local terrain = band(t, TERRAIN_TYPES_MASK)
+					local tc = GRID_TERRAIN_COLORS[terrain] or {100, 100, 100, 255}
+					G.setColor_old(tc[1], tc[2], tc[3], tc[4] or 255)
+					G.rectangle("fill", x, y, GR.cell_size, GR.cell_size)
+				end
+
+				if show_tags then
+					local alpha = show_terrain and 96 or 220
+					for flag, c in pairs(GRID_FLAG_COLORS) do
+						if band(t, flag) ~= 0 then
+							G.setColor_old(c[1], c[2], c[3], alpha)
+							G.rectangle("fill", x, y, GR.cell_size, GR.cell_size)
+						end
+					end
+				end
 			end
 		end
 
@@ -549,7 +646,11 @@ function editor:draw()
 
 		for _, e in pairs(self.store.entities) do
 			if e.pos then
-				if e.render and e.render.sprites[1].hidden then
+				local is_selected = self.entities_selected and table.contains(self.entities_selected, e.id)
+
+				if is_selected then
+					G.setColor_old(255, 180, 0, 240)
+				elseif e.render and e.render.sprites[1].hidden then
 					G.setColor_old(0, 0, 200, 50)
 				else
 					G.setColor_old(0, 0, 200, 200)
@@ -558,7 +659,7 @@ function editor:draw()
 				G.rectangle("fill", e.pos.x - 2, e.pos.y - 8, 4, 16)
 				G.rectangle("fill", e.pos.x - 8, e.pos.y - 2, 16, 4)
 
-				if self.entities_selected and table.contains(self.entities_selected, e.id) and e.render and e.render.sprites and e.render.sprites[1] then
+				if is_selected and e.render and e.render.sprites and e.render.sprites[1] then
 					local f = e.render.sprites[1]
 
 					if f.ss then
@@ -985,10 +1086,76 @@ function editor:undo_push_entity(from_drag, eid, ...)
 	end
 end
 
+function editor:undo_push_paths(from_drag)
+	if not self.undo_active then
+		return
+	end
+
+	local last = self.undo_stack[#self.undo_stack]
+	if from_drag and last and last.type == "paths" and last.from_drag then
+		return
+	end
+
+	table.insert(self.undo_stack, {
+		type = "paths",
+		from_drag = from_drag and true or false,
+		path_curves = table.deepclone(self.path_curves),
+		active_paths = table.deepclone(self.active_paths),
+		path_connections = table.deepclone(self.path_connections)
+	})
+end
+
+function editor:undo_push_grid(from_drag)
+	if not self.undo_active then
+		return
+	end
+
+	local last = self.undo_stack[#self.undo_stack]
+	if from_drag and last and last.type == "grid" and last.from_drag then
+		return
+	end
+
+	table.insert(self.undo_stack, {
+		type = "grid",
+		from_drag = from_drag and true or false,
+		grid = table.deepclone(GR.grid),
+		grid_w = GR.grid_w,
+		grid_h = GR.grid_h,
+		ox = GR.ox,
+		oy = GR.oy
+	})
+end
+
+function editor:undo_push_entity_insert(eid)
+	if not self.undo_active then
+		return
+	end
+
+	table.insert(self.undo_stack, {
+		type = "entity_insert",
+		id = eid
+	})
+end
+
+function editor:undo_push_entity_delete(e)
+	if not self.undo_active or not e then
+		return
+	end
+
+	table.insert(self.undo_stack, {
+		type = "entity_delete",
+		entity = table.deepclone(e)
+	})
+end
+
 function editor:undo_pop()
 	local item = table.remove(self.undo_stack)
 
-	if item and item.type == "entity" then
+	if not item then
+		return
+	end
+
+	if item.type == "entity" then
 		local e = self.store.entities[item.id]
 
 		if not e then
@@ -1000,6 +1167,47 @@ function editor:undo_pop()
 		for k, v in pairs(item.props) do
 			LU.eval_set_prop(e, k, v)
 		end
+	elseif item.type == "entity_insert" then
+		local e = self.store.entities[item.id]
+		if not e then
+			return
+		end
+
+		LU.queue_remove(self.store, e)
+		local list = self.store.level and self.store.level.data and self.store.level.data.entities_list
+		if list and list._idx then
+			local le = list._idx[e.id]
+			if le then
+				table.removeobject(list, le)
+				list._idx[e.id] = nil
+			end
+		end
+		self.entities_dirty = true
+	elseif item.type == "entity_delete" then
+		if not item.entity then
+			return
+		end
+
+		LU.queue_insert(self.store, table.deepclone(item.entity))
+		self.entities_dirty = true
+	elseif item.type == "paths" then
+		self.path_curves = table.deepclone(item.path_curves or {})
+		self.active_paths = table.deepclone(item.active_paths or {})
+		self.path_connections = table.deepclone(item.path_connections or {})
+
+		P.path_curves = self.path_curves
+		P.active_paths = self.active_paths
+		P.path_connections = self.path_connections
+		self:update_curves()
+		self.paths_dirty = true
+	elseif item.type == "grid" then
+		GR.grid = table.deepclone(item.grid or {})
+		GR.grid_w = item.grid_w or (#GR.grid > 0 and #GR.grid or 0)
+		GR.grid_h = item.grid_h or (GR.grid[1] and #GR.grid[1] or 0)
+		GR.ox = item.ox or 0
+		GR.oy = item.oy or 0
+		GR.waypoints_cache = {}
+		self.grid_dirty = true
 	end
 end
 
@@ -1060,29 +1268,22 @@ function editor:set_node_width(pi, ni, w)
 end
 
 function editor:set_node_pos(pi, ni, x, y)
-	local touched = {}
 	local path = self.path_curves[pi]
 	local nodes = path.nodes
-	local beziers = path.beziers
 	local node = nodes[ni]
-	local dx, dy = x - node.x, y - node.y
 
 	node.x, node.y = x, y
 
-	table.insert(touched, ni)
-
 	if (ni - 1) % 3 == 0 then
-		for _, oi in pairs({-1, 1}) do
-			local i = ni + oi
-			local nn = nodes[i]
-
-			if nn then
-				nn.x, nn.y = nn.x + dx, nn.y + dy
-
-				table.insert(touched, i)
-			end
-		end
+		-- 移动的是 knot → 用全部用户点重建 Catmull-Rom 样条
+		ensure_path_user_points(path)
+		path.user_points[(ni - 1) / 3 + 1] = {
+			x = x,
+			y = y
+		}
+		self:recalc_smooth_control_points(pi, path.user_points)
 	else
+		-- 移动的是控制手柄 → 对侧手柄对称移动
 		local oni = ni % 3 == 0 and ni + 2 or ni - 2
 		local cni = ni % 3 == 0 and ni + 1 or ni - 1
 		local on = nodes[oni]
@@ -1092,14 +1293,11 @@ function editor:set_node_pos(pi, ni, x, y)
 		if nn and on and cn then
 			local ol = V.len(on.x - cn.x, on.y - cn.y)
 			local donx, dony = V.mul(ol, V.rotate(km.pi, V.normalize(nn.x - cn.x, nn.y - cn.y)))
-
 			on.x, on.y = cn.x + donx, cn.y + dony
-
-			table.insert(touched, oni)
 		end
-	end
 
-	self:update_curves(pi, touched)
+		self:update_curves(pi, {ni, oni})
+	end
 end
 
 function editor:extend_path(pi, ni, x, y)

@@ -714,7 +714,7 @@ function KEProp:on_keypressed(key)
 	elseif key == "delete" then
 		self:set_value("")
 		return true
-	elseif key == "return" or key == "escape" then
+	elseif key == "return" or key == "kpenter" or key == "escape" then
 		blur_input(self)
 		return true
 	end
@@ -979,7 +979,9 @@ KECellInfo.static.serialize_children = false
 function KECellInfo:initialize(size)
 	KView.initialize(self, size)
 
-	local lt = KLabel:new(V.v(KE_CONST.PROP_W / 2, KE_CONST.PROP_H))
+	local left_w = 52
+	local right_w = KE_CONST.PROP_W - left_w
+	local lt = KLabel:new(V.v(left_w, KE_CONST.PROP_H))
 
 	lt.text = ""
 	lt.text_align = "left"
@@ -991,15 +993,16 @@ function KECellInfo:initialize(size)
 
 	self.lt = lt
 
-	local gt = KLabel:new(V.v(KE_CONST.PROP_W / 2, KE_CONST.PROP_H))
+	local gt = KLabel:new(V.v(right_w, KE_CONST.PROP_H))
 
 	gt.text = ""
-	gt.text_align = "right"
-	gt.pos = V.v(KE_CONST.PROP_OX + KE_CONST.PROP_W / 2, 0)
+	gt.text_align = "left"
+	gt.pos = V.v(KE_CONST.PROP_OX + left_w, 0)
 	gt.font_name = KE_CONST.font_name
 	gt.font_size = KE_CONST.font_size
 
 	self:add_child(gt)
 
 	self.gt = gt
+	self.size = V.v(KE_CONST.PROP_W, KE_CONST.PROP_H)
 end
