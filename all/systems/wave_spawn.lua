@@ -159,7 +159,7 @@ function M.register(sys)
 				if start then
 					group.group_idx = 1
 
-					for _, wave in pairs(group.waves) do
+					for _, wave in ipairs(group.waves) do
 						if wave.notification and wave.notification ~= "" then
 							signal.emit("wave-notification", "view", wave.notification)
 						end
@@ -212,7 +212,7 @@ function M.register(sys)
 				store.current_wave_group = group
 				signal.emit("next-wave-sent", group)
 
-				for _, wave in pairs(group.waves) do
+				for _, wave in ipairs(group.waves) do
 					wave.group_idx = i
 
 					if i ~= 1 and wave.notification and wave.notification ~= "" then
