@@ -9311,7 +9311,7 @@ function scripts.moon_controller.update(this, store)
 					U.y_wait(store, fade_time)
 				end
 
-				S:queue(string.format("MusicBattle_%02d", store.level_idx), {
+				S:queue(store.custom_music and store.custom_music.battle or string.format("MusicBattle_%02d", store.level_idx), {
 					seek = 19.774
 				})
 
@@ -22676,7 +22676,7 @@ function scripts.moon_controller_s91.update(this, store)
 			U.y_wait(store, fade_time)
 		end
 
-		S:queue(string.format("MusicBattle_%02d", store.level_idx), {
+		S:queue(store.custom_music and store.custom_music.battle or string.format("MusicBattle_%02d", store.level_idx), {
 			seek = 19.774
 		})
 
@@ -22944,7 +22944,7 @@ function scripts.moon_controller_s72.update(this, store)
 			U.y_wait(store, fade_time)
 		end
 
-		S:queue(string.format("MusicBattle_%02d", store.level_idx), {
+		S:queue(store.custom_music and store.custom_music.battle or string.format("MusicBattle_%02d", store.level_idx), {
 			seek = 19.774
 		})
 

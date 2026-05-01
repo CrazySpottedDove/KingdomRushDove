@@ -23,10 +23,21 @@ IS_ANDROID = love.system.getOS() == "Android"
 ---@return function|nil, string|nil
 function love.filesystem.loadWithPreference(filename, prefixs)
 	for i = 1, #prefixs do
-		local path = prefixs[i] .. "/" .. filename
-		local info = love.filesystem.getInfo(path)
-		if info and info.type == "file" then
-			return love.filesystem.load(path)
+		local prefix = prefixs[i]
+		local candidates = {}
+
+		-- 自定义地图运行时：当请求 KR_PATH_GAME 资源时，优先从插件根目录读取
+		if _G.CUSTOM_MAP_ROOT and prefix == KR_PATH_GAME then
+			candidates[#candidates + 1] = _G.CUSTOM_MAP_ROOT
+		end
+		candidates[#candidates + 1] = prefix
+
+		for _, base in ipairs(candidates) do
+			local path = base .. "/" .. filename
+			local info = love.filesystem.getInfo(path)
+			if info and info.type == "file" then
+				return love.filesystem.load(path)
+			end
 		end
 	end
 end

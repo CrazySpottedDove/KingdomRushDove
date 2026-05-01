@@ -56,3 +56,4 @@ mods/local
 config.json
 *.aluac
 .zed/
+.codex

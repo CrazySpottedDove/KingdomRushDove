@@ -678,6 +678,16 @@ function wave_db:get_next_cmd(wave_name)
 	return next_cmd, next_idx
 end
 
+local function resolve_wave_sources(level_name, suffix)
+	if _G.CUSTOM_MAP_ROOT then
+		local base = string.format("%s/data/waves/%s_waves_%s", _G.CUSTOM_MAP_ROOT, level_name, suffix)
+		return {base}
+	end
+	local editor_base = string.format("game_editor/data/waves/%s_waves_%s", level_name, suffix)
+	local game_base = string.format("%s/data/waves/%s_waves_%s", KR_PATH_GAME, level_name, suffix)
+	return {editor_base, game_base}
+end
+
 function wave_db:load_tsv(level_name, game_mode, wave_ss_data)
 	self.parse_errors = nil
 
@@ -687,21 +697,24 @@ function wave_db:load_tsv(level_name, game_mode, wave_ss_data)
 		rows = tsv.parse_tsv(wave_ss_data)
 	else
 		local suffix = gms[game_mode]
-		local wn = string.format("%s/data/waves/%s_waves_%s", KR_PATH_GAME, level_name, suffix)
-		local wf = string.format("%s.tsv", wn)
-
-		if not is_file(wf) then
-			log.info("wave file in tsv format not found: %s", wf)
-
+		local selected_wf
+		for _, base in ipairs(resolve_wave_sources(level_name, suffix)) do
+			local wf = string.format("%s.tsv", base)
+			if is_file(wf) then
+				selected_wf = wf
+				break
+			end
+		end
+		if not selected_wf then
+			log.info("wave file in tsv format not found for level:%s mode:%s", level_name, suffix)
 			return
 		end
 
-		log.debug("Loading %s", wn)
-
-		rows = tsv.load(wf)
+		log.debug("Loading %s", selected_wf)
+		rows = tsv.load(selected_wf)
 
 		if not rows or #rows == 0 then
-			log_e("Failed to load %s", wf)
+			log_e("Failed to load %s", selected_wf)
 
 			return
 		end
@@ -867,16 +880,25 @@ function wave_db:load_lua(level_name, game_mode, endless)
 	self.is_endless = endless
 
 	local suffix = gms[game_mode]
-	local wn = string.format("%s/data/waves/%s_waves_%s", KR_PATH_GAME, level_name, suffix)
-	local wf = string.format("%s.lua", wn)
+	local wn
+	local wf
+	for _, base in ipairs(resolve_wave_sources(level_name, suffix)) do
+		local candidate = string.format("%s.lua", base)
+		if is_file(candidate) then
+			wn = base
+			wf = candidate
+			break
+		end
+	end
+	if not wf then
+		log.error("wave file not found for level:%s mode:%s", level_name, suffix)
+		return
+	end
 
 	log.debug("Loading %s", wn)
-
 	local ok, wchunk = pcall(FS.load, wf)
-
 	if not ok then
 		log.error("Failed to load %s: error: %s", wf, wchunk)
-
 		return
 	end
 

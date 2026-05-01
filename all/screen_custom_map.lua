@@ -1,20 +1,358 @@
--- 该 scene 用于展示所有通过插件安装导入的玩家自定义地图，并提供游玩入口。
--- 首先，我们定义地图插件的标准目录结构：
--- - plugins/$entry/config.lua(插件配置文件)
--- - plugins/$entry/data/levels/level$num.lua(可选，关卡初始化脚本)
--- - plugins/$entry/data/levels/level$num_data.lua(可选，关卡数据文件)
--- - plugins/$entry/data/levels/level$num_paths.lua(路径数据文件)
--- - plugins/$entry/data/levels/level$num_grid.lua(可选，关卡元数据文件，包含地图名称、作者、版本等信息)
--- - plugins/$entry/data/waves/level$num_waves_campaign.lua(必选，战役模式出怪文件)
--- - plugins/$entry/data/waves/level$num_waves_heroic.lua(可选，英雄模式出怪文件)
--- - plugins/$entry/data/waves/level$num_waves_iron.lua(可选，钢铁模式出怪文件)
--- - plugins/$entry/assets/images/... (可选，地图相关的美术资源，需要包含.lua文件和配套的美术，并由我们手动实现加载逻辑)
--- - plugins/$entry/assets/sounds/... (可选，地图相关的音频资源，需要包含.lua文件和配套的音频，并由我们手动实现加载逻辑)
--- - plugins/$entry/assets/strings/... (地图相关的文本资源，在 .lua 文件中定义文本键值对，由我们手动实现加载逻辑。这里主要提供关卡的名称，关卡的介绍等文本内容的本地化支持。当然，也不排除有的关卡插件会自定义敌人，这时，这些敌人的文本也应该被添加。)
--- 我们已经在 [@interface.lua](file:///home/dove/KingdomRushDove/dove_modules/wave_generator/interface.lua) 中提供了出怪生成方法，并提供了出怪配置模板 [@config_template.lua](file:///home/dove/KingdomRushDove/dove_modules/wave_generator/config_template.lua) ，你要为 game_editor.lua 添加一个新的 “出怪配置” 工具栏。该工具栏包含按钮：出怪配置和出怪预览。出怪配置提供可视化的、完整的出怪配置文件修改方法，并允许用户通过点击“生成出怪”按钮来调用 interface 中的方法生成出怪，生成成功需要弹窗提醒。而出怪预览则通过表格的方式向用户呈现目前的出怪情况。如果空间不够，考虑允许用户上下滑动查看。也允许用户在出怪预览中进一步微调出怪。在保存时，也把出怪文件保存。另外，不要让玩家自己写怪物的名称，玩家可能并不了解怪物的英文名。你可以允许玩家通过输入怪物的英文名进行筛选查询，同时提供一个可滑动的列表，每一个表项的文字是怪物的template_name和其中文名的结合（通过i18n_key查询name，或者直接用template_name查询name）。
--- 在完成出怪工具栏的制作之后，参照上面的插件格式，需要让 game_editor.lua 支持导出为插件。特殊地，需要考虑，如果背景图片是由用户拖拽进入的，需要把图片也打包到插件中，并在插件的加载逻辑中正确加载这些图片资源。导出插件时，需要让用户输入 $entry 作为插件的唯一标识符，这个标识符将被用来创建插件的目录结构，并作为索引来存储和访问该插件的相关数据和资源。
--- 需要注意的是，不同的插件中，完全有可能出现 $num 冲突的情况。因此，在本文件中，我们并不将 $num 作为索引，而是将 $entry 作为索引。
--- 在视觉上，本界面以卡片列表的形式展示每个自定义地图，卡片上显示地图名称、地图缩略图、作者、版本，简介，目前获得的星星数，并提供一个“游玩”按钮。当鼠标悬浮在卡片上时，卡片应当有一个悬浮动画效果。点击游玩按钮时，进入进一步的模式选择界面，这可以参考 screen_map 中的 LevelSelectView。不过，应当注意，我们需要检查插件是否支持了英雄或钢铁模式。如果没有，就不应该出现对应的选择按钮。
--- 确定进入关卡后，跳转到 game 场景。
--- 需要注意的是，game 场景中用到的 system，里面可能有些初始化逻辑没有和插件这种特殊路径做适配。我们可以选择进行适配，也可以选择直接写一个新的 system 来专门处理自定义地图的加载和运行。无论如何，我们都需要确保自定义地图的资源能够正确加载。
--- 需要单独制定一个存档文件，用来存储特殊关卡的进度。这个存档文件同样采用 entry 作为索引，记录每个自定义地图的进度信息，包括获得的星星数、是否完成了英雄模式和钢铁模式等。(可见 storage.lua，现有存档模板为 slot_2.lua，需与该文件区分开)
+local log = require("lib.klua.log"):new("screen_custom_map")
+local SU = require("screen_utils")
+local V = require("lib.klua.vector")
+local v = V.v
+local persistence = require("lib.klua.persistence")
+local FS = love.filesystem
+
+require("klove.kui")
+
+local screen = {}
+screen.ref_h = 1080
+screen.ref_w = 1920
+screen.ref_res = TEXTURE_SIZE_ALIAS.fullhd
+screen.required_textures = {}
+
+local PLUGINS_DIR = "game_editor/plugins"
+local SAVE_FILE = "custom_slot.lua"
+
+local function load_lua_file(path)
+	local f, err = FS.load(path)
+	if not f then
+		return nil, err
+	end
+	local ok, data = pcall(f)
+	if not ok then
+		return nil, data
+	end
+	return data
+end
+
+local function load_progress()
+	local data = load_lua_file(SAVE_FILE)
+	if type(data) ~= "table" then
+		return {
+			maps = {}
+		}
+	end
+	data.maps = data.maps or {}
+	return data
+end
+
+local function save_progress(data)
+	local out = persistence.serialize_to_string(data)
+	FS.write(SAVE_FILE, out)
+end
+
+local function scan_maps()
+	local maps = {}
+	local ok, entries = pcall(FS.getDirectoryItems, PLUGINS_DIR)
+	if not ok or not entries then
+		return maps
+	end
+
+	for _, entry in ipairs(entries) do
+		local base = PLUGINS_DIR .. "/" .. entry
+		local info = FS.getInfo(base)
+		if info and info.type == "directory" then
+			local cfg = load_lua_file(base .. "/config.lua")
+			if type(cfg) == "table" then
+				local level_name = cfg.level_name or string.format("level%02d", tonumber(cfg.level_idx) or 1)
+				local level_idx = tonumber(cfg.level_idx) or tonumber(level_name:match("level(%d+)")) or 1
+				local wave_root = base .. "/data/waves/"
+				local has_campaign = FS.getInfo(wave_root .. level_name .. "_waves_campaign.lua") ~= nil
+				if has_campaign then
+					maps[#maps + 1] = {
+						entry = entry,
+						base = base,
+						cfg = cfg,
+						level_name = level_name,
+						level_idx = level_idx,
+						has_heroic = FS.getInfo(wave_root .. level_name .. "_waves_heroic.lua") ~= nil,
+						has_iron = FS.getInfo(wave_root .. level_name .. "_waves_iron.lua") ~= nil
+					}
+				end
+			end
+		end
+	end
+
+	table.sort(maps, function(a, b)
+		return (a.cfg.name or a.entry) < (b.cfg.name or b.entry)
+	end)
+	return maps
+end
+
+function screen:init(w, h, done_callback)
+	self.done_callback = done_callback
+	self.progress = load_progress()
+	self.maps = scan_maps()
+	local sw, sh, scale, origin = SU.clamp_window_aspect(w, h, self.ref_w, self.ref_h)
+	self.sw, self.sh = sw, sh
+	self._scroll = 0
+
+	local window = KWindow:new(v(sw, sh))
+	window.scale = v(scale, scale)
+	window.origin = origin
+	window.colors.background = {12, 16, 26, 255}
+	self.window = window
+
+	local header = KView:new(v(sw - 80, 84))
+	header.pos = v(40, 18)
+	header.colors.background = {18, 24, 38, 235}
+	window:add_child(header)
+
+	local title = KLabel:new(v(sw - 280, 56))
+	title.pos = v(140, 10)
+	title.text = "自定义地图"
+	title.text_align = "left"
+	title.vertical_align = "middle"
+	title.font_size = 28
+	title.colors.text = {242, 228, 188, 255}
+	header:add_child(title)
+
+	local hint = KLabel:new(v(sw - 280, 22))
+	hint.pos = v(140, 52)
+	hint.text = "来自插件目录 game_editor/plugins，支持战役/英雄/钢铁模式自动识别"
+	hint.text_align = "left"
+	hint.vertical_align = "middle"
+	hint.font_size = 13
+	hint.colors.text = {178, 192, 216, 255}
+	header:add_child(hint)
+
+	local back_btn = KButton:new(v(160, 36))
+	back_btn.pos = v(16, 24)
+	back_btn.text = "返回"
+	back_btn.colors.background = {52, 66, 94, 255}
+	back_btn.colors.text = {230, 230, 230, 255}
+	function back_btn.on_click()
+		self.done_callback({
+			next_item_name = "map"
+		})
+	end
+	header:add_child(back_btn)
+
+	local list_view = KView:new(v(sw - 80, sh - 140))
+	list_view.pos = v(40, 112)
+	list_view.clip = true
+	list_view.colors.background = {16, 22, 34, 225}
+	window:add_child(list_view)
+	self.list_view = list_view
+
+	self.list_content = KView:new(v(list_view.size.x, 0))
+	list_view:add_child(self.list_content)
+	self:rebuild_cards()
+end
+
+function screen:rebuild_cards()
+	self.list_content:remove_children()
+	local card_w = self.list_view.size.x - 24
+	local card_h = 150
+	local y = 12
+	local progress = self.progress.maps or {}
+
+	if #self.maps == 0 then
+		local empty = KLabel:new(v(card_w, 60))
+		empty.pos = v(12, y + 40)
+		empty.text = "未发现可游玩的地图插件（需存在 campaign 出怪文件）"
+		empty.text_align = "center"
+		empty.vertical_align = "middle"
+		empty.colors.text = {210, 210, 210, 255}
+		self.list_content:add_child(empty)
+		self.list_content.size = v(self.list_view.size.x, y + 120)
+		return
+	end
+
+	for _, map in ipairs(self.maps) do
+		local card = KView:new(v(card_w, card_h))
+		card.pos = v(12, y)
+		card.colors.background = {28, 36, 54, 255}
+		local base_y = y
+		function card.on_enter(this)
+			this.pos = v(this.pos.x, base_y - 2)
+			this.colors.background = {42, 56, 84, 255}
+		end
+		function card.on_exit(this)
+			this.pos = v(this.pos.x, base_y)
+			this.colors.background = {28, 36, 54, 255}
+		end
+
+		local accent = KView:new(v(6, card_h))
+		accent.colors.background = {194, 148, 48, 255}
+		card:add_child(accent)
+
+		local p = progress[map.entry] or {}
+		local name = KLabel:new(v(card_w - 260, 30))
+		name.pos = v(24, 10)
+		name.text = map.cfg.name or map.entry
+		name.colors.text = {242, 228, 188, 255}
+		name.font_size = 22
+		name.vertical_align = "middle"
+		card:add_child(name)
+
+		local meta = KLabel:new(v(card_w - 260, 24))
+		meta.pos = v(24, 44)
+		meta.text = string.format("作者: %s   版本: %s   星星: %d", map.cfg.by or "匿名", map.cfg.version or "1.0", tonumber(p.stars) or 0)
+		meta.colors.text = {210, 210, 210, 255}
+		meta.font_size = 14
+		meta.vertical_align = "middle"
+		card:add_child(meta)
+
+		local desc = KLabel:new(v(card_w - 260, 52))
+		desc.pos = v(24, 72)
+		desc.text = map.cfg.desc or "无简介"
+		desc.colors.text = {185, 196, 220, 255}
+		desc.font_size = 13
+		desc.line_height = 1.2
+		card:add_child(desc)
+
+		local mode_badge = KLabel:new(v(170, 26))
+		mode_badge.pos = v(card_w - 340, 14)
+		mode_badge.text = string.format("模式: 战役%s%s", map.has_heroic and " / 英雄" or "", map.has_iron and " / 钢铁" or "")
+		mode_badge.text_align = "right"
+		mode_badge.vertical_align = "middle"
+		mode_badge.font_size = 12
+		mode_badge.colors.text = {182, 198, 226, 255}
+		card:add_child(mode_badge)
+
+		local done_badge = KLabel:new(v(170, 22))
+		done_badge.pos = v(card_w - 340, 40)
+		done_badge.text = string.format("完成: 英雄[%s] 钢铁[%s]", p.heroic and "√" or " ", p.iron and "√" or " ")
+		done_badge.text_align = "right"
+		done_badge.vertical_align = "middle"
+		done_badge.font_size = 12
+		done_badge.colors.text = {160, 178, 210, 255}
+		card:add_child(done_badge)
+
+		local play_btn = KButton:new(v(130, 42))
+		play_btn.pos = v(card_w - 150, card_h - 55)
+		play_btn.text = "游玩"
+		play_btn.colors.background = {44, 108, 68, 255}
+		play_btn.colors.text = {255, 255, 255, 255}
+		function play_btn.on_click()
+			self:show_mode_select(map)
+		end
+		card:add_child(play_btn)
+
+		self.list_content:add_child(card)
+		y = y + card_h + 12
+	end
+
+	self.list_content.size = v(self.list_view.size.x, y + 8)
+end
+
+function screen:show_mode_select(map)
+	if self.mode_popup then
+		self.window:remove_child(self.mode_popup)
+	end
+
+	local pw, ph = 460, 240
+	local panel = KView:new(v(pw, ph))
+	panel.anchor = v(pw * 0.5, ph * 0.5)
+	panel.pos = v(self.sw * 0.5, self.sh * 0.5)
+	panel.colors.background = {18, 24, 38, 248}
+	self.window:add_child(panel)
+	self.mode_popup = panel
+
+	local title = KLabel:new(v(pw, 42))
+	title.text = "选择模式 - " .. (map.cfg.name or map.entry)
+	title.text_align = "center"
+	title.vertical_align = "middle"
+	title.font_size = 18
+	title.colors.text = {242, 228, 188, 255}
+	panel:add_child(title)
+
+	local function add_mode_button(text, mode, y)
+		local b = KButton:new(v(180, 36))
+		b.pos = v((pw - 180) * 0.5, y)
+		b.text = text
+		b.colors.background = {44, 62, 90, 255}
+		b.colors.text = {240, 240, 240, 255}
+		function b.on_click()
+			self:start_custom_game(map, mode)
+		end
+		panel:add_child(b)
+	end
+
+	add_mode_button("战役", GAME_MODE_CAMPAIGN, 60)
+	if map.has_heroic then
+		add_mode_button("英雄", GAME_MODE_HEROIC, 106)
+	end
+	if map.has_iron then
+		add_mode_button("钢铁", GAME_MODE_IRON, map.has_heroic and 152 or 106)
+	end
+
+	local close_btn = KButton:new(v(120, 30))
+	close_btn.pos = v((pw - 120) * 0.5, ph - 42)
+	close_btn.text = "取消"
+	function close_btn.on_click()
+		panel.hidden = true
+	end
+	panel:add_child(close_btn)
+end
+
+function screen:start_custom_game(map, mode)
+	self.done_callback({
+		next_item_name = "game",
+		level_idx = map.level_idx,
+		level_mode = mode,
+		level_difficulty = DIFFICULTY_NORMAL,
+		custom_map_entry = map.entry,
+		custom_map_level_name = map.level_name,
+		custom_map_root = map.base,
+		custom_map_return_to = "custom_map",
+		custom_map_bg_image = map.cfg.background_image and (map.base .. "/" .. map.cfg.background_image) or nil,
+		custom_map_bg_sprite = map.cfg.background_sprite,
+		custom_map_battle_music = map.cfg.battle_music and (map.base .. "/" .. map.cfg.battle_music) or nil,
+		custom_map_battle_prep_music = map.cfg.battle_prep_music and (map.base .. "/" .. map.cfg.battle_prep_music) or nil
+	})
+end
+
+function screen:update(dt)
+	self.window:update(dt)
+	return true
+end
+
+function screen:draw()
+	self.window:draw()
+end
+
+function screen:keypressed(key, isrepeat)
+	self.window:keypressed(key, isrepeat)
+	if key == "escape" then
+		self.done_callback({
+			next_item_name = "map"
+		})
+	end
+end
+
+function screen:keyreleased(key)
+	self.window:keyreleased(key)
+end
+
+function screen:textinput(t)
+	self.window:textinput(t)
+end
+
+function screen:mousepressed(x, y, button)
+	self.window:mousepressed(x, y, button)
+end
+
+function screen:mousereleased(x, y, button)
+	self.window:mousereleased(x, y, button)
+end
+
+function screen:wheelmoved(dx, dy)
+	self.window:wheelmoved(dx, dy)
+	local max_scroll = math.max(0, self.list_content.size.y - self.list_view.size.y)
+	self._scroll = math.max(0, math.min(max_scroll, self._scroll - dy * 28))
+	self.list_content.pos = v(0, -self._scroll)
+end
+
+function screen:destroy()
+	if self.window then
+		self.window:destroy()
+	end
+	self.window = nil
+end
+
+return screen

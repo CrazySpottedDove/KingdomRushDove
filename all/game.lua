@@ -130,6 +130,14 @@ game.simulation_systems = {
 	"wave_generator"
 }
 
+local function get_battle_prep_music_id(store)
+	if store and store.custom_music and store.custom_music.battle_prep then
+		return store.custom_music.battle_prep
+	end
+
+	return string.format("MusicBattlePrep_%02d", store.level_idx)
+end
+
 local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_done)
 	self.tick_length_limit = TICK_LENGTH * 1.1
 	self.dash_start_offset = 0
@@ -245,7 +253,7 @@ function game:init(screen_w, screen_h)
 	self.game_gui = game_gui
 	self.store.game_gui = game_gui
 	if not self.store.level.show_comic_idx or self.store.level_mode ~= GAME_MODE_CAMPAIGN then
-		S:queue(string.format("MusicBattlePrep_%02d", self.store.level_idx))
+		S:queue(get_battle_prep_music_id(self.store))
 	end
 end
 
@@ -276,7 +284,7 @@ function game:restart()
 	self.simulation:init(self.store, self.simulation_systems)
 	self.game_gui:init(self.screen_w, self.screen_h, self)
 	S:stop_all()
-	S:queue(string.format("MusicBattlePrep_%02d", self.store.level_idx))
+	S:queue(get_battle_prep_music_id(self.store))
 
 	self:init_debug()
 	signal.emit("game-start", self.store)

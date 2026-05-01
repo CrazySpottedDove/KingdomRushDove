@@ -6130,13 +6130,10 @@ function OptionsView:initialize(sw, sh)
 		custom_map_button.pos.y = button_height
 		function custom_map_button.on_click()
 			S:queue("GUIButtonCommon")
-			local CustomMapBrowser = require("game_editor_custom_map_browser")
-			local view = CustomMapBrowser:new(screen_map.sw, screen_map.sh, function(outcome)
-				screen_map.option_panel:hide()
-				screen_map.done_callback(outcome)
-			end)
-			screen_map.window:add_child(view)
-			view:show()
+			screen_map.option_panel:hide()
+			screen_map.done_callback({
+				next_item_name = "custom_map"
+			})
 		end
 		self.back:add_child(custom_map_button)
 

@@ -12,6 +12,7 @@ function interface.config_default()
 end
 
 local function distribute_total_amount_to_groups_randomly(total, n, min_each)
+	min_each = tonumber(min_each) or 0
 	local result = {}
 
 	for i = 1, n do
@@ -48,7 +49,7 @@ local function distribute_total_amount_to_groups_randomly(total, n, min_each)
 end
 
 --- 生成单子波
---- @param config_sub_wave table 该子波的配置数据
+--- @param config_wave table 该子波的配置数据
 local function generate_wave(config_wave)
 	-- 1. 根据金币总量，随机地生成一个数量列表，每个数量对应一个敌人类型
 	local gold = config_wave.gold
@@ -138,17 +139,15 @@ local function generate_wave(config_wave)
 		spawn.interval_next = interval - spawn.interval * spawn.max
 	end
 
-	table.random_order(spawns)
-
 	return {
-		delay = config_wave.delay,
+		delay = config_wave.delay * 30,
 		path_index = config_wave.path_index,
-		spawns = spawns
+		spawns = table.random_order(spawns)
 	}
 end
 
 --- 生成单波
---- @param config_group table 该波的配置数据
+--- @param config_group table& 该波的配置数据(保证原本的有效数据不被修改)
 --- @return table 生成的单波数据
 function interface.generate_group(config_group)
 	local interval = config_group.interval
@@ -164,8 +163,7 @@ function interface.generate_group(config_group)
 	for i = 1, wave_count do
 		config_waves[i].gold = golds[i]
 		config_waves[i].interval = (interval - config_waves[i].delay - config_waves[i].rest) * 30
-		config_waves[i].delay = config_waves[i].delay * 30
-		config_waves[i].rest = nil -- 生成完后就不需要 rest 了
+		config_waves[i].delay = config_waves[i].delay
 		waves[i] = generate_wave(config_waves[i])
 	end
 
