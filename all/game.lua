@@ -227,8 +227,6 @@ local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_d
 
 	self.simulation = simulation
 
-	coroutine.yield()
-
 	self:init_debug()
 	signal.emit("game-start", self.store)
 end

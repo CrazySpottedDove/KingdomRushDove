@@ -673,18 +673,22 @@ function editor:load_level(idx, mode)
 		s.level_name = "level" .. string.format("%02i", idx)
 		s.level_mode = mode
 		s.level_difficulty = DIFFICULTY_EASY
-		s.level = LU.load_level(s, s.level_name, true)
+		s.level = LU.load_level(s, s.level_name)
 		if not s.level.data then
 			s.level.data = {}
 		end
 		-- custom_resource_table(s.level.data)
 		director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
 
-		if s.level.data.required_exoskeletons then
-			EXO:queue_load(s.level.data.required_exoskeletons)
-			EXO:load(s.level.data.required_exoskeletons)
+		if s.level.required_exoskeletons then
+			EXO:queue_load(s.level.required_exoskeletons)
+			EXO:load(s.level.required_exoskeletons)
 		end
 		-- self:load_custom_resources()
+
+		if s.level.init then
+			s.level:init(s)
+		end
 
 		if s.level.data.entities_list then
 			LU.insert_entities(self.store, s.level.data.entities_list, true)
