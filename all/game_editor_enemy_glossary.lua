@@ -40,8 +40,8 @@ function EnemyGlossaryView:initialize(sw, sh)
 	title.colors.background = {232, 232, 232, 255}
 	panel:add_child(title)
 
-	local close_btn = KButton:new(v(30, 28))
-	close_btn.text = "X"
+	local close_btn = KButton:new(v(30, 20))
+	close_btn.text = "x"
 	close_btn.pos = v(pw - 34, 3)
 	close_btn.colors.background = {220, 180, 180, 255}
 	close_btn.colors.text = {20, 20, 20, 255}

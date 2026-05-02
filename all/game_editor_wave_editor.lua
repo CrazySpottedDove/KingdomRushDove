@@ -81,8 +81,8 @@ function WaveEditorView:initialize(sw, sh, editor, opts)
 	title.colors.text = C.text
 	panel:add_child(title)
 
-	local close_btn = KButton:new(V.v(26, 24))
-	close_btn.text = "X"
+	local close_btn = KButton:new(V.v(30, 20))
+	close_btn.text = "x"
 	close_btn.pos = v(pw - 30, 5)
 	close_btn.colors.background = {220, 180, 180, 255}
 	close_btn.colors.text = C.text

@@ -88,8 +88,8 @@ function WaveConfigView:initialize(sw, sh, editor)
 	title.colors.text = C.text
 	panel:add_child(title)
 
-	local close_btn = KButton:new(V.v(26, 24))
-	close_btn.text = "X"
+	local close_btn = KButton:new(V.v(30, 20))
+	close_btn.text = "x"
 	close_btn.pos = v(pw - 30, 5)
 	close_btn.colors.background = {220, 180, 180, 255}
 	close_btn.colors.text = C.text
@@ -274,11 +274,11 @@ function WaveConfigView:_build_form()
 		self._content:add_child(del_group_btn)
 		y = y + 28
 
-		local g_interval = self:_create_prop("波的长度(秒)", group.interval)
+		local g_interval = self:_create_prop("持续时间/秒(interval)", group.interval)
 		g_interval.pos = v(10, y)
 		self._content:add_child(g_interval)
 
-		local g_gold = self:_create_prop("该波总金币", group.total_gold)
+		local g_gold = self:_create_prop("本波金币量(gold)", group.total_gold)
 		g_gold.pos = v(220, y)
 		self._content:add_child(g_gold)
 		y = y + 46
@@ -290,11 +290,11 @@ function WaveConfigView:_build_form()
 		}
 
 		for wi, wave in ipairs(group.waves or {}) do
-			local w_delay = self:_create_prop(string.format("子波%d 延迟秒(delay)", wi), wave.delay or 0)
+			local w_delay = self:_create_prop(string.format("子波%d 延迟/秒(delay)", wi), wave.delay or 0)
 			w_delay.pos = v(40, y)
 			self._content:add_child(w_delay)
 
-			local w_rest = self:_create_prop(string.format("子波%d 留白秒(rest)", wi), wave.rest or 0)
+			local w_rest = self:_create_prop(string.format("子波%d 留白/秒(rest)", wi), wave.rest or 0)
 			w_rest.pos = v(250, y)
 			self._content:add_child(w_rest)
 

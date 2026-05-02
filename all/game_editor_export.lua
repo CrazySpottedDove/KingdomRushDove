@@ -149,8 +149,8 @@ function EditorExportView:initialize(sw, sh, editor)
 	title.font_name = "h"
 	panel:add_child(title)
 
-	local close_btn = KButton:new(V.v(30, 30))
-	close_btn.text = "X"
+	local close_btn = KButton:new(V.v(30, 20))
+	close_btn.text = "x"
 	close_btn.pos = v(pw - 40, 12)
 	close_btn.colors.background = {120, 50, 50, 255}
 	close_btn.colors.text = {255, 255, 255, 255}

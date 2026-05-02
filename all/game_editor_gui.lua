@@ -289,9 +289,6 @@ function gui:init(w, h, editor)
 	}
 	wid("entities_insert").on_click = nil
 	wid("entities_insert").text = "插入实体(A) [仅快捷键]"
-	wid("entities_search").on_click = function()
-		gui:search_entity_suggestions()
-	end
 	wid("entities_selected").hidden = true
 
 	-- 设置实体自动补全
@@ -1748,10 +1745,7 @@ function gui:_rebuild_entity_hint()
 	end
 	local left = entities_panel.pos.x + prop.pos.x
 	local top = entities_panel.pos.y + prop.pos.y
-	local text_w = 0
-	if G and G.getFont and G.getFont() then
-		text_w = G.getFont():getWidth(tostring(prop.value or ""))
-	end
+	local text_w = G.getFont():getWidth(tostring(prop.value or ""))
 	local px = math.min(self.sw - self._entity_hint.size.x - 12, left + 8 + text_w)
 	local py = top + prop.size.y + 30
 	if py + self._entity_hint.size.y > self.sh - 8 then
@@ -1907,39 +1901,6 @@ function gui:duplicate_entity()
 
 	LU.queue_insert(self.editor.store, de)
 	self:select_entity(de)
-end
-
-function gui:search_entity_suggestions()
-	local tv = wid("entities_insert_template")
-	local list = wid("entities_search_suggestions")
-	local str = tv.value
-
-	if str and string.len(str) >= 3 then
-		local results = E:search_entity(str)
-
-		list:clear_rows()
-
-		for i = 1, 10 do
-			local tn = results[i]
-
-			if not tn then
-				break
-			end
-
-			local l = KLabel:new(V.v(list.size.x, 20))
-
-			l.text_align = "left"
-			l.text = tn
-			l.font_name = "body"
-			l.font_size = 8
-
-			function l.on_click()
-				tv:set_value(tn)
-			end
-
-			list:add_row(l)
-		end
-	end
 end
 
 function gui:update_paths_list()
