@@ -47,13 +47,15 @@ local STATE_COMMITTING_CHANGES = 3
 local STATE_SELECT_URL = 4
 local STATE_CHECK_UPDATE = 5
 local STATE_CHECKING_ASSETS = 6
+local STATE_DOWNLOADING_ASSETS_HEAVY = 7 -- 【新增】大规模资源更新状态（超过1000个文件）
 local STATE_STRING_MAP = {
 	[STATE_CHECKING_ASSETS] = "校验美术资源中……",
 	[STATE_DOWNLOADING_ASSETS] = "下载美术资源中（可能需要较长时间）……",
 	[STATE_DOWNLOADING_CODE] = "下载代码资源中……",
 	[STATE_COMMITTING_CHANGES] = "提交更新事务中……",
 	[STATE_SELECT_URL] = "选择更新地址中……",
-	[STATE_CHECK_UPDATE] = "检查更新中……"
+	[STATE_CHECK_UPDATE] = "检查更新中……",
+	[STATE_DOWNLOADING_ASSETS_HEAVY] = "下载巨量美术资源中，强烈建议直接下载本体⊙﹏⊙∥"
 }
 local state = STATE_DOWNLOADING_ASSETS
 local update_log_line_max_count = 20
@@ -789,17 +791,6 @@ local function diff_assets()
 				local_info[2] = file_hash("_assets/" .. file)
 			end
 
-			-- TODO: 数个版本后，可删去本兼容性代码
-			if not local_info[1] then
-				local_info[1] = local_info.size
-			end
-			if not info[1] then
-				info[1] = info.size
-			end
-			if not info[2] then
-				info[2] = info.hash
-			end
-
 			if local_info[1] ~= info[1] or local_info[2] ~= info[2] then
 				added_or_modified[#added_or_modified + 1] = file
 			end
@@ -815,10 +806,15 @@ local function sync_assets(added_or_modified)
 	if not server_address or not update_cache_dir then
 		return true
 	end
-	set_state(STATE_DOWNLOADING_ASSETS)
 
 	local url_base = server_address .. "assets/download"
 	local file_count = #added_or_modified
+
+	if file_count > 1000 then
+		set_state(STATE_DOWNLOADING_ASSETS_HEAVY)
+	else
+		set_state(STATE_DOWNLOADING_ASSETS)
+	end
 
 	for i, file_path in ipairs(added_or_modified) do
 		-- 下载到缓存目录，而不是直接覆盖本地文件
