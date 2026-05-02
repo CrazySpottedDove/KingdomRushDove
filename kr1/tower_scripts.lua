@@ -20003,6 +20003,7 @@ function scripts.tower_paladin_covenant.soldier_update(this, store)
 					a_h.disabled = nil
 					a_h.cooldown = p.cooldown[p.level]
 					a_h.lost_health = p.health_trigger_factor[p.level]
+					a_h.beat_back_damage_value = p.beat_back_damage_value[p.level]
 				elseif p == pow_l and this.soldier.tower_soldier_idx and this.soldier.tower_soldier_idx == 1 then
 					local b = p.b
 
@@ -20069,8 +20070,6 @@ function scripts.tower_paladin_covenant.soldier_update(this, store)
 				local a = a_h
 
 				if not a.disabled and this.health.hp <= this.health.hp_max * a.lost_health and store.tick_ts - a.ts > a.cooldown then
-					local needs_cleanup = false
-
 					U.animation_start(this, a.animation .. "_start", nil, store.tick_ts)
 					S:queue(a.sound)
 
@@ -20078,7 +20077,6 @@ function scripts.tower_paladin_covenant.soldier_update(this, store)
 					-- block empty
 					else
 						a.ts = store.tick_ts
-						needs_cleanup = true
 
 						for _, m in ipairs(a.mods) do
 							local mod = E:create_entity(m)
@@ -20108,6 +20106,24 @@ function scripts.tower_paladin_covenant.soldier_update(this, store)
 							end
 						end
 						this.health.immune_to = F_NONE
+
+						local decal_beat_back = E:create_entity("decal_paladin_holystrike")
+						decal_beat_back.pos:copy(this.pos)
+						decal_beat_back.render.sprites[1].ts = store.tick_ts
+						queue_insert(store, decal_beat_back)
+
+						local enemies = U.find_enemies_in_range_filter_off(this.pos, 50, bor(F_STUN, F_TELEPORT), bor(F_FLYING, F_BOSS))
+						if enemies then
+							for i = 1, #enemies do
+								local damage = E:create_entity("damage")
+								damage.value = a.beat_back_damage_value * this.unit.damage_factor
+								damage.damage_type = a.beat_back_damage_type
+								damage.source_id = this.id
+								damage.target_id = enemies[i].id
+								queue_damage(store, damage)
+								SU.beat_back_enemy(enemies[i], a.beat_back_distance, a.beat_back_duration)
+							end
+						end
 					end
 				end
 			end

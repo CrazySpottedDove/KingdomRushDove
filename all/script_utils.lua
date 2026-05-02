@@ -4902,4 +4902,59 @@ function SU.unmock_enemy(target)
 	target._mock_source_id = nil
 end
 
+local function enemy_beat_back_logic(this, store)
+	local beat_back_distance = this._beat_back_distance
+	local beat_back_duration = this._beat_back_duration
+	local start_pos = V.vclone(this.pos)
+	-- 避免击退效果被传送影响
+	U.bans_add(this.vis, F_TELEPORT)
+	U.unblock_all(store, this)
+
+	-- 初始化一个缓动状态，使得击退效果拥有一个平滑的过渡过程
+	-- 该运动函数需保证约在 beat_back_duration 时间内使单位移动 beat_back_distance 距离
+	-- 这里使用一个简单的线性缓动函数，实际使用中可以根据需要替换为其他类型的缓动函数
+
+	-- 临时更新 motion 的 real_speed，在结束时重新动态计算
+	this.motion.real_speed = 2 * beat_back_distance / beat_back_duration
+
+	this.nav_path.dir = -this.nav_path.dir
+
+	local a = -this.motion.real_speed / beat_back_duration
+	local dt = 0
+	local start_ts = store.tick_ts
+	local last_ts = store.tick_ts
+
+	-- 使用 idle 动画作为击退过程的动画
+	local flip_x = this.motion and this.motion.dest.x < this.pos.x or nil
+	U.animation_start(this, "idle", flip_x, store.tick_ts, true)
+
+	-- 在击退过程中，持续更新单位位置，直到达到预定的击退时间
+	while store.tick_ts - start_ts < beat_back_duration do
+		dt = store.tick_ts - last_ts
+		last_ts = store.tick_ts
+		this.motion.real_speed = math.max(this.motion.real_speed + a * dt, 0)
+		local next_pos = P:next_entity_node(this, dt)
+		U.set_destination(this, next_pos)
+		U.walk(this, dt)
+		coroutine.yield()
+		this.motion.speed.x, this.motion.speed.y = 0, 0
+	end
+
+	-- 保持前后一致性
+	U.bans_remove(this.vis, F_TELEPORT)
+	this.motion.real_speed = U.real_max_speed(this)
+	this.nav_path.dir = -this.nav_path.dir
+	this._beat_back_distance = nil
+	this._beat_back_duration = nil
+end
+
+function SU.beat_back_enemy(target, distance, duration)
+	if U.overwrite_main_script(target, enemy_beat_back_logic) then
+		target._beat_back_distance = distance
+		target._beat_back_duration = duration
+		return true
+	end
+	return false
+end
+
 return SU

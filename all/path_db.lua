@@ -327,6 +327,77 @@ function path_db:point_within_distance(x, y, dist)
 	return false
 end
 
+--- 以给定的 nav_path 为中心，快速查找邻近的同一路径中离 pos 最近的节点，返回 ni
+--- 该函数的开销较少，在能够满足要求时，应使用该函数，避免使用 nearest_nodes 进行全路径搜索
+---@param pos ffi.cdata vector
+---@param nav_path ffi.cdata nav_path
+function path_db:nearest_node_with_nav_path_info(pos, nav_path)
+	local path = self.paths[nav_path.pi][nav_path.spi]
+
+	-- 避免越界
+	if nav_path.ni < 1 then
+		return 1
+	end
+	local node_count = #path
+	if nav_path.ni > node_count then
+		return node_count
+	end
+
+	-- 先记录 nav_path 对应节点和 pos 的距离
+
+	local current_node = path[nav_path.ni]
+	local dx = current_node.x - pos.x
+	local dy = current_node.y - pos.y
+	-- 用于比较的当前距离平方
+	local current_dist2 = dx * dx + dy * dy
+
+	-- 先正向检查，发现递减结束时停下
+	local forward_ni = nav_path.ni
+	local forward_dist2 = current_dist2
+	while forward_ni < node_count do
+		-- 探测下一个节点和 pos 的距离平方
+		local node = path[forward_ni + 1]
+		local dx = node.x - pos.x
+		local dy = node.y - pos.y
+		local dist2 = dx * dx + dy * dy
+
+		-- 更近，更新 forward_dist2 和 forward_ni
+		if dist2 < forward_dist2 then
+			forward_dist2 = dist2
+			forward_ni = forward_ni + 1
+		else
+			-- 不再递减，停下
+			break
+		end
+	end
+
+	-- 再反向检查，发现递减结束时停下
+	local backward_ni = nav_path.ni
+	local backward_dist2 = current_dist2
+	while backward_ni > 1 do
+		-- 探测前一个节点和 pos 的距离平方
+		local node = path[backward_ni - 1]
+		local dx = node.x - pos.x
+		local dy = node.y - pos.y
+		local dist2 = dx * dx + dy * dy
+		-- 更近，更新 backward_dist2 和 backward_ni
+		if dist2 < backward_dist2 then
+			backward_dist2 = dist2
+			backward_ni = backward_ni - 1
+		else
+			-- 不再递减，停下
+			break
+		end
+	end
+
+	-- 比较 forward_ni 和 backward_ni 哪个更近，返回更近的那个
+	if forward_dist2 < backward_dist2 then
+		return forward_ni
+	else
+		return backward_ni
+	end
+end
+
 --- 查找距离指定点 (x, y) 最近的路径节点列表（可筛选路径、子路径、有效性等）。该函数可能开销较大，请合理使用。
 ---@param x number 目标点的x坐标
 ---@param y number 目标点的y坐标

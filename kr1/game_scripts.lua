@@ -16633,15 +16633,17 @@ function scripts.mod_timelapse.remove(this, store)
 		SU.show_modifiers(store, target, true, this)
 		SU.show_auras(store, target, true)
 	else
-		local e = E:create_entity("high_elven_sentinel_extra")
+		if this.template_name == "mod_timelapse" then
+			local e = E:create_entity("high_elven_sentinel_extra")
 
-		if target then
-			e.pos:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
-		else
-			e.pos:copy(this.pos)
+			if target then
+				e.pos:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+			else
+				e.pos:copy(this.pos)
+			end
+
+			queue_insert(store, e)
 		end
-
-		queue_insert(store, e)
 	end
 
 	return true

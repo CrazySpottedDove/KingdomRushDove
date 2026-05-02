@@ -9737,4 +9737,15 @@ function scripts.mod_do_damage_by_movement.update(this, store)
 	end
 end
 
+scripts.mod_goback = {}
+
+function scripts.mod_goback.insert(this, store)
+end
+
+function scripts.mod_goback.update(this, store)
+end
+
+function scripts.mod_goback.remove(this, store)
+end
+
 return scripts

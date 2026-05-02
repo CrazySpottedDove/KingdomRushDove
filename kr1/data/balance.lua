@@ -5606,11 +5606,15 @@ local towers = {
 		healing_prayer = {
 			duration = 4,
 			heal_every = 0.25,
-			price = {140, 140, 140},
+			price = {175, 150},
 			health_trigger_factor = {0.25, 0.25, 0.25},
 			heal = {4, 7, 10},
 			s_healing = {16, 28, 40},
-			cooldown = {28, 25, 22}
+			cooldown = {28, 25, 22},
+			beat_back_radius = 50,
+			beat_back_distance = 50,
+			beat_back_damage_value = {40, 80, 120},
+			beat_back_damage_type = DAMAGE_MAGICAL
 		}
 	},
 	royal_archers = {
