@@ -2212,6 +2212,7 @@ scripts.tower_arcane_wizard = {
 				b.aura.source_id = this.id
 				b.aura.max_count = pow_t.max_count_base + pow_t.max_count_inc * pow_t.level
 				b.aura.level = pow_t.level
+				b.aura.damage_factor = tw.damage_factor
 			else
 				if attack == ad then
 					update_base_damage()
