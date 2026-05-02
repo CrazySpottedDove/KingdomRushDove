@@ -11,7 +11,6 @@ local signal = require("lib.hump.signal")
 local V = require("lib.klua.vector")
 local F = require("lib.klove.font_db")
 local simulation, A
-local serpent = require("serpent")
 local I = require("lib.klove.image_db")
 local S = require("sound_db")
 local E = require("entity_db")
@@ -680,18 +679,15 @@ function editor:load_level(idx, mode)
 		end
 		-- custom_resource_table(s.level.data)
 		director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
-		if s.level.required_exoskeletons then
-			EXO:queue_load(s.level.required_exoskeletons)
-			EXO:load()
+
+		if s.level.data.required_exoskeletons then
+			EXO:queue_load(s.level.data.required_exoskeletons)
+			EXO:load(s.level.data.required_exoskeletons)
 		end
 		-- self:load_custom_resources()
 
 		if s.level.data.entities_list then
 			LU.insert_entities(self.store, s.level.data.entities_list, true)
-		end
-
-		if s.level.data.required_exoskeletons then
-			EXO:load(s.level.data.required_exoskeletons)
 		end
 
 		if not s.level.nav_mesh then

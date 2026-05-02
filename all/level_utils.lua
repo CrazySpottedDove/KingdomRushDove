@@ -11,7 +11,6 @@ local GS = require("kr1.game_settings")
 local I = require("lib.klove.image_db")
 local G = require("love.graphics")
 local P = require("path_db")
-local serpent = require("serpent")
 local bit = require("bit")
 local bor = bit.bor
 local U = require("utils")

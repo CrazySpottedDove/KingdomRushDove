@@ -2,6 +2,50 @@
 local write, writeIndent, writers, refCount, stringWriter
 local persistence = {}
 
+local function is_array(t)
+	-- 纯数组：键为 1..n 的连续整数，且没有其他键
+	if type(t) ~= "table" then
+		return false
+	end
+
+	local n = #t
+	local count = 0
+
+	for k, _ in pairs(t) do
+		if type(k) ~= "number" or k < 1 or k > n or k % 1 ~= 0 then
+			return false
+		end
+
+		count = count + 1
+	end
+
+	return count == n
+end
+
+local key_words = {
+	["and"] = true,
+	["break"] = true,
+	["do"] = true,
+	["else"] = true,
+	["elseif"] = true,
+	["end"] = true,
+	["false"] = true,
+	["for"] = true,
+	["function"] = true,
+	["if"] = true,
+	["in"] = true,
+	["local"] = true,
+	["nil"] = true,
+	["not"] = true,
+	["or"] = true,
+	["repeat"] = true,
+	["return"] = true,
+	["then"] = true,
+	["true"] = true,
+	["until"] = true,
+	["while"] = true
+}
+
 function persistence.store(path, ...)
 	local file, e = io.open(path, "w")
 
@@ -68,23 +112,31 @@ function persistence.serialize(file, ...)
 		end
 	end
 
+	if n == 0 then
+		file:write("return\n")
+		return
+	end
+
+	if n == 1 then
+		file:write("return ")
+		write(file, select(1, ...), 0, objRefNames)
+		file:write("\n")
+		return
+	end
+
 	for i = 1, n do
 		file:write("local " .. "obj" .. i .. " = ")
 		write(file, select(i, ...), 0, objRefNames)
 		file:write("\n")
 	end
 
-	if n > 0 then
-		file:write("return obj1")
+	file:write("return obj1")
 
-		for i = 2, n do
-			file:write(" ,obj" .. i)
-		end
-
-		file:write("\n")
-	else
-		file:write("return\n")
+	for i = 2, n do
+		file:write(" ,obj" .. i)
 	end
+
+	file:write("\n")
 end
 
 function persistence.serialize_to_string(...)
@@ -148,38 +200,54 @@ writers = {
 		else
 			file:write("{\n")
 
-			local keys = {}
-
-			for k, v in pairs(item) do
-				table.insert(keys, k)
-			end
-
-			table.sort(keys, function(e1, e2)
-				local te1, te2 = type(e1), type(e2)
-
-				if te1 == "number" and te2 == "number" then
-					return e1 < e2
-				elseif te1 == "string" and te2 == "string" then
-					return e1 < e2
-				elseif te1 == "number" then
-					return true
-				else
-					return false
-				end
-			end)
-
-			for _, k in pairs(keys) do
-				local v = item[k]
-				-- 我们暂时不序列化这些无法序列化的类型
-				local value_type = type(v)
-
-				if value_type ~= "function" and value_type ~= "thread" and value_type ~= "userdata" then
+			if is_array(item) then
+				for i = 1, #item do
 					writeIndent(file, level + 1)
-					file:write("[")
-					write(file, k, level + 1, objRefNames)
-					file:write("] = ")
-					write(file, v, level + 1, objRefNames)
-					file:write(";\n")
+					write(file, item[i], level + 1, objRefNames)
+					file:write(",\n")
+				end
+			else
+				local keys = {}
+
+				for k, v in pairs(item) do
+					table.insert(keys, k)
+				end
+
+				table.sort(keys, function(e1, e2)
+					local te1, te2 = type(e1), type(e2)
+
+					if te1 == "number" and te2 == "number" then
+						return e1 < e2
+					elseif te1 == "string" and te2 == "string" then
+						return e1 < e2
+					elseif te1 == "number" then
+						return true
+					else
+						return false
+					end
+				end)
+
+				for _, k in ipairs(keys) do
+					local v = item[k]
+					-- 我们暂时不序列化这些无法序列化的类型
+					local value_type = type(v)
+
+					if value_type ~= "function" and value_type ~= "thread" and value_type ~= "userdata" then
+						if type(k) == "string" and k:match("^[%a_][%w_]*$") and (not key_words[k]) then
+							writeIndent(file, level + 1)
+							file:write(k)
+							file:write(" = ")
+							write(file, v, level + 1, objRefNames)
+							file:write(",\n")
+						else
+							writeIndent(file, level + 1)
+							file:write("[")
+							write(file, k, level + 1, objRefNames)
+							file:write("] = ")
+							write(file, v, level + 1, objRefNames)
+							file:write(",\n")
+						end
+					end
 				end
 			end
 
@@ -250,26 +318,6 @@ end
 
 local write_compact
 
-local function is_array(t)
-	-- 纯数组：键为 1..n 的连续整数，且没有其他键
-	if type(t) ~= "table" then
-		return false
-	end
-
-	local n = #t
-	local count = 0
-
-	for k, _ in pairs(t) do
-		if type(k) ~= "number" or k < 1 or k > n or k % 1 ~= 0 then
-			return false
-		end
-
-		count = count + 1
-	end
-
-	return count == n
-end
-
 function persistence.serialize_compact(file, ...)
 	-- 紧凑版本：不生成 multiRefObjects，不排序键，不缩进
 	-- 适合 v3 的数组密集结构（如 EXO），体积更小
@@ -312,30 +360,6 @@ function persistence.serialize_to_string_compact(...)
 
 	return str
 end
-
-local key_words = {
-	["and"] = true,
-	["break"] = true,
-	["do"] = true,
-	["else"] = true,
-	["elseif"] = true,
-	["end"] = true,
-	["false"] = true,
-	["for"] = true,
-	["function"] = true,
-	["if"] = true,
-	["in"] = true,
-	["local"] = true,
-	["nil"] = true,
-	["not"] = true,
-	["or"] = true,
-	["repeat"] = true,
-	["return"] = true,
-	["then"] = true,
-	["true"] = true,
-	["until"] = true,
-	["while"] = true
-}
 
 write_compact = function(file, item)
 	local t = type(item)

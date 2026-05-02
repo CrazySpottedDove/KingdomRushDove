@@ -1,6 +1,5 @@
 -- chunkname: @./mods/all/hook_utils.lua
 local log = require("lib.klua.log"):new("hook_utils")
-local serpent = require("serpent")
 local hook_utils = {}
 
 -- 元表：自动创建不存在表

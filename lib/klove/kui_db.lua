@@ -1,6 +1,5 @@
--- chunkname: @./lib/klove/kui_db.lua
+-- DEPRECATED: 我们的 UI 并不稳定，我们并不希望有人使用这个库，保留它只是考虑历史兼容性。
 local log = require("lib.klua.log"):new("kui_db")
-local serpent = require("serpent")
 
 require("lib.klua.string")
 
@@ -11,44 +10,6 @@ function kui_db:init(templates_path, reload)
 	self.paths = string.split(templates_path, ";")
 	self.reload = reload
 	self.templates = {}
-end
-
-if DEBUG then
-	function kui_db:write(name, str)
-		local usepath = self.paths[1]
-
-		for _, path in pairs(self.paths) do
-			local filename = path .. "/" .. name .. ".lua"
-
-			if love.filesystem.getInfo(filename) then
-				usepath = path
-
-				break
-			end
-		end
-
-		local filename = KR_FULLPATH_BASE .. "/" .. usepath .. "/" .. name .. ".lua"
-		local out = "return " .. str .. "\n"
-		local f = io.open(filename, "w")
-
-		f:write(out)
-		f:flush()
-		f:close()
-	end
-
-	function kui_db:put(name, str)
-		self:write(name, str)
-
-		self.templates[name] = str
-	end
-
-	function kui_db:put_table(name, t)
-		self:extract_templates(t)
-
-		local str = self:pretty_print(t)
-
-		self:put(name, str)
-	end
 end
 
 function kui_db:read(name)
@@ -179,61 +140,6 @@ function kui_db:replace_templates(t, ctx)
 	end
 
 	return out
-end
-
-function kui_db:extract_templates(t)
-	if t.template_name and t._template_table then
-		self:put_table(t.template_name, t._template_table)
-
-		t._template_table = nil
-	end
-
-	if t.children then
-		for _, c in pairs(t.children) do
-			self:extract_templates(c)
-		end
-	end
-end
-
-function kui_db:pretty_print(t)
-	local function custom_sort(k, o)
-		local function sort(a, b)
-			if a == "class" then
-				return true
-			elseif b == "class" then
-				return false
-			elseif a == "id" then
-				return true
-			elseif b == "id" then
-				return false
-			elseif a == "children" then
-				return false
-			elseif b == "children" then
-				return true
-			else
-				return a < b
-			end
-		end
-
-		table.sort(k, sort)
-	end
-
-	require("debug")
-
-	local function custom_format(tag, head, body, tail, level)
-		local class_body = string.find(body, "^class")
-
-		return tag .. (class_body and "\n" .. string.rep("    ", level) or "") .. head .. body .. tail
-	end
-
-	return serpent.line(t, {
-		comment = false,
-		sortkeys = custom_sort,
-		custom = custom_format,
-		keyignore = {
-			_template_table = true
-		}
-	})
 end
 
 return kui_db

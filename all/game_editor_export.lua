@@ -4,7 +4,7 @@ require("gg_views_custom")
 
 local V = require("lib.klua.vector")
 local v = V.v
-local serpent = require("serpent")
+local storage = require("all.storage")
 local FS = love.filesystem
 
 local EditorExportView = class("EditorExportView", PopUpView)
@@ -114,11 +114,7 @@ function EditorExportView.save_custom_save(data)
 		maps = {}
 	}
 	data.maps = data.maps or {}
-	FS.write(CUSTOM_SAVE_FILE, "return " .. serpent.block(data, {
-		indent = "    ",
-		sortkeys = true,
-		comment = false
-	}) .. "\n")
+	storage:write_lua(CUSTOM_SAVE_FILE, data)
 end
 
 function EditorExportView:initialize(sw, sh, editor)
@@ -331,12 +327,7 @@ function EditorExportView:_do_export()
 		end
 	end
 
-	local cfg_str = serpent.block(cfg, {
-		indent = "    ",
-		sortkeys = true,
-		comment = false
-	})
-	FS.write(plugin_dir .. "/config.lua", "return " .. cfg_str .. "\n")
+	storage:write_lua(plugin_dir .. "/config.lua", cfg)
 
 	if not ok_snapshot or not has_data or not has_paths then
 		self.editor.gui:show_save_notification("导出完成，但缺少关键文件(data/paths)", false)

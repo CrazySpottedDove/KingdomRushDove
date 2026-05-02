@@ -8,7 +8,6 @@ require("lib.klua.table")
 
 local V = require("lib.klua.vector")
 local GR = require("grid_db")
-local serpent = require("serpent")
 local path_db = {}
 
 local function is_file(path)
