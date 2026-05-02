@@ -7118,8 +7118,6 @@ function scripts.mod_teleport.update(this, store)
 		U.y_wait(store, this.delay_end)
 	end
 
-	U.sprites_show(target, nil, nil, true)
-
 	if target.health and not target.health.dead then
 		if target.ui then
 			target.ui.can_click = true
@@ -7129,6 +7127,7 @@ function scripts.mod_teleport.update(this, store)
 			target.health_bar.hidden = health_bar_hidden
 		end
 
+		U.sprites_show(target, nil, nil, true)
 		SU.show_modifiers(store, target, true)
 		SU.show_auras(store, target, true)
 	end

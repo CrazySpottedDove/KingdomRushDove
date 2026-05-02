@@ -137,30 +137,40 @@ local function level_up_basic(this)
 	return hl, ls
 end
 
---- ultimate 索敌
+--- ultimate 索敌。默认在敌人数量较多时或者有血量比较高的敌人时返回有效的 target。返回敌人和敌人数量。
 ---@param this table
 ---@param store table
 ---@param range number
 ---@param ignore_bigguy boolean|nil
 ---@param require_foremost boolean|nil
 ---@param vis_bans number|nil
-local function find_target_at_critical_moment(this, store, range, ignore_bigguy, require_foremost, vis_bans)
-	local target = nil
-	local _, targets = U.find_foremost_enemy_in_range_filter_off(this.pos, range, 0, F_RANGED, vis_bans or 0)
+---@param filter function|nil
+---@return table, number
+local function find_target_at_critical_moment(this, store, range, ignore_bigguy, require_foremost, vis_bans, filter)
+	local target, targets
+
+	if filter then
+		target, targets = U.find_foremost_enemy_in_range_filter_on(this.pos, range, 0, F_RANGED, vis_bans or 0, filter)
+	else
+		target, targets = U.find_foremost_enemy_in_range_filter_off(this.pos, range, 0, F_RANGED, vis_bans or 0)
+	end
+
+	target = nil
+
 	local num = 0
 
 	if targets then
 		num = #targets
 
 		if not ignore_bigguy then
-			for _, t in pairs(targets) do
+			for _, t in ipairs(targets) do
 				if t.health and t.health.hp > BIG_ENEMY_HP then
 					return t, num
 				end
 			end
 		end
 
-		if #targets > MANY_ENEMY_COUNT then
+		if num > MANY_ENEMY_COUNT then
 			if require_foremost then
 				target = targets[1]
 			else
@@ -19591,8 +19601,7 @@ function scripts.hero_space_elf.level_up(this, store)
 	upgrade_skill(this, "ultimate", function(this, s)
 		local u = this.hero.skills.ultimate
 		local uc = E:get_template(u.controller_name)
-		local aura = E:get_template(uc.entity)
-		local modifier = E:get_template(aura.aura.mod)
+		local modifier = E:get_template(uc.entity)
 
 		modifier.modifier.duration = s.duration[s.level]
 		modifier.damage = s.damage[s.level]
@@ -19843,6 +19852,10 @@ function scripts.hero_space_elf.update(this, store)
 
 	this.health_bar.hidden = false
 
+	local function ultimate_filter_fn(e)
+		return not e.unit.is_stunned
+	end
+
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -19858,7 +19871,7 @@ function scripts.hero_space_elf.update(this, store)
 			end
 
 			if ready_to_use_skill(this.ultimate, store) then
-				local target = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range, false, false, bor(F_BOSS, F_FLYING))
+				local target = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range, false, false, bor(F_BOSS, F_FLYING), ultimate_filter_fn)
 
 				if target and U.has_valid_rally_node_nearby(target.pos) then
 					U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
@@ -20599,29 +20612,32 @@ end
 scripts.hero_space_elf_ultimate = {}
 
 function scripts.hero_space_elf_ultimate.update(this, store)
-	local function spawn_aura(pi, spi, ni)
-		local pos = P:node_pos(pi, spi, ni)
-		local a = E:create_entity(this.entity)
-
-		a.pos = pos
-
-		queue_insert(store, a)
-
-		local d = E:create_entity(this.decal)
-
-		d.pos = pos
-		d.render.sprites[1].ts = store.tick_ts
-
-		queue_insert(store, d)
-	end
-
 	local nearest = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
 
 	if #nearest > 0 then
 		local pi, spi, ni = unpack(nearest[1])
 
 		if P:is_node_valid(pi, ni) then
-			spawn_aura(pi, 1, ni)
+			local pos = P:node_pos(pi, 1, ni)
+
+			local d = E:create_entity(this.decal)
+			d.pos = pos
+			d.render.sprites[1].ts = store.tick_ts
+			queue_insert(store, d)
+
+			local enemies = U.find_enemies_in_range_filter_on(pos, this.radius, F_RANGED, F_NONE, function(e)
+				return not e.unit.is_stunned
+			end)
+
+			if enemies then
+				for i = 1, #enemies do
+					local m = E:create_entity(this.entity)
+					m.modifier.target_id = enemies[i].id
+					m.modifier.damage_factor = this.damage_factor
+					m.modifier.source_id = this.id
+					queue_insert(store, m)
+				end
+			end
 		end
 	end
 
@@ -20629,86 +20645,6 @@ function scripts.hero_space_elf_ultimate.update(this, store)
 end
 
 scripts.mod_hero_space_elf_ultimate = {}
-
-function scripts.mod_hero_space_elf_ultimate.queue(this, store, insertion)
-	local target = store.entities[this.modifier.target_id]
-
-	if not target then
-		return
-	end
-
-	if insertion then
-		log.debug("%s (%s) queue/insertion", this.template_name, this.id)
-
-		if U.flags_pass(target.vis, this.modifier) then
-			this._target_prev_bans = target.vis.bans
-		-- target.vis.bans = F_ALL
-		-- target.health.ignore_damage = true
-		end
-	else
-		log.debug("%s (%s) queue/removal", this.template_name, this.id)
-
-		if this._target_prev_bans then
-			target.vis.bans = this._target_prev_bans
-			target.health.ignore_damage = false
-		end
-
-		if this._decal_timelapse then
-			queue_remove(store, this._decal_timelapse)
-
-			if target.ui then
-				target.ui.can_click = true
-			end
-
-			if target.health_bar then
-				target.health_bar.hidden = nil
-			end
-
-			U.sprites_show(target, nil, nil, true)
-			SU.show_modifiers(store, target, true, this)
-			SU.show_auras(store, target, true)
-		end
-	end
-end
-
-function scripts.mod_hero_space_elf_ultimate.dequeue(this, store, insertion)
-	local target = store.entities[this.modifier.target_id]
-
-	if not target then
-		return
-	end
-
-	if insertion then
-		log.debug("%s (%s) dequeue/insertion", this.template_name, this.id)
-
-		if this._target_prev_bans then
-			target.vis.bans = this._target_prev_bans
-			target.health.ignore_damage = false
-		end
-	end
-end
-
-function scripts.mod_hero_space_elf_ultimate.insert(this, store)
-	local target = store.entities[this.modifier.target_id]
-
-	if target and target.health and not target.health.dead and this._target_prev_bans ~= nil then
-		SU.stun_inc(target)
-
-		return true
-	else
-		return false
-	end
-end
-
-function scripts.mod_hero_space_elf_ultimate.remove(this, store)
-	local target = store.entities[this.modifier.target_id]
-
-	if target then
-		SU.stun_dec(target)
-	end
-
-	return true
-end
 
 function scripts.mod_hero_space_elf_ultimate.update(this, store)
 	local m = this.modifier
@@ -20734,22 +20670,20 @@ function scripts.mod_hero_space_elf_ultimate.update(this, store)
 
 	local es = E:create_entity(this.decal)
 
-	if not target.render.sprites[1].exo then
-		this._decal_timelapse = es
-		es.pos.x, es.pos.y = target.pos.x, target.pos.y
-		es.render = U.render_clone(target.render)
+	this._decal_timelapse = es
+	es.pos.x, es.pos.y = target.pos.x, target.pos.y
+	es.render = U.render_clone(target.render)
 
-		local tween_keys = es.tween.props[1].keys
+	local tween_keys = es.tween.props[1].keys
 
-		for i, s in ipairs(es.render.sprites) do
-			es.tween.props[i] = E:clone_c("tween_prop")
-			es.tween.props[i].keys = tween_keys
-			es.tween.props[i].sprite_id = i
-		end
-
-		queue_insert(store, es)
-		U.y_wait(store, fts(1))
+	for i, s in ipairs(es.render.sprites) do
+		es.tween.props[i] = E:clone_c("tween_prop")
+		es.tween.props[i].keys = tween_keys
+		es.tween.props[i].sprite_id = i
 	end
+
+	queue_insert(store, es)
+	U.y_wait(store, fts(1))
 
 	U.unblock_all(store, target)
 
@@ -20803,22 +20737,6 @@ function scripts.mod_hero_space_elf_ultimate.update(this, store)
 	S:queue(this.out_sfx)
 	U.y_animation_wait(this)
 
-	if not target.health.dead then
-		if target.health_bar then
-			target.health_bar.hidden = nil
-		end
-
-		U.sprites_show(target, nil, nil, true)
-		SU.show_modifiers(store, target, true, this)
-		SU.show_auras(store, target, true)
-	end
-
-	queue_remove(store, es)
-
-	this._decal_timelapse = nil
-
-	queue_remove(store, this)
-
 	if this.interrupt then
 		target.health.hp = 0
 
@@ -20837,6 +20755,8 @@ function scripts.mod_hero_space_elf_ultimate.update(this, store)
 	end
 
 	signal.emit("mod-applied", this, target)
+
+	queue_remove(store, this)
 end
 
 scripts.hero_raelyn = {}

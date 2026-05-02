@@ -1044,14 +1044,6 @@ function sys.render:on_render_update(dt, ts, store)
 			local last_runs = s.runs
 			local fn
 
-			-- 我找遍了所有的文件，也没有找到哪里是通过这种方式实现动画的，怀疑是一个奇怪的历史遗留补丁，因此先注释掉看看
-			-- if s.animation then
-			-- 	A:generate_frames(s.animation)
-
-			-- 	fn, s.runs, s.frame_idx = A:fni(s.animation, ts - s.ts + s.time_offset, s.loop, s.fps)
-			--     log.error("看到请报告作者：entity %s has animation, which is no longer supported, please convert it to animated", e.template_name)
-			--     log.error("Animation name: %s", fn)
-			-- else
 			if s.animated then
 				fn, s.runs, s.frame_idx = A:fn(s.prefix and (s.prefix .. "_" .. s.name) or s.name, ts - s.ts + s.time_offset, s.loop, s.fps)
 				s.frame_name = fn

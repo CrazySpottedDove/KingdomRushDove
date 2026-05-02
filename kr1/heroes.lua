@@ -12154,20 +12154,7 @@ tt.render.sprites[3].loop = false
 tt.render.sprites[3].animated = true
 tt.main_script.update = scripts.aura_hero_space_elf_void_rift.update
 tt.ignore_damage = false
---#endregion
---#region aura_hero_space_elf_ultimate
-tt = RT("aura_hero_space_elf_ultimate", "aura")
-b = balance.heroes.hero_space_elf
-AC(tt, "track_damage")
-tt.aura.duration = fts(1)
-tt.aura.radius = b.ultimate.radius
-tt.aura.vis_bans = F_FRIEND
-tt.aura.vis_flags = F_RANGED
-tt.aura.mod = "mod_hero_space_elf_ultimate"
-tt.main_script.insert = scripts.aura_apply_mod.insert
-tt.main_script.update = scripts.aura_apply_mod.update
---#endregion
---#region mod_hero_space_elf_black_aegis
+
 tt = RT("mod_hero_space_elf_black_aegis", "modifier")
 
 AC(tt, "render", "health_bar", "health")
@@ -12268,8 +12255,6 @@ tt.tween.props[2].keys = {{0, vec_2(0, 0)}, {fts(30), vec_2(0, 10)}, {fts(60), v
 tt.tween.props[2].sprite_id = 1
 tt.tween.props[2].disabled = true
 tt.tween.props[2].loop = true
-tt.main_script.queue = scripts.mod_timelapse.queue
-tt.main_script.dequeue = scripts.mod_timelapse.dequeue
 tt.main_script.update = scripts.mod_hero_space_elf_ultimate.update
 tt.main_script.insert = scripts.mod_timelapse.insert
 tt.main_script.remove = scripts.mod_timelapse.remove
@@ -12283,9 +12268,10 @@ tt.decal = "decal_hero_space_elf_ultimate_mod"
 --#region controller_hero_space_elf_ultimate
 tt = RT("controller_hero_space_elf_ultimate")
 AC(tt, "pos", "main_script", "sound_events")
-tt.entity = "aura_hero_space_elf_ultimate"
+tt.entity = "mod_hero_space_elf_ultimate"
 tt.decal = "decal_hero_space_elf_ultimate"
 tt.main_script.update = scripts.hero_space_elf_ultimate.update
+tt.radius = balance.heroes.hero_space_elf.ultimate.radius
 --#endregion
 --#region hero_raelyn
 tt = RT("hero_raelyn", "hero")

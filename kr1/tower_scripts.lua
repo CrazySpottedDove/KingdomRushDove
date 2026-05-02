@@ -1870,14 +1870,6 @@ scripts.tower_high_elven = {
 		return o
 	end,
 	remove = function(this, store)
-		local mods = table.filter(store.modifiers, function(_, e)
-			return e.modifier and e.modifier.source_id == this.id and e.template_name == "mod_high_elven"
-		end)
-
-		for _, m in pairs(mods) do
-			queue_remove(store, m)
-		end
-
 		for _, s in pairs(this.sentinels) do
 			s.owner = nil
 

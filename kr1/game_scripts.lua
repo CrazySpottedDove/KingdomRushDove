@@ -16603,68 +16603,45 @@ end
 
 scripts.mod_timelapse = {}
 
-function scripts.mod_timelapse.queue(this, store, insertion)
-	local target = store.entities[this.modifier.target_id]
-
-	if not target then
-		return
-	end
-
-	if insertion then
-		log.debug("%s (%s) queue/insertion", this.template_name, this.id)
-
-		if U.flags_pass(target.vis, this.modifier) then
-			this._target_prev_bans = target.vis.bans
-		end
-	else
-		log.debug("%s (%s) queue/removal", this.template_name, this.id)
-
-		if this._target_prev_bans then
-			target.vis.bans = this._target_prev_bans
-			target.health.ignore_damage = false
-		end
-
-		if this._decal_timelapse then
-			queue_remove(store, this._decal_timelapse)
-
-			if target.ui then
-				target.ui.can_click = true
-			end
-
-			if target.health_bar then
-				target.health_bar.hidden = nil
-			end
-
-			U.sprites_show(target, nil, nil, true)
-			SU.show_modifiers(store, target, true, this)
-			SU.show_auras(store, target, true)
-		end
-	end
-end
-
-function scripts.mod_timelapse.dequeue(this, store, insertion)
-	return
-end
-
 function scripts.mod_timelapse.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
-	if target and target.health and not target.health.dead and this._target_prev_bans ~= nil then
+	if target and not target.health.dead and U.flags_pass(target.vis, this.modifier) then
 		SU.stun_inc(target)
 		U.cast_silence(target, store.tick_ts)
 
 		return true
-	else
-		return false
 	end
+
+	return false
 end
 
 function scripts.mod_timelapse.remove(this, store)
+	queue_remove(store, this._decal_timelapse)
+
 	local target = store.entities[this.modifier.target_id]
 
-	if target then
+	if target and not target.health.dead then
 		SU.stun_dec(target)
 		U.remove_silence(target, store.tick_ts)
+
+		if target.health_bar then
+			target.health_bar.hidden = nil
+		end
+
+		U.sprites_show(target, nil, nil, true)
+		SU.show_modifiers(store, target, true, this)
+		SU.show_auras(store, target, true)
+	else
+		local e = E:create_entity("high_elven_sentinel_extra")
+
+		if target then
+			e.pos:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+		else
+			e.pos:copy(this.pos)
+		end
+
+		queue_insert(store, e)
 	end
 
 	return true
@@ -16674,7 +16651,7 @@ function scripts.mod_timelapse.update(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
 
-	if not target or not target.health or target.health.dead then
+	if not target or target.health.dead then
 		queue_remove(store, this)
 
 		return
@@ -16742,29 +16719,16 @@ function scripts.mod_timelapse.update(this, store)
 	es.tween.reverse = true
 	es.tween.ts = store.tick_ts
 
-	U.y_animation_wait(this)
-	queue_remove(store, es)
-
-	this._decal_timelapse = nil
-
-	if not target.health.dead then
-		if target.health_bar then
-			target.health_bar.hidden = nil
+	while not U.animation_finished(this) do
+		if target.health.dead then
+			for i = 1, #es.render.sprites do
+				es.render.sprites[i].hidden = true
+			end
 		end
-
-		U.sprites_show(target, nil, nil, true)
-		SU.show_modifiers(store, target, true, this)
-		SU.show_auras(store, target, true)
-	else
-		local e = E:create_entity("high_elven_sentinel_extra")
-
-		e.pos.x = target.pos.x + target.unit.hit_offset.x
-		e.pos.y = target.pos.y + target.unit.hit_offset.y
-
-		queue_insert(store, e)
+		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	-- U.y_animation_wait(this)
 
 	if this.interrupt then
 		target.health.hp = 0
@@ -16775,6 +16739,7 @@ function scripts.mod_timelapse.update(this, store)
 	end
 
 	signal.emit("mod-applied", this, target)
+	queue_remove(store, this)
 end
 
 scripts.mod_arrow_arcane_slumber = {}
