@@ -48,6 +48,7 @@ local STATE_SELECT_URL = 4
 local STATE_CHECK_UPDATE = 5
 local STATE_CHECKING_ASSETS = 6
 local STATE_DOWNLOADING_ASSETS_HEAVY = 7 -- 【新增】大规模资源更新状态（超过1000个文件）
+local STATE_DOWNLOADING_ASSETS_MIDDLE_HEAVY = 8 -- 【新增】中等规模资源更新状态（超过100个文件）
 local STATE_STRING_MAP = {
 	[STATE_CHECKING_ASSETS] = "校验美术资源中……",
 	[STATE_DOWNLOADING_ASSETS] = "下载美术资源中（可能需要较长时间）……",
@@ -55,7 +56,8 @@ local STATE_STRING_MAP = {
 	[STATE_COMMITTING_CHANGES] = "提交更新事务中……",
 	[STATE_SELECT_URL] = "选择更新地址中……",
 	[STATE_CHECK_UPDATE] = "检查更新中……",
-	[STATE_DOWNLOADING_ASSETS_HEAVY] = "下载巨量美术资源中，强烈建议直接下载本体⊙﹏⊙∥"
+	[STATE_DOWNLOADING_ASSETS_HEAVY] = "下载巨量美术资源中，强烈建议直接下载本体⊙﹏⊙∥",
+	[STATE_DOWNLOADING_ASSETS_MIDDLE_HEAVY] = "下载大量美术资源中，如不成功可下载本体……"
 }
 local state = STATE_DOWNLOADING_ASSETS
 local update_log_line_max_count = 20
@@ -812,6 +814,8 @@ local function sync_assets(added_or_modified)
 
 	if file_count > 1000 then
 		set_state(STATE_DOWNLOADING_ASSETS_HEAVY)
+	elseif file_count > 100 then
+		set_state(STATE_DOWNLOADING_ASSETS_MIDDLE_HEAVY)
 	else
 		set_state(STATE_DOWNLOADING_ASSETS)
 	end
