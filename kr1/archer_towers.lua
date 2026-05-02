@@ -20,12 +20,6 @@ local function ady(v)
 end
 local V = require("lib.klua.vector")
 local v = V.v
--- local function v(x, y)
--- 	return {
--- 		x = x,
--- 		y = y
--- 	}
--- end
 
 require("game_templates_utils")
 
@@ -154,9 +148,7 @@ tt.main_script.update = scripts.mod_thorn.update
 tt.main_script.remove = scripts.mod_thorn.remove
 
 local tower_crossbow = RT("tower_crossbow", "tower_archer_1")
-
 AC(tower_crossbow, "powers")
-
 tower_crossbow.info.portrait = "kr2_info_portraits_towers_0009"
 tower_crossbow.info.enc_icon = 17
 tower_crossbow.tower.type = "crossbow"
@@ -168,8 +160,8 @@ tower_crossbow.powers.multishot.name = "BARRAGE"
 tower_crossbow.powers.multishot.enc_icon = 7
 tower_crossbow.powers.multishot.attack_idx = 2
 tower_crossbow.powers.eagle = CC("power")
-tower_crossbow.powers.eagle.price_base = 200
-tower_crossbow.powers.eagle.price_inc = 200
+tower_crossbow.powers.eagle.price_base = 225
+tower_crossbow.powers.eagle.price_inc = 225
 tower_crossbow.powers.eagle.name = "FALCONER"
 tower_crossbow.powers.eagle.enc_icon = 8
 tower_crossbow.main_script.update = scripts.tower_crossbow.update
@@ -244,13 +236,11 @@ multishot_crossbow.render.sprites[1].animated = false
 multishot_crossbow.sound_events.insert = "ArrowSound"
 
 local mod_crossbow_eagle = RT("mod_crossbow_eagle", "modifier")
-
 AC(mod_crossbow_eagle, "render", "tween")
-
-mod_crossbow_eagle.range_factor = 1.03
-mod_crossbow_eagle.range_factor_inc = 0.03
-mod_crossbow_eagle.cooldown_factor = 0.965
-mod_crossbow_eagle.cooldown_factor_inc = -0.025
+mod_crossbow_eagle.range_factor = 1.025
+mod_crossbow_eagle.range_factor_inc = 0.025
+mod_crossbow_eagle.cooldown_factor = 0.95
+mod_crossbow_eagle.cooldown_factor_inc = -0.05
 mod_crossbow_eagle.main_script.insert = scripts.mod_crossbow_eagle.insert
 mod_crossbow_eagle.main_script.remove = scripts.mod_crossbow_eagle.remove
 mod_crossbow_eagle.tween.remove = false
