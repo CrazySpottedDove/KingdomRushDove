@@ -125,6 +125,10 @@ end
 function LU.eval_file(filename)
 	local f, err = love.filesystem.loadWithPreference(filename, {"game_editor", KR_PATH_GAME})
 
+	if not f then
+		return nil, "File does not exist"
+	end
+
 	if err then
 		log.info("Error loading file %s: %s", filename, err)
 
