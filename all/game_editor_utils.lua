@@ -63,6 +63,7 @@ function GEU.find_min_editor_index()
 		-- 匹配 level%02d_paths.lua（不匹配 _data, _grid, _paths 后缀）
 		local idx = f:match("^level(%d%d%d%d)_paths%.lua$")
 		if idx then
+			idx = tonumber(idx)
 			if idx < min_idx and idx > 9000 then
 				min_idx = idx
 			end
