@@ -293,6 +293,9 @@ function gui:init(w, h, editor)
 		gui:search_entity_suggestions()
 	end
 	wid("entities_selected").hidden = true
+
+	-- 设置实体自动补全
+	self:_setup_entity_autocomplete()
 	wid("entities_duplicate").on_click = function()
 		gui:duplicate_entity()
 	end
@@ -827,6 +830,20 @@ function gui:update(dt)
 			self._save_notification = nil
 			self._save_notification_ts = nil
 		end
+	end
+
+	-- 更新实体自动补全
+	self._active_entity_prop = nil
+	local template_prop = wid("entities_insert_template")
+	if template_prop and template_prop.is_focused then
+		self._active_entity_prop = template_prop
+	end
+	local active_id = self._active_entity_prop and tostring(self._active_entity_prop) or ""
+	local active_val = self._active_entity_prop and tostring(self._active_entity_prop.value or "") or ""
+	local key = active_id .. "|" .. active_val .. "|" .. tostring(self._entity_hint_index) .. "|" .. tostring(self._entity_hint_offset)
+	if key ~= self._entity_hint_cache_key then
+		self._entity_hint_cache_key = key
+		self:_rebuild_entity_hint()
 	end
 end
 
@@ -1622,6 +1639,177 @@ function gui:show_save_notification(text, is_success)
 	self.window:add_child(notif)
 	self._save_notification = notif
 	self._save_notification_ts = love.timer.getTime()
+end
+
+function gui:_setup_entity_autocomplete()
+	local entities_panel = wid("entities")
+	if not entities_panel then
+		return
+	end
+
+	-- 创建实体提示下拉框
+	local hint_w, hint_h = 320, 170
+	self._entity_hint = KView:new(V.v(hint_w, hint_h))
+	self._entity_hint.colors.background = {245, 245, 245, 255}
+	self._entity_hint.hidden = true
+	self._entity_hint.clip = true
+	self.window:add_child(self._entity_hint)
+
+	self._entity_hint_content = KView:new(V.v(self._entity_hint.size.x, 0))
+	self._entity_hint:add_child(self._entity_hint_content)
+
+	self._entity_hint_index = 1
+	self._entity_hint_items = {}
+	self._entity_hint_all = {}
+	self._entity_hint_offset = 1
+	self._active_entity_prop = nil
+	self._entity_rows = nil
+
+	-- 绑定实体模板输入框的按键处理
+	local template_prop = wid("entities_insert_template")
+	if template_prop then
+		self:_bind_entity_template_keys(template_prop)
+	end
+end
+
+function gui:_ensure_entity_rows()
+	if self._entity_rows then
+		return
+	end
+	E:ensure_loaded()
+	self._entity_rows = {}
+	for name, tpl in pairs(E.entities or {}) do
+		self._entity_rows[#self._entity_rows + 1] = {
+			name = name
+		}
+	end
+	table.sort(self._entity_rows, function(a, b)
+		return a.name < b.name
+	end)
+end
+
+function gui:_bind_entity_template_keys(prop)
+	local owner = self
+	function prop.on_keypressed(this, key)
+		if owner._entity_hint and not owner._entity_hint.hidden and #owner._entity_hint_all > 0 then
+			if key == "down" then
+				owner._entity_hint_index = math.min(#owner._entity_hint_all, owner._entity_hint_index + 1)
+				owner:_refresh_entity_hint_focus()
+				return true
+			elseif key == "up" then
+				owner._entity_hint_index = math.max(1, owner._entity_hint_index - 1)
+				owner:_refresh_entity_hint_focus()
+				return true
+			elseif key == "return" or key == "kpenter" then
+				owner:_accept_entity_hint(owner._entity_hint_all[owner._entity_hint_index].name)
+				return true
+			elseif key == "escape" then
+				owner._entity_hint.hidden = true
+				return true
+			end
+		end
+		return KEProp.on_keypressed(this, key)
+	end
+end
+
+function gui:_rebuild_entity_hint()
+	self:_ensure_entity_rows()
+	local prop = self._active_entity_prop
+	if not prop or prop.hidden or not prop.is_focused then
+		self._entity_hint.hidden = true
+		return
+	end
+	local text = tostring(prop.value or "")
+	local prefix = text:match("([^,%s]*)$") or ""
+	local low = string.lower(prefix)
+	if low == "" then
+		self._entity_hint.hidden = true
+		return
+	end
+	self._entity_hint_all = {}
+	for _, row in ipairs(self._entity_rows) do
+		if string.find(string.lower(row.name), low, 1, true) then
+			self._entity_hint_all[#self._entity_hint_all + 1] = row
+		end
+	end
+	if #self._entity_hint_all == 0 then
+		self._entity_hint.hidden = true
+		return
+	end
+	self._entity_hint_index = math.max(1, math.min(self._entity_hint_index or 1, #self._entity_hint_all))
+	self._entity_hint_offset = math.max(1, math.min(self._entity_hint_offset or 1, self._entity_hint_index))
+	self:_render_entity_hint_items()
+	self._entity_hint.hidden = false
+
+	local entities_panel = wid("entities")
+	if not entities_panel then
+		self._entity_hint.hidden = true
+		return
+	end
+	local left = entities_panel.pos.x + prop.pos.x
+	local top = entities_panel.pos.y + prop.pos.y
+	local text_w = 0
+	if G and G.getFont and G.getFont() then
+		text_w = G.getFont():getWidth(tostring(prop.value or ""))
+	end
+	local px = math.min(self.sw - self._entity_hint.size.x - 12, left + 8 + text_w)
+	local py = top + prop.size.y + 30
+	if py + self._entity_hint.size.y > self.sh - 8 then
+		py = top - self._entity_hint.size.y - 30
+	end
+	py = math.max(38, py)
+	self._entity_hint.pos = V.v(px, py)
+end
+
+function gui:_render_entity_hint_items()
+	self._entity_hint_content:remove_children()
+	self._entity_hint_items = {}
+	local row_h = 26
+	local max_rows = math.max(1, math.floor((self._entity_hint.size.y - 8) / row_h))
+	local max_offset = math.max(1, #self._entity_hint_all - max_rows + 1)
+	self._entity_hint_offset = math.max(1, math.min(self._entity_hint_offset, max_offset))
+	local y = 4
+	for i = self._entity_hint_offset, math.min(#self._entity_hint_all, self._entity_hint_offset + max_rows - 1) do
+		local row = self._entity_hint_all[i]
+		local btn = KButton:new(V.v(self._entity_hint.size.x - 8, 24))
+		btn.pos = V.v(4, y)
+		btn.text = row.name
+		btn.text_align = "left"
+		btn.colors.background = {236, 236, 236, 255}
+		btn.colors.text = {20, 20, 20, 255}
+		function btn.on_click()
+			self:_accept_entity_hint(row.name)
+		end
+		self._entity_hint_content:add_child(btn)
+		self._entity_hint_items[#self._entity_hint_items + 1] = {
+			name = row.name,
+			idx = i,
+			btn = btn
+		}
+		y = y + row_h
+	end
+	self._entity_hint_content.size = V.v(self._entity_hint.size.x, y + 4)
+	self:_refresh_entity_hint_focus()
+end
+
+function gui:_refresh_entity_hint_focus()
+	for _, item in ipairs(self._entity_hint_items) do
+		if item.idx == self._entity_hint_index then
+			item.btn.colors.background = {200, 200, 255, 255}
+		else
+			item.btn.colors.background = {236, 236, 236, 255}
+		end
+	end
+end
+
+function gui:_accept_entity_hint(name)
+	local prop = self._active_entity_prop
+	if not prop or not name then
+		return
+	end
+	prop:set_value(name)
+	self._entity_hint.hidden = true
+	self._entity_hint_all = {}
 end
 
 function gui:insert_entity()

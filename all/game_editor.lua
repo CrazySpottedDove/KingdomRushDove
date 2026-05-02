@@ -686,20 +686,16 @@ function editor:load_level(idx, mode)
 		end
 		-- self:load_custom_resources()
 
-		if s.level.data then
+		if s.level.data.entities_list then
 			LU.insert_entities(self.store, s.level.data.entities_list, true)
+		end
 
-			if s.level.data.required_exoskeletons then
-				EXO:load(s.level.data.required_exoskeletons)
-			end
+		if s.level.data.required_exoskeletons then
+			EXO:load(s.level.data.required_exoskeletons)
 		end
 
 		if not s.level.nav_mesh then
 			s.level.nav_mesh = {}
-
-			if not s.level.data then
-				s.level.data = {}
-			end
 
 			s.level.data.nav_mesh = s.level.nav_mesh
 		end
