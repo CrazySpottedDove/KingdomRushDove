@@ -15836,6 +15836,18 @@ tt.render.sprites[1].z = Z_BULLETS + 2
 tt.render.sprites[1].offset = v(0, 5)
 tt.render.sprites[1].scale = vv(1.25)
 
+tt = RT("mod_tower_stage_13_sunray_special", "modifier")
+local b = balance.specials.towers.stage_13_sunray.special_attack
+E:add_comps(tt, "dps")
+tt.modifier.duration = b.duration
+tt.dps.damage_min = b.damage_min
+tt.dps.damage_max = b.damage_max
+tt.dps.damage_type = DAMAGE_DISINTEGRATE
+tt.dps.damage_every = 1e+99
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+tt.main_script.remove = scripts.mod_tower_stage_13_sunray_special.remove
+
 tt = E:register_t("aura_controller_stage_14_amalgam", "aura")
 tt.aura.duration = 1e+99
 tt.aura.cycle_time = 0.25

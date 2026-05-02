@@ -32480,6 +32480,27 @@ function scripts.tower_stage_13_sunray.update(this, store)
 	end
 end
 
+scripts.mod_tower_stage_13_sunray_special = {}
+
+function scripts.mod_tower_stage_13_sunray_special.remove(this, store)
+	local target = store.entities[this.modifier.target_id]
+	local source = store.entities[this.modifier.source_id]
+
+	if target and source and target.health and target.health.dead then
+		local tower = store.entities[source.aura.source_id]
+
+		if tower then
+			tower.total_enemies_killed = tower.total_enemies_killed + 1
+
+			if tower.total_enemies_killed >= 10 then
+				signal.emit("sunray_kills-stage13", this)
+			end
+		end
+	end
+
+	return true
+end
+
 scripts.mod_sunray = {}
 
 function scripts.mod_sunray.update(this, store)
