@@ -398,6 +398,8 @@ function path_db:nearest_node_with_nav_path_info(pos, nav_path)
 	end
 end
 
+local perf = require("dove_modules.perf.perf")
+
 --- 查找距离指定点 (x, y) 最近的路径节点列表（可筛选路径、子路径、有效性等）。该函数可能开销较大，请合理使用。
 ---@param x number 目标点的x坐标
 ---@param y number 目标点的y坐标

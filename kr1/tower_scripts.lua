@@ -24427,10 +24427,6 @@ end
 
 scripts.soldier_dark_knight = {}
 
-function scripts.soldier_dark_knight.on_damage(this, store, damage)
-	return true
-end
-
 function scripts.soldier_dark_knight.insert(this, store)
 	if not scripts.soldier_barrack.insert(this, store) then
 		return false
@@ -24488,10 +24484,9 @@ function scripts.soldier_dark_knight.update(this, store)
 			SU.soldier_power_upgrade(this, "instakill")
 			local atk = this.melee.attacks[2]
 			atk.disabled = p_instakill.level < 1
-			atk.base_chance = atk.chance_inc * p_instakill.level
-			if atk.chance < atk.base_chance then
-				atk.chance = atk.base_chance
-			end
+			local new_base_chance = atk.chance_inc * p_instakill.level
+			atk.chance = atk.chance - atk.base_chance + new_base_chance
+			atk.base_chance = new_base_chance
 		end
 
 		if p_spike.changed then

@@ -65,7 +65,10 @@ function M.register(sys)
 		end
 
 		if e.main_script and e.main_script.update then
-			d.entities_with_main_script_on_update[e.id] = e
+			-- d.entities_with_main_script_on_update[e.id] = e
+			d.entities_with_main_script_on_update_count = d.entities_with_main_script_on_update_count + 1
+			d.entities_with_main_script_on_update_array[d.entities_with_main_script_on_update_count] = e
+			d.entities_with_main_script_on_update_index[e.id] = d.entities_with_main_script_on_update_count
 		end
 
 		if e.timed then
@@ -134,7 +137,15 @@ function M.register(sys)
 		end
 
 		if e.main_script and e.main_script.update then
-			d.entities_with_main_script_on_update[e.id] = nil
+			local index = d.entities_with_main_script_on_update_index[e.id]
+
+			-- 交换删除，保证数组的连续性
+			local last_entity = d.entities_with_main_script_on_update_array[d.entities_with_main_script_on_update_count]
+			d.entities_with_main_script_on_update_array[index] = last_entity
+			d.entities_with_main_script_on_update_index[last_entity.id] = index
+			d.entities_with_main_script_on_update_array[d.entities_with_main_script_on_update_count] = nil
+			d.entities_with_main_script_on_update_index[e.id] = nil
+			d.entities_with_main_script_on_update_count = d.entities_with_main_script_on_update_count - 1
 		end
 
 		if e.timed then
