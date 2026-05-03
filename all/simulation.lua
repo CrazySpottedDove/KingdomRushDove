@@ -220,6 +220,10 @@ function simulation:do_tick(dt)
 end
 
 function simulation:queue_insert_entity(e)
+	-- DEBUG USE
+	-- if not e then
+	--     error("Attempt to queue a nil entity" .. debug.traceback())
+	-- end
 	local d = self.store
 
 	for i = 1, self.systems_on_queue_count do

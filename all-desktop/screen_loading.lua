@@ -133,7 +133,7 @@ function screen:update(dt)
 	if self.director_ref.queued_item_init_co and coroutine.status(self.director_ref.queued_item_init_co) ~= "dead" then
 		local ok, err = coroutine.resume(self.director_ref.queued_item_init_co)
 		if not ok then
-			error("Error in loading coroutine: " .. tostring(err))
+			error("Error in loading coroutine: " .. tostring(err) .. "\n" .. debug.traceback(self.director_ref.queued_item_init_co))
 		end
 	end
 
