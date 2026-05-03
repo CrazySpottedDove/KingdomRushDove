@@ -870,7 +870,7 @@ function wave_db:load_lua(level_name, game_mode, endless)
 	local suffix = gms[game_mode]
 
 	local filename = string.format("data/waves/%s_waves_%s.lua", level_name, suffix)
-	local f, err = love.filesystem.loadWithPreference(filename, {"game_editor", KR_PATH_GAME})
+	local f, err = love.filesystem.loadWithPreference(filename, {EDITOR_PATH, KR_PATH_GAME})
 	if not f then
 		log.error("No wave file found for level %s and game mode %s. Tried to load %s. Error: %s", level_name, game_mode, filename, err)
 		return
@@ -886,7 +886,7 @@ function wave_db:load_lua(level_name, game_mode, endless)
 	wave_db.db = wtable
 
 	local extra_filename = string.format("data/waves/%s_waves_%s_extra.lua", level_name, suffix)
-	f, err = love.filesystem.loadWithPreference(extra_filename, {"game_editor", KR_PATH_GAME})
+	f, err = love.filesystem.loadWithPreference(extra_filename, {EDITOR_PATH, KR_PATH_GAME})
 	if f then
 		if err then
 			log.error("Failed to load extra wave file %s: %s", extra_filename, err)

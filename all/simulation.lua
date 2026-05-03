@@ -172,10 +172,14 @@ function simulation:render_update(dt)
 	end
 end
 
+-- local perf = require("dove_modules.perf.perf")
+
 function simulation:do_tick(dt)
 	local d = self.store
 
 	d.tick_ts = d.tick_ts + dt
+
+	-- perf.start("insert/remove")
 
 	-- 批量插入
 	local last_count = #d.pending_inserts
@@ -207,6 +211,8 @@ function simulation:do_tick(dt)
 	for i = #d.pending_removals, #d.pending_removals - last_count + 1, -1 do
 		d.pending_removals[i] = nil
 	end
+
+	-- perf.stop("insert/remove")
 
 	for i = 1, self.systems_on_update_count do
 		self.systems_on_update[i]:on_update(dt, d.tick_ts, d)

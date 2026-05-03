@@ -140,36 +140,36 @@ function storage:load_criket()
 			end
 		end
 
-		if #criket.groups <= 0 then -- 若没有出怪组则使用模板的出怪组
-			criket.groups = criket_template.groups
-		else
-			local ct_groups = criket_template.groups[1]
-			local ct_spawns = ct_groups.spawns[1]
+	-- if #criket.groups <= 0 then -- 若没有出怪组则使用模板的出怪组
+	-- 	criket.groups = criket_template.groups
+	-- else
+	-- 	local ct_groups = criket_template.groups[1]
+	-- 	local ct_spawns = ct_groups.spawns[1]
 
-			for _, group in pairs(criket.groups) do
-				for ctg_k, ctg_v in pairs(ct_groups) do
-					if not group[ctg_k] then -- 若出怪组不存在模板出怪组的键则向其增加模板的对应键
-						group[ctg_k] = ctg_v
-					else
-						local criket_spawns = group.spawns
+	-- 	for _, group in pairs(criket.groups) do
+	-- 		for ctg_k, ctg_v in pairs(ct_groups) do
+	-- 			if not group[ctg_k] then -- 若出怪组不存在模板出怪组的键则向其增加模板的对应键
+	-- 				group[ctg_k] = ctg_v
+	-- 			else
+	-- 				local criket_spawns = group.spawns
 
-						if #criket_spawns <= 0 then -- 若没有出任何怪则使用模板的怪物
-							criket_spawns = ct_spawns
-						else
-							for ct_k, ct_v in pairs(ct_spawns) do
-								for _, spawn in pairs(criket_spawns) do
-									if not spawn[ct_k] then
-										spawn[ct_k] = ct_v
-									end
-								end
-							end
-						end
-					end
-				end
-			end
-		end
+	-- 				if #criket_spawns <= 0 then -- 若没有出任何怪则使用模板的怪物
+	-- 					criket_spawns = ct_spawns
+	-- 				else
+	-- 					for ct_k, ct_v in pairs(ct_spawns) do
+	-- 						for _, spawn in pairs(criket_spawns) do
+	-- 							if not spawn[ct_k] then
+	-- 								spawn[ct_k] = ct_v
+	-- 							end
+	-- 						end
+	-- 					end
+	-- 				end
+	-- 			end
+	-- 		end
+	-- 	end
+	-- end
 
-		criket.fps_transformed = false
+	-- criket.fps_transformed = false
 	end
 
 	return criket

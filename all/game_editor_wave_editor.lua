@@ -496,7 +496,7 @@ function WaveEditorView:_rebuild_creep_suggestions()
 	self._enemy_suggest_items = {}
 	local rows = {}
 	for name, tpl in pairs(E.entities or {}) do
-		if string.sub(name, 1, 6) == "enemy_" and tpl.enemy and string.find(string.lower(name), query, 1, true) then
+		if tpl.enemy and string.find(string.lower(name), query, 1, true) then
 			local label = enemy_display(name, tpl)
 			if label then
 				rows[#rows + 1] = {

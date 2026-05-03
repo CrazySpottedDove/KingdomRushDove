@@ -122,7 +122,7 @@ local function wave_rel(level_name, mode)
 end
 
 local function load_lua_table_with_pref(path)
-	local f = love.filesystem.loadWithPreference(path, {"game_editor", KR_PATH_GAME})
+	local f = love.filesystem.loadWithPreference(path, {EDITOR_PATH, KR_PATH_GAME})
 	if not f then
 		return nil
 	end
@@ -609,7 +609,12 @@ end
 -- end
 
 -- 加载某一个关卡。查找顺序：编辑器目录 → 游戏目录 → 初始化空白关卡
-function editor:load_level(idx, mode)
+function editor:load_level(idx, mode, recover)
+	if recover then
+		-- 如果是希望恢复至游戏本体内容，优先从游戏目录加载。
+		EDITOR_PATH = "kr1"
+	end
+
 	self.undo_stack = {}
 	self.undo_active = false
 	self.store = {}
@@ -625,88 +630,93 @@ function editor:load_level(idx, mode)
 
 	local s = self.store
 
-	-- 如果没有 idx，我们应该找到一个合适的关卡序号，并创建一个新的关卡
 	if not idx then
-		-- 获取一个合适的关卡序号
-		idx = GEU.find_min_editor_index() - 1
-		s.level_idx = idx
-		s.level_name = "level" .. string.format("%02i", idx)
-		s.level_mode = mode
-		s.level_difficulty = DIFFICULTY_EASY
-		s.level = {
-			data = {
-				locked_hero = false,
-				level_terrain_style = "tower_holder_grass",
-				max_upgrade_level = 6,
-				entities_list = {},
-				invalid_path_ranges = {},
-				level_mode_overrides = {{}, {}, {}},
-				nav_mesh = {},
-				custom_resources = {},
-				required_sounds = {},
-				required_textures = {},
-				required_exoskeletons = {}
-			},
-			unlock_towers = {},
-			locked_towers = {}
-		}
-		for _, n in ipairs({
-			"required_textures",
-			"required_sounds",
-			"required_exoskeletons",
-			"locked_hero",
-			"locked_powers",
-			"locked_towers",
-			"max_upgrade_level",
-			"custom_spawn_pos",
-			"show_comic_idx",
-			"nav_mesh",
-			"unlock_towers",
-			"custom_start_pos",
-			"ignore_walk_backwards_paths"
-		}) do
-			s.level[n] = s.level.data[n]
-		end
-	else
-		-- 不需要区分来自 game_editor 目录还是游戏目录，直接进行加载。默认情况下，会先从 game_editor 加载，然后才是从游戏目录加载。
-		s.level_idx = idx
-		s.level_name = "level" .. string.format("%02i", idx)
-		s.level_mode = mode
-		s.level_difficulty = DIFFICULTY_EASY
-		s.level = LU.load_level(s, s.level_name)
-		if not s.level.data then
-			s.level.data = {}
-		end
-		-- custom_resource_table(s.level.data)
-		director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
-
-		if s.level.required_exoskeletons then
-			EXO:queue_load(s.level.required_exoskeletons)
-			EXO:load(s.level.required_exoskeletons)
-		end
-		-- self:load_custom_resources()
-
-		if s.level.init then
-			s.level:init(s)
-		end
-
-		if s.level.data.entities_list then
-			LU.insert_entities(self.store, s.level.data.entities_list, true)
-		end
-
-		if not s.level.nav_mesh then
-			s.level.nav_mesh = {}
-
-			s.level.data.nav_mesh = s.level.nav_mesh
-		end
-
-		if s.level.load then
-			P.add_invalid_range = function()
-			end
-
-			s.level:load(s)
-		end
+		-- 默认值：斗蛐蛐关卡
+		idx = 1000
 	end
+
+	-- 如果没有 idx，我们应该找到一个合适的关卡序号，并创建一个新的关卡
+	-- if not idx then
+	-- -- 获取一个合适的关卡序号
+	-- idx = GEU.find_min_editor_index() - 1
+	-- s.level_idx = idx
+	-- s.level_name = "level" .. string.format("%02i", idx)
+	-- s.level_mode = mode
+	-- s.level_difficulty = DIFFICULTY_EASY
+	-- s.level = {
+	-- 	data = {
+	-- 		locked_hero = false,
+	-- 		level_terrain_style = "tower_holder_grass",
+	-- 		max_upgrade_level = 6,
+	-- 		entities_list = {},
+	-- 		invalid_path_ranges = {},
+	-- 		level_mode_overrides = {{}, {}, {}},
+	-- 		nav_mesh = {},
+	-- 		custom_resources = {},
+	-- 		required_sounds = {},
+	-- 		required_textures = {},
+	-- 		required_exoskeletons = {}
+	-- 	},
+	-- 	unlock_towers = {},
+	-- 	locked_towers = {}
+	-- }
+	-- for _, n in ipairs({
+	-- 	"required_textures",
+	-- 	"required_sounds",
+	-- 	"required_exoskeletons",
+	-- 	"locked_hero",
+	-- 	"locked_powers",
+	-- 	"locked_towers",
+	-- 	"max_upgrade_level",
+	-- 	"custom_spawn_pos",
+	-- 	"show_comic_idx",
+	-- 	"nav_mesh",
+	-- 	"unlock_towers",
+	-- 	"custom_start_pos",
+	-- 	"ignore_walk_backwards_paths"
+	-- }) do
+	-- 	s.level[n] = s.level.data[n]
+	-- end
+	-- else
+	-- 不需要区分来自 game_editor 目录还是游戏目录，直接进行加载。默认情况下，会先从 game_editor 加载，然后才是从游戏目录加载。
+	s.level_idx = idx
+	s.level_name = "level" .. string.format("%02i", idx)
+	s.level_mode = mode
+	s.level_difficulty = DIFFICULTY_EASY
+	s.level = LU.load_level(s, s.level_name)
+	if not s.level.data then
+		s.level.data = {}
+	end
+	-- custom_resource_table(s.level.data)
+	director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
+
+	if s.level.required_exoskeletons then
+		EXO:queue_load(s.level.required_exoskeletons)
+		EXO:load(s.level.required_exoskeletons)
+	end
+	-- self:load_custom_resources()
+
+	if s.level.init then
+		s.level:init(s)
+	end
+
+	if s.level.data.entities_list then
+		LU.insert_entities(self.store, s.level.data.entities_list, true)
+	end
+
+	if not s.level.nav_mesh then
+		s.level.nav_mesh = {}
+
+		s.level.data.nav_mesh = s.level.nav_mesh
+	end
+
+	if s.level.load then
+		P.add_invalid_range = function()
+		end
+
+		s.level:load(s)
+	end
+	-- end
 
 	-- 尝试加载网格
 	if not GR:load(s.level_name) then
@@ -743,6 +753,10 @@ function editor:load_level(idx, mode)
 	self:load_wave_assets()
 
 	self.gui:level_loaded(idx)
+
+	if recover then
+		EDITOR_PATH = "game_editor"
+	end
 end
 
 function editor:load_wave_assets()

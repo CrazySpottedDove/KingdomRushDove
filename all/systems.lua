@@ -87,9 +87,9 @@ function sys.level:init_coroutined(store)
 	W:load(store.level_name, store.level_mode, store.level_mode_override == GAME_MODE_ENDLESS)
 	coroutine.yield()
 
-	if store.criket and store.criket.on then
-		W:patch_waves(store.criket)
-	end
+	-- if store.criket and store.criket.on then
+	-- W:patch_waves(store.criket)
+	-- end
 
 	if store.config.random_creeps then
 		W:randomize_creeps()
@@ -138,9 +138,9 @@ function sys.level:init_coroutined(store)
 		store.hero_xp_multiplier = 0.1 * (store.level_idx - 100) * store.hero_xp_multiplier
 	end
 
-	if store.criket and store.criket.on then
-		store.player_gold = store.criket.cash
-	end
+	-- if store.criket and store.criket.on then
+	-- store.player_gold = store.criket.cash
+	-- end
 
 	if slot.locked_towers then
 		for _, tower in pairs(slot.locked_towers) do

@@ -74,7 +74,7 @@ function grid_db:load(name)
 	self.waypoints_cache = {}
 
 	local fn = "data/levels/" .. name .. "_grid.lua"
-	local f, err = love.filesystem.loadWithPreference(fn, {"game_editor", KR_PATH_GAME})
+	local f, err = love.filesystem.loadWithPreference(fn, {EDITOR_PATH, KR_PATH_GAME})
 
 	if not f then
 		log.error("File %s doesn't exist - error: %s", fn, err)

@@ -68,7 +68,7 @@ function LU.load_level(store, name)
 	local level
 	local fn = "data/levels/" .. name .. ".lua"
 
-	local f, err = love.filesystem.loadWithPreference(fn, {"game_editor", KR_PATH_GAME})
+	local f, err = love.filesystem.loadWithPreference(fn, {EDITOR_PATH, KR_PATH_GAME})
 
 	if not f then
 		log.debug("Level file does not exist for %s", fn)
@@ -122,7 +122,7 @@ end
 
 --- 读取单个关卡文件，返回数据
 function LU.eval_file(filename)
-	local f, err = love.filesystem.loadWithPreference(filename, {"game_editor", KR_PATH_GAME})
+	local f, err = love.filesystem.loadWithPreference(filename, {EDITOR_PATH, KR_PATH_GAME})
 
 	if not f then
 		return nil, "File does not exist"
@@ -194,7 +194,7 @@ end
 ---@param store table
 function LU.load_locations(store)
 	local fn = "data/levels/" .. store.level_name .. "_loc.lua"
-	local f, err = love.filesystem.loadWithPreference(fn, {"game_editor", KR_PATH_GAME})
+	local f, err = love.filesystem.loadWithPreference(fn, {EDITOR_PATH, KR_PATH_GAME})
 
 	if not f then
 		log.info("Level locations file does not exist for %s", fn)

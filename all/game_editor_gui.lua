@@ -183,6 +183,9 @@ function gui:init(w, h, editor)
 	wid("tools_load").on_click = function()
 		editor:load_level(wid("tools_level_name").value, wid("tools_game_mode").value)
 	end
+	wid("tools_recover").on_click = function()
+		editor:load_level(editor.store.level_idx, editor.store.level_mode, true)
+	end
 	wid("tools_undo").on_click = function()
 		self:undo()
 	end

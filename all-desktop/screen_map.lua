@@ -7013,17 +7013,19 @@ function EditableGroup:add_items(data)
 	for key, value in pairs(data) do
 		if type(value) == "boolean" or type(value) == "number" or type(value) == "string" then
 			-- 添加新 item
-			local item = EditableItem:new(self.key_label_map[key] or key, value, V.v(column_width, 40))
+			if self.key_label_map[key] then
+				local item = EditableItem:new(self.key_label_map[key], value, V.v(column_width, 40))
 
-			item.pos = V.v((start_x + math.floor(index / max_rows) * (column_width + self.padding.x)), start_y + (index % max_rows) * row_height)
-			item.on_change_callback = function(label, value)
-				self.data[table.keyforobject(self.key_label_map, label) or label] = value
+				item.pos = V.v((start_x + math.floor(index / max_rows) * (column_width + self.padding.x)), start_y + (index % max_rows) * row_height)
+				item.on_change_callback = function(label, value)
+					self.data[table.keyforobject(self.key_label_map, label) or label] = value
+				end
+				self.items[key] = item
+				self.data[key] = value
+				index = index + 1
+
+				self:add_child(item)
 			end
-			self.items[key] = item
-			self.data[key] = value
-			index = index + 1
-
-			self:add_child(item)
 		end
 	end
 end
@@ -7176,11 +7178,11 @@ CriketPanelView = class("CriketPanelView", EditablePanelView)
 function CriketPanelView:initialize(sw, sh)
 	EditablePanelView.initialize(self, sw, sh, "斗蛐蛐配置")
 	self:set_key_label_map({
-		on = "启用斗蛐蛐",
-		fps_transformed = "请勿修改本条",
-		gold_judge = "启用金币裁判",
-		cash = "初始资金",
-		gold_base = "金币基准值"
+		on = "启用斗蛐蛐"
+	-- fps_transformed = "请勿修改本条",
+	-- gold_judge = "启用金币裁判",
+	-- cash = "初始资金",
+	-- gold_base = "金币基准值"
 	})
 end
 

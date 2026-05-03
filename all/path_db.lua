@@ -24,7 +24,7 @@ path_db.average_node_dist = 6
 local function load_file_by_name(name)
 	local data
 	local fn = "data/levels/" .. name .. "_paths.lua"
-	local f, err = love.filesystem.loadWithPreference(fn, {"game_editor", KR_PATH_GAME})
+	local f, err = love.filesystem.loadWithPreference(fn, {EDITOR_PATH, KR_PATH_GAME})
 	if not f then
 		log.debug("Level paths file does not exist for %s", fn)
 

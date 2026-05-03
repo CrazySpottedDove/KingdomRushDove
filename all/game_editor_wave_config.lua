@@ -585,7 +585,7 @@ function WaveConfigView:_ensure_enemy_rows()
 	E:ensure_loaded()
 	self._enemy_rows = {}
 	for name, tpl in pairs(E.entities or {}) do
-		if string.sub(name, 1, 6) == "enemy_" and tpl.enemy then
+		if tpl.enemy then
 			local label = enemy_name_label(name, tpl)
 			if label then
 				self._enemy_rows[#self._enemy_rows + 1] = {

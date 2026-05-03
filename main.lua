@@ -173,6 +173,7 @@ KR_PATH_ROOT = ""
 KR_PATH_ALL = "all"
 KR_PATH_ALL_TARGET = string.format("all-%s", KR_TARGET)
 KR_PATH_GAME = KR_GAME
+EDITOR_PATH = "game_editor"
 KR_PATH_GAME_TARGET = string.format("%s-%s", KR_GAME, KR_TARGET)
 KR_PATH_ASSETS_ROOT = "_assets"
 KR_PATH_ASSETS_ALL_TARGET = string.format("_assets/all-%s", KR_TARGET)

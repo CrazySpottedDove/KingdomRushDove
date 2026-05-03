@@ -743,27 +743,27 @@ function game_gui:build_random_towers()
 		end
 
 		if new_tower.barrack then
-			if game_gui.game.store.criket and game_gui.game.store.criket.on then
-				local path_index = game_gui.game.store.criket.groups[1].path_index
-				local nodes = P.paths[path_index][1]
-				local i = 1
+			-- if game_gui.game.store.criket and game_gui.game.store.criket.on then
+			-- 	local path_index = game_gui.game.store.criket.groups[1].path_index
+			-- 	local nodes = P.paths[path_index][1]
+			-- 	local i = 1
 
-				while i <= #nodes and not U.is_inside_ellipse(nodes[i], new_tower.pos, new_tower.barrack.rally_range) do
-					i = i + 1
-				end
+			-- 	while i <= #nodes and not U.is_inside_ellipse(nodes[i], new_tower.pos, new_tower.barrack.rally_range) do
+			-- 		i = i + 1
+			-- 	end
 
-				if i > #nodes then
-					new_tower.barrack.rally_pos = V.vclone(new_tower.tower.default_rally_pos)
-				else
-					if i == 1 then
-						i = 2
-					end
+			-- 	if i > #nodes then
+			-- 		new_tower.barrack.rally_pos = V.vclone(new_tower.tower.default_rally_pos)
+			-- 	else
+			-- 		if i == 1 then
+			-- 			i = 2
+			-- 		end
 
-					new_tower.barrack.rally_pos = V.vclone(nodes[i - 1])
-				end
-			else
-				new_tower.barrack.rally_pos = V.vclone(new_tower.tower.default_rally_pos)
-			end
+			-- 		new_tower.barrack.rally_pos = V.vclone(nodes[i - 1])
+			-- 	end
+			-- else
+			new_tower.barrack.rally_pos = V.vclone(new_tower.tower.default_rally_pos)
+		-- end
 		end
 
 		if new_tower.mercenary then
@@ -6152,28 +6152,28 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
 			end
 
 			if new_tower.barrack then
-				if game_gui.game.store.criket and game_gui.game.store.criket.on then
-					local path_index = game_gui.game.store.criket.groups[1].path_index
-					-- local nodes = P:nearest_nodes(new_tower.pos.x, new_tower.pos.y, {path_index}, {1}, true)
-					local nodes = P.paths[path_index][1]
-					local i = 1
+				-- if game_gui.game.store.criket and game_gui.game.store.criket.on then
+				-- 	local path_index = game_gui.game.store.criket.groups[1].path_index
+				-- 	-- local nodes = P:nearest_nodes(new_tower.pos.x, new_tower.pos.y, {path_index}, {1}, true)
+				-- 	local nodes = P.paths[path_index][1]
+				-- 	local i = 1
 
-					while i <= #nodes and not U.is_inside_ellipse(nodes[i], new_tower.pos, new_tower.barrack.rally_range) do
-						i = i + 1
-					end
+				-- 	while i <= #nodes and not U.is_inside_ellipse(nodes[i], new_tower.pos, new_tower.barrack.rally_range) do
+				-- 		i = i + 1
+				-- 	end
 
-					if i > #nodes then
-						new_tower.barrack.rally_pos = V.vclone(new_tower.tower.default_rally_pos)
-					else
-						if i == 1 then
-							i = 2
-						end
+				-- 	if i > #nodes then
+				-- 		new_tower.barrack.rally_pos = V.vclone(new_tower.tower.default_rally_pos)
+				-- 	else
+				-- 		if i == 1 then
+				-- 			i = 2
+				-- 		end
 
-						new_tower.barrack.rally_pos = V.vclone(nodes[i - 1])
-					end
-				else
-					new_tower.barrack.rally_pos = V.vclone(new_tower.tower.default_rally_pos)
-				end
+				-- 		new_tower.barrack.rally_pos = V.vclone(nodes[i - 1])
+				-- 	end
+				-- else
+				new_tower.barrack.rally_pos = V.vclone(new_tower.tower.default_rally_pos)
+			-- end
 			end
 
 			if new_tower.mercenary then
@@ -6208,9 +6208,9 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
 
 	local store = game_gui.game.store
 
-	if store.criket.on and store.criket.gold_judge then
-		store.config.enemy_health_multiplier = total_cost / store.criket.gold_base
-	end
+	-- if store.criket.on and store.criket.gold_judge then
+	-- store.config.enemy_health_multiplier = total_cost / store.criket.gold_base
+	-- end
 
 	self:hide()
 end

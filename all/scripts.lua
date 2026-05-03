@@ -7404,7 +7404,7 @@ function scripts.mega_spawner.insert(this, store)
 	if this.load_file then
 		local fn = "data/levels/" .. this.load_file .. ".lua"
 
-		local f, err = love.filesystem.loadWithPreference(fn, {"game_editor", KR_PATH_GAME})
+		local f, err = love.filesystem.loadWithPreference(fn, {EDITOR_PATH, KR_PATH_GAME})
 
 		if not f then
 			log.error("mega_spawner load_file does not exist: %s", this.load_file)
