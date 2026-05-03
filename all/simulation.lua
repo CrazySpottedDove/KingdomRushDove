@@ -29,7 +29,7 @@ function simulation:init(store, system_names)
 	d.auras = {}
 	d.particle_systems = {}
 	-- d.entities_with_main_script_on_update = {}
-	d.entities_with_main_script_on_update_array = {}
+	d.entities_with_main_script_on_update = {}
 	d.entities_with_main_script_on_update_index = {}
 	d.entities_with_main_script_on_update_count = 0
 	d.entities_with_timed = {}

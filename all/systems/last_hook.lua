@@ -46,9 +46,11 @@ function M.register(sys)
 			local target = d.entities[e.modifier.target_id]
 
 			if target then
+				-- 可能的触发原因是，有不合法的脚本在运行时修改了原有的 modifier.target_id，使得它指向了一个 _applied_mods 字段未被正确初始化的实体。
 				if not target._applied_mods then
 					target._applied_mods = {}
-					log.error(string.format("！如果看见这条消息，请截下来发给作者 target: %s, mod: %s", target.template_name, e.template_name))
+					-- 这个问题应该是历史遗留问题，现在使用强制蓝屏策略，等待用户报告。
+					error(string.format("！如果看见这条消息，请截下来发给作者 target: %s, mod: %s", target.template_name, e.template_name))
 				end
 
 				local mods = target._applied_mods
@@ -65,9 +67,8 @@ function M.register(sys)
 		end
 
 		if e.main_script and e.main_script.update then
-			-- d.entities_with_main_script_on_update[e.id] = e
 			d.entities_with_main_script_on_update_count = d.entities_with_main_script_on_update_count + 1
-			d.entities_with_main_script_on_update_array[d.entities_with_main_script_on_update_count] = e
+			d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count] = e
 			d.entities_with_main_script_on_update_index[e.id] = d.entities_with_main_script_on_update_count
 		end
 
@@ -140,10 +141,10 @@ function M.register(sys)
 			local index = d.entities_with_main_script_on_update_index[e.id]
 
 			-- 交换删除，保证数组的连续性
-			local last_entity = d.entities_with_main_script_on_update_array[d.entities_with_main_script_on_update_count]
-			d.entities_with_main_script_on_update_array[index] = last_entity
+			local last_entity = d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count]
+			d.entities_with_main_script_on_update[index] = last_entity
 			d.entities_with_main_script_on_update_index[last_entity.id] = index
-			d.entities_with_main_script_on_update_array[d.entities_with_main_script_on_update_count] = nil
+			d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count] = nil
 			d.entities_with_main_script_on_update_index[e.id] = nil
 			d.entities_with_main_script_on_update_count = d.entities_with_main_script_on_update_count - 1
 		end

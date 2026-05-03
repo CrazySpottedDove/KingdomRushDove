@@ -32,7 +32,7 @@ function M.register(sys)
 	function sys.main_script:on_update(dt, ts, store)
 		perf.start("main_script")
 		for i = 1, store.entities_with_main_script_on_update_count do
-			local e = store.entities_with_main_script_on_update_array[i]
+			local e = store.entities_with_main_script_on_update[i]
 			local s = e.main_script
 
 			if not s.co and s.runs ~= 0 then
