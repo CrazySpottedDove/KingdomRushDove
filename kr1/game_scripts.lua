@@ -8041,7 +8041,10 @@ function scripts.bomb_pirate_cannon.update(this, store)
 
 	local p = SU.create_bullet_pop(store, this)
 
-	queue_insert(store, p)
+	if p then
+		queue_insert(store, p)
+
+	end
 
 	local sfx = E:create_entity(b.hit_fx)
 
@@ -50453,8 +50456,11 @@ function scripts.bullet_storm_elemental.update(this, store)
 	end
 
 	local p = SU.create_bullet_pop(store, this)
+	if p then
+		queue_insert(store, p)
 
-	queue_insert(store, p)
+	end
+
 	S:queue(this.sound_events.hit)
 
 	if b.hit_fx then
@@ -52948,7 +52954,10 @@ function scripts.bullet_hellfire_warlock_fireball.update(this, store)
 
 	local p = SU.create_bullet_pop(store, this)
 
-	queue_insert(store, p)
+	if p then
+		queue_insert(store, p)
+
+	end
 	S:queue(this.sound_events.hit)
 
 	if b.hit_fx then
@@ -68419,7 +68428,10 @@ function scripts.bullet_alfa_lava_vomit.update(this, store, script)
 
 	local p = SU.create_bullet_pop(store, this)
 
-	queue_insert(store, p)
+	if p then
+		queue_insert(store, p)
+
+	end
 
 	local cell_type = GR:cell_type(b.to.x, b.to.y)
 
@@ -69272,7 +69284,10 @@ function scripts.bullet_enemy_evolved_acid.update(this, store, script)
 
 	local p = SU.create_bullet_pop(store, this)
 
-	queue_insert(store, p)
+	if p then
+		queue_insert(store, p)
+
+	end
 	S:queue(this.sound_events.hit)
 
 	if b.hit_decal then

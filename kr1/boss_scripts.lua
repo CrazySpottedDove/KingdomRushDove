@@ -8434,7 +8434,10 @@ function scripts.bullet_stage_16_overseer_tentacle_spawn.update(this, store)
 
 	local p = SU.create_bullet_pop(store, this)
 
-	queue_insert(store, p)
+	if p then
+		queue_insert(store, p)
+
+	end
 
 	local cell_type = GR:cell_type(b.to.x, b.to.y)
 

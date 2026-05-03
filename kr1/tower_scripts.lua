@@ -517,7 +517,7 @@ scripts.tower_musketeer = {
 
 							queue_insert(store, m)
 							shot_animation(ax, seeker_idx, enemy, ax.animation_seeker)
-							y_wait(store, ax.shoot_time)
+							y_wait(store, ax.shoot_time * this.tower.cooldown_factor)
 
 							if enemy.health.dead then
 								enemy = U.refind_foremost_enemy(enemy, store, ax.vis_flags, ax.vis_bans)
@@ -16268,7 +16268,10 @@ function scripts.bullet_tower_ballista_skill_bomb.update(this, store)
 
 	local p = SU.create_bullet_pop(store, this)
 
-	queue_insert(store, p)
+	if p then
+		queue_insert(store, p)
+
+	end
 
 	local cell_type = GR:cell_type(this_pos.x, this_pos.y)
 

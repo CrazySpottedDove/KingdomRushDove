@@ -4805,9 +4805,7 @@ tt.bullet.xp_gain_factor = nil
 --#endregion
 --#region mod_van_helsing_crosshair
 tt = RT("mod_van_helsing_crosshair", "modifier")
-
 AC(tt, "render")
-
 tt.render.sprites[1].name = "vanhelsing_crosshair"
 tt.render.sprites[1].sort_y_offset = -2
 tt.main_script.update = scripts.mod_track_target.update

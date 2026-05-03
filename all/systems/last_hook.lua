@@ -140,6 +140,10 @@ function M.register(sys)
 		if e.main_script and e.main_script.update then
 			local index = d.entities_with_main_script_on_update_index[e.id]
 
+			if not index then
+				log.error(string.format("！如果看见这条消息，请截下来发给作者，实体 %s 的 main_script.update 没有正确注册到 entities_with_main_script_on_update 中", e.template_name))
+				return false
+			end
 			-- 交换删除，保证数组的连续性
 			local last_entity = d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count]
 			d.entities_with_main_script_on_update[index] = last_entity

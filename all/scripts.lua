@@ -2834,7 +2834,9 @@ function scripts.bomb.update(this, store)
 
 	local p = SU.create_bullet_pop(store, this)
 
-	queue_insert(store, p)
+	if p then
+		queue_insert(store, p)
+	end
 
 	local cell_type = GR:cell_type(this_pos.x, this_pos.y)
 
@@ -2990,7 +2992,10 @@ function scripts.enemy_bomb.update(this, store)
 
 	local p = SU.create_bullet_pop(store, this)
 
-	queue_insert(store, p)
+	if p then
+		queue_insert(store, p)
+	end
+
 	S:queue(this.sound_events.hit)
 
 	if b.hit_fx then
@@ -8447,7 +8452,10 @@ function scripts.bomb_bouncing.update(this, store)
 
 		local p = SU.create_bullet_pop(store, this)
 
-		queue_insert(store, p)
+		if p then
+			queue_insert(store, p)
+
+		end
 
 		local cell_type = GR:cell_type(this_pos.x, this_pos.y)
 

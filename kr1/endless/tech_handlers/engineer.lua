@@ -102,7 +102,9 @@ local function engineer_focus_bomb_update(this, store)
 	end
 
 	local p = SU.create_bullet_pop(store, this)
-	Common.queue_insert(store, p)
+	if p then
+		Common.queue_insert(store, p)
+	end
 
 	local cell_type = GR:cell_type(b.to.x, b.to.y)
 	if b.hit_fx_water and band(cell_type, TERRAIN_WATER) ~= 0 then

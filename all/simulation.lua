@@ -214,9 +214,9 @@ function simulation:do_tick(dt)
 end
 
 function simulation:queue_insert_entity(e)
-	if not e then
-		return
-	end
+	-- if not e then
+	-- return
+	-- end
 
 	local d = self.store
 
@@ -229,7 +229,14 @@ function simulation:queue_insert_entity(e)
 end
 
 function simulation:queue_remove_entity(e)
-	if not e or e.pending_removal then
+	-- 这里做检查，避免重复移除同一个实体
+	-- if not e or e.pending_removal then
+	-- return
+	-- end
+
+	-- 如果实体不在 store 中，或者已经标记为 pending_removal，那么就不需要再处理了。因为可能存在重复调用 queue_remove_entity 的情况。
+	-- 原来只是进行 pending_removal 的检查，但如果实体已经被移除，此时实体也是 pending_removal 为 nil 的状态
+	if (not self.store.entities[e.id]) or e.pending_removal then
 		return
 	end
 
