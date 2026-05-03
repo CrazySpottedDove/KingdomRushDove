@@ -56,7 +56,7 @@ local persistent_textures = table.to_map({
 	"gui_common",
 	"gui_ico",
 	"gui_portraits",
-	"achievements",
+	-- "achievements",
 	"encyclopedia_creeps",
 	"gui_notifications",
 	"gui_notifications_bg",
