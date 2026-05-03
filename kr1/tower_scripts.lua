@@ -23695,9 +23695,19 @@ function scripts.aura_orc_shaman_healing_roots.update(this, store)
 					m.modifier.source_id = this.id
 					m.modifier.damage_factor = a.damage_factor
 					m.modifier.level = a.level
-					if m.hps and a.heal_inc then
-						m.hps.heal_inc = a.heal_inc
-					end
+					queue_insert(store, m)
+				end
+			end
+
+			targets = U.find_enemies_in_range_filter_off(this.pos, a.radius, a.vis_flags, a.vis_bans)
+			if targets then
+				for i = 1, #targets do
+					local t = targets[i]
+					local m = E:create_entity(a.mod_enemy)
+					m.modifier.target_id = t.id
+					m.modifier.source_id = this.id
+					m.modifier.damage_factor = a.damage_factor
+					m.modifier.level = a.level
 					queue_insert(store, m)
 				end
 			end
@@ -23738,6 +23748,10 @@ function scripts.tower_orc_shaman.update(this, store)
 		U.y_wait(store, aa.shoot_time * this.tower.cooldown_factor)
 
 		return af
+	end
+
+	local function heal_filter_fn(e)
+		return not U.has_modifier(store, e, "mod_orc_shaman_heal_enemy")
 	end
 
 	while true do
@@ -23838,7 +23852,9 @@ function scripts.tower_orc_shaman.update(this, store)
 			end
 
 			if ready_to_use_power(pow_v, va, store, this.tower.cooldown_factor) then
-				local target = U.is_soldiers_around_need_heal(store.soldiers, tpos, va.min_health_factor, a.range)
+				-- local target = U.is_soldiers_around_need_heal(store.soldiers, tpos, va.min_health_factor, a.range)
+				local target = U.find_first_enemy_in_range_filter_on(tpos, a.range, va.vis_flags, va.vis_bans, heal_filter_fn)
+
 				if not target then
 					va.ts = va.ts + 0.3
 				else
@@ -23846,6 +23862,12 @@ function scripts.tower_orc_shaman.update(this, store)
 						delay = 0.3
 					})
 					do_shoot_animation(va, target)
+
+					local new_target = U.find_foremost_enemy_in_range_filter_on(tpos, a.range, nil, va.vis_flags, va.vis_bans, heal_filter_fn)
+
+					if new_target then
+						target = new_target
+					end
 
 					local aura = E:create_entity(va.aura)
 					aura.pos:copy(target.pos)
@@ -23868,6 +23890,36 @@ function scripts.tower_orc_shaman.update(this, store)
 			coroutine.yield()
 		end
 	end
+end
+
+scripts.mod_orc_shaman_heal_enemy = {}
+
+function scripts.mod_orc_shaman_heal_enemy.insert(this, store)
+	if scripts.mod_hps.insert(this, store) then
+		local target = store.entities[this.modifier.target_id]
+		if not target then
+			return false
+		end
+		local exponent = this.damage_exponent + this.damage_exponent_inc * this.modifier.level
+		this._on_damage_index = U.insert_on_damage(target, function(this, store, damage)
+			damage.value = damage.value ^ exponent
+			return true
+		end)
+		local factor = this.damage_factor_magical + this.damage_factor_magical_inc * this.modifier.level
+		target.health.damage_factor_magical = target.health.damage_factor_magical * factor
+		return true
+	end
+	return false
+end
+
+function scripts.mod_orc_shaman_heal_enemy.remove(this, store)
+	local target = store.entities[this.modifier.target_id]
+	if target then
+		U.remove_on_damage(target, this._on_damage_index)
+		local factor = this.damage_factor_magical + this.damage_factor_magical_inc * this.modifier.level
+		target.health.damage_factor_magical = target.health.damage_factor_magical / factor
+	end
+	return true
 end
 
 scripts.bullet_orc_shaman_shock = {}
