@@ -685,7 +685,40 @@ function editor:load_level(idx, mode, recover)
 	s.level_difficulty = DIFFICULTY_EASY
 	s.level = LU.load_level(s, s.level_name)
 	if not s.level.data then
-		s.level.data = {}
+		s.level.data = {
+			locked_hero = false,
+			level_terrain_style = "tower_holder_grass",
+			max_upgrade_level = 6,
+			entities_list = {},
+			invalid_path_ranges = {},
+			level_mode_overrides = {{}, {}, {}},
+			nav_mesh = {},
+			custom_resources = {},
+			required_sounds = {},
+			required_textures = {},
+			required_exoskeletons = {}
+		}
+		for _, n in ipairs({
+			"required_textures",
+			"required_sounds",
+			"required_exoskeletons",
+			"locked_hero",
+			"locked_powers",
+			"locked_towers",
+			"max_upgrade_level",
+			"custom_spawn_pos",
+			"show_comic_idx",
+			"nav_mesh",
+			"unlock_towers",
+			"custom_start_pos",
+			"ignore_walk_backwards_paths"
+		}) do
+			if not s.level[n] then
+				s.level[n] = s.level.data[n]
+			else
+				s.level.data[n] = s.level[n]
+			end
+		end
 	end
 	-- custom_resource_table(s.level.data)
 	director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
