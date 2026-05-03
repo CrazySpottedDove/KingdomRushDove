@@ -54,7 +54,8 @@ function director:init(params)
 
 		if love.filesystem.getInfo(p .. "/sounds.lua") then
 			S:init(p)
-
+			S:set_main_gain_fx(params.volume_fx)
+			S:set_main_gain_music(params.volume_music)
 			break
 		end
 	end
