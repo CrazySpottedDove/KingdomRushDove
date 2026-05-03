@@ -17410,20 +17410,14 @@ function scripts.tower_hermit_toad.update(this, store)
 		local x = (1 - eased_t) ^ 2 * p1.x + 2 * (1 - eased_t) * eased_t * mid_x + eased_t ^ 2 * p2.x
 		local y = (1 - eased_t) ^ 2 * p1.y + 2 * (1 - eased_t) * eased_t * mid_y + eased_t ^ 2 * p2.y
 
-		return {
-			x = x,
-			y = y
-		}
+		return v(x, y)
 	end
 
 	local function linear_position(p1, p2, t)
 		local x = p1.x + (p2.x - p1.x) * t
 		local y = p1.y + (p2.y - p1.y) * t
 
-		return {
-			x = x,
-			y = y
-		}
+		return v(x, y)
 	end
 
 	local function y_toad_flip(af)
@@ -17595,7 +17589,7 @@ function scripts.tower_hermit_toad.update(this, store)
 						local angle = V.angleTo(normal_x, normal_y)
 						local entity_frame_names = {}
 
-						for _, es in pairs(target.render.sprites) do
+						for _, es in ipairs(target.render.sprites) do
 							if es.animated then
 								table.insert(entity_frame_names, es.frame_name)
 							else
@@ -17674,7 +17668,6 @@ function scripts.tower_hermit_toad.update(this, store)
 
 								eaten = true
 							end
-
 							coroutine.yield()
 						end
 					end

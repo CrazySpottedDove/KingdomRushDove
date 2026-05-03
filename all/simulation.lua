@@ -39,7 +39,7 @@ function simulation:init(store, system_names)
 	d.entities_with_ui = {}
 	d.pending_inserts = {}
 	d.pending_removals = {}
-	d.entity_count = 0
+	-- d.entity_count = 0
 	-- d.entity_max = 0
 	d.speed_factor = 1
 	self.systems_on_queue = {}
@@ -214,29 +214,18 @@ function simulation:do_tick(dt)
 end
 
 function simulation:queue_insert_entity(e)
-	-- if not e then
-	-- return
-	-- end
-
 	local d = self.store
 
 	for i = 1, self.systems_on_queue_count do
 		self.systems_on_queue[i]:on_queue(e, d, true)
 	end
 
-	e.pending_removal = nil
 	d.pending_inserts[#d.pending_inserts + 1] = e
 end
 
 function simulation:queue_remove_entity(e)
 	-- 这里做检查，避免重复移除同一个实体
-	-- if not e or e.pending_removal then
-	-- return
-	-- end
-
-	-- 如果实体不在 store 中，或者已经标记为 pending_removal，那么就不需要再处理了。因为可能存在重复调用 queue_remove_entity 的情况。
-	-- 原来只是进行 pending_removal 的检查，但如果实体已经被移除，此时实体也是 pending_removal 为 nil 的状态
-	if (not self.store.entities[e.id]) or e.pending_removal then
+	if e.pending_removal then
 		return
 	end
 
@@ -250,6 +239,7 @@ function simulation:queue_remove_entity(e)
 	self.store.pending_removals[#self.store.pending_removals + 1] = e
 end
 
+--- 我们乐观地认为，不可能存在对同一实体的重复插入。如果有，也是先移除了，然后重新插入
 function simulation:insert_entity(e)
 	local d = self.store
 
@@ -263,13 +253,18 @@ function simulation:insert_entity(e)
 		end
 	end
 
-	e.pending_removal = nil
 	d.entities[e.id] = e
-	d.entity_count = d.entity_count + 1
+-- d.entity_count = d.entity_count + 1
 end
 
+-- 由于有些实体自己会管理自己的 remove，同时有些实体会控制其它实体的 remove，所以我们需要在 remove_entity 里做检查，避免重复移除同一个实体导致的各种问题。
 function simulation:remove_entity(e)
 	local d = self.store
+
+	-- 已经不在 store 里了，跳过后续所有逻辑
+	if d.entities[e.id] == nil then
+		return
+	end
 
 	for i = 1, self.systems_on_remove_count do
 		if not self.systems_on_remove[i]:on_remove(e, d) then
@@ -285,7 +280,7 @@ function simulation:remove_entity(e)
 
 	e.pending_removal = nil
 	d.entities[e.id] = nil
-	d.entity_count = d.entity_count - 1
+-- d.entity_count = d.entity_count - 1
 end
 
 return simulation
