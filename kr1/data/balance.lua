@@ -3240,7 +3240,7 @@ local enemies = {
 		machinist = {
 			regen_health = 60,
 			timeout = 30,
-			gold = 0,
+			gold = 100,
 			magic_armor = 0,
 			operation_cd = 3,
 			speed = 36,
@@ -3486,7 +3486,7 @@ local enemies = {
 		},
 		boss_spider_queen = {
 			spawn_node = 45,
-			gold = 0,
+			gold = 250,
 			spawn_path = 1,
 			speed = 13,
 			armor = 0.2,
