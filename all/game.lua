@@ -1462,7 +1462,6 @@ if IS_ANDROID then
 		perf.stop("game_gui_draw")
 
 		d.damage_numbers_draw(self)
-
 	end
 else
 	function game:draw_game()

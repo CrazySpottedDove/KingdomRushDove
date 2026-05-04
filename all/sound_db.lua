@@ -309,6 +309,7 @@ function sound_db:queue_load_done()
 	return true
 end
 
+-- DEPRECATED: 现在不建议使用该接口进行资源加载，sound_db 的主要加载方式是 queue_load_group() + queue_load_done() 的组合，该方法只是考虑历史兼容性的保留！
 function sound_db:load_group(name, yielding, filter)
 	-- 保持接口兼容：走统一队列状态机，不再维护单独路径
 	self:queue_load_group(name)

@@ -76,7 +76,7 @@ local function dnum_display_params(damage, hp_max)
 	local abs_score = damage * 0.001
 	local score = (math.min(ratio, 1) + math.min(abs_score, 1)) * 0.5
 	score = score ^ 0.7
-	local font_scale = 0.45 + score * 0.55
+	local font_scale = 0.5 + score * 0.6
 	local duration = 0.70 + score * 0.70
 	local vy = -30 + score * (-25)
 	return font_scale, duration, vy
@@ -136,6 +136,7 @@ local function dnum_on_applied_enabled(store, d, target)
 end
 
 local function dnum_draw_enabled(g)
+	perf.start("damage_number")
 	local now = g.store.tick_ts
 	local c = g.camera
 	local zoom = c and c.zoom or 1
@@ -171,20 +172,15 @@ local function dnum_draw_enabled(g)
 				local tw = font:getWidth(txt) * fs
 				local sx_c = floor(sx - tw * 0.5)
 				local sy_f = floor(sy)
-				G.push()
-				G.translate(sx_c, sy_f)
-				G.scale(fs, fs)
 				dnum_set_color(0, 0, 0, fade * 0.8)
-				G.print(txt, 1, 1)
-				G.print(txt, -1, 1)
-				G.print(txt, 0, 1)
+				G.print(txt, sx_c + 2, sy_f + 2, 0, fs, fs)
 				dnum_set_color(n.r, n.g, n.b, fade)
-				G.print(txt, 0, 0)
-				G.pop()
+				G.print(txt, sx_c, sy_f, 0, fs, fs)
 			end
 		end
 	end
 	dnum_set_color(1, 1, 1, 1)
+	perf.stop("damage_number")
 end
 
 dnum_on_applied_impl = dnum_on_applied_disabled
