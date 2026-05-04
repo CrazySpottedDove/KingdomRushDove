@@ -25,22 +25,14 @@ function hook:front_init()
 end
 
 function hook:after_init()
-	-- HOOK(A, "fni", self.A.fni)
 	raw_image_load_atlas = I.load_atlas
 	HOOK(I, "load_atlas", self.I.load_atlas)
 	HOOK(I, "queue_load_atlas", self.I.queue_load_atlas)
-	HOOK(S, "load_group", self.S.load_group)
+	HOOK(S, "queue_load_group", self.S.queue_load_group)
+	HOOK(S, "queue_load_done", self.S.queue_load_done)
 	HOOK(LU, "load_level", self.LU.load_level)
 	HOOK(P, "load", self.P.load)
 end
-
--- dove 版已支持，不再使用这个钩子，避免问题。
--- -- 为单独修改动画速度增加支持
--- function hook.A.fni(fni, self, animation, time_offset, loop, fps, tick_length)
--- 	fps = animation.fps or self.fps
-
--- 	return fni(self, animation, time_offset, loop, fps, tick_length)
--- end
 
 -- 增加图像资源覆盖路径
 function hook.I.load_atlas(load_atlas, self, ref_scale, path, name, yielding)
@@ -156,37 +148,98 @@ function hook.S.init(init, self, path, overrides)
 	end
 end
 
-function hook.S.load_group(load_group, self, name, yielding, filter)
-	load_group(self, name, yielding, filter)
+local function clear_sound_group_cache(self, name)
+	local group = self.groups and self.groups[name]
+	if not group then
+		return
+	end
 
+	if self.sounds_uses and self.sounds_uses[name] then
+		self.sounds_uses[name] = nil
+	end
+
+	local function clear_file(file_name)
+		if self.sources and self.sources[file_name] then
+			self.sources[file_name] = nil
+		end
+		if self.source_uses and self.source_uses[file_name] then
+			self.source_uses[file_name] = nil
+		end
+	end
+
+	if group.files then
+		for _, file_name in ipairs(group.files) do
+			clear_file(file_name)
+		end
+	end
+
+	if group.sounds then
+		for _, sound_name in ipairs(group.sounds) do
+			local sound = self.sounds and self.sounds[sound_name]
+			if sound and sound.files then
+				for _, file_name in ipairs(sound.files) do
+					clear_file(file_name)
+				end
+			end
+		end
+	end
+end
+
+function hook.S.queue_load_group(queue_load_group, self, name)
+	queue_load_group(self, name)
+
+	if self._mod_overlay_running then
+		return
+	end
+
+	if not self._mod_override_groups then
+		self._mod_override_groups = {}
+		self._mod_override_groups_seen = {}
+	end
+
+	if not self._mod_override_groups_seen[name] then
+		self._mod_override_groups_seen[name] = true
+		self._mod_override_groups[#self._mod_override_groups + 1] = name
+	end
+end
+
+function hook.S.queue_load_done(queue_load_done, self)
+	local done = queue_load_done(self)
+	if not done then
+		return false
+	end
+
+	if self._mod_overlay_running then
+		return true
+	end
+
+	local override_groups = self._mod_override_groups
+	if not override_groups or #override_groups == 0 then
+		return true
+	end
+
+	self._mod_override_groups = nil
+	self._mod_override_groups_seen = nil
+	self._mod_overlay_running = true
+
+	local origin_path = self.files_path
 	for i = 1, mod_db.mods_count do
 		local mod_data = mod_db.mods_datas[i]
 		local files_path = mod_data.check_paths["/_assets/sounds/files"]
 
 		if files_path then
-			if self.sounds_uses and self.sounds_uses[name] then
-				self.sounds_uses[name] = nil
-			end
-
-			if self.sources then
-				local sound_files = self.groups[name].files
-
-				for _, file_name in ipairs(sound_files) do
-					if self.sources and self.sources[file_name] then
-						self.sources[file_name] = nil
-					end
-				end
-			end
-
-			local origin_path = self.files_path
-
 			self.files_path = files_path
 
-			load_group(self, name, yielding, filter)
-
-			self.files_path = origin_path
+			for _, group_name in ipairs(override_groups) do
+				clear_sound_group_cache(self, group_name)
+				self:load_group(group_name, false)
+			end
 		end
 	end
+	self.files_path = origin_path
+	self._mod_overlay_running = nil
+
+	return true
 end
 
 -- 增加关卡数据覆盖路径

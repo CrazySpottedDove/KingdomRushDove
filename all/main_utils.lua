@@ -22,10 +22,6 @@ function mu.parse_args(arg, params)
 		return arg[table.keyforobject(arg, "-" .. key) + 1]
 	end
 
-	if has_arg("audio_mode") then
-		params.audio_mode = argv("audio_mode")
-	end
-
 	if has_arg("fps") then
 		params.fps = argv("fps")
 	end

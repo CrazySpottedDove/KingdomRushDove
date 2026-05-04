@@ -4522,6 +4522,19 @@ function SU.enemy_scale_mul(store, e, factor, duration)
 	u.mod_offset.y = u.mod_offset.y * factor
 	u.damage_factor = u.damage_factor * (factor * factor * factor)
 	e.health.damage_factor = e.health.damage_factor / (factor * factor * factor)
+
+	if e.melee then
+		for i = 1, #e.melee.attacks do
+			local a = e.melee.attacks[i]
+			if a.hit_offset then
+				a.hit_offset.x = a.hit_offset.x * factor
+				a.hit_offset.y = a.hit_offset.y * factor
+			end
+			if a.damage_radius then
+				a.damage_radius = a.damage_radius * factor
+			end
+		end
+	end
 end
 
 function SU.deck_shuffle(deck)

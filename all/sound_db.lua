@@ -55,13 +55,13 @@ sound_db.sound_extras = {}
 sound_db.ref_counters = {}
 sound_db.ts = 0
 sound_db.paused = false
-sound_db.global_source_mode = nil
 sound_db.load_queue = {}
-sound_db.load_queue_current = nil
-sound_db.group_progress = 0
+sound_db.threads = {}
+sound_db.load_file_queue = {}
+sound_db.load_mode_queue = {}
+sound_db.load_file_total = 0
+sound_db.load_file_done = 0
 sound_db.progress = 0
-sound_db.groups_total = 0
-sound_db.groups_done = 0
 sound_db.sounds_uses = {}
 sound_db.missing_sources_warned = {}
 sound_db.missing_sources_summary_printed = false
@@ -154,7 +154,6 @@ function sound_db:init(path)
 	for id, sd in pairs(self.sounds) do
 		self:_precache_sound(id, sd)
 	end
--- print(_extras_cnt)
 end
 
 -- 预缓存 per-sound 热路径字段，在 init() 和 mod 懒初始化时调用。
@@ -167,185 +166,160 @@ function sound_db:_precache_sound(id, sd)
 	sd._files_n = sd.files and #sd.files or 0
 end
 
-function sound_db:queue_load_done()
-	if not self.load_queue_current and #self.load_queue == 0 then
-		self.progress = 1
-		self.groups_total = 0
+function sound_db:queue_load_group(name)
+	log.info("queued %s", name)
+	table.insert(self.load_queue, name)
 
+	if #self.load_queue == 1 and #self.threads == 0 and #self.load_file_queue == 0 then
+		self.progress = 0
+	end
+end
+
+function sound_db:queue_load_done()
+	-- 加载队列已空，而且所有线程都完成工作，说明加载已结束
+	if #self.load_queue == 0 and #self.threads == 0 then
+		self.progress = 1
 		return true
 	end
 
 	::label_2_0::
 
-	if not self.co then
-		self.co = coroutine.create(self.load_group)
-	end
+	local load_queue_length = #self.load_queue
+	for i = load_queue_length, 1, -1 do
+		local name = self.load_queue[i]
+		self.load_queue[i] = nil
 
-	if self.load_queue_current then
-		local name = self.load_queue_current
-		local suc, err = coroutine.resume(self.co, self, name, true)
+		local group = self.groups[name]
 
-		if coroutine.status(self.co) ~= "dead" and err == nil then
-			self.progress = (self.groups_done + self.group_progress) / self.groups_total
+		if not group then
+			log.error("sound group %s not found", name)
+		elseif self.sounds_uses[name] then
+			-- 已经有声音的使用了，只添加引用计数
+			self.sounds_uses[name] = self.sounds_uses[name] + 1
+		else
+			self.sounds_uses[name] = 1
 
-			return false
-		end
+			if group.files then
+				local mode = group.stream and "stream" or "static"
+				for j = 1, #group.files do
+					local fn = group.files[j]
 
-		if err ~= nil then
-			log.error("Error in sound_db load coro: %s", debug.traceback(self.co, err))
-		end
+					if self.source_uses[fn] then
+						self.source_uses[fn] = self.source_uses[fn] + 1
+					else
+						self.source_uses[fn] = 1
+						local insert_index = #self.load_file_queue + 1
+						self.load_file_queue[insert_index] = fn
+						self.load_mode_queue[insert_index] = mode
+					end
+				end
+			end
 
-		self.co = nil
-		self.groups_done = self.groups_done + 1
+			if group.sounds then
+				for j = 1, #group.sounds do
+					local sound = self.sounds[group.sounds[j]]
+					if sound and sound.files then
+						local mode = sound.stream and "stream" or "static"
+						for k = 1, #sound.files do
+							local fn = sound.files[k]
 
-		log.info("group %s done (%d/%d)", name, self.groups_done, self.groups_total)
-	end
-
-	if #self.load_queue > 0 then
-		self.load_queue_current = table.remove(self.load_queue, 1)
-
-		goto label_2_0
-	end
-
-	log.debug("sound queue loaded")
-
-	self.load_queue_current = nil
-	self.progress = 1
-	self.groups_total = 0
-	return true
-end
-
-function sound_db:queue_load_group(name)
-	log.info("queued %s", name)
-	table.insert(self.load_queue, name)
-
-	self.groups_total = self.groups_total + 1
-
-	if #self.load_queue == 1 and not self.load_queue_current then
-		self.progress = 0
-		self.groups_done = 0
-	end
-end
-
-function sound_db:load_group(name, yielding, filter)
-	local rt_start = love.timer.getTime()
-
-	log.debug("loading sound group %s", name)
-
-	if not self.groups[name] then
-		log.error("sound group %s not found", name)
-
-		return
-	end
-
-	if self.sounds_uses[name] then
-		self.sounds_uses[name] = self.sounds_uses[name] + 1
-
-		log.debug("sounds %s already loaded", name)
-
-		return
-	end
-
-	self.sounds_uses[name] = 1
-	self.group_progress = 0
-
-	local files = {}
-	local group = self.groups[name]
-
-	if group.files then
-		for _, f in pairs(group.files) do
-			table.insert(files, {f, group.stream or false})
-		end
-	end
-
-	if group.sounds then
-		for _, s in pairs(self.groups[name].sounds) do
-			log.debug("   getting sound %s from group %s", s, name)
-
-			local sound = self.sounds[s]
-
-			for _, f in pairs(sound.files) do
-				table.insert(files, {f, sound.stream or false})
+							if self.source_uses[fn] then
+								self.source_uses[fn] = self.source_uses[fn] + 1
+							else
+								self.source_uses[fn] = 1
+								local insert_index = #self.load_file_queue + 1
+								self.load_file_queue[insert_index] = fn
+								self.load_mode_queue[insert_index] = mode
+							end
+						end
+					end
+				end
 			end
 		end
+
+		self.load_file_total = #self.load_file_queue
+		self.load_file_done = 0
 	end
 
-	local load_threads = {}
-	local th_i = 1
+	if #self.load_file_queue > 0 then
+		local thread_count = math.min(_MAX_THREADS, #self.load_file_queue)
+		for i = 1, thread_count do
+			local th = love.thread.newThread(_LOAD_AUDIO_THREAD_CODE)
+			local cin = love.thread.newChannel()
+			local cout = love.thread.newChannel()
 
-	for i = 1, _MAX_THREADS do
-		local th = love.thread.newThread(_LOAD_AUDIO_THREAD_CODE)
-		local cin = love.thread.newChannel()
-		local cout = love.thread.newChannel()
+			th:start(cin, cout, i)
+			self.threads[i] = {th, cin, cout}
+		end
 
-		th:start(cin, cout, i)
-
-		table.insert(load_threads, {th, cin, cout})
-	end
-
-	for _, item in pairs(files) do
-		local fn, stream = unpack(item)
-		local mode = self.global_source_mode or stream and "stream" or "static"
-
-		if self.sources[fn] then
-			self.source_uses[fn] = self.source_uses[fn] + 1
-		else
-			local file = string.format(self.files_path .. "/%s", fn)
-			local cin = load_threads[th_i][2]
+		local last_thread_used = 1
+		for i = #self.load_file_queue, 1, -1 do
+			local file = string.format(self.files_path .. "/%s", self.load_file_queue[i])
+			local cin = self.threads[last_thread_used][2]
 
 			cin:push(file)
-			cin:push(mode)
-			cin:push(fn)
+			cin:push(self.load_mode_queue[i])
+			cin:push(self.load_file_queue[i])
+			self.load_file_queue[i] = nil
+			self.load_mode_queue[i] = nil
 
-			th_i = km.zmod(th_i + 1, #load_threads)
+			last_thread_used = km.zmod(last_thread_used + 1, thread_count)
+		end
+
+		self.load_file_queue = {}
+
+		for i = 1, thread_count do
+			self.threads[i][2]:push("QUIT")
 		end
 	end
 
-	for _, item in pairs(load_threads) do
-		item[2]:push("QUIT")
-	end
-
-	local yield_every = 0
-
-	while #load_threads > 0 do
-		local th, cin, cout = unpack(load_threads[1])
+	for i = #self.threads, 1, -1 do
+		local th, cin, cout = unpack(self.threads[i])
 
 		if th:isRunning() then
 			local result = cout:pop()
-
 			if result then
 				local r1, r2, r3 = unpack(result)
-
 				if r1 == "DONE" then
-					table.remove(load_threads, 1)
+					table.remove(self.threads, i)
 				elseif r1 == "ERROR" then
 					log.error("Failed to create audio source for file: %s. Error: %s", r3, r2)
+					self.load_file_done = self.load_file_done + 1
 				elseif r1 == "OK" then
 					local fn, master_src = r3, r2
-
 					self.sources[fn] = {master_src}
-					self.source_uses[fn] = 1
+					self.load_file_done = self.load_file_done + 1
 				end
 			end
 		else
 			log.error("Thread error:%s", th:getError())
-			table.remove(load_threads, 1)
-		end
-
-		yield_every = yield_every + 1
-
-		if yielding and yield_every == 1000 then
-			yield_every = 0
-
-			coroutine.yield()
+			table.remove(self.threads, i)
 		end
 	end
 
-	load_threads = nil
+	if #self.threads > 0 then
+		self.progress = self.load_file_done / self.load_file_total
+		return false
+	end
 
-	log.info("Done loading sounds from group %s - time: %s", name, love.timer.getTime() - rt_start)
+	self.progress = 1
+	self.load_file_done = 0
+	self.load_file_total = 0
 
-	self.group_progress = 1
+	return true
+end
+
+function sound_db:load_group(name, yielding, filter)
+	-- 保持接口兼容：走统一队列状态机，不再维护单独路径
+	self:queue_load_group(name)
+	while true do
+		if self:queue_load_done() then
+			break
+		end
+		if yielding then
+			love.timer.sleep(0.001)
+		end
+	end
 end
 
 function sound_db:unload_group(name)
@@ -386,7 +360,7 @@ function sound_db:unload_group(name)
 
 				if source_uses[f] < 1 then
 					sources[f] = nil
-					source_uses[f] = 0
+					source_uses[f] = nil
 				end
 			end
 		end
@@ -412,7 +386,7 @@ function sound_db:unload_group(name)
 
 					if source_uses[f] < 1 then
 						sources[f] = nil
-						source_uses[f] = 0
+						source_uses[f] = nil
 					end
 				end
 			end

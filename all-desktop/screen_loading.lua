@@ -3,7 +3,6 @@ local F = require("lib.klove.font_db")
 local I = require("lib.klove.image_db")
 local S = require("sound_db")
 local GS = require("kr1.game_settings")
-local Timer = require("lib.hump.timer")
 
 require("all.constants")
 
@@ -126,41 +125,46 @@ function screen:destroy()
 end
 
 function screen:update(dt)
-	if self.timer then
-		self.timer:update(dt)
-	end
+	local init_coro = self.director_ref.queued_item_init_co
 
-	if self.director_ref.queued_item_init_co and coroutine.status(self.director_ref.queued_item_init_co) ~= "dead" then
-		local ok, err = coroutine.resume(self.director_ref.queued_item_init_co)
+	-- 优先保证资源加载的并行线程启动
+	local i_done = I:queue_load_done()
+	local s_done = S:queue_load_done()
+
+	-- 同时执行初始化逻辑协程，让 lua 端也不要闲着
+	if init_coro and coroutine.status(init_coro) ~= "dead" then
+		local ok, err = coroutine.resume(init_coro)
 		if not ok then
 			error("Error in loading coroutine: " .. tostring(err) .. "\n" .. debug.traceback(self.director_ref.queued_item_init_co))
 		end
 	end
 
+	-- 加载完成之后，再更新动画状态，保证动画状态是最新的
 	self.anim_t = self.anim_t + dt
 	self.progress = km.clamp(0, 1, 0.6 * I.progress + 0.4 * S.progress)
 	self.progress_display = self.progress_display + (self.progress - self.progress_display) * math.min(dt * 7, 1)
 
-	local init_coro = self.director_ref.queued_item_init_co
-
-	if I:queue_load_done() and S:queue_load_done() then
-		-- 如果有初始化工作被分配到 screen_loading 阶段的话，也要求初始化工作完成。
+	-- 检查工作是否已经完成
+	if i_done and s_done then
+		-- 没有初始化协程，那就结束
 		if not init_coro then
 			self.hold_enabled = false
 			self.progress = 1
 			self.progress_display = 1
-		-- I.log_banned = false
-		elseif coroutine.status(init_coro) == "dead" then
-			self.hold_enabled = false
-			self.progress = 1
-			self.progress_display = 1
-			-- 执行剩余的必须在资源加载完后执行的 init 工作
-			self.director_ref.queued_item:init(self.w, self.h)
-			self.director_ref.queued_item_init = true
-			self.director_ref.queued_item.done_callback_called = nil
 		else
-			self.progress = 0.99
-			self.progress_display = 0.99
+			-- 有初始化协程，需要保证初始化协程也已经结束
+			if coroutine.status(init_coro) == "dead" then
+				self.hold_enabled = false
+				self.progress = 1
+				self.progress_display = 1
+				-- 执行剩余的必须在资源加载完后执行的 init 工作
+				self.director_ref.queued_item:init(self.w, self.h)
+				self.director_ref.queued_item_init = true
+				self.director_ref.queued_item.done_callback_called = nil
+			else
+				self.progress = 0.99
+				self.progress_display = 0.99
+			end
 		end
 	end
 

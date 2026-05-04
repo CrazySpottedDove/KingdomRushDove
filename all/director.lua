@@ -552,8 +552,6 @@ function director:load_texture_groups(groups, texture_size, ref_height, queue, i
 end
 
 function director:load_sound_groups(groups)
-	S.global_source_mode = self.params.audio_mode
-
 	if groups then
 		for _, group in pairs(groups) do
 			S:queue_load_group(group)

@@ -75,12 +75,11 @@ image_db.atlas_uses = {}
 image_db.load_queue = {}
 image_db.load_queue_current = nil
 image_db.progress = 0
-image_db.groups_total = 0
-image_db.groups_done = 0
 image_db.missing_images = {}
 image_db.missing_sprites = {}
 image_db.threads = {}
 image_db.image_name_queue = {}
+image_db.image_path_queue = {}
 image_db.queue_load_total_images = 0
 image_db.queue_load_done_images = 0
 image_db.use_canvas = true
@@ -238,65 +237,56 @@ end
 function image_db:queue_load_done()
 	if #self.load_queue == 0 and #self.threads == 0 then
 		self.progress = 1
-		self.groups_total = 0
 
 		return true
 	end
 
-	if not self.queue_load_start_time then
-		self.queue_load_start_time = love.timer.getTime()
-	end
+	local load_queue_length = #self.load_queue
 
-	::label_3_0::
+	for i = load_queue_length, 1, -1 do
+		local item = self.load_queue[i]
+		self.load_queue[i] = nil
 
-	-- perf.tmp_start("preload_atlas")
-	for i = 1, #self.load_queue do
-		local item = table.remove(self.load_queue, 1)
-		local ref_scale, path, name = unpack(item)
-		local image_names = self:preload_atlas_from_bytecode(ref_scale, path, name)
+		-- 不要删掉这行，这真是注释：local ref_scale, path, name = unpack(item)
+		local image_names = self:preload_atlas_from_bytecode(item[1], item[2], item[3])
 
 		if image_names then
 			for n in pairs(image_names) do
-				table.insert(self.image_name_queue, {n, path})
-
+				local insert_index = #self.image_name_queue + 1
+				self.image_name_queue[insert_index] = n
+				self.image_path_queue[insert_index] = item[2]
 				self.queue_load_total_images = self.queue_load_total_images + 1
 			end
 		end
 	end
-	-- perf.tmp_stop("preload_atlas")
 
-	if #self.threads == 0 then
-		for i = 1, math.min(#self.image_name_queue, _MAX_THREADS) do
+	if #self.image_name_queue > 0 then
+		local thread_count = math.min(_MAX_THREADS, #self.image_name_queue)
+		for i = 1, thread_count do
 			local th = love.thread.newThread(_LOAD_IMAGE_THREAD_CODE)
 			local cin = love.thread.newChannel()
 			local cout = love.thread.newChannel()
 
 			th:start(cin, cout, i)
-
-			table.insert(self.threads, {th, cin, cout})
+			self.threads[i] = {th, cin, cout}
 		end
 
-		self.last_thread_used = 1
-	end
+		local last_thread_used = 1
 
-	if #self.image_name_queue > 0 then
-		for j = 1, #self.image_name_queue do
-			local image_name, path = unpack(table.remove(self.image_name_queue, 1))
-			local cin = self.threads[self.last_thread_used][2]
+		for j = #self.image_name_queue, 1, -1 do
+			local cin = self.threads[last_thread_used][2]
 
-			cin:push(image_name)
-			cin:push(path)
+			cin:push(self.image_name_queue[j])
+			cin:push(self.image_path_queue[j])
+			self.image_name_queue[j] = nil
+			self.image_path_queue[j] = nil
 
-			self.last_thread_used = km.zmod(self.last_thread_used + 1, #self.threads)
+			last_thread_used = km.zmod(last_thread_used + 1, thread_count)
 		end
-	end
 
-	for i = 1, #self.threads do
-		self.threads[i][2]:push("QUIT")
-	end
-
-	if not love.graphics.isActive() then
-		return false
+		for i = 1, thread_count do
+			self.threads[i][2]:push("QUIT")
+		end
 	end
 
 	for i = #self.threads, 1, -1 do
@@ -354,18 +344,9 @@ function image_db:queue_load_done()
 		return false
 	end
 
-	if #self.load_queue > 0 then
-		goto label_3_0
-	end
-
-	print("Image DB queue load done in " .. (love.timer.getTime() - self.queue_load_start_time) * 1000 .. "ms. Loaded images: " .. self.queue_load_done_images)
-
-	self.queue_load_start_time = nil
 	self.progress = 1
-	self.groups_total = 0
 	self.queue_load_total_images = 0
 	self.queue_load_done_images = 0
-	self.image_name_queue = {}
 
 	-- self:save_to_file()
 	return true
@@ -378,11 +359,8 @@ function image_db:queue_load_atlas(ref_scale, path, name)
 
 	table.insert(self.load_queue, {ref_scale, path, name})
 
-	self.groups_total = self.groups_total + 1
-
 	if #self.load_queue == 1 and not self.load_queue_current then
 		self.progress = 0
-		self.groups_done = 0
 	end
 end
 
@@ -556,7 +534,7 @@ function image_db:preload_atlas_from_bytecode(ref_scale, path, name)
 	local success, chunk = pcall(FS.load, group_file)
 	if not success or type(chunk) ~= "function" then
 		log.error("Failed to load atlas bytecode: %s. Error: %s", group_file, chunk)
-		return {}
+		return
 	end
 
 	local info = chunk()
