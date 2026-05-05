@@ -113,7 +113,7 @@ end
 local dnum_set_color = G.setColor
 
 local function dnum_build_atlas()
-	local font = require("lib.klove.font_db"):f("numbers_bold", 31)
+	local font = require("lib.klove.font_db"):f("numbers_bold", 30)
 
 	local widths = {}
 	local h = font:getHeight()
@@ -221,6 +221,8 @@ local function dnum_on_applied_enabled(store, d, target)
 	n.width = tw
 end
 
+local last_alpha = 1
+
 local function dnum_draw_enabled(g)
 	perf.start("damage number")
 	local now = g.store.tick_ts
@@ -236,7 +238,7 @@ local function dnum_draw_enabled(g)
 	end
 
 	dnum_batch:clear()
-	local last_alpha = 1
+
 	for i = 0, MAX_DNUMS - 1 do
 		local n = dnum_pool[i]
 		if n.alive ~= 0 then
