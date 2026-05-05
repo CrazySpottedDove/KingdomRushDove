@@ -723,11 +723,10 @@ mod_death_rider.main_script.insert = scripts.mod_death_rider.insert
 mod_death_rider.main_script.remove = scripts.mod_death_rider.remove
 mod_death_rider.main_script.update = scripts.mod_track_target.update
 --#endregion
+
 --#region tower_sunray
 tt = RT("tower_sunray", "tower_mage_1")
-
 AC(tt, "powers")
-
 tt.tower.level = 1
 tt.tower.type = "sunray"
 tt.tower.price = 290
@@ -2526,11 +2525,8 @@ tt.render.sprites[1].prefix = "elven_stargazers_tower_rising_star_hit_fx"
 --#endregion
 --#region tower_elven_stargazers_lvl4
 tt = RT("tower_elven_stargazers_lvl4", "tower")
-
 local b = balance.towers.elven_stargazers
-
 AC(tt, "powers", "attacks")
-
 tt.sound_events.insert = "TowerElvenStargazersTaunt"
 tt.info.i18n_key = "TOWER_STARGAZER_4"
 tt.info.stat_range = b.stats.range

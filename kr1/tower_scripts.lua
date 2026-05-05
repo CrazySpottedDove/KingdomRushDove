@@ -128,7 +128,7 @@ scripts.tower_archer_dwarf = {
 
 		min, max = math.ceil(min * this.tower.damage_factor), math.ceil(max * this.tower.damage_factor)
 
-		local cooldown = a.cooldown
+		local cooldown = a.cooldown * this.tower.cooldown_factor
 
 		return {
 			type = STATS_TYPE_TOWER,
@@ -1108,7 +1108,7 @@ scripts.tower_pirate_watchtower = {
 			damage_min = min,
 			damage_max = max,
 			range = this.attacks.range,
-			cooldown = a.cooldown
+			cooldown = a.cooldown * this.tower.cooldown_factor
 		}
 	end,
 	remove = function(this, store)
@@ -1493,7 +1493,7 @@ scripts.tower_silver = {
 	get_info = function(this)
 		local o = scripts.tower_common.get_info(this)
 
-		o.cooldown = 1.5
+		o.cooldown = 1.5 * this.tower.cooldown_factor
 
 		return o
 	end,
@@ -3062,7 +3062,7 @@ scripts.tower_faerie_dragon = {
 		local b = E:get_template("bolt_faerie_dragon")
 		local min = b.bullet.damage_min * this.tower.damage_factor
 		local max = b.bullet.damage_max * this.tower.damage_factor
-		local cooldown = this.attacks.list[1].cooldown
+		local cooldown = this.attacks.list[1].cooldown * this.tower.cooldown_factor
 		local range = this.attacks.range
 
 		return {
@@ -3139,13 +3139,13 @@ scripts.tower_faerie_dragon = {
 
 					local assigned_target_ids = {}
 
-					for _, dragon in pairs(this.dragons) do
+					for _, dragon in ipairs(this.dragons) do
 						if dragon.custom_attack.target_id then
 							table.insert(assigned_target_ids, dragon.custom_attack.target_id)
 						end
 					end
 
-					for _, dragon in pairs(this.dragons) do
+					for _, dragon in ipairs(this.dragons) do
 						if dragon.custom_attack.target_id then
 						-- block empty
 						else
@@ -3200,7 +3200,7 @@ scripts.tower_sunray = {
 		local max = b.damage_max + b.damage_inc * p.level
 		local min = b.damage_min + b.damage_inc * p.level
 		local d_type = b.damage_type
-		local cooldown = pow.cooldown_base + pow.cooldown_inc * pow.level
+		local cooldown = (pow.cooldown_base + pow.cooldown_inc * pow.level) * this.tower.cooldown_factor
 
 		return {
 			type = STATS_TYPE_TOWER_MAGE,
@@ -4419,7 +4419,7 @@ scripts.tower_tesla = {
 			damage_max = max,
 			damage_type = d_type,
 			range = this.attacks.range,
-			cooldown = this.attacks.list[1].cooldown
+			cooldown = this.attacks.list[1].cooldown * this.tower.cooldown_factor
 		}
 	end,
 	update = function(this, store)
@@ -4580,7 +4580,7 @@ scripts.tower_mech = {
 
 		min, max = math.ceil(min * this.tower.damage_factor), math.ceil(max * this.tower.damage_factor)
 
-		local cooldown = sm.attacks.list[1].cooldown
+		local cooldown = sm.attacks.list[1].cooldown * this.tower.cooldown_factor
 		local range = sm.attacks.list[1].max_range
 
 		return {
@@ -4932,11 +4932,7 @@ scripts.tower_frankenstein = {
 
 		min, max = math.ceil(min * this.tower.damage_factor), math.ceil(max * this.tower.damage_factor)
 
-		local cooldown
-
-		if this.attacks and this.attacks.list[1].cooldown then
-			cooldown = this.attacks.list[1].cooldown
-		end
+		local cooldown = this.attacks.list[1].cooldown * this.tower.cooldown_factor
 
 		return {
 			type = STATS_TYPE_TOWER,
@@ -18155,7 +18151,7 @@ function scripts.tower_sparking_geode.get_info(this)
 	o.type = STATS_TYPE_TOWER_MAGE
 	o.damage_min = math.ceil(b.bullet.damage_min * this.tower.damage_factor)
 	o.damage_max = math.ceil(b.bullet.damage_max * this.tower.damage_factor)
-	o.cooldown = (this.attacks.list[1].ray_timing_min + this.attacks.list[1].ray_timing_max) / 2
+	o.cooldown = (this.attacks.list[1].ray_timing_min + this.attacks.list[1].ray_timing_max) / 2 * this.tower.cooldown_factor
 
 	return o
 end
