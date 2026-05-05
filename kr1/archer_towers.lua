@@ -1791,11 +1791,8 @@ tt.damage_type = bor(DAMAGE_ARMOR, DAMAGE_NO_SHIELD_HIT)
 --#endregion
 --#region tower_ballista_lvl4
 tt = RT("tower_ballista_lvl4", "tower")
-
 local b = balance.towers.ballista
-
 AC(tt, "powers", "attacks")
-
 tt.tower.level = 1
 tt.tower.price = b.price[4]
 tt.tower.menu_offset = v(0, 30)
@@ -1805,7 +1802,6 @@ tt.info.portrait = "kr5_portraits_towers_0010"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_archer_%04i"
 tt.render.sprites[1].offset = v(0, 15)
-
 for i = 2, 4 do
 	tt.render.sprites[i] = CC("sprite")
 	tt.render.sprites[i].animated = true
@@ -1815,7 +1811,6 @@ for i = 2, 4 do
 	tt.render.sprites[i].sort_y_offset = 5
 	tt.render.sprites[i].group = "layers_base"
 end
-
 tt.render.sprites[5] = CC("sprite")
 tt.render.sprites[5].animated = true
 tt.render.sprites[5].prefix = "ballista_tower_lvl4_tower_goblin"
@@ -1923,7 +1918,6 @@ tt.bullet.mod = "mod_bullet_tower_ballista_skill_final_shot_stun"
 tt.render.sprites[1].anchor = v(0.5, 0.5)
 tt.render.sprites[1].name = "ballista_tower_special_arrow_idle"
 tt.image_width = 162.5
-tt.is_final_shot = true
 tt.sound_events.insert = "TowerBallistaFinalNail"
 tt.main_script.update = scripts.bullet_tower_ballista_skill_final_shot.update
 --#endregion

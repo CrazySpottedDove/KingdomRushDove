@@ -16012,12 +16012,6 @@ function scripts.bullet_tower_ballista.update(this, store)
 			fx.render.sprites[1].ts = store.tick_ts
 
 			queue_insert(store, fx)
-
-			if this.is_final_shot then
-				local angle = V.angleTo(b.from.x - b.to.x, b.from.y - b.to.y)
-
-				fx.render.sprites[1].r = angle
-			end
 		elseif this.missed_shot and GR:cell_is_only(this.pos.x, this.pos.y, TERRAIN_LAND) then
 			local fx = E:create_entity(this.missed_arrow_decal)
 
