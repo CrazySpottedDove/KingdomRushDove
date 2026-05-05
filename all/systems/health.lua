@@ -17,57 +17,85 @@ ffi.cdef[[
 typedef struct {
     float  x, y;
     float  vx, vy;
-    float  r, g, b;
+    int    color_idx;
     float  font_scale;
     float  duration;
-    double ts;
+    float  ts;
     int    alive;
+    int    digits_len;
+    int    width;
 } DNum;
 ]]
 
 local MAX_DNUMS = 300
 local dnum_pool = ffi.new("DNum[?]", MAX_DNUMS)
-local dnum_texts = {}
+local dnum_digits = {}
 local dnum_write_cur = 0
 local dnum_on_applied_impl
 local dnum_draw_impl
+local dnum_atlas_font
+local dnum_atlas_canvas
+local dnum_atlas_quads
+local dnum_atlas_widths
+local dnum_batch
+local DNUM_MAX_CHARS = 12
+local DNUM_BATCH_CAP = MAX_DNUMS * DNUM_MAX_CHARS * 2
 
 for i = 0, MAX_DNUMS - 1 do
 	dnum_pool[i].alive = 0
-	dnum_texts[i] = ""
+	dnum_digits[i] = {}
 end
 
-local function dnum_color(dtype)
+local dnum_palette = {
+	{0.00, 0.00, 0.00}, -- shadow
+	{1.00, 0.08, 0.08}, -- instakill
+	{0.20, 1.00, 0.20}, -- poison
+	{0.30, 0.70, 1.00}, -- electrical
+	{1.00, 0.50, 0.80}, -- magical explosion
+	{0.40, 0.50, 1.00}, -- magical
+	{1.00, 0.45, 0.05}, -- explosion
+	{1.00, 1.00, 0.10}, -- stab
+	{0.90, 0.35, 0.20}, -- rude
+	{0.50, 0.85, 1.00}, -- shot
+	{1.00, 0.88, 0.50}, -- physical
+	{0.30, 0.40, 0.92}, -- against magic armor
+	{0.75, 0.75, 0.80}, -- against armor
+	{0.00, 0.85, 0.85}, -- mixed
+	{0.95, 0.95, 0.95}, -- true
+	{1.00, 0.88, 0.55} -- default
+}
+
+local function dnum_color_index(dtype)
 	if band(dtype, DAMAGE_INSTAKILL) ~= 0 then
-		return 1.0, 0.08, 0.08
+		return 2
 	elseif band(dtype, DAMAGE_POISON) ~= 0 then
-		return 0.2, 1.0, 0.2
+		return 3
 	elseif band(dtype, DAMAGE_ELECTRICAL) ~= 0 then
-		return 0.3, 0.7, 1.0
+		return 4
 	elseif band(dtype, DAMAGE_MAGICAL_EXPLOSION) ~= 0 then
-		return 1.0, 0.5, 0.8
+		return 5
 	elseif band(dtype, DAMAGE_MAGICAL) ~= 0 then
-		return 0.4, 0.5, 1.0
+		return 6
 	elseif band(dtype, DAMAGE_EXPLOSION) ~= 0 then
-		return 1.0, 0.45, 0.05
+		return 7
 	elseif band(dtype, DAMAGE_STAB) ~= 0 then
-		return 1.0, 1.0, 0.1
+		return 8
 	elseif band(dtype, DAMAGE_RUDE) ~= 0 then
-		return 0.9, 0.35, 0.2
+		return 9
 	elseif band(dtype, DAMAGE_SHOT) ~= 0 then
-		return 0.5, 0.85, 1.0
+		return 10
 	elseif band(dtype, DAMAGE_PHYSICAL) ~= 0 then
-		return 1.0, 0.88, 0.5
+		return 11
 	elseif band(dtype, DAMAGE_AGAINST_MAGIC_ARMOR) ~= 0 then
-		return 0.3, 0.4, 0.92
+		return 12
 	elseif band(dtype, DAMAGE_AGAINST_ARMOR) ~= 0 then
-		return 0.75, 0.75, 0.8
+		return 13
 	elseif band(dtype, DAMAGE_MIXED) ~= 0 then
-		return 0.0, 0.85, 0.85
+		return 14
 	elseif band(dtype, DAMAGE_TRUE) ~= 0 then
-		return 0.95, 0.95, 0.95
+		return 15
 	else
-		return 1.0, 0.88, 0.55
+		return 16
 	end
 end
 
@@ -76,13 +104,60 @@ local function dnum_display_params(damage, hp_max)
 	local abs_score = damage * 0.001
 	local score = (math.min(ratio, 1) + math.min(abs_score, 1)) * 0.5
 	score = score ^ 0.7
-	local font_scale = 0.5 + score * 0.6
+	local font_scale = 0.45 + score * 0.55
 	local duration = 0.70 + score * 0.70
 	local vy = -30 + score * (-25)
 	return font_scale, duration, vy
 end
 
 local dnum_set_color = G.setColor
+
+local function dnum_build_atlas()
+	local font = require("lib.klove.font_db"):f("numbers_bold", 31)
+
+	local widths = {}
+	local h = font:getHeight()
+	local atlas_w = 0
+	local color_count = #dnum_palette
+
+	for i = 0, 9 do
+		local c = tostring(i)
+		local w = font:getWidth(c)
+		widths[i] = w
+		atlas_w = atlas_w + w
+	end
+
+	local canvas = G.newCanvas(atlas_w, h * color_count)
+	local quads = {}
+
+	G.push("all")
+	G.setCanvas(canvas)
+	G.clear(0, 0, 0, 0)
+	G.setFont(font)
+	for ci = 1, color_count do
+		local p = dnum_palette[ci]
+		local y = (ci - 1) * h
+		local x = 0
+		dnum_set_color(p[1], p[2], p[3], 1)
+		quads[ci] = {}
+		for i = 0, 9 do
+			local c = tostring(i)
+			local w = widths[i]
+			G.print(c, x, y)
+			quads[ci][i] = G.newQuad(x, y, w, h, atlas_w, h * color_count)
+			x = x + w
+		end
+	end
+
+	G.setCanvas()
+	G.pop()
+
+	dnum_atlas_font = font
+	dnum_atlas_canvas = canvas
+	dnum_atlas_quads = quads
+	dnum_atlas_widths = widths
+	dnum_batch = G.newSpriteBatch(canvas, DNUM_BATCH_CAP, "stream")
+end
 
 local function dnum_on_applied_disabled(store, d, target)
 	return
@@ -93,19 +168,19 @@ local function dnum_draw_disabled(g)
 end
 
 local function dnum_on_applied_enabled(store, d, target)
-	if not d.damage_applied or d.damage_applied <= 0 or not target or not target.pos then
+	if not target.pos then
 		return
 	end
 
 	local hp_max = target.health.hp_max
 	local font_scale, duration, vy = dnum_display_params(d.damage_applied, hp_max)
 
-	if d.damage_result and band(d.damage_result, DR_KILL) ~= 0 then
+	if band(d.damage_result, DR_KILL) ~= 0 then
 		font_scale = font_scale * 1.25
 		duration = duration + 0.2
 	end
 
-	local r, g, b = dnum_color(d.damage_type or 0)
+	local color_idx = dnum_color_index(d.damage_type)
 
 	local world_y = target.pos.y
 	local unit = target.unit
@@ -125,21 +200,32 @@ local function dnum_on_applied_enabled(store, d, target)
 	n.y = REF_H - world_y - 20
 	n.vx = (random() - 0.5) * 8
 	n.vy = vy - random() * 8
-	n.r = r
-	n.g = g
-	n.b = b
+	n.color_idx = color_idx
 	n.font_scale = font_scale
 	n.duration = duration
 	n.ts = store.tick_ts
 	n.alive = 1
-	dnum_texts[slot] = tostring(floor(d.damage_applied))
+
+	local txt = tostring(floor(d.damage_applied))
+
+	local digits = dnum_digits[slot]
+	local len = #txt
+	local tw = 0
+	for i = 1, len do
+		local digit = string.byte(txt, i) - 48
+		digits[i] = digit
+
+		tw = tw + dnum_atlas_widths[digit]
+	end
+	n.digits_len = len
+	n.width = tw
 end
 
 local function dnum_draw_enabled(g)
-	perf.start("damage_number")
+	perf.start("damage number")
 	local now = g.store.tick_ts
 	local c = g.camera
-	local zoom = c and c.zoom or 1
+	local zoom = c.zoom
 	local gs = g.game_scale * zoom
 	local rox = -(c.x * zoom - g.screen_w * 0.5)
 	local roy = -(c.y * zoom - g.screen_h * 0.5)
@@ -149,7 +235,8 @@ local function dnum_draw_enabled(g)
 		roy = roy + g.store.world_offset.y
 	end
 
-	local font = G.getFont()
+	dnum_batch:clear()
+	local last_alpha = 1
 	for i = 0, MAX_DNUMS - 1 do
 		local n = dnum_pool[i]
 		if n.alive ~= 0 then
@@ -157,30 +244,46 @@ local function dnum_draw_enabled(g)
 			if t >= n.duration then
 				n.alive = 0
 			else
-				local alpha = 1 - t / n.duration
-				local fade = alpha < 0.4 and (alpha / 0.4) ^ 1.5 or 1
+				local remain = 1 - t / n.duration
+				local alpha = remain < 0.4 and (remain * 2.5) or 1
+
 				local wx = n.x + n.vx * t
 				local wy = n.y + n.vy * t + 12 * t * t
 				local sx = wx * gs + rox
 				local sy = wy * gs + roy
 				local fs = n.font_scale
 				if t < 0.12 then
-					fs = fs * (1 + 0.5 * (1 - t / 0.12))
+					fs = fs * (1.5 - t * 4.66)
 				end
 
-				local txt = dnum_texts[i]
-				local tw = font:getWidth(txt) * fs
+				local len = n.digits_len
+				local tw = n.width * fs
 				local sx_c = floor(sx - tw * 0.5)
 				local sy_f = floor(sy)
-				dnum_set_color(0, 0, 0, fade * 0.8)
-				G.print(txt, sx_c + 2, sy_f + 2, 0, fs, fs)
-				dnum_set_color(n.r, n.g, n.b, fade)
-				G.print(txt, sx_c, sy_f, 0, fs, fs)
+				local cursor = sx_c
+				local digits = dnum_digits[i]
+				local shadow_quads = dnum_atlas_quads[1]
+				local color_quads = dnum_atlas_quads[n.color_idx]
+				if last_alpha ~= alpha then
+					dnum_batch:setColor(1, 1, 1, alpha)
+					last_alpha = alpha
+				end
+				for j = 1, len do
+					local digit = digits[j]
+					local cw = dnum_atlas_widths[digit]
+
+					dnum_batch:add(shadow_quads[digit], cursor + fs, sy_f + fs, 0, fs, fs)
+					dnum_batch:add(color_quads[digit], cursor, sy_f, 0, fs, fs)
+					cursor = cursor + cw * fs
+				end
 			end
 		end
 	end
+
 	dnum_set_color(1, 1, 1, 1)
-	perf.stop("damage_number")
+	G.draw(dnum_batch)
+	dnum_set_color(1, 1, 1, 1)
+	perf.stop("damage number")
 end
 
 dnum_on_applied_impl = dnum_on_applied_disabled
@@ -190,9 +293,11 @@ local function dnum_init(store)
 	dnum_write_cur = 0
 	for i = 0, MAX_DNUMS - 1 do
 		dnum_pool[i].alive = 0
-		dnum_texts[i] = ""
 	end
 	if store.config.damage_numbers_enabled ~= false then
+		if not dnum_batch then
+			dnum_build_atlas()
+		end
 		dnum_on_applied_impl = dnum_on_applied_enabled
 		dnum_draw_impl = dnum_draw_enabled
 	else
@@ -551,6 +656,7 @@ function M.register(sys)
 									table.insert(source.track_damage.damaged, {e.id, actual_damage})
 								end
 							end
+							dnum_on_applied_impl(store, d, e)
 						end
 
 						if h.spiked_armor > 0 and d.source_id then
@@ -583,7 +689,6 @@ function M.register(sys)
 
 						damages_applied_count = damages_applied_count + 1
 						damages_applied[damages_applied_count] = d
-						dnum_on_applied_impl(store, d, e)
 					end
 
 					if starting_hp > 0 and h.hp <= 0 then
