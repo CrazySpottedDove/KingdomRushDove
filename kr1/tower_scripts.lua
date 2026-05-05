@@ -3211,13 +3211,13 @@ scripts.tower_sunray = {
 			cooldown = cooldown
 		}
 	end,
-	damage_factor_fun = function(count)
+	damage_factor_fn = function(count)
 		-- count = 1 时，伤害系数为 1
 		-- count 越大，伤害系数越小
 		-- count * 伤害系数收敛于 4
 		return 4 / (3 + count)
 	end,
-	charge_factor_fun = function(count)
+	charge_factor_fn = function(count)
 		local c = E:get_template("tower_sunray").powers.charge
 
 		-- count = 1 时，为 min_charge_factor
@@ -3300,7 +3300,7 @@ scripts.tower_sunray = {
 				end
 
 				U.animation_start_group(this, "shoot", nil, store.tick_ts, false, group_tower)
-				y_wait(store, a.shoot_time)
+				y_wait(store, a.shoot_time * tw.cooldown_factor)
 
 				local enemies = U.find_enemies_in_range_filter_off(target.pos, a.radius, a.vis_flags, a.vis_bans)
 
@@ -3313,7 +3313,7 @@ scripts.tower_sunray = {
 				-- 确定打出攻击，此时刷新cd
 				a.ts = store.tick_ts
 
-				local damage_factor = tw.damage_factor * scripts.tower_sunray.damage_factor_fun(#enemies)
+				local damage_factor = tw.damage_factor * scripts.tower_sunray.damage_factor_fn(#enemies)
 				local damage_min = bullet.damage_min + bullet.damage_inc * pow_r.level
 				local damage_max = bullet.damage_max + bullet.damage_inc * pow_r.level
 				local kill_count = 0
@@ -3370,7 +3370,7 @@ scripts.tower_sunray = {
 				end
 
 				if kill_count > 0 then
-					a.ts = a.ts - a.cooldown * scripts.tower_sunray.charge_factor_fun(kill_count) * tw.cooldown_factor
+					a.ts = a.ts - a.cooldown * scripts.tower_sunray.charge_factor_fn(kill_count) * tw.cooldown_factor
 				end
 
 				U.y_animation_wait_group(this, group_tower)
