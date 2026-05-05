@@ -25,9 +25,7 @@ require("game_templates_utils")
 
 --#region tower_ranger
 tt = RT("tower_ranger", "tower_archer_1")
-
 AC(tt, "powers")
-
 image_y = 90
 tt.tower.type = "ranger"
 tt.tower.level = 1
@@ -809,13 +807,11 @@ decal_pirate_watcher_preview.tween.props[1].keys = {{0, vec_2(1, 1)}, {0.25, vec
 --#endregion
 --#region tower_arcane
 tt = RT("tower_arcane", "tower")
-
 AC(tt, "attacks", "powers")
-
 image_y = 90
 tt.tower.type = "arcane"
 tt.tower.level = 1
-tt.tower.price = 220
+tt.tower.price = 230
 tt.tower.size = TOWER_SIZE_LARGE
 tt.info.enc_icon = 17
 tt.info.fn = scripts.tower_arcane.get_info
@@ -884,8 +880,8 @@ tt.sound_events.insert = "ElvesArcherArcaneTaunt"
 --#endregion
 --#region arrow_arcane
 tt = RT("arrow_arcane", "arrow_1")
-tt.bullet.damage_max = 18
-tt.bullet.damage_min = 11
+tt.bullet.damage_max = 19
+tt.bullet.damage_min = 14
 tt.bullet.damage_type = DAMAGE_MIXED
 tt.bullet.miss_decal = "archer_arcane_proy2_decal-f"
 tt.bullet.mod = {"mod_arrow_arcane"}
