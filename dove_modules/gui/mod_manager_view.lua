@@ -584,11 +584,11 @@ function ModToggleButton:_refresh()
 	if self.value then
 		self.colors.background = self._hover and {58, 183, 90, 245} or {35, 148, 68, 215}
 		self._label.colors.text = {195, 255, 178, 255}
-		self._label.text = "启用"
+		self._label.text = "已启用"
 	else
 		self.colors.background = self._hover and {178, 55, 55, 245} or {148, 38, 38, 215}
 		self._label.colors.text = {255, 178, 155, 255}
-		self._label.text = "禁用"
+		self._label.text = "已禁用"
 	end
 end
 
