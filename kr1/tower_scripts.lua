@@ -1370,6 +1370,17 @@ scripts.tower_arcane = {
 		local pow_b = this.powers.burst
 		local pow_s = this.powers.slumber
 
+		local function attack_sort_fn(a, b)
+			local a_flying = band(a.vis.flags, F_FLYING) ~= 0
+			local b_flying = band(b.vis.flags, F_FLYING) ~= 0
+			if a_flying and not b_flying then
+				return true
+			elseif not a_flying and b_flying then
+				return false
+			end
+			return a.health.magic_armor > b.health.magic_armor
+		end
+
 		while true do
 			if tw.blocked then
 				coroutine.yield()
@@ -1420,24 +1431,26 @@ scripts.tower_arcane = {
 					else
 						aa.ts = store.tick_ts
 
+						table.sort(enemies, attack_sort_fn)
+
 						for i = 1, #shooter_sids do
 							shooter_idx = km.zmod(shooter_idx + 1, #shooter_sids)
-							enemy = enemies[km.zmod(shooter_idx, #enemies)]
+							enemy = enemies[1]
 
 							shot_animation(aa, shooter_idx, enemy)
 
 							if i == 1 then
-								y_wait(store, aa.shooters_delay)
+								y_wait(store, aa.shooters_delay * tw.cooldown_factor)
 							end
 						end
 
-						while store.tick_ts - aa.ts < aa.shoot_time do
+						while store.tick_ts - aa.ts < aa.shoot_time * tw.cooldown_factor do
 							coroutine.yield()
 						end
 
 						for i = 1, #shooter_sids do
 							shooter_idx = km.zmod(shooter_idx + 1, #shooter_sids)
-							enemy = enemies[km.zmod(shooter_idx, #enemies)]
+							enemy = enemies[1]
 
 							if enemy.health.dead then
 								enemy = U.refind_foremost_enemy(enemy, store, aa.vis_flags, aa.vis_bans)
@@ -1454,7 +1467,7 @@ scripts.tower_arcane = {
 							end
 
 							if i == 1 then
-								y_wait(store, aa.shooters_delay)
+								y_wait(store, aa.shooters_delay * tw.cooldown_factor)
 							end
 						end
 
@@ -1463,7 +1476,7 @@ scripts.tower_arcane = {
 				end
 
 				if store.tick_ts - aa.ts > tw.long_idle_cooldown then
-					for _, sid in pairs(shooter_sids) do
+					for _, sid in ipairs(shooter_sids) do
 						local an, af = animation_name_facing_point(this, "idle", tw.long_idle_pos, sid)
 
 						animation_start(this, an, af, store.tick_ts, -1, sid)

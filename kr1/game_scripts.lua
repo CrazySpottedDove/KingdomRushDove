@@ -16088,7 +16088,7 @@ function scripts.aura_arcane_burst.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(hit_pos, a.radius, a.vis_flags, a.vis_bans)
 
 	if targets then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = a.damage_type
@@ -16104,6 +16104,15 @@ function scripts.aura_arcane_burst.update(this, store)
 				m.modifier.target_id = target.id
 				m.modifier.source_id = this.id
 
+				queue_insert(store, m)
+			end
+
+			if target.health.magic_armor <= 0 then
+				local m = E:create_entity("mod_arcane_burst")
+				m.modifier.target_id = target.id
+				m.modifier.source_id = this.id
+				m.modifier.damage_factor = a.damage_factor
+				m.modifier.level = a.level
 				queue_insert(store, m)
 			end
 		end

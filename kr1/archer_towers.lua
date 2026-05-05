@@ -818,8 +818,8 @@ tt.info.fn = scripts.tower_arcane.get_info
 tt.info.portrait = "kr3_info_portraits_towers_0009"
 tt.info.i18n_key = "TOWER_ARCANE_ARCHER"
 tt.powers.burst = CC("power")
-tt.powers.burst.price_base = 180
-tt.powers.burst.price_inc = 180
+tt.powers.burst.price_base = 200
+tt.powers.burst.price_inc = 200
 tt.powers.burst.attack_idx = 2
 tt.powers.burst.enc_icon = 4
 tt.powers.slumber = CC("power")
@@ -907,9 +907,7 @@ tt.sound_events.insert = "TowerArcanePreloadAndTravel"
 --#endregion
 --#region aura_arcane_burst
 tt = RT("aura_arcane_burst", "aura")
-
 AC(tt, "render")
-
 tt.aura.damage_inc = 80
 tt.aura.damage_type = DAMAGE_MAGICAL_EXPLOSION
 tt.aura.radius = 57.5
@@ -920,10 +918,24 @@ tt.render.sprites[1].sort_y_offset = -7
 tt.render.sprites[1].z = Z_EFFECTS
 tt.sound_events.insert = "TowerArcaneExplotion"
 --#endregion
+
+tt = RT("mod_arcane_burst", "modifier")
+E:add_comps(tt, "dps", "render")
+tt.render.sprites[1].name = "arcane_slumber_explosion"
+tt.dps.damage_min = 0
+tt.dps.damage_max = 0
+tt.dps.damage_type = DAMAGE_MAGICAL
+tt.dps.damage_every = fts(14)
+tt.dps.damage_inc = 10
+tt.modifier.duration = 4 * fts(14)
+tt.modifier.allows_duplicates = true
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+
 --#region arrow_arcane_slumber
 tt = RT("arrow_arcane_slumber", "arrow_arcane")
-tt.bullet.damage_max = 36
-tt.bullet.damage_min = 22
+tt.bullet.damage_max = 76
+tt.bullet.damage_min = 56
 tt.bullet.flight_time_min = fts(14)
 tt.bullet.miss_decal = "archer_arcane_proy2_decal-f"
 tt.bullet.hit_fx = "fx_arcane_slumber_explosion"
@@ -940,9 +952,7 @@ tt.damage_type = DAMAGE_MAGICAL_ARMOR
 --#endregion
 --#region mod_arrow_arcane_slumber
 tt = RT("mod_arrow_arcane_slumber", "modifier")
-
 AC(tt, "render")
-
 tt.main_script.insert = scripts.mod_arrow_arcane_slumber.insert
 tt.main_script.update = scripts.mod_stun.update
 tt.main_script.remove = scripts.mod_stun.remove
