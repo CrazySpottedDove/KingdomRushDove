@@ -113,7 +113,11 @@ end
 local dnum_set_color = G.setColor
 
 local function dnum_build_atlas()
-	local font = require("lib.klove.font_db"):f("numbers_bold", 30)
+	local font_size = 30
+	if IS_ANDROID then
+		font_size = math.ceil(font_size / love.window.getDPIScale())
+	end
+	local font = require("lib.klove.font_db"):f("numbers_bold", font_size)
 
 	local widths = {}
 	local h = font:getHeight()
