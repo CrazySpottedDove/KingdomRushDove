@@ -196,8 +196,8 @@ function scripts.aura_totem.update(this, store)
 		if enemies then
 			local mods = this.aura.mods or {this.aura.mod}
 			local extra_duration = total_duration - (store.tick_ts - this.aura.ts)
-			for _, enemy in pairs(enemies) do
-				for _, mod in pairs(mods) do
+			for _, enemy in ipairs(enemies) do
+				for _, mod in ipairs(mods) do
 					local new_mod = E:create_entity(mod)
 
 					new_mod.modifier.level = this.aura.level
@@ -926,7 +926,7 @@ function scripts.mod_dracolich_disease.remove(this, store)
 		local targets = U.find_enemies_in_range_filter_off(this.pos, this.spread_radius, this.modifier.vis_flags, this.modifier.vis_bans)
 
 		if targets then
-			for _, t in pairs(targets) do
+			for _, t in ipairs(targets) do
 				local m = E:create_entity(this.template_name)
 
 				m.modifier.target_id = t.id
@@ -998,7 +998,7 @@ function scripts.dracolich_spine.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.damage_flags, b.damage_bans)
 
 	if targets then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = b.damage_type
@@ -1125,7 +1125,7 @@ function scripts.dracolich_plague_carrier.update(this, store)
 			if not targets then
 			-- block empty
 			else
-				for _, e in pairs(targets) do
+				for _, e in ipairs(targets) do
 					local d = E:create_entity("damage")
 
 					d.source_id = this.id
@@ -1203,7 +1203,7 @@ function scripts.fireball_dragon.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(hit_center, b.damage_radius, b.vis_flags, b.vis_bans)
 
 	if targets then
-		for _, e in pairs(targets) do
+		for _, e in ipairs(targets) do
 			local d = SU.create_bullet_damage(b, e.id, this.id)
 
 			d.xp_dest_id = b.source_id
@@ -1503,7 +1503,7 @@ function scripts.elora_ice_spike.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.damage_flags, b.damage_bans)
 
 	if targets then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = b.damage_type
@@ -3009,7 +3009,7 @@ function scripts.aura_tesla_overcharge.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(this.pos, a.radius * this.scale_factor, a.vis_flags, a.vis_bans)
 
 	if targets then
-		for _, e in pairs(targets) do
+		for _, e in ipairs(targets) do
 			local d = SU.create_attack_damage(a, e.id, this)
 
 			queue_damage(store, d)
@@ -3216,7 +3216,7 @@ function scripts.aura_ignus_surge_of_flame.update(this, store)
 			targets = U.find_enemies_in_range_filter_off(this.pos, a.damage_radius, a.damage_flags or 0, a.damage_bans or 0) or {}
 			ts = store.tick_ts
 
-			for _, t in pairs(targets) do
+			for _, t in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.damage_type = a.damage_type
@@ -3412,7 +3412,7 @@ function scripts.aura_10yr_bomb.update(this, store)
 		local targets = U.find_enemies_in_range_filter_off(pos, radius, a.vis_flags, a.vis_bans)
 
 		if targets then
-			for _, t in pairs(targets) do
+			for _, t in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.value = math.random(a.damage_min, a.damage_max)
@@ -4818,7 +4818,7 @@ function scripts.aura_burning_floor.update(this, store)
 			local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.radius, a.vis_flags, a.vis_bans)
 
 			if targets then
-				for _, target in pairs(targets) do
+				for _, target in ipairs(targets) do
 					local m = E:create_entity(this.aura.mod)
 
 					m.modifier.target_id = target.id
@@ -6827,7 +6827,7 @@ function scripts.phantom_warrior_aura.update(this, store)
 			end)
 
 			if targets then
-				for _, target in pairs(targets) do
+				for _, target in ipairs(targets) do
 					local d = E:create_entity("damage")
 
 					d.damage_type = a.damage_type
@@ -7151,7 +7151,7 @@ function scripts.blazefang_explosion.update(this, store)
 		return not v.health.dead and U.is_inside_ellipse(v.pos, this.pos, b.damage_radius)
 	end)
 
-	for _, target in pairs(targets) do
+	for _, target in ipairs(targets) do
 		local d = E:create_entity("damage")
 
 		d.source_id = this.id
@@ -8028,7 +8028,7 @@ function scripts.bomb_pirate_cannon.update(this, store)
 		return e and e.health and not e.health.dead and e.vis and band(e.vis.flags, b.damage_bans) == 0 and band(e.vis.bans, b.damage_flags) == 0 and U.is_inside_ellipse(e.pos, b.to, b.damage_radius)
 	end)
 
-	for _, target in pairs(targets) do
+	for _, target in ipairs(targets) do
 		local d = E:create_entity("damage")
 
 		d.damage_type = b.damage_type
@@ -8190,7 +8190,7 @@ function scripts.carnivorous_plant.update(this, store)
 			end)
 
 			if #targets > 0 then
-				for _, target in pairs(targets) do
+				for _, target in ipairs(targets) do
 					local d = E:create_entity("damage")
 
 					d.damage_type = a.damage_type
@@ -8794,7 +8794,7 @@ function scripts.steam_frigate_mine.update(this, store)
 
 			local enemies = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.damage_flags, b.damage_bans)
 
-			for _, enemy in pairs(enemies) do
+			for _, enemy in ipairs(enemies) do
 				local d = E:create_entity("damage")
 
 				d.damage_type = b.damage_type
@@ -9010,7 +9010,7 @@ function scripts.ray_neptune.update(this, store)
 		return false
 	end)
 
-	for _, enemy in pairs(enemies) do
+	for _, enemy in ipairs(enemies) do
 		local d = E:create_entity("damage")
 
 		d.source_id = this.id
@@ -9836,7 +9836,7 @@ function scripts.voodoo_witch_skull_aura.update(this, store)
 			local targets = U.find_targets_in_range(store.entities, this.pos, 0, a.radius, F_NONE, a.vis_bans)
 
 			if targets then
-				for _, target in pairs(targets) do
+				for _, target in ipairs(targets) do
 					if target.enemy or (target.soldier and band(target.vis.bans, a.vis_flags) == 0) then
 						local m = E:create_entity("mod_voodoo_witch_skull_spawn")
 
@@ -10104,7 +10104,7 @@ function scripts.voodoo_witch_death_aura.update(this, store)
 			local targets = U.find_enemies_in_range_filter_off(this.pos, a.radius, a.vis_flags, a.vis_bans)
 
 			if targets then
-				for _, target in pairs(targets) do
+				for _, target in ipairs(targets) do
 					local d = E:create_entity("damage")
 
 					d.damage_type = a.damage_type
@@ -10987,7 +10987,7 @@ function scripts.soldier_blade.update(this, store)
 							local targets = U.find_enemies_in_range_filter_off(this.pos, ca.damage_radius, ca.damage_flags, ca.damage_bans)
 
 							if targets then
-								for _, target in pairs(targets) do
+								for _, target in ipairs(targets) do
 									local d = E:create_entity("damage")
 
 									d.source_id = this.id
@@ -11279,7 +11279,7 @@ function scripts.soldier_forest.update(this, store)
 					if not targets then
 						log.debug("Circle of Life has no targets for soldier id:%s", this.id)
 					else
-						for _, target in pairs(targets) do
+						for _, target in ipairs(targets) do
 							local mod = E:create_entity(ca.mod)
 
 							mod.modifier.level = pow_c.level
@@ -11842,7 +11842,7 @@ function scripts.aura_baby_malik_fissure.update(this, store)
 		local targets = U.find_enemies_in_range_filter_off(pos, a.damage_radius, a.vis_flags, a.vis_bans)
 
 		if targets then
-			for _, t in pairs(targets) do
+			for _, t in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.value = math.random(a.damage_min, a.damage_max)
@@ -13562,7 +13562,7 @@ function scripts.enemy_twilight_heretic.update(this, store)
 					table.insert(targets, extra_targets[1])
 				end
 
-				for _, t in pairs(targets) do
+				for _, t in ipairs(targets) do
 					local m = E:create_entity(a.mod)
 
 					m.modifier.target_id = t.id
@@ -13867,7 +13867,7 @@ function scripts.enemy_razorboar.update(this, store)
 							end)
 
 							if enemies then
-								for _, e in pairs(enemies) do
+								for _, e in ipairs(enemies) do
 									table.insert(a.hit_targets, e.id)
 
 									local m = E:create_entity(a.mod_enemy)
@@ -13885,7 +13885,7 @@ function scripts.enemy_razorboar.update(this, store)
 							end)
 
 							if soldiers then
-								for _, e in pairs(soldiers) do
+								for _, e in ipairs(soldiers) do
 									table.insert(a.hit_targets, e.id)
 
 									local m = E:create_entity(a.mod_soldier)
@@ -14606,7 +14606,7 @@ function scripts.enemy_screecher_bat.update(this, store)
 					end)
 
 					if targets then
-						for _, t in pairs(targets) do
+						for _, t in ipairs(targets) do
 							local m = E:create_entity(a.mod)
 
 							m.modifier.source_id = this.id
@@ -14717,7 +14717,7 @@ function scripts.aura_shadow_champion_death.update(this, store)
 	end)
 
 	if targets then
-		for _, t in pairs(targets) do
+		for _, t in ipairs(targets) do
 			local m = E:create_entity(a.enemy_mod)
 
 			m.modifier.source_id = this.id
@@ -14730,7 +14730,7 @@ function scripts.aura_shadow_champion_death.update(this, store)
 	targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.radius, a.vis_flags, a.vis_bans)
 
 	if targets then
-		for _, t in pairs(targets) do
+		for _, t in ipairs(targets) do
 			local m = E:create_entity(a.soldier_mod)
 
 			m.modifier.source_id = this.id
@@ -15005,7 +15005,7 @@ function scripts.plant_poison_pumpkin.update(this, store)
 			local first, targets = U.find_foremost_enemy_in_range_filter_off(this.pos, ca.range, false, ca.vis_flags, ca.vis_bans)
 
 			if first then
-				for _, target in pairs(targets) do
+				for _, target in ipairs(targets) do
 					for _, mod_name in pairs(ca.mods) do
 						local m = E:create_entity(mod_name)
 
@@ -15335,7 +15335,7 @@ function scripts.crystal_unstable.update(this, store)
 			local best_count = -1
 			local best_target
 
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local nearby = U.find_targets_in_range(targets, target.pos, 0, aa.aura_range, aa.vis_flags, aa.vis_bans, function(e)
 					return e.health and e.health.hp / e.health.hp_max < aa.trigger_hp_factor
 				end)
@@ -15465,7 +15465,7 @@ function scripts.paralyzing_tree.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(this.pos, ca.range, ca.vis_flags, ca.vis_bans)
 
 	if targets then
-		for _, t in pairs(targets) do
+		for _, t in ipairs(targets) do
 			local m = E:create_entity(ca.mod)
 
 			m.modifier.source_id = this.id
@@ -15610,7 +15610,7 @@ function scripts.bolt_elves.update(this, store)
 		local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
 
 		if targets then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = SU.create_bullet_damage(b, target.id, this.id)
 
 				queue_damage(store, d)
@@ -15821,7 +15821,7 @@ function scripts.meteor_lilith.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(b.to, b.damage_radius, b.damage_flags, b.damage_bans)
 
 	if targets then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = b.damage_type
@@ -16039,7 +16039,7 @@ function scripts.rock_perython.update(this, store)
 	local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
 
 	if targets then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.source_id = this.id
@@ -16198,7 +16198,7 @@ function scripts.aura_lilith_soul_eater.update(this, store)
 			end)
 
 			if targets then
-				for _, target in pairs(targets) do
+				for _, target in ipairs(targets) do
 					local m = E:create_entity(a.mod)
 
 					m.modifier.source_id = hero.id
@@ -16265,7 +16265,7 @@ function scripts.aura_phoenix_egg.update(this, store)
 			local targets = U.find_enemies_in_range_filter_off(this.pos, a.radius, a.vis_flags, a.vis_bans)
 
 			if targets then
-				for _, t in pairs(targets) do
+				for _, t in ipairs(targets) do
 					local m = E:create_entity(a.mod)
 
 					m.modifier.target_id = t.id
@@ -16284,7 +16284,7 @@ function scripts.aura_phoenix_egg.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(this.pos, ca.radius, ca.vis_flags, ca.vis_bans)
 
 	if targets then
-		for _, t in pairs(targets) do
+		for _, t in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.value = math.random(ca.damage_min, ca.damage_max)
@@ -16360,7 +16360,7 @@ function scripts.aura_bandersnatch_spines.update(this, store)
 	local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.radius, a.vis_flags, a.vis_bans)
 
 	if targets then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = a.damage_type
@@ -16482,7 +16482,7 @@ function scripts.aura_mactans_path_web.update(this, store)
 				local targets = U.find_soldiers_in_range(store.soldiers, pos, 0, a.radius, a.vis_flags, a.vis_bans)
 
 				if targets then
-					for _, target in pairs(targets) do
+					for _, target in ipairs(targets) do
 						local m = E:create_entity("mod_mactans_spider_web")
 
 						m.pos.x, m.pos.y = target.pos.x, target.pos.y
@@ -16916,7 +16916,7 @@ function scripts.mod_eldritch.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(this.pos, this.damage_radius, this.damage_flags, this.damage_bans)
 
 	if targets then
-		for _, t in pairs(targets) do
+		for _, t in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.source_id = this.id
@@ -17324,7 +17324,7 @@ function scripts.mod_phoenix_flaming_path.update(this, store)
 				local targets = U.find_enemies_in_range_filter_off(target.pos, ca.radius, ca.vis_flags, ca.vis_bans)
 
 				if targets then
-					for _, t in pairs(targets) do
+					for _, t in ipairs(targets) do
 						local d = E:create_entity("damage")
 
 						d.value = ca.damage
@@ -17488,7 +17488,7 @@ function scripts.mod_twilight_avenger_last_service.remove(this, store)
 		end)
 
 		if targets and #targets > 0 then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local is_enemy = band(target.vis.flags, F_ENEMY) ~= 0
 				local d = E:create_entity("damage")
 
@@ -18221,7 +18221,7 @@ function scripts.power_thunder_control.update(this, store)
 		local targets = U.find_enemies_in_range_filter_off(pos, thunder.damage_radius, this.vis_flags, this.vis_bans)
 
 		if targets then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.damage_type = thunder.damage_type
@@ -18330,7 +18330,7 @@ function scripts.power_thunder_control.update(this, store)
 			local targets = U.find_enemies_in_range_filter_off(this.pos, this.slow.range, this.vis_flags, this.vis_bans)
 
 			if targets then
-				for _, target in pairs(targets) do
+				for _, target in ipairs(targets) do
 					local mod = E:create_entity(this.slow.mod)
 
 					mod.modifier.target_id = target.id
@@ -19338,7 +19338,7 @@ function scripts.bullet_gryphon.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
 
 	if targets then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			local d = SU.create_bullet_damage(b, target.id, this.id)
 
 			queue_damage(store, d)
@@ -19834,7 +19834,7 @@ scripts.aura_tower_faerie_dragon = {
 				local targets = U.find_enemies_in_range_filter_off(this.pos, source.attacks.range, bor(F_MOD, F_STUN), F_BOSS)
 
 				if targets then
-					for _, target in pairs(targets) do
+					for _, target in ipairs(targets) do
 						if math.random() < source.aura_rate then
 							local mod = E:create_entity(this.aura.mod)
 
@@ -20411,7 +20411,7 @@ function scripts.faerie_trails.update(this, store)
 			return not e.health.dead and e.main_script and e.main_script.co ~= nil and e.nav_path and is_inside_section(e.nav_path.pi, e.nav_path.ni)
 		end)
 
-		for _, enemy in pairs(enemies) do
+		for _, enemy in ipairs(enemies) do
 			local speed, color = get_speed(enemy.nav_path.pi)
 			local fx = E:create_entity("fx_faerie_smoke")
 
@@ -21225,7 +21225,7 @@ function scripts.aura_fiery_mist_baby_ashbite.update(this, store)
 				local targets = U.find_enemies_in_range_filter_off(this.pos, a.radius, a.vis_flags, a.vis_bans)
 
 				if targets then
-					for _, target in pairs(targets) do
+					for _, target in ipairs(targets) do
 						local m = E:create_entity(a.mod)
 
 						m.modifier.target_id = target.id
@@ -22073,7 +22073,7 @@ function scripts.ray5_simple.update(this, store)
 	if target and (b.mod or b.mods) then
 		local mods = b.mods or {b.mod}
 
-		for _, mod_name in pairs(mods) do
+		for _, mod_name in ipairs(mods) do
 			local m = E:create_entity(mod_name)
 
 			m.modifier.target_id = b.target_id
@@ -22251,7 +22251,7 @@ function scripts.cricet_random_eff_mod.insert(this, store)
 	end)
 
 	if enemies then
-		for i, e in pairs(enemies) do
+		for i, e in ipairs(enemies) do
 			e.has_cricet_random_eff = source.id
 
 			-- 去重
@@ -29339,7 +29339,7 @@ function scripts.aura_stage_10_obelisk_teleport.update(this, store)
 
 				local mods = this.aura.mods or {this.aura.mod}
 
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local new_mod = E:create_entity(mod_name)
 
 					new_mod.modifier.level = this.aura.level
@@ -30369,7 +30369,7 @@ function scripts.aura_enemy_stage_11_cult_leader_illusion_shield.update(this, st
 
 				local mods = this.aura.mods or {this.aura.mod}
 
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local new_mod
 
 					if target.template_name == "boss_corrupted_denas" then
@@ -32634,7 +32634,7 @@ function scripts.bullet_tower_stage_13_sunray.update(this, store)
 	if target and (b.mod or b.mods) then
 		local mods = b.mods or {b.mod}
 
-		for _, mod_name in pairs(mods) do
+		for _, mod_name in ipairs(mods) do
 			local m = E:create_entity(mod_name)
 
 			m.modifier.target_id = b.target_id
@@ -33042,7 +33042,7 @@ function scripts.soldier_reinforcement_stage_15_denas.update(this, store)
 	local enemies = U.find_enemies_in_range_filter_off(this.pos, this.spawn_stun_radius, this.spawn_vis_flags, this.spawn_vis_bans)
 
 	if enemies and #enemies > 0 then
-		for _, enemy in pairs(enemies) do
+		for _, enemy in ipairs(enemies) do
 			local mod = E:create_entity(this.spawn_stun_mod)
 
 			mod.modifier.target_id = enemy.id
@@ -33396,7 +33396,7 @@ function scripts.aura_stage_15_cult_leader_tower_stun.update(this, store)
 
 			local selected_targets = 0
 
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				selected_targets = selected_targets + 1
 				if this.aura.targets_per_cycle and selected_targets > this.aura.targets_per_cycle then
 					break
@@ -33409,7 +33409,7 @@ function scripts.aura_stage_15_cult_leader_tower_stun.update(this, store)
 				local mods = this.aura.mods or {this.aura.mod}
 				local applied_to_target = false
 
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local new_mod = E:create_entity(mod_name)
 
 					new_mod.modifier.level = this.aura.level
@@ -33862,7 +33862,7 @@ function scripts.decal_stage_21_falling_rocks.update(this, store)
 			local targets = U.find_enemies_in_range_filter_off(this.fall_position, this.damage_radius, this.vis_flags, this.vis_bans)
 
 			if targets then
-				for _, t in pairs(targets) do
+				for _, t in ipairs(targets) do
 					local d = E:create_entity("damage")
 
 					d.damage_type = this.damage_type
@@ -34256,7 +34256,7 @@ function scripts.enemy_rhino.update(this, store)
 							end)
 
 							if enemies then
-								for _, e in pairs(enemies) do
+								for _, e in ipairs(enemies) do
 									table.insert(a.hit_targets, e.id)
 
 									local m = E:create_entity(a.mod_enemy)
@@ -34274,7 +34274,7 @@ function scripts.enemy_rhino.update(this, store)
 							end)
 
 							if soldiers then
-								for _, e in pairs(soldiers) do
+								for _, e in ipairs(soldiers) do
 									table.insert(a.hit_targets, e.id)
 
 									local m = E:create_entity(a.mod_soldier)
@@ -38043,7 +38043,7 @@ function scripts.quickfeet_gator_chicken_leg_bullet.update(this, store)
 			if b.mod or b.mods then
 				local mods = b.mods or {b.mod}
 
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local m = E:create_entity(mod_name)
 
 					m.modifier.target_id = b.target_id
@@ -38436,7 +38436,7 @@ function scripts.enemy_crocs_shaman.update(this, store)
 
 					local healed_units = 0
 
-					for _, enemy in pairs(enemies) do
+					for _, enemy in ipairs(enemies) do
 						if not (enemy.health.hp < enemy.health.hp_max) then
 						-- block empty
 						else
@@ -38698,7 +38698,7 @@ function scripts.enemy_crocs_tank.update(this, store)
 						end)
 
 						if soldiers then
-							for _, e in pairs(soldiers) do
+							for _, e in ipairs(soldiers) do
 								table.insert(a.hit_targets, e.id)
 
 								local m = E:create_entity(a.mod_soldier)
@@ -39542,7 +39542,7 @@ function scripts.aura_bullet_enemy_crocs_hydra_dot.update(this, store)
 
 			for i, target in ipairs(targets) do
 
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local new_mod = E:create_entity(mod_name)
 
 					new_mod.modifier.level = this.aura.level
@@ -39741,7 +39741,7 @@ function scripts.trees_guardian_tree_wave_of_roots.update(this, store)
 				local targets = U.find_enemies_in_range_filter_off(node_pos, this.radius, this.vis_flags, this.vis_bans)
 
 				if targets then
-					for _, target in pairs(targets) do
+					for _, target in ipairs(targets) do
 						local m = E:create_entity(this.mod)
 
 						m.modifier.target_id = target.id
@@ -40110,7 +40110,7 @@ function scripts.bullet_heart_of_the_arborean.update(this, store)
 		local targets = U.find_enemies_in_range_filter_off(hit_pos, b.damage_radius, b.vis_flags, b.vis_bans)
 
 		if targets then
-			for _, t in pairs(targets) do
+			for _, t in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.damage_type = b.damage_type
@@ -41260,7 +41260,7 @@ function scripts.tower_stage_17_weirdwood.update(this, store)
 						return ee.modifier and ee.modifier.target_id == e.id
 					end)
 
-					for _, mod in pairs(mods) do
+					for _, mod in ipairs(mods) do
 						queue_remove(store, mod)
 					end
 
@@ -41701,7 +41701,7 @@ function scripts.stage_20_arborean_oldtree_tree.update(this, store)
 			local targets = U.find_enemies_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
 			if targets then
-				for _, target in pairs(targets) do
+				for _, target in ipairs(targets) do
 					local d = E:create_entity("damage")
 
 					d.source_id = this.id
@@ -43961,7 +43961,7 @@ function scripts.bullet_stage_25_torso_missile.update(this, store)
 		if (b.mod or b.mods) and target.tower then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = target.id
@@ -46625,7 +46625,7 @@ function scripts.bullet_enemy_brute_welder_death.update(this, store)
 		if (b.mod or b.mods) and target.tower then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = b.target_id
@@ -47113,7 +47113,7 @@ function scripts.controller_darksteel_guardian_death.update(this, store)
 		return v.soldier and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.explotion_vis_bans) == 0 and band(v.vis.bans, this.explotion_vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, dradius)
 	end)
 
-	for _, enemy in pairs(targets) do
+	for _, enemy in ipairs(targets) do
 		local d = E:create_entity("damage")
 
 		d.damage_type = this.explotion_damage_type
@@ -47439,7 +47439,7 @@ function scripts.enemy_darksteel_hulk.update(this, store)
 						end)
 
 						if enemies then
-							for _, e in pairs(enemies) do
+							for _, e in ipairs(enemies) do
 								table.insert(a.hit_targets, e.id)
 
 								local m = E:create_entity(a.mod_enemy)
@@ -47459,7 +47459,7 @@ function scripts.enemy_darksteel_hulk.update(this, store)
 						end)
 
 						if soldiers then
-							for _, e in pairs(soldiers) do
+							for _, e in ipairs(soldiers) do
 								table.insert(a.hit_targets, e.id)
 
 								local m = E:create_entity(a.mod_soldier)
@@ -49623,7 +49623,7 @@ function scripts.enemy_nine_tailed_fox.update(this, store)
 						soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a_tp.range, a_tp.vis_flags, a_tp.vis_bans)
 
 						if soldiers and #soldiers > 0 then
-							for _, v in pairs(soldiers) do
+							for _, v in ipairs(soldiers) do
 								local mod = E:create_entity(a_tp.mod)
 
 								mod.modifier.target_id = v.id
@@ -49753,7 +49753,7 @@ function scripts.ps_nine_tailed_fox_underground_trail.update(this, store)
 			local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, this.damage_radius, this.vis_flags, this.vis_bans)
 
 			if targets and #targets > 0 then
-				for _, target in pairs(targets) do
+				for _, target in ipairs(targets) do
 					local d = E:create_entity("damage")
 
 					d.value = math.random(this.damage_min, this.damage_max)
@@ -50436,7 +50436,7 @@ function scripts.bullet_storm_elemental.update(this, store)
 		end)
 	end
 
-	for _, target in pairs(targets) do
+	for _, target in ipairs(targets) do
 		local d = E:create_entity("damage")
 
 		d.damage_type = b.damage_type
@@ -50753,7 +50753,7 @@ function scripts.decal_water_sorceress_heal_wave.update(this, store)
 		end)
 
 		if enemies then
-			for _, e in pairs(enemies) do
+			for _, e in ipairs(enemies) do
 				local mod = E:create_entity(this.mod)
 
 				mod.modifier.target_id = e.id
@@ -50769,7 +50769,7 @@ function scripts.decal_water_sorceress_heal_wave.update(this, store)
 		end)
 
 		if soldiers then
-			for _, e in pairs(soldiers) do
+			for _, e in ipairs(soldiers) do
 				local mod = E:create_entity(this.mod_damage)
 
 				mod.modifier.target_id = e.id
@@ -51129,7 +51129,7 @@ function scripts.bullet_wuxian_bolt.update(this, store)
 		return v.vis and v.health and not v.health.dead and band(v.vis.flags, b.damage_bans) == 0 and band(v.vis.bans, b.damage_flags) == 0 and U.is_inside_ellipse(v.pos, b.to, dradius)
 	end)
 
-	for _, enemy in pairs(enemies) do
+	for _, enemy in ipairs(enemies) do
 		local d = E:create_entity("damage")
 
 		d.damage_type = b.damage_type
@@ -51488,7 +51488,7 @@ function scripts.ray_qiongqi.update(this, store)
 	end
 
 	if targets and b.damage_type ~= DAMAGE_NONE then
-		for _, t in pairs(targets) do
+		for _, t in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.source_id = this.id
@@ -52933,7 +52933,7 @@ function scripts.bullet_hellfire_warlock_fireball.update(this, store)
 		end)
 	end
 
-	for _, target in pairs(targets) do
+	for _, target in ipairs(targets) do
 		local d = E:create_entity("damage")
 
 		d.damage_type = b.damage_type
@@ -53129,7 +53129,7 @@ function scripts.enemy_demon_minotaur.update(this, store)
 			local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.range_damage, a.vis_flags, a.vis_bans)
 
 			if targets then
-				for _, t in pairs(targets) do
+				for _, t in ipairs(targets) do
 					local d = E:create_entity("damage")
 
 					d.damage_type = a.damage_type
@@ -53360,7 +53360,7 @@ function scripts.controller_stage_31_water_mechanic.update(this, store)
 
 				previous_enemies_ids = {}
 
-				for _, e in pairs(targets) do
+				for _, e in ipairs(targets) do
 					table.insert(previous_enemies_ids, e.id)
 				end
 
@@ -53377,7 +53377,7 @@ function scripts.controller_stage_31_water_mechanic.update(this, store)
 		if targets then
 			local allow_amount = 0
 
-			for _, t in pairs(targets) do
+			for _, t in ipairs(targets) do
 				local allow = t.enemy and not table.contains(previous_enemies_ids, t.id) and table.contains(this.enemies_detection, t.template_name) or t.is_flaming_ground
 
 				if allow then
@@ -56565,7 +56565,7 @@ function scripts.tunnel_KR5_stage_34_ponds.update(this, store)
 			return e and e.enemy and e.health and not e.health.dead and e.main_script and e.main_script.co ~= nil and e.nav_path and e.nav_path.pi == tu.pick_pi and e.nav_path.ni >= tu.pick_ni and (tu.pick_pi ~= tu.place_pi or e.nav_path.ni < tu.place_ni)
 		end)
 
-		for _, enemy in pairs(enemies) do
+		for _, enemy in ipairs(enemies) do
 			if tu.pick_fx then
 				local fx = E:create_entity(tu.pick_fx)
 
@@ -58324,7 +58324,7 @@ function scripts.bullet_boss_princess_iron_fan.update(this, store)
 		return e and e.health and not e.health.dead and e.vis and band(e.vis.flags, b.damage_bans) == 0 and band(e.vis.bans, b.damage_flags) == 0 and U.is_inside_ellipse(e.pos, b.to, b.damage_radius)
 	end)
 
-	for _, target in pairs(targets) do
+	for _, target in ipairs(targets) do
 		local d = E:create_entity("damage")
 
 		d.damage_type = b.damage_type
@@ -58357,7 +58357,7 @@ function scripts.bullet_boss_princess_iron_fan.update(this, store)
 	if target and (b.mod or b.mods) then
 		local mods = b.mods or {b.mod}
 
-		for _, mod_name in pairs(mods) do
+		for _, mod_name in ipairs(mods) do
 			local m = E:create_entity(mod_name)
 
 			m.modifier.target_id = b.target_id
@@ -59984,7 +59984,7 @@ function scripts.fx_stage_35_cannonball.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(this.pos, 100, F_AREA, F_BOSS)
 
 	if targets and #targets > 0 then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			target.health.hp = 0
 		end
 	end
@@ -62768,7 +62768,7 @@ function scripts.bullet_boss_stage_37_geisers_bossfight.update(this, store, scri
 		if b.mod or b.mods then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = b.target_id
@@ -63662,7 +63662,7 @@ function scripts.bullet_stage_37_dragons_wardens.update(this, store)
 		if b.mod or b.mods then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = b.target_id
@@ -63675,7 +63675,7 @@ function scripts.bullet_stage_37_dragons_wardens.update(this, store)
 		local targets = U.find_enemies_in_range(store.entities, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
 
 		if targets then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = SU.create_bullet_damage(b, target.id, this.id)
 
 				queue_damage(store, d)
@@ -68093,7 +68093,7 @@ function scripts.enemy_evolved_lava.update(this, store, script)
 			local soldiers = U.find_soldiers_in_range(store.soldiers, dmg_pos, 0, this.landing_damage_radius, this.landing_damage_vis_flags, this.landing_damage_vis_bans)
 
 			if soldiers then
-				for k, v in pairs(soldiers) do
+				for k, v in ipairs(soldiers) do
 					local d = E:create_entity("damage")
 
 					d.source_id = this.id
@@ -68244,7 +68244,7 @@ function scripts.enemy_alfa_lava.update(this, store, script)
 					local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.jump_damage_radius, a.jump_damage_vis_flags, a.jump_damage_vis_bans)
 
 					if soldiers then
-						for k, v in pairs(soldiers) do
+						for k, v in ipairs(soldiers) do
 							local d = E:create_entity("damage")
 
 							d.source_id = this.id
@@ -68397,7 +68397,7 @@ function scripts.bullet_alfa_lava_vomit.update(this, store, script)
 		return v.enemy and v.vis and v.health and not v.health.dead and band(v.vis.flags, b.damage_bans) == 0 and band(v.vis.bans, b.damage_flags) == 0 and U.is_inside_ellipse(v.pos, b.to, dradius)
 	end)
 
-	for _, enemy in pairs(enemies) do
+	for _, enemy in ipairs(enemies) do
 		local d = E:create_entity("damage")
 
 		d.damage_type = b.damage_type
@@ -68668,7 +68668,7 @@ function scripts.aura_enemy_alfa_lava_dot.update(this, store, script)
 
 				local mods = this.aura.mods or {this.aura.mod}
 
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local new_mod = E:create_entity(mod_name)
 
 					new_mod.modifier.level = this.aura.level
@@ -69248,7 +69248,7 @@ function scripts.bullet_enemy_evolved_acid.update(this, store, script)
 	end
 
 	if targets then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = b.damage_type
@@ -69750,7 +69750,7 @@ function scripts.enemy_alfa_acid_sheep.update(this, store, script)
 			if dist < this.range and (this.mod or this.mods) then
 				local mods = this.mods or {this.mod}
 
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local m = E:create_entity(mod_name)
 
 					m.modifier.target_id = this.target_id
@@ -70809,7 +70809,7 @@ function scripts.enemy_evolved_storm.update(this, store, script)
 				local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a_area.damage_radius, a_area.vis_flags, a_area.vis_bans)
 
 				if targets then
-					for _, t in pairs(targets) do
+					for _, t in ipairs(targets) do
 						local d = E:create_entity("damage")
 
 						d.damage_type = a_area.damage_type
@@ -71719,7 +71719,7 @@ function scripts.boss_murglum.update(this, store, script)
 		local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a_feral_bite.damage_radius, a_feral_bite.vis_flags, a_feral_bite.vis_bans)
 
 		if soldiers and #soldiers > 0 then
-			for _, s in pairs(soldiers) do
+			for _, s in ipairs(soldiers) do
 				local d = E:create_entity("damage")
 
 				d.damage_type = a_feral_bite.damage_type
@@ -71921,7 +71921,7 @@ function scripts.bolt_boss_murglum_attack.update(this, store, script)
 		if b.mod or b.mods then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = b.target_id
@@ -71934,7 +71934,7 @@ function scripts.bolt_boss_murglum_attack.update(this, store, script)
 		local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
 
 		if targets then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = SU.create_bullet_damage(b, target.id, this.id)
 
 				queue_damage(store, d)

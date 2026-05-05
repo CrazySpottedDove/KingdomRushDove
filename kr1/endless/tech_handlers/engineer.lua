@@ -87,7 +87,7 @@ local function engineer_focus_bomb_update(this, store)
 			end
 
 			if mods then
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local mod = E:create_entity(mod_name)
 					mod.modifier.damage_factor = b.damage_factor
 					mod.modifier.target_id = enemy.id

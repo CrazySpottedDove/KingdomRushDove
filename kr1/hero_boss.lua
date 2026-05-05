@@ -360,7 +360,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 
 					local targets = U.find_soldiers_in_range(store.soldiers or store.entities, hit_pos, 0, attack.damage_radius, attack.damage_flags, attack.damage_bans) or {}
 
-					for _, e in pairs(targets) do
+					for _, e in ipairs(targets) do
 						local d = E:create_entity("damage")
 
 						d.source_id = this.id
@@ -927,7 +927,7 @@ tt.main_script.update = function(this, store)
 
 					courage.ts = start_ts
 
-					for _, e in pairs(targets) do
+					for _, e in ipairs(targets) do
 						local mod = E:create_entity(courage.mod)
 
 						mod.modifier.target_id = e.id
@@ -1374,7 +1374,7 @@ tt.main_script.update = function(this, store)
 						local targets = U.find_soldiers_in_range(entities, this.pos, 0, ca.damage_radius, ca.damage_flags, ca.damage_bans)
 
 						if targets then
-							for _, target in pairs(targets) do
+							for _, target in ipairs(targets) do
 								local d = E:create_entity("damage")
 
 								d.source_id = this.id
@@ -1626,7 +1626,7 @@ tt.main_script.update = function(this, store)
 					local targets = U.find_enemies_in_range_filter_off(this.pos, ca.max_range, ca.vis_flags, ca.vis_bans)
 
 					if targets then
-						for _, target in pairs(targets) do
+						for _, target in ipairs(targets) do
 							local mod = E:create_entity(ca.mod)
 
 							mod.modifier.level = 3
@@ -2097,7 +2097,7 @@ tt.main_script.update = function(this, store)
 	local targets = U.find_soldiers_in_range(store.soldiers or store.entities, b.to, 0, b.damage_radius, b.damage_flags, b.damage_bans) or {}
 	local damage_value = math.ceil((b.damage_factor or 1) * math.random(b.damage_min, b.damage_max))
 
-	for _, enemy in pairs(targets) do
+	for _, enemy in ipairs(targets) do
 		local d = E:create_entity("damage")
 
 		d.source_id = this.id
@@ -2199,7 +2199,7 @@ tt.main_script.update = function(this, store)
 		local targets = U.find_soldiers_in_range(store.soldiers or store.entities, pos, 0, radius, a.vis_flags, a.vis_bans)
 
 		if targets then
-			for _, t in pairs(targets) do
+			for _, t in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.value = math.random(a.damage_min, a.damage_max)

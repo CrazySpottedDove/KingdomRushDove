@@ -1397,7 +1397,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("barrack_survival")
 
 	if u then
-		for _, n in pairs(soldiers) do
+		for _, n in ipairs(soldiers) do
 			T(n).health.hp_max = km.round(T(n).health.hp_max * u.health_factor)
 		end
 	end
@@ -1431,7 +1431,7 @@ function upgrades:patch_templates(max_level)
 		for _, n in pairs(barrack_towers) do
 			T(n).barrack.rally_range = T(n).barrack.rally_range * u.rally_range_factor
 		end
-		for _, n in pairs(soldiers) do
+		for _, n in ipairs(soldiers) do
 			T(n).motion.max_speed = T(n).motion.max_speed + u.speed_inc
 		end
 	end
@@ -1445,14 +1445,14 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("barrack_weapon")
 	if u then
-		for _, n in pairs(soldiers) do
+		for _, n in ipairs(soldiers) do
 			T(n).unit.damage_factor = T(n).unit.damage_factor * u.damage_factor
 		end
 	end
 
 	u = self:get_upgrade("barrack_go_on")
 	if u then
-		for _, n in pairs(soldiers) do
+		for _, n in ipairs(soldiers) do
 			T(n).health.dead_lifetime = T(n).health.dead_lifetime * u.cooldown_factor
 		end
 	end
@@ -1460,7 +1460,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("barrack_better_armor")
 
 	if u then
-		for _, n in pairs(soldiers) do
+		for _, n in ipairs(soldiers) do
 			T(n).health.armor = T(n).health.armor + u.armor_increase
 		end
 	end
@@ -1468,7 +1468,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("barrack_improved_deployment")
 
 	if u then
-		for _, n in pairs(soldiers) do
+		for _, n in ipairs(soldiers) do
 			T(n).health.dead_lifetime = math.floor(T(n).health.dead_lifetime * u.cooldown_factor)
 		end
 
@@ -1480,7 +1480,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("barrack_survival_2")
 
 	if u then
-		for _, n in pairs(soldiers) do
+		for _, n in ipairs(soldiers) do
 			T(n).health.hp_max = km.round(T(n).health.hp_max * u.health_factor)
 		end
 	end

@@ -81,7 +81,7 @@ local function execute_effect(cfg, tower, store, targets)
 
 	if effect.type == "heal_percent" then
 		-- 治疗走直接改血量，避免走 damage_queue 带来的额外分支开销。
-		for _, t in pairs(targets) do
+		for _, t in ipairs(targets) do
 			if t.health and t.health.hp_max then
 				local add = math.floor(t.health.hp_max * (effect.percent or 0))
 				t.health.hp = math.min(t.health.hp_max, t.health.hp + add)
@@ -94,7 +94,7 @@ local function execute_effect(cfg, tower, store, targets)
 		-- 伤害统一走 damage 实体，复用现有 health/pops 链路，兼容现有 mod。
 		-- source_id 为塔 id（无尽无子弹链）；用 origin/extra 与射线 mod 区分，便于 DEBUG_DAMAGE_TRACE。
 		local skill_id = cfg.id or "?"
-		for _, t in pairs(targets) do
+		for _, t in ipairs(targets) do
 			if t.health and not t.health.dead then
 				local dmg = E:create_entity("damage")
 				local min_dmg = effect.damage_min or 0

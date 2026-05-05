@@ -342,7 +342,7 @@ scripts.hero_gerald = {
 
 								SU.hero_gain_xp_from_skill(this, skill)
 
-								for _, e in pairs(targets) do
+								for _, e in ipairs(targets) do
 									local mod = E:create_entity(courage.mod)
 
 									mod.modifier.target_id = e.id
@@ -803,7 +803,7 @@ scripts.soldier_mirage_illusion = {
 				local enemies = U.find_enemies_in_range_filter_off(this.pos, this.melee.attacks[1].damage_radius, F_AREA, 0)
 
 				if enemies then
-					for _, e in pairs(enemies) do
+					for _, e in ipairs(enemies) do
 						if e.health and not e.health.dead then
 							local d = SU.create_attack_damage(this.melee.attacks[1], e.id, this)
 
@@ -1530,7 +1530,7 @@ scripts.hero_wizard = {
 
 						local count = a.count
 
-						for _, t in pairs(targets) do
+						for _, t in ipairs(targets) do
 							if remaining_damage <= 0 or count == 0 then
 								break
 							end
@@ -2755,7 +2755,7 @@ scripts.beastmaster_rhino = {
 				if not targets then
 				-- block empty
 				else
-					for _, e in pairs(targets) do
+					for _, e in ipairs(targets) do
 						if band(e.vis.bans, F_STUN) == 0 and band(e.vis.flags, F_BOSS) == 0 and math.random() < attack.mod_chance then
 							local m = E:create_entity(attack.mod)
 
@@ -3334,7 +3334,7 @@ scripts.van_helsing_grenade = {
 		local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.damage_flags, b.damage_bans)
 
 		if targets then
-			for _, t in pairs(targets) do
+			for _, t in ipairs(targets) do
 				if t.health and not t.health.dead then
 					local mod = E:create_entity(b.mod)
 
@@ -3825,7 +3825,7 @@ scripts.aura_malik_fissure = {
 			local targets = U.find_enemies_in_range_filter_off(pos, a.damage_radius, a.vis_flags, a.vis_bans)
 
 			if targets then
-				for _, t in pairs(targets) do
+				for _, t in ipairs(targets) do
 					local d = E:create_entity("damage")
 
 					d.value = math.random(a.damage_min, a.damage_max)
@@ -4540,7 +4540,7 @@ scripts.magnus_arcane_rain = {
 		local targets = U.find_enemies_in_range_filter_off(this.pos, this.damage_radius, this.damage_flags, this.damage_bans or 0)
 
 		if targets then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.damage_type = this.damage_type
@@ -5093,7 +5093,7 @@ scripts.hero_giant = {
 				return
 			end
 
-			for _, t in pairs(targets) do
+			for _, t in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.source_id = this.id
@@ -5484,7 +5484,7 @@ function scripts.hero_dracolich.update(this, store)
 				})
 				U.y_wait(store, a.hit_time)
 
-				for _, target in pairs(targets) do
+				for _, target in ipairs(targets) do
 					local d = E:create_entity("damage")
 
 					d.damage_type = a.damage_type
@@ -6747,7 +6747,7 @@ scripts.hero_ignus = {
 							targets = U.find_enemies_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
 							if targets then
-								for _, t in pairs(targets) do
+								for _, t in ipairs(targets) do
 									local fx = E:create_entity(a.hit_fx)
 
 									fx.pos = V.vclone(t.pos)
@@ -7539,7 +7539,7 @@ scripts.power_fireball_10yr = {
 		end)
 		local damage_value = math.ceil(b.damage_factor * math.random(b.damage_min, b.damage_max))
 
-		for _, enemy in pairs(enemies) do
+		for _, enemy in ipairs(enemies) do
 			local d = E:create_entity("damage")
 
 			d.source_id = this.id
@@ -7654,7 +7654,7 @@ scripts.power_giant_fireball_10yr = {
 		end)
 		local damage_value = math.ceil(b.damage_factor * math.random(b.damage_min, b.damage_max))
 
-		for _, enemy in pairs(enemies) do
+		for _, enemy in ipairs(enemies) do
 			local d = E:create_entity("damage")
 
 			d.source_id = this.id
@@ -7956,7 +7956,7 @@ function scripts.hero_vampiress.update(this, store)
 					targets = U.find_enemies_in_range_filter_off(this.pos, a.damage_radius, a.vis_flags, a.vis_bans)
 
 					if targets then
-						for _, e in pairs(targets) do
+						for _, e in ipairs(targets) do
 							local d = E:create_entity("damage")
 
 							d.source_id = this.id
@@ -8405,7 +8405,7 @@ scripts.hero_monk = {
 						targets = U.find_enemies_in_range_filter_off(this.pos, a.damage_radius, a.damage_flags, a.damage_bans)
 
 						if targets then
-							for _, t in pairs(targets) do
+							for _, t in ipairs(targets) do
 								local d = E:create_entity("damage")
 
 								d.source_id = this.id
@@ -8759,7 +8759,7 @@ function scripts.hero_voodoo_witch.update(this, store)
 
 						SU.hero_gain_xp_from_skill(this, skill)
 
-						for _, t in pairs(targets) do
+						for _, t in ipairs(targets) do
 							if not t.health.dead and store.entities[t.id] then
 								local m = E:create_entity(a.mod_fx)
 
@@ -8772,7 +8772,7 @@ function scripts.hero_voodoo_witch.update(this, store)
 
 						U.y_wait(store, fts(16))
 
-						for _, t in pairs(targets) do
+						for _, t in ipairs(targets) do
 							if not t.health.dead and store.entities[t.id] then
 								local d = E:create_entity("damage")
 
@@ -9036,7 +9036,7 @@ function scripts.hero_crab.update(this, store)
 						if enemies then
 							local rate = (this.motion.real_speed - 60) / (b.stun_speed - 60)
 
-							for _, e in pairs(enemies) do
+							for _, e in ipairs(enemies) do
 								if not e.health.dead then
 									local mod = E:create_entity("mod_stun_burrow")
 
@@ -9193,7 +9193,7 @@ function scripts.hero_crab.update(this, store)
 				end)
 
 				if targets then
-					for _, t in pairs(targets) do
+					for _, t in ipairs(targets) do
 						local d = E:create_entity("damage")
 
 						d.source_id = this.id
@@ -9490,7 +9490,7 @@ scripts.hero_minotaur = {
 
 							local heal = 0
 
-							for _, e in pairs(targets) do
+							for _, e in ipairs(targets) do
 								local d = E:create_entity("damage")
 
 								d.source_id = this.id
@@ -9628,7 +9628,7 @@ scripts.hero_minotaur = {
 						end)
 
 						if targets then
-							for _, t in pairs(targets) do
+							for _, t in ipairs(targets) do
 								table.insert(damaged_enemies, t)
 								do_rush_damage(t, a, false)
 								do_rush_stun(t, a)
@@ -9996,7 +9996,7 @@ scripts.hero_monkey_god = {
 							local targets = U.find_enemies_between_range_filter_off(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 							if targets then
-								for _, target in pairs(targets) do
+								for _, target in ipairs(targets) do
 									local m = E:create_entity(a.mod)
 
 									m.modifier.target_id = target.id
@@ -10567,7 +10567,7 @@ scripts.arrow_hero_elves_archer_ultimate = {
 		end
 
 		if targets then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.damage_type = b.damage_type
@@ -10972,7 +10972,7 @@ function scripts.aura_regson_heal.update(this, store)
 			local targets = U.find_enemies_in_range_filter_off(hero.pos, a.radius, a.vis_flags, a.vis_bans)
 
 			if targets then
-				for _, target in pairs(targets) do
+				for _, target in ipairs(targets) do
 					local m = E:create_entity("mod_regson_heal")
 
 					m.modifier.source_id = hero.id
@@ -11549,7 +11549,7 @@ function scripts.mod_lynn_ultimate.update(this, store)
 			local targets = U.find_enemies_in_range_filter_off(target.pos, this.explode_range, this.explode_vis_flags, this.explode_vis_bans)
 
 			if targets then
-				for _, t in pairs(targets) do
+				for _, t in ipairs(targets) do
 					local new_mod = E:create_entity("mod_lynn_ultimate")
 
 					new_mod.modifier.source_id = this.id
@@ -12347,7 +12347,7 @@ function scripts.hero_veznan.update(this, store)
 					local balls = {}
 					local o = V.v(a.balls_dest_offset.x * (this.render.sprites[1].flip_x and -1 or 1), a.balls_dest_offset.y)
 
-					for _, target in pairs(targets) do
+					for _, target in ipairs(targets) do
 						local d = E:create_entity("damage")
 
 						d.damage_type = DAMAGE_EAT
@@ -12428,7 +12428,7 @@ function scripts.hero_veznan.update(this, store)
 					if targets then
 						SU.hero_gain_xp_from_skill(this, skill)
 
-						for _, t in pairs(targets) do
+						for _, t in ipairs(targets) do
 							queue_damage(store, SU.create_attack_damage(a, t.id, this))
 
 							local m = E:create_entity(a.mod)
@@ -12560,7 +12560,7 @@ function scripts.hero_veznan_ultimate.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(this.pos, this.range, this.vis_flags, this.vis_bans)
 
 	if targets then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			local m = E:create_entity(this.mod)
 
 			m.modifier.source_id = this.id
@@ -12885,7 +12885,7 @@ function scripts.hero_durax_ultimate.update(this, store)
 	if targets then
 		local single = #targets == 1
 
-		for i, target in pairs(targets) do
+		for i, target in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.value = this.damage / #targets
@@ -13759,7 +13759,7 @@ function scripts.fireball_arivan.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(b.to, b.damage_radius, b.damage_flags, b.damage_bans)
 
 	if targets then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = b.damage_type
@@ -13912,7 +13912,7 @@ function scripts.hero_arivan_ultimate.update(this, store)
 								last_freeze_target = nil
 							end
 						elseif ai == 1 then
-							for _, target in pairs(targets) do
+							for _, target in ipairs(targets) do
 								local mod = E:create_entity(a.mod)
 
 								mod.modifier.target_id = target.id
@@ -13920,7 +13920,7 @@ function scripts.hero_arivan_ultimate.update(this, store)
 								queue_insert(store, mod)
 							end
 						elseif ai == 2 then
-							for _, target in pairs(targets) do
+							for _, target in ipairs(targets) do
 								local d = E:create_entity("damage")
 
 								d.damage_type = a.damage_type
@@ -14278,7 +14278,7 @@ function scripts.hero_phoenix_ultimate.update(this, store)
 	targets = U.find_enemies_in_range_filter_off(this.pos, a.radius, a.vis_flags, a.damage_vis_bans)
 
 	if targets then
-		for _, t in pairs(targets) do
+		for _, t in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.value = math.random(a.damage_min, a.damage_max) * this.damage_factor
@@ -14531,7 +14531,7 @@ function scripts.hero_bravebark.update(this, store)
 							spawn_spikes(9, hit_center, a.decal_range / 1.25, 0, 0.07, 0.75)
 							spawn_spikes(13, hit_center, a.decal_range, math.pi * 2 / 26, 0.17, 0.5)
 
-							for _, target in pairs(targets) do
+							for _, target in ipairs(targets) do
 								local d = SU.create_attack_damage(a, target.id, this)
 
 								queue_damage(store, d)
@@ -14634,7 +14634,7 @@ function scripts.hero_bravebark_ultimate.update(this, store)
 			local targets = U.find_enemies_in_range_filter_off(e.pos, this.damage_radius, this.vis_flags, this.vis_bans)
 
 			if targets then
-				for _, target in pairs(targets) do
+				for _, target in ipairs(targets) do
 					local m = E:create_entity(this.mod)
 
 					m.modifier.target_id = target.id
@@ -14996,7 +14996,7 @@ function scripts.hero_catha_ultimate.update(this, store)
 	end)
 
 	if targets then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			local m = E:create_entity(this.mod)
 
 			m.modifier.source_id = this.id
@@ -16454,7 +16454,7 @@ function scripts.hero_rag.update(this, store)
 								local targets = U.find_enemies_in_range_filter_off(this.pos, a.damage_radius, a.vis_flags, a.vis_bans)
 
 								if targets then
-									for _, t in pairs(targets) do
+									for _, t in ipairs(targets) do
 										local d = SU.create_attack_damage(a, t.id, this)
 
 										queue_damage(store, d)
@@ -16889,7 +16889,7 @@ function scripts.lion_bruce.update(this, store)
 			local targets = U.find_enemies_in_range_filter_off(this.pos, attack.range, attack.vis_flags, attack.vis_bans)
 
 			if targets then
-				for _, e in pairs(targets) do
+				for _, e in ipairs(targets) do
 					if U.flag_has(e.vis.flags, F_BOSS) then
 						local d = E:create_entity("damage")
 
@@ -17014,7 +17014,7 @@ function scripts.hero_bolverk.update(this, store)
 						targets = U.find_enemies_between_range_filter_off(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 						if targets then
-							for _, target in pairs(targets) do
+							for _, target in ipairs(targets) do
 								local m1 = E:create_entity(a.mods[1])
 
 								m1.modifier.target_id = target.id
@@ -17221,7 +17221,7 @@ scripts.hero_dwarf = {
 						targets = U.find_enemies_in_range_filter_off(hit_pos, ring.damage_radius * a.scale, a.vis_flags, a.vis_bans)
 
 						if targets then
-							for _, target in pairs(targets) do
+							for _, target in ipairs(targets) do
 								local d = SU.create_attack_damage(ring, target.id, this)
 
 								d.value = d.value * a.scale
@@ -17615,7 +17615,7 @@ function scripts.breath_dragon.update(this, store)
 		if targets and every < store.tick_ts - last_ts then
 			last_ts = store.tick_ts
 
-			for _, e in pairs(targets) do
+			for _, e in ipairs(targets) do
 				if e.health and not e.health.dead then
 					local d = E:create_entity("damage")
 
@@ -17734,7 +17734,7 @@ function scripts.aura_fiery_mist_ashbite.update(this, store)
 			local targets = U.find_enemies_in_range_filter_off(this.pos, a.radius, a.vis_flags, a.vis_bans)
 
 			if targets then
-				for _, target in pairs(targets) do
+				for _, target in ipairs(targets) do
 					local m = E:create_entity(a.mod)
 
 					m.modifier.target_id = target.id
@@ -17899,7 +17899,7 @@ function scripts.wildfirebarrage_dragon.update(this, store)
 				targets = U.find_enemies_in_range_filter_off(pos, b.damage_radius, b.damage_flags, b.damage_bans)
 
 				if targets then
-					for _, target in pairs(targets) do
+					for _, target in ipairs(targets) do
 						local d = SU.create_bullet_damage(b, target.id, this.id)
 
 						d.xp_dest_id = b.source_id
@@ -19068,7 +19068,7 @@ function scripts.aura_hero_hunter_shoot_around.update(this, store)
 				return (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.excluded_entities or not table.contains(this.aura.excluded_entities, v.id))
 			end) or {}
 
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.source_id = this.id
@@ -19091,7 +19091,7 @@ function scripts.aura_hero_hunter_shoot_around.update(this, store)
 
 				local mods = this.aura.mods or {this.aura.mod}
 
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local m = E:create_entity(mod_name)
 
 					m.modifier.level = this.aura.level
@@ -20425,7 +20425,7 @@ function scripts.mod_hero_space_elf_black_aegis.update(this, store)
 			local targets = U.find_enemies_in_range_filter_off(this.pos, this.explosion_range, 0, bor(F_FLYING, F_CLIFF))
 
 			if targets then
-				for _, target in pairs(targets) do
+				for _, target in ipairs(targets) do
 					local d = E:create_entity("damage")
 
 					d.value = this.explosion_damage * this.modifier.damage_factor
@@ -20561,7 +20561,7 @@ function scripts.aura_hero_space_elf_void_rift.update(this, store)
 				return not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius)
 			end)
 
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.source_id = this.id
@@ -20584,7 +20584,7 @@ function scripts.aura_hero_space_elf_void_rift.update(this, store)
 
 				local mods = this.aura.mods or {this.aura.mod}
 
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local m = E:create_entity(mod_name)
 
 					m.modifier.level = this.aura.level
@@ -22366,7 +22366,7 @@ function scripts.aura_hero_venom_ultimate.update(this, store)
 
 				local mods = this.aura.mods or {this.aura.mod}
 
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local new_mod = E:create_entity(mod_name)
 
 					new_mod.modifier.level = this.aura.level
@@ -23273,7 +23273,7 @@ function scripts.bolt_hero_dragon_gem_attack.update(this, store)
 		local targets = U.find_enemies_in_range_filter_off(target_pos, r, 0, target_bans)
 
 		if targets then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.value = math.random(damage_min, damage_max) * b.damage_factor
@@ -23402,7 +23402,7 @@ function scripts.aura_hero_dragon_gem_skill_stun.update(this, store)
 
 				local mods = this.aura.mods or {this.aura.mod}
 
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local new_mod = E:create_entity(mod_name)
 
 					new_mod.modifier.level = this.aura.level
@@ -23494,7 +23494,7 @@ function scripts.decal_hero_dragon_gem_floor_impact_shard.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(this.pos, this.damage_range, 0, bit.bor(F_FLYING, F_CLIFF))
 
 	if targets then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.value = math.random(this.damage_min, this.damage_max)
@@ -23611,7 +23611,7 @@ function scripts.mod_hero_dragon_gem_crystal_instakill.update(this, store)
 		local targets = U.find_enemies_in_range_filter_off(this.pos, this.damage_range, 0, this.damage_aoe_bans)
 
 		if targets then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.value = math.random(this.damage_aoe_min, this.damage_aoe_max) * this.modifier.damage_factor
@@ -23702,7 +23702,7 @@ function scripts.aura_hero_dragon_gem_crystal_totem.update(this, store)
 
 				local mods = this.aura.mods or {this.aura.mod}
 
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local new_mod = E:create_entity(mod_name)
 
 					new_mod.modifier.level = this.aura.level
@@ -23723,7 +23723,7 @@ function scripts.aura_hero_dragon_gem_crystal_totem.update(this, store)
 			local targets = U.find_enemies_in_range_filter_off(this.pos, this.damage_range, this.aura.vis_flags, F_NONE)
 
 			if targets then
-				for _, target in pairs(targets) do
+				for _, target in ipairs(targets) do
 					local d = E:create_entity("damage")
 
 					d.value = math.random(this.damage_min, this.damage_max) * this.aura.damage_factor
@@ -23877,7 +23877,7 @@ function scripts.bullet_hero_dragon_gem_ultimate_shard.update(this, store)
 	local targets = U.find_targets_in_range(store.enemies, b.to, 0, b.damage_radius, b.damage_flags, b.damage_bans)
 
 	if targets then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = b.damage_type
@@ -23962,7 +23962,7 @@ function scripts.decal_hero_dragon_gem_ultimate_shard.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(this.pos, this.damage_range, 0, bit.bor(F_FLYING, F_CLIFF))
 
 	if targets then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.value = math.random(this.damage_min, this.damage_max)
@@ -24728,7 +24728,7 @@ function scripts.bullet_hero_witch_basic.update(this, store)
 		if b.mod or b.mods then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = b.target_id
@@ -24741,7 +24741,7 @@ function scripts.bullet_hero_witch_basic.update(this, store)
 		local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
 
 		if targets then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = SU.create_bullet_damage(b, target.id, this.id)
 
 				queue_damage(store, d)
@@ -24865,7 +24865,7 @@ function scripts.aura_hero_witch_path_aoe.update(this, store)
 
 				local mods = this.aura.mods or {this.aura.mod}
 
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local new_mod = E:create_entity(mod_name)
 
 					new_mod.modifier.level = this.aura.level
@@ -25002,7 +25002,7 @@ function scripts.bullet_witch_skill_polymorph.update(this, store)
 		if b.mod or b.mods then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = b.target_id
@@ -25990,7 +25990,7 @@ function scripts.bolt_dragon_bone_basic_attack.update(this, store)
 		local targets = U.find_enemies_in_range_filter_off(target_pos, r, 0, target_bans)
 
 		if targets then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.value = math.random(damage_min, damage_max)
@@ -26049,7 +26049,7 @@ function scripts.mod_dragon_bone_plague.remove(this, store)
 		local targets = U.find_enemies_in_range_filter_off(this.pos, this.spread_radius, this.modifier.vis_flags, this.modifier.vis_bans)
 
 		if targets then
-			for _, t in pairs(targets) do
+			for _, t in ipairs(targets) do
 				local m = E:create_entity(this.template_name)
 
 				m.modifier.target_id = t.id
@@ -26196,7 +26196,7 @@ function scripts.aura_dragon_bone_cloud.update(this, store)
 				for i, target in ipairs(targets) do
 					local mods = this.aura.mods or {this.aura.mod}
 
-					for _, mod_name in pairs(mods) do
+					for _, mod_name in ipairs(mods) do
 						local new_mod = E:create_entity(mod_name)
 
 						new_mod.modifier.level = this.aura.level
@@ -26297,7 +26297,7 @@ function scripts.bullet_dragon_bone_rain.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.damage_flags, b.damage_bans)
 
 	if targets then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = b.damage_type
@@ -26745,7 +26745,7 @@ function scripts.hero_lumenir.update(this, store)
 					local middle = 0
 					local damaged = false
 
-					for _, s in pairs(soldiers) do
+					for _, s in ipairs(soldiers) do
 						middle = middle + s.pos.x
 
 						if s.health and s.health.hp < s.health.hp_max then
@@ -26762,7 +26762,7 @@ function scripts.hero_lumenir.update(this, store)
 						U.animation_start(this, a.animation, middle - this.pos.x < 0, store.tick_ts)
 						U.y_wait(store, a.shoot_time)
 
-						for _, s in pairs(soldiers) do
+						for _, s in ipairs(soldiers) do
 							local m = E:create_entity(a.mod)
 
 							m.modifier.target_id = s.id
@@ -27143,7 +27143,7 @@ function scripts.soldier_lumenir_ultimate.update(this, store)
 		local enemies = U.find_enemies_in_range_filter_off(target.pos, this.stun_range, this.stun_flags, this.stun_bans)
 
 		if enemies then
-			for k, e in pairs(enemies) do
+			for k, e in ipairs(enemies) do
 				local m = E:create_entity("mod_lumenir_ulti_stun")
 
 				m.modifier.duration = this.stun_duration
@@ -27258,7 +27258,7 @@ function scripts.mod_hero_lumenir_sword_hit.update(this, store)
 			local targets = U.find_enemies_in_range_filter_off(this.pos, this.stun_range, this.stun_vis_flags, this.stun_bans)
 
 			if targets then
-				for _, target in pairs(targets) do
+				for _, target in ipairs(targets) do
 					local s = E:create_entity(this.mod_stun)
 
 					s.modifier.target_id = target.id
@@ -27605,7 +27605,7 @@ function scripts.aura_fire_balls_hero_lumenir.update(this, store)
 			if not targets then
 			-- block empty
 			else
-				for _, e in pairs(targets) do
+				for _, e in ipairs(targets) do
 					local d = E:create_entity("damage")
 
 					d.source_id = this.id
@@ -27730,7 +27730,7 @@ function scripts.bolt_lumenir.update(this, store)
 		if b.mod or b.mods then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = b.target_id
@@ -27748,7 +27748,7 @@ function scripts.bolt_lumenir.update(this, store)
 		local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
 
 		if targets then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = SU.create_bullet_damage(b, target.id, this.id)
 
 				queue_damage(store, d)
@@ -28852,7 +28852,7 @@ function scripts.controller_hero_wukong_ultimate.update(this, store)
 		local targets = U.find_enemies_in_range_filter_off(this.pos, this.damage_radius, this.damage_flags, this.damage_bans)
 
 		if targets then
-			for _, e in pairs(targets) do
+			for _, e in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.value = this.damage * this.damage_factor
@@ -28975,7 +28975,7 @@ function scripts.aura_apply_mod_hero_wukong_ultimate.update(this, store)
 
 				local mods = this.aura.mods or {this.aura.mod}
 
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local new_mod = E:create_entity(mod_name)
 
 					new_mod.modifier.level = this.aura.level
@@ -29021,7 +29021,7 @@ function scripts.decal_hero_wukong_ranged_attack_staff.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(this.pos, this.damage_radius, this.damage_flags, this.damage_bans)
 
 	if targets then
-		for _, e in pairs(targets) do
+		for _, e in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.value = math.random(this.damage_min, this.damage_max) * this.damage_factor
@@ -29413,7 +29413,7 @@ function scripts.hero_vesper_ricochet_bullet.update(this, store)
 		if b.mod or b.mods then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.source_id = this.id
@@ -29585,7 +29585,7 @@ function scripts.hero_vesper_ultimate_arrow.update(this, store)
 	local targets = U.find_targets_in_range(store.entities, b.to, 0, b.damage_radius, b.damage_flags, b.damage_bans)
 
 	if targets then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = b.damage_type
@@ -30219,7 +30219,7 @@ function scripts.bullet_hero_muyrn_verdant_blast.update(this, store)
 		if b.mod or b.mods then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = b.target_id
@@ -30382,7 +30382,7 @@ function scripts.hero_muyrn_ranged_attack_bullet.update(this, store)
 		local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
 
 		if targets then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = SU.create_bullet_damage(b, target.id, this.id)
 
 				queue_damage(store, d)
@@ -31573,7 +31573,7 @@ function scripts.bullet_hero_dragon_arb_breath_splint.update(this, store, script
 		if targets and #targets > 0 then
 			local mod_hit_times = {}
 
-			for _, e in pairs(targets) do
+			for _, e in ipairs(targets) do
 				if bit.band(e.vis.flags, F_FLYING) ~= 0 == is_flying_damage then
 					local d = SU.create_bullet_damage(b, e.id, this.id)
 					local u = UP:get_upgrade("mage_spell_of_penetration")
@@ -32675,7 +32675,7 @@ function scripts.bullet_hero_dragon_arb_linirea_plant_heal.update(this, store)
 		local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
 
 		if targets then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = SU.create_bullet_damage(b, target.id, this.id)
 
 				queue_damage(store, d)
@@ -33744,7 +33744,7 @@ function scripts.decal_hero_builder_ultimate_projectile.update(this, store)
 	local targets = U.find_targets_in_range(store.entities, b.to, 0, b.damage_radius, b.damage_flags, b.damage_bans)
 
 	if targets then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = b.damage_type
@@ -33951,7 +33951,7 @@ function scripts.hero_robot.update(this, store)
 		local enemies = U.find_enemies_in_range_filter_off(point, radius, damage_flags, damage_bans)
 
 		if enemies then
-			for _, enemy in pairs(enemies) do
+			for _, enemy in ipairs(enemies) do
 				local d = E:create_entity("damage")
 
 				d.damage_type = damage_type
@@ -34503,7 +34503,7 @@ function scripts.bullet_hero_robot_skill_fire.update(this, store)
 		return v.enemy and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.damage_bans) == 0 and band(v.vis.bans, this.damage_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.damage_radius)
 	end)
 
-	for _, enemy in pairs(enemies) do
+	for _, enemy in ipairs(enemies) do
 		local d = E:create_entity("damage")
 
 		d.damage_type = this.bullet.damage_type
@@ -34631,7 +34631,7 @@ function scripts.aura_hero_robot_skill_fire_slow.update(this, store, script)
 
 				local mods = this.aura.mods or {this.aura.mod}
 
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local new_mod = E:create_entity(mod_name)
 
 					new_mod.modifier.level = this.aura.level
@@ -34876,7 +34876,7 @@ function scripts.hero_robot_ultimate.update(this, store)
 	if not targets or #targets == 0 then
 		pi, spi, ni, dist = unpack(nearest[1])
 	else
-		for _, t in pairs(targets) do
+		for _, t in ipairs(targets) do
 			for _, n in pairs(nearest) do
 				pi, spi, ni, dist = unpack(n)
 
@@ -35022,7 +35022,7 @@ function scripts.aura_hero_robot_ultimate_train.update(this, store)
 			local has_mod, mods = U.has_modifiers(store, target, this.aura.mod)
 
 			if has_mod then
-				for _, mod in pairs(mods) do
+				for _, mod in ipairs(mods) do
 					if mod.modifier.source_id == this.id then
 						already_hit_target = true
 
@@ -35510,10 +35510,10 @@ function scripts.hero_bird.update(this, store)
 						local targets = U.find_enemies_in_range_filter_off(this.pos, a.radius, a.vis_flags, a.vis_bans)
 
 						if targets and #targets > 0 then
-							for _, t in pairs(targets) do
+							for _, t in ipairs(targets) do
 								local mods = a.mods or {a.mod}
 
-								for _, m in pairs(mods) do
+								for _, m in ipairs(mods) do
 									local mod = E:create_entity(m)
 
 									mod.modifier.target_id = t.id
@@ -35625,7 +35625,7 @@ function scripts.hero_bird.update(this, store)
 									goto label_515_0
 								end
 
-								for _, t in pairs(targets) do
+								for _, t in ipairs(targets) do
 									do_gattling_damage(t)
 								end
 							end

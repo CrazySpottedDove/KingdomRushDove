@@ -1333,27 +1333,26 @@ function U.attack_order(attacks)
 	for i = 1, #attacks do
 		local a = attacks[i]
 
-		table.insert(order, {
-			id = i,
-			chance = a.chance or 1,
-			cooldown = a.cooldown
-		})
+		table.insert(order, {i, a.chance or 1, a.cooldown})
+	-- id = i,
+	-- chance = a.chance or 1,
+	-- cooldown = a.cooldown
 	end
 
 	table.sort(order, function(o1, o2)
-		if o1.chance ~= o2.chance then
-			return o1.chance < o2.chance
-		elseif o1.cooldown and o2.cooldown and o1.cooldown ~= o2.cooldown then
-			return o1.cooldown > o2.cooldown
+		if o1[2] ~= o2[2] then
+			return o1[2] < o2[2]
+		elseif o1[3] and o2[3] and o1[3] ~= o2[3] then
+			return o1[3] > o2[3]
 		else
-			return o1.id < o2.id
+			return o1[1] < o2[1]
 		end
 	end)
 
 	local out = {}
 
 	for i = 1, #order do
-		out[i] = order[i].id
+		out[i] = order[i][1]
 	end
 
 	return out
@@ -2164,7 +2163,7 @@ function U.find_teleport_moment(store, center, range, trigger_count)
 	local target = nil
 	local soldier_count = 0
 
-	for _, e in pairs(enemies) do
+	for _, e in ipairs(enemies) do
 		target = e
 
 		if e.health.hp > enemy_hp_max then

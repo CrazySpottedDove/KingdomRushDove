@@ -8399,7 +8399,7 @@ function scripts.bullet_stage_16_overseer_tentacle_spawn.update(this, store)
 		return v.enemy and v.vis and v.health and not v.health.dead and band(v.vis.flags, b.damage_bans) == 0 and band(v.vis.bans, b.damage_flags) == 0 and U.is_inside_ellipse(v.pos, b.to, dradius)
 	end)
 
-	for _, enemy in pairs(enemies) do
+	for _, enemy in ipairs(enemies) do
 		local d = E:create_entity("damage")
 
 		d.damage_type = b.damage_type
@@ -8497,7 +8497,7 @@ function scripts.bullet_stage_16_overseer_tentacle_spawn.update(this, store)
 	local soldiers = U.find_soldiers_in_range(store.soldiers, b.to, 0, this.explosion_damage.range, this.explosion_damage.vis_flags, this.explosion_damage.vis_bans)
 
 	if soldiers then
-		for _, soldier in pairs(soldiers) do
+		for _, soldier in ipairs(soldiers) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = this.explosion_damage.damage_type
@@ -8825,7 +8825,7 @@ function scripts.bullet_stage_19_navira_fire_ball_ray.update(this, store)
 	if target and (b.mod or b.mods) then
 		local mods = b.mods or {b.mod}
 
-		for _, mod_name in pairs(mods) do
+		for _, mod_name in ipairs(mods) do
 			local m = E:create_entity(mod_name)
 
 			m.modifier.target_id = b.target_id
@@ -9537,7 +9537,7 @@ function scripts.aura_bullet_boss_crocs_poison_rain_lvl1.update(this, store)
 
 				local mods = this.aura.mods or {this.aura.mod}
 
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local new_mod = E:create_entity(mod_name)
 
 					new_mod.modifier.level = this.aura.level
@@ -9654,7 +9654,7 @@ function scripts.boss_crocs.update(this, store)
 				local soldiers = U.find_soldiers_in_range(store.soldiers, kill_position[1], 0, kill_position[2], 0, 0)
 
 				if soldiers and #soldiers > 0 then
-					for _, sold in pairs(soldiers) do
+					for _, sold in ipairs(soldiers) do
 						local d = E:create_entity("damage")
 
 						d.source_id = this.id
@@ -9896,7 +9896,7 @@ function scripts.boss_crocs.update(this, store)
 				local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, this.stomp_passive.range, this.stomp_passive.vis_flags_soldiers, this.stomp_passive.vis_bans_soldiers)
 
 				if soldiers then
-					for _, soldier in pairs(soldiers) do
+					for _, soldier in ipairs(soldiers) do
 						local d = E:create_entity("damage")
 
 						d.damage_type = this.stomp_passive.damage_type
@@ -12185,7 +12185,7 @@ function scripts.boss_spider_queen.update(this, store)
 									soldiers = table.slice(soldiers, 1, a.max_targets)
 								end
 
-								for _, s in pairs(soldiers) do
+								for _, s in ipairs(soldiers) do
 									local mod = E:create_entity(a.mod_loop)
 
 									mod.modifier.target_id = s.id
@@ -12226,7 +12226,7 @@ function scripts.boss_spider_queen.update(this, store)
 							soldiers = table.slice(soldiers, 1, a.max_targets)
 						end
 
-						for _, s in pairs(soldiers) do
+						for _, s in ipairs(soldiers) do
 							local bullet = E:create_entity(a.bullet)
 
 							bullet.pos = V.vclone(s.pos)

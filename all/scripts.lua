@@ -486,7 +486,7 @@ function scripts.entity_marker_controller.update(this, store)
 		coroutine.yield()
 	end
 
-	for _, m in pairs(this.markers) do
+	for _, m in ipairs(this.markers) do
 		queue_remove(store, m)
 	end
 
@@ -539,34 +539,33 @@ function scripts.enemy_basic.insert(this, store)
 	U.set_destination(this, next)
 	U.set_heading(this, next)
 
-	if not this.pos or this.pos.x == 0 and this.pos.y == 0 then
+	if this.pos.x == 0 and this.pos.y == 0 then
 		this.pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
 	end
 
 	if this.render then
-		for _, s in pairs(this.render.sprites) do
-			s.ts = store.tick_ts
+		for i = 1, #this.render.sprites do
+			this.render.sprites[i].ts = store.tick_ts
 		end
 	end
 
 	if this.melee then
 		this.melee.order = U.attack_order(this.melee.attacks)
-
-		for _, a in pairs(this.melee.attacks) do
-			a.ts = store.tick_ts
+		for i = 1, #this.melee.attacks do
+			this.melee.attacks[i].ts = store.tick_ts
 		end
 	end
 
 	if this.ranged then
 		this.ranged.order = U.attack_order(this.ranged.attacks)
-
-		for _, a in pairs(this.ranged.attacks) do
-			a.ts = store.tick_ts
+		for i = 1, #this.ranged.attacks do
+			this.ranged.attacks[i].ts = store.tick_ts
 		end
 	end
 
 	if this.auras then
-		for _, a in pairs(this.auras.list) do
+		for i = 1, #this.auras.list do
+			local a = this.auras.list[i]
 			a.ts = store.tick_ts
 
 			if a.cooldown == 0 then
@@ -1258,7 +1257,8 @@ function scripts.soldier_barrack.insert(this, store)
 	end
 
 	if this.auras then
-		for _, a in pairs(this.auras.list) do
+		for i = 1, #this.auras.list do
+			local a = this.auras.list[i]
 			if a.cooldown == 0 then
 				local e = E:create_entity(a.name)
 
@@ -1312,8 +1312,8 @@ function scripts.soldier_barrack.insert(this, store)
 	this.vis.bans = F_ALL
 
 	if this.render then
-		for _, s in pairs(this.render.sprites) do
-			s.ts = store.tick_ts - U.frandom(0, 1)
+		for i = 1, #this.render.sprites do
+			this.render.sprites[i].ts = store.tick_ts - U.frandom(0, 1)
 		end
 	end
 
@@ -1834,7 +1834,7 @@ function scripts.tower_barrack.get_info(this)
 
 	local min, max, cooldown
 
-	for _, a in pairs(attacks) do
+	for _, a in ipairs(attacks) do
 		if a.damage_min then
 			min, max = a.damage_min, a.damage_max
 			cooldown = a.cooldown
@@ -3350,7 +3350,7 @@ function scripts.enemy_missile.update(this, store)
 			return v.vis and v.unit and v.health and not v.health.dead and band(v.vis.flags, b.damage_bans) == 0 and band(v.vis.bans, b.damage_flags) == 0 and U.is_inside_ellipse(V.v(v.pos.x + v.unit.hit_offset.x, v.pos.y + v.unit.hit_offset.y), b.to, b.damage_radius)
 		end)
 
-		for _, t in pairs(targets) do
+		for _, t in ipairs(targets) do
 			local t_pos = V.v(t.pos.x + t.unit.hit_offset.x, t.pos.y + t.unit.hit_offset.y)
 			local d = E:create_entity("damage")
 
@@ -3663,7 +3663,7 @@ function scripts.bolt.update(this, store)
 		if b.mod or b.mods then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = b.target_id
@@ -3854,7 +3854,7 @@ function scripts.bolt_trace_target.update(this, store)
 		if b.mod or b.mods then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = b.target_id
@@ -3917,7 +3917,7 @@ function scripts.bolt_blast.update(this, store)
 	local enemies = U.find_enemies_in_range_filter_off(explode_pos, dradius, b.damage_flags, b.damage_bans)
 
 	if enemies then
-		for _, enemy in pairs(enemies) do
+		for _, enemy in ipairs(enemies) do
 			local d = E:create_entity("damage")
 
 			d.source_id = this.id
@@ -4033,7 +4033,7 @@ function scripts.shotgun.update(this, store)
 		end
 
 		if mods then
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local mod = E:create_entity(mod_name)
 
 				mod.modifier.source_id = this.id
@@ -4145,7 +4145,7 @@ function scripts.ray_simple.update(this, store)
 	if target and (b.mod or b.mods) then
 		local mods = b.mods or {b.mod}
 
-		for _, mod_name in pairs(mods) do
+		for _, mod_name in ipairs(mods) do
 			local m = E:create_entity(mod_name)
 
 			m.modifier.target_id = b.target_id
@@ -4281,7 +4281,7 @@ function scripts.ray_enemy.update(this, store)
 	end
 
 	if targets and b.damage_type ~= DAMAGE_NONE then
-		for _, t in pairs(targets) do
+		for _, t in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.source_id = this.id
@@ -4419,7 +4419,7 @@ function scripts.fireball.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(hit_center, b.damage_radius, b.vis_flags, b.vis_bans)
 
 	if targets then
-		for _, e in pairs(targets) do
+		for _, e in ipairs(targets) do
 			if b.damage_type ~= DAMAGE_NONE then
 				local d = SU.create_bullet_damage_without_pops(b, e.id, this.id)
 
@@ -5064,7 +5064,7 @@ function scripts.tunnel_KR5.update(this, store)
 			return e and e.enemy and e.health and not e.health.dead and e.main_script and e.main_script.co ~= nil and e.nav_path and e.nav_path.pi == tu.pick_pi and e.nav_path.ni >= tu.pick_ni and (tu.pick_pi ~= tu.place_pi or e.nav_path.ni < tu.place_ni)
 		end)
 
-		for _, enemy in pairs(enemies) do
+		for _, enemy in ipairs(enemies) do
 			if tu.pick_fx then
 				local fx = E:create_entity(tu.pick_fx)
 
@@ -5161,7 +5161,7 @@ function scripts.tunnel_KR5_destructible.update(this, store)
 				return e and e.enemy and e.health and not e.health.dead and e.main_script and e.main_script.co ~= nil and e.nav_path and e.nav_path.pi == tu.pick_pi and e.nav_path.ni >= tu.pick_ni and (tu.pick_pi ~= tu.place_pi or e.nav_path.ni < tu.place_ni)
 			end)
 
-			for _, enemy in pairs(enemies) do
+			for _, enemy in ipairs(enemies) do
 				if tu.pick_fx then
 					local fx = E:create_entity(tu.pick_fx)
 
@@ -6672,7 +6672,7 @@ function scripts.mod_heal_on_damage.update(this, store)
 				local mods = U.find_modifiers_with_flags(this, this.heal_bans)
 
 				if mods and #mods > 0 then
-					for _, mod in pairs(mods) do
+					for _, mod in ipairs(mods) do
 						queue_remove(store, mod)
 					end
 				end
@@ -8042,7 +8042,7 @@ function scripts.abomination_explosion_aura.update(this, store)
 	local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
 
 	if targets then
-		for _, target in pairs(targets) do
+		for _, target in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = this.aura.damage_type
@@ -9072,7 +9072,7 @@ function scripts.bolt_force_motion_kr5.update(this, store)
 		if b.mod or b.mods then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = b.target_id
@@ -9084,7 +9084,7 @@ function scripts.bolt_force_motion_kr5.update(this, store)
 	elseif b.damage_radius and b.damage_radius > 0 then
 		local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
 		if targets then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = SU.create_bullet_damage_without_pops(b, target.id, this.id)
 
 				queue_damage(store, d)
@@ -9329,7 +9329,7 @@ function scripts.mod_hide_tower.insert(this, store)
 	this.hidden_particles = {}
 
 	for k, v in pairs(store.particle_systems) do
-		if v.particle_system and v.particle_system.track_id == m.target_id and v.particle_system.emit then
+		if v.particle_system.track_id == m.target_id and v.particle_system.emit then
 			table.insert(this.hidden_particles, v.id)
 
 			v.particle_system.emit = false
@@ -9342,10 +9342,10 @@ function scripts.mod_hide_tower.insert(this, store)
 		end
 
 		local mods = table.filter(store.modifiers, function(k, v)
-			return v.modifier and v.modifier.target_id == target.id and not table.contains(this.skip_modifiers, v.template_name)
+			return v.modifier.target_id == target.id and not table.contains(this.skip_modifiers, v.template_name)
 		end)
 
-		for _, m in pairs(mods) do
+		for _, m in ipairs(mods) do
 			U.sprites_hide(m, nil, nil, true)
 		end
 	end
@@ -9366,11 +9366,11 @@ function scripts.mod_hide_tower.remove(this, store)
 	local target = store.entities[m.target_id]
 
 	if target then
-		for _, i in pairs(this.hidden_sprites) do
+		for _, i in ipairs(this.hidden_sprites) do
 			target.render.sprites[i].hidden = false
 		end
 
-		for _, id in pairs(this.hidden_particles) do
+		for _, id in ipairs(this.hidden_particles) do
 			local ps = store.entities[id]
 
 			if ps then
@@ -9383,7 +9383,7 @@ function scripts.mod_hide_tower.remove(this, store)
 				return v.modifier and v.modifier.target_id == target.id and not table.contains(this.skip_modifiers, v.template_name)
 			end)
 
-			for _, m in pairs(mods) do
+			for _, m in ipairs(mods) do
 				U.sprites_show(m, nil, nil, true)
 			end
 		end
@@ -9489,7 +9489,7 @@ function scripts.mod_test_unit_pos_kr5.update(this, store)
 		end
 	end
 
-	for _, s in pairs(this.render.sprites) do
+	for _, s in ipairs(this.render.sprites) do
 		s.offset = targetOffset
 		s.z = targetZ
 	end
@@ -9555,12 +9555,12 @@ function scripts.aura_tower_holder_capture.update(this, store)
 		end
 
 		if store.tick_ts - last_tick_ts >= this.aura.cycle_time then
-			local heroes = table.filter(store.entities, function(k, v)
-				return v.unit and v.vis and v.hero and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.excluded_entities or not table.contains(this.aura.excluded_entities, v.id))
+			local heroes = table.filter(store.soldiers, function(k, v)
+				return v.hero and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.excluded_entities or not table.contains(this.aura.excluded_entities, v.id))
 			end)
 
-			if heroes and #heroes > 0 then
-				for _, heroe in pairs(heroes) do
+			if #heroes > 0 then
+				for _, heroe in ipairs(heroes) do
 					local capture_multiplier = this.capture_multiplier
 
 					if heroe.capture_multiplier then

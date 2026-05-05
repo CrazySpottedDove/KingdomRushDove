@@ -307,7 +307,7 @@ scripts.aura_endless_engineer_aftermath_ray = {
 		local targets = U.find_enemies_in_range_filter_off(this.pos, a.radius, a.vis_flags, a.vis_bans)
 
 		if targets then
-			for _, e in pairs(targets) do
+			for _, e in ipairs(targets) do
 				local d = SU.create_attack_damage(a, e.id, this)
 
 				queue_damage(store, d)
@@ -359,7 +359,7 @@ function scripts.endless_mage_thunder.update(this, store)
 		local targets = U.find_enemies_in_range_filter_off(pos, thunder.damage_radius, this.vis_flags, this.vis_bans)
 
 		if targets then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.damage_type = thunder.damage_type

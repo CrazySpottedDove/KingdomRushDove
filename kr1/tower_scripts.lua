@@ -633,7 +633,7 @@ scripts.tower_crossbow = {
 			return e.modifier.source_id == this.id
 		end)
 
-		for _, m in pairs(mods) do
+		for _, m in ipairs(mods) do
 			queue_remove(store, m)
 		end
 
@@ -691,7 +691,7 @@ scripts.tower_crossbow = {
 					end)
 					local modded_ids = {}
 
-					for _, m in pairs(mods) do
+					for _, m in ipairs(mods) do
 						table.insert(modded_ids, m.modifier.target_id)
 					end
 
@@ -700,7 +700,7 @@ scripts.tower_crossbow = {
 						return e ~= this and not table.contains(modded_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, range)
 					end)
 
-					for _, target in pairs(targets) do
+					for _, target in ipairs(targets) do
 						local decal = E:create_entity("decal_crossbow_eagle_preview")
 
 						decal.pos = target.pos
@@ -1170,7 +1170,7 @@ scripts.tower_pirate_watchtower = {
 					end)
 					local modded_ids = {}
 
-					for _, m in pairs(mods) do
+					for _, m in ipairs(mods) do
 						table.insert(modded_ids, m.modifier.target_id)
 					end
 
@@ -1178,7 +1178,7 @@ scripts.tower_pirate_watchtower = {
 						return e.tower.can_be_mod and not table.contains(modded_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, pow_w.range)
 					end)
 
-					for _, target in pairs(targets) do
+					for _, target in ipairs(targets) do
 						local decal = E:create_entity("decal_pirate_watcher_preview")
 
 						decal.pos = target.pos
@@ -1637,7 +1637,7 @@ scripts.tower_silver = {
 					local mark = false
 
 					if enemies then
-						for _, enemy_iter in pairs(enemies) do
+						for _, enemy_iter in ipairs(enemies) do
 							if U.has_modifiers(store, enemy_iter, "mod_arrow_silver_mark") then
 								enemy = enemy_iter
 								mark = true
@@ -1940,7 +1940,7 @@ scripts.tower_high_elven = {
 					end)
 					local modded_ids = {}
 
-					for _, m in pairs(mods) do
+					for _, m in ipairs(mods) do
 						table.insert(modded_ids, m.modifier.target_id)
 					end
 
@@ -1956,7 +1956,7 @@ scripts.tower_high_elven = {
 						return e ~= this and not table.contains(modded_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, range)
 					end)
 
-					for _, target in pairs(targets) do
+					for _, target in ipairs(targets) do
 						local decal = E:create_entity("decal_high_elven_sentinel_preview")
 
 						decal.pos = target.pos
@@ -2494,7 +2494,7 @@ scripts.tower_sorcerer = {
 							end
 						else
 							if aa == ab then
-								for _, e in pairs(enemies) do
+								for _, e in ipairs(enemies) do
 									if not U.has_modifiers(store, e, ab_mod) then
 										enemy = e
 
@@ -2868,7 +2868,7 @@ scripts.tower_necromancer = {
 								return v.aura.source_id == s.id
 							end)
 
-							for _, aura in pairs(auras) do
+							for _, aura in ipairs(auras) do
 								aura.aura.level = pow_r.level
 							end
 						end
@@ -5355,7 +5355,7 @@ function scripts.mod_druid_sylvan.update(this, store)
 				end)
 
 				if targets then
-					for _, t in pairs(targets) do
+					for _, t in ipairs(targets) do
 						local b = E:create_entity(a.bullet)
 
 						b.bullet.damage_max = dhp * a.damage_factor[m.level]
@@ -6894,7 +6894,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
 		if b.mod or b.mods then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = b.target_id
@@ -7119,7 +7119,7 @@ function scripts.soldier_tower_demon_pit.update(this, store)
 		local factor = damage_factor * this.unit.damage_factor
 
 		if targets then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.value = (u and damage_max or random(damage_min, damage_max)) * factor
@@ -7363,7 +7363,7 @@ function scripts.big_guy_tower_demon_pit.update(this, store)
 		local targets = U.find_enemies_in_range_filter_off(this.pos, r, F_AREA, F_NONE)
 
 		if targets then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = E:create_entity("damage")
 
 				d.value = damage
@@ -8630,7 +8630,7 @@ function scripts.aura_tower_necromancer_skill_rider.update(this, store)
 			local has_mod, mods = U.has_modifiers(store, target, this.aura.mod)
 
 			if has_mod then
-				for _, mod in pairs(mods) do
+				for _, mod in ipairs(mods) do
 					if mod.modifier.source_id == this.id then
 						already_hit_target = true
 
@@ -9651,7 +9651,7 @@ function scripts.tower_pandas_ray.update(this, store)
 	if target and (b.mod or b.mods) then
 		local mods = b.mods or {b.mod}
 
-		for _, mod_name in pairs(mods) do
+		for _, mod_name in ipairs(mods) do
 			local m = E:create_entity(mod_name)
 
 			m.modifier.damage_factor = b.damage_factor
@@ -9899,7 +9899,7 @@ function scripts.bullet_tower_pandas_air.update(this, store)
 		if b.mod or b.mods then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = b.target_id
@@ -11111,7 +11111,7 @@ function scripts.bullet_tower_ray.update(this, store)
 	if target and (b.mod or b.mods) then
 		local mods = b.mods or {b.mod}
 
-		for _, mod_name in pairs(mods) do
+		for _, mod_name in ipairs(mods) do
 			local m = E:create_entity(mod_name)
 
 			m.modifier.target_id = b.target_id
@@ -12446,7 +12446,7 @@ function scripts.aura_tower_sand_skill_big_blade.update(this, store)
 
 					local mods = this.aura.mods or {this.aura.mod}
 
-					for _, mod_name in pairs(mods) do
+					for _, mod_name in ipairs(mods) do
 						local new_mod = E:create_entity(mod_name)
 
 						new_mod.modifier.level = this.aura.level
@@ -12794,7 +12794,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_tamer.update(this, sto
 			local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), ab.range, false, ab.vis_flags, ab.vis_bans)
 
 			if enemy then
-				for _, e in pairs(enemies) do
+				for _, e in ipairs(enemies) do
 					if band(e.vis.flags, F_MOCKING) == 0 and U.enemy_is_silent_target(e) then
 						enemy = e
 
@@ -12930,7 +12930,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.update(this, sto
 			if targets then
 				target = targets[1]
 
-				for _, t in pairs(targets) do
+				for _, t in ipairs(targets) do
 					if band(t.vis.flags, F_MOCKING) == 0 and U.enemy_is_silent_target(t) then
 						target = t
 
@@ -13239,7 +13239,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
 				end)
 
 				if targets then
-					for _, target in pairs(targets) do
+					for _, target in ipairs(targets) do
 						local decal = E:create_entity("decal_tower_arcane_wizard_empowerment_preview")
 
 						decal.pos = target.pos
@@ -13263,7 +13263,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
 					local max_factor = 1
 
 					if has_mod and mods and #mods >= 1 then
-						for k, v in pairs(mods) do
+						for k, v in ipairs(mods) do
 							if max_factor < v.damage_factor then
 								max_factor = v.damage_factor
 							end
@@ -13298,7 +13298,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
 						local max_factor = 1
 
 						if mods and #mods >= 1 then
-							for k, v in pairs(mods) do
+							for k, v in ipairs(mods) do
 								if max_factor < v.damage_factor then
 									max_factor = v.damage_factor
 								end
@@ -14746,7 +14746,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 		if b.mod or b.mods then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = b.target_id
@@ -15502,7 +15502,7 @@ function scripts.controller_tower_flamespitter_column.update(this, store)
 	local enemies = U.find_enemies_in_range_filter_off(this.dest, this.radius_in, this.vis_flags, this.vis_bans)
 
 	if enemies and #enemies > 0 then
-		for _, enemy in pairs(enemies) do
+		for _, enemy in ipairs(enemies) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = this.damage_in_type
@@ -15517,7 +15517,7 @@ function scripts.controller_tower_flamespitter_column.update(this, store)
 	local enemies = U.find_enemies_between_range_filter_off(this.dest, this.radius_in, this.radius_out, this.vis_flags, this.vis_bans)
 
 	if enemies and #enemies > 0 then
-		for _, enemy in pairs(enemies) do
+		for _, enemy in ipairs(enemies) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = this.damage_out_type
@@ -16246,7 +16246,7 @@ function scripts.bullet_tower_ballista_skill_bomb.update(this, store)
 	local enemies = U.find_enemies_in_range_filter_off(this_pos, dradius, b.damage_flags, b.damage_bans)
 
 	if enemies then
-		for _, enemy in pairs(enemies) do
+		for _, enemy in ipairs(enemies) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = b.damage_type
@@ -16778,7 +16778,7 @@ function scripts.aura_bullet_tower_barrel_skill_barrel.update(this, store)
 
 			if targets then
 				for i, target in ipairs(targets) do
-					for _, mod_name in pairs(mods) do
+					for _, mod_name in ipairs(mods) do
 						local new_mod = E:create_entity(mod_name)
 
 						new_mod.modifier.level = a.level
@@ -16816,7 +16816,7 @@ function scripts.aura_bullet_tower_barrel_skill_barrel.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(this.pos, this.explosion_damage_radius, this.explosion_vis_flags, this.explosion_vis_bans)
 
 	if targets then
-		for i, target in pairs(targets) do
+		for i, target in ipairs(targets) do
 			local d = E:create_entity("damage")
 
 			d.damage_type = this.explosion_damage_type
@@ -18518,7 +18518,7 @@ function scripts.tower_sparking_geode_ray.update(this, store)
 		if b.mod or b.mods then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = b.target_id
@@ -18923,7 +18923,7 @@ function scripts.aura_tower_sparking_geode_spike_burst.update(this, store)
 
 					local mods = this.aura.mods or {this.aura.mod}
 
-					for _, mod_name in pairs(mods) do
+					for _, mod_name in ipairs(mods) do
 						local new_mod = E:create_entity(mod_name)
 
 						new_mod.modifier.level = this.aura.level
@@ -20698,7 +20698,7 @@ function scripts.tower_arborean_emissary_bolt.update(this, store)
 		if b.mod or b.mods then
 			local mods = b.mods or {b.mod}
 
-			for _, mod_name in pairs(mods) do
+			for _, mod_name in ipairs(mods) do
 				local m = E:create_entity(mod_name)
 
 				m.modifier.target_id = b.target_id
@@ -20711,7 +20711,7 @@ function scripts.tower_arborean_emissary_bolt.update(this, store)
 		local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
 
 		if targets then
-			for _, target in pairs(targets) do
+			for _, target in ipairs(targets) do
 				local d = SU.create_bullet_damage(b, target.id, this.id)
 
 				queue_damage(store, d)
@@ -20893,7 +20893,7 @@ function scripts.aura_tower_arborean_emissary_gift_of_nature.update(this, store)
 			local mods = this.aura.mods or {this.aura.mod}
 
 			for i, target in ipairs(targets) do
-				for _, mod_name in pairs(mods) do
+				for _, mod_name in ipairs(mods) do
 					local new_mod = E:create_entity(mod_name)
 
 					new_mod.modifier.level = this.aura.level
