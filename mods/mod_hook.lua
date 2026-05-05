@@ -20,6 +20,18 @@ end
 
 local hook = hook_utils:new()
 
+local function merge_keyed_table(dst, src, on_assign)
+	if not src then
+		return
+	end
+	for k, v in pairs(src) do
+		dst[k] = v
+		if on_assign then
+			on_assign(k, v)
+		end
+	end
+end
+
 function hook:front_init()
 	HOOK(S, "init", self.S.init)
 end
@@ -131,9 +143,14 @@ function hook.S.init(init, self, path, overrides)
 		local sounds_path = mod_data.check_paths["/_assets/sounds/sounds.lua"]
 
 		if sounds_path then
-			self.sounds = FS.load(sounds_path)()
+			local mod_sounds = FS.load(sounds_path)()
+			merge_keyed_table(self.sounds, mod_sounds, function(id, sd)
+				if self._precache_sound then
+					self:_precache_sound(id, sd)
+				end
+			end)
 
-			log.info("Found sound's sounds override in mod %s", mod_data.name)
+			log.info("Merged sound's sounds from mod %s", mod_data.name)
 
 			self.mod_load.sounds = true
 		end
@@ -141,9 +158,10 @@ function hook.S.init(init, self, path, overrides)
 		local groups_path = mod_data.check_paths["/_assets/sounds/groups.lua"]
 
 		if groups_path then
-			self.groups = FS.load(groups_path)()
+			local mod_groups = FS.load(groups_path)()
+			merge_keyed_table(self.groups, mod_groups)
 
-			log.info("Found sound's groups override in mod %s", mod_data.name)
+			log.info("Merged sound's groups from mod %s", mod_data.name)
 		end
 	end
 end
