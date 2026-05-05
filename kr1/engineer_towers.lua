@@ -395,6 +395,7 @@ tower_dwaarp.attacks.list[3].vis_bans = bor(F_FLYING, F_CLIFF, F_BOSS)
 tower_dwaarp.attacks.list[3].bullet = "drill"
 tower_dwaarp.attacks.list[3].cooldown = 29
 tower_dwaarp.attacks.list[3].cooldown_inc = -3
+tower_dwaarp.attacks.list[3].cooldown_base = 32
 tower_dwaarp.attacks.list[3].hit_time = fts(46)
 tower_dwaarp.attacks.list[3].sound = "EarthquakeDrillIn"
 tower_dwaarp.sound_events.insert = "EarthquakeTauntReady"

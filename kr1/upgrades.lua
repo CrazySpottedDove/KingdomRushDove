@@ -1835,6 +1835,7 @@ function upgrades:patch_templates(max_level)
 		at.min_cooldown = at.min_cooldown * u.cooldown_factor
 		at = T("tower_dwaarp").attacks.list[3]
 		at.cooldown_inc = at.cooldown_inc * u.cooldown_factor
+		at.cooldown_base = at.cooldown_base * u.cooldown_factor
 		at = T("tower_frankenstein").attacks.list[1]
 		at.cooldown = at.cooldown * u.cooldown_factor_electric
 		at = T("tower_tesla").attacks.list[1]

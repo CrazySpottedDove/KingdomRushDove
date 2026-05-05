@@ -3880,8 +3880,6 @@ scripts.tower_dwaarp = {
 
 		aa.ts = store.tick_ts
 
-		::label_89_0::
-
 		while true do
 			if this.tower.blocked then
 				coroutine.yield()
@@ -3893,7 +3891,7 @@ scripts.tower_dwaarp = {
 						da.ts = store.tick_ts
 					end
 
-					da.cooldown = da.cooldown + da.cooldown_inc
+					da.cooldown = da.cooldown_base + da.cooldown_inc * pow_d.level
 				end
 
 				if pow_l.changed then
@@ -3920,17 +3918,17 @@ scripts.tower_dwaarp = {
 					std_ready = true
 				end
 
-				if not drill_ready and not lava_ready and not std_ready then
+				if not drill_ready and not std_ready then
 					coroutine.yield()
 				else
 					if drill_ready then
-						-- local trigger_enemy = U.find_first_enemy()
 						local trigger_enemy = U.detect_foremost_enemy_in_range_filter_on(tpos(this), a.range, da.vis_flags, da.vis_bans, function(e, origin)
 							return e.health and e.health.hp > 1000
 						end)
 
 						if not trigger_enemy then
-						-- block empty
+							da.ts = da.ts + 0.1
+							drill_ready = false
 						else
 							drill_ready = false
 							da.ts = store.tick_ts
@@ -3938,7 +3936,7 @@ scripts.tower_dwaarp = {
 							S:queue(da.sound)
 							animation_start(this, "drill", nil, store.tick_ts, 1, anim_id)
 
-							while store.tick_ts - da.ts < da.hit_time do
+							while store.tick_ts - da.ts < da.hit_time * this.tower.cooldown_factor do
 								coroutine.yield()
 							end
 
@@ -3962,181 +3960,185 @@ scripts.tower_dwaarp = {
 							while not animation_finished(this, anim_id) do
 								coroutine.yield()
 							end
-
-							goto label_89_0
 						end
 					end
 
-					local trigger_enemy = U.find_first_enemy_in_range_filter_off(tpos(this), a.range, aa.vis_flags, aa.vis_bans)
+					if std_ready then
+						local trigger_enemy = U.find_first_enemy_in_range_filter_off(tpos(this), a.range, aa.vis_flags, aa.vis_bans)
 
-					if trigger_enemy then
-						aa.ts = store.tick_ts
+						if trigger_enemy then
+							aa.ts = store.tick_ts
 
-						if lava_ready then
-							la.ts = store.tick_ts
-						end
+							if lava_ready then
+								la.ts = store.tick_ts
+							end
 
-						animation_start(this, "shoot", nil, store.tick_ts, 1, anim_id)
+							animation_start(this, "shoot", nil, store.tick_ts, 1, anim_id)
 
-						while store.tick_ts - aa.ts < aa.hit_time * tw.cooldown_factor do
-							coroutine.yield()
-						end
+							while store.tick_ts - aa.ts < aa.hit_time * tw.cooldown_factor do
+								coroutine.yield()
+							end
 
-						local enemies = U.find_enemies_in_range_filter_off(tpos(this), a.range, aa.damage_flags, aa.damage_bans)
+							local enemies = U.find_enemies_in_range_filter_off(tpos(this), a.range, aa.damage_flags, aa.damage_bans)
 
-						if enemies then
-							for _, enemy in pairs(enemies) do
-								local d = E:create_entity("damage")
-
-								d.source_id = this.id
-								d.target_id = enemy.id
-								d.damage_type = aa.damage_type
-
+							if enemies then
+								local dvalue
 								if UP:get_upgrade("engineer_efficiency") then
-									d.value = aa.damage_max
+									dvalue = aa.damage_max
 								else
-									d.value = random(aa.damage_min, aa.damage_max)
+									dvalue = random(aa.damage_min, aa.damage_max)
 								end
+								dvalue = this.tower.damage_factor * dvalue
 
-								d.value = this.tower.damage_factor * d.value
+								for _, enemy in ipairs(enemies) do
+									local d = E:create_entity("damage")
 
-								queue_damage(store, d)
+									d.source_id = this.id
+									d.target_id = enemy.id
+									d.damage_type = aa.damage_type
+									d.value = dvalue
 
-								if aa.mod then
-									local mod = E:create_entity(aa.mod)
+									queue_damage(store, d)
 
-									mod.modifier.target_id = enemy.id
-
-									queue_insert(store, mod)
-								elseif aa.mods then
-									for _, m in pairs(aa.mods) do
-										local mod = E:create_entity(m)
+									if aa.mod then
+										local mod = E:create_entity(aa.mod)
 
 										mod.modifier.source_id = this.id
 										mod.modifier.target_id = enemy.id
 										mod.modifier.damage_factor = this.tower.damage_factor
 
 										queue_insert(store, mod)
+									elseif aa.mods then
+										for _, m in ipairs(aa.mods) do
+											local mod = E:create_entity(m)
+
+											mod.modifier.source_id = this.id
+											mod.modifier.target_id = enemy.id
+											mod.modifier.damage_factor = this.tower.damage_factor
+
+											queue_insert(store, mod)
+										end
 									end
 								end
 							end
-						end
 
-						local fx_points = this.fx_points(this)
+							local fx_points = this.fx_points(this)
 
-						for i = 1, #fx_points do
-							local p = fx_points[i]
+							for i = 1, #fx_points do
+								local p = fx_points[i]
+
+								if lava_ready then
+									local lava = E:create_entity(la.bullet)
+
+									lava.pos.x, lava.pos.y = p.pos.x, p.pos.y
+									lava.aura.ts = store.tick_ts
+									lava.aura.source_id = this.id
+									lava.aura.level = pow_l.level
+									lava.aura.radius = lava.aura.radius
+									lava.aura.damage_factor = this.tower.damage_factor
+
+									queue_insert(store, lava)
+								end
+
+								if band(p.terrain, TERRAIN_WATER) ~= 0 then
+									local smoke = E:create_entity("decal_dwaarp_smoke_water")
+
+									smoke.pos.x, smoke.pos.y = p.pos.x, p.pos.y
+									smoke.render.sprites[1].ts = store.tick_ts + random() * 5 / FPS
+
+									queue_insert(store, smoke)
+
+									if lava_ready then
+										local vapor = E:create_entity("decal_dwaarp_scorched_water")
+
+										vapor.render.sprites[1].ts = store.tick_ts + U.frandom(0, 0.5)
+										vapor.pos.x, vapor.pos.y = p.pos.x + U.frandom(-5, 5), p.pos.y + U.frandom(-5, 5)
+
+										if random() < 0.5 then
+											vapor.render.sprites[1].flip_x = true
+										end
+
+										queue_insert(store, vapor)
+									end
+								else
+									local decal = E:create_entity("decal_tween")
+
+									decal.pos.x, decal.pos.y = p.pos.x, p.pos.y
+									decal.tween.props[1].keys = {{0, 255}, {1, 255}, {2.5, 0}}
+									decal.tween.props[1].name = "alpha"
+
+									if random() < 0.5 then
+										decal.render.sprites[1].name = "EarthquakeTower_HitDecal1"
+									else
+										decal.render.sprites[1].name = "EarthquakeTower_HitDecal2"
+									end
+
+									decal.render.sprites[1].animated = false
+									decal.render.sprites[1].z = Z_DECALS
+									decal.render.sprites[1].ts = store.tick_ts
+
+									queue_insert(store, decal)
+
+									local smoke = E:create_entity("decal_dwaarp_smoke")
+
+									smoke.pos.x, smoke.pos.y = p.pos.x, p.pos.y
+									smoke.render.sprites[1].ts = store.tick_ts + random() * 5 / FPS
+
+									queue_insert(store, smoke)
+
+									if lava_ready then
+										local scorch = E:create_entity("decal_dwaarp_scorched")
+
+										if random() < 0.5 then
+											scorch.render.sprites[1].name = "EarthquakeTower_Lava2"
+										end
+
+										scorch.pos.x, scorch.pos.y = p.pos.x, p.pos.y
+										scorch.render.sprites[1].ts = store.tick_ts
+
+										queue_insert(store, scorch)
+									end
+								end
+							end
 
 							if lava_ready then
-								local lava = E:create_entity(la.bullet)
+								local tower_scorch = E:create_entity("decal_dwaarp_tower_scorched")
 
-								lava.pos.x, lava.pos.y = p.pos.x, p.pos.y
-								lava.aura.ts = store.tick_ts
-								lava.aura.source_id = this.id
-								lava.aura.level = pow_l.level
-								lava.aura.radius = lava.aura.radius
-								lava.aura.damage_factor = this.tower.damage_factor
+								tower_scorch.pos.x, tower_scorch.pos.y = this.pos.x, this.pos.y + 10
+								tower_scorch.render.sprites[1].ts = store.tick_ts
 
-								queue_insert(store, lava)
+								queue_insert(store, tower_scorch)
 							end
 
-							if band(p.terrain, TERRAIN_WATER) ~= 0 then
-								local smoke = E:create_entity("decal_dwaarp_smoke_water")
+							local pulse = E:create_entity("decal_dwaarp_pulse")
 
-								smoke.pos.x, smoke.pos.y = p.pos.x, p.pos.y
-								smoke.render.sprites[1].ts = store.tick_ts + random() * 5 / FPS
+							pulse.pos.x, pulse.pos.y = this.pos.x, this.pos.y + 16
+							pulse.render.sprites[1].ts = store.tick_ts
 
-								queue_insert(store, smoke)
+							queue_insert(store, pulse)
 
-								if lava_ready then
-									local vapor = E:create_entity("decal_dwaarp_scorched_water")
-
-									vapor.render.sprites[1].ts = store.tick_ts + U.frandom(0, 0.5)
-									vapor.pos.x, vapor.pos.y = p.pos.x + U.frandom(-5, 5), p.pos.y + U.frandom(-5, 5)
-
-									if random() < 0.5 then
-										vapor.render.sprites[1].flip_x = true
-									end
-
-									queue_insert(store, vapor)
-								end
-							else
-								local decal = E:create_entity("decal_tween")
-
-								decal.pos.x, decal.pos.y = p.pos.x, p.pos.y
-								decal.tween.props[1].keys = {{0, 255}, {1, 255}, {2.5, 0}}
-								decal.tween.props[1].name = "alpha"
-
-								if random() < 0.5 then
-									decal.render.sprites[1].name = "EarthquakeTower_HitDecal1"
-								else
-									decal.render.sprites[1].name = "EarthquakeTower_HitDecal2"
-								end
-
-								decal.render.sprites[1].animated = false
-								decal.render.sprites[1].z = Z_DECALS
-								decal.render.sprites[1].ts = store.tick_ts
-
-								queue_insert(store, decal)
-
-								local smoke = E:create_entity("decal_dwaarp_smoke")
-
-								smoke.pos.x, smoke.pos.y = p.pos.x, p.pos.y
-								smoke.render.sprites[1].ts = store.tick_ts + random() * 5 / FPS
-
-								queue_insert(store, smoke)
-
-								if lava_ready then
-									local scorch = E:create_entity("decal_dwaarp_scorched")
-
-									if random() < 0.5 then
-										scorch.render.sprites[1].name = "EarthquakeTower_Lava2"
-									end
-
-									scorch.pos.x, scorch.pos.y = p.pos.x, p.pos.y
-									scorch.render.sprites[1].ts = store.tick_ts
-
-									queue_insert(store, scorch)
-								end
+							if lava_ready then
+								S:queue(la.sound)
 							end
+
+							S:queue(aa.sound)
+
+							while not animation_finished(this, anim_id) do
+								coroutine.yield()
+							end
+
+							std_ready = false
+							lava_ready = false
+							this.render.sprites[4].hidden = true
+							this.render.sprites[5].hidden = true
+						else
+							aa.ts = aa.ts + 0.1
+							std_ready = false
 						end
 
-						if lava_ready then
-							local tower_scorch = E:create_entity("decal_dwaarp_tower_scorched")
-
-							tower_scorch.pos.x, tower_scorch.pos.y = this.pos.x, this.pos.y + 10
-							tower_scorch.render.sprites[1].ts = store.tick_ts
-
-							queue_insert(store, tower_scorch)
-						end
-
-						local pulse = E:create_entity("decal_dwaarp_pulse")
-
-						pulse.pos.x, pulse.pos.y = this.pos.x, this.pos.y + 16
-						pulse.render.sprites[1].ts = store.tick_ts
-
-						queue_insert(store, pulse)
-
-						if lava_ready then
-							S:queue(la.sound)
-						end
-
-						S:queue(aa.sound)
-
-						while not animation_finished(this, anim_id) do
-							coroutine.yield()
-						end
-
-						std_ready = false
-						lava_ready = false
-						this.render.sprites[4].hidden = true
-						this.render.sprites[5].hidden = true
-					else
-						y_wait(store, this.tower.guard_time)
+						animation_start(this, "idle", nil, store.tick_ts, -1, anim_id)
+						coroutine.yield()
 					end
-
-					animation_start(this, "idle", nil, store.tick_ts, -1, anim_id)
-					coroutine.yield()
 				end
 			end
 		end
