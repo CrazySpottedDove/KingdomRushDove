@@ -2451,15 +2451,13 @@ tt = RT("mod_tower_ray_slow", "mod_slow")
 b = balance.towers.ray.basic_attack
 tt.slow.factor = b.slow.factor
 tt.modifier.duration = b.duration
+--#endregion
 -- 红法 END
 
 -- 观星 BEGIN
---#endregion
 --#region ps_stargazers_death_star_trail
 tt = RT("ps_stargazers_death_star_trail")
-
 AC(tt, "pos", "particle_system")
-
 tt.particle_system.name = "elven_stargazers_tower_rising_star_particle_trail_idle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
@@ -2471,9 +2469,7 @@ tt.particle_system.z = Z_BULLET_PARTICLES
 --#endregion
 --#region fx_tower_elven_stargazers_ray_hit_start
 tt = RT("fx_tower_elven_stargazers_ray_hit_start", "fx")
-
 AC(tt, "tween")
-
 tt.render.sprites[1].name = "elven_stargazers_tower_rising_star_hit_fx_idle"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].scale = vec_2(1.5, 1.5)
@@ -2510,9 +2506,7 @@ tt.timed.runs = INT_32_MAX
 --#endregion
 --#region fx_tower_elven_stargazers_ray_hit
 tt = RT("fx_tower_elven_stargazers_ray_hit", "fx")
-
 AC(tt)
-
 tt.render.sprites[1].name = "elven_stargazers_tower_ray_end_end"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS + 1

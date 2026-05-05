@@ -693,6 +693,24 @@ function SU.create_bullet_damage_without_pops(bullet, target_id, source_id)
 	return d
 end
 
+function SU.create_bullet_damage_without_pops_and_value(bullet, target_id, source_id)
+	local d = E:create_entity("damage")
+
+	d.damage_type = bullet.damage_type
+	d.reduce_armor = bullet.reduce_armor
+	d.reduce_magic_armor = bullet.reduce_magic_armor
+	d.target_id = target_id
+	d.source_id = source_id
+	d.xp_gain_factor = bullet.xp_gain_factor
+	d.xp_dest_id = bullet.xp_dest_id
+	d.track_damage = bullet.track_damage
+
+	-- 传递伤害钩子，这里采用只读引用，避免不必要的表复制开销
+	d.hooks = bullet.damage_hooks
+
+	return d
+end
+
 ---创建攻击伤害
 ---@param a table 攻击
 ---@param target_id number 目标ID

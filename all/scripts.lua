@@ -2148,13 +2148,6 @@ function scripts.arrow.insert(this, store)
 	end
 
 	if b.predict_target_pos then
-		-- local err_x, err_y = 0, 0
-		-- if b.prediction_error then
-		--     err_x = target.motion.speed.x == 0 and 0 or U.frandom(0, 1) * 10
-		--     err_y = target.motion.speed.y == 0 and 0 or U.frandom(0, 1) * -10
-		-- end
-		-- b.to.x = b.to.x + target.motion.speed.x * b.flight_time + err_x
-		-- b.to.y = b.to.y + target.motion.speed.y * b.flight_time + err_y
 		b.to.x = b.to.x + target.motion.speed.x * b.flight_time
 		b.to.y = b.to.y + target.motion.speed.y * b.flight_time
 	end
@@ -2238,7 +2231,7 @@ function scripts.arrow.update(this, store)
 
 	local hit = false
 
-	if target and target.health and not target.health.dead then
+	if target and not target.health.dead then
 		local target_pos = V.vclone(target.pos)
 
 		if target.unit and target.unit.hit_offset and not b.ignore_hit_offset then
@@ -2262,15 +2255,17 @@ function scripts.arrow.update(this, store)
 
 			if mods then
 				for _, mod_name in ipairs(mods) do
-					local mod = E:create_entity(mod_name)
+					if U.flags_pass(target.vis, E:get_template(mod_name).modifier) then
+						local mod = E:create_entity(mod_name)
 
-					mod.modifier.source_id = this.id
-					mod.modifier.target_id = target.id
-					mod.modifier.level = b.level
-					mod.modifier.source_damage = d
-					mod.modifier.damage_factor = b.damage_factor
+						mod.modifier.source_id = this.id
+						mod.modifier.target_id = target.id
+						mod.modifier.level = b.level
+						mod.modifier.source_damage = d
+						mod.modifier.damage_factor = b.damage_factor
 
-					queue_insert(store, mod)
+						queue_insert(store, mod)
+					end
 				end
 			end
 
@@ -2802,7 +2797,7 @@ function scripts.bomb.update(this, store)
 	if enemies then
 		for i = 1, #enemies do
 			local enemy = enemies[i]
-			local d = SU.create_bullet_damage_without_pops(b, enemy.id, this.id)
+			local d = SU.create_bullet_damage_without_pops_and_value(b, enemy.id, this.id)
 
 			if UP:get_upgrade("engineer_efficiency") then
 				d.value = dmax
@@ -2818,13 +2813,12 @@ function scripts.bomb.update(this, store)
 
 			if mods then
 				for _, mod_name in ipairs(mods) do
-					local mod = E:create_entity(mod_name)
+					if U.flags_pass(enemy.vis, E:get_template(mod_name).modifier) then
+						local mod = E:create_entity(mod_name)
 
-					mod.modifier.damage_factor = b.damage_factor
-					mod.modifier.target_id = enemy.id
-					mod.modifier.source_id = this.id
-
-					if U.flags_pass(enemy.vis, mod.modifier) then
+						mod.modifier.damage_factor = b.damage_factor
+						mod.modifier.target_id = enemy.id
+						mod.modifier.source_id = this.id
 						queue_insert(store, mod)
 					end
 				end
@@ -5629,13 +5623,11 @@ function scripts.mod_stun.insert(this, store)
 		return false
 	end
 
-	if target.vis and not U.flags_pass(target.vis, this.modifier) then
-		log.paranoid("mod %s cannot be applied to entity %s:%s because of vis flags/bans", this.template_name, target.id, target.template_name)
-
+	if not U.flags_pass(target.vis, this.modifier) then
 		return false
 	end
 
-	if target and target.unit and this.render then
+	if target.unit and this.render then
 		for i = 1, #this.render.sprites do
 			local s = this.render.sprites[i]
 
@@ -5676,7 +5668,6 @@ function scripts.mod_stun.insert(this, store)
 	end
 
 	SU.stun_inc(target)
-	log.paranoid("mod_stun.insert (%s)-%s for target (%s)-%s", this.id, this.template_name, target.id, target.template_name)
 	signal.emit("mod-applied", this, target)
 
 	return true
@@ -8231,7 +8222,7 @@ scripts.soldier_revive_resist = function(this, store)
 
 	this.health.ignore_damage = true
 
-	for _, m in pairs(mods) do
+	for _, m in ipairs(mods) do
 		if band(m.modifier.vis_flags, F_STUN) ~= 0 then
 			m.abort = true
 
@@ -8406,13 +8397,21 @@ function scripts.bomb_bouncing.update(this, store)
 	this_pos.x = b.from.x
 	this_pos.y = b.from.y
 
+	local mods
+
+	if b.mod then
+		mods = type(b.mod) == "string" and {b.mod} or b.mod
+	elseif b.mods then
+		mods = b.mods
+	end
+
 	local function do_hit()
 		local enemies = U.find_enemies_in_range_filter_off(this_pos, dradius, b.damage_flags, b.damage_bans)
 
 		if enemies then
 			for i = 1, #enemies do
 				local enemy = enemies[i]
-				local d = SU.create_bullet_damage_without_pops(b, enemy.id, this.id)
+				local d = SU.create_bullet_damage_without_pops_and_value(b, enemy.id, this.id)
 
 				if UP:get_upgrade("engineer_efficiency") then
 					d.value = dmax
@@ -8426,23 +8425,15 @@ function scripts.bomb_bouncing.update(this, store)
 
 				queue_damage(store, d)
 
-				local mods
-
-				if b.mod then
-					mods = type(b.mod) == "string" and {b.mod} or b.mod
-				elseif b.mods then
-					mods = b.mods
-				end
-
 				if mods then
-					for _, mod_name in pairs(mods) do
-						local mod = E:create_entity(mod_name)
+					for _, mod_name in ipairs(mods) do
+						if U.flags_pass(enemy.vis, E:get_template(mod_name).modifier) then
+							local mod = E:create_entity(mod_name)
 
-						mod.modifier.damage_factor = b.damage_factor
-						mod.modifier.target_id = enemy.id
-						mod.modifier.source_id = this.id
+							mod.modifier.damage_factor = b.damage_factor
+							mod.modifier.target_id = enemy.id
+							mod.modifier.source_id = this.id
 
-						if U.flags_pass(enemy.vis, mod.modifier) then
 							queue_insert(store, mod)
 						end
 					end
@@ -8454,7 +8445,6 @@ function scripts.bomb_bouncing.update(this, store)
 
 		if p then
 			queue_insert(store, p)
-
 		end
 
 		local cell_type = GR:cell_type(this_pos.x, this_pos.y)
