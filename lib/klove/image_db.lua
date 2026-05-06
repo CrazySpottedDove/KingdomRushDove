@@ -734,14 +734,20 @@ function image_db:add_image(name, image, group, scale)
 
 	if not self.atlas_uses[name_scale] then
 		self.atlas_uses[name_scale] = 1
+	else
+		self.atlas_uses[name_scale] = self.atlas_uses[name_scale] + 1
 	end
 end
 
 --- 移除图像文件
 ---@param name string 纹理名称
 function image_db:remove_image(name)
-	self.db_images[name] = nil
-	self.db_atlas[name] = nil
+	local name_scale = self.db_atlas[name].group
+	self.atlas_uses[name_scale] = self.atlas_uses[name_scale] - 1
+	if self.atlas_uses[name_scale] <= 0 then
+		self.db_images[name] = nil
+		self.db_atlas[name] = nil
+	end
 end
 
 function image_db:i(name)
