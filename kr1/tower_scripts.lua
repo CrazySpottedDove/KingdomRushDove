@@ -204,7 +204,7 @@ scripts.tower_archer_dwarf = {
 
 					animation_start(this, an, af, store.tick_ts, false, shooter_sid)
 
-					while store.tick_ts - a.ts < a.shoot_time do
+					while store.tick_ts - a.ts < a.shoot_time * tw.cooldown_factor do
 						coroutine.yield()
 					end
 
@@ -471,7 +471,7 @@ scripts.tower_musketeer = {
 						pow.changed = nil
 
 						if pow.level == 1 then
-							for _, ax in pairs(a.list) do
+							for _, ax in ipairs(a.list) do
 								if ax.power_name and this.powers[ax.power_name] == pow then
 									ax.ts = store.tick_ts
 								end
@@ -487,7 +487,7 @@ scripts.tower_musketeer = {
 				SU.tower_update_silenced_powers(store, this)
 
 				if pow_sn.level > 0 then
-					for _, ax in pairs({asi, asn}) do
+					for _, ax in ipairs({asi, asn}) do
 						if (ax.chance == 1 or random() < ax.chance) and ready_to_use_power(pow_sn, ax, store, tw.cooldown_factor) then
 							local enemy = U.find_biggest_enemy_in_range_filter_off(tpos, ax.range, ax.vis_flags, ax.vis_bans)
 
@@ -501,7 +501,7 @@ scripts.tower_musketeer = {
 								goto continue_ax
 							end
 
-							for _, axx in pairs({aa, asi, asn}) do
+							for _, axx in ipairs({aa, asi, asn}) do
 								axx.ts = store.tick_ts
 							end
 
@@ -564,7 +564,7 @@ scripts.tower_musketeer = {
 						sprites[fsid].flip_x = fuse_idx < shooter_idx
 						U.change_sprite_draw_order(this, ssid, 5)
 
-						y_wait(store, ash.shoot_time)
+						y_wait(store, ash.shoot_time * tw.cooldown_factor)
 
 						local shooting_right = tpos.x < enemy.pos.x
 						local soffset = sprites[ssid].offset
@@ -595,7 +595,7 @@ scripts.tower_musketeer = {
 					end
 				end
 
-				if ready_to_attack(aa, store, this.tower.cooldown_factor) then
+				if ready_to_attack(aa, store, tw.cooldown_factor) then
 					local enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, a.range, aa.vis_flags, aa.vis_bans)
 
 					if not enemy then
@@ -607,14 +607,14 @@ scripts.tower_musketeer = {
 
 						local an, af, ai = shot_animation(aa, shooter_idx, enemy)
 
-						y_wait(store, aa.shoot_time)
+						y_wait(store, aa.shoot_time * tw.cooldown_factor)
 						shot_bullet(aa, shooter_idx, ai, enemy, 0)
 						y_animation_wait(this, shooter_sids[shooter_idx])
 					end
 				end
 
 				if store.tick_ts - aa.ts > tw.long_idle_cooldown then
-					for _, sid in pairs(shooter_sids) do
+					for _, sid in ipairs(shooter_sids) do
 						local an, af = animation_name_facing_point(this, "idle", tw.long_idle_pos, sid)
 
 						animation_start(this, an, af, store.tick_ts, -1, sid)
@@ -745,7 +745,7 @@ scripts.tower_crossbow = {
 							return e.template_name == ea.mod and e.modifier.level >= pow_e.level
 						end)
 
-						for _, m in pairs(existing_mods) do
+						for _, m in ipairs(existing_mods) do
 							local target_id = m.modifier.target_id
 							local target = store.entities[target_id]
 							local source_id = m.modifier.source_id
@@ -759,7 +759,7 @@ scripts.tower_crossbow = {
 							return e.tower.can_be_mod and not table.contains(busy_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, eagle_range)
 						end)
 
-						for _, tower in pairs(towers) do
+						for _, tower in ipairs(towers) do
 							local new_mod = E:create_entity(ea.mod)
 
 							new_mod.modifier.level = pow_e.level
@@ -817,7 +817,7 @@ scripts.tower_crossbow = {
 						for i = 1, ma.shots + pow_m.level * ma.shots_inc do
 							local origin = last_enemy.pos
 
-							while store.tick_ts - loop_ts < ma.shoot_time do
+							while store.tick_ts - loop_ts < ma.shoot_time * tw.cooldown_factor do
 								coroutine.yield()
 							end
 
@@ -860,11 +860,11 @@ scripts.tower_crossbow = {
 							queue_insert(store, b)
 
 							-- AC:inc_check("BOLTOFTHESUN", 1)
-							while store.tick_ts - loop_ts < ma.cycle_time do
+							while store.tick_ts - loop_ts < ma.cycle_time * tw.cooldown_factor do
 								coroutine.yield()
 							end
 
-							loop_ts = 2 * store.tick_ts - (loop_ts + ma.cycle_time)
+							loop_ts = store.tick_ts
 						end
 
 						local an, af = animation_name_facing_point(this, "multishot_end", last_enemy.pos, shooter_sid, start_offset)
@@ -900,7 +900,7 @@ scripts.tower_crossbow = {
 
 						animation_start(this, an, af, store.tick_ts, 1, shooter_sid)
 
-						while store.tick_ts - aa.ts < aa.shoot_time do
+						while store.tick_ts - aa.ts < aa.shoot_time * tw.cooldown_factor do
 							coroutine.yield()
 						end
 

@@ -4743,7 +4743,6 @@ function scripts.aura_apply_mod.update(this, store)
 						queue_insert(store, new_mod)
 					end
 					victims_count = victims_count + 1
-
 				end
 			end
 		end
