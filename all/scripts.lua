@@ -643,7 +643,6 @@ function scripts.enemy_mixed.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -1050,7 +1049,6 @@ function scripts.soldier_reinforcement.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
 
 		if not this.health.dead then
@@ -1334,7 +1332,6 @@ function scripts.soldier_barrack.update(this, store)
 
 	if this.render.sprites[1].name == "raise" then
 		this.health_bar.hidden = true
-
 		U.animation_start(this, "raise", nil, store.tick_ts, 1)
 
 		while not U.animation_finished(this) and not this.health.dead do

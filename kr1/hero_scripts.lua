@@ -248,7 +248,6 @@ scripts.hero_gerald = {
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		while true do
 			if h.dead then
 				SU.y_hero_death_and_respawn(store, this)
@@ -585,7 +584,6 @@ scripts.hero_alleria = {
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		while true do
 			if h.dead then
 				SU.y_hero_death_and_respawn(store, this)
@@ -882,7 +880,6 @@ scripts.hero_mirage = {
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		while true do
 			if h.dead then
 				SU.y_hero_death_and_respawn(store, this)
@@ -1485,7 +1482,6 @@ scripts.hero_wizard = {
 		U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		local arcane_torrent_ts = store.tick_ts
 
 		local function filter_fn(v)
@@ -1778,7 +1774,6 @@ scripts.hero_alric = {
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		while true do
 			if h.dead then
 				SU.y_hero_death_and_respawn(store, this)
@@ -1977,7 +1972,6 @@ scripts.hero_bolin = {
 		U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		while true do
 			if h.dead then
 				SU.y_hero_death_and_respawn(store, this)
@@ -2473,7 +2467,6 @@ scripts.hero_denas = {
 		U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		for _, t in pairs(E:filter_templates("tower")) do
 			t.tower.price = math.floor(t.tower.price * this.tower_price_factor)
 		end
@@ -3085,7 +3078,6 @@ scripts.hero_beastmaster = {
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		while true do
 			if h.dead then
 				this.falcons = {}
@@ -3503,7 +3495,6 @@ scripts.hero_van_helsing = {
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		while true do
 			if h.dead then
 				if band(this.health.last_damage_types, bor(DAMAGE_EAT, DAMAGE_HOST, DAMAGE_DISINTEGRATE)) == 0 then
@@ -3991,7 +3982,6 @@ scripts.hero_malik = {
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		while true do
 			if h.dead then
 				SU.y_hero_death_and_respawn(store, this)
@@ -4240,7 +4230,6 @@ scripts.hero_priest = {
 		U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		while true do
 			if h.dead then
 				SU.y_hero_death_and_respawn(store, this)
@@ -4570,7 +4559,6 @@ scripts.soldier_magnus_illusion = {
 		end
 
 		this.health_bar.hidden = true
-
 		U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
 
 		if not this.health.dead then
@@ -4745,7 +4733,6 @@ scripts.hero_magnus = {
 		U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		while true do
 			if h.dead then
 				SU.y_hero_death_and_respawn(store, this)
@@ -5129,7 +5116,6 @@ scripts.hero_giant = {
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		while true do
 			if h.dead then
 				if band(h.last_damage_types, bor(DAMAGE_DISINTEGRATE, DAMAGE_HOST, DAMAGE_EAT)) == 0 then
@@ -5784,7 +5770,6 @@ function scripts.hero_pirate.update(this, store)
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -6264,7 +6249,6 @@ function scripts.hero_hacksaw.update(this, store)
 	U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			S:queue(this.sound_events.death2)
@@ -6411,7 +6395,6 @@ scripts.hero_ingvar = {
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		while true do
 			if h.dead then
 				if this.is_bear then
@@ -6568,7 +6551,6 @@ scripts.hero_ignus = {
 		U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		local aura = E:create_entity(this.particles_aura)
 
 		aura.aura.source_id = this.id
@@ -6932,7 +6914,6 @@ scripts.hero_oni = {
 		U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		while true do
 			if h.dead then
 				SU.y_hero_death_and_respawn(store, this)
@@ -7091,7 +7072,6 @@ function scripts.hero_thor.update(this, store)
 	U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -7268,7 +7248,6 @@ scripts.hero_10yr = {
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		local aura = E:create_entity(this.particles_aura)
 
 		aura.aura.source_id = this.id
@@ -7870,7 +7849,6 @@ function scripts.hero_vampiress.update(this, store)
 	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -8085,7 +8063,6 @@ function scripts.hero_alien.update(this, store)
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -8295,7 +8272,6 @@ scripts.hero_monk = {
 		U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		while true do
 			if h.dead then
 				SU.y_hero_death_and_respawn(store, this)
@@ -8319,7 +8295,6 @@ scripts.hero_monk = {
 
 						this.vis.bans = F_ALL
 						this.health_bar.hidden = true
-
 						SU.hide_modifiers(store, this, true)
 
 						a.ts = store.tick_ts
@@ -8333,7 +8308,6 @@ scripts.hero_monk = {
 						if SU.y_soldier_wait(store, this, a.hit_time) then
 							this.vis.bans = vis_bans
 							this.health_bar.hidden = this.health.dead
-
 							goto label_393_2
 						end
 
@@ -8348,7 +8322,6 @@ scripts.hero_monk = {
 
 						this.vis.bans = vis_bans
 						this.health_bar.hidden = false
-
 						SU.show_modifiers(store, this, true)
 
 						if SU.y_hero_animation_wait(this) then
@@ -8447,7 +8420,6 @@ scripts.hero_monk = {
 
 					this.health.ignore_damage = true
 					this.health_bar.hidden = true
-
 					local start_ts = store.tick_ts
 					local start_pos = V.vclone(this.pos)
 					local last_target
@@ -8681,7 +8653,6 @@ function scripts.hero_voodoo_witch.update(this, store)
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -8924,7 +8895,6 @@ function scripts.hero_crab.update(this, store)
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -9307,7 +9277,6 @@ scripts.mod_minotaur_daedalus = {
 		U.sprites_hide(target)
 
 		target.health_bar.hidden = true
-
 		U.y_wait(store, 0.5)
 
 		target.nav_path.pi = this.dest_pi
@@ -9331,7 +9300,6 @@ scripts.mod_minotaur_daedalus = {
 		U.sprites_show(target)
 
 		target.health_bar.hidden = nil
-
 		local s = this.render.sprites[1]
 
 		s.hidden = nil
@@ -9443,7 +9411,6 @@ scripts.hero_minotaur = {
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		while true do
 			if h.dead then
 				SU.y_hero_death_and_respawn(store, this)
@@ -9854,7 +9821,6 @@ scripts.hero_monkey_god = {
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		while true do
 			if h.dead then
 				SU.y_hero_death_and_respawn(store, this)
@@ -9892,7 +9858,6 @@ scripts.hero_monkey_god = {
 
 						this.unit.marker_hidden = true
 						this.health_bar.hidden = true
-
 						S:queue(this.sound_events.change_rally_point)
 						S:queue(this.sound_events.cloud_start)
 						SU.hide_modifiers(store, this, true)
@@ -10185,7 +10150,6 @@ scripts.hero_elves_archer = {
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		while true do
 			this.regen.is_idle = nil
 
@@ -10699,7 +10663,6 @@ scripts.hero_regson = {
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		local fade_start_time
 		local origin_pos
 		local aura_blade = this.aura_blade
@@ -10762,7 +10725,6 @@ scripts.hero_regson = {
 							if SU.hero_interrupted(this) then
 								this.render.sprites[1].alpha = 255
 								this.health_bar.hidden = false
-
 								goto label_98_0
 							end
 
@@ -11310,7 +11272,6 @@ function scripts.hero_lynn.update(this, store)
 	local a, skill, brk, sta
 
 	this.health_bar.hidden = false
-
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 	while true do
@@ -11791,7 +11752,6 @@ function scripts.hero_wilbur.update(this, store)
 	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil, true)
 
 	while true do
@@ -12286,7 +12246,6 @@ function scripts.hero_veznan.update(this, store)
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -12660,7 +12619,6 @@ function scripts.hero_durax.update(this, store)
 	local a, skill, brk, sta, decal
 
 	this.health_bar.hidden = false
-
 	if not this.clone then
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
@@ -13016,7 +12974,6 @@ function scripts.hero_elves_denas.update(this, store)
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -13536,7 +13493,6 @@ function scripts.hero_arivan.update(this, store)
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -14073,7 +14029,6 @@ function scripts.hero_phoenix.update(this, store)
 	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil, true)
 
 	while true do
@@ -14162,7 +14117,6 @@ function scripts.hero_phoenix.update(this, store)
 				h.dead = true
 				h.hp = 0
 				this.health_bar.hidden = true
-
 				goto label_190_0
 			end
 		end
@@ -14377,7 +14331,6 @@ function scripts.hero_bravebark.update(this, store)
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -14755,7 +14708,6 @@ function scripts.hero_catha.update(this, store)
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -15107,7 +15059,6 @@ function scripts.hero_lilith.update(this, store)
 	local a, skill, brk, sta
 
 	this.health_bar.hidden = false
-
 	local function skill_come_into_cooldown(skill_attack, is_ultimate)
 		if is_ultimate then
 			skill_attack.ts = store.tick_ts - km.clamp(0, 1, this.revive.protect) * skill_attack.cooldown * 0.15
@@ -15465,7 +15416,6 @@ function scripts.hero_xin.update(this, store)
 	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	local mod_clear_ts = store.tick_ts
 
 	while true do
@@ -15499,7 +15449,6 @@ function scripts.hero_xin.update(this, store)
 				SU.insert_sprite(store, "fx_xin_smoke_teleport_out", this.pos, initial_flip)
 
 				this.health_bar.hidden = true
-
 				if U.is_blocked_valid(store, this) then
 					local blocked = store.entities[this.soldier.target_id]
 					local m = E:create_entity("mod_xin_stun")
@@ -15663,7 +15612,6 @@ function scripts.hero_xin.update(this, store)
 
 				-- U.y_wait(store, fts(14))
 				this.health_bar.hidden = true
-
 				-- U.y_wait(store, fts(3))
 				if U.is_blocked_valid(store, this) then
 					local blocked = store.entities[this.soldier.target_id]
@@ -15703,7 +15651,6 @@ function scripts.hero_xin.update(this, store)
 				S:queue(a.sounds[2])
 
 				this.health_bar.hidden = nil
-
 				queue_damage(store, SU.create_attack_damage(a, target.id, this))
 				U.y_animation_wait(this)
 
@@ -15724,7 +15671,6 @@ function scripts.hero_xin.update(this, store)
 				end
 
 				this.health_bar.hidden = true
-
 				U.animation_start(this, a.animations[4], lflip, store.tick_ts)
 				SU.insert_sprite(store, "fx_xin_smoke_teleport_hit_out", this.pos, lflip)
 				U.y_animation_wait(this)
@@ -15963,7 +15909,6 @@ function scripts.hero_faustus.update(this, store)
 	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil, true)
 
 	while true do
@@ -16257,7 +16202,6 @@ function scripts.hero_rag.update(this, store)
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -16700,7 +16644,6 @@ function scripts.hero_bruce.update(this, store)
 	local a, skill, brk, sta
 
 	this.health_bar.hidden = false
-
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 	while true do
@@ -16973,7 +16916,6 @@ function scripts.hero_bolverk.update(this, store)
 	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -17101,7 +17043,6 @@ scripts.hero_dwarf = {
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
-
 		local pow_dwarf = this.hero.skills.dwarfsoldier
 		local a
 
@@ -17186,7 +17127,6 @@ scripts.hero_dwarf = {
 						a.ts = store.tick_ts
 						this.health.ignore_damage = true
 						this.health_bar.hidden = true
-
 						U.animation_start(this, a.animations[1], nil, store.tick_ts, true)
 						U.heal(this, this.health.hp_max * a.scale * 0.1)
 
@@ -18275,7 +18215,6 @@ function scripts.hero_hunter.update(this, store)
 	end
 
 	this.health_bar.hidden = false
-
 	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 
 	while true do
@@ -18350,7 +18289,6 @@ function scripts.hero_hunter.update(this, store)
 
 					this.unit.marker_hidden = true
 					this.health_bar.hidden = true
-
 					S:queue(this.sound_events.change_rally_point)
 					S:queue(this.flywalk.sound)
 
@@ -19694,7 +19632,6 @@ function scripts.hero_space_elf.update(this, store)
 				this.vis.bans = F_ALL
 				this.health.ignore_damage = true
 				this.health_bar.hidden = true
-
 				S:queue(tp.sound_in)
 
 				if tp.fx_out then
@@ -19755,7 +19692,6 @@ function scripts.hero_space_elf.update(this, store)
 				this.vis.bans = F_ALL
 				this.health.ignore_damage = true
 				this.health_bar.hidden = true
-
 				S:queue(tr.sound_loop)
 
 				local an, af = U.animation_name_facing_point(this, tr.animations[2], r.pos)
@@ -19851,7 +19787,6 @@ function scripts.hero_space_elf.update(this, store)
 	U.animation_start(this, "idle", nil, store.tick_ts, true)
 
 	this.health_bar.hidden = false
-
 	local function ultimate_filter_fn(e)
 		return not e.unit.is_stunned
 	end
@@ -20274,7 +20209,6 @@ function scripts.soldier_hero_space_elf_astral_reflection.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		U.y_animation_play(this, "in", nil, store.tick_ts, 1)
 
 		if not this.health.dead then
@@ -20866,7 +20800,6 @@ function scripts.hero_raelyn.update(this, store)
 	local onslaught_on = false
 
 	this.health_bar.hidden = false
-
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
 	while true do
@@ -21050,7 +20983,7 @@ function scripts.hero_raelyn.update(this, store)
 							if is_soldier then
 								shield_max_damage = shield_max_damage * skill.soldier_factor
 								m.render.sprites[1].scale = v(0.71, 0.71)
-								m.health_bar.offset.y = m.health_bar.offset.y * 0.71
+								U.change_health_bar_offset_run_time(m.health_bar, m.health_bar.offset.y * 0.71)
 							end
 
 							m.modifier.source_id = this.id
@@ -21327,7 +21260,6 @@ function scripts.hero_raelyn_command_orders_dark_knight.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
 
 		if not this.health.dead then
@@ -21621,7 +21553,6 @@ function scripts.hero_venom.update(this, store)
 	end
 
 	this.health_bar.hidden = false
-
 	play_level_up_animation()
 
 	while true do
@@ -21670,7 +21601,6 @@ function scripts.hero_venom.update(this, store)
 
 					this.unit.marker_hidden = true
 					this.health_bar.hidden = true
-
 					S:queue(this.sound_events.change_rally_point)
 					S:queue(this.slimewalk.sound)
 
@@ -22625,7 +22555,6 @@ function scripts.hero_dragon_gem.update(this, store)
 	this.tween.disabled = false
 	this.tween.ts = store.tick_ts
 	this.health_bar.hidden = false
-
 	U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts - fts(4), this.idle_flip.loop, nil, true)
 
 	while true do
@@ -25187,7 +25116,6 @@ function scripts.soldier_hero_witch_decoy.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
 
 		if not this.health.dead then
@@ -25436,7 +25364,6 @@ function scripts.hero_dragon_bone.update(this, store)
 	this.tween.disabled = false
 	this.tween.ts = store.tick_ts
 	this.health_bar.hidden = false
-
 	U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts - fts(4), this.idle_flip.loop, nil, true)
 
 	while true do
@@ -26680,7 +26607,6 @@ function scripts.hero_lumenir.update(this, store)
 	this.tween.disabled = false
 	this.tween.ts = store.tick_ts
 	this.health_bar.hidden = false
-
 	U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil, true)
 
 	while true do
@@ -27928,7 +27854,6 @@ function scripts.hero_wukong.update(this, store)
 	queue_insert(store, ps_nube_trail)
 
 	this.health_bar.hidden = false
-
 	local function rally_zhu_apprentice()
 		if not zhu_apprentice_soldier then
 			return
@@ -28369,7 +28294,6 @@ function scripts.hero_wukong.update(this, store)
 								U.y_wait(store, a.staff_appear_time)
 
 								this.health_bar.hidden = true
-
 								local staff_offset_x = a.staff_offset.x * (this.render.sprites[1].flip_x and -1 or 1)
 								local staff_fx = E:create_entity(a.staff_template)
 
@@ -28435,8 +28359,7 @@ function scripts.hero_wukong.update(this, store)
 								SU.y_hero_animation_wait(this)
 								U.animation_start(this, "idle", nil, store.tick_ts, true)
 
-								this.health_bar.hidden = false
-								-- U.pop_bans(this.vis, pushed_bans)
+								this.health_bar.hidden = false -- U.pop_bans(this.vis, pushed_bans)
 								this.health.immune_to = 0
 
 								goto label_882_1
@@ -29212,7 +29135,6 @@ function scripts.hero_vesper.update(this, store)
 	end
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -29771,7 +29693,6 @@ function scripts.hero_muyrn.update(this, store)
 	end
 
 	this.health_bar.hidden = false
-
 	local treewalk_trail = E:create_entity(this.treewalk.trail)
 
 	treewalk_trail.particle_system.track_id = this.id
@@ -29814,7 +29735,6 @@ function scripts.hero_muyrn.update(this, store)
 
 					this.unit.marker_hidden = true
 					this.health_bar.hidden = true
-
 					S:queue(this.sound_events.change_rally_point)
 					S:queue(this.treewalk.sound)
 
@@ -30861,7 +30781,6 @@ function scripts.hero_dragon_arb.update(this, store)
 	this.tween.disabled = false
 	this.tween.ts = store.tick_ts
 	this.health_bar.hidden = false
-
 	local passive_controller = E:create_entity(this.controller_passive)
 
 	queue_insert(store, passive_controller)
@@ -33289,7 +33208,6 @@ function scripts.hero_builder.update(this, store)
 	end
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -33541,7 +33459,6 @@ function scripts.hero_builder.update(this, store)
 						U.animation_start(this, an, af, store.tick_ts, 1)
 
 						this.health_bar.hidden = true
-
 						local _vis = {}
 
 						_vis.bans, _vis.flags = this.vis.bans, this.vis.flags
@@ -33982,7 +33899,6 @@ function scripts.hero_robot.update(this, store)
 	queue_insert(store, ps2)
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			ps1.particle_system.emit = false
@@ -35358,7 +35274,6 @@ function scripts.hero_bird.update(this, store)
 	this.tween.disabled = false
 	this.tween.ts = store.tick_ts
 	this.health_bar.hidden = false
-
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 	U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil, true)
 
@@ -36216,7 +36131,6 @@ function scripts.hero_lava.update(this, store)
 	end
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			S:queue(this.sound_events.death)
@@ -36282,7 +36196,6 @@ function scripts.hero_lava.update(this, store)
 			U.y_animation_play(this, "respawn", nil, store.tick_ts)
 
 			this.health_bar.hidden = false
-
 			if hotheaded_skill.level > 0 then
 				local towers = U.find_towers_in_range(store.towers, this.pos, hotheaded_attack, function(t)
 					return t.tower.can_be_mod
@@ -36784,7 +36697,6 @@ function scripts.hero_spider.update(this, store)
 				this.vis.bans = F_ALL
 				this.health.ignore_damage = true
 				this.health_bar.hidden = true
-
 				local an, af = U.animation_name_facing_point(this, tp.animations[1], r.pos)
 
 				U.animation_start(this, an, af, store.tick_ts, 1, nil)
@@ -36916,7 +36828,6 @@ function scripts.hero_spider.update(this, store)
 	U.animation_start(this, "idle", nil, store.tick_ts, true)
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -37026,7 +36937,6 @@ function scripts.hero_spider.update(this, store)
 				U.y_wait(store, fts(14))
 
 				this.health_bar.hidden = true
-
 				U.y_wait(store, fts(3))
 
 				if U.is_blocked_valid(store, this) then
@@ -37056,7 +36966,6 @@ function scripts.hero_spider.update(this, store)
 				U.y_wait(store, fts(20))
 
 				this.health_bar.hidden = nil
-
 				queue_damage(store, SU.create_attack_damage(a, target.id, this))
 
 				if band(target.vis.bans, bor(F_MOD, F_POISON)) == 0 then
@@ -37240,7 +37149,6 @@ function scripts.mod_hero_spider_skill_instakill_melee.insert(this, store)
 	target.ui.can_click = false
 	target.ui.can_select = false
 	target.health_bar.hidden = true
-
 	return true
 end
 
@@ -38685,7 +38593,6 @@ function scripts.hero_dragon_sun.update(this, store)
 	this.tween.props[1].disabled = false
 	this.tween.props[1].ts = store.tick_ts
 	this.health_bar.hidden = false
-
 	U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts - fts(4), this.idle_flip.loop, nil, true)
 
 	local function can_overcharge()
@@ -39051,7 +38958,6 @@ function scripts.hero_dragon_sun.update(this, store)
 
 		this.health.ignore_damage = true
 		this.health_bar.hidden = true
-
 		local target_center_node = P:nearest_nodes(target.pos.x, target.pos.y, {target.nav_path.pi}, {1}, true)[1]
 		local skill_pos = P:node_pos(target_center_node[1], target_center_node[2], target_center_node[3])
 		local af = skill_pos.x < this.pos.x
@@ -39082,7 +38988,6 @@ function scripts.hero_dragon_sun.update(this, store)
 		U.y_wait(store, fts(4))
 
 		this.health_bar.hidden = nil
-
 		local d = E:create_entity("damage")
 
 		d.value = math.ceil(U.frandom(a.target_damage_min, a.target_damage_max))
@@ -39148,7 +39053,6 @@ function scripts.hero_dragon_sun.update(this, store)
 		U.y_wait(store, fts(5))
 
 		this.health_bar.hidden = nil
-
 		this.health.ignore_damage = nil
 
 		U.y_animation_wait(this)

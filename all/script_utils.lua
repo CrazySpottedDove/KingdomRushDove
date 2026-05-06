@@ -916,7 +916,6 @@ function SU.y_hero_new_rally(store, this)
 			this.vis.bans = F_ALL
 			this.health.ignore_damage = true
 			this.health_bar.hidden = true
-
 			S:queue(tp.sound)
 
 			if tp.fx_out then
@@ -973,7 +972,6 @@ function SU.y_hero_new_rally(store, this)
 			this.vis.bans = F_ALL
 			this.health.ignore_damage = true
 			this.health_bar.hidden = true
-
 			local prev_scale, prev_color
 
 			if tr.scale then
@@ -1367,7 +1365,6 @@ function SU.y_soldier_revive(store, this)
 		this.health.ignore_damage = true
 		this.health.dead = false
 		this.health_bar.hidden = false
-
 		if this.soldier.target_id then
 			local enemy = store.entities[this.soldier.target_id]
 
@@ -3254,7 +3251,7 @@ function SU.enemy_cliff_change(store, this)
 				end
 			end
 
-			this.health_bar.z = Z_BACKGROUND_BETWEEN + 1
+			U.change_health_bar_z_run_time(this.health_bar, Z_BACKGROUND_BETWEEN + 1)
 		elseif c.last_terrain_type == TERRAIN_CLIFF and terrain_type == TERRAIN_LAND then
 			this.vis.flags = band(this.vis.flags, bnot(F_CLIFF))
 			this.vis.bans = c._orig_vis_bans
@@ -3277,7 +3274,7 @@ function SU.enemy_cliff_change(store, this)
 				end
 			end
 
-			this.health_bar.z = Z_OBJECTS
+			U.change_health_bar_z_run_time(this.health_bar, Z_OBJECTS)
 		end
 
 		c.last_terrain_type = terrain_type

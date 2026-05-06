@@ -7130,7 +7130,6 @@ function scripts.soldier_tower_demon_pit.update(this, store)
 	end
 
 	this.health_bar.hidden = true
-
 	U.y_animation_play(this, "landing", nil, store.tick_ts, 1)
 
 	if not this.health.dead then
@@ -7325,7 +7324,6 @@ function scripts.big_guy_tower_demon_pit.update(this, store)
 	end
 
 	this.health_bar.hidden = true
-
 	U.y_animation_play(this, "landing", nil, store.tick_ts, 1)
 
 	if not this.health.dead then
@@ -10016,7 +10014,6 @@ function scripts.soldier_tower_pandas.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
 
 		if not this.health.dead then
@@ -13821,11 +13818,11 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 		if this.current_mode == MODE_GROUND then
 			local new_height = U.ease_value(this.health_bar.offset.y, this.health_bar.y_offset, store.tick_length * 10, "linear")
 
-			this.health_bar.offset.y = new_height
+			U.change_health_bar_offset_run_time(this.health_bar, new_height)
 		else
 			local new_height = U.ease_value(this.health_bar.offset.y, this.flight_height + this.health_bar.y_offset, store.tick_length * 10, "linear")
 
-			this.health_bar.offset.y = new_height
+			U.change_health_bar_offset_run_time(this.health_bar, new_height)
 		end
 	end
 
@@ -19876,7 +19873,7 @@ function scripts.tower_paladin_covenant.soldier_insert(this, store)
 					this.render.sprites[1].prefix = p.sprite_prefix
 					this.soldier.is_captain = true
 					this.health_bar.type = p.health_bar_size
-					this.health_bar.offset.y = this.health_bar.offset.y + 2
+					U.change_health_bar_offset_run_time(this.health_bar, this.health_bar.offset.y + 2)
 					this.soldier.is_captain = true
 					this.info.portrait = p.portrait
 					a_l.disabled = nil
@@ -19946,7 +19943,7 @@ function scripts.tower_paladin_covenant.soldier_update(this, store)
 					this.melee.attacks[2].hit_time = p.hit_time
 					this.render.sprites[1].prefix = p.sprite_prefix
 					this.soldier.is_captain = true
-					this.health_bar.offset.y = this.health_bar.offset.y + 2
+					U.change_health_bar_offset_run_time(this.health_bar, this.health_bar.offset.y + 2)
 					this.info.portrait = p.portrait
 					this.health_bar.type = p.health_bar_size
 
@@ -20990,7 +20987,6 @@ function scripts.soldier_priests_barrack.update(this, store)
 
 	if this.render.sprites[1].name == "raise" then
 		this.health_bar.hidden = true
-
 		U.animation_start(this, "raise", nil, store.tick_ts, 1)
 
 		while not U.animation_finished(this) and not this.health.dead do
@@ -21258,7 +21254,6 @@ function scripts.soldier_abomination_priests_barrack.update(this, store)
 
 	if this.render.sprites[1].name == "raise" then
 		this.health_bar.hidden = true
-
 		U.animation_start(this, "raise", nil, store.tick_ts, 1)
 
 		while not U.animation_finished(this) and not this.health.dead do
@@ -23199,7 +23194,6 @@ function scripts.soldier_rotten_forest_tree.update(this, store)
 	end
 
 	this.health_bar.hidden = true
-
 	U.y_animation_play(this, "spawn", nil, store.tick_ts, 1)
 
 	if not this.health.dead then

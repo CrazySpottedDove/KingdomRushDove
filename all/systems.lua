@@ -934,17 +934,16 @@ function sys.render:on_insert(entity, store)
 			r = 0,
 			alpha = 255,
 			anchor = V.vv(0),
-			offset = V.v(hb.offset.x, hb.offset.y),
+			offset = V.v(hb.offset.x - hbsize.x * 0.5, hb.offset.y),
 			_draw_order = (hb.draw_order and 100000 * hb.draw_order + 1 or 200002) + entity.id,
 			z = Z_OBJECTS,
 			sort_y_offset = hb.sort_y_offset,
 			ss = self._hb_ss,
 			color = hb.colors and hb.colors.bg or self._hb_colors.bg,
 			bar_width = hbsize.x,
-			scale = V.v(hbsize.x, hbsize.y)
+			scale = V.v(hbsize.x, hbsize.y),
+			hidden = true
 		}
-
-		fb.offset.x = fb.offset.x - hbsize.x * fb.ss.ref_scale * 0.5
 
 		local ff = {
 			flip_x = false,
@@ -952,17 +951,16 @@ function sys.render:on_insert(entity, store)
 			r = 0,
 			alpha = 255,
 			anchor = V.vv(0),
-			offset = V.v(hb.offset.x, hb.offset.y),
+			offset = V.v(hb.offset.x - hbsize.x * 0.5, hb.offset.y),
 			_draw_order = (hb.draw_order and 100000 * hb.draw_order + 2 or 200003) + entity.id,
 			z = Z_OBJECTS,
 			sort_y_offset = hb.sort_y_offset,
 			ss = self._hb_ss,
 			color = hb.colors and hb.colors.fg or self._hb_colors.fg,
 			bar_width = hbsize.x,
-			scale = V.v(hbsize.x, hbsize.y)
+			scale = V.v(hbsize.x, hbsize.y),
+			hidden = true
 		}
-
-		ff.offset.x = ff.offset.x - hbsize.x * ff.ss.ref_scale * 0.5
 
 		for i = #hb.frames, 1, -1 do
 			hb.frames[i].marked_to_remove = true
@@ -987,7 +985,8 @@ function sys.render:on_insert(entity, store)
 				ss = self._hb_ss,
 				color = hb.colors and hb.colors.black or self._hb_colors.black,
 				bar_width = hbsize.x,
-				scale = V.v(hbsize.x, hbsize.y)
+				scale = V.v(hbsize.x, hbsize.y),
+				hidden = true
 			}
 
 			hb.frames[3] = fk
@@ -1126,13 +1125,14 @@ function sys.render:on_render_update(dt, ts, store)
 			end
 		end
 
+		perf.start("health_bar")
 		if e.health_bar and show_health_bar then
 			local hb = e.health_bar
 			local fb = hb.frames[1]
 			local ff = hb.frames[2]
 			local fk = hb.black_bar_hp and hb.frames[3] or nil
 
-			if hb.hidden or e.health.hp == e.health.hp_max then
+			if e.health.hp == e.health.hp_max or hb.hidden then
 				fb.hidden = true
 				ff.hidden = true
 
@@ -1141,23 +1141,17 @@ function sys.render:on_render_update(dt, ts, store)
 				end
 			else
 				-- draw_order 属性在 insert 时即计算，我们要求后续永远不要出现操作 draw_order 的行为
+				-- offset 的更新使用 U.change_health_bar_offset_run_time
+				-- z 的更新使用 U.change_health_bar_z_run_time
+				-- sort_y_offset 的更新使用 U.change_health_bar_sort_y_offset_run_time
 				fb.hidden = false
 				ff.hidden = false
-				fb.pos.x, fb.pos.y = floor(e.pos.x), ceil(e.pos.y)
+				fb.pos.x, fb.pos.y = e.pos.x, e.pos.y
 				ff.pos.x, ff.pos.y = fb.pos.x, fb.pos.y
-				fb.offset.x, fb.offset.y = hb.offset.x - fb.bar_width * fb.ss.ref_scale * 0.5, hb.offset.y
-				ff.offset.x, ff.offset.y = hb.offset.x - ff.bar_width * ff.ss.ref_scale * 0.5, hb.offset.y
-				fb.z = hb.z or Z_OBJECTS
-				ff.z = fb.z
-				fb.sort_y_offset = hb.sort_y_offset
-				ff.sort_y_offset = hb.sort_y_offset
 
 				if fk then
 					fk.hidden = false
-					fk.pos.x, fk.pos.y = floor(e.pos.x), floor(e.pos.y)
-					fk.offset.x, fk.offset.y = hb.offset.x - fk.bar_width * fk.ss.ref_scale * 0.5, hb.offset.y
-					fk.z = hb.z or Z_OBJECTS
-					fk.sort_y_offset = hb.sort_y_offset
+					fk.pos.x, fk.pos.y = e.pos.x, e.pos.y
 					ff.scale.x = e.health.hp / hb.black_bar_hp * ff.bar_width
 					fb.scale.x = e.health.hp_max / hb.black_bar_hp * fb.bar_width
 				else
@@ -1171,6 +1165,7 @@ function sys.render:on_render_update(dt, ts, store)
 				end
 			end
 		end
+		perf.stop("health_bar")
 	end
 
 	-- FFI同步

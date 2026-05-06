@@ -1995,7 +1995,7 @@ function scripts.enemy_demon_gulaemon.update(this, store)
 	end
 
 	local function patch_offsets(factor)
-		this.health_bar.offset.y = this.health_bar.offset.y + factor * a.off_health_bar_y
+		U.change_health_bar_offset_run_time(this.health_bar, this.health_bar.offset.y + factor * a.off_health_bar_y)
 		this.ui.click_rect.pos.y = this.ui.click_rect.pos.y + factor * a.off_click_rect_y
 		this.unit.mod_offset.y = this.unit.mod_offset.y + factor * a.off_mod_offset_y
 		this.unit.hit_offset.y = this.unit.hit_offset.y + factor * a.off_hit_offset_y
@@ -2016,7 +2016,6 @@ function scripts.enemy_demon_gulaemon.update(this, store)
 			if ready_to_land() and not this.health.dead then
 				this._should_land = nil
 				this.health_bar.hidden = true
-
 				local an, af = U.animation_name_facing_point(this, "land", this.motion.dest)
 
 				U.animation_start(this, an, af, store.tick_ts)
@@ -2058,13 +2057,11 @@ function scripts.enemy_demon_gulaemon.update(this, store)
 						this.vis.flags = U.flag_set(this.vis.flags, a.flags_air)
 						this.unit.disintegrate_fx = "fx_enemy_desintegrate_air"
 						this.health_bar.hidden = true
-
 						local an, af = U.animation_name_facing_point(this, "takeoff", this.motion.dest)
 
 						U.y_animation_play(this, an, af, store.tick_ts)
 
 						this.health_bar.hidden = nil
-
 						local m = E:create_entity(a.mod)
 
 						m.modifier.source_id = this.id
@@ -5222,7 +5219,6 @@ function scripts.enemy_cannibal.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
 
 		if not this.health.dead then
@@ -5980,7 +5976,6 @@ function scripts.enemy_darter.update(this, store)
 				this.vis.bans = bor(F_ALL)
 				this.render.sprites[1].hidden = true
 				this.health_bar.hidden = true
-
 				SU.hide_modifiers(store, this, true)
 				SU.hide_auras(store, this, true)
 				S:queue(this.sound_events.blink)
@@ -6872,7 +6867,6 @@ function scripts.enemy_headless_horseman.update(this, store)
 
 	this.vis.bans = bans
 	this.health_bar.hidden = nil
-
 	::label_62_0::
 
 	while true do
@@ -11369,19 +11363,16 @@ function scripts.soldier_druid_bear.update(this, store)
 	end
 
 	this.health_bar.hidden = true
-
 	do_effects(true)
 	U.y_animation_play(this, "spawn", nil, store.tick_ts)
 
 	this.health_bar.hidden = nil
-
 	while true do
 		if this.health.dead then
 			do_effects(false)
 			SU.y_soldier_death(store, this)
 
 			this.health_bar.hidden = true
-
 			return
 		end
 
@@ -11788,7 +11779,6 @@ function scripts.hero_baby_malik.update(this, store)
 	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 
 	this.health_bar.hidden = false
-
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -13600,7 +13590,6 @@ function scripts.enemy_mantaray.update(this, store)
 	if this.render.sprites[1].name == "raise" then
 		this.render.sprites[2].hidden = true
 		this.health_bar.hidden = true
-
 		local af = this.motion.forced_waypoint and this.motion.forced_waypoint.x < this.pos.x
 
 		U.animation_start(this, "raise", af, store.tick_ts, true)
@@ -17647,7 +17636,7 @@ function scripts.mod_twilight_heretic_consume.remove(this, store)
 
 	if target then
 		target.render.sprites[1].angles.walk = this._angles_walk
-		target.health_bar.offset.y = this._health_bar_offset_y
+		U.change_health_bar_offset_run_time(target.health_bar, this._health_bar_offset_y)
 
 		U.speed_div(target, this.speed_factor)
 
@@ -17689,7 +17678,7 @@ function scripts.mod_twilight_heretic_consume.update(this, store)
 		end
 
 		this.render.sprites[1].offset.y = oy
-		target.health_bar.offset.y = hboy + hoy
+		U.change_health_bar_offset_run_time(target.health_bar, hboy + hoy)
 
 		coroutine.yield()
 	end
@@ -24412,7 +24401,6 @@ function scripts.soldier_earth_elemental.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
 
 		if not this.health.dead then
@@ -29456,7 +29444,6 @@ function scripts.soldier_stage_10_ymca.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
 
 		if not this.health.dead then
@@ -34325,7 +34312,6 @@ function scripts.enemy_hyena5.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
 
 		if not this.health.dead then
@@ -34578,7 +34564,6 @@ function scripts.enemy_acolyte_tentacle.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -34811,7 +34796,6 @@ function scripts.enemy_lesser_sister_nightmare.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -34994,7 +34978,6 @@ function scripts.enemy_small_stalker.update(this, store)
 				this.pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, ni)
 				this.nav_path.ni = ni
 				this.health_bar.hidden = false
-
 				U.animation_start(this, "teleport_out", nil, store.tick_ts, false)
 
 				animation = "teleport_out"
@@ -35567,7 +35550,6 @@ function scripts.enemy_crystal_golem.update(this, store)
 		this.ui.can_click = false
 		this.health._hp_max = this.health.hp_max
 		this.health_bar.hidden = true
-
 		U.animation_start(this, "holder", nil, store.tick_ts)
 
 		while true do
@@ -35601,7 +35583,6 @@ function scripts.enemy_crystal_golem.update(this, store)
 				this.vis.bans = this.vis._bans
 				this.ui.can_click = true
 				this.health_bar.hidden = false
-
 				break
 			end
 
@@ -36614,7 +36595,6 @@ function scripts.enemy_specter.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -37647,7 +37627,6 @@ function scripts.enemy_crocs_basic_egg.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -37790,7 +37769,6 @@ function scripts.enemy_crocs_basic.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -40942,7 +40920,6 @@ function scripts.stage20_arborean_house.update(this, store)
 		destroy_house()
 
 		this.health_bar.hidden = true
-
 		return
 	end
 
@@ -46932,7 +46909,6 @@ function scripts.enemy_darksteel_guardian.update(this, store)
 		this.health._immune_to = this.health.immune_to
 		this.health.immune_to = DAMAGE_ALL
 		this.health_bar.hidden = true
-
 		U.animation_start(this, "idle_1", nil, store.tick_ts)
 
 		while not this.wake_up do
@@ -47154,7 +47130,6 @@ function scripts.enemy_darksteel_anvil.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -48857,7 +48832,6 @@ function scripts.enemy_cultbrood.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, "raise_in", af, store.tick_ts, 1)
@@ -49389,7 +49363,6 @@ function scripts.enemy_fire_fox.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -49468,7 +49441,6 @@ function scripts.enemy_nine_tailed_fox.update(this, store)
 	if this.spawned_from_summon then
 		a_tp.ts = store.tick_ts
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "summon", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -49550,7 +49522,6 @@ function scripts.enemy_nine_tailed_fox.update(this, store)
 				queue_remove(store, tp_trail)
 			else
 				this.health_bar.hidden = true
-
 				if SU.y_enemy_animation_wait(this, 1, 1) then
 					queue_remove(store, tp_trail)
 				else
@@ -49945,7 +49916,6 @@ function scripts.enemy_water_spirit.update(this, store)
 		queue_insert(store, ps_swim)
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "awahead", this.motion.dest)
 		local offsetDistSpawn = 700
 
@@ -50039,7 +50009,6 @@ function scripts.enemy_water_spirit.update(this, store)
 	end
 
 	this.health_bar.hidden = false
-
 	::label_271_0::
 
 	while true do
@@ -50136,7 +50105,6 @@ function scripts.enemy_storm_elemental.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -50496,7 +50464,6 @@ function scripts.enemy_water_sorceress.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -50899,7 +50866,6 @@ function scripts.enemy_wuxian.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -51293,7 +51259,6 @@ function scripts.enemy_qiongqi.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -51728,7 +51693,6 @@ function scripts.enemy_fan_guard.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -51941,7 +51905,6 @@ function scripts.enemy_terracota.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -52130,7 +52093,6 @@ function scripts.enemy_golden_eyed.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -52201,7 +52163,6 @@ function scripts.enemy_golden_eyed.update(this, store)
 		U.animation_start(this, an, af, store.tick_ts, true)
 
 		this.health_bar.hidden = true
-
 		local jump_force = 400
 
 		if this.nav_path.pi == 5 then
@@ -52457,7 +52418,6 @@ function scripts.enemy_doom_bringer.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -52659,7 +52619,6 @@ function scripts.enemy_hellfire_warlock.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -57038,7 +56997,6 @@ function scripts.decal_boss_princess_iron_fan_bossfight_shield.update(this, stor
 	this.tween.ts = store.tick_ts
 	this.tween.disabled = nil
 	this.health_bar.hidden = false
-
 	while this.health.hp > 0 do
 		coroutine.yield()
 
@@ -57628,7 +57586,6 @@ function scripts.boss_princess_iron_fan.update(this, store)
 	end
 
 	this.health_bar.hidden = true
-
 	if this.template_name == "boss_princess_iron_fan_clone" then
 		is_clone = true
 
@@ -59038,7 +58995,6 @@ function scripts.boss_bull_king.update(this, store)
 	end
 
 	this.health_bar.hidden = true
-
 	local an, af = U.animation_name_facing_point(this, "spawn_out", this.motion.dest)
 
 	U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -59991,7 +59947,6 @@ function scripts.soldier_stage_35_cannonball.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
 
 		if not this.health.dead then
@@ -67707,7 +67662,6 @@ function scripts.enemy_basic_lava.update(this, store, script)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -67868,7 +67822,6 @@ function scripts.enemy_evolved_lava.update(this, store, script)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -67918,7 +67871,7 @@ function scripts.enemy_evolved_lava.update(this, store, script)
 	local function adjust_flight_settings()
 		this.vis.flags = U.flag_clear(this.vis.flags, F_FLYING)
 		this.vis.bans = U.flag_clear(this.vis.bans, F_BLOCK)
-		this.health_bar.offset.y = this.health_bar.offset.y - this.flight_height
+		U.change_health_bar_offset_run_time(this.health_bar, this.health_bar.offset.y - this.flight_height)
 		this.unit.hit_offset.y = this.unit.hit_offset.y - this.flight_height
 		this.unit.mod_offset.y = this.unit.mod_offset.y - this.flight_height
 		this.ui.click_rect.pos.y = this.ui.click_rect.pos.y - this.flight_height
@@ -67938,7 +67891,6 @@ function scripts.enemy_evolved_lava.update(this, store, script)
 
 	local function take_off(store, this)
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "idle", this.motion.dest)
 		local af = this.motion and this.motion.dest.x < this.pos.x or nil
 
@@ -68104,7 +68056,6 @@ function scripts.enemy_alfa_lava.update(this, store, script)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -68653,7 +68604,6 @@ function scripts.enemy_basic_acid.update(this, store, script)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -68902,7 +68852,6 @@ function scripts.enemy_evolved_acid.update(this, store, script)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -69376,7 +69325,6 @@ function scripts.enemy_alfa_acid.update(this, store, script)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -70118,7 +70066,6 @@ function scripts.enemy_basic_shadow.update(this, store, script)
 				this.pushed_bans = U.push_bans(this.vis, F_ALL)
 				this.health.ignore_damage = true
 				this.health_bar.hidden = true
-
 				local decal = E:create_entity(this.evolve_decal)
 
 				decal.pos = V.vclone(this.pos)
@@ -70179,7 +70126,6 @@ function scripts.enemy_evolved_shadow.update(this, store, script)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -70536,7 +70482,6 @@ function scripts.enemy_alfa_shadow.update(this, store, script)
 		U.speed_div_self(this, evolve_tp.speed_mult)
 		this.render.sprites[1].anchor = old_anchor
 		this.health_bar.hidden = nil
-
 		S:queue("EnemyShadowAlfaEvolveScream")
 		U.animation_start(this, evolve_tp.animation_out, target_pos.x < this.pos.x, store.tick_ts, false, 1, true)
 		U.y_animation_wait(this)
@@ -70589,7 +70534,6 @@ function scripts.enemy_basic_storm.update(this, store, script)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -71192,7 +71136,6 @@ function scripts.enemy_executioner_storm.update(this, store, script)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -71377,7 +71320,6 @@ function scripts.boss_murglum.update(this, store, script)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -72309,7 +72251,6 @@ function scripts.soldier_dragon_warden_warrior.update(this, store, script)
 		end
 
 		this.health_bar.hidden = true
-
 		U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
 
 		if not this.health.dead then

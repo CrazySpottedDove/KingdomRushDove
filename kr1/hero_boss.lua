@@ -872,7 +872,6 @@ a.hit_time = fts(5)
 a.sound = "HeroPaladinDeflect"
 tt.main_script.update = function(this, store)
 	this.health_bar.hidden = false
-
 	local courage = this.timed_attacks.list[1]
 
 	while true do
@@ -1054,7 +1053,6 @@ a = tt.timed_attacks.list[1]
 a.entity = "eb_alleria_wildcat"
 tt.main_script.update = function(this, store)
 	this.health_bar.hidden = false
-
 	local wildcat = this.timed_attacks.list[1]
 	local multishot = this.ranged.attacks[2]
 
@@ -1798,7 +1796,6 @@ tt.main_script.update = function(this, store)
 	end
 
 	this.health_bar.hidden = false
-
 	local aura = E:create_entity(this.particles_aura)
 
 	aura.aura.source_id = this.id
@@ -1867,7 +1864,6 @@ tt.main_script.update = function(this, store)
 				this.vis.bans = F_ALL
 				this.health.ignore_damage = true
 				this.health_bar.hidden = true
-
 				S:queue(tp.sound)
 
 				if tp.fx_out then

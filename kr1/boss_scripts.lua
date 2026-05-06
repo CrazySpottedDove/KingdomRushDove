@@ -1526,7 +1526,6 @@ function scripts.eb_moloch.update(this, store)
 	this.phase = "sitting"
 	this.phase_signal = nil
 	this.health_bar.hidden = true
-
 	while not this.phase_signal do
 		coroutine.yield()
 	end
@@ -2263,7 +2262,6 @@ function scripts.eb_efreeti.update(this, store)
 
 	this.phase = "spawn"
 	this.health_bar.hidden = true
-
 	local an, af = U.animation_name_facing_point(this, "idle", this.motion.dest)
 
 	U.animation_start(this, an, af, store.tick_ts)
@@ -3358,7 +3356,6 @@ scripts.enemy_umbra_piece = {}
 
 function scripts.enemy_umbra_piece.update(this, store)
 	this.health_bar.hidden = true
-
 	U.y_animation_play(this, "fall", nil, store.tick_ts, 1)
 	U.y_wait(store, this.piece_respawn_delay)
 	S:queue(this.sound_events.raise)
@@ -3366,7 +3363,6 @@ function scripts.enemy_umbra_piece.update(this, store)
 
 	this.vis.bans = this.vis.bans_walking
 	this.health_bar.hidden = false
-
 	::label_263_0::
 
 	this.call_back = false
@@ -3672,7 +3668,6 @@ function scripts.eb_leviathan.update(this, store)
 	U.sprites_hide(this)
 
 	this.health_bar.hidden = true
-
 	local fx = E:create_entity("fx_leviathan_incoming")
 
 	fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
@@ -3884,7 +3879,6 @@ function scripts.eb_dracula.update(this, store)
 			if this.phase == "fight" then
 				this.nav_path.pi = 3
 				this.health_bar.hidden = true
-
 				local _vis_bans = this.vis.bans
 
 				this.vis.bans = bor(this.vis.bans, F_ALL)
@@ -4431,12 +4425,10 @@ function scripts.eb_gnoll.update(this, store)
 
 	this.phase = "intro"
 	this.health_bar.hidden = true
-
 	y_do_howl()
 
 	this.phase = "loop"
 	this.health_bar.hidden = nil
-
 	::label_321_0::
 
 	while true do
@@ -4997,12 +4989,10 @@ function scripts.eb_drow_queen.update(this, store)
 				this.ui.can_select = true
 				this.phase = "fighting"
 				this.health_bar.hidden = nil
-
 				y_fight()
 
 				this.health.hp = this.hp_threshold
 				this.health_bar.hidden = true
-
 				if this.health.hp > 0 then
 					this.megaspawner.manual_wave = "BOSSRETURN0"
 					this.health.dead = false
@@ -5062,7 +5052,6 @@ function scripts.decal_drow_queen_shield.update(this, store)
 		this.tween.ts = store.tick_ts
 		this.tween.disabled = nil
 		this.health_bar.hidden = false
-
 		while this.health.hp > 0 do
 			coroutine.yield()
 
@@ -5216,7 +5205,6 @@ function scripts.eb_spider.update(this, store)
 
 	local function y_death()
 		this.health_bar.hidden = true
-
 		S:queue(this.sound_events.death)
 		U.y_animation_play(this, "death_first_start", nil, store.tick_ts)
 		SU.y_show_taunt_set(store, this.taunts, "death", 1, this.pos, 2, false)
@@ -7211,7 +7199,6 @@ function scripts.boss_cult_leader.update(this, store)
 				this.ui.can_click = false
 				this.ui.can_select = false
 				this.health_bar.hidden = true
-
 				SU.remove_modifiers(store, this)
 
 				this.unit.marker_hidden = true
@@ -9576,7 +9563,6 @@ function scripts.boss_crocs.update(this, store)
 
 		this.render.sprites[1].flip_x = true
 		this.health_bar.hidden = true
-
 		U.animation_start(this, "fall", nil, store.tick_ts, 1)
 		U.y_wait(store, fts(20))
 
@@ -10788,7 +10774,6 @@ function scripts.boss_pig.update(this, store)
 	this.phase = "intro"
 	this.health_bar.hidden = true
 	this.health_bar.hidden = nil
-
 	for _, value in pairs(this.render.sprites) do
 		value.hidden = true
 	end
@@ -10830,7 +10815,6 @@ function scripts.boss_pig.update(this, store)
 			if ready_to_jump() then
 				this.ui.can_select = false
 				this.health_bar.hidden = true
-
 				y_fly(reach_positions[jump_id], 300, reach_path_id[jump_id])
 
 				jump_id = jump_id + 1
@@ -11716,7 +11700,6 @@ function scripts.boss_spider_queen.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -11898,7 +11881,6 @@ function scripts.boss_spider_queen.update(this, store)
 			if ready_to_jump() then
 				this.ui.can_select = false
 				this.health_bar.hidden = true
-
 				local dest = P:node_pos(this.jump_paths[jump_id], 1, this.jump_nodes[jump_id])
 
 				y_fly(dest, 300, this.jump_paths[jump_id])
@@ -12879,7 +12861,6 @@ function scripts.boss_redboy_teen.update(this, store)
 		end
 
 		this.health_bar.hidden = true
-
 		local an, af = U.animation_name_facing_point(this, "spawn", this.motion.dest)
 
 		U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -13410,7 +13391,6 @@ function scripts.boss_redboy_teen.update(this, store)
 			if ready_to_jump() then
 				this.ui.can_select = false
 				this.health_bar.hidden = true
-
 				local dragon_controller
 
 				for k, v in pairs(store.entities) do

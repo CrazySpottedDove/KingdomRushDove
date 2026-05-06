@@ -111,3 +111,4 @@ server  ssh://dove@10.112.99.5:60001/srv/git/KingdomRushDove.git (push)
 - 为了提高加载效率，游戏在运行时只加载 `game_animations.luac`。如果对 `game_animations.lua` 进行了修改，请使用 `make compile_animations` 编译它。
 - 同理，图集定义文件也需经过 `make compile_atlas` 编译，才能正常被使用。
 - `main_script` 的 queue 和 dequeue 方法被禁用，统一在 insert, remove 中实现。
+- 运行时（实体已在store中时）修改 health_bar 的 offset，需调用 `U.change_health_bar_offset_run_time(health_bar, offset_y)` 方法。修改 z，需调用`U.change_health_bar_z_run_time(health_bar, z)`。修改 sort_y_offset, 需调用 `U.change_health_bar_sort_y_offset_run_time(health_bar, sort_y_offset)`

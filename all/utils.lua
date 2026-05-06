@@ -3139,4 +3139,28 @@ function U.overwrite_main_script(entity, new_script, on_new_script_return)
 	return true
 end
 
+--- 运行时修改 health_bar 时请调用本函数，避免修改不生效
+---@param health_bar table
+---@param y number
+function U.change_health_bar_offset_run_time(health_bar, y)
+	health_bar.offset.y = y
+	for i = 1, #health_bar.frames do
+		health_bar.frames[i].offset.y = y
+	end
+end
+
+function U.change_health_bar_z_run_time(health_bar, z)
+	health_bar.z = z
+	for i = 1, #health_bar.frames do
+		health_bar.frames[i].z = z
+	end
+end
+
+function U.change_health_bar_sort_y_offset_run_time(health_bar, sort_y_offset)
+	health_bar.sort_y_offset = sort_y_offset
+	for i = 1, #health_bar.frames do
+		health_bar.frames[i].sort_y_offset = sort_y_offset
+	end
+end
+
 return U
