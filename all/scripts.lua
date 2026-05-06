@@ -1867,7 +1867,7 @@ function scripts.tower_barrack.insert(this, store)
 end
 
 function scripts.tower_barrack.remove(this, store)
-	for _, s in pairs(this.barrack.soldiers) do
+	for _, s in ipairs(this.barrack.soldiers) do
 		if s.health then
 			s.health.dead = true
 		end
@@ -1890,7 +1890,7 @@ function scripts.tower_barrack.update(this, store)
 				if p.changed then
 					p.changed = nil
 
-					for _, s in pairs(b.soldiers) do
+					for _, s in ipairs(b.soldiers) do
 						s.powers[pn].level = p.level
 						s.powers[pn].changed = true
 					end
@@ -1999,7 +1999,7 @@ function scripts.tower_barrack_mercenaries.update(this, store)
 				if p.changed then
 					p.changed = nil
 
-					for _, s in pairs(b.soldiers) do
+					for _, s in ipairs(b.soldiers) do
 						s.powers[pn].level = p.level
 						s.powers[pn].changed = true
 					end

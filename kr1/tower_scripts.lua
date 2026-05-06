@@ -5602,7 +5602,7 @@ function scripts.tower_baby_ashbite.update(this, store)
 				if p.changed then
 					p.changed = nil
 
-					for _, s in pairs(b.soldiers) do
+					for _, s in ipairs(b.soldiers) do
 						s.powers[pn].level = p.level
 						s.powers[pn].changed = true
 					end
@@ -8960,7 +8960,7 @@ function scripts.tower_pandas.update(this, store)
 			local sounds = {}
 			local all_dead = true
 
-			for i, s in pairs(b.soldiers) do
+			for i, s in ipairs(b.soldiers) do
 				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, 3, formation_offset)
 				s.nav_rally.new = true
 
@@ -8986,7 +8986,7 @@ function scripts.tower_pandas.update(this, store)
 			if p.changed then
 				p.changed = nil
 
-				for _, s in pairs(b.soldiers) do
+				for _, s in ipairs(b.soldiers) do
 					if s.powers[pn] == nil then
 					-- block empty
 					else
@@ -9094,7 +9094,7 @@ function scripts.tower_pandas.update(this, store)
 	for i = 1, #this.pandas do
 		local panda = this.pandas[i]
 
-		for _, soldier in pairs(b.soldiers) do
+		for _, soldier in ipairs(b.soldiers) do
 			if panda.soldier_type == soldier.template_name then
 				panda.status = "on_floor"
 				this.render.sprites[panda.render].hidden = true
@@ -9103,7 +9103,7 @@ function scripts.tower_pandas.update(this, store)
 		end
 	end
 
-	for i, soldier in pairs(this.barrack.soldiers) do
+	for i, soldier in ipairs(this.barrack.soldiers) do
 		soldier.bullet_arrived = true
 		soldier.do_level_up_smoke = true
 	end
@@ -9301,7 +9301,7 @@ function scripts.tower_pandas.update(this, store)
 		end
 
 		if store.tick_ts < a2.force_retreat_until_ts and store.tick_ts > a2.next_force_retreat_kill and #b.soldiers > 0 then
-			for _, soldier in pairs(b.soldiers) do
+			for _, soldier in ipairs(b.soldiers) do
 				if soldier.health.hp > 0 then
 					soldier.health.hp = 0
 
@@ -16393,7 +16393,7 @@ function scripts.tower_paladin_rider.update(this, store)
 				if p.changed then
 					p.changed = nil
 
-					for _, s in pairs(b.soldiers) do
+					for _, s in ipairs(b.soldiers) do
 						s.powers[pn].level = p.level
 						s.powers[pn].changed = true
 					end
@@ -18999,7 +18999,7 @@ function scripts.tower_dwarf.update(this, store)
 		end
 		if pow_i.changed then
 			pow_i.changed = nil
-			for _, s in pairs(b.soldiers) do
+			for _, s in ipairs(b.soldiers) do
 				s.powers.incendiary_ammo.level = pow_i.level
 				s.powers.incendiary_ammo.changed = true
 			end
@@ -19340,7 +19340,7 @@ function scripts.tower_ghost.update(this, store)
 		if sa.changed or this.tower_upgrade_persistent_data.swaped then
 			sa.changed = nil
 
-			for _, s in pairs(b.soldiers) do
+			for _, s in ipairs(b.soldiers) do
 				s.powers.soul_attack.level = sa.level
 				s.powers.soul_attack.changed = true
 			end
@@ -19349,7 +19349,7 @@ function scripts.tower_ghost.update(this, store)
 		if ed.changed or this.tower_upgrade_persistent_data.swaped then
 			ed.changed = nil
 
-			for _, s in pairs(b.soldiers) do
+			for _, s in ipairs(b.soldiers) do
 				s.powers.extra_damage.level = ed.level
 				s.powers.extra_damage.changed = true
 			end

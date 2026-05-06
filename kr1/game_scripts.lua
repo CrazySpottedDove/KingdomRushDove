@@ -10732,7 +10732,7 @@ function scripts.druid_shooter_nature.update(this, store)
 			if soldier_added then
 				soldier_added = false
 
-				for _, s in pairs(b.soldiers) do
+				for _, s in ipairs(b.soldiers) do
 					s.nav_rally.new = true
 				end
 			end
@@ -10745,7 +10745,7 @@ function scripts.druid_shooter_nature.update(this, store)
 
 				local all_dead = true
 
-				for i, s in pairs(b.soldiers) do
+				for i, s in ipairs(b.soldiers) do
 					local s = b.soldiers[i]
 
 					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, formation_offset)
@@ -41484,7 +41484,7 @@ function scripts.tower_stage_18_elven_barrack.update(this, store)
 end
 
 function scripts.tower_stage_18_elven_barrack.remove(this, store)
-	for _, s in pairs(this.barrack.soldiers) do
+	for _, s in ipairs(this.barrack.soldiers) do
 		if s.health then
 			s.health.hp = 0
 			s.health.dead = true
@@ -63411,7 +63411,7 @@ function scripts.stage_37_barrack_dragon_wardens.update(this, store, script)
 				if p.changed then
 					p.changed = nil
 
-					for _, s in pairs(b.soldiers) do
+					for _, s in ipairs(b.soldiers) do
 						s.powers[pn].level = p.level
 						s.powers[pn].changed = true
 					end
