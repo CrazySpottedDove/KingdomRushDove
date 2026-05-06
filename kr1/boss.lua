@@ -2537,6 +2537,7 @@ tt.taunts.sets.prebattle = CC("taunt_set")
 tt.taunts.sets.prebattle.format = "BOSS_BRAM_TAUNT_PREBATTLE_%04d"
 tt.taunts.sets.prebattle.end_idx = 3
 --#endregion
+
 --#region mod_bram_slap
 tt = RT("mod_bram_slap", "modifier")
 tt.main_script.insert = scripts.mod_bram_slap.insert
@@ -2544,11 +2545,10 @@ tt.main_script.update = scripts.mod_bram_slap.update
 tt.custom_anchors = {}
 tt.custom_anchors.default = vec_2(0.5, 0.45)
 --#endregion
+
 --#region eb_bajnimen
 tt = RT("eb_bajnimen", "boss")
-
 AC(tt, "melee", "ranged", "timed_attacks")
-
 tt.enemy.gold = 250
 tt.enemy.lives_cost = 20
 tt.enemy.melee_slot = vec_2(60, 0)

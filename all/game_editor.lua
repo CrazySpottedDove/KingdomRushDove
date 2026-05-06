@@ -618,6 +618,7 @@ function editor:load_level(idx, mode, recover)
 	self.undo_stack = {}
 	self.undo_active = false
 	self.store = {}
+	self.store.config = storage:load_config()
 
 	local systems = self.simulation_systems
 

@@ -925,7 +925,7 @@ function sys.render:on_insert(entity, store)
 		end
 	end
 
-	if entity.health_bar and store.config and store.config.show_health_bar then
+	if entity.health_bar and store.config.show_health_bar then
 		local hb = entity.health_bar
 		local hbsize = self._hb_sizes[hb.type]
 		local fb = {
@@ -1009,7 +1009,7 @@ function sys.render:on_remove(entity, store)
 		end
 	end
 
-	if store.config and store.config.show_health_bar and entity.health_bar then
+	if store.config.show_health_bar and entity.health_bar then
 		for i = #entity.health_bar.frames, 1, -1 do
 			local f = entity.health_bar.frames[i]
 
@@ -1025,7 +1025,7 @@ function sys.render:on_render_update(dt, ts, store)
 	perf.start("render")
 	local d = store
 	local entities = d.entities_with_render
-	local show_health_bar = store.config and store.config.show_health_bar
+	local show_health_bar = store.config.show_health_bar
 
 	for _, e in pairs(entities) do
 		local sprites = e.render.sprites
