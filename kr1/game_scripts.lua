@@ -72322,7 +72322,7 @@ function scripts.soldier_dragon_warden_warrior.get_info(this)
 
 	local min, max
 
-	for _, a in pairs(attacks) do
+	for _, a in ipairs(attacks) do
 		if a.damage_min then
 			min, max = a.damage_min * #a.hit_times, a.damage_max * #a.hit_times
 

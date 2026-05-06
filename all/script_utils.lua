@@ -4471,7 +4471,7 @@ end
 
 function SU.towers_swaped(store, this, attacks)
 	if this.tower_upgrade_persistent_data.swaped then
-		for _, a in pairs(attacks) do
+		for _, a in ipairs(attacks) do
 			a.ts = store.tick_ts
 		end
 

@@ -3109,7 +3109,7 @@ tt.tower.kind = TOWER_KIND_BARRACK
 tt.tower.level = 1
 tt.tower.price = b.price[4]
 tt.tower.menu_offset = v(0, 30)
-tt.info.fn = scripts.tower_ghost.get_info
+tt.info.fn = scripts.tower_barrack.get_info
 tt.info.i18n_key = "TOWER_GHOST_4"
 tt.info.portrait = "kr5_portraits_towers_0016"
 tt.user_selection_func = scripts.tower_ghost.user_selection_func
@@ -3670,7 +3670,7 @@ tt.health.armor = b.armor
 tt.health.hp_max = b.hp_max
 tt.health_bar.offset = v(0, 35)
 tt.health.dead_lifetime = 10
-tt.info.fn = scripts.soldier_priests_barrack.get_info
+tt.info.fn = scripts.soldier_barrack.get_info
 tt.info.damage_icon = b.melee.damage_type == DAMAGE_MAGICAL and "magic" or nil
 -- TODO
 -- tt.info.portrait = "kr5_info_portraits_soldiers_0058"

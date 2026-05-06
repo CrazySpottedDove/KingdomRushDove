@@ -6944,12 +6944,9 @@ function scripts.tower_demon_pit.update(this, store)
 	local ab = a.list[1]
 	local ag = a.list[2]
 	local last_ts = store.tick_ts - ab.cooldown
-	-- local nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
 
 	ab.ts = store.tick_ts - ab.cooldown + a.attack_delay_on_spawn
 
-	-- local nodes_update_ts = store.tick_ts
-	-- local nodes_limit = #nearest_nodes > 5 and 5 or #nearest_nodes
 	local attacks = {ag, ab}
 	local pows = {}
 	local pow_g, pow_m
@@ -6979,12 +6976,6 @@ function scripts.tower_demon_pit.update(this, store)
 		if this.tower.blocked then
 			coroutine.yield()
 		else
-			-- if store.tick_ts - nodes_update_ts > 30 then
-			-- 	nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
-			-- 	nodes_update_ts = store.tick_ts
-			-- 	nodes_limit = #nearest_nodes > 5 and 5 or #nearest_nodes
-			-- end
-
 			if pow_m.changed then
 				pow_m.changed = nil
 			end
@@ -7007,7 +6998,7 @@ function scripts.tower_demon_pit.update(this, store)
 
 			SU.towers_swaped(store, this, this.attacks.list)
 
-			for i, aa in pairs(attacks) do
+			for i, aa in ipairs(attacks) do
 				local pow = pows[i]
 
 				if (not pow or pow.level > 0) and ready_to_attack(aa, store, this.tower.cooldown_factor) then
@@ -7060,9 +7051,6 @@ function scripts.tower_demon_pit.update(this, store)
 
 						if not enemy_pos then
 							enemy_pos = U.get_nearest_valid_rally_pos(tpos(this))
-						-- local idx = random(1, nodes_limit)
-
-						-- enemy_pos = P:node_pos(nearest_nodes[idx][1], nearest_nodes[idx][2], nearest_nodes[idx][3])
 						end
 
 						shoot_bullet(aa, enemy_pos, pow_m)
@@ -8928,7 +8916,7 @@ function scripts.tower_pandas.get_info(this)
 
 	local min, max
 
-	for _, a in pairs(attacks) do
+	for _, a in ipairs(attacks) do
 		if a.damage_min then
 			local damage_factor = this.tower.damage_factor
 			local hit_times_mult = a.hit_times and #a.hit_times or 1
@@ -10504,7 +10492,7 @@ function scripts.tower_ray.update(this, store)
 
 			SU.towers_swaped(store, this, this.attacks.list)
 
-			for i, aa in pairs(attacks) do
+			for i, aa in ipairs(attacks) do
 				if not aa.disabled and ready_to_attack(aa, store, this.tower.cooldown_factor) and store.tick_ts - last_ts > a.min_cooldown * this.tower.cooldown_factor then
 					if aa == as then
 						local enemy, pred_pos = find_target(aa)
@@ -19339,52 +19327,6 @@ end
 -- 幽冥 START
 scripts.tower_ghost = {}
 
-function scripts.tower_ghost.get_info(this)
-	local s = E:create_entity(this.barrack.soldier_type)
-
-	if this.powers then
-		for pn, p in pairs(this.powers) do
-			for i = 1, p.level do
-				SU.soldier_power_upgrade(s, pn)
-			end
-		end
-	end
-
-	local s_info = s.info.fn(s)
-	local attacks
-
-	if s.melee and s.melee.attacks then
-		attacks = s.melee.attacks
-	elseif s.ranged and s.ranged.attacks then
-		attacks = s.ranged.attacks
-	end
-
-	local min, max
-
-	for _, a in pairs(attacks) do
-		if a.damage_min then
-			local damage_factor = this.tower.damage_factor
-
-			min, max = a.damage_min * damage_factor, a.damage_max * damage_factor
-
-			break
-		end
-	end
-
-	if min and max then
-		min, max = math.ceil(min), math.ceil(max)
-	end
-
-	return {
-		type = STATS_TYPE_TOWER_BARRACK,
-		hp_max = s.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		armor = s.health.armor,
-		respawn = s.health.dead_lifetime
-	}
-end
-
 function scripts.tower_ghost.update(this, store)
 	local spawn_time = 0.5
 	local spawn_ts = store.tick_ts
@@ -21050,38 +20992,6 @@ end
 -- 树灵 END
 
 scripts.soldier_priests_barrack = {}
-
-function scripts.soldier_priests_barrack.get_info(this)
-	local attacks = this.ranged.attacks
-	local min, max
-
-	for _, a in pairs(attacks) do
-		if a.damage_min then
-			min, max = a.damage_min, a.damage_max
-
-			break
-		end
-	end
-
-	if this.unit and min then
-		min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
-	end
-
-	if min and max then
-		min, max = math.ceil(min), math.ceil(max)
-	end
-
-	return {
-		type = STATS_TYPE_SOLDIER,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		damage_icon = this.info.damage_icon,
-		armor = this.health.armor,
-		respawn = this.health.dead_lifetime
-	}
-end
 
 function scripts.soldier_priests_barrack.update(this, store)
 	local brk, sta
