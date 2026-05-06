@@ -28585,21 +28585,14 @@ end
 
 scripts.mod_hero_wukong_attacks_combos = {}
 
-function scripts.mod_hero_wukong_attacks_combos.queue(this, store, insertion)
-	if not insertion then
-		return
-	end
-
+function scripts.mod_hero_wukong_attacks_combos.insert(this, store)
 	local source = store.entities[this.modifier.source_id]
 
 	if not source then
-		return
+		return false
 	end
 
 	scripts.hero_wukong.choose_next_random_attack(source)
-end
-
-function scripts.mod_hero_wukong_attacks_combos.insert(this, store)
 	return false
 end
 

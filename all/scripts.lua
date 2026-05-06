@@ -5331,35 +5331,32 @@ end
 
 scripts.mod_mark_flags = {}
 
-function scripts.mod_mark_flags.queue(this, store, insertion)
+function scripts.mod_mark_flags.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		return
+		return false
 	end
 
 	local mf = this.mark_flags
 
-	if insertion then
-		mf._prev_bans = band(target.vis.bans, mf.vis_bans)
-		target.vis.bans = bor(target.vis.bans, mf.vis_bans)
-	elseif mf._prev_bans then
-		target.vis.bans = bor(band(target.vis.bans, bnot(mf.vis_bans)), mf._prev_bans)
-	end
+	U.bans_add(target.vis, mf.vis_bans)
+
+	return true
 end
 
-function scripts.mod_mark_flags.dequeue(this, store, insertion)
+function scripts.mod_mark_flags.remove(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		return
+		return true
 	end
 
 	local mf = this.mark_flags
 
-	if insertion and mf._prev_bans then
-		target.vis.bans = bor(band(target.vis.bans, bnot(mf.vis_bans)), mf._prev_bans)
-	end
+	U.bans_remove(target.vis, mf.vis_bans)
+
+	return true
 end
 
 function scripts.mod_mark_flags.update(this, store)

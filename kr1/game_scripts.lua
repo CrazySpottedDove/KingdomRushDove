@@ -16977,18 +16977,17 @@ end
 
 scripts.mod_bravebark_branchball = {}
 
-function scripts.mod_bravebark_branchball.queue(this, store, insertion)
+function scripts.mod_bravebark_branchball.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		return
+		return false
 	end
 
-	if insertion then
-		target.vis.bans = F_ALL
+	target.vis.bans = F_ALL
 
-		SU.stun_inc(target)
-	end
+	SU.stun_inc(target)
+	return true
 end
 
 function scripts.mod_bravebark_branchball.update(this, store)
@@ -35138,18 +35137,18 @@ end
 
 scripts.mod_enemy_unblinded_abomination_eat = {}
 
-function scripts.mod_enemy_unblinded_abomination_eat.queue(this, store, insertion)
+function scripts.mod_enemy_unblinded_abomination_eat.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		return
+		return false
 	end
 
-	if insertion then
-		target.vis.bans = F_ALL
+	target.vis.bans = F_ALL
 
-		SU.stun_inc(target)
-	end
+	SU.stun_inc(target)
+
+	return true
 end
 
 function scripts.mod_enemy_unblinded_abomination_eat.update(this, store)
@@ -36415,18 +36414,17 @@ end
 
 scripts.mod_enemy_evolving_scourge_eat = {}
 
-function scripts.mod_enemy_evolving_scourge_eat.queue(this, store, insertion)
+function scripts.mod_enemy_evolving_scourge_eat.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		return
+		return false
 	end
 
-	if insertion then
-		target.vis.bans = F_ALL
+	target.vis.bans = F_ALL
 
-		SU.stun_inc(target)
-	end
+	SU.stun_inc(target)
+	return true
 end
 
 function scripts.mod_enemy_evolving_scourge_eat.update(this, store)
@@ -43983,28 +43981,6 @@ function scripts.bullet_stage_25_torso_missile.update(this, store)
 	queue_remove(store, this)
 end
 
-scripts.mod_stage_25_torso_missile_mark = {}
-
-function scripts.mod_stage_25_torso_missile_mark.queue(this, store, insertion)
-	local target = store.entities[this.modifier.target_id]
-
-	if not target or not target.vis then
-		return
-	end
-
-	return scripts.mod_mark_flags.queue(this, store, insertion)
-end
-
-function scripts.mod_stage_25_torso_missile_mark.dequeue(this, store, insertion)
-	local target = store.entities[this.modifier.target_id]
-
-	if not target or not target.vis then
-		return
-	end
-
-	return scripts.mod_mark_flags.dequeue(this, store, insertion)
-end
-
 scripts.mod_stage_25_torso_missile_stun = {}
 
 function scripts.mod_stage_25_torso_missile_stun.update(this, store)
@@ -46645,28 +46621,6 @@ function scripts.bullet_enemy_brute_welder_death.update(this, store)
 	end
 
 	queue_remove(store, this)
-end
-
-scripts.mod_bullet_enemy_brute_welder_death_mark = {}
-
-function scripts.mod_bullet_enemy_brute_welder_death_mark.queue(this, store, insertion)
-	local target = store.entities[this.modifier.target_id]
-
-	if not target or not target.vis then
-		return
-	end
-
-	return scripts.mod_mark_flags.queue(this, store, insertion)
-end
-
-function scripts.mod_bullet_enemy_brute_welder_death_mark.dequeue(this, store, insertion)
-	local target = store.entities[this.modifier.target_id]
-
-	if not target or not target.vis then
-		return
-	end
-
-	return scripts.mod_mark_flags.dequeue(this, store, insertion)
 end
 
 scripts.mod_bullet_enemy_brute_welder_death_stun = {}
@@ -50133,15 +50087,11 @@ end
 
 scripts.mod_gale_warrior_combo_counter = {}
 
-function scripts.mod_gale_warrior_combo_counter.queue(this, store, insertion)
-	if not insertion then
-		return
-	end
-
+function scripts.mod_gale_warrior_combo_counter.insert(this, store)
 	local source = store.entities[this.modifier.source_id]
 
 	if not source then
-		return
+		return false
 	end
 
 	source.combo_attacks_done = source.combo_attacks_done + 1
@@ -50150,28 +50100,23 @@ function scripts.mod_gale_warrior_combo_counter.queue(this, store, insertion)
 		source.melee.attacks[2].disabled = false
 		source.melee.attacks[1].disabled = true
 	end
-end
-
-function scripts.mod_gale_warrior_combo_counter.insert(this, store)
 	return false
 end
 
 scripts.mod_gale_warrior_dot = {}
 
-function scripts.mod_gale_warrior_dot.queue(this, store, insertion)
-	if not insertion then
-		return
-	end
-
+function scripts.mod_gale_warrior_dot.insert(this, store)
 	local source = store.entities[this.modifier.source_id]
 
 	if not source then
-		return
+		return false
 	end
 
 	source.combo_attacks_done = 0
 	source.melee.attacks[2].disabled = true
 	source.melee.attacks[1].disabled = false
+
+	return true
 end
 
 scripts.enemy_storm_elemental = {}
@@ -72614,34 +72559,33 @@ end
 
 scripts.bullet_soldier_dragon_warden_dragon_raider = {}
 
-function scripts.bullet_soldier_dragon_warden_dragon_raider.queue(this, store, insertion)
-	if insertion then
-		local target = store.entities[this.aura.target_id]
+function scripts.bullet_soldier_dragon_warden_dragon_raider.insert(this, store)
 
-		if not target then
-			return false
-		end
+	local target = store.entities[this.aura.target_id]
 
-		this.aura = nil
-
-		local b = this.bullet
-		local offset = V.vclone(this.bullet_start_offset)
-
-		if this.pos.x > target.pos.x then
-			offset.x = -offset.x
-		end
-
-		this.pos.x, this.pos.y = this.pos.x + offset.x, this.pos.y + offset.y
-		b.from = V.vclone(this.pos)
-		b.to = V.vclone(target.pos)
-
-		if target.unit and target.unit.hit_offset then
-			b.to.x, b.to.y = b.to.x + target.unit.hit_offset.x, b.to.y + target.unit.hit_offset.y
-		end
-
-		b.target_id = target.id
-		b.source_id = this.id
+	if not target then
+		return false
 	end
+
+	this.aura = nil
+
+	local b = this.bullet
+	local offset = V.vclone(this.bullet_start_offset)
+
+	if this.pos.x > target.pos.x then
+		offset.x = -offset.x
+	end
+
+	this.pos.x, this.pos.y = this.pos.x + offset.x, this.pos.y + offset.y
+	b.from = V.vclone(this.pos)
+	b.to = V.vclone(target.pos)
+
+	if target.unit and target.unit.hit_offset then
+		b.to.x, b.to.y = b.to.x + target.unit.hit_offset.x, b.to.y + target.unit.hit_offset.y
+	end
+
+	b.target_id = target.id
+	b.source_id = this.id
 
 	return true
 end

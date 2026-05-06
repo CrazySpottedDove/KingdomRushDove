@@ -9,18 +9,6 @@ function M.register(sys)
 	sys.main_script = {}
 	sys.main_script.name = "main_script"
 
-	function sys.main_script:on_queue(entity, store, insertion)
-		if entity.main_script and entity.main_script.queue then
-			entity.main_script.queue(entity, store, insertion)
-		end
-	end
-
-	function sys.main_script:on_dequeue(entity, store, insertion)
-		if entity.main_script and entity.main_script.dequeue then
-			entity.main_script.dequeue(entity, store, insertion)
-		end
-	end
-
 	function sys.main_script:on_insert(entity, store)
 		if entity.main_script and entity.main_script.insert then
 			return entity.main_script.insert(entity, store)

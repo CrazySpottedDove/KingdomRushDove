@@ -1365,8 +1365,6 @@ tt.modifier.vis_flags = bor(F_MOD, F_BURN)
 --#endregion
 --#region mod_gulaemon_fly
 tt = RT("mod_gulaemon_fly", "modifier")
--- tt.main_script.queue = scripts.mod_gulaemon_fly.queue
--- tt.main_script.dequeue = scripts.mod_gulaemon_fly.dequeue
 tt.main_script.insert = scripts.mod_gulaemon_fly.insert
 tt.main_script.remove = scripts.mod_gulaemon_fly.remove
 tt.main_script.update = scripts.mod_gulaemon_fly.update
@@ -1377,8 +1375,6 @@ tt.nodes_limit = 20
 --#endregion
 --#region mod_troll_skater
 tt = RT("mod_troll_skater", "modifier")
--- tt.main_script.queue = scripts.mod_gulaemon_fly.queue
--- tt.main_script.dequeue = scripts.mod_gulaemon_fly.dequeue
 tt.main_script.insert = scripts.mod_gulaemon_fly.insert
 tt.main_script.update = scripts.mod_gulaemon_fly.update
 tt.main_script.remove = scripts.mod_gulaemon_fly.remove
@@ -6579,12 +6575,11 @@ tt.render.sprites[1].draw_order = 10
 --#region mod_minidragon_faustus
 tt = RT("mod_minidragon_faustus", "mod_liquid_fire_faustus")
 --#endregion
+
 --#region mod_bravebark_branchball
 tt = RT("mod_bravebark_branchball", "modifier")
-
 AC(tt, "render")
-
-tt.main_script.queue = scripts.mod_bravebark_branchball.queue
+tt.main_script.insert = scripts.mod_bravebark_branchball.insert
 tt.main_script.update = scripts.mod_bravebark_branchball.update
 tt.custom_anchors = {}
 tt.custom_anchors.default = vec_2(0.5, 0.45)
@@ -6687,24 +6682,21 @@ tt.render.sprites[1].prefix = "mod_bruce_kings_roar"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].size_names = nil
 --#endregion
---#region mod_slow_wilbur
+
 tt = RT("mod_slow_wilbur", "mod_slow")
 tt.slow.factor = nil
---#endregion
+
 --#region mod_gnoll_burner
 tt = RT("mod_gnoll_burner", "modifier")
-
 AC(tt, "dps", "render", "mark_flags")
-
 tt.dps.damage_min = 4
 tt.dps.damage_max = 4
 tt.dps.damage_type = DAMAGE_TRUE
 tt.dps.damage_every = fts(12)
 tt.dps.kill = true
 tt.mark_flags.vis_bans = F_CUSTOM
-tt.main_script.queue = scripts.mod_mark_flags.queue
-tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
-tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.remove = scripts.mod_mark_flags.remove
+tt.main_script.insert = fn_group(scripts.mod_dps.insert, scripts.mod_mark_flags.insert)
 tt.main_script.update = scripts.mod_dps.update
 tt.modifier.duration = 2
 tt.modifier.vis_flags = bor(F_MOD, F_BURN)
@@ -6713,11 +6705,10 @@ tt.render.sprites[1].name = "small"
 tt.render.sprites[1].size_names = {"small", "medium", "large"}
 tt.render.sprites[1].draw_order = 10
 --#endregion
+
 --#region mod_gnoll_gnawer
 tt = RT("mod_gnoll_gnawer", "modifier")
-
 AC(tt, "render")
-
 tt.modifier.duration = fts(10)
 tt.modifier.use_mod_offset = false
 tt.inflicted_damage_factor = 1.5
@@ -6745,12 +6736,10 @@ tt.tween.remove = false
 --#endregion
 --#region mod_twilight_elf_harasser
 tt = RT("mod_twilight_elf_harasser", "modifier")
-
 AC(tt, "mark_flags")
-
 tt.mark_flags.vis_bans = F_CUSTOM
-tt.main_script.queue = scripts.mod_mark_flags.queue
-tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.insert = scripts.mod_mark_flags.insert
+tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
 tt.modifier.duration = fts(20)
 --#endregion
@@ -14867,7 +14856,7 @@ tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 
 tt = E:register_t("mod_enemy_evolving_scourge_eat", "modifier")
-tt.main_script.queue = scripts.mod_enemy_evolving_scourge_eat.queue
+tt.main_script.insert = scripts.mod_enemy_evolving_scourge_eat.insert
 tt.main_script.update = scripts.mod_enemy_evolving_scourge_eat.update
 tt.explode_fx = "fx_enemy_evolving_scourge_eat"
 
@@ -15011,8 +15000,8 @@ tt = E:register_t("mod_enemy_unblinded_shackler_mark", "modifier")
 E:add_comps(tt, "mark_flags")
 tt.mark_flags.vis_bans = F_CUSTOM
 tt.modifier.duration = 1e+99
-tt.main_script.queue = scripts.mod_mark_flags.queue
-tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.insert = scripts.mod_mark_flags.insert
+tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
 
 tt = E:register_t("mod_stage_10_obelisk_heal", "modifier")
@@ -16570,16 +16559,16 @@ tt = E:register_t("mod_enemy_revenant_harvester_mark", "modifier")
 E:add_comps(tt, "mark_flags")
 tt.mark_flags.vis_bans = F_CUSTOM
 tt.modifier.duration = -1
-tt.main_script.queue = scripts.mod_mark_flags.queue
-tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.insert = scripts.mod_mark_flags.insert
+tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
 
 tt = E:register_t("mod_enemy_revenant_soulcaller_mark", "modifier")
 E:add_comps(tt, "mark_flags")
 tt.mark_flags.vis_bans = F_CUSTOM
 tt.modifier.duration = b.duration
-tt.main_script.queue = scripts.mod_mark_flags.queue
-tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.insert = scripts.mod_mark_flags.insert
+tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
 
 tt = E:register_t("mod_stage_18_eridan_stun", "mod_stun")
@@ -17328,8 +17317,8 @@ tt = E:register_t("mod_chicken_leg_polymorph_mark", "modifier")
 E:add_comps(tt, "mark_flags")
 
 tt.modifier.duration = fts(80)
-tt.main_script.queue = scripts.mod_mark_flags.queue
-tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.insert = scripts.mod_mark_flags.insert
+tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
 tt = E:register_t("mod_enemy_crocs_tank_charge_soldier", "modifier")
 b = balance.enemies.crocs.crocs_tank
@@ -17362,19 +17351,17 @@ tt.render.sprites[1].scale = vv(0.5)
 tt.render.sprites[1].z = Z_EFFECTS
 tt.render.sprites[1].loop = true
 tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}, {tt.modifier.duration - fts(10), 255}, {tt.modifier.duration, 0}}
+
 tt = E:register_t("mod_enemy_crocs_shaman_tower_mark", "modifier")
-
 E:add_comps(tt, "mark_flags")
-
 tt.modifier.duration = fts(20)
-tt.main_script.queue = scripts.mod_mark_flags.queue
-tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.insert = scripts.mod_mark_flags.insert
+tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+
 tt = E:register_t("mod_crocs_shaman_tower_debuff", "modifier")
 b = balance.enemies.crocs.crocs_shaman.debuff_towers
-
 E:add_comps(tt, "render")
-
 tt.main_script.insert = scripts.mod_crocs_shaman_tower_debuff.insert
 tt.main_script.update = scripts.mod_crocs_shaman_tower_debuff.update
 tt.modifier.duration = b.stun_duration
@@ -17510,8 +17497,6 @@ tt.offset_y_per_tower = {
 }
 tt = E:register_t("mod_boss_crocs_tower_eat", "modifier")
 E:add_comps(tt, "render")
-tt.main_script.queue = scripts.mod_boss_crocs_tower_eat.queue
-tt.main_script.dequeue = scripts.mod_boss_crocs_tower_eat.dequeue
 tt.main_script.insert = scripts.mod_boss_crocs_tower_eat.insert
 tt.main_script.remove = scripts.mod_boss_crocs_tower_eat.remove
 tt.main_script.update = scripts.mod_boss_crocs_tower_eat.update
@@ -22056,7 +22041,6 @@ b = balance.enemies.wukong.nine_tailed_fox.teleport
 tt.modifier.duration = b.stun_duration
 tt = RT("mod_gale_warrior_combo_counter", "modifier")
 tt.main_script.insert = scripts.mod_gale_warrior_combo_counter.insert
-tt.main_script.queue = scripts.mod_gale_warrior_combo_counter.queue
 
 tt = RT("mod_gale_warrior_dot", "mod_blood")
 b = balance.enemies.wukong.gale_warrior.puncturing_thrust.dot
@@ -22066,19 +22050,18 @@ tt.dps.damage_max = b.damage_max
 tt.dps.damage_type = b.damage_type
 tt.modifier.duration = b.duration
 tt.modifier.level = 0
-tt.main_script.queue = scripts.mod_gale_warrior_dot.queue
+tt.main_script.insert = fn_group(scripts.mod_dps.insert, scripts.mod_gale_warrior_dot.insert)
 
 tt = E:register_t("mod_enemy_storm_elemental_tower_mark", "modifier")
 E:add_comps(tt, "mark_flags")
 tt.modifier.duration = fts(30)
-tt.main_script.queue = scripts.mod_mark_flags.queue
-tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.insert = scripts.mod_mark_flags.insert
+tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+
 tt = E:register_t("mod_enemy_storm_elemental_tower_debuff", "modifier")
 b = balance.enemies.wukong.storm_elemental.tower_block
-
 E:add_comps(tt, "render")
-
 tt.main_script.insert = scripts.mod_crocs_shaman_tower_debuff.insert
 tt.main_script.update = scripts.mod_crocs_shaman_tower_debuff.update
 tt.main_script.remove = scripts.mod_crocs_shaman_tower_debuff.remove
@@ -23235,18 +23218,16 @@ tt = E:register_t("fx_enemy_fan_guard_melee_hit", "fx")
 tt.render.sprites[1].name = "fan_guard_hit_run"
 tt.render.sprites[1].sort_y_offset = -30
 
+-- TODO: 毫无用处的mod，何意味？
 tt = E:register_t("mod_doom_bringer_tower_block_mark", "modifier")
-
 E:add_comps(tt, "mark_flags")
-
 tt.modifier.duration = fts(30)
-tt.main_script.queue = scripts.mod_mark_flags.queue
-tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.insert = scripts.mod_mark_flags.insert
+tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+
 tt = E:register_t("mod_doom_bringer_tower_block", "modifier")
-
 E:add_comps(tt, "render", "tween")
-
 b = balance.enemies.wukong.doom_bringer
 tt.main_script.insert = scripts.mod_doom_bringer_tower_block.insert
 tt.main_script.update = scripts.mod_doom_bringer_tower_block.update
@@ -25063,7 +25044,7 @@ tt.raise = "spawn"
 tt.balloon_duration = b.balloon_duration
 tt = RT("bullet_soldier_dragon_warden_dragon_raider", "bolt")
 b = balance.specials.stage_38_dragon_wardens.soldiers.dragon_raider
-tt.main_script.queue = scripts.bullet_soldier_dragon_warden_dragon_raider.queue
+tt.main_script.insert = fn_group(scripts.bullet_soldier_dragon_warden_dragon_raider.insert, scripts.bolt.insert)
 tt.aura = {}
 tt.render.sprites[1].prefix = "warden_warlock_stage3_projectil"
 tt.render.sprites[1].name = "run"
@@ -25308,7 +25289,7 @@ tt.force_motion.max_v = 450
 tt.sound_events.insert = "DragonsDLCMageWardensShoot"
 tt = RT("bullet_stage_40_island_wardens_melee", "bolt")
 b = balance.specials.stage_40_moving_island.soldiers.ranged
-tt.main_script.queue = scripts.bullet_soldier_dragon_warden_dragon_raider.queue
+tt.main_script.insert = fn_group(scripts.bullet_soldier_dragon_warden_dragon_raider.insert, scripts.bolt.insert)
 tt.aura = {}
 tt.render.sprites[1].prefix = "warden_warlock_stage3_projectil"
 tt.render.sprites[1].name = "run"

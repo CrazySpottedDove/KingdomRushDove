@@ -2539,7 +2539,7 @@ tt.taunts.sets.prebattle.end_idx = 3
 --#endregion
 --#region mod_bram_slap
 tt = RT("mod_bram_slap", "modifier")
-tt.main_script.queue = scripts.mod_bram_slap.queue
+tt.main_script.insert = scripts.mod_bram_slap.insert
 tt.main_script.update = scripts.mod_bram_slap.update
 tt.custom_anchors = {}
 tt.custom_anchors.default = vec_2(0.5, 0.45)

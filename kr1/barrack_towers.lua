@@ -8,7 +8,6 @@ local image_x = 0
 local image_y = nil
 local tt = nil
 local scripts = require("game_scripts")
-local SU = require("script_utils")
 
 local V = require("lib.klua.vector")
 
@@ -2722,12 +2721,10 @@ tt.render.sprites[1].draw_order = DO_MOD_FX
 --#endregion
 --#region mod_soldier_tower_rocket_gunners_sting_missiles_mark
 tt = RT("mod_soldier_tower_rocket_gunners_sting_missiles_mark", "modifier")
-
 AC(tt, "mark_flags")
-
 tt.mark_flags.vis_bans = F_CUSTOM
-tt.main_script.queue = scripts.mod_mark_flags.queue
-tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.insert = scripts.mod_mark_flags.insert
+tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
 -- 牢大 END
 -- 圣骑兵 START
@@ -3798,7 +3795,7 @@ tt.duration = b.duration
 
 tt = E:register_t("mod_priests_abomination_eat", "modifier")
 b = balance.specials.towers.tower_stage_28_priests_barrack.abomination
-tt.main_script.queue = scripts.mod_enemy_unblinded_abomination_eat.queue
+tt.main_script.insert = scripts.mod_enemy_unblinded_abomination_eat.insert
 tt.main_script.update = scripts.mod_enemy_unblinded_abomination_eat.update
 tt.explode_fx = "fx_soldier_priests_barrack_abomination_eat"
 tt.required_hp = b.eat.hp_required

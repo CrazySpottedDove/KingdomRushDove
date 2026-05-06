@@ -40,3 +40,17 @@ end
 function CC(comp_name)
 	return E:clone_c(comp_name)
 end
+
+-- 合成 insert 函数
+function fn_group(...)
+	local functions = {...}
+	return function(this, store)
+		for i = 1, #functions do
+			if not functions[i](this, store) then
+				return false
+			end
+		end
+
+		return true
+	end
+end

@@ -11259,10 +11259,9 @@ tt.dps.damage_every = fts(10)
 tt.dps.damage_type = DAMAGE_TRUE
 tt.mark_flags.vis_bans = F_CUSTOM
 tt.modifier.duration = 3
-tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.insert = fn_group(scripts.mod_dps.insert, scripts.mod_mark_flags.insert)
 tt.main_script.update = scripts.mod_dps.update
-tt.main_script.queue = scripts.mod_mark_flags.queue
-tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.remove = scripts.mod_mark_flags.remove
 --#endregion
 --#region hero_bolverk
 tt = RT("hero_bolverk", "hero")
@@ -14026,22 +14025,20 @@ tt.end_mod = "mod_hero_witch_ultimate_sleep"
 tt.sound_events.insert = "HeroDragonBoneUltimateOut"
 tt.sound_events.remove = "HeroDragonBoneUltimateIn"
 --#endregion
+
 --#region mod_hero_witch_ultimate_mark
 tt = RT("mod_hero_witch_ultimate_mark", "modifier")
-
 AC(tt, "mark_flags")
-
 tt.mark_flags.vis_bans = F_TELEPORT
 tt.modifier.duration = fts(50)
-tt.main_script.queue = scripts.mod_mark_flags.queue
-tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.insert = scripts.mod_mark_flags.insert
+tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
 --#endregion
+
 --#region mod_hero_witch_ultimate_sleep
 tt = RT("mod_hero_witch_ultimate_sleep", "modifier")
-
 AC(tt, "render")
-
 tt.main_script.insert = scripts.mod_stun.insert
 tt.main_script.update = scripts.mod_stun.update
 tt.main_script.remove = scripts.mod_stun.remove
@@ -15838,7 +15835,6 @@ tt.main_script.update = scripts.aura_apply_mod_hero_wukong_ultimate.update
 --#region mod_hero_wukong_attacks_combos
 tt = RT("mod_hero_wukong_attacks_combos", "modifier")
 tt.main_script.insert = scripts.mod_hero_wukong_attacks_combos.insert
-tt.main_script.queue = scripts.mod_hero_wukong_attacks_combos.queue
 --#endregion
 --#region mod_hero_wukong_ranged_pole_stun
 tt = RT("mod_hero_wukong_ranged_pole_stun", "mod_stun")
@@ -17288,24 +17284,23 @@ tt.hps.heal_min = nil
 tt.hps.heal_max = nil
 tt.main_script.insert = scripts.mod_hps.insert
 tt.main_script.update = scripts.mod_hero_dragon_arb_plant_linirea_heal.update
+
 tt = E:register_t("mod_hero_dragon_arb_plant_linirea_heal_mark", "modifier")
 b = balance.heroes.hero_dragon_arb.tower_plants.linirea
-
 E:add_comps(tt, "mark_flags")
-
 tt.mark_flags.vis_bans = F_CUSTOM
 tt.modifier.duration = b.heal_duration + 2
-tt.main_script.queue = scripts.mod_mark_flags.queue
-tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.insert = scripts.mod_mark_flags.insert
+tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+
 tt = E:register_t("mod_hero_dragon_arb_plant_dark_army_slow", "mod_slow")
 b = balance.heroes.hero_dragon_arb.tower_plants.dark_army
 tt.modifier.duration = 0.5
 tt.slow.factor = nil
+
 tt = E:register_t("mod_hero_dragon_arb_plant_dark_army_dps", "modifier")
-
 E:add_comps(tt, "dps")
-
 b = balance.heroes.hero_dragon_arb.tower_plants.dark_army
 tt.modifier.duration = 0.5
 tt.dps.damage_min = nil

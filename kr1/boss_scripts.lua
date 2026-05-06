@@ -5598,18 +5598,17 @@ end
 
 scripts.mod_bram_slap = {}
 
-function scripts.mod_bram_slap.queue(this, store, insertion)
+function scripts.mod_bram_slap.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
-		return
+		return false
 	end
 
-	if insertion then
-		target.vis.bans = F_ALL
+	target.vis.bans = F_ALL
 
-		SU.stun_inc(target)
-	end
+	SU.stun_inc(target)
+	return true
 end
 
 function scripts.mod_bram_slap.update(this, store)
@@ -10362,43 +10361,16 @@ end
 
 scripts.mod_boss_crocs_tower_eat = {}
 
-function scripts.mod_boss_crocs_tower_eat.queue(this, store, insertion)
-	local target = store.entities[this.modifier.target_id]
-
-	if not target then
-		return
-	end
-
-	if insertion then
-		SU.tower_block_inc(target)
-		SU.remove_modifiers(store, target, nil, "mod_boss_crocs_tower_eat")
-
-		this._pushed_bans = U.push_bans(target.vis, F_ALL)
-	end
-end
-
-function scripts.mod_boss_crocs_tower_eat.dequeue(this, store, insertion)
-	local target = store.entities[this.modifier.target_id]
-
-	if not target then
-		return
-	end
-
-	if insertion then
-		SU.tower_block_dec(target)
-
-		if this._pushed_bans then
-			U.pop_bans(target.vis, this._pushed_bans)
-		end
-	end
-end
-
 function scripts.mod_boss_crocs_tower_eat.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
 		return false
 	end
+
+	SU.tower_block_inc(target)
+	SU.remove_modifiers(store, target, nil, "mod_boss_crocs_tower_eat")
+	U.bans_add(target.vis, F_ALL)
 
 	target.tower._type = target.tower.type
 	target.tower._prevent_timed_destroy_price = this._prevent_timed_destroy_price
@@ -10482,6 +10454,14 @@ function scripts.mod_boss_crocs_tower_eat.update(this, store)
 end
 
 function scripts.mod_boss_crocs_tower_eat.remove(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if not target then
+		return true
+	end
+
+	U.bans_remove(target.vis, F_ALL)
+
 	return true
 end
 

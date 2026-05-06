@@ -3275,16 +3275,17 @@ tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
 tt.main_script.insert = scripts.mod_tower_hermit_toad_jump.insert
 --#endregion
+
+-- TODO 也是何意味mod
 --#region mod_tower_hermit_toad_instakill_mark
 tt = RT("mod_tower_hermit_toad_instakill_mark", "modifier")
-
 AC(tt, "mark_flags")
-
 tt.modifier.duration = fts(120)
-tt.main_script.queue = scripts.mod_mark_flags.queue
-tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
+tt.main_script.insert = scripts.mod_mark_flags.insert
+tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
 -- 蛤蟆 END
+
 -- 树灵 START
 --#endregion
 --#region ps_tower_arborean_emissary_bolt_trail
