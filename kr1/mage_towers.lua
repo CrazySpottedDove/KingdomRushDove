@@ -847,9 +847,7 @@ tt.sound_events.insert = "TowerWizardBasicBolt"
 --#endregion
 --#region tower_high_elven
 tt = RT("tower_high_elven", "tower")
-
 AC(tt, "attacks", "powers", "tween")
-
 tt.info.enc_icon = 15
 tt.info.fn = scripts.tower_high_elven.get_info
 tt.info.i18n_key = "TOWER_MAGE_HIGH_ELVEN"
@@ -925,9 +923,7 @@ tt.max_sentinels = 1
 --#endregion
 --#region mod_high_elven
 tt = RT("mod_high_elven", "modifier")
-
 AC(tt, "render", "tween")
-
 tt.damage_factor = 0.09
 tt.damage_factor_inc = 0.045
 tt.cooldown_factor = 0.955

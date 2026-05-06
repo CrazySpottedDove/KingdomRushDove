@@ -1889,6 +1889,18 @@ scripts.tower_high_elven = {
 			queue_remove(store, s)
 		end
 
+		local mods = table.filter(store.modifiers, function(_, e)
+			return e.modifier.source_id == this.id
+		end)
+
+		for _, m in ipairs(mods) do
+			queue_remove(store, m)
+		end
+
+		if this.sentinel_previews then
+			SU.queue_remove_clean_table(store, this.sentinel_previews)
+		end
+
 		return true
 	end,
 	insert = function(this, store)
@@ -1998,7 +2010,7 @@ scripts.tower_high_elven = {
 						return e.tower.can_be_mod and not table.contains(busy_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, pow_s.range)
 					end)
 
-					for _, tower in pairs(towers) do
+					for _, tower in ipairs(towers) do
 						local new_mod = E:create_entity("mod_high_elven")
 
 						new_mod.modifier.level = pow_s.level
@@ -2039,7 +2051,7 @@ scripts.tower_high_elven = {
 							this.tween.props[1].ts = store.tick_ts
 
 							S:queue(ta.sound)
-							y_wait(store, ta.cast_time)
+							y_wait(store, ta.cast_time * tw.cooldown_factor)
 
 							for i = 1, math.min(#enemies, pow_t.target_count[pow_t.level]) do
 								local target = enemies[i]
@@ -2047,6 +2059,7 @@ scripts.tower_high_elven = {
 
 								mod.modifier.target_id = target.id
 								mod.modifier.level = pow_t.level
+								mod.modifier.damage_factor = tw.damage_factor
 
 								queue_insert(store, mod)
 							end
@@ -2071,16 +2084,16 @@ scripts.tower_high_elven = {
 
 						this.tween.props[1].ts = store.tick_ts
 
-						y_wait(store, ba.shoot_time)
+						y_wait(store, ba.shoot_time * tw.cooldown_factor)
 
 						local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, nil, ba.vis_flags, ba.vis_bans)
 
 						if enemy then
-							local eidx = 1
-
+							table.sort(enemies, function(e1, e2)
+								return e1.health.hp < e2.health.hp
+							end)
 							for i, bn in ipairs(ba.bullets) do
-								enemy = enemies[km.zmod(eidx, #enemies)]
-								eidx = eidx + 1
+								enemy = enemies[km.zmod(i, #enemies)]
 
 								local b = E:create_entity(bn)
 
@@ -2092,14 +2105,6 @@ scripts.tower_high_elven = {
 								b.pos = vclone(b.bullet.from)
 
 								queue_insert(store, b)
-
-								if i == 1 then
-									table.sort(enemies, function(e1, e2)
-										return e1.health.hp < e2.health.hp
-									end)
-
-									eidx = 1
-								end
 							end
 						end
 
