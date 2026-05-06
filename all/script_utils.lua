@@ -4178,7 +4178,8 @@ local fps_based_keys = {
 	["hit_time"] = true,
 	["cast_time"] = true,
 	["shoot_time"] = true,
-	["dodge_time"] = true
+	["dodge_time"] = true,
+	["cycle_time"] = true
 }
 
 function SU.scale_fps_based_keys(tbl, factor, visited)

@@ -1095,9 +1095,7 @@ tt.modifier.duration = fts(11)
 --#endregion
 --#region tower_wild_magus
 tt = RT("tower_wild_magus", "tower")
-
 AC(tt, "attacks", "powers", "tween")
-
 tt.info.enc_icon = 16
 tt.info.i18n_key = "TOWER_MAGE_WILD_MAGUS"
 tt.info.portrait = "kr3_info_portraits_towers_0007"

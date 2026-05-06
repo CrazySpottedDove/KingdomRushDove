@@ -204,7 +204,7 @@ scripts.tower_archer_dwarf = {
 
 					animation_start(this, an, af, store.tick_ts, false, shooter_sid)
 
-					while store.tick_ts - a.ts < a.shoot_time * tw.cooldown_factor do
+					while store.tick_ts - a.ts < a.shoot_time do
 						coroutine.yield()
 					end
 
@@ -281,7 +281,7 @@ scripts.tower_ranger = {
 
 		local function add_attacked_enemy(enemy)
 			table.insert(attacked_enemies_id, enemy.id)
-			table.insert(attacked_enemies_ts, store.tick_ts + aa.shoot_time * this.tower.cooldown_factor)
+			table.insert(attacked_enemies_ts, store.tick_ts + aa.shoot_time)
 		end
 
 		local function shot_animation(attack, shooter_idx, enemy)
@@ -367,7 +367,7 @@ scripts.tower_ranger = {
 
 						local idle_an, idle_af = shot_animation(aa, shooter_idx, enemy)
 
-						y_wait(store, aa.shoot_time * this.tower.cooldown_factor)
+						y_wait(store, aa.shoot_time)
 
 						if enemy.health.dead then
 							enemy = U.refind_foremost_enemy(enemy, store, aa.vis_flags, aa.vis_bans)
@@ -517,7 +517,7 @@ scripts.tower_musketeer = {
 
 							queue_insert(store, m)
 							shot_animation(ax, seeker_idx, enemy, ax.animation_seeker)
-							y_wait(store, ax.shoot_time * this.tower.cooldown_factor)
+							y_wait(store, ax.shoot_time)
 
 							if enemy.health.dead then
 								enemy = U.refind_foremost_enemy(enemy, store, ax.vis_flags, ax.vis_bans)
@@ -564,7 +564,7 @@ scripts.tower_musketeer = {
 						sprites[fsid].flip_x = fuse_idx < shooter_idx
 						U.change_sprite_draw_order(this, ssid, 5)
 
-						y_wait(store, ash.shoot_time * tw.cooldown_factor)
+						y_wait(store, ash.shoot_time)
 
 						local shooting_right = tpos.x < enemy.pos.x
 						local soffset = sprites[ssid].offset
@@ -607,7 +607,7 @@ scripts.tower_musketeer = {
 
 						local an, af, ai = shot_animation(aa, shooter_idx, enemy)
 
-						y_wait(store, aa.shoot_time * tw.cooldown_factor)
+						y_wait(store, aa.shoot_time)
 						shot_bullet(aa, shooter_idx, ai, enemy, 0)
 						y_animation_wait(this, shooter_sids[shooter_idx])
 					end
@@ -817,7 +817,7 @@ scripts.tower_crossbow = {
 						for i = 1, ma.shots + pow_m.level * ma.shots_inc do
 							local origin = last_enemy.pos
 
-							while store.tick_ts - loop_ts < ma.shoot_time * tw.cooldown_factor do
+							while store.tick_ts - loop_ts < ma.shoot_time do
 								coroutine.yield()
 							end
 
@@ -860,7 +860,7 @@ scripts.tower_crossbow = {
 							queue_insert(store, b)
 
 							-- AC:inc_check("BOLTOFTHESUN", 1)
-							while store.tick_ts - loop_ts < ma.cycle_time * tw.cooldown_factor do
+							while store.tick_ts - loop_ts < ma.cycle_time do
 								coroutine.yield()
 							end
 
@@ -900,7 +900,7 @@ scripts.tower_crossbow = {
 
 						animation_start(this, an, af, store.tick_ts, 1, shooter_sid)
 
-						while store.tick_ts - aa.ts < aa.shoot_time * tw.cooldown_factor do
+						while store.tick_ts - aa.ts < aa.shoot_time do
 							coroutine.yield()
 						end
 
@@ -1096,23 +1096,8 @@ scripts.tower_totem = {
 }
 -- 海盗射手
 scripts.tower_pirate_watchtower = {
-	get_info = function(this)
-		local a = this.attacks.list[1]
-		local b = E:get_template(a.bullet)
-		local min, max = b.bullet.damage_min, b.bullet.damage_max
-
-		min, max = math.ceil(min * this.tower.damage_factor), math.ceil(max * this.tower.damage_factor)
-
-		return {
-			type = STATS_TYPE_TOWER,
-			damage_min = min,
-			damage_max = max,
-			range = this.attacks.range,
-			cooldown = a.cooldown * this.tower.cooldown_factor
-		}
-	end,
 	remove = function(this, store)
-		for _, parrot in pairs(this.parrots) do
+		for _, parrot in ipairs(this.parrots) do
 			parrot.owner = nil
 		end
 
@@ -1122,7 +1107,7 @@ scripts.tower_pirate_watchtower = {
 			return e.template_name == "mod_pirate_watcher" and e.modifier.source_id == this.id
 		end)
 
-		for _, m in pairs(watcher_mods) do
+		for _, m in ipairs(watcher_mods) do
 			queue_remove(store, m)
 		end
 
@@ -1157,7 +1142,7 @@ scripts.tower_pirate_watchtower = {
 			else
 				if this.ui.hover_active and this.ui.args == "watcher" and (not this.watcher_previews or watcher_previews_level ~= pow_w.level) then
 					if this.watcher_previews then
-						for _, decal in pairs(this.watcher_previews) do
+						for _, decal in ipairs(this.watcher_previews) do
 							queue_remove(store, decal)
 						end
 					end
@@ -1188,7 +1173,7 @@ scripts.tower_pirate_watchtower = {
 						table.insert(this.watcher_previews, decal)
 					end
 				elseif this.watcher_previews and (not this.ui.hover_active or this.ui.args ~= "watcher") then
-					for _, decal in pairs(this.watcher_previews) do
+					for _, decal in ipairs(this.watcher_previews) do
 						queue_remove(store, decal)
 					end
 
@@ -1284,7 +1269,7 @@ scripts.tower_pirate_watchtower = {
 						local bl = b1.bullet
 
 						bl.damage_factor = tw.damage_factor
-						bl.from = vclone(b1.pos)
+						bl.from:copy(b1.pos)
 						bl.to = pred_pos
 						bl.target_id = enemy.id
 						bl.source_id = this.id
@@ -1444,7 +1429,7 @@ scripts.tower_arcane = {
 							end
 						end
 
-						while store.tick_ts - aa.ts < aa.shoot_time * tw.cooldown_factor do
+						while store.tick_ts - aa.ts < aa.shoot_time do
 							coroutine.yield()
 						end
 
@@ -1599,20 +1584,18 @@ scripts.tower_silver = {
 			if tw.blocked then
 				coroutine.yield()
 			else
-				for k, pow in pairs(this.powers) do
-					if pow.changed then
-						pow.changed = nil
-
-						if pow.level == 1 then
-							local pa = this.attacks.list[pow.attack_idx]
-
-							pa.ts = store.tick_ts
-						end
-
-						if k == "mark" then
-							this.attacks.list[3].cooldown = this.attacks.list[3].cooldown + this.attacks.list[3].cooldown_inc
-						end
+				if pow_s.changed then
+					pow_s.changed = nil
+					if pow_s.level == 1 then
+						this.attacks.list[2].ts = store.tick_ts
 					end
+				end
+				if pow_m.changed then
+					pow_m.changed = nil
+					if pow_m.level == 1 then
+						this.attacks.list[3].ts = store.tick_ts
+					end
+					this.attacks.list[3].cooldown = this.attacks.list[3].cooldown_base + this.attacks.list[3].cooldown_inc * pow_m.level
 				end
 
 				SU.tower_update_silenced_powers(store, this)
@@ -1702,19 +1685,18 @@ scripts.tower_wild_magus = {
 			if tw.blocked then
 			-- block empty
 			else
-				for k, pow in pairs(this.powers) do
-					if pow.changed then
-						pow.changed = nil
+				if pow_e.changed then
+					pow_e.changed = nil
+					if pow_e.level == 1 then
+						ea.ts = store.tick_ts
+					end
+					ea.cooldown = pow_e.cooldowns[pow_e.level]
+				end
 
-						if pow.level == 1 then
-							local pa = this.attacks.list[pow.attack_idx]
-
-							pa.ts = store.tick_ts
-						end
-
-						if pow.cooldowns then
-							a.list[pow.attack_idx].cooldown = pow.cooldowns[pow.level]
-						end
+				if pow_w.changed then
+					pow_w.changed = nil
+					if pow_w.level == 1 then
+						wa.ts = store.tick_ts
 					end
 				end
 
@@ -2051,7 +2033,7 @@ scripts.tower_high_elven = {
 							this.tween.props[1].ts = store.tick_ts
 
 							S:queue(ta.sound)
-							y_wait(store, ta.cast_time * tw.cooldown_factor)
+							y_wait(store, ta.cast_time)
 
 							for i = 1, math.min(#enemies, pow_t.target_count[pow_t.level]) do
 								local target = enemies[i]
@@ -2084,7 +2066,7 @@ scripts.tower_high_elven = {
 
 						this.tween.props[1].ts = store.tick_ts
 
-						y_wait(store, ba.shoot_time * tw.cooldown_factor)
+						y_wait(store, ba.shoot_time)
 
 						local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, nil, ba.vis_flags, ba.vis_bans)
 
@@ -2948,7 +2930,7 @@ scripts.tower_necromancer = {
 
 						animation_start(this, an, nil, store.tick_ts, 1, shooter_sid)
 
-						while store.tick_ts - pa.ts < pa.shoot_time * this.tower.cooldown_factor do
+						while store.tick_ts - pa.ts < pa.shoot_time do
 							coroutine.yield()
 						end
 
@@ -3009,7 +2991,7 @@ scripts.tower_necromancer = {
 
 						ba.ts = store.tick_ts
 
-						while store.tick_ts - ba.ts < ba.shoot_time * this.tower.cooldown_factor do
+						while store.tick_ts - ba.ts < ba.shoot_time do
 							coroutine.yield()
 						end
 
@@ -3305,7 +3287,7 @@ scripts.tower_sunray = {
 				end
 
 				U.animation_start_group(this, "shoot", nil, store.tick_ts, false, group_tower)
-				y_wait(store, a.shoot_time * tw.cooldown_factor)
+				y_wait(store, a.shoot_time)
 
 				local enemies = U.find_enemies_in_range_filter_off(target.pos, a.radius, a.vis_flags, a.vis_bans)
 
@@ -3954,7 +3936,7 @@ scripts.tower_dwaarp = {
 							S:queue(da.sound)
 							animation_start(this, "drill", nil, store.tick_ts, 1, anim_id)
 
-							while store.tick_ts - da.ts < da.hit_time * this.tower.cooldown_factor do
+							while store.tick_ts - da.ts < da.hit_time do
 								coroutine.yield()
 							end
 
@@ -3993,7 +3975,7 @@ scripts.tower_dwaarp = {
 
 							animation_start(this, "shoot", nil, store.tick_ts, 1, anim_id)
 
-							while store.tick_ts - aa.ts < aa.hit_time * tw.cooldown_factor do
+							while store.tick_ts - aa.ts < aa.hit_time do
 								coroutine.yield()
 							end
 
@@ -4219,7 +4201,7 @@ scripts.tower_entwood = {
 				loaded = nil
 
 				U.animation_start_group(this, at.animation, nil, store.tick_ts, false, "layers")
-				y_wait(store, at.shoot_time * this.tower.cooldown_factor)
+				y_wait(store, at.shoot_time)
 
 				local bo = at.bullet_start_offset
 				local b = E:create_entity(at.bullet)
@@ -15272,7 +15254,7 @@ function scripts.tower_flamespitter.update(this, store)
 				animation_start(this.flame_fx, "loop", false, store.tick_ts, true)
 
 				local fire_ts = store.tick_ts
-				local fire_cycle_ts = store.tick_ts - attack_basic.cycle_time * tw.cooldown_factor
+				local fire_cycle_ts = store.tick_ts - attack_basic.cycle_time
 				local tried_seek_last_time = false
 
 				while store.tick_ts - fire_ts < attack_basic.duration * tw.cooldown_factor do
@@ -15311,8 +15293,8 @@ function scripts.tower_flamespitter.update(this, store)
 					this.flame_fx.render.sprites[1].scale.x = scale_factor
 					this.flame_fx.render.sprites[1].scale.y = scale_factor
 
-					if store.tick_ts - fire_cycle_ts >= attack_basic.cycle_time * tw.cooldown_factor then
-						fire_cycle_ts = fire_cycle_ts + attack_basic.cycle_time * tw.cooldown_factor
+					if store.tick_ts - fire_cycle_ts >= attack_basic.cycle_time then
+						fire_cycle_ts = fire_cycle_ts + attack_basic.cycle_time
 
 						local r = -this.flame_fx.render.sprites[1].r
 						-- 矩形索敌
@@ -21877,7 +21859,7 @@ function scripts.tower_dragons.update(this, store)
 					end
 
 					U.animation_start(this, a_massive_fear.animation, nil, store.tick_ts, false, 2, true)
-					U.y_wait(store, a_massive_fear.cast_time * tw.cooldown_factor)
+					U.y_wait(store, a_massive_fear.cast_time)
 
 					points = find_path_center_positions_near_tower(150)
 
@@ -21964,7 +21946,7 @@ function scripts.tower_dragons.update(this, store)
 					end
 
 					U.animation_start(this, attack.animation[anim_idx], nil, store.tick_ts, false, 2, true)
-					U.y_wait(store, attack.shoot_time * tw.cooldown_factor)
+					U.y_wait(store, attack.shoot_time)
 
 					for i = 1, 3 do
 						local j = km.zmod(i, #targets)
@@ -22419,7 +22401,7 @@ function scripts.tower_shadow_archer.update(this, store)
 
 		local shoot_time = attack.shoot_time
 
-		U.y_wait(store, shoot_time * this.tower.cooldown_factor)
+		U.y_wait(store, shoot_time)
 
 		if enemy.health.dead then
 			enemy = U.refind_foremost_enemy(enemy, store, attack.vis_flags, attack.vis_bans)
@@ -22549,7 +22531,7 @@ function scripts.tower_shadow_archer.update(this, store)
 							}, enemy, 1, true)
 							shooter.offset = v(lpos.x - shooter.pos.x, lpos.y - shooter.pos.y + 18)
 							U.animation_start(this, "teleportInAttack", lflip, store.tick_ts, false, sid)
-							U.y_wait(store, as.shoot_time * this.tower.cooldown_factor)
+							U.y_wait(store, as.shoot_time)
 
 							if not enemy.health.dead then
 								local d = E:create_entity("damage")
@@ -23332,7 +23314,7 @@ function scripts.tower_infernal_mage.update(this, store)
 		elseif aa == ac then
 			this.render.sprites[curse_sid].ts = store.tick_ts
 		end
-		U.y_wait(store, aa.shoot_time * this.tower.cooldown_factor)
+		U.y_wait(store, aa.shoot_time)
 		return af
 	end
 
@@ -23663,7 +23645,7 @@ function scripts.tower_orc_shaman.update(this, store)
 		local an, af = U.animation_name_facing_point(this, aa.animation, target.pos, shooter_sid, this.render.sprites[shooter_sid].offset)
 
 		U.animation_start(this, an, af, store.tick_ts, false, shooter_sid)
-		U.y_wait(store, aa.shoot_time * this.tower.cooldown_factor)
+		U.y_wait(store, aa.shoot_time)
 
 		return af
 	end
@@ -23735,7 +23717,7 @@ function scripts.tower_orc_shaman.update(this, store)
 			end
 
 			if ready_to_use_power(pow_m, ma, store, this.tower.cooldown_factor) then
-				local target, targets = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, a.range, ma.shoot_time * this.tower.cooldown_factor, ma.vis_flags, ma.vis_bans, E:get_template(ma.bullet).bullet.damage_radius)
+				local target, targets = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, a.range, ma.shoot_time, ma.vis_flags, ma.vis_bans, E:get_template(ma.bullet).bullet.damage_radius)
 
 				if not target or #targets < 2 then
 					ma.ts = ma.ts + 0.3

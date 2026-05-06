@@ -1576,7 +1576,7 @@ function scripts.tower_archer.update(this, store)
 
 				last_target_pos = enemy.pos
 
-				while store.tick_ts - a.ts < a.shoot_time * this.tower.cooldown_factor do
+				while store.tick_ts - a.ts < a.shoot_time do
 					coroutine.yield()
 				end
 
@@ -1776,7 +1776,7 @@ function scripts.tower_engineer.update(this, store)
 					U.animation_start(this, "shoot", nil, store.tick_ts, 1, i)
 				end
 
-				while store.tick_ts - ba.ts < ba.shoot_time * this.tower.cooldown_factor do
+				while store.tick_ts - ba.ts < ba.shoot_time do
 					coroutine.yield()
 				end
 
