@@ -10595,7 +10595,7 @@ function scripts.high_elven_sentinel.update(this, store)
 			this.pos.x = this.owner.pos.x + this.tower_rotation_offset.x + p.x
 			this.pos.y = this.owner.pos.y + this.tower_rotation_offset.y + p.y
 
-			if store.tick_ts - charge_ts > this.charge_time then
+			if store.tick_ts - charge_ts > this.charge_time * this.owner.tower.cooldown_factor then
 				if sb.name == "small" then
 					U.animation_start(this, "big", nil, store.tick_ts, true, sb_sid)
 				end
@@ -10607,7 +10607,7 @@ function scripts.high_elven_sentinel.update(this, store)
 
 					break
 				else
-					U.y_wait(store, this.owner.tower.guard_time)
+					charge_ts = charge_ts + 0.1
 				end
 			end
 

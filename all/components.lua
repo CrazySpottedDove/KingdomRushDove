@@ -439,7 +439,6 @@ tower.holder_id = nil
 tower.sell = nil
 tower.spent = 0
 tower.upgrade_to = nil
-tower.guard_time = fts(1)
 local tower_holder = E:register_c("tower_holder")
 
 tower_holder.blocked = false

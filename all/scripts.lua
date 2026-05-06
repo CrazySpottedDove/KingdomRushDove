@@ -1576,7 +1576,7 @@ function scripts.tower_archer.update(this, store)
 
 				last_target_pos = enemy.pos
 
-				while store.tick_ts - a.ts < a.shoot_time do
+				while store.tick_ts - a.ts < a.shoot_time * this.tower.cooldown_factor do
 					coroutine.yield()
 				end
 
@@ -1626,7 +1626,7 @@ function scripts.tower_archer.update(this, store)
 
 				U.animation_start(this, an, af, store.tick_ts, -1, shooter_sid)
 			else
-				U.y_wait(store, this.tower.guard_time)
+				a.ts = a.ts + 0.1
 			end
 
 			if store.tick_ts - a.ts > this.tower.long_idle_cooldown then
@@ -1735,7 +1735,7 @@ function scripts.tower_mage.update(this, store)
 
 				U.animation_start(this, an, nil, store.tick_ts, -1, shooter_sid)
 			else
-				U.y_wait(store, this.tower.guard_time)
+				aa.ts = aa.ts + 0.1
 			end
 
 			if store.tick_ts - aa.ts > this.tower.long_idle_cooldown then
@@ -1776,7 +1776,7 @@ function scripts.tower_engineer.update(this, store)
 					U.animation_start(this, "shoot", nil, store.tick_ts, 1, i)
 				end
 
-				while store.tick_ts - ba.ts < ba.shoot_time do
+				while store.tick_ts - ba.ts < ba.shoot_time * this.tower.cooldown_factor do
 					coroutine.yield()
 				end
 
@@ -1798,7 +1798,7 @@ function scripts.tower_engineer.update(this, store)
 					coroutine.yield()
 				end
 			else
-				U.y_wait(store, this.tower.guard_time)
+				ba.ts = ba.ts + 0.1
 			end
 
 			for i = 2, 8 do

@@ -2481,7 +2481,7 @@ scripts.tower_sorcerer = {
 
 				SU.tower_update_silenced_powers(store, this)
 
-				for i, aa in pairs(attacks) do
+				for i, aa in ipairs(attacks) do
 					pow = pows[i]
 
 					if (pow and ready_to_use_power(pow, aa, store, this.tower.cooldown_factor)) or (not pow and ready_to_attack(aa, store, this.tower.cooldown_factor)) and store.tick_ts - last_ts > a.min_cooldown * this.tower.cooldown_factor then
@@ -2489,9 +2489,7 @@ scripts.tower_sorcerer = {
 
 						if not enemy then
 							-- block empty
-							if aa == ab then
-								y_wait(store, this.tower.guard_time)
-							end
+							aa.ts = aa.ts + 0.1
 						else
 							if aa == ab then
 								for _, e in ipairs(enemies) do
@@ -2919,7 +2917,7 @@ scripts.tower_necromancer = {
 						return v.aura.source_id == this.id and v.template_name == this.auras.list[1].name
 					end)
 
-					for _, e in pairs(e_table) do
+					for _, e in ipairs(e_table) do
 						e.max_skeletons_tower = e.max_skeletons_tower + 1
 					end
 
@@ -2945,7 +2943,7 @@ scripts.tower_necromancer = {
 
 						animation_start(this, an, nil, store.tick_ts, 1, shooter_sid)
 
-						while store.tick_ts - pa.ts < pa.shoot_time do
+						while store.tick_ts - pa.ts < pa.shoot_time * this.tower.cooldown_factor do
 							coroutine.yield()
 						end
 
@@ -2967,6 +2965,8 @@ scripts.tower_necromancer = {
 						while not animation_finished(this, shooter_sid) do
 							coroutine.yield()
 						end
+					else
+						pa.ts = pa.ts + 0.1
 					end
 				end
 
@@ -3004,7 +3004,7 @@ scripts.tower_necromancer = {
 
 						ba.ts = store.tick_ts
 
-						while store.tick_ts - ba.ts < ba.shoot_time do
+						while store.tick_ts - ba.ts < ba.shoot_time * this.tower.cooldown_factor do
 							coroutine.yield()
 						end
 
@@ -3035,7 +3035,7 @@ scripts.tower_necromancer = {
 
 						hands_raised = false
 					else
-						y_wait(store, this.tower.guard_time)
+						ba.ts = ba.ts + 0.1
 					end
 				end
 
@@ -3455,7 +3455,7 @@ function scripts.tower_pixie.update(this, store)
 			end
 
 			if store.tick_ts - a.ts > a.cooldown * this.tower.cooldown_factor then
-				for _, pixie in pairs(pixies) do
+				for _, pixie in ipairs(pixies) do
 					local target, attack
 					local acc = 0
 
@@ -3481,7 +3481,7 @@ function scripts.tower_pixie.update(this, store)
 
 							if not target then
 								-- block empty
-								y_wait(store, this.tower.guard_time)
+								pixie.attack_ts = pixie.attack_ts + 0.1
 							else
 								enemy_cooldowns[target.id] = store.tick_ts + a.enemy_cooldown * this.tower.cooldown_factor
 								pixie.attack_ts = store.tick_ts
@@ -4204,8 +4204,6 @@ scripts.tower_entwood = {
 		end
 
 		local function do_attack(at)
-			SU.delay_attack(store, at, 0.25)
-
 			local target = U.find_first_enemy(store, tpos(this), 0, a.range, at.vis_flags, at.vis_bans, filter_faerie)
 
 			if target then
@@ -4216,7 +4214,7 @@ scripts.tower_entwood = {
 				loaded = nil
 
 				U.animation_start_group(this, at.animation, nil, store.tick_ts, false, "layers")
-				y_wait(store, at.shoot_time)
+				y_wait(store, at.shoot_time * this.tower.cooldown_factor)
 
 				local bo = at.bullet_start_offset
 				local b = E:create_entity(at.bullet)
@@ -4247,7 +4245,7 @@ scripts.tower_entwood = {
 				return true
 			end
 
-			y_wait(store, this.tower.guard_time)
+			at.ts = at.ts + 0.1
 
 			return false
 		end
@@ -5536,7 +5534,7 @@ function scripts.tower_druid.update(this, store)
 					load_bullet()
 				else
 					-- block empty
-					y_wait(store, this.tower.guard_time)
+					ba.ts = ba.ts + 0.1
 				end
 			end
 
