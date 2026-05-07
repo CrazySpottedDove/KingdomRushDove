@@ -618,7 +618,7 @@ function M.register(sys)
 					h.last_damage_types = bor(h.last_damage_types, d.damage_type)
 
 					if band(d.damage_type, DAMAGE_EAT) ~= 0 then
-						local eat_amt = h.hp
+						local eat_amt = math.max(h.hp, 0)
 
 						d.damage_applied = eat_amt
 						d.damage_result = bor(d.damage_result, DR_KILL)

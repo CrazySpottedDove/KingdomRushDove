@@ -41,36 +41,12 @@ end
 end
 local c_taunt=E:create_entity("taunts_s19_controller")
 LU.queue_insert(store,c_taunt)
-signal.emit("pan-zoom-camera",0,{x=800,y=800},2)
-signal.emit("show-curtains")
-signal.emit("hide-gui")
-signal.emit("start-cinematic")
-U.y_wait(store,1)
 controller_pre_bossfight.render.sprites[1].hidden=false
-S:queue("Stage19NaviraEnter")
-U.y_animation_play(controller_pre_bossfight,"teleport_in",true,store.tick_ts,1)
-U.animation_start(controller_pre_bossfight,"idlecape",true,store.tick_ts,true,1,true)
-U.y_wait(store,0.5)
-signal.emit("show-balloon_tutorial","LV19_NAVIRA_START_01",false)
-U.y_wait(store,3.5)
-signal.emit("show-balloon_tutorial","LV19_NAVIRA_START_02",false)
-U.y_wait(store,3.5)
-U.animation_start(controller_pre_bossfight,"idlecapeout",true,store.tick_ts,false)
-U.y_wait(store,fts(23.5))
 local cape=E:create_entity(controller_pre_bossfight.cape_t)
 cape.pos=V.vclone(controller_pre_bossfight.pos)
 cape.render.sprites[1].ts=store.tick_ts
 cape.tween.ts=store.tick_ts
 LU.queue_insert(store,cape)
-U.animation_start(cape,"run",true,store.tick_ts,true,1,true)
-U.y_animation_wait(controller_pre_bossfight)
-U.animation_start(controller_pre_bossfight,"idle",true,store.tick_ts,true,1,true)
-signal.emit("show-balloon_tutorial","LV19_NAVIRA_START_03",false)
-U.y_wait(store,4)
-signal.emit("hide-curtains")
-signal.emit("pan-zoom-camera",2,{x=440,y=430},OVm(1,1.2))
-signal.emit("show-gui")
-signal.emit("end-cinematic")
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end
