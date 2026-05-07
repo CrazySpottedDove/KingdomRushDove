@@ -12,6 +12,8 @@ end
 require("lib.klua.table")
 require("lib.klua.dump")
 
+local extension_name = IS_ANDROID and ".aluac" or ".luac"
+
 -- 缓存纹理，这些纹理只要进局内肯定会需要加载，就不重复加载卸载了
 local persistent_textures = table.to_map({
 	-- game
@@ -527,7 +529,7 @@ function image_db:preload_atlas_from_bytecode(ref_scale, path, name)
 	self.atlas_uses[name_scale] = 1
 	self.progress = 0
 
-	local group_file = path .. "/" .. name .. (IS_ANDROID and ".aluac" or ".luac")
+	local group_file = path .. "/" .. name .. extension_name
 
 	-- 使用 pcall 进行保护，避免加载不存在的资源文件。如果不存在，报错提醒。
 	-- local info = FS.load(group_file)()

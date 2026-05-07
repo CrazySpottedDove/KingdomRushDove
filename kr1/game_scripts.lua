@@ -11397,7 +11397,8 @@ function scripts.soldier_druid_bear.update(this, store)
 						if slot_pos and not V.veq(slot_pos, this.pos) then
 							U.y_animation_play(this, "stance2idle", nil, store.tick_ts)
 
-							this.health_bar.offset = this.health_bar.offsets.idle
+							-- this.health_bar.offset = this.health_bar.offsets.idle
+							U.change_health_bar_offset_run_time(this.health_bar, this.health_bar.offsets.idle.y)
 							standing = false
 						end
 					end
@@ -11415,7 +11416,8 @@ function scripts.soldier_druid_bear.update(this, store)
 					if not standing then
 						U.y_animation_play(this, "idle2stance", nil, store.tick_ts)
 
-						this.health_bar.offset = this.health_bar.offsets.standing
+						-- this.health_bar.offset = this.health_bar.offsets.standing
+						U.change_health_bar_offset_run_time(this.health_bar, this.health_bar.offsets.standing.y)
 						standing = true
 					end
 
@@ -11430,7 +11432,8 @@ function scripts.soldier_druid_bear.update(this, store)
 			if standing then
 				U.y_animation_play(this, "stance2idle", nil, store.tick_ts)
 
-				this.health_bar.offset = this.health_bar.offsets.idle
+				-- this.health_bar.offset = this.health_bar.offsets.idle
+				U.change_health_bar_offset_run_time(this.health_bar, this.health_bar.offsets.idle.y)
 				standing = false
 			end
 
@@ -36342,7 +36345,8 @@ function scripts.enemy_evolving_scourge.update(this, store)
 						U.y_animation_play(this, "mutation", nil, store.tick_ts)
 					end
 
-					this.health_bar.offset = this.health_bar_offset_config[this.next_phase]
+					-- this.health_bar.offset = this.health_bar_offset_config[this.next_phase]
+					U.change_health_bar_offset_run_time(this.health_bar, this.health_bar_offset_config[this.next_phase].y)
 					this.health_bar.type = this.health_bar_type_config[this.next_phase]
 					this.current_phase = this.next_phase
 
@@ -37943,7 +37947,8 @@ function scripts.enemy_quickfeet_gator.update(this, store)
 								queue_insert(store, bullet)
 
 								a.disabled = true
-								this.health_bar.offset = a.new_health_bar_offset
+								-- this.health_bar.offset = a.new_health_bar_offset
+								U.change_health_bar_offset_run_time(this.health_bar, a.new_health_bar_offset.y)
 
 								SU.y_enemy_animation_wait(this)
 
@@ -39387,7 +39392,8 @@ function scripts.enemy_crocs_hydra.update(this, store)
 			attack_debuff.disabled = false
 			attack_debuff.ts = store.tick_ts
 			this.melee.attacks[1].hit_times = attack_transform.new_hit_times
-			this.health_bar.offset = V.vclone(attack_transform.new_health_bar_offset)
+			-- this.health_bar.offset = V.vclone(attack_transform.new_health_bar_offset)
+			U.change_health_bar_offset_run_time(this.health_bar, attack_transform.new_health_bar_offset.y)
 			this.ui.click_rect = attack_transform.new_click_rect
 			this.unit.size = attack_transform.new_size
 			this.enemy.gold = _gold
@@ -48442,7 +48448,8 @@ function scripts.enemy_ballooning_spider.update(this, store)
 	end
 
 	local function set_flying_vars()
-		this.health_bar.offset = V.vclone(this.takeoff.health_bar_offset)
+		-- this.health_bar.offset = V.vclone(this.takeoff.health_bar_offset)
+		U.change_health_bar_offset_run_time(this.health_bar, this.takeoff.health_bar_offset.y)
 		this.render.sprites[1].offset = V.vclone(this.takeoff.sprite_offset)
 		this.ui.click_rect = this.takeoff.ui_click_rect
 		this.unit.disintegrate_fx = this.takeoff.disintegrate_fx
@@ -48550,7 +48557,8 @@ function scripts.enemy_ballooning_spider.update(this, store)
 					if hp_transition_start < elapsed_time then
 						local hp_elapsed_percentage = easeInOutSine((elapsed_time - hp_transition_start) / hp_transition_duration)
 
-						this.health_bar.offset = V.v(oHPOffset.x + diffHPOffset.x * hp_elapsed_percentage, oHPOffset.y + diffHPOffset.y * hp_elapsed_percentage)
+						-- this.health_bar.offset = V.v(oHPOffset.x + diffHPOffset.x * hp_elapsed_percentage, oHPOffset.y + diffHPOffset.y * hp_elapsed_percentage)
+						U.change_health_bar_offset_run_time(this.health_bar, oHPOffset.y + diffHPOffset.y * hp_elapsed_percentage)
 					end
 				end
 

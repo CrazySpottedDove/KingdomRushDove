@@ -3101,7 +3101,8 @@ function SU.enemy_water_change(store, this)
 			if this.health_bar then
 				if this.water.health_bar_offset then
 					this.health_bar._orig_offset = this.health_bar.offset
-					this.health_bar.offset = this.water.health_bar_offset
+					-- this.health_bar.offset = this.water.health_bar_offset
+					U.change_health_bar_offset_run_time(this.health_bar, this.water.health_bar_offset.y)
 				end
 
 				if this.water.health_bar_hidden then
@@ -3157,7 +3158,8 @@ function SU.enemy_water_change(store, this)
 			U.speed_div_self(this, this.water.speed_factor)
 
 			if this.water.health_bar_offset and this.health_bar._orig_offset then
-				this.health_bar.offset = this.health_bar._orig_offset
+				-- this.health_bar.offset = this.health_bar._orig_offset
+				U.change_health_bar_offset_run_time(this.health_bar, this.health_bar._orig_offset.y)
 			end
 
 			if this.water.health_bar_hidden then

@@ -18593,7 +18593,8 @@ function scripts.mod_tower_sparking_geode_stun.insert(this, store)
 
 	if this.health_bar_offset then
 		this._target_health_bar_offset = V.vclone(target.health_bar.offset)
-		target.health_bar.offset = V.vclone(this.health_bar_offset[target.unit.size])
+		U.change_health_bar_offset_run_time(target.health_bar, this.health_bar_offset[target.unit.size].y)
+	-- target.health_bar.offset = V.vclone(this.health_bar_offset[target.unit.size])
 	end
 
 	U.sprites_hide(target, nil, nil, true)
@@ -18755,7 +18756,8 @@ function scripts.mod_tower_sparking_geode_stun.remove(this, store)
 	end
 
 	if this._target_health_bar_offset then
-		target.health_bar.offset = V.vclone(this._target_health_bar_offset)
+		-- target.health_bar.offset = V.vclone(this._target_health_bar_offset)
+		U.change_health_bar_offset_run_time(target.health_bar, this._target_health_bar_offset.y)
 	end
 
 	U.sprites_show(target, nil, nil, true)

@@ -7211,7 +7211,8 @@ scripts.hero_10yr = {
 			ba.ts = store.tick_ts
 			this.teleport.disabled = true
 			this.is_buffed = true
-			this.health_bar.offset = this.health_bar.offset_buffed
+			-- this.health_bar.offset = this.health_bar.offset_buffed
+			U.change_health_bar_offset_run_time(this.health_bar, this.health_bar.offset_buffed.y)
 
 			U.update_max_speed(this, this.motion.max_speed_buffed)
 
@@ -7237,7 +7238,8 @@ scripts.hero_10yr = {
 			this.health.immune_to = DAMAGE_NONE
 			this.render.sprites[1].prefix = "hero_10yr"
 			this.teleport.disabled = nil
-			this.health_bar.offset = this.health_bar.offset_normal
+			-- this.health_bar.offset = this.health_bar.offset_normal
+			U.change_health_bar_offset_run_time(this.health_bar, this.health_bar.offset_normal.y)
 
 			U.update_max_speed(this, this.motion.max_speed_normal)
 
@@ -8928,7 +8930,8 @@ function scripts.hero_crab.update(this, store)
 					U.y_animation_play(this, "burrow_in", r.pos.x < this.pos.x, store.tick_ts)
 
 					this.health_bar._orig_offset = this.health_bar.offset
-					this.health_bar.offset = b.health_bar_offset
+					-- this.health_bar.offset = b.health_bar_offset
+					U.change_health_bar_offset_run_time(this.health_bar, b.health_bar_offset.y)
 					this.unit._orig_hit_offset = this.unit.hit_offset
 					this.unit.hit_offset = b.hit_offset
 					this.unit._orig_mod_offset = this.unit.mod_offset
@@ -9045,7 +9048,8 @@ function scripts.hero_crab.update(this, store)
 						end
 					end
 
-					this.health_bar.offset = this.health_bar._orig_offset
+					-- this.health_bar.offset = this.health_bar._orig_offset
+					U.change_health_bar_offset_run_time(this.health_bar, this.health_bar._orig_offset.y)
 					this.unit.hit_offset = this.unit._orig_hit_offset
 					this.unit.mod_offset = this.unit._orig_mod_offset
 
@@ -21511,7 +21515,8 @@ function scripts.hero_venom.update(this, store)
 		this._bar_type = this.health_bar.type
 		this._click_rect = table.deepclone(this.ui.click_rect)
 		this._hit_mod_offset = V.vclone(this.unit.hit_offset)
-		this.health_bar.offset = V.vclone(this.beast.health_bar_offset)
+		-- this.health_bar.offset = V.vclone(this.beast.health_bar_offset)
+		U.change_health_bar_offset_run_time(this.health_bar, this.beast.health_bar_offset.y)
 		this.health_bar.type = this.beast.health_bar_type
 		this.ui.click_rect = table.deepclone(this.beast.click_rect)
 		this.unit.hit_offset = V.vclone(this.beast.hit_mod_offset)
@@ -21541,7 +21546,8 @@ function scripts.hero_venom.update(this, store)
 		this.melee.attacks[5].disabled = true
 		-- this.melee.attacks[6].disabled = false
 		eat_enemy_attack.disabled = false
-		this.health_bar.offset = V.vclone(this._bar_offset)
+		-- this.health_bar.offset = V.vclone(this._bar_offset)
+		U.change_health_bar_offset_run_time(this.health_bar, this._bar_offset.y)
 		this.health_bar.type = this._bar_type
 		this.ui.click_rect = table.deepclone(this._click_rect)
 		this.unit.hit_offset = V.vclone(this._hit_mod_offset)

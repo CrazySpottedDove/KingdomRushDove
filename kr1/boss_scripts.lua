@@ -946,11 +946,12 @@ function scripts.eb_veznan.update(this, store)
 	this.enemy.melee_slot = this.demon.melee_slot
 	this.health.hp = initial_hp * 1.5
 	this.health.hp_max = initial_hp * 1.5
-	this.health_bar.offset = this.demon.health_bar_offset
+	-- this.health_bar.offset = this.demon.health_bar_offset
+	U.change_health_bar_offset_run_time(this.health_bar, this.demon.health_bar_offset.y)
 	do
 		local hb = this.health_bar
-		local f1 = hb and hb.frames and hb.frames[1]
-		local f2 = hb and hb.frames and hb.frames[2]
+		local f1 = hb.frames[1]
+		local f2 = hb.frames[2]
 		local sc = this.demon.health_bar_scale
 
 		if f1 and f2 and sc then
@@ -8993,7 +8994,7 @@ function scripts.boss_navira.update(this, store)
 		this.vis.bans = bor(F_BLOCK, F_STUN)
 		U.speed_mul_self(this, this.tornado_speed_mult)
 		this.health_bar._offset_y = this.health_bar.offset.y
-		this.health_bar.offset.y = 115
+		U.change_health_bar_offset_run_time(this.health_bar, 115)
 		this.tornado_aura = E:create_entity(this.tornado_aura_t)
 		this.tornado_aura.aura.source_id = this.id
 
@@ -9028,7 +9029,7 @@ function scripts.boss_navira.update(this, store)
 		this.render.sprites[1].angles.walk = {"idle", "idle"}
 		this.vis.bans = this.vis._bans
 		U.speed_div_self(this, this.tornado_speed_mult)
-		this.health_bar.offset.y = this.health_bar._offset_y
+		U.change_health_bar_offset_run_time(this.health_bar, this.health_bar._offset_y)
 
 		queue_remove(store, this.tornado_aura)
 
@@ -10265,7 +10266,8 @@ function scripts.boss_crocs.update(this, store)
 
 				local next_template = E:get_template(this.next_level_template)
 
-				this.health_bar.offset = V.vclone(next_template.health_bar.offset)
+				-- this.health_bar.offset = V.vclone(next_template.health_bar.offset)
+				U.change_health_bar_offset_run_time(this.health_bar, next_template.health_bar.offset.y)
 
 				local hp_start = this.health.hp
 

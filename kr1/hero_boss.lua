@@ -1765,7 +1765,8 @@ tt.main_script.update = function(this, store)
 		ba.ts = store.tick_ts
 		this.teleport.disabled = true
 		this.is_buffed = true
-		this.health_bar.offset = this.health_bar.offset_buffed
+		-- this.health_bar.offset = this.health_bar.offset_buffed
+		U.change_health_bar_offset_run_time(this.health_bar, this.health_bar.offset_buffed.y)
 
 		if U.update_max_speed then
 			U.update_max_speed(this, this.motion.max_speed_buffed)
@@ -1791,7 +1792,8 @@ tt.main_script.update = function(this, store)
 		this.health.immune_to = DAMAGE_NONE
 		this.render.sprites[1].prefix = "hero_10yr"
 		this.teleport.disabled = nil
-		this.health_bar.offset = this.health_bar.offset_normal
+		-- this.health_bar.offset = this.health_bar.offset_normal
+		U.change_health_bar_offset_run_time(this.health_bar, this.health_bar.offset_normal.y)
 
 		if U.update_max_speed then
 			U.update_max_speed(this, this.motion.max_speed_normal)
