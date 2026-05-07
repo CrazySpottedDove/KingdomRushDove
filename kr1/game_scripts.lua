@@ -32101,11 +32101,14 @@ function scripts.controller_terrain_3_stage_16_glare.update(this, store)
 
 			this.glare_active = false
 
-			queue_remove(store, aura)
+			if aura then
+				queue_remove(store, aura)
+			end
+
 			if decal then
 				U.y_animation_play(decal, "out", nil, store.tick_ts)
+				queue_remove(store, decal)
 			end
-			queue_remove(store, decal)
 		end
 
 		coroutine.yield()

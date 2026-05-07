@@ -3321,6 +3321,7 @@ tt.ui.click_rect = r(-120, -30, 240, 180)
 tt.ui.can_click = true
 tt.info.fn = scripts.controller_stage_16_overseer.get_info
 tt.info.portrait = "kr5_info_portraits_enemies_0043"
+tt.phase = 1
 tt.sound_rumble = "Stage16OverseerRumble"
 tt.sound_unchain_center = "Stage16OverseerUnchainCenter"
 tt.sound_teleport_charge = "Stage16OverseerTeleportCharge"

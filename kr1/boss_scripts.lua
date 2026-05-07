@@ -7313,8 +7313,6 @@ function scripts.controller_stage_16_overseer.get_info(this)
 end
 
 function scripts.controller_stage_16_overseer.update(this, store)
-	this.phase = 1
-
 	local change_phase_ts = store.tick_ts
 	local change_tower_ts = store.tick_ts
 	local destroy_holder_last_ts = store.tick_ts
