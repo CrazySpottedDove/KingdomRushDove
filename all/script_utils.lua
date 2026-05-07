@@ -5002,6 +5002,7 @@ local function enemy_betray_logic(this, store)
 	E:add_comps(this, "nav_rally")
 	U.flags_add(this.vis, F_FRIEND)
 	U.flags_remove(this.vis, F_ENEMY)
+	U.cast_silence(this, store.tick_ts)
 	E:add_comps(this, "soldier", "idle_flip")
 	store.enemy_spatial_index.remove_entity(this)
 	this.soldier.melee_slot_offset:set(this.enemy.melee_slot.x * 0.5, this.enemy.melee_slot.y)
@@ -5068,6 +5069,7 @@ local function enemy_betray_logic(this, store)
 	store.enemies[this.id] = this
 	U.flags_remove(this.vis, F_FRIEND)
 	U.flags_add(this.vis, F_ENEMY)
+	U.remove_silence(this, store.tick_ts)
 	this.nav_path.dir = 1
 	this.nav_rally = nil
 	this.soldier = nil
