@@ -5335,6 +5335,11 @@ function scripts.mod_mark_flags.insert(this, store)
 		return false
 	end
 
+	-- TODO: 我也不知道怎么搞出来这种 target 没有 vis 的情况的，事实上我觉得这一堆 mod_mark_flags 的使用挺何意味的
+	if not target.vis then
+		return false
+	end
+
 	local mf = this.mark_flags
 
 	U.bans_add(target.vis, mf.vis_bans)

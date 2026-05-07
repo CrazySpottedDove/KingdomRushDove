@@ -3078,7 +3078,6 @@ tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
 tt.main_script.insert = scripts.mod_tower_hermit_toad_jump.insert
 
--- TODO 也是何意味mod
 tt = RT("mod_tower_hermit_toad_instakill_mark", "modifier")
 AC(tt, "mark_flags")
 tt.modifier.duration = fts(120)

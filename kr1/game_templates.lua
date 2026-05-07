@@ -21964,7 +21964,6 @@ tt = E:register_t("fx_enemy_fan_guard_melee_hit", "fx")
 tt.render.sprites[1].name = "fan_guard_hit_run"
 tt.render.sprites[1].sort_y_offset = -30
 
--- TODO: 毫无用处的mod，何意味？
 tt = E:register_t("mod_doom_bringer_tower_block_mark", "modifier")
 E:add_comps(tt, "mark_flags")
 tt.modifier.duration = fts(30)

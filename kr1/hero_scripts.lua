@@ -31624,7 +31624,8 @@ function scripts.bullet_hero_dragon_arb_breath_splint.update(this, store, script
 
 	do_damage(false)
 
-	local terrain_type = band(GR:cell_type(this.pos.x, this.pos.y), TERRAIN_TYPES_MASK)
+	-- TODO: 这里 GR:cell_type 返回 nil 相关的报错很奇怪，检查 grid_db 后我认为它应该一定会返回一个正常值，除非这关的 grid 有问题。
+	local terrain_type = band(GR:cell_type(this.pos.x, this.pos.y) or TERRAIN_NONE, TERRAIN_TYPES_MASK)
 
 	if b.payload and terrain_type ~= TERRAIN_WATER then
 		local hp = E:create_entity(table.random(b.payload))
