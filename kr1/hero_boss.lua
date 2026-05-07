@@ -739,6 +739,7 @@ tt.health_bar.offset = v(0, ady(60))
 tt.vis.flags = F_ENEMY
 
 local function inherit_from_hero_template(new_template, old_template)
+
 	local t = RT(new_template, "hero_boss")
 	local old_t = E:get_template(old_template)
 
@@ -794,6 +795,7 @@ local function inherit_from_hero_template(new_template, old_template)
 end
 
 local function inherit_from_soldier_template(new_template, old_template)
+
 	local t = RT(new_template, "enemy")
 	local old_t = E:get_template(old_template)
 
@@ -985,10 +987,9 @@ tt.main_script.update = function(this, store)
 		coroutine.yield()
 	end
 end
+
 tt = RT("mod_eb_gerald_courage", "modifier")
-
 AC(tt, "render")
-
 tt.modifier.duration = 6
 tt.modifier.use_mod_offset = false
 tt.render.sprites[1].name = "mod_gerald_courage"
@@ -1162,10 +1163,12 @@ a.vis_flags = 0
 tt.main_script.insert = scripts.enemy_basic.insert
 tt.main_script.update = scripts.enemy_mixed.update
 tt.info.fn = scripts.enemy_basic.get_info
+
 tt = RT("arrow_eb_alleria", "arrow")
 tt.bullet.flight_time = fts(15)
 tt.bullet.damage_max = 55
 tt.bullet.damage_min = 13
+
 tt = RT("arrow_multishot_eb_alleria", "arrow")
 tt.bullet.particles_name = "ps_arrow_multishot_hero_alleria"
 tt.bullet.damage_min = 15
@@ -1265,6 +1268,7 @@ tt.bullet.flight_time = fts(12)
 tt.bullet.reset_to_target_pos = true
 tt.bullet.damage_type = bor(DAMAGE_PHYSICAL, DAMAGE_NO_DODGE)
 tt.bullet.mod = "mod_enemy_elf_bleed"
+
 tt = RT("arrow_enemy_elf_cripple", "arrow")
 tt.bullet.damage_type = bor(DAMAGE_TRUE, DAMAGE_NO_DODGE)
 tt.bullet.particles_name = "ps_arrow_multishot_hero_alleria"
@@ -1273,6 +1277,7 @@ tt.bullet.mod = "mod_enemy_elf_bleed"
 tt.bullet.flight_time = fts(8)
 tt.bullet.damage_min = 95
 tt.bullet.damage_max = 95
+
 tt = RT("mod_enemy_elf_bleed", "mod_blood")
 tt.dps.damage_max = 20
 tt.dps.damage_min = 20
@@ -1655,10 +1660,12 @@ tt.main_script.update = function(this, store)
 		coroutine.yield()
 	end
 end
+
 tt = RT("spear_enemy_forest_oak", "spear_forest_oak")
 tt.bullet.damage_max = 160
 tt.bullet.damage_min = 160
 tt.bullet.damage_inc = 0
+
 tt = RT("aura_enemy_forest_eerie", "aura_forest_eerie")
 tt.aura.vis_bans = bor(F_FLYING, F_ENEMY)
 tt = inherit_from_hero_template("eb_10yr", "hero_10yr")
@@ -1999,6 +2006,7 @@ tt.main_script.update = function(this, store)
 		coroutine.yield()
 	end
 end
+
 tt = RT("aura_eb_10yr_fireball", "aura_10yr_fireball")
 tt.aura.entity = "fireball_eb_10yr"
 tt.aura.loops = 5
@@ -2049,10 +2057,13 @@ tt.main_script.update = function(this, store)
 
 	queue_remove(store, this)
 end
+
 tt = RT("power_scorched_water_eb_10yr", "power_scorched_water")
 tt.aura.vis_bans = bor(F_ENEMY, F_FLYING)
+
 tt = RT("power_scorched_earth_eb_10yr", "power_scorched_earth")
 tt.aura.vis_bans = bor(F_ENEMY, F_FLYING)
+
 tt = RT("fireball_eb_10yr", "fireball_10yr")
 tt.scorch_earth = true
 tt.main_script.update = function(this, store)
@@ -2164,6 +2175,7 @@ tt.main_script.update = function(this, store)
 end
 tt.bullet.damage_max = 70
 tt.bullet.damage_min = 40
+
 tt = RT("aura_eb_10yr_bomb", "aura_10yr_bomb")
 tt.stun = {
 	vis_flags = bor(F_RANGED, F_STUN),
@@ -2243,12 +2255,15 @@ tt.main_script.update = function(this, store)
 
 	queue_remove(store, this)
 end
+
 tt = RT("mod_eb_10yr_stun", "mod_10yr_stun")
 tt.modifier.vis_bans = F_FLYING
+
 tt = RT("eb_gerald_strong", "eb_gerald")
 tt.health.hp_max = 1600
 tt.enemy.gold = 100
 tt.enemy.lives_cost = 3
+
 tt = RT("eb_alleria_strong", "eb_alleria")
 tt.health.hp_max = 1600
 tt.enemy.gold = 100
@@ -2260,13 +2275,16 @@ a = tt.ranged.attacks[1]
 a.bullet = "arrow_eb_alleria_strong"
 a = tt.ranged.attacks[2]
 a.bullet = "arrow_multishot_eb_alleria_strong"
+
 tt = RT("arrow_eb_alleria_strong", "arrow_eb_alleria")
 tt.bullet.flight_time = fts(15)
 tt.bullet.damage_max = 60
 tt.bullet.damage_min = 40
+
 tt = RT("arrow_multishot_eb_alleria_strong", "arrow_multishot_eb_alleria")
 tt.bullet.damage_min = 40
 tt.bullet.damage_max = 60
+
 tt = RT("enemy_blade_strong", "enemy_blade")
 tt.health.hp_max = 800
 a = tt.melee.attacks[1]
@@ -2274,6 +2292,7 @@ a.cooldown = 0.8
 a.damage_max = 95
 a.damage_min = 75
 tt.enemy.gold = 50
+
 tt = RT("enemy_forest_strong", "enemy_forest")
 tt.health.hp_max = 1200
 a = tt.melee.attacks[1]
@@ -2281,10 +2300,12 @@ a.cooldown = 0.8
 a.damage_max = 95
 a.damage_min = 75
 tt.ranged.attacks[2].bullet = "spear_enemy_forest_oak_strong"
+
 tt = RT("spear_enemy_forest_oak_strong", "spear_enemy_forest_oak")
 tt.bullet.damage_max = 640
 tt.bullet.damage_min = 640
 tt.bullet.damage_inc = 0
+
 tt = RT("eb_10yr_strong", "eb_10yr")
 tt.health.hp_max = 1600
 tt.enemy.gold = 150

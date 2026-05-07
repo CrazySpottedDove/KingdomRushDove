@@ -18,14 +18,11 @@ E:register_c_ffi("pos", pos)
 
 local heading = require("lib.heading")
 E:register_c_ffi("heading", heading.new(1))
--- local heading = E:register_c("heading")
--- heading.angle = 0
 
 local constant_spiked_armor = require("lib.constant_spiked_armor")
 E:register_c_ffi("constant_spiked_armor", constant_spiked_armor.new(0, DAMAGE_PHYSICAL))
 
 local health = E:register_c("health")
-
 health.hp_max = 10
 health.hp = nil
 health.hp_healed = nil
@@ -68,8 +65,8 @@ regen.last_hit_standoff_time = 2
 regen.last_hit_ts = 0
 regen.is_idle = nil
 regen.ts = 0
-local motion = E:register_c("motion")
 
+local motion = E:register_c("motion")
 motion.dest = v(0, 0)
 motion.forced_waypoint = nil
 motion.invulnerable = nil
@@ -79,8 +76,8 @@ motion.buff = 0
 motion.real_speed = 0
 motion.speed = v(0, 0)
 motion.arrived = true
-local force_motion = E:register_c("force_motion")
 
+local force_motion = E:register_c("force_motion")
 force_motion.a = v(0, 0)
 force_motion.v = v(0, 0)
 force_motion.fr = 0.1
@@ -94,24 +91,10 @@ force_motion.ramp_max_factor = 1
 local nav_path = require("lib.nav_path")
 E:register_c_ffi("nav_path", nav_path.new(1, 1, 1, 1))
 
--- local nav_path = E:register_c("nav_path")
--- nav_path.pi = 1
--- nav_path.spi = 1
--- nav_path.ni = 1
--- nav_path.dir = 1
-
 local nav_rally = require("lib.nav_rally")
 E:register_c_ffi("nav_rally", nav_rally.new(v(0, 0), v(0, 0), band(DAMAGE_ALL_TYPES, bnot(DAMAGE_POISON)), true, false))
 
--- local nav_rally = E:register_c("nav_rally")
--- nav_rally.pos = v(0, 0)
--- nav_rally.center = nil
--- nav_rally.requires_node_nearby = true
--- nav_rally.immune_to = band(DAMAGE_ALL_TYPES, bnot(DAMAGE_POISON))
--- nav_rally.new = false
-
 local nav_grid = E:register_c("nav_grid")
-
 nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_ICE)
 nav_grid.valid_terrains_dest = bor(TERRAIN_LAND, TERRAIN_ICE)
 nav_grid.waypoints = {}
@@ -131,7 +114,6 @@ tween_prop.time_offset = nil
 tween_prop.ts = nil
 
 -- Runtime fields (9): --   disabled, ignore_reverse, interp, interp_fn, keys, loop, name, sprite_id, ts
-
 local tween = E:register_c("tween")
 tween.props = {}
 tween.props[1] = E:clone_c("tween_prop")
@@ -146,10 +128,9 @@ tween.random_ts = nil
 
 local timed = require("lib.timed")
 E:register_c_ffi("timed", timed.new(FLOAT_MAX, 1, 1))
+
 -- disabled 键被 dove 版删除，取而代之的是 runs = 1 / runs = INT_32_MAX。
-
 local delayed_play = E:register_c("delayed_play")
-
 delayed_play.min_delay = 1
 delayed_play.max_delay = 5
 delayed_play.play_duration = nil
@@ -171,20 +152,20 @@ delayed_play.achievement = nil
 delayed_play.achievement_flag = nil
 delayed_play.disabled = nil
 delayed_play.delay = nil
-local sequence = E:register_c("sequence")
 
+local sequence = E:register_c("sequence")
 sequence.steps = {}
 sequence.fxs = {}
 sequence.sprite_id = 1
 sequence.loop = false
-local delayed_sequence = E:register_c("delayed_sequence")
 
+local delayed_sequence = E:register_c("delayed_sequence")
 delayed_sequence.animations = {}
 delayed_sequence.min_delay = 1
 delayed_sequence.max_delay = 5
 delayed_sequence.random = nil
-local click_play = E:register_c("click_play")
 
+local click_play = E:register_c("click_play")
 click_play.idle_animation = "idle"
 click_play.click_animation = "clicked"
 click_play.required_clicks = 1
@@ -234,13 +215,11 @@ sprite.sync_flag = nil
 -- Runtime fields (31): --   _width, alpha, anchor, angles, animated, color, delay_start, draw_order, exclude_mod_offset, exo, exo_hide_prefix, flip_x, group, hidden, hidden_count,
 --   hide_after_runs, ignore_start, loop, name, offset, pos, prefix, r, scale, scale_mult, size_names, size_prefix, size_scales, sort_y_offset, sprite_id,
 --   z
-
 local render = E:register_c("render")
-
 render.sprites = {}
 render.sprites[1] = E:clone_c("sprite")
-local text = E:register_c("text")
 
+local text = E:register_c("text")
 text.text = ""
 text.size = v(0, 0)
 text.font = "Comic Book Italic-13"
@@ -250,9 +229,9 @@ text.sprite_id = nil
 text.debug_bg = nil
 
 local texts = E:register_c("texts")
-
 texts.list = {}
 texts.list[1] = E:clone_c("text")
+
 local particle_system = E:register_c("particle_system")
 particle_system.alphas = {255}
 particle_system.anchor = v(0.5, 0.5)
@@ -296,15 +275,15 @@ particle_system.last_pos = v(0, 0)
 particle_system.frames = {}
 particle_system.particles = {}
 particle_system.particle_count = 0
-local main_script = E:register_c("main_script")
 
+local main_script = E:register_c("main_script")
 main_script.insert = nil
 main_script.update = nil
 main_script.remove = nil
 main_script.runs = 1
 main_script.co = nil
-local power = E:register_c("power")
 
+local power = E:register_c("power")
 power.max_level = 3
 power.level = 0
 power.price_base = 0
@@ -315,14 +294,12 @@ power.enc_icon = nil
 power.on_power_upgrade = nil
 
 -- Runtime fields (4): --   attack_cooldown, damage_factor, price_base, price_inc
-
 local powers = E:register_c("powers")
-local user_power = E:register_c("user_power")
 
+local user_power = E:register_c("user_power")
 user_power.level = 1
 
 local water = E:register_c("water")
-
 water.vis_bans = bor(F_BLOCK, F_SKELETON)
 water.sprite_suffix = "_water"
 water.angles_flip_vertical = {
@@ -334,8 +311,8 @@ water.mod_offset = nil
 water.health_bar_offset = nil
 water.health_bar_hidden = nil
 water.last_terrain_type = nil
-local cliff = E:register_c("cliff")
 
+local cliff = E:register_c("cliff")
 cliff.vis_bans = bor(F_BLOCK, F_SKELETON, F_BURN, F_DRILL)
 cliff.sprite_suffix = "_cliff"
 cliff.hide_sprite_ids = nil
@@ -345,7 +322,6 @@ cliff.last_terrain_type = nil
 cliff.fall_to_pos = nil
 
 local user_selection = E:register_c("user_selection")
-
 user_selection.allowed = false
 user_selection.custom_pointer_name = nil
 user_selection.in_progress = nil
@@ -354,8 +330,8 @@ user_selection.can_select_point_fn = nil
 user_selection.ignore_point = nil
 user_selection.new_pos = nil
 user_selection.arg = nil
-local ui = E:register_c("ui")
 
+local ui = E:register_c("ui")
 ui.can_click = true
 ui.can_select = true
 ui.can_hover = nil
@@ -372,8 +348,8 @@ ui.has_nav_mesh = nil
 ui.nav_mesh_id = nil
 ui.hover_sprite_name = nil
 ui.hover_sprite_anchor = nil
-local info = E:register_c("info")
 
+local info = E:register_c("info")
 info.fn = nil
 info.portrait = nil
 info.hero_portrait = nil
@@ -382,8 +358,8 @@ info.enc_icon = nil
 info.damage_icon = nil
 info.ultimate_icon = nil
 info.ultimate_pointer_style = nil
-local unit = E:register_c("unit")
 
+local unit = E:register_c("unit")
 unit.name = nil
 unit.size = UNIT_SIZE_SMALL
 unit.blood_color = BLOOD_RED
@@ -410,8 +386,8 @@ unit.spawner_id = nil
 unit.price = 0
 unit.cooldown_factor = 1
 unit.damage_buff = 0
-local tower = E:register_c("tower")
 
+local tower = E:register_c("tower")
 tower.can_be_mod = true
 tower.can_be_sold = true
 tower.can_do_magic = true
@@ -439,21 +415,20 @@ tower.holder_id = nil
 tower.sell = nil
 tower.spent = 0
 tower.upgrade_to = nil
-local tower_holder = E:register_c("tower_holder")
 
+local tower_holder = E:register_c("tower_holder")
 tower_holder.blocked = false
 tower_holder.unblock_price = 0
 tower_holder.preview_ids = {}
 tower_holder.custom = nil
-local tower_upgrade_persistent_data = E:register_c("tower_upgrade_persistent_data")
 
+local tower_upgrade_persistent_data = E:register_c("tower_upgrade_persistent_data")
 tower_upgrade_persistent_data.current_mode = 0
 tower_upgrade_persistent_data.max_current_mode = 0
 tower_upgrade_persistent_data.upgrade_functions = {}
+
 -- Runtime fields (7): --   current_golems, current_skeletons, current_skulls, fire_skulls, skeletons_ref, skulls_ref, swaped
-
 local enemy = E:register_c("enemy")
-
 enemy.can_do_magic = true
 enemy.can_accept_magic = true
 enemy.blockers = {}
@@ -466,28 +441,28 @@ enemy.gold_bag = 0
 enemy.lives_cost = 1
 enemy.counts = {}
 enemy.remove_at_goal_line = true
-local soldier = E:register_c("soldier")
 
+local soldier = E:register_c("soldier")
 soldier.name = nil
 soldier.tower_id = nil
 soldier.melee_slot_offset = v(0, 0)
 soldier.target_id = nil
 soldier.courage_ts = 0
 soldier.last_block_ts = 0
-local reinforcement = E:register_c("reinforcement")
 
+local reinforcement = E:register_c("reinforcement")
 reinforcement.duration = 21
 reinforcement.fade = true
 reinforcement.fade_in = nil
 reinforcement.fade_out = nil
 reinforcement.hp_before_timeout = nil
-local lifespan = E:register_c("lifespan")
 
+local lifespan = E:register_c("lifespan")
 lifespan.duration = 21
 lifespan.fade = false
 lifespan.ts = 0
-local hero = E:register_c("hero")
 
+local hero = E:register_c("hero")
 hero.level = 1
 hero.xp = 0
 hero.xp_queued = 0
@@ -497,8 +472,8 @@ hero.stage_hero = nil
 hero.tombstone_show_time = nil
 hero.tombstone_decal = "decal_hero_tombstone"
 hero.respawn_point = nil
-local hero_skill = E:register_c("hero_skill")
 
+local hero_skill = E:register_c("hero_skill")
 hero_skill.name = nil
 hero_skill.level = 0
 hero_skill.xp_gain_factor = 1
@@ -507,13 +482,12 @@ hero_skill.xp_level_steps = nil
 hero_skill.hr_order = 1
 hero_skill.hr_cost = nil
 hero_skill.hr_icon = nil
+
 -- Runtime fields (49): --   area_damage_max, area_damage_min, attack_cooldown, bounces, controller_name, cooldown, damage, damage_factor, damage_max, damage_max_flier, damage_min, damage_min_flier, damage_speed_ratio, damage_total, distance,
 --   duration, entity, extra_armor, extra_magic_armor, heal, heal_hp, heal_max, heal_min, hp_max, inflicted_damage_factor, instakill_chance, max_mines, max_range, max_summons, max_targets,
 --   min_distance_from_end, mod, pole_amounts, skip_confirmation, slow_duration, slow_factor, smash_chance, smash_damage_max, smash_damage_min, speed_factor, stun_duration, target_damage_max, target_damage_min, wisp_damage_max, wisp_damage_min,
 --   wisp_duration, xp_gain, xp_gain_factor, xp_level_steps
-
 local barrack = E:register_c("barrack")
-
 barrack.max_soldiers = 3
 barrack.soldier_type = ""
 barrack.rally_range = 0
@@ -529,8 +503,8 @@ barrack.soldiers = {}
 barrack.rally_pos = nil
 barrack.rally_new = false
 barrack.unit_bought = nil
-local melee_attack = E:register_c("melee_attack")
 
+local melee_attack = E:register_c("melee_attack")
 melee_attack.type = "melee"
 melee_attack.animation = "attack"
 melee_attack.duration = nil
@@ -575,12 +549,11 @@ melee_attack.track_damage = nil
 melee_attack.pop = {"pop_sok", "pop_pow"}
 melee_attack.pop_chance = 0.1
 melee_attack.ts = 0
+
 -- Runtime fields (44): --   action_time_eat, animation, animations, area_damage_max, area_damage_min, area_damage_radius, area_damage_type, area_vis_bans, area_vis_flags, basic_attack, cooldown, cooldown_init, damage_bans, damage_flags, damage_max,
 --   damage_min, damage_radius, damage_type, disabled, fn_can, hit_damage_factor, hit_fx, hit_fx_offset, hit_offset, hit_time, hit_times, hp_threshold, instakill, loops, min_cooldown,
 --   mod, shared_cooldown, sound, sound_args, staff_appear_time, staff_dust_template_back, staff_dust_template_front, staff_offset, staff_template, type, vis_bans, vis_flags, xp_from_skill, xp_gain_factor
-
 local spell_attack = E:register_c("spell_attack")
-
 spell_attack.type = "spell"
 spell_attack.spell = ""
 spell_attack.animation = "cast"
@@ -593,8 +566,8 @@ spell_attack.vis_flags = 0
 spell_attack.vis_bans = 0
 spell_attack.sound = nil
 spell_attack.ts = 0
-local bullet_attack = E:register_c("bullet_attack")
 
+local bullet_attack = E:register_c("bullet_attack")
 bullet_attack.animation = "shoot"
 bullet_attack.bullet = ""
 bullet_attack.bullet_start_offset = nil
@@ -626,15 +599,14 @@ bullet_attack.vis_flags = F_RANGED
 bullet_attack.count = 0
 bullet_attack.ts = 0
 bullet_attack.target_pos = nil
+
 -- Runtime fields (86): --   allowed_templates, animation, animation_cancelled, animation_end, animation_in, animation_loop, animation_out, animation_start, animations, aura, basic_attack, bullet, bullet_flier, bullet_ray, bullet_spikes,
 --   bullet_start_offset, cast_time, chance, cooldown, cooldown_max, cooldown_min, damage_radius, decal, disabled, duration, exclude_tower_kind, excluded_templates, filter_targets_with_mod, first_cooldown, fx,
 --   ignore_out_of_range_check, jump_damage_max, jump_damage_min, jump_damage_radius, jump_damage_times, jump_damage_type, jump_damage_vis_bans, jump_damage_vis_flags, loop_times, loops, mark_mod, max_angle, max_angle_fliers, max_casts, max_count,
 --   max_flight_time, max_nodes_range, max_range, max_targets, min_flight_time, min_nodes_range, min_range, min_targets, mod, new_anim_prefix, new_health_bar_offset, node_prediction, node_prediction_base, nodes_limit, only_while_blocked,
 --   plant_dark_army, plant_linirea, prediction_time, reset_to_target_pos, self_nodes_from_start, shared_cooldown, shoot_time, shoot_times, shoots_delay, shots_delay, sound, sound_destroy, spawn, spawn_evolved, spawn_max_range_to_enemy,
 --   spikes_fx, spikes_fx_offset, sync_animation, target_nodes_from_start, ultimate_fx, ultimate_fx_offset, vis_bans, vis_flag, vis_flags, xp_from_skill, xp_gain_factor
-
 local area_attack = E:register_c("area_attack")
-
 area_attack.animation = "attack"
 area_attack.chance = 1
 area_attack.cooldown = nil
@@ -667,13 +639,12 @@ area_attack.vis_flags = F_RANGED
 area_attack.damage_bans = F_FLYING
 area_attack.damage_flags = F_AREA
 area_attack.ts = 0
+
 -- Runtime fields (52): --   absorb_radius, absorb_time, animation, animation_end_fail, animation_end_success, animation_loop, animation_start, bullet, cast_time, chance, cooldown, cooldown_init, damage_bans, damage_max, damage_min,
 --   damage_radius, damage_type, decal, disabled, drain_center_offset, first_cooldown, fx, fx_end_units, hit_decal, hit_decal_offset, hit_fx, hit_fx_offset, hit_offset, hit_time, hit_times,
 --   include_blocked, loop_duration, max_damage, max_range, max_targets, min_count, min_damage, min_range, min_targets, minimum_fires, mod, mod_end, mod_loop, mod_loop_every, nodes_limit,
 --   removes_charged_status, sound, sound_args, sound_hit, uninterruptible, vis_bans, vis_flags
-
 local aura_attack = E:register_c("aura_attack")
-
 aura_attack.type = "aura"
 aura_attack.bullet = nil
 aura_attack.cooldown = nil
@@ -682,9 +653,7 @@ aura_attack.ts = 0
 
 -- Runtime fields (23): --   animation, animation_end, animation_in, animation_loop, aura, aura_offset, cast_time, cooldown, disabled, duration, hit_time, max_range, max_range_effect, max_range_trigger, min_targets,
 --   name, node_prediction, nodes_limit_end, nodes_limit_start, sound, vis_bans, vis_flags, xp_from_skill
-
 local mod_attack = E:register_c("mod_attack")
-
 mod_attack.type = "mod"
 mod_attack.mod = nil
 mod_attack.cast_time = nil
@@ -692,12 +661,11 @@ mod_attack.chance = 1
 mod_attack.vis_flags = 0
 mod_attack.vis_bans = 0
 mod_attack.ts = 0
+
 -- Runtime fields (44): --   animation, animation_end, animation_start, aura_name, bullet, bullet_start_offset, cast_fx, cast_time, cooldown, damage_max, damage_min, damage_type, decal_stun, decal_warning, disabled,
 --   drain_time, duration, enabled, excluded_templates, first_cooldown_max, first_cooldown_min, heal_hp_damage_factor, heal_hp_fixed, hit_time, holders_ids, hp_trigger_factor, lost_health, markDurationOffset, markMod, max_count,
 --   max_range, max_targets, min_cooldown, min_range, min_targets, mod, mod_stun_wardens, nodes_limit, range, shoot_time, sound, stun_fliers, vis_bans, vis_flags
-
 local spawn_attack = E:register_c("spawn_attack")
-
 spawn_attack.type = "spawn"
 spawn_attack.entity = ""
 spawn_attack.cooldown = nil
@@ -710,13 +678,13 @@ spawn_attack.vis_flags = 0
 spawn_attack.disabled = nil
 
 local custom_attack = E:register_c("custom_attack")
-
 custom_attack.type = "custom"
 custom_attack.cooldown = nil
 custom_attack.chance = 1
 custom_attack.ts = 0
 custom_attack.vis_flags = 0
 custom_attack.vis_bans = 0
+
 -- Runtime fields (247): --   action_time_eat, action_time_mod, action_time_shoot, activate_on_positions, allies_health_threshold, allowed_template, allowed_templates, ally_count_needed, amount, animation, animation_canceled, animation_completed, animation_end, animation_in, animation_in_fx,
 --   animation_loop, animation_out, animation_start, animations, anime_fx, anime_fx_back_black, anime_fx_back_white, area_damage_max, area_damage_min, area_damage_radius, area_damage_type, area_offset, aura, aura_decal, available_paths,
 --   blocker_charge_delay, build_speed, bullet, bullet_aim_height, bullet_flier, bullet_mod, bullet_spawn_pos, bullet_start_offset, cached_radius, cancelled_cooldown, cast_sound, cast_time, casts, charge_in_speed, charge_while_blocked,
@@ -734,9 +702,7 @@ custom_attack.vis_bans = 0
 --   spawn_pos, spawn_time, spawns, speed, speed_mult, staff_floor_fx, staff_template, stun_decal, stun_fx1, stun_fx2, stun_mod, stun_sound, summon_floor_fx, summon_time, target_damage_max,
 --   target_damage_min, target_damage_type, target_nodes_limit, towers_mod, towers_mod_mark, tp_nodes_offset, tp_speed, trail, trigger_range, ts, use_custom_formation, vis_bans, vis_bans_enemies, vis_bans_soldiers, vis_bans_stun,
 --   vis_flags, vis_flags_enemies, vis_flags_soldiers, vis_flags_stun, warning_duration, wave_decal, xp_from_skill
-
 local melee = E:register_c("melee")
-
 melee.continue_in_cooldown = nil
 melee.range = nil
 melee.cooldown = nil
@@ -750,7 +716,6 @@ melee.last_attack = nil
 melee.forced_ts = 0
 
 local ranged = E:register_c("ranged")
-
 ranged.range = nil
 ranged.cooldown = nil
 ranged.forced_cooldown = nil
@@ -761,26 +726,24 @@ ranged.attacks[1] = E:clone_c("bullet_attack")
 ranged.order = {1}
 ranged.forced_ts = 0
 ranged.last_range_ts = 0
+
 local timed_attacks = E:register_c("timed_attacks")
-
 timed_attacks.list = {}
-local timed_actions = E:register_c("timed_actions")
 
+local timed_actions = E:register_c("timed_actions")
 timed_actions.list = {}
 
 local attacks = E:register_c("attacks")
-
 attacks.range = 0
 attacks.cooldown = nil
 attacks.hide_range = nil
 attacks.list = {}
 attacks.order = {}
-local auras = E:register_c("auras")
 
+local auras = E:register_c("auras")
 auras.list = {}
 
 local revive = E:register_c("revive")
-
 revive.disabled = true
 revive.chance = 0
 revive.health_recover = 0
@@ -797,7 +760,6 @@ revive.resist = nil
 revive.protect = 0
 
 local death_spawns = E:register_c("death_spawns")
-
 death_spawns.name = ""
 death_spawns.quantity = 1
 death_spawns.spread_nodes = 0
@@ -808,8 +770,8 @@ death_spawns.spawn_animation = nil
 death_spawns.no_spawn_damage_types = nil
 death_spawns.fx = nil
 death_spawns.fx_flip_to_source = nil
-local dodge = E:register_c("dodge")
 
+local dodge = E:register_c("dodge")
 dodge.chance = 0
 dodge.cooldown = nil
 dodge.animation = nil
@@ -825,25 +787,21 @@ dodge.ts = 0
 dodge.last_attack = nil
 
 local vis = E:register_c("vis")
-
 vis.flags = 0
 vis.bans = 0
 
 local cloak = E:register_c("cloak")
-
 cloak.flags = 0
 cloak.bans = 0
 cloak.alpha = nil
 
 local pickpocket = E:register_c("pickpocket")
-
 pickpocket.chance = 0
 pickpocket.chance_inc = nil
 pickpocket.steal_min = 0
 pickpocket.steal_max = 0
 
 local idle_flip = E:register_c("idle_flip")
-
 idle_flip.cooldown = 5
 idle_flip.chance = 0.4
 idle_flip.walk_dist = 0
@@ -855,7 +813,6 @@ idle_flip.last_animation = "idle"
 idle_flip.ts_counter = 0
 
 local spawner = E:register_c("spawner")
-
 spawner.allowed_subpaths = {1, 2, 3}
 spawner.animation_loop = nil
 spawner.animation_end = nil
@@ -884,8 +841,8 @@ spawner.spi = nil
 spawner.ni = nil
 spawner.interrupt = nil
 spawner.spawn_data = nil
-local graveyard = E:register_c("graveyard")
 
+local graveyard = E:register_c("graveyard")
 graveyard.dead_time = 0.5
 graveyard.spawn_interval = 0.1
 graveyard.spawns_by_health = nil
@@ -897,17 +854,14 @@ graveyard.vis_has = 0
 graveyard.pi = nil
 
 local track_kills = E:register_c("track_kills")
-
 track_kills.mod = nil
 track_kills.killed = {}
 
 local track_damage = E:register_c("track_damage")
-
 track_damage.mod = nil
 track_damage.damaged = {}
 
 local modifier = E:register_c("modifier")
-
 modifier.target_id = nil
 modifier.source_id = nil
 modifier.level = 1
@@ -932,8 +886,8 @@ modifier.ts = 0
 modifier.type = nil
 -- damage_hooks
 modifier.damage_hooks = {}
-local dps = E:register_c("dps")
 
+local dps = E:register_c("dps")
 dps.damage_min = 0
 dps.damage_max = 0
 dps.damage_inc = 0
@@ -946,8 +900,8 @@ dps.fx_target_flip = nil
 dps.fx_every = nil
 dps.fx_tracks_target = nil
 dps.ts = 0
-local hps = E:register_c("hps")
 
+local hps = E:register_c("hps")
 hps.heal_every = 1
 hps.heal_min = 0
 hps.heal_max = 0
@@ -955,8 +909,8 @@ hps.heal_min_inc = nil
 hps.heal_max_inc = nil
 hps.fx = nil
 hps.ts = 0
-local armor_buff = E:register_c("armor_buff")
 
+local armor_buff = E:register_c("armor_buff")
 armor_buff.magic = false
 armor_buff.max_factor = 0
 armor_buff.step_factor = 0
@@ -964,21 +918,17 @@ armor_buff.cycle_time = 1
 armor_buff.factor = nil
 
 local heal_on_kill = E:register_c("heal_on_kill")
-
 heal_on_kill.hp = nil
 
 local slow = E:register_c("slow")
-
 slow.factor = 0.5
 slow.factor_inc = nil
 
 local fast = E:register_c("fast")
-
 fast.factor = 1
 fast.factor_inc = nil
 
 local bullet = E:register_c("bullet")
-
 bullet.acceleration_factor = nil
 bullet.align_with_trajectory = nil
 bullet.asymmetrical = nil
@@ -1079,8 +1029,8 @@ sound_events.insert_args = nil
 sound_events.remove_args = nil
 sound_events.death_args = nil
 sound_events.new_node_args = nil
-local tunnel = E:register_c("tunnel")
 
+local tunnel = E:register_c("tunnel")
 tunnel.pick_pi = nil
 tunnel.pick_ni = nil
 tunnel.place_pi = nil
@@ -1094,24 +1044,20 @@ tunnel.place_fx = nil
 tunnel.name = nil
 
 local count_group = E:register_c("count_group")
-
 count_group.name = nil
 count_group.type = COUNT_GROUP_CONCURRENT
 count_group.in_limbo = nil
 
 local mark_flags = E:register_c("mark_flags")
-
 mark_flags.vis_bans = 0
 mark_flags.vis_flags = 0
 
 local teleport = E:register_c("teleport")
-
 teleport.min_distance = 0
 teleport.animations = {"teleport_out", "teleport_in"}
 teleport.delay = 0
 
 local polymorph = E:register_c("polymorph")
-
 polymorph.custom_entity_names = {}
 polymorph.custom_entity_names.default = nil
 polymorph.hit_fx_sizes = nil
@@ -1121,7 +1067,6 @@ polymorph.transfer_health_factor = nil
 polymorph.transfer_speed_factor = nil
 
 local selfdestruct = E:register_c("selfdestruct")
-
 selfdestruct.animation = "selfdestruct"
 selfdestruct.damage = nil
 selfdestruct.damage_min = nil
@@ -1139,7 +1084,6 @@ selfdestruct.vis_flags = F_RANGED
 selfdestruct.xp_from_skill = nil
 
 local taunts = E:register_c("taunts")
-
 taunts.delay_min = 15
 taunts.delay_max = 20
 taunts.duration = 4
@@ -1150,7 +1094,6 @@ taunts.ts = 0
 taunts.next_ts = 0
 
 local taunt_set = E:register_c("taunt_set")
-
 taunt_set.format = nil
 taunt_set.start_idx = 1
 taunt_set.end_idx = 1
@@ -1159,7 +1102,6 @@ taunt_set.decal_name = nil
 taunt_set.pos = nil
 
 local moon = E:register_c("moon")
-
 moon.active = nil
 moon.speed_factor = nil
 moon.damage_factor = nil
@@ -1168,30 +1110,26 @@ moon.transform_name = nil
 moon.lifesteal_damage_factor = nil
 
 local endless = E:register_c("endless")
-
 endless.factor_map = nil
 
 local plant = E:register_c("plant")
-
 plant.block_count = 0
 plant.blocked = nil
 
 local crystal = E:register_c("crystal")
-local transfer = E:register_c("transfer")
 
+local transfer = E:register_c("transfer")
 transfer.min_distance = 0
 transfer.animations = {"transfer_start", "transfer_loop", "transfer_end"}
 transfer.extra_speed = 3 * FPS
 
 local editor = E:register_c("editor")
-
 editor.game_mode = 0
 editor.scaffold = nil
 editor.props = nil
 editor.device_profile = nil
 
 local editor_script = E:register_c("editor_script")
-
 editor_script.insert = nil
 editor_script.remove = nil
 editor_script.update = nil
@@ -1199,25 +1137,21 @@ editor_script.runs = 1
 editor_script.co = nil
 
 local light = E:register_c("light")
-
 light.radius = 0
+
 local lights = E:register_c("lights")
-
 lights[1] = E:clone_c("light")
-local cheats_text_button = E:register_c("cheats_text_button")
 
+local cheats_text_button = E:register_c("cheats_text_button")
 cheats_text_button.text = nil
 cheats_text_button.fn = nil
 
 -- Runtime fields (2): --   fn, text
-
 local cheats = E:register_c("cheats")
-
 cheats.buttons = {}
 cheats.buttons[1] = E:clone_c("cheats_text_button")
 
 local glare_kr5 = E:register_c("glare_kr5")
-
 glare_kr5.active = nil
 glare_kr5.regen_hp = 0
 glare_kr5.speed_factor = nil
@@ -1226,7 +1160,6 @@ glare_kr5.on_start_glare = nil
 glare_kr5.on_end_glare = nil
 
 local corruption_kr5 = E:register_c("corruption_kr5")
-
 corruption_kr5.count = 0
 corruption_kr5.limit = 3
 corruption_kr5.on_corrupt = nil
@@ -1234,13 +1167,11 @@ corruption_kr5.spawn = nil
 corruption_kr5.enabled = true
 
 local event = E:register_c("event")
-
 event.name = nil
 event.on_event = nil
 event.entity_id = nil
+
 -- Runtime fields (2): --   name, on_event
-
 local events = E:register_c("events")
-
 events.list = {}
 events.list[1] = E:clone_c("event")

@@ -33,7 +33,6 @@ local function ady(v)
 end
 
 local damage = E:register_t("damage")
-
 damage.damage_type = DAMAGE_TRUE
 damage.value = 0
 damage.reduce_armor = 0
@@ -57,45 +56,35 @@ damage.xp_gain_factor = nil
 damage.hooks = {}
 
 local decal = E:register_t("decal")
-
 E:add_comps(decal, "pos", "render")
 
 local decal_timed = E:register_t("decal_timed", "decal")
-
 E:add_comps(decal_timed, "timed")
-
 decal_timed.render.sprites[1].loop = false
 
 local decal_tween = E:register_t("decal_tween", "decal")
-
 E:add_comps(decal_tween, "tween")
-
 decal_tween.tween.remove = true
 
 local decal_scripted = E:register_t("decal_scripted", "decal")
-
 E:add_comps(decal_scripted, "main_script")
 
 tt = E:register_t("decal_static", "decal")
-
 E:add_comps(tt, "editor")
-
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].scale = v(1, 1)
 tt.editor.props = {{"render.sprites[1].name", PT_STRING}, {"render.sprites[1].scale", PT_COORDS}, {"render.sprites[1].r", PT_NUMBER, math.pi / 180}}
+
 tt = E:register_t("decal_loop", "decal")
-
 E:add_comps(tt, "editor")
-
 tt.render.sprites[1].random_ts = 1
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].scale = v(1, 1)
 tt.editor.props = {{"render.sprites[1].name", PT_STRING}, {"render.sprites[1].scale", PT_COORDS}, {"render.sprites[1].r", PT_NUMBER, math.pi / 180}}
+
 tt = E:register_t("decal_delayed_play", "decal")
-
 E:add_comps(tt, "main_script", "delayed_play", "editor")
-
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].scale = v(1, 1)
 tt.main_script.update = scripts.delayed_play.update
@@ -104,42 +93,36 @@ tt.editor.overrides = {
 	["render.sprites[1].hidden"] = false,
 	["render.sprites[1].loop"] = true
 }
+
 tt = E:register_t("decal_delayed_click_play", "decal")
-
 E:add_comps(tt, "main_script", "delayed_play", "ui")
-
 tt.render.sprites[1].loop = false
 tt.main_script.update = scripts.delayed_play.update
 tt.ui.can_click = true
+
 tt = E:register_t("decal_click_play", "decal")
-
 E:add_comps(tt, "main_script", "click_play", "ui")
-
 tt.render.sprites[1].loop = false
 tt.main_script.update = scripts.click_play.update
 tt.ui.can_click = true
+
 tt = E:register_t("decal_click_pause", "decal")
-
 E:add_comps(tt, "main_script", "ui")
-
 tt.main_script.update = scripts.click_pause.update
 tt.ui.can_click = true
+
 tt = E:register_t("decal_sequence", "decal")
-
 E:add_comps(tt, "main_script", "sequence")
-
 tt.main_script.update = scripts.sequence.update
 tt.render.sprites[1].loop = false
+
 tt = E:register_t("decal_delayed_sequence", "decal")
-
 E:add_comps(tt, "main_script", "delayed_sequence")
-
 tt.main_script.update = scripts.delayed_sequence.update
 tt.render.sprites[1].loop = false
+
 tt = E:register_t("decal_background", "decal")
-
 E:add_comps(tt, "editor")
-
 tt.render.sprites[1].animated = false
 tt.pos = v(REF_W * 0.5, REF_H * 0.5)
 tt.editor.props = {{"render.sprites[1].name", PT_STRING}, {"render.sprites[1].z", PT_NUMBER, 1}, {"render.sprites[1].sort_y", PT_NUMBER, 1}}
@@ -174,36 +157,38 @@ tt.render.sprites[1].name = "decal_defense_flag_water"
 tt.render.sprites[1].anchor = v(0.5, 0.12962962962962962)
 
 local decal_bomb_crater = E:register_t("decal_bomb_crater", "decal_tween")
-
 decal_bomb_crater.tween.props[1].keys = {{1, 255}, {2.5, 0}}
 decal_bomb_crater.render.sprites[1].name = "decal_bomb_crater"
 decal_bomb_crater.render.sprites[1].animated = false
+
 tt = E:register_t("decal_ground_hit", "decal_timed")
 tt.render.sprites[1].name = "ground_hit_decal"
 tt.render.sprites[1].z = Z_DECALS
+
 tt = E:register_t("decal_entity_marker_small", "decal")
 tt.render.sprites[1].name = "selected_small"
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].animated = false
+
 tt = E:register_t("decal_entity_marker_med", "decal_entity_marker_small")
 tt.render.sprites[1].name = "selected_med"
+
 tt = E:register_t("decal_entity_marker_big", "decal_entity_marker_small")
 tt.render.sprites[1].name = "selected_big"
+
 tt = E:register_t("decal_entity_marker_soldier_small", "decal_entity_marker_small")
 tt.render.sprites[1].name = "selected_soldier_small"
+
 tt = E:register_t("entity_marker_controller")
-
 E:add_comps(tt, "main_script")
-
 tt.main_script.insert = scripts.entity_marker_controller.insert
 tt.main_script.update = scripts.entity_marker_controller.update
 tt.target = nil
 tt.done = nil
+
 -- banned for no assets
 tt = E:register_t("clickable_hover_controller")
-
 E:add_comps(tt, "main_script", "render", "tween")
-
 tt.main_script.insert = scripts.clickable_hover_controller.insert
 tt.main_script.update = scripts.clickable_hover_controller.update
 tt.main_script.remove = scripts.clickable_hover_controller.remove
@@ -215,6 +200,7 @@ tt.tween.props[1].loop = true
 tt.tween.remove = false
 tt.target = nil
 tt.done = nil
+
 tt = E:register_t("decal_rally_range", "decal")
 tt.actual_radius = 137
 tt.render.sprites[1].animated = false
@@ -228,6 +214,7 @@ tt.render.sprites[3] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[3].scale = v(1, -1)
 tt.render.sprites[4] = table.deepclone(tt.render.sprites[1])
 tt.render.sprites[4].scale = v(-1, -1)
+
 tt = E:register_t("decal_tower_range", "decal_rally_range")
 tt.render.sprites[1].name = "range_circle"
 tt.render.sprites[2].name = "range_circle"
@@ -235,25 +222,20 @@ tt.render.sprites[3].name = "range_circle"
 tt.render.sprites[4].name = "range_circle"
 
 local decal_hero_tombstone = E:register_t("decal_hero_tombstone", "decal")
-
 decal_hero_tombstone.render.sprites[1].animated = false
 decal_hero_tombstone.render.sprites[1].name = "hero_death_0039"
 decal_hero_tombstone.render.sprites[1].anchor = v(0.5, 0.16)
 decal_hero_tombstone.render.sprites[1].z = Z_OBJECTS
 
 local spell = E:register_t("spell")
-
 E:add_comps(spell, "spell", "main_script")
 
 local bullet = E:register_t("bullet")
-
 E:add_comps(bullet, "bullet", "pos", "render", "sound_events", "main_script")
-
 bullet.render.sprites[1].z = Z_BULLETS
 bullet.bullet.vis_flags = F_RANGED
 
 local arrow = E:register_t("arrow", "bullet")
-
 arrow.bullet.hit_distance = 22
 arrow.bullet.hit_blood_fx = "fx_blood_splat"
 arrow.bullet.miss_decal = "decal_arrow"
@@ -273,13 +255,11 @@ arrow.bullet.predict_target_pos = true
 arrow.bullet.hide_radius = 6
 
 local arrow_legionnaire = E:register_t("arrow_legionnaire", "arrow")
-
 arrow_legionnaire.bullet.flight_time = fts(20)
 arrow_legionnaire.bullet.damage_min = 15
 arrow_legionnaire.bullet.damage_max = 30
 
 local shotgun = E:register_t("shotgun", "bullet")
-
 shotgun.main_script.insert = scripts.shotgun.insert
 shotgun.main_script.update = scripts.shotgun.update
 shotgun.render.sprites[1].name = "bullet"
@@ -292,7 +272,6 @@ shotgun.bullet.hide_radius = 25
 shotgun.bullet.vis_flags = F_RANGED
 
 local bomb = E:register_t("bomb", "bullet")
-
 bomb.bullet.flight_time = fts(31)
 bomb.bullet.rotation_speed = 20 * FPS * math.pi / 180
 bomb.bullet.hit_fx = "fx_explosion_small"
@@ -314,19 +293,18 @@ bomb.sound_events.hit = "BombExplosionSound"
 bomb.sound_events.hit_water = "RTWaterExplosion"
 
 local bomb_dynamite = E:register_t("bomb_dynamite", "bomb")
-
 bomb_dynamite.render.sprites[1].name = "bombs_0002"
 bomb_dynamite.bullet.damage_min = 22
 bomb_dynamite.bullet.damage_max = 44
 bomb_dynamite.bullet.damage_radius = 62.400000000000006
 
 local bomb_black = E:register_t("bomb_black", "bomb")
-
 bomb_black.render.sprites[1].name = "bombs_0003"
 bomb_black.bullet.align_with_trajectory = true
 bomb_black.bullet.damage_min = 33
 bomb_black.bullet.damage_max = 66
 bomb_black.bullet.damage_radius = 67.2
+
 tt = E:register_t("bolt", "bullet")
 tt.main_script.insert = scripts.bolt.insert
 tt.main_script.update = scripts.bolt.update
@@ -341,6 +319,7 @@ tt.bullet.hit_fx = "fx_bolt_hit"
 tt.bullet.pop = {"pop_zap"}
 tt.bullet.pop_conds = DR_KILL
 tt.sound_events.insert = "BoltSound"
+
 tt = E:register_t("bolt_enemy", "bolt")
 tt.main_script.insert = scripts.bolt_enemy.insert
 tt.main_script.update = scripts.bolt_enemy.update
@@ -349,23 +328,18 @@ tt.bullet.pop_conds = nil
 tt.bullet.damage_type = DAMAGE_MAGICAL
 
 local fx = E:register_t("fx")
-
 E:add_comps(fx, "pos", "render", "timed")
-
 fx.timed.runs = 1
 fx.render.sprites[1].loop = false
 fx.render.sprites[1].z = Z_EFFECTS
 
 local fx_fade = E:register_t("fx_fade")
-
 E:add_comps(fx_fade, "pos", "render", "tween")
-
 fx_fade.render.sprites[1].loop = false
 fx_fade.render.sprites[1].z = Z_EFFECTS
 fx_fade.tween.props[1].keys = {{0.5, 255}, {1.5, 0}}
 
 local fx_unit_explode = E:register_t("fx_unit_explode", "fx")
-
 fx_unit_explode.render.sprites[1].prefix = "explode"
 fx_unit_explode.render.sprites[1].name = "small"
 fx_unit_explode.render.sprites[1].size_names = {"small", "big", "big"}
@@ -374,14 +348,12 @@ fx_unit_explode.render.sprites[1].z = Z_OBJECTS
 fx_unit_explode.render.sprites[1].draw_order = 1
 
 local fx_soldier_desintegrate = E:register_t("fx_soldier_desintegrate", "fx")
-
 fx_soldier_desintegrate.render.sprites[1].name = "desintegrate_soldier"
 fx_soldier_desintegrate.render.sprites[1].anchor.y = 0.24
 fx_soldier_desintegrate.render.sprites[1].z = Z_OBJECTS
 fx_soldier_desintegrate.render.sprites[1].draw_order = 1
 
 local fx_enemy_desintegrate = E:register_t("fx_enemy_desintegrate", "fx_fade")
-
 fx_enemy_desintegrate.render.sprites[1].prefix = "desintegrate_enemy"
 fx_enemy_desintegrate.render.sprites[1].name = "small"
 fx_enemy_desintegrate.render.sprites[1].anchor.y = 0.22
@@ -390,7 +362,6 @@ fx_enemy_desintegrate.render.sprites[1].draw_order = 1
 fx_enemy_desintegrate.render.sprites[1].z = Z_OBJECTS
 
 local fx_enemy_desintegrate_air = E:register_t("fx_enemy_desintegrate_air", "fx")
-
 fx_enemy_desintegrate_air.render.sprites[1].prefix = "desintegrate_enemy_air"
 fx_enemy_desintegrate_air.render.sprites[1].name = "small"
 fx_enemy_desintegrate_air.render.sprites[1].anchor.y = 0.36923076923076925
@@ -398,7 +369,6 @@ fx_enemy_desintegrate_air.render.sprites[1].draw_order = 1
 fx_enemy_desintegrate_air.render.sprites[1].z = Z_OBJECTS
 
 local fx_spider_explode = E:register_t("fx_spider_explode", "fx")
-
 fx_spider_explode.render.sprites[1].prefix = "spider_explode"
 fx_spider_explode.render.sprites[1].name = "small"
 fx_spider_explode.render.sprites[1].offset = v(0, 12)
@@ -407,14 +377,12 @@ fx_spider_explode.render.sprites[1].draw_order = 1
 fx_spider_explode.render.sprites[1].z = Z_OBJECTS
 
 local decal_blood_pool = E:register_t("decal_blood_pool", "decal_tween")
-
 decal_blood_pool.tween.props[1].keys = {{1, 255}, {5, 0}}
 decal_blood_pool.render.sprites[1].prefix = "blood_pool"
 decal_blood_pool.render.sprites[1].name = "red"
 decal_blood_pool.render.sprites[1].z = Z_DECALS
 
 local fx_bleeding = E:register_t("fx_bleeding", "fx")
-
 fx_bleeding.render.sprites[1].prefix = "bleeding"
 fx_bleeding.render.sprites[1].name = "big_red"
 fx_bleeding.render.sprites[1].size_names = {"small", "big", "big"}
@@ -423,9 +391,7 @@ fx_bleeding.render.sprites[1].z = Z_OBJECTS
 fx_bleeding.render.sprites[1].draw_order = 20
 
 local fx_blood_splat = E:register_t("fx_blood_splat", "fx")
-
 E:add_comps(fx_blood_splat, "sound_events")
-
 fx_blood_splat.render.sprites[1].prefix = "blood_splat"
 fx_blood_splat.render.sprites[1].name = "red"
 fx_blood_splat.render.sprites[1].anchor.x = 0.42857142857142855
@@ -433,7 +399,6 @@ fx_blood_splat.use_blood_color = true
 fx_blood_splat.sound_events.insert = "HitSound"
 
 local fx_explosion_big = E:register_t("fx_explosion_big", "fx")
-
 fx_explosion_big.render.sprites[1].prefix = "explosion"
 fx_explosion_big.render.sprites[1].name = "big"
 fx_explosion_big.render.sprites[1].anchor.y = 0.13
@@ -459,7 +424,6 @@ local fx_explosion_air_small = E:register_t("fx_explosion_air_small", "fx_explos
 fx_explosion_air_small.render.sprites[1].scale = v(0.8, 0.8)
 
 local fx_explosion_water = E:register_t("fx_explosion_water", "fx")
-
 fx_explosion_water.render.sprites[1].prefix = "explosion"
 fx_explosion_water.render.sprites[1].name = "water"
 fx_explosion_water.render.sprites[1].anchor.y = 0.2
@@ -467,13 +431,11 @@ fx_explosion_water.render.sprites[1].z = Z_OBJECTS
 fx_explosion_water.render.sprites[1].sort_y_offset = -2
 
 local fx_splash_small = E:register_t("fx_splash_small", "fx")
-
 fx_splash_small.render.sprites[1].prefix = "water_splash"
 fx_splash_small.render.sprites[1].name = "small"
 fx_splash_small.render.sprites[1].anchor.y = 0.286
 
 local fx_enemy_splash = E:register_t("fx_enemy_splash", "fx")
-
 fx_enemy_splash.render.sprites[1].prefix = "enemy_water_splash"
 fx_enemy_splash.render.sprites[1].name = "small"
 fx_enemy_splash.render.sprites[1].size_names = {"small", "small", "big"}
@@ -482,39 +444,36 @@ fx_enemy_splash.render.sprites[1].z = Z_OBJECTS
 fx_enemy_splash.render.sprites[1].sort_y_offset = -8
 
 local fx_smoke_bullet = E:register_t("fx_smoke_bullet", "fx")
-
 fx_smoke_bullet.render.sprites[1].prefix = "smoke"
 fx_smoke_bullet.render.sprites[1].name = "bullet"
 fx_smoke_bullet.render.sprites[1].anchor.y = 0
+
 tt = E:register_t("fx_rifle_smoke", "fx")
 tt.render.sprites[1].name = "fx_rifle_smoke"
 tt.render.sprites[1].anchor = v(-0.2, 0.5)
 
 local fx_tower_buy_dust = E:register_t("fx_tower_buy_dust", "fx")
-
 fx_tower_buy_dust.render.sprites[1].name = "tower_build_dust"
 
 local fx_tower_sell_dust = E:register_t("fx_tower_sell_dust", "fx")
-
 fx_tower_sell_dust.render.sprites[1].name = "tower_sell_dust"
 
 local fx_bolt_hit = E:register_t("fx_bolt_hit", "fx")
-
 fx_bolt_hit.render.sprites[1].name = "bolt_hit"
 
 local fx_coin_jump = E:register_t("fx_coin_jump", "fx")
-
 E:add_comps(fx_coin_jump, "tween", "sound_events")
-
 fx_coin_jump.render.sprites[1].name = "fx_coin_jump"
 fx_coin_jump.render.sprites[1].z = Z_BULLETS
 fx_coin_jump.render.sprites[1].offset.y = 40
 fx_coin_jump.tween.props[1].name = "alpha"
 fx_coin_jump.tween.props[1].keys = {{0, 255}, {0.5, 255}, {0.8, 0}}
 fx_coin_jump.sound_events.insert = "AssassinGold"
+
 tt = E:register_t("fx_ground_hit", "fx")
 tt.render.sprites[1].name = "ground_hit_smoke"
 tt.render.sprites[1].anchor.y = 0.27
+
 tt = E:register_t("fx_coin_shower", "decal_scripted")
 tt.main_script.update = scripts.fx_coin_shower.update
 tt.coin_count = 10
@@ -543,9 +502,7 @@ tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_blood.update
 
 local mod_poison = E:register_t("mod_poison", "modifier")
-
 E:add_comps(mod_poison, "dps", "render")
-
 mod_poison.modifier.duration = 5
 mod_poison.modifier.vis_flags = F_POISON
 mod_poison.modifier.type = MOD_TYPE_POISON
@@ -562,7 +519,6 @@ mod_poison.main_script.insert = scripts.mod_dps.insert
 mod_poison.main_script.update = scripts.mod_dps.update
 
 local mod_pestilence = E:register_t("mod_pestilence", "mod_poison")
-
 mod_pestilence.dps.damage_min = 2
 mod_pestilence.dps.damage_max = 2
 mod_pestilence.dps.damage_every = fts(3)
@@ -570,9 +526,7 @@ mod_pestilence.dps.kill = true
 mod_pestilence.modifier.duration = 1
 
 local mod_slow = E:register_t("mod_slow", "modifier")
-
 E:add_comps(mod_slow, "slow")
-
 mod_slow.modifier.duration = 0.5
 mod_slow.modifier.type = MOD_TYPE_SLOW
 mod_slow.slow.factor = 0.5
@@ -581,19 +535,15 @@ mod_slow.main_script.remove = scripts.mod_slow.remove
 mod_slow.main_script.update = scripts.mod_track_target.update
 
 local mod_slow_oil = E:register_t("mod_slow_oil", "mod_slow")
-
 mod_slow_oil.modifier.duration = 1
 mod_slow_oil.slow.factor = 0.25
 
 local mod_slow_dwaarp = E:register_t("mod_slow_dwaarp", "mod_slow")
-
 mod_slow_dwaarp.modifier.duration = fts(12)
 mod_slow_dwaarp.slow.factor = 0.35
 
 local mod_stun = E:register_t("mod_stun", "modifier")
-
 E:add_comps(mod_stun, "render")
-
 mod_stun.main_script.insert = scripts.mod_stun.insert
 mod_stun.main_script.update = scripts.mod_stun.update
 mod_stun.main_script.remove = scripts.mod_stun.remove
@@ -608,7 +558,6 @@ mod_stun.render.sprites[1].draw_order = 20
 
 -- 用于使实体对于某些效果不可见
 local mod_ban = E:register_t("mod_ban", "modifier")
-
 mod_ban.main_script.insert = scripts.mod_ban.insert
 mod_ban.main_script.update = scripts.mod_ban.update
 mod_ban.main_script.remove = scripts.mod_ban.remove
@@ -616,9 +565,7 @@ mod_ban.modifier.duration = 6
 mod_ban.modifier.ban_vis = 0
 
 local mod_lava = E:register_t("mod_lava", "modifier")
-
 E:add_comps(mod_lava, "dps", "render")
-
 mod_lava.modifier.duration = 2
 mod_lava.modifier.vis_flags = F_BURN
 mod_lava.dps.damage_min = 1
@@ -633,12 +580,12 @@ mod_lava.render.sprites[1].draw_order = 2
 mod_lava.render.sprites[1].loop = true
 mod_lava.main_script.insert = scripts.mod_dps.insert
 mod_lava.main_script.update = scripts.mod_dps.update
+
 tt = E:register_t("mod_track_target_fx", "modifier")
-
 E:add_comps(tt, "render")
-
 tt.main_script.insert = scripts.mod_track_target.insert
 tt.main_script.update = scripts.mod_track_target.update
+
 tt = E:register_t("mod_damage", "modifier")
 tt.damage_max = 0
 tt.damage_min = 0
@@ -662,6 +609,7 @@ tt.fx_end = nil
 tt.damage_base = 0
 tt.damage_inc = 0
 tt.damage_type = DAMAGE_MAGICAL_EXPLOSION
+
 tt = E:register_t("mod_freeze", "modifier")
 tt.modifier.duration = 5
 tt.modifier.type = MOD_TYPE_FREEZE
@@ -675,19 +623,16 @@ tt.shader = "p_tint"
 tt.shader_args = {
 	tint_color = {0.6235294117647059, 0.9176470588235294, 1, 1}
 }
+
 tt = E:register_t("mod_polymorph", "modifier")
-
 E:add_comps(tt, "polymorph")
-
 tt.main_script.insert = scripts.mod_polymorph.insert
 tt.modifier.type = MOD_TYPE_POLYMORPH
 
 local aura = E:register_t("aura")
-
 E:add_comps(aura, "aura", "pos", "sound_events", "main_script")
 
 local lava = E:register_t("lava", "aura")
-
 lava.aura.mod = "mod_lava"
 lava.aura.duration = 3
 lava.aura.cycle_time = 0.3
@@ -719,11 +664,9 @@ tt.aura.amplitude = 1
 tt.aura.freq_factor = 1
 
 local particle_system = E:register_t("particle_system")
-
 E:add_comps(particle_system, "pos", "particle_system")
 
 local ps_power_fireball = E:register_t("ps_power_fireball", "particle_system")
-
 ps_power_fireball.particle_system.name = "fireball_particle"
 ps_power_fireball.particle_system.animated = true
 ps_power_fireball.particle_system.loop = false
@@ -737,7 +680,6 @@ ps_power_fireball.particle_system.emit_spread = math.pi
 ps_power_fireball.particle_system.emission_rate = 60
 
 local ps_water_trail = E:register_t("ps_water_trail", "particle_system")
-
 ps_water_trail.particle_system.name = "UnderwaterParticle2"
 ps_water_trail.particle_system.animated = false
 ps_water_trail.particle_system.particle_lifetime = {0.3, 1.2}
@@ -776,50 +718,70 @@ tt.render.sprites[1].hidden = false
 tt.tween.remove = true
 tt.tween.props[1].name = "scale"
 tt.tween.props[1].keys = {{0, v(0.75, 0.75)}, {0.1, v(1.2, 1.2)}, {0.2, v(1, 1)}, {0.3, v(1.1, 1.1)}, {0.4, v(1, 1)}, {0.9, v(1, 1)}}
+
 tt = E:register_t("pop_aack", "pop")
 tt.render.sprites[1].name = "pop_0015"
+
 tt = E:register_t("pop_bzzt", "pop")
 tt.render.sprites[1].name = "pop_0011"
+
 tt = E:register_t("pop_instakill", "pop")
 tt.render.sprites[1].name = "pop_0020"
 tt.pop_over_target = true
+
 tt = E:register_t("pop_kapow", "pop")
 tt.render.sprites[1].name = "pop_0008"
 tt.pop_y_offset = 40
+
 tt = E:register_t("pop_kboom", "pop")
 tt.render.sprites[1].name = "pop_0004"
+
 tt = E:register_t("pop_oof", "pop")
 tt.render.sprites[1].name = "pop_0002"
+
 tt = E:register_t("pop_pow", "pop")
 tt.render.sprites[1].name = "pop_0005"
 tt.pop_y_offset = 40
+
 tt = E:register_t("pop_puff", "pop")
 tt.render.sprites[1].name = "pop_0010"
+
 tt = E:register_t("pop_shunt", "pop")
 tt.render.sprites[1].name = "pop_0013"
+
 tt = E:register_t("pop_shunt_violet", "pop")
 tt.render.sprites[1].name = "pop_0016"
+
 tt = E:register_t("pop_sishh", "pop")
 tt.render.sprites[1].name = "pop_0018"
+
 tt = E:register_t("pop_slurp", "pop")
 tt.render.sprites[1].name = "pop_0021"
+
 tt = E:register_t("pop_sok", "pop")
 tt.render.sprites[1].name = "pop_0006"
 tt.pop_y_offset = 40
+
 tt = E:register_t("pop_splat", "pop")
 tt.render.sprites[1].name = "pop_0020"
 tt.pop_over_target = true
+
 tt = E:register_t("pop_thunk", "pop")
 tt.render.sprites[1].name = "pop_0019"
+
 tt = E:register_t("pop_whaam", "pop")
 tt.render.sprites[1].name = "pop_0009"
 tt.pop_y_offset = 40
+
 tt = E:register_t("pop_zap", "pop")
 tt.render.sprites[1].name = "pop_0001"
+
 tt = E:register_t("pop_zap_arcane", "pop")
 tt.render.sprites[1].name = "pop_0012"
+
 tt = E:register_t("pop_zap_sorcerer", "pop")
 tt.render.sprites[1].name = "pop_0014"
+
 tt = E:register_t("pop_zapow", "pop")
 tt.render.sprites[1].name = "pop_0017"
 
@@ -845,10 +807,9 @@ tt.render.sprites[3].scale = vv(scale_scale)
 tt.main_script.insert = scripts.editor_wave_flag.insert
 tt.editor_script.update = scripts.editor_wave_flag.editor_update
 tt.editor.props = {{"editor.path_id", PT_NUMBER}, {"editor.r", PT_NUMBER, math.pi / 180}, {"editor.len", PT_NUMBER}}
+
 tt = E:register_t("editor_spawner_arrow")
-
 E:add_comps(tt, "pos", "render", "editor")
-
 tt.editor.scaffold = true
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "editor_square_blue"
@@ -864,26 +825,23 @@ tt.render.sprites[3].animated = false
 tt.render.sprites[3].name = "editor_triangle_blue"
 tt.render.sprites[3].scale = vv(scale_scale)
 tt.line_image_width = 128
+
 tt = E:register_t("editor_shape_square_blue")
-
 E:add_comps(tt, "pos", "render", "editor")
-
 tt.editor.scaffold = true
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "editor_square_blue"
 tt.render.sprites[1].scale = vv(scale_scale)
+
 tt = E:register_t("editor_shape_triangle_blue")
-
 E:add_comps(tt, "pos", "render", "editor")
-
 tt.editor.scaffold = true
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "editor_triangle_blue"
 tt.render.sprites[1].scale = vv(scale_scale)
+
 tt = E:register_t("editor_rally_point")
-
 E:add_comps(tt, "pos", "editor", "editor_script", "render")
-
 tt.editor.scaffold = true
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "rally_feedback_0002"
@@ -897,10 +855,9 @@ tt.tower_id = nil
 tt.image_width = 180
 tt.editor_script.update = scripts.editor_rally_point.update
 tt.editor_script.remove = scripts.editor_rally_point.remove
+
 tt = E:register_t("tower_build")
-
 E:add_comps(tt, "pos", "tower", "main_script", "render", "tween", "sound_events", "ui")
-
 tt.tower.type = "build_animation"
 tt.tower.can_be_mod = false
 tt.main_script.update = scripts.tower_build.update
@@ -931,9 +888,7 @@ tt.ui.can_select = false
 tt.sound_events.insert = "GUITowerBuilding"
 
 local tower = E:register_t("tower")
-
 E:add_comps(tower, "tower", "pos", "render", "main_script", "ui", "info", "sound_events", "editor", "editor_script", "vis", "tower_upgrade_persistent_data")
-
 tower.tower.level = 1
 tower.render.sprites[1].z = Z_TOWER_BASES
 tower.ui.click_rect = r(-40, -12, 80, 70)
@@ -945,21 +900,16 @@ tower.editor_script.insert = scripts.editor_tower.insert
 tower.editor_script.remove = scripts.editor_tower.remove
 
 local unit = E:register_t("unit")
-
 E:add_comps(unit, "unit", "pos", "heading", "health", "health_bar", "render", "ui")
-
 unit.ui.click_rect = r(-15, 0, 30, 30)
 
 local soldier = E:register_t("soldier", "unit")
-
 E:add_comps(soldier, "soldier", "motion", "nav_rally", "main_script", "vis", "regen", "idle_flip", "sound_events", "info")
-
 soldier.vis.flags = F_FRIEND
 soldier.sound_events.death_by_explosion = "DeathEplosion"
+
 tt = E:register_t("soldier_militia", "soldier")
-
 E:add_comps(tt, "melee")
-
 image_y = 52
 anchor_y = 0.17
 tt.health.dead_lifetime = 10
@@ -995,6 +945,7 @@ tt.ui.click_rect = r(-10, -2, 20, 25)
 tt.unit.hit_offset = v(0, 12)
 tt.unit.marker_offset = v(0, ady(8))
 tt.unit.mod_offset = v(0, ady(21))
+
 tt = E:register_t("soldier_footmen", "soldier_militia")
 tt.info.portrait = "info_portraits_soldiers_0002"
 tt.render.sprites[1].prefix = "soldierfootmen"
@@ -1003,6 +954,7 @@ tt.health.armor = 0.15
 tt.melee.attacks[1].cooldown = 1 + fts(11)
 tt.melee.attacks[1].damage_min = 3
 tt.melee.attacks[1].damage_max = 4
+
 tt = E:register_t("soldier_knight", "soldier_militia")
 tt.info.portrait = "info_portraits_soldiers_0003"
 tt.render.sprites[1].prefix = "soldierknight"
@@ -1013,9 +965,7 @@ tt.melee.attacks[1].damage_min = 6
 tt.melee.attacks[1].damage_max = 10
 
 local hero = E:register_t("hero", "soldier")
-
 E:add_comps(hero, "hero", "nav_grid")
-
 hero.health_bar.hidden = true
 hero.vis.flags = bor(F_HERO, F_FRIEND)
 hero.vis.bans = bor(F_POLYMORPH, F_DISINTEGRATED, F_CANNIBALIZE, F_SKELETON)
@@ -1030,13 +980,10 @@ hero.ui.z = 2
 hero.unit.hit_offset = v(0, 12)
 
 local stage_hero = E:register_t("stage_hero", "hero")
-
 stage_hero.hero.stage_hero = true
 
 local enemy = E:register_t("enemy", "unit")
-
 E:add_comps(enemy, "enemy", "motion", "nav_path", "main_script", "sound_events", "vis", "info")
-
 enemy.vis.flags = F_ENEMY
 enemy.render.sprites[1].angles = {}
 enemy.render.sprites[1].angles.walk = {"walkingRightLeft", "walkingUp", "walkingDown"}
@@ -1083,6 +1030,7 @@ tt.max_spread = 20
 tt.fireball_count = 3
 tt.cataclysm_count = 0
 tt.user_selection.can_select_point_fn = scripts.power_fireball_control.can_select_point
+
 tt = E:register_t("power_fireball", "bullet")
 tt.bullet.min_speed = 0
 tt.bullet.max_speed = 15 * FPS
@@ -1178,7 +1126,6 @@ tt.attract_radius = 50
 -- tt.main_script.remove = scripts.clickable_hover_controller.remove
 -- tt.target = nil
 -- tt.done = nil
-
 tt = E:register_t("arrow5_45degrees", "arrow")
 tt.main_script.insert = scripts.arrow5_45degrees.insert
 

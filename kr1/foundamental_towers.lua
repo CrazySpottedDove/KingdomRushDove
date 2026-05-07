@@ -28,7 +28,6 @@ local vv = V.vv
 
 require("game_templates_utils")
 
---#region tower_holder
 tt = RT("tower_holder")
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "editor", "editor_script", "main_script")
 tt.ui.click_rect = r(-40, -12, 80, 46)
@@ -66,9 +65,7 @@ tt.render.sprites[5].offset = vec_2(0, 41)
 tt.editor.props = {{"tower.terrain_style", PT_NUMBER}, {"tower.default_rally_pos", PT_COORDS}, {"tower.holder_id", PT_STRING}, {"ui.nav_mesh_id", PT_STRING}, {"editor.game_mode", PT_NUMBER}}
 tt.editor_script.insert = scripts.editor_tower.insert
 tt.editor_script.remove = scripts.editor_tower.remove
---#endregion
 
---#region 所有塔位
 local holder_template_names = {
 	tower_holder_grass = TERRAIN_STYLE_GRASS,
 	tower_holder_snow = TERRAIN_STYLE_SNOW,
@@ -109,12 +106,11 @@ local holder_template_names = {
 
 -- 注册所有模板
 for name, terrain_style in pairs(holder_template_names) do
+
 	local tt = RT(name, "tower_holder")
 	U.set_terrain_style(tt, terrain_style)
 end
---#endregion
 
---#region tower_holder_blocked
 tt = RT("tower_holder_blocked")
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "sound_events", "editor")
 tt.tower.level = 1
@@ -130,9 +126,7 @@ tt.render.sprites[1].z = Z_DECALS
 -- tt.render.sprites[2] = CC("sprite")
 tt.ui.click_rect = r(-40, -12, 80, 46)
 tt.sound_events.remove = "GUITowerSell"
---#endregion
 
---#region 所有 blocked 塔位
 local holder_blocked_names = {
 	tower_holder_blocked_jungle = {
 		terrain_style = TERRAIN_STYLE_JUNGLE,
@@ -178,42 +172,35 @@ local holder_blocked_names = {
 
 -- 遍历注册所有 blocked 塔位
 for name, data in pairs(holder_blocked_names) do
+
 	local tt = E:register_t(name, "tower_holder_blocked")
 	tt.tower_holder.unblock_price = data.unblock_price
 	tt.tower.terrain_style = data.terrain_style
 	tt.render.sprites[1].name = data.sprite_name
 end
---#endregion
 
---#region tower_build_archer
 tt = RT("tower_build_archer", "tower_build")
 tt.build_name = "tower_archer_1"
 tt.render.sprites[2].name = "tower_constructing_0004"
 tt.render.sprites[2].offset = vec_2(0, 39)
---#endregion
---#region tower_build_barrack
+
 tt = RT("tower_build_barrack", "tower_build_archer")
 tt.build_name = "tower_barrack_1"
 tt.render.sprites[2].name = "tower_constructing_0002"
 tt.render.sprites[2].offset = vec_2(0, 40)
---#endregion
---#region tower_build_mage
+
 tt = RT("tower_build_mage", "tower_build_archer")
 tt.build_name = "tower_mage_1"
 tt.render.sprites[2].name = "tower_constructing_0003"
 tt.render.sprites[2].offset = vec_2(0, 31)
---#endregion
---#region tower_build_engineer
+
 tt = RT("tower_build_engineer", "tower_build_archer")
 tt.build_name = "tower_engineer_1"
 tt.render.sprites[2].name = "tower_constructing_0001"
 tt.render.sprites[2].offset = vec_2(0, 41)
---#endregion
---#region tower_mage_1
+
 tt = RT("tower_mage_1", "tower")
-
 AC(tt, "attacks")
-
 tt.tower.type = "mage"
 tt.tower.level = 1
 tt.tower.price = 100
@@ -247,8 +234,7 @@ tt.render.sprites[3].offset = vec_2(1, 57)
 tt.render.sid_tower = 2
 tt.render.sid_shooter = 3
 tt.sound_events.insert = "MageTaunt"
---#endregion
---#region tower_mage_2
+
 tt = RT("tower_mage_2", "tower_mage_1")
 tt.info.enc_icon = 7
 tt.tower.level = 2
@@ -258,8 +244,7 @@ tt.attacks.list[1].bullet = "bolt_2"
 tt.attacks.list[1].bullet_start_offset = {vec_2(8, 66), vec_2(-5, 64)}
 tt.render.sprites[2].prefix = "towermagelvl2"
 tt.render.sprites[3].offset = vec_2(1, 57)
---#endregion
---#region tower_mage_3
+
 tt = RT("tower_mage_3", "tower_mage_1")
 tt.info.enc_icon = 11
 tt.tower.level = 3
@@ -269,27 +254,21 @@ tt.attacks.list[1].bullet = "bolt_3"
 tt.attacks.list[1].bullet_start_offset = {vec_2(8, 70), vec_2(-5, 69)}
 tt.render.sprites[2].prefix = "towermagelvl3"
 tt.render.sprites[3].offset = vec_2(1, 62)
---#endregion
---#region bolt_1
+
 tt = RT("bolt_1", "bolt")
 tt.bullet.damage_min = 11
 tt.bullet.damage_max = 19
---#endregion
---#region bolt_2
+
 tt = RT("bolt_2", "bolt")
 tt.bullet.damage_min = 25
 tt.bullet.damage_max = 47
---#endregion
---#region bolt_3
+
 tt = RT("bolt_3", "bolt")
 tt.bullet.damage_min = 44
 tt.bullet.damage_max = 81
---#endregion
---#region tower_engineer_1
+
 tt = RT("tower_engineer_1", "tower")
-
 AC(tt, "attacks")
-
 tt.tower.type = "engineer"
 tt.tower.level = 1
 tt.tower.price = 125
@@ -317,8 +296,7 @@ for i = 2, 8 do
 end
 
 tt.sound_events.insert = "EngineerTaunt"
---#endregion
---#region tower_engineer_2
+
 tt = RT("tower_engineer_2", "tower_engineer_1")
 tt.info.enc_icon = 8
 tt.tower.level = 2
@@ -335,8 +313,6 @@ for i = 2, 8 do
 	tt.render.sprites[i].offset = vec_2(0, 42)
 end
 
---#endregion
---#region tower_engineer_3
 tt = RT("tower_engineer_3", "tower_engineer_1")
 tt.info.enc_icon = 12
 tt.tower.level = 3
@@ -354,12 +330,8 @@ for i = 2, 8 do
 	tt.render.sprites[i].offset = vec_2(0, 43)
 end
 
---#endregion
---#region tower_archer_1
 tt = RT("tower_archer_1", "tower")
-
 AC(tt, "attacks")
-
 tt.tower.type = "archer"
 tt.tower.level = 1
 tt.tower.price = 70
@@ -398,8 +370,7 @@ tt.attacks.list[1].cooldown = 0.8
 tt.attacks.list[1].shoot_time = fts(5)
 tt.attacks.list[1].bullet_start_offset = {vec_2(-10, 50), vec_2(10, 50)}
 tt.sound_events.insert = "ArcherTaunt"
---#endregion
---#region tower_archer_2
+
 tt = RT("tower_archer_2", "tower_archer_1")
 tt.info.enc_icon = 5
 tt.tower.level = 2
@@ -412,8 +383,7 @@ tt.render.sprites[4].offset = vec_2(9, 52)
 tt.attacks.range = 160
 tt.attacks.list[1].bullet = "arrow_2"
 tt.attacks.list[1].cooldown = 0.6
---#endregion
---#region tower_archer_3
+
 tt = RT("tower_archer_3", "tower_archer_1")
 tt.info.enc_icon = 9
 tt.tower.level = 3
@@ -426,29 +396,23 @@ tt.render.sprites[4].offset = vec_2(9, 57)
 tt.attacks.range = 180
 tt.attacks.list[1].bullet = "arrow_3"
 tt.attacks.list[1].cooldown = 0.5
---#endregion
---#region arrow_1
+
 tt = RT("arrow_1", "arrow")
 tt.bullet.damage_min = 4
 tt.bullet.damage_max = 7
---#endregion
---#region arrow_2
+
 tt = RT("arrow_2", "arrow")
 tt.bullet.damage_min = 8
 tt.bullet.damage_max = 12
 tt.bullet.flight_time = fts(21)
---#endregion
---#region arrow_3
+
 tt = RT("arrow_3", "arrow")
 tt.bullet.damage_min = 11
 tt.bullet.damage_max = 18
 tt.bullet.flight_time = fts(20)
---#endregion
---#region tower_barrack_1
+
 tt = RT("tower_barrack_1", "tower")
-
 AC(tt, "barrack")
-
 tt.tower.type = "barrack"
 tt.tower.level = 1
 tt.tower.price = 70
@@ -475,8 +439,7 @@ tt.main_script.update = scripts.tower_barrack.update
 tt.main_script.remove = scripts.tower_barrack.remove
 tt.sound_events.insert = "BarrackTaunt"
 tt.sound_events.change_rally_point = "BarrackTaunt"
---#endregion
---#region tower_barrack_2
+
 tt = RT("tower_barrack_2", "tower_barrack_1")
 tt.info.enc_icon = 6
 tt.tower.level = 2
@@ -485,8 +448,7 @@ tt.render.sprites[2].name = "tower_barracks_lvl2_layer1_0001"
 tt.render.sprites[3].prefix = "towerbarracklvl2_door"
 tt.barrack.soldier_type = "soldier_footmen"
 tt.barrack.rally_range = 150
---#endregion
---#region tower_barrack_3
+
 tt = RT("tower_barrack_3", "tower_barrack_1")
 tt.info.enc_icon = 10
 tt.tower.level = 3
@@ -495,12 +457,9 @@ tt.render.sprites[2].name = "tower_barracks_lvl3_layer1_0001"
 tt.render.sprites[3].prefix = "towerbarracklvl3_door"
 tt.barrack.soldier_type = "soldier_knight"
 tt.barrack.rally_range = 155
---#endregion
---#region tower_neptune_holder
+
 tt = RT("tower_neptune_holder")
-
 AC(tt, "tower", "tower_holder", "pos", "render", "ui", "info")
-
 tt.tower.level = 1
 tt.tower.type = "holder_neptune"
 tt.tower.can_be_mod = false
@@ -516,12 +475,9 @@ tt.render.sprites[2].name = "neptuno_0001"
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].offset = vec_2(0, 39)
 tt.ui.click_rect = r(-40, -10, 80, 90)
---#endregion
---#region tower_neptune
+
 tt = RT("tower_neptune", "tower")
-
 AC(tt, "powers", "user_selection", "attacks")
-
 tt.tower.level = 1
 tt.tower.type = "neptune"
 tt.tower.price = 500
@@ -591,8 +547,7 @@ tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].bullet = "ray_neptune"
 tt.attacks.list[1].cooldown = 30
 tt.attacks.list[1].bullet_start_offset = vec_2(17, 105)
---#endregion
---#region ray_neptune
+
 tt = RT("ray_neptune", "bullet")
 tt.image_width = 358
 tt.main_script.update = scripts.ray_neptune.update
@@ -606,14 +561,12 @@ tt.bullet.damage_radius = 38.4
 tt.bullet.damage_rect = r(-40, -2, 80, 50)
 tt.bullet.hit_fx = "fx_ray_neptune_explosion"
 tt.sound_events.insert = "PolymorphSound"
---#endregion
---#region fx_ray_neptune_explosion
+
 tt = RT("fx_ray_neptune_explosion", "decal_timed")
 tt.render.sprites[1].name = "ray_neptune_explosion"
 tt.render.sprites[1].anchor.y = 0.24444444444444444
 tt.render.sprites[1].z = Z_BULLETS
---#endregion
---#region rock_1
+
 tt = RT("rock_1", "bomb")
 tt.bullet.flight_time = fts(28)
 tt.bullet.damage_radius = 60
@@ -627,22 +580,18 @@ tt.render.sprites[1].name = "artillery_thrower_proy"
 tt.sound_events.insert = "TowerStoneDruidBoulderThrow"
 tt.sound_events.hit = "TowerStoneDruidBoulderExplote"
 tt.sound_events.hit_water = "RTWaterExplosion"
---#endregion
---#region rock_2
+
 tt = RT("rock_2", "rock_1")
 tt.bullet.damage_max = 30
 tt.bullet.damage_min = 18
---#endregion
---#region rock_3
+
 tt = RT("rock_3", "rock_1")
 tt.bullet.damage_max = 50
 tt.bullet.damage_min = 30
---#endregion
---#region mod_rock_slow
+
 tt = RT("mod_rock_slow", "mod_slow")
 tt.modifier.duration = 0.75
---#endregion
---#region soldier_barrack_1
+
 tt = RT("soldier_barrack_1", "soldier_militia")
 AC(tt, "revive")
 image_y = 46
@@ -685,12 +634,9 @@ tt.soldier.melee_slot_offset = vec_2(5, 0)
 tt.ui.click_rect = r(-10, -2, 20, 25)
 tt.unit.hit_offset = vec_2(0, 12)
 tt.unit.mod_offset = vec_2(0, 10)
---#endregion
---#region soldier_barrack_2
+
 tt = RT("soldier_barrack_2", "soldier_barrack_1")
-
 AC(tt, "ranged")
-
 image_y = 46
 anchor_y = 11 / image_y
 tt.health.armor = 0.4
@@ -707,8 +653,7 @@ tt.ranged.attacks[1].max_range = 140
 tt.ranged.attacks[1].min_range = 25
 tt.ranged.attacks[1].shoot_time = fts(5)
 tt.render.sprites[1].prefix = "soldier_barrack_2"
---#endregion
---#region soldier_barrack_3
+
 tt = RT("soldier_barrack_3", "soldier_barrack_2")
 image_y = 46
 anchor_y = 11 / image_y
@@ -729,12 +674,8 @@ local b
 local balance = require("kr1.data.balance")
 
 ---龙魂宝壶
---#endregion
---#region tower_holder_blocked_elemental
 tt = RT("tower_holder_blocked_elemental", "tower")
-
 E:add_comps(tt, "tower_holder", "tween")
-
 tt.tower.level = 1
 tt.tower.can_be_mod = false
 tt.tower_holder.blocked = true
@@ -750,9 +691,8 @@ tt.render.sprites[1].name = "terrain_barrack_%04i" --"terrains_holders_%04i"
 tt.render.sprites[1].offset = v(0, 13)
 tt.render.sprites[1].z = Z_DECALS
 tt.ui.click_rect = r(-40, -12, 80, 46)
+
 ---龙魂宝壶 金
---#endregion
---#region tower_holder_blocked_elemental_metal_b
 tt = RT("tower_holder_blocked_elemental_metal", "tower_holder_blocked_elemental")
 b = balance.specials.terrain_8.elemental_holders.metal_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
@@ -788,10 +728,8 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {2, 255}, {2.5, 255}, {4.5, 0}}
 tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
---#endregion
 
 ---龙魂宝壶 木
---#region tower_holder_blocked_elemental_wood
 tt = RT("tower_holder_blocked_elemental_wood", "tower_holder_blocked_elemental")
 b = balance.specials.terrain_8.elemental_holders.wooden_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
@@ -824,16 +762,13 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {2, 255}, {2.5, 255}, {4.5, 0}}
 tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
---#endregion
---#region tower_holder_blocked_elemental_wood_enhance
+
 tt = RT("tower_holder_blocked_elemental_wood_enhance", "tower_holder_blocked_elemental_wood")
 tt.tower.type = "holder_blocked_elemental_wood_enhance"
 tt.tower_holder.unblock_price = 50
----龙魂宝壶 水
---#endregion
---#region tower_holder_blocked_elemental_water_b
-tt = RT("tower_holder_blocked_elemental_water", "tower_holder_blocked_elemental")
 
+---龙魂宝壶 水
+tt = RT("tower_holder_blocked_elemental_water", "tower_holder_blocked_elemental")
 b = balance.specials.terrain_8.elemental_holders.water_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
@@ -865,9 +800,8 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {2, 255}, {2.5, 255}, {4.5, 0}}
 tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
+
 ---龙魂宝壶 火
---#endregion
---#region tower_holder_blocked_elemental_fire
 tt = RT("tower_holder_blocked_elemental_fire", "tower_holder_blocked_elemental")
 b = balance.specials.terrain_8.elemental_holders.fire_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
@@ -900,11 +834,9 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {2, 255}, {2.5, 255}, {4.5, 0}}
 tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
----龙魂宝壶 土
---#endregion
---#region tower_holder_blocked_elemental_earth
-tt = RT("tower_holder_blocked_elemental_earth", "tower_holder_blocked_elemental")
 
+---龙魂宝壶 土
+tt = RT("tower_holder_blocked_elemental_earth", "tower_holder_blocked_elemental")
 b = balance.specials.terrain_8.elemental_holders.earth_holder
 tt.main_script.insert = scripts.tower_holder_blocked_elemental_holder.insert
 tt.main_script.remove = scripts.tower_holder_blocked_elemental_holder.remove
@@ -936,16 +868,13 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {2, 255}, {2.5, 255}, {4.5, 0}}
 tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
--- 龙魂宝壶-防御塔
---#endregion
---#region tower_holder_elemental
-tt = RT("tower_holder_elemental", "tower_holder")
 
+-- 龙魂宝壶-防御塔
+tt = RT("tower_holder_elemental", "tower_holder")
 tt.main_script.update = scripts.tower_holder_elemental.update
 tt.main_script.remove = scripts.tower_holder_elemental.remove
 tt.tower.terrain_style = nil
---#endregion
---#region tower_holder_elemental_wood
+
 tt = RT("tower_holder_elemental_wood", "tower_holder_elemental")
 tt.tower.terrain_style = nil
 tt.render.sid_base = 1
@@ -967,12 +896,10 @@ tt.render.sprites[tt.render.sid_dragon].z = Z_OBJECTS
 tt.render.sprites[tt.render.sid_dragon].offset = v(0, -10)
 tt.controller_name = "controller_elemental_wood"
 tt.cannot_be_swapped = true
---#endregion
---#region tower_holder_elemental_wood_enhance
+
 tt = RT("tower_holder_elemental_wood_enhance", "tower_holder_elemental_wood")
 tt.controller_name = "controller_elemental_wood_enhance"
---#endregion
---#region tower_holder_elemental_fire
+
 tt = RT("tower_holder_elemental_fire", "tower_holder_elemental")
 tt.tower.terrain_style = nil
 tt.render.sid_base = 1
@@ -993,8 +920,7 @@ tt.render.sprites[tt.render.sid_dragon].z = Z_OBJECTS
 tt.render.sprites[tt.render.sid_dragon].offset = v(0, -10)
 tt.controller_name = "controller_elemental_fire"
 tt.cannot_be_swapped = true
---#endregion
---#region tower_holder_elemental_water
+
 tt = RT("tower_holder_elemental_water", "tower_holder_elemental")
 tt.tower.terrain_style = nil
 tt.render.sid_base = 1
@@ -1015,8 +941,7 @@ tt.render.sprites[tt.render.sid_dragon].z = Z_OBJECTS
 tt.render.sprites[tt.render.sid_dragon].offset = v(0, -10)
 tt.controller_name = "controller_elemental_water"
 tt.cannot_be_swapped = true
---#endregion
---#region tower_holder_elemental_earth
+
 tt = RT("tower_holder_elemental_earth", "tower_holder_elemental")
 tt.tower.terrain_style = nil
 tt.render.sid_base = 1
@@ -1038,8 +963,7 @@ tt.render.sprites[tt.render.sid_dragon].z = Z_OBJECTS
 tt.render.sprites[tt.render.sid_dragon].offset = v(0, -10)
 tt.controller_name = "controller_elemental_earth"
 tt.cannot_be_swapped = true
---#endregion
---#region tower_holder_elemental_metal
+
 tt = RT("tower_holder_elemental_metal", "tower_holder_elemental")
 b = balance.specials.terrain_8.elemental_holders.metal_holder
 tt.tower.terrain_style = nil
@@ -1062,13 +986,10 @@ tt.render.sprites[tt.render.sid_dragon].z = Z_OBJECTS
 tt.render.sprites[tt.render.sid_dragon].offset = v(0, -10)
 tt.controller_name = "controller_elemental_metal"
 tt.cannot_be_swapped = true
+
 -- 龙魂宝壶 控制器
---#endregion
---#region controller_elemental_wood
 tt = RT("controller_elemental_wood")
-
 E:add_comps(tt, "main_script", "pos", "render", "tween")
-
 b = balance.specials.terrain_8.elemental_holders.wooden_holder
 tt.main_script.update = scripts.controller_elemental_wood.update
 tt.main_script.remove = scripts.controller_elemental_generic.remove
@@ -1139,8 +1060,7 @@ tt.tween.props[1].loop = false
 tt.tween.disabled = true
 tt.tween.reverse = true
 tt.tween.remove = false
---#endregion
---#region controller_elemental_wood_enhance
+
 tt = RT("controller_elemental_wood_enhance", "controller_elemental_wood")
 b = balance.specials.terrain_8.elemental_holders.wooden_holder_enhance
 tt.main_script.update = scripts.controller_elemental_wood.update
@@ -1213,8 +1133,7 @@ tt.tween.props[1].loop = false
 tt.tween.disabled = true
 tt.tween.reverse = true
 tt.tween.remove = false
---#endregion
---#region decal_elemental_wood_holder_root_1
+
 tt = RT("decal_elemental_wood_holder_root_1", "decal_scripted")
 tt.render.sprites[1].prefix = "stage31_wood_holder_root1Def"
 tt.render.sprites[1].exo = true
@@ -1224,28 +1143,23 @@ tt.render.sprites[1].hidden = true
 tt.main_script.update = scripts.hero_muyrn_root_defender_root_decal.update
 tt.vis_flags = bor(F_RANGED)
 tt.vis_bans = bor(F_FRIEND)
---#endregion
---#region decal_elemental_wood_holder_root_2
+
 tt = RT("decal_elemental_wood_holder_root_2", "decal_elemental_wood_holder_root_1")
 tt.render.sprites[1].prefix = "stage31_wood_holder_root2Def"
---#endregion
---#region decal_elemental_wood_holder_root_3
+
 tt = RT("decal_elemental_wood_holder_root_3", "decal_elemental_wood_holder_root_1")
 tt.render.sprites[1].prefix = "stage31_wood_holder_root3Def"
---#endregion
---#region decal_elemental_wood_holder_root_4
+
 tt = RT("decal_elemental_wood_holder_root_4", "decal_elemental_wood_holder_root_1")
 tt.render.sprites[1].prefix = "stage31_wood_holder_root4Def"
---#endregion
---#region decal_elemental_wood_holder_root_dragon
+
 tt = RT("decal_elemental_wood_holder_root_dragon", "decal_scripted")
 tt.render.sprites[1].prefix = "stage31_wood_holder_dragon_rootDef"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].name = "in"
 tt.loop_times = 2
 tt.main_script.update = scripts.decal_elemental_wood_holder_root_dragon.update
---#endregion
---#region fx_elemental_wood_holder_broken_jarra
+
 tt = RT("fx_elemental_wood_holder_broken_jarra", "decal_scripted")
 tt.main_script.update = scripts.multi_sprite_fx.update
 tt.render.sprites[1].prefix = "stage31_wood_holder_jarraDef"
@@ -1265,8 +1179,7 @@ tt.render.sprites[3].name = "in"
 tt.render.sprites[3].exo = true
 tt.render.sprites[3].offset = v(0, 5)
 tt.render.sprites[3].z = Z_OBJECTS
---#endregion
---#region aura_elemental_wood
+
 tt = RT("aura_elemental_wood", "aura")
 tt.aura.duration = b.duration
 tt.aura.cycle_time = 0.3
@@ -1277,17 +1190,13 @@ tt.duration = b.duration
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 tt.main_script.remove = scripts.aura_apply_mod.remove
---#endregion
---#region mod_elemental_wood_slow
+
 tt = RT("mod_elemental_wood_slow", "mod_slow")
 tt.modifier.duration = 1
 tt.slow.factor = b.slow_factor
---#endregion
---#region mod_elemental_wood_damage
+
 tt = RT("mod_elemental_wood_damage", "modifier")
-
 E:add_comps(tt, "dps")
-
 tt.modifier.duration = 1
 tt.dps.damage_min = b.damage_min
 tt.dps.damage_max = b.damage_max
@@ -1295,12 +1204,9 @@ tt.dps.damage_type = b.damage_type
 tt.dps.damage_every = b.damage_every
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
---#endregion
---#region controller_elemental_fire
+
 tt = RT("controller_elemental_fire")
-
 E:add_comps(tt, "main_script", "pos", "render", "tween")
-
 b = balance.specials.terrain_8.elemental_holders.fire_holder
 tt.main_script.update = scripts.controller_elemental_fire.update
 tt.main_script.remove = scripts.controller_elemental_generic.remove
@@ -1382,29 +1288,25 @@ tt.tween.props[2].loop = false
 tt.tween.disabled = true
 tt.tween.reverse = true
 tt.tween.remove = false
---#endregion
---#region decal_elemental_fire_holder_root_dragon
+
 tt = RT("decal_elemental_fire_holder_root_dragon", "decal_scripted")
 tt.render.sprites[1].prefix = "fireholder_dragon_rootDef"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].name = "in"
 tt.loop_times = 1
 tt.main_script.update = scripts.decal_elemental_wood_holder_root_dragon.update
---#endregion
---#region decal_elemental_fire_holder_root_dragon_kill
+
 tt = RT("decal_elemental_fire_holder_root_dragon_kill", "decal_scripted")
 tt.render.sprites[1].prefix = "fireholder_dragon_executionDef"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].name = "in"
 tt.main_script.update = scripts.decal_elemental_wood_holder_root_dragon_kill.update
---#endregion
---#region fx_elemental_fire_holder_explosion
+
 tt = RT("fx_elemental_fire_holder_explosion", "fx")
 tt.render.sprites[1].prefix = "fireholder_dragon_executionDef"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].name = "in"
---#endregion
---#region fx_elemental_fire_holder_broken_jarra
+
 tt = RT("fx_elemental_fire_holder_broken_jarra", "decal_scripted")
 tt.main_script.update = scripts.multi_sprite_fx.update
 tt.render.sprites[1].prefix = "fireholder_jarraDef"
@@ -1424,7 +1326,6 @@ tt.render.sprites[3].name = "in"
 tt.render.sprites[3].exo = true
 tt.render.sprites[3].offset = v(0, 5)
 tt.render.sprites[3].z = Z_OBJECTS
---#endregion
 
 tt = RT("controller_elemental_water")
 E:add_comps(tt, "main_script", "pos", "render", "tween")
@@ -1519,6 +1420,7 @@ tt.tween.props[tt.tween.sid_hide_hojas].disabled = true
 tt.tween.props[tt.tween.sid_hide_hojas].ignore_reverse = true
 tt.tween.reverse = true
 tt.tween.remove = false
+
 tt = E:register_t("mod_eleemntal_water_holder_teleport", "mod_teleport")
 tt.modifier.vis_flags = bor(F_MOD)
 tt.modifier.vis_bans = bor(F_BOSS)
@@ -1531,11 +1433,13 @@ tt.hold_time = 0.34
 tt.delay_end = fts(3)
 tt.fx_start = "fx_eleemntal_water_holder_teleport"
 tt.fx_end = "fx_eleemntal_water_holder_teleport"
+
 tt = E:register_t("fx_eleemntal_water_holder_teleport", "fx")
 tt.render.sprites[1].prefix = "holder_elemental_33_teleport_teleport_fx"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].size_names = {"idle", "big_idle", "big_idle"}
 tt.render.sprites[1].animated = true
+
 tt = E:register_t("fx_elemental_water_holder_broken_jarra", "decal_scripted")
 tt.main_script.update = scripts.multi_sprite_fx.update
 tt.render.sprites[1].prefix = "stage33_water_holder_jarraDef"
@@ -1555,11 +1459,13 @@ tt.render.sprites[3].name = "in"
 tt.render.sprites[3].exo = true
 tt.render.sprites[3].offset = v(0, 5)
 tt.render.sprites[3].z = Z_OBJECTS
+
 tt = E:register_t("fx_elemental_water_holder_healing", "fx")
 tt.render.sprites[1].prefix = "stage33_water_holder_healDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_EFFECTS
+
 tt = E:register_t("decal_elemental_water_holder_passive_mist", "decal_tween")
 tt.render.sprites[1].prefix = "stage33_water_mistDef"
 tt.render.sprites[1].name = "run"
@@ -1571,12 +1477,14 @@ tt.tween.props[1].keys = {{0, 0}, {1, 255}}
 tt.tween.props[1].loop = false
 tt.tween.disabled = false
 tt.tween.remove = false
+
 tt = E:register_t("decal_elemental_water_holder_root_dragon", "decal_scripted")
 tt.render.sprites[1].prefix = "stage33_water_dragonrootDef"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].name = "in"
 tt.loop_times = 2
 tt.main_script.update = scripts.decal_elemental_wood_holder_root_dragon.update
+
 tt = E:register_t("decal_elemental_water_holder_root_dragon_kill", "decal_elemental_water_holder_root_dragon")
 tt.render.sprites[1].prefix = "stage33_water_dragonflyDef"
 tt.only_in = true
@@ -1693,6 +1601,7 @@ tt.tween.props[tt.tween.sid_hide_hojas].disabled = true
 tt.tween.props[tt.tween.sid_hide_hojas].ignore_reverse = true
 tt.tween.reverse = true
 tt.tween.remove = false
+
 tt = E:register_t("fx_elemental_earth_holder_broken_jarra", "decal_scripted")
 tt.main_script.update = scripts.multi_sprite_fx.update
 tt.render.sprites[1].prefix = "dirtholder_jarraDef"
@@ -1712,6 +1621,7 @@ tt.render.sprites[3].name = "in"
 tt.render.sprites[3].exo = true
 tt.render.sprites[3].offset = v(0, 5)
 tt.render.sprites[3].z = Z_OBJECTS
+
 tt = E:register_t("aura_elemental_earth_increase_health", "aura")
 tt.aura.duration = 1e+99
 tt.aura.cycle_time = 0.3
@@ -1721,6 +1631,7 @@ tt.aura.mod = "mod_elemental_earth_increase_health"
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 tt.main_script.remove = scripts.aura_apply_mod.remove
+
 tt = E:register_t("mod_elemental_earth_increase_health", "modifier")
 b = balance.specials.terrain_8.elemental_holders.earth_holder
 tt.extra_health_multiplier = b.extra_health_multiplier
@@ -1869,17 +1780,20 @@ tt.tween.props[tt.tween.sid_hide_hojas].disabled = true
 tt.tween.props[tt.tween.sid_hide_hojas].ignore_reverse = true
 tt.tween.reverse = true
 tt.tween.remove = false
+
 tt = E:register_t("decal_elemental_metal_holder_root_dragon", "decal_scripted")
 tt.render.sprites[1].prefix = "goldholder_dragon_rootDef"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].name = "in"
 tt.loop_times = 2
 tt.main_script.update = scripts.decal_elemental_wood_holder_root_dragon.update
+
 tt = E:register_t("fx_elemental_metal_holder_coins", "fx")
 tt.render.sprites[1].prefix = "goldholder_coin_splashDef"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].exo = true
 tt.render.sprites[1].z = Z_EFFECTS
+
 tt = E:register_t("mod_elemental_metal_gold_per_damage", "modifier")
 b = balance.specials.terrain_8.elemental_holders.metal_holder
 tt.damage_gold_ratio = b.damage_gold_ratio
@@ -1888,6 +1802,7 @@ tt.main_script.update = scripts.mod_elemental_metal_gold_per_damage.update
 tt.modifier.bans = {}
 tt.modifier.duration = 0.5
 tt.modifier.use_mod_offset = false
+
 tt = E:register_t("tower_stage_13_sunray", "tower")
 b = balance.specials.towers.stage_13_sunray
 E:add_comps(tt, "user_selection", "attacks")
