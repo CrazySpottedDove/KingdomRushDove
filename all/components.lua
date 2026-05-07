@@ -1175,3 +1175,7 @@ event.entity_id = nil
 local events = E:register_c("events")
 events.list = {}
 events.list[1] = E:clone_c("event")
+
+local betray = E:register_c("betray")
+betray.duration = 10
+betray.ts = 0

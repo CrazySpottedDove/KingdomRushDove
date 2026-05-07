@@ -460,7 +460,6 @@ tt.barrack.rally_range = 175
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_artillery_%04i"
 tt.render.sprites[1].offset = vec_2(0, 6)
-
 for i = 2, 10 do
 	tt.render.sprites[i] = CC("sprite")
 	tt.render.sprites[i].prefix = "towermecha_layer" .. i - 1
@@ -468,7 +467,6 @@ for i = 2, 10 do
 	tt.render.sprites[i].offset = vec_2(0, 46)
 	tt.render.sprites[i].z = Z_TOWER_BASES
 end
-
 tt.render.sprites[10].z = Z_OBJECTS
 tt.sound_events.insert = {"MechTauntReady", "MechSpawn"}
 tt.sound_events.change_rally_point = "MechTaunt"

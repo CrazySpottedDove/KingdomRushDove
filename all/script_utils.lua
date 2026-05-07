@@ -4977,10 +4977,111 @@ local function enemy_beat_back_logic(this, store)
 	this._beat_back_duration = nil
 end
 
+--- 击退敌人
+---@param target table 敌人
+---@param distance number 击退距离
+---@param duration number 击退持续时间
+---@return boolean 是否成功击退
 function SU.beat_back_enemy(target, distance, duration)
 	if U.overwrite_main_script(target, enemy_beat_back_logic) then
 		target._beat_back_distance = distance
 		target._beat_back_duration = duration
+		return true
+	end
+	return false
+end
+
+function SU.is_valid_betray_target(target)
+	return not target._betray_data and target.melee and band(target.vis.flags, bor(F_FLYING, F_BOSS)) == 0 and not target._main_script_overwritten and U.has_valid_rally_node_nearby(target.pos) and band(target.vis.bans, F_BLOCK) == 0
+end
+
+-- 避开所有可能导致错误的因素，选择直接让被策反的敌人沉默，并只能进行近战攻击，作为一个白板
+local function enemy_betray_logic(this, store)
+	U.unblock_all(store, this)
+	this._betray_data.ts = store.tick_ts
+	E:add_comps(this, "nav_rally")
+	U.flags_add(this.vis, F_FRIEND)
+	U.flags_remove(this.vis, F_ENEMY)
+	E:add_comps(this, "soldier", "idle_flip")
+	store.enemy_spatial_index.remove_entity(this)
+	this.soldier.melee_slot_offset:set(this.enemy.melee_slot.x * 0.5, this.enemy.melee_slot.y)
+	store.enemies[this.id] = nil
+	store.soldiers[this.id] = this
+	this.nav_rally.pos:copy(this.pos)
+	this.nav_rally.center = this.nav_rally.pos
+	this.nav_path.dir = -1
+	this.melee.range = 60
+
+	for _, a in ipairs(this.melee.attacks) do
+		a._original_vis_bans = a.vis_bans
+		a.vis_bans = bor(U.flag_clear(a.vis_bans, F_ENEMY), F_FRIEND)
+		if a.hit_times and not a.animations then
+			a.animations = {nil, a.animation, nil}
+			a.loops = 1
+		end
+	end
+
+	local brk, sta
+
+	while store.tick_ts - this._betray_data.ts < this._betray_data.duration do
+		if this.health.dead then
+			store.player_gold = store.player_gold + this.enemy.gold
+			break
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+			if brk or sta ~= A_NO_TARGET then
+				goto continue
+			end
+
+			SU.soldier_idle(store, this)
+
+			local next_pos = P:next_entity_node(this, store.tick_length)
+			if not next_pos or not U.has_valid_rally_node_nearby(this.pos) then
+			-- SU.soldier_idle(store, this)
+			else
+				U.set_destination(this, next_pos)
+				local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
+				U.animation_start(this, an, af, store.tick_ts, -1)
+				U.walk(this, store.tick_length)
+				this.nav_rally.pos:copy(this.pos)
+			end
+		end
+
+		::continue::
+
+		coroutine.yield()
+	end
+
+	store.enemy_spatial_index.insert_entity(this)
+
+	for _, a in ipairs(this.melee.attacks) do
+		a.vis_bans = a._original_vis_bans
+		a._original_vis_bans = nil
+	end
+
+	U.unblock_target(store, this)
+	store.soldiers[this.id] = nil
+	store.enemies[this.id] = this
+	U.flags_remove(this.vis, F_FRIEND)
+	U.flags_add(this.vis, F_ENEMY)
+	this.nav_path.dir = 1
+	this.nav_rally = nil
+	this.soldier = nil
+	this.idle_flip = nil
+	this._betray_data = nil
+end
+
+--- 策反敌人。调用前，应保证已使用 SU.is_valid_betray_target 判断目标是否合法。
+---@param target table 敌人
+---@param betray table 策反相关数据(component)
+---@return boolean 是否成功策反
+function SU.betray_enemy(target, betray)
+	if U.overwrite_main_script(target, enemy_betray_logic) then
+		target._betray_data = betray
 		return true
 	end
 	return false
