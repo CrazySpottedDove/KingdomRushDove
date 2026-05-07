@@ -897,6 +897,7 @@ function sys.render:on_insert(entity, store)
 	local render_frames = store.render_frames
 
 	if entity.render then
+		local track_e_pos = nil
 		for i = 1, #entity.render.sprites do
 			local s = entity.render.sprites[i]
 
@@ -908,8 +909,16 @@ function sys.render:on_insert(entity, store)
 			end
 
 			if not s.pos then
-				s.pos = V.v(entity.pos.x, entity.pos.y)
-				s._track_e = true
+				if not track_e_pos then
+					s.pos = V.v(entity.pos.x, entity.pos.y)
+					track_e_pos = s.pos
+					s._track_e = true
+				else
+					-- 使用引用，这样，只要单个 tracK_e_pos 进行同步更新，其余 sprite 就会自动跟随，不需要同样做一次赋值操作了。
+					s.pos = track_e_pos
+				end
+			-- s.pos = V.v(entity.pos.x, entity.pos.y)
+			-- s._track_e = true
 			end
 
 			if s.shader then
@@ -947,7 +956,8 @@ function sys.render:on_insert(entity, store)
 
 		local ff = {
 			flip_x = false,
-			pos = V.vv(0),
+			-- 引用 fb 的 pos，这样我们始终只需要修改 fb 的 pos 即可
+			pos = fb.pos,
 			r = 0,
 			alpha = 255,
 			anchor = V.vv(0),
@@ -974,7 +984,8 @@ function sys.render:on_insert(entity, store)
 		if hb.black_bar_hp then
 			local fk = {
 				flip_x = false,
-				pos = V.vv(0),
+				-- 同样使用引用
+				pos = fb.pos,
 				r = 0,
 				alpha = 255,
 				anchor = V.vv(0),
@@ -1147,11 +1158,11 @@ function sys.render:on_render_update(dt, ts, store)
 				fb.hidden = false
 				ff.hidden = false
 				fb.pos.x, fb.pos.y = e.pos.x, e.pos.y
-				ff.pos.x, ff.pos.y = fb.pos.x, fb.pos.y
+				-- ff.pos.x, ff.pos.y = fb.pos.x, fb.pos.y
 
 				if fk then
 					fk.hidden = false
-					fk.pos.x, fk.pos.y = e.pos.x, e.pos.y
+					-- fk.pos.x, fk.pos.y = e.pos.x, e.pos.y
 					ff.scale.x = e.health.hp / hb.black_bar_hp * ff.bar_width
 					fb.scale.x = e.health.hp_max / hb.black_bar_hp * fb.bar_width
 				else

@@ -49,8 +49,8 @@ health.delete_after = nil
 health.death_ts = 0
 health.instakill_resistance = 0
 health.armor_resilience = 0
-local health_bar = E:register_c("health_bar")
 
+local health_bar = E:register_c("health_bar")
 health_bar.offset = v(0, 35)
 health_bar.type = HEALTH_BAR_SIZE_SMALL
 health_bar.hidden = false
@@ -58,8 +58,8 @@ health_bar.z = Z_OBJECTS
 health_bar.draw_order = nil
 health_bar.sort_y_offset = nil
 health_bar.frames = {}
-local regen = E:register_c("regen")
 
+local regen = E:register_c("regen")
 regen.health = nil
 regen.cooldown = 0
 regen.ignore_stun = nil
@@ -191,8 +191,8 @@ click_play.required_clicks = 1
 click_play.achievement = nil
 click_play.achievement_flag = nil
 click_play.play_once = false
-local sprite = E:register_c("sprite")
 
+local sprite = E:register_c("sprite")
 sprite.animated = true
 sprite.group = nil
 sprite.prefix = nil
