@@ -659,7 +659,7 @@ function M.register(sys)
 								local source = entities[d.source_id]
 
 								if source and source.track_damage then
-									table.insert(source.track_damage.damaged, {e.id, actual_damage})
+									source.track_damage.damaged[#source.track_damage.damaged + 1] = {e.id, actual_damage}
 								end
 							end
 							dnum_on_applied_impl(store, d, e)
@@ -704,7 +704,7 @@ function M.register(sys)
 							local source = entities[d.source_id]
 
 							if source and source.track_kills then
-								table.insert(source.track_kills.killed, e.id)
+								source.track_kills.killed[#source.track_kills.killed + 1] = e.id
 							end
 						end
 					end
@@ -735,7 +735,7 @@ function M.register(sys)
 
 			if not h.dead then
 				h.last_damage_types = 0
-			elseif not h.ignore_delete_after and (h.delete_after and store.tick_ts > h.delete_after or h.delete_now) then
+			elseif not h.ignore_delete_after and (h.delete_after and store.tick_ts > h.delete_after) then
 				queue_remove(store, e)
 			end
 		end
@@ -757,7 +757,7 @@ function M.register(sys)
 
 			if not h.dead then
 				h.last_damage_types = 0
-			elseif not e.hero and not h.ignore_delete_after and (h.delete_after and store.tick_ts > h.delete_after or h.delete_now) then
+			elseif not e.hero and not h.ignore_delete_after and (h.delete_after and store.tick_ts > h.delete_after) then
 				queue_remove(store, e)
 			end
 		end
