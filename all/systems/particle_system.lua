@@ -15,9 +15,6 @@ local sin = math.sin
 -- FFI Definition for particle_t
 ffi.cdef[[
     typedef struct {
-        float pos_x;
-        float pos_y;
-        float r;
         float speed_x;
         float speed_y;
         float spin;
@@ -26,46 +23,12 @@ ffi.cdef[[
         float ts;
         float last_ts;
         float lifetime;
-        int name_idx;
     } particle_t;
 ]]
 
 function M.register(sys)
 	sys.particle_system = {}
 	sys.particle_system.name = "particle_system"
-
-	-- local phase_interp = function(values, phase, default)
-	-- 	if not values or #values == 0 then
-	-- 		return default
-	-- 	end
-
-	-- 	if #values == 1 then
-	-- 		return values[1]
-	-- 	end
-
-	-- 	local intervals = #values - 1
-	-- 	local interval = floor(phase * intervals)
-	-- 	local interval_phase = phase * intervals - interval
-	-- 	local a = values[interval + 1]
-	-- 	local b = values[interval + 2]
-	-- 	local ta = type(a)
-
-	-- 	if ta == "table" then
-	-- 		local out = {}
-
-	-- 		for i = 1, #a do
-	-- 			out[i] = a[i] + (b[i] - a[i]) * interval_phase
-	-- 		end
-
-	-- 		return out
-	-- 	elseif ta == "boolean" then
-	-- 		return a
-	-- 	elseif a ~= nil and b ~= nil then
-	-- 		return a + (b - a) * interval_phase
-	-- 	end
-
-	-- 	return default
-	-- end
 
 	-- 不负责做兜底检查，由调用者保证。就目前而言，没有发现需要 phase_interp 做除了 number 之外类型的插值的情况。因此，删除动态分支。
 	local phase_interp = function(values, phase)
@@ -91,7 +54,6 @@ function M.register(sys)
 
 			ps.ts = store.tick_ts
 			ps.emit_ts = store.tick_ts + ps.ts_offset
-		-- ps.last_pos = V.v(0, 0)
 		end
 
 		return true
@@ -152,6 +114,7 @@ function M.register(sys)
 				end
 			end
 
+			-- 粒子的初始化逻辑，每个粒子只会执行一次
 			if not ps.emit then
 				ps.emit_ts = ts + ps.ts_offset
 			elseif ts - ps.emit_ts > 1 / ps.emission_rate then
@@ -162,7 +125,7 @@ function M.register(sys)
 					local pts = ps.emit_ts + i / ps.emission_rate
 					ps.particle_count = ps.particle_count + 1
 
-					local p = ffi.new("particle_t", 0, 0, ps.emit_rotation and ps.emit_rotation or (ps.track_rotation and target_rot) or (ps.emit_direction + (random() - 0.5) * ps.emit_rotation_spread), 0, 0, ps.spin and random() * (ps.spin[2] - ps.spin[1]) + ps.spin[1] or 0, 1, 1, pts, pts, particle_lifetime, 0)
+					local p = ffi.new("particle_t", 0, 0, ps.spin and random() * (ps.spin[2] - ps.spin[1]) + ps.spin[1] or 0, 1, 1, pts, pts, particle_lifetime)
 
 					particles[ps.particle_count] = p
 
@@ -171,7 +134,7 @@ function M.register(sys)
 						flip_x = false,
 						flip_y = false,
 						pos = V.v(0, 0),
-						r = 0,
+						r = ps.emit_rotation and ps.emit_rotation or (ps.track_rotation and target_rot) or (ps.emit_direction + (random() - 0.5) * ps.emit_rotation_spread),
 						scale = V.v(1, 1),
 						anchor = V.v(ps.anchor.x, ps.anchor.y),
 						offset = V.v(0, 0),
@@ -180,7 +143,8 @@ function M.register(sys)
 						sort_y = ps.sort_y,
 						sort_y_offset = ps.sort_y_offset,
 						alpha = 255,
-						hidden = nil
+						hidden = nil,
+						animation_name = ps.name
 					}
 
 					frames[ps.particle_count] = f
@@ -188,20 +152,20 @@ function M.register(sys)
 
 					if ps.track_id then
 						local factor = (i - 1) / count
-						p.pos_x, p.pos_y = ps.last_pos.x + (e_pos.x - ps.last_pos.x) * factor, ps.last_pos.y + (e_pos.y - ps.last_pos.y) * factor
+						f.pos.x, f.pos.y = ps.last_pos.x + (e_pos.x - ps.last_pos.x) * factor, ps.last_pos.y + (e_pos.y - ps.last_pos.y) * factor
 					else
-						p.pos_x, p.pos_y = e_pos.x, e_pos.y
+						f.pos.x, f.pos.y = e_pos.x, e_pos.y
 					end
 
 					if ps.emit_area_spread then
 						local sp = ps.emit_area_spread
-						p.pos_x = p.pos_x + (random() - 0.5) * sp.x * 0.5
-						p.pos_y = p.pos_y + (random() - 0.5) * sp.y * 0.5
+						f.pos.x = f.pos.x + (random() - 0.5) * sp.x * 0.5
+						f.pos.y = f.pos.y + (random() - 0.5) * sp.y * 0.5
 					end
 
 					if ps.emit_offset then
-						p.pos_x = p.pos_x + ps.emit_offset.x
-						p.pos_y = p.pos_y + ps.emit_offset.y
+						f.pos.x = f.pos.x + ps.emit_offset.x
+						f.pos.y = f.pos.y + ps.emit_offset.y
 					end
 
 					if ps.emit_speed then
@@ -225,9 +189,9 @@ function M.register(sys)
 							end
 
 							ps._last_name_idx = km.zmod(ps._last_name_idx + 1, #ps.names)
-							p.name_idx = ps._last_name_idx
+							f.animation_name = ps.names[ps._last_name_idx]
 						else
-							p.name_idx = random(1, #ps.names)
+							f.animation_name = ps.names[random(1, #ps.names)]
 						end
 					end
 				end
@@ -259,10 +223,8 @@ function M.register(sys)
 					local tp = ts - p.last_ts
 
 					p.last_ts = ts
-					p.pos_x, p.pos_y = p.pos_x + p.speed_x * tp, p.pos_y + p.speed_y * tp
-					f.pos.x, f.pos.y = p.pos_x, p.pos_y
-					p.r = p.r + p.spin * tp
-					f.r = p.r
+					f.pos.x, f.pos.y = f.pos.x + p.speed_x * tp, f.pos.y + p.speed_y * tp
+					f.r = f.r + p.spin * tp
 
 					if ps.scales_x then
 						f.scale.x = phase_interp(ps.scales_x, phase) * p.scale_x
@@ -286,8 +248,6 @@ function M.register(sys)
 						f.color = ps.color
 					end
 
-					local fn
-
 					if ps.animated then
 						local to = ts - p.ts
 
@@ -295,18 +255,10 @@ function M.register(sys)
 							to = to * ps.animation_fps / FPS
 						end
 
-						if p.name_idx > 0 then
-							fn = A:fn(ps.names[p.name_idx], to, ps.loop)
-						else
-							fn = A:fn(ps.name, to, ps.loop)
-						end
-					elseif p.name_idx > 0 then
-						fn = ps.names[p.name_idx]
+						f.ss = I:s(A:fn(f.animation_name, to, ps.loop))
 					else
-						fn = ps.name
+						f.ss = I:s(f.animation_name)
 					end
-
-					f.ss = I:s(fn)
 				end
 
 				::label_51_0::

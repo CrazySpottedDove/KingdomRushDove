@@ -753,9 +753,6 @@ function sys.tween:on_render_update(dt, ts, store)
 					--     log.error("entity %s tween_prop %s has no interp_fn", e.template_name, tween_prop.name)
 					-- end
 					tween_prop.interp_fn(ka, kb, time, s, tween_prop.name)
-
-				-- 该逻辑已提前，避免再次判断 reverse
-				-- finished = finished and (tween_prop.loop or ka == kb)
 				end
 			end
 
@@ -917,8 +914,6 @@ function sys.render:on_insert(entity, store)
 					-- 使用引用，这样，只要单个 tracK_e_pos 进行同步更新，其余 sprite 就会自动跟随，不需要同样做一次赋值操作了。
 					s.pos = track_e_pos
 				end
-			-- s.pos = V.v(entity.pos.x, entity.pos.y)
-			-- s._track_e = true
 			end
 
 			if s.shader then
@@ -1136,7 +1131,6 @@ function sys.render:on_render_update(dt, ts, store)
 			end
 		end
 
-		perf.start("health_bar")
 		if e.health_bar and show_health_bar then
 			local hb = e.health_bar
 			local fb = hb.frames[1]
@@ -1158,11 +1152,9 @@ function sys.render:on_render_update(dt, ts, store)
 				fb.hidden = false
 				ff.hidden = false
 				fb.pos.x, fb.pos.y = e.pos.x, e.pos.y
-				-- ff.pos.x, ff.pos.y = fb.pos.x, fb.pos.y
 
 				if fk then
 					fk.hidden = false
-					-- fk.pos.x, fk.pos.y = e.pos.x, e.pos.y
 					ff.scale.x = e.health.hp / hb.black_bar_hp * ff.bar_width
 					fb.scale.x = e.health.hp_max / hb.black_bar_hp * fb.bar_width
 				else
@@ -1176,7 +1168,6 @@ function sys.render:on_render_update(dt, ts, store)
 				end
 			end
 		end
-		perf.stop("health_bar")
 	end
 
 	-- FFI同步

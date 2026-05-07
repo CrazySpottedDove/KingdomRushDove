@@ -1095,11 +1095,10 @@ tt.bullet.flight_time_factor = fts(0.033)
 tt.bullet.damage_max = 60
 tt.bullet.damage_min = 45
 --#endregion
+
 --#region ps_arrow_silver
 tt = RT("ps_arrow_silver")
-
 AC(tt, "pos", "particle_system")
-
 tt.particle_system.names = {"arrow_silver_mark_particle_1", "arrow_silver_mark_particle_2"}
 tt.particle_system.loop = false
 tt.particle_system.cycle_names = true
@@ -1111,11 +1110,10 @@ tt.particle_system.alphas = {255, 0}
 tt.particle_system.emission_rate = 60
 tt.particle_system.color = {255, 100, 100}
 --#endregion
+
 --#region ps_arrow_silver_mark
 tt = RT("ps_arrow_silver_mark")
-
 AC(tt, "pos", "particle_system")
-
 tt.particle_system.names = {"arrow_silver_mark_particle_1", "arrow_silver_mark_particle_2"}
 tt.particle_system.loop = false
 tt.particle_system.cycle_names = true
@@ -1125,6 +1123,7 @@ tt.particle_system.scales_y = {0.85, 0.85}
 tt.particle_system.scales_x = {0.85, 0.85}
 tt.particle_system.emission_rate = 30
 --#endregion
+
 --#region mod_arrow_silver_mark
 tt = RT("mod_arrow_silver_mark", "modifier")
 
