@@ -528,15 +528,6 @@ function scripts.enemy_basic.get_info(this)
 end
 
 function scripts.enemy_basic.insert(this, store)
-	-- insert 期分发 update 逻辑，减少运行时分支
-	if this.main_script.update == scripts.enemy_mixed.update then
-		if this.melee then
-			if not this.ranged then
-				this.main_script.update = scripts.enemy_melee.update
-			end
-		end
-	end
-
 	local next, new = P:next_entity_node(this, store.tick_length)
 
 	if not next then
