@@ -11857,7 +11857,6 @@ tt.main_script.update = scripts.mod_track_target.update
 tt.modifier.duration = nil
 
 tt = RT("hero_raelyn_onslaught_aura", "aura")
-AC(tt, "render")
 tt.aura.duration = fts(11)
 tt.aura.cycle_time = fts(11)
 tt.aura.damage_min = nil
@@ -11868,16 +11867,6 @@ tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
 tt.aura.vis_flags = bor(F_RANGED)
 tt.aura.excluded_entities = nil
 tt.main_script.update = scripts.aura_apply_damage.update
-
-function tt.main_script.insert(this, store)
-	if this.render then
-		for _, s in pairs(this.render.sprites) do
-			s.ts = store.tick_ts
-		end
-	end
-
-	return true
-end
 
 tt = RT("hero_raelyn_ultimate")
 AC(tt, "pos", "main_script", "sound_events")

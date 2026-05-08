@@ -563,7 +563,6 @@ local ps_missile_mecha = RT("ps_missile_mecha")
 AC(ps_missile_mecha, "pos", "particle_system")
 ps_missile_mecha.particle_system.name = "particle_smokelet"
 ps_missile_mecha.particle_system.animated = false
--- ps_missile_mecha.particle_system.particle_lifetime = {1.6, 1.8}
 ps_missile_mecha.particle_system.particle_lifetime = {0.8, 0.9}
 ps_missile_mecha.particle_system.alphas = {255, 0}
 ps_missile_mecha.particle_system.scales_x = {1, 3}
