@@ -3842,7 +3842,7 @@ function scripts.eb_dracula.update(this, store)
 		U.update_max_speed(this, this.motion.max_speed_bat)
 
 		while not this.motion.arrived do
-			U.walk(this, store.tick_length)
+			U.walk_off__accel__unsnapped(this, store.tick_length)
 			coroutine.yield()
 		end
 
@@ -11016,7 +11016,7 @@ function scripts.boss_machinist.update(this, store)
 		end
 
 		U.set_destination(this, next)
-		U.walk(this, store.tick_length)
+		U.walk_off__accel__unsnapped(this, store.tick_length)
 		coroutine.yield()
 
 		this.motion.speed.x, this.motion.speed.y = 0, 0

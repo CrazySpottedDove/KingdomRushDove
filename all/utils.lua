@@ -757,8 +757,7 @@ function U.walk(e, dt, accel, unsnapped)
 		e.heading.angle = v_angle
 	end
 
-	local true_step = min(step, v_len)
-	local sx, sy = true_step * nx, true_step * ny
+	local sx, sy = step * nx, step * ny
 
 	pos.x, pos.y = pos.x + sx, pos.y + sy
 	m.speed.x, m.speed.y = sx / dt, sy / dt
@@ -767,7 +766,7 @@ function U.walk(e, dt, accel, unsnapped)
 	return false
 end
 
-function U.walk_off__accel__unsanpped(e, dt)
+function U.walk_off__accel__unsnapped(e, dt)
 	if e.motion.arrived then
 		return true
 	end
@@ -1399,7 +1398,7 @@ end
 ---@return table? 士兵位置, boolean? 士兵是否在右侧
 function U.melee_slot_position(soldier, enemy, rank, back)
 	if not rank then
-		rank = table.keyforobject(enemy.enemy.blockers, soldier.id)
+		rank = table.indexforobject(enemy.enemy.blockers, soldier.id)
 
 		if not rank then
 			return nil
@@ -1436,7 +1435,7 @@ end
 ---@return table|nil 敌人位置, boolean|nil 敌人是否在右侧
 function U.melee_slot_enemy_position(enemy, soldier, rank, back)
 	if not rank then
-		rank = table.keyforobject(enemy.enemy.blockers, soldier.id)
+		rank = table.indexforobject(enemy.enemy.blockers, soldier.id)
 
 		if not rank then
 			return nil
@@ -1527,7 +1526,7 @@ function U.blocker_rank(store, blocker)
 	local blocked = store.entities[blocked_id]
 
 	if blocked then
-		return table.keyforobject(blocked.enemy.blockers, blocker.id)
+		return table.indexforobject(blocked.enemy.blockers, blocker.id)
 	end
 
 	return nil
@@ -1596,7 +1595,7 @@ function U.block_enemy(store, blocker, blocked)
 		U.unblock_target(store, blocker)
 	end
 
-	if not table.keyforobject(blocked.enemy.blockers, blocker.id) then
+	if not table.indexforobject(blocked.enemy.blockers, blocker.id) then
 		table.insert(blocked.enemy.blockers, blocker.id)
 
 		blocker.soldier.target_id = blocked.id
@@ -1612,7 +1611,7 @@ function U.replace_blocker(store, old, new)
 	local blocked = store.entities[blocked_id]
 
 	if blocked then
-		local idx = table.keyforobject(blocked.enemy.blockers, old.id)
+		local idx = table.indexforobject(blocked.enemy.blockers, old.id)
 
 		if idx then
 			blocked.enemy.blockers[idx] = new.id

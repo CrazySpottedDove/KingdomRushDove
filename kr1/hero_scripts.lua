@@ -1699,7 +1699,7 @@ scripts.soldier_sand_warrior = {
 						local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
 						U.animation_start(this, an, af, store.tick_ts, -1)
-						U.walk(this, store.tick_length)
+						U.walk_off__accel__unsnapped(this, store.tick_length)
 						coroutine.yield()
 
 						target = U.find_foremost_enemy_in_range_filter_off(this.pos, this.melee.range, false, attack.vis_flags, attack.vis_bans)
@@ -2736,7 +2736,7 @@ scripts.beastmaster_rhino = {
 			local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
 			U.animation_start(this, an, af, store.tick_ts)
-			U.walk(this, store.tick_length)
+			U.walk_off__accel__unsnapped(this, store.tick_length)
 
 			if store.tick_ts - attack.ts >= attack.cooldown then
 				attack.ts = store.tick_ts
@@ -9593,7 +9593,7 @@ scripts.hero_minotaur = {
 
 					U.set_destination(this, slot_pos)
 
-					while not U.walk(this, store.tick_length) do
+					while not U.walk_off__accel__unsnapped(this, store.tick_length) do
 						local targets = U.find_enemies_in_range_filter_on(this.pos, a.stun_range, a.stun_vis_flags, a.stun_vis_bans, function(v)
 							return not table.contains(damaged_enemies, v)
 						end)
@@ -9900,7 +9900,7 @@ scripts.hero_monkey_god = {
 									goto label_452_0
 								end
 
-								U.walk(this, store.tick_length)
+								U.walk_off__accel__unsnapped(this, store.tick_length)
 								coroutine.yield()
 
 								this.motion.speed.x, this.motion.speed.y = 0, 0
@@ -13854,7 +13854,7 @@ function scripts.hero_arivan_ultimate.update(this, store)
 				goto label_95_0
 			end
 
-			U.walk(this, store.tick_length)
+			U.walk_off__accel__unsnapped(this, store.tick_length)
 
 			for ai, a in ipairs(this.timed_attacks.list) do
 				if store.tick_ts - a.ts < a.cooldown then
@@ -16381,7 +16381,7 @@ function scripts.hero_rag.update(this, store)
 						damage_ts = store.tick_ts - a.damage_every
 
 						while store.tick_ts - a.ts < a.duration and not SU.hero_interrupted(this) do
-							if U.walk(this, store.tick_length) then
+							if U.walk_off__accel__unsnapped(this, store.tick_length) then
 								if math.abs(next_node.ni - start_node.ni) == a.nodes_range then
 									next_node.dir = next_node.dir * -1
 								end
@@ -16828,7 +16828,7 @@ function scripts.lion_bruce.update(this, store)
 		local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
 		U.animation_start(this, an, af, store.tick_ts)
-		U.walk(this, store.tick_length)
+		U.walk_off__accel__unsnapped(this, store.tick_length)
 
 		if not fading and store.tick_ts - attack.ts > attack.cooldown then
 			attack.ts = store.tick_ts
@@ -18341,7 +18341,7 @@ function scripts.hero_hunter.update(this, store)
 								ps.particle_system.emit_offset = ps.particle_system.emit_offsets[offset_index]
 							end
 
-							U.walk(this, store.tick_length)
+							U.walk_off__accel__unsnapped(this, store.tick_length)
 							coroutine.yield()
 
 							this.motion.speed.x, this.motion.speed.y = 0, 0
@@ -19742,7 +19742,7 @@ function scripts.hero_space_elf.update(this, store)
 							end
 						end
 
-						U.walk(this, store.tick_length)
+						U.walk_off__accel__unsnapped(this, store.tick_length)
 						coroutine.yield()
 
 						this.motion.speed.x, this.motion.speed.y = 0, 0
@@ -21637,7 +21637,7 @@ function scripts.hero_venom.update(this, store)
 								goto label_294_0
 							end
 
-							U.walk(this, store.tick_length)
+							U.walk_off__accel__unsnapped(this, store.tick_length)
 							coroutine.yield()
 
 							this.motion.speed.x, this.motion.speed.y = 0, 0
@@ -28049,7 +28049,7 @@ function scripts.hero_wukong.update(this, store)
 								goto label_882_0
 							end
 
-							U.walk(this, store.tick_length)
+							U.walk_off__accel__unsnapped(this, store.tick_length)
 
 							local vx, vy = V.sub(this.motion.dest.x, this.motion.dest.y, this.pos.x, this.pos.y)
 							local path_len = V.len(vx, vy)
@@ -29767,7 +29767,7 @@ function scripts.hero_muyrn.update(this, store)
 								goto label_283_0
 							end
 
-							U.walk(this, store.tick_length)
+							U.walk_off__accel__unsnapped(this, store.tick_length)
 							coroutine.yield()
 
 							this.motion.speed.x, this.motion.speed.y = 0, 0
@@ -32076,7 +32076,7 @@ function scripts.soldier_hero_dragon_arb_spawn.update(this, store, script)
 					local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
 					U.animation_start(this, an, af, store.tick_ts, -1)
-					U.walk(this, store.tick_length)
+					U.walk_off__accel__unsnapped(this, store.tick_length)
 					coroutine.yield()
 
 					target = U.find_foremost_enemy_in_range_filter_off(this.pos, this.melee.range, false, attack.vis_flags, attack.vis_bans)
@@ -33977,7 +33977,7 @@ function scripts.hero_robot.update(this, store)
 								goto label_432_0
 							end
 
-							U.walk(this, store.tick_length)
+							U.walk_off__accel__unsnapped(this, store.tick_length)
 							coroutine.yield()
 
 							this.motion.speed.x, this.motion.speed.y = 0, 0
@@ -34981,7 +34981,7 @@ function scripts.aura_hero_robot_ultimate_train.update(this, store)
 		else
 			U.set_destination(this, target_pos)
 
-			if U.walk(this, store.tick_length) then
+			if U.walk_off__accel__unsnapped(this, store.tick_length) then
 				return false
 			else
 				local an, af = animation_name_facing_point_hero_robot("run", this.motion.dest)
@@ -36032,7 +36032,7 @@ function scripts.hero_lava.update(this, store)
 		else
 			U.set_destination(this, dest)
 
-			if U.walk(this, store.tick_length) then
+			if U.walk_off__accel__unsnapped(this, store.tick_length) then
 				return false
 			else
 				local an, af = U.animation_name_facing_point(this, "death_walk", this.motion.dest)
@@ -39365,7 +39365,7 @@ function scripts.bullet_hero_dragon_sun_breath_ray.update(this, store)
 			U.set_destination(this, next)
 		end
 
-		U.walk(this, store.tick_length)
+		U.walk_off__accel__unsnapped(this, store.tick_length)
 
 		if store.tick_ts >= next_decal_ts then
 			next_decal_ts = store.tick_ts + fts(6)
@@ -39904,7 +39904,7 @@ function scripts.bullet_hero_dragon_sun_ultimate.update(this, store)
 			U.set_destination(this, next)
 		end
 
-		U.walk(this, store.tick_length)
+		U.walk_off__accel__unsnapped(this, store.tick_length)
 
 		if store.tick_ts > next_decal_ts then
 			next_decal_ts = store.tick_ts + time_between_decals

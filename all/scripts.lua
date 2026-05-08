@@ -8785,7 +8785,7 @@ local function enemy_attracted_logic(this, store)
 			local an, af = U.animation_name_facing_point(this, "walk", motion.dest)
 
 			U.animation_start(this, an, af, store.tick_ts, true)
-			U.walk(this, store.tick_length)
+			U.walk_off__accel__unsnapped(this, store.tick_length)
 
 			motion.speed.x, motion.speed.y = 0, 0
 		end

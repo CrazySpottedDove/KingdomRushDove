@@ -287,7 +287,7 @@ function scripts.twister.update(this, store)
 		U.set_destination(this, P:node_pos(np.pi, np.spi, np.ni))
 
 		while not this.motion.arrived do
-			U.walk(this, store.tick_length)
+			U.walk_off__accel__unsnapped(this, store.tick_length)
 			coroutine.yield()
 
 			if this.interrupt then
@@ -5525,7 +5525,7 @@ function scripts.enemy_alien_breeder.update(this, store)
 							goto label_19_0
 						end
 
-						U.walk(this, store.tick_length)
+						U.walk_off__accel__unsnapped(this, store.tick_length)
 						coroutine.yield()
 					end
 
@@ -5812,7 +5812,7 @@ function scripts.enemy_cannibal_volcano.update(this, store)
 				this.health.hp = 0
 
 				while not this.motion.arrived do
-					U.walk(this, store.tick_length)
+					U.walk_off__accel__unsnapped(this, store.tick_length)
 
 					this.render.sprites[1].alpha = km.clamp(0, 255, this.render.sprites[1].alpha - fade_step)
 
@@ -6737,7 +6737,7 @@ function scripts.enemy_deviltide_shark.update(this, store)
 			local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
 			U.animation_start(this, an, af, store.tick_ts, -1)
-			U.walk(this, store.tick_length)
+			U.walk_off__accel__unsnapped(this, store.tick_length)
 			coroutine.yield()
 
 			this.motion.speed.x, this.motion.speed.y = 0, 0
@@ -7187,7 +7187,7 @@ function scripts.elvira_bat.update(this, store)
 	U.set_destination(this, this.motion.forced_waypoint)
 
 	while not this.motion.arrived and not this.spawner.interrupt do
-		U.walk(this, store.tick_length)
+		U.walk_off__accel__unsnapped(this, store.tick_length)
 		coroutine.yield()
 	end
 
@@ -7480,7 +7480,7 @@ function scripts.decal_black_dragon.update(this, store)
 			U.set_destination(this, v(150, REF_H + 100))
 
 			while not this.motion.arrived do
-				U.walk(this, store.tick_length)
+				U.walk_off__accel__unsnapped(this, store.tick_length)
 				update_shadow()
 				coroutine.yield()
 			end
@@ -7555,7 +7555,7 @@ function scripts.decal_black_dragon.update(this, store)
 					end
 				end
 
-				U.walk(this, store.tick_length)
+				U.walk_off__accel__unsnapped(this, store.tick_length)
 				coroutine.yield()
 			end
 
@@ -7575,7 +7575,7 @@ function scripts.decal_black_dragon.update(this, store)
 			U.set_destination(this, this.sleep_pos)
 
 			while not this.motion.arrived do
-				U.walk(this, store.tick_length)
+				U.walk_off__accel__unsnapped(this, store.tick_length)
 				update_shadow()
 				coroutine.yield()
 			end
@@ -8245,7 +8245,7 @@ function scripts.decal_volcano_virgin.update(this, store)
 	U.set_destination(this, v(this.pos.x + dist, this.pos.y))
 
 	while not this.motion.arrived do
-		U.walk(this, store.tick_length)
+		U.walk_off__accel__unsnapped(this, store.tick_length)
 
 		this.render.sprites[1].alpha = km.clamp(0, 255, this.render.sprites[1].alpha - fade_step)
 
@@ -8259,7 +8259,7 @@ end
 scripts.decal_indiana_boulder = {}
 
 function scripts.decal_indiana_boulder.update(this, store)
-	while not U.walk(this, store.tick_length) do
+	while not U.walk_off__accel__unsnapped(this, store.tick_length) do
 		coroutine.yield()
 	end
 
@@ -9552,7 +9552,7 @@ function scripts.decal_stage22_reptile.update(this, store)
 			U.animation_start(this, "climb", nil, store.tick_ts, true)
 			U.set_destination(this, v(this.pos.x, this.pos.y + this.climb_distance))
 
-			while not U.walk(this, store.tick_length) do
+			while not U.walk_off__accel__unsnapped(this, store.tick_length) do
 				coroutine.yield()
 			end
 
@@ -11708,7 +11708,7 @@ function scripts.decal_minidragon_faustus.update(this, store)
 			a.ts = store.tick_ts
 		end
 
-		U.walk(this, store.tick_length)
+		U.walk_off__accel__unsnapped(this, store.tick_length)
 		coroutine.yield()
 	end
 
@@ -13673,7 +13673,7 @@ function scripts.enemy_mantaray.update(this, store)
 							goto label_286_0
 						end
 
-						U.walk(this, store.tick_length)
+						U.walk_off__accel__unsnapped(this, store.tick_length)
 						coroutine.yield()
 					end
 
@@ -18502,7 +18502,7 @@ function scripts.decal_bambi.update(this, store)
 				U.set_destination(this, dest)
 
 				while not this.motion.arrived do
-					U.walk(this, store.tick_length)
+					U.walk_off__accel__unsnapped(this, store.tick_length)
 					coroutine.yield()
 				end
 
@@ -18707,7 +18707,7 @@ function scripts.decal_river_object.update(this, store)
 		end
 
 		U.set_destination(this, next)
-		U.walk(this, store.tick_length)
+		U.walk_off__accel__unsnapped(this, store.tick_length)
 		coroutine.yield()
 	end
 
@@ -18731,7 +18731,7 @@ function scripts.decal_river_object.update(this, store)
 		U.update_max_speed(this, V.dist(fall_dest.x, fall_dest.y, this.pos.x, this.pos.y) / this.fall_time)
 		U.set_destination(this, fall_dest)
 
-		while not U.walk(this, store.tick_length) do
+		while not U.walk_off__accel__unsnapped(this, store.tick_length) do
 			coroutine.yield()
 		end
 
@@ -20548,7 +20548,7 @@ function scripts.nav_faerie.update(this, store)
 		end
 
 		U.set_destination(this, next)
-		U.walk(this, store.tick_length)
+		U.walk_off__accel__unsnapped(this, store.tick_length)
 		coroutine.yield()
 	end
 
@@ -20926,7 +20926,7 @@ function scripts.decal_black_baby_dragon.update(this, store)
 					end
 
 					U.set_destination(this, nex)
-					U.walk(this, store.tick_length)
+					U.walk_off__accel__unsnapped(this, store.tick_length)
 
 					nex, new = P:next_entity_node(this, store.tick_length)
 
@@ -21703,7 +21703,7 @@ function scripts.decal_walking.update(this, store)
 				U.animation_start(this, an, af, store.tick_ts, true)
 
 				while not this.motion.arrived do
-					U.walk(this, store.tick_length)
+					U.walk_off__accel__unsnapped(this, store.tick_length)
 					coroutine.yield()
 
 					this.motion.speed.x, this.motion.speed.y = 0, 0
@@ -25991,7 +25991,7 @@ function scripts.decal_stage_04_arborean.update(this, store)
 				end
 			end
 
-			U.walk(this, store.tick_length)
+			U.walk_off__accel__unsnapped(this, store.tick_length)
 		end
 
 		coroutine.yield()
@@ -29421,7 +29421,7 @@ function scripts.soldier_stage_10_ymca.update(this, store)
 
 	U.animation_start(this, an, af, store.tick_ts, -1)
 
-	while not U.walk(this, store.tick_length) do
+	while not U.walk_off__accel__unsnapped(this, store.tick_length) do
 		coroutine.yield()
 	end
 
@@ -29431,7 +29431,7 @@ function scripts.soldier_stage_10_ymca.update(this, store)
 
 	U.animation_start(this, an, af, store.tick_ts, -1)
 
-	while not U.walk(this, store.tick_length) do
+	while not U.walk_off__accel__unsnapped(this, store.tick_length) do
 		coroutine.yield()
 	end
 
@@ -39333,7 +39333,7 @@ function scripts.enemy_crocs_hydra.update(this, store)
 						U.set_destination(this, next)
 
 						U.speed_mul_self(this, jump_into_water_multiplier)
-						U.walk(this, store.tick_length)
+						U.walk_off__accel__unsnapped(this, store.tick_length)
 						U.speed_div_self(this, jump_into_water_multiplier)
 
 						coroutine.yield()
@@ -39363,7 +39363,7 @@ function scripts.enemy_crocs_hydra.update(this, store)
 
 						U.speed_mul_self(this, jump_out_of_water_multiplier)
 
-						U.walk(this, store.tick_length)
+						U.walk_off__accel__unsnapped(this, store.tick_length)
 
 						U.speed_div_self(this, jump_out_of_water_multiplier)
 						coroutine.yield()
@@ -42435,7 +42435,7 @@ function scripts.soldier_charge.update(this, store)
 					local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
 					U.animation_start(this, an, af, store.tick_ts, -1)
-					U.walk(this, store.tick_length)
+					U.walk_off__accel__unsnapped(this, store.tick_length)
 					coroutine.yield()
 
 					target = U.find_foremost_enemy_in_range_filter_off(this.pos, this.melee.range, false, attack.vis_flags, attack.vis_bans)
@@ -48528,7 +48528,7 @@ function scripts.enemy_ballooning_spider.update(this, store)
 					end
 
 					U.set_destination(this, next)
-					U.walk(this, store.tick_length)
+					U.walk_off__accel__unsnapped(this, store.tick_length)
 					coroutine.yield()
 
 					this.motion.speed.x, this.motion.speed.y = 0, 0
@@ -49671,7 +49671,7 @@ function scripts.ps_nine_tailed_fox_underground_trail.update(this, store)
 		end
 
 		U.set_destination(this, next)
-		U.walk(this, store.tick_length)
+		U.walk_off__accel__unsnapped(this, store.tick_length)
 		coroutine.yield()
 
 		this.motion.speed.x, this.motion.speed.y = 0, 0
@@ -49910,7 +49910,7 @@ function scripts.enemy_water_spirit.update(this, store)
 		end
 
 		U.animation_start(this, animation_name, nil, store.tick_ts, true, sprite_id)
-		U.walk(this, store.tick_length)
+		U.walk_off__accel__unsnapped(this, store.tick_length)
 		coroutine.yield()
 
 		this.motion.speed.x, this.motion.speed.y = 0, 0
@@ -52148,7 +52148,7 @@ function scripts.enemy_golden_eyed.update(this, store)
 		end
 
 		U.animation_start(this, animation_name, nil, store.tick_ts, true, sprite_id)
-		U.walk(this, store.tick_length)
+		U.walk_off__accel__unsnapped(this, store.tick_length)
 		coroutine.yield()
 
 		this.motion.speed.x, this.motion.speed.y = 0, 0
@@ -52959,7 +52959,7 @@ function scripts.enemy_demon_minotaur.update(this, store)
 		end
 
 		U.set_destination(this, next)
-		U.walk(this, store.tick_length)
+		U.walk_off__accel__unsnapped(this, store.tick_length)
 		coroutine.yield()
 
 		this.motion.speed.x, this.motion.speed.y = 0, 0
@@ -60063,7 +60063,7 @@ function scripts.soldier_stage_35_cannonball.update(this, store)
 						local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
 						U.animation_start(this, an, af, store.tick_ts, -1)
-						U.walk(this, store.tick_length)
+						U.walk_off__accel__unsnapped(this, store.tick_length)
 						coroutine.yield()
 
 						target = U.find_foremost_enemy_in_range_filter_off(this.pos, this.melee.range, false, attack.vis_flags, attack.vis_bans)
@@ -66975,7 +66975,7 @@ function scripts.controller_stage_40_moving_island.update(this, store)
 			end
 
 			U.set_destination(this, next)
-			U.walk(this, store.tick_length)
+			U.walk_off__accel__unsnapped(this, store.tick_length)
 		elseif not this.reached_destination then
 			this.reached_destination = true
 			moving = false
@@ -67188,7 +67188,7 @@ function scripts.controller_stage_40_moving_island.tp_to_next_step_fn(this, stor
 			end
 
 			U.set_destination(this, next)
-			U.walk(this, store.tick_length)
+			U.walk_off__accel__unsnapped(this, store.tick_length)
 		elseif not this.reached_destination then
 			this.reached_destination = true
 		end
@@ -70484,7 +70484,7 @@ function scripts.enemy_alfa_shadow.update(this, store, script)
 			U.set_destination(this, dest_pos)
 
 			while V.dist(this.pos.x, this.pos.y, dest_pos.x, dest_pos.y) > 5 do
-				U.walk(this, store.tick_length)
+				U.walk_off__accel__unsnapped(this, store.tick_length)
 				coroutine.yield()
 			end
 		end
@@ -72477,7 +72477,7 @@ function scripts.soldier_dragon_warden_charge.update(this, store, script)
 				local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
 				U.animation_start(this, an, af, store.tick_ts, -1)
-				U.walk(this, store.tick_length)
+				U.walk_off__accel__unsnapped(this, store.tick_length)
 				coroutine.yield()
 
 				target = U.find_foremost_enemy(store.entities, this.pos, 0, this.melee.range, false, attack.vis_flags, attack.vis_bans)

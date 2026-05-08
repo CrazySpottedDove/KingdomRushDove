@@ -29,6 +29,26 @@ function table.contains(t, o)
 	return table.keyforobject(t, o) ~= nil
 end
 
+function table.arraycontains(t, o)
+	for i = 1, #t do
+		if t[i] == o then
+			return true
+		end
+	end
+	return false
+end
+
+function table.indexforobject(t, o)
+	local index
+	for i = 1, #t do
+		if o == t[i] then
+			index = i
+			break
+		end
+	end
+	return index
+end
+
 function table.clone(t)
 	local t2 = {}
 

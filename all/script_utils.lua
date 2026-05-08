@@ -1287,7 +1287,7 @@ function SU.y_reinforcement_fade_out(store, this)
 	this.health.hp = 0
 
 	while not this.motion.arrived do
-		U.walk(this, store.tick_length)
+		U.walk_off__accel__unsnapped(this, store.tick_length)
 		coroutine.yield()
 	end
 end
@@ -1328,7 +1328,7 @@ function SU.y_soldier_new_rally(store, this)
 				break
 			end
 
-			U.walk(this, store.tick_length)
+			U.walk_off__accel__unsnapped(this, store.tick_length)
 			coroutine.yield()
 
 			this.motion.speed.x, this.motion.speed.y = 0, 0
@@ -2396,7 +2396,7 @@ function SU.y_soldier_do_single_melee_attack(store, this, target, attack)
 	end
 
 	-- 要求攻击的敌人被这个士兵拦截
-	if not SU.unit_dodges(store, target, false, attack, this) and table.contains(target.enemy.blockers, this.id) then
+	if not SU.unit_dodges(store, target, false, attack, this) and table.arraycontains(target.enemy.blockers, this.id) then
 		if attack.side_effect then
 			attack.side_effect(this, store, attack, target)
 		end
@@ -2614,7 +2614,7 @@ function SU.soldier_move_to_slot_step(store, this, target)
 
 		U.animation_start(this, an, af, store.tick_ts, -1)
 
-		if U.walk(this, store.tick_length) then
+		if U.walk_off__accel__unsnapped(this, store.tick_length) then
 			local target_is_moving = target.motion and not target.motion.arrived
 			if target_is_moving then
 				return true
@@ -2759,7 +2759,7 @@ function SU.soldier_go_back_step(store, this)
 	else
 		U.set_destination(this, dest)
 
-		if U.walk(this, store.tick_length) then
+		if U.walk_off__accel__unsnapped(this, store.tick_length) then
 			return false
 		else
 			local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
@@ -3006,7 +3006,7 @@ end
 ---@param blocker table 士兵实体
 ---@return boolean 是否可拦截
 function SU.can_melee_blocker(store, this, blocker)
-	return not this.health.dead and not this.unit.is_stunned and blocker and not blocker.health.dead and table.contains(this.enemy.blockers, blocker.id) and store.entities[blocker.id]
+	return not this.health.dead and not this.unit.is_stunned and blocker and not blocker.health.dead and table.arraycontains(this.enemy.blockers, blocker.id) and store.entities[blocker.id]
 end
 
 ---判断敌人是否可远程攻击士兵
@@ -3447,7 +3447,7 @@ function SU.y_enemy_walk_step(store, this, animation_name, sprite_id)
 	end
 
 	U.animation_start(this, an, af, store.tick_ts, true, sprite_id)
-	U.walk_off__accel__unsanpped(this, store.tick_length)
+	U.walk_off__accel__unsnapped(this, store.tick_length)
 
 	coroutine.yield()
 
@@ -3605,10 +3605,12 @@ function SU.y_wait_for_blocker(store, this, blocker)
 
 	U.animation_start(this, an, af, store.tick_ts, true)
 
+	-- 停下来等，所以 motion 标记为 arrived
+	this.motion.arrived = true
 	while not blocker.motion.arrived do
 		coroutine.yield()
 
-		if this.health.dead or this.unit.is_stunned or not table.contains(this.enemy.blockers, blocker.id) or blocker.health.dead or not store.entities[blocker.id] then
+		if this.health.dead or this.unit.is_stunned or not table.arraycontains(this.enemy.blockers, blocker.id) or blocker.health.dead or not store.entities[blocker.id] then
 			return false
 		end
 
@@ -3923,7 +3925,7 @@ function SU.y_enemy_melee_attacks(store, this, target)
 
 					S:queue(ma.sound_hit, ma.sound_hit_args)
 
-					if ma.type == "melee" and not dodged and table.contains(this.enemy.blockers, target.id) then
+					if ma.type == "melee" and not dodged and table.arraycontains(this.enemy.blockers, target.id) then
 						if ma.side_effect then
 							ma.side_effect(this, store, ma, target)
 						end
@@ -4717,7 +4719,7 @@ function SU.go_to_forced_waypoint(this, store)
 		local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
 		U.animation_start(this, an, af, store.tick_ts, true)
-		U.walk(this, store.tick_length)
+		U.walk_off__accel__unsnapped(this, store.tick_length)
 
 		return true
 	end
@@ -4734,25 +4736,25 @@ function SU.downgrade_tower(store, target)
 		target.tower.spent = 0
 		store.player_gold = store.player_gold + E:get_template(template_name).tower.price
 	end
-	if table.contains(GS.archer_towers, target.template_name) then
+	if table.arraycontains(GS.archer_towers, target.template_name) then
 		if target.tower.level == 1 and target.template_name ~= "tower_archer_1" then
 			to_tower("tower_archer_3")
 		elseif target.tower.level > 1 then
 			to_tower("tower_archer_1")
 		end
-	elseif table.contains(GS.engineer_towers, target.template_name) then
+	elseif table.arraycontains(GS.engineer_towers, target.template_name) then
 		if target.tower.level == 1 and target.template_name ~= "tower_engineer_1" then
 			to_tower("tower_engineer_3")
 		elseif target.tower.level > 1 then
 			to_tower("tower_engineer_1")
 		end
-	elseif table.contains(GS.mage_towers, target.template_name) then
+	elseif table.arraycontains(GS.mage_towers, target.template_name) then
 		if target.tower.level == 1 and target.template_name ~= "tower_mage_1" then
 			to_tower("tower_mage_3")
 		elseif target.tower.level > 1 then
 			to_tower("tower_mage_1")
 		end
-	elseif table.contains(GS.barrack_towers, target.template_name) then
+	elseif table.arraycontains(GS.barrack_towers, target.template_name) then
 		if target.tower.level == 1 and target.template_name ~= "tower_barrack_1" then
 			to_tower("tower_barrack_3")
 		elseif target.tower.level > 1 then
@@ -4937,7 +4939,7 @@ local function enemy_mocked_logic(this, store)
 	end
 
 	-- 逻辑上，让敌人被嘲讽源拦截，以使相关函数正常工作
-	if not table.contains(this.enemy.blockers, source.id) then
+	if not table.arraycontains(this.enemy.blockers, source.id) then
 		this.enemy.blockers[1] = source.id
 	end
 
@@ -4963,7 +4965,7 @@ local function enemy_mocked_logic(this, store)
 				U.set_destination(this, destination)
 				local an, af = U.animation_name_facing_point(this, "walk", destination)
 				U.animation_start(this, an, af, store.tick_ts, true)
-				U.walk(this, store.tick_length)
+				U.walk_off__accel__unsnapped(this, store.tick_length)
 				-- 还需要更新敌人的 nav_path
 				local nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, {this.nav_path.pi}, {this.nav_path.spi}, true)
 				this.nav_path.ni = nearest_nodes[1][3]
@@ -5130,7 +5132,7 @@ local function enemy_betray_logic(this, store)
 				U.set_destination(this, next_pos)
 				local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 				U.animation_start(this, an, af, store.tick_ts, -1)
-				U.walk(this, store.tick_length)
+				U.walk_off__accel__unsnapped(this, store.tick_length)
 				this.nav_rally.pos:copy(this.pos)
 			end
 		end
