@@ -46,12 +46,15 @@ end
 --- 在第一次初始化 entity_db 时调用，对 entity_db 里的实体运行逻辑进行类似编译的操作，减少运行时的动态分支，以提高脚本执行性能
 function entity_db:precompile()
 	local enemy_pc = require("precompile.enemy")
-
+	enemy_pc:init()
+	-- local perf = require("dove_modules.perf.perf")
+	-- perf.tmp_start("precompile")
 	for _, e in pairs(self.entities) do
 		if e.main_script and e.enemy then
 			enemy_pc:precompile(e)
 		end
 	end
+-- perf.tmp_stop("precompile")
 end
 
 --- 确认 entity_db 已加载

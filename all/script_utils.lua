@@ -3527,24 +3527,28 @@ function SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 			return false
 		end
 
-		local node_valid = P:is_node_valid(this.nav_path.pi, this.nav_path.ni)
+		if P:is_node_valid(this.nav_path.pi, this.nav_path.ni) then
+			if this.ranged then
+				if this.enemy.can_do_magic then
+					for i = 1, #this.ranged.attacks do
+						local a = this.ranged.attacks[i]
+						if not a.disabled and (a.hold_advance or store.tick_ts - a.ts > a.cooldown) then
+							ranged = U.find_nearest_soldier(store.soldiers, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
-		if node_valid and this.ranged then
-			for _, a in ipairs(this.ranged.attacks) do
-				if not a.disabled and (this.enemy.can_do_magic) and (a.hold_advance or store.tick_ts - a.ts > a.cooldown) then
-					ranged = U.find_nearest_soldier(store.soldiers, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
-
-					if ranged ~= nil then
-						break
+							if ranged then
+								break
+							else
+								a.ts = a.ts + 0.1
+							end
+						end
 					end
 				end
 			end
-		end
+			if #this.enemy.blockers > 0 then
+				U.cleanup_blockers(store, this)
 
-		if node_valid and #this.enemy.blockers > 0 then
-			U.cleanup_blockers(store, this)
-
-			blocker = store.entities[this.enemy.blockers[1]]
+				blocker = store.entities[this.enemy.blockers[1]]
+			end
 		end
 
 		if not blocker and not ranged then
@@ -3592,6 +3596,56 @@ function SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func__ranged(store,
 	end
 
 	return true, blocker
+end
+
+function SU.y_enemy_walk_until_blocked_on__ranged_off__ignore_soldiers__func(store, this)
+	local ranged, blocker
+	local terrain_type = band(GR:cell_type(this.pos.x, this.pos.y), bor(TERRAIN_WATER, TERRAIN_LAND))
+
+	while not blocker and not ranged do
+		if this.unit.is_stunned then
+			return false
+		end
+
+		if this.health.dead then
+			return false
+		end
+
+		if P:is_node_valid(this.nav_path.pi, this.nav_path.ni) then
+			if this.enemy.can_do_magic then
+				for i = 1, #this.ranged.attacks do
+					local a = this.ranged.attacks[i]
+					if not a.disabled and (a.hold_advance or store.tick_ts - a.ts > a.cooldown) then
+						ranged = U.find_nearest_soldier(store.soldiers, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
+
+						if ranged then
+							break
+						else
+							a.ts = a.ts + 0.1
+						end
+					end
+				end
+			end
+
+			if #this.enemy.blockers > 0 then
+				U.cleanup_blockers(store, this)
+
+				blocker = store.entities[this.enemy.blockers[1]]
+			end
+		end
+
+		if not blocker and not ranged then
+			SU.y_enemy_walk_step(store, this)
+		else
+			U.animation_start(this, "idle", nil, store.tick_ts, true)
+		end
+
+		if terrain_type ~= band(GR:cell_type(this.pos.x, this.pos.y), bor(TERRAIN_WATER, TERRAIN_LAND)) then
+			return false, nil, nil
+		end
+	end
+
+	return true, blocker, ranged
 end
 
 ---士兵等待拦截者
