@@ -53,7 +53,7 @@ local function tpos(e)
 end
 
 local env = setmetatable({
-    scripts = scripts,
+	scripts = scripts,
 	km = km,
 	signal = signal,
 	AC = AC,
@@ -76,8 +76,10 @@ local env = setmetatable({
 	queue_remove = queue_remove,
 	queue_damage = queue_damage,
 	fts = fts,
-	tpos = tpos,
-}, {__index = _G})
+	tpos = tpos
+}, {
+	__index = _G
+})
 
 ----------
 
@@ -107,7 +109,7 @@ M.enemy_basic = {
 }
 
 M.enemy_basic.insert.template = [[
-function scripts.enemy_basic.insert(this, store)
+return function(this, store)
 	local next, new = P:next_entity_node(this, store.tick_length)
 
 	if not next then
@@ -200,11 +202,22 @@ function M.enemy_basic.insert.compile(e)
 		local auras_1 = e.auras and M.enemy_basic.insert.auras[1] or ""
 		local water_1 = e.water and M.enemy_basic.insert.water[1] or ""
 		local code = string.format(M.enemy_basic.insert.template, render_1, melee_1, ranged_1, auras_1, water_1)
-        fn = load(code, "enemy_basic.insert" .. template_key, "t", env)
-        M.enemy_basic.insert.cache[template_key] = fn
+		local chunk, err = load(code, "enemy_basic.insert" .. template_key, "t", env)
+
+		if not chunk then
+			error(err)
+		end
+
+		fn = chunk()
+
+		if type(fn) ~= "function" then
+			error("enemy_basic.insert precompile did not return a function")
+		end
+
+		M.enemy_basic.insert.cache[template_key] = fn
 	end
 
-    return fn
+	return fn
 end
 
 return M

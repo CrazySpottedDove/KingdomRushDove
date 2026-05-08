@@ -35,12 +35,12 @@ function entity_db:load()
 		self.entities = copy(self.entities_backup)
 	end
 
-	-- collectgarbage()
-	-- local after = collectgarbage("count")
-	-- print(string.format("entity_db:load() 内存使用增加了 %.2f KB", after - before))
+-- collectgarbage()
+-- local after = collectgarbage("count")
+-- print(string.format("entity_db:load() 内存使用增加了 %.2f KB", after - before))
 
-	-- self:report_status()
-	-- self:test_tween()
+-- self:report_status()
+-- self:test_tween()
 end
 
 --- 在第一次初始化 entity_db 时调用，对 entity_db 里的实体运行逻辑进行类似编译的操作，减少运行时的动态分支，以提高脚本执行性能
@@ -70,9 +70,7 @@ function entity_db:test_tween()
 			for _, prop in pairs(e.tween.props) do
 				for _, key in pairs(prop.keys) do
 					if key[3] then
-						log.error(
-							"template %s has tween with ease function in [keys], which is not supported in entity_db:test_tween()",
-							name)
+						log.error("template %s has tween with ease function in [keys], which is not supported in entity_db:test_tween()", name)
 					end
 
 					if key[2] == nil then
@@ -232,7 +230,7 @@ function entity_db:add_comps(entity, ...)
 	-- 	return
 	-- end
 
-	for _, v in ipairs({ ... }) do
+	for _, v in ipairs({...}) do
 		-- if not self.components[v] then
 		-- 	log.error("component %s does not exist", v)
 
@@ -298,7 +296,7 @@ function entity_db:filter(entities, ...)
 	local result = {}
 
 	for id, e in pairs(entities) do
-		for _, n in pairs({ ... }) do
+		for _, n in pairs({...}) do
 			if not e[n] then
 				goto label_12_0
 			end
@@ -378,8 +376,7 @@ function entity_db:gen_wave(level_idx, game_mode)
 		[GAME_MODE_HEROIC] = "heroic",
 		[GAME_MODE_IRON] = "iron"
 	}
-	local file_name = string.format("data.waveconfigs.level%02d_waves_%s_config", level_idx, game_mode_str_map
-		[game_mode])
+	local file_name = string.format("data.waveconfigs.level%02d_waves_%s_config", level_idx, game_mode_str_map[game_mode])
 
 	package.loaded[file_name] = nil
 
@@ -446,8 +443,7 @@ function entity_db:gen_wave(level_idx, game_mode)
 	for wave_i = 1, cfg.max_waves do
 		local group = {}
 
-		group.interval = lerp(cfg.initial_interval, cfg.final_interval,
-			cfg.max_waves > 1 and (wave_i - 1) / (cfg.max_waves - 1) or 0)
+		group.interval = lerp(cfg.initial_interval, cfg.final_interval, cfg.max_waves > 1 and (wave_i - 1) / (cfg.max_waves - 1) or 0)
 		group.waves = {}
 
 		-- 本波总权重预算 = wave_weight_function
@@ -471,8 +467,7 @@ function entity_db:gen_wave(level_idx, game_mode)
 			local fluctuation_factor = 0.2 -- 浮动比例（20%）
 
 			for i, path in pairs(active_paths) do
-				local base_share = total_weight *
-					(((cfg.path_weight_map and cfg.path_weight_map[path]) or 1) / active_weight_sum)
+				local base_share = total_weight * (((cfg.path_weight_map and cfg.path_weight_map[path]) or 1) / active_weight_sum)
 
 				if i < path_count then
 					local fluctuation = base_share * (math.random() * 2 - 1) * fluctuation_factor
@@ -640,8 +635,7 @@ function entity_db:gen_wave(level_idx, game_mode)
 							for _, spawn in pairs(sw.spawns) do
 								-- 按比例调整 interval 与 interval_next（保持二者相对关系）
 								spawn.interval = (spawn.interval or 1) * scale
-								spawn.interval_next = (spawn.interval_next or (spawn.interval * cfg.interval_next_factor)) *
-									scale
+								spawn.interval_next = (spawn.interval_next or (spawn.interval * cfg.interval_next_factor)) * scale
 							end
 						end
 					end
@@ -720,8 +714,7 @@ function entity_db:gen_wave(level_idx, game_mode)
 		cash = cfg.initial_cash,
 		groups = groups
 	}
-	local save_file_name = string.format("kr1/data/waves/level%02d_waves_%s.lua", level_idx, game_mode_str_map
-		[game_mode])
+	local save_file_name = string.format("kr1/data/waves/level%02d_waves_%s.lua", level_idx, game_mode_str_map[game_mode])
 	local persistence = require("lib.klua.persistence")
 	local data_string = persistence.serialize_to_string(file_data)
 	-- 写入文件
