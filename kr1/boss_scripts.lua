@@ -3396,7 +3396,7 @@ function scripts.enemy_umbra_piece.update(this, store)
 			U.animation_start(this, "idle", nil, store.tick_ts, -1)
 			coroutine.yield()
 		else
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty
@@ -3916,7 +3916,7 @@ function scripts.eb_dracula.update(this, store)
 			U.animation_start(this, "idle", nil, store.tick_ts, -1)
 			coroutine.yield()
 		else
-			local ok, blocker = SU.y_enemy_walk_until_blocked(store, this)
+			local ok, blocker = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not ok then
 			-- block empty
@@ -11428,7 +11428,7 @@ function scripts.boss_grymbeard.update(this, store)
 				return nil
 			end
 
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty

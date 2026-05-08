@@ -4999,7 +4999,7 @@ function scripts.enemy_tremor.update(this, store)
 				burrowed = true
 			end
 
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty
@@ -5477,7 +5477,7 @@ function scripts.enemy_alien_breeder.update(this, store)
 			U.animation_start(this, "idle", nil, store.tick_ts, -1)
 			coroutine.yield()
 		else
-			local ok, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			local ok, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not ok then
 			-- block empty
@@ -6286,7 +6286,7 @@ function scripts.enemy_sniper.update(this, store)
 			U.animation_start(this, "idle", nil, store.tick_ts, -1)
 			coroutine.yield()
 		else
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty
@@ -12482,7 +12482,7 @@ function scripts.enemy_bandersnatch.update(this, store)
 				U.update_max_speed(this, this.motion.min_speed)
 			end
 
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty
@@ -12544,7 +12544,7 @@ function scripts.enemy_boomshrooms.update(this, store)
 		if this.unit.is_stunned then
 			SU.y_enemy_stun(store, this)
 		else
-			local cont, blocker = SU.y_enemy_walk_until_blocked(store, this)
+			local cont, blocker = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty
@@ -13628,7 +13628,7 @@ function scripts.enemy_mantaray.update(this, store)
 			U.animation_start(this, "idle", nil, store.tick_ts, -1)
 			coroutine.yield()
 		else
-			local ok, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			local ok, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not ok then
 			-- block empty
@@ -14641,7 +14641,7 @@ function scripts.enemy_grim_devourers.update(this, store)
 			U.animation_start(this, "idle", nil, store.tick_ts, -1)
 			coroutine.yield()
 		else
-			local ok, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			local ok, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not ok then
 			-- block empty
@@ -34916,7 +34916,7 @@ function scripts.enemy_surveyor_harpy.update(this, store)
 		if this.unit.is_stunned then
 			SU.y_enemy_stun(store, this)
 		else
-			SU.y_enemy_walk_until_blocked(store, this)
+			SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 		end
 	end
 end
@@ -35540,7 +35540,7 @@ function scripts.enemy_corrupted_stalker.update(this, store)
 		if this.unit.is_stunned then
 			SU.y_enemy_stun(store, this)
 		else
-			SU.y_enemy_walk_until_blocked(store, this)
+			SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 		end
 	end
 end
@@ -36526,7 +36526,7 @@ function scripts.enemy_corrupted_elf.update(this, store)
 		if this.unit.is_stunned then
 			y_stun(store, this)
 		else
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty
@@ -36783,7 +36783,7 @@ function scripts.enemy_dust_cryptid.update(this, store)
 		if this.unit.is_stunned then
 			SU.y_enemy_stun(store, this)
 		else
-			SU.y_enemy_walk_until_blocked(store, this)
+			SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 		end
 	end
 end
@@ -38240,7 +38240,7 @@ function scripts.enemy_crocs_flier.update(this, store)
 		if this.unit.is_stunned then
 			SU.y_enemy_stun(store, this)
 		else
-			SU.y_enemy_walk_until_blocked(store, this)
+			SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 		end
 	end
 end
@@ -45901,7 +45901,7 @@ function scripts.enemy_darksteel_shielder.update(this, store)
 		if this.unit.is_stunned then
 			SU.y_enemy_stun(store, this)
 		else
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty
@@ -46043,7 +46043,7 @@ function scripts.enemy_rolling_sentry.update(this, store)
 		if this.unit.is_stunned then
 			SU.y_enemy_stun(store, this)
 		else
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty
@@ -46313,7 +46313,7 @@ function scripts.enemy_brute_welder.update(this, store)
 		if this.unit.is_stunned then
 			SU.y_enemy_stun(store, this)
 		else
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty
@@ -46791,7 +46791,7 @@ function scripts.enemy_darksteel_fist.update(this, store)
 		if this.unit.is_stunned then
 			SU.y_enemy_stun(store, this)
 		else
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty
@@ -48869,7 +48869,7 @@ function scripts.enemy_cultbrood.update(this, store)
 		if this.unit.is_stunned then
 			SU.y_enemy_stun(store, this)
 		else
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty
@@ -49312,7 +49312,7 @@ function scripts.enemy_fire_phoenix.update(this, store)
 		if this.unit.is_stunned then
 			SU.y_enemy_stun(store, this)
 		else
-			SU.y_enemy_walk_until_blocked(store, this)
+			SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 		end
 	end
 end
@@ -50032,7 +50032,7 @@ function scripts.enemy_water_spirit.update(this, store)
 		if this.unit.is_stunned then
 			SU.y_enemy_stun(store, this)
 		else
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty
@@ -50219,7 +50219,7 @@ function scripts.enemy_storm_elemental.update(this, store)
 		if this.unit.is_stunned then
 			SU.y_enemy_stun(store, this)
 		else
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty
@@ -51300,7 +51300,7 @@ function scripts.enemy_qiongqi.update(this, store)
 		if this.unit.is_stunned then
 			SU.y_enemy_stun(store, this)
 		else
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty
@@ -51723,7 +51723,7 @@ function scripts.enemy_fan_guard.update(this, store)
 		if this.unit.is_stunned then
 			y_fan_guard_stun(store, this)
 		else
-			cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty
@@ -51988,7 +51988,7 @@ function scripts.enemy_terracota.update(this, store)
 				p_sys_b.particle_system.emit = true
 			end
 
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this)
+			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty
