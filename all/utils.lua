@@ -483,7 +483,7 @@ function U.animation_name_facing_point(e, group, point, idx, offset, use_path)
 	local fx, fy
 
 	if e.nav_path and use_path then
-		local npos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
+		local npos = P:node_pos_ref(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
 
 		fx, fy = npos.x, npos.y
 	else
@@ -760,6 +760,39 @@ function U.walk(e, dt, accel, unsnapped)
 	local true_step = min(step, v_len)
 	local sx, sy = true_step * nx, true_step * ny
 
+	pos.x, pos.y = pos.x + sx, pos.y + sy
+	m.speed.x, m.speed.y = sx / dt, sy / dt
+	m.arrived = false
+
+	return false
+end
+
+function U.walk_off__accel__unsanpped(e, dt)
+	if e.motion.arrived then
+		return true
+	end
+
+	local m = e.motion
+	local pos = e.pos
+	local vx, vy = m.dest.x - pos.x, m.dest.y - pos.y
+
+	local step = e.motion.real_speed * dt
+
+	if vx * vx + vy * vy <= step * step and not (e.teleport and e.teleport.pending) then
+		pos.x, pos.y = m.dest.x, m.dest.y
+		m.speed.x, m.speed.y = 0, 0
+		m.arrived = true
+
+		return true
+	end
+
+	local v_angle = atan2(vy, vx)
+
+	if e.heading then
+		e.heading.angle = v_angle
+	end
+
+	local sx, sy = step * cos(v_angle), step * sin(v_angle)
 	pos.x, pos.y = pos.x + sx, pos.y + sy
 	m.speed.x, m.speed.y = sx / dt, sy / dt
 	m.arrived = false
@@ -1603,7 +1636,6 @@ function U.cleanup_blockers(store, blocked)
 		local blocker_id = blockers[i]
 
 		if not store.entities[blocker_id] then
-			log.debug("cleanup_blockers for (%s) %s removing id %s", blocked.id, blocked.template_name, blocker_id)
 			table.remove(blockers, i)
 		end
 	end
@@ -3104,7 +3136,7 @@ end
 function U.get_nearest_valid_rally_pos(pos)
 	local nodes = P:nearest_nodes(pos.x, pos.y, nil, {1, 2, 3}, NF_RALLY)
 	for i = 1, #nodes do
-		local node_pos = P:node_pos(nodes[i][1], nodes[i][2], nodes[i][3], true)
+		local node_pos = P:node_pos_ref(nodes[i][1], nodes[i][2], nodes[i][3])
 		if U.has_valid_rally_node_nearby(node_pos) then
 			return node_pos:clone()
 		end

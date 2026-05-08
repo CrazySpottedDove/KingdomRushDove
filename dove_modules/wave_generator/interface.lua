@@ -219,7 +219,7 @@ local function generate_wave(config_wave)
 	end
 
 	local spawn_count = #spawns
-	local intervals = distribute_total_amount_to_groups_randomly(interval, spawn_count, 30)
+	local intervals = distribute_total_amount_to_groups_randomly(interval, spawn_count, 1)
 
 	for i = 1, spawn_count do
 		-- 然后计算一个随机但合理的 interval 和 interval_next。interval 不可过小。

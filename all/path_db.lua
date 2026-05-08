@@ -3,6 +3,7 @@ local bit = require("bit")
 local log = require("lib.klua.log"):new("path_db")
 local km = require("lib.klua.macros")
 local FS = love.filesystem
+local perf = require("dove_modules.perf.perf")
 
 require("lib.klua.table")
 
@@ -212,6 +213,13 @@ function path_db:node_pos(pi, spi, ni, return_ref)
 	else
 		return V.vclone(path[ni])
 	end
+end
+
+--- 在只读使用的情况下，使用该函数代替 node_pos 调用，减少性能开销
+function path_db:node_pos_ref(pi, spi, ni)
+	local path = self.paths[pi][spi]
+	ni = km.clamp(1, #path, ni)
+	return path[ni]
 end
 
 function path_db:node_offset_pos(offset, pi, spi, ni)
