@@ -519,7 +519,7 @@ tt.bullet.pop = {"pop_headshot"}
 
 tt = RT("bomb_musketeer", "bomb")
 tt.bullet.damage_max = 0
-tt.bullet.damage_max_inc = 40
+tt.bullet.damage_max_inc = 42
 tt.bullet.damage_min = 0
 tt.bullet.damage_min_inc = 10
 tt.bullet.damage_radius = 48
