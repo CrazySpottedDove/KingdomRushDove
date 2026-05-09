@@ -87,19 +87,18 @@ M.env = setmetatable({
 function M:init()
 	self.enemy_basic = require("precompile.templates.enemy_basic")
 	self.enemy_mixed = require("precompile.templates.enemy_mixed")
+	self.aura_apply_mod = require("precompile.templates.aura_apply_mod")
 end
 
 -- local compiled_templates = {}
 
 function M:_compile(e, template)
 	local code = CU.process(template, self.env, e)
-	-- if not compiled_templates[template] then
-	-- print(code)
-	-- compiled_templates[template] = code
-	-- end
 	local chunk, err = load(code, nil, "t", self.env)
 	if not chunk then
-		error("Error compiling script: " .. err)
+		-- 编译失败时，输出模板源码和生成代码方便调试
+		local msg = {"Error compiling script: " .. err, "", "--- Generated code ---", code, "--- Template source ---", template}
+		error(table.concat(msg, "\n"))
 	end
 	return chunk()
 end
@@ -122,11 +121,19 @@ function M:compile(e)
 			end
 		end
 
-	-- if e.aura then
-	-- 	if m.insert == scripts.aura_apply_mod.insert then
-	-- 		m.insert = self.aura_apply_mod.insert.compile(e)
-	-- 	end
-	-- end
+		if e.aura then
+			if m.insert == scripts.aura_apply_mod.insert then
+				m.insert = self:_compile(e, self.aura_apply_mod.insert)
+			end
+
+			if m.update == scripts.aura_apply_mod.update then
+				if e.aura.duration then
+					m.update = self:_compile(e, self.aura_apply_mod.update)
+				else
+					print(e.template_name .. " has no aura.duration, skip compile")
+				end
+			end
+		end
 	end
 end
 

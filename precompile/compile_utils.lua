@@ -119,14 +119,14 @@ local function analyze_line(line)
 			expr = stmt
 		}
 	end
-	local cond = t:match("^if constexpr%((.*)%) then$")
+	local cond = t:match("^constif%((.*)%)$")
 	if cond then
 		return {
 			directive = "if",
 			expr = cond
 		}
 	end
-	cond = t:match("^elseif constexpr%((.*)%) then$")
+	cond = t:match("^constelseif%((.*)%)$")
 	if cond then
 		return {
 			directive = "elseif",
@@ -143,15 +143,15 @@ local function analyze_line(line)
 			directive = "constend"
 		}
 	end
-	-- @constexpr 标签语法：对下一行生效
-	cond = t:match("^@constexpr%((.*)%)$")
+	-- @constif 标签语法：对下一行生效
+	cond = t:match("^@constif%((.*)%)$")
 	if cond then
 		return {
 			directive = "at_constexpr",
 			expr = cond
 		}
 	end
-	if t:match("^@else$") then
+	if t:match("^@constelse$") then
 		return {
 			directive = "at_else"
 		}

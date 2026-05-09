@@ -14,27 +14,27 @@ return function(this, store)
         this.pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
     end
 
-    if constexpr(this.render) then
+    constif(this.render)
         constfor i = 1, #this.render.sprites do
             this.render.sprites[i].ts = store.tick_ts
         constend
     constend
 
-    if constexpr(this.melee) then
+    constif(this.melee)
         conststmt(this.melee.order = U.attack_order(this.melee.attacks))
         constfor i = 1, #this.melee.attacks do
             this.melee.attacks[i].ts = store.tick_ts
         constend
     constend
 
-    if constexpr(this.ranged) then
+    constif(this.ranged)
         conststmt(this.ranged.order = U.attack_order(this.ranged.attacks))
         constfor i = 1, #this.ranged.attacks do
             this.ranged.attacks[i].ts = store.tick_ts
         constend
     constend
 
-    if constexpr(this.auras) then
+    constif(this.auras)
         constfor i = 1, #this.auras.list do
             local a = this.auras.list[i]
             a.ts = store.tick_ts
@@ -52,7 +52,7 @@ return function(this, store)
 
     this.enemy.gold_bag = this.enemy.gold
 
-    if constexpr(this.water) then
+    constif(this.water)
         if this.spawn_data and this.spawn_data.water_ignore_pi then
             this.water.ignore_pi = this.spawn_data.water_ignore_pi
         end

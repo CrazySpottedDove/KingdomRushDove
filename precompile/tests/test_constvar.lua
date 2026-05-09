@@ -43,7 +43,7 @@ end
 test("constvar_scope", [[
 return function()
     constvar a = 10
-    if constexpr(true) then
+    constif(true)
         constvar b = 20
         conststmt(print("a =", a, "b =", b))
     constend

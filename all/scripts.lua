@@ -7201,9 +7201,12 @@ function scripts.mod_teleport.update(this, store)
 		if n_ni < 1 then
 			local prev_pi = P:get_prev_pi(target.nav_path.pi)
 			if prev_pi then
-				target.nav_path.pi = prev_pi
-				target.nav_path.ni = P:get_end_node(prev_pi)
-				n_ni = target.nav_path.ni + n_ni
+				local new_ni = P:get_end_node(prev_pi) + n_ni
+				local new_pos = P:node_pos_ref(target.nav_path.pi, target.nav_path.spi, new_ni)
+				if new_pos:dist(target.pos) <= 1.1 * P.average_node_dist * n_off then
+					n_ni = new_ni
+					target.nav_path.pi = prev_pi
+				end
 			end
 		end
 
