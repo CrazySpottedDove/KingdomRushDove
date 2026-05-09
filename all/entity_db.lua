@@ -2,11 +2,13 @@
 local log = require("lib.klua.log"):new("entity_db")
 
 require("lib.klua.table")
+local perf = require("dove_modules.perf.perf")
 
 local copy = table.deepclone
 local entity_db = {
 	last_id = 1,
 	entities = {},
+	components_cloner = {},
 	loaded = false
 }
 
@@ -22,6 +24,8 @@ function entity_db:load()
 	if not self.components then
 		self.components = {}
 		require("components")
+		local compiler = require("precompile.interface")
+		self.components_cloner = compiler:compile_component_cloners()
 	end
 
 	-- 可以对 entities 做一个备份。因为 package.loaded 清空后，需要做的事情不只是表的复制，还有 lua 文件的解析。这么做就可以把解析的时间节省下来了。同时，备份只有这些模板文件的部分，这就允许外部通过钩子手动添加，不会导致问题。
@@ -34,7 +38,6 @@ function entity_db:load()
 	else
 		self.entities = copy(self.entities_backup)
 	end
-
 -- collectgarbage()
 -- local after = collectgarbage("count")
 -- print(string.format("entity_db:load() 内存使用增加了 %.2f KB", after - before))
@@ -47,7 +50,6 @@ end
 function entity_db:precompile()
 	local compiler = require("precompile.interface")
 	compiler:init()
-	local perf = require("dove_modules.perf.perf")
 	perf.tmp_start("precompile")
 	for _, e in pairs(self.entities) do
 		compiler:compile(e)
@@ -224,6 +226,11 @@ function entity_db:clone_c(name)
 	-- 	return
 	-- end
 
+	local cloner = self.components_cloner and self.components_cloner[name]
+	if cloner then
+		return cloner(self.components[name])
+	end
+
 	return copy(self.components[name])
 end
 
@@ -249,7 +256,12 @@ function entity_db:add_comps(entity, ...)
 		-- end
 
 		-- RELEASE VER
-		entity[v] = copy(self.components[v])
+		local cloner = self.components_cloner and self.components_cloner[v]
+		if cloner then
+			entity[v] = cloner(self.components[v])
+		else
+			entity[v] = copy(self.components[v])
+		end
 	end
 end
 

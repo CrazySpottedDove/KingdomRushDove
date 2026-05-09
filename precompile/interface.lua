@@ -97,7 +97,8 @@ function M:init()
 	self.bolt = require("precompile.templates.bolt")
 end
 
--- local compiled_templates = {}
+-- 组件克隆函数编译器
+local GenCC = require("precompile.gen_component_cloner")
 
 local function _context_lines(lines, err_ln, label, around)
 	around = around or 2
@@ -276,6 +277,11 @@ function M:compile(e)
 
 		end
 	end
+end
+
+--- 为所有 components 生成优化的克隆函数
+function M:compile_component_cloners()
+	return GenCC.compile_all(E.components, self.env)
 end
 
 return M
