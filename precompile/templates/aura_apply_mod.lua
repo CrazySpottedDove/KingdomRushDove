@@ -139,7 +139,7 @@ return function(this, store)
 
 					@constif(this.aura.filter_source)
 					and this.aura.source_id ~= e.id
-				end) or {}
+				end)
 				constelse
 				local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
 				constend
@@ -157,6 +157,12 @@ return function(this, store)
 				and this.aura.source_id ~= v.id
 			end)
 			constend
+
+            constif(band(a.vis_bans, F_FRIEND) ~= 0)
+            if not targets then
+                goto label_89_0
+            end
+            constend
 
 			for i = 1, #targets do
 				constif(a.targets_per_cycle)
