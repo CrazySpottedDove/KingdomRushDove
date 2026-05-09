@@ -114,16 +114,47 @@ return function(this, store)
 			cycles_count = cycles_count + 1
 
 			constif(band(a.vis_bans, F_ENEMY) ~= 0)
-			local targets = table.filter(store.entities, function(k, v)
-				return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= v.id)
+			local targets = table.filter(store.soldiers, function(k, v)
+				return not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius)
+
+				@constif(this.aura.allowed_templates)
+				and table.contains(this.aura.allowed_templates, v.template_name)
+
+				@constif(this.aura.excluded_templates)
+				and not table.contains(this.aura.excluded_templates, v.template_name)
+
+				@constif(this.aura.filter_source)
+				and this.aura.source_id ~= v.id
 			end)
 			constelseif(band(a.vis_bans, F_FRIEND) ~= 0)
-			local targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, function(e)
-				return (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, e.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, e.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= e.id)
-			end) or {}
+				constif(a.allowed_templates or a.excluded_templates or a.filter_source)
+				local targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, function(e)
+					return true
+
+					@constif(this.aura.allowed_templates)
+					and table.contains(this.aura.allowed_templates, e.template_name)
+
+					@constif(this.aura.excluded_templates)
+					and not table.contains(this.aura.excluded_templates, e.template_name)
+
+					@constif(this.aura.filter_source)
+					and this.aura.source_id ~= e.id
+				end) or {}
+				constelse
+				local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
+				constend
 			constelse
 			local targets = table.filter(store.entities, function(k, v)
-				return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= v.id)
+				return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius)
+
+				@constif(this.aura.allowed_templates)
+				and table.contains(this.aura.allowed_templates, v.template_name)
+
+				@constif(this.aura.excluded_templates)
+				and not table.contains(this.aura.excluded_templates, v.template_name)
+
+				@constif(this.aura.filter_source)
+				and this.aura.source_id ~= v.id
 			end)
 			constend
 
@@ -155,7 +186,7 @@ return function(this, store)
 						new_mod.render = nil
 					end
 					constend
-					
+
 					queue_insert(store, new_mod)
 				end
 			end
@@ -168,7 +199,7 @@ return function(this, store)
 
 	@constif(a.max_count)
 	signal.emit("aura-apply-mod-victims", this, victims_count)
-	
+
 	queue_remove(store, this)
 end
 ]]

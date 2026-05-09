@@ -164,6 +164,13 @@ local function analyze_line(line)
 			expr = cve
 		}
 	end
+	local s_expr = t:match("^conststring%((.*)%)$")
+	if s_expr then
+		return {
+			directive = "string",
+			expr = s_expr
+		}
+	end
 	local vn, rest = t:match("^constfor (%w+)%s*=%s*(.+)$")
 	if vn then
 		rest = rest:match("^(.*)%s+do$")
@@ -270,13 +277,17 @@ local function eval_stmt(stmt, env, scope_vars)
 			eval_env[k] = v
 		end
 	end
+	-- inject constexpr function for use inside conststmt()
+	eval_env.constexpr = function(expr)
+		return eval_expr(expr, env, scope_vars)
+	end
 	local fn, err = load(stmt, "conststmt", "t", eval_env)
 	if not fn then
-		error("compile_utils: conststmt error: " .. err)
+		error("compile_utils: conststmt error on [" .. stmt .. "]: " .. err)
 	end
 	local ok, r = pcall(fn)
 	if not ok then
-		error("compile_utils: conststmt runtime error: " .. tostring(r))
+		error("compile_utils: conststmt runtime error on [" .. stmt .. "]: " .. tostring(r))
 	end
 end
 
@@ -1019,6 +1030,12 @@ local function compile_insts(lines, start, finish, dirs)
 				expr = d.expr
 			}
 			i = i + 1
+		elseif dt == "string" then
+			insts[#insts + 1] = {
+				t = "string",
+				expr = d.expr
+			}
+			i = i + 1
 		elseif dt == "at_constexpr" then
 			local t_line = (i + 1 <= finish) and lines[i + 1] or ""
 			local e_line, skip = "", 2
@@ -1126,6 +1143,8 @@ local function exec_insts(insts, env, scope_vars, out, subs)
 			eval_stmt(inst.expr, env, scope_vars)
 		elseif t == "var" then
 			scope_vars[inst.vname] = _eval(inst.expr)
+		elseif t == "string" then
+			out[#out + 1] = tostring(_eval(inst.expr))
 		elseif t == "at" then
 			local take = _eval(inst.expr)
 			local line = take and inst.t_line or inst.e_line
