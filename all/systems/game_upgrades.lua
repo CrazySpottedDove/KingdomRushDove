@@ -19,7 +19,7 @@ function M.register(sys)
 
 	local mage_tower_map = table.to_map(UP.mage_towers)
 
-	function sys.game_upgrades:on_insert(entity, store)
+	function sys.game_upgrades:on_insert_unconditional(entity, store)
 		local mage_bullet_names = UP.mage_tower_bolts
 		local u = UP:get_upgrade("mage_brilliance")
 
@@ -92,10 +92,10 @@ function M.register(sys)
 			dps_infernal_mage.damage_max = ceil(dps_infernal_mage._orig_damage_max * f)
 		end
 
-		return true
+	-- return true
 	end
 
-	function sys.game_upgrades:on_remove(entity, store)
+	function sys.game_upgrades:on_remove_unconditional(entity, store)
 		local mage_bullet_names = UP.mage_tower_bolts
 		local u = UP:get_upgrade("mage_brilliance")
 

@@ -22,15 +22,15 @@ function M.register(sys)
 		seek.set_entities(store.enemies)
 	end
 
-	function sys.spatial_index:on_insert(entity, store)
+	function sys.spatial_index:on_insert_unconditional(entity, store)
 		if entity.enemy then
 			store.enemy_spatial_index.insert_entity(entity)
 		end
 
-		return true
+	-- return true
 	end
 
-	function sys.spatial_index:on_remove(entity, store)
+	function sys.spatial_index:on_remove_unconditional(entity, store)
 		if entity.enemy then
 			store.enemy_spatial_index.remove_entity(entity)
 		end

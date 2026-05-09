@@ -589,7 +589,7 @@ function M.register(sys)
 		dnum_init(store)
 	end
 
-	function sys.health:on_insert(entity, store)
+	function sys.health:on_insert_unconditional(entity, store)
 		if entity.health and not entity.health.hp then
 			entity.health.hp = entity.health.hp_max
 		end

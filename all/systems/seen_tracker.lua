@@ -16,12 +16,12 @@ function M.register(sys)
 		store.seen_dirty = nil
 	end
 
-	function sys.seen_tracker:on_insert(entity, store)
+	function sys.seen_tracker:on_insert_unconditional(entity, store)
 		if (entity.tower or entity.enemy) and not entity.ignore_seen_tracker then
 			U.mark_seen(store, entity.template_name)
 		end
 
-		return true
+	-- return true
 	end
 
 	function sys.seen_tracker:on_update(dt, ts, store)

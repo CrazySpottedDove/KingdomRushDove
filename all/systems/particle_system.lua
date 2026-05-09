@@ -48,7 +48,7 @@ function M.register(sys)
 		self.phase_interp = phase_interp
 	end
 
-	function sys.particle_system:on_insert(entity, store)
+	function sys.particle_system:on_insert_unconditional(entity, store)
 		if entity.particle_system then
 			local ps = entity.particle_system
 
@@ -56,10 +56,10 @@ function M.register(sys)
 			ps.emit_ts = store.tick_ts + ps.ts_offset
 		end
 
-		return true
+	-- return true
 	end
 
-	function sys.particle_system:on_remove(entity, store)
+	function sys.particle_system:on_remove_unconditional(entity, store)
 		if entity.particle_system then
 			local ps = entity.particle_system
 

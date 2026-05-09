@@ -16,7 +16,7 @@ function M.register(sys)
 		}
 	end
 
-	function sys.last_hook:on_insert(e, d)
+	function sys.last_hook:on_insert_unconditional(e, d)
 		if e.enemy then
 			d.enemies[e.id] = e
 
@@ -103,7 +103,7 @@ function M.register(sys)
 		return true
 	end
 
-	function sys.last_hook:on_remove(e, d)
+	function sys.last_hook:on_remove_unconditional(e, d)
 		if e.enemy then
 			d.enemies[e.id] = nil
 			d.enemy_count = d.enemy_count - 1
@@ -142,7 +142,8 @@ function M.register(sys)
 
 			if not index then
 				log.error(string.format("！如果看见这条消息，请截下来发给作者，实体 %s 的 main_script.update 没有正确注册到 entities_with_main_script_on_update 中", e.template_name))
-				return false
+				-- return false
+				return
 			end
 			-- 交换删除，保证数组的连续性
 			local last_entity = d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count]
@@ -181,7 +182,7 @@ function M.register(sys)
 			e._applied_mods = nil
 		end
 
-		return true
+	-- return true
 	end
 end
 

@@ -595,7 +595,7 @@ local function lerp_table_sine(a, b, t, s, key)
 end
 --- LERP FUNCTIONS END
 
-function sys.tween:on_insert(entity, store)
+function sys.tween:on_insert_unconditional(entity, store)
 	if entity.tween then
 		for i = 1, #entity.tween.props do
 			local p = entity.tween.props[i]
@@ -685,7 +685,7 @@ function sys.tween:on_insert(entity, store)
 		end
 	end
 
-	return true
+-- return true
 end
 
 function sys.tween:on_render_update(dt, ts, store)
@@ -905,7 +905,7 @@ function sys.render:init(store)
 	self._hb_colors = HEALTH_BAR_COLORS
 end
 
-function sys.render:on_insert(entity, store)
+function sys.render:on_insert_unconditional(entity, store)
 	local render_frames = store.render_frames
 
 	if entity.render then
@@ -1015,10 +1015,10 @@ function sys.render:on_insert(entity, store)
 		end
 	end
 
-	return true
+-- return true
 end
 
-function sys.render:on_remove(entity, store)
+function sys.render:on_remove_unconditional(entity, store)
 	if entity.render then
 		for i = #entity.render.sprites, 1, -1 do
 			local s = entity.render.sprites[i]
@@ -1038,7 +1038,7 @@ function sys.render:on_remove(entity, store)
 		end
 	end
 
-	return true
+-- return true
 end
 
 function sys.render:on_render_update(dt, ts, store)

@@ -45,7 +45,9 @@ function simulation:init(store, system_names)
 	self.systems_on_queue = {}
 	self.systems_on_dequeue = {}
 	self.systems_on_insert = {}
+	self.systems_on_insert_unconditional = {}
 	self.systems_on_remove = {}
+	self.systems_on_remove_unconditional = {}
 	self.systems_on_update = {}
 
 	local systems_order = {}
@@ -71,8 +73,16 @@ function simulation:init(store, system_names)
 			table.insert(self.systems_on_insert, s)
 		end
 
+		if s.on_insert_unconditional then
+			table.insert(self.systems_on_insert_unconditional, s)
+		end
+
 		if s.on_remove then
 			table.insert(self.systems_on_remove, s)
+		end
+
+		if s.on_remove_unconditional then
+			table.insert(self.systems_on_remove_unconditional, s)
 		end
 
 		if s.on_update then
@@ -83,7 +93,9 @@ function simulation:init(store, system_names)
 	self.systems_on_queue_count = #self.systems_on_queue
 	self.systems_on_dequeue_count = #self.systems_on_dequeue
 	self.systems_on_insert_count = #self.systems_on_insert
+	self.systems_on_insert_unconditional_count = #self.systems_on_insert_unconditional
 	self.systems_on_remove_count = #self.systems_on_remove
+	self.systems_on_remove_unconditional_count = #self.systems_on_remove_unconditional
 	self.systems_on_update_count = #self.systems_on_update
 
 	-- init 动作必须在最后执行，因为对 systems_on_xxx_count 有依赖。而且，你必须保证所有因 init 而进入的实体都经历所有的钩子处理。
@@ -112,7 +124,9 @@ function simulation:init(store, system_names)
 	self.systems_on_queue = {}
 	self.systems_on_dequeue = {}
 	self.systems_on_insert = {}
+	self.systems_on_insert_unconditional = {}
 	self.systems_on_remove = {}
+	self.systems_on_remove_unconditional = {}
 	self.systems_on_update = {}
 	self.systems_on_render_update = {}
 
@@ -129,8 +143,16 @@ function simulation:init(store, system_names)
 			table.insert(self.systems_on_insert, s)
 		end
 
+		if s.on_insert_unconditional then
+			table.insert(self.systems_on_insert_unconditional, s)
+		end
+
 		if s.on_remove then
 			table.insert(self.systems_on_remove, s)
+		end
+
+		if s.on_remove_unconditional then
+			table.insert(self.systems_on_remove_unconditional, s)
 		end
 
 		if s.on_update then
@@ -145,7 +167,9 @@ function simulation:init(store, system_names)
 	self.systems_on_queue_count = #self.systems_on_queue
 	self.systems_on_dequeue_count = #self.systems_on_dequeue
 	self.systems_on_insert_count = #self.systems_on_insert
+	self.systems_on_insert_unconditional_count = #self.systems_on_insert_unconditional
 	self.systems_on_remove_count = #self.systems_on_remove
+	self.systems_on_remove_unconditional_count = #self.systems_on_remove_unconditional
 	self.systems_on_update_count = #self.systems_on_update
 	self.systems_on_render_update_count = #self.systems_on_render_update
 end
@@ -263,6 +287,10 @@ function simulation:insert_entity(e)
 		end
 	end
 
+	for i = 1, self.systems_on_insert_unconditional_count do
+		self.systems_on_insert_unconditional[i]:on_insert_unconditional(e, d)
+	end
+
 	d.entities[e.id] = e
 -- d.entity_count = d.entity_count + 1
 end
@@ -286,6 +314,10 @@ function simulation:remove_entity(e)
 
 			return
 		end
+	end
+
+	for i = 1, self.systems_on_remove_unconditional_count do
+		self.systems_on_remove_unconditional[i]:on_remove_unconditional(e, d)
 	end
 
 	e.pending_removal = nil

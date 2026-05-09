@@ -11,7 +11,7 @@ function M.register(sys)
 	sys.endless_patch = {}
 	sys.endless_patch.name = "endless_patch"
 
-	function sys.endless_patch:on_insert(entity, store)
+	function sys.endless_patch:on_insert_unconditional(entity, store)
 		if store.level_mode_override == GAME_MODE_ENDLESS then
 			if not entity._endless_strengthened then
 				local endless = store.endless
@@ -58,7 +58,7 @@ function M.register(sys)
 			end
 		end
 
-		return true
+	-- return true
 	end
 end
 

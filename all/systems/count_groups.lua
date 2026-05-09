@@ -36,11 +36,11 @@ function M.register(sys)
 
 	function sys.count_groups:on_dequeue(entity, store, insertion)
 		if insertion then
-			self:on_remove(entity, store)
+			self:on_remove_unconditional(entity, store)
 		end
 	end
 
-	function sys.count_groups:on_remove(entity, store)
+	function sys.count_groups:on_remove_unconditional(entity, store)
 		if entity.count_group and not entity.count_group.in_limbo and entity.count_group.type == COUNT_GROUP_CONCURRENT then
 			local c = entity.count_group
 			local g = store.count_groups
@@ -49,7 +49,7 @@ function M.register(sys)
 			signal.emit("count-group-changed", entity, g[c.type][c.name], -1)
 		end
 
-		return true
+	-- return true
 	end
 end
 

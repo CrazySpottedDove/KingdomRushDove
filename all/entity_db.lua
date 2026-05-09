@@ -279,7 +279,6 @@ function entity_db:create_entity(t)
 
 	out.id = self.last_id
 	self.last_id = self.last_id + 1
-
 	return out
 end
 

@@ -7,7 +7,7 @@ function M.register(sys)
 	sys.sound_events = {}
 	sys.sound_events.name = "sound_events"
 
-	function sys.sound_events:on_insert(entity, store)
+	function sys.sound_events:on_insert_unconditional(entity, store)
 		local se = entity.sound_events
 
 		if se and se.insert then
@@ -22,10 +22,10 @@ function M.register(sys)
 			end
 		end
 
-		return true
+	-- return true
 	end
 
-	function sys.sound_events:on_remove(entity, store)
+	function sys.sound_events:on_remove_unconditional(entity, store)
 		local se = entity.sound_events
 
 		if se then

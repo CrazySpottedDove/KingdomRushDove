@@ -8,7 +8,7 @@ function M.register(sys)
 		store.event_handlers = {}
 	end
 
-	function sys.events:on_insert(entity, store)
+	function sys.events:on_insert_unconditional(entity, store)
 		if entity.events then
 			for _, ev in pairs(entity.events.list) do
 				if not store.event_handlers[ev.name] then
@@ -23,7 +23,7 @@ function M.register(sys)
 		return true
 	end
 
-	function sys.events:on_remove(entity, store)
+	function sys.events:on_remove_unconditional(entity, store)
 		if entity.events then
 			for _, ev in pairs(entity.events.list) do
 				if store.event_handlers[ev.name] then
@@ -32,7 +32,7 @@ function M.register(sys)
 			end
 		end
 
-		return true
+	-- return true
 	end
 end
 

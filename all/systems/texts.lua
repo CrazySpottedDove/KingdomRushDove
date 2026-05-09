@@ -8,7 +8,7 @@ function M.register(sys)
 	sys.texts = {}
 	sys.texts.name = "texts"
 
-	function sys.texts:on_insert(entity, store)
+	function sys.texts:on_insert_unconditional(entity, store)
 		if entity.texts then
 			for _, t in pairs(entity.texts.list) do
 				local sprite_id = t.sprite_id
@@ -27,7 +27,7 @@ function M.register(sys)
 		return true
 	end
 
-	function sys.texts:on_remove(entity, store)
+	function sys.texts:on_remove_unconditional(entity, store)
 		if entity.texts then
 			for _, t in pairs(entity.texts.list) do
 				if t.image_name then
