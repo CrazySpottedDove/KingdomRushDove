@@ -1,14 +1,16 @@
 -- constvar 编译期常量测试
 local c = require("precompile.compile_utils")
 
-local test_env = {
+local test_env = setmetatable({
 	print = print,
 	U = {
 		clamp = function(v, min, max)
 			return math.max(min, math.min(max, v))
 		end
 	}
-}
+}, {
+	__index = _G
+})
 
 local function test(name, template, entity, expected_substrings)
 	local code = c.process(template, test_env, entity)

@@ -1,6 +1,172 @@
 -- precompile 性能基准测试
 -- 模拟 entity_db:precompile() 的流程，测量各阶段耗时
 
+-- 设置 love 存根（被所有模块依赖）
+if not _G.love then
+	_G.love = {}
+	love.filesystem = {
+		getInfo = function()
+			return nil
+		end,
+		loadWithPreference = function()
+			return nil, "stub"
+		end
+	}
+	love.graphics = {
+		newImage = function()
+			return {}
+		end,
+		newQuad = function()
+			return {}
+		end
+	}
+	love.audio = {
+		newSource = function()
+			return {}
+		end
+	}
+end
+_G.IS_ANDROID = false
+_G.LLDEBUGGER = nil
+_G.F_ENEMY = 2048
+_G.F_FRIEND = 1024
+_G.F_MOD = 4
+_G.F_RANGED = 2
+_G.F_BLOCK = 1
+_G.F_FLYING = 128
+_G.TERRAIN_LAND = 1
+_G.TERRAIN_WATER = 2
+_G.FPS = 30
+_G.DAMAGE_PHYSICAL = 2
+_G.DAMAGE_TRUE = 1
+_G.DAMAGE_MAGICAL = 4
+
+-- 扩展 table 模块
+if not table.deepclone then
+	function table.keys(t)
+		local kk = {}
+		for k in pairs(t) do
+			kk[#kk + 1] = k
+		end
+		return kk
+	end
+	function table.clone(t)
+		local c = {}
+		for k, v in pairs(t) do
+			c[k] = v
+		end
+		return c
+	end
+	function table.deepclone(t)
+		if type(t) ~= "table" then
+			return t
+		end
+		local c = {}
+		for k, v in pairs(t) do
+			c[k] = table.deepclone(v)
+		end
+		return c
+	end
+	function table.contains(t, o)
+		for _, v in pairs(t) do
+			if v == o then
+				return true
+			end
+		end
+		return false
+	end
+	function table.merge(t1, t2, new)
+		local m = new and table.clone(t1) or t1
+		for k, v in pairs(t2) do
+			m[k] = v
+		end
+		return m
+	end
+end
+
+-- 模块存根
+local stubs = {
+	["lib.hump.signal"] = {
+		emit = function()
+		end,
+		register = function()
+		end
+	},
+	["lib.klua.log"] = {
+		new = function(name)
+			return {
+				debug = function()
+				end,
+				info = function()
+				end,
+				warn = function()
+				end,
+				error = function()
+				end
+			}
+		end
+	},
+	["dove_modules.perf.perf"] = {
+		start = function()
+		end,
+		stop = function()
+		end,
+		tmp_start = function()
+		end,
+		tmp_stop = function()
+		end
+	},
+	["i18n"] = setmetatable({}, {
+		__call = function(_, s)
+			return s
+		end
+	}),
+	["kr1.game_settings"] = {
+		difficulty_enemy_speed_factor = {
+			[1] = 1,
+			[2] = 1,
+			[3] = 1,
+			[4] = 1
+		}
+	},
+	["kr1.upgrades"] = {},
+	["achievements"] = {},
+	["level_utils"] = {},
+	["sound_db"] = {
+		queue = function()
+		end,
+		stop_all = function()
+		end
+	},
+	["grid_db"] = {
+		cell_type = function()
+			return 1
+		end,
+		get_coords = function()
+			return 1, 1
+		end
+	},
+	["path_db"] = {
+		next_entity_node = function()
+			return {
+				x = 0,
+				y = 0
+			}, true
+		end,
+		is_node_valid = function()
+			return true
+		end
+	},
+	["all.constants"] = true
+}
+for name, mod in pairs(stubs) do
+	if not package.loaded[name] then
+		package.loaded[name] = mod
+	end
+end
+
+package.loaded["lib.klua.table"] = true
+
 local function bench(name, fn)
 	collectgarbage("collect")
 	local t0 = os.clock()
