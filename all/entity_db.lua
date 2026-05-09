@@ -53,6 +53,9 @@ function entity_db:precompile()
 		compiler:compile(e)
 	end
 	perf.tmp_stop("precompile")
+	-- profiling report (可注释掉以关闭)
+	local CU = require("precompile.compile_utils")
+	CU.profile_report()
 end
 
 --- 确认 entity_db 已加载

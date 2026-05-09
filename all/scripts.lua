@@ -636,6 +636,7 @@ function scripts.enemy_passive.update(this, store)
 end
 
 -- 在敌人脚本过多的时候，过多的分支判断是导致 main_script 开销暴涨的主要原因。该脚本确实考虑了各种各样的可能，但是性能却有所欠缺，我们更倾向于在 insert 的时候，根据敌人的 component 判断敌人适合什么样的更新函数，并进行对应的 main_script.update 分发，力求将这些 if 判断消灭在 insert 中，避免 update 时总是做一些重复的 if 判断
+-- 现在我们随便了，因为有编译器会消灭 enemy_mixed 中的大量分支。
 scripts.enemy_mixed = {}
 
 function scripts.enemy_mixed.update(this, store)
@@ -690,128 +691,6 @@ function scripts.enemy_mixed.update(this, store)
 				elseif ranged then
 					while SU.can_range_soldier(store, this, ranged) and #this.enemy.blockers == 0 do
 						if not SU.y_enemy_range_attacks(store, this, ranged) then
-							goto label_25_0
-						end
-
-						coroutine.yield()
-					end
-				end
-
-				coroutine.yield()
-			end
-		end
-	end
-end
-
-scripts.enemy_melee_ranged = {}
-
-function scripts.enemy_melee_ranged.update(this, store)
-	if this.render.sprites[1].name == "raise" then
-		if this.sound_events and this.sound_events.raise then
-			S:queue(this.sound_events.raise, this.sound_events.raise_args)
-		end
-
-		this.health_bar.hidden = true
-		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
-
-		U.y_animation_play(this, an, af, store.tick_ts, 1)
-
-		if not this.health.dead then
-			this.health_bar.hidden = nil
-		end
-	end
-
-	::label_25_0::
-
-	while true do
-		if this.health.dead then
-			SU.y_enemy_death(store, this)
-
-			return
-		end
-
-		if this.unit.is_stunned then
-			SU.y_enemy_stun(store, this)
-		else
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked_on__ranged_off__ignore_soldiers__func(store, this)
-
-			if not cont then
-			-- block empty
-			else
-				if blocker then
-					if not SU.y_wait_for_blocker(store, this, blocker) then
-						goto label_25_0
-					end
-
-					while SU.can_melee_blocker(store, this, blocker) do
-						if this.ranged and this.ranged.range_while_blocking and ranged then
-							SU.y_enemy_range_attacks(store, this, ranged)
-						end
-
-						if not SU.y_enemy_melee_attacks(store, this, blocker) then
-							goto label_25_0
-						end
-
-						coroutine.yield()
-					end
-				elseif ranged then
-					while SU.can_range_soldier(store, this, ranged) and #this.enemy.blockers == 0 do
-						if not SU.y_enemy_range_attacks(store, this, ranged) then
-							goto label_25_0
-						end
-
-						coroutine.yield()
-					end
-				end
-
-				coroutine.yield()
-			end
-		end
-	end
-end
-
-scripts.enemy_melee = {}
-
-function scripts.enemy_melee.update(this, store)
-	if this.render.sprites[1].name == "raise" then
-		if this.sound_events and this.sound_events.raise then
-			S:queue(this.sound_events.raise, this.sound_events.raise_args)
-		end
-
-		this.health_bar.hidden = true
-		local an, af = U.animation_name_facing_point(this, "raise", this.motion.dest)
-
-		U.y_animation_play(this, an, af, store.tick_ts, 1)
-
-		if not this.health.dead then
-			this.health_bar.hidden = nil
-		end
-	end
-
-	::label_25_0::
-
-	while true do
-		if this.health.dead then
-			SU.y_enemy_death(store, this)
-
-			return
-		end
-
-		if this.unit.is_stunned then
-			SU.y_enemy_stun(store, this)
-		else
-			local cont, blocker = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func__ranged(store, this)
-
-			if not cont then
-			-- block empty
-			else
-				if blocker then
-					if not SU.y_wait_for_blocker(store, this, blocker) then
-						goto label_25_0
-					end
-
-					while SU.can_melee_blocker(store, this, blocker) do
-						if not SU.y_enemy_melee_attacks(store, this, blocker) then
 							goto label_25_0
 						end
 

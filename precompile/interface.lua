@@ -94,6 +94,10 @@ end
 
 function M:_compile(e, template)
 	local code = CU.process(template, self.env, e)
+	-- if not compiled_templates[template] then
+	-- 	compiled_templates[template] = true
+	-- 	print(code)
+	-- end
 	local chunk, err = load(code, nil, "t", self.env)
 	if not chunk then
 		-- 编译失败时，输出模板源码和生成代码方便调试
