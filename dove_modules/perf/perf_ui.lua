@@ -18,7 +18,13 @@ local perf_ui = {
 	-- 累加的条目
 	sum_entries = {},
 	-- 累加的总耗时
-	sum_total_ms = 0
+	sum_total_ms = 0,
+	-- 模式："window" = 窗口平均值（默认），"cumulative" = 累计全程平均值
+	mode = "window",
+	-- 累计模式下不重置的累计数据
+	cum_entries = {},
+	cum_total_ms = 0,
+	cum_count = 0
 }
 
 local function deep_sum_entries(sum_entries, items)
@@ -44,20 +50,44 @@ function perf_ui.sync_data()
 	deep_sum_entries(perf_ui.sum_entries, items)
 	perf_ui.sum_total_ms = perf_ui.sum_total_ms + sum
 
-	if perf_ui.sync_count >= perf_ui.refresh_rate then
-		-- 计算平均值
-		local avg_entries = {}
-		for i, e in ipairs(perf_ui.sum_entries) do
-			avg_entries[i] = {
-				name = e.name,
-				time = e.time / perf_ui.sync_count,
-				percentage = e.percentage / perf_ui.sync_count
-			}
-		end
-		perf_ui.entries = avg_entries
-		perf_ui.total_ms = perf_ui.sum_total_ms / perf_ui.sync_count
+	if perf_ui.mode == "cumulative" then
+		-- 累计模式：累加到永久计数器，不重置
+		deep_sum_entries(perf_ui.cum_entries, items)
+		perf_ui.cum_total_ms = perf_ui.cum_total_ms + sum
+		perf_ui.cum_count = perf_ui.cum_count + 1
+	end
 
-		-- 重置计数和累加
+	if perf_ui.sync_count >= perf_ui.refresh_rate then
+		local avg_entries = {}
+		local divisor
+
+		if perf_ui.mode == "cumulative" then
+			-- 用累计数据算全程平均值
+			divisor = perf_ui.cum_count
+			for i, e in ipairs(perf_ui.cum_entries) do
+				avg_entries[i] = {
+					name = e.name,
+					time = e.time / divisor,
+					percentage = e.percentage / divisor
+				}
+			end
+			perf_ui.total_ms = perf_ui.cum_total_ms / divisor
+		else
+			-- 窗口模式（默认）：用当前窗口数据算平均值
+			divisor = perf_ui.sync_count
+			for i, e in ipairs(perf_ui.sum_entries) do
+				avg_entries[i] = {
+					name = e.name,
+					time = e.time / divisor,
+					percentage = e.percentage / divisor
+				}
+			end
+			perf_ui.total_ms = perf_ui.sum_total_ms / divisor
+		end
+
+		perf_ui.entries = avg_entries
+
+		-- 窗口模式才重置计数，累计模式不清除累计数据
 		perf_ui.sync_count = 0
 		perf_ui.sum_entries = {}
 		perf_ui.sum_total_ms = 0
@@ -72,6 +102,26 @@ function perf_ui.disable()
 end
 function perf_ui.toggle()
 	perf_ui.enabled = not perf_ui.enabled
+end
+
+function perf_ui.set_mode(m)
+	if m == "window" or m == "cumulative" then
+		perf_ui.mode = m
+		-- 切换模式时重置累计状态
+		perf_ui.cum_entries = {}
+		perf_ui.cum_total_ms = 0
+		perf_ui.cum_count = 0
+	end
+end
+function perf_ui.get_mode()
+	return perf_ui.mode
+end
+function perf_ui.toggle_mode()
+	if perf_ui.mode == "window" then
+		perf_ui:set_mode("cumulative")
+	else
+		perf_ui:set_mode("window")
+	end
 end
 
 local function textWidth(s)
@@ -98,7 +148,8 @@ function perf_ui.draw()
 
 	-- 标题：FPS 和 总耗时
 	lg.setColor(1, 1, 1, 0.95)
-	lg.print(string.format("FPS: %d, Memory: %d MB", love.timer.getFPS(), collectgarbage("count") / 1024), x + 8, y + 6)
+	local mode_tag = perf_ui.mode == "cumulative" and " [AVG]" or ""
+	lg.print(string.format("FPS: %d, Memory: %d MB%s", love.timer.getFPS(), collectgarbage("count") / 1024, mode_tag), x + 8, y + 6)
 
 	local bx, by = x + 8, y + 28
 	local value_x = x + w - 8
@@ -133,5 +184,8 @@ function perf_ui.draw()
 
 	lg.pop()
 end
+
+-- DEBUG
+-- perf_ui.set_mode("cumulative")
 
 return perf_ui

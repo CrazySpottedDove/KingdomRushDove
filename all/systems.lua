@@ -287,6 +287,21 @@ end
 function sys.level:on_update(dt, ts, store)
 	perf.start("level")
 
+	-- DEBUG/PERF
+	-- if not debug_inserted then
+	-- 	debug_inserted = true
+	-- 	local entity_count = 10000
+	-- 	local template = "lava"
+	-- 	for i = 1, entity_count do
+	-- 		local e = E:create_entity(template)
+	-- 		e.pos = V.v(random(0, 800), random(0, 600))
+	-- 		if e.aura then
+	-- 			e.aura.duration = 9999999
+	-- 		end
+	-- 		queue_insert(store, e)
+	-- 	end
+	-- end
+
 	if not store.level.update then
 		store.level.run_complete = true
 	else

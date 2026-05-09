@@ -4301,7 +4301,6 @@ tt.attacks.list[1].vis_bans = bor(F_FLYING, F_FRIEND)
 tt.attacks.list[1].vis_flags = bor(F_RANGED)
 
 tt = RT("bullet_razor_edge", "bolt")
-tt.bullet.payload = "aura_razor_edge"
 tt.bullet.damage_type = DAMAGE_NONE
 tt.bullet.acceleration_factor = 0.3
 tt.bullet.ignore_rotation = true
