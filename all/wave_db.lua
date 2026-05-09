@@ -1087,7 +1087,9 @@ function wave_db:randomize_creeps()
 				local spawn_count = math.floor(spawn_step)
 				if spawn_count > 0 then
 					spawn_step = spawn_step - spawn_count
-					local avg_interval = spawn.interval * spawn.max / spawn_count
+
+					local avg_interval = (spawn.interval or 0) * spawn.max / spawn_count
+
 					for l = 1, spawn_count do
 						local new_spawn = table.deepclone(spawn)
 						new_spawn.interval = avg_interval
