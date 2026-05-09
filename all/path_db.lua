@@ -206,7 +206,13 @@ end
 function path_db:node_pos(pi, spi, ni, return_ref)
 	local path = self.paths[pi][spi]
 
-	ni = km.clamp(1, #path, ni)
+	if ni > #path then
+		ni = #path
+	end
+
+	if ni < 1 then
+		ni = 1
+	end
 
 	if return_ref then
 		return path[ni]
@@ -218,11 +224,18 @@ end
 --- 在只读使用的情况下，使用该函数代替 node_pos 调用，减少性能开销
 function path_db:node_pos_ref(pi, spi, ni)
 	local path = self.paths[pi][spi]
-	ni = km.clamp(1, #path, ni)
+	if ni > #path then
+		ni = #path
+	end
+
+	if ni < 1 then
+		ni = 1
+	end
 	return path[ni]
 end
 
 function path_db:node_offset_pos(offset, pi, spi, ni)
+	-- TODO: path 长度为 0 怎么办？
 	ni = km.clamp(1, #self.paths[pi][spi], ni)
 
 	local o = self.paths[pi][spi][ni]
@@ -636,7 +649,7 @@ function path_db:predict_enemy_node_advance(e, flight_time)
 
 	local speed = V.len(e.motion.speed.x, e.motion.speed.y)
 	local node_offset = math.ceil(flight_time * speed / average_node_dist)
-	local path = self.paths[e.nav_path.pi][1]
+	local path = self.paths[e.nav_path.pi][e.nav_path.spi]
 
 	return km.clamp(0, #path - e.nav_path.ni, node_offset)
 end
