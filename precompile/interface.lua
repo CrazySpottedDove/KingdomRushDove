@@ -1,5 +1,5 @@
 local M = {}
-
+local CU = require("precompile.compile_utils")
 ------- 提供环境变量
 
 local scripts = require("scripts")
@@ -85,23 +85,48 @@ M.env = setmetatable({
 
 -- 引入所有的编译器规则
 function M:init()
-	require("precompile.compilers.enemy_basic")
-	require("precompile.compilers.enemy_mixed")
+	self.enemy_basic = require("precompile.templates.enemy_basic")
+	self.enemy_mixed = require("precompile.templates.enemy_mixed")
 end
 
-function M:precompile(e)
-	local m = e.main_script
+-- local compiled_templates = {}
 
-	if m.insert then
-		if m.insert == scripts.enemy_basic.insert then
-			m.insert = self.enemy_basic.insert.compile(e)
-		end
+function M:_compile(e, template)
+	local code = CU.process(template, self.env, e)
+	-- if not compiled_templates[template] then
+	-- print(code)
+	-- compiled_templates[template] = code
+	-- end
+	local chunk, err = load(code, nil, "t", self.env)
+	if not chunk then
+		error("Error compiling script: " .. err)
 	end
+	return chunk()
+end
 
-	if m.update then
-		if m.update == scripts.enemy_mixed.update then
-			m.update = self.enemy_mixed.update.compile(e)
+function M:compile(e)
+	if e.main_script then
+		local m = e.main_script
+
+		if e.enemy then
+			if m.insert == scripts.enemy_basic.insert then
+				-- m.insert = self.enemy_basic.insert.compile(e)
+				m.insert = self:_compile(e, self.enemy_basic.insert)
+			end
+
+			if m.update == scripts.enemy_mixed.update then
+				-- m.update = self.enemy_mixed.update.compile(e)
+				if e.melee or e.ranged then
+					m.update = self:_compile(e, self.enemy_mixed.update)
+				end
+			end
 		end
+
+	-- if e.aura then
+	-- 	if m.insert == scripts.aura_apply_mod.insert then
+	-- 		m.insert = self.aura_apply_mod.insert.compile(e)
+	-- 	end
+	-- end
 	end
 end
 

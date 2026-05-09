@@ -1364,8 +1364,9 @@ function U.attack_order(attacks)
 
 	for i = 1, #attacks do
 		local a = attacks[i]
-
-		table.insert(order, {i, a.chance or 1, a.cooldown})
+		local chance = type(a.chance) == "table" and a.chance[#a.chance] or a.chance or 1
+		local cooldown = type(a.cooldown) == "table" and a.cooldown[#a.cooldown] or a.cooldown
+		table.insert(order, {i, chance, cooldown})
 	-- id = i,
 	-- chance = a.chance or 1,
 	-- cooldown = a.cooldown

@@ -13028,7 +13028,7 @@ tt.ultimate = {
 
 tt = RT("enemy_pumpkin_witch", "enemy")
 local b = balance.heroes.hero_witch.skill_polymorph.pumpkin
-
+tt.main_script.update = scripts.enemy_passive.update
 tt.health.armor = b.armor
 tt.health.magic_armor = b.magic_armor
 tt.health_bar.offset = vec_2(0, 32)
