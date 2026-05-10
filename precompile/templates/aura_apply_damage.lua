@@ -105,7 +105,7 @@ return function(this, store)
 				local mods = this.aura.mods or {this.aura.mod}
 				local mod_count = #mods
 
-				for i = 1, target_count do
+				for i = 1, #targets do
 					local target = targets[i]
 
 					local d = E:create_entity("damage")
