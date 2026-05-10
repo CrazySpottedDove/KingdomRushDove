@@ -19,7 +19,8 @@ GS.archer_towers = {
 	"tower_royal_archers_lvl4",
 	"tower_ballista_lvl4",
 	"tower_shadow_archer",
-	"tower_bone_flingers"
+	"tower_bone_flingers",
+	"tower_ogre_shipwreck"
 }
 GS.mage_towers = {
 	"tower_mage_1",

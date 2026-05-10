@@ -1167,6 +1167,7 @@ local obj1 = {
 		["tower_dragons_lvl4"] = true,
 		["tower_archer_shadow"] = true,
 		["tower_bone_flingers"] = true,
+		["tower_ogre_shipwreck"] = true,
 		["tower_rotten_forest"] = true,
 		["tower_infernal_mage"] = true,
 		["tower_orc_shaman"] = true,

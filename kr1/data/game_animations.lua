@@ -34484,6 +34484,102 @@ return {
 		prefix = "razorboar",
 		to = 49
 	},
+	-- 这里属于是红哥布林的持续时间结束后的撤离补丁，参考的FL。
+	re_reinforcement_death = {
+		from = 7,
+		prefix = "reinforce_A0",
+		to = 17
+	},
+	re_conscript_1_death = {
+		from = 7,
+		prefix = "reinforce_A1",
+		to = 17
+	},
+	re_conscript_2_death = {
+		from = 7,
+		prefix = "reinforce_B1",
+		to = 17
+	},
+	re_conscript_3_death = {
+		from = 7,
+		prefix = "reinforce_C1",
+		to = 17
+	},
+	re_farmer_1_death = {
+		from = 7,
+		prefix = "reinforce_A0",
+		to = 17
+	},
+	re_farmer_2_death = {
+		from = 7,
+		prefix = "reinforce_B0",
+		to = 17
+	},
+	re_farmer_3_death = {
+		from = 7,
+		prefix = "reinforce_C0",
+		to = 17
+	},
+	re_farmer_well_fed_1_death = {
+		from = 7,
+		prefix = "reinforce_A0",
+		to = 17
+	},
+	re_farmer_well_fed_2_death = {
+		from = 7,
+		prefix = "reinforce_B0",
+		to = 17
+	},
+	re_farmer_well_fed_3_death = {
+		from = 7,
+		prefix = "reinforce_C0",
+		to = 17
+	},
+	re_legionnaire_1_death = {
+		from = 7,
+		prefix = "reinforce_A3",
+		to = 17
+	},
+	re_legionnaire_2_death = {
+		from = 7,
+		prefix = "reinforce_B3",
+		to = 17
+	},
+	re_legionnaire_3_death = {
+		from = 7,
+		prefix = "reinforce_C3",
+		to = 17
+	},
+	re_legionnaire_ranged_1_death = {
+		from = 7,
+		prefix = "reinforce_A3",
+		to = 17
+	},
+	re_legionnaire_ranged_2_death = {
+		from = 7,
+		prefix = "reinforce_B3",
+		to = 17
+	},
+	re_legionnaire_ranged_3_death = {
+		from = 7,
+		prefix = "reinforce_C3",
+		to = 17
+	},
+	re_warrior_1_death = {
+		from = 7,
+		prefix = "reinforce_A2",
+		to = 17
+	},
+	re_warrior_2_death = {
+		from = 7,
+		prefix = "reinforce_B2",
+		to = 17
+	},
+	re_warrior_3_death = {
+		from = 7,
+		prefix = "reinforce_C2",
+		to = 17
+	},
 	re_conscript_1_attack = {
 		from = 7,
 		prefix = "reinforce_A1",
@@ -47461,6 +47557,212 @@ return {
 		prefix = "warmongers_mage_tower_lvl4_explotion",
 		from = 1,
 		to = 19
+	},
+	-- 食人魔沉船
+	ogre_shipwreck_tower_lvl4_layer1_idle = {
+		prefix = "ogre_shipwreck_tower_lvl4_layer1",
+		from = 1,
+		to = 1
+	},
+	ogre_shipwreck_tower_lvl4_layer1_open = {
+		prefix = "ogre_shipwreck_tower_lvl4_layer1",
+		from = 2,
+		to = 17
+	},
+	ogre_shipwreck_tower_lvl4_layer1_close = {
+		prefix = "ogre_shipwreck_tower_lvl4_layer1",
+		from = 18,
+		to = 34
+	},
+	ogre_shipwreck_tower_lvl4_layer2_idle = {
+		prefix = "ogre_shipwreck_tower_lvl4_layer2",
+		from = 1,
+		to = 1
+	},
+	ogre_shipwreck_tower_lvl4_layer2_open = {
+		prefix = "ogre_shipwreck_tower_lvl4_layer2",
+		from = 2,
+		to = 17
+	},
+	ogre_shipwreck_tower_lvl4_layer2_close = {
+		prefix = "ogre_shipwreck_tower_lvl4_layer2",
+		from = 18,
+		to = 34
+	},
+	ogre_shipwreck_tower_lvl4_flags_run = {
+		prefix = "ogre_shipwreck_tower_lvl4_flags",
+		from = 1,
+		to = 20
+	},
+	ogre_shipwreck_musket_idle = {
+		prefix = "musket_tower",
+		from = 1,
+		to = 1
+	},
+	ogre_shipwreck_musket_shootDown = {
+		prefix = "musket_tower",
+		from = 2,
+		to = 21
+	},
+	ogre_shipwreck_musket_idleUp = {
+		prefix = "musket_tower",
+		from = 22,
+		to = 22
+	},
+	ogre_shipwreck_musket_shootUp = {
+		prefix = "musket_tower",
+		from = 23,
+		to = 44
+	},
+	ogre_shipwreck_musket_skillDownIn = {
+		prefix = "musket_tower",
+		from = 45,
+		to = 50
+	},
+	ogre_shipwreck_musket_skillDownLoop = {
+		prefix = "musket_tower",
+		from = 51,
+		to = 56
+	},
+	ogre_shipwreck_musket_skillDownEnd = {
+		prefix = "musket_tower",
+		from = 57,
+		to = 70
+	},
+	ogre_shipwreck_musket_skillUpIn = {
+		prefix = "musket_tower",
+		from = 71,
+		to = 76
+	},
+	ogre_shipwreck_musket_skillUpLoop = {
+		prefix = "musket_tower",
+		from = 77,
+		to = 82
+	},
+	ogre_shipwreck_musket_skillUpEnd = {
+		prefix = "musket_tower",
+		from = 83,
+		to = 95
+	},
+	musket_hit_run = {
+		prefix = "musket_hit",
+		from = 1,
+		to = 9
+	},
+	cook_ogre_idle = {
+		prefix = "cook_ogre",
+		from = 1,
+		to = 1
+	},
+	cook_ogre_walk = {
+		prefix = "cook_ogre",
+		from = 2,
+		to = 35
+	},
+	cook_ogre_attack = {
+		prefix = "cook_ogre",
+		from = 36,
+		to = 66
+	},
+	cook_ogre_death = {
+		prefix = "cook_ogre",
+		from = 67,
+		to = 93
+	},
+	cook_ogre_spawn = {
+		prefix = "cook_ogre",
+		from = 94,
+		to = 109
+	},
+	deckhand_goblin_idle = {
+		prefix = "deckhand_goblin",
+		from = 1,
+		to = 1
+	},
+	deckhand_goblin_walk = {
+		prefix = "deckhand_goblin",
+		from = 2,
+		to = 9
+	},
+	deckhand_goblin_attack = {
+		prefix = "deckhand_goblin",
+		from = 10,
+		to = 23
+	},
+	deckhand_goblin_death = {
+		prefix = "deckhand_goblin",
+		from = 24,
+		to = 36
+	},
+	goblin_bomber_idle = {
+		prefix = "goblin_bomber",
+		from = 1,
+		to = 1
+	},
+	goblin_bomber_shoot = {
+		prefix = "goblin_bomber",
+		from = 2,
+		to = 40
+	},
+	goblin_bomber_skill = {
+		prefix = "goblin_bomber",
+		from = 41,
+		to = 80
+	},
+	goblin_bomber_idleGoblin = {
+		prefix = "goblin_bomber",
+		from = 81,
+		to = 81
+	},
+	goblin_bomber_shootGoblin = {
+		prefix = "goblin_bomber",
+		from = 82,
+		to = 120
+	},
+	goblin_bomber_skillGoblin = {
+		prefix = "goblin_bomber",
+		from = 121,
+		to = 160
+	},
+	goblin_bomber_burst_run = {
+		prefix = "goblin_bomber_burst",
+		from = 1,
+		to = 20
+	},
+	goblin_bomber_trail_run = {
+		prefix = "goblin_bomber_trail",
+		from = 1,
+		to = 9
+	},
+	goblin_bomber_projectile_run = {
+		prefix = "goblin_bomber_projectil",
+		from = 1,
+		to = 14
+	},
+	ogre_shipwreck_slinger_idle = {
+		prefix = "skill_goblin",
+		from = 1,
+		to = 1
+	},
+	ogre_shipwreck_slinger_running = {
+		prefix = "skill_goblin",
+		from = 2,
+		to = 9
+	},
+	ogre_shipwreck_slinger_attack = {
+		prefix = "skill_goblin",
+		from = 10,
+		to = 23
+	},
+	ogre_shipwreck_slinger_death = {
+		prefix = "skill_goblin",
+		from = 24,
+		to = 36
+	},
+	skill_goblin_projectile_basic_idle = {
+		prefix = "skill_goblin_projectile_basic",
+		from = 1,
+		to = 1
 	},
 	Stage17_waterFall = {
 		prefix = "Stage17_waterFall",

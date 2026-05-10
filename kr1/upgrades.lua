@@ -995,7 +995,13 @@ upgrades.arrows = {
 	"arrow_tower_shadow_archer",
 	"arrow_tower_shadow_archer_mark",
 	"bone_flingers_bone",
-	"bone_flingers_bone_golem"
+	"bone_flingers_bone_golem",
+	"bullet_ogre_shipwreck_musket",
+	"bullet_ogre_shipwreck_musket_volley",
+	"bullet_ogre_shipwreck_musket_volley_lv2",
+	"bomb_ogre_shipwreck_goblin",
+	"bomb_ogre_shipwreck_goblin_skill1",
+	"bomb_ogre_shipwreck_goblin_skill2"
 }
 
 upgrades.soldiers = {
@@ -1037,6 +1043,12 @@ upgrades.soldiers = {
 	"soldier_bone_golem",
 	"soldier_flingers_skeleton",
 	"soldier_flingers_skeleton_warrior",
+	"soldier_ogre_shipwreck_cook",
+	"soldier_ogre_shipwreck_cook_enhanced",
+	"soldier_ogre_shipwreck_deckhand",
+	"soldier_ogre_shipwreck_deckhand_elite",
+	"soldier_ogre_shipwreck_red_goblin",
+	"soldier_ogre_shipwreck_red_goblin_elite",
 	"soldier_orc_warrior",
 	"soldier_orc_warrior_captain",
 	"soldier_dark_knight"
@@ -1067,6 +1079,12 @@ upgrades.barrack_soldiers = {
 	"soldier_tower_ghost_lvl4",
 	"soldier_tower_dwarf_lvl4",
 	"tower_paladin_covenant_soldier_lvl4",
+	"soldier_ogre_shipwreck_cook",
+	"soldier_ogre_shipwreck_cook_enhanced",
+	"soldier_ogre_shipwreck_deckhand",
+	"soldier_ogre_shipwreck_deckhand_elite",
+	"soldier_ogre_shipwreck_red_goblin",
+	"soldier_ogre_shipwreck_red_goblin_elite",
 	"soldier_orc_warrior",
 	"soldier_orc_warrior_captain",
 	"soldier_dark_knight"
@@ -1103,6 +1121,7 @@ upgrades.towers_with_barrack = {
 	"tower_barrel_lvl4",
 	"tower_paladin_covenant_lvl4",
 	"tower_bone_flingers",
+	"tower_ogre_shipwreck",
 	"tower_orc_warriors",
 	"tower_dark_knights"
 }

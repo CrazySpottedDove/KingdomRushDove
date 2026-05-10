@@ -62,7 +62,8 @@ game.required_textures = {
 	"kr4_warmongers_tower_mage",
 	"kr4_fallen_ones_bone_flingers",
 	"kr4_warmongers_tower_barrack",
-	"kr4_dark_army_tower_barrack"
+	"kr4_dark_army_tower_barrack",
+	"kr4_ogres_tower_barrack"
 }
 game.ref_h = REF_H
 game.ref_w = REF_W
@@ -97,6 +98,7 @@ game.required_sounds = {
 	"tower_infernal_mage",
 	"tower_orc_shaman",
 	"tower_bone_flingers",
+	"tower_ogre_shipwreck",
 	"tower_orc_warriors",
 	"tower_dark_knights"
 }

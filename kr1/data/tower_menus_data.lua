@@ -423,6 +423,13 @@ return {
 			tt_title = _("TOWER_BONE_FLINGERS_NAME"),
 			tt_desc = _("TOWER_BONE_FLINGERS_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_ogre_shipwreck",
+			image = "kr4_main_icons_0022",
+			place = 21,
+			tt_title = _("TOWER_ORC_SHIPWRECK_NAME"),
+			tt_desc = _("TOWER_ORC_SHIPWRECK_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	barrack = {{M(tpl.common_upgrade, {
@@ -3130,6 +3137,43 @@ return {
 		tt_list = {{
 			tt_title = _("TOWER_BONE_FLINGERS_GOLEM_NAME_1"),
 			tt_desc = _("TOWER_BONE_FLINGERS_GOLEM_DESCRIPTION_1")
+		}}
+	}), tpl.rally, tpl.sell}},
+	ogre_shipwreck = {{M(tpl.upgrade_power, {
+		action_arg = "armor",
+		image = "kr4_special_icons_0076",
+		place = 6,
+		sounds = {"OgreShipwreckPower01"},
+		tt_phrase = _("TOWER_ORC_SHIPWRECK_ARMOR_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ORC_SHIPWRECK_ARMOR_NAME_1"),
+			tt_desc = _("TOWER_ORC_SHIPWRECK_ARMOR_DESCRIPTION_1")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "multishoot",
+		image = "kr4_special_icons_0077",
+		place = 5,
+		sounds = {"OgreShipwreckPower02"},
+		tt_phrase = _("TOWER_ORC_SHIPWRECK_MULTISHOOT_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ORC_SHIPWRECK_MULTISHOOT_NAME_1"),
+			tt_desc = _("TOWER_ORC_SHIPWRECK_MULTISHOOT_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ORC_SHIPWRECK_MULTISHOOT_NAME_2"),
+			tt_desc = _("TOWER_ORC_SHIPWRECK_MULTISHOOT_DESCRIPTION_2")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "goblin_launcher",
+		image = "kr4_special_icons_0078",
+		place = 7,
+		sounds = {"OgreShipwreckPower03"},
+		tt_phrase = _("TOWER_ORC_SHIPWRECK_GOBLIN_LAUNCHER_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ORC_SHIPWRECK_GOBLIN_LAUNCHER_NAME_1"),
+			tt_desc = _("TOWER_ORC_SHIPWRECK_GOBLIN_LAUNCHER_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ORC_SHIPWRECK_GOBLIN_LAUNCHER_NAME_2"),
+			tt_desc = _("TOWER_ORC_SHIPWRECK_GOBLIN_LAUNCHER_DESCRIPTION_2")
 		}}
 	}), tpl.rally, tpl.sell}},
 	rotten_forest = {{M(tpl.upgrade_power, {
