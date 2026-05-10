@@ -277,18 +277,22 @@ function sound_db:queue_load_done()
 		local th, cin, cout = unpack(self.threads[i])
 
 		if th:isRunning() then
-			local result = cout:pop()
-			if result then
-				local r1, r2, r3 = unpack(result)
-				if r1 == "DONE" then
-					table.remove(self.threads, i)
-				elseif r1 == "ERROR" then
-					log.error("Failed to create audio source for file: %s. Error: %s", r3, r2)
-					self.load_file_done = self.load_file_done + 1
-				elseif r1 == "OK" then
-					local fn, master_src = r3, r2
-					self.sources[fn] = {master_src}
-					self.load_file_done = self.load_file_done + 1
+			while true do
+				local result = cout:pop()
+				if result then
+					local r1, r2, r3 = unpack(result)
+					if r1 == "DONE" then
+						table.remove(self.threads, i)
+					elseif r1 == "ERROR" then
+						log.error("Failed to create audio source for file: %s. Error: %s", r3, r2)
+						self.load_file_done = self.load_file_done + 1
+					elseif r1 == "OK" then
+						local fn, master_src = r3, r2
+						self.sources[fn] = {master_src}
+						self.load_file_done = self.load_file_done + 1
+					end
+				else
+					break
 				end
 			end
 		else

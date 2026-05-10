@@ -295,43 +295,47 @@ function image_db:queue_load_done()
 		local th, cin, cout = unpack(self.threads[i])
 
 		if th:isRunning() then
-			local result = cout:pop()
+			while true do
+				local result = cout:pop()
 
-			if result then
-				local r1, r2, r3, r4, r5 = unpack(result)
+				if result then
+					local r1, r2, r3, r4, r5 = unpack(result)
 
-				if r1 == "DONE" then
-					table.remove(self.threads, i)
-				elseif r1 == "ERROR" then
-					log.error("Failed to load image file: %s. Error: %s", r3, r2)
-				elseif r1 == "OK" then
-					local key, data, w, h = r2, r3, r4, r5
-					local im = G.newImage(data)
+					if r1 == "DONE" then
+						table.remove(self.threads, i)
+					elseif r1 == "ERROR" then
+						log.error("Failed to load image file: %s. Error: %s", r3, r2)
+					elseif r1 == "OK" then
+						local key, data, w, h = r2, r3, r4, r5
+						local im = G.newImage(data)
 
-					if not im then
-						log.error("Image could not be created: %s", key)
-					else
-						if self.use_canvas and not im:isCompressed() then
-							log.paranoid(" +++ creating canvas %s", im)
-
-							local c = G.newCanvas(w, h)
-
-							G.setCanvas(c)
-							G.setBlendMode("replace", "premultiplied")
-							G.draw(im)
-							G.setBlendMode("alpha", "alphamultiply")
-							G.setCanvas()
-
-							self.db_images[key] = {c, w, h}
-							im = nil
+						if not im then
+							log.error("Image could not be created: %s", key)
 						else
-							log.paranoid(" +++ keeping image %s", im)
+							if self.use_canvas and not im:isCompressed() then
+								log.paranoid(" +++ creating canvas %s", im)
 
-							self.db_images[key] = {im, w, h}
+								local c = G.newCanvas(w, h)
+
+								G.setCanvas(c)
+								G.setBlendMode("replace", "premultiplied")
+								G.draw(im)
+								G.setBlendMode("alpha", "alphamultiply")
+								G.setCanvas()
+
+								self.db_images[key] = {c, w, h}
+								im = nil
+							else
+								log.paranoid(" +++ keeping image %s", im)
+
+								self.db_images[key] = {im, w, h}
+							end
+
+							self.queue_load_done_images = self.queue_load_done_images + 1
 						end
-
-						self.queue_load_done_images = self.queue_load_done_images + 1
 					end
+				else
+					break
 				end
 			end
 		else

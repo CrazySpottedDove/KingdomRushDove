@@ -5,8 +5,6 @@ local enemy_passive = {}
 
 enemy_passive.update = [[
 return function(this, store)
-	local terrain_type
-
 	if this.render.sprites[1].name == "raise" then
 		local next_pos
 
@@ -22,9 +20,8 @@ return function(this, store)
 	end
 
 	while true do
-		constif(this.cliff)
-		terrain_type = SU.enemy_cliff_change(store, this)
-		constend
+		@constif(this.cliff)
+		SU.enemy_cliff_change(store, this)
 
 		if this.health.dead then
 			SU.y_enemy_death(store, this)
@@ -36,7 +33,6 @@ return function(this, store)
 			U.animation_start(this, "idle", nil, store.tick_ts, -1)
 			coroutine.yield()
 		else
-			-- passive 敌人不会攻击，这里直接排除所有分支
 			SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func__ranged(store, this)
 		end
 	end

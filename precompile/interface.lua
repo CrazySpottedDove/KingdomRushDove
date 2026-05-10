@@ -87,9 +87,9 @@ M.env = setmetatable({
 function M:init()
 	self.enemy_basic = require("precompile.templates.enemy_basic")
 	self.enemy_mixed = require("precompile.templates.enemy_mixed")
-	-- self.enemy_passive = require("precompile.templates.enemy_passive")
+	self.enemy_passive = require("precompile.templates.enemy_passive")
 	self.aura_apply_mod = require("precompile.templates.aura_apply_mod")
-	-- self.aura_apply_damage = require("precompile.templates.aura_apply_damage")
+	self.aura_apply_damage = require("precompile.templates.aura_apply_damage")
 	-- self.soldier_reinforcement = require("precompile.templates.soldier_reinforcement")
 	-- self.soldier_barrack = require("precompile.templates.soldier_barrack")
 	self.arrow = require("precompile.templates.arrow")
@@ -224,6 +224,8 @@ function M:compile(e)
 				if e.melee or e.ranged then
 					m.update = self:_compile(e, self.enemy_mixed.update)
 				end
+			elseif m.update == scripts.enemy_passive.update then
+				m.update = self:_compile(e, self.enemy_passive.update)
 			end
 		end
 
@@ -271,10 +273,11 @@ function M:compile(e)
 				if e.aura.duration then
 					m.update = self:_compile(e, self.aura_apply_mod.update)
 				end
-			-- elseif m.update == scripts.aura_apply_damage.update then
-			-- m.update = self:_compile(e, self.aura_apply_damage.update)
+			elseif m.update == scripts.aura_apply_damage.update then
+				if e.aura.duration then
+					m.update = self:_compile(e, self.aura_apply_damage.update)
+				end
 			end
-
 		end
 	end
 end
