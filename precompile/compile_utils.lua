@@ -1,85 +1,41 @@
 -- 编译期模板预处理工具
 local M = {}
 
--- 常量
-local OPENERS = {
-	["if"] = true,
-	["for"] = true,
-	["while"] = true,
-	["function"] = true,
-	["do"] = true,
-	["repeat"] = true
-}
-local CLOSERS = {
-	["end"] = true,
-	["until"] = true
-}
+-- byte 常量（避免重复计算）
+local b_space = 32
+local b_tab = 9
+local b_cr = 13
+local b_dash = 45
+local b_squote = 39
+local b_dquote = 34
+local b_bslash = 92
+local b_lbrack = 91
+local b_rbrack = 93
+local b_eq = 61
+local b_lparen = 40
+local b_rparen = 41
+local b_comma = 44
+local b_colon = 58
+local b_dot = 46
+local b_semic = 59
+local b_newl = 10
+local b_und = 95
 
--- 分词
-local function scan_keywords(line)
-	local kws = {}
-	local i = 1
-	local n = #line
-	while i <= n do
-		local ch = line:sub(i, i)
-		if ch:match("[ \t\r]") then
-			i = i + 1
-		elseif ch == "-" and line:sub(i + 1, i + 1) == "-" then
-			break
-		elseif ch == "'" or ch == '"' then
-			local q = ch
-			local j = i + 1
-			while j <= n do
-				local c = line:sub(j, j)
-				if c == "\\" then
-					j = j + 2
-				elseif c == q then
-					j = j + 1
-					break
-				else
-					j = j + 1
-				end
-			end
-			i = j
-		elseif ch == "[" then
-			local eq = 0
-			local k = i + 1
-			while line:sub(k, k) == "=" do
-				eq = eq + 1
-				k = k + 1
-			end
-			if line:sub(k, k) == "[" then
-				local close = "]"
-				for _ = 1, eq do
-					close = close .. "="
-				end
-				close = close .. "]"
-				local pos = line:find(close, k + 1)
-				if pos then
-					i = pos + #close
-				else
-					i = n + 1
-				end
-			else
-				i = i + 1
-			end
-		elseif ch:match("[%a_]") then
-			local j = i + 1
-			while j <= n and line:sub(j, j):match("[%w_]") do
-				j = j + 1
-			end
-			local word = line:sub(i, j - 1)
-			if OPENERS[word] then
-				kws[#kws + 1] = word
-			elseif CLOSERS[word] then
-				kws[#kws + 1] = word
-			end
-			i = j
-		else
-			i = i + 1
-		end
-	end
-	return kws
+-- 字节级判断函数（内联友好）
+local function is_ws(b)
+	return b == b_space or b == b_tab or b == b_cr
+end
+local function is_id_start(b)
+	return (b >= 65 and b <= 90) or b == b_und or (b >= 97 and b <= 122)
+end
+local function is_id_char(b)
+	return (b >= 48 and b <= 57) or (b >= 65 and b <= 90) or b == b_und or (b >= 97 and b <= 122)
+end
+
+-- Helper: 将 byte 转为 Lua 字符（必须定义在所有使用它的函数之前）
+local BYTE_TO_CHAR = {}
+for i = 0, 255 do
+	BYTE_TO_CHAR[i] = string.char(i)
 end
 
 -- 参数拆分
@@ -89,102 +45,149 @@ local function split_args(s)
 	end
 	local parts = {}
 	local depth = 0
-	local buf = ""
+	local buf = {}
 	for k = 1, #s do
-		local c = s:sub(k, k)
-		if c == "(" or c == "[" or c == "{" then
+		local b = s:byte(k)
+		if b == b_lparen or b == b_lbrack or b == 123 then
 			depth = depth + 1
-			buf = buf .. c
-		elseif c == ")" or c == "]" or c == "}" then
+			buf[#buf + 1] = BYTE_TO_CHAR[b]
+		elseif b == b_rparen or b == b_rbrack or b == 125 then
 			depth = depth - 1
-			buf = buf .. c
-		elseif c == "," and depth == 0 then
-			parts[#parts + 1] = buf:match("^%s*(.-)%s*$")
-			buf = ""
+			buf[#buf + 1] = BYTE_TO_CHAR[b]
+		elseif b == b_comma and depth == 0 then
+			parts[#parts + 1] = table.concat(buf):match("^%s*(.-)%s*$")
+			buf = {}
 		else
-			buf = buf .. c
+			buf[#buf + 1] = BYTE_TO_CHAR[b]
 		end
 	end
-	parts[#parts + 1] = buf:match("^%s*(.-)%s*$")
+	parts[#parts + 1] = table.concat(buf):match("^%s*(.-)%s*$")
 	return parts
 end
 
--- 行类型分析
+-- 行类型分析（用 string.find 替换多次 match，提前跳出）
 local function analyze_line(line)
 	local t = line:match("^%s*(.*)$")
-	local stmt = t:match("^conststmt%((.*)%)$")
-	if stmt then
+	-- 用首字符快速分流
+	local fb = t:byte(1)
+	if not fb then
 		return {
-			directive = "stmt",
-			expr = stmt
+			directive = nil
 		}
 	end
-	local cond = t:match("^constif%((.*)%)$")
-	if cond then
+	if fb == b_dash and t:byte(2) == b_dash then
 		return {
-			directive = "if",
-			expr = cond
+			directive = nil
 		}
 	end
-	cond = t:match("^constelseif%((.*)%)$")
-	if cond then
-		return {
-			directive = "elseif",
-			expr = cond
-		}
+
+	-- conststmt
+	if fb == 99 and t:find("^conststmt%(", 1) then
+		local expr = t:match("^conststmt%((.*)%)$")
+		if expr then
+			M._prof.al_hits = M._prof.al_hits + 1
+			return {
+				directive = "stmt",
+				expr = expr
+			}
+		end
 	end
-	if t:match("^constelse$") then
+	-- constif
+	if fb == 99 and t:find("^constif%(", 1) then
+		local cond = t:match("^constif%((.*)%)$")
+		if cond then
+			M._prof.al_hits = M._prof.al_hits + 1
+			return {
+				directive = "if",
+				expr = cond
+			}
+		end
+	end
+	-- constelseif
+	if fb == 99 and t:find("^constelseif%(", 1) then
+		local cond = t:match("^constelseif%((.*)%)$")
+		if cond then
+			M._prof.al_hits = M._prof.al_hits + 1
+			return {
+				directive = "elseif",
+				expr = cond
+			}
+		end
+	end
+	-- constelse
+	if fb == 99 and t:find("^constelse$", 1) then
+		M._prof.al_hits = M._prof.al_hits + 1
 		return {
 			directive = "constelse"
 		}
 	end
-	if t:match("^constend$") then
+	-- constend
+	if fb == 99 and t:find("^constend$", 1) then
+		M._prof.al_hits = M._prof.al_hits + 1
 		return {
 			directive = "constend"
 		}
 	end
-	-- @constif 标签语法：对下一行生效
-	cond = t:match("^@constif%((.*)%)$")
-	if cond then
-		return {
-			directive = "at_constexpr",
-			expr = cond
-		}
+	-- @constif
+	if fb == 64 and t:find("^@constif%(", 1) then
+		local cond = t:match("^@constif%((.*)%)$")
+		if cond then
+			M._prof.al_hits = M._prof.al_hits + 1
+			return {
+				directive = "at_constexpr",
+				expr = cond
+			}
+		end
 	end
-	if t:match("^@constelse$") then
+	-- @constelse
+	if fb == 64 and t:find("^@constelse$", 1) then
+		M._prof.al_hits = M._prof.al_hits + 1
 		return {
 			directive = "at_else"
 		}
 	end
-	local cvn, cve = t:match("^constvar%s+(%w+)%s*=%s*(.-)$")
-	if cvn then
-		return {
-			directive = "constvar",
-			var = cvn,
-			expr = cve
-		}
-	end
-	local s_expr = t:match("^conststring%((.*)%)$")
-	if s_expr then
-		return {
-			directive = "string",
-			expr = s_expr
-		}
-	end
-	local vn, rest = t:match("^constfor (%w+)%s*=%s*(.+)$")
-	if vn then
-		rest = rest:match("^(.*)%s+do$")
-		if rest then
-			local parts = split_args(rest)
+	-- constvar
+	if fb == 99 and t:find("^constvar%s+", 1) then
+		local cvn, cve = t:match("^constvar%s+(%w+)%s*=%s*(.-)$")
+		if cvn then
+			M._prof.al_hits = M._prof.al_hits + 1
 			return {
-				directive = "for",
-				var = vn,
-				start = parts[1],
-				stop = parts[2],
-				step = parts[3] or "1"
+				directive = "constvar",
+				var = cvn,
+				expr = cve
 			}
 		end
 	end
+	-- conststring
+	if fb == 99 and t:find("^conststring%(", 1) then
+		local s_expr = t:match("^conststring%((.*)%)$")
+		if s_expr then
+			M._prof.al_hits = M._prof.al_hits + 1
+			return {
+				directive = "string",
+				expr = s_expr
+			}
+		end
+	end
+	-- constfor
+	if fb == 99 and t:find("^constfor ", 1) then
+		local vn, rest = t:match("^constfor (%w+)%s*=%s*(.+)$")
+		if vn then
+			rest = rest:match("^(.*)%s+do$")
+			if rest then
+				local parts = split_args(rest)
+				M._prof.al_hits = M._prof.al_hits + 1
+				return {
+					directive = "for",
+					var = vn,
+					start = parts[1],
+					stop = parts[2],
+					step = parts[3] or "1"
+				}
+			end
+		end
+	end
+	M._prof.al_hits = M._prof.al_hits + 1
 	return {
 		directive = nil
 	}
@@ -229,33 +232,50 @@ local function _fast_eval(expr, env)
 			return not iv, true
 		end
 	end
-	-- scope_vars 查表
-	if env[expr] ~= nil and type(expr) == "string" and expr:match("^[%w_]+$") then
-		return env[expr], true
+	-- scope_vars 查表（用 byte 检查替代模式匹配）
+	if env[expr] ~= nil and type(expr) == "string" then
+		local ok = true
+		for j = 1, #expr do
+			local b = expr:byte(j)
+			if not is_id_char(b) then
+				ok = false
+				break
+			end
+		end
+		if ok then
+			return env[expr], true
+		end
 	end
 	return nil, false -- 无法处理
 end
 
+-- 创建求值环境
+local function make_eval_env(env, scope_vars)
+	if not scope_vars or not next(scope_vars) then
+		return env
+	end
+	local eval_env = {}
+	for k, v in pairs(scope_vars) do
+		eval_env[k] = v
+	end
+	setmetatable(eval_env, {
+		__index = env
+	})
+	return eval_env
+end
+
 -- 求值
 local function eval_expr(expr, env, scope_vars)
-	local eval_env = env
-	if scope_vars and next(scope_vars) then
-		eval_env = setmetatable({}, {
-			__index = env
-		})
-		for k, v in pairs(scope_vars) do
-			eval_env[k] = v
-		end
-	end
+	local eval_env = make_eval_env(env, scope_vars)
 	-- 快速路径
 	local r, handled = _fast_eval(expr, eval_env)
 	if handled then
-		M._prof.eval_total = (M._prof.eval_total or 0) + 1
-		M._prof.eval_fast = (M._prof.eval_fast or 0) + 1
+		M._prof.eval_total = M._prof.eval_total + 1
+		M._prof.eval_fast = M._prof.eval_fast + 1
 		return r
 	end
-	M._prof.eval_total = (M._prof.eval_total or 0) + 1
-	M._prof.eval_slow = (M._prof.eval_slow or 0) + 1
+	M._prof.eval_total = M._prof.eval_total + 1
+	M._prof.eval_slow = M._prof.eval_slow + 1
 	-- fallback：复杂表达式用 load()
 	local fn, err = load("return(" .. expr .. ")", "constexpr", "t", eval_env)
 	if not fn then
@@ -267,16 +287,9 @@ local function eval_expr(expr, env, scope_vars)
 	end
 	return r
 end
+
 local function eval_stmt(stmt, env, scope_vars)
-	local eval_env = env
-	if scope_vars and next(scope_vars) then
-		eval_env = setmetatable({}, {
-			__index = env
-		})
-		for k, v in pairs(scope_vars) do
-			eval_env[k] = v
-		end
-	end
+	local eval_env = make_eval_env(env, scope_vars)
 	-- inject constexpr function for use inside conststmt()
 	eval_env.constexpr = function(expr)
 		return eval_expr(expr, env, scope_vars)
@@ -362,83 +375,53 @@ end
 -- 全局计数器
 local cf_counter = 0
 
--- constbreak→goto 转换（不追加标签，由调用方统一添加）
-local function replace_constbreak_in_lines(lines, label)
-	local result = {}
-	for _, line in ipairs(lines) do
-		local out = {}
-		local i = 1
-		local n = #line
-		while i <= n do
-			local ch = line:sub(i, i)
-			if ch:match("[ \t\r]") then
-				out[#out + 1] = ch
-				i = i + 1
-			elseif ch == "-" and line:sub(i + 1, i + 1) == "-" then
-				out[#out + 1] = line:sub(i)
-				break
-			elseif ch == "'" or ch == "\"" then
-				local q = ch
-				local j = i + 1
-				while j <= n do
-					local c = line:sub(j, j)
-					if c == "\\" then
-						j = j + 2
-					elseif c == q then
-						j = j + 1
-						break
-					else
-						j = j + 1
-					end
-				end
-				out[#out + 1] = line:sub(i, j - 1)
-				i = j
-			elseif ch == "[" then
-				local eq = 0
-				local k = i + 1
-				while line:sub(k, k) == "=" do
-					eq = eq + 1
-					k = k + 1
-				end
-				if line:sub(k, k) == "[" then
-					local close = "]"
-					for _ = 1, eq do
-						close = close .. "="
-					end
-					close = close .. "]"
-					local pos = line:find(close, k + 1)
-					if pos then
-						out[#out + 1] = line:sub(i, pos + #close - 1)
-						i = pos + #close
-					else
-						out[#out + 1] = ch
-						i = i + 1
-					end
-				else
-					out[#out + 1] = ch
-					i = i + 1
-				end
-			elseif ch:match("[%a_]") then
-				local j = i + 1
-				while j <= n and line:sub(j, j):match("[%w_]") do
-					j = j + 1
-				end
-				local word = line:sub(i, j - 1)
-				if word == "constbreak" then
-					out[#out + 1] = "goto " .. label
-					i = j
-				else
-					out[#out + 1] = word
-					i = j
-				end
-			else
-				out[#out + 1] = ch
-				i = i + 1
-			end
-		end
-		result[#result + 1] = table.concat(out)
+-- 字节级 tokenizer：提取下一个单词
+local function scan_word(text, i, n)
+	local j = i + 1
+	while j <= n and is_id_char(text:byte(j)) do
+		j = j + 1
 	end
-	return result
+	return text:sub(i, j - 1), j
+end
+
+-- 字节级 tokenizer：跳过字符串字面量
+local function skip_string(text, i, n)
+	local q = text:byte(i)
+	local j = i + 1
+	while j <= n do
+		local bc = text:byte(j)
+		if bc == b_bslash then
+			j = j + 2
+		elseif bc == q then
+			return j + 1
+		else
+			j = j + 1
+		end
+	end
+	return j
+end
+
+-- 字节级 tokenizer：跳过长括号字面量
+local function skip_longbracket(text, i, n)
+	local eq = 0
+	local k = i + 1
+	while text:byte(k) == b_eq do
+		eq = eq + 1
+		k = k + 1
+	end
+	if text:byte(k) == b_lbrack then
+		local close = "]"
+		for _ = 1, eq do
+			close = close .. "="
+		end
+		close = close .. "]"
+		local pos = text:find(close, k + 1, true)
+		if pos then
+			return pos + #close
+		end
+		return n + 1
+	end
+	return i + 1
 end
 
 -- 分词安全的标识符替换
@@ -447,60 +430,23 @@ local function replace_ident_in_text(text, var_name, value)
 	local i = 1
 	local n = #text
 	while i <= n do
-		local ch = text:sub(i, i)
-		if ch:match("[ \t\r]") then
-			out[#out + 1] = ch
+		local b = text:byte(i)
+		if is_ws(b) then
+			out[#out + 1] = BYTE_TO_CHAR[b]
 			i = i + 1
-		elseif ch == "-" and text:sub(i + 1, i + 1) == "-" then
+		elseif b == b_dash and text:byte(i + 1) == b_dash then
 			out[#out + 1] = text:sub(i)
 			break
-		elseif ch == "'" or ch == '"' then
-			local q = ch
-			local j = i + 1
-			while j <= n do
-				local c = text:sub(j, j)
-				if c == "\\" then
-					j = j + 2
-				elseif c == q then
-					j = j + 1
-					break
-				else
-					j = j + 1
-				end
-			end
+		elseif b == b_squote or b == b_dquote then
+			local j = skip_string(text, i, n)
 			out[#out + 1] = text:sub(i, j - 1)
 			i = j
-		elseif ch == "[" then
-			local eq = 0
-			local k = i + 1
-			while text:sub(k, k) == "=" do
-				eq = eq + 1
-				k = k + 1
-			end
-			if text:sub(k, k) == "[" then
-				local close = "]"
-				for _ = 1, eq do
-					close = close .. "="
-				end
-				close = close .. "]"
-				local pos = text:find(close, k + 1)
-				if pos then
-					out[#out + 1] = text:sub(i, pos + #close - 1)
-					i = pos + #close
-				else
-					out[#out + 1] = ch
-					i = i + 1
-				end
-			else
-				out[#out + 1] = ch
-				i = i + 1
-			end
-		elseif ch:match("[%a_]") then
-			local j = i + 1
-			while j <= n and text:sub(j, j):match("[%w_]") do
-				j = j + 1
-			end
-			local word = text:sub(i, j - 1)
+		elseif b == b_lbrack then
+			local j = skip_longbracket(text, i, n)
+			out[#out + 1] = text:sub(i, j - 1)
+			i = j
+		elseif is_id_start(b) then
+			local word, j = scan_word(text, i, n)
 			if word == var_name then
 				out[#out + 1] = value
 			else
@@ -508,189 +454,61 @@ local function replace_ident_in_text(text, var_name, value)
 			end
 			i = j
 		else
-			out[#out + 1] = ch
+			out[#out + 1] = BYTE_TO_CHAR[b]
 			i = i + 1
 		end
 	end
 	return table.concat(out)
 end
 
-local function replace_ident_in_lines(lines, var_name, value)
-	local result = {}
-	for _, line in ipairs(lines) do
-		local cf = line:match("^%s*constfor%s+(%w+)%s*=")
-		if cf and cf == var_name then
-			result[#result + 1] = line
-		else
-			result[#result + 1] = replace_ident_in_text(line, var_name, value)
-		end
+-- 检查字符前面是否被 . 或 : 前缀（跳过空白）
+local function is_preceded_by_dot_colon(text, i)
+	local k = i - 1
+	while k >= 1 and is_ws(text:byte(k)) do
+		k = k - 1
 	end
-	return result
+	if k >= 1 then
+		local pb = text:byte(k)
+		return pb == b_dot or pb == b_colon
+	end
+	return false
 end
 
 -- 将输出变量重命名为 __tpl_ 前缀（保留 local，只改独立标识符，不改字段访问）
-local function rename_ident_standalone(text, old_name, new_name)
-	local out = {}
-	local i = 1
-	local n = #text
-	while i <= n do
-		local ch = text:sub(i, i)
-		if ch:match("[ \t\r]") then
-			out[#out + 1] = ch
-			i = i + 1
-		elseif ch == "-" and text:sub(i + 1, i + 1) == "-" then
-			out[#out + 1] = text:sub(i)
-			break
-		elseif ch == "'" or ch == "\"" then
-			local q = ch
-			local j = i + 1
-			while j <= n do
-				local c = text:sub(j, j)
-				if c == "\\" then
-					j = j + 2
-				elseif c == q then
-					j = j + 1
-					break
-				else
-					j = j + 1
-				end
-			end
-			out[#out + 1] = text:sub(i, j - 1)
-			i = j
-		elseif ch == "[" then
-			local eq = 0
-			local k = i + 1
-			while text:sub(k, k) == "=" do
-				eq = eq + 1
-				k = k + 1
-			end
-			if text:sub(k, k) == "[" then
-				local close = "]"
-				for _ = 1, eq do
-					close = close .. "="
-				end
-				close = close .. "]"
-				local pos = text:find(close, k + 1)
-				if pos then
-					out[#out + 1] = text:sub(i, pos + #close - 1)
-					i = pos + #close
-				else
-					out[#out + 1] = ch
-					i = i + 1
-				end
-			else
-				out[#out + 1] = ch
-				i = i + 1
-			end
-		elseif ch:match("[%a_]") then
-			local j = i + 1
-			while j <= n and text:sub(j, j):match("[%w_]") do
-				j = j + 1
-			end
-			local word = text:sub(i, j - 1)
-			if word == old_name then
-				-- 检查是否是被 . 或 : 前缀的字段访问
-				local k = i - 1
-				while k >= 1 and text:sub(k, k):match("[ \t\r]") do
-					k = k - 1
-				end
-				local prev = (k >= 1) and text:sub(k, k) or ""
-				if prev ~= "." and prev ~= ":" then
-					out[#out + 1] = new_name
-					i = j
-				else
-					out[#out + 1] = word
-					i = j
-				end
-			else
-				out[#out + 1] = word
-				i = j
-			end
-		else
-			out[#out + 1] = ch
-			i = i + 1
-		end
-	end
-	return table.concat(out)
-end
-
 local function rename_output_vars(body, var_names)
 	if not var_names or #var_names == 0 then
 		return body
 	end
 	-- 构建重命名映射表
 	local rename = {}
-	for _, vn in ipairs(var_names) do
-		rename[vn] = "__tpl_" .. vn
+	for vi = 1, #var_names do
+		rename[var_names[vi]] = "__tpl_" .. var_names[vi]
 	end
 	-- 单次遍历完成所有重命名
 	local out = {}
 	local i = 1
 	local n = #body
 	while i <= n do
-		local ch = body:sub(i, i)
-		if ch:match("[ \t\r]") then
-			out[#out + 1] = ch
+		local b = body:byte(i)
+		if is_ws(b) then
+			out[#out + 1] = BYTE_TO_CHAR[b]
 			i = i + 1
-		elseif ch == "-" and body:sub(i + 1, i + 1) == "-" then
+		elseif b == b_dash and body:byte(i + 1) == b_dash then
 			out[#out + 1] = body:sub(i)
 			break
-		elseif ch == "'" or ch == "\"" then
-			local q = ch
-			local j = i + 1
-			while j <= n do
-				local c = body:sub(j, j)
-				if c == "\\" then
-					j = j + 2
-				elseif c == q then
-					j = j + 1
-					break
-				else
-					j = j + 1
-				end
-			end
+		elseif b == b_squote or b == b_dquote then
+			local j = skip_string(body, i, n)
 			out[#out + 1] = body:sub(i, j - 1)
 			i = j
-		elseif ch == "[" then
-			local eq = 0
-			local k = i + 1
-			while body:sub(k, k) == "=" do
-				eq = eq + 1
-				k = k + 1
-			end
-			if body:sub(k, k) == "[" then
-				local close = "]"
-				for _ = 1, eq do
-					close = close .. "="
-				end
-				close = close .. "]"
-				local pos = body:find(close, k + 1)
-				if pos then
-					out[#out + 1] = body:sub(i, pos + #close - 1)
-					i = pos + #close
-				else
-					out[#out + 1] = ch
-					i = i + 1
-				end
-			else
-				out[#out + 1] = ch
-				i = i + 1
-			end
-		elseif ch:match("[%a_]") then
-			local j = i + 1
-			while j <= n and body:sub(j, j):match("[%w_]") do
-				j = j + 1
-			end
-			local word = body:sub(i, j - 1)
+		elseif b == b_lbrack then
+			local j = skip_longbracket(body, i, n)
+			out[#out + 1] = body:sub(i, j - 1)
+			i = j
+		elseif is_id_start(b) then
+			local word, j = scan_word(body, i, n)
 			local new_name = rename[word]
 			if new_name then
-				-- 检查是否是字段访问（前面有 . 或 :）
-				local k = i - 1
-				while k >= 1 and body:sub(k, k):match("[ \t\r]") do
-					k = k - 1
-				end
-				local prev = (k >= 1) and body:sub(k, k) or ""
-				if prev ~= "." and prev ~= ":" then
+				if not is_preceded_by_dot_colon(body, i) then
 					out[#out + 1] = new_name
 					i = j
 				else
@@ -702,7 +520,7 @@ local function rename_output_vars(body, var_names)
 				i = j
 			end
 		else
-			out[#out + 1] = ch
+			out[#out + 1] = BYTE_TO_CHAR[b]
 			i = i + 1
 		end
 	end
@@ -718,12 +536,12 @@ local function transform_returns_to_assign(body, var_names, label_suffix)
 	local label = "__template_end" .. (label_suffix or "")
 	local hr = false
 	while i <= n do
-		local ch = body:sub(i, i)
-		if ch:match("[ \t\r]") then
-			out[#out + 1] = ch
+		local b = body:byte(i)
+		if is_ws(b) then
+			out[#out + 1] = BYTE_TO_CHAR[b]
 			i = i + 1
-		elseif ch == "-" and body:sub(i + 1, i + 1) == "-" then
-			local nl = body:find("\n", i)
+		elseif b == b_dash and body:byte(i + 1) == b_dash then
+			local nl = body:find("\n", i, true)
 			if nl then
 				out[#out + 1] = body:sub(i, nl - 1)
 				i = nl
@@ -731,65 +549,28 @@ local function transform_returns_to_assign(body, var_names, label_suffix)
 				out[#out + 1] = body:sub(i)
 				break
 			end
-		elseif ch == "'" or ch == '"' then
-			local q = ch
-			local j = i + 1
-			while j <= n do
-				local c = body:sub(j, j)
-				if c == "\\" then
-					j = j + 2
-				elseif c == q then
-					j = j + 1
-					break
-				else
-					j = j + 1
-				end
-			end
+		elseif b == b_squote or b == b_dquote then
+			local j = skip_string(body, i, n)
 			out[#out + 1] = body:sub(i, j - 1)
 			i = j
-		elseif ch == "[" then
-			local eq = 0
-			local k = i + 1
-			while body:sub(k, k) == "=" do
-				eq = eq + 1
-				k = k + 1
-			end
-			if body:sub(k, k) == "[" then
-				local close = "]"
-				for _ = 1, eq do
-					close = close .. "="
-				end
-				close = close .. "]"
-				local pos = body:find(close, k + 1)
-				if pos then
-					out[#out + 1] = body:sub(i, pos + #close - 1)
-					i = pos + #close
-				else
-					out[#out + 1] = ch
-					i = i + 1
-				end
-			else
-				out[#out + 1] = ch
-				i = i + 1
-			end
-		elseif ch:match("[%a_]") then
-			local j = i + 1
-			while j <= n and body:sub(j, j):match("[%w_]") do
-				j = j + 1
-			end
-			local word = body:sub(i, j - 1)
+		elseif b == b_lbrack then
+			local j = skip_longbracket(body, i, n)
+			out[#out + 1] = body:sub(i, j - 1)
+			i = j
+		elseif is_id_start(b) then
+			local word, j = scan_word(body, i, n)
 			if word == "return" then
-				local nc = body:sub(j, j)
-				if nc == "" or not nc:match("[%w_]") then
+				local nc = body:byte(j)
+				if not nc or not is_id_char(nc) then
 					hr = true
 					local vs2 = j
-					while vs2 <= n and body:sub(vs2, vs2):match("[ \t]") do
+					while vs2 <= n and (body:byte(vs2) == b_space or body:byte(vs2) == b_tab) do
 						vs2 = vs2 + 1
 					end
 					local ve = vs2
 					while ve <= n do
-						local c = body:sub(ve, ve)
-						if c == "\n" or c == ";" then
+						local bc = body:byte(ve)
+						if bc == b_newl or bc == b_semic then
 							break
 						end
 						ve = ve + 1
@@ -802,10 +583,10 @@ local function transform_returns_to_assign(body, var_names, label_suffix)
 					end
 					out[#out + 1] = "\ngoto " .. label .. "\n"
 					i = ve
-					if i <= n and body:sub(i, i) == ";" then
+					if i <= n and body:byte(i) == b_semic then
 						i = i + 1
 					end
-					if i <= n and body:sub(i, i) == "\n" then
+					if i <= n and body:byte(i) == b_newl then
 						i = i + 1
 					end
 				else
@@ -817,7 +598,7 @@ local function transform_returns_to_assign(body, var_names, label_suffix)
 				i = j
 			end
 		else
-			out[#out + 1] = ch
+			out[#out + 1] = BYTE_TO_CHAR[b]
 			i = i + 1
 		end
 	end
@@ -825,99 +606,6 @@ local function transform_returns_to_assign(body, var_names, label_suffix)
 		out[#out + 1] = "\n::" .. label .. "::"
 	end
 	return table.concat(out)
-end
-
--- 行内 template 展开
-local function expand_template_in_line(line)
-	if not next(M.templates) then
-		return nil
-	end
-	local pos = line:find("template ", 1, true)
-	if not pos then
-		return nil
-	end
-	if pos > 1 then
-		local p = line:sub(pos - 1, pos - 1)
-		if p:match("[%w_]") then
-			return nil
-		end
-	end
-	local ns = pos + 9
-	local ne = ns
-	local n = #line
-	while ne <= n and line:sub(ne, ne):match("[%w_]") do
-		ne = ne + 1
-	end
-	local name = line:sub(ns, ne - 1)
-	if #name == 0 or line:sub(ne, ne) ~= "(" then
-		return nil
-	end
-	local depth = 0
-	local close
-	for j = ne, n do
-		local c = line:sub(j, j)
-		if c == "(" then
-			depth = depth + 1
-		elseif c == ")" then
-			depth = depth - 1
-			if depth == 0 then
-				close = j
-				break
-			end
-		end
-	end
-	if not close then
-		return nil
-	end
-	local tpl = M.templates[name]
-	if not tpl then
-		return nil
-	end
-	local args_str = line:sub(ne + 1, close - 1)
-	local args = split_args(args_str)
-	local expanded = tpl.body
-	for pi, pname in ipairs(tpl.params) do
-		local arg = args[pi] or ""
-		expanded = replace_ident_in_text(expanded, pname, arg)
-	end
-	local before = line:sub(1, pos - 1)
-	local after = line:sub(close + 1)
-	local standalone = (before:match("^%s*$") and after:match("^%s*$"))
-	if standalone then
-		return expanded, true, nil, nil, nil, nil
-	end
-	local lhs = before:match("^(.-)%s*=%s*$")
-	if lhs then
-		local stripped = lhs:match("^%s*(.-)%s*$")
-		local vs = stripped:match("^local%s+(.*)$") or stripped
-		local vns = {}
-		for v in vs:gmatch("[%w_]+") do
-			vns[#vns + 1] = v
-		end
-		if #vns > 0 then
-			-- Return body separately; lhs_line, prefix, suffix will be handled by caller
-			-- after rename_output_vars and transform_returns_to_assign have processed the body
-			return expanded, false, vns, lhs, "do\n", "\nend\n" .. after
-		end
-	end
-	return before .. expanded .. after, false, {}, nil, nil, nil
-end
-
--- 作用域复制（展开 metatable 链，扁平化为一个表）
-local function copy_scope(scope)
-	if not scope then
-		return {}
-	end
-	local result = {}
-	local s = scope
-	while s do
-		for k, v in pairs(s) do
-			result[k] = v
-		end
-		local mt = getmetatable(s)
-		s = mt and mt.__index
-	end
-	return result
 end
 
 -- ====== 指令流架构：parse 阶段生成指令列表（缓存），eval 阶段逐指令执行 ======
@@ -932,23 +620,27 @@ local function _scan_tpl(line)
 	if not pos then
 		return nil
 	end
-	if pos > 1 and line:sub(pos - 1, pos - 1):match("[%w_]") then
-		return nil
+	M._prof.tpl_find = M._prof.tpl_find + 1
+	if pos > 1 then
+		local pb = line:byte(pos - 1)
+		if is_id_char(pb) then
+			return nil
+		end
 	end
 	local ns, ne, n = pos + 9, pos + 9, #line
-	while ne <= n and line:sub(ne, ne):match("[%w_]") do
+	while ne <= n and is_id_char(line:byte(ne)) do
 		ne = ne + 1
 	end
 	local name = line:sub(ns, ne - 1)
-	if #name == 0 or line:sub(ne, ne) ~= "(" then
+	if #name == 0 or line:byte(ne) ~= b_lparen then
 		return nil
 	end
 	local depth, close = 0, nil
 	for j = ne, n do
-		local c = line:sub(j, j)
-		if c == "(" then
+		local bc = line:byte(j)
+		if bc == b_lparen then
 			depth = depth + 1
-		elseif c == ")" then
+		elseif bc == b_rparen then
 			depth = depth - 1
 			if depth == 0 then
 				close = j
@@ -1078,6 +770,9 @@ local function compile_insts(lines, start, finish, dirs)
 	return insts
 end
 
+-- Forward declaration for mutual recursion with _exec_tpl
+local _exec_tpl
+
 -- 执行指令流，追加到 out 表
 local function exec_insts(insts, env, scope_vars, out, subs)
 	scope_vars = scope_vars or {}
@@ -1088,22 +783,12 @@ local function exec_insts(insts, env, scope_vars, out, subs)
 	end
 	local function _eval(e)
 		-- 先应用 subs 替换（constfor 循环变量等）
-		local orig = e
 		if subs and next(subs) then
 			for k, v in pairs(subs) do
 				if e:find(k, 1, true) then
 					e = replace_ident_in_text(e, k, v)
 				end
 			end
-		end
-		if e ~= orig then
-			local v = _cache[e]
-			if v ~= nil then
-				return v
-			end
-			v = eval_expr(e, env, scope_vars)
-			_cache[e] = v
-			return v
 		end
 		local v = _cache[e]
 		if v ~= nil then
@@ -1172,7 +857,7 @@ local function exec_insts(insts, env, scope_vars, out, subs)
 end
 
 -- 执行模板展开
-function _exec_tpl(tpl, info, env, scope_vars, out)
+_exec_tpl = function(tpl, info, env, scope_vars, out)
 	-- 确保 template body 有缓存指令流
 	if not tpl._insts then
 		local lines = {}
@@ -1210,8 +895,14 @@ function _exec_tpl(tpl, info, env, scope_vars, out)
 	local vns, lhs = info and info.vns, info and info.lhs
 	if vns and #vns > 0 then
 		cf_counter = cf_counter + 1
+		local t0 = os.clock()
 		sub = rename_output_vars(sub, vns)
+		M._prof.rename_dt = M._prof.rename_dt + (os.clock() - t0)
+		M._prof.rename_count = M._prof.rename_count + 1
+		local t1 = os.clock()
 		sub = transform_returns_to_assign(sub, vns, "_" .. cf_counter)
+		M._prof.xret_dt = M._prof.xret_dt + (os.clock() - t1)
+		M._prof.xret_count = M._prof.xret_count + 1
 	end
 	if lhs then
 		sub = lhs .. "\ndo\n" .. sub .. "\nend\n"
@@ -1259,13 +950,7 @@ local function get_insts(template)
 	return insts
 end
 
--- 新 process_lines：基于指令流
-local function process_lines(lines, start, finish, env, scope_vars, parsed_insts)
-	local insts = parsed_insts or get_insts(table.concat(lines, "\n"))
-	return exec_insts_outer(insts, env, scope_vars or {})
-end
-
-function exec_insts_outer(insts, env, scope_vars)
+local function exec_insts_outer(insts, env, scope_vars)
 	local out = {}
 	exec_insts(insts, env, scope_vars, out)
 	return table.concat(out)
@@ -1276,7 +961,7 @@ M.templates = {}
 local function parse_template_func(text)
 	local paren
 	for i = 1, #text do
-		if text:sub(i, i) == "(" then
+		if text:byte(i) == b_lparen then
 			paren = i
 			break
 		end
@@ -1291,10 +976,10 @@ local function parse_template_func(text)
 	local depth = 0
 	local close
 	for i = paren, #text do
-		local c = text:sub(i, i)
-		if c == "(" then
+		local c = text:byte(i)
+		if c == b_lparen then
 			depth = depth + 1
-		elseif c == ")" then
+		elseif c == b_rparen then
 			depth = depth - 1
 			if depth == 0 then
 				close = i
@@ -1331,11 +1016,11 @@ function M.process(template, compile_env, entity)
 	}
 	local t0 = os.clock()
 	local insts = get_insts(template)
-	M._prof.parse_dt = (M._prof.parse_dt or 0) + (os.clock() - t0)
+	M._prof.parse_dt = M._prof.parse_dt + (os.clock() - t0)
 	local t1 = os.clock()
 	local result = exec_insts_outer(insts, env, {})
-	M._prof.proc_dt = (M._prof.proc_dt or 0) + (os.clock() - t1)
-	M._prof.calls = (M._prof.calls or 0) + 1
+	M._prof.proc_dt = M._prof.proc_dt + (os.clock() - t1)
+	M._prof.calls = M._prof.calls + 1
 	return result
 end
 
@@ -1354,15 +1039,14 @@ function M.profile_report()
 	end
 	local p = M._prof
 	print("=== Precompile Profile ===")
-	print(string.format("  calls:                 %d", p.calls or 0))
-	print(string.format("  parse_template:        %.3f ms", (p.parse_dt or 0) * 1000))
-	print(string.format("  process_lines:         %.3f ms", (p.proc_dt or 0) * 1000))
-	print(string.format("  eval_expr total:       %d (fast=%d slow=%d)", (p.eval_total or 0), (p.eval_fast or 0), (p.eval_slow or 0)))
-	print(string.format("  rename_output_vars:    %d (%.3f ms)", (p.rename_count or 0), (p.rename_dt or 0) * 1000))
-	print(string.format("  transform_returns:     %d (%.3f ms)", (p.xret_count or 0), (p.xret_dt or 0) * 1000))
-	print(string.format("  expand_template:       %d (%.3f ms)", (p.tpl_check or 0), (p.tpl_dt or 0) * 1000))
-	print(string.format("  analyze_line hits:     %d", p.al_hits or 0))
-	print(string.format("  line-find template:    %d", p.tpl_find or 0))
+	print(string.format("  calls:                 %d", p.calls))
+	print(string.format("  parse_template:        %.3f ms", p.parse_dt * 1000))
+	print(string.format("  process_lines:         %.3f ms", p.proc_dt * 1000))
+	print(string.format("  eval_expr total:       %d (fast=%d slow=%d)", p.eval_total, p.eval_fast, p.eval_slow))
+	print(string.format("  rename_output_vars:    %d (%.3f ms)", p.rename_count, p.rename_dt * 1000))
+	print(string.format("  transform_returns:     %d (%.3f ms)", p.xret_count, p.xret_dt * 1000))
+	print(string.format("  analyze_line hits:     %d", p.al_hits))
+	print(string.format("  line-find template:    %d", p.tpl_find))
 end
 
 return M

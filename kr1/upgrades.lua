@@ -507,12 +507,12 @@ upgrades.list = {{
 	-- 	level = 4,
 	-- 	icon = 23
 	-- },
-	engineer_field_logistics = {
+	engineer_industrialization = {
 		class = "engineers",
-		cost_factor = 0.88,
+		cost_factor = 0.8,
 		price = 3,
 		level = 4,
-		icon = 25
+		icon = 26
 	},
 	engineer_efficiency = {
 		price = 3,
@@ -805,7 +805,7 @@ upgrades.list = {{
 	},
 	engineer_field_logistics = {
 		class = "engineers",
-		cost_factor = 0.9,
+		cost_factor = 0.88,
 		price = 3,
 		level = 4,
 		icon = 25

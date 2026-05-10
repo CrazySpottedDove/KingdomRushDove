@@ -180,13 +180,7 @@ function entity_db:register_t(name, base)
 	-- 	return self.entities[name]
 	-- end
 
-	local t
-
-	if base then
-		t = copy(self.entities[base])
-	else
-		t = {}
-	end
+	local t = base and copy(self.entities[base]) or {}
 
 	t.template_name = name
 	self.entities[name] = t
@@ -201,11 +195,7 @@ function entity_db:register_c(name, base)
 	-- 	return
 	-- end
 
-	local c = {}
-
-	if base then
-		c = copy(self.components[base])
-	end
+	local c = base and copy(self.components[base]) or {}
 
 	self.components[name] = c
 
