@@ -3979,7 +3979,7 @@ function UpgradeButtons:on_enter()
 		self.over_circle.hidden = false
 	end
 
-	screen_map.upgrades:set_tip_panel(_(self.my_id .. "_NAME"), _(self.my_id .. "_DESCRIPTION"), self.data_values.price)
+	screen_map.upgrades:set_tip_panel(_("UPGRADE_" .. UPGR.list_id .. "_" .. self.my_id .. "_NAME"), _("UPGRADE_" .. UPGR.list_id .. "_" .. self.my_id .. "_DESCRIPTION"), self.data_values.price)
 end
 
 function UpgradeButtons:on_exit()

@@ -9315,21 +9315,21 @@ AC(tt, "main_script")
 tt.main_script.update = scripts.controller_s93.update
 
 tt = RT("mod_archer_tear", "mod_damage")
-tt.damage_min = 0.0075
-tt.damage_max = 0.0075
+tt.damage_min = 0.0072
+tt.damage_max = 0.0072
 tt.damage_type = bor(DAMAGE_ARMOR, DAMAGE_NO_SHIELD_HIT)
 
 tt = RT("mod_archer_tear_small", "mod_archer_tear")
-tt.damage_min = 0.005
-tt.damage_max = 0.005
+tt.damage_min = 0.0044
+tt.damage_max = 0.0044
 
 tt = RT("mod_archer_tear_big", "mod_archer_tear")
 tt.damage_min = 0.01
 tt.damage_max = 0.01
 
 tt = RT("mod_archer_tear_tiny", "mod_archer_tear")
-tt.damage_min = 0.0025
-tt.damage_max = 0.0025
+tt.damage_min = 0.0016
+tt.damage_max = 0.0016
 
 -- G5
 -- local function vv(x)

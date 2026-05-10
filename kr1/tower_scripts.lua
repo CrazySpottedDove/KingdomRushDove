@@ -3990,6 +3990,8 @@ scripts.tower_dwaarp = {
 								end
 								dvalue = this.tower.damage_factor * dvalue
 
+								local u = UP:get_upgrade("engineer_magic_dust")
+
 								for _, enemy in ipairs(enemies) do
 									local d = E:create_entity("damage")
 
@@ -3997,6 +3999,10 @@ scripts.tower_dwaarp = {
 									d.target_id = enemy.id
 									d.damage_type = aa.damage_type
 									d.value = dvalue
+
+									if u then
+										d.hooks[#d.hooks + 1] = u.hook
+									end
 
 									queue_damage(store, d)
 
@@ -15312,6 +15318,11 @@ function scripts.tower_flamespitter.update(this, store)
 									d.value = attack_basic.damage_max * tw.damage_factor
 								else
 									d.value = (random(attack_basic.damage_min, attack_basic.damage_max)) * tw.damage_factor
+								end
+
+								local u = UP:get_upgrade("engineer_magic_dust")
+								if u then
+									d.hooks[#d.hooks + 1] = u.hook
 								end
 
 								queue_damage(store, d)

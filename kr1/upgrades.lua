@@ -54,7 +54,7 @@ upgrades.list = {{
 		icon = 16
 	},
 	archer_precision = {
-		damage_factor = 1.8,
+		damage_factor = 2,
 		class = "archers",
 		chance = 0.1,
 		price = 3,
@@ -334,7 +334,6 @@ upgrades.list = {{
 	},
 	archer_tear = {
 		from_kr = 2,
-		reduce_armor = 0.0075,
 		class = "archers",
 		price = 2,
 		level = 4,
@@ -490,6 +489,7 @@ upgrades.list = {{
 		class = "engineers",
 		price = 1,
 		level = 2,
+		damage_factor = 1.2,
 		icon = 17
 	},
 	engineer_concentrated_fire = {
@@ -500,12 +500,19 @@ upgrades.list = {{
 		level = 3,
 		icon = 18
 	},
-	engineer_diffusion = {
+	-- engineer_diffusion = {
+	-- 	class = "engineers",
+	-- 	radius_factor = 1.2,
+	-- 	price = 3,
+	-- 	level = 4,
+	-- 	icon = 23
+	-- },
+	engineer_field_logistics = {
 		class = "engineers",
-		radius_factor = 1.2,
+		cost_factor = 0.88,
 		price = 3,
 		level = 4,
-		icon = 23
+		icon = 25
 	},
 	engineer_efficiency = {
 		price = 3,
@@ -523,9 +530,9 @@ upgrades.list = {{
 		level = 6
 	},
 	rain_blazing_skies = {
-		fireball_count_increase = 2,
+		fireball_count_increase = 3,
 		class = "rain",
-		damage_increase = 30,
+		damage_increase = 20,
 		price = 2,
 		level = 1,
 		icon = 3
@@ -538,15 +545,15 @@ upgrades.list = {{
 	},
 	rain_bigger_and_meaner = {
 		range_factor = 1.25,
-		cooldown_reduction = 10,
+		cooldown_reduction = 12,
 		class = "rain",
-		damage_increase = 30,
+		damage_increase = 25,
 		price = 3,
 		level = 3,
 		icon = 5
 	},
 	rain_blazing_earth = {
-		cooldown_reduction = 10,
+		cooldown_reduction = 12,
 		class = "rain",
 		price = 3,
 		level = 4,
@@ -554,7 +561,7 @@ upgrades.list = {{
 	},
 	rain_cataclysm = {
 		class = "rain",
-		damage_increase = 60,
+		damage_increase = 45,
 		price = 3,
 		level = 5,
 		icon = 7
@@ -562,7 +569,7 @@ upgrades.list = {{
 	rain_armaggedon = {
 		from_kr = 2,
 		class = "rain",
-		fireball_count_increase = 1,
+		fireball_count_increase = 2,
 		icon = 25,
 		price = 4,
 		level = 6
@@ -605,8 +612,8 @@ upgrades.list = {{
 	reinforcement_level_6 = {
 		from_kr = 3,
 		class = "reinforcements",
-		duration_inc = 2,
-		cooldown_dec = 1,
+		duration_inc = 1,
+		cooldown_dec = 2,
 		icon = 29,
 		price = 4,
 		level = 6
@@ -1754,15 +1761,25 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("engineer_magic_dust")
 	if u then
+		u.hook = function(entity, damage, protection)
+			if math.random() < 0.1 then
+				damage.value = damage.value + entity.health.hp_max * 0.05 * math.sqrt(damage.value + 1) / 12.5
+			end
+		end
 		for _, n in pairs(engineer_bombs) do
 			local n = T(n)
 			local b = n.bullet
-			b.damage_hooks[#b.damage_hooks + 1] = function(entity, damage, protection)
-				if math.random() < 0.1 then
-					damage.value = damage.value + entity.health.hp_max * 0.05
-				end
-			end
+			b.damage_hooks[#b.damage_hooks + 1] = u.hook
 		end
+		-- 地震、喷火在他们的逻辑里处理这个科技。
+
+		-- 作为吃不到这个科技的补偿，腐森，特斯拉和弗兰肯斯坦的攻击得到伤害提升
+		T("ray_tesla").bounce_damage_min = math.floor(T("ray_tesla").bounce_damage_min * u.damage_factor)
+		T("ray_tesla").bounce_damage_max = math.floor(T("ray_tesla").bounce_damage_max * u.damage_factor)
+		T("mod_ray_frankenstein").dps.damage_min = math.floor(T("mod_ray_frankenstein").dps.damage_min * u.damage_factor)
+		T("mod_ray_frankenstein").dps.damage_max = math.floor(T("mod_ray_frankenstein").dps.damage_max * u.damage_factor)
+		T("mod_tower_rotten_forest_burst_damage").dps.damage_min = math.floor(T("mod_tower_rotten_forest_burst_damage").dps.damage_min * u.damage_factor)
+		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = math.floor(T("mod_tower_rotten_forest_burst_damage").dps.damage_max * u.damage_factor)
 	end
 
 	u = self:get_upgrade("engineer_diffusion")
