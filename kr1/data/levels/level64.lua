@@ -95,7 +95,6 @@ local b=E:create_entity("torch_gnoll_burner")
 b.pos=V.v(gnoll.pos.x+bullet_offset.x,gnoll.pos.y+bullet_offset.y)
 b.bullet.from=V.vclone(b.pos)
 b.bullet.to=bd.shoot_pos
-b.bullet.target_id=gnoll.id
 b.bullet.miss_fx=nil
 LU.queue_insert(store,b)
 U.y_wait(store,flight_time)
