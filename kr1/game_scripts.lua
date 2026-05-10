@@ -69266,17 +69266,6 @@ function scripts.bullet_enemy_evolved_acid_spawn.update(this, store, script)
 		end
 	end
 
-	local targets
-	local target = b.target_id and store.entities[b.target_id]
-
-	if target and target.vis and U.flag_has(target.vis.flags, F_FLYING) then
-		targets = {target}
-	else
-		targets = table.filter(store.soldiers, function(_, e)
-			return not e.health.dead and band(e.vis.flags, b.damage_bans) == 0 and band(e.vis.bans, b.damage_flags) == 0 and U.is_inside_ellipse(e.pos, b.to, b.damage_radius)
-		end)
-	end
-
 	S:queue(this.sound_events.hit)
 
 	if b.hit_fx then

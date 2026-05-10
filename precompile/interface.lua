@@ -90,6 +90,7 @@ function M:init()
 	self.enemy_passive = require("precompile.templates.enemy_passive")
 	self.aura_apply_mod = require("precompile.templates.aura_apply_mod")
 	self.aura_apply_damage = require("precompile.templates.aura_apply_damage")
+	self.mod_dps = require("precompile.templates.mod_dps")
 	-- self.soldier_reinforcement = require("precompile.templates.soldier_reinforcement")
 	-- self.soldier_barrack = require("precompile.templates.soldier_barrack")
 	self.arrow = require("precompile.templates.arrow")
@@ -262,6 +263,15 @@ function M:compile(e)
 		-- 		m.update = self:_compile(e, self.soldier_reinforcement.update)
 		-- 	end
 		-- end
+		if e.modifier then
+			if m.insert == scripts.mod_dps.insert then
+				m.insert = self:_compile(e, self.mod_dps.insert)
+			end
+
+			if m.update == scripts.mod_dps.update then
+				m.update = self:_compile(e, self.mod_dps.update)
+			end
+		end
 
 		-- === 光环 ===
 		if e.aura then
