@@ -675,12 +675,38 @@ local function compile_insts(lines, start, finish, dirs)
 		if dt == "if" then
 			local bdata = dirs._if[i]
 			local br, ei = bdata[1], bdata[2]
-			local then_i, else_i
+			-- then 分支
+			local then_i
 			if br[1] and br[1].start <= br[1].stop then
 				then_i = compile_insts(lines, br[1].start, br[1].stop, dirs)
 			end
-			if br[2] and br[2].start <= br[2].stop then
-				else_i = compile_insts(lines, br[2].start, br[2].stop, dirs)
+			-- elseif/else 链：将 elseif 编译为嵌套 if/else
+			local function build_else_chain(idx)
+				if idx > #br then
+					return nil
+				end
+				local b = br[idx]
+				if b.type == "elseif" then
+					local ei_then
+					if b.start <= b.stop then
+						ei_then = compile_insts(lines, b.start, b.stop, dirs)
+					end
+					return {{
+						t = "if",
+						expr = b.expr,
+						then_i = ei_then,
+						else_i = build_else_chain(idx + 1)
+					}}
+				else -- "else"
+					if b.start <= b.stop then
+						return compile_insts(lines, b.start, b.stop, dirs)
+					end
+					return nil
+				end
+			end
+			local else_i
+			if #br > 1 then
+				else_i = build_else_chain(2)
 			end
 			insts[#insts + 1] = {
 				t = "if",

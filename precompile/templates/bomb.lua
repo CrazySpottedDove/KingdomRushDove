@@ -123,7 +123,7 @@ return function(this, store)
         queue_insert(store, pop)
     constend
 
-    @constif(b.hif_fx_water or b.hit_decal)
+    @constif(b.hit_fx_water or b.hit_decal)
     local cell_type = GR:cell_type(this_pos.x, this_pos.y)
 
     constif(b.hit_fx_water)
