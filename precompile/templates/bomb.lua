@@ -28,14 +28,14 @@ return function(this, store)
 	local dmin, dmax = b.damage_min, b.damage_max
 	local dradius = b.damage_radius
 
-	constif(b.level and b.level > 0)
-		@constif(b.damage_radius_inc)
-		dradius = dradius + b.level * b.damage_radius_inc
-		@constif(b.damage_min_inc)
-		dmin = dmin + b.level * b.damage_min_inc
-		@constif(b.damage_max_inc)
-		dmax = dmax + b.level * b.damage_max_inc
-	constend
+    @constif(b.damage_radius_inc)
+    dradius = dradius + b.level * b.damage_radius_inc
+
+    @constif(b.damage_min_inc)
+    dmin = dmin + b.level * b.damage_min_inc
+
+    @constif(b.damage_max_inc)
+    dmax = dmax + b.level * b.damage_max_inc
 
 	constif(b.particles_name)
 		local ps = E:create_entity(b.particles_name)
@@ -76,8 +76,8 @@ return function(this, store)
 	end
 
 	local enemies = U.find_enemies_in_range_filter_off(this_pos, dradius, b.damage_flags, b.damage_bans)
-	local mods
 
+	local mods
 	if b.mod then
 		mods = type(b.mod) == "string" and {b.mod} or b.mod
 	elseif b.mods then
@@ -118,81 +118,83 @@ return function(this, store)
 		end
 	end
 
-	local p = SU.create_bullet_pop(store, this)
+    constif(b.pop)
+	    local pop = SU.create_pop(store, this.pos, b.pop)
+        queue_insert(store, pop)
+    constend
 
-	if p then
-		queue_insert(store, p)
-	end
+    @constif(b.hif_fx_water or b.hit_decal)
+    local cell_type = GR:cell_type(this_pos.x, this_pos.y)
 
-	local cell_type = GR:cell_type(this_pos.x, this_pos.y)
+    constif(b.hit_fx_water)
+        if band(cell_type, TERRAIN_WATER) ~= 0 then
+            @constif(this.sound_events and this.sound_events.hit_water)
+            S:queue(this.sound_events.hit_water)
 
-	constif(b.hit_fx_water)
-		if band(cell_type, TERRAIN_WATER) ~= 0 then
-			@constif(this.sound_events and this.sound_events.hit_water)
-			S:queue(this.sound_events.hit_water)
+            local water_fx = E:create_entity(b.hit_fx_water)
 
-			local water_fx = E:create_entity(b.hit_fx_water)
+            water_fx.pos.x, water_fx.pos.y = this_pos.x, this_pos.y
+            water_fx.render.sprites[1].ts = store.tick_ts
+            water_fx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
 
-			water_fx.pos.x, water_fx.pos.y = this_pos.x, this_pos.y
-			water_fx.render.sprites[1].ts = store.tick_ts
-			water_fx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
+            queue_insert(store, water_fx)
+        constif(b.hit_fx)
+        else
+            @constif(this.sound_events and this.sound_events.hit)
+            S:queue(this.sound_events.hit)
 
-			queue_insert(store, water_fx)
-		else
-	constelseif(b.hit_fx)
-		if true then
-	constend
+            local sfx = E:create_entity(b.hit_fx)
 
-	constif(b.hit_fx)
-			@constif(this.sound_events and this.sound_events.hit)
-			S:queue(this.sound_events.hit)
+            sfx.pos.x, sfx.pos.y = this_pos.x, this_pos.y
+            sfx.render.sprites[1].ts = store.tick_ts
+            sfx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
 
-			local sfx = E:create_entity(b.hit_fx)
+            queue_insert(store, sfx)
+        constend
+        end
+    constelse
+        constif(b.hit_fx)
+            @constif(this.sound_events and this.sound_events.hit)
+            S:queue(this.sound_events.hit)
 
-			sfx.pos = V.vclone(this_pos)
-			sfx.render.sprites[1].ts = store.tick_ts
-			sfx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
+            local sfx = E:create_entity(b.hit_fx)
 
-			queue_insert(store, sfx)
-	constend
+            sfx.pos.x, sfx.pos.y = this_pos.x, this_pos.y
+            sfx.render.sprites[1].ts = store.tick_ts
+            sfx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
 
-	constif(b.hit_fx_water)
-		end
-	constend
+            queue_insert(store, sfx)
+        constend
+    constend
 
-	@constif(b.hit_decal)
-	if band(cell_type, TERRAIN_WATER) == 0 then
-		local decal = E:create_entity(b.hit_decal)
+	constif(b.hit_decal)
+    if band(cell_type, TERRAIN_WATER) == 0 then
+        local decal = E:create_entity(b.hit_decal)
 
-		decal.pos = V.vclone(this_pos)
-		decal.render.sprites[1].ts = store.tick_ts
+        decal.pos = V.vclone(this_pos)
+        decal.render.sprites[1].ts = store.tick_ts
 
-		queue_insert(store, decal)
-	end
+        queue_insert(store, decal)
+    end
+    constend
 
-	constif(b.hit_payload)
-		local hp
-
-		if type(b.hit_payload) == "string" then
-			hp = E:create_entity(b.hit_payload)
-		else
-			hp = b.hit_payload
-		end
+	if b.hit_payload then
+		local hp = type(b.hit_payload) == "string" and E:create_entity(b.hit_payload) or b.hit_payload
 
 		hp.pos.x, hp.pos.y = this_pos.x, this_pos.y
 		hp.source_id = b.source_id
 
-		constif(E:get_template(b.hit_payload).unit)
+		if hp.unit then
 			hp.unit.damage_factor = this.bullet.damage_factor * hp.unit.damage_factor
-		constend
+		end
 
-		constif(E:get_template(b.hit_payload).aura)
+		if hp.aura then
 			hp.aura.level = this.bullet.level
 			hp.aura.damage_factor = this.bullet.damage_factor * hp.aura.damage_factor
-		constend
+		end
 
 		queue_insert(store, hp)
-	constend
+	end
 
 	queue_remove(store, this)
 end

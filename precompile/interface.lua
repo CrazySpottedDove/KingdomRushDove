@@ -93,7 +93,7 @@ function M:init()
 	-- self.soldier_reinforcement = require("precompile.templates.soldier_reinforcement")
 	-- self.soldier_barrack = require("precompile.templates.soldier_barrack")
 	self.arrow = require("precompile.templates.arrow")
-	-- self.bomb = require("precompile.templates.bomb")
+	self.bomb = require("precompile.templates.bomb")
 	self.bolt = require("precompile.templates.bolt")
 end
 
@@ -231,16 +231,16 @@ function M:compile(e)
 		if e.bullet then
 			if m.insert == scripts.arrow.insert then
 				m.insert = self:_compile(e, self.arrow.insert)
-			-- elseif m.insert == scripts.bomb.insert then
-			-- m.insert = self:_compile(e, self.bomb.insert)
+			elseif m.insert == scripts.bomb.insert then
+				m.insert = self:_compile(e, self.bomb.insert)
 			elseif m.insert == scripts.bolt.insert then
 				m.insert = self:_compile(e, self.bolt.insert)
 			end
 
 			if m.update == scripts.arrow.update then
 				m.update = self:_compile(e, self.arrow.update)
-			-- elseif m.update == scripts.bomb.update then
-			-- m.update = self:_compile(e, self.bomb.update)
+			elseif m.update == scripts.bomb.update then
+				m.update = self:_compile(e, self.bomb.update)
 			elseif m.update == scripts.bolt.update then
 				m.update = self:_compile(e, self.bolt.update)
 			end

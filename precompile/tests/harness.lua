@@ -132,7 +132,7 @@ function M.stub_globals()
 	_G.TICK_LENGTH = 1 / 30
 	_G.NULL = "__NULL__"
 	_G.INT_32_MAX = 2147483647
-	_G.FLOAT_MAX = 3.402823466e+308
+	_G.FLOAT_MAX = 3.402823466e+30
 
 	-- 一些预编译模板引用的全局函数
 	_G.yield = coroutine.yield
