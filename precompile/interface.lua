@@ -138,9 +138,9 @@ end
 
 function M:_compile(e, template)
 	local code = CU.process(template, self.env, e)
-	if e.template_name == "bullet_tower_barrel_skill_barrel" then
-		print(code)
-	end
+	-- if e.template_name == "bullet_tower_barrel_skill_barrel" then
+	-- print(code)
+	-- end
 	local chunk, err = load(code, nil, "t", self.env)
 	if not chunk then
 		-- 提取出错行号（err 格式："[string "..."]:行号: 错误信息"）
