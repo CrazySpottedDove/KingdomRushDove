@@ -1633,7 +1633,7 @@ function upgrades:patch_templates(max_level)
 			local b = T(n).bullet
 			b.damage_hooks[#b.damage_hooks + 1] = function(entity, damage, protection)
 				if math.random() < 0.1 and protection < 1 then
-					damage.value = damage.value * 1.5 / (1 - protection)
+					damage.value = damage.value * 2 / (1 - protection)
 				end
 			end
 		end

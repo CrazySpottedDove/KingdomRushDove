@@ -226,7 +226,7 @@ function entity_db:clone_c(name)
 	-- 	return
 	-- end
 
-	local cloner = self.components_cloner and self.components_cloner[name]
+	local cloner = self.components_cloner[name]
 	if cloner then
 		return cloner(self.components[name])
 	end
@@ -256,7 +256,7 @@ function entity_db:add_comps(entity, ...)
 		-- end
 
 		-- RELEASE VER
-		local cloner = self.components_cloner and self.components_cloner[v]
+		local cloner = self.components_cloner[v]
 		if cloner then
 			entity[v] = cloner(self.components[v])
 		else
