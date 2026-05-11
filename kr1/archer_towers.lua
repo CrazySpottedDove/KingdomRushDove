@@ -2540,6 +2540,7 @@ tt.health_bar.type = HEALTH_BAR_SIZE_SMALL
 tt.unit.hit_offset = v(0, 18)
 tt.unit.mod_offset = v(0, ady(23))
 tt.ui.click_rect = r(-18, -3, 36, 40)
+tt.vis.bans = bor(F_LYCAN, F_CANNIBALIZE, F_SKELETON)
 tt.main_script.insert = scripts.soldier_ogre_shipwreck_red_goblin.insert
 tt.main_script.remove = scripts.soldier_barrack.remove
 tt.main_script.update = scripts.soldier_reinforcement.update
