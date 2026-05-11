@@ -11,9 +11,10 @@ local storage = require("all.storage")
 local json = require("lib.json")
 local persistence = require("lib.klua.persistence")
 local mod_paths = require("mod_paths")
+local editable_panel_view = require("dove_modules.gui.editable_panel_view")
 
 require("gg_views_custom")
-
+local _sw, _sh, _keyboard, _controller
 local PANEL_MIN_W = 900
 local PANEL_MAX_W = 10000
 -- local PANEL_MAX_W = 1020
@@ -568,6 +569,8 @@ function ModToggleButton:initialize(initial_value, size)
 	self._label.text_align = "center"
 	self._label.vertical_align = "middle"
 	self._label.propagate_on_click = true
+	self._enable_text = "已启用"
+	self._disable_text = "已禁用"
 	self:add_child(self._label)
 	self:_refresh()
 end
@@ -584,11 +587,11 @@ function ModToggleButton:_refresh()
 	if self.value then
 		self.colors.background = self._hover and {58, 183, 90, 245} or {35, 148, 68, 215}
 		self._label.colors.text = {195, 255, 178, 255}
-		self._label.text = "已启用"
+		self._label.text = self._enable_text
 	else
 		self.colors.background = self._hover and {178, 55, 55, 245} or {148, 38, 38, 215}
 		self._label.colors.text = {255, 178, 155, 255}
-		self._label.text = "已禁用"
+		self._label.text = self._disable_text
 	end
 end
 
@@ -713,6 +716,41 @@ function ModItemRow:initialize(opts, row_w)
 		end
 		self:add_child(toggle)
 		self.toggle = toggle
+		-- 插件配置按钮
+		if self.opts.mod_data.has_config then
+			local config_button = ModToggleButton:new(true, V.v(toggle_w, clamp(toggle_h, 36, 44)))
+			config_button.pos = V.v(row_w - 2 * right_pad - toggle_w * 3 / 2, toggle_top + toggle.size.y / 2)
+			config_button.anchor = V.v(toggle.size.x / 2, toggle.size.y / 2)
+			config_button._label.text = "配置"
+			config_button._enable_text = "配置"
+			function config_button:on_click()
+				S:queue("GUIButtonCommon")
+				local config_view = editable_panel_view:new(_sw, _sh, opts.title, _keyboard, _controller)
+
+				config_view._config_path = opts.mod_data.path .. "/" .. opts.mod_data.name .. "_config.lua"
+				function config_view:load()
+					local config = storage:load_lua(self._config_path, true)
+					self.data_group:set_all_data(config)
+				end
+				function config_view:save()
+					local config = storage:load_lua(opts.mod_data.path .. "/" .. opts.mod_data.name .. "_config.lua", true)
+					for k, v in pairs(self.data_group:get_all_data()) do
+						config[k] = v
+					end
+
+					storage:write_lua(self._config_path, config)
+				end
+
+				local config = storage:load_lua(config_view._config_path, true)
+
+				config_view:set_key_label_map(config.key_label_map or {})
+
+				_controller:add_child(config_view)
+
+				config_view:show()
+			end
+			self:add_child(config_button)
+		end
 	else
 		self:_refresh_accent(true)
 	end
@@ -781,8 +819,12 @@ end
 
 ModManagerView = class("ModManagerView", PopUpView)
 
-function ModManagerView:initialize(sw, sh)
+function ModManagerView:initialize(sw, sh, keyboard, controller)
 	PopUpView.initialize(self, V.v(sw, sh))
+	_keyboard = keyboard
+	_controller = controller
+	_sw = sw
+	_sh = sh
 	local rs = GGLabel.static.ref_h / REF_H
 	local panel_w = math.min(PANEL_MAX_W, sw - PANEL_MARGIN)
 	panel_w = math.max(PANEL_MIN_W, panel_w)
@@ -1487,12 +1529,18 @@ function ModManagerView:_reload_local_mods()
 				local config_path = dir_path .. "/config.lua"
 				local mc = self:_read_mod_config(config_path)
 				if mc then
+					local has_config = false
+					local config_info = love.filesystem.getInfo(dir_path .. "/" .. name .. "_config.lua")
+					if config_info and config_info.type == "file" then
+						has_config = true
+					end
 					local mod_data = {
 						name = name,
 						path = dir_path,
 						config_path = config_path,
 						config = mc,
-						entry = mc.entry or name
+						entry = mc.entry or name,
+						has_config = has_config
 					}
 					self.local_mods[#self.local_mods + 1] = mod_data
 					self.local_by_name[name] = mod_data
