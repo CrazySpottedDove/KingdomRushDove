@@ -997,11 +997,8 @@ upgrades.arrows = {
 	"bone_flingers_bone",
 	"bone_flingers_bone_golem",
 	"bullet_ogre_shipwreck_musket",
-	"bullet_ogre_shipwreck_musket_volley",
-	"bullet_ogre_shipwreck_musket_volley_lv2",
-	"bomb_ogre_shipwreck_goblin",
-	"bomb_ogre_shipwreck_goblin_skill1",
-	"bomb_ogre_shipwreck_goblin_skill2"
+	"bullet_ogre_shipwreck_musket_volley_lvl1",
+	"bullet_ogre_shipwreck_musket_volley_lvl2"
 }
 
 upgrades.soldiers = {
@@ -1044,9 +1041,7 @@ upgrades.soldiers = {
 	"soldier_flingers_skeleton",
 	"soldier_flingers_skeleton_warrior",
 	"soldier_ogre_shipwreck_cook",
-	"soldier_ogre_shipwreck_cook_enhanced",
 	"soldier_ogre_shipwreck_deckhand",
-	"soldier_ogre_shipwreck_deckhand_elite",
 	"soldier_ogre_shipwreck_red_goblin",
 	"soldier_ogre_shipwreck_red_goblin_elite",
 	"soldier_orc_warrior",
@@ -1080,9 +1075,7 @@ upgrades.barrack_soldiers = {
 	"soldier_tower_dwarf_lvl4",
 	"tower_paladin_covenant_soldier_lvl4",
 	"soldier_ogre_shipwreck_cook",
-	"soldier_ogre_shipwreck_cook_enhanced",
 	"soldier_ogre_shipwreck_deckhand",
-	"soldier_ogre_shipwreck_deckhand_elite",
 	"soldier_ogre_shipwreck_red_goblin",
 	"soldier_ogre_shipwreck_red_goblin_elite",
 	"soldier_orc_warrior",
@@ -1199,7 +1192,10 @@ upgrades.engineer_bombs = {
 	"bullet_tower_demon_pit_big_guy_lvl4",
 	"bullet_tower_barrel_lvl4",
 	"bullet_tower_hermit_toad_engineer_basic_lvl4",
-	"tower_sparking_geode_ray_lvl4"
+	"tower_sparking_geode_ray_lvl4",
+	"bomb_ogre_shipwreck_goblin",
+	"bomb_ogre_shipwreck_goblin_skill1",
+	"bomb_ogre_shipwreck_goblin_skill2"
 }
 
 upgrades.engineer_advanced_tower = {
