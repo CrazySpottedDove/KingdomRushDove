@@ -24941,34 +24941,6 @@ end
 -- 子协程 resume 连续失败时 log.error 节流（秒，与 store.tick_ts 同轴）
 local OGRE_SHIPWRECK_CO_ERR_LOG_COOLDOWN = 2
 
--- 层索引与 power 顺序、无目标推迟等均由 kr1/archer_towers tower_ogre_shipwreck 提供；insert 处 assert
-local function ogre_shipwreck_sid_door_a(this)
-	return this.render.sid_ogre_door_a
-end
-
-local function ogre_shipwreck_sid_door_b(this)
-	return this.render.sid_ogre_door_b
-end
-
-local function ogre_shipwreck_sid_musket(this)
-	return this.render.sid_ogre_musket
-end
-
-local function ogre_shipwreck_sid_bomber(this)
-	return this.render.sid_ogre_bomber
-end
-
-local function ogre_shipwreck_power_order(this)
-	return this.tower.ogre_shipwreck_power_order
-end
-
--- 须在 try_one_bomber_slot / co_try_* 等之前定义：Lua 局部名从声明行起才可见，否则协程内会退化为查全局 nil
-local function ogre_shipwreck_y_wait_sprite(this, store, sid)
-	while not U.animation_finished(this, sid) do
-		coroutine.yield()
-	end
-end
-
 --- 甲板炮 / 哥布林技能弹：共用「寻敌 → 动画 → 抛物实体」路径（仅动画名与落点语义不同）
 local function ogre_shipwreck_try_one_bomber_slot(this, store, tw, tp, aa, slot, pow_gl)
 	if not aa or aa.disabled or not ready_to_attack(aa, store, tw.cooldown_factor) then
@@ -24978,7 +24950,7 @@ local function ogre_shipwreck_try_one_bomber_slot(this, store, tw, tp, aa, slot,
 	local enemy, _, pred_pos = U.find_foremost_enemy(store, tp, 0, aa.range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
 
 	if not enemy then
-		SU.delay_attack(store, aa, tw.ogre_shipwreck_no_target_delay)
+		aa.ts = aa.ts + 0.1
 
 		return true
 	end
@@ -24999,10 +24971,8 @@ local function ogre_shipwreck_try_one_bomber_slot(this, store, tw, tp, aa, slot,
 
 	local boff = aa.bullet_start_offset
 
-	assert(boff and boff.x ~= nil and boff.y ~= nil, "tower_ogre_shipwreck: bomber slot bullet_start_offset must be vector")
-
 	-- 投弹层（goblin_bomber）不按目标做 flip：KRV 单条 shoot/skill 序列，animation_name_facing_point 会改 flip 导致错误
-	U.animation_start(this, ani_shoot, nil, store.tick_ts, 1, ogre_shipwreck_sid_bomber(this))
+	U.animation_start(this, ani_shoot, nil, store.tick_ts, 1, this.render.sid_ogre_bomber)
 
 	if aa.spawn_delay then
 		y_wait(store, aa.spawn_delay * tw.cooldown_factor)
@@ -25024,9 +24994,7 @@ local function ogre_shipwreck_try_one_bomber_slot(this, store, tw, tp, aa, slot,
 		pred_pos = vclone(enemy.pos)
 	end
 
-	local bomb = assert(E:create_entity(aa.bullet), "tower_ogre_shipwreck: create_entity failed for " .. tostring(aa.bullet))
-
-	assert(bomb.bullet and bomb.pos, "tower_ogre_shipwreck: bomb template must expose bullet + pos")
+	local bomb = E:create_entity(aa.bullet)
 
 	bomb.bullet.damage_factor = tw.damage_factor
 	bomb.pos.x = this.pos.x + boff.x
@@ -25043,16 +25011,18 @@ local function ogre_shipwreck_try_one_bomber_slot(this, store, tw, tp, aa, slot,
 
 	queue_insert(store, bomb)
 
-	ogre_shipwreck_y_wait_sprite(this, store, ogre_shipwreck_sid_bomber(this))
+	while not U.animation_finished(this, this.render.sid_ogre_bomber) do
+		coroutine.yield()
+	end
 
-	U.animation_start(this, ani_idle, nil, store.tick_ts, -1, ogre_shipwreck_sid_bomber(this))
+	U.animation_start(this, ani_idle, nil, store.tick_ts, -1, this.render.sid_ogre_bomber)
 
 	return true
 end
 
 local function ogre_shipwreck_door_anim_start(this, ts, name, loop_flag)
-	U.animation_start(this, name, nil, ts, loop_flag, ogre_shipwreck_sid_door_a(this))
-	U.animation_start(this, name, nil, ts, loop_flag, ogre_shipwreck_sid_door_b(this))
+	U.animation_start(this, name, nil, ts, loop_flag, this.render.sid_ogre_door_a)
+	U.animation_start(this, name, nil, ts, loop_flag, this.render.sid_ogre_door_b)
 end
 
 local function ogre_shipwreck_flush_rally_if_needed(this, store, b)
@@ -25082,7 +25052,7 @@ local function ogre_shipwreck_flush_rally_if_needed(this, store, b)
 end
 
 local function ogre_shipwreck_door_anim_wait(this, store, b)
-	while not (U.animation_finished(this, ogre_shipwreck_sid_door_a(this)) and U.animation_finished(this, ogre_shipwreck_sid_door_b(this))) do
+	while not (U.animation_finished(this, this.render.sid_ogre_door_a) and U.animation_finished(this, this.render.sid_ogre_door_b)) do
 		ogre_shipwreck_flush_rally_if_needed(this, store, b)
 		coroutine.yield()
 	end
@@ -25114,17 +25084,6 @@ local function ogre_shipwreck_resume_co(co)
 	return coroutine.resume(co)
 end
 
-local function ogre_shipwreck_barrack_sync_power_to_soldiers(b, pn, level)
-	for si = 1, b.max_soldiers do
-		local s = b.soldiers[si]
-
-		if s and s.powers and s.powers[pn] then
-			s.powers[pn].level = level
-			s.powers[pn].changed = true
-		end
-	end
-end
-
 local function ogre_shipwreck_slot_attack(this, name)
 	local list = this.attacks.list
 
@@ -25141,38 +25100,6 @@ local function ogre_shipwreck_slot_attack(this, name)
 	return nil
 end
 
-local function ogre_shipwreck_split_attack_orders(tw)
-	local order_src = tw.ogre_shipwreck_attack_slot_order
-	local order_main = {}
-	local bomber_order = {}
-
-	for oi = 1, #order_src do
-		local slot = order_src[oi]
-
-		if slot ~= "deck_cannon" and slot ~= "goblin_launcher" then
-			order_main[#order_main + 1] = slot
-		elseif slot == "deck_cannon" or slot == "goblin_launcher" then
-			bomber_order[#bomber_order + 1] = slot
-		end
-	end
-
-	return order_main, bomber_order
-end
-
-local function ogre_shipwreck_apply_template_melee_to_soldier(s, hp_tpl, m1_tpl)
-	if not s or not s.health or s.health.dead or not hp_tpl or not m1_tpl or not s.melee or not s.melee.attacks or not s.melee.attacks[1] then
-		return
-	end
-
-	s.health.armor = hp_tpl.armor
-	s.melee.attacks[1].damage_max = m1_tpl.damage_max
-	s.melee.attacks[1].damage_min = m1_tpl.damage_min
-
-	if s.health.hp ~= 0 then
-		s.health.hp = s.health.hp_max
-	end
-end
-
 local function ogre_shipwreck_co_try_multishoot(this, store, tw, tp, am, sprites)
 	local enemy = U.find_foremost_enemy(store, tp, 0, am.range, false, am.vis_flags, am.vis_bans)
 
@@ -25186,26 +25113,22 @@ local function ogre_shipwreck_co_try_multishoot(this, store, tw, tp, am, sprites
 
 	local start_offset = am.bullet_start_offset
 
-	assert(start_offset and start_offset.x ~= nil and start_offset.y ~= nil, "tower_ogre_shipwreck: multishoot bullet_start_offset must be vector")
-
-	local sid_m = ogre_shipwreck_sid_musket(this)
+	local sid_m = this.render.sid_ogre_musket
 	local musket_sp = sprites[sid_m]
-
-	assert(musket_sp, "tower_ogre_shipwreck: multishoot requires render.sprites[sid_ogre_musket]")
 
 	local musket_off = musket_sp.offset
 
-	assert(musket_off and musket_off.x ~= nil and musket_off.y ~= nil, "tower_ogre_shipwreck: multishoot musket sprite.offset required")
 	local an, af = animation_name_facing_point(this, "skillin", enemy.pos, sid_m, musket_off)
 
-	U.animation_start(this, an, af, store.tick_ts, 1, sid_m)
-	ogre_shipwreck_y_wait_sprite(this, store, sid_m)
+	U.y_animation_play(this, an, af, store.tick_ts, 1, sid_m)
 
 	an, af = animation_name_facing_point(this, "skillloop", enemy.pos, sid_m, start_offset)
 
 	U.animation_start(this, an, af, store.tick_ts, -1, sid_m)
 
-	S:queue(tw.ogre_shipwreck_multishoot_rage_sound, {delay = tw.ogre_shipwreck_multishoot_rage_delay})
+	S:queue(tw.ogre_shipwreck_multishoot_rage_sound, {
+		delay = tw.ogre_shipwreck_multishoot_rage_delay
+	})
 
 	local last_enemy = enemy
 	local loop_ts = store.tick_ts
@@ -25214,8 +25137,6 @@ local function ogre_shipwreck_co_try_multishoot(this, store, tw, tp, am, sprites
 	local shoot_step = am.shoot_time * volley_cf
 	local cycle_step = am.cycle_time * volley_cf
 	local near_r = am.near_range
-
-	assert(shots_n and shots_n >= 1, "tower_ogre_shipwreck: multishoot attacks.list[4].shots required")
 
 	for shot_i = 1, shots_n do
 		local origin = last_enemy.pos
@@ -25241,8 +25162,6 @@ local function ogre_shipwreck_co_try_multishoot(this, store, tw, tp, am, sprites
 		end
 
 		local bullet = assert(E:create_entity(am.bullet), "tower_ogre_shipwreck: multishoot create_entity failed for " .. tostring(am.bullet))
-
-		assert(bullet.bullet, "tower_ogre_shipwreck: multishoot bullet entity invalid")
 
 		bullet.bullet.damage_factor = tw.damage_factor
 		bullet.bullet.target_id = enemy_id
@@ -25270,8 +25189,7 @@ local function ogre_shipwreck_co_try_multishoot(this, store, tw, tp, am, sprites
 
 	an, af = animation_name_facing_point(this, "skillend", skillend_face, sid_m, start_offset)
 
-	U.animation_start(this, an, af, store.tick_ts, 1, sid_m)
-	ogre_shipwreck_y_wait_sprite(this, store, sid_m)
+	U.y_animation_play(this, an, af, store.tick_ts, 1, sid_m)
 end
 
 local function ogre_shipwreck_co_try_musket(this, store, tw, tp, ab, sprites)
@@ -25285,14 +25203,10 @@ local function ogre_shipwreck_co_try_musket(this, store, tw, tp, ab, sprites)
 
 	ab.ts = store.tick_ts
 
-	local sid_m = ogre_shipwreck_sid_musket(this)
+	local sid_m = this.render.sid_ogre_musket
 	local musket_sp = sprites[sid_m]
 
-	assert(musket_sp, "tower_ogre_shipwreck: musket requires render.sprites[sid_ogre_musket]")
-
 	local soffset = musket_sp.offset
-
-	assert(soffset and soffset.x ~= nil and soffset.y ~= nil, "tower_ogre_shipwreck: musket sprite.offset required")
 
 	local anim_name = ab.animation
 	local an, af, ai = animation_name_facing_point(this, anim_name, enemy.pos, sid_m, soffset)
@@ -25301,14 +25215,8 @@ local function ogre_shipwreck_co_try_musket(this, store, tw, tp, ab, sprites)
 
 	local shooting_right = tp.x < enemy.pos.x
 	local bso = ab.bullet_start_offset
-	local boff = assert(type(bso) == "table" and bso[ai], "tower_ogre_shipwreck: musket bullet_start_offset[" .. tostring(ai) .. "] missing")
-
-	assert(boff.x ~= nil and boff.y ~= nil, "tower_ogre_shipwreck: musket offset vector invalid")
-
-	local bullet = assert(E:create_entity(ab.bullet), "tower_ogre_shipwreck: musket create_entity failed for " .. tostring(ab.bullet))
-
-	assert(bullet.bullet, "tower_ogre_shipwreck: musket bullet entity invalid")
-	assert(bullet.pos, "tower_ogre_shipwreck: musket bullet template must define pos")
+	local boff = bso[ai]
+	local bullet = E:create_entity(ab.bullet)
 
 	bullet.pos.x = this.pos.x + soffset.x + boff.x * (shooting_right and 1 or -1)
 	bullet.pos.y = this.pos.y + soffset.y + boff.y
@@ -25324,7 +25232,9 @@ local function ogre_shipwreck_co_try_musket(this, store, tw, tp, ab, sprites)
 	apply_precision(bullet)
 	queue_insert(store, bullet)
 
-	ogre_shipwreck_y_wait_sprite(this, store, sid_m)
+	while not U.animation_finished(this, sid_m) do
+		coroutine.yield()
+	end
 end
 
 local function ogre_shipwreck_co_try_main_slot(this, store, tw, tp, aa, sprites)
@@ -25343,234 +25253,7 @@ local function ogre_shipwreck_co_try_main_slot(this, store, tw, tp, aa, sprites)
 	end
 end
 
-local function ogre_shipwreck_apply_power_changes(this, store, b, ag, am, sprites, t_cook_hp, t_elite_hp, t_cook_m1, t_elite_m1)
-	local po = this.powers
-	local twp = this.tower
-	local p_armor = po.armor
-
-	if p_armor and p_armor.changed then
-		p_armor.changed = nil
-		ogre_shipwreck_barrack_sync_power_to_soldiers(b, "armor", p_armor.level)
-
-		-- KRV ogres_armor：模板名读 tw.ogre_shipwreck_armor_*（数据在 archer_towers）
-		ag.bullet = twp.ogre_shipwreck_armor_goblin_bullet
-		this.barrack.soldier_type = twp.ogre_shipwreck_armor_cook_template
-
-		if b.soldier_types then
-			b.soldier_types[1] = twp.ogre_shipwreck_armor_cook_template
-			b.soldier_types[2] = twp.ogre_shipwreck_armor_deck_template
-		end
-
-		local idle_was = twp.ogre_shipwreck_bomber_idle_pre_armor
-		local idle_set = twp.ogre_shipwreck_bomber_idle_post_armor
-
-		local sid_b = ogre_shipwreck_sid_bomber(this)
-
-		if sprites[sid_b] and sprites[sid_b].name == idle_was then
-			sprites[sid_b].name = idle_set
-		end
-
-		ogre_shipwreck_apply_template_melee_to_soldier(b.soldiers[1], t_cook_hp, t_cook_m1)
-		ogre_shipwreck_apply_template_melee_to_soldier(b.soldiers[2], t_elite_hp, t_elite_m1)
-	end
-
-	local p_ms = po.multishoot
-
-	if p_ms and p_ms.changed then
-		p_ms.changed = nil
-		ogre_shipwreck_barrack_sync_power_to_soldiers(b, "multishoot", p_ms.level)
-
-		am.disabled = false
-		am.ts = store.tick_ts
-
-		if p_ms.level == 2 then
-			am.bullet = twp.ogre_shipwreck_volley_bullet_lv2
-		else
-			am.bullet = twp.ogre_shipwreck_volley_bullet_lv1
-		end
-	end
-
-	local p_gl = po.goblin_launcher
-
-	if p_gl and p_gl.changed then
-		p_gl.changed = nil
-		ogre_shipwreck_barrack_sync_power_to_soldiers(b, "goblin_launcher", p_gl.level)
-
-		ag.disabled = false
-		ag.cooldown = assert(p_gl.cooldown[p_gl.level], "tower_ogre_shipwreck: goblin_launcher.cooldown missing for level " .. tostring(p_gl.level))
-		ag.ts = store.tick_ts
-	end
-end
-
-local function ogre_shipwreck_ensure_draw_order(this, sprites)
-	if this._ogre_shipwreck_draw_order_inited then
-		return
-	end
-
-	this._ogre_shipwreck_draw_order_inited = true
-
-	local tw = this.tower
-	local sid_b = ogre_shipwreck_sid_bomber(this)
-	local sid_m = ogre_shipwreck_sid_musket(this)
-
-	if sprites[sid_b] then
-		U.change_sprite_draw_order(this, sid_b, tw.ogre_shipwreck_draw_order_bomber)
-	end
-
-	if sprites[sid_m] then
-		U.change_sprite_draw_order(this, sid_m, tw.ogre_shipwreck_draw_order_musket)
-	end
-end
-
-local function ogre_shipwreck_tick_respawns_and_door(this, store, b)
-	for i = 1, b.max_soldiers do
-		local s = b.soldiers[i]
-
-		if not s or s.health.dead and not store.entities[s.id] then
-			if not b.door_open then
-				S:queue("GUITowerOpenDoor")
-				ogre_shipwreck_door_anim_start(this, store.tick_ts, "open", false)
-
-				ogre_shipwreck_door_anim_wait(this, store, b)
-
-				b.door_open = true
-				b.door_open_ts = store.tick_ts
-			end
-
-			local soldier_type
-
-			if s then
-				soldier_type = s.template_name
-			elseif b.soldier_types then
-				soldier_type = b.soldier_types[i]
-			else
-				soldier_type = b.soldier_type
-			end
-
-			s = E:create_entity(soldier_type)
-			s.soldier.tower_id = this.id
-			s.soldier.tower_soldier_idx = i
-			s.pos = v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))
-			s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers)
-			s.nav_rally.new = true
-
-			if this.powers and s.powers then
-				local porder = ogre_shipwreck_power_order(this)
-
-				for opi = 1, #porder do
-					local pn2 = porder[opi]
-					local p2 = this.powers[pn2]
-					local sp = p2 and s.powers[pn2]
-
-					if p2 and sp then
-						sp.level = p2.level
-					end
-				end
-			end
-
-			U.soldier_inherit_tower_buff_factor(s, this)
-			queue_insert(store, s)
-
-			b.soldiers[i] = s
-
-			signal.emit("tower-spawn", this, s)
-		end
-	end
-
-	if b.door_open and store.tick_ts - b.door_open_ts > b.door_hold_time then
-		ogre_shipwreck_door_anim_start(this, store.tick_ts, "close", false)
-
-		ogre_shipwreck_door_anim_wait(this, store, b)
-
-		b.door_open = false
-	end
-end
-
 scripts.tower_ogre_shipwreck = {}
-
-function scripts.tower_ogre_shipwreck.get_info(this)
-	local o = scripts.tower_barrack.get_info(this)
-
-	if not o then
-		return {
-			type = STATS_TYPE_TOWER_BARRACK
-		}
-	end
-
-	local ab = this.attacks and this.attacks.list and this.attacks.list[1]
-
-	if ab and ab.bullet then
-		local bt = E:get_template(ab.bullet)
-		local bbul = bt and bt.bullet
-
-		if bbul and bbul.damage_min then
-			o.ranged_damage_min = math.ceil(bbul.damage_min * this.tower.damage_factor)
-			o.ranged_damage_max = math.ceil(bbul.damage_max * this.tower.damage_factor)
-			o.ranged_damage_type = bbul.damage_type
-		end
-	end
-
-	local tpl = E:get_template(this.barrack.soldier_type)
-	local s = tpl and table.deepclone(tpl)
-
-	if s and this.powers then
-		local po = this.powers
-		local porder = ogre_shipwreck_power_order(this)
-		local npo = #porder
-
-		for pi = 1, npo do
-			local pn = porder[pi]
-			local p = po[pn]
-
-			if p then
-				for i = 1, p.level do
-					SU.soldier_power_upgrade(s, pn)
-				end
-			end
-		end
-	end
-
-	if s and s.health then
-		o.armor = band(s.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or s.health.armor
-		o.magic_armor = band(s.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or s.health.magic_armor
-	end
-
-	if s and s.melee and s.melee.attacks then
-		for mi = 1, #s.melee.attacks do
-			local a = s.melee.attacks[mi]
-
-			if a.damage_min then
-				o.damage_type = a.damage_type
-
-				break
-			end
-		end
-	end
-
-	o.no_ranged = false
-	o.yes_melee = true
-
-	return o
-end
-
-function scripts.tower_ogre_shipwreck.insert(this, store)
-	local tw = assert(this.tower, "tower_ogre_shipwreck: tower component required")
-	local list = assert(this.attacks and this.attacks.list, "tower_ogre_shipwreck: attacks.list required")
-
-	assert(list[1] and list[2] and list[3] and list[4], "tower_ogre_shipwreck: attacks.list[1..4] required")
-	assert(tw.ogre_shipwreck_attack_slot_order, "tower_ogre_shipwreck: tower.ogre_shipwreck_attack_slot_order required")
-	assert(tw.ogre_shipwreck_power_order, "tower_ogre_shipwreck: tower.ogre_shipwreck_power_order required")
-	assert(tw.ogre_shipwreck_no_target_delay, "tower_ogre_shipwreck: tower.ogre_shipwreck_no_target_delay required")
-	assert(tw.ogre_shipwreck_multishoot_rage_sound and tw.ogre_shipwreck_multishoot_rage_delay ~= nil, "tower_ogre_shipwreck: tower.ogre_shipwreck_multishoot_rage_* required")
-	assert(tw.ogre_shipwreck_draw_order_bomber and tw.ogre_shipwreck_draw_order_musket, "tower_ogre_shipwreck: tower.ogre_shipwreck_draw_order_* required")
-	assert(tw.ogre_shipwreck_armor_goblin_bullet and tw.ogre_shipwreck_armor_cook_template and tw.ogre_shipwreck_armor_deck_template, "tower_ogre_shipwreck: tower.ogre_shipwreck_armor_* required")
-	assert(tw.ogre_shipwreck_volley_bullet_lv1 and tw.ogre_shipwreck_volley_bullet_lv2, "tower_ogre_shipwreck: tower.ogre_shipwreck_volley_bullet_* required")
-	assert(tw.ogre_shipwreck_bomber_idle_pre_armor and tw.ogre_shipwreck_bomber_idle_post_armor, "tower_ogre_shipwreck: tower.ogre_shipwreck_bomber_idle_* required")
-	assert(this.render.sid_ogre_door_a and this.render.sid_ogre_door_b and this.render.sid_ogre_musket and this.render.sid_ogre_bomber, "tower_ogre_shipwreck: render sid_ogre_* required")
-	assert(this.powers, "tower_ogre_shipwreck: powers required")
-
-	return scripts.tower_barrack.insert(this, store)
-end
 
 function scripts.tower_ogre_shipwreck.remove(this, store)
 	this._ogre_bomber_co = nil
@@ -25592,13 +25275,12 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 	local am = this.attacks.list[4]
 	local tmpl_cook_enhanced = E:get_template("soldier_ogre_shipwreck_cook_enhanced")
 	local tmpl_deckhand_elite = E:get_template("soldier_ogre_shipwreck_deckhand_elite")
-	local t_cook_hp = tmpl_cook_enhanced and tmpl_cook_enhanced.health
-	local t_elite_hp = tmpl_deckhand_elite and tmpl_deckhand_elite.health
-	local t_cook_m1 = tmpl_cook_enhanced and tmpl_cook_enhanced.melee and tmpl_cook_enhanced.melee.attacks and tmpl_cook_enhanced.melee.attacks[1]
-	local t_elite_m1 = tmpl_deckhand_elite and tmpl_deckhand_elite.melee and tmpl_deckhand_elite.melee.attacks and tmpl_deckhand_elite.melee.attacks[1]
+	local t_cook_hp = tmpl_cook_enhanced.health
+	local t_elite_hp = tmpl_deckhand_elite.health
+	local t_cook_m1 = tmpl_cook_enhanced.melee.attacks[1]
+	local t_elite_m1 = tmpl_deckhand_elite.melee.attacks[1]
 
-	-- 甲板炮与哥布林技能弹共用 sprite 6：单协程 _ogre_bomber_co 按 bomber_order 串行。顺序表由主循环每帧写入 this._ogre_shipwreck_*，避免闭包过期且不每 yield 分配新表。
-	local function ogre_shipwreck_bomber_thread()
+	this._ogre_bomber_co = coroutine.create(function()
 		while true do
 			if not this.tower.blocked then
 				local bomber_order = this._ogre_shipwreck_bomber_order
@@ -25618,9 +25300,9 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 
 			coroutine.yield()
 		end
-	end
+	end)
 
-	local function ogre_shipwreck_attack_thread()
+	this._ogre_attack_co = coroutine.create(function()
 		while true do
 			if not this.tower.blocked then
 				local order_main = this._ogre_shipwreck_order_main
@@ -25635,41 +25317,11 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 
 			coroutine.yield()
 		end
-	end
+	end)
 
 	-- 根因未除时每帧都会 false：重建协程可恢复「单次」故障，但会刷屏 log；按时间节流并 success 时清计时
 	local function ogre_resume_sub_coroutines()
-		local ok_b, err_b = ogre_shipwreck_resume_co(this._ogre_bomber_co)
 
-		if ok_b then
-			this._ogre_bomber_co_err_log_ts = nil
-		else
-			local ts = store.tick_ts
-			local last = this._ogre_bomber_co_err_log_ts
-
-			if not last or ts - last >= OGRE_SHIPWRECK_CO_ERR_LOG_COOLDOWN then
-				this._ogre_bomber_co_err_log_ts = ts
-				log.error("tower_ogre_shipwreck id=%s _ogre_bomber_co: %s", tostring(this.id), tostring(err_b))
-			end
-
-			this._ogre_bomber_co = coroutine.create(ogre_shipwreck_bomber_thread)
-		end
-
-		local ok_a, err_a = ogre_shipwreck_resume_co(this._ogre_attack_co)
-
-		if ok_a then
-			this._ogre_attack_co_err_log_ts = nil
-		else
-			local ts = store.tick_ts
-			local last = this._ogre_attack_co_err_log_ts
-
-			if not last or ts - last >= OGRE_SHIPWRECK_CO_ERR_LOG_COOLDOWN then
-				this._ogre_attack_co_err_log_ts = ts
-				log.error("tower_ogre_shipwreck id=%s _ogre_attack_co: %s", tostring(this.id), tostring(err_a))
-			end
-
-			this._ogre_attack_co = coroutine.create(ogre_shipwreck_attack_thread)
-		end
 	end
 
 	-- 与 scripts.tower_archer.update 一致：主协程进入循环前将各槽 bullet_attack.ts 锚到当前 tick，从首帧起按 cooldown 计时
@@ -25681,111 +25333,271 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 		end
 	end
 
+	local p_armor = this.powers.armor
+
 	while true do
 		if tw.blocked then
 			coroutine.yield()
 		else
-			ogre_shipwreck_apply_power_changes(this, store, b, ag, am, sprites, t_cook_hp, t_elite_hp, t_cook_m1, t_elite_m1)
+			local po = this.powers
+			local twp = this.tower
+
+			if p_armor.changed then
+				p_armor.changed = nil
+
+				for si = 1, b.max_soldiers do
+					local s = b.soldiers[si]
+
+					if s and s.powers and s.powers.armor then
+						s.powers.armor.level = p_armor.level
+						s.powers.armor.changed = true
+					end
+				end
+
+				-- KRV ogres_armor：模板名读 tw.ogre_shipwreck_armor_*（数据在 archer_towers）
+				ag.bullet = twp.ogre_shipwreck_armor_goblin_bullet
+				this.barrack.soldier_type = twp.ogre_shipwreck_armor_cook_template
+
+				if b.soldier_types then
+					b.soldier_types[1] = twp.ogre_shipwreck_armor_cook_template
+					b.soldier_types[2] = twp.ogre_shipwreck_armor_deck_template
+				end
+
+				local idle_was = twp.ogre_shipwreck_bomber_idle_pre_armor
+				local idle_set = twp.ogre_shipwreck_bomber_idle_post_armor
+				local sid_b = this.render.sid_ogre_bomber
+
+				if sprites[sid_b] and sprites[sid_b].name == idle_was then
+					sprites[sid_b].name = idle_set
+				end
+
+				local s1 = b.soldiers[1]
+
+				if s1 and s1.health and not s1.health.dead and s1.melee and s1.melee.attacks and s1.melee.attacks[1] then
+					s1.health.armor = t_cook_hp.armor
+					s1.melee.attacks[1].damage_max = t_cook_m1.damage_max
+					s1.melee.attacks[1].damage_min = t_cook_m1.damage_min
+
+					if s1.health.hp ~= 0 then
+						s1.health.hp = s1.health.hp_max
+					end
+				end
+
+				local s2 = b.soldiers[2]
+
+				if s2 and s2.health and not s2.health.dead and s2.melee and s2.melee.attacks and s2.melee.attacks[1] then
+					s2.health.armor = t_elite_hp.armor
+					s2.melee.attacks[1].damage_max = t_elite_m1.damage_max
+					s2.melee.attacks[1].damage_min = t_elite_m1.damage_min
+
+					if s2.health.hp ~= 0 then
+						s2.health.hp = s2.health.hp_max
+					end
+				end
+			end
 
 			SU.tower_update_silenced_powers(store, this)
 
-			ogre_shipwreck_ensure_draw_order(this, sprites)
+			if not this._ogre_shipwreck_draw_order_inited then
+				this._ogre_shipwreck_draw_order_inited = true
 
-			ogre_shipwreck_flush_rally_if_needed(this, store, b)
+				local sid_b = this.render.sid_ogre_bomber
+				local sid_m = this.render.sid_ogre_musket
 
-			ogre_shipwreck_tick_respawns_and_door(this, store, b)
+				if sprites[sid_b] then
+					U.change_sprite_draw_order(this, sid_b, tw.ogre_shipwreck_draw_order_bomber)
+				end
 
-			ogre_shipwreck_flush_rally_if_needed(this, store, b)
+				if sprites[sid_m] then
+					U.change_sprite_draw_order(this, sid_m, tw.ogre_shipwreck_draw_order_musket)
+				end
+			end
 
-			local om, bo = ogre_shipwreck_split_attack_orders(tw)
+			if b.rally_new then
+				b.rally_new = false
+
+				signal.emit("rally-point-changed", this)
+
+				local all_dead = true
+
+				for i = 1, b.max_soldiers do
+					local s = b.soldiers[i]
+
+					if s then
+						s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+						s.nav_rally.new = true
+						all_dead = all_dead and s.health.dead
+					end
+				end
+
+				if not all_dead then
+					S:queue(this.sound_events.change_rally_point)
+				end
+			end
+
+			for i = 1, b.max_soldiers do
+				local s = b.soldiers[i]
+
+				if not s or s.health.dead and not store.entities[s.id] then
+					if not b.door_open then
+						S:queue("GUITowerOpenDoor")
+						ogre_shipwreck_door_anim_start(this, store.tick_ts, "open", false)
+
+						ogre_shipwreck_door_anim_wait(this, store, b)
+
+						b.door_open = true
+						b.door_open_ts = store.tick_ts
+					end
+
+					local soldier_type
+
+					if s then
+						soldier_type = s.template_name
+					elseif b.soldier_types then
+						soldier_type = b.soldier_types[i]
+					else
+						soldier_type = b.soldier_type
+					end
+
+					s = E:create_entity(soldier_type)
+					s.soldier.tower_id = this.id
+					s.soldier.tower_soldier_idx = i
+					s.pos = v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))
+					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers)
+					s.nav_rally.new = true
+
+					if this.powers and s.powers then
+						local porder = this.tower.ogre_shipwreck_power_order
+
+						for opi = 1, #porder do
+							local pn2 = porder[opi]
+							local p2 = this.powers[pn2]
+							local sp = p2 and s.powers[pn2]
+
+							if p2 and sp then
+								sp.level = p2.level
+							end
+						end
+					end
+
+					U.soldier_inherit_tower_buff_factor(s, this)
+					queue_insert(store, s)
+
+					b.soldiers[i] = s
+
+					signal.emit("tower-spawn", this, s)
+				end
+			end
+
+			if b.door_open and store.tick_ts - b.door_open_ts > b.door_hold_time then
+				ogre_shipwreck_door_anim_start(this, store.tick_ts, "close", false)
+
+				ogre_shipwreck_door_anim_wait(this, store, b)
+
+				b.door_open = false
+			end
+
+			if b.rally_new then
+				b.rally_new = false
+
+				signal.emit("rally-point-changed", this)
+
+				local all_dead = true
+
+				for i = 1, b.max_soldiers do
+					local s = b.soldiers[i]
+
+					if s then
+						s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+						s.nav_rally.new = true
+						all_dead = all_dead and s.health.dead
+					end
+				end
+
+				if not all_dead then
+					S:queue(this.sound_events.change_rally_point)
+				end
+			end
+
+			local om = {}
+			local bo = {}
+			local order_src = tw.ogre_shipwreck_attack_slot_order
+
+			for oi = 1, #order_src do
+				local slot = order_src[oi]
+
+				if slot ~= "deck_cannon" and slot ~= "goblin_launcher" then
+					om[#om + 1] = slot
+				else
+					bo[#bo + 1] = slot
+				end
+			end
 
 			this._ogre_shipwreck_order_main = om
 			this._ogre_shipwreck_bomber_order = bo
 
 			if not this._ogre_bomber_co then
-				this._ogre_bomber_co = coroutine.create(ogre_shipwreck_bomber_thread)
+				-- 甲板炮与哥布林技能弹共用 sprite 6：单协程 _ogre_bomber_co 按 bomber_order 串行。顺序表由主循环每帧写入 this._ogre_shipwreck_*，避免闭包过期且不每 yield 分配新表。
+				this._ogre_bomber_co = coroutine.create(function()
+					while true do
+						if not this.tower.blocked then
+							local bomber_order = this._ogre_shipwreck_bomber_order
+							local tp = tpos(this)
+							local pow_gl = this.powers.goblin_launcher
+
+							for bi = 1, #bomber_order do
+								local slot = bomber_order[bi]
+
+								if slot == "deck_cannon" or slot == "goblin_launcher" then
+									if ogre_shipwreck_try_one_bomber_slot(this, store, tw, tp, ogre_shipwreck_slot_attack(this, slot), slot, pow_gl) then
+										break
+									end
+								end
+							end
+						end
+
+						coroutine.yield()
+					end
+				end)
 			end
 
 			if not this._ogre_attack_co then
-				this._ogre_attack_co = coroutine.create(ogre_shipwreck_attack_thread)
+				this._ogre_attack_co = coroutine.create(function()
+					while true do
+						if not this.tower.blocked then
+							local order_main = this._ogre_shipwreck_order_main
+							local tp = tpos(this)
+
+							for omi = 1, #order_main do
+								local slot = order_main[omi]
+
+								ogre_shipwreck_co_try_main_slot(this, store, tw, tp, ogre_shipwreck_slot_attack(this, slot), sprites)
+							end
+						end
+
+						coroutine.yield()
+					end
+				end)
 			end
 
 			ogre_resume_sub_coroutines()
+
 		end
 
 		coroutine.yield()
 	end
 end
 
-scripts.soldier_ogre_shipwreck_cook = scripts.soldier_ogre_shipwreck_cook or {}
-
-function scripts.soldier_ogre_shipwreck_cook.update(this, store)
-	return scripts.soldier_barrack.update(this, store)
-end
-
-scripts.soldier_ogre_shipwreck_red_goblin = scripts.soldier_ogre_shipwreck_red_goblin or {}
+scripts.soldier_ogre_shipwreck_red_goblin = {}
 
 function scripts.soldier_ogre_shipwreck_red_goblin.insert(this, store)
-	this.reinforcement.ts = store.tick_ts
-
 	scripts.soldier_reinforcement.insert(this, store)
 
-	this.vis._bans = this.vis.bans
-	this.vis.bans = F_ALL
-
-	-- tween 默认用 sprite.ts 计时；攻击动画会改 ts，alpha 会抖动。锚定 props 时间轴到生成时刻
-	if this.tween and this.tween.props and this.tween.props[1] then
-		this.tween.props[1].ts = store.tick_ts
-	end
-
-	if this.render then
-		for i = 1, #this.render.sprites do
-			this.render.sprites[i].ts = store.tick_ts - U.frandom(0, 1)
-		end
-	end
-
-	-- 援军式：不自动走向塔集结点；集结点初始即落地位置，仅在被选中点选后由 GUI 改 nav_rally（须无 soldier.tower_id，否则会进塔集结模式）
-	this.nav_rally.pos = vclone(this.pos)
-	this.nav_rally.center = vclone(this.pos)
+	this.nav_rally.pos:copy(this.pos)
+	this.nav_rally.center:copy(this.pos)
 	this.nav_rally.new = false
-
-	if this.nav_grid then
-		this.nav_grid.waypoints = nil
-	end
-
-	this.motion.arrived = true
-
-	if this.soldier then
-		this.soldier.tower_id = nil
-		this.soldier.tower_soldier_idx = nil
-	end
 
 	return true
 end
-
-function scripts.soldier_ogre_shipwreck_red_goblin.update(this, store)
-	-- 与 soldier_barrack 一致：insert 里暂存 vis._bans 后 reinforcement 不会帮你恢复
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
-	end
-
-	-- 援军主循环与 scripts.soldier_reinforcement.update 同源；限时淡出见 reinforcement.expire_with_fade_out（all/scripts.lua）
-	return scripts.soldier_reinforcement.update(this, store)
-end
-
-scripts.bomb_ogre_shipwreck_goblin = {}
-
-function scripts.bomb_ogre_shipwreck_goblin.insert(this, store)
-	local b = this.bullet
-	local dist = V.dist(b.from.x, b.from.y, b.to.x, b.to.y)
-
-	assert(b.g and b.g < 0, "bomb_ogre_shipwreck_goblin: bullet.g must be negative (same convention as scripts.bomb / SU.initial_parabola_speed; positive g inverts arc)")
-	b.flight_time = math.max(fts(14), math.min(fts(44), fts(17) + dist * 0.032))
-
-	return scripts.bomb.insert(this, store)
-end
-
--- 掷骨者 End
 
 return scripts

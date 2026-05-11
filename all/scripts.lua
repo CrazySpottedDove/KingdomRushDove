@@ -1061,30 +1061,13 @@ function scripts.soldier_reinforcement.update(this, store)
 
 	while true do
 		if this.health.dead or this.reinforcement.duration and store.tick_ts - this.reinforcement.ts > this.reinforcement.duration then
-			-- 下面会把 hp 置 0；必须先记下「入场时是否已因伤害死亡」，否则超时分支无法与战死区分（模板数据：kr1/archer_towers expire_with_fade_out）
-			local had_damage_death = this.health.dead
-
 			if this.health.hp > 0 then
 				this.reinforcement.hp_before_timeout = this.health.hp
 			end
 
 			this.health.hp = 0
 
-			-- 援军限时退场：默认仍走 y_soldier_death（死亡动画）。仅少数模板设 reinforcement.expire_with_fade_out（如食人魔沉船哥布林发射红地精）：到时走路淡出，手感比横死更贴合「召唤物下场」；战死一律不走淡出。
-			if this.reinforcement.expire_with_fade_out and not had_damage_death then
-				-- tween 与 sprite.ts 挂钩；战斗动画会改写 ts，淡出前对齐 tick_ts，避免透明度突变
-				if this.tween then
-					if this.tween.props and this.tween.props[1] then
-						this.tween.props[1].ts = store.tick_ts
-					end
-
-					this.tween.ts = store.tick_ts
-				end
-
-				SU.y_reinforcement_fade_out(store, this)
-			else
-				SU.y_soldier_death(store, this)
-			end
+			SU.y_soldier_death(store, this)
 
 			return
 		end
@@ -1092,7 +1075,6 @@ function scripts.soldier_reinforcement.update(this, store)
 		if this.unit.is_stunned then
 			SU.soldier_idle(store, this)
 		else
-			-- SU.soldier_courage_upgrade(store, this)
 			while this.nav_rally.new do
 				if SU.y_controable_new_rally(store, this) then
 					goto label_34_1
@@ -3981,18 +3963,6 @@ function scripts.shotgun.update(this, store)
 	local target_invalid = false
 	local ps
 
-	-- 霰弹/直线追踪弹（shotgun 模板）共用：取目标 body 的命中偏移。旧代码直连 tgt.unit.hit_offset，缺 unit 或 hit_offset 时会崩；食人魔沉船火枪弹等需稳定命中点与命中 FX 对齐，故集中封装并返回 (0,0) 兜底。
-	local function shotgun_hit_offset_xy(tgt)
-		local u = tgt and tgt.unit
-		local ho = u and u.hit_offset
-
-		if ho then
-			return ho.x, ho.y
-		end
-
-		return 0, 0
-	end
-
 	if b.particles_name then
 		ps = E:create_entity(b.particles_name)
 		ps.particle_system.track_id = this.id
@@ -4008,22 +3978,16 @@ function scripts.shotgun.update(this, store)
 		end
 
 		if target then
-			-- 追踪阶段：测距用 tpx/tpy 已尊重 ignore_hit_offset；同步更新 b.to 时旧实现始终加 hit_offset，与标志语义不一致，此处改为与 ox/oy 一致（影响所有 shotgun 子弹上声明了 ignore_hit_offset 的模板）。
-			local hx_aim, hy_aim = shotgun_hit_offset_xy(target)
-			local ox = b.ignore_hit_offset and 0 or hx_aim
-			local oy = b.ignore_hit_offset and 0 or hy_aim
-			local tpx, tpy = target.pos.x + ox, target.pos.y + oy
+			local tpx, tpy = target.pos.x, target.pos.y
+
+			if not b.ignore_hit_offset then
+				tpx, tpy = tpx + target.unit.hit_offset.x, tpy + target.unit.hit_offset.y
+			end
 			local d = math.max(math.abs(tpx - b.to.x), math.abs(tpy - b.to.y))
 
 			if d > b.max_track_distance or band(target.vis.bans, F_RANGED) ~= 0 then
 				target_invalid = true
 				target = nil
-			elseif target.health and not target.health.dead then
-				if b.ignore_hit_offset then
-					b.to.x, b.to.y = target.pos.x, target.pos.y
-				else
-					b.to.x, b.to.y = target.pos.x + hx_aim, target.pos.y + hy_aim
-				end
 			end
 		end
 
@@ -4072,24 +4036,10 @@ function scripts.shotgun.update(this, store)
 			end
 		end
 
-		-- 命中特效与溅血共用 shotgun_hit_offset_xy，避免 FX 落在脚底而判定按 hit_offset；blood 侧补 target.unit 判断，防止无单位实体访问 blood_color。
-		local hx_fx, hy_fx = shotgun_hit_offset_xy(target)
-
-		-- 可选通用命中 FX（子弹模板 bullet.hit_fx）；未配置则不创建，不影响既有仅 hit_blood_fx 的塔。
-		if b.hit_fx then
-			local sfx = E:create_entity(b.hit_fx)
-
-			sfx.pos.x, sfx.pos.y = target.pos.x + hx_fx, target.pos.y + hy_fx
-			sfx.render.sprites[1].ts = store.tick_ts
-			sfx.render.sprites[1].r = this.render.sprites[1].r
-
-			queue_insert(store, sfx)
-		end
-
-		if b.hit_blood_fx and target.unit and target.unit.blood_color ~= BLOOD_NONE then
+		if b.hit_blood_fx and target.unit.blood_color ~= BLOOD_NONE then
 			local sfx = E:create_entity(b.hit_blood_fx)
 
-			sfx.pos.x, sfx.pos.y = target.pos.x + hx_fx, target.pos.y + hy_fx
+			sfx.pos.x, sfx.pos.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
 			sfx.render.sprites[1].ts = store.tick_ts
 
 			if sfx.use_blood_color and target.unit.blood_color then

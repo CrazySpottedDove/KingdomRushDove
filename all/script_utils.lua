@@ -1265,9 +1265,6 @@ end
 ---@param this table 士兵实体
 ---@return nil
 function SU.y_reinforcement_fade_out(store, this)
-	-- 修复红哥布林淡出后敌人会愣一会的BUG，与 y_soldier_death 首行一致：立刻解除拦截。限时淡出时实体仍在 store 中，U.cleanup_blockers 只剔除「已无实体」的 id，不会处理 hp=0 的淡出单位；若不 unblock，敌人 blockers 仍指向该士兵，会站桩到实体移除。
-	U.unblock_target(store, this)
-
 	this.render.sprites[1].ts = store.tick_ts
 
 	local offset = 50

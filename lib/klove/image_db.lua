@@ -54,6 +54,7 @@ local persistent_textures = table.to_map({
 	"kr4_fallen_ones_bone_flingers",
 	"kr4_warmongers_tower_barrack",
 	"kr4_dark_army_tower_barrack",
+	"kr4_ogres_tower_barrack",
 	-- game_gui
 	"gui_common",
 	"gui_ico",

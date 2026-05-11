@@ -2235,9 +2235,7 @@ E:add_comps(tt, "powers", "barrack")
 tt.info.i18n_key = "TOWER_ORC_SHIPWRECK"
 tt.info.enc_icon = 22
 tt.info.portrait = "kr4_info_portraits_towers_0022"
-tt.info.fn = scripts.tower_ogre_shipwreck.get_info
 tt.tower.type = "ogre_shipwreck"
--- 槽名须与 tower_scripts 内 slot_runners 键一致；调手感/KRV 对表时优先改此数组
 tt.tower.ogre_shipwreck_attack_slot_order = {"multishoot", "musket", "goblin_launcher", "deck_cannon"}
 tt.tower.ogre_shipwreck_no_target_delay = fts(5)
 tt.tower.ogre_shipwreck_multishoot_rage_delay = 0.16
@@ -2249,34 +2247,24 @@ tt.tower.ogre_shipwreck_volley_bullet_lv1 = "bullet_ogre_shipwreck_musket_volley
 tt.tower.ogre_shipwreck_volley_bullet_lv2 = "bullet_ogre_shipwreck_musket_volley_lv2"
 tt.tower.ogre_shipwreck_bomber_idle_pre_armor = "idle"
 tt.tower.ogre_shipwreck_bomber_idle_post_armor = "idleGoblin"
--- 与 get_info / 补员 power 同步顺序一致（勿 pairs powers）
 tt.tower.ogre_shipwreck_power_order = {"armor", "multishoot", "goblin_launcher"}
 tt.tower.level = 1
 tt.tower.price = 460
 tt.tower.size = TOWER_SIZE_LARGE
--- KRV pirates_ogres_level4：塔体索敌 400；火枪本体 pirates_soldier_ogre_musket_lvl3 主 range_unit 射程 300、CD 1.5s、出手 0.23s，这是换算过来的值，大的有些吓人了
 tt.attacks.range = 400
 tt.attacks.list[1] = E:clone_c("bullet_attack")
 tt.attacks.list[1].animation = "shoot"
 tt.attacks.list[1].bullet = "bullet_ogre_shipwreck_musket"
 tt.attacks.list[1].range = 300
 tt.attacks.list[1].cooldown = 1.5
--- 物理火枪；勿继承 bullet_attack 默认 requires_magic，否则部分索敌链会异常
-tt.attacks.list[1].requires_magic = false
--- KRV pirates_soldier_ogre_musket_lvl3 主 range_unit action_time = 0.23s
 tt.attacks.list[1].shoot_time = 0.23
--- FL attack bullet_start_offset v(0,55)；Dove 弹道会再加火枪 sprite.offset v(0,55)，此处用 0 避免竖直叠加两次
 tt.attacks.list[1].bullet_start_offset = {v(0, 0), v(0, 0)}
--- KRV/FL：list[2] 甲板固定炮（goblin_bomber 图层）；list[3] 技能弹（购哥布林强化后启用）；list[4] 火枪连射（购多重射击后启用）
--- 槽序号与 kr1/tower_scripts.lua `ogre_shipwreck_slot_attack`（list 下标）一致；技能绑定位见 powers.*.attack_idx。层索引见 tt.render.sid_ogre_*。
 tt.attacks.list[2] = E:clone_c("bullet_attack")
 tt.attacks.list[2].bullet = "bomb_ogre_shipwreck_goblin"
 tt.attacks.list[2].cooldown = 4
 tt.attacks.list[2].range = 400
--- KRV range_unit action_time ≈0.93s；spawn_delay 对齐 goblin_bomber_shoot 出手帧（约前 2/5 段）
 tt.attacks.list[2].shoot_time = fts(28)
 tt.attacks.list[2].spawn_delay = fts(27)
--- 抛物弹略减路径超前量，配合 spawn_delay 与脚本锁定首发目标，贴近 KRV 落点观感
 tt.attacks.list[2].node_prediction = fts(34)
 tt.attacks.list[2].bullet_start_offset = v(-39, 18)
 tt.attacks.list[2].vis_flags = 0
@@ -2295,21 +2283,15 @@ tt.attacks.list[3].disabled = true
 tt.attacks.list[4] = E:clone_c("bullet_attack")
 tt.attacks.list[4].bullet = "bullet_ogre_shipwreck_musket_volley"
 tt.attacks.list[4].cooldown = 15
--- KRV ogre_multishoot range 300
 tt.attacks.list[4].range = 300
--- KRV ogre_multishoot：首发前摇 action_time ≈ 0.1666s（≈ fts(5)）；后续间隔见 cycle_time（仅第一发在塔脚本使用 shoot_time）
 tt.attacks.list[4].shoot_time = fts(5)
 tt.attacks.list[4].near_range = 96
--- KRV ogre_multishoot：extra_proyectiles 14 段间隔 + 首发 = 15 发；Lv2 仅伤害 18→29（units_settings），发数不变
 tt.attacks.list[4].shots = 15
--- KRV extra_proyectiles 间隔 0.1s（≈ fts(3) @30FPS）；与 plist 射速一致；若与动画 loop 帧观感不齐再在脚本侧微调
 tt.attacks.list[4].cycle_time = fts(3)
 tt.attacks.list[4].bullet_start_offset = v(0, 45)
 tt.attacks.list[4].vis_flags = 0
 tt.attacks.list[4].vis_bans = bor(F_NIGHTMARE)
 tt.attacks.list[4].disabled = true
--- bullet_attack.ts 由 tower_ogre_shipwreck.update 主协程首轮锚到 store.tick_ts（与 scripts.tower_archer 一致）
--- KRV/FL powers.enhance「更好的船员」：单档；厨子升为强化模板；技能哥布林弹升为 skill2；甲板 idle→idleGoblin
 tt.powers.armor = E:clone_c("power")
 tt.powers.armor.price_base = 150
 tt.powers.armor.price_inc = 0
@@ -2322,7 +2304,6 @@ tt.powers.multishoot.max_level = 2
 tt.powers.multishoot.enc_icon = 77
 tt.powers.multishoot.attack_idx = 4
 tt.powers.goblin_launcher = E:clone_c("power")
--- KRV towers_settings goblin_launcher cost [0,200,100]：首购 200、二档 +100
 tt.powers.goblin_launcher.price_base = 200
 tt.powers.goblin_launcher.price_inc = 100
 tt.powers.goblin_launcher.max_level = 2
@@ -2330,20 +2311,16 @@ tt.powers.goblin_launcher.enc_icon = 78
 tt.powers.goblin_launcher.attack_idx = 3
 tt.powers.goblin_launcher.cooldown = {15, 10}
 tt.barrack.soldier_type = "soldier_ogre_shipwreck_cook"
--- 槽 1 厨子（Ogre Pirate）、槽 2 甲板水手（KRV Goblin Deckhand，近战）；购「更好的船员」后由塔脚本换成 *_enhanced / *_elite。抛物轰炸为塔身 list[2] 等攻击，非此槽士兵职业。
 tt.barrack.soldier_types = {"soldier_ogre_shipwreck_cook", "soldier_ogre_shipwreck_deckhand"}
--- 与标准兵营一致：出生点在塔身（非集结点），由士兵逻辑走向 rally
 tt.barrack.respawn_offset = v(0, 0)
 tt.barrack.rally_range = 300
--- KRV：从 Lv2 起 max_soldiers=2；厨子 + 甲板水手
 tt.barrack.max_soldiers = 2
-tt.main_script.insert = scripts.tower_ogre_shipwreck.insert
+tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.remove = scripts.tower_ogre_shipwreck.remove
 tt.main_script.update = scripts.tower_ogre_shipwreck.update
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_archer_%04i"
 tt.render.sprites[1].offset = v(0, 10)
--- 四级塔部件叠放顺序，旗→layer1→火枪→layer2→甲板哥布林
 tt.render.sprites[2] = E:clone_c("sprite")
 tt.render.sprites[2].anchor.y = 0.13
 tt.render.sprites[2].animated = true
@@ -2369,7 +2346,6 @@ tt.render.sid_ogre_musket = 4
 tt.render.sid_ogre_bomber = 6
 tt.tower.ogre_shipwreck_draw_order_bomber = 2
 tt.tower.ogre_shipwreck_draw_order_musket = 5
--- draw_order：读档等路径可能跳过 insert，由 scripts.tower_ogre_shipwreck.update 首帧懒初始化 change_sprite_draw_order
 tt.render.sprites[4].angles = {
 	idle = {"idleUp", "idle"},
 	shoot = {"shootUp", "shootDown"},
@@ -2428,7 +2404,6 @@ tt.bullet.damage_max = 29
 tt = E:register_t("bomb_ogre_shipwreck_goblin", "bomb")
 -- flight_time 由 scripts.bomb_ogre_shipwreck_goblin.insert 按距离写入。g 须为负：与 SU.initial_parabola_speed / scripts.bomb.update 及全游戏其它炸弹一致（正 g 会弧顶反向：先下后上）
 tt.bullet.g = -REF_H * 1.05
-tt.main_script.insert = scripts.bomb_ogre_shipwreck_goblin.insert
 tt.bullet.rotation_speed = 20 * FPS * math.pi / 180
 tt.bullet.damage_radius = 105
 tt.bullet.damage_min = 50
@@ -2484,7 +2459,7 @@ tt.melee.range = 75
 tt.melee.attacks[1].damage_min = 52
 tt.melee.attacks[1].damage_max = 78
 -- 原1.5，KRV里面食人魔的动画有问题，感觉像是没做完，超过1秒会导致动画出现明显卡顿
-tt.melee.attacks[1].cooldown = 1.0
+tt.melee.attacks[1].cooldown = 1.5
 tt.melee.attacks[1].hit_time = fts(12)
 tt.motion.max_speed = 20
 tt.regen.health = 16
@@ -2499,10 +2474,6 @@ tt.health_bar.offset = v(0, ady(65))
 tt.unit.hit_offset = v(0, 18)
 tt.unit.mod_offset = v(0, ady(42))
 tt.ui.click_rect = r(-18, -3, 36, 40)
-tt.info.fn = scripts.soldier_barrack.get_info
-tt.main_script.insert = scripts.soldier_barrack.insert
-tt.main_script.remove = scripts.soldier_barrack.remove
-tt.main_script.update = scripts.soldier_ogre_shipwreck_cook.update
 
 tt = RT("soldier_ogre_shipwreck_cook_enhanced", "soldier_ogre_shipwreck_cook")
 -- KRV ogres_armor：gain_armor 30 + 近战档 2 → 70–96（armor 按 30% 计）
@@ -2514,7 +2485,6 @@ tt.melee.attacks[1].damage_max = 96
 tt = E:register_t("soldier_ogre_shipwreck_deckhand", "soldier_militia")
 AC(tt, "nav_grid")
 tt.info.portrait = "kr4_info_portraits_soldiers_0036"
--- KRV：SHIPWRECK_GOBLIN_NAME 七选一
 tt.info.i18n_key = nil
 tt.info.random_name_format = "SHIPWRECK_GOBLIN_%i_NAME"
 tt.info.random_name_count = 7
@@ -2545,8 +2515,6 @@ tt.ui.click_rect = r(-18, -3, 36, 40)
 tt.info.fn = scripts.soldier_barrack.get_info
 tt.main_script.insert = scripts.soldier_barrack.insert
 tt.main_script.remove = scripts.soldier_barrack.remove
--- 与厨子同用 barrack 协程；甲板无独立行为分支时保持单一路径即可维护
-tt.main_script.update = scripts.soldier_ogre_shipwreck_cook.update
 
 tt = RT("soldier_ogre_shipwreck_deckhand_elite", "soldier_ogre_shipwreck_deckhand")
 tt.health.armor = 0.3
@@ -2558,6 +2526,7 @@ tt = E:register_t("soldier_ogre_shipwreck_red_goblin", "soldier_militia")
 AC(tt, "nav_grid", "reinforcement", "tween")
 -- 援军式可控：无 tower_id，选中为点选全图移动；落地集结点=出生点，不自动走向食人魔塔集结范围
 tt.controable = true
+tt.controable_other = true
 tt.info.portrait = "kr4_info_portraits_soldiers_0037"
 tt.info.random_name_format = nil
 tt.info.random_name_count = nil
@@ -2576,13 +2545,12 @@ tt.motion.max_speed = 75
 tt.reinforcement.duration = 5
 -- 战死走 SU.y_soldier_death（death 动画）；限时到期走走路淡出（expire_with_fade_out）
 tt.reinforcement.fade = false
-tt.reinforcement.fade_out = false
-tt.reinforcement.expire_with_fade_out = true
+tt.reinforcement.fade_out = true
 tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
 tt.tween.props[1].name = "alpha"
 tt.tween.remove = false
 tt.tween.reverse = false
-tt.tween.run_once = true
+tt.tween.disabled = true
 tt.render.sprites[1].anchor = v(0.5, 0.15)
 tt.render.sprites[1].prefix = "ogre_shipwreck_slinger"
 tt.render.sprites[1].name = "idle"
@@ -2594,10 +2562,9 @@ tt.health_bar.type = HEALTH_BAR_SIZE_SMALL
 tt.unit.hit_offset = v(0, 18)
 tt.unit.mod_offset = v(0, ady(23))
 tt.ui.click_rect = r(-18, -3, 36, 40)
-tt.info.fn = scripts.soldier_barrack.get_info
 tt.main_script.insert = scripts.soldier_ogre_shipwreck_red_goblin.insert
 tt.main_script.remove = scripts.soldier_barrack.remove
-tt.main_script.update = scripts.soldier_ogre_shipwreck_red_goblin.update
+tt.main_script.update = scripts.soldier_reinforcement.update
 
 tt = RT("soldier_ogre_shipwreck_red_goblin_elite", "soldier_ogre_shipwreck_red_goblin")
 tt.health.armor = 0.3

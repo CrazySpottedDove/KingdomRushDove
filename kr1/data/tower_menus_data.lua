@@ -423,13 +423,13 @@ return {
 			tt_title = _("TOWER_BONE_FLINGERS_NAME"),
 			tt_desc = _("TOWER_BONE_FLINGERS_DESCRIPTION")
 		}),
-		M(tpl.upgrade, {
-			action_arg = "tower_ogre_shipwreck",
-			image = "kr4_main_icons_0022",
-			place = 21,
-			tt_title = _("TOWER_ORC_SHIPWRECK_NAME"),
-			tt_desc = _("TOWER_ORC_SHIPWRECK_DESCRIPTION")
-		}),
+		-- M(tpl.upgrade, {
+		-- 	action_arg = "tower_ogre_shipwreck",
+		-- 	image = "kr4_main_icons_0022",
+		-- 	place = 21,
+		-- 	tt_title = _("TOWER_ORC_SHIPWRECK_NAME"),
+		-- 	tt_desc = _("TOWER_ORC_SHIPWRECK_DESCRIPTION")
+		-- }),
 		tpl.sell
 	}},
 	barrack = {{M(tpl.common_upgrade, {
