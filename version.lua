@@ -8,7 +8,7 @@ local version = {
 	bundle_id = "com.ironhidegames.kingdomrush.standalone",
 	build = is_build,
 	bundle_keywords = "-standalone",
-	id = "0.1.8"
+	id = "0.1.9"
 }
 
 return version
