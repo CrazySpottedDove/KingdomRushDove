@@ -25265,38 +25265,29 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 
 					local soldier_type = s and s.template_name or b.soldier_types[i]
 
-					s = E:create_entity(soldier_type)
-					s.soldier.tower_id = this.id
-					s.soldier.tower_soldier_idx = i
-					s.pos = v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))
-					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers)
-					s.nav_rally.new = true
+					if soldier_type then
+						s = E:create_entity(soldier_type)
+						s.soldier.tower_id = this.id
+						s.soldier.tower_soldier_idx = i
+						s.pos = v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))
+						s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers)
+						s.nav_rally.new = true
 
-					s.powers.armor.level = p_armor.level
+						s.powers.armor.level = p_armor.level
 
-					U.soldier_inherit_tower_buff_factor(s, this)
-					queue_insert(store, s)
+						U.soldier_inherit_tower_buff_factor(s, this)
+						queue_insert(store, s)
 
-					b.soldiers[i] = s
-					s.soldier.tower_soldier_idx = i
+						b.soldiers[i] = s
+						s.soldier.tower_soldier_idx = i
 
-					signal.emit("tower-spawn", this, s)
+						signal.emit("tower-spawn", this, s)
+					end
 				end
 			end
 
-			local success, err = coroutine.resume(this._ogre_bomber_co)
-			if coroutine.status(this._ogre_bomber_co) == "dead" then
-				if not success and err ~= nil then
-					error("Ogre bomber coroutine died with error: " .. err .. debug.traceback(this._ogre_bomber_co))
-				end
-			end
-
-			local success, err = coroutine.resume(this._ogre_attack_co)
-			if coroutine.status(this._ogre_attack_co) == "dead" then
-				if not success and err ~= nil then
-					error("Ogre attack coroutine died with error: " .. err .. debug.traceback(this._ogre_attack_co))
-				end
-			end
+			coroutine.resume(this._ogre_bomber_co)
+			coroutine.resume(this._ogre_attack_co)
 		end
 
 		if b.door_open and store.tick_ts - b.door_open_ts > b.door_hold_time then
