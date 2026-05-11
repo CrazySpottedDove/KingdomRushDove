@@ -4598,7 +4598,7 @@ function EncyclopediaView:detail_tower(index)
 	special_label.font_size = 15
 	special_label.line_height = CJK(0.85, nil, 1.1, 0.9)
 	special_label.colors.text = {0, 0, 0}
-	special_label.text = _(string.upper(dt.info.i18n_key or tower_name) .. "_SPECIAL")
+	special_label.text = _(string.upper(tower_name) .. "_SPECIAL")
 	special_label.text_align = "center"
 	special_label.fit_lines = 4
 
