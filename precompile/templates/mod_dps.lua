@@ -67,20 +67,6 @@ return function(this, store)
 
 	local fx_ts = 0
 
-	local function do_damage(target, value)
-		local d = E:create_entity("damage")
-
-		d.source_id = this.id
-		d.target_id = target.id
-		d.value = value * m.damage_factor
-		d.damage_type = dps.damage_type
-		d.pop = dps.pop
-		d.pop_chance = dps.pop_chance
-		d.pop_conds = dps.pop_conds
-
-		queue_damage(store, d)
-	end
-
 	this.pos = target.pos
 
 	while true do
@@ -90,22 +76,22 @@ return function(this, store)
 			break
 		end
 
-        constif(dps.damage_last)
 		if store.tick_ts - m.ts >= m.duration - 1e-09 then
-            local d = E:create_entity("damage")
+            constif(dps.damage_last)
+                local d = E:create_entity("damage")
 
-            d.source_id = this.id
-            d.target_id = target.id
-            d.value = dps.damage_last * m.damage_factor
-            d.damage_type = dps.damage_type
-            d.pop = dps.pop
-            d.pop_chance = dps.pop_chance
-            d.pop_conds = dps.pop_conds
+                d.source_id = this.id
+                d.target_id = target.id
+                d.value = dps.damage_last * m.damage_factor
+                d.damage_type = dps.damage_type
+                d.pop = dps.pop
+                d.pop_chance = dps.pop_chance
+                d.pop_conds = dps.pop_conds
 
-            queue_damage(store, d)
+                queue_damage(store, d)
+            constend
 			break
 		end
-        constend
 
         constif(this.render and this.modifier.use_mod_offset)
 		if target.unit.mod_offset then
