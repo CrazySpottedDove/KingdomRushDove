@@ -1171,3 +1171,8 @@ tt.damage_per_distance = 1
 tt.damage_per_distance_inc = 0
 tt.modifier.duration = 6
 tt.modifier.vis_flags = F_MOD
+
+tt = E:register_t("decal_timed_empty", "decal_timed")
+tt.render.sprites[1].name = "decal_bomb_crater"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].hidden = true

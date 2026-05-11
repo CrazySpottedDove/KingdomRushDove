@@ -4881,7 +4881,8 @@ scripts.giant_boulder = {
 			b.hit_fx_sort_y_offset = -1 - target.unit.hit_offset.y
 
 			if target.unit.hit_offset.y > 23 then
-				b.hit_decal = nil
+				-- b.hit_decal = nil
+				b.hit_decal = "decal_timed_empty"
 			end
 		end
 
@@ -29689,7 +29690,8 @@ function scripts.hero_muyrn.update(this, store)
 		if flying then
 			b.bullet.ignore_hit_offset = false
 			b.bullet.hit_fx = b.bullet.hit_fx_flying
-			b.bullet.hit_decal = nil
+			-- b.bullet.hit_decal = nil
+			b.bullet.hit_decal = "decal_timed_empty"
 			b.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 		end
 

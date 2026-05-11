@@ -132,3 +132,4 @@ server  ssh://dove@10.112.99.5:60001/srv/git/KingdomRushDove.git (push)
 - 对于 sprite 的 pos，如要修改其值，不应当直接为他赋一个新的 pos，而应该改动它的
   pos（赋值和克隆的区别，克隆会导致原有的引用关系失效，导致一系列优化问题）。
 - 对于一个 arrow，我们期待它的 payload 是一个 string? 类型的量。我们不希望在运行时直接通过赋值给某个 bullet，使它获得 payload。你可以为这种情况专门写一个脚本来实现类似的效果。如果是对实体数据库中所有同类 arrow 都生效的，则可以添加 payload，并对它的 update 脚本执行重新编译。
+- 不要在运行时把 hit_decal 置 nil，而是使用类似于 `decal_timed_empty` 的空 decal 替换他。
