@@ -5,6 +5,9 @@ return function(this, store)
     constvar a = this.aura
 	this.aura.ts = store.tick_ts
 
+    @constif(not a.cycles and a.duration >= 0)
+    this.aura.duration = this.aura.duration + this.aura.level * this.aura.duration_inc
+
 	local last_hit_ts = 0
 
     @constif(a.cycles)
@@ -12,15 +15,13 @@ return function(this, store)
 
 	while true do
 		constif(a.cycles)
-		if cycles_count >= this.aura.cycles then
-			break
-		end
-        constend
-
-		constif(a.duration >= 0)
-        if store.tick_ts - this.aura.ts >= this.aura.duration + this.aura.level * this.aura.duration_inc then
-            break
-        end
+            if cycles_count >= this.aura.cycles then
+                break
+            end
+        constelseif(a.duration >= 0)
+            if store.tick_ts - this.aura.ts >= this.aura.duration then
+                break
+            end
         constend
 
 		constif(a.track_source)
