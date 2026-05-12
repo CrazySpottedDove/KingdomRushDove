@@ -259,7 +259,7 @@ scripts.mod_endless_engineer_aftermath = {
 		if enemies then
 			for i = 1, #enemies do
 				local e = enemies[i]
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.damage_type = DAMAGE_EXPLOSION
 				d.value = this.value
@@ -360,7 +360,7 @@ function scripts.endless_mage_thunder.update(this, store)
 
 		if targets then
 			for _, target in ipairs(targets) do
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.damage_type = thunder.damage_type
 				d.value = math.random(thunder.damage_min, thunder.damage_max)

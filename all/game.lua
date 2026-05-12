@@ -711,7 +711,7 @@ if DEBUG then
 				local e = self.game_gui.selected_entity
 
 				if ctrl and shift and e.health then
-					local damage = E:create_entity("damage")
+					local damage = E.create_damage()
 
 					damage.value = e.health.hp
 					damage.target_id = e.id
@@ -719,7 +719,7 @@ if DEBUG then
 
 					table.insert(self.store.damage_queue, damage)
 				elseif shift and e.health then
-					local damage = E:create_entity("damage")
+					local damage = E.create_damage()
 
 					damage.value = math.floor(0.9 * e.health.hp - 1)
 					damage.target_id = e.id
@@ -728,7 +728,7 @@ if DEBUG then
 				elseif ctrl and e.health then
 					e.health.hp = e.health.hp_max
 				elseif e.health then
-					local damage = E:create_entity("damage")
+					local damage = E.create_damage()
 
 					damage.value = e.health.hp
 					damage.target_id = e.id

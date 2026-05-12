@@ -2956,7 +2956,7 @@ function scripts.enemy_bomb.update(this, store)
 	end
 
 	for _, target in ipairs(targets) do
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 
 		d.damage_type = b.damage_type
 
@@ -3351,7 +3351,7 @@ function scripts.enemy_missile.update(this, store)
 
 		for _, t in ipairs(targets) do
 			local t_pos = V.v(t.pos.x + t.unit.hit_offset.x, t.pos.y + t.unit.hit_offset.y)
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.source_id = this.id
 			d.target_id = t.id
@@ -3913,7 +3913,7 @@ function scripts.bolt_blast.update(this, store)
 
 	if enemies then
 		for _, enemy in ipairs(enemies) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.source_id = this.id
 			d.target_id = enemy.id
@@ -4272,7 +4272,7 @@ function scripts.ray_enemy.update(this, store)
 
 	if targets and b.damage_type ~= DAMAGE_NONE then
 		for _, t in ipairs(targets) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.source_id = this.id
 			d.target_id = t.id
@@ -4811,7 +4811,7 @@ function scripts.aura_apply_damage.update(this, store)
 				for i = 1, target_count do
 					local target = targets[i]
 
-					local d = E:create_entity("damage")
+					local d = E.create_damage()
 
 					d.source_id = this.id
 					d.target_id = target.id
@@ -5829,7 +5829,7 @@ function scripts.mod_dps.update(this, store)
 	local function do_damage(target, value)
 		total_damage = total_damage + value
 
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 
 		d.source_id = this.id
 		d.target_id = target.id
@@ -5943,7 +5943,7 @@ function scripts.mod_blood.update(this, store)
 	local function do_damage(target, value)
 		total_damage = total_damage + value
 
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 
 		d.source_id = this.id
 		d.target_id = target.id
@@ -6918,7 +6918,7 @@ function scripts.mod_damage.insert(this, store)
 		return false
 	end
 
-	local d = E:create_entity("damage")
+	local d = E.create_damage()
 
 	d.value = math.random(this.damage_min, this.damage_max)
 	d.source_id = this.id
@@ -6941,7 +6941,7 @@ function scripts.mod_teleport.insert(this, store)
 
 	if target and target.health and not target.health.dead and (not this.max_times_applied or not target.enemy.counts.mod_teleport or target.enemy.counts.mod_teleport < this.max_times_applied) and (not this.jump_connection or P:get_next_pi(target.nav_path.pi)) then
 		if this.damage_base ~= 0 then
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.source_id = this.id
 			d.target_id = target.id
@@ -7163,7 +7163,7 @@ function scripts.mod_polymorph.insert(this, store)
 		e_name = pm.custom_entity_names.default
 	end
 
-	local d = E:create_entity("damage")
+	local d = E.create_damage()
 
 	d.damage_type = bor(DAMAGE_EAT, DAMAGE_NO_LIFESTEAL)
 	d.source_id = this.id
@@ -7927,7 +7927,7 @@ function scripts.power_fireball.update(this, store)
 
 		for i = 1, #enemies do
 			local enemy = enemies[i]
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.source_id = this.id
 			d.target_id = enemy.id
@@ -8037,7 +8037,7 @@ function scripts.abomination_explosion_aura.update(this, store)
 
 	if targets then
 		for _, target in ipairs(targets) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.damage_type = this.aura.damage_type
 			d.value = this.aura.damage_max
@@ -8110,7 +8110,7 @@ function scripts.mod_lycanthropy.update(this, store)
 			return
 		end
 
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 
 		d.damage_type = DAMAGE_EAT
 		d.source_id = this.id
@@ -9411,7 +9411,7 @@ function scripts.mod_lifesteal_kr5.insert(this, store)
 			dmg_value = math.random(damage_min, damage_max)
 		end
 
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 
 		d.value = dmg_value
 		d.source_id = this.id
@@ -9689,7 +9689,7 @@ function scripts.mod_do_damage_by_movement.insert(this, store)
 	end
 
 	this.pos:copy(target.pos)
-	this.damage_cache = E:create_entity("damage")
+	this.damage_cache = E.create_damage()
 	this.damage_cache.damage_type = this.damage_type
 	this.damage_cache.source_id = this.id
 	this.damage_cache.target_id = target.id

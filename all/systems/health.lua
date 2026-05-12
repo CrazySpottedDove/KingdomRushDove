@@ -669,7 +669,7 @@ function M.register(sys)
 							local t = entities[d.source_id]
 
 							if t and t.health and not t.health.dead then
-								local sad = E:create_entity("damage")
+								local sad = E.create_damage()
 
 								sad.damage_type = DAMAGE_TRUE
 								sad.value = h.spiked_armor * d.value
@@ -683,7 +683,7 @@ function M.register(sys)
 							local t = entities[d.source_id]
 
 							if t and t.health and not t.health.dead then
-								local sad = E:create_entity("damage")
+								local sad = E.create_damage()
 
 								sad.damage_type = h.constant_spiked_armor.damage_type
 								sad.value = h.constant_spiked_armor.value

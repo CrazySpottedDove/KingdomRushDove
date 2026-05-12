@@ -272,6 +272,19 @@ function entity_db:create_entity(t)
 	return out
 end
 
+--- 这是一个面向伤害的特殊优化函数，因为调用 table.deepclone 在创建伤害时的效率是直接给一个伤害表的 1 / 10。
+--- 注意和 templates.lua 中的 damage 模板同步定义。
+function entity_db.create_damage()
+	return {
+		damage_type = DAMAGE_TRUE,
+		value = 0,
+		reduce_armor = 0,
+		reduce_magic_armor = 0,
+		damage_result = 0,
+		hooks = {}
+	}
+end
+
 function entity_db:clone_entity(e)
 	local out = copy(e)
 

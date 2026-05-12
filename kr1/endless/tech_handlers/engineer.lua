@@ -65,7 +65,7 @@ local function engineer_focus_bomb_update(this, store)
 	if enemies then
 		for i = 1, #enemies do
 			local enemy = enemies[i]
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.damage_type = b.damage_type
 			d.reduce_armor = b.reduce_armor

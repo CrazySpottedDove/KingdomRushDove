@@ -91,7 +91,7 @@ scripts.soldier_templar = {}
 function scripts.soldier_templar.side_effect_1(this, store, attack, target)
 	this.revive.protect = this.revive.protect + 0.01
 	if target then
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 		d.source_id = this.id
 		d.target_id = target.id
 		d.value = math.ceil(this.health.hp_max * 0.02 * this.powers.extralife.level)
@@ -104,7 +104,7 @@ function scripts.soldier_templar.side_effect_2(this, store, attack, target)
 	this.revive.protect = this.revive.protect + 0.01
 	if target then
 		target.health.damage_factor = target.health.damage_factor * 1.035
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 		d.source_id = this.id
 		d.target_id = target.id
 		d.value = math.ceil(this.health.hp_max * 0.03 * this.powers.extralife.level)
@@ -3993,7 +3993,7 @@ scripts.tower_dwaarp = {
 								local u = UP:get_upgrade("engineer_magic_dust")
 
 								for _, enemy in ipairs(enemies) do
-									local d = E:create_entity("damage")
+									local d = E.create_damage()
 
 									d.source_id = this.id
 									d.target_id = enemy.id
@@ -4323,7 +4323,7 @@ scripts.tower_entwood = {
 
 						if targets then
 							for i, target in ipairs(targets) do
-								local d = E:create_entity("damage")
+								local d = E.create_damage()
 
 								d.source_id = this.id
 								d.target_id = target.id
@@ -5328,7 +5328,7 @@ function scripts.mod_druid_sylvan.update(this, store)
 		end
 
 		if store.tick_ts - ray_ts > this.ray_cooldown then
-			local damage = E:create_entity("damage")
+			local damage = E.create_damage()
 
 			damage.value = this.damage
 			damage.damage_type = DAMAGE_TRUE
@@ -6019,7 +6019,7 @@ function scripts.tower_dark_elf.update(this, store)
 	-- 找到范围内生命最高的、且一定能被一发子弹击杀的敌人
 	local function find_target_to_kill(node_prediction)
 		local target_to_kill, targets = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(this), this.attacks.range, attack.vis_flags, attack.vis_bans)
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 		local bullet = E:get_template(attack.bullet).bullet
 
 		d.value = this.tower.damage_factor * (bullet.damage_min + this.tower_upgrade_persistent_data.souls_extra_damage_min)
@@ -7099,7 +7099,7 @@ function scripts.soldier_tower_demon_pit.update(this, store)
 
 		if targets then
 			for _, target in ipairs(targets) do
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.value = (u and damage_max or random(damage_min, damage_max)) * factor
 				d.damage_type = dty
@@ -7341,7 +7341,7 @@ function scripts.big_guy_tower_demon_pit.update(this, store)
 
 		if targets then
 			for _, target in ipairs(targets) do
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.value = damage
 				d.damage_type = dty
@@ -10229,7 +10229,7 @@ function scripts.soldier_tower_pandas.update(this, store)
 								if affected then
 									for _, enemy in ipairs(affected) do
 										if enemy.health and not enemy.health.dead then
-											local d = E:create_entity("damage")
+											local d = E.create_damage()
 
 											d.source_id = this.id
 											d.target_id = enemy.id
@@ -10293,7 +10293,7 @@ function scripts.soldier_tower_pandas.update(this, store)
 
 						for i = 1, num_targets do
 							local t = targets[i]
-							local d = E:create_entity("damage")
+							local d = E.create_damage()
 
 							d.source_id = this.id
 							d.target_id = t.id
@@ -10892,7 +10892,7 @@ function scripts.mod_tower_ray_damage.update(this, store)
 	local source = store.entities[m.source_id]
 
 	local function apply_damage(value)
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 
 		d.source_id = this.id
 		d.target_id = target.id
@@ -11158,7 +11158,7 @@ function scripts.bullet_tower_ray.update(this, store)
 		if explosion_targets then
 			for i = 1, #explosion_targets do
 				local explosion_target = explosion_targets[i]
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.source_id = this.id
 				d.target_id = explosion_target.id
@@ -11886,7 +11886,7 @@ function scripts.mod_ray_stargazers.update(this, store)
 	end
 
 	-- local function apply_damage(value)
-	--     local d = E:create_entity("damage")
+	--     local d = E.create_damage()
 	--     d.source_id = this.id
 	--     d.target_id = target.id
 	--     d.value = value * m.damage_factor
@@ -12397,7 +12397,7 @@ function scripts.aura_tower_sand_skill_big_blade.update(this, store)
 
 			if targets then
 				for i, target in ipairs(targets) do
-					local d = E:create_entity("damage")
+					local d = E.create_damage()
 
 					d.source_id = this.id
 					d.target_id = target.id
@@ -13002,7 +13002,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.update(this, sto
 
 				S:queue(ca.sound)
 
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.source_id = this.id
 				d.target_id = target.id
@@ -13583,7 +13583,7 @@ function scripts.tower_arcane_wizard_ray_disintegrate_mod.update(this, store)
 
 		if store.tick_ts - m.ts >= m.duration then
 			-- if is_boss then
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.source_id = this.id
 			d.target_id = target.id
@@ -13594,7 +13594,7 @@ function scripts.tower_arcane_wizard_ray_disintegrate_mod.update(this, store)
 
 			break
 		-- else
-		--     local d = E:create_entity("damage")
+		--     local d = E.create_damage()
 		--     d.source_id = this.id
 		--     d.target_id = target.id
 		--     d.damage_type = m.damage_type
@@ -13765,7 +13765,7 @@ local function tower_rocket_gunners_phosphoric_area_damage(soldier, store, targe
 	end
 
 	for _, enemy in ipairs(enemies) do
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 
 		d.damage_type = attack.damage_type
 
@@ -14710,7 +14710,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 	end
 
 	if target and not target.health.dead then
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 
 		d.source_id = this.id
 		d.target_id = target.id
@@ -15308,7 +15308,7 @@ function scripts.tower_flamespitter.update(this, store)
 
 						if aura_targets then
 							for _, aura_target in ipairs(aura_targets) do
-								local d = E:create_entity("damage")
+								local d = E.create_damage()
 
 								d.source_id = this.id
 								d.target_id = aura_target.id
@@ -15484,7 +15484,7 @@ function scripts.controller_tower_flamespitter_column.update(this, store)
 
 	if enemies and #enemies > 0 then
 		for _, enemy in ipairs(enemies) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.damage_type = this.damage_in_type
 			d.value = random(this.damage_in_min, this.damage_in_max) * this.damage_factor
@@ -15499,7 +15499,7 @@ function scripts.controller_tower_flamespitter_column.update(this, store)
 
 	if enemies and #enemies > 0 then
 		for _, enemy in ipairs(enemies) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.damage_type = this.damage_out_type
 			d.value = random(this.damage_out_min, this.damage_out_max) * this.damage_factor
@@ -16228,7 +16228,7 @@ function scripts.bullet_tower_ballista_skill_bomb.update(this, store)
 
 	if enemies then
 		for _, enemy in ipairs(enemies) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.damage_type = b.damage_type
 			d.reduce_armor = b.reduce_armor
@@ -16798,7 +16798,7 @@ function scripts.aura_bullet_tower_barrel_skill_barrel.update(this, store)
 
 	if targets then
 		for i, target in ipairs(targets) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.damage_type = this.explosion_damage_type
 
@@ -17714,7 +17714,7 @@ function scripts.tower_hermit_toad.update(this, store)
 
 					if targets then
 						for _, t in ipairs(targets) do
-							local d = E:create_entity("damage")
+							local d = E.create_damage()
 
 							d.damage_type = attack.damage_type
 
@@ -20053,7 +20053,7 @@ function scripts.tower_paladin_covenant.soldier_update(this, store)
 						local enemies = U.find_enemies_in_range_filter_off(this.pos, 50, bor(F_STUN, F_TELEPORT), bor(F_FLYING, F_BOSS))
 						if enemies then
 							for i = 1, #enemies do
-								local damage = E:create_entity("damage")
+								local damage = E.create_damage()
 								damage.value = a.beat_back_damage_value * this.unit.damage_factor
 								damage.damage_type = a.beat_back_damage_type
 								damage.source_id = this.id
@@ -20248,7 +20248,7 @@ function scripts.tower_arborean_emissary.update(this, store)
 
 								queue_insert(store, m)
 
-								local d = E:create_entity("damage")
+								local d = E.create_damage()
 
 								d.value = math.random(aw.damage_min, aw.damage_max) * tw.damage_factor
 								d.source_id = this.id
@@ -22542,7 +22542,7 @@ function scripts.tower_shadow_archer.update(this, store)
 							U.y_wait(store, as.shoot_time)
 
 							if not enemy.health.dead then
-								local d = E:create_entity("damage")
+								local d = E.create_damage()
 								d.source_id = this.id
 								d.target_id = enemy.id
 								d.damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_FX_EXPLODE)
@@ -22703,14 +22703,14 @@ function scripts.shadow_crow.update(this, store)
 			if ready_to_attack(ca, store, this.owner.tower.cooldown_factor) and this.pos:dist2(target.pos) <= 2500 then
 				U.animation_start(this, "carry", nil, store.tick_ts, true)
 
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 				d.source_id = this.id
 				d.target_id = target.id
 				d.value = math.random(ca.damage_min, ca.damage_max) * this.owner.tower.damage_factor
 				d.damage_type = ca.damage_type
 				queue_damage(store, d)
 
-				d = E:create_entity("damage")
+				d = E.create_damage()
 				d.source_id = this.id
 				d.target_id = target.id
 				d.value = this.damage_armor
@@ -23522,7 +23522,7 @@ function scripts.aura_lava_fissure.update(this, store)
 
 	if targets then
 		for _, e in ipairs(targets) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.damage_type = a.damage_type
 			d.value = math.random(a.damage_min, a.damage_max) * a.damage_factor
@@ -23843,7 +23843,7 @@ function scripts.bullet_orc_shaman_shock.update(this, store)
 	if enemies then
 		for i = 1, #enemies do
 			local enemy = enemies[i]
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 			d.source_id = this.id
 			d.target_id = enemy.id
 			d.value = math.ceil(U.frandom(dmin, dmax) * b.damage_factor)
@@ -23975,7 +23975,7 @@ function scripts.fireball_orc_shaman_meteorite.update(this, store)
 	if enemies then
 		for i = 1, #enemies do
 			local enemy = enemies[i]
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.source_id = this.id
 			d.target_id = enemy.id

@@ -108,7 +108,7 @@ return function(this, store)
 				for i = 1, #targets do
 					local target = targets[i]
 
-					local d = E:create_entity("damage")
+					local d = E.create_damage()
 
 					d.source_id = this.id
 					d.target_id = target.id

@@ -1016,7 +1016,7 @@ scripts.hero_mirage = {
 						U.y_wait(store, a_l.hit_time)
 
 						if target and not target.health.dead then
-							local d = E:create_entity("damage")
+							local d = E.create_damage()
 
 							d.source_id = this.id
 							d.target_id = target.id
@@ -1339,7 +1339,7 @@ scripts.mod_ray_wizard = {
 					cycle_damage = cycle_damage + final_damage
 				end
 
-				d = E:create_entity("damage")
+				d = E.create_damage()
 				d.source_id = this.id
 				d.target_id = target.id
 				d.value = cycle_damage
@@ -1535,7 +1535,7 @@ scripts.hero_wizard = {
 								remaining_damage = remaining_damage - t.health.hp
 								count = count - 1
 
-								local d = E:create_entity("damage")
+								local d = E.create_damage()
 
 								d.damage_type = DAMAGE_EAT
 								d.target_id = t.id
@@ -1904,7 +1904,7 @@ scripts.decal_bolin_mine = {
 				local new_targets = U.find_enemies_in_range_filter_off(this.pos, 2 * this.radius, this.vis_flags, this.vis_bans)
 
 				for _, t in ipairs(new_targets) do
-					local d = E:create_entity("damage")
+					local d = E.create_damage()
 
 					d.damage_type = DAMAGE_EXPLOSION
 					d.source_id = this.id
@@ -2758,7 +2758,7 @@ scripts.beastmaster_rhino = {
 							queue_insert(store, m)
 						end
 
-						local d = E:create_entity("damage")
+						local d = E.create_damage()
 
 						d.source_id = this.id
 						d.target_id = e.id
@@ -2843,7 +2843,7 @@ scripts.beastmaster_falcon = {
 					else
 						this.pos.x, this.pos.y = target.pos.x, target.pos.y - 1
 
-						local d = E:create_entity("damage")
+						local d = E.create_damage()
 
 						d.source_id = this.id
 						d.target_id = target.id
@@ -3817,7 +3817,7 @@ scripts.aura_malik_fissure = {
 
 			if targets then
 				for _, t in ipairs(targets) do
-					local d = E:create_entity("damage")
+					local d = E.create_damage()
 
 					d.value = math.random(a.damage_min, a.damage_max)
 					d.damage_type = a.damage_type
@@ -4530,7 +4530,7 @@ scripts.magnus_arcane_rain = {
 
 		if targets then
 			for _, target in ipairs(targets) do
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.damage_type = this.damage_type
 				d.source_id = this.id
@@ -4909,7 +4909,7 @@ scripts.mod_giant_massivedamage = {
 		s.flip_x = source.render.sprites[1].flip_x
 		s.ts = store.tick_ts
 
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 
 		d.source_id = this.id
 		d.target_id = target.id
@@ -5082,7 +5082,7 @@ scripts.hero_giant = {
 			end
 
 			for _, t in ipairs(targets) do
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.source_id = this.id
 				d.target_id = t.id
@@ -5472,7 +5472,7 @@ function scripts.hero_dracolich.update(this, store)
 				U.y_wait(store, a.hit_time)
 
 				for _, target in ipairs(targets) do
-					local d = E:create_entity("damage")
+					local d = E.create_damage()
 
 					d.damage_type = a.damage_type
 					d.source_id = this.id
@@ -6745,7 +6745,7 @@ scripts.hero_ignus = {
 
 									queue_insert(store, fx)
 
-									local d = E:create_entity("damage")
+									local d = E.create_damage()
 
 									d.damage_type = a.damage_type
 									d.source_id = this.id
@@ -7522,7 +7522,7 @@ scripts.power_fireball_10yr = {
 		local damage_value = math.ceil(b.damage_factor * math.random(b.damage_min, b.damage_max))
 
 		for _, enemy in ipairs(enemies) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.source_id = this.id
 			d.target_id = enemy.id
@@ -7637,7 +7637,7 @@ scripts.power_giant_fireball_10yr = {
 		local damage_value = math.ceil(b.damage_factor * math.random(b.damage_min, b.damage_max))
 
 		for _, enemy in ipairs(enemies) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.source_id = this.id
 			d.target_id = enemy.id
@@ -7938,7 +7938,7 @@ function scripts.hero_vampiress.update(this, store)
 
 					if targets then
 						for _, e in ipairs(targets) do
-							local d = E:create_entity("damage")
+							local d = E.create_damage()
 
 							d.source_id = this.id
 							d.target_id = e.id
@@ -8039,7 +8039,7 @@ scripts.hero_alien = {
 }
 
 function scripts.hero_alien.vibroblades_side_effect(this, store, attack, damage)
-	local d = E:create_entity("damage")
+	local d = E.create_damage()
 
 	d.source_id = this.id
 	d.target_id = damage.target_id
@@ -8314,7 +8314,7 @@ scripts.hero_monk = {
 							goto label_393_2
 						end
 
-						local d = E:create_entity("damage")
+						local d = E.create_damage()
 
 						d.source_id = this.id
 						d.target_id = target.id
@@ -8382,7 +8382,7 @@ scripts.hero_monk = {
 
 						if targets then
 							for _, t in ipairs(targets) do
-								local d = E:create_entity("damage")
+								local d = E.create_damage()
 
 								d.source_id = this.id
 								d.target_id = t.id
@@ -8489,7 +8489,7 @@ scripts.hero_monk = {
 							coroutine.yield()
 						end
 
-						local d = E:create_entity("damage")
+						local d = E.create_damage()
 
 						d.source_id = this.id
 						d.target_id = target.id
@@ -8748,7 +8748,7 @@ function scripts.hero_voodoo_witch.update(this, store)
 
 						for _, t in ipairs(targets) do
 							if not t.health.dead and store.entities[t.id] then
-								local d = E:create_entity("damage")
+								local d = E.create_damage()
 
 								d.source_id = this.id
 								d.target_id = t.id
@@ -9019,7 +9019,7 @@ function scripts.hero_crab.update(this, store)
 
 									queue_insert(store, mod)
 
-									local d = E:create_entity("damage")
+									local d = E.create_damage()
 
 									d.source_id = this.id
 									d.target_id = e.id
@@ -9169,7 +9169,7 @@ function scripts.hero_crab.update(this, store)
 
 				if targets then
 					for _, t in ipairs(targets) do
-						local d = E:create_entity("damage")
+						local d = E.create_damage()
 
 						d.source_id = this.id
 						d.target_id = t.id
@@ -9388,7 +9388,7 @@ scripts.hero_minotaur = {
 		queue_insert(store, ps)
 
 		local function do_rush_damage(target, a, final_hit)
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.source_id = this.id
 			d.target_id = target.id
@@ -9463,7 +9463,7 @@ scripts.hero_minotaur = {
 							local heal = 0
 
 							for _, e in ipairs(targets) do
-								local d = E:create_entity("damage")
+								local d = E.create_damage()
 
 								d.source_id = this.id
 								d.target_id = e.id
@@ -10537,7 +10537,7 @@ scripts.arrow_hero_elves_archer_ultimate = {
 
 		if targets then
 			for _, target in ipairs(targets) do
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.damage_type = b.damage_type
 				d.value = b.damage_max * b.damage_factor
@@ -11107,7 +11107,7 @@ function scripts.mod_regson_slash.update(this, store)
 	U.animation_start(this, this.name, nil, store.tick_ts)
 	U.y_wait(store, this.hit_time)
 
-	local d = E:create_entity("damage")
+	local d = E.create_damage()
 
 	d.source_id = this.id
 	d.target_id = target.id
@@ -11153,7 +11153,7 @@ function scripts.hero_regson_ultimate.update(this, store)
 		U.y_wait(store, this.hit_time)
 
 		do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.source_id = this.id
 			d.target_id = target.id
@@ -11524,7 +11524,7 @@ function scripts.mod_lynn_ultimate.update(this, store)
 
 					queue_insert(store, new_mod)
 
-					local d = E:create_entity("damage")
+					local d = E.create_damage()
 
 					d.damage_type = this.explode_damage_type
 					d.value = this.explode_damage * this.modifier.damage_factor
@@ -11546,7 +11546,7 @@ function scripts.mod_lynn_ultimate.update(this, store)
 		if dps.damage_every and store.tick_ts - dps.ts >= dps.damage_every then
 			dps.ts = dps.ts + dps.damage_every
 
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.source_id = this.id
 			d.target_id = target.id
@@ -12312,7 +12312,7 @@ function scripts.hero_veznan.update(this, store)
 					local o = V.v(a.balls_dest_offset.x * (this.render.sprites[1].flip_x and -1 or 1), a.balls_dest_offset.y)
 
 					for _, target in ipairs(targets) do
-						local d = E:create_entity("damage")
+						local d = E.create_damage()
 
 						d.damage_type = DAMAGE_EAT
 						d.target_id = target.id
@@ -12849,7 +12849,7 @@ function scripts.hero_durax_ultimate.update(this, store)
 		local single = #targets == 1
 
 		for i, target in ipairs(targets) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.value = this.damage / #targets
 			d.damage_type = this.damage_type
@@ -13721,7 +13721,7 @@ function scripts.fireball_arivan.update(this, store)
 
 	if targets then
 		for _, target in ipairs(targets) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.damage_type = b.damage_type
 			d.value = U.frandom(b.damage_min, b.damage_max) * b.damage_factor
@@ -13882,7 +13882,7 @@ function scripts.hero_arivan_ultimate.update(this, store)
 							end
 						elseif ai == 2 then
 							for _, target in ipairs(targets) do
-								local d = E:create_entity("damage")
+								local d = E.create_damage()
 
 								d.damage_type = a.damage_type
 								d.value = a.damage_max
@@ -14238,7 +14238,7 @@ function scripts.hero_phoenix_ultimate.update(this, store)
 
 	if targets then
 		for _, t in ipairs(targets) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.value = math.random(a.damage_min, a.damage_max) * this.damage_factor
 			d.damage_type = a.damage_type
@@ -14600,7 +14600,7 @@ function scripts.hero_bravebark_ultimate.update(this, store)
 
 					queue_insert(store, m)
 
-					local d = E:create_entity("damage")
+					local d = E.create_damage()
 
 					d.value = this.damage * this.damage_factor
 					d.source_id = this.id
@@ -16839,7 +16839,7 @@ function scripts.lion_bruce.update(this, store)
 			if targets then
 				for _, e in ipairs(targets) do
 					if U.flag_has(e.vis.flags, F_BOSS) then
-						local d = E:create_entity("damage")
+						local d = E.create_damage()
 
 						d.value = attack.damage_boss * this.damage_factor
 						d.source_id = this.id
@@ -17319,7 +17319,7 @@ function scripts.hero_dragon.update(this, store)
 
 				queue_insert(store, fx)
 
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.damage_type = a.damage_type
 				d.value = (a.damage + this.unit.damage_buff) * this.unit.damage_factor
@@ -17562,7 +17562,7 @@ function scripts.breath_dragon.update(this, store)
 
 			for _, e in ipairs(targets) do
 				if e.health and not e.health.dead then
-					local d = E:create_entity("damage")
+					local d = E.create_damage()
 
 					d.damage_type = b.damage_type
 					d.value = damage_per_step
@@ -17688,7 +17688,7 @@ function scripts.aura_fiery_mist_ashbite.update(this, store)
 
 					queue_insert(store, m)
 
-					local d = E:create_entity("damage")
+					local d = E.create_damage()
 
 					d.source_id = this.id
 					d.target_id = target.id
@@ -18890,7 +18890,7 @@ function scripts.mod_hero_hunter_ricochet_attack.update(this, store)
 
 	while true do
 		if not already_hit and store.tick_ts - m.ts >= this.hit_delay then
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.damage_type = this.damage_type
 			d.value = math.random(this.damage_min, this.damage_max) * this.modifier.damage_factor
@@ -19012,7 +19012,7 @@ function scripts.aura_hero_hunter_shoot_around.update(this, store)
 			end) or {}
 
 			for _, target in ipairs(targets) do
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.source_id = this.id
 				d.target_id = target.id
@@ -19225,7 +19225,7 @@ function scripts.soldier_hero_hunter_beast.update(this, store)
 			if not already_hit and store.tick_ts - start_attack_ts >= attack.shoot_time then
 				already_hit = true
 
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.source_id = this.id
 				d.target_id = target.id
@@ -20365,7 +20365,7 @@ function scripts.mod_hero_space_elf_black_aegis.update(this, store)
 
 			if targets then
 				for _, target in ipairs(targets) do
-					local d = E:create_entity("damage")
+					local d = E.create_damage()
 
 					d.value = this.explosion_damage * this.modifier.damage_factor
 					d.damage_type = this.explosion_damage_type
@@ -20501,7 +20501,7 @@ function scripts.aura_hero_space_elf_void_rift.update(this, store)
 			end)
 
 			for _, target in ipairs(targets) do
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.source_id = this.id
 				d.target_id = target.id
@@ -20683,7 +20683,7 @@ function scripts.mod_hero_space_elf_ultimate.update(this, store)
 			target.health.last_damage_types = DAMAGE_NO_SPAWNS
 		end
 	else
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 
 		d.damage_type = this.damage_type
 		d.value = this.damage
@@ -20923,7 +20923,7 @@ function scripts.hero_raelyn.update(this, store)
 
 									queue_insert(store, m)
 								end
-								local d = E:create_entity("damage")
+								local d = E.create_damage()
 								d.value = a.damage
 								d.damage_type = a.damage_type
 								d.source_id = this.id
@@ -21709,7 +21709,7 @@ function scripts.hero_venom.update(this, store)
 
 						if eat_targets then
 							for _, eat_target in pairs(eat_targets) do
-								local d = E:create_entity("damage")
+								local d = E.create_damage()
 
 								d.source_id = this.id
 								d.target_id = eat_target.id
@@ -22061,7 +22061,7 @@ function scripts.decal_hero_venom_spike.update(this, store)
 
 	if enemies and #enemies > 0 then
 		for i = 1, #enemies do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.damage_type = this.damage_type
 			d.value = math.random(this.damage_min, this.damage_max)
@@ -22234,7 +22234,7 @@ function scripts.aura_hero_venom_ultimate.update(this, store)
 			end)
 
 			for i, target in ipairs(targets) do
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.damage_type = this.end_damage_type
 				d.value = math.random(this.end_damage_min, this.end_damage_max) * this.aura.damage_factor
@@ -23210,7 +23210,7 @@ function scripts.bolt_hero_dragon_gem_attack.update(this, store)
 
 		if targets then
 			for _, target in ipairs(targets) do
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.value = math.random(damage_min, damage_max) * b.damage_factor
 				d.damage_type = dty
@@ -23431,7 +23431,7 @@ function scripts.decal_hero_dragon_gem_floor_impact_shard.update(this, store)
 
 	if targets then
 		for _, target in ipairs(targets) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.value = math.random(this.damage_min, this.damage_max)
 			d.damage_type = this.damage_type
@@ -23494,7 +23494,7 @@ function scripts.mod_hero_dragon_gem_crystal_instakill.update(this, store)
 		end
 	end
 
-	local d = E:create_entity("damage")
+	local d = E.create_damage()
 
 	d.value = 1
 	d.damage_type = this.damage_type
@@ -23548,7 +23548,7 @@ function scripts.mod_hero_dragon_gem_crystal_instakill.update(this, store)
 
 		if targets then
 			for _, target in ipairs(targets) do
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.value = math.random(this.damage_aoe_min, this.damage_aoe_max) * this.modifier.damage_factor
 				d.damage_type = this.damage_type_aoe
@@ -23660,7 +23660,7 @@ function scripts.aura_hero_dragon_gem_crystal_totem.update(this, store)
 
 			if targets then
 				for _, target in ipairs(targets) do
-					local d = E:create_entity("damage")
+					local d = E.create_damage()
 
 					d.value = math.random(this.damage_min, this.damage_max) * this.aura.damage_factor
 					d.damage_type = this.damage_type
@@ -23814,7 +23814,7 @@ function scripts.bullet_hero_dragon_gem_ultimate_shard.update(this, store)
 
 	if targets then
 		for _, target in ipairs(targets) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.damage_type = b.damage_type
 			d.value = b.damage_max * b.damage_factor
@@ -23899,7 +23899,7 @@ function scripts.decal_hero_dragon_gem_ultimate_shard.update(this, store)
 
 	if targets then
 		for _, target in ipairs(targets) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.value = math.random(this.damage_min, this.damage_max)
 			d.damage_type = this.damage_type
@@ -24746,7 +24746,7 @@ function scripts.aura_hero_witch_path_aoe.update(this, store)
 	end)
 
 	for i, target in ipairs(targets) do
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 
 		d.damage_type = this.damage_type
 		d.value = math.random(this.damage_min, this.damage_max) * this.aura.damage_factor
@@ -25485,7 +25485,7 @@ function scripts.hero_dragon_bone.update(this, store)
 
 			if targets then
 				for i, v in ipairs(targets) do
-					local d = E:create_entity("damage")
+					local d = E.create_damage()
 
 					d.source_id = this.id
 					d.target_id = v.id
@@ -25925,7 +25925,7 @@ function scripts.bolt_dragon_bone_basic_attack.update(this, store)
 
 		if targets then
 			for _, target in ipairs(targets) do
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.value = math.random(damage_min, damage_max)
 				d.damage_type = dty
@@ -25992,7 +25992,7 @@ function scripts.mod_dragon_bone_plague.remove(this, store)
 
 				queue_insert(store, m)
 
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.source_id = this.id
 				d.target_id = t.id
@@ -26232,7 +26232,7 @@ function scripts.bullet_dragon_bone_rain.update(this, store)
 
 	if targets then
 		for _, target in ipairs(targets) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.damage_type = b.damage_type
 			d.source_id = this.id
@@ -26316,7 +26316,7 @@ function scripts.bolt_dragon_bone_burst.update(this, store)
 		local is_flying
 
 		if target then
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.damage_type = b.damage_type
 			d.value = math.random(dmin, dmax) * b.damage_factor
@@ -27113,7 +27113,7 @@ function scripts.soldier_lumenir_ultimate.update(this, store)
 					end
 
 					if attack.damage_type ~= DAMAGE_NONE then
-						local d = E:create_entity("damage")
+						local d = E.create_damage()
 
 						d.damage_type = attack.damage_type
 						d.value = math.ceil(U.frandom(attack.damage_min, attack.damage_max))
@@ -27178,7 +27178,7 @@ function scripts.mod_hero_lumenir_sword_hit.update(this, store)
 			damaged = true
 
 			if target and not target.health.dead then
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.source_id = this.id
 				d.target_id = target.id
@@ -27539,7 +27539,7 @@ function scripts.aura_fire_balls_hero_lumenir.update(this, store)
 			-- block empty
 			else
 				for _, e in ipairs(targets) do
-					local d = E:create_entity("damage")
+					local d = E.create_damage()
 
 					d.source_id = this.id
 					d.target_id = e.id
@@ -27958,7 +27958,7 @@ function scripts.hero_wukong.update(this, store)
 	end
 
 	local function create_damage(a, target_id)
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 
 		d.source_id = this.id
 		d.target_id = target_id
@@ -28320,7 +28320,7 @@ function scripts.hero_wukong.update(this, store)
 
 									if target then
 										-- queue_damage(store, create_damage(a, target.id))
-										local d = E:create_entity("damage")
+										local d = E.create_damage()
 
 										d.source_id = this.id
 										d.target_id = target.id
@@ -28776,7 +28776,7 @@ function scripts.controller_hero_wukong_ultimate.update(this, store)
 
 		if targets then
 			for _, e in ipairs(targets) do
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.value = this.damage * this.damage_factor
 				d.damage_type = this.damage_type
@@ -28945,7 +28945,7 @@ function scripts.decal_hero_wukong_ranged_attack_staff.update(this, store)
 
 	if targets then
 		for _, e in ipairs(targets) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.value = math.random(this.damage_min, this.damage_max) * this.damage_factor
 			d.damage_type = this.damage_type
@@ -29508,7 +29508,7 @@ function scripts.hero_vesper_ultimate_arrow.update(this, store)
 
 	if targets then
 		for _, target in ipairs(targets) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.damage_type = b.damage_type
 			d.value = b.damage_max
@@ -32153,7 +32153,7 @@ function scripts.mod_hero_dragon_arb_bleed.update(this, store, script)
 	local fx_ts = 0
 
 	local function do_damage(target, value, damage_type)
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 
 		d.source_id = this.id
 		d.target_id = target.id
@@ -33664,7 +33664,7 @@ function scripts.decal_hero_builder_ultimate_projectile.update(this, store)
 
 	if targets then
 		for _, target in ipairs(targets) do
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.damage_type = b.damage_type
 			d.value = b.damage_max
@@ -33871,7 +33871,7 @@ function scripts.hero_robot.update(this, store)
 
 		if enemies then
 			for _, enemy in ipairs(enemies) do
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.damage_type = damage_type
 
@@ -34422,7 +34422,7 @@ function scripts.bullet_hero_robot_skill_fire.update(this, store)
 	end)
 
 	for _, enemy in ipairs(enemies) do
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 
 		d.damage_type = this.bullet.damage_type
 
@@ -35492,7 +35492,7 @@ function scripts.hero_bird.update(this, store)
 						U.animation_start(this, an, af, store.tick_ts, true)
 
 						local function do_gattling_damage(target)
-							local d = E:create_entity("damage")
+							local d = E.create_damage()
 
 							d.damage_type = a.damage_type
 							d.value = math.random(a.damage_min, a.damage_max)
@@ -35616,7 +35616,7 @@ function scripts.hero_bird.update(this, store)
 							coroutine.yield()
 						end
 
-						local d = E:create_entity("damage")
+						local d = E.create_damage()
 
 						d.damage_type = DAMAGE_INSTAKILL
 						d.value = 10
@@ -36424,7 +36424,7 @@ function scripts.bullet_ultimate_hero_lava.update(this, store, script)
 	local damage_value = math.ceil(b.damage_factor * math.random(b.damage_min, b.damage_max))
 
 	for _, enemy in ipairs(enemies) do
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 
 		d.source_id = this.id
 		d.target_id = enemy.id
@@ -36786,7 +36786,7 @@ function scripts.hero_spider.update(this, store)
 					if target and targets then
 						for _, enemy in ipairs(targets) do
 							if enemy and not enemy.dead then
-								local d = E:create_entity("damage")
+								local d = E.create_damage()
 
 								d.damage_type = a.damage_type
 								d.value = math.random(a.damage_min[skill.level], a.damage_max[skill.level])
@@ -37059,7 +37059,7 @@ function scripts.hero_spider.update(this, store)
 						if target and targets then
 							for _, enemy in ipairs(targets) do
 								if enemy and not enemy.dead then
-									local d = E:create_entity("damage")
+									local d = E.create_damage()
 
 									d.damage_type = a.damage_type
 									d.value = math.random(a.damage_min[skill.level], a.damage_max[skill.level])
@@ -37175,7 +37175,7 @@ function scripts.mod_hero_spider_skill_instakill_melee.update(this, store, scrip
 	this.pos = target.pos
 	start_ts = store.tick_ts
 
-	local d = E:create_entity("damage")
+	local d = E.create_damage()
 
 	d.damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_FX_NOT_EXPLODE, DAMAGE_NO_SPAWNS, DAMAGE_IGNORE_SHIELD)
 	d.source_id = this.id
@@ -37567,7 +37567,7 @@ function scripts.hero_mecha.update(this, store)
 					if target and targets then
 						for _, enemy in ipairs(targets) do
 							if enemy and not enemy.dead then
-								local d = E:create_entity("damage")
+								local d = E.create_damage()
 
 								d.damage_type = a.damage_type
 								d.value = math.random(a.damage_min[skill.level], a.damage_max[skill.level])
@@ -38256,7 +38256,7 @@ function scripts.aura_bullet_hero_mecha_mine.update(this, store)
 			if targets and #targets > 0 then
 				for _, enemy in ipairs(targets) do
 					if enemy and not enemy.dead then
-						local d = E:create_entity("damage")
+						local d = E.create_damage()
 
 						d.damage_type = this.damage_type
 
@@ -38997,7 +38997,7 @@ function scripts.hero_dragon_sun.update(this, store)
 		U.y_wait(store, fts(4))
 
 		this.health_bar.hidden = nil
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 
 		d.value = math.ceil(U.frandom(a.target_damage_min, a.target_damage_max))
 		d.damage_type = a.target_damage_type
@@ -39012,7 +39012,7 @@ function scripts.hero_dragon_sun.update(this, store)
 
 		if area_targets then
 			for _, t in pairs(area_targets) do
-				d = E:create_entity("damage")
+				d = E.create_damage()
 				d.value = math.ceil(U.frandom(a.area_damage_min, a.area_damage_max))
 				d.damage_type = a.area_damage_type
 				d.target_id = t.id
@@ -39267,7 +39267,7 @@ function scripts.aura_bullet_hero_dragon_sun_solar_stones_mine.update(this, stor
 				if dmg_targets and #dmg_targets > 0 then
 					for _, enemy in ipairs(dmg_targets) do
 						if enemy and not enemy.dead then
-							local d = E:create_entity("damage")
+							local d = E.create_damage()
 
 							d.damage_type = this.damage_type
 
@@ -39733,7 +39733,7 @@ function scripts.mod_hero_dragon_sun_bassic_attack_burn_dps.update(this, store, 
 
 			local damage_value = math.random(dmin, dmax)
 
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.source_id = this.id
 			d.target_id = target.id

@@ -96,7 +96,7 @@ local function execute_effect(cfg, tower, store, targets)
 		local skill_id = cfg.id or "?"
 		for _, t in ipairs(targets) do
 			if t.health and not t.health.dead then
-				local dmg = E:create_entity("damage")
+				local dmg = E.create_damage()
 				local min_dmg = effect.damage_min or 0
 				local max_dmg = effect.damage_max or min_dmg
 				dmg.value = math.random(min_dmg, max_dmg)

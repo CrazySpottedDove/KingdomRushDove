@@ -609,7 +609,7 @@ end
 ---@param source_id number 来源ID
 ---@return table 伤害实体
 function SU.create_bullet_damage(bullet, target_id, source_id)
-	local d = E:create_entity("damage")
+	local d = E.create_damage()
 
 	d.damage_type = bullet.damage_type
 	d.reduce_armor = bullet.reduce_armor
@@ -655,7 +655,7 @@ end
 ---@param target_id number 目标ID
 ---@param source_id number 来源ID
 function SU.create_bullet_damage_without_pops(bullet, target_id, source_id)
-	local d = E:create_entity("damage")
+	local d = E.create_damage()
 
 	d.damage_type = bullet.damage_type
 	d.reduce_armor = bullet.reduce_armor
@@ -694,7 +694,7 @@ function SU.create_bullet_damage_without_pops(bullet, target_id, source_id)
 end
 
 function SU.create_bullet_damage_without_pops_and_value(bullet, target_id, source_id)
-	local d = E:create_entity("damage")
+	local d = E.create_damage()
 
 	d.damage_type = bullet.damage_type
 	d.reduce_armor = bullet.reduce_armor
@@ -734,7 +734,7 @@ function SU.create_attack_damage(a, target_id, this)
 		end
 	end
 
-	local d = E:create_entity("damage")
+	local d = E.create_damage()
 
 	d.value = U.frandom(vmin, vmax)
 
@@ -1133,7 +1133,7 @@ function SU.y_hero_death_and_respawn(store, this)
 
 		if targets then
 			for _, t in ipairs(targets) do
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.damage_type = sd.damage_type
 				d.value = ((sd.damage and sd.damage or math.random(sd.damage_min, sd.damage_max)) + this.unit.damage_buff) * this.unit.damage_factor
@@ -2046,7 +2046,7 @@ function SU.y_soldier_do_single_area_attack(store, this, target, attack)
 
 	for i = 1, math.min(attack.count or #targets, #targets) do
 		local e = targets[i]
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 
 		d.source_id = this.id
 		d.target_id = e.id
@@ -2215,7 +2215,7 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 				local targets = U.find_enemies_in_range_filter_off(hit_pos, attack.damage_radius, attack.damage_flags, attack.damage_bans) or {}
 
 				for _, e in ipairs(targets) do
-					local d = E:create_entity("damage")
+					local d = E.create_damage()
 
 					d.source_id = this.id
 					d.target_id = e.id
@@ -2268,7 +2268,7 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 					queue_insert(store, fx)
 				end
 			elseif this.soldier and this.soldier.target_id == target.id then
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				if attack.instakill then
 					d.damage_type = DAMAGE_INSTAKILL
@@ -2402,7 +2402,7 @@ function SU.y_soldier_do_single_melee_attack(store, this, target, attack)
 		end
 
 		if attack.damage_type ~= DAMAGE_NONE then
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.source_id = this.id
 			d.target_id = target.id
@@ -3984,7 +3984,7 @@ function SU.y_enemy_melee_attacks(store, this, target)
 							ma.side_effect(this, store, ma, target)
 						end
 
-						local d = E:create_entity("damage")
+						local d = E.create_damage()
 
 						d.source_id = this.id
 						d.target_id = target.id
@@ -4030,7 +4030,7 @@ function SU.y_enemy_melee_attacks(store, this, target)
 									break
 								end
 
-								local d = E:create_entity("damage")
+								local d = E.create_damage()
 
 								d.source_id = this.id
 								d.target_id = e.id

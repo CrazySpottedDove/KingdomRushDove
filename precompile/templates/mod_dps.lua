@@ -78,7 +78,7 @@ return function(this, store)
 
 		if store.tick_ts - m.ts >= m.duration - 1e-09 then
             constif(dps.damage_last)
-                local d = E:create_entity("damage")
+                local d = E.create_damage()
 
                 d.source_id = this.id
                 d.target_id = target.id
@@ -119,7 +119,7 @@ return function(this, store)
             @constif(not dps.kill)
 			damage_value = km.clamp(0, target.health.hp - 1, damage_value)
 
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
             d.source_id = this.id
             d.target_id = target.id

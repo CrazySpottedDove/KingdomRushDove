@@ -198,7 +198,7 @@ local function enemy_do_counter_attack(store, this, target)
 				ma.side_effect(this, store, ma, target)
 			end
 
-			local d = E:create_entity("damage")
+			local d = E.create_damage()
 
 			d.source_id = this.id
 			d.target_id = target.id
@@ -361,7 +361,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 					local targets = U.find_soldiers_in_range(store.soldiers or store.entities, hit_pos, 0, attack.damage_radius, attack.damage_flags, attack.damage_bans) or {}
 
 					for _, e in ipairs(targets) do
-						local d = E:create_entity("damage")
+						local d = E.create_damage()
 
 						d.source_id = this.id
 						d.target_id = e.id
@@ -414,7 +414,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 						queue_insert(store, fx)
 					end
 				else
-					local d = E:create_entity("damage")
+					local d = E.create_damage()
 
 					if attack.instakill then
 						d.damage_type = DAMAGE_INSTAKILL
@@ -535,7 +535,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 					ma.side_effect(this, store, ma, target)
 				end
 
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.source_id = this.id
 				d.target_id = target.id
@@ -579,7 +579,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 							break
 						end
 
-						local d = E:create_entity("damage")
+						local d = E.create_damage()
 
 						d.source_id = this.id
 						d.target_id = e.id
@@ -1378,7 +1378,7 @@ tt.main_script.update = function(this, store)
 
 						if targets then
 							for _, target in ipairs(targets) do
-								local d = E:create_entity("damage")
+								local d = E.create_damage()
 
 								d.source_id = this.id
 								d.target_id = target.id
@@ -1462,7 +1462,7 @@ tt.main_script.update = function(this, store)
 					U.animation_start(this, an, sflip, store.tick_ts)
 					U.y_wait(store, bda.hit_time)
 
-					local d = E:create_entity("damage")
+					local d = E.create_damage()
 
 					d.source_id = this.id
 					d.target_id = target.id
@@ -2107,7 +2107,7 @@ tt.main_script.update = function(this, store)
 	local damage_value = math.ceil((b.damage_factor or 1) * math.random(b.damage_min, b.damage_max))
 
 	for _, enemy in ipairs(targets) do
-		local d = E:create_entity("damage")
+		local d = E.create_damage()
 
 		d.source_id = this.id
 		d.target_id = enemy.id
@@ -2210,7 +2210,7 @@ tt.main_script.update = function(this, store)
 
 		if targets then
 			for _, t in ipairs(targets) do
-				local d = E:create_entity("damage")
+				local d = E.create_damage()
 
 				d.value = math.random(a.damage_min, a.damage_max)
 				d.damage_type = a.damage_type
