@@ -25140,7 +25140,7 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 						shot_i = shot_i + 1
 					end
 
-					a_multi.ts = store.tick_ts - (a_multi.shots - shot_i) * a_multi.cooldown / a_multi.shots
+					a_multi.ts = a_multi.ts - (a_multi.shots - shot_i) * a_multi.cooldown / a_multi.shots * 0.8
 
 					local skillend_face = last_enemy.pos
 
