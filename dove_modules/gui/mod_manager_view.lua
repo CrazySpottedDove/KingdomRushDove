@@ -22,7 +22,7 @@ local PANEL_MIN_H = 730
 -- local PANEL_MAX_H = 800
 local PANEL_MAX_H = 10000
 -- local PANEL_MARGIN = 36
-local PANEL_MARGIN = 60
+local PANEL_MARGIN = 150
 local ROW_H = 156
 local ROW_PAD = 16
 local ACCENT_W = 6
@@ -619,6 +619,11 @@ function ModItemRow:initialize(opts, row_w)
 	self._base_bg = {24, 18, 12, 210}
 	self._hover_bg = {40, 30, 18, 230}
 	self.colors.background = {self._base_bg[1], self._base_bg[2], self._base_bg[3], self._base_bg[4]}
+	self.propagate_on_down = true
+	self.propagate_on_up = true
+	self.propagate_on_touch_down = true
+	self.propagate_on_touch_up = true
+	self.propagate_on_touch_move = true
 	self.shape = {
 		name = "rectangle",
 		args = {"fill", 0, 0, row_w, ROW_H, 14, 14}
@@ -1135,7 +1140,8 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	end
 
 	local close_btn = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
-	close_btn.pos = V.v(panel_w - 20, 20)
+	close_btn.pos = V.v(panel_w - 23, 23)
+	close_btn.scale:set(1.5, 1.5)
 	close_btn:set_anchor_to_center()
 	self.back:add_child(close_btn)
 	close_btn.on_click = function()

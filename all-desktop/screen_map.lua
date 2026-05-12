@@ -1423,7 +1423,7 @@ if IS_ANDROID then
 	local TOUCH_SCROLL_THRESHOLD = 15 -- 滑动阈值，像素
 	local TOUCH_SCROLL_SENSITIVITY = 2.25 -- 灵敏度系数，0.5~1.0之间
 	local function should_block_map_touch(this)
-		return (this.mod_manager_view and not this.mod_manager_view.hidden) or (this.hero_room and not this.hero_room.hidden)
+		return (this.mod_manager_view and not this.mod_manager_view.hidden) or (this.hero_room and not this.hero_room.hidden) or (this.config_panel_view and not this.config_panel_view.hidden) or (this.criket_panel_view and not this.criket_panel_view.hidden) or (this.keyset_panel_view and not this.keyset_panel_view.hidden) or (this.launch_options_panel_view and not this.launch_options_panel_view.hidden) or (this.ui_settings_panel_view and not this.ui_settings_panel_view.hidden)
 	end
 
 	function screen_map:touchpressed(id, x, y, dx, dy, pressure)

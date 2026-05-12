@@ -1,7 +1,6 @@
 local log = require("lib.klua.log"):new("EditablePanelView")
 local class = require("middleclass")
 local V = require("lib.klua.vector")
-local EditableItem = class("EditableItem", KButton)
 local S = require("sound_db")
 local i18n = require("i18n")
 local utf8 = require("utf8")
@@ -14,25 +13,29 @@ local function CJK(default, zh, ja, kr)
 	return i18n.cjk(i18n, default, zh, ja, kr)
 end
 
-function EditableItem:initialize(key_text, initial_value, size, keyboard, controller)
+local EditableItem = class("EditableItem", KButton)
+function EditableItem:initialize(key_text, initial_value, size, keyboard, controller, editable_group)
 	size = size or V.v(300, 40)
 
 	KButton.initialize(self, size)
 	self.keyboard = keyboard
 	self.controller = controller
+	self.editable_group = editable_group
 	self.key = key_text
 	self.value = initial_value or false
 	self.on_change_callback = nil
 	self.is_focused = false -- 新增：焦点状态
 
 	-- 键名标签
-	self.key_label = GGLabel:new(V.v(self.size.x - 80, self.size.y))
+	self.key_label = GGLabel:new(V.v(self.size.x - 190, self.size.y))
 	self.key_label.pos = V.v(10, 0)
 	self.key_label.font_name = "body"
 	self.key_label.font_size = 16
 	self.key_label.text = key_text
 	self.key_label.text_align = "left"
 	self.key_label.vertical_align = "middle"
+	self.key_label.fit_lines = 1
+	self.key_label.fit_size = true
 	self.key_label.colors.text = {200, 200, 200, 255}
 	self.key_label.colors.text_default = {200, 200, 200, 255}
 	self.key_label.colors.text_hover = {255, 255, 255, 255}
@@ -42,13 +45,15 @@ function EditableItem:initialize(key_text, initial_value, size, keyboard, contro
 	self:add_child(self.key_label)
 
 	-- 值标签
-	self.value_label = GGLabel:new(V.v(60, self.size.y))
-	self.value_label.pos = V.v(self.size.x - 70, 0)
+	self.value_label = GGLabel:new(V.v(170, self.size.y))
+	self.value_label.pos = V.v(self.size.x - 180, 0)
 	self.value_label.font_name = "body"
 	self.value_label.font_size = 16
 	self.value_label.text = nil
 	self.value_label.text_align = "center"
 	self.value_label.vertical_align = "middle"
+	self.value_label.fit_lines = 1
+	self.value_label.fit_size = true
 	self.value_label.colors.text_yes = {100, 255, 100, 255}
 	self.value_label.colors.text_no = {255, 100, 100, 255}
 	self.value_label.colors.text_yes_hover = {150, 255, 150, 255}
@@ -60,8 +65,8 @@ function EditableItem:initialize(key_text, initial_value, size, keyboard, contro
 	self:add_child(self.value_label)
 
 	-- 新增：输入框边框提示（用于 number 和 string 类型）
-	self.input_border = KView:new(V.v(70, self.size.y - 4))
-	self.input_border.pos = V.v(self.size.x - 75, 2)
+	self.input_border = KView:new(V.v(170, self.size.y - 4))
+	self.input_border.pos = V.v(self.size.x - 180, 2)
 	self.input_border.colors.background = {0, 0, 0, 0}
 	self.input_border.colors.border_focused = {255, 220, 100, 200}
 	self.input_border.colors.border_normal = {100, 100, 100, 100}
@@ -226,7 +231,8 @@ function EditableItem:on_click(button, vx, vy)
 
 	if self._type == "boolean" then
 		self.value = not self.value
-		self.parent:clear_focus()
+		-- self.parent:clear_focus()
+		self.editable_group:clear_focus()
 	elseif self._type == "number" then
 		if IS_ANDROID then
 			-- 安卓端：弹出数字键盘让用户精确输入
@@ -247,13 +253,15 @@ function EditableItem:on_click(button, vx, vy)
 			-- 电脑端：直接键盘录入
 			-- screen_map.window:set_responder(self)
 			self.controller:set_responder(self)
-			self.parent:clear_focus()
+			-- self.parent:clear_focus()
+			self.editable_group:clear_focus()
 			self:set_focused(true)
 		end
 	elseif self._type == "string" then
 		-- screen_map.window:set_responder(self)
 		self.controller:set_responder(self)
-		self.parent:clear_focus()
+		-- self.parent:clear_focus()
+		self.editable_group:clear_focus()
 		self:set_focused(true)
 	end
 
@@ -313,8 +321,19 @@ function EditableGroup:initialize(size, keyboard, controller)
 	self.item_height = 45
 	self.padding = V.v(10, 10) -- 修正：使用向量表示水平和垂直内边距
 	self.data = {}
+	self.sorted_keys = {}
 	self.keyboard = keyboard
 	self.controller = controller
+
+	self.list = KScrollList:new(V.v(self.size.x - 2 * self.padding.x, self.size.y - 2 * self.padding.y))
+	self.list.pos = V.v(self.padding.x, self.padding.y)
+	self.list.scroll_acceleration = 0
+	self.list.scroll_amount = self.item_height
+	self.list.drag_scroll_threshold = 8
+	self.list:set_scroller_size(12, 2)
+	self.list.colors.scroller_background = {80, 70, 50, 120}
+	self.list.colors.scroller_foreground = {180, 160, 120, 200}
+	self:add_child(self.list)
 end
 
 function EditableGroup:clear_focus()
@@ -324,47 +343,87 @@ function EditableGroup:clear_focus()
 end
 
 function EditableGroup:set_key_label_map(map)
-	self.key_label_map = map
+	self.key_label_map = map or {}
+	self:_rebuild_and_render()
 end
 
-function EditableGroup:add_items(data)
-	local total_items = 0
+function EditableGroup:_is_editable_type(value)
+	local t = type(value)
+	return t == "boolean" or t == "number" or t == "string"
+end
 
-	for key, value in pairs(data) do
-		if type(value) == "boolean" or type(value) == "number" or type(value) == "string" then
-			total_items = total_items + 1
+function EditableGroup:_clear_items()
+	self.list:clear_rows()
+	self.items = {}
+end
+
+function EditableGroup:_collect_sorted_keys()
+	local keys = {}
+
+	for key, value in pairs(self.data) do
+		if self:_is_editable_type(value) and self.key_label_map[key] then
+			keys[#keys + 1] = key
 		end
 	end
 
-	-- 重新调整所有 item 的位置
-	local max_rows = 8 -- 每列最多 6 个 item
-	local row_height = self.item_height
-	local actual_columns = math.ceil(total_items / max_rows - 0.0001) -- 实际列数
-	local column_width = (self.size.x - (1 + actual_columns) * self.padding.x) / actual_columns -- 动态计算列宽
-	local actual_rows = math.min(total_items, max_rows) -- 实际行数
-	local actual_height = actual_rows * row_height -- 实际高度
-	local start_x = self.padding.x -- 水平居中起始位置
-	local start_y = self.padding.y -- 垂直居中起始位置
-	local index = 0
+	table.sort(keys, function(a, b)
+		local la = tostring(self.key_label_map[a] or a)
+		local lb = tostring(self.key_label_map[b] or b)
 
-	for key, value in pairs(data) do
-		if type(value) == "boolean" or type(value) == "number" or type(value) == "string" then
-			-- 添加新 item
-			if self.key_label_map[key] then
-				local item = EditableItem:new(self.key_label_map[key], value, V.v(column_width, 40), self.keyboard, self.controller)
+		if la == lb then
+			return tostring(a) < tostring(b)
+		end
 
-				item.pos = V.v((start_x + math.floor(index / max_rows) * (column_width + self.padding.x)), start_y + (index % max_rows) * row_height)
-				item.on_change_callback = function(label, value)
-					self.data[table.keyforobject(self.key_label_map, label) or label] = value
-				end
-				self.items[key] = item
-				self.data[key] = value
-				index = index + 1
+		return la < lb
+	end)
 
-				self:add_child(item)
+	self.sorted_keys = keys
+end
+
+function EditableGroup:_render_list()
+	self:_clear_items()
+
+	local item_w = self.list.size.x - self.padding.x * 2 - 20
+	local item_h = 40
+	local item_y = math.floor((self.item_height - item_h) * 0.5)
+
+	for idx = 1, #self.sorted_keys do
+		local key = self.sorted_keys[idx]
+		local value = self.data[key]
+		local row = KView:new(V.v(self.list.size.x, self.item_height))
+		row.propagate_on_down = true
+		row.propagate_on_up = true
+		row.propagate_on_touch_down = true
+		row.propagate_on_touch_up = true
+		row.propagate_on_touch_move = true
+		local item = EditableItem:new(self.key_label_map[key], value, V.v(item_w, item_h), self.keyboard, self.controller, self)
+
+		item.pos = V.v(self.padding.x, item_y)
+		-- 允许事件继续冒泡到 KScrollList，保证触屏拖动滚动体验
+		item.propagate_on_down = true
+		item.propagate_on_up = true
+		item.propagate_on_touch_down = true
+		item.propagate_on_touch_up = true
+		item.propagate_on_touch_move = true
+
+		item.on_change_callback = function(_, new_value)
+			self.data[key] = new_value
+			if self.on_data_change_callback then
+				self.on_data_change_callback(key, new_value, self:get_all_data())
 			end
 		end
+
+		row:add_child(item)
+		self.list:add_row(row)
+		self.items[key] = item
 	end
+end
+
+function EditableGroup:_rebuild_and_render()
+	self:_collect_sorted_keys()
+	self:clear_focus()
+	self:_render_list()
+	self.list:scroll_to_top()
 end
 
 function EditableGroup:get_value(key)
@@ -372,19 +431,12 @@ function EditableGroup:get_value(key)
 end
 
 function EditableGroup:get_all_data()
-	return self.data
+	return table.deepclone(self.data)
 end
 
 function EditableGroup:set_all_data(data)
-	self.data = data
-
-	for key, item in pairs(self.items) do
-		self:remove_child(item)
-	end
-
-	self.items = {}
-
-	self:add_items(data)
+	self.data = table.deepclone(data or {})
+	self:_rebuild_and_render()
 end
 
 function EditableGroup:set_on_data_change_callback(callback)
@@ -415,8 +467,10 @@ function EditablePanelView:initialize(sw, sh, title, keyboard, controller)
 
 	self.back:add_child(header)
 
+	local controls_y = 448
+
 	-- 创建配置组
-	self.data_group = EditableGroup:new(V.v(self.back.size.x, self.back.size.y), keyboard, controller)
+	self.data_group = EditableGroup:new(V.v(self.back.size.x, controls_y - 10), keyboard, controller)
 	self.data_group.pos = V.v(100, 100)
 	self.data_group.scale = v(1 / 1.45, 1 / 1.45)
 
@@ -425,23 +479,29 @@ function EditablePanelView:initialize(sw, sh, title, keyboard, controller)
 	end)
 	self.back:add_child(self.data_group)
 
-	-- 添加底部按钮
-	local mx = 150
-	local y = 450
-	local b = GGOptionsButton:new(_("BUTTON_DONE"))
+	-- 底部按钮（无分页，改为滚动列表）
+	local cancel_btn = GGOptionsButton:new(CJK("Cancel", "取消"))
+	cancel_btn.scale = V.v(0.62, 0.62)
+	cancel_btn.anchor = V.v(cancel_btn.size.x / 2, cancel_btn.size.y / 2)
+	cancel_btn.pos = V.v(self.back.size.x / 2 - 110, controls_y)
+	function cancel_btn.on_click()
+		S:queue("GUIButtonCommon")
+		self:hide()
+	end
+	self.cancel_button = cancel_btn
+	self.back:add_child(cancel_btn)
 
-	b.anchor.x = b.size.x / 2
-	b.pos = V.v(self.back.size.x / 2, y)
-
-	function b.on_click()
+	local done_btn = GGOptionsButton:new(_("BUTTON_DONE"))
+	done_btn.scale = V.v(0.62, 0.62)
+	done_btn.anchor = V.v(done_btn.size.x / 2, done_btn.size.y / 2)
+	done_btn.pos = V.v(self.back.size.x / 2 + 110, controls_y)
+	function done_btn.on_click()
 		S:queue("GUIButtonCommon")
 		self:save()
 		self:hide()
 	end
-
-	self.done_button = b
-
-	self.back:add_child(b)
+	self.done_button = done_btn
+	self.back:add_child(done_btn)
 end
 
 function EditablePanelView:set_key_label_map(map)
