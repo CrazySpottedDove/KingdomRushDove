@@ -1905,7 +1905,10 @@ function upgrades:patch_templates(max_level)
 		at = T("tower_rotten_forest").powers.tree
 		at.cooldown = at.cooldown * u.cooldown_factor
 		at.cooldown_inc = at.cooldown_inc * u.cooldown_factor
-
+		at = T("tower_ogre_shipwreck").powers.goblin_launcher
+		for i = 1, #at.cooldown do
+			at.cooldown[i] = at.cooldown[i] * u.cooldown_factor
+		end
 	end
 
 	u = self:get_upgrade("engineer_efficiency")
