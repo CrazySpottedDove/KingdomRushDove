@@ -906,12 +906,12 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	}
 	self:add_child(self.back)
 
-	local header = GGPanelHeader:new("模组管理器 / 插件商店", panel_w - 40)
+	local header = GGPanelHeader:new("插件管理器", panel_w - 40)
 	header.pos = V.v(20, 14)
 	self.back:add_child(header)
 
 	local global_lbl = GGOptionsLabel:new(V.v(300, global_label_h))
-	global_lbl.text = "启用模组加载器"
+	global_lbl.text = "插件管理器总开关"
 	global_lbl.text_align = "left"
 	global_lbl.vertical_align = "middle"
 	global_lbl.pos = V.v(20, global_label_y)
@@ -962,6 +962,9 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 			self:_start_task("刷新商店列表", function()
 				return self:_fetch_store_list()
 			end)
+		else
+			-- 本地模式，直接显示对应分类的条目，无需网络请求
+			self:_render_current_list()
 		end
 	end
 	self.back:add_child(self.category_btn)
@@ -1187,7 +1190,8 @@ function ModManagerView:_refresh_header_buttons()
 	local task_running = self._active_task ~= nil
 	self.refresh_btn:set_text(in_store and "刷新商店" or "查询远端")
 	self.sort_btn:set_enabled(in_store and not self._active_task)
-	self.category_btn:set_enabled(in_store and not self._active_task)
+	-- self.category_btn:set_enabled(in_store and not self._active_task)
+	self.category_btn:set_enabled(true) -- 分类按钮始终可用，本地下，直接切显示的本地插件分类。商店下，切换分类会直接刷新商店列表
 	self.refresh_btn:set_enabled(not self._active_task)
 	self.prev_page_btn.hidden = not in_store
 	self.page_lbl.hidden = not in_store
@@ -1806,63 +1810,70 @@ function ModManagerView:_render_local_list()
 	self.mod_list:clear_rows()
 	self._mod_rows = {}
 	local list_w = self.mod_list.size.x - self.mod_list.scroller_width - 2 * self.mod_list.scroller_margin - 4
-	for _, mod_data in ipairs(self.local_mods) do
-		local cfg = mod_data.config or {}
-		local remote = self.remote_by_entry[mod_data.entry]
-		local status = ""
-		local primary_text, secondary_text
-		local on_primary, on_secondary
 
-		if remote and has_update(cfg.version, remote.version) then
-			status = string.format("可更新：v%s → v%s", safe_tostring(cfg.version), safe_tostring(remote.version))
-			primary_text = "更新"
-			on_primary = function()
-				self:_start_task("更新插件", function()
-					return self:_install_plugin(remote, true)
+	local category_option = CATEGORY_OPTIONS[self.category_idx]
+
+	for _, mod_data in ipairs(self.local_mods) do
+		local cfg = mod_data.config
+		local mod_category = cfg.category or "other"
+		-- 过滤分类
+		if category_option.value == "all" or category_option.value == mod_category then
+			local remote = self.remote_by_entry[mod_data.entry]
+			local status = ""
+			local primary_text, secondary_text
+			local on_primary, on_secondary
+
+			if remote and has_update(cfg.version, remote.version) then
+				status = string.format("可更新：v%s → v%s", safe_tostring(cfg.version), safe_tostring(remote.version))
+				primary_text = "更新"
+				on_primary = function()
+					self:_start_task("更新插件", function()
+						return self:_install_plugin(remote, true)
+					end)
+				end
+			elseif remote then
+				status = "已是最新版本"
+			else
+				status = self._remote_lookup_done and "未在商店中找到远端条目" or "未查询远端条目（点“查询远端”）"
+			end
+			secondary_text = "删除"
+			on_secondary = function()
+				self:_start_task("删除插件", function()
+					local ok, err = self:_delete_local_mod_by_name(mod_data.name)
+					if ok then
+						self:_set_status("已删除插件：" .. mod_data.name, 0)
+						return true, nil
+					end
+					return false, err
 				end)
 			end
-		elseif remote then
-			status = "已是最新版本"
-		else
-			status = self._remote_lookup_done and "未在商店中找到远端条目" or "未查询远端条目（点“查询远端”）"
-		end
-		secondary_text = "删除"
-		on_secondary = function()
-			self:_start_task("删除插件", function()
-				local ok, err = self:_delete_local_mod_by_name(mod_data.name)
-				if ok then
-					self:_set_status("已删除插件：" .. mod_data.name, 0)
-					return true, nil
-				end
-				return false, err
-			end)
-		end
 
-		local row = ModItemRow:new({
-			mod_data = mod_data,
-			title = cfg.name or mod_data.name,
-			meta = string.format("本地版本 v%s  作者: %s", safe_tostring(cfg.version), safe_tostring(cfg.by)),
-			desc = cfg.desc or "",
-			status = status,
-			show_toggle = true,
-			action_button_size = self._row_action_button_size,
-			toggle_size = self._row_toggle_size,
-			status_width = self._row_status_width,
-			right_pad = self._row_right_pad,
-			action_bottom_margin = self._row_action_bottom_margin,
-			toggle_top_margin = self._row_toggle_top_margin,
-			enabled = cfg.enabled ~= false,
-			on_toggle = function(v)
-				cfg.enabled = v
-			end,
-			primary_text = primary_text,
-			secondary_text = secondary_text,
-			on_primary = on_primary,
-			on_secondary = on_secondary
-		}, list_w)
-		self.mod_list:add_row(row)
-		self.mod_list:add_row(KView:new(V.v(list_w, 10)))
-		self._mod_rows[#self._mod_rows + 1] = row
+			local row = ModItemRow:new({
+				mod_data = mod_data,
+				title = cfg.name or mod_data.name,
+				meta = string.format("本地版本 v%s  作者: %s", safe_tostring(cfg.version), safe_tostring(cfg.by)),
+				desc = cfg.desc or "",
+				status = status,
+				show_toggle = true,
+				action_button_size = self._row_action_button_size,
+				toggle_size = self._row_toggle_size,
+				status_width = self._row_status_width,
+				right_pad = self._row_right_pad,
+				action_bottom_margin = self._row_action_bottom_margin,
+				toggle_top_margin = self._row_toggle_top_margin,
+				enabled = cfg.enabled ~= false,
+				on_toggle = function(v)
+					cfg.enabled = v
+				end,
+				primary_text = primary_text,
+				secondary_text = secondary_text,
+				on_primary = on_primary,
+				on_secondary = on_secondary
+			}, list_w)
+			self.mod_list:add_row(row)
+			self.mod_list:add_row(KView:new(V.v(list_w, 10)))
+			self._mod_rows[#self._mod_rows + 1] = row
+		end
 	end
 end
 
