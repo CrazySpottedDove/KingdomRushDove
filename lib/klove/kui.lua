@@ -2128,7 +2128,7 @@ function KScrollList:update(dt)
 end
 
 function KScrollList:on_down(button, x, y)
-	log.error("button:%s x:%s, y:%s", button, x, y)
+	-- log.error("button:%s x:%s, y:%s", button, x, y)
 
 	if button == 1 and self._bottom_y > self.size.y then
 		self._down_y = y

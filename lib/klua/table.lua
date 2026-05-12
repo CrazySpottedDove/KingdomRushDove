@@ -29,6 +29,17 @@ function table.contains(t, o)
 	return table.keyforobject(t, o) ~= nil
 end
 
+function table.isarray(t)
+	local count = 0
+	for _, _ in pairs(t) do
+		count = count + 1
+	end
+	if count == #t then
+		return true
+	end
+	return false
+end
+
 function table.arraycontains(t, o)
 	for i = 1, #t do
 		if t[i] == o then

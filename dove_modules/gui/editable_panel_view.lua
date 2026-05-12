@@ -4,6 +4,7 @@ local V = require("lib.klua.vector")
 local S = require("sound_db")
 local i18n = require("i18n")
 local utf8 = require("utf8")
+require("lib.klua.table")
 
 require("klove.kui")
 require("gg_views_custom")
@@ -231,8 +232,9 @@ function EditableItem:on_click(button, vx, vy)
 
 	if self._type == "boolean" then
 		self.value = not self.value
-		-- self.parent:clear_focus()
-		self.editable_group:clear_focus()
+		if self.editable_group then
+			self.editable_group:clear_focus()
+		end
 	elseif self._type == "number" then
 		if IS_ANDROID then
 			-- 安卓端：弹出数字键盘让用户精确输入
@@ -253,15 +255,17 @@ function EditableItem:on_click(button, vx, vy)
 			-- 电脑端：直接键盘录入
 			-- screen_map.window:set_responder(self)
 			self.controller:set_responder(self)
-			-- self.parent:clear_focus()
-			self.editable_group:clear_focus()
+			if self.editable_group then
+				self.editable_group:clear_focus()
+			end
 			self:set_focused(true)
 		end
 	elseif self._type == "string" then
 		-- screen_map.window:set_responder(self)
 		self.controller:set_responder(self)
-		-- self.parent:clear_focus()
-		self.editable_group:clear_focus()
+		if self.editable_group then
+			self.editable_group:clear_focus()
+		end
 		self:set_focused(true)
 	end
 
@@ -309,6 +313,9 @@ function EditableItem:on_keypressed(key)
 	end
 end
 
+-- =====================================================
+-- EditableGroup — 管理可编辑项的容器
+-- =====================================================
 local EditableGroup = class("EditableGroup", KView)
 
 function EditableGroup:initialize(size, keyboard, controller)
@@ -349,7 +356,22 @@ end
 
 function EditableGroup:_is_editable_type(value)
 	local t = type(value)
-	return t == "boolean" or t == "number" or t == "string"
+
+	if t == "boolean" or t == "number" or t == "string" then
+		return true
+	end
+
+	-- 连续数组也视为可编辑
+	if t == "table" and table.isarray(value) then
+		for _, v in ipairs(value) do
+			if type(v) ~= "boolean" and type(v) ~= "number" and type(t) ~= "string" then
+				return false
+			end
+		end
+		return true
+	end
+
+	return false
 end
 
 function EditableGroup:_clear_items()
@@ -390,32 +412,118 @@ function EditableGroup:_render_list()
 	for idx = 1, #self.sorted_keys do
 		local key = self.sorted_keys[idx]
 		local value = self.data[key]
-		local row = KView:new(V.v(self.list.size.x, self.item_height))
-		row.propagate_on_down = true
-		row.propagate_on_up = true
-		row.propagate_on_touch_down = true
-		row.propagate_on_touch_up = true
-		row.propagate_on_touch_move = true
-		local item = EditableItem:new(self.key_label_map[key], value, V.v(item_w, item_h), self.keyboard, self.controller, self)
+		local label = self.key_label_map[key]
 
-		item.pos = V.v(self.padding.x, item_y)
-		-- 允许事件继续冒泡到 KScrollList，保证触屏拖动滚动体验
-		item.propagate_on_down = true
-		item.propagate_on_up = true
-		item.propagate_on_touch_down = true
-		item.propagate_on_touch_up = true
-		item.propagate_on_touch_move = true
+		if type(value) == "table" and table.isarray(value) then
+			-- ======== 数组类型：标题行 + 每项各占一行 ========
+			-- 标题行：纯展示，但视觉上与普通 EditableItem 的 key/value 区域对齐
+			local header_row = KView:new(V.v(self.list.size.x, self.item_height))
+			header_row.propagate_on_down = true
+			header_row.propagate_on_up = true
+			header_row.propagate_on_touch_down = true
+			header_row.propagate_on_touch_up = true
+			header_row.propagate_on_touch_move = true
 
-		item.on_change_callback = function(_, new_value)
-			self.data[key] = new_value
-			if self.on_data_change_callback then
-				self.on_data_change_callback(key, new_value, self:get_all_data())
+			-- 数组标题：与普通 EditableItem 的 key_label 位置、字体完全一致
+			local header_label = GGLabel:new(V.v(item_w - 190, item_h))
+			header_label.pos = V.v(self.padding.x + 10, item_y)
+			header_label.font_name = "body"
+			header_label.font_size = 16
+			header_label.text = label
+			header_label.text_align = "left"
+			header_label.vertical_align = "middle"
+			header_label.fit_lines = 1
+			header_label.fit_size = true
+			header_label.colors.text = {200, 220, 220, 255}
+			header_row:add_child(header_label)
+
+			-- [N items]：与普通 EditableItem 的 value_label 位置、大小完全一致
+			local count_label = GGLabel:new(V.v(170, item_h))
+			count_label.pos = V.v(self.padding.x + item_w - 180, item_y)
+			count_label.font_name = "body"
+			count_label.font_size = 16
+			count_label.text = ""
+			count_label.text_align = "center"
+			count_label.vertical_align = "middle"
+			count_label.fit_lines = 1
+			count_label.fit_size = true
+			count_label.colors.text = {200, 200, 200, 255}
+			header_row:add_child(count_label)
+
+			self.list:add_row(header_row)
+
+			-- 每项各占一行：相对于标题缩进，数值与普通 value_label 右对齐
+			local indent = 0
+			local elem_item_w = item_w - indent
+
+			for i, elem in ipairs(value) do
+				local elem_row = KView:new(V.v(self.list.size.x, self.item_height))
+				elem_row.propagate_on_down = true
+				elem_row.propagate_on_up = true
+				elem_row.propagate_on_touch_down = true
+				elem_row.propagate_on_touch_up = true
+				elem_row.propagate_on_touch_move = true
+
+				-- 使用 EditableItem，key_text 为 "→"，缩进放置
+				local elem_item = EditableItem:new("[" .. i .. "]", elem, V.v(elem_item_w, item_h), self.keyboard, self.controller, self)
+				elem_item.pos = V.v(self.padding.x + indent, item_y)
+				elem_item.propagate_on_down = true
+				elem_item.propagate_on_up = true
+				elem_item.propagate_on_touch_down = true
+				elem_item.propagate_on_touch_up = true
+				elem_item.propagate_on_touch_move = true
+
+				-- 箭头样式微调
+				elem_item.key_label.colors.text = {180, 180, 180, 255}
+				elem_item.key_label.colors.text_default = {180, 180, 180, 255}
+				elem_item.key_label.colors.text_hover = {220, 220, 220, 255}
+
+				local saved_key = key
+				local saved_idx = i
+
+				elem_item.on_change_callback = function(_, new_value)
+					if self.data[saved_key] and self.data[saved_key][saved_idx] ~= nil then
+						self.data[saved_key][saved_idx] = new_value
+
+						if self.on_data_change_callback then
+							self.on_data_change_callback(saved_key, self.data[saved_key], self:get_all_data())
+						end
+					end
+				end
+
+				elem_row:add_child(elem_item)
+				self.list:add_row(elem_row)
+				self.items[key .. "[" .. i .. "]"] = elem_item
 			end
-		end
+		else
+			-- ======== 基本类型：使用 EditableItem ========
+			local row = KView:new(V.v(self.list.size.x, self.item_height))
+			row.propagate_on_down = true
+			row.propagate_on_up = true
+			row.propagate_on_touch_down = true
+			row.propagate_on_touch_up = true
+			row.propagate_on_touch_move = true
 
-		row:add_child(item)
-		self.list:add_row(row)
-		self.items[key] = item
+			local item = EditableItem:new(label, value, V.v(item_w, item_h), self.keyboard, self.controller, self)
+
+			item.pos = V.v(self.padding.x, item_y)
+			item.propagate_on_down = true
+			item.propagate_on_up = true
+			item.propagate_on_touch_down = true
+			item.propagate_on_touch_up = true
+			item.propagate_on_touch_move = true
+
+			item.on_change_callback = function(_, new_value)
+				self.data[key] = new_value
+				if self.on_data_change_callback then
+					self.on_data_change_callback(key, new_value, self:get_all_data())
+				end
+			end
+
+			row:add_child(item)
+			self.list:add_row(row)
+			self.items[key] = item
+		end
 	end
 end
 

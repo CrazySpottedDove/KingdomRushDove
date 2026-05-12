@@ -922,7 +922,7 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	self.global_toggle.pos = V.v(panel_w - 24 - self.global_toggle.size.x / 2, global_toggle_center_y)
 	self.back:add_child(self.global_toggle)
 
-	self.mode_btn = ModActionButton:new("视图：本地", V.v(header_btn_w, header_btn_h))
+	self.mode_btn = ModActionButton:new("前往商店", V.v(header_btn_w, header_btn_h))
 	self.mode_btn.pos = V.v(header_group_x, header_top_y)
 	self.mode_btn.on_press = function()
 		local prev_mode = self.mode
@@ -1180,7 +1180,7 @@ function ModManagerView:_stop_http_thread()
 end
 
 function ModManagerView:_refresh_header_buttons()
-	self.mode_btn:set_text(self.mode == "local" and "视图：本地" or "视图：商店")
+	self.mode_btn:set_text(self.mode == "local" and "前往商店" or "回到本地")
 	self.sort_btn:set_text("排序：" .. SORT_OPTIONS[self.sort_idx].label)
 	self.category_btn:set_text("分类：" .. CATEGORY_OPTIONS[self.category_idx].label)
 	local in_store = self.mode == "store"
@@ -1954,7 +1954,7 @@ function ModManagerView:show()
 	self:_reload_local_mods()
 	self:_render_current_list()
 	self.task_dialog.hidden = true
-	self:_set_status("切换到商店视图后会自动拉取第一页", 0)
+	self:_set_status("前往插件商店后会自动拉取第一页", 0)
 	self:_sanitize_view_texts(self.back)
 	ModManagerView.super.show(self)
 end
