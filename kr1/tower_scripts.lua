@@ -18248,14 +18248,14 @@ function scripts.tower_sparking_geode.update(this, store)
 				local enemies = U.find_enemies_in_range_filter_off(tpos(this), a.range, a_crystalize.vis_flags, a_crystalize.vis_bans)
 
 				if not enemies then
-					a_crystalize.ts = a_crystalize.ts + a_crystalize.cooldown * 0.2
+					a_crystalize.ts = a_crystalize.ts + 0.1
 				else
 					-- 筛选生命最高的敌人
 					table.sort(enemies, function(e1, e2)
 						return e1.health.hp > e2.health.hp
 					end)
 
-					for i = 1, math.min(#enemies, pow_crystalize.level) do
+					for i = 1, math.min(#enemies, a_crystalize.max_targets[pow_crystalize.level]) do
 						local mod = E:create_entity(a_crystalize.mod)
 
 						mod.modifier.source_id = this.id
@@ -18265,6 +18265,17 @@ function scripts.tower_sparking_geode.update(this, store)
 						mod.received_damage_factor = a_crystalize.received_damage_factor[pow_crystalize.level]
 
 						queue_insert(store, mod)
+
+						local bullet = E:create_entity(a_basic.bullet)
+						bullet.bullet.shot_index = i
+						bullet.bullet.damage_factor = tw.damage_factor
+						bullet.bullet.source_id = this.id
+						bullet.pos:copy(enemies[i].pos)
+						bullet.bullet.to:copy(bullet.pos)
+						bullet.bullet.from:copy(bullet.pos)
+						bullet.bullet.target_id = enemies[i].id
+						queue_insert(store, bullet)
+
 						U.y_wait(store, fts(2) * tw.cooldown_factor)
 					end
 
@@ -18288,7 +18299,7 @@ function scripts.tower_sparking_geode.update(this, store)
 				local enemy = U.find_first_enemy_in_range_filter_off(tpos(this), a.range, a_burst.vis_flags, a_burst.vis_bans)
 
 				if not enemy then
-					a_burst.ts = a_burst.ts + a_burst.cooldown * 0.2
+					a_burst.ts = a_burst.ts + 0.1
 				else
 					do
 						local spike_burst_aura = E:create_entity(a_burst.aura)
@@ -18330,14 +18341,12 @@ function scripts.tower_sparking_geode.update(this, store)
 					U.animation_start(this, a_basic.animation_loop, nil, store.tick_ts, true, 5)
 					U.animation_start(this, "loop", nil, store.tick_ts, true, 6)
 
-					-- local enemies = U.find_enemies_in_range_filter_off(tpos(this), a.range, a_basic.vis_flags, a_basic.vis_bans)
 					local _, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false, a_basic.vis_flags, a_basic.vis_bans)
 					local shot_i = 1
 
 					-- 电涌巨像进入持续攻击状态
 					while not a_basic_break() do
 						if enemies then
-							-- enemy = table.random(enemies)
 							enemy = enemies[1]
 						end
 
@@ -18393,7 +18402,7 @@ function scripts.tower_sparking_geode.update(this, store)
 
 						U.y_wait(store, ray_timing * tw.cooldown_factor)
 
-						enemies = U.find_enemies_in_range_filter_off(tpos(this), a.range, a_basic.vis_flags, a_basic.vis_bans)
+						_, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false, a_basic.vis_flags, a_basic.vis_bans)
 
 						if not enemies then
 							break
