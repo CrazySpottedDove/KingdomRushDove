@@ -6071,7 +6071,6 @@ function scripts.enemy_savant.update(this, store)
 		else
 			if ready_to_portal() then
 				local pi, spi, ni = this.nav_path.pi, this.nav_path.spi, this.nav_path.ni
-				local path = P:path(pi, 1)
 
 				ni = ni + pa.node_offset
 
