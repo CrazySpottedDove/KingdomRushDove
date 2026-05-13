@@ -314,6 +314,14 @@ return {
 			tt_title = _("TOWER_ROTTEN_FOREST_NAME"),
 			tt_desc = _("TOWER_ROTTEN_FOREST_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_rocket_riders",
+			image = "kr4_main_icons_0004",
+			type = "rocket_riders",
+			place = 20,
+			tt_title = _("TOWER_ROCKET_RIDERS_NAME"),
+			tt_desc = _("TOWER_ROCKET_RIDERS_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	archer = {{M(tpl.common_upgrade, {
@@ -3350,5 +3358,54 @@ return {
 			tt_title = _("TOWER_DARK_KNIGHTS_SHIELD_NAME_1"),
 			tt_desc = _("TOWER_DARK_KNIGHTS_SHIELD_DESCRIPTION_1")
 		}}
-	}), tpl.rally, tpl.sell}}
+	}), tpl.rally, tpl.sell}},
+	rocket_riders = {{M(tpl.upgrade_power, {
+		action_arg = "mine",
+		image = "kr4_special_icons_0012",
+		place = 6,
+		sounds = {"RocketRidersMineTaunt"},
+		tt_phrase = _("TOWER_ROCKET_RIDERS_MINE_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ROCKET_RIDERS_MINE_NAME_1"),
+			tt_desc = _("TOWER_ROCKET_RIDERS_MINE_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ROCKET_RIDERS_MINE_NAME_2"),
+			tt_desc = _("TOWER_ROCKET_RIDERS_MINE_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_ROCKET_RIDERS_MINE_NAME_3"),
+			tt_desc = _("TOWER_ROCKET_RIDERS_MINE_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "nitro",
+		image = "kr4_special_icons_0011",
+		place = 5,
+		sounds = {"RocketRidersNitroTaunt"},
+		tt_phrase = _("TOWER_ROCKET_RIDERS_NITRO_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ROCKET_RIDERS_NITRO_NAME_1"),
+			tt_desc = _("TOWER_ROCKET_RIDERS_NITRO_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ROCKET_RIDERS_NITRO_NAME_2"),
+			tt_desc = _("TOWER_ROCKET_RIDERS_NITRO_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_ROCKET_RIDERS_NITRO_NAME_3"),
+			tt_desc = _("TOWER_ROCKET_RIDERS_NITRO_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "engine",
+		image = "kr4_special_icons_0010",
+		place = 7,
+		sounds = {"RocketRidersEngineTaunt"},
+		tt_phrase = _("TOWER_ROCKET_RIDERS_ENGINE_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_ROCKET_RIDERS_ENGINE_NAME_1"),
+			tt_desc = _("TOWER_ROCKET_RIDERS_ENGINE_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_ROCKET_RIDERS_ENGINE_NAME_2"),
+			tt_desc = _("TOWER_ROCKET_RIDERS_ENGINE_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_ROCKET_RIDERS_ENGINE_NAME_3"),
+			tt_desc = _("TOWER_ROCKET_RIDERS_ENGINE_DESCRIPTION_3")
+		}}
+	}), tpl.sell}}
 }

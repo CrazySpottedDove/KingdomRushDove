@@ -61,7 +61,8 @@ GS.engineer_towers = {
 	"tower_flamespitter_lvl4",
 	"tower_barrel_lvl4",
 	"tower_sparking_geode_lvl4",
-	"tower_rotten_forest"
+	"tower_rotten_forest",
+	"tower_rocket_riders"
 }
 GS.barrack_towers = {
 	"tower_barrack_1",

@@ -1195,7 +1195,9 @@ upgrades.engineer_bombs = {
 	"tower_sparking_geode_ray_lvl4",
 	"bomb_ogre_shipwreck_goblin",
 	"bomb_ogre_shipwreck_goblin_skill1",
-	"bomb_ogre_shipwreck_goblin_skill2"
+	"bomb_ogre_shipwreck_goblin_skill2",
+	"missile_rr",
+	"missile_rr_nitro"
 }
 
 upgrades.engineer_advanced_tower = {
@@ -1211,7 +1213,8 @@ upgrades.engineer_advanced_tower = {
 	"tower_flamespitter_lvl4",
 	"tower_barrel_lvl4",
 	"tower_sparking_geode_lvl4",
-	"tower_rotten_forest"
+	"tower_rotten_forest",
+	"tower_rocket_riders"
 }
 
 local fps_based_keys = {
@@ -1909,6 +1912,10 @@ function upgrades:patch_templates(max_level)
 		for i = 1, #at.cooldown do
 			at.cooldown[i] = at.cooldown[i] * u.cooldown_factor
 		end
+		at = T("tower_rocket_riders").attacks.list[2]
+		at.cooldown = at.cooldown * u.cooldown_factor
+		at = T("rr_mine_box").attacks.list[1]
+		at.cooldown = at.cooldown * u.cooldown_factor
 	end
 
 	u = self:get_upgrade("engineer_efficiency")

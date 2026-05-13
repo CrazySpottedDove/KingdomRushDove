@@ -347,8 +347,10 @@ function table.find_best(t, rule)
 	for i = 2, #t do
 		local candidate = t[i]
 
-		if rule(candidate) > best_score then
+		local score = rule(candidate)
+		if score > best_score then
 			best_candidate = candidate
+			best_score = score
 		end
 	end
 

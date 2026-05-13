@@ -3050,8 +3050,7 @@ function scripts.missile.update(this, store)
 	local rot_dir = 1
 	local follow = false
 	local max_same_target_count = 3
-	-- local max_seek_angle = b.max_seek_angle or 0.2
-	local max_seek_angle = b.math_seek_angle or math.pi / 6
+	local max_seek_angle = b.max_seek_angle or math.pi / 6
 
 	if this.render.sprites[1].animated then
 		U.animation_start(this, "flying", nil, store.tick_ts, -1)
