@@ -25851,6 +25851,10 @@ function scripts.missile_rr.remove(this, store)
 				fragment.bullet.speed:set(speed_amount * math.cos(fragment_angle), speed_amount * math.sin(fragment_angle))
 				fragment.pos:copy(start_pos)
 				fragment.render.sprites[1].name = fragment.render.sprites[1].name .. math.random(1, 2)
+				if i ~= 0 then
+					-- 只有第一个碎片有爆炸音效，避免炸音
+					fragment.sound_events.hit = nil
+				end
 				queue_insert(store, fragment)
 			end
 		end
