@@ -19347,6 +19347,7 @@ tt.aura.vis_bans = bor(tt.aura.vis_bans, F_ENEMY)
 tt.aura.mods = {"mod_hero_dragon_sun_heal", "mod_hero_dragon_sun_ban"}
 tt.aura.radius = b.radius
 tt.aura.cycle_time = b.heal_every / 4
+tt.aura.track_source = true
 tt.heal_fx = "fx_hero_dragon_sun_heal_particle"
 
 tt = RT("aura_bullet_hero_dragon_sun_solar_stones_mine", "aura")

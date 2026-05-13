@@ -38802,7 +38802,6 @@ function scripts.hero_dragon_sun.update(this, store)
 		local aura = E:create_entity(a_healing_aura.aura)
 
 		aura.aura.source_id = this.id
-		aura.aura.track_source = true
 		aura.pos = V.vclone(this.pos)
 		aura.aura.ts = store.tick_ts
 

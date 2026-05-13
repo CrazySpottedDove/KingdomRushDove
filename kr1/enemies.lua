@@ -14281,3 +14281,4 @@ tt.aura.mod = "mod_enemy_alfa_lava_dot"
 tt.aura.radius = b.lava_radius
 tt.aura.cycle_time = 0.1
 tt.aura.vis_bans = bor(F_FLYING, F_ENEMY)
+tt.aura.track_source = true
