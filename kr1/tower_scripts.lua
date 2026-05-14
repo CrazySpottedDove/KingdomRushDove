@@ -25516,7 +25516,7 @@ function scripts.mine_box.update(this, store)
 			queue_remove(store, this)
 			return
 		end
-		if store.tick_ts - a.ts > a.cooldown * this.owner.tower.cooldown_factor then
+		if not this.owner.tower.blocked and store.tick_ts - a.ts > a.cooldown * this.owner.tower.cooldown_factor then
 			a.ts = store.tick_ts
 			U.animation_start(this, a.animation, nil, store.tick_ts)
 			U.y_wait(store, a.shoot_time)
@@ -25574,51 +25574,7 @@ end
 
 scripts.bomb_rr_mine = {}
 
-function scripts.bomb_rr_mine.update(this, store, script)
-	local b = this.bullet
-	local dmin, dmax = b.damage_min, b.damage_max
-	local dradius = b.damage_radius
-
-	local ps
-
-	if b.particles_name then
-		ps = E:create_entity(b.particles_name)
-		ps.particle_system.track_id = this.id
-
-		queue_insert(store, ps)
-	end
-
-	while store.tick_ts - b.ts + store.tick_length < b.flight_time do
-		coroutine.yield()
-
-		b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
-		this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
-
-		if b.align_with_trajectory then
-			this.render.sprites[1].r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
-		elseif b.rotation_speed then
-			this.render.sprites[1].r = this.render.sprites[1].r + b.rotation_speed * store.tick_length
-		end
-
-		if b.hide_radius then
-			this.render.sprites[1].hidden = V.dist(this.pos.x, this.pos.y, b.from.x, b.from.y) < b.hide_radius or V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) < b.hide_radius
-		end
-	end
-
-	local hp = E:create_entity(b.hit_payload)
-	hp.pos.x, hp.pos.y = b.to.x, b.to.y
-	hp.damage_min = this.bullet.damage_config[this.bullet.level]
-	hp.damage_max = this.bullet.damage_config[this.bullet.level]
-	hp.damage_factor = this.bullet.damage_factor
-
-	queue_insert(store, hp)
-
-	queue_remove(store, this)
-end
-
-scripts.mine_rr_initial = {}
-
-function scripts.mine_rr_initial.update(this, store)
+function scripts.bomb_rr_mine.update(this, store)
 	local b = this.bullet
 
 	this.render.sprites[1].r = 20 * math.pi / 180 * (b.to.x > b.from.x and 1 or -1)
@@ -25640,35 +25596,13 @@ function scripts.mine_rr_initial.update(this, store)
 		coroutine.yield()
 	end
 
-	if b.hit_fx then
-		S:queue(this.sound_events.hit)
+	local hp = E:create_entity(b.hit_payload)
+	hp.pos.x, hp.pos.y = b.to.x, b.to.y
+	hp.damage_min = this.bullet.damage_config[this.bullet.level]
+	hp.damage_max = this.bullet.damage_config[this.bullet.level]
+	hp.damage_factor = this.bullet.damage_factor
 
-		local sfx = E:create_entity(b.hit_fx)
-
-		sfx.pos = V.vclone(b.to)
-		sfx.render.sprites[1].ts = store.tick_ts
-
-		queue_insert(store, sfx)
-	end
-
-	local dest = b.to
-
-	for i = 1, b.fragment_count do
-		local bf_dest = V.vclone(dest)
-
-		bf_dest.x = bf_dest.x + U.frandom(-b.fragment_pos_spread.x, b.fragment_pos_spread.x)
-		bf_dest.y = bf_dest.y + U.frandom(-b.fragment_pos_spread.y, b.fragment_pos_spread.y)
-
-		local bf = E:create_entity(b.fragment_name)
-
-		bf.bullet.from = V.vclone(this.pos)
-		bf.bullet.to = bf_dest
-		bf.bullet.flight_time = bf.bullet.flight_time + fts(i) * math.random(1, 2)
-		bf.render.sprites[1].r = 100 * math.random() * (math.pi / 180)
-		bf.bullet.level = this.bullet.level
-
-		queue_insert(store, bf)
-	end
+	queue_insert(store, hp)
 
 	queue_remove(store, this)
 end
@@ -25702,7 +25636,7 @@ function scripts.decal_rr_mine.update(this, store)
 					d.damage_type = this.damage_type
 					d.source_id = this.id
 					d.target_id = t.id
-					d.value = math.random(this.damage_min, this.damage_max)
+					d.value = math.random(this.damage_min, this.damage_max) * this.damage_factor
 
 					queue_damage(store, d)
 				end
@@ -25743,7 +25677,7 @@ function scripts.decal_rr_mine.update(this, store)
 					d.damage_type = this.damage_type
 					d.source_id = this.id
 					d.target_id = t.id
-					d.value = math.random(this.damage_min, this.damage_max)
+					d.value = math.random(this.damage_min, this.damage_max) * this.damage_factor
 
 					queue_damage(store, d)
 				end
