@@ -24171,7 +24171,6 @@ function scripts.controller_elemental_earth.update(this, store)
 	controller.pos = this.pos
 	controller.aura.radius = this.max_range
 	controller.aura.source_id = this.id
-	controller.aura.track_source = true
 
 	queue_insert(store, controller)
 
@@ -49336,7 +49335,6 @@ function scripts.decal_dlc_wukong_flaming_ground.insert(this, store)
 			e.pos = V.vclone(this.pos)
 			e.aura.source_id = this.id
 			e.aura.ts = store.tick_ts
-			e.aura.track_source = true
 
 			queue_insert(store, e)
 			table.insert(this.cached_auras, e.id)
@@ -71933,7 +71931,6 @@ function scripts.decal_boss_murglum_geiser.insert(this, store, script)
 			e.pos = V.vclone(this.pos)
 			e.aura.source_id = this.id
 			e.aura.ts = store.tick_ts
-			e.aura.track_source = true
 
 			queue_insert(store, e)
 			table.insert(this.cached_auras, e.id)

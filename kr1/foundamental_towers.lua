@@ -1627,6 +1627,7 @@ tt.aura.duration = 1e+99
 tt.aura.cycle_time = 0.3
 tt.aura.vis_bans = bor(F_ENEMY)
 tt.aura.vis_flags = F_AREA
+tt.aura.track_source = true
 tt.aura.mod = "mod_elemental_earth_increase_health"
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update

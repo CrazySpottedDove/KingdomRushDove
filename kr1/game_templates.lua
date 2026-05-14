@@ -20614,19 +20614,23 @@ tt.aura.vis_bans = bor(F_FLYING)
 
 tt = RT("aura_wukong_fire_ground_dps", "aura_wukong_fire_ground_apply_mod")
 tt.aura.mod = "mod_wukong_flaming_ground_dps"
+tt.aura.track_source = true
 tt.aura.vis_bans = bor(tt.aura.vis_bans, F_ENEMY)
 tt.aura.excluded_templates = {"hero_lava", "hero_ignus"}
 
 tt = RT("aura_wukong_fire_ground_sprint", "aura_wukong_fire_ground_apply_mod")
 tt.aura.mod = "mod_wukong_flaming_ground_sprint"
+tt.aura.track_source = true
 tt.aura.allowed_templates = {"enemy_fire_fox"}
 
 tt = RT("aura_wukong_fire_ground_healing", "aura_wukong_fire_ground_apply_mod")
 tt.aura.mod = "mod_wukong_flaming_ground_healing"
+tt.aura.track_source = true
 tt.aura.allowed_templates = {"enemy_ash_spirit"}
 
 tt = RT("aura_wukong_fire_ground_wuxian", "aura_wukong_fire_ground_apply_mod")
 tt.aura.mod = "mod_wukong_flaming_ground_toggle_abilities"
+tt.aura.track_source = true
 tt.aura.allowed_templates = {"enemy_wuxian", "enemy_nine_tailed_fox", "enemy_blaze_raider", "enemy_flame_guard"}
 
 tt = RT("aura_fire_fox_explotion_dps", "aura")
@@ -24142,6 +24146,7 @@ b = balance.enemies.dragons.dragon_boss_stage_37.geisers_bossfight
 tt.main_script.update = scripts.aura_apply_damage.update
 tt.aura.duration = -1
 tt.aura.radius = 55
+tt.aura.track_source = true
 tt.aura.vis_bans = bor(F_FLYING, F_ENEMY)
 tt.aura.damage_min = b.min_damage
 tt.aura.damage_max = b.max_damage
