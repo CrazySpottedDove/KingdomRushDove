@@ -2798,4 +2798,4 @@ tt.sound_events.insert = nil
 tt.bullet.particles_name = "ps_rr_fragment"
 
 tt = RT("ps_rr_fragment", "ps_missile")
-tt.particle_system.particle_lifetime = {1.3, 1.5}
+tt.particle_system.particle_lifetime = {0.8, 1}
