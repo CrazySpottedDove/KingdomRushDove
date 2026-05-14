@@ -25832,20 +25832,18 @@ function scripts.bomb_rr_fragment.update(this, store)
 
 	if targets then
 		for i = 1, #targets do
-			if not hitted[targets[i].id] then
-				local d = SU.create_bullet_damage_without_pops_and_value(this.bullet, targets[i].id, this.id)
+			local d = SU.create_bullet_damage_without_pops_and_value(this.bullet, targets[i].id, this.id)
 
-				if UP:get_upgrade("engineer_efficiency") then
-					d.value = this.bullet.damage_max
-				else
-					local dist_factor = U.dist_factor_inside_ellipse(targets[i].pos, this.pos, this.bullet.damage_radius)
+			if UP:get_upgrade("engineer_efficiency") then
+				d.value = this.bullet.damage_max
+			else
+				local dist_factor = U.dist_factor_inside_ellipse(targets[i].pos, this.pos, this.bullet.damage_radius)
 
-					d.value = this.bullet.damage_max + (this.bullet.damage_max - this.bullet.damage_min) * dist_factor
-				end
-
-				d.value = d.value * this.bullet.damage_factor
-				queue_damage(store, d)
+				d.value = this.bullet.damage_max + (this.bullet.damage_max - this.bullet.damage_min) * dist_factor
 			end
+
+			d.value = d.value * this.bullet.damage_factor
+			queue_damage(store, d)
 		end
 	end
 
