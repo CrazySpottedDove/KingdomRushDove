@@ -25352,6 +25352,20 @@ end
 --哥布林火箭骑兵
 scripts.tower_rocket_riders = {}
 
+function scripts.tower_rocket_riders.get_info(this)
+	local info = scripts.tower_common.get_info(this)
+	local bullet = E:get_template(this.attacks.list[1].bullet).bullet
+	info.damage_min = bullet.damage_min
+	info.damage_max = bullet.damage_max
+	if this.powers.engine.level > 0 then
+		info.damage_min = info.damage_min + this.powers.engine.damage_inc[this.powers.engine.level]
+		info.damage_max = info.damage_max + this.powers.engine.damage_inc[this.powers.engine.level]
+	end
+	info.damage_min = info.damage_min * this.tower.damage_factor
+	info.damage_max = info.damage_max * this.tower.damage_factor
+	return info
+end
+
 function scripts.tower_rocket_riders.remove(this, store)
 	if this.box then
 		this.box.owner = nil
@@ -25434,6 +25448,10 @@ function scripts.tower_rocket_riders.update(this, store, script)
 					b.bullet.level = pow_n.level
 					b.bullet.damage_min = b.bullet.damage_min + pow_n.damage_inc[pow_n.level]
 					b.bullet.damage_max = b.bullet.damage_max + pow_n.damage_inc[pow_n.level]
+					if pow_c.level > 0 then
+						b.bullet.damage_min = b.bullet.damage_min + pow_c.damage_inc[pow_c.level]
+						b.bullet.damage_max = b.bullet.damage_max + pow_c.damage_inc[pow_c.level]
+					end
 					queue_insert(store, b)
 
 					U.y_animation_wait(this, tower_sid)
@@ -25470,6 +25488,10 @@ function scripts.tower_rocket_riders.update(this, store, script)
 					b.bullet.to:set(0.5 * (enemy.pos.x + b.pos.x), 0.5 * (enemy.pos.y + b.pos.y))
 					b.bullet.target_id = enemy.id
 					b.bullet.source_id = this.id
+					if pow_c.level > 0 then
+						b.bullet.damage_min = b.bullet.damage_min + pow_c.damage_inc[pow_c.level]
+						b.bullet.damage_max = b.bullet.damage_max + pow_c.damage_inc[pow_c.level]
+					end
 					queue_insert(store, b)
 
 					U.y_animation_wait(this, tower_sid)
@@ -25761,6 +25783,7 @@ function scripts.bomb_rr_fragment.update(this, store)
 	local start_ts = store.tick_ts
 	local check_interval = math.min(0.05, this.bullet.flight_time / 10)
 	local check_ts = start_ts - check_interval
+	local hitted = {}
 
 	while store.tick_ts - start_ts < this.bullet.flight_time do
 		if store.tick_ts - check_ts >= check_interval then
@@ -25769,29 +25792,35 @@ function scripts.bomb_rr_fragment.update(this, store)
 			local targets = U.find_enemies_in_range_filter_off(this.pos, this.bullet.damage_radius, this.bullet.damage_flags, this.bullet.damage_bans)
 
 			if targets then
+				local hit_any = false
 				for i = 1, #targets do
-					local d = SU.create_bullet_damage_without_pops_and_value(this.bullet, targets[i].id, this.id)
+					if not hitted[targets[i].id] then
+						hitted[targets[i].id] = true
+						hit_any = true
+						local d = SU.create_bullet_damage_without_pops_and_value(this.bullet, targets[i].id, this.id)
 
-					if UP:get_upgrade("engineer_efficiency") then
-						d.value = this.bullet.damage_max
-					else
-						local dist_factor = U.dist_factor_inside_ellipse(targets[i].pos, this.pos, this.bullet.damage_radius)
+						if UP:get_upgrade("engineer_efficiency") then
+							d.value = this.bullet.damage_max
+						else
+							local dist_factor = U.dist_factor_inside_ellipse(targets[i].pos, this.pos, this.bullet.damage_radius)
 
-						d.value = this.bullet.damage_max + (this.bullet.damage_max - this.bullet.damage_min) * dist_factor
+							d.value = this.bullet.damage_max + (this.bullet.damage_max - this.bullet.damage_min) * dist_factor
+						end
+
+						d.value = d.value * this.bullet.damage_factor
+						queue_damage(store, d)
 					end
-
-					d.value = d.value * this.bullet.damage_factor
-					queue_damage(store, d)
 				end
 
-				local fx = E:create_entity(this.bullet.hit_fx)
-				fx.pos:copy(this.pos)
-				fx.render.sprites[1].ts = store.tick_ts
-				queue_insert(store, fx)
-				S:queue(this.sound_events.hit)
-
-				queue_remove(store, this)
-				return
+				if hit_any then
+					local fx = E:create_entity(this.bullet.hit_fx)
+					fx.pos:copy(this.pos)
+					fx.render.sprites[1].ts = store.tick_ts
+					queue_insert(store, fx)
+					S:queue(this.sound_events.hit)
+					this.bullet.speed.x = this.bullet.speed.x * 0.8
+					this.bullet.speed.y = this.bullet.speed.y * 0.8
+				end
 			end
 		end
 
@@ -25803,18 +25832,20 @@ function scripts.bomb_rr_fragment.update(this, store)
 
 	if targets then
 		for i = 1, #targets do
-			local d = SU.create_bullet_damage_without_pops_and_value(this.bullet, targets[i].id, this.id)
+			if not hitted[targets[i].id] then
+				local d = SU.create_bullet_damage_without_pops_and_value(this.bullet, targets[i].id, this.id)
 
-			if UP:get_upgrade("engineer_efficiency") then
-				d.value = this.bullet.damage_max
-			else
-				local dist_factor = U.dist_factor_inside_ellipse(targets[i].pos, this.pos, this.bullet.damage_radius)
+				if UP:get_upgrade("engineer_efficiency") then
+					d.value = this.bullet.damage_max
+				else
+					local dist_factor = U.dist_factor_inside_ellipse(targets[i].pos, this.pos, this.bullet.damage_radius)
 
-				d.value = this.bullet.damage_max + (this.bullet.damage_max - this.bullet.damage_min) * dist_factor
+					d.value = this.bullet.damage_max + (this.bullet.damage_max - this.bullet.damage_min) * dist_factor
+				end
+
+				d.value = d.value * this.bullet.damage_factor
+				queue_damage(store, d)
 			end
-
-			d.value = d.value * this.bullet.damage_factor
-			queue_damage(store, d)
 		end
 	end
 
@@ -25837,6 +25868,9 @@ function scripts.missile_rr.remove(this, store)
 			local damage_radius = E:get_template("bomb_rr_fragment").bullet.damage_radius + 1
 
 			local count = source.powers.engine.fragment_count[source.powers.engine.level]
+			if this.template_name == "missile_rr_nitro" then
+				count = count + 2
+			end
 			local angle = math.atan2(this.bullet.speed.y, this.bullet.speed.x)
 
 			start_pos.x, start_pos.y = start_pos.x + damage_radius * math.cos(angle), start_pos.y + damage_radius * math.sin(angle)
