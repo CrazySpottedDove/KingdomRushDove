@@ -25797,29 +25797,36 @@ function scripts.bomb_rr_fragment.update(this, store)
 					if not hitted[targets[i].id] then
 						hitted[targets[i].id] = true
 						hit_any = true
-						local d = SU.create_bullet_damage_without_pops_and_value(this.bullet, targets[i].id, this.id)
 
-						if UP:get_upgrade("engineer_efficiency") then
-							d.value = this.bullet.damage_max
-						else
-							local dist_factor = U.dist_factor_inside_ellipse(targets[i].pos, this.pos, this.bullet.damage_radius)
+						local damage_targets = U.find_enemies_in_range_filter_off(targets[i].pos, this.bullet.damage_radius, this.bullet.damage_flags, this.bullet.damage_bans)
 
-							d.value = this.bullet.damage_max + (this.bullet.damage_max - this.bullet.damage_min) * dist_factor
+						for j = 1, #damage_targets do
+							local d = SU.create_bullet_damage_without_pops_and_value(this.bullet, targets[i].id, this.id)
+
+							if UP:get_upgrade("engineer_efficiency") then
+								d.value = this.bullet.damage_max
+							else
+								local dist_factor = U.dist_factor_inside_ellipse(targets[i].pos, this.pos, this.bullet.damage_radius)
+
+								d.value = this.bullet.damage_max + (this.bullet.damage_max - this.bullet.damage_min) * dist_factor
+							end
+
+							d.value = d.value * this.bullet.damage_factor
+							queue_damage(store, d)
 						end
 
-						d.value = d.value * this.bullet.damage_factor
-						queue_damage(store, d)
+						local fx = E:create_entity(this.bullet.hit_fx)
+						fx.pos:copy(targets[i].pos)
+						fx.render.sprites[1].ts = store.tick_ts
+						queue_insert(store, fx)
+
+						this.bullet.speed.x = this.bullet.speed.x * 0.9
+						this.bullet.speed.y = this.bullet.speed.y * 0.9
 					end
 				end
 
 				if hit_any then
-					local fx = E:create_entity(this.bullet.hit_fx)
-					fx.pos:copy(this.pos)
-					fx.render.sprites[1].ts = store.tick_ts
-					queue_insert(store, fx)
 					S:queue(this.sound_events.hit)
-					this.bullet.speed.x = this.bullet.speed.x * 0.8
-					this.bullet.speed.y = this.bullet.speed.y * 0.8
 				end
 			end
 		end

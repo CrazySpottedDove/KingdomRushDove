@@ -2697,7 +2697,7 @@ tt.bullet.turn_speed = 10 * math.pi / 180 * 30
 tt.bullet.acceleration_factor = 0.12
 tt.bullet.min_speed = 325
 tt.bullet.max_speed = 475
-tt.bullet.retarget_range = math.huge
+tt.bullet.retarget_range = 200
 tt.bullet.max_seek_angle = math.pi * 0.5
 tt.render.sprites[1].prefix = "warmongers_rocket_missile_lvl4"
 tt.render.sprites[1].animated = true
@@ -2784,7 +2784,7 @@ tt.sound_events.hit = nil
 tt.sound_events.insert = nil
 
 tt = RT("bomb_rr_fragment", "bomb")
-tt.bullet.damage_max = 21
+tt.bullet.damage_max = 18
 tt.bullet.damage_min = 10
 tt.bullet.damage_radius = 35
 tt.bullet.flight_time = fts(10)
