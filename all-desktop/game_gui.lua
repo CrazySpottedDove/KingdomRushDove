@@ -6440,6 +6440,10 @@ function TowerMenu:show()
 		local ux, uy = game_gui:g2u(V.v(V.add(entity.pos.x, entity.pos.y, entity.tower.range_offset.x, entity.tower.range_offset.y)))
 
 		game_gui:show_tower_range(ux, uy, range)
+
+		if entity.attacks.blind_range then
+			game_gui:show_rally_range(ux, uy, entity.attacks.blind_range)
+		end
 	end
 
 	local current_tms = tower_menus[entity.tower.type]
@@ -6752,6 +6756,10 @@ function TowerMenu:update(dt)
 		local ux, uy = game_gui:g2u(V.v(V.add(e.pos.x, e.pos.y, e.tower.range_offset.x, e.tower.range_offset.y)), true)
 
 		game_gui:show_tower_range(ux, uy, e.attacks.range)
+
+		if e.attacks.blind_range then
+			game_gui:show_rally_range(ux, uy, e.attacks.blind_range)
+		end
 
 		if not game_gui.tower_range_upgrade.hidden and e.template_name == "tower_crossbow" then
 			if e.powers.eagle.level < 3 then

@@ -25376,6 +25376,76 @@ function scripts.tower_rocket_riders.remove(this, store)
 	return true
 end
 
+function scripts.tower_rocket_riders.score_fn_normal(e)
+	return -P:nodes_to_goal(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
+end
+
+function scripts.tower_rocket_riders.score_fn_cluster(e)
+	return e[4]
+end
+
+function scripts.tower_rocket_riders.seek(this, store, a, enemies)
+	if this.powers.engine.level <= 0 then
+		return table.find_best(enemies, scripts.tower_rocket_riders.score_fn_normal)
+	else
+		local start_x = this.pos.x + a.bullet_start_offset.x
+		local start_y = this.pos.y + a.bullet_start_offset.y
+		local score_table = {}
+
+		-- 先计算角度和距离
+		for i = 1, #enemies do
+			local dx = enemies[i].pos.x - start_x
+			local dy = enemies[i].pos.y - start_y
+			-- 角度，距离，id，分数
+			score_table[i] = {math.atan2(dy, dx), dx * dx + dy * dy, i, 0}
+		end
+
+		-- 按角度排序
+		table.sort(score_table, function(a, b)
+			return a[1] < b[1]
+		end)
+
+		-- 然后计算分数。分数为邻居(不止左右邻居，全部邻居，因为已经按角度排序，只要两侧查找，找到第一个角度>30度的就跳出)中夹角差小于30度的数量
+		for i = 1, #score_table do
+			local score = 0
+			local angle = score_table[i][1]
+
+			-- 向左查找
+			for j = i - 1, 1, -1 do
+				local neighbor_angle = score_table[j][1]
+				local angle_diff = math.abs(angle - neighbor_angle)
+
+				if angle_diff > math.rad(30) then
+					break
+				end
+
+				-- 如果距离更远，有可能被 cluster 命中，所以 score+1
+				if score_table[j][2] > score_table[i][2] then
+					score = score + 1
+				end
+			end
+
+			-- 向右查找
+			for j = i + 1, #score_table do
+				local neighbor_angle = score_table[j][1]
+				local angle_diff = math.abs(angle - neighbor_angle)
+
+				if angle_diff > math.rad(30) then
+					break
+				end
+
+				if score_table[j][2] > score_table[i][2] then
+					score = score + 1
+				end
+			end
+
+			score_table[i][4] = score
+		end
+
+		return enemies[table.find_best(score_table, scripts.tower_rocket_riders.score_fn_cluster)[3]]
+	end
+end
+
 function scripts.tower_rocket_riders.update(this, store, script)
 	local tower_sid = 2
 	local common_sid = 3
@@ -25414,7 +25484,7 @@ function scripts.tower_rocket_riders.update(this, store, script)
 			end
 
 			if ready_to_use_power(pow_n, an, store, this.tower.cooldown_factor) then
-				local enemy = U.find_first_enemy_in_range_filter_off(tpos, a.range, an.vis_flags, an.vis_bans)
+				local enemy = U.find_first_enemy_between_range_filter_off(tpos, a.blind_range, a.range, an.vis_flags, an.vis_bans)
 				if not enemy then
 					an.ts = an.ts + 0.1
 				else
@@ -25425,14 +25495,10 @@ function scripts.tower_rocket_riders.update(this, store, script)
 					U.animation_start_group(this, an.animation, nil, store.tick_ts, false, "layers")
 					U.y_wait(store, an.shoot_time)
 
-					local enemies = U.find_enemies_in_range_filter_off(tpos, a.range, an.vis_flags, an.vis_bans)
+					local enemies = U.find_enemies_between_range_filter_off(tpos, a.blind_range, a.range, an.vis_flags, an.vis_bans)
 
 					if enemies then
-						enemy = table.find_best(enemies, function(e)
-							local dx = tpos.x - e.pos.x
-							local dy = tpos.y - e.pos.y
-							return -(dx * dx + dy * dy)
-						end)
+						enemy = scripts.tower_rocket_riders.seek(this, store, an, enemies)
 					end
 
 					local b = E:create_entity(an.bullet)
@@ -25459,7 +25525,7 @@ function scripts.tower_rocket_riders.update(this, store, script)
 			end
 
 			if ready_to_attack(ab, store, this.tower.cooldown_factor) then
-				local enemy = U.find_first_enemy_in_range_filter_off(tpos, a.range, ab.vis_flags, ab.vis_bans)
+				local enemy = U.find_first_enemy_between_range_filter_off(tpos, a.blind_range, a.range, ab.vis_flags, ab.vis_bans)
 				if not enemy then
 					ab.ts = ab.ts + 0.1
 				else
@@ -25468,14 +25534,10 @@ function scripts.tower_rocket_riders.update(this, store, script)
 					U.animation_start_group(this, ab.animation, nil, store.tick_ts, false, "layers")
 					U.y_wait(store, ab.shoot_time)
 
-					local enemies = U.find_enemies_in_range_filter_off(tpos, a.range, ab.vis_flags, ab.vis_bans)
+					local enemies = U.find_enemies_between_range_filter_off(tpos, a.blind_range, a.range, ab.vis_flags, ab.vis_bans)
 
 					if enemies then
-						enemy = table.find_best(enemies, function(e)
-							local dx = tpos.x - e.pos.x
-							local dy = tpos.y - e.pos.y
-							return -(dx * dx + dy * dy)
-						end)
+						enemy = scripts.tower_rocket_riders.seek(this, store, ab, enemies)
 					end
 
 					local b = E:create_entity(ab.bullet)
@@ -25521,18 +25583,23 @@ function scripts.mine_box.update(this, store)
 			U.animation_start(this, a.animation, nil, store.tick_ts)
 			U.y_wait(store, a.shoot_time)
 
+			if not this.owner or not store.entities[this.owner.id] then
+				queue_remove(store, this)
+				return
+			end
+
 			local b = E:create_entity(a.bullet)
 
 			b.pos.x, b.pos.y = this.pos.x + a.bullet_start_offset.x, this.pos.y + a.bullet_start_offset.y
 			b.bullet.damage_factor = this.owner.tower.damage_factor
 			b.bullet.from = V.vclone(b.pos)
 
-			local global_r = 150
+			local global_r = this.owner.attacks.range
 			local global_success = false
 
 			for i = 1, 24 do
 				local angle = 2 * math.pi * math.random(1, 24) / 24
-				local r = global_r
+				local r = global_r * (0.1 + 0.9 * math.random())
 				b.bullet.source_id = this.id
 
 				local tries = 0
@@ -25631,7 +25698,7 @@ function scripts.decal_rr_mine.update(this, store)
 			queue_insert(store, fx)
 			if targets and #targets > 0 then
 				for _, t in ipairs(targets) do
-					local d = E:create_entity("damage")
+					local d = E:create_damage()
 
 					d.damage_type = this.damage_type
 					d.source_id = this.id
@@ -25639,6 +25706,13 @@ function scripts.decal_rr_mine.update(this, store)
 					d.value = math.random(this.damage_min, this.damage_max) * this.damage_factor
 
 					queue_damage(store, d)
+
+					if U.flags_pass(t.vis, E:get_template(this.mod).modifier) then
+						local mod = E:create_entity(this.mod)
+						mod.modifier.target_id = t.id
+						mod.modifier.source_id = this.id
+						queue_insert(store, mod)
+					end
 				end
 			end
 			break
@@ -25672,7 +25746,7 @@ function scripts.decal_rr_mine.update(this, store)
 
 			if targets then
 				for _, t in ipairs(targets) do
-					local d = E:create_entity("damage")
+					local d = E:create_damage()
 
 					d.damage_type = this.damage_type
 					d.source_id = this.id
@@ -25680,8 +25754,14 @@ function scripts.decal_rr_mine.update(this, store)
 					d.value = math.random(this.damage_min, this.damage_max) * this.damage_factor
 
 					queue_damage(store, d)
-				end
 
+					if U.flags_pass(t.vis, E:get_template(this.mod).modifier) then
+						local mod = E:create_entity(this.mod)
+						mod.modifier.target_id = t.id
+						mod.modifier.source_id = this.id
+						queue_insert(store, mod)
+					end
+				end
 			end
 			local dec = E:create_entity(this.hit_decal)
 
