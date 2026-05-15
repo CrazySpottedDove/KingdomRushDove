@@ -298,6 +298,20 @@ local function basename(path)
 	return (path:match("([^/]+)$") or path)
 end
 
+local function merge_missing_or_mismatch_fields(local_cfg, remote_cfg)
+	if type(local_cfg) ~= "table" or type(remote_cfg) ~= "table" then
+		return
+	end
+	for k, remote_v in pairs(remote_cfg) do
+		local local_v = local_cfg[k]
+		if local_v == nil or type(local_v) ~= type(remote_v) then
+			local_cfg[k] = table.deepclone(remote_v)
+		elseif type(remote_v) == "table" then
+			merge_missing_or_mismatch_fields(local_v, remote_v)
+		end
+	end
+end
+
 local function le_u16(s, i)
 	local b1, b2 = s:byte(i, i + 1)
 	if not b1 or not b2 then
@@ -1716,9 +1730,11 @@ function ModManagerView:_install_plugin(item, is_update)
 
 	local target_name = (entry ~= "" and entry) or basename(selected_dir)
 	local target_dir = mod_paths.LOCAL_MODS_DIR .. "/" .. target_name
+	local local_mod = nil
 	local preserved_enabled = nil
+	local preserved_local_config = nil
 	if is_update then
-		local local_mod = (entry ~= "" and self.local_by_entry[entry]) or self.local_by_name[target_name]
+		local_mod = (entry ~= "" and self.local_by_entry[entry]) or self.local_by_name[target_name]
 		if local_mod and local_mod.config then
 			preserved_enabled = local_mod.config.enabled ~= false
 		else
@@ -1726,6 +1742,15 @@ function ModManagerView:_install_plugin(item, is_update)
 			if existing_cfg then
 				preserved_enabled = existing_cfg.enabled ~= false
 			end
+		end
+
+		local local_cfg_path = local_mod and (local_mod.path .. "/" .. local_mod.name .. "_config.lua") or (target_dir .. "/" .. target_name .. "_config.lua")
+		if FS.getInfo(local_cfg_path, "file") then
+			local local_cfg, read_err = self:_read_mod_config(local_cfg_path)
+			if not local_cfg then
+				return false, "更新前读取本地配置失败：" .. local_cfg_path .. " (" .. tostring(read_err) .. ")"
+			end
+			preserved_local_config = local_cfg
 		end
 	end
 	remove_dir_recursive(target_dir)
@@ -1739,6 +1764,21 @@ function ModManagerView:_install_plugin(item, is_update)
 		local wok = self:_write_mod_config(target_dir .. "/config.lua", installed_cfg)
 		if not wok then
 			return false, "更新后写入配置失败：" .. target_dir .. "/config.lua"
+		end
+	end
+	if preserved_local_config then
+		local installed_local_cfg_path = target_dir .. "/" .. target_name .. "_config.lua"
+		local merged_local_cfg = table.deepclone(preserved_local_config)
+		if FS.getInfo(installed_local_cfg_path, "file") then
+			local remote_local_cfg, read_err = self:_read_mod_config(installed_local_cfg_path)
+			if not remote_local_cfg then
+				return false, "更新后读取远端本地配置失败：" .. installed_local_cfg_path .. " (" .. tostring(read_err) .. ")"
+			end
+			merge_missing_or_mismatch_fields(merged_local_cfg, remote_local_cfg)
+		end
+		local wok = self:_write_mod_config(installed_local_cfg_path, merged_local_cfg)
+		if not wok then
+			return false, "更新后写入本地配置失败：" .. installed_local_cfg_path
 		end
 	end
 	remove_dir_recursive("tmp/mod_store_stage")
