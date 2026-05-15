@@ -1716,8 +1716,31 @@ function ModManagerView:_install_plugin(item, is_update)
 
 	local target_name = (entry ~= "" and entry) or basename(selected_dir)
 	local target_dir = mod_paths.LOCAL_MODS_DIR .. "/" .. target_name
+	local preserved_enabled = nil
+	if is_update then
+		local local_mod = (entry ~= "" and self.local_by_entry[entry]) or self.local_by_name[target_name]
+		if local_mod and local_mod.config then
+			preserved_enabled = local_mod.config.enabled ~= false
+		else
+			local existing_cfg = self:_read_mod_config(target_dir .. "/config.lua")
+			if existing_cfg then
+				preserved_enabled = existing_cfg.enabled ~= false
+			end
+		end
+	end
 	remove_dir_recursive(target_dir)
 	copy_dir_recursive(selected_dir, target_dir)
+	if preserved_enabled ~= nil then
+		local installed_cfg = self:_read_mod_config(target_dir .. "/config.lua")
+		if not installed_cfg then
+			return false, "更新后读取配置失败：" .. target_dir .. "/config.lua"
+		end
+		installed_cfg.enabled = preserved_enabled
+		local wok = self:_write_mod_config(target_dir .. "/config.lua", installed_cfg)
+		if not wok then
+			return false, "更新后写入配置失败：" .. target_dir .. "/config.lua"
+		end
+	end
 	remove_dir_recursive("tmp/mod_store_stage")
 
 	self:_reload_local_mods()

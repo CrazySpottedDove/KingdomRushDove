@@ -5,8 +5,6 @@ local scripts = require("endless_scripts")
 local AC = require("achievements")
 local log = require("lib.klua.log"):new("hero_scripts")
 
-require("lib.klua.table")
-
 local km = require("lib.klua.macros")
 local signal = require("lib.hump.signal")
 local E = require("entity_db")
