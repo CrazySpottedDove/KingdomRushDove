@@ -16620,7 +16620,10 @@ function scripts.mod_timelapse.insert(this, store)
 end
 
 function scripts.mod_timelapse.remove(this, store)
-	queue_remove(store, this._decal_timelapse)
+	if this._decal_timelapse then
+		queue_remove(store, this._decal_timelapse)
+		this._decal_timelapse = nil
+	end
 
 	local target = store.entities[this.modifier.target_id]
 
