@@ -242,6 +242,19 @@ local function utf8_sub(s, max_chars)
 	return table.concat(result)
 end
 
+local function point_in_rect(x, y, rect)
+	return rect and x >= rect.x and x <= rect.x + rect.w and y >= rect.y and y <= rect.y + rect.h
+end
+
+local function clamp(v, min_v, max_v)
+	if v < min_v then
+		return min_v
+	elseif v > max_v then
+		return max_v
+	end
+	return v
+end
+
 local function log_info(line)
 	table.insert(update_log_lines, sanitize_utf8(line))
 	if #update_log_lines > update_log_line_max_count then
@@ -1182,11 +1195,7 @@ local function run_code()
 	end
 
 	local messages = {}
-	for i, commit in ipairs(update_response.commits or {}) do
-		if i > 20 then
-			table.insert(messages, string.format("...以及另外 %d 条更新", #update_response.commits - 20))
-			break
-		end
+	for _, commit in ipairs(update_response.commits or {}) do
 		table.insert(messages, commit.message)
 	end
 
@@ -1263,11 +1272,154 @@ local function do_update()
 	}
 end
 
+function M:_open_dialog(title, message, buttons, on_select)
+	self._dialog = {
+		title = sanitize_utf8(title or ""),
+		message = sanitize_utf8(message or ""),
+		buttons = buttons or {{
+			text = "确定",
+			value = "ok",
+			is_default = true,
+			is_cancel = true
+		}},
+		on_select = on_select
+	}
+	self._dialog_scroll_y = 0
+	self._dialog_dragging = false
+	self._dialog_drag_button = nil
+	self._dialog_drag_start_y = 0
+	self._dialog_scroll_start = 0
+	self._dialog_hover_button_index = nil
+	self._dialog_focus_index = 1
+	for i, btn in ipairs(self._dialog.buttons) do
+		if btn.is_default then
+			self._dialog_focus_index = i
+			break
+		end
+	end
+	self._dialog_layout = nil
+end
+
+function M:_close_dialog(button_index)
+	local dialog = self._dialog
+	if not dialog then
+		return
+	end
+	self._dialog = nil
+	self._dialog_layout = nil
+	self._dialog_dragging = false
+	self._dialog_drag_button = nil
+	self._dialog_hover_button_index = nil
+	local callback = dialog.on_select
+	if callback then
+		callback(dialog.buttons[button_index], button_index)
+	end
+end
+
+function M:_activate_dialog_button(button_index)
+	local dialog = self._dialog
+	if not dialog or not dialog.buttons[button_index] then
+		return
+	end
+	self:_close_dialog(button_index)
+end
+
+function M:_get_dialog_layout()
+	if not self._dialog then
+		return nil
+	end
+	local w, h = G.getDimensions()
+	local panel_w = math.max(420, math.min(math.floor(w * 0.72), w - 80))
+	local panel_h = math.max(220, math.min(math.floor(h * 0.6), h - 80))
+	local panel_x = math.floor((w - panel_w) / 2)
+	local panel_y = math.floor((h - panel_h) / 2)
+	local btn_count = math.max(1, #self._dialog.buttons)
+	local btn_gap = 12
+	local available_btn_w = panel_w - 40 - (btn_count - 1) * btn_gap
+	local btn_w = math.max(110, math.min(180, math.floor(available_btn_w / btn_count)))
+	local total_btn_w = btn_w * btn_count + (btn_count - 1) * btn_gap
+	local btn_x = panel_x + math.floor((panel_w - total_btn_w) / 2)
+	local btn_y = panel_y + panel_h - 56
+	local btn_h = 36
+	local buttons = {}
+	for i = 1, btn_count do
+		buttons[i] = {
+			x = btn_x + (i - 1) * (btn_w + btn_gap),
+			y = btn_y,
+			w = btn_w,
+			h = btn_h
+		}
+	end
+	self._dialog_layout = {
+		x = panel_x,
+		y = panel_y,
+		w = panel_w,
+		h = panel_h,
+		title_x = panel_x + 24,
+		title_y = panel_y + 18,
+		text_x = panel_x + 24,
+		text_y = panel_y + 58,
+		text_w = panel_w - 48,
+		text_h = panel_h - 124,
+		text_padding = 12,
+		buttons = buttons
+	}
+	return self._dialog_layout
+end
+
+function M:_get_dialog_text_metrics(layout)
+	local dialog = self._dialog
+	if not dialog or not layout then
+		return nil
+	end
+	local text_w = math.max(60, layout.text_w - layout.text_padding * 2)
+	local text_h = math.max(40, layout.text_h - layout.text_padding * 2)
+	if dialog._cache_text_w ~= text_w then
+		local _, wrapped = font_normal:getWrap(dialog.message or "", text_w)
+		dialog._wrapped_lines = wrapped or {""}
+		dialog._cache_text_w = text_w
+	end
+	local line_h = font_normal:getHeight() + 4
+	local content_h = #dialog._wrapped_lines * line_h
+	local max_scroll = math.max(0, content_h - text_h)
+	return {
+		text_w = text_w,
+		text_h = text_h,
+		line_h = line_h,
+		content_h = content_h,
+		max_scroll = max_scroll,
+		lines = dialog._wrapped_lines
+	}
+end
+
+function M:_set_dialog_scroll(scroll_y)
+	local layout = self:_get_dialog_layout()
+	local metrics = self:_get_dialog_text_metrics(layout)
+	if not metrics then
+		self._dialog_scroll_y = 0
+		return
+	end
+	self._dialog_scroll_y = clamp(scroll_y or 0, 0, metrics.max_scroll)
+end
+
+function M:_scroll_dialog_by(delta)
+	self:_set_dialog_scroll((self._dialog_scroll_y or 0) + delta)
+end
+
 function M:init(params, done_callback)
 	apply_upgrade = apply_upgrade and params.update_enabled
 
 	self.done_callback = done_callback
 	self.params = params
+	self._dialog = nil
+	self._dialog_layout = nil
+	self._dialog_focus_index = 1
+	self._dialog_scroll_y = 0
+	self._dialog_dragging = false
+	self._dialog_drag_button = nil
+	self._dialog_drag_start_y = 0
+	self._dialog_scroll_start = 0
+	self._dialog_hover_button_index = nil
 	if not apply_upgrade then
 		self:done_callback()
 		return
@@ -1290,6 +1442,20 @@ function M:init(params, done_callback)
 end
 
 function M:update(dt)
+	if self._dialog then
+		if self._dialog_dragging then
+			local drag_button = self._dialog_drag_button or 1
+			if not love.mouse.isDown(drag_button) then
+				self._dialog_dragging = false
+				self._dialog_drag_button = nil
+			else
+				local _, my = love.mouse.getPosition()
+				local delta = my - (self._dialog_drag_start_y or my)
+				self:_set_dialog_scroll((self._dialog_scroll_start or 0) - delta)
+			end
+		end
+		return
+	end
 	if self.co then
 		local success, result = coroutine.resume(self.co)
 		if not success then
@@ -1302,9 +1468,14 @@ function M:update(dt)
 			if http_worker then
 				http_worker:wait()
 			end
-			-- 【修复】在线程清理完成后显示消息框
-			love.window.showMessageBox("升级失败", "更新过程异常。\n\n" .. sanitize_utf8(tostring(result)), {"确定"})
-			self:done_callback()
+			self:_open_dialog("升级失败", "更新过程异常。\n\n" .. sanitize_utf8(tostring(result)), {{
+				text = "确定",
+				value = "ok",
+				is_default = true,
+				is_cancel = true
+			}}, function()
+				self:done_callback()
+			end)
 		elseif coroutine.status(self.co) == "dead" then
 			-- 协程正常结束，处理返回结果
 			self.co = nil
@@ -1320,25 +1491,43 @@ function M:update(dt)
 				self:done_callback()
 			elseif result.status == "AskUpdate" then
 				-- 询问是否更新
-				local pressed = love.window.showMessageBox("发现新版本", result.message, {"更新", "取消"})
-				if pressed == 1 then
-					-- 用户选择更新，创建新协程执行更新
-					http_worker = love.thread.newThread(HTTP_WORKER)
-					http_worker:start()
-					self.co = coroutine.create(do_update)
-				else
-					-- 用户取消更新
-					self:done_callback()
-				end
+				self:_open_dialog("发现新版本", result.message, {{
+					text = "更新",
+					value = "update",
+					is_default = true
+				}, {
+					text = "取消",
+					value = "cancel",
+					is_cancel = true
+				}}, function(btn)
+					if btn and btn.value == "update" then
+						http_worker = love.thread.newThread(HTTP_WORKER)
+						http_worker:start()
+						self.co = coroutine.create(do_update)
+					else
+						self:done_callback()
+					end
+				end)
 			elseif result.status == "Updated" then
 				-- 更新完成，显示成功消息并重启
-				love.window.showMessageBox("升级完成", result.message, {"确定"})
-				-- R.tmp()
-				love.event.quit()
+				self:_open_dialog("升级完成", result.message, {{
+					text = "确定",
+					value = "ok",
+					is_default = true,
+					is_cancel = true
+				}}, function()
+					love.event.quit()
+				end)
 			elseif result.status == "Error" then
 				-- 更新失败，显示错误消息
-				love.window.showMessageBox(result.title or "错误", result.message, {"确定"})
-				self:done_callback()
+				self:_open_dialog(result.title or "错误", result.message, {{
+					text = "确定",
+					value = "ok",
+					is_default = true,
+					is_cancel = true
+				}}, function()
+					self:done_callback()
+				end)
 			end
 		end
 	end
@@ -1732,17 +1921,201 @@ function M:draw()
 	local char_x = card_x + card_w - char_w - 20
 	local char_y = card_y + card_h - char_h - 15 + float_offset
 	draw_pixel_character(char_x, char_y, char_scale, 0.9 * ui_state.fade_alpha)
+
+	if self._dialog then
+		local layout = self:_get_dialog_layout()
+		local metrics = self:_get_dialog_text_metrics(layout)
+		local mx, my = love.mouse.getPosition()
+		self._dialog_hover_button_index = nil
+		for i, btn_rect in ipairs(layout.buttons) do
+			if point_in_rect(mx, my, btn_rect) then
+				self._dialog_hover_button_index = i
+				break
+			end
+		end
+		-- 遮罩层
+		G.setColor(0, 0, 0, 0.58)
+		G.rectangle("fill", 0, 0, w, h)
+
+		-- 对话框主体
+		G.setColor(0.14, 0.16, 0.22, 0.98)
+		draw_rounded_rect_fill(layout.x, layout.y, layout.w, layout.h, 12)
+		G.setColor(0.35, 0.55, 0.9, 0.9)
+		G.setLineWidth(2)
+		draw_rounded_rect_line(layout.x, layout.y, layout.w, layout.h, 12)
+		G.setLineWidth(1)
+
+		G.setFont(font_title)
+		G.setColor(1, 1, 1, 1)
+		G.printf(self._dialog.title or "", layout.title_x, layout.title_y, layout.w - 48, "left")
+
+		-- 文本区域（支持滚轮/拖动）
+		G.setColor(0.09, 0.11, 0.16, 0.95)
+		draw_rounded_rect_fill(layout.text_x, layout.text_y, layout.text_w, layout.text_h, 8)
+		G.setColor(0.28, 0.40, 0.58, 0.95)
+		draw_rounded_rect_line(layout.text_x, layout.text_y, layout.text_w, layout.text_h, 8)
+
+		local text_draw_x = layout.text_x + layout.text_padding
+		local text_draw_y = layout.text_y + layout.text_padding
+		G.setScissor(text_draw_x, text_draw_y, metrics.text_w, metrics.text_h)
+		G.setFont(font_normal)
+		G.setColor(0.85, 0.90, 0.98, 1)
+		local start_line = math.max(1, math.floor((self._dialog_scroll_y or 0) / metrics.line_h) + 1)
+		local y_offset = ((self._dialog_scroll_y or 0) % metrics.line_h)
+		local y = text_draw_y - y_offset
+		for i = start_line, #metrics.lines do
+			if y > text_draw_y + metrics.text_h then
+				break
+			end
+			G.print(metrics.lines[i], text_draw_x, y)
+			y = y + metrics.line_h
+		end
+		G.setScissor()
+
+		if metrics.max_scroll > 0 then
+			local track_w = 6
+			local track_x = layout.text_x + layout.text_w - track_w - 6
+			local track_y = layout.text_y + 6
+			local track_h = layout.text_h - 12
+			G.setColor(0.18, 0.22, 0.30, 0.9)
+			draw_rounded_rect_fill(track_x, track_y, track_w, track_h, 3)
+			local thumb_h = math.max(28, track_h * metrics.text_h / metrics.content_h)
+			local thumb_y = track_y + (track_h - thumb_h) * ((self._dialog_scroll_y or 0) / metrics.max_scroll)
+			G.setColor(0.46, 0.66, 0.98, 0.95)
+			draw_rounded_rect_fill(track_x, thumb_y, track_w, thumb_h, 3)
+		end
+
+		for i, btn_rect in ipairs(layout.buttons) do
+			local focused = i == self._dialog_focus_index
+			local hovered = i == self._dialog_hover_button_index
+			if focused and hovered then
+				G.setColor(0.21, 0.62, 0.88, 1)
+			elseif hovered then
+				G.setColor(0.24, 0.40, 0.55, 1)
+			elseif focused then
+				G.setColor(0.23, 0.53, 0.93, 1)
+			else
+				G.setColor(0.22, 0.25, 0.33, 1)
+			end
+			draw_rounded_rect_fill(btn_rect.x, btn_rect.y, btn_rect.w, btn_rect.h, 8)
+			if focused and hovered then
+				G.setColor(0.70, 0.94, 0.98, 1)
+			elseif hovered then
+				G.setColor(0.58, 0.78, 0.90, 1)
+			elseif focused then
+				G.setColor(0.60, 0.85, 1.00, 1)
+			else
+				G.setColor(0.42, 0.52, 0.68, 1)
+			end
+			draw_rounded_rect_line(btn_rect.x, btn_rect.y, btn_rect.w, btn_rect.h, 8)
+
+			G.setFont(font_normal)
+			G.setColor(1, 1, 1, 1)
+			local btn_text = (self._dialog.buttons[i] and self._dialog.buttons[i].text) or "确定"
+			G.printf(btn_text, btn_rect.x, btn_rect.y + 8, btn_rect.w, "center")
+		end
+	end
 end
 
 function M:keyreleased(key, scancode)
 end
 function M:keypressed(key, isrepeat)
+	if not self._dialog then
+		return
+	end
+	local buttons = self._dialog.buttons or {}
+	local count = #buttons
+	if count == 0 then
+		return
+	end
+	if key == "left" or key == "a" then
+		self._dialog_focus_index = self._dialog_focus_index - 1
+		if self._dialog_focus_index < 1 then
+			self._dialog_focus_index = count
+		end
+	elseif key == "right" or key == "d" then
+		self._dialog_focus_index = self._dialog_focus_index + 1
+		if self._dialog_focus_index > count then
+			self._dialog_focus_index = 1
+		end
+	elseif key == "return" or key == "kpenter" or key == "space" then
+		self:_activate_dialog_button(self._dialog_focus_index)
+	elseif key == "up" then
+		self:_scroll_dialog_by(-36)
+	elseif key == "down" then
+		self:_scroll_dialog_by(36)
+	elseif key == "pageup" then
+		local layout = self:_get_dialog_layout()
+		local metrics = self:_get_dialog_text_metrics(layout)
+		self:_scroll_dialog_by(-(metrics and metrics.text_h or 180) * 0.85)
+	elseif key == "pagedown" then
+		local layout = self:_get_dialog_layout()
+		local metrics = self:_get_dialog_text_metrics(layout)
+		self:_scroll_dialog_by((metrics and metrics.text_h or 180) * 0.85)
+	elseif key == "escape" then
+		local cancel_index = count
+		for i, btn in ipairs(buttons) do
+			if btn.is_cancel then
+				cancel_index = i
+				break
+			end
+		end
+		self:_activate_dialog_button(cancel_index)
+	end
 end
 function M:textinput(t)
 end
 function M:mousepressed(x, y, button, istouch)
+	if not self._dialog then
+		return
+	end
+	local layout = self:_get_dialog_layout()
+	if (button == 1 or button == 3) and point_in_rect(x, y, {
+		x = layout.text_x,
+		y = layout.text_y,
+		w = layout.text_w,
+		h = layout.text_h
+	}) then
+		self._dialog_dragging = true
+		self._dialog_drag_button = button
+		self._dialog_drag_start_y = y
+		self._dialog_scroll_start = self._dialog_scroll_y or 0
+		return
+	end
+	if button ~= 1 then
+		return
+	end
+	for i, rect in ipairs(layout.buttons or {}) do
+		if point_in_rect(x, y, rect) then
+			self._dialog_focus_index = i
+			self:_activate_dialog_button(i)
+			return
+		end
+	end
 end
 function M:mousereleased(x, y, button, istouch)
+	if not self._dialog then
+		return
+	end
+	if self._dialog_dragging and button == self._dialog_drag_button then
+		self._dialog_dragging = false
+		self._dialog_drag_button = nil
+	end
+end
+function M:wheelmoved(dx, dy)
+	if not self._dialog then
+		return
+	end
+	local mx, my = love.mouse.getPosition()
+	local layout = self:_get_dialog_layout()
+	if point_in_rect(mx, my, {
+		x = layout.text_x,
+		y = layout.text_y,
+		w = layout.text_w,
+		h = layout.text_h
+	}) then
+		self:_scroll_dialog_by(-dy * 42)
+	end
 end
 
 return M
