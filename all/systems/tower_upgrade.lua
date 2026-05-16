@@ -22,7 +22,6 @@ function M.register(sys)
 	sys.tower_upgrade.name = "tower_upgrade"
 
 	function sys.tower_upgrade:on_update(dt, ts, store)
-		perf.start("tower_upgrade")
 		for _, e in pairs(store.towers) do
 			if e.tower.sell or e.tower.destroy then
 				if e.tower.sell then
@@ -224,7 +223,6 @@ function M.register(sys)
 				end
 			end
 		end
-		perf.stop("tower_upgrade")
 	end
 end
 

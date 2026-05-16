@@ -25,7 +25,6 @@ function M.register(sys)
 	end
 
 	function sys.seen_tracker:on_update(dt, ts, store)
-		perf.start("seen_tracker")
 		if store.seen_dirty then
 			local slot = storage:load_slot()
 
@@ -35,7 +34,6 @@ function M.register(sys)
 
 			store.seen_dirty = false
 		end
-		perf.stop("seen_tracker")
 	end
 end
 

@@ -565,9 +565,7 @@ end
 
 function director:update(dt)
 	local updated = false
-	perf.start("Sound.update")
 	S:update(dt)
-	perf.stop("Sound.update")
 
 	-- 发现有 next_item_name，说明当前 item 发出了切换请求。因此，把 next_item_name 放入加载队列中
 	if self.next_item_name then

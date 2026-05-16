@@ -8,7 +8,6 @@ function M.register(sys)
 	sys.hero_xp_tracking.name = "hero_xp_tracking"
 
 	function sys.hero_xp_tracking:on_update(dt, ts, store)
-		perf.start("hero_xp_tracking")
 		for i = 1, #store.damages_applied do
 			local d = store.damages_applied[i]
 
@@ -22,7 +21,6 @@ function M.register(sys)
 				end
 			end
 		end
-		perf.stop("hero_xp_tracking")
 	end
 end
 

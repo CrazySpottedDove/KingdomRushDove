@@ -23,7 +23,6 @@ function M.register(sys)
 	sys.pops.name = "pops"
 
 	function sys.pops:on_update(dt, ts, store)
-		perf.start("pops")
 		local damages_applied = store.damages_applied
 		local entities = store.entities
 
@@ -65,8 +64,6 @@ function M.register(sys)
 				end
 			end
 		end
-
-		perf.stop("pops")
 	end
 end
 

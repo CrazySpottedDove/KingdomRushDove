@@ -39,9 +39,7 @@ function M.register(sys)
 	end
 
 	function sys.spatial_index:on_update(dt, ts, store)
-		perf.start("spatial_index")
 		store.enemy_spatial_index.on_update(dt)
-		perf.stop("spatial_index")
 	end
 end
 

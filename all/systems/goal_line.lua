@@ -19,7 +19,6 @@ function M.register(sys)
 	sys.goal_line.name = "goal_line"
 
 	function sys.goal_line:on_update(dt, ts, store)
-		perf.start("goal_line")
 		local enemies = store.enemies
 
 		for _, e in pairs(enemies) do
@@ -33,7 +32,6 @@ function M.register(sys)
 				queue_remove(store, e)
 			end
 		end
-		perf.stop("goal_line")
 	end
 end
 

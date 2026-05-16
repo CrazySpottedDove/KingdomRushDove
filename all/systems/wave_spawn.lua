@@ -261,7 +261,6 @@ function M.register(sys)
 	end
 
 	function sys.wave_spawn:on_update(dt, ts, store)
-		perf.start("wave_spawn")
 		sys.wave_spawn:force_next_wave(store)
 
 		if store.wave_spawn_thread then
@@ -304,7 +303,6 @@ function M.register(sys)
 		end
 
 		store.force_next_wave = false
-		perf.stop("wave_spawn")
 	end
 end
 

@@ -285,8 +285,6 @@ function sys.level:init_coroutined(store)
 end
 
 function sys.level:on_update(dt, ts, store)
-	perf.start("level")
-
 	-- DEBUG/PERF
 	-- if not debug_inserted then
 	-- 	debug_inserted = true
@@ -425,7 +423,6 @@ function sys.level:on_update(dt, ts, store)
 			storage:save_slot(slot, nil, true)
 		end
 	end
-	perf.stop("level")
 end
 
 sys.tween = {}
