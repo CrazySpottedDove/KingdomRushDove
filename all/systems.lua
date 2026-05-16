@@ -1152,8 +1152,9 @@ function sys.render:on_render_update(dt, ts, store)
 					s.pos.x, s.pos.y = e.pos.x, e.pos.y
 				end
 
-				if e.health_bar and show_health_bar then
+				if e.health_bar and show_health_bar and e.health_bar._last_ts ~= ts then
 					local hb = e.health_bar
+					hb._last_ts = ts
 					local fb = hb.frames[1]
 					local ff = hb.frames[2]
 					local fk = hb.black_bar_hp and hb.frames[3] or nil

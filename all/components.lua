@@ -54,6 +54,7 @@ health_bar.hidden = false
 health_bar.z = Z_OBJECTS
 health_bar.draw_order = nil
 health_bar.sort_y_offset = nil
+health_bar._last_ts = 0
 health_bar.frames = {}
 
 local regen = E:register_c("regen")
