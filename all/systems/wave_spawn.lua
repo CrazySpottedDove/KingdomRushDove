@@ -165,7 +165,7 @@ function M.register(sys)
 						end
 					end
 
-					while not store.send_next_wave do
+					while not (store.send_next_wave or store.force_next_wave) do
 						coroutine.yield()
 					end
 

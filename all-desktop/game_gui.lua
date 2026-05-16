@@ -3614,8 +3614,9 @@ function PauseView:initialize()
 		btn_force_wave.pos.y = button_height
 		function btn_force_wave.on_click()
 			S:queue("GUIButtonCommon")
-			self:hide()
 			game_gui.game.store.force_next_wave = true
+			-- 强制刷新一帧
+			game_gui.game.store.step = true
 		end
 		self:add_child(btn_force_wave)
 
