@@ -6696,7 +6696,6 @@ function ConfigPanelView:initialize(sw, sh, keyboard, controller)
 	self:set_key_label_map({
 		hero_full_level_at_start = "英雄开局满级",
 		reverse_path = "路线倒转",
-		show_health_bar = "显示血条",
 		damage_numbers_enabled = "显示伤害数字",
 		custom_config_enabled = "启用自定义配置",
 		endless = "开启无尽模式",

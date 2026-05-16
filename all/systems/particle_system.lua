@@ -148,7 +148,8 @@ function M.register(sys)
 					}
 
 					frames[ps.particle_count] = f
-					store.render_frames[#store.render_frames + 1] = f
+					store.render_frames_count = store.render_frames_count + 1
+					store.render_frames[store.render_frames_count] = f
 
 					if ps.track_id then
 						local factor = (i - 1) / count

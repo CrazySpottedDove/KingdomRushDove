@@ -28,17 +28,49 @@ local perf_ui = {
 }
 
 local function deep_sum_entries(sum_entries, items)
-	for i, e in ipairs(items) do
-		if not sum_entries[i] then
-			sum_entries[i] = {
-				name = e.name,
+	for i = 1, #items do
+		local e = items[i]
+		local key = e.name
+		local entry = sum_entries[key]
+
+		if not entry then
+			entry = {
+				name = key,
 				time = 0,
 				percentage = 0
 			}
+			sum_entries[key] = entry
 		end
-		sum_entries[i].time = sum_entries[i].time + (e.time or 0)
-		sum_entries[i].percentage = sum_entries[i].percentage + (e.percentage or 0)
+
+		entry.time = entry.time + (e.time or 0)
+		entry.percentage = entry.percentage + (e.percentage or 0)
 	end
+end
+
+local function build_avg_entries(sum_entries, divisor)
+	local avg_entries = {}
+
+	if divisor <= 0 then
+		return avg_entries
+	end
+
+	for _, e in pairs(sum_entries) do
+		avg_entries[#avg_entries + 1] = {
+			name = e.name,
+			time = e.time / divisor,
+			percentage = e.percentage / divisor
+		}
+	end
+
+	table.sort(avg_entries, function(a, b)
+		if a.time == b.time then
+			return a.name < b.name
+		end
+
+		return a.time > b.time
+	end)
+
+	return avg_entries
 end
 
 function perf_ui.sync_data()
@@ -58,34 +90,19 @@ function perf_ui.sync_data()
 	end
 
 	if perf_ui.sync_count >= perf_ui.refresh_rate then
-		local avg_entries = {}
 		local divisor
 
 		if perf_ui.mode == "cumulative" then
 			-- 用累计数据算全程平均值
 			divisor = perf_ui.cum_count
-			for i, e in ipairs(perf_ui.cum_entries) do
-				avg_entries[i] = {
-					name = e.name,
-					time = e.time / divisor,
-					percentage = e.percentage / divisor
-				}
-			end
-			perf_ui.total_ms = perf_ui.cum_total_ms / divisor
+			perf_ui.entries = build_avg_entries(perf_ui.cum_entries, divisor)
+			perf_ui.total_ms = divisor > 0 and perf_ui.cum_total_ms / divisor or 0
 		else
 			-- 窗口模式（默认）：用当前窗口数据算平均值
 			divisor = perf_ui.sync_count
-			for i, e in ipairs(perf_ui.sum_entries) do
-				avg_entries[i] = {
-					name = e.name,
-					time = e.time / divisor,
-					percentage = e.percentage / divisor
-				}
-			end
-			perf_ui.total_ms = perf_ui.sum_total_ms / divisor
+			perf_ui.entries = build_avg_entries(perf_ui.sum_entries, divisor)
+			perf_ui.total_ms = divisor > 0 and perf_ui.sum_total_ms / divisor or 0
 		end
-
-		perf_ui.entries = avg_entries
 
 		-- 窗口模式才重置计数，累计模式不清除累计数据
 		perf_ui.sync_count = 0
@@ -186,6 +203,6 @@ function perf_ui.draw()
 end
 
 -- DEBUG
--- perf_ui.set_mode("cumulative")
+perf_ui.set_mode("cumulative")
 
 return perf_ui

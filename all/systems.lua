@@ -887,6 +887,7 @@ end
 
 function sys.render:init(store)
 	store.render_frames = {}
+	store.render_frames_count = 0
 	store.render_frames_ffi = ffi.new("RenderFrameFFI[16384]")
 	store.render_frames_ffi_tmp = ffi.new("RenderFrameFFI[16384]")
 
@@ -938,82 +939,84 @@ function sys.render:on_insert_unconditional(entity, store)
 			-- 	s.z = Z_OBJECTS
 			-- end
 
-			render_frames[#render_frames + 1] = s
-		end
-	end
-
-	if entity.health_bar and store.config.show_health_bar then
-		local hb = entity.health_bar
-		local hbsize = self._hb_sizes[hb.type]
-		local fb = {
-			flip_x = false,
-			pos = V.vv(0),
-			r = 0,
-			alpha = 255,
-			anchor = V.vv(0),
-			offset = V.v(hb.offset.x - hbsize.x * 0.5, hb.offset.y),
-			_draw_order = (hb.draw_order and 100000 * hb.draw_order + 1 or 200002) + entity.id,
-			z = Z_OBJECTS,
-			sort_y_offset = hb.sort_y_offset,
-			ss = self._hb_ss,
-			color = hb.colors and hb.colors.bg or self._hb_colors.bg,
-			bar_width = hbsize.x,
-			scale = V.v(hbsize.x, hbsize.y),
-			hidden = true
-		}
-
-		local ff = {
-			flip_x = false,
-			-- 引用 fb 的 pos，这样我们始终只需要修改 fb 的 pos 即可
-			pos = fb.pos,
-			r = 0,
-			alpha = 255,
-			anchor = V.vv(0),
-			offset = V.v(hb.offset.x - hbsize.x * 0.5, hb.offset.y),
-			_draw_order = (hb.draw_order and 100000 * hb.draw_order + 2 or 200003) + entity.id,
-			z = Z_OBJECTS,
-			sort_y_offset = hb.sort_y_offset,
-			ss = self._hb_ss,
-			color = hb.colors and hb.colors.fg or self._hb_colors.fg,
-			bar_width = hbsize.x,
-			scale = V.v(hbsize.x, hbsize.y),
-			hidden = true
-		}
-
-		for i = #hb.frames, 1, -1 do
-			hb.frames[i].marked_to_remove = true
+			store.render_frames_count = store.render_frames_count + 1
+			render_frames[store.render_frames_count] = s
 		end
 
-		hb.frames[1] = fb
-		hb.frames[2] = ff
-		render_frames[#render_frames + 1] = fb
-		render_frames[#render_frames + 1] = ff
-
-		if hb.black_bar_hp then
-			local fk = {
+		if entity.health_bar then
+			local hb = entity.health_bar
+			local hbsize = self._hb_sizes[hb.type]
+			local fb = {
 				flip_x = false,
-				-- 同样使用引用
-				pos = fb.pos,
+				pos = V.vv(0),
 				r = 0,
 				alpha = 255,
 				anchor = V.vv(0),
 				offset = V.v(hb.offset.x - hbsize.x * 0.5, hb.offset.y),
-				_draw_order = (hb.draw_order and 100000 * hb.draw_order or 200001) + entity.id,
+				_draw_order = (hb.draw_order and 100000 * hb.draw_order + 1 or 200002) + entity.id,
 				z = Z_OBJECTS,
 				sort_y_offset = hb.sort_y_offset,
 				ss = self._hb_ss,
-				color = hb.colors and hb.colors.black or self._hb_colors.black,
+				color = hb.colors and hb.colors.bg or self._hb_colors.bg,
 				bar_width = hbsize.x,
 				scale = V.v(hbsize.x, hbsize.y),
 				hidden = true
 			}
 
-			hb.frames[3] = fk
-			render_frames[#render_frames + 1] = fk
+			local ff = {
+				flip_x = false,
+				-- 引用 fb 的 pos，这样我们始终只需要修改 fb 的 pos 即可
+				pos = fb.pos,
+				r = 0,
+				alpha = 255,
+				anchor = V.vv(0),
+				offset = V.v(hb.offset.x - hbsize.x * 0.5, hb.offset.y),
+				_draw_order = (hb.draw_order and 100000 * hb.draw_order + 2 or 200003) + entity.id,
+				z = Z_OBJECTS,
+				sort_y_offset = hb.sort_y_offset,
+				ss = self._hb_ss,
+				color = hb.colors and hb.colors.fg or self._hb_colors.fg,
+				bar_width = hbsize.x,
+				scale = V.v(hbsize.x, hbsize.y),
+				hidden = true
+			}
+
+			for i = #hb.frames, 1, -1 do
+				hb.frames[i].marked_to_remove = true
+			end
+
+			hb.frames[1] = fb
+			hb.frames[2] = ff
+			store.render_frames_count = store.render_frames_count + 1
+			render_frames[store.render_frames_count] = fb
+			store.render_frames_count = store.render_frames_count + 1
+			render_frames[store.render_frames_count] = ff
+
+			if hb.black_bar_hp then
+				local fk = {
+					flip_x = false,
+					-- 同样使用引用
+					pos = fb.pos,
+					r = 0,
+					alpha = 255,
+					anchor = V.vv(0),
+					offset = V.v(hb.offset.x - hbsize.x * 0.5, hb.offset.y),
+					_draw_order = (hb.draw_order and 100000 * hb.draw_order or 200001) + entity.id,
+					z = Z_OBJECTS,
+					sort_y_offset = hb.sort_y_offset,
+					ss = self._hb_ss,
+					color = hb.colors and hb.colors.black or self._hb_colors.black,
+					bar_width = hbsize.x,
+					scale = V.v(hbsize.x, hbsize.y),
+					hidden = true
+				}
+
+				hb.frames[3] = fk
+				store.render_frames_count = store.render_frames_count + 1
+				render_frames[store.render_frames_count] = fk
+			end
 		end
 	end
-
--- return true
 end
 
 function sys.render:on_remove_unconditional(entity, store)
@@ -1025,30 +1028,27 @@ function sys.render:on_remove_unconditional(entity, store)
 		-- 这里不可以置 nil，以防其它地方使用 sprite 时发生错误
 		-- entity.render.sprites[i] = nil
 		end
-	end
 
-	if store.config.show_health_bar and entity.health_bar then
-		for i = #entity.health_bar.frames, 1, -1 do
-			local f = entity.health_bar.frames[i]
+		if entity.health_bar then
+			for i = #entity.health_bar.frames, 1, -1 do
+				local f = entity.health_bar.frames[i]
 
-			f.marked_to_remove = true
-			entity.health_bar.frames[i] = nil
+				f.marked_to_remove = true
+				entity.health_bar.frames[i] = nil
+			end
 		end
 	end
-
--- return true
 end
 
 function sys.render:on_render_update(dt, ts, store)
 	perf.start("render")
-	local show_health_bar = store.config.show_health_bar
 
 	local render_frames = store.render_frames
 	local render_frames_ffi = store.render_frames_ffi
 	local n = 0
 
 	-- 把 render sprite 的更新直接放在遍历 render_frames 的阶段完成，利用数组的连续性，除去原有的 store.entities_with_render + sprites 数组的双重循环遍历，大大减小循环遍历开销，也避免了 pairs 的调用，有利于 luajit 优化。
-	for i = 1, #render_frames do
+	for i = 1, store.render_frames_count do
 		local s = render_frames[i]
 
 		if not s.marked_to_remove then
@@ -1149,7 +1149,7 @@ function sys.render:on_render_update(dt, ts, store)
 					s.pos.x, s.pos.y = e.pos.x, e.pos.y
 				end
 
-				if e.health_bar and show_health_bar and e.health_bar._last_ts ~= ts then
+				if e.health_bar and e.health_bar._last_ts ~= ts then
 					local hb = e.health_bar
 					hb._last_ts = ts
 					local fb = hb.frames[1]
@@ -1215,6 +1215,7 @@ function sys.render:on_render_update(dt, ts, store)
 	-- perf.stop("render_from_ffi")
 
 	store.render_frames = new_frames
+	store.render_frames_count = n
 	perf.stop("render")
 end
 
