@@ -157,7 +157,7 @@ love.run()
 | `store.enemies` / `store.soldiers` / `store.towers` | 分类快速索引 |
 | `store.modifiers` / `store.auras` | 修饰器/光环索引 |
 | `store.particle_systems` | 粒子系统索引 |
-| `store.entities_with_render/tween/timed/lights/ui` | 按组件类型的快速索引 |
+| `store.entities_with_tween/timed/lights/ui` | 按组件类型的快速索引 |
 | `store.damage_queue` | 待结算伤害队列（通过 `queue_damage(store, d)` 写入） |
 | `store.damages_applied` | 当帧已结算伤害列表（每帧由 sys.health 更新） |
 | `store.render_frames` | 排序后的可渲染帧列表（由 sys.render 维护，渲染层消费） |
@@ -234,7 +234,7 @@ Windows/Linux/Android 分别使用 `librender_sort.dll`、`librender_sort.so`、
 
 ### sys.last_hook — 分类索引维护
 
-最后一个 on_insert/on_remove 处理器，维护所有分类快速索引。  
+最后一个 on_insert/on_remove 处理器，维护所有分类快速索引。
 提供 `store.last_hooks.on_insert/on_remove` 扩展点供外部（mod）追加逻辑。
 
 ### sys.spatial_index — 空间索引
@@ -480,7 +480,7 @@ perf.reset() -- 每帧重置
 
 ## 十五、格式化规范
 
-使用专有 VSCode 插件 `dlfmt` 格式化（配置见 `dlfmt_task.json`）。  
+使用专有 VSCode 插件 `dlfmt` 格式化（配置见 `dlfmt_task.json`）。
 提交前必须右键 `dlfmt_task.json` 运行 JSON 任务，确保格式一致且必要数据资源已压缩。
 
 ---

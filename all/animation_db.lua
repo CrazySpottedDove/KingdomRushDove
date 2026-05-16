@@ -174,25 +174,26 @@ function animation_db:generate_frames(name)
 end
 
 function animation_db:fni(animation, time_offset, loop, fps)
-	local a = animation
+	if not fps then
+		fps = self.fps
+	end
 
-	fps = fps or self.fps
-
-	local eps = 1e-09
-	local len = a[1]
-	local time_in_frames_plus_eps = time_offset * fps + eps
+	-- local eps = 1e-09
+	local len = animation[1]
+	-- local time_in_frames_plus_eps = time_offset * fps + eps
+	local time_in_frames_plus_eps = time_offset * fps
 	local next_elapsed = ceil(time_in_frames_plus_eps + self.tick_length * fps)
 	local runs = max(0, floor((next_elapsed - 1) / len))
 
 	if loop then
 		local idx = floor(time_in_frames_plus_eps) % len + 1
 
-		return a[2][idx], runs, idx
+		return animation[2][idx], runs, idx
 	else
 		local elapsed_frames = ceil(time_in_frames_plus_eps)
 		local idx = max(1, min(len, elapsed_frames))
 
-		return a[2][idx], runs, idx
+		return animation[2][idx], runs, idx
 	end
 end
 

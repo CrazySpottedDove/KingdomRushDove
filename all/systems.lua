@@ -914,6 +914,7 @@ function sys.render:on_insert_unconditional(entity, store)
 			local s = entity.render.sprites[i]
 
 			s.marked_to_remove = false
+			s._render_e = entity
 			s._draw_order = 100000 * (s.draw_order or i) + entity.id
 
 			if s.random_ts then
@@ -1043,170 +1044,168 @@ end
 
 function sys.render:on_render_update(dt, ts, store)
 	perf.start("render")
-	local d = store
-	local entities = d.entities_with_render
 	local show_health_bar = store.config.show_health_bar
 
-	for _, e in pairs(entities) do
-		local sprites = e.render.sprites
-
-		for i = 1, #sprites do
-			local s = sprites[i]
-
-			if s.ts > ts then
-				s.hidden = true
-				s._hidden_for_ts = true
-			elseif s._hidden_for_ts then
-				s.hidden = false
-				s._hidden_for_ts = false
-			end
-
-			local last_runs = s.runs
-			local fn
-
-			if s.animated then
-				fn, s.runs, s.frame_idx = A:fn(s.prefix and (s.prefix .. "_" .. s.name) or s.name, ts - s.ts + s.time_offset, s.loop, s.fps)
-				s.frame_name = fn
-			else
-				s.runs = 0
-				s.frame_idx = 1
-				fn = s.name
-			end
-
-			if s.exo then
-				local exo_frame = EXO:f(fn)
-
-				if exo_frame then
-					s.exo_frame = exo_frame
-					local exo = EXO:get_exo_by_frame(exo_frame)
-
-					if s.exo_hide_prefix then
-						for i = 1, #exo_frame do
-							local p = exo_frame[i]
-							if p[1] == 1 then
-								local pname = exo.parts[p[2]][1]
-
-								p.hidden = false
-
-								for j = 1, #s.exo_hide_prefix do
-									if string.find(pname, s.exo_hide_prefix[j], 1, true) then
-										p.hidden = true
-
-										break
-									end
-								end
-							end
-						end
-					end
-				else
-					-- if not MISSED_SS[fn] then
-					-- 	-- fallback, 仅在开发时启用，用于检查美术资源
-					-- 	log.error("Failed to get EXO frame for entity %s, frame id: %d", e.template_name, i)
-					-- 	log.error("EXO name: %s", fn)
-					-- 	MISSED_SS[fn] = true
-					-- end
-					s.exo_frame = {}
-				end
-			else
-				s.sync_flag = last_runs ~= s.runs
-				s.ss = I:s(fn)
-
-			-- DEBUG:仅在开发时启用，用于检查美术资源
-			-- if s.ss == nil then
-			-- 	if s.animation then
-			-- 		if not MISSED_SS[s.animation] then
-			-- 			log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
-			-- 			log.error("Animation name: %s", s.animation)
-			-- 			MISSED_SS[s.animation] = true
-			-- 		end
-
-			-- 	elseif s.animated then
-			-- 		if not MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] then
-			-- 			log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
-			-- 			log.error("Animated prefix: %s", s.prefix)
-			-- 			log.error("Animated name: %s", s.name)
-			-- 			MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] = true
-			-- 		end
-			-- 	else
-			-- 		if not MISSED_SS[s.name] then
-			-- 			log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
-			-- 			log.error("Static sprite name: %s", s.name)
-			-- 			MISSED_SS[s.name] = true
-			-- 		end
-			-- 	end
-			-- end
-			end
-
-			if s._track_e then
-				s.pos.x, s.pos.y = e.pos.x, e.pos.y
-			end
-
-			if s.hide_after_runs and s.runs >= s.hide_after_runs then
-				s.hidden = true
-			end
-		end
-
-		if e.health_bar and show_health_bar then
-			local hb = e.health_bar
-			local fb = hb.frames[1]
-			local ff = hb.frames[2]
-			local fk = hb.black_bar_hp and hb.frames[3] or nil
-
-			if e.health.hp == e.health.hp_max or hb.hidden then
-				fb.hidden = true
-				ff.hidden = true
-
-				if fk then
-					fk.hidden = true
-				end
-			else
-				-- draw_order 属性在 insert 时即计算，我们要求后续永远不要出现操作 draw_order 的行为
-				-- offset 的更新使用 U.change_health_bar_offset_run_time
-				-- z 的更新使用 U.change_health_bar_z_run_time
-				-- sort_y_offset 的更新使用 U.change_health_bar_sort_y_offset_run_time
-				fb.hidden = false
-				ff.hidden = false
-				fb.pos.x, fb.pos.y = e.pos.x, e.pos.y
-
-				if fk then
-					fk.hidden = false
-					ff.scale.x = e.health.hp / hb.black_bar_hp * ff.bar_width
-					fb.scale.x = e.health.hp_max / hb.black_bar_hp * fb.bar_width
-				else
-					if e.health.hp > e.health.hp_max then
-						ff.scale.x = ff.bar_width
-						ff.color = hb.colors and hb.colors.fg2 or self._hb_colors.fg2
-					else
-						ff.scale.x = e.health.hp / e.health.hp_max * ff.bar_width
-						ff.color = hb.colors and hb.colors.fg or self._hb_colors.fg
-					end
-				end
-			end
-		end
-	end
-
-	-- FFI同步
 	local render_frames = store.render_frames
 	local render_frames_ffi = store.render_frames_ffi
 	local n = 0
 
+	-- 把 render sprite 的更新直接放在遍历 render_frames 的阶段完成，利用数组的连续性，除去原有的 store.entities_with_render + sprites 数组的双重循环遍历，大大减小循环遍历开销，也避免了 pairs 的调用，有利于 luajit 优化。
 	for i = 1, #render_frames do
-		local f = render_frames[i]
+		local s = render_frames[i]
 
-		if not f.marked_to_remove then
+		if not s.marked_to_remove then
+			if s._render_e then
+				if s.ts > ts then
+					s.hidden = true
+					s._hidden_for_ts = true
+				elseif s._hidden_for_ts then
+					s.hidden = false
+					s._hidden_for_ts = false
+				end
+
+				-- 通过排查可知，动画更新这里是 render 系统的主要性能瓶颈
+				local last_runs = s.runs
+				local fn
+
+				if s.animated then
+					fn, s.runs, s.frame_idx = A:fn(s.prefix and (s.prefix .. "_" .. s.name) or s.name, ts - s.ts + s.time_offset, s.loop, s.fps)
+
+					s.frame_name = fn
+				else
+					s.runs = 0
+					s.frame_idx = 1
+					fn = s.name
+				end
+
+				if s.exo then
+					local exo_frame = EXO:f(fn)
+
+					if exo_frame then
+						s.exo_frame = exo_frame
+						local exo = EXO:get_exo_by_frame(exo_frame)
+
+						if s.exo_hide_prefix then
+							for i = 1, #exo_frame do
+								local p = exo_frame[i]
+								if p[1] == 1 then
+									local pname = exo.parts[p[2]][1]
+
+									p.hidden = false
+
+									for j = 1, #s.exo_hide_prefix do
+										if string.find(pname, s.exo_hide_prefix[j], 1, true) then
+											p.hidden = true
+
+											break
+										end
+									end
+								end
+							end
+						end
+					else
+						-- if not MISSED_SS[fn] then
+						-- 	-- fallback, 仅在开发时启用，用于检查美术资源
+						-- 	log.error("Failed to get EXO frame for entity %s, frame id: %d", e.template_name, i)
+						-- 	log.error("EXO name: %s", fn)
+						-- 	MISSED_SS[fn] = true
+						-- end
+						s.exo_frame = {}
+					end
+				else
+					s.sync_flag = last_runs ~= s.runs
+					s.ss = I:s(fn)
+
+				-- DEBUG:仅在开发时启用，用于检查美术资源
+				-- if s.ss == nil then
+				-- 	if s.animation then
+				-- 		if not MISSED_SS[s.animation] then
+				-- 			log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+				-- 			log.error("Animation name: %s", s.animation)
+				-- 			MISSED_SS[s.animation] = true
+				-- 		end
+
+				-- 	elseif s.animated then
+				-- 		if not MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] then
+				-- 			log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+				-- 			log.error("Animated prefix: %s", s.prefix)
+				-- 			log.error("Animated name: %s", s.name)
+				-- 			MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] = true
+				-- 		end
+				-- 	else
+				-- 		if not MISSED_SS[s.name] then
+				-- 			log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+				-- 			log.error("Static sprite name: %s", s.name)
+				-- 			MISSED_SS[s.name] = true
+				-- 		end
+				-- 	end
+				-- end
+				end
+
+				if s.hide_after_runs and s.runs >= s.hide_after_runs then
+					s.hidden = true
+				end
+
+				local e = s._render_e
+
+				if s._track_e then
+					s.pos.x, s.pos.y = e.pos.x, e.pos.y
+				end
+
+				if e.health_bar and show_health_bar then
+					local hb = e.health_bar
+					local fb = hb.frames[1]
+					local ff = hb.frames[2]
+					local fk = hb.black_bar_hp and hb.frames[3] or nil
+
+					if e.health.hp == e.health.hp_max or hb.hidden then
+						fb.hidden = true
+						ff.hidden = true
+
+						if fk then
+							fk.hidden = true
+						end
+					else
+						-- draw_order 属性在 insert 时即计算，我们要求后续永远不要出现操作 draw_order 的行为
+						-- offset 的更新使用 U.change_health_bar_offset_run_time
+						-- z 的更新使用 U.change_health_bar_z_run_time
+						-- sort_y_offset 的更新使用 U.change_health_bar_sort_y_offset_run_time
+						fb.hidden = false
+						ff.hidden = false
+						fb.pos.x, fb.pos.y = e.pos.x, e.pos.y
+
+						if fk then
+							fk.hidden = false
+							ff.scale.x = e.health.hp / hb.black_bar_hp * ff.bar_width
+							fb.scale.x = e.health.hp_max / hb.black_bar_hp * fb.bar_width
+						else
+							if e.health.hp > e.health.hp_max then
+								ff.scale.x = ff.bar_width
+								ff.color = hb.colors and hb.colors.fg2 or self._hb_colors.fg2
+							else
+								ff.scale.x = e.health.hp / e.health.hp_max * ff.bar_width
+								ff.color = hb.colors and hb.colors.fg or self._hb_colors.fg
+							end
+						end
+					end
+				end
+			end
 			local ffi_f = render_frames_ffi[n]
 
-			ffi_f.z = f.z
-			ffi_f.sort_y = f.sort_y or (f.sort_y_offset or 0) + f.pos.y
-			ffi_f.draw_order = f._draw_order
-			ffi_f.pos_x = f.pos.x
+			ffi_f.z = s.z
+			ffi_f.sort_y = s.sort_y or (s.sort_y_offset or 0) + s.pos.y
+			ffi_f.draw_order = s._draw_order
+			ffi_f.pos_x = s.pos.x
 			ffi_f.lua_index = i
 			n = n + 1
 		end
 	end
 
+	-- perf.start("render_sort")
 	lib_render_sort.ffi_sort(render_frames_ffi, store.render_frames_ffi_tmp, n)
+	-- perf.stop("render_sort")
 
+	-- perf.start("render_from_ffi")
 	local new_frames = {}
 
 	local i = 0
@@ -1215,6 +1214,7 @@ function sys.render:on_render_update(dt, ts, store)
 		i = i + 1
 		new_frames[i] = render_frames[ffi_f.lua_index]
 	end
+	-- perf.stop("render_from_ffi")
 
 	store.render_frames = new_frames
 	perf.stop("render")
