@@ -135,25 +135,25 @@ function path_db:load(name, visible_coords)
 			local ni_in = 1
 			local ni_out = #p[1]
 
-			for i = 1, #p[1] do
-				local n = p[1][i]
+			-- for i = 1, #p[1] do
+			-- 	local n = p[1][i]
 
-				if n.x >= vc.left and n.x <= vc.right and n.y >= vc.bottom and n.y <= vc.top then
-					ni_in = i
+			-- 	if n.x >= vc.left and n.x <= vc.right and n.y >= vc.bottom and n.y <= vc.top then
+			-- 		ni_in = i
 
-					break
-				end
-			end
+			-- 		break
+			-- 	end
+			-- end
 
-			for i = ni_in, #p[1] do
-				local n = p[1][i]
+			-- for i = ni_in, #p[1] do
+			-- 	local n = p[1][i]
 
-				if n.x < vc.left or n.x > vc.right or n.y < vc.bottom or n.y > vc.top then
-					ni_out = i
+			-- 	if n.x < vc.left or n.x > vc.right or n.y < vc.bottom or n.y > vc.top then
+			-- 		ni_out = i
 
-					break
-				end
-			end
+			-- 		break
+			-- 	end
+			-- end
 
 			local offset = self.path_end_margin
 

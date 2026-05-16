@@ -912,7 +912,7 @@ function sys.render:on_insert_unconditional(entity, store)
 			local s = entity.render.sprites[i]
 
 			s.marked_to_remove = false
-			s._render_e = entity
+			s._render_e_id = entity.id
 			s._draw_order = 100000 * (s.draw_order or i) + entity.id
 
 			if s.random_ts then
@@ -1052,7 +1052,7 @@ function sys.render:on_render_update(dt, ts, store)
 		local s = render_frames[i]
 
 		if not s.marked_to_remove then
-			if s._render_e then
+			if s._render_e_id then
 				if s.ts > ts then
 					s.hidden = true
 					s._hidden_for_ts = true
@@ -1143,7 +1143,7 @@ function sys.render:on_render_update(dt, ts, store)
 					s.hidden = true
 				end
 
-				local e = s._render_e
+				local e = store.entities[s._render_e_id]
 
 				if s._track_e then
 					s.pos.x, s.pos.y = e.pos.x, e.pos.y
