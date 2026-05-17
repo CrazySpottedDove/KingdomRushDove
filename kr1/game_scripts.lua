@@ -49391,7 +49391,7 @@ function scripts.enemy_fire_fox.update(this, store)
 
 	while true do
 		if this.health.dead then
-			if not this.old_death_spawns then
+			if not this.old_death_spawns and this.death_spawns then
 				this.death_spawns.delay = this.flaming_ground_decal_delay
 				this.death_spawns.name = this.flaming_ground_decal
 				this.death_spawns.death_animation = "death"
