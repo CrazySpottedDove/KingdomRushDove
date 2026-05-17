@@ -11588,8 +11588,21 @@ function scripts.tower_stargazers.update(this, store)
 
 				if enemies then
 					local dead_hit = {}
+					local enemy_count = #enemies
+
 					for i = 1, shots do
-						enemy = enemies[km.zmod(i, #enemies)]
+						local iteration_count = 0
+						local j = i
+						enemy = enemies[km.zmod(j, enemy_count)]
+						while iteration_count < enemy_count do
+							local candidate = enemies[km.zmod(j, enemy_count)]
+							if not candidate.health.dead or not dead_hit[candidate.id] then
+								enemy = candidate
+								break
+							end
+							j = j + 1
+							iteration_count = iteration_count + 1
+						end
 
 						local bullet = E:create_entity(aa.bullet)
 
