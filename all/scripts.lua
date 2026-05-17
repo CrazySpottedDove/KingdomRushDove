@@ -5689,7 +5689,9 @@ function scripts.mod_stun.update(this, store)
 		return
 	end
 
-	U.animation_start(this, "loop", nil, store.tick_ts, true)
+	if this.render then
+		U.animation_start(this, "loop", nil, store.tick_ts, true)
+	end
 
 	while store.tick_ts - m.ts < m.duration and target and not target.health.dead do
 		if this.abort then

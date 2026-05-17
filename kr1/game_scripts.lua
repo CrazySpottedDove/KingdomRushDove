@@ -5489,7 +5489,15 @@ function scripts.enemy_alien_breeder.update(this, store)
 
 					this.vis.bans = bor(this.vis.bans, F_TWISTER, F_BLOCK)
 
-					SU.stun_inc(blocker)
+					-- SU.stun_inc(blocker)
+
+					local mod = E:create_entity("mod_enemy_alien_breeder_facehug")
+					mod.modifier.source_id = this.id
+					mod.modifier.target_id = blocker.id
+					queue_insert(store, mod)
+
+					-- 等待 mod 生效
+					coroutine.yield()
 
 					this.health_bar.hidden = true
 					hugging = true
@@ -5535,8 +5543,22 @@ function scripts.enemy_alien_breeder.update(this, store)
 
 					while not blocker.health.dead do
 						if this.health.dead then
-							SU.stun_dec(blocker)
+							queue_remove(store, mod)
 
+							dead_when_hugging = true
+
+							goto label_19_0
+						end
+
+						if not store.entities[mod.id] then
+							-- mod 被移除，说明对象强制解除了控制，直接爆体而亡
+							local d = E.create_damage()
+							d.damage_type = DAMAGE_INSTAKILL
+							d.source_id = blocker.id
+							d.target_id = this.id
+							d.value = this.health.hp
+							queue_damage(store, d)
+							coroutine.yield()
 							dead_when_hugging = true
 
 							goto label_19_0

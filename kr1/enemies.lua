@@ -3798,6 +3798,11 @@ tt.facehug_offsets.hero_monkey_god = vec_2(10, 5)
 tt.facehug_offsets.hero_vampiress = vec_2(0, 20)
 tt.facehug_offsets.hero_van_helsing = vec_2(1, 5)
 
+tt = RT("mod_enemy_alien_breeder_facehug", "mod_stun")
+tt.render = nil
+tt.modifier.animation_phases = nil
+tt.modifier.duration = 1e+99
+
 tt = RT("enemy_alien_reaper", "enemy")
 AC(tt, "melee")
 anchor_y = 0.13
@@ -4685,11 +4690,8 @@ tt.water.hit_offset = vec_2(0, 5)
 tt.water.mod_offset = vec_2(2, ady(20))
 tt.water.speed_factor = 1.2
 
-tt = RT("mod_greenfin_net", "modifier")
+tt = RT("mod_greenfin_net", "mod_stun")
 AC(tt, "render")
-tt.main_script.insert = scripts.mod_stun.insert
-tt.main_script.update = scripts.mod_stun.update
-tt.main_script.remove = scripts.mod_stun.remove
 tt.modifier.duration = 6
 tt.modifier.duration_heroes = 1
 tt.modifier.animation_phases = true
