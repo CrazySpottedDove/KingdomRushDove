@@ -4804,6 +4804,11 @@ function EncyclopediaView:show_skill_detail(prefix, power_name, power, from_kr)
 	if power.max_level > 3 then
 		height = height * 3 / power.max_level
 	end
+	local color_old = {193, 33, 33}
+	local color_new = {63, 137, 45}
+	local RichTextLabel = require("dove_modules.gui.rich_text_label")
+	local text_diff = require("dove_modules.gui.text_utils")
+
 	for i = 1, power.max_level do
 		local offset_y = (i - 1) * height
 		-- 技能名
@@ -4823,12 +4828,28 @@ function EncyclopediaView:show_skill_detail(prefix, power_name, power, from_kr)
 		panel:add_child(name_label)
 
 		-- 技能描述
-		local desc_label = GGLabel:new(V.v(400, 140))
+		-- local desc_label = GGLabel:new(V.v(400, 140))
 
-		if from_kr == 5 then
-			desc_label.text = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_" .. i .. "_DESCRIPTION")))
+		local desc_label = RichTextLabel:new(V.v(400, 140), nil, GGLabel.static.font_scale, GGLabel.static.ref_h)
+
+		if i == 1 then
+			if from_kr == 5 then
+				desc_label:set_text(text_diff.mark_number(U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_" .. i .. "_DESCRIPTION"))), color_new))
+			else
+				desc_label:set_text(text_diff.mark_number(U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_DESCRIPTION_" .. i))), color_new))
+			end
 		else
-			desc_label.text = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_DESCRIPTION_" .. i)))
+			if from_kr == 5 then
+				local last_desc = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_" .. (i - 1) .. "_DESCRIPTION")))
+				local current_desc = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_" .. i .. "_DESCRIPTION")))
+				local diff_text = text_diff.create_diff_text(last_desc, current_desc, color_old, color_new)
+				desc_label:set_text(diff_text)
+			else
+				local last_desc = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_DESCRIPTION_" .. (i - 1))))
+				local current_desc = U.balance_format(_(prefix .. "_" .. string.upper(power_name .. "_DESCRIPTION_" .. i)))
+				local diff_text = text_diff.create_diff_text(last_desc, current_desc, color_old, color_new)
+				desc_label:set_text(diff_text)
+			end
 		end
 
 		desc_label.font_size = 16
@@ -4836,7 +4857,7 @@ function EncyclopediaView:show_skill_detail(prefix, power_name, power, from_kr)
 		desc_label.pos = v(50, 65 + offset_y)
 		desc_label.line_height = 0.8
 		desc_label.text_align = "left"
-
+		desc_label.default_color = {0, 0, 0}
 		panel:add_child(desc_label)
 	end
 

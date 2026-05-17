@@ -88,7 +88,9 @@ end
 -- @param text1 旧文本（当前级）
 -- @param text2 新文本（下一级）
 -- @return 富文本字符串
-function M.create_diff_text(text1, text2)
+function M.create_diff_text(text1, text2, color_old, color_new)
+	color_old = color_old or M.COLORS.OLD_VALUE
+	color_new = color_new or M.COLORS.NEW_VALUE
 	if not text1 or not text2 then
 		return text2 or text1 or ""
 	end
@@ -109,9 +111,9 @@ function M.create_diff_text(text1, text2)
 
 		if num1 and num2 then
 			-- 构造替换文本：{c:r,g,b}旧值{/c}→{c:r,g,b}新值{/c}
-			local old_colored = string.format("{c:%d,%d,%d}%s{/c}", M.COLORS.OLD_VALUE[1], M.COLORS.OLD_VALUE[2], M.COLORS.OLD_VALUE[3], num1.str)
+			local old_colored = string.format("{c:%d,%d,%d}%s{/c}", color_old[1], color_old[2], color_old[3], num1.str)
 			local arrow = "→"
-			local new_colored = string.format("{c:%d,%d,%d}%s{/c}", M.COLORS.NEW_VALUE[1], M.COLORS.NEW_VALUE[2], M.COLORS.NEW_VALUE[3], num2.str)
+			local new_colored = string.format("{c:%d,%d,%d}%s{/c}", color_new[1], color_new[2], color_new[3], num2.str)
 
 			local replacement = old_colored .. arrow .. new_colored
 
@@ -120,9 +122,9 @@ function M.create_diff_text(text1, text2)
 				end_pos = num2.end_pos,
 				replacement = replacement
 			})
-		elseif num2 and not num1 then
+		elseif (num2 and not num1) then
 			-- 新增的数值，直接标绿
-			local new_colored = string.format("{c:%d,%d,%d}%s{/c}", M.COLORS.NEW_VALUE[1], M.COLORS.NEW_VALUE[2], M.COLORS.NEW_VALUE[3], num2.str)
+			local new_colored = string.format("{c:%d,%d,%d}%s{/c}", color_new[1], color_new[2], color_new[3], num2.str)
 
 			table.insert(replacements, {
 				start_pos = num2.start_pos,
