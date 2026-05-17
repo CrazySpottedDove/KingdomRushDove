@@ -7752,7 +7752,7 @@ tt.received_damage_factor = b.ranged_attack.received_damage_factor
 tt.main_script.insert = scripts.mod_damage_factors.insert
 tt.main_script.remove = scripts.mod_damage_factors.remove
 tt.main_script.update = scripts.mod_track_target.update
-tt.modifier.vis_flags = F_MOD
+tt.modifier.vis_flags = bor(F_MOD, F_POISON)
 tt.render.sprites[1].name = "skunk_bombardier_modifier_modifier"
 tt.render.sprites[1].draw_order = DO_MOD_FX
 
@@ -14068,6 +14068,7 @@ tt = RT("mod_enemy_evolved_lava_dot", "modifier")
 E:add_comps(tt, "render", "dps")
 b = balance.enemies.dragons.evolved_lava.special_attack.dot
 tt.modifier.duration = b.duration
+tt.modifier.vis_flags = bor(F_MOD, F_BURN)
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 tt.render.sprites[1].size_names = {"small", "medium", "large"}
@@ -14086,6 +14087,7 @@ tt = RT("mod_enemy_alfa_lava_dot", "modifier")
 E:add_comps(tt, "render", "dps")
 b = balance.enemies.dragons.alfa_lava.lava_vomit_attack.dot
 tt.modifier.duration = b.duration
+tt.modifier.vis_flags = bor(F_MOD, F_BURN)
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 tt.render.sprites[1].size_names = {"small", "medium", "large"}
@@ -14114,6 +14116,7 @@ tt.render.sprites[1].size_names = {"run", "run", "run"}
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].draw_order = DO_MOD_FX
 tt.render.sprites[1].anchor = v(0.5, 0.6)
+tt.modifier.vis_flags = bor(F_MOD, F_POISON)
 tt.main_script.insert = scripts.mod_enemy_basic_acid_armor_reduction.insert
 tt.main_script.remove = scripts.mod_enemy_basic_acid_armor_reduction.remove
 tt.main_script.update = scripts.mod_track_target.update

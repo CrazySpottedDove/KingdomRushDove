@@ -5997,6 +5997,8 @@ tt.dps.damage_every = fts(11)
 tt.dps.damage_type = DAMAGE_PHYSICAL
 tt.modifier.duration = 10
 tt.modifier.use_mod_offset = nil
+tt.modifier.type = MOD_TYPE_STUN
+tt.modifier.vis_flags = F_STUN
 tt.main_script.insert = scripts.mod_stun.insert
 tt.main_script.remove = scripts.mod_stun.remove
 tt.main_script.update = scripts.mod_twilight_heretic_servant.update
@@ -18126,7 +18128,7 @@ tt = E:register_t("mod_cultbrood_poison", "modifier")
 b = balance.enemies.arachnids.cultbrood.poison_attack
 E:add_comps(tt, "render", "dps")
 tt.modifier.duration = b.poison.duration
-tt.modifier.vis_flags = bor(F_MOD)
+tt.modifier.vis_flags = bor(F_MOD, F_POISON)
 tt.render.sprites[1].name = "cultbrood_modifier_idle"
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_cultbrood_poison.update
