@@ -11551,6 +11551,7 @@ function scripts.tower_stargazers.update(this, store)
 
 		if pow_s.changed then
 			pow_s.changed = nil
+
 			aa.cooldown = aa.cooldown_base + pow_s.level * aa.ray_timing
 			shots = aa.count_base + pow_s.level
 			aa.count = shots
