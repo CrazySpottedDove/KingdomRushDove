@@ -2425,6 +2425,9 @@ scripts.tower_sorcerer = {
 					end
 
 					if not s or s.health.dead and store.tick_ts - s.health.death_ts > s.health.dead_lifetime then
+						if s then
+							queue_remove(store, s)
+						end
 						local ns = E:create_entity(ba.soldier_type)
 
 						ns.soldier.tower_id = this.id

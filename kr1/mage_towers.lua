@@ -300,6 +300,7 @@ tt.health.hp_inc = 100
 tt.health_bar.offset = vec_2(0, 55)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.health.instakill_resistance = 0.3
+tt.health.ignore_delete_after = true
 tt.info.i18n_key = "SOLDIER_ELEMENTAL"
 tt.info.portrait = "info_portraits_soldiers_0006"
 tt.info.random_name_count = nil

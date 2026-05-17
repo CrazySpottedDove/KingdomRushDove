@@ -723,6 +723,7 @@ tt.health.dead_lifetime = 12
 tt.health.hp_max = 500
 tt.health_bar.offset = vec_2(0, 48)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.health.ignore_delete_after = true
 tt.info.fn = scripts.soldier_barrack.get_info
 tt.info.portrait = "kr2_info_portraits_soldiers_0014"
 tt.main_script.insert = scripts.soldier_barrack.insert

@@ -571,6 +571,8 @@ local function damage_trace_print_death(store, target)
 	print("[DAMAGE_TRACE] ========== end death trace ==========")
 end
 
+local FADE_OUT_DURATION = 0.4
+
 function M.register(sys)
 	local function queue_insert(store, e)
 		simulation:queue_insert_entity(e)
@@ -723,7 +725,16 @@ function M.register(sys)
 				h.hp = 0
 				h.dead = true
 				h.death_ts = store.tick_ts
-				h.delete_after = store.tick_ts + h.dead_lifetime
+
+				if e.render then
+					h.fading_after = store.tick_ts + h.dead_lifetime - FADE_OUT_DURATION
+					h._fade_init_alphas = {}
+					for i = 1, #e.render.sprites do
+						h._fade_init_alphas[i] = e.render.sprites[i].alpha
+					end
+				else
+					h.delete_after = store.tick_ts + h.dead_lifetime
+				end
 
 				if e.health_bar then
 					e.health_bar.hidden = true
@@ -735,8 +746,21 @@ function M.register(sys)
 
 			if not h.dead then
 				h.last_damage_types = 0
-			elseif not h.ignore_delete_after and (h.delete_after and store.tick_ts > h.delete_after) then
-				queue_remove(store, e)
+			elseif not h.ignore_delete_after then
+				if h.fading_after and store.tick_ts > h.fading_after then
+					local progress = (store.tick_ts - h.fading_after) / FADE_OUT_DURATION
+
+					if progress >= 1.0 then
+						queue_remove(store, e)
+					else
+						local sprites = e.render.sprites
+						for i = 1, #sprites do
+							sprites[i].alpha = h._fade_init_alphas[i] * (1 - progress)
+						end
+					end
+				elseif h.delete_after and store.tick_ts > h.delete_after then
+					queue_remove(store, e)
+				end
 			end
 		end
 
@@ -748,7 +772,16 @@ function M.register(sys)
 				h.hp = 0
 				h.dead = true
 				h.death_ts = store.tick_ts
-				h.delete_after = store.tick_ts + h.dead_lifetime
+
+				if e.render then
+					h.fading_after = store.tick_ts + h.dead_lifetime - FADE_OUT_DURATION
+					h._fade_init_alphas = {}
+					for i = 1, #e.render.sprites do
+						h._fade_init_alphas[i] = e.render.sprites[i].alpha
+					end
+				else
+					h.delete_after = store.tick_ts + h.dead_lifetime
+				end
 
 				if e.health_bar then
 					e.health_bar.hidden = true
@@ -757,8 +790,21 @@ function M.register(sys)
 
 			if not h.dead then
 				h.last_damage_types = 0
-			elseif not e.hero and not h.ignore_delete_after and (h.delete_after and store.tick_ts > h.delete_after) then
-				queue_remove(store, e)
+			elseif not e.hero and not h.ignore_delete_after then
+				if h.fading_after and store.tick_ts > h.fading_after then
+					local progress = (store.tick_ts - h.fading_after) / FADE_OUT_DURATION
+
+					if progress >= 1.0 then
+						queue_remove(store, e)
+					else
+						local sprites = e.render.sprites
+						for i = 1, #sprites do
+							sprites[i].alpha = h._fade_init_alphas[i] * (1 - progress)
+						end
+					end
+				elseif h.delete_after and store.tick_ts > h.delete_after then
+					queue_remove(store, e)
+				end
 			end
 		end
 

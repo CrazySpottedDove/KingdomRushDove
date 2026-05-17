@@ -1560,6 +1560,14 @@ scripts.enemy_sheep = {
 			if this.ui.clicked then
 				this.ui.clicked = nil
 				clicks = clicks + 1
+				local d = E.create_damage()
+				d.damage_type = DAMAGE_TRUE
+				d.value = hp_max / this.clicks_to_destroy
+				d.target_id = this.id
+				queue_damage(store, d)
+				if U.predict_damage(this, d) >= this.health.hp then
+					AC:inc_check("SHEEP_KILLER")
+				end
 			end
 
 			if clicks >= this.clicks_to_destroy then
