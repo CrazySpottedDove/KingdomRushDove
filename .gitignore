@@ -57,3 +57,4 @@ config.json
 *.aluac
 .zed/
 .codex
+.deepseek

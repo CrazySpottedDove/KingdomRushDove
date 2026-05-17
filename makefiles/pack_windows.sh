@@ -80,6 +80,7 @@ rsync -a \
     --exclude='mods/local/' \
     --exclude='.plugins/' \
     --exclude='config.json' \
+    --exclude='.deepseek/' \
     ./ "$DEST_DIR/"
 
 echo "Creating archive -> $ARCHIVE_DIR"
