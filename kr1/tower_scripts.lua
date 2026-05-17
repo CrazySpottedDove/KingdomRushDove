@@ -2471,7 +2471,7 @@ scripts.tower_sorcerer = {
 				for i, aa in ipairs(attacks) do
 					pow = pows[i]
 
-					if (pow and ready_to_use_power(pow, aa, store, this.tower.cooldown_factor)) or (not pow and ready_to_attack(aa, store, this.tower.cooldown_factor)) and store.tick_ts - last_ts > a.min_cooldown * this.tower.cooldown_factor then
+					if (pow and ready_to_use_power(pow, aa, store, this.tower.cooldown_factor)) or (not pow and ready_to_attack(aa, store, this.tower.cooldown_factor)) then
 						local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false, aa.vis_flags, aa.vis_bans)
 
 						if not enemy then
@@ -5723,7 +5723,7 @@ function scripts.tower_tricannon.update(this, store)
 				this.decal_mod = nil
 			end
 
-			if ready_to_use_power(pow_o, ao, store, tw.cooldown_factor) and (store.tick_ts - last_ts > a.min_cooldown * tw.cooldown_factor) then
+			if ready_to_use_power(pow_o, ao, store, tw.cooldown_factor) then
 				if U.find_first_enemy_in_range_filter_off(tpos, a.range, ao.vis_flags, ao.vis_bans) then
 					ao.active = true
 					S:queue(ao.sound)
@@ -5744,7 +5744,7 @@ function scripts.tower_tricannon.update(this, store)
 				end
 			end
 
-			if ready_to_use_power(pow_m, am, store, tw.cooldown_factor) and (store.tick_ts - last_ts > a.min_cooldown * tw.cooldown_factor) then
+			if ready_to_use_power(pow_m, am, store, tw.cooldown_factor) then
 				local trigger = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range, am.vis_flags, am.vis_bans)
 
 				if not trigger then
@@ -7503,7 +7503,7 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 		local power = this.powers.skill_debuff
 		local attack = a.list[2]
 
-		if power.level > 0 and ready_to_attack(attack, store, tw.cooldown_factor) and (store.tick_ts - last_ts_shared > attack.min_cooldown * tw.cooldown_factor) then
+		if power.level > 0 and ready_to_attack(attack, store, tw.cooldown_factor) then
 			local enemy, enemies = U.find_foremost_enemy_in_range_filter_on(tpos, attack.max_range, attack.node_prediction, attack.vis_flags, attack.vis_bans, function(e, o)
 				local node_offset = P:predict_enemy_node_advance(e, attack.node_prediction + attack.cast_time)
 				local e_ni = e.nav_path.ni + node_offset
@@ -7547,7 +7547,7 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 		local power = this.powers.skill_rider
 		local attack = a.list[3]
 
-		if power.level <= 0 or not ready_to_attack(attack, store, tw.cooldown_factor) or (attack.min_cooldown and store.tick_ts - last_ts_shared < attack.min_cooldown * tw.cooldown_factor) then
+		if power.level <= 0 or not ready_to_attack(attack, store, tw.cooldown_factor) then
 			return
 		end
 
@@ -7641,7 +7641,7 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 
 			local attack = this.attacks.list[1]
 
-			if ready_to_attack(attack, store, tw.cooldown_factor) and store.tick_ts - last_ts_shared > this.attacks.min_cooldown * tw.cooldown_factor then
+			if ready_to_attack(attack, store, tw.cooldown_factor) then
 				target, pred_pos = find_target(attack)
 
 				if not target and max_skulls <= this.tower_upgrade_persistent_data.current_skulls then
@@ -10483,7 +10483,7 @@ function scripts.tower_ray.update(this, store)
 			SU.towers_swaped(store, this, this.attacks.list)
 
 			for i, aa in ipairs(attacks) do
-				if not aa.disabled and ready_to_attack(aa, store, this.tower.cooldown_factor) and store.tick_ts - last_ts > a.min_cooldown * this.tower.cooldown_factor then
+				if not aa.disabled and ready_to_attack(aa, store, this.tower.cooldown_factor) then
 					if aa == as then
 						local enemy, pred_pos = find_target(aa)
 
@@ -10628,7 +10628,7 @@ function scripts.tower_ray.update(this, store)
 
 							U.animation_start_group(this, "idle_2", nil, store.tick_ts, true, "rocks")
 
-							enemy_id = ray_wait_retarget((aa.shoot_time - fts(4)) * this.tower.cooldown_factor, aa, enemy_id)
+							enemy_id = ray_wait_retarget(aa.shoot_time - fts(4) * this.tower.cooldown_factor, aa, enemy_id)
 
 							if not enemy_id then
 								goto label_989_1
@@ -10712,7 +10712,7 @@ function scripts.tower_ray.update(this, store)
 
 							queue_insert(store, b)
 
-							while store.tick_ts - last_ts < (aa.duration + aa.shoot_time) * this.tower.cooldown_factor and b and not b.force_stop_ray and not this.tower.blocked do
+							while store.tick_ts - last_ts < aa.duration * this.tower.cooldown_factor + aa.shoot_time and b and not b.force_stop_ray and not this.tower.blocked do
 								if ray_target_invalid(store, enemy_id) then
 									break
 								end
@@ -10723,7 +10723,7 @@ function scripts.tower_ray.update(this, store)
 									break
 								end
 
-								if store.tick_ts - last_fx > 1 and store.tick_ts - last_ts < (aa.duration + aa.shoot_time - 0.75) * this.tower.cooldown_factor and b.bullet.out_start_fx then
+								if store.tick_ts - last_fx > 1 and store.tick_ts - last_ts < (aa.duration - 0.75) * this.tower.cooldown_factor + aa.shoot_time and b.bullet.out_start_fx then
 									local fx = E:create_entity(b.bullet.out_start_fx)
 
 									fx.pos.x, fx.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y

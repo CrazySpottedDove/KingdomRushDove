@@ -203,6 +203,6 @@ function perf_ui.draw()
 end
 
 -- DEBUG
-perf_ui.set_mode("cumulative")
+-- perf_ui.set_mode("cumulative")
 
 return perf_ui
