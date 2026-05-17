@@ -65,6 +65,7 @@ require("all.constants")
 require("gg_views_custom")
 
 local data = require("data.game_gui_data")
+local damage_icons = require("kr1-desktop.data.damage_icons")
 local tower_menus = require("kr1.data.tower_menus_data")
 local game_gui = {}
 
@@ -2987,7 +2988,7 @@ function InfoBar:update_stats()
 		self:add_child(self.stats_view)
 	end
 
-	local ddi = data.damage_icons
+	local ddi = damage_icons
 	local damage_icon = ddi[stats.damage_icon] or ddi[band(DAMAGE_BASE_TYPES, stats.damage_type or 0)] or ddi.default
 
 	if stats.ranged_damage_type and not stats.no_ranged and band(stats.ranged_damage_type, DAMAGE_PHYSICAL) ~= 0 then
@@ -7207,7 +7208,7 @@ function TowerMenuTooltip:show(entity, item)
 		elseif stats.type == STATS_TYPE_TOWER or stats.type == STATS_TYPE_TOWER_MAGE then
 			self.damage_label.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
 
-			local ddi = data.damage_icons
+			local ddi = damage_icons
 			self.damage_label:set_image(ddi[stats.damage_icon] or ddi[band(DAMAGE_BASE_TYPES, stats.damage_type or 0)] or ddi.default, V.v(self.damage_label.size.x, self.damage_label.size.y))
 
 			self.cooldown_label.text = GU.cooldown_value_desc_detailed(stats.cooldown)

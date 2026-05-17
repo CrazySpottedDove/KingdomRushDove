@@ -25,6 +25,7 @@ local achievements_data, map_data
 local tower_menus_data = require("kr1.data.tower_menus_data")
 local R = require("all.restart")
 local perf = require("dove_modules.perf.perf")
+local damage_icons = require("kr1-desktop.data.damage_icons")
 require("klove.kui")
 
 local kui_db = require("klove.kui_db")
@@ -57,7 +58,8 @@ screen_map.required_textures = {
 	"achievements",
 	"encyclopedia",
 	"encyclopedia_creeps",
-	"gui_ico"
+	"gui_ico",
+	"gui_common"
 }
 screen_map.ref_w = 1920
 screen_map.ref_h = 1080
@@ -4500,17 +4502,22 @@ function EncyclopediaView:detail_tower(index)
 
 	if di.type == STATS_TYPE_TOWER_BARRACK then
 		stats_list = {"health", "dmg", "armor", "respawn"}
-	elseif di.type == STATS_TYPE_TOWER_MAGE then
-		stats_list = {"mdmg", "reload", "range"}
 	else
 		stats_list = {"dmg", "reload", "range"}
 	end
 
 	local mx = 200
 	local my = 380
+	local band = require("bit").band
 
 	for i, v in pairs(stats_list) do
-		local icon = KImageView:new("encyclopedia_icons_00" .. string.format("%02i", icons_list[v]))
+		local image_name
+		if v == "dmg" then
+			image_name = damage_icons[band(DAMAGE_BASE_TYPES, di.damage_type or 0)] or damage_icons.default
+		else
+			image_name = "encyclopedia_icons_00" .. string.format("%02i", icons_list[v])
+		end
+		local icon = KImageView:new(image_name)
 
 		icon.pos = V.v(mx, my)
 		icon.anchor = V.v(icon.size.x / 2, icon.size.y / 2)

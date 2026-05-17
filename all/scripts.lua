@@ -1822,39 +1822,13 @@ function scripts.tower_barrack.get_info(this)
 		end
 	end
 
+	U.soldier_inherit_tower_buff_factor(s, this)
+
 	local s_info = s.info.fn(s)
-	local attacks
 
-	if s.melee and s.melee.attacks then
-		attacks = s.melee.attacks
-	elseif s.ranged and s.ranged.attacks then
-		attacks = s.ranged.attacks
-	end
+	s_info.type = STATS_TYPE_TOWER_BARRACK
 
-	local min, max, cooldown
-
-	for _, a in ipairs(attacks) do
-		if a.damage_min then
-			min, max = a.damage_min, a.damage_max
-			cooldown = a.cooldown
-			break
-		end
-	end
-
-	if min and max then
-		min, max = math.ceil(min * this.tower.damage_factor), math.ceil(max * this.tower.damage_factor)
-	end
-
-	return {
-		type = STATS_TYPE_TOWER_BARRACK,
-		hp_max = s.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		armor = s.health.armor,
-		magic_armor = s.health.magic_armor,
-		respawn = s.health.dead_lifetime,
-		cooldown = cooldown
-	}
+	return s_info
 end
 
 function scripts.tower_barrack.insert(this, store)
