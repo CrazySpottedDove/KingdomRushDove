@@ -8185,6 +8185,14 @@ scripts.soldier_revive_resist = function(this, store)
 		return
 	end
 
+	-- 如果没有正在拦截的对象，尝试重新拦截，避免丢失目标。
+	if not this.soldier.target_id or store.entities[this.soldier.target_id] == nil then
+		local block_target = SU.soldier_pick_melee_target(store, this)
+		if block_target then
+			U.block_enemy(store, this, block_target)
+		end
+	end
+
 	this.revive.protect = this.revive.protect - r.cost
 
 	local clear_stun = false

@@ -2057,6 +2057,7 @@ function scripts.enemy_demon_gulaemon.update(this, store)
 						is_flying = true
 
 						U.cleanup_blockers(store, this)
+                        
 						SU.remove_modifiers_by_type(store, this, MOD_TYPE_SLOW)
 						patch_offsets(1)
 
