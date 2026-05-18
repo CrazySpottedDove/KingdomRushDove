@@ -45,19 +45,21 @@ local function find_number_diffs(text1, text2)
 
 	for i = 1, min_count do
 		if nums1[i].value ~= nums2[i].value then
-			table.insert(diff_indices, i)
+			table.insert(diff_indices, {true, i})
+		else
+			table.insert(diff_indices, {false, i})
 		end
 	end
 
 	-- 如果数字数量不同，标记额外的数字
 	if #nums1 > min_count then
 		for i = min_count + 1, #nums1 do
-			table.insert(diff_indices, i)
+			table.insert(diff_indices, {true, i})
 		end
 	end
 	if #nums2 > min_count then
 		for i = min_count + 1, #nums2 do
-			table.insert(diff_indices, i)
+			table.insert(diff_indices, {true, i})
 		end
 	end
 
@@ -105,23 +107,34 @@ function M.create_diff_text(text1, text2, color_old, color_new)
 	-- 收集所有需要替换的位置和内容
 	local replacements = {}
 
-	for _, idx in ipairs(diff_indices) do
-		local num1 = nums1[idx]
-		local num2 = nums2[idx]
+	for _, t in ipairs(diff_indices) do
+		local num1 = nums1[t[2]]
+		local num2 = nums2[t[2]]
 
 		if num1 and num2 then
-			-- 构造替换文本：{c:r,g,b}旧值{/c}→{c:r,g,b}新值{/c}
-			local old_colored = string.format("{c:%d,%d,%d}%s{/c}", color_old[1], color_old[2], color_old[3], num1.str)
-			local arrow = "→"
-			local new_colored = string.format("{c:%d,%d,%d}%s{/c}", color_new[1], color_new[2], color_new[3], num2.str)
+			if t[1] then
+				-- 构造替换文本：{c:r,g,b}旧值{/c}→{c:r,g,b}新值{/c}
+				local old_colored = string.format("{c:%d,%d,%d}%s{/c}", color_old[1], color_old[2], color_old[3], num1.str)
+				local arrow = "→"
+				local new_colored = string.format("{c:%d,%d,%d}%s{/c}", color_new[1], color_new[2], color_new[3], num2.str)
 
-			local replacement = old_colored .. arrow .. new_colored
+				local replacement = old_colored .. arrow .. new_colored
 
-			table.insert(replacements, {
-				start_pos = num2.start_pos,
-				end_pos = num2.end_pos,
-				replacement = replacement
-			})
+				table.insert(replacements, {
+					start_pos = num2.start_pos,
+					end_pos = num2.end_pos,
+					replacement = replacement
+				})
+			else
+				-- 数值相同，直接保留新文本中的数值
+				local new_colored = string.format("{c:%d,%d,%d}%s{/c}", color_new[1], color_new[2], color_new[3], num2.str)
+
+				table.insert(replacements, {
+					start_pos = num2.start_pos,
+					end_pos = num2.end_pos,
+					replacement = new_colored
+				})
+			end
 		elseif (num2 and not num1) then
 			-- 新增的数值，直接标绿
 			local new_colored = string.format("{c:%d,%d,%d}%s{/c}", color_new[1], color_new[2], color_new[3], num2.str)
@@ -174,8 +187,8 @@ function M.create_compact_diff(text1, text2)
 	-- 收集所有需要替换的位置
 	local replacements = {}
 
-	for _, idx in ipairs(diff_indices) do
-		local num2 = nums2[idx]
+	for _, t in ipairs(diff_indices) do
+		local num2 = nums2[t[2]]
 
 		if num2 then
 			local new_colored = string.format("{c:%d,%d,%d}%s{/c}", M.COLORS.NEW_VALUE[1], M.COLORS.NEW_VALUE[2], M.COLORS.NEW_VALUE[3], num2.str)
