@@ -4,7 +4,7 @@
 typedef struct
 {
     float sort_y;
-    float pos_x;
+    // float pos_x;
     int    z;
     int    draw_order;
     int    lua_index;
@@ -15,7 +15,7 @@ static int cmp(const RenderFrameFFI* a, const RenderFrameFFI* b)
     if (a->z != b->z) return (a->z < b->z) ? -1 : 1;
     if (a->sort_y != b->sort_y) return (a->sort_y > b->sort_y) ? -1 : 1;
     if (a->draw_order != b->draw_order) return (a->draw_order < b->draw_order) ? -1 : 1;
-    if (a->pos_x != b->pos_x) return (a->pos_x < b->pos_x) ? -1 : 1;
+    // if (a->pos_x != b->pos_x) return (a->pos_x < b->pos_x) ? -1 : 1;
     return 0;
 }
 

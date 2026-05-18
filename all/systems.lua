@@ -788,7 +788,7 @@ sys.render.name = "render"
 ffi.cdef[[
 typedef struct {
     float sort_y;
-    float pos_x;
+    //float pos_x;
     int z;
     int draw_order;
     int lua_index;
@@ -829,9 +829,9 @@ else
 			return a.draw_order < b.draw_order
 		end
 
-		if a.pos_x ~= b.pos_x then
-			return a.pos_x < b.pos_x
-		end
+		-- if a.pos_x ~= b.pos_x then
+		-- return a.pos_x < b.pos_x
+		-- end
 
 		return false
 	end
@@ -1193,7 +1193,7 @@ function sys.render:on_render_update(dt, ts, store)
 			ffi_f.z = s.z
 			ffi_f.sort_y = s.sort_y or (s.sort_y_offset or 0) + s.pos.y
 			ffi_f.draw_order = s._draw_order
-			ffi_f.pos_x = s.pos.x
+			-- ffi_f.pos_x = s.pos.x
 			ffi_f.lua_index = i
 			n = n + 1
 		end
