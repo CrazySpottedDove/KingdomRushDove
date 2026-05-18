@@ -32,6 +32,8 @@ function M.register(sys)
 			for _, t in pairs(entity.texts.list) do
 				if t.image_name then
 					I:remove_image(t.image_name)
+					-- 跳过绘制，避免执行了 remove_image 后，由于 on_render_update 未执行即调用 draw 导致的找不到纹理错误
+					entity.render.sprites[t.sprite_id].hidden = true
 				end
 			end
 		end

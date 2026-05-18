@@ -4828,9 +4828,14 @@ function EncyclopediaView:show_skill_detail(prefix, power_name, power, from_kr)
 		panel:add_child(name_label)
 
 		-- 技能描述
-		-- local desc_label = GGLabel:new(V.v(400, 140))
-
 		local desc_label = RichTextLabel:new(V.v(400, 140), nil, GGLabel.static.font_scale, GGLabel.static.ref_h)
+
+		desc_label.font_size = 16
+		desc_label.font_name = "body"
+		desc_label.pos = v(50, 65 + offset_y)
+		desc_label.line_height = 0.8
+		desc_label.text_align = "left"
+		desc_label.default_color = {0, 0, 0}
 
 		if i == 1 then
 			if from_kr == 5 then
@@ -4852,12 +4857,6 @@ function EncyclopediaView:show_skill_detail(prefix, power_name, power, from_kr)
 			end
 		end
 
-		desc_label.font_size = 16
-		desc_label.font_name = "body"
-		desc_label.pos = v(50, 65 + offset_y)
-		desc_label.line_height = 0.8
-		desc_label.text_align = "left"
-		desc_label.default_color = {0, 0, 0}
 		panel:add_child(desc_label)
 	end
 
