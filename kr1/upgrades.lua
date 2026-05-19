@@ -1920,7 +1920,6 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("engineer_efficiency")
 	if u then
-		-- 电泳巨像吃不到这个科技，所以给它加点伤害补偿
 		T("mod_tower_rotten_forest_burst_damage").dps.damage_min = math.floor(T("mod_tower_rotten_forest_burst_damage").dps.damage_min * 1.25)
 		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = math.floor(T("mod_tower_rotten_forest_burst_damage").dps.damage_max * 1.25)
 	end

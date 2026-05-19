@@ -6739,7 +6739,10 @@ function ConfigPanelView:initialize(sw, sh, keyboard, controller)
 		hero_health_damage_multiplier = "英雄受伤倍率",
 		ban_random_towers = "随机禁用高级塔",
 		random_creeps = "随机出怪",
-		build_random_towers = "随机建造防御塔"
+		build_random_towers = "随机建造防御塔",
+		tower_cooldown_divider = "防御塔攻速倍率",
+		tower_damage_multiplier = "防御塔伤害倍率",
+		tower_range_multiplier = "防御塔射程倍率"
 	})
 end
 

@@ -749,9 +749,10 @@ end
 -- 在 difficulty:patch_templates() 后调用！
 function entity_db:patch_config(config)
 	-- 如果所有倍率都是 1，就直接跳过，避免不必要的循环和乘法运算，提升性能。
-	if config.enemy_damage_multiplier == 1 and config.enemy_health_multiplier == 1 and config.enemy_gold_multiplier == 1 and config.enemy_health_damage_multiplier == 1 and config.enemy_speed_multiplier == 1 then
+	if config.enemy_damage_multiplier == 1 and config.enemy_health_multiplier == 1 and config.enemy_gold_multiplier == 1 and config.enemy_health_damage_multiplier == 1 and config.enemy_speed_multiplier == 1 and config.tower_cooldown_divider == 1 and config.tower_damage_multiplier == 1 and config.tower_range_multiplier == 1 then
 		return
 	end
+	local SU = require("script_utils")
 	for _, t in pairs(self.entities) do
 		if t.enemy then
 			if t.health.hp_max then
@@ -772,6 +773,14 @@ function entity_db:patch_config(config)
 
 			if t.motion.max_speed then
 				t.motion.max_speed = t.motion.max_speed * config.enemy_speed_multiplier
+			end
+		end
+		if t.tower then
+			t.tower.cooldown_factor = t.tower.cooldown_factor / config.tower_cooldown_divider
+			SU.change_fps(0, t, 1 / t.tower.cooldown_factor)
+			t.tower.damage_factor = t.tower.damage_factor * config.tower_damage_multiplier
+			if t.attacks then
+				t.attacks.range = t.attacks.range * config.tower_range_multiplier
 			end
 		end
 	end

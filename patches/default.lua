@@ -32,6 +32,12 @@ return {
 	enemy_health_damage_multiplier = 1,
 	-- 怪物移速倍率，默认为 1
 	enemy_speed_multiplier = 1,
+	-- 防御塔攻速倍率，默认为 1
+	tower_cooldown_divider = 1,
+	-- 防御塔伤害倍率，默认为 1
+	tower_damage_multiplier = 1,
+	-- 防御塔射程倍率，默认为 1
+	tower_range_multiplier = 1,
 	-- 随机禁用高级防御塔
 	ban_random_towers = false,
 	-- 随机出怪
