@@ -286,7 +286,7 @@ function table.random(t)
 end
 
 function table.random_order(t)
-	if not t or #t < 1 then
+	if not t then
 		return nil
 	end
 
