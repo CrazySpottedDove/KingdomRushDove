@@ -2296,12 +2296,12 @@ tt.aura.mods = {"mod_tower_sparking_geode_burst_slow", "mod_tower_sparking_geode
 tt.aura.radius = b.radius
 tt.aura.vis_flags = bor(F_MOD)
 tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
-tt.aura.duration = nil
+tt.aura.duration = b.duration[1]
 tt.aura.cycle_time = b.damage_every
-tt.distance_between_crystals = {115, 110, 70}
-tt.main_script.insert = scripts.aura_tower_sparking_geode_spike_burst.insert
-tt.main_script.update = scripts.aura_tower_sparking_geode_spike_burst.update
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
 tt.ps_names = {"ps_tower_sparking_geode_sparks_1", "ps_tower_sparking_geode_sparks_2"}
+tt.ps_spread_follow_radius = true
 
 tt = RT("mod_tower_sparking_geode_stun", "mod_stun")
 tt.main_script.insert = scripts.mod_tower_sparking_geode_stun.insert
@@ -2485,7 +2485,6 @@ tt.aura.vis_flags = bor(F_MOD)
 tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
 tt.aura.duration = 1e+99
 tt.aura.cycle_time = 0.4
-tt.distance_between_crystals = {115, 110, 70}
 tt.main_script.insert = scripts.aura_tower_rotten_forest_spike_burst.insert
 tt.main_script.update = scripts.aura_tower_rotten_forest_spike_burst.update
 
@@ -2496,7 +2495,6 @@ tt.aura.vis_flags = bor(F_MOD)
 tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
 tt.aura.duration = 1e+99
 tt.aura.cycle_time = 0.4
-tt.distance_between_crystals = {115, 110, 70}
 tt.main_script.insert = scripts.aura_tower_rotten_forest_fog.insert
 tt.main_script.update = scripts.aura_tower_rotten_forest_fog.update
 

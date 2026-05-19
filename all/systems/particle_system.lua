@@ -160,8 +160,8 @@ function M.register(sys)
 
 					if ps.emit_area_spread then
 						local sp = ps.emit_area_spread
-						f.pos.x = f.pos.x + (random() - 0.5) * sp.x * 0.5
-						f.pos.y = f.pos.y + (random() - 0.5) * sp.y * 0.5
+						f.pos.x = f.pos.x + (random() - 0.5) * sp.x
+						f.pos.y = f.pos.y + (random() - 0.5) * sp.y
 					end
 
 					if ps.emit_offset then

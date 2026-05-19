@@ -4583,6 +4583,7 @@ function scripts.aura_apply_mod.insert(this, store)
 	return true
 end
 
+-- 该方法只是一个fallback实现，不考虑性能，只需考虑兼容性。实际实体的脚本通过编译得到，没有冗余检查。
 function scripts.aura_apply_mod.update(this, store)
 	local first_hit_ts
 	local last_hit_ts = 0
@@ -4594,6 +4595,18 @@ function scripts.aura_apply_mod.update(this, store)
 
 		if te and te.pos then
 			this.pos = te.pos
+		end
+	end
+
+	-- 适配电泳巨像：粒子效果。
+	if this.ps_names then
+		for i = 1, #this.ps_names do
+			local ps = E:create_entity(this.ps_names[i])
+			if this.ps_spread_follow_radius then
+				ps.particle_system.emit_area_spread = V.vv(this.aura.radius)
+			end
+			ps.particle_system.track_id = this.id
+			queue_insert(store, ps)
 		end
 	end
 

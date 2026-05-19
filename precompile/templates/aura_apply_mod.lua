@@ -39,12 +39,24 @@ return function(this, store)
 	@constif(a.max_count)
 	local victims_count = 0
 
-	constif(a.track_source)
-	local source = store.entities[this.aura.source_id]
+    constif(this.ps_names)
+        constfor i = 1, #this.ps_names do
+            local ps = E:create_entity(this.ps_names[i])
 
-	if source and source.pos then
-		this.pos = source.pos
-	end
+            @constif(this.ps_spread_follow_radius)
+            ps.particle_system.emit_area_spread = V.vv(this.aura.radius)
+
+            ps.particle_system.track_id = this.id
+            queue_insert(store, ps)
+        constend
+    constend
+
+	constif(a.track_source)
+        local source = store.entities[this.aura.source_id]
+
+        if source and source.pos then
+            this.pos = source.pos
+        end
 	constend
 
 	@constif(a.apply_delay)
