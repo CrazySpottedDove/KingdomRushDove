@@ -8182,7 +8182,7 @@ end
 
 -- 通过复生特性来抵抗异常状态
 scripts.soldier_revive_resist = function(this, store)
-	if not this.revive or not this.revive.resist then
+	if not this.revive or not this.revive.resist or this.revive.disabled then
 		return
 	end
 
