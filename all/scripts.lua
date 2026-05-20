@@ -5668,13 +5668,6 @@ function scripts.mod_stun.update(this, store)
 		U.animation_start(this, "start", nil, store.tick_ts)
 
 		while not U.animation_finished(this) do
-			if this.abort then
-				-- goto abort
-				this.aborted = true
-
-				return
-			end
-
 			if not target_hidden and m.hide_target_delay and store.tick_ts - start_ts > m.hide_target_delay then
 				target_hidden = true
 
@@ -5695,25 +5688,11 @@ function scripts.mod_stun.update(this, store)
 		end
 	end
 
-	if this.abort then
-		-- goto abort
-		this.aborted = true
-
-		return
-	end
-
 	if this.render then
 		U.animation_start(this, "loop", nil, store.tick_ts, true)
 	end
 
 	while store.tick_ts - m.ts < m.duration and target and not target.health.dead do
-		if this.abort then
-			-- goto abort
-			this.aborted = true
-
-			return
-		end
-
 		if this.render and m.use_mod_offset and target.unit.mod_offset and not m.custom_offsets then
 			for i = 1, #this.render.sprites do
 				local s = this.render.sprites[i]
@@ -5724,8 +5703,6 @@ function scripts.mod_stun.update(this, store)
 
 		coroutine.yield()
 	end
-
-	::abort::
 
 	if m.animation_phases then
 		U.animation_start(this, "end", nil, store.tick_ts)
@@ -8214,40 +8191,18 @@ scripts.soldier_revive_resist = function(this, store)
 
 	for _, m in ipairs(mods) do
 		if band(m.modifier.vis_flags, F_STUN) ~= 0 then
-			m.abort = true
-
-			while not m.aborted do
-				coroutine.yield()
-			end
-
-			if m.modifier.animation_phases then
-				U.animation_start(m, "end", nil, store.tick_ts)
-
-				if m.modifier.hide_target_delay then
-					if this.ui then
-						this.ui.can_click = true
-					end
-
-					if this.health_bar and not this.health.dead then
-						this.health_bar.hidden = nil
-					end
-
-					U.sprites_show(this, nil, nil, true)
-					SU.show_modifiers(store, this, true, m)
-					SU.show_auras(store, this, true)
-				end
-
-				while not U.animation_finished(m) do
-					coroutine.yield()
-				end
-			end
-
 			clear_stun = true
 		end
 
 		m.modifier.removed_by_ban = true
+	end
 
-		queue_remove(store, m)
+	for _, m in ipairs(mods) do
+		-- 等待 mod 自己清理自己
+		while store.entities[m.id] do
+			m.modifier.ts = -10000
+			coroutine.yield()
+		end
 	end
 
 	local mod_ban = E:create_entity("mod_ban")
