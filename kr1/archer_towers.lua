@@ -2061,7 +2061,6 @@ tt.attacks.list[1].cooldown = 0.6
 tt.attacks.list[1].shoot_time = fts(7)
 tt.attacks.list[1].bullet_start_offset = {v(-9, 65), v(17, 59)}
 tt.attacks.list[2] = E:clone_c("spawn_attack")
--- 行尸走肉不走旧弹道链，触发逻辑在塔脚本里直接召唤。
 tt.attacks.list[2].cooldown = 16
 tt.attacks.list[2].disabled = true
 tt.attacks.list[2].vis_flags = bor(F_BLOCK)
@@ -2071,7 +2070,7 @@ tt.attacks.list[3] = table.deepclone(tt.attacks.list[2])
 tt.attacks.list[3].entity = "soldier_flingers_skeleton_warrior"
 tt.powers.skeleton = E:clone_c("power")
 tt.powers.skeleton.price_base = 160
-tt.powers.skeleton.price_inc = 200
+tt.powers.skeleton.price_inc = 195
 tt.powers.skeleton.max_level = 3
 tt.powers.skeleton.attack_idx = 2
 tt.powers.skeleton.cooldown = {16, 12, 10}
