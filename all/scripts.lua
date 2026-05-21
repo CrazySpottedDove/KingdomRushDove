@@ -8075,6 +8075,12 @@ function scripts.mod_lycanthropy.update(this, store)
 			return
 		end
 
+		-- 支持中途移除
+		if this.modifier.removed_by_ban then
+			queue_remove(store, this)
+			return
+		end
+
 		local d = E.create_damage()
 
 		d.damage_type = DAMAGE_EAT
@@ -8215,6 +8221,7 @@ scripts.soldier_revive_resist = function(this, store)
 		-- 等待 mod 自己清理自己
 		while store.entities[m.id] do
 			m.modifier.ts = -10000
+			m.modifier.duration = 0.01
 			coroutine.yield()
 		end
 	end
