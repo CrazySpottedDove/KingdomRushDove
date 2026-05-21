@@ -8197,14 +8197,6 @@ scripts.soldier_revive_resist = function(this, store)
 		m.modifier.removed_by_ban = true
 	end
 
-	for _, m in ipairs(mods) do
-		-- 等待 mod 自己清理自己
-		while store.entities[m.id] do
-			m.modifier.ts = -10000
-			coroutine.yield()
-		end
-	end
-
 	local mod_ban = E:create_entity("mod_ban")
 
 	mod_ban.modifier.ban_vis = r.bans
@@ -8212,6 +8204,20 @@ scripts.soldier_revive_resist = function(this, store)
 	mod_ban.modifier.duration = r.duration
 
 	queue_insert(store, mod_ban)
+
+	if this.revive.animation then
+		S:queue(this.revive.sound)
+		U.animation_start(this, this.revive.animation, nil, store.tick_ts, false)
+		this.revive.ts = store.tick_ts
+	end
+
+	for _, m in ipairs(mods) do
+		-- 等待 mod 自己清理自己
+		while store.entities[m.id] do
+			m.modifier.ts = -10000
+			coroutine.yield()
+		end
+	end
 
 	if this.revive.fx then
 		local fx = E:create_entity(this.revive.fx)
@@ -8223,14 +8229,14 @@ scripts.soldier_revive_resist = function(this, store)
 	end
 
 	if this.revive.animation then
-		S:queue(this.revive.sound)
-		U.animation_start(this, this.revive.animation, nil, store.tick_ts, false)
+		-- S:queue(this.revive.sound)
+		-- U.animation_start(this, this.revive.animation, nil, store.tick_ts, false)
 
-		this.revive.ts = store.tick_ts
+		-- this.revive.ts = store.tick_ts
 
-		while store.tick_ts - this.revive.ts < this.revive.hit_time do
-			coroutine.yield()
-		end
+		-- while store.tick_ts - this.revive.ts < this.revive.hit_time do
+		-- 	coroutine.yield()
+		-- end
 
 		while not U.animation_finished(this) do
 			coroutine.yield()
@@ -8247,6 +8253,7 @@ scripts.soldier_revive_resist = function(this, store)
 		r.side_effect(this, store)
 	end
 end
+
 scripts.mod_ban = {}
 scripts.mod_ban.insert = function(this, store)
 	local target = store.entities[this.modifier.target_id]
