@@ -24460,10 +24460,6 @@ function scripts.tower_bone_flingers.get_info(this)
 	}
 end
 
-function scripts.tower_bone_flingers.insert(this, store)
-	return true
-end
-
 function scripts.tower_bone_flingers.remove(this, store)
 	local bar = this.barrack
 
@@ -24488,7 +24484,8 @@ function scripts.tower_bone_flingers.update(this, store)
 	local pow_g = this.powers.golem
 	local last_soldier_pos = {}
 	local pow_s = this.powers.skeleton
-	local as = this.attacks.list[2]
+	local as1 = this.attacks.list[2]
+	local as2 = this.attacks.list[3]
 	local pow_m = this.powers.milk
 	local tpos = tpos(this)
 	local bones_small = {"boneflingers_shooter_proyectiles_0001", "boneflingers_shooter_proyectiles_0002", "boneflingers_shooter_proyectiles_0003", "boneflingers_shooter_proyectiles_0004"}
@@ -24502,38 +24499,16 @@ function scripts.tower_bone_flingers.update(this, store)
 		return U.has_valid_rally_node_nearby(e.pos)
 	end
 
-	local function pick_spawn_node_max_spi(pos)
-		local nodes = P:nearest_nodes(pos.x, pos.y, nil, nil, true)
-		if not nodes or #nodes < 1 then
-			return nil
-		end
-
-		-- 共线路段这里会给多条子路，按作者口径固定吃编号最大的那条。
-		local node = nodes[1]
-		for i = 2, #nodes do
-			local n = nodes[i]
-			if n[1] == node[1] and n[3] == node[3] and n[2] > node[2] then
-				node = n
-			end
-		end
-
-		return node
-	end
-
 	local function spawn_walking_skeleton(spawn_pos, entity_name)
-		local node = pick_spawn_node_max_spi(spawn_pos)
-		if not node then
-			return false
+		local nodes = P:nearest_nodes(spawn_pos.x, spawn_pos.y, nil, nil, true)
+		if not nodes or #nodes < 1 then
+			return
 		end
-
+		local node = nodes[1]
 		local pi, spi, ni = node[1], node[2], node[3]
 		local e = E:create_entity(entity_name)
 		local e_pos = P:node_pos(pi, spi, ni)
-		if not e_pos then
-			return false
-		end
 
-		-- 这里直接落在路径节点，别再走中转壳，不然后面看代码只会更绕。
 		e.pos.x, e.pos.y = e_pos.x, e_pos.y
 		e.nav_path.pi = pi
 		e.nav_path.spi = spi
@@ -24544,6 +24519,26 @@ function scripts.tower_bone_flingers.update(this, store)
 
 		queue_insert(store, e)
 		return true
+	end
+
+	local function check_and_do_spawn_attack(aa)
+		if ready_to_attack(aa, store, this.tower.cooldown_factor) and not aa.disabled then
+			aa.ts = store.tick_ts
+
+			local enemy = U.find_random_enemy(store.entities, tpos, 0, a.range, aa.vis_flags, aa.vis_bans, spawn_filter_fn)
+			local spawn_pos
+
+			if not enemy then
+				-- 没目标就找最近合法驻扎点，避免刷到无效地形直接暴毙。
+				spawn_pos = U.get_nearest_valid_rally_pos(tpos)
+			else
+				spawn_pos = U.calculate_enemy_ffe_pos(enemy, aa.node_prediction)
+			end
+
+			if spawn_pos then
+				spawn_walking_skeleton(spawn_pos, aa.entity)
+			end
+		end
 	end
 
 	while true do
@@ -24559,31 +24554,24 @@ function scripts.tower_bone_flingers.update(this, store)
 
 			if pow_s.changed then
 				pow_s.changed = nil
-				as.disabled = false
-				as.cooldown = pow_s.cooldown[pow_s.level]
-				as.ts = as.ts + fts(math.random(-6, 6))
-			end
-
-			if ready_to_use_power(pow_s, as, store, this.tower.cooldown_factor) then
-				as.ts = store.tick_ts
-
-				local sk_name = pow_s.level == 1 and "soldier_flingers_skeleton" or "soldier_flingers_skeleton_warrior"
-
-				local enemy = U.find_random_enemy(store.entities, tpos, 0, a.range, pow_s.vis_flags, pow_s.vis_bans, spawn_filter_fn)
-				local spawn_pos
-
-				if not enemy then
-					-- 没目标就找最近合法驻扎点，避免刷到无效地形直接暴毙。
-					spawn_pos = U.get_nearest_valid_rally_pos(tpos)
-				else
-					-- 有目标按敌前预测点落位，这个是 KR4 行尸走肉的核心手感。
-					spawn_pos = U.calculate_enemy_ffe_pos(enemy, as.node_prediction)
-				end
-
-				if spawn_pos then
-					spawn_walking_skeleton(spawn_pos, sk_name)
+				if pow_s.level == 1 then
+					as1.disabled = false
+					as2.disabled = true
+					as1.cooldown = pow_s.cooldown[pow_s.level]
+				elseif pow_s.level == 2 then
+					as1.disabled = true
+					as2.disabled = false
+					as2.cooldown = pow_s.cooldown[pow_s.level]
+				elseif pow_s.level == 3 then
+					as1.disabled = false
+					as2.disabled = false
+					as1.cooldown = pow_s.cooldown[pow_s.level]
+					as2.cooldown = pow_s.cooldown[pow_s.level]
 				end
 			end
+
+			check_and_do_spawn_attack(as1)
+			check_and_do_spawn_attack(as2)
 
 			soldier_added = false
 			for i = 1, barrack.max_soldiers do
@@ -24623,7 +24611,6 @@ function scripts.tower_bone_flingers.update(this, store)
 			end
 
 			if barrack.rally_new then
-				formation_offset = -0.4
 				barrack.rally_new = false
 				signal.emit("rally-point-changed", this)
 
