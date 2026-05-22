@@ -20074,7 +20074,7 @@ function scripts.tower_arborean_emissary.update(this, store)
 					end)
 					if #targets > 0 then
 						S:queue(ag.sound)
-						local target = table.find_best(target, function(t)
+						local target = table.find_best(targets, function(t)
 							return 1 - t.health.hp / t.health.hp_max
 						end)
 						local center_pos = V.vclone(target.pos)
