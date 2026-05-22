@@ -1046,7 +1046,10 @@ upgrades.soldiers = {
 	"soldier_ogre_shipwreck_red_goblin_elite",
 	"soldier_orc_warrior",
 	"soldier_orc_warrior_captain",
-	"soldier_dark_knight"
+	"soldier_dark_knight",
+	"soldier_zombie",
+	"soldier_zombie_medium",
+	"soldier_zombie_big"
 }
 
 upgrades.barrack_soldiers = {
@@ -1080,7 +1083,10 @@ upgrades.barrack_soldiers = {
 	"soldier_ogre_shipwreck_red_goblin_elite",
 	"soldier_orc_warrior",
 	"soldier_orc_warrior_captain",
-	"soldier_dark_knight"
+	"soldier_dark_knight",
+	"soldier_zombie",
+	"soldier_zombie_medium",
+	"soldier_zombie_big"
 }
 
 upgrades.towers_with_barrack = {
@@ -1116,7 +1122,8 @@ upgrades.towers_with_barrack = {
 	"tower_bone_flingers",
 	"tower_ogre_shipwreck",
 	"tower_orc_warriors",
-	"tower_dark_knights"
+	"tower_dark_knights",
+	"tower_grim_cemetery"
 }
 
 upgrades.non_barrack_towers_with_barrack_attribute = {"tower_sorcerer", "tower_mech", "tower_necromancer", "tower_frankenstein", "tower_druid", "tower_dark_elf_lvl4", "tower_bone_flingers"}

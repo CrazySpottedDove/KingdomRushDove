@@ -520,7 +520,7 @@ function scripts.necromancer_aura.update(this, store)
 			for i = #skeletons, 1, -1 do
 				local e = skeletons[i]
 
-				if not e or e.health.dead then
+				if e.health.dead then
 					table.remove(skeletons, i)
 				end
 			end
@@ -537,7 +537,7 @@ function scripts.necromancer_aura.update(this, store)
 				if #dead_enemies > 0 then
 					dead_enemies = table.slice(dead_enemies, 1, max_spawns)
 
-					for _, dead in pairs(dead_enemies) do
+					for _, dead in ipairs(dead_enemies) do
 						dead.vis.bans = bor(dead.vis.bans, F_SKELETON)
 						dead.health.delete_after = 0
 
@@ -559,6 +559,7 @@ function scripts.necromancer_aura.update(this, store)
 						e.nav_rally.center = V.vclone(e.pos)
 						e.nav_rally.pos = V.vclone(e.pos)
 						e.soldier.tower_id = source.id
+						U.soldier_inherit_tower_buff_factor(e, source)
 						skeletons[#skeletons + 1] = e
 
 						queue_insert(store, e)

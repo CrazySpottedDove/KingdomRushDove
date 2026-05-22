@@ -1444,11 +1444,13 @@ function game_gui:select_entity(e)
 		if e.soldier and e.soldier.tower_id and self.game.simulation.store.entities[e.soldier.tower_id] then
 			local tower = self.game.simulation.store.entities[e.soldier.tower_id]
 
-			game_gui:set_mode(GUI_MODE_RALLY_TOWER)
+			if not tower.barrack.banned then
+				game_gui:set_mode(GUI_MODE_RALLY_TOWER)
 
-			local ux, uy = game_gui:g2u(V.v(V.add(tower.pos.x, tower.pos.y, tower.tower.range_offset.x, tower.tower.range_offset.y)))
+				local ux, uy = game_gui:g2u(V.v(V.add(tower.pos.x, tower.pos.y, tower.tower.range_offset.x, tower.tower.range_offset.y)))
 
-			game_gui:show_rally_range(ux, uy, tower.barrack.rally_range)
+				game_gui:show_rally_range(ux, uy, tower.barrack.rally_range)
+			end
 		else
 			local m = E:create_entity("entity_marker_controller")
 

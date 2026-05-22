@@ -602,6 +602,14 @@ return {
 			tt_title = _("TOWER_DARK_KNIGHTS_NAME"),
 			tt_desc = _("TOWER_DARK_KNIGHTS_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_grim_cemetery",
+			type = "grim_cemetery",
+			image = "kr4_main_icons_0010",
+			place = 28,
+			tt_title = _("TOWER_GRIM_CEMETERY_NAME"),
+			tt_desc = _("TOWER_GRIM_CEMETERY_DESCRIPTION")
+		}),
 		tpl.rally,
 		tpl.sell
 	}},
@@ -3409,6 +3417,45 @@ return {
 		}, {
 			tt_title = _("TOWER_ROCKET_RIDERS_ENGINE_NAME_3"),
 			tt_desc = _("TOWER_ROCKET_RIDERS_ENGINE_DESCRIPTION_3")
+		}}
+	}), tpl.sell}},
+	grim_cemetery = {{M(tpl.upgrade_power, {
+		action_arg = "hands",
+		image = "kr4_special_icons_0034",
+		sounds = {"GrimCemeteryHandsTaunt"},
+		place = 6,
+		tt_phrase = _("TOWER_GRIM_CEMETERY_HANDS_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_GRIM_CEMETERY_HANDS_NAME_1"),
+			tt_desc = _("TOWER_GRIM_CEMETERY_HANDS_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_GRIM_CEMETERY_HANDS_NAME_2"),
+			tt_desc = _("TOWER_GRIM_CEMETERY_HANDS_DESCRIPTION_2")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "big",
+		image = "kr4_special_icons_0033",
+		sounds = {"GrimCemeteryBigTaunt"},
+		place = 5,
+		tt_phrase = _("TOWER_GRIM_CEMETERY_BIG_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_GRIM_CEMETERY_BIG_NAME_1"),
+			tt_desc = _("TOWER_GRIM_CEMETERY_BIG_DESCRIPTION_1")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "pestilence",
+		place = 7,
+		image = "kr4_special_icons_0035",
+		tt_phrase = _("TOWER_GRIM_CEMETERY_PESTILENCE_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_GRIM_CEMETERY_PESTILENCE_NAME_1"),
+			tt_desc = _("TOWER_GRIM_CEMETERY_PESTILENCE_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_GRIM_CEMETERY_PESTILENCE_NAME_2"),
+			tt_desc = _("TOWER_GRIM_CEMETERY_PESTILENCE_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_GRIM_CEMETERY_PESTILENCE_NAME_3"),
+			tt_desc = _("TOWER_GRIM_CEMETERY_PESTILENCE_DESCRIPTION_3")
 		}}
 	}), tpl.sell}}
 }

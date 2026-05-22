@@ -4691,7 +4691,6 @@ tt.water.mod_offset = vec_2(2, ady(20))
 tt.water.speed_factor = 1.2
 
 tt = RT("mod_greenfin_net", "mod_stun")
-AC(tt, "render")
 tt.modifier.duration = 6
 tt.modifier.duration_heroes = 1
 tt.modifier.animation_phases = true

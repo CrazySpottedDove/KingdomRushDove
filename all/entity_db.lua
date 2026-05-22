@@ -225,24 +225,10 @@ function entity_db:clone_c(name)
 end
 
 function entity_db:add_comps(entity, ...)
-	-- if entity == nil then
-	-- 	log.error("entity is nil")
-
-	-- 	return
-	-- end
-
 	for _, v in ipairs({...}) do
-		-- if not self.components[v] then
-		-- 	log.error("component %s does not exist", v)
-
-		-- 	return
-		-- end
-
 		-- DEBUG USE
-		-- if not entity[v] then
-		-- 	entity[v] = copy(self.components[v])
-		-- else
-		--     log.error("entity %s already has component %s", entity.template_name, v)
+		-- if entity[v] then
+		-- 	log.error("entity %s already has component %s", entity.template_name, v)
 		-- end
 
 		-- RELEASE VER

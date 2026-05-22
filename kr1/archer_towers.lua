@@ -2133,7 +2133,7 @@ tt.bullet.damage_min = 17
 tt.bullet.damage_max = 31
 
 tt = RT("soldier_bone_golem", "soldier_militia")
-AC(tt, "melee", "ranged", "nav_grid")
+AC(tt, "ranged", "nav_grid")
 tt.health.armor = 0
 tt.health.armor_inc = 0
 tt.health.dead_lifetime = 10

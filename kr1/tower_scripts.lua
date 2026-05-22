@@ -25772,4 +25772,568 @@ function scripts.missile_rr.remove(this, store)
 	return true
 end
 
+--僵尸
+scripts.tower_grim_cemetery = {}
+
+function scripts.tower_grim_cemetery.get_info(this)
+	local s = E:get_template("soldier_zombie")
+	local ar = E:get_template("grim_cemetery_aura")
+	local soldier_type = "soldier_zombie"
+	if this.powers.big then
+		soldier_type = "soldier_zombie_big"
+	end
+	local s = E:create_entity(soldier_type)
+	U.soldier_inherit_tower_buff_factor(s, this)
+	local s_info = s.info.fn(s)
+	s_info.type = STATS_TYPE_TOWER_BARRACK
+
+	return s_info
+end
+
+function scripts.tower_grim_cemetery.insert(this, store, script)
+	local e = E:create_entity("grim_cemetery_aura")
+	e.pos = tpos(this)
+	e.aura.source_id = this.id
+	e.aura.ts = store.tick_ts
+	queue_insert(store, e)
+	this.aura_cemetery = e
+
+	return true
+end
+
+function scripts.tower_grim_cemetery.update(this, store, script)
+	local b = this.barrack
+	local a = this.attacks
+	local ha = this.attacks.list[1]
+	local pow_h = this.powers.hands
+
+	while true do
+		if pow_h.changed then
+			pow_h.changed = nil
+			ha.cooldown = pow_h.cooldown[pow_h.level]
+
+			if pow_h.level == 1 then
+				ha.ts = store.tick_ts
+			end
+		end
+		-- sync vision range with barrack rally range
+		this.attacks.range = this.barrack.rally_range
+
+		if not this.tower.blocked then
+			if ready_to_use_power(pow_h, ha, store, this.tower.cooldown_factor) then
+				local targets = U.find_enemies_in_range_filter_on(tpos(this), a.range, ha.vis_flags, ha.vis_bans, SU.is_valid_scare_target)
+
+				if not targets then
+					ha.ts = ha.ts + 0.1
+				else
+					ha.ts = store.tick_ts
+					S:queue(ha.sound)
+
+					local do_count = 0
+					local remain_count = pow_h.count
+
+					::try_again::
+					do_count = math.min(remain_count, #targets)
+					remain_count = remain_count - do_count
+
+					targets = table.random_order(targets)
+
+					for i = 1, do_count do
+						local b = E:create_entity(ha.bullet)
+						b.pos:copy(targets[i].pos)
+						b.source_id = this.id
+						b.target_id = targets[i].id
+						b.aura.level = pow_h.level
+						b.aura.damage_factor = this.tower.damage_factor * b.aura.damage_factor
+						b.render.sprites[1].ts = store.tick_ts
+						queue_insert(store, b)
+
+						U.y_wait(store, 0.1)
+					end
+
+					if remain_count > 0 then
+						targets = U.find_enemies_in_range_filter_on(tpos(this), a.range, ha.vis_flags, ha.vis_bans, SU.is_valid_scare_target)
+						if targets then
+							goto try_again
+						end
+					end
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+function scripts.tower_grim_cemetery.remove(this, store)
+	if this.aura_cemetery then
+		for _, s in ipairs(this.aura_cemetery.zombies) do
+			if s.health then
+				s.health.dead = true
+			end
+		end
+		queue_remove(store, this.aura_cemetery)
+		this.aura_cemetery = nil
+	end
+
+	return true
+end
+
+scripts.grim_cemetery_aura = {}
+
+function scripts.grim_cemetery_aura.update(this, store, script)
+	local last_ts = store.tick_ts
+	local spawn_ts = store.tick_ts
+	local spawn_time = nil
+
+	local source = store.entities[this.aura.source_id]
+	if not source then
+		queue_remove(store, this)
+		return
+	end
+
+	local pow_b = source.powers.big
+	local pow_p = source.powers.pestilence
+
+	local stored_zombie_count = 0
+
+	local function filter_fn(v)
+		return v.health.dead and band(v.vis.bans, F_SKELETON) == 0 and band(v.health.last_damage_types, DAMAGE_EAT) == 0 and store.tick_ts - v.health.death_ts >= v.health.dead_lifetime - this.aura.cycle_time
+	end
+
+	local function filter_stored(v)
+		return not v._cemetery_spawned
+	end
+
+	local function spawn(pos, template_name)
+		local e = E:create_entity(template_name)
+		e.pos = pos
+		e.nav_rally.center:copy(e.pos)
+		e.nav_rally.pos:copy(e.pos)
+		e.soldier.tower_id = source.id
+
+		U.soldier_inherit_tower_buff_factor(e, source)
+
+		queue_insert(store, e)
+
+		if pow_p.level > 0 then
+			e.pestilence_active = true
+			coroutine.yield()
+			local m = E:create_entity(this.pestilence_mod)
+			m.modifier.level = pow_p.level
+			m.modifier.target_id = e.id
+			m.modifier.source_id = this.id
+			m.modifier.damage_factor = source.tower.damage_factor
+			queue_insert(store, m)
+		end
+
+		S:queue(this.spawn_sound)
+
+		this.zombies[#this.zombies + 1] = e
+	end
+
+	while true do
+		source = store.entities[this.aura.source_id]
+
+		if not source then
+			queue_remove(store, this)
+
+			return
+		end
+
+		if pow_b.changed then
+			pow_b.changed = nil
+			local z = E:get_template("soldier_zombie_big")
+			for _, s in ipairs(this.zombies) do
+				s.health.hp_max = z.health.hp_max
+				s.health.hp = math.max(s.health.hp_max, s.health.hp)
+				s.info.portrait = z.info.portrait
+				s.melee.attacks[1].cooldown = z.melee.attacks[1].cooldown
+				s.melee.attacks[1].damage_max = z.melee.attacks[1].damage_max
+				s.melee.attacks[1].damage_min = z.melee.attacks[1].damage_min
+				s.render.sprites[1].prefix = z.render.sprites[1].prefix
+			end
+		end
+
+		if pow_p.changed then
+			pow_p.changed = nil
+		end
+
+		if store.tick_ts - spawn_ts >= this.spawn_cooldown * source.tower.cooldown_factor then
+			if stored_zombie_count < source.barrack.max_soldiers then
+				stored_zombie_count = stored_zombie_count + 1
+			end
+			spawn_ts = store.tick_ts
+		end
+
+		if store.tick_ts - last_ts >= this.aura.cycle_time then
+			last_ts = store.tick_ts
+
+			for i = #this.zombies, 1, -1 do
+				local s = this.zombies[i]
+				if s.health.dead then
+					table.remove(this.zombies, i)
+				end
+			end
+
+			local max_spawns = source.barrack.max_soldiers - #this.zombies
+
+			if max_spawns > 0 then
+				local dead_enemies = U.find_enemies_in_range_filter_override(this.pos, source.barrack.rally_range, filter_fn)
+
+				if #dead_enemies > 0 then
+					local spawn_count = math.min(max_spawns, #dead_enemies)
+					max_spawns = max_spawns - spawn_count
+					for i = 1, spawn_count do
+						local dead = dead_enemies[i]
+						dead.vis.bans = bor(dead.vis.bans, F_SKELETON)
+						dead.health.delete_after = 0
+
+						local spawn_pos = V.vclone(dead.pos)
+						if dead.enemy.necromancer_offset then
+							spawn_pos.x = spawn_pos.x + dead.enemy.necromancer_offset.x * (dead.render.sprites[1].flip_x and -1 or 1)
+							spawn_pos.y = spawn_pos.y + dead.enemy.necromancer_offset.y
+						end
+
+						local template_name
+						if pow_b.level > 0 then
+							template_name = this.entity_big
+						else
+							if dead.health.hp_max > this.min_health_for_medium then
+								template_name = this.entity_medium
+							else
+								template_name = this.entity_small
+							end
+						end
+
+						spawn(spawn_pos, template_name)
+					end
+				end
+			end
+
+			if max_spawns > 0 then
+				local enemy, _, spawn_pos = U.find_foremost_enemy_in_range_filter_on(this.pos, source.barrack.rally_range, fts(1), F_BLOCK, F_FLYING, filter_stored)
+				if enemy and stored_zombie_count > 0 then
+					stored_zombie_count = stored_zombie_count - 1
+					local template_name
+					if pow_b.level > 0 then
+						template_name = this.entity_big
+					else
+						template_name = this.entity_small
+					end
+					spawn(spawn_pos, template_name)
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.soldier_zombie = {}
+
+function scripts.soldier_zombie.update(this, store, script)
+	local brk, sta
+
+	this.idle_flip.ts = store.tick_ts
+
+	if this.vis._bans then
+		this.vis.bans = this.vis._bans
+		this.vis._bans = nil
+	end
+
+	do
+		local target = SU.soldier_pick_melee_target(store, this)
+		if target then
+			U.block_enemy(store, this, target)
+			local slot_pos, _, _ = U.melee_slot_position(this, target)
+			U.set_destination(this, slot_pos)
+		end
+	end
+
+	if this.render.sprites[1].name == "raise" then
+		this.health_bar.hidden = true
+
+		U.animation_start(this, "raise", nil, store.tick_ts, 1)
+
+		while not U.animation_finished(this) and not this.health.dead do
+			coroutine.yield()
+		end
+
+		if not this.health.dead then
+			this.health_bar.hidden = nil
+		end
+	end
+
+	local function zombie_idle(store, this, force_ts)
+		U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil, force_ts)
+
+		if this.unit.is_stunned then
+			return
+		end
+
+		if store.tick_ts - this.idle_flip.ts > 2 * store.tick_length then
+			this.idle_flip.ts_counter = 0
+		end
+
+		this.idle_flip.ts = store.tick_ts
+		this.idle_flip.ts_counter = this.idle_flip.ts_counter + store.tick_length
+
+		if this.idle_flip.ts_counter > this.idle_flip.cooldown then
+			this.idle_flip.ts_counter = 0
+
+			local new_pos = V.vclone(this.pos)
+
+			this.idle_flip.last_dir = -1 * this.idle_flip.last_dir
+			new_pos.x = new_pos.x + this.idle_flip.last_dir * this.idle_flip.walk_dist
+
+			if not GR:cell_is(new_pos.x, new_pos.y, TERRAIN_WATER) then
+				this.nav_rally.new = true
+				this.nav_rally.pos = new_pos
+			end
+		end
+	end
+
+	local function y_zombie_death(store, this)
+		U.unblock_target(store, this)
+
+		local h = this.health
+
+		if band(h.last_damage_types, bor(DAMAGE_DISINTEGRATE, DAMAGE_DISINTEGRATE_BOSS)) ~= 0 then
+			this.unit.hide_during_death = true
+
+			local fx = E:create_entity("fx_soldier_desintegrate")
+
+			fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
+			fx.render.sprites[1].ts = store.tick_ts
+
+			queue_insert(store, fx)
+		elseif band(h.last_damage_types, bor(DAMAGE_EAT)) ~= 0 then
+			this.unit.hide_during_death = true
+		elseif band(h.last_damage_types, bor(DAMAGE_HOST)) ~= 0 then
+			S:queue(this.sound_events.death_by_explosion)
+
+			this.unit.hide_during_death = true
+
+			local fx = E:create_entity("fx_unit_explode")
+
+			fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
+			fx.render.sprites[1].ts = store.tick_ts
+			fx.render.sprites[1].name = fx.render.sprites[1].size_names[this.unit.size]
+
+			queue_insert(store, fx)
+
+			if this.unit.show_blood_pool and this.unit.blood_color ~= BLOOD_NONE then
+				local decal = E:create_entity("decal_blood_pool")
+
+				decal.pos = V.vclone(this.pos)
+				decal.render.sprites[1].ts = store.tick_ts
+				decal.render.sprites[1].name = this.unit.blood_color
+
+				queue_insert(store, decal)
+			end
+		elseif this.reinforcement and (this.reinforcement.fade or this.reinforcement.fade_out) then
+			SU.y_reinforcement_fade_out(store, this)
+
+			return
+		else
+			if this.pestilence_active then
+				S:queue(this.sound_events.death_xplode, this.sound_events.death_xplode_args)
+				U.y_animation_play(this, "bloatedDeath", nil, store.tick_ts, 1)
+			else
+				S:queue(this.sound_events.death, this.sound_events.death_args)
+				U.y_animation_play(this, "death", nil, store.tick_ts, 1)
+			end
+
+			this.ui.can_select = false
+		end
+
+		if this.ui then
+			this.ui.can_click = not this.unit.hide_after_death
+			this.ui.z = -1
+		end
+
+		if this.unit.hide_during_death or this.unit.hide_after_death then
+			for _, s in pairs(this.render.sprites) do
+				s.hidden = true
+			end
+		end
+	end
+
+	while true do
+		if not this.health.dead or SU.y_soldier_revive(store, this) then
+		-- block empty
+		else
+			y_zombie_death(store, this)
+
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			while this.nav_rally.new do
+				if SU.y_soldier_new_rally(store, this) then
+					goto label_39_1
+				end
+			end
+
+			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+			if brk or sta ~= A_NO_TARGET then
+				goto label_39_1
+			end
+
+			if SU.soldier_go_back_step(store, this) then
+				goto label_39_1
+			end
+
+			::label_39_0::
+
+			zombie_idle(store, this)
+		end
+
+		::label_39_1::
+
+		coroutine.yield()
+	end
+end
+
+scripts.aura_grim_cemetery_hand = {}
+
+function scripts.aura_grim_cemetery_hand.insert(this, store, script)
+	this.aura.ts = store.tick_ts
+
+	for _, s in ipairs(this.render.sprites) do
+		s.ts = store.tick_ts
+	end
+
+	local rid = math.random(1, 2)
+	if rid == 2 then
+		this.render.sprites[1].prefix = "fallen_ones_grim_cemetery_hand2"
+	end
+
+	this.actual_duration = this.aura.duration
+
+	return true
+end
+
+function scripts.aura_grim_cemetery_hand.update(this, store, script)
+	local last_hit_ts = store.tick_ts - this.aura.cycle_time
+
+	U.y_animation_play(this, "in", nil, store.tick_ts, 1)
+
+	while not U.animation_finished(this) do
+		coroutine.yield()
+	end
+
+	while true do
+		U.animation_start(this, "run", nil, store.tick_ts, true)
+		if this.interrupt then
+			last_hit_ts = 1e+99
+		end
+
+		if store.tick_ts - this.aura.ts > this.actual_duration then
+			break
+		end
+
+		if store.tick_ts - last_hit_ts >= this.aura.cycle_time then
+			last_hit_ts = store.tick_ts
+
+			local targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, SU.is_valid_scare_target)
+			if targets then
+				for _, target in ipairs(targets) do
+					SU.scare_enemy(target, {
+						duration = this.scare_duration
+					})
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+
+	U.y_animation_play(this, "out", nil, store.tick_ts, 1)
+	while not U.animation_finished(this) do
+		coroutine.yield()
+	end
+	queue_remove(store, this)
+end
+
+scripts.mod_grim_cemetery_explode = {}
+
+function scripts.mod_grim_cemetery_explode.remove(this, store)
+	if this.modifier.removed_by_ban then
+		return true
+	end
+	local targets = U.find_enemies_in_range_filter_off(this.pos, this.explode_range, this.explode_vis_flags, this.explode_vis_bans)
+
+	if targets then
+		for i = 1, #targets do
+			local target = targets[i]
+
+			local d = E:create_entity("damage")
+			d.damage_type = this.explode_damage_type
+			d.value = this.explode_damage[this.modifier.level] * this.modifier.damage_factor
+			d.source_id = this.id
+			d.target_id = target.id
+
+			queue_damage(store, d)
+
+			local m = E:create_entity(this.explode_mod)
+
+			m.modifier.level = this.modifier.level
+			m.modifier.damage_factor = this.modifier.damage_factor
+			m.modifier.target_id = target.id
+			m.modifier.source_id = this.id
+
+			queue_insert(store, m)
+		end
+	end
+
+	return true
+end
+
+function scripts.mod_grim_cemetery_explode.update(this, store, script)
+	local m = this.modifier
+
+	this.modifier.ts = store.tick_ts
+
+	local target = store.entities[m.target_id]
+
+	if not target then
+		queue_remove(store, this)
+
+		return
+	end
+
+	this.pos = target.pos
+
+	while true do
+		target = store.entities[m.target_id]
+
+		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
+			U.y_wait(store, this.explode_delay)
+			queue_remove(store, this)
+
+			return
+		end
+
+		if this.render and target.unit then
+			local s = this.render.sprites[1]
+			local flip_sign = 1
+
+			if target.render then
+				flip_sign = target.render.sprites[1].flip_x and -1 or 1
+			end
+
+			if target.unit.mod_offset then
+				s.offset.x, s.offset.y = target.unit.mod_offset.x * flip_sign, target.unit.mod_offset.y
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
 return scripts

@@ -2449,7 +2449,7 @@ tt.aura.hit_sound = "ThornSound"
 tt.main_script.update = scripts.aura_rotten_forest_thorn.update
 
 tt = E:register_t("decal_rotten_forest_smoke", "decal_scripted")
-E:add_comps(tt, "render", "tween")
+E:add_comps(tt, "tween")
 tt.render.sprites[1] = E:clone_c("sprite")
 tt.render.sprites[1].prefix = "rotten_forest_tower_decal_floor"
 tt.render.sprites[1].name = "idle"
@@ -2468,7 +2468,7 @@ tt.tween.props[2].sprite_id = 2
 tt.tween.run_once = true
 
 tt = E:register_t("decal_rotten_forest_fog", "decal")
-E:add_comps(tt, "render", "tween")
+E:add_comps(tt, "tween")
 tt.render.sprites[1] = E:clone_c("sprite")
 tt.render.sprites[1].prefix = "rotten_forest_tower_fog"
 tt.render.sprites[1].name = "run"
@@ -2726,26 +2726,6 @@ tt.bullet.align_with_trajectory = true
 tt.sound_events.insert = "RocketRidersNitro"
 tt.bullet.particles_name = "ps_rocket_riders_nitro"
 
-tt = RT("bomb_rr_mine", "bomb")
-tt.bullet.damage_bans = F_ALL
-tt.bullet.damage_flags = 0
-tt.bullet.damage_max = 0
-tt.bullet.damage_min = 0
-tt.bullet.damage_config = {60, 120, 180}
-tt.bullet.damage_radius = 66
-tt.bullet.flight_time = 0
-tt.bullet.pop = nil
-tt.bullet.hit_payload = "decal_rr_mine"
-tt.main_script.update = scripts.bomb_rr_mine.update
-tt.bullet.hit_fx = nil
-tt.bullet.hit_decal = nil
-tt.bullet.hide_radius = nil
-tt.render.sprites[1].name = "warmongers_rocket_tower_lvl4_box_goblin_mine_floor_out"
-tt.render.sprites[1].animated = true
-tt.sound_events.insert = "RocketRidersMine"
-tt.sound_events.hit = nil
-tt.sound_events.hit_water = nil
-
 tt = RT("decal_rr_mine", "decal_scripted")
 tt.check_interval = fts(3)
 tt.damage_max = 0
@@ -2767,7 +2747,6 @@ tt.vis_bans2 = bor(F_FRIEND)
 tt.vis_flags = bor(F_ENEMY)
 
 tt = RT("bomb_rr_mine", "bullet")
-AC(tt, "sound_events")
 tt.bullet.damage_type = DAMAGE_NONE
 tt.bullet.flight_time = 0.6
 tt.bullet.hide_radius = 2
@@ -2779,7 +2758,7 @@ tt.main_script.update = scripts.bomb_rr_mine.update
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "warmongers_rocket_tower_lvl4_box_goblin_mine"
 tt.sound_events.hit = nil
-tt.sound_events.insert = nil
+tt.sound_events.insert = "RocketRidersMine"
 
 tt = RT("mod_rr_mine_stun", "mod_stun")
 tt.modifier.duration = 1.5

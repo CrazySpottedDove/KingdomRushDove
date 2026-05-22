@@ -435,7 +435,6 @@ enemy.can_accept_magic = true
 enemy.blockers = {}
 enemy.max_blockers = nil
 enemy.melee_slot = v(38, 0)
-enemy.necromancer_offset = v(0, 0)
 enemy.valid_terrains = TERRAIN_LAND
 enemy.gold = 0
 enemy.gold_bag = 0

@@ -3946,7 +3946,6 @@ tt.bullet.damage_flags = F_AREA
 tt.sound_events.insert = nil
 
 tt = RT("mod_orc_shaman_stun", "mod_stun")
-AC(tt, "render")
 tt.modifier.duration = fts(20)
 tt.modifier.vis_bans = F_BOSS
 tt.render.sprites[1].prefix = "warmongers_mage_tower_ray_modifier"

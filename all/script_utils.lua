@@ -5228,4 +5228,42 @@ function SU.betray_enemy(target, betray)
 	return false
 end
 
+function SU.is_valid_scare_target(target)
+	return not target._scare_data and not target._main_script_overwritten and U.has_valid_rally_node_nearby(target.pos) and band(target.vis.flags, F_BOSS) == 0
+end
+
+local function enemy_scared_logic(this, store)
+	this.nav_path.dir = -1
+	this._scare_data.ts = store.tick_ts
+	while store.tick_ts - this._scare_data.ts < this._scare_data.duration do
+		if this.health.dead then
+			return
+		end
+		if this.unit.is_stunned then
+			SU.y_enemy_stun(store, this)
+		else
+			local next_pos = P:next_entity_node(this, store.tick_length)
+			if not next_pos or not U.has_valid_rally_node_nearby(this.pos) then
+				break
+			end
+			U.set_destination(this, next_pos)
+			local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
+			U.animation_start(this, an, af, store.tick_ts, true)
+			U.walk_off__accel__unsnapped(this, store.tick_length)
+		end
+		coroutine.yield()
+	end
+
+	this._scare_data = nil
+	this.nav_path.dir = 1
+end
+
+function SU.scare_enemy(target, scare_data)
+	if U.overwrite_main_script(target, enemy_scared_logic) then
+		target._scare_data = scare_data
+		return true
+	end
+	return false
+end
+
 return SU

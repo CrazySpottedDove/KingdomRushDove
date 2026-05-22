@@ -137,7 +137,7 @@ function M.register(sys)
 					elseif ne.area_attack then
 						ne.area_attack.ts = e.ranged_attack.ts
 					end
-				elseif e.barrack and ne.barrack then
+				elseif e.barrack and ne.barrack and not ne.barrack.banned then
 					ne.barrack.rally_pos = V.vclone(e.barrack.rally_pos)
 
 					for i, s in ipairs(e.barrack.soldiers) do
