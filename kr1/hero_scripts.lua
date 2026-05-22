@@ -13287,19 +13287,9 @@ function scripts.shield_elves_denas.update(this, store)
 	end
 
 	if bounce_count < this.max_rebounds then
-		local last_target = target
-
-		::label_75_1::
-
 		target = U.find_random_enemy(store, this.pos, 0, this.rebound_range, b.vis_flags, b.vis_bans, function(v)
 			return not table.contains(visited, v.id)
 		end)
-
-		if not target and #visited > 1 then
-			visited = {last_target.id}
-
-			goto label_75_1
-		end
 
 		if target then
 			S:queue(this.sound_events.bounce)
