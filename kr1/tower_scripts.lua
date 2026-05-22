@@ -20074,7 +20074,9 @@ function scripts.tower_arborean_emissary.update(this, store)
 					end)
 					if #targets > 0 then
 						S:queue(ag.sound)
-						local target = targets[math.random(1, #targets)]
+						local target = table.find_best(target, function(t)
+							return 1 - t.health.hp / t.health.hp_max
+						end)
 						local center_pos = V.vclone(target.pos)
 						local nodes = P:nearest_nodes(center_pos.x, center_pos.y, nil, {1}, false)
 						local pi, spi, ni = unpack(nodes[1])
