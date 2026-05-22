@@ -55,9 +55,6 @@ function M.register(sys)
 			end
 		end
 
-		-- if mdf.allows_duplicates then
-		-- return true
-		-- end
 		mdf.ts = store.tick_ts
 
 		if this.render then
@@ -66,51 +63,23 @@ function M.register(sys)
 			end
 		end
 
+		local duplicates = {}
+
 		for i = 1, #modifiers do
 			local m = modifiers[i]
 
 			if m.template_name == this.template_name then
 				if mdf.level == m.modifier.level then
-					-- 这段代码正常工作，建立在 modifiers 的顺序不会改变的基础上
-					if m.max_duplicates then
-						if m.max_duplicates == 0 then
-							if mdf.replaces_lower then
-								if this.render then
-									for j = 1, #this.render.sprites do
-										this.render.sprites[j].ts = m.render.sprites[1].ts
-									end
-								end
-								queue_remove(store, m)
-								return true
-							else
-								return false
-							end
-						end
+					if mdf.max_duplicates then
+						mdf.max_duplicates = mdf.max_duplicates - 1
+						duplicates[#duplicates + 1] = m
 
-						m.max_duplicates = m.max_duplicates - 1
-
-						if m.dps then
-							m.dps.fx = nil
-						end
-
-						if m.render then
-							for i = 1, #m.render.sprites do
-								m.render.sprites[i].hidden = true
-								this.render.sprites[i].ts = m.render.sprites[i].ts
-							end
+						if mdf.max_duplicates < 0 then
+							return false
 						end
 					elseif mdf.allows_duplicates then
-						if m.dps then
-							m.dps.fx = nil
-						end
-						if m.render then
-							for i = 1, #m.render.sprites do
-								m.render.sprites[i].hidden = true
-								this.render.sprites[i].ts = m.render.sprites[i].ts
-							end
-						end
-					else
-						return false
+						duplicates[#duplicates + 1] = m
+						break
 					end
 				elseif mdf.level > m.modifier.level and mdf.replaces_lower then
 					if m.render then
@@ -130,6 +99,25 @@ function M.register(sys)
 					return false
 				else
 					return false
+				end
+			end
+		end
+
+		if #duplicates > 0 then
+			for _, d in ipairs(duplicates) do
+				if d.dps then
+					d.dps.fx = nil
+				end
+
+				if d.render then
+					for i = 1, #d.render.sprites do
+						d.render.sprites[i].hidden = true
+					end
+				end
+			end
+			if this.render then
+				for i = 1, #this.render.sprites do
+					this.render.sprites[i].ts = duplicates[1].render.sprites[1].ts
 				end
 			end
 		end
