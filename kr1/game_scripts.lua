@@ -2935,7 +2935,7 @@ function scripts.aura_ranger_thorn.update(this, store)
 
 	local function find_targets()
 		local targets = U.find_enemies_in_range_filter_on(this.pos, a.radius, a.vis_flags, a.vis_bans, function(e)
-			return not e.enemy._ranger_thron_ts or store.tick_ts - e.enemy._ranger_thron_ts >= a.cooldown
+			return not e.enemy._ranger_thron_ts or store.tick_ts - e.enemy._ranger_thron_ts >= a.cooldown * (store.entities[a.source_id] and store.entities[a.source_id].tower.cooldown_factor or 1) * 0.8
 		end)
 
 		return targets
@@ -2950,11 +2950,11 @@ function scripts.aura_ranger_thorn.update(this, store)
 
 		if owner.tower.blocked then
 		-- block empty
-		elseif store.tick_ts - a.ts >= a.cooldown then
+		elseif store.tick_ts - a.ts >= a.cooldown * owner.tower.cooldown_factor then
 			local targets = find_targets()
 
 			if not targets or #targets < a.min_count then
-				a.ts = a.ts + fts(1)
+				a.ts = a.ts + 0.05
 			else
 				a.ts = store.tick_ts
 
@@ -2968,6 +2968,12 @@ function scripts.aura_ranger_thorn.update(this, store)
 				else
 					S:queue(a.hit_sound)
 
+					owner = store.entities[a.source_id]
+					if not owner then
+						queue_remove(store, this)
+						return
+					end
+
 					for i = 1, math.min(#targets, a.max_count + a.max_count_inc * owner.powers.thorn.level) do
 						local e = targets[i]
 
@@ -2979,6 +2985,7 @@ function scripts.aura_ranger_thorn.update(this, store)
 						m.modifier.source_id = this.id
 						m.modifier.level = owner.powers.thorn.level
 						m.modifier.duration = m.modifier.duration + m.modifier.duration_inc * owner.powers.thorn.level
+						m.modifier.damage_factor = owner.tower.damage_factor * m.modifier.damage_factor
 
 						if U.has_modifier_in_list(store, e, {"mod_ranger_poison"}) then
 							m.modifier.duration = m.modifier.duration + owner.powers.poison.level * m.modifier.duration_inc * 0.5

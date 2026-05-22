@@ -36,7 +36,7 @@ tt.info.portrait = "info_portraits_towers_0006"
 tt.powers.poison = CC("power")
 tt.powers.poison.price_base = 225
 tt.powers.poison.price_inc = 175
-tt.powers.poison.mods = {"mod_ranger_poison", "mod_ranger_slow"}
+tt.powers.poison.mods = {"mod_ranger_poison"}
 tt.powers.poison.enc_icon = 8
 tt.powers.thorn = CC("power")
 tt.powers.thorn.price_base = 225
@@ -83,7 +83,7 @@ tt.aura.duration = -1
 tt.aura.radius = 200
 tt.aura.vis_flags = bor(F_THORN, F_MOD)
 tt.aura.vis_bans = bor(F_FLYING, F_BOSS)
-tt.aura.cooldown = 8 + fts(34)
+tt.aura.cooldown = 9
 tt.aura.max_count = 2
 tt.aura.max_count_inc = 2
 tt.aura.min_count = 2
@@ -100,6 +100,7 @@ tt.bullet.damage_max = 20
 tt.bullet.flight_time = fts(15.2)
 
 tt = RT("mod_ranger_poison", "mod_poison")
+AC(tt, "slow")
 tt.modifier.duration = 3
 tt.dps.damage_max = 0
 tt.dps.damage_min = 0
@@ -107,10 +108,10 @@ tt.dps.damage_inc = 5
 tt.dps.damage_every = 1
 tt.dps.kill = true
 tt.dps.damage_type = bor(DAMAGE_POISON, DAMAGE_NO_SHIELD_HIT)
-
-tt = RT("mod_ranger_slow", "mod_slow")
-tt.modifier.duration = 3
 tt.slow.factor = 0.9
+tt.modifier.max_duplicates = 3
+tt.main_script.insert = fn_group(tt.main_script.insert, scripts.mod_slow.insert)
+tt.main_script.remove = scripts.mod_slow.remove
 
 tt = RT("mod_thorn", "modifier")
 AC(tt, "render")
@@ -121,11 +122,10 @@ tt.modifier.duration_inc = 1
 tt.modifier.type = MOD_TYPE_FREEZE
 tt.modifier.vis_flags = bor(F_THORN, F_MOD)
 tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
-tt.max_times_applied = 3
-tt.damage_min = 40
-tt.damage_max = 40
+tt.damage_min = 20
+tt.damage_max = 20
 tt.damage_type = DAMAGE_PHYSICAL
-tt.damage_every = 1
+tt.damage_every = 0.5
 tt.render.sprites[1].prefix = "mod_thorn_small"
 tt.render.sprites[1].name = "start"
 tt.render.sprites[1].size_prefixes = {"mod_thorn_small", "mod_thorn_big", "mod_thorn_big"}

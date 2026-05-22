@@ -3119,10 +3119,10 @@ return {
 		}, {
 			tt_title = _("TOWER_BONE_FLINGERS_SKELETON_NAME_2"),
 			tt_desc = _("TOWER_BONE_FLINGERS_SKELETON_DESCRIPTION_2")
-		},{
-            tt_title = _("TOWER_BONE_FLINGERS_SKELETON_NAME_3"),
-            tt_desc = _("TOWER_BONE_FLINGERS_SKELETON_DESCRIPTION_3")
-        }}
+		}, {
+			tt_title = _("TOWER_BONE_FLINGERS_SKELETON_NAME_3"),
+			tt_desc = _("TOWER_BONE_FLINGERS_SKELETON_DESCRIPTION_3")
+		}}
 	}), M(tpl.upgrade_power, {
 		action_arg = "milk",
 		image = "kr4_special_icons_0038",

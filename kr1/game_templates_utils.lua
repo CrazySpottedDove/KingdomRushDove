@@ -41,7 +41,7 @@ function CC(comp_name)
 	return E:clone_c(comp_name)
 end
 
--- 合成 insert 函数
+-- 合成 insert, remove 函数
 function fn_group(...)
 	local functions = {...}
 	return function(this, store)
