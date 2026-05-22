@@ -80,6 +80,8 @@ function M.register(sys)
 					elseif mdf.allows_duplicates then
 						duplicates[#duplicates + 1] = m
 						break
+					else
+						return false
 					end
 				elseif mdf.level > m.modifier.level and mdf.replaces_lower then
 					if m.render then
