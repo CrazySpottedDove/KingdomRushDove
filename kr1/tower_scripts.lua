@@ -25790,6 +25790,10 @@ function scripts.tower_grim_cemetery.get_info(this)
 	return s_info
 end
 
+local function tower_grim_cemetery_scare_filter(e)
+	return SU.is_valid_scare_target(e) and (not e._cemetery_scare_count or e._cemetery_scare_count < 3)
+end
+
 function scripts.tower_grim_cemetery.insert(this, store, script)
 	local e = E:create_entity("grim_cemetery_aura")
 	e.pos = tpos(this)
@@ -25821,7 +25825,7 @@ function scripts.tower_grim_cemetery.update(this, store, script)
 
 		if not this.tower.blocked then
 			if ready_to_use_power(pow_h, ha, store, this.tower.cooldown_factor) then
-				local targets = U.find_enemies_in_range_filter_on(tpos(this), a.range, ha.vis_flags, ha.vis_bans, SU.is_valid_scare_target)
+				local targets = U.find_enemies_in_range_filter_on(tpos(this), a.range, ha.vis_flags, ha.vis_bans, tower_grim_cemetery_scare_filter)
 
 				if not targets then
 					ha.ts = ha.ts + 0.1
@@ -25852,7 +25856,7 @@ function scripts.tower_grim_cemetery.update(this, store, script)
 					end
 
 					if remain_count > 0 then
-						targets = U.find_enemies_in_range_filter_on(tpos(this), a.range, ha.vis_flags, ha.vis_bans, SU.is_valid_scare_target)
+						targets = U.find_enemies_in_range_filter_on(tpos(this), a.range, ha.vis_flags, ha.vis_bans, tower_grim_cemetery_scare_filter)
 						if targets then
 							goto try_again
 						end
@@ -25959,7 +25963,7 @@ function scripts.grim_cemetery_aura.update(this, store, script)
 			pow_p.changed = nil
 		end
 
-		if store.tick_ts - spawn_ts >= this.spawn_cooldown * source.tower.cooldown_factor then
+		if store.tick_ts - spawn_ts >= E:get_template("soldier_zombie").health.dead_lifetime * source.tower.cooldown_factor then
 			if stored_zombie_count < source.barrack.max_soldiers then
 				stored_zombie_count = stored_zombie_count + 1
 			end
@@ -26132,10 +26136,6 @@ function scripts.soldier_zombie.update(this, store, script)
 
 				queue_insert(store, decal)
 			end
-		elseif this.reinforcement and (this.reinforcement.fade or this.reinforcement.fade_out) then
-			SU.y_reinforcement_fade_out(store, this)
-
-			return
 		else
 			if this.pestilence_active then
 				S:queue(this.sound_events.death_xplode, this.sound_events.death_xplode_args)
@@ -26148,10 +26148,8 @@ function scripts.soldier_zombie.update(this, store, script)
 			this.ui.can_select = false
 		end
 
-		if this.ui then
-			this.ui.can_click = not this.unit.hide_after_death
-			this.ui.z = -1
-		end
+		this.ui.can_click = not this.unit.hide_after_death
+		this.ui.z = -1
 
 		if this.unit.hide_during_death or this.unit.hide_after_death then
 			for _, s in pairs(this.render.sprites) do
@@ -26240,12 +26238,18 @@ function scripts.aura_grim_cemetery_hand.update(this, store, script)
 		if store.tick_ts - last_hit_ts >= this.aura.cycle_time then
 			last_hit_ts = store.tick_ts
 
-			local targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, SU.is_valid_scare_target)
+			local targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, tower_grim_cemetery_scare_filter)
 			if targets then
 				for _, target in ipairs(targets) do
-					SU.scare_enemy(target, {
+					if SU.scare_enemy(target, {
 						duration = this.scare_duration
-					})
+					}) then
+						if not target._cemetery_scare_count then
+							target._cemetery_scare_count = 1
+						else
+							target._cemetery_scare_count = target._cemetery_scare_count + 1
+						end
+					end
 				end
 			end
 		end

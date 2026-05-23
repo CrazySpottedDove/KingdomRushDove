@@ -1245,7 +1245,10 @@ GS.wraith = {
 	soldier_dragon_bone_ultimate_dog = true,
 	soldier_flingers_skeleton = true,
 	soldier_flingers_skeleton_warrior = true,
-	soldier_bone_golem = true
+	soldier_bone_golem = true,
+	soldier_zombie = true,
+	soldier_zombie_medium = true,
+	soldier_zombie_big = true
 }
 
 return GS
