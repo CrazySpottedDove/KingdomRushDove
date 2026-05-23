@@ -86,6 +86,8 @@ function M.register(sys)
 							m.tween.ts = store.tick_ts - (mdf.resets_same_tween_offset or 0)
 						end
 						return false
+					else
+						return false
 					end
 				elseif mdf.level > m.modifier.level and mdf.replaces_lower then
 					if m.render then
