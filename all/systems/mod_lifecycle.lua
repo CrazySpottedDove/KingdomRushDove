@@ -80,7 +80,11 @@ function M.register(sys)
 					elseif mdf.allows_duplicates then
 						duplicates[#duplicates + 1] = m
 						break
-					else
+					elseif mdf.resets_same then
+						m.modifier.ts = store.tick_ts
+						if mdf.resets_same_tween and m.tween then
+							m.tween.ts = store.tick_ts - (mdf.resets_same_tween_offset or 0)
+						end
 						return false
 					end
 				elseif mdf.level > m.modifier.level and mdf.replaces_lower then
@@ -91,14 +95,6 @@ function M.register(sys)
 					end
 
 					queue_remove(store, m)
-				elseif mdf.level == m.modifier.level and mdf.resets_same then
-					m.modifier.ts = store.tick_ts
-
-					if mdf.resets_same_tween and m.tween then
-						m.tween.ts = store.tick_ts - (mdf.resets_same_tween_offset or 0)
-					end
-
-					return false
 				else
 					return false
 				end
