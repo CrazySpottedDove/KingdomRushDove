@@ -25906,7 +25906,7 @@ function scripts.grim_cemetery_aura.update(this, store, script)
 	end
 
 	local function filter_stored(v)
-		return not v._cemetery_spawned
+		return not v._cemetery_spawned or not v._cemetery_spawned[this.id] or v._cemetery_spawned[this.id] < 2
 	end
 
 	local function spawn(pos, template_name)
@@ -25927,7 +25927,7 @@ function scripts.grim_cemetery_aura.update(this, store, script)
 			m.modifier.level = pow_p.level
 			m.modifier.target_id = e.id
 			m.modifier.source_id = this.id
-			m.modifier.damage_factor = source.tower.damage_factor
+			m.modifier.damage_factor = e.unit.damage_factor
 			queue_insert(store, m)
 		end
 
@@ -26024,6 +26024,16 @@ function scripts.grim_cemetery_aura.update(this, store, script)
 						template_name = this.entity_big
 					else
 						template_name = this.entity_small
+					end
+
+					-- 上限：同一座僵尸塔对同一个敌人最多生成两名僵尸来拦截
+					if not enemy._cemetery_spawned then
+						enemy._cemetery_spawned = {}
+					end
+					if not enemy._cemetery_spawned[this.id] then
+						enemy._cemetery_spawned[this.id] = 1
+					else
+						enemy._cemetery_spawned[this.id] = enemy._cemetery_spawned[this.id] + 1
 					end
 					spawn(spawn_pos, template_name)
 				end
