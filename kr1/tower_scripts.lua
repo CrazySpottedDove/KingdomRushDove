@@ -25779,7 +25779,7 @@ function scripts.tower_grim_cemetery.get_info(this)
 	local s = E:get_template("soldier_zombie")
 	local ar = E:get_template("grim_cemetery_aura")
 	local soldier_type = "soldier_zombie"
-	if this.powers.big then
+	if this.powers.big.level > 0 then
 		soldier_type = "soldier_zombie_big"
 	end
 	local s = E:create_entity(soldier_type)

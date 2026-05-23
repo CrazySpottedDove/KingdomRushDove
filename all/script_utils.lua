@@ -5229,7 +5229,7 @@ function SU.betray_enemy(target, betray)
 end
 
 function SU.is_valid_scare_target(target)
-	return not target._scare_data and not target._main_script_overwritten and U.has_valid_rally_node_nearby(target.pos) and band(target.vis.flags, F_BOSS) == 0
+	return not target._scare_data and not target._main_script_overwritten and U.has_valid_rally_node_nearby(target.pos) and band(target.vis.flags, F_BOSS) == 0 and target.health_bar and not target.health_bar.hidden
 end
 
 local function enemy_scared_logic(this, store)
