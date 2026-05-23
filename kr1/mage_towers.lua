@@ -3870,7 +3870,7 @@ tt.powers.meteor = CC("power")
 tt.powers.meteor.price_base = 200
 tt.powers.meteor.price_inc = 200
 tt.powers.vines = CC("power")
-tt.powers.vines.price_base = 200
+tt.powers.vines.price_base = 210
 tt.powers.vines.price_inc = 175
 tt.render.sprites[1].offset = v(0, 11)
 tt.render.sprites[2] = CC("sprite")
@@ -3991,6 +3991,8 @@ tt.render.sprites[1].loop = true
 tt.render.sprites[1].size_names = {"run", "run", "run"}
 
 tt = RT("mod_orc_shaman_heal_enemy", "mod_orc_shaman_heal")
+AC(tt, "slow")
+tt.slow.factor = 0.6
 tt.main_script.insert = scripts.mod_orc_shaman_heal_enemy.insert
 tt.main_script.remove = scripts.mod_orc_shaman_heal_enemy.remove
 tt.damage_factor_magical = 1.09

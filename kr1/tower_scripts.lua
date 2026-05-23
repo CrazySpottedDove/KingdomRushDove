@@ -23681,11 +23681,10 @@ end
 scripts.mod_orc_shaman_heal_enemy = {}
 
 function scripts.mod_orc_shaman_heal_enemy.insert(this, store)
-	if scripts.mod_hps.insert(this, store) then
+	if scripts.mod_hps.insert(this, store) and scripts.mod_slow.insert(this, store) then
+		-- 必然有 target
 		local target = store.entities[this.modifier.target_id]
-		if not target then
-			return false
-		end
+
 		local exponent = this.damage_exponent + this.damage_exponent_inc * this.modifier.level
 		this._on_damage_index = U.insert_on_damage(target, function(this, store, damage)
 			damage.value = damage.value ^ exponent
@@ -23704,6 +23703,7 @@ function scripts.mod_orc_shaman_heal_enemy.remove(this, store)
 		U.remove_on_damage(target, this._on_damage_index)
 		local factor = this.damage_factor_magical + this.damage_factor_magical_inc * this.modifier.level
 		target.health.damage_factor_magical = target.health.damage_factor_magical / factor
+		scripts.mod_slow.remove(this, store)
 	end
 	return true
 end
