@@ -6917,6 +6917,7 @@ function scripts.mod_teleport.insert(this, store)
 		end
 
 		SU.stun_inc(target)
+		U.bans_add(target.vis, F_TELEPORT)
 
 		return true
 	else
@@ -6929,6 +6930,7 @@ function scripts.mod_teleport.remove(this, store)
 
 	if target then
 		SU.stun_dec(target)
+		U.bans_remove(target.vis, F_TELEPORT)
 	end
 
 	return true
