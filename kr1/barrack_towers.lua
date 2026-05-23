@@ -3954,8 +3954,8 @@ tt.idle_flip.last_dir = 1
 tt.idle_flip.walk_dist = 10
 tt.health.hp_max = 300
 tt.info.portrait = "kr4_info_portraits_soldiers_0021"
-tt.melee.attacks[1].damage_max = 10
-tt.melee.attacks[1].damage_min = 4
+tt.melee.attacks[1].damage_max = 12
+tt.melee.attacks[1].damage_min = 5
 tt.melee.attacks[1].hit_time = fts(21)
 tt.render.sprites[1].prefix = "grim_cemetery_zombie_medium"
 
@@ -3967,7 +3967,7 @@ tt.idle_flip.last_dir = 1
 tt.idle_flip.walk_dist = 10
 tt.health.hp_max = 300
 tt.info.portrait = "kr4_info_portraits_soldiers_0006"
-tt.melee.attacks[1].damage_max = 12
+tt.melee.attacks[1].damage_max = 14
 tt.melee.attacks[1].damage_min = 7
 tt.melee.attacks[1].hit_time = fts(22)
 tt.render.sprites[1].prefix = "grim_cemetery_zombie_better"
@@ -4003,6 +4003,22 @@ tt.explode_damage = {30, 80}
 tt.explode_mod = "mod_grim_cemetery_poison"
 tt.explode_vis_bans = bor(F_FRIEND)
 tt.explode_vis_flags = bor(F_RANGED, F_AREA)
+
+tt = E:register_t("mod_grim_cemetery_scare", "modifier")
+AC(tt, "render", "texts")
+tt.main_script.insert = scripts.mod_track_target.insert
+tt.main_script.update = scripts.mod_track_target.update
+tt.modifier.duration = 3
+tt.render.sprites[1].z = Z_BULLETS
+tt.render.sprites[1].offset = v(0, 10)
+tt.render.sprites[1].animated = false
+tt.texts.list[1].text = "!"
+tt.texts.list[1].font_name = "taunts"
+tt.texts.list[1].font_size = 20
+tt.texts.list[1].color = {50, 255, 50}
+tt.texts.list[1].sprite_id = 1
+tt.texts.list[1].size = v(140, 60)
+tt.texts.list[1].line_height = i18n:cjk(1, 1)
 
 tt = RT("mod_grim_cemetery_poison", "mod_poison")
 tt.modifier.duration = 3

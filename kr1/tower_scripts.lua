@@ -26259,6 +26259,10 @@ function scripts.aura_grim_cemetery_hand.update(this, store, script)
 						else
 							target._cemetery_scare_count = target._cemetery_scare_count + 1
 						end
+						local m = E:create_entity("mod_grim_cemetery_scare")
+						m.modifier.target_id = target.id
+						m.modifier.source_id = this.id
+						queue_insert(store, m)
 					end
 				end
 			end

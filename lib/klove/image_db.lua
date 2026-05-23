@@ -718,7 +718,7 @@ function image_db:load_image_file(fn, path)
 	end
 end
 
---- 临时添加图像文件
+--- 临时添加图像文件。改方法添加的图像组都是临时组，由 director 接管资源的释放，因此不会主动管理 atlas_uses 引用计数。
 ---@param name string 纹理名称
 ---@param image userdata 纹理
 ---@param group string 纹理组名称
@@ -739,22 +739,22 @@ function image_db:add_image(name, image, group, scale)
 	}
 	self.db_images[name] = {image, w, h}
 
-	if not self.atlas_uses[name_scale] then
-		self.atlas_uses[name_scale] = 1
-	else
-		self.atlas_uses[name_scale] = self.atlas_uses[name_scale] + 1
-	end
+-- if not self.atlas_uses[name_scale] then
+-- self.atlas_uses[name_scale] = 1
+-- else
+-- self.atlas_uses[name_scale] = self.atlas_uses[name_scale] + 1
+-- end
 end
 
 --- 移除图像文件
 ---@param name string 纹理名称
 function image_db:remove_image(name)
-	local name_scale = self.db_atlas[name].group
-	self.atlas_uses[name_scale] = self.atlas_uses[name_scale] - 1
-	if self.atlas_uses[name_scale] <= 0 then
-		self.db_images[name] = nil
-		self.db_atlas[name] = nil
-	end
+	-- local name_scale = self.db_atlas[name].group
+	-- self.atlas_uses[name_scale] = self.atlas_uses[name_scale] - 1
+	-- if self.atlas_uses[name_scale] <= 0 then
+	self.db_images[name] = nil
+	self.db_atlas[name] = nil
+-- end
 end
 
 function image_db:i(name)
