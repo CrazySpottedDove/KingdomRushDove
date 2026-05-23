@@ -24067,6 +24067,7 @@ function scripts.soldier_orc_warrior.update(this, store)
 						a.aura.target_id = this.id
 						a.aura.source_id = this.id
 						a.regen.health = p.heal[p.level] * a.regen.cooldown
+						a.aura.ts = store.tick_ts
 						queue_insert(store, a)
 					else
 						this._aura_regen.regen.health = p.heal[p.level] * this._aura_regen.regen.cooldown

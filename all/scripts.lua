@@ -4864,8 +4864,10 @@ function scripts.aura_unit_regen.update(this, store)
 				this.aura.ts = this.aura.ts + this.regen.cooldown
 
 				if (this.regen.ignore_stun or not target.unit.is_stunned) and (this.regen.ignore_mods or not U.flag_has(target.vis.bans, F_MOD)) then
-					target.health.hp = target.health.hp + this.regen.health
-					target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp)
+					if target.health.hp < target.health.hp_max then
+						target.health.hp = target.health.hp + this.regen.health
+						target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp)
+					end
 				end
 			end
 		end
@@ -8238,15 +8240,6 @@ scripts.soldier_revive_resist = function(this, store)
 	end
 
 	if this.revive.animation then
-		-- S:queue(this.revive.sound)
-		-- U.animation_start(this, this.revive.animation, nil, store.tick_ts, false)
-
-		-- this.revive.ts = store.tick_ts
-
-		-- while store.tick_ts - this.revive.ts < this.revive.hit_time do
-		-- 	coroutine.yield()
-		-- end
-
 		while not U.animation_finished(this) do
 			coroutine.yield()
 		end
