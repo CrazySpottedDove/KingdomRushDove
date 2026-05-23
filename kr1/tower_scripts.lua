@@ -25825,7 +25825,7 @@ function scripts.tower_grim_cemetery.update(this, store, script)
 
 		if not this.tower.blocked then
 			if ready_to_use_power(pow_h, ha, store, this.tower.cooldown_factor) then
-				local targets = U.find_enemies_in_range_filter_on(tpos(this), a.range, ha.vis_flags, ha.vis_bans, tower_grim_cemetery_scare_filter)
+				local targets = U.find_enemies_in_range_filter_on(tpos(this), a.range * 0.7, ha.vis_flags, ha.vis_bans, tower_grim_cemetery_scare_filter)
 
 				if not targets then
 					ha.ts = ha.ts + 0.1
@@ -25856,7 +25856,7 @@ function scripts.tower_grim_cemetery.update(this, store, script)
 					end
 
 					if remain_count > 0 then
-						targets = U.find_enemies_in_range_filter_on(tpos(this), a.range, ha.vis_flags, ha.vis_bans, tower_grim_cemetery_scare_filter)
+						targets = U.find_enemies_in_range_filter_on(tpos(this), a.range * 0.7, ha.vis_flags, ha.vis_bans, tower_grim_cemetery_scare_filter)
 						if targets then
 							goto try_again
 						end
