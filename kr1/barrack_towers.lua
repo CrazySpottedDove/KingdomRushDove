@@ -3838,7 +3838,7 @@ tt.powers.hands = E:clone_c("power")
 tt.powers.hands.price_base = 200
 tt.powers.hands.price_inc = 100
 tt.powers.hands.max_level = 2
-tt.powers.hands.cooldown = {20, 15}
+tt.powers.hands.cooldown = {20, 16}
 tt.powers.hands.count = 10
 tt.powers.pestilence = E:clone_c("power")
 tt.powers.pestilence.price_base = 110
@@ -3985,7 +3985,7 @@ tt.render.sprites[1].prefix = "fallen_ones_grim_cemetery_hand1"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].z = Z_DECALS
-tt.scare_duration = 3
+tt.scare_duration = 2.7
 
 tt = E:register_t("mod_grim_cemetery_explode", "modifier")
 E:add_comps(tt, "render")
