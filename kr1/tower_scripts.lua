@@ -14185,16 +14185,6 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 			pred_pos.y = pred_pos.y - this.flight_height
 		end
 
-		if attack == this.ranged.attacks[3] then
-			local mark = E:create_entity(attack.mark_mod)
-
-			mark.modifier.target_id = target.id
-			mark.modifier.source_id = this.id
-			mark.modifier.duration = 9e+99
-
-			queue_insert(store, mark)
-		end
-
 		attack_done = SU.y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
 
 		if attack_done then
@@ -14595,10 +14585,11 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 
 		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step, stx, sty)))
 		fm.v.x, fm.v.y = V.trim(fm.max_v, V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y)))
+
 		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
 		fm.a.x, fm.a.y = 0, 0
 
-		return dist <= fm.max_v * store.tick_length
+		return dist * dist <= fm.v.x * fm.v.x + fm.v.y * fm.v.y * store.tick_length * store.tick_length
 	end
 
 	local function fly_to_pos(target_pos)
@@ -14629,18 +14620,24 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 		queue_insert(store, ps)
 	end
 
+	local mark_mod
 	if target then
 		local m = E:create_entity(this.mod)
 
 		m.modifier.target_id = target.id
 
 		queue_insert(store, m)
+
+		mark_mod = E:create_entity(this.mark_mod)
+		mark_mod.modifier.source_id = this.id
+		mark_mod.modifier.target_id = target.id
+		mark_mod.modifier.duration = 1e99
+		queue_insert(store, mark_mod)
 	end
 
 	local soldier_pos = v(source.pos.x, source.pos.y + source.render.sprites[1].offset.y)
 	local soldier_floor_pos = v(source.pos.x, source.pos.y)
 	local attack = table.deepclone(source.ranged.attacks[3])
-
 	fm.a.x, fm.a.y = 0, 80
 
 	local target_pos = v(soldier_pos.x, soldier_pos.y + 130)
@@ -14801,6 +14798,10 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 		ps.particle_system.emit = false
 
 		y_wait(store, ps.particle_system.particle_lifetime[2])
+	end
+
+	if mark_mod then
+		queue_remove(store, mark_mod)
 	end
 
 	queue_remove(store, this)

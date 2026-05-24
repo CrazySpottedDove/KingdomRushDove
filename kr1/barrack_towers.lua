@@ -2553,6 +2553,7 @@ tt.force_motion.a_step = 5
 tt.force_motion.max_a = 1800
 tt.force_motion.max_v = 600
 tt.mod = "mod_soldier_tower_rocket_gunners_sting_missiles_target"
+tt.mark_mod = "mod_soldier_tower_rocket_gunners_sting_missiles_mark"
 tt.sound_events.insert = "TowerRocketGunnersStingMissileCast"
 tt.sound_events.hit = "TowerRocketGunnersStingMissileExplosion"
 
@@ -2566,7 +2567,7 @@ tt.render.sprites[1].draw_order = DO_MOD_FX
 
 tt = RT("mod_soldier_tower_rocket_gunners_sting_missiles_mark", "modifier")
 AC(tt, "mark_flags")
-tt.mark_flags.vis_bans = F_CUSTOM
+tt.mark_flags.vis_bans = bor(F_CUSTOM, F_RANGED, F_AREA, F_INSTAKILL, F_EAT)
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
