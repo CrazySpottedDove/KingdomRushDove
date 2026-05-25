@@ -2567,7 +2567,7 @@ tt.render.sprites[1].draw_order = DO_MOD_FX
 
 tt = RT("mod_soldier_tower_rocket_gunners_sting_missiles_mark", "modifier")
 AC(tt, "mark_flags")
-tt.mark_flags.vis_bans = bor(F_CUSTOM, F_RANGED, F_AREA, F_INSTAKILL, F_EAT)
+tt.mark_flags.vis_bans = bor(F_CUSTOM, F_RANGED, F_INSTAKILL, F_EAT)
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update

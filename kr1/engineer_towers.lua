@@ -70,7 +70,6 @@ tt.attacks.list[1].bullet = "bomb_bfg"
 tt.attacks.list[1].bullet_start_offset = vec_2(0, 64)
 tt.attacks.list[1].cooldown = 3.65
 tt.attacks.list[1].node_prediction = fts(25)
--- tt.attacks.list[1].range = 190
 tt.attacks.list[1].shoot_time = fts(23)
 tt.attacks.list[1].vis_bans = bor(F_FLYING)
 tt.attacks.list[2] = CC("bullet_attack")
