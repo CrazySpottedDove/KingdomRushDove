@@ -106,6 +106,7 @@ tt.attacks.list[3].vis_bans = bor(F_BOSS, F_FREEZE)
 tt = RT("mod_ray_arcane", "modifier")
 AC(tt, "render", "dps")
 -- standard dps: 248 / 2 / 2 = 62, with price = 290
+-- 性价比: 62 / 790 = 0.0785
 tt.dps.damage_min = 92
 tt.dps.damage_max = 156
 tt.dps.damage_type = bor(DAMAGE_MAGICAL, DAMAGE_ONE_SHIELD_HIT)

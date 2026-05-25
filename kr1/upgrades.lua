@@ -1791,7 +1791,7 @@ function upgrades:patch_templates(max_level)
 				damage.value = damage.value + entity.health.hp_max * 0.05 * math.sqrt(damage.value + 1) / 12.5
 			end
 		end
-		for _, n in pairs(engineer_bombs) do
+		for _, n in ipairs(engineer_bombs) do
 			local n = T(n)
 			local b = n.bullet
 			b.damage_hooks[#b.damage_hooks + 1] = u.hook

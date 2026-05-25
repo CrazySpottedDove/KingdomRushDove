@@ -272,6 +272,8 @@ shotgun.bullet.hide_radius = 25
 shotgun.bullet.vis_flags = F_RANGED
 
 local bomb = E:register_t("bomb", "bullet")
+-- dps: 17 / 3 = 5.67
+-- 性价比: 5.67 / 125 = 0.04536
 bomb.bullet.flight_time = fts(31)
 bomb.bullet.rotation_speed = 20 * FPS * math.pi / 180
 bomb.bullet.hit_fx = "fx_explosion_small"
@@ -293,16 +295,20 @@ bomb.sound_events.hit = "BombExplosionSound"
 bomb.sound_events.hit_water = "RTWaterExplosion"
 
 local bomb_dynamite = E:register_t("bomb_dynamite", "bomb")
+-- dps: 44 / 3 = 14.67
+-- 性价比: 14.67 / 345 = 0.0425
 bomb_dynamite.render.sprites[1].name = "bombs_0002"
 bomb_dynamite.bullet.damage_min = 22
 bomb_dynamite.bullet.damage_max = 44
 bomb_dynamite.bullet.damage_radius = 62.400000000000006
 
 local bomb_black = E:register_t("bomb_black", "bomb")
+-- dps: 72 / 3 = 24
+-- 性价比: 22 / 665 = 0.036
 bomb_black.render.sprites[1].name = "bombs_0003"
 bomb_black.bullet.align_with_trajectory = true
-bomb_black.bullet.damage_min = 33
-bomb_black.bullet.damage_max = 66
+bomb_black.bullet.damage_min = 36
+bomb_black.bullet.damage_max = 72
 bomb_black.bullet.damage_radius = 67.2
 
 tt = E:register_t("bolt", "bullet")

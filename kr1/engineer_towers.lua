@@ -92,6 +92,7 @@ tt.attacks.list[3].vis_bans = 0
 
 tt = RT("bomb_bfg", "bomb")
 -- dps = 131 / 3.65 = 35.89 per second
+-- 性价比: 35.89 / 1145 = 0.0313
 tt.bullet.damage_max = 131
 tt.bullet.damage_min = 66
 tt.bullet.damage_radius = 75

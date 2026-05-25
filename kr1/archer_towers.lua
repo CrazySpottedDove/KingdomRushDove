@@ -95,6 +95,7 @@ tt.main_script.update = scripts.aura_ranger_thorn.update
 
 tt = RT("arrow_ranger", "arrow")
 -- expected_dps: 42.3
+-- 性价比: 42.3/570 = 0.074
 tt.bullet.damage_min = 13
 tt.bullet.damage_max = 20
 tt.bullet.flight_time = fts(15.2)

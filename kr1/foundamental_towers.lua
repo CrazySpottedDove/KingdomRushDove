@@ -256,14 +256,20 @@ tt.render.sprites[2].prefix = "towermagelvl3"
 tt.render.sprites[3].offset = vec_2(1, 62)
 
 tt = RT("bolt_1", "bolt")
+-- dps: 15 / 1.5 = 10
+-- 性价比: 10 / 100 = 0.1
 tt.bullet.damage_min = 11
 tt.bullet.damage_max = 19
 
 tt = RT("bolt_2", "bolt")
+-- dps: 35.5 / 1.5 = 23.666
+-- 性价比: 23.666 / 260 = 0.0909
 tt.bullet.damage_min = 25
 tt.bullet.damage_max = 47
 
 tt = RT("bolt_3", "bolt")
+-- dps: 65 / 1.5 = 43.333
+-- 性价比: 43.333 / 500 = 0.0866
 tt.bullet.damage_min = 44
 tt.bullet.damage_max = 81
 
@@ -398,15 +404,21 @@ tt.attacks.list[1].bullet = "arrow_3"
 tt.attacks.list[1].cooldown = 0.5
 
 tt = RT("arrow_1", "arrow")
+-- dps: 5.5 / 0.8 = 6.875
+-- 性价比: 6.875 / 70 = 0.0982
 tt.bullet.damage_min = 4
 tt.bullet.damage_max = 7
 
 tt = RT("arrow_2", "arrow")
+-- dps: 10 / 0.6 = 16.666
+-- 性价比: 16.666 / 180 = 0.0925
 tt.bullet.damage_min = 8
 tt.bullet.damage_max = 12
 tt.bullet.flight_time = fts(21)
 
 tt = RT("arrow_3", "arrow")
+-- dps: 14.5 / 0.5 = 29
+-- 性价比: 29 / 340 = 0.0853
 tt.bullet.damage_min = 11
 tt.bullet.damage_max = 18
 tt.bullet.flight_time = fts(20)
