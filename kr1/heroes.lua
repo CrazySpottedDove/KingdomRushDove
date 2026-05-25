@@ -13622,7 +13622,7 @@ tt.tween.reverse = false
 tt.unit.hit_offset = vec_2(0, 5)
 tt.unit.mod_offset = vec_2(0, 14)
 tt.unit.level = 0
-tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
+tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN, F_POISON)
 
 tt = RT("bolt_dragon_bone_basic_attack", "bolt")
 AC(tt, "force_motion")
