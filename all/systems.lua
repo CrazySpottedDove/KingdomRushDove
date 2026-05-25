@@ -896,7 +896,7 @@ function sys.render:init(store)
 	self._hb_ss = {
 		ref_scale = 1,
 		quad = hb_quad,
-		trim = {0, 0, 0, 0},
+		trim = {0, 0},
 		size = {1, 1}
 	}
 	self._hb_sizes = HEALTH_BAR_SIZES[store.texture_size] or HEALTH_BAR_SIZES.default

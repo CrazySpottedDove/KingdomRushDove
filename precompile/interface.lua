@@ -93,6 +93,7 @@ function M:init()
 	self.mod_dps = require("precompile.templates.mod_dps")
 	-- self.soldier_reinforcement = require("precompile.templates.soldier_reinforcement")
 	-- self.soldier_barrack = require("precompile.templates.soldier_barrack")
+	self.mod_track_target = require("precompile.templates.mod_track_target")
 	self.arrow = require("precompile.templates.arrow")
 	self.bomb = require("precompile.templates.bomb")
 	self.bolt = require("precompile.templates.bolt")
@@ -269,10 +270,16 @@ function M:compile(e)
 		if e.modifier then
 			if m.insert == scripts.mod_dps.insert then
 				m.insert = self:_compile(e, self.mod_dps.insert)
+			elseif m.insert == scripts.mod_track_target.insert then
+				m.insert = self:_compile(e, self.mod_track_target.insert)
 			end
 
 			if m.update == scripts.mod_dps.update then
 				m.update = self:_compile(e, self.mod_dps.update)
+			elseif m.update == scripts.mod_track_target.update then
+				if e.modifier.duration then
+					m.update = self:_compile(e, self.mod_track_target.update)
+				end
 			end
 		end
 

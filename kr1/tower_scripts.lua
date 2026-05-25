@@ -4544,7 +4544,7 @@ scripts.mod_tesla_overcharge = {
 		if scripts.mod_track_target.insert(this, store) then
 			local target = store.entities[this.modifier.target_id]
 
-			if math.random() < 0.12 and band(target.vis.bans, F_STUN) ~= 0 and band(target.vis.flags, F_BOSS) == 0 then
+			if math.random() < 0.12 and band(target.vis.bans, F_STUN) == 0 and band(target.vis.flags, F_BOSS) == 0 then
 				SU.stun_inc(target)
 
 				this._stun = true
