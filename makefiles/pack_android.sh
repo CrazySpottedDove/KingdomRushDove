@@ -72,14 +72,14 @@ for arg in "$@"; do
 done
 
 if [ "$HD_MODE" -eq 1 ]; then
-    ARCHIVE_DIR=".versions/KingdomRushDove-Android-HD-Cycle2-v${current_id}.zip"
-    OUTPUT_FINAL=$VERSION_DIR/KingdomRushDove-Android-HD-Cycle2-v${current_id}.apk
+    ARCHIVE_DIR=".versions/王国保卫战Dove版-v${current_id}-安卓手机端-高清版.zip"
+    OUTPUT_FINAL=$VERSION_DIR/王国保卫战Dove版-v${current_id}-安卓手机端-高清版.apk
     CACHE_DIR=".versions/.android_image_cache_hd"
     CACHE_KEY="resize=100%|strip=1|astc=1|tool=$IM_CMD"
     AUDIO_CACHE_DIR=".versions/.android_audio_cache_hd"
 else
-    ARCHIVE_DIR=".versions/KingdomRushDove-Android-Cycle2-v${current_id}.zip"
-    OUTPUT_FINAL=$VERSION_DIR/KingdomRushDove-Android-Cycle2-v${current_id}.apk
+    ARCHIVE_DIR=".versions/王国保卫战Dove版-v${current_id}-安卓手机端.zip"
+    OUTPUT_FINAL=$VERSION_DIR/王国保卫战Dove版-v${current_id}-安卓手机端.apk
     CACHE_DIR=".versions/.android_image_cache"
     CACHE_KEY="resize=50%|strip=1|astc=1|tool=$IM_CMD"
     AUDIO_CACHE_DIR=".versions/.android_audio_cache"

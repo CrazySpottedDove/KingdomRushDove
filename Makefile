@@ -86,6 +86,14 @@ windows_quick:
 	@bash $(MAKE_FILE_DIR)/package.sh
 	bash $(MAKE_FILE_DIR)/pack_windows.sh quick
 
+installer:
+	@bash $(MAKE_FILE_DIR)/package.sh
+	bash $(MAKE_FILE_DIR)/pack_windows_installer.sh
+
+installer_quick:
+	@bash $(MAKE_FILE_DIR)/package.sh
+	bash $(MAKE_FILE_DIR)/pack_windows_installer.sh quick
+
 android_quick:
 	@bash $(MAKE_FILE_DIR)/package.sh
 	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh quick

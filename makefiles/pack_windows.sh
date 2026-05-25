@@ -16,7 +16,7 @@ fi
 echo "Current version id: $current_id"
 
 mkdir -p ".versions"
-ARCHIVE_DIR=".versions/KingdomRushDove-Windows-Cycle2-v${current_id}.zip"
+ARCHIVE_DIR=".versions/王国保卫战Dove版-v${current_id}-Windows电脑端.zip"
 TOPDIR="$(basename "$ARCHIVE_DIR" .zip)"  # love_env 改名为这个
 
 QUICK_MODE=0
@@ -29,8 +29,8 @@ for arg in "$@"; do
 done
 
 # 依赖检查
-if ! command -v zip >/dev/null 2>&1; then
-    echo "ERROR: zip not found" >&2
+if ! command -v 7z >/dev/null 2>&1; then
+    echo "ERROR: 7z not found" >&2
     exit 1
 fi
 if ! command -v rsync >/dev/null 2>&1; then
@@ -87,7 +87,7 @@ echo "Creating archive -> $ARCHIVE_DIR"
 (
     cd "$STAGE_DIR"
     # 打包改名后的目录 TOPDIR，这样解压后顶层就是 KingdomRushDove-Windows-v9.1.6
-    zip -r "../$(basename "$ARCHIVE_DIR")" "$TOPDIR" -q
+    7z a -tzip -mx9 -mmt=on "../$(basename "$ARCHIVE_DIR")" "$TOPDIR" >/dev/null
 )
 
 # 移回到 .versions 下的最终 zip（cd 子shell里已写到 .versions）
