@@ -127,6 +127,7 @@ tt.modifier.pop_conds = DR_KILL
 tt.modifier.damage_type = bor(DAMAGE_DISINTEGRATE, DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS)
 tt.modifier.damage = 1
 tt.modifier.duration = fts(10)
+tt.mark_flags.vis_bans = bor(F_RANGED, F_AREA, F_INSTAKILL, F_EAT)
 tt.render.sprites[1].name = "mod_ray_arcane"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS
