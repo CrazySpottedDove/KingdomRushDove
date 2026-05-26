@@ -7,7 +7,6 @@ local anchor_y = 0
 local image_x = 0
 local image_y = nil
 local tt = nil
-local b
 local balance = require("kr1.data.balance")
 local scripts = require("game_scripts")
 local U = require("utils")

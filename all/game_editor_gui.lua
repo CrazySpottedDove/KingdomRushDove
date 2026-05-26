@@ -13,8 +13,6 @@ local LU = require("level_utils")
 local E = require("entity_db")
 local U = require("utils")
 local V = require("lib.klua.vector")
-local v = V.v
-local r = V.r
 local P = require("path_db")
 local GR = require("grid_db")
 local GS = require("kr1.game_settings")
@@ -1538,7 +1536,7 @@ function gui:update_entity_prop(prop_view)
 	end
 
 	if prop_type == PT_COORDS then
-		local state, reason = self.are_axes_in_range(prop_value, self._last_prop_value)
+		local state = self.are_axes_in_range(prop_value, self._last_prop_value)
 
 		if state then
 			self.editor:undo_push_entity(picker.tracking, e.id, prop_name .. ".x", get_prop(e, prop_name .. ".x"), prop_name .. ".y", get_prop(e, prop_name .. ".y"))
@@ -2087,7 +2085,7 @@ function gui:path_connects_to_change(prop_view)
 		return
 	end
 
-	local pi, ni = unpack(self.path_nodes_selected[1])
+	local pi = unpack(self.path_nodes_selected[1])
 	local cpi = prop_view.value
 	local current = self.editor.path_connections and self.editor.path_connections[pi] or nil
 	if cpi < 1 or cpi > #self.editor.path_curves then
@@ -2108,7 +2106,7 @@ function gui:path_active_change(prop_view)
 		return
 	end
 
-	local pi, ni = unpack(self.path_nodes_selected[1])
+	local pi = unpack(self.path_nodes_selected[1])
 	local current = self.editor.active_paths and self.editor.active_paths[pi]
 	if current == prop_view.value then
 		return
@@ -2317,7 +2315,7 @@ function gui:flip_path()
 		return
 	end
 
-	local pi, ni = unpack(self.path_nodes_selected[1])
+	local pi = unpack(self.path_nodes_selected[1])
 
 	self.editor:undo_push_paths(false)
 	self.editor:flip_path(pi)
@@ -2332,7 +2330,7 @@ function gui:move_path(inc)
 		return
 	end
 
-	local pi, ni = unpack(self.path_nodes_selected[1])
+	local pi = unpack(self.path_nodes_selected[1])
 
 	if pi + inc < 1 or pi + inc > #self.editor.path_curves then
 		return
@@ -2358,9 +2356,8 @@ function gui:duplicate_path()
 	end
 
 	self.editor:undo_push_paths(false)
-	local pi, ni = unpack(self.path_nodes_selected[1])
+	local pi = unpack(self.path_nodes_selected[1])
 	local npi = self.editor:duplicate_path(pi)
-
 	self:update_paths_list()
 	self:select_node(npi, 1)
 end
@@ -2371,7 +2368,7 @@ function gui:remove_path()
 	end
 
 	self.editor:undo_push_paths(false)
-	local pi, ni = unpack(self.path_nodes_selected[1])
+	local pi = unpack(self.path_nodes_selected[1])
 
 	self.editor:remove_path(pi)
 	self:update_paths_list()
@@ -2383,7 +2380,7 @@ function gui:preview_path(view)
 		return
 	end
 
-	local pi, ni = unpack(self.path_nodes_selected[1])
+	local pi = unpack(self.path_nodes_selected[1])
 
 	self.editor:preview_path_points(pi)
 end

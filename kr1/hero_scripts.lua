@@ -238,7 +238,6 @@ scripts.hero_gerald = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
 		local courage = this.timed_attacks.list[1]
 		local paladin = this.timed_attacks.list[2]
 		local skill, brk, sta
@@ -297,7 +296,7 @@ scripts.hero_gerald = {
 
 						paladin.ts = store.tick_ts
 
-						local pi, spi, ni = unpack(nodes[1])
+						local pi, _, ni = unpack(nodes[1])
 						local new_soldier = E:create_entity(paladin.entity)
 						local e_spi, e_ni = math.random(1, 3), ni
 
@@ -570,7 +569,6 @@ scripts.hero_alleria = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
 		local a, skill, brk, sta
 
 		local function get_wildcat_pos()
@@ -697,7 +695,6 @@ scripts.mirage_shadow = {
 	update = function(this, store)
 		local b = this.bullet
 		local target = store.entities[b.target_id]
-		local start_ts = store.tick_ts
 		local mspeed = U.frandom(b.min_speed, b.max_speed)
 
 		while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
@@ -868,7 +865,6 @@ scripts.hero_mirage = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
 		local a_sd = this.timed_attacks.list[1]
 		local s_sd = this.hero.skills.shadowdance
 		local a_l = this.timed_attacks.list[2]
@@ -1469,8 +1465,7 @@ scripts.hero_wizard = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
-		local a, skill, brk, sta
+		local a, skill, brk
 		local unit = this.unit
 		local a_disintegrate = this.timed_attacks.list[1]
 		local a_missile = this.timed_attacks.list[2]
@@ -1764,7 +1759,6 @@ scripts.hero_alric = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
 		local swa = this.timed_attacks.list[1]
 		local sws = this.hero.skills.sandwarriors
 		local brk, sta
@@ -1794,7 +1788,6 @@ scripts.hero_alric = {
 					local target_info = U.find_enemies_in_paths(store.enemies, this.pos, 0, swa.range_nodes, nil, swa.vis_flags, swa.vis_bans, true)
 
 					if target_info then
-						local target = target_info[1].target
 						local origin = target_info[1].origin
 						local start_ts = store.tick_ts
 
@@ -1963,9 +1956,7 @@ scripts.hero_bolin = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
 		local a, skill, brk, sta
-		local shoot_count = 0
 
 		U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
@@ -2116,7 +2107,7 @@ scripts.hero_bolin = {
 					end
 
 					if ready_to_attack(a, store) then
-						local target, targets, pred_pos
+						local target, targets
 						if a.filter_fn then
 							target, targets = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, a.filter_fn)
 						else
@@ -2126,7 +2117,6 @@ scripts.hero_bolin = {
 						if not target then
 						-- block empty
 						else
-							local flip = target.pos.x < this.pos.x
 							local b, an, af, ai
 
 							an, af, ai = U.animation_name_facing_point(this, a.aim_animation, target.pos)
@@ -2458,8 +2448,7 @@ scripts.hero_denas = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
-		local a, skill, brk, sta, target, pred_pos
+		local a, skill, target, pred_pos
 		local rock_flight_time = E:get_template("denas_catapult_rock").bullet.flight_time
 
 		U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
@@ -2472,7 +2461,7 @@ scripts.hero_denas = {
 		local function do_denas_attack(target, attack, pred_pos)
 			local bullet
 			local bullet_to = pred_pos or target.pos
-			local bullet_to_start = V.vclone(bullet_to)
+
 			local bidx = math.random(1, #a.animations)
 			local animation = attack.animations[bidx]
 			local bullet_name = attack.bullets[bidx]
@@ -2611,7 +2600,7 @@ scripts.hero_denas = {
 
 						SU.hero_gain_xp_from_skill(this, skill)
 
-						local pi, spi, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
+						local pi, _, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
 						local n_off = P:predict_enemy_node_advance(target, rock_flight_time)
 
 						if P:is_node_valid(pi, ni + n_off) then
@@ -2705,12 +2694,11 @@ scripts.beastmaster_rhino = {
 	end,
 	update = function(this, store)
 		local attack = this.attack
-		local start_ts = store.tick_ts
 
 		this.tween.ts = store.tick_ts
 
 		while true do
-			local next, new = P:next_entity_node(this, store.tick_length)
+			local next = P:next_entity_node(this, store.tick_length)
 
 			if not next then
 				log.debug("  X not next for %s", this.id)
@@ -2720,7 +2708,6 @@ scripts.beastmaster_rhino = {
 			end
 
 			if not P:is_node_valid(this.nav_path.pi, this.nav_path.ni) or band(GR:cell_type(next.x, next.y), bor(TERRAIN_CLIFF, TERRAIN_WATER, TERRAIN_FAERIE)) ~= 0 then
-				local twk = this.tween.props[1].keys
 
 				if store.tick_ts - this.tween.ts < this.duration - 0.25 then
 					log.debug("  FF finish early for %s", this.id)
@@ -3030,7 +3017,6 @@ scripts.hero_beastmaster = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
 		local a, skill, brk, sta
 
 		local function distribute_boars(x, y, qty)
@@ -3320,7 +3306,6 @@ scripts.van_helsing_grenade = {
 			end
 		end
 
-		local target = store.entities[b.target_id]
 		local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.damage_flags, b.damage_bans)
 
 		if targets then
@@ -3476,7 +3461,6 @@ scripts.hero_van_helsing = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
 		local ra = this.ranged.attacks[1]
 		local a, skill, brk, sta
 
@@ -3874,7 +3858,7 @@ scripts.aura_malik_fissure = {
 			local nodes = P:nearest_nodes(node_pos1.x, node_pos1.y, nil, nil, true)
 
 			if #nodes > 1 then
-				local npi, nspi, nni = unpack(nodes[2])
+				local npi, _, nni = unpack(nodes[2])
 				local new = true
 
 				for _, p in pairs(pis) do
@@ -3897,7 +3881,7 @@ scripts.aura_malik_fissure = {
 			local nodes = P:nearest_nodes(node_pos2.x, node_pos2.y, nil, nil, true)
 
 			if #nodes > 1 then
-				local npi, nspi, nni = unpack(nodes[2])
+				local npi, _, nni = unpack(nodes[2])
 				local new = true
 
 				for _, p in pairs(pis) do
@@ -3974,8 +3958,7 @@ scripts.hero_malik = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
-		local a, skill, brk, sta
+		local brk, sta
 
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
@@ -4068,7 +4051,6 @@ scripts.mod_priest_armor = {
 	end,
 	update = function(this, store)
 		local m = this.modifier
-		local last_ts = store.tick_ts
 		local target = store.entities[m.target_id]
 
 		if not target then
@@ -4194,8 +4176,7 @@ scripts.hero_priest = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
-		local a, skill, brk, sta
+		local a, skill, brk
 
 		local function do_armor_buff(pos, out)
 			local skill = this.hero.skills.wingsoflight
@@ -4721,7 +4702,6 @@ scripts.hero_magnus = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
 		local a, skill, brk, sta
 
 		local function d2r(d)
@@ -4938,9 +4918,8 @@ scripts.aura_giant_bastion = {
 
 		local enabled = false
 		local added_damage = 0
-		local attack = hero.melee.attacks[1]
 		local last_tick = store.tick_ts
-		local last_pos = V.vclone(this.pos)
+
 		local s = this.render.sprites[1]
 
 		local function add_damage(value)
@@ -5071,7 +5050,6 @@ scripts.hero_giant = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
 		local a, skill, brk, sta
 
 		local function do_stomp(attack, targets)
@@ -5157,7 +5135,7 @@ scripts.hero_giant = {
 						local targets_hp = table.map(targets, function(k, v)
 							return v.health and v.health.hp or 0
 						end)
-						local max_target_hp_idx, max_target_hp = table.maxv(targets_hp)
+						local _, max_target_hp = table.maxv(targets_hp)
 
 						if #targets < a.trigger_min_enemies and max_target_hp < a.trigger_min_hp then
 							SU.delay_attack(store, a, 0.13333333333333333)
@@ -5308,7 +5286,6 @@ end
 
 function scripts.hero_dracolich.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill, force_idle_ts
 
 	local function skeleton_glow_fx()
@@ -5409,7 +5386,7 @@ function scripts.hero_dracolich.update(this, store)
 				if #nodes < 1 then
 					SU.delay_attack(store, a, 0.4)
 				else
-					local s_pi, s_spi, s_ni = unpack(nodes[1])
+					local s_pi, _, s_ni = unpack(nodes[1])
 					local flip = target.pos.x < this.pos.x
 
 					U.animation_start(this, "spinerain", flip, store.tick_ts)
@@ -5458,7 +5435,6 @@ function scripts.hero_dracolich.update(this, store)
 			if not targets or #targets < a.min_count then
 				SU.delay_attack(store, a, 0.4)
 			else
-				local start_ts = store.tick_ts
 
 				this.health_bar.hidden = true
 				this.health.ignore_damage = true
@@ -5558,7 +5534,7 @@ function scripts.hero_dracolich.update(this, store)
 				if not target then
 					SU.delay_attack(store, a, 0.4)
 				else
-					local pi, spi, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
+					local pi, _, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
 					local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {pi}, nil, nil, NF_RALLY)
 
 					if #nodes < 1 then
@@ -5622,12 +5598,11 @@ function scripts.hero_dracolich.update(this, store)
 				local origin = V.v(this.pos.x, this.pos.y + a.bullet_start_offset[1].y)
 				local bullet_t = E:get_template(a.bullet)
 				local bullet_speed = bullet_t.bullet.min_speed
-				local flight_time = bullet_t.bullet.flight_time
 				local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 				if target then
 					local start_ts = store.tick_ts
-					local b, emit_fx, emit_ps, emit_ts
+					local b, _, _
 					local dist = V.dist(origin.x, origin.y, target.pos.x, target.pos.y)
 					local node_offset = P:predict_enemy_node_advance(target, dist / bullet_speed)
 					local t_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni + node_offset)
@@ -6005,7 +5980,6 @@ scripts.hero_elora = {
 
 function scripts.hero_elora.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill, brk, sta
 	local fe = this.render.sprites[2]
 	local ps = E:create_entity(this.run_particles_name)
@@ -6060,7 +6034,7 @@ function scripts.hero_elora.update(this, store)
 					if #nodes < 1 then
 						SU.delay_attack(store, a, 0.4)
 					else
-						local s_pi, s_spi, s_ni = unpack(nodes[1])
+						local s_pi, _, s_ni = unpack(nodes[1])
 						local flip = target.pos.x < this.pos.x
 						local start_ts = store.tick_ts
 
@@ -6121,7 +6095,7 @@ function scripts.hero_elora.update(this, store)
 					if #nodes < 1 then
 						SU.delay_attack(store, a, 0.4)
 					else
-						local s_pi, s_spi, s_ni = unpack(nodes[1])
+						local s_pi, _, s_ni = unpack(nodes[1])
 						local flip = target.pos.x < this.pos.x
 						local start_ts = store.tick_ts
 
@@ -6242,8 +6216,7 @@ scripts.hero_hacksaw = {
 
 function scripts.hero_hacksaw.update(this, store)
 	local h = this.health
-	local he = this.hero
-	local a, skill, brk, sta
+	local brk, sta
 
 	U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
@@ -6344,7 +6317,6 @@ scripts.hero_ingvar = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
 		local ba = this.timed_attacks.list[2]
 		local a, skill, brk, sta
 
@@ -6454,7 +6426,7 @@ scripts.hero_ingvar = {
 
 						a.ts = store.tick_ts
 
-						local pi, spi, ni = unpack(nodes[1])
+						local pi, _, ni = unpack(nodes[1])
 						local no_min, no_max = unpack(a.nodes_offset)
 						local no
 
@@ -6544,8 +6516,7 @@ scripts.hero_ignus = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
-		local a, skill, brk, sta, target, attack_done
+		local a, skill, brk, sta
 
 		U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
@@ -6628,7 +6599,7 @@ scripts.hero_ignus = {
 								U.block_enemy(store, this, target)
 								SU.hero_gain_xp_from_skill(this, skill)
 
-								local slot_pos, slot_flip = U.melee_slot_position(this, target, 1)
+								local slot_pos = U.melee_slot_position(this, target, 1)
 
 								this.vis.bans = F_ALL
 								this.health.ignore_damage = true
@@ -6895,7 +6866,6 @@ scripts.hero_oni = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
 		local a, skill, brk, sta
 
 		local function spawn_swords(count, center, radius, angle, delay)
@@ -7065,8 +7035,7 @@ scripts.hero_thor = {
 
 function scripts.hero_thor.update(this, store)
 	local h = this.health
-	local he = this.hero
-	local a, skill, brk, sta
+	local brk, sta
 
 	U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
@@ -7183,7 +7152,6 @@ scripts.hero_10yr = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
 		local ra = this.timed_attacks.list[1]
 		local ba = this.timed_attacks.list[2]
 		local bma = this.timed_attacks.list[3]
@@ -7289,7 +7257,7 @@ scripts.hero_10yr = {
 				skill = this.hero.skills.rain
 
 				if ready_to_use_skill(a, store) then
-					local start_ts, bdy, bdt, au
+					local start_ts, au
 					local fired_aura = false
 					local targets = U.find_enemies_between_range_filter_off(this.pos, a.min_range, a.trigger_range, a.vis_flags, a.vis_bans)
 
@@ -7351,7 +7319,7 @@ scripts.hero_10yr = {
 				skill = this.hero.skills.rain
 
 				if ready_to_use_skill(a, store) then
-					local start_ts, bdy, bdt, au
+					local start_ts, au
 					local fired_aura = false
 					local targets = U.find_enemies_between_range_filter_off(this.pos, a.min_range, a.trigger_range, a.vis_flags, a.vis_bans)
 
@@ -7839,7 +7807,6 @@ end
 
 function scripts.hero_vampiress.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local r = this.nav_rally
 	local brk, sta, should_fly, already_flying
 	local orig_prefix = this.render.sprites[1].prefix
@@ -8058,7 +8025,6 @@ end
 
 function scripts.hero_alien.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill, brk, sta
 
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
@@ -8267,7 +8233,6 @@ scripts.hero_monk = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
 		local a, skill, brk, sta
 
 		U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
@@ -8648,7 +8613,6 @@ end
 
 function scripts.hero_voodoo_witch.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill, brk, sta
 
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
@@ -8890,7 +8854,6 @@ end
 
 function scripts.hero_crab.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill, brk, sta
 
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
@@ -9230,7 +9193,6 @@ scripts.mod_minotaur_daedalus = {
 		SU.stun_inc(target)
 
 		local s = this.render.sprites[1]
-		local m = this.modifier
 
 		s.prefix = s.prefix .. "_" .. s.size_names[target.unit.size]
 
@@ -9376,7 +9338,6 @@ scripts.hero_minotaur = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
 		local a, skill, brk, sta
 		local ps = E:create_entity("ps_minotaur_bullrush")
 
@@ -9588,7 +9549,7 @@ scripts.hero_minotaur = {
 					S:queue(a.sound)
 					U.animation_start(this, a.animations[2], nil, store.tick_ts, true)
 
-					local slot_pos, slot_flip = U.melee_slot_position(this, target, 1)
+					local slot_pos = U.melee_slot_position(this, target, 1)
 
 					U.set_destination(this, slot_pos)
 
@@ -9811,7 +9772,6 @@ scripts.hero_monkey_god = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
 		local a, skill, brk, sta
 		local cloud_trail = E:create_entity("ps_monkey_god_trail")
 
@@ -9945,8 +9905,6 @@ scripts.hero_monkey_god = {
 					else
 						S:queue(a.sound_start)
 						U.y_animation_play(this, a.animations[1], nil, store.tick_ts, 1)
-
-						local loop_ts = store.tick_ts
 
 						a.ts = store.tick_ts
 						this.melee.attacks[3].ts = 0
@@ -10132,8 +10090,7 @@ scripts.hero_elves_archer = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
-		local brk, sta, a, skill
+		local skill
 		local is_sword = false
 		local guard_attack = this.timed_attacks.list[1]
 		local porcupine_target, porcupine_level = nil, 0
@@ -10215,7 +10172,7 @@ scripts.hero_elves_archer = {
 
 						guard_attack.ts = store.tick_ts
 
-						local pi, spi, ni = unpack(nodes[1])
+						local pi, _, ni = unpack(nodes[1])
 						local new_soldier = E:create_entity(guard_attack.entity)
 						local e_spi, e_ni = math.random(1, 3), ni
 
@@ -10271,7 +10228,7 @@ scripts.hero_elves_archer = {
 						SU.hero_gain_xp_from_skill(this, this.hero.skills[attack.xp_from_skill])
 					end
 
-					local attack_done = SU.y_soldier_do_single_melee_attack(store, this, target, attack)
+					SU.y_soldier_do_single_melee_attack(store, this, target, attack)
 
 					U.animation_start(this, "idle_sword", nil, store.tick_ts, true)
 
@@ -10305,7 +10262,7 @@ scripts.hero_elves_archer = {
 					local start_ts = store.tick_ts
 
 					if attack.max_loops then
-						local an, af, ai = U.animation_name_facing_point(this, attack.animations[1], target.pos)
+						local an, af = U.animation_name_facing_point(this, attack.animations[1], target.pos)
 
 						U.y_animation_play(this, an, af, store.tick_ts, 1)
 
@@ -10660,8 +10617,7 @@ scripts.hero_regson = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
-		local a, skill, brk, sta
+		local brk, sta
 
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
@@ -11271,7 +11227,6 @@ end
 
 function scripts.hero_lynn.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill, brk, sta
 
 	this.health_bar.hidden = false
@@ -11749,8 +11704,7 @@ end
 
 function scripts.hero_wilbur.update(this, store)
 	local h = this.health
-	local he = this.hero
-	local a, skill, brk, sta
+	local a, skill, brk
 
 	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 
@@ -11829,9 +11783,7 @@ function scripts.hero_wilbur.update(this, store)
 			if not target_info then
 				SU.delay_attack(store, a, 0.16666666666666666)
 			else
-				local target = target_info[1].enemy
 				local origin = target_info[1].origin
-				local start_ts = store.tick_ts
 				local bullet_to_ni = origin[3] - math.random(8, 13)
 
 				bullet_to_ni = km.clamp(5, P:get_end_node(origin[1]), bullet_to_ni)
@@ -11910,7 +11862,6 @@ function scripts.aura_wilbur_bobbing.update(this, store)
 	local s3 = hero.render.sprites[3]
 	local nr = hero.nav_rally
 	local layers = {hero.render.sprites[3], hero.render.sprites[4]}
-	local r_names = {"r", "r"}
 	local dist_th = 40
 	local max_angle = km.deg2rad(5)
 	local angle_step = km.deg2rad(20) * store.tick_length
@@ -11920,7 +11871,6 @@ function scripts.aura_wilbur_bobbing.update(this, store)
 
 	while true do
 		local dx = this.pos.x - nr.center.x
-		local sign = dx < 0 and -1 or 1
 		local dest_angle = km.clamp(-max_angle, max_angle, max_angle * dx / dist_th)
 
 		for _, s in pairs(layers) do
@@ -11989,7 +11939,7 @@ function scripts.drone_wilbur.update(this, store)
 	end
 
 	local shoot_ts, search_ts, shots = 0, 0, 0
-	local target, targets, dist
+	local target, dist
 	local dest = V.v(this.pos.x, this.pos.y)
 
 	this.start_ts = store.tick_ts
@@ -12165,7 +12115,7 @@ function scripts.missile_wilbur.insert(this, store)
 	if b.shot_index ~= 1 then
 		local o_target = store.entities[b.target_id]
 		local o = o_target and o_target.pos or this.pos
-		local target, targets = U.find_foremost_enemy_in_range_filter_on(o, b.first_retarget_range, false, b.vis_flags, b.vis_bans, function(e)
+		local _, targets = U.find_foremost_enemy_in_range_filter_on(o, b.first_retarget_range, false, b.vis_flags, b.vis_bans, function(e)
 			return e.id ~= b.target_id
 		end)
 
@@ -12243,7 +12193,6 @@ end
 
 function scripts.hero_veznan.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill, brk, sta
 
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
@@ -12618,7 +12567,6 @@ end
 
 function scripts.hero_durax.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill, brk, sta, decal
 
 	this.health_bar.hidden = false
@@ -12964,7 +12912,6 @@ end
 
 function scripts.hero_elves_denas.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill, brk, sta
 
 	local function shield_strike_filter_fn(e, origin)
@@ -13168,7 +13115,7 @@ function scripts.hero_elves_denas_ultimate.update(this, store)
 	local nearest = P:nearest_nodes(this.pos.x, this.pos.y)
 
 	if #nearest > 1 then
-		local pi, spi, ni = unpack(nearest[1])
+		local pi, _, ni = unpack(nearest[1])
 		local pos = P:node_pos(pi, 1, ni)
 		local count = this.guards_count[this.level]
 
@@ -13222,7 +13169,6 @@ scripts.shield_elves_denas = {}
 function scripts.shield_elves_denas.update(this, store)
 	local b = this.bullet
 	local mspeed = b.max_speed
-	local s = this.render.sprites[1]
 	local target = store.entities[b.target_id]
 	local ps
 	local bounce_count = 0
@@ -13480,7 +13426,6 @@ end
 
 function scripts.hero_arivan.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill, brk, sta
 
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
@@ -13548,7 +13493,6 @@ function scripts.hero_arivan.update(this, store)
 					SU.delay_attack(store, a, 0.26666666666666666)
 				else
 					local pred_pos = target.pos
-					local start_ts = store.tick_ts
 					local an, af = U.animation_name_facing_point(this, a.animations[1], pred_pos)
 
 					U.y_animation_play(this, an, af, store.tick_ts, 1)
@@ -13679,7 +13623,7 @@ scripts.fireball_arivan = {}
 function scripts.fireball_arivan.update(this, store)
 	local b = this.bullet
 	local mspeed = b.min_speed
-	local target, ps
+	local ps
 
 	S:queue(this.sound_events.summon)
 	U.animation_start(this, "idle", nil, store.tick_ts, false)
@@ -14016,8 +13960,7 @@ end
 
 function scripts.hero_phoenix.update(this, store)
 	local h = this.health
-	local he = this.hero
-	local a, skill, brk, sta
+	local a, skill, brk
 
 	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 
@@ -14305,7 +14248,6 @@ end
 
 function scripts.hero_bravebark.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill, brk, sta
 
 	local function spawn_spikes(count, center, radius, angle, delay, scale)
@@ -14465,7 +14407,6 @@ function scripts.hero_bravebark.update(this, store)
 
 							SU.hero_gain_xp_from_skill(this, skill)
 
-							local tpos = V.vclone(targets[1].pos)
 							local hit_center = V.v(this.pos.x + a.hit_offset.x * (af and -1 or 1), this.pos.y + a.hit_offset.y)
 							local decal = E:create_entity(a.hit_decal)
 
@@ -14619,8 +14560,6 @@ scripts.hero_catha = {}
 
 function scripts.hero_catha.level_up(this, store)
 	local hl, ls = level_up_basic(this)
-	local hl = this.hero.level
-	local ls = this.hero.level_stats
 
 	this.melee.attacks[1].damage_min = ls.melee_damage_min[hl]
 	this.melee.attacks[1].damage_max = ls.melee_damage_max[hl]
@@ -14695,7 +14634,6 @@ end
 
 function scripts.hero_catha.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill, brk, sta
 
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
@@ -15048,7 +14986,6 @@ end
 
 function scripts.hero_lilith.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill, brk, sta
 
 	this.health_bar.hidden = false
@@ -15075,7 +15012,6 @@ function scripts.hero_lilith.update(this, store)
 
 	while true do
 		if h.dead then
-			local r = this.revive
 			local chance_pass = math.random() < (this.revive.chance + this.revive.protect)
 
 			if not this.revive.disabled and not U.flag_has(h.last_damage_types, bor(DAMAGE_EAT, DAMAGE_HOST, DAMAGE_DISINTEGRATE)) and chance_pass then
@@ -15403,7 +15339,6 @@ end
 
 function scripts.hero_xin.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill, brk, sta
 
 	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
@@ -15896,8 +15831,6 @@ end
 
 function scripts.hero_faustus.update(this, store)
 	local h = this.health
-	local he = this.hero
-	local a, skill
 
 	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 
@@ -15948,7 +15881,7 @@ function scripts.hero_faustus.update(this, store)
 			elseif store.tick_ts - a.ts < a.cooldown * this.unit.cooldown_factor then
 			-- block empty
 			else
-				local bullet_t = E:get_template(a.bullet)
+
 				local flight_time = a.estimated_flight_time or 1
 				local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans, function(e)
 					if U.flag_has(a.vis_flags, F_SPELLCASTER) and not U.enemy_is_silent_target(e) then
@@ -16189,7 +16122,6 @@ end
 
 function scripts.hero_rag.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill, brk, sta, ranged_done
 
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
@@ -16243,9 +16175,7 @@ function scripts.hero_rag.update(this, store)
 				if not target_info then
 					SU.delay_attack(store, a, 0.16666666666666666)
 				else
-					local target = target_info[1].enemy
 					local origin = target_info[1].origin
-					local start_ts = store.tick_ts
 					local bullet_to_ni = origin[3] - 5
 					local bullet_to = P:node_pos(origin[1], 1, bullet_to_ni)
 					local flip = bullet_to.x < this.pos.x
@@ -16633,7 +16563,6 @@ end
 
 function scripts.hero_bruce.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill, brk, sta
 
 	this.health_bar.hidden = false
@@ -16799,7 +16728,7 @@ function scripts.lion_bruce.update(this, store)
 	this.tween.ts = store.tick_ts
 
 	while true do
-		local next, new = P:next_entity_node(this, store.tick_length)
+		local next = P:next_entity_node(this, store.tick_length)
 
 		if not fading and (not next or not P:is_node_valid(this.nav_path.pi, this.nav_path.ni) or store.tick_ts - start_ts >= this.duration) then
 			fading = true
@@ -16903,8 +16832,7 @@ end
 
 function scripts.hero_bolverk.update(this, store)
 	local h = this.health
-	local he = this.hero
-	local brk, sta, a, skill
+	local brk, sta, a
 
 	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 
@@ -17029,7 +16957,6 @@ scripts.hero_dwarf = {
 	end,
 	update = function(this, store)
 		local h = this.health
-		local he = this.hero
 		local brk, sta
 		local ring = this.melee.attacks[2]
 
@@ -17072,7 +16999,7 @@ scripts.hero_dwarf = {
 
 							a.ts = store.tick_ts
 
-							local pi, spi, ni = unpack(nodes[1])
+							local pi, _, ni = unpack(nodes[1])
 
 							for i = 1, a.count do
 								local new_soldier = E:create_entity(a.entity)
@@ -17251,7 +17178,6 @@ end
 
 function scripts.hero_dragon.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill, force_idle_ts
 
 	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
@@ -17378,7 +17304,7 @@ function scripts.hero_dragon.update(this, store)
 
 				if target then
 					local start_ts = store.tick_ts
-					local b, emit_fx, emit_ps, emit_ts, node_offset
+					local b, emit_fx, emit_ps, node_offset
 
 					if flight_time then
 						node_offset = P:predict_enemy_node_advance(target, flight_time + a.shoot_time)
@@ -17508,7 +17434,6 @@ scripts.breath_dragon = {}
 function scripts.breath_dragon.update(this, store)
 	local b = this.bullet
 	local tl = store.tick_length
-	local insert_ts = store.tick_ts
 	local mspeed = V.dist(b.to.x, b.to.y, b.from.x, b.from.y) / b.flight_time
 
 	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * tl do
@@ -17581,9 +17506,7 @@ scripts.fierymist_dragon = {}
 function scripts.fierymist_dragon.update(this, store)
 	local b = this.bullet
 	local tl = store.tick_length
-	local insert_ts = store.tick_ts
 	local node
-	local target = store.entities[b.target_id]
 	local mspeed = V.dist(b.to.x, b.to.y, b.from.x, b.from.y) / b.flight_time
 	local dist2 = mspeed * mspeed * tl * tl
 	local nodes = P:nearest_nodes(b.to.x, b.to.y, nil, nil, true)
@@ -17719,7 +17642,6 @@ end
 
 function scripts.wildfirebarrage_dragon.update(this, store)
 	local b = this.bullet
-	local dradius = b.damage_radius
 	local ps = E:create_entity(b.particles_name)
 
 	ps.particle_system.track_id = this.id
@@ -17804,7 +17726,7 @@ function scripts.wildfirebarrage_dragon.update(this, store)
 		}
 
 		for i = 1, this.explosions do
-			local fx, decal, pos, targets
+			local fx, decal, targets
 			local n = {
 				pi = node.pi,
 				spi = node_subpaths[i],
@@ -17960,15 +17882,12 @@ function scripts.hero_hunter.update(this, store)
 	local h = this.health
 	local a, skill, brk, sta
 	local last_ts = store.tick_ts
-	local last_target
-	local last_target_ts = store.tick_ts
 	local base_speed = this.motion.max_speed
 	local melee_attack = this.melee.attacks[1]
 	local ranged_attack = this.ranged.attacks[1]
 	local melee_hits = 0
 	local heal_strike_ready = false
 	local last_attack_ranged = false
-	local aim_before_shot = true
 	local shooting_state = false
 	local heal_strike_attack = this.timed_attacks.list[1]
 	local ricochet_attack = this.timed_attacks.list[2]
@@ -17985,7 +17904,6 @@ function scripts.hero_hunter.update(this, store)
 		local start_ts = store.tick_ts
 		local bullet
 		local bullet_to = pred_pos or target.pos
-		local bullet_to_start = V.vclone(bullet_to)
 
 		while store.tick_ts - start_ts < attack.shoot_time do
 			if this.unit.is_stunned or this.health.dead or this.nav_rally and this.nav_rally.new then
@@ -18023,7 +17941,6 @@ function scripts.hero_hunter.update(this, store)
 		local a = this.render.sprites[1]
 		local o_name, o_flip, o_idx
 		local a1, a2, a3, a4, a5, a6, a7, a8 = 22.5, 67.5, 112.5, 157.5, 202.5, 247.5, 292.5, 337.5
-		local quadrant = a._last_quadrant
 		local angles = a.angles[group]
 
 		if a1 <= angle_deg and angle_deg < a2 then
@@ -18077,14 +17994,13 @@ function scripts.hero_hunter.update(this, store)
 
 		local bullet
 		local bullet_to = pred_pos or target.pos
-		local bullet_to_start = V.vclone(bullet_to)
 
 		if not shooting_state then
-			local an, af, ai = U.animation_name_facing_point(this, attack.animation_prepare, bullet_to)
+			local an, af = U.animation_name_facing_point(this, attack.animation_prepare, bullet_to)
 
 			U.y_animation_play(this, an, af, store.tick_ts, 1)
 
-			local an, af, ai = animation_name_facing_point_hero_hunter(this, attack.animation_aim, bullet_to)
+			local an, af = animation_name_facing_point_hero_hunter(this, attack.animation_aim, bullet_to)
 
 			U.y_animation_play(this, an, af, store.tick_ts, 1)
 
@@ -18416,7 +18332,7 @@ function scripts.hero_hunter.update(this, store)
 				else
 					last_ts = store.tick_ts
 
-					local an, af, ai = U.animation_name_facing_point(this, a.animation, target.pos)
+					local an, af = U.animation_name_facing_point(this, a.animation, target.pos)
 
 					shooting_state = false
 
@@ -18650,7 +18566,7 @@ scripts.arrow_hero_hunter_ricochet = {}
 function scripts.arrow_hero_hunter_ricochet.update(this, store)
 	local b = this.bullet
 	local target = store.entities[b.target_id]
-	local dest = V.vclone(b.to)
+
 	local bounce_count = 0
 	local already_hit = {}
 	local last_target
@@ -18845,7 +18761,6 @@ scripts.mod_hero_hunter_ricochet_attack = {}
 
 function scripts.mod_hero_hunter_ricochet_attack.update(this, store)
 	local m = this.modifier
-	local start_ts = store.tick_ts
 	local already_hit = false
 
 	this.modifier.ts = store.tick_ts
@@ -19057,7 +18972,6 @@ scripts.bullet_hero_hunter_ranged_attack = {}
 function scripts.bullet_hero_hunter_ranged_attack.update(this, store)
 	local b = this.bullet
 	local target = store.entities[b.target_id]
-	local source = store.entities[b.source_id]
 
 	-- b.damage_min = b.damage_min_config[b.level]
 	-- b.damage_max = b.damage_max_config[b.level]
@@ -19095,7 +19009,6 @@ scripts.bullet_hero_hunter_ultimate_ranged_attack = {}
 function scripts.bullet_hero_hunter_ultimate_ranged_attack.update(this, store)
 	local b = this.bullet
 	local target = store.entities[b.target_id]
-	local source = store.entities[b.source_id]
 
 	U.y_wait(store, b.flight_time)
 
@@ -19130,7 +19043,6 @@ scripts.soldier_hero_hunter_beast = {}
 
 function scripts.soldier_hero_hunter_beast.update(this, store)
 	local sf = this.render.sprites[1]
-	local fm = this.force_motion
 	local attack = this.attacks.list[1]
 	local target = this.enemy_target
 	local move_to_owner = false
@@ -19269,7 +19181,7 @@ function scripts.soldier_hero_hunter_beast.update(this, store)
 		end
 
 		if target then
-			local distance_from_target = V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y)
+
 			if store.tick_ts - attack.ts > attack.cooldown and V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y) < this.min_distance_to_attack then
 				do_attack()
 			end
@@ -19382,7 +19294,7 @@ end
 scripts.soldier_hero_hunter_ultimate = {}
 
 function scripts.soldier_hero_hunter_ultimate.update(this, store)
-	local brk, stam, star
+	local brk, star
 
 	this.reinforcement.ts = store.tick_ts
 	this.render.sprites[1].ts = store.tick_ts
@@ -19930,7 +19842,7 @@ function scripts.hero_space_elf.update(this, store)
 
 					SU.hero_gain_xp_from_skill(this, skill)
 
-					local target, enemies = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range_effect, false, a.vis_flags, a.vis_bans)
+					local target = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range_effect, false, a.vis_flags, a.vis_bans)
 
 					if target and not target.health.dead then
 						local ni = target.nav_path.ni + P:predict_enemy_node_advance(target, a.predict)
@@ -20178,7 +20090,7 @@ end
 scripts.soldier_hero_space_elf_astral_reflection = {}
 
 function scripts.soldier_hero_space_elf_astral_reflection.update(this, store)
-	local brk, stam, star, a
+	local brk, stam, star
 
 	this.reinforcement.ts = store.tick_ts
 	this.render.sprites[1].ts = store.tick_ts
@@ -20531,7 +20443,7 @@ function scripts.hero_space_elf_ultimate.update(this, store)
 	local nearest = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
 
 	if #nearest > 0 then
-		local pi, spi, ni = unpack(nearest[1])
+		local pi, _, ni = unpack(nearest[1])
 
 		if P:is_node_valid(pi, ni) then
 			local pos = P:node_pos(pi, 1, ni)
@@ -20771,7 +20683,6 @@ end
 function scripts.hero_raelyn.update(this, store)
 	local h = this.health
 	local a, skill, brk, sta
-	local ultimate = this.hero.skills.ultimate
 	local basic_attack = this.melee.attacks[1]
 	local unbreakable_attack = this.timed_attacks.list[1]
 	local inspire_fear_attack = this.timed_attacks.list[2]
@@ -21426,8 +21337,6 @@ function scripts.hero_venom.update(this, store)
 	local floor_spikes_attack = this.timed_attacks.list[3]
 	local eat_enemy_attack = this.timed_attacks.list[4]
 	local last_ts = store.tick_ts
-	local last_target
-	local last_target_ts = store.tick_ts
 	local base_speed = this.motion.max_speed
 
 	this.is_transformed = false
@@ -21803,7 +21712,7 @@ function scripts.hero_venom.update(this, store)
 				local targets = table.filter(enemies, function(k, v)
 					local vpi = v.nav_path.pi
 					local nearest = P:nearest_nodes(this.pos.x, this.pos.y, {vpi})
-					local pi, spi, ni = unpack(nearest[1])
+					local _, _, ni = unpack(nearest[1])
 
 					return ni > v.nav_path.ni
 				end)
@@ -21855,7 +21764,7 @@ function scripts.hero_venom.update(this, store)
 				local nearest = P:nearest_nodes(this.pos.x, this.pos.y, {path})
 
 				if #nearest > 0 then
-					local pi, spi, ni = unpack(nearest[1])
+					local pi, _, ni = unpack(nearest[1])
 					local initial_offset = 1
 
 					ni = ni - initial_offset
@@ -21912,7 +21821,7 @@ function scripts.hero_venom.update(this, store)
 			a = ranged_tentacle_attack
 
 			if not this.is_transformed and ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
-				local target, _, pred_pos = U.find_foremost_enemy_between_range_filter_off(tpos(this), a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
+				local target = U.find_foremost_enemy_between_range_filter_off(tpos(this), a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
 
 				if not target then
 					SU.delay_attack(store, a, fts(10))
@@ -21922,7 +21831,7 @@ function scripts.hero_venom.update(this, store)
 
 					last_ts = store.tick_ts
 
-					local an, af, ai = U.animation_name_facing_point(this, a.animation, enemy_pos)
+					local an, af = U.animation_name_facing_point(this, a.animation, enemy_pos)
 
 					U.animation_start(this, an, af, store.tick_ts, false)
 					S:queue(a.sound)
@@ -22133,7 +22042,7 @@ function scripts.hero_venom_ultimate.update(this, store)
 	local nearest = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
 
 	if #nearest > 0 then
-		local pi, spi, ni = unpack(nearest[1])
+		local pi, _, ni = unpack(nearest[1])
 
 		if P:is_node_valid(pi, ni) then
 			S:queue(this.sound)
@@ -22152,7 +22061,7 @@ function scripts.hero_venom_ultimate.update(this, store)
 				return nil
 			end
 
-			local pi, spi, ni = unpack(nodes[1])
+			local pi, _, ni = unpack(nodes[1])
 			local npos = P:node_pos(pi, 1, ni)
 
 			aura.pos = npos
@@ -22392,8 +22301,6 @@ end
 
 function scripts.hero_dragon_gem.update(this, store)
 	local h = this.health
-	local he = this.hero
-	local a, skill
 	local shots_with_mod = 0
 	local shadow_sprite = this.render.sprites[2]
 	local stun_attack = this.ranged.attacks[2]
@@ -22548,7 +22455,6 @@ function scripts.hero_dragon_gem.update(this, store)
 		end
 
 		while this.nav_rally.new do
-			local r = this.nav_rally
 			local start_pos = V.vclone(this.pos)
 
 			SU.y_hero_new_rally(store, this)
@@ -22625,7 +22531,7 @@ function scripts.hero_dragon_gem.update(this, store)
 						end
 
 						local start_ts = store.tick_ts
-						local an, af, ai = U.animation_name_facing_point(this, a.animation, target.pos)
+						local an, af = U.animation_name_facing_point(this, a.animation, target.pos)
 
 						S:queue(a.sound)
 						U.animation_start(this, an, af, store.tick_ts)
@@ -22694,7 +22600,6 @@ function scripts.hero_dragon_gem.update(this, store)
 							goto label_370_1
 						end
 
-						local pi, spi, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
 						local available_paths = {}
 
 						for k, v in pairs(P.paths) do
@@ -22728,7 +22633,7 @@ function scripts.hero_dragon_gem.update(this, store)
 						S:queue(a.sound)
 
 						local start_ts = store.tick_ts
-						local an, af, ai = U.animation_name_facing_point(this, a.animation, target.pos)
+						local an, af = U.animation_name_facing_point(this, a.animation, target.pos)
 
 						U.animation_start(this, an, af, store.tick_ts)
 						U.y_wait(store, a.fall_time)
@@ -22843,7 +22748,7 @@ function scripts.hero_dragon_gem.update(this, store)
 					end
 
 					if i == 4 then
-						local target, targets = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range, 0, a.vis_flags, a.vis_bans)
+						local target = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range, 0, a.vis_flags, a.vis_bans)
 
 						if not target then
 							SU.delay_attack(store, a, 0.4)
@@ -22861,7 +22766,7 @@ function scripts.hero_dragon_gem.update(this, store)
 
 						S:queue(a.sound, a.sound_args)
 
-						local an, af, ai = U.animation_name_facing_point(this, a.animation, target.pos)
+						local an, af = U.animation_name_facing_point(this, a.animation, target.pos)
 
 						U.animation_start(this, an, af, store.tick_ts)
 						U.y_wait(store, a.shoot_time)
@@ -22907,7 +22812,7 @@ function scripts.hero_dragon_gem.update(this, store)
 
 						S:queue(a.sound)
 
-						local an, af, ai = U.animation_name_facing_point(this, a.animation, bullet_to)
+						local an, af = U.animation_name_facing_point(this, a.animation, bullet_to)
 
 						U.animation_start(this, an, af, store.tick_ts)
 						U.y_wait(store, a.shoot_time)
@@ -22932,17 +22837,17 @@ function scripts.hero_dragon_gem.update(this, store)
 					end
 
 					if i == 1 then
-						local bullet_t = E:get_template(a.bullet)
+
 						local flight_time = a.estimated_flight_time or 1
 						local targets = U.find_enemies_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
 						if targets then
 							local target = targets[1]
 							local start_ts = store.tick_ts
-							local start_fx, b, targets
+							local start_fx, b
 							local node_offset = P:predict_enemy_node_advance(target, flight_time)
 							local t_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni + node_offset)
-							local an, af, ai = U.animation_name_facing_point(this, a.animation, t_pos)
+							local an, af = U.animation_name_facing_point(this, a.animation, t_pos)
 
 							U.animation_start(this, an, af, store.tick_ts)
 							S:queue(a.start_sound, a.start_sound_args)
@@ -23051,7 +22956,7 @@ function scripts.bolt_hero_dragon_gem_attack.update(this, store)
 	local b = this.bullet
 	local s = this.render.sprites[1]
 	local mspeed = b.min_speed
-	local target, ps
+	local ps
 	local new_target = false
 	local target_invalid = false
 	local target = store.entities[b.target_id]
@@ -23739,7 +23644,7 @@ function scripts.hero_dragon_gem_ultimate.update(this, store)
 		local nearest = P:nearest_nodes(this.pos.x, this.pos.y, available_paths)
 
 		if nearest and #nearest > 0 then
-			local path_pi, path_spi, path_ni = unpack(nearest[1])
+			local path_pi, _, path_ni = unpack(nearest[1])
 			local spi = {1, 3, 2}
 
 			while count > #target_pos do
@@ -23910,8 +23815,6 @@ function scripts.mod_hero_dragon_gem_passive_charge.update(this, store)
 
 	this.pos = target.pos
 
-	local start_countdown = false
-
 	while true do
 		target = store.entities[m.target_id]
 
@@ -24080,9 +23983,7 @@ end
 function scripts.hero_witch.update(this, store)
 	local last_ts = store.tick_ts
 	local h = this.health
-	local a, skill, brk, stam, star
-	local ultimate = this.hero.skills.ultimate
-	local basic_attack = this.melee.attacks[1]
+	local a, skill, brk, stam
 	local basic_ranged = this.ranged.attacks[1]
 	local skill_soldiers_attack = this.timed_attacks.list[1]
 	local skill_polymorph = this.timed_attacks.list[2]
@@ -24220,7 +24121,7 @@ function scripts.hero_witch.update(this, store)
 			skill = this.hero.skills.path_aoe
 
 			if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
-				local target, targets, pred_pos = U.find_foremost_enemy_with_max_coverage(store, this.pos, 0, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, nil, nil, E:get_template("aura_hero_witch_path_aoe").aura.radius)
+				local _, targets, pred_pos = U.find_foremost_enemy_with_max_coverage(store, this.pos, 0, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, nil, nil, E:get_template("aura_hero_witch_path_aoe").aura.radius)
 
 				if not targets or #targets < a.min_targets or not pred_pos then
 					SU.delay_attack(store, a, fts(10))
@@ -24265,8 +24166,6 @@ function scripts.hero_witch.update(this, store)
 				if not enemy then
 				-- block empty
 				else
-					local enemy_pos = enemy.pos
-					local enemy_id = enemy.id
 
 					this.dodge.active = false
 					this.dodge.ts = store.tick_ts
@@ -24316,7 +24215,7 @@ function scripts.hero_witch.update(this, store)
 			-- block empty
 			else
 				if store.tick_ts - basic_ranged.ts >= basic_ranged.cooldown then
-					local enemy, enemies, enemy_pos = U.find_foremost_enemy_between_range_filter_off(this.pos, basic_ranged.min_range, basic_ranged.max_range, basic_ranged.node_prediction, basic_ranged.vis_flags, basic_ranged.vis_bans)
+					local enemy, _, enemy_pos = U.find_foremost_enemy_between_range_filter_off(this.pos, basic_ranged.min_range, basic_ranged.max_range, basic_ranged.node_prediction, basic_ranged.vis_flags, basic_ranged.vis_bans)
 
 					if not enemy then
 						SU.delay_attack(store, basic_ranged, fts(10))
@@ -24365,7 +24264,7 @@ function scripts.hero_witch.update(this, store)
 				a = this.timed_attacks.list[2]
 
 				if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
-					local enemy, enemies = U.find_foremost_enemy_in_range_filter_on(this.pos, a.range, false, a.vis_flags, a.vis_bans, function(e)
+					local enemy = U.find_foremost_enemy_in_range_filter_on(this.pos, a.range, false, a.vis_flags, a.vis_bans, function(e)
 						return e.health and e.health.hp_max <= a.hp_max and P:nodes_to_goal(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni) >= a.max_nodes_to_goal
 					end)
 
@@ -25335,9 +25234,7 @@ end
 
 function scripts.hero_dragon_bone.update(this, store)
 	local h = this.health
-	local he = this.hero
-	local a, skill
-	local shots_with_mod = 0
+	local a
 	local basic_ranged = this.ranged.attacks[1]
 	local cloud_attack = this.ranged.attacks[2]
 	local nova_attack = this.ranged.attacks[3]
@@ -25356,8 +25253,6 @@ function scripts.hero_dragon_bone.update(this, store)
 		end
 
 		while this.nav_rally.new do
-			local r = this.nav_rally
-			local start_pos = V.vclone(this.pos)
 
 			SU.y_hero_new_rally(store, this)
 		end
@@ -25381,7 +25276,7 @@ function scripts.hero_dragon_bone.update(this, store)
 		a = cloud_attack
 
 		if ready_to_use_skill(a, store) then
-			local target, targets, pred_pos = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.shoot_time + fts(10), a.vis_flags, a.vis_bans, function(v, o)
+			local _, targets, pred_pos = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.shoot_time + fts(10), a.vis_flags, a.vis_bans, function(v, o)
 				return GR:cell_is(v.pos.x, v.pos.y, TERRAIN_LAND)
 			end)
 
@@ -25393,7 +25288,7 @@ function scripts.hero_dragon_bone.update(this, store)
 
 			local target = targets[1]
 			local start_ts = store.tick_ts
-			local an, af, ai = U.animation_name_facing_point(this, a.animation, pred_pos)
+			local an, af = U.animation_name_facing_point(this, a.animation, pred_pos)
 
 			S:queue(a.sound)
 			U.animation_start(this, an, af, store.tick_ts)
@@ -25434,7 +25329,7 @@ function scripts.hero_dragon_bone.update(this, store)
 				goto label_664_4
 			end
 
-			local target, targets, pred_pos = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.hit_time, a.vis_flags, a.vis_bans_target, function(v, o)
+			local _, targets, pred_pos = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.hit_time, a.vis_flags, a.vis_bans_target, function(v, o)
 				return GR:cell_is(v.pos.x, v.pos.y, TERRAIN_LAND)
 			end)
 
@@ -25444,9 +25339,8 @@ function scripts.hero_dragon_bone.update(this, store)
 				goto label_664_4
 			end
 
-			local target = targets[1]
 			local start_ts = store.tick_ts
-			local an, af, ai = U.animation_name_facing_point(this, a.animation, pred_pos)
+			local an, af = U.animation_name_facing_point(this, a.animation, pred_pos)
 
 			S:queue(a.sound)
 			U.animation_start(this, an, af, store.tick_ts)
@@ -25510,7 +25404,7 @@ function scripts.hero_dragon_bone.update(this, store)
 				goto label_664_4
 			end
 
-			local s_pi, s_spi, s_ni = unpack(nodes[1])
+			local s_pi, _, s_ni = unpack(nodes[1])
 
 			S:queue(a.sound)
 
@@ -25560,7 +25454,7 @@ function scripts.hero_dragon_bone.update(this, store)
 		a = burst_attack
 
 		if ready_to_use_skill(a, store) then
-			local target, targets, pred_pos = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.spawn_time + a.node_prediction, a.vis_flags, a.vis_bans, function(v, o)
+			local target, targets = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.spawn_time + a.node_prediction, a.vis_flags, a.vis_bans, function(v, o)
 				return GR:cell_is(v.pos.x, v.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE))
 			end)
 
@@ -25694,7 +25588,7 @@ function scripts.hero_dragon_bone.update(this, store)
 		a = basic_ranged
 
 		if ready_to_use_skill(a, store) then
-			local bullet_t = E:get_template(a.bullet)
+
 			local flight_time = a.estimated_flight_time or 1
 			local pos_offset = v(this.pos.x + a.ignore_offset.x, this.pos.y + a.ignore_offset.y)
 			local targets = U.find_enemies_between_range_filter_on(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans, function(e)
@@ -25704,10 +25598,10 @@ function scripts.hero_dragon_bone.update(this, store)
 			if targets then
 				local target = targets[1]
 				local start_ts = store.tick_ts
-				local b, targets
+				local b
 				local node_offset = P:predict_enemy_node_advance(target, flight_time)
 				local t_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni + node_offset)
-				local an, af, ai = U.animation_name_facing_point(this, a.animation, t_pos)
+				local an, af = U.animation_name_facing_point(this, a.animation, t_pos)
 
 				U.animation_start(this, an, af, store.tick_ts)
 				S:queue(a.start_sound, a.start_sound_args)
@@ -25792,7 +25686,7 @@ function scripts.bolt_dragon_bone_basic_attack.update(this, store)
 	local b = this.bullet
 	local s = this.render.sprites[1]
 	local mspeed = b.min_speed
-	local target, ps
+	local ps
 	local new_target = false
 	local target_invalid = false
 	local target = store.entities[b.target_id]
@@ -26002,7 +25896,6 @@ scripts.bullet_dragon_bone_cloud = {}
 function scripts.bullet_dragon_bone_cloud.update(this, store)
 	local b = this.bullet
 	local s = this.render.sprites[1]
-	local target = store.entities[b.target_id]
 	local dest = V.vclone(b.to)
 
 	s.scale = s.scale or V.v(1, 1)
@@ -26050,7 +25943,7 @@ function scripts.aura_dragon_bone_cloud.update(this, store)
 	this.tween.ts = store.tick_ts
 
 	local nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y)
-	local pi, spi, ni = unpack(nearest_nodes[1])
+	local pi, _, ni = unpack(nearest_nodes[1])
 	local cloud_1 = E:create_entity(this.decal_cloud_t)
 
 	cloud_1.pos = P:node_pos(pi, 1, ni + 3)
@@ -26502,8 +26395,6 @@ function scripts.hero_lumenir.level_up(this, store, initial)
 		a.disabled = nil
 		a.cooldown = s.cooldown[s.level]
 
-		local e = E:get_template(a.entity)
-
 		a.duration = s.duration[s.level]
 
 		local b = E:get_template("bolt_lumenir_mini")
@@ -26548,14 +26439,13 @@ end
 
 function scripts.hero_lumenir.update(this, store)
 	local h = this.health
-	local he = this.hero
-	local a, skill
+	local a
 	local basic_ranged = this.ranged.attacks[1]
 	local shield_attack = this.ranged.attacks[2]
 	local celestial_judgement_attack = this.ranged.attacks[3]
 	local mini_dragon_attack = this.ranged.attacks[4]
 	local fire_balls_attack = this.ranged.attacks[5]
-	local upg_lf = UP:get_upgrade("heroes_lethal_focus")
+	UP:get_upgrade("heroes_lethal_focus")
 
 	local function find_hero()
 		for _, e in pairs(store.soldiers) do
@@ -26690,7 +26580,7 @@ function scripts.hero_lumenir.update(this, store)
 			local target = U.find_biggest_enemy_in_range_filter_off(this.pos, a.range, a.vis_flags, a.vis_bans)
 
 			if target then
-				local an, af, ai = U.animation_name_facing_point(this, a.animation, target.pos)
+				local an, af = U.animation_name_facing_point(this, a.animation, target.pos)
 
 				S:queue(a.sound)
 
@@ -26760,7 +26650,7 @@ function scripts.hero_lumenir.update(this, store)
 				goto label_411_2
 			end
 
-			local pi, spi, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
+			local pi, _, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
 			local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {pi}, nil, nil, NF_RALLY)
 
 			if #nodes < 1 then
@@ -26820,7 +26710,7 @@ function scripts.hero_lumenir.update(this, store)
 			if targets then
 				local target = targets[1]
 				local start_ts = store.tick_ts
-				local start_fx, b, targets
+				local start_fx, b
 				local node_offset = P:predict_enemy_node_advance(target, flight_time)
 				local t_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni + node_offset)
 				local an, af, ai = U.animation_name_facing_point(this, a.animation, t_pos)
@@ -26927,7 +26817,8 @@ function scripts.hero_lumenir_ultimate.update(this, store)
 		pi = nodes[1][1],
 		ni = nodes[1][3]
 	}
-	local node_pos = P:node_pos(node.pi, node.spi, node.ni)
+	P:node_pos(node.pi, node.spi, node.ni)
+
 	local count = this.count
 	local target, targets = U.find_nearest_enemy(store, this.pos, 0, this.range, this.vis_flags, this.vis_bans)
 	local idx = 1
@@ -26992,7 +26883,7 @@ function scripts.hero_lumenir_ultimate.update(this, store)
 	local nearest = P:nearest_nodes(this.pos.x, this.pos.y, available_paths)
 
 	if nearest and #nearest > 0 then
-		local path_pi, path_spi, path_ni = unpack(nearest[1])
+		local path_pi, _, path_ni = unpack(nearest[1])
 		local spi = {1, 3, 2}
 
 		while count > 0 do
@@ -27284,10 +27175,8 @@ function scripts.mini_dragon_hero_lumenir.update(this, store)
 	local ss = this.render.sprites[2]
 	local a = this.ranged.attacks[1]
 	local fm = this.force_motion
-	local owner = this.owner
 	local hero = store.entities[this.hero_id]
-	local shoot_ts, search_ts = 0, 0
-	local target, targets, dist
+	local dist
 	local dest = V.v(this.pos.x, this.pos.y)
 
 	if this.delay_creation then
@@ -27307,14 +27196,10 @@ function scripts.mini_dragon_hero_lumenir.update(this, store)
 	this.tween.disabled = false
 	this.tween.ts = store.tick_ts
 
-	local oos = {V.v(-15, 0), V.v(10, 7)}
-
 	U.y_animation_play(this, "spawn", true, store.tick_ts)
 	U.animation_start(this, "walk", nil, store.tick_ts, true)
 
 	this.start_ts = store.tick_ts
-
-	local initial_pos_offset = {}
 
 	while store.tick_ts - this.start_ts <= this.duration do
 		if this.remove_hero_death then
@@ -27350,11 +27235,10 @@ function scripts.mini_dragon_hero_lumenir.update(this, store)
 				if targets and #targets > 0 then
 					local start_ts = store.tick_ts
 					local start_fx, b
-					local flight_time = a.estimated_flight_time or 1
 					local target = targets[1]
 					local node_offset = P:predict_enemy_node_advance(target, 1)
 					local t_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni + node_offset)
-					local an, af, ai = U.animation_name_facing_point(this, a.animation, t_pos)
+					local an, af = U.animation_name_facing_point(this, a.animation, t_pos)
 
 					U.animation_start(this, an, af, store.tick_ts)
 					S:queue(a.start_sound, a.start_sound_args)
@@ -27421,7 +27305,6 @@ function scripts.aura_fire_balls_hero_lumenir.update(this, store)
 	local m = this.motion
 	local nav = this.nav_path
 	local dt = store.tick_length
-	local start_ni = nav.ni
 	local start_ts = store.tick_ts
 	local hit_ts = 0
 
@@ -27799,9 +27682,6 @@ end
 function scripts.hero_wukong.update(this, store)
 	local h = this.health
 	local a, skill, brk, sta
-	local last_ts = store.tick_ts
-	local last_target
-	local last_target_ts = store.tick_ts
 	local zhu_apprentice_soldier, first_ranged_target, ranged_targets, first_ranged_target_pred_pos
 	local second_idle_cd_min = 15
 	local second_idle_cd_max = 30
@@ -28093,7 +27973,7 @@ function scripts.hero_wukong.update(this, store)
 			a = hair_clones_attack
 
 			if ready_to_use_skill(a, store) then
-				local enemy, enemies, pred_pos = U.find_foremost_enemy_in_range_filter_on(this.pos, a.max_range, a.cast_time, a.vis_flags, a.vis_bans, function(e, origin)
+				local _, enemies, pred_pos = U.find_foremost_enemy_in_range_filter_on(this.pos, a.max_range, a.cast_time, a.vis_flags, a.vis_bans, function(e, origin)
 					local node_offset = P:predict_enemy_node_advance(e, a.cast_time)
 					local e_ni = e.nav_path.ni + node_offset + 8
 					local n_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
@@ -28243,7 +28123,7 @@ function scripts.hero_wukong.update(this, store)
 										local nodes = P:nearest_nodes(target.pos.x, target.pos.y, nil, nil, true)
 
 										if #nodes >= 1 then
-											local pi, spi, ni = unpack(nodes[1])
+											local pi, _, ni = unpack(nodes[1])
 
 											pos_target = P:node_pos(pi, 1, ni)
 										end
@@ -28491,7 +28371,7 @@ function scripts.soldier_hero_wukong_zhu_apprentice.insert(this, store)
 end
 
 function scripts.soldier_hero_wukong_zhu_apprentice.update(this, store)
-	local brk, stam, star, a
+	local brk, stam, _
 
 	this.render.sprites[1].ts = store.tick_ts
 
@@ -28688,7 +28568,7 @@ function scripts.controller_hero_wukong_ultimate.update(this, store)
 		return
 	end
 
-	local pi, spi, ni = unpack(nodes[1])
+	local pi, _, ni = unpack(nodes[1])
 
 	this.pos = P:node_pos(pi, 1, ni)
 
@@ -29091,7 +28971,7 @@ function scripts.hero_vesper.update(this, store)
 		queue_insert(store, b)
 		U.y_animation_wait(this)
 
-		local an, af, ai = U.animation_name_facing_point(this, this.dodge.animation_attack_end, pos)
+		local an, af = U.animation_name_facing_point(this, this.dodge.animation_attack_end, pos)
 
 		U.animation_start(this, an, af, store.tick_ts, false)
 		U.y_animation_wait(this)
@@ -29416,7 +29296,7 @@ function scripts.hero_vesper_ultimate.update(this, store)
 	local nearest = P:nearest_nodes(this.pos.x, this.pos.y, available_paths, nil, true)
 
 	if #nearest > 0 then
-		local pi, spi, ni = unpack(nearest[1])
+		local pi, _, ni = unpack(nearest[1])
 		local count = this.spread[this.level]
 		local enemies = U.find_enemies_in_range_filter_off(this.pos, this.enemies_range, this.vis_flags, this.vis_bans)
 
@@ -29866,7 +29746,7 @@ function scripts.hero_muyrn.update(this, store)
 
 					S:queue(a.sound)
 
-					local an, af, ai = U.animation_name_facing_point(this, a.animation, aim_target.pos)
+					local an, af = U.animation_name_facing_point(this, a.animation, aim_target.pos)
 
 					U.animation_start(this, an, af, store.tick_ts, false)
 
@@ -30333,7 +30213,7 @@ function scripts.hero_muyrn_sentinel_wisps_entity.update(this, store)
 	this.tween.ts = store.tick_ts
 
 	local starting_offset = V.v(offset_x, offset_y)
-	local starting_pos = V.vclone(this.pos)
+
 	local positions = {{{0, starting_offset}, {0.2, V.v(offset_x, offset_y + 20)}, {0.5, V.v(offset_x + 5, offset_y - 10)}, {0.7, V.v(offset_x - 5, offset_y)}, {0.8, V.v(offset_x, offset_y + 5)}, {1, starting_offset}}, {{0, starting_offset}, {0.2, V.v(offset_x, offset_y - 20)}, {0.5, V.v(offset_x - 5, offset_y - 10)}, {0.7, V.v(offset_x + 5, offset_y)}, {0.8, V.v(offset_x, offset_y + 5)}, {1, starting_offset}}, {{0, starting_offset}, {0.2, V.v(offset_x - 10, offset_y)}, {0.5, V.v(offset_x + 5, offset_y + 10)}, {0.7, V.v(offset_x - 5, offset_y)}, {0.8, V.v(offset_x, offset_y + 5)}, {1, starting_offset}}}
 
 	local function current_phase(phase)
@@ -30730,9 +30610,7 @@ end
 
 function scripts.hero_dragon_arb.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill
-	local shadow_sprite = this.render.sprites[2]
 
 	this.ultimate_ts = store.tick_ts
 
@@ -30954,8 +30832,6 @@ function scripts.hero_dragon_arb.update(this, store)
 		end
 
 		while this.nav_rally.new do
-			local r = this.nav_rally
-			local start_pos = V.vclone(this.pos)
 
 			y_hero_dragon_arb_new_rally(store, this)
 		end
@@ -30995,7 +30871,7 @@ function scripts.hero_dragon_arb.update(this, store)
 			if target then
 				do
 					local start_ts = store.tick_ts
-					local b, targets, emit_ps, emit_ts
+					local b
 					local bullet_start_offset = V.vv(0)
 					local apply_thorn_bleed = false
 
@@ -31005,12 +30881,10 @@ function scripts.hero_dragon_arb.update(this, store)
 
 					local node_offset = P:predict_enemy_node_advance(target, flight_time)
 					local t_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni + node_offset)
-					local an, af, ai = U.animation_name_facing_point(this, a.animation, t_pos)
+					local an, af = U.animation_name_facing_point(this, a.animation, t_pos)
 
 					U.animation_start_group(this, an, af, store.tick_ts, false, this.render.sprites[1].group)
 					S:queue(a.start_sound, a.start_sound_args)
-
-					local triggered_lethal_focus
 
 					while store.tick_ts - start_ts < a.shoot_times[1] do
 						if this.unit.is_stunned or this.health.dead or this.nav_rally and this.nav_rally.new then
@@ -31635,7 +31509,6 @@ scripts.bullet_hero_dragon_arb_arborean_spawn = {}
 function scripts.bullet_hero_dragon_arb_arborean_spawn.update(this, store, script)
 	local b = this.bullet
 	local s = this.render.sprites[1]
-	local mspeed = b.min_speed
 	local fm = this.force_motion
 	local ps
 
@@ -31895,8 +31768,6 @@ function scripts.mod_hero_dragon_arb_ultimate.update(this, store, script)
 
 	this.pos = target.pos
 
-	local start_countdown = false
-
 	while true do
 		target = store.entities[m.target_id]
 
@@ -32102,9 +31973,8 @@ function scripts.mod_hero_dragon_arb_bleed.insert(this, store, script)
 end
 
 function scripts.mod_hero_dragon_arb_bleed.update(this, store, script)
-	local cycles, total_damage = 0, 0
+	local cycles = 0
 	local m = this.modifier
-	local nodes_dt = 0
 	local dps = this.dps
 	local fx_ts = 0
 
@@ -32419,7 +32289,7 @@ function scripts.decal_hero_dragon_arb_tower_plant_dark_army.update(this, store,
 		end
 
 		if store.tick_ts - a.ts > a.cooldown then
-			local target, targets, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range, a.hit_time, a.vis_flags, a.vis_bans)
+			local target, _, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range, a.hit_time, a.vis_flags, a.vis_bans)
 
 			if not target or not pred_pos then
 			-- block empty
@@ -32754,8 +32624,6 @@ function scripts.decal_hero_dragon_arb_passive_plant.update(this, store)
 	if this.delay then
 		U.y_wait(store, this.delay)
 	end
-
-	local start_ts = store.tick_ts
 
 	this.render.sprites[1].hidden = nil
 
@@ -33419,7 +33287,7 @@ function scripts.hero_builder.update(this, store)
 						this.sound_events = se
 						U.update_max_speed(this, base_speed)
 
-						local an, af, ai = U.animation_name_facing_point(this, a.animation, turret_pos)
+						local an, af = U.animation_name_facing_point(this, a.animation, turret_pos)
 
 						U.animation_start(this, an, af, store.tick_ts, 1)
 
@@ -33530,7 +33398,7 @@ function scripts.decal_hero_builder_defensive_turret.update(this, store)
 		end
 
 		if store.tick_ts - a.ts > a.cooldown then
-			local target, targets = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range, false, a.vis_flags, a.vis_bans)
+			local target = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range, false, a.vis_flags, a.vis_bans)
 
 			if not target then
 				SU.delay_attack(store, a, 0.2)
@@ -33538,7 +33406,7 @@ function scripts.decal_hero_builder_defensive_turret.update(this, store)
 				a.ts = store.tick_ts
 
 				if target and target.health and not target.health.dead then
-					local an, af, ai = U.animation_name_facing_point(this, a.animation, target.pos)
+					local an, af = U.animation_name_facing_point(this, a.animation, target.pos)
 
 					U.animation_start(this, an, af, store.tick_ts, false, soldier_sid)
 					U.animation_start(this, an, nil, store.tick_ts, false, 1)
@@ -33592,7 +33460,7 @@ function scripts.hero_builder_ultimate.update(this, store)
 	local nearest = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
 
 	if #nearest > 0 then
-		local pi, spi, ni = unpack(nearest[1])
+		local pi, _, ni = unpack(nearest[1])
 
 		if P:is_node_valid(pi, ni) then
 			spawn_ball(pi, 1, ni)
@@ -33797,8 +33665,6 @@ function scripts.hero_robot.update(this, store)
 	local h = this.health
 	local a, skill, brk, sta
 	local last_ts = store.tick_ts
-	local last_target
-	local last_target_ts = store.tick_ts
 	local base_speed = this.motion.max_speed
 	local jump_attack = this.timed_attacks.list[1]
 	local fire_attack = this.timed_attacks.list[2]
@@ -33998,7 +33864,7 @@ function scripts.hero_robot.update(this, store)
 					SU.delay_attack(store, a, fts(5))
 				else
 					for i = 1, a.loops do
-						local target, pred_pos = U.find_random_enemy_with_pos(store, this.pos, 0, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, function(e, origin)
+						local target = U.find_random_enemy_with_pos(store, this.pos, 0, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, function(e, origin)
 							return P:is_node_valid(e.nav_path.pi, e.nav_path.ni)
 						end)
 
@@ -34029,15 +33895,15 @@ function scripts.hero_robot.update(this, store)
 								ps1.particle_system.emit = false
 								ps2.particle_system.emit = false
 
-								local an, af, ai = U.animation_name_facing_point(this, a.animation_prepare, target_pos)
+								local an, af = U.animation_name_facing_point(this, a.animation_prepare, target_pos)
 
 								U.y_animation_play(this, an, af, store.tick_ts, 1)
 
-								local an, af, ai = U.animation_name_facing_point(this, a.animation, target_pos)
+								local an, af = U.animation_name_facing_point(this, a.animation, target_pos)
 
 								U.animation_start(this, an, af, store.tick_ts, false)
 
-								local target, pred_pos = U.find_random_enemy_with_pos(store, this.pos, 0, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, function(e, origin)
+								local target = U.find_random_enemy_with_pos(store, this.pos, 0, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, function(e, origin)
 									return P:is_node_valid(e.nav_path.pi, e.nav_path.ni)
 								end)
 
@@ -34115,7 +33981,7 @@ function scripts.hero_robot.update(this, store)
 				if this.soldier.target_id ~= nil then
 					SU.delay_attack(store, a, fts(10))
 				else
-					local target, enemies, pred_pos = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
+					local target, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
 
 					if not target then
 						SU.delay_attack(store, a, fts(10))
@@ -34131,12 +33997,12 @@ function scripts.hero_robot.update(this, store)
 						ps1.particle_system.emit = false
 						ps2.particle_system.emit = false
 
-						local an, af, ai = U.animation_name_facing_point(this, a.animation, final_target.pos)
+						local an, af = U.animation_name_facing_point(this, a.animation, final_target.pos)
 
 						U.animation_start(this, an, af, store.tick_ts, false)
 						U.y_wait(store, a.shoot_time)
 
-						local target, _, pred_pos = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
+						local target = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
 
 						if target then
 							final_target = target
@@ -34164,7 +34030,7 @@ function scripts.hero_robot.update(this, store)
 						local nearest = P:nearest_nodes(this.pos.x, this.pos.y, {path})
 
 						if #nearest > 0 then
-							local pi, spi, ni = unpack(nearest[1])
+							local pi, _, ni = unpack(nearest[1])
 							local initial_offset = 1
 							local direction = ni < final_target.nav_path.ni and -1 or 1
 
@@ -34220,7 +34086,7 @@ function scripts.hero_robot.update(this, store)
 					ps1.particle_system.emit = false
 					ps2.particle_system.emit = false
 
-					local an, af, ai = U.animation_name_facing_point(this, a.animation, pred_pos)
+					local an, af = U.animation_name_facing_point(this, a.animation, pred_pos)
 
 					U.animation_start(this, an, af, store.tick_ts, false)
 					U.y_wait(store, a.load_time)
@@ -34274,7 +34140,7 @@ function scripts.hero_robot.update(this, store)
 							ps1.particle_system.emit = false
 							ps2.particle_system.emit = false
 
-							local an, af, ai = U.animation_name_facing_point(this, a.animation, target.pos)
+							local an, af = U.animation_name_facing_point(this, a.animation, target.pos)
 
 							U.animation_start(this, an, af, store.tick_ts, false)
 							U.y_wait(store, a.shoot_time)
@@ -34352,8 +34218,7 @@ scripts.bullet_hero_robot_skill_fire = {}
 function scripts.bullet_hero_robot_skill_fire.update(this, store)
 	local b = this.bullet
 	local mspeed = b.min_speed
-	local target, ps
-	local already_hit = {}
+	local target
 
 	b.speed.x, b.speed.y = V.normalize(b.to.x - b.from.x, b.to.y - b.from.y)
 
@@ -34594,7 +34459,6 @@ scripts.mod_hero_robot_skill_uppercut = {}
 
 function scripts.mod_hero_robot_skill_uppercut.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
-	local m = this.modifier
 
 	if not target then
 		return false
@@ -34630,7 +34494,7 @@ function scripts.mod_hero_robot_skill_uppercut.insert(this, store)
 end
 
 function scripts.mod_hero_robot_skill_uppercut.update(this, store, script)
-	local start_ts, target_hidden
+	local start_ts
 	local m = this.modifier
 	local target = store.entities[this.modifier.target_id]
 
@@ -34643,8 +34507,6 @@ function scripts.mod_hero_robot_skill_uppercut.update(this, store, script)
 	this.pos = target.pos
 
 	local is_on_right = store.entities[this.modifier.source_id].pos.x < this.pos.x
-	local s = this.render.sprites[1]
-	local is_exo = false
 
 	for k, v in pairs(target.render.sprites) do
 		if v.exo then
@@ -34783,11 +34645,8 @@ scripts.aura_hero_robot_ultimate_train = {}
 function scripts.aura_hero_robot_ultimate_train.update(this, store)
 	local first_hit_ts
 	local last_hit_ts = 0
-	local sid_rider = 1
-	local sid_fx = 2
 	local target_pos = this.pos
 	local fading = false
-	local spawned_fx = false
 	local last_ni_decal = 0
 	local last_ni_smoke = 0
 	local path_ni = 1
@@ -34838,7 +34697,6 @@ function scripts.aura_hero_robot_ultimate_train.update(this, store)
 		local a = this.render.sprites[1]
 		local o_name, o_flip, o_idx
 		local a1, a2, a3, a4, a5, a6, a7, a8 = 22.5, 67.5, 112.5, 157.5, 202.5, 247.5, 292.5, 337.5
-		local quadrant = a._last_quadrant
 		local angles = a.angles[group]
 
 		if a1 <= angle_deg and angle_deg < a2 then
@@ -34943,7 +34801,6 @@ function scripts.aura_hero_robot_ultimate_train.update(this, store)
 	end
 
 	local function run_backwards()
-		local last_pos = this.pos
 
 		distance = V.dist2(target_pos.x, target_pos.y, this.pos.x, this.pos.y)
 
@@ -35212,10 +35069,6 @@ end
 
 function scripts.hero_bird.update(this, store)
 	local h = this.health
-	local he = this.hero
-	local a, skill
-	local shadow_sprite = this.render.sprites[2]
-	local basic_attack = this.ranged.attacks[1]
 	local cluster_bomb_attack = this.timed_attacks.list[1]
 	local shout_stun_attack = this.timed_attacks.list[2]
 	local gattling_attack = this.timed_attacks.list[3]
@@ -35240,8 +35093,6 @@ function scripts.hero_bird.update(this, store)
 		end
 
 		while this.nav_rally.new do
-			local r = this.nav_rally
-			local start_pos = V.vclone(this.pos)
 
 			SU.y_hero_new_rally(store, this)
 		end
@@ -35285,7 +35136,7 @@ function scripts.hero_bird.update(this, store)
 					local start_ts = store.tick_ts
 					local b
 					local bullet_start_offset = v(0, 0)
-					local an, af, ai = U.animation_name_facing_point(this, a.animation, pred_pos)
+					local an, af = U.animation_name_facing_point(this, a.animation, pred_pos)
 
 					U.animation_start(this, an, af, store.tick_ts)
 					S:queue(a.start_sound, a.start_sound_args)
@@ -35357,13 +35208,13 @@ function scripts.hero_bird.update(this, store)
 					break
 				end
 			elseif a == shout_stun_attack then
-				local target, targets, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, a.radius, a.node_prediction, a.vis_flags, a.vis_bans)
+				local _, targets, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, a.radius, a.node_prediction, a.vis_flags, a.vis_bans)
 
 				if not targets or #targets < a.min_targets or not pred_pos then
 				-- block empty
 				else
 					local start_ts = store.tick_ts
-					local an, af, ai = U.animation_name_facing_point(this, a.animation, pred_pos)
+					local an, af = U.animation_name_facing_point(this, a.animation, pred_pos)
 
 					U.animation_start(this, an, af, store.tick_ts)
 					S:queue(a.sound)
@@ -35415,7 +35266,7 @@ function scripts.hero_bird.update(this, store)
 				-- block empty
 				else
 					local start_ts = store.tick_ts
-					local an, af, ai = U.animation_name_facing_point(this, a.animation_in, pred_pos)
+					local an, af = U.animation_name_facing_point(this, a.animation_in, pred_pos)
 
 					U.animation_start(this, an, af, store.tick_ts, false)
 
@@ -35434,7 +35285,7 @@ function scripts.hero_bird.update(this, store)
 
 						S:queue(a.sound)
 
-						local an, af, ai = U.animation_name_facing_point(this, a.animation_loop, target.pos)
+						local an, af = U.animation_name_facing_point(this, a.animation_loop, target.pos)
 
 						U.animation_start(this, an, af, store.tick_ts, true)
 
@@ -35461,8 +35312,6 @@ function scripts.hero_bird.update(this, store)
 
 							queue_insert(store, fx)
 						end
-
-						local shoot_count = 0
 
 						while store.tick_ts - shoot_start_ts < a.duration and target and not target.health.dead do
 							if band(target.vis.flags, F_FLYING) ~= 0 then
@@ -35508,7 +35357,7 @@ function scripts.hero_bird.update(this, store)
 						S:stop(a.sound)
 						S:queue(a.sound_end)
 
-						local an, af, ai = U.animation_name_facing_point(this, a.animation_out, target.pos)
+						local an, af = U.animation_name_facing_point(this, a.animation_out, target.pos)
 
 						U.animation_start(this, an, af, store.tick_ts, false)
 
@@ -35532,7 +35381,7 @@ function scripts.hero_bird.update(this, store)
 				-- block empty
 				else
 					local start_ts = store.tick_ts
-					local an, af, ai = U.animation_name_facing_point(this, a.animation, pred_pos)
+					local an, af = U.animation_name_facing_point(this, a.animation, pred_pos)
 
 					U.animation_start(this, an, af, store.tick_ts)
 
@@ -35618,7 +35467,7 @@ function scripts.controller_bullet_hero_bird_cluster_bomb_part.update(this, stor
 
 	local nodes = {}
 	local floor_node = P:nearest_nodes(floor_pos.x, floor_pos.y)[1]
-	local path_pi, path_spi, path_ni = unpack(floor_node)
+	local path_pi, _, path_ni = unpack(floor_node)
 
 	table.insert(nodes, 1, P:node_pos(path_pi, 1, path_ni + 3))
 	table.insert(nodes, 2, P:node_pos(path_pi, 2, path_ni))
@@ -35701,13 +35550,10 @@ function scripts.hero_bird_ultimate_child.update(this, store)
 	local ss = this.render.sprites[2]
 	local a = this.melee.attacks[1]
 	local fm = this.force_motion
-	local attack_ts, search_ts = 0, 0
-	local target, targets, dist
+	local target, dist
 	local dest = V.v(this.pos.x, this.pos.y)
 
 	this.start_ts = store.tick_ts
-
-	local orbit_phase = 0
 
 	fm.a_step = fm.a_step + math.random(-3, 3)
 	this.tween.ts = U.frandom(0, 1)
@@ -35963,8 +35809,6 @@ end
 function scripts.hero_lava.update(this, store)
 	local h = this.health
 	local a, skill, brk, sta
-	local ultimate = this.hero.skills.ultimate
-	local basic_attack = this.melee.attacks[1]
 	local hotheaded_skill = this.hero.skills.hotheaded
 	local hotheaded_attack = this.timed_attacks.list[1]
 	local wild_eruption = this.timed_attacks.list[2]
@@ -36299,7 +36143,7 @@ function scripts.hero_lava_ultimate.update(this, store)
 	for i = 1, this.fireball_count do
 		if i <= this.fireball_count then
 			local e = E:create_entity(this.bullet)
-			local p, found, tries = nil, nil, 0
+			local p, tries = nil, 0
 
 			while not p and tries < 5 do
 				p = V.v(this.pos.x + math.random(-this.max_spread, this.max_spread), this.pos.y + math.random(-this.max_spread, this.max_spread))
@@ -36726,7 +36570,7 @@ function scripts.hero_spider.update(this, store)
 
 					queue_insert(store, decal)
 
-					local target, targets, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, a.damage_radius, 0, a.vis_flags, a.vis_bans_damage)
+					local target, targets = U.find_foremost_enemy_in_range_filter_off(this.pos, a.damage_radius, 0, a.vis_flags, a.vis_bans_damage)
 
 					if target and targets then
 						for _, enemy in ipairs(targets) do
@@ -36824,7 +36668,7 @@ function scripts.hero_spider.update(this, store)
 							else
 								last_ts = store.tick_ts
 
-								local an, af, ai = U.animation_name_facing_point(this, a.animation, target.pos)
+								local an, af = U.animation_name_facing_point(this, a.animation, target.pos)
 
 								U.animation_start(this, an, af, store.tick_ts, false)
 								S:queue("HeroSpiderInstakill")
@@ -36984,7 +36828,7 @@ function scripts.hero_spider.update(this, store)
 				skill = this.hero.skills.area_attack
 
 				if not a.disabled and store.tick_ts - a.ts > a.cooldown and store.tick_ts - last_ts > a.min_cooldown then
-					local target, targets, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, a.damage_radius, 0, a.vis_flags, a.vis_bans_trigger)
+					local _, targets, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, a.damage_radius, 0, a.vis_flags, a.vis_bans_trigger)
 
 					if not targets or #targets < a.min_targets or not pred_pos then
 						SU.delay_attack(store, a, fts(10))
@@ -36999,7 +36843,7 @@ function scripts.hero_spider.update(this, store)
 							goto label_1340_1
 						end
 
-						local target, targets, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, a.damage_radius, 0, a.vis_flags, a.vis_bans_damage)
+						local target, targets = U.find_foremost_enemy_in_range_filter_off(this.pos, a.damage_radius, 0, a.vis_flags, a.vis_bans_damage)
 
 						if target and targets then
 							for _, enemy in ipairs(targets) do
@@ -37083,7 +36927,6 @@ scripts.mod_hero_spider_skill_instakill_melee = {}
 
 function scripts.mod_hero_spider_skill_instakill_melee.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
-	local m = this.modifier
 
 	if not target then
 		return false
@@ -37107,8 +36950,6 @@ function scripts.mod_hero_spider_skill_instakill_melee.insert(this, store)
 end
 
 function scripts.mod_hero_spider_skill_instakill_melee.update(this, store, script)
-	local start_ts, target_hidden
-	local m = this.modifier
 	local target = store.entities[this.modifier.target_id]
 
 	if not target then
@@ -37491,7 +37332,7 @@ function scripts.hero_mecha.update(this, store)
 			skill = this.hero.skills.power_slam
 
 			if not a.disabled and store.tick_ts - a.ts > a.cooldown and store.tick_ts - last_ts > a.min_cooldown then
-				local target, targets, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, a.damage_radius, 0, a.vis_flags, a.vis_bans_trigger)
+				local _, targets, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, a.damage_radius, 0, a.vis_flags, a.vis_bans_trigger)
 
 				if not targets or #targets < a.min_targets or not pred_pos then
 					SU.delay_attack(store, a, fts(10))
@@ -37506,7 +37347,7 @@ function scripts.hero_mecha.update(this, store)
 						goto label_hero_mecha_continue
 					end
 
-					local target, targets, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, a.damage_radius, 0, a.vis_flags, a.vis_bans_damage)
+					local target, targets = U.find_foremost_enemy_in_range_filter_off(this.pos, a.damage_radius, 0, a.vis_flags, a.vis_bans_damage)
 
 					if target and targets then
 						for _, enemy in ipairs(targets) do
@@ -37634,7 +37475,7 @@ function scripts.hero_mecha.update(this, store)
 			end
 
 			do
-				local brk, sta = SU.y_soldier_ranged_attacks(store, this)
+				local _, sta = SU.y_soldier_ranged_attacks(store, this)
 
 				if sta == A_DONE then
 					if this.ranged.attacks[1].disabled then
@@ -37779,7 +37620,6 @@ function scripts.bullet_hero_mecha.update(this, store)
 	end
 
 	local function y_fly_to_pos(target_pos)
-		local start_ts = store.tick_ts
 		local dx, dy = V.sub(target_pos.x, target_pos.y, this.pos.x, this.pos.y)
 		local dist2 = V.len2(dx, dy)
 
@@ -37996,7 +37836,7 @@ function scripts.drone_hero_mecha.update(this, store)
 	end
 
 	local shoot_ts, search_ts = 0, 0
-	local target, targets, dist
+	local target, dist
 	local dest = V.v(this.pos.x, this.pos.y)
 
 	this.start_ts = store.tick_ts
@@ -38278,7 +38118,7 @@ function scripts.hero_mecha_ultimate.update(this, store)
 	local nearest = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
 
 	if #nearest > 0 then
-		local pi, spi, ni = unpack(nearest[1])
+		local pi, _, ni = unpack(nearest[1])
 
 		if P:is_node_valid(pi, ni) then
 			S:queue(this.sound)
@@ -38534,9 +38374,7 @@ end
 
 function scripts.hero_dragon_sun.update(this, store)
 	local h = this.health
-	local he = this.hero
-	local a, skill
-	local shadow_sprite = this.render.sprites[2]
+	local a
 	local is_overcharged = false
 	local a_healing_aura = this.timed_attacks.list[this.timed_attacks.sid_healing_aura]
 	local a_overcharge = this.timed_attacks.list[this.timed_attacks.sid_overcharge]
@@ -38613,7 +38451,7 @@ function scripts.hero_dragon_sun.update(this, store)
 
 	local function do_ranged_attack()
 		local a = this.ranged.attacks[1]
-		local target, all_targets = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(this.pos, a.max_range, a.shoot_time, a.vis_flags, a.vis_bans, a.damage_radius * 2)
+		local target = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(this.pos, a.max_range, a.shoot_time, a.vis_flags, a.vis_bans, a.damage_radius * 2)
 
 		if not target then
 			return true
@@ -38625,7 +38463,7 @@ function scripts.hero_dragon_sun.update(this, store)
 		local flight_time = 0
 		local node_offset = P:predict_enemy_node_advance(target, a.shoot_time + flight_time)
 		local t_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni + node_offset)
-		local an, af, ai = U.animation_name_facing_point(this, a.animation, t_pos)
+		local an, af = U.animation_name_facing_point(this, a.animation, t_pos)
 
 		bullet_start_offset = a.bullet_start_offset[af and 2 or 1]
 
@@ -39275,15 +39113,6 @@ function scripts.bullet_hero_dragon_sun_breath_ray.update(this, store)
 	local DOWNSTREAM = 1
 	local nodes_to_move = math.ceil(this.motion.max_speed * this.ray_duration / P.average_node_dist * 0.8)
 	local ray_is_right_to_left = store.entities[b.source_id].render.sprites[1].flip_x
-	local upstream_goes_right
-
-	if P:is_node_valid(this.nav_path.pi, this.nav_path.ni + DOWNSTREAM) then
-		local next_downstream_node = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni + 1)
-
-	elseif P:is_node_valid(this.nav_path.pi, this.nav_path.ni + UPSTREAM) then
-		local next_upstream_node = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni - 1)
-
-	end
 
 	this.nav_path.dir = DOWNSTREAM
 
@@ -39302,7 +39131,7 @@ function scripts.bullet_hero_dragon_sun_breath_ray.update(this, store)
 
 		this.pos.x, this.pos.y = dest.x, dest.y
 
-		local next, new = P:next_entity_node(this, store.tick_length)
+		local next = P:next_entity_node(this, store.tick_length)
 
 		if next then
 			U.set_destination(this, next)
@@ -39358,7 +39187,6 @@ function scripts.bullet_hero_dragon_sun_breath_ray.update(this, store)
 
 	local function hit_targets(targets_table)
 		if targets_table and #targets_table > 0 then
-			local mod_hit_times = {}
 
 			for _, e in ipairs(targets_table) do
 				local d = SU.create_bullet_damage(b, e.id, this.id)
@@ -39629,7 +39457,7 @@ end
 scripts.mod_hero_dragon_sun_bassic_attack_burn_dps = {}
 
 function scripts.mod_hero_dragon_sun_bassic_attack_burn_dps.update(this, store, script)
-	local cycles, total_damage = 0, 0
+	local cycles = 0
 	local m = this.modifier
 	local dps = this.dps
 	local dmin = dps.damage_min + (m.level or 0) * (dps.damage_inc or 0)
@@ -39841,7 +39669,7 @@ function scripts.bullet_hero_dragon_sun_ultimate.update(this, store)
 	local function update_targetting()
 		this.pos.x, this.pos.y = dest.x, dest.y
 
-		local next, new = P:next_entity_node(this, store.tick_length)
+		local next = P:next_entity_node(this, store.tick_length)
 
 		if next then
 			U.set_destination(this, next)

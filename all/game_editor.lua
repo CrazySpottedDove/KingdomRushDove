@@ -1152,20 +1152,15 @@ function editor:draw()
 
 	local rox, roy = self.game_ref_origin.x, self.game_ref_origin.y
 	local gs = self.game_scale
-	local last_idx
 	local node_w = 10
 	local curve_w = 3
 	local curve_selected_w = 3
-	local width_w = 6
 	local sel_w = 2
 	local color_curve = {255, 100, 100, 255}
 	local color_curve_sel = {255, 255, 100, 255}
 	local color_node = {0, 0, 255, 255}
-	local color_handle = {100, 100, 255, 255}
-	local color_width = {255, 255, 0, 255}
 	local color_selected = {255, 150, 150, 255}
 
-	-- 更新路径 canvas
 	if self.paths_visible and (not self.paths_canvas or self.paths_dirty) then
 		self.paths_dirty = nil
 
@@ -1183,14 +1178,10 @@ function editor:draw()
 				G.setColor_old(self.path_selected == pi and color_curve_sel or color_curve)
 				G.line(bezier:render())
 
-				local p1x, p1y = bezier:getControlPoint(1)
-				local p4x, p4y = bezier:getControlPoint(4)
 			end
 
 			local fnt = G.getFont()
-
 			G.setFont(F:f("DroidSansMono", 10))
-
 			for i, bezier in ipairs(path.beziers) do
 				local p1x, p1y = bezier:getControlPoint(1)
 				local p4x, p4y = bezier:getControlPoint(4)
@@ -1604,7 +1595,7 @@ function editor:serialize_entity(e)
 
 	if e.editor and e.editor.props then
 		for _, prop in pairs(e.editor.props) do
-			local prop_name, prop_type = unpack(prop)
+			local prop_name = unpack(prop)
 
 			t[prop_name] = LU.eval_get_prop(e, prop_name)
 		end
@@ -1901,14 +1892,12 @@ function editor:update_curves(pi, touched)
 	else
 		for _, path in pairs(self.path_curves) do
 			local n = path.nodes
-			local w = path.widths
 			local scount = (#n - 1) / 3
 			local beziers = {}
 
 			for i = 1, scount do
 				local j = 3 * (i - 1) + 1
 				local p1, p2, p3, p4 = n[j], n[j + 1], n[j + 2], n[j + 3]
-
 				table.insert(beziers, love.math.newBezierCurve({p1.x, p1.y, p2.x, p2.y, p3.x, p3.y, p4.x, p4.y}))
 			end
 

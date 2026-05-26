@@ -5,7 +5,6 @@ local km = require("lib.klua.macros")
 require("lib.klua.table")
 require("lib.klua.dump")
 
-local G = love.graphics
 local FS = love.filesystem
 local ceil = math.ceil
 local floor = math.floor

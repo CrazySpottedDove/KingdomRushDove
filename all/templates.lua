@@ -1,8 +1,6 @@
 -- chunkname: @./all/templates.lua
 local bit = require("bit")
 local bor = bit.bor
-local band = bit.band
-local bnot = bit.bnot
 local E = require("entity_db")
 local i18n = require("i18n")
 
@@ -14,7 +12,6 @@ local image_y = 0
 local tt
 local scripts = require("scripts")
 local game_scripts = require("game_scripts")
-local IS_KR1 = true
 
 local function T(t)
 	return E:get_template(t)

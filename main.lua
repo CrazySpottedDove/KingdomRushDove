@@ -416,10 +416,6 @@ local function load(arg)
 
 	MU.start_debugger(main.params)
 
-	local font_paths = KR_PATH_ASSETS_ALL_FALLBACK or {{
-		path = KR_PATH_ASSETS_ALL_TARGET
-	}}
-
 	main:set_locale(main.params.locale)
 	love.window.setTitle(version.title .. version.id)
 

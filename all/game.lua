@@ -441,8 +441,6 @@ end
 
 function game:wheelmoved(dx, dy)
 	if self.camera then
-		local old_zoom = self.camera.zoom
-
 		self.camera.zoom = self.camera.zoom * (1 + dy * 0.1)
 
 		self.camera:clamp()
@@ -505,11 +503,7 @@ function game:touchmoved(id, x, y, dx, dy, pressure)
 				local scale = dist / self._pinch_last_dist
 				local new_zoom = km.clamp(self.camera.min_zoom, self.camera.max_zoom, self._pinch_last_zoom * scale)
 				-- 以两指中心为缩放中心
-				local old_zoom = self.camera.zoom
-				local ratio = old_zoom / new_zoom
-
 				self.camera.zoom = new_zoom
-
 				self.camera:clamp()
 			end
 		end
@@ -547,11 +541,10 @@ function game:draw_enemy_pages()
 		G.setColor(1, 1, 1)
 	end
 
-	local sw, sh, scale, origin = SU.clamp_window_aspect(self.screen_w, self.screen_h, self.screen_w, self.screen_h)
+	local _, _, _, origin = SU.clamp_window_aspect(self.screen_w, self.screen_h, self.screen_w, self.screen_h)
 
 	G.setColor(0, 0, 0, 0.392)
 	G.rectangle("fill", origin.x + 5, self.screen_h * 0.5 - 5, 270, self.screen_h / 3)
-
 	local names = self.enemy_pages[self.current_enemy_page]
 	local x, y = math.floor(origin.x + 10), self.screen_h * 0.5
 
@@ -884,15 +877,11 @@ end
 
 function game:front_draw_debug(rox, roy, gs)
 	if self.DBG_DRAW_PATHS and not self.path_canvas then
-		local node_size = 2
-		local point_size = 3
 
 		G.push()
 		G.translate(rox, roy)
 		G.scale(gs, gs)
-
 		self.path_canvas = G.newCanvas()
-
 		G.setCanvas(self.path_canvas)
 
 		for pi, p in ipairs(P.paths) do
@@ -1474,17 +1463,13 @@ else
 		perf.start("game_draw")
 		local d = self.store
 
-		local frame_draw_params = RU.frame_draw_params
 		local draw_frames_range = RU.draw_frames_range
 		local gs = self.game_scale
 
 		local c = self.camera
-
 		-- c:clamp()
-
 		local rox, roy = -(c.x * c.zoom - self.screen_w * 0.5), -(c.y * c.zoom - self.screen_h * 0.5)
 		gs = gs * c.zoom
-
 		if d.world_offset then
 			rox, roy = rox + d.world_offset.x, roy + d.world_offset.y
 		end

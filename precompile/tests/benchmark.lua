@@ -305,7 +305,7 @@ for idx, e in ipairs(entities) do
 		local code = CU.process(compiler.enemy_basic.insert, compiler.env, e)
 		total_process = total_process + (os.clock() - t0)
 
-		local fn, err = load(code, nil, "t", compiler.env)
+		local fn = load(code, nil, "t", compiler.env)
 		if fn then
 			total_load = total_load + (os.clock() - t0) -- includes process time, approximate
 		end
@@ -318,7 +318,7 @@ for idx, e in ipairs(entities) do
 		local code = CU.process(compiler.enemy_mixed.update, compiler.env, e)
 		total_process = total_process + (os.clock() - t0)
 
-		local fn, err = load(code, nil, "t", compiler.env)
+		local fn = load(code, nil, "t", compiler.env)
 		if fn then
 			total_load = total_load + (os.clock() - t0)
 		end
@@ -342,10 +342,8 @@ print(string.format("   total: %.3f ms", (os.clock() - t0) * 1000))
 -- 插入 CU.process 内部计时
 print("")
 print("=== CU.process internal timing ===")
-local e = entities[1]
 
 -- eval_expr 次数统计
-local orig_eval = CU.eval_expr
 -- (we can't easily count calls without modifying the module)
 -- Instead, instrument CU.process directly
 
@@ -357,12 +355,12 @@ local function timed_process(template, env, entity, label)
 	return code
 end
 
-local code_insert = timed_process(compiler.enemy_basic.insert, compiler.env, entities[1], "enemy_basic.insert")
+timed_process(compiler.enemy_basic.insert, compiler.env, entities[1], "enemy_basic.insert")
+
 local code_update = timed_process(compiler.enemy_mixed.update, compiler.env, entities[1], "enemy_mixed.update")
-local code_update2 = timed_process(compiler.enemy_mixed.update, compiler.env, entities[5], "enemy_mixed.update(5)")
+timed_process(compiler.enemy_mixed.update, compiler.env, entities[5], "enemy_mixed.update(5)")
 
 -- load+chunk 计时
-local _, first_load_err
 local t0 = os.clock()
 local fn, err = load(code_update, nil, "t", compiler.env)
 local load_dt = (os.clock() - t0) * 1000

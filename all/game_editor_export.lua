@@ -292,8 +292,9 @@ function EditorExportView:_do_export()
 		FS.write(waves_dir .. "/" .. level_name .. "_waves_campaign.lua", "return {\n    lives = 20,\n    cash = 800,\n    groups = {}\n}\n")
 		has_campaign = true
 	end
-	local has_heroic = self:_copy_into_plugin("game_editor/data/waves/" .. level_name .. "_waves_heroic.lua", abs_base .. "/waves/" .. level_name .. "_waves_heroic.lua", waves_dir .. "/" .. level_name .. "_waves_heroic.lua")
-	local has_iron = self:_copy_into_plugin("game_editor/data/waves/" .. level_name .. "_waves_iron.lua", abs_base .. "/waves/" .. level_name .. "_waves_iron.lua", waves_dir .. "/" .. level_name .. "_waves_iron.lua")
+	self:_copy_into_plugin("game_editor/data/waves/" .. level_name .. "_waves_heroic.lua", abs_base .. "/waves/" .. level_name .. "_waves_heroic.lua", waves_dir .. "/" .. level_name .. "_waves_heroic.lua")
+
+	self:_copy_into_plugin("game_editor/data/waves/" .. level_name .. "_waves_iron.lua", abs_base .. "/waves/" .. level_name .. "_waves_iron.lua", waves_dir .. "/" .. level_name .. "_waves_iron.lua")
 
 	local resources = self.editor.store.level and self.editor.store.level.data and self.editor.store.level.data.custom_resources or {}
 

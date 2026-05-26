@@ -1,20 +1,6 @@
 -- 预编译性能对比测试（lua / luajit 通用）
 local CU = require("precompile.compile_utils")
 
-local tpl = [[return function()
-    local s = 0
-    constif(this.a) s = s + 1 constend
-    constif(this.b) s = s + 2 constend
-    constif(this.c) s = s + 3 constend
-    constif(this.d) s = s + 4 constend
-    constif(this.e) s = s + 5 constend
-    constif(this.f) s = s + 6 constend
-    constif(this.g) s = s + 7 constend
-    constif(this.h) s = s + 8 constend
-    constif(this.i) s = s + 9 constend
-    constif(this.j) s = s + 10 constend
-    return s
-end]]
 -- NOTE: constif(cond) body constend 必须各占一行，上面格式是错的！
 -- 用多行格式重写：
 local tpl2 = [[return function()

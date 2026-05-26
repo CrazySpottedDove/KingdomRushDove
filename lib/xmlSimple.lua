@@ -93,7 +93,7 @@ function newParser()
 			i = j + 1
 		end
 
-		local text = string.sub(xmlText, i)
+		string.sub(xmlText, i)
 
 		if #stack > 1 then
 			error("XmlParser: unclosed " .. stack[#stack]:name())

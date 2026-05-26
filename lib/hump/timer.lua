@@ -1,5 +1,4 @@
 -- timer:tween(len 补间持续时间, subject 被补间的对象, target 目标状态, method 插值方法, after 补间结束后的回调函数, ...)
-local log = require("lib.klua.log"):new("timer")
 local Timer = {}
 
 Timer.__index = Timer

@@ -17,7 +17,6 @@ local class = require("middleclass")
 local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
-local bnot = bit.bnot
 local AC = require("achievements")
 local F = require("lib.klove.font_db")
 local I = require("lib.klove.image_db")
@@ -28,7 +27,6 @@ local U = require("utils")
 
 local V = require("lib.klua.vector")
 local v = V.v
-local r = V.r
 
 -- Dove modules
 local RichTextLabel = require("dove_modules.gui.rich_text_label")
@@ -1367,7 +1365,7 @@ function game_gui:find_flag_position(pf, vf, margin, len)
 	local isects = {}
 
 	for _, b in pairs(borders) do
-		local pi, towards = intersection(pf, vf, b[1], b[2])
+		local pi = intersection(pf, vf, b[1], b[2])
 
 		if pi then
 			table.insert(isects, pi)
@@ -2586,8 +2584,6 @@ end
 function Power2Button:fire(wx, wy)
 	Power2Button.super.fire(self, wx, wy)
 
-	local level_idx = game_gui.game.store.level_index
-
 	local i = math.random(1, 3)
 	local e = E:create_entity("re_current_" .. i)
 
@@ -2765,9 +2761,8 @@ function InfoBar:initialize()
 	local s_3 = s / 3
 	local s_2 = s / 2
 	local s_4 = s / 4
-	local s_9 = s / 9
 	local s_12 = s / 12
-	local margin = v(10, 14)
+
 	local padding = v(20, CJK(1, 0, 3, -1.5))
 	local label_height = 14
 	local stat_labels = {}
@@ -4041,12 +4036,11 @@ function VictoryView:show()
 	S:stop_all()
 	S:queue("GUIQuestCompleted")
 
-	local v_badge, v_stars, v_restart, v_continue = self.v_badge, self.v_stars, self.v_restart, self.v_continue
+	local v_stars, v_restart, v_continue = self.v_stars, self.v_restart, self.v_continue
 	local c_chain = v_continue.children[1]
 	local r_chain = v_restart.children[1]
 	local stars_rating = game_gui.game.store.game_outcome.stars
 	local level_idx = game_gui.game.store.level_idx
-	local gems = game_gui.game.store.gems_collected or 0
 	local gv = self:ci("gems_view")
 
 	if gv then
@@ -4150,7 +4144,7 @@ function MousePointer:initialize()
 	pirate_camp.anchor = v(pirate_camp.size.x * 0.5, pirate_camp.size.y * 0.5)
 	pirate_camp.alpha = 0.75
 
-	local p1b, p2b, p3b, pb_point, pb_area, sunray_tower
+	local p1b, p2b, p3b, sunray_tower
 
 	if E:get_template("user_power_1").template_name == "power_fireball_control" then
 		p1b = KImageView:new("pointer_fireball_0001")
@@ -4351,11 +4345,6 @@ function NotificationView:initialize(w, h)
 end
 
 function NotificationView:show(id, no_transition, force_show)
-	local img_prefix = {
-		[N_ENEMY] = "encyclopedia_creeps_",
-		[N_TOWER] = "encyclopedia_towers_",
-		[N_POWER] = "tutorial_powers_polaroids_"
-	}
 	local titles = {
 		218,
 		215,
@@ -4821,7 +4810,7 @@ function NotificationView:show(id, no_transition, force_show)
 		self.anchor = V.v(self.size.x * 0.5, self.size.y * 0.5)
 	elseif n.layout == N_TOWER_2 then
 		local views_1, pw1, ph1 = create_layout(N_TOWER, n.images[1], n.prefixes[1], n.subs[1])
-		local views_2, pw2, ph2 = create_layout(N_TOWER, n.images[2], n.prefixes[2], n.subs[2], ph1 - 30)
+		local views_2, _, ph2 = create_layout(N_TOWER, n.images[2], n.prefixes[2], n.subs[2], ph1 - 30)
 		local v_title = create_noti_title(n.layout)
 
 		v_title.anchor = V.v(0, v_title.size.y)
@@ -5807,7 +5796,6 @@ function PickView:on_down(button, x, y)
 			end
 
 			if P:valid_node_nearby(wx, wy, nil, NF_RALLY) then
-				local num = #game_gui.selected_controables
 
 				for idx, e in ipairs(game_gui.selected_controables) do
 					local rally_pos = calc_rally_pos(idx)
@@ -6209,8 +6197,6 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
 			end
 		end
 	end
-
-	local store = game_gui.game.store
 
 	-- if store.criket.on and store.criket.gold_judge then
 	-- store.config.enemy_health_multiplier = total_cost / store.criket.gold_base
@@ -6915,8 +6901,6 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 
 		game_gui:set_mode(GUI_MODE_SELECT_POINT)
 
-		local ux, uy = game_gui:g2u(e.pos)
-
 		self:hide()
 	elseif item.action == "tw_upgrade" or item.action == "tw_unblock" then
 		entity.tower.upgrade_to = item.action_arg
@@ -7094,9 +7078,7 @@ function TowerMenuTooltip:initialize()
 	local bottom_margin = 26
 	local font_size = 10
 	local text_offset = v(18, CJK(3, 1, 1, 1))
-	local w2 = (self.size.x - margin.x) * 0.5
 	local w3 = (self.size.x - margin.x) / 3
-	local p12, p22 = margin.x * 0.5, margin.x * 0.5 + w2
 	local p13, p23, p33 = margin.x * 0.5, margin.x * 0.5 + w3, margin.x * 0.5 + 2 * w3
 	local damage_label = GGLabel:new(V.v(self.size.x / 3, 16), "tooltip_icons_0007")
 
@@ -7298,7 +7280,7 @@ function TowerMenuTooltip:show(entity, item)
 		self.desc:do_fit_lines()
 		self.damage_label:do_fit_lines()
 
-		local width, lines = self.desc:get_wrap_lines()
+		local _, lines = self.desc:get_wrap_lines()
 
 		if self.title:get_font_height() + self.desc:get_font_height() * lines + (no_bottom_label and 0 or self.damage_label:get_font_height()) < 73 then
 			self:set_image("tooltip_bg_small")
@@ -7598,7 +7580,7 @@ function IncomingTooltip:set_report(text)
 	self.title.size.x = w
 	self.size.x = w
 
-	local width, lines = self.report:get_wrap_lines()
+	local _, lines = self.report:get_wrap_lines()
 	local height = lines * self.report:get_font_height()
 
 	self.size.y = 40 + height + 10
@@ -7609,7 +7591,7 @@ function IncomingTooltip:show(x, y, r, report)
 
 	local arrow = self.arrow
 	local a_w, a_h = arrow.anchor.x, arrow.size.y - arrow.anchor.y
-	local a = km.unroll(r)
+
 	local offset = 15
 
 	if x > 1.5 * self.size.x then
@@ -8050,7 +8032,6 @@ function SelectPanelView:initialize(sw, sh, title)
 	self.back:add_child(self.data_group)
 
 	-- 添加底部按钮
-	local mx = 150
 	local y = 420
 	local b = GGOptionsButton:new(_("BUTTON_DONE"))
 

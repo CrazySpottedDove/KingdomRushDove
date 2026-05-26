@@ -13,7 +13,6 @@ local FS = love.filesystem
 local font_title = require("lib.klove.font_db"):f("msyh", 28)
 local font_normal = require("lib.klove.font_db"):f("msyh", 18)
 local font_small = require("lib.klove.font_db"):f("msyh", 14)
-local font = font_normal -- 兼容旧代码
 local FU = require("all.file_utlis")
 
 -- UI 动画状态
@@ -89,9 +88,7 @@ local update_cache_dir = nil
 
 -- 进度跟踪（避免频繁刷新日志）
 local last_progress_update = 0
-local current_download_progress = 0
 
--- UTF-8 清理函数：移除无效的 UTF-8 字节序列
 local function sanitize_utf8(s)
 	if type(s) ~= "string" then
 		return tostring(s)
@@ -690,7 +687,7 @@ local function download_to_file_chunked(url_base, file_param, real_path)
 		local chunk_success = false
 
 		while chunk_retries <= DOWNLOAD_CONFIG.chunk_max_retries do
-			local code, body, headers, elapsed = async_request(url, {
+			local code, body, headers = async_request(url, {
 				method = "GET",
 				headers = {
 					["Range"] = "bytes=" .. chunk_start .. "-" .. chunk_end
@@ -849,7 +846,7 @@ local function download_to_lovefs_chunked(url_base, file_param, fs_path)
 		local chunk_success = false
 
 		while chunk_retries <= DOWNLOAD_CONFIG.chunk_max_retries do
-			local code, body, headers, elapsed = async_request(url, {
+			local code, body, headers = async_request(url, {
 				method = "GET",
 				headers = {
 					["Range"] = "bytes=" .. chunk_start .. "-" .. chunk_end

@@ -13900,7 +13900,6 @@ tt.bullet.pop_conds = nil
 tt.sound_events.hit = "EnemyEvolvedAcidAttack"
 
 tt = RT("bullet_enemy_evolved_acid_spawn", "bomb")
-local b = balance.enemies.dragons.evolved_acid.ranged_attack
 tt.bullet.damage_max = 0
 tt.bullet.damage_min = 0
 tt.bullet.damage_radius = 0

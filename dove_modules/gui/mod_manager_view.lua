@@ -3,7 +3,6 @@
 local log = require("lib.klua.log"):new("mod_manager_view")
 local class = require("middleclass")
 local V = require("lib.klua.vector")
-local G = love.graphics
 local FS = love.filesystem
 local S = require("sound_db")
 local restart = require("all.restart")
@@ -799,7 +798,7 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	self._upload_pending_cover = nil
 	self._my_plugins_only = false
 	do
-		local dev_chunk, dev_err = FS.load("developer.lua")
+		local dev_chunk = FS.load("developer.lua")
 		if dev_chunk then
 			local ok, result = pcall(dev_chunk)
 			if ok and type(result) == "table" then

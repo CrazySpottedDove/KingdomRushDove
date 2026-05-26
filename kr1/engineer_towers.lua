@@ -1325,10 +1325,6 @@ tt.bullet.particles_name = "tower_tricannon_bomb_4_bombardment_trail"
 -- 恶魔澡坑_START
 b = balance.towers.demon_pit
 
-local basic_attack = b.basic_attack
-local big_guy = b.big_guy
-local master_exploders = b.master_exploders
-
 tt = RT("tower_demon_pit_demon_trail")
 AC(tt, "pos", "particle_system")
 tt.particle_system.name = "demon_pit_tower_demon_projectile_particle_idle"

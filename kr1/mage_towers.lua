@@ -2190,7 +2190,6 @@ tt.vis.bans = bor(F_BLOCK, F_SKELETON, F_POLYMORPH)
 tt.clicks_to_destroy = b.clicks_to_destroy
 
 tt = RT("enemy_tower_ray_sheep_flying", "enemy_tower_ray_sheep")
-local b = balance.towers.ray.skill_sheep.sheep
 
 tt.info.enc_icon = 126
 tt.info.portrait = "kr5_info_portraits_enemies_0041"

@@ -125,8 +125,8 @@ local scripts_orig = {
 	enemy_update = scripts.enemy_mixed.update
 }
 
-local compiled_melee_insert, compiled_melee_update = compile_entity(e_melee)
-local compiled_mixed_insert, compiled_mixed_update = compile_entity(e_mixed)
+local _, compiled_melee_update = compile_entity(e_melee)
+local _, compiled_mixed_update = compile_entity(e_mixed)
 
 print("")
 print("═══  enemy_mixed.update  运行时基准测试  ═══")
@@ -162,8 +162,6 @@ local function run_test(name, entity_tpl, compiled_update, orig_update, soldiers
 			H.run_simulation_frame(store)
 		end
 	end
-
-	local soldiers_data = soldiers or H.create_soldiers(E, 20, 200, 0)
 
 	local result = H.benchmark_stable(name, function(count, compiled)
 		run_sim(count, compiled)

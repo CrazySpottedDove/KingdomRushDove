@@ -1147,7 +1147,6 @@ end
 scripts.veznan_souls_aura = {}
 
 function scripts.veznan_souls_aura.update(this, store)
-	local count = 0
 
 	for i = 1, this.souls.count do
 		if this.interrupt then
@@ -2028,7 +2027,7 @@ function scripts.blackburn_aura.update(this, store)
 					if #nearest_nodes < 1 then
 					-- block empty
 					else
-						local pi, spi, ni = unpack(nearest_nodes[1])
+						local pi, _, ni = unpack(nearest_nodes[1])
 
 						if not P:is_node_valid(pi, ni) then
 						-- block empty
@@ -2077,7 +2076,7 @@ function scripts.eb_efreeti.get_info(this)
 end
 
 function scripts.eb_efreeti.insert(this, store)
-	local next, new = P:next_entity_node(this, store.tick_length)
+	local next = P:next_entity_node(this, store.tick_length)
 
 	if not next then
 		log.debug("(%s) %s has no valid next node", this.id, this.template_name)
@@ -3298,7 +3297,6 @@ scripts.umbra_portal = {}
 
 function scripts.umbra_portal.update(this, store)
 	local sp = this.spawner
-	local s = this.render.sprites[1]
 	local spawn_ts
 
 	if sp.animation_start then
@@ -3396,7 +3394,7 @@ function scripts.enemy_umbra_piece.update(this, store)
 			U.animation_start(this, "idle", nil, store.tick_ts, -1)
 			coroutine.yield()
 		else
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
+			local cont, blocker = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty
@@ -3487,7 +3485,7 @@ function scripts.umbra_guy.update(this, store)
 			last_lives = store.lives
 
 			local i = math.random(taunt.lost_life_idx[1], taunt.lost_life_idx[2])
-			local t = show_taunt(i, taunt.duration)
+			show_taunt(i, taunt.duration)
 
 			U.animation_start(this, "taunt", nil, store.tick_ts, true)
 			U.y_wait(store, taunt.duration)
@@ -3503,7 +3501,7 @@ function scripts.umbra_guy.update(this, store)
 
 		if store.tick_ts - taunt.ts > taunt.cooldown then
 			local i = math.random(taunt.normal_idx[1], taunt.normal_idx[2])
-			local t = show_taunt(i, taunt.duration)
+			show_taunt(i, taunt.duration)
 
 			U.animation_start(this, "taunt", nil, store.tick_ts, true)
 			U.y_wait(store, taunt.duration)
@@ -3523,7 +3521,6 @@ function scripts.umbra_guy.update(this, store)
 			if not target then
 			-- block empty
 			else
-				local start_ts = store.tick_ts
 
 				log.debug(">>> %s: umbra_guy firing at (%s) %s", store.tick_ts, target.id, target.template_name)
 
@@ -3585,7 +3582,7 @@ function scripts.eb_leviathan.get_info(this)
 end
 
 function scripts.eb_leviathan.insert(this, store)
-	local next, new = P:next_entity_node(this, store.tick_length)
+	local next = P:next_entity_node(this, store.tick_length)
 
 	if not next then
 		log.debug("(%s) %s has no valid next node", this.id, this.template_name)
@@ -4580,7 +4577,7 @@ function scripts.eb_drow_queen.on_damage(this, store, damage)
 end
 
 function scripts.eb_drow_queen.update(this, store)
-	local sid_body, sid_fly = 1, 4
+	local sid_body = 1
 	local s_body = this.render.sprites[sid_body]
 	local d_shield = E:create_entity("decal_drow_queen_shield")
 
@@ -4630,7 +4627,7 @@ function scripts.eb_drow_queen.update(this, store)
 		end
 
 		if #towers > 5 then
-			local tower_2, tower_id_2 = table.random(towers)
+			local tower_2 = table.random(towers)
 
 			if tower_2 and tower_2_id ~= tower_id then
 				block_tower_ids({tower_2.tower.holder_id})
@@ -4941,7 +4938,7 @@ function scripts.eb_drow_queen.update(this, store)
 			this.phase = "casting"
 			this.ui.can_select = true
 
-			local __, __, shield_hp, pow_cooldown_min, pow_cooldown_max, pow_chances, shield_duration = unpack(this.phase_params, 1, 7)
+			local _, _, shield_hp, pow_cooldown_min, _, pow_chances, shield_duration = unpack(this.phase_params, 1, 7)
 
 			y_power(shield_hp, shield_duration, pow_cooldown_min, pow_chances)
 
@@ -4963,7 +4960,7 @@ function scripts.eb_drow_queen.update(this, store)
 			this.ui.can_select = true
 
 			for i, fight_round in ipairs(this.fight_rounds) do
-				local shield_hp, pow_cooldown_min, pow_cooldown_max, pow_chances, shield_duration, packs, pack_pis, fight_pi, tower_set = unpack(fight_round, 1, 9)
+				local shield_hp, pow_cooldown_min, _, pow_chances, shield_duration, packs, pack_pis, fight_pi, tower_set = unpack(fight_round, 1, 9)
 
 				y_power(shield_hp, shield_duration, pow_cooldown_min, pow_chances)
 
@@ -5140,7 +5137,7 @@ function scripts.eb_spider.update(this, store)
 		local round = boss_rounds[round_idx]
 		local pis = P:get_connected_paths(round.pi)
 		local nodes = P:nearest_nodes(round.pos.x, round.pos.y, pis, nil, true)
-		local dest, dest_node
+		local dest_node
 
 		if #nodes < 0 then
 			log.error("eb_spider: could not find node near %s,%s in paths:%s", round.pos.x, round.pos.y, getdump(pis))
@@ -5318,7 +5315,7 @@ function scripts.eb_spider.update(this, store)
 
 	this.phase = "fight"
 
-	local cont, blocker, ranged
+	local cont, blocker
 
 	::label_344_0::
 
@@ -5866,7 +5863,6 @@ scripts.eb_balrog = {}
 
 function scripts.eb_balrog.update(this, store)
 	local at = this.timed_attacks.list[1]
-	local cont, blocker, ranged
 	local stage_hero = LU.list_entities(store.soldiers, "hero_bolverk")[1]
 
 	local function ready_to_taint()
@@ -5918,12 +5914,12 @@ function scripts.eb_balrog.update(this, store)
 					if #nearest < 1 then
 						SU.delay_attack(store, at, 0.2)
 					else
-						local pi, spi, ni = unpack(nearest[1])
+						local pi, _, ni = unpack(nearest[1])
 						local shoot_dest = P:node_pos(pi, 1, ni)
 
 						S:queue(a.sound)
 
-						local an, af, ai = U.animation_name_facing_point(this, a.animation, shoot_dest)
+						local _, af = U.animation_name_facing_point(this, a.animation, shoot_dest)
 
 						U.animation_start(this, a.animation, af, store.tick_ts, false)
 						U.y_wait(store, a.shoot_time)
@@ -5975,7 +5971,6 @@ end
 scripts.eb_jack = {}
 
 function scripts.eb_jack.update(this, store)
-	local ra = this.ranged.attacks[1]
 	local last_quit_hp = this.health.hp
 	local quit_threshold = this.health.hp_max * 0.2
 
@@ -6469,8 +6464,6 @@ scripts.bullet_boss_corrupted_denas_spawn_entities = {}
 
 function scripts.bullet_boss_corrupted_denas_spawn_entities.update(this, store)
 	local b = this.bullet
-	local dmin, dmax = b.damage_min, b.damage_max
-	local dradius = b.damage_radius
 	local ps
 
 	if b.particles_name then
@@ -6529,7 +6522,7 @@ scripts.controller_stage_15_cult_leader_tower = {}
 function scripts.controller_stage_15_cult_leader_tower.update(this, store)
 	local last_wave_processed = 0
 	local last_attack_ts = store.tick_ts
-	local attack_cd, time_to_leave_after_attack
+	local attack_cd
 
 	U.animation_start_group(this, "idlenothing", nil, store.tick_ts, true, "layers")
 
@@ -6648,7 +6641,7 @@ function scripts.controller_stage_15_cult_leader_tower.update(this, store)
 
 				if soldier_groups and #soldier_groups > 0 then
 					for _, soldier_group in ipairs(soldier_groups) do
-						local surrounded_soldier, surrounded_soldiers = U.find_entity_most_surrounded(soldier_group.soldiers)
+						local surrounded_soldier = U.find_entity_most_surrounded(soldier_group.soldiers)
 						local aura = E:create_entity(this.aura)
 						local nearest_nodes = P:nearest_nodes(surrounded_soldier.pos.x, surrounded_soldier.pos.y, nil, {1}, true)
 						local pi, spi, ni = unpack(nearest_nodes[1])
@@ -6717,7 +6710,7 @@ function scripts.controller_stage_15_cult_leader_tower.update(this, store)
 					soldier_groups = table.slice(soldier_groups, 1, this.config_per_wave[store.wave_group_number].targets_amount)
 
 					for _, soldier_group in ipairs(soldier_groups) do
-						local surrounded_soldier, surrounded_soldiers = U.find_entity_most_surrounded(soldier_group.soldiers)
+						local surrounded_soldier = U.find_entity_most_surrounded(soldier_group.soldiers)
 						local aura = E:create_entity(this.aura)
 						local nearest_nodes = P:nearest_nodes(surrounded_soldier.pos.x, surrounded_soldier.pos.y, nil, {1}, true)
 						local pi, spi, ni = unpack(nearest_nodes[1])
@@ -7169,8 +7162,6 @@ function scripts.boss_cult_leader.update(this, store)
 		coroutine.yield()
 	end
 
-	local start_ts = store.tick_ts
-
 	signal.emit("boss_fight_start", this)
 	signal.emit("change_power_button", "power_button_1", "bottom_powers_icons_0002", 25)
 
@@ -7324,9 +7315,8 @@ function scripts.controller_stage_16_overseer.update(this, store)
 	local next_holder_to_destroy_i = 1
 	local next_idle_anim_cooldown = math.random(this.idle_cooldown_min, this.idle_cooldown_max)
 	local last_idle_anim_ts = store.tick_ts
-	local disable_tower_cooldown, change_tower_cooldown
+	local change_tower_cooldown
 	local change_tower_first_time = true
-	local disable_tower_first_time = true
 	local spawners = LU.list_entities(store.entities, "mega_spawner")
 	local megaspawner_boss
 
@@ -7481,8 +7471,6 @@ function scripts.controller_stage_16_overseer.update(this, store)
 
 	queue_insert(store, shake)
 	U.y_animation_wait(this, 1)
-
-	local start_ts = store.tick_ts
 
 	this.idle_anims = this.idle_fight_anims
 	last_idle_anim_ts = store.tick_ts
@@ -8026,11 +8014,7 @@ function scripts.controller_stage_16_overseer_mouth_door.update(this, store)
 		end
 	end
 
-	local start_ts = store.tick_ts
-
 	last_check_enemy = store.tick_ts
-
-	local last_index_processed = 0
 
 	while true do
 		if store.tick_ts - last_check_enemy >= this.check_cooldown then
@@ -8047,7 +8031,6 @@ end
 scripts.controller_stage_16_overseer_tentacle = {}
 
 function scripts.controller_stage_16_overseer_tentacle.update(this, store)
-	local current_phase = 1
 	local can_spawn_enemies = false
 	local last_shot_ts = store.tick_ts
 	local last_shot_attack_soldiers_ts = store.tick_ts
@@ -8288,11 +8271,6 @@ function scripts.enemy_overseer_hit_point.update(this, store)
 	this.nav_path.spi = path_spi
 	this.nav_path.ni = path_ni
 
-	local min_x = this.pos.x - this.move_bounds.x / 2
-	local max_x = min_x + this.move_bounds.x
-	local min_y = this.pos.y - this.move_bounds.y / 2
-	local max_y = this.pos.y + this.move_bounds.y
-
 	this.vis._bans = this.vis.bans
 	this.vis.bans = bit.bor(F_ALL)
 
@@ -8503,7 +8481,6 @@ end
 scripts.controller_stage_16_overseer_eye = {}
 
 function scripts.controller_stage_16_overseer_eye.update(this, store)
-	local start_ts = store.tick_ts
 	local blink_cooldown = math.random(this.blink_min_cooldown, this.blink_max_cooldown)
 	local last_blink = store.tick_ts
 	local overseer = table.filter(store.entities, function(k, v)
@@ -8638,7 +8615,6 @@ function scripts.controller_stage_19_navira.update(this, store)
 		if store.wave_group_number > 0 and LU.has_alive_enemies(store) and store.tick_ts - fire_balls_ts > this.fire_balls_cd - this.fire_balls_wait_between_balls then
 			for i = 1, this.fire_balls_count do
 				local ball = E:create_entity(this.fire_ball_t)
-				local angle = i * 2 * math.pi / this.fire_balls_count % (2 * math.pi)
 
 				ball.render.sprites[1].name = string.format(ball.render.sprites[1].name, i)
 				ball.render.sprites[1].ts = store.tick_ts
@@ -8829,7 +8805,6 @@ scripts.mod_bullet_stage_19_navira_fire_ball_ray_stun = {}
 function scripts.mod_bullet_stage_19_navira_fire_ball_ray_stun.update(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
-	local source = store.entities[m.source_id]
 
 	if not target then
 		queue_remove(store, this)
@@ -9063,7 +9038,7 @@ function scripts.boss_navira.update(this, store)
 				this.render.sprites[1].z = Z_OBJECTS
 			end
 
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, nil, break_fn)
+			local cont, blocker = SU.y_enemy_walk_until_blocked(store, this, nil, break_fn)
 
 			if not cont then
 			-- block empty
@@ -9367,9 +9342,6 @@ end
 
 function scripts.mod_boss_crocs_tower_timed_destroy.update(this, store)
 	local target = store.entities[this.modifier.target_id]
-	local holder_id = target.tower.holder_id
-	local holder = store.entities[holder_id]
-
 	local function find_boss_id()
 		local boss_table = table.filter(store.entities, function(k, v)
 			return v.boss_crocs_level ~= nil
@@ -10057,7 +10029,7 @@ function scripts.boss_crocs.update(this, store)
 						return false
 					end
 
-					local pi, spi, ni, dist = unpack(nearest_node[1])
+					local _, _, ni = unpack(nearest_node[1])
 
 					if ni < this.nav_path.ni then
 						return false
@@ -10227,7 +10199,7 @@ function scripts.boss_crocs.update(this, store)
 				end
 
 				for i = 1, a.shots_amount - qty_shoots do
-					local shot_pos, pi, spi, ni
+					local shot_pos
 					local tries = 0
 					local found = false
 
@@ -10526,13 +10498,12 @@ end
 scripts.boss_pig = {}
 
 function scripts.boss_pig.update(this, store)
-	local sid_body, sid_fly = 1, 4
+	local sid_body = 1
 	local d_flying = E:create_entity("decal_boss_pig_flying")
 	local s_flying = d_flying.render.sprites[1]
 
 	queue_insert(store, d_flying)
 
-	local s_body = this.render.sprites[sid_body]
 	local node_id = P:nearest_nodes(698, 467, {2})[1][3]
 	local jump_id = 1
 	local jump_positions = {V.v(698, 467), V.v(150, 278)}
@@ -10558,8 +10529,6 @@ function scripts.boss_pig.update(this, store)
 	local function y_arrive(to, dest_pi)
 		local start_ts = store.tick_ts
 		local phase
-		local flags = this.vis.flags
-		local bans = this.vis.bans
 
 		this.vis.flags = this.vis.flags_jumping
 		this.vis.bans = this.vis.bans_jumping
@@ -10642,8 +10611,6 @@ function scripts.boss_pig.update(this, store)
 		local from = this.pos
 
 		SU.remove_modifiers(store, this)
-
-		local af = to.x < from.x
 
 		s_flying.r = V.angleTo(to.x - from.x, to.y - from.y)
 		s_flying.flip_y = math.abs(s_flying.r) > math.pi / 2
@@ -10858,8 +10825,6 @@ function scripts.boss_machinist.update(this, store)
 		end
 	end
 
-	local spawn_ts = store.tick_ts
-
 	U.animation_start(this, "nopilot", nil, store.tick_ts - fts(10), true, 1, true)
 	U.y_wait(store, this.descend_duration)
 
@@ -10980,7 +10945,7 @@ function scripts.boss_machinist.update(this, store)
 			U.animation_start(this, "run", false, store.tick_ts, true)
 		end
 
-		local next, new
+		local next
 
 		if this.motion.forced_waypoint then
 			local w = this.motion.forced_waypoint
@@ -11109,8 +11074,6 @@ function scripts.boss_deformed_grymbeard.update(this, store)
 	this.health.hp_max = this.clones_to_die
 	this.health.hp = this.clones_to_die
 
-	local spawn_ts = store.tick_ts
-
 	signal.emit("boss_fight_start", this)
 	W:start_manual_wave("BOSS1")
 
@@ -11227,7 +11190,6 @@ end
 scripts.boss_grymbeard = {}
 
 function scripts.boss_grymbeard.update(this, store)
-	local spawn_ts = store.tick_ts
 	local ra = this.ranged.attacks[1]
 
 	local function shoot_clone(spawn_pos, target_pos)
@@ -11495,10 +11457,8 @@ function scripts.bullet_boss_grymbeard.update(this, store)
 	end
 
 	local function fly_to_pos(target_pos)
-		local start_ts = store.tick_ts
 		local last_pos = V.vclone(this.pos)
 		local dx, dy = V.sub(target_pos.x, target_pos.y, this.pos.x, this.pos.y)
-		local dist = V.len(dx, dy)
 
 		while V.len(dx, dy) > 20 do
 			last_pos.x, last_pos.y = this.pos.x, this.pos.y
@@ -11790,8 +11750,6 @@ function scripts.boss_spider_queen.update(this, store)
 		local from = this.pos
 
 		SU.remove_modifiers(store, this)
-
-		local af = to.x < from.x
 
 		s_flying.r = V.angleTo(to.x - from.x, to.y - from.y)
 		s_flying.flip_y = math.abs(s_flying.r) > math.pi / 2
@@ -12107,7 +12065,6 @@ function scripts.boss_spider_queen.update(this, store)
 				if not soldiers or #soldiers < a.min_targets then
 					SU.delay_attack(store, a, fts(10))
 				else
-					local start_ts = store.tick_ts
 
 					this.render.sprites[2].hidden = false
 
@@ -12411,7 +12368,6 @@ function scripts.mod_boss_spider_queen_tower_debuff.update(this, store)
 	local duration = SU.get_difficulty_field_value(store, m.duration)
 	local duration_long = SU.get_difficulty_field_value(store, m.duration_long)
 	local target = store.entities[m.target_id]
-	local source = store.entities[m.source_id]
 
 	if not target then
 		queue_remove(store, this)
@@ -12822,7 +12778,6 @@ function scripts.boss_redboy_teen.update(this, store)
 	local a_meteorite = this.timed_attacks.list[3]
 	local a_fireabsorb = this.timed_attacks.list[4]
 	local a_stun_towers = this.timed_attacks.list[5]
-	local a
 	local change_path_node_start = P:nearest_nodes(this.change_path_node_start_pos.x, this.change_path_node_start_pos.y, {this.nav_path.pi})[1][3]
 	local jumped = false
 
@@ -12899,8 +12854,6 @@ function scripts.boss_redboy_teen.update(this, store)
 		local jump_fly_up_anim = this.is_dead and "jump_fly_up_02" or "jump_fly_up"
 		local jump_fly_down_anim = this.is_dead and "jump_fly_down_02" or "jump_fly_down"
 		local hide_possessed_delay = 0.1
-		local hide_possessed_delay_dec_mult = 0.9
-		local hide_possessed_delay_min = 0.05
 		local hide_possessed_max_times = 9
 		local hide_possessed_times = 0
 		local hide_possessed_ts = store.tick_ts + hide_possessed_delay
@@ -13261,7 +13214,7 @@ function scripts.boss_redboy_teen.update(this, store)
 	this.nav_path.spi = 1
 	this.nav_path.ni = P:nearest_nodes(this.spawn_pos.node_pos.x, this.spawn_pos.node_pos.y, {this.nav_path.pi})[1][3]
 
-	local next, new = P:next_entity_node(this, store.tick_length)
+	local next = P:next_entity_node(this, store.tick_length)
 
 	if not next then
 		log.debug("(%s) %s has no valid next node", this.id, this.template_name)
@@ -13285,8 +13238,6 @@ function scripts.boss_redboy_teen.update(this, store)
 
 	local function y_on_death()
 		S:queue("Stage32RedboyDeathStart")
-
-		local dragon_controller
 
 		for k, v in pairs(store.entities) do
 			if v.template_name == "controller_stage_32_boss" then

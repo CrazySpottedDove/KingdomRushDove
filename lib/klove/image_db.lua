@@ -293,7 +293,7 @@ function image_db:queue_load_done()
 	end
 
 	for i = #self.threads, 1, -1 do
-		local th, cin, cout = unpack(self.threads[i])
+		local th, _, cout = unpack(self.threads[i])
 
 		if th:isRunning() then
 			while true do
@@ -762,7 +762,7 @@ function image_db:i(name)
 
 	if self.db_images[name] then
 		if i[1] == nil and i[4] and i[5] then
-			local key, im, w, h = self:load_image_file(i[4], i[5])
+			local _, im, w, h = self:load_image_file(i[4], i[5])
 
 			self.db_images[name] = {im, w, h}
 

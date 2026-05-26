@@ -295,7 +295,7 @@ power.enc_icon = nil
 power.on_power_upgrade = nil
 
 -- Runtime fields (4): --   attack_cooldown, damage_factor, price_base, price_inc
-local powers = E:register_c("powers")
+E:register_c("powers")
 
 local user_power = E:register_c("user_power")
 user_power.level = 1
@@ -1116,7 +1116,7 @@ local plant = E:register_c("plant")
 plant.block_count = 0
 plant.blocked = nil
 
-local crystal = E:register_c("crystal")
+E:register_c("crystal")
 
 local transfer = E:register_c("transfer")
 transfer.min_distance = 0

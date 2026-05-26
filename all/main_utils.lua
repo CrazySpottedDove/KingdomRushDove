@@ -122,9 +122,6 @@ function mu.default_params(params, game_name, game_target, game_platform)
 		end
 	end
 
-	local api_level, has_menu_key, device_locale
-	local device_profile = DEVICE_PROFILE_LOW
-
 	d("width", 1024)
 	d("height", 768)
 	d("texture_size", "fullhd")

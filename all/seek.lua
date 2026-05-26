@@ -6,7 +6,6 @@ local seek = {}
 local P = require("path_db")
 local bit = require("bit")
 local band = bit.band
-local bor = bit.bor
 
 require("all.constants")
 local V = require("lib.klua.vector")
@@ -25,13 +24,11 @@ end
 
 local _aspect = ASPECT
 local _aspect_inv = 1.0 / _aspect
-local _cell_size = SPATIAL_HASH_CELL_SIZE
 local _cell_size_factor = SPATIAL_HASH_CELL_SIZE_FACTOR
 local _x_min = IN_GAME_X_MIN
 local _y_min = IN_GAME_Y_MIN
 local _cols = SPATIAL_HASH_COLS
 local _rows = SPATIAL_HASH_ROWS
-local _max_index = SPATIAL_HASH_MAX_INDEX
 local ceil = math.ceil
 local floor = math.floor
 local max = math.max
@@ -1397,7 +1394,6 @@ function seek.find_biggest_enemy_in_range_filter_off(origin, range, flags, bans)
 	local b = range * _aspect
 	local min_row = max(1, _y_to_row(y - b))
 	local max_row = min(_rows, _y_to_row(y + b))
-	local count = 0
 	local index_base = (min_row - 1) * _cols - 1
 	local r_outer_sq = range * range
 	local max_hp = -1
@@ -1434,7 +1430,6 @@ function seek.find_biggest_enemy_in_range_filter_on(origin, range, flags, bans, 
 	local b = range * _aspect
 	local min_row = max(1, _y_to_row(y - b))
 	local max_row = min(_rows, _y_to_row(y + b))
-	local count = 0
 	local index_base = (min_row - 1) * _cols - 1
 	local r_outer_sq = range * range
 	local max_hp = -1

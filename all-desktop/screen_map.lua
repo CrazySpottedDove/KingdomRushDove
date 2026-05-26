@@ -36,8 +36,6 @@ require("dove_modules.gui.numeric_keyboard_view")
 require("dove_modules.gui.mod_manager_view")
 -- end
 
-local IS_KR1 = true
-
 screen_map = {}
 screen_map.required_sounds = {"common", "music_screen_map"}
 screen_map.required_textures = {
@@ -2080,7 +2078,6 @@ function MapView:show_flags(num)
 			if not level then
 			-- block empty
 			else
-				local points_data = screen_map.map_points.points[i]
 				local flag, wing
 
 				if extra then
@@ -2552,7 +2549,7 @@ local function add_level_title(parent, text, style, y)
 	title:do_fit_lines()
 	parent:add_child(title)
 
-	local tw, wrn, wr = title:get_wrap_lines()
+	local _, wrn, wr = title:get_wrap_lines()
 	local title_w = 0
 
 	for i = 1, wrn do
@@ -2619,7 +2616,7 @@ local function add_level_description(parent, text)
 
 	parent:add_child(first_paragraph_1_label)
 
-	local w, p_nlines, p_lines = first_paragraph_1_label:get_wrap_lines()
+	local _, _, p_lines = first_paragraph_1_label:get_wrap_lines()
 	local p_max_lines = math.ceil((bg.pos.y + bg.size.y - TEXT_TOP_POS - 3) / (first_paragraph_1_label:get_font_height() * line_height))
 	local p_1_nlines = math.min(p_max_lines, #p_lines)
 
@@ -2995,7 +2992,6 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 	end
 
 	local level_string = string.format("%02i", level_num)
-	local level_data = screen_map.level_data[level_num]
 
 	self.back = KImageView:new("levelSelect_background")
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
@@ -3070,7 +3066,7 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 	self.back:add_child(self.campaign)
 	add_level_title(self.campaign, _("Campaign"), "right")
 
-	local desc_h = add_level_description(self.campaign, _("LEVEL_" .. tostring(level_num) .. "_HISTORY"))
+	add_level_description(self.campaign, _("LEVEL_" .. tostring(level_num) .. "_HISTORY"))
 
 	add_difficulty_stamp(self.campaign, GAME_MODE_CAMPAIGN, slot_data[GAME_MODE_CAMPAIGN], 690, 520)
 
@@ -3097,7 +3093,7 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 	self.heroic:add_child(rbg)
 	add_level_title(self.heroic, _("Heroic"), "right")
 
-	local desc_h = add_level_description(self.heroic, _("LEVEL_MODE_HEROIC_DESCRIPTION"))
+	add_level_description(self.heroic, _("LEVEL_MODE_HEROIC_DESCRIPTION"))
 
 	add_level_title(self.heroic, _("Challenge Rules"), "sub", rules_y)
 	add_level_rules(self.heroic, level_num, rules_y + 38)
@@ -3132,7 +3128,7 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 	self.iron:add_child(rbbg)
 	add_level_title(self.iron, _("Iron"), "right")
 
-	local desc_h = add_level_description(self.iron, _("LEVEL_MODE_IRON_DESCRIPTION"))
+	add_level_description(self.iron, _("LEVEL_MODE_IRON_DESCRIPTION"))
 
 	add_level_title(self.iron, _("Challenge Rules"), "sub", rules_y)
 	add_level_rules(self.iron, level_num, rules_y + 38)
@@ -3183,7 +3179,7 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 	desc_label.text = _("LEVEL_MODE_LOCKED_DESCRIPTION")
 	desc_label.line_height = 0.9
 
-	local w, lines = desc_label:get_wrap_lines()
+	local _, lines = desc_label:get_wrap_lines()
 	local panel_h = desc_label.pos.y + lines * desc_label:get_font_height() * desc_label.line_height + 10
 
 	self.tip_panel = KView:new(V.v(300, panel_h))
@@ -3261,7 +3257,6 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 	self.level_idx = level_num
 
 	local level_string = string.format("%02i", level_num)
-	local level_data = screen_map.level_data[level_num]
 
 	self.back = KImageView:new("levelSelect_background")
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
@@ -3381,7 +3376,8 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 	self.back:add_child(right_page)
 	add_level_title(right_page, _("ENDLESS_LEVEL_SELECT_HEADER"), "right")
 
-	local desc_h = add_level_description(right_page, _("ENDLESS_LEVEL_" .. tostring(level_num - 80) .. "_HISTORY"))
+	add_level_description(right_page, _("ENDLESS_LEVEL_" .. tostring(level_num - 80) .. "_HISTORY"))
+
 	local rules_y = 320
 	local rbg = KImageView:new("levelSelect_modebg_notxt_0001")
 
@@ -3664,7 +3660,7 @@ function UpgradesView:set_tip_panel(title, desc, price)
 
 	d.text = desc
 
-	local _w, lines = d:get_wrap_lines()
+	local _, lines = d:get_wrap_lines()
 
 	self.tip_panel.size.y = d.pos.y + (lines + 1) * d.line_height * d:get_font_height()
 	self.tip_panel.tip.pos = v(-14, self.tip_panel.size.y - 20)
@@ -4431,7 +4427,7 @@ function EncyclopediaView:detail_tower(index)
 	title_label.text_align = "center"
 	title_label.fit_lines = 1
 
-	local title_width, _w = title_label:get_wrap_lines()
+	local title_width = title_label:get_wrap_lines()
 
 	self.right_panel:add_child(title_label)
 
@@ -4562,8 +4558,6 @@ function EncyclopediaView:detail_tower(index)
 			my = 420
 		end
 	end
-
-	local tower_data_in_menu = tower_menus_data[dt.tower.type]
 
 	local specials = GGLabel:new(V.v(190, 26))
 
@@ -4919,7 +4913,6 @@ function EncyclopediaView:load_creeps(index)
 
 		if i <= max_creeps then
 			local t = E:get_template(creeps_data[i].name)
-			local enemy_thumb_fmt
 			local from_kr
 
 			if i <= 68 then
@@ -5004,7 +4997,6 @@ function EncyclopediaView:create_creep(icon, pos, information, enabled)
 	end
 
 	local creep_data = GS.encyclopedia_enemies[information]
-	local t = E:get_template(creep_data.name)
 
 	if creep_data.always_shown or screen_map.user_data.seen[creep_data.name] then
 		local b = KButton:new()
@@ -5074,7 +5066,7 @@ function EncyclopediaView:detail_creep(index)
 	title_label.text_align = "center"
 	title_label.fit_lines = 1
 
-	local title_width, _w = title_label:get_wrap_lines()
+	local title_width = title_label:get_wrap_lines()
 
 	self.right_panel:add_child(title_label)
 
@@ -5351,7 +5343,7 @@ end
 
 function HPAni:update(dt)
 	if self.animation then
-		local fn, runs = self:animation_frame(self.animation, self.ts, self.loop, self.fps)
+		local _, runs = self:animation_frame(self.animation, self.ts, self.loop, self.fps)
 
 		if runs >= 1 and self.loop_wait then
 			local t1, t2
@@ -6456,8 +6448,6 @@ function DifficultyView:initialize(sw, sh)
 	self.back:add_child(header)
 
 	local b_y = sh / 2 - 20
-	local offset = 90
-	local aw = self.back.size.x - 2 * offset
 	local sep = -60
 
 	local b_texts = {{_("LEVEL_SELECT_DIFFICULTY_CASUAL"), _("For beginners to strategy games!")}, {_("LEVEL_SELECT_DIFFICULTY_NORMAL"), _("A good challenge!")}, {_("LEVEL_SELECT_DIFFICULTY_VETERAN"), _("Hardcore! play at your own risk!")}}

@@ -10746,7 +10746,6 @@ tt.sound_big_eye = "Terrain3GlareOnBig"
 tt.sound_off = "Terrain3GlareOff"
 
 tt = E:register_t("controller_terrain_3_stage_15_glare", "controller_terrain_3_local_glare")
-local b = balance.specials.stage15_cult_leader_tower
 
 function tt.main_script.insert(this, store)
 	return true

@@ -3,7 +3,6 @@ local log = require("lib.klua.log"):new("screen_comics")
 local V = require("lib.klua.vector")
 local I = require("lib.klove.image_db")
 local F = require("lib.klove.font_db")
-local G = love.graphics
 local S = require("sound_db")
 local SU = require("screen_utils")
 local v = V.v
@@ -89,7 +88,7 @@ function screen_comics:init(w, h, done_callback)
 				row[i] = tonumber(row[i])
 			end
 
-			local cmd, text_key, sid, x, y, size_x, size_y, r, cr, cg, cb, fit_lines = unpack(row)
+			local _, text_key, sid, x, y, size_x, size_y, r, cr, cg, cb, fit_lines = unpack(row)
 
 			if not labels[text_key .. sid] then
 				labels[text_key .. sid] = true

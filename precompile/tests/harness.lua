@@ -531,7 +531,8 @@ function M.register_base_components(E)
 	main_script.remove = nil
 	main_script.runs = 1
 	main_script.co = nil
-	local info = E:register_c("info")
+	E:register_c("info")
+
 	local sound_events = E:register_c("sound_events")
 	sound_events.new_node = nil
 	sound_events.new_node_args = nil
@@ -790,7 +791,7 @@ function M.make_script_utils(U)
 
 	function SU.y_enemy_walk_step(store, this, animation_name)
 		animation_name = animation_name or "walk"
-		local next, new = P:next_entity_node(this, store.tick_length)
+		local next = P:next_entity_node(this, store.tick_length)
 		if not next then
 			coroutine.yield()
 			return false
@@ -1035,7 +1036,6 @@ end
 
 -- ===================== 9. 稳定 Benchmark =====================
 local MIN_DURATION = 0.15 -- 最少运行 150ms，保证信噪比
-local WARMUP_FRAMES = 100
 
 -- 自适应 benchmark：自动找到合适的实体数量，使每轮运行达到 MIN_DURATION
 -- run_fn(count, is_compiled) → void（运行完整的模拟过程）
@@ -1185,7 +1185,6 @@ function M.print_result(r)
 	print(string.format("  %-20s  %14s  %14s  %8s", "原始 (未编译)", M.format_time(o_mean), M.format_time(o_std), M.format_time(o_min)))
 	print(string.format("  %-20s  %14s  %14s  %8s", "已编译", M.format_time(c_mean), M.format_time(c_std), M.format_time(c_min)))
 
-	local arrow = pct < 0 and "🚀" or "⚠"
 	print("")
 	print(string.format("  性能变化: %+.2f%%  %s", -pct, (-pct) > 5 and "✓ 编译版本更快" or "~ 噪声范围内"))
 	print("")

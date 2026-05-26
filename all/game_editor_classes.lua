@@ -10,8 +10,6 @@ require("klove.kui")
 
 local class = require("middleclass")
 local V = require("lib.klua.vector")
-local v = V.v
-local r = V.r
 local utf8 = require("utf8")
 
 KE_CONST = {}

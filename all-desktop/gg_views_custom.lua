@@ -1,5 +1,5 @@
 -- chunkname: @./all-desktop/gg_views_custom.lua
-local log = require("lib.klua.log"):new("gg_views_custom")
+require("lib.klua.log"):new("gg_views_custom")
 
 require("klove.kui")
 
@@ -7,7 +7,6 @@ local V = require("lib.klua.vector")
 local class = require("middleclass")
 local km = require("lib.klua.macros")
 local F = require("lib.klove.font_db")
-local G = love.graphics
 local i18n = require("i18n")
 
 require("gg_views")
@@ -181,7 +180,7 @@ function VolumeSlider:update(dt)
 	end
 
 	if self._sliding then
-		local wx, wy = self:screen_to_view(x, y)
+		local wx = self:screen_to_view(x, y)
 		local vbx = self.value_bar.pos.x
 		local vbw = self.value_bar.size.x
 		local value = km.clamp(0, vbw, wx - vbx) / vbw

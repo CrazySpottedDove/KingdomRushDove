@@ -393,7 +393,8 @@ local quiz_bank = get_quiz_bank()
 
 local font = require("lib.klove.font_db"):f("msyh", 20)
 local small_font = require("lib.klove.font_db"):f("msyh", 16)
-local title_font = require("lib.klove.font_db"):f("msyh", 24)
+require("lib.klove.font_db"):f("msyh", 24)
+
 local line_h = font:getHeight() + 6
 local lines = {}
 
@@ -526,7 +527,7 @@ end
 
 function MUST_READ:touchmoved(id, x, y, dx, dy, pressure)
 	if self.touch_scrolling then
-		local w, h = love.graphics.getDimensions()
+		local _, h = love.graphics.getDimensions()
 		local visible_lines = math.floor((h - 180) / line_h)
 		local total_lines = #lines
 		local max_scroll = math.max(0, total_lines - visible_lines)
@@ -536,7 +537,7 @@ function MUST_READ:touchmoved(id, x, y, dx, dy, pressure)
 end
 
 function MUST_READ:layout()
-	local w, h = love.graphics.getDimensions()
+	local w = love.graphics.getDimensions()
 	local maxw = math.max(200, w - self.margin * 2)
 	lines = wrap_text(self.text, font, maxw)
 end
@@ -556,7 +557,6 @@ function MUST_READ:mousepressed(x, y, button)
 	-- 如果已经答题成功过，只显示阅读模式
 	if self.has_read then
 		if self.mode == "reading" then
-			local content_w = math.max(200, w - self.margin * 2)
 			local visible_lines = math.floor((h - 180) / line_h)
 			local total_lines = #lines
 			local can_continue = is_scrolled_to_bottom(self.scroll, total_lines, visible_lines)
@@ -651,7 +651,6 @@ function MUST_READ:mousepressed(x, y, button)
 		end
 
 		local q_idx = self.shuffled_questions[self.current_question]
-		local question = quiz_bank[q_idx]
 		local shuffle_data = self.shuffled_options[q_idx]
 
 		-- 选项位置
