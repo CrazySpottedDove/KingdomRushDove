@@ -1,3 +1,6 @@
+local SystemsLevel = require("all.systems.level")
+local SystemsTween = require("all.systems.tween")
+local SystemsRender = require("all.systems.render")
 local SystemsTowerUpgrade = require("all.systems.tower_upgrade")
 local SystemsGameUpgrades = require("all.systems.game_upgrades")
 local SystemsMainScript = require("all.systems.main_script")
@@ -28,6 +31,9 @@ local SystemsWaveGenerator = require("all.systems.wave_generator")
 local M = {}
 
 function M.register_systems(sys)
+	SystemsLevel.register(sys)
+	SystemsTween.register(sys)
+	SystemsRender.register(sys)
 	SystemsTowerUpgrade.register(sys)
 	SystemsGameUpgrades.register(sys)
 	SystemsMainScript.register(sys)
