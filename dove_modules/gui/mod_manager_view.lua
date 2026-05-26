@@ -12,6 +12,7 @@ local json = require("lib.json")
 local persistence = require("lib.klua.persistence")
 local mod_paths = require("mod_paths")
 local editable_panel_view = require("dove_modules.gui.editable_panel_view")
+local zip = require("lib.zip")
 
 require("gg_views_custom")
 local _sw, _sh, _keyboard, _controller
@@ -221,21 +222,6 @@ local function has_update(local_version, remote_version)
 	return norm_version(local_version) ~= "" and norm_version(remote_version) ~= "" and norm_version(local_version) ~= norm_version(remote_version)
 end
 
-local function sanitize_zip_path(path)
-	if not path or path == "" then
-		return nil
-	end
-	path = path:gsub("\\", "/")
-	path = path:gsub("^/+", "")
-	if path:find("^%.%./") or path:find("/%.%./") or path:find("%.%.%z") then
-		return nil
-	end
-	if path:find("^%a:[/\\]") then
-		return nil
-	end
-	return path
-end
-
 local function split_path(path)
 	local out = {}
 	for seg in path:gmatch("[^/]+") do
@@ -310,104 +296,6 @@ local function merge_missing_or_mismatch_fields(local_cfg, remote_cfg)
 			merge_missing_or_mismatch_fields(local_v, remote_v)
 		end
 	end
-end
-
-local function le_u16(s, i)
-	local b1, b2 = s:byte(i, i + 1)
-	if not b1 or not b2 then
-		return nil
-	end
-	return b1 + b2 * 256
-end
-
-local function le_u32(s, i)
-	local b1, b2, b3, b4 = s:byte(i, i + 3)
-	if not b1 or not b2 or not b3 or not b4 then
-		return nil
-	end
-	return b1 + b2 * 256 + b3 * 65536 + b4 * 16777216
-end
-
-local function find_eocd(zip_data)
-	local sig = string.char(0x50, 0x4b, 0x05, 0x06)
-	local start = math.max(1, #zip_data - 65557)
-	for i = #zip_data - 3, start, -1 do
-		if zip_data:sub(i, i + 3) == sig then
-			return i
-		end
-	end
-	return nil
-end
-
-local function unzip_to_dir(zip_data, output_dir)
-	local eocd_pos = find_eocd(zip_data)
-	if not eocd_pos then
-		return false, "zip 缺少 EOCD 结构"
-	end
-	local cd_count = le_u16(zip_data, eocd_pos + 10)
-	local cd_offset = le_u32(zip_data, eocd_pos + 16)
-	if not cd_count or not cd_offset then
-		return false, "zip EOCD 字段非法"
-	end
-
-	local pos = cd_offset + 1
-	for _ = 1, cd_count do
-		if zip_data:sub(pos, pos + 3) ~= string.char(0x50, 0x4b, 0x01, 0x02) then
-			return false, "zip 中央目录头非法"
-		end
-		local method = le_u16(zip_data, pos + 10)
-		local comp_size = le_u32(zip_data, pos + 20)
-		local uncomp_size = le_u32(zip_data, pos + 24)
-		local name_len = le_u16(zip_data, pos + 28)
-		local extra_len = le_u16(zip_data, pos + 30)
-		local comment_len = le_u16(zip_data, pos + 32)
-		local local_offset = le_u32(zip_data, pos + 42)
-		if not method or not comp_size or not uncomp_size or not name_len or not extra_len or not comment_len or not local_offset then
-			return false, "zip 中央目录字段非法"
-		end
-		local name_start = pos + 46
-		local name = zip_data:sub(name_start, name_start + name_len - 1)
-		local safe_name = sanitize_zip_path(name)
-		pos = name_start + name_len + extra_len + comment_len
-
-		if safe_name and not safe_name:match("/$") then
-			local local_pos = local_offset + 1
-			if zip_data:sub(local_pos, local_pos + 3) ~= string.char(0x50, 0x4b, 0x03, 0x04) then
-				return false, "zip 本地头非法"
-			end
-			local local_name_len = le_u16(zip_data, local_pos + 26)
-			local local_extra_len = le_u16(zip_data, local_pos + 28)
-			if not local_name_len or not local_extra_len then
-				return false, "zip 本地头字段非法"
-			end
-			local data_start = local_pos + 30 + local_name_len + local_extra_len
-			local comp_data = zip_data:sub(data_start, data_start + comp_size - 1)
-			local out_data
-			if method == 0 then
-				out_data = comp_data
-			elseif method == 8 then
-				local ok, decompressed = pcall(love.data.decompress, "string", "deflate", comp_data)
-				if not ok then
-					return false, "zip 解压失败: " .. tostring(decompressed)
-				end
-				out_data = decompressed
-			else
-				return false, "zip 不支持的压缩方式: " .. tostring(method)
-			end
-			if uncomp_size and #out_data ~= uncomp_size then
-				return false, "zip 文件大小校验失败: " .. safe_name
-			end
-
-			local out_path = output_dir .. "/" .. safe_name
-			ensure_parent_dirs(out_path)
-			local ok = FS.write(out_path, out_data)
-			if not ok then
-				return false, "写入失败: " .. out_path
-			end
-		end
-	end
-
-	return true, nil
 end
 
 local function url_encode(str)
@@ -652,7 +540,10 @@ function ModItemRow:initialize(opts, row_w)
 	local toggle_w = toggle_size and toggle_size.x or 84
 	local toggle_h = toggle_size and toggle_size.y or 36
 	local right_pad = opts and opts.right_pad or (IS_ANDROID and 30 or 24)
-	local action_col_w = math.max(toggle_w, action_w * 2 + action_gap)
+	local actions = self.opts.actions or {}
+	local action_btn_count = #actions
+	local needed_action_w = action_w * math.max(1, action_btn_count) + action_gap * math.max(0, action_btn_count - 1)
+	local action_col_w = math.max(toggle_w, needed_action_w)
 	local action_col_left = row_w - right_pad - action_col_w
 	local status_w = clamp(opts and opts.status_width or action_col_w, 180, action_col_w)
 	local status_x = row_w - right_pad - status_w
@@ -718,8 +609,6 @@ function ModItemRow:initialize(opts, row_w)
 	local action_top_min_y = 104
 	local toggle_bottom = 0
 	local action_right = row_w - right_pad
-	local primary_x = action_right - action_w
-	local secondary_x = primary_x - action_w - action_gap
 	if self.opts.show_toggle then
 		local toggle = ModToggleButton:new(self.opts.enabled ~= false, V.v(toggle_w, clamp(toggle_h, 36, 44)))
 		local toggle_top_margin = opts and opts.toggle_top_margin or 16
@@ -779,31 +668,21 @@ function ModItemRow:initialize(opts, row_w)
 	action_h = clamp(action_h, action_h_min, action_h_max)
 	local action_y = ROW_H - action_h - action_bottom_margin
 
-	if self.opts.secondary_text then
-		local secondary = ModActionButton:new(self.opts.secondary_text, V.v(action_w, action_h))
-		secondary.pos = V.v(secondary_x, action_y)
-		secondary.on_press = function()
-			if self.opts.on_secondary then
-				self.opts.on_secondary()
-			end
-		end
-		self:add_child(secondary)
-		self.secondary_btn = secondary
-	end
+	local total_w = action_btn_count * action_w + math.max(0, action_btn_count - 1) * action_gap
+	local x = action_right - total_w
 
-	if self.opts.primary_text then
-		local primary = ModActionButton:new(self.opts.primary_text, V.v(action_w, action_h))
-		primary.pos = V.v(primary_x, action_y)
-		primary.on_press = function()
-			if self.opts.on_primary then
-				self.opts.on_primary()
+	self._action_buttons = {}
+	for _, action in ipairs(actions) do
+		local btn = ModActionButton:new(action.text, V.v(action_w, action_h))
+		btn.pos = V.v(x, action_y)
+		btn.on_press = function()
+			if action.on_press then
+				action.on_press()
 			end
 		end
-		self:add_child(primary)
-		self.primary_btn = primary
-	elseif self.secondary_btn then
-		-- 仅一个操作按钮时靠右对齐，避免视觉漂移到中间区域
-		self.secondary_btn.pos = V.v(primary_x, action_y)
+		self:add_child(btn)
+		self._action_buttons[#self._action_buttons + 1] = btn
+		x = x + action_w + action_gap
 	end
 
 	local sep = KView:new(V.v(row_w, 1))
@@ -910,6 +789,27 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	self._active_download_name = ""
 	self._http_thread = nil
 
+	self._developer_config = {
+		account = "",
+		password = ""
+	}
+	self._developer_token = nil
+	self._developer_mode = false
+	self._upload_pending_data = nil
+	self._upload_pending_cover = nil
+	self._my_plugins_only = false
+	do
+		local dev_chunk, dev_err = FS.load("developer.lua")
+		if dev_chunk then
+			local ok, result = pcall(dev_chunk)
+			if ok and type(result) == "table" then
+				self._developer_config.account = result.account or ""
+				self._developer_config.password = result.password or ""
+				self._developer_mode = self._developer_config.account ~= "" and self._developer_config.password ~= ""
+			end
+		end
+	end
+
 	self.back = KView:new(V.v(panel_w, panel_h))
 	self.back.colors.background = {47, 34, 6, 226}
 	self.back.anchor = V.v(panel_w / 2, panel_h / 2)
@@ -1006,6 +906,18 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 		end)
 	end
 	self.back:add_child(self.update_all_btn)
+
+	self.my_plugins_btn = ModActionButton:new("我的插件", V.v(header_btn_w, header_btn_h))
+	self.my_plugins_btn.pos = V.v(header_group_x + (header_btn_w + header_btn_gap) * 2, header_row2_y)
+	self.my_plugins_btn.on_press = function()
+		self._my_plugins_only = not self._my_plugins_only
+		if self.mode ~= "store" then
+			self:_render_current_list()
+		end
+		self:_refresh_header_buttons()
+	end
+	self.my_plugins_btn.hidden = not self._developer_mode
+	self.back:add_child(self.my_plugins_btn)
 
 	local pager_gap = 10
 	local pager_next_x = panel_w - 20 - pager_btn_w
@@ -1117,6 +1029,7 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 
 	local task_btn_w = clamp(math.floor(110 * touch_scale + 0.5), 110, 150)
 	local task_btn_h = clamp(math.floor(28 * touch_scale + 0.5), 28, 34)
+	self._confirm_btn_h = task_btn_h
 	self.task_cancel_btn = ModActionButton:new("断开请求", V.v(task_btn_w, task_btn_h))
 	self.task_cancel_btn.pos = V.v(self.task_dialog.size.x - task_btn_w - 12, self.task_dialog.size.y - task_btn_h - 12)
 	self.task_cancel_btn.on_press = function()
@@ -1124,6 +1037,48 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 		self:_set_status("已请求断连，正在停止当前网络操作…", nil)
 	end
 	self.task_dialog:add_child(self.task_cancel_btn)
+
+	local cover_btn_gap = 10
+	self._confirm_btn_gap = cover_btn_gap
+	local cover_btn_w = math.floor(task_btn_w * 0.8)
+	self._confirm_btn_w = cover_btn_w
+	self._cover_yes_btn = ModActionButton:new("上传封面", V.v(cover_btn_w, task_btn_h))
+	self._cover_yes_btn.on_press = function()
+		S:queue("GUIButtonCommon")
+		local mod_data = self._upload_pending_data
+		local has_cover = self._upload_pending_cover ~= nil
+		self:_reset_cover_prompt()
+		if mod_data then
+			self:_start_task("上传插件", function()
+				return self:_upload_plugin(mod_data, has_cover)
+			end)
+		end
+	end
+	self._cover_yes_btn.hidden = true
+	self.task_dialog:add_child(self._cover_yes_btn)
+
+	self._cover_no_btn = ModActionButton:new("跳过封面", V.v(cover_btn_w, task_btn_h))
+	self._cover_no_btn.on_press = function()
+		S:queue("GUIButtonCommon")
+		local mod_data = self._upload_pending_data
+		self:_reset_cover_prompt()
+		if mod_data then
+			self:_start_task("上传插件", function()
+				return self:_upload_plugin(mod_data, false)
+			end)
+		end
+	end
+	self._cover_no_btn.hidden = true
+	self.task_dialog:add_child(self._cover_no_btn)
+
+	self._confirm_cancel_btn = ModActionButton:new("取消", V.v(cover_btn_w, task_btn_h))
+	self._confirm_cancel_btn.on_press = function()
+		S:queue("GUIButtonCommon")
+		self:_reset_cover_prompt()
+	end
+	self._confirm_cancel_btn.hidden = true
+	self.task_dialog:add_child(self._confirm_cancel_btn)
+	self.task_dialog:add_child(self._cover_no_btn)
 
 	self.mod_list = KScrollList:new(V.v(panel_w - 40, scroll_h))
 	self.mod_list.pos = V.v(20, list_top_y)
@@ -1215,6 +1170,17 @@ function ModManagerView:_refresh_header_buttons()
 	self.page_lbl.text = string.format("第%d/%d页", self.store_page, self.store_total_pages)
 	self.task_cancel_btn:set_enabled(task_running)
 	self.update_all_btn:set_enabled(not task_running)
+	self.my_plugins_btn.hidden = not self._developer_mode or in_store
+	if not self.my_plugins_btn.hidden then
+		if self._my_plugins_only then
+			self.my_plugins_btn:set_text("切换本地插件")
+			self.my_plugins_btn.colors.background = {161, 122, 45, 245}
+			self.my_plugins_btn._label.colors.text = {255, 240, 190, 255}
+		else
+			self.my_plugins_btn:set_text("切换我的插件")
+			self.my_plugins_btn:_refresh()
+		end
+	end
 end
 
 function ModManagerView:_set_status(text, progress)
@@ -1703,7 +1669,7 @@ function ModManagerView:_install_plugin(item, is_update)
 	FS.createDirectory(stage_root)
 
 	self:_set_status("正在解压插件：" .. (item.name or item.entry or "?"), 92)
-	local ok, unzip_err = unzip_to_dir(zip_data, stage_root)
+	local ok, unzip_err = zip.unzip_to_dir(zip_data, stage_root)
 	if not ok then
 		return false, unzip_err
 	end
@@ -1880,35 +1846,49 @@ function ModManagerView:_render_local_list()
 		local cfg = mod_data.config
 		local mod_category = cfg.category or "other"
 		-- 过滤分类
-		if category_option.value == "all" or category_option.value == mod_category then
+		if (category_option.value == "all" or category_option.value == mod_category) and (not self._my_plugins_only or cfg.by == self._developer_config.account) then
 			local remote = self.remote_by_entry[mod_data.entry]
 			local status = ""
-			local primary_text, secondary_text
-			local on_primary, on_secondary
 
 			if remote and has_update(cfg.version, remote.version) then
 				status = string.format("可更新：v%s → v%s", safe_tostring(cfg.version), safe_tostring(remote.version))
-				primary_text = "更新"
-				on_primary = function()
-					self:_start_task("更新插件", function()
-						return self:_install_plugin(remote, true)
-					end)
-				end
 			elseif remote then
 				status = "已是最新版本"
 			else
 				status = self._remote_lookup_done and "未在商店中找到远端条目" or "未查询远端条目（点“查询远端”）"
 			end
-			secondary_text = "删除"
-			on_secondary = function()
-				self:_start_task("删除插件", function()
-					local ok, err = self:_delete_local_mod_by_name(mod_data.name)
-					if ok then
-						self:_set_status("已删除插件：" .. mod_data.name, 0)
-						return true, nil
+
+			local actions = {}
+			if self._developer_mode and cfg.by == self._developer_config.account then
+				actions[#actions + 1] = {
+					text = "上传",
+					on_press = function()
+						self:_handle_upload_plugin(mod_data)
 					end
-					return false, err
-				end)
+				}
+			end
+			actions[#actions + 1] = {
+				text = "删除",
+				on_press = function()
+					self:_start_task("删除插件", function()
+						local ok, err = self:_delete_local_mod_by_name(mod_data.name)
+						if ok then
+							self:_set_status("已删除插件：" .. mod_data.name, 0)
+							return true, nil
+						end
+						return false, err
+					end)
+				end
+			}
+			if remote and has_update(cfg.version, remote.version) then
+				actions[#actions + 1] = {
+					text = "更新",
+					on_press = function()
+						self:_start_task("更新插件", function()
+							return self:_install_plugin(remote, true)
+						end)
+					end
+				}
 			end
 
 			local row = ModItemRow:new({
@@ -1928,10 +1908,7 @@ function ModManagerView:_render_local_list()
 				on_toggle = function(v)
 					cfg.enabled = v
 				end,
-				primary_text = primary_text,
-				secondary_text = secondary_text,
-				on_primary = on_primary,
-				on_secondary = on_secondary
+				actions = actions
 			}, list_w)
 			self.mod_list:add_row(row)
 			self.mod_list:add_row(KView:new(V.v(list_w, 10)))
@@ -1948,17 +1925,39 @@ function ModManagerView:_render_store_list()
 		local installed = local_mod ~= nil
 		local needs_update = installed and has_update(local_mod.config.version, item.version)
 		local status
-		local primary_text = "安装"
 		if installed then
 			if needs_update then
 				status = string.format("已安装：v%s（可更新到 v%s）", safe_tostring(local_mod.config.version), safe_tostring(item.version))
-				primary_text = "更新"
 			else
 				status = "已安装且最新"
-				primary_text = "重装"
 			end
 		else
 			status = "未安装"
+		end
+
+		local actions = {}
+		actions[#actions + 1] = {
+			text = installed and (needs_update and "更新" or "重装") or "安装",
+			on_press = function()
+				self:_start_task("安装插件", function()
+					return self:_install_or_update_item(item)
+				end)
+			end
+		}
+		if installed then
+			actions[#actions + 1] = {
+				text = "删除",
+				on_press = function()
+					self:_start_task("删除插件", function()
+						local ok, err = self:_delete_local_mod_by_name(local_mod.name)
+						if ok then
+							self:_set_status("已删除插件：" .. local_mod.name, 0)
+							return true, nil
+						end
+						return false, err
+					end)
+				end
+			}
 		end
 
 		local row = ModItemRow:new({
@@ -1971,23 +1970,7 @@ function ModManagerView:_render_store_list()
 			status_width = self._row_status_width,
 			right_pad = self._row_right_pad,
 			action_bottom_margin = self._row_action_bottom_margin,
-			primary_text = primary_text,
-			secondary_text = installed and "删除" or nil,
-			on_primary = function()
-				self:_start_task("安装插件", function()
-					return self:_install_or_update_item(item)
-				end)
-			end,
-			on_secondary = installed and function()
-				self:_start_task("删除插件", function()
-					local ok, err = self:_delete_local_mod_by_name(local_mod.name)
-					if ok then
-						self:_set_status("已删除插件：" .. local_mod.name, 0)
-						return true, nil
-					end
-					return false, err
-				end)
-			end or nil
+			actions = actions
 		}, list_w)
 		self.mod_list:add_row(row)
 		self.mod_list:add_row(KView:new(V.v(list_w, 10)))
@@ -2044,7 +2027,11 @@ function ModManagerView:update(dt)
 	self:_sanitize_view_texts(self.back)
 	self:_render_progress()
 	if not self._active_task then
-		self.task_dialog.hidden = true
+		if not self._cover_yes_btn.hidden or not self._cover_no_btn.hidden then
+		-- 等待用户选择是否上传封面
+		else
+			self.task_dialog.hidden = true
+		end
 		return
 	end
 	local ok, result = coroutine.resume(self._active_task)
@@ -2070,6 +2057,203 @@ function ModManagerView:update(dt)
 		self._cancel_requested = false
 		self:_refresh_header_buttons()
 	end
+end
+
+function ModManagerView:_reset_cover_prompt()
+	self._upload_pending_data = nil
+	self._upload_pending_cover = nil
+	self._cover_yes_btn.hidden = true
+	self._cover_no_btn.hidden = true
+	self._confirm_cancel_btn.hidden = true
+	self.task_cancel_btn.hidden = false
+	self._cover_yes_btn:set_text("上传封面")
+end
+
+function ModManagerView:_handle_upload_plugin(mod_data)
+	local cover_name = nil
+	local items = FS.getDirectoryItems(mod_data.path) or {}
+	for _, name in ipairs(items) do
+		if name:lower():match("^cover%.") then
+			cover_name = name
+			break
+		end
+	end
+
+	self._upload_pending_data = mod_data
+	self._upload_pending_cover = cover_name
+	self.task_dialog.hidden = false
+	self.task_cancel_btn.hidden = true
+	self._confirm_cancel_btn.hidden = false
+	self.progress_fill.shape.args[4] = 0
+	self.progress_fill.size = V.v(0, self.progress_fill.size.y)
+
+	if cover_name then
+		self.task_title_lbl.text = "上传插件"
+		self.task_status_lbl.text = "检测到封面文件 " .. cover_name .. "，是否上传？"
+		self._cover_yes_btn:set_text("上传封面")
+		self._cover_yes_btn.hidden = false
+		self._cover_no_btn.hidden = false
+	else
+		self.task_title_lbl.text = "上传插件"
+		self.task_status_lbl.text = "确认上传 " .. (mod_data.config.name or mod_data.name) .. " 到商店？"
+		self._cover_yes_btn:set_text("确认上传")
+		self._cover_yes_btn.hidden = false
+		self._cover_no_btn.hidden = true
+	end
+
+	local visible = {}
+	if not self._cover_yes_btn.hidden then
+		visible[#visible + 1] = self._cover_yes_btn
+	end
+	if not self._cover_no_btn.hidden then
+		visible[#visible + 1] = self._cover_no_btn
+	end
+	if not self._confirm_cancel_btn.hidden then
+		visible[#visible + 1] = self._confirm_cancel_btn
+	end
+	local total_w = #visible * self._confirm_btn_w + (#visible - 1) * self._confirm_btn_gap
+	local x = self.task_dialog.size.x - total_w - 12
+	for _, btn in ipairs(visible) do
+		btn.pos = V.v(x, self.task_dialog.size.y - self._confirm_btn_h - 12)
+		x = x + self._confirm_btn_w + self._confirm_btn_gap
+	end
+end
+
+function ModManagerView:_developer_login()
+	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
+	if not base then
+		return false, "无法选择插件商店地址"
+	end
+
+	self:_set_status("正在登录开发者账户…", 5)
+	local resp, err = self:_request(base .. "/login", {
+		method = "POST",
+		headers = {
+			["Content-Type"] = "application/json"
+		},
+		data = json.encode({
+			username = self._developer_config.account,
+			password = self._developer_config.password
+		})
+	}, 15)
+
+	if err then
+		return false, "登录失败：" .. err
+	end
+	if tonumber(resp.code) ~= 200 then
+		return false, "登录失败：HTTP " .. tostring(resp.code) .. " " .. tostring(resp.body)
+	end
+
+	local ok, body = pcall(json.decode, resp.body)
+	if not ok or not body.token then
+		return false, "登录响应解析失败"
+	end
+
+	self._developer_token = body.token
+	return true, nil
+end
+
+function ModManagerView:_upload_plugin(mod_data, upload_cover)
+	if not self._developer_token then
+		local ok, err = self:_developer_login()
+		if not ok then
+			return false, err
+		end
+	end
+
+	local entry = mod_data.config.entry or mod_data.name
+	self:_set_status("正在打包插件：" .. entry, 10)
+
+	local cover_data = nil
+	local cover_ext = nil
+	if upload_cover then
+		local items = FS.getDirectoryItems(mod_data.path) or {}
+		for _, name in ipairs(items) do
+			if name:lower():match("^cover%.") then
+				cover_data = FS.read(mod_data.path .. "/" .. name)
+				cover_ext = name:match("%.([^%.]+)$")
+				break
+			end
+		end
+	end
+
+	self:_set_status("正在压缩插件：" .. entry, 20)
+	local zip_data = zip.create_from_dir(mod_data.path, {
+		exclude = {"^cover%..+$"},
+		skip_dirs = {".git"}
+	})
+	if not zip_data then
+		return false, "打包插件失败：目录为空"
+	end
+
+	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
+	if not base then
+		return false, "无法选择插件商店地址"
+	end
+
+	self:_set_status("正在上传插件：" .. entry, 40)
+	local resp, err = self:_request(base .. "/upload", {
+		method = "POST",
+		headers = {
+			["Authorization"] = "Bearer " .. self._developer_token,
+			["Content-Type"] = "application/octet-stream"
+		},
+		data = zip_data
+	}, 60)
+
+	if err then
+		return false, "上传失败：" .. err
+	end
+	if tonumber(resp.code) ~= 200 then
+		return false, "上传失败：HTTP " .. tostring(resp.code) .. " " .. tostring(resp.body)
+	end
+
+	local ok, body = pcall(json.decode, resp.body)
+	if not ok or not body.entry then
+		return false, "上传响应解析失败"
+	end
+
+	self:_set_status("已上传插件，正在处理…", 80)
+
+	if cover_data and cover_ext then
+		self:_set_status("正在上传封面…", 90)
+		local mime = "application/octet-stream"
+		if cover_ext == "png" then
+			mime = "image/png"
+		elseif cover_ext == "jpg" or cover_ext == "jpeg" then
+			mime = "image/jpeg"
+		elseif cover_ext == "gif" then
+			mime = "image/gif"
+		elseif cover_ext == "webp" then
+			mime = "image/webp"
+		end
+		local cover_resp, cover_err = self:_request(base .. "/" .. url_encode(entry) .. "/cover", {
+			method = "POST",
+			headers = {
+				["Authorization"] = "Bearer " .. self._developer_token,
+				["Content-Type"] = mime
+			},
+			data = cover_data
+		}, 30)
+
+		if cover_err then
+			self:_set_status("插件上传成功，但封面上传失败：" .. cover_err, 100)
+			self:_reload_local_mods()
+			self:_render_current_list()
+			return true, nil
+		end
+		if tonumber(cover_resp.code) ~= 200 then
+			self:_set_status("插件上传成功，但封面上传失败：HTTP " .. tostring(cover_resp.code), 100)
+			self:_reload_local_mods()
+			self:_render_current_list()
+			return true, nil
+		end
+	end
+
+	self:_set_status("上传成功：" .. entry, 100)
+	self:_reload_local_mods()
+	self:_render_current_list()
+	return true, nil
 end
 
 function ModManagerView:save()
