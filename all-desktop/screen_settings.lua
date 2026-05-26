@@ -416,7 +416,7 @@ function screen_settings:init(w, h, params, done_callback)
 
 	local l_ver = KLabel(V.v(sw, 12))
 
-	l_ver.text = string.format("ver. %s", version.string .. version.id or "NA")
+	l_ver.text = string.format("版本号：%s", version.id)
 	l_ver.font_name = "sans"
 	l_ver.font_size = 11
 	l_ver.colors.text = colors.text_black
