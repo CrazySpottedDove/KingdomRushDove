@@ -2179,7 +2179,7 @@ function ModManagerView:_upload_plugin(mod_data, upload_cover)
 	self:_set_status("正在压缩插件：" .. entry, 20)
 	local zip_data = zip.create_from_dir(mod_data.path, {
 		exclude = {"^cover%..+$"},
-		skip_dirs = {".git"}
+		skip_dirs = {".git", ".backup", ".tmp"}
 	})
 	if not zip_data then
 		return false, "打包插件失败：目录为空"
