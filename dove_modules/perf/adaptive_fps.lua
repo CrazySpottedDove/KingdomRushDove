@@ -9,6 +9,7 @@ local M = {
 function M:set_scene(scene)
 	self.scene = scene
 	self.counter = 0
+	-- scene 的初始 max_fps 意味着渲染的最高帧率，max_fps 大于这个值是没有意义的
 	self.max_fps = scene.max_fps
 	self.fps = scene.max_fps
 	self.tick_length = 1 / self.fps

@@ -3485,11 +3485,6 @@ function PauseView:initialize()
 		function btn_slow.on_click()
 			S:queue("GUIButtonCommon")
 			game_gui.game.simulation.store.speed_factor = game_gui.game.simulation.store.speed_factor * 0.5
-			if game_gui.game.simulation.store.speed_factor > 1 then
-				game_gui.game.simulation.store.tick_length = math.min(TICK_LENGTH * game_gui.game.simulation.store.speed_factor, 1 / 30)
-			else
-				game_gui.game.simulation.store.tick_length = TICK_LENGTH
-			end
 		end
 		self:add_child(btn_slow)
 
@@ -3501,7 +3496,6 @@ function PauseView:initialize()
 		function btn_normal.on_click()
 			S:queue("GUIButtonCommon")
 			game_gui.game.simulation.store.speed_factor = 1
-			game_gui.game.simulation.store.tick_length = TICK_LENGTH
 		end
 		self:add_child(btn_normal)
 
@@ -3513,11 +3507,6 @@ function PauseView:initialize()
 		function btn_quick.on_click()
 			S:queue("GUIButtonCommon")
 			game_gui.game.simulation.store.speed_factor = game_gui.game.simulation.store.speed_factor * 2
-			if game_gui.game.simulation.store.speed_factor > 1 then
-				game_gui.game.simulation.store.tick_length = math.min(TICK_LENGTH * game_gui.game.simulation.store.speed_factor, 1 / 30)
-			else
-				game_gui.game.simulation.store.tick_length = TICK_LENGTH
-			end
 		end
 		self:add_child(btn_quick)
 
