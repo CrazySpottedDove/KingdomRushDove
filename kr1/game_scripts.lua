@@ -4407,7 +4407,7 @@ function scripts.graveyard_controller.update(this, store)
 						if #nearest_nodes < 1 then
 							log.error("graveyard controller %s could not spawn enemy. node not found near %s,%s", this.id, s_pos.x, s_pos.y)
 						else
-							pi, spi, ni = unpack(nearest_nodes[1])
+							pi, _, ni = unpack(nearest_nodes[1])
 							e = E:create_entity(s[1])
 							e.nav_path.pi, e.nav_path.spi, e.nav_path.ni = pi, math.random(1, 3), ni
 							e.pos = V.vclone(s_pos)
@@ -4466,7 +4466,7 @@ function scripts.graveyard_s110.update(this, store)
 						if #nearest_nodes < 1 then
 							log.error("graveyard controller %s could not spawn enemy. node not found near %s,%s", this.id, s_pos.x, s_pos.y)
 						else
-							pi, spi, ni = unpack(nearest_nodes[1])
+							pi, _, ni = unpack(nearest_nodes[1])
 
 							if t.template_name == "enemy_halloween_zombie" then
 								e = E:create_entity("enemy_skeleton")
@@ -5517,7 +5517,6 @@ function scripts.enemy_alien_breeder.update(this, store)
 					coroutine.yield()
 
 					this.health_bar.hidden = true
-					hugging = true
 
 					local damage_value = blocker.health.hp / (blocker.hero and 5 or 2.5)
 
@@ -5622,7 +5621,6 @@ function scripts.enemy_alien_breeder.update(this, store)
 					this.vis.bans = band(this.vis.bans, bnot(F_TWISTER))
 					this.vis.bans = band(this.vis.bans, bnot(F_BLOCK))
 					this.health_bar.hidden = true
-					hugging = false
 				end
 
 				coroutine.yield()
@@ -5865,7 +5863,7 @@ function scripts.enemy_cannibal_volcano.update(this, store)
 
 			::label_24_0::
 
-			ok, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, false, function(this, store)
+			ok, blocker = SU.y_enemy_walk_until_blocked(store, this, false, function(this, store)
 				return ready_for_action()
 			end)
 
@@ -10462,7 +10460,6 @@ function scripts.high_elven_sentinel_extra.update(this, store)
 	this.tween.reverse = false
 	this.tween.ts = store.tick_ts
 	shots = 0
-	charge_ts = store.tick_ts
 
 	while not target do
 		target = find_target(ra.max_range)
@@ -18735,7 +18732,7 @@ function scripts.decal_river_object.update(this, store)
 	while true do
 		check_clicked()
 
-		next, new = P:next_entity_node(this, store.tick_length)
+		next = P:next_entity_node(this, store.tick_length)
 
 		if next == nil then
 			break
@@ -20107,8 +20104,6 @@ function scripts.simon_controller.update(this, store)
 			if ms[i].ui.clicked then
 				clear_touches()
 
-				touch_ts = store.tick_ts
-
 				return i
 			end
 		end
@@ -20580,7 +20575,7 @@ function scripts.nav_faerie.update(this, store)
 			this.render.sprites[4].hidden = current_color ~= "yellow"
 		end
 
-		next, new = P:next_entity_node(this, store.tick_length)
+		next = P:next_entity_node(this, store.tick_length)
 
 		if not next then
 			log.error("(%s)nav_faerie reached goal", this.id)
@@ -20969,7 +20964,7 @@ function scripts.decal_black_baby_dragon.update(this, store)
 					U.set_destination(this, nex)
 					U.walk_off__accel__unsnapped(this, store.tick_length)
 
-					nex, new = P:next_entity_node(this, store.tick_length)
+					nex = P:next_entity_node(this, store.tick_length)
 
 					coroutine.yield()
 				end
@@ -26017,10 +26012,8 @@ function scripts.decal_stage_04_arborean.update(this, store)
 				next_destination = this.walk_destination[destination_idx]
 
 				if next_destination.x - (this.pos.x - start_pos.x) > 0 then
-					walking_left = false
 					this.render.sprites[1].flip_x = false
 				else
-					walking_left = true
 					this.render.sprites[1].flip_x = true
 				end
 
@@ -26093,17 +26086,11 @@ end
 scripts.decal_stage_04_easteregg_sheepy_baby = {}
 
 function scripts.decal_stage_04_easteregg_sheepy_baby.update(this, store)
-	local walking_left = false
-	local is_dead = false
-	local destination_idx = 1
-	local start_pos = V.vclone(this.pos)
 	local reach_height = false
 	local fm = this.force_motion
-	local controller
 
 	for _, v in pairs(store.entities) do
 		if v.template_name == "controller_stage_04_arboreans" then
-			controller = v
 
 			break
 		end
@@ -28960,10 +28947,8 @@ function scripts.bullet_stage_10_obelisk_priests_alternative.update(this, store)
 	end
 
 	local function fly_to_pos(target_pos)
-		local start_ts = store.tick_ts
 		local last_pos = V.vclone(this.pos)
 		local dx, dy = V.sub(target_pos.x, target_pos.y, this.pos.x, this.pos.y)
-		local dist = V.len(dx, dy)
 
 		while V.len(dx, dy) > 20 do
 			last_pos.x, last_pos.y = this.pos.x, this.pos.y
@@ -28972,7 +28957,6 @@ function scripts.bullet_stage_10_obelisk_priests_alternative.update(this, store)
 
 			this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
 			dx, dy = V.sub(target_pos.x, target_pos.y, this.pos.x, this.pos.y)
-			dist = V.len(dx, dy)
 
 			coroutine.yield()
 		end
@@ -32331,10 +32315,9 @@ function scripts.tower_stage_13_sunray.update(this, store)
 				local b = E:create_entity(as.bullet)
 				local start_offset = as.bullet_start_offset
 
-				enemy, pred_pos = find_target(as)
+				enemy = find_target(as)
 
 				if enemy then
-					enemy_id = enemy.id
 					enemy_pos = enemy.pos
 				end
 
@@ -32447,7 +32430,7 @@ function scripts.tower_stage_13_sunray.update(this, store)
 				this.ray_fx_start = fx
 			end
 
-			enemy, pred_pos = find_target(ab)
+			enemy = find_target(ab)
 
 			if enemy then
 				enemy_id = enemy.id
@@ -34942,7 +34925,6 @@ function scripts.enemy_surveyor_harpy.update(this, store)
 
 	while true do
 		if this.cliff then
-			terrain_type = SU.enemy_cliff_change(store, this)
 		end
 
 		if this.health.dead then
@@ -38266,7 +38248,6 @@ function scripts.enemy_crocs_flier.update(this, store)
 
 	while true do
 		if this.cliff then
-			terrain_type = SU.enemy_cliff_change(store, this)
 		end
 
 		if this.health.dead then
@@ -41828,7 +41809,6 @@ function scripts.tower_stage_20_arborean_honey.update(this, store)
 		U.animation_start(this, "hit", nil, store.tick_ts, false, 3)
 
 		if enemy then
-			last_target_pos = enemy.pos
 
 			shot_bullet(a, enemy)
 		end
@@ -42569,7 +42549,6 @@ function scripts.controller_stage_23_roboboots.update(this, store)
 
 	for _, e in pairs(store.entities) do
 		if e.template_name == "decal_stage_23_mask_5" then
-			mask_boot_right = e.id
 		elseif e.template_name == "decal_stage_23_mask_6" then
 			mask_boot_left = e.id
 		end
@@ -43608,7 +43587,6 @@ function scripts.controller_stage_25_torso.update(this, store)
 			local near = U.find_soldiers_in_range(soldiers, v.pos, 0, this.fist_radius, 0, 0)
 
 			if #near_soldiers < #near then
-				soldier = v
 				near_soldiers = near
 			end
 		end
@@ -43908,7 +43886,6 @@ function scripts.bullet_stage_25_torso_missile.update(this, store)
 
 			this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
 			dx, dy = V.sub(target_pos.x, target_pos.y, this.pos.x, this.pos.y)
-			dist = V.len(dx, dy)
 
 			coroutine.yield()
 		end
@@ -44225,7 +44202,6 @@ function scripts.decal_stage_26_mewtwo.update(this, store)
 		if this.ui.clicked then
 			this.ui.clicked = nil
 			this.ui.can_click = false
-			eyes_opened = false
 			taps = taps + 1
 
 			if taps < 3 then
@@ -46518,7 +46494,6 @@ function scripts.bullet_enemy_brute_welder_death.update(this, store)
 
 			this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
 			dx, dy = V.sub(target_pos.x, target_pos.y, this.pos.x, this.pos.y)
-			dist = V.len(dx, dy)
 
 			coroutine.yield()
 		end
@@ -47859,8 +47834,6 @@ function scripts.controller_stage_29_spider_holders.update(this, store)
 
 					flag = nil
 				end
-
-				new_hldr = replace_holder(store, hldr, "tower_holder_blocked_spiders")
 
 				::label_1545_0::
 
@@ -49698,8 +49671,7 @@ function scripts.ps_nine_tailed_fox_underground_trail.update(this, store)
 				return false
 			end
 		else
-			use_path = true
-			next, new = P:next_entity_node(this, store.tick_length)
+			next = P:next_entity_node(this, store.tick_length)
 
 			if not next then
 				log.debug("ps_nine_tailed_fox_underground_trail ran out of nodes to walk")
@@ -49931,7 +49903,6 @@ function scripts.enemy_water_spirit.update(this, store)
 				return false
 			end
 		else
-			use_path = true
 			next, new = P:next_entity_node(this, store.tick_length)
 
 			if not next then
@@ -51762,7 +51733,7 @@ function scripts.enemy_fan_guard.update(this, store)
 		if this.unit.is_stunned then
 			y_fan_guard_stun(store, this)
 		else
-			cont, blocker, ranged = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
+			cont, blocker = SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 			if not cont then
 			-- block empty
@@ -52169,7 +52140,6 @@ function scripts.enemy_golden_eyed.update(this, store)
 				return false
 			end
 		else
-			use_path = true
 			next, new = P:next_entity_node(this, store.tick_length)
 
 			if not next then
@@ -52986,8 +52956,7 @@ function scripts.enemy_demon_minotaur.update(this, store)
 				return false
 			end
 		else
-			use_path = true
-			next, new = P:next_entity_node(this, store.tick_length)
+			next = P:next_entity_node(this, store.tick_length)
 
 			if not next then
 				log.debug("enemy %s ran out of nodes to walk", this.id)
@@ -55530,7 +55499,7 @@ function scripts.stage_33_lightning_strike.update(this, store)
 
 		if #nearest > 0 then
 			path_pi, path_spi, path_ni = unpack(nearest[1])
-			enemy_pos = P:node_pos(path_pi, path_spi, path_ni)
+			P:node_pos(path_pi, path_spi, path_ni)
 		end
 
 		local enemy = E:create_entity(this.spawn_unit)
@@ -56294,7 +56263,6 @@ function scripts.controller_stage_34_ponds_spawner.update(this, store)
 
 	for i, v in pairs(store.entities) do
 		if v.template_name == this.hulk_spawner_t then
-			spawner_decal = v
 
 			break
 		end
@@ -67359,7 +67327,6 @@ function scripts.soldier_warden_stage_40_moving_island.get_info(this)
 		local b = E:get_template(this.attacks.list[1].bullet)
 
 		min, max = b.bullet.damage_min, b.bullet.damage_max
-		d_type = b.bullet.damage_type
 	end
 
 	if this.unit and min then
@@ -67373,7 +67340,6 @@ function scripts.soldier_warden_stage_40_moving_island.get_info(this)
 	local cooldown
 
 	if this.attacks and this.attacks.list[1].cooldown then
-		cooldown = this.attacks.list[1].cooldown
 	end
 
 	return {
@@ -67817,7 +67783,7 @@ function scripts.enemy_basic_lava.update(this, store, script)
 				goto label_2214_0
 			end
 
-			cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, nil, break_fn)
+			cont, blocker = SU.y_enemy_walk_until_blocked(store, this, nil, break_fn)
 
 			if not cont then
 			-- block empty
@@ -68009,7 +67975,7 @@ function scripts.enemy_evolved_lava.update(this, store, script)
 			local an, af = this.landing_anim
 
 			if s then
-				an, af = U.animation_name_facing_point(this, this.landing_anim, s.pos)
+				an = U.animation_name_facing_point(this, this.landing_anim, s.pos)
 			end
 
 			U.animation_start(this, an, nil, store.tick_ts, false, 1, true)

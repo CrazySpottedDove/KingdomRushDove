@@ -277,7 +277,6 @@ end
 local function update_progress(percent, force, bytes_downloaded, bytes_total)
 	local now = love.timer.getTime()
 	if force or (now - last_progress_update) > DOWNLOAD_CONFIG.progress_update_interval then
-		current_download_progress = percent
 		last_progress_update = now
 
 		-- 更新 UI 状态

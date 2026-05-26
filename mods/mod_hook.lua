@@ -9,14 +9,7 @@ local mod_utils = require("mod_utils")
 local hook_utils = require("hook_utils")
 local mod_db = require("mod_db")
 local HOOK = hook_utils.HOOK
-local A
 local raw_image_load_atlas = nil
-
-if IS_KR5 then
-	A = require("klove.animation_db")
-else
-	A = require("animation_db")
-end
 
 local hook = hook_utils:new()
 

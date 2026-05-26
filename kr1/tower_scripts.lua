@@ -3648,8 +3648,6 @@ scripts.tower_bfg = {
 
 						local trigger_pos = vclone(trigger.pos)
 
-						last_ts = ac.ts
-
 						animation_start(this, ac.animation, nil, store.tick_ts, false, tower_sid)
 						y_wait(store, ac.shoot_time)
 
@@ -3686,8 +3684,6 @@ scripts.tower_bfg = {
 						ab.ts = store.tick_ts
 
 						local trigger_pos = vclone(trigger.pos)
-
-						last_ts = ab.ts
 
 						animation_start(this, ab.animation, nil, store.tick_ts, false, tower_sid)
 						y_wait(store, ab.shoot_time)
@@ -6840,7 +6836,6 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
 
 		if b.target_id then
 			mspeed = b.min_speed
-			new_target = true
 
 			goto label_1011_0
 		end
@@ -7542,7 +7537,6 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 			y_animation_wait(this, this.render.sid_mage)
 
 			attack.ts = start_ts
-			last_ts_shared = start_ts
 		end
 	end
 
@@ -7582,7 +7576,6 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 		y_animation_wait(this, this.render.sid_mage)
 
 		attack.ts = start_ts
-		last_ts_shared = start_ts
 	end
 
 	local target, pred_pos = find_target(a.list[1])
@@ -9133,7 +9126,6 @@ function scripts.tower_pandas.update(this, store)
 		end
 
 		if panda.is_panda_green then
-			green_panda_sid = panda.render
 		end
 	end
 
@@ -9342,7 +9334,6 @@ function scripts.tower_pandas.update(this, store)
 					queue_insert(store, bullet)
 				end
 
-				prev_target_pos = vclone(last_target_pos)
 				panda.shoot_cfg = nil
 			end
 		end
@@ -10532,7 +10523,7 @@ function scripts.tower_ray.update(this, store)
 							b = E:create_entity(aa.bullet)
 							start_offset = aa.bullet_start_offset
 
-							an, af, ai = animation_name_facing_point(this, aa.animation_loop, enemy.pos, this.render.sid_mage, this.mage_offset)
+							an, af = animation_name_facing_point(this, aa.animation_loop, enemy.pos, this.render.sid_mage, this.mage_offset)
 
 							a._last_target_pos.x, a._last_target_pos.y = enemy.pos.x, enemy.pos.y
 
@@ -10557,7 +10548,6 @@ function scripts.tower_ray.update(this, store)
 
 							if enemy then
 								enemy_id = enemy.id
-								enemy_pos = enemy.pos
 							else
 								goto label_989_0
 							end
@@ -10576,14 +10566,14 @@ function scripts.tower_ray.update(this, store)
 
 							::label_989_0::
 
-							an, af, ai = animation_name_facing_point(this, aa.animation_end, a._last_target_pos, this.render.sid_mage, this.mage_offset)
+							an, af = animation_name_facing_point(this, aa.animation_end, a._last_target_pos, this.render.sid_mage, this.mage_offset)
 
 							animation_start(this, an, af, store.tick_ts, false, this.render.sid_mage)
 							U.y_animation_play_group(this, "glow_end", nil, store.tick_ts, 1, "rocks")
 							U.animation_start_group(this, "idle", nil, store.tick_ts, true, "rocks")
 							y_animation_wait(this, this.render.sid_mage)
 
-							an, af, ai = animation_name_facing_point(this, "idle", a._last_target_pos, this.render.sid_mage, this.shooter_offset)
+							an, af = animation_name_facing_point(this, "idle", a._last_target_pos, this.render.sid_mage, this.shooter_offset)
 
 							animation_start(this, an, af, store.tick_ts, true, this.render.sid_mage)
 
@@ -10637,7 +10627,7 @@ function scripts.tower_ray.update(this, store)
 								goto label_989_1
 							end
 
-							enemy, pred_pos = find_target(aa)
+							enemy = find_target(aa)
 
 							if not enemy then
 								goto label_ray_lvl4_abort_before_beam
@@ -10646,7 +10636,7 @@ function scripts.tower_ray.update(this, store)
 							b = E:create_entity(aa.bullet)
 							start_offset = aa.bullet_start_offset
 
-							an, af, ai = animation_name_facing_point(this, aa.animation_loop, enemy.pos, this.render.sid_mage, this.mage_offset)
+							an, af = animation_name_facing_point(this, aa.animation_loop, enemy.pos, this.render.sid_mage, this.mage_offset)
 
 							a._last_target_pos.x, a._last_target_pos.y = enemy.pos.x, enemy.pos.y
 
@@ -10688,7 +10678,7 @@ function scripts.tower_ray.update(this, store)
 
 							range_to_stay = a.range + a.extra_range
 
-							enemy, pred_pos = find_target(aa)
+							enemy = find_target(aa)
 
 							if enemy then
 								enemy_id = enemy.id
@@ -10766,14 +10756,14 @@ function scripts.tower_ray.update(this, store)
 
 							U.animation_start_group(this, "break", nil, store.tick_ts, false, "crystals")
 
-							an, af, ai = animation_name_facing_point(this, aa.animation_end, a._last_target_pos, this.render.sid_mage, this.mage_offset)
+							an, af = animation_name_facing_point(this, aa.animation_end, a._last_target_pos, this.render.sid_mage, this.mage_offset)
 
 							animation_start(this, an, af, store.tick_ts, false, this.render.sid_mage)
 							U.y_animation_play_group(this, "glow_end", nil, store.tick_ts, 1, "rocks")
 							U.animation_start_group(this, "idle", nil, store.tick_ts, true, "rocks")
 							y_animation_wait(this, this.render.sid_mage)
 
-							an, af, ai = animation_name_facing_point(this, "idle", a._last_target_pos, this.render.sid_mage, this.shooter_offset)
+							an, af = animation_name_facing_point(this, "idle", a._last_target_pos, this.render.sid_mage, this.shooter_offset)
 
 							animation_start(this, an, af, store.tick_ts, true, this.render.sid_mage)
 
@@ -10797,7 +10787,7 @@ function scripts.tower_ray.update(this, store)
 
 								local soffset = this.shooter_offset
 
-								an, af, ai = animation_name_facing_point(this, "idle", a._last_target_pos, this.render.sid_mage, soffset)
+								an, af = animation_name_facing_point(this, "idle", a._last_target_pos, this.render.sid_mage, soffset)
 								animation_start(this, an, af, store.tick_ts, true, this.render.sid_mage)
 							end
 
@@ -13443,7 +13433,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
 						this.ray_fx_start = fx
 					end
 
-					enemy, pred_pos = find_target(ar)
+					enemy = find_target(ar)
 
 					if enemy then
 						enemy_id = enemy.id
@@ -14606,7 +14596,6 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 			this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
 			ps.particle_system.emit_offset.x, ps.particle_system.emit_offset.y = V.rotate(this.render.sprites[1].r, ps.emit_offset_relative.x, ps.emit_offset_relative.y)
 			dx, dy = V.sub(target_pos.x, target_pos.y, this.pos.x, this.pos.y)
-			dist = V.len(dx, dy)
 
 			coroutine.yield()
 		end
@@ -14923,28 +14912,20 @@ function scripts.tower_flamespitter.update(this, store)
 
 		if a1 <= angle_deg and angle_deg < a2 then
 			o_name, o_flip, o_idx = angles[3], true, 3
-			quadrant = 1
 		elseif a2 <= angle_deg and angle_deg < a3 then
 			o_name, o_flip, o_idx = angles[4], false, 4
-			quadrant = 2
 		elseif a3 <= angle_deg and angle_deg < a4 then
 			o_name, o_flip, o_idx = angles[3], false, 3
-			quadrant = 3
 		elseif a4 <= angle_deg and angle_deg < a5 then
 			o_name, o_flip, o_idx = angles[2], false, 2
-			quadrant = 4
 		elseif a5 <= angle_deg and angle_deg < a6 then
 			o_name, o_flip, o_idx = angles[1], false, 1
-			quadrant = 5
 		elseif a6 <= angle_deg and angle_deg < a7 then
 			o_name, o_flip, o_idx = angles[5], false, 5
-			quadrant = 6
 		elseif a7 <= angle_deg and angle_deg < a8 then
 			o_name, o_flip, o_idx = angles[1], true, 1
-			quadrant = 7
 		else
 			o_name, o_flip, o_idx = angles[2], true, 2
-			quadrant = 8
 		end
 
 		return o_name, o_flip, o_idx
@@ -14972,7 +14953,7 @@ function scripts.tower_flamespitter.update(this, store)
 		local angle_dist = km.short_angle_deg(current_angle, target_angle_deg)
 
 		current_angle = km.unroll_deg(current_angle + math.min(this.turn_speed, math.abs(angle_dist)) * km.sign(angle_dist))
-		a_name, a_flip, angle_idx = animation_name_facing_angle_flamespitter("idle", current_angle)
+		a_name, a_flip = animation_name_facing_angle_flamespitter("idle", current_angle)
 
 		animation_start(this, a_name, a_flip, store.tick_ts, false, this.render.sid_tower_top)
 
@@ -15140,7 +15121,7 @@ function scripts.tower_flamespitter.update(this, store)
 		a.ts = start_ts
 	end
 
-	a_name, a_flip, angle_idx = animation_name_facing_angle_flamespitter("idle", this.tower_upgrade_persistent_data.current_angle)
+	a_name, a_flip = animation_name_facing_angle_flamespitter("idle", this.tower_upgrade_persistent_data.current_angle)
 
 	animation_start(this, a_name, a_flip, store.tick_ts, false, this.render.sid_tower_top)
 
@@ -15620,7 +15601,7 @@ function scripts.tower_ballista.update(this, store)
 		local angle_dist = km.short_angle_deg(current_angle, target_angle_deg)
 
 		current_angle = km.unroll_deg(current_angle + math.min(this.turn_speed, math.abs(angle_dist)) * km.sign(angle_dist))
-		a_name, a_flip, angle_idx = animation_name_facing_angle_ballista("idle", current_angle)
+		a_name, a_flip = animation_name_facing_angle_ballista("idle", current_angle)
 
 		U.animation_start(this, a_name, a_flip, store.tick_ts, false, this.render.sid_tower_top)
 
@@ -15643,7 +15624,7 @@ function scripts.tower_ballista.update(this, store)
 		local angle_in_radian = math.atan2(pos.y - this.pos.y - this.tower_top_offset.y, pos.x - this.pos.x - this.tower_top_offset.x)
 		local angle_in_degree = angle_in_radian % (2 * math.pi) * 180 / math.pi
 
-		a_name, a_flip, angle_idx = animation_name_facing_angle_ballista("idle", angle_in_degree)
+		a_name, a_flip = animation_name_facing_angle_ballista("idle", angle_in_degree)
 
 		U.animation_start(this, a_name, a_flip, store.tick_ts, false, this.render.sid_tower_top)
 
@@ -15702,7 +15683,7 @@ function scripts.tower_ballista.update(this, store)
 		ab.ts = start_ts
 	end
 
-	a_name, a_flip, angle_idx = animation_name_facing_angle_ballista("idle", this.tower_upgrade_persistent_data.current_angle)
+	a_name, a_flip = animation_name_facing_angle_ballista("idle", this.tower_upgrade_persistent_data.current_angle)
 
 	U.animation_start(this, a_name, a_flip, store.tick_ts, false, this.render.sid_tower_top)
 

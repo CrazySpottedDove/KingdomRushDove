@@ -1973,10 +1973,7 @@ end
 function gui:path_nodes_select(x, y, w, h)
 	log.debug("x:%s,y%s,w:%s,h:%s", x, y, w, h)
 
-	local multi = true
-
 	if not w or not h then
-		multi = false
 		w, h = NODE_SELECTION_WINDOW * 2, NODE_SELECTION_WINDOW * 2
 		x, y = x - w / 2, y - h / 2
 	end
@@ -1985,8 +1982,6 @@ function gui:path_nodes_select(x, y, w, h)
 	local lpi = self.editor.path_selected
 
 	self:select_node()
-
-	local sel = {}
 
 	for pi, path in ipairs(self.editor.path_curves) do
 		if not lpi or lpi == pi then

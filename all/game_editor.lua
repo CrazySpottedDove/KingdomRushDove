@@ -1443,19 +1443,19 @@ function editor:draw()
 					local oe = towers[row[i]]
 
 					if oe then
-						local tx, ty, ta, a, r
+						local tx, ty, a
 
 						if i == 1 then
 							tx, ty = e.pos.x + ox, e.pos.y
-							a, r = V.toPolar(oe.pos.x - ax - (e.pos.x + ox), oe.pos.y - e.pos.y)
+							a = V.toPolar(oe.pos.x - ax - (e.pos.x + ox), oe.pos.y - e.pos.y)
 						elseif i == 2 then
 							tx, ty = e.pos.x, e.pos.y + oy
-							a, r = V.toPolar(oe.pos.x - e.pos.x, oe.pos.y - ay - (e.pos.y - oy))
+							a = V.toPolar(oe.pos.x - e.pos.x, oe.pos.y - ay - (e.pos.y - oy))
 						elseif i == 3 then
-							a, r = V.toPolar(oe.pos.x + ax - (e.pos.x - ox), oe.pos.y - e.pos.y)
+							a = V.toPolar(oe.pos.x + ax - (e.pos.x - ox), oe.pos.y - e.pos.y)
 							tx, ty = e.pos.x - ox, e.pos.y
 						else
-							a, r = V.toPolar(oe.pos.x - e.pos.x, oe.pos.y + ay - (e.pos.y + oy))
+							a = V.toPolar(oe.pos.x - e.pos.x, oe.pos.y + ay - (e.pos.y + oy))
 							tx, ty = e.pos.x, e.pos.y - oy
 						end
 
@@ -1484,7 +1484,7 @@ function editor:draw()
 	G.translate(rox, roy)
 	G.scale(gs, gs)
 
-	last_idx = RU.draw_frames_range(self.store.render_frames, 1, Z_GUI - 1)
+	RU.draw_frames_range(self.store.render_frames, 1, Z_GUI - 1)
 
 	G.pop()
 

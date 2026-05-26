@@ -1596,12 +1596,12 @@ scripts.hero_wizard = {
 					this.arcanetorrent_factor = tmp - 1
 				end
 
-				brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+				brk = SU.y_soldier_melee_block_and_attacks(store, this)
 
 				if brk or U.is_blocked_valid(store, this) then
 				-- block empty
 				else
-					brk, sta = SU.y_soldier_ranged_attacks(store, this)
+					brk = SU.y_soldier_ranged_attacks(store, this)
 
 					if brk then
 					-- block empty
@@ -2118,9 +2118,9 @@ scripts.hero_bolin = {
 					if ready_to_attack(a, store) then
 						local target, targets, pred_pos
 						if a.filter_fn then
-							target, targets, pred_pos = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, a.filter_fn)
+							target, targets = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, a.filter_fn)
 						else
-							target, targets, pred_pos = U.find_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
+							target, targets = U.find_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
 						end
 
 						if not target then
@@ -2149,9 +2149,9 @@ scripts.hero_bolin = {
 
 								if si > 1 and (not target or target.health.death or not target_dist or not (target_dist >= a.min_range) or target_dist <= a.max_range or true) then
 									if a.filter_fn then
-										target, targets, pred_pos = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, a.filter_fn)
+										target, targets = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, a.filter_fn)
 									else
-										target, targets, pred_pos = U.find_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
+										target, targets = U.find_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
 									end
 
 									if not target then
@@ -3842,12 +3842,12 @@ scripts.aura_malik_fissure = {
 
 		do_attack(this.pos)
 
-		local pi, spi, ni, pis
+		local pi, ni, pis
 
 		if a.target_id and store.entities[a.target_id] then
 			local np = store.entities[a.target_id].nav_path
 
-			pi, spi, ni = np.pi, np.spi, np.ni
+			pi, ni = np.pi, np.ni
 		else
 			local nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
 
@@ -3857,7 +3857,7 @@ scripts.aura_malik_fissure = {
 				goto label_201_0
 			end
 
-			pi, spi, ni = unpack(nodes[1])
+			pi, ni = nodes[1][1], nodes[1][3]
 		end
 
 		pis = {{
@@ -4440,20 +4440,20 @@ scripts.hero_priest = {
 				end
 
 				if this.soldier.target_id then
-					brk, sta = SU.y_soldier_ranged_attacks(store, this)
+					brk = SU.y_soldier_ranged_attacks(store, this)
 
 					if brk then
 						goto label_365_0
 					end
 				end
 
-				brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+				brk = SU.y_soldier_melee_block_and_attacks(store, this)
 
 				if brk or U.is_blocked_valid(store, this) then
 					goto label_365_0
 				end
 
-				brk, sta = SU.y_soldier_ranged_attacks(store, this)
+				brk = SU.y_soldier_ranged_attacks(store, this)
 
 				if brk then
 					goto label_365_0
@@ -10342,7 +10342,7 @@ scripts.hero_elves_archer = {
 						loops = math.min(attack.max_loops - loops_done, pred_shots)
 
 						for i = 1, loops do
-							an, af, ai = U.animation_name_facing_point(this, attack.animations[2], target.pos)
+							an, af = U.animation_name_facing_point(this, attack.animations[2], target.pos)
 
 							U.animation_start(this, an, af, store.tick_ts, false)
 
@@ -10406,7 +10406,7 @@ scripts.hero_elves_archer = {
 
 						::label_79_1::
 
-						an, af, ai = U.animation_name_facing_point(this, attack.animations[3], target.pos)
+						an, af = U.animation_name_facing_point(this, attack.animations[3], target.pos)
 
 						U.animation_start(this, an, af, store.tick_ts, 1)
 
@@ -11873,7 +11873,7 @@ function scripts.hero_wilbur.update(this, store)
 			end
 		end
 
-		brk, sta = SU.y_soldier_ranged_attacks(store, this)
+		brk = SU.y_soldier_ranged_attacks(store, this)
 
 		if brk then
 		-- block empty
@@ -14161,7 +14161,7 @@ function scripts.hero_phoenix.update(this, store)
 			end
 		end
 
-		brk, sta = SU.y_soldier_ranged_attacks(store, this)
+		brk = SU.y_soldier_ranged_attacks(store, this)
 
 		if brk then
 		-- block empty
@@ -17437,8 +17437,6 @@ function scripts.hero_dragon.update(this, store)
 							dest.y = dest.y + 15
 						end
 
-						emit_ts = store.tick_ts
-
 						local ps = E:create_entity(a.emit_ps)
 						local mspeed = V.dist(dest.x, dest.y, b.bullet.from.x, b.bullet.from.y) / b.bullet.flight_time
 
@@ -18030,28 +18028,20 @@ function scripts.hero_hunter.update(this, store)
 
 		if a1 <= angle_deg and angle_deg < a2 then
 			o_name, o_flip, o_idx = angles[3], false, 3
-			quadrant = 1
 		elseif a2 <= angle_deg and angle_deg < a3 then
 			o_name, o_flip, o_idx = angles[4], false, 4
-			quadrant = 2
 		elseif a3 <= angle_deg and angle_deg < a4 then
 			o_name, o_flip, o_idx = angles[3], true, 3
-			quadrant = 3
 		elseif a4 <= angle_deg and angle_deg < a5 then
 			o_name, o_flip, o_idx = angles[2], true, 2
-			quadrant = 4
 		elseif a5 <= angle_deg and angle_deg < a6 then
 			o_name, o_flip, o_idx = angles[1], true, 1
-			quadrant = 5
 		elseif a6 <= angle_deg and angle_deg < a7 then
 			o_name, o_flip, o_idx = angles[5], false, 5
-			quadrant = 6
 		elseif a7 <= angle_deg and angle_deg < a8 then
 			o_name, o_flip, o_idx = angles[1], false, 1
-			quadrant = 7
 		else
 			o_name, o_flip, o_idx = angles[2], false, 2
-			quadrant = 8
 		end
 
 		return o_name, o_flip, o_idx
@@ -18602,7 +18592,6 @@ function scripts.hero_hunter.update(this, store)
 
 					SU.y_hero_animation_wait(this)
 
-					aim_before_shot = true
 					last_ts = start_ts
 
 					goto label_337_1
@@ -22966,7 +22955,6 @@ function scripts.hero_dragon_gem.update(this, store)
 								coroutine.yield()
 							end
 
-							targets = {target}
 							b = E:create_entity(a.bullet)
 
 							if a.type == "aura" then
@@ -25390,7 +25378,6 @@ function scripts.hero_dragon_bone.update(this, store)
 			end
 		end
 
-		skill = this.hero.skills.cloud
 		a = cloud_attack
 
 		if ready_to_use_skill(a, store) then
@@ -25440,7 +25427,6 @@ function scripts.hero_dragon_bone.update(this, store)
 			end
 		end
 
-		skill = this.hero.skills.nova
 		a = nova_attack
 
 		if ready_to_use_skill(a, store) then
@@ -25504,7 +25490,6 @@ function scripts.hero_dragon_bone.update(this, store)
 			goto label_664_4
 		end
 
-		skill = this.hero.skills.rain
 		a = rain_attack
 
 		if ready_to_use_skill(a, store) then
@@ -25572,7 +25557,6 @@ function scripts.hero_dragon_bone.update(this, store)
 			goto label_664_4
 		end
 
-		skill = this.hero.skills.burst
 		a = burst_attack
 
 		if ready_to_use_skill(a, store) then
@@ -25736,7 +25720,6 @@ function scripts.hero_dragon_bone.update(this, store)
 					coroutine.yield()
 				end
 
-				targets = {target}
 				b = E:create_entity(a.bullet)
 				b.bullet.target_id = target.id
 				b.bullet.source_id = this.id
@@ -26653,7 +26636,6 @@ function scripts.hero_lumenir.update(this, store)
 			end
 		end
 
-		skill = this.hero.skills.shield
 		a = shield_attack
 
 		if ready_to_use_skill(a, store) then
@@ -26702,7 +26684,6 @@ function scripts.hero_lumenir.update(this, store)
 			end
 		end
 
-		skill = this.hero.skills.celestial_judgement
 		a = celestial_judgement_attack
 
 		if ready_to_use_skill(a, store) then
@@ -26735,7 +26716,6 @@ function scripts.hero_lumenir.update(this, store)
 			goto label_411_1
 		end
 
-		skill = this.hero.skills.mini_dragon
 		a = mini_dragon_attack
 
 		if ready_to_use_skill(a, store) then
@@ -26753,7 +26733,6 @@ function scripts.hero_lumenir.update(this, store)
 			end
 		end
 
-		skill = this.hero.skills.fire_balls
 		a = fire_balls_attack
 
 		if ready_to_use_skill(a, store) then
@@ -27337,12 +27316,6 @@ function scripts.mini_dragon_hero_lumenir.update(this, store)
 
 	local initial_pos_offset = {}
 
-	if this.drone_id == 1 then
-		initial_pos_offset = V.v(-50, 40)
-	else
-		initial_pos_offset = V.v(40, 30)
-	end
-
 	while store.tick_ts - this.start_ts <= this.duration do
 		if this.remove_hero_death then
 			if hero.health.dead then
@@ -27351,8 +27324,6 @@ function scripts.mini_dragon_hero_lumenir.update(this, store)
 		elseif not hero.health.dead then
 			break
 		end
-
-		search_ts = store.tick_ts
 
 		if hero then
 			this._chasing_target_id = hero.id
@@ -28163,7 +28134,7 @@ function scripts.hero_wukong.update(this, store)
 						goto label_882_1
 					end
 
-					enemy, enemies, pred_pos = U.find_foremost_enemy_in_range_filter_on(this.pos, a.max_range, a.cast_time, a.vis_flags, a.vis_bans, function(e, origin)
+					enemies, pred_pos = U.find_foremost_enemy_in_range_filter_on(this.pos, a.max_range, a.cast_time, a.vis_flags, a.vis_bans, function(e, origin)
 						local e_ni = e.nav_path.ni + 8
 						local n_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
 
@@ -28186,7 +28157,6 @@ function scripts.hero_wukong.update(this, store)
 					end
 
 					a.ts = start_ts
-					last_ts = start_ts
 
 					SU.hero_gain_xp_from_skill(this, skill)
 
@@ -28348,7 +28318,6 @@ function scripts.hero_wukong.update(this, store)
 								camera_shake(staff_fx.pos)
 
 								a.ts = start_ts
-								last_ts = start_ts
 
 								SU.hero_gain_xp_from_skill(this, skill)
 								SU.y_hero_animation_wait(this)
@@ -28445,7 +28414,6 @@ function scripts.hero_wukong.update(this, store)
 					end
 
 					a.ts = store.tick_ts
-					last_ts = store.tick_ts
 
 					SU.hero_gain_xp_from_skill(this, skill)
 					SU.y_hero_animation_wait(this)
@@ -29458,7 +29426,7 @@ function scripts.hero_vesper_ultimate.update(this, store)
 			nearest = P:nearest_nodes(this.pos.x, this.pos.y, {enemy_pi})
 
 			if #nearest > 0 then
-				pi, spi, ni = unpack(nearest[1])
+				pi, _, ni = unpack(nearest[1])
 			end
 		end
 
@@ -34680,7 +34648,6 @@ function scripts.mod_hero_robot_skill_uppercut.update(this, store, script)
 
 	for k, v in pairs(target.render.sprites) do
 		if v.exo then
-			is_exo = true
 
 			break
 		end
@@ -34777,14 +34744,14 @@ function scripts.hero_robot_ultimate.update(this, store)
 		return nil
 	end
 
-	local pi, spi, ni, dist
+	local pi, ni, dist
 
 	if not targets or #targets == 0 then
-		pi, spi, ni, dist = unpack(nearest[1])
+		pi, ni, dist = nearest[1][1], nearest[1][3], nearest[1][4]
 	else
 		for _, t in ipairs(targets) do
 			for _, n in pairs(nearest) do
-				pi, spi, ni, dist = unpack(n)
+				pi, _, ni, dist = unpack(n)
 
 				if dist > 20 then
 					break
@@ -34876,28 +34843,20 @@ function scripts.aura_hero_robot_ultimate_train.update(this, store)
 
 		if a1 <= angle_deg and angle_deg < a2 then
 			o_name, o_flip, o_idx = angles[3], false, 3
-			quadrant = 1
 		elseif a2 <= angle_deg and angle_deg < a3 then
 			o_name, o_flip, o_idx = angles[4], false, 4
-			quadrant = 2
 		elseif a3 <= angle_deg and angle_deg < a4 then
 			o_name, o_flip, o_idx = angles[3], true, 3
-			quadrant = 3
 		elseif a4 <= angle_deg and angle_deg < a5 then
 			o_name, o_flip, o_idx = angles[2], true, 2
-			quadrant = 4
 		elseif a5 <= angle_deg and angle_deg < a6 then
 			o_name, o_flip, o_idx = angles[1], true, 1
-			quadrant = 5
 		elseif a6 <= angle_deg and angle_deg < a7 then
 			o_name, o_flip, o_idx = angles[5], false, 5
-			quadrant = 6
 		elseif a7 <= angle_deg and angle_deg < a8 then
 			o_name, o_flip, o_idx = angles[1], false, 1
-			quadrant = 7
 		else
 			o_name, o_flip, o_idx = angles[2], false, 2
-			quadrant = 8
 		end
 
 		return o_name, o_flip, o_idx
@@ -35775,7 +35734,7 @@ function scripts.hero_bird_ultimate_child.update(this, store)
 
 		::label_523_0::
 
-		target, targets = U.find_foremost_enemy_in_range_filter_on(this.pos, this.target_range, 0, a.vis_flags, a.vis_bans, function(e, origin)
+		target = U.find_foremost_enemy_in_range_filter_on(this.pos, this.target_range, 0, a.vis_flags, a.vis_bans, function(e, origin)
 			return V.dist2(e.pos.x, e.pos.y, start_pos.x, start_pos.y) < this.chase_range * this.chase_range
 		end)
 
@@ -35877,8 +35836,6 @@ function scripts.hero_bird_ultimate_child.update(this, store)
 
 				local dx, dy = V.sub(target.pos.x, target.pos.y, start_pos.x, start_pos.y)
 				local dist2 = V.len2(dx, dy)
-
-				attack_ts = store.tick_ts
 
 				if this.duration and store.tick_ts - this.start_ts > this.duration then
 					break
@@ -37161,7 +37118,6 @@ function scripts.mod_hero_spider_skill_instakill_melee.update(this, store, scrip
 	end
 
 	this.pos = target.pos
-	start_ts = store.tick_ts
 
 	local d = E.create_damage()
 
@@ -39324,11 +39280,9 @@ function scripts.bullet_hero_dragon_sun_breath_ray.update(this, store)
 	if P:is_node_valid(this.nav_path.pi, this.nav_path.ni + DOWNSTREAM) then
 		local next_downstream_node = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni + 1)
 
-		upstream_goes_right = next_downstream_node.x < dest.x
 	elseif P:is_node_valid(this.nav_path.pi, this.nav_path.ni + UPSTREAM) then
 		local next_upstream_node = P:node_pos(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni - 1)
 
-		upstream_goes_right = next_upstream_node.x >= dest.x
 	end
 
 	this.nav_path.dir = DOWNSTREAM

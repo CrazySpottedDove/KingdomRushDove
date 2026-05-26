@@ -5404,7 +5404,7 @@ function scripts.eb_spider.update(this, store)
 				goto label_344_0
 			end
 
-			cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, false, break_fn)
+			cont, blocker = SU.y_enemy_walk_until_blocked(store, this, false, break_fn)
 
 			if not cont then
 			-- block empty
@@ -9690,15 +9690,6 @@ function scripts.boss_crocs.update(this, store)
 		this.evolution_amount = 0
 	end
 
-	local orig_rain_cooldown, orig_rain_min_range, orig_rain_max_range, orig_rain_shots
-
-	if attack_rain then
-		orig_rain_cooldown = attack_rain.cooldown
-		orig_rain_min_range = attack_rain.min_range
-		orig_rain_max_range = attack_rain.max_range
-		orig_rain_shots = attack_rain.shots_amount
-	end
-
 	local spawners = LU.list_entities(store.entities, "mega_spawner")
 	local megaspawner_boss
 
@@ -10242,7 +10233,7 @@ function scripts.boss_crocs.update(this, store)
 
 					while not found and tries < 5 do
 						tries = tries + 1
-						shot_pos, pi, spi, ni = P:get_random_position(10, bor(bor(TERRAIN_LAND, TERRAIN_ICE)))
+						shot_pos = P:get_random_position(10, bor(bor(TERRAIN_LAND, TERRAIN_ICE)))
 
 						if shot_pos ~= nil then
 							found = true
@@ -11005,7 +10996,7 @@ function scripts.boss_machinist.update(this, store)
 				return
 			end
 		else
-			next, new = P:next_entity_node(this, store.tick_length)
+			next = P:next_entity_node(this, store.tick_length)
 
 			if not next then
 				log.debug("enemy %s ran out of nodes to walk", this.id)
@@ -11517,7 +11508,6 @@ function scripts.bullet_boss_grymbeard.update(this, store)
 			this.render.sprites[1].r = V.angleTo(this.pos.x - last_pos.x, this.pos.y - last_pos.y)
 			ps.particle_system.emit_offset.x, ps.particle_system.emit_offset.y = V.rotate(this.render.sprites[1].r, ps.emit_offset_relative.x, ps.emit_offset_relative.y)
 			dx, dy = V.sub(target_pos.x, target_pos.y, this.pos.x, this.pos.y)
-			dist = V.len(dx, dy)
 
 			coroutine.yield()
 		end
@@ -11577,11 +11567,11 @@ function scripts.bullet_boss_grymbeard.update(this, store)
 	ps.particle_system.emission_rate = 90
 
 	if not target or not target.health or target.health.dead then
-		local new_target, targets
+		local new_target
 		if attack.filter_fn then
-			new_target, targets = U.find_foremost_enemy_in_range_filter_on(source_pos, attack.max_range, false, attack.vis_flags, attack.vis_bans, attack.filter_fn)
+			new_target = U.find_foremost_enemy_in_range_filter_on(source_pos, attack.max_range, false, attack.vis_flags, attack.vis_bans, attack.filter_fn)
 		else
-			new_target, targets = U.find_foremost_enemy_in_range_filter_off(source_pos, attack.max_range, false, attack.vis_flags, attack.vis_bans)
+			new_target = U.find_foremost_enemy_in_range_filter_off(source_pos, attack.max_range, false, attack.vis_flags, attack.vis_bans)
 		end
 
 		if new_target then
@@ -13300,7 +13290,6 @@ function scripts.boss_redboy_teen.update(this, store)
 
 		for k, v in pairs(store.entities) do
 			if v.template_name == "controller_stage_32_boss" then
-				dragon_controller = v
 			end
 		end
 
