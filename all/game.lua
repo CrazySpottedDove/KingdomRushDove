@@ -20,6 +20,7 @@ local game_gui = require("game_gui")
 local SH = require("klove.shader_db")
 local G = love.graphics
 local bit = require("bit")
+local adaptive_fps = require("dove_modules.perf.adaptive_fps")
 
 require("all.constants")
 
@@ -137,7 +138,7 @@ game.simulation_systems = {
 }
 
 local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_done)
-	self.tick_length_limit = TICK_LENGTH * 1.1
+	adaptive_fps:set_scene(self)
 	self.dash_start_offset = 0
 	self.screen_w = screen_w
 	self.screen_h = screen_h
@@ -292,6 +293,7 @@ function game:destroy()
 	self.game_gui = nil
 
 	RU.destroy()
+	adaptive_fps:destroy()
 end
 
 function game:update_debug(dt)
@@ -372,10 +374,7 @@ function game:update(dt)
 	end
 
 	local d = self.simulation.store
-
-	if dt > self.tick_length_limit then
-		dt = self.tick_length_limit
-	end
+	dt = adaptive_fps:update(dt)
 
 	d.dt = dt * d.speed_factor
 	d.ts = d.ts + d.dt
