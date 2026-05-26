@@ -1718,11 +1718,10 @@ end
 function SU.soldier_pick_ranged_target_and_attack(store, this)
 	local r = this.ranged
 
-	if store.tick_ts - r.last_range_ts < fts(1) then
+	-- 频率限制，避免所有视野内都没有攻击的时候，依然频繁索敌
+	if store.tick_ts - r.last_range_ts < 0.1 then
 		return nil, nil
 	end
-
-	r.last_range_ts = store.tick_ts
 
 	local awaiting_target
 	local target
@@ -1734,7 +1733,7 @@ function SU.soldier_pick_ranged_target_and_attack(store, this)
 		-- block empty
 		elseif a.sync_animation and not this.render.sprites[1].sync_flag then
 		-- block empty
-		elseif a.chance and math.random() > a.chance then
+		elseif math.random() > a.chance then
 		-- block empty
 		else
 			if a.filter_fn then
@@ -1752,13 +1751,15 @@ function SU.soldier_pick_ranged_target_and_attack(store, this)
 
 				if not ready then
 					awaiting_target = target
-				elseif math.random() <= a.chance then
-					return target, a, U.calculate_enemy_ffe_pos(target, a.node_prediction)
 				else
-					a.ts = store.tick_ts
+					return target, a, U.calculate_enemy_ffe_pos(target, a.node_prediction)
 				end
 			end
 		end
+	end
+
+	if not awaiting_target then
+		r.last_range_ts = store.tick_ts
 	end
 
 	return awaiting_target, nil

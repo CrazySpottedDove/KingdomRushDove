@@ -83,22 +83,6 @@ M.env = setmetatable({
 
 ----------
 
--- 引入所有的编译器规则
-function M:init()
-	self.enemy_basic = require("precompile.templates.enemy_basic")
-	self.enemy_mixed = require("precompile.templates.enemy_mixed")
-	self.enemy_passive = require("precompile.templates.enemy_passive")
-	self.aura_apply_mod = require("precompile.templates.aura_apply_mod")
-	self.aura_apply_damage = require("precompile.templates.aura_apply_damage")
-	self.mod_dps = require("precompile.templates.mod_dps")
-	-- self.soldier_reinforcement = require("precompile.templates.soldier_reinforcement")
-	-- self.soldier_barrack = require("precompile.templates.soldier_barrack")
-	self.mod_track_target = require("precompile.templates.mod_track_target")
-	self.arrow = require("precompile.templates.arrow")
-	self.bomb = require("precompile.templates.bomb")
-	self.bolt = require("precompile.templates.bolt")
-end
-
 -- 组件克隆函数编译器
 local GenCC = require("precompile.gen_component_cloner")
 
@@ -215,6 +199,22 @@ function M:_compile(e, template)
 	return chunk()
 end
 
+-- 引入所有的编译器规则
+function M:init()
+	self.enemy_basic = require("precompile.templates.enemy_basic")
+	self.enemy_mixed = require("precompile.templates.enemy_mixed")
+	self.enemy_passive = require("precompile.templates.enemy_passive")
+	self.aura_apply_mod = require("precompile.templates.aura_apply_mod")
+	self.aura_apply_damage = require("precompile.templates.aura_apply_damage")
+	self.mod_dps = require("precompile.templates.mod_dps")
+	-- self.soldier_reinforcement = require("precompile.templates.soldier_reinforcement")
+	self.soldier_barrack = require("precompile.templates.soldier_barrack")
+	self.mod_track_target = require("precompile.templates.mod_track_target")
+	self.arrow = require("precompile.templates.arrow")
+	self.bomb = require("precompile.templates.bomb")
+	self.bolt = require("precompile.templates.bolt")
+end
+
 function M:compile(e)
 	if e.main_script then
 		local m = e.main_script
@@ -254,19 +254,20 @@ function M:compile(e)
 		end
 
 		-- === 士兵（兵营/援军）===
-		-- if e.soldier or e.reinforcement then
-		-- 	if m.insert == scripts.soldier_barrack.insert then
-		-- 		m.insert = self:_compile(e, self.soldier_barrack.insert)
-		-- 	elseif m.insert == scripts.soldier_reinforcement.insert then
-		-- 		m.insert = self:_compile(e, self.soldier_reinforcement.insert)
-		-- 	end
+		if e.soldier then
+			-- 	if m.insert == scripts.soldier_barrack.insert then
+			-- 		m.insert = self:_compile(e, self.soldier_barrack.insert)
+			-- 	elseif m.insert == scripts.soldier_reinforcement.insert then
+			-- 		m.insert = self:_compile(e, self.soldier_reinforcement.insert)
+			-- 	end
 
-		-- 	if m.update == scripts.soldier_barrack.update then
-		-- 		m.update = self:_compile(e, self.soldier_barrack.update)
-		-- 	elseif m.update == scripts.soldier_reinforcement.update then
-		-- 		m.update = self:_compile(e, self.soldier_reinforcement.update)
-		-- 	end
-		-- end
+			if m.update == scripts.soldier_barrack.update then
+				m.update = self:_compile(e, self.soldier_barrack.update)
+			-- 	elseif m.update == scripts.soldier_reinforcement.update then
+			-- 		m.update = self:_compile(e, self.soldier_reinforcement.update)
+			end
+		end
+
 		if e.modifier then
 			if m.insert == scripts.mod_dps.insert then
 				m.insert = self:_compile(e, self.mod_dps.insert)

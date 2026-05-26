@@ -93,46 +93,65 @@ return function(this, store)
 
 	while true do
 		constif(this.powers)
-		for pn, p in pairs(this.powers) do
-			if p.changed then
-				p.changed = nil
-				SU.soldier_power_upgrade(this, pn)
+			for pn, p in pairs(this.powers) do
+				if p.changed then
+					p.changed = nil
+
+					SU.soldier_power_upgrade(this, pn)
+				end
 			end
-		end
 		constend
 
-		constif(this.cloak and this.soldier.target_id)
-		this.vis.flags = band(this.vis.flags, bnot(this.cloak.flags))
-		this.vis.bans = band(this.vis.bans, bnot(this.cloak.bans))
-		this.render.sprites[1].alpha = 255
-		constend
+        constif(this.clock)
+        if this.soldier.target_id then
+            this.vis.flags = band(this.vis.flags, bnot(this.clock.flags))
+            this.vis.bans = band(this.vis.bans, bnot(this.clock.bans))
+            this.render.sprites[1].alpha = 255
+        end
+        constend
 
-		if not this.health.dead or SU.y_soldier_revive(store, this) then
-		-- empty
-		else
+		if this.health.dead
+        @constif(this.revive)
+        and not SU.y_soldier_revive(store, this)
+        then
 			SU.y_soldier_death(store, this)
+
 			return
 		end
 
+        @constif(this.revive)
 		scripts.soldier_revive_resist(this, store)
 
 		if this.unit.is_stunned then
 			SU.soldier_idle(store, this)
 		else
-			constif(this.dodge and this.dodge.active)
-			this.dodge.active = false
+            constif(this.dodge)
+                if this.dodge.active then
+                    this.dodge.active = false
 
-			constif(this.dodge.counter_attack and this.powers[this.dodge.counter_attack.power_name].level > 0)
-			this.dodge.counter_attack_pending = true
-			constelseif(this.dodge.animation)
-			U.animation_start(this, this.dodge.animation, nil, store.tick_ts, 1)
-			while not U.animation_finished(this) do
-				coroutine.yield()
-			end
-			constend
+                    constif(this.dodge.counter_attack)
+                        if this.powers[this.dodge.counter_attack.power_name].level > 0 then
+                            this.dodge.counter_attack_pending = true
+                    constif(this.dodge.animation)
+                        elseif this.dodge.animation then
+                            U.animation_start(this, this.dodge.animation, nil, store.tick_ts, 1)
 
-			signal.emit("soldier-dodge", this)
-			constend
+                            while not U.animation_finished(this) do
+                                coroutine.yield()
+                            end
+                    constend
+                        end
+                    constelseif(this.dodge.animation)
+                        U.animation_start(this, this.dodge.animation, nil, store.tick_ts, 1)
+
+                        while not U.animation_finished(this) do
+                            coroutine.yield()
+                        end
+                    constend
+
+                    signal.emit("soldier-dodge", this)
+                end
+            constend
 
 			while this.nav_rally.new do
 				if SU.y_soldier_new_rally(store, this) then
@@ -141,32 +160,45 @@ return function(this, store)
 			end
 
 			constif(this.timed_actions)
-			brk, sta = SU.y_soldier_timed_actions(store, this)
-			if brk then goto label_39_1 end
+				brk, sta = SU.y_soldier_timed_actions(store, this)
+
+				if brk then
+					goto label_39_1
+				end
 			constend
 
 			constif(this.timed_attacks)
-			brk, sta = SU.y_soldier_timed_attacks(store, this)
-			if brk then goto label_39_1 end
+				brk, sta = SU.y_soldier_timed_attacks(store, this)
+
+				if brk then
+					goto label_39_1
+				end
 			constend
 
 			constif(this.ranged and this.ranged.range_while_blocking)
-			brk, sta = SU.y_soldier_ranged_attacks(store, this)
-			if brk then goto label_39_1 end
+				brk, sta = SU.y_soldier_ranged_attacks(store, this)
+
+				if brk then
+					goto label_39_1
+				end
 			constend
 
 			constif(this.melee)
-			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
-			if brk or sta ~= A_NO_TARGET then goto label_39_1 end
+				brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+				if brk or sta ~= A_NO_TARGET then
+					goto label_39_1
+				end
 			constend
 
 			constif(this.ranged and not this.ranged.range_while_blocking)
-			brk, sta = SU.y_soldier_ranged_attacks(store, this)
-			if brk or sta == A_DONE then
-				goto label_39_1
-			elseif sta == A_IN_COOLDOWN and not this.ranged.go_back_during_cooldown then
-				goto label_39_0
-			end
+				brk, sta = SU.y_soldier_ranged_attacks(store, this)
+
+				if brk or sta == A_DONE then
+					goto label_39_1
+				elseif sta == A_IN_COOLDOWN and not this.ranged.go_back_during_cooldown then
+					goto label_39_0
+				end
 			constend
 
 			if SU.soldier_go_back_step(store, this) then
@@ -178,14 +210,14 @@ return function(this, store)
 			SU.soldier_idle(store, this)
 
 			constif(this.cloak)
-			this.vis.flags = bor(this.vis.flags, this.cloak.flags)
-			this.vis.bans = bor(this.vis.bans, this.cloak.bans)
+				this.vis.flags = bor(this.vis.flags, this.cloak.flags)
+				this.vis.bans = bor(this.vis.bans, this.cloak.bans)
 
-			constif(this.cloak.alpha)
-			this.render.sprites[1].alpha = this.cloak.alpha
-			constend
+				@constif(this.cloak.alpha)
+				this.render.sprites[1].alpha = this.cloak.alpha
 			constend
 
+            @constif(this.regen)
 			SU.soldier_regen(store, this)
 		end
 

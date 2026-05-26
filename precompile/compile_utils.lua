@@ -1040,13 +1040,13 @@ function M.process(template, compile_env, entity)
 	}) or {
 		this = entity
 	}
-	local t0 = os.clock()
+	-- local t0 = os.clock()
 	local insts = get_insts(template)
-	M._prof.parse_dt = M._prof.parse_dt + (os.clock() - t0)
-	local t1 = os.clock()
+	-- M._prof.parse_dt = M._prof.parse_dt + (os.clock() - t0)
+	-- local t1 = os.clock()
 	local result = exec_insts_outer(insts, env, {})
-	M._prof.proc_dt = M._prof.proc_dt + (os.clock() - t1)
-	M._prof.calls = M._prof.calls + 1
+	-- M._prof.proc_dt = M._prof.proc_dt + (os.clock() - t1)
+	-- M._prof.calls = M._prof.calls + 1
 	return result
 end
 
