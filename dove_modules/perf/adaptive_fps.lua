@@ -46,6 +46,7 @@ function M:update(dt)
 		end
 		return dt
 	end
+	self.counter = 0
 	return dt
 end
 
