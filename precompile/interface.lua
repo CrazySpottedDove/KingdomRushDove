@@ -255,11 +255,11 @@ function M:compile(e)
 
 		-- === 士兵（兵营/援军）===
 		if e.soldier then
-			-- 	if m.insert == scripts.soldier_barrack.insert then
-			-- 		m.insert = self:_compile(e, self.soldier_barrack.insert)
+			if m.insert == scripts.soldier_barrack.insert then
+				m.insert = self:_compile(e, self.soldier_barrack.insert)
 			-- 	elseif m.insert == scripts.soldier_reinforcement.insert then
 			-- 		m.insert = self:_compile(e, self.soldier_reinforcement.insert)
-			-- 	end
+			end
 
 			if m.update == scripts.soldier_barrack.update then
 				m.update = self:_compile(e, self.soldier_barrack.update)

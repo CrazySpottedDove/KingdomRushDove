@@ -835,25 +835,30 @@ end
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 最近的士兵
 function U.find_nearest_soldier(entities, origin, min_range, max_range, flags, bans, filter_func)
-	local soldiers = U.find_soldiers_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
+	local soldiers = table.filter(entities, function(k, v)
+		return not v.pending_removal and v.vis and v.health and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin))
+	end)
 
-	if not soldiers or #soldiers == 0 then
+	if #soldiers == 0 then
 		return nil
 	else
-		table.sort(soldiers, function(e1, e2)
-			local e1_mock = band(e1.vis.flags, F_MOCKING) ~= 0
-			local e2_mock = band(e2.vis.flags, F_MOCKING) ~= 0
+		-- 不要 sort，只找一个最优的，线性扫描即可
+		local best = soldiers[1]
+		for i = 2, #soldiers do
+			local s = soldiers[i]
+			local s_mock = band(s.vis.flags, F_MOCKING) ~= 0
+			local best_mock = band(best.vis.flags, F_MOCKING) ~= 0
 
-			if e1_mock and not e2_mock then
-				return true
-			elseif not e1_mock and e2_mock then
-				return false
+			if s_mock and not best_mock then
+				best = s
+			elseif not s_mock and best_mock then
+			-- do nothing
+			elseif V.dist2(s.pos.x, s.pos.y, origin.x, origin.y) < V.dist2(best.pos.x, best.pos.y, origin.x, origin.y) then
+				best = s
 			end
+		end
 
-			return V.dist2(e1.pos.x, e1.pos.y, origin.x, origin.y) < V.dist2(e2.pos.x, e2.pos.y, origin.x, origin.y)
-		end)
-
-		return soldiers[1]
+		return best
 	end
 end
 
@@ -871,7 +876,7 @@ function U.find_soldiers_in_range(entities, origin, min_range, max_range, flags,
 		return not v.pending_removal and v.vis and v.health and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin))
 	end)
 
-	if not soldiers or #soldiers == 0 then
+	if #soldiers == 0 then
 		return nil
 	else
 		return soldiers

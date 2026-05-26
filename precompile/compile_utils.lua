@@ -845,7 +845,13 @@ local function exec_insts(insts, env, scope_vars, out, subs)
 				end
 				s2[inst.var] = tostring(val)
 				s2["constbreak"] = "goto " .. label
+				if inst.has_cb then
+					out[#out + 1] = "do\n"
+				end
 				exec_insts(inst.body, env, scope_vars, out, s2)
+				if inst.has_cb then
+					out[#out + 1] = "end\n"
+				end
 			end
 			if inst.has_cb then
 				out[#out + 1] = "::" .. label .. "::\n"

@@ -1784,7 +1784,7 @@ function SU.y_soldier_ranged_attacks(store, this)
 	local start_ts = store.tick_ts
 	local attack_done
 
-	U.set_destination(this, this.pos)
+	-- U.set_destination(this, this.pos)
 
 	if attack.loops then
 		attack_done = SU.y_soldier_do_loopable_ranged_attack(store, this, target, attack)
@@ -2650,12 +2650,10 @@ function SU.soldier_pick_melee_attack(store, this, target)
 				local cooldown = 0
 
 				-- cooldown_factor: 全部近战攻击的冷却因子
-				if a.cooldown then
-					cooldown = a.cooldown
-				end
-
 				if this.melee.cooldown and a.shared_cooldown then
 					cooldown = this.melee.cooldown
+				elseif a.cooldown then
+					cooldown = a.cooldown
 				end
 
 				cooldown = cooldown * this.unit.cooldown_factor
@@ -2701,7 +2699,7 @@ end
 ---@return boolean 是否提前结束, number 状态码
 ---@desc 状态码：A_NO_TARGET(1) 无目标, A_IN_COOLDOWN(2) 冷却中, A_DONE(3) 完成
 function SU.y_soldier_melee_block_and_attacks(store, this)
-	if store.tick_ts - this.soldier.last_block_ts < fts(1) then
+	if store.tick_ts - this.soldier.last_block_ts < 0.1 then
 		return false, A_NO_TARGET
 	end
 
@@ -3482,13 +3480,18 @@ function SU.y_enemy_walk_until_blocked(store, this, ignore_soldiers, func)
 		local node_valid = P:is_node_valid(this.nav_path.pi, this.nav_path.ni)
 
 		if node_valid and not ignore_soldiers and this.ranged then
-			for _, a in ipairs(this.ranged.attacks) do
-				if not a.disabled and (this.enemy.can_do_magic) and (a.hold_advance or store.tick_ts - a.ts > a.cooldown) then
-					ranged = U.find_nearest_soldier(store.soldiers, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
+			if store.tick_ts - this.ranged.last_range_ts > 0.1 and this.enemy.can_do_magic then
+				for _, a in ipairs(this.ranged.attacks) do
+					if not a.disabled and (a.hold_advance or store.tick_ts - a.ts > a.cooldown) then
+						ranged = U.find_nearest_soldier(store.soldiers, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
-					if ranged ~= nil then
-						break
+						if ranged ~= nil then
+							break
+						end
 					end
+				end
+				if not ranged then
+					this.ranged.last_range_ts = store.tick_ts
 				end
 			end
 		end
@@ -3528,7 +3531,7 @@ function SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 
 		if P:is_node_valid(this.nav_path.pi, this.nav_path.ni) then
 			if this.ranged then
-				if this.enemy.can_do_magic then
+				if store.tick_ts - this.ranged.last_range_ts > 0.1 and this.enemy.can_do_magic then
 					for i = 1, #this.ranged.attacks do
 						local a = this.ranged.attacks[i]
 						if not a.disabled and (a.hold_advance or store.tick_ts - a.ts > a.cooldown) then
@@ -3540,6 +3543,9 @@ function SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 								a.ts = a.ts + 0.1
 							end
 						end
+					end
+					if not ranged then
+						this.ranged.last_range_ts = store.tick_ts
 					end
 				end
 			end
@@ -3611,7 +3617,7 @@ function SU.y_enemy_walk_until_blocked_on__ranged_off__ignore_soldiers__func(sto
 		end
 
 		if P:is_node_valid(this.nav_path.pi, this.nav_path.ni) then
-			if this.enemy.can_do_magic then
+			if store.tick_ts - this.ranged.last_range_ts > 0.1 and this.enemy.can_do_magic then
 				for i = 1, #this.ranged.attacks do
 					local a = this.ranged.attacks[i]
 					if not a.disabled and (a.hold_advance or store.tick_ts - a.ts > a.cooldown) then
@@ -3623,6 +3629,9 @@ function SU.y_enemy_walk_until_blocked_on__ranged_off__ignore_soldiers__func(sto
 							a.ts = a.ts + 0.1
 						end
 					end
+				end
+				if not ranged then
+					this.ranged.last_range_ts = store.tick_ts
 				end
 			end
 

@@ -3,14 +3,13 @@ local CU = require("precompile.compile_utils")
 CU.define("y_enemy_walk_until_blocked", [=[
 function(store, this)
     local blocker
-    constvar ranged = this.ranged
 
-    @constif(ranged)
+    @constif(this.ranged)
     local ranged
 
 	local terrain_type = band(GR:cell_type(this.pos.x, this.pos.y), bor(TERRAIN_WATER, TERRAIN_LAND))
 
-    @constif(ranged)
+    @constif(this.ranged)
     while not blocker and not ranged do
     @constelse
     while not blocker do
@@ -23,13 +22,13 @@ function(store, this)
 			return false
 		end
 
-        constif(ranged)
+        constif(this.ranged)
         if P:is_node_valid(this.nav_path.pi, this.nav_path.ni) then
-            if this.enemy.can_do_magic then
+            if this.enemy.can_do_magic and store.tick_ts - this.ranged.last_range_ts > 0.1 then
                 constfor i = 1, #this.ranged.attacks do
                     local a = this.ranged.attacks[i]
 
-                    @constif(ranged.attacks[i].hold_advance)
+                    @constif(this.ranged.attacks[i].hold_advance)
                     if not a.disabled then
                     @constelse
                     if not a.disabled and store.tick_ts - a.ts > a.cooldown then
@@ -38,7 +37,7 @@ function(store, this)
                         if ranged then
                             constbreak
 
-                        constif(not ranged.attacks[i].hold_advance)
+                        constif(not this.ranged.attacks[i].hold_advance)
                         else
                             a.ts = a.ts + 0.1
                         constend
@@ -46,6 +45,9 @@ function(store, this)
                         end
                     end
                 constend
+                if not ranged then
+                    this.ranged.last_range_ts = store.tick_ts
+                end
             end
             if #this.enemy.blockers > 0 then
                 U.cleanup_blockers(store, this)
@@ -61,7 +63,7 @@ function(store, this)
         end
         constend
 
-        @constif(ranged)
+        @constif(this.ranged)
         if not blocker and not ranged then
         @constelse
         if not blocker then
@@ -76,7 +78,7 @@ function(store, this)
 		end
 	end
 
-    @constif(ranged)
+    @constif(this.ranged)
     return true, blocker, ranged
     @constelse
     return true, blocker
