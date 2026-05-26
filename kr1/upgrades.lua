@@ -1,5 +1,4 @@
 -- chunkname: @./kr1/upgrades.lua
-local log = require("lib.klua.log"):new("kr1.upgrades")
 local km = require("lib.klua.macros")
 local E = require("entity_db")
 local bit = require("bit")
@@ -11,7 +10,6 @@ local function T(name)
 	return E:get_template(name)
 end
 
-local epsilon = 1e-09
 local upgrades = {}
 
 upgrades.max_level = nil

@@ -1,5 +1,4 @@
 -- chunkname: @./all/render_utils.lua
-local log = require("lib.klua.log"):new("render_utils")
 local I = require("lib.klove.image_db")
 local EXO = require("all.exoskeleton")
 local G = love.graphics
@@ -179,12 +178,10 @@ function RU.init()
 											batch:clear()
 											lr, lg, lb, la = nil, nil, nil, nil -- 重置颜色状态
 											if ss.atlas then
-												local im, w, h = I:i(ss.atlas)
-
 												current_atlas = ss.atlas
-												last_texture = im
+												last_texture = I:i(ss.atlas)
 
-												batch:setTexture(im)
+												batch:setTexture(last_texture)
 											end
 											batch_count = 0
 											if f._shader ~= current_shader then
@@ -443,12 +440,10 @@ function RU.init()
 									lr, lg, lb, la = nil, nil, nil, nil
 
 									if ss.atlas then
-										local im, w, h = I:i(ss.atlas)
-
 										current_atlas = ss.atlas
-										last_texture = im
+										last_texture = I:i(ss.atlas)
 
-										batch:setTexture(im)
+										batch:setTexture(last_texture)
 									end
 
 									batch_count = 0

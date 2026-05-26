@@ -81,28 +81,6 @@ local a
 
 local V = require("lib.klua.vector")
 local v = V.v
-local vv = V.vv
-local r = V.r
--- local function v(v1, v2)
--- 	return {
--- 		x = v1,
--- 		y = v2
--- 	}
--- end
-
--- local function vv(v1)
--- 	return {
--- 		x = v1,
--- 		y = v1
--- 	}
--- end
-
--- local function r(x, y, w, h)
--- 	return {
--- 		pos = v(x, y),
--- 		size = v(w, h)
--- 	}
--- end
 
 local function fts(v)
 	return v / FPS
@@ -277,7 +255,6 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 	end
 
 	if ma.loops then
-		local attack_done = false
 		local start_ts = store.tick_ts
 		local an, af
 		local attack = ma
@@ -436,8 +413,6 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 
 					queue_damage(store, d)
 				end
-
-				attack_done = true
 			end
 
 			while not U.animation_finished(this) do
@@ -902,14 +877,6 @@ tt.main_script.update = function(this, store)
 			end
 
 			if ready_to_attack(courage, store) and this.health.hp_max > this.health.hp and this.enemy.can_do_magic then
-				local entities
-
-				if store.enemy_spatial_index then
-					entities = store
-				else
-					entities = store.entities
-				end
-
 				local targets = U.find_enemies_in_range_filter_on(this.pos, courage.range, courage.vis_flags, courage.vis_bans, function(v)
 					return not U.has_modifier_in_list(store, v, {courage.mod})
 				end)
@@ -949,7 +916,7 @@ tt.main_script.update = function(this, store)
 				end
 			end
 
-			local cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, false, function()
+			local cont, blocker = SU.y_enemy_walk_until_blocked(store, this, false, function()
 				return ready_to_attack(courage, store) and this.health.hp_max > this.health.hp and this.enemy.can_do_magic
 			end)
 
@@ -1321,7 +1288,6 @@ a.cooldown = 7.2
 a.hits = 4
 tt.enemy.gold = 30
 tt.main_script.update = function(this, store)
-	local brk, sta
 	local bda = this.timed_attacks.list[1]
 
 	local function bda_ready()
@@ -1510,7 +1476,6 @@ tt.timed_attacks.list[2].bullet = "aura_enemy_forest_eerie"
 tt.timed_attacks.list[2].max_range = tt.timed_attacks.list[2].max_range + 2 * tt.timed_attacks.list[2].max_range_inc
 tt.timed_attacks.list[2].vis_bans = bor(F_ENEMY, F_FLYING)
 tt.main_script.update = function(this, store)
-	local brk, sta
 	local ca = this.timed_attacks.list[1]
 	local ea = this.timed_attacks.list[2]
 	local entities = store.entities
@@ -1620,12 +1585,6 @@ tt.main_script.update = function(this, store)
 
 					queue_insert(store, fx)
 
-					local enemy_entities = store.entities
-
-					if store.enemy_spatial_index then
-						enemy_entities = store
-					end
-
 					local targets = U.find_enemies_in_range_filter_off(this.pos, ca.max_range, ca.vis_flags, ca.vis_bans)
 
 					if targets then
@@ -1707,11 +1666,10 @@ tt.particles_aura = "aura_10yr_idle"
 tt.melee.cooldown = 1.35
 tt.main_script.update = function(this, store)
 	local h = this.health
-	local he = this.hero
 	local ra = this.timed_attacks.list[1]
 	local ba = this.timed_attacks.list[2]
 	local bma = this.timed_attacks.list[3]
-	local a, brk, sta
+	local a
 
 	local function y_enemy_mixed_walk_melee_ranged(store, this, ignore_soldiers, walk_break_fn, melee_break_fn, ranged_break_fn)
 		ranged_break_fn = ranged_break_fn or melee_break_fn
@@ -1928,7 +1886,7 @@ tt.main_script.update = function(this, store)
 			a = ra
 
 			if ra_ready() then
-				local start_ts, bdy, bdt, au
+				local start_ts, au
 				local fired_aura = false
 				local targets = U.find_soldiers_in_range(soldier_entities, this.pos, a.min_range, a.trigger_range, a.vis_flags, a.vis_bans)
 
@@ -2016,20 +1974,12 @@ tt.aura.vis_flags = F_RANGED
 tt.aura.vis_bans = F_FLYING
 tt.main_script.update = function(this, store)
 	local start_y = store.visible_coords and store.visible_coords.top or REF_H
-	local bdt
 	local a = this.aura
 	local owner = store.entities[a.source_id]
 
 	if not owner then
 		log.error("owner %s was not found. bailing out", a.source_od)
 	else
-		do
-			local bdy = math.abs(owner.pos.y - start_y)
-			local tpl = E:get_template(a.entity)
-
-			bdt = bdy / tpl.bullet.max_speed
-		end
-
 		for i = 1, a.loops do
 			local target = U.find_nearest_soldier(store.soldiers or store.entities, owner.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 			local b = E:create_entity(a.entity)
@@ -2231,7 +2181,7 @@ tt.main_script.update = function(this, store)
 		end
 	end
 
-	local pi, spi, ni, target, origin
+	local pi, spi, ni
 	local target = U.find_nearest_soldier(store.soldiers or store.entities, this.pos, 0, a.max_nodes * P.average_node_dist, a.vis_flags, a.vis_bans)
 
 	if not target then
@@ -2344,7 +2294,7 @@ tt.main_script.update = function(this, store)
 		return ready_to_attack(sand, store) and this.enemy.can_do_magic
 	end
 
-	local cont, blocker, ranged
+	local cont, blocker
 
 	while true do
 		if this.health.dead then
@@ -2385,7 +2335,7 @@ tt.main_script.update = function(this, store)
 			end
 		end
 
-		cont, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, false, sand_ready)
+		cont, blocker = SU.y_enemy_walk_until_blocked(store, this, false, sand_ready)
 		if cont then
 			if blocker then
 				if not SU.y_wait_for_blocker(store, this, blocker) then

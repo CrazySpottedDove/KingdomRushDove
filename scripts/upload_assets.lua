@@ -24,7 +24,6 @@ local COLOR = {
 local assets_dir = read_assets_dir()
 local new_index = dofile("_assets/assets_index.lua")
 local is_windows = package.config:sub(1, 1) == '\\'
-local null_dev = is_windows and "NUL" or "/dev/null"
 local same_as_remote = false
 
 local function table_to_string(t)

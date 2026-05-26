@@ -2,8 +2,6 @@ local M = {}
 
 local perf = require("dove_modules.perf.perf")
 
-local log = require("lib.klua.log"):new("systems")
-
 function M.register(sys)
 
 	sys.spatial_index = {}

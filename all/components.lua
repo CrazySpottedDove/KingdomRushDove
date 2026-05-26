@@ -601,7 +601,7 @@ bullet_attack.ts = 0
 bullet_attack.target_pos = nil
 
 -- Runtime fields (86): --   allowed_templates, animation, animation_cancelled, animation_end, animation_in, animation_loop, animation_out, animation_start, animations, aura, basic_attack, bullet, bullet_flier, bullet_ray, bullet_spikes,
---   bullet_start_offset, cast_time, chance, cooldown, cooldown_max, cooldown_min, damage_radius, decal, disabled, duration, exclude_tower_kind, excluded_templates, filter_targets_with_mod, first_cooldown, fx,
+--   bullet_start_offset, cast_time, chance, cooldown, cooldown_max, cooldown_min, damage_radius, decal, disabled, duration, excluded_templates, filter_targets_with_mod, first_cooldown, fx,
 --   ignore_out_of_range_check, jump_damage_max, jump_damage_min, jump_damage_radius, jump_damage_times, jump_damage_type, jump_damage_vis_bans, jump_damage_vis_flags, loop_times, loops, mark_mod, max_angle, max_angle_fliers, max_casts, max_count,
 --   max_flight_time, max_nodes_range, max_range, max_targets, min_flight_time, min_nodes_range, min_range, min_targets, mod, new_anim_prefix, new_health_bar_offset, node_prediction, node_prediction_base, nodes_limit, only_while_blocked,
 --   plant_dark_army, plant_linirea, prediction_time, reset_to_target_pos, self_nodes_from_start, shared_cooldown, shoot_time, shoot_times, shoots_delay, shots_delay, sound, sound_destroy, spawn, spawn_evolved, spawn_max_range_to_enemy,

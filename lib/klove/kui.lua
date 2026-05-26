@@ -860,7 +860,6 @@ end
 ---@param x any
 ---@param y any
 function KView:screen_to_view(x, y)
-	local ox, oy = 0, 0
 	local this = self
 	local view_list = {}
 
@@ -887,7 +886,6 @@ end
 ---@param x any
 ---@param y any
 function KView:view_to_screen(x, y)
-	local ox, oy = 0, 0
 	local this = self
 
 	repeat
@@ -1973,7 +1971,7 @@ function KImageButton:remove_disabled_tint()
 	if self.disable_image_name then
 		self:set_image(self.default_image_name)
 	else
-		KImageButton.super.remove_disabled_tint(self, color)
+		KImageButton.super.remove_disabled_tint(self)
 	end
 end
 
@@ -2083,7 +2081,7 @@ function KScrollList:update(dt)
 	KScrollList.super.update(self, dt)
 
 	local mx, my, any_button_down = self:get_window():get_mouse_position()
-	local wx, wy = self:screen_to_view(mx, my)
+	local _, wy = self:screen_to_view(mx, my)
 
 	if not any_button_down and self._down_y then
 		-- 兜底：当抬手事件未命中列表时，避免拖拽状态泄漏到下一次点击
@@ -2217,20 +2215,19 @@ function KTable:update(dt)
 		end
 	end
 
-	if self.end_view then
-		local th = self._total_height
-		local ev = self.end_view
+	-- if self.end_view then
+	-- local th = self._total_height
+	-- local ev = self.end_view
 
-		if -sy >= th - ev.size.y and not table.contains(self.children, ev) then
-			sv:prepare(#self.data + 1, self.data[#data + 1])
-			self:add_child(ev)
-		elseif -sv < th - ev.size.y and table.contains(self.children, ev) then
-			self:remove_child(ev)
-		end
-	end
+	-- if -sy >= th - ev.size.y and not table.contains(self.children, ev) then
+	-- 	sv:prepare(#self.data + 1, self.data[#data + 1])
+	-- 	self:add_child(ev)
+	-- elseif -sv < th - ev.size.y and table.contains(self.children, ev) then
+	-- 	self:remove_child(ev)
+	-- end
+	-- end
 
 	local cy = self.cell_view.size.y
-	local vis_count = self.cell_view.size.y / self.size.y
 	local start_vis_idx = math.ceil((-sy - self._first_cell_y) / cy)
 	local end_vis_idx = math.ceil((-sy - self._first_cell_y + self.size.y) / cy)
 

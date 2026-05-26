@@ -783,7 +783,6 @@ function SU.parabola_y(phase, from_y, to_y, max_y)
 	local max_y = math.max(max_y, from_y, to_y)
 	local reverse = to_y < from_y
 	local offset = reverse and to_y or from_y
-	local xc = (reverse and from_y or to_y) - offset
 	local M = reverse and max_y - to_y or max_y - from_y
 	local C = (reverse and from_y or to_y) - offset
 	local x = reverse and 1 - phase or phase
@@ -972,7 +971,7 @@ function SU.y_hero_new_rally(store, this)
 			this.vis.bans = F_ALL
 			this.health.ignore_damage = true
 			this.health_bar.hidden = true
-			local prev_scale, prev_color
+			local prev_scale
 
 			if tr.scale then
 				prev_scale = this.render.sprites[1].scale
@@ -1278,7 +1277,7 @@ function SU.y_reinforcement_fade_out(store, this)
 	U.set_destination(this, o)
 
 	local t_angle = offset > 0 and 0 or math.pi
-	local an, af, ai = U.animation_name_for_angle(this, "walk", t_angle)
+	local an, af = U.animation_name_for_angle(this, "walk", t_angle)
 
 	U.animation_start(this, an, af, store.tick_ts, -1)
 
@@ -1486,7 +1485,6 @@ end
 ---@return boolean 是否攻击完成
 function SU.y_soldier_do_loopable_ranged_attack(store, this, target, attack)
 	local attack_done = false
-	local start_ts = store.tick_ts
 	local b, an, af, ai
 
 	S:queue(attack.sound, attack.sound_args)
@@ -2597,7 +2595,7 @@ end
 function SU.soldier_move_to_slot_step(store, this, target)
 	U.block_enemy(store, this, target)
 
-	local slot_pos, slot_flip, enemy_flip = U.melee_slot_position(this, target)
+	local slot_pos = U.melee_slot_position(this, target)
 
 	if not slot_pos then
 		return true
@@ -4188,7 +4186,7 @@ function SU.y_show_taunt_set(store, taunts, set_name, index, pos, duration, wait
 		return nil
 	end
 
-	local offset = set.offset or taunts.offset or v(0, 0)
+	local offset = set.offset or taunts.offset or V.v(0, 0)
 	local t = E:create_entity(decal or set.decal_name or taunts.decal_name)
 
 	if not t or not t.texts or not t.texts.list or not t.texts.list[1] then
@@ -5073,7 +5071,6 @@ end
 local function enemy_beat_back_logic(this, store)
 	local beat_back_distance = this._beat_back_distance
 	local beat_back_duration = this._beat_back_duration
-	local start_pos = V.vclone(this.pos)
 	-- 避免击退效果被传送影响
 	U.bans_add(this.vis, F_TELEPORT)
 	U.unblock_all(store, this)

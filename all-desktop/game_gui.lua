@@ -2397,7 +2397,6 @@ function PowerButton:early_wave_bonus(remaining_time)
 		reward_fx.pos = V.v(self.size.x * 0.5, -2 * reward_fx.size.y / 3)
 
 		self:add_child(reward_fx)
-		log.debug("show early wave time reward at %s,%s", wx, wy)
 	end
 end
 
@@ -5268,10 +5267,6 @@ function TutorialBalloon:initialize(id)
 			table.deepmerge(lv, d)
 
 			lv.text = _(lv.text)
-
-			if lv.color and colors[lv.color] then
-				lv.colors.text = colors[lv.color]
-			end
 
 			table.insert(views, lv)
 

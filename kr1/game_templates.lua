@@ -10571,19 +10571,6 @@ tt.path_portal_off_delay = b.path_portal_off_delay
 tt.sound_candles_in = "Stage09NightmarePortalCandles"
 tt.sound_portal_in = "Stage09NightmarePortalEye"
 
-tt = E:register_t("decal_stage_09_skeleton", "decal_scripted")
-E:add_comps(tt, "ui", "motion")
-tt.render.sprites[1].prefix = "skeleton_koopaDef"
-tt.render.sprites[1].name = "idle"
-tt.render.sprites[1].exo = true
-tt.render.sprites[1].z = Z_DECALS
-tt.main_script.update = scripts.decal_stage_09_skeleton.update
-tt.death_time = 12
-tt.walk_destination = v(120, 0)
-tt.motion.speed = v(10, 10)
-tt.motion.max_speed = 20
-tt.ui.click_rect = r(-20, -10, 40, 40)
-
 tt = E:register_t("controller_stage_10_obelisk")
 b = balance.specials.stage10_obelisk
 E:add_comps(tt, "editor", "pos", "main_script")
@@ -14815,7 +14802,6 @@ b = balance.specials.towers.stage_18_elven_barrack
 E:add_comps(tt, "barrack", "corruption_kr5")
 tt.tower.type = "tower_stage_18_elven_barrack"
 tt.tower.level = 1
-tt.tower.kind = TOWER_KIND_BARRACK
 tt.tower.can_be_sold = false
 tt.tower.can_be_mod = false
 tt.tower.terrain_style = TERRAIN_STYLE_SEA_OF_TREES_6
@@ -23915,7 +23901,6 @@ b = balance.specials.stage_37_dragon_wardens
 E:add_comps(tt, "barrack")
 tt.tower.type = "stage_37_barrack_dragon_wardens"
 tt.tower.level = 1
-tt.tower.kind = TOWER_KIND_BARRACK
 tt.tower.can_be_sold = false
 tt.tower.can_be_mod = false
 tt.info.portrait = "kr5_portraits_towers_0008"

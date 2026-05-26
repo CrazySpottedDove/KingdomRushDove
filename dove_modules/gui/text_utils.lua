@@ -177,7 +177,7 @@ function M.create_compact_diff(text1, text2)
 		return text2 or text1 or ""
 	end
 
-	local nums1, nums2, diff_indices = find_number_diffs(text1, text2)
+	local _, nums2, diff_indices = find_number_diffs(text1, text2)
 
 	-- 如果没有变化，返回新文本
 	if #diff_indices == 0 then

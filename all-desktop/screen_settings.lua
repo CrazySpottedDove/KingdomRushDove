@@ -1,5 +1,4 @@
 -- chunkname: @./all-desktop/screen_settings.lua
-local log = require("lib.klua.log"):new("gameGui")
 local km = require("lib.klua.macros")
 local version = require("version")
 require("lib.klua.table")
@@ -591,7 +590,7 @@ end
 
 function screen_settings:update_resolutions_list(fullscreen, highdpi)
 	local resolutions = {}
-	local dt_w, dt_h = love.window.getDesktopDimensions()
+	local dt_w = love.window.getDesktopDimensions()
 
 	for _, r in pairs(self.all_resolutions) do
 		-- local aspect = r.x / r.y

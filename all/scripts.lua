@@ -459,8 +459,6 @@ function scripts.entity_marker_controller.insert(this, store)
 			end
 		end
 	else
-		local suf
-
 		insert_marker(t)
 	end
 
@@ -528,7 +526,7 @@ function scripts.enemy_basic.get_info(this)
 end
 
 function scripts.enemy_basic.insert(this, store)
-	local next, new = P:next_entity_node(this, store.tick_length)
+	local next = P:next_entity_node(this, store.tick_length)
 
 	if not next then
 		log.debug("(%s) %s has no valid next node", this.id, this.template_name)
@@ -598,8 +596,6 @@ end
 scripts.enemy_passive = {}
 
 function scripts.enemy_passive.update(this, store)
-	local terrain_type
-
 	if this.render.sprites[1].name == "raise" then
 		local next_pos
 
@@ -616,7 +612,7 @@ function scripts.enemy_passive.update(this, store)
 
 	while true do
 		if this.cliff then
-			terrain_type = SU.enemy_cliff_change(store, this)
+			SU.enemy_cliff_change(store, this)
 		end
 
 		if this.health.dead then
@@ -1568,7 +1564,6 @@ function scripts.tower_archer.update(this, store)
 				local shooter_idx = a.count % #a.bullet_start_offset + 1
 				local shooter_sid = shooter_sprite_ids[shooter_idx]
 				local start_offset = a.bullet_start_offset[shooter_idx]
-				local s = this.render.sprites[shooter_sid]
 				local an, af = U.animation_name_facing_point(this, "shoot", enemy.pos, shooter_sid, start_offset)
 
 				U.animation_start(this, an, af, store.tick_ts, 1, shooter_sid)
@@ -1584,7 +1579,7 @@ function scripts.tower_archer.update(this, store)
 				if enemy then
 					last_target_pos = enemy.pos
 
-					local an, af = U.animation_name_facing_point(this, "shoot", enemy.pos, shooter_sid, start_offset)
+					local _, af = U.animation_name_facing_point(this, "shoot", enemy.pos, shooter_sid, start_offset)
 
 					this.render.sprites[shooter_sid].flip_x = af
 
@@ -1684,7 +1679,6 @@ function scripts.tower_mage.update(this, store)
 				local shooter_offset_y = aa.bullet_start_offset[1].y
 				local tx, ty = V.sub(enemy.pos.x, enemy.pos.y, this.pos.x, this.pos.y + shooter_offset_y)
 				local t_angle = km.unroll(V.angleTo(tx, ty))
-				local shooter = this.render.sprites[shooter_sid]
 				local an, _, ai = U.animation_name_for_angle(this, aa.animation, t_angle, shooter_sid)
 
 				U.animation_start(this, an, nil, store.tick_ts, 1, shooter_sid)
@@ -1852,7 +1846,6 @@ function scripts.tower_barrack.remove(this, store)
 end
 
 function scripts.tower_barrack.update(this, store)
-	local tower_sid = 2
 	local door_sid = 3
 
 	while true do
@@ -3022,7 +3015,6 @@ function scripts.missile.update(this, store)
 	local target = store.entities[b.target_id]
 	local mspeed = b.min_speed
 	local rot_dir = 1
-	local follow = false
 	local max_same_target_count = 3
 	local max_seek_angle = b.max_seek_angle or math.pi / 6
 
@@ -3232,7 +3224,6 @@ function scripts.enemy_missile.update(this, store)
 	local target = store.entities[b.target_id]
 	local mspeed = b.min_speed
 	local rot_dir = 1
-	local follow = false
 	local max_seek_angle = b.max_seek_angle or 0.2
 
 	if b.particles_name then
@@ -4343,7 +4334,6 @@ function scripts.fireball.update(this, store)
 	if b.g then
 		local last_ts = store.tick_ts
 		local speed = b.speed
-		local this_pos = this.pos
 
 		while flight_time > store.tick_ts - b.ts + store.tick_length do
 			coroutine.yield()
@@ -4460,7 +4450,6 @@ end
 function scripts.bullet_illusion.update(this, store)
 	local b = this.bullet
 	local target = store.entities[b.target_id]
-	local start_ts = store.tick_ts
 	local mspeed = U.frandom(b.min_speed, b.max_speed)
 	local an, af
 	local missed = false
@@ -4541,14 +4530,14 @@ function scripts.bullet_illusion.update(this, store)
 		end
 
 		if a.miss then
-			U.animation_start(this, a_death, nil, store.tick_ts)
+			U.animation_start(this, nil, nil, store.tick_ts)
 			U.y_animation_wait(this)
 		end
 	end
 
 	if a.death then
 		S:queue(this.sound_events.death)
-		U.animation_start(this, a_death, nil, store.tick_ts)
+		U.animation_start(this, nil, nil, store.tick_ts)
 		U.y_animation_wait(this)
 	end
 
@@ -6609,7 +6598,7 @@ function scripts.mod_heal_on_damage.update(this, store)
 		local has_damaged = false
 
 		for _, v in pairs(target.track_damage.damaged) do
-			local e_id, actual_damage = unpack(v)
+			local _, actual_damage = unpack(v)
 
 			if actual_damage > 0 then
 				target.health.hp = target.health.hp + hf * actual_damage
@@ -7089,7 +7078,7 @@ function scripts.mod_teleport.update(this, store)
 		SU.show_auras(store, target, true)
 	end
 
-	local nn, new = P:next_entity_node(target, store.tick_length)
+	local nn = P:next_entity_node(target, store.tick_length)
 
 	if nn then
 		local vx, vy = V.sub(nn.x, nn.y, target.pos.x, target.pos.y)
@@ -7206,7 +7195,7 @@ function scripts.decal_defend_point.insert(this, store)
 	local nodes_list = P:nearest_nodes(this.pos.x, this.pos.y)
 
 	for _, item in pairs(nodes_list) do
-		local pi, spi, ni, dist = unpack(item, 1, 4)
+		local pi, _, ni, dist = unpack(item, 1, 4)
 
 		if dist < P:path_width(pi) * 0.5 then
 			P:set_defend_point_node(pi, ni)
@@ -7439,7 +7428,7 @@ function scripts.mega_spawner.update(this, store)
 								log.error("pack spawner %s not found", custom_data.spawnPackId)
 							else
 								for _, wpack in pairs(spack) do
-									local p_delay, p_delay_var, p_group, p_subpath, p_qty, p_force_all, p_sequence, p_int_min, p_int_max, p_template, p_custom_data = unpack(wpack, 1, 11)
+									local _, _, _, p_subpath, p_qty, _, _, p_int_min, p_int_max, p_template = unpack(wpack, 1, 11)
 
 									for i = 1, p_qty do
 										local point = {
@@ -7709,7 +7698,7 @@ function scripts.taunts_controller.update(this, store)
 			break
 		end
 
-		local start_ts, last_ts = store.tick_ts, store.tick_ts
+		local start_ts = store.tick_ts
 		local wave_number = store.wave_group_number
 		local groups = sequence[wave_number]
 
@@ -7773,7 +7762,7 @@ function scripts.power_fireball_control.update(this, store)
 	for i = 1, math.max(this.fireball_count, this.cataclysm_count) do
 		if i <= this.fireball_count then
 			local e = E:create_entity("power_fireball")
-			local p, found, tries = nil, nil, 0
+			local p, tries = nil, 0
 
 			while not p and tries < 5 do
 				p = V.v(this.pos.x + math.random(-this.max_spread, this.max_spread), this.pos.y + math.random(-this.max_spread, this.max_spread))
@@ -9214,7 +9203,6 @@ end
 function scripts.invisible_bullet.update(this, store)
 	local b = this.bullet
 	local target = store.entities[b.target_id]
-	local target_invalid = false
 
 	if target and target.health and not target.health.dead then
 		local d = SU.create_bullet_damage(b, target.id, this.id)

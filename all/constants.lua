@@ -445,3 +445,8 @@ function OVm(default, mobile)
 	return OVT(default, OV_PHONE, mobile, OV_TABLET, mobile)
 end
 
+DO_ENEMY_BIG = 2
+DO_SOLDIER_BIG = 3
+DO_HEROES = 3
+DO_MOD_FX = 4
+DO_TOWER_MODS = 10

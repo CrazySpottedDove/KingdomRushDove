@@ -405,7 +405,7 @@ function scripts.endless_mage_thunder.update(this, store)
 							local nearest = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
 
 							if #nearest > 0 then
-								local pi, spi, ni = unpack(nearest[1])
+								local pi, _, ni = unpack(nearest[1])
 								local no = math.random(-this.nodes_spread, this.nodes_spread)
 
 								if not P:is_node_valid(pi, ni + no) then

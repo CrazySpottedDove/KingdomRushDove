@@ -273,8 +273,6 @@ function A:lap_start(id, ts)
 	counter[id] = ts
 	self.dirty = true
 
-	log.paranoid("A:lap_start id:%s ts:%s -> %s", id, value, ts)
-
 	return ts, ad
 end
 

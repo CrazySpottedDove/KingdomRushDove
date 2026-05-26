@@ -6,18 +6,14 @@ local ffi = require("ffi")
 
 require("all.constants")
 
-local _aspect = ASPECT
-local _aspect_inv = 1.0 / _aspect
 local ceil = math.ceil
 local floor = math.floor
 local max = math.max
 local min = math.min
-local _cell_size = SPATIAL_HASH_CELL_SIZE
 local _cell_size_factor = SPATIAL_HASH_CELL_SIZE_FACTOR
 local _x_min = IN_GAME_X_MIN
 local _y_min = IN_GAME_Y_MIN
 local _cols = SPATIAL_HASH_COLS
-local _rows = SPATIAL_HASH_ROWS
 local _max_size = SPATIAL_HASH_MAX_INDEX
 local _check_interval = SPATIAL_INDEX_CHECK_INTERVAL
 

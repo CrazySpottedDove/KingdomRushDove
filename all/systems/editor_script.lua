@@ -38,7 +38,7 @@ function M.register(sys)
 				end
 
 				if s.co then
-					local success, err = coroutine.resume(s.co, e, store, s)
+					local _, err = coroutine.resume(s.co, e, store, s)
 
 					if coroutine.status(s.co) == "dead" or err ~= nil then
 						if err ~= nil then

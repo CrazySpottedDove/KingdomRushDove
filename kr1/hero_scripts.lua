@@ -2798,7 +2798,7 @@ scripts.beastmaster_falcon = {
 					SU.delay_attack(store, ca, 0.13333333333333333)
 				else
 					S:queue(ca.sound)
-					U.animation_start(this, "attack_fly", af, store.tick_ts, false)
+					U.animation_start(this, "attack_fly", nil, store.tick_ts, false)
 
 					local accel = 180
 					local max_speed = 300
@@ -22056,8 +22056,6 @@ function scripts.hero_venom_ultimate.update(this, store)
 			local nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
 
 			if #nodes < 1 then
-				log.debug("cannot insert venom ulti, no valid nodes nearby %s,%s", x, y)
-
 				return nil
 			end
 
@@ -25643,7 +25641,6 @@ function scripts.hero_dragon_bone.update(this, store)
 					b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 				end
 
-				b.bullet.shot_index = i
 				b.bullet.damage_factor = this.unit.damage_factor
 
 				queue_insert(store, b)
@@ -26711,7 +26708,7 @@ function scripts.hero_lumenir.update(this, store)
 				local target = targets[1]
 				local start_ts = store.tick_ts
 				local start_fx, b
-				local node_offset = P:predict_enemy_node_advance(target, flight_time)
+				local node_offset = P:predict_enemy_node_advance(target, nil)
 				local t_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni + node_offset)
 				local an, af, ai = U.animation_name_facing_point(this, a.animation, t_pos)
 
@@ -30646,7 +30643,7 @@ function scripts.hero_dragon_arb.update(this, store)
 	end
 
 	local function attack_is_tower_valid(v, a)
-		local is_tower = v.tower and not v.pending_removal and not v.tower.blocked and (not a.excluded_templates or not table.contains(a.excluded_templates, v.template_name)) and v.vis and band(v.vis.flags, a.vis_bans) == 0 and band(v.vis.bans, a.vis_flags) == 0 and not table.contains(a.exclude_tower_kind, v.tower.kind) and v.tower.can_be_mod and U.is_inside_ellipse(v.pos, this.pos, a.max_range) and (a.min_range == 0 or not U.is_inside_ellipse(v.pos, this.pos, a.min_range))
+		local is_tower = v.tower and not v.pending_removal and not v.tower.blocked and (not a.excluded_templates or not table.contains(a.excluded_templates, v.template_name)) and v.vis and band(v.vis.flags, a.vis_bans) == 0 and band(v.vis.bans, a.vis_flags) == 0 and v.tower.can_be_mod and U.is_inside_ellipse(v.pos, this.pos, a.max_range) and (a.min_range == 0 or not U.is_inside_ellipse(v.pos, this.pos, a.min_range))
 
 		return is_tower
 	end
@@ -31002,7 +30999,6 @@ function scripts.hero_dragon_arb.update(this, store)
 						b.bullet.to = V.v(bullet_dest_pos.x + math.random(-20, 20), bullet_dest_pos.y + math.random(-20, 20))
 						b.bullet.damage_max = b.bullet.damage_max / #a.shoot_times
 						b.bullet.damage_min = b.bullet.damage_min / #a.shoot_times
-						b.bullet.shot_index = i
 
 						b.bullet.damage_factor = this.unit.damage_factor
 
@@ -39109,7 +39105,6 @@ function scripts.bullet_hero_dragon_sun_breath_ray.update(this, store)
 
 	local last_damage_ts = 0
 	local bullet_end_pos = V.vv(0)
-	local UPSTREAM = -1
 	local DOWNSTREAM = 1
 	local nodes_to_move = math.ceil(this.motion.max_speed * this.ray_duration / P.average_node_dist * 0.8)
 	local ray_is_right_to_left = store.entities[b.source_id].render.sprites[1].flip_x

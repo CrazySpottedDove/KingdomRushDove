@@ -5282,7 +5282,7 @@ end
 HeroStatDots = class("HeroStatDots", KView)
 
 function HeroStatDots:initialize()
-	HeroStatDots.super.initialize(self, size)
+	HeroStatDots.super.initialize(self)
 
 	self.dots_per_second = 20
 

@@ -1,5 +1,4 @@
 -- chunkname: @./all/screen_credits.lua
-local log = require("lib.klua.log"):new("screen_slots")
 local class = require("middleclass")
 local F = require("lib.klove.font_db")
 local V = require("lib.klua.vector")
@@ -122,7 +121,7 @@ function screen:init(w, h, done_callback, ending_version)
 				label.text_align = "center"
 			end
 
-			local _h, lines = label:get_wrap_lines()
+			local _, lines = label:get_wrap_lines()
 
 			label.size.y = lines * label.line_height * label:get_font_height()
 			current_y = current_y + label.size.y
@@ -145,7 +144,7 @@ function screen:init(w, h, done_callback, ending_version)
 				label.text_align = "center"
 			end
 
-			local _h, lines = label:get_wrap_lines()
+			local _, lines = label:get_wrap_lines()
 
 			label.size.y = lines * label.line_height * label:get_font_height()
 			current_y = current_y + label.size.y
@@ -167,7 +166,7 @@ function screen:init(w, h, done_callback, ending_version)
 				label.text_align = "center"
 			end
 
-			local _h, lines = label:get_wrap_lines()
+			local _, lines = label:get_wrap_lines()
 
 			label.size.y = lines * label.line_height * label:get_font_height()
 			current_y = current_y + label.size.y
@@ -189,7 +188,7 @@ function screen:init(w, h, done_callback, ending_version)
 				label.text_align = "center"
 			end
 
-			local _h, lines = label:get_wrap_lines()
+			local _, lines = label:get_wrap_lines()
 
 			label.size.y = lines * label.line_height * label:get_font_height()
 			current_y = current_y + label.size.y
@@ -211,7 +210,7 @@ function screen:init(w, h, done_callback, ending_version)
 				label.text_align = "center"
 			end
 
-			local _h, lines = label:get_wrap_lines()
+			local _, lines = label:get_wrap_lines()
 
 			label.size.y = lines * label.line_height * label:get_font_height()
 			current_y = current_y + label.size.y

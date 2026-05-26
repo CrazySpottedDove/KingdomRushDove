@@ -234,7 +234,7 @@ function RichTextLabel:_fit_text()
 		self._fitted_font_size = nil
 
 		while font_size >= 1 do
-			local w, lines = self:get_wrap_lines()
+			local _, lines = self:get_wrap_lines()
 			local h = lines * self:get_font_height() * self.line_height
 
 			if fit_lines and fit_size and lines <= fit_lines and h <= self.text_size.y or not fit_size and fit_lines and lines <= fit_lines or not fit_lines and fit_size and h <= self.text_size.y then
@@ -376,7 +376,7 @@ function RichTextLabel:_draw_self()
 
 	-- 垂直对齐处理
 	if self.vertical_align and self.vertical_align ~= "top" then
-		local tw, tl = self:get_wrap_lines()
+		local _, tl = self:get_wrap_lines()
 		local th = self:get_font_height()
 		local des = -1 * self.font:getDescent() / font_scale
 		local base = self.font:getBaseline() / font_scale
@@ -482,7 +482,6 @@ function RichTextLabel:_draw_rich_text_segments(voff, font_scale, pr, pg, pb, pa
 	end
 
 	-- 为每个段落找到其在换行文本中的位置
-	local current_char = 1
 	local line_height = self:get_font_height() * self.line_height
 
 	for line_idx, line_text in ipairs(wrapped_lines) do
@@ -499,7 +498,6 @@ end
 -- @param font_scale 字体缩放
 -- @param pr,pg,pb,pa 当前颜色
 function RichTextLabel:_draw_line_segments(line_text, line_y, font_scale, pr, pg, pb, pa)
-	local x_offset = 0
 	local plain_text = self:get_plain_text()
 	local line_start = string.find(plain_text, line_text, 1, true)
 

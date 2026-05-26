@@ -1748,10 +1748,6 @@ function scripts.eb_myconid.update(this, store)
 				si = si + 1
 
 				if SU.y_enemy_wait(store, this, sa.final_wait) then
-					if sp then
-						sp.spawner.interrupt = true
-					end
-
 					goto label_168_0
 				end
 
@@ -3530,7 +3526,7 @@ function scripts.umbra_guy.update(this, store)
 
 				taunt.ts = store.tick_ts + taunt.attack_duration
 
-				U.animation_start(this, at.animation, ni, store.tick_ts, false)
+				U.animation_start(this, at.animation, nil, store.tick_ts, false)
 				U.y_wait(store, at.shoot_time)
 
 				local off = at.bullet_start_offset
@@ -4629,7 +4625,7 @@ function scripts.eb_drow_queen.update(this, store)
 		if #towers > 5 then
 			local tower_2 = table.random(towers)
 
-			if tower_2 and tower_2_id ~= tower_id then
+			if tower_2 and nil ~= tower_id then
 				block_tower_ids({tower_2.tower.holder_id})
 			end
 		end
@@ -9096,7 +9092,7 @@ function scripts.controller_stage_22_boss_crocs.update(this, store)
 
 	local function get_towers_to_eat()
 		local towers = table.filter(store.towers, function(k, v)
-			local is_tower = not v.pending_removal and (not this.excluded_templates or not table.contains(this.excluded_templates, v.template_name)) and v.vis and band(v.vis.flags, this.vis_bans) == 0 and band(v.vis.bans, this.vis_flags) == 0 and (not this.exclude_tower_kind or not table.contains(this.exclude_tower_kind, v.tower.kind)) and v.tower.can_be_mod
+			local is_tower = not v.pending_removal and (not this.excluded_templates or not table.contains(this.excluded_templates, v.template_name)) and v.vis and band(v.vis.flags, this.vis_bans) == 0 and band(v.vis.bans, this.vis_flags) == 0 and v.tower.can_be_mod
 			return is_tower
 		end)
 
@@ -9687,7 +9683,7 @@ function scripts.boss_crocs.update(this, store)
 	end
 
 	local function attack_is_tower_valid(v, a)
-		local is_tower = v.tower and not v.pending_removal and (not a.excluded_templates or not table.contains(a.excluded_templates, v.template_name)) and v.vis and band(v.vis.flags, a.vis_bans) == 0 and band(v.vis.bans, a.vis_flags) == 0 and (not a.exclude_tower_kind or not table.contains(a.exclude_tower_kind, v.tower.kind)) and v.tower.can_be_mod and U.is_inside_ellipse(v.pos, this.pos, a.max_range)
+		local is_tower = v.tower and not v.pending_removal and (not a.excluded_templates or not table.contains(a.excluded_templates, v.template_name)) and v.vis and band(v.vis.flags, a.vis_bans) == 0 and band(v.vis.bans, a.vis_flags) == 0 and v.tower.can_be_mod and U.is_inside_ellipse(v.pos, this.pos, a.max_range)
 
 		return is_tower
 	end
@@ -10498,7 +10494,6 @@ end
 scripts.boss_pig = {}
 
 function scripts.boss_pig.update(this, store)
-	local sid_body = 1
 	local d_flying = E:create_entity("decal_boss_pig_flying")
 	local s_flying = d_flying.render.sprites[1]
 
@@ -11660,7 +11655,7 @@ function scripts.boss_spider_queen.update(this, store)
 	end
 
 	local function filter_tower_fn(v, origin, attack)
-		return v.vis and band(v.vis.flags, a.vis_bans) == 0 and band(v.vis.bans, a.vis_flags) == 0 and (not a.exclude_tower_kind or not table.contains(a.exclude_tower_kind, v.tower.kind)) and v.tower.can_be_mod
+		return v.vis and band(v.vis.flags, a.vis_bans) == 0 and band(v.vis.bans, a.vis_flags) == 0 and v.tower.can_be_mod
 	end
 
 	local function is_after_nodes_limit(attack)
@@ -12004,7 +11999,7 @@ function scripts.boss_spider_queen.update(this, store)
 								obj.pos = P:node_pos(this.nav_path.pi, v.spi, ni)
 								obj.render.sprites[1].flip_x = this.render.sprites[1].flip_x
 								obj.pi = this.nav_path.pi
-								obj.spi = spi
+								obj.spi = v.spi
 								obj.ni = ni
 
 								queue_insert(store, obj)

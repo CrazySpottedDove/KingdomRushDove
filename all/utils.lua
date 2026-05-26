@@ -1121,7 +1121,7 @@ function U.find_enemies_in_paths(entities, origin, min_node_range, max_node_rang
 	local nearest_nodes = P:nearest_nodes(origin.x, origin.y)
 
 	for _, n in pairs(nearest_nodes) do
-		local opi, ospi, oni, odist = unpack(n, 1, 4)
+		local opi, _, oni, odist = unpack(n, 1, 4)
 
 		if max_path_dist < odist or not P:is_node_valid(opi, oni) then
 		-- block empty

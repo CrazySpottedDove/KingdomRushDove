@@ -5,7 +5,6 @@ require("lib.klua.table")
 
 local km = require("lib.klua.macros")
 local LA = love.audio
-local LS = love.sound
 local FS = love.filesystem
 local sound_db = {}
 
@@ -274,7 +273,7 @@ function sound_db:queue_load_done()
 	end
 
 	for i = #self.threads, 1, -1 do
-		local th, cin, cout = unpack(self.threads[i])
+		local th, _, cout = unpack(self.threads[i])
 
 		if th:isRunning() then
 			while true do
@@ -611,7 +610,6 @@ function sound_db:update(dt)
 
 	-- 处理所有播放请求，如果请求设置了delay选项，则会在指定的延迟时间后才播放
 	local queue = sound_db.request_queue
-	local reqs_due = {}
 
 	for i = #queue, 1, -1 do
 		local req = queue[i]

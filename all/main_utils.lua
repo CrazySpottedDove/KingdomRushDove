@@ -213,19 +213,6 @@ function mu.start_debugger(params)
 
 			m.coro()
 			m.start()
-		elseif params.repl then
-			require("lib.klua.repl")
-
-			local repl_port, repl_address
-
-			if params.repl then
-				repl_address, repl_port = unpack(string.split(params.repl, ":"))
-			end
-
-			repl_port = repl_port or 9000
-			repl_address = repl_address or "127.0.0.1"
-
-			repl_init(repl_port, repl_address)
 		end
 	end
 end

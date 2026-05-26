@@ -17322,7 +17322,6 @@ function scripts.mod_phoenix_flaming_path.update(this, store)
 			if store.tick_ts - ca.ts > ca.cooldown then
 				ca.ts = store.tick_ts
 
-				S:queue(sound)
 				SU.insert_sprite(store, ca.fx, fx_pos)
 				U.y_wait(store, ca.hit_time)
 
@@ -18777,7 +18776,7 @@ function scripts.decal_george_jungle.update(this, store)
 	local play_ts = store.tick_ts
 	local play_time = U.frandom(this.play_time[1], this.play_time[2])
 	local sid_liana, sid_fall, sid_bush = 1, 2, 3
-	local s_liana, s_fall = this.render.sprites[1], this.render.sprites[2], this.render.sprites[3]
+	local s_liana, s_fall = this.render.sprites[1], this.render.sprites[2]
 	local dx = store.visible_coords.right - REF_W
 	local ox, oy = s_liana.offset.x, s_liana.offset.y
 
@@ -18864,7 +18863,7 @@ function scripts.decal_tree_ewok.update(this, store)
 			if target then
 				a.ts = store.tick_ts
 
-				local node_offset = P:predict_enemy_node_advance(target, prediction_time)
+				local node_offset = P:predict_enemy_node_advance(target, nil)
 				local pred_pos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni + node_offset)
 				local an, af, ai = U.animation_name_facing_point(this, a.animation, pred_pos)
 
@@ -20360,7 +20359,7 @@ function scripts.faerie_trails.insert(this, store)
 		end
 
 		if node_in then
-			table.insert(this.sections, {pi, node_in, ni})
+			table.insert(this.sections, {pi, node_in, nil})
 		end
 	end
 
@@ -21203,8 +21202,6 @@ function scripts.aura_fiery_mist_baby_ashbite.update(this, store)
 				fx.tween.ts = store.tick_ts
 
 				queue_insert(store, fx)
-			else
-				log.debug("aura_fiery_mist_baby_ashbite: path %s,%s,%s is not valid", pi, spi, ni)
 			end
 
 			spi = km.zmod(spi + 2, 3)
@@ -25466,7 +25463,7 @@ function scripts.decal_stage_02_fishing_link.update(this, store)
 			end
 
 			U.y_animation_wait(this, 1)
-			U.animation_start(this, "idle", fals, store.tick_ts, true)
+			U.animation_start(this, "idle", nil, store.tick_ts, true)
 
 			this.line_move = false
 			line_move_cd = math.random(this.min_line_move_cd, this.max_line_move_cd)
@@ -27341,28 +27338,6 @@ function scripts.aura_stage_09_spawn_nightmare_convert.update(this, store)
 					this.entities_spawned = this.entities_spawned + 1
 				end
 			end
-		end
-
-		coroutine.yield()
-	end
-end
-
-scripts.decal_stage_09_skeleton = {}
-
-function scripts.decal_stage_09_skeleton.update(this, store)
-	local is_dead = false
-
-	U.animation_start(this, "idle_death", nil, store.tick_ts, true)
-
-	while true do
-		if is_dead and store.tick_ts - death_ts >= this.death_time then
-			S:queue("Stage09DryBonesReform")
-			U.y_animation_play(this, "respawn", nil, store.tick_ts)
-
-			is_dead = false
-			this.ui.can_click = true
-
-			U.animation_start(this, "walk", nil, store.tick_ts, true)
 		end
 
 		coroutine.yield()
@@ -38098,7 +38073,7 @@ function scripts.enemy_killertile.update(this, store)
 			coroutine.yield()
 		else
 			local ignore_soldiers = terrain_type == TERRAIN_WATER
-			local ok, blocker, _ = SU.y_enemy_walk_until_blocked(store, this, ignore_soldiers, break_fn)
+			local ok, blocker, _ = SU.y_enemy_walk_until_blocked(store, this, ignore_soldiers)
 
 			if not ok then
 			-- block empty
@@ -38108,7 +38083,7 @@ function scripts.enemy_killertile.update(this, store)
 						goto label_162_0
 					end
 
-					while SU.can_melee_blocker(store, this, blocker) and (not break_fn or not break_fn(store, this)) do
+					while SU.can_melee_blocker(store, this, blocker) do
 						if not SU.y_enemy_melee_attacks(store, this, blocker) then
 							goto label_162_0
 						end
@@ -38216,7 +38191,7 @@ function scripts.enemy_crocs_ranged.update(this, store)
 			coroutine.yield()
 		else
 			local ignore_soldiers = terrain_type == TERRAIN_WATER
-			local ok, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, ignore_soldiers, break_fn)
+			local ok, blocker, ranged = SU.y_enemy_walk_until_blocked(store, this, ignore_soldiers)
 
 			if not ok then
 			-- block empty
@@ -38226,7 +38201,7 @@ function scripts.enemy_crocs_ranged.update(this, store)
 						goto label_165_0
 					end
 
-					while SU.can_melee_blocker(store, this, blocker) and (not break_fn or not break_fn(store, this)) do
+					while SU.can_melee_blocker(store, this, blocker) do
 						if not SU.y_enemy_melee_attacks(store, this, blocker) then
 							goto label_165_0
 						end
@@ -38234,7 +38209,7 @@ function scripts.enemy_crocs_ranged.update(this, store)
 						coroutine.yield()
 					end
 				elseif ranged then
-					while SU.can_range_soldier(store, this, ranged) and #this.enemy.blockers == 0 and (not break_fn or not break_fn(store, this)) do
+					while SU.can_range_soldier(store, this, ranged) and #this.enemy.blockers == 0 do
 						if not SU.y_enemy_range_attacks(store, this, ranged) then
 							goto label_165_0
 						end
@@ -56832,8 +56807,6 @@ function scripts.decal_boss_princess_iron_fan_waves_shield.update(this, store)
 		log.info("[WARNING] Boss princess couldn't find a desired node for the shield. This may cause some units or towers to ignore the shield. In example the arborean dragon")
 	end
 
-	U.sprites_hide(target, nil, nil, true)
-
 	while this.health.hp > 0 do
 		coroutine.yield()
 	end
@@ -64137,7 +64110,6 @@ function scripts.mod_boss_stage_39_get_hit_dps.update(this, store, script)
 		coroutine.yield()
 	end
 
-	log.paranoid(">>>>> id:%s - mod_boss_stage_39_get_hit_dps cycles:%s total_damage:%s", this.id, cycles, total_damage)
 	queue_remove(store, this)
 end
 

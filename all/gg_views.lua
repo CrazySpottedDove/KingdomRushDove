@@ -103,7 +103,7 @@ function GGLabel:_fit_text()
 		self._fitted_font_size = nil
 
 		while font_size >= 1 do
-			local w, lines = self:get_wrap_lines()
+			local _, lines = self:get_wrap_lines()
 			local h = lines * self:get_font_height() * self.line_height
 
 			if fit_lines and fit_size and lines <= fit_lines and h <= self.text_size.y or not fit_size and fit_lines and lines <= fit_lines or not fit_lines and fit_size and h <= self.text_size.y then
@@ -147,7 +147,7 @@ function GGLabel:_draw_self()
 	local voff = (self.font_adj.top or 0) / font_scale
 
 	if self.vertical_align and self.vertical_align ~= "top" then
-		local tw, tl = self:get_wrap_lines()
+		local _, tl = self:get_wrap_lines()
 		local th = self:get_font_height()
 		local des = -1 * self.font:getDescent() / font_scale
 		local base = self.font:getBaseline() / font_scale
@@ -614,7 +614,7 @@ function GG9View:initialize(image_name, size, slice_rect)
 	G.setScissor()
 	G.origin()
 
-	local ox, oy, lw, lh = 0, 0, 0, 0
+	local ox, oy = 0, 0
 
 	for i = 1, cw + 2 do
 		for j = 1, ch + 2 do
@@ -802,10 +802,10 @@ function GGLayout:initialize(size, layout, space)
 end
 
 function GGLayout:update_layout()
-	local x, y = 0, 0
+	local y = 0
 
 	if self.layout == "top" then
-		x, y = 0, 0
+		y = 0
 
 		for _, c in pairs(self.children) do
 			if c:isInstanceOf(GGLabel) then
@@ -815,7 +815,7 @@ function GGLayout:update_layout()
 				c:_load_font()
 				c:_fit_text()
 
-				local w, l = c:get_wrap_lines()
+				local _, l = c:get_wrap_lines()
 
 				c.size.y = l * c:get_font_height() * c.line_height
 				c.text_size.y = c.size.y
@@ -864,7 +864,6 @@ function GGEllipseText:redraw()
 	local text_w = 0
 
 	for i = 1, count do
-		local o = utf8.offset(self.text, i)
 		local l = GGLabel:new()
 
 		self:add_child(l)

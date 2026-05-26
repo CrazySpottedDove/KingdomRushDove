@@ -103,11 +103,11 @@ function PopUpView:update(dt)
 end
 
 function PopUpView:cancel_timers()
-	if self._timers then
-		for _, t in pairs(self._timers) do
-			timer:cancel(t)
-		end
-	end
+-- if self._timers then
+-- 	for _, t in pairs(self._timers) do
+-- 		timer:cancel(t)
+-- 	end
+-- end
 end
 
 function PopUpView:on_enter()

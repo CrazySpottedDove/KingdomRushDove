@@ -52,7 +52,7 @@ function font_db:load(font_sizes)
 			self.fonts[key] = font
 
 			local image = G.newImage(f)
-			local w, h = image:getDimensions()
+			local _, h = image:getDimensions()
 			local data = image:getData()
 			local sr, sg, sb, sa
 

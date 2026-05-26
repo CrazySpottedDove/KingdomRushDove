@@ -139,11 +139,10 @@ local function compile_entity(e)
 	return ec.main_script.insert, ec.main_script.update
 end
 
-local orig_aura_insert = scripts.aura_apply_mod.insert
 local orig_aura_update = scripts.aura_apply_mod.update
 
-local comp_simple_insert, comp_simple_update = compile_entity(e_simple)
-local comp_complex_insert, comp_complex_update = compile_entity(e_complex)
+local _, comp_simple_update = compile_entity(e_simple)
+local _, comp_complex_update = compile_entity(e_complex)
 
 print("")
 print("═══  aura_apply_mod  运行时基准测试  ═══")

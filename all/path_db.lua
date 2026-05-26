@@ -2,7 +2,6 @@
 local bit = require("bit")
 local log = require("lib.klua.log"):new("path_db")
 local km = require("lib.klua.macros")
-local FS = love.filesystem
 local perf = require("dove_modules.perf.perf")
 
 require("lib.klua.table")
@@ -129,8 +128,6 @@ function path_db:load(name, visible_coords)
 	end
 
 	if visible_coords then
-		local vc = visible_coords
-
 		for j, p in ipairs(self.paths) do
 			local ni_in = 1
 			local ni_out = #p[1]

@@ -3585,8 +3585,6 @@ scripts.tower_bfg = {
 					else
 						am.ts = store.tick_ts
 
-						local trigger_pos = vclone(trigger.pos)
-
 						animation_start(this, am.animation, nil, store.tick_ts, false, tower_sid)
 						y_wait(store, am.shoot_time)
 
@@ -11475,7 +11473,6 @@ function scripts.tower_stargazers.update(this, store)
 	local tpos = tpos(this)
 	local aa_vis_flags = aa.vis_flags
 	local aa_vis_bans = aa.vis_bans
-	local aa_shooter_offset_y = aa.bullet_start_offset[1].y
 	local sprites = this.render.sprites
 	local at_vis_flags = at.vis_flags
 	local at_vis_bans = at.vis_bans
@@ -15156,8 +15153,6 @@ function scripts.tower_flamespitter.update(this, store)
 						coroutine.yield()
 					end
 				until reached_target
-
-				local nearest = P:nearest_nodes(pred_pos.x, pred_pos.y)
 
 				-- animation_start(this, "attack", a_flip, store.tick_ts, false, this.render.sid_dwarf)
 				y_wait(store, fts(14) * tw.cooldown_factor)
@@ -20824,18 +20819,8 @@ function scripts.soldier_priests_barrack.update(this, store)
 		if s.nav_path then
 			s.nav_path.pi = this.nav_path.pi
 
-			local spread_nodes = this.death_spawns.spread_nodes
-
-			if spread_nodes > 0 then
-				s.nav_path.spi = km.zmod(this.nav_path.spi + i, 3)
-
-				local node_offset = spread_nodes * -2 * math.floor(i / 3)
-
-				s.nav_path.ni = this.nav_path.ni + node_offset + spread_nodes
-			else
-				s.nav_path.spi = this.nav_path.spi
-				s.nav_path.ni = this.nav_path.ni + 2
-			end
+			s.nav_path.spi = this.nav_path.spi
+			s.nav_path.ni = this.nav_path.ni + 2
 		end
 
 		if s.nav_grid and this.nav_grid then

@@ -1,6 +1,6 @@
 local FS = love.filesystem
 local bit = require("bit")
-local bxor, band, rshift, lshift = bit.bxor, bit.band, bit.rshift, bit.lshift
+local bxor, band, rshift = bit.bxor, bit.band, bit.rshift
 
 local zip = {}
 

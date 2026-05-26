@@ -1,4 +1,3 @@
-local log = require("lib.klua.log"):new("grid_a_star")
 local V = require("lib.klua.vector")
 
 require("lib.klua.table")
@@ -133,7 +132,7 @@ function a.get_neighbors(nodes, node, grid, valid_cell_fn)
 	local y = node.y
 
 	local gx = #grid
-	local cx, cy, cell
+	local cell
 
 	local function try(nx, ny)
 		if nx > 1 and nx < gx then

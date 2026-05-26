@@ -45,7 +45,6 @@ function difficulty:patch_templates()
 				end
 			elseif not PT(t.health, "hp_max") and hp_factor_soldier and hp_factor_soldier ~= 1 then
 				if not t.health.hp_max then
-					log.debug("no hp_max in %s", t.template_name)
 				else
 					t.health.hp_max = math.floor(t.health.hp_max * hp_factor_soldier)
 				end

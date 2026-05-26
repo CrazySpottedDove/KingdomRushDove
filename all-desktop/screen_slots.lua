@@ -4,7 +4,6 @@ local class = require("middleclass")
 local F = require("lib.klove.font_db")
 local I = require("lib.klove.image_db")
 local V = require("lib.klua.vector")
-local v = V.v
 local signal = require("lib.hump.signal")
 local storage = require("all.storage")
 local slot_template = require("data.slot_template")
@@ -316,7 +315,7 @@ function screen:init(w, h, done_callback)
 	local show_credits = window:get_child_by_id("banner_button_credits")
 
 	function show_credits.on_click()
-		self:handle_credits_button(b_credits)
+		self:handle_credits_button()
 		S:queue("GUIButtonCommon")
 	end
 
@@ -356,7 +355,7 @@ function screen:init(w, h, done_callback)
 
 	function quit_yes.on_click(this)
 		S:queue("GUIButtonCommon")
-		screen:handle_quit_button(b_yes)
+		screen:handle_quit_button()
 	end
 
 	local quit_no = window:get_child_by_id("quit_button_no")
@@ -416,8 +415,6 @@ function screen:init(w, h, done_callback)
 
 	wid("cloudsave_cancel_button").on_click = function(this)
 		S:queue("GUIButtonCommon")
-
-		local rid = screen.cloudsave_req_id
 
 		screen.cloudsave_req_id = nil
 
@@ -494,13 +491,13 @@ function screen:handle_slot_button(slot_idx)
 	})
 end
 
-function screen:handle_credits_button(button)
+function screen:handle_credits_button()
 	self.done_callback({
 		next_item_name = "credits"
 	})
 end
 
-function screen:handle_quit_button(button)
+function screen:handle_quit_button()
 	self.done_callback({
 		quit = true
 	})

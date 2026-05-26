@@ -125,7 +125,7 @@ function kui_db:replace_templates(t, ctx)
 		local tt = self:get_table(n, ctx)
 
 		if tt then
-			out = table.deepmerge(tt, t, new)
+			out = table.deepmerge(tt, t)
 		end
 	elseif t.children then
 		local ac = {}

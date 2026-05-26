@@ -33,8 +33,6 @@ local dnum_digits = {}
 local dnum_write_cur = 0
 local dnum_on_applied_impl
 local dnum_draw_impl
-local dnum_atlas_font
-local dnum_atlas_canvas
 local dnum_atlas_quads
 local dnum_atlas_widths
 local dnum_batch
@@ -156,8 +154,6 @@ local function dnum_build_atlas()
 	G.setCanvas()
 	G.pop()
 
-	dnum_atlas_font = font
-	dnum_atlas_canvas = canvas
 	dnum_atlas_quads = quads
 	dnum_atlas_widths = widths
 	dnum_batch = G.newSpriteBatch(canvas, DNUM_BATCH_CAP, "stream")

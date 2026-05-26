@@ -257,7 +257,7 @@ function M.register(sys)
 			end
 
 			if store.level.co then
-				local success, error = coroutine.resume(store.level.co, store.level, store)
+				local _, error = coroutine.resume(store.level.co, store.level, store)
 
 				if coroutine.status(store.level.co) == "dead" or error ~= nil then
 					if error ~= nil then
@@ -271,8 +271,6 @@ function M.register(sys)
 		end
 
 		if not store._common_notifications then
-			local slot = storage:load_slot()
-
 			store._common_notifications = true
 
 			if store.level_mode == GAME_MODE_IRON or store.level_mode == GAME_MODE_HEROIC then

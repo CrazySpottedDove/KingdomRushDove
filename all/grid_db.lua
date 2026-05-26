@@ -1,7 +1,6 @@
 -- chunkname: @./all/grid_db.lua
 local log = require("lib.klua.log"):new("grid_db")
 local V = require("lib.klua.vector")
-local FS = love.filesystem
 local km = require("lib.klua.macros")
 
 require("lib.klua.table")

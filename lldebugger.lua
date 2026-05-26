@@ -1296,7 +1296,7 @@ ____modules = {
 
 			local supportsUtf8Identifiers = (function()
 				local identifier = (string.char(226) .. string.char(143)) .. string.char(176)
-				local ____, err = loadLuaString((("local " .. identifier) .. " = true return ") .. identifier)
+				local _, err = loadLuaString((("local " .. identifier) .. " = true return ") .. identifier)
 
 				return err == nil
 			end)()

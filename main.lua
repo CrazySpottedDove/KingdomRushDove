@@ -27,9 +27,9 @@ function love.filesystem.loadWithPreference(filename, prefixs)
 		local candidates = {}
 
 		-- 自定义地图运行时：当请求 KR_PATH_GAME 资源时，优先从插件根目录读取
-		if _G.CUSTOM_MAP_ROOT and prefix == KR_PATH_GAME then
-			candidates[#candidates + 1] = _G.CUSTOM_MAP_ROOT
-		end
+		-- if _G.CUSTOM_MAP_ROOT and prefix == KR_PATH_GAME then
+		-- 	candidates[#candidates + 1] = _G.CUSTOM_MAP_ROOT
+		-- end
 		candidates[#candidates + 1] = prefix
 
 		for _, base in ipairs(candidates) do
@@ -793,8 +793,8 @@ local function disabled_all_mods()
 	if not love.filesystem.getInfo(cfg_path, "file") then
 		return false
 	end
-	local chunk, err = love.filesystem.load(cfg_path)
-	local ok, cfg = pcall(chunk)
+	local chunk = love.filesystem.load(cfg_path)
+	local _, cfg = pcall(chunk)
 	if cfg.enabled == true then
 		cfg.enabled = false
 		storage:write_lua(cfg_path, cfg)
@@ -805,7 +805,7 @@ end
 
 function love.errorhandler(msg)
 	local error_canvas = G.newCanvas(G.getWidth(), G.getHeight())
-	local last_canvas = G.getCanvas()
+	-- local last_canvas = G.getCanvas()
 
 	G.setCanvas(error_canvas)
 
@@ -905,8 +905,6 @@ function love.errorhandler(msg)
 	G.setFont(font)
 	G.printf(p, pos, pos + tip_height, text_width)
 	G.present()
-
-	local show_last = true
 
 	if LLDEBUGGER then
 		LLDEBUGGER.start()

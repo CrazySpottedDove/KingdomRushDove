@@ -4,7 +4,6 @@ local km = require("lib.klua.macros")
 local tsv = require("lib.klua.tsv")
 require("lib.klua.string")
 require("lib.klua.table")
-local FS = love.filesystem
 local E = require("entity_db")
 local EL = require("kr1.data.endless")
 local EU = require("endless_utils")
@@ -440,7 +439,6 @@ function wave_db:create_wave_group_from_tsv(wave_cmd)
 		waves = {},
 		interval = (wave_cmd.wait_time or 0) * FPS
 	}
-	local out = {}
 	local w
 	local delay = 0
 	local has_flying = false
@@ -686,7 +684,6 @@ function wave_db:load_tsv(level_name, game_mode, wave_ss_data)
 	if wave_ss_data then
 		rows = tsv.parse_tsv(wave_ss_data)
 	else
-		local suffix = gms[game_mode]
 		local suffix = gms[game_mode]
 		local wn = string.format("%s/data/waves/%s_waves_%s", KR_PATH_GAME, level_name, suffix)
 		local wf = string.format("%s.tsv", wn)

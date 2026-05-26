@@ -15,11 +15,11 @@ function tsv.csv_row_to_table(s)
 
 	repeat
 		if string.find(s, "^\"", fieldstart) then
-			local a, c
+			local _, c
 			local i = fieldstart
 
 			repeat
-				a, i, c = string.find(s, "\"(\"?)", i + 1)
+				_, i, c = string.find(s, "\"(\"?)", i + 1)
 			until c ~= "\""
 
 			if not i then
