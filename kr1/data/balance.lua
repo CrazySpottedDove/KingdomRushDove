@@ -5642,7 +5642,7 @@ local towers = {
 			s_damage_min = {20, 40, 60},
 			s_damage_max = {30, 60, 90},
 			damage_type = DAMAGE_STAB,
-			armor_penetration = {0.1, 0.25, 0.4}
+			armor_penetration = {0.11, 0.26, 0.41}
 		},
 		rapacious_hunter = {
 			range = 220,

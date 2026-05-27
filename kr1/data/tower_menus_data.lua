@@ -408,7 +408,7 @@ return {
 			image = "kr5_main_icons_0002",
 			place = 17,
 			tt_title = _("TOWER_ROYAL_ARCHERS_NAME"),
-			tt_desc = _("TOWER_ROYAL_ARCHERS_1_DESCRIPTION")
+			tt_desc = _("TOWER_ROYAL_ARCHERS_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_ballista_lvl4",
