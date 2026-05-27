@@ -3710,18 +3710,7 @@ scripts.missile_bfg = {
 
 scripts.lava_dwaarp = {
 	update = function(this, store)
-		local last_hit_ts = 0
-		local cycles_count = 0
-
-		if this.aura.track_source and this.aura.source_id then
-			local te = store.entities[this.aura.source_id]
-
-			if te and te.pos then
-				this.pos = te.pos
-			end
-		end
-
-		last_hit_ts = store.tick_ts - this.aura.cycle_time
+		local last_hit_ts = store.tick_ts - this.aura.cycle_time
 
 		if this.aura.apply_delay then
 			last_hit_ts = last_hit_ts + this.aura.apply_delay
@@ -3737,20 +3726,11 @@ scripts.lava_dwaarp = {
 			end
 
 			if store.tick_ts - last_hit_ts >= this.aura.cycle_time then
-				if this.render and this.aura.cast_resets_sprite_id then
-					this.render.sprites[this.aura.cast_resets_sprite_id].ts = store.tick_ts
-				end
-
 				last_hit_ts = store.tick_ts
-				cycles_count = cycles_count + 1
 
-				local targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, function(e)
-					return (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, e.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, e.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= e.id)
-				end)
+				local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
 
-				if not targets then
-				-- last_hit_ts = last_hit_ts + fts(1)
-				else
+				if targets then
 					for i = 1, #targets do
 						local target = targets[i]
 						local new_mod = E:create_entity(this.aura.mod)
@@ -3774,72 +3754,6 @@ scripts.lava_dwaarp = {
 }
 -- 地震
 scripts.tower_dwaarp = {
-	insert = function(this, store)
-		local function fx_points(this)
-			if this.attacks.range == this._fx_point_range then
-				if this._fx_points_cache then
-					return this._fx_points_cache
-				end
-			else
-				this._fx_point_range = this.attacks.range
-			end
-
-			local points = {}
-			-- range = 180 时，是 100 内圈， 115 外圈来添加岩浆特效
-			-- 随着范围变大，不应该修改岩浆特效的贴图大小，而应该在更多的位置均匀地添加岩浆特效
-			-- lava 的范围为 70，我们直接保证灼烧点之间的弧长不要超过 140，即 r * theta < 140
-			-- 我们设置初始盲区为 r = 30，然后保证最外圈可以触及 r = attacks.range，然后求平均。
-			-- 70 * k + x - 70, 70 * k + x + 15 + 70 要尽量均匀分布在 [30, attacks.range] 中
-			-- k = 0, 1, ..., math.ceil(attacks.range - 30) / 70
-			local void_radius = 30
-			local scope = this.attacks.range - void_radius
-			-- 特效生效半径
-			local fx_r = 70
-			-- 特效视觉直径
-			local fx_d = 1.2 * fx_r
-			-- 径向分布 k 个特效中心
-			local k = math.ceil(scope / fx_d)
-			-- 重新计算特效中心步长
-			local fx_d_real = fx_d
-
-			if k > 1 then
-				fx_d_real = (scope - fx_d) / (k - 1)
-			end
-
-			local r_start = void_radius + fx_r
-
-			-- 起始 fx_point 中心的 x 坐标
-			for i = 1, k do
-				local r = r_start + (i - 1) * fx_d_real
-				local theta = fx_d / r
-				-- 总共取这么多点，分内圈外圈
-				local n_points = math.ceil(2 * math.pi / theta)
-
-				theta = 2 * math.pi / n_points
-
-				for j = 1, n_points do
-					local pos = U.point_on_ellipse(this.pos, r, theta * j)
-
-					if GR:cell_is(pos.x, pos.y, TERRAIN_WATER) or P:valid_node_nearby(pos.x, pos.y, 1) and not GR:cell_is(pos.x, pos.y, TERRAIN_CLIFF) then
-						local p = {}
-
-						p.pos = pos
-						p.terrain = GR:cell_type(pos.x, pos.y)
-
-						table.insert(points, p)
-					end
-				end
-			end
-
-			this._fx_points_cache = points
-
-			return points
-		end
-
-		this.fx_points = fx_points
-
-		return true
-	end,
 	update = function(this, store)
 		local a = this.attacks
 		local aa = this.attacks.list[1]
@@ -4002,23 +3916,24 @@ scripts.tower_dwaarp = {
 								end
 							end
 
-							local fx_points = this.fx_points(this)
+							if lava_ready then
+								local lava = E:create_entity(la.bullet)
+								lava.pos = tpos(this)
+								-- lava.pos.x, lava.pos.y = p.pos.x, p.pos.y
+								lava.aura.ts = store.tick_ts
+								lava.aura.source_id = this.id
+								lava.aura.level = pow_l.level
+								-- lava.aura.radius = lava.aura.radius
+								lava.aura.radius = a.range
+								lava.aura.damage_factor = this.tower.damage_factor
+
+								queue_insert(store, lava)
+							end
+
+							local fx_points = U.get_path_fx_points(this, 60)
 
 							for i = 1, #fx_points do
 								local p = fx_points[i]
-
-								if lava_ready then
-									local lava = E:create_entity(la.bullet)
-
-									lava.pos.x, lava.pos.y = p.pos.x, p.pos.y
-									lava.aura.ts = store.tick_ts
-									lava.aura.source_id = this.id
-									lava.aura.level = pow_l.level
-									lava.aura.radius = lava.aura.radius
-									lava.aura.damage_factor = this.tower.damage_factor
-
-									queue_insert(store, lava)
-								end
 
 								if band(p.terrain, TERRAIN_WATER) ~= 0 then
 									local smoke = E:create_entity("decal_dwaarp_smoke_water")
@@ -4124,6 +4039,7 @@ scripts.tower_dwaarp = {
 		end
 	end
 }
+
 -- 大树
 scripts.tower_entwood = {
 	insert = function(this, store)
@@ -22606,7 +22522,7 @@ function scripts.tower_rotten_forest.insert(this, store, script)
 	e.owner = this
 	this.aura1 = e
 
-	for _, p in ipairs(U.get_path_fx_points(this)) do
+	for _, p in ipairs(U.get_path_fx_points(this, 50)) do
 		local smoke = E:create_entity("decal_rotten_forest_smoke")
 		smoke.pos:copy(p.pos)
 		table.insert(this.aura_list1, smoke)
@@ -22626,7 +22542,7 @@ function scripts.tower_rotten_forest.insert(this, store, script)
 
 		queue_insert(store, e)
 
-		for _, p in ipairs(U.get_path_fx_points(this)) do
+		for _, p in ipairs(U.get_path_fx_points(this, 50)) do
 			local fog = E:create_entity("decal_rotten_forest_fog")
 			fog.pos:copy(p.pos)
 			fog.render.sprites[1].ts = store.tick_ts
@@ -22680,7 +22596,7 @@ function scripts.tower_rotten_forest.update(this, store, script)
 
 					queue_insert(store, e)
 
-					for _, p in ipairs(U.get_path_fx_points(this)) do
+					for _, p in ipairs(U.get_path_fx_points(this, 50)) do
 						local fog = E:create_entity("decal_rotten_forest_fog")
 						fog.pos:copy(p.pos)
 						fog.render.sprites[1].ts = store.tick_ts
@@ -22706,7 +22622,7 @@ function scripts.tower_rotten_forest.update(this, store, script)
 					this.aura_list1[i].tween.remove = true
 					this.aura_list1[i] = nil
 				end
-				for _, p in ipairs(U.get_path_fx_points(this)) do
+				for _, p in ipairs(U.get_path_fx_points(this, 50)) do
 					local smoke = E:create_entity("decal_rotten_forest_smoke")
 					smoke.pos:copy(p.pos)
 					table.insert(this.aura_list1, smoke)
@@ -22723,7 +22639,7 @@ function scripts.tower_rotten_forest.update(this, store, script)
 						this.aura_list2[i].tween.remove = true
 						this.aura_list2[i] = nil
 					end
-					for _, p in ipairs(U.get_path_fx_points(this)) do
+					for _, p in ipairs(U.get_path_fx_points(this, 50)) do
 						local fog = E:create_entity("decal_rotten_forest_fog")
 						fog.pos:copy(p.pos)
 						fog.render.sprites[1].ts = store.tick_ts
@@ -22931,17 +22847,22 @@ function scripts.decal_rotten_forest_smoke.update(this, store, script)
 	local range = 50
 	local vis_flags = F_MOD
 	local vis_bans = bor(F_FLYING, F_BOSS)
-	while true do
-		local current = this.render.sprites[2].name
+	local last_ts = store.tick_ts
 
-		if not U.find_first_enemy_in_range_filter_off(this.pos, range, vis_flags, vis_bans) then
-			if current == "loop" then
-				U.y_animation_play(this, "out", nil, store.tick_ts, false, 2)
-				U.animation_start(this, "idle", nil, store.tick_ts, true, 2)
+	while true do
+		if store.tick_ts - last_ts > 0.1 then
+			last_ts = store.tick_ts
+			local current = this.render.sprites[2].name
+
+			if not U.find_first_enemy_in_range_filter_off(this.pos, range, vis_flags, vis_bans) then
+				if current == "loop" then
+					U.y_animation_play(this, "out", nil, store.tick_ts, false, 2)
+					U.animation_start(this, "idle", nil, store.tick_ts, true, 2)
+				end
+			elseif current == "idle" then
+				U.y_animation_play(this, "introLoop", nil, store.tick_ts, false, 2)
+				U.animation_start(this, "loop", nil, store.tick_ts, true, 2)
 			end
-		elseif current == "idle" then
-			U.y_animation_play(this, "introLoop", nil, store.tick_ts, false, 2)
-			U.animation_start(this, "loop", nil, store.tick_ts, true, 2)
 		end
 
 		coroutine.yield()

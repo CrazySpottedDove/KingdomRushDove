@@ -3074,43 +3074,43 @@ function U.set_terrain_style(e, terrain_style)
 end
 
 --- 为需要路径特效的实体获取路径特效点列表，依赖于实体的 .attacks.range 属性，且会缓存结果以优化性能
-function U.get_path_fx_points(this)
-	if this.attacks.range == this._fx_point_range then
-		if this._fx_points_cache then
-			return this._fx_points_cache
-		end
-	else
-		this._fx_point_range = this.attacks.range
+function U.get_path_fx_points(this, fx_radius, void_radius)
+	if this.attacks.range == this._fx_point_range and this._fx_points_cache then
+		return this._fx_points_cache
 	end
+
+	if not fx_radius then
+		fx_radius = 70
+	end
+
+	if not void_radius then
+		void_radius = 30
+	end
+
+	this._fx_point_range = this.attacks.range
 
 	local points = {}
-	-- range = 180 时，是 100 内圈， 115 外圈来添加岩浆特效
-	-- 随着范围变大，不应该修改岩浆特效的贴图大小，而应该在更多的位置均匀地添加岩浆特效
-	-- lava 的范围为 70，我们直接保证灼烧点之间的弧长不要超过 140，即 r * theta < 140
-	-- 我们设置初始盲区为 r = 30，然后保证最外圈可以触及 r = attacks.range，然后求平均。
-	-- 70 * k + x - 70, 70 * k + x + 15 + 70 要尽量均匀分布在 [30, attacks.range] 中
-	-- k = 0, 1, ..., math.ceil(attacks.range - 30) / 70
-	local void_radius = 30
+
+	-- 特效总长
 	local scope = this.attacks.range - void_radius
-	-- 特效生效半径
-	local fx_r = 70
-	-- 特效视觉直径
-	local fx_d = 1.2 * fx_r
-	-- 径向分布 k 个特效中心
-	local k = math.ceil(scope / fx_d)
-	-- 重新计算特效中心步长
-	local fx_d_real = fx_d
+	-- 特效直径
+	local fx_d = 2 * fx_radius
+	-- 半径方向上 k 个特效
+	local k = math.ceil(scope / fx_d * 1.5)
+	-- 特效中心步长
+	local fx_d_step = fx_d
 
 	if k > 1 then
-		fx_d_real = (scope - fx_d) / (k - 1)
+		fx_d_step = (scope - fx_d) / (k - 1)
 	end
 
-	local r_start = void_radius + fx_r
+	local r_start = void_radius + fx_radius
 
 	-- 起始 fx_point 中心的 x 坐标
 	for i = 1, k do
-		local r = r_start + (i - 1) * fx_d_real
-		local theta = fx_d / r
+		local r = r_start + (i - 1) * fx_d_step
+		-- local theta = fx_d / r
+		local theta = fx_radius / r
 		-- 总共取这么多点，分内圈外圈
 		local n_points = math.ceil(2 * math.pi / theta)
 
