@@ -7,20 +7,20 @@ local km = require("lib.klua.macros")
 
 function AU.animation_name_facing_point_use_path_and_offset(e, group, point, idx, offset)
 	local npos = P:node_pos_ref(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
-	return U.animation_name_for_angle(e, group, km.unroll(math.atan2(point.y - offset.y - npos.y, point.x - offset.x - npos.x)))
+	return U.animation_name_for_angle(e, group, km.unroll(math.atan2(point.y - offset.y - npos.y, point.x - offset.x - npos.x)), idx)
 end
 
 function AU.animation_name_facing_point_use_path(e, group, point, idx)
 	local npos = P:node_pos_ref(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
-	return U.animation_name_for_angle(e, group, km.unroll(math.atan2(point.y - npos.y, point.x - npos.x)))
+	return U.animation_name_for_angle(e, group, km.unroll(math.atan2(point.y - npos.y, point.x - npos.x)), idx)
 end
 
 function AU.animation_name_facing_point_use_offset(e, group, point, idx, offset)
-	return U.animation_name_for_angle(e, group, km.unroll(math.atan2(point.y - offset.y - e.y, point.x - offset.x - e.x)))
+	return U.animation_name_for_angle(e, group, km.unroll(math.atan2(point.y - offset.y - e.pos.y, point.x - offset.x - e.pos.x)), idx)
 end
 
 function AU.animation_name_facing_point(e, group, point, idx)
-	return U.animation_name_for_angle(e, group, km.unroll(math.atan2(point.y - e.y, point.x - e.x)))
+	return U.animation_name_for_angle(e, group, km.unroll(math.atan2(point.y - e.pos.y, point.x - e.pos.x)), idx)
 end
 
 return AU

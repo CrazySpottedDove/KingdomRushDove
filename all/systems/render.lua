@@ -395,7 +395,6 @@ function M.register(sys)
 
 		store.render_frames = new_frames
 		store.render_frames_swapper = render_frames
-
 		store.render_frames_count = n
 		perf.stop("render")
 	end

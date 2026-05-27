@@ -52,7 +52,6 @@ function M.register(sys)
 
 		perf.stop("main_script")
 	end
-
 	function sys.main_script:on_remove(entity, store)
 		if entity.main_script and entity.main_script.remove then
 			return entity.main_script.remove(entity, store, entity.main_script)

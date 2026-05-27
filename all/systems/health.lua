@@ -568,7 +568,7 @@ local function damage_trace_print_death(store, target)
 end
 
 local FADE_OUT_DURATION = 0.4
-
+require("table.clear")
 function M.register(sys)
 	local function queue_insert(store, e)
 		simulation:queue_insert_entity(e)
@@ -584,6 +584,8 @@ function M.register(sys)
 	function sys.health:init(store)
 		store.damage_queue = {}
 		store.damages_applied = {}
+		store.damage_queue_swapper = {}
+		store.damages_applied_swapper = {}
 		dnum_init(store)
 	end
 
@@ -597,12 +599,16 @@ function M.register(sys)
 
 	function sys.health:on_update(dt, ts, store)
 		perf.start("health")
-		local new_damage_queue = {}
-		local damage_queue = store.damage_queue
-		local damages_applied = {}
+		local new_damage_queue = store.damage_queue_swapper
+		table.clear(new_damage_queue)
+		local damages_applied = store.damages_applied_swapper
+		table.clear(damages_applied)
 		local damages_applied_count = 0
-		local entities = store.entities
+
+		local damage_queue = store.damage_queue
 		local damage_queue_len = #damage_queue
+
+		local entities = store.entities
 		for i = damage_queue_len, 1, -1 do
 			local d = damage_queue[i]
 			local e = entities[d.target_id]
@@ -804,12 +810,13 @@ function M.register(sys)
 			end
 		end
 
-		store.damage_queue = new_damage_queue
-
 		for i = damage_queue_len + 1, #damage_queue do
 			new_damage_queue[#new_damage_queue + 1] = damage_queue[i]
 		end
 
+		store.damage_queue_swapper = damage_queue
+		store.damage_queue = new_damage_queue
+		store.damages_applied_swapper = store.damages_applied
 		store.damages_applied = damages_applied
 		perf.stop("health")
 	end
