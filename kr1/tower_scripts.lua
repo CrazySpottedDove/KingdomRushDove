@@ -7495,18 +7495,16 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 
 			had_target = target ~= nil
 
-			for k, pow in pairs(this.powers) do
-				if pow.changed then
-					pow.changed = nil
+			if this.powers.skill_debuff.changed then
+				this.powers.skill_debuff.changed = nil
+				a.list[2].cooldown = this.powers.skill_debuff.cooldown[this.powers.skill_debuff.level]
+				a.list[2].ts = store.tick_ts
+			end
 
-					if pow == this.powers.skill_debuff then
-						this.attacks.list[2].cooldown = pow.cooldown[pow.level]
-						this.attacks.list[2].ts = store.tick_ts - this.attacks.list[2].cooldown
-					elseif pow == this.powers.skill_rider then
-						this.attacks.list[3].cooldown = pow.cooldown[pow.level]
-						this.attacks.list[3].ts = store.tick_ts - this.attacks.list[3].cooldown
-					end
-				end
+			if this.powers.skill_rider.changed then
+				this.powers.skill_rider.changed = nil
+				a.list[3].cooldown = this.powers.skill_rider.cooldown[this.powers.skill_rider.level]
+				a.list[3].ts = store.tick_ts
 			end
 
 			if this.tower_upgrade_persistent_data.current_skulls == 0 then
@@ -7523,10 +7521,8 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 				else
 					local start_ts = store.tick_ts
 
-					-- if this.tower.level > 1 then
 					animation_start(this, "skull_spawn", nil, store.tick_ts, 1, this.render.sid_glow_fx)
 
-					-- end
 					if is_pos_below(pred_pos) then
 						animation_start(this, "attack", nil, store.tick_ts, nil, this.render.sid_mage)
 					else
