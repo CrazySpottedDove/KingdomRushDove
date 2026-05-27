@@ -10,7 +10,7 @@ local EXO = require("all.exoskeleton")
 local ffi = require("ffi")
 
 require("all.constants")
-
+local table_clear = require("table.clear")
 MISSED_SS = {}
 
 ffi.cdef[[
@@ -112,6 +112,7 @@ function M.register(sys)
 
 	function sys.render:init(store)
 		store.render_frames = {}
+		store.render_frames_swapper = {}
 		store.render_frames_count = 0
 		store.render_frames_ffi = ffi.new("RenderFrameFFI[16384]")
 		store.render_frames_ffi_tmp = ffi.new("RenderFrameFFI[16384]")
@@ -275,50 +276,52 @@ function M.register(sys)
 						s._hidden_for_ts = false
 					end
 
-					local last_runs = s.runs
-					local fn
+					do
+						local fn
+						local last_runs = s.runs
 
-					if s.animated then
-						fn, s.runs, s.frame_idx = A:fn(s.prefix and (s.prefix .. "_" .. s.name) or s.name, ts - s.ts + s.time_offset, s.loop, s.fps)
+						if s.animated then
+							fn, s.runs, s.frame_idx = A:fn(s.prefix and (s.prefix .. "_" .. s.name) or s.name, ts - s.ts + s.time_offset, s.loop, s.fps)
 
-						s.frame_name = fn
-					else
-						s.runs = 0
-						s.frame_idx = 1
-						fn = s.name
-					end
+							s.frame_name = fn
+						else
+							s.runs = 0
+							s.frame_idx = 1
+							fn = s.name
+						end
 
-					if s.exo then
-						local exo_frame = EXO:f(fn)
+						if s.exo then
+							local exo_frame = EXO:f(fn)
 
-						if exo_frame then
-							s.exo_frame = exo_frame
-							local exo = EXO:get_exo_by_frame(exo_frame)
+							if exo_frame then
+								s.exo_frame = exo_frame
+								local exo = EXO:get_exo_by_frame(exo_frame)
 
-							if s.exo_hide_prefix then
-								for i = 1, #exo_frame do
-									local p = exo_frame[i]
-									if p[1] == 1 then
-										local pname = exo.parts[p[2]][1]
+								if s.exo_hide_prefix then
+									for i = 1, #exo_frame do
+										local p = exo_frame[i]
+										if p[1] == 1 then
+											local pname = exo.parts[p[2]][1]
 
-										p.hidden = false
+											p.hidden = false
 
-										for j = 1, #s.exo_hide_prefix do
-											if string.find(pname, s.exo_hide_prefix[j], 1, true) then
-												p.hidden = true
+											for j = 1, #s.exo_hide_prefix do
+												if string.find(pname, s.exo_hide_prefix[j], 1, true) then
+													p.hidden = true
 
-												break
+													break
+												end
 											end
 										end
 									end
 								end
+							else
+								s.exo_frame = {}
 							end
 						else
-							s.exo_frame = {}
+							s.sync_flag = last_runs ~= s.runs
+							s.ss = I:s(fn)
 						end
-					else
-						s.sync_flag = last_runs ~= s.runs
-						s.ss = I:s(fn)
 					end
 
 					if s.hide_after_runs and s.runs >= s.hide_after_runs then
@@ -366,19 +369,22 @@ function M.register(sys)
 						end
 					end
 				end
-				local ffi_f = render_frames_ffi[n]
 
+				local ffi_f = render_frames_ffi[n]
 				ffi_f.z = s.z
 				ffi_f.sort_y = s.sort_y or (s.sort_y_offset or 0) + s.pos.y
 				ffi_f.draw_order = s._draw_order
 				ffi_f.lua_index = i
+
 				n = n + 1
 			end
 		end
 
 		lib_render_sort.ffi_sort(render_frames_ffi, store.render_frames_ffi_tmp, n)
 
-		local new_frames = {}
+		local new_frames = store.render_frames_swapper
+		-- 必须保留该行！怀疑对象的写入更替引发了一些 GC 问题，导致性能暴跌。在清理后可以恢复正常
+		table_clear(new_frames)
 
 		local i = 0
 		while i < n do
@@ -388,6 +394,8 @@ function M.register(sys)
 		end
 
 		store.render_frames = new_frames
+		store.render_frames_swapper = render_frames
+
 		store.render_frames_count = n
 		perf.stop("render")
 	end

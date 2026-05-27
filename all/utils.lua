@@ -430,7 +430,7 @@ function U.animation_name_for_angle(e, group, angle, idx)
 		local a1, a2, a3, a4 = 45, 135, 225, 315
 
 		if a.angles_custom and a.angles_custom[group] then
-			a1, a2, a3, a4 = unpack(a.angles_custom[group], 1, 4)
+			a1, a2, a3, a4 = a.angles_custom[group][1], a.angles_custom[group][2], a.angles_custom[group][3], a.angles_custom[group][4]
 		end
 
 		local quadrant = a._last_quadrant

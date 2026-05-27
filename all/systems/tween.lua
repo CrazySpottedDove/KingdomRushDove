@@ -265,7 +265,6 @@ function M.register(sys)
 			end
 		end
 
-	-- return true
 	end
 
 	function sys.tween:on_render_update(dt, ts, store)
@@ -273,16 +272,14 @@ function M.register(sys)
 		local entities = store.entities_with_tween
 
 		for _, e in pairs(entities) do
-			if e.tween.disabled then
-			else
+			if not e.tween.disabled then
 				local finished = true
 				local sprites = e.render.sprites
 				local tween = e.tween
 
 				for i = 1, #tween.props do
 					local tween_prop = tween.props[i]
-					if tween_prop.disabled then
-					else
+					if not tween_prop.disabled then
 						local s = sprites[tween_prop.sprite_id]
 						local keys = tween_prop.keys
 						local ka = keys[1]
