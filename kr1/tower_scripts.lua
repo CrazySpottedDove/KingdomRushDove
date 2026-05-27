@@ -6846,6 +6846,10 @@ function scripts.tower_demon_pit.update(this, store)
 		return b
 	end
 
+	local function sort_fn(a, b)
+		return #P.paths[a[1]][a[2]] > #P.paths[b[1]][b[2]]
+	end
+
 	while true do
 		if this.tower.blocked then
 			coroutine.yield()
@@ -6890,10 +6894,16 @@ function scripts.tower_demon_pit.update(this, store)
 						local enemy_pos = enemy and U.calculate_enemy_ffe_pos(enemy, aa.node_prediction) or nil
 
 						if not enemy_pos then
-							enemy_pos = U.get_nearest_valid_rally_pos(tpos(this))
-						-- local idx = random(1, nodes_limit)
-
-						-- enemy_pos = P:node_pos(nearest_nodes[idx][1], nearest_nodes[idx][2], nearest_nodes[idx][3])
+							local center = tpos(this)
+							local nodes = P:nearest_nodes(center.x, center.y, nil, {1, 2, 3}, NF_RALLY)
+							table.sort(nodes, sort_fn)
+							for i = 1, #nodes do
+								local node_pos = P:node_pos_ref(nodes[i][1], nodes[i][2], nodes[i][3])
+								if center:dist(node_pos) <= a.range and U.has_valid_rally_node_nearby(node_pos) then
+									enemy_pos = node_pos
+									break
+								end
+							end
 						end
 
 						shoot_bullet(aa, enemy_pos, pow_g)
@@ -6924,7 +6934,16 @@ function scripts.tower_demon_pit.update(this, store)
 						local enemy_pos = enemy and U.calculate_enemy_ffe_pos(enemy, aa.node_prediction) or nil
 
 						if not enemy_pos then
-							enemy_pos = U.get_nearest_valid_rally_pos(tpos(this))
+							local center = tpos(this)
+							local nodes = P:nearest_nodes(center.x, center.y, nil, {1, 2, 3}, NF_RALLY)
+							table.sort(nodes, sort_fn)
+							for i = 1, #nodes do
+								local node_pos = P:node_pos_ref(nodes[i][1], nodes[i][2], nodes[i][3])
+								if center:dist(node_pos) <= a.range and U.has_valid_rally_node_nearby(node_pos) then
+									enemy_pos = node_pos
+									break
+								end
+							end
 						end
 
 						shoot_bullet(aa, enemy_pos, pow_m)
@@ -7031,34 +7050,22 @@ function scripts.soldier_tower_demon_pit.update(this, store)
 
 	patrol_pos.x, patrol_pos.y = patrol_pos.x + this.patrol_pos_offset.x, patrol_pos.y + this.patrol_pos_offset.y
 
-	local nearest_node = P:nearest_nodes(patrol_pos.x, patrol_pos.y, nil, nil, false)[1]
-	local pi, spi, ni = unpack(nearest_node)
-	local npos = P:node_pos(pi, spi, ni)
-	local patrol_pos_2 = vclone(this.pos)
+	local nearest_nodes = P:nearest_nodes(patrol_pos.x, patrol_pos.y, nil, nil, false)
+	local pi, spi, ni = nearest_nodes[1][1], nearest_nodes[1][2], nearest_nodes[1][3]
 
-	patrol_pos_2.x, patrol_pos_2.y = patrol_pos_2.x - this.patrol_pos_offset.x, patrol_pos_2.y - this.patrol_pos_offset.y
-
-	local nearest_node = P:nearest_nodes(patrol_pos_2.x, patrol_pos_2.y, nil, nil, false)[1]
-	local pi, spi, ni = unpack(nearest_node)
-	local npos_2 = P:node_pos(pi, spi, ni)
-
-	if V.dist2(patrol_pos.x, patrol_pos.y, npos.x, npos.y) > V.dist2(patrol_pos_2.x, patrol_pos_2.y, npos_2.x, npos_2.y) then
-		patrol_pos = vclone(patrol_pos_2)
+	table.sort(nearest_nodes, function(a, b)
+		return #P.paths[a[1]][a[2]] > #P.paths[b[1]][b[2]]
+	end)
+	for i = 1, #nearest_nodes do
+		local node_pos = P:node_pos_ref(nearest_nodes[i][1], nearest_nodes[i][2], nearest_nodes[i][3])
+		if V.dist(patrol_pos.x, patrol_pos.y, node_pos.x, node_pos.y) <= P.average_node_dist * 2 then
+			pi, spi, ni = nearest_nodes[i][1], nearest_nodes[i][2], nearest_nodes[i][3]
+			break
+		end
 	end
 
 	local idle_ts = store.tick_ts
 	local patrol_cd = random(this.patrol_min_cd, this.patrol_max_cd)
-	local available_paths = {}
-
-	for k, v in pairs(P.paths) do
-		table.insert(available_paths, k)
-	end
-
-	if store.level.ignore_walk_backwards_paths then
-		available_paths = table.filter(available_paths, function(k, v)
-			return not table.contains(store.level.ignore_walk_backwards_paths, v)
-		end)
-	end
 
 	while true do
 		if this.health.dead or (this.reinforcement.duration and store.tick_ts - this.reinforcement.ts > this.reinforcement.duration) or ni < -20 or (not U.has_valid_rally_node_nearby(this.pos)) then
@@ -7232,29 +7239,22 @@ function scripts.big_guy_tower_demon_pit.update(this, store)
 		end
 	end
 
-	local path_ni = 1
-	local path_spi = 1
-	local path_pi = 1
+	local nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, NF_RALLY)
+	local path_pi, path_spi, path_ni = nearest_nodes[1][1], 1, nearest_nodes[1][3]
+
+	table.sort(nearest_nodes, function(a, b)
+		return #P.paths[a[1]][a[2]] > #P.paths[b[1]][b[2]]
+	end)
+	for i = 1, #nearest_nodes do
+		local node_pos = P:node_pos_ref(nearest_nodes[i][1], nearest_nodes[i][2], nearest_nodes[i][3])
+		if V.dist(this.pos.x, this.pos.y, node_pos.x, node_pos.y) <= P.average_node_dist * 2 then
+			path_pi, path_ni = nearest_nodes[i][1], nearest_nodes[i][3]
+			break
+		end
+	end
+
 	local node_pos
-	local available_paths = {}
 
-	for k, v in pairs(P.paths) do
-		table.insert(available_paths, k)
-	end
-
-	if store.level.ignore_walk_backwards_paths then
-		available_paths = table.filter(available_paths, function(k, v)
-			return not table.contains(store.level.ignore_walk_backwards_paths, v)
-		end)
-	end
-
-	local nearest = P:nearest_nodes(this.pos.x, this.pos.y, available_paths)
-
-	if #nearest > 0 then
-		path_pi, path_spi, path_ni = unpack(nearest[1])
-	end
-
-	path_spi = 1
 	path_ni = path_ni - 3
 
 	local distance = 0

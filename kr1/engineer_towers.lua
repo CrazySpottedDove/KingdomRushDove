@@ -1374,7 +1374,6 @@ tt.powers.big_guy.key = "BIG_DEMON"
 tt.info.i18n_key = "TOWER_DEMON_PIT_4"
 tt.info.portrait = "kr5_portraits_towers_0006"
 tt.info.enc_icon = 4
--- tt.info.fn = scripts.tower_demon_pit.get_info
 tt.main_script.update = scripts.tower_demon_pit.update
 tt.ui.click_rect = r(-30, 0, 60, 60)
 tt.sound_events.insert = "TowerDemonPitTaunt"
