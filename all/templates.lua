@@ -928,9 +928,10 @@ tt.info.random_name_format = "SOLDIER_RANDOM_%i_NAME"
 tt.main_script.insert = scripts.soldier_barrack.insert
 tt.main_script.remove = scripts.soldier_barrack.remove
 tt.main_script.update = scripts.soldier_barrack.update
+-- dps: 7.5 / 1 = 7.5
 tt.melee.attacks[1].cooldown = 1
 tt.melee.attacks[1].damage_max = 3
-tt.melee.attacks[1].damage_min = 1
+tt.melee.attacks[1].damage_min = 2
 tt.melee.attacks[1].hit_time = fts(5)
 tt.melee.attacks[1].sound = "MeleeSword"
 tt.melee.attacks[1].vis_bans = bor(F_CLIFF)
@@ -954,18 +955,20 @@ tt.info.portrait = "info_portraits_soldiers_0002"
 tt.render.sprites[1].prefix = "soldierfootmen"
 tt.health.hp_max = 100
 tt.health.armor = 0.15
+-- dps: 15 / 1.36 = 11.03
 tt.melee.attacks[1].cooldown = 1 + fts(11)
-tt.melee.attacks[1].damage_min = 3
-tt.melee.attacks[1].damage_max = 4
+tt.melee.attacks[1].damage_min = 4
+tt.melee.attacks[1].damage_max = 6
 
 tt = E:register_t("soldier_knight", "soldier_militia")
 tt.info.portrait = "info_portraits_soldiers_0003"
 tt.render.sprites[1].prefix = "soldierknight"
 tt.health.hp_max = 150
 tt.health.armor = 0.3
+-- dps: 30 / 1.36 = 22.06
 tt.melee.attacks[1].cooldown = 1 + fts(11)
-tt.melee.attacks[1].damage_min = 6
-tt.melee.attacks[1].damage_max = 10
+tt.melee.attacks[1].damage_min = 8
+tt.melee.attacks[1].damage_max = 12
 
 local hero = E:register_t("hero", "soldier")
 E:add_comps(hero, "hero", "nav_grid")

@@ -255,22 +255,22 @@ tt.render.sprites[2].prefix = "towermagelvl3"
 tt.render.sprites[3].offset = vec_2(1, 62)
 
 tt = RT("bolt_1", "bolt")
--- dps: 15 / 1.5 = 10
--- 性价比: 10 / 100 = 0.1
+-- dps: 15.5 / 1.5 = 10.333
+-- 性价比: 10.333 / 100 = 0.1033
 tt.bullet.damage_min = 11
-tt.bullet.damage_max = 19
+tt.bullet.damage_max = 20
 
 tt = RT("bolt_2", "bolt")
--- dps: 35.5 / 1.5 = 23.666
--- 性价比: 23.666 / 260 = 0.0909
-tt.bullet.damage_min = 25
-tt.bullet.damage_max = 47
+-- dps: 37 / 1.5 = 24.666
+-- 性价比: 24.666 / 260 = 0.0949
+tt.bullet.damage_min = 26
+tt.bullet.damage_max = 48
 
 tt = RT("bolt_3", "bolt")
--- dps: 65 / 1.5 = 43.333
--- 性价比: 43.333 / 500 = 0.0866
-tt.bullet.damage_min = 44
-tt.bullet.damage_max = 81
+-- dps: 64.5 / 1.5 = 43
+-- 性价比: 43 / 500 = 0.086
+tt.bullet.damage_min = 47
+tt.bullet.damage_max = 82
 
 tt = RT("tower_engineer_1", "tower")
 AC(tt, "attacks")
@@ -403,23 +403,23 @@ tt.attacks.list[1].bullet = "arrow_3"
 tt.attacks.list[1].cooldown = 0.5
 
 tt = RT("arrow_1", "arrow")
--- dps: 5.5 / 0.8 = 6.875
--- 性价比: 6.875 / 70 = 0.0982
+-- dps: 6 / 0.8 = 7.5
+-- 性价比: 7.5 / 70 = 0.1071
 tt.bullet.damage_min = 4
-tt.bullet.damage_max = 7
+tt.bullet.damage_max = 8
 
 tt = RT("arrow_2", "arrow")
--- dps: 10 / 0.6 = 16.666
--- 性价比: 16.666 / 180 = 0.0925
+-- dps: 10.5 / 0.6 = 17.5
+-- 性价比: 17.5 / 180 = 0.0972
 tt.bullet.damage_min = 8
-tt.bullet.damage_max = 12
+tt.bullet.damage_max = 13
 tt.bullet.flight_time = fts(21)
 
 tt = RT("arrow_3", "arrow")
--- dps: 14.5 / 0.5 = 29
--- 性价比: 29 / 340 = 0.0853
+-- dps: 15.5 / 0.5 = 31
+-- 性价比: 31 / 340 = 0.0911
 tt.bullet.damage_min = 11
-tt.bullet.damage_max = 18
+tt.bullet.damage_max = 20
 tt.bullet.flight_time = fts(20)
 
 tt = RT("tower_barrack_1", "tower")
