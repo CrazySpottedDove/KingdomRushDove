@@ -14998,7 +14998,7 @@ tt.render.sprites[1].z = Z_OBJECTS
 
 tt = E:register_t("hero_vesper", "hero")
 b = balance.heroes.hero_vesper
-E:add_comps(tt, "melee", "ranged", "dodge", "timed_attacks")
+E:add_comps(tt, "melee", "ranged", "dodge", "timed_attacks", "teleport")
 tt.hero.level_stats.armor = b.armor
 tt.hero.level_stats.hp_max = b.hp_max
 tt.hero.level_stats.melee_damage_max = b.basic_melee.damage_max
@@ -15198,6 +15198,10 @@ tt.timed_attacks.list[1].shoot_time = fts(19)
 tt.timed_attacks.list[1].min_targets = b.ricochet.min_targets
 tt.timed_attacks.list[1].max_range_trigger = b.ricochet.max_range_trigger
 tt.timed_attacks.list[1].sound = "HeroVesperRicochetCast"
+tt.teleport.min_distance = tt.melee.range
+tt.teleport.delay = 0
+tt.teleport.sound = "HeroVesperDisengageCast"
+tt.teleport.animations = {"disengage_disappear", "teleport_out"}
 tt.ui.click_rect = r(-19, -5, 38, 43)
 tt.ultimate = {
 	ts = 0,

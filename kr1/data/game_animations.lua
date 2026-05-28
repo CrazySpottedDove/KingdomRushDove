@@ -29288,6 +29288,11 @@ return {
 		prefix = "hero_vesper_vesper",
 		to = 232
 	},
+	hero_vesper_vesper_teleport_out = {
+		from = 221,
+		prefix = "hero_vesper_vesper",
+		to = 229
+	},
 	hero_vesper_vesper_disengage_attack_end = {
 		from = 238,
 		prefix = "hero_vesper_vesper",
