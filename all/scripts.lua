@@ -5016,13 +5016,13 @@ function scripts.tunnel_KR5.update(this, store)
 	if not tu.place_ni then
 		tu.place_ni = 1
 	end
+	do
+		local pf = P:node_pos_ref(tu.pick_pi, 1, tu.pick_ni)
+		local pt = P:node_pos_ref(tu.place_pi, 1, tu.place_ni)
+		tu.length = V.dist(pf.x, pf.y, pt.x, pt.y)
+	end
 
-	local pf = P:node_pos(tu.pick_pi, 1, tu.pick_ni)
-	local pt = P:node_pos(tu.place_pi, 1, tu.place_ni)
-	local length = V.dist(pf.x, pf.y, pt.x, pt.y)
 	local picked_enemies = tu.picked_enemies
-
-	tu.length = length
 	this.total_picked_enemies = 0
 
 	while true do
@@ -5040,7 +5040,7 @@ function scripts.tunnel_KR5.update(this, store)
 				queue_insert(store, fx)
 			end
 
-			local release_ts = store.tick_ts + length / (tu.speed_factor * enemy.motion.max_speed)
+			local release_ts = store.tick_ts + tu.length / (tu.speed_factor * enemy.motion.max_speed)
 
 			log.debug("tunnel %s picked %s", this.id, enemy.id)
 			table.insert(picked_enemies, {
@@ -7038,11 +7038,12 @@ function scripts.mod_teleport.update(this, store)
 		target.nav_path.ni = km.clamp(n_limit, P:get_end_node(target.nav_path.pi) - n_limit, n_ni)
 	end
 
-	local npos = P:node_pos(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni)
-
 	U.unblock_all(store, target)
 
-	target.pos.x, target.pos.y = npos.x, npos.y
+	do
+		local npos = P:node_pos_ref(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni)
+		target.pos.x, target.pos.y = npos.x, npos.y
+	end
 
 	local fx = E:create_entity(this.fx_end)
 
@@ -7790,8 +7791,8 @@ function scripts.power_fireball_control.update(this, store)
 			local u = UP:get_upgrade("rain_armaggedon")
 
 			if u then
-				local enemies = table.filter(store.entities, function(k, v)
-					return v.enemy and not v.health.dead and band(v.vis.bans, F_RANGED) == 0
+				local enemies = table.filter(store.enemies, function(k, v)
+					return band(v.vis.bans, F_RANGED) == 0
 				end)
 
 				if #enemies > 0 then
@@ -7826,7 +7827,7 @@ function scripts.power_fireball_control.update(this, store)
 				e.pos.x = dest.x
 				e.pos.y = start_y
 				e.bullet.from = V.vclone(e.pos)
-				e.bullet.to = V.vclone(dest)
+				e.bullet.to = dest
 				e.bullet.level = this.user_power.level
 
 				queue_insert(store, e)
@@ -7957,31 +7958,6 @@ scripts.power_reinforcements_control = {}
 
 function scripts.power_reinforcements_control.can_select_point(this, x, y)
 	return P:valid_node_nearby(x, y, nil, NF_RALLY) and GR:cell_is_only(x, y, bor(TERRAIN_LAND, TERRAIN_ICE))
-end
-
--- 经证实，该代码并没有被执行
-function scripts.power_reinforcements_control.insert(this, store)
-	local x, y = this.pos.x, this.pos.y
-	local i1 = math.random(1, 3)
-	local e1 = E:create_entity("re_current_" .. i1)
-
-	e1.pos.x = x + 10
-	e1.pos.y = y - 10
-	e1.nav_rally.center = V.v(x, y)
-	e1.nav_rally.pos = V.vclone(e1.pos)
-
-	local i2 = math.random(1, 3)
-	local e2 = E:create_entity("re_current_" .. i2)
-
-	e2.pos.x = x - 10
-	e2.pos.y = y + 10
-	e2.nav_rally.center = V.v(x, y)
-	e2.nav_rally.pos = V.vclone(e2.pos)
-
-	queue_insert(store, e1)
-	queue_insert(store, e2)
-
-	return true
 end
 
 scripts.abomination_explosion_aura = {}

@@ -1006,7 +1006,7 @@ scripts.tower_totem = {
 								totem_node = totem_node + node_offset
 							end
 
-							local totem_pos = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, totem_node)
+							local totem_pos = P:node_pos_ref(enemy.nav_path.pi, enemy.nav_path.spi, totem_node)
 							local b = E:create_entity(ta.bullet)
 
 							b.pos.x, b.pos.y = totem_pos.x, totem_pos.y
@@ -2932,7 +2932,7 @@ scripts.tower_necromancer = {
 						b.aura.source_id = this.id
 						b.aura.ts = store.tick_ts
 						b.aura.level = pow_p.level
-						b.pos = vclone(dest)
+						b.pos = dest
 
 						queue_insert(store, b)
 
@@ -5400,7 +5400,7 @@ function scripts.tower_druid.update(this, store)
 								ni_pred = ni_pred - (i - 2) * 5
 							end
 
-							pred_pos = P:node_pos(target.nav_path.pi, 1, ni_pred)
+							pred_pos = P:node_pos_ref(target.nav_path.pi, 1, ni_pred)
 						end
 
 						b.bullet.to = v(pred_pos.x, pred_pos.y)
@@ -7383,7 +7383,7 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 			local enemy, enemies = U.find_foremost_enemy_in_range_filter_on(tpos, attack.max_range, attack.node_prediction, attack.vis_flags, attack.vis_bans, function(e, o)
 				local node_offset = P:predict_enemy_node_advance(e, attack.node_prediction + attack.cast_time)
 				local e_ni = e.nav_path.ni + node_offset
-				local n_pos = P:node_pos(e.nav_path.pi, e.nav_path.spi, e_ni)
+				local n_pos = P:node_pos_ref(e.nav_path.pi, e.nav_path.spi, e_ni)
 
 				return band(GR:cell_type(n_pos.x, n_pos.y), bor(TERRAIN_CLIFF, TERRAIN_WATER)) == 0
 			end)
@@ -8210,21 +8210,23 @@ function scripts.soldier_tower_necromancer_skeleton.update(this, store)
 
 	local patrol_pos = vclone(this.pos)
 
-	patrol_pos.x, patrol_pos.y = patrol_pos.x + this.patrol_pos_offset.x, patrol_pos.y + this.patrol_pos_offset.y
+	do
+		patrol_pos.x, patrol_pos.y = patrol_pos.x + this.patrol_pos_offset.x, patrol_pos.y + this.patrol_pos_offset.y
 
-	local nearest_node = P:nearest_nodes(patrol_pos.x, patrol_pos.y, nil, nil, false)[1]
-	local pi, spi, ni = unpack(nearest_node)
-	local npos = P:node_pos(pi, spi, ni)
-	local patrol_pos_2 = vclone(this.pos)
+		local nearest_node = P:nearest_nodes(patrol_pos.x, patrol_pos.y, nil, nil, false)[1]
+		local pi, spi, ni = unpack(nearest_node)
+		local npos = P:node_pos_ref(pi, spi, ni)
+		local patrol_pos_2 = vclone(this.pos)
 
-	patrol_pos_2.x, patrol_pos_2.y = patrol_pos_2.x - this.patrol_pos_offset.x, patrol_pos_2.y - this.patrol_pos_offset.y
+		patrol_pos_2.x, patrol_pos_2.y = patrol_pos_2.x - this.patrol_pos_offset.x, patrol_pos_2.y - this.patrol_pos_offset.y
 
-	local nearest_node = P:nearest_nodes(patrol_pos_2.x, patrol_pos_2.y, nil, nil, false)[1]
-	local pi, spi, ni = unpack(nearest_node)
-	local npos_2 = P:node_pos(pi, spi, ni)
+		local nearest_node = P:nearest_nodes(patrol_pos_2.x, patrol_pos_2.y, nil, nil, false)[1]
+		local pi, spi, ni = unpack(nearest_node)
+		local npos_2 = P:node_pos_ref(pi, spi, ni)
 
-	if V.dist2(patrol_pos.x, patrol_pos.y, npos.x, npos.y) > V.dist2(patrol_pos_2.x, patrol_pos_2.y, npos_2.x, npos_2.y) then
-		patrol_pos = vclone(patrol_pos_2)
+		if V.dist2(patrol_pos.x, patrol_pos.y, npos.x, npos.y) > V.dist2(patrol_pos_2.x, patrol_pos_2.y, npos_2.x, npos_2.y) then
+			patrol_pos = vclone(patrol_pos_2)
+		end
 	end
 
 	local idle_ts = store.tick_ts
@@ -11394,10 +11396,6 @@ function scripts.tower_stargazers.update(this, store)
 			pow_t.changed = nil
 			at.cooldown = pow_t.cooldown[pow_t.level]
 			at.teleport_nodes_back = pow_t.teleport_nodes_back[pow_t.level]
-
-			if pow_t.level == 1 then
-				at.ts = store.tick_ts - at.cooldown
-			end
 		end
 
 		if pow_s.changed then
@@ -19889,12 +19887,11 @@ function scripts.tower_arborean_emissary.update(this, store)
 						local target = table.find_best(targets, function(t)
 							return 1 - t.health.hp / t.health.hp_max
 						end)
-						local center_pos = V.vclone(target.pos)
-						local nodes = P:nearest_nodes(center_pos.x, center_pos.y, nil, {1}, false)
+
+						local nodes = P:nearest_nodes(target.pos.x, target.pos.y, nil, {1}, false)
 						local pi, spi, ni = unpack(nodes[1])
-						center_pos = P:node_pos(pi, spi, ni)
 						local e = E:create_entity(ag.entity)
-						e.pos = center_pos
+						e.pos = P:node_pos(pi, spi, ni)
 						e.duration = pow_g.aura_duration[pow_g.level]
 						e.tower_pos = V.vclone(this.pos)
 						e.power_level = pow_g.level
@@ -22902,22 +22899,23 @@ function scripts.soldier_rotten_forest_tree.update(this, store)
 	this.nav_rally.pos = starting_pos
 
 	local patrol_pos = V.vclone(this.pos)
+	do
+		patrol_pos.x, patrol_pos.y = patrol_pos.x + this.patrol_pos_offset.x, patrol_pos.y + this.patrol_pos_offset.y
 
-	patrol_pos.x, patrol_pos.y = patrol_pos.x + this.patrol_pos_offset.x, patrol_pos.y + this.patrol_pos_offset.y
+		local nearest_node = P:nearest_nodes(patrol_pos.x, patrol_pos.y, nil, nil, false)[1]
+		local pi, spi, ni = unpack(nearest_node)
+		local npos = P:node_pos_ref(pi, spi, ni)
+		local patrol_pos_2 = V.vclone(this.pos)
 
-	local nearest_node = P:nearest_nodes(patrol_pos.x, patrol_pos.y, nil, nil, false)[1]
-	local pi, spi, ni = unpack(nearest_node)
-	local npos = P:node_pos(pi, spi, ni)
-	local patrol_pos_2 = V.vclone(this.pos)
+		patrol_pos_2.x, patrol_pos_2.y = patrol_pos_2.x - this.patrol_pos_offset.x, patrol_pos_2.y - this.patrol_pos_offset.y
 
-	patrol_pos_2.x, patrol_pos_2.y = patrol_pos_2.x - this.patrol_pos_offset.x, patrol_pos_2.y - this.patrol_pos_offset.y
+		local nearest_node = P:nearest_nodes(patrol_pos_2.x, patrol_pos_2.y, nil, nil, false)[1]
+		local pi, spi, ni = unpack(nearest_node)
+		local npos_2 = P:node_pos_ref(pi, spi, ni)
 
-	local nearest_node = P:nearest_nodes(patrol_pos_2.x, patrol_pos_2.y, nil, nil, false)[1]
-	local pi, spi, ni = unpack(nearest_node)
-	local npos_2 = P:node_pos(pi, spi, ni)
-
-	if V.dist2(patrol_pos.x, patrol_pos.y, npos.x, npos.y) > V.dist2(patrol_pos_2.x, patrol_pos_2.y, npos_2.x, npos_2.y) then
-		patrol_pos = V.vclone(patrol_pos_2)
+		if V.dist2(patrol_pos.x, patrol_pos.y, npos.x, npos.y) > V.dist2(patrol_pos_2.x, patrol_pos_2.y, npos_2.x, npos_2.y) then
+			patrol_pos = V.vclone(patrol_pos_2)
+		end
 	end
 
 	local idle_ts = store.tick_ts
@@ -24308,7 +24306,7 @@ function scripts.tower_bone_flingers.update(this, store)
 		local node = nodes[1]
 		local pi, spi, ni = node[1], node[2], node[3]
 		local e = E:create_entity(entity_name)
-		local e_pos = P:node_pos(pi, spi, ni)
+		local e_pos = P:node_pos_ref(pi, spi, ni)
 
 		e.pos.x, e.pos.y = e_pos.x, e_pos.y
 		e.nav_path.pi = pi
@@ -25263,9 +25261,9 @@ function scripts.mine_box.update(this, store)
 					local nodes = P:nearest_nodes(search_center.x, search_center.y, nil, nil, true)
 					if #nodes > 0 then
 						for i = 1, #nodes do
-							local pos = P:node_pos(nodes[i][1], nodes[i][2], nodes[i][3])
+							local pos = P:node_pos_ref(nodes[i][1], nodes[i][2], nodes[i][3])
 							if not GR:cell_is(pos.x, pos.y, bor(TERRAIN_CLIFF, TERRAIN_FAERIE, TERRAIN_WATER)) then
-								b.bullet.to = pos
+								b.bullet.to:copy(pos)
 								break
 							end
 						end
