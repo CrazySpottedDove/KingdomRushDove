@@ -14730,7 +14730,6 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.info.hero_portrait = "kr5_hero_portraits_0018"
 tt.info.i18n_key = "HERO_WUKONG"
 tt.info.portrait = "kr5_info_portraits_heroes_0018"
-tt.info.damage_icon = "magic"
 tt.info.fn = scripts.hero_basic.get_info
 tt.hero.fn_level_up = scripts.hero_wukong.level_up
 tt.main_script.insert = scripts.hero_wukong.insert
@@ -17229,6 +17228,7 @@ tt.ultimate = {
 	ts = 0,
 	cooldown = b.ultimate.cooldown[1]
 }
+tt.nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_SHALLOW, TERRAIN_NOWALK, TERRAIN_ICE)
 
 tt = RT("bullet_hero_robot_skill_fire", "bullet")
 b = balance.heroes.hero_robot
