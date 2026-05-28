@@ -191,8 +191,9 @@ function screen_map:init_coro(w, h, done_callback)
 		screen_map.tower_data = map_data.tower_data
 		screen_map.level_data = map_data.level_data
 
-		self.map_points = get_map_points_for_generation(self.generation)
 		self.user_data = storage:load_slot()
+		self.generation = self.user_data.last_generation
+		self.map_points = get_map_points_for_generation(self.generation)
 		self.unlock_data = {}
 		self.unlock_data.unlocked_levels = {}
 
@@ -1493,7 +1494,7 @@ end
 
 function screen_map:start_level(level_idx, level_mode)
 	local user_data = storage:load_slot()
-
+	user_data.last_generation = self.generation
 	storage:save_slot(user_data, nil, true)
 	self.done_callback({
 		next_item_name = "game",

@@ -1310,7 +1310,8 @@ local obj1 = {
 	},
 	["upgrade_list_id"] = 1,
 	["locked_towers"] = {},
-	["version_string"] = "kr1-desktop-5.6.12"
+	["version_string"] = "kr1-desktop-5.6.12",
+	["last_generation"] = 1
 }
 
 return obj1

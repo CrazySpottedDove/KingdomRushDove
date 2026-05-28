@@ -4063,6 +4063,7 @@ function scripts.eb_saurian_king.update(this, store)
 		if U.has_soldier_in_range(store.soldiers, this.pos, 0, ha.damage_radius, ha.vis_flags, ha.vis_bans) then
 			return true
 		end
+		ha.ts = ha.ts + 0.1
 		return false
 	end
 

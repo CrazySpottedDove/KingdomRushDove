@@ -21,6 +21,7 @@ return {
 	heroes = {
 		selected = {}
 	},
+	last_generation = 1,
 	locked_towers = {
 		"tower_paladin",
 		"tower_barbarian",
