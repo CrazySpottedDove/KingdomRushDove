@@ -1434,6 +1434,8 @@ tt.unit.hide_after_death = true
 tt.unit.size = UNIT_SIZE_MEDIUM
 tt.vis.bans = F_ALL
 tt.vis.bans_walking = bor(F_SKELETON, F_EAT, F_POISON, F_TWISTER, F_POLYMORPH, F_TELEPORT)
+-- 对象特殊，使用 BOSS 标签做保护
+tt.vis.flags = bor(tt.vis.flags, F_BOSS)
 tt.piece_respawn_delay = fts(35) + 3
 tt.piece_respawn_delay_repeating = fts(35)
 
