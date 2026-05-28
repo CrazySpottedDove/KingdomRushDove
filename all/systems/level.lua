@@ -54,7 +54,7 @@ function M.register(sys)
 			P:reverse_all_paths()
 		end
 
-		E:load()
+		E:Load()
 		coroutine.yield()
 
 		DI:patch_templates()

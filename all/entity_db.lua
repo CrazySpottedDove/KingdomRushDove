@@ -8,39 +8,35 @@ local copy = table.deepclone
 local entity_db = {
 	last_id = 1,
 	entities = {},
+	components = {},
 	components_cloner = {},
 	loaded = false
 }
 
--- 这里需要进行性能优化，避免每次 load 的全量表加载，但是又要考虑 mods 模块的适配性。即： load() 之后，依然可以通过钩子的方式继续向 entity_db.entities 添加或修改模板。
-function entity_db:load()
+function entity_db:Load()
 	self.last_id = 1
 	self.loaded = true
 
-	-- collectgarbage()
-	-- local before = collectgarbage("count")
-
-	-- components 是永远不会被外部修改的，因此完全不需要缓存，直接加载即可。
-	if not self.components then
-		self.components = {}
-		require("components")
-		local compiler = require("precompile.interface")
-		self.components_cloner = compiler:compile_component_cloners()
-	end
-
-	-- 可以对 entities 做一个备份。因为 package.loaded 清空后，需要做的事情不只是表的复制，还有 lua 文件的解析。这么做就可以把解析的时间节省下来了。同时，备份只有这些模板文件的部分，这就允许外部通过钩子手动添加，不会导致问题。
 	if not self.entities_backup then
-		-- 不需要手动清空 package.loaded，因为只有第一次加载会执行这些 require 语句，之后就直接从备份复制了。
-		require("templates")
-		require("game_templates")
+		self:load()
 		self:precompile()
 		self.entities_backup = copy(self.entities)
 	else
+		-- 已有实体数据库备份时，直接拷贝即可。components 约定为只读数据，无需重复拷贝。
 		self.entities = copy(self.entities_backup)
 	end
--- collectgarbage()
--- local after = collectgarbage("count")
--- print(string.format("entity_db:load() 内存使用增加了 %.2f KB", after - before))
+end
+
+--- 实体数据库的首次初始化，实际的初始化逻辑，只负责将组件和实体模板从文件加载到内存中。
+--- 插件应当 HOOK 该函数，来实现自己定义的组件和实体模板的加载（不要在这个HOOK中做其他事情！）。
+--- 通过将 precompile 步骤和 load 步骤分离，允许了在 load HOOK 中注册的实体也享受到编译效果，从而避免错误地继承一个已被编译的脚本的问题。
+function entity_db:load()
+	require("components")
+	local compiler = require("precompile.interface")
+	self.components_cloner = compiler:compile_component_cloners()
+
+	require("templates")
+	require("game_templates")
 
 -- self:report_status()
 -- self:test_tween()
@@ -64,7 +60,7 @@ end
 --- @return boolean (true: 执行加载逻辑；false: 已加载)
 function entity_db:ensure_loaded()
 	if not self.loaded then
-		self:load()
+		self:Load()
 		return true
 	end
 	return false

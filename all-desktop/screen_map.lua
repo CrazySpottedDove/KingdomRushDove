@@ -4215,7 +4215,7 @@ function EncyclopediaView:show()
 	EncyclopediaView.super.show(self)
 
 	local user_data = storage:load_slot()
-	E:load()
+	E:Load()
 	UPGR:set_levels(user_data.upgrades)
 	UPGR:set_list_id(user_data.upgrade_list_id)
 	DI:set_level(screen_map.user_data.difficulty)
