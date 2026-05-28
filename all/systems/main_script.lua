@@ -49,7 +49,7 @@ function M.register(sys)
 				end
 			end
 		end
-
+		perf.set_main_scripts(store.entities_with_main_script_on_update_count)
 		perf.stop("main_script")
 	end
 	function sys.main_script:on_remove(entity, store)
