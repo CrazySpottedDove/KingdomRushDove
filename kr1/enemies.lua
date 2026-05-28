@@ -7560,7 +7560,6 @@ tt.bullet.miss_decal = "dreadeye_viper_arrow2"
 tt.bullet.particles_name = "ps_bullet_dreadeye_viper"
 tt.render.sprites[1].name = "dreadeye_viper_arrow"
 tt.bullet.hit_distance = 20
-tt.bullet.extend_particles_cutoff = true
 local b = balance.enemies.werebeasts.surveyor_harpy
 
 tt = E:register_t("enemy_surveyor_harpy", "enemy")

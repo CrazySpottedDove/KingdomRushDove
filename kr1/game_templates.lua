@@ -15619,7 +15619,6 @@ tt.render.sprites[1].animated = true
 tt.bullet.rotation_speed = 30 * FPS * math.pi / 180 * 0.6
 tt.bullet.hide_radius = 2
 tt.bullet.hit_distance = 20
-tt.bullet.extend_particles_cutoff = true
 
 tt = E:register_t("bullet_ranged_crocs", "arrow")
 b = balance.enemies.crocs.crocs_ranged
@@ -15638,7 +15637,6 @@ tt.render.sprites[1].name = "ranged_croc_proyectile"
 tt.render.sprites[1].animated = false
 tt.bullet.hide_radius = 0
 tt.bullet.hit_distance = 20
-tt.bullet.extend_particles_cutoff = true
 
 tt = E:register_t("bullet_crocs_shaman", "bolt_enemy")
 local b = balance.enemies.crocs.crocs_shaman
@@ -17884,7 +17882,6 @@ tt.render.sprites[1].name = "darksteel_anvil_attack_projectile"
 tt.render.sprites[1].animated = true
 tt.bullet.hide_radius = 0
 tt.bullet.hit_distance = 20
-tt.bullet.extend_particles_cutoff = true
 
 tt = E:register_t("decal_stage_28_mask_1", "decal")
 tt.render.sprites[1].name = "stage_28_mask_01"

@@ -10,6 +10,9 @@ return function(this, store)
 		return false
 	end
 
+    @constif(b.flight_time_min and b.flight_time_per_dist)
+    b.flight_time = b.flight_time_min + V.dist(b.from.x, b.from.y, b.to.x, b.to.y) * b.flight_time_per_dist
+
 	constif(b.reset_to_target_pos)
 		b.to.x, b.to.y = target.pos.x, target.pos.y
 

@@ -543,8 +543,12 @@ function ModItemRow:initialize(opts, row_w)
 	local action_btn_count = #actions
 	local needed_action_w = action_w * math.max(1, action_btn_count) + action_gap * math.max(0, action_btn_count - 1)
 	local action_col_w = math.max(toggle_w, needed_action_w)
-	local action_col_left = row_w - right_pad - action_col_w
-	local status_w = clamp(opts and opts.status_width or action_col_w, 180, action_col_w)
+	local status_col_w = opts and opts.status_width or action_col_w
+	if status_col_w < 180 then
+		status_col_w = 180
+	end
+	local action_col_left = row_w - right_pad - status_col_w
+	local status_w = status_col_w
 	local status_x = row_w - right_pad - status_w
 	local text_w = math.max(220, action_col_left - (ACCENT_W + ROW_PAD) - 12)
 
@@ -599,8 +603,6 @@ function ModItemRow:initialize(opts, row_w)
 	status_lbl.vertical_align = "middle"
 	status_lbl.colors.text = {242, 211, 121, 255}
 	status_lbl.text = safe_tostring(self.opts.status or "")
-	status_lbl.fit_lines = 1
-	status_lbl.fit_size = true
 	status_lbl.pos = V.v(status_x, status_y)
 	self:add_child(status_lbl)
 
