@@ -6,6 +6,7 @@ local perf = {}
 -- item: { sum: number, start_time: number, avg_sum: number, count: number}
 perf.items = {}
 perf.tmp = {}
+perf.frames = 0
 
 function perf.reset()
 	for _, v in pairs(perf.items) do
@@ -99,6 +100,10 @@ function perf.tmp_stop(name)
 	local elapsed = love.timer.getTime() * 1000 - perf.tmp[name]
 	print(name .. " took " .. elapsed .. " ms")
 	perf.tmp[name] = nil
+end
+
+function perf.set_frames(frame_count)
+	perf.frames = frame_count
 end
 
 return perf
