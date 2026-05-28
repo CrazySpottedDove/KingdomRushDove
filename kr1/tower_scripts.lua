@@ -22560,7 +22560,7 @@ function scripts.tower_rotten_forest.update(this, store, script)
 	local tpos = tpos(this)
 
 	-- 用于同步特效与 aura 生效范围
-	local last_range = 0
+	local last_range = a.range
 
 	while true do
 		if this.tower.blocked then
