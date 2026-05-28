@@ -4262,7 +4262,6 @@ tt.powers.razor_edge = CC("power")
 tt.powers.razor_edge.max_level = 2
 tt.powers.razor_edge.price_base = 200
 tt.powers.razor_edge.price_inc = 200
-tt.powers.razor_edge.enc_icon = 17
 tt.powers.razor_edge.attack_idx = 1
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "galahadriansBastion_layer2_0053"

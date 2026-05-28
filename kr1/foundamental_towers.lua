@@ -501,7 +501,6 @@ tt.powers.ray = CC("power")
 tt.powers.ray.level = 1
 tt.powers.ray.max_level = 3
 tt.powers.ray.price_inc = 500
-tt.powers.ray.enc_icon = 26
 tt.main_script.insert = scripts.tower_neptune.insert
 tt.main_script.update = scripts.tower_neptune.update
 tt.render.sprites[1].name = "neptuno_0002"

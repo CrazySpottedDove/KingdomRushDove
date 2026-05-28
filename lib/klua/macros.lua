@@ -46,7 +46,7 @@ local function SHORT_ANGLE_DEG(from, to)
 end
 
 local function CLAMP_SIGNED(min, max, v)
-	return v < min and min or max < v and max or v
+	return math.min(math.max(v, min), max)
 end
 
 local function CLAMP(a, b, v)
