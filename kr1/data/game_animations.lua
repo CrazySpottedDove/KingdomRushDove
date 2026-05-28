@@ -29278,11 +29278,6 @@ return {
 		prefix = "hero_vesper_vesper",
 		to = 307
 	},
-	hero_vesper_vesper_disengage = {
-		from = 210,
-		prefix = "hero_vesper_vesper",
-		to = 257
-	},
 	hero_vesper_vesper_disengage_appear = {
 		from = 221,
 		prefix = "hero_vesper_vesper",
