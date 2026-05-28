@@ -18395,35 +18395,6 @@ function scripts.power_thunder_control.update(this, store)
 	queue_remove(store, this)
 end
 
-scripts.power_hero_control = {}
-
-function scripts.power_hero_control.can_select_point(this, x, y, store)
-	if store.main_hero then
-		local ut = E:get_template(store.main_hero.hero.skills.ultimate.controller_name)
-
-		if not ut.can_fire_fn or ut.can_fire_fn(ut, x, y, store) then
-			return true
-		end
-	end
-
-	return false
-end
-
-function scripts.power_hero_control.insert(this, store)
-	if store.main_hero then
-		local u = store.main_hero.hero.skills.ultimate
-		local e = E:create_entity(u.controller_name)
-
-		e.pos.x, e.pos.y = this.pos.x, this.pos.y
-		e.owner = store.main_hero
-		e.level = u.level
-
-		queue_insert(store, e)
-	end
-
-	return false
-end
-
 scripts.birds_controller = {}
 
 function scripts.birds_controller.update(this, store)
@@ -64103,7 +64074,7 @@ function scripts.mod_boss_stage_39_get_hit_dps.update(this, store, script)
 
 		do_damage(target, damage_value)
 
-		if total_damage >= this.damage_total then
+		if total_damage > this.damage_total then
 			break
 		end
 

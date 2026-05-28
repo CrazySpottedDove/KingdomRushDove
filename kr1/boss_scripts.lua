@@ -35,10 +35,6 @@ local function tpos(e)
 end
 
 local function enemy_ready_to_magic_attack(this, store, attack)
-	if not attack or not this.enemy or this.enemy.can_do_magic == nil then
-		return false
-	end
-
 	return this.enemy.can_do_magic and store.tick_ts - attack.ts > attack.cooldown
 end
 
@@ -1801,7 +1797,20 @@ function scripts.eb_blackburn.update(this, store)
 	local sa = this.timed_attacks.list[1]
 
 	local function ready_to_smash()
-		return enemy_ready_to_magic_attack(this, store, sa)
+		if not enemy_ready_to_magic_attack(this, store, sa) then
+			return false
+		end
+		local towers = U.find_towers_in_range(store.towers, this.pos, sa, function(t)
+			return t.tower.can_be_mod
+		end)
+		if towers then
+			return true
+		end
+		if U.has_soldier_in_range(store.soldiers, this.pos, 0, sa.damage_radius, sa.vis_flags, sa.vis_bans) then
+			return true
+		end
+		sa.ts = sa.ts + 0.1
+		return false
 	end
 
 	sa.ts = store.tick_ts
@@ -1882,7 +1891,7 @@ function scripts.eb_blackburn.update(this, store)
 					end
 				end
 
-				local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, sa.damage_radius, sa.vis_flags or 0, sa.vis_bans or 0)
+				local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, sa.damage_radius, sa.vis_flags, sa.vis_bans)
 
 				if targets then
 					for i = 1, #targets do
@@ -1997,12 +2006,6 @@ function scripts.blackburn_aura.update(this, store)
 
 		if store.tick_ts - last_ts >= this.aura.cycle_time then
 			last_ts = store.tick_ts
-
-			for _, e in pairs(store.soldiers) do
-				if e and not e.health.dead and e.soldier.tower_id == source.id then
-					tower_skeletons_count = tower_skeletons_count + 1
-				end
-			end
 
 			local max_spawns = this.count_group_max - (cg[this.count_group_name] or 0)
 
@@ -4054,7 +4057,13 @@ function scripts.eb_saurian_king.update(this, store)
 	local ha = this.timed_attacks.list[1]
 
 	local function ready_to_hammer()
-		return enemy_ready_to_magic_attack(this, store, ha)
+		if not enemy_ready_to_magic_attack(this, store, ha) then
+			return false
+		end
+		if U.has_soldier_in_range(store.soldiers, this.pos, 0, ha.damage_radius, ha.vis_flags, ha.vis_bans) then
+			return true
+		end
+		return false
 	end
 
 	local function hammer_hit(idx)

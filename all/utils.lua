@@ -883,6 +883,15 @@ function U.find_soldiers_in_range(entities, origin, min_range, max_range, flags,
 	end
 end
 
+function U.has_soldier_in_range(entities, origin, min_range, max_range, flags, bans, filter_func)
+	for _, v in pairs(entities) do
+		if not v.pending_removal and v.vis and v.health and not v.health.dead and band(v.vis.flags, bans) == 0 and band(v.vis.bans, flags) == 0 and U.is_inside_ellipse(v.pos, origin, max_range) and (min_range == 0 or not U.is_inside_ellipse(v.pos, origin, min_range)) and (not filter_func or filter_func(v, origin)) then
+			return true
+		end
+	end
+	return false
+end
+
 ---搜索最近的敌人
 ---@param store table game.store
 ---@param origin table 原点 {x, y}

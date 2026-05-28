@@ -6410,8 +6410,6 @@ tt.render.sprites[1].z = Z_OBJECTS_SKY
 tt = RT("fx_power_thunder_rain_splash", "fx")
 tt.render.sprites[1].name = "fx_power_thunder_rain_splash"
 
-tt = RT("power_hero_control")
-
 tt = RT("decal_water_sparks", "decal_loop")
 tt.render.sprites[1].name = "decal_water_sparks_idle"
 
