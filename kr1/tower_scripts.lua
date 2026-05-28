@@ -11442,7 +11442,8 @@ function scripts.tower_stargazers.update(this, store)
 
 					for i = 1, shots do
 						local iteration_count = 0
-						local j = i
+						-- 希望让观星优先选择前三个敌人进行攻击，提高射击数多的情况下的射击密度
+						local j = km.zmod(i, 3)
 						enemy = enemies[km.zmod(j, enemy_count)]
 						while iteration_count < enemy_count do
 							local candidate = enemies[km.zmod(j, enemy_count)]
@@ -11747,19 +11748,9 @@ function scripts.mod_ray_stargazers.update(this, store)
 		return
 	end
 
-	-- local function apply_damage(value)
-	--     local d = E.create_damage()
-	--     d.source_id = this.id
-	--     d.target_id = target.id
-	--     d.value = value * m.damage_factor
-	--     d.damage_type = this.damage_type
-	--     queue_damage(store, d)
-	-- end
-	-- local raw_damage = random(this.modifier.damage_min, this.modifier.damage_max)
 	this.pos = target.pos
 	m.ts = store.tick_ts
 
-	-- apply_damage(raw_damage)
 	while true do
 		target = store.entities[m.target_id]
 
@@ -11767,7 +11758,7 @@ function scripts.mod_ray_stargazers.update(this, store)
 			break
 		end
 
-		if this.render and m.use_mod_offset and target.unit.hit_offset then
+		if m.use_mod_offset and target.unit.hit_offset then
 			for _, s in ipairs(this.render.sprites) do
 				s.offset.x, s.offset.y = target.unit.hit_offset.x, target.unit.hit_offset.y
 			end

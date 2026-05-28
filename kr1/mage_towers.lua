@@ -2512,9 +2512,6 @@ tt.sound_events.hit = "TowerElvenStargazersRisingStarImpact"
 
 tt = RT("mod_tower_elven_stargazers_ray_hit", "modifier")
 AC(tt, "render")
--- tt.modifier.damage_min = nil
--- tt.modifier.damage_max = nil
--- tt.damage_type = DAMAGE_MAGICAL
 tt.main_script.update = scripts.mod_ray_stargazers.update
 tt.modifier.duration = fts(10)
 tt.modifier.allows_duplicates = true
