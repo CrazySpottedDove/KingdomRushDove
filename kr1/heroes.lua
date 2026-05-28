@@ -15297,11 +15297,12 @@ tt.sound_events.hit = "HeroVesperArrowToTheKneeImpact"
 tt = E:register_t("arrow_hero_vesper_disengage", "arrow")
 tt.render.sprites[1].name = "hero_vesper_arrow"
 tt.bullet.miss_decal = "archer_hero_proy_0002-f"
-tt.bullet.flight_time = fts(8)
+tt.bullet.flight_time_min = fts(4)
+tt.bullet.flight_time_per_dist = 0.0011
 tt.bullet.pop = {"pop_archer"}
 tt.bullet.hide_radius = 1
 tt.bullet.particles_name = "ps_hero_vesper_arrow_trail"
-tt.bullet.g = -2.5 / (fts(1) * fts(1))
+tt.bullet.g = 0
 tt.bullet.damage_type = b.disengage.damage_type
 
 tt = E:register_t("arrow_hero_vesper_ricochet", "bullet")
