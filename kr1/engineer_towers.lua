@@ -372,6 +372,14 @@ tower_dwaarp.sound_events.insert = "EarthquakeTauntReady"
 
 local lava = RT("lava_dwaarp", "lava")
 lava.main_script.update = scripts.lava_dwaarp.update
+lava.aura.duration = 3
+lava.aura.mod = "mod_lava_dwaarp"
+
+tt = RT("mod_lava_dwaarp", "mod_lava")
+tt.dps.damage_min = 1
+tt.dps.damage_max = 1
+tt.dps.damage_inc = 3
+tt.dps.damage_every = 0.2
 
 local decal_dwaarp_smoke = RT("decal_dwaarp_smoke", "decal_timed")
 decal_dwaarp_smoke.render.sprites[1].prefix = "towerdwaarp_sfx"
