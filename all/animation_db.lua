@@ -110,19 +110,9 @@ function animation_db:fn(animation_name, time_offset, loop, fps)
 
 	local len = a[1]
 	local time_in_frames_plus_eps = time_offset * fps
-	-- local next_elapsed = ceil(time_in_frames_plus_eps + self.tick_length * fps)
-	local runs = max(0, floor((ceil(time_in_frames_plus_eps + adaptive_fps.tick_length * fps) - 1) / len))
+	local idx = loop and (floor(time_in_frames_plus_eps) % len + 1) or max(1, min(len, ceil(time_in_frames_plus_eps)))
 
-	if loop then
-		local idx = floor(time_in_frames_plus_eps) % len + 1
-
-		return a[2][idx], runs, idx
-	else
-		local elapsed_frames = ceil(time_in_frames_plus_eps)
-		local idx = max(1, min(len, elapsed_frames))
-
-		return a[2][idx], runs, idx
-	end
+	return a[2][idx], max(0, floor((ceil(time_in_frames_plus_eps + adaptive_fps.tick_length * fps) - 1) / len)), idx
 end
 
 --- DEPRECATED: 该方法已废弃，建议使用 extrace_frame_from 来直接从原始定义表中提取出 frame_count 和 frame_names。此处保留以提供部分插件代码的兼容性。
