@@ -32,11 +32,26 @@ end
 --- 通过将 precompile 步骤和 load 步骤分离，允许了在 load HOOK 中注册的实体也享受到编译效果，从而避免错误地继承一个已被编译的脚本的问题。
 function entity_db:load()
 	require("components")
+
 	local compiler = require("precompile.interface")
 	self.components_cloner = compiler:compile_component_cloners()
 
 	require("templates")
 	require("game_templates")
+
+	-- clear up
+	package.loaded["components"] = nil
+	package.loaded["templates"] = nil
+	package.loaded["game_templates"] = nil
+	package.loaded["foundamental_towers"] = nil
+	package.loaded["mage_towers"] = nil
+	package.loaded["archer_towers"] = nil
+	package.loaded["engineer_towers"] = nil
+	package.loaded["barrack_towers"] = nil
+	package.loaded["heroes"] = nil
+	package.loaded["enemies"] = nil
+	package.loaded["boss"] = nil
+	package.loaded["hero_boss"] = nil
 
 -- self:report_status()
 -- self:test_tween()
