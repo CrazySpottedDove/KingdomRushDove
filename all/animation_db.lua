@@ -10,14 +10,14 @@ local ceil = math.ceil
 local floor = math.floor
 local max = math.max
 local min = math.min
-
+local adaptive_fps = require("dove_modules.perf.adaptive_fps")
 require("all.constants")
 
 local animation_db = {}
 
 animation_db.db = {}
 animation_db.fps = FPS
-animation_db.tick_length = TICK_LENGTH
+-- animation_db.tick_length = TICK_LENGTH
 animation_db.missing_animations = {}
 animation_db.loaded = false
 
@@ -83,7 +83,7 @@ function animation_db:load()
 	if self.loaded then
 		return
 	end
-	self.tick_length = TICK_LENGTH
+	-- self.tick_length = TICK_LENGTH
 	self.db = FS.load(KR_PATH_GAME .. "/data/game_animations.luac")()
 	self.loaded = true
 end
@@ -104,7 +104,25 @@ function animation_db:fn(animation_name, time_offset, loop, fps)
 		return nil, 0, nil
 	end
 
-	return self:fni(a, time_offset, loop, fps)
+	if not fps then
+		fps = self.fps
+	end
+
+	local len = a[1]
+	local time_in_frames_plus_eps = time_offset * fps
+	-- local next_elapsed = ceil(time_in_frames_plus_eps + self.tick_length * fps)
+	local runs = max(0, floor((ceil(time_in_frames_plus_eps + adaptive_fps.tick_length * fps) - 1) / len))
+
+	if loop then
+		local idx = floor(time_in_frames_plus_eps) % len + 1
+
+		return a[2][idx], runs, idx
+	else
+		local elapsed_frames = ceil(time_in_frames_plus_eps)
+		local idx = max(1, min(len, elapsed_frames))
+
+		return a[2][idx], runs, idx
+	end
 end
 
 --- DEPRECATED: 该方法已废弃，建议使用 extrace_frame_from 来直接从原始定义表中提取出 frame_count 和 frame_names。此处保留以提供部分插件代码的兼容性。
@@ -177,12 +195,10 @@ function animation_db:fni(animation, time_offset, loop, fps)
 		fps = self.fps
 	end
 
-	-- local eps = 1e-09
 	local len = animation[1]
-	-- local time_in_frames_plus_eps = time_offset * fps + eps
 	local time_in_frames_plus_eps = time_offset * fps
-	local next_elapsed = ceil(time_in_frames_plus_eps + self.tick_length * fps)
-	local runs = max(0, floor((next_elapsed - 1) / len))
+	-- local next_elapsed = ceil(time_in_frames_plus_eps + self.tick_length * fps)
+	local runs = max(0, floor((ceil(time_in_frames_plus_eps + self.tick_length * fps) - 1) / len))
 
 	if loop then
 		local idx = floor(time_in_frames_plus_eps) % len + 1
@@ -194,28 +210,6 @@ function animation_db:fni(animation, time_offset, loop, fps)
 
 		return animation[2][idx], runs, idx
 	end
-end
-
-function animation_db:duration(animation_name)
-	local a = self.db[animation_name]
-
-	if not a then
-		if not animation_name and self.missing_animations["nil"] or self.missing_animations[animation_name] then
-			return nil
-		end
-
-		log.error("animation %s not found", animation_name)
-
-		self.missing_animations[animation_name or "nil"] = true
-
-		return nil
-	end
-
-	if not a[2] then
-		self:fni(a, 0, false)
-	end
-
-	return a[1] / self.fps, a[1]
 end
 
 function animation_db:save_to_file()
