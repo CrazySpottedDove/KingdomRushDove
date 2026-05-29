@@ -392,15 +392,25 @@ function game:update(dt)
 		updated = true
 	end
 
-	while d.to_gui > TICK_LENGTH do
-		d.to_gui = d.to_gui - TICK_LENGTH
-		self.simulation:render_update(TICK_LENGTH)
+	while d.to_gui > adaptive_fps.tick_length do
+		d.to_gui = d.to_gui - adaptive_fps.tick_length
+		self.simulation:render_update(adaptive_fps.tick_length)
 		perf.start("game_gui:update")
-		self.game_gui:update(TICK_LENGTH)
+		self.game_gui:update(adaptive_fps.tick_length)
 		perf.stop("game_gui:update")
 		d.step = false
 		updated = true
 	end
+
+	-- while d.to_gui > TICK_LENGTH do
+	-- 	d.to_gui = d.to_gui - TICK_LENGTH
+	-- 	self.simulation:render_update(TICK_LENGTH)
+	-- 	perf.start("game_gui:update")
+	-- 	self.game_gui:update(TICK_LENGTH)
+	-- 	perf.stop("game_gui:update")
+	-- 	d.step = false
+	-- 	updated = true
+	-- end
 
 	return updated
 end

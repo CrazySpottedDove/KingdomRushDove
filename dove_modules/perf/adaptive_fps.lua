@@ -4,6 +4,7 @@ local M = {
 	counter = 0,
 	scene = nil
 }
+local perf = require("dove_modules.perf.perf")
 -- Called once on game init to bind to the game scene
 function M:set_scene(scene)
 	self.scene = scene
@@ -33,7 +34,12 @@ function M:update(dt)
 				self.scene.limit_fps = self.fps
 			end
 		end
-		return self.tick_length
+		-- 如果 dt 太大了，说明性能不足了，这时候不可以直接返回 dt，否则大的耗时会进一步放大下一次 dt，造成游戏卡死。这里使用 min_fps 来限制 dt 的最大值，来避免这种情况的发生。
+		if dt * self.min_fps > 1 then
+			return 1 / self.min_fps
+		else
+			return self.tick_length
+		end
 	elseif self.max_fps > self.fps then
 		self.counter = self.counter - 1
 		if self.counter < -5 then
