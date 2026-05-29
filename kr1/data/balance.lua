@@ -476,7 +476,6 @@ local heroes = {
 			max_range = 150,
 			min_range = 50,
 			cooldown = {30, 30, 30},
-			damage_type = DAMAGE_TRUE,
 			xp_gain = {240, 480, 720},
 			dragon = {
 				max_speed = 75,
@@ -485,7 +484,7 @@ local heroes = {
 					max_range = 120,
 					cooldown = 1,
 					min_range = 0,
-					damage_type = DAMAGE_PHYSICAL,
+					damage_type = DAMAGE_TRUE,
 					damage_min = {13, 20, 24},
 					damage_max = {18, 31, 37}
 				}
