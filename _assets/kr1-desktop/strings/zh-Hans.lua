@@ -2753,7 +2753,6 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	HERO_DRAGON_BONE_SPECIAL = "瘟疫，脊骨骤雨，瘟神毒雾，爆发感染，疫病灾星，化骨为龙",
 	HERO_DRAGON_DESCRIPTION = "阿什比特是忠实的烧烤爱好者。原味还是孜然？",
 	HERO_DRAGON_GEM_DESCRIPTION = "邪教在遗忘峡谷的活动打断了科斯米尔与世隔绝的生活。为了驱逐入侵者，这条晶龙与维兹南达成协议，加入联盟对抗共同的敌人。",
-
 	HERO_DRAGON_GEM_NAME = "科斯米尔",
 	HERO_DRAGON_GEM_SPECIAL = "结晶吐息，棱晶碎片，红晶石冢，能量输导，水晶崩落，无源充能",
 	HERO_DRAGON_NAME = "阿什比特",
