@@ -162,7 +162,7 @@ return {
 			action_arg = "tower_elven_stargazers_lvl4",
 			image = "kr5_main_icons_0008",
 			place = 18,
-			tt_title = _("TOWER_ELVEN_STARGAZERS_NAME"),
+			tt_title = _("TOWER_STARGAZER_4_NAME"),
 			tt_desc = _("TOWER_STARGAZER_4_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
@@ -303,8 +303,8 @@ return {
 			image = "kr5_main_icons_0042",
 			type = "sparking_geode",
 			place = 18,
-			tt_title = _("TOWER_SPARKING_GEODE_1_NAME"),
-			tt_desc = _("TOWER_SPARKING_GEODE_1_DESCRIPTION")
+			tt_title = _("TOWER_SPARKING_GEODE_4_NAME"),
+			tt_desc = _("TOWER_SPARKING_GEODE_4_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_rotten_forest",
@@ -400,14 +400,14 @@ return {
 			action_arg = "tower_sand_lvl4",
 			image = "kr5_main_icons_0013",
 			place = 16,
-			tt_title = _("TOWER_SAND_NAME"),
-			tt_desc = _("TOWER_SAND_1_DESCRIPTION")
+			tt_title = _("TOWER_SAND_4_NAME"),
+			tt_desc = _("TOWER_SAND_4_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_royal_archers_lvl4",
 			image = "kr5_main_icons_0002",
 			place = 17,
-			tt_title = _("TOWER_ROYAL_ARCHERS_NAME"),
+			tt_title = _("TOWER_ROYAL_ARCHERS_4_NAME"),
 			tt_desc = _("TOWER_ROYAL_ARCHERS_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
