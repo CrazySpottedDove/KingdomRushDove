@@ -7594,12 +7594,13 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 end
 
 function scripts.tower_necromancer_lvl4.remove(this, store)
-	if this.tower_upgrade_persistent_data.skulls_ref and not this.tower.upgrade_to then
+	if this.tower_upgrade_persistent_data.skulls_ref then
 		for _, skull in pairs(this.tower_upgrade_persistent_data.skulls_ref) do
 			if skull then
 				queue_remove(store, skull)
 			end
 		end
+		this.tower_upgrade_persistent_data.current_skulls = 0
 	end
 
 	return true
