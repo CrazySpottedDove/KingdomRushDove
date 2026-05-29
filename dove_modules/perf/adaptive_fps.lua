@@ -4,7 +4,6 @@ local M = {
 	counter = 0,
 	scene = nil
 }
-
 -- Called once on game init to bind to the game scene
 function M:set_scene(scene)
 	self.scene = scene
@@ -25,9 +24,12 @@ function M:update(dt)
 		if self.counter > 5 then
 			self.counter = 0
 			if self.fps > self.min_fps then
+				-- fps: 标准 fps，即绘制层的更新 fps。
 				self.fps = math.max(self.min_fps, 1 / dt)
+				-- tick_length: 绘制层的更新周期
 				self.tick_length = 1 / self.fps
-				self.scene.simulation.store.tick_length = self.tick_length
+				-- 当玩家选择了倍速的时候，如果发现帧率不稳定了，则在合理的区间内，适当提高 store.tick_length，从而减少需要执行 update 的次数，来降低 CPU 的更新压力
+				self.scene.simulation.store.tick_length = math.min(self.tick_length * math.max(self.scene.simulation.store.speed_factor, 1), 1 / self.min_fps)
 				self.scene.limit_fps = self.fps
 			end
 		end
@@ -38,9 +40,10 @@ function M:update(dt)
 			self.counter = 0
 
 			if self.max_fps > self.fps then
-				self.fps = self.fps + 1
+				-- 慢慢回升 fps，避免突然提升 fps 导致的性能问题
+				self.fps = math.floor(self.fps + 1)
 				self.tick_length = 1 / self.fps
-				self.scene.simulation.store.tick_length = self.tick_length
+				self.scene.simulation.store.tick_length = math.min(self.tick_length * math.max(self.scene.simulation.store.speed_factor, 1), 1 / self.min_fps)
 				self.scene.limit_fps = self.fps
 			end
 		end
