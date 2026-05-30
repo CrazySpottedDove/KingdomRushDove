@@ -10810,11 +10810,12 @@ function scripts.mod_tower_ray_damage.update(this, store)
 				current_tier = current_tier + 1
 				if current_tier <= tier_count then
 					current_dps = dps_per_tier[current_tier]
-					this.render.sprites[1].scale = V.vv(0.333 + 0.167 * current_tier)
-					source.render.sprites[1].scale.y = 0.67 + 0.33 * current_tier
-					apply_damage(current_dps)
+					this.render.sprites[1].scale = V.vv(0.3 + 0.15 * current_tier)
+					source.render.sprites[1].scale.y = 0.6 + 0.3 * current_tier
 				end
-			else
+			end
+
+			if current_tier <= tier_count then
 				apply_damage(current_dps)
 			end
 		end
