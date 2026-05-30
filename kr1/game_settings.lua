@@ -79,7 +79,6 @@ GS.barrack_towers = {
 	"tower_barrack_pirates",
 	"tower_blade",
 	"tower_forest",
-	"tower_druid",
 	"tower_drow",
 	"tower_ewok",
 	"tower_baby_ashbite",
