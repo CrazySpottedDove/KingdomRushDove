@@ -2200,6 +2200,7 @@ tt.explosion_factor = b.explosion_factor
 tt.bullet.damage_type = DAMAGE_MAGICAL
 tt.bullet.damage_min = b.damage_min[4]
 tt.bullet.damage_max = b.damage_max[4]
+-- dps: 335 / 4.5 = 74.4
 tt.bullet.hit_time = fts(2)
 tt.bullet.out_start_fx = "fx_tower_ray_hit_start"
 tt.bullet.out_fx = "fx_tower_ray_hit_source"

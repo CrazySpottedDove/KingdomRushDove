@@ -1640,25 +1640,27 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("mage_strike")
 	if u then
+		local function mage_strike(entity, damage, protection)
+			if protection <= 0 then
+				damage.value = damage.value * 1.2
+			end
+		end
 		for _, n in ipairs(self.mage_tower_bolts) do
 			local b = T(n).bullet
-			b.damage_hooks[#b.damage_hooks + 1] = function(entity, damage, protection)
-				if protection <= 0 then
-					damage.value = damage.value * 1.2
-				end
-			end
+			b.damage_hooks[#b.damage_hooks + 1] = mage_strike
 		end
 	end
 
 	u = self:get_upgrade("mage_unsteady")
 	if u then
+		local function mage_unsteady(entity, damage, protection)
+			if math.random() < 0.1 and protection < 1 then
+				damage.value = damage.value * 2 / (1 - protection)
+			end
+		end
 		for _, n in ipairs(self.mage_tower_bolts) do
 			local b = T(n).bullet
-			b.damage_hooks[#b.damage_hooks + 1] = function(entity, damage, protection)
-				if math.random() < 0.1 and protection < 1 then
-					damage.value = damage.value * 2 / (1 - protection)
-				end
-			end
+			b.damage_hooks[#b.damage_hooks + 1] = mage_unsteady
 		end
 	end
 

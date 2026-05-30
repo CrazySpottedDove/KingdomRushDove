@@ -3503,7 +3503,7 @@ scripts.mod_slow_curse = {}
 function scripts.mod_slow_curse.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
 
-	if not target or U.has_modifier_types(store, target, MOD_TYPE_SLOW, MOD_TYPE_RAGE) then
+	if not target or U.has_modifier_types(store, target, MOD_TYPE_RAGE) then
 		return false
 	end
 

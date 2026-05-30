@@ -10311,9 +10311,6 @@ function scripts.tower_ray.update(this, store)
 				end
 
 				ac.damage_mult = pow_c.damage_mult[pow_c.level]
-				-- local b = E:get_template(ac.bullet)
-				-- b.damage_mult = pow_c.damage_mult[pow_c.level]
-				ac.ts = store.tick_ts - ac.cooldown
 
 				if not pow_c._shock_fx then
 					pow_c._shock_fx = true
@@ -10336,7 +10333,6 @@ function scripts.tower_ray.update(this, store)
 				pow_s.changed = nil
 				as.disabled = false
 				as.cooldown = pow_s.cooldown[1]
-				as.ts = store.tick_ts - as.cooldown
 			end
 
 			SU.towers_swaped(store, this, this.attacks.list)
@@ -10755,6 +10751,7 @@ function scripts.mod_tower_ray_damage.update(this, store)
 		d.target_id = target.id
 		d.value = value
 		d.damage_type = dps.damage_type
+		d.hooks = m.damage_hooks
 		d.pop = dps.pop
 		d.pop_chance = dps.pop_chance
 		d.pop_conds = dps.pop_conds
@@ -10777,7 +10774,7 @@ function scripts.mod_tower_ray_damage.update(this, store)
 	local current_dps = dps_per_tier[1]
 
 	this.pos = target.pos
-	dps.ts = store.tick_ts
+	dps.ts = store.tick_ts - dps.damage_every
 	m.ts = store.tick_ts
 
 	if this.forced_start_ts then
@@ -10810,13 +10807,16 @@ function scripts.mod_tower_ray_damage.update(this, store)
 
 			if current_cycle > cycles_per_tier then
 				current_cycle = current_cycle - cycles_per_tier
-				current_tier = math.min(current_tier + 1, tier_count)
-				current_dps = dps_per_tier[current_tier]
-				this.render.sprites[1].scale = V.vv(0.333 + 0.167 * current_tier)
-				source.render.sprites[1].scale.y = 0.67 + 0.33 * current_tier
+				current_tier = current_tier + 1
+				if current_tier <= tier_count then
+					current_dps = dps_per_tier[current_tier]
+					this.render.sprites[1].scale = V.vv(0.333 + 0.167 * current_tier)
+					source.render.sprites[1].scale.y = 0.67 + 0.33 * current_tier
+					apply_damage(current_dps)
+				end
+			else
+				apply_damage(current_dps)
 			end
-
-			apply_damage(current_dps)
 		end
 
 		coroutine.yield()
@@ -10845,23 +10845,15 @@ function scripts.mod_tower_ray_slow.insert(this, store)
 
 	signal.emit("mod-applied", this, target)
 
-	this.modifier_inserted = true
-
 	return true
 end
 
 function scripts.mod_tower_ray_slow.remove(this, store)
-	if not this.modifier_inserted then
-		return true
-	end
-
 	local target = store.entities[this.modifier.target_id]
 
 	if target and target.motion then
 		U.speed_div(target, this.slow.factor)
 	end
-
-	this.modifier_inserted = false
 
 	return true
 end
@@ -10949,15 +10941,16 @@ function scripts.bullet_tower_ray.update(this, store)
 
 			m.modifier.target_id = b.target_id
 			m.modifier.source_id = this.id
-			local dmg_factor = tonumber(b.damage_factor) or 1
-			local chain_dmg_mult = this._is_origin and 1 or tonumber(this.damage_mult) or 1
+			local dmg_factor = b.damage_factor
+			local chain_dmg_mult = this._is_origin and 1 or this.damage_mult
 
+			U.modifier_inherit_bullet(m.modifier, b)
 			m.modifier.damage_factor = dmg_factor * chain_dmg_mult
 
 			if mod_name == "mod_tower_ray_damage" then
-				m.dps.damage_max = tonumber(b.damage_max) or 0
-				m.dps.damage_min = tonumber(b.damage_min) or 0
-				m.modifier.duration = (tonumber(m.modifier.duration) or 0) * b.cooldown_factor
+				m.dps.damage_max = b.damage_max
+				m.dps.damage_min = b.damage_min
+				m.modifier.duration = m.modifier.duration * b.cooldown_factor
 			end
 
 			table.insert(mods_added, m)
@@ -10998,7 +10991,7 @@ function scripts.bullet_tower_ray.update(this, store)
 	local chained_next_ray = false
 	local start_chain_delay = this.chain_delay
 	local source = store.entities[b.source_id]
-	local ray_duration = (tonumber(this.ray_duration) or 0) * b.cooldown_factor
+	local ray_duration = this.ray_duration * b.cooldown_factor
 	local kill_explosion_done = false
 	local last_hit_explosion_pos = nil
 
@@ -11010,7 +11003,7 @@ function scripts.bullet_tower_ray.update(this, store)
 
 		queue_insert(store, explosion_fx)
 
-		local explosion_targets = U.find_enemies_in_range_filter_off(explosion_fx.pos, tonumber(this.explosion_radius) or 0, F_AREA, F_NONE)
+		local explosion_targets = U.find_enemies_in_range_filter_off(explosion_fx.pos, this.explosion_radius, F_AREA, F_NONE)
 
 		if explosion_targets then
 			for i = 1, #explosion_targets do
@@ -11019,10 +11012,10 @@ function scripts.bullet_tower_ray.update(this, store)
 
 				d.source_id = this.id
 				d.target_id = explosion_target.id
-				local ex_dmin = tonumber(b.damage_min) or 0
-				local ex_dmax = tonumber(b.damage_max) or ex_dmin
+				local ex_dmin = b.damage_min
+				local ex_dmax = b.damage_max
 
-				d.value = random(ex_dmin, ex_dmax) * (tonumber(b.damage_factor) or 1) * (tonumber(this.explosion_factor) or 1)
+				d.value = random(ex_dmin, ex_dmax) * b.damage_factor * this.explosion_factor
 				d.damage_type = DAMAGE_MAGICAL_EXPLOSION
 
 				queue_damage(store, d)
@@ -11069,12 +11062,12 @@ function scripts.bullet_tower_ray.update(this, store)
 				chain.bullet.target_id = chain_target.id
 				chain.bullet.source_id = b.target_id
 				chain.bullet.level = b.level
-				chain.bullet.damage_factor = tonumber(b.damage_factor) or 1
+				chain.bullet.damage_factor = b.damage_factor
 				chain.tower_ref = tower
 				chain.chain_pos = this.chain_pos + 1
 				chain.mod_start_ts = start_ts
 				chain.bullet.cooldown_factor = b.cooldown_factor
-				chain.damage_mult = tonumber(this.damage_mult) or 1
+				chain.damage_mult = this.damage_mult
 
 				queue_insert(store, chain)
 
