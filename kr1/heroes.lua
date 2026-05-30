@@ -15332,7 +15332,7 @@ tt.sound = "HeroVesperRicochetImpact"
 
 tt = E:register_t("mod_vesper_ricochet_slow", "mod_slow")
 b = balance.heroes.hero_vesper
-tt.modifier.duration = b.ricochet.slow_factor
+tt.modifier.duration = b.ricochet.duration
 tt.slow.factor = b.ricochet.slow_factor
 
 tt = E:register_t("mod_hero_vesper_martial_flourish_fx", "modifier")
