@@ -183,8 +183,8 @@ return {
 			action_arg = "tower_arborean_emissary_lvl4",
 			image = "kr5_main_icons_0006",
 			place = 21,
-			tt_title = _("TOWER_ARBOREAN_EMISSARY_1_NAME"),
-			tt_desc = _("TOWER_ARBOREAN_EMISSARY_1_DESCRIPTION")
+			tt_title = _("TOWER_ARBOREAN_EMISSARY_4_NAME"),
+			tt_desc = _("TOWER_ARBOREAN_EMISSARY_4_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_dragons_lvl4",
