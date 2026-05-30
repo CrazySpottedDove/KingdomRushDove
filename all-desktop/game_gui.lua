@@ -6385,7 +6385,7 @@ function TowerMenu:initialize()
 	self.clip = false
 end
 
-function TowerMenu:show()
+function TowerMenu:show(tower_menu)
 	local entity = game_gui.selected_entity
 
 	if not entity or not entity.tower then
@@ -6409,15 +6409,19 @@ function TowerMenu:show()
 		end
 	end
 
-	local current_tms = tower_menus[entity.tower.type]
+	local tm = tower_menu
 
-	if not current_tms or not current_tms[entity.tower.level] then
-		self.hidden = true
+	if not tm then
+		local current_tms = tower_menus[entity.tower.type]
 
-		return
+		if not current_tms or not current_tms[entity.tower.level] then
+			self.hidden = true
+
+			return
+		end
+
+		tm = current_tms[entity.tower.level]
 	end
-
-	local tm = current_tms[entity.tower.level]
 
 	if game_gui.game.store.config.build_random_towers then
 		if entity.tower.type == "holder" then
@@ -7006,6 +7010,9 @@ function TowerMenu:button_callback(button, item, entity, mouse_button, x, y)
 			e.user_selection.in_progress = true
 		end
 		self:hide()
+	elseif item.action == "redirect" then
+		self:hide()
+		self:show(item.action_arg)
 	end
 
 	if item.sounds and not inhibit_sounds then
@@ -7262,7 +7269,7 @@ function TowerMenuTooltip:show(entity, item)
 			self:set_image("tooltip_bg_standard")
 		end
 
-		for _, v in pairs({self.damage_label, self.cooldown_label, self.health_label, self.armor_label}) do
+		for _, v in ipairs({self.damage_label, self.cooldown_label, self.health_label, self.armor_label}) do
 			v.pos.y = self.size.y - 26
 		end
 
@@ -7391,7 +7398,7 @@ function TowerMenuButton:initialize(item, entity)
 
 	if item.action == "upgrade_power" then
 		bo = create_bo_view("special_icons_0000")
-	elseif table.contains({"tw_upgrade", "tw_buy_soldier", "tw_buy_attack", "tw_unblock", "tw_repair"}, item.action) then
+	elseif table.contains({"tw_upgrade", "tw_buy_soldier", "tw_buy_attack", "tw_unblock", "tw_repair", "redirect"}, item.action) then
 		bo = create_bo_view("main_icons_0000")
 	end
 
