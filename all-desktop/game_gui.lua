@@ -6375,7 +6375,7 @@ TowerMenu = class("TowerMenu", KImageView)
 
 function TowerMenu:initialize()
 	TowerMenu.super.initialize(self, "gui_ring")
-
+	self._game_pos = V.v(0, 0)
 	self.can_drag = false
 	self.propagate_on_click = true
 	self.propagate_on_down = true
@@ -6422,14 +6422,14 @@ function TowerMenu:show()
 	if game_gui.game.store.config.build_random_towers then
 		if entity.tower.type == "holder" then
 			tm = tower_menus.random_foundamental[1]
-		elseif entity.tower.level == 3 then
-			if entity.tower.type == "archer" then
+		else
+			if tm == tower_menus.archer[3] then
 				tm = tower_menus.random_advanced_archer[1]
-			elseif entity.tower.type == "barrack" then
+			elseif tm == tower_menus.barrack[3] then
 				tm = tower_menus.random_advanced_barrack[1]
-			elseif entity.tower.type == "engineer" then
+			elseif tm == tower_menus.engineer[3] then
 				tm = tower_menus.random_advanced_engineer[1]
-			elseif entity.tower.type == "mage" then
+			elseif tm == tower_menus.mage[3] then
 				tm = tower_menus.random_advanced_mage[1]
 			end
 		end
@@ -6461,25 +6461,23 @@ function TowerMenu:show()
 			b.pos.x, b.pos.y = b.pos.x - b.size.x * 0.5, b.pos.y - b.size.y * 0.5
 			b.item_props = item
 
-			local stm = self
-
 			if item.action == "tw_none" then
 				b:disable()
 			else
 				function b.on_click(this, button, x, y)
 					if not self.tweening and not this.click_disabled then
-						stm:button_callback(this, item, entity, button, x, y)
+						self:button_callback(this, item, entity, button, x, y)
 					end
 				end
 
 				function b.on_enter(this, drag_view)
 					if not self.tweening then
-						stm:button_enter(this, item, entity)
+						self:button_enter(this, item, entity)
 					end
 				end
 
 				function b.on_exit(this, drag_view)
-					stm:button_exit(this, item, entity)
+					self:button_exit(this, item, entity)
 				end
 			end
 
@@ -6497,22 +6495,47 @@ function TowerMenu:show()
 	local mo = entity.tower.menu_offset
 	local ewx_g, ewy_g = entity.pos.x + ro.x + mo.x, entity.pos.y + ro.y + mo.y
 
-	if entity.tower.level == 3 then
+	-- 统一处理菜单可视性
+	do
 		local visible_coords = game_gui.game.store.visible_coords
-
-		if ewy_g + data.tower_menu_button_height > visible_coords.top then
-			ewy_g = visible_coords.top - data.tower_menu_button_height
+		local x_left = 0
+		local x_right = 0
+		local y_top = 0
+		local y_bottom = 0
+		for i = 1, #tm do
+			local item = tm[i]
+			local button_offset = data.tower_menu_button_places[item.place]
+			if x_left > button_offset.x then
+				x_left = button_offset.x
+			end
+			if x_right < button_offset.x then
+				x_right = button_offset.x
+			end
+			if y_top < -button_offset.y then
+				y_top = -button_offset.y
+			end
+			if y_bottom > -button_offset.y then
+				y_bottom = -button_offset.y
+			end
 		end
-
-		if ewx_g + data.tower_menu_button_width > visible_coords.right then
-			ewx_g = visible_coords.right - data.tower_menu_button_width
-		elseif ewx_g - data.tower_menu_button_width < visible_coords.left then
-			ewx_g = visible_coords.left + data.tower_menu_button_width
+		x_left, x_right = x_left - data.tower_menu_center_x - 25, x_right - data.tower_menu_center_x + 25
+		y_top, y_bottom = y_top + data.tower_menu_center_y, y_bottom + data.tower_menu_center_y
+		if ewy_g + y_top > visible_coords.top then
+			ewy_g = visible_coords.top - y_top
+		end
+		if ewy_g + y_bottom < visible_coords.bottom then
+			ewy_g = visible_coords.bottom - y_bottom
+		end
+		if ewx_g + x_right > visible_coords.right then
+			ewx_g = visible_coords.right - x_right
+		end
+		if ewx_g + x_left < visible_coords.left then
+			ewx_g = visible_coords.left - x_left
 		end
 	end
 
 	local ewx, ewy = game_gui:g2u(V.v(ewx_g, ewy_g), true)
-
+	self._game_pos:set(ewx_g, ewy_g)
 	self.pos = v(ewx, ewy)
 	self.scale = v(0.6, 0.6)
 	self.alpha = 0
@@ -6570,52 +6593,34 @@ function TowerMenu:update(dt)
 
 	TowerMenu.super.update(self, dt)
 
-	local e = game_gui.selected_entity
-
-	if not e or not e.tower then
+	if not game_gui.selected_entity or not game_gui.selected_entity.tower then
 		return
 	end
 
-	-- 根据相机动态更新TowerMenu的位置和缩放
+	local e = game_gui.game.store.entities[game_gui.selected_entity.id]
+
+	if not e then
+		self:hide()
+		return
+	end
+
 	if not self.tweening then
-		local ro = e.tower.range_offset
-		local mo = e.tower.menu_offset
-		local ewx_g, ewy_g = e.pos.x + ro.x + mo.x, e.pos.y + ro.y + mo.y
-
-		-- 边界检查（针对3级塔）
-		if e.tower.level == 3 then
-			local visible_coords = game_gui.game.store.visible_coords
-
-			if ewy_g + data.tower_menu_button_height > visible_coords.top then
-				ewy_g = visible_coords.top - data.tower_menu_button_height
-			end
-
-			if ewx_g + data.tower_menu_button_width > visible_coords.right then
-				ewx_g = visible_coords.right - data.tower_menu_button_width
-			elseif ewx_g - data.tower_menu_button_width < visible_coords.left then
-				ewx_g = visible_coords.left + data.tower_menu_button_width
-			end
-		end
-
-		local ewx, ewy = game_gui:g2u(V.v(ewx_g, ewy_g), true)
-
-		self.pos.x = ewx
-		self.pos.y = ewy
-		self.scale.x = game_gui.game.camera.zoom
-		self.scale.y = game_gui.game.camera.zoom
+		local x, y = game_gui:g2u(self._game_pos, true)
+		self.pos.x, self.pos.y = x, y
+		self.scale.x, self.scale.y = game_gui.game.camera.zoom, game_gui.game.camera.zoom
 	end
 
 	local store = game_gui.game.store
 
-	for _, c in pairs(self.children) do
+	for _, c in ipairs(self.children) do
 		if c:isInstanceOf(TowerMenuButton) and c.item_props then
-			if c.item_props.action == "tw_point" and e and e.user_selection then
+			if c.item_props.action == "tw_point" and e.user_selection then
 				if not e.user_selection.allowed then
 					c:disable()
 				else
 					c:enable()
 				end
-			elseif e and c.item_props.action == "tw_upgrade" then
+			elseif c.item_props.action == "tw_upgrade" then
 				local nt = E:get_template(c.item_props.action_arg)
 
 				if nt.build_name then
@@ -6633,13 +6638,13 @@ function TowerMenu:update(dt)
 				else
 					c:enable()
 				end
-			elseif e and c.item_props.action == "tw_unblock" then
+			elseif c.item_props.action == "tw_unblock" then
 				if e.tower_holder.unblock_price > store.player_gold then
 					c:disable()
 				else
 					c:enable()
 				end
-			elseif e and c.item_props.action == "upgrade_power" then
+			elseif c.item_props.action == "upgrade_power" then
 				local power = e.powers[c.item_props.action_arg]
 				local price = power.level == 0 and power.price_base or power.price_inc
 
@@ -6655,7 +6660,7 @@ function TowerMenu:update(dt)
 					pt.text = tostring(price)
 					pt.hidden = power.level == power.max_level
 				end
-			elseif e and c.item_props.action == "tw_buy_soldier" then
+			elseif c.item_props.action == "tw_buy_soldier" then
 				local nt = E:get_template(c.item_props.action_arg)
 				local price = nt.unit.price
 
@@ -6671,7 +6676,7 @@ function TowerMenu:update(dt)
 					pt.text = tostring(price)
 					pt.hidden = false
 				end
-			elseif e and c.item_props.action == "tw_buy_attack" then
+			elseif c.item_props.action == "tw_buy_attack" then
 				local price = e.attacks.list[c.item_props.action_arg].price
 
 				if price > store.player_gold then
@@ -6686,7 +6691,7 @@ function TowerMenu:update(dt)
 					pt.text = tostring(price)
 					pt.hidden = false
 				end
-			elseif e and c.item_props.action == "tw_change_mode" then
+			elseif c.item_props.action == "tw_change_mode" then
 				local current_mode = e.tower_upgrade_persistent_data.current_mode
 
 				if e.tower_upgrade_persistent_data.max_current_mode == 0 then
@@ -6698,7 +6703,7 @@ function TowerMenu:update(dt)
 				else
 					c.button:set_image(c.item["image_mode" .. current_mode])
 				end
-			elseif e and c.item_props.action == "tw_free_action" then
+			elseif c.item_props.action == "tw_free_action" then
 				local usa = e.user_selection and e.user_selection.actions
 				if usa and usa.tw_free_action then
 					if not usa.tw_free_action.allowed then
@@ -6715,7 +6720,7 @@ function TowerMenu:update(dt)
 		end
 	end
 
-	if e and e.attacks and e.attacks.range and not game_gui.tower_range.hidden then
+	if e.attacks and e.attacks.range and not game_gui.tower_range.hidden then
 		local ux, uy = game_gui:g2u(V.v(V.add(e.pos.x, e.pos.y, e.tower.range_offset.x, e.tower.range_offset.y)), true)
 
 		game_gui:show_tower_range(ux, uy, e.attacks.range)
@@ -7120,10 +7125,6 @@ function TowerMenuTooltip:initialize()
 	self:add_child(phrase_label)
 end
 
-function TowerMenuTooltip:set_template(template)
-	return
-end
-
 function TowerMenuTooltip:show(entity, item)
 	self.hidden = false
 	self.current_entity = entity -- 保存引用以便update使用
@@ -7269,13 +7270,12 @@ function TowerMenuTooltip:show(entity, item)
 	end
 
 	local oy = 142
-	local ex, ey = game_gui:g2u(V.v(entity.pos.x, entity.pos.y), true)
 
-	self.pos.x = ex - math.floor(self.size.x * 0.5)
-	self.pos.y = ey - self.size.y - oy - 20
+	self.pos.x = game_gui.towermenu.pos.x - math.floor(self.size.x * 0.5)
+	self.pos.y = game_gui.towermenu.pos.y - self.size.y - oy - 20
 
 	if self.pos.y < self.size.y / 3 then
-		self.pos.y = ey + 76
+		self.pos.y = game_gui.towermenu.pos.y + 76
 	end
 end
 
@@ -7285,12 +7285,9 @@ function TowerMenuTooltip:hide()
 	self.current_item = nil
 end
 
-TowerMenuButton = class("TowerMenuButton", KView)
-
 -- 如果tooltip正在显示，根据相机动态更新位置和缩放
 function TowerMenuTooltip:update(dt)
 	if not self.hidden and self.current_entity and self.current_item then
-		local entity = self.current_entity
 		local camera = game_gui.game.camera
 
 		-- tooltip随相机缩放
@@ -7299,16 +7296,17 @@ function TowerMenuTooltip:update(dt)
 
 		-- 基础偏移（不需要乘以zoom，因为tooltip自身会缩放）
 		local oy = 142
-		local ex, ey = game_gui:g2u(V.v(entity.pos.x, entity.pos.y), true)
 
-		self.pos.x = ex - math.floor(self.size.x * camera.zoom * 0.5)
-		self.pos.y = ey - self.size.y * camera.zoom - oy - 20
+		self.pos.x = game_gui.towermenu.pos.x - math.floor(self.size.x * camera.zoom * 0.5)
+		self.pos.y = game_gui.towermenu.pos.y - self.size.y * camera.zoom - oy - 20
 
 		if self.pos.y < self.size.y * camera.zoom / 3 then
-			self.pos.y = ey + 76
+			self.pos.y = game_gui.towermenu.pos.y + 76
 		end
 	end
 end
+
+TowerMenuButton = class("TowerMenuButton", KView)
 
 function TowerMenuButton:enable()
 	self.click_disabled = false
