@@ -2032,7 +2032,6 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("thunder_level_6")
 
 	if u then
-		T("power_thunder_control").cooldown = 0
 		T("power_thunder_control").main_script.insert = function(this, store)
 			for _, e in pairs(store.soldiers) do
 				if e.health.dead and not e.reinforcement then
