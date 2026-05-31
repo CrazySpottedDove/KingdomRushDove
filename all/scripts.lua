@@ -5294,6 +5294,7 @@ function scripts.aura_screen_shake.update(this, store)
 	end
 
 	store.world_offset = nil
+	queue_remove(store, this)
 end
 
 scripts.mod_mark_flags = {}
