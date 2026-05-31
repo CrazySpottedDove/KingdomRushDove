@@ -22497,11 +22497,12 @@ function scripts.tower_rotten_forest.insert(this, store, script)
 	local e = E:create_entity(this.auras.list[1].name)
 	e.pos = V.vclone(this.pos)
 	e.aura.source_id = this.id
+	e.aura.radius = this.attacks.range
 	e.aura.ts = store.tick_ts
 	e.owner = this
 	this.aura1 = e
 
-	for _, p in ipairs(U.get_path_fx_points(this, 50)) do
+	for _, p in ipairs(U.get_path_fx_points(this, 55)) do
 		local smoke = E:create_entity("decal_rotten_forest_smoke")
 		smoke.pos:copy(p.pos)
 		table.insert(this.aura_list1, smoke)
@@ -22516,12 +22517,13 @@ function scripts.tower_rotten_forest.insert(this, store, script)
 		e.aura.level = this.powers.fog.level
 		e.aura.source_id = this.id
 		e.aura.ts = store.tick_ts
+		e.aura.radius = this.attacks.range
 		e.owner = this
 		this.aura2 = e
 
 		queue_insert(store, e)
 
-		for _, p in ipairs(U.get_path_fx_points(this, 50)) do
+		for _, p in ipairs(U.get_path_fx_points(this, 55)) do
 			local fog = E:create_entity("decal_rotten_forest_fog")
 			fog.pos:copy(p.pos)
 			fog.render.sprites[1].ts = store.tick_ts
@@ -22575,7 +22577,7 @@ function scripts.tower_rotten_forest.update(this, store, script)
 
 					queue_insert(store, e)
 
-					for _, p in ipairs(U.get_path_fx_points(this, 50)) do
+					for _, p in ipairs(U.get_path_fx_points(this, 55)) do
 						local fog = E:create_entity("decal_rotten_forest_fog")
 						fog.pos:copy(p.pos)
 						fog.render.sprites[1].ts = store.tick_ts
@@ -22601,7 +22603,7 @@ function scripts.tower_rotten_forest.update(this, store, script)
 					this.aura_list1[i].tween.remove = true
 					this.aura_list1[i] = nil
 				end
-				for _, p in ipairs(U.get_path_fx_points(this, 50)) do
+				for _, p in ipairs(U.get_path_fx_points(this, 55)) do
 					local smoke = E:create_entity("decal_rotten_forest_smoke")
 					smoke.pos:copy(p.pos)
 					table.insert(this.aura_list1, smoke)
@@ -22618,7 +22620,7 @@ function scripts.tower_rotten_forest.update(this, store, script)
 						this.aura_list2[i].tween.remove = true
 						this.aura_list2[i] = nil
 					end
-					for _, p in ipairs(U.get_path_fx_points(this, 50)) do
+					for _, p in ipairs(U.get_path_fx_points(this, 55)) do
 						local fog = E:create_entity("decal_rotten_forest_fog")
 						fog.pos:copy(p.pos)
 						fog.render.sprites[1].ts = store.tick_ts
