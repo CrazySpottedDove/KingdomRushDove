@@ -3894,16 +3894,8 @@ scripts.tower_dwaarp = {
 
 									queue_damage(store, d)
 
-									if aa.mod then
-										local mod = E:create_entity(aa.mod)
-
-										mod.modifier.source_id = this.id
-										mod.modifier.target_id = enemy.id
-										mod.modifier.damage_factor = this.tower.damage_factor
-
-										queue_insert(store, mod)
-									elseif aa.mods then
-										for _, m in ipairs(aa.mods) do
+									for _, m in ipairs(aa.mods) do
+										if U.flags_pass(enemy.vis, E:get_template(m).modifier) then
 											local mod = E:create_entity(m)
 
 											mod.modifier.source_id = this.id
@@ -4037,6 +4029,17 @@ scripts.tower_dwaarp = {
 				end
 			end
 		end
+	end
+}
+
+scripts.mod_jump_dwaarp = {
+	insert = function(this, store)
+		local target = store.entities[this.modifier.target_id]
+		if not target then
+			return false
+		end
+		this.jump.v = 10 + 140 / (1 + target.health.hp_max / 1000)
+		return true
 	end
 }
 

@@ -1178,3 +1178,7 @@ events.list[1] = E:clone_c("event")
 local betray = E:register_c("betray")
 betray.duration = 10
 betray.ts = 0
+
+local jump = E:register_c("jump")
+jump.g = -1 / (fts(1) * fts(1))
+jump.v = 100

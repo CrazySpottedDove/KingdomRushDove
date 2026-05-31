@@ -9651,4 +9651,43 @@ function scripts.mod_do_damage_by_movement.update(this, store)
 	end
 end
 
+scripts.mod_jump_passive = {}
+
+-- insert 留给用户自定义 v 的初始化逻辑，因此把 stun_inc 放在 update 初始化阶段里。
+
+function scripts.mod_jump_passive.remove(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if target then
+		SU.stun_dec(target)
+	end
+
+	return true
+end
+
+function scripts.mod_jump_passive.update(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+	if not target or target.health.dead then
+		queue_remove(store, this)
+
+		return
+	end
+	SU.stun_inc(target)
+	m.ts = store.tick_ts
+	local jump = this.jump
+	local stop_ts = store.tick_ts - jump.v / jump.g * 2
+	local last_ts = store.tick_ts
+	local start_y = target.pos.y
+	while store.tick_ts < stop_ts do
+		local dt = store.tick_ts - last_ts
+		target.pos.y = target.pos.y + jump.v * dt
+		jump.v = jump.v + jump.g * dt
+		last_ts = store.tick_ts
+		coroutine.yield()
+	end
+	target.pos.y = start_y
+	queue_remove(store, this)
+end
+
 return scripts

@@ -307,7 +307,7 @@ AC(tower_dwaarp, "attacks", "powers")
 tower_dwaarp.info.portrait = "kr2_info_portraits_towers_0011"
 tower_dwaarp.info.enc_icon = 14
 tower_dwaarp.tower.type = "dwaarp"
-tower_dwaarp.tower.price = 325
+tower_dwaarp.tower.price = 330
 tower_dwaarp.powers.drill = CC("power")
 tower_dwaarp.powers.drill.price_base = 400
 tower_dwaarp.powers.drill.price_inc = 175
@@ -350,7 +350,7 @@ tower_dwaarp.attacks.list[1].damage_flags = F_AREA
 tower_dwaarp.attacks.list[1].damage_bans = F_FLYING
 tower_dwaarp.attacks.list[1].cooldown = 3
 tower_dwaarp.attacks.list[1].hit_time = fts(13)
-tower_dwaarp.attacks.list[1].mod = "mod_slow_dwaarp"
+tower_dwaarp.attacks.list[1].mods = {"mod_slow_dwaarp", "mod_jump_dwaarp"}
 tower_dwaarp.attacks.list[1].damage_min = 33
 tower_dwaarp.attacks.list[1].damage_max = 55
 tower_dwaarp.attacks.list[1].sound = "EarthquakeAttack"
@@ -375,9 +375,16 @@ lava.main_script.update = scripts.lava_dwaarp.update
 lava.aura.duration = 3
 lava.aura.mod = "mod_lava_dwaarp"
 
+tt = E:register_t("mod_slow_dwaarp", "mod_slow")
+tt.modifier.duration = fts(12)
+tt.slow.factor = 0.35
+
+tt = RT("mod_jump_dwaarp", "mod_jump_passive")
+tt.main_script.insert = scripts.mod_jump_dwaarp.insert
+
 tt = RT("mod_lava_dwaarp", "mod_lava")
-tt.dps.damage_min = 1
-tt.dps.damage_max = 1
+tt.dps.damage_min = 2
+tt.dps.damage_max = 2
 tt.dps.damage_inc = 3
 tt.dps.damage_every = 0.2
 

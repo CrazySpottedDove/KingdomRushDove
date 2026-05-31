@@ -541,10 +541,6 @@ local mod_slow_oil = E:register_t("mod_slow_oil", "mod_slow")
 mod_slow_oil.modifier.duration = 1
 mod_slow_oil.slow.factor = 0.25
 
-local mod_slow_dwaarp = E:register_t("mod_slow_dwaarp", "mod_slow")
-mod_slow_dwaarp.modifier.duration = fts(12)
-mod_slow_dwaarp.slow.factor = 0.35
-
 local mod_stun = E:register_t("mod_stun", "modifier")
 E:add_comps(mod_stun, "render")
 mod_stun.main_script.insert = scripts.mod_stun.insert
@@ -1182,3 +1178,10 @@ tt = E:register_t("decal_timed_empty", "decal_timed")
 tt.render.sprites[1].name = "decal_bomb_crater"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].hidden = true
+
+tt = E:register_t("mod_jump_passive", "modifier")
+E:add_comps(tt, "jump")
+tt.main_script.remove = scripts.mod_jump_passive.remove
+tt.main_script.update = scripts.mod_jump_passive.update
+tt.modifier.vis_flags = bor(F_STUN, F_MOD)
+tt.modifier.vis_bans = bor(F_WATER, F_FLYING, F_CLIFF)
