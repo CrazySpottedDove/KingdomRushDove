@@ -2546,6 +2546,24 @@ end
 
 scripts.bomb_cluster = {}
 
+function scripts.bomb_cluster.insert(this, store)
+	local b = this.bullet
+	local dest = V.vclone(b.to)
+	local target = store.entities[b.target_id]
+	local nearest_nodes = P:nearest_nodes(b.to.x, b.to.y, target and {target.nav_path.pi} or nil)
+
+	if #nearest_nodes > 0 then
+		local pi, _, ni = unpack(nearest_nodes[1])
+
+		this._pred_pi, this._pred_ni = pi, ni
+		dest = P:node_pos(pi, 1, ni)
+	end
+
+	b.to.x, b.to.y = dest.x + b.dest_pos_offset.x, dest.y + b.dest_pos_offset.y
+
+	return scripts.bomb.insert(this, store)
+end
+
 function scripts.bomb_cluster.update(this, store)
 	local b = this.bullet
 
