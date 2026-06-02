@@ -267,6 +267,7 @@ tt.dps.damage_every = 1.25
 tt.dps.damage_type = DAMAGE_TRUE
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
+tt.modifier.max_duplicates = 2
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].prefix = "mod_sorcerer_curse"
 tt.render.sprites[1].size_names = {"small", "medium", "large"}
