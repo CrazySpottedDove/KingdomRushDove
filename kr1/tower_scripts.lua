@@ -4043,6 +4043,22 @@ scripts.mod_jump_dwaarp = {
 	end
 }
 
+scripts.soldier_assassin = {}
+function scripts.soldier_assassin.on_damage(this, store, damage)
+	if damage.damage_type == DAMAGE_EAT then
+		return true
+	end
+	if store.tick_ts - this.dodge.survive_ts > this.dodge.survive_cooldown then
+		local actual_damage = U.predict_damage(this, damage)
+		if actual_damage >= this.health.hp then
+			this.health.hp = 1
+			this.dodge.survive_ts = store.tick_ts
+			return false
+		end
+	end
+	return true
+end
+
 -- 大树
 scripts.tower_entwood = {
 	insert = function(this, store)
