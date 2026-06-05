@@ -22838,7 +22838,7 @@ end
 
 scripts.decal_rotten_forest_smoke = {}
 
-function scripts.decal_rotten_forest_smoke.update(this, store, script)
+function scripts.decal_rotten_forest_smoke.update(this, store)
 	U.animation_start(this, "intro", nil, store.tick_ts, false)
 	U.y_wait(store, fts(6))
 	U.animation_start(this, "idle", nil, store.tick_ts, true, 2)

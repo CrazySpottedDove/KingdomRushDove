@@ -277,9 +277,11 @@ function M:compile(e)
 
 			if m.update == scripts.mod_dps.update then
 				m.update = self:_compile(e, self.mod_dps.update)
+				m.type = 1
 			elseif m.update == scripts.mod_track_target.update then
 				if e.modifier.duration then
 					m.update = self:_compile(e, self.mod_track_target.update)
+					m.type = 1
 				end
 			end
 		end

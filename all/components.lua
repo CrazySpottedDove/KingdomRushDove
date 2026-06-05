@@ -283,6 +283,13 @@ main_script.update = nil
 main_script.remove = nil
 main_script.runs = 1
 main_script.co = nil
+-- 0: coroutine, 1: state machine
+main_script.type = 0
+main_script.context = nil
+
+local context = E:register_c("context")
+-- 0 是默认的初始化状态
+context.state = 0
 
 local power = E:register_c("power")
 power.max_level = 3

@@ -3,6 +3,7 @@ local M = {}
 local perf = require("dove_modules.perf.perf")
 
 local log = require("lib.klua.log"):new("systems")
+local E = require("entity_db")
 
 function M.register(sys)
 
@@ -11,6 +12,11 @@ function M.register(sys)
 
 	function sys.main_script:on_insert(entity, store)
 		if entity.main_script and entity.main_script.insert then
+			if entity.main_script.type == 1 then
+				if entity.main_script.context == nil then
+					entity.main_script.context = E:clone_c("context")
+				end
+			end
 			return entity.main_script.insert(entity, store)
 		else
 			return true
@@ -23,31 +29,49 @@ function M.register(sys)
 			local e = store.entities_with_main_script_on_update[i]
 			local s = e.main_script
 
-			if not s.co and s.runs ~= 0 then
-				s.runs = s.runs - 1
-				s.co = coroutine.create(s.update)
-			end
-
-			if s.co then
-				local success, err = coroutine.resume(s.co, e, store)
-
-				if coroutine.status(s.co) == "dead" or (not success and err ~= nil) then
-					if not success and err ~= nil then
-						-- -- 安卓端逻辑：直接抛出错误，触发全局错误捕获机制，弹出错误提示框
-						if IS_ANDROID then
-							error("Error running " .. e.template_name .. " coro: " .. err .. debug.traceback(s.co))
-						else
-							log.error("Error running " .. e.template_name .. " coro: " .. err .. debug.traceback(s.co))
-						end
-
-						if LLDEBUGGER then
-							LLDEBUGGER.start()
-						end
-					end
-
-					s.co = nil
+			-- 协程型脚本
+			if s.type == 0 then
+				if not s.co and s.runs ~= 0 then
+					s.runs = s.runs - 1
+					s.co = coroutine.create(s.update)
 				end
+
+				if s.co then
+					local success, err = coroutine.resume(s.co, e, store)
+
+					if coroutine.status(s.co) == "dead" or (not success and err ~= nil) then
+						if not success and err ~= nil then
+							-- -- 安卓端逻辑：直接抛出错误，触发全局错误捕获机制，弹出错误提示框
+							if IS_ANDROID then
+								error("Error running " .. e.template_name .. " coro: " .. err .. debug.traceback(s.co))
+							else
+								log.error("Error running " .. e.template_name .. " coro: " .. err .. debug.traceback(s.co))
+								simulation:queue_remove_entity(e)
+							end
+
+							if LLDEBUGGER then
+								LLDEBUGGER.start()
+							end
+						end
+
+						s.co = nil
+					end
+				end
+			else
+				-- 状态机型脚本
+				s.update(e, store)
+			-- local success, err = pcall(s.update, e, store)
+			-- if not success and err ~= nil then
+			-- 	-- -- 安卓端逻辑：直接抛出错误，触发全局错误捕获机制，弹出错误提示框
+			-- 	if IS_ANDROID then
+			-- 		error("Error running " .. e.template_name .. " state machine: " .. err .. debug.traceback())
+			-- 	else
+			-- 		log.error("Error running " .. e.template_name .. " state machine: " .. err .. debug.traceback())
+			-- 		simulation:queue_remove_entity(e)
+			-- 	end
+			-- end
 			end
+
 		end
 		perf.set_main_scripts(store.entities_with_main_script_on_update_count)
 		perf.stop("main_script")
