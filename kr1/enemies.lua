@@ -7294,6 +7294,7 @@ tt.mark_flags.vis_bans = F_CUSTOM
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+tt.main_script.type = 1
 
 local b = balance.enemies.werebeasts.turtle_shaman
 
@@ -10837,6 +10838,7 @@ tt.modifier.duration = 5
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+tt.main_script.type = 1
 
 tt = E:register_t("mod_bullet_enemy_brute_welder_death_stun", "modifier")
 local b = balance.enemies.hammer_and_anvil.brute_welder
@@ -10872,6 +10874,7 @@ tt.modifier.duration = 7
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+tt.main_script.type = 1
 tt.render.sprites[1].prefix = "DLC_stage_03_missile_decal_tower"
 tt.render.sprites[1].name = "loop"
 tt.render.sprites[1].offset = v(0, 10)
@@ -14156,6 +14159,7 @@ tt.modifier.duration = fts(210)
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+tt.main_script.type = 1
 
 tt = RT("mod_enemy_alfa_shadow_evolve", "modifier")
 tt.modifier.duration = fts(2)
@@ -14168,6 +14172,7 @@ tt.modifier.duration = 4
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+tt.main_script.type = 1
 
 tt = RT("mod_enemy_alfa_storm_evolve", "modifier")
 tt.modifier.duration = fts(2)
@@ -14226,6 +14231,7 @@ tt.modifier.duration = 6
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+tt.main_script.type = 1
 
 tt = RT("mod_boss_murglum_tower_block", "mod_hide_tower")
 E:add_comps(tt, "render")

@@ -2540,6 +2540,7 @@ tt.mark_flags.vis_bans = bor(F_CUSTOM, F_RANGED, F_INSTAKILL, F_EAT)
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+tt.main_script.type = 1
 
 -- 牢大 END
 -- 圣骑兵 START

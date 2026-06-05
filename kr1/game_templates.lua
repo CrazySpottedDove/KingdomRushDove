@@ -5845,6 +5845,7 @@ tt.mark_flags.vis_bans = F_CUSTOM
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+tt.main_script.type = 1
 tt.modifier.duration = fts(20)
 
 tt = RT("mod_redcap_heal", "modifier")
@@ -13558,6 +13559,7 @@ tt.modifier.duration = 1e+99
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+tt.main_script.type = 1
 
 tt = E:register_t("mod_stage_10_obelisk_heal", "modifier")
 b = balance.specials.stage10_obelisk.heal
@@ -15152,6 +15154,7 @@ tt.modifier.duration = -1
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+tt.main_script.type = 1
 
 tt = E:register_t("mod_enemy_revenant_soulcaller_mark", "modifier")
 E:add_comps(tt, "mark_flags")
@@ -15160,6 +15163,7 @@ tt.modifier.duration = b.duration
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+tt.main_script.type = 1
 
 tt = E:register_t("mod_stage_18_eridan_stun", "mod_stun")
 tt.modifier.duration = 1e+99
@@ -15905,6 +15909,7 @@ tt.modifier.duration = fts(80)
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+tt.main_script.type = 1
 
 tt = E:register_t("mod_enemy_crocs_tank_charge_soldier", "modifier")
 b = balance.enemies.crocs.crocs_tank
@@ -15941,6 +15946,7 @@ tt.modifier.duration = fts(20)
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+tt.main_script.type = 1
 
 tt = E:register_t("mod_crocs_shaman_tower_debuff", "modifier")
 b = balance.enemies.crocs.crocs_shaman.debuff_towers
@@ -20744,6 +20750,7 @@ tt.modifier.duration = fts(30)
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+tt.main_script.type = 1
 
 tt = E:register_t("mod_enemy_storm_elemental_tower_debuff", "modifier")
 b = balance.enemies.wukong.storm_elemental.tower_block
@@ -21948,6 +21955,7 @@ tt.modifier.duration = fts(30)
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+tt.main_script.type = 1
 
 tt = E:register_t("mod_doom_bringer_tower_block", "modifier")
 E:add_comps(tt, "render", "tween")

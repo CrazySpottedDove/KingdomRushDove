@@ -13242,6 +13242,7 @@ tt.modifier.duration = fts(50)
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+tt.main_script.type = 1
 
 tt = RT("mod_hero_witch_ultimate_sleep", "modifier")
 AC(tt, "render")
@@ -16366,6 +16367,7 @@ tt.modifier.duration = b.heal_duration + 2
 tt.main_script.insert = scripts.mod_mark_flags.insert
 tt.main_script.remove = scripts.mod_mark_flags.remove
 tt.main_script.update = scripts.mod_mark_flags.update
+tt.main_script.type = 1
 
 tt = E:register_t("mod_hero_dragon_arb_plant_dark_army_slow", "mod_slow")
 b = balance.heroes.hero_dragon_arb.tower_plants.dark_army

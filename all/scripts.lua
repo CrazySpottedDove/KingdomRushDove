@@ -5334,19 +5334,25 @@ end
 
 function scripts.mod_mark_flags.update(this, store)
 	local m = this.modifier
+	local target = store.entities[m.target_id]
 
-	m.ts = store.tick_ts
+	if not target or target.health and target.health.dead then
+		queue_remove(store, this)
+		return
+	end
 
-	while true do
-		local target = store.entities[m.target_id]
+	local context = this.main_script.context
 
-		if not target or (target.health and target.health.dead) or m.duration >= 0 and store.tick_ts - m.ts > m.duration then
+	if context.state == 0 then
+		m.ts = store.tick_ts
+		context.state = 1
+	end
+
+	if context.state == 1 then
+		if m.duration >= 0 and store.tick_ts - m.ts > m.duration then
 			queue_remove(store, this)
-
 			return
 		end
-
-		coroutine.yield()
 	end
 end
 
