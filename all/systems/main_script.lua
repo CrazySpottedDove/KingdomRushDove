@@ -11,13 +11,17 @@ function M.register(sys)
 	sys.main_script.name = "main_script"
 
 	function sys.main_script:on_insert(entity, store)
-		if entity.main_script and entity.main_script.insert then
+		if entity.main_script then
 			if entity.main_script.type == 1 then
 				if entity.main_script.context == nil then
 					entity.main_script.context = E:clone_c("context")
 				end
 			end
-			return entity.main_script.insert(entity, store)
+			if entity.main_script.insert then
+				return entity.main_script.insert(entity, store)
+			else
+				return true
+			end
 		else
 			return true
 		end
