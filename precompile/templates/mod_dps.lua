@@ -184,6 +184,8 @@ end
 -- end
 -- ]]
 
+-- 运行时允许动态赋 dps.fx 为 nil，减少部分渲染开销
+-- 因此，dps.fx 还需要在运行时检查是否为 nil，不仅仅需要静态检查
 mod_dps.update = [[
 return function(this, store)
     constvar dps = this.dps
@@ -271,48 +273,53 @@ return function(this, store)
             queue_damage(store, d)
 
             constif(dps.fx)
-                @constif(dps.fx_every)
-                if store.tick_ts - context.fx_ts >= dps.fx_every then
+                if
+                    dps.fx
+                    @constif(dps.fx_every)
+                    and store.tick_ts - context.fx_ts >= dps.fx_every
+                    @constif(E:get_template(dps.fx).render.sprites[1].use_blood_color)
+                    and target.unit.blood_color
+                then
+                    @constif(dps.fx_every)
+                    context.fx_ts = store.tick_ts
 
-                @constif(dps.fx_every)
-                context.fx_ts = store.tick_ts
+                    local fx = E:create_entity(dps.fx)
 
-                local fx = E:create_entity(dps.fx)
+                    constif(dps.fx_tracks_target)
+                        fx.pos = target.pos
 
-                constif(dps.fx_tracks_target)
-                    fx.pos = target.pos
+                        constif(this.modifier.use_mod_offset)
+                        if target.unit.mod_offset then
+                            fx.render.sprites[1].offset.x = target.unit.mod_offset.x
+                            fx.render.sprites[1].offset.y = target.unit.mod_offset.y
+                        end
+                        constend
+                    constelse
+                        fx.pos = V.vclone(this.pos)
 
-                    constif(this.modifier.use_mod_offset)
-                    if target.unit.mod_offset then
-                        fx.render.sprites[1].offset.x = target.unit.mod_offset.x
-                        fx.render.sprites[1].offset.y = target.unit.mod_offset.y
+                        constif(this.modifier.use_mod_offset)
+                        if target.unit.mod_offset then
+                            fx.pos.x, fx.pos.y = fx.pos.x + target.unit.mod_offset.x, fx.pos.y + target.unit.mod_offset.y
+                        end
+                        constend
+                    constend
+
+                    fx.render.sprites[1].ts = store.tick_ts
+                    fx.render.sprites[1].runs = 0
+
+                    @constif(E:get_template(dps.fx).render.sprites[1].size_names)
+                    fx.render.sprites[1].name = fx.render.sprites[1].size_names[target.unit.size]
+
+                    @constif(E:get_template(dps.fx).render.sprites[1].use_blood_color)
+                    fx.render.sprites[1].name = fx.render.sprites[1].name .. "_" .. target.unit.blood_color
+
+                    constif(dps.fx_target_flip)
+                    if target.render then
+                        fx.render.sprites[1].flip_x = target.render.sprites[1].flip_x
                     end
                     constend
-                constelse
-                    fx.pos = V.vclone(this.pos)
 
-                    constif(this.modifier.use_mod_offset)
-                    if target.unit.mod_offset then
-                        fx.pos.x, fx.pos.y = fx.pos.x + target.unit.mod_offset.x, fx.pos.y + target.unit.mod_offset.y
-                    end
-                    constend
-                constend
-
-                fx.render.sprites[1].ts = store.tick_ts
-                fx.render.sprites[1].runs = 0
-
-                @constif(E:get_template(dps.fx).render.sprites[1].size_names)
-                fx.render.sprites[1].name = fx.render.sprites[1].size_names[target.unit.size]
-
-                constif(dps.fx_target_flip)
-                if target.render then
-                    fx.render.sprites[1].flip_x = target.render.sprites[1].flip_x
-                end
-                constend
-
-                queue_insert(store, fx)
-
-                @constif(dps.fx_every)
+                    queue_insert(store, fx)
                 end
             constend
 		end

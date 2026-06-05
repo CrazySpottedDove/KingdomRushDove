@@ -2657,20 +2657,6 @@ function scripts.arrow_missile.update(this, store)
 	queue_remove(store, this)
 end
 
-scripts.mod_health_damage_factor_inc = {}
-
-function scripts.mod_health_damage_factor_inc.insert(this, store)
-	if this.modifier.target_id then
-		local target = store.entities[this.modifier.target_id]
-
-		if target and target.health then
-			target.health.damage_factor = target.health.damage_factor * (1 + this.modifier.health_damage_factor_inc)
-		end
-	end
-
-	return false
-end
-
 scripts.bomb = {}
 
 function scripts.bomb.insert(this, store)
@@ -5297,6 +5283,20 @@ function scripts.aura_screen_shake.update(this, store)
 	queue_remove(store, this)
 end
 
+scripts.mod_health_damage_factor_inc = {}
+
+function scripts.mod_health_damage_factor_inc.insert(this, store)
+	if this.modifier.target_id then
+		local target = store.entities[this.modifier.target_id]
+
+		if target and target.health then
+			target.health.damage_factor = target.health.damage_factor * (1 + this.modifier.health_damage_factor_inc)
+		end
+	end
+
+	return false
+end
+
 scripts.mod_mark_flags = {}
 
 function scripts.mod_mark_flags.insert(this, store)
@@ -5846,7 +5846,7 @@ function scripts.mod_dps.update(this, store)
 
 			do_damage(target, damage_value)
 
-			if dps.fx and (not dps.fx_every or store.tick_ts - fx_ts >= dps.fx_every) then
+			if dps.fx and (not dps.fx_every or store.tick_ts - fx_ts >= dps.fx_every) and (not E:get_template(dps.fx).render.sprites[1].use_blood_color or target.unit.blood_color) then
 				fx_ts = store.tick_ts
 
 				local fx = E:create_entity(dps.fx)
@@ -5873,121 +5873,9 @@ function scripts.mod_dps.update(this, store)
 					fx.render.sprites[1].name = fx.render.sprites[1].size_names[target.unit.size]
 				end
 
-				if dps.fx_target_flip and target and target.render then
-					fx.render.sprites[1].flip_x = target.render.sprites[1].flip_x
+				if fx.render.sprites[1].use_blood_color then
+					fx.render.sprites[1].color = fx.render.sprites[1].color .. "_" .. target.unit.blood_color
 				end
-
-				queue_insert(store, fx)
-			end
-		end
-
-		coroutine.yield()
-	end
-
-	queue_remove(store, this)
-end
-
-scripts.mod_blood = {}
-
-function scripts.mod_blood.update(this, store)
-	local cycles, total_damage = 0, 0
-	local m = this.modifier
-	local dps = this.dps
-	local dmin = dps.damage_min + m.level * dps.damage_inc
-	local dmax = dps.damage_max + m.level * dps.damage_inc
-	local fx_ts = 0
-
-	local function do_damage(target, value)
-		total_damage = total_damage + value
-
-		local d = E.create_damage()
-
-		d.source_id = this.id
-		d.target_id = target.id
-		d.value = value * m.damage_factor
-		d.damage_type = dps.damage_type
-		d.pop = dps.pop
-		d.pop_chance = dps.pop_chance
-		d.pop_conds = dps.pop_conds
-
-		queue_damage(store, d)
-	end
-
-	local target = store.entities[m.target_id]
-
-	if not target then
-		queue_remove(store, this)
-
-		return
-	end
-
-	this.pos = target.pos
-
-	while true do
-		target = store.entities[m.target_id]
-
-		if not target or target.health.dead then
-			break
-		end
-
-		if store.tick_ts - m.ts >= m.duration - 1e-09 then
-			if dps.damage_last then
-				do_damage(target, dps.damage_last)
-			end
-
-			break
-		end
-
-		if this.render and m.use_mod_offset and target.unit.mod_offset then
-			local so = this.render.sprites[1].offset
-
-			so.x, so.y = target.unit.mod_offset.x, target.unit.mod_offset.y
-		end
-
-		if dps.damage_every and store.tick_ts - dps.ts >= dps.damage_every then
-			cycles = cycles + 1
-			dps.ts = dps.ts + dps.damage_every
-
-			local damage_value = math.random(dmin, dmax)
-
-			if cycles == 1 and dps.damage_first then
-				damage_value = dps.damage_first
-			end
-
-			if not dps.kill then
-				damage_value = km.clamp(0, target.health.hp - 1, damage_value)
-			end
-
-			do_damage(target, damage_value)
-
-			if dps.fx and (not dps.fx_every or store.tick_ts - fx_ts >= dps.fx_every) and target.unit.blood_color then
-				fx_ts = store.tick_ts
-
-				local fx = E:create_entity(dps.fx)
-
-				if dps.fx_tracks_target then
-					fx.pos = target.pos
-
-					if m.use_mod_offset and target.unit.mod_offset then
-						fx.render.sprites[1].offset.x = target.unit.mod_offset.x
-						fx.render.sprites[1].offset.y = target.unit.mod_offset.y
-					end
-				else
-					fx.pos = V.vclone(this.pos)
-
-					if m.use_mod_offset and target.unit.mod_offset then
-						fx.pos.x, fx.pos.y = fx.pos.x + target.unit.mod_offset.x, fx.pos.y + target.unit.mod_offset.y
-					end
-				end
-
-				fx.render.sprites[1].ts = store.tick_ts
-				fx.render.sprites[1].runs = 0
-
-				if fx.render.sprites[1].size_names then
-					fx.render.sprites[1].name = fx.render.sprites[1].size_names[target.unit.size]
-				end
-
-				fx.render.sprites[1].name = fx.render.sprites[1].name .. "_" .. target.unit.blood_color
 
 				if dps.fx_target_flip and target and target.render then
 					fx.render.sprites[1].flip_x = target.render.sprites[1].flip_x
@@ -6000,7 +5888,6 @@ function scripts.mod_blood.update(this, store)
 		coroutine.yield()
 	end
 
-	log.paranoid(">>>>> id:%s - mod_dps cycles:%s total_damage:%s", this.id, cycles, total_damage)
 	queue_remove(store, this)
 end
 
