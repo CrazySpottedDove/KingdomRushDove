@@ -48,10 +48,10 @@ return function(this, store)
 				return not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius)
 
 				@constif(this.aura.allowed_templates)
-				and table.contains(this.aura.allowed_templates, v.template_name)
+				and table.arraycontains(this.aura.allowed_templates, v.template_name)
 
 				@constif(this.aura.excluded_templates)
-				and not table.contains(this.aura.excluded_templates, v.template_name)
+				and not table.arraycontains(this.aura.excluded_templates, v.template_name)
 
 				@constif(this.aura.filter_source)
 				and this.aura.source_id ~= v.id
@@ -62,10 +62,10 @@ return function(this, store)
 					return true
 
 					@constif(this.aura.allowed_templates)
-					and table.contains(this.aura.allowed_templates, e.template_name)
+					and table.arraycontains(this.aura.allowed_templates, e.template_name)
 
 					@constif(this.aura.excluded_templates)
-					and not table.contains(this.aura.excluded_templates, e.template_name)
+					and not table.arraycontains(this.aura.excluded_templates, e.template_name)
 
 					@constif(this.aura.filter_source)
 					and this.aura.source_id ~= e.id
@@ -78,10 +78,10 @@ return function(this, store)
 				return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius)
 
 				@constif(this.aura.allowed_templates)
-				and table.contains(this.aura.allowed_templates, v.template_name)
+				and table.arraycontains(this.aura.allowed_templates, v.template_name)
 
 				@constif(this.aura.excluded_templates)
-				and not table.contains(this.aura.excluded_templates, v.template_name)
+				and not table.arraycontains(this.aura.excluded_templates, v.template_name)
 
 				@constif(this.aura.filter_source)
 				and this.aura.source_id ~= v.id

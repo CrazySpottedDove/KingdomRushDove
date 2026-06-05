@@ -695,7 +695,7 @@ scripts.tower_crossbow = {
 
 					local range = ea.range + km.clamp(1, 3, pow_e.level + 1) * ea.range_inc
 					local targets = table.filter(store.towers, function(_, e)
-						return e ~= this and not table.contains(modded_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, range)
+						return e ~= this and not table.arraycontains(modded_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, range)
 					end)
 
 					for _, target in ipairs(targets) do
