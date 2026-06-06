@@ -246,6 +246,7 @@ function M:compile(e)
 
 			if m.update == scripts.arrow.update then
 				m.update = self:_compile(e, self.arrow.update)
+				m.type = 1
 			elseif m.update == scripts.bomb.update then
 				m.update = self:_compile(e, self.bomb.update)
 			elseif m.update == scripts.bolt.update then
