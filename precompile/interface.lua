@@ -296,6 +296,7 @@ function M:compile(e)
 			if m.update == scripts.aura_apply_mod.update then
 				if e.aura.duration then
 					m.update = self:_compile(e, self.aura_apply_mod.update)
+					m.type = 1
 				end
 			elseif m.update == scripts.aura_apply_damage.update then
 				if e.aura.duration then
