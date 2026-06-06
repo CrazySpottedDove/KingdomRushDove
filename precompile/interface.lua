@@ -1,5 +1,6 @@
 local M = {}
 local CU = require("precompile.compile_utils")
+local _fn_cache = {}
 ------- 提供环境变量
 
 local scripts = require("scripts")
@@ -123,9 +124,19 @@ end
 
 function M:_compile(e, template)
 	local code = CU.process(template, self.env, e)
-	-- if e.template_name == "bullet_tower_barrel_skill_barrel" then
-	-- print(code)
-	-- end
+
+	-- 相同代码字符串 ⇒ 函数必然相同，直接复用
+	local t_cache = _fn_cache[template]
+	if t_cache then
+		local fn = t_cache[code]
+		if fn then
+			return fn
+		end
+	else
+		t_cache = {}
+		_fn_cache[template] = t_cache
+	end
+
 	local chunk, err = load(code, nil, "t", self.env)
 	if not chunk then
 		-- 提取出错行号（err 格式："[string "..."]:行号: 错误信息"）
@@ -196,7 +207,9 @@ function M:_compile(e, template)
 		msg[#msg + 1] = "错误来源：编译生成的代码（非模板源码）"
 		error(table.concat(msg, "\n"))
 	end
-	return chunk()
+	local result = chunk()
+	t_cache[code] = result
+	return result
 end
 
 -- 引入所有的编译器规则
