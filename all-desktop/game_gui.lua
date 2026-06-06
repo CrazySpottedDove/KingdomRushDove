@@ -963,10 +963,16 @@ function game_gui:keypressed(key, isrepeat)
 		end
 	elseif ks.slow == key then
 		self.game.simulation.store.speed_factor = self.game.simulation.store.speed_factor * 0.5
+		local adaptive_fps = require("dove_modules.perf.adaptive_fps")
+		adaptive_fps:set_fps(adaptive_fps.fps)
 	elseif ks.quick == key then
 		self.game.simulation.store.speed_factor = self.game.simulation.store.speed_factor * 2
+		local adaptive_fps = require("dove_modules.perf.adaptive_fps")
+		adaptive_fps:set_fps(adaptive_fps.fps)
 	elseif ks.normal == key then
 		self.game.simulation.store.speed_factor = 1
+		local adaptive_fps = require("dove_modules.perf.adaptive_fps")
+		adaptive_fps:set_fps(adaptive_fps.fps)
 	elseif ks.next_wave == key then
 		-- if not self.next_wave_button:is_disabled() then
 		game_gui.game.store.send_next_wave = true
