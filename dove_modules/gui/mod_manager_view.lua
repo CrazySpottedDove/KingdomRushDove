@@ -651,6 +651,14 @@ function ModItemRow:initialize(opts, row_w)
 					end
 
 					storage:write_lua(self._config_path, config)
+					local cfg_chunk, cfg_err = FS.load(opts.mod_data.config_path)
+					if cfg_chunk then
+						local ok, mod_cfg = pcall(cfg_chunk)
+						if ok and type(mod_cfg) == "table" then
+							mod_cfg.last_used_at = os.time()
+							FS.write(opts.mod_data.config_path, persistence.serialize_to_string(mod_cfg))
+						end
+					end
 				end
 
 				local config = storage:load_lua(config_view._config_path, true)
@@ -1544,6 +1552,11 @@ function ModManagerView:_reload_local_mods()
 		end
 	end
 	table.sort(self.local_mods, function(a, b)
+		local t_a = a.config.last_used_at or 0
+		local t_b = b.config.last_used_at or 0
+		if t_a ~= t_b then
+			return t_a > t_b
+		end
 		return (a.config.priority or 0) < (b.config.priority or 0)
 	end)
 end
@@ -1753,6 +1766,12 @@ function ModManagerView:_install_plugin(item, is_update)
 	end
 	remove_dir_recursive("tmp/mod_store_stage")
 
+	local new_cfg = self:_read_mod_config(target_dir .. "/config.lua")
+	if new_cfg then
+		new_cfg.last_used_at = os.time()
+		self:_write_mod_config(target_dir .. "/config.lua", new_cfg)
+	end
+
 	self:_reload_local_mods()
 	self:_render_current_list()
 	self:_set_status((is_update and "插件更新完成：" or "插件安装完成：") .. (item.name or item.entry or "?"), 100)
@@ -1911,6 +1930,9 @@ function ModManagerView:_render_local_list()
 				enabled = cfg.enabled ~= false,
 				on_toggle = function(v)
 					cfg.enabled = v
+					if v then
+						cfg.last_used_at = os.time()
+					end
 				end,
 				actions = actions
 			}, list_w)
@@ -2275,6 +2297,9 @@ function ModManagerView:save()
 			out[k] = v
 		end
 		out.enabled = cfg.enabled ~= false
+		if out.enabled then
+			out.last_used_at = os.time()
+		end
 		local wok = self:_write_mod_config(mod_data.config_path, out)
 		if not wok then
 			log.error("写入 %s 失败", mod_data.config_path)
