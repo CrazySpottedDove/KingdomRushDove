@@ -3,6 +3,7 @@ local F = require("lib.klove.font_db")
 local I = require("lib.klove.image_db")
 local S = require("sound_db")
 local GS = require("kr1.game_settings")
+local PixelArtView = require("dove_modules.gui.pixel_art_view")
 
 require("all.constants")
 
@@ -13,91 +14,21 @@ screen.required_sounds = {}
 screen.ref_w = 1920
 screen.ref_h = 1080
 screen.ref_res = TEXTURE_SIZE_ALIAS.fullhd
-
-local PIXEL_PALETTE = {
-	[1] = {186, 173, 154},
-	[2] = {159, 142, 119},
-	[3] = {197, 93, 39},
-	[4] = {105, 95, 80},
-	[5] = {204, 64, 16},
-	[6] = {89, 65, 40},
-	[7] = {67, 52, 35},
-	[8] = {54, 39, 21},
-	[9] = {54, 27, 11},
-	[10] = {34, 24, 13},
-	[11] = {30, 21, 12},
-	[12] = {28, 18, 9},
-	[13] = {20, 13, 6}
+screen.pixel_arts = {"_assets.kr1-desktop.pixel_art.dove"}
+screen.images = {}
+screen.art_layout = {
+	art_type = "pixel_map",
+	-- art_type = "image",
+	mode = "top",
+	-- mode = "fullscreen",
+	alpha = 1,
+	-- alpha = 0.5,
+	enable_bob = true,
+	-- enable_bob = false,
+	enable_glow = true,
+	-- enable_glow = false,
+	hide_bar = false
 }
-
-local PIXEL_DOVE = {
-	"000000000000000000000000000000000000000000000000",
-	"000000000000000000000000000000000000000000000000",
-	"000000000000000000000000000000000000000000000000",
-	"0000000000000000000000000000000DD000000000D00000",
-	"00000000000000000000000000000A7447C00000DA8A0000",
-	"0000000000000000000ABCCCCCBC8411126C00DA74480000",
-	"0000BACD000000000BCA8766678A41122128C864224A0000",
-	"0000A447AD00000BB84211111124111661267222227B0000",
-	"0000B4222478CDC841112444444211122263342226AC0000",
-	"0000C84211122464444788888941111112766744677B0000",
-	"00000B8422111111111248888611111124744444427C0000",
-	"0000C846642221111111127A411111112744422224A00000",
-	"00000842244422222111112421111111474422246AC00000",
-	"00000C8422222211242111112211111246444447AC000000",
-	"000000DA744222211221111111111112464444447B000000",
-	"0000000A64644422222422211222222244444467A0000000",
-	"0000000B744446667446776466666667874467ACC0000000",
-	"000000BA777764337A63336A733333333686676AC0000000",
-	"000000C727C333338835535963555555336AB826C0000000",
-	"000000C417A3355393355559635555555536C822AB000000",
-	"00000AA228A335556355559D63555665555398218B000000",
-	"00000BA128A33553355559CC635559C6555598417C000000",
-	"00000C8148A3355355559CAA63555CC6555598616C000000",
-	"00000C8148A635555556CA8A355556335556B8616C000000",
-	"00000C8148A635555556C88A355553555559A8616C000000",
-	"00000C8148A6355555536A8A35555555559C88616C000000",
-	"00000BA228A65555555537CA3555555556C988417C000000",
-	"000000B217A655559555538A35555655538888218B000000",
-	"000000C416A655559955553835556955553A8712B0000000",
-	"000000C814A655559C55555655556C655556A416C0000000",
-	"000000BA218655559D95599955559D955556A218B0000000",
-	"0000000C71496699AAC99CAC99999AA6569C614B00000000",
-	"0000000BA417CCCB9867A889AAAAA8AAACC8128B00000000",
-	"00000000B82179888822888888888888988216B000000000",
-	"000000000C712788421262264464422688214AA000000000",
-	"000000000CC6127412122121212212128214AC0000000000",
-	"00000000C87A61641622144141141224714A88BB00000000",
-	"0000000BA633A886111241127116211487B6339C00000000",
-	"00000000B63338CA7667866886687668CB6336AC00000000",
-	"00000000CA63337CCA98888888889ACC933369C000000000",
-	"000000000CA7333ACCCBAAAAAAABCCCB33369C0000000000",
-	"0000000000CC966BC0BCCCCCCCCCC0CB637AC00000000000",
-	"000000000000CBBC000000000000000CBACC000000000000",
-	"0000000000000BB00000000000000000CC00000000000000",
-	"000000000000000000000000000000000000000000000000",
-	"000000000000000000000000000000000000000000000000",
-	"000000000000000000000000000000000000000000000000",
-	"000000000000000000000000000000000000000000000000"
-}
-
-local function draw_pixel_dove(x, y, scale, phase, alpha)
-	for row_idx, row in ipairs(PIXEL_DOVE) do
-		for col_idx = 1, #row do
-			local pixel = tonumber(row:sub(col_idx, col_idx), 16)
-			local color = PIXEL_PALETTE[pixel]
-
-			if color then
-				local glow = (col_idx + row_idx + phase) % 11 == 0 and 18 or 0
-				local r = math.min(255, color[1] + glow) / 255
-				local g = math.min(255, color[2] + glow) / 255
-				local b = math.min(255, color[3] + glow) / 255
-				love.graphics.setColor(r, g, b, alpha)
-				love.graphics.rectangle("fill", x + (col_idx - 1) * scale, y + (row_idx - 1) * scale, scale, scale)
-			end
-		end
-	end
-end
 
 -- 允许 director 在初始化 screen 时为其传入一个协程，screen 可以在加载过程中执行协程代码，从而在等待加载资源的同时完成一些初始化任务
 function screen:init(w, h, director_ref)
@@ -105,13 +36,20 @@ function screen:init(w, h, director_ref)
 	self.progress = 0
 	self.progress_display = 0
 	self.anim_t = 0
-	self.font_title = F:f("msyh", 34)
-	self.font_percent = F:f("msyh", 28)
-	self.font_tip = F:f("msyh", 20)
+	self.font_title = F:f("body", 34)
+	self.font_percent = F:f("body", 28)
+	self.font_tip = F:f("body", 20)
 	self.tip = _(string.format("TIP_%i", math.random(1, GS.gameplay_tips_count)))
 	self.director_ref = director_ref
 	self.w = w
 	self.h = h
+	self.pixel_art_view = nil
+	self.bg_image = nil
+	if self.art_layout.art_type == "image" then
+		self.bg_image = I:s(table.random(self.images))
+	else
+		self.pixel_art_view = PixelArtView:new(require(table.random(self.pixel_arts)))
+	end
 end
 
 function screen:destroy()
@@ -122,6 +60,7 @@ function screen:destroy()
 	self.font_percent = nil
 	self.font_tip = nil
 	self.tip = nil
+	self.pixel_art_view = nil
 end
 
 function screen:update(dt)
@@ -141,6 +80,9 @@ function screen:update(dt)
 
 	-- 加载完成之后，再更新动画状态，保证动画状态是最新的
 	self.anim_t = self.anim_t + dt
+	if self.pixel_art_view then
+		self.pixel_art_view:update(dt)
+	end
 	self.progress = km.clamp(0, 1, 0.6 * I.progress + 0.4 * S.progress)
 	self.progress_display = self.progress_display + (self.progress - self.progress_display) * math.min(dt * 7, 1)
 
@@ -186,36 +128,64 @@ function screen:draw()
 		g.rectangle("fill", 0, y, w, 1)
 	end
 
-	local pixel_scale = math.max(3, math.floor(math.min(w, h) / 180))
-	local sprite_w = #PIXEL_DOVE[1] * pixel_scale
-	local sprite_h = #PIXEL_DOVE * pixel_scale
-	local bob_y = math.floor(math.sin(self.anim_t * 2.8) * pixel_scale)
-	local sprite_x = math.floor((w - sprite_w) * 0.5)
-	local sprite_y = math.floor(h * 0.28 - sprite_h * 0.5 + bob_y)
 	local phase = math.floor(self.anim_t * 14)
+	local layout = self.art_layout
+	local sprite_alpha = (layout.alpha or 1) * a
 
-	draw_pixel_dove(sprite_x, sprite_y, pixel_scale, phase, a)
+	if self.bg_image then
+		local ss = self.bg_image
+		local img = I:i(ss.atlas)
+		local iw, ih = ss.size[1] * (ss.ref_scale or 1), ss.size[2] * (ss.ref_scale or 1)
+		local scale = layout.mode == "fullscreen" and math.max(w / iw, h / ih) or math.min(w / iw, h / ih)
+		local sw, sh = iw * scale, ih * scale
+		g.setColor(1, 1, 1, sprite_alpha)
+		g.draw(img, ss.quad, math.floor((w - sw) * 0.5), math.floor((h - sh) * 0.5), 0, scale, scale)
+	else
+		local dove = self.pixel_art_view
+		local native_w, native_h = dove:get_native_size()
+		dove.enable_bob = layout.enable_bob ~= false
+		dove.enable_glow = layout.enable_glow ~= false
 
+		local scale, sprite_x, sprite_y
+		if layout.mode == "fullscreen" then
+			scale = math.min(w / native_w, h / native_h)
+			sprite_x = math.floor((w - native_w * scale) * 0.5)
+			sprite_y = math.floor((h - native_h * scale) * 0.5)
+		else
+			local max_w = math.floor(w * 0.6)
+			local max_h = math.floor(h * 0.35)
+			scale = math.max(3, math.min(math.floor(max_w / native_w), math.floor(max_h / native_h)))
+			sprite_x = math.floor((w - native_w * scale) * 0.5)
+			sprite_y = math.floor(h * 0.28 - native_h * scale * 0.5)
+		end
+		dove.pixel_scale = scale
+		dove:draw_at(sprite_x, sprite_y, scale, sprite_alpha)
+	end
+
+	local hide_bar = layout.hide_bar
 	local bar_w = math.floor(math.min(740, w * 0.68))
 	local bar_h = math.max(14, math.floor(h / 48))
 	local bar_x = math.floor((w - bar_w) * 0.5)
 	local bar_y = math.floor(h * 0.72)
-	local inner_w = bar_w - 4
-	local fill_w = math.floor(inner_w * self.progress_display)
 
-	g.setColor(0.08, 0.08, 0.10, a)
-	g.rectangle("fill", bar_x, bar_y, bar_w, bar_h)
-	g.setColor(0.22, 0.22, 0.26, a)
-	g.rectangle("line", bar_x, bar_y, bar_w, bar_h)
+	if not hide_bar then
+		local inner_w = bar_w - 4
+		local fill_w = math.floor(inner_w * self.progress_display)
 
-	if fill_w > 0 then
-		g.setColor(0.92, 0.54, 0.21, a)
-		g.rectangle("fill", bar_x + 2, bar_y + 2, fill_w, bar_h - 4)
+		g.setColor(0.08, 0.08, 0.10, a)
+		g.rectangle("fill", bar_x, bar_y, bar_w, bar_h)
+		g.setColor(0.22, 0.22, 0.26, a)
+		g.rectangle("line", bar_x, bar_y, bar_w, bar_h)
 
-		local stripe_start = (phase * 2) % 8
-		g.setColor(1, 0.76, 0.40, 0.35 * a)
-		for x = stripe_start, fill_w, 8 do
-			g.rectangle("fill", bar_x + 2 + x, bar_y + 2, 3, bar_h - 4)
+		if fill_w > 0 then
+			g.setColor(0.92, 0.54, 0.21, a)
+			g.rectangle("fill", bar_x + 2, bar_y + 2, fill_w, bar_h - 4)
+
+			local stripe_start = (phase * 2) % 8
+			g.setColor(1, 0.76, 0.40, 0.35 * a)
+			for x = stripe_start, fill_w, 8 do
+				g.rectangle("fill", bar_x + 2 + x, bar_y + 2, 3, bar_h - 4)
+			end
 		end
 	end
 

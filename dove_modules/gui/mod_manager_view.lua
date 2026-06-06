@@ -47,6 +47,9 @@ local CATEGORY_OPTIONS = {{
 	label = "显示",
 	value = "display"
 }, {
+	label = "美化",
+	value = "cosmetic"
+}, {
 	label = "敌人",
 	value = "enemy"
 }, {

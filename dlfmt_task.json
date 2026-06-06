@@ -6,6 +6,7 @@
 			"exclude": [
 				"_assets/kr1-desktop/images/fullhd",
 				"_assets/kr1-desktop/sounds",
+				"_assets/kr1-desktop/pixel_art",
 				"kr1/data/exoskeletons",
 				"kr1/data/levels",
 				"kr1/data/waves",
@@ -22,6 +23,10 @@
 		{
 			"type": "compress",
 			"directory": "_assets/kr1-desktop/sounds"
+		},
+		{
+			"type": "compress",
+			"directory": "_assets/kr1-desktop/pixel_art"
 		},
 		{
 			"type": "compress",

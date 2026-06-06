@@ -251,7 +251,7 @@ function image_db:queue_load_done()
 		self.load_queue[i] = nil
 
 		-- 不要删掉这行，这真是注释：local ref_scale, path, name = unpack(item)
-		local image_names = self:preload_atlas_from_bytecode(item[1], item[2], item[3])
+		local image_names = item[4] and self:preload_atlas(item[1], item[2], item[3]) or self:preload_atlas_from_bytecode(item[1], item[2], item[3])
 
 		if image_names then
 			for n in pairs(image_names) do
@@ -359,12 +359,12 @@ function image_db:queue_load_done()
 	return true
 end
 
-function image_db:queue_load_atlas(ref_scale, path, name)
+function image_db:queue_load_atlas(ref_scale, path, name, not_bytecode)
 	if persistent_textures[name] and self.atlas_uses[name_scale(name, ref_scale)] then
 		return
 	end
 
-	table.insert(self.load_queue, {ref_scale, path, name})
+	table.insert(self.load_queue, {ref_scale, path, name, not_bytecode})
 
 	if #self.load_queue == 1 and not self.load_queue_current then
 		self.progress = 0

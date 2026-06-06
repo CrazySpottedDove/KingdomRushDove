@@ -243,4 +243,23 @@ function mod_utils.mixed_apply_factor(t, k, factor)
 	return true
 end
 
+--- 用于为插件提供自定义的资源加载方式，可以和其余本体美术资源一同加载。使用该方式加载的资源索引，不需要提前打包成 bytecode 格式。
+---@param groups table 美术资源组
+---@param path string 美术资源父路径
+---@param ref_height number 参考高度
+---@param queue boolean 是否使用队列加载
+---@param item_name string scene 名称（可在 director_data里查找）
+function mod_utils.load_texture_groups(groups, path, ref_height, queue, item_name)
+	local director = require("director")
+	local scale = director:get_texture_scale(item_name, ref_height)
+	local I = require("lib.klove.image_db")
+	for _, group in pairs(groups) do
+		if queue then
+			I:queue_load_atlas(scale, "plugins/" .. path, group, true)
+		else
+			I:load_atlas(scale, "plugins/" .. path, group)
+		end
+	end
+end
+
 return mod_utils
