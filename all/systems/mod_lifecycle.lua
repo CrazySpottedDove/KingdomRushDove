@@ -112,6 +112,7 @@ function M.register(sys)
 				if d.render then
 					for i = 1, #d.render.sprites do
 						d.render.sprites[i].hidden = true
+						d.render.sprites[i].marked_to_remove = true
 					end
 				end
 			end

@@ -2277,7 +2277,6 @@ tt.dps.pop = {"pop_zap_arcane"}
 tt.dps.pop_conds = DR_KILL
 tt.main_script.update = scripts.mod_tower_ray_damage.update
 tt.modifier.duration = b.duration
-tt.modifier.allows_duplicates = true
 tt.modifier.use_mod_offset = true
 tt.render.sprites[1].name = "channeler_tower_ray_end_loop"
 tt.render.sprites[1].loop = true
