@@ -243,11 +243,11 @@ function mod_utils.mixed_apply_factor(t, k, factor)
 	return true
 end
 
---- 用于为插件提供自定义的资源加载方式，可以和其余本体美术资源一同加载。使用该方式加载的资源索引，不需要提前打包成 bytecode 格式。
----@param groups table 美术资源组
----@param path string 美术资源父路径
----@param ref_height number 参考高度
----@param queue boolean 是否使用队列加载
+--- 用于为插件提供自定义的资源加载方式。使用该方式加载的资源索引，不需要提前打包成 bytecode 格式。建议在 screen_loading 的 init 函数钩子的前面调用本函数，这样就可以让插件的资源和本体的资源一起加载。
+---@param groups table 美术资源组(如：想加载 go_foo.lua，就给 {"go_foo"})
+---@param path string 美术资源父路径(如：插件entry名称/assets)
+---@param ref_height number 参考高度(如：game.ref_res)
+---@param queue boolean 是否使用队列加载(true)或直接加载(false)
 ---@param item_name string scene 名称（可在 director_data里查找）
 function mod_utils.load_texture_groups(groups, path, ref_height, queue, item_name)
 	local director = require("director")

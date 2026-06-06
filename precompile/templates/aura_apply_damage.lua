@@ -1,154 +1,305 @@
 local aura_apply_damage = {}
 
+-- aura_apply_damage.update = [[
+-- return function(this, store)
+--     constvar a = this.aura
+-- 	this.aura.ts = store.tick_ts
+
+--     @constif(not a.cycles and a.duration >= 0)
+--     this.aura.duration = this.aura.duration + this.aura.level * this.aura.duration_inc
+
+-- 	local last_hit_ts = 0
+
+--     @constif(a.cycles)
+-- 	local cycles_count = 0
+
+-- 	while true do
+-- 		constif(a.cycles)
+--             if cycles_count >= this.aura.cycles then
+--                 break
+--             end
+--         constelseif(a.duration >= 0)
+--             if store.tick_ts - this.aura.ts >= this.aura.duration then
+--                 break
+--             end
+--         constend
+
+-- 		constif(a.track_source)
+-- 		local te = store.entities[this.aura.source_id]
+
+-- 		if not te or te.health and te.health.dead or (te.enemy and (not te.enemy.can_do_magic)) then
+-- 			queue_remove(store, this)
+-- 			return
+-- 		end
+
+-- 		if te.pos then
+-- 			this.pos.x, this.pos.y = te.pos.x, te.pos.y
+-- 		end
+-- 		constend
+
+-- 		if store.tick_ts - last_hit_ts >= this.aura.cycle_time then
+--             @constif(a.cycles)
+-- 			cycles_count = cycles_count + 1
+
+-- 			last_hit_ts = store.tick_ts
+
+--             constif(band(a.vis_bans, F_ENEMY) ~= 0)
+-- 			local targets = table.filter(store.soldiers, function(k, v)
+-- 				return not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius)
+
+-- 				@constif(this.aura.allowed_templates)
+-- 				and table.arraycontains(this.aura.allowed_templates, v.template_name)
+
+-- 				@constif(this.aura.excluded_templates)
+-- 				and not table.arraycontains(this.aura.excluded_templates, v.template_name)
+
+-- 				@constif(this.aura.filter_source)
+-- 				and this.aura.source_id ~= v.id
+-- 			end)
+-- 			constelseif(band(a.vis_bans, F_FRIEND) ~= 0)
+-- 				constif(a.allowed_templates or a.excluded_templates or a.filter_source)
+-- 				local targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, function(e)
+-- 					return true
+
+-- 					@constif(this.aura.allowed_templates)
+-- 					and table.arraycontains(this.aura.allowed_templates, e.template_name)
+
+-- 					@constif(this.aura.excluded_templates)
+-- 					and not table.arraycontains(this.aura.excluded_templates, e.template_name)
+
+-- 					@constif(this.aura.filter_source)
+-- 					and this.aura.source_id ~= e.id
+-- 				end)
+-- 				constelse
+-- 				local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
+-- 				constend
+-- 			constelse
+-- 			local targets = table.filter(store.entities, function(k, v)
+-- 				return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius)
+
+-- 				@constif(this.aura.allowed_templates)
+-- 				and table.arraycontains(this.aura.allowed_templates, v.template_name)
+
+-- 				@constif(this.aura.excluded_templates)
+-- 				and not table.arraycontains(this.aura.excluded_templates, v.template_name)
+
+-- 				@constif(this.aura.filter_source)
+-- 				and this.aura.source_id ~= v.id
+-- 			end)
+-- 			constend
+
+--             constif(band(a.vis_bans, F_FRIEND) ~= 0)
+--             if not targets then
+--                 goto label_89_0
+--             end
+--             constend
+
+--             @constif(band(a.vis_bans, F_FRIEND) == 0)
+-- 			if #targets > 0 then
+-- 				local dmin, dmax = this.aura.damage_min, this.aura.damage_max
+
+-- 				constif(this.aura.damage_inc)
+-- 				dmin = dmin + this.aura.damage_inc * this.aura.level
+-- 				dmax = dmax + this.aura.damage_inc * this.aura.level
+-- 				constend
+
+-- 				local mods = this.aura.mods or {this.aura.mod}
+-- 				local mod_count = #mods
+
+-- 				for i = 1, #targets do
+-- 					local target = targets[i]
+
+-- 					local d = E.create_damage()
+
+-- 					d.source_id = this.id
+-- 					d.target_id = target.id
+
+-- 					d.value = math.random(dmin, dmax) * this.aura.damage_factor
+-- 					d.damage_type = this.aura.damage_type
+-- 					d.track_damage = this.aura.track_damage
+-- 					d.xp_dest_id = this.aura.xp_dest_id
+-- 					d.xp_gain_factor = this.aura.xp_gain_factor
+
+-- 					queue_damage(store, d)
+
+-- 					for j = 1, mod_count do
+-- 						local m = E:create_entity(mods[j])
+
+-- 						m.modifier.level = this.aura.level
+-- 						m.modifier.target_id = target.id
+-- 						m.modifier.source_id = this.id
+-- 						m.modifier.damage_factor = this.aura.damage_factor
+
+--                         constif(a.hide_source_fx)
+-- 						if target.id == this.aura.source_id then
+-- 							m.render = nil
+-- 						end
+--                         constend
+
+-- 						queue_insert(store, m)
+-- 					end
+-- 				end
+--             @constif(band(a.vis_bans, F_FRIEND) == 0)
+-- 			end
+-- 		end
+
+--         ::label_89_0::
+
+-- 		coroutine.yield()
+-- 	end
+
+-- 	queue_remove(store, this)
+-- end
+-- ]]
+
 aura_apply_damage.update = [[
 return function(this, store)
     constvar a = this.aura
-	this.aura.ts = store.tick_ts
+    local context = this.main_script.context
 
-    @constif(not a.cycles and a.duration >= 0)
-    this.aura.duration = this.aura.duration + this.aura.level * this.aura.duration_inc
+    if context.state == 0 then
+        this.aura.ts = store.tick_ts
 
-	local last_hit_ts = 0
+        @constif(not a.cycles and a.duration >= 0)
+        this.aura.duration = this.aura.duration + this.aura.level * this.aura.duration_inc
 
-    @constif(a.cycles)
-	local cycles_count = 0
+        context.last_hit_ts = 0
+        context.cycles_count = 0
+        context.state = 1
+    end
 
-	while true do
-		constif(a.cycles)
-            if cycles_count >= this.aura.cycles then
-                break
-            end
-        constelseif(a.duration >= 0)
-            if store.tick_ts - this.aura.ts >= this.aura.duration then
-                break
-            end
+    constif(a.cycles)
+        if context.cycles_count >= this.aura.cycles then
+            queue_remove(store, this)
+            return
+        end
+    constelseif(a.duration >= 0)
+        if store.tick_ts - this.aura.ts >= this.aura.duration then
+            queue_remove(store, this)
+            return
+        end
+    constend
+
+    constif(a.track_source)
+        local te = store.entities[this.aura.source_id]
+
+        if not te or te.health and te.health.dead or (te.enemy and (not te.enemy.can_do_magic)) then
+            queue_remove(store, this)
+            return
+        end
+
+        if te.pos then
+            this.pos.x, this.pos.y = te.pos.x, te.pos.y
+        end
+    constend
+
+    if store.tick_ts - context.last_hit_ts >= this.aura.cycle_time then
+        @constif(a.cycles)
+        context.cycles_count = context.cycles_count + 1
+
+        context.last_hit_ts = store.tick_ts
+
+        local targets
+
+        constif(band(a.vis_bans, F_ENEMY) ~= 0)
+            targets = table.filter(store.soldiers, function(k, v)
+                return not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius)
+
+                @constif(this.aura.allowed_templates)
+                and table.arraycontains(this.aura.allowed_templates, v.template_name)
+
+                @constif(this.aura.excluded_templates)
+                and not table.arraycontains(this.aura.excluded_templates, v.template_name)
+
+                @constif(this.aura.filter_source)
+                and this.aura.source_id ~= v.id
+            end)
+        constelseif(band(a.vis_bans, F_FRIEND) ~= 0)
+            constif(a.allowed_templates or a.excluded_templates or a.filter_source)
+                targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, function(e)
+                    return true
+
+                    @constif(this.aura.allowed_templates)
+                    and table.arraycontains(this.aura.allowed_templates, e.template_name)
+
+                    @constif(this.aura.excluded_templates)
+                    and not table.arraycontains(this.aura.excluded_templates, e.template_name)
+
+                    @constif(this.aura.filter_source)
+                    and this.aura.source_id ~= e.id
+                end)
+            constelse
+                targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
+            constend
+        constelse
+            targets = table.filter(store.entities, function(k, v)
+                return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius)
+
+                @constif(this.aura.allowed_templates)
+                and table.arraycontains(this.aura.allowed_templates, v.template_name)
+
+                @constif(this.aura.excluded_templates)
+                and not table.arraycontains(this.aura.excluded_templates, v.template_name)
+
+                @constif(this.aura.filter_source)
+                and this.aura.source_id ~= v.id
+            end)
         constend
 
-		constif(a.track_source)
-		local te = store.entities[this.aura.source_id]
+        constif(band(a.vis_bans, F_FRIEND) ~= 0)
+             if not targets then
+                 return
+             end
+        constend
 
-		if not te or te.health and te.health.dead or (te.enemy and (not te.enemy.can_do_magic)) then
-			queue_remove(store, this)
-			return
-		end
+        @constif(band(a.vis_bans, F_FRIEND) == 0)
+ 	    if #targets > 0 then
+            local dmin, dmax = this.aura.damage_min, this.aura.damage_max
 
-		if te.pos then
-			this.pos.x, this.pos.y = te.pos.x, te.pos.y
-		end
-		constend
-
-		if store.tick_ts - last_hit_ts >= this.aura.cycle_time then
-            @constif(a.cycles)
-			cycles_count = cycles_count + 1
-
-			last_hit_ts = store.tick_ts
-
-            constif(band(a.vis_bans, F_ENEMY) ~= 0)
-			local targets = table.filter(store.soldiers, function(k, v)
-				return not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius)
-
-				@constif(this.aura.allowed_templates)
-				and table.arraycontains(this.aura.allowed_templates, v.template_name)
-
-				@constif(this.aura.excluded_templates)
-				and not table.arraycontains(this.aura.excluded_templates, v.template_name)
-
-				@constif(this.aura.filter_source)
-				and this.aura.source_id ~= v.id
-			end)
-			constelseif(band(a.vis_bans, F_FRIEND) ~= 0)
-				constif(a.allowed_templates or a.excluded_templates or a.filter_source)
-				local targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, function(e)
-					return true
-
-					@constif(this.aura.allowed_templates)
-					and table.arraycontains(this.aura.allowed_templates, e.template_name)
-
-					@constif(this.aura.excluded_templates)
-					and not table.arraycontains(this.aura.excluded_templates, e.template_name)
-
-					@constif(this.aura.filter_source)
-					and this.aura.source_id ~= e.id
-				end)
-				constelse
-				local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
-				constend
-			constelse
-			local targets = table.filter(store.entities, function(k, v)
-				return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius)
-
-				@constif(this.aura.allowed_templates)
-				and table.arraycontains(this.aura.allowed_templates, v.template_name)
-
-				@constif(this.aura.excluded_templates)
-				and not table.arraycontains(this.aura.excluded_templates, v.template_name)
-
-				@constif(this.aura.filter_source)
-				and this.aura.source_id ~= v.id
-			end)
-			constend
-
-            constif(band(a.vis_bans, F_FRIEND) ~= 0)
-            if not targets then
-                goto label_89_0
-            end
+            constif(this.aura.damage_inc)
+            dmin = dmin + this.aura.damage_inc * this.aura.level
+            dmax = dmax + this.aura.damage_inc * this.aura.level
             constend
 
-            @constif(band(a.vis_bans, F_FRIEND) == 0)
-			if #targets > 0 then
-				local dmin, dmax = this.aura.damage_min, this.aura.damage_max
+            local mods = this.aura.mods or {this.aura.mod}
+            local mod_count = #mods
 
-				constif(this.aura.damage_inc)
-				dmin = dmin + this.aura.damage_inc * this.aura.level
-				dmax = dmax + this.aura.damage_inc * this.aura.level
-				constend
+            for i = 1, #targets do
+                local target = targets[i]
 
-				local mods = this.aura.mods or {this.aura.mod}
-				local mod_count = #mods
+                local d = E.create_damage()
 
-				for i = 1, #targets do
-					local target = targets[i]
+                d.source_id = this.id
+                d.target_id = target.id
 
-					local d = E.create_damage()
+                d.value = math.random(dmin, dmax) * this.aura.damage_factor
+                d.damage_type = this.aura.damage_type
+                d.track_damage = this.aura.track_damage
+                d.xp_dest_id = this.aura.xp_dest_id
+                d.xp_gain_factor = this.aura.xp_gain_factor
 
-					d.source_id = this.id
-					d.target_id = target.id
+                queue_damage(store, d)
 
-					d.value = math.random(dmin, dmax) * this.aura.damage_factor
-					d.damage_type = this.aura.damage_type
-					d.track_damage = this.aura.track_damage
-					d.xp_dest_id = this.aura.xp_dest_id
-					d.xp_gain_factor = this.aura.xp_gain_factor
+                for j = 1, mod_count do
+                    local m = E:create_entity(mods[j])
 
-					queue_damage(store, d)
+                    m.modifier.level = this.aura.level
+                    m.modifier.target_id = target.id
+                    m.modifier.source_id = this.id
+                    m.modifier.damage_factor = this.aura.damage_factor
 
-					for j = 1, mod_count do
-						local m = E:create_entity(mods[j])
+                    constif(a.hide_source_fx)
+                    if target.id == this.aura.source_id then
+                        m.render = nil
+                    end
+                    constend
 
-						m.modifier.level = this.aura.level
-						m.modifier.target_id = target.id
-						m.modifier.source_id = this.id
-						m.modifier.damage_factor = this.aura.damage_factor
-
-                        constif(a.hide_source_fx)
-						if target.id == this.aura.source_id then
-							m.render = nil
-						end
-                        constend
-
-						queue_insert(store, m)
-					end
-				end
-            @constif(band(a.vis_bans, F_FRIEND) == 0)
-			end
-		end
-
-        ::label_89_0::
-
-		coroutine.yield()
-	end
-
-	queue_remove(store, this)
+                    queue_insert(store, m)
+                end
+            end
+        @constif(band(a.vis_bans, F_FRIEND) == 0)
+        end
+    end
 end
 ]]
 

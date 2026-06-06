@@ -262,8 +262,10 @@ function M:compile(e)
 				m.type = 1
 			elseif m.update == scripts.bomb.update then
 				m.update = self:_compile(e, self.bomb.update)
+				m.type = 1
 			elseif m.update == scripts.bolt.update then
 				m.update = self:_compile(e, self.bolt.update)
+				m.type = 1
 			end
 		end
 
@@ -314,6 +316,7 @@ function M:compile(e)
 			elseif m.update == scripts.aura_apply_damage.update then
 				if e.aura.duration then
 					m.update = self:_compile(e, self.aura_apply_damage.update)
+					m.type = 1
 				end
 			end
 		end
