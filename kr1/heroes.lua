@@ -15285,7 +15285,7 @@ tt = E:register_t("hero_vesper_arrow_to_the_knee_arrow", "arrow")
 tt.render.sprites[1].name = "hero_vesper_arrow_to_the_knee_arrow"
 tt.render.sprites[1].animated = false
 tt.bullet.miss_decal = "hero_vesper_arrow_to_the_knee_arrow_miss"
-tt.bullet.flight_time = fts(10)
+tt.bullet.flight_time = fts(12)
 tt.bullet.hide_radius = nil
 tt.bullet.mod = "hero_vesper_arrow_to_the_knee_arrow_mod"
 tt.bullet.particles_name = "ps_hero_vesper_arrow_to_the_knee_bullet_trail"
@@ -15293,7 +15293,7 @@ tt.bullet.damage_type = b.arrow_to_the_knee.damage_type
 tt.bullet.hit_fx = "hero_vesper_arrow_to_the_knee_hit"
 tt.bullet.reset_to_target_pos = true
 tt.bullet.hit_blood_fx = nil
-tt.bullet.straight_forward_distance = 200
+tt.bullet.straight_forward_distance = 275
 tt.bullet.damage_radius = 35
 tt.sound_events.hit = "HeroVesperArrowToTheKneeImpact"
 
