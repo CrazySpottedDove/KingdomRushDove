@@ -3049,7 +3049,7 @@ tt.sound_events.hit_water = "RTWaterExplosion"
 
 tt = E:register_t("range_mod_balloon", "modifier")
 AC(tt, "render", "tween")
-tt.modifier.duration = 99
+tt.modifier.duration = 8
 tt.range_factor = 1.2
 tt.range_factor_inc = 0
 tt.main_script.insert = scripts.mod_tower_factors.insert

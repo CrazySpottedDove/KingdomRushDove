@@ -26272,16 +26272,25 @@ function scripts.soldier_balloon.update(this, store, script)
 			while r.new do
 				r.new = false
 				U.set_destination(this, r.pos)
+
 				local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 				U.animation_start_group(this, an, af, store.tick_ts, true, "layers")
 				U.animation_start_group(this.owner, "flags", nil, store.tick_ts, true, "layers")
 				while not this.motion.arrived and not r.new do
-					U.walk(this, store.tick_length)
+					U.walk_off__accel__unsnapped(this, store.tick_length)
 					coroutine.yield()
 					this.motion.speed.x, this.motion.speed.y = 0, 0
 				end
 				U.animation_start_group(this, "idle", nil, store.tick_ts, true, "layers")
 				U.animation_start_group(this.owner, "idle", nil, store.tick_ts, true, "layers")
+
+				local existing_mods = table.filter(store.modifiers, function(_, e)
+					return e.modifier.source_id == this.id and e.template_name == ea.mod and not U.is_inside_ellipse(e.pos, this.pos, ea.range + ea.range_inc * pow_e.level)
+				end)
+
+				for i = 1, #existing_mods do
+					queue_remove(store, existing_mods[i])
+				end
 				coroutine.yield()
 			end
 
