@@ -14,6 +14,7 @@ local font_title = require("lib.klove.font_db"):f("msyh", 28)
 local font_normal = require("lib.klove.font_db"):f("msyh", 18)
 local font_small = require("lib.klove.font_db"):f("msyh", 14)
 local FU = require("all.file_utlis")
+local zip = require("lib.zip")
 
 -- UI 动画状态
 local ui_state = {
@@ -262,6 +263,7 @@ end
 
 -- 记录错误日志
 local function log_error(line)
+	print("[ERROR] " .. line)
 	table.insert(update_log_lines, "[错误] " .. sanitize_utf8(line))
 	if #update_log_lines > update_log_line_max_count then
 		table.remove(update_log_lines, 1)
@@ -928,6 +930,194 @@ local function download_to_lovefs_chunked(url_base, file_param, fs_path)
 	return true, existing
 end
 
+-- ============================================================
+-- 打包下载: 给定完整 URL，分块下载 zip 到真实文件系统
+-- ============================================================
+local function download_bundle_zip(url, real_path)
+	local part_path = real_path .. ".part"
+	local chunk_size = current_chunk_size
+
+	FU.ensure_parent_dir(real_path)
+
+	local code, body, headers = async_request(url, {
+		method = "GET",
+		headers = {
+			["Range"] = "bytes=0-0"
+		}
+	}, 30)
+
+	local total_size = nil
+	if code == 206 then
+		local _, _, size = parse_content_range(headers["content-range"])
+		total_size = size
+	elseif code == 200 then
+		total_size = #body
+		local wf = io.open(part_path, "wb")
+		if not wf then
+			log_error("无法写入打包: " .. part_path)
+			return false, 0
+		end
+		wf:write(body)
+		wf:close()
+		FU.ensure_parent_dir(real_path)
+		os.remove(real_path)
+		os.rename(part_path, real_path)
+		return true, total_size
+	else
+		log_error(string.format("无法获取打包大小: HTTP %d", code))
+		return false, 0
+	end
+
+	if not total_size or total_size == 0 then
+
+		log_error("打包大小无效")
+		return false, 0
+	end
+
+	local downloaded_size = 0
+	local f_check = io.open(part_path, "rb")
+	if f_check then
+		downloaded_size = f_check:seek("end")
+		f_check:close()
+		if downloaded_size > total_size then
+			log_info(string.format("检测到异常续传打包（%d > %d），自动重置重下", downloaded_size, total_size))
+			os.remove(part_path)
+			downloaded_size = 0
+		end
+		if downloaded_size > 0 then
+			log_info(string.format("续传打包 %.2f/%.2f KB", downloaded_size / 1024, total_size / 1024))
+		end
+	end
+
+	while downloaded_size < total_size do
+		local chunk_start = downloaded_size
+
+		local chunk_retries = 0
+		local chunk_success = false
+
+		while chunk_retries <= DOWNLOAD_CONFIG.chunk_max_retries do
+			local chunk_end = math.min(chunk_start + chunk_size - 1, total_size - 1)
+			local code, body, headers = async_request(url, {
+				method = "GET",
+				headers = {
+					["Range"] = "bytes=" .. chunk_start .. "-" .. chunk_end
+				}
+			}, DOWNLOAD_CONFIG.chunk_timeout)
+
+			if code == 206 or code == 200 then
+				local ok_resp, new_size = validate_chunk_response(code, body, headers, chunk_start, chunk_end, total_size, downloaded_size)
+				if ok_resp then
+					local write_mode = code == 200 and "wb" or "ab"
+					local wf = io.open(part_path, write_mode)
+					if not wf then
+
+						log_error("无法打开打包文件写入: " .. part_path)
+						return false, 0
+					end
+					wf:write(body)
+					wf:close()
+					downloaded_size = new_size
+					local percent = downloaded_size * 100.0 / total_size
+					update_progress(percent, true, downloaded_size, total_size)
+					chunk_success = true
+					break
+				end
+				code = 0
+			end
+
+			if not chunk_success then
+				local should_retry_flag, error_type = should_retry_error(code, chunk_retries)
+
+				if not should_retry_flag then
+
+					log_error(string.format("下载打包失败: HTTP %d", code))
+					return false, 0
+				end
+
+				chunk_retries = chunk_retries + 1
+				if chunk_retries > DOWNLOAD_CONFIG.chunk_max_retries then
+
+					log_error("打包下载失败（超过重试限制）")
+					return false, 0
+				end
+
+				adjust_chunk_size(false)
+				chunk_size = current_chunk_size
+
+				local backoff = calculate_backoff(chunk_retries, error_type)
+				async_sleep(backoff)
+			end
+		end
+
+		if chunk_success then
+			adjust_chunk_size(true)
+			chunk_size = current_chunk_size
+		end
+	end
+
+	local f_final = io.open(part_path, "rb")
+	if not f_final then
+
+		log_error("打包下载完成但无法读取")
+		return false, 0
+	end
+	local actual_size = f_final:seek("end")
+	f_final:close()
+
+	if actual_size ~= total_size then
+
+		log_error(string.format("打包大小不匹配: %d vs %d", actual_size, total_size))
+		return false, 0
+	end
+
+	FU.ensure_parent_dir(real_path)
+	os.remove(real_path)
+	local renamed = os.rename(part_path, real_path)
+	if not renamed then
+		local rf = io.open(part_path, "rb")
+		local wf = io.open(real_path, "wb")
+		if rf and wf then
+			wf:write(rf:read("*a"))
+			rf:close()
+			wf:close()
+			os.remove(part_path)
+		else
+			if rf then
+				rf:close()
+			end
+			if wf then
+				wf:close()
+			end
+
+			log_error("打包文件移动失败")
+			return false, 0
+		end
+	end
+
+	return true, total_size
+end
+
+-- 解压 zip 到目标目录（使用 lib/zip.lua），返回是否成功
+local function extract_zip(zip_path, dest_dir)
+	local rf = io.open(zip_path, "rb")
+	if not rf then
+		log_error("无法读取打包文件: " .. zip_path)
+		return false
+	end
+	local zip_data = rf:read("*a")
+	rf:close()
+
+	local ok, err = zip.unzip_to_dir(zip_data, dest_dir)
+	if not ok then
+		log_error("解压打包失败: " .. (err or "unknown"))
+		return false
+	end
+
+	return true
+end
+
+local MAX_RAW_BUNDLE_SIZE = 20 * 1024 * 1024
+
 local function diff_assets()
 	set_state(STATE_CHECKING_ASSETS)
 	local tmp_dir = ".assets_diff_tmp"
@@ -968,7 +1158,7 @@ local function diff_assets()
 	end
 
 	FS.remove(tmp_dir)
-	return added_or_modified
+	return added_or_modified, remote_assets_index
 end
 
 -- 【重构】下载资源到缓存目录（不直接覆盖本地文件）
@@ -1014,6 +1204,124 @@ local function sync_assets(added_or_modified)
 	return true
 end
 
+-- 【新增】使用打包方式下载资源（减少连接数，提高弱网成功率）
+local function sync_assets_bundled(added_or_modified, asset_sizes)
+	if not server_address or not update_cache_dir then
+		return true
+	end
+
+	local file_count = #added_or_modified
+
+	if file_count > 1000 then
+		set_state(STATE_DOWNLOADING_ASSETS_HEAVY)
+	elseif file_count > 100 then
+		set_state(STATE_DOWNLOADING_ASSETS_MIDDLE_HEAVY)
+	else
+		set_state(STATE_DOWNLOADING_ASSETS)
+	end
+
+	-- 分组：按原始大小切分，每捆不超过 MAX_RAW_BUNDLE_SIZE
+	local batches = {}
+	local current = {}
+	local current_size = 0
+	for _, f in ipairs(added_or_modified) do
+		local fsize = (asset_sizes and asset_sizes[f]) and asset_sizes[f][1] or 0
+		if current_size + fsize > MAX_RAW_BUNDLE_SIZE and #current > 0 then
+			table.insert(batches, current)
+			current = {f}
+			current_size = fsize
+		else
+			table.insert(current, f)
+			current_size = current_size + fsize
+		end
+	end
+	if #current > 0 then
+		table.insert(batches, current)
+	end
+
+	for bi, batch in ipairs(batches) do
+		if not sync_assets_batch(batch, bi, #batches) then
+			return false
+		end
+	end
+
+	return true
+end
+
+-- 处理单个资源打包批次，失败自动回退到单文件下载
+local function sync_assets_batch(batch, bi, total_batches)
+	-- 1. POST 创建打包
+	local url = server_address .. "bundle/assets"
+	local code, body, headers = async_request(url, {
+		method = "POST",
+		headers = {
+			["Content-Type"] = "application/json"
+		},
+		data = json.encode({
+			files = batch
+		})
+	}, 60)
+
+	if code ~= 200 then
+
+		log_error("创建资源打包失败，回退到单文件下载")
+		return sync_assets(batch)
+	end
+
+	local result = json.decode(body)
+	if not result or not result.bundle_id then
+
+		log_error("创建资源打包响应无效，回退到单文件下载")
+		return sync_assets(batch)
+	end
+
+	local bundle_id = result.bundle_id
+	local bundle_size = result.size or 0
+
+	set_current_file(string.format("资源打包 %d/%d", bi, total_batches), bi, total_batches)
+	log_info(string.format("资源打包 %d/%d (%.1f KB, %d个文件)", bi, total_batches, bundle_size / 1024, result.file_count or 0))
+
+	-- 2. GET 分块下载 zip
+	local zip_path = update_cache_dir .. "/bundle_assets_" .. bi .. ".zip"
+	local get_url = server_address .. "bundle/assets?id=" .. bundle_id
+	local ok = download_bundle_zip(get_url, zip_path)
+	if not ok then
+		log_error("下载资源打包失败，回退到单文件下载")
+		os.remove(zip_path)
+		return sync_assets(batch)
+	end
+
+	-- 3. 解压到缓存
+	local assets_dir = update_cache_dir .. "/assets"
+	for _, f in ipairs(batch) do
+		local parent = (assets_dir .. "/" .. f):match("(.+)/")
+		if parent then
+			FS.createDirectory(parent)
+		end
+	end
+	local ok = extract_zip(zip_path, assets_dir)
+	os.remove(zip_path)
+	if not ok then
+		log_error("解压资源打包失败，回退到单文件下载")
+		return sync_assets(batch)
+	end
+
+	-- 4. 检测缺失文件，回退单文件下载
+	local missing = {}
+	for _, f in ipairs(batch) do
+		if not FS.getInfo(update_cache_dir .. "/assets/" .. f) then
+			table.insert(missing, f)
+		end
+	end
+
+	if #missing > 0 then
+		log_info(string.format("补下载 %d 个缺失资源", #missing))
+		return sync_assets(missing)
+	end
+
+	return true
+end
+
 -- 【重构】下载代码到缓存目录
 local function upgrade_new_version(info)
 	set_state(STATE_DOWNLOADING_CODE)
@@ -1042,6 +1350,92 @@ local function upgrade_new_version(info)
 				log_error("下载失败: " .. file_path)
 				return false
 			end
+		end
+	end
+
+	return true
+end
+
+-- 【新增】使用打包方式下载代码（所有代码文件打包为一个 zip）
+local function upgrade_new_version_bundled(info)
+	set_state(STATE_DOWNLOADING_CODE)
+
+	local added_or_modified = info.added_or_modified_files or {}
+	local file_count = #added_or_modified
+
+	if file_count == 0 then
+		return true
+	end
+
+	-- 1. POST 创建打包
+	local url = server_address .. "bundle/code"
+	local code, body, headers = async_request(url, {
+		method = "POST",
+		headers = {
+			["Content-Type"] = "application/json"
+		},
+		data = json.encode({
+			files = added_or_modified
+		})
+	}, 60)
+
+	if code ~= 200 then
+		log_error("创建代码打包失败，回退到单文件下载")
+		return upgrade_new_version(info)
+	end
+
+	local result = json.decode(body)
+	if not result or not result.bundle_id then
+		log_error("创建代码打包响应无效，回退到单文件下载")
+		return upgrade_new_version(info)
+	end
+
+	local bundle_id = result.bundle_id
+	local bundle_size = result.size or 0
+
+	set_current_file("代码打包", 1, 1)
+	log_info(string.format("代码打包 (%.1f KB, %d个文件)", bundle_size / 1024, result.file_count or 0))
+
+	-- 2. GET 分块下载 zip
+	local zip_path = update_cache_dir .. "/bundle_code.zip"
+	local get_url = server_address .. "bundle/code?id=" .. bundle_id
+	local ok = download_bundle_zip(get_url, zip_path)
+	if not ok then
+		log_error("下载代码打包失败，回退到单文件下载")
+		os.remove(zip_path)
+		return upgrade_new_version(info)
+	end
+
+	-- 3. 解压到缓存
+	local code_dir = update_cache_dir .. "/code"
+	for _, f in ipairs(added_or_modified) do
+		local parent = (code_dir .. "/" .. f):match("(.+)/")
+		if parent then
+			FS.createDirectory(parent)
+		end
+	end
+	local ok = extract_zip(zip_path, code_dir)
+	os.remove(zip_path)
+	if not ok then
+		log_error("解压代码打包失败，回退到单文件下载")
+		return upgrade_new_version(info)
+	end
+
+	-- 4. 检测缺失文件，回退单文件下载
+	local missing = {}
+	for _, f in ipairs(added_or_modified) do
+		if not FS.getInfo(update_cache_dir .. "/code/" .. f) then
+			table.insert(missing, f)
+		end
+	end
+
+	if #missing > 0 then
+		log_info(string.format("补下载 %d 个缺失代码文件", #missing))
+		local temp_info = {
+			added_or_modified_files = missing
+		}
+		if not upgrade_new_version(temp_info) then
+			return false
 		end
 	end
 
@@ -1224,7 +1618,7 @@ local function do_update()
 	log_info("缓存目录: " .. update_cache_dir)
 
 	-- 1. 检查资源差异
-	local added_or_modified_assets = diff_assets()
+	local added_or_modified_assets, asset_sizes = diff_assets()
 	if not added_or_modified_assets then
 		return {
 			status = "Error",
@@ -1233,8 +1627,8 @@ local function do_update()
 		}
 	end
 
-	-- 2. 下载资源到缓存
-	local success = sync_assets(added_or_modified_assets)
+	-- 2. 下载资源到缓存（使用打包方式，失败自动回退）
+	local success = sync_assets_bundled(added_or_modified_assets, asset_sizes)
 	if not success then
 		return {
 			status = "Error",
@@ -1243,8 +1637,8 @@ local function do_update()
 		}
 	end
 
-	-- 3. 下载代码到缓存
-	success = upgrade_new_version(update_response)
+	-- 3. 下载代码到缓存（使用打包方式，失败自动回退）
+	success = upgrade_new_version_bundled(update_response)
 	if not success then
 		return {
 			status = "Error",
