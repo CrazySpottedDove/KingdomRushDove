@@ -453,39 +453,49 @@ local HTTP_WORKER = [[
                 code = code,
                 body = body,
                 headers = headers,
-                elapsed = elapsed
+                elapsed = elapsed,
+                seq = req.seq
             })
         else
             resp_ch:push({
                 code = 0,
                 body = tostring(code),
                 headers = {},
-                elapsed = elapsed
+                elapsed = elapsed,
+                seq = req.seq
             })
         end
    end
 ]]
 local http_worker = nil
+local request_seq = 0
 
 --- 异步 HTTP 请求，含默认超时策略
 local function async_request(url, options, timeout)
+	request_seq = request_seq + 1
+	local seq = request_seq
 	love.thread.getChannel("um_http_req"):push({
 		url = url,
-		options = options
+		options = options,
+		seq = seq
 	})
 	local resp_ch = love.thread.getChannel("um_http_resp")
 	timeout = timeout or DOWNLOAD_CONFIG.base_timeout
 
 	local start_time = love.timer.getTime()
-	while resp_ch:getCount() == 0 do
+	while true do
 		if love.timer.getTime() - start_time > timeout then
 			return 0, "请求超时", {}, 0
 		end
-		coroutine.yield()
+		if resp_ch:getCount() > 0 then
+			local resp = resp_ch:pop()
+			if resp.seq == seq then
+				return resp.code, resp.body, resp.headers, resp.elapsed or 0
+			end
+		else
+			coroutine.yield()
+		end
 	end
-
-	local resp = resp_ch:pop()
-	return resp.code, resp.body, resp.headers, resp.elapsed or 0
 end
 
 -- 非阻塞等待
@@ -679,14 +689,13 @@ local function download_to_file_chunked(url_base, file_param, real_path)
 
 	-- 分块下载
 	while downloaded_size < total_size do
-		-- 计算本块的范围
 		local chunk_start = downloaded_size
-		local chunk_end = math.min(chunk_start + chunk_size - 1, total_size - 1)
 
 		local chunk_retries = 0
 		local chunk_success = false
 
 		while chunk_retries <= DOWNLOAD_CONFIG.chunk_max_retries do
+			local chunk_end = math.min(chunk_start + chunk_size - 1, total_size - 1)
 			local code, body, headers = async_request(url, {
 				method = "GET",
 				headers = {
@@ -840,12 +849,12 @@ local function download_to_lovefs_chunked(url_base, file_param, fs_path)
 	-- 分块下载（移除文件级别重试，只保留块级别重试）
 	while downloaded_size < total_size do
 		local chunk_start = downloaded_size
-		local chunk_end = math.min(chunk_start + chunk_size - 1, total_size - 1)
 
 		local chunk_retries = 0
 		local chunk_success = false
 
 		while chunk_retries <= DOWNLOAD_CONFIG.chunk_max_retries do
+			local chunk_end = math.min(chunk_start + chunk_size - 1, total_size - 1)
 			local code, body, headers = async_request(url, {
 				method = "GET",
 				headers = {
