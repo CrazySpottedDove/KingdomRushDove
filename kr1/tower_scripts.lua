@@ -4491,9 +4491,6 @@ scripts.tower_mech = {
 			cooldown = cooldown
 		}
 	end,
-	insert = function(this, store)
-		return true
-	end,
 	update = function(this, store)
 		local tower_sid = 2
 		local wts
@@ -26148,6 +26145,329 @@ function scripts.mod_grim_cemetery_explode.update(this, store, script)
 			end
 		end
 
+		coroutine.yield()
+	end
+end
+
+--飞艇
+scripts.tower_balloon = {}
+
+function scripts.tower_balloon.update(this, store)
+	local context = this.main_script.context
+
+	if context.state == 0 then
+		local balloon = E:create_entity(this.barrack.soldier_type)
+		balloon.pos.x, balloon.pos.y = this.pos.x, this.pos.y + 16
+		balloon.nav_rally.pos.x, balloon.nav_rally.pos.y = this.tower.default_rally_pos.x, this.tower.default_rally_pos.y
+		balloon.nav_rally.new = true
+		balloon.owner = this
+		balloon.wick_mode = 1
+		queue_insert(store, balloon)
+		table.insert(this.barrack.soldiers, balloon)
+
+		context.state = 1
+	end
+
+	local b = this.barrack
+
+	if b.rally_new then
+		b.rally_new = false
+		signal.emit("rally-point-changed", this)
+		S:queue(this.sound_events.change_rally_point)
+		for i, s in ipairs(b.soldiers) do
+			s.nav_rally.pos = V.vclone(b.rally_pos)
+			s.nav_rally.center = V.vclone(b.rally_pos)
+			s.nav_rally.new = true
+		end
+	end
+
+	if this.powers.oil.changed then
+		this.powers.oil.changed = nil
+		for i, s in ipairs(b.soldiers) do
+			s.powers.oil.changed = true
+			s.powers.oil.level = this.powers.oil.level
+		end
+	end
+
+	if this.powers.watcher.changed then
+		this.powers.watcher.changed = nil
+		for i, s in ipairs(b.soldiers) do
+			s.powers.watcher.changed = true
+			s.powers.watcher.level = this.powers.watcher.level
+		end
+	end
+
+	if this.powers.bomber.changed then
+		this.powers.bomber.changed = nil
+		for i, s in ipairs(b.soldiers) do
+			s.powers.bomber.changed = true
+			s.powers.bomber.level = this.powers.bomber.level
+		end
+	end
+end
+
+scripts.soldier_balloon = {}
+
+function scripts.soldier_balloon.insert(this, store, script)
+	this.attacks.order = U.attack_order(this.attacks.list)
+	this.idle_flip.ts = store.tick_ts
+	return true
+end
+
+function scripts.soldier_balloon.remove(this, store, script)
+	local mods = table.filter(store.modifiers, function(_, e)
+		return e.modifier.source_id == this.id
+	end)
+	for _, m in ipairs(mods) do
+		queue_remove(store, m)
+	end
+	return true
+end
+
+function scripts.soldier_balloon.update(this, store, script)
+	local ab = this.attacks.list[1]
+	local ea = this.attacks.list[2]
+	local ao = this.attacks.list[3]
+	local aa = this.attacks.list[4]
+	local pow_o = this.powers.oil
+	local pow_b = this.powers.bomber
+	local pow_e = this.powers.watcher
+	local tw = this.owner.tower
+
+	this.wick_mode = 1
+	ab.ts = store.tick_ts
+
+	local co_shooters = coroutine.create(function()
+		while true do
+			if ready_to_attack(ab, store, tw.cooldown_factor) then
+				local target, pred_pos = U.find_random_enemy_with_pos(store, this.pos, 0, ab.max_range, ab.node_prediction, ab.vis_flags, ab.vis_bans)
+				if target then
+					ab.ts = store.tick_ts
+					this.wick_mode = km.zmod(this.wick_mode + 1, 2)
+					local shooter_sid = this.wick_mode + 4
+					local an, af = U.animation_name_facing_point(this, ab.animations[this.wick_mode], target.pos)
+					U.animation_start(this, an, af, store.tick_ts, false, shooter_sid)
+					U.y_wait(store, ab.hit_times[this.wick_mode] * tw.cooldown_factor)
+					local b = E:create_entity(ab.bullet)
+					b.bullet.damage_factor = this.owner.tower.damage_factor
+					b.pos.x = this.pos.x + (af and -1 or 1) * ab.start_offsets[this.wick_mode].x
+					b.pos.y = this.pos.y + ab.start_offsets[this.wick_mode].y
+					b.bullet.from:copy(b.pos)
+					b.bullet.to = pred_pos
+					b.bullet.target_id = target.id
+					b.bullet.source_id = this.id
+					queue_insert(store, b)
+					while not U.animation_finished(this, shooter_sid) do
+						coroutine.yield()
+					end
+				end
+			end
+			coroutine.yield()
+		end
+	end)
+
+	local co_layers = coroutine.create(function()
+		while true do
+			local r = this.nav_rally
+			while r.new do
+				r.new = false
+				U.set_destination(this, r.pos)
+				local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
+				U.animation_start_group(this, an, af, store.tick_ts, true, "layers")
+				U.animation_start_group(this.owner, "flags", nil, store.tick_ts, true, "layers")
+				while not this.motion.arrived and not r.new do
+					U.walk(this, store.tick_length)
+					coroutine.yield()
+					this.motion.speed.x, this.motion.speed.y = 0, 0
+				end
+				U.animation_start_group(this, "idle", nil, store.tick_ts, true, "layers")
+				U.animation_start_group(this.owner, "idle", nil, store.tick_ts, true, "layers")
+				coroutine.yield()
+			end
+
+			if pow_b.level > 0 then
+				if ready_to_attack(aa, store, tw.cooldown_factor) then
+					if U.find_first_enemy_in_range_filter_off(this.pos, aa.max_range, aa.vis_flags, aa.vis_bans) then
+						aa.ts = store.tick_ts
+						U.animation_start_group(this, "paratrooper", nil, store.tick_ts, false, "layers")
+
+						while not U.animation_finished(this, 2) do
+							coroutine.yield()
+						end
+						local b = E:create_entity(aa.bullet)
+						b.bullet.damage_factor = tw.damage_factor * b.bullet.damage_factor
+						b.pos.x, b.pos.y = this.pos.x + aa.bullet_start_offset.x * (this.render.sprites[2].flip_x and -1 or 1), this.pos.y + aa.bullet_start_offset.y
+						b.bullet.from:copy(b.pos)
+						b.bullet.to = this.pos
+						b.bullet.source_id = this.id
+						queue_insert(store, b)
+					end
+					U.animation_start_group(this, "idle", nil, store.tick_ts, true, "layers")
+				end
+			end
+			U.animation_start_group(this, "idle", nil, store.tick_ts, true, "layers")
+			coroutine.yield()
+		end
+	end)
+
+	local co_pitch = coroutine.create(function()
+		while true do
+			if pow_o.level > 0 then
+				if ready_to_attack(ao, store, tw.cooldown_factor) then
+					local target = U.find_random_enemy(store, this.pos, ao.min_range, ao.max_range, ao.vis_flags, ao.vis_bans)
+					if target then
+						ao.ts = store.tick_ts
+						local an, af = U.animation_name_facing_point(this, ao.animation, target.pos)
+						this.render.sprites[1].hidden = false
+						U.animation_start(this, an, af, store.tick_ts, false, 1)
+						U.y_wait(store, ao.hit_time)
+						local b = E:create_entity(ao.bullet)
+						b.pos.x = this.pos.x + (af and -1 or 1) * ao.start_offset.x
+						b.pos.y = this.pos.y + ao.start_offset.y
+						b.render.sprites[1].ts = store.tick_ts
+						b.bullet.level = pow_o.level
+						b.bullet.from:copy(b.pos)
+						b.bullet.to = this.pos
+						queue_insert(store, b)
+						while not U.animation_finished(this, 1) do
+							coroutine.yield()
+						end
+						this.render.sprites[1].hidden = true
+					end
+				end
+			end
+			coroutine.yield()
+		end
+	end)
+
+	while true do
+		if pow_e.changed then
+			pow_e.changed = nil
+			ea.ts = store.tick_ts
+		end
+
+		if pow_b.changed then
+			pow_b.changed = nil
+			if pow_b.level == 1 then
+				aa.ts = store.tick_ts
+			end
+		end
+
+		if pow_o.changed then
+			pow_o.changed = nil
+			if pow_o.level == 1 then
+				ao.ts = store.tick_ts
+			end
+		end
+
+		if pow_e.level > 0 then
+			if store.tick_ts - ea.ts > ea.cooldown then
+				ea.ts = store.tick_ts
+				local eagle_range = ea.range + ea.range_inc * pow_e.level
+				local existing_mods = table.filter(store.modifiers, function(_, e)
+					return e.template_name == ea.mod and e.modifier.level >= pow_e.level
+				end)
+				local busy_ids = table.map(existing_mods, function(k, v)
+					return v.modifier.target_id
+				end)
+				local towers = table.filter(store.towers, function(_, e)
+					return e.tower.can_be_mod and not table.contains(busy_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, eagle_range)
+				end)
+				for _, tower in ipairs(towers) do
+					local new_mod = E:create_entity(ea.mod)
+					new_mod.modifier.level = pow_e.level
+					new_mod.modifier.target_id = tower.id
+					new_mod.modifier.source_id = this.id
+					new_mod.pos = tower.pos
+					queue_insert(store, new_mod)
+				end
+			end
+		end
+
+		coroutine.resume(co_layers)
+		coroutine.resume(co_shooters)
+		coroutine.resume(co_pitch)
+		coroutine.yield()
+	end
+end
+
+scripts.soldier_balloon_goblin = {}
+
+function scripts.soldier_balloon_goblin.update(this, store, script)
+	local brk, sta
+	this.reinforcement.ts = store.tick_ts
+	this.render.sprites[1].ts = store.tick_ts
+	this.nav_rally.pos = V.vclone(this.pos)
+	this.nav_rally.center = this.nav_rally.pos
+	if this.sound_events and this.sound_events.raise then
+		S:queue(this.sound_events.raise)
+	end
+	this.health_bar.hidden = true
+	U.y_animation_play(this, "idle", nil, store.tick_ts, 1)
+	if not this.health.dead then
+		this.health_bar.hidden = nil
+	end
+	local starting_pos = V.vclone(this.pos)
+	this.nav_rally.pos = starting_pos
+	local patrol_pos = V.vclone(this.pos)
+	patrol_pos.x, patrol_pos.y = patrol_pos.x + this.patrol_pos_offset.x, patrol_pos.y + this.patrol_pos_offset.y
+
+	local nearest_node = P:nearest_nodes(patrol_pos.x, patrol_pos.y, nil, nil, false)[1]
+	local pi, spi, ni = unpack(nearest_node)
+	local npos = P:node_pos(pi, spi, ni)
+	local patrol_pos_2 = V.vclone(this.pos)
+	patrol_pos_2.x, patrol_pos_2.y = patrol_pos_2.x - this.patrol_pos_offset.x, patrol_pos_2.y - this.patrol_pos_offset.y
+	local nearest_node = P:nearest_nodes(patrol_pos_2.x, patrol_pos_2.y, nil, nil, false)[1]
+	local pi, spi, ni = unpack(nearest_node)
+	local npos_2 = P:node_pos(pi, spi, ni)
+	if V.dist2(patrol_pos.x, patrol_pos.y, npos.x, npos.y) > V.dist2(patrol_pos_2.x, patrol_pos_2.y, npos_2.x, npos_2.y) then
+		patrol_pos = V.vclone(patrol_pos_2)
+	end
+
+	local idle_ts = store.tick_ts
+	local patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
+
+	while true do
+		::label_706_1::
+		if this.health.dead or (this.reinforcement.duration and store.tick_ts - this.reinforcement.ts > this.reinforcement.duration) then
+			if this.health.hp > 0 then
+				this.reinforcement.hp_before_timeout = this.health.hp
+			end
+			this.health.hp = 0
+			SU.y_soldier_death(store, this)
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+			idle_ts = store.tick_ts
+			patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
+		else
+			if this.ranged and not this.ranged.range_while_blocking then
+				brk, sta = SU.y_soldier_ranged_attacks(store, this)
+				if brk or sta == A_DONE then
+					goto label_706_1
+				elseif sta == A_IN_COOLDOWN and not this.ranged.go_back_during_cooldown then
+					goto label_706_0
+				end
+			end
+
+			if SU.soldier_go_back_step(store, this) then
+			else
+				SU.soldier_idle(store, this)
+				SU.soldier_regen(store, this)
+				if patrol_cd < store.tick_ts - idle_ts then
+					if this.nav_rally.pos == starting_pos then
+						this.nav_rally.pos = patrol_pos
+					else
+						this.nav_rally.pos = starting_pos
+					end
+					idle_ts = store.tick_ts
+					patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
+				end
+			end
+		end
+		::label_706_0::
 		coroutine.yield()
 	end
 end

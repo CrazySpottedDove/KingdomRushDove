@@ -48026,5 +48026,131 @@ return {
 		prefix = "fallen_ones_grim_cemetery_fly_3",
 		from = 1,
 		to = 48
+	},
+	--飞艇
+	warmongers_baloon_tower_base_lvl4_light_run = {
+		prefix = "warmongers_baloon_tower_base_lvl4_light",
+		from = 1,
+		to = 40
+	},
+	warmongers_baloon_tower_base_flag_run = {
+		prefix = "warmongers_baloon_tower_base_flag",
+		from = 1,
+		to = 14
+	},
+	warmongers_baloon_tower_lookout_lvl4_idle = {
+		prefix = "warmongers_baloon_tower_lvl4_lookout",
+		from = 1,
+		to = 1
+	},
+	warmongers_baloon_tower_lookout_lvl4_spyglass = {
+		prefix = "warmongers_baloon_tower_lvl4_lookout",
+		from = 2,
+		to = 57
+	},
+	warmongers_baloon_tower_lookout_lvl4_splash = {
+		prefix = "warmongers_baloon_tower_lvl4_lookout",
+		from = 58,
+		to = 125
+	},
+	warmongers_baloon_tower_lvl4_zapper_idle = {
+		prefix = "warmongers_baloon_tower_lvl4_zapper",
+		from = 1,
+		to = 1
+	},
+	warmongers_baloon_tower_lvl4_zapper_running = {
+		prefix = "warmongers_baloon_tower_lvl4_zapper",
+		from = 2,
+		to = 9
+	},
+	warmongers_baloon_tower_lvl4_zapper_attack = {
+		prefix = "warmongers_baloon_tower_lvl4_zapper",
+		from = 10,
+		to = 38
+	},
+	warmongers_baloon_tower_lvl4_zapper_shoot = {
+		prefix = "warmongers_baloon_tower_lvl4_zapper",
+		from = 39,
+		to = 54
+	},
+	warmongers_baloon_tower_lvl4_zapper_death = {
+		prefix = "warmongers_baloon_tower_lvl4_zapper",
+		from = 55,
+		to = 67
+	},
+	baloon_tower_splash_run = {
+		prefix = "warmongers_baloon_tower_lvl4_splash",
+		from = 1,
+		to = 16
+	},
+	baloon_tower_pitch_run = {
+		prefix = "warmongers_baloon_tower_lvl4_pitch",
+		from = 1,
+		to = 26
+	},
+	baloon_tower_paratrooper_run = {
+		prefix = "warmongers_baloon_tower_lvl4_paratrooper",
+		from = 1,
+		to = 4
+	},
+	baloon_tower_buff_aura_run = {
+		prefix = "warmongers_baloon_tower_lvl4_tower_buff_aura",
+		from = 1,
+		to = 30
+	},
+	baloon_tower_buff_run = {
+		prefix = "warmongers_baloon_tower_lvl4_tower_buff",
+		from = 1,
+		to = 30
+	},
+	warmongers_baloon_tower_shooter_lvl4_idle = {
+		prefix = "warmongers_baloon_tower_shooter_lvl4",
+		from = 1,
+		to = 1
+	},
+	warmongers_baloon_tower_shooter_lvl4_shoot = {
+		prefix = "warmongers_baloon_tower_shooter_lvl4",
+		from = 2,
+		to = 27
+	},
+	warmongers_baloon_tower_base_lvl4_idle = {
+		prefix = "warmongers_baloon_tower_base_lvl1_layer1",
+		from = 1,
+		to = 1
+	},
+	warmongers_baloon_tower_base_lvl4_layerX_idle = {
+		layer_prefix = "warmongers_baloon_tower_base_lvl4_layer%i",
+		layer_from = 1,
+		layer_to = 2,
+		from = 1,
+		to = 1
+	},
+	warmongers_baloon_tower_base_lvl4_layerX_flags = {
+		layer_prefix = "warmongers_baloon_tower_base_lvl4_layer%i",
+		layer_from = 1,
+		layer_to = 2,
+		from = 2,
+		to = 68
+	},
+	warmongers_baloon_tower_lvl4_layerX_idle = {
+		layer_prefix = "warmongers_baloon_tower_lvl4_layer%i",
+		layer_from = 1,
+		layer_to = 3,
+		from = 1,
+		to = 24
+	},
+	warmongers_baloon_tower_lvl4_layerX_walk = {
+		layer_prefix = "warmongers_baloon_tower_lvl4_layer%i",
+		layer_from = 1,
+		layer_to = 3,
+		from = 25,
+		to = 49
+	},
+	warmongers_baloon_tower_lvl4_layerX_paratrooper = {
+		layer_prefix = "warmongers_baloon_tower_lvl4_layer%i",
+		layer_from = 1,
+		layer_to = 3,
+		from = 64,
+		to = 104
 	}
 }

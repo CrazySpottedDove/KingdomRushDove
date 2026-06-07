@@ -1,5 +1,5 @@
 local M = {}
-
+local log = require("lib.klua.log"):new("render")
 local perf = require("dove_modules.perf.perf")
 local A = require("animation_db")
 local I = require("lib.klove.image_db")
@@ -316,11 +316,43 @@ function M.register(sys)
 									end
 								end
 							else
+								-- if not MISSED_SS[fn] then
+								-- 	-- fallback, 仅在开发时启用，用于检查美术资源
+								-- 	log.error("Failed to get EXO frame for entity %s, frame id: %d", e.template_name, i)
+								-- 	log.error("EXO name: %s", fn)
+								-- 	MISSED_SS[fn] = true
+								-- end
 								s.exo_frame = {}
 							end
 						else
 							s.sync_flag = last_runs ~= s.runs
 							s.ss = I:s(fn)
+
+							-- DEBUG:仅在开发时启用，用于检查美术资源
+							if s.ss == nil then
+								local e = store.entities[s._render_e_id]
+								if s.animation then
+									if not MISSED_SS[s.animation] then
+										log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+										log.error("Animation name: %s", s.animation)
+										MISSED_SS[s.animation] = true
+									end
+
+								elseif s.animated then
+									if not MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] then
+										log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+										log.error("Animated prefix: %s", s.prefix)
+										log.error("Animated name: %s", s.name)
+										MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] = true
+									end
+								else
+									if not MISSED_SS[s.name] then
+										log.error("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i)
+										log.error("Static sprite name: %s", s.name)
+										MISSED_SS[s.name] = true
+									end
+								end
+							end
 						end
 					end
 

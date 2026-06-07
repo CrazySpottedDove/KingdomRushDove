@@ -1121,10 +1121,11 @@ upgrades.towers_with_barrack = {
 	"tower_ogre_shipwreck",
 	"tower_orc_warriors",
 	"tower_dark_knights",
-	"tower_grim_cemetery"
+	"tower_grim_cemetery",
+	"tower_balloon"
 }
 
-upgrades.non_barrack_towers_with_barrack_attribute = {"tower_sorcerer", "tower_mech", "tower_necromancer", "tower_frankenstein", "tower_druid", "tower_dark_elf_lvl4", "tower_bone_flingers"}
+upgrades.non_barrack_towers_with_barrack_attribute = {"tower_sorcerer", "tower_mech", "tower_necromancer", "tower_frankenstein", "tower_druid", "tower_dark_elf_lvl4", "tower_bone_flingers", "tower_balloon"}
 
 upgrades.mage_towers = GS.mage_towers
 
@@ -1202,7 +1203,9 @@ upgrades.engineer_bombs = {
 	"bomb_ogre_shipwreck_goblin_skill1",
 	"bomb_ogre_shipwreck_goblin_skill2",
 	"missile_rr",
-	"missile_rr_nitro"
+	"missile_rr_nitro",
+	"bomb_balloon",
+	"bullet_balloon_oil"
 }
 
 upgrades.engineer_advanced_tower = {
@@ -1219,7 +1222,8 @@ upgrades.engineer_advanced_tower = {
 	"tower_barrel_lvl4",
 	"tower_sparking_geode_lvl4",
 	"tower_rotten_forest",
-	"tower_rocket_riders"
+	"tower_rocket_riders",
+	"tower_balloon"
 }
 
 local fps_based_keys = {
@@ -1773,7 +1777,7 @@ function upgrades:patch_templates(max_level)
 
 	if u then
 		for _, n in pairs(engineer_towers) do
-			if n ~= "tower_mech" then
+			if n ~= "tower_mech" and n ~= "tower_balloon" then
 				T(n).attacks.range = math.ceil(T(n).attacks.range * u.range_factor)
 			end
 		end
@@ -1782,6 +1786,8 @@ function upgrades:patch_templates(max_level)
 		T("druid_shooter_sylvan").attacks.list[1].range = math.ceil(T("druid_shooter_sylvan").attacks.list[1].range * u.range_factor)
 		T("tower_flamespitter_lvl4").attacks.list[2].max_range = math.ceil(T("tower_flamespitter_lvl4").attacks.list[2].max_range * u.range_factor)
 		T("tower_flamespitter_lvl4").attacks.list[3].max_range = math.ceil(T("tower_flamespitter_lvl4").attacks.list[3].max_range * u.range_factor)
+		T("soldier_balloon").attacks.list[1].max_range = math.ceil(T("soldier_balloon").attacks.list[1].max_range * u.range_factor)
+		T("soldier_mecha").attacks.list[1].max_range = math.ceil(T("soldier_mecha").attacks.list[1].max_range * u.range_factor)
 	end
 
 	u = self:get_upgrade("engineer_magic_dust")

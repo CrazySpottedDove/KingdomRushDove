@@ -651,7 +651,7 @@ function ModItemRow:initialize(opts, row_w)
 					end
 
 					storage:write_lua(self._config_path, config)
-					local cfg_chunk, cfg_err = FS.load(opts.mod_data.config_path)
+					local cfg_chunk, _ = FS.load(opts.mod_data.config_path)
 					if cfg_chunk then
 						local ok, mod_cfg = pcall(cfg_chunk)
 						if ok and type(mod_cfg) == "table" then

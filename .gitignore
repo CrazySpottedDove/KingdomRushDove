@@ -58,3 +58,4 @@ config.json
 .zed/
 .codex
 .deepseek
+.opencode

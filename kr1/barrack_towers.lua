@@ -2313,7 +2313,6 @@ tt.barrack.rally_range = b.rally_range[4]
 tt.barrack.respawn_offset = vec_2(0, 34)
 tt.barrack.max_soldiers = b.max_soldiers
 tt.barrack.has_door = false
-tt.barrack.range_upgradable = true
 tt.barrack.rally_anywhere = true
 tt.sound_events.insert = "TowerPaladinCovenantTaunt"
 tt.sound_events.change_rally_point = "TowerPaladinCovenantTaunt"

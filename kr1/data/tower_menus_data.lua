@@ -322,6 +322,14 @@ return {
 			tt_title = _("TOWER_ROCKET_RIDERS_NAME"),
 			tt_desc = _("TOWER_ROCKET_RIDERS_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_balloon",
+			image = "kr4_main_icons_0015",
+			type = "balloon",
+			place = 21,
+			tt_title = _("TOWER_BALLOON_NAME"),
+			tt_desc = _("TOWER_BALLOON_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	archer = {{M(tpl.common_upgrade, {
@@ -2356,32 +2364,32 @@ return {
 		image = "kr5_special_icons_0013",
 		place = 6,
 		sounds = {"TowerElvenStargazersSkillATaunt"},
-		tt_phrase = _("TOWER_STARGAZER_4_EVENT_HORIZON_NOTE"),
+		tt_phrase = _("TOWER_STARGAZER_4_TELEPORT_NOTE"),
 		tt_list = {{
-			tt_title = _("TOWER_STARGAZER_4_EVENT_HORIZON_1_NAME"),
-			tt_desc = _("TOWER_STARGAZER_4_EVENT_HORIZON_1_DESCRIPTION")
+			tt_title = _("TOWER_STARGAZER_4_TELEPORT_1_NAME"),
+			tt_desc = _("TOWER_STARGAZER_4_TELEPORT_1_DESCRIPTION")
 		}, {
-			tt_title = _("TOWER_STARGAZER_4_EVENT_HORIZON_2_NAME"),
-			tt_desc = _("TOWER_STARGAZER_4_EVENT_HORIZON_2_DESCRIPTION")
+			tt_title = _("TOWER_STARGAZER_4_TELEPORT_2_NAME"),
+			tt_desc = _("TOWER_STARGAZER_4_TELEPORT_2_DESCRIPTION")
 		}, {
-			tt_title = _("TOWER_STARGAZER_4_EVENT_HORIZON_3_NAME"),
-			tt_desc = _("TOWER_STARGAZER_4_EVENT_HORIZON_3_DESCRIPTION")
+			tt_title = _("TOWER_STARGAZER_4_TELEPORT_3_NAME"),
+			tt_desc = _("TOWER_STARGAZER_4_TELEPORT_3_DESCRIPTION")
 		}}
 	}), M(tpl.upgrade_power, {
 		action_arg = "stars_death",
 		image = "kr5_special_icons_0014",
 		place = 7,
 		sounds = {"TowerElvenStargazersSkillBTaunt"},
-		tt_phrase = _("TOWER_STARGAZER_4_RISING_STAR_NOTE"),
+		tt_phrase = _("TOWER_STARGAZER_4_STARS_DEATH_NOTE"),
 		tt_list = {{
-			tt_title = _("TOWER_STARGAZER_4_RISING_STAR_1_NAME"),
-			tt_desc = _("TOWER_STARGAZER_4_RISING_STAR_1_DESCRIPTION")
+			tt_title = _("TOWER_STARGAZER_4_STARS_DEATH_1_NAME"),
+			tt_desc = _("TOWER_STARGAZER_4_STARS_DEATH_1_DESCRIPTION")
 		}, {
-			tt_title = _("TOWER_STARGAZER_4_RISING_STAR_2_NAME"),
-			tt_desc = _("TOWER_STARGAZER_4_RISING_STAR_2_DESCRIPTION")
+			tt_title = _("TOWER_STARGAZER_4_STARS_DEATH_2_NAME"),
+			tt_desc = _("TOWER_STARGAZER_4_STARS_DEATH_2_DESCRIPTION")
 		}, {
-			tt_title = _("TOWER_STARGAZER_4_RISING_STAR_3_NAME"),
-			tt_desc = _("TOWER_STARGAZER_4_RISING_STAR_3_DESCRIPTION")
+			tt_title = _("TOWER_STARGAZER_4_STARS_DEATH_3_NAME"),
+			tt_desc = _("TOWER_STARGAZER_4_STARS_DEATH_3_DESCRIPTION")
 		}}
 	}), tpl.sell}},
 	sand = {{M(tpl.upgrade_power, {
@@ -3457,5 +3465,42 @@ return {
 			tt_title = _("TOWER_GRIM_CEMETERY_PESTILENCE_NAME_3"),
 			tt_desc = _("TOWER_GRIM_CEMETERY_PESTILENCE_DESCRIPTION_3")
 		}}
-	}), tpl.sell}}
+	}), tpl.sell}},
+	balloon = {{M(tpl.upgrade_power, {
+		action_arg = "bomber",
+		image = "kr4_special_icons_0014",
+		sounds = {"BalloonSkillATaunt"},
+		place = 6,
+		tt_phrase = _("TOWER_BALLOON_BOMBER_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_BALLOON_BOMBER_NAME_1"),
+			tt_desc = _("TOWER_BALLOON_BOMBER_DESCRIPTION_1")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "watcher",
+		image = "kr4_special_icons_0015",
+		sounds = {"BalloonSkillBTaunt"},
+		place = 5,
+		tt_phrase = _("TOWER_BALLOON_WATCHER_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_BALLOON_WATCHER_NAME_1"),
+			tt_desc = _("TOWER_BALLOON_WATCHER_DESCRIPTION_1")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "oil",
+		image = "kr4_special_icons_0013",
+		sounds = {"BalloonSkillCTaunt"},
+		place = 7,
+		tt_phrase = _("TOWER_BALLOON_OIL_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_BALLOON_OIL_NAME_1"),
+			tt_desc = _("TOWER_BALLOON_OIL_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_BALLOON_OIL_NAME_2"),
+			tt_desc = _("TOWER_BALLOON_OIL_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_BALLOON_OIL_NAME_3"),
+			tt_desc = _("TOWER_BALLOON_OIL_DESCRIPTION_3")
+		}}
+	}), tpl.rally, tpl.sell}}
 }
