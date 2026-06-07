@@ -6717,9 +6717,9 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	TOWER_BALLOON_OIL_NAME_1 = "焦油桶",
 	TOWER_BALLOON_OIL_NAME_2 = "焦油桶II",
 	TOWER_BALLOON_OIL_NAME_3 = "焦油桶III",
-	TOWER_BALLOON_OIL_DESCRIPTION_1 = "每隔13秒，投掷焦油桶至正下方，对范围内敌人造成普攻伤害，并产生持续6秒的废油，使敌人减速20%。",
-	TOWER_BALLOON_OIL_DESCRIPTION_2 = "每隔13秒，投掷焦油桶至正下方，对范围内敌人造成普攻伤害，并产生持续6秒的废油，使敌人减速40%。",
-	TOWER_BALLOON_OIL_DESCRIPTION_3 = "每隔13秒，投掷焦油桶至正下方，对范围内敌人造成普攻伤害，并产生持续6秒的废油，使敌人减速60%。",
+	TOWER_BALLOON_OIL_DESCRIPTION_1 = "每隔12秒，投掷焦油桶至正下方，对范围内敌人造成普攻伤害，并产生持续6秒的废油，使敌人减速20%。",
+	TOWER_BALLOON_OIL_DESCRIPTION_2 = "每隔12秒，投掷焦油桶至正下方，对范围内敌人造成普攻伤害，并产生持续6秒的废油，使敌人减速40%。",
+	TOWER_BALLOON_OIL_DESCRIPTION_3 = "每隔12秒，投掷焦油桶至正下方，对范围内敌人造成普攻伤害，并产生持续6秒的废油，使敌人减速60%。",
 	TOWER_BALLOON_OIL_NOTE = "泼油！",
 	TOWER_BALLOON_SPECIAL = "随机索敌，飞行中投弹"
 }
