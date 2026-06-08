@@ -32,7 +32,6 @@ function simulation:init(store, system_names)
 	d.entities_with_main_script_on_update_index = {}
 	d.entities_with_main_script_on_update_count = 0
 	d.entities_with_timed = {}
-	d.entities_with_tween = {}
 	d.entities_with_lights = {}
 	d.entities_with_ui = {}
 	d.pending_inserts = {}

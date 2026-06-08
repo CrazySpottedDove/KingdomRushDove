@@ -61,7 +61,7 @@ local function lerp_number_quad(a, b, t, s, key)
 end
 
 local function lerp_number_sine_multiply(a, b, t, s, key)
-	s[key] = a == b and (a[2] * s[key]) or (a + (b - a) * (0.5 * (1 - cos((t - a[1]) / (b[1] - a[1]) * PI))) * s[key])
+	s[key] = a == b and (a[2] * s[key]) or (a[2] + (b[2] - a[2]) * (0.5 * (1 - cos((t - a[1]) / (b[1] - a[1]) * PI))) * s[key])
 end
 
 local function lerp_number_sine(a, b, t, s, key)
@@ -179,8 +179,13 @@ function M.register(sys)
 	sys.tween = {}
 	sys.tween.name = "tween"
 
+	function sys.tween:init(store)
+		store.entities_with_tween = {}
+	end
+
 	function sys.tween:on_insert_unconditional(entity, store)
 		if entity.tween then
+			store.entities_with_tween[entity.id] = entity
 			for i = 1, #entity.tween.props do
 				local p = entity.tween.props[i]
 				for j = 1, #p.keys do
@@ -264,7 +269,6 @@ function M.register(sys)
 				entity.tween.ts = U.frandom(-1 * entity.tween.random_ts, 0)
 			end
 		end
-
 	end
 
 	function sys.tween:on_render_update(dt, ts, store)
@@ -347,6 +351,12 @@ function M.register(sys)
 			end
 		end
 		perf.stop("tween_system")
+	end
+
+	function sys.tween:on_remove_unconditional(entity, store)
+		if entity.tween then
+			store.entities_with_tween[entity.id] = nil
+		end
 	end
 end
 

@@ -76,10 +76,6 @@ function M.register(sys)
 			d.entities_with_timed[e.id] = e
 		end
 
-		if e.tween then
-			d.entities_with_tween[e.id] = e
-		end
-
 		if e.lights then
 			d.entities_with_lights[e.id] = e
 		end
@@ -152,10 +148,6 @@ function M.register(sys)
 
 		if e.timed then
 			d.entities_with_timed[e.id] = nil
-		end
-
-		if e.tween then
-			d.entities_with_tween[e.id] = nil
 		end
 
 		if e.lights then
