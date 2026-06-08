@@ -132,7 +132,6 @@ function M.register(sys)
 					particles[ps.particle_count] = p
 
 					local f = {
-						ss = nil,
 						flip_x = false,
 						flip_y = false,
 						pos = V.v(0, 0),
@@ -197,6 +196,10 @@ function M.register(sys)
 							f.animation_name = ps.names[random(1, #ps.names)]
 						end
 					end
+
+					if ps.color then
+						f.color = ps.color
+					end
 				end
 
 				ps.emit_ts = ps.emit_ts + count * 1 / ps.emission_rate
@@ -245,10 +248,6 @@ function M.register(sys)
 
 					if ps.sort_y_offsets then
 						f.sort_y_offset = phase_interp(ps.sort_y_offsets, phase)
-					end
-
-					if ps.color then
-						f.color = ps.color
 					end
 
 					if ps.animated then

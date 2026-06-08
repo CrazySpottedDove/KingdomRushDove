@@ -22295,71 +22295,76 @@ end
 
 scripts.shadow_crow = {}
 
-function scripts.shadow_crow.update(this, store)
-	local sp = this.render.sprites[1]
+local function shadow_crow_force_move_step(this, store, dest, max_speed, ramp_radius, accel_cap)
+	local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
+	local dist = V.len(dx, dy)
+	local df = 1
+	local ac = accel_cap or 900
+
+	if ramp_radius and ramp_radius > 0 and dist <= ramp_radius then
+		df = math.max(dist / ramp_radius, 0.1)
+	end
 	local fm = this.force_motion
-	local ca = this.custom_attack
-	local dest = V.vclone(this.idle_pos)
-	local mytarget = nil
 
-	local function force_move_step(dest, max_speed, ramp_radius, accel_cap)
-		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
-		local dist = V.len(dx, dy)
-		local df = 1
-		local ac = accel_cap or 900
+	fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(ac, V.mul(10 * df, dx, dy)))
+	fm.v.x, fm.v.y = V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y))
+	fm.v.x, fm.v.y = V.trim(max_speed, fm.v.x, fm.v.y)
+	this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
+	fm.a.x, fm.a.y = V.mul(-0.05 / store.tick_length, fm.v.x, fm.v.y)
+	this.render.sprites[1].flip_x = this.pos.x < dest.x
+end
 
-		if ramp_radius and ramp_radius > 0 and dist <= ramp_radius then
-			df = math.max(dist / ramp_radius, 0.1)
-		end
+local _shadow_crow_this = nil
 
-		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(ac, V.mul(10 * df, dx, dy)))
-		fm.v.x, fm.v.y = V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y))
-		fm.v.x, fm.v.y = V.trim(max_speed, fm.v.x, fm.v.y)
-		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
-		fm.a.x, fm.a.y = V.mul(-0.05 / store.tick_length, fm.v.x, fm.v.y)
-		sp.flip_x = this.pos.x < dest.x
+local function shadow_crow_sort_fn(e1, e2)
+	if e1.health.armor > 0 and e2.health.armor <= 0 then
+		return true
+	end
+	if e1.health.armor <= 0 and e2.health.armor > 0 then
+		return false
+	end
+	return _shadow_crow_this.pos:dist2(e1.pos) < _shadow_crow_this.pos:dist2(e2.pos)
+end
+
+function scripts.shadow_crow.update(this, store)
+	if not this.owner then
+		queue_remove(store, this)
+		return
 	end
 
-	sp.offset.y = this.flight_height
+	local context = this.main_script.context
+	if context.state == 0 then
+		context.search_ts = store.tick_ts
+		context.state = 1
+		context.dest = V.vclone(this.idle_pos)
+	end
 
-	local search_ts = store.tick_ts
+	local mytarget = context.mytarget
+	if mytarget and (mytarget.health.dead or mytarget.health.armor <= 0 or not store.entities[mytarget.id] or this.idle_pos:dist2(mytarget.pos) > this.owner.attacks.range * 1.44 * this.owner.attacks.range) then
+		context.mytarget = nil
+		mytarget = nil
+	end
 
-	while true do
-		if not this.owner then
-			queue_remove(store, this)
-			return
+	if not mytarget and context.search_ts < store.tick_ts then
+		context.search_ts = store.tick_ts
+		local enemies = U.find_enemies_in_range_filter_off(tpos(this.owner), this.owner.attacks.range * 1.2, this.custom_attack.vis_flags, this.custom_attack.vis_bans)
+		if enemies then
+			_shadow_crow_this = this
+			table.sort(enemies, shadow_crow_sort_fn)
+			mytarget = enemies[1]
+			context.mytarget = mytarget
+		else
+			context.search_ts = context.search_ts + fts(5)
 		end
+	end
 
-		if mytarget and (mytarget.health.dead or mytarget.health.armor <= 0 or not store.entities[mytarget.id] or this.idle_pos:dist2(mytarget.pos) > this.owner.attacks.range * 1.44 * this.owner.attacks.range) then
-			mytarget = nil
-		end
-
-		if not mytarget and search_ts < store.tick_ts then
-			search_ts = store.tick_ts
-			local enemies = U.find_enemies_in_range_filter_off(tpos(this.owner), this.owner.attacks.range * 1.2, ca.vis_flags, ca.vis_bans)
-			if enemies then
-				table.sort(enemies, function(e1, e2)
-					if e1.health.armor > 0 and e2.health.armor <= 0 then
-						return true
-					end
-					if e1.health.armor <= 0 and e2.health.armor > 0 then
-						return false
-					end
-					return this.pos:dist2(e1.pos) < this.pos:dist2(e2.pos)
-				end)
-				mytarget = enemies[1]
-			else
-				search_ts = search_ts + fts(5)
-			end
-		end
-
-		if mytarget and not this.owner.tower.blocked then
+	if mytarget then
+		if not this.owner.tower.blocked then
 			local target = store.entities[mytarget.id]
 
-			local dist = V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y)
-			local target_speed = target.motion and target.motion.max_speed or 0
-			local effective_chase_speed = math.max(this.flight_speed_busy - target_speed * 0.5, this.flight_speed_busy * 0.3)
-			local lead_time = math.max(0.06, math.min(dist / effective_chase_speed, 0.6)) * 1.8
+			local effective_chase_speed = math.max(this.flight_speed_busy - (target.motion and target.motion.max_speed or 0) * 0.5, this.flight_speed_busy * 0.3)
+			local lead_time = math.max(0.06, math.min(V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y) / effective_chase_speed, 0.6)) * 1.8
+			local dest = context.dest
 
 			if target.motion and target.motion.speed then
 				dest:copy(target.pos)
@@ -22372,12 +22377,9 @@ function scripts.shadow_crow.update(this, store)
 			dest:scalar_add(10 * math.cos(random_theta), 10 * math.sin(random_theta))
 
 			U.animation_start(this, "fly", nil, store.tick_ts, true)
-			force_move_step(dest, this.flight_speed_busy, this.ramp_dist_busy, 4200)
+			shadow_crow_force_move_step(this, store, dest, this.flight_speed_busy, this.ramp_dist_busy, 4200)
 
-			if not this.owner then
-				queue_remove(store, this)
-				return
-			end
+			local ca = this.custom_attack
 
 			if ready_to_attack(ca, store, this.owner.tower.cooldown_factor) and this.pos:dist2(target.pos) <= 2500 then
 				U.animation_start(this, "carry", nil, store.tick_ts, true)
@@ -22413,14 +22415,10 @@ function scripts.shadow_crow.update(this, store)
 				end
 			end
 		end
-
-		if not mytarget then
-			dest:copy(this.idle_pos)
-			U.animation_start(this, "fly", nil, store.tick_ts, true)
-			force_move_step(dest, this.flight_speed_idle, this.ramp_dist_idle, 700)
-		end
-
-		coroutine.yield()
+	else
+		context.dest:copy(this.idle_pos)
+		U.animation_start(this, "fly", nil, store.tick_ts, true)
+		shadow_crow_force_move_step(this, store, context.dest, this.flight_speed_idle, this.ramp_dist_idle, 700)
 	end
 end
 
