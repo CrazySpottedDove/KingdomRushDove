@@ -746,10 +746,11 @@ end
 -- 在 difficulty:patch_templates() 后调用！
 function entity_db:patch_config(config)
 	-- 如果所有倍率都是 1，就直接跳过，避免不必要的循环和乘法运算，提升性能。
-	if config.enemy_damage_multiplier == 1 and config.enemy_health_multiplier == 1 and config.enemy_gold_multiplier == 1 and config.enemy_health_damage_multiplier == 1 and config.enemy_speed_multiplier == 1 and config.tower_cooldown_divider == 1 and config.tower_damage_multiplier == 1 and config.tower_range_multiplier == 1 then
+	if config.enemy_damage_multiplier == 1 and config.enemy_health_multiplier == 1 and config.enemy_gold_multiplier == 1 and config.enemy_health_damage_multiplier == 1 and config.enemy_speed_multiplier == 1 and config.tower_cooldown_divider == 1 and config.tower_damage_multiplier == 1 and config.tower_range_multiplier == 1 and config.extra_soldiers == 0 then
 		return
 	end
 	local SU = require("script_utils")
+	local barrack_towers = require("kr1.game_settings").barrack_towers
 	for _, t in pairs(self.entities) do
 		if t.enemy then
 			if t.health.hp_max then
@@ -778,6 +779,9 @@ function entity_db:patch_config(config)
 			t.tower.damage_factor = t.tower.damage_factor * config.tower_damage_multiplier
 			if t.attacks then
 				t.attacks.range = t.attacks.range * config.tower_range_multiplier
+			end
+			if t.template_name ~= "tower_baby_ashbite" and t.template_name ~= "tower_pandas_lvl4" and table.arraycontains(barrack_towers, t.template_name) then
+				t.barrack.max_soldiers = t.barrack.max_soldiers + config.extra_soldiers
 			end
 		end
 	end

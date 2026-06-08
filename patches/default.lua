@@ -43,5 +43,7 @@ return {
 	-- 随机出怪
 	random_creeps = false,
 	-- 随机造塔
-	build_random_towers = false
+	build_random_towers = false,
+	-- 额外士兵数量
+	extra_soldiers = 0
 }

@@ -6733,7 +6733,8 @@ function ConfigPanelView:initialize(sw, sh, keyboard, controller)
 		build_random_towers = "随机建造防御塔",
 		tower_cooldown_divider = "防御塔攻速倍率",
 		tower_damage_multiplier = "防御塔伤害倍率",
-		tower_range_multiplier = "防御塔射程倍率"
+		tower_range_multiplier = "防御塔射程倍率",
+		extra_soldiers = "额外士兵数量"
 	})
 end
 
