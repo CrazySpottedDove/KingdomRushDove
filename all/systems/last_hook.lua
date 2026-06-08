@@ -62,10 +62,6 @@ function M.register(sys)
 			d.auras[e.id] = e
 		end
 
-		if e.particle_system then
-			d.particle_systems[e.id] = e
-		end
-
 		if e.main_script and e.main_script.update then
 			d.entities_with_main_script_on_update_count = d.entities_with_main_script_on_update_count + 1
 			d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count] = e
@@ -123,10 +119,6 @@ function M.register(sys)
 			d.towers[e.id] = nil
 		elseif e.aura then
 			d.auras[e.id] = nil
-		end
-
-		if e.particle_system then
-			d.particle_systems[e.id] = nil
 		end
 
 		if e.main_script and e.main_script.update then

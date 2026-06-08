@@ -46,6 +46,7 @@ function M.register(sys)
 
 	function sys.particle_system:init(store)
 		self.phase_interp = phase_interp
+		store.particle_systems = {}
 	end
 
 	function sys.particle_system:on_insert_unconditional(entity, store)
@@ -54,9 +55,8 @@ function M.register(sys)
 
 			ps.ts = store.tick_ts
 			ps.emit_ts = store.tick_ts + ps.ts_offset
+			store.particle_systems[entity.id] = entity
 		end
-
-	-- return true
 	end
 
 	function sys.particle_system:on_remove_unconditional(entity, store)
@@ -68,6 +68,8 @@ function M.register(sys)
 				ps.frames[i].marked_to_remove = true
 				ps.frames[i] = nil
 			end
+
+			store.particle_systems[entity.id] = nil
 		end
 
 		return true
