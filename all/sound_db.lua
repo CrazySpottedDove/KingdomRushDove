@@ -733,6 +733,23 @@ function sound_db:play(request)
 	end
 end
 
+-- 在指定的声音源池中找到最早将要停止的声音源，返回其索引位置
+local function soon_to_stop_source(group_active_sources)
+	local mtp = 1000000000
+	local pos = 1
+
+	for i, ast in ipairs(group_active_sources) do
+		local remaining = ast.source:getDuration() - ast.source:tell()
+
+		if remaining < mtp then
+			mtp = remaining
+			pos = i
+		end
+	end
+
+	return pos
+end
+
 local function get_or_create_source(source_pool)
 	-- 先遍历，有空闲的资源，直接返回即可
 	for i = 1, #source_pool do
@@ -772,7 +789,14 @@ function sound_db:_play(request, source_pool)
 	if #active_list < max then
 		source = get_or_create_source(source_pool)
 	else
-		return
+		local ste_idx = soon_to_stop_source(active_list)
+		local ste_ast = active_list[ste_idx]
+
+		ste_ast.source:stop()
+
+		table.remove(active_list, ste_idx)
+
+		source = get_or_create_source(source_pool)
 	end
 
 	local vol = opts.gain or 1
