@@ -21,7 +21,7 @@ end
 soldier_reinforcement.update = [[
 return function(this, store)
 	local brk, stam, star
-
+    
 	this.reinforcement.ts = store.tick_ts
 	this.render.sprites[1].ts = store.tick_ts
 

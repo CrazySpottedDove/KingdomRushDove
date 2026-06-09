@@ -153,8 +153,23 @@ local aura_apply_damage = {}
 -- ]]
 
 aura_apply_damage.update = [[
+constvar a = this.aura
+constif(band(a.vis_bans, F_FRIEND) ~= 0 and a.allowed_templates or a.excluded_templates or a.filter_source)
+    local _aura = nil
+    local function filter_fn(e)
+        return true
+
+        @constif(a.allowed_templates)
+        and table.arraycontains(_aura.allowed_templates, e.template_name)
+
+        @constif(a.excluded_templates)
+        and not table.arraycontains(_aura.excluded_templates, e.template_name)
+
+        @constif(a.filter_source)
+        and _aura.source_id ~= e.id
+    end
+constend
 return function(this, store)
-    constvar a = this.aura
     local context = this.main_script.context
 
     if context.state == 0 then
@@ -202,8 +217,9 @@ return function(this, store)
         local targets
 
         constif(band(a.vis_bans, F_ENEMY) ~= 0)
-            targets = table.filter(store.soldiers, function(k, v)
-                return not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius)
+            local targets = {}
+            for _, v in pairs(store.soldiers) do
+                if not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius)
 
                 @constif(this.aura.allowed_templates)
                 and table.arraycontains(this.aura.allowed_templates, v.template_name)
@@ -213,37 +229,34 @@ return function(this, store)
 
                 @constif(this.aura.filter_source)
                 and this.aura.source_id ~= v.id
-            end)
+                then
+                    targets[#targets + 1] = v
+                end
+            end
         constelseif(band(a.vis_bans, F_FRIEND) ~= 0)
             constif(a.allowed_templates or a.excluded_templates or a.filter_source)
-                targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, function(e)
-                    return true
-
-                    @constif(this.aura.allowed_templates)
-                    and table.arraycontains(this.aura.allowed_templates, e.template_name)
-
-                    @constif(this.aura.excluded_templates)
-                    and not table.arraycontains(this.aura.excluded_templates, e.template_name)
-
-                    @constif(this.aura.filter_source)
-                    and this.aura.source_id ~= e.id
-                end)
+            _aura = this.aura
+            local targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans, filter_fn)
             constelse
-                targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
+            local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
             constend
         constelse
-            targets = table.filter(store.entities, function(k, v)
-                return v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius)
+        local targets = {}
+        for _, v in pairs(store.entities) do
+            if v.unit and v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius)
 
-                @constif(this.aura.allowed_templates)
-                and table.arraycontains(this.aura.allowed_templates, v.template_name)
+            @constif(this.aura.allowed_templates)
+            and table.arraycontains(this.aura.allowed_templates, v.template_name)
 
-                @constif(this.aura.excluded_templates)
-                and not table.arraycontains(this.aura.excluded_templates, v.template_name)
+            @constif(this.aura.excluded_templates)
+            and not table.arraycontains(this.aura.excluded_templates, v.template_name)
 
-                @constif(this.aura.filter_source)
-                and this.aura.source_id ~= v.id
-            end)
+            @constif(this.aura.filter_source)
+            and this.aura.source_id ~= v.id
+            then
+                targets[#targets + 1] = v
+            end
+        end
         constend
 
         constif(band(a.vis_bans, F_FRIEND) ~= 0)

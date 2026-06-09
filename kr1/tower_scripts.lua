@@ -22314,18 +22314,6 @@ local function shadow_crow_force_move_step(this, store, dest, max_speed, ramp_ra
 	this.render.sprites[1].flip_x = this.pos.x < dest.x
 end
 
-local _shadow_crow_this = nil
-
-local function shadow_crow_sort_fn(e1, e2)
-	if e1.health.armor > 0 and e2.health.armor <= 0 then
-		return true
-	end
-	if e1.health.armor <= 0 and e2.health.armor > 0 then
-		return false
-	end
-	return _shadow_crow_this.pos:dist2(e1.pos) < _shadow_crow_this.pos:dist2(e2.pos)
-end
-
 function scripts.shadow_crow.update(this, store)
 	if not this.owner then
 		queue_remove(store, this)
@@ -22349,9 +22337,17 @@ function scripts.shadow_crow.update(this, store)
 		context.search_ts = store.tick_ts
 		local enemies = U.find_enemies_in_range_filter_off(tpos(this.owner), this.owner.attacks.range * 1.2, this.custom_attack.vis_flags, this.custom_attack.vis_bans)
 		if enemies then
-			_shadow_crow_this = this
-			table.sort(enemies, shadow_crow_sort_fn)
 			mytarget = enemies[1]
+			for i = 2, #enemies do
+				local candidate = enemies[i]
+				if candidate.health.armor > 0 and mytarget.health.armor <= 0 then
+					mytarget = candidate
+				elseif candidate.health.armor <= 0 and mytarget.health.armor > 0 then
+				-- do nothing
+				elseif this.pos:dist2(candidate.pos) < this.pos:dist2(mytarget.pos) then
+					mytarget = candidate
+				end
+			end
 			context.mytarget = mytarget
 		else
 			context.search_ts = context.search_ts + fts(5)
@@ -26450,13 +26446,11 @@ function scripts.soldier_balloon_goblin.update(this, store, script)
 			idle_ts = store.tick_ts
 			patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
 		else
-			if this.ranged and not this.ranged.range_while_blocking then
-				brk, sta = SU.y_soldier_ranged_attacks(store, this)
-				if brk or sta == A_DONE then
-					goto label_706_1
-				elseif sta == A_IN_COOLDOWN and not this.ranged.go_back_during_cooldown then
-					goto label_706_0
-				end
+			brk, sta = SU.y_soldier_ranged_attacks(store, this)
+			if brk or sta == A_DONE then
+				goto label_706_1
+			elseif sta == A_IN_COOLDOWN and not this.ranged.go_back_during_cooldown then
+				goto label_706_0
 			end
 
 			if SU.soldier_go_back_step(store, this) then
