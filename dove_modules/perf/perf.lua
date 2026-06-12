@@ -7,7 +7,7 @@ local perf = {}
 perf.items = {}
 perf.tmp = {}
 perf.frames = 0
-perf.main_scripts = 0
+perf.coros = 0
 
 function perf.reset()
 	for _, v in pairs(perf.items) do
@@ -107,8 +107,8 @@ function perf.set_frames(frame_count)
 	perf.frames = frame_count
 end
 
-function perf.set_main_scripts(main_script_count)
-	perf.main_scripts = main_script_count
+function perf.set_coros(coro_count)
+	perf.coros = coro_count
 end
 
 return perf

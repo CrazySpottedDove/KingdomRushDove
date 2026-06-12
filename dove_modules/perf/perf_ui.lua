@@ -166,7 +166,7 @@ function perf_ui.draw()
 	-- 标题：FPS 和 总耗时
 	lg.setColor(1, 1, 1, 0.95)
 	local mode_tag = perf_ui.mode == "cumulative" and " [AVG]" or ""
-	lg.print(string.format("FPS: %d Memory: %d MB%s Frames: %d Scripts: %d", love.timer.getFPS(), collectgarbage("count") / 1024, mode_tag, perf.frames, perf.main_scripts), x + 8, y + 6)
+	lg.print(string.format("FPS: %d Memory: %d MB%s Frames: %d Coros: %d", love.timer.getFPS(), collectgarbage("count") / 1024, mode_tag, perf.frames, perf.coros), x + 8, y + 6)
 
 	local bx, by = x + 8, y + 28
 	local value_x = x + w - 8
