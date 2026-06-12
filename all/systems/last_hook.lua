@@ -62,11 +62,11 @@ function M.register(sys)
 			d.auras[e.id] = e
 		end
 
-		if e.main_script and e.main_script.update then
-			d.entities_with_main_script_on_update_count = d.entities_with_main_script_on_update_count + 1
-			d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count] = e
-			d.entities_with_main_script_on_update_index[e.id] = d.entities_with_main_script_on_update_count
-		end
+		-- if e.main_script and e.main_script.update then
+		-- 	d.entities_with_main_script_on_update_count = d.entities_with_main_script_on_update_count + 1
+		-- 	d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count] = e
+		-- 	d.entities_with_main_script_on_update_index[e.id] = d.entities_with_main_script_on_update_count
+		-- end
 
 		if e.timed then
 			d.entities_with_timed[e.id] = e
@@ -121,22 +121,22 @@ function M.register(sys)
 			d.auras[e.id] = nil
 		end
 
-		if e.main_script and e.main_script.update then
-			local index = d.entities_with_main_script_on_update_index[e.id]
+		-- if e.main_script and e.main_script.update then
+		-- 	local index = d.entities_with_main_script_on_update_index[e.id]
 
-			if not index then
-				log.error(string.format("！如果看见这条消息，请截下来发给作者，实体 %s 的 main_script.update 没有正确注册到 entities_with_main_script_on_update 中", e.template_name))
-				-- return false
-				return
-			end
-			-- 交换删除，保证数组的连续性
-			local last_entity = d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count]
-			d.entities_with_main_script_on_update[index] = last_entity
-			d.entities_with_main_script_on_update_index[last_entity.id] = index
-			d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count] = nil
-			d.entities_with_main_script_on_update_index[e.id] = nil
-			d.entities_with_main_script_on_update_count = d.entities_with_main_script_on_update_count - 1
-		end
+		-- 	if not index then
+		-- 		log.error(string.format("！如果看见这条消息，请截下来发给作者，实体 %s 的 main_script.update 没有正确注册到 entities_with_main_script_on_update 中", e.template_name))
+		-- 		-- return false
+		-- 		return
+		-- 	end
+		-- 	-- 交换删除，保证数组的连续性
+		-- 	local last_entity = d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count]
+		-- 	d.entities_with_main_script_on_update[index] = last_entity
+		-- 	d.entities_with_main_script_on_update_index[last_entity.id] = index
+		-- 	d.entities_with_main_script_on_update[d.entities_with_main_script_on_update_count] = nil
+		-- 	d.entities_with_main_script_on_update_index[e.id] = nil
+		-- 	d.entities_with_main_script_on_update_count = d.entities_with_main_script_on_update_count - 1
+		-- end
 
 		if e.timed then
 			d.entities_with_timed[e.id] = nil
