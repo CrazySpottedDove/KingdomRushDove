@@ -26208,21 +26208,10 @@ function scripts.soldier_balloon.insert(this, store, script)
 	return true
 end
 
-function scripts.soldier_balloon.remove(this, store, script)
-	local mods = table.filter(store.modifiers, function(_, e)
-		return e.modifier.source_id == this.id
-	end)
-	for _, m in ipairs(mods) do
-		queue_remove(store, m)
-	end
-	return true
-end
-
 function scripts.soldier_balloon.update(this, store, script)
 	local ab = this.attacks.list[1]
-	local ea = this.attacks.list[2]
-	local ao = this.attacks.list[3]
-	local aa = this.attacks.list[4]
+	local ao = this.attacks.list[2]
+	local aa = this.attacks.list[3]
 	local pow_o = this.powers.oil
 	local pow_b = this.powers.bomber
 	local pow_e = this.powers.watcher
@@ -26261,31 +26250,34 @@ function scripts.soldier_balloon.update(this, store, script)
 	end)
 
 	local co_layers = coroutine.create(function()
+		local last_search_ts = store.tick_ts
 		while true do
 			local r = this.nav_rally
-			while r.new do
-				r.new = false
-				U.set_destination(this, r.pos)
 
+			if pow_e.level > 0 and not r.new and store.tick_ts - last_search_ts > 0.1 and not U.find_first_enemy_in_range_filter_off(this.pos, ab.max_range, ab.vis_flags, ab.vis_bans) then
+				last_search_ts = store.tick_ts
+				local target = U.detect_foremost_enemy_in_range_filter_off(this.owner.pos, this.owner.barrack.rally_range, ab.vis_flags, ab.vis_bans)
+				if target then
+					r.new = true
+					r.pos:copy(target.pos)
+				end
+			end
+
+			if r.new then
 				local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 				U.animation_start_group(this, an, af, store.tick_ts, true, "layers")
 				U.animation_start_group(this.owner, "flags", nil, store.tick_ts, true, "layers")
-				while not this.motion.arrived and not r.new do
-					U.walk_off__accel__unsnapped(this, store.tick_length)
-					coroutine.yield()
-					this.motion.speed.x, this.motion.speed.y = 0, 0
+				while r.new do
+					r.new = false
+					U.set_destination(this, r.pos)
+					while not this.motion.arrived and not r.new do
+						U.walk_off__accel__unsnapped(this, store.tick_length)
+						coroutine.yield()
+						this.motion.speed.x, this.motion.speed.y = 0, 0
+					end
 				end
 				U.animation_start_group(this, "idle", nil, store.tick_ts, true, "layers")
 				U.animation_start_group(this.owner, "idle", nil, store.tick_ts, true, "layers")
-
-				local existing_mods = table.filter(store.modifiers, function(_, e)
-					return e.modifier.source_id == this.id and e.template_name == ea.mod and not U.is_inside_ellipse(e.pos, this.pos, ea.range + ea.range_inc * pow_e.level)
-				end)
-
-				for i = 1, #existing_mods do
-					queue_remove(store, existing_mods[i])
-				end
-				coroutine.yield()
 			end
 
 			if pow_b.level > 0 then
@@ -26316,8 +26308,16 @@ function scripts.soldier_balloon.update(this, store, script)
 	local co_pitch = coroutine.create(function()
 		while true do
 			if pow_o.level > 0 then
+				if pow_e.level > 0 and store.tick_ts - ao.ts + 2 > ao.cooldown * tw.cooldown_factor then
+					local oil_target = U.detect_foremost_enemy_in_range_filter_off(this.owner.pos, this.owner.barrack.rally_range, ao.vis_flags, ao.vis_bans)
+					if oil_target then
+						local r = this.nav_rally
+						r.new = true
+						r.pos:copy(oil_target.pos)
+					end
+				end
 				if ready_to_attack(ao, store, tw.cooldown_factor) then
-					local target = U.find_random_enemy(store, this.pos, ao.min_range, ao.max_range, ao.vis_flags, ao.vis_bans)
+					local target = U.find_first_enemy_in_range_filter_off(this.pos, ao.max_range, ao.vis_flags, ao.vis_bans)
 					if target then
 						ao.ts = store.tick_ts
 						local an, af = U.animation_name_facing_point(this, ao.animation, target.pos)
@@ -26346,7 +26346,13 @@ function scripts.soldier_balloon.update(this, store, script)
 	while true do
 		if pow_e.changed then
 			pow_e.changed = nil
-			ea.ts = store.tick_ts
+			local mod = E:create_entity(pow_e.mod)
+			mod.modifier.level = pow_e.level
+			mod.modifier.source_id = this.id
+			mod.modifier.target_id = this.owner.id
+			mod.pos:copy(this.owner.pos)
+			this._balloon_mod_id = mod.id
+			queue_insert(store, mod)
 		end
 
 		if pow_b.changed then
@@ -26363,35 +26369,18 @@ function scripts.soldier_balloon.update(this, store, script)
 			end
 		end
 
-		if pow_e.level > 0 then
-			if store.tick_ts - ea.ts > ea.cooldown then
-				ea.ts = store.tick_ts
-				local eagle_range = ea.range + ea.range_inc * pow_e.level
-				local existing_mods = table.filter(store.modifiers, function(_, e)
-					return e.template_name == ea.mod and e.modifier.level >= pow_e.level
-				end)
-				local busy_ids = table.map(existing_mods, function(k, v)
-					return v.modifier.target_id
-				end)
-				local towers = table.filter(store.towers, function(_, e)
-					return e.tower.can_be_mod and not table.contains(busy_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, eagle_range)
-				end)
-				for _, tower in ipairs(towers) do
-					local new_mod = E:create_entity(ea.mod)
-					new_mod.modifier.level = pow_e.level
-					new_mod.modifier.target_id = tower.id
-					new_mod.modifier.source_id = this.id
-					new_mod.pos = tower.pos
-					queue_insert(store, new_mod)
-				end
-			end
-		end
-
 		coroutine.resume(co_layers)
 		coroutine.resume(co_shooters)
 		coroutine.resume(co_pitch)
 		coroutine.yield()
 	end
+end
+
+function scripts.soldier_balloon.remove(this, store, script)
+	if this._balloon_mod_id and store.entities[this._balloon_mod_id] then
+		queue_remove(store, store.entities[this._balloon_mod_id])
+	end
+	return true
 end
 
 scripts.soldier_balloon_goblin = {}
@@ -26471,6 +26460,31 @@ function scripts.soldier_balloon_goblin.update(this, store, script)
 		::label_706_0::
 		coroutine.yield()
 	end
+end
+
+scripts.mod_balloon = {}
+
+function scripts.mod_balloon.insert(this, store)
+	if scripts.mod_tower_factors.insert(this, store) then
+		local source = store.entities[this.modifier.source_id]
+		if not source then
+			return false
+		end
+		U.speed_inc_self(source, this.speed_inc)
+		return true
+	end
+	return false
+end
+
+function scripts.mod_balloon.remove(this, store)
+	if scripts.mod_tower_factors.remove(this, store) then
+		local source = store.entities[this.modifier.source_id]
+		if source then
+			U.speed_dec_self(source, this.speed_inc)
+		end
+		return true
+	end
+	return false
 end
 
 return scripts
