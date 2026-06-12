@@ -83,55 +83,7 @@ function M.register(sys)
 	end
 
 	function sys.main_script:on_update(dt, ts, store)
-		perf.start("main_script")
-		-- for i = 1, store.entities_with_main_script_on_update_count do
-		-- 	local e = store.entities_with_main_script_on_update[i]
-		-- 	local s = e.main_script
-
-		-- 	-- 协程型脚本
-		-- 	if s.type == 0 then
-		-- 		if not s.co and s.runs ~= 0 then
-		-- 			s.runs = s.runs - 1
-		-- 			s.co = coroutine.create(s.update)
-		-- 		end
-
-		-- 		if s.co then
-		-- 			local success, err = coroutine.resume(s.co, e, store)
-
-		-- 			if coroutine.status(s.co) == "dead" or (not success and err ~= nil) then
-		-- 				if not success and err ~= nil then
-		-- 					-- -- 安卓端逻辑：直接抛出错误，触发全局错误捕获机制，弹出错误提示框
-		-- 					if IS_ANDROID then
-		-- 						error("Error running " .. e.template_name .. " coro: " .. err .. debug.traceback(s.co))
-		-- 					else
-		-- 						log.error("Error running " .. e.template_name .. " coro: " .. err .. debug.traceback(s.co))
-		-- 						simulation:queue_remove_entity(e)
-		-- 					end
-
-		-- 					if LLDEBUGGER then
-		-- 						LLDEBUGGER.start()
-		-- 					end
-		-- 				end
-
-		-- 				s.co = nil
-		-- 			end
-		-- 		end
-		-- 	else
-		-- 		-- 状态机型脚本
-		-- 		s.update(e, store)
-		-- 	-- local success, err = pcall(s.update, e, store)
-		-- 	-- if not success and err ~= nil then
-		-- 	-- 	-- -- 安卓端逻辑：直接抛出错误，触发全局错误捕获机制，弹出错误提示框
-		-- 	-- 	if IS_ANDROID then
-		-- 	-- 		error("Error running " .. e.template_name .. " state machine: " .. err .. debug.traceback())
-		-- 	-- 	else
-		-- 	-- 		log.error("Error running " .. e.template_name .. " state machine: " .. err .. debug.traceback())
-		-- 	-- 		simulation:queue_remove_entity(e)
-		-- 	-- 	end
-		-- 	-- end
-		-- 	end
-		-- end
-
+		perf.start("coro")
 		for i = 1, store.entities_with_main_script_on_update_count do
 			local e = store.entities_with_main_script_on_update[i]
 			local s = e.main_script
@@ -164,13 +116,16 @@ function M.register(sys)
 				end
 			end
 		end
+		perf.stop("coro")
 
+		perf.start("state machine")
 		for i = 1, store.entities_with_main_script_on_update_count1 do
 			local e = store.entities_with_main_script_on_update1[i]
 			e.main_script.update(e, store)
 		end
-		perf.set_main_scripts(store.entities_with_main_script_on_update_count)
-		perf.stop("main_script")
+		perf.stop("state machine")
+
+		perf.set_coros(store.entities_with_main_script_on_update_count)
 	end
 
 	function sys.main_script:on_remove(entity, store)
