@@ -1729,11 +1729,11 @@ function U.predict_damage(entity, damage)
 	end
 
 	if band(damage.damage_type, bor(DAMAGE_MAGICAL, DAMAGE_MAGICAL_EXPLOSION)) ~= 0 then
-		rounded_damage = km.round(rounded_damage * entity.health.damage_factor_magical)
+		rounded_damage = rounded_damage * entity.health.damage_factor_magical
 	end
 
 	if band(damage.damage_type, DAMAGE_ELECTRICAL) ~= 0 and entity.health.damage_factor_electrical then
-		rounded_damage = km.round(rounded_damage * entity.health.damage_factor_electrical)
+		rounded_damage = rounded_damage * entity.health.damage_factor_electrical
 	end
 
 	-- 该类攻击对护甲高的敌人伤害更高
