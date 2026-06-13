@@ -2813,6 +2813,7 @@ tt.ui.click_rect = r(-40, -10, 80, 50)
 
 tt = E:register_t("soldier_balloon")
 AC(tt, "pos", "render", "motion", "nav_rally", "main_script", "vis", "idle_flip", "attacks", "nav_grid", "powers")
+-- 为了减小开销，该防御塔的 tween 通过 coro 手动实现。
 tt.flight_height = 65
 tt.idle_flip.cooldown = 10
 tt.idle_flip.last_dir = 1
@@ -2822,7 +2823,7 @@ tt.main_script.remove = scripts.soldier_balloon.remove
 tt.main_script.update = scripts.soldier_balloon.update
 tt.vis.bans = F_RANGED
 tt.motion.max_speed = 100
-tt.balloon_layer_count = 7
+local balloon_layer_count = 7
 tt.render.sprites[1] = E:clone_c("sprite")
 tt.render.sprites[1].prefix = "baloon_tower_pitch"
 tt.render.sprites[1].name = "run"
@@ -2848,11 +2849,13 @@ tt.render.sprites[7].prefix = "warmongers_baloon_tower_lookout_lvl4"
 tt.render.sprites[7].name = "idle"
 tt.render.sprites[7].anchor.y = 0.11
 tt.render.sprites[7].offset = v(0, 96)
+tt.render.sprites[7].hidden = true
 tt.render.sprites[8] = E:clone_c("sprite")
 tt.render.sprites[8].animated = false
 tt.render.sprites[8].name = "warmongers_baloon_tower_shadow"
 tt.render.sprites[8].z = Z_DECALS + 1
-for i = 1, tt.balloon_layer_count do
+tt.render.sprites[8].scale = vv(1)
+for i = 1, balloon_layer_count do
 	tt.render.sprites[i].offset.y = tt.render.sprites[i].offset.y + balloon_offset_y
 end
 tt.attacks.list[1] = E:clone_c("bullet_attack")
@@ -2880,7 +2883,6 @@ tt.attacks.list[3].cooldown = 12
 tt.attacks.list[3].bullet_start_offset = v(-25, 105)
 tt.attacks.list[3].max_range = 180
 tt.attacks.list[3].animation = "paratrooper"
-tt.attacks.list[3].animation_reload = "big_guy_reload_big_guy"
 tt.attacks.list[3].vis_flags = bor(F_RANGED)
 tt.attacks.list[3].vis_bans = bor(F_FLYING)
 tt.powers.bomber = E:clone_c("power")

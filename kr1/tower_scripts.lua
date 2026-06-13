@@ -26205,6 +26205,16 @@ scripts.soldier_balloon = {}
 function scripts.soldier_balloon.insert(this, store, script)
 	this.attacks.order = U.attack_order(this.attacks.list)
 	this.idle_flip.ts = store.tick_ts
+	for i = 1, #this.render.sprites - 1 do
+		local s = this.render.sprites[i]
+		if not s._original_offset_y then
+			s._original_offset_y = s.offset.y
+		end
+	end
+	local s = this.render.sprites[#this.render.sprites]
+	if not s._original_scale then
+		s._original_scale = s.scale.x
+	end
 	return true
 end
 
@@ -26216,7 +26226,7 @@ function scripts.soldier_balloon.update(this, store, script)
 	local pow_b = this.powers.bomber
 	local pow_e = this.powers.watcher
 	local tw = this.owner.tower
-
+	local sprite_count = #this.render.sprites
 	this.wick_mode = 1
 	ab.ts = store.tick_ts
 
@@ -26266,10 +26276,23 @@ function scripts.soldier_balloon.update(this, store, script)
 			if r.new then
 				local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 				U.animation_start_group(this, an, af, store.tick_ts, true, "layers")
-				U.animation_start_group(this.owner, "flags", nil, store.tick_ts, true, "layers")
+				U.animation_start_group(this.owner, "flags", nil, store.tick_ts, false, "layers")
+				U.animation_start(this, "splash", af, store.tick_ts, false, 7)
 				while r.new do
 					r.new = false
 					U.set_destination(this, r.pos)
+					-- 处理连续的 flip_x 变化，这里硬编码
+					if r.pos.x > this.pos.x then
+						this.render.sprites[2].flip_x = false
+						this.render.sprites[3].flip_x = false
+						this.render.sprites[4].flip_x = false
+						this.render.sprites[7].flip_x = false
+					elseif r.pos.x < this.pos.x then
+						this.render.sprites[2].flip_x = true
+						this.render.sprites[3].flip_x = true
+						this.render.sprites[4].flip_x = true
+						this.render.sprites[7].flip_x = true
+					end
 					while not this.motion.arrived and not r.new do
 						U.walk_off__accel__unsnapped(this, store.tick_length)
 						coroutine.yield()
@@ -26277,6 +26300,7 @@ function scripts.soldier_balloon.update(this, store, script)
 					end
 				end
 				U.animation_start_group(this, "idle", nil, store.tick_ts, true, "layers")
+				U.y_animation_wait_group(this.owner, "layers", 1)
 				U.animation_start_group(this.owner, "idle", nil, store.tick_ts, true, "layers")
 			end
 
@@ -26353,6 +26377,7 @@ function scripts.soldier_balloon.update(this, store, script)
 			mod.pos:copy(this.owner.pos)
 			this._balloon_mod_id = mod.id
 			queue_insert(store, mod)
+			this.render.sprites[7].hidden = false
 		end
 
 		if pow_b.changed then
@@ -26367,6 +26392,19 @@ function scripts.soldier_balloon.update(this, store, script)
 			if pow_o.level == 1 then
 				ao.ts = store.tick_ts
 			end
+		end
+
+		-- 独立的飞艇 tween 实现
+		local phase = math.sin(store.tick_ts * 2)
+		for i = 1, sprite_count - 1 do
+			local s = this.render.sprites[i]
+			s.offset.y = s._original_offset_y + phase * 3
+		end
+		do
+			local s = this.render.sprites[sprite_count]
+			local new_scale = s._original_scale - phase * 0.05
+			s.scale.x = new_scale
+			s.scale.y = new_scale
 		end
 
 		coroutine.resume(co_layers)
