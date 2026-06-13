@@ -26264,10 +26264,10 @@ function scripts.soldier_balloon.update(this, store, script)
 		while true do
 			local r = this.nav_rally
 
-			if pow_e.level > 0 and not r.new and store.tick_ts - last_search_ts > 0.1 and not U.find_first_enemy_in_range_filter_off(this.pos, ab.max_range, ab.vis_flags, ab.vis_bans) then
+			if pow_e.level > 0 and not r.new and store.tick_ts - last_search_ts > 0.1 then
 				last_search_ts = store.tick_ts
 				local target = U.detect_foremost_enemy_in_range_filter_off(this.owner.pos, this.owner.barrack.rally_range, ab.vis_flags, ab.vis_bans)
-				if target then
+				if target and not U.is_inside_ellipse(this.pos, target.pos, ab.max_range) then
 					r.new = true
 					r.pos:copy(target.pos)
 				end
