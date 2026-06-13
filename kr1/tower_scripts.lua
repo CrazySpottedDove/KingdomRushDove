@@ -26402,7 +26402,7 @@ function scripts.soldier_balloon.update(this, store, script)
 		end
 		do
 			local s = this.render.sprites[sprite_count]
-			local new_scale = s._original_scale - phase * 0.05
+			local new_scale = s._original_scale + phase * 0.05
 			s.scale.x = new_scale
 			s.scale.y = new_scale
 		end
