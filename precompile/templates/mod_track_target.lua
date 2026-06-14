@@ -24,8 +24,6 @@ return function(this, store)
 		end
 	constend
 
-    this.modifier.ts = store.tick_ts + store.tick_length
-    this.pos = target.pos
 	return true
 end
 ]]
@@ -102,12 +100,12 @@ return function(this, store)
 		return
 	end
 
-    -- local context = this.main_script.context
-    -- if context.state == 0 then
-    --     context.state = 1
-    --     this.modifier.ts = store.tick_ts
-    --     this.pos = target.pos
-    -- end
+    local context = this.main_script.context
+    if context.state == 0 then
+        context.state = 1
+        this.modifier.ts = store.tick_ts
+        this.pos = target.pos
+    end
 
     constif(this.modifier.duration >= 0)
         if store.tick_ts - m.ts > m.duration then

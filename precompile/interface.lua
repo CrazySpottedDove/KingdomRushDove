@@ -290,7 +290,6 @@ function M:compile(e)
 			elseif m.insert == scripts.mod_track_target.insert then
 				m.insert = self:_compile(e, self.mod_track_target.insert)
 			end
-
 			if m.update == scripts.mod_dps.update then
 				m.update = self:_compile(e, self.mod_dps.update)
 				m.type = 1
