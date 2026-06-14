@@ -26147,9 +26147,9 @@ end
 scripts.tower_balloon = {}
 
 function scripts.tower_balloon.update(this, store)
-	local context = this.main_script.context
+	local b = this.barrack
 
-	if context.state == 0 then
+	if #b.soldiers == 0 then
 		local balloon = E:create_entity(this.barrack.soldier_type)
 		balloon.pos.x, balloon.pos.y = this.pos.x, this.pos.y + 16
 		balloon.nav_rally.pos.x, balloon.nav_rally.pos.y = this.tower.default_rally_pos.x, this.tower.default_rally_pos.y
@@ -26158,11 +26158,7 @@ function scripts.tower_balloon.update(this, store)
 		balloon.wick_mode = 1
 		queue_insert(store, balloon)
 		table.insert(this.barrack.soldiers, balloon)
-
-		context.state = 1
 	end
-
-	local b = this.barrack
 
 	if b.rally_new then
 		b.rally_new = false

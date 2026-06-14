@@ -55,7 +55,7 @@ function RU.init()
 				end
 				last_idx = i
 
-				if not f.hidden then
+				if not f.hidden and not f.marked_to_remove then
 					if f.exo_frame then
 						local exo = EXO:get_exo_by_frame(f.exo_frame)
 						for part_idx, part in ipairs(f.exo_frame) do
@@ -352,7 +352,7 @@ function RU.init()
 
 				last_idx = i
 
-				if f.hidden then
+				if f.hidden or f.marked_to_remove then
 				-- block empty
 				elseif f.exo_frame then
 					local exo = EXO:get_exo_by_frame(f.exo_frame)
