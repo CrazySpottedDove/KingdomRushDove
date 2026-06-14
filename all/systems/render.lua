@@ -243,6 +243,7 @@ function M.register(sys)
 				local s = entity.render.sprites[i]
 
 				s.marked_to_remove = true
+				s.hidden = true
 			end
 
 			if entity.health_bar then
@@ -250,6 +251,7 @@ function M.register(sys)
 					local f = entity.health_bar.frames[i]
 
 					f.marked_to_remove = true
+					f.hidden = true
 					entity.health_bar.frames[i] = nil
 				end
 			end

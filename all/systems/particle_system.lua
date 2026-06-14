@@ -66,6 +66,7 @@ function M.register(sys)
 			for i = ps.particle_count, 1, -1 do
 				ps.particles[i] = nil
 				ps.frames[i].marked_to_remove = true
+				ps.frames[i].hidden = true
 				ps.frames[i] = nil
 			end
 
@@ -220,6 +221,7 @@ function M.register(sys)
 						frames[last_count] = nil
 						ps.particle_count = last_count - 1
 						f.marked_to_remove = true
+						f.hidden = true
 
 						goto label_51_0
 					elseif phase < 0 then
