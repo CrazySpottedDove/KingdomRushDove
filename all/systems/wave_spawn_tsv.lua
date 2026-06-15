@@ -8,7 +8,7 @@ local km = require("lib.klua.macros")
 local P = require("path_db")
 local U = require("utils")
 local W = require("wave_db")
-
+local configer = require("dove_modules.configer")
 local log = require("lib.klua.log"):new("systems")
 
 function M.register(sys)
@@ -147,9 +147,9 @@ function M.register(sys)
 
 	function sys.wave_spawn_tsv.cmd_fns.spawn(store, cmd, wave_name)
 		local wait_time = cmd.wait_time
-		local spawn_multipier_min = math.floor(store.config.enemy_count_multiplier)
-		local spawn_multipier_max = math.ceil(store.config.enemy_count_multiplier)
-		local spawn_min_rate = spawn_multipier_max - store.config.enemy_count_multiplier
+		local spawn_multipier_min = math.floor((configer.config().enabled and configer.config().enemy_count_multiplier or 1))
+		local spawn_multipier_max = math.ceil((configer.config().enabled and configer.config().enemy_count_multiplier or 1))
+		local spawn_min_rate = spawn_multipier_max - (configer.config().enabled and configer.config().enemy_count_multiplier or 1)
 
 		local spawn_multiplier = math.random() < spawn_min_rate and spawn_multipier_min or spawn_multipier_max
 

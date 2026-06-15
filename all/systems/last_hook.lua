@@ -1,7 +1,5 @@
 local M = {}
 
-local log = require("lib.klua.log"):new("systems")
-
 function M.register(sys)
 
 	sys.last_hook = {}

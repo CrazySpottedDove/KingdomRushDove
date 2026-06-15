@@ -745,6 +745,9 @@ end
 
 -- 在 difficulty:patch_templates() 后调用！
 function entity_db:patch_config(config)
+	if not config.enabled then
+		return
+	end
 	-- 如果所有倍率都是 1，就直接跳过，避免不必要的循环和乘法运算，提升性能。
 	if config.enemy_damage_multiplier == 1 and config.enemy_health_multiplier == 1 and config.enemy_gold_multiplier == 1 and config.enemy_health_damage_multiplier == 1 and config.enemy_speed_multiplier == 1 and config.tower_cooldown_divider == 1 and config.tower_damage_multiplier == 1 and config.tower_range_multiplier == 1 and config.extra_soldiers == 0 then
 		return

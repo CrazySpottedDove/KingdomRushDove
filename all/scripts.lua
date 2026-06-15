@@ -13,8 +13,10 @@ local P = require("path_db")
 local S = require("sound_db")
 local SU = require("script_utils")
 local U = require("utils")
+local configer = require("dove_modules.configer")
 local LU = require("level_utils")
 local UP = require("kr1.upgrades")
+local configer = require("dove_modules.configer")
 
 local V = require("lib.klua.vector")
 local bit = require("bit")
@@ -7304,7 +7306,7 @@ function scripts.mega_spawner.update(this, store)
 								break
 							end
 
-							for i = 1, store.config.enemy_count_multiplier do
+							for i = 1, (configer.config().enabled and configer.config().enemy_count_multiplier or 1) do
 								table.insert(spawn_queue, {
 									c_delay / i,
 									template,
@@ -7331,7 +7333,7 @@ function scripts.mega_spawner.update(this, store)
 										}
 										local spi = p_subpath and p_subpath > 0 and p_subpath or math.random(1, 3)
 
-										for i = 1, store.config.enemy_count_multiplier do
+										for i = 1, (configer.config().enabled and configer.config().enemy_count_multiplier or 1) do
 											table.insert(spawn_queue, {c_delay / i, p_template, point, spi, {
 												pack = custom_data.spawnPackId
 											}})
@@ -7358,7 +7360,7 @@ function scripts.mega_spawner.update(this, store)
 									local point = this.spawner_points[point_id]
 									local spi = subpath and subpath > 0 and subpath or math.random(1, 3)
 
-									for j = 1, store.config.enemy_count_multiplier do
+									for j = 1, (configer.config().enabled and configer.config().enemy_count_multiplier or 1) do
 										table.insert(spawn_queue, {c_delay / j, template, point, spi, custom_data})
 									end
 
@@ -7390,7 +7392,7 @@ function scripts.mega_spawner.update(this, store)
 
 										local this_delay = c_delay + U.frandom(0, delay_var) + int_delay
 
-										for j = 1, store.config.enemy_count_multiplier do
+										for j = 1, (configer.config().enabled and configer.config().enemy_count_multiplier or 1) do
 											table.insert(spawn_queue, {this_delay / j, template, point, spi, custom_data})
 										end
 									end

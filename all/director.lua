@@ -20,6 +20,7 @@ local storage = require("all.storage")
 local director_data = require("data.director_data")
 local GS = require("kr1.game_settings")
 local EXO = require("all.exoskeleton")
+local configer = require("dove_modules.configer")
 
 local function replace_locale(list, locale)
 	local out = {}
@@ -267,7 +268,7 @@ function director:unload_item(item)
 		groups = table.append(groups, replace_locale(game.required_textures))
 		groups = table.append(groups, replace_locale(game.store.level.required_textures))
 
-		if game.store.config.enable_hero_menu then
+		if configer.config().enabled and configer.config().enable_hero_menu then
 			local hero_data = require("data.map_data").hero_data
 
 			for _, data in pairs(hero_data) do
@@ -307,7 +308,7 @@ function director:unload_item(item)
 			end
 		end
 
-		local criket = game.store.criket
+		local criket = configer.criket()
 
 		if criket and criket.on then
 			for _, group in pairs(criket.required_sounds) do
@@ -443,15 +444,11 @@ function director:queue_load_item_named(name)
 		game.store.screen_scale = self:get_texture_scale("game", REF_H)
 		game.store.texture_size = self.params.texture_size
 		game.store.level = LU.load_level(game.store, game.store.level_name)
-		game.store.config = storage:load_config()
-
-		if game.store.config.endless then
+		if configer.config().enabled and configer.config().endless then
 			game.store.level_mode_override = GAME_MODE_ENDLESS
 		end
 
-		game.store.criket = storage:load_criket()
-
-		local criket = game.store.criket
+		local criket = configer.criket()
 
 		if criket and criket.on then
 			self:load_texture_groups(replace_locale(criket.required_textures), self.params.texture_size, game.ref_res, true, "game")
@@ -468,7 +465,7 @@ function director:queue_load_item_named(name)
 			EXO:queue_load(game.store.level.required_exoskeletons)
 		end
 
-		if game.store.config.enable_hero_menu then
+		if configer.config().enabled and configer.config().enable_hero_menu then
 			local hero_data = require("data.map_data").hero_data
 
 			for _, data in pairs(hero_data) do

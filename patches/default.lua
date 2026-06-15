@@ -2,7 +2,7 @@
 return {
 	-- 如果需要英雄满级，请将此条改为 true，默认为 false
 	hero_full_level_at_start = false,
-	-- 出怪倍数，默认为 1(必须为整数，过大容易卡顿！)
+	-- 出怪倍数，默认为 1(过大容易卡顿！)
 	enemy_count_multiplier = 1,
 	-- 怪物掉落金币倍率，默认为 1，向上取整
 	enemy_gold_multiplier = 1,
@@ -18,10 +18,8 @@ return {
 	hero_health_damage_multiplier = 1,
 	-- 路线是否倒转，默认为 false
 	reverse_path = false,
-	-- 伤害数字是否显示，默认为 false
-	damage_numbers_enabled = false,
 	-- 启动自定义配置开关，默认为 true。如果需要恢复默认配置，可以将它变为 false
-	custom_config_enabled = true,
+	enabled = true,
 	-- 启动无尽模式开关，默认为 false
 	endless = false,
 	-- 允许局内召唤英雄开关，默认为 false

@@ -25,6 +25,7 @@ local ceil = math.ceil
 local random = math.random
 
 local EXO = require("all.exoskeleton")
+local configer = require("dove_modules.configer")
 
 local function queue_insert(store, e)
 	simulation:queue_insert_entity(e)
@@ -50,7 +51,7 @@ function M.register(sys)
 		P:load(store.level_name, store.visible_coords)
 		coroutine.yield()
 
-		if store.config.reverse_path then
+		if configer.config().enabled and configer.config().reverse_path then
 			P:reverse_all_paths()
 		end
 
@@ -58,13 +59,13 @@ function M.register(sys)
 		coroutine.yield()
 
 		DI:patch_templates()
-		E:patch_config(store.config)
+		E:patch_config(configer.config())
 		coroutine.yield()
 
 		W:load(store.level_name, store.level_mode, store.level_mode_override == GAME_MODE_ENDLESS)
 		coroutine.yield()
 
-		if store.config.random_creeps then
+		if configer.config().enabled and configer.config().random_creeps then
 			W:randomize_creeps()
 		end
 
@@ -96,9 +97,9 @@ function M.register(sys)
 
 		store.level.co = nil
 		store.level.run_complete = nil
-		store.player_gold = ceil(W:initial_gold() * store.config.gold_multiplier)
+		store.player_gold = ceil(W:initial_gold() * (configer.config().enabled and configer.config().gold_multiplier or 1))
 
-		store.hero_xp_multiplier = GS.hero_xp_gain_per_difficulty_mode[store.level_difficulty] * store.config.hero_xp_gain_multiplier
+		store.hero_xp_multiplier = GS.hero_xp_gain_per_difficulty_mode[store.level_difficulty] * (configer.config().enabled and configer.config().hero_xp_gain_multiplier or 1)
 
 		if store.level_idx <= 9 then
 			store.hero_xp_multiplier = 0.1 * store.level_idx * store.hero_xp_multiplier
@@ -122,7 +123,7 @@ function M.register(sys)
 			table.removeobject(store.level.locked_towers, unlock_tower)
 		end
 
-		if store.config.ban_random_towers then
+		if configer.config().enabled and configer.config().ban_random_towers then
 			local locked_towers = store.level.locked_towers
 			for i = 4, #GS.archer_towers do
 				if math.random() < 0.5 then
@@ -146,7 +147,7 @@ function M.register(sys)
 			end
 		end
 
-		if store.criket and store.criket.on then
+		if configer.criket() and configer.criket().on then
 			store.lives = 0
 		elseif store.level_mode == GAME_MODE_CAMPAIGN then
 			store.lives = 20
@@ -287,7 +288,7 @@ function M.register(sys)
 		end
 
 		if not store.game_outcome then
-			if store.lives < 1 and (not store.criket or not store.criket.on) then
+			if store.lives < 1 and (not configer.criket() or not configer.criket().on) then
 				log.info("++++ DEFEAT ++++")
 
 				store.game_outcome = {
@@ -307,7 +308,7 @@ function M.register(sys)
 				signal.emit("game-defeat-after", store)
 				storage:save_slot(slot, nil, true)
 			elseif store.level.run_complete and store.waves_finished and not LU.has_alive_enemies(store) then
-				if store.criket and store.criket.on then
+				if configer.criket() and configer.criket().on then
 					local stars = 3
 
 					if store.lives < -10 then
@@ -316,7 +317,7 @@ function M.register(sys)
 						stars = 2
 					end
 
-					store.criket.time_cost = store.tick_ts - store.criket.start_time
+					configer.criket().time_cost = store.tick_ts - configer.criket().start_time
 					store.game_outcome = {
 						victory = true,
 						lives_left = store.lives,

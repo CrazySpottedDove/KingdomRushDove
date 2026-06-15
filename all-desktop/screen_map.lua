@@ -23,6 +23,7 @@ local timer = require("hump.timer").new()
 local utf8 = require("utf8")
 local achievements_data, map_data
 local tower_menus_data = require("kr1.data.tower_menus_data")
+local configer = require("dove_modules.configer")
 local R = require("all.restart")
 local perf = require("dove_modules.perf.perf")
 local damage_icons = require("kr1-desktop.data.damage_icons")
@@ -4221,7 +4222,7 @@ function EncyclopediaView:show()
 	DI:set_level(screen_map.user_data.difficulty)
 	UPGR:patch_templates(6)
 	DI:patch_templates()
-	E:patch_config(storage:load_config())
+	E:patch_config(configer.config())
 	self:load_towers(1)
 
 	self.enemies_button.hidden = false
@@ -6714,8 +6715,7 @@ function ConfigPanelView:initialize(sw, sh, keyboard, controller)
 	self:set_key_label_map({
 		hero_full_level_at_start = "英雄开局满级",
 		reverse_path = "路线倒转",
-		damage_numbers_enabled = "显示伤害数字",
-		custom_config_enabled = "启用自定义配置",
+		enabled = "启用自定义配置",
 		endless = "开启无尽模式",
 		enable_hero_menu = "启用局内英雄菜单",
 		enemy_count_multiplier = "敌人数量倍率",
@@ -6739,19 +6739,17 @@ function ConfigPanelView:initialize(sw, sh, keyboard, controller)
 end
 
 function ConfigPanelView:load()
-	local config = storage:load_config()
-
-	self.data_group:set_all_data(config)
+	self.data_group:set_all_data(configer.config())
 end
 
 function ConfigPanelView:save()
-	local config = storage:load_config()
+	local config = configer.config()
 
 	for k, v in pairs(self.data_group:get_all_data()) do
 		config[k] = v
 	end
 
-	storage:save_config(config)
+	configer.save()
 end
 
 CriketPanelView = class("CriketPanelView", EditablePanelView)
@@ -6768,19 +6766,17 @@ function CriketPanelView:initialize(sw, sh, keyboard, controller)
 end
 
 function CriketPanelView:load()
-	local criket = storage:load_criket()
-
-	self.data_group:set_all_data(criket)
+	self.data_group:set_all_data(configer.criket())
 end
 
 function CriketPanelView:save()
-	local criket = storage:load_criket()
+	local criket = configer.criket()
 
 	for k, v in pairs(self.data_group:get_all_data()) do
 		criket[k] = v
 	end
 
-	storage:save_criket(criket)
+	configer.save("criket")
 end
 
 KeysetPanelView = class("KeysetPanelView", EditablePanelView)
@@ -6815,18 +6811,17 @@ function KeysetPanelView:initialize(sw, sh, keyboard, controller)
 end
 
 function KeysetPanelView:load()
-	local keyset = storage:load_keyset()
-	self.data_group:set_all_data(keyset)
+	self.data_group:set_all_data(configer.keyset())
 end
 
 function KeysetPanelView:save()
-	local keyset = storage:load_keyset()
+	local keyset = configer.keyset()
 
 	for k, v in pairs(self.data_group:get_all_data()) do
 		keyset[k] = v
 	end
 
-	storage:save_keyset(keyset)
+	configer.save("keyset")
 end
 
 LaunchOptionsPanelView = class("LaunchOptionsPanelView", EditablePanelView)
@@ -6860,32 +6855,34 @@ UISettingsPanelView = class("UIPanelView", EditablePanelView)
 function UISettingsPanelView:initialize(sw, sh, keyboard, controller)
 	EditablePanelView.initialize(self, sw, sh, "UI设置", keyboard, controller)
 	self:set_key_label_map({
-		hud_scale = "局内技能按钮缩放"
+		hud_scale = "局内技能按钮缩放",
+		damage_numbers_enabled = "显示伤害数字"
 	})
 end
 
 function UISettingsPanelView:load()
-	local ui_settings = storage:load_ui_settings()
+	local ui_settings = configer.ui_settings()
+
 	if IS_ANDROID then
 		-- 这里要通过长宽比来判断，因为有些安卓设备虽然是移动平台但屏幕比较大，适合用桌面版的 HUD 布局和大小
 		local aspect_ratio = self.sw / self.sh
 		if aspect_ratio > 1920 / 1080 and ui_settings.hud_scale < 1.35 then
 			-- 屏幕更宽的设备使用放大 HUD，屏幕更窄的设备使用桌面的 HUD
 			ui_settings.hud_scale = 1.35
-			storage:save_ui_settings(ui_settings)
+			configer.save("ui_settings")
 		end
 	end
 	self.data_group:set_all_data(ui_settings)
 end
 
 function UISettingsPanelView:save()
-	local ui_settings = storage:load_ui_settings()
+	local ui_settings = configer.ui_settings()
 
 	for k, v in pairs(self.data_group:get_all_data()) do
 		ui_settings[k] = v
 	end
 
-	storage:save_ui_settings(ui_settings)
+	configer.save("ui_settings")
 end
 
 return screen_map

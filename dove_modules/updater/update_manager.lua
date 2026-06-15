@@ -1252,7 +1252,7 @@ end
 local function sync_assets_batch(batch, bi, total_batches)
 	-- 1. POST 创建打包
 	local url = server_address .. "bundle/assets"
-	local code, body, headers = async_request(url, {
+	local code, body = async_request(url, {
 		method = "POST",
 		headers = {
 			["Content-Type"] = "application/json"
@@ -1369,7 +1369,7 @@ local function upgrade_new_version_bundled(info)
 
 	-- 1. POST 创建打包
 	local url = server_address .. "bundle/code"
-	local code, body, headers = async_request(url, {
+	local code, body = async_request(url, {
 		method = "POST",
 		headers = {
 			["Content-Type"] = "application/json"

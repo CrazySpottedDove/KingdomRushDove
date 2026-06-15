@@ -24,6 +24,7 @@ local S = require("sound_db")
 local SU = require("screen_utils")
 local E = require("entity_db")
 local U = require("utils")
+local configer = require("dove_modules.configer")
 
 local V = require("lib.klua.vector")
 local v = V.v
@@ -200,7 +201,7 @@ local signals = {
 		game_gui:disable_keys()
 
 		local wait_time
-		if store.criket and store.criket.on then
+		if configer.criket() and configer.criket().on then
 			wait_time = 0.5
 		else
 			wait_time = 2
@@ -298,8 +299,6 @@ function game_gui:init(w, h, game)
 	self.to = 0
 	local settings = storage:load_settings()
 
-	self.key_shortcuts = storage:load_keyset()
-	self.ui_settings = storage:load_ui_settings()
 	self.pause_on_switch = settings.pause_on_switch
 
 	local window = KWindow:new(V.v(sw, sh))
@@ -313,15 +312,15 @@ function game_gui:init(w, h, game)
 	GGLabel.static.font_scale = scale
 	GGLabel.static.ref_h = self.ref_h
 
-	local hud_scale = self.ui_settings.hud_scale
+	local hud_scale = configer.ui_settings().hud_scale
 	if IS_ANDROID then
 		-- 这里要通过长宽比来判断，因为有些安卓设备虽然是移动平台但屏幕比较大，适合用桌面版的 HUD 布局和大小
 		local aspect_ratio = self.sw / self.sh
 		if aspect_ratio > 1920 / 1080 and hud_scale < 1.35 then
 			-- 屏幕更宽的设备使用放大 HUD，屏幕更窄的设备使用桌面的 HUD
 			hud_scale = 1.35
-			self.ui_settings.hud_scale = hud_scale
-			storage:save_ui_settings(self.ui_settings)
+			configer.ui_settings().hud_scale = hud_scale
+			configer.save("ui_settings")
 		end
 	end
 
@@ -742,8 +741,8 @@ function game_gui:build_random_towers()
 		end
 
 		if new_tower.barrack then
-			-- if game_gui.game.store.criket and game_gui.game.store.criket.on then
-			-- 	local path_index = game_gui.game.store.criket.groups[1].path_index
+			-- if configer.criket() and configer.criket().on then
+			-- 	local path_index = configer.criket().groups[1].path_index
 			-- 	local nodes = P.paths[path_index][1]
 			-- 	local i = 1
 
@@ -900,7 +899,7 @@ function game_gui:keypressed(key, isrepeat)
 		return
 	end
 
-	local ks = self.key_shortcuts
+	local ks = configer.keyset()
 
 	if ks.pow_1 == key and not self.power_1:is_disabled() then
 		self.power_1:toggle_selection()
@@ -1013,7 +1012,7 @@ function game_gui:keypressed(key, isrepeat)
 		self.game.store.player_gold = self.game.store.player_gold - EL.gold_extra_cost
 
 		game_gui.endless_select_reward_view:show(true)
-	elseif ks.hero_menu_toggle == key and self.game.store.config.enable_hero_menu then
+	elseif ks.hero_menu_toggle == key and configer.config().enabled and configer.config().enable_hero_menu then
 		if self.heromenu.hidden then
 			self.heromenu:show()
 		else
@@ -1029,7 +1028,7 @@ function game_gui:keypressed(key, isrepeat)
 		require("dove_modules.perf.perf_ui").toggle()
 	elseif ks.random_towers == key then
 		game_gui:build_random_towers()
-	elseif ks.restart == key and game_gui.game.store.criket.on then
+	elseif ks.restart == key and configer.criket().on then
 		game_gui:restart_game()
 	end
 end
@@ -3302,7 +3301,7 @@ function HudCountersView:update(dt)
 	local wave_value = store.wave_group_number
 	if game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS then
 		wave_value = store.wave_group_number
-	elseif store.criket.on then
+	elseif configer.criket().on then
 		wave_value = store.enemy_count
 	end
 
@@ -3311,8 +3310,8 @@ function HudCountersView:update(dt)
 
 		if game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS then
 			self.lbl_wave.text = string.format("%d", wave_value)
-		elseif store.criket.on then
-			self.lbl_wave.text = string.format("%3d*%.2f", wave_value, store.config.enemy_health_multiplier)
+		elseif configer.criket().on then
+			self.lbl_wave.text = string.format("%3d*%.2f", wave_value, configer.config().enabled and configer.config().enemy_health_multiplier or 1)
 		else
 			self.lbl_wave.text = string.format(_("MENU_HUD_WAVES"), wave_value, store.wave_group_total)
 		end
@@ -3577,7 +3576,7 @@ function PauseView:initialize()
 		btn_hero_menu.pos.y = button_height
 		function btn_hero_menu.on_click()
 			S:queue("GUIButtonCommon")
-			if game_gui.game.store.config.enable_hero_menu then
+			if configer.config().enabled and configer.config().enable_hero_menu then
 				self:hide()
 				if game_gui.heromenu.hidden then
 					game_gui.heromenu:show()
@@ -3986,7 +3985,7 @@ function VictoryView:initialize(level_mode)
 end
 
 function VictoryView:show()
-	local criket = game_gui.game.store.criket
+	local criket = configer.criket()
 
 	if criket and criket.on then
 		local lives
@@ -6093,7 +6092,7 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
 		if v.tower.type == "holder" or (v.tower_holder and v.tower_holder.blocked) then
 			local new_tower = E:create_entity(item.action_arg)
 
-			game_gui.game.store.criket.tower_name = new_tower.template_name
+			configer.criket().tower_name = new_tower.template_name
 			new_tower.pos = V.vclone(v.pos)
 			new_tower.tower.holder_id = v.tower.holder_id
 			new_tower.tower.flip_x = v.tower.flip_x
@@ -6123,8 +6122,8 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
 			end
 
 			if new_tower.barrack then
-				-- if game_gui.game.store.criket and game_gui.game.store.criket.on then
-				-- 	local path_index = game_gui.game.store.criket.groups[1].path_index
+				-- if configer.criket() and configer.criket().on then
+				-- 	local path_index = configer.criket().groups[1].path_index
 				-- 	-- local nodes = P:nearest_nodes(new_tower.pos.x, new_tower.pos.y, {path_index}, {1}, true)
 				-- 	local nodes = P.paths[path_index][1]
 				-- 	local i = 1
@@ -6177,8 +6176,8 @@ function CriketMenu:button_callback(button, item, entity, mouse_button, x, y)
 		end
 	end
 
-	-- if store.criket.on and store.criket.gold_judge then
-	-- store.config.enemy_health_multiplier = total_cost / store.criket.gold_base
+	-- if configer.criket().on and configer.criket().gold_judge then
+	-- configer.config().enemy_health_multiplier = total_cost / configer.criket().gold_base
 	-- end
 
 	self:hide()
@@ -6429,7 +6428,7 @@ function TowerMenu:show(tower_menu)
 		tm = current_tms[entity.tower.level]
 	end
 
-	if game_gui.game.store.config.build_random_towers then
+	if configer.config().enabled and configer.config().build_random_towers then
 		if entity.tower.type == "holder" then
 			tm = tower_menus.random_foundamental[1]
 		else

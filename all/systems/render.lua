@@ -1,5 +1,4 @@
 local M = {}
-local log = require("lib.klua.log"):new("render")
 local perf = require("dove_modules.perf.perf")
 local A = require("animation_db")
 local I = require("lib.klove.image_db")

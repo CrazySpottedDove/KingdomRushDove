@@ -13,7 +13,9 @@ local GR = require("grid_db")
 local GS = require("kr1.game_settings")
 local P = require("path_db")
 local S = require("sound_db")
+local configer = require("dove_modules.configer")
 local SU = require("script_utils")
+local configer = require("dove_modules.configer")
 local U = require("utils")
 local LU = require("level_utils")
 local UP = require("kr1.upgrades")
@@ -9449,7 +9451,7 @@ function scripts.points_spawner.update(this, store)
 							local spi = subpath > 0 and subpath or math.random(1, 3)
 							local this_delay = c_delay + U.frandom(0, delay_var)
 
-							for i = 1, store.config.enemy_count_multiplier do
+							for i = 1, (configer.config().enabled and configer.config().enemy_count_multiplier or 1) do
 								table.insert(spawn_queue, {this_delay / i, template, point.from, point.to, point.path, spi, custom_data})
 							end
 						end
@@ -9462,7 +9464,7 @@ function scripts.points_spawner.update(this, store)
 						local point = this.spawner_points[point_id]
 						local spi = subpath > 0 and subpath or math.random(1, 3)
 
-						for i = 1, store.config.enemy_count_multiplier do
+						for i = 1, (configer.config().enabled and configer.config().enemy_count_multiplier or 1) do
 							table.insert(spawn_queue, {c_delay / i, template, point.from, point.to, point.path, spi, custom_data})
 						end
 					end

@@ -1,6 +1,5 @@
 -- chunkname: @./main.lua
 local version = require("version")
-
 require("all.constants")
 
 if love.system.getOS() == "Windows" then

@@ -10,6 +10,7 @@ local E = require("entity_db")
 local GS = require("kr1.game_settings")
 local I = require("lib.klove.image_db")
 local G = require("love.graphics")
+local configer = require("dove_modules.configer")
 local P = require("path_db")
 local bit = require("bit")
 local bor = bit.bor
@@ -390,6 +391,34 @@ function LU.insert_background(store, name, z, sort_y, quad_trim)
 	return e
 end
 
+local function create_hero(store, name, pos, force_full_level)
+	local hero = E:create_entity(name)
+
+	hero.pos = V.vclone(pos)
+	hero.nav_rally.center = V.vclone(hero.pos)
+	hero.nav_rally.pos = hero.nav_rally.center
+	hero.hero.xp = 0
+	hero.hero.level = 1
+
+	if (configer.config().enabled and configer.config().hero_full_level_at_start or store.level_mode_override == GAME_MODE_ENDLESS) or force_full_level then
+		if hero.hero.fn_level_up then
+			for i = 1, 10 do
+				hero.hero.level = i
+
+				hero.hero.fn_level_up(hero, store)
+			end
+		else
+			hero.hero.level = 10
+		end
+	end
+
+	if configer.config().enabled then
+		hero.unit.damage_factor = configer.config().hero_damage_multiplier * hero.unit.damage_factor
+		hero.health.damage_factor = configer.config().hero_health_damage_multiplier * hero.health.damage_factor
+	end
+	return hero
+end
+
 function LU.insert_hero(store, name, pos, force_full_level)
 	if store.level.locked_hero then
 		log.debug("hero locked for level. will not insert")
@@ -398,27 +427,7 @@ function LU.insert_hero(store, name, pos, force_full_level)
 	end
 
 	if name and pos then
-		local hero = E:create_entity(name)
-
-		hero.pos = V.vclone(pos)
-		hero.nav_rally.center = V.vclone(hero.pos)
-		hero.nav_rally.pos = hero.nav_rally.center
-
-		if (store.config.hero_full_level_at_start or store.level_mode_override == GAME_MODE_ENDLESS) or force_full_level then
-			if hero.hero.fn_level_up then
-				for i = 1, 10 do
-					hero.hero.level = i
-
-					hero.hero.fn_level_up(hero, store)
-				end
-			else
-				hero.hero.level = 10
-			end
-		end
-
-		hero.unit.damage_factor = store.config.hero_damage_multiplier * hero.unit.damage_factor
-		hero.health.damage_factor = store.config.hero_health_damage_multiplier * hero.health.damage_factor
-
+		local hero = create_hero(store, name, pos, force_full_level)
 		LU.queue_insert(store, hero)
 		signal.emit("hero-added-no-panel", hero)
 
@@ -434,7 +443,7 @@ function LU.insert_hero(store, name, pos, force_full_level)
 	end
 
 	for i, template_name in ipairs(template_names) do
-		local hero = E:create_entity(template_name)
+		local hero = E:get_template(template_name)
 		local pos
 
 		if not hero then
@@ -457,27 +466,8 @@ function LU.insert_hero(store, name, pos, force_full_level)
 			pos = store.level.locations.exits[1].pos
 		end
 
-		hero.pos = V.vclone(pos)
-		hero.nav_rally.center = V.vclone(hero.pos)
-		hero.nav_rally.pos = hero.nav_rally.center
+		local hero = create_hero(store, template_name, pos, force_full_level)
 		store.main_hero = hero
-		hero.hero.xp = 0
-		hero.hero.level = 1
-
-		if (store.config.hero_full_level_at_start or store.level_mode_override == GAME_MODE_ENDLESS) or force_full_level then
-			if hero.hero.fn_level_up then
-				for i = 1, 10 do
-					hero.hero.level = i
-
-					hero.hero.fn_level_up(hero, store)
-				end
-			else
-				hero.hero.level = 10
-			end
-		end
-
-		hero.unit.damage_factor = store.config.hero_damage_multiplier * hero.unit.damage_factor
-		hero.health.damage_factor = store.config.hero_health_damage_multiplier * hero.health.damage_factor
 
 		LU.queue_insert(store, hero)
 		signal.emit("hero-added", hero)

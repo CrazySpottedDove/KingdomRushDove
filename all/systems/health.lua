@@ -12,6 +12,7 @@ local ffi = require("ffi")
 local G = love.graphics
 local random = math.random
 local floor = math.floor
+local configer = require("dove_modules.configer")
 
 ffi.cdef[[
 typedef struct {
@@ -296,7 +297,7 @@ local function dnum_init(store)
 	for i = 0, MAX_DNUMS - 1 do
 		dnum_pool[i].alive = 0
 	end
-	if store.config.damage_numbers_enabled ~= false then
+	if configer.ui_settings().damage_numbers_enabled ~= false then
 		if not dnum_batch then
 			dnum_build_atlas()
 		end
