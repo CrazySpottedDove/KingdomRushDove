@@ -6749,7 +6749,7 @@ function ConfigPanelView:save()
 		config[k] = v
 	end
 
-	configer.save()
+	configer.save("config")
 end
 
 CriketPanelView = class("CriketPanelView", EditablePanelView)
