@@ -609,12 +609,6 @@ end
 ---@param source_id number 来源ID
 ---@return table 伤害实体
 function SU.create_bullet_damage(bullet, target_id, source_id)
-	local d = E.create_damage()
-
-	d.damage_type = bullet.damage_type
-	d.reduce_armor = bullet.reduce_armor
-	d.reduce_magic_armor = bullet.reduce_magic_armor
-
 	local vmin, vmax = bullet.damage_min, bullet.damage_max
 
 	if bullet.level and bullet.level > 0 then
@@ -634,9 +628,10 @@ function SU.create_bullet_damage(bullet, target_id, source_id)
 
 	local value = U.frandom(vmin, vmax)
 
-	d.value = math.max(1, bullet.damage_factor * value)
-	d.target_id = target_id
-	d.source_id = source_id
+	local d = E.assign_damage(bullet.damage_type, math.max(1, bullet.damage_factor * value), source_id, target_id)
+
+	d.reduce_armor = bullet.reduce_armor
+	d.reduce_magic_armor = bullet.reduce_magic_armor
 	d.xp_gain_factor = bullet.xp_gain_factor
 	d.xp_dest_id = bullet.xp_dest_id
 	d.pop = bullet.pop
@@ -655,11 +650,6 @@ end
 ---@param target_id number 目标ID
 ---@param source_id number 来源ID
 function SU.create_bullet_damage_without_pops(bullet, target_id, source_id)
-	local d = E.create_damage()
-
-	d.damage_type = bullet.damage_type
-	d.reduce_armor = bullet.reduce_armor
-	d.reduce_magic_armor = bullet.reduce_magic_armor
 
 	local vmin, vmax = bullet.damage_min, bullet.damage_max
 
@@ -680,9 +670,10 @@ function SU.create_bullet_damage_without_pops(bullet, target_id, source_id)
 
 	local value = U.frandom(vmin, vmax)
 
-	d.value = math.max(1, bullet.damage_factor * value)
-	d.target_id = target_id
-	d.source_id = source_id
+	local d = E.assign_damage(bullet.damage_type, math.max(1, bullet.damage_factor * value), source_id, target_id)
+
+	d.reduce_armor = bullet.reduce_armor
+	d.reduce_magic_armor = bullet.reduce_magic_armor
 	d.xp_gain_factor = bullet.xp_gain_factor
 	d.xp_dest_id = bullet.xp_dest_id
 	d.track_damage = bullet.track_damage
@@ -734,20 +725,14 @@ function SU.create_attack_damage(a, target_id, this)
 		end
 	end
 
-	local d = E.create_damage()
-
-	d.value = U.frandom(vmin, vmax)
+	local value = U.frandom(vmin, vmax)
 
 	if this.unit then
-		d.value = (d.value + this.unit.damage_buff) * this.unit.damage_factor
+		value = (value + this.unit.damage_buff) * this.unit.damage_factor
 	end
 
-	d.damage_type = a.damage_type
-	d.target_id = target_id
-	d.source_id = this.id
-
 	-- TODO: 伤害钩子尚未挂载
-	return d
+	return E.assign_damage(a.damage_type, value, this.id, target_id)
 end
 
 ---抛物线初速度

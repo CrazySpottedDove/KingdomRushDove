@@ -282,6 +282,24 @@ function entity_db.create_damage()
 	}
 end
 
+--- 更直接的伤害创建函数，避免多次赋值。
+---@param damage_type number
+---@param value number
+---@param source_id number
+---@param target_id number
+function entity_db.assign_damage(damage_type, value, source_id, target_id)
+	return {
+		damage_type = damage_type,
+		value = value,
+		reduce_armor = 0,
+		reduce_magic_armor = 0,
+		damage_result = 0,
+		hooks = {},
+		target_id = target_id,
+		source_id = source_id
+	}
+end
+
 function entity_db:clone_entity(e)
 	local out = copy(e)
 

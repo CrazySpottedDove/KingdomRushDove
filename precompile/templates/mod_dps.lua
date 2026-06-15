@@ -220,12 +220,8 @@ return function(this, store)
 
     if store.tick_ts - m.ts >= m.duration - 1e-09 then
         constif(dps.damage_last)
-            local d = E.create_damage()
+            local d = E.assign_damage(dps.damage_type, dps.damage_last * m.damage_factor, this.id, target.id)
 
-            d.source_id = this.id
-            d.target_id = target.id
-            d.value = dps.damage_last * m.damage_factor
-            d.damage_type = dps.damage_type
             d.pop = dps.pop
             d.pop_chance = dps.pop_chance
             d.pop_conds = dps.pop_conds
@@ -260,12 +256,8 @@ return function(this, store)
             @constif(not dps.kill)
 			damage_value = km.clamp(0, target.health.hp - 1, damage_value)
 
-			local d = E.create_damage()
+			local d = E.assign_damage(dps.damage_type, damage_value, this.id, target.id)
 
-            d.source_id = this.id
-            d.target_id = target.id
-            d.value = damage_value
-            d.damage_type = dps.damage_type
             d.pop = dps.pop
             d.pop_chance = dps.pop_chance
             d.pop_conds = dps.pop_conds

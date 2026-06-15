@@ -280,13 +280,8 @@ return function(this, store)
             for i = 1, #targets do
                 local target = targets[i]
 
-                local d = E.create_damage()
+                local d = E.assign_damage(this.aura.damage_type, math.random(dmin, dmax) * this.aura.damage_factor, this.id, target.id)
 
-                d.source_id = this.id
-                d.target_id = target.id
-
-                d.value = math.random(dmin, dmax) * this.aura.damage_factor
-                d.damage_type = this.aura.damage_type
                 d.track_damage = this.aura.track_damage
                 d.xp_dest_id = this.aura.xp_dest_id
                 d.xp_gain_factor = this.aura.xp_gain_factor

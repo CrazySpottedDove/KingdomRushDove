@@ -26079,11 +26079,7 @@ function scripts.mod_grim_cemetery_explode.remove(this, store)
 		for i = 1, #targets do
 			local target = targets[i]
 
-			local d = E:create_entity("damage")
-			d.damage_type = this.explode_damage_type
-			d.value = this.explode_damage[this.modifier.level] * this.modifier.damage_factor
-			d.source_id = this.id
-			d.target_id = target.id
+			local d = E.assign_damage(this.explode_damage_type, this.explode_damage[this.modifier.level] * this.modifier.damage_factor, this.id, target.id)
 
 			queue_damage(store, d)
 
