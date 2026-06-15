@@ -715,6 +715,20 @@ function ModItemRow:_refresh_accent(enabled)
 	end
 end
 
+function ModItemRow:set_dimmed(dimmed)
+	if dimmed then
+		self._accent.colors.background = {80, 72, 58, 200}
+		self.colors.background = {18, 14, 10, 180}
+		self.colors.foreground = {80, 72, 58, 180}
+	else
+		self.colors.background = {self._base_bg[1], self._base_bg[2], self._base_bg[3], self._base_bg[4]}
+		if self.toggle then
+			self:_refresh_accent(self.toggle.value)
+		end
+	end
+	self._hover_bg = dimmed and {18, 14, 10, 200} or {40, 30, 18, 230}
+end
+
 function ModItemRow:is_enabled()
 	return self.toggle and self.toggle.value or true
 end
@@ -800,6 +814,9 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	self._selected_site = nil
 	self._active_download_name = ""
 	self._http_thread = nil
+	self._unsaved_changes = false
+	self._pending_close = false
+	self._saved_state = {}
 
 	self._developer_config = {
 		account = "",
@@ -846,6 +863,10 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	self.global_toggle = ModToggleButton:new(false, V.v(global_toggle_w, global_toggle_h))
 	self.global_toggle.anchor = V.v(self.global_toggle.size.x / 2, self.global_toggle.size.y / 2)
 	self.global_toggle.pos = V.v(panel_w - 24 - self.global_toggle.size.x / 2, global_toggle_center_y)
+	self.global_toggle.on_change = function(_, v)
+		self._unsaved_changes = self:_check_unsaved()
+		self:_render_current_list()
+	end
 	self.back:add_child(self.global_toggle)
 
 	self.mode_btn = ModActionButton:new("前往商店", V.v(header_btn_w, header_btn_h))
@@ -1092,6 +1113,17 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	self.task_dialog:add_child(self._confirm_cancel_btn)
 	self.task_dialog:add_child(self._cover_no_btn)
 
+	self._disabled_warning = GGLabel:new(V.v(panel_w - 40, 28))
+	self._disabled_warning.font_name = "body"
+	self._disabled_warning.font_size = 14 * rs
+	self._disabled_warning.text_align = "center"
+	self._disabled_warning.vertical_align = "middle"
+	self._disabled_warning.colors.text = {255, 180, 100, 255}
+	self._disabled_warning.text = "⚠ 插件管理器总开关已关闭，所有插件不会生效"
+	self._disabled_warning.pos = V.v(20, list_top_y - 32)
+	self._disabled_warning.hidden = true
+	self.back:add_child(self._disabled_warning)
+
 	self.mod_list = KScrollList:new(V.v(panel_w - 40, scroll_h))
 	self.mod_list.pos = V.v(20, list_top_y)
 	self.mod_list.drag_scroll_threshold = IS_ANDROID and 20 or 6
@@ -1132,6 +1164,94 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 		S:queue("GUIButtonCommon")
 		self:hide()
 	end
+
+	self._confirm_dialog = KView:new(V.v(480, 180))
+	self._confirm_dialog.anchor = V.v(self._confirm_dialog.size.x / 2, self._confirm_dialog.size.y / 2)
+	self._confirm_dialog.pos = V.v(panel_w / 2, panel_h / 2)
+	self._confirm_dialog.colors.background = {30, 21, 9, 235}
+	self._confirm_dialog.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, self._confirm_dialog.size.x, self._confirm_dialog.size.y, 12, 12}
+	}
+	self._confirm_dialog.hidden = true
+	self.back:add_child(self._confirm_dialog)
+
+	local confirm_title = GGLabel:new(V.v(self._confirm_dialog.size.x - 24, 28))
+	confirm_title.font_name = "h"
+	confirm_title.font_size = 15 * rs
+	confirm_title.text_align = "left"
+	confirm_title.vertical_align = "middle"
+	confirm_title.colors.text = {244, 221, 165, 255}
+	confirm_title.text = "有未保存的修改"
+	confirm_title.pos = V.v(12, 10)
+	self._confirm_dialog:add_child(confirm_title)
+
+	local confirm_hint = GGLabel:new(V.v(self._confirm_dialog.size.x - 24, 28))
+	confirm_hint.font_name = "body"
+	confirm_hint.font_size = 12 * rs
+	confirm_hint.text_align = "left"
+	confirm_hint.vertical_align = "middle"
+	confirm_hint.colors.text = {223, 202, 152, 255}
+	confirm_hint.text = "插件管理器配置已修改，请选择操作："
+	confirm_hint.pos = V.v(12, 40)
+	self._confirm_dialog:add_child(confirm_hint)
+
+	local bw = 120
+	local bh = 30
+	local gap = 16
+	local row_y1 = self._confirm_dialog.size.y - bh * 2 - 16
+	local row_y2 = self._confirm_dialog.size.y - bh - 8
+
+	local function center_row(buttons)
+		local total_w = #buttons * bw + (#buttons - 1) * gap
+		local x = (self._confirm_dialog.size.x - total_w) / 2
+		for _, b in ipairs(buttons) do
+			local btn = ModActionButton:new(b.text, V.v(bw, bh))
+			btn.pos = V.v(x, b.y)
+			btn.on_press = function()
+				S:queue("GUIButtonCommon")
+				b.action()
+			end
+			self._confirm_dialog:add_child(btn)
+			x = x + bw + gap
+		end
+	end
+
+	center_row({{
+		text = "保存调整",
+		y = row_y1,
+		action = function()
+			self:save()
+			self._confirm_dialog.hidden = true
+			self._unsaved_changes = false
+			self._pending_close = true
+		end
+	}, {
+		text = "舍弃调整",
+		y = row_y1,
+		action = function()
+			self._confirm_dialog.hidden = true
+			self._unsaved_changes = false
+			self._pending_close = true
+		end
+	}})
+
+	center_row({{
+		text = "保存并重启",
+		y = row_y2,
+		action = function()
+			self:save()
+			self._confirm_dialog.hidden = true
+			self:_stop_http_thread()
+			restart.tmp()
+		end
+	}, {
+		text = "取消",
+		y = row_y2,
+		action = function()
+			self._confirm_dialog.hidden = true
+		end
+	}})
 
 	self.task_dialog:order_to_front()
 	self:_refresh_header_buttons()
@@ -1426,14 +1546,12 @@ function ModManagerView:_fetch_store_list()
 	end
 	self.remote_by_entry = self._remote_entry_cache
 	self:_set_status(string.format("插件商店第 %d 页已刷新：%d 项", self.store_page, #self.store_items), 100)
-	self:_reload_local_mods()
 	self:_render_current_list()
 	return true, nil
 end
 
 function ModManagerView:_fetch_remote_entries_for_local()
 	self._cancel_requested = false
-	self:_reload_local_mods()
 	if #self.local_mods == 0 then
 		self.remote_by_entry = self._remote_entry_cache
 		self._remote_lookup_done = true
@@ -1502,7 +1620,6 @@ function ModManagerView:_fetch_remote_entries_for_local()
 
 	self.remote_by_entry = self._remote_entry_cache
 	self._remote_lookup_done = true
-	self:_reload_local_mods()
 	self:_render_current_list()
 	if found_count >= total_targets then
 		self:_set_status(string.format("远端条目查询完成：已匹配 %d/%d", found_count, total_targets), 100)
@@ -1515,7 +1632,10 @@ end
 function ModManagerView:_reload_local_mods()
 	mod_paths.ensure_storage_ready()
 	local cfg = self:_read_main_config()
+	local saved_cb = self.global_toggle.on_change
+	self.global_toggle.on_change = nil
 	self.global_toggle:set_value(cfg.enabled ~= false)
+	self.global_toggle.on_change = saved_cb
 
 	self.local_mods = {}
 	self.local_by_entry = {}
@@ -1559,6 +1679,7 @@ function ModManagerView:_reload_local_mods()
 		end
 		return (a.config.priority or 0) < (b.config.priority or 0)
 	end)
+	self:_capture_state()
 end
 
 function ModManagerView:_delete_local_mod_by_name(mod_name)
@@ -1788,7 +1909,6 @@ end
 
 function ModManagerView:_update_all_plugins()
 	self._cancel_requested = false
-	self:_reload_local_mods()
 	if #self.local_mods == 0 then
 		self:_set_status("本地没有已安装插件", 0)
 		return true, nil
@@ -1862,6 +1982,9 @@ function ModManagerView:_render_local_list()
 	self.mod_list:clear_rows()
 	self._mod_rows = {}
 	local list_w = self.mod_list.size.x - self.mod_list.scroller_width - 2 * self.mod_list.scroller_margin - 4
+	local global_disabled = not self.global_toggle.value
+
+	self._disabled_warning.hidden = not global_disabled
 
 	local category_option = CATEGORY_OPTIONS[self.category_idx]
 
@@ -1920,7 +2043,7 @@ function ModManagerView:_render_local_list()
 				meta = string.format("本地版本 v%s  作者: %s", safe_tostring(cfg.version), safe_tostring(cfg.by)),
 				desc = cfg.desc or "",
 				status = status,
-				show_toggle = true,
+				show_toggle = not global_disabled,
 				action_button_size = self._row_action_button_size,
 				toggle_size = self._row_toggle_size,
 				status_width = self._row_status_width,
@@ -1933,9 +2056,13 @@ function ModManagerView:_render_local_list()
 					if v then
 						cfg.last_used_at = os.time()
 					end
+					self._unsaved_changes = self:_check_unsaved()
 				end,
-				actions = actions
+				actions = global_disabled and {} or actions
 			}, list_w)
+			if global_disabled then
+				row:set_dimmed(true)
+			end
 			self.mod_list:add_row(row)
 			self.mod_list:add_row(KView:new(V.v(list_w, 10)))
 			self._mod_rows[#self._mod_rows + 1] = row
@@ -2033,6 +2160,7 @@ end
 
 function ModManagerView:show()
 	mod_paths.ensure_storage_ready()
+	self._unsaved_changes = false
 	self:_start_http_thread()
 	self:_reload_local_mods()
 	self:_render_current_list()
@@ -2043,6 +2171,11 @@ function ModManagerView:show()
 end
 
 function ModManagerView:hide()
+	if self._unsaved_changes then
+		self._confirm_dialog.hidden = false
+		self._confirm_dialog:order_to_front()
+		return
+	end
 	self._cancel_requested = true
 	self:_stop_http_thread()
 	ModManagerView.super.hide(self)
@@ -2050,6 +2183,11 @@ end
 
 function ModManagerView:update(dt)
 	ModManagerView.super.update(self, dt)
+	if self._pending_close then
+		self._pending_close = false
+		self:hide()
+		return
+	end
 	self:_sanitize_view_texts(self.back)
 	self:_render_progress()
 	if not self._active_task then
@@ -2282,6 +2420,30 @@ function ModManagerView:_upload_plugin(mod_data, upload_cover)
 	return true, nil
 end
 
+function ModManagerView:_capture_state()
+	self._saved_state = {
+		global_enabled = self.global_toggle.value,
+		mod_enabled = {}
+	}
+	for _, mod_data in ipairs(self.local_mods) do
+		self._saved_state.mod_enabled[mod_data.name] = mod_data.config.enabled ~= false
+	end
+	self._unsaved_changes = false
+end
+
+function ModManagerView:_check_unsaved()
+	if self.global_toggle.value ~= self._saved_state.global_enabled then
+		return true
+	end
+	for _, mod_data in ipairs(self.local_mods) do
+		local saved = self._saved_state.mod_enabled[mod_data.name]
+		if saved ~= nil and (mod_data.config.enabled ~= false) ~= saved then
+			return true
+		end
+	end
+	return false
+end
+
 function ModManagerView:save()
 	local base_cfg = self:_read_main_config()
 	base_cfg.enabled = self.global_toggle.value
@@ -2305,6 +2467,7 @@ function ModManagerView:save()
 			log.error("写入 %s 失败", mod_data.config_path)
 		end
 	end
+	self:_capture_state()
 end
 
 function ModManagerView:destroy()
