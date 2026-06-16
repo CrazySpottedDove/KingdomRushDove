@@ -1393,7 +1393,7 @@ local function do_update()
 		return {
 			status = "Error",
 			title = "升级失败",
-			message = "校验美术资源时发生错误。\n\n" .. table.concat(error_log_lines, "\n")
+			message = "校验美术资源时发生错误。如多次尝试更新均失败，考虑重新安装整包。\n\n" .. table.concat(error_log_lines, "\n")
 		}
 	end
 
@@ -1403,7 +1403,7 @@ local function do_update()
 		return {
 			status = "Error",
 			title = "升级失败",
-			message = "下载资源失败，但已保留进度，下次将自动续传。\n\n" .. table.concat(error_log_lines, "\n")
+			message = "下载资源失败，但已保留进度，下次将自动续传。如多次尝试更新均失败，考虑重新安装整包。\n\n" .. table.concat(error_log_lines, "\n")
 		}
 	end
 
@@ -1413,7 +1413,7 @@ local function do_update()
 		return {
 			status = "Error",
 			title = "升级失败",
-			message = "下载代码失败，但已保留进度，下次将自动续传。\n\n" .. table.concat(error_log_lines, "\n")
+			message = "下载代码失败，但已保留进度，下次将自动续传。如多次尝试更新均失败，考虑重新安装整包。\n\n" .. table.concat(error_log_lines, "\n")
 		}
 	end
 
@@ -1431,7 +1431,7 @@ local function do_update()
 		return {
 			status = "Error",
 			title = "升级失败",
-			message = "提交更改失败。\n\n" .. table.concat(error_log_lines, "\n")
+			message = "提交更改失败。如多次尝试更新均失败，考虑重新安装整包。\n\n" .. table.concat(error_log_lines, "\n")
 		}
 	end
 
