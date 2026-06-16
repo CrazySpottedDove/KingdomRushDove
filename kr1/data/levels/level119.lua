@@ -63,7 +63,7 @@ cape.render.sprites[1].ts=store.tick_ts
 cape.tween.ts=store.tick_ts
 LU.queue_insert(store,cape)
 U.animation_start(cape,"run",true,store.tick_ts,true,1,true)
-U.y_animation_wait(controller_pre_bossfight)
+U.y_animation_wait_default(controller_pre_bossfight)
 U.animation_start(controller_pre_bossfight,"idle",true,store.tick_ts,true,1,true)
 signal.emit("show-balloon_tutorial","LV19_NAVIRA_START_03",false)
 U.y_wait_unconditional(store,4)

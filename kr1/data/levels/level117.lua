@@ -89,7 +89,7 @@ U.animation_start(v,"run",nil,store.tick_ts,false)
 break
 end
 end
-U.y_animation_wait(soulcaller_up)
+U.y_animation_wait_default(soulcaller_up)
 U.y_animation_play(soulcaller_up,"revenant_idle_02",nil,store.tick_ts)
 S:queue("Stage17RootSoulcallerOut")
 U.y_animation_play(soulcaller_up,"revenant_out",nil,store.tick_ts)
@@ -111,7 +111,7 @@ U.animation_start(v,"run",nil,store.tick_ts,false)
 break
 end
 end
-U.y_animation_wait(soulcaller_down)
+U.y_animation_wait_default(soulcaller_down)
 U.animation_start(soulcaller_down,"revenant_idle_02",nil,store.tick_ts,false)
 U.y_wait_unconditional(store,fts(30))
 if #holders>0 then
@@ -122,7 +122,7 @@ v.ui.can_click=true
 v.tower.can_hover=true
 end
 end
-U.y_animation_wait(soulcaller_down)
+U.y_animation_wait_default(soulcaller_down)
 S:queue("Stage17RootSoulcallerOut")
 U.y_animation_play(soulcaller_down,"revenant_out",nil,store.tick_ts)
 soulcaller_down.render.sprites[1].hidden=true

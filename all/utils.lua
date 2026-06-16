@@ -241,8 +241,6 @@ function U.hover_pulse_alpha(t)
 	return min + (max - min) * 0.5 * (1 + sin(t * km.twopi / per))
 end
 
-local INV_ASPECT_07 = 1 / 0.7
-
 ---检测点是否在椭圆内（使用默认纵横比 0.7）
 ---@param p table 点坐标 {x, y}
 ---@param center table 椭圆中心 {x, y}
@@ -250,7 +248,7 @@ local INV_ASPECT_07 = 1 / 0.7
 ---@return boolean 是否在椭圆内
 function U.is_inside_ellipse(p, center, radius)
 	local x = (p.x - center.x)
-	local y = (p.y - center.y) * INV_ASPECT_07
+	local y = (p.y - center.y) * 1.42857142857
 
 	return x * x + y * y <= radius * radius
 end
@@ -411,6 +409,19 @@ function U.y_animation_wait(entity, idx, times)
 	idx = idx or 1
 
 	while not U.animation_finished(entity, idx, times) do
+		coroutine.yield()
+	end
+end
+
+--- U.animation_finished 的显示默认实现，性能更优
+---@param entity table
+function U.animation_finished_default(entity)
+	return entity.render.sprites[1].runs > 0
+end
+
+--- U.y_animation_wait 的显示默认实现，性能更优
+function U.y_animation_wait_default(entity)
+	while entity.render.sprites[1].runs <= 0 do
 		coroutine.yield()
 	end
 end

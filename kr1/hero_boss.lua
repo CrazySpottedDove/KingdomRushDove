@@ -236,7 +236,7 @@ local function enemy_do_counter_attack(store, this, target)
 		end
 	end
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		if this.health.dead or ma.ignore_stun and this.unit.is_stunned then
 			return false
 		end
@@ -410,7 +410,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 				end
 			end
 
-			while not U.animation_finished(this) do
+			while not U.animation_finished_default(this) do
 				if this.unit.is_stunned then
 					goto label_70_0
 				end
@@ -436,7 +436,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 
 			U.animation_start(this, an, af, store.tick_ts, 1)
 
-			while not U.animation_finished(this) do
+			while not U.animation_finished_default(this) do
 				if this.health.dead then
 					break
 				end
@@ -607,7 +607,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 			end
 		end
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			if this.health.dead or ma.ignore_stun and this.unit.is_stunned or this.dodge and this.dodge.active and not this.dodge.silent then
 				return false
 			end
@@ -675,7 +675,7 @@ local function y_enemy_melee_attacks(store, this, target)
 			else
 				enemy_do_single_melee_attack(store, this, target, ma)
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					if this.health.dead or ma.ignore_stun and this.unit.is_stunned or this.dodge and this.dodge.active and not this.dodge.silent then
 						return false
 					end
@@ -894,7 +894,7 @@ tt.main_script.update = function(this, store)
 						queue_insert(store, mod)
 					end
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						if this.health.dead or this.unit.is_stunned then
 							break
 						end
@@ -1065,7 +1065,7 @@ tt.main_script.update = function(this, store)
 
 					queue_insert(store, e)
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						if this.health.dead or this.unit.is_stunned then
 							break
 						end
@@ -1352,7 +1352,7 @@ tt.main_script.update = function(this, store)
 					this.dodge.applied = nil
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 			end
 
 			if bda_ready() then
@@ -1416,7 +1416,7 @@ tt.main_script.update = function(this, store)
 					local d = E.assign_damage(bda.damage_type, U.frandom(bda.damage_min, bda.damage_max), this.id, target.id)
 
 					queue_damage(store, d)
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 					SU.stun_dec(target)
 				end
 
@@ -1538,7 +1538,7 @@ tt.main_script.update = function(this, store)
 						a.pos_ni = node[3]
 
 						queue_insert(store, a)
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 
 						this._casting_eerie = nil
 					else
@@ -1578,7 +1578,7 @@ tt.main_script.update = function(this, store)
 							queue_insert(store, mod)
 						end
 
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 
 						this._casting_circle = nil
 					end
@@ -1876,7 +1876,7 @@ tt.main_script.update = function(this, store)
 					S:queue(a.sound_start)
 					U.animation_start(this, a.animations[1], nil, store.tick_ts, false)
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						if unit_interrupted(this) then
 							goto label_90_0
 						end
@@ -1888,7 +1888,7 @@ tt.main_script.update = function(this, store)
 
 					U.animation_start(this, a.animations[2], nil, store.tick_ts, false)
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						if unit_interrupted(this) then
 							goto label_90_0
 						end
@@ -2296,7 +2296,7 @@ tt.main_script.update = function(this, store)
 					queue_insert(store, spawn)
 				end
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					if unit_interrupted(this) then
 						goto label_alric_end
 					end

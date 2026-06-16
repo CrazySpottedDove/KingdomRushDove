@@ -3517,7 +3517,7 @@ function scripts.decal_pixie.update(this, store)
 					queue_insert(store, e)
 				end
 
-				y_animation_wait(this)
+				U.y_animation_wait_default(this)
 				U.y_animation_play(this, "teleportOut", nil, store.tick_ts)
 				SU.stun_dec(target)
 
@@ -4649,7 +4649,7 @@ function scripts.soldier_mecha.update(this, store)
 
 					queue_insert(store, b)
 
-					while not animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						coroutine.yield()
 					end
 
@@ -4679,7 +4679,7 @@ function scripts.soldier_mecha.update(this, store)
 
 					animation_start(this, an, af, store.tick_ts, false, 1)
 
-					while not animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						coroutine.yield()
 					end
 
@@ -4719,7 +4719,7 @@ function scripts.soldier_mecha.update(this, store)
 							end
 						end
 
-						while not animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							coroutine.yield()
 						end
 					end
@@ -4728,7 +4728,7 @@ function scripts.soldier_mecha.update(this, store)
 
 					animation_start(this, am.animation_post, nil, store.tick_ts, false, 1)
 
-					while not animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						coroutine.yield()
 					end
 
@@ -4768,7 +4768,7 @@ function scripts.soldier_mecha.update(this, store)
 
 				queue_insert(store, b)
 
-				while not animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					if this.nav_rally.new then
 						break
 					end
@@ -6429,7 +6429,7 @@ function scripts.bullet_tower_dark_elf.update(this, store)
 			s.hidden = false
 		end
 	else
-		while not animation_finished(this, 1) do
+		while not U.animation_finished_default(this) do
 			if source and not store.entities[source.id] then
 				queue_remove(store, this)
 
@@ -6920,7 +6920,7 @@ function scripts.tower_demon_pit.update(this, store)
 						d.pos = vclone(this.pos)
 
 						queue_insert(store, d)
-						y_animation_wait(d)
+						U.y_animation_wait_default(d)
 						animation_start(this, aa.animation_reload, nil, store.tick_ts, false, this.demons_sid)
 						y_animation_wait(this, this.demons_sid)
 						animation_start(this, aa.animation, nil, store.tick_ts, false, this.demons_sid)
@@ -6962,7 +6962,7 @@ scripts.decal_tower_demon_pit_reload = {}
 function scripts.decal_tower_demon_pit_reload.update(this, store)
 	this.render.sprites[1].ts = store.tick_ts
 
-	y_animation_wait(this)
+	U.y_animation_wait_default(this)
 
 	this.render.sprites[1].hidden = true
 
@@ -7080,7 +7080,7 @@ function scripts.soldier_tower_demon_pit.update(this, store)
 			decal.tween.ts = store.tick_ts
 
 			queue_insert(store, decal)
-			y_animation_wait(this, 1)
+			U.y_animation_wait_default(this)
 			queue_remove(store, this)
 
 			return
@@ -7259,7 +7259,7 @@ function scripts.big_guy_tower_demon_pit.update(this, store)
 			y_wait(store, fts(20))
 			S:queue(this.explosion_sound)
 			explosion(this.explosion_range[this.level], this.explosion_damage[this.level] * this.unit.damage_factor, this.explosion_damage_type)
-			y_animation_wait(this, 1)
+			U.y_animation_wait_default(this)
 			queue_remove(store, this)
 			queue_remove(store, this)
 
@@ -7806,7 +7806,7 @@ function scripts.bullet_tower_necromancer.update(this, store)
 		ps.particle_system.emit = false
 	end
 
-	while not animation_finished(this, 1) do
+	while not U.animation_finished_default(this) do
 		coroutine.yield()
 	end
 
@@ -7955,7 +7955,7 @@ function scripts.bullet_tower_necromancer_deathspawn.update(this, store)
 		ps.particle_system.emit = false
 	end
 
-	while not animation_finished(this, 1) do
+	while not U.animation_finished_default(this) do
 		coroutine.yield()
 	end
 
@@ -9589,7 +9589,7 @@ function scripts.tower_pandas_ray.update(this, store)
 			s.hidden = false
 		end
 	else
-		while not animation_finished(this, 1) do
+		while not U.animation_finished_default(this) do
 			if tower and not store.entities[tower.id] then
 				queue_remove(store, this)
 
@@ -10094,7 +10094,7 @@ function scripts.soldier_tower_pandas.update(this, store)
 							end
 						end
 
-						y_animation_wait(this)
+						U.y_animation_wait_default(this)
 						animation_start(this, "idle", nil, store.tick_ts, true)
 					else
 						a_i.ts = a_i.ts + a_i.cooldown * 0.2
@@ -10152,7 +10152,7 @@ function scripts.soldier_tower_pandas.update(this, store)
 							queue_insert(store, mod_teleport)
 						end
 
-						y_animation_wait(this)
+						U.y_animation_wait_default(this)
 						animation_start(this, "idle", nil, store.tick_ts, true)
 					end
 				end
@@ -11133,7 +11133,7 @@ function scripts.bullet_tower_ray.update(this, store)
 	end
 
 	if this.render.sprites[1].name == "fade" then
-		y_animation_wait(this)
+		U.y_animation_wait_default(this)
 	else
 		U.y_animation_play(this, "fade", nil, store.tick_ts)
 	end
@@ -12608,7 +12608,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_tamer.update(this, sto
 
 				ab.ts = store.tick_ts
 
-				y_animation_wait(this)
+				U.y_animation_wait_default(this)
 				U.y_animation_play(this, "idle_3", nil, store.tick_ts, 1)
 
 				last_cheer = store.tick_ts
@@ -14271,7 +14271,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_phosphoric.update(this, sto
 			s.hidden = false
 		end
 	else
-		while not animation_finished(this, 1) do
+		while not U.animation_finished_default(this) do
 			coroutine.yield()
 		end
 	end
@@ -14610,7 +14610,7 @@ function scripts.mod_soldier_tower_rocket_gunners_sting_missiles_target.update(t
 			end
 		end
 
-		if animation_finished(this, 1) and not is_idle then
+		if U.animation_finished_default(this) and not is_idle then
 			is_idle = true
 
 			animation_start(this, "idle", nil, store.tick_ts, true)
@@ -15261,7 +15261,7 @@ function scripts.controller_tower_flamespitter_column.update(this, store)
 		end
 	end
 
-	y_animation_wait(fx)
+	U.y_animation_wait_default(fx)
 
 	fx.render.sprites[1].hidden = true
 
@@ -15809,7 +15809,7 @@ function scripts.bullet_tower_ballista.update(this, store)
 			s.hidden = false
 		end
 	else
-		while not U.animation_finished(this, 1) do
+		while not U.animation_finished_default(this) do
 			if source and not store.entities[source.id] then
 				queue_remove(store, this)
 
@@ -16051,7 +16051,7 @@ function scripts.aura_bullet_tower_ballista_skill_bomb.update(this, store)
 	U.animation_start(this, "in", false, store.tick_ts, false, 1)
 
 	while true do
-		if U.animation_finished(this, 1) and this.render.sprites[1].name ~= "idle" then
+		if U.animation_finished_default(this) and this.render.sprites[1].name ~= "idle" then
 			U.animation_start(this, "idle", false, store.tick_ts, true, 1)
 		end
 
@@ -17798,7 +17798,7 @@ function scripts.bullet_tower_hermit_toad_instakill_tongue.update(this, store)
 			s.hidden = false
 		end
 	else
-		while not U.animation_finished(this, 1) do
+		while not U.animation_finished_default(this) do
 			if source and not store.entities[source.id] then
 				queue_remove(store, this)
 
@@ -20568,7 +20568,7 @@ function scripts.soldier_priests_barrack.update(this, store)
 		this.health_bar.hidden = true
 		U.animation_start(this, "raise", nil, store.tick_ts, 1)
 
-		while not U.animation_finished(this) and not this.health.dead do
+		while not U.animation_finished_default(this) and not this.health.dead do
 			coroutine.yield()
 		end
 
@@ -20722,7 +20722,7 @@ function scripts.soldier_priests_barrack.update(this, store)
 				elseif this.dodge.animation then
 					U.animation_start(this, this.dodge.animation, nil, store.tick_ts, 1)
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						coroutine.yield()
 					end
 				end
@@ -20824,7 +20824,7 @@ function scripts.soldier_abomination_priests_barrack.update(this, store)
 		this.health_bar.hidden = true
 		U.animation_start(this, "raise", nil, store.tick_ts, 1)
 
-		while not U.animation_finished(this) and not this.health.dead do
+		while not U.animation_finished_default(this) and not this.health.dead do
 			coroutine.yield()
 		end
 
@@ -20884,7 +20884,7 @@ function scripts.soldier_abomination_priests_barrack.update(this, store)
 				elseif this.dodge.animation then
 					U.animation_start(this, this.dodge.animation, nil, store.tick_ts, 1)
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						coroutine.yield()
 					end
 				end
@@ -21015,7 +21015,7 @@ function scripts.decal_tentacle_priests_barrack.update(this, store)
 					queue_insert(store, e)
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 			end
 		end
 
@@ -21209,7 +21209,7 @@ function scripts.tower_dragons.update(this, store)
 			queue_insert(store, e)
 			table.insert(this.dragons, e)
 		end
-		U.y_animation_wait(this.dragons[1], 1, 1)
+		U.y_animation_wait_default(this.dragons[1])
 	end
 
 	this.dragons = {}
@@ -21889,7 +21889,7 @@ function scripts.faerie_dragon_lvl4.update(this, store)
 						queue_insert(store, b)
 					end
 
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 				end
 
 				::label_faerie_dragon_no_target::
@@ -23111,7 +23111,7 @@ function scripts.aura_orc_shaman_healing_roots.update(this, store)
 			break
 		end
 
-		if U.animation_finished(this, 1) and this.render.sprites[1].name ~= "run" then
+		if U.animation_finished_default(this) and this.render.sprites[1].name ~= "run" then
 			U.animation_start(this, "run", nil, store.tick_ts, true, 1)
 		end
 
@@ -23156,7 +23156,7 @@ function scripts.aura_orc_shaman_healing_roots.update(this, store)
 	end
 
 	U.animation_start(this, "out", nil, store.tick_ts, false, 1)
-	U.y_animation_wait(this, 1, 1)
+	U.y_animation_wait_default(this)
 	queue_remove(store, this)
 end
 
@@ -23381,7 +23381,7 @@ function scripts.bullet_orc_shaman_shock.update(this, store)
 		end
 	end
 
-	U.y_animation_wait(this, nil, 1)
+	U.y_animation_wait_default(this)
 	queue_remove(store, this)
 end
 
@@ -23770,7 +23770,7 @@ function scripts.soldier_orc_warrior.update(this, store)
 								end
 							end
 
-							U.y_animation_wait(this, 1, 1)
+							U.y_animation_wait_default(this)
 						end
 					end
 				end
@@ -25700,7 +25700,7 @@ function scripts.soldier_zombie.update(this, store, script)
 
 		U.animation_start(this, "raise", nil, store.tick_ts, 1)
 
-		while not U.animation_finished(this) and not this.health.dead do
+		while not U.animation_finished_default(this) and not this.health.dead do
 			coroutine.yield()
 		end
 
@@ -25861,7 +25861,7 @@ function scripts.aura_grim_cemetery_hand.update(this, store, script)
 
 	U.y_animation_play(this, "in", nil, store.tick_ts, 1)
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		coroutine.yield()
 	end
 
@@ -25902,7 +25902,7 @@ function scripts.aura_grim_cemetery_hand.update(this, store, script)
 	end
 
 	U.y_animation_play(this, "out", nil, store.tick_ts, 1)
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		coroutine.yield()
 	end
 	queue_remove(store, this)
@@ -26189,7 +26189,7 @@ function scripts.soldier_balloon.update(this, store, script)
 						b.bullet.from:copy(b.pos)
 						b.bullet.to = this.pos
 						queue_insert(store, b)
-						while not U.animation_finished(this, 1) do
+						while not U.animation_finished_default(this) do
 							coroutine.yield()
 						end
 						this.render.sprites[1].hidden = true

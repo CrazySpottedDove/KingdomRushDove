@@ -251,7 +251,7 @@ function scripts.twister.update(this, store)
 
 	U.animation_start(this, "start", nil, store.tick_ts, 1)
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		coroutine.yield()
 	end
 
@@ -396,7 +396,7 @@ function scripts.twister.update(this, store)
 	end
 	queue_insert(store, bolt)
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		coroutine.yield()
 	end
 
@@ -635,7 +635,7 @@ function scripts.drill.update(this, store)
 
 	queue_damage(store, d)
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		coroutine.yield()
 	end
 
@@ -1621,7 +1621,7 @@ scripts.enemy_shaman = {
 							end
 						end
 
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 					end
 				end
 
@@ -1777,7 +1777,7 @@ scripts.enemy_troll_chieftain = {
 
 							S:queue(a.cast_sound)
 							rage_targets()
-							U.y_animation_wait(this)
+							U.y_animation_wait_default(this)
 						end
 					end
 				end
@@ -2000,7 +2000,7 @@ function scripts.enemy_demon_gulaemon.update(this, store)
 
 				U.animation_start(this, an, af, store.tick_ts)
 
-				while not U.animation_finished(this) and not this.health.dead do
+				while not U.animation_finished_default(this) and not this.health.dead do
 					coroutine.yield()
 				end
 
@@ -2165,7 +2165,7 @@ scripts.enemy_zombiemancer = {
 						coroutine.yield()
 					end
 
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					a.ts = store.tick_ts
 				end
@@ -2233,7 +2233,7 @@ scripts.enemy_zombiemancer = {
 							goto label_117_0
 						end
 
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 
 						abomination.render.sprites[1].alpha = 255
 
@@ -2350,7 +2350,7 @@ function scripts.enemy_necromancer.update(this, store)
 					coroutine.yield()
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				a.ts = store.tick_ts
 			end
@@ -2749,7 +2749,7 @@ function scripts.ray_tesla.update(this, store)
 				end
 			end
 
-			while not U.animation_finished(this) do
+			while not U.animation_finished_default(this) do
 				if target then
 					update_sprite()
 				end
@@ -2888,7 +2888,7 @@ function scripts.ray_thor.update(this, store)
 
 		queue_insert(store, mod)
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			update_sprite()
 			coroutine.yield()
 		end
@@ -3541,7 +3541,7 @@ function scripts.mod_thorn.update(this, store)
 
 	U.animation_start(this, "start", target_flip, store.tick_ts, false)
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		if target.health.dead then
 			goto label_223_0
 		end
@@ -4135,7 +4135,7 @@ function scripts.mod_witch_frog.update(this, store)
 	t.ts = store.tick_ts
 
 	U.y_wait_unconditional(store, t_end[1])
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	U.animation_start(this, "idle", nil, store.tick_ts, true)
 	U.y_wait_unconditional(store, this.animation_delay)
 	U.y_animation_play(this, "puff", nil, store.tick_ts, 1)
@@ -4303,7 +4303,7 @@ function scripts.decal_fish.update(this, store)
 
 		this.ui.clicked = nil
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			if this.ui.clicked then
 				AC:got(this.achievement_id)
 
@@ -4490,7 +4490,7 @@ function scripts.decal_fredo.update(this, store)
 			this.ui.can_click = false
 
 			U.animation_start(this, "release", nil, store.tick_ts, false)
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			AC:got("FREE_FREDO")
 			queue_remove(store, this)
 		end
@@ -4690,7 +4690,7 @@ function scripts.decal_scrat.update(this, store)
 	this.ui.can_click = false
 
 	U.animation_start(this, "play", nil, store.tick_ts, false)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 
 	this.render.sprites[1].hidden = true
 
@@ -4797,7 +4797,7 @@ function scripts.decal_s23_splinter_pizza.update(this, store)
 	this.ui.clicked = nil
 
 	U.animation_start(this, "clicked", nil, store.tick_ts, false)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	AC:got("SPLINTER")
 
 	this.render.sprites[1].prefix = "decal_s23_splinter"
@@ -4836,7 +4836,7 @@ function scripts.decal_s24_nevermore.update(this, store)
 	this.ui.clicked = nil
 
 	U.animation_start(this, "clicked", nil, store.tick_ts, false)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	U.animation_start(this, "fly", nil, store.tick_ts, true)
 
 	this.tween.reverse = false
@@ -4876,7 +4876,7 @@ function scripts.decal_s25_nessie.update(this, store)
 		this.ui.can_click = true
 
 		U.animation_start(this, "bubble_in", nil, store.tick_ts, false)
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 
 		while this.render.sprites[1].runs < 1 do
 			if this.ui.clicked then
@@ -4903,7 +4903,7 @@ function scripts.decal_s25_nessie.update(this, store)
 		this.ui.can_click = false
 
 		U.animation_start(this, "bubble_out", nil, store.tick_ts, false)
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 
 		goto label_273_0
 
@@ -4915,7 +4915,7 @@ function scripts.decal_s25_nessie.update(this, store)
 		U.animation_start(this, "clicked", nil, store.tick_ts, false)
 		U.y_wait_unconditional(store, fts(90))
 		S:queue(this.sound)
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 		AC:got("NESSIE")
 		U.sprites_hide(this)
 		coroutine.yield()
@@ -4948,7 +4948,7 @@ function scripts.enemy_tremor.update(this, store)
 				SU.remove_modifiers(store, this)
 				U.animation_start(this, "burrow", nil, store.tick_ts, 1)
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					coroutine.yield()
 				end
 
@@ -4966,7 +4966,7 @@ function scripts.enemy_tremor.update(this, store)
 
 						U.animation_start(this, an, af, store.tick_ts, 1)
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							coroutine.yield()
 						end
 
@@ -5076,7 +5076,7 @@ function scripts.enemy_munra.update(this, store)
 
 					this.did_sarcophagus = true
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						if this.health.dead then
 							goto label_7_0
 						end
@@ -5115,7 +5115,7 @@ function scripts.enemy_munra.update(this, store)
 					queue_insert(store, new_mod)
 				end
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					if this.health.dead then
 						goto label_7_0
 					end
@@ -5262,7 +5262,7 @@ function scripts.enemy_cannibal.update(this, store)
 						this.health.hp_max = this.health.hp_max + this.cannibalize.extra_hp
 					end
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						if not store.entities[target.id] then
 							break
 						end
@@ -5624,7 +5624,7 @@ function scripts.enemy_shaman_necro.update(this, store)
 						queue_insert(store, e)
 					end
 
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 				end
 			end
 
@@ -5765,7 +5765,7 @@ function scripts.enemy_cannibal_volcano.update(this, store)
 				S:queue(this.sound_events.scream)
 				U.y_wait_unconditional(store, fts(33))
 				show_throw_virgin()
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				this.phase = "princess_thrown"
 
@@ -6328,7 +6328,7 @@ function scripts.enemy_sniper.update(this, store)
 
 						ra.ts = store.tick_ts
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							coroutine.yield()
 						end
 
@@ -6442,7 +6442,7 @@ function scripts.enemy_blacksurge.update(this, store)
 					S:queue(ta.sound)
 				end
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					coroutine.yield()
 				end
 			end
@@ -6460,7 +6460,7 @@ function scripts.enemy_blacksurge.update(this, store)
 
 				U.animation_start(this, "hide", nil, store.tick_ts, 1)
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					if this.health.dead then
 						goto label_46_1
 					end
@@ -6493,7 +6493,7 @@ function scripts.enemy_blacksurge.update(this, store)
 
 				U.animation_start(this, "show", nil, store.tick_ts, 1)
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					coroutine.yield()
 				end
 
@@ -6612,7 +6612,7 @@ function scripts.enemy_bluegale.update(this, store)
 					e.pos = npos
 
 					queue_insert(store, e)
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 				end
 			end
 
@@ -6741,7 +6741,7 @@ function scripts.enemy_deviltide_shark.update(this, store)
 
 				queue_insert(store, e)
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					coroutine.yield()
 				end
 
@@ -7338,7 +7338,7 @@ function scripts.gorilla_small_liana.update(this, store)
 	spawn.render.sprites[1].flip_x = right_side
 
 	queue_insert(store, spawn)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	queue_remove(store, this)
 end
 
@@ -7696,7 +7696,7 @@ function scripts.decal_tusken.update(this, store)
 				U.y_wait_unconditional(store, a.shoot_time)
 				queue_insert(store, b)
 				S:queue("ShotgunSound")
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 				U.y_wait_unconditional(store, a.cooldown - (store.tick_ts - attack_ts))
 			end
 		end
@@ -7791,7 +7791,7 @@ function scripts.sand_worm.update(this, store)
 		decal.render.sprites[1].ts = store.tick_ts
 
 		queue_insert(store, decal)
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 
 		s.hidden = true
 	end
@@ -7945,7 +7945,7 @@ function scripts.pirate_cannons.update(this, store)
 				queue_insert(store, b1)
 				U.y_wait_unconditional(store, fts(4))
 				queue_insert(store, b2)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				a.ts = store.tick_ts
 			end
@@ -8130,7 +8130,7 @@ function scripts.carnivorous_plant.update(this, store)
 				end
 			end
 
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			U.animation_start(this, "idle", nil, store.tick_ts, true)
 		end
 	end
@@ -8294,7 +8294,7 @@ function scripts.enemy_gunboat.update(this, store)
 							queue_insert(store, b)
 						end
 
-						while not U.animation_finished(this) or this.unit.is_stunned do
+						while not U.animation_finished_default(this) or this.unit.is_stunned do
 							if this.health.dead then
 								goto label_188_0
 							end
@@ -8357,7 +8357,7 @@ function scripts.decal_whale.update(this, store)
 		U.animation_start(this, "show", nil, store.tick_ts, 1, i)
 	end
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		coroutine.yield()
 	end
 
@@ -8389,7 +8389,7 @@ function scripts.decal_whale.update(this, store)
 		U.animation_start(this, "hide", nil, store.tick_ts, 1, i)
 	end
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		coroutine.yield()
 	end
 
@@ -8594,7 +8594,7 @@ function scripts.hero_steam_frigate.update(this, store)
 
 				queue_insert(store, b)
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					if this.nav_rally.new then
 						goto label_470_0
 					end
@@ -8647,7 +8647,7 @@ function scripts.hero_steam_frigate.update(this, store)
 			queue_insert(store, m)
 			table.insert(mines_alive, m)
 
-			while not U.animation_finished(this) do
+			while not U.animation_finished_default(this) do
 				if this.nav_rally.new then
 					goto label_470_0
 				end
@@ -8937,7 +8937,7 @@ function scripts.ray_neptune.update(this, store)
 		queue_damage(store, d)
 	end
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		coroutine.yield()
 	end
 
@@ -9109,7 +9109,7 @@ function scripts.ray_frankenstein.update(this, store)
 			end
 		end
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			update_sprite()
 			coroutine.yield()
 		end
@@ -9946,7 +9946,7 @@ function scripts.voodoo_witch_skull.update(this, store)
 
 				this.max_shots = this.max_shots - 1
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					move_step(this.rot_dest, true)
 					coroutine.yield()
 				end
@@ -10227,7 +10227,7 @@ function scripts.decal_veznan_soulburn_ball.update(this, store)
 	fx.render.sprites[1].flip_x = af
 
 	queue_insert(store, fx)
-	U.y_animation_wait(fx)
+	U.y_animation_wait_default(fx)
 
 	local ps = E:create_entity(this.particles_name)
 
@@ -10244,7 +10244,7 @@ function scripts.decal_veznan_soulburn_ball.update(this, store)
 
 	this.arrived = true
 
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	queue_remove(store, this)
 end
 
@@ -10956,7 +10956,7 @@ function scripts.soldier_blade.update(this, store)
 					local d = E.assign_damage(bda.damage_type, U.frandom(bda.damage_min, bda.damage_max), this.id, target.id)
 
 					queue_damage(store, d)
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 					SU.stun_dec(target)
 				end
 
@@ -11110,7 +11110,7 @@ function scripts.soldier_forest.update(this, store)
 					a.pos_ni = ni
 
 					queue_insert(store, a)
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					this._casting_eerie = nil
 				-- AC:inc_check("EERIE_GARDENER")
@@ -11166,7 +11166,7 @@ function scripts.soldier_forest.update(this, store)
 							queue_insert(store, mod)
 						end
 
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 
 						this._casting_circle = nil
 					end
@@ -11492,7 +11492,7 @@ function scripts.soldier_xin_shadow.update(this, store)
 					queue_damage(store, d)
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				attack_count = attack_count + 1
 			end
@@ -11829,7 +11829,7 @@ function scripts.enemy_gnoll_blighter.update(this, store)
 				m.modifier.source_id = this.id
 
 				queue_insert(store, m)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				goto label_224_0
 			end
@@ -11956,7 +11956,7 @@ function scripts.enemy_ettin.update(this, store)
 				local d = E.assign_damage(this.insane.damage_type, damage_value, this.id, this.id)
 
 				queue_damage(store, d)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 				U.animation_start(this, "insaneLoop", nil, store.tick_ts, true)
 
 				if SU.y_enemy_wait(store, this, this.insane.stun_duration) then
@@ -12142,7 +12142,7 @@ function scripts.enemy_twilight_elf_harasser.update(this, store)
 
 					queue_insert(store, b)
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						if this.health.dead or this.unit.is_stunned then
 							goto label_236_0
 						end
@@ -12319,7 +12319,7 @@ function scripts.enemy_bandersnatch.update(this, store)
 
 		queue_insert(store, a)
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			coroutine.yield()
 		end
 
@@ -12577,7 +12577,7 @@ function scripts.enemy_gloomy.update(this, store)
 				end
 
 				queue_insert(store, e)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				this._clones_count = this._clones_count + 1
 				a.ts = store.tick_ts
@@ -12727,7 +12727,7 @@ function scripts.enemy_twilight_avenger.update(this, store)
 					m.modifier.target_id = target.id
 
 					queue_insert(store, m)
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					a.ts = store.tick_ts
 
@@ -13037,7 +13037,7 @@ function scripts.enemy_webspitting_spider.update(this, store)
 								end
 							end
 
-							U.y_animation_wait(this)
+							U.y_animation_wait_default(this)
 
 							a.ts = store.tick_ts
 
@@ -13181,7 +13181,7 @@ function scripts.enemy_twilight_evoker.update(this, store)
 						queue_insert(store, m)
 					end
 
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					a.ts = store.tick_ts
 				end
@@ -13215,7 +13215,7 @@ function scripts.enemy_twilight_evoker.update(this, store)
 					m.pos.x, m.pos.y = tower.pos.x, tower.pos.y
 
 					queue_insert(store, m)
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					a.ts = store.tick_ts
 				end
@@ -13310,7 +13310,7 @@ function scripts.enemy_twilight_heretic.update(this, store)
 							a.ts = store.tick_ts
 
 							U.animation_start(this, a.animations[3], nil, store.tick_ts, false)
-							U.y_animation_wait(this)
+							U.y_animation_wait_default(this)
 						else
 							local fx = E:create_entity(a.hit_fx)
 
@@ -13338,7 +13338,7 @@ function scripts.enemy_twilight_heretic.update(this, store)
 								table.insert(balls, b)
 							end
 
-							U.y_animation_wait(this)
+							U.y_animation_wait_default(this)
 							U.animation_start(this, a.animations[2], nil, store.tick_ts, true)
 
 							while true do
@@ -13360,7 +13360,7 @@ function scripts.enemy_twilight_heretic.update(this, store)
 							end
 
 							U.animation_start(this, a.animations[3], nil, store.tick_ts, false)
-							U.y_animation_wait(this)
+							U.y_animation_wait_default(this)
 
 							local m = E:create_entity(a.mod)
 
@@ -13425,7 +13425,7 @@ function scripts.enemy_twilight_heretic.update(this, store)
 					U.y_wait_unconditional(store, 0.1)
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				a.ts = store.tick_ts
 			end
@@ -13617,7 +13617,7 @@ function scripts.enemy_mantaray.update(this, store)
 							end
 						end
 
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 						queue_remove(store, this)
 
 						return
@@ -13829,7 +13829,7 @@ function scripts.enemy_arachnomancer.update(this, store)
 				e.spawner.entity = set[2]
 
 				queue_insert(store, e)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				a.ts = store.tick_ts
 
@@ -13875,7 +13875,7 @@ function scripts.spider_arachnomancer_egg_spawner.update(this, store)
 					goto label_297_0
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				if this.spawn_once then
 					this.tween.disabled = nil
@@ -14461,7 +14461,7 @@ function scripts.enemy_screecher_bat.update(this, store)
 						end
 					end
 
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					a.ts = store.tick_ts
 				end
@@ -14542,7 +14542,7 @@ function scripts.enemy_grim_devourers.update(this, store)
 						U.y_wait_unconditional(store, 0.03333333333333333)
 					end
 
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 				end
 
 				::label_316_1::
@@ -14720,7 +14720,7 @@ function scripts.plant_magic_blossom.update(this, store)
 				queue_insert(store, b)
 			end
 
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 
 			goto label_387_1
 		end
@@ -14862,7 +14862,7 @@ function scripts.plant_poison_pumpkin.update(this, store)
 				end
 			end
 
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 
 			goto label_388_1
 		end
@@ -14971,7 +14971,7 @@ function scripts.crystal_arcane.update(this, store)
 					queue_insert(store, b)
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 			elseif idx == 2 then
 				glow_tween.keys = glow_tween.keys_freeze
 				glow_tween.ts = store.tick_ts
@@ -15007,7 +15007,7 @@ function scripts.crystal_arcane.update(this, store)
 					queue_insert(store, d)
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 				U.animation_start(this, aa.animations[2], nil, store.tick_ts, true)
 				U.y_wait_unconditional(store, aa.duration - 0.3)
 				U.y_animation_play(this, aa.animations[3], nil, store.tick_ts)
@@ -15056,7 +15056,7 @@ function scripts.crystal_arcane.update(this, store)
 					end
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 			end
 
 			goto label_390_0
@@ -15243,7 +15243,7 @@ function scripts.crystal_unstable.update(this, store)
 
 		if casted then
 			add_fxs()
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 
 			goto label_392_0
 		end
@@ -15320,7 +15320,7 @@ function scripts.paralyzing_tree.update(this, store)
 		end
 	end
 
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 
 	goto label_398_0
 end
@@ -16525,7 +16525,7 @@ function scripts.mod_timelapse.update(this, store)
 	es.tween.ts = store.tick_ts
 	es.tween.disabled = false
 
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	U.animation_start(this, "loop", nil, store.tick_ts, true, 1)
 	U.y_wait(store, m.duration - (store.tick_ts - m.ts) - fts(10), function(store, time)
 		return this.interrupt or target.health.dead
@@ -16545,7 +16545,7 @@ function scripts.mod_timelapse.update(this, store)
 	es.tween.reverse = true
 	es.tween.ts = store.tick_ts
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		if target.health.dead then
 			for i = 1, #es.render.sprites do
 				es.render.sprites[i].hidden = true
@@ -16554,7 +16554,7 @@ function scripts.mod_timelapse.update(this, store)
 		coroutine.yield()
 	end
 
-	-- U.y_animation_wait(this)
+	-- U.y_animation_wait_default(this)
 
 	if this.interrupt then
 		target.health.hp = 0
@@ -16847,7 +16847,7 @@ function scripts.mod_bravebark_branchball.update(this, store)
 	es.tween.props[3].keys[2][2] = (af and -1 or 1) * math.random(300, 400) * math.pi / 180
 
 	queue_insert(store, es)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	queue_remove(store, this)
 end
 
@@ -17509,7 +17509,7 @@ function scripts.mod_twilight_heretic_servant.update(this, store)
 			break
 		end
 
-		if not looping and U.animation_finished(this) then
+		if not looping and U.animation_finished_default(this) then
 			looping = true
 
 			U.animation_start(this, "loop", nil, store.tick_ts, true)
@@ -18291,7 +18291,7 @@ function scripts.decal_rabbit.update(this, store)
 					goto label_510_1
 				end
 			else
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 			end
 		end
 	end
@@ -18606,7 +18606,7 @@ function scripts.decal_tree_ewok.update(this, store)
 				b.bullet.source_id = this.id
 
 				queue_insert(store, b)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 			end
 		end
 
@@ -18957,7 +18957,7 @@ function scripts.decal_gryphon.update(this, store)
 
 				S:queue("ElvesGryphonsShoot")
 				U.animation_start_group(this, "attack_start", flip_x, store.tick_ts, false, "layers")
-			elseif phase == 2 and U.animation_finished(this) then
+			elseif phase == 2 and U.animation_finished_default(this) then
 				phase = phase + 1
 
 				U.animation_start_group(this, "attack_loop", flip_x, store.tick_ts, true, "layers")
@@ -18985,7 +18985,7 @@ function scripts.decal_gryphon.update(this, store)
 						queue_insert(store, b)
 					end
 				end
-			elseif phase == 4 and U.animation_finished(this) then
+			elseif phase == 4 and U.animation_finished_default(this) then
 				phase = phase + 1
 
 				U.animation_start_group(this, "fly", flip_x, store.tick_ts, true, "layers")
@@ -19153,7 +19153,7 @@ function scripts.decal_s08_magic_bean.update(this, store)
 
 	U.animation_start(this, "step" .. step, nil, store.tick_ts, false)
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		if step == 4 and store.tick_ts - start_ts >= fts(60) then
 			S:stop("ElvesBeanGrowLoop")
 
@@ -19402,7 +19402,7 @@ function scripts.decal_s09_crystal_serpent_attack.update(this, store)
 
 	S:queue("ElvesCrystalSerpentEmerge")
 	U.animation_start(this, "spawn", this.flip_x, store.tick_ts, false)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	S:queue("ElvesCrystalSerpentAttack", {
 		delay = fts(5)
 	})
@@ -19432,7 +19432,7 @@ function scripts.decal_s09_crystal_serpent_attack.update(this, store)
 		end
 	end
 
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	S:queue("ElvesCrystalSerpentSubmerge", {
 		delay = fts(8)
 	})
@@ -19449,14 +19449,14 @@ function scripts.decal_s09_crystal_serpent_scream.update(this, store)
 	this.render.sprites[3].hidden = false
 
 	U.animation_start(this, "waterWaves", this.flip_x, store.tick_ts, true, 3)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	S:queue("ElvesCrystalSerpentScream")
 
 	this.render.sprites[2].hidden = false
 
 	U.animation_start(this, "superScream", this.flip_x, store.tick_ts, false, 1)
 	U.animation_start(this, "superScreamRays", this.flip_x, store.tick_ts, false, 2)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 
 	this.render.sprites[2].hidden = true
 
@@ -19468,7 +19468,7 @@ function scripts.decal_s09_crystal_serpent_scream.update(this, store)
 
 	this.render.sprites[3].hidden = true
 
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	queue_remove(store, this)
 end
 
@@ -19683,7 +19683,7 @@ function scripts.faerie_dragon.update(this, store)
 					queue_insert(store, b)
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 			end
 
 			::label_542_0::
@@ -19902,7 +19902,7 @@ function scripts.simon_controller.update(this, store)
 
 					store.player_gold = store.player_gold + this.reward_base + this.reward_inc * (#this.seq - this.initial_sequence_length)
 
-					U.y_animation_wait(gnome)
+					U.y_animation_wait_default(gnome)
 
 					if #this.seq == this.achievement_count then
 					-- AC:got(this.achievement_id)
@@ -21048,7 +21048,7 @@ function scripts.decal_s15_mactans.update(this, store)
 
 			this.decal_statue.phase_signal = "hit"
 
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 
 			attack_ts = store.tick_ts
 			cooldown = U.frandom(4, 6)
@@ -21222,7 +21222,7 @@ function scripts.gnoll_bush.update(this, store)
 	end
 
 	S:queue("ElvesGnollTrailOut")
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	queue_remove(store, this)
 end
 
@@ -21862,7 +21862,7 @@ function scripts.ray5_simple.update(this, store)
 			s.hidden = false
 		end
 	else
-		while not U.animation_finished(this, 1) do
+		while not U.animation_finished_default(this) do
 			if tower and not store.entities[tower.id] then
 				queue_remove(store, this)
 
@@ -21973,7 +21973,7 @@ function scripts.cricet_random_eff_mod.update(this, store)
 
 	s.ts = store.tick_ts
 
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	queue_remove(store, this)
 end
 
@@ -24955,7 +24955,7 @@ function scripts.stage_02_arborean_baby2.update(this, store)
 				if is_standup then
 					U.animation_start(this, "sit_down", nil, store.tick_ts, 1)
 
-					while not U.animation_finished(this, 1, 1) do
+					while not U.animation_finished_default(this) do
 						coroutine.yield()
 					end
 
@@ -24963,7 +24963,7 @@ function scripts.stage_02_arborean_baby2.update(this, store)
 				else
 					U.animation_start(this, "sit_up", nil, store.tick_ts, 1)
 
-					while not U.animation_finished(this, 1, 1) do
+					while not U.animation_finished_default(this) do
 						coroutine.yield()
 					end
 
@@ -25091,7 +25091,7 @@ function scripts.decal_stage_02_fishing_link.update(this, store)
 			U.animation_start(this, this.fish_animations[this.fish_anim], nil, store.tick_ts, false)
 			U.y_wait_unconditional(store, fts(30))
 			S:queue(c.clicked_sound)
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 
 			line_move_cd = math.random(this.min_line_move_cd, this.max_line_move_cd)
 			last_line_move_ts = store.tick_ts
@@ -25131,7 +25131,7 @@ function scripts.decal_stage_02_fishing_link.update(this, store)
 
 					signal.emit("got-gold", gold_pos, this.gold_amount)
 					signal.emit("link-stage02", this)
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					this.ui.clicked = nil
 					this.fishing = false
@@ -25148,7 +25148,7 @@ function scripts.decal_stage_02_fishing_link.update(this, store)
 				coroutine.yield()
 			end
 
-			U.y_animation_wait(this, 1)
+			U.y_animation_wait_default(this)
 			U.animation_start(this, "idle", nil, store.tick_ts, true)
 
 			this.line_move = false
@@ -25214,7 +25214,7 @@ function scripts.decal_stage_02_fishing_link_line.update(this, store)
 				U.animation_start(this, "fishing_rupee_clicked", nil, store.tick_ts)
 				U.y_wait_unconditional(store, fts(61))
 				U.animation_start(water_splash, "splash_in", nil, store.tick_ts, false)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 			else
 				if this.fishing_link.fish_anim == 1 or this.fishing_link.fish_anim == 2 then
 					U.y_wait_unconditional(store, fts(1))
@@ -25238,7 +25238,7 @@ function scripts.decal_stage_02_fishing_link_line.update(this, store)
 				U.animation_start(water_splash, "splash_in", nil, store.tick_ts, false)
 			end
 
-			U.y_animation_wait(this.fishing_link)
+			U.y_animation_wait_default(this.fishing_link)
 
 			this.fishing_link.water_move = false
 		end
@@ -25996,7 +25996,7 @@ function scripts.decal_stage_06_minecraft_easter_egg.update(this, store)
 		if change_anim_cd < store.tick_ts - last_change then
 			U.animation_start(this, this.animation_attack, nil, store.tick_ts, 1)
 
-			while not U.animation_finished(this, 1, 1) do
+			while not U.animation_finished_default(this) do
 				if click_and_die() then
 					goto label_1066_0
 				end
@@ -26142,7 +26142,7 @@ function scripts.decal_stage_07_temple.update(this, store)
 			queue_insert(store, shake)
 		end
 
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 	end
 
 	do
@@ -26768,7 +26768,7 @@ function scripts.soldier_elf_stage_08.update(this, store)
 				U.y_wait_unconditional(store, a.shoot_time)
 				queue_insert(store, b)
 				S:queue("ArrowSound")
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				local an, af = U.animation_name_facing_point(this, "back_to_idle2", target_pos)
 
@@ -26777,7 +26777,7 @@ function scripts.soldier_elf_stage_08.update(this, store)
 				is_resting = false
 				last_shoot = store.tick_ts
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 			end
 		end
 
@@ -26793,7 +26793,7 @@ function scripts.soldier_elf_stage_08.update(this, store)
 			end
 		end
 
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 
 		::label_1083_0::
 
@@ -27148,7 +27148,7 @@ function scripts.controller_stage_10_obelisk_by_wave.update(this, store)
 			U.animation_start(this.cultist, "back_online", nil, store.tick_ts)
 			U.animation_start(this.crystal, "back_online", nil, store.tick_ts)
 			S:queue(this.sound_activation)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 
 			this.crystal.tween.props[1].ts = store.tick_ts
 		else
@@ -27157,9 +27157,9 @@ function scripts.controller_stage_10_obelisk_by_wave.update(this, store)
 
 		crystal_up()
 		U.animation_start(this.cultist, "change_in", nil, store.tick_ts)
-		U.y_animation_wait(this.cultist)
+		U.y_animation_wait_default(this.cultist)
 		U.animation_start(this.crystal, "change_in", nil, store.tick_ts)
-		U.y_animation_wait(this.crystal)
+		U.y_animation_wait_default(this.crystal)
 		U.animation_start(this.cultist, "change_loop", nil, store.tick_ts, true)
 		U.animation_start(this.crystal, "change_loop", nil, store.tick_ts, true)
 
@@ -27185,14 +27185,14 @@ function scripts.controller_stage_10_obelisk_by_wave.update(this, store)
 		end
 
 		U.animation_start(this.cultist, "change_out", nil, store.tick_ts)
-		U.y_animation_wait(this.cultist)
+		U.y_animation_wait_default(this.cultist)
 		U.animation_start(this.cultist, "idle", nil, store.tick_ts, true)
 
 		if store.level_mode == GAME_MODE_CAMPAIGN and table.contains(golems_to_spawn, store.wave_group_number) then
 			current_mode = MODE_SACRIFICE
 		else
 			U.animation_start(this.crystal, "to_idle" .. crystal_mode_list[current_mode_idx], nil, store.tick_ts)
-			U.y_animation_wait(this.crystal)
+			U.y_animation_wait_default(this.crystal)
 			U.animation_start(this.crystal, "idle" .. crystal_mode_list[current_mode_idx], nil, store.tick_ts, true)
 
 			local set_ts = store.tick_ts
@@ -27264,9 +27264,9 @@ function scripts.controller_stage_10_obelisk_by_wave.update(this, store)
 			shake.aura.freq_factor = 1
 
 			queue_insert(store, shake)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			U.animation_start(this.cultist, "telegraph_out", nil, store.tick_ts)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			U.animation_start(this.cultist, "idle", nil, store.tick_ts, true)
 
 			local soldiers = table.filter(store.entities, function(k, v)
@@ -27331,10 +27331,10 @@ function scripts.controller_stage_10_obelisk_by_wave.update(this, store)
 
 			U.y_wait_unconditional(store, mod_duration)
 			S:stop(this.sound_heal_loop)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			U.animation_start(this.cultist, "telegraph_out", nil, store.tick_ts)
 			U.animation_start(this.base_crystal, "heal_out", nil, store.tick_ts)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			U.animation_start(this.cultist, "idle", nil, store.tick_ts, true)
 
 			mode_ability_ts = store.tick_ts
@@ -27406,9 +27406,9 @@ function scripts.controller_stage_10_obelisk_by_wave.update(this, store)
 				queue_insert(store, a)
 			end
 
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			U.animation_start(this.cultist, "telegraph_out", nil, store.tick_ts)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			U.animation_start(this.cultist, "idle", nil, store.tick_ts, true)
 
 			mode_ability_ts = store.tick_ts
@@ -27418,18 +27418,18 @@ function scripts.controller_stage_10_obelisk_by_wave.update(this, store)
 	local function do_sacrifice()
 		if table.contains(golems_to_spawn, store.wave_group_number) then
 			U.animation_start(this.crystal, "to_idle4", nil, store.tick_ts)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			S:queue(this.sound_cast_golem)
 			U.animation_start(this.cultist, "sacrifice_in", nil, store.tick_ts)
 			U.animation_start(this.crystal, "sacrifice_in", nil, store.tick_ts)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			U.animation_start(this.cultist, "sacrifice_loop", nil, store.tick_ts, true)
 			U.animation_start(this.crystal, "sacrifice_loop", nil, store.tick_ts, true)
 			U.y_wait_unconditional(store, this.sacrifice_duration)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			U.animation_start(this.cultist, "sacrifice_out", nil, store.tick_ts)
 			U.animation_start(this.crystal, "sacrifice_out", nil, store.tick_ts)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			crystal_down()
 
 			local golem_idx = #this.config.sacrifice.waves - #golems_to_spawn + 1
@@ -27556,7 +27556,7 @@ function scripts.controller_stage_10_obelisk_wave_fixed.update(this, store)
 			U.animation_start(this.cultist, "back_online", nil, store.tick_ts)
 			U.animation_start(this.crystal, "back_online", nil, store.tick_ts)
 			S:queue(this.sound_activation)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 
 			this.crystal.tween.props[1].ts = store.tick_ts
 		else
@@ -27565,9 +27565,9 @@ function scripts.controller_stage_10_obelisk_wave_fixed.update(this, store)
 
 		crystal_up()
 		U.animation_start(this.cultist, "change_in", nil, store.tick_ts)
-		U.y_animation_wait(this.cultist)
+		U.y_animation_wait_default(this.cultist)
 		U.animation_start(this.crystal, "change_in", nil, store.tick_ts)
-		U.y_animation_wait(this.crystal)
+		U.y_animation_wait_default(this.crystal)
 		U.animation_start(this.cultist, "change_loop", nil, store.tick_ts, true)
 		U.animation_start(this.crystal, "change_loop", nil, store.tick_ts, true)
 
@@ -27597,7 +27597,7 @@ function scripts.controller_stage_10_obelisk_wave_fixed.update(this, store)
 		end
 
 		U.animation_start(this.cultist, "change_out", nil, store.tick_ts)
-		U.y_animation_wait(this.cultist)
+		U.y_animation_wait_default(this.cultist)
 		U.animation_start(this.cultist, "idle", nil, store.tick_ts, true)
 
 		if store.level_mode == GAME_MODE_CAMPAIGN and table.contains(golems_to_spawn, store.wave_group_number) then
@@ -27612,7 +27612,7 @@ function scripts.controller_stage_10_obelisk_wave_fixed.update(this, store)
 			end
 
 			U.animation_start(this.crystal, "to_idle" .. current_mode, nil, store.tick_ts)
-			U.y_animation_wait(this.crystal)
+			U.y_animation_wait_default(this.crystal)
 			U.animation_start(this.crystal, "idle" .. current_mode, nil, store.tick_ts, true)
 
 			local set_ts = store.tick_ts
@@ -27682,9 +27682,9 @@ function scripts.controller_stage_10_obelisk_wave_fixed.update(this, store)
 			shake.aura.freq_factor = 1
 
 			queue_insert(store, shake)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			U.animation_start(this.cultist, "telegraph_out", nil, store.tick_ts)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			U.animation_start(this.cultist, "idle", nil, store.tick_ts, true)
 
 			local soldiers = table.filter(store.entities, function(k, v)
@@ -27749,10 +27749,10 @@ function scripts.controller_stage_10_obelisk_wave_fixed.update(this, store)
 
 			U.y_wait_unconditional(store, mod_duration)
 			S:stop(this.sound_heal_loop)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			U.animation_start(this.cultist, "telegraph_out", nil, store.tick_ts)
 			U.animation_start(this.base_crystal, "heal_out", nil, store.tick_ts)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			U.animation_start(this.cultist, "idle", nil, store.tick_ts, true)
 
 			mode_ability_ts = store.tick_ts
@@ -27832,9 +27832,9 @@ function scripts.controller_stage_10_obelisk_wave_fixed.update(this, store)
 				queue_insert(store, a)
 			end
 
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			U.animation_start(this.cultist, "telegraph_out", nil, store.tick_ts)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			U.animation_start(this.cultist, "idle", nil, store.tick_ts, true)
 
 			mode_ability_ts = store.tick_ts
@@ -27844,18 +27844,18 @@ function scripts.controller_stage_10_obelisk_wave_fixed.update(this, store)
 	local function do_sacrifice()
 		if table.contains(golems_to_spawn, store.wave_group_number) then
 			U.animation_start(this.crystal, "to_idle4", nil, store.tick_ts)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			S:queue(this.sound_cast_golem)
 			U.animation_start(this.cultist, "sacrifice_in", nil, store.tick_ts)
 			U.animation_start(this.crystal, "sacrifice_in", nil, store.tick_ts)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			U.animation_start(this.cultist, "sacrifice_loop", nil, store.tick_ts, true)
 			U.animation_start(this.crystal, "sacrifice_loop", nil, store.tick_ts, true)
 			U.y_wait_unconditional(store, this.sacrifice_duration)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			U.animation_start(this.cultist, "sacrifice_out", nil, store.tick_ts)
 			U.animation_start(this.crystal, "sacrifice_out", nil, store.tick_ts)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			crystal_down()
 
 			local golem_idx = #this.config.sacrifice.waves - #golems_to_spawn + 1
@@ -27984,7 +27984,7 @@ function scripts.controller_stage_10_obelisk_iron.update(this, store)
 			U.animation_start(this.cultist, "back_online", nil, store.tick_ts)
 			U.animation_start(this.crystal, "back_online", nil, store.tick_ts)
 			S:queue(this.sound_activation)
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 
 			this.crystal.tween.props[1].ts = store.tick_ts
 		else
@@ -27993,9 +27993,9 @@ function scripts.controller_stage_10_obelisk_iron.update(this, store)
 
 		crystal_up()
 		U.animation_start(this.cultist, "change_in", nil, store.tick_ts)
-		U.y_animation_wait(this.cultist)
+		U.y_animation_wait_default(this.cultist)
 		U.animation_start(this.crystal, "change_in", nil, store.tick_ts)
-		U.y_animation_wait(this.crystal)
+		U.y_animation_wait_default(this.crystal)
 		U.animation_start(this.cultist, "change_loop", nil, store.tick_ts, true)
 		U.animation_start(this.crystal, "change_loop", nil, store.tick_ts, true)
 
@@ -28019,24 +28019,24 @@ function scripts.controller_stage_10_obelisk_iron.update(this, store)
 		end
 
 		U.animation_start(this.cultist, "change_out", nil, store.tick_ts)
-		U.y_animation_wait(this.cultist)
+		U.y_animation_wait_default(this.cultist)
 		U.animation_start(this.cultist, "idle", nil, store.tick_ts, true)
 	end
 
 	local function do_sacrifice()
 		U.animation_start(this.crystal, "to_idle4", nil, store.tick_ts)
-		U.y_animation_wait(this.cultist)
+		U.y_animation_wait_default(this.cultist)
 		S:queue(this.sound_cast_golem)
 		U.animation_start(this.cultist, "sacrifice_in", nil, store.tick_ts)
 		U.animation_start(this.crystal, "sacrifice_in", nil, store.tick_ts)
-		U.y_animation_wait(this.cultist)
+		U.y_animation_wait_default(this.cultist)
 		U.animation_start(this.cultist, "sacrifice_loop", nil, store.tick_ts, true)
 		U.animation_start(this.crystal, "sacrifice_loop", nil, store.tick_ts, true)
 		U.y_wait_unconditional(store, this.sacrifice_duration)
-		U.y_animation_wait(this.cultist)
+		U.y_animation_wait_default(this.cultist)
 		U.animation_start(this.cultist, "sacrifice_out", nil, store.tick_ts)
 		U.animation_start(this.crystal, "sacrifice_out", nil, store.tick_ts)
-		U.y_animation_wait(this.cultist)
+		U.y_animation_wait_default(this.cultist)
 		crystal_down()
 
 		local golem_idx = next_sacrifice_id - 1
@@ -28922,7 +28922,7 @@ function scripts.controller_stage_11_cult_leader.update(this, store)
 			S:queue("Stage11CultLeaderLeave")
 			U.y_wait_unconditional(store, 1.6)
 			S:queue("Stage11MidCinematicPlatformMove")
-			U.y_animation_wait(this.cultist)
+			U.y_animation_wait_default(this.cultist)
 			queue_remove(store, this)
 
 			return
@@ -29041,7 +29041,7 @@ function scripts.controller_stage_11_cult_leader.update(this, store)
 					U.y_animation_play(this.cultist, "attackleave", false, store.tick_ts)
 				end
 
-				U.y_animation_wait(this.cultist)
+				U.y_animation_wait_default(this.cultist)
 				U.animation_start(this.cultist, "idle", nil, store.tick_ts, true)
 
 				last_ability_ts = store.tick_ts
@@ -29134,7 +29134,7 @@ function scripts.enemy_stage_11_cult_leader_illusion.update(this, store)
 			end
 		end
 
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 		U.animation_start(this, attack_chain.animation_loop, nil, store.tick_ts, true)
 
 		start_ts = store.tick_ts
@@ -29771,7 +29771,7 @@ function scripts.controller_stage_11_portal.update(this, store)
 				lightning.ts = store.tick_ts
 			end
 
-			if not lightning.entity.render.sprites[1].hidden and U.animation_finished(lightning.entity) then
+			if not lightning.entity.render.sprites[1].hidden and U.animation_finished_default(lightning.entity) then
 				lightning.entity.render.sprites[1].hidden = true
 			end
 		end
@@ -29943,10 +29943,10 @@ function scripts.decal_stage_11_veznan.update(this, store)
 	this.render.sprites[1].hidden = false
 
 	U.animation_start(this, "spawn", false, store.tick_ts)
-	U.y_animation_wait(fx)
+	U.y_animation_wait_default(fx)
 	queue_remove(store, fx)
 	queue_remove(store, fx_base)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 
 	local cult_leader = table.filter(store.entities, function(k, v)
 		return v.template_name == this.cult_leader_template_name
@@ -29997,7 +29997,7 @@ function scripts.decal_stage_11_veznan.update(this, store)
 		b.target_id = cult_leader.id
 
 		queue_insert(store, b)
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 		U.animation_start(this, "charging", false, store.tick_ts, true)
 	end
 
@@ -30038,7 +30038,7 @@ function scripts.decal_stage_11_veznan.update(this, store)
 			queue_insert(store, soldier)
 		end
 
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 		U.y_animation_play(this, "Skill2_out", nil, store.tick_ts)
 		U.animation_start(this, "charging", false, store.tick_ts, true)
 	end
@@ -30065,10 +30065,10 @@ function scripts.decal_stage_11_veznan.update(this, store)
 			modifier.modifier.target_id = corrupted_denas.id
 
 			queue_insert(store, modifier)
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			U.animation_start(this, "skill3_out", false, store.tick_ts)
 			U.y_animation_play(decal_fx, "out", nil, store.tick_ts)
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			U.animation_start(this, "charging", false, store.tick_ts, true)
 		end
 	end
@@ -30342,7 +30342,7 @@ function scripts.soldier_stage_11_veznan_skill_soldiers.update(this, store)
 
 			U.animation_start(this, "death", nil, store.tick_ts, false)
 			U.y_wait_unconditional(store, fts(20))
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			queue_remove(store, this)
 
 			return
@@ -30424,7 +30424,7 @@ function scripts.enemy_glareling.update(this, store)
 	end
 
 	if this.render.sprites[1].name == "egg_spawn" then
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 	end
 
 	local function check_sacrifice()
@@ -30570,7 +30570,7 @@ function scripts.mod_stage_11_veznan_skill_cage.update(this, store)
 	if m.animation_phases then
 		U.animation_start(this, "in", nil, store.tick_ts)
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			if not target_hidden and m.hide_target_delay and store.tick_ts - start_ts > m.hide_target_delay then
 				target_hidden = true
 
@@ -30624,7 +30624,7 @@ function scripts.mod_stage_11_veznan_skill_cage.update(this, store)
 			SU.show_auras(store, target, true)
 		end
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			coroutine.yield()
 		end
 	end
@@ -31419,7 +31419,7 @@ function scripts.decal_stage_12_sheepy_easteregg.update(this, store)
 			S:queue("Stage12SheepyPart2")
 			U.y_wait_unconditional(store, 1)
 			S:queue("Stage12SheepyPart3")
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			signal.emit("sheepy_tap_achievement", 2)
 		end
 
@@ -31565,7 +31565,7 @@ function scripts.tower_stage_13_sunray.update(this, store)
 						show_decal = 0
 					end
 
-					if U.animation_finished(this) and this.render.sprites[1].name == as.animation_in then
+					if U.animation_finished_default(this) and this.render.sprites[1].name == as.animation_in then
 						U.animation_start(this, as.animation_loop, nil, store.tick_ts, true)
 					end
 
@@ -31578,7 +31578,7 @@ function scripts.tower_stage_13_sunray.update(this, store)
 				end
 
 				queue_remove(store, aura)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 				U.animation_start(this, "idleinactive", false, store.tick_ts, true, 1, true)
 
 				this.repair.active = false
@@ -31867,7 +31867,7 @@ function scripts.bullet_tower_stage_13_sunray.update(this, store)
 		queue_insert(store, fx)
 	end
 
-	while store.tick_ts - s.ts < this.ray_duration and (this.render.sprites[1].name ~= "fade" or not U.animation_finished(this)) do
+	while store.tick_ts - s.ts < this.ray_duration and (this.render.sprites[1].name ~= "fade" or not U.animation_finished_default(this)) do
 		if this.track_target then
 			update_sprite()
 		end
@@ -32158,7 +32158,7 @@ function scripts.decal_stage_14_easter_egg_rickmorty.update(this, store)
 			S:queue("Stage14RickPortal12Pass")
 			U.y_wait_unconditional(store, 1)
 			S:queue("Stage14RickPortal12Close")
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 
 			this.pos = this.pos_spawn[click_amounts]
 			this.render.sprites[1].prefix = this.prefix_names[click_amounts]
@@ -32181,7 +32181,7 @@ function scripts.decal_stage_14_easter_egg_rickmorty.update(this, store)
 			end
 
 			S:queue("Stage14RickPortal12Close")
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			U.animation_start(this, "idle", nil, store.tick_ts, true)
 		end
 
@@ -32251,7 +32251,7 @@ function scripts.soldier_reinforcement_stage_15_denas.update(this, store)
 		end
 	end
 
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	U.animation_start(this, "idle_a", nil, store.tick_ts, true)
 
 	local function y_denas_new_rally(store, this)
@@ -32444,7 +32444,7 @@ function scripts.decal_stage_15_easter_egg_goblin.update(this, store)
 			portal_spawned = true
 		end
 
-		if decal_portal and U.animation_finished(decal_portal) then
+		if decal_portal and U.animation_finished_default(decal_portal) then
 			U.animation_start(decal_portal, "loop", nil, store.tick_ts, true)
 		end
 	end
@@ -32472,7 +32472,7 @@ function scripts.decal_stage_15_easter_egg_goblin.update(this, store)
 					S:queue("Stage15RiffPortalBroom")
 					U.y_wait_unconditional(store, 2.6)
 					S:queue("Stage15RiffPortalClose")
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					break
 				else
@@ -32501,7 +32501,7 @@ function scripts.decal_stage_15_easter_egg_goblin.update(this, store)
 				local min_time_in_ts = store.tick_ts
 				local min_time_cooldown = 2
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					if min_time_cooldown <= store.tick_ts - min_time_in_ts then
 						check_click_and_spawn_portal()
 					end
@@ -32959,7 +32959,7 @@ function scripts.controller_stage_18_eridan.update(this, store)
 				local target, _ = find_target()
 
 				shoot_bullet(target, af)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 				U.animation_start(this, "idle", nil, store.tick_ts, true)
 			end
 		elseif store.tick_ts - ai.ts > ai.cooldown then
@@ -33013,7 +33013,7 @@ function scripts.controller_stage_18_eridan.update(this, store)
 				d.damage_type = ai.damage_type
 
 				queue_damage(store, d)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 				S:queue(this.sound_in_out)
 				U.y_animation_play(this, ai.animation_start, false, store.tick_ts)
 
@@ -33025,7 +33025,7 @@ function scripts.controller_stage_18_eridan.update(this, store)
 			end
 		end
 
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 
 		::label_1332_0::
 
@@ -33149,7 +33149,7 @@ function scripts.decal_stage_22_remolino.update(this, store)
 			U.y_animation_play(this, this.animation_start, nil, store.tick_ts)
 			U.animation_start(this, this.animation_loop, nil, store.tick_ts, true)
 			U.y_wait_unconditional(store, wave_config[interval_index][TO] - wave_config[interval_index][FROM])
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			U.y_animation_play(this, this.animation_end, nil, store.tick_ts)
 
 			this.render.sprites[1].hidden = true
@@ -33238,7 +33238,7 @@ function scripts.enemy_turtle_shaman.update(this, store)
 					end
 
 					SU.insert_sprite(store, a.cast_fx, this.pos)
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 				end
 			end
 
@@ -33709,7 +33709,7 @@ function scripts.enemy_bear_vanguard.update(this, store)
 				mod.modifier.source_id = this.id
 
 				queue_insert(store, mod)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				this.wrath_of_the_fallen.ts = nil
 				trigger_wrath_of_the_fallen = false
@@ -33833,7 +33833,7 @@ function scripts.enemy_acolyte_tentacle.update(this, store)
 				e.damage_max = math.ceil(e.aura.damage_max * this.unit.damage_factor)
 
 				queue_insert(store, e)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 			else
 				SU.delay_attack(store, ah, fts(10))
 			end
@@ -33963,7 +33963,7 @@ function scripts.enemy_lesser_sister.update(this, store)
 				this.spawned_nightmares = this.spawned_nightmares + 1
 
 				signal.emit("wave-notification", "icon", "enemy_lesser_sister_nightmare")
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 			end
 
 			if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, break_fn, nil, break_fn) then
@@ -34162,7 +34162,7 @@ function scripts.enemy_small_stalker.update(this, store)
 				U.animation_start(this, "teleport_in", nil, store.tick_ts, 1)
 				SU.remove_modifiers(store, this)
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					if this.health.dead then
 						shadow_sprite.hidden = true
 
@@ -34666,7 +34666,7 @@ function scripts.enemy_armored_nightmare.update(this, store)
 
 				U.animation_start(this, an, af, store.tick_ts, false)
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					if can_spawn and this.death_spawns.delay then
 						U.y_wait_unconditional(store, this.death_spawns.delay)
 						SU.do_death_spawns(store, this)
@@ -35178,7 +35178,7 @@ function scripts.enemy_vile_spawner.update(this, store)
 					signal.emit("wave-notification", "icon", "enemy_lesser_eye")
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				a.ts = start_ts
 			end
@@ -36488,7 +36488,7 @@ function scripts.enemy_revenant_soulcaller.update(this, store)
 
 				this.spawned_specters = this.spawned_specters + 1
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 			end
 
 			if ready_to_stun() then
@@ -36535,7 +36535,7 @@ function scripts.enemy_revenant_soulcaller.update(this, store)
 
 						at.ts = start_ts
 
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 					end
 				end
 			end
@@ -37672,7 +37672,7 @@ function scripts.enemy_crocs_shaman.update(this, store)
 
 					a.ts = start_ts
 
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 				end
 			end
 
@@ -38151,7 +38151,7 @@ function scripts.enemy_crocs_egg_spawner.update(this, store)
 						U.y_wait_unconditional(store, a.delay_between)
 					end
 
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					a.ts = start_ts
 				end
@@ -38404,7 +38404,7 @@ function scripts.enemy_crocs_hydra.update(this, store)
 						end
 					end
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						if this.health.dead or ma.ignore_stun and this.unit.is_stunned or this.dodge and this.dodge.active and not this.dodge.silent then
 							return false
 						end
@@ -38496,7 +38496,7 @@ function scripts.enemy_crocs_hydra.update(this, store)
 					U.animation_start(this, "spawnOut", nil, store.tick_ts, false)
 					U.y_wait_unconditional(store, fts(4))
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						local next = P:next_entity_node(this, store.tick_length)
 
 						if not next then
@@ -38649,7 +38649,7 @@ function scripts.enemy_crocs_hydra.update(this, store)
 
 					attack_debuff.ts = start_ts
 
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 				end
 			end
 
@@ -38797,7 +38797,7 @@ function scripts.trees_guardian_tree.update(this, store)
 
 					queue_insert(store, p)
 					S:queue(this.sound_roots)
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 				end
 
 				U.animation_start(this, this.animation_idle_awake, nil, store.tick_ts)
@@ -39191,7 +39191,7 @@ function scripts.trees_heart_of_the_arborean_decal.update(this, store)
 				U.y_wait_unconditional(store, a.wait_between_shots)
 			end
 
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			U.animation_start(this, "idleLoading", nil, store.tick_ts, true)
 
 			a.ts = store.tick_ts
@@ -39515,11 +39515,11 @@ function scripts.bush_spawner_decal.update(this, store)
 			U.animation_start(this, this.animation_spawner_start, nil, store.tick_ts, false)
 			U.y_wait_unconditional(store, fts(57))
 			S:queue("Stage04ElevatorBreak")
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			U.animation_start(this, this.animation_spawner_idle, nil, store.tick_ts, false)
 		elseif activated and this.disabled then
 			U.animation_start(this, this.animation_spawner_end, nil, store.tick_ts, false)
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			queue_remove(store, this)
 		end
 
@@ -39902,7 +39902,7 @@ function scripts.decal_stage_09_sheepy_easteregg.update(this, store)
 			U.animation_start(this, "action_" .. math.random(1, 3), nil, store.tick_ts)
 			signal.emit("sheepy_tap_achievement", 1)
 
-			while not U.animation_finished(this) do
+			while not U.animation_finished_default(this) do
 				if check_bridge_down() then
 					U.y_wait_unconditional(store, fts(13))
 					S:queue("Stage09SheepyBridge")
@@ -42320,7 +42320,7 @@ function scripts.enemy_machinist.update(this, store)
 					this.operation_done = true
 					this.current_op = this.current_op + 1
 
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					this.render.sprites[1].z = Z_OBJECTS
 
@@ -42347,7 +42347,7 @@ function scripts.enemy_machinist.update(this, store)
 								this.operation_done = true
 								this.current_op = this.current_op + 1
 
-								U.y_animation_wait(this)
+								U.y_animation_wait_default(this)
 								S:queue(this.sound_lever[2])
 								U.animation_start(this, "factory2", true, store.tick_ts, false)
 								U.y_wait_unconditional(store, fts(17))
@@ -42356,7 +42356,7 @@ function scripts.enemy_machinist.update(this, store)
 								this.operation_done = true
 								this.current_op = this.current_op + 1
 
-								U.y_animation_wait(this)
+								U.y_animation_wait_default(this)
 								S:queue(this.sound_lever[3])
 								S:queue(this.sound_factory_on)
 								U.animation_start(this, "factory3", true, store.tick_ts, false)
@@ -42366,7 +42366,7 @@ function scripts.enemy_machinist.update(this, store)
 								this.operation_done = true
 								this.current_op = this.current_op + 1
 
-								U.y_animation_wait(this)
+								U.y_animation_wait_default(this)
 
 								this.render.sprites[1].z = Z_OBJECTS
 
@@ -42562,7 +42562,7 @@ function scripts.decal_stage_24_upgrade_station.update(this, store)
 								fist.source_id = this.id
 
 								queue_insert(store, fist)
-								U.y_animation_wait(this)
+								U.y_animation_wait_default(this)
 								U.animation_start(this, "idleopen", nil, store.tick_ts, true)
 							end
 						end
@@ -42650,7 +42650,7 @@ function scripts.decal_stage_25_solid_snake.update(this, store)
 			end
 		end
 
-		if eyes_opened and U.animation_finished(this) then
+		if eyes_opened and U.animation_finished_default(this) then
 			eyes_opened = false
 
 			U.animation_start(this, "idle_" .. taps * 2 + 1, nil, store.tick_ts, true)
@@ -42831,9 +42831,9 @@ function scripts.controller_stage_25_torso.update(this, store)
 				if store.tick_ts - start_wave_ts >= wave_data.time_start then
 					if wave_data.action == "open" then
 						if torso.render.sprites[1].name == "doors_close" then
-							U.y_animation_wait(torso)
+							U.y_animation_wait_default(torso)
 						elseif torso.render.sprites[1].name ~= "idle_doors" then
-							U.y_animation_wait(torso)
+							U.y_animation_wait_default(torso)
 							U.animation_start(torso, "idle_machinist", nil, store.tick_ts, true)
 
 							goto label_1586_0
@@ -42911,7 +42911,7 @@ function scripts.controller_stage_25_torso.update(this, store)
 						end
 
 						signal.emit("fist-stage25", enemies_count)
-						U.y_animation_wait(fist)
+						U.y_animation_wait_default(fist)
 						queue_remove(store, fist)
 						U.animation_start(torso, "idle_machinist", nil, store.tick_ts, true)
 					elseif wave_data.action == "missile" then
@@ -42924,11 +42924,11 @@ function scripts.controller_stage_25_torso.update(this, store)
 						S:queue(this.sound_torso_button)
 						U.y_wait_unconditional(store, fts(3))
 						shoot_missile(target)
-						U.y_animation_wait(torso)
+						U.y_animation_wait_default(torso)
 						U.animation_start(torso, "idle_machinist", nil, store.tick_ts, true)
 					elseif wave_data.action == "close" then
 						if torso.render.sprites[1].name ~= "idle_machinist" then
-							U.y_animation_wait(torso)
+							U.y_animation_wait_default(torso)
 							U.animation_start(torso, "idle_machinist", nil, store.tick_ts, true)
 						else
 							S:queue(this.sound_torso_close)
@@ -43358,7 +43358,7 @@ function scripts.decal_stage_26_mewtwo.update(this, store)
 				queue_insert(store, mewtwo)
 				U.animation_start(mewtwo, "spawn", nil, store.tick_ts, false)
 				U.y_animation_play(this, "idle_4", nil, store.tick_ts, 1)
-				U.y_animation_wait(mewtwo)
+				U.y_animation_wait_default(mewtwo)
 				signal.emit("mewtwo-stage26", this)
 			else
 				this.ui.can_click = true
@@ -43694,7 +43694,7 @@ function scripts.controller_stage_26_hulk_spawner.update(this, store)
 
 			queue_insert(store, hulk)
 			signal.emit("wave-notification", "icon", "enemy_darksteel_hulk")
-			U.y_animation_wait(spawner_decal)
+			U.y_animation_wait_default(spawner_decal)
 			U.y_wait_unconditional(store, fts(60))
 			U.y_animation_play(spawner_decal, "reset", nil, store.tick_ts, 1)
 			U.animation_start(spawner_decal, "idle", nil, store.tick_ts, true)
@@ -43777,7 +43777,7 @@ function scripts.controller_stage_27_platform.update(this, store)
 
 			queue_insert(store, shake)
 			queue_insert(store, shake)
-			U.y_animation_wait(platform)
+			U.y_animation_wait_default(platform)
 			U.animation_start(platform, "idleopen", nil, store.tick_ts, true)
 
 			door_mask.render.sprites[1].hidden = false
@@ -43792,7 +43792,7 @@ function scripts.controller_stage_27_platform.update(this, store)
 
 			platform.render.sprites[1].z = Z_BACKGROUND_COVERS
 
-			U.y_animation_wait(platform)
+			U.y_animation_wait_default(platform)
 			U.animation_start(platform, "idle", nil, store.tick_ts, true)
 
 			this.platform_down = false
@@ -43833,7 +43833,7 @@ function scripts.controller_stage_27_platform.update(this, store)
 			shake.aura.freq_factor = 2
 
 			queue_insert(store, shake)
-			U.y_animation_wait(platform)
+			U.y_animation_wait_default(platform)
 
 			platform_bars.render.sprites[1].hidden = true
 			this.platform_destroy = false
@@ -43876,7 +43876,7 @@ function scripts.controller_stage_27_platform.update(this, store)
 				cannon_c_right.clones_count = this.cannons_clones_count
 			end
 
-			U.y_animation_wait(platform)
+			U.y_animation_wait_default(platform)
 			U.animation_start(platform, "idle", nil, store.tick_ts, true)
 
 			this.cannons_in = false
@@ -44001,7 +44001,7 @@ function scripts.controller_stage_27_cannon.update(this, store)
 			U.animation_start(this.cannon, "shoot", nil, store.tick_ts, false)
 			U.y_wait_unconditional(store, this.cannon_shoot_time)
 			shoot_cannon()
-			U.y_animation_wait(this.cannon)
+			U.y_animation_wait_default(this.cannon)
 
 			this.cannon.render.sprites[1].hidden = true
 			this.shoot_cannon = false
@@ -44135,7 +44135,7 @@ function scripts.controller_stage_27_head.update(this, store)
 	end
 
 	local function check_ray_end(end_offset, ray)
-		if head.render.sprites[1].name == "raycancel" and U.animation_finished(head) then
+		if head.render.sprites[1].name == "raycancel" and U.animation_finished_default(head) then
 			U.animation_start(head, "idle", nil, store.tick_ts, true)
 		end
 
@@ -44150,11 +44150,11 @@ function scripts.controller_stage_27_head.update(this, store)
 			U.animation_start(ray, "end", nil, store.tick_ts, false)
 		end
 
-		if ray.render.sprites[1].name == "end" and U.animation_finished(ray) then
+		if ray.render.sprites[1].name == "end" and U.animation_finished_default(ray) then
 			queue_remove(store, ray)
 		end
 
-		if head.render.sprites[1].name == "rayend" and U.animation_finished(head) then
+		if head.render.sprites[1].name == "rayend" and U.animation_finished_default(head) then
 			U.animation_start(head, "idle", nil, store.tick_ts, true)
 		end
 	end
@@ -44320,7 +44320,7 @@ function scripts.controller_stage_27_head.update(this, store)
 			shooting_ray = false
 
 			if taps_count >= this.taps_to_cancel and ray then
-				U.y_animation_wait(ray)
+				U.y_animation_wait_default(ray)
 			end
 
 			this.do_attack = false
@@ -44439,7 +44439,7 @@ function scripts.controller_stage_27_head.update(this, store)
 
 			queue_insert(store, shake)
 			stun_towers()
-			U.y_animation_wait(head)
+			U.y_animation_wait_default(head)
 
 			local smoke_back = E:create_entity(this.smoke_back_t)
 
@@ -44591,7 +44591,7 @@ function scripts.controller_stage_27_head.update(this, store)
 				shoot_scrap(p)
 			end
 
-			U.y_animation_wait(head)
+			U.y_animation_wait_default(head)
 
 			this.shoot_scrap = false
 		end
@@ -45002,7 +45002,7 @@ function scripts.decal_stage_27_beam.update(this, store)
 				end
 			end
 
-			if doing_idle and U.animation_finished(this) then
+			if doing_idle and U.animation_finished_default(this) then
 				doing_idle = false
 
 				if taps == 0 then
@@ -45500,7 +45500,7 @@ function scripts.enemy_brute_welder.update(this, store)
 
 							queue_insert(store, aura)
 
-							while not U.animation_finished(this) do
+							while not U.animation_finished_default(this) do
 								if this.health.dead or this.unit.is_stunned then
 									goto label_261_0
 								end
@@ -46151,12 +46151,12 @@ function scripts.enemy_darksteel_guardian.update(this, store)
 				U.animation_start(this, "attack", nil, store.tick_ts)
 				U.y_wait_unconditional(store, this.melee.attacks[1].hit_time)
 				U.animation_start(rock, "hit_1", nil, store.tick_ts)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 				S:queue(this.sound_rock)
 				U.animation_start(this, "attack", nil, store.tick_ts)
 				U.y_wait_unconditional(store, this.melee.attacks[1].hit_time)
 				U.animation_start(rock, "hit_2", nil, store.tick_ts)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 				queue_remove(store, rock)
 
 				rock = nil
@@ -46605,7 +46605,7 @@ function scripts.decal_terrain_6_exodia_part.update(this, store)
 			U.animation_start(this, "shine", nil, store.tick_ts, false)
 		end
 
-		if this.render.sprites[1].name == "shine" and U.animation_finished(this) then
+		if this.render.sprites[1].name == "shine" and U.animation_finished_default(this) then
 			U.animation_start(this, "idle", nil, store.tick_ts, true)
 		end
 
@@ -46896,7 +46896,7 @@ function scripts.controller_stage_29_spider_holders.update(this, store)
 
 				U.animation_start(this, "arrive", nil, store.tick_ts, false, 1)
 
-				while not U.animation_finished(this, 1) do
+				while not U.animation_finished_default(this) do
 					if not table.contains(store.entities, hldr) then
 						buy_tower = true
 
@@ -46961,7 +46961,7 @@ function scripts.controller_stage_29_spider_holders.update(this, store)
 
 				S:stop(this.sound_loop)
 				U.animation_start(this, "climb_up_start", nil, store.tick_ts, false, 1)
-				U.y_animation_wait(this, 1)
+				U.y_animation_wait_default(this)
 				U.animation_start(this, "climbing_up_idle", nil, store.tick_ts, true, 1)
 				U.y_ease_key(store, this.pos, "y", this.pos.y, REF_H + 100, this.time_to_up, "quad")
 
@@ -46989,7 +46989,7 @@ function scripts.controller_stage_29_spider_holders.update(this, store)
 					s.ts = store.tick_ts
 				end
 
-				U.y_animation_wait(this, 1)
+				U.y_animation_wait_default(this)
 
 				this.render.sprites[1].hidden = true
 			else
@@ -47182,7 +47182,7 @@ function scripts.decal_stage_30_door.update(this, store)
 				return
 			end
 
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			S:queue("Stage30BossfightClawClose")
 			U.y_animation_play(this, this.animation_close, nil, store.tick_ts)
 			U.animation_start(this, this.animation_idle_closed, nil, store.tick_ts, true)
@@ -47667,7 +47667,7 @@ function scripts.enemy_ballooning_spider.update(this, store)
 
 					this.motion.speed.x, this.motion.speed.y = 0, 0
 
-					if not anim_finished and U.animation_finished(this, 1) then
+					if not anim_finished and U.animation_finished_default(this) then
 						anim_finished = true
 						this.render.sprites[1].prefix = this.render.sprites[1].prefix .. "_air"
 
@@ -47806,7 +47806,7 @@ function scripts.enemy_spider_sister.update(this, store)
 				this.spawned_nightmares = this.spawned_nightmares + 1
 
 				signal.emit("wave-notification", "icon", a.entity)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 			end
 
 			if not SU.y_enemy_mixed_walk_melee_ranged(store, this, false, break_fn, nil, break_fn) then
@@ -48125,7 +48125,7 @@ function scripts.enemy_drainbrood.update(this, store)
 								break
 							end
 
-							U.y_animation_wait(this)
+							U.y_animation_wait_default(this)
 
 							a.ts = store.tick_ts
 
@@ -48165,7 +48165,7 @@ function scripts.mod_drainbrood_web.update(this, store)
 	if m.animation_phases then
 		U.animation_start(this, "in", nil, store.tick_ts)
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			if not target_hidden and m.hide_target_delay and store.tick_ts - start_ts > m.hide_target_delay then
 				target_hidden = true
 
@@ -48217,7 +48217,7 @@ function scripts.mod_drainbrood_web.update(this, store)
 			SU.show_auras(store, target, true)
 		end
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			coroutine.yield()
 		end
 	end
@@ -48376,7 +48376,7 @@ function scripts.enemy_fire_phoenix.update(this, store)
 
 				U.animation_start(this, "bomb_death", nil, store.tick_ts, 1, 1)
 
-				while not U.animation_finished(this, 1, 1) do
+				while not U.animation_finished_default(this) do
 					shadow_sprite.alpha = shadow_sprite.alpha * 0.95
 
 					coroutine.yield()
@@ -48911,7 +48911,7 @@ function scripts.enemy_storm_spirit.update(this, store)
 
 				this.render.sprites[1].ignore_start = true
 
-				while not U.animation_finished(this, 1, 1) do
+				while not U.animation_finished_default(this) do
 					SU.y_enemy_walk_step(store, this)
 				end
 
@@ -49416,7 +49416,7 @@ function scripts.bullet_storm_elemental.update(this, store)
 
 	U.animation_start(this, "in", nil, store.tick_ts, false, 1, true)
 
-	while not U.animation_finished(this, 1, 1) do
+	while not U.animation_finished_default(this) do
 		source = store.entities[b.source_id]
 
 		if not source or source.health.dead or source.unit.is_stunned then
@@ -49568,7 +49568,7 @@ function scripts.bullet_storm_elemental.update(this, store)
 		end
 	end
 
-	U.y_animation_wait(this, 1)
+	U.y_animation_wait_default(this)
 	queue_remove(store, this)
 end
 
@@ -50537,7 +50537,7 @@ function scripts.ray_qiongqi.update(this, store)
 		SU.insert_sprite(store, b.hit_fx, b.to)
 	end
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		update_sprite()
 		coroutine.yield()
 	end
@@ -50784,7 +50784,7 @@ function scripts.enemy_fan_guard.update(this, store)
 						end
 					end
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						if this.health.dead or ma.ignore_stun and this.unit.is_stunned or this.dodge and this.dodge.active and not this.dodge.silent then
 							return false
 						end
@@ -52122,7 +52122,7 @@ function scripts.enemy_demon_minotaur.update(this, store)
 	while not this.health.dead and not this.unit.is_stunned do
 		y_enemy_walk_step_minotaur(store, this)
 
-		if U.animation_finished(this) then
+		if U.animation_finished_default(this) then
 			break
 		end
 	end
@@ -52567,14 +52567,14 @@ function scripts.controller_stage_31_water_mechanic.update(this, store)
 
 				removing_water_end_ts = store.tick_ts + fts(6) + this.duration
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					removing_water_end()
 					coroutine.yield()
 				end
 
 				U.animation_start(this, "attack", nil, store.tick_ts, false, 1, true)
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					removing_water_end()
 					coroutine.yield()
 				end
@@ -52599,7 +52599,7 @@ function scripts.controller_stage_31_water_mechanic.update(this, store)
 		if explained_mechanic and bloon_ts < store.tick_ts then
 			U.animation_start(this, "idle_bloons", nil, store.tick_ts, false, 1, true)
 
-			while not U.animation_finished(this) and not this.ui.clicked do
+			while not U.animation_finished_default(this) and not this.ui.clicked do
 				manage_warning()
 				coroutine.yield()
 			end
@@ -53092,7 +53092,7 @@ function scripts.decal_stage_31_easter_egg_oogway.update(this, store)
 
 			U.animation_start(this, "idle_2", nil, store.tick_ts, false)
 
-			while not U.animation_finished(this, 1, 1) do
+			while not U.animation_finished_default(this) do
 				if this.ui.clicked then
 					goto label_1875_0
 				end
@@ -53212,7 +53212,7 @@ function scripts.decal_achievement_saitam.update(this, store)
 			end
 		end
 
-		if this.render.sprites[1].name == "click_1" and U.animation_finished(this, 1, 1) then
+		if this.render.sprites[1].name == "click_1" and U.animation_finished_default(this) then
 			U.animation_start(this, "idle", nil, store.tick_ts, true)
 		end
 
@@ -53366,7 +53366,7 @@ function scripts.fx_stage_32_fireball_right.update(this, store)
 	create_fires()
 	U.y_animation_wait(this, 2)
 	U.sprites_hide(this, 2, 2, false)
-	U.y_animation_wait(this, 1)
+	U.y_animation_wait_default(this)
 	queue_remove(store, this)
 end
 
@@ -54266,7 +54266,7 @@ function scripts.decal_redboy_teen_skyrock.update(this, store)
 	enemy.pos = V.v(this.pos.x, this.pos.y + 2)
 
 	queue_insert(store, enemy)
-	U.y_animation_wait(this, 1)
+	U.y_animation_wait_default(this)
 	queue_remove(store, this)
 end
 
@@ -55793,10 +55793,10 @@ function scripts.controller_boss_princess_iron_fan_waves.update(this, store)
 		if tower then
 			U.y_animation_play(this, "stun_tower_in", nil, store.tick_ts)
 			block_tower_ids({tower.tower.holder_id})
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			U.animation_start(this, "stun_tower_loop", nil, store.tick_ts, true)
 			U.y_wait_unconditional(store, this.block_tower_loop_duration)
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			U.y_animation_play(this, "stun_tower_out", nil, store.tick_ts)
 		end
 
@@ -57025,7 +57025,7 @@ function scripts.boss_princess_iron_fan.update(this, store)
 		mod_death.modifier.source_id = this.id
 
 		queue_insert(store, mod_death)
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 		U.y_wait_unconditional(store, 1.5)
 		LU.kill_all_enemies(store, true)
 		signal.emit("boss-killed", this)
@@ -57448,7 +57448,7 @@ function scripts.bullet_boss_princess_iron_fan.update(this, store)
 			s.hidden = false
 		end
 	else
-		while not U.animation_finished(this, 1) do
+		while not U.animation_finished_default(this) do
 			if tower and not store.entities[tower.id] then
 				queue_remove(store, this)
 
@@ -57807,7 +57807,7 @@ function scripts.controller_stage_35_golden_beast.update(this, store)
 
 			queue_insert(store, e)
 			signal.emit("wave-notification", "icon", "enemy_golden_eyed")
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			U.animation_start(this, "loop_empty", nil, store.tick_ts, true)
 			U.y_wait_unconditional(store, this.empty_wait)
 			U.y_animation_play(this, "in", nil, store.tick_ts, 1)
@@ -57918,7 +57918,7 @@ function scripts.controller_stage_35_bull_king.update(this, store)
 			queue_insert(store, shake)
 			U.y_wait_unconditional(store, 2.2)
 			S:queue("Stage35BossBullKingJumpToPath")
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			U.animation_start(this, "idle_silla", nil, store.tick_ts, true)
 
 			local boss = E:create_entity("boss_bull_king")
@@ -58638,7 +58638,7 @@ function scripts.mod_bull_king_tower_debuff.update(this, store)
 		SU.tower_block_dec(target)
 	end
 
-	while not U.animation_finished(this, 1) do
+	while not U.animation_finished_default(this) do
 		coroutine.yield()
 	end
 
@@ -58992,7 +58992,7 @@ function scripts.fx_stage_35_cannonball.update(this, store)
 		queue_insert(store, decal)
 	end
 
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	queue_remove(store, this)
 end
 
@@ -59158,7 +59158,7 @@ function scripts.fx_stage_35_cannonball_open_path.update(this, store)
 	shake.aura.freq_factor = 4
 
 	queue_insert(store, shake)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	U.animation_start(this, "idle", nil, store.tick_ts, true)
 end
 
@@ -59175,7 +59175,7 @@ function scripts.fx_stage_35_cannonball_block_path.update(this, store)
 	shake.aura.freq_factor = 4
 
 	queue_insert(store, shake)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	U.animation_start(this, "idle", nil, store.tick_ts, true)
 end
 
@@ -59298,7 +59298,7 @@ function scripts.mod_stage_32_tower_blocked.update(this, store)
 			break
 		end
 
-		if this.render.sprites[this.render.sid_lava].name == "in" and U.animation_finished(this, 1, 1) then
+		if this.render.sprites[this.render.sid_lava].name == "in" and U.animation_finished_default(this) then
 			U.animation_start(this, "loop", nil, store.tick_ts, true, this.render.sid_lava, true)
 		end
 
@@ -59476,7 +59476,7 @@ function scripts.decal_stage33_envelop.update(this, store)
 			end
 		end
 
-		if spr.name == "in" and U.animation_finished(this, 1) then
+		if spr.name == "in" and U.animation_finished_default(this) then
 			U.animation_start(this, "idle", nil, store.tick_ts, true, 1)
 		end
 
@@ -59741,7 +59741,7 @@ function scripts.stage_39_cocoon.update(this, store, script)
 		if sprites_group then
 			U.y_animation_wait_group(this, sprites_group, 1)
 		else
-			U.y_animation_wait(this, 1, 1)
+			U.y_animation_wait_default(this)
 		end
 	end
 
@@ -60225,13 +60225,13 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 
 			queue_insert(store, b)
 			U.animation_start(this, "torre_ataque_basic_loop", nil, store.tick_ts, false, 1, true)
-			U.y_animation_wait(this, 1, 1)
+			U.y_animation_wait_default(this)
 		end
 		U.y_animation_play(this, "torre_ataque_basic_out", nil, store.tick_ts, 1, 1)
 
 		next_area_attack_ts = store.tick_ts + b.area_attack_cooldown
 
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 
 		if not this.render.sprites[1].flip_x then
 			U.y_animation_play(this, "giro_torre", nil, store.tick_ts, 1, 1)
@@ -60275,7 +60275,7 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 
 		this.render.sprites[1].runs = 0
 
-		U.y_animation_wait(this, 1)
+		U.y_animation_wait_default(this)
 		U.y_animation_play(this, "roar_out", nil, store.tick_ts, 1, 1)
 		U.animation_start(this, "torre_idle", nil, store.tick_ts, true, 1, true)
 		U.y_wait_unconditional(store, 0.5)
@@ -60304,7 +60304,7 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 		shake.aura.freq_factor = 4
 
 		queue_insert(store, shake)
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 
 		if cinematic then
 			local dist = V.dist(this.pos.x, this.pos.y, desired_pos.x, desired_pos.y)
@@ -60393,7 +60393,7 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 				}, OVtargets(nil, 1.2))
 			end
 
-			if this.render.sprites[1].name == "in_destruccion_torre" and U.animation_finished(this) then
+			if this.render.sprites[1].name == "in_destruccion_torre" and U.animation_finished_default(this) then
 				U.animation_start(this, "destruccion_torre", nil, store.tick_ts, false, 1, true)
 				S:queue("Stage37Cinematic1Arrive")
 
@@ -60445,7 +60445,7 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 		end
 
 		if this.render.sprites[1].name ~= "destruccion_torre" then
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			U.animation_start(this, "destruccion_torre", nil, store.tick_ts, false, 1, true)
 			U.y_wait_unconditional(store, fts(2))
 			S:queue("Stage37Cinematic1Arrive")
@@ -60472,7 +60472,7 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 			end
 		end
 
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 		U.animation_start(this, "torre_idle", nil, store.tick_ts, true, 1, true)
 
 		if cinematic then
@@ -60495,7 +60495,7 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 
 			this.render.sprites[1].runs = 0
 
-			U.y_animation_wait(this, 1)
+			U.y_animation_wait_default(this)
 			U.y_animation_play(this, "roar_out", nil, store.tick_ts, 1, 1)
 			U.animation_start(this, "torre_idle", nil, store.tick_ts, true, 1, true)
 			signal.emit("hide-curtains")
@@ -60575,7 +60575,7 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 
 		this.render.sprites[1].runs = 0
 
-		U.y_animation_wait(this, 1)
+		U.y_animation_wait_default(this)
 		U.y_animation_play(this, "roar_out", nil, store.tick_ts, 1, 1)
 		U.animation_start(this, "torre_idle", nil, store.tick_ts, true, 1, true)
 
@@ -60644,7 +60644,7 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 			bullet.bullet.mod_duration = duration
 
 			queue_insert(store, bullet)
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 
 			if not this.render.sprites[1].flip_x then
 				U.y_animation_play(this, "giro_torre", nil, store.tick_ts, 1, 1)
@@ -60713,7 +60713,7 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 
 			this.render.sprites[1].runs = 0
 
-			U.y_animation_wait(this, 1)
+			U.y_animation_wait_default(this)
 			U.y_animation_play(this, "roar_out", nil, store.tick_ts, 1, 1)
 			U.animation_start(this, "torre_idle", nil, store.tick_ts, true, 1, true)
 			U.y_wait_unconditional(store, 0.5)
@@ -60738,7 +60738,7 @@ function scripts.controller_stage_37_dragon_boss.update(this, store, script)
 			shake.aura.freq_factor = 4
 
 			queue_insert(store, shake)
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			U.animation_start(this, "walk", nil, store.tick_ts, true, 1, true)
 
 			local diff, norm_x, norm_y
@@ -60960,7 +60960,7 @@ function scripts.decal_stage_36_easter_egg_spyro.update(this, store, script)
 			local wind = 30
 
 			while this.pos.x > -1000 do
-				if U.animation_finished(this) and spyro.name == "fly_in" then
+				if U.animation_finished_default(this) and spyro.name == "fly_in" then
 					U.animation_start(this, "fly_loop", nil, store.tick_ts, true, 1, true)
 				end
 
@@ -61003,7 +61003,7 @@ function scripts.decal_stage_36_easter_egg_spyro.update(this, store, script)
 				local wind = 30
 
 				while V.dist(this.pos.x, this.pos.y, end_pos.x, end_pos.y) > 20 do
-					if U.animation_finished(this) and spyro.name == "fly_in" then
+					if U.animation_finished_default(this) and spyro.name == "fly_in" then
 						U.animation_start(this, "fly_loop", nil, store.tick_ts, true, 1, true)
 					end
 
@@ -61044,7 +61044,7 @@ function scripts.decal_stage_36_easter_egg_spyro.update(this, store, script)
 					coroutine.yield()
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 				U.animation_start(this, "idle2", nil, store.tick_ts, true, 1, true)
 
 				this.ui.can_click = true
@@ -61241,7 +61241,7 @@ function scripts.decal_stage_38_easter_ender_egg.update(this, store, script)
 		fx.render.sprites[1].ts = store.tick_ts
 
 		queue_insert(store, fx)
-		U.y_animation_wait(this, 1, 1)
+		U.y_animation_wait_default(this)
 		U.animation_start(this, "idle", nil, store.tick_ts, true, 1, true)
 	end
 
@@ -62285,7 +62285,7 @@ function scripts.stage_36_paths_controller.update(this, store, script)
 				end
 			end
 
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			U.animation_start(this, "idle", nil, store.tick_ts, true, sprite_sid, true)
 
 			if cinematic then
@@ -62433,7 +62433,7 @@ function scripts.stage_37_barrack_dragon_wardens.update(this, store, script)
 
 						next_respawn_ts = store.tick_ts + this.respawn_time
 
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 						U.animation_start(this, "idle", nil, store.tick_ts, true, 1, true)
 
 						break
@@ -62736,7 +62736,7 @@ function scripts.tower_stage_38_dragon_wardens.update(this, store)
 					U.y_wait_unconditional(store, 0.5)
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 				U.animation_start(this, "idle", nil, store.tick_ts, true, 1, true)
 			end
 		end
@@ -62845,7 +62845,7 @@ function scripts.stage_39_veins_tower_stun.update(this, store)
 	mod_hide.handle_stun = false
 
 	queue_insert(store, mod_hide)
-	U.y_animation_wait(this, 1)
+	U.y_animation_wait_default(this)
 	U.animation_start(this, "loop", nil, store.tick_ts, true, 1, true)
 
 	local nearest_node = P:nearest_nodes(target.pos.x, target.pos.y, nil, {1}, false)[1]
@@ -62880,7 +62880,7 @@ function scripts.stage_39_veins_tower_stun.update(this, store)
 
 	local entity_id = e.id
 
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	U.animation_start(this, "loop_2", nil, store.tick_ts, true, 1, true)
 
 	while store.entities[entity_id] do
@@ -62899,7 +62899,7 @@ function scripts.stage_39_veins_tower_stun.update(this, store)
 
 	this.finishing = true
 
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 
 	if target.tower_holder then
 		target.tower_holder.blocked = false
@@ -62947,7 +62947,7 @@ function scripts.controller_stage_39_boss.update(this, store)
 			x = 512,
 			y = 420
 		}, OVtargets(nil, 1.4, 1.4, 1.4, 1.4))
-		U.y_animation_wait(this, 1, 1)
+		U.y_animation_wait_default(this)
 
 		this.health.dead = false
 		first_death = false
@@ -62977,7 +62977,7 @@ function scripts.controller_stage_39_boss.update(this, store)
 
 		this.health.hp = this.health.hp_max
 
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 		U.y_animation_play(this, "angry_out", nil, store.tick_ts, 1, 1)
 		U.animation_start(this, "idle", nil, store.tick_ts, true, 1, true)
 		U.y_wait_unconditional(store, 1)
@@ -63017,7 +63017,7 @@ function scripts.controller_stage_39_boss.update(this, store)
 		}, 1.2)
 		U.y_animation_play(this, "death", nil, store.tick_ts, false, 1, true)
 		signal.emit("boss-killed", this)
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 		LU.kill_all_enemies(store, true)
 
 		store.level.bossfight_ended = true
@@ -63062,7 +63062,7 @@ function scripts.controller_stage_39_boss.update(this, store)
 		wait_and_attack(fts(17))
 		U.y_wait_unconditional(store, fts(20))
 		SU.shake_screen(store, 0.4, 0.3, 2.5)
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 		U.animation_start(this, "idle", nil, store.tick_ts, true, 1, true)
 
 		if vein_attack_nmbr == 1 then
@@ -63106,7 +63106,7 @@ function scripts.controller_stage_39_boss.update(this, store)
 		queue_insert(store, fx)
 		U.animation_start(this, "damage", nil, store.tick_ts, false, 1, true)
 
-		while not U.animation_finished(this) and not this.get_hit and not this.health.dead do
+		while not U.animation_finished_default(this) and not this.get_hit and not this.health.dead do
 			coroutine.yield()
 		end
 
@@ -63150,7 +63150,7 @@ function scripts.controller_stage_39_boss.update(this, store)
 			U.animation_start(this, "spawn_vena", nil, store.tick_ts, false, 1, true)
 			U.y_wait_unconditional(store, 0.9)
 			SU.shake_screen(store, 0.4, 1.5, 2.5)
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			U.animation_start(this, "idle_sleep", nil, store.tick_ts, true, 1, true)
 
 			this.activate_spawner = false
@@ -63240,7 +63240,7 @@ function scripts.controller_stage_39_boss.update(this, store)
 				U.animation_start(this, "spawn_vena_up", nil, store.tick_ts, false, 1, true)
 				U.y_wait_unconditional(store, 0.9)
 				SU.shake_screen(store, 0.4, 1.5, 2.5)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 				U.animation_start(this, "idle", nil, store.tick_ts, true, 1, true)
 
 				this.activate_spawner = false
@@ -63492,7 +63492,7 @@ function scripts.controller_stage_40_ballista.update(this, store, script)
 
 		local damage_config = math.ceil(this.damage[this.shoot_nmbr] * math.max(GS.difficulty_enemy_hp_max_factor[store.level_difficulty] / 1.1, 1))
 		this.boss_ref:get_hit_by_ballista_fn(store, damage_config)
-		U.y_animation_wait(this, 1, 1)
+		U.y_animation_wait_default(this)
 		U.animation_start(this, "loop_2", nil, store.tick_ts, true, 1, true)
 
 		this.next_attack_ts = store.tick_ts + this.cooldown - fts(137) - fts(192)
@@ -63737,7 +63737,7 @@ function scripts.controller_stage_40_boss_shadow_waves.update(this, store, scrip
 			}}
 		end
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			this.imaginary_position.x = this.imaginary_position.x + dir * speed * store.tick_length
 
 			if start_shake_ts and start_shake_ts < store.tick_ts then
@@ -64140,7 +64140,7 @@ function scripts.mod_stage_40_boss_shadow_units_stun.update(this, store, script)
 	if m.animation_phases then
 		U.animation_start(this, "start", nil, store.tick_ts)
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			if not target_hidden and m.hide_target_delay and store.tick_ts - start_ts > m.hide_target_delay then
 				target_hidden = true
 
@@ -64203,7 +64203,7 @@ function scripts.mod_stage_40_boss_shadow_units_stun.update(this, store, script)
 			SU.show_auras(store, target, true)
 		end
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			coroutine.yield()
 		end
 	end
@@ -64574,7 +64574,7 @@ function scripts.controller_stage_40_boss.update(this, store)
 			SU.shake_screen(store, 0.8, 1.5, 1)
 		end
 
-		U.y_animation_wait(this, 1, 1)
+		U.y_animation_wait_default(this)
 		U.animation_start(this, "idle", nil, store.tick_ts, true, 1, true)
 
 		if current_step == #this.steps_config then
@@ -64669,7 +64669,7 @@ function scripts.controller_stage_40_boss.update(this, store)
 
 		local shake_screen_ts = store.tick_ts + fts(20)
 
-		while not U.animation_finished(this, 1, 1) do
+		while not U.animation_finished_default(this) do
 			if this.health.dead then
 				unban_ranged_attacks()
 				remove_decals()
@@ -64784,7 +64784,7 @@ function scripts.controller_stage_40_boss.update(this, store)
 
 		U.animation_start(this, "breath_attack_in", nil, store.tick_ts, false, 1, true)
 
-		while not U.animation_finished(this, 1, 1) do
+		while not U.animation_finished_default(this) do
 			if this.health.dead then
 				unban_ranged_attacks()
 				remove_decals()
@@ -64834,7 +64834,7 @@ function scripts.controller_stage_40_boss.update(this, store)
 
 		shake_screen_ts = store.tick_ts + fts(16)
 
-		while not U.animation_finished(this, 1, 1) do
+		while not U.animation_finished_default(this) do
 			if this.health.dead then
 				unban_ranged_attacks()
 
@@ -64885,7 +64885,7 @@ function scripts.controller_stage_40_boss.update(this, store)
 
 		local shake_screen_ts = store.tick_ts + fts(21)
 
-		while not U.animation_finished(this, 1, 1) do
+		while not U.animation_finished_default(this) do
 			if this.health.dead then
 				unban_ranged_attacks()
 
@@ -64935,7 +64935,7 @@ function scripts.controller_stage_40_boss.update(this, store)
 
 		local hit_ts = store.tick_ts + fts(30)
 
-		while not U.animation_finished(this, 1, 1) do
+		while not U.animation_finished_default(this) do
 			if this.health.dead then
 				unban_ranged_attacks()
 
@@ -65015,7 +65015,7 @@ function scripts.controller_stage_40_boss.update(this, store)
 
 		shake_screen_ts = store.tick_ts + fts(33)
 
-		while not U.animation_finished(this, 1, 1) do
+		while not U.animation_finished_default(this) do
 			if this.health.dead then
 				unban_ranged_attacks()
 
@@ -65052,7 +65052,7 @@ function scripts.controller_stage_40_boss.update(this, store)
 		U.animation_start(this, "death", nil, store.tick_ts, false, 1, true)
 		U.y_wait_unconditional(store, fts(89))
 		SU.shake_screen(store, 3, 2, 2)
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 		U.y_wait_unconditional(store, 1)
 		U.y_wait_unconditional(store, 2)
 		LU.kill_all_enemies(store, true)
@@ -65129,7 +65129,7 @@ function scripts.controller_stage_40_boss.update(this, store)
 	this.render.sprites[1].sort_y_offset = -100
 
 	SU.shake_screen(store, 2, 2, 2)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 
 	this.pos.x = this.pos.x + 150
 
@@ -65138,7 +65138,7 @@ function scripts.controller_stage_40_boss.update(this, store)
 	S:stop_group("MUSIC")
 	S:queue("MusicBossFight_140")
 	SU.shake_screen(store, 1, 1.5, 2)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	U.animation_start(this, "idle", nil, store.tick_ts, true, 1, true)
 	U.y_wait_unconditional(store, 5)
 	do_breath(true)
@@ -66307,7 +66307,7 @@ function scripts.soldier_warden_stage_40_moving_island.update(this, store)
 
 					shot_bullet(aa, enemy, 0)
 
-					while not U.animation_finished(this, 1, 1) do
+					while not U.animation_finished_default(this) do
 						warden_hp_regen()
 						coroutine.yield()
 					end
@@ -66421,7 +66421,7 @@ function scripts.soldier_warden_stage_40_island_stopped.update(this, store, scri
 				if this.dodge.animation then
 					U.animation_start(this, this.dodge.animation, nil, store.tick_ts, 1)
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						coroutine.yield()
 					end
 				end
@@ -66748,7 +66748,7 @@ function scripts.enemy_basic_lava.update(this, store, script)
 
 				U.animation_start(this, an, af, store.tick_ts, false, 1, true)
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					if this.health.dead then
 						goto label_2214_0
 					end
@@ -66758,7 +66758,7 @@ function scripts.enemy_basic_lava.update(this, store, script)
 
 				U.animation_start(this, this.transform_anim_loop, af, store.tick_ts, false, 1, true)
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					if this.health.dead then
 						goto label_2214_0
 					end
@@ -66770,7 +66770,7 @@ function scripts.enemy_basic_lava.update(this, store, script)
 				U.y_wait_unconditional(store, fts(28))
 				S:queue(this.evolve_sound)
 				U.sprites_show(this, 2, 2, true)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				this.can_evolve_dragons_mechanic = true
 
@@ -67440,7 +67440,7 @@ function scripts.decal_enemy_alfa_lava_dot.update(this, store, script)
 
 	U.animation_start(this, this.in_anim, nil, store.tick_ts, false, 1, true)
 
-	while not U.animation_finished(this) and not this.remove and not this.has_been_picked do
+	while not U.animation_finished_default(this) and not this.remove and not this.has_been_picked do
 		coroutine.yield()
 	end
 
@@ -67455,7 +67455,7 @@ function scripts.decal_enemy_alfa_lava_dot.update(this, store, script)
 	this.leaving = true
 
 	if this.has_been_picked then
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 	else
 		U.y_animation_play(this, this.end_anim, nil, store.tick_ts)
 	end
@@ -69348,7 +69348,7 @@ function scripts.enemy_alfa_shadow.update(this, store, script)
 		this.health_bar.hidden = nil
 		S:queue("EnemyShadowAlfaEvolveScream")
 		U.animation_start(this, evolve_tp.animation_out, target_pos.x < this.pos.x, store.tick_ts, false, 1, true)
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 
 		if pushed_bans then
 			U.pop_bans(this.vis, pushed_bans)
@@ -70090,7 +70090,7 @@ function scripts.enemy_executioner_storm.update(this, store, script)
 				d.value = math.random(a_instakill.damage_min, a_instakill.damage_max)
 
 				queue_damage(store, d)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				this.health.ignore_damage = nil
 
@@ -70392,7 +70392,7 @@ function scripts.boss_murglum.update(this, store, script)
 
 			queue_insert(store, b)
 			U.animation_start(this, a_geisers.animation_loop, nil, store.tick_ts, false, 1, true)
-			U.y_animation_wait(this, 1, 1)
+			U.y_animation_wait_default(this)
 		end
 
 		U.animation_start(this, a_geisers.animation_out, nil, store.tick_ts, false, 1, true)
@@ -70540,7 +70540,7 @@ function scripts.boss_murglum.update(this, store, script)
 		death_decal.render.sprites[1].ts = store.tick_ts
 
 		queue_insert(store, death_decal)
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 		U.y_wait_unconditional(store, fts(15))
 		LU.kill_all_enemies(store, true)
 
@@ -71162,7 +71162,7 @@ function scripts.soldier_dragon_warden_warrior.update(this, store, script)
 				if this.dodge.animation then
 					U.animation_start(this, this.dodge.animation, nil, store.tick_ts, 1)
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						coroutine.yield()
 					end
 				end

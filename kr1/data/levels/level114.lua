@@ -47,7 +47,7 @@ shake.aura.amplitude=0.2
 shake.aura.duration=1
 shake.aura.freq_factor=4
 LU.queue_insert(store,shake)
-U.y_animation_wait(hidden_path_dust)
+U.y_animation_wait_default(hidden_path_dust)
 LU.queue_remove(store,hidden_path_dust)
 P:activate_path(5)
 set_terrain(blocked_cells,bit.bor(TERRAIN_LAND))

@@ -89,7 +89,7 @@ last_gas=store.tick_ts
 gas_cd=math.random(20,30)
 gas_anim=true
 end
-if U.animation_finished(pig) and gas_anim then
+if U.animation_finished_default(pig) and gas_anim then
 gas_anim=false
 U.y_animation_play(pig,"to_sleeping",false,store.tick_ts,1)
 U.animation_start(pig,"sleeping",false,store.tick_ts,true)
@@ -103,7 +103,7 @@ last_gas=store.tick_ts
 gas_cd=math.random(20,30)
 gas_anim=true
 end
-if U.animation_finished(pig) and gas_anim then
+if U.animation_finished_default(pig) and gas_anim then
 gas_anim=false
 U.y_animation_play(pig,"to_sleeping",false,store.tick_ts,1)
 U.animation_start(pig,"sleeping",false,store.tick_ts,true)

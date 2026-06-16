@@ -141,7 +141,7 @@ U.animation_start(block,"end",nil,store.tick_ts)
 end
 if #tower_blocks>0 then
 S:queue("Level1SpecialEndingHoldDissipate")
-U.y_animation_wait(tower_blocks[1])
+U.y_animation_wait_default(tower_blocks[1])
 end
 end
 return level

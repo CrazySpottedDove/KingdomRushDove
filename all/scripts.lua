@@ -238,7 +238,7 @@ function scripts.delayed_play.update(this, store)
 					else
 						U.animation_start(this, d.play_animation, nil, store.tick_ts, false)
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							if d.click_interrupts and this.ui.clicked then
 								goto label_9_0
 							end
@@ -1010,7 +1010,7 @@ function scripts.delayed_spawn.update(this, store)
 	end
 
 	queue_insert(store, e)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	queue_remove(store, this)
 end
 
@@ -1334,7 +1334,7 @@ function scripts.soldier_barrack.update(this, store)
 		this.health_bar.hidden = true
 		U.animation_start(this, "raise", nil, store.tick_ts, 1)
 
-		while not U.animation_finished(this) and not this.health.dead do
+		while not U.animation_finished_default(this) and not this.health.dead do
 			coroutine.yield()
 		end
 
@@ -1382,7 +1382,7 @@ function scripts.soldier_barrack.update(this, store)
 				elseif this.dodge.animation then
 					U.animation_start(this, this.dodge.animation, nil, store.tick_ts, 1)
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						coroutine.yield()
 					end
 				end
@@ -3877,7 +3877,7 @@ function scripts.bolt_blast.update(this, store)
 		end
 	end
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		coroutine.yield()
 	end
 
@@ -4147,7 +4147,7 @@ function scripts.ray_simple.update(this, store)
 			coroutine.yield()
 		end
 	else
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 	end
 
 	queue_remove(store, this)
@@ -4247,7 +4247,7 @@ function scripts.ray_enemy.update(this, store)
 		SU.insert_sprite(store, b.hit_fx, b.to)
 	end
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		update_sprite()
 		coroutine.yield()
 	end
@@ -4474,7 +4474,7 @@ function scripts.bullet_illusion.update(this, store)
 			an, af = U.animation_name_facing_point(this, a.attack, b.to)
 
 			U.animation_start(this, an, af, store.tick_ts, false)
-		elseif phase == "start" and U.animation_finished(this) then
+		elseif phase == "start" and U.animation_finished_default(this) then
 			phase = "loop"
 			an, af = U.animation_name_facing_point(this, a.loop, b.to)
 
@@ -4501,7 +4501,7 @@ function scripts.bullet_illusion.update(this, store)
 		end
 	end
 
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 
 	::label_87_0::
 
@@ -4519,14 +4519,14 @@ function scripts.bullet_illusion.update(this, store)
 
 		if a.miss then
 			U.animation_start(this, nil, nil, store.tick_ts)
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 		end
 	end
 
 	if a.death then
 		S:queue(this.sound_events.death)
 		U.animation_start(this, nil, nil, store.tick_ts)
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 	end
 
 	queue_remove(store, this)
@@ -5667,7 +5667,7 @@ function scripts.mod_stun.update(this, store)
 	if m.animation_phases then
 		U.animation_start(this, "start", nil, store.tick_ts)
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			if not target_hidden and m.hide_target_delay and store.tick_ts - start_ts > m.hide_target_delay then
 				target_hidden = true
 
@@ -5721,7 +5721,7 @@ function scripts.mod_stun.update(this, store)
 			SU.show_auras(store, target, true)
 		end
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			coroutine.yield()
 		end
 	end
@@ -6359,7 +6359,7 @@ function scripts.mod_tower_block.update(this, store)
 		U.sprites_hide(target, nil, nil, true)
 	end
 
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	U.animation_start(this, "loop", nil, store.tick_ts, true)
 	U.y_wait_unconditional(store, m.duration - (store.tick_ts - m.ts))
 	S:queue(this.sound_events.finish)
@@ -6370,7 +6370,7 @@ function scripts.mod_tower_block.update(this, store)
 		U.sprites_show(target, nil, nil, true)
 	end
 
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	SU.tower_block_dec(target)
 	queue_remove(store, this)
 end
@@ -6437,7 +6437,7 @@ function scripts.mod_tower_remove.update(this, store)
 
 		target.tower.destroy = true
 
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 
 		local mods = target._applied_mods
 
@@ -8099,7 +8099,7 @@ scripts.soldier_revive_resist = function(this, store)
 	end
 
 	if this.revive.animation then
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			coroutine.yield()
 		end
 	end
@@ -8713,7 +8713,7 @@ function scripts.delayed_play_kr5.update(this, store)
 					else
 						U.animation_start(this, d.play_animation, nil, store.tick_ts, false)
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							if d.click_interrupts and this.ui.clicked then
 								goto label_15_0
 							end

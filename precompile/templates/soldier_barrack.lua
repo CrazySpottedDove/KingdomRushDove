@@ -82,7 +82,7 @@ return function(this, store)
 		this.health_bar.hidden = true
 		U.animation_start(this, "raise", nil, store.tick_ts, 1)
 
-		while not U.animation_finished(this) and not this.health.dead do
+		while not U.animation_finished_default(this) and not this.health.dead do
 			coroutine.yield()
 		end
 
@@ -136,7 +136,7 @@ return function(this, store)
                         elseif this.dodge.animation then
                             U.animation_start(this, this.dodge.animation, nil, store.tick_ts, 1)
 
-                            while not U.animation_finished(this) do
+                            while not U.animation_finished_default(this) do
                                 coroutine.yield()
                             end
                     constend
@@ -144,7 +144,7 @@ return function(this, store)
                     constelseif(this.dodge.animation)
                         U.animation_start(this, this.dodge.animation, nil, store.tick_ts, 1)
 
-                        while not U.animation_finished(this) do
+                        while not U.animation_finished_default(this) do
                             coroutine.yield()
                         end
                     constend

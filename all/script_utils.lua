@@ -802,7 +802,7 @@ end
 ---@param this table 士兵实体
 ---@return boolean 是否提前结束
 function SU.y_soldier_animation_wait(this)
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		if SU.soldier_interrupted(this) then
 			return true
 		end
@@ -1138,7 +1138,7 @@ function SU.y_hero_death_and_respawn(store, this)
 			end
 		end
 
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 	elseif band(h.last_damage_types, bor(DAMAGE_DISINTEGRATE)) ~= 0 then
 		this.unit.hide_after_death = true
 
@@ -1384,7 +1384,7 @@ function SU.y_soldier_revive(store, this)
 		this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + this.health.hp_max * r.health_recover)
 
 		if r.animation then
-			while not U.animation_finished(this) do
+			while not U.animation_finished_default(this) do
 				coroutine.yield()
 			end
 		end
@@ -1682,7 +1682,7 @@ function SU.y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
 
 		attack_done = true
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			if this.unit.is_stunned or this.health.dead or this.nav_rally and this.nav_rally.new then
 				break
 			end
@@ -1908,7 +1908,7 @@ function SU.y_soldier_do_timed_attack(store, this, target, attack)
 
 	attack_done = true
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		if this.health.dead or this.nav_rally and this.nav_rally.new then
 			break
 		end
@@ -2098,7 +2098,7 @@ function SU.y_soldier_do_single_area_attack(store, this, target, attack)
 
 	attack_done = true
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		if SU.attack_interrupted(this, attack) or this.nav_rally and this.nav_rally.new then
 			break
 		end
@@ -2278,7 +2278,7 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 			attack_done = true
 		end
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			if this.unit.is_stunned then
 				goto label_70_0
 			end
@@ -2304,7 +2304,7 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 
 		U.animation_start(this, an, af, store.tick_ts, 1)
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			if this.health.dead or this.nav_rally and this.nav_rally.new then
 				break
 			end
@@ -2508,7 +2508,7 @@ function SU.y_soldier_do_single_melee_attack(store, this, target, attack)
 
 	attack_done = true
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		if SU.attack_interrupted(this, attack) or (not attack.ignore_rally_change and this.nav_rally and this.nav_rally.new) then
 			break
 		elseif SU.dodge_active(this) then
@@ -3028,7 +3028,7 @@ end
 ---@param this table 敌人实体
 ---@return boolean 是否提前结束
 function SU.y_enemy_animation_wait(this)
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		if SU.enemy_interrupted(this) then
 			return true
 		end
@@ -3358,7 +3358,7 @@ function SU.y_enemy_death(store, this)
 			can_spawn = false
 		end
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			coroutine.yield()
 		end
 	end
@@ -3743,7 +3743,7 @@ function SU.y_enemy_do_ranged_attack(store, this, target, attack)
 		end
 	end
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		if this.health.dead or this.unit.is_stunned and not attack.ignore_stun then
 			return false
 		end
@@ -3815,7 +3815,7 @@ function SU.y_enemy_do_loopable_ranged_attack(store, this, target, attack)
 			attack_done = true
 		end
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			if this.unit.is_stunned and not attack.ignore_stun then
 				goto label_99_0
 			end
@@ -3834,7 +3834,7 @@ function SU.y_enemy_do_loopable_ranged_attack(store, this, target, attack)
 
 	U.animation_start(this, an, af, store.tick_ts, 1)
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		if this.health.dead then
 			break
 		end
@@ -4076,7 +4076,7 @@ function SU.y_enemy_melee_attacks(store, this, target)
 					end
 				end
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					if this.health.dead or ma.ignore_stun and this.unit.is_stunned or this.dodge and this.dodge.active and not this.dodge.silent then
 						return false
 					end

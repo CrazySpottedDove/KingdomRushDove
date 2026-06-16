@@ -149,7 +149,7 @@ function scripts.decal_catapult_endless.update(this, store)
 						queue_insert(store, b)
 					end
 
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 					U.animation_start(this, "idle", nil, store.tick_ts)
 
 					a.ts = store.tick_ts

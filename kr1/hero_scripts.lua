@@ -642,7 +642,7 @@ scripts.hero_alleria = {
 
 							a.pet = e
 
-							U.y_animation_wait(this)
+							U.y_animation_wait_default(this)
 
 							a.ts = store.tick_ts
 							this.health.immune_to = 0
@@ -710,7 +710,7 @@ scripts.mirage_shadow = {
 				smoke.render.sprites[1].ts = store.tick_ts
 
 				queue_insert(store, smoke)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 				queue_remove(store, this)
 
 				return
@@ -896,7 +896,7 @@ scripts.hero_mirage = {
 					smoke.render.sprites[1].ts = store.tick_ts
 
 					queue_insert(store, smoke)
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					local enemy = store.entities[this.soldier.target_id]
 
@@ -1050,7 +1050,7 @@ scripts.hero_mirage = {
 							end
 						end
 
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 						SU.stun_dec(target)
 						S:queue(this.sound_events.lethal_vanish)
 
@@ -1116,7 +1116,7 @@ scripts.hero_mirage = {
 							end
 						end
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							if this.nav_rally.new then
 								goto label_296_1
 							end
@@ -1268,7 +1268,7 @@ scripts.ray_wizard_chain = {
 			end
 		end
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			update_sprite()
 			coroutine.yield()
 		end
@@ -1534,7 +1534,7 @@ scripts.hero_wizard = {
 							end
 						end
 
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 
 						goto label_326_0
 					end
@@ -1815,7 +1815,7 @@ scripts.hero_alric = {
 							queue_insert(store, spawn)
 						end
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							if this.nav_rally.new then
 								goto label_289_0
 							end
@@ -2005,7 +2005,7 @@ scripts.hero_bolin = {
 
 								queue_insert(store, b)
 
-								if not U.y_animation_wait(this) then
+								if not U.y_animation_wait_default(this) then
 									goto label_47_0
 								end
 							end
@@ -2069,7 +2069,7 @@ scripts.hero_bolin = {
 
 							queue_insert(store, b)
 
-							if not U.y_animation_wait(this) then
+							if not U.y_animation_wait_default(this) then
 								goto label_47_0
 							end
 						end
@@ -2172,13 +2172,13 @@ scripts.hero_bolin = {
 								end
 							end
 
-							U.y_animation_wait(this)
+							U.y_animation_wait_default(this)
 
 							a.ts = store.tick_ts
 
 							U.animation_start(this, "reload", nil, store.tick_ts)
 
-							if U.y_animation_wait(this) then
+							if U.y_animation_wait_default(this) then
 								goto label_47_0
 							end
 						end
@@ -2480,7 +2480,7 @@ scripts.hero_denas = {
 
 			queue_insert(store, bullet)
 
-			if U.y_animation_wait(this) then
+			if U.y_animation_wait_default(this) then
 				return
 			end
 
@@ -3145,7 +3145,7 @@ scripts.hero_beastmaster = {
 							table.insert(this.boars, e)
 						end
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							if this.nav_rally.new then
 								goto label_339_0
 							end
@@ -3224,7 +3224,7 @@ scripts.hero_beastmaster = {
 							sni = km.clamp(1, origin[3] + 2, sni - 2)
 						end
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							if this.nav_rally.new then
 								goto label_339_0
 							end
@@ -3329,7 +3329,7 @@ scripts.mod_van_helsing_relic = {
 			this.render.sprites[1].offset.y = target.health_bar.offset.y
 			this.render.sprites[1].ts = store.tick_ts
 
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 		end
 
 		queue_remove(store, this)
@@ -3535,7 +3535,7 @@ scripts.hero_van_helsing = {
 
 						U.animation_start(this, an, af, store.tick_ts, false)
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							if SU.hero_interrupted(this) then
 								goto label_419_1
 							end
@@ -3563,7 +3563,7 @@ scripts.hero_van_helsing = {
 								queue_insert(store, b)
 							end
 
-							while not U.animation_finished(this) do
+							while not U.animation_finished_default(this) do
 								if SU.hero_interrupted(this) then
 									goto label_419_0
 								end
@@ -3590,7 +3590,7 @@ scripts.hero_van_helsing = {
 
 						U.animation_start(this, an, af, store.tick_ts, false)
 
-						while not U.animation_finished(this) and not SU.hero_interrupted(this) do
+						while not U.animation_finished_default(this) and not SU.hero_interrupted(this) do
 							coroutine.yield()
 						end
 
@@ -3670,7 +3670,7 @@ scripts.hero_van_helsing = {
 
 								queue_insert(store, b)
 
-								while not U.animation_finished(this) and not SU.hero_interrupted(this) do
+								while not U.animation_finished_default(this) and not SU.hero_interrupted(this) do
 									coroutine.yield()
 								end
 
@@ -3715,7 +3715,7 @@ scripts.hero_van_helsing = {
 
 							queue_insert(store, b)
 
-							while not U.animation_finished(this) and not SU.hero_interrupted(this) do
+							while not U.animation_finished_default(this) and not SU.hero_interrupted(this) do
 								coroutine.yield()
 							end
 
@@ -4322,7 +4322,7 @@ scripts.hero_priest = {
 
 							a.ts = store.tick_ts
 
-							U.y_animation_wait(this)
+							U.y_animation_wait_default(this)
 
 							goto label_365_0
 						end
@@ -4383,7 +4383,7 @@ scripts.hero_priest = {
 							queue_insert(store, m)
 						end
 
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 
 						goto label_365_0
 					end
@@ -4484,7 +4484,7 @@ scripts.magnus_arcane_rain = {
 			end
 		end
 
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 		queue_remove(store, this)
 	end
 }
@@ -4565,7 +4565,7 @@ scripts.soldier_magnus_illusion = {
 
 						queue_insert(store, e)
 
-						if not U.y_animation_wait(this) then
+						if not U.y_animation_wait_default(this) then
 							this.render.sprites[1].prefix = "soldier_magnus_illusion"
 
 							goto label_34_0
@@ -4726,7 +4726,7 @@ scripts.hero_magnus = {
 						queue_insert(store, e)
 					end
 
-					if not U.y_animation_wait(this) then
+					if not U.y_animation_wait_default(this) then
 						goto label_75_0
 					end
 				end
@@ -4771,7 +4771,7 @@ scripts.hero_magnus = {
 
 						queue_insert(store, e)
 
-						if not U.y_animation_wait(this) then
+						if not U.y_animation_wait_default(this) then
 							goto label_75_0
 						end
 					end
@@ -5135,7 +5135,7 @@ scripts.hero_giant = {
 								fx.render.sprites[1].ts = store.tick_ts
 
 								queue_insert(store, fx)
-								U.y_animation_wait(this)
+								U.y_animation_wait_default(this)
 							end
 
 							goto label_306_0
@@ -5314,7 +5314,7 @@ function scripts.hero_dracolich.update(this, store)
 
 				e.owner = this
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				force_idle_ts = true
 				a.ts = store.tick_ts
@@ -5368,7 +5368,7 @@ function scripts.hero_dracolich.update(this, store)
 						spi = km.zmod(spi + math.random(1, 2), 3)
 					end
 
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					force_idle_ts = true
 					a.ts = store.tick_ts
@@ -5441,7 +5441,7 @@ function scripts.hero_dracolich.update(this, store)
 				fx.render.sprites[1].ts = store.tick_ts
 
 				queue_insert(store, fx)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				this.render.sprites[1].hidden = true
 
@@ -5519,7 +5519,7 @@ function scripts.hero_dracolich.update(this, store)
 							delay = delay + fts(U.frandom(1, 3))
 						end
 
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 
 						force_idle_ts = true
 						a.ts = store.tick_ts
@@ -5582,7 +5582,7 @@ function scripts.hero_dracolich.update(this, store)
 
 					a.ts = start_ts
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						if this.unit.is_stunned or this.health.dead or this.nav_rally and this.nav_rally.new then
 							goto label_407_0
 						end
@@ -5772,7 +5772,7 @@ function scripts.hero_pirate.update(this, store)
 
 					queue_insert(store, ks_aura)
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						if this.nav_rally.new then
 							goto label_317_0
 						end
@@ -5838,7 +5838,7 @@ function scripts.hero_pirate.update(this, store)
 
 					queue_insert(store, bullet)
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						if this.nav_rally.new then
 							goto label_317_0
 						end
@@ -6682,7 +6682,7 @@ scripts.hero_ignus = {
 
 							queue_insert(store, e)
 
-							if not U.y_animation_wait(this) then
+							if not U.y_animation_wait_default(this) then
 							-- block empty
 							end
 
@@ -7219,7 +7219,7 @@ scripts.hero_10yr = {
 						S:queue(a.sound_start)
 						U.animation_start(this, a.animations[1], nil, store.tick_ts, false)
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							if SU.hero_interrupted(this) then
 								goto label_90_0
 							end
@@ -7231,7 +7231,7 @@ scripts.hero_10yr = {
 
 						U.animation_start(this, a.animations[2], nil, store.tick_ts, false)
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							if SU.hero_interrupted(this) then
 								goto label_90_0
 							end
@@ -7281,7 +7281,7 @@ scripts.hero_10yr = {
 						S:queue(a.sound_start)
 						U.animation_start(this, a.animations[1], nil, store.tick_ts, false)
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							if SU.hero_interrupted(this) then
 								goto label_90_0
 							end
@@ -7293,7 +7293,7 @@ scripts.hero_10yr = {
 
 						U.animation_start(this, a.animations[2], nil, store.tick_ts, false)
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							if SU.hero_interrupted(this) then
 								goto label_90_0
 							end
@@ -7781,7 +7781,7 @@ function scripts.hero_vampiress.update(this, store)
 						fx.render.sprites[1].ts = store.tick_ts
 
 						queue_insert(store, fx)
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 					end
 				end
 
@@ -7794,7 +7794,7 @@ function scripts.hero_vampiress.update(this, store)
 					this.render.sprites[2].hidden = true
 
 					U.y_animation_play(this, "exit", nil, store.tick_ts)
-					U.y_animation_wait(this, nil, 1)
+					U.y_animation_wait_default(this)
 
 					this.render.sprites[1].prefix = orig_prefix
 
@@ -7848,7 +7848,7 @@ function scripts.hero_vampiress.update(this, store)
 						end
 					end
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						if SU.hero_interrupted(this) then
 							goto label_477_0
 						end
@@ -8022,7 +8022,7 @@ function scripts.hero_alien.update(this, store)
 					e.owner = this
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				goto label_353_1
 			end
@@ -8054,7 +8054,7 @@ function scripts.hero_alien.update(this, store)
 
 					e.owner = this
 
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					goto label_353_1
 				end
@@ -8270,7 +8270,7 @@ scripts.hero_monk = {
 							end
 						end
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							if SU.hero_interrupted(this) then
 								break
 							end
@@ -8307,7 +8307,7 @@ scripts.hero_monk = {
 
 					U.animation_start(this, "leopard_start", nil, store.tick_ts, false)
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						if SU.hero_interrupted(this) then
 							goto label_393_0
 						end
@@ -8380,7 +8380,7 @@ scripts.hero_monk = {
 
 						queue_insert(store, fx)
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							if SU.hero_interrupted(this) then
 								SU.stun_dec(target)
 
@@ -8632,7 +8632,7 @@ function scripts.hero_voodoo_witch.update(this, store)
 							end
 						end
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							if SU.hero_interrupted(this) then
 								break
 							end
@@ -9035,7 +9035,7 @@ function scripts.hero_crab.update(this, store)
 					end
 				end
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					if SU.hero_interrupted(this) then
 						goto label_400_2
 					end
@@ -9321,7 +9321,7 @@ scripts.hero_minotaur = {
 
 							U.heal(this, heal)
 
-							while not U.animation_finished(this) and not SU.hero_interrupted(this) do
+							while not U.animation_finished_default(this) and not SU.hero_interrupted(this) do
 								coroutine.yield()
 							end
 
@@ -9370,7 +9370,7 @@ scripts.hero_minotaur = {
 								queue_insert(store, m)
 							end
 
-							while not U.animation_finished(this) and not SU.hero_interrupted(this) do
+							while not U.animation_finished_default(this) and not SU.hero_interrupted(this) do
 								coroutine.yield()
 							end
 
@@ -9496,7 +9496,7 @@ scripts.hero_minotaur = {
 					this.timed_attacks.list[1].ts = 0
 
 					SU.hero_gain_xp_from_skill(this, skill)
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					goto label_437_2
 				end
@@ -9827,7 +9827,7 @@ scripts.hero_monkey_god = {
 								end
 							end
 
-							while not U.animation_finished(this) do
+							while not U.animation_finished_default(this) do
 								if SU.hero_interrupted(this) then
 									a.ts = a.ts - a.cooldown * (a.loops - i) / a.loops
 
@@ -10224,7 +10224,7 @@ scripts.hero_elves_archer = {
 							attack_done = true
 							loops_done = loops_done + 1
 
-							while not U.animation_finished(this) do
+							while not U.animation_finished_default(this) do
 								if SU.hero_interrupted(this) then
 									goto label_79_2
 								end
@@ -10253,7 +10253,7 @@ scripts.hero_elves_archer = {
 
 						U.animation_start(this, an, af, store.tick_ts, 1)
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							if SU.hero_interrupted(this) then
 								break
 							end
@@ -10514,7 +10514,7 @@ scripts.hero_regson = {
 
 			U.animation_start(this, this.timed_attacks.list[1].animation .. "_end", nil, store.tick_ts, false)
 
-			while not U.animation_finished(this) do
+			while not U.animation_finished_default(this) do
 				if store.tick_ts - fade_start_time < this.timed_attacks.list[1].fade_start_end_time then
 					this.render.sprites[1].alpha = 255 * (store.tick_ts - fade_start_time) / this.timed_attacks.list[1].fade_start_end_time
 				end
@@ -10557,7 +10557,7 @@ scripts.hero_regson = {
 						S:queue(this.sound_events.change_rally_point)
 						U.animation_start(this, a.animation .. "_start", nil, store.tick_ts, false)
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							if store.tick_ts - fade_start_time < a.fade_start_end_time then
 								this.render.sprites[1].alpha = 255 * (1 - (store.tick_ts - fade_start_time) / a.fade_start_end_time)
 							end
@@ -10596,7 +10596,7 @@ scripts.hero_regson = {
 							local damage_applied = false
 							local fade_out_start_time
 
-							while not U.animation_finished(this) do
+							while not U.animation_finished_default(this) do
 								-- 显形
 								if store.tick_ts - fade_start_time < a.fade_time then
 									this.render.sprites[1].alpha = 255 * (store.tick_ts - fade_start_time) / a.fade_time
@@ -10945,7 +10945,7 @@ function scripts.mod_regson_slash.update(this, store)
 	local d = E.assign_damage(this.damage_type, math.random(this.damage_min, this.damage_max) * m.damage_factor, this.id, target.id)
 
 	queue_damage(store, d)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	queue_remove(store, this)
 end
 
@@ -10995,7 +10995,7 @@ function scripts.hero_regson_ultimate.update(this, store)
 			queue_damage(store, d)
 		end
 
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 		SU.stun_dec(target)
 
 		if not is_boss then
@@ -11861,7 +11861,7 @@ function scripts.drone_wilbur.update(this, store)
 					queue_damage(store, d)
 				end
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					U.force_motion_step(this, store.tick_length, dest)
 
 					sd.flip_x = this.pos.x < target.pos.x
@@ -12145,7 +12145,7 @@ function scripts.hero_veznan.update(this, store)
 						table.insert(balls, b)
 					end
 
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 					U.animation_start(this, a.animations[2], nil, store.tick_ts, true)
 
 					while true do
@@ -12168,7 +12168,7 @@ function scripts.hero_veznan.update(this, store)
 
 					SU.hero_gain_xp_from_skill(this, skill)
 					U.animation_start(this, a.animations[3], nil, store.tick_ts, false)
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					a.ts = store.tick_ts
 				end
@@ -12227,7 +12227,7 @@ function scripts.hero_veznan.update(this, store)
 					decal.render.sprites[2].ts = store.tick_ts
 
 					queue_insert(store, decal)
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					a.ts = store.tick_ts
 				end
@@ -12264,7 +12264,7 @@ function scripts.hero_veznan.update(this, store)
 						end
 					end
 
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					a.ts = store.tick_ts
 				end
@@ -12575,7 +12575,7 @@ function scripts.hero_durax.update(this, store)
 						queue_insert(store, clone)
 						signal.emit("hero-added-no-panel", clone)
 						SU.hero_gain_xp_from_skill(this, skill)
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 
 						a.ts = store.tick_ts
 					end
@@ -12852,7 +12852,7 @@ function scripts.hero_elves_denas.update(this, store)
 						U.y_wait_unconditional(store, total_time / 9)
 					end
 
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 				end
 			end
 
@@ -12899,7 +12899,7 @@ function scripts.hero_elves_denas.update(this, store)
 				mod.modifier.source_id = this.id
 
 				queue_insert(store, mod)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 				SU.hero_gain_xp_from_skill(this, skill)
 			end
 
@@ -12949,7 +12949,7 @@ function scripts.hero_elves_denas.update(this, store)
 					fx.tween.props[2].keys = {{0, V.v(0, 40)}, {0.5, V.v(0, 50)}}
 
 					queue_insert(store, fx)
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 				end
 
 				SU.soldier_idle(store, this)
@@ -13330,7 +13330,7 @@ function scripts.hero_arivan.update(this, store)
 				this.melee.attacks[1].damage_min = this.melee_raw_min + this.stone_extra
 				this.melee.attacks[1].damage_max = this.melee_raw_max + this.stone_extra
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				a.ts = store.tick_ts
 
@@ -13391,7 +13391,7 @@ function scripts.hero_arivan.update(this, store)
 							queue_insert(store, b)
 						end
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							if SU.hero_interrupted(this) then
 								goto label_90_0
 							end
@@ -13403,7 +13403,7 @@ function scripts.hero_arivan.update(this, store)
 					SU.hero_gain_xp_from_skill(this, skill)
 					U.animation_start(this, a.animations[3], nil, store.tick_ts, false)
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						if SU.hero_interrupted(this) then
 							break
 						end
@@ -14731,7 +14731,7 @@ function scripts.hero_catha_ultimate.update(this, store)
 		end
 	end
 
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	queue_remove(store, this)
 end
 
@@ -15231,7 +15231,7 @@ function scripts.hero_xin.update(this, store)
 					U.replace_blocker(store, this, shadow)
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				this.health_bar.hidden = nil
 				this.pos.x = this.nav_rally.pos.x
@@ -15288,7 +15288,7 @@ function scripts.hero_xin.update(this, store)
 				this.mind_over_body_last_ts = store.tick_ts
 				this.unit.damage_buff = this.unit.damage_buff + this.mind_over_body_damage_buff
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				this.health.ignore_damage = false
 				a.ts = store.tick_ts
@@ -15323,7 +15323,7 @@ function scripts.hero_xin.update(this, store)
 						queue_insert(store, m)
 					end
 
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 					SU.hero_gain_xp_from_skill(this, skill)
 
 					a.ts = store.tick_ts
@@ -15395,7 +15395,7 @@ function scripts.hero_xin.update(this, store)
 					U.replace_blocker(store, this, shadow)
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				local m = E:create_entity("mod_xin_stun")
 
@@ -15415,12 +15415,12 @@ function scripts.hero_xin.update(this, store)
 
 				this.health_bar.hidden = nil
 				queue_damage(store, SU.create_attack_damage(a, target.id, this))
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				if target and not target.health.dead then
 					U.animation_start(this, a.animations[3], lflip, store.tick_ts)
 					queue_damage(store, SU.create_attack_damage(a, target.id, this))
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 				end
 
 				if target and not target.health.dead then
@@ -15436,7 +15436,7 @@ function scripts.hero_xin.update(this, store)
 				this.health_bar.hidden = true
 				U.animation_start(this, a.animations[4], lflip, store.tick_ts)
 				SU.insert_sprite(store, "fx_xin_smoke_teleport_hit_out", this.pos, lflip)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				if this.nav_rally.new then
 					this.nav_rally.new = false
@@ -15460,7 +15460,7 @@ function scripts.hero_xin.update(this, store)
 				this.vis.bans = _bans
 				this.health.ignore_damage = nil
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 				SU.hero_gain_xp_from_skill(this, skill)
 
 				a.ts = store.tick_ts
@@ -15825,7 +15825,7 @@ function scripts.hero_faustus.update(this, store)
 
 					a.ts = start_ts
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						if this.unit.is_stunned or this.health.dead or this.nav_rally and this.nav_rally.new then
 							goto label_112_0
 						end
@@ -16897,7 +16897,7 @@ scripts.hero_dwarf = {
 
 						U.animation_start(this, a.animations[2], nil, store.tick_ts, false)
 						S:queue(a.sound)
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 						SU.hero_gain_xp_from_skill(this, this.hero.skills.giant)
 
 						local hit_pos = V.vclone(this.pos)
@@ -17105,7 +17105,7 @@ function scripts.hero_dragon.update(this, store)
 
 				queue_damage(store, d)
 				SU.stun_dec(target)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				force_idle_ts = true
 
@@ -17217,7 +17217,7 @@ function scripts.hero_dragon.update(this, store)
 						emit_fx = fx
 					end
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						if this.unit.is_stunned or this.health.dead or this.nav_rally and this.nav_rally.new then
 							goto label_383_0
 						end
@@ -17864,7 +17864,7 @@ function scripts.hero_hunter.update(this, store)
 
 		attack_done = true
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			if this.unit.is_stunned or this.health.dead or this.nav_rally and this.nav_rally.new then
 				break
 			end
@@ -18175,7 +18175,7 @@ function scripts.hero_hunter.update(this, store)
 					a.ts = last_ts
 
 					SU.hero_gain_xp_from_skill(this, skill)
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					goto label_337_1
 				end
@@ -18911,7 +18911,7 @@ function scripts.soldier_hero_hunter_beast.update(this, store)
 		this.force_motion.max_a = this.force_motion.max_a * 1.5
 		this.force_motion.max_v = this.force_motion.max_v * 1.5
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			if not already_hit and store.tick_ts - start_attack_ts >= attack.shoot_time then
 				already_hit = true
 
@@ -20070,7 +20070,7 @@ function scripts.mod_hero_space_elf_black_aegis.update(this, store)
 				end
 			end
 
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 			queue_remove(store, this)
 
 			return
@@ -20320,7 +20320,7 @@ function scripts.mod_hero_space_elf_ultimate.update(this, store)
 	s.hidden = false
 
 	U.animation_start(this, "in", nil, store.tick_ts, false, 1)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 
 	tween_levitate.keys[1][2].y = this.render.sprites[1].offset.y
 	tween_levitate.keys[2][2].y = this.render.sprites[1].offset.y + tween_levitate.keys[2][2].y
@@ -20348,7 +20348,7 @@ function scripts.mod_hero_space_elf_ultimate.update(this, store)
 	es.tween.ts = store.tick_ts
 
 	S:queue(this.out_sfx)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 
 	if this.interrupt then
 		target.health.hp = 0
@@ -20508,7 +20508,7 @@ function scripts.hero_raelyn.update(this, store)
 						v_y = v_y + g * dt
 						last_ts = store.tick_ts
 					end
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 					this.nav_grid.waypoints = {}
 				else
 					if SU.y_hero_new_rally(store, this) then
@@ -21399,7 +21399,7 @@ function scripts.hero_venom.update(this, store)
 							queue_insert(store, mod)
 						end
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							if this.health.dead or this.unit.is_stunned then
 								break
 							end
@@ -21646,7 +21646,7 @@ function scripts.hero_venom.update(this, store)
 
 							queue_insert(store, b)
 							SU.hero_gain_xp_from_skill(this, skill)
-							U.y_animation_wait(this)
+							U.y_animation_wait_default(this)
 
 							goto label_294_2
 						end
@@ -21868,7 +21868,7 @@ function scripts.aura_hero_venom_ultimate.update(this, store)
 	end
 
 	while true do
-		if this.render.sprites[1].name == "in" and U.animation_finished(this) then
+		if this.render.sprites[1].name == "in" and U.animation_finished_default(this) then
 			U.animation_start(this, "idle", false, store.tick_ts, true)
 		end
 
@@ -21891,7 +21891,7 @@ function scripts.aura_hero_venom_ultimate.update(this, store)
 				queue_damage(store, d)
 			end
 
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 
 			break
 		end
@@ -22327,7 +22327,7 @@ function scripts.hero_dragon_gem.update(this, store)
 						end
 
 						queue_insert(store, b)
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 
 						a.ts = start_ts
 
@@ -22499,7 +22499,7 @@ function scripts.hero_dragon_gem.update(this, store)
 						controller.entity = a.entity
 
 						queue_insert(store, controller)
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 
 						a.ts = start_ts
 
@@ -22539,7 +22539,7 @@ function scripts.hero_dragon_gem.update(this, store)
 						mod.modifier.damage_factor = this.unit.damage_factor
 
 						queue_insert(store, mod)
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 
 						a.ts = start_ts
 
@@ -22588,7 +22588,7 @@ function scripts.hero_dragon_gem.update(this, store)
 						bullet.bullet.damage_factor = this.unit.damage_factor
 
 						queue_insert(store, bullet)
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 
 						a.ts = start_ts
 
@@ -22665,7 +22665,7 @@ function scripts.hero_dragon_gem.update(this, store)
 
 							a.ts = start_ts
 
-							while not U.animation_finished(this) do
+							while not U.animation_finished_default(this) do
 								if this.unit.is_stunned or this.health.dead or this.nav_rally and this.nav_rally.new then
 									goto label_370_0
 								end
@@ -23061,7 +23061,7 @@ function scripts.decal_hero_dragon_gem_floor_impact_shard.update(this, store)
 
 	U.animation_start(this, "start", nil, store.tick_ts, 1)
 	U.y_wait_unconditional(store, this.damage_time)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	U.animation_start(this, "idle", nil, store.tick_ts, 1)
 
 	local targets = U.find_enemies_in_range_filter_off(this.pos, this.damage_range, 0, bit.bor(F_FLYING, F_CLIFF))
@@ -23076,7 +23076,7 @@ function scripts.decal_hero_dragon_gem_floor_impact_shard.update(this, store)
 
 	U.y_wait_unconditional(store, this.duration_time + fts(math.random(1, 10) - 5))
 	U.animation_start(this, "end", nil, store.tick_ts, 1)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	queue_remove(store, this)
 end
 
@@ -23105,7 +23105,7 @@ function scripts.mod_hero_dragon_gem_crystal_instakill.update(this, store)
 	if m.animation_phases then
 		U.animation_start(this, "start", nil, store.tick_ts)
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			if not target_hidden and m.hide_target_delay and store.tick_ts - start_ts > m.hide_target_delay then
 				target_hidden = true
 
@@ -23181,7 +23181,7 @@ function scripts.mod_hero_dragon_gem_crystal_instakill.update(this, store)
 			end
 		end
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			coroutine.yield()
 		end
 	end
@@ -23916,7 +23916,7 @@ function scripts.hero_witch.update(this, store)
 					this.timed_attacks.list[3].ts = this.timed_attacks.list[3].ts - 2
 					this.ultimate.ts = this.ultimate.ts - 2
 
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 					U.y_wait_unconditional(store, fts(3))
 
 					this.pos.x, this.pos.y = new_pos.x, new_pos.y
@@ -25155,7 +25155,7 @@ function scripts.hero_dragon_bone.update(this, store)
 				spi = km.zmod(spi + math.random(1, 2), 3)
 			end
 
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 
 			a.ts = store.tick_ts
 
@@ -25288,7 +25288,7 @@ function scripts.hero_dragon_bone.update(this, store)
 					U.y_wait_unconditional(store, a.wait_between_shots)
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				a.ts = store.tick_ts
 
@@ -25366,7 +25366,7 @@ function scripts.hero_dragon_bone.update(this, store)
 
 				a.ts = start_ts
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					if this.unit.is_stunned or this.health.dead or this.nav_rally and this.nav_rally.new then
 						goto label_664_0
 					end
@@ -25622,7 +25622,7 @@ function scripts.bullet_dragon_bone_cloud.update(this, store)
 	hp.pos = V.vclone(dest)
 
 	queue_insert(store, hp)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	queue_remove(store, this)
 end
 
@@ -26254,7 +26254,7 @@ function scripts.hero_lumenir.update(this, store)
 							queue_insert(store, m)
 						end
 
-						U.y_animation_wait(this, 1, 1)
+						U.y_animation_wait_default(this)
 
 						a.ts = store.tick_ts
 
@@ -26287,7 +26287,7 @@ function scripts.hero_lumenir.update(this, store)
 				m.modifier.level = this.hero.skills.celestial_judgement.level
 
 				queue_insert(store, m)
-				U.y_animation_wait(this, 1, 1)
+				U.y_animation_wait_default(this)
 				SU.hero_gain_xp_from_skill(this, this.hero.skills[a.xp_from_skill])
 			else
 				SU.delay_attack(store, a, fts(10))
@@ -26382,7 +26382,7 @@ function scripts.hero_lumenir.update(this, store)
 				queue_insert(store, e)
 			end
 
-			U.y_animation_wait(this)
+			U.y_animation_wait_default(this)
 
 			a.ts = store.tick_ts
 
@@ -26453,7 +26453,7 @@ function scripts.hero_lumenir.update(this, store)
 
 				a.ts = start_ts
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					if this.unit.is_stunned or this.health.dead or this.nav_rally and this.nav_rally.new then
 						goto label_411_0
 					end
@@ -26667,7 +26667,7 @@ function scripts.soldier_lumenir_ultimate.update(this, store)
 					end
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				attack_count = attack_count + 1
 			end
@@ -26945,7 +26945,7 @@ function scripts.mini_dragon_hero_lumenir.update(this, store)
 
 					a.ts = start_ts
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						coroutine.yield()
 					end
 
@@ -27454,7 +27454,7 @@ function scripts.hero_wukong.update(this, store)
 	end
 
 	local function y_wukong_wait_animation_for_second_idle(this)
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			if SU.soldier_pick_melee_target(store, this) then
 				return true
 			end
@@ -27599,7 +27599,7 @@ function scripts.hero_wukong.update(this, store)
 						end
 					end
 
-					U.y_animation_wait(this, 1)
+					U.y_animation_wait_default(this)
 
 					this.ui.click_rect = this.ui.click_rect_nofly
 
@@ -28162,7 +28162,7 @@ function scripts.soldier_hero_wukong_zhu_apprentice.update(this, store)
 				if this.dodge.animation then
 					U.animation_start(this, this.dodge.animation, nil, store.tick_ts, 1)
 
-					while not U.animation_finished(this) do
+					while not U.animation_finished_default(this) do
 						coroutine.yield()
 					end
 				end
@@ -28207,7 +28207,7 @@ function scripts.fx_hero_wukong_giant_staff.update(this, store)
 	local staff_finished
 
 	while not staff_finished do
-		if U.animation_finished(this, 1) then
+		if U.animation_finished_default(this) then
 			staff_finished = true
 		-- this.render.sprites[2].hidden = true
 		end
@@ -28313,7 +28313,7 @@ function scripts.aura_apply_mod_hero_wukong_ultimate.update(this, store)
 	U.animation_start(this, "in", nil, store.tick_ts)
 
 	while true do
-		if U.animation_finished(this) then
+		if U.animation_finished_default(this) then
 			U.animation_start(this, "loop", nil, store.tick_ts, true)
 		end
 
@@ -28625,12 +28625,12 @@ function scripts.hero_vesper.update(this, store)
 		b.bullet.target_id = target_id
 
 		queue_insert(store, b)
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 
 		local an, af = U.animation_name_facing_point(this, this.dodge.animation_attack_end, pos)
 
 		U.animation_start(this, an, af, store.tick_ts, false)
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 	end
 
 	this.health_bar.hidden = false
@@ -28711,7 +28711,7 @@ function scripts.hero_vesper.update(this, store)
 					SU.hide_modifiers(store, this, true)
 					SU.hide_auras(store, this, true)
 					U.animation_start(this, this.dodge.animation_dissapear, nil, store.tick_ts, false)
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 					U.y_wait_unconditional(store, fts(1))
 
 					this.pos.x, this.pos.y = new_pos.x, new_pos.y
@@ -31902,7 +31902,7 @@ function scripts.decal_hero_dragon_arb_tower_plant_linirea.update(this, store, s
 				U.y_wait_unconditional(store, a.shoot_time)
 				queue_insert(store, b)
 				S:queue("ArrowSound")
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 				U.animation_start(this, "idle", nil, store.tick_ts)
 			end
 		end
@@ -31960,7 +31960,7 @@ function scripts.decal_hero_dragon_arb_tower_plant_dark_army.update(this, store,
 					queue_insert(store, e)
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 			end
 		end
 
@@ -32813,7 +32813,7 @@ function scripts.hero_builder.update(this, store)
 				mod.modifier.source_id = this.id
 
 				queue_insert(store, mod)
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 			end
 
 			skill = this.hero.skills.demolition_man
@@ -32968,7 +32968,7 @@ function scripts.hero_builder.update(this, store)
 
 						e.sound_destroy = a.sound_destroy
 
-						while not U.animation_finished(this) do
+						while not U.animation_finished_default(this) do
 							coroutine.yield()
 						end
 
@@ -33072,7 +33072,7 @@ function scripts.decal_hero_builder_defensive_turret.update(this, store)
 					b.pos = V.vclone(b.bullet.from)
 
 					queue_insert(store, b)
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 				end
 			end
 		end
@@ -33596,7 +33596,7 @@ function scripts.hero_robot.update(this, store)
 								SU.show_modifiers(store, this, true)
 								SU.show_auras(store, this, true)
 								SU.hero_gain_xp_from_skill(this, skill)
-								U.y_animation_wait(this)
+								U.y_animation_wait_default(this)
 
 								ps1.particle_system.emit = true
 								ps2.particle_system.emit = true
@@ -33691,7 +33691,7 @@ function scripts.hero_robot.update(this, store)
 						a.ts = last_ts
 
 						SU.hero_gain_xp_from_skill(this, skill)
-						U.y_animation_wait(this)
+						U.y_animation_wait_default(this)
 
 						ps1.particle_system.emit = true
 						ps2.particle_system.emit = true
@@ -33734,7 +33734,7 @@ function scripts.hero_robot.update(this, store)
 					queue_insert(store, decal)
 					explosion_damage(this.pos, a.damage_radius, a.damage_min, a.damage_max, a.damage_type, a.damage_bans, a.damage_flags, a.mod)
 					SU.hero_gain_xp_from_skill(this, skill)
-					U.y_animation_wait(this)
+					U.y_animation_wait_default(this)
 
 					ps1.particle_system.emit = true
 					ps2.particle_system.emit = true
@@ -33789,7 +33789,7 @@ function scripts.hero_robot.update(this, store)
 							a.ts = last_ts
 
 							SU.hero_gain_xp_from_skill(this, skill)
-							U.y_animation_wait(this)
+							U.y_animation_wait_default(this)
 
 							ps1.particle_system.emit = true
 							ps2.particle_system.emit = true
@@ -35565,7 +35565,7 @@ function scripts.hero_lava.update(this, store)
 				U.animation_start(this, "ultimate", nil, store.tick_ts)
 				U.y_wait_unconditional(store, 0.5)
 				ultimate_extra_fireballs()
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				this.health.hp = 0
 				this._death_by_ultimate = false
@@ -36290,7 +36290,7 @@ function scripts.hero_spider.update(this, store)
 								a.ts = last_ts
 
 								SU.hero_gain_xp_from_skill(this, skill)
-								U.y_animation_wait(this)
+								U.y_animation_wait_default(this)
 
 								goto label_1340_1
 							end
@@ -36353,7 +36353,7 @@ function scripts.hero_spider.update(this, store)
 					queue_insert(store, m)
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				local m = E:create_entity("mod_hero_spider_stun")
 
@@ -36379,7 +36379,7 @@ function scripts.hero_spider.update(this, store)
 					queue_insert(store, mod)
 				end
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 
 				if this.nav_rally.new then
 					this.nav_rally.new = false
@@ -36395,7 +36395,7 @@ function scripts.hero_spider.update(this, store)
 				this.vis.bans = _bans
 				this.health.ignore_damage = nil
 
-				U.y_animation_wait(this)
+				U.y_animation_wait_default(this)
 				SU.hero_gain_xp_from_skill(this, skill)
 
 				a.ts = store.tick_ts
@@ -36658,7 +36658,7 @@ function scripts.fx_hero_spider_ultimate_spawn.update(this, store)
 
 	queue_insert(store, e)
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		coroutine.yield()
 	end
 
@@ -37513,7 +37513,7 @@ function scripts.drone_hero_mecha.update(this, store)
 					queue_insert(store, fx)
 				end
 
-				while not U.animation_finished(this) do
+				while not U.animation_finished_default(this) do
 					U.force_motion_step(this, store.tick_length, dest)
 
 					sd.flip_x = this.pos.x < target.pos.x
@@ -37617,7 +37617,7 @@ function scripts.aura_bullet_hero_mecha_mine.insert(this, store)
 end
 
 function scripts.aura_bullet_hero_mecha_mine.update(this, store)
-	U.y_animation_wait(this)
+	U.y_animation_wait_default(this)
 	U.animation_start(this, "idle", nil, store.tick_ts, true)
 
 	while true do
@@ -38105,7 +38105,7 @@ function scripts.hero_dragon_sun.update(this, store)
 			end_overcharge()
 		end
 
-		while not U.animation_finished(this) do
+		while not U.animation_finished_default(this) do
 			if this.unit.is_stunned or this.health.dead or this.nav_rally and this.nav_rally.new then
 				return false
 			end
@@ -38351,7 +38351,7 @@ function scripts.hero_dragon_sun.update(this, store)
 		U.animation_start(this, "idle", af, store.tick_ts, true, false)
 		U.y_wait_unconditional(store, 0.5)
 		U.animation_start(this, a.animations[1], nil, store.tick_ts)
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 
 		local __offset = V.vclone(this.render.sprites[1].offset)
 
@@ -38400,7 +38400,7 @@ function scripts.hero_dragon_sun.update(this, store)
 		explotion_decal.tween.ts = store.tick_ts
 
 		queue_insert(store, explotion_decal)
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 		-- U.y_animation_play(this, "idle", nil, store.tick_ts, 1)
 		U.y_animation_play(this, a.animations[3], nil, store.tick_ts)
 
@@ -38421,7 +38421,7 @@ function scripts.hero_dragon_sun.update(this, store)
 		this.health_bar.hidden = nil
 		this.health.ignore_damage = nil
 
-		U.y_animation_wait(this)
+		U.y_animation_wait_default(this)
 		SU.hero_gain_xp_from_skill(this, this.hero.skills.worthy_foe)
 
 		a.ts = store.tick_ts
@@ -38601,7 +38601,7 @@ function scripts.aura_bullet_hero_dragon_sun_solar_stones_mine.update(this, stor
 	spawn_fx.render.sprites[1].runs = 0
 
 	queue_insert(store, spawn_fx)
-	U.y_animation_wait(this, 1, 1)
+	U.y_animation_wait_default(this)
 
 	this.render.sprites[1].hidden = true
 	this.render.sprites[2].hidden = false
@@ -38845,7 +38845,7 @@ function scripts.bullet_hero_dragon_sun_breath_ray.update(this, store)
 		coroutine.yield()
 	end
 
-	U.y_animation_wait(this, 1, 1)
+	U.y_animation_wait_default(this)
 
 	s.hidden = true
 
@@ -38939,7 +38939,7 @@ function scripts.bullet_hero_dragon_sun_breath_flier.update(this, store)
 			coroutine.yield()
 		end
 	else
-		while not U.animation_finished(this, 1) do
+		while not U.animation_finished_default(this) do
 			coroutine.yield()
 		end
 	end
@@ -39347,7 +39347,7 @@ function scripts.bullet_hero_dragon_sun_ultimate.update(this, store)
 	this.tween.disabled = false
 	this.render.sprites[1].runs = 0
 
-	while not U.animation_finished(this) do
+	while not U.animation_finished_default(this) do
 		update_targetting()
 		coroutine.yield()
 	end

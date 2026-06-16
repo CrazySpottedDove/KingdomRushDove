@@ -42,7 +42,7 @@ U.y_wait_unconditional(store,fts(60))
 dwarf_intro.render.sprites[1].z=Z_DECALS
 U.y_wait_unconditional(store,fts(110))
 S:queue("Stage25IntroCrashFinalExplosion")
-U.y_animation_wait(dwarf_intro)
+U.y_animation_wait_default(dwarf_intro)
 signal.emit("hide-curtains")
 signal.emit("pan-zoom-camera",2,{x=480,y=384},OVm(1,1.3))
 signal.emit("show-gui")
@@ -61,7 +61,7 @@ end
 end
 LU.queue_remove(store,controller_torso)
 if torso.render.sprites[1].name~="name" then
-U.y_animation_wait(torso)
+U.y_animation_wait_default(torso)
 end
 signal.emit("pan-zoom-camera",1.5,{x=550,y=500},1.3)
 signal.emit("show-curtains")
