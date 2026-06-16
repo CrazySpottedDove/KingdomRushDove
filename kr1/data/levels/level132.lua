@@ -42,7 +42,7 @@ signal.emit("start-cinematic")
 y_do_boss_taunt("LV32_BOSS_INTRO_01")
 y_do_boss_taunt("LV32_BOSS_INTRO_02")
 controller_boss_prefight.end_intro=true
-U.y_wait(store,1.5)
+U.y_wait_unconditional(store,1.5)
 signal.emit("hide-curtains")
 signal.emit("pan-zoom-camera",2,{x=533,y=430},OVm(1,1.2))
 signal.emit("show-gui")

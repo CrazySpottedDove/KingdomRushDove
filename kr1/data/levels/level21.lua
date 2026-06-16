@@ -19,7 +19,7 @@ LU.queue_insert(store,boss)
 self.boss=boss
 U.mark_seen(store,boss.template_name)
 coroutine.yield()
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 while store.wave_group_number<boss.wave_active do
 coroutine.yield()
 end
@@ -27,7 +27,7 @@ boss.phase_signal="battle"
 while self.boss.phase~="death-complete" do
 coroutine.yield()
 end
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 end
 end
 return level

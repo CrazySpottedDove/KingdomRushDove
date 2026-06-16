@@ -27,7 +27,7 @@ while not boss.health.dead do
 coroutine.yield()
 end
 log.debug("+++++++++++++++ wait for spawns")
-U.y_wait(store,boss.on_death_spawn_wait)
+U.y_wait_unconditional(store,boss.on_death_spawn_wait)
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end

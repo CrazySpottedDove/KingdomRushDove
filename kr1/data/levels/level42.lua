@@ -62,7 +62,7 @@ if self.gunboat_waves and self.gunboat_waves[wave_number] then
 local start_ts=store.tick_ts
 for _,gw in pairs(self.gunboat_waves[wave_number]) do
 local offset_delay=gw.delay-(store.tick_ts-start_ts)
-U.y_wait(store,offset_delay)
+U.y_wait_unconditional(store,offset_delay)
 if store.waves_finished then
 goto label_3_0
 end

@@ -22,7 +22,7 @@ LU.queue_insert(store,boss)
 self.boss=boss
 U.mark_seen(store,boss.template_name)
 coroutine.yield()
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 self.boss.phase_signal="welcome"
 while self.boss.phase~="castle" do
 coroutine.yield()

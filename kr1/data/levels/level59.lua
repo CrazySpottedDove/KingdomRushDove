@@ -60,7 +60,7 @@ signal.emit("show-curtains")
 signal.emit("pan-zoom-camera",2,{x=1000,y=400},2)
 signal.emit("hide-gui")
 end
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 boss.phase_signal="welcome"
 boss.phase_params=0
 while self.boss.phase~="prebattle" do
@@ -87,7 +87,7 @@ coroutine.yield()
 end
 signal.emit("hide-curtains")
 signal.emit("pan-zoom-camera",2,{x=512,y=384},1)
-U.y_wait(store,2.5)
+U.y_wait_unconditional(store,2.5)
 end
 end
 function level:y_boss_wave(store,wave_number)

@@ -134,7 +134,7 @@ while not store.waves_finished do
 local wave_number=store.wave_group_number
 local sacrifice_delay=self.sacrifice_delays[wave_number]
 if sacrifice_delay then
-U.y_wait(store,sacrifice_delay)
+U.y_wait_unconditional(store,sacrifice_delay)
 self:y_do_sacrifice(store)
 end
 while wave_number==store.wave_group_number and not store.waves_finished do

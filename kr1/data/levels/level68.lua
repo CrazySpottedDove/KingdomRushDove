@@ -47,6 +47,6 @@ end
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 end
 return level

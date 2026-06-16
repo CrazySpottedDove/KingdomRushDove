@@ -54,15 +54,15 @@ signal.emit("show-curtains")
 signal.emit("hide-gui")
 signal.emit("start-cinematic")
 controller_boss_prefight:force_go_middle(store)
-U.y_wait(store,4)
+U.y_wait_unconditional(store,4)
 y_do_boss_taunt("LV34_BOSS_INTRO_01")
 while U.flag_has(store.main_hero.vis.bans,controller_boss_prefight.stun_hero_vis_flags) do
 coroutine.yield()
 end
 controller_boss_prefight:force_capture_hero(store.main_hero)
-U.y_wait(store,5)
+U.y_wait_unconditional(store,5)
 controller_boss_prefight:force_go_back(store)
-U.y_wait(store,6)
+U.y_wait_unconditional(store,6)
 store.main_hero.sound_events.change_rally_point=old_vo
 signal.emit("hide-curtains")
 signal.emit("show-gui")

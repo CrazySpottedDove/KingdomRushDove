@@ -727,8 +727,10 @@ function M.make_utils()
 	function U.animation_finished()
 		return true
 	end
-	function U.is_inside_ellipse(p, center, radius, aspect)
-		aspect = aspect or 0.7
+	function U.is_inside_ellipse(p, center, radius)
+		return ((p.x - center.x) ^ 2 + ((p.y - center.y) / 0.7) ^ 2) <= radius * radius
+	end
+	function U.is_inside_ellipse_with_aspect(p, center, radius, aspect)
 		return ((p.x - center.x) ^ 2 + ((p.y - center.y) / aspect) ^ 2) <= radius * radius
 	end
 	function U.cleanup_blockers(store, blocked)

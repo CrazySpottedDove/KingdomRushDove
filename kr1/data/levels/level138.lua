@@ -60,21 +60,21 @@ while wait_until_ts>store.tick_ts do
 coroutine.yield()
 end
 signal.emit("pan-zoom-camera",3,{x=690,y=404},OVtargets(nil,1.17,1.17,1,1.2))
-U.y_wait(store,4)
+U.y_wait_unconditional(store,4)
 if fly_hero then
 y_do_boss_taunt("LV38_INTRO_TAUNT_FLY_01")
 else
 y_do_boss_taunt("LV38_INTRO_TAUNT_01")
 end
-U.y_wait(store,4)
+U.y_wait_unconditional(store,4)
 if fly_hero then
 y_do_boss_taunt("LV38_INTRO_TAUNT_FLY_02")
 else
 y_do_boss_taunt("LV38_INTRO_TAUNT_02")
 end
-U.y_wait(store,3)
+U.y_wait_unconditional(store,3)
 signal.emit("pan-zoom-camera",2,{x=400,y=380},1)
-U.y_wait(store,2)
+U.y_wait_unconditional(store,2)
 signal.emit("hide-curtains")
 signal.emit("show-gui")
 signal.emit("end-cinematic",true)

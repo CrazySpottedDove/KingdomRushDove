@@ -218,7 +218,7 @@ self.decal_indiana.render.sprites[1].ts=store.tick_ts
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end
-U.y_wait(store,2)
+U.y_wait_unconditional(store,2)
 signal.emit("show-curtains")
 signal.emit("pan-zoom-camera",2.5,{x=660,y=460},1.95)
 signal.emit("hide-gui")
@@ -235,7 +235,7 @@ boss.pos=P:node_pos(boss.nav_path.pi,boss.nav_path.spi,boss.nav_path.ni)
 boss.pos.y=boss.pos.y+300
 LU.queue_insert(store,boss)
 self.boss=boss
-U.y_wait(store,3)
+U.y_wait_unconditional(store,3)
 signal.emit("hide-curtains")
 signal.emit("pan-zoom-camera",2,{x=512,y=384},1)
 signal.emit("show-gui")
@@ -244,7 +244,7 @@ while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end
 if store.level_mode==GAME_MODE_CAMPAIGN then
-U.y_wait(store,3)
+U.y_wait_unconditional(store,3)
 end
 log.debug("-- WON")
 end
@@ -259,19 +259,19 @@ S:queue("SpecialIndiana")
 S:queue("SpecialIndianaSelect")
 U.y_animation_play(self.decal_top_door,"open",nil,store.tick_ts)
 U.animation_start(self.decal_indiana,"jump",nil,store.tick_ts,false)
-U.y_wait(store,2)
+U.y_wait_unconditional(store,2)
 S:queue("SpecialIndianaSelect")
 U.y_animation_play(self.decal_side_door,"open",nil,store.tick_ts)
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 S:queue("SpecialIndianaRuns")
 U.animation_start(self.decal_indiana,"exit",nil,store.tick_ts,false)
-U.y_wait(store,0.25)
+U.y_wait_unconditional(store,0.25)
 LU.queue_insert(store,decal_boulder)
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 for _,e in pairs(self.alien_eggs) do
 e.do_destroy=true
 end
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 end
 function level:y_puzzle_failed(store)
 self.puzzle_attempts=self.puzzle_attempts+1

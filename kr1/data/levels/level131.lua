@@ -51,7 +51,7 @@ shake_travel.aura.freq_factor=5
 shake_travel.aura.reverse_fade=true
 LU.queue_insert(store,shake_travel)
 local spawn_wait_time=1.5
-U.y_wait(store,spawn_wait_time)
+U.y_wait_unconditional(store,spawn_wait_time)
 S:queue("TerrainWukongMeteoriteTravelLoop")
 if on_screen then
 local shake_transform=E:create_entity("aura_screen_shake")
@@ -60,7 +60,7 @@ shake_transform.aura.duration=0.7
 shake_transform.aura.freq_factor=4
 LU.queue_insert(store,shake_transform)
 end
-U.y_wait(store,duration-spawn_wait_time)
+U.y_wait_unconditional(store,duration-spawn_wait_time)
 S:stop("TerrainWukongMeteoriteTravelLoop")
 S:queue("TerrainWukongMeteoriteImpact")
 local shake_impact=E:create_entity("aura_screen_shake")
@@ -121,7 +121,7 @@ v.ui.can_click=false
 break
 end
 end
-U.y_wait(store,fts(10))
+U.y_wait_unconditional(store,fts(10))
 create_fires(store,{[2]={finish=60,begin=1}})
 end
 P:activate_path(2)
@@ -141,7 +141,7 @@ LU.queue_insert(store,fireball_b)
 y_meteorite_shake(store,fts(150))
 coroutine.yield()
 instakill_units(store,fireball_b.kill_area_id)
-U.y_wait(store,fts(10))
+U.y_wait_unconditional(store,fts(10))
 create_fires(store,{[3]={finish=50,begin=1}})
 end
 P:activate_path(3)
@@ -161,7 +161,7 @@ LU.queue_insert(store,fireball_c)
 y_meteorite_shake(store,fts(150),true)
 coroutine.yield()
 instakill_units(store,fireball_c.kill_area_id)
-U.y_wait(store,fts(10))
+U.y_wait_unconditional(store,fts(10))
 for _,v in pairs(store.entities) do
 if v.template_name=="decal_achievement_saitam_stage31" then
 U.sprites_hide(v,1,1,true)

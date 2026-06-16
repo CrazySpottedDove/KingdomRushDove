@@ -69,7 +69,7 @@ while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end
 if store.level_mode==GAME_MODE_CAMPAIGN then
-U.y_wait(store,3)
+U.y_wait_unconditional(store,3)
 end
 log.debug("-- WON")
 end

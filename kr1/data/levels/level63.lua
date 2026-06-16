@@ -64,7 +64,7 @@ if not store.restarted then
 signal.emit("show-curtains")
 signal.emit("pan-zoom-camera",3,{x=512,y=672},2)
 signal.emit("hide-gui")
-U.y_wait(store,8)
+U.y_wait_unconditional(store,8)
 signal.emit("hide-curtains")
 signal.emit("pan-zoom-camera",2,{x=512,y=384},1)
 signal.emit("show-gui")
@@ -85,15 +85,15 @@ repeat
 coroutine.yield()
 until s_mactans.phase=="idle" and s_malicia.phase=="idle"
 S:queue("MusicBossPreFight15")
-U.y_wait(store,3)
+U.y_wait_unconditional(store,3)
 SU.y_show_taunt_set(store,c_taunt.taunts,"custom_malicia","BREAKING",nil,1.5,true)
-U.y_wait(store,1.5)
+U.y_wait_unconditional(store,1.5)
 s_mactans.phase_signal="single_attack"
 s_malicia.phase_signal="single_attack"
 repeat
 coroutine.yield()
 until s_mactans.phase=="idle" and s_malicia.phase=="idle"
-U.y_wait(store,1.5)
+U.y_wait_unconditional(store,1.5)
 s_statue.phase_signal="break"
 s_crystal.tween.disabled=true
 local crystal_s=s_crystal.render.sprites[1]
@@ -107,21 +107,21 @@ fx.render.sprites[1].ts=store.tick_ts
 LU.queue_insert(store,fx)
 s_mactans.phase_signal="jump"
 s_malicia.phase_signal="jump"
-U.y_wait(store,fts(34))
+U.y_wait_unconditional(store,fts(34))
 SU.y_show_taunt_set(store,c_taunt.taunts,"custom_malicia","MINE",nil,1,false)
 SU.y_show_taunt_set(store,c_taunt.taunts,"custom_mactans","MINE",nil,1,false)
-U.y_wait(store,fts(37))
+U.y_wait_unconditional(store,fts(37))
 fx=E:create_entity("fx_s15_crystal_transformation")
 fx.pos.x,fx.pos.y=s_crystal.pos.x,s_crystal.pos.y
 U.animation_start(fx,"explosion",nil,store.tick_ts,false)
 LU.queue_insert(store,fx)
 LU.queue_remove(store,s_crystal)
-U.y_wait(store,fts(100))
+U.y_wait_unconditional(store,fts(100))
 local circle=E:create_entity("fx_s15_white_circle")
 circle.pos.x,circle.pos.y=s_crystal.pos.x,s_crystal.pos.y
 circle.render.sprites[1].ts=store.tick_ts
 LU.queue_insert(store,circle)
-U.y_wait(store,0.5)
+U.y_wait_unconditional(store,0.5)
 local boss=E:create_entity("eb_spider")
 boss.pos.x,boss.pos.y=544,643
 boss.megaspawner=LU.list_entities(store.entities,"mega_spawner")[1]

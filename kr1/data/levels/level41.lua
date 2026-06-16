@@ -110,7 +110,7 @@ end
 function level:update(store)
 LU.insert_hero(store)
 if store.level_mode==GAME_MODE_CAMPAIGN then
-U.y_wait(store,2)
+U.y_wait_unconditional(store,2)
 self.guy.phase="intro"
 while store.wave_group_number<1 do
 coroutine.yield()
@@ -121,7 +121,7 @@ end
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end
-U.y_wait(store,3)
+U.y_wait_unconditional(store,3)
 signal.emit("show-curtains")
 signal.emit("pan-zoom-camera",2.5,{x=560,y=600},1.5)
 signal.emit("hide-gui")
@@ -131,9 +131,9 @@ while self.guy.phase~="death-started" do
 coroutine.yield()
 end
 self.crystals.phase="crack"
-U.y_wait(store,4.1)
+U.y_wait_unconditional(store,4.1)
 LU.queue_remove(store,self.guy_force_field)
-U.y_wait(store,0.3)
+U.y_wait_unconditional(store,0.3)
 self.boss=E:create_entity("eb_umbra")
 self.boss.home_node=table.deepclone(self.home_node)
 LU.queue_insert(store,self.boss)

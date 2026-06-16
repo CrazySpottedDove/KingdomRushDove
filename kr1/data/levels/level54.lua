@@ -49,7 +49,7 @@ while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end
 if store.level_mode==GAME_MODE_CAMPAIGN then
-U.y_wait(store,2)
+U.y_wait_unconditional(store,2)
 signal.emit("show-curtains")
 signal.emit("pan-zoom-camera",2,{x=120,y=500},2)
 signal.emit("hide-gui")
@@ -62,7 +62,7 @@ y_move(store,jail,V.v(120,459),47)
 S:stop("ElvesHyenaWagonLoop")
 S:queue("ElvesHyenaWagonExplosion")
 U.animation_start(jail,"open",nil,store.tick_ts,false)
-U.y_wait(store,fts(83))
+U.y_wait_unconditional(store,fts(83))
 S:queue("ElvesHyenaWagonEnd")
 local nodes=P:nearest_nodes(jail.pos.x,jail.pos.y)
 local node=nodes[1]
@@ -73,7 +73,7 @@ boss.nav_path.ni=node[3]+1
 boss.mega_spawner=self.mega_spawner
 LU.queue_insert(store,boss)
 self.boss=boss
-U.y_wait(store,fts(3))
+U.y_wait_unconditional(store,fts(3))
 for i=1,5 do
 jail.render.sprites[i].z=Z_DECALS
 end
@@ -89,7 +89,7 @@ end
 while self.boss.phase~="death-complete" do
 coroutine.yield()
 end
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 end
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()

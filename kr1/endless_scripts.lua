@@ -121,7 +121,7 @@ function scripts.decal_catapult_endless.update(this, store)
 					local an, af, ai = U.animation_name_facing_point(this, a.animation, dest)
 
 					U.animation_start(this, an, af, store.tick_ts, false)
-					U.y_wait(store, a.shoot_time)
+					U.y_wait_unconditional(store, a.shoot_time)
 
 					local n_offsets = {0, -5, 5, -10, 10}
 
@@ -297,7 +297,7 @@ scripts.aura_endless_engineer_aftermath_ray = {
 		ps.particle_system.scales_y = {0.8, 0.36}
 
 		queue_insert(store, ps)
-		U.y_wait(store, a.duration)
+		U.y_wait_unconditional(store, a.duration)
 
 		local targets = U.find_enemies_in_range_filter_off(this.pos, a.radius, a.vis_flags, a.vis_bans)
 

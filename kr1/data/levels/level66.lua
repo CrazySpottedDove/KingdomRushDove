@@ -20,7 +20,7 @@ boss.pos=V.vclone(boss.pos_sitting)
 LU.queue_insert(store,boss)
 self.boss=boss
 coroutine.yield()
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 boss.phase_signal="welcome"
 while self.boss.phase~="sitting" do
 coroutine.yield()
@@ -48,7 +48,7 @@ self.megaspawner.interrupt=true
 while self.boss.phase~="death-complete" do
 coroutine.yield()
 end
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 end
 end
 return level

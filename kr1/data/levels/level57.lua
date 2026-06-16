@@ -63,7 +63,7 @@ while not store.waves_finished and (DEBUG_SERPENT_WAVE or store.wave_group_numbe
 coroutine.yield()
 end
 end
-U.y_wait(store,0.5)
+U.y_wait_unconditional(store,0.5)
 end
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
@@ -77,16 +77,16 @@ self:add_serpent_back(store,pos,flip_x)
 elseif action==ATTACK then
 local back1_pos,back1_flip,back2_pos,back2_flip,attack_pos,attack_flip,holder_ids=unpack(self.serpent_action_data[ATTACK][data])
 self:add_serpent_back(store,back1_pos,back1_flip)
-U.y_wait(store,1.4)
+U.y_wait_unconditional(store,1.4)
 self:add_serpent_back(store,back2_pos,back2_flip)
-U.y_wait(store,3.3)
+U.y_wait_unconditional(store,3.3)
 self:add_serpent_attack(store,attack_pos,attack_flip,holder_ids)
 elseif action==OPEN_PATH then
 local back_pos,back_flip,scream_pos,scream_flip,zone_ids,path_ids=unpack(self.serpent_action_data[OPEN_PATH][data])
 self:add_serpent_back(store,back_pos,back_flip)
-U.y_wait(store,3.3)
+U.y_wait_unconditional(store,3.3)
 self:add_serpent_scream(store,scream_pos,scream_flip,path_ids)
-U.y_wait(store,1.7)
+U.y_wait_unconditional(store,1.7)
 S:queue("ElvesCrystalSerpentBreakingCrystal")
 for _,z in pairs(zone_ids) do
 self:open_zone(store,z)

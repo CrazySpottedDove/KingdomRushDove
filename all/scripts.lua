@@ -84,7 +84,7 @@ function scripts.sequence.update(this, store)
 		local step = s.steps[i]
 
 		if type(step) == "number" then
-			U.y_wait(store, step)
+			U.y_wait_unconditional(store, step)
 		elseif type(step) == "string" then
 			U.y_animation_play(this, step, nil, store.tick_ts, 1, this.sequence.sprite_id)
 		else
@@ -111,7 +111,7 @@ function scripts.delayed_sequence.update(this, store)
 	local current_idx = 0
 
 	while true do
-		U.y_wait(store, math.random(d.min_delay, d.max_delay))
+		U.y_wait_unconditional(store, math.random(d.min_delay, d.max_delay))
 
 		s.hidden = nil
 
@@ -509,7 +509,7 @@ function scripts.fx_coin_shower.update(this, store)
 		fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
 
 		queue_insert(store, fx)
-		U.y_wait(store, this.coin_delay)
+		U.y_wait_unconditional(store, this.coin_delay)
 	end
 
 	queue_remove(store, this)
@@ -997,7 +997,7 @@ function scripts.delayed_spawn.insert(this, store)
 end
 
 function scripts.delayed_spawn.update(this, store)
-	U.y_wait(store, this.delay)
+	U.y_wait_unconditional(store, this.delay)
 
 	local e = this.payload
 
@@ -2332,7 +2332,7 @@ function scripts.arrow.update(this, store)
 		s.hidden = true
 		ps.particle_system.emit = false
 
-		U.y_wait(store, ps.particle_system.particle_lifetime[2])
+		U.y_wait_unconditional(store, ps.particle_system.particle_lifetime[2])
 	end
 
 	queue_remove(store, this)
@@ -2653,7 +2653,7 @@ function scripts.arrow_missile.update(this, store)
 		s.hidden = true
 		ps.particle_system.emit = false
 
-		U.y_wait(store, ps.particle_system.particle_lifetime[2])
+		U.y_wait_unconditional(store, ps.particle_system.particle_lifetime[2])
 	end
 
 	queue_remove(store, this)
@@ -5256,7 +5256,7 @@ function scripts.loop_sound_aura.update(this, store)
 		end
 
 		S:queue(this.sound_name)
-		U.y_wait(store, this.loop_delay)
+		U.y_wait_unconditional(store, this.loop_delay)
 		coroutine.yield()
 	end
 end
@@ -6353,7 +6353,7 @@ function scripts.mod_tower_block.update(this, store)
 
 	SU.tower_block_inc(target)
 	U.animation_start(this, "start", nil, store.tick_ts, false)
-	U.y_wait(store, 0.1)
+	U.y_wait_unconditional(store, 0.1)
 
 	if m.hide_tower then
 		U.sprites_hide(target, nil, nil, true)
@@ -6361,10 +6361,10 @@ function scripts.mod_tower_block.update(this, store)
 
 	U.y_animation_wait(this)
 	U.animation_start(this, "loop", nil, store.tick_ts, true)
-	U.y_wait(store, m.duration - (store.tick_ts - m.ts))
+	U.y_wait_unconditional(store, m.duration - (store.tick_ts - m.ts))
 	S:queue(this.sound_events.finish)
 	U.animation_start(this, "end", nil, store.tick_ts, false)
-	U.y_wait(store, 0.1)
+	U.y_wait_unconditional(store, 0.1)
 
 	if m.hide_tower then
 		U.sprites_show(target, nil, nil, true)
@@ -6860,7 +6860,7 @@ function scripts.mod_teleport.update(this, store)
 	queue_insert(store, fx)
 
 	if this.delay_start then
-		U.y_wait(store, this.delay_start)
+		U.y_wait_unconditional(store, this.delay_start)
 	end
 
 	local health_bar_hidden
@@ -6879,7 +6879,7 @@ function scripts.mod_teleport.update(this, store)
 	U.sprites_hide(target, nil, nil, true)
 	SU.hide_modifiers(store, target, true)
 	SU.hide_auras(store, target, true)
-	U.y_wait(store, this.hold_time)
+	U.y_wait_unconditional(store, this.hold_time)
 
 	if target.motion then
 		target.motion.forced_waypoint = nil
@@ -6958,7 +6958,7 @@ function scripts.mod_teleport.update(this, store)
 	queue_insert(store, fx)
 
 	if this.delay_end then
-		U.y_wait(store, this.delay_end)
+		U.y_wait_unconditional(store, this.delay_end)
 	end
 
 	if target.health and not target.health.dead then
@@ -7081,7 +7081,7 @@ function scripts.background_sounds.update(this, store)
 	while true do
 		local delay = math.random(this.min_delay, this.max_delay)
 
-		U.y_wait(store, delay)
+		U.y_wait_unconditional(store, delay)
 		S:queue(this.sounds[math.random(#this.sounds)])
 	end
 end
@@ -7859,7 +7859,7 @@ end
 scripts.abomination_explosion_aura = {}
 
 function scripts.abomination_explosion_aura.update(this, store)
-	U.y_wait(store, this.aura.hit_time)
+	U.y_wait_unconditional(store, this.aura.hit_time)
 
 	local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
 
@@ -8929,7 +8929,7 @@ function scripts.bolt_force_motion_kr5.update(this, store)
 	if ps and ps.particle_system.emit then
 		ps.particle_system.emit = false
 
-		U.y_wait(store, ps.particle_system.particle_lifetime[2])
+		U.y_wait_unconditional(store, ps.particle_system.particle_lifetime[2])
 	end
 
 	queue_remove(store, this)
@@ -8957,7 +8957,7 @@ function scripts.mod_track_fx.update(this, store)
 		this.tween.disabled = false
 
 		U.animation_start(this, this.animation_loop, nil, store.tick_ts, true)
-		U.y_wait(store, this.tween.props[1].keys[2][1])
+		U.y_wait_unconditional(store, this.tween.props[1].keys[2][1])
 	else
 		U.y_animation_play(this, this.animation_start, nil, store.tick_ts, 1)
 	end
@@ -8975,7 +8975,7 @@ function scripts.mod_track_fx.update(this, store)
 				this.tween.reverse = true
 				this.tween.disabled = false
 
-				U.y_wait(store, this.tween.props[1].keys[2][1])
+				U.y_wait_unconditional(store, this.tween.props[1].keys[2][1])
 			else
 				U.y_animation_play(this, this.animation_end, nil, store.tick_ts, 1)
 			end

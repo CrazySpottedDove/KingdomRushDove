@@ -37,13 +37,13 @@ end
 coroutine.yield()
 end
 S:stop_group("MUSIC")
-U.y_wait(store,15)
+U.y_wait_unconditional(store,15)
 signal.emit("fade-out",1,{255,255,255,255})
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 signal.emit("hide-curtains")
-U.y_wait(store,3-2)
+U.y_wait_unconditional(store,3-2)
 signal.emit("fade-out",0.5,{0,0,0,255})
-U.y_wait(store,0.5)
+U.y_wait_unconditional(store,0.5)
 store.waves_finished=true
 store.level.run_complete=true
 end

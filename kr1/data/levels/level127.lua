@@ -27,7 +27,7 @@ signal.emit("pan-zoom-camera",1.5,{x=600,y=700},2)
 signal.emit("show-curtains")
 signal.emit("hide-gui")
 signal.emit("start-cinematic")
-U.y_wait(store,9.5)
+U.y_wait_unconditional(store,9.5)
 signal.emit("hide-curtains")
 signal.emit("pan-zoom-camera",3,{x=512,y=384},1)
 signal.emit("show-gui")
@@ -54,15 +54,15 @@ break
 end
 end
 head_c.events.list[7].on_event(head_c,store,"head_destroy")
-U.y_wait(store,fts(370))
+U.y_wait_unconditional(store,fts(370))
 signal.emit("hide-curtains")
 signal.emit("pan-zoom-camera",3,{x=512,y=384},1)
 signal.emit("show-gui")
 signal.emit("end-cinematic")
-U.y_wait(store,fts(70))
+U.y_wait_unconditional(store,fts(70))
 S:stop_group("MUSIC")
 S:queue("MusicBossFight_127")
-U.y_wait(store,fts(80))
+U.y_wait_unconditional(store,fts(80))
 local boss
 for i,v in pairs(store.entities) do
 if v.template_name=="boss_grymbeard" then
@@ -76,7 +76,7 @@ end
 if head_c.towers_stunned==0 then
 signal.emit("head-stage27",nil)
 end
-U.y_wait(store,fts(80))
+U.y_wait_unconditional(store,fts(80))
 signal.emit("boss_fight_end")
 signal.emit("fade-out",1)
 else

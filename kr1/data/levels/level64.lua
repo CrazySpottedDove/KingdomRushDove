@@ -90,14 +90,14 @@ LU.queue_insert(store,gnoll)
 U.animation_start(gnoll,"walkingRightLeft",true,store.tick_ts,true)
 y_walk(store,gnoll,bd.end_pos,gnoll_speed)
 U.animation_start(gnoll,"shoot",true,store.tick_ts,false)
-U.y_wait(store,shoot_time)
+U.y_wait_unconditional(store,shoot_time)
 local b=E:create_entity("torch_gnoll_burner")
 b.pos=V.v(gnoll.pos.x+bullet_offset.x,gnoll.pos.y+bullet_offset.y)
 b.bullet.from=V.vclone(b.pos)
 b.bullet.to=bd.shoot_pos
 b.bullet.miss_fx=nil
 LU.queue_insert(store,b)
-U.y_wait(store,flight_time)
+U.y_wait_unconditional(store,flight_time)
 U.animation_start(gnoll,"idle",true,store.tick_ts,true)
 for i=1,bd.explosions do
 local fxs=LU.list_entities(store.entities,"fx_s16_burner_explosion",zone*10+i)
@@ -109,7 +109,7 @@ fx.render.sprites[1].hidden=nil
 end
 S:queue("ElvesSpecialExplosionPath",{delay=delay})
 end
-U.y_wait(store,fts(9))
+U.y_wait_unconditional(store,fts(9))
 local land=LU.list_entities(store.entities,"decal_s16_land_"..zone)[1]
 land.tween.disabled=nil
 land.tween.ts=store.tick_ts
@@ -142,7 +142,7 @@ end
 if bd.grid_rect then
 change_grid_rect(bd.grid_rect,TERRAIN_LAND)
 end
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 local nodes=P:nearest_nodes(gnoll.pos.x,gnoll.pos.y,{bd.dest_pi})
 local node=nodes[1]
 local e=E:create_entity("enemy_gnoll_burner")

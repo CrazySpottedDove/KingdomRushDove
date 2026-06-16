@@ -61,7 +61,7 @@ if store.level_mode==GAME_MODE_CAMPAIGN then
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end
-U.y_wait(store,2)
+U.y_wait_unconditional(store,2)
 signal.emit("show-curtains")
 signal.emit("pan-zoom-camera",2.5,{x=512,y=576},2)
 signal.emit("hide-gui")
@@ -84,7 +84,7 @@ signal.emit("show-gui")
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end
-U.y_wait(store,5)
+U.y_wait_unconditional(store,5)
 self.door.phase="destruction"
 while self.door.phase~="finished" do
 coroutine.yield()

@@ -241,15 +241,27 @@ function U.hover_pulse_alpha(t)
 	return min + (max - min) * 0.5 * (1 + sin(t * km.twopi / per))
 end
 
----检测点是否在椭圆内
+local INV_ASPECT_07 = 1 / 0.7
+
+---检测点是否在椭圆内（使用默认纵横比 0.7）
 ---@param p table 点坐标 {x, y}
 ---@param center table 椭圆中心 {x, y}
 ---@param radius number 椭圆长轴半径
----@param aspect number? 椭圆纵横比（可选，默认0.7）
 ---@return boolean 是否在椭圆内
-function U.is_inside_ellipse(p, center, radius, aspect)
-	aspect = aspect or 0.7
+function U.is_inside_ellipse(p, center, radius)
+	local x = (p.x - center.x)
+	local y = (p.y - center.y) * INV_ASPECT_07
 
+	return x * x + y * y <= radius * radius
+end
+
+---检测点是否在椭圆内（自定义纵横比）
+---@param p table 点坐标 {x, y}
+---@param center table 椭圆中心 {x, y}
+---@param radius number 椭圆长轴半径
+---@param aspect number 椭圆纵横比
+---@return boolean 是否在椭圆内
+function U.is_inside_ellipse_with_aspect(p, center, radius, aspect)
 	local x = (p.x - center.x)
 	local y = (p.y - center.y) / aspect
 
@@ -304,13 +316,26 @@ end
 ---@param break_func function? 中断函数（可选）
 ---@return boolean 是否被中断
 function U.y_wait(store, time, break_func)
-	local start_ts = store.tick_ts
+	local stop_ts = store.tick_ts + time
 
-	while time > store.tick_ts - start_ts do
+	while store.tick_ts < stop_ts do
 		if break_func and break_func(store, time) then
 			return true
 		end
 
+		coroutine.yield()
+	end
+
+	return false
+end
+
+---协程：等待指定时间，无中断条件
+---@param store table game.store
+---@param time number 等待时间
+function U.y_wait_unconditional(store, time)
+	local stop_ts = store.tick_ts + time
+
+	while store.tick_ts < stop_ts do
 		coroutine.yield()
 	end
 
@@ -372,9 +397,6 @@ function U.animation_finished(entity, idx, times)
 	local a = entity.render.sprites[idx]
 
 	if a.loop then
-		-- if times == 1 then
-		--     log.debug("waiting for looping animation for entity %s - ", entity.id, entity.template_name)
-		-- end
 		return times <= a.runs
 	else
 		return a.runs > 0

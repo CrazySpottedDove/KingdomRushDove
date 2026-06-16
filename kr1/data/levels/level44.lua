@@ -91,7 +91,7 @@ signal.emit("show-curtains")
 signal.emit("pan-zoom-camera",2.5,{x=738,y=576},2)
 signal.emit("hide-gui")
 S:queue("MusicBossPreFightEnd")
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 local boss=E:create_entity("eb_leviathan")
 boss.nav_path.pi=6
 boss.nav_path.spi=1
@@ -105,7 +105,7 @@ while self.boss.phase~="loop" do
 coroutine.yield()
 end
 S:queue("MusicBossFight2")
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 signal.emit("hide-curtains")
 signal.emit("pan-zoom-camera",2,{x=512,y=384},1)
 signal.emit("show-gui")
@@ -156,7 +156,7 @@ break
 end
 coroutine.yield()
 end
-U.y_wait(store,3)
+U.y_wait_unconditional(store,3)
 end
 end
 function level:y_update_tentacles(store)
@@ -177,7 +177,7 @@ local tentacles={}
 if self.tentacle_waves and self.tentacle_waves[wave_number] then
 for _,tw in pairs(self.tentacle_waves[wave_number]) do
 local delay=tw[1]-(store.tick_ts-start_ts)
-U.y_wait(store,delay)
+U.y_wait_unconditional(store,delay)
 if store.waves_finished or store.wave_group_number~=wave_number then
 for _,t in pairs(tentacles) do
 t.interrupt=true

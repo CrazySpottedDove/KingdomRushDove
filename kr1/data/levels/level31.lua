@@ -150,9 +150,9 @@ LU.queue_insert(store,lumberjack)
 local cut_steps={{x=1079,y=430},{x=927,y=420},{x=837,y=408},{x=810,y=401},{x=760,y=395}}
 for i,step in ipairs(cut_steps) do
 U.animation_start(lumberjack,"cut",nil,store.tick_ts,false)
-U.y_wait(store,0.5)
+U.y_wait_unconditional(store,0.5)
 cut_group(i)
-U.y_wait(store,0.4)
+U.y_wait_unconditional(store,0.4)
 U.animation_start(lumberjack,"walk",nil,store.tick_ts,true)
 y_walk(store,lumberjack,step,1.024*FPS)
 end

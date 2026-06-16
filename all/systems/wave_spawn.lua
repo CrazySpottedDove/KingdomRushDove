@@ -60,7 +60,7 @@ function M.register(sys)
 				end
 
 				for j = 1, s.max do
-					U.y_wait(store, fts(s.interval or 0) / spawn_multipier)
+					U.y_wait_unconditional(store, fts(s.interval or 0) / spawn_multipier)
 
 					if not current_creep then
 						current_creep = s.creep
@@ -85,7 +85,7 @@ function M.register(sys)
 				end
 
 				if s.max == 0 then
-					U.y_wait(store, fts(s.interval or 0) / spawn_multipier)
+					U.y_wait_unconditional(store, fts(s.interval or 0) / spawn_multipier)
 				end
 
 				local oes = s.on_end_signal
@@ -110,7 +110,7 @@ function M.register(sys)
 						end
 					end
 
-					U.y_wait(store, fts(interval_next) / spawn_multipier)
+					U.y_wait_unconditional(store, fts(interval_next) / spawn_multipier)
 				end
 			end
 		end

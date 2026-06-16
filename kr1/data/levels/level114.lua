@@ -41,7 +41,7 @@ local hidden_path_dust=E:create_entity("decal_stage_14_hidden_path_dust")
 hidden_path_dust.pos=V.v(512,384)
 LU.queue_insert(store,hidden_path_dust)
 U.animation_start(hidden_path_dust,"run",nil,store.tick_ts)
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 local shake=E:create_entity("aura_screen_shake")
 shake.aura.amplitude=0.2
 shake.aura.duration=1

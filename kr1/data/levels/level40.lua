@@ -127,7 +127,7 @@ e.tween.props[3]=E:clone_c("tween_prop")
 e.tween.props[3].keys={{0,255},{fts(20),255},{fts(22),0},{fts(41),0}}
 e.tween.props[3].sprite_id=3
 LU.queue_insert(store,e)
-U.y_wait(store,fts(3))
+U.y_wait_unconditional(store,fts(3))
 LU.queue_remove(store,self.cave_closed)
 end
 while not store.waves_finished or LU.has_alive_enemies(store) do

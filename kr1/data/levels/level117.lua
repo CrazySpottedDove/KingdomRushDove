@@ -70,9 +70,9 @@ soulcaller_up.render.sprites[1].hidden=false
 S:queue("Stage17RootSoulcallerIn")
 U.y_animation_play(soulcaller_up,"revenant_in",nil,store.tick_ts)
 U.animation_start(soulcaller_up,"revenant_idle",nil,store.tick_ts,true)
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 U.animation_start(soulcaller_up,"revenant_anim_reveal",nil,store.tick_ts,false)
-U.y_wait(store,fts(16))
+U.y_wait_unconditional(store,fts(16))
 S:queue("Stage17VinesOut")
 P:activate_path(3)
 P:activate_path(4)
@@ -101,9 +101,9 @@ soulcaller_down.render.sprites[1].hidden=false
 S:queue("Stage17RootSoulcallerIn")
 U.y_animation_play(soulcaller_down,"revenant_in",nil,store.tick_ts)
 U.animation_start(soulcaller_down,"revenant_idle",nil,store.tick_ts,true)
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 U.animation_start(soulcaller_down,"revenant_anim_reveal",nil,store.tick_ts,false)
-U.y_wait(store,fts(16))
+U.y_wait_unconditional(store,fts(16))
 S:queue("Stage17VinesOut")
 for _,v in pairs(store.entities) do
 if v.template_name=="decal_stage_17_hidden_path_2" then
@@ -113,7 +113,7 @@ end
 end
 U.y_animation_wait(soulcaller_down)
 U.animation_start(soulcaller_down,"revenant_idle_02",nil,store.tick_ts,false)
-U.y_wait(store,fts(30))
+U.y_wait_unconditional(store,fts(30))
 if #holders>0 then
 for k,v in pairs(holders) do
 v.render.sprites[1].z=Z_DECALS

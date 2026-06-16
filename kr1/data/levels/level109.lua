@@ -47,7 +47,7 @@ shake.aura.duration=1.2
 shake.aura.freq_factor=2
 LU.queue_insert(store,shake)
 S:queue("Stage09CultBridgeRumble")
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 local shake=E:create_entity("aura_screen_shake")
 shake.aura.amplitude=0.6
 shake.aura.duration=1

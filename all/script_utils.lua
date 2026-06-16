@@ -919,7 +919,7 @@ function SU.y_hero_new_rally(store, this)
 
 			if tp.delay > 0 then
 				U.sprites_hide(this, nil, nil, true)
-				U.y_wait(store, tp.delay)
+				U.y_wait_unconditional(store, tp.delay)
 				U.sprites_show(this, nil, nil, true)
 			end
 
@@ -1102,7 +1102,7 @@ function SU.y_hero_death_and_respawn(store, this)
 		U.animation_start(this, sd.animation, nil, store.tick_ts)
 		S:queue(this.sound_events.death, this.sound_events.death_args)
 		S:queue(sd.sound, sd.sound_args)
-		U.y_wait(store, sd.hit_time)
+		U.y_wait_unconditional(store, sd.hit_time)
 		S:queue(sd.sound_hit)
 
 		if sd.hit_fx then
@@ -1239,7 +1239,7 @@ end
 ---@param this table 士兵实体
 ---@return nil
 function SU.y_reinforcement_fade_in(store, this)
-	U.y_wait(store, fts(10))
+	U.y_wait_unconditional(store, fts(10))
 
 	this.tween.disabled = true
 end
@@ -3352,7 +3352,7 @@ function SU.y_enemy_death(store, this)
 		U.animation_start(this, this.unit.death_animation, nil, store.tick_ts, false)
 
 		if can_spawn and this.death_spawns.delay then
-			U.y_wait(store, this.death_spawns.delay)
+			U.y_wait_unconditional(store, this.death_spawns.delay)
 			SU.do_death_spawns(store, this)
 
 			can_spawn = false
@@ -4197,7 +4197,7 @@ function SU.y_show_taunt_set(store, taunts, set_name, index, pos, duration, wait
 	queue_insert(store, t)
 
 	if wait then
-		U.y_wait(store, duration)
+		U.y_wait_unconditional(store, duration)
 	end
 
 	return t

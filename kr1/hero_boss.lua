@@ -1318,7 +1318,7 @@ tt.main_script.update = function(this, store)
 
 				S:queue(ca.sound)
 				U.animation_start(this, ca.animation, nil, store.tick_ts, true)
-				U.y_wait(store, ca.hit_time)
+				U.y_wait_unconditional(store, ca.hit_time)
 
 				while store.tick_ts - start_ts < ca.duration do
 					if store.tick_ts - ca.ts > ca.damage_every then
@@ -1411,7 +1411,7 @@ tt.main_script.update = function(this, store)
 					local an = table.random({"dance_hit1", "dance_hit2", "dance_hit3"})
 
 					U.animation_start(this, an, sflip, store.tick_ts)
-					U.y_wait(store, bda.hit_time)
+					U.y_wait_unconditional(store, bda.hit_time)
 
 					local d = E.assign_damage(bda.damage_type, U.frandom(bda.damage_min, bda.damage_max), this.id, target.id)
 
@@ -1527,7 +1527,7 @@ tt.main_script.update = function(this, store)
 						ea.ts = store.tick_ts
 
 						U.animation_start(this, ea.animation, nil, store.tick_ts)
-						U.y_wait(store, ea.cast_time)
+						U.y_wait_unconditional(store, ea.cast_time)
 
 						local a = E:create_entity(ea.bullet)
 
@@ -1556,7 +1556,7 @@ tt.main_script.update = function(this, store)
 
 					S:queue(ca.sound)
 					U.animation_start(this, ca.animation, nil, store.tick_ts)
-					U.y_wait(store, ca.cast_time)
+					U.y_wait_unconditional(store, ca.cast_time)
 
 					local fx = E:create_entity("fx_forest_circle")
 
@@ -1830,7 +1830,7 @@ tt.main_script.update = function(this, store)
 
 				if tp.delay > 0 then
 					U.sprites_hide(this, nil, nil, true)
-					U.y_wait(store, tp.delay)
+					U.y_wait_unconditional(store, tp.delay)
 					U.sprites_show(this, nil, nil, true)
 				end
 
@@ -1983,7 +1983,7 @@ tt.main_script.update = function(this, store)
 			b.bullet.from = V.vclone(b.pos)
 
 			queue_insert(store, b)
-			U.y_wait(store, a.delay)
+			U.y_wait_unconditional(store, a.delay)
 		end
 	end
 
@@ -2167,7 +2167,7 @@ tt.main_script.update = function(this, store)
 
 			spi = i == a.steps and 1 or (spi == 2 or spi == 3) and 1 or math.random() < 0.5 and 2 or 3
 
-			U.y_wait(store, a.step_delay)
+			U.y_wait_unconditional(store, a.step_delay)
 
 			local spos = P:node_pos(pi, spi, nni)
 

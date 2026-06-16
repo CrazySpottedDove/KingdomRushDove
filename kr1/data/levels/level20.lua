@@ -25,7 +25,7 @@ local npos=P:node_pos(boss.nav_path.pi,boss.nav_path.spi,boss.nav_path.ni)
 boss.motion.forced_waypoint=npos
 LU.queue_insert(store,boss)
 coroutine.yield()
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 while store.wave_group_number~=store.wave_group_total do
 coroutine.yield()
 end
@@ -34,7 +34,7 @@ boss.sleeping=nil
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end
-U.y_wait(store,1)
+U.y_wait_unconditional(store,1)
 end
 end
 return level

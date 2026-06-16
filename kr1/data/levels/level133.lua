@@ -57,7 +57,7 @@ end
 kill_area:kill_area_fn(store)
 for i=1,8 do
 create_thunder(store,V.v(ray_positions[i].x+all_ray_offsets.x,ray_positions[i].y+all_ray_offsets.y))
-U.y_wait(store,fts(2))
+U.y_wait_unconditional(store,fts(2))
 end
 end
 for _,e in pairs(store.entities) do
@@ -72,7 +72,7 @@ end
 if not skip_anim then
 for i=9,#ray_positions do
 create_thunder(store,V.v(ray_positions[i].x+all_ray_offsets.x,ray_positions[i].y+all_ray_offsets.y))
-U.y_wait(store,fts(2))
+U.y_wait_unconditional(store,fts(2))
 end
 kill_area:kill_area_fn(store)
 end

@@ -191,7 +191,7 @@ while self.decal_taunting_dracula.showing do
 coroutine.yield()
 end
 LU.queue_remove(store,self.decal_taunting_dracula)
-U.y_wait(store,2)
+U.y_wait_unconditional(store,2)
 signal.emit("show-curtains")
 signal.emit("pan-zoom-camera",2.5,{x=512,y=550},2)
 signal.emit("hide-gui")
@@ -202,7 +202,7 @@ boss.nav_path.ni=1
 boss.pos=P:node_pos(boss.nav_path.pi,boss.nav_path.spi,boss.nav_path.ni)
 LU.queue_insert(store,boss)
 self.boss=boss
-U.y_wait(store,4)
+U.y_wait_unconditional(store,4)
 self.points_spawner.manual_wave="BOSS"
 while self.boss.phase~="fight" do
 coroutine.yield()
@@ -230,7 +230,7 @@ while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end
 if store.level_mode==GAME_MODE_CAMPAIGN then
-U.y_wait(store,3)
+U.y_wait_unconditional(store,3)
 end
 log.debug("-- WON")
 end

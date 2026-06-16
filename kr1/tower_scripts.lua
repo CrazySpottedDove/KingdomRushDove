@@ -15526,7 +15526,7 @@ function scripts.tower_ballista.update(this, store)
 						a_name, a_flip, angle_idx = animation_name_facing_point_ballista("final_shot", pred_pos, this.tower_top_offset)
 
 						U.animation_start(this, a_name, a_flip, store.tick_ts, false, this.render.sid_tower_top)
-						U.y_wait(store, fts(6) * tw.cooldown_factor)
+						U.y_wait_unconditional(store, fts(6) * tw.cooldown_factor)
 
 						b = E:create_entity(this.powers.skill_final_shot.bullet)
 					else
@@ -15641,13 +15641,13 @@ function scripts.tower_ballista.update(this, store)
 				aa.ts = store.tick_ts
 				last_ts = start_ts
 
-				U.y_wait(store, fts(15) * tw.cooldown_factor)
+				U.y_wait_unconditional(store, fts(15) * tw.cooldown_factor)
 				U.y_animation_play_group(this, "ability5", false, store.tick_ts, false, "layers_base")
 
 				a_name, a_flip, angle_idx = animation_name_facing_angle_ballista("reload", this.tower_upgrade_persistent_data.current_angle)
 
 				U.y_animation_play(this, a_name, a_flip, store.tick_ts, false, this.render.sid_tower_top)
-				U.y_wait(store, fts(4) * tw.cooldown_factor)
+				U.y_wait_unconditional(store, fts(4) * tw.cooldown_factor)
 
 				last_ts_idle = store.tick_ts
 				idle_cooldown = random(4, 8)
@@ -16228,7 +16228,7 @@ function scripts.soldier_paladin_rider.update(this, store)
 	while true do
 		if this.health.dead then
 			SU.y_soldier_death(store, this)
-			U.y_wait(store, this.health.dead_lifetime)
+			U.y_wait_unconditional(store, this.health.dead_lifetime)
 			queue_remove(store, this)
 
 			return
@@ -16330,7 +16330,7 @@ function scripts.tower_barrel.update(this, store)
 					local flip_x = pred_pos.x > this.pos.x
 
 					U.animation_start(this, bba.animation, flip_x, store.tick_ts, false, this.sid_viking)
-					U.y_wait(store, bba.shoot_time)
+					U.y_wait_unconditional(store, bba.shoot_time)
 
 					local trigger_pos = pred_pos
 					local enemy, _, pred_pos = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, a.range, bba.node_prediction, bba.vis_flags, bba.vis_bans, E:get_template("bullet_tower_barrel_skill_barrel").bullet.damage_radius)
@@ -16376,7 +16376,7 @@ function scripts.tower_barrel.update(this, store)
 						S:queue(pow_w.sound_evict)
 						S:queue(pow_w.sound_drink)
 						U.animation_start(this, wa.animation, false, store.tick_ts, false, this.sid_tower)
-						U.y_wait(store, wa.drunk_man_spawn_delay)
+						U.y_wait_unconditional(store, wa.drunk_man_spawn_delay)
 
 						s = E:create_entity(b.soldier_type)
 						s.soldier.tower_id = this.id
@@ -16418,7 +16418,7 @@ function scripts.tower_barrel.update(this, store)
 					local flip_x = trigger_pos.x > this.pos.x
 
 					U.animation_start(this, ba.animation, flip_x, store.tick_ts, false, this.sid_viking)
-					U.y_wait(store, ba.shoot_time)
+					U.y_wait_unconditional(store, ba.shoot_time)
 
 					local enemy, _, pred_pos = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, a.range, ba.node_prediction, ba.vis_flags, ba.vis_bans, E:get_template("bullet_tower_barrel_lvl4").bullet.damage_radius)
 					local offset_x = ba.bullet_start_offset.x
@@ -16562,7 +16562,7 @@ scripts.controller_soldier_tower_barrel_skill_warrior_spawn = {}
 
 function scripts.controller_soldier_tower_barrel_skill_warrior_spawn.update(this, store)
 	U.animation_start(this, "idle", false, store.tick_ts, false, this.sid_drunk_man)
-	U.y_wait(store, this.berzerker_spawn_delay)
+	U.y_wait_unconditional(store, this.berzerker_spawn_delay)
 
 	local warrior_pos = v(this.pos.x + this.berzerker_spawn_offset.x, this.pos.y + this.berzerker_spawn_offset.y)
 	local spawn_fx = E:create_entity(this.spawn_fx)
@@ -17065,9 +17065,9 @@ function scripts.tower_hermit_toad.update(this, store)
 
 			U.animation_start(this, anim_name, nil, store.tick_ts, false, 3)
 			U.animation_start(this, "changetower", nil, store.tick_ts, false, 5)
-			U.y_wait(store, fts(9 * tw.cooldown_factor))
+			U.y_wait_unconditional(store, fts(9 * tw.cooldown_factor))
 			create_splash_fx()
-			U.y_wait(store, fts(24 * tw.cooldown_factor))
+			U.y_wait_unconditional(store, fts(24 * tw.cooldown_factor))
 		else
 			U.animation_start(this, get_mode_anim(this.render.bubbles_anims, new_mode), nil, this.render.sprites[4].ts, true, 4)
 		end
@@ -17280,7 +17280,7 @@ function scripts.tower_hermit_toad.update(this, store)
 					local bullet_from = V.vclone(bullet.bullet.from)
 					local bullet_to = V.vclone(bullet.bullet.to)
 
-					U.y_wait(store, fts(1 * tw.cooldown_factor))
+					U.y_wait_unconditional(store, fts(1 * tw.cooldown_factor))
 
 					if target then
 						local is_exo = false
@@ -17951,7 +17951,7 @@ function scripts.tower_sparking_geode.update(this, store)
 
 				S:queue(a_crystalize.sound_cast)
 				U.animation_start(this, a_crystalize.animation, nil, store.tick_ts, false, 5)
-				U.y_wait(store, a_crystalize.cast_time)
+				U.y_wait_unconditional(store, a_crystalize.cast_time)
 
 				local fx = E:create_entity(a_crystalize.up_ray_fx)
 
@@ -17960,7 +17960,7 @@ function scripts.tower_sparking_geode.update(this, store)
 				fx.render.sprites[2].ts = store.tick_ts
 
 				queue_insert(store, fx)
-				U.y_wait(store, fts(11) * tw.cooldown_factor)
+				U.y_wait_unconditional(store, fts(11) * tw.cooldown_factor)
 
 				local enemies = U.find_enemies_in_range_filter_off(tpos(this), a.range, a_crystalize.vis_flags, a_crystalize.vis_bans)
 
@@ -17993,7 +17993,7 @@ function scripts.tower_sparking_geode.update(this, store)
 						bullet.bullet.target_id = enemies[i].id
 						queue_insert(store, bullet)
 
-						U.y_wait(store, fts(2) * tw.cooldown_factor)
+						U.y_wait_unconditional(store, fts(2) * tw.cooldown_factor)
 					end
 
 					a_crystalize.ts = start_ts
@@ -18010,7 +18010,7 @@ function scripts.tower_sparking_geode.update(this, store)
 
 				S:queue(a_burst.sound_cast)
 				U.animation_start(this, a_burst.animation, nil, store.tick_ts, false, 5)
-				U.y_wait(store, a_burst.cast_time)
+				U.y_wait_unconditional(store, a_burst.cast_time)
 				S:queue(a_burst.sound_loop)
 
 				local enemy = U.find_first_enemy_in_range_filter_off(tpos(this), a.range, a_burst.vis_flags, a_burst.vis_bans)
@@ -18117,7 +18117,7 @@ function scripts.tower_sparking_geode.update(this, store)
 
 						local ray_timing = a_basic.ray_timing_min + (a_basic.ray_timing_max - a_basic.ray_timing_min) * math.max(0, 1 - shot_i / a.attack_count_for_min_cooldown)
 
-						U.y_wait(store, ray_timing * tw.cooldown_factor)
+						U.y_wait_unconditional(store, ray_timing * tw.cooldown_factor)
 
 						_, enemies = U.find_foremost_enemy_in_range_filter_off(tpos(this), a.range, false, a_basic.vis_flags, a_basic.vis_bans)
 
@@ -18240,7 +18240,7 @@ function scripts.tower_sparking_geode_ray.update(this, store)
 		table.insert(this.seen_targets, target.id)
 
 		if this.bounces > 0 then
-			U.y_wait(store, this.bounce_delay)
+			U.y_wait_unconditional(store, this.bounce_delay)
 
 			local bounce_target = U.find_nearest_enemy(store.entities, dest, 0, this.bounce_range, this.bounce_vis_flags, this.bounce_vis_bans, function(v)
 				return not table.contains(this.seen_targets, v.id)
@@ -18877,7 +18877,7 @@ function scripts.bullet_soldier_tower_dwarf.update(this, store)
 	local b = this.bullet
 	local target = store.entities[b.target_id]
 
-	U.y_wait(store, b.flight_time)
+	U.y_wait_unconditional(store, b.flight_time)
 
 	if target then
 		local d = SU.create_bullet_damage(b, target.id, this.id)
@@ -19113,7 +19113,7 @@ function scripts.tower_ghost.soldier_update(this, store)
 		spawn.pos = V.vclone(fpos)
 
 		queue_insert(store, spawn)
-		U.y_wait(store, fts(8))
+		U.y_wait_unconditional(store, fts(8))
 
 		this.render.sprites[1].hidden = false
 	end
@@ -19198,7 +19198,7 @@ function scripts.tower_ghost.soldier_update(this, store)
 end
 
 function scripts.tower_ghost.soul_update(this, store)
-	U.y_wait(store, this.delay)
+	U.y_wait_unconditional(store, this.delay)
 
 	this.render.sprites[1].hidden = false
 
@@ -19273,7 +19273,7 @@ function scripts.controller_tower_swap.update(this, store)
 		ne.pos = V.vclone(to.pos)
 
 		queue_insert(store, ne)
-		U.y_wait(store, fts(4))
+		U.y_wait_unconditional(store, fts(4))
 	end
 
 	local function create_spawner_in(to)
@@ -19332,9 +19332,9 @@ function scripts.controller_tower_swap.update(this, store)
 			queue_remove(store, t1)
 			remove_modifiers(t1)
 
-			U.y_wait(store, this.delay)
+			U.y_wait_unconditional(store, this.delay)
 			create_spawner_in(t1)
-			U.y_wait(store, this.fx_spawn_delay)
+			U.y_wait_unconditional(store, this.fx_spawn_delay)
 			queue_insert(store, t1)
 
 			t1.ui.can_click = true
@@ -19372,10 +19372,10 @@ function scripts.controller_tower_swap.update(this, store)
 			queue_remove(store, t2)
 			remove_modifiers(t2)
 
-			U.y_wait(store, this.delay)
+			U.y_wait_unconditional(store, this.delay)
 			create_spawner_in(t1)
 			create_spawner_in(t2)
-			U.y_wait(store, this.fx_spawn_delay)
+			U.y_wait_unconditional(store, this.fx_spawn_delay)
 			-- exchange position data
 			swap(t1, t2, "pos")
 			swap(t1.tower, t2.tower, "holder_id")
@@ -19991,7 +19991,7 @@ function scripts.decal_tower_arborean_emissary_gift_of_nature_wisp.update(this, 
 
 	sf.hidden = true
 
-	U.y_wait(store, fts(this.wisp_order) * 3)
+	U.y_wait_unconditional(store, fts(this.wisp_order) * 3)
 
 	sf.hidden = false
 	this.tween.disabled = false
@@ -20246,7 +20246,7 @@ function scripts.tower_arborean_emissary_bolt.update(this, store)
 	if ps and ps.particle_system.emit then
 		ps.particle_system.emit = false
 
-		U.y_wait(store, ps.particle_system.particle_lifetime[2])
+		U.y_wait_unconditional(store, ps.particle_system.particle_lifetime[2])
 	end
 
 	queue_remove(store, this)
@@ -21001,7 +21001,7 @@ function scripts.decal_tentacle_priests_barrack.update(this, store)
 				local flip_x = pred_pos.x < this.pos.x
 
 				U.animation_start(this, a.animation, flip_x, store.tick_ts, false)
-				U.y_wait(store, a.hit_time)
+				U.y_wait_unconditional(store, a.hit_time)
 
 				local enemies = U.find_enemies_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
@@ -21422,7 +21422,7 @@ function scripts.tower_dragons.update(this, store)
 					end
 
 					U.animation_start(this, a_massive_fear.animation, nil, store.tick_ts, false, 2, true)
-					U.y_wait(store, a_massive_fear.cast_time)
+					U.y_wait_unconditional(store, a_massive_fear.cast_time)
 
 					points = find_path_center_positions_near_tower(150)
 
@@ -21456,7 +21456,7 @@ function scripts.tower_dragons.update(this, store)
 					this.tower_upgrade_persistent_data.massive_fear_ts = a_massive_fear.ts
 
 					if count_targets < a_massive_fear.max_targets then
-						U.y_wait(store, fts(30) * tw.cooldown_factor)
+						U.y_wait_unconditional(store, fts(30) * tw.cooldown_factor)
 
 						local enemies_repeat = U.find_enemies_in_range_filter_on(tpos, a_massive_fear.range_factor * a.range, a_massive_fear.vis_flags, a_massive_fear.vis_bans, function(e)
 							return not e.unit.is_stunned
@@ -21509,7 +21509,7 @@ function scripts.tower_dragons.update(this, store)
 					end
 
 					U.animation_start(this, attack.animation[anim_idx], nil, store.tick_ts, false, 2, true)
-					U.y_wait(store, attack.shoot_time)
+					U.y_wait_unconditional(store, attack.shoot_time)
 
 					for i = 1, 3 do
 						local j = km.zmod(i, #targets)
@@ -21562,15 +21562,15 @@ scripts.decal_tower_dragons_stun = {}
 function scripts.decal_tower_dragons_stun.update(this, store, script)
 	this.render.sprites[1].hidden = true
 
-	U.y_wait(store, fts(math.random(0, 5)))
+	U.y_wait_unconditional(store, fts(math.random(0, 5)))
 
 	this.render.sprites[1].hidden = false
 
 	U.y_animation_play(this, "in", nil, store.tick_ts, 1, 1)
 	U.animation_start(this, "idle", nil, store.tick_ts, true, 1, true)
-	U.y_wait(store, this.duration)
+	U.y_wait_unconditional(store, this.duration)
 	SU.fade_out_entity(store, this, 0, fts(10))
-	U.y_wait(store, fts(10))
+	U.y_wait_unconditional(store, fts(10))
 	queue_remove(store, this)
 end
 
@@ -21776,7 +21776,7 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 	if ps.particle_system.emit then
 		ps.particle_system.emit = false
 
-		U.y_wait(store, ps.particle_system.particle_lifetime[2])
+		U.y_wait_unconditional(store, ps.particle_system.particle_lifetime[2])
 	end
 
 	queue_remove(store, this)
@@ -21873,7 +21873,7 @@ function scripts.faerie_dragon_lvl4.update(this, store)
 					an, af, ai = U.animation_name_facing_point(this, ca.animation, pred_pos)
 
 					U.animation_start(this, an, af, store.tick_ts, false, 1, true)
-					U.y_wait(store, ca.shoot_time)
+					U.y_wait_unconditional(store, ca.shoot_time)
 
 					do
 						local so = ca.bullet_start_offset[ai]
@@ -21964,7 +21964,7 @@ function scripts.tower_shadow_archer.update(this, store)
 
 		local shoot_time = attack.shoot_time
 
-		U.y_wait(store, shoot_time)
+		U.y_wait_unconditional(store, shoot_time)
 
 		if enemy.health.dead then
 			enemy = U.refind_foremost_enemy(enemy, store, attack.vis_flags, attack.vis_bans)
@@ -22094,7 +22094,7 @@ function scripts.tower_shadow_archer.update(this, store)
 							}, enemy, 1, true)
 							shooter.offset = v(lpos.x - shooter.pos.x, lpos.y - shooter.pos.y + 18)
 							U.animation_start(this, "teleportInAttack", lflip, store.tick_ts, false, sid)
-							U.y_wait(store, as.shoot_time)
+							U.y_wait_unconditional(store, as.shoot_time)
 
 							if not enemy.health.dead then
 								local d = E.assign_damage(bor(DAMAGE_INSTAKILL, DAMAGE_FX_EXPLODE), nil, this.id, enemy.id)
@@ -22696,9 +22696,9 @@ scripts.decal_rotten_forest_smoke = {}
 
 function scripts.decal_rotten_forest_smoke.update(this, store)
 	U.animation_start(this, "intro", nil, store.tick_ts, false)
-	U.y_wait(store, fts(6))
+	U.y_wait_unconditional(store, fts(6))
 	U.animation_start(this, "idle", nil, store.tick_ts, true, 2)
-	U.y_wait(store, fts(5))
+	U.y_wait_unconditional(store, fts(5))
 	U.animation_start(this, "idle", nil, store.tick_ts, true, 1)
 	local range = 50
 	local vis_flags = F_MOD
@@ -22865,7 +22865,7 @@ function scripts.tower_infernal_mage.update(this, store)
 		elseif aa == ac then
 			this.render.sprites[curse_sid].ts = store.tick_ts
 		end
-		U.y_wait(store, aa.shoot_time)
+		U.y_wait_unconditional(store, aa.shoot_time)
 		return af
 	end
 
@@ -22953,7 +22953,7 @@ function scripts.tower_infernal_mage.update(this, store)
 							aura_lava.target_id = enemy.id
 							aura_lava.aura.damage_factor = this.tower.damage_factor
 							queue_insert(store, aura_lava)
-							U.y_wait(store, fts(2) * this.tower.cooldown_factor)
+							U.y_wait_unconditional(store, fts(2) * this.tower.cooldown_factor)
 						end
 
 						S:queue(ad.sound)
@@ -23184,7 +23184,7 @@ function scripts.tower_orc_shaman.update(this, store)
 		local an, af = U.animation_name_facing_point(this, aa.animation, target.pos, shooter_sid, this.render.sprites[shooter_sid].offset)
 
 		U.animation_start(this, an, af, store.tick_ts, false, shooter_sid)
-		U.y_wait(store, aa.shoot_time)
+		U.y_wait_unconditional(store, aa.shoot_time)
 
 		return af
 	end
@@ -23284,7 +23284,7 @@ function scripts.tower_orc_shaman.update(this, store)
 						b.render.sprites[1].ts = store.tick_ts
 
 						queue_insert(store, b)
-						U.y_wait(store, fts(6) * this.tower.cooldown_factor)
+						U.y_wait_unconditional(store, fts(6) * this.tower.cooldown_factor)
 					end
 
 					U.y_animation_wait(this, shooter_sid, 1)
@@ -24000,7 +24000,7 @@ function scripts.soldier_dark_knight.update(this, store)
 				do_mock()
 				U.y_animation_play(this, shield_attack.animation_start, nil, store.tick_ts, 1)
 				do_mock()
-				U.y_wait(store, shield_attack.hit_time)
+				U.y_wait_unconditional(store, shield_attack.hit_time)
 				do_mock()
 				U.y_animation_play(this, "imperviousStop", nil, store.tick_ts, 1)
 				do_mock()
@@ -24682,7 +24682,7 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 
 					U.animation_start(this, an, af, store.tick_ts, false, sid_m)
 
-					U.y_wait(store, a_normal.shoot_time)
+					U.y_wait_unconditional(store, a_normal.shoot_time)
 
 					local shooting_right = tp.x < enemy.pos.x
 					local bso = a_normal.bullet_start_offset
@@ -24994,7 +24994,7 @@ function scripts.tower_rocket_riders.update(this, store, script)
 					this.render.sprites[common_sid].hidden = true
 
 					U.animation_start_group(this, an.animation, nil, store.tick_ts, false, "layers")
-					U.y_wait(store, an.shoot_time)
+					U.y_wait_unconditional(store, an.shoot_time)
 
 					local enemies = U.find_enemies_between_range_filter_off(tpos, a.blind_range, a.range, an.vis_flags, an.vis_bans)
 
@@ -25033,7 +25033,7 @@ function scripts.tower_rocket_riders.update(this, store, script)
 					ab.ts = store.tick_ts
 
 					U.animation_start_group(this, ab.animation, nil, store.tick_ts, false, "layers")
-					U.y_wait(store, ab.shoot_time)
+					U.y_wait_unconditional(store, ab.shoot_time)
 
 					local enemies = U.find_enemies_between_range_filter_off(tpos, a.blind_range, a.range, ab.vis_flags, ab.vis_bans)
 
@@ -25082,7 +25082,7 @@ function scripts.mine_box.update(this, store)
 		if not this.owner.tower.blocked and store.tick_ts - a.ts > a.cooldown * this.owner.tower.cooldown_factor then
 			a.ts = store.tick_ts
 			U.animation_start(this, a.animation, nil, store.tick_ts)
-			U.y_wait(store, a.shoot_time)
+			U.y_wait_unconditional(store, a.shoot_time)
 
 			if not this.owner or not store.entities[this.owner.id] then
 				queue_remove(store, this)
@@ -25271,7 +25271,7 @@ function scripts.decal_rr_mine.update(this, store)
 			break
 		end
 
-		U.y_wait(store, this.check_interval)
+		U.y_wait_unconditional(store, this.check_interval)
 	end
 
 	queue_remove(store, this)
@@ -25483,7 +25483,7 @@ function scripts.tower_grim_cemetery.update(this, store, script)
 						b.render.sprites[1].ts = store.tick_ts
 						queue_insert(store, b)
 
-						U.y_wait(store, 0.1)
+						U.y_wait_unconditional(store, 0.1)
 					end
 
 					if remain_count > 0 then
@@ -25957,7 +25957,7 @@ function scripts.mod_grim_cemetery_explode.update(this, store, script)
 		target = store.entities[m.target_id]
 
 		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
-			U.y_wait(store, this.explode_delay)
+			U.y_wait_unconditional(store, this.explode_delay)
 			queue_remove(store, this)
 
 			return
@@ -26073,7 +26073,7 @@ function scripts.soldier_balloon.update(this, store, script)
 					local shooter_sid = this.wick_mode + 4
 					local an, af = U.animation_name_facing_point(this, ab.animations[this.wick_mode], target.pos)
 					U.animation_start(this, an, af, store.tick_ts, false, shooter_sid)
-					U.y_wait(store, ab.hit_times[this.wick_mode] * tw.cooldown_factor)
+					U.y_wait_unconditional(store, ab.hit_times[this.wick_mode] * tw.cooldown_factor)
 					local b = E:create_entity(ab.bullet)
 					b.bullet.damage_factor = this.owner.tower.damage_factor
 					b.pos.x = this.pos.x + (af and -1 or 1) * ab.start_offsets[this.wick_mode].x
@@ -26180,7 +26180,7 @@ function scripts.soldier_balloon.update(this, store, script)
 						local an, af = U.animation_name_facing_point(this, ao.animation, target.pos)
 						this.render.sprites[1].hidden = false
 						U.animation_start(this, an, af, store.tick_ts, false, 1)
-						U.y_wait(store, ao.hit_time)
+						U.y_wait_unconditional(store, ao.hit_time)
 						local b = E:create_entity(ao.bullet)
 						b.pos.x = this.pos.x + (af and -1 or 1) * ao.start_offset.x
 						b.pos.y = this.pos.y + ao.start_offset.y
