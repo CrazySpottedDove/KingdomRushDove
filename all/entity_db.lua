@@ -256,11 +256,12 @@ end
 ---@param t string 模板名
 function entity_db:create_entity(t)
 	local tpl = self.entities[t]
-	if not tpl then
-		log.error("template %s not found", t)
+	-- DEBUG USE
+	-- if not tpl then
+	-- 	log.error("template %s not found", t)
 
-		return nil
-	end
+	-- 	return nil
+	-- end
 
 	local out = copy(tpl)
 

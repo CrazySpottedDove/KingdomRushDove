@@ -1204,50 +1204,6 @@ local function sync_assets(added_or_modified)
 	return true
 end
 
--- 【新增】使用打包方式下载资源（减少连接数，提高弱网成功率）
-local function sync_assets_bundled(added_or_modified, asset_sizes)
-	if not server_address or not update_cache_dir then
-		return true
-	end
-
-	local file_count = #added_or_modified
-
-	if file_count > 1000 then
-		set_state(STATE_DOWNLOADING_ASSETS_HEAVY)
-	elseif file_count > 100 then
-		set_state(STATE_DOWNLOADING_ASSETS_MIDDLE_HEAVY)
-	else
-		set_state(STATE_DOWNLOADING_ASSETS)
-	end
-
-	-- 分组：按原始大小切分，每捆不超过 MAX_RAW_BUNDLE_SIZE
-	local batches = {}
-	local current = {}
-	local current_size = 0
-	for _, f in ipairs(added_or_modified) do
-		local fsize = (asset_sizes and asset_sizes[f]) and asset_sizes[f][1] or 0
-		if current_size + fsize > MAX_RAW_BUNDLE_SIZE and #current > 0 then
-			table.insert(batches, current)
-			current = {f}
-			current_size = fsize
-		else
-			table.insert(current, f)
-			current_size = current_size + fsize
-		end
-	end
-	if #current > 0 then
-		table.insert(batches, current)
-	end
-
-	for bi, batch in ipairs(batches) do
-		if not sync_assets_batch(batch, bi, #batches) then
-			return false
-		end
-	end
-
-	return true
-end
-
 -- 处理单个资源打包批次，失败自动回退到单文件下载
 local function sync_assets_batch(batch, bi, total_batches)
 	-- 1. POST 创建打包
@@ -1263,7 +1219,6 @@ local function sync_assets_batch(batch, bi, total_batches)
 	}, 60)
 
 	if code ~= 200 then
-
 		log_error("创建资源打包失败，回退到单文件下载")
 		return sync_assets(batch)
 	end
@@ -1317,6 +1272,50 @@ local function sync_assets_batch(batch, bi, total_batches)
 	if #missing > 0 then
 		log_info(string.format("补下载 %d 个缺失资源", #missing))
 		return sync_assets(missing)
+	end
+
+	return true
+end
+
+-- 【新增】使用打包方式下载资源（减少连接数，提高弱网成功率）
+local function sync_assets_bundled(added_or_modified, asset_sizes)
+	if not server_address or not update_cache_dir then
+		return true
+	end
+
+	local file_count = #added_or_modified
+
+	if file_count > 1000 then
+		set_state(STATE_DOWNLOADING_ASSETS_HEAVY)
+	elseif file_count > 100 then
+		set_state(STATE_DOWNLOADING_ASSETS_MIDDLE_HEAVY)
+	else
+		set_state(STATE_DOWNLOADING_ASSETS)
+	end
+
+	-- 分组：按原始大小切分，每捆不超过 MAX_RAW_BUNDLE_SIZE
+	local batches = {}
+	local current = {}
+	local current_size = 0
+	for _, f in ipairs(added_or_modified) do
+		local fsize = (asset_sizes and asset_sizes[f]) and asset_sizes[f][1] or 0
+		if current_size + fsize > MAX_RAW_BUNDLE_SIZE and #current > 0 then
+			table.insert(batches, current)
+			current = {f}
+			current_size = fsize
+		else
+			table.insert(current, f)
+			current_size = current_size + fsize
+		end
+	end
+	if #current > 0 then
+		table.insert(batches, current)
+	end
+
+	for bi, batch in ipairs(batches) do
+		if not sync_assets_batch(batch, bi, #batches) then
+			return false
+		end
 	end
 
 	return true

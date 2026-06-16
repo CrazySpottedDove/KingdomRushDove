@@ -48223,7 +48223,7 @@ return {
 		to = 20,
 		from = 1
 	},
-	spirit_mausoleum_lvl4_possession_proyectile_travel = {
+	spirit_mausoleum_lvl4_possession_proyectile_flying = {
 		prefix = "spirit_mausoleum_lvl4_possession_proyectile",
 		to = 12,
 		from = 1

@@ -210,14 +210,14 @@ return {
 			tt_title = _("TOWER_ORC_SHAMAN_NAME"),
 			tt_desc = _("TOWER_ORC_SHAMAN_DESCRIPTION")
 		}),
-		-- M(tpl.upgrade, {
-		-- 	action_arg = "tower_spirit_mausoleum",
-		-- 	image = "kr4_main_icons_0007",
-		-- 	type = "spirit_mausoleum",
-		-- 	place = 25,
-		-- 	tt_title = _("TOWER_SPIRIT_MAUSOLEUM_NAME"),
-		-- 	tt_desc = _("TOWER_SPIRIT_MAUSOLEUM_DESCRIPTION")
-		-- }),
+		M(tpl.upgrade, {
+			action_arg = "tower_spirit_mausoleum",
+			image = "kr4_main_icons_0007",
+			type = "spirit_mausoleum",
+			place = 25,
+			tt_title = _("TOWER_SPIRIT_MAUSOLEUM_NAME"),
+			tt_desc = _("TOWER_SPIRIT_MAUSOLEUM_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	engineer = {{M(tpl.common_upgrade, {
@@ -3316,9 +3316,6 @@ return {
 		tt_list = {{
 			tt_title = _("TOWER_SPIRIT_MAUSOLEUM_SPECTRAL_COMMUNION_NAME_1"),
 			tt_desc = _("TOWER_SPIRIT_MAUSOLEUM_SPECTRAL_COMMUNION_DESCRIPTION_1")
-		}, {
-			tt_title = _("TOWER_SPIRIT_MAUSOLEUM_SPECTRAL_COMMUNION_NAME_2"),
-			tt_desc = _("TOWER_SPIRIT_MAUSOLEUM_SPECTRAL_COMMUNION_DESCRIPTION_2")
 		}}
 	}), M(tpl.upgrade_power, {
 		action_arg = "possession",

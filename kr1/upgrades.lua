@@ -1047,7 +1047,8 @@ upgrades.soldiers = {
 	"soldier_dark_knight",
 	"soldier_zombie",
 	"soldier_zombie_medium",
-	"soldier_zombie_big"
+	"soldier_zombie_big",
+	"soldier_gargoyle"
 }
 
 upgrades.barrack_soldiers = {
@@ -1122,7 +1123,8 @@ upgrades.towers_with_barrack = {
 	"tower_orc_warriors",
 	"tower_dark_knights",
 	"tower_grim_cemetery",
-	"tower_balloon"
+	"tower_balloon",
+	"tower_spirit_mausoleum"
 }
 
 upgrades.non_barrack_towers_with_barrack_attribute = {"tower_sorcerer", "tower_mech", "tower_necromancer", "tower_frankenstein", "tower_druid", "tower_dark_elf_lvl4", "tower_bone_flingers", "tower_balloon", "tower_spirit_mausoleum"}
@@ -1152,7 +1154,7 @@ upgrades.mage_tower_bolts = {
 	"bolt_faerie_dragon_lvl4",
 	"bolt_infernal_mage",
 	"bolt_orc_shaman",
-	"tower_spirit_mausoleum_bolt"
+	"bolt_tower_spirit_mausoleum"
 }
 
 local other_bolts = {

@@ -5123,7 +5123,7 @@ function SU.beat_back_enemy(target, distance, duration)
 end
 
 function SU.is_valid_betray_target(target)
-	return not target._betray_data and target.melee and band(target.vis.flags, bor(F_FLYING, F_BOSS)) == 0 and not target._main_script_overwritten and U.has_valid_rally_node_nearby(target.pos) and band(target.vis.bans, F_BLOCK) == 0
+	return not target._betray_data and target.melee and band(target.vis.flags, bor(F_FLYING, F_BOSS)) == 0 and not target._main_script_overwritten and U.has_valid_rally_node_nearby(target.pos) and band(target.vis.bans, F_BLOCK) == 0 and target.health_bar and not target.health_bar.hidden
 end
 
 -- 避开所有可能导致错误的因素，选择直接让被策反的敌人沉默，并只能进行近战攻击，作为一个白板
@@ -5142,7 +5142,7 @@ local function enemy_betray_logic(this, store)
 	this.nav_rally.pos:copy(this.pos)
 	this.nav_rally.center = this.nav_rally.pos
 	this.nav_path.dir = -1
-	this.melee.range = 60
+	this.melee.range = 100
 
 	for _, a in ipairs(this.melee.attacks) do
 		a._original_vis_bans = a.vis_bans
@@ -5168,6 +5168,9 @@ local function enemy_betray_logic(this, store)
 			if brk or sta ~= A_NO_TARGET then
 				goto continue
 			end
+
+			local nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, {this.nav_path.pi}, {this.nav_path.spi}, true)
+			this.nav_path.ni = nearest_nodes[1][3]
 
 			SU.soldier_idle(store, this)
 
@@ -5202,6 +5205,8 @@ local function enemy_betray_logic(this, store)
 	U.flags_add(this.vis, F_ENEMY)
 	U.remove_silence(this, store.tick_ts)
 	this.nav_path.dir = 1
+	local nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, {this.nav_path.pi}, {this.nav_path.spi}, true)
+	this.nav_path.ni = nearest_nodes[1][3]
 	this.nav_rally = nil
 	this.soldier = nil
 	this.idle_flip = nil
@@ -5209,8 +5214,9 @@ local function enemy_betray_logic(this, store)
 end
 
 --- 策反敌人。调用前，应保证已使用 SU.is_valid_betray_target 判断目标是否合法。
+--- betray = {ts, duration}
 ---@param target table 敌人
----@param betray table 策反相关数据(component)
+---@param betray table 策反相关数据{ts, duration}
 ---@return boolean 是否成功策反
 function SU.betray_enemy(target, betray)
 	if U.overwrite_main_script(target, enemy_betray_logic) then
