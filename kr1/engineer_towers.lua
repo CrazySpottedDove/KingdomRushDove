@@ -3007,6 +3007,7 @@ tt.ranged.attacks[1].min_range = 0
 tt.ranged.attacks[1].shoot_time = fts(8)
 tt.ranged.attacks[1].ts = 0
 tt.ranged.attacks[1].vis_bans = bor(F_FLYING)
+tt.ranged.attacks[1].ignore_hit_offset = true
 tt.motion.max_speed = 75
 tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
 tt.tween.props[1].name = "alpha"
