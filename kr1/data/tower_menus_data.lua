@@ -210,6 +210,14 @@ return {
 			tt_title = _("TOWER_ORC_SHAMAN_NAME"),
 			tt_desc = _("TOWER_ORC_SHAMAN_DESCRIPTION")
 		}),
+		-- M(tpl.upgrade, {
+		-- 	action_arg = "tower_spirit_mausoleum",
+		-- 	image = "kr4_main_icons_0007",
+		-- 	type = "spirit_mausoleum",
+		-- 	place = 25,
+		-- 	tt_title = _("TOWER_SPIRIT_MAUSOLEUM_NAME"),
+		-- 	tt_desc = _("TOWER_SPIRIT_MAUSOLEUM_DESCRIPTION")
+		-- }),
 		tpl.sell
 	}},
 	engineer = {{M(tpl.common_upgrade, {
@@ -3286,6 +3294,49 @@ return {
 			tt_desc = _("TOWER_INFERNAL_MAGE_TELEPORT_DESCRIPTION_3")
 		}}
 	}), tpl.sell}},
+	spirit_mausoleum = {{M(tpl.upgrade_power, {
+		action_arg = "gargoyles",
+		image = "kr4_special_icons_0025",
+		place = 6,
+		sounds = {"fallen_ones_spirit_mausoleum_gargoyles_upgrade"},
+		tt_phrase = _("TOWER_SPIRIT_MAUSOLEUM_GARGOYLES_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SPIRIT_MAUSOLEUM_GARGOYLES_NAME_1"),
+			tt_desc = _("TOWER_SPIRIT_MAUSOLEUM_GARGOYLES_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SPIRIT_MAUSOLEUM_GARGOYLES_NAME_2"),
+			tt_desc = _("TOWER_SPIRIT_MAUSOLEUM_GARGOYLES_DESCRIPTION_2")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "spectral_communion",
+		image = "kr4_special_icons_0026",
+		place = 5,
+		sounds = {"fallen_ones_spirit_mausoleum_communion_upgrade"},
+		tt_phrase = _("TOWER_SPIRIT_MAUSOLEUM_SPECTRAL_COMMUNION_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SPIRIT_MAUSOLEUM_SPECTRAL_COMMUNION_NAME_1"),
+			tt_desc = _("TOWER_SPIRIT_MAUSOLEUM_SPECTRAL_COMMUNION_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SPIRIT_MAUSOLEUM_SPECTRAL_COMMUNION_NAME_2"),
+			tt_desc = _("TOWER_SPIRIT_MAUSOLEUM_SPECTRAL_COMMUNION_DESCRIPTION_2")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "possession",
+		image = "kr4_special_icons_0024",
+		place = 7,
+		sounds = {"fallen_ones_spirit_mausoleum_possesion_upgrade"},
+		tt_phrase = _("TOWER_SPIRIT_MAUSOLEUM_POSSESSION_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SPIRIT_MAUSOLEUM_POSSESSION_NAME_1"),
+			tt_desc = _("TOWER_SPIRIT_MAUSOLEUM_POSSESSION_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SPIRIT_MAUSOLEUM_POSSESSION_NAME_2"),
+			tt_desc = _("TOWER_SPIRIT_MAUSOLEUM_POSSESSION_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_SPIRIT_MAUSOLEUM_POSSESSION_NAME_3"),
+			tt_desc = _("TOWER_SPIRIT_MAUSOLEUM_POSSESSION_DESCRIPTION_3")
+		}}
+	}), tpl.rally, tpl.sell}},
 	orc_shaman = {{M(tpl.upgrade_power, {
 		action_arg = "vines",
 		image = "kr4_special_icons_0001",

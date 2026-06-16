@@ -1125,7 +1125,7 @@ upgrades.towers_with_barrack = {
 	"tower_balloon"
 }
 
-upgrades.non_barrack_towers_with_barrack_attribute = {"tower_sorcerer", "tower_mech", "tower_necromancer", "tower_frankenstein", "tower_druid", "tower_dark_elf_lvl4", "tower_bone_flingers", "tower_balloon"}
+upgrades.non_barrack_towers_with_barrack_attribute = {"tower_sorcerer", "tower_mech", "tower_necromancer", "tower_frankenstein", "tower_druid", "tower_dark_elf_lvl4", "tower_bone_flingers", "tower_balloon", "tower_spirit_mausoleum"}
 
 upgrades.mage_towers = GS.mage_towers
 
@@ -1151,7 +1151,8 @@ upgrades.mage_tower_bolts = {
 	"tower_arborean_emissary_bolt_lvl4",
 	"bolt_faerie_dragon_lvl4",
 	"bolt_infernal_mage",
-	"bolt_orc_shaman"
+	"bolt_orc_shaman",
+	"tower_spirit_mausoleum_bolt"
 }
 
 local other_bolts = {

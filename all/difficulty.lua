@@ -2,7 +2,7 @@
 local E = require("entity_db")
 local GS = require("kr1.game_settings")
 local km = require("lib.klua.macros")
-
+local bit = require("bit")
 require("all.constants")
 
 local difficulty = {}
@@ -57,7 +57,7 @@ function difficulty:patch_templates()
 					t.health.instakill_resistance = km.clamp(0, 1, (t.health.hp_max - 2000) * 0.0002)
 				end
 
-				if band(t.vis.flags, F_FLYING) ~= 0 then
+				if bit.band(t.vis.flags, F_FLYING) ~= 0 then
 					-- 削弱飞行兵的生命加成
 					t.health.hp_max = math.floor(t.health.hp_max * (0.25 + 0.75 * hp_factor_enemy))
 				else
