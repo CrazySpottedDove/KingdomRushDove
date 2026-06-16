@@ -65,17 +65,12 @@ local function engineer_focus_bomb_update(this, store)
 	if enemies then
 		for i = 1, #enemies do
 			local enemy = enemies[i]
-			local d = E.create_damage()
-
-			d.damage_type = b.damage_type
+			local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, b.to, dradius)
+			local value = dmax + (dmax - (dmax - dmin) * dist_factor) * (store.endless.upgrade_levels.engineer_focus * EL.friend_buff.engineer_focus)
+			value = b.damage_factor * value
+			local d = E.assign_damage(b.damage_type, value, this.id, enemy.id)
 			d.reduce_armor = b.reduce_armor
 			d.reduce_magic_armor = b.reduce_magic_armor
-
-			local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, b.to, dradius)
-			d.value = dmax + (dmax - (dmax - dmin) * dist_factor) * (store.endless.upgrade_levels.engineer_focus * EL.friend_buff.engineer_focus)
-			d.value = b.damage_factor * d.value
-			d.source_id = this.id
-			d.target_id = enemy.id
 
 			Common.queue_damage(store, d)
 

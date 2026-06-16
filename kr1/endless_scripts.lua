@@ -259,12 +259,7 @@ scripts.mod_endless_engineer_aftermath = {
 		if enemies then
 			for i = 1, #enemies do
 				local e = enemies[i]
-				local d = E.create_damage()
-
-				d.damage_type = DAMAGE_EXPLOSION
-				d.value = this.value
-				d.source_id = this.id
-				d.target_id = e.id
+				local d = E.assign_damage(DAMAGE_EXPLOSION, this.value, this.id, e.id)
 
 				queue_damage(store, d)
 			end
@@ -360,12 +355,7 @@ function scripts.endless_mage_thunder.update(this, store)
 
 		if targets then
 			for _, target in ipairs(targets) do
-				local d = E.create_damage()
-
-				d.damage_type = thunder.damage_type
-				d.value = math.random(thunder.damage_min, thunder.damage_max)
-				d.target_id = target.id
-				d.source_id = this.id
+				local d = E.assign_damage(thunder.damage_type, math.random(thunder.damage_min, thunder.damage_max), this.id, target.id)
 
 				SU.magic_armor_dec(target, 0.01)
 				queue_damage(store, d)

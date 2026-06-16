@@ -96,13 +96,9 @@ local function execute_effect(cfg, tower, store, targets)
 		local skill_id = cfg.id or "?"
 		for _, t in ipairs(targets) do
 			if t.health and not t.health.dead then
-				local dmg = E.create_damage()
 				local min_dmg = effect.damage_min or 0
 				local max_dmg = effect.damage_max or min_dmg
-				dmg.value = math.random(min_dmg, max_dmg)
-				dmg.target_id = t.id
-				dmg.source_id = tower.id
-				dmg.damage_type = effect.damage_type or DAMAGE_TRUE
+				local dmg = E.assign_damage(effect.damage_type or DAMAGE_TRUE, math.random(min_dmg, max_dmg), tower.id, t.id)
 				dmg.pop = effect.pop
 				dmg.pop_conds = effect.pop_conds or DR_DAMAGE
 				dmg.damage_trace_origin = "tower_skill_endless"

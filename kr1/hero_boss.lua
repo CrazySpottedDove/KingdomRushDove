@@ -338,12 +338,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 					local targets = U.find_soldiers_in_range(store.soldiers or store.entities, hit_pos, 0, attack.damage_radius, attack.damage_flags, attack.damage_bans) or {}
 
 					for _, e in ipairs(targets) do
-						local d = E.create_damage()
-
-						d.source_id = this.id
-						d.target_id = e.id
-						d.damage_type = attack.damage_type
-						d.value = (math.random(attack.damage_min, attack.damage_max) + (this.unit.damage_buff or 0)) * this.unit.damage_factor
+						local d = E.assign_damage(attack.damage_type, (math.random(attack.damage_min, attack.damage_max) + (this.unit.damage_buff or 0)) * this.unit.damage_factor, this.id, e.id)
 						d.track_kills = this.track_kills ~= nil
 						d.track_damage = attack.track_damage
 						d.xp_gain_factor = attack.xp_gain_factor
@@ -554,12 +549,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 							break
 						end
 
-						local d = E.create_damage()
-
-						d.source_id = this.id
-						d.target_id = e.id
-						d.damage_type = ma.damage_type
-						d.value = this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max)
+						local d = E.assign_damage(ma.damage_type, this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max), this.id, e.id)
 						d.pop = ma.pop
 						d.pop_chance = ma.pop_chance
 						d.pop_conds = ma.pop_conds
@@ -1344,12 +1334,7 @@ tt.main_script.update = function(this, store)
 
 						if targets then
 							for _, target in ipairs(targets) do
-								local d = E.create_damage()
-
-								d.source_id = this.id
-								d.target_id = target.id
-								d.value = ca.damage_max
-								d.damage_type = ca.damage_type
+								local d = E.assign_damage(ca.damage_type, ca.damage_max, this.id, target.id)
 
 								queue_damage(store, d)
 							end
@@ -1428,12 +1413,7 @@ tt.main_script.update = function(this, store)
 					U.animation_start(this, an, sflip, store.tick_ts)
 					U.y_wait(store, bda.hit_time)
 
-					local d = E.create_damage()
-
-					d.source_id = this.id
-					d.target_id = target.id
-					d.value = U.frandom(bda.damage_min, bda.damage_max)
-					d.damage_type = bda.damage_type
+					local d = E.assign_damage(bda.damage_type, U.frandom(bda.damage_min, bda.damage_max), this.id, target.id)
 
 					queue_damage(store, d)
 					U.y_animation_wait(this)
@@ -2057,12 +2037,7 @@ tt.main_script.update = function(this, store)
 	local damage_value = math.ceil((b.damage_factor or 1) * math.random(b.damage_min, b.damage_max))
 
 	for _, enemy in ipairs(targets) do
-		local d = E.create_damage()
-
-		d.source_id = this.id
-		d.target_id = enemy.id
-		d.value = damage_value
-		d.damage_type = b.damage_type
+		local d = E.assign_damage(b.damage_type, damage_value, this.id, enemy.id)
 
 		queue_damage(store, d)
 	end
@@ -2160,12 +2135,7 @@ tt.main_script.update = function(this, store)
 
 		if targets then
 			for _, t in ipairs(targets) do
-				local d = E.create_damage()
-
-				d.value = math.random(a.damage_min, a.damage_max)
-				d.damage_type = a.damage_type
-				d.source_id = this.id
-				d.target_id = t.id
+				local d = E.assign_damage(a.damage_type, math.random(a.damage_min, a.damage_max), this.id, t.id)
 
 				queue_damage(store, d)
 
