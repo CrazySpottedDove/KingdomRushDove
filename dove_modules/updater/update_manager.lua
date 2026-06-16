@@ -369,7 +369,7 @@ local function cleanup_old_update_dirs(current_dir)
 	end
 end
 
--- 【新增】确保更新缓存目录存在
+-- 【新增】确保更新缓存目录存在。注意，更新缓存目录使用 lovefs 目录
 local function ensure_update_cache_dir(local_hash, server_hash)
 	local dir = get_update_cache_dir(local_hash, server_hash)
 
@@ -621,189 +621,10 @@ local function validate_chunk_response(code, body, headers, chunk_start, chunk_e
 	return false, nil
 end
 
--- 【核心函数】分块下载到真实文件系统（支持断点续传）
--- 使用自适应块大小
-local function download_to_file_chunked(url_base, file_param, real_path)
-	local part_path = real_path .. ".part"
-
-	-- 使用当前自适应的块大小
-	local chunk_size = current_chunk_size
-
-	-- 编码文件参数
-	local encoded_file = url_encode(file_param)
-	local url = url_base .. "?file=" .. encoded_file
-
-	-- 先获取文件总大小
-	local code, body, headers = async_request(url, {
-		method = "GET",
-		headers = {
-			["Range"] = "bytes=0-0"
-		}
-	}, 30)
-
-	local total_size = nil
-	if code == 206 then
-		local _, _, size = parse_content_range(headers["content-range"])
-		total_size = size
-	elseif code == 200 then
-		-- 服务器不支持 Range，或文件很小直接返回了
-		total_size = #body
-		local wf = io.open(part_path, "wb")
-		if not wf then
-			log_error("无法写入文件: " .. part_path)
-			return false
-		end
-		wf:write(body)
-		wf:close()
-
-		-- 直接完成
-		FU.ensure_parent_dir(real_path)
-		os.remove(real_path)
-		os.rename(part_path, real_path)
-		return true
-	else
-		log_error(string.format("无法获取文件大小: HTTP %d", code))
-		return false
-	end
-
-	if not total_size or total_size == 0 then
-		log_error("文件大小无效")
-		return false
-	end
-
-	-- log_info(string.format("文件大小: %.2f MB", total_size / 1024 / 1024))
-
-	-- 检查已下载的大小
-	local downloaded_size = 0
-	local f_check = io.open(part_path, "rb")
-	if f_check then
-		downloaded_size = f_check:seek("end")
-		f_check:close()
-		if downloaded_size > total_size then
-			log_info(string.format("检测到异常续传文件（%d > %d），自动重置重下", downloaded_size, total_size))
-			os.remove(part_path)
-			downloaded_size = 0
-		end
-		if downloaded_size > 0 then
-			log_info(string.format("续传 %.2f/%.2f MB", downloaded_size / 1024 / 1024, total_size / 1024 / 1024))
-		end
-	end
-
-	-- 分块下载
-	while downloaded_size < total_size do
-		local chunk_start = downloaded_size
-
-		local chunk_retries = 0
-		local chunk_success = false
-
-		while chunk_retries <= DOWNLOAD_CONFIG.chunk_max_retries do
-			local chunk_end = math.min(chunk_start + chunk_size - 1, total_size - 1)
-			local code, body, headers = async_request(url, {
-				method = "GET",
-				headers = {
-					["Range"] = "bytes=" .. chunk_start .. "-" .. chunk_end
-				}
-			}, DOWNLOAD_CONFIG.chunk_timeout)
-
-			if code == 206 or code == 200 then
-				local ok_resp, new_size = validate_chunk_response(code, body, headers, chunk_start, chunk_end, total_size, downloaded_size)
-				if ok_resp then
-					local write_mode = code == 200 and "wb" or "ab"
-					local wf = io.open(part_path, write_mode)
-					if not wf then
-						log_error("无法打开文件写入")
-						return false
-					end
-					wf:write(body)
-					wf:close()
-
-					downloaded_size = new_size
-
-					-- 更新进度（传递字节信息用于 UI）
-					local percent = downloaded_size * 100.0 / total_size
-					update_progress(percent, true, downloaded_size, total_size)
-
-					chunk_success = true
-					break
-				end
-				code = 0 -- 响应内容非法，按可重试网络错误处理
-			end
-
-			if not chunk_success then
-				-- 失败，判断是否重试
-				local should_retry_flag, error_type = should_retry_error(code, chunk_retries)
-
-				if not should_retry_flag then
-					log_error(string.format("下载失败: HTTP %d", code))
-					return false
-				end
-
-				chunk_retries = chunk_retries + 1
-				if chunk_retries > DOWNLOAD_CONFIG.chunk_max_retries then
-					log_error("块下载失败（超过重试限制）")
-					return false
-				end
-
-				-- 【优化】使用自适应块大小
-				adjust_chunk_size(false)
-				-- 更新本次循环使用的块大小
-				chunk_size = current_chunk_size
-
-				local backoff = calculate_backoff(chunk_retries, error_type)
-				log_info(string.format("重试中 (%d/%d, %ds, 块%dKB)...", chunk_retries, DOWNLOAD_CONFIG.chunk_max_retries, backoff, chunk_size / 1024))
-				async_sleep(backoff)
-			end
-		end
-
-		-- 【优化】成功下载块后，尝试逐步恢复块大小
-		if chunk_success then
-			adjust_chunk_size(true)
-			chunk_size = current_chunk_size
-		end
-	end
-
-	-- 验证最终大小
-	local f_final = io.open(part_path, "rb")
-	if not f_final then
-		log_error("下载完成但无法读取文件")
-		return false
-	end
-	local actual_size = f_final:seek("end")
-	f_final:close()
-
-	if actual_size ~= total_size then
-		log_error(string.format("文件大小不匹配: %d vs %d", actual_size, total_size))
-		return false
-	end
-
-	-- 重命名为最终文件
-	FU.ensure_parent_dir(real_path)
-	os.remove(real_path)
-	local renamed = os.rename(part_path, real_path)
-	if not renamed then
-		local rf = io.open(part_path, "rb")
-		local wf = io.open(real_path, "wb")
-		if rf and wf then
-			wf:write(rf:read("*a"))
-			rf:close()
-			wf:close()
-			os.remove(part_path)
-		else
-			if rf then
-				rf:close()
-			end
-			if wf then
-				wf:close()
-			end
-			log_error("文件移动失败")
-			return false
-		end
-	end
-
-	return true
-end
-
--- 【核心函数】分块下载到 LÖVE 文件系统（使用自适应块大小）
+--- 【核心函数】分块下载到 LOVE 文件系统（使用自适应块大小）
+---@param url_base string ipv4/ipv6 服务器基地址
+---@param file_param string 游戏文件相对路径
+---@param fs_path string 下载到的 lovefs 路径
 local function download_to_lovefs_chunked(url_base, file_param, fs_path)
 	local part_path = fs_path .. ".part"
 	-- 使用自适应块大小
@@ -931,13 +752,19 @@ local function download_to_lovefs_chunked(url_base, file_param, fs_path)
 end
 
 -- ============================================================
--- 打包下载: 给定完整 URL，分块下载 zip 到真实文件系统
+-- 打包下载: 给定完整 URL，分块下载 zip 到 lovefs
 -- ============================================================
-local function download_bundle_zip(url, real_path)
-	local part_path = real_path .. ".part"
+--- 下载 zip 到 lovefs
+---@param url any
+---@param fs_path any
+local function download_bundle_zip(url, fs_path)
+	local part_path = fs_path .. ".part"
 	local chunk_size = current_chunk_size
 
-	FU.ensure_parent_dir(real_path)
+	local parent = fs_path:match("(.+)/")
+	if parent then
+		FS.createDirectory(parent)
+	end
 
 	local code, body, headers = async_request(url, {
 		method = "GET",
@@ -952,16 +779,8 @@ local function download_bundle_zip(url, real_path)
 		total_size = size
 	elseif code == 200 then
 		total_size = #body
-		local wf = io.open(part_path, "wb")
-		if not wf then
-			log_error("无法写入打包: " .. part_path)
-			return false, 0
-		end
-		wf:write(body)
-		wf:close()
-		FU.ensure_parent_dir(real_path)
-		os.remove(real_path)
-		os.rename(part_path, real_path)
+		FS.remove(part_path)
+		FS.write(fs_path, body)
 		return true, total_size
 	else
 		log_error(string.format("无法获取打包大小: HTTP %d", code))
@@ -969,24 +788,20 @@ local function download_bundle_zip(url, real_path)
 	end
 
 	if not total_size or total_size == 0 then
-
 		log_error("打包大小无效")
 		return false, 0
 	end
 
-	local downloaded_size = 0
-	local f_check = io.open(part_path, "rb")
-	if f_check then
-		downloaded_size = f_check:seek("end")
-		f_check:close()
-		if downloaded_size > total_size then
-			log_info(string.format("检测到异常续传打包（%d > %d），自动重置重下", downloaded_size, total_size))
-			os.remove(part_path)
-			downloaded_size = 0
-		end
-		if downloaded_size > 0 then
-			log_info(string.format("续传打包 %.2f/%.2f KB", downloaded_size / 1024, total_size / 1024))
-		end
+	local existing = FS.read(part_path) or ""
+	local downloaded_size = #existing
+	if downloaded_size > total_size then
+		log_info(string.format("检测到异常续传打包（%d > %d），自动重置重下", downloaded_size, total_size))
+		FS.remove(part_path)
+		existing = ""
+		downloaded_size = 0
+	end
+	if downloaded_size > 0 then
+		log_info(string.format("续传打包 %.2f/%.2f KB", downloaded_size / 1024, total_size / 1024))
 	end
 
 	while downloaded_size < total_size do
@@ -1007,15 +822,12 @@ local function download_bundle_zip(url, real_path)
 			if code == 206 or code == 200 then
 				local ok_resp, new_size = validate_chunk_response(code, body, headers, chunk_start, chunk_end, total_size, downloaded_size)
 				if ok_resp then
-					local write_mode = code == 200 and "wb" or "ab"
-					local wf = io.open(part_path, write_mode)
-					if not wf then
-
-						log_error("无法打开打包文件写入: " .. part_path)
-						return false, 0
+					if code == 200 then
+						existing = body
+					else
+						existing = existing .. body
 					end
-					wf:write(body)
-					wf:close()
+					FS.write(part_path, existing)
 					downloaded_size = new_size
 					local percent = downloaded_size * 100.0 / total_size
 					update_progress(percent, true, downloaded_size, total_size)
@@ -1027,16 +839,13 @@ local function download_bundle_zip(url, real_path)
 
 			if not chunk_success then
 				local should_retry_flag, error_type = should_retry_error(code, chunk_retries)
-
 				if not should_retry_flag then
-
 					log_error(string.format("下载打包失败: HTTP %d", code))
 					return false, 0
 				end
 
 				chunk_retries = chunk_retries + 1
 				if chunk_retries > DOWNLOAD_CONFIG.chunk_max_retries then
-
 					log_error("打包下载失败（超过重试限制）")
 					return false, 0
 				end
@@ -1055,57 +864,23 @@ local function download_bundle_zip(url, real_path)
 		end
 	end
 
-	local f_final = io.open(part_path, "rb")
-	if not f_final then
-
-		log_error("打包下载完成但无法读取")
-		return false, 0
-	end
-	local actual_size = f_final:seek("end")
-	f_final:close()
-
-	if actual_size ~= total_size then
-
-		log_error(string.format("打包大小不匹配: %d vs %d", actual_size, total_size))
+	if #existing ~= total_size then
+		log_error(string.format("打包大小不匹配: %d vs %d", #existing, total_size))
 		return false, 0
 	end
 
-	FU.ensure_parent_dir(real_path)
-	os.remove(real_path)
-	local renamed = os.rename(part_path, real_path)
-	if not renamed then
-		local rf = io.open(part_path, "rb")
-		local wf = io.open(real_path, "wb")
-		if rf and wf then
-			wf:write(rf:read("*a"))
-			rf:close()
-			wf:close()
-			os.remove(part_path)
-		else
-			if rf then
-				rf:close()
-			end
-			if wf then
-				wf:close()
-			end
-
-			log_error("打包文件移动失败")
-			return false, 0
-		end
-	end
-
+	FS.write(fs_path, existing)
+	FS.remove(part_path)
 	return true, total_size
 end
 
 -- 解压 zip 到目标目录（使用 lib/zip.lua），返回是否成功
 local function extract_zip(zip_path, dest_dir)
-	local rf = io.open(zip_path, "rb")
-	if not rf then
+	local zip_data = FS.read(zip_path)
+	if not zip_data then
 		log_error("无法读取打包文件: " .. zip_path)
 		return false
 	end
-	local zip_data = rf:read("*a")
-	rf:close()
 
 	local ok, err = zip.unzip_to_dir(zip_data, dest_dir)
 	if not ok then
@@ -1138,7 +913,9 @@ local function diff_assets()
 
 	log_info("资源索引下载完成")
 
+	-- 远程的 assets_index 内容
 	local remote_assets_index = loadstring(index_content)()
+	-- 本地的 assets_index 内容
 	local local_assets_index = love.filesystem.load("_assets/assets_index.lua")()
 
 	local added_or_modified = {}
@@ -1191,8 +968,7 @@ local function sync_assets(added_or_modified)
 		if cached_info and cached_info.size and cached_info.size > 0 then
 			log_info("已缓存，跳过")
 		else
-			FU.ensure_parent_dir(cached_path)
-			local ok = download_to_file_chunked(url_base, file_path, cached_path)
+			local ok, _ = download_to_lovefs_chunked(url_base, file_path, cached_path)
 
 			if not ok then
 				log_error("下载失败: " .. file_path)
@@ -1242,7 +1018,7 @@ local function sync_assets_batch(batch, bi, total_batches)
 	local ok = download_bundle_zip(get_url, zip_path)
 	if not ok then
 		log_error("下载资源打包失败，回退到单文件下载")
-		os.remove(zip_path)
+		FS.remove(zip_path)
 		return sync_assets(batch)
 	end
 
@@ -1255,7 +1031,7 @@ local function sync_assets_batch(batch, bi, total_batches)
 		end
 	end
 	local ok = extract_zip(zip_path, assets_dir)
-	os.remove(zip_path)
+	FS.remove(zip_path)
 	if not ok then
 		log_error("解压资源打包失败，回退到单文件下载")
 		return sync_assets(batch)
@@ -1342,7 +1118,6 @@ local function upgrade_new_version(info)
 		if cached_info and cached_info.size and cached_info.size > 0 then
 			log_info("已缓存，跳过")
 		else
-			FU.ensure_parent_dir(cached_path)
 			local ok, _ = download_to_lovefs_chunked(url_base, file_path, cached_path)
 
 			if not ok then
@@ -1401,7 +1176,7 @@ local function upgrade_new_version_bundled(info)
 	local ok = download_bundle_zip(get_url, zip_path)
 	if not ok then
 		log_error("下载代码打包失败，回退到单文件下载")
-		os.remove(zip_path)
+		FS.remove(zip_path)
 		return upgrade_new_version(info)
 	end
 
@@ -1414,7 +1189,7 @@ local function upgrade_new_version_bundled(info)
 		end
 	end
 	local ok = extract_zip(zip_path, code_dir)
-	os.remove(zip_path)
+	FS.remove(zip_path)
 	if not ok then
 		log_error("解压代码打包失败，回退到单文件下载")
 		return upgrade_new_version(info)
@@ -1472,23 +1247,19 @@ local function commit_all_changes(info)
 		local local_path = "_assets/" .. file_path
 
 		-- 读取缓存文件
-		local rf = io.open(cached_path, "rb")
-		if not rf then
+		local content = FS.read(cached_path)
+		if not content then
 			log_error("读取资源缓存失败: " .. cached_path)
 			return false
 		end
-		local content = rf:read("*a")
-		rf:close()
 
 		-- 写入本地文件
 		FU.ensure_parent_dir(local_path)
-		local wf = io.open(local_path, "wb")
-		if not wf then
+		local success = FU.write_file(local_path, content)
+		if not success then
 			log_error("写入资源失败: " .. local_path)
 			return false
 		end
-		wf:write(content)
-		wf:close()
 		log_info("提交资源: " .. file_path)
 	end
 
