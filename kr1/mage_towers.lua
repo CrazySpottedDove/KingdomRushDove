@@ -4042,6 +4042,7 @@ tt.attacks.list[1].charge_animation = "shoot"
 tt.attacks.list[1].bullet = "bolt_tower_spirit_mausoleum"
 tt.attacks.list[1].max_charges = 3
 tt.attacks.list[1].stored_bullets = {}
+tt.attacks.list[1].extra_bullets = {}
 tt.attacks.list[1].cooldown = 1.5
 tt.attacks.list[1].shoot_time = 0.6
 tt.attacks.list[1].bullet_start_offset = v(-7, 85)

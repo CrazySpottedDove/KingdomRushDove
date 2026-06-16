@@ -26550,7 +26550,24 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 						for i = #a1.stored_bullets, 1, -1 do
 							local b = a1.stored_bullets[i]
 							a1.stored_bullets[i] = nil
-							-- b.bullet.shot_index = 2
+							b.bullet.target_id = target.id
+							b.bullet.to:set(pred_pos.x + target.unit.hit_offset.x, pred_pos.y + target.unit.hit_offset.y)
+							b.target_found = true
+							local d = SU.create_bullet_damage_without_pops(b.bullet, target.id, b.id)
+							target_expected_hp = target_expected_hp - U.predict_damage(target, d)
+							if target_expected_hp <= 0 then
+								if j < #targets then
+									j = j + 1
+									target = targets[j]
+									target_expected_hp = target.health.hp
+								else
+									break
+								end
+							end
+						end
+						for i = #a1.extra_bullets, 1, -1 do
+							local b = a1.extra_bullets[i]
+							a1.extra_bullets[i] = nil
 							b.bullet.target_id = target.id
 							b.bullet.to:set(pred_pos.x + target.unit.hit_offset.x, pred_pos.y + target.unit.hit_offset.y)
 							b.target_found = true
@@ -26615,12 +26632,12 @@ function scripts.aura_spectral_communion.update(this, store)
 					end
 
 					b.bullet.damage_factor = source.tower.damage_factor
-					b.bullet.from:copy(b.pos)
+					b.bullet.from:set(source.pos.x + start_offset.x, source.pos.y + start_offset.y)
 					b.bullet.shot_index = math.floor((i - 1) / 3 + 1) % -2 + 2
 					local offset = b.bullet.destination_offsets[(b.bullet.shot_index - 1) % #b.bullet.destination_offsets + 1]
 
 					b.bullet.to:set(source.pos.x + start_offset.x + offset.x, source.pos.y + start_offset.y + offset.y)
-					a.stored_bullets[#a.stored_bullets + 1] = b
+					a.extra_bullets[#a.extra_bullets + 1] = b
 					queue_insert(store, b)
 				end
 			end
