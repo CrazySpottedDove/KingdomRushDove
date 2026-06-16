@@ -8,6 +8,7 @@ perf.items = {}
 perf.tmp = {}
 perf.frames = 0
 perf.coros = 0
+perf.stms = 0
 
 function perf.reset()
 	for _, v in pairs(perf.items) do
@@ -109,6 +110,10 @@ end
 
 function perf.set_coros(coro_count)
 	perf.coros = coro_count
+end
+
+function perf.set_stms(stm_count)
+	perf.stms = stm_count
 end
 
 return perf

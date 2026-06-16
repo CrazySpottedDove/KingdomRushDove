@@ -126,6 +126,7 @@ function M.register(sys)
 		perf.stop("state machine")
 
 		perf.set_coros(store.entities_with_main_script_on_update_count)
+		perf.set_stms(store.entities_with_main_script_on_update_count1)
 	end
 
 	function sys.main_script:on_remove(entity, store)
