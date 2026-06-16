@@ -3502,6 +3502,7 @@ return {
 		action_arg = "pestilence",
 		place = 7,
 		image = "kr4_special_icons_0035",
+		sounds = {"GrimCemeteryPestilenceTaunt"},
 		tt_phrase = _("TOWER_GRIM_CEMETERY_PESTILENCE_NOTE"),
 		tt_list = {{
 			tt_title = _("TOWER_GRIM_CEMETERY_PESTILENCE_NAME_1"),
