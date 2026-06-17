@@ -190,13 +190,13 @@ else
     bash makefiles/pack_windows.sh no-upload
     start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-Windows电脑端.zip" "$SERVER_DIR_WINDOWS" "$QUARK_DIR_WINDOWS" "windows"
 
-    echo "[STEP] build linux"
-    bash makefiles/pack_linux.sh no-upload
-    start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-Linux电脑端.zip" "$SERVER_DIR_LINUX" "$QUARK_DIR_LINUX" "linux"
-
     echo "[STEP] build windows installer"
     bash makefiles/pack_windows_installer.sh no-upload
     start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-Windows电脑端-安装程序.exe" "$SERVER_DIR_WINDOWS" "$QUARK_DIR_WINDOWS" "windows_installer"
+
+    echo "[STEP] build linux"
+    bash makefiles/pack_linux.sh no-upload
+    start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-Linux电脑端.zip" "$SERVER_DIR_LINUX" "$QUARK_DIR_LINUX" "linux"
 fi
 
 run_upload_phase

@@ -22097,7 +22097,7 @@ function scripts.tower_shadow_archer.update(this, store)
 							U.y_wait_unconditional(store, as.shoot_time)
 
 							if not enemy.health.dead then
-								local d = E.assign_damage(bor(DAMAGE_INSTAKILL, DAMAGE_FX_EXPLODE), nil, this.id, enemy.id)
+								local d = E.assign_damage(bor(DAMAGE_INSTAKILL, DAMAGE_FX_EXPLODE), 0, this.id, enemy.id)
 								queue_damage(store, d)
 
 								as.ts = start_ts

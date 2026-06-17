@@ -2186,7 +2186,7 @@ function scripts.eb_efreeti.update(this, store)
 
 		for i = 1, math.min(#targets, a_poly.max_count) do
 			local target = targets[i]
-			local d = E.assign_damage(DAMAGE_EAT, nil, this.id, target.id)
+			local d = E.assign_damage(DAMAGE_EAT, 0, this.id, target.id)
 
 			queue_damage(store, d)
 			spawn_efreeti_small(target.pos)
@@ -2200,7 +2200,7 @@ function scripts.eb_efreeti.update(this, store)
 
 		for i = 1, math.min(#targets, a_des.max_count) do
 			local target = targets[i]
-			local d = E.assign_damage(bor(DAMAGE_DISINTEGRATE, DAMAGE_INSTAKILL), nil, this.id, target.id)
+			local d = E.assign_damage(bor(DAMAGE_DISINTEGRATE, DAMAGE_INSTAKILL), 0, this.id, target.id)
 
 			queue_damage(store, d)
 		end
@@ -5559,7 +5559,7 @@ function scripts.mod_bram_slap.update(this, store)
 
 	this.pos.x, this.pos.y = target.pos.x, target.pos.y
 
-	local d = E.assign_damage(DAMAGE_EAT, nil, this.id, target.id)
+	local d = E.assign_damage(DAMAGE_EAT, 0, this.id, target.id)
 
 	queue_damage(store, d)
 
@@ -6957,7 +6957,7 @@ function scripts.boss_cult_leader.update(this, store)
 							S:queue(ma.sound_hit, ma.sound_hit_args)
 
 							if ma.type == "melee" and not dodged and table.contains(this.enemy.blockers, target.id) then
-								local d = E.assign_damage(nil, nil, this.id, target.id)
+								local d = E.assign_damage(DAMAGE_TRUE, 0, this.id, target.id)
 								d.track_kills = this.track_kills ~= nil
 								d.track_damage = ma.track_damage
 								d.pop = ma.pop
@@ -8287,7 +8287,7 @@ function scripts.bullet_stage_16_overseer_tentacle_spawn.update(this, store)
 	end)
 
 	for _, enemy in ipairs(enemies) do
-		local d = E.assign_damage(b.damage_type, nil, this.id, enemy.id)
+		local d = E.assign_damage(b.damage_type, 0, this.id, enemy.id)
 		d.reduce_armor = b.reduce_armor
 		d.reduce_magic_armor = b.reduce_magic_armor
 
@@ -9864,7 +9864,7 @@ function scripts.boss_crocs.update(this, store)
 				blockers = get_executable_blocker()
 
 				for _, block in pairs(blockers) do
-					local d = E.assign_damage(attack_execute.damage_type, nil, this.id, block.id)
+					local d = E.assign_damage(attack_execute.damage_type, 0, this.id, block.id)
 					d.track_kills = this.track_kills ~= nil
 					d.track_damage = attack_execute.track_damage
 					d.pop = attack_execute.pop

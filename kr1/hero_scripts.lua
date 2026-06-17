@@ -1010,7 +1010,7 @@ scripts.hero_mirage = {
 						U.y_wait_unconditional(store, a_l.hit_time)
 
 						if target and not target.health.dead then
-							local d = E.assign_damage(nil, nil, this.id, target.id)
+							local d = E.assign_damage(DAMAGE_TRUE, 0, this.id, target.id)
 
 							if math.random() < a_l.instakill_chance then
 								if band(target.vis.flags, F_BOSS) ~= 0 then
@@ -1521,7 +1521,7 @@ scripts.hero_wizard = {
 								remaining_damage = remaining_damage - t.health.hp
 								count = count - 1
 
-								local d = E.assign_damage(DAMAGE_EAT, nil, this.id, t.id)
+								local d = E.assign_damage(DAMAGE_EAT, 0, this.id, t.id)
 
 								queue_damage(store, d)
 
@@ -10983,7 +10983,7 @@ function scripts.hero_regson_ultimate.update(this, store)
 		U.y_wait_unconditional(store, this.hit_time)
 
 		do
-			local d = E.assign_damage(nil, nil, this.id, target.id)
+			local d = E.assign_damage(DAMAGE_TRUE, 0, this.id, target.id)
 
 			if is_boss then
 				d.damage_type = DAMAGE_TRUE
@@ -12122,7 +12122,7 @@ function scripts.hero_veznan.update(this, store)
 					local o = V.v(a.balls_dest_offset.x * (this.render.sprites[1].flip_x and -1 or 1), a.balls_dest_offset.y)
 
 					for _, target in ipairs(targets) do
-						local d = E.assign_damage(DAMAGE_EAT, nil, this.id, target.id)
+						local d = E.assign_damage(DAMAGE_EAT, 0, this.id, target.id)
 
 						queue_damage(store, d)
 
@@ -14368,7 +14368,7 @@ function scripts.hero_bravebark_ultimate.update(this, store)
 
 					queue_insert(store, m)
 
-					local d = E.assign_damage(nil, this.damage * this.damage_factor, this.id, target.id)
+					local d = E.assign_damage(DAMAGE_TRUE, this.damage * this.damage_factor, this.id, target.id)
 
 					queue_damage(store, d)
 				end
@@ -21371,7 +21371,7 @@ function scripts.hero_venom.update(this, store)
 
 						if eat_targets then
 							for _, eat_target in pairs(eat_targets) do
-								local d = E.assign_damage(nil, nil, this.id, eat_target.id)
+								local d = E.assign_damage(DAMAGE_TRUE, 0, this.id, eat_target.id)
 
 								if eat_target.health.hp <= eat_target.health.hp_max * eat_enemy_attack.hp_trigger then
 									d.damage_type = DAMAGE_EAT
@@ -27472,7 +27472,7 @@ function scripts.hero_wukong.update(this, store)
 	end
 
 	local function create_damage(a, target_id)
-		local d = E.assign_damage(a.area_damage_type, nil, this.id, target_id)
+		local d = E.assign_damage(a.area_damage_type, 0, this.id, target_id)
 		d.track_kills = this.track_kills ~= nil
 		d.track_damage = a.track_damage
 		d.pop = a.pop
@@ -36561,7 +36561,7 @@ function scripts.mod_hero_spider_skill_instakill_melee.update(this, store, scrip
 
 	this.pos = target.pos
 
-	local d = E.assign_damage(bor(DAMAGE_INSTAKILL, DAMAGE_FX_NOT_EXPLODE, DAMAGE_NO_SPAWNS, DAMAGE_IGNORE_SHIELD), nil, this.id, target.id)
+	local d = E.assign_damage(bor(DAMAGE_INSTAKILL, DAMAGE_FX_NOT_EXPLODE, DAMAGE_NO_SPAWNS, DAMAGE_IGNORE_SHIELD), 0, this.id, target.id)
 
 	queue_damage(store, d)
 

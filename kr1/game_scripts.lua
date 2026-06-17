@@ -628,7 +628,7 @@ function scripts.drill.update(this, store)
 		coroutine.yield()
 	end
 
-	local d = E.assign_damage(DAMAGE_EAT, nil, this.id, target.id)
+	local d = E.assign_damage(DAMAGE_EAT, 0, this.id, target.id)
 	d.pop = b.pop
 	d.pop_conds = b.pop_conds
 	d.pop_chance = b.pop_chance
@@ -7779,7 +7779,7 @@ function scripts.sand_worm.update(this, store)
 			if v.health.dead then
 				v.render.sprites[1].hidden = true
 			else
-				local d = E.assign_damage(a.damage_type, nil, this.id, v.id)
+				local d = E.assign_damage(a.damage_type, 0, this.id, v.id)
 
 				queue_damage(store, d)
 			end
@@ -8124,7 +8124,7 @@ function scripts.carnivorous_plant.update(this, store)
 
 			if #targets > 0 then
 				for _, target in ipairs(targets) do
-					local d = E.assign_damage(a.damage_type, nil, this.id, target.id)
+					local d = E.assign_damage(a.damage_type, 0, this.id, target.id)
 
 					queue_damage(store, d)
 				end
@@ -9689,7 +9689,7 @@ function scripts.alien_abduction_ship.update(this, store)
 		queue_insert(store, es)
 		table.insert(enemy_decals, es)
 
-		local d = E.assign_damage(DAMAGE_EAT, nil, this.id, e.id)
+		local d = E.assign_damage(DAMAGE_EAT, 0, this.id, e.id)
 
 		queue_damage(store, d)
 	end
@@ -12490,7 +12490,7 @@ function scripts.enemy_shroom_breeder.update(this, store)
 						if not U.flags_pass(target.vis, a) then
 						-- block empty
 						else
-							local d = E.assign_damage(DAMAGE_EAT, nil, this.id, target.id)
+							local d = E.assign_damage(DAMAGE_EAT, 0, this.id, target.id)
 
 							queue_damage(store, d)
 
@@ -13301,7 +13301,7 @@ function scripts.enemy_twilight_heretic.update(this, store)
 					if not target then
 						a.ts = store.tick_ts
 					else
-						local d = E.assign_damage(DAMAGE_INSTAKILL, nil, this.id, target.id)
+						local d = E.assign_damage(DAMAGE_INSTAKILL, 0, this.id, target.id)
 
 						queue_damage(store, d)
 						coroutine.yield()
@@ -16828,7 +16828,7 @@ function scripts.mod_bravebark_branchball.update(this, store)
 
 	queue_insert(store, fx)
 
-	local d = E.assign_damage(DAMAGE_EAT, nil, this.id, target.id)
+	local d = E.assign_damage(DAMAGE_EAT, 0, this.id, target.id)
 
 	queue_damage(store, d)
 
@@ -17742,11 +17742,11 @@ function scripts.mod_bloodsydian_warlock.update(this, store)
 	target.health.ignore_damage = false
 
 	if this.modifier.kill then
-		local d = E.assign_damage(nil, target.health.hp, this.id, target.id)
+		local d = E.assign_damage(DAMAGE_TRUE, target.health.hp, this.id, target.id)
 
 		queue_damage(store, d)
 	elseif not target.health.dead and target.health.hp > 0 then
-		local d = E.assign_damage(DAMAGE_EAT, nil, this.id, target.id)
+		local d = E.assign_damage(DAMAGE_EAT, 0, this.id, target.id)
 
 		queue_damage(store, d)
 
