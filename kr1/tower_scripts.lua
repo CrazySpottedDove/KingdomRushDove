@@ -26597,6 +26597,26 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 	end
 end
 
+scripts.bolt_possession = {
+	insert = function(this, store)
+		if not scripts.bolt.insert(this, store) then
+			return false
+		end
+		local target = store.entities[this.bullet.target_id]
+		if target then
+			U.bans_add(target.vis, this.mark_flags.vis_bans)
+		end
+		return true
+	end,
+	remove = function(this, store)
+		local target = store.entities[this.bullet.target_id]
+		if target then
+			U.bans_remove(target.vis, this.mark_flags.vis_bans)
+		end
+		return true
+	end
+}
+
 scripts.aura_spectral_communion = {}
 function scripts.aura_spectral_communion.update(this, store)
 	local last_ts = store.tick_ts

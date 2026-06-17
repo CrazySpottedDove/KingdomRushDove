@@ -4174,7 +4174,10 @@ tt.main_script.insert = scripts.mod_possession.insert
 tt.main_script.update = scripts.mod_possession.update
 
 tt = RT("bolt_possession", "bolt")
-AC(tt, "tween")
+AC(tt, "tween", "mark_flags")
+tt.mark_flags.vis_bans = bor(F_INSTAKILL, F_RANGED, F_CUSTOM, F_EAT)
+tt.main_script.insert = scripts.bolt_possession.insert
+tt.main_script.remove = scripts.bolt_possession.remove
 tt.render.sprites[1].name = "flying"
 tt.render.sprites[1].prefix = "spirit_mausoleum_lvl4_possession_proyectile"
 tt.render.sprites[1].anchor = v(0.5, 0.5)
