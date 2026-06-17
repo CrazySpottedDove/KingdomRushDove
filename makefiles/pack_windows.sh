@@ -81,6 +81,7 @@ rsync -a \
     --exclude='.plugins/' \
     --exclude='config.json' \
     --exclude='.deepseek/' \
+    --exclude='.opencode' \
     ./ "$DEST_DIR/"
 
 echo "Creating archive -> $ARCHIVE_DIR"
