@@ -26391,6 +26391,10 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 	a1.ts = store.tick_ts
 	a2.ts = store.tick_ts
 
+	local function betray_filter(target)
+		return SU.is_valid_betray_target(target) and target.health.hp > a2.min_hp
+	end
+
 	while true do
 		if this.tower.blocked then
 			coroutine.yield()
@@ -26484,7 +26488,7 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 			end
 
 			if ready_to_use_power(pow_p, a2, store, this.tower.cooldown_factor) then
-				local target = U.find_biggest_enemy_in_range_filter_on(tpos(this), a.range, a2.vis_flags, a2.vis_bans, SU.is_valid_betray_target)
+				local target = U.find_biggest_enemy_in_range_filter_on(tpos(this), a.range, a2.vis_flags, a2.vis_bans, betray_filter)
 
 				if not target then
 					a2.ts = a2.ts + 0.1
@@ -26499,7 +26503,7 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 					U.y_wait(store, a2.shoot_time)
 
 					if target.health.dead then
-						local new_target = U.find_biggest_enemy_in_range_filter_on(tpos(this), a.range, a2.vis_flags, a2.vis_bans, SU.is_valid_betray_target)
+						local new_target = U.find_biggest_enemy_in_range_filter_on(tpos(this), a.range, a2.vis_flags, a2.vis_bans, betray_filter)
 
 						if new_target then
 							target = new_target
