@@ -68,7 +68,8 @@ game.required_textures = {
 	"kr4_ogres_tower_barrack",
 	"kr4_fallen_ones_grim_cemetery",
 	"kr4_warmongers_tower_balloon",
-	"kr4_fallen_ones_spirit_mausoleum"
+	"kr4_fallen_ones_spirit_mausoleum",
+	"kr4_elves_tower_barrack"
 }
 game.ref_h = REF_H
 game.ref_w = REF_W
@@ -109,7 +110,8 @@ game.required_sounds = {
 	"tower_rocket_riders",
 	"tower_grim_cemetery",
 	"tower_balloon",
-	"tower_spirit_mausoleum"
+	"tower_spirit_mausoleum",
+	"kr4_elves_barrack"
 }
 game.simulation_systems = {
 	"level",

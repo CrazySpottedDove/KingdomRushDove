@@ -4190,7 +4190,6 @@ tt.bullet.acceleration_factor = 0.01
 tt.bullet.min_speed = 100
 tt.bullet.max_speed = 200
 tt.bullet.max_track_distance = REF_H / 2
-tt.bullet.flip_x = true
 tt.bullet.mod = "mod_possession"
 tt.bullet.hit_fx = "fx_bolt_possession_hit"
 tt.bullet.pop = nil

@@ -26870,4 +26870,185 @@ function scripts.mod_possession.update(this, store)
 	end
 end
 
+scripts.soldier_elves_harasser = {}
+function scripts.soldier_elves_harasser.update(this, store, script)
+	local brk, sta
+
+	if this.vis._bans then
+		this.vis.bans = this.vis._bans
+		this.vis._bans = nil
+	end
+
+	if this.render.sprites[1].name == "raise" then
+		this.health_bar.hidden = true
+		U.animation_start(this, "raise", nil, store.tick_ts, 1)
+		while not U.animation_finished_default(this) and not this.health.dead do
+			coroutine.yield()
+		end
+		if not this.health.dead then
+			this.health_bar.hidden = nil
+		end
+	end
+
+	while true do
+		for pn, p in pairs(this.powers) do
+			if p.changed then
+				p.changed = nil
+				SU.soldier_power_upgrade(this, pn)
+			end
+		end
+
+		if this.health.dead then
+			local tower = store.entities[this.soldier.tower_id]
+			if this.powers.last_breath.level > 0 and tower then
+				local unit = E:create_entity(this.death_spawns.name)
+				unit.pos:copy(this.pos)
+				unit.nav_rally.pos:copy(this.pos)
+				unit.nav_rally.center = unit.nav_rally.pos
+				unit._espectral_tower_ref = tower
+				queue_insert(store, unit)
+				this.render.sprites[1].hidden = true
+				this.render.sprites[2].hidden = true
+				U.replace_blocker(store, this, unit)
+				U.y_wait_unconditional(store, this.health.dead_lifetime)
+				queue_remove(store, this)
+			else
+				SU.y_soldier_death(store, this)
+			end
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			if this.dodge.active then
+				this.dodge.active = false
+				if this.dodge.counter_attack and this.powers[this.dodge.counter_attack.power_name].level > 0 then
+					this.dodge.counter_attack_pending = true
+				elseif this.dodge.animation then
+					U.animation_start(this, this.dodge.animation, nil, store.tick_ts, 1)
+					while not U.animation_finished_default(this) do
+						coroutine.yield()
+					end
+				end
+				signal.emit("soldier-dodge", this)
+			end
+
+			while this.nav_rally.new do
+				if SU.y_soldier_new_rally(store, this) then
+					goto label_44_1
+				end
+			end
+
+			-- 允许骚扰者拦截状态下的远程攻击，但是禁止骚扰者在前往拦截过程中进行远程攻击。这是因为骚扰者的攻速过快，如果允许前往拦截过程中进行远程攻击，很容易发生敌人一直在等骚扰者过来的问题
+			if this.soldier.target_id and store.entities[this.soldier.target_id] and this.motion.arrived then
+				brk, sta = SU.y_soldier_ranged_attacks(store, this)
+				if brk then
+					goto label_44_1
+				end
+			end
+
+			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+			if brk or sta ~= A_NO_TARGET then
+				goto label_44_1
+			end
+
+			-- if this.ranged and not this.ranged.range_while_blocking then
+			brk, sta = SU.y_soldier_ranged_attacks(store, this)
+			if brk or sta == A_DONE then
+				goto label_44_1
+			-- elseif sta == A_IN_COOLDOWN and not this.ranged.go_back_during_cooldown then
+			-- goto label_44_0
+			end
+
+			if SU.soldier_go_back_step(store, this) then
+				goto label_44_1
+			end
+
+			::label_44_0::
+
+			SU.soldier_idle(store, this)
+			SU.soldier_regen(store, this)
+		end
+
+		::label_44_1::
+
+		coroutine.yield()
+	end
+end
+
+scripts.soldier_elves_espectral_harasser = {}
+function scripts.soldier_elves_espectral_harasser.update(this, store, script)
+	local brk, stam
+
+	this.reinforcement.ts = store.tick_ts
+	this.render.sprites[1].ts = store.tick_ts
+
+	if this.reinforcement.fade or this.reinforcement.fade_in then
+		SU.y_reinforcement_fade_in(store, this)
+	elseif this.render.sprites[1].name == "raise" then
+		this.health.ignore_damage = true
+		if this.sound_events.raise then
+			S:queue(this.sound_events.raise, this.sound_events.raise_args)
+		end
+		this.health_bar.hidden = true
+		U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
+		this.health.ignore_damage = false
+		if not this.health.dead then
+			this.health_bar.hidden = nil
+		end
+	end
+
+	local ps = E:create_entity(this.particle)
+	ps.particle_system.emit = this.nav_rally.new
+	ps.particle_system.track_id = this.id
+	queue_insert(store, ps)
+
+	while true do
+		if this.health.dead or this.reinforcement.duration and store.tick_ts - this.reinforcement.ts > this.reinforcement.duration then
+			ps.particle_system.emit = nil
+			if this.health.hp > 0 then
+				this.reinforcement.hp_before_timeout = this.health.hp
+			end
+			this.health.hp = 0
+			SU.y_soldier_death(store, this)
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			SU.soldier_courage_upgrade(store, this)
+
+			if not this.soldier.target_id then
+				local target = U.detect_foremost_enemy_in_range_filter_off(tpos(this._espectral_tower_ref), this._espectral_tower_ref.barrack.rally_range, F_BLOCK, F_CLIFF)
+				if target then
+					this.nav_rally.new = true
+					this.nav_rally.center:copy(target.pos)
+				end
+			end
+
+			while this.nav_rally.new do
+				ps.particle_system.emit = true
+				if SU.y_soldier_new_rally(store, this) then
+					goto label_espectral_1
+				end
+			end
+
+			if this.melee then
+				brk, stam = SU.y_soldier_melee_block_and_attacks(store, this)
+				if brk or stam ~= A_NO_TARGET then
+					goto label_espectral_1
+				end
+			end
+
+			SU.soldier_idle(store, this)
+		end
+
+		::label_espectral_1::
+
+		coroutine.yield()
+	end
+end
+
 return scripts

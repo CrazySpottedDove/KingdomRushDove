@@ -48277,5 +48277,105 @@ return {
 		prefix = "spirit_mausoleum_lvl4_gargoyle_spawn",
 		to = 35,
 		from = 1
+	},
+	elves_soldier_harasser_lvl4_idle = {
+		prefix = "elves_soldier_harasser_lvl4",
+		to = 1,
+		from = 1
+	},
+	elves_soldier_harasser_lvl4_running = {
+		prefix = "elves_soldier_harasser_lvl4",
+		to = 17,
+		from = 2
+	},
+	elves_soldier_harasser_lvl4_attack = {
+		prefix = "elves_soldier_harasser_lvl4",
+		to = 35,
+		from = 18
+	},
+	elves_soldier_harasser_lvl4_attack2 = {
+		prefix = "elves_soldier_harasser_lvl4",
+		to = 69,
+		from = 36
+	},
+	elves_soldier_harasser_lvl4_shoot = {
+		to = 93,
+		from = 70,
+		prefix = "elves_soldier_harasser_lvl4"
+	},
+	elves_soldier_harasser_lvl4_inshoot = {
+		to = 101,
+		from = 94,
+		prefix = "elves_soldier_harasser_lvl4"
+	},
+	elves_soldier_harasser_lvl4_multishoot = {
+		prefix = "elves_soldier_harasser_lvl4",
+		to = 106,
+		from = 102
+	},
+	elves_soldier_harasser_lvl4_outshoot = {
+		prefix = "elves_soldier_harasser_lvl4",
+		to = 119,
+		from = 107
+	},
+	elves_soldier_harasser_lvl4_backstabHit = {
+		prefix = "elves_soldier_harasser_lvl4",
+		to = 135,
+		from = 120
+	},
+	elves_soldier_harasser_lvl4_backstab = {
+		prefix = "elves_soldier_harasser_lvl4",
+		to = 155,
+		from = 136
+	},
+	elves_soldier_harasser_lvl4_death = {
+		prefix = "elves_soldier_harasser_lvl4",
+		to = 171,
+		from = 156
+	},
+	elves_soldier_harasser_lvl4_transform = {
+		prefix = "elves_soldier_harasser_lvl4",
+		to = 245,
+		from = 172
+	},
+	twilight_elves_barrack_tower_lvl4_open = {
+		prefix = "twilight_elves_barrack_tower_lvl4_layer2",
+		to = 9,
+		from = 1
+	},
+	twilight_elves_barrack_tower_lvl4_close = {
+		prefix = "twilight_elves_barrack_tower_lvl4_layer2",
+		to = 20,
+		from = 10
+	},
+	elves_soldier_espectral_harasser_run_effect_run = {
+		prefix = "elves_soldier_espectral_harasser_run_effect",
+		to = 4,
+		from = 1
+	},
+	elves_soldier_espectral_harasser_idle = {
+		prefix = "elves_soldier_espectral_harasser",
+		to = 10,
+		from = 1
+	},
+	elves_soldier_espectral_harasser_walk = {
+		prefix = "elves_soldier_espectral_harasser",
+		to = 26,
+		from = 11
+	},
+	elves_soldier_espectral_harasser_attack = {
+		prefix = "elves_soldier_espectral_harasser",
+		to = 51,
+		from = 27
+	},
+	elves_soldier_espectral_harasser_death = {
+		prefix = "elves_soldier_espectral_harasser",
+		to = 95,
+		from = 52
+	},
+	elves_soldier_espectral_harasser_raise = {
+		prefix = "elves_soldier_espectral_harasser",
+		to = 158,
+		from = 96
 	}
 }

@@ -1523,11 +1523,21 @@ function SU.y_soldier_do_loopable_ranged_attack(store, this, target, attack)
 			b.bullet.damage_factor = this.unit.damage_factor
 			b.bullet.damage_max = b.bullet.damage_max + this.unit.damage_buff
 			b.bullet.damage_min = b.bullet.damage_min + this.unit.damage_buff
+			b.bullet.level = attack.level
 
 			queue_insert(store, b)
 
 			if attack.xp_from_skill then
 				SU.hero_gain_xp_from_skill(this, this.hero.skills[attack.xp_from_skill])
+			end
+
+			if attack.check_target_before_shot then
+				if target.health.dead or target.health.hp - U.predict_damage(target, SU.create_bullet_damage_without_pops(b.bullet, target.id, b.id)) < 0 then
+					local new_target = attack.filter_fn and U.detect_foremost_enemy_between_range_filter_on(target.pos, 5, 100, attack.vis_flags, attack.vis_bans, attack.filter_fn) or U.detect_foremost_enemy_between_range_filter_off(this.pos, 5, 100, attack.vis_flags, attack.vis_bans)
+					if new_target then
+						target = new_target
+					end
+				end
 			end
 
 			attack_done = true

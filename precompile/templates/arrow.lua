@@ -599,10 +599,14 @@ return function(this, store)
                     decal.render.sprites[1].animated = false
                     decal.render.sprites[1].z = Z_DECALS
 
-                    @constif(b.rotation_speed)
-                    decal.render.sprites[1].flip_x = b.rotation_speed > 0
-                    @constelse
-                    decal.render.sprites[1].r = -math.pi * 0.5 * (1 + (0.5 - math.random()) * 0.35)
+                    constif(b.rotation_speed)
+                        decal.render.sprites[1].flip_x = b.rotation_speed > 0
+                    constelse
+                        @constif(b.miss_decal_rotation)
+                        decal.render.sprites[1].r = -math.pi * 0.5 * (1 + (0.5 - math.random()) * 0.35) + b.miss_decal_rotation
+                        @constelse
+                        decal.render.sprites[1].r = -math.pi * 0.5 * (1 + (0.5 - math.random()) * 0.35)
+                    constend
 
                     @constif(b.miss_decal_anchor)
                     decal.render.sprites[1].anchor = b.miss_decal_anchor

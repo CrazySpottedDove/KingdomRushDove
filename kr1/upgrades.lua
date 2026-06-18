@@ -1048,7 +1048,9 @@ upgrades.soldiers = {
 	"soldier_zombie",
 	"soldier_zombie_medium",
 	"soldier_zombie_big",
-	"soldier_gargoyle"
+	"soldier_gargoyle",
+	"soldier_elves_harasser",
+	"soldier_elves_espectral_harasser"
 }
 
 upgrades.barrack_soldiers = {
@@ -1085,7 +1087,9 @@ upgrades.barrack_soldiers = {
 	"soldier_dark_knight",
 	"soldier_zombie",
 	"soldier_zombie_medium",
-	"soldier_zombie_big"
+	"soldier_zombie_big",
+	"soldier_elves_harasser",
+	"soldier_elves_espectral_harasser"
 }
 
 upgrades.towers_with_barrack = {
@@ -1123,6 +1127,7 @@ upgrades.towers_with_barrack = {
 	"tower_orc_warriors",
 	"tower_dark_knights",
 	"tower_grim_cemetery",
+	"tower_twilight_elves_barrack",
 	"tower_balloon",
 	"tower_spirit_mausoleum"
 }

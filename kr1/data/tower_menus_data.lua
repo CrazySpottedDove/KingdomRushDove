@@ -626,6 +626,14 @@ return {
 			tt_title = _("TOWER_GRIM_CEMETERY_NAME"),
 			tt_desc = _("TOWER_GRIM_CEMETERY_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_twilight_elves_barrack",
+			type = "twilight_elves_barrack",
+			image = "kr4_main_icons_0011",
+			place = 29,
+			tt_title = _("TOWER_TWILIGHT_ELVES_BARRACK_NAME"),
+			tt_desc = _("TOWER_TWILIGHT_ELVES_BARRACK_DESCRIPTION")
+		}),
 		tpl.rally,
 		tpl.sell
 	}},
@@ -3550,6 +3558,49 @@ return {
 		}, {
 			tt_title = _("TOWER_BALLOON_OIL_NAME_3"),
 			tt_desc = _("TOWER_BALLOON_OIL_DESCRIPTION_3")
+		}}
+	}), tpl.rally, tpl.sell}},
+	twilight_elves_barrack = {{M(tpl.upgrade_power, {
+		action_arg = "arrow_storm",
+		image = "kr4_special_icons_0050",
+		place = 5,
+		sounds = {"elves_barrack_multishoot_upgrade"},
+		tt_phrase = _("TOWER_TWILIGHT_ELVES_BARRACK_ARROW_STORM_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_TWILIGHT_ELVES_BARRACK_ARROW_STORM_NAME_1"),
+			tt_desc = _("TOWER_TWILIGHT_ELVES_BARRACK_ARROW_STORM_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_TWILIGHT_ELVES_BARRACK_ARROW_STORM_NAME_2"),
+			tt_desc = _("TOWER_TWILIGHT_ELVES_BARRACK_ARROW_STORM_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_TWILIGHT_ELVES_BARRACK_ARROW_STORM_NAME_3"),
+			tt_desc = _("TOWER_TWILIGHT_ELVES_BARRACK_ARROW_STORM_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "backstab",
+		image = "kr4_special_icons_0051",
+		place = 6,
+		sounds = {"elves_barrack_backstab_upgrade"},
+		tt_phrase = _("TOWER_TWILIGHT_ELVES_BARRACK_BACKSTAB_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_TWILIGHT_ELVES_BARRACK_BACKSTAB_NAME_1"),
+			tt_desc = _("TOWER_TWILIGHT_ELVES_BARRACK_BACKSTAB_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_TWILIGHT_ELVES_BARRACK_BACKSTAB_NAME_2"),
+			tt_desc = _("TOWER_TWILIGHT_ELVES_BARRACK_BACKSTAB_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_TWILIGHT_ELVES_BARRACK_BACKSTAB_NAME_3"),
+			tt_desc = _("TOWER_TWILIGHT_ELVES_BARRACK_BACKSTAB_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "last_breath",
+		image = "kr4_special_icons_0052",
+		place = 7,
+		sounds = {"elves_barrack_afterlife_upgrade"},
+		tt_phrase = _("TOWER_TWILIGHT_ELVES_BARRACK_LAST_BREATH_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_TWILIGHT_ELVES_BARRACK_LAST_BREATH_NAME_1"),
+			tt_desc = _("TOWER_TWILIGHT_ELVES_BARRACK_LAST_BREATH_DESCRIPTION_1")
 		}}
 	}), tpl.rally, tpl.sell}}
 }
