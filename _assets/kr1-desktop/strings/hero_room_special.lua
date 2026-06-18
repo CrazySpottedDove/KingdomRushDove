@@ -3151,4 +3151,18 @@ cycle_time = blc.damage_every
 radius = blc.damage_radius
 map["日炎风暴"] = str(cooldown_str(), "召唤一道纯粹太阳能量的巨型光柱，沿路径前进，每", cycle_time, "秒对", radius, "范围内敌人造成", damage_str(), "。")
 
+function H.dump()
+	for hero_name, skills in pairs(H) do
+		print("Hero:", hero_name)
+		if type(skills) == "table" then
+			for skill_name, skill_description in pairs(skills) do
+				print(skill_name)
+				print(skill_description)
+			end
+		end
+	end
+end
+
+-- H.dump()
+
 return H

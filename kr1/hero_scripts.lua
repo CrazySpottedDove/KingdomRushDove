@@ -23126,7 +23126,7 @@ function scripts.mod_hero_dragon_gem_crystal_instakill.update(this, store)
 		end
 	end
 
-	local d = E.assign_damage(this.damage_type, math.random(this.damage_min, this.damage_max), this.id, target.id)
+	local d = E.assign_damage(this.damage_type, 1, this.id, target.id)
 
 	queue_damage(store, d)
 	U.animation_start(this, "idle", nil, store.tick_ts, true)

@@ -33276,6 +33276,11 @@ function scripts.enemy_cutthroat_rat.update(this, store)
 				return false
 			end
 
+			-- 保护：考虑 blockers 还没来得及清理的情况
+			if not store.entities[this.enemy.blockers[1]] then
+				return false
+			end
+
 			return true
 		end
 
