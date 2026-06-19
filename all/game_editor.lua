@@ -1673,6 +1673,7 @@ end
 --- 将当前 store 对应的关卡数据全部保存
 function editor:level_save()
 	log.info("Saving level: %s", self.store.level_name)
+	love.filesystem.createDirectory("game_editor/data/levels")
 	local ok_curves = self:save_curves()
 	local ok_grid = self:save_grid()
 	local ok_data = self:save_data()
