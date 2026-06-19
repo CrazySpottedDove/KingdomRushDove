@@ -3,7 +3,7 @@
 local log = require("lib.klua.log"):new("game")
 local storage = require("all.storage")
 log:set_level("debug")
-
+local adaptive_fps = require("dove_modules.perf.adaptive_fps")
 require("lib.klua.dump")
 
 local km = require("lib.klua.macros")
@@ -107,7 +107,7 @@ editor.required_textures = {
 editor.ref_h = REF_H
 editor.ref_w = REF_W
 editor.ref_res = TEXTURE_SIZE_ALIAS.ipad
-editor.simulation_systems = {"editor_overrides", "editor_script", "render", "last_hook"}
+editor.simulation_systems = {"editor_overrides", "editor_script", "render", "health", "last_hook"}
 
 local function mode_suffix(mode)
 	return GEU.mode_to_str(mode or GAME_MODE_CAMPAIGN)
@@ -831,6 +831,7 @@ function editor:save_wave_assets()
 end
 
 function editor:init(screen_w, screen_h, done_callback)
+	adaptive_fps:set_scene(self)
 	self.screen_w = screen_w
 	self.screen_h = screen_h
 	self.done_callback = done_callback
