@@ -121,15 +121,32 @@ cat > "$NSI_FILE" << NSISEOL
 
 Name "王国保卫战 Dove 版"
 OutFile "..\\$(basename "$INSTALLER_FILE")"
-InstallDir "\$PROGRAMFILES64\\王国保卫战Dove版"
-InstallDirRegKey HKLM "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "UninstallString"
-RequestExecutionLevel admin
+InstallDir "\$LOCALAPPDATA\\王国保卫战Dove版"
+InstallDirRegKey HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "UninstallString"
+RequestExecutionLevel user
 
 SetCompressor zlib
 
 !define MUI_ABORTWARNING
+!define MUI_ABORTWARNING_TEXT "你确定要退出安装吗？"
 !define MUI_ICON "${ICON_NSIS}"
 !define MUI_UNICON "${ICON_NSIS}"
+!define MUI_WELCOMEPAGE_TITLE "欢迎安装 王国保卫战 Dove 版"
+!define MUI_WELCOMEPAGE_TEXT "本安装向导将引导您完成安装过程。$\r$\n$\r$\n点击「下一步」继续。$\r$\n$\r$\n注意：本游戏为免费改版，一切售卖本游戏的行为均属侵权。"
+!define MUI_FINISHPAGE_TITLE "安装完成"
+!define MUI_FINISHPAGE_TEXT "王国保卫战 Dove 版已成功安装！$\r$\n$\r$\n点击「完成」退出安装向导。"
+
+!define MUI_INSTFILESPAGE_FINISHHEADER_TEXT "安装进行中"
+!define MUI_INSTFILESPAGE_FINISHHEADER_SUBTEXT "请稍候，正在复制文件..."
+
+Caption "王国保卫战 Dove 版 安装程序"
+VIProductVersion "${current_id}"
+VIAddVersionKey "ProductName" "王国保卫战 Dove 版"
+VIAddVersionKey "FileDescription" "王国保卫战 Dove 版 安装程序"
+VIAddVersionKey "FileVersion" "${current_id}"
+VIAddVersionKey "LegalCopyright" "Modified version based on Kingdom Rush, Copyright Ironhide Game Studio. KingdomRushDove mod by CrazySpottedDove."
+BrandingText "https://github.com/CrazySpottedDove/KingdomRushDove"
+
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
@@ -157,19 +174,19 @@ Section "Install"
 
   WriteUninstaller "\$INSTDIR\\uninstall.exe"
 
-  WriteRegStr HKLM "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "DisplayName" "王国保卫战 Dove 版"
-  WriteRegStr HKLM "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "UninstallString" "\$INSTDIR\\uninstall.exe"
-  WriteRegStr HKLM "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "DisplayIcon" "\$INSTDIR\\KingdomRushDove\\KingdomRushDove版启动器.exe"
-  WriteRegStr HKLM "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "Publisher" "Dove"
-  WriteRegDWORD HKLM "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "NoModify" 1
-  WriteRegDWORD HKLM "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "NoRepair" 1
+  WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "DisplayName" "王国保卫战 Dove 版"
+  WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "UninstallString" "\$INSTDIR\\uninstall.exe"
+  WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "DisplayIcon" "\$INSTDIR\\KingdomRushDove\\KingdomRushDove版启动器.exe"
+  WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "Publisher" "Dove"
+  WriteRegDWORD HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "NoModify" 1
+  WriteRegDWORD HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版" "NoRepair" 1
 SectionEnd
 
 Section "Uninstall"
   Delete "\$DESKTOP\\王国保卫战 Dove 版.lnk"
   RMDir /r "\$SMPROGRAMS\\王国保卫战 Dove 版"
   RMDir /r "\$INSTDIR"
-  DeleteRegKey HKLM "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版"
+  DeleteRegKey HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\王国保卫战Dove版"
 SectionEnd
 NSISEOL
 
