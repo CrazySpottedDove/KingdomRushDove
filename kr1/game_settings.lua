@@ -1251,7 +1251,8 @@ GS.wraith = {
 	soldier_zombie = true,
 	soldier_zombie_medium = true,
 	soldier_zombie_big = true,
-	soldier_gargoyle = true
+	soldier_gargoyle = true,
+	soldier_tower_ghost_lvl4 = true
 }
 
 return GS

@@ -2867,6 +2867,7 @@ tt.sound_events.death = "TowerGhostSoulAttackTravel"
 tt.ui.click_rect = r(-12, 2, 24, 30)
 tt.soul = "soul_soldier_tower_ghost_lvl4"
 tt.extra_damage_cooldown = b.extra_damage.cooldown_start
+tt.vis.bans = bor(F_CANNIBALIZE, F_POISON, F_LYCAN, F_SKELETON)
 
 tt = RT("soul_soldier_tower_ghost_lvl4", "decal_scripted")
 tt.main_script.update = scripts.tower_ghost.soul_update
@@ -3998,7 +3999,7 @@ tt.info.portrait = "kr4_info_portraits_towers_0011"
 tt.tower.type = "twilight_elves_barrack"
 tt.tower.price = 250
 tt.tower.menu_offset = v(0, 15)
-tt.barrack.rally_range = 170
+tt.barrack.rally_range = 180
 tt.barrack.soldier_type = "soldier_elves_harasser"
 tt.barrack.max_soldiers = 2
 tt.powers.backstab = CC("power")
