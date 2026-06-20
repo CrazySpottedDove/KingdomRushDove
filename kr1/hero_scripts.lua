@@ -4,7 +4,7 @@ require("i18n")
 local scripts = require("endless_scripts")
 local AC = require("achievements")
 local log = require("lib.klua.log"):new("hero_scripts")
-
+local A = require("animation_db")
 local km = require("lib.klua.macros")
 local signal = require("lib.hump.signal")
 local E = require("entity_db")
@@ -34098,16 +34098,6 @@ function scripts.mod_hero_robot_skill_uppercut.insert(this, store)
 		return false
 	end
 
-	this._entity_frame_names = {}
-
-	for _, es in pairs(target.render.sprites) do
-		if es.animated then
-			table.insert(this._entity_frame_names, es.frame_name)
-		else
-			table.insert(this._entity_frame_names, es.name)
-		end
-	end
-
 	SU.stun_inc(target)
 
 	target.vis.bans = F_ALL
@@ -34120,7 +34110,7 @@ function scripts.mod_hero_robot_skill_uppercut.insert(this, store)
 end
 
 function scripts.mod_hero_robot_skill_uppercut.update(this, store, script)
-	local start_ts
+	local start_ts = store.tick_ts
 	local m = this.modifier
 	local target = store.entities[this.modifier.target_id]
 
@@ -34130,37 +34120,7 @@ function scripts.mod_hero_robot_skill_uppercut.update(this, store, script)
 		return
 	end
 
-	this.pos = target.pos
-
 	local is_on_right = store.entities[this.modifier.source_id].pos.x < this.pos.x
-
-	for k, v in pairs(target.render.sprites) do
-		if v.exo then
-
-			break
-		end
-	end
-
-	local es = E:create_entity(this.clone_decal)
-
-	es.pos.y = es.pos.y + this.enemy_move_offset.y
-
-	if is_on_right then
-		es.pos.x = es.pos.x + this.enemy_move_offset.x
-	else
-		es.pos.x = es.pos.x - this.enemy_move_offset.x
-	end
-
-	start_ts = store.tick_ts
-	es.tween.ts = store.tick_ts
-
-	local offset_to_center = target.unit.hit_offset.y / 2
-
-	es.render.sprites[1].offset.y = offset_to_center * -1
-	es.tween.props[1].keys[2][1] = this.modifier.duration - fts(6)
-	es.tween.props[1].keys[3][1] = this.modifier.duration
-
-	queue_insert(store, es)
 
 	while store.tick_ts - start_ts < this.modifier.duration do
 		target = store.entities[m.target_id]
@@ -34168,9 +34128,6 @@ function scripts.mod_hero_robot_skill_uppercut.update(this, store, script)
 		if not target or target.health.dead then
 			break
 		end
-
-		this.pos = target.pos
-		es.pos = V.vclone(target.pos)
 
 		local speed = this.fly_speed
 		local rot = this.rotation_speed
@@ -34203,12 +34160,6 @@ function scripts.mod_hero_robot_skill_uppercut.update(this, store, script)
 		target.unit.show_blood_pool = true
 
 		for i, es in pairs(target.render.sprites) do
-			if es.animated then
-				es.frame_name = this._entity_frame_names[i]
-			else
-				es.name = this._entity_frame_names[i]
-			end
-
 			es.r = 0
 		end
 	end

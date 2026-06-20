@@ -22726,11 +22726,11 @@ return {
 		prefix = "hermit_toad_tower_tongue",
 		to = 12
 	},
-	hermit_toad_tower_tonguehit_run = {
-		from = 1,
-		prefix = "hermit_toad_tower_tonguehit",
-		to = 15
-	},
+	-- hermit_toad_tower_tonguehit_run = {
+	-- 	from = 1,
+	-- 	prefix = "hermit_toad_tower_tonguehit",
+	-- 	to = 15
+	-- },
 	hermit_toad_tower_trail2_run = {
 		from = 1,
 		prefix = "hermit_toad_tower_trail2",
@@ -48377,5 +48377,86 @@ return {
 		prefix = "elves_soldier_espectral_harasser",
 		to = 158,
 		from = 96
+	},
+	tower_goblirangs_shooter_idleUp = {
+		prefix = "tower_goblirangs_shooter",
+		to = 1,
+		from = 1
+	},
+	tower_goblirangs_shooter_idleDown = {
+		prefix = "tower_goblirangs_shooter",
+		to = 1,
+		from = 1
+	},
+	tower_goblirangs_shooter_shootUp = {
+		prefix = "tower_goblirangs_shooter",
+		to = 12,
+		from = 2,
+		post = {12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 10, 9}
+	},
+	tower_goblirangs_shooter_shootDown = {
+		prefix = "tower_goblirangs_shooter",
+		to = 12,
+		from = 2,
+		post = {12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 10, 9}
+	},
+	tower_goblirangs_shooter_beesUp = {
+		prefix = "tower_goblirangs_shooter",
+		to = 23,
+		from = 13,
+		post = {23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 21, 20}
+	},
+	tower_goblirangs_shooter_beesDown = {
+		prefix = "tower_goblirangs_shooter",
+		to = 23,
+		from = 13,
+		post = {23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 21, 20}
+	},
+	tower_goblirangs_shooter_bigUp = {
+		prefix = "tower_goblirangs_shooter",
+		to = 44,
+		from = 24,
+		post = {44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 42, 41}
+	},
+	tower_goblirangs_shooter_bigDown = {
+		prefix = "tower_goblirangs_shooter",
+		to = 44,
+		from = 24,
+		post = {44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 42, 41}
+	},
+	goblirangs_proy_hit_decal = {
+		prefix = "goblirangs_proy_decal",
+		to = 7,
+		from = 1
+	},
+	goblirangs_proy = {
+		prefix = "goblirangs_proy",
+		to = 1,
+		from = 1
+	},
+	tower_goblirangs_overlay = {
+		prefix = "tower_goblirangs_base",
+		to = 2,
+		from = 2
+	},
+	goblirangs_bees_aura = {
+		prefix = "goblirangs_bees",
+		to = 18,
+		from = 1
+	},
+	goblirangs_bees_decal = {
+		prefix = "goblirangs_bees_decal",
+		to = 9,
+		from = 1
+	},
+	goblirangs_proy_big_decal = {
+		prefix = "goblirangs_proy_big_decal",
+		to = 9,
+		from = 1
+	},
+	stun_goblirang_loop = {
+		prefix = "goblirang_stun",
+		to = 10,
+		from = 1
 	}
 }

@@ -810,7 +810,6 @@ function image_db:save_to_file()
 	storage:write_lua("image_db_DB_IMAGES.lua", self.db_images)
 	storage:write_lua("image_db_DB_ATLAS.lua", self.db_atlas)
 	storage:write_lua("image_db_ATLAS_USES.lua", self.atlas_uses)
-
 end
 
 return image_db

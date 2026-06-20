@@ -5,6 +5,7 @@ require("lib.klua.table")
 
 local km = require("lib.klua.macros")
 local signal = require("lib.hump.signal")
+local A = require("animation_db")
 local AC = require("achievements")
 local E = require("entity_db")
 local GR = require("grid_db")
@@ -5451,11 +5452,11 @@ function scripts.mod_freeze.insert(this, store)
 
 	this._entity_frame_names = {}
 
-	for _, es in pairs(target.render.sprites) do
-		if es.animated then
-			table.insert(this._entity_frame_names, es.frame_name)
+	for _, s in pairs(target.render.sprites) do
+		if s.animated then
+			table.insert(this._entity_frame_names, A:frame_name(s.prefix and (s.prefix .. "_" .. s.name) or s.name, s.frame_idx))
 		else
-			table.insert(this._entity_frame_names, es.name)
+			table.insert(this._entity_frame_names, s.name)
 		end
 	end
 

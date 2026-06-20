@@ -93,13 +93,13 @@ function animation_db:fn(animation_name, time_offset, loop, fps)
 	local a = self.db[animation_name]
 
 	if not a then
-		if not animation_name and self.missing_animations["nil"] or self.missing_animations[animation_name] then
+		if self.missing_animations[animation_name] then
 			return nil, 0, nil
 		end
 
 		log.error("animation %s not found", animation_name)
 
-		self.missing_animations[animation_name or "nil"] = true
+		self.missing_animations[animation_name] = true
 
 		return nil, 0, nil
 	end
@@ -113,6 +113,23 @@ function animation_db:fn(animation_name, time_offset, loop, fps)
 	local idx = loop and (floor(time_in_frames_plus_eps) % len + 1) or max(1, min(len, ceil(time_in_frames_plus_eps)))
 
 	return a[2][idx], max(0, floor((ceil(time_in_frames_plus_eps + adaptive_fps.tick_length * fps) - 1) / len)), idx
+end
+
+function animation_db:frame_name(animation_name, frame_idx)
+	local a = self.db[animation_name]
+	if not a then
+		if self.missing_animations[animation_name] then
+			return nil
+		end
+
+		log.error("animation %s not found", animation_name)
+
+		self.missing_animations[animation_name] = true
+
+		return nil
+	end
+
+	return a[2][frame_idx]
 end
 
 --- DEPRECATED: 该方法已废弃，建议使用 extrace_frame_from 来直接从原始定义表中提取出 frame_count 和 frame_names。此处保留以提供部分插件代码的兼容性。

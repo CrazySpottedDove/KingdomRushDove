@@ -17032,13 +17032,6 @@ tt.tween.props[2].keys = {{0, v(1, 1)}, {fts(6), v(1.7, 1.7)}, {fts(16), v(2, 2)
 tt.tween.props[2].sprite_id = 1
 tt.tween.remove = true
 
-tt = RT("decal_hero_robot_skill_uppercut_clone", "decal")
-AC(tt, "tween")
-tt.tween.props[1].name = "alpha"
-tt.tween.props[1].keys = {{0, 255}, {0, 255}, {0, 0}}
-tt.tween.props[1].sprite_id = 1
-tt.tween.remove = true
-
 tt = RT("decal_hero_robot_ultimate_floor", "decal_tween")
 tt.render.sprites[1].name = "Blaze_trendecal_run"
 tt.render.sprites[1].animated = true
@@ -17364,11 +17357,9 @@ tt.tween.remove = false
 
 tt = RT("mod_hero_robot_skill_uppercut", "modifier")
 b = balance.heroes.hero_robot.uppercut
-AC(tt, "dps", "render")
 tt.modifier.duration = fts(10)
 tt.main_script.insert = scripts.mod_hero_robot_skill_uppercut.insert
 tt.main_script.update = scripts.mod_hero_robot_skill_uppercut.update
-tt.clone_decal = "decal_hero_robot_skill_uppercut_clone"
 tt.fly_speed = v(7, 8)
 tt.rotation_speed = 0.17
 

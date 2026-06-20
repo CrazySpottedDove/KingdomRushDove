@@ -210,7 +210,6 @@ sprite.ignore_start = nil
 sprite.ts = 0
 sprite.runs = 0
 sprite.frame_idx = 1
-sprite.frame_name = nil
 sprite.sync_flag = nil
 
 -- Runtime fields (31): --   _width, alpha, anchor, angles, animated, color, delay_start, draw_order, exclude_mod_offset, exo, exo_hide_prefix, flip_x, group, hidden, hidden_count,
