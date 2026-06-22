@@ -48378,85 +48378,145 @@ return {
 		to = 158,
 		from = 96
 	},
-	tower_goblirangs_shooter_idleUp = {
-		prefix = "tower_goblirangs_shooter",
-		to = 1,
-		from = 1
+	warmongers_archer_tower_proyectile_hit_run = {
+		prefix = "warmongers_archer_tower_hit",
+		from = 1,
+		to = 7
 	},
-	tower_goblirangs_shooter_idleDown = {
-		prefix = "tower_goblirangs_shooter",
-		to = 1,
-		from = 1
+	warmongers_archer_tower_proyectile_special_hit_run = {
+		prefix = "warmongers_archer_tower_lvl4_special_hit",
+		from = 1,
+		to = 8
 	},
-	tower_goblirangs_shooter_shootUp = {
-		prefix = "tower_goblirangs_shooter",
-		to = 12,
+	warmongers_archer_tower_proyectile_spineffect_run = {
+		prefix = "warmongers_archer_tower_proyectile_spineffect",
+		from = 1,
+		to = 6
+	},
+	particle_honey_bees = {
+		prefix = "warmongers_archer_tower_lvl4_honey_particle",
+		from = 1,
+		to = 22
+	},
+	explosion_honey_bees = {
+		prefix = "warmongers_archer_tower_lvl4_honey_explosion",
+		from = 1,
+		to = 10
+	},
+	honey_bees = {
+		prefix = "warmongers_archer_tower_lvl4_honey_cloud",
+		from = 1,
+		to = 18
+	},
+	warmongers_archer_tower_shooter_idleDown = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 1,
+		to = 1
+	},
+	warmongers_archer_tower_shooter_idleUp = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 25,
+		to = 25
+	},
+	warmongers_archer_tower_shooter_shootDownIn = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
 		from = 2,
-		post = {12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 10, 9}
+		to = 18
 	},
-	tower_goblirangs_shooter_shootDown = {
-		prefix = "tower_goblirangs_shooter",
-		to = 12,
+	warmongers_archer_tower_shooter_shootDownIdle = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 18,
+		to = 18
+	},
+	warmongers_archer_tower_shooter_shootDownOut = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 19,
+		to = 24
+	},
+	warmongers_archer_tower_shooter_shootUpIn = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 26,
+		to = 42
+	},
+	warmongers_archer_tower_shooter_shootUpIdle = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 42,
+		to = 42
+	},
+	warmongers_archer_tower_shooter_shootUpOut = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 43,
+		to = 48
+	},
+	warmongers_archer_tower_shooter_bigDownIn1 = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 49,
+		to = 74
+	},
+	warmongers_archer_tower_shooter_bigDownIdle1 = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 75,
+		to = 75
+	},
+	warmongers_archer_tower_shooter_bigDownOut1 = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 76,
+		to = 89
+	},
+	warmongers_archer_tower_shooter_bigDownIn2 = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 90,
+		to = 115
+	},
+	warmongers_archer_tower_shooter_bigDownIdle2 = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 116,
+		to = 116
+	},
+	warmongers_archer_tower_shooter_bigDownOut2 = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 117,
+		to = 130
+	},
+	warmongers_archer_tower_shooter_bigUpIn1 = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 131,
+		to = 156
+	},
+	warmongers_archer_tower_shooter_bigUpIdle1 = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 157,
+		to = 157
+	},
+	warmongers_archer_tower_shooter_bigUpOut1 = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 158,
+		to = 171
+	},
+	warmongers_archer_tower_shooter_bigUpIn2 = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 172,
+		to = 197
+	},
+	warmongers_archer_tower_shooter_bigUpIdle2 = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 198,
+		to = 198
+	},
+	warmongers_archer_tower_shooter_bigUpOut2 = {
+		prefix = "warmongers_archer_tower_shooter_lvl4",
+		from = 199,
+		to = 212
+	},
+	--投弹手扔蜂窝
+	warmongers_archer_tower_shooter_beesDown = {
+		prefix = "warmongers_archerhoney_tower_shooter_lvl4",
 		from = 2,
-		post = {12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 10, 9}
+		to = 17
 	},
-	tower_goblirangs_shooter_beesUp = {
-		prefix = "tower_goblirangs_shooter",
-		to = 23,
-		from = 13,
-		post = {23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 21, 20}
-	},
-	tower_goblirangs_shooter_beesDown = {
-		prefix = "tower_goblirangs_shooter",
-		to = 23,
-		from = 13,
-		post = {23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 21, 20}
-	},
-	tower_goblirangs_shooter_bigUp = {
-		prefix = "tower_goblirangs_shooter",
-		to = 44,
-		from = 24,
-		post = {44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 42, 41}
-	},
-	tower_goblirangs_shooter_bigDown = {
-		prefix = "tower_goblirangs_shooter",
-		to = 44,
-		from = 24,
-		post = {44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 42, 41}
-	},
-	goblirangs_proy_hit_decal = {
-		prefix = "goblirangs_proy_decal",
-		to = 7,
-		from = 1
-	},
-	goblirangs_proy = {
-		prefix = "goblirangs_proy",
-		to = 1,
-		from = 1
-	},
-	tower_goblirangs_overlay = {
-		prefix = "tower_goblirangs_base",
-		to = 2,
-		from = 2
-	},
-	goblirangs_bees_aura = {
-		prefix = "goblirangs_bees",
-		to = 18,
-		from = 1
-	},
-	goblirangs_bees_decal = {
-		prefix = "goblirangs_bees_decal",
-		to = 9,
-		from = 1
-	},
-	goblirangs_proy_big_decal = {
-		prefix = "goblirangs_proy_big_decal",
-		to = 9,
-		from = 1
-	},
-	stun_goblirang_loop = {
-		prefix = "goblirang_stun",
-		to = 10,
-		from = 1
+	warmongers_archer_tower_shooter_beesUp = {
+		prefix = "warmongers_archerhoney_tower_shooter_lvl4",
+		from = 19,
+		to = 34
 	}
 }

@@ -273,6 +273,13 @@ return function(this, store)
             end
         constend
 
+        constif(a.track_target)
+            local target = store.entities[this.aura.target_id]
+            if target and target.pos then
+                this.pos = target.pos
+            end
+        constend
+
         @constif(a.apply_delay)
         context.last_hit_ts = store.tick_ts - this.aura.apply_delay - this.aura.cycle_time
         @constelse

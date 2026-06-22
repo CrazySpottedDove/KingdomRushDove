@@ -2283,21 +2283,13 @@ end
 ---@param entity table 域
 ---@param mod_name string mod名称
 function U.append_mod(field, mod_name)
-	if field.mod then
-		if type(field.mod) == "table" then
-			field.mods = field.mod
-
-			table.insert(field.mods, mod_name)
-
-			field.mod = nil
-		else
-			field.mods = {field.mod, mod_name}
-			field.mod = nil
-		end
+	if field.mods then
+		field.mods[#field.mods + 1] = mod_name
+	elseif field.mod then
+		field.mods = {field.mod, mod_name}
+		field.mod = nil
 	else
-		field.mods = field.mods or {}
-
-		table.insert(field.mods, mod_name)
+		field.mods = {mod_name}
 	end
 end
 

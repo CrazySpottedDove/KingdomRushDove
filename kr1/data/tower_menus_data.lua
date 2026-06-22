@@ -454,6 +454,13 @@ return {
 			tt_title = _("TOWER_ORC_SHIPWRECK_NAME"),
 			tt_desc = _("TOWER_ORC_SHIPWRECK_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_goblirang",
+			image = "kr4_main_icons_0008",
+			place = 22,
+			tt_title = _("TOWER_GOBLIRANG_NAME"),
+			tt_desc = _("TOWER_GOBLIRANG_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	barrack = {{M(tpl.common_upgrade, {
@@ -3602,5 +3609,45 @@ return {
 			tt_title = _("TOWER_TWILIGHT_ELVES_BARRACK_LAST_BREATH_NAME_1"),
 			tt_desc = _("TOWER_TWILIGHT_ELVES_BARRACK_LAST_BREATH_DESCRIPTION_1")
 		}}
-	}), tpl.rally, tpl.sell}}
+	}), tpl.rally, tpl.sell}},
+	goblirang = {{M(tpl.upgrade_power, {
+		action_arg = "big",
+		image = "kr4_special_icons_0009",
+		place = 5,
+		tt_phrase = _("TOWER_GOBLIRANG_BIG_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_GOBLIRANG_BIG_NAME_1"),
+			tt_desc = _("TOWER_GOBLIRANG_BIG_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_GOBLIRANG_BIG_NAME_2"),
+			tt_desc = _("TOWER_GOBLIRANG_BIG_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_GOBLIRANG_BIG_NAME_3"),
+			tt_desc = _("TOWER_GOBLIRANG_BIG_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "stun",
+		image = "kr4_special_icons_0008",
+		place = 6,
+		tt_phrase = _("TOWER_GOBLIRANG_STUN_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_GOBLIRANG_STUN_NAME_1"),
+			tt_desc = _("TOWER_GOBLIRANG_STUN_DESCRIPTION_1")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "bees",
+		image = "kr4_special_icons_0007",
+		place = 7,
+		tt_phrase = _("TOWER_GOBLIRANG_BEES_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_GOBLIRANG_BEES_NAME_1"),
+			tt_desc = _("TOWER_GOBLIRANG_BEES_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_GOBLIRANG_BEES_NAME_2"),
+			tt_desc = _("TOWER_GOBLIRANG_BEES_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_GOBLIRANG_BEES_NAME_3"),
+			tt_desc = _("TOWER_GOBLIRANG_BEES_DESCRIPTION_3")
+		}}
+	}), tpl.sell}}
 }

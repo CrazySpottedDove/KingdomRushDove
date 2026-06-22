@@ -2217,7 +2217,7 @@ function scripts.arrow.update(this, store)
 			local mods
 
 			if b.mod then
-				mods = type(b.mod) == "table" and b.mod or {b.mod}
+				mods = {b.mod}
 			elseif b.mods then
 				mods = b.mods
 			end
@@ -2528,7 +2528,7 @@ function scripts.arrow_missile.update(this, store)
 			local mods
 
 			if b.mod then
-				mods = type(b.mod) == "table" and b.mod or {b.mod}
+				mods = {b.mod}
 			elseif b.mods then
 				mods = b.mods
 			end
@@ -2744,7 +2744,7 @@ function scripts.bomb.update(this, store)
 	local enemies = U.find_enemies_in_range_filter_off(this_pos, dradius, b.damage_flags, b.damage_bans)
 	local mods
 	if b.mod then
-		mods = type(b.mod) == "string" and {b.mod} or b.mod
+		mods = {b.mod}
 	elseif b.mods then
 		mods = b.mods
 	end
@@ -3970,7 +3970,7 @@ function scripts.shotgun.update(this, store)
 		local mods
 
 		if b.mod then
-			mods = type(b.mod) == "table" and b.mod or {b.mod}
+			mods = {b.mod}
 		elseif b.mods then
 			mods = b.mods
 		end
@@ -8214,7 +8214,7 @@ function scripts.bomb_bouncing.update(this, store)
 	local mods
 
 	if b.mod then
-		mods = type(b.mod) == "string" and {b.mod} or b.mod
+		mods = {b.mod}
 	elseif b.mods then
 		mods = b.mods
 	end

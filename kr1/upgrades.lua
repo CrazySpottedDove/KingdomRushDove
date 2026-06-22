@@ -996,7 +996,9 @@ upgrades.arrows = {
 	"bone_flingers_bone_golem",
 	"bullet_ogre_shipwreck_musket",
 	"bullet_ogre_shipwreck_musket_volley_lvl1",
-	"bullet_ogre_shipwreck_musket_volley_lvl2"
+	"bullet_ogre_shipwreck_musket_volley_lvl2",
+	"goblirang",
+	"goblirang_big"
 }
 
 upgrades.soldiers = {
@@ -1350,14 +1352,13 @@ function upgrades:patch_templates(max_level)
 	end
 
 	local function apply_mod(bullet, mod_name)
-		if type(bullet.mod) == "table" then
-			table.insert(bullet.mod, mod_name)
-		elseif bullet.mod ~= nil then
-			bullet.mod = {bullet.mod, mod_name}
-		elseif bullet.mods ~= nil then
-			table.insert(bullet.mods, mod_name)
+		if bullet.mods then
+			bullet.mods[#bullet.mods + 1] = mod_name
+		elseif bullet.mod then
+			bullet.mods = {bullet.mod, mod_name}
+			bullet.mod = nil
 		else
-			bullet.mod = mod_name
+			bullet.mods = {mod_name}
 		end
 	end
 

@@ -30196,7 +30196,7 @@ function scripts.hero_dragon_arb.level_up(this, store)
 		a.cooldown = s.cooldown[sl]
 		a.instakill_chance = s.instakill_chance[sl]
 
-		local mod = E:get_template(a.mod[1])
+		local mod = E:get_template(a.mods[1])
 
 		mod.modifier.duration = s.duration[sl]
 		mod.damage_speed_ratio = s.damage_speed_ratio[sl]
@@ -30659,7 +30659,7 @@ function scripts.hero_dragon_arb.update(this, store)
 						b.cached_controller_dragon_arb_passive_id = passive_controller.id
 
 						if apply_thorn_bleed then
-							b.bullet.mod = table.deepclone(attack_thorn_bleed.mod)
+							b.bullet.mods = table.deepclone(attack_thorn_bleed.mods)
 
 							if this.ultimate_active then
 								b.instakill_chance = attack_thorn_bleed.instakill_chance
@@ -30991,40 +30991,38 @@ function scripts.bullet_hero_dragon_arb_breath_splint.update(this, store, script
 
 					queue_insert(store, passive_mark_mod)
 
-					if b.mod then
-						for _, v in pairs(b.mod) do
-							do
-								local mod = E:create_entity(v)
+					for _, v in ipairs(b.mods) do
+						do
+							local mod = E:create_entity(v)
 
-								if mod.chance and math.random() >= mod.chance then
-								-- block empty
-								else
-									if mod.max_targets_per_hit then
-										if not mod_hit_times[v] then
-											mod_hit_times[v] = 0
-										end
-
-										if mod_hit_times[v] >= mod.max_targets_per_hit then
-											goto label_832_0
-										else
-											mod_hit_times[v] = mod_hit_times[v] + 1
-										end
+							if mod.chance and math.random() >= mod.chance then
+							-- block empty
+							else
+								if mod.max_targets_per_hit then
+									if not mod_hit_times[v] then
+										mod_hit_times[v] = 0
 									end
 
-									mod.modifier.target_id = e.id
-
-									if this.instakill_chance then
-										mod.instakill_chance = this.instakill_chance
+									if mod_hit_times[v] >= mod.max_targets_per_hit then
+										goto label_832_0
+									else
+										mod_hit_times[v] = mod_hit_times[v] + 1
 									end
-
-									mod.cached_controller_dragon_arb_passive_id = this.cached_controller_dragon_arb_passive_id
-
-									queue_insert(store, mod)
 								end
-							end
 
-							::label_832_0::
+								mod.modifier.target_id = e.id
+
+								if this.instakill_chance then
+									mod.instakill_chance = this.instakill_chance
+								end
+
+								mod.cached_controller_dragon_arb_passive_id = this.cached_controller_dragon_arb_passive_id
+
+								queue_insert(store, mod)
+							end
 						end
+
+						::label_832_0::
 					end
 				end
 			end
@@ -37257,7 +37255,7 @@ function scripts.bullet_hero_mecha.update(this, store)
 
 	local mods
 	if b.mod then
-		mods = type(b.mod) == "string" and {b.mod} or b.mod
+		mods = {b.mod}
 	elseif b.mods then
 		mods = b.mods
 	end
