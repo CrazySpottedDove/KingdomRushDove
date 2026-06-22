@@ -110,25 +110,25 @@ return {
 			tt_desc = _("TOWER_NECROMANCER_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
-			action_arg = "tower_high_elven",
-			image = "kr3_main_icons_0004",
-			place = 11,
-			tt_title = _("TOWER_MAGE_HIGH_ELVEN_NAME"),
-			tt_desc = _("TOWER_MAGE_HIGH_ELVEN_DESCRIPTION")
-		}),
-		M(tpl.upgrade, {
 			action_arg = "tower_archmage",
 			image = "main_icons_0022",
-			place = 12,
+			place = 11,
 			tt_title = _("TOWER_ARCHMAGE_NAME"),
 			tt_desc = _("TOWER_ARCHMAGE_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_wild_magus",
 			image = "kr3_main_icons_0003",
-			place = 13,
+			place = 12,
 			tt_title = _("TOWER_MAGE_WILD_MAGUS_NAME"),
 			tt_desc = _("TOWER_MAGE_WILD_MAGUS_DESCRIPTION")
+		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_high_elven",
+			image = "kr3_main_icons_0004",
+			place = 13,
+			tt_title = _("TOWER_MAGE_HIGH_ELVEN_NAME"),
+			tt_desc = _("TOWER_MAGE_HIGH_ELVEN_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_faerie_dragon",
@@ -3615,6 +3615,7 @@ return {
 		image = "kr4_special_icons_0009",
 		place = 5,
 		tt_phrase = _("TOWER_GOBLIRANG_BIG_NOTE"),
+		sounds = {"GoblirangsBigTaunt"},
 		tt_list = {{
 			tt_title = _("TOWER_GOBLIRANG_BIG_NAME_1"),
 			tt_desc = _("TOWER_GOBLIRANG_BIG_DESCRIPTION_1")
@@ -3628,6 +3629,7 @@ return {
 	}), M(tpl.upgrade_power, {
 		action_arg = "stun",
 		image = "kr4_special_icons_0008",
+		sounds = {"GoblirangsStunTaunt"},
 		place = 6,
 		tt_phrase = _("TOWER_GOBLIRANG_STUN_NOTE"),
 		tt_list = {{
@@ -3638,6 +3640,7 @@ return {
 		action_arg = "bees",
 		image = "kr4_special_icons_0007",
 		place = 7,
+		sounds = {"GoblirangsBeesTaunt"},
 		tt_phrase = _("TOWER_GOBLIRANG_BEES_NOTE"),
 		tt_list = {{
 			tt_title = _("TOWER_GOBLIRANG_BEES_NAME_1"),
