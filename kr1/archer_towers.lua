@@ -41,7 +41,7 @@ tt.powers.thorn = CC("power")
 tt.powers.thorn.price_base = 225
 tt.powers.thorn.price_inc = 175
 tt.powers.thorn.aura = "aura_ranger_thorn"
-tt.powers.thorn.name = "thorns"
+
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_archer_%04i"
 tt.render.sprites[1].offset = vec_2(0, 15)
@@ -143,12 +143,12 @@ tower_crossbow.tower.price = 230
 tower_crossbow.powers.multishot = CC("power")
 tower_crossbow.powers.multishot.price_base = 250
 tower_crossbow.powers.multishot.price_inc = 150
-tower_crossbow.powers.multishot.name = "BARRAGE"
+
 tower_crossbow.powers.multishot.attack_idx = 2
 tower_crossbow.powers.eagle = CC("power")
 tower_crossbow.powers.eagle.price_base = 225
 tower_crossbow.powers.eagle.price_inc = 225
-tower_crossbow.powers.eagle.name = "FALCONER"
+
 tower_crossbow.main_script.update = scripts.tower_crossbow.update
 tower_crossbow.main_script.remove = scripts.tower_crossbow.remove
 tower_crossbow.attacks.range = 200
@@ -267,7 +267,7 @@ tower_totem.powers.weakness.attack_idx = 2
 tower_totem.powers.silence = CC("power")
 tower_totem.powers.silence.price_base = 150
 tower_totem.powers.silence.price_inc = 150
-tower_totem.powers.silence.name = "SPIRITS"
+
 tower_totem.powers.silence.attack_idx = 3
 tower_totem.main_script.update = scripts.tower_totem.update
 tower_totem.attacks.range = 180
@@ -2535,7 +2535,7 @@ tt.powers.stun.mod = "mod_goblirang_stun"
 tt.powers.bees = CC("power")
 tt.powers.bees.price_base = 250
 tt.powers.bees.price_inc = 200
-tt.powers.bees.name = "bees"
+
 tt.powers.big = CC("power")
 tt.powers.big.price_base = 200
 tt.powers.big.price_inc = 100

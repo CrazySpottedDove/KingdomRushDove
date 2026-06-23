@@ -44,7 +44,7 @@ tt.powers.disintegrate.price_base = 350
 tt.powers.disintegrate.price_inc = 225
 tt.powers.disintegrate.cooldown_base = 22
 tt.powers.disintegrate.cooldown_inc = -2
-tt.powers.disintegrate.name = "DESINTEGRATE"
+
 tt.powers.disintegrate.upper_damage = {666, 733, 800}
 tt.powers.disintegrate.attack_idx = 2
 tt.powers.teleport = CC("power")
@@ -184,7 +184,7 @@ tt.powers.polymorph.price_base = 300
 tt.powers.polymorph.price_inc = 100
 tt.powers.polymorph.cooldown_base = 22
 tt.powers.polymorph.cooldown_inc = -2
-tt.powers.polymorph.name = "POLIMORPH"
+
 tt.powers.polymorph.attack_idx = 2
 tt.powers.elemental = CC("power")
 tt.powers.elemental.price_base = 325
@@ -352,7 +352,7 @@ tower_archmage.powers.twister.attack_idx = 2
 tower_archmage.powers.blast = CC("power")
 tower_archmage.powers.blast.price_base = 200
 tower_archmage.powers.blast.price_inc = 200
-tower_archmage.powers.blast.name = "CRITICAL"
+
 tower_archmage.main_script.insert = scripts.tower_archmage.insert
 tower_archmage.main_script.remove = scripts.tower_archmage.remove
 tower_archmage.main_script.update = scripts.tower_archmage.update
@@ -2385,12 +2385,12 @@ tt.powers.teleport = CC("power")
 tt.powers.teleport.price = b.teleport.price
 tt.powers.teleport.cooldown = b.teleport.cooldown
 tt.powers.teleport.teleport_nodes_back = b.teleport.teleport_nodes_back
-tt.powers.teleport.name = "teleport"
+
 tt.powers.teleport.price_base = b.teleport.price[1]
 tt.powers.teleport.price_inc = b.teleport.price[2]
 tt.powers.stars_death = CC("power")
 tt.powers.stars_death.price = b.stars_death.price
-tt.powers.stars_death.name = "stars_death"
+
 tt.powers.stars_death.price_base = b.stars_death.price[1]
 tt.powers.stars_death.price_inc = b.stars_death.price[2]
 tt.render.sprites[1].animated = false
@@ -2555,7 +2555,7 @@ tt.powers.empowerment.price_inc = b.empowerment.price[2]
 tt.powers.empowerment.damage_factor = b.empowerment.damage_factor
 tt.powers.empowerment.cooldown = b.empowerment.cooldown
 tt.powers.empowerment.duration = b.empowerment.duration
-tt.powers.empowerment.name = "empowerment"
+
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_mage_%04i"
 tt.render.sprites[1].offset = vec_2(0, 13)
@@ -2804,7 +2804,7 @@ tt.powers.instakill.price_base = b.power_instakill.price[1]
 tt.powers.instakill.price_inc = b.power_instakill.price[1]
 tt.powers.instakill.cooldown = b.power_instakill.cooldown
 tt.powers.instakill.attack_idx = 3
-tt.powers.instakill.key = "SKILL_INSTAKILL"
+
 tt.powers.jump = CC("power")
 tt.powers.jump.max_level = 3
 tt.powers.jump.price_base = b.power_jump.price[1]
@@ -2813,7 +2813,7 @@ tt.powers.jump.cooldown = b.power_jump.cooldown
 tt.powers.jump.damage_min = b.power_jump.damage_min
 tt.powers.jump.damage_max = b.power_jump.damage_max
 tt.powers.jump.attack_idx = 4
-tt.powers.jump.key = "SKILL_JUMP"
+
 tt.attacks.range = b.mage_basic_attack.range[4]
 tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].bullet = "bullet_tower_hermit_toad_engineer_basic_lvl4"
@@ -3135,7 +3135,7 @@ tt.powers.gift_of_nature.price_base = b.gift_of_nature.price[2]
 tt.powers.gift_of_nature.price_inc = b.gift_of_nature.price[3]
 tt.powers.gift_of_nature.cooldown = b.gift_of_nature.cooldown
 tt.powers.gift_of_nature.aura_duration = b.gift_of_nature.duration
-tt.powers.gift_of_nature.name = "GIFT_OF_NATURE"
+
 tt.powers.wave_of_roots = CC("power")
 tt.powers.wave_of_roots.price_base = b.wave_of_roots.price[2]
 tt.powers.wave_of_roots.price_inc = b.wave_of_roots.price[3]
@@ -3143,7 +3143,7 @@ tt.powers.wave_of_roots.count = b.wave_of_roots.count
 tt.powers.wave_of_roots.cooldown = b.wave_of_roots.cooldown
 tt.powers.wave_of_roots.damage_min = b.wave_of_roots.damage_min
 tt.powers.wave_of_roots.damage_max = b.wave_of_roots.damage_max
-tt.powers.wave_of_roots.name = "WAVE_OF_ROOTS"
+
 tt.ui.click_rect = r(-43, 0, 86, 68)
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_mage_%04i"

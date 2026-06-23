@@ -4706,7 +4706,7 @@ function EncyclopediaView:detail_tower_second(index)
 		power_button.anchor = v(power_button.size.x * 0.65 / 2, power_button.size.y * 0.65 / 2)
 
 		if i == 1 then
-			self:show_skill_detail(prefix, power.key or power.name or k, power, t.from_kr)
+			self:show_skill_detail(prefix, k, power, t.from_kr)
 
 			power_button._selected = true
 		else
@@ -4721,7 +4721,7 @@ function EncyclopediaView:detail_tower_second(index)
 
 			power_button._selected = true
 
-			self:show_skill_detail(prefix, power.key or power.name or k, power, t.from_kr)
+			self:show_skill_detail(prefix, k, power, t.from_kr)
 
 			for _, btn in pairs(self.right_panel.power_buttons) do
 				if btn ~= power_button then
@@ -4757,9 +4757,9 @@ function EncyclopediaView:detail_tower_second(index)
 		label.colors.text = {0, 0, 0}
 
 		if t.from_kr == 5 then
-			label.text = _(string.upper(string.format("%s_%s_1_NAME", dt.info.i18n_key or tower_name, power.key or power.name or k)))
+			label.text = _(string.upper(string.format("%s_%s_1_NAME", dt.info.i18n_key or tower_name, k)))
 		else
-			label.text = _(string.upper(string.format("%s_%s_NAME_1", dt.info.i18n_key or tower_name, power.name or power.key or k)))
+			label.text = _(string.upper(string.format("%s_%s_NAME_1", dt.info.i18n_key or tower_name, k)))
 		end
 
 		label.text_align = "center"

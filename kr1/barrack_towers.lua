@@ -43,7 +43,7 @@ tt.powers.shield.max_level = 1
 tt.powers.holystrike = CC("power")
 tt.powers.holystrike.price_base = 200
 tt.powers.holystrike.price_inc = 150
-tt.powers.holystrike.name = "HOLY_STRIKE"
+
 tt.barrack.soldier_type = "soldier_paladin"
 tt.barrack.rally_range = 160
 tt.render.sprites[1].name = "terrain_barrack_%04i"
@@ -159,14 +159,14 @@ tt.tower.price = 195
 tt.powers.dual = CC("power")
 tt.powers.dual.price_base = 250
 tt.powers.dual.price_inc = 100
-tt.powers.dual.name = "DOUBLE_AXE"
+
 tt.powers.twister = CC("power")
 tt.powers.twister.price_base = 150
 tt.powers.twister.price_inc = 100
 tt.powers.throwing = CC("power")
 tt.powers.throwing.price_base = 150
 tt.powers.throwing.price_inc = 100
-tt.powers.throwing.name = "THROWING_AXES"
+
 tt.barrack.soldier_type = "soldier_barbarian"
 tt.barrack.max_soldiers = 4
 tt.barrack.rally_range = 165
@@ -310,11 +310,10 @@ tt.ui.click_rect = r(-40, -10, 80, 90)
 tt.powers.bleed = CC("power")
 tt.powers.bleed.price_base = 100
 tt.powers.bleed.price_inc = 100
-tt.powers.bleed.name = "BLEEDING"
+
 tt.powers.cripple = CC("power")
 tt.powers.cripple.price_base = 200
 tt.powers.cripple.price_inc = 125
-tt.powers.cripple.name = "CRIPPLE"
 
 tt = RT("soldier_elf", "soldier_militia")
 AC(tt, "powers", "ranged")
@@ -417,11 +416,10 @@ tt.sound_events.change_rally_point = "AmazonTaunt"
 tt.powers.whirlwind = CC("power")
 tt.powers.whirlwind.price_base = 250
 tt.powers.whirlwind.max_level = 1
-tt.powers.whirlwind.name = "WHIRLWIND"
+
 tt.powers.valkyrie = CC("power")
 tt.powers.valkyrie.price_base = 175
 tt.powers.valkyrie.max_level = 1
-tt.powers.valkyrie.name = "VALKYRIE"
 
 tt = RT("soldier_amazona", "soldier_militia")
 AC(tt, "track_kills", "auras", "powers")
@@ -513,15 +511,15 @@ tower_templar.tower.price = 185
 tower_templar.powers.holygrail = CC("power")
 tower_templar.powers.holygrail.price_base = 180
 tower_templar.powers.holygrail.price_inc = 135
-tower_templar.powers.holygrail.name = "HOLY"
+
 tower_templar.powers.extralife = CC("power")
 tower_templar.powers.extralife.price_base = 150
 tower_templar.powers.extralife.price_inc = 150
-tower_templar.powers.extralife.name = "TOUGHNESS"
+
 tower_templar.powers.blood = CC("power")
 tower_templar.powers.blood.price_base = 200
 tower_templar.powers.blood.price_inc = 150
-tower_templar.powers.blood.name = "ARTERIAL"
+
 tower_templar.barrack.soldier_type = "soldier_templar"
 tower_templar.barrack.rally_range = 160
 tower_templar.render.sprites[1].name = "terrain_barrack_%04i"
@@ -631,7 +629,7 @@ tower_assassin.powers.pickpocket = CC("power")
 tower_assassin.powers.pickpocket.price_base = 100
 tower_assassin.powers.pickpocket.price_inc = 75
 tower_assassin.powers.pickpocket.max_level = 3
-tower_assassin.powers.pickpocket.name = "PICK"
+
 tower_assassin.powers.counter = CC("power")
 tower_assassin.powers.counter.price_base = 125
 tower_assassin.powers.counter.price_inc = 125
@@ -1077,7 +1075,7 @@ tt.powers.swirling = CC("power")
 tt.powers.swirling.price_base = 250
 tt.powers.swirling.price_inc = 150
 tt.powers.swirling.max_level = 1
-tt.powers.swirling.name = "SWIRLING_EDGE"
+
 tt.render.sprites[2].name = "barracks_towers_layer1_0076"
 tt.render.sprites[3].prefix = "tower_blade_door"
 tt.sound_events.change_rally_point = "ElvesBarrackBladesingerTaunt"
@@ -1908,20 +1906,18 @@ tt.tower.menu_offset = v(0, 35)
 tt.powers.thunder = CC("power")
 tt.powers.thunder.price_base = 150
 tt.powers.thunder.price_inc = 150
-tt.powers.thunder.name = "thunder"
-tt.powers.thunder.key = "THUNDER"
+
 tt.powers.thunder.max_level = 2
 tt.powers.hat = CC("power")
 tt.powers.hat.price_base = 140
 tt.powers.hat.price_inc = 140
-tt.powers.hat.name = "hat"
+
 tt.powers.hat.max_level = 2
-tt.powers.hat.key = "HAT"
+
 tt.powers.teleport = CC("power")
 tt.powers.teleport.price_base = 160
 tt.powers.teleport.price_inc = 160
-tt.powers.teleport.name = "fiery"
-tt.powers.teleport.key = "FIERY"
+
 tt.powers.teleport.max_level = 2
 tt.info.i18n_key = "TOWER_PANDAS_4"
 tt.info.portrait = "kr5_portraits_towers_0031"

@@ -184,6 +184,7 @@ if [ "$rebuild_love" -eq 1 ]; then
         "update.lua"
         ".gdb_history"
         "docs/*"
+        "precompile/tests/*"
         ".plugins/*"
         "all/librender_sort.so"
         "all/librender_sort.dll"

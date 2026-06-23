@@ -194,7 +194,7 @@ tt.powers.bolt.price_inc = 170
 tt.powers.bolt.max_level = 3
 tt.powers.bolt.jumps_base = 3
 tt.powers.bolt.jumps_inc = 1
-tt.powers.bolt.name = "CHARGED_BOLT"
+
 tt.powers.overcharge = CC("power")
 tt.powers.overcharge.price_base = 160
 tt.powers.overcharge.price_inc = 140
@@ -315,7 +315,7 @@ tower_dwaarp.powers.drill.attack_idx = 3
 tower_dwaarp.powers.lava = CC("power")
 tower_dwaarp.powers.lava.price_base = 375
 tower_dwaarp.powers.lava.price_inc = 275
-tower_dwaarp.powers.lava.name = "BLAST"
+
 tower_dwaarp.powers.lava.attack_idx = 2
 tower_dwaarp.main_script.update = scripts.tower_dwaarp.update
 tower_dwaarp.render.sprites[1].animated = false
@@ -457,7 +457,7 @@ tt.powers.missile.max_level = 3
 tt.powers.oil = CC("power")
 tt.powers.oil.price_base = 250
 tt.powers.oil.price_inc = 200
-tt.powers.oil.name = "WASTE"
+
 tt.main_script.update = scripts.tower_mech.update
 tt.main_script.remove = scripts.tower_barrack.remove
 tt.barrack.soldier_type = "soldier_mecha"
@@ -823,7 +823,7 @@ tt.powers.nature.price_base = 300
 tt.powers.nature.price_inc = 300
 tt.powers.nature.max_level = 2
 tt.powers.nature.entity = "druid_shooter_nature"
-tt.powers.nature.name = "NATURES_FRIEND"
+
 tt.powers.sylvan = CC("power")
 tt.powers.sylvan.price_base = 250
 tt.powers.sylvan.price_inc = 250
@@ -1366,7 +1366,7 @@ tt.powers.big_guy.price_inc = b.big_guy.price[2]
 tt.powers.big_guy.damage_max = 2
 tt.powers.big_guy.damage_min = 2
 tt.powers.big_guy.cooldown = b.big_guy.cooldown
-tt.powers.big_guy.key = "BIG_DEMON"
+
 tt.info.i18n_key = "TOWER_DEMON_PIT_4"
 tt.info.portrait = "kr5_portraits_towers_0006"
 tt.info.enc_icon = 4
@@ -2141,15 +2141,13 @@ tt.powers.crystalize.price_base = b.crystalize.price[1]
 tt.powers.crystalize.price_inc = b.crystalize.price[2]
 tt.powers.crystalize.cooldown = b.crystalize.cooldown
 tt.powers.crystalize.max_level = #b.crystalize.cooldown
-tt.powers.crystalize.name = "crystalize"
-tt.powers.crystalize.key = "CRYSTALIZE"
+
 tt.powers.spike_burst = CC("power")
 tt.powers.spike_burst.price_base = b.spike_burst.price[1]
 tt.powers.spike_burst.price_inc = b.spike_burst.price[2]
 tt.powers.spike_burst.max_level = #b.spike_burst.cooldown
 tt.powers.spike_burst.cooldown = b.spike_burst.cooldown
-tt.powers.spike_burst.name = "spike_burst"
-tt.powers.spike_burst.key = "SPIKE_BURST"
+
 tt.wakeup_duration = fts(45)
 tt.tower.type = "sparking_geode"
 tt.tower.kind = TOWER_KIND_ENGINEER
