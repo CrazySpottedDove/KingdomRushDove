@@ -5653,8 +5653,8 @@ function HeroRoomViewKR1:show_hero(name)
 		end
 	end
 
-	self:get_child_by_id("skills_bio_desc").text = _(ht.info.i18n_key .. "_DESCRIPTION")
-	self:get_child_by_id("skills_spec_desc").text = _(ht.info.i18n_key .. "_SPECIAL")
+	self:get_child_by_id("skills_bio_desc").text = _(string.upper(ht.template_name) .. "_DESCRIPTION")
+	self:get_child_by_id("skills_spec_desc").text = _(string.upper(ht.template_name) .. "_SPECIAL")
 
 	for i, c in pairs(self:get_child_by_id("hero_room_stats").children) do
 		c:set(hd.stats[i], true)

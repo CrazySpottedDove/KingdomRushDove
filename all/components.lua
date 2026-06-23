@@ -296,7 +296,6 @@ power.level = 0
 power.price_base = 0
 power.price_inc = 0
 power.changed = nil
-power.name = nil
 power.on_power_upgrade = nil
 
 -- Runtime fields (4): --   attack_cooldown, damage_factor, price_base, price_inc
