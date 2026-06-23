@@ -35,6 +35,7 @@ require("gg_views_custom")
 require("dove_modules.gui.numeric_keyboard_view")
 -- if not IS_ANDROID then
 require("dove_modules.gui.mod_manager_view")
+require("dove_modules.gui.changelog_view")
 -- end
 
 screen_map = {}
@@ -178,7 +179,7 @@ screen_map.signal_handlers = {}
 local scroll_hotpot_width = 100
 
 local function should_block_map_scroll(this)
-	return (this.level_select and not this.level_select.hidden) or (this.hero_room and not this.hero_room.hidden) or (this.upgrades and not this.upgrades.hidden) or (this.encyclopedia and not this.encyclopedia.hidden) or (this.achievements and not this.achievements.hidden) or (this.option_panel and not this.option_panel.hidden) or (this.config_panel_view and not this.config_panel_view.hidden) or (this.criket_panel_view and not this.criket_panel_view.hidden) or (this.keyset_panel_view and not this.keyset_panel_view.hidden) or (this.launch_options_panel_view and not this.launch_options_panel_view.hidden) or (this.ui_settings_panel_view and not this.ui_settings_panel_view.hidden) or (this.mod_manager_view and not this.mod_manager_view.hidden)
+	return (this.level_select and not this.level_select.hidden) or (this.hero_room and not this.hero_room.hidden) or (this.upgrades and not this.upgrades.hidden) or (this.encyclopedia and not this.encyclopedia.hidden) or (this.achievements and not this.achievements.hidden) or (this.option_panel and not this.option_panel.hidden) or (this.config_panel_view and not this.config_panel_view.hidden) or (this.criket_panel_view and not this.criket_panel_view.hidden) or (this.keyset_panel_view and not this.keyset_panel_view.hidden) or (this.launch_options_panel_view and not this.launch_options_panel_view.hidden) or (this.ui_settings_panel_view and not this.ui_settings_panel_view.hidden) or (this.mod_manager_view and not this.mod_manager_view.hidden) or (this.changelog_view and not this.changelog_view.hidden)
 end
 
 function screen_map:init_coro(w, h, done_callback)
@@ -939,6 +940,19 @@ function screen_map:ensure_mod_manager_view()
 	return mod_manager_view
 end
 
+function screen_map:ensure_changelog_view()
+	if self.changelog_view then
+		return self.changelog_view
+	end
+
+	local changelog_view = ChangelogView:new(self.sw, self.sh)
+	changelog_view.pos = v(0, 0)
+	self.window:add_child(changelog_view)
+	self.changelog_view = changelog_view
+
+	return changelog_view
+end
+
 function screen_map:destroy()
 	for sn, fn in pairs(self.signal_handlers) do
 		signal.remove(sn, fn)
@@ -1107,6 +1121,10 @@ function screen_map:keypressed(key, isrepeat)
 		-- if not IS_ANDROID then
 		elseif self.mod_manager_view and not self.mod_manager_view.hidden then
 			self.mod_manager_view:hide()
+
+			return true
+		elseif self.changelog_view and not self.changelog_view.hidden then
+			self.changelog_view:hide()
 
 			return true
 		end
@@ -6102,7 +6120,8 @@ function OptionsView:initialize(sw, sh)
 	history_button.pos.y = button_height
 	function history_button.on_click()
 		S:queue("GUIButtonCommon")
-		love.system.openURL("https://krdovedownload4.crazyspotteddove.top/history")
+		screen_map.option_panel:hide()
+		screen_map:ensure_changelog_view():show()
 	end
 
 	self.back:add_child(history_button)

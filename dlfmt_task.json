@@ -13,12 +13,17 @@
 				"kr1/data/waveconfigs",
 				"kr1-desktop/data",
 				"all-desktop/data",
+				"dove_modules/data",
 				".versions"
 			]
 		},
 		{
 			"type": "compress",
 			"directory": "_assets/kr1-desktop/images/fullhd"
+		},
+		{
+			"type": "compress",
+			"directory": "dove_modules/data"
 		},
 		{
 			"type": "compress",

@@ -19,6 +19,9 @@ _examine_dir_map:
 		exit 1; \
 	fi
 
+changelog:
+	@luajit scripts/gen_changelog.lua
+
 # sync 目标只在开发者游戏放在 windows 上，但是代码开发在 linux 上时作为同步代码资源脚本来使用
 sync:
 	@bash $(MAKE_FILE_DIR)/sync.sh "$(WINDOWS_DIR)"
