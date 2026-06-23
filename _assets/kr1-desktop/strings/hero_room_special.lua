@@ -3113,7 +3113,7 @@ get_cooldown()
 d[1].damage_min = table.tail(blc.damages_target.damage_min)
 d[1].damage_max = table.tail(blc.damages_target.damage_max)
 d[1].damage_type = blc.damages_target.damage_type
-map["耀阳审判"] = str(cooldown_str(), "奥利昂传送至视野中生命值最高的敌人，发动毁灭性的一击，造成", damage_str(), "。")
+map["耀阳审判"] = str(cooldown_str(), "当攻击范围中无敌人时，奥利昂传送至生命值最高的敌人头顶，发动毁灭性的一击，造成", damage_str(), "。")
 
 blc = balance.hero_dragon_sun.solar_cleansing
 set_skill(h.hero.skills.solar_cleansing)

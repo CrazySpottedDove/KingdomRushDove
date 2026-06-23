@@ -38247,6 +38247,11 @@ function scripts.hero_dragon_sun.update(this, store)
 			return false
 		end
 
+		-- 视野中无敌人时才释放该技能
+		if U.find_first_enemy_in_range_filter_off(this.pos, this.ranged.attacks[1].max_range, this.ranged.attacks[1].vis_flags, this.ranged.attacks[1].vis_bans) then
+			return false
+		end
+
 		return true
 	end
 
