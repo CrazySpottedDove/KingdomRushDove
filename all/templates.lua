@@ -922,7 +922,6 @@ tt.info.portrait = "info_portraits_soldiers_0001"
 tt.info.random_name_count = 40
 tt.info.random_name_format = "SOLDIER_RANDOM_%i_NAME"
 tt.main_script.insert = scripts.soldier_barrack.insert
-tt.main_script.remove = scripts.soldier_barrack.remove
 tt.main_script.update = scripts.soldier_barrack.update
 -- dps: 7.5 / 1 = 7.5
 tt.melee.attacks[1].cooldown = 1

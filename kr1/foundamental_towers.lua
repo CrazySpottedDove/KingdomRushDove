@@ -618,7 +618,6 @@ tt.info.portrait = "info_portraits_soldiers_0001"
 tt.info.random_name_count = 25
 tt.info.random_name_format = "ELVES_SOLDIER_BARRACKS_%i_NAME"
 tt.main_script.insert = scripts.soldier_barrack.insert
-tt.main_script.remove = scripts.soldier_barrack.remove
 tt.main_script.update = scripts.soldier_barrack.update
 tt.melee.attacks[1].cooldown = 1
 tt.melee.attacks[1].damage_max = 4

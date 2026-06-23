@@ -1319,10 +1319,6 @@ function scripts.soldier_barrack.insert(this, store)
 	return true
 end
 
-function scripts.soldier_barrack.remove(this, store)
-	return true
-end
-
 function scripts.soldier_barrack.update(this, store)
 	local brk, sta
 

@@ -102,10 +102,10 @@ return function(this, store)
 			end
 		constend
 
-        constif(this.clock)
+        constif(this.cloak)
         if this.soldier.target_id then
-            this.vis.flags = band(this.vis.flags, bnot(this.clock.flags))
-            this.vis.bans = band(this.vis.bans, bnot(this.clock.bans))
+            this.vis.flags = band(this.vis.flags, bnot(this.cloak.flags))
+            this.vis.bans = band(this.vis.bans, bnot(this.cloak.bans))
             this.render.sprites[1].alpha = 255
         end
         constend

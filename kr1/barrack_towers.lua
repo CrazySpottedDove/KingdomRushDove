@@ -1520,7 +1520,6 @@ tt.info.portrait = "kr3_info_portraits_soldiers_0006"
 tt.info.random_name_count = 6
 tt.info.random_name_format = "ELVES_SOLDIER_EWOK_%i_NAME"
 tt.main_script.insert = scripts.soldier_barrack.insert
-tt.main_script.remove = scripts.soldier_barrack.remove
 tt.main_script.update = scripts.soldier_ewok.update
 tt.melee.attacks[1].cooldown = 1
 tt.melee.attacks[1].damage_max = 7
