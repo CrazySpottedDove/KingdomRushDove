@@ -5155,6 +5155,7 @@ tt = RT("enemy_gnoll_gnawer", "enemy")
 AC(tt, "melee", "auras")
 tt.info.enc_icon = 3
 tt.info.portrait = "kr3_info_portraits_enemies_0002"
+tt.info.i18n_key = "ENEMY_GNOLL_GNAWER"
 tt.auras.list[1] = CC("aura_attack")
 tt.auras.list[1].name = "aura_gnoll_gnawer"
 tt.auras.list[1].cooldown = 0
@@ -5246,6 +5247,7 @@ tt = RT("enemy_ettin", "enemy")
 AC(tt, "melee", "auras", "endless")
 tt.info.enc_icon = 5
 tt.info.portrait = "kr3_info_portraits_enemies_0011"
+tt.info.i18n_key = "ENEMY_ETTIN"
 tt.auras.list[1] = CC("aura_attack")
 tt.auras.list[1].name = "aura_ettin_regen"
 tt.auras.list[1].cooldown = 0
@@ -5281,6 +5283,7 @@ tt.ui.click_rect = r(-25, -5, 50, 60)
 tt = RT("enemy_perython", "enemy")
 tt.info.enc_icon = 6
 tt.info.portrait = "kr3_info_portraits_enemies_0006"
+tt.info.i18n_key = "ENEMY_PERYTHON"
 tt.enemy.gold = 18
 tt.health.hp_max = {90, 120, 120, 140}
 tt.health_bar.offset = vec_2(0, 90)
@@ -6434,6 +6437,7 @@ tt = RT("enemy_bloodsydian_warlock", "enemy")
 AC(tt, "melee", "timed_attacks")
 tt.info.enc_icon = 37
 tt.info.portrait = "kr3_info_portraits_enemies_0044"
+tt.info.i18n_key = "ENEMY_BLOODSYDIAN_WARLOCK"
 tt.enemy.gold = 50
 tt.enemy.melee_slot = vec_2(37, 0)
 tt.health.hp_max = 1200
