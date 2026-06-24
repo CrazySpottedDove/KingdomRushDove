@@ -16978,9 +16978,10 @@ tt.hero.skills.jump.stun_duration = b.jump.stun_duration
 tt.hero.skills.jump.loops = b.jump.loops
 tt.hero.skills.jump.xp_gain = b.jump.xp_gain
 tt.hero.skills.jump.xp_level_steps = {
-	[2] = 1,
-	[5] = 2,
-	[8] = 3
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
 }
 tt.hero.skills.fire = CC("hero_skill")
 tt.hero.skills.fire.cooldown = b.fire.cooldown
