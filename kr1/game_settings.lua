@@ -1242,6 +1242,7 @@ GS.wraith = {
 	hero_vampiress = true,
 	hero_dracolich = true,
 	hero_dragon_bone = true,
+	hero_hunter = true,
 	soldier_death_rider = true,
 	soldier_tower_necromancer_skeleton_lvl4 = true,
 	soldier_tower_necromancer_skeleton_golem_lvl4 = true,
