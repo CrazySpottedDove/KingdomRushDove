@@ -5560,7 +5560,7 @@ function scripts.tower_tricannon.update(this, store)
 
 		b.pos.x, b.pos.y = this.pos.x + bullet_start_offset.x, this.pos.y + bullet_start_offset.y
 		b.bullet.damage_factor = this.tower.damage_factor
-		b.bullet.from = vclone(b.pos)
+		b.bullet.from:copy(b.pos)
 		b.bullet.to = dest
 
 		if ao.active then
@@ -5607,7 +5607,8 @@ function scripts.tower_tricannon.update(this, store)
 			end
 
 			if ready_to_use_power(pow_o, ao, store, tw.cooldown_factor) then
-				if U.find_first_enemy_in_range_filter_off(tpos, a.range, ao.vis_flags, ao.vis_bans) then
+				local trigger = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range + 160, ao.vis_flags, ao.vis_bans)
+				if trigger and U.is_inside_ellipse(tpos, U.calculate_enemy_ffe_pos(trigger, fts(60)), a.range) then
 					ao.active = true
 					S:queue(ao.sound)
 					U.y_animation_play_group(this, ao.animation_charge, nil, store.tick_ts, false, "layers")
@@ -5638,7 +5639,7 @@ function scripts.tower_tricannon.update(this, store)
 					last_ts = am.ts
 
 					U.animation_start_group(this, am.animation_start, nil, store.tick_ts, false, "layers")
-					y_wait(store, am.shoot_time)
+					U.y_wait_unconditional(store, am.shoot_time)
 
 					local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range, am.vis_flags, am.vis_bans)
 					local dest = enemy and U.calculate_enemy_ffe_pos(enemy, am.node_prediction) or trigger_pos
@@ -5662,14 +5663,21 @@ function scripts.tower_tricannon.update(this, store)
 					U.animation_start_group(this, am.animation_loop, nil, store.tick_ts, true, "layers")
 
 					for _, ni_candidate in ipairs(table.random_order(nindices)) do
-						local spi = random(1, 3)
+						local spi = 1
+						if math.random() < 0.5 then
+							if math.random() < 0.5 then
+								spi = 2
+							else
+								spi = 3
+							end
+						end
 						local destination = P:node_pos(pi, spi, ni_candidate)
 						shoot_bullet(am, nil, destination, 1)
 
 						local min_time = am.time_between_bombs_min
 						local max_time = am.time_between_bombs_max
 
-						y_wait(store, fts(random(min_time, max_time)) * tw.cooldown_factor)
+						U.y_wait_unconditional(store, fts(random(min_time, max_time)) * tw.cooldown_factor)
 					end
 
 					U.y_animation_wait_group(this, "layers")
