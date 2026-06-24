@@ -675,10 +675,10 @@ local heroes = {
 			max_range = 250,
 			min_range = 0,
 			cooldown = 2,
-			xp_gain_factor = 2.35,
+			xp_gain_factor = 2.15,
 			damage_type = DAMAGE_EXPLOSION,
-			damage_max = {17, 19, 22, 24, 26, 29, 31, 34, 37, 41},
-			damage_min = {11, 13, 14, 16, 18, 19, 21, 22, 24, 27},
+			damage_max = {18, 20, 24, 26, 28, 31, 34, 37, 40, 45},
+			damage_min = {12, 14, 15, 17, 19, 20, 23, 24, 26, 29},
 			damage_radius = 50
 		},
 		goblidrones = {
