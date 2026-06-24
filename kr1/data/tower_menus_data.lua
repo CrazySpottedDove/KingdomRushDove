@@ -1103,16 +1103,16 @@ return {
 		image = "special_icons_0006",
 		place = 7,
 		sounds = {"BarrackPaladinHolyStrikeTaunt"},
-		tt_phrase = _("TOWER_PALADIN_HOLY_STRIKE_NOTE"),
+		tt_phrase = _("TOWER_PALADIN_HOLYSTRIKE_NOTE"),
 		tt_list = {{
-			tt_title = _("TOWER_PALADIN_HOLY_STRIKE_NAME_1"),
-			tt_desc = _("TOWER_PALADIN_HOLY_STRIKE_DESCRIPTION_1")
+			tt_title = _("TOWER_PALADIN_HOLYSTRIKE_NAME_1"),
+			tt_desc = _("TOWER_PALADIN_HOLYSTRIKE_DESCRIPTION_1")
 		}, {
-			tt_title = _("TOWER_PALADIN_HOLY_STRIKE_NAME_2"),
-			tt_desc = _("TOWER_PALADIN_HOLY_STRIKE_DESCRIPTION_2")
+			tt_title = _("TOWER_PALADIN_HOLYSTRIKE_NAME_2"),
+			tt_desc = _("TOWER_PALADIN_HOLYSTRIKE_DESCRIPTION_2")
 		}, {
-			tt_title = _("TOWER_PALADIN_HOLY_STRIKE_NAME_3"),
-			tt_desc = _("TOWER_PALADIN_HOLY_STRIKE_DESCRIPTION_3")
+			tt_title = _("TOWER_PALADIN_HOLYSTRIKE_NAME_3"),
+			tt_desc = _("TOWER_PALADIN_HOLYSTRIKE_DESCRIPTION_3")
 		}}
 	}), tpl.rally, tpl.sell}},
 	barbarian = {{M(tpl.upgrade_power, {
