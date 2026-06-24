@@ -1,0 +1,1 @@
+return {{date="2025-12-16",author="CrazySpottedDove",message="修复了多次点击藤蔓导致的蓝屏问题"},{date="2025-12-16",author="CrazySpottedDove",message="继续削弱狂化系列英雄敌人的基础数值"},{date="2025-12-17",author="CrazySpottedDove",message="削减了无畏树人多个技能的技能冷却，并添加了他的技能描述"},{date="2025-12-17",author="CrazySpottedDove",message="小重做日光塔，强度尚未测试"}}

@@ -1,0 +1,1 @@
+return {{date="2025-10-27",author="CrazySpottedDove",message="调整了倍速图层的位置、优先级，暂时注释了倍速图层的三角形"},{date="2025-10-27",author="CrazySpottedDove",message="修复勾巴tower_soldier_idx引入的bug"},{date="2025-10-27",author="CrazySpottedDove",message="临时修复日光塔技能图标删除了的问题"},{date="2025-10-27",author="CrazySpottedDove",message="调整加速提示位置"}}

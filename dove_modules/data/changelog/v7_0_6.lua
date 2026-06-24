@@ -1,0 +1,1 @@
+return {{date="2025-10-29",author="CrazySpottedDove",message="让package脚本结束后返回开发分支"},{date="2025-10-29",author="CrazySpottedDove",message="细化部分技能描述"},{date="2025-10-29",author="CrazySpottedDove",message="添加了矮人喷火器"},{date="2025-10-29",author="CrazySpottedDove",message="修复矮人喷火器的部分bug"},{date="2025-10-29",author="CrazySpottedDove",message="修复大德在极限距离扔不出石头的问题"}}

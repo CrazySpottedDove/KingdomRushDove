@@ -1,0 +1,1 @@
+return {{date="2025-12-09",author="CrazySpottedDove",message="修正特斯拉电磁塔的攻击范围生效方式"},{date="2025-12-09",author="CrazySpottedDove",message="使特斯拉电磁塔的过载范围与特斯拉电磁塔攻击范围一致"},{date="2025-12-09",author="CrazySpottedDove",message="削减狂化敌人的数值；提高英雄敌人的赏金"}}

@@ -1,0 +1,1 @@
+return {{date="2025-11-22",author="CrazySpottedDove",message="增加显示更新内容的最多条数"},{date="2025-11-22",author="CrazySpottedDove",message="修复了在中文路径下找不到客户端的问题"},{date="2025-11-22",author="CrazySpottedDove",message="添加了阿什比特的技能描述"},{date="2025-11-23",author="CrazySpottedDove",message="使巨弩哨站的最后一击可以贯穿敌人"}}

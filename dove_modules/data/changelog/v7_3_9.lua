@@ -1,0 +1,1 @@
+return {{date="2025-11-08",author="CrazySpottedDove",message="摩洛克死后不让关卡立刻结束"},{date="2025-11-08",author="CrazySpottedDove",message="opt"},{date="2025-11-08",author="CrazySpottedDove",message="恢复电伤的穿甲性能与原版一致"},{date="2025-11-08",author="CrazySpottedDove",message="提升雷神对电塔系列的辅助能力"},{date="2025-11-08",author="CrazySpottedDove",message="确定雷神的辅助效果"}}

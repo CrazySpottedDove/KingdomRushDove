@@ -1,0 +1,1 @@
+return {{date="2025-11-03",author="CrazySpottedDove",message="添加了小马哥和火男的技能描述"},{date="2025-11-03",author="CrazySpottedDove",message="添加了迪纳斯国王的技能描述"},{date="2025-11-03",author="CrazySpottedDove",message="抄了一些字符串"}}

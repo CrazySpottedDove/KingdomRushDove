@@ -1,0 +1,1 @@
+return {{date="2025-11-23",author="CrazySpottedDove",message="修复含漫画关卡结算完成后蓝屏的问题"},{date="2025-11-23",author="CrazySpottedDove",message="添加德得尔的技能介绍；增强了德得尔圣光术的效果"},{date="2025-11-23",author="CrazySpottedDove",message="略微提升德得尔基础伤害数值"},{date="2025-11-23",author="CrazySpottedDove",message="提升神圣祝颂的持续时间"},{date="2025-11-23",author="CrazySpottedDove",message="为鲁林添加召唤援军的技能，并添加鲁林的技能介绍"}}

@@ -1,0 +1,1 @@
+return {{date="2026-04-10",author="CrazySpottedDove",message="feat: 恢复do_tick调用"},{date="2026-04-10",author="CrazySpottedDove",message="feat: 修复联盟死法诅咒有时导致的蓝屏"},{date="2026-04-10",author="CrazySpottedDove",message="feat: 支持非整数的出怪倍数"},{date="2026-04-11",author="CrazySpottedDove",message="feat: 在安卓端添加数字键盘"}}

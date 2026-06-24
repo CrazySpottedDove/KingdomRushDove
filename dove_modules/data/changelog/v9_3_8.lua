@@ -1,0 +1,1 @@
+return {{date="2026-01-18",author="CrazySpottedDove",message="降低了must_read和update_manager的耦合度。迁移更新逻辑到lua代码中，尝试兼容win7平台。删除误复制的文件，修复因此导致的各种问题。"},{date="2026-01-18",author="CrazySpottedDove",message="修正文本描述。再次强调，五代目前只放进来了大地图，没有移植关卡，因此不要游玩。"}}

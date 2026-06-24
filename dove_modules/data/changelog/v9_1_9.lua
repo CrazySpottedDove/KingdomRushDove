@@ -1,0 +1,1 @@
+return {{date="2025-12-10",author="CrazySpottedDove",message="使诡异符文的boss波每路只出一个boss"},{date="2025-12-10",author="CrazySpottedDove",message="添加艾莉丹的技能描述"},{date="2025-12-10",author="CrazySpottedDove",message="略微提高瑞格的升级速度"},{date="2025-12-10",author="CrazySpottedDove",message="提高诡异符文关卡木龙魂的增益效果"},{date="2025-12-10",author="CrazySpottedDove",message="使诡异符文关卡的木龙魂额外提供20%增伤"}}

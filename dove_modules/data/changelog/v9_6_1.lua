@@ -1,0 +1,1 @@
+return {{date="2026-02-23",author="CrazySpottedDove",message="初始化level2004战役出怪，且有待调整。"},{date="2026-02-23",author="CrazySpottedDove",message="添加了切换地图的补间动画，并允许通过快捷键1，2，3，5直接切换地图"},{date="2026-02-23",author="CrazySpottedDove",message="完成关卡2004的战役设计"},{date="2026-02-23",author="CrazySpottedDove",message="修复特殊分辨率下地图缩放的尺寸问题"}}

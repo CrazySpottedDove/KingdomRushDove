@@ -1,0 +1,1 @@
+return {{date="2025-12-13",author="CrazySpottedDove",message="削减狂化女巫的生命值"},{date="2025-12-13",author="CrazySpottedDove",message="削减诡异符文英雄模式出怪量"},{date="2025-12-14",author="CrazySpottedDove",message="大幅降低裂地攻势的内置cd"},{date="2025-12-14",author="CrazySpottedDove",message="修复卡兹传送导致敌人无敌的问题"},{date="2025-12-14",author="CrazySpottedDove",message="提高杀戮成长15层成长上限"}}

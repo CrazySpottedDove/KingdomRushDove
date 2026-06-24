@@ -1,0 +1,1 @@
+return {{date="2025-10-16",author="CrazySpottedDove",message="修复钢锯的子弹有时无法正常移除的问题"},{date="2025-10-16",author="CrazySpottedDove",message="修复沙丘哨兵不优先对空的问题；整合部分伤害类型组"},{date="2025-10-16",author="CrazySpottedDove",message="使马利克的地震更毁天灭地"},{date="2025-10-16",author="CrazySpottedDove",message="使马利克的地震再毁天灭地一点点"},{date="2025-10-16",author="CrazySpottedDove",message="略微减少钢锯秒杀cd"}}

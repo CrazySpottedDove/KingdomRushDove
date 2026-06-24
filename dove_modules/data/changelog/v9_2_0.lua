@@ -1,0 +1,1 @@
+return {{date="2025-12-11",author="CrazySpottedDove",message="移除了火箭枪手磷化子弹的枪伤词条"},{date="2025-12-12",author="CrazySpottedDove",message="削减了部分狂化敌人的血量；削减了狂化小公主的分裂箭伤害；压缩了最后一波出怪"},{date="2025-12-12",author="CrazySpottedDove",message="compress"}}

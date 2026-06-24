@@ -1,0 +1,1 @@
+return {{date="2026-02-02",author="CrazySpottedDove",message="优化了更新检查显示；修复了铁皮的设置总是下一次游戏才生效的问题；提高了启动速度"},{date="2026-02-03",author="CrazySpottedDove",message="修复了皇弓射手有时会卡死的恶性bug；优化了皇弓破甲箭的逻辑，使其伤害更不容易浪费；为猎鹰添加了提升皇弓射程的额外效果"},{date="2026-02-04",author="CrazySpottedDove",message="添加了五代恐蛛症支线；修复了诡须克隆缺乏portrait导致的蓝屏问题；简化了特斯拉电流的伤害结算逻辑"}}

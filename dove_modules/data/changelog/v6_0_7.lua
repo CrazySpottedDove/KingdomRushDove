@@ -1,0 +1,1 @@
+return {{date="2025-10-19",author="CrazySpottedDove",message="bug fix"},{date="2025-10-19",author="CrazySpottedDove",message="bug fix"},{date="2025-10-19",author="CrazySpottedDove",message="完善皇弓文本描述和增强皇弓技能效果"},{date="2025-10-20",author="CrazySpottedDove",message="正式添加了风暴环礁之夜的钢铁模式"},{date="2025-10-20",author="CrazySpottedDove",message="添加了风暴环礁之夜的英雄模式"}}

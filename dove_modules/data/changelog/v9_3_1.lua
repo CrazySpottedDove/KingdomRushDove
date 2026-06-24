@@ -1,0 +1,1 @@
+return {{date="2025-12-24",author="CrazySpottedDove",message="修复三管加农炮射程与显示不统一的问题；优化了地震的特效表现和实际效果"},{date="2025-12-24",author="CrazySpottedDove",message="修复地震特效范围过大的问题；略微减小地震的攻击范围，但使地震的岩浆范围完全与普攻范围一致"},{date="2025-12-26",author="CrazySpottedDove",message="增强了system稳定性"}}

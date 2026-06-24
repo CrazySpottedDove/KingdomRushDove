@@ -1,0 +1,1 @@
+return {{date="2026-04-19",author="CrazySpottedDove",message="fix: 安卓端数字键盘失效的问题"},{date="2026-04-19",author="CrazySpottedDove",message="feat: 添加内置的插件商店，手机/电脑端通用"},{date="2026-04-19",author="CrazySpottedDove",message="feat: 同步作者的话"}}

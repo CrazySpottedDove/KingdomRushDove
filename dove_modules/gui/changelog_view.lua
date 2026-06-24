@@ -6,7 +6,7 @@ local i18n = require("i18n")
 require("klove.kui")
 require("gg_views_custom")
 
-local changelog_data = require("dove_modules.data.changelog_data")
+local changelog_index = require("dove_modules.data.changelog_data")
 
 local PANEL_MARGIN = 150
 local PANEL_MIN_W = 700
@@ -18,11 +18,25 @@ local ENTRY_H = 24
 local BTN_W = 80
 local BTN_H = 26
 
+local _loaded_versions = {}
+
 local function safe_tostring(s)
 	if s == nil then
 		return ""
 	end
 	return tostring(s)
+end
+
+local function load_entries(file_key)
+	if _loaded_versions[file_key] then
+		return _loaded_versions[file_key]
+	end
+	local ok, data = pcall(require, "dove_modules.data.changelog." .. file_key)
+	if ok and type(data) == "table" then
+		_loaded_versions[file_key] = data
+		return data
+	end
+	return {}
 end
 
 ChangelogView = class("ChangelogView", PopUpView)
@@ -66,7 +80,7 @@ function ChangelogView:initialize(sw, sh)
 		self:hide()
 	end
 
-	if #changelog_data == 0 then
+	if #changelog_index == 0 then
 		local empty_lbl = GGLabel:new(V.v(panel_w - 40, 60))
 		empty_lbl.font_size = 14 * rs
 		empty_lbl.text_align = "center"
@@ -91,7 +105,7 @@ function ChangelogView:_build_ui(rs, panel_w, panel_h)
 	self.back:add_child(prev_btn)
 	prev_btn.on_press = function()
 		S:queue("GUIButtonCommon")
-		if self._ver_idx < #changelog_data then
+		if self._ver_idx < #changelog_index then
 			self._ver_idx = self._ver_idx + 1
 			self:_render_version()
 		end
@@ -146,24 +160,25 @@ end
 function ChangelogView:_render_version()
 	local rs = GGLabel.static.ref_h / REF_H
 	local panel_w = self._panel_w
-	local ver = changelog_data[self._ver_idx]
-	if not ver then
+	local ver_info = changelog_index[self._ver_idx]
+	if not ver_info then
 		return
 	end
 
 	if self._ver_idx == 1 then
-		self._ver_lbl.text = "v" .. safe_tostring(ver.id)
+		self._ver_lbl.text = "v" .. safe_tostring(ver_info.id)
 	else
-		local newer_id = changelog_data[self._ver_idx - 1].id
-		self._ver_lbl.text = "v" .. safe_tostring(ver.id) .. " → v" .. safe_tostring(newer_id)
+		local newer_id = changelog_index[self._ver_idx - 1].id
+		self._ver_lbl.text = "v" .. safe_tostring(ver_info.id) .. " → v" .. safe_tostring(newer_id)
 	end
 
-	self._prev_btn:set_enabled(self._ver_idx < #changelog_data)
+	self._prev_btn:set_enabled(self._ver_idx < #changelog_index)
 	self._next_btn:set_enabled(self._ver_idx > 1)
 
 	self.scroll_list:clear_rows()
 
-	local total = #(ver.entries or {})
+	local entries = load_entries(ver_info.file)
+	local total = #entries
 
 	-- local info = GGLabel:new(V.v(panel_w - 40, 22))
 	-- info.font_name = "body"
@@ -180,7 +195,7 @@ function ChangelogView:_render_version()
 	self.scroll_list:add_row(head_sep)
 
 	for i = 1, total do
-		local entry = ver.entries[i]
+		local entry = entries[i]
 		if entry then
 			local row = KView:new(V.v(panel_w - 40, ENTRY_H))
 			row.propagate_on_down = true
@@ -266,7 +281,7 @@ function ChangelogView:_show_version_picker()
 	picker:add_child(list)
 
 	local row_h = 28
-	for idx, ver in ipairs(changelog_data) do
+	for idx, ver_info in ipairs(changelog_index) do
 		local row = KView:new(V.v(list.size.x, row_h))
 		row._base_bg = idx == self._ver_idx and {80, 60, 25, 200} or nil
 		row._hover_bg = idx == self._ver_idx and {100, 75, 35, 220} or {55, 42, 15, 230}
@@ -290,10 +305,10 @@ function ChangelogView:_show_version_picker()
 		lbl.vertical_align = "middle"
 		lbl.colors.text = idx == self._ver_idx and {255, 215, 100, 255} or {200, 190, 160, 255}
 		if idx == 1 then
-			lbl.text = string.format("v%-12s  (%d条)", safe_tostring(ver.id), #(ver.entries or {}))
+			lbl.text = string.format("v%-12s  (%d条)", safe_tostring(ver_info.id), ver_info.count or 0)
 		else
-			local newer_id = changelog_data[idx - 1].id
-			lbl.text = string.format("v%s → v%s  (%d条)", safe_tostring(ver.id), safe_tostring(newer_id), #(ver.entries or {}))
+			local newer_id = changelog_index[idx - 1].id
+			lbl.text = string.format("v%s → v%s  (%d条)", safe_tostring(ver_info.id), safe_tostring(newer_id), ver_info.count or 0)
 		end
 		lbl.fit_lines = 1
 		lbl.pos = V.v(6, 0)
@@ -333,6 +348,5 @@ function ChangelogView:_show_version_picker()
 			picker.parent:remove_child(picker)
 		end
 	end
-
 	picker:order_to_front()
 end

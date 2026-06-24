@@ -1,0 +1,1 @@
+return {{date="2025-10-29",author="MC123ACD",message="修改资源引用1"},{date="2025-10-29",author="CrazySpottedDove",message="优化了喷火器的普攻动画效果；调整了喷火器的攻击伤害逻辑为直线打击"},{date="2025-10-29",author="CrazySpottedDove",message="对喷火器进行平衡性调整"}}

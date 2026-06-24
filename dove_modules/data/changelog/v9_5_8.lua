@@ -1,0 +1,1 @@
+return {{date="2026-02-18",author="CrazySpottedDove",message="优化随机出怪的随机算法"},{date="2026-02-18",author="CrazySpottedDove",message="添加安雅的技能描述，并适当增强安雅过弱的技能"},{date="2026-02-18",author="CrazySpottedDove",message="优化了随机出怪的计算逻辑"},{date="2026-02-18",author="CrazySpottedDove",message="添加蕾琳的技能描述"}}

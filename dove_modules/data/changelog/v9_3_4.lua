@@ -1,0 +1,1 @@
+return {{date="2026-01-08",author="CrazySpottedDove",message="aura 性能优化"},{date="2026-01-09",author="CrazySpottedDove",message="为撼天墟谷的战役模式添加了boss：大祭司瓦利斯"},{date="2026-01-09",author="CrazySpottedDove",message="修复卡兹传送敌人后敌人短暂免疫的bug"},{date="2026-01-09",author="CrazySpottedDove",message="优化了新boss的数值和boss波压力"},{date="2026-01-09",author="CrazySpottedDove",message="修复安卓端告示导致蓝屏问题"}}

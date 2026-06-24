@@ -1,0 +1,1 @@
+return {{date="2025-10-16",author="CrazySpottedDove",message="修复沙镖赚钱不生效的问题"},{date="2025-10-17",author="CrazySpottedDove",message="调整沙镖数值，提升范围和弹射范围，降低攻击力"},{date="2025-10-17",author="CrazySpottedDove",message="添加了皇家弓箭手"},{date="2025-10-18",author="CrazySpottedDove",message="完成皇弓调整。修复野蛮人落下鸟后无法消失的问题；修复三管炮弹看起来迷你的问题"}}

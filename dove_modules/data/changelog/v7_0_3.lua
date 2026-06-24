@@ -1,0 +1,1 @@
+return {{date="2025-10-27",author="MC123ACD",message="修复缺少日光塔图标的问题，修复图标瑕疵"},{date="2025-10-27",author="CrazySpottedDove",message="添加了防御塔的二级技能菜单"},{date="2025-10-27",author="CrazySpottedDove",message="细化了部分防御塔的技能描述"},{date="2025-10-27",author="CrazySpottedDove",message="完善了防御塔图鉴"}}

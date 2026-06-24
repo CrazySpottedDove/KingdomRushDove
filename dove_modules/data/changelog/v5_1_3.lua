@@ -1,0 +1,1 @@
+return {{date="2025-10-07",author="CrazySpottedDove",message="添加了新关卡：失落庭园(目前开放战役模式)；修复了低速情况下菜单关闭时淡出时间过长的问题"},{date="2025-10-07",author="CrazySpottedDove",message="comment args"},{date="2025-10-07",author="CrazySpottedDove",message="添加新地图资源至index"},{date="2025-10-07",author="CrazySpottedDove",message="使打包脚本能处理临时美术资源"}}

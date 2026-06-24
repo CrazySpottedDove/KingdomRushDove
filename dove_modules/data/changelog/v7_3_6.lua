@@ -1,0 +1,1 @@
+return {{date="2025-11-07",author="CrazySpottedDove",message="修复单个地震塔也能触发多重灼烧的问题"},{date="2025-11-07",author="CrazySpottedDove",message="修复五代奥法的伤害图标错误"},{date="2025-11-07",author="CrazySpottedDove",message="添加船长的技能描述"}}

@@ -1,0 +1,1 @@
+return {{date="2026-03-23",author="CrazySpottedDove",message="放大了安卓端的英雄按钮和暂停按钮的UI大小"},{date="2026-03-23",author="CrazySpottedDove",message="修复安卓端放大后部分gui错位"},{date="2026-03-24",author="CrazySpottedDove",message="优化了P:valid_node_nearby()的性能"},{date="2026-03-24",author="CrazySpottedDove",message="修正UI放缩，对平板做特殊处理"}}

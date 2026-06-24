@@ -1,0 +1,1 @@
+return {{date="2025-11-28",author="CrazySpottedDove",message="优化了吸引机制的聚怪效果"},{date="2025-11-29",author="CrazySpottedDove",message="统一了护甲韧性的处理方式；修复了但丁削抗异常"},{date="2025-11-29",author="CrazySpottedDove",message="添加了但丁的技能描述"}}

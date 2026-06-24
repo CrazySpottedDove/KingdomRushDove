@@ -1,0 +1,1 @@
+return {{date="2026-04-04",author="CrazySpottedDove",message="perf: 优化音乐资源打包"},{date="2026-04-05",author="CrazySpottedDove",message="转换所有音乐资源为ogg格式以避免安卓端异常的声音无法播放问题"},{date="2026-04-05",author="CrazySpottedDove",message="feat: 优化了boss血条的显示逻辑"}}

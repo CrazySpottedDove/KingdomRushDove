@@ -1,0 +1,1 @@
+return {{date="2026-02-26",author="CrazySpottedDove",message="修复部分情况下配置界面抢占键盘事件控制权的问题"},{date="2026-02-26",author="CrazySpottedDove",message="修复库绍的攻速异常问题"},{date="2026-02-27",author="CrazySpottedDove",message="允许手动关闭参数设置、存档选择、作者的话，并使它们默认启用。可在大地图按l打开配置，或者点左上角设置按钮修改启动项"},{date="2026-02-27",author="CrazySpottedDove",message="修复update_manager相关问题"}}

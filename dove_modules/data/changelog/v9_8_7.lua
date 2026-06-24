@@ -1,0 +1,1 @@
+return {{date="2026-03-26",author="CrazySpottedDove",message="真的修复恶魔澡堂"},{date="2026-03-26",author="CrazySpottedDove",message="修复武装梦魇的相关问题"},{date="2026-03-26",author="CrazySpottedDove",message="修复暮弓技能价格错误"},{date="2026-03-26",author="CrazySpottedDove",message="安卓端调集士兵改为只需要点一次，其余保持两次"},{date="2026-03-26",author="CrazySpottedDove",message="安卓端点击第一次科技显示科技效果，第二次完成选择。"}}

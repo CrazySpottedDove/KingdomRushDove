@@ -1,0 +1,1 @@
+return {{date="2026-03-21",author="CrazySpottedDove",message="迁移存档位置"},{date="2026-03-21",author="CrazySpottedDove",message="修复安卓上的文字显示问题；搞定了打包脚本，修改安卓的打包方式为apk"},{date="2026-03-21",author="CrazySpottedDove",message="默认存档中提供关卡全通"}}

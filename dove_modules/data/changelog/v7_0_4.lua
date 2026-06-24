@@ -1,0 +1,1 @@
+return {{date="2025-10-28",author="CrazySpottedDove",message="添加了commit-hash.txt生成支持，为用户级更新器做准备"},{date="2025-10-28",author="CrazySpottedDove",message="修改了package.sh，为用户级更新器做适配"},{date="2025-10-28",author="CrazySpottedDove",message="添加commit_hash文件"}}

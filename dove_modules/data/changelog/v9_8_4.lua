@@ -1,0 +1,1 @@
+return {{date="2026-03-24",author="CrazySpottedDove",message="优化安卓打包脚本，减少对不必要文件的打包"},{date="2026-03-24",author="CrazySpottedDove",message="修正安卓打包时放大后的美术未成功压缩的问题"},{date="2026-03-24",author="CrazySpottedDove",message="放宽了局内缩放的上限"},{date="2026-03-24",author="CrazySpottedDove",message="修复手机端大雪怪卡死问题（可能？）"}}

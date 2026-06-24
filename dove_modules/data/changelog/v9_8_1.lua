@@ -1,0 +1,1 @@
+return {{date="2026-03-22",author="CrazySpottedDove",message="对超宽屏、超窄屏做了适配"},{date="2026-03-22",author="CrazySpottedDove",message="修复部分分辨率下game的相机范围"},{date="2026-03-22",author="CrazySpottedDove",message="修复部分分辨率下screen_map的初始位置"},{date="2026-03-22",author="CrazySpottedDove",message="优化了部分game_gui在相机变换时的表现"}}

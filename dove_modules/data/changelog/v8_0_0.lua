@@ -1,0 +1,1 @@
+return {{date="2025-11-10",author="CrazySpottedDove",message="允许了更多的配置项；允许直接在配置项中输入小数"},{date="2025-11-10",author="CrazySpottedDove",message="修复风暴环礁之夜无法进入的问题"},{date="2025-11-10",author="CrazySpottedDove",message="修复ESC导致音乐中断的问题"}}
