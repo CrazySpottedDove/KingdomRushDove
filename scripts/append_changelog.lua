@@ -49,6 +49,46 @@ local vid = ver.id
 local filename = "v" .. (vid:gsub("%.", "_"))
 local filepath = "dove_modules/data/changelog/" .. filename .. ".lua"
 
+local function is_version_only_commit(hash)
+	local parent = run("git rev-list --parents -n 1 " .. hash .. " 2>/dev/null")
+	if not parent then
+		return false
+	end
+	local count = 0
+	for _ in parent:gmatch("%x+") do
+		count = count + 1
+	end
+	if count <= 1 then
+		return false
+	end
+	local diff = run("git diff-tree --no-commit-id --name-only -r " .. hash)
+	if not diff then
+		return false
+	end
+	local non_version = 0
+	for f in diff:gmatch("[^\n]+") do
+		if f ~= "version.lua" then
+			non_version = non_version + 1
+		end
+	end
+	return non_version == 0
+end
+
+local function is_version_marker(msg)
+	local patterns = {"LAST%s+VERSION%s*[:%s]+v?[%d%.]+", "MAIN%s+VERSION%s+JUMP%s*[:%s]+v?[%d%.]+", "version%s+jump%s+to%s+v?[%d%.]+", "VERSION%s+JUMP%s+TO%s+v?[%d%.]+"}
+	for _, pat in ipairs(patterns) do
+		if msg:match(pat) then
+			return true
+		end
+	end
+	return false
+end
+
+-- 与 gen_changelog.lua 保持一致的过滤规则
+if is_version_only_commit(hash) or is_version_marker(message) then
+	os.exit(0)
+end
+
 local function escape(s)
 	return s:gsub("[\"'\\]", {
 		['"'] = '\\"',
@@ -66,8 +106,8 @@ if existing then
 	end
 end
 
--- 在开头插入新条目
-table.insert(entries, 1, {
+-- 追加到末尾，与 gen_changelog.lua 一致（最旧在前，最新在后）
+table.insert(entries, {
 	date = date,
 	author = author,
 	message = message

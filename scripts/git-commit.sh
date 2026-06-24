@@ -9,14 +9,6 @@
 # file) instead of a full git history scan, keeping it fast.
 
 set -e
-cd "$(git rev-parse --show-toplevel)" || exit 1
-
-# Step 0: format code
-echo "Running dlfmt..."
-dlfmt --json-task ./dlfmt_task.json
-
-# Step 1: stage all changes (including formatting)
-git add -A
 
 # Step 2: git commit (capture exit without set -e killing us)
 set +e
@@ -30,6 +22,9 @@ fi
 
 # Step 3: fast incremental changelog append (reads last commit info)
 luajit scripts/append_changelog.lua
+
+echo "Running dlfmt..."
+dlfmt --json-task ./dlfmt_task.json
 
 # Step 4: stage updated changelog files
 git add dove_modules/data/changelog_data.lua
