@@ -92,7 +92,9 @@ function GEU.init_blank_level(store, idx, mode)
 			nav_mesh = {}
 		},
 		required_textures = {},
+		plugin_required_textures = {},
 		required_sounds = {},
+		plugin_required_sounds = {},
 		nav_mesh = {}
 	}
 

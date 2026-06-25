@@ -115,6 +115,8 @@ game.required_sounds = {
 	"kr4_elves_barrack",
 	"tower_goblirang"
 }
+game.plugin_required_textures = {}
+game.plugin_required_sounds = {}
 game.simulation_systems = {
 	"level",
 	"wave_spawn",

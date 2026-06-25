@@ -49,6 +49,15 @@ function table.arraycontains(t, o)
 	return false
 end
 
+function table.arrayensure(t, o)
+	for i = 1, #t do
+		if t[i] == o then
+			return
+		end
+	end
+	t[#t + 1] = o
+end
+
 function table.indexforobject(t, o)
 	local index
 	for i = 1, #t do

@@ -261,7 +261,7 @@ function director:unload_item(item)
 	if item.item_name == "game" then
 		local game = item
 
-		self:unload_texture_groups(replace_locale(game.game_gui.required_textures), self.params.texture_size, game.game_gui.ref_res, "game_gui")
+		self:unload_texture_groups(replace_locale(game.game_gui.required_textures), game.game_gui.ref_res, "game_gui")
 
 		local groups = {}
 
@@ -285,19 +285,15 @@ function director:unload_item(item)
 			end
 		end
 
-		self:unload_texture_groups(groups, self.params.texture_size, game.ref_res, "game")
+		self:unload_texture_groups(groups, game.ref_res, "game")
 		I:unload_atlas("temp_game_texts", game.store.screen_scale)
 
 		if item.required_sounds then
-			for _, group in pairs(item.required_sounds) do
-				S:unload_group(group)
-			end
+			self:unload_sound_groups(item.required_sounds)
 		end
 
 		if game.store.level.required_sounds then
-			for _, group in pairs(game.store.level.required_sounds) do
-				S:unload_group(group)
-			end
+			self:unload_sound_groups(game.store.level.required_sounds)
 		end
 
 		if game.store.selected_hero then
@@ -311,9 +307,7 @@ function director:unload_item(item)
 		local criket = configer.criket()
 
 		if criket and criket.on then
-			for _, group in pairs(criket.required_sounds) do
-				S:unload_group(group)
-			end
+			self:unload_sound_groups(criket.required_sounds)
 		end
 
 		game:destroy()
@@ -331,9 +325,7 @@ function director:unload_item(item)
 		end
 
 		if item.required_sounds then
-			for _, group in pairs(item.required_sounds) do
-				S:unload_group(group)
-			end
+			self:unload_sound_groups(item.required_sounds)
 		end
 
 		if item.destroy then
@@ -370,10 +362,9 @@ function director:queue_load_item_named(name)
 		local loading = _require("screen_loading")
 
 		self:load_texture_groups(loading.required_textures, self.params.texture_size, loading.ref_res, false)
-
-		if loading.required_sounds then
-			self:load_sound_groups(loading.required_sounds)
-		end
+		self:load_sound_groups(loading.required_sounds)
+		self:load_plugin_texture_groups(loading.plugin_required_textures, loading.ref_res, false)
+		self:load_sound_groups(loading.plugin_required_sounds)
 
 		-- 添加 init 协程的支持
 		local init_coro
@@ -403,6 +394,7 @@ function director:queue_load_item_named(name)
 
 		if item.required_textures then
 			self:load_texture_groups(replace_locale(item.required_textures), self.params.texture_size, item.ref_res, true, name)
+			self:load_plugin_texture_groups(item.plugin_required_textures, item.ref_res, true, name)
 		end
 
 		if item.ref_res then
@@ -414,6 +406,7 @@ function director:queue_load_item_named(name)
 		if item.required_sounds then
 			self:load_sound_groups(item.required_sounds)
 		end
+		self:load_sound_groups(item.plugin_required_sounds)
 	elseif props.type == "comic" then
 		local args = self.next_item_args
 		local comic_idx = args.custom
@@ -456,10 +449,14 @@ function director:queue_load_item_named(name)
 		end
 
 		self:load_texture_groups(replace_locale(game.required_textures), self.params.texture_size, game.ref_res, true, "game")
+		self:load_plugin_texture_groups(game.plugin_required_textures, game.ref_res, true, "game")
 		self:load_texture_groups(replace_locale(game.store.level.required_textures), self.params.texture_size, game.ref_res, true, "game")
 		self:load_texture_groups(replace_locale(game_gui.required_textures), self.params.texture_size, game_gui.ref_res, true, "game_gui")
+		self:load_plugin_texture_groups(game_gui.plugin_required_textures, game_gui.ref_res, true, "game_gui")
 		self:load_sound_groups(game.required_sounds)
+		self:load_sound_groups(game.plugin_required_sounds)
 		self:load_sound_groups(game.store.level.required_sounds)
+		self:load_sound_groups(game_gui.plugin_required_sounds)
 
 		if game.store.level.required_exoskeletons then
 			EXO:queue_load(game.store.level.required_exoskeletons)
@@ -512,16 +509,9 @@ function director:queue_load_item_named(name)
 	log.debug("queued item: %s", self.queued_item.item_name)
 end
 
-function director:unload_texture_groups(groups, texture_size, ref_height, item_name)
-	local forced_texture_size
-
+function director:unload_texture_groups(groups, ref_height, item_name)
+	local scale = ref_height and self:get_texture_scale(item_name, ref_height) or 1
 	for _, group in pairs(groups) do
-		local scale = 1
-
-		if ref_height then
-			scale = self:get_texture_scale(item_name, ref_height, forced_texture_size)
-		end
-
 		I:unload_atlas(group, scale)
 	end
 end
@@ -548,11 +538,43 @@ function director:load_texture_groups(groups, texture_size, ref_height, queue, i
 	end
 end
 
+--- 专门用于加载插件的 texture 资源，允许插件只需要在 scene 的 plugin_required_textures 中注册项目，就可以跟随本体进行资源加载
+function director:load_plugin_texture_groups(groups, ref_height, queue, item_name)
+	local scale = ref_height and self:get_texture_scale(item_name, ref_height) or 1
+
+	for group, texture_group_info in pairs(groups) do
+		local path = "plugins/" .. texture_group_info.path
+		if queue then
+			I:queue_load_atlas(scale, path, group, not texture_group_info.use_bytecode)
+		else
+			if texture_group_info.use_bytecode then
+				I:load_atlas_new(scale, path, group)
+			else
+				I:load_atlas(scale, path, group)
+			end
+		end
+	end
+end
+
+function director:unload_plugin_texture_groups(groups, ref_height, item_name)
+	local scale = ref_height and self:get_texture_scale(item_name, ref_height) or 1
+
+	for group, _ in pairs(groups) do
+		I:unload_atlas(group, scale)
+	end
+end
+
 function director:load_sound_groups(groups)
 	if groups then
 		for _, group in pairs(groups) do
 			S:queue_load_group(group)
 		end
+	end
+end
+
+function director:unload_sound_groups(groups)
+	for _, group in pairs(groups) do
+		S:unload_group(group)
 	end
 end
 

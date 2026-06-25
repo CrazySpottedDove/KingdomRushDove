@@ -16,6 +16,8 @@ local screen = {}
 
 screen.required_sounds = {"common", "music_screen_credits"}
 screen.required_textures = {"screen_credits"}
+screen.plugin_required_textures = {}
+screen.plugin_required_sounds = {}
 screen.ref_h = 768
 screen.ref_w = nil
 screen.ref_res = TEXTURE_SIZE_ALIAS.ipad

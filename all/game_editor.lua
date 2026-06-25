@@ -104,6 +104,8 @@ editor.required_textures = {
 	"kr4_warmongers_tower_barrack",
 	"kr4_dark_army_tower_barrack"
 }
+editor.plugin_required_textures = {}
+editor.plugin_required_sounds = {}
 editor.ref_h = REF_H
 editor.ref_w = REF_W
 editor.ref_res = TEXTURE_SIZE_ALIAS.ipad

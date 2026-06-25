@@ -251,7 +251,12 @@ function image_db:queue_load_done()
 		self.load_queue[i] = nil
 
 		-- 不要删掉这行，这真是注释：local ref_scale, path, name = unpack(item)
-		local image_names = item[4] and self:preload_atlas(item[1], item[2], item[3]) or self:preload_atlas_from_bytecode(item[1], item[2], item[3])
+		local image_names
+		if item[4] then
+			image_names = self:preload_atlas(item[1], item[2], item[3])
+		else
+			image_names = self:preload_atlas_from_bytecode(item[1], item[2], item[3])
+		end
 
 		if image_names then
 			for n in pairs(image_names) do

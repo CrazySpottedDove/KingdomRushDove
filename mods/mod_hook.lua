@@ -65,8 +65,8 @@ function hook.I.load_atlas(load_atlas, self, ref_scale, path, name, yielding)
 end
 
 -- 增加图像资源覆盖路径
-function hook.I.queue_load_atlas(queue_load_atlas, self, ref_scale, path, name)
-	queue_load_atlas(self, ref_scale, path, name)
+function hook.I.queue_load_atlas(queue_load_atlas, self, ref_scale, path, name, not_bytecode)
+	queue_load_atlas(self, ref_scale, path, name, not_bytecode)
 
 	for i = 1, mod_db.mods_count do
 		local mod_data = mod_db.mods_datas[i]
@@ -102,7 +102,7 @@ function hook.I.queue_load_atlas(queue_load_atlas, self, ref_scale, path, name)
 					raw_image_load_atlas(self, ref_scale, images_path, name, false)
 					log.info("Found atlas override %s in mod %s (android lua fallback)", lua_file, mod_data.name)
 				else
-					queue_load_atlas(self, ref_scale, images_path, name)
+					queue_load_atlas(self, ref_scale, images_path, name, not_bytecode)
 					log.info("Found atlas override %s in mod %s", lua_file, mod_data.name)
 				end
 			end

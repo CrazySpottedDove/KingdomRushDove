@@ -23,6 +23,8 @@ local screen = {}
 
 screen.required_sounds = {"common", "music_screen_slots"}
 screen.required_textures = {"screen_slots", "view_options"}
+screen.plugin_required_textures = {}
+screen.plugin_required_sounds = {}
 screen.ref_w = 1920
 screen.ref_h = 1080
 screen.ref_res = TEXTURE_SIZE_ALIAS.fullhd

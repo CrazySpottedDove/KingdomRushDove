@@ -18,6 +18,8 @@ local screen_settings = {}
 
 -- screen_settings.required_textures = {"screen_settings"}
 screen_settings.required_textures = {}
+screen_settings.plugin_required_textures = {}
+screen_settings.plugin_required_sounds = {}
 screen_settings.ref_h = 1080
 
 local colors = {

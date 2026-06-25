@@ -61,6 +61,8 @@ screen_map.required_textures = {
 	"gui_ico",
 	"gui_common"
 }
+screen_map.plugin_required_textures = {}
+screen_map.plugin_required_sounds = {}
 screen_map.ref_w = 1920
 screen_map.ref_h = 1080
 screen_map.ref_res = TEXTURE_SIZE_ALIAS.fullhd

@@ -57,6 +57,7 @@ sound_db.paused = false
 sound_db.load_queue = {}
 sound_db.threads = {}
 sound_db.load_file_queue = {}
+sound_db.load_path_queue = {}
 sound_db.load_mode_queue = {}
 sound_db.load_file_total = 0
 sound_db.load_file_done = 0
@@ -166,7 +167,6 @@ function sound_db:_precache_sound(id, sd)
 end
 
 function sound_db:queue_load_group(name)
-	log.info("queued %s", name)
 	table.insert(self.load_queue, name)
 
 	if #self.load_queue == 1 and #self.threads == 0 and #self.load_file_queue == 0 then
@@ -208,7 +208,10 @@ function sound_db:queue_load_done()
 					else
 						self.source_uses[fn] = 1
 						local insert_index = #self.load_file_queue + 1
+						-- 允许在 group 中指定 parent_dir，以允许 mod 自定义声音资源的加载路径
+						local parent_dir = (group.parent_dir and group.parent_dir or self.files_path) .. "/"
 						self.load_file_queue[insert_index] = fn
+						self.load_path_queue[insert_index] = parent_dir .. fn
 						self.load_mode_queue[insert_index] = mode
 					end
 				end
@@ -219,6 +222,7 @@ function sound_db:queue_load_done()
 					local sound = self.sounds[group.sounds[j]]
 					if sound and sound.files then
 						local mode = sound.stream and "stream" or "static"
+						local parent_dir = (sound.parent_dir and sound.parent_dir or self.files_path) .. "/"
 						for k = 1, #sound.files do
 							local fn = sound.files[k]
 
@@ -228,6 +232,7 @@ function sound_db:queue_load_done()
 								self.source_uses[fn] = 1
 								local insert_index = #self.load_file_queue + 1
 								self.load_file_queue[insert_index] = fn
+								self.load_path_queue[insert_index] = parent_dir .. fn
 								self.load_mode_queue[insert_index] = mode
 							end
 						end
@@ -253,19 +258,17 @@ function sound_db:queue_load_done()
 
 		local last_thread_used = 1
 		for i = #self.load_file_queue, 1, -1 do
-			local file = string.format(self.files_path .. "/%s", self.load_file_queue[i])
 			local cin = self.threads[last_thread_used][2]
 
-			cin:push(file)
+			cin:push(self.load_path_queue[i])
 			cin:push(self.load_mode_queue[i])
 			cin:push(self.load_file_queue[i])
+			self.load_path_queue[i] = nil
 			self.load_file_queue[i] = nil
 			self.load_mode_queue[i] = nil
 
 			last_thread_used = km.zmod(last_thread_used + 1, thread_count)
 		end
-
-		self.load_file_queue = {}
 
 		for i = 1, thread_count do
 			self.threads[i][2]:push("QUIT")

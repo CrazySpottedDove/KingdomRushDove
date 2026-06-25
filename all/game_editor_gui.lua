@@ -32,6 +32,8 @@ log:set_level("debug")
 local gui = {}
 
 gui.required_textures = {}
+gui.plugin_required_textures = {}
+gui.plugin_required_sounds = {}
 
 local function wid(id)
 	return gui.window:get_child_by_id(id)

@@ -8,6 +8,8 @@ local screen = {}
 
 screen.required_sounds = {"common", "music_screen_kr1_end"}
 screen.required_textures = {"screen_credits", "comic_end"}
+screen.plugin_required_textures = {}
+screen.plugin_required_sounds = {}
 screen.ref_h = GUI_REF_H
 
 screen.ref_res = TEXTURE_SIZE_ALIAS.ipad

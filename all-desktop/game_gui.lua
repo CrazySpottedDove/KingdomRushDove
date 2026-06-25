@@ -69,6 +69,8 @@ local tower_menus = require("kr1.data.tower_menus_data")
 local game_gui = {}
 
 game_gui.required_textures = {"gui_common", "gui_ico", "gui_portraits", "achievements", "encyclopedia_creeps", "gui_notifications", "gui_notifications_bg", "ballon", "view_options"}
+game_gui.plugin_required_textures = {}
+game_gui.plugin_required_sounds = {}
 game_gui.ref_h = GUI_REF_H
 game_gui.ref_w = GUI_REF_W
 game_gui.ref_res = TEXTURE_SIZE_ALIAS.ipad
@@ -5966,8 +5968,6 @@ function CriketMenu:initialize()
 	self.clip = false
 end
 
-local criket_menu = require("kr1.data.criket_menu_data")
-
 function CriketMenu:calculate_button_position(item_index)
 	local circle_volume = 6
 	local radius_mod = 65
@@ -5993,7 +5993,7 @@ end
 
 function CriketMenu:show()
 	self:remove_children()
-
+	local criket_menu = require("kr1.data.criket_menu_data")
 	for index, item in pairs(criket_menu) do
 		local b = CriketMenuButton:new(item)
 

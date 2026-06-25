@@ -243,6 +243,7 @@ function mod_utils.mixed_apply_factor(t, k, factor)
 	return true
 end
 
+--- DEPRECATED: 建议直接注册。
 --- 用于为插件提供自定义的资源加载方式。使用该方式加载的资源索引，不需要提前打包成 bytecode 格式。建议在 screen_loading 的 init 函数钩子的前面调用本函数，这样就可以让插件的资源和本体的资源一起加载。
 ---@param groups table 美术资源组(如：想加载 go_foo.lua，就给 {"go_foo"})
 ---@param path string 美术资源父路径(如：插件entry名称/assets)
