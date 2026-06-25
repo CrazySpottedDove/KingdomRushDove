@@ -539,8 +539,8 @@ return {
 			action_arg = "tower_blade",
 			image = "kr3_main_icons_0001",
 			place = 16,
-			tt_title = _("TOWER_BARRACKS_BLADE_NAME"),
-			tt_desc = _("TOWER_BARRACKS_BLADE_DESCRIPTION")
+			tt_title = _("TOWER_BLADE_NAME"),
+			tt_desc = _("TOWER_BLADE_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_forest",
