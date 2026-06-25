@@ -26350,15 +26350,23 @@ end
 
 scripts.tower_spirit_mausoleum = {}
 function scripts.tower_spirit_mausoleum.remove(this, store)
-	for _, b in ipairs(this.attacks.list[1].stored_bullets) do
-		queue_remove(store, b)
+	local bullets = this.attacks.list[1].stored_bullets
+	for i = #bullets, 1, -1 do
+		queue_remove(store, bullets[i])
+		bullets[i] = nil
 	end
-	for _, s in ipairs(this.barrack.soldiers) do
-		if s.health then
-			s.health.dead = true
-		end
-		queue_remove(store, s)
+	bullets = this.attacks.list[1].extra_bullets
+	for i = #bullets, 1, -1 do
+		queue_remove(store, bullets[i])
+		bullets[i] = nil
 	end
+
+	local soldiers = this.barrack.soldiers
+	for i = #soldiers, 1, -1 do
+		queue_remove(store, soldiers[i])
+		soldiers[i] = nil
+	end
+
 	if this._aura_spectral_communion then
 		local aura = store.entities[this._aura_spectral_communion]
 		if aura then
@@ -26789,6 +26797,7 @@ function scripts.tower_spirit_mausoleum_bolt.update(this, store)
 				local m = E:create_entity(mod_name)
 				m.modifier.target_id = b.target_id
 				m.modifier.level = b.level
+				m.modifier.damage_factor = b.damage_factor
 				queue_insert(store, m)
 			end
 		end
