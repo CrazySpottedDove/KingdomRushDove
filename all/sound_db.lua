@@ -156,6 +156,21 @@ function sound_db:init(path)
 	end
 end
 
+--- 插件接口：用于追加声音组的数据定义
+---@param groups table，格式类似 groups.lua，可添加字段 parent_dir，指定 mod 自定义声音资源的加载路径
+function sound_db:register_groups(groups)
+	for k, v in pairs(groups) do
+		self.groups[k] = v
+	end
+end
+
+function sound_db:register_sounds(sounds)
+	for k, v in pairs(sounds) do
+		self.sounds[k] = v
+		self:_precache_sound(k, v)
+	end
+end
+
 -- 预缓存 per-sound 热路径字段，在 init() 和 mod 懒初始化时调用。
 -- 只写 _ 前缀字段，不影响声音定义的公共字段。
 function sound_db:_precache_sound(id, sd)
