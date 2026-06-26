@@ -59,7 +59,6 @@ function M.register(sys)
 		coroutine.yield()
 
 		DI:patch_templates()
-		E:patch_config(configer.config())
 		coroutine.yield()
 
 		W:load(store.level_name, store.level_mode, store.level_mode_override == GAME_MODE_ENDLESS)
@@ -82,6 +81,7 @@ function M.register(sys)
 		end
 
 		UP:patch_templates(store.level.max_upgrade_level or GS.max_upgrade_level)
+		E:patch_config(configer.config())
 		coroutine.yield()
 
 		if store.level.data then

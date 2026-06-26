@@ -43,7 +43,6 @@ tt.powers.disintegrate.price_base = 350
 tt.powers.disintegrate.price_inc = 225
 tt.powers.disintegrate.cooldown_base = 22
 tt.powers.disintegrate.cooldown_inc = -2
-
 tt.powers.disintegrate.upper_damage = {666, 733, 800}
 tt.powers.disintegrate.attack_idx = 2
 tt.powers.teleport = CC("power")

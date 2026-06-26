@@ -132,7 +132,7 @@ function animation_db:frame_name(animation_name, frame_idx)
 	return a[2][frame_idx]
 end
 
---- DEPRECATED: 该方法已废弃，建议使用 extrace_frame_from 来直接从原始定义表中提取出 frame_count 和 frame_names。此处保留以提供部分插件代码的兼容性。
+--- DEPRECATED: 该方法已废弃，建议使用 extract_frame_from 来直接从原始定义表中提取出 frame_count 和 frame_names。此处保留以提供部分插件代码的兼容性。
 --- 完成动画 frames 和 frame_names 的生成。所有从文件加载的动画都还处于不可用阶段，需要通过 generate_frames 来生成 frame_names 和 frame_count，以取得运行时的最高效率。
 --- @param name string 动画名称，该动画应当在 animation_db 中已经有旧格式的定义
 --- 生成的结构：self.db[name] = {[1] = frame_count(int), [2] = frame_names(array of string)}
@@ -143,58 +143,7 @@ function animation_db:generate_frames(name)
 		return
 	end
 
-	local prefix = a.prefix
-	local frame_names = {}
-	local frame_count = 0
-
-	if a.ranges then
-		for i = 1, #a.ranges do
-			local range = a.ranges[i]
-
-			if #range == 2 then
-				local from = range[1]
-				local to = range[2]
-				local inc = to < from and -1 or 1
-
-				for frame = from, to, inc do
-					frame_count = frame_count + 1
-					frame_names[frame_count] = prefix .. string.format("_%04i", frame)
-				end
-			else
-				for j = 1, #range do
-					frame_count = frame_count + 1
-					frame_names[frame_count] = prefix .. string.format("_%04i", range[j])
-				end
-			end
-		end
-	else
-		if a.pre then
-			local pre = a.pre
-			for i = 1, #pre do
-				frame_count = frame_count + 1
-				frame_names[frame_count] = prefix .. string.format("_%04i", pre[i])
-			end
-		end
-
-		if a.from and a.to then
-			local inc = a.from > a.to and -1 or 1
-
-			for frame = a.from, a.to, inc do
-				frame_count = frame_count + 1
-				frame_names[frame_count] = prefix .. string.format("_%04i", frame)
-			end
-		end
-
-		if a.post then
-			local post = a.post
-			for i = 1, #post do
-				frame_count = frame_count + 1
-				frame_names[frame_count] = prefix .. string.format("_%04i", post[i])
-			end
-		end
-	end
-
-	self.db[name] = {frame_count, frame_names}
+	self.db[name] = self.extract_frame_from(a)
 end
 
 function animation_db:fni(animation, time_offset, loop, fps)

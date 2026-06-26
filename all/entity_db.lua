@@ -767,12 +767,55 @@ function entity_db:patch_config(config)
 	if not config.enabled then
 		return
 	end
+
+	-- 动态添加模板, 避免模板数量膨胀. 正常游玩, 并不太会开 build_random_towers.
+	local GS = require("kr1.game_settings")
+	if config.build_random_towers then
+		local scripts = require("game_scripts")
+		local tt = self:register_t("tower_random_advanced_archer", "tower")
+		tt.tower.price = 0
+		tt.info.fn = scripts.tower_random.get_info
+		tt.desc_key = "TOWER_RANDOM_ADVANCED_ARCHER_DESCRIPTION"
+		for i = 4, #GS.archer_towers do
+			tt.tower.price = tt.tower.price + self:get_template(GS.archer_towers[i]).tower.price
+		end
+		tt.tower.price = math.floor(tt.tower.price / (#GS.archer_towers - 3))
+
+		tt = self:register_t("tower_random_advanced_mage", "tower")
+		tt.tower.price = 0
+		tt.info.fn = scripts.tower_random.get_info
+		for i = 4, #GS.mage_towers do
+			tt.tower.price = tt.tower.price + self:get_template(GS.mage_towers[i]).tower.price
+		end
+		tt.desc_key = "TOWER_RANDOM_ADVANCED_MAGE_DESCRIPTION"
+		tt.tower.price = math.floor(tt.tower.price / (#GS.mage_towers - 3))
+
+		tt = self:register_t("tower_random_advanced_engineer", "tower")
+		tt.tower.price = 0
+		tt.info.fn = scripts.tower_random.get_info
+		for i = 4, #GS.engineer_towers do
+			tt.tower.price = tt.tower.price + self:get_template(GS.engineer_towers[i]).tower.price
+		end
+		tt.desc_key = "TOWER_RANDOM_ADVANCED_ENGINEER_DESCRIPTION"
+		tt.tower.price = math.floor(tt.tower.price / (#GS.engineer_towers - 3))
+
+		tt = self:register_t("tower_random_advanced_barrack", "tower")
+		tt.tower.price = 0
+		tt.info.fn = scripts.tower_random.get_info
+		for i = 4, #GS.barrack_towers do
+			tt.tower.price = tt.tower.price + self:get_template(GS.barrack_towers[i]).tower.price
+		end
+		tt.desc_key = "TOWER_RANDOM_ADVANCED_BARRACK_DESCRIPTION"
+		tt.tower.price = math.floor(tt.tower.price / (#GS.barrack_towers - 3))
+	end
+
 	-- 如果所有倍率都是 1，就直接跳过，避免不必要的循环和乘法运算，提升性能。
 	if config.enemy_damage_multiplier == 1 and config.enemy_health_multiplier == 1 and config.enemy_gold_multiplier == 1 and config.enemy_health_damage_multiplier == 1 and config.enemy_speed_multiplier == 1 and config.tower_cooldown_divider == 1 and config.tower_damage_multiplier == 1 and config.tower_range_multiplier == 1 and config.extra_soldiers == 0 then
 		return
 	end
+
+	local barrack_towers = GS.barrack_towers
 	local SU = require("script_utils")
-	local barrack_towers = require("kr1.game_settings").barrack_towers
 	for _, t in pairs(self.entities) do
 		if t.enemy then
 			if t.health.hp_max then
@@ -807,6 +850,7 @@ function entity_db:patch_config(config)
 			end
 		end
 	end
+
 end
 
 return entity_db

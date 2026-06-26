@@ -13,14 +13,12 @@ function M.register(sys)
 	sys.game_upgrades.name = "game_upgrades"
 
 	function sys.game_upgrades:init(store)
-		store.game_upgrades_data = {}
-		store.game_upgrades_data.mage_towers_count = 0
+		self.mage_tower_map = table.to_map(UP.mage_towers)
 	end
-
-	local mage_tower_map = table.to_map(UP.mage_towers)
 
 	function sys.game_upgrades:on_insert_unconditional(entity, store)
 		local mage_bullet_names = UP.mage_tower_bolts
+		local mage_tower_map = self.mage_tower_map
 		local u = UP:get_upgrade("mage_brilliance")
 
 		if entity.tower and u and mage_tower_map[entity.template_name] then
@@ -97,6 +95,7 @@ function M.register(sys)
 
 	function sys.game_upgrades:on_remove_unconditional(entity, store)
 		local mage_bullet_names = UP.mage_tower_bolts
+		local mage_tower_map = self.mage_tower_map
 		local u = UP:get_upgrade("mage_brilliance")
 
 		if entity.tower and u and mage_tower_map[entity.template_name] then
