@@ -12,13 +12,13 @@
 #	stage total gold	1900
 #	stage gold curve
 #	WAVE 1					Glarebrood x5
-Drainbrood x1
-Deathbrood x1					Glarebrood x3
-Deathbrood x1															Glarebrood x6
-Drainbrood x1
-Deadbrood x2											Glarebrood x3
-Drainbrood x1					Glarebrood x3
-Drainbrood x1
+#Drainbrood x1
+#Deathbrood x1					Glarebrood x3
+#Deathbrood x1															Glarebrood x6
+#Drainbrood x1
+#Deadbrood x2											Glarebrood x3
+#Drainbrood x1					Glarebrood x3
+#Drainbrood x1
 #	enemies
 #	cant.															0	0	0	0
 #	gold	0														0	0	0	0
@@ -49,8 +49,8 @@ Drainbrood x1
 					1.5																																	drainbrood					drainbrood
 	wait				2
 #	WAVE 2					Drainbrood x2					Ballooning x7
-Drainbrood x1															Ballooning x5
-Drainbrood x3															Ballooning x5
+#Drainbrood x1															Ballooning x5
+#Drainbrood x3															Ballooning x5
 #	enemies
 #	cant.					0	0	0	0		0	0	0	0		0	0	0	0
 #	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
@@ -80,10 +80,10 @@ Drainbrood x3															Ballooning x5
 					1.5
 	wait				2
 #	WAVE 3					Drainbrood x2					Ballooning x6															Ballooning x5
-Drainbrood x1
-Glarewarden x1										Glarewarden x2
-Drainbrood x1					Glarewarden x2
-Drainbrood x1
+#Drainbrood x1
+#Glarewarden x1										Glarewarden x2
+#Drainbrood x1					Glarewarden x2
+#Drainbrood x1
 #	enemies
 #	cant.					0	0		0		0	0		0		0	0	0	0
 #	gold	0				0	0	0	0		0	0	0	0		0	0	0	0
@@ -107,12 +107,12 @@ Drainbrood x1
 					2.5																																						glarenwarden
 	wait				2
 #	WAVE 4										Glarebrood x5
-Cultbrood x2															Glarebrood x5
-Deathbrood x4
-Cultbrood x2					Glarebrood x3
-Deathbrood x3					Glarebrood x5
-Cultbrood x1
-Deathbrood x5
+#Cultbrood x2															Glarebrood x5
+#Deathbrood x4
+#Cultbrood x2					Glarebrood x3
+#Deathbrood x3					Glarebrood x5
+#Cultbrood x1
+#Deathbrood x5
 #	enemies
 #	cant.
 #	gold	0
@@ -148,11 +148,11 @@ Deathbrood x5
 
 
 #	WAVE 5					SSister x2
-SPriest x2										Glarebrood x5
-Deathbrood x2
-Drainbrood x1										Deathbrood x1
-Drainbrood x1					Glarebrood x5					Dethbrood x2					SSister x2
-SPriest x2
+#SPriest x2										Glarebrood x5
+#Deathbrood x2
+#Drainbrood x1										Deathbrood x1
+#Drainbrood x1					Glarebrood x5					Dethbrood x2					SSister x2
+#SPriest x2
 #	enemies
 #	cant.
 #	gold	0
@@ -181,12 +181,12 @@ SPriest x2
 	wait				5
 
 #	WAVE 6					Glarebrood x3
-Drainbrood x2										SPriest x2
-SSister x1										SSister x1
-Deathbrood x2
-Drainbrood x1					Drainbrood x2
-Glarewarden x2
-Glarebrood x3					Cultbrood x4					Cultbrood x4
+#Drainbrood x2										SPriest x2
+#SSister x1										SSister x1
+#Deathbrood x2
+#Drainbrood x1					Drainbrood x2
+#Glarewarden x2
+#Glarebrood x3					Cultbrood x4					Cultbrood x4
 #	enemies
 #	cant.
 #	gold	0
