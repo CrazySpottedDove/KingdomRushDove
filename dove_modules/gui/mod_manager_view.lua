@@ -1631,18 +1631,14 @@ end
 
 function ModManagerView:_reload_local_mods()
 	mod_paths.ensure_storage_ready()
-	local cfg = self:_read_main_config()
-	local saved_cb = self.global_toggle.on_change
-	self.global_toggle.on_change = nil
-	self.global_toggle:set_value(cfg.enabled ~= false)
-	self.global_toggle.on_change = saved_cb
+	local main_cfg = self:_read_main_config()
 
 	self.local_mods = {}
 	self.local_by_entry = {}
 	self.local_by_name = {}
 
 	local mods_dir = mod_paths.LOCAL_MODS_DIR
-	local not_mod_path = cfg.not_mod_path or {"mod_template", "all"}
+	local not_mod_path = main_cfg.not_mod_path or {"mod_template", "all"}
 	local items = FS.getDirectoryItems(mods_dir) or {}
 	for _, name in ipairs(items) do
 		if not table.contains(not_mod_path, name) then
@@ -1679,7 +1675,6 @@ function ModManagerView:_reload_local_mods()
 		end
 		return (a.config.priority or 0) < (b.config.priority or 0)
 	end)
-	self:_capture_state()
 end
 
 function ModManagerView:_delete_local_mod_by_name(mod_name)
@@ -2073,6 +2068,8 @@ end
 function ModManagerView:_render_store_list()
 	self.mod_list:clear_rows()
 	local list_w = self.mod_list.size.x - self.mod_list.scroller_width - 2 * self.mod_list.scroller_margin - 4
+	local global_disabled = not self.global_toggle.value
+	self._disabled_warning.hidden = not global_disabled
 	for _, item in ipairs(self.store_items) do
 		local local_mod = self.local_by_entry[item.entry] or self.local_by_name[item.entry]
 		local installed = local_mod ~= nil
@@ -2162,7 +2159,14 @@ function ModManagerView:show()
 	mod_paths.ensure_storage_ready()
 	self._unsaved_changes = false
 	self:_start_http_thread()
+	-- 从磁盘读取初始状态，但仅在此处（后续 _reload_local_mods 不会覆盖用户未保存的修改）
+	local cfg = self:_read_main_config()
+	local saved_cb = self.global_toggle.on_change
+	self.global_toggle.on_change = nil
+	self.global_toggle:set_value(cfg.enabled ~= false)
+	self.global_toggle.on_change = saved_cb
 	self:_reload_local_mods()
+	self:_capture_state()
 	self:_render_current_list()
 	self.task_dialog.hidden = true
 	self:_set_status("前往插件商店后会自动拉取第一页", 0)
