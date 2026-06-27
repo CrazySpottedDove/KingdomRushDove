@@ -11,6 +11,7 @@ local json = require("lib.json")
 local persistence = require("lib.klua.persistence")
 local mod_paths = require("mod_paths")
 local editable_panel_view = require("dove_modules.gui.editable_panel_view")
+local mod_detail_view = require("dove_modules.gui.mod_detail_view")
 local zip = require("lib.zip")
 
 local km = require("lib.klua.macros")
@@ -1414,6 +1415,12 @@ function ModManagerView:_render_local_list()
 				}
 			end
 			actions[#actions + 1] = {
+				text = "详情",
+				on_press = function()
+					self:_show_local_mod_detail(mod_data)
+				end
+			}
+			actions[#actions + 1] = {
 				text = "删除",
 				on_press = function()
 					self:_start_task("删除插件", function()
@@ -1493,6 +1500,12 @@ function ModManagerView:_render_store_list()
 		end
 
 		local actions = {}
+		actions[#actions + 1] = {
+			text = "详情",
+			on_press = function()
+				self:_show_store_mod_detail(item)
+			end
+		}
 		actions[#actions + 1] = {
 			text = installed and (needs_update and "更新" or "重装") or "安装",
 			on_press = function()
@@ -1641,6 +1654,64 @@ function ModManagerView:_reset_cover_prompt()
 	self._confirm_cancel_btn.hidden = true
 	self.task_cancel_btn.hidden = false
 	self._cover_yes_btn:set_text("上传封面")
+end
+
+function ModManagerView:_show_local_mod_detail(mod_data)
+	-- 读取本地 README.md
+	local readme_path = mod_data.path .. "/README.md"
+	local content = nil
+	local fallback = mod_data.config.desc or "暂无说明文档"
+	if FS.getInfo(readme_path, "file") then
+		content = FS.read(readme_path) or nil
+	end
+	if not content or content == "" then
+		content = nil
+	end
+
+	local detail = mod_detail_view:new(self._sw, self._sh, mod_data.config.name or mod_data.name, content, fallback)
+	self:add_child(detail)
+	detail:show()
+end
+
+function ModManagerView:_show_store_mod_detail(item)
+	-- 网络获取商店插件的 README
+	self:_start_task("获取插件详情", function()
+		local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
+		if not base then
+			return false, "无法选择插件商店地址"
+		end
+		local entry = utf8_util.sanitize(item.entry or "")
+		if entry == "" then
+			return false, "插件缺少 entry 字段"
+		end
+
+		local url = base .. "/" .. url_encode(entry) .. "/readme"
+		self:_set_status("正在获取插件详情：" .. (item.name or item.entry), 50)
+		local resp, err = self:_request(url, {
+			method = "GET"
+		}, 20)
+		if err then
+			return false, "获取详情失败：" .. err
+		end
+		if tonumber(resp.code) ~= 200 then
+			-- 可能没有 README，使用 item.desc 作为备选
+			self:_set_status("插件无 README 文档", 100)
+			local detail = mod_detail_view:new(self._sw, self._sh, item.name or item.entry, nil, item.desc or "暂无说明文档")
+			self:add_child(detail)
+			detail:show()
+			return true, nil
+		end
+
+		local content = resp.body or ""
+		if content == "" then
+			content = nil
+		end
+		self:_set_status("已获取详情", 100)
+		local detail = mod_detail_view:new(self._sw, self._sh, item.name or item.entry, content, item.desc or "暂无说明文档")
+		self:add_child(detail)
+		detail:show()
+		return true, nil
+	end)
 end
 
 function ModManagerView:_handle_upload_plugin(mod_data)
