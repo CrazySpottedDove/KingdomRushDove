@@ -2872,38 +2872,38 @@ return {
 	holder_blocked_elemental_wood = {{M(tpl.unblock, {
 		action_arg = "tower_holder_elemental_wood",
 		image = "kr5_main_icons_0045",
-		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WOOD_NAME"),
-		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WOOD_DESCRIPTION")
+		tt_title = _("TOWER_HOLDER_BLOCKED_ELEMENTAL_WOOD_NAME"),
+		tt_desc = _("TOWER_HOLDER_BLOCKED_ELEMENTAL_WOOD_DESCRIPTION")
 	})}},
 	holder_blocked_elemental_wood_enhance = {{M(tpl.unblock, {
 		action_arg = "tower_holder_elemental_wood_enhance",
 		image = "kr5_main_icons_0045",
-		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WOOD_NAME"),
-		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WOOD_DESCRIPTION")
+		tt_title = _("TOWER_HOLDER_BLOCKED_ELEMENTAL_WOOD_NAME"),
+		tt_desc = _("TOWER_HOLDER_BLOCKED_ELEMENTAL_WOOD_DESCRIPTION")
 	})}},
 	holder_blocked_elemental_fire = {{M(tpl.unblock, {
 		action_arg = "tower_holder_elemental_fire",
 		image = "kr5_main_icons_0044",
-		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_FIRE_NAME"),
-		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_FIRE_DESCRIPTION")
+		tt_title = _("TOWER_HOLDER_BLOCKED_ELEMENTAL_FIRE_NAME"),
+		tt_desc = _("TOWER_HOLDER_BLOCKED_ELEMENTAL_FIRE_DESCRIPTION")
 	})}},
 	holder_blocked_elemental_water = {{M(tpl.unblock, {
 		action_arg = "tower_holder_elemental_water",
 		image = "kr5_main_icons_0046",
-		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WATER_NAME"),
-		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_WATER_DESCRIPTION")
+		tt_title = _("TOWER_HOLDER_BLOCKED_ELEMENTAL_WATER_NAME"),
+		tt_desc = _("TOWER_HOLDER_BLOCKED_ELEMENTAL_WATER_DESCRIPTION")
 	})}},
 	holder_blocked_elemental_earth = {{M(tpl.unblock, {
 		action_arg = "tower_holder_elemental_earth",
 		image = "kr5_main_icons_0050",
-		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_EARTH_NAME"),
-		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_EARTH_DESCRIPTION")
+		tt_title = _("TOWER_HOLDER_BLOCKED_ELEMENTAL_EARTH_NAME"),
+		tt_desc = _("TOWER_HOLDER_BLOCKED_ELEMENTAL_EARTH_DESCRIPTION")
 	})}},
 	holder_blocked_elemental_metal = {{M(tpl.unblock, {
 		action_arg = "tower_holder_elemental_metal",
 		image = "kr5_main_icons_0047",
-		tt_title = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_METAL_NAME"),
-		tt_desc = _("SPECIAL_REPAIR_HOLDER_ELEMENTAL_METAL_DESCRIPTION")
+		tt_title = _("TOWER_HOLDER_BLOCKED_ELEMENTAL_METAL_NAME"),
+		tt_desc = _("TOWER_HOLDER_BLOCKED_ELEMENTAL_METAL_DESCRIPTION")
 	})}},
 	tower_arborean_sentinels = {{M(tpl.buy_soldier, {
 		action_arg = "soldier_arborean_sentinels_spearmen",

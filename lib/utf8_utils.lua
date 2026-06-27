@@ -36,7 +36,7 @@ function M.truncate_bytes(s, max_bytes)
 	local last_ok = 0
 	local i = 1
 	while i <= n do
-		local ok, err = utf8.len(s, i, i)
+		local ok, _ = utf8.len(s, i, i)
 		if not ok then
 			i = i + 1
 		else
