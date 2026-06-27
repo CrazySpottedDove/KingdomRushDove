@@ -525,8 +525,8 @@ return {
 			action_arg = "tower_barrack_mercenaries",
 			image = "main_icons_0030",
 			place = 14,
-			tt_title = _("SPECIAL_DJINN_NAME"),
-			tt_desc = _("SPECIAL_DJINN_DESCRIPTION")
+			tt_title = _("TOWER_BARRACK_MERCENARIES_NAME"),
+			tt_desc = _("TOWER_BARRACK_MERCENARIES_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_barrack_pirates",
