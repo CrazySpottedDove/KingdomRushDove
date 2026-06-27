@@ -14,6 +14,7 @@ local editable_panel_view = require("dove_modules.gui.editable_panel_view")
 local zip = require("lib.zip")
 
 local km = require("lib.klua.macros")
+local utf8_util = require("lib.utf8_utils")
 require("lib.klua.string")
 require("gg_views_custom")
 local PANEL_MIN_W = 900
@@ -25,8 +26,6 @@ local PANEL_MAX_H = 10000
 -- local PANEL_MARGIN = 36
 local PANEL_MARGIN = 150
 local ROW_H = 156
-local ROW_PAD = 16
-local ACCENT_W = 6
 local LIST_TOP_Y = 208
 local STORE_PAGE_SIZE = 20
 
@@ -68,7 +67,6 @@ local SORT_OPTIONS = {{
 	label = "最新",
 	value = "newest"
 }}
-local invalid_utf8_fix_count = 0
 
 local HTTP_WORKER = [[
 local https = require("https")
@@ -98,123 +96,8 @@ while true do
 end
 ]]
 
-local function hex_context(s, pos, radius)
-	pos = math.max(1, pos or 1)
-	radius = radius or 8
-	local from_i = math.max(1, pos - radius)
-	local to_i = math.min(#s, pos + radius)
-	local parts = {}
-	for i = from_i, to_i do
-		parts[#parts + 1] = string.format("%02X", s:byte(i))
-	end
-	return table.concat(parts, " ")
-end
-
-local function safe_tostring(v)
-	if v == nil then
-		return ""
-	end
-
-	local original = tostring(v)
-	local s = original:gsub("%z", "")
-	local out = {}
-	local i = 1
-	local n = #s
-	local first_invalid_pos = nil
-
-	while i <= n do
-		local b1 = s:byte(i)
-
-		if b1 < 0x80 then
-			out[#out + 1] = string.char(b1)
-			i = i + 1
-		elseif b1 >= 0xC2 and b1 <= 0xDF then
-			local b2 = s:byte(i + 1)
-			if b2 and b2 >= 0x80 and b2 <= 0xBF then
-				out[#out + 1] = s:sub(i, i + 1)
-				i = i + 2
-			else
-				out[#out + 1] = "?"
-				first_invalid_pos = first_invalid_pos or i
-				i = i + 1
-			end
-		elseif b1 == 0xE0 then
-			local b2, b3 = s:byte(i + 1), s:byte(i + 2)
-			if b2 and b3 and b2 >= 0xA0 and b2 <= 0xBF and b3 >= 0x80 and b3 <= 0xBF then
-				out[#out + 1] = s:sub(i, i + 2)
-				i = i + 3
-			else
-				out[#out + 1] = "?"
-				first_invalid_pos = first_invalid_pos or i
-				i = i + 1
-			end
-		elseif (b1 >= 0xE1 and b1 <= 0xEC) or (b1 >= 0xEE and b1 <= 0xEF) then
-			local b2, b3 = s:byte(i + 1), s:byte(i + 2)
-			if b2 and b3 and b2 >= 0x80 and b2 <= 0xBF and b3 >= 0x80 and b3 <= 0xBF then
-				out[#out + 1] = s:sub(i, i + 2)
-				i = i + 3
-			else
-				out[#out + 1] = "?"
-				first_invalid_pos = first_invalid_pos or i
-				i = i + 1
-			end
-		elseif b1 == 0xED then
-			local b2, b3 = s:byte(i + 1), s:byte(i + 2)
-			if b2 and b3 and b2 >= 0x80 and b2 <= 0x9F and b3 >= 0x80 and b3 <= 0xBF then
-				out[#out + 1] = s:sub(i, i + 2)
-				i = i + 3
-			else
-				out[#out + 1] = "?"
-				first_invalid_pos = first_invalid_pos or i
-				i = i + 1
-			end
-		elseif b1 == 0xF0 then
-			local b2, b3, b4 = s:byte(i + 1), s:byte(i + 2), s:byte(i + 3)
-			if b2 and b3 and b4 and b2 >= 0x90 and b2 <= 0xBF and b3 >= 0x80 and b3 <= 0xBF and b4 >= 0x80 and b4 <= 0xBF then
-				out[#out + 1] = s:sub(i, i + 3)
-				i = i + 4
-			else
-				out[#out + 1] = "?"
-				first_invalid_pos = first_invalid_pos or i
-				i = i + 1
-			end
-		elseif b1 >= 0xF1 and b1 <= 0xF3 then
-			local b2, b3, b4 = s:byte(i + 1), s:byte(i + 2), s:byte(i + 3)
-			if b2 and b3 and b4 and b2 >= 0x80 and b2 <= 0xBF and b3 >= 0x80 and b3 <= 0xBF and b4 >= 0x80 and b4 <= 0xBF then
-				out[#out + 1] = s:sub(i, i + 3)
-				i = i + 4
-			else
-				out[#out + 1] = "?"
-				i = i + 1
-			end
-		elseif b1 == 0xF4 then
-			local b2, b3, b4 = s:byte(i + 1), s:byte(i + 2), s:byte(i + 3)
-			if b2 and b3 and b4 and b2 >= 0x80 and b2 <= 0x8F and b3 >= 0x80 and b3 <= 0xBF and b4 >= 0x80 and b4 <= 0xBF then
-				out[#out + 1] = s:sub(i, i + 3)
-				i = i + 4
-			else
-				out[#out + 1] = "?"
-				first_invalid_pos = first_invalid_pos or i
-				i = i + 1
-			end
-		else
-			out[#out + 1] = "?"
-			first_invalid_pos = first_invalid_pos or i
-			i = i + 1
-		end
-	end
-
-	local cleaned = table.concat(out)
-	if cleaned ~= original and invalid_utf8_fix_count < 10 then
-		invalid_utf8_fix_count = invalid_utf8_fix_count + 1
-		print(string.format("[mod_manager_view] 非法UTF-8已清洗（样本%d，首个非法字节位置=%d，字节上下文=%s）", invalid_utf8_fix_count, first_invalid_pos or -1, hex_context(s, first_invalid_pos or 1, 10)))
-		print("[mod_manager_view] 清洗后文本: " .. cleaned)
-	end
-	return cleaned
-end
-
 local function norm_version(v)
-	return string.trim(safe_tostring(v))
+	return string.trim(utf8_util.sanitize(v))
 end
 
 local function has_update(local_version, remote_version)
@@ -296,43 +179,6 @@ local function normalize_headers(h)
 	return out
 end
 
-local function utf8_truncate_by_bytes(s, max_bytes)
-	if #s <= max_bytes then
-		return s
-	end
-	local i = 1
-	local last_ok = 0
-	local n = #s
-	while i <= n do
-		local b = s:byte(i)
-		local step = 1
-		if b >= 0xF0 then
-			step = 4
-		elseif b >= 0xE0 then
-			step = 3
-		elseif b >= 0xC0 then
-			step = 2
-		end
-		if i + step - 1 > max_bytes then
-			break
-		end
-		last_ok = i + step - 1
-		i = i + step
-	end
-	if last_ok <= 0 then
-		return ""
-	end
-	return s:sub(1, last_ok)
-end
-
-local function safe_label_desc(s)
-	s = safe_tostring(s)
-	if #s > 130 then
-		return utf8_truncate_by_bytes(s, 127) .. "..."
-	end
-	return s
-end
-
 local function in_game_version(plugin)
 	local gv = plugin.game_version
 	if type(gv) ~= "table" then
@@ -344,362 +190,7 @@ local function in_game_version(plugin)
 	return table.contains(gv, KR_GAME)
 end
 
--- ─────────────────────────────────────────────
--- 基础按钮
--- ─────────────────────────────────────────────
-ModActionButton = class("ModActionButton", KButton)
-
-function ModActionButton:initialize(text, size)
-	local rs = GGLabel.static.ref_h / REF_H
-	local w = size and size.x or 110
-	local h = size and size.y or 34
-	KButton.initialize(self, V.v(w, h))
-	self.text = ""
-	self._text = safe_tostring(text or "")
-	self.enabled = true
-	self._hover = false
-	self.shape = {
-		name = "rectangle",
-		args = {"fill", 0, 0, w, h, 8, 8}
-	}
-	self._label = GGLabel:new(self.size)
-	self._label.font_name = "body"
-	self._label.font_size = 13 * rs
-	self._label.text_align = "center"
-	self._label.vertical_align = "middle"
-	self._label.fit_lines = 1
-	self._label.fit_size = true
-	self._label.propagate_on_click = true
-	self:add_child(self._label)
-	self:_refresh()
-end
-
-function ModActionButton:set_text(text)
-	self._text = safe_tostring(text)
-	self:_refresh()
-end
-
-function ModActionButton:set_enabled(v)
-	self.enabled = v ~= false
-	self:_refresh()
-end
-
-function ModActionButton:_refresh()
-	if not self.enabled then
-		self.colors.background = {88, 78, 64, 180}
-		self._label.colors.text = {160, 150, 130, 220}
-	elseif self._hover then
-		self.colors.background = {161, 122, 45, 245}
-		self._label.colors.text = {255, 240, 190, 255}
-	else
-		self.colors.background = {134, 101, 36, 220}
-		self._label.colors.text = {236, 220, 175, 255}
-	end
-	self._label.text = self._text
-end
-
-function ModActionButton:on_enter()
-	self._hover = true
-	self:_refresh()
-end
-
-function ModActionButton:on_exit()
-	self._hover = false
-	self:_refresh()
-end
-
-function ModActionButton:on_click()
-	if not self.enabled then
-		return
-	end
-	S:queue("GUIButtonCommon")
-	if self.on_press then
-		self:on_press()
-	end
-end
-
-ModToggleButton = class("ModToggleButton", KButton)
-
-function ModToggleButton:initialize(initial_value, size)
-	local rs = GGLabel.static.ref_h / REF_H
-	local w = size and size.x or 84
-	local h = size and size.y or 36
-	KButton.initialize(self, V.v(w, h))
-	self.shape = {
-		name = "rectangle",
-		args = {"fill", 0, 0, w, h, 9, 9}
-	}
-	self.value = initial_value ~= false
-	self._hover = false
-	self._label = GGLabel:new(self.size)
-	self._label.font_name = "body"
-	self._label.font_size = 16 * rs
-	self._label.text_align = "center"
-	self._label.vertical_align = "middle"
-	self._label.propagate_on_click = true
-	self._enable_text = "已启用"
-	self._disable_text = "已禁用"
-	self:add_child(self._label)
-	self:_refresh()
-end
-
-function ModToggleButton:set_value(v)
-	self.value = v
-	self:_refresh()
-	if self.on_change then
-		self:on_change(v)
-	end
-end
-
-function ModToggleButton:_refresh()
-	if self.value then
-		self.colors.background = self._hover and {58, 183, 90, 245} or {35, 148, 68, 215}
-		self._label.colors.text = {195, 255, 178, 255}
-		self._label.text = self._enable_text
-	else
-		self.colors.background = self._hover and {178, 55, 55, 245} or {148, 38, 38, 215}
-		self._label.colors.text = {255, 178, 155, 255}
-		self._label.text = self._disable_text
-	end
-end
-
-function ModToggleButton:on_enter()
-	self._hover = true
-	self:_refresh()
-end
-
-function ModToggleButton:on_exit()
-	self._hover = false
-	self:_refresh()
-end
-
-function ModToggleButton:on_click()
-	S:queue("GUIButtonCommon")
-	self:set_value(not self.value)
-end
-
-ModItemRow = class("ModItemRow", KView)
-
-function ModItemRow:initialize(opts, row_w)
-	row_w = row_w or 760
-	KView.initialize(self, V.v(row_w, ROW_H))
-	self.opts = opts or {}
-	self._base_bg = {24, 18, 12, 210}
-	self._hover_bg = {40, 30, 18, 230}
-	self.colors.background = {self._base_bg[1], self._base_bg[2], self._base_bg[3], self._base_bg[4]}
-	self.propagate_on_down = true
-	self.propagate_on_up = true
-	self.propagate_on_touch_down = true
-	self.propagate_on_touch_up = true
-	self.propagate_on_touch_move = true
-	self.shape = {
-		name = "rectangle",
-		args = {"fill", 0, 0, row_w, ROW_H, 14, 14}
-	}
-
-	local rs = GGLabel.static.ref_h / REF_H
-	local action_size = opts and opts.action_button_size or nil
-	local action_w = action_size and action_size.x or 122
-	local action_h = action_size and action_size.y or 34
-	local action_gap = opts and opts.action_button_gap or 10
-	local toggle_size = opts and opts.toggle_size or nil
-	local toggle_w = toggle_size and toggle_size.x or 84
-	local toggle_h = toggle_size and toggle_size.y or 36
-	local right_pad = opts and opts.right_pad or (IS_ANDROID and 30 or 24)
-	local actions = self.opts.actions or {}
-	local action_btn_count = #actions
-	local needed_action_w = action_w * math.max(1, action_btn_count) + action_gap * math.max(0, action_btn_count - 1)
-	local action_col_w = math.max(toggle_w, needed_action_w)
-	local status_col_w = opts and opts.status_width or action_col_w
-	if status_col_w < 180 then
-		status_col_w = 180
-	end
-	local action_col_left = row_w - right_pad - status_col_w
-	local status_w = status_col_w
-	local status_x = row_w - right_pad - status_w
-	local text_w = math.max(220, action_col_left - (ACCENT_W + ROW_PAD) - 12)
-
-	local accent = KView:new(V.v(ACCENT_W, ROW_H - 1))
-	accent.pos = V.v(0, 0)
-	self:add_child(accent)
-	self._accent = accent
-
-	local name_lbl = GGLabel:new(V.v(text_w, 26))
-	name_lbl.font_name = "h"
-	name_lbl.font_size = 16 * rs
-	name_lbl.text_align = "left"
-	name_lbl.vertical_align = "middle"
-	name_lbl.colors.text = {238, 218, 162, 255}
-	name_lbl.text = safe_tostring(self.opts.title or "?")
-	name_lbl.fit_lines = 1
-	name_lbl.fit_size = true
-	name_lbl.pos = V.v(ACCENT_W + ROW_PAD, 10)
-	self:add_child(name_lbl)
-
-	local meta_lbl = GGLabel:new(V.v(text_w, 22))
-	meta_lbl.font_name = "body"
-	meta_lbl.font_size = 13 * rs
-	meta_lbl.text_align = "left"
-	meta_lbl.vertical_align = "middle"
-	meta_lbl.colors.text = {175, 162, 122, 255}
-	meta_lbl.text = safe_tostring(self.opts.meta or "")
-	meta_lbl.fit_lines = 1
-	meta_lbl.fit_size = true
-	meta_lbl.pos = V.v(ACCENT_W + ROW_PAD, 38)
-	self:add_child(meta_lbl)
-
-	local desc_lbl = GGLabel:new(V.v(text_w, 62))
-	desc_lbl.font_name = "body"
-	desc_lbl.font_size = 12 * rs
-	desc_lbl.text_align = "left"
-	desc_lbl.vertical_align = "top"
-	desc_lbl.colors.text = {148, 140, 116, 255}
-	desc_lbl.text = safe_label_desc(self.opts.desc or "")
-	desc_lbl.fit_lines = 3
-	desc_lbl.line_height = 1.25
-	desc_lbl.fit_size = true
-	desc_lbl.pos = V.v(ACCENT_W + ROW_PAD, 62)
-	self:add_child(desc_lbl)
-
-	local status_y = 8
-	local status_h = 22
-	local status_lbl = GGLabel:new(V.v(status_w, status_h))
-	status_lbl.font_name = "body"
-	status_lbl.font_size = 12 * rs
-	status_lbl.text_align = "right"
-	status_lbl.vertical_align = "middle"
-	status_lbl.colors.text = {242, 211, 121, 255}
-	status_lbl.text = safe_tostring(self.opts.status or "")
-	status_lbl.pos = V.v(status_x, status_y)
-	self:add_child(status_lbl)
-
-	local action_bottom_margin = opts and opts.action_bottom_margin or 16
-	local action_top_min_y = 104
-	local toggle_bottom = 0
-	local action_right = row_w - right_pad
-	if self.opts.show_toggle then
-		local toggle = ModToggleButton:new(self.opts.enabled ~= false, V.v(toggle_w, km.clamp(toggle_h, 36, 44)))
-		local toggle_top_margin = opts and opts.toggle_top_margin or 16
-		local toggle_top = math.max(toggle_top_margin, status_y + status_h + 14)
-		toggle_bottom = toggle_top + toggle.size.y
-		toggle.pos = V.v(row_w - right_pad - toggle_w / 2, toggle_top + toggle.size.y / 2)
-		toggle.anchor = V.v(toggle.size.x / 2, toggle.size.y / 2)
-		toggle.on_change = function(_, v)
-			if self.opts.on_toggle then
-				self.opts.on_toggle(v)
-			end
-			self:_refresh_accent(v)
-		end
-		self:add_child(toggle)
-		self.toggle = toggle
-		-- 插件配置按钮
-		if self.opts.mod_data.has_config then
-			local config_button = ModToggleButton:new(true, V.v(toggle_w, km.clamp(toggle_h, 36, 44)))
-			config_button.pos = V.v(row_w - 2 * right_pad - toggle_w * 3 / 2, toggle_top + toggle.size.y / 2)
-			config_button.anchor = V.v(toggle.size.x / 2, toggle.size.y / 2)
-			config_button._label.text = "配置"
-			config_button._enable_text = "配置"
-			function config_button:on_click()
-				S:queue("GUIButtonCommon")
-				local config_view = editable_panel_view:new(self.opts._sw, self.opts._sh, opts.title, self.opts._keyboard, self.opts._controller)
-
-				config_view._config_path = opts.mod_data.path .. "/" .. opts.mod_data.name .. "_config.lua"
-				function config_view:load()
-					local config = storage:load_lua(self._config_path, true)
-					self.data_group:set_all_data(config)
-				end
-				function config_view:save()
-					local config = storage:load_lua(opts.mod_data.path .. "/" .. opts.mod_data.name .. "_config.lua", true)
-					for k, v in pairs(self.data_group:get_all_data()) do
-						config[k] = v
-					end
-
-					storage:write_lua(self._config_path, config)
-					local cfg_chunk, _ = FS.load(opts.mod_data.config_path)
-					if cfg_chunk then
-						local ok, mod_cfg = pcall(cfg_chunk)
-						if ok and type(mod_cfg) == "table" then
-							mod_cfg.last_used_at = os.time()
-							FS.write(opts.mod_data.config_path, persistence.serialize_to_string(mod_cfg))
-						end
-					end
-				end
-
-				local config = storage:load_lua(config_view._config_path, true)
-
-				config_view:set_key_label_map(config.key_label_map or {})
-
-				self.opts._controller:add_child(config_view)
-
-				config_view:show()
-			end
-			self:add_child(config_button)
-		end
-	else
-		self:_refresh_accent(true)
-	end
-	action_top_min_y = math.max(action_top_min_y, toggle_bottom + 4)
-	local action_h_min = 28
-	local action_h_max = math.max(action_h_min, ROW_H - action_top_min_y - action_bottom_margin)
-	action_h = km.clamp(action_h, action_h_min, action_h_max)
-	local action_y = ROW_H - action_h - action_bottom_margin
-
-	local total_w = action_btn_count * action_w + math.max(0, action_btn_count - 1) * action_gap
-	local x = action_right - total_w
-
-	self._action_buttons = {}
-	for _, action in ipairs(actions) do
-		local btn = ModActionButton:new(action.text, V.v(action_w, action_h))
-		btn.pos = V.v(x, action_y)
-		btn.on_press = function()
-			if action.on_press then
-				action.on_press()
-			end
-		end
-		self:add_child(btn)
-		self._action_buttons[#self._action_buttons + 1] = btn
-		x = x + action_w + action_gap
-	end
-
-	local sep = KView:new(V.v(row_w, 1))
-	sep.colors.background = {65, 50, 30, 200}
-	sep.pos = V.v(0, ROW_H - 1)
-	self:add_child(sep)
-
-	if self.toggle then
-		self:_refresh_accent(self.toggle.value)
-	end
-end
-
-function ModItemRow:_refresh_accent(enabled)
-	if enabled then
-		self._accent.colors.background = {55, 185, 80, 235}
-	else
-		self._accent.colors.background = {185, 50, 45, 210}
-	end
-end
-
-function ModItemRow:set_dimmed(dimmed)
-	if dimmed then
-		self._accent.colors.background = {80, 72, 58, 200}
-		self.colors.background = {18, 14, 10, 180}
-		self.colors.foreground = {80, 72, 58, 180}
-	else
-		self.colors.background = {self._base_bg[1], self._base_bg[2], self._base_bg[3], self._base_bg[4]}
-		if self.toggle then
-			self:_refresh_accent(self.toggle.value)
-		end
-	end
-	self._hover_bg = dimmed and {18, 14, 10, 200} or {40, 30, 18, 230}
-end
-
-function ModItemRow:on_enter()
-	self.colors.background = {self._hover_bg[1], self._hover_bg[2], self._hover_bg[3], self._hover_bg[4]}
-end
-
-function ModItemRow:on_exit()
-	self.colors.background = {self._base_bg[1], self._base_bg[2], self._base_bg[3], self._base_bg[4]}
-end
+require("dove_modules.gui.mod_manager_components")
 
 ModManagerView = class("ModManagerView", PopUpView)
 
@@ -1281,7 +772,7 @@ function ModManagerView:_refresh_header_buttons()
 end
 
 function ModManagerView:_set_status(text, progress)
-	self._status_text = safe_tostring(text or "")
+	self._status_text = utf8_util.sanitize(text or "")
 	self.hint_lbl.text = self._status_text
 	if self.task_status_lbl then
 		self.task_status_lbl.text = self._status_text
@@ -1441,7 +932,7 @@ function ModManagerView:_fetch_store_list()
 	end
 	local sort_val = SORT_OPTIONS[self.sort_idx].value
 	local category_val = CATEGORY_OPTIONS[self.category_idx].value
-	local page = math.max(1, tonumber(self.store_page) or 1)
+	local page = math.max(1, self.store_page)
 	self:_set_status(string.format("正在刷新插件商店（第 %d 页）…", page), 5)
 	local ok, page_data_or_err = self:_get_store_page(base, sort_val, category_val, page, true)
 	if not ok then
@@ -1478,7 +969,7 @@ function ModManagerView:_fetch_remote_entries_for_local()
 	local target_entries = {}
 	local total_targets = 0
 	for _, mod_data in ipairs(self.local_mods) do
-		local entry = safe_tostring(mod_data.entry)
+		local entry = utf8_util.sanitize(mod_data.entry)
 		if entry ~= "" then
 			if not target_entries[entry] then
 				total_targets = total_targets + 1
@@ -1703,7 +1194,7 @@ end
 
 function ModManagerView:_install_plugin(item, is_update)
 	self._cancel_requested = false
-	self:_set_status((is_update and "正在更新插件：" or "正在安装插件：") .. (item.name or item.entry or "?"), 0)
+	self:_set_status((is_update and "正在更新插件：" or "正在安装插件：") .. (item.name or item.entry), 0)
 	local zip_data, err = self:_download_zip(item)
 	if not zip_data then
 		return false, err
@@ -1712,14 +1203,14 @@ function ModManagerView:_install_plugin(item, is_update)
 		return false, "cancelled"
 	end
 
-	local entry = safe_tostring(item.entry or "")
+	local entry = utf8_util.sanitize(item.entry or "")
 	local stage_root = "tmp/mod_store_stage/" .. (entry ~= "" and entry or ("pkg_" .. tostring(os.time())))
 	remove_dir_recursive("tmp/mod_store_stage")
 	FS.createDirectory("tmp")
 	FS.createDirectory("tmp/mod_store_stage")
 	FS.createDirectory(stage_root)
 
-	self:_set_status("正在解压插件：" .. (item.name or item.entry or "?"), 92)
+	self:_set_status("正在解压插件：" .. (item.name or item.entry), 92)
 	local ok, unzip_err = zip.unzip_to_dir(zip_data, stage_root)
 	if not ok then
 		return false, unzip_err
@@ -1729,7 +1220,7 @@ function ModManagerView:_install_plugin(item, is_update)
 	local selected_dir = nil
 	for _, c in ipairs(candidates) do
 		local cfg = mod_paths.load_lua_table(c .. "/config.lua")
-		local c_entry = cfg and safe_tostring(cfg.entry or "")
+		local c_entry = cfg and utf8_util.sanitize(cfg.entry or "")
 		if entry ~= "" and (c_entry == entry or basename(c) == entry) then
 			selected_dir = c
 			break
@@ -1806,7 +1297,7 @@ function ModManagerView:_install_plugin(item, is_update)
 		storage:write_lua(target_dir .. "/config.lua", new_cfg)
 	end
 
-	self:_refresh_local_view((is_update and "插件更新完成：" or "插件安装完成：") .. (item.name or item.entry or "?"))
+	self:_refresh_local_view((is_update and "插件更新完成：" or "插件安装完成：") .. (item.name or item.entry))
 	self._active_download_name = ""
 	return true, nil
 end
@@ -1827,7 +1318,7 @@ function ModManagerView:_update_all_plugins()
 	local need_remote_lookup = not next(self._remote_entry_cache)
 	if not need_remote_lookup then
 		for _, mod_data in ipairs(self.local_mods) do
-			local entry = safe_tostring(mod_data.entry)
+			local entry = utf8_util.sanitize(mod_data.entry)
 			if entry ~= "" and not self._remote_entry_cache[entry] then
 				need_remote_lookup = true
 				break
@@ -1906,7 +1397,7 @@ function ModManagerView:_render_local_list()
 			local status = ""
 
 			if remote and has_update(cfg.version, remote.version) then
-				status = string.format("可更新：v%s → v%s", safe_tostring(cfg.version), safe_tostring(remote.version))
+				status = string.format("可更新：v%s → v%s", utf8_util.sanitize(cfg.version), utf8_util.sanitize(remote.version))
 			elseif remote then
 				status = "已是最新版本"
 			else
@@ -1949,7 +1440,7 @@ function ModManagerView:_render_local_list()
 			local row = ModItemRow:new({
 				mod_data = mod_data,
 				title = cfg.name or mod_data.name,
-				meta = string.format("本地版本 v%s  作者: %s", safe_tostring(cfg.version), safe_tostring(cfg.by)),
+				meta = string.format("本地版本 v%s  作者: %s", utf8_util.sanitize(cfg.version), utf8_util.sanitize(cfg.by)),
 				desc = cfg.desc or "",
 				status = status,
 				show_toggle = not global_disabled,
@@ -1993,7 +1484,7 @@ function ModManagerView:_render_store_list()
 		local status
 		if installed then
 			if needs_update then
-				status = string.format("已安装：v%s（可更新到 v%s）", safe_tostring(local_mod.config.version), safe_tostring(item.version))
+				status = string.format("已安装：v%s（可更新到 v%s）", utf8_util.sanitize(local_mod.config.version), utf8_util.sanitize(item.version))
 			else
 				status = "已安装且最新"
 			end
@@ -2027,8 +1518,8 @@ function ModManagerView:_render_store_list()
 		end
 
 		local row = ModItemRow:new({
-			title = item.name or item.entry or "?",
-			meta = string.format("v%s  下载:%s  作者:%s", safe_tostring(item.version), safe_tostring(item.downloads), safe_tostring(item.by)),
+			title = item.name or item.entry,
+			meta = string.format("v%s  下载:%s  作者:%s", utf8_util.sanitize(item.version), utf8_util.sanitize(item.downloads), utf8_util.sanitize(item.by)),
 			desc = item.desc or "",
 			status = status,
 			show_toggle = false,
@@ -2059,10 +1550,10 @@ function ModManagerView:_sanitize_view_texts(view)
 		return
 	end
 	if type(view.text) == "string" then
-		view.text = safe_tostring(view.text)
+		view.text = utf8_util.sanitize(view.text)
 	end
 	if type(view._text) == "string" then
-		view._text = safe_tostring(view._text)
+		view._text = utf8_util.sanitize(view._text)
 	end
 	local children = view.children
 	if type(children) == "table" then

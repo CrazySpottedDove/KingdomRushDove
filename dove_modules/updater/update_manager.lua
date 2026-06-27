@@ -15,6 +15,7 @@ local font_normal = require("lib.klove.font_db"):f("msyh", 18)
 local font_small = require("lib.klove.font_db"):f("msyh", 14)
 local FU = require("all.file_utlis")
 local zip = require("lib.zip")
+local utf8_util = require("lib.utf8_utils")
 
 -- UI 动画状态
 local ui_state = {
@@ -90,156 +91,6 @@ local update_cache_dir = nil
 -- 进度跟踪（避免频繁刷新日志）
 local last_progress_update = 0
 
-local function sanitize_utf8(s)
-	if type(s) ~= "string" then
-		return tostring(s)
-	end
-
-	local utf8 = require("utf8")
-	local result = {}
-	local i = 1
-	local len = #s
-
-	while i <= len do
-		local byte = string.byte(s, i)
-
-		-- 处理 UTF-8 多字节序列
-		if byte < 0x80 then
-			-- ASCII 单字节
-			result[#result + 1] = string.char(byte)
-			i = i + 1
-		elseif byte < 0xC0 then
-			-- 无效的 UTF-8 起始字节，跳过
-			i = i + 1
-		elseif byte < 0xE0 then
-			-- 2 字节序列
-			if i + 1 <= len then
-				local byte2 = string.byte(s, i + 1)
-				if byte2 and byte2 >= 0x80 and byte2 < 0xC0 then
-					result[#result + 1] = string.sub(s, i, i + 1)
-					i = i + 2
-				else
-					i = i + 1
-				end
-			else
-				i = i + 1
-			end
-		elseif byte < 0xF0 then
-			-- 3 字节序列
-			if i + 2 <= len then
-				local byte2 = string.byte(s, i + 1)
-				local byte3 = string.byte(s, i + 2)
-				if byte2 and byte2 >= 0x80 and byte2 < 0xC0 and byte3 and byte3 >= 0x80 and byte3 < 0xC0 then
-					result[#result + 1] = string.sub(s, i, i + 2)
-					i = i + 3
-				else
-					i = i + 1
-				end
-			else
-				i = i + 1
-			end
-		elseif byte < 0xF8 then
-			-- 4 字节序列
-			if i + 3 <= len then
-				local byte2 = string.byte(s, i + 1)
-				local byte3 = string.byte(s, i + 2)
-				local byte4 = string.byte(s, i + 3)
-				if byte2 and byte2 >= 0x80 and byte2 < 0xC0 and byte3 and byte3 >= 0x80 and byte3 < 0xC0 and byte4 and byte4 >= 0x80 and byte4 < 0xC0 then
-					result[#result + 1] = string.sub(s, i, i + 3)
-					i = i + 4
-				else
-					i = i + 1
-				end
-			else
-				i = i + 1
-			end
-		else
-			-- 无效字节，跳过
-			i = i + 1
-		end
-	end
-
-	return table.concat(result)
-end
-
--- UTF-8 安全的字符串截断函数：按字符（不是字节）数截断
--- 当截断到不完整的 UTF-8 字符时，会舍弃该字符
-local function utf8_sub(s, max_chars)
-	if type(s) ~= "string" or max_chars <= 0 then
-		return ""
-	end
-
-	local utf8 = require("utf8")
-	local result = {}
-	local char_count = 0
-	local i = 1
-	local len = #s
-
-	while i <= len and char_count < max_chars do
-		local byte = string.byte(s, i)
-
-		if byte < 0x80 then
-			-- ASCII 单字节字符
-			result[#result + 1] = string.char(byte)
-			char_count = char_count + 1
-			i = i + 1
-		elseif byte < 0xC0 then
-			-- 无效的 UTF-8 起始字节，跳过
-			i = i + 1
-		elseif byte < 0xE0 then
-			-- 2 字节序列
-			if i + 1 <= len then
-				local byte2 = string.byte(s, i + 1)
-				if byte2 and byte2 >= 0x80 and byte2 < 0xC0 then
-					result[#result + 1] = string.sub(s, i, i + 1)
-					char_count = char_count + 1
-					i = i + 2
-				else
-					i = i + 1
-				end
-			else
-				i = i + 1
-			end
-		elseif byte < 0xF0 then
-			-- 3 字节序列（中文字符）
-			if i + 2 <= len then
-				local byte2 = string.byte(s, i + 1)
-				local byte3 = string.byte(s, i + 2)
-				if byte2 and byte2 >= 0x80 and byte2 < 0xC0 and byte3 and byte3 >= 0x80 and byte3 < 0xC0 then
-					result[#result + 1] = string.sub(s, i, i + 2)
-					char_count = char_count + 1
-					i = i + 3
-				else
-					i = i + 1
-				end
-			else
-				i = i + 1
-			end
-		elseif byte < 0xF8 then
-			-- 4 字节序列
-			if i + 3 <= len then
-				local byte2 = string.byte(s, i + 1)
-				local byte3 = string.byte(s, i + 2)
-				local byte4 = string.byte(s, i + 3)
-				if byte2 and byte2 >= 0x80 and byte2 < 0xC0 and byte3 and byte3 >= 0x80 and byte3 < 0xC0 and byte4 and byte4 >= 0x80 and byte4 < 0xC0 then
-					result[#result + 1] = string.sub(s, i, i + 3)
-					char_count = char_count + 1
-					i = i + 4
-				else
-					i = i + 1
-				end
-			else
-				i = i + 1
-			end
-		else
-			-- 无效字节，跳过
-			i = i + 1
-		end
-	end
-
-	return table.concat(result)
-end
-
 local function point_in_rect(x, y, rect)
 	return rect and x >= rect.x and x <= rect.x + rect.w and y >= rect.y and y <= rect.y + rect.h
 end
@@ -254,7 +105,7 @@ local function clamp(v, min_v, max_v)
 end
 
 local function log_info(line)
-	table.insert(update_log_lines, sanitize_utf8(line))
+	table.insert(update_log_lines, utf8_util.sanitize(line))
 	if #update_log_lines > update_log_line_max_count then
 		table.remove(update_log_lines, 1)
 	end
@@ -264,11 +115,11 @@ end
 -- 记录错误日志
 local function log_error(line)
 	print("[ERROR] " .. line)
-	table.insert(update_log_lines, "[错误] " .. sanitize_utf8(line))
+	table.insert(update_log_lines, "[错误] " .. utf8_util.sanitize(line))
 	if #update_log_lines > update_log_line_max_count then
 		table.remove(update_log_lines, 1)
 	end
-	table.insert(error_log_lines, sanitize_utf8(line))
+	table.insert(error_log_lines, utf8_util.sanitize(line))
 	coroutine.yield()
 end
 
@@ -1443,8 +1294,8 @@ end
 
 function M:_open_dialog(title, message, buttons, on_select)
 	self._dialog = {
-		title = sanitize_utf8(title or ""),
-		message = sanitize_utf8(message or ""),
+		title = utf8_util.sanitize(title or ""),
+		message = utf8_util.sanitize(message or ""),
 		buttons = buttons or {{
 			text = "确定",
 			value = "ok",
@@ -1629,15 +1480,15 @@ function M:update(dt)
 		local success, result = coroutine.resume(self.co)
 		if not success then
 			-- 协程执行异常
-			table.insert(update_log_lines, "[错误] " .. sanitize_utf8(tostring(result)))
-			table.insert(error_log_lines, sanitize_utf8(tostring(result)))
+			table.insert(update_log_lines, "[错误] " .. utf8_util.sanitize(tostring(result)))
+			table.insert(error_log_lines, utf8_util.sanitize(tostring(result)))
 			self.co = nil
 			-- 确保线程退出
 			love.thread.getChannel("um_http_req"):push("quit")
 			if http_worker then
 				http_worker:wait()
 			end
-			self:_open_dialog("升级失败", "更新过程异常。\n\n" .. sanitize_utf8(tostring(result)), {{
+			self:_open_dialog("升级失败", "更新过程异常。\n\n" .. utf8_util.sanitize(tostring(result)), {{
 				text = "确定",
 				value = "ok",
 				is_default = true,
@@ -2070,7 +1921,7 @@ function M:draw()
 		local line = update_log_lines[i]
 		-- 使用 UTF-8 安全的截断函数，按字符数而不是字节数截断
 		if #line > max_chars then
-			line = utf8_sub(line, max_chars - 3) .. "..."
+			line = utf8_util.sub(line, max_chars - 3) .. "..."
 		end
 		local line_y = log_y + log_padding + (i - start_idx) * line_height
 		-- 错误日志用红色
