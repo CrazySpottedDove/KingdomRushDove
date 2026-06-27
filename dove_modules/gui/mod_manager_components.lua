@@ -277,7 +277,7 @@ function ModItemRow:initialize(opts, row_w)
 			config_button._enable_text = "配置"
 			function config_button:on_click()
 				S:queue("GUIButtonCommon")
-				local config_view = editable_panel_view:new(self.opts._sw, self.opts._sh, opts.title, self.opts._keyboard, self.opts._controller)
+				local config_view = editable_panel_view:new(opts._sw, opts._sh, opts.title, opts._keyboard, opts._controller)
 				config_view._config_path = opts.mod_data.path .. "/" .. opts.mod_data.name .. "_config.lua"
 				function config_view:load()
 					local config = storage:load_lua(self._config_path, true)
@@ -300,7 +300,7 @@ function ModItemRow:initialize(opts, row_w)
 				end
 				local config = storage:load_lua(config_view._config_path, true)
 				config_view:set_key_label_map(config.key_label_map or {})
-				self.opts._controller:add_child(config_view)
+				opts._controller:add_child(config_view)
 				config_view:show()
 			end
 			self:add_child(config_button)
