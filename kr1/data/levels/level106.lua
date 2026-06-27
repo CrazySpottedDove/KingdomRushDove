@@ -84,7 +84,7 @@ local gas_cd=math.random(20,30)
 local gas_anim=false
 while store.wave_group_number<3 do
 if gas_cd<store.tick_ts-last_gas then
-U.animation_start_default(pig,"gases",false,store.tick_ts,1)
+U.animation_start_default(pig,"gases",false,store.tick_ts,false)
 last_gas=store.tick_ts
 gas_cd=math.random(20,30)
 gas_anim=true
@@ -98,7 +98,7 @@ coroutine.yield()
 end
 while store.wave_group_number<10 do
 if gas_cd<store.tick_ts-last_gas then
-U.animation_start_default(pig,"gases",false,store.tick_ts,1)
+U.animation_start_default(pig,"gases",false,store.tick_ts,false)
 last_gas=store.tick_ts
 gas_cd=math.random(20,30)
 gas_anim=true

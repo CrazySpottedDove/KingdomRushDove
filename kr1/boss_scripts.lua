@@ -309,7 +309,7 @@ function scripts.eb_jt.update(this, store)
 					SU.delay_attack(store, fa, 0.5)
 				else
 					SU.hide_modifiers(store, this, true)
-					U.animation_start_default(this, "freeze", nil, store.tick_ts, 1)
+					U.animation_start_default(this, "freeze", nil, store.tick_ts, false)
 					S:queue(fa.sound, fa.sound_args)
 					U.y_wait_unconditional(store, fa.hit_time)
 
@@ -990,7 +990,7 @@ function scripts.eb_veznan.update(this, store)
 	S:stop_all()
 	S:queue(this.sound_events.death)
 	signal.emit("boss-killed", this)
-	U.animation_start_default(this, "death", nil, store.tick_ts, 1)
+	U.animation_start_default(this, "death", nil, store.tick_ts, false)
 	signal.emit("hide-gui")
 	U.y_wait_unconditional(store, fts(110))
 	LU.kill_all_enemies(store, true)
@@ -1120,7 +1120,7 @@ function scripts.mod_veznan_tower.update(this, store)
 	s_tap.hidden = true
 
 	S:queue(this.sound_blocked)
-	U.animation_start(this, "hold", nil, store.tick_ts, 1, 1)
+	U.animation_start(this, "hold", nil, store.tick_ts, false, 1)
 	U.y_wait_unconditional(store, this.duration)
 
 	::label_151_0::
@@ -2302,7 +2302,7 @@ function scripts.eb_efreeti.update(this, store)
 					S:queue(this.sound_events.polymorph, {
 						delay = fts(15)
 					})
-					U.animation_start_default(this, a_poly.animation, nil, store.tick_ts, 1)
+					U.animation_start_default(this, a_poly.animation, nil, store.tick_ts, false)
 					U.y_wait_unconditional(store, a_poly.hit_time)
 
 					if this.unit.is_stunned then
@@ -2318,7 +2318,7 @@ function scripts.eb_efreeti.update(this, store)
 				S:queue(this.sound_events.spawn, {
 					delay = fts(15)
 				})
-				U.animation_start_default(this, a_spawn.animation, nil, store.tick_ts, 1)
+				U.animation_start_default(this, a_spawn.animation, nil, store.tick_ts, false)
 
 				for i = 1, a_spawn.max_count do
 					U.y_wait_unconditional(store, a_spawn.spawn_time)
@@ -2343,7 +2343,7 @@ function scripts.eb_efreeti.update(this, store)
 				S:queue(this.sound_events.desintegrate, {
 					delay = fts(15)
 				})
-				U.animation_start_default(this, "attack", nil, store.tick_ts, 1)
+				U.animation_start_default(this, "attack", nil, store.tick_ts, false)
 				U.y_wait_unconditional(store, a_des.hit_time)
 
 				if this.unit.is_stunned then
@@ -3281,7 +3281,7 @@ function scripts.umbra_portal.update(this, store)
 	local spawn_ts
 
 	if sp.animation_start then
-		U.y_animation_play(this, sp.animation_start, nil, store.tick_ts, 1)
+		U.y_animation_play(this, sp.animation_start, nil, store.tick_ts, false)
 	end
 
 	if sp.animation_loop then
@@ -6911,7 +6911,7 @@ function scripts.boss_cult_leader.update(this, store)
 
 						for i = 1, #this.render.sprites do
 							if this.render.sprites[i].animated then
-								U.animation_start(this, an, af, store.tick_ts, 1, i)
+								U.animation_start(this, an, af, store.tick_ts, false, i)
 							end
 						end
 
@@ -7440,8 +7440,8 @@ function scripts.controller_stage_16_overseer.update(this, store)
 			death_fx.pos = V.vclone(this.pos)
 
 			queue_insert(store, death_fx)
-			U.animation_start(death_fx, "death", nil, store.tick_ts, 1, 1)
-			U.animation_start(this, "death", nil, store.tick_ts, 1, 1)
+			U.animation_start(death_fx, "death", nil, store.tick_ts, false, 1)
+			U.animation_start(this, "death", nil, store.tick_ts, false, 1)
 			U.y_wait_unconditional(store, 2)
 
 			local shake = E:create_entity("aura_screen_shake")
@@ -9447,7 +9447,7 @@ function scripts.boss_crocs.update(this, store)
 
 		this.render.sprites[1].flip_x = true
 		this.health_bar.hidden = true
-		U.animation_start_default(this, "fall", nil, store.tick_ts, 1)
+		U.animation_start_default(this, "fall", nil, store.tick_ts, false)
 		U.y_wait_unconditional(store, fts(20))
 
 		local shake = E:create_entity("aura_screen_shake")
@@ -9847,7 +9847,7 @@ function scripts.boss_crocs.update(this, store)
 
 				for i = 1, #this.render.sprites do
 					if this.render.sprites[i].animated then
-						U.animation_start(this, an, af, store.tick_ts, 1, i)
+						U.animation_start(this, an, af, store.tick_ts, false, i)
 					end
 				end
 
@@ -11967,7 +11967,7 @@ function scripts.boss_spider_queen.update(this, store)
 					this.render.sprites[2].hidden = false
 
 					U.animation_start(this, "loop", nil, store.tick_ts, true, 2, true)
-					U.animation_start(this, a.animation_start, nil, store.tick_ts, 1, 1)
+					U.animation_start(this, a.animation_start, nil, store.tick_ts, false, 1)
 					U.y_wait_unconditional(store, fts(25))
 					S:queue("Stage30BossfightDrainLoopStart")
 					SU.y_enemy_animation_wait(this)

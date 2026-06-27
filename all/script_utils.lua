@@ -1984,7 +1984,7 @@ function SU.y_soldier_do_single_area_attack(store, this, target, attack)
 	local targets, hit_pos
 	local an, af = U.animation_name_facing_point(this, attack.animation, target.pos)
 
-	U.animation_start_default(this, an, af, store.tick_ts, 1)
+	U.animation_start_default(this, an, af, store.tick_ts, false)
 	S:queue(attack.sound, attack.sound_args)
 
 	while store.tick_ts - start_ts < attack.hit_time do
@@ -2153,7 +2153,7 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 
 		an, af = U.animation_name_facing_point(this, attack.animations[2], target.pos)
 
-		U.animation_start_default(this, an, af, store.tick_ts, 1)
+		U.animation_start_default(this, an, af, store.tick_ts, false)
 
 		local hit_times = attack.hit_times and attack.hit_times or {attack.hit_time}
 
@@ -2312,7 +2312,7 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 	if attack.animations[3] then
 		an, af = U.animation_name_facing_point(this, attack.animations[3], target.pos)
 
-		U.animation_start_default(this, an, af, store.tick_ts, 1)
+		U.animation_start_default(this, an, af, store.tick_ts, false)
 
 		while not U.animation_finished_default(this) do
 			if this.health.dead or this.nav_rally and this.nav_rally.new then
@@ -2348,7 +2348,7 @@ function SU.y_soldier_do_single_melee_attack(store, this, target, attack)
 	local start_ts = store.tick_ts
 	local an, af = U.animation_name_facing_point(this, attack.animation, target.pos)
 
-	U.animation_start_default(this, an, af, store.tick_ts, 1)
+	U.animation_start_default(this, an, af, store.tick_ts, false)
 	S:queue(attack.sound, attack.sound_args)
 
 	while store.tick_ts - start_ts < attack.hit_time do
@@ -3842,7 +3842,7 @@ function SU.y_enemy_do_loopable_ranged_attack(store, this, target, attack)
 
 	an, af, ai = U.animation_name_facing_point(this, attack.animations[3], target.pos)
 
-	U.animation_start_default(this, an, af, store.tick_ts, 1)
+	U.animation_start_default(this, an, af, store.tick_ts, false)
 
 	while not U.animation_finished_default(this) do
 		if this.health.dead then
@@ -3937,7 +3937,7 @@ function SU.y_enemy_melee_attacks(store, this, target)
 
 				for i = 1, #this.render.sprites do
 					if this.render.sprites[i].animated then
-						U.animation_start(this, an, af, store.tick_ts, 1, i)
+						U.animation_start(this, an, af, store.tick_ts, false, i)
 					end
 				end
 

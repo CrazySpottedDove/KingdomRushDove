@@ -80,7 +80,7 @@ return function(this, store)
 
 	if this.render.sprites[1].name == "raise" then
 		this.health_bar.hidden = true
-		U.animation_start_default(this, "raise", nil, store.tick_ts, 1)
+		U.animation_start_default(this, "raise", nil, store.tick_ts, false)
 
 		while not U.animation_finished_default(this) and not this.health.dead do
 			coroutine.yield()
@@ -134,7 +134,7 @@ return function(this, store)
                             this.dodge.counter_attack_pending = true
                     constif(this.dodge.animation)
                         elseif this.dodge.animation then
-                            U.animation_start_default(this, this.dodge.animation, nil, store.tick_ts, 1)
+                            U.animation_start_default(this, this.dodge.animation, nil, store.tick_ts, false)
 
                             while not U.animation_finished_default(this) do
                                 coroutine.yield()
@@ -142,7 +142,7 @@ return function(this, store)
                     constend
                         end
                     constelseif(this.dodge.animation)
-                        U.animation_start_default(this, this.dodge.animation, nil, store.tick_ts, 1)
+                        U.animation_start_default(this, this.dodge.animation, nil, store.tick_ts, false)
 
                         while not U.animation_finished_default(this) do
                             coroutine.yield()

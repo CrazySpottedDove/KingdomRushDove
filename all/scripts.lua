@@ -850,7 +850,7 @@ function scripts.enemies_spawner.update(this, store)
 	end
 
 	if sp.animation_start then
-		U.y_animation_play(this, sp.animation_start, nil, store.tick_ts, 1)
+		U.y_animation_play(this, sp.animation_start, nil, store.tick_ts, false)
 	end
 
 	if sp.animation_concurrent then
@@ -1329,7 +1329,7 @@ function scripts.soldier_barrack.update(this, store)
 
 	if this.render.sprites[1].name == "raise" then
 		this.health_bar.hidden = true
-		U.animation_start_default(this, "raise", nil, store.tick_ts, 1)
+		U.animation_start_default(this, "raise", nil, store.tick_ts, false)
 
 		while not U.animation_finished_default(this) and not this.health.dead do
 			coroutine.yield()
@@ -1377,7 +1377,7 @@ function scripts.soldier_barrack.update(this, store)
 				if this.dodge.counter_attack and this.powers[this.dodge.counter_attack.power_name].level > 0 then
 					this.dodge.counter_attack_pending = true
 				elseif this.dodge.animation then
-					U.animation_start_default(this, this.dodge.animation, nil, store.tick_ts, 1)
+					U.animation_start_default(this, this.dodge.animation, nil, store.tick_ts, false)
 
 					while not U.animation_finished_default(this) do
 						coroutine.yield()
@@ -1565,7 +1565,7 @@ function scripts.tower_archer.update(this, store)
 				local start_offset = a.bullet_start_offset[shooter_idx]
 				local an, af = U.animation_name_facing_point(this, "shoot", enemy.pos, shooter_sid, start_offset)
 
-				U.animation_start(this, an, af, store.tick_ts, 1, shooter_sid)
+				U.animation_start(this, an, af, store.tick_ts, false, shooter_sid)
 
 				last_target_pos = enemy.pos
 
@@ -1680,8 +1680,8 @@ function scripts.tower_mage.update(this, store)
 				local t_angle = km.unroll(V.angleTo(tx, ty))
 				local an, _, ai = U.animation_name_for_angle(this, aa.animation, t_angle, shooter_sid)
 
-				U.animation_start(this, an, nil, store.tick_ts, 1, shooter_sid)
-				U.animation_start(this, "shoot", nil, store.tick_ts, 1, tower_sid)
+				U.animation_start(this, an, nil, store.tick_ts, false, shooter_sid)
+				U.animation_start(this, "shoot", nil, store.tick_ts, false, tower_sid)
 
 				last_target_pos = V.vclone(enemy.pos)
 
@@ -1765,7 +1765,7 @@ function scripts.tower_engineer.update(this, store)
 				ba.ts = store.tick_ts
 
 				for i = 2, 8 do
-					U.animation_start(this, "shoot", nil, store.tick_ts, 1, i)
+					U.animation_start(this, "shoot", nil, store.tick_ts, false, i)
 				end
 
 				while store.tick_ts - ba.ts < ba.shoot_time do
@@ -1870,7 +1870,7 @@ function scripts.tower_barrack.update(this, store)
 				if not s or s.health.dead and not store.entities[s.id] then
 					if not b.door_open then
 						S:queue("GUITowerOpenDoor")
-						U.animation_start(this, "open", nil, store.tick_ts, 1, door_sid)
+						U.animation_start(this, "open", nil, store.tick_ts, false, door_sid)
 
 						while not U.animation_finished(this, door_sid) do
 							coroutine.yield()
@@ -1914,7 +1914,7 @@ function scripts.tower_barrack.update(this, store)
 		end
 
 		if b.door_open and store.tick_ts - b.door_open_ts > b.door_hold_time then
-			U.animation_start(this, "close", nil, store.tick_ts, 1, door_sid)
+			U.animation_start(this, "close", nil, store.tick_ts, false, door_sid)
 
 			while not U.animation_finished(this, door_sid) do
 				coroutine.yield()
@@ -3855,7 +3855,7 @@ function scripts.bolt_blast.update(this, store)
 	local dmax = b.damage_max + b.level * b.damage_inc
 	local explode_pos = V.v(this.pos.x, this.pos.y - 8)
 
-	U.animation_start_default(this, "hit", nil, store.tick_ts, 1)
+	U.animation_start_default(this, "hit", nil, store.tick_ts, false)
 
 	local d_value = U.frandom(dmin, dmax)
 	local enemies = U.find_enemies_in_range_filter_off(explode_pos, dradius, b.damage_flags, b.damage_bans)
@@ -8956,7 +8956,7 @@ function scripts.mod_track_fx.update(this, store)
 		U.animation_start_default(this, this.animation_loop, nil, store.tick_ts, true)
 		U.y_wait_unconditional(store, this.tween.props[1].keys[2][1])
 	else
-		U.y_animation_play(this, this.animation_start, nil, store.tick_ts, 1)
+		U.y_animation_play(this, this.animation_start, nil, store.tick_ts, false)
 	end
 
 	if this.sound_events.insert then

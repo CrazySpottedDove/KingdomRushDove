@@ -75,7 +75,7 @@ signal.emit("hide-gui")
 signal.emit("start-cinematic")
 boss_decal.render.sprites[1].prefix="DLC_Enanos_S4_Boss02Def"
 S:queue("Stage26Outro")
-U.animation_start_default(boss_decal,"death",nil,store.tick_ts,1)
+U.animation_start_default(boss_decal,"death",nil,store.tick_ts,false)
 U.y_wait_unconditional(store,fts(20))
 LU.queue_remove(store,bubbles)
 U.y_wait_unconditional(store,fts(60))

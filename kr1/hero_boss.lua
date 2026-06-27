@@ -126,7 +126,7 @@ local function enemy_do_counter_attack(store, this, target)
 
 	for i = 1, #this.render.sprites do
 		if this.render.sprites[i].animated then
-			U.animation_start(this, an, af, store.tick_ts, 1, i)
+			U.animation_start(this, an, af, store.tick_ts, false, i)
 		end
 	end
 
@@ -280,7 +280,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 
 			an, af = U.animation_name_facing_point(this, attack.animations[2], target.pos)
 
-			U.animation_start_default(this, an, af, store.tick_ts, 1)
+			U.animation_start_default(this, an, af, store.tick_ts, false)
 
 			local hit_times = attack.hit_times and attack.hit_times or {attack.hit_time}
 
@@ -434,7 +434,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 		if attack.animations[3] then
 			an, af = U.animation_name_facing_point(this, attack.animations[3], target.pos)
 
-			U.animation_start_default(this, an, af, store.tick_ts, 1)
+			U.animation_start_default(this, an, af, store.tick_ts, false)
 
 			while not U.animation_finished_default(this) do
 				if this.health.dead then
@@ -455,7 +455,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 
 		for i = 1, #this.render.sprites do
 			if this.render.sprites[i].animated then
-				U.animation_start(this, an, af, store.tick_ts, 1, i)
+				U.animation_start(this, an, af, store.tick_ts, false, i)
 			end
 		end
 
@@ -2278,7 +2278,7 @@ tt.main_script.update = function(this, store)
 			if sand_ready() then
 				local start_ts = store.tick_ts
 				S:queue(sand.sound)
-				U.animation_start_default(this, sand.animation, nil, store.tick_ts, 1)
+				U.animation_start_default(this, sand.animation, nil, store.tick_ts, false)
 				while store.tick_ts - start_ts < sand.spawn_time do
 					if unit_interrupted(this) then
 						goto label_alric_end
