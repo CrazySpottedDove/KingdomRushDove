@@ -11,6 +11,7 @@ local perf_ui = {
 	font = require("lib.klove.font_db"):f("msyh", 12),
 	entries = {},
 	total_ms = 0,
+	log_to_console = false,
 	-- 刷新率，每多少次sync_data才更新一次显示
 	refresh_rate = 10,
 	-- 当前计数
@@ -109,6 +110,10 @@ function perf_ui.sync_data()
 		perf_ui.sum_entries = {}
 		perf_ui.sum_total_ms = 0
 	end
+
+	if perf_ui.log_to_console then
+		perf_ui:log()
+	end
 end
 
 function perf_ui.enable()
@@ -139,6 +144,21 @@ function perf_ui.toggle_mode()
 	else
 		perf_ui:set_mode("window")
 	end
+end
+
+function perf_ui:log()
+	local rows = math.min(#self.entries, self.max_rows)
+	local total = self.total_ms
+
+	print(string.format("===== perf (%d entries, total %.2f us) =====", rows, total))
+	for i = 1, rows do
+		local e = self.entries[i]
+		if not e then
+			break
+		end
+		print(string.format("  %s: %.2f us (%.1f%%)", e.name, e.time or 0, e.percentage or 0))
+	end
+	print("======================================")
 end
 
 local function textWidth(s)
