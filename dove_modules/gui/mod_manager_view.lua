@@ -1119,7 +1119,7 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	self._disabled_warning.text_align = "center"
 	self._disabled_warning.vertical_align = "middle"
 	self._disabled_warning.colors.text = {255, 180, 100, 255}
-	self._disabled_warning.text = "⚠ 插件管理器总开关已关闭，所有插件不会生效"
+	self._disabled_warning.text = "!插件管理器总开关已关闭，所有插件不会生效"
 	self._disabled_warning.pos = V.v(20, list_top_y - 32)
 	self._disabled_warning.hidden = true
 	self.back:add_child(self._disabled_warning)
