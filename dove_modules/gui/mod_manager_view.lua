@@ -221,29 +221,6 @@ local function has_update(local_version, remote_version)
 	return norm_version(local_version) ~= "" and norm_version(remote_version) ~= "" and norm_version(local_version) ~= norm_version(remote_version)
 end
 
-local function split_path(path)
-	local out = {}
-	for seg in path:gmatch("[^/]+") do
-		out[#out + 1] = seg
-	end
-	return out
-end
-
-local function ensure_parent_dirs(path)
-	local parts = split_path(path)
-	if #parts <= 1 then
-		return true
-	end
-	local current = parts[1]
-	for i = 2, #parts - 1 do
-		current = current .. "/" .. parts[i]
-		if not FS.getInfo(current, "directory") then
-			FS.createDirectory(current)
-		end
-	end
-	return true
-end
-
 local function remove_dir_recursive(path)
 	local info = FS.getInfo(path)
 	if not info then
@@ -714,10 +691,6 @@ function ModItemRow:set_dimmed(dimmed)
 		end
 	end
 	self._hover_bg = dimmed and {18, 14, 10, 200} or {40, 30, 18, 230}
-end
-
-function ModItemRow:is_enabled()
-	return self.toggle and self.toggle.value or true
 end
 
 function ModItemRow:on_enter()
@@ -1316,13 +1289,6 @@ function ModManagerView:_set_status(text, progress)
 	if progress ~= nil then
 		self._progress_target = math.max(0, math.min(100, progress))
 	end
-end
-
-function ModManagerView:_set_progress(progress)
-	if progress == nil then
-		return
-	end
-	self._progress_target = math.max(0, math.min(100, progress))
 end
 
 function ModManagerView:_render_progress()
