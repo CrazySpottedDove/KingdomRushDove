@@ -12240,7 +12240,7 @@ function scripts.hero_veznan.update(this, store)
 				local triggers = U.find_enemies_in_range_filter_off(this.pos, a.range, a.vis_flags, a.vis_bans)
 
 				if not triggers then
-					SU.delay_attack(store, a, 0.3333333333333333)
+					a.ts = a.ts + 0.3333333333333333
 				else
 					local first_target = table.random(triggers)
 					local targets = U.find_enemies_in_range_filter_off(first_target.pos, a.radius, a.vis_flags, a.vis_bans)
@@ -12251,16 +12251,18 @@ function scripts.hero_veznan.update(this, store)
 					S:queue(a.cast_sound)
 					SU.hero_gain_xp_from_skill(this, skill)
 
-					for i = 1, math.min(#targets, a.max_count) do
-						local target = targets[i]
+					if targets then
+						for i = 1, math.min(#targets, a.max_count) do
+							local target = targets[i]
 
-						for _, m_name in pairs(a.mods) do
-							local m = E:create_entity(m_name)
+							for _, m_name in ipairs(a.mods) do
+								local m = E:create_entity(m_name)
 
-							m.modifier.target_id = target.id
-							m.modifier.source_id = this.id
+								m.modifier.target_id = target.id
+								m.modifier.source_id = this.id
 
-							queue_insert(store, m)
+								queue_insert(store, m)
+							end
 						end
 					end
 
