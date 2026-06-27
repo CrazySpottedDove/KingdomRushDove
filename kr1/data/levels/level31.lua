@@ -84,7 +84,7 @@ P:remove_invalid_range(1,1,20)
 P:remove_invalid_range(2,1,20)
 P:add_invalid_range(1,1,10)
 P:add_invalid_range(2,1,10)
-U.animation_start(self.ship_door,"open",nil,store.tick_ts,false)
+U.animation_start_default(self.ship_door,"open",nil,store.tick_ts,false)
 if store.level_mode==GAME_MODE_CAMPAIGN then
 while store.wave_group_number<8 do
 coroutine.yield()
@@ -123,7 +123,7 @@ function level:y_cut_palms(store)
 local function cut_group(i)
 for _,palm in pairs(self.palm_tree_groups[i]) do
 palm.timed.runs=1
-U.animation_start(palm,"cut",nil,store.tick_ts,false)
+U.animation_start_default(palm,"cut",nil,store.tick_ts,false)
 end
 S:queue("SpecialCutTrees")
 local land=self.palm_land_groups[i]
@@ -149,11 +149,11 @@ lumberjack.pos=v(1160,440)
 LU.queue_insert(store,lumberjack)
 local cut_steps={{x=1079,y=430},{x=927,y=420},{x=837,y=408},{x=810,y=401},{x=760,y=395}}
 for i,step in ipairs(cut_steps) do
-U.animation_start(lumberjack,"cut",nil,store.tick_ts,false)
+U.animation_start_default(lumberjack,"cut",nil,store.tick_ts,false)
 U.y_wait_unconditional(store,0.5)
 cut_group(i)
 U.y_wait_unconditional(store,0.4)
-U.animation_start(lumberjack,"walk",nil,store.tick_ts,true)
+U.animation_start_default(lumberjack,"walk",nil,store.tick_ts,true)
 y_walk(store,lumberjack,step,1.024*FPS)
 end
 LU.queue_remove(store,lumberjack)

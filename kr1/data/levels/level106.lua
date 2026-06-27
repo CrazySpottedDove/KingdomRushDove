@@ -53,10 +53,10 @@ LU.queue_insert(store,cult_leader)
 S:queue("Stage11MydriasIllusionSummonCast",{delay=0})
 S:queue("Stage06AcolyteTeleport",{delay=0.1})
 U.y_animation_play(cult_leader,"cinematicspawn",nil,store.tick_ts)
-U.animation_start(cult_leader,"idle",nil,store.tick_ts,true)
+U.animation_start_default(cult_leader,"idle",nil,store.tick_ts,true)
 S:queue("Stage06BossPigWakeUp")
 U.y_animation_play(pig,"to_idle",false,store.tick_ts,1)
-U.animation_start(pig,"idle",false,store.tick_ts,true)
+U.animation_start_default(pig,"idle",false,store.tick_ts,true)
 U.y_wait_unconditional(store,0.5)
 signal.emit("show-balloon_tutorial","LV06_CULTIST01",false)
 U.y_wait_unconditional(store,3)
@@ -73,7 +73,7 @@ U.y_animation_play(cult_leader,"cinematicdespawn",nil,store.tick_ts)
 LU.queue_remove(store,cult_leader)
 U.y_animation_play(pig,"to_sleeping",false,store.tick_ts,1)
 S:queue("Stage06BossPigSnore")
-U.animation_start(pig,"sleeping",false,store.tick_ts,true)
+U.animation_start_default(pig,"sleeping",false,store.tick_ts,true)
 U.y_wait_unconditional(store,1)
 signal.emit("hide-curtains")
 signal.emit("pan-zoom-camera",2,{x=512,y=280},OVm(1,1.3))
@@ -84,7 +84,7 @@ local gas_cd=math.random(20,30)
 local gas_anim=false
 while store.wave_group_number<3 do
 if gas_cd<store.tick_ts-last_gas then
-U.animation_start(pig,"gases",false,store.tick_ts,1)
+U.animation_start_default(pig,"gases",false,store.tick_ts,1)
 last_gas=store.tick_ts
 gas_cd=math.random(20,30)
 gas_anim=true
@@ -92,13 +92,13 @@ end
 if U.animation_finished_default(pig) and gas_anim then
 gas_anim=false
 U.y_animation_play(pig,"to_sleeping",false,store.tick_ts,1)
-U.animation_start(pig,"sleeping",false,store.tick_ts,true)
+U.animation_start_default(pig,"sleeping",false,store.tick_ts,true)
 end
 coroutine.yield()
 end
 while store.wave_group_number<10 do
 if gas_cd<store.tick_ts-last_gas then
-U.animation_start(pig,"gases",false,store.tick_ts,1)
+U.animation_start_default(pig,"gases",false,store.tick_ts,1)
 last_gas=store.tick_ts
 gas_cd=math.random(20,30)
 gas_anim=true
@@ -106,15 +106,15 @@ end
 if U.animation_finished_default(pig) and gas_anim then
 gas_anim=false
 U.y_animation_play(pig,"to_sleeping",false,store.tick_ts,1)
-U.animation_start(pig,"sleeping",false,store.tick_ts,true)
+U.animation_start_default(pig,"sleeping",false,store.tick_ts,true)
 end
 coroutine.yield()
 end
 U.y_animation_play(pig,"to_idle",false,store.tick_ts,1)
-U.animation_start(pig,"idle",false,store.tick_ts,true)
+U.animation_start_default(pig,"idle",false,store.tick_ts,true)
 U.y_wait_unconditional(store,1.6)
 U.y_animation_play(pig,"horn_in",false,store.tick_ts,1)
-U.animation_start(pig,"horn_loop",false,store.tick_ts,true)
+U.animation_start_default(pig,"horn_loop",false,store.tick_ts,true)
 S:queue(pig.sound_horn)
 U.y_wait_unconditional(store,fts(40))
 U.y_animation_play(pig,"horn_out",false,store.tick_ts,1)
@@ -142,7 +142,7 @@ end
 end
 hole_mask.render.sprites[1].hidden=false
 U.y_animation_wait(pig,1,1)
-U.animation_start(pig,"idle",false,store.tick_ts,true)
+U.animation_start_default(pig,"idle",false,store.tick_ts,true)
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end

@@ -169,7 +169,7 @@ end
 local function cut_group(store,tree_groups,land_groups,i)
 for _,palm in pairs(tree_groups[i]) do
 palm.timed.runs=1
-U.animation_start(palm,"cut",nil,store.tick_ts,false)
+U.animation_start_default(palm,"cut",nil,store.tick_ts,false)
 end
 S:queue("SpecialCutTrees")
 local land=land_groups[i]
@@ -196,11 +196,11 @@ LU.queue_insert(store,lumberjack)
 lumberjack.pos=v(1180,436)
 local cut_steps={{x=1130,y=438},{x=1063,y=438},{x=1000,y=440}}
 for i,step in ipairs(cut_steps) do
-U.animation_start(lumberjack,"cut",nil,store.tick_ts,false)
+U.animation_start_default(lumberjack,"cut",nil,store.tick_ts,false)
 U.y_wait_unconditional(store,0.5)
 cut_group(store,self.palm_tree_groups_right,self.palm_land_groups_right,i)
 U.y_wait_unconditional(store,0.4)
-U.animation_start(lumberjack,"walk",nil,store.tick_ts,true)
+U.animation_start_default(lumberjack,"walk",nil,store.tick_ts,true)
 y_walk(store,lumberjack,step,1.024*FPS)
 end
 LU.queue_remove(store,lumberjack)
@@ -220,11 +220,11 @@ LU.queue_insert(store,lumberjack)
 lumberjack.pos=v(-160,200)
 local cut_steps={{x=-108,y=222},{x=26,y=252},{x=57,y=266},{x=142,y=294},{x=192,y=310}}
 for i,step in ipairs(cut_steps) do
-U.animation_start(lumberjack,"cut",nil,store.tick_ts,false)
+U.animation_start_default(lumberjack,"cut",nil,store.tick_ts,false)
 U.y_wait_unconditional(store,0.5)
 cut_group(store,self.palm_tree_groups_left,self.palm_land_groups_left,i)
 U.y_wait_unconditional(store,0.4)
-U.animation_start(lumberjack,"walk",nil,store.tick_ts,true)
+U.animation_start_default(lumberjack,"walk",nil,store.tick_ts,true)
 y_walk(store,lumberjack,step,1.024*FPS)
 end
 LU.queue_remove(store,lumberjack)

@@ -30,7 +30,7 @@ return function(this, store)
 		end
 
 		if this.unit.is_stunned then
-			U.animation_start(this, "idle", nil, store.tick_ts, -1)
+			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 			coroutine.yield()
 		else
 			SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func__ranged(store, this)

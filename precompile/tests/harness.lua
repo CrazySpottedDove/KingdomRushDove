@@ -799,7 +799,7 @@ function M.make_script_utils(U)
 			return false
 		end
 		U.set_destination(this, next)
-		U.animation_start(this, animation_name, nil, store.tick_ts, true)
+		U.animation_start_default(this, animation_name, nil, store.tick_ts, true)
 		U.walk_off__accel__unsnapped(this, store.tick_length)
 		coroutine.yield()
 		this.motion.speed.x, this.motion.speed.y = 0, 0
@@ -811,7 +811,7 @@ function M.make_script_utils(U)
 	end
 
 	function SU.y_enemy_stun(store, this)
-		U.animation_start(this, "idle", nil, store.tick_ts, true)
+		U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 		coroutine.yield()
 	end
 
@@ -904,7 +904,7 @@ function M.make_script_utils(U)
 			if not blocker and not ranged then
 				SU.y_enemy_walk_step(store, this)
 			else
-				U.animation_start(this, "idle", nil, store.tick_ts, true)
+				U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 			end
 		end
 		return true, blocker, ranged

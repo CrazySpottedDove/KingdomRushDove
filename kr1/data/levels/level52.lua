@@ -57,9 +57,9 @@ local gnoll_speed=1.5*FPS
 gnoll=E:create_entity("decal_gnoll_burner")
 gnoll.pos=start_pos
 LU.queue_insert(store,gnoll)
-U.animation_start(gnoll,"walkingRightLeft",true,store.tick_ts,true)
+U.animation_start_default(gnoll,"walkingRightLeft",true,store.tick_ts,true)
 y_walk(store,gnoll,end_pos,gnoll_speed)
-U.animation_start(gnoll,"shoot",true,store.tick_ts,false)
+U.animation_start_default(gnoll,"shoot",true,store.tick_ts,false)
 U.y_wait_unconditional(store,shoot_time)
 local b=E:create_entity("torch_gnoll_burner")
 b.pos=V.v(gnoll.pos.x+bullet_offset.x,gnoll.pos.y+bullet_offset.y)
@@ -73,7 +73,7 @@ fx.render.sprites[1].name="fx_torch_gnoll_burner_explosion"
 fx.render.sprites[1].ts=store.tick_ts
 fx.pos=shoot_pos
 LU.queue_insert(store,fx)
-U.animation_start(gnoll,"idle",true,store.tick_ts,true)
+U.animation_start_default(gnoll,"idle",true,store.tick_ts,true)
 U.y_wait_unconditional(store,fts(5))
 end
 S:queue("ElvesSpecialExplosionPath")

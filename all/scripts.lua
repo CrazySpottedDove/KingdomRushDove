@@ -140,7 +140,7 @@ function scripts.delayed_play.update(this, store)
 	end
 
 	if d.idle_animation then
-		U.animation_start(this, d.idle_animation, nil, store.tick_ts, d.loop_idle)
+		U.animation_start_default(this, d.idle_animation, nil, store.tick_ts, d.loop_idle)
 	else
 		s.hidden = true
 	end
@@ -201,7 +201,7 @@ function scripts.delayed_play.update(this, store)
 				if not d.idle_animation then
 					s.hidden = true
 				else
-					U.animation_start(this, d.idle_animation, nil, store.tick_ts, d.loop_play)
+					U.animation_start_default(this, d.idle_animation, nil, store.tick_ts, d.loop_play)
 				end
 
 				clicks = 0
@@ -229,7 +229,7 @@ function scripts.delayed_play.update(this, store)
 					end
 
 					if d.play_duration then
-						U.animation_start(this, d.play_animation, nil, store.tick_ts, true)
+						U.animation_start_default(this, d.play_animation, nil, store.tick_ts, true)
 
 						if U.y_wait(store, d.play_duration, function()
 							return d.click_interrupts and this.ui.clicked
@@ -237,7 +237,7 @@ function scripts.delayed_play.update(this, store)
 							goto label_9_0
 						end
 					else
-						U.animation_start(this, d.play_animation, nil, store.tick_ts, false)
+						U.animation_start_default(this, d.play_animation, nil, store.tick_ts, false)
 
 						while not U.animation_finished_default(this) do
 							if d.click_interrupts and this.ui.clicked then
@@ -252,7 +252,7 @@ function scripts.delayed_play.update(this, store)
 				if not d.idle_animation then
 					s.hidden = true
 				else
-					U.animation_start(this, d.idle_animation, nil, store.tick_ts, d.loop_idle)
+					U.animation_start_default(this, d.idle_animation, nil, store.tick_ts, d.loop_idle)
 				end
 
 				if this.ui and not d.click_interrupts then
@@ -296,7 +296,7 @@ function scripts.click_play.update(this, store)
 			if not c.idle_animation or c.play_once then
 				s.hidden = true
 			else
-				U.animation_start(this, c.idle_animation, nil, store.tick_ts, true)
+				U.animation_start_default(this, c.idle_animation, nil, store.tick_ts, true)
 			end
 
 			if c.achievement then
@@ -625,7 +625,7 @@ function scripts.enemy_passive.update(this, store)
 		end
 
 		if this.unit.is_stunned then
-			U.animation_start(this, "idle", nil, store.tick_ts, -1)
+			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 			coroutine.yield()
 		else
 			-- passive 敌人不会攻击，这里直接排除所有分支
@@ -729,7 +729,7 @@ function scripts.enemy_mixed_water.update(this, store)
 		end
 
 		if this.unit.is_stunned then
-			U.animation_start(this, "idle", nil, store.tick_ts, -1)
+			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 			coroutine.yield()
 		else
 			local ignore_soldiers = terrain_type == TERRAIN_WATER
@@ -788,7 +788,7 @@ function scripts.enemy_mixed_cliff.update(this, store)
 		end
 
 		if this.unit.is_stunned then
-			U.animation_start(this, "idle", nil, store.tick_ts, -1)
+			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 			coroutine.yield()
 		else
 			local ignore_soldiers = terrain_type == TERRAIN_CLIFF
@@ -854,11 +854,11 @@ function scripts.enemies_spawner.update(this, store)
 	end
 
 	if sp.animation_concurrent then
-		U.animation_start(this, sp.animation_concurrent, nil, store.tick_ts)
+		U.animation_start_default(this, sp.animation_concurrent, nil, store.tick_ts)
 	end
 
 	if sp.animation_loop then
-		U.animation_start(this, sp.animation_loop, nil, store.tick_ts, true)
+		U.animation_start_default(this, sp.animation_loop, nil, store.tick_ts, true)
 	end
 
 	if this.level then
@@ -962,7 +962,7 @@ function scripts.enemies_spawner.update(this, store)
 		U.y_animation_play(this, sp.animation_end, nil, store.tick_ts, 1)
 		queue_remove(store, this)
 	elseif this.tween then
-		U.animation_start(this, "idle", nil, store.tick_ts)
+		U.animation_start_default(this, "idle", nil, store.tick_ts)
 
 		this.tween.disabled = false
 		this.tween.remove = true
@@ -1329,7 +1329,7 @@ function scripts.soldier_barrack.update(this, store)
 
 	if this.render.sprites[1].name == "raise" then
 		this.health_bar.hidden = true
-		U.animation_start(this, "raise", nil, store.tick_ts, 1)
+		U.animation_start_default(this, "raise", nil, store.tick_ts, 1)
 
 		while not U.animation_finished_default(this) and not this.health.dead do
 			coroutine.yield()
@@ -1377,7 +1377,7 @@ function scripts.soldier_barrack.update(this, store)
 				if this.dodge.counter_attack and this.powers[this.dodge.counter_attack.power_name].level > 0 then
 					this.dodge.counter_attack_pending = true
 				elseif this.dodge.animation then
-					U.animation_start(this, this.dodge.animation, nil, store.tick_ts, 1)
+					U.animation_start_default(this, this.dodge.animation, nil, store.tick_ts, 1)
 
 					while not U.animation_finished_default(this) do
 						coroutine.yield()
@@ -1617,7 +1617,7 @@ function scripts.tower_archer.update(this, store)
 
 				an, af = U.animation_name_facing_point(this, "idle", last_target_pos, shooter_sid, start_offset)
 
-				U.animation_start(this, an, af, store.tick_ts, -1, shooter_sid)
+				U.animation_start(this, an, af, store.tick_ts, true, shooter_sid)
 			else
 				a.ts = a.ts + 0.1
 			end
@@ -1626,7 +1626,7 @@ function scripts.tower_archer.update(this, store)
 				for _, sid in pairs(shooter_sprite_ids) do
 					local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos, sid)
 
-					U.animation_start(this, an, af, store.tick_ts, -1, sid)
+					U.animation_start(this, an, af, store.tick_ts, true, sid)
 				end
 			end
 		end
@@ -1721,11 +1721,11 @@ function scripts.tower_mage.update(this, store)
 					coroutine.yield()
 				end
 
-				U.animation_start(this, "idle", nil, store.tick_ts, -1, tower_sid)
+				U.animation_start(this, "idle", nil, store.tick_ts, true, tower_sid)
 
 				local an = U.animation_name_facing_point(this, "idle", last_target_pos, shooter_sid, aa.bullet_start_offset[1])
 
-				U.animation_start(this, an, nil, store.tick_ts, -1, shooter_sid)
+				U.animation_start(this, an, nil, store.tick_ts, true, shooter_sid)
 			else
 				aa.ts = aa.ts + 0.1
 			end
@@ -1733,7 +1733,7 @@ function scripts.tower_mage.update(this, store)
 			if store.tick_ts - aa.ts > this.tower.long_idle_cooldown then
 				local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos, shooter_sid)
 
-				U.animation_start(this, an, af, store.tick_ts, -1, shooter_sid)
+				U.animation_start(this, an, af, store.tick_ts, true, shooter_sid)
 			end
 		end
 
@@ -1794,7 +1794,7 @@ function scripts.tower_engineer.update(this, store)
 			end
 
 			for i = 2, 8 do
-				U.animation_start(this, "idle", nil, store.tick_ts, -1, i)
+				U.animation_start(this, "idle", nil, store.tick_ts, true, i)
 			end
 
 			coroutine.yield()
@@ -3004,7 +3004,7 @@ function scripts.missile.update(this, store)
 	local max_seek_angle = b.max_seek_angle or math.pi / 6
 
 	if this.render.sprites[1].animated then
-		U.animation_start(this, "flying", nil, store.tick_ts, -1)
+		U.animation_start_default(this, "flying", nil, store.tick_ts, true)
 	end
 
 	-- 先发射，速度
@@ -3220,7 +3220,7 @@ function scripts.enemy_missile.update(this, store)
 	end
 
 	if this.render.sprites[1].animated then
-		U.animation_start(this, "flying", nil, store.tick_ts, -1)
+		U.animation_start_default(this, "flying", nil, store.tick_ts, true)
 	end
 
 	while V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * mspeed * store.tick_length * store.tick_length do
@@ -3354,7 +3354,7 @@ function scripts.bolt_enemy.insert(this, store)
 
 	b.speed.x, b.speed.y = V.normalize(b.to.x - b.from.x, b.to.y - b.from.y)
 
-	U.animation_start(this, "flying", nil, store.tick_ts, -1)
+	U.animation_start_default(this, "flying", nil, store.tick_ts, true)
 
 	return true
 end
@@ -3494,7 +3494,7 @@ function scripts.bolt.insert(this, store)
 		s.r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
 	end
 
-	U.animation_start(this, "flying", nil, store.tick_ts, s.loop)
+	U.animation_start_default(this, "flying", nil, store.tick_ts, s.loop)
 
 	return true
 end
@@ -3522,7 +3522,7 @@ function scripts.bolt.update(this, store)
 		s.z = Z_OBJECTS
 		s.sort_y_offset = b.store_sort_y_offset
 
-		U.animation_start(this, "idle", nil, store.tick_ts, true)
+		U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 		if ps then
 			ps.particle_system.emit = false
@@ -3533,7 +3533,7 @@ function scripts.bolt.update(this, store)
 		s.z = Z_BULLETS
 		s.sort_y_offset = nil
 
-		U.animation_start(this, "flying", nil, store.tick_ts, s.loop)
+		U.animation_start_default(this, "flying", nil, store.tick_ts, s.loop)
 
 		if ps then
 			ps.particle_system.emit = true
@@ -3678,7 +3678,7 @@ function scripts.bolt_trace_target.update(this, store)
 		s.z = Z_OBJECTS
 		s.sort_y_offset = b.store_sort_y_offset
 
-		U.animation_start(this, "idle", nil, store.tick_ts, true)
+		U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 		if ps then
 			ps.particle_system.emit = false
@@ -3689,7 +3689,7 @@ function scripts.bolt_trace_target.update(this, store)
 		s.z = Z_BULLETS
 		s.sort_y_offset = nil
 
-		U.animation_start(this, "flying", nil, store.tick_ts, s.loop)
+		U.animation_start_default(this, "flying", nil, store.tick_ts, s.loop)
 
 		if ps then
 			ps.particle_system.emit = true
@@ -3855,7 +3855,7 @@ function scripts.bolt_blast.update(this, store)
 	local dmax = b.damage_max + b.level * b.damage_inc
 	local explode_pos = V.v(this.pos.x, this.pos.y - 8)
 
-	U.animation_start(this, "hit", nil, store.tick_ts, 1)
+	U.animation_start_default(this, "hit", nil, store.tick_ts, 1)
 
 	local d_value = U.frandom(dmin, dmax)
 	local enemies = U.find_enemies_in_range_filter_off(explode_pos, dradius, b.damage_flags, b.damage_bans)
@@ -4445,12 +4445,12 @@ function scripts.bullet_illusion.update(this, store)
 		phase = "start"
 		an, af = U.animation_name_facing_point(this, a.start, b.to)
 
-		U.animation_start(this, an, af, store.tick_ts, false)
+		U.animation_start_default(this, an, af, store.tick_ts, false)
 	else
 		phase = "loop"
 		an, af = U.animation_name_facing_point(this, a.loop, b.to)
 
-		U.animation_start(this, an, af, store.tick_ts, false)
+		U.animation_start_default(this, an, af, store.tick_ts, false)
 	end
 
 	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
@@ -4470,12 +4470,12 @@ function scripts.bullet_illusion.update(this, store)
 			phase = "attack"
 			an, af = U.animation_name_facing_point(this, a.attack, b.to)
 
-			U.animation_start(this, an, af, store.tick_ts, false)
+			U.animation_start_default(this, an, af, store.tick_ts, false)
 		elseif phase == "start" and U.animation_finished_default(this) then
 			phase = "loop"
 			an, af = U.animation_name_facing_point(this, a.loop, b.to)
 
-			U.animation_start(this, an, af, store.tick_ts, true)
+			U.animation_start_default(this, an, af, store.tick_ts, true)
 		end
 
 		coroutine.yield()
@@ -4515,14 +4515,14 @@ function scripts.bullet_illusion.update(this, store)
 		end
 
 		if a.miss then
-			U.animation_start(this, nil, nil, store.tick_ts)
+			U.animation_start_default(this, nil, nil, store.tick_ts)
 			U.y_animation_wait_default(this)
 		end
 	end
 
 	if a.death then
 		S:queue(this.sound_events.death)
-		U.animation_start(this, nil, nil, store.tick_ts)
+		U.animation_start_default(this, nil, nil, store.tick_ts)
 		U.y_animation_wait_default(this)
 	end
 
@@ -5501,7 +5501,7 @@ function scripts.mod_freeze.update(this, store)
 
 	if this.render then
 		if this.custom_animations then
-			U.animation_start(this, this.custom_animations[1], nil, store.tick_ts)
+			U.animation_start_default(this, this.custom_animations[1], nil, store.tick_ts)
 		else
 			this.render.sprites[1].ts = store.tick_ts
 		end
@@ -5662,7 +5662,7 @@ function scripts.mod_stun.update(this, store)
 	start_ts = store.tick_ts
 
 	if m.animation_phases then
-		U.animation_start(this, "start", nil, store.tick_ts)
+		U.animation_start_default(this, "start", nil, store.tick_ts)
 
 		while not U.animation_finished_default(this) do
 			if not target_hidden and m.hide_target_delay and store.tick_ts - start_ts > m.hide_target_delay then
@@ -5686,7 +5686,7 @@ function scripts.mod_stun.update(this, store)
 	end
 
 	if this.render then
-		U.animation_start(this, "loop", nil, store.tick_ts, true)
+		U.animation_start_default(this, "loop", nil, store.tick_ts, true)
 	end
 
 	while store.tick_ts - m.ts < m.duration and target and not target.health.dead do
@@ -5702,7 +5702,7 @@ function scripts.mod_stun.update(this, store)
 	end
 
 	if m.animation_phases then
-		U.animation_start(this, "end", nil, store.tick_ts)
+		U.animation_start_default(this, "end", nil, store.tick_ts)
 
 		if target_hidden then
 			if target.ui then
@@ -6349,7 +6349,7 @@ function scripts.mod_tower_block.update(this, store)
 	m.ts = store.tick_ts
 
 	SU.tower_block_inc(target)
-	U.animation_start(this, "start", nil, store.tick_ts, false)
+	U.animation_start_default(this, "start", nil, store.tick_ts, false)
 	U.y_wait_unconditional(store, 0.1)
 
 	if m.hide_tower then
@@ -6357,10 +6357,10 @@ function scripts.mod_tower_block.update(this, store)
 	end
 
 	U.y_animation_wait_default(this)
-	U.animation_start(this, "loop", nil, store.tick_ts, true)
+	U.animation_start_default(this, "loop", nil, store.tick_ts, true)
 	U.y_wait_unconditional(store, m.duration - (store.tick_ts - m.ts))
 	S:queue(this.sound_events.finish)
-	U.animation_start(this, "end", nil, store.tick_ts, false)
+	U.animation_start_default(this, "end", nil, store.tick_ts, false)
 	U.y_wait_unconditional(store, 0.1)
 
 	if m.hide_tower then
@@ -6426,7 +6426,7 @@ function scripts.mod_tower_remove.update(this, store)
 		this.pos = target.pos
 
 		SU.tower_block_inc(target)
-		U.animation_start(this, nil, nil, store.tick_ts, false)
+		U.animation_start_default(this, nil, nil, store.tick_ts, false)
 
 		while store.tick_ts - m.ts < m.hide_time do
 			coroutine.yield()
@@ -8073,7 +8073,7 @@ scripts.soldier_revive_resist = function(this, store)
 
 	if this.revive.animation then
 		S:queue(this.revive.sound)
-		U.animation_start(this, this.revive.animation, nil, store.tick_ts, false)
+		U.animation_start_default(this, this.revive.animation, nil, store.tick_ts, false)
 		this.revive.ts = store.tick_ts
 	end
 
@@ -8518,7 +8518,7 @@ local function enemy_attracted_logic(this, store)
 			SU.y_enemy_stun(store, this)
 		else
 			if V.dist2(this_pos.x, this_pos.y, attract_pos.x, attract_pos.y) < attract_radius2 then
-				-- U.animation_start(this, "idle", nil, store.tick_ts, true)
+				-- U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 				angle = math.atan2(this_pos.y - attract_pos.y, this_pos.x - attract_pos.x)
 
 				local dest = V.v(attract_pos.x + attract_radius * math.cos(angle + d_angle), attract_pos.y + attract_radius * math.sin(angle + d_angle))
@@ -8530,7 +8530,7 @@ local function enemy_attracted_logic(this, store)
 
 			local an, af = U.animation_name_facing_point(this, "walk", motion.dest)
 
-			U.animation_start(this, an, af, store.tick_ts, true)
+			U.animation_start_default(this, an, af, store.tick_ts, true)
 			U.walk_off__accel__unsnapped(this, store.tick_length)
 
 			motion.speed.x, motion.speed.y = 0, 0
@@ -8607,7 +8607,7 @@ function scripts.delayed_play_kr5.update(this, store)
 	end
 
 	if d.idle_animation then
-		U.animation_start(this, d.idle_animation, nil, store.tick_ts, d.loop_idle)
+		U.animation_start_default(this, d.idle_animation, nil, store.tick_ts, d.loop_idle)
 	else
 		s.hidden = true
 	end
@@ -8672,7 +8672,7 @@ function scripts.delayed_play_kr5.update(this, store)
 				if not d.idle_animation then
 					s.hidden = true
 				else
-					U.animation_start(this, d.idle_animation, nil, store.tick_ts, d.loop_play)
+					U.animation_start_default(this, d.idle_animation, nil, store.tick_ts, d.loop_play)
 				end
 
 				clicks = 0
@@ -8700,7 +8700,7 @@ function scripts.delayed_play_kr5.update(this, store)
 					end
 
 					if d.play_duration then
-						U.animation_start(this, d.play_animation, nil, store.tick_ts, true)
+						U.animation_start_default(this, d.play_animation, nil, store.tick_ts, true)
 
 						if U.y_wait(store, d.play_duration, function()
 							return d.click_interrupts and this.ui.clicked
@@ -8708,7 +8708,7 @@ function scripts.delayed_play_kr5.update(this, store)
 							goto label_15_0
 						end
 					else
-						U.animation_start(this, d.play_animation, nil, store.tick_ts, false)
+						U.animation_start_default(this, d.play_animation, nil, store.tick_ts, false)
 
 						while not U.animation_finished_default(this) do
 							if d.click_interrupts and this.ui.clicked then
@@ -8723,7 +8723,7 @@ function scripts.delayed_play_kr5.update(this, store)
 				if not d.idle_animation then
 					s.hidden = true
 				else
-					U.animation_start(this, d.idle_animation, nil, store.tick_ts, d.loop_idle)
+					U.animation_start_default(this, d.idle_animation, nil, store.tick_ts, d.loop_idle)
 				end
 
 				if this.ui and not d.click_interrupts then
@@ -8953,7 +8953,7 @@ function scripts.mod_track_fx.update(this, store)
 		this.tween.ts = store.tick_ts
 		this.tween.disabled = false
 
-		U.animation_start(this, this.animation_loop, nil, store.tick_ts, true)
+		U.animation_start_default(this, this.animation_loop, nil, store.tick_ts, true)
 		U.y_wait_unconditional(store, this.tween.props[1].keys[2][1])
 	else
 		U.y_animation_play(this, this.animation_start, nil, store.tick_ts, 1)
@@ -9000,7 +9000,7 @@ function scripts.mod_track_fx.update(this, store)
 			end
 		end
 
-		U.animation_start(this, this.animation_loop, nil, store.tick_ts, true)
+		U.animation_start_default(this, this.animation_loop, nil, store.tick_ts, true)
 		coroutine.yield()
 	end
 end

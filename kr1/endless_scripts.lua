@@ -80,13 +80,13 @@ function scripts.decal_catapult_endless.update(this, store)
 		a.bullet = ms.bullet
 		this.phase = "enter"
 
-		U.animation_start(this, "running", true, store.tick_ts, true)
+		U.animation_start_default(this, "running", true, store.tick_ts, true)
 		U.y_ease_key(store, this.pos, "x", this.x_outside, this.x_inside, this.transit_time)
 
 		this.phase = "in"
 		start_ts = store.tick_ts
 
-		U.animation_start(this, "idle", true, store.tick_ts, true)
+		U.animation_start_default(this, "idle", true, store.tick_ts, true)
 
 		while store.tick_ts - start_ts < this.duration do
 			if store.tick_ts - a.ts > a.cooldown then
@@ -120,7 +120,7 @@ function scripts.decal_catapult_endless.update(this, store)
 				else
 					local an, af, ai = U.animation_name_facing_point(this, a.animation, dest)
 
-					U.animation_start(this, an, af, store.tick_ts, false)
+					U.animation_start_default(this, an, af, store.tick_ts, false)
 					U.y_wait_unconditional(store, a.shoot_time)
 
 					local n_offsets = {0, -5, 5, -10, 10}
@@ -150,7 +150,7 @@ function scripts.decal_catapult_endless.update(this, store)
 					end
 
 					U.y_animation_wait_default(this)
-					U.animation_start(this, "idle", nil, store.tick_ts)
+					U.animation_start_default(this, "idle", nil, store.tick_ts)
 
 					a.ts = store.tick_ts
 				end
@@ -161,7 +161,7 @@ function scripts.decal_catapult_endless.update(this, store)
 
 		this.phase = "exit"
 
-		U.animation_start(this, "running", false, store.tick_ts, true)
+		U.animation_start_default(this, "running", false, store.tick_ts, true)
 		U.y_ease_key(store, this.pos, "x", this.x_inside, this.x_outside, this.transit_time)
 	end
 end

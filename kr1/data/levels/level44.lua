@@ -170,7 +170,7 @@ e.render.sprites[1].flip_x=hw[3]
 LU.queue_insert(store,e)
 boss_head=e
 U.y_animation_play(e,"show",nil,store.tick_ts,1)
-U.animation_start(e,"idle",nil,store.tick_ts,true)
+U.animation_start_default(e,"idle",nil,store.tick_ts,true)
 end
 local start_ts=store.tick_ts
 local tentacles={}

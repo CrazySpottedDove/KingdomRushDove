@@ -70,7 +70,7 @@ function(store, this)
 
 			SU.y_enemy_walk_step(store, this)
 		else
-			U.animation_start(this, "idle", nil, store.tick_ts, true)
+			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 		end
 
 		if terrain_type ~= band(GR:cell_type(this.pos.x, this.pos.y), bor(TERRAIN_WATER, TERRAIN_LAND)) then

@@ -20,7 +20,7 @@ return function(this, store)
 	@constif(not b.ignore_rotation)
 	s.r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
 
-	U.animation_start(this, "flying", nil, store.tick_ts, s.loop)
+	U.animation_start_default(this, "flying", nil, store.tick_ts, s.loop)
 
 	return true
 end
@@ -50,7 +50,7 @@ end
 
 -- 		s.z = Z_OBJECTS
 -- 		s.sort_y_offset = b.store_sort_y_offset
--- 		U.animation_start(this, "idle", nil, store.tick_ts, true)
+-- 		U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 -- 		@constif(b.particles_name)
 -- 		ps.particle_system.emit = false
@@ -61,7 +61,7 @@ end
 -- 		s.z = Z_BULLETS
 -- 		s.sort_y_offset = nil
 
--- 		U.animation_start(this, "flying", nil, store.tick_ts, s.loop)
+-- 		U.animation_start_default(this, "flying", nil, store.tick_ts, s.loop)
 
 -- 		@constif(b.particles_name)
 -- 		ps.particle_system.emit = true
@@ -200,7 +200,7 @@ return function(this, store)
 
             s.z = Z_OBJECTS
             s.sort_y_offset = b.store_sort_y_offset
-            U.animation_start(this, "idle", nil, store.tick_ts, true)
+            U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
             @constif(b.particles_name)
             context.ps.particle_system.emit = false
@@ -217,7 +217,7 @@ return function(this, store)
 
         s.z = Z_BULLETS
         s.sort_y_offset = nil
-        U.animation_start(this, "flying", nil, store.tick_ts, s.loop)
+        U.animation_start_default(this, "flying", nil, store.tick_ts, s.loop)
 
         @constif(b.particles_name)
         context.ps.particle_system.emit = true

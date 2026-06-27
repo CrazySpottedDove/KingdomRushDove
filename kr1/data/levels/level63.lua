@@ -113,7 +113,7 @@ SU.y_show_taunt_set(store,c_taunt.taunts,"custom_mactans","MINE",nil,1,false)
 U.y_wait_unconditional(store,fts(37))
 fx=E:create_entity("fx_s15_crystal_transformation")
 fx.pos.x,fx.pos.y=s_crystal.pos.x,s_crystal.pos.y
-U.animation_start(fx,"explosion",nil,store.tick_ts,false)
+U.animation_start_default(fx,"explosion",nil,store.tick_ts,false)
 LU.queue_insert(store,fx)
 LU.queue_remove(store,s_crystal)
 U.y_wait_unconditional(store,fts(100))

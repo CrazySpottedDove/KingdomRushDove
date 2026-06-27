@@ -854,7 +854,7 @@ function SU.y_hero_walk_waypoints(store, this, animation)
 
 		local an, af = U.animation_name_facing_point(this, animation, this.motion.dest)
 
-		U.animation_start(this, an, af, store.tick_ts, true)
+		U.animation_start_default(this, an, af, store.tick_ts, true)
 
 		while not this.motion.arrived do
 			if this.health.dead and not this.health.ignore_damage then
@@ -1011,7 +1011,7 @@ function SU.y_hero_new_rally(store, this)
 
 			local out = SU.y_hero_walk_waypoints(store, this)
 
-			U.animation_start(this, "idle", nil, store.tick_ts, true)
+			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 			this.vis.bans = vis_bans
 			this.health.immune_to = prev_immune
@@ -1099,7 +1099,7 @@ function SU.y_hero_death_and_respawn(store, this)
 		this.health_bar.hidden = true
 		dead_lifetime = sd.dead_lifetime or dead_lifetime
 
-		U.animation_start(this, sd.animation, nil, store.tick_ts)
+		U.animation_start_default(this, sd.animation, nil, store.tick_ts)
 		S:queue(this.sound_events.death, this.sound_events.death_args)
 		S:queue(sd.sound, sd.sound_args)
 		U.y_wait_unconditional(store, sd.hit_time)
@@ -1264,7 +1264,7 @@ function SU.y_reinforcement_fade_out(store, this)
 	local t_angle = offset > 0 and 0 or math.pi
 	local an, af = U.animation_name_for_angle(this, "walk", t_angle)
 
-	U.animation_start(this, an, af, store.tick_ts, -1)
+	U.animation_start_default(this, an, af, store.tick_ts, true)
 
 	this.tween.reverse = true
 	this.tween.disabled = nil
@@ -1297,7 +1297,7 @@ function SU.y_soldier_new_rally(store, this)
 
 		local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
-		U.animation_start(this, an, af, store.tick_ts, -1)
+		U.animation_start_default(this, an, af, store.tick_ts, true)
 
 		while not this.motion.arrived do
 			if this.health.dead or this.unit.is_stunned then
@@ -1368,7 +1368,7 @@ function SU.y_soldier_revive(store, this)
 
 		if r.animation then
 			S:queue(r.sound)
-			U.animation_start(this, r.animation, nil, store.tick_ts, false)
+			U.animation_start_default(this, r.animation, nil, store.tick_ts, false)
 
 			r.ts = store.tick_ts
 
@@ -1596,7 +1596,7 @@ function SU.y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
 	local bullet_to_start = V.vclone(bullet_to)
 	local an, af, ai = U.animation_name_facing_point(this, attack.animation, bullet_to)
 
-	U.animation_start(this, an, af, store.tick_ts, false)
+	U.animation_start_default(this, an, af, store.tick_ts, false)
 	S:queue(attack.sound)
 
 	while store.tick_ts - start_ts < attack.shoot_time do
@@ -1819,7 +1819,7 @@ function SU.y_soldier_do_timed_action(store, this, action)
 	local action_done = false
 	local start_ts = store.tick_ts
 
-	U.animation_start(this, action.animation, nil, store.tick_ts)
+	U.animation_start_default(this, action.animation, nil, store.tick_ts)
 	S:queue(action.sound)
 
 	if action.cast_time and SU.y_soldier_wait(store, this, action.cast_time) then
@@ -1893,7 +1893,7 @@ function SU.y_soldier_do_timed_attack(store, this, target, attack)
 	local spell
 	local an, af = U.animation_name_facing_point(this, attack.animation, target.pos)
 
-	U.animation_start(this, an, af, store.tick_ts)
+	U.animation_start_default(this, an, af, store.tick_ts)
 	S:queue(attack.sound)
 
 	while store.tick_ts - start_ts < attack.cast_time do
@@ -1984,7 +1984,7 @@ function SU.y_soldier_do_single_area_attack(store, this, target, attack)
 	local targets, hit_pos
 	local an, af = U.animation_name_facing_point(this, attack.animation, target.pos)
 
-	U.animation_start(this, an, af, store.tick_ts, 1)
+	U.animation_start_default(this, an, af, store.tick_ts, 1)
 	S:queue(attack.sound, attack.sound_args)
 
 	while store.tick_ts - start_ts < attack.hit_time do
@@ -2153,7 +2153,7 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 
 		an, af = U.animation_name_facing_point(this, attack.animations[2], target.pos)
 
-		U.animation_start(this, an, af, store.tick_ts, 1)
+		U.animation_start_default(this, an, af, store.tick_ts, 1)
 
 		local hit_times = attack.hit_times and attack.hit_times or {attack.hit_time}
 
@@ -2312,7 +2312,7 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 	if attack.animations[3] then
 		an, af = U.animation_name_facing_point(this, attack.animations[3], target.pos)
 
-		U.animation_start(this, an, af, store.tick_ts, 1)
+		U.animation_start_default(this, an, af, store.tick_ts, 1)
 
 		while not U.animation_finished_default(this) do
 			if this.health.dead or this.nav_rally and this.nav_rally.new then
@@ -2348,7 +2348,7 @@ function SU.y_soldier_do_single_melee_attack(store, this, target, attack)
 	local start_ts = store.tick_ts
 	local an, af = U.animation_name_facing_point(this, attack.animation, target.pos)
 
-	U.animation_start(this, an, af, store.tick_ts, 1)
+	U.animation_start_default(this, an, af, store.tick_ts, 1)
 	S:queue(attack.sound, attack.sound_args)
 
 	while store.tick_ts - start_ts < attack.hit_time do
@@ -2606,7 +2606,7 @@ function SU.soldier_move_to_slot_step(store, this, target)
 
 		local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
-		U.animation_start(this, an, af, store.tick_ts, -1)
+		U.animation_start_default(this, an, af, store.tick_ts, true)
 
 		if U.walk_off__accel__unsnapped(this, store.tick_length) then
 			local target_is_moving = target.motion and not target.motion.arrived
@@ -2618,7 +2618,7 @@ function SU.soldier_move_to_slot_step(store, this, target)
 
 			an, af = U.animation_name_facing_point(this, ani, target.pos)
 
-			U.animation_start(this, an, af, store.tick_ts, -1)
+			U.animation_start_default(this, an, af, store.tick_ts, true)
 		end
 
 		return true
@@ -2756,7 +2756,7 @@ function SU.soldier_go_back_step(store, this)
 		else
 			local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
-			U.animation_start(this, an, af, store.tick_ts, -1)
+			U.animation_start_default(this, an, af, store.tick_ts, true)
 
 			return true
 		end
@@ -3344,7 +3344,7 @@ function SU.y_enemy_death(store, this)
 	elseif band(terrain_type, TERRAIN_CLIFF) ~= 0 and band(this.vis.flags, F_FLYING) == 0 and this.cliff then
 		S:queue("WilhemScream")
 		S:queue(this.sound_events.death, this.sound_events.death_args)
-		U.animation_start(this, "fall", nil, store.tick_ts, true)
+		U.animation_start_default(this, "fall", nil, store.tick_ts, true)
 		U.set_destination(this, this.cliff.fall_to_pos)
 
 		while not U.walk(this, store.tick_length, this.cliff.fall_accel) do
@@ -3359,7 +3359,7 @@ function SU.y_enemy_death(store, this)
 	elseif this.unit.death_animation then
 		S:queue(this.sound_events.death, this.sound_events.death_args)
 		SU.show_blood_pool(this, terrain_type)
-		U.animation_start(this, this.unit.death_animation, nil, store.tick_ts, false)
+		U.animation_start_default(this, this.unit.death_animation, nil, store.tick_ts, false)
 
 		if can_spawn and this.death_spawns.delay then
 			U.y_wait_unconditional(store, this.death_spawns.delay)
@@ -3500,7 +3500,7 @@ function SU.y_enemy_walk_until_blocked(store, this, ignore_soldiers, func)
 		if ignore_soldiers or not blocker and not ranged then
 			SU.y_enemy_walk_step(store, this)
 		else
-			U.animation_start(this, "idle", nil, store.tick_ts, true)
+			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 		end
 
 		if terrain_type ~= band(GR:cell_type(this.pos.x, this.pos.y), bor(TERRAIN_WATER, TERRAIN_LAND)) then
@@ -3554,7 +3554,7 @@ function SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 		if not blocker and not ranged then
 			SU.y_enemy_walk_step(store, this)
 		else
-			U.animation_start(this, "idle", nil, store.tick_ts, true)
+			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 		end
 
 		if terrain_type ~= band(GR:cell_type(this.pos.x, this.pos.y), bor(TERRAIN_WATER, TERRAIN_LAND)) then
@@ -3587,7 +3587,7 @@ function SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func__ranged(store,
 		if not blocker then
 			SU.y_enemy_walk_step(store, this)
 		else
-			U.animation_start(this, "idle", nil, store.tick_ts, true)
+			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 		end
 
 		if terrain_type ~= band(GR:cell_type(this.pos.x, this.pos.y), bor(TERRAIN_WATER, TERRAIN_LAND)) then
@@ -3640,7 +3640,7 @@ function SU.y_enemy_walk_until_blocked_on__ranged_off__ignore_soldiers__func(sto
 		if not blocker and not ranged then
 			SU.y_enemy_walk_step(store, this)
 		else
-			U.animation_start(this, "idle", nil, store.tick_ts, true)
+			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 		end
 
 		if terrain_type ~= band(GR:cell_type(this.pos.x, this.pos.y), bor(TERRAIN_WATER, TERRAIN_LAND)) then
@@ -3660,7 +3660,7 @@ function SU.y_wait_for_blocker(store, this, blocker)
 	local pos = blocker.motion.arrived and blocker.pos or blocker.motion.dest
 	local an, af = U.animation_name_facing_point(this, "idle", pos)
 
-	U.animation_start(this, an, af, store.tick_ts, true)
+	U.animation_start_default(this, an, af, store.tick_ts, true)
 
 	-- 停下来等，所以 motion 标记为 arrived
 	this.motion.arrived = true
@@ -3692,7 +3692,7 @@ end
 function SU.y_enemy_do_ranged_attack(store, this, target, attack)
 	local an, af, ai = U.animation_name_facing_point(this, attack.animation, target.pos)
 
-	U.animation_start(this, an, af, store.tick_ts, false)
+	U.animation_start_default(this, an, af, store.tick_ts, false)
 
 	while store.tick_ts - attack.ts < attack.shoot_time do
 		if this.health.dead or this.unit.is_stunned and not attack.ignore_stun then
@@ -3761,7 +3761,7 @@ function SU.y_enemy_do_ranged_attack(store, this, target, attack)
 		coroutine.yield()
 	end
 
-	U.animation_start(this, "idle", nil, store.tick_ts, true)
+	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 	return true
 end
@@ -3785,7 +3785,7 @@ function SU.y_enemy_do_loopable_ranged_attack(store, this, target, attack)
 	for i = 1, attack.loops do
 		an, af, ai = U.animation_name_facing_point(this, attack.animations[2], target.pos)
 
-		U.animation_start(this, an, af, store.tick_ts, false)
+		U.animation_start_default(this, an, af, store.tick_ts, false)
 
 		local shoot_times = attack.shoot_times or {attack.shoot_time}
 
@@ -3842,7 +3842,7 @@ function SU.y_enemy_do_loopable_ranged_attack(store, this, target, attack)
 
 	an, af, ai = U.animation_name_facing_point(this, attack.animations[3], target.pos)
 
-	U.animation_start(this, an, af, store.tick_ts, 1)
+	U.animation_start_default(this, an, af, store.tick_ts, 1)
 
 	while not U.animation_finished_default(this) do
 		if this.health.dead then
@@ -4094,7 +4094,7 @@ function SU.y_enemy_melee_attacks(store, this, target)
 					coroutine.yield()
 				end
 
-				U.animation_start(this, "idle", nil, store.tick_ts, true)
+				U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 				return true
 			end
@@ -4111,7 +4111,7 @@ end
 function SU.y_enemy_stun(store, this)
 	local flip_x = this.motion and this.motion.dest.x < this.pos.x or nil
 
-	U.animation_start(this, "idle", flip_x, store.tick_ts, true)
+	U.animation_start_default(this, "idle", flip_x, store.tick_ts, true)
 	coroutine.yield()
 end
 
@@ -4531,7 +4531,7 @@ function SU.y_controable_new_rally(store, this)
 
 		local out = SU.y_hero_walk_waypoints(store, this)
 
-		U.animation_start(this, "idle", nil, store.tick_ts, true)
+		U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 		this.vis.bans = vis_bans
 		this.health.immune_to = prev_immune
@@ -4775,7 +4775,7 @@ function SU.go_to_forced_waypoint(this, store)
 
 		local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
-		U.animation_start(this, an, af, store.tick_ts, true)
+		U.animation_start_default(this, an, af, store.tick_ts, true)
 		U.walk_off__accel__unsnapped(this, store.tick_length)
 
 		return true
@@ -5021,7 +5021,7 @@ local function enemy_mocked_logic(this, store)
 			if not (destination:equals(this.pos)) then
 				U.set_destination(this, destination)
 				local an, af = U.animation_name_facing_point(this, "walk", destination)
-				U.animation_start(this, an, af, store.tick_ts, true)
+				U.animation_start_default(this, an, af, store.tick_ts, true)
 				U.walk_off__accel__unsnapped(this, store.tick_length)
 				-- 还需要更新敌人的 nav_path
 				local nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, {this.nav_path.pi}, {this.nav_path.spi}, true)
@@ -5031,7 +5031,7 @@ local function enemy_mocked_logic(this, store)
 				this.motion.speed.y = 0
 			else
 				this.motion.arrived = true
-				U.animation_start(this, "idle", flip_x, store.tick_ts, true)
+				U.animation_start_default(this, "idle", flip_x, store.tick_ts, true)
 				-- 让敌人只会傻乎乎地近战普攻
 				SU.y_enemy_melee_attacks(store, this, source)
 			end
@@ -5096,7 +5096,7 @@ local function enemy_beat_back_logic(this, store)
 
 	-- 使用 idle 动画作为击退过程的动画
 	local flip_x = this.motion and this.motion.dest.x < this.pos.x or nil
-	U.animation_start(this, "idle", flip_x, store.tick_ts, true)
+	U.animation_start_default(this, "idle", flip_x, store.tick_ts, true)
 
 	-- 在击退过程中，持续更新单位位置，直到达到预定的击退时间
 	while store.tick_ts - start_ts < beat_back_duration do
@@ -5190,7 +5190,7 @@ local function enemy_betray_logic(this, store)
 			else
 				U.set_destination(this, next_pos)
 				local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
-				U.animation_start(this, an, af, store.tick_ts, -1)
+				U.animation_start_default(this, an, af, store.tick_ts, true)
 				U.walk_off__accel__unsnapped(this, store.tick_length)
 				this.nav_rally.pos:copy(this.pos)
 			end
@@ -5256,7 +5256,7 @@ local function enemy_scared_logic(this, store)
 			end
 			U.set_destination(this, next_pos)
 			local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
-			U.animation_start(this, an, af, store.tick_ts, true)
+			U.animation_start_default(this, an, af, store.tick_ts, true)
 			U.walk_off__accel__unsnapped(this, store.tick_length)
 		end
 		coroutine.yield()

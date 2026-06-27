@@ -163,10 +163,10 @@ end
 S:queue("SpecialIndianaRuns")
 self.decal_indiana.render.sprites[1].hidden=false
 U.y_animation_play(self.decal_indiana,"enter",nil,store.tick_ts)
-U.animation_start(self.decal_indiana,"idle",nil,store.tick_ts,false)
+U.animation_start_default(self.decal_indiana,"idle",nil,store.tick_ts,false)
 flip_ts=store.tick_ts
 for _,b in pairs(self.puzzle_buttons) do
-U.animation_start(b,"flash",nil,store.tick_ts,false)
+U.animation_start_default(b,"flash",nil,store.tick_ts,false)
 b.ui.can_click=true
 end
 while not store.waves_finished do
@@ -174,7 +174,7 @@ if store.tick_ts-flip_ts>5 then
 flip_ts=store.tick_ts
 local a
 a=self.decal_indiana.render.sprites[1].name=="idle" and "idle2" or "idle"
-U.animation_start(self.decal_indiana,a,nil,store.tick_ts,false)
+U.animation_start_default(self.decal_indiana,a,nil,store.tick_ts,false)
 local qm=E:create_entity("decal_indiana_question_marks")
 qm.render.sprites[1].ts=store.tick_ts
 qm.pos=v(734+OX,738)
@@ -205,7 +205,7 @@ for _,b in pairs(self.puzzle_buttons) do
 if b.ui.clicked then
 b.ui.clicked=false
 S:queue("SpecialIndianaSelect")
-U.animation_start(b,"active",nil,store.tick_ts,false)
+U.animation_start_default(b,"active",nil,store.tick_ts,false)
 table.insert(puzzle_sequence,b.puzzle_value)
 end
 end
@@ -258,13 +258,13 @@ U.set_destination(decal_boulder,boulder_to)
 S:queue("SpecialIndiana")
 S:queue("SpecialIndianaSelect")
 U.y_animation_play(self.decal_top_door,"open",nil,store.tick_ts)
-U.animation_start(self.decal_indiana,"jump",nil,store.tick_ts,false)
+U.animation_start_default(self.decal_indiana,"jump",nil,store.tick_ts,false)
 U.y_wait_unconditional(store,2)
 S:queue("SpecialIndianaSelect")
 U.y_animation_play(self.decal_side_door,"open",nil,store.tick_ts)
 U.y_wait_unconditional(store,1)
 S:queue("SpecialIndianaRuns")
-U.animation_start(self.decal_indiana,"exit",nil,store.tick_ts,false)
+U.animation_start_default(self.decal_indiana,"exit",nil,store.tick_ts,false)
 U.y_wait_unconditional(store,0.25)
 LU.queue_insert(store,decal_boulder)
 U.y_wait_unconditional(store,1)
@@ -276,7 +276,7 @@ end
 function level:y_puzzle_failed(store)
 self.puzzle_attempts=self.puzzle_attempts+1
 for _,b in pairs(self.puzzle_buttons) do
-U.animation_start(b,"flash",nil,store.tick_ts,false)
+U.animation_start_default(b,"flash",nil,store.tick_ts,false)
 end
 for i=1,math.min(self.puzzle_attempts,#self.alien_eggs) do
 self.alien_eggs[i].do_spawn=true

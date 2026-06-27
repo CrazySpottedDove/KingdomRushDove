@@ -69,9 +69,9 @@ end
 soulcaller_up.render.sprites[1].hidden=false
 S:queue("Stage17RootSoulcallerIn")
 U.y_animation_play(soulcaller_up,"revenant_in",nil,store.tick_ts)
-U.animation_start(soulcaller_up,"revenant_idle",nil,store.tick_ts,true)
+U.animation_start_default(soulcaller_up,"revenant_idle",nil,store.tick_ts,true)
 U.y_wait_unconditional(store,1)
-U.animation_start(soulcaller_up,"revenant_anim_reveal",nil,store.tick_ts,false)
+U.animation_start_default(soulcaller_up,"revenant_anim_reveal",nil,store.tick_ts,false)
 U.y_wait_unconditional(store,fts(16))
 S:queue("Stage17VinesOut")
 P:activate_path(3)
@@ -85,7 +85,7 @@ P:remove_invalid_range(7,nil,nil,bit.bor(NF_RALLY,NF_TWISTER))
 set_terrain(blocked_cells_1,bit.bor(TERRAIN_LAND))
 for _,v in pairs(store.entities) do
 if v.template_name=="decal_stage_17_hidden_path_1" then
-U.animation_start(v,"run",nil,store.tick_ts,false)
+U.animation_start_default(v,"run",nil,store.tick_ts,false)
 break
 end
 end
@@ -100,19 +100,19 @@ end
 soulcaller_down.render.sprites[1].hidden=false
 S:queue("Stage17RootSoulcallerIn")
 U.y_animation_play(soulcaller_down,"revenant_in",nil,store.tick_ts)
-U.animation_start(soulcaller_down,"revenant_idle",nil,store.tick_ts,true)
+U.animation_start_default(soulcaller_down,"revenant_idle",nil,store.tick_ts,true)
 U.y_wait_unconditional(store,1)
-U.animation_start(soulcaller_down,"revenant_anim_reveal",nil,store.tick_ts,false)
+U.animation_start_default(soulcaller_down,"revenant_anim_reveal",nil,store.tick_ts,false)
 U.y_wait_unconditional(store,fts(16))
 S:queue("Stage17VinesOut")
 for _,v in pairs(store.entities) do
 if v.template_name=="decal_stage_17_hidden_path_2" then
-U.animation_start(v,"run",nil,store.tick_ts,false)
+U.animation_start_default(v,"run",nil,store.tick_ts,false)
 break
 end
 end
 U.y_animation_wait_default(soulcaller_down)
-U.animation_start(soulcaller_down,"revenant_idle_02",nil,store.tick_ts,false)
+U.animation_start_default(soulcaller_down,"revenant_idle_02",nil,store.tick_ts,false)
 U.y_wait_unconditional(store,fts(30))
 if #holders>0 then
 for k,v in pairs(holders) do

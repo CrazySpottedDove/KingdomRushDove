@@ -27,9 +27,9 @@ break
 end
 end
 if store.level_mode==GAME_MODE_CAMPAIGN then
-U.animation_start(statue,"idle_campaign",nil,store.tick_ts)
+U.animation_start_default(statue,"idle_campaign",nil,store.tick_ts)
 else
-U.animation_start(statue,"idle_1",nil,store.tick_ts)
+U.animation_start_default(statue,"idle_1",nil,store.tick_ts)
 end
 if store.level_mode==GAME_MODE_CAMPAIGN then
 local controller_pre_bossfight
@@ -55,7 +55,7 @@ signal.emit("show-balloon_tutorial","LV19_NAVIRA_START_01",false)
 U.y_wait_unconditional(store,3.5)
 signal.emit("show-balloon_tutorial","LV19_NAVIRA_START_02",false)
 U.y_wait_unconditional(store,3.5)
-U.animation_start(controller_pre_bossfight,"idlecapeout",true,store.tick_ts,false)
+U.animation_start_default(controller_pre_bossfight,"idlecapeout",true,store.tick_ts,false)
 U.y_wait_unconditional(store,fts(23.5))
 local cape=E:create_entity(controller_pre_bossfight.cape_t)
 cape.pos=V.vclone(controller_pre_bossfight.pos)

@@ -176,10 +176,10 @@ if store.level_mode==GAME_MODE_CAMPAIGN then
 while store.wave_group_number<2 do
 coroutine.yield()
 end
-U.animation_start(self.grating_door_left,"open",nil,store.tick_ts,false)
-U.animation_start(self.grating_door_right,"open",nil,store.tick_ts,false)
-U.animation_start(self.castle_door_left,"open",nil,store.tick_ts,false)
-U.animation_start(self.castle_door_right,"open",nil,store.tick_ts,false)
+U.animation_start_default(self.grating_door_left,"open",nil,store.tick_ts,false)
+U.animation_start_default(self.grating_door_right,"open",nil,store.tick_ts,false)
+U.animation_start_default(self.castle_door_left,"open",nil,store.tick_ts,false)
+U.animation_start_default(self.castle_door_right,"open",nil,store.tick_ts,false)
 S:queue("HWCastleDoorsOpen")
 for i=2,3 do
 P:remove_invalid_range(i,nil,40)

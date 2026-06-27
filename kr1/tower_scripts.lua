@@ -375,7 +375,7 @@ scripts.tower_ranger = {
 					for _, sid in ipairs(shooter_sids) do
 						local an, af = AU.animation_name_facing_point(this, "idle", tw.long_idle_pos, sid)
 
-						animation_start(this, an, af, store.tick_ts, -1, sid)
+						animation_start(this, an, af, store.tick_ts, true, sid)
 					end
 				end
 
@@ -608,7 +608,7 @@ scripts.tower_musketeer = {
 					for _, sid in ipairs(shooter_sids) do
 						local an, af = AU.animation_name_facing_point(this, "idle", tw.long_idle_pos, sid)
 
-						animation_start(this, an, af, store.tick_ts, -1, sid)
+						animation_start(this, an, af, store.tick_ts, true, sid)
 					end
 				end
 
@@ -790,7 +790,7 @@ scripts.tower_crossbow = {
 
 						an, af = AU.animation_name_facing_point_use_offset(this, "multishot_loop", enemy.pos, shooter_sid, start_offset)
 
-						animation_start(this, an, af, store.tick_ts, -1, shooter_sid)
+						animation_start(this, an, af, store.tick_ts, true, shooter_sid)
 
 						local last_enemy = enemy
 						local loop_ts = store.tick_ts
@@ -920,7 +920,7 @@ scripts.tower_crossbow = {
 
 						an, af = AU.animation_name_facing_point_use_offset(this, "idle", last_target_pos, shooter_sid, start_offset)
 
-						animation_start(this, an, af, store.tick_ts, -1, shooter_sid)
+						animation_start(this, an, af, store.tick_ts, true, shooter_sid)
 
 						U.change_sprite_draw_order(this, shooter_sid)
 					end
@@ -930,7 +930,7 @@ scripts.tower_crossbow = {
 					for _, sid in pairs(shooter_sprite_ids) do
 						local an, af = AU.animation_name_facing_point(this, "idle", tw.long_idle_pos, sid)
 
-						animation_start(this, an, af, store.tick_ts, -1, sid)
+						animation_start(this, an, af, store.tick_ts, true, sid)
 					end
 				end
 			end
@@ -1057,7 +1057,7 @@ scripts.tower_totem = {
 
 						an, af = AU.animation_name_facing_point_use_offset(this, "idle", last_target_pos, shooter_sid, start_offset)
 
-						animation_start(this, an, af, store.tick_ts, -1, shooter_sid)
+						animation_start(this, an, af, store.tick_ts, true, shooter_sid)
 					end
 				end
 
@@ -1065,7 +1065,7 @@ scripts.tower_totem = {
 					for _, sid in pairs(shooter_sprite_ids) do
 						local an, af = AU.animation_name_facing_point(this, "idle", tw.long_idle_pos, sid)
 
-						animation_start(this, an, af, store.tick_ts, -1, sid)
+						animation_start(this, an, af, store.tick_ts, true, sid)
 					end
 				end
 			end
@@ -1444,7 +1444,7 @@ scripts.tower_arcane = {
 					for _, sid in ipairs(shooter_sids) do
 						local an, af = animation_name_facing_point(this, "idle", tw.long_idle_pos, sid)
 
-						animation_start(this, an, af, store.tick_ts, -1, sid)
+						animation_start(this, an, af, store.tick_ts, true, sid)
 					end
 				end
 
@@ -2742,12 +2742,12 @@ scripts.tower_archmage = {
 
 				local an = U.animation_name_for_angle(this, "idle", this._last_t_angle, shooter_sid)
 
-				animation_start(this, an, nil, store.tick_ts, -1, shooter_sid)
+				animation_start(this, an, nil, store.tick_ts, true, shooter_sid)
 
 				if store.tick_ts - math.max(ba.ts, ta.ts) > tw.long_idle_cooldown then
 					local an, af = animation_name_facing_point(this, "idle", tw.long_idle_pos, shooter_sid)
 
-					animation_start(this, an, af, store.tick_ts, -1, shooter_sid)
+					animation_start(this, an, af, store.tick_ts, true, shooter_sid)
 				end
 
 				coroutine.yield()
@@ -2964,7 +2964,7 @@ scripts.tower_necromancer = {
 
 						local an, _, ai = U.animation_name_for_angle(this, "shoot_loop", t_angle, shooter_sid)
 
-						animation_start(this, an, nil, store.tick_ts, -1, shooter_sid)
+						animation_start(this, an, nil, store.tick_ts, true, shooter_sid)
 
 						ba.ts = store.tick_ts
 
@@ -3006,13 +3006,13 @@ scripts.tower_necromancer = {
 				if not hands_raised then
 					local an = U.animation_name_for_angle(this, "idle", t_angle, shooter_sid)
 
-					animation_start(this, an, nil, store.tick_ts, -1, shooter_sid)
+					animation_start(this, an, nil, store.tick_ts, true, shooter_sid)
 				end
 
 				if store.tick_ts - math.max(ba.ts, pa.ts) > this.tower.long_idle_cooldown then
 					local an, af = animation_name_facing_point(this, "idle", this.tower.long_idle_pos, shooter_sid)
 
-					animation_start(this, an, af, store.tick_ts, -1, shooter_sid)
+					animation_start(this, an, af, store.tick_ts, true, shooter_sid)
 				end
 
 				coroutine.yield()
@@ -3492,7 +3492,7 @@ function scripts.decal_pixie.update(this, store)
 				this_pos.x, this_pos.y = target.pos.x + target.enemy.melee_slot.x * (slot_flip and 1 or -1), target.pos.y + target.enemy.melee_slot.y
 
 				U.y_animation_play(this, "teleportIn", slot_flip, store.tick_ts)
-				animation_start(this, a.animation, nil, store.tick_ts, false)
+				U.animation_start_default(this, a.animation, nil, store.tick_ts, false)
 
 				if a.type == "mod" then
 					for _, m in pairs(a.mods) do
@@ -3528,7 +3528,7 @@ function scripts.decal_pixie.update(this, store)
 
 			this.target_id = nil
 		elseif store.tick_ts - iflip.ts > iflip.cooldown then
-			animation_start(this, table.random(iflip.animations), random() < 0.5, store.tick_ts, iflip.loop)
+			U.animation_start_default(this, table.random(iflip.animations), random() < 0.5, store.tick_ts, iflip.loop)
 
 			iflip.ts = store.tick_ts
 		end
@@ -3674,7 +3674,7 @@ scripts.tower_bfg = {
 					end
 				end
 
-				animation_start(this, "idle", nil, store.tick_ts)
+				U.animation_start_default(this, "idle", nil, store.tick_ts)
 				coroutine.yield()
 			end
 		end
@@ -4010,7 +4010,7 @@ scripts.tower_dwaarp = {
 							std_ready = false
 						end
 
-						animation_start(this, "idle", nil, store.tick_ts, -1, anim_id)
+						animation_start(this, "idle", nil, store.tick_ts, true, anim_id)
 						coroutine.yield()
 					end
 				end
@@ -4417,7 +4417,7 @@ scripts.tower_tesla = {
 					end
 				end
 
-				animation_start(this, "idle", nil, store.tick_ts)
+				U.animation_start_default(this, "idle", nil, store.tick_ts)
 
 				::continue::
 
@@ -4635,7 +4635,7 @@ function scripts.soldier_mecha.update(this, store)
 
 					local an, af = animation_name_facing_point(this, ao.animation, target.pos)
 
-					animation_start(this, an, af, store.tick_ts, false)
+					U.animation_start_default(this, an, af, store.tick_ts, false)
 					y_wait(store, ao.hit_time)
 
 					local b = E:create_entity(ao.bullet)
@@ -5141,7 +5141,7 @@ function scripts.druid_shooter_sylvan.update(this, store)
 
 			if target and #enemies > 1 then
 				S:queue(a.sound)
-				animation_start(this, a.animation, nil, store.tick_ts)
+				U.animation_start_default(this, a.animation, nil, store.tick_ts)
 				y_wait(store, a.cast_time)
 
 				a.ts = store.tick_ts
@@ -6181,7 +6181,7 @@ function scripts.tower_dark_elf.update(this, store)
 			if store.tick_ts - last_ts > this.tower.long_idle_cooldown then
 				local an, af = animation_name_facing_point(this, "idle", this.tower.long_idle_pos, this.render.sid_archer)
 
-				animation_start(this, an, af, store.tick_ts, -1, this.render.sid_archer)
+				animation_start(this, an, af, store.tick_ts, true, this.render.sid_archer)
 
 				this.attacks._last_target_pos = vec_2(REF_W, 0)
 			end
@@ -6219,7 +6219,7 @@ function scripts.mod_tower_dark_elf_big_target.update(this, store)
 
 	this.pos = target.pos
 
-	animation_start(this, "run", nil, store.tick_ts)
+	U.animation_start_default(this, "run", nil, store.tick_ts)
 
 	local t_id = m.target_id
 
@@ -6499,7 +6499,7 @@ function scripts.controller_tower_dark_elf_soldiers.update(this, store)
 					this.render.sprites[1].hidden = false
 
 					U.y_animation_play(this, "open", nil, store.tick_ts)
-					animation_start(this, "idle", false, store.tick_ts)
+					U.animation_start_default(this, "idle", false, store.tick_ts)
 
 					s = E:create_entity(b.soldier_type)
 
@@ -6639,7 +6639,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.insert(this, store)
 		s.r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
 	end
 
-	animation_start(this, "flying", nil, store.tick_ts, s.loop)
+	U.animation_start_default(this, "flying", nil, store.tick_ts, s.loop)
 
 	return true
 end
@@ -6677,7 +6677,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
 		s.z = Z_OBJECTS
 		s.sort_y_offset = b.store_sort_y_offset
 
-		animation_start(this, "idle", nil, store.tick_ts, true)
+		U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 		if ps then
 			ps.particle_system.emit = false
@@ -6688,7 +6688,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
 		s.z = Z_BULLETS
 		s.sort_y_offset = nil
 
-		animation_start(this, "soul_travel", nil, store.tick_ts, s.loop)
+		U.animation_start_default(this, "soul_travel", nil, store.tick_ts, s.loop)
 
 		if ps then
 			ps.particle_system.emit = true
@@ -7151,7 +7151,7 @@ function scripts.projecticle_big_guy_tower_demon_pit.update(this, store)
 	local last_y = this.pos.y
 	local flip_x = b.to.x - b.from.x < 0
 
-	animation_start(this, "idle_1", flip_x, store.tick_ts, 40)
+	U.animation_start_default(this, "idle_1", flip_x, store.tick_ts, 40)
 
 	b.ts = store.tick_ts
 	b.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
@@ -7837,7 +7837,7 @@ function scripts.bullet_tower_necromancer_deathspawn.insert(this, store)
 		s.r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
 	end
 
-	animation_start(this, "flying", nil, store.tick_ts, s.loop)
+	U.animation_start_default(this, "flying", nil, store.tick_ts, s.loop)
 
 	return true
 end
@@ -8555,7 +8555,7 @@ function scripts.aura_tower_necromancer_skill_rider.update(this, store)
 			else
 				local an, af = animation_name_facing_point(this, "walk", this.motion.dest)
 
-				animation_start(this, an, af, store.tick_ts, -1)
+				U.animation_start_default(this, an, af, store.tick_ts, true)
 
 				return true
 			end
@@ -9146,7 +9146,7 @@ function scripts.tower_pandas.update(this, store)
 					af = not af
 				end
 
-				animation_start(this, an, af, store.tick_ts, -1, panda.render)
+				animation_start(this, an, af, store.tick_ts, true, panda.render)
 
 				panda.in_animation = false
 			end
@@ -9211,7 +9211,7 @@ function scripts.tower_pandas.update(this, store)
 
 					af = false
 
-					animation_start(this, an, af, store.tick_ts, -1, panda.render)
+					animation_start(this, an, af, store.tick_ts, true, panda.render)
 				end
 			end
 		end
@@ -9641,7 +9641,7 @@ function scripts.bullet_tower_pandas_air.update(this, store)
 		s.z = Z_OBJECTS
 		s.sort_y_offset = b.store_sort_y_offset
 
-		animation_start(this, "idle", nil, store.tick_ts, true)
+		U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 		if ps then
 			ps.particle_system.emit = false
@@ -9652,7 +9652,7 @@ function scripts.bullet_tower_pandas_air.update(this, store)
 		s.z = Z_BULLETS
 		s.sort_y_offset = nil
 
-		animation_start(this, "flying", nil, store.tick_ts, s.loop)
+		U.animation_start_default(this, "flying", nil, store.tick_ts, s.loop)
 
 		if ps then
 			ps.particle_system.emit = true
@@ -10050,7 +10050,7 @@ function scripts.soldier_tower_pandas.update(this, store)
 
 						local an, af = animation_name_facing_point(this, a_i.animation, crowded_pos)
 
-						animation_start(this, an, af, store.tick_ts, false)
+						U.animation_start_default(this, an, af, store.tick_ts, false)
 
 						if this.sound_events and this.sound_events.thunder then
 							S:queue(this.sound_events.thunder)
@@ -10103,7 +10103,7 @@ function scripts.soldier_tower_pandas.update(this, store)
 						end
 
 						U.y_animation_wait_default(this)
-						animation_start(this, "idle", nil, store.tick_ts, true)
+						U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 					else
 						a_i.ts = a_i.ts + a_i.cooldown * 0.2
 					end
@@ -10118,7 +10118,7 @@ function scripts.soldier_tower_pandas.update(this, store)
 				else
 					a_i.ts = store.tick_ts
 
-					animation_start(this, a_i.animation, nil, store.tick_ts, false)
+					U.animation_start_default(this, a_i.animation, nil, store.tick_ts, false)
 
 					if this.sound_events and this.sound_events.teleport then
 						S:queue(this.sound_events.teleport)
@@ -10161,7 +10161,7 @@ function scripts.soldier_tower_pandas.update(this, store)
 						end
 
 						U.y_animation_wait_default(this)
-						animation_start(this, "idle", nil, store.tick_ts, true)
+						U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 					end
 				end
 			end
@@ -10306,7 +10306,7 @@ function scripts.tower_ray.update(this, store)
 						shock_fx.tower_id = this.id
 
 						queue_insert(store, shock_fx)
-						animation_start(shock_fx, "idle", nil, store.tick_ts, true)
+						U.animation_start_default(shock_fx, "idle", nil, store.tick_ts, true)
 					end
 				end
 			end
@@ -10686,7 +10686,7 @@ function scripts.fx_tower_ray_lvl4_shock.update(this, store)
 	while store.entities[this.tower_id] do
 		this.render.sprites[1].hidden = false
 
-		animation_start(this, "idle", nil, store.tick_ts, true)
+		U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 		while not animation_finished(this, 1, cds[cd_id]) do
 			hide_if_necessary()
@@ -10894,7 +10894,7 @@ function scripts.bullet_tower_ray.update(this, store)
 
 	s.scale = s.scale or V.vv(1)
 
-	animation_start(this, "loop", nil, store.tick_ts, true)
+	U.animation_start_default(this, "loop", nil, store.tick_ts, true)
 	update_sprite()
 
 	if b.hit_time and b.hit_time > fts(1) then
@@ -11072,7 +11072,7 @@ function scripts.bullet_tower_ray.update(this, store)
 		end
 
 		if store.tick_ts - start_ts > ray_duration - fts(7) and this.render.sprites[1].name ~= "fade" then
-			animation_start(this, "fade", nil, store.tick_ts)
+			U.animation_start_default(this, "fade", nil, store.tick_ts)
 		end
 
 		update_sprite()
@@ -11291,7 +11291,7 @@ function scripts.enemy_tower_ray_sheep.update(this, store)
 
 			coroutine.yield()
 		elseif this.unit.is_stunned then
-			animation_start(this, "idle", nil, store.tick_ts, -1)
+			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 			coroutine.yield()
 		else
 			SU.y_enemy_walk_until_blocked(store, this, true, function(store, this)
@@ -11956,7 +11956,7 @@ function scripts.tower_sand.update(this, store)
 				for _, sid in pairs(shooter_sids) do
 					local an, af = animation_name_facing_point(this, "idle", this.tower.long_idle_pos, sid)
 
-					animation_start(this, an, af, store.tick_ts, -1, sid)
+					animation_start(this, an, af, store.tick_ts, true, sid)
 				end
 			end
 		end
@@ -12172,7 +12172,7 @@ function scripts.aura_tower_sand_skill_big_blade.update(this, store)
 	ps.particle_system.track_id = this.id
 
 	queue_insert(store, ps)
-	animation_start(this, "idle", nil, store.tick_ts, true)
+	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 	while true do
 		local d = this.dest_pos
@@ -12189,7 +12189,7 @@ function scripts.aura_tower_sand_skill_big_blade.update(this, store)
 			this.render.sprites[1].prefix = "tower_sand_lvl4_skill_2_decal"
 
 			U.y_animation_play(this, "in", nil, store.tick_ts)
-			animation_start(this, "loop", nil, store.tick_ts, true)
+			U.animation_start_default(this, "loop", nil, store.tick_ts, true)
 
 			this.render.sprites[1].z = Z_DECALS
 			ps.particle_system.emit = false
@@ -12457,7 +12457,7 @@ function scripts.tower_royal_archers.update(this, store)
 				if store.tick_ts - aa.ts > tw.long_idle_cooldown then
 					local an, af = animation_name_facing_point(this, "idle", tw.long_idle_pos, shooter_sid)
 
-					animation_start(this, an, af, store.tick_ts, -1, shooter_sid)
+					animation_start(this, an, af, store.tick_ts, true, shooter_sid)
 				end
 
 				coroutine.yield()
@@ -12597,7 +12597,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_tamer.update(this, sto
 				mark_mod.modifier.duration = ab.mark_mod_duration
 
 				queue_insert(store, mark_mod)
-				animation_start(this, ab.animation, nil, store.tick_ts, false)
+				U.animation_start_default(this, ab.animation, nil, store.tick_ts, false)
 
 				while store.tick_ts - ab.ts < ab.cast_time do
 					coroutine.yield()
@@ -12843,7 +12843,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.update(this, sto
 
 		::label_784_0::
 
-		animation_start(this, "idle_1", nil, store.tick_ts, true)
+		U.animation_start_default(this, "idle_1", nil, store.tick_ts, true)
 
 		if move_to_owner then
 			local owner_pos = {}
@@ -13655,7 +13655,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 			U.set_destination(this, r.pos)
 
 			-- if r.delay_max then
-			-- 	animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
+			-- 	U.animation_start_default(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
 
 			-- 	if SU.y_soldier_wait(store, this, random() * r.delay_max) then
 			-- 		goto label_540_0
@@ -13664,7 +13664,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 
 			local an, af = animation_name_facing_point(this, "walk", this.motion.dest)
 
-			animation_start(this, an, af, store.tick_ts, -1)
+			U.animation_start_default(this, an, af, store.tick_ts, true)
 
 			local start_ts = store.tick_ts
 
@@ -13688,7 +13688,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 
 				this.render.sprites[1].scale = v(1, 1)
 
-				animation_start(this, "idle_air", nil, store.tick_ts, true)
+				U.animation_start_default(this, "idle_air", nil, store.tick_ts, true)
 
 				this.idle_flip.last_animation = "idle_air"
 
@@ -13817,7 +13817,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 		queue_insert(store, land_fx)
 		S:queue(this.sound_take_off)
 		U.y_animation_play(this, "take_off", nil, store.tick_ts, 1)
-		animation_start(this, "idle_air", nil, store.tick_ts, true)
+		U.animation_start_default(this, "idle_air", nil, store.tick_ts, true)
 
 		this.idle_flip.last_animation = "idle_air"
 
@@ -13879,7 +13879,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 		end
 
 		U.y_animation_play(this, "landing", nil, store.tick_ts, 1)
-		animation_start(this, "idle_floor", nil, store.tick_ts, 1)
+		U.animation_start_default(this, "idle_floor", nil, store.tick_ts, 1)
 
 		this.idle_flip.last_animation = "idle_floor"
 		this.render.sprites[1].angles.walk = {"walk"}
@@ -13903,14 +13903,14 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 
 				local an, af = animation_name_facing_point(this, idle_animation, idle_pos)
 
-				animation_start(this, an, af, store.tick_ts, true)
+				U.animation_start_default(this, an, af, store.tick_ts, true)
 			end
 		elseif last_target_pos then
 			idle_pos = last_target_pos
 
 			local an, af = animation_name_facing_point(this, idle_animation, idle_pos)
 
-			animation_start(this, an, af, store.tick_ts, true)
+			U.animation_start_default(this, an, af, store.tick_ts, true)
 		else
 			animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil)
 		end
@@ -13995,7 +13995,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 		queue_insert(store, this.shadow_decal)
 
 		if this.current_mode == MODE_FLY then
-			animation_start(this, "idle_air", nil, store.tick_ts, true)
+			U.animation_start_default(this, "idle_air", nil, store.tick_ts, true)
 
 			this.idle_flip.last_animation = "idle_air"
 
@@ -14031,7 +14031,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 			this.tween.props[1].disabled = true
 			this.tween.disabled = true
 
-			animation_start(this, "idle_floor", nil, store.tick_ts, true)
+			U.animation_start_default(this, "idle_floor", nil, store.tick_ts, true)
 
 			this.idle_flip.last_animation = "idle_floor"
 			this.render.sprites[1].angles.walk = {"walk"}
@@ -14587,7 +14587,7 @@ function scripts.mod_soldier_tower_rocket_gunners_sting_missiles_target.update(t
 
 	this.pos = target.pos
 
-	animation_start(this, "start", nil, store.tick_ts)
+	U.animation_start_default(this, "start", nil, store.tick_ts)
 
 	local is_idle = false
 
@@ -14621,7 +14621,7 @@ function scripts.mod_soldier_tower_rocket_gunners_sting_missiles_target.update(t
 		if U.animation_finished_default(this) and not is_idle then
 			is_idle = true
 
-			animation_start(this, "idle", nil, store.tick_ts, true)
+			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 		end
 
 		coroutine.yield()
@@ -15020,7 +15020,7 @@ function scripts.tower_flamespitter.update(this, store)
 
 				queue_insert(store, this.flame_fx)
 				U.y_animation_play(this.flame_fx, "in", false, store.tick_ts)
-				animation_start(this.flame_fx, "loop", false, store.tick_ts, true)
+				U.animation_start_default(this.flame_fx, "loop", false, store.tick_ts, true)
 
 				local fire_ts = store.tick_ts
 				local fire_cycle_ts = store.tick_ts - attack_basic.cycle_time
@@ -16256,7 +16256,7 @@ function scripts.soldier_paladin_rider.update(this, store)
 
 				local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
-				U.animation_start(this, an, af, store.tick_ts, -1)
+				U.animation_start_default(this, an, af, store.tick_ts, true)
 				U.walk(this, store.tick_length)
 
 				this.nav_rally.center = next_pos
@@ -16661,7 +16661,7 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store)
 			U.set_destination(this, r.pos)
 
 			-- if r.delay_max then
-			-- 	U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
+			-- 	U.animation_start_default(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
 
 			-- 	local index = this.soldier.tower_soldier_idx or 0
 			-- 	local tower = store.entities[this.soldier.tower_id]
@@ -16674,7 +16674,7 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store)
 
 			local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
-			U.animation_start(this, an, af, store.tick_ts, -1)
+			U.animation_start_default(this, an, af, store.tick_ts, true)
 
 			while not this.motion.arrived do
 				if this.health.dead or this.unit.is_stunned then
@@ -16690,7 +16690,7 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store)
 
 					local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
-					U.animation_start(this, an, af, store.tick_ts, -1)
+					U.animation_start_default(this, an, af, store.tick_ts, true)
 
 					r.new = false
 				end
@@ -18508,7 +18508,7 @@ scripts.decal_tower_sparking_geode_burst_crystal = {}
 function scripts.decal_tower_sparking_geode_burst_crystal.update(this, store)
 
 	U.y_animation_play(this, "in", nil, store.tick_ts)
-	U.animation_start(this, "idle", nil, store.tick_ts, true)
+	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 	while not this.finish do
 		coroutine.yield()
@@ -18671,7 +18671,7 @@ function scripts.soldier_tower_dwarf.update(this, store)
 			U.set_destination(this, r.pos)
 
 			-- if r.delay_max then
-			-- 	U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
+			-- 	U.animation_start_default(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
 
 			-- 	local index = this.soldier.tower_soldier_idx or 0
 			-- 	local tower = store.entities[this.soldier.tower_id]
@@ -18688,7 +18688,7 @@ function scripts.soldier_tower_dwarf.update(this, store)
 			if V.dist2(r.center.x, r.center.y, old_center.x, old_center.y) < this.max_dist_walk * this.max_dist_walk or first_walk then
 				local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
-				U.animation_start(this, an, af, store.tick_ts, -1)
+				U.animation_start_default(this, an, af, store.tick_ts, true)
 
 				while not this.motion.arrived do
 					if this.health.dead or this.unit.is_stunned then
@@ -18789,7 +18789,7 @@ function scripts.soldier_tower_dwarf.update(this, store)
 				this.render.sprites[1].animated = true
 
 				U.y_animation_play(this, "jump_out", nil, store.tick_ts, 1)
-				U.animation_start(this, "idle", nil, store.tick_ts, 1)
+				U.animation_start_default(this, "idle", nil, store.tick_ts, 1)
 			end
 		end
 
@@ -19024,7 +19024,7 @@ function scripts.tower_ghost.soldier_update(this, store)
 
 			local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
-			U.animation_start(this, an, af, store.tick_ts, -1)
+			U.animation_start_default(this, an, af, store.tick_ts, true)
 
 			while not this.motion.arrived do
 				if this.health.dead or this.unit.is_stunned then
@@ -19040,7 +19040,7 @@ function scripts.tower_ghost.soldier_update(this, store)
 
 					local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
-					U.animation_start(this, an, af, store.tick_ts, -1)
+					U.animation_start_default(this, an, af, store.tick_ts, true)
 
 					r.new = false
 				end
@@ -19573,7 +19573,7 @@ function scripts.tower_paladin_covenant.soldier_update(this, store)
 				local a = a_h
 
 				if not a.disabled and this.health.hp <= this.health.hp_max * a.lost_health and store.tick_ts - a.ts > a.cooldown then
-					U.animation_start(this, a.animation .. "_start", nil, store.tick_ts)
+					U.animation_start_default(this, a.animation .. "_start", nil, store.tick_ts)
 					S:queue(a.sound)
 
 					if SU.y_soldier_wait(store, this, a.hit_time[this.unit.is_captain and 2 or 1]) then
@@ -19596,12 +19596,12 @@ function scripts.tower_paladin_covenant.soldier_update(this, store)
 						if SU.y_soldier_animation_wait(this) then
 						-- block empty
 						else
-							U.animation_start(this, a.animation .. "_loop", nil, store.tick_ts, true)
+							U.animation_start_default(this, a.animation .. "_loop", nil, store.tick_ts, true)
 
 							if SU.y_soldier_wait(store, this, a.duration - (store.tick_ts - a.ts)) then
 							-- block empty
 							else
-								U.animation_start(this, a.animation .. "_end", nil, store.tick_ts)
+								U.animation_start_default(this, a.animation .. "_end", nil, store.tick_ts)
 
 								if SU.y_soldier_animation_wait(this) then
 								-- block empty
@@ -19633,7 +19633,7 @@ function scripts.tower_paladin_covenant.soldier_update(this, store)
 				if not U.find_first_enemy_in_range_filter_off(this.pos, a.enemies_trigger_range, a.vis_flags, a.vis_bans) then
 					a.ts = a.ts + fts(15)
 				else
-					U.animation_start(this, a.animation, nil, store.tick_ts)
+					U.animation_start_default(this, a.animation, nil, store.tick_ts)
 					S:queue(a.sound)
 
 					if SU.y_soldier_wait(store, this, a.hit_time) then
@@ -20342,7 +20342,7 @@ function scripts.tower_arborean_emissary_root_stun_mod.update(this, store)
 	this.pos = target.pos
 
 	U.y_animation_play(this, this.animation_start, nil, store.tick_ts, 1)
-	U.animation_start(this, this.animation_idle, nil, store.tick_ts, false)
+	U.animation_start_default(this, this.animation_idle, nil, store.tick_ts, false)
 
 	while store.tick_ts - m.ts < m.duration - this.out_before and target and not target.health.dead do
 		if this.render and m.use_mod_offset and target.unit.mod_offset and not m.custom_offsets then
@@ -20556,7 +20556,7 @@ function scripts.soldier_priests_barrack.update(this, store)
 
 	if this.render.sprites[1].name == "raise" then
 		this.health_bar.hidden = true
-		U.animation_start(this, "raise", nil, store.tick_ts, 1)
+		U.animation_start_default(this, "raise", nil, store.tick_ts, 1)
 
 		while not U.animation_finished_default(this) and not this.health.dead do
 			coroutine.yield()
@@ -20710,7 +20710,7 @@ function scripts.soldier_priests_barrack.update(this, store)
 				if this.dodge.counter_attack and this.powers[this.dodge.counter_attack.power_name].level > 0 then
 					this.dodge.counter_attack_pending = true
 				elseif this.dodge.animation then
-					U.animation_start(this, this.dodge.animation, nil, store.tick_ts, 1)
+					U.animation_start_default(this, this.dodge.animation, nil, store.tick_ts, 1)
 
 					while not U.animation_finished_default(this) do
 						coroutine.yield()
@@ -20812,7 +20812,7 @@ function scripts.soldier_abomination_priests_barrack.update(this, store)
 
 	if this.render.sprites[1].name == "raise" then
 		this.health_bar.hidden = true
-		U.animation_start(this, "raise", nil, store.tick_ts, 1)
+		U.animation_start_default(this, "raise", nil, store.tick_ts, 1)
 
 		while not U.animation_finished_default(this) and not this.health.dead do
 			coroutine.yield()
@@ -20872,7 +20872,7 @@ function scripts.soldier_abomination_priests_barrack.update(this, store)
 				if this.dodge.counter_attack and this.powers[this.dodge.counter_attack.power_name].level > 0 then
 					this.dodge.counter_attack_pending = true
 				elseif this.dodge.animation then
-					U.animation_start(this, this.dodge.animation, nil, store.tick_ts, 1)
+					U.animation_start_default(this, this.dodge.animation, nil, store.tick_ts, 1)
 
 					while not U.animation_finished_default(this) do
 						coroutine.yield()
@@ -20965,7 +20965,7 @@ function scripts.decal_tentacle_priests_barrack.update(this, store)
 	a.cooldown = U.frandom(a.cooldown_min, a.cooldown_max)
 
 	U.y_animation_play(this, "raise", nil, store.tick_ts)
-	U.animation_start(this, "idle", nil, store.tick_ts, true)
+	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 	a.ts = store.tick_ts - a.cooldown
 
@@ -20990,7 +20990,7 @@ function scripts.decal_tentacle_priests_barrack.update(this, store)
 
 				local flip_x = pred_pos.x < this.pos.x
 
-				U.animation_start(this, a.animation, flip_x, store.tick_ts, false)
+				U.animation_start_default(this, a.animation, flip_x, store.tick_ts, false)
 				U.y_wait_unconditional(store, a.hit_time)
 
 				local enemies = U.find_enemies_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
@@ -21837,7 +21837,7 @@ function scripts.faerie_dragon_lvl4.update(this, store)
 				else
 					an, af, ai = U.animation_name_facing_point(this, "fly", target.pos)
 
-					U.animation_start(this, an, af, store.tick_ts, true)
+					U.animation_start_default(this, an, af, store.tick_ts, true)
 
 					repeat
 						target = store.entities[ca.target_id]
@@ -21885,7 +21885,7 @@ function scripts.faerie_dragon_lvl4.update(this, store)
 				::label_faerie_dragon_no_target::
 
 				ca.target_id = nil
-				U.animation_start(this, "idle", nil, store.tick_ts, true)
+				U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 			-- dest.x, dest.y = this.idle_pos.x, this.idle_pos.y
 			end
 			coroutine.yield()
@@ -21894,7 +21894,7 @@ function scripts.faerie_dragon_lvl4.update(this, store)
 			end
 		end
 
-		U.animation_start(this, "idle", nil, store.tick_ts, true)
+		U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 		if V.dist(dest.x, dest.y, this.idle_pos.x, this.idle_pos.y) > 43 or V.dist(dest.x, dest.y, this.pos.x, this.pos.y) < 10 then
 			dest = U.point_on_ellipse(this.idle_pos, 40, U.frandom(0, 2 * math.pi))
@@ -22235,13 +22235,13 @@ function scripts.shadow_crow.update(this, store)
 			local random_theta = U.frandom(0, 2 * math.pi)
 			dest:scalar_add(10 * math.cos(random_theta), 10 * math.sin(random_theta))
 
-			U.animation_start(this, "fly", nil, store.tick_ts, true)
+			U.animation_start_default(this, "fly", nil, store.tick_ts, true)
 			shadow_crow_force_move_step(this, store, dest, this.flight_speed_busy, this.ramp_dist_busy, 4200)
 
 			local ca = this.custom_attack
 
 			if ready_to_attack(ca, store, this.owner.tower.cooldown_factor) and this.pos:dist2(target.pos) <= 2500 then
-				U.animation_start(this, "carry", nil, store.tick_ts, true)
+				U.animation_start_default(this, "carry", nil, store.tick_ts, true)
 
 				local d = E.assign_damage(ca.damage_type, math.random(ca.damage_min, ca.damage_max) * this.owner.tower.damage_factor, this.id, target.id)
 				queue_damage(store, d)
@@ -22268,7 +22268,7 @@ function scripts.shadow_crow.update(this, store)
 		end
 	else
 		context.dest:copy(this.idle_pos)
-		U.animation_start(this, "fly", nil, store.tick_ts, true)
+		U.animation_start_default(this, "fly", nil, store.tick_ts, true)
 		shadow_crow_force_move_step(this, store, context.dest, this.flight_speed_idle, this.ramp_dist_idle, 700)
 	end
 end
@@ -22685,7 +22685,7 @@ end
 scripts.decal_rotten_forest_smoke = {}
 
 function scripts.decal_rotten_forest_smoke.update(this, store)
-	U.animation_start(this, "intro", nil, store.tick_ts, false)
+	U.animation_start_default(this, "intro", nil, store.tick_ts, false)
 	U.y_wait_unconditional(store, fts(6))
 	U.animation_start(this, "idle", nil, store.tick_ts, true, 2)
 	U.y_wait_unconditional(store, fts(5))
@@ -23359,7 +23359,7 @@ function scripts.bullet_orc_shaman_shock.update(this, store)
 	local dmin = b.damage_min
 	local dmax = b.damage_max
 
-	U.animation_start(this, "hit", nil, store.tick_ts, 1)
+	U.animation_start_default(this, "hit", nil, store.tick_ts, 1)
 
 	local enemies = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.damage_flags, b.damage_bans)
 
@@ -24415,7 +24415,7 @@ function scripts.soldier_flingers_skeleton.update(this, store)
 		end
 
 		if this.unit.is_stunned then
-			U.animation_start(this, "idle", nil, store.tick_ts, true)
+			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 		else
 			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
@@ -24424,7 +24424,7 @@ function scripts.soldier_flingers_skeleton.update(this, store)
 				U.set_destination(this, next_pos)
 				next_pos = P:next_entity_node(this, store.tick_length)
 				local an, af = U.animation_name_facing_point(this, "running", this.motion.dest)
-				U.animation_start(this, an, af, store.tick_ts, true)
+				U.animation_start_default(this, an, af, store.tick_ts, true)
 				U.walk(this, store.tick_length)
 
 				-- 同步集结点，避免不索敌
@@ -24548,7 +24548,7 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 							coroutine.yield()
 						end
 
-						U.animation_start(this, ani_idle, nil, store.tick_ts, -1, sid)
+						U.animation_start(this, ani_idle, nil, store.tick_ts, true, sid)
 
 						break
 					end
@@ -24590,7 +24590,7 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 
 					an, af = animation_name_facing_point(this, "skillloop", enemy.pos, sid_m, start_offset)
 
-					U.animation_start(this, an, af, store.tick_ts, -1, sid_m)
+					U.animation_start(this, an, af, store.tick_ts, true, sid_m)
 
 					S:queue(tw.ogre_shipwreck_multishoot_rage_sound, {
 						delay = tw.ogre_shipwreck_multishoot_rage_delay
@@ -25071,7 +25071,7 @@ function scripts.mine_box.update(this, store)
 		end
 		if not this.owner.tower.blocked and store.tick_ts - a.ts > a.cooldown * this.owner.tower.cooldown_factor then
 			a.ts = store.tick_ts
-			U.animation_start(this, a.animation, nil, store.tick_ts)
+			U.animation_start_default(this, a.animation, nil, store.tick_ts)
 			U.y_wait_unconditional(store, a.shoot_time)
 
 			if not this.owner or not store.entities[this.owner.id] then
@@ -25688,7 +25688,7 @@ function scripts.soldier_zombie.update(this, store, script)
 	if this.render.sprites[1].name == "raise" then
 		this.health_bar.hidden = true
 
-		U.animation_start(this, "raise", nil, store.tick_ts, 1)
+		U.animation_start_default(this, "raise", nil, store.tick_ts, 1)
 
 		while not U.animation_finished_default(this) and not this.health.dead do
 			coroutine.yield()
@@ -25856,7 +25856,7 @@ function scripts.aura_grim_cemetery_hand.update(this, store, script)
 	end
 
 	while true do
-		U.animation_start(this, "run", nil, store.tick_ts, true)
+		U.animation_start_default(this, "run", nil, store.tick_ts, true)
 		if this.interrupt then
 			last_hit_ts = 1e+99
 		end
@@ -26849,13 +26849,13 @@ function scripts.mod_possession.update(this, store)
 		return
 	end
 	this.pos = target.pos
-	U.animation_start(this, "start", nil, store.tick_ts, false)
+	U.animation_start_default(this, "start", nil, store.tick_ts, false)
 	this.betray.ts = store.tick_ts
 	SU.betray_enemy(target, this.betray)
 
 	while true do
 		if U.animation_finished(this) then
-			U.animation_start(this, "loop", nil, store.tick_ts, true)
+			U.animation_start_default(this, "loop", nil, store.tick_ts, true)
 		end
 
 		target = store.entities[m.target_id]
@@ -26880,7 +26880,7 @@ function scripts.soldier_elves_harasser.update(this, store, script)
 
 	if this.render.sprites[1].name == "raise" then
 		this.health_bar.hidden = true
-		U.animation_start(this, "raise", nil, store.tick_ts, 1)
+		U.animation_start_default(this, "raise", nil, store.tick_ts, 1)
 		while not U.animation_finished_default(this) and not this.health.dead do
 			coroutine.yield()
 		end
@@ -26926,7 +26926,7 @@ function scripts.soldier_elves_harasser.update(this, store, script)
 				if this.dodge.counter_attack and this.powers[this.dodge.counter_attack.power_name].level > 0 then
 					this.dodge.counter_attack_pending = true
 				elseif this.dodge.animation then
-					U.animation_start(this, this.dodge.animation, nil, store.tick_ts, 1)
+					U.animation_start_default(this, this.dodge.animation, nil, store.tick_ts, 1)
 					while not U.animation_finished_default(this) do
 						coroutine.yield()
 					end
@@ -27236,7 +27236,7 @@ function scripts.tower_goblirang.update(this, store)
 			if store.tick_ts - aa.ts > this.tower.long_idle_cooldown then
 				for _, sid in ipairs(shooter_sids) do
 					local an, af = U.animation_name_facing_point(this, "idle", this.tower.long_idle_pos, sid)
-					U.animation_start(this, an, af, store.tick_ts, -1, sid)
+					U.animation_start(this, an, af, store.tick_ts, true, sid)
 				end
 			end
 		end
@@ -27257,7 +27257,7 @@ function scripts.goblirang.update(this, store)
 	local last_x = this.pos.x
 	local last_y = this.pos.y
 
-	U.animation_start(this, "flying", nil, store.tick_ts, true)
+	U.animation_start_default(this, "flying", nil, store.tick_ts, true)
 	local ps = E:create_entity(b.particles_name)
 	ps.particle_system.track_id = this.id
 	queue_insert(store, ps)

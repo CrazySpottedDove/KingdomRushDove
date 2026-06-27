@@ -280,7 +280,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 
 			an, af = U.animation_name_facing_point(this, attack.animations[2], target.pos)
 
-			U.animation_start(this, an, af, store.tick_ts, 1)
+			U.animation_start_default(this, an, af, store.tick_ts, 1)
 
 			local hit_times = attack.hit_times and attack.hit_times or {attack.hit_time}
 
@@ -434,7 +434,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 		if attack.animations[3] then
 			an, af = U.animation_name_facing_point(this, attack.animations[3], target.pos)
 
-			U.animation_start(this, an, af, store.tick_ts, 1)
+			U.animation_start_default(this, an, af, store.tick_ts, 1)
 
 			while not U.animation_finished_default(this) do
 				if this.health.dead then
@@ -616,7 +616,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 		end
 	end
 
-	U.animation_start(this, "idle", nil, store.tick_ts, true)
+	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 	return true
 end
@@ -683,7 +683,7 @@ local function y_enemy_melee_attacks(store, this, target)
 					coroutine.yield()
 				end
 
-				U.animation_start(this, "idle", nil, store.tick_ts, true)
+				U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
 				return true
 			end
@@ -877,7 +877,7 @@ tt.main_script.update = function(this, store)
 					local start_ts = store.tick_ts
 
 					S:queue(courage.sound)
-					U.animation_start(this, courage.animation, nil, store.tick_ts)
+					U.animation_start_default(this, courage.animation, nil, store.tick_ts)
 
 					if y_enemy_wait(store, this, courage.shoot_time) then
 						goto while_end
@@ -1046,7 +1046,7 @@ tt.main_script.update = function(this, store)
 
 					this.health.immune_to = F_ALL
 
-					U.animation_start(this, wildcat.animation, nil, store.tick_ts)
+					U.animation_start_default(this, wildcat.animation, nil, store.tick_ts)
 
 					if y_enemy_wait(store, this, wildcat.spawn_time) then
 						this.health.immune_to = F_NONE
@@ -1317,7 +1317,7 @@ tt.main_script.update = function(this, store)
 				end
 
 				S:queue(ca.sound)
-				U.animation_start(this, ca.animation, nil, store.tick_ts, true)
+				U.animation_start_default(this, ca.animation, nil, store.tick_ts, true)
 				U.y_wait_unconditional(store, ca.hit_time)
 
 				while store.tick_ts - start_ts < ca.duration do
@@ -1410,7 +1410,7 @@ tt.main_script.update = function(this, store)
 
 					local an = table.random({"dance_hit1", "dance_hit2", "dance_hit3"})
 
-					U.animation_start(this, an, sflip, store.tick_ts)
+					U.animation_start_default(this, an, sflip, store.tick_ts)
 					U.y_wait_unconditional(store, bda.hit_time)
 
 					local d = E.assign_damage(bda.damage_type, U.frandom(bda.damage_min, bda.damage_max), this.id, target.id)
@@ -1526,7 +1526,7 @@ tt.main_script.update = function(this, store)
 						this._casting_eerie = true
 						ea.ts = store.tick_ts
 
-						U.animation_start(this, ea.animation, nil, store.tick_ts)
+						U.animation_start_default(this, ea.animation, nil, store.tick_ts)
 						U.y_wait_unconditional(store, ea.cast_time)
 
 						local a = E:create_entity(ea.bullet)
@@ -1555,7 +1555,7 @@ tt.main_script.update = function(this, store)
 					ca.ts = store.tick_ts
 
 					S:queue(ca.sound)
-					U.animation_start(this, ca.animation, nil, store.tick_ts)
+					U.animation_start_default(this, ca.animation, nil, store.tick_ts)
 					U.y_wait_unconditional(store, ca.cast_time)
 
 					local fx = E:create_entity("fx_forest_circle")
@@ -1874,7 +1874,7 @@ tt.main_script.update = function(this, store)
 					SU.delay_attack(store, a, 1)
 				else
 					S:queue(a.sound_start)
-					U.animation_start(this, a.animations[1], nil, store.tick_ts, false)
+					U.animation_start_default(this, a.animations[1], nil, store.tick_ts, false)
 
 					while not U.animation_finished_default(this) do
 						if unit_interrupted(this) then
@@ -1886,7 +1886,7 @@ tt.main_script.update = function(this, store)
 
 					start_ts = store.tick_ts
 
-					U.animation_start(this, a.animations[2], nil, store.tick_ts, false)
+					U.animation_start_default(this, a.animations[2], nil, store.tick_ts, false)
 
 					while not U.animation_finished_default(this) do
 						if unit_interrupted(this) then
@@ -2278,7 +2278,7 @@ tt.main_script.update = function(this, store)
 			if sand_ready() then
 				local start_ts = store.tick_ts
 				S:queue(sand.sound)
-				U.animation_start(this, sand.animation, nil, store.tick_ts, 1)
+				U.animation_start_default(this, sand.animation, nil, store.tick_ts, 1)
 				while store.tick_ts - start_ts < sand.spawn_time do
 					if unit_interrupted(this) then
 						goto label_alric_end

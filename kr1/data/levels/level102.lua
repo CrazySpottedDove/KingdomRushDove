@@ -29,7 +29,7 @@ if not already_passed_level then
 local veznan=E:create_entity("decal_stage_02_veznan")
 veznan.pos=V.v(317,350)
 LU.queue_insert(store,veznan)
-U.animation_start(veznan,"idle",false,store.tick_ts,true)
+U.animation_start_default(veznan,"idle",false,store.tick_ts,true)
 end
 end
 function level:update(store)
@@ -68,11 +68,11 @@ coroutine.yield()
 end
 hero.sound_events.change_rally_point=old_vo
 U.y_animation_play(veznan,"loopIn",true,store.tick_ts)
-U.animation_start(veznan,"loop",true,store.tick_ts)
+U.animation_start_default(veznan,"loop",true,store.tick_ts)
 signal.emit("show-balloon_tutorial","LV02_VEZNAN01",false)
 U.y_wait_unconditional(store,4.5)
 U.y_animation_play(veznan,"loopEnd",true,store.tick_ts)
-U.animation_start(veznan,"idle",true,store.tick_ts)
+U.animation_start_default(veznan,"idle",true,store.tick_ts)
 signal.emit("show-balloon_tutorial","LV02_VEZNAN02",false)
 U.y_wait_unconditional(store,3.5)
 local spawn_pos=V.vclone(veznan.pos)
@@ -83,7 +83,7 @@ raelyn.nav_rally.pos=V.vclone(raelyn.nav_rally.center)
 raelyn.spawning_in_cinematic_s2=true
 S:queue("Stage02RaelynTeleport")
 U.y_animation_play(raelyn,"respawn",true,store.tick_ts)
-U.animation_start(raelyn,"idle",true,store.tick_ts,true)
+U.animation_start_default(raelyn,"idle",true,store.tick_ts,true)
 raelyn.spawning_in_cinematic_s2=false
 U.y_wait_unconditional(store,1)
 S:queue("Stage02VeznanTeleport")

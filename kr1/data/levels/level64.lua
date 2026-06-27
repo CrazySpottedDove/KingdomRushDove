@@ -87,9 +87,9 @@ LU.queue_insert(store,fx)
 local gnoll=E:create_entity("decal_gnoll_burner")
 gnoll.pos=V.vclone(bd.start_pos)
 LU.queue_insert(store,gnoll)
-U.animation_start(gnoll,"walkingRightLeft",true,store.tick_ts,true)
+U.animation_start_default(gnoll,"walkingRightLeft",true,store.tick_ts,true)
 y_walk(store,gnoll,bd.end_pos,gnoll_speed)
-U.animation_start(gnoll,"shoot",true,store.tick_ts,false)
+U.animation_start_default(gnoll,"shoot",true,store.tick_ts,false)
 U.y_wait_unconditional(store,shoot_time)
 local b=E:create_entity("torch_gnoll_burner")
 b.pos=V.v(gnoll.pos.x+bullet_offset.x,gnoll.pos.y+bullet_offset.y)
@@ -98,7 +98,7 @@ b.bullet.to=bd.shoot_pos
 b.bullet.miss_fx=nil
 LU.queue_insert(store,b)
 U.y_wait_unconditional(store,flight_time)
-U.animation_start(gnoll,"idle",true,store.tick_ts,true)
+U.animation_start_default(gnoll,"idle",true,store.tick_ts,true)
 for i=1,bd.explosions do
 local fxs=LU.list_entities(store.entities,"fx_s16_burner_explosion",zone*10+i)
 for _,fx in pairs(fxs) do

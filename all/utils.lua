@@ -349,8 +349,6 @@ end
 ---@param idx number? 指定精灵索引（可选，默认所有精灵）
 ---@param force_ts boolean? 是否强制设置时间戳（可选）
 function U.animation_start(entity, name, flip_x, ts, loop, idx, force_ts)
-	loop = (loop == -1 or loop == true) and true or false
-
 	local first, last
 
 	if idx then
@@ -406,22 +404,55 @@ end
 ---@param idx number? 精灵索引（可选，默认1）
 ---@param times number? 完成次数（可选，默认1）
 function U.y_animation_wait(entity, idx, times)
-	idx = idx or 1
+	local a = entity.render.sprites[idx or 1]
+	times = a.loop and (times or 1) or 0
 
-	while not U.animation_finished(entity, idx, times) do
+	while a.runs <= times do
 		coroutine.yield()
 	end
 end
 
---- U.animation_finished 的显示默认实现，性能更优
+--- U.animation_start 的显示默认实现，性能更优
+---@param entity any
+---@param name any
+---@param flip_x any
+---@param ts any
+---@param loop any
+function U.animation_start_default(entity, name, flip_x, ts, loop)
+	for i = 1, #entity.render.sprites do
+		local a = entity.render.sprites[i]
+
+		if not a.ignore_start then
+			if flip_x ~= nil then
+				a.flip_x = flip_x
+			end
+
+			if a.animated then
+				a.loop = loop or a.loop_forced == true
+
+				if not a.loop then
+					a.ts = ts
+					a.runs = 0
+				end
+
+				if name then
+					a.name = name
+				end
+			end
+		end
+	end
+end
+
+--- U.animation_finished 的显式默认实现，性能更优
 ---@param entity table
 function U.animation_finished_default(entity)
 	return entity.render.sprites[1].runs > 0
 end
 
---- U.y_animation_wait 的显示默认实现，性能更优
+--- U.y_animation_wait 的显式默认实现，性能更优
 function U.y_animation_wait_default(entity)
-	while entity.render.sprites[1].runs <= 0 do
+	local s = entity.render.sprites[1]
+	while s.runs <= 0 do
 		coroutine.yield()
 	end
 end
@@ -433,9 +464,7 @@ end
 ---@param idx number? 精灵索引（可选，默认1）
 ---@return string 动画名称, boolean 是否水平翻转, number 象限索引
 function U.animation_name_for_angle(e, group, angle, idx)
-	idx = idx or 1
-
-	local a = e.render.sprites[idx]
+	local a = e.render.sprites[idx or 1]
 	local angles = a.angles and a.angles[group] or nil
 
 	if not angles then
@@ -466,11 +495,11 @@ function U.animation_name_for_angle(e, group, angle, idx)
 			a1, a2, a3, a4 = a.angles_custom[group][1], a.angles_custom[group][2], a.angles_custom[group][3], a.angles_custom[group][4]
 		end
 
-		local quadrant = a._last_quadrant
+		local skew_factor = a._last_skew_factor
 		local stickiness = a.angles_stickiness and a.angles_stickiness[group]
 
-		if stickiness and quadrant then
-			local skew = stickiness * ((quadrant == 1 or quadrant == 3) and 1 or -1)
+		if stickiness and skew_factor then
+			local skew = stickiness * skew_factor
 
 			a1, a3 = a1 - skew, a3 - skew
 			a2, a4 = a2 + skew, a4 + skew
@@ -480,20 +509,20 @@ function U.animation_name_for_angle(e, group, angle, idx)
 
 		if a1 <= angle_deg and angle_deg < a2 then
 			o_name, o_flip, o_idx = angles[2], false, 2
-			quadrant = 1
+			skew_factor = 1
 		elseif a2 <= angle_deg and angle_deg < a3 then
 			o_name, o_flip, o_idx = angles[1], true, 1
-			quadrant = 2
+			skew_factor = -1
 		elseif a3 <= angle_deg and angle_deg < a4 then
 			o_name, o_flip, o_idx = angles[3], false, 3
-			quadrant = 3
+			skew_factor = 1
 		else
 			o_name, o_flip, o_idx = angles[1], false, 1
-			quadrant = 4
+			skew_factor = -1
 		end
 
 		if stickiness then
-			a._last_quadrant = quadrant
+			a._last_skew_factor = skew_factor
 		end
 
 		if a.angles_flip_vertical and a.angles_flip_vertical[group] then
@@ -505,6 +534,7 @@ function U.animation_name_for_angle(e, group, angle, idx)
 end
 
 ---根据面向点获取动画名称
+---该函数原本通过尾调用 U.animation_name_for_angle 的方式来实现。由于该函数位于热点路径，且 U.animation_name_for_angle 在其他地方的调用较少，所以这里选择单独进行深度优化。
 ---@param e table 实体
 ---@param group string 动画组名
 ---@param point table 目标点 {x, y}
@@ -513,23 +543,81 @@ end
 ---@param use_path boolean? 是否使用路径点（可选）
 ---@return string 动画名称, boolean 是否水平翻转, number 象限索引
 function U.animation_name_facing_point(e, group, point, idx, offset, use_path)
-	local fx, fy
+	local dx, dy = point.x, point.y
 
 	if e.nav_path and use_path then
 		local npos = P:node_pos_ref(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
-
-		fx, fy = npos.x, npos.y
+		dx, dy = dx - npos.x, dy - npos.y
 	else
-		fx, fy = e.pos.x, e.pos.y
+		dx, dy = dx - e.pos.x, dy - e.pos.y
 	end
 
 	if offset then
-		fx, fy = fx + offset.x, fy + offset.y
+		dx, dy = dx - offset.x, dy - offset.y
 	end
 
-	local angle = km.unroll(atan2(point.y - fy, point.x - fx))
+	local a = e.render.sprites[idx or 1]
+	local angles = a.angles and a.angles[group] or nil
 
-	return U.animation_name_for_angle(e, group, angle, idx)
+	if not angles then
+		return group, dx < 0, 1
+	end
+
+	local angle_count = #angles
+
+	if angle_count == 1 then
+		return angles[1], dx < 0, 1
+	elseif angle_count == 2 then
+		local coordinate_idx = dy > 0 and 1 or 2
+		return angles[coordinate_idx], (a.angles_flip_horizontal and a.angles_flip_horizontal[coordinate_idx]) and (dx >= 0) or (dx < 0), coordinate_idx
+	--else if angle_count == 3 then
+	else
+		local angle = atan2(dy, dx) % 6.2831853071795862
+		local coordinate_idx = 1
+		local o_flip = false
+		local a1, a2, a3, a4 = 45, 135, 225, 315
+		if a.angles_custom and a.angles_custom[group] then
+			a1, a2, a3, a4 = a.angles_custom[group][1], a.angles_custom[group][2], a.angles_custom[group][3], a.angles_custom[group][4]
+		end
+
+		local stickiness = a.angles_stickiness and a.angles_stickiness[group]
+		local angle_deg = angle * 57.295779513082323
+
+		if stickiness then
+			local skew_factor = a._last_skew_factor
+			if skew_factor then
+				local skew = stickiness * skew_factor
+				a1, a3 = a1 - skew, a3 - skew
+				a2, a4 = a2 + skew, a4 + skew
+			end
+			if a1 <= angle_deg and angle_deg < a2 then
+				coordinate_idx = 2
+				a._last_skew_factor = 1
+			elseif a2 <= angle_deg and angle_deg < a3 then
+				o_flip = true
+				a._last_skew_factor = -1
+			elseif a3 <= angle_deg and angle_deg < a4 then
+				coordinate_idx = 3
+				a._last_skew_factor = 1
+			else
+				a._last_skew_factor = -1
+			end
+		else
+			if a1 <= angle_deg and angle_deg < a2 then
+				coordinate_idx = 2
+			elseif a2 <= angle_deg and angle_deg < a3 then
+				o_flip = true
+			elseif a3 <= angle_deg and angle_deg < a4 then
+				coordinate_idx = 3
+			end
+		end
+
+		if a.angles_flip_vertical and a.angles_flip_vertical[group] then
+			o_flip = dy > 0
+		end
+
+		return angles[coordinate_idx], o_flip, coordinate_idx
+	end
 end
 
 ---协程：播放动画并等待完成
@@ -542,7 +630,10 @@ end
 function U.y_animation_play(entity, name, flip_x, ts, times, idx)
 	U.animation_start(entity, name, flip_x, ts, times and times > 1, idx, true)
 
-	while not U.animation_finished(entity, idx, times) do
+	local a = entity.render.sprites[idx or 1]
+	times = a.loop and (times or 1) or 0
+
+	while a.runs <= times do
 		coroutine.yield()
 	end
 end

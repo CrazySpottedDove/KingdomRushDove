@@ -102,7 +102,7 @@ if not e.tower_holder then
 local block=E:create_entity("decal_stage01_tower_block")
 block.pos.x,block.pos.y=e.pos.x,e.pos.y
 LU.queue_insert(store,block)
-U.animation_start(block,"start",nil,store.tick_ts)
+U.animation_start_default(block,"start",nil,store.tick_ts)
 table.insert(tower_blocks,block)
 end
 end
@@ -137,7 +137,7 @@ U.y_wait_unconditional(store,fts(10))
 y_move(store,boss,boss_pos_3,2.25,"quad-out")
 LU.queue_remove(store,boss)
 for _,block in pairs(tower_blocks) do
-U.animation_start(block,"end",nil,store.tick_ts)
+U.animation_start_default(block,"end",nil,store.tick_ts)
 end
 if #tower_blocks>0 then
 S:queue("Level1SpecialEndingHoldDissipate")
