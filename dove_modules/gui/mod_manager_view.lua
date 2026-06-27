@@ -13,8 +13,9 @@ local mod_paths = require("mod_paths")
 local editable_panel_view = require("dove_modules.gui.editable_panel_view")
 local zip = require("lib.zip")
 
+local km = require("lib.klua.macros")
+require("lib.klua.string")
 require("gg_views_custom")
-local _sw, _sh, _keyboard, _controller
 local PANEL_MIN_W = 900
 local PANEL_MAX_W = 10000
 -- local PANEL_MAX_W = 1020
@@ -96,10 +97,6 @@ while true do
 	end
 end
 ]]
-
-local function trim(s)
-	return type(s) == "string" and s:match("^%s*(.-)%s*$") or s
-end
 
 local function hex_context(s, pos, radius)
 	pos = math.max(1, pos or 1)
@@ -217,7 +214,7 @@ local function safe_tostring(v)
 end
 
 local function norm_version(v)
-	return trim(safe_tostring(v))
+	return string.trim(safe_tostring(v))
 end
 
 local function has_update(local_version, remote_version)
@@ -357,16 +354,6 @@ local function safe_label_desc(s)
 		return utf8_truncate_by_bytes(s, 127) .. "..."
 	end
 	return s
-end
-
-local function clamp(v, lo, hi)
-	if v < lo then
-		return lo
-	end
-	if v > hi then
-		return hi
-	end
-	return v
 end
 
 local function in_game_version(plugin)
@@ -614,7 +601,7 @@ function ModItemRow:initialize(opts, row_w)
 	local toggle_bottom = 0
 	local action_right = row_w - right_pad
 	if self.opts.show_toggle then
-		local toggle = ModToggleButton:new(self.opts.enabled ~= false, V.v(toggle_w, clamp(toggle_h, 36, 44)))
+		local toggle = ModToggleButton:new(self.opts.enabled ~= false, V.v(toggle_w, km.clamp(toggle_h, 36, 44)))
 		local toggle_top_margin = opts and opts.toggle_top_margin or 16
 		local toggle_top = math.max(toggle_top_margin, status_y + status_h + 14)
 		toggle_bottom = toggle_top + toggle.size.y
@@ -630,14 +617,14 @@ function ModItemRow:initialize(opts, row_w)
 		self.toggle = toggle
 		-- 插件配置按钮
 		if self.opts.mod_data.has_config then
-			local config_button = ModToggleButton:new(true, V.v(toggle_w, clamp(toggle_h, 36, 44)))
+			local config_button = ModToggleButton:new(true, V.v(toggle_w, km.clamp(toggle_h, 36, 44)))
 			config_button.pos = V.v(row_w - 2 * right_pad - toggle_w * 3 / 2, toggle_top + toggle.size.y / 2)
 			config_button.anchor = V.v(toggle.size.x / 2, toggle.size.y / 2)
 			config_button._label.text = "配置"
 			config_button._enable_text = "配置"
 			function config_button:on_click()
 				S:queue("GUIButtonCommon")
-				local config_view = editable_panel_view:new(_sw, _sh, opts.title, _keyboard, _controller)
+				local config_view = editable_panel_view:new(self.opts._sw, self.opts._sh, opts.title, self.opts._keyboard, self.opts._controller)
 
 				config_view._config_path = opts.mod_data.path .. "/" .. opts.mod_data.name .. "_config.lua"
 				function config_view:load()
@@ -665,7 +652,7 @@ function ModItemRow:initialize(opts, row_w)
 
 				config_view:set_key_label_map(config.key_label_map or {})
 
-				_controller:add_child(config_view)
+				self.opts._controller:add_child(config_view)
 
 				config_view:show()
 			end
@@ -677,7 +664,7 @@ function ModItemRow:initialize(opts, row_w)
 	action_top_min_y = math.max(action_top_min_y, toggle_bottom + 4)
 	local action_h_min = 28
 	local action_h_max = math.max(action_h_min, ROW_H - action_top_min_y - action_bottom_margin)
-	action_h = clamp(action_h, action_h_min, action_h_max)
+	action_h = km.clamp(action_h, action_h_min, action_h_max)
 	local action_y = ROW_H - action_h - action_bottom_margin
 
 	local total_w = action_btn_count * action_w + math.max(0, action_btn_count - 1) * action_gap
@@ -745,11 +732,13 @@ ModManagerView = class("ModManagerView", PopUpView)
 
 function ModManagerView:initialize(sw, sh, keyboard, controller)
 	PopUpView.initialize(self, V.v(sw, sh))
-	_keyboard = keyboard
-	_controller = controller
-	_sw = sw
-	_sh = sh
+	self._keyboard = keyboard
+	self._controller = controller
+	self._sw = sw
+	self._sh = sh
 	local rs = GGLabel.static.ref_h / REF_H
+
+	-- 面板尺寸与缩放
 	local panel_w = math.min(PANEL_MAX_W, sw - PANEL_MARGIN)
 	panel_w = math.max(PANEL_MIN_W, panel_w)
 	panel_w = math.min(panel_w, sw - 12)
@@ -757,7 +746,7 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	panel_h = math.max(PANEL_MIN_H, panel_h)
 	panel_h = math.min(panel_h, sh - 12)
 	local ui_scale = math.max(panel_w / PANEL_MIN_W, panel_h / PANEL_MIN_H)
-	local touch_scale = clamp(ui_scale * (IS_ANDROID and 1.12 or 1.0), 1.0, 1.35)
+	local touch_scale = km.clamp(ui_scale * (IS_ANDROID and 1.12 or 1.0), 1.0, 1.35)
 	local header_btn_w = math.floor(132 * touch_scale + 0.5)
 	local header_btn_h = math.floor(30 * touch_scale + 0.5)
 	local header_btn_gap = math.floor(10 * touch_scale + 0.5)
@@ -767,11 +756,11 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	local hint_h = math.max(math.floor(20 * touch_scale + 0.5), pager_btn_h + 4)
 	local global_label_y = 56
 	local global_label_h = 28
-	local global_toggle_w = clamp(math.floor(92 * touch_scale + 0.5), 84, 120)
-	local global_toggle_h = clamp(math.floor(40 * touch_scale + 0.5), 36, 42)
+	local global_toggle_w = km.clamp(math.floor(92 * touch_scale + 0.5), 84, 120)
+	local global_toggle_h = km.clamp(math.floor(40 * touch_scale + 0.5), 36, 42)
 	local global_toggle_center_y = global_label_y + math.floor(global_label_h / 2) + 2
 	local global_row_bottom = math.max(global_label_y + global_label_h, global_toggle_center_y + math.floor(global_toggle_h / 2))
-	local header_top_gap = clamp(math.floor(16 * touch_scale + 0.5), 14, 24)
+	local header_top_gap = km.clamp(math.floor(16 * touch_scale + 0.5), 14, 24)
 	local header_top_y = global_row_bottom + header_top_gap
 	local header_row_gap = math.max(6, math.floor(6 * touch_scale + 0.5))
 	local header_row2_y = header_top_y + header_btn_h + header_row_gap
@@ -782,14 +771,15 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	local footer_y = panel_h - 44
 	local scroll_h = math.max(260, footer_y - list_top_y - 14)
 	local header_group_x = panel_w - 20 - (header_btn_w * 3 + header_btn_gap * 2)
-	self._row_action_button_size = V.v(clamp(math.floor(122 * touch_scale + 0.5), 122, 160), clamp(math.floor(34 * touch_scale + 0.5), 34, 38))
-	self._row_toggle_size = V.v(clamp(math.floor(84 * touch_scale + 0.5), 84, 110), clamp(math.floor(36 * touch_scale + 0.5), 36, 44))
-	self._row_status_width = clamp(math.floor(300 * touch_scale + 0.5), 300, 380)
+	self._row_action_button_size = V.v(km.clamp(math.floor(122 * touch_scale + 0.5), 122, 160), km.clamp(math.floor(34 * touch_scale + 0.5), 34, 38))
+	self._row_toggle_size = V.v(km.clamp(math.floor(84 * touch_scale + 0.5), 84, 110), km.clamp(math.floor(36 * touch_scale + 0.5), 36, 44))
+	self._row_status_width = km.clamp(math.floor(300 * touch_scale + 0.5), 300, 380)
 	local row_right_pad = math.floor((IS_ANDROID and 30 or 26) * touch_scale + 0.5)
-	self._row_right_pad = clamp(row_right_pad, IS_ANDROID and 32 or 28, IS_ANDROID and 44 or 38)
-	self._row_action_bottom_margin = clamp(math.floor(18 * touch_scale + 0.5), 18, 26)
-	self._row_toggle_top_margin = clamp(math.floor(18 * touch_scale + 0.5), 18, 26)
+	self._row_right_pad = km.clamp(row_right_pad, IS_ANDROID and 32 or 28, IS_ANDROID and 44 or 38)
+	self._row_action_bottom_margin = km.clamp(math.floor(18 * touch_scale + 0.5), 18, 26)
+	self._row_toggle_top_margin = km.clamp(math.floor(18 * touch_scale + 0.5), 18, 26)
 
+	-- 视图状态
 	self.mode = "local"
 	self.sort_idx = 1
 	self.category_idx = 1
@@ -818,6 +808,7 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	self._pending_close = false
 	self._saved_state = {}
 
+	-- 开发者模式
 	self._developer_config = {
 		account = "",
 		password = ""
@@ -849,10 +840,12 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	}
 	self:add_child(self.back)
 
+	-- 面板标题
 	local header = GGPanelHeader:new("插件管理器", panel_w - 40)
 	header.pos = V.v(20, 14)
 	self.back:add_child(header)
 
+	-- 插件管理器总开关
 	local global_lbl = GGOptionsLabel:new(V.v(300, global_label_h))
 	global_lbl.text = "插件管理器总开关"
 	global_lbl.text_align = "left"
@@ -869,8 +862,17 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	end
 	self.back:add_child(self.global_toggle)
 
-	self.mode_btn = ModActionButton:new("前往商店", V.v(header_btn_w, header_btn_h))
-	self.mode_btn.pos = V.v(header_group_x, header_top_y)
+	-- 头部按钮组（模式/排序/分类/刷新/更新/我的插件）
+	local function header_btn(text, x, y, w, h)
+		w = w or header_btn_w
+		h = h or header_btn_h
+		local btn = ModActionButton:new(text, V.v(w, h))
+		btn.pos = V.v(x, y)
+		self.back:add_child(btn)
+		return btn
+	end
+
+	self.mode_btn = header_btn("前往商店", header_group_x, header_top_y)
 	self.mode_btn.on_press = function()
 		local prev_mode = self.mode
 		self.mode = (self.mode == "local") and "store" or "local"
@@ -883,10 +885,8 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 			end)
 		end
 	end
-	self.back:add_child(self.mode_btn)
 
-	self.sort_btn = ModActionButton:new("排序：最热", V.v(header_btn_w, header_btn_h))
-	self.sort_btn.pos = V.v(header_group_x + header_btn_w + header_btn_gap, header_top_y)
+	self.sort_btn = header_btn("排序：最热", header_group_x + header_btn_w + header_btn_gap, header_top_y)
 	self.sort_btn.on_press = function()
 		self.sort_idx = self.sort_idx % #SORT_OPTIONS + 1
 		self.store_page = 1
@@ -897,10 +897,8 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 			end)
 		end
 	end
-	self.back:add_child(self.sort_btn)
 
-	self.category_btn = ModActionButton:new("分类：全部", V.v(header_btn_w, header_btn_h))
-	self.category_btn.pos = V.v(header_group_x + (header_btn_w + header_btn_gap) * 2, header_top_y)
+	self.category_btn = header_btn("分类：全部", header_group_x + (header_btn_w + header_btn_gap) * 2, header_top_y)
 	self.category_btn.on_press = function()
 		self.category_idx = self.category_idx % #CATEGORY_OPTIONS + 1
 		self.store_page = 1
@@ -914,10 +912,8 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 			self:_render_current_list()
 		end
 	end
-	self.back:add_child(self.category_btn)
 
-	self.refresh_btn = ModActionButton:new("刷新商店", V.v(header_btn_w, header_btn_h))
-	self.refresh_btn.pos = V.v(header_group_x, header_row2_y)
+	self.refresh_btn = header_btn("刷新商店", header_group_x, header_row2_y)
 	self.refresh_btn.on_press = function()
 		if self.mode == "store" then
 			self:_start_task("刷新商店列表", function()
@@ -929,19 +925,15 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 			end)
 		end
 	end
-	self.back:add_child(self.refresh_btn)
 
-	self.update_all_btn = ModActionButton:new("一键更新全部", V.v(header_btn_w, header_btn_h))
-	self.update_all_btn.pos = V.v(header_group_x + header_btn_w + header_btn_gap, header_row2_y)
+	self.update_all_btn = header_btn("一键更新全部", header_group_x + header_btn_w + header_btn_gap, header_row2_y)
 	self.update_all_btn.on_press = function()
 		self:_start_task("一键更新插件", function()
 			return self:_update_all_plugins()
 		end)
 	end
-	self.back:add_child(self.update_all_btn)
 
-	self.my_plugins_btn = ModActionButton:new("我的插件", V.v(header_btn_w, header_btn_h))
-	self.my_plugins_btn.pos = V.v(header_group_x + (header_btn_w + header_btn_gap) * 2, header_row2_y)
+	self.my_plugins_btn = header_btn("我的插件", header_group_x + (header_btn_w + header_btn_gap) * 2, header_row2_y)
 	self.my_plugins_btn.on_press = function()
 		self._my_plugins_only = not self._my_plugins_only
 		if self.mode ~= "store" then
@@ -950,15 +942,14 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 		self:_refresh_header_buttons()
 	end
 	self.my_plugins_btn.hidden = not self._developer_mode
-	self.back:add_child(self.my_plugins_btn)
 
+	-- 分页控件与状态提示
 	local pager_gap = 10
 	local pager_next_x = panel_w - 20 - pager_btn_w
 	local pager_page_x = pager_next_x - pager_gap - pager_page_w
 	local pager_prev_x = pager_page_x - pager_gap - pager_btn_w
 
-	self.prev_page_btn = ModActionButton:new("上一页", V.v(pager_btn_w, pager_btn_h))
-	self.prev_page_btn.pos = V.v(pager_prev_x, pager_y)
+	self.prev_page_btn = header_btn("上一页", pager_prev_x, pager_y, pager_btn_w, pager_btn_h)
 	self.prev_page_btn.on_press = function()
 		if self.mode ~= "store" or self.store_page <= 1 then
 			return
@@ -968,13 +959,13 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 			return self:_fetch_store_list()
 		end)
 	end
-	self.back:add_child(self.prev_page_btn)
 
 	local sep = KView:new(V.v(panel_w - 40, 1))
 	sep.colors.background = {95, 75, 40, 255}
 	sep.pos = V.v(20, sep_y)
 	self.back:add_child(sep)
 
+	-- 状态提示文本与翻页标签
 	self.hint_lbl = GGLabel:new(V.v(panel_w - 40, hint_h))
 	self.hint_lbl.font_name = "body"
 	self.hint_lbl.font_size = 12 * rs
@@ -995,8 +986,7 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	self.page_lbl.pos = V.v(pager_page_x, pager_y)
 	self.back:add_child(self.page_lbl)
 
-	self.next_page_btn = ModActionButton:new("下一页", V.v(pager_btn_w, pager_btn_h))
-	self.next_page_btn.pos = V.v(pager_next_x, pager_y)
+	self.next_page_btn = header_btn("下一页", pager_next_x, pager_y, pager_btn_w, pager_btn_h)
 	self.next_page_btn.on_press = function()
 		if self.mode ~= "store" or self.store_page >= self.store_total_pages then
 			return
@@ -1006,8 +996,8 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 			return self:_fetch_store_list()
 		end)
 	end
-	self.back:add_child(self.next_page_btn)
 
+	-- 任务进度对话框
 	self.task_dialog = KView:new(V.v(math.min(560, panel_w - 80), 150))
 	self.task_dialog.anchor = V.v(self.task_dialog.size.x / 2, self.task_dialog.size.y / 2)
 	self.task_dialog.pos = V.v(panel_w / 2, panel_h / 2)
@@ -1060,8 +1050,8 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	}
 	self.progress_bg:add_child(self.progress_fill)
 
-	local task_btn_w = clamp(math.floor(110 * touch_scale + 0.5), 110, 150)
-	local task_btn_h = clamp(math.floor(28 * touch_scale + 0.5), 28, 34)
+	local task_btn_w = km.clamp(math.floor(110 * touch_scale + 0.5), 110, 150)
+	local task_btn_h = km.clamp(math.floor(28 * touch_scale + 0.5), 28, 34)
 	self._confirm_btn_h = task_btn_h
 	self.task_cancel_btn = ModActionButton:new("断开请求", V.v(task_btn_w, task_btn_h))
 	self.task_cancel_btn.pos = V.v(self.task_dialog.size.x - task_btn_w - 12, self.task_dialog.size.y - task_btn_h - 12)
@@ -1113,6 +1103,7 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	self.task_dialog:add_child(self._confirm_cancel_btn)
 	self.task_dialog:add_child(self._cover_no_btn)
 
+	-- 禁用警告与插件列表
 	self._disabled_warning = GGLabel:new(V.v(panel_w - 40, 28))
 	self._disabled_warning.font_name = "body"
 	self._disabled_warning.font_size = 14 * rs
@@ -1134,6 +1125,7 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	self.mod_list.scroller_width = 24
 	self.back:add_child(self.mod_list)
 
+	-- 底部按钮（保存并重启 / 浏览器商店 / 关闭）
 	local y_btn = footer_y
 	local save_btn = GGOptionsButton:new("保存并重启")
 	save_btn:set_anchor_to_center()
@@ -1165,6 +1157,7 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 		self:hide()
 	end
 
+	-- 未保存修改确认对话框
 	self._confirm_dialog = KView:new(V.v(480, 180))
 	self._confirm_dialog.anchor = V.v(self._confirm_dialog.size.x / 2, self._confirm_dialog.size.y / 2)
 	self._confirm_dialog.pos = V.v(panel_w / 2, panel_h / 2)
@@ -1291,8 +1284,7 @@ function ModManagerView:_refresh_header_buttons()
 	local task_running = self._active_task ~= nil
 	self.refresh_btn:set_text(in_store and "刷新商店" or "查询远端")
 	self.sort_btn:set_enabled(in_store and not self._active_task)
-	-- self.category_btn:set_enabled(in_store and not self._active_task)
-	self.category_btn:set_enabled(true) -- 分类按钮始终可用，本地下，直接切显示的本地插件分类。商店下，切换分类会直接刷新商店列表
+	self.category_btn:set_enabled(true) -- 分类按钮始终可用，本地下直接切分类，商店下刷新商店列表
 	self.refresh_btn:set_enabled(not self._active_task)
 	self.prev_page_btn.hidden = not in_store
 	self.page_lbl.hidden = not in_store
@@ -1321,9 +1313,7 @@ function ModManagerView:_set_status(text, progress)
 	if self.task_status_lbl then
 		self.task_status_lbl.text = self._status_text
 	end
-	if progress == nil then
-		self._progress_target = self._progress_target
-	else
+	if progress ~= nil then
 		self._progress_target = math.max(0, math.min(100, progress))
 	end
 end
@@ -1340,55 +1330,6 @@ function ModManagerView:_render_progress()
 	local w = (self.progress_bg.size.x) * (self._progress_value / 100)
 	self.progress_fill.shape.args[4] = w
 	self.progress_fill.size = V.v(w, self.progress_fill.size.y)
-end
-
-function ModManagerView:_serialize_lua(tbl)
-	return persistence.serialize_to_string(tbl)
-end
-
-function ModManagerView:_read_lua_table(path)
-	local chunk, err = FS.load(path)
-	if not chunk then
-		return nil, err
-	end
-	local ok, result = pcall(chunk)
-	if not ok then
-		return nil, result
-	end
-	if type(result) ~= "table" then
-		return nil, "not table"
-	end
-	return result, nil
-end
-
-function ModManagerView:_read_main_config()
-	local cfg = mod_paths.load_main_config()
-	return cfg
-end
-
-function ModManagerView:_write_main_config(cfg)
-	local str = self:_serialize_lua(cfg)
-	return FS.write(mod_paths.MAIN_CONFIG_PATH, str)
-end
-
-function ModManagerView:_read_mod_config(path)
-	return self:_read_lua_table(path)
-end
-
-function ModManagerView:_write_mod_config(path, cfg)
-	return FS.write(path, self:_serialize_lua(cfg))
-end
-
-function ModManagerView:_get_candidate_sites()
-	local params = main and main.params or {}
-	local last = params and params.update_last_site or STORE_BACKUP_SITES[1]
-	local sites = {last}
-	for _, site in ipairs(STORE_BACKUP_SITES) do
-		if site ~= last then
-			sites[#sites + 1] = site
-		end
-	end
-	return sites
 end
 
 function ModManagerView:_request(url, options, timeout_sec)
@@ -1425,7 +1366,14 @@ function ModManagerView:_select_store_base_url()
 	if self._selected_site and self._selected_site ~= "" then
 		return self._selected_site:gsub("/+$", "") .. "/plugins"
 	end
-	local candidates = self:_get_candidate_sites()
+	local params_tmp = main and main.params or {}
+	local last_site = params_tmp and params_tmp.update_last_site or STORE_BACKUP_SITES[1]
+	local candidates = {last_site}
+	for _, site in ipairs(STORE_BACKUP_SITES) do
+		if site ~= last_site then
+			candidates[#candidates + 1] = site
+		end
+	end
 	for i, site in ipairs(candidates) do
 		self:_set_status(string.format("正在选择插件商店地址（%d/%d）：%s", i, #candidates, site), 0)
 		local test_url = site:gsub("/+$", "") .. "/plugins/list?page=1&page_size=1&sort=hot&category=all"
@@ -1448,10 +1396,6 @@ function ModManagerView:_select_store_base_url()
 		end
 	end
 	return nil
-end
-
-function ModManagerView:_store_cache_key(base, sort_val, category_val, page, page_size)
-	return table.concat({base or "", sort_val or "", category_val or "", tostring(page or 1), tostring(page_size or STORE_PAGE_SIZE)}, "::")
 end
 
 function ModManagerView:_decode_store_page(body, fallback_page)
@@ -1498,7 +1442,7 @@ function ModManagerView:_decode_store_page(body, fallback_page)
 end
 
 function ModManagerView:_get_store_page(base, sort_val, category_val, page, use_cache)
-	local key = self:_store_cache_key(base, sort_val, category_val, page, STORE_PAGE_SIZE)
+	local key = table.concat({base or "", sort_val or "", category_val or "", tostring(page or 1), tostring(STORE_PAGE_SIZE)}, "::")
 	if use_cache ~= false and self._store_page_cache[key] then
 		return true, self._store_page_cache[key], true
 	end
@@ -1631,7 +1575,7 @@ end
 
 function ModManagerView:_reload_local_mods()
 	mod_paths.ensure_storage_ready()
-	local main_cfg = self:_read_main_config()
+	local main_cfg = mod_paths.load_main_config()
 
 	self.local_mods = {}
 	self.local_by_entry = {}
@@ -1645,7 +1589,7 @@ function ModManagerView:_reload_local_mods()
 			local dir_path = mods_dir .. "/" .. name
 			if FS.getInfo(dir_path, "directory") then
 				local config_path = dir_path .. "/config.lua"
-				local mc = self:_read_mod_config(config_path)
+				local mc = mod_paths.load_lua_table(config_path)
 				if mc then
 					local has_config = false
 					local config_info = love.filesystem.getInfo(dir_path .. "/" .. name .. "_config.lua")
@@ -1675,6 +1619,14 @@ function ModManagerView:_reload_local_mods()
 		end
 		return (a.config.priority or 0) < (b.config.priority or 0)
 	end)
+end
+
+function ModManagerView:_refresh_local_view(status_text)
+	if status_text then
+		self:_set_status(status_text, 100)
+	end
+	self:_reload_local_mods()
+	self:_render_current_list()
 end
 
 function ModManagerView:_delete_local_mod_by_name(mod_name)
@@ -1810,7 +1762,7 @@ function ModManagerView:_install_plugin(item, is_update)
 	local candidates = self:_collect_mod_root_candidates(stage_root)
 	local selected_dir = nil
 	for _, c in ipairs(candidates) do
-		local cfg = self:_read_mod_config(c .. "/config.lua")
+		local cfg = mod_paths.load_lua_table(c .. "/config.lua")
 		local c_entry = cfg and safe_tostring(cfg.entry or "")
 		if entry ~= "" and (c_entry == entry or basename(c) == entry) then
 			selected_dir = c
@@ -1837,7 +1789,7 @@ function ModManagerView:_install_plugin(item, is_update)
 		if local_mod and local_mod.config then
 			preserved_enabled = local_mod.config.enabled ~= false
 		else
-			local existing_cfg = self:_read_mod_config(target_dir .. "/config.lua")
+			local existing_cfg = mod_paths.load_lua_table(target_dir .. "/config.lua")
 			if existing_cfg then
 				preserved_enabled = existing_cfg.enabled ~= false
 			end
@@ -1845,7 +1797,7 @@ function ModManagerView:_install_plugin(item, is_update)
 
 		local local_cfg_path = local_mod and (local_mod.path .. "/" .. local_mod.name .. "_config.lua") or (target_dir .. "/" .. target_name .. "_config.lua")
 		if FS.getInfo(local_cfg_path, "file") then
-			local local_cfg, read_err = self:_read_mod_config(local_cfg_path)
+			local local_cfg, read_err = mod_paths.load_lua_table(local_cfg_path)
 			if not local_cfg then
 				return false, "更新前读取本地配置失败：" .. local_cfg_path .. " (" .. tostring(read_err) .. ")"
 			end
@@ -1855,12 +1807,12 @@ function ModManagerView:_install_plugin(item, is_update)
 	remove_dir_recursive(target_dir)
 	copy_dir_recursive(selected_dir, target_dir)
 	if preserved_enabled ~= nil then
-		local installed_cfg = self:_read_mod_config(target_dir .. "/config.lua")
+		local installed_cfg = mod_paths.load_lua_table(target_dir .. "/config.lua")
 		if not installed_cfg then
 			return false, "更新后读取配置失败：" .. target_dir .. "/config.lua"
 		end
 		installed_cfg.enabled = preserved_enabled
-		local wok = self:_write_mod_config(target_dir .. "/config.lua", installed_cfg)
+		local wok = storage:write_lua(target_dir .. "/config.lua", installed_cfg)
 		if not wok then
 			return false, "更新后写入配置失败：" .. target_dir .. "/config.lua"
 		end
@@ -1869,28 +1821,26 @@ function ModManagerView:_install_plugin(item, is_update)
 		local installed_local_cfg_path = target_dir .. "/" .. target_name .. "_config.lua"
 		local merged_local_cfg = table.deepclone(preserved_local_config)
 		if FS.getInfo(installed_local_cfg_path, "file") then
-			local remote_local_cfg, read_err = self:_read_mod_config(installed_local_cfg_path)
+			local remote_local_cfg, read_err = mod_paths.load_lua_table(installed_local_cfg_path)
 			if not remote_local_cfg then
 				return false, "更新后读取远端本地配置失败：" .. installed_local_cfg_path .. " (" .. tostring(read_err) .. ")"
 			end
 			merge_missing_or_mismatch_fields(merged_local_cfg, remote_local_cfg)
 		end
-		local wok = self:_write_mod_config(installed_local_cfg_path, merged_local_cfg)
+		local wok = storage:write_lua(installed_local_cfg_path, merged_local_cfg)
 		if not wok then
 			return false, "更新后写入本地配置失败：" .. installed_local_cfg_path
 		end
 	end
 	remove_dir_recursive("tmp/mod_store_stage")
 
-	local new_cfg = self:_read_mod_config(target_dir .. "/config.lua")
+	local new_cfg = mod_paths.load_lua_table(target_dir .. "/config.lua")
 	if new_cfg then
 		new_cfg.last_used_at = os.time()
-		self:_write_mod_config(target_dir .. "/config.lua", new_cfg)
+		storage:write_lua(target_dir .. "/config.lua", new_cfg)
 	end
 
-	self:_reload_local_mods()
-	self:_render_current_list()
-	self:_set_status((is_update and "插件更新完成：" or "插件安装完成：") .. (item.name or item.entry or "?"), 100)
+	self:_refresh_local_view((is_update and "插件更新完成：" or "插件安装完成：") .. (item.name or item.entry or "?"))
 	self._active_download_name = ""
 	return true, nil
 end
@@ -1979,8 +1929,6 @@ function ModManagerView:_render_local_list()
 	local list_w = self.mod_list.size.x - self.mod_list.scroller_width - 2 * self.mod_list.scroller_margin - 4
 	local global_disabled = not self.global_toggle.value
 
-	self._disabled_warning.hidden = not global_disabled
-
 	local category_option = CATEGORY_OPTIONS[self.category_idx]
 
 	for _, mod_data in ipairs(self.local_mods) do
@@ -2053,7 +2001,11 @@ function ModManagerView:_render_local_list()
 					end
 					self._unsaved_changes = self:_check_unsaved()
 				end,
-				actions = global_disabled and {} or actions
+				actions = global_disabled and {} or actions,
+				_sw = self._sw,
+				_sh = self._sh,
+				_keyboard = self._keyboard,
+				_controller = self._controller
 			}, list_w)
 			if global_disabled then
 				row:set_dimmed(true)
@@ -2068,8 +2020,6 @@ end
 function ModManagerView:_render_store_list()
 	self.mod_list:clear_rows()
 	local list_w = self.mod_list.size.x - self.mod_list.scroller_width - 2 * self.mod_list.scroller_margin - 4
-	local global_disabled = not self.global_toggle.value
-	self._disabled_warning.hidden = not global_disabled
 	for _, item in ipairs(self.store_items) do
 		local local_mod = self.local_by_entry[item.entry] or self.local_by_name[item.entry]
 		local installed = local_mod ~= nil
@@ -2128,6 +2078,7 @@ function ModManagerView:_render_store_list()
 end
 
 function ModManagerView:_render_current_list()
+	self._disabled_warning.hidden = self.global_toggle.value
 	if self.mode == "store" then
 		self:_render_store_list()
 	else
@@ -2160,7 +2111,7 @@ function ModManagerView:show()
 	self._unsaved_changes = false
 	self:_start_http_thread()
 	-- 从磁盘读取初始状态，但仅在此处（后续 _reload_local_mods 不会覆盖用户未保存的修改）
-	local cfg = self:_read_main_config()
+	local cfg = mod_paths.load_main_config()
 	local saved_cb = self.global_toggle.on_change
 	self.global_toggle.on_change = nil
 	self.global_toggle:set_value(cfg.enabled ~= false)
@@ -2195,9 +2146,7 @@ function ModManagerView:update(dt)
 	self:_sanitize_view_texts(self.back)
 	self:_render_progress()
 	if not self._active_task then
-		if not self._cover_yes_btn.hidden or not self._cover_no_btn.hidden then
-		-- 等待用户选择是否上传封面
-		else
+		if self._cover_yes_btn.hidden and self._cover_no_btn.hidden then
 			self.task_dialog.hidden = true
 		end
 		return
@@ -2405,22 +2354,16 @@ function ModManagerView:_upload_plugin(mod_data, upload_cover)
 		}, 30)
 
 		if cover_err then
-			self:_set_status("插件上传成功，但封面上传失败：" .. cover_err, 100)
-			self:_reload_local_mods()
-			self:_render_current_list()
+			self:_refresh_local_view("插件上传成功，但封面上传失败：" .. cover_err)
 			return true, nil
 		end
 		if tonumber(cover_resp.code) ~= 200 then
-			self:_set_status("插件上传成功，但封面上传失败：HTTP " .. tostring(cover_resp.code), 100)
-			self:_reload_local_mods()
-			self:_render_current_list()
+			self:_refresh_local_view("插件上传成功，但封面上传失败：HTTP " .. tostring(cover_resp.code))
 			return true, nil
 		end
 	end
 
-	self:_set_status("上传成功：" .. entry, 100)
-	self:_reload_local_mods()
-	self:_render_current_list()
+	self:_refresh_local_view("上传成功：" .. entry)
 	return true, nil
 end
 
@@ -2449,9 +2392,9 @@ function ModManagerView:_check_unsaved()
 end
 
 function ModManagerView:save()
-	local base_cfg = self:_read_main_config()
+	local base_cfg = mod_paths.load_main_config()
 	base_cfg.enabled = self.global_toggle.value
-	local ok = self:_write_main_config(base_cfg)
+	local ok = storage:write_lua(mod_paths.MAIN_CONFIG_PATH, base_cfg)
 	if not ok then
 		log.error("写入 %s 失败", mod_paths.MAIN_CONFIG_PATH)
 	end
@@ -2466,7 +2409,7 @@ function ModManagerView:save()
 		if out.enabled then
 			out.last_used_at = os.time()
 		end
-		local wok = self:_write_mod_config(mod_data.config_path, out)
+		local wok = storage:write_lua(mod_data.config_path, out)
 		if not wok then
 			log.error("写入 %s 失败", mod_data.config_path)
 		end
