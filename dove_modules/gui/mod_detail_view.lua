@@ -8,11 +8,11 @@ local utf8_util = require("lib.utf8_utils")
 
 require("gg_views_custom")
 
-local PANEL_MARGIN = 60
-local PANEL_MIN_W = 660
-local PANEL_MAX_W = 1200
-local PANEL_MIN_H = 400
-local PANEL_MAX_H = 900
+local PANEL_MARGIN = 150
+local PANEL_MIN_W = 900
+local PANEL_MAX_W = 10000
+local PANEL_MIN_H = 730
+local PANEL_MAX_H = 10000
 local RS = GGLabel.static.ref_h / REF_H
 
 -- ─────────────────────────────────────────────
@@ -444,7 +444,7 @@ function ModDetailView:_render_content(content)
 	local blocks = parse_markdown(content)
 
 	for _, block in ipairs(blocks) do
-		print("Rendering block type:", block.block_type, "text:", block.text)
+		-- print("Rendering block type:", block.block_type, "text:", block.text)
 		if block.block_type == BlockType.EMPTY then
 			self:_add_spacer_row(12)
 		elseif block.block_type == BlockType.HORIZONTAL_RULE then
@@ -527,19 +527,24 @@ function ModDetailView:_add_paragraph_row(text, scroll_w)
 	if not text or text == "" then
 		return
 	end
-	local lbl = GGLabel:new(V.v(scroll_w, 40))
+	local lbl = GGLabel:new(V.v(scroll_w, 200))
 	lbl.font_name = "body"
 	lbl.font_size = 14 * RS
 	lbl.text_align = "left"
 	lbl.vertical_align = "top"
 	lbl.colors.text = {148, 140, 116, 255}
 	lbl.text = utf8_util.sanitize(text)
-	lbl.fit_lines = 8
-	lbl.fit_size = true
+	lbl.fit_lines = 9999 -- 不限行数，不缩小字号，文本自由换行
 	lbl.line_height = 1.45
 
-	local h = math.max(20, lbl.size.y)
+	-- 计算文本换行后的实际高度
+	local _, wrapped_lines = lbl:get_wrap_lines()
+	local font_height = lbl:get_font_height()
+	local text_h = math.max(font_height, wrapped_lines * font_height * lbl.line_height)
+	local h = math.ceil(text_h) + 4
+
 	local row = KView:new(V.v(scroll_w, h))
+	lbl.size = V.v(scroll_w, h)
 	lbl.pos = V.v(0, 2)
 	row:add_child(lbl)
 	self._scroll:add_row(row)
@@ -656,19 +661,24 @@ function ModDetailView:_add_table_block(block, scroll_w)
 end
 
 function ModDetailView:_add_quote_row(text, scroll_w)
-	local lbl = GGLabel:new(V.v(scroll_w - 20, 40))
+	local lbl = GGLabel:new(V.v(scroll_w - 20, 200))
 	lbl.font_name = "body"
 	lbl.font_size = 13 * RS
 	lbl.text_align = "left"
 	lbl.vertical_align = "top"
 	lbl.colors.text = {180, 170, 130, 255}
 	lbl.text = utf8_util.sanitize(text)
-	lbl.fit_lines = 6
-	lbl.fit_size = true
+	lbl.fit_lines = 9999 -- 不限行数，不缩小字号
 	lbl.line_height = 1.4
 
-	local h = math.max(22, lbl.size.y)
+	-- 计算文本换行后的实际高度
+	local _, wrapped_lines = lbl:get_wrap_lines()
+	local font_height = lbl:get_font_height()
+	local text_h = math.max(font_height, wrapped_lines * font_height * lbl.line_height)
+	local h = math.ceil(text_h) + 4
 	local row = KView:new(V.v(scroll_w, h))
+
+	lbl.size = V.v(scroll_w - 20, h)
 
 	-- 引用左侧竖线
 	local quote_bar = KView:new(V.v(4, h))
@@ -682,19 +692,24 @@ function ModDetailView:_add_quote_row(text, scroll_w)
 end
 
 function ModDetailView:_add_list_item_row(text, indent, scroll_w)
-	local lbl = GGLabel:new(V.v(scroll_w - indent * 20 - 20, 40))
+	local lbl = GGLabel:new(V.v(scroll_w - indent * 20 - 20, 200))
 	lbl.font_name = "body"
 	lbl.font_size = 14 * RS
 	lbl.text_align = "left"
 	lbl.vertical_align = "top"
 	lbl.colors.text = {148, 140, 116, 255}
 	lbl.text = utf8_util.sanitize("• " .. text)
-	lbl.fit_lines = 6
-	lbl.fit_size = true
+	lbl.fit_lines = 9999 -- 不限行数，不缩小字号
 	lbl.line_height = 1.4
 
-	local h = math.max(20, lbl.size.y)
+	-- 计算文本换行后的实际高度
+	local _, wrapped_lines = lbl:get_wrap_lines()
+	local font_height = lbl:get_font_height()
+	local text_h = math.max(font_height, wrapped_lines * font_height * lbl.line_height)
+	local h = math.ceil(text_h) + 4
+
 	local row = KView:new(V.v(scroll_w, h))
+	lbl.size = V.v(scroll_w - indent * 20 - 20, h)
 	lbl.pos = V.v(indent * 20, 2)
 	row:add_child(lbl)
 	self._scroll:add_row(row)
