@@ -22,7 +22,6 @@ local signal = require("lib.hump.signal")
 local timer = require("hump.timer").new()
 local utf8 = require("utf8")
 local achievements_data, map_data
-local tower_menus_data = require("kr1.data.tower_menus_data")
 local configer = require("dove_modules.configer")
 local R = require("all.restart")
 local perf = require("dove_modules.perf.perf")
@@ -4659,6 +4658,8 @@ function EncyclopediaView:detail_tower_second(index)
 	local tower_name = t.name
 	local dt = E:create_entity(tower_name)
 	local prefix = string.upper(dt.info.i18n_key or t.name)
+	local tower_menus_data = require("kr1.data.tower_menus_data")
+
 	local tower_data_in_menu = tower_menus_data[dt.tower.type]
 
 	local specials = GGLabel:new(V.v(190, 26))

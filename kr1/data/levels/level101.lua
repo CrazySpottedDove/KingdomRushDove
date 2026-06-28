@@ -11,7 +11,6 @@ local SU=require("script_utils")
 local storage=require("all.storage")
 local W=require("wave_db")
 require("all.constants")
-local tower_menus=require("kr1.data.tower_menus_data")
 local function fts(v)
 return v/FPS
 end

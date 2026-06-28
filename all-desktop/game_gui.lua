@@ -65,7 +65,6 @@ require("gg_views_custom")
 
 local data = require("data.game_gui_data")
 local damage_icons = require("kr1-desktop.data.damage_icons")
-local tower_menus = require("kr1.data.tower_menus_data")
 local game_gui = {}
 
 game_gui.required_textures = {"gui_common", "gui_ico", "gui_portraits", "achievements", "encyclopedia_creeps", "gui_notifications", "gui_notifications_bg", "ballon", "view_options"}
@@ -6415,9 +6414,10 @@ function TowerMenu:show(tower_menu)
 	end
 
 	local tm = tower_menu
+	local tower_menus_data = require("kr1.data.tower_menus_data")
 
 	if not tm then
-		local current_tms = tower_menus[entity.tower.type]
+		local current_tms = tower_menus_data[entity.tower.type]
 
 		if not current_tms or not current_tms[entity.tower.level] then
 			self.hidden = true
@@ -6430,16 +6430,16 @@ function TowerMenu:show(tower_menu)
 
 	if configer.config().enabled and configer.config().build_random_towers then
 		if entity.tower.type == "holder" then
-			tm = tower_menus.random_foundamental[1]
+			tm = tower_menus_data.random_foundamental[1]
 		else
-			if tm == tower_menus.archer[3] then
-				tm = tower_menus.random_advanced_archer[1]
-			elseif tm == tower_menus.barrack[3] then
-				tm = tower_menus.random_advanced_barrack[1]
-			elseif tm == tower_menus.engineer[3] then
-				tm = tower_menus.random_advanced_engineer[1]
-			elseif tm == tower_menus.mage[3] then
-				tm = tower_menus.random_advanced_mage[1]
+			if tm == tower_menus_data.archer[3] then
+				tm = tower_menus_data.random_advanced_archer[1]
+			elseif tm == tower_menus_data.barrack[3] then
+				tm = tower_menus_data.random_advanced_barrack[1]
+			elseif tm == tower_menus_data.engineer[3] then
+				tm = tower_menus_data.random_advanced_engineer[1]
+			elseif tm == tower_menus_data.mage[3] then
+				tm = tower_menus_data.random_advanced_mage[1]
 			end
 		end
 	end
