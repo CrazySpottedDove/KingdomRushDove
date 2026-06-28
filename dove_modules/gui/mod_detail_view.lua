@@ -16,6 +16,30 @@ local PANEL_MAX_H = 10000
 local RS = GGLabel.static.ref_h / REF_H
 
 -- ─────────────────────────────────────────────
+-- 颜色常量（所有文字颜色集中定义，方便统一调亮）
+-- ─────────────────────────────────────────────
+-- 注意：colors.text 使用 0~255 整数 RGBA，不做归一化
+local C_TEXT_TITLE = {250, 232, 180, 255} -- 标题/表头 - 亮金色
+local C_TEXT_BODY = {205, 196, 168, 255} -- 正文/列表 - 明亮暖白（比原来亮很多）
+local C_TEXT_TABLE = {215, 206, 178, 255} -- 表格数据 - 介于正文和标题之间
+local C_TEXT_QUOTE = {195, 186, 158, 255} -- 引用 - 中暖色
+local C_TEXT_CODE = {195, 215, 180, 255} -- 代码 - 绿色调保持不变
+local C_TEXT_EMPTY = {210, 195, 150, 255} -- 空状态 - 暖色
+-- ─────────────────────────────────────────────
+
+-- ─────────────────────────────────────────────
+-- 字号常量（统一管理，方便整体缩放）
+-- ─────────────────────────────────────────────
+local FS_TITLE = 18 -- 面板标题
+local FS_HEADING = {24, 21, 19, 17, 16, 14} -- H1~H6
+local FS_BODY = 16 -- 正文/列表项
+local FS_CODE = 15 -- 代码
+local FS_TABLE = 15 -- 表格单元格
+local FS_QUOTE = 14 -- 引用
+local FS_EMPTY = 15 -- 空状态
+-- ─────────────────────────────────────────────
+
+-- ─────────────────────────────────────────────
 -- Markdown 解析：将 markdown 文本解析为块列表
 -- ─────────────────────────────────────────────
 
@@ -362,7 +386,7 @@ function ModDetailView:initialize(sw, sh, title, content, fallback_text)
 
 	-- 面板
 	self._panel = KView:new(V.v(panel_w, panel_h))
-	self._panel.colors.background = {47, 34, 6, 235}
+	self._panel.colors.background = {33, 24, 4, 255}
 	self._panel.anchor = V.v(panel_w / 2, panel_h / 2)
 	self._panel.pos = V.v(sw / 2, sh / 2)
 	self._panel.shape = {
@@ -383,10 +407,10 @@ function ModDetailView:initialize(sw, sh, title, content, fallback_text)
 
 	local title_lbl = GGLabel:new(V.v(panel_w - 80, 44))
 	title_lbl.font_name = "h"
-	title_lbl.font_size = 17 * RS
+	title_lbl.font_size = FS_TITLE * RS
 	title_lbl.text_align = "left"
 	title_lbl.vertical_align = "middle"
-	title_lbl.colors.text = {244, 221, 165, 255}
+	title_lbl.colors.text = C_TEXT_TITLE
 	title_lbl.text = utf8_util.sanitize(self._title) .. " - 详情"
 	title_lbl.fit_lines = 1
 	title_lbl.fit_size = true
@@ -470,10 +494,10 @@ function ModDetailView:_add_empty_row(message)
 	local row = KView:new(V.v(scroll_w, 50))
 	local lbl = GGLabel:new(V.v(scroll_w, 50))
 	lbl.font_name = "body"
-	lbl.font_size = 15 * RS
+	lbl.font_size = FS_EMPTY * RS
 	lbl.text_align = "center"
 	lbl.vertical_align = "middle"
-	lbl.colors.text = {200, 180, 130, 255}
+	lbl.colors.text = C_TEXT_EMPTY
 	lbl.text = utf8_util.sanitize(message or "暂无内容")
 	lbl.fit_lines = 2
 	lbl.fit_size = true
@@ -501,9 +525,9 @@ function ModDetailView:_add_hr_row(scroll_w)
 end
 
 function ModDetailView:_add_heading_row(text, level, scroll_w)
-	local font_size_map = {22, 19, 17, 15, 14, 13}
+	local font_size_map = FS_HEADING
 	local paddings = {8, 6, 4, 3, 2, 2}
-	local fs = font_size_map[level] or 15
+	local fs = font_size_map[level] or FS_BODY
 	local padding = paddings[level] or 4
 	local row = KView:new(V.v(scroll_w, fs * 1.5 + padding * 2))
 
@@ -512,7 +536,7 @@ function ModDetailView:_add_heading_row(text, level, scroll_w)
 	lbl.font_size = fs * RS
 	lbl.text_align = "left"
 	lbl.vertical_align = "middle"
-	lbl.colors.text = {244, 221, 165, 255}
+	lbl.colors.text = C_TEXT_TITLE
 	lbl.text = utf8_util.sanitize(text)
 	lbl.fit_lines = 2
 	lbl.fit_size = true
@@ -529,10 +553,10 @@ function ModDetailView:_add_paragraph_row(text, scroll_w)
 	end
 	local lbl = GGLabel:new(V.v(scroll_w, 200))
 	lbl.font_name = "body"
-	lbl.font_size = 14 * RS
+	lbl.font_size = FS_BODY * RS
 	lbl.text_align = "left"
 	lbl.vertical_align = "top"
-	lbl.colors.text = {148, 140, 116, 255}
+	lbl.colors.text = C_TEXT_BODY
 	lbl.text = utf8_util.sanitize(text)
 	lbl.fit_lines = 9999 -- 不限行数，不缩小字号，文本自由换行
 	lbl.line_height = 1.45
@@ -555,10 +579,10 @@ function ModDetailView:_add_code_row(text, scroll_w)
 	local padding_h = 16
 	local code_lbl = GGLabel:new(V.v(scroll_w - padding_h - 8, 200))
 	code_lbl.font_name = "body"
-	code_lbl.font_size = 15 * RS
+	code_lbl.font_size = FS_CODE * RS
 	code_lbl.text_align = "left"
 	code_lbl.vertical_align = "top"
-	code_lbl.colors.text = {195, 215, 180, 255}
+	code_lbl.colors.text = C_TEXT_CODE
 	code_lbl.text = utf8_util.sanitize(text)
 	code_lbl.fit_lines = 9999
 	code_lbl.line_height = 1.35
@@ -610,7 +634,7 @@ function ModDetailView:_add_table_block(block, scroll_w)
 	end
 
 	local cell_w = math.floor((scroll_w - 2) / max_cells)
-	local font_size = 13 * RS
+	local font_size = FS_TABLE * RS
 	local line_height_v = font_size * 1.35
 
 	for row_idx, cells in ipairs(rows) do
@@ -640,12 +664,12 @@ function ModDetailView:_add_table_block(block, scroll_w)
 				-- 表头行：粗体（使用 h 字体族）+ 金色文字
 				lbl.font_name = "h"
 				lbl.font_size = font_size
-				lbl.colors.text = {244, 221, 165, 255}
+				lbl.colors.text = C_TEXT_TITLE
 			else
 				-- 数据行：正常体
 				lbl.font_name = "body"
 				lbl.font_size = font_size
-				lbl.colors.text = {160, 152, 120, 255}
+				lbl.colors.text = C_TEXT_TABLE
 			end
 			lbl.text_align = "left"
 			lbl.vertical_align = "middle"
@@ -663,10 +687,10 @@ end
 function ModDetailView:_add_quote_row(text, scroll_w)
 	local lbl = GGLabel:new(V.v(scroll_w - 20, 200))
 	lbl.font_name = "body"
-	lbl.font_size = 13 * RS
+	lbl.font_size = FS_QUOTE * RS
 	lbl.text_align = "left"
 	lbl.vertical_align = "top"
-	lbl.colors.text = {180, 170, 130, 255}
+	lbl.colors.text = C_TEXT_QUOTE
 	lbl.text = utf8_util.sanitize(text)
 	lbl.fit_lines = 9999 -- 不限行数，不缩小字号
 	lbl.line_height = 1.4
@@ -694,10 +718,10 @@ end
 function ModDetailView:_add_list_item_row(text, indent, scroll_w)
 	local lbl = GGLabel:new(V.v(scroll_w - indent * 20 - 20, 200))
 	lbl.font_name = "body"
-	lbl.font_size = 14 * RS
+	lbl.font_size = FS_BODY * RS
 	lbl.text_align = "left"
 	lbl.vertical_align = "top"
-	lbl.colors.text = {148, 140, 116, 255}
+	lbl.colors.text = C_TEXT_BODY
 	lbl.text = utf8_util.sanitize("• " .. text)
 	lbl.fit_lines = 9999 -- 不限行数，不缩小字号
 	lbl.line_height = 1.4
