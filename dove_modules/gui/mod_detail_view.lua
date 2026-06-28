@@ -441,6 +441,21 @@ function ModDetailView:initialize(sw, sh, title, content, fallback_text)
 	self._scroll.colors.scroller_background = {45, 36, 22, 200}
 	self._scroll.colors.scroller_foreground = {110, 90, 50, 255}
 	self._scroll.scroller_width = 18
+
+	-- 确保所有子视图传播鼠标事件，使整个滚动态区域可拖动（不仅滚动条）
+	local orig_add_row = self._scroll.add_row
+	function self._scroll:add_row(view)
+		local function set_propagate(v)
+			v.propagate_on_down = true
+			v.propagate_on_up = true
+			for _, child in ipairs(v.children or {}) do
+				set_propagate(child)
+			end
+		end
+		set_propagate(view)
+		orig_add_row(self, view)
+	end
+
 	self._panel:add_child(self._scroll)
 
 	-- 渲染内容
