@@ -134,8 +134,19 @@ local function parse_markdown(text)
 
 	text = text:gsub("\r\n?", "\n")
 	local raw = {}
-	for line in text:gmatch("([^\n]*)") do
-		raw[#raw + 1] = line
+	-- 逐行分割，避免 gmatch("([^\n]*)") 在相邻 \n 之间产生幽灵空串 ""
+	-- 但仍保留真实的空行（EMPTY block 需要）
+	local pos = 1
+	local len = #text
+	while pos <= len do
+		local next_nl = text:find("\n", pos)
+		if next_nl then
+			raw[#raw + 1] = text:sub(pos, next_nl - 1)
+			pos = next_nl + 1
+		else
+			raw[#raw + 1] = text:sub(pos)
+			break
+		end
 	end
 	if #raw == 0 then
 		return {{
@@ -247,8 +258,7 @@ local function parse_markdown(text)
 
 						-- ─── 表格 ──────────
 						-- 收集连续的表格行，合并为一个 TABLE block
-						-- 注意：gmatch("([^\n]*)") 会在相邻 \n 之间产生空字符串 ""
-						-- 所以需要在收集循环中跳过这些"空行伪影"
+						-- 跳过表格行之间可能的真实空行（某些 markdown 风格）
 						elseif l:sub(1, 1) == "|" then
 							local table_rows = {}
 							local sep_found = false
