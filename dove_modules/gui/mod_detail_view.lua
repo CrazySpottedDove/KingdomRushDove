@@ -1,6 +1,5 @@
 -- 插件详情弹窗（README 查看器）
 -- 支持 markdown 的简单渲染（标题、加粗、代码块等）
-local log = require("lib.klua.log"):new("mod_detail_view")
 local class = require("middleclass")
 local V = require("lib.klua.vector")
 local S = require("sound_db")
@@ -247,16 +246,63 @@ local function parse_markdown(text)
 							idx = idx + 1
 
 						-- ─── 表格 ──────────
+						-- 收集连续的表格行，合并为一个 TABLE block
+						-- 注意：gmatch("([^\n]*)") 会在相邻 \n 之间产生空字符串 ""
+						-- 所以需要在收集循环中跳过这些"空行伪影"
 						elseif l:sub(1, 1) == "|" then
-							if is_table_sep(trimmed) then
-							-- 跳过分隔行
-							else
+							local table_rows = {}
+							local sep_found = false
+							while idx <= #raw do
+								local tl = raw[idx]
+								local ttrimmed = tl:match("^%s*(.-)%s*$") or tl
+
+								-- 空行（可能是 gmatch 伪影，也可能是真实的空行）
+								-- 向前窥探：如果后续还有 | 行则跳过，属于同一表格
+								if tl:match("^%s*$") then
+									local peek = idx + 1
+									local has_more_table = false
+									while peek <= #raw do
+										local pl = raw[peek]
+										if pl:match("^%s*$") then
+											peek = peek + 1
+										elseif pl:sub(1, 1) == "|" then
+											has_more_table = true
+											break
+										else
+											break
+										end
+									end
+									if has_more_table then
+										idx = idx + 1
+									else
+										break
+									end
+
+								elseif tl:sub(1, 1) == "|" then
+									if is_table_sep(ttrimmed) then
+										sep_found = true
+									else
+										local cells = {}
+										local inner = ttrimmed:match("^|%s*(.-)%s*|$") or ttrimmed:match("^|%s*(.+)$") or ttrimmed
+										for cell in inner:gmatch("([^|]+)") do
+											local c = cell:match("^%s*(.-)%s*$") or cell
+											cells[#cells + 1] = utf8_util.sanitize(strip_inline_markdown(c))
+										end
+										table_rows[#table_rows + 1] = cells
+									end
+									idx = idx + 1
+
+								else
+									break
+								end
+							end
+							if #table_rows > 0 then
 								blocks[#blocks + 1] = {
 									block_type = BlockType.TABLE,
-									text = strip_inline_markdown(l)
+									rows = table_rows,
+									header_count = sep_found and 1 or 0
 								}
 							end
-							idx = idx + 1
 
 						-- ─── 默认段落 ──────
 						else
@@ -388,6 +434,7 @@ function ModDetailView:_render_content(content)
 	local blocks = parse_markdown(content)
 
 	for _, block in ipairs(blocks) do
+		print("Rendering block type:", block.block_type, "text:", block.text)
 		if block.block_type == BlockType.EMPTY then
 			self:_add_spacer_row(12)
 		elseif block.block_type == BlockType.HORIZONTAL_RULE then
@@ -399,7 +446,7 @@ function ModDetailView:_render_content(content)
 		elseif block.block_type == BlockType.BLOCKQUOTE then
 			self:_add_quote_row(block.text, scroll_w)
 		elseif block.block_type == BlockType.TABLE then
-			self:_add_table_row(block.text, scroll_w)
+			self:_add_table_block(block, scroll_w)
 		elseif block.block_type == BlockType.LIST_ITEM then
 			self:_add_list_item_row(block.text, block.indent or 0, scroll_w)
 		else
@@ -530,52 +577,72 @@ function ModDetailView:_add_code_row(text, scroll_w)
 	self:_add_spacer_row(8)
 end
 
-function ModDetailView:_add_table_row(text, scroll_w)
-	local cells = {}
-	local inner = text:match("^%s*|%s*(.-)%s*|%s*$") or text:match("^%s*|%s*(.+)$") or text
-	for cell in inner:gmatch("([^|]+)") do
-		local c = cell:match("^%s*(.-)%s*$") or cell
-		cells[#cells + 1] = utf8_util.sanitize(c)
-	end
-	local cell_count = #cells
-	if cell_count == 0 then
+function ModDetailView:_add_table_block(block, scroll_w)
+	local rows = block.rows
+	if not rows or #rows == 0 then
 		return
 	end
 
-	local cell_w = math.floor((scroll_w - 2) / math.max(1, cell_count))
+	local header_count = block.header_count or 0
+
+	-- 计算最大列数
+	local max_cells = 0
+	for _, row in ipairs(rows) do
+		max_cells = math.max(max_cells, #row)
+	end
+	if max_cells == 0 then
+		return
+	end
+
+	local cell_w = math.floor((scroll_w - 2) / max_cells)
 	local font_size = 13 * RS
 	local line_height_v = font_size * 1.35
-	local max_cell_lines = 1
-	for _, c in ipairs(cells) do
-		local approx_lines = math.max(1, math.ceil(#c / math.max(1, math.floor(cell_w / (font_size * 0.65)))))
-		max_cell_lines = math.max(max_cell_lines, approx_lines)
+
+	for row_idx, cells in ipairs(rows) do
+		local cell_count = math.max(1, #cells)
+		-- 估算行高
+		local max_cell_lines = 1
+		for _, c in ipairs(cells) do
+			local approx_lines = math.max(1, math.ceil(#c / math.max(1, math.floor(cell_w / (font_size * 0.65)))))
+			max_cell_lines = math.max(max_cell_lines, approx_lines)
+		end
+
+		-- 行高 = 文字高度 + 上下留白
+		local row_h = math.max(26, max_cell_lines * line_height_v + 12)
+		local row = KView:new(V.v(scroll_w, row_h))
+
+		-- 底部细线
+		local bottom_line = KView:new(V.v(scroll_w, 1))
+		bottom_line.colors.background = {80, 65, 35, 180}
+		bottom_line.pos = V.v(0, row_h - 2)
+		row:add_child(bottom_line)
+
+		local is_header = row_idx <= header_count
+
+		for idx, cell_text in ipairs(cells) do
+			local lbl = GGLabel:new(V.v(cell_w - 4, row_h))
+			if is_header then
+				-- 表头行：粗体（使用 h 字体族）+ 金色文字
+				lbl.font_name = "h"
+				lbl.font_size = font_size
+				lbl.colors.text = {244, 221, 165, 255}
+			else
+				-- 数据行：正常体
+				lbl.font_name = "body"
+				lbl.font_size = font_size
+				lbl.colors.text = {160, 152, 120, 255}
+			end
+			lbl.text_align = "left"
+			lbl.vertical_align = "middle"
+			lbl.text = cell_text
+			lbl.fit_lines = 3
+			lbl.fit_size = true
+			lbl.pos = V.v((idx - 1) * cell_w + 2, 0)
+			row:add_child(lbl)
+		end
+
+		self._scroll:add_row(row)
 	end
-
-	-- 行高 = 文字高度 + 上下留白，文字在两条线中间
-	local row_h = math.max(26, max_cell_lines * line_height_v + 12)
-	local row = KView:new(V.v(scroll_w, row_h))
-
-	-- 底部细线
-	local bottom_line = KView:new(V.v(scroll_w, 1))
-	bottom_line.colors.background = {80, 65, 35, 180}
-	bottom_line.pos = V.v(0, row_h - 1)
-	row:add_child(bottom_line)
-
-	for idx, cell_text in ipairs(cells) do
-		local lbl = GGLabel:new(V.v(cell_w - 4, row_h))
-		lbl.font_name = "body"
-		lbl.font_size = font_size
-		lbl.text_align = "left"
-		lbl.vertical_align = "middle"
-		lbl.colors.text = {160, 152, 120, 255}
-		lbl.text = cell_text
-		lbl.fit_lines = 3
-		lbl.fit_size = true
-		lbl.pos = V.v((idx - 1) * cell_w + 2, 0)
-		row:add_child(lbl)
-	end
-
-	self._scroll:add_row(row)
 end
 
 function ModDetailView:_add_quote_row(text, scroll_w)
