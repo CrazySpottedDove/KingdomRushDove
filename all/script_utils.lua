@@ -3405,12 +3405,10 @@ end
 function SU.y_enemy_walk_step(store, this, animation_name, sprite_id)
 	animation_name = animation_name or "walk"
 
-	local next, new, use_path
+	local next, use_path
 
 	if this.motion.forced_waypoint then
 		local w = this.motion.forced_waypoint
-
-		next = w
 
 		if V.dist(w.x, w.y, this.pos.x, this.pos.y) < 2 * this.motion.real_speed * store.tick_length then
 			this.pos.x, this.pos.y = w.x, w.y
@@ -3418,8 +3416,10 @@ function SU.y_enemy_walk_step(store, this, animation_name, sprite_id)
 
 			return false
 		end
+		next = w
 	else
 		use_path = true
+		local new
 		next, new = P:next_entity_node(this, store.tick_length)
 
 		if not next then
@@ -3428,15 +3428,23 @@ function SU.y_enemy_walk_step(store, this, animation_name, sprite_id)
 
 			return false
 		end
+
+		if this.sound_events and new then
+			S:queue(this.sound_events.new_node, this.sound_events.new_node_args)
+		end
 	end
 
 	U.set_destination(this, next)
 
-	local an, af = U.animation_name_facing_point(this, animation_name, this.motion.dest, sprite_id, nil, use_path)
-
-	if this.sound_events and new then
-		S:queue(this.sound_events.new_node, this.sound_events.new_node_args)
+	local dx, dy = next.x, next.y
+	if use_path then
+		local npos = P:node_pos_ref(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni)
+		dx, dy = dx - npos.x, dy - npos.y
+	else
+		dx, dy = dx - this.pos.x, dy - this.pos.y
 	end
+
+	local an, af = U.animation_name_with_direction(this.render.sprites[sprite_id or 1], animation_name, dx, dy)
 
 	U.animation_start(this, an, af, store.tick_ts, true, sprite_id)
 	U.walk_off__accel__unsnapped(this, store.tick_length)

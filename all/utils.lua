@@ -556,8 +556,16 @@ function U.animation_name_facing_point(e, group, point, idx, offset, use_path)
 		dx, dy = dx - offset.x, dy - offset.y
 	end
 
-	local a = e.render.sprites[idx or 1]
-	local angles = a.angles and a.angles[group] or nil
+	return U.animation_name_with_direction(e.render.sprites[idx or 1], group, dx, dy)
+end
+
+--- 直接给出 dx, dy，确定动画组的名称，是更底层的接口
+---@param sprite table
+---@param group string
+---@param dx number
+---@param dy number
+function U.animation_name_with_direction(sprite, group, dx, dy)
+	local angles = sprite.angles and sprite.angles[group] or nil
 
 	if not angles then
 		return group, dx < 0, 1
@@ -569,22 +577,22 @@ function U.animation_name_facing_point(e, group, point, idx, offset, use_path)
 		return angles[1], dx < 0, 1
 	elseif angle_count == 2 then
 		local coordinate_idx = dy > 0 and 1 or 2
-		return angles[coordinate_idx], (a.angles_flip_horizontal and a.angles_flip_horizontal[coordinate_idx]) and (dx >= 0) or (dx < 0), coordinate_idx
+		return angles[coordinate_idx], (sprite.angles_flip_horizontal and sprite.angles_flip_horizontal[coordinate_idx]) and (dx >= 0) or (dx < 0), coordinate_idx
 	--else if angle_count == 3 then
 	else
 		local angle = atan2(dy, dx) % 6.2831853071795862
 		local coordinate_idx = 1
 		local o_flip = false
 		local a1, a2, a3, a4 = 45, 135, 225, 315
-		if a.angles_custom and a.angles_custom[group] then
-			a1, a2, a3, a4 = a.angles_custom[group][1], a.angles_custom[group][2], a.angles_custom[group][3], a.angles_custom[group][4]
+		if sprite.angles_custom and sprite.angles_custom[group] then
+			a1, a2, a3, a4 = sprite.angles_custom[group][1], sprite.angles_custom[group][2], sprite.angles_custom[group][3], sprite.angles_custom[group][4]
 		end
 
-		local stickiness = a.angles_stickiness and a.angles_stickiness[group]
+		local stickiness = sprite.angles_stickiness and sprite.angles_stickiness[group]
 		local angle_deg = angle * 57.295779513082323
 
 		if stickiness then
-			local skew_factor = a._last_skew_factor
+			local skew_factor = sprite._last_skew_factor
 			if skew_factor then
 				local skew = stickiness * skew_factor
 				a1, a3 = a1 - skew, a3 - skew
@@ -592,28 +600,28 @@ function U.animation_name_facing_point(e, group, point, idx, offset, use_path)
 			end
 			if a1 <= angle_deg and angle_deg < a2 then
 				coordinate_idx = 2
-				a._last_skew_factor = 1
-			elseif a2 <= angle_deg and angle_deg < a3 then
-				o_flip = true
-				a._last_skew_factor = -1
+				sprite._last_skew_factor = 1
 			elseif a3 <= angle_deg and angle_deg < a4 then
 				coordinate_idx = 3
-				a._last_skew_factor = 1
+				sprite._last_skew_factor = 1
 			else
-				a._last_skew_factor = -1
+				sprite._last_skew_factor = -1
+				if dx < 0 then
+					o_flip = true
+				end
 			end
 		else
 			if a1 <= angle_deg and angle_deg < a2 then
 				coordinate_idx = 2
-			elseif a2 <= angle_deg and angle_deg < a3 then
-				o_flip = true
 			elseif a3 <= angle_deg and angle_deg < a4 then
 				coordinate_idx = 3
+			elseif dx < 0 then
+				o_flip = true
 			end
 		end
 
-		if a.angles_flip_vertical and a.angles_flip_vertical[group] then
-			o_flip = dy > 0
+		if sprite.angles_flip_vertical and sprite.angles_flip_vertical[group] then
+			o_flip = dx < 0
 		end
 
 		return angles[coordinate_idx], o_flip, coordinate_idx

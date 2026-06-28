@@ -653,7 +653,6 @@ function ModDetailView:_add_table_block(block, scroll_w)
 	local line_height_v = font_size * 1.35
 
 	for row_idx, cells in ipairs(rows) do
-		local cell_count = math.max(1, #cells)
 		-- 估算行高
 		local max_cell_lines = 1
 		for _, c in ipairs(cells) do
