@@ -1774,14 +1774,8 @@ end
 function U.cleanup_blockers(store, blocked)
 	local blockers = blocked.enemy.blockers
 
-	if not blockers then
-		return
-	end
-
 	for i = #blockers, 1, -1 do
-		local blocker_id = blockers[i]
-
-		if not store.entities[blocker_id] then
+		if not store.entities[blockers[i]] then
 			table.remove(blockers, i)
 		end
 	end

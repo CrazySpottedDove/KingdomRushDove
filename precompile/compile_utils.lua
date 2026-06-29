@@ -580,18 +580,36 @@ local function transform_returns_to_assign(body, var_names, label_suffix)
 						if #expr == 0 then
 							out[#out + 1] = vs .. " = nil"
 						else
-							out[#out + 1] = vs .. " = " .. expr
+							local renamed = expr
+							for _, vn in ipairs(var_names) do
+								renamed = renamed:gsub("(%f[%w_])" .. vn .. "(%f[%W_])", "%1__tpl_" .. vn .. "%2")
+							end
+							out[#out + 1] = vs .. " = " .. renamed
 						end
 					elseif #expr > 0 then
 						out[#out + 1] = "_ = " .. expr
 					end
-					out[#out + 1] = "\ngoto " .. label .. "\n"
 					i = ve
 					if i <= n and body:byte(i) == b_semic then
 						i = i + 1
 					end
 					if i <= n and body:byte(i) == b_newl then
 						i = i + 1
+					end
+					-- 如果 return 是 body 中最后一个有效语句，跳过冗余 goto
+					local need_goto = false
+					for j = i, n do
+						local bc = body:byte(j)
+						if bc == b_dash and body:byte(j + 1) == b_dash then
+							break
+						end
+						if not (bc == b_space or bc == b_tab or bc == b_newl or bc == b_semic) then
+							need_goto = true
+							break
+						end
+					end
+					if need_goto then
+						out[#out + 1] = "\ngoto " .. label .. "\n"
 					end
 				else
 					out[#out + 1] = word

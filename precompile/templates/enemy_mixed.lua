@@ -178,11 +178,7 @@ function(store, this)
     @constelse
     while not blocker do
 
-		if this.unit.is_stunned then
-			return false
-		end
-
-		if this.health.dead then
+		if this.unit.is_stunned or this.health.dead then
 			return false
 		end
 
