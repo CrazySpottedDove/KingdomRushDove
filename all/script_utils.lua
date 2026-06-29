@@ -5253,7 +5253,7 @@ local function enemy_scared_logic(this, store)
 	this._scare_data.ts = store.tick_ts
 	while store.tick_ts - this._scare_data.ts < this._scare_data.duration do
 		if this.health.dead then
-			return
+			break
 		end
 		if this.unit.is_stunned then
 			SU.y_enemy_stun(store, this)
