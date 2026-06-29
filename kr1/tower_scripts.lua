@@ -18815,9 +18815,7 @@ function scripts.soldier_tower_dwarf.update(this, store)
 
 			SU.y_soldier_death(store, this)
 
-			while true do
-				coroutine.yield()
-			end
+			return
 		end
 
 		if this.unit.is_stunned then
@@ -19551,13 +19549,7 @@ function scripts.tower_paladin_covenant.soldier_update(this, store)
 
 			SU.y_soldier_death(store, this)
 
-			while true do
-				if pow_l.changed then
-					queue_remove(store, this)
-				end
-
-				coroutine.yield()
-			end
+			return
 		end
 
 		if this.unit.is_stunned then
