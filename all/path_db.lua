@@ -74,7 +74,7 @@ function path_db:load(name, visible_coords)
 	self.path_connections = {}
 	self.path_connections_spi_to_ni = {}
 	-- 反向索引，记录哪些路径回去是什么，以消除 prev_pis 这种运行时补丁
-	self.path_connections_reserve = {}
+	self.path_connections_reverse = {}
 	self.path_start_node = {}
 	self.path_end_node = {}
 	self.visible_path_start_node = {}
@@ -110,7 +110,7 @@ function path_db:load(name, visible_coords)
 
 	-- 建立反向索引
 	for from_pi, to_pi in pairs(self.path_connections) do
-		self.path_connections_reserve[to_pi] = from_pi
+		self.path_connections_reverse[to_pi] = from_pi
 	end
 
 	for i, p in ipairs(self.paths) do
@@ -285,7 +285,7 @@ end
 --- 返回该路径上一条连接的路径 pi
 ---@param pi integer 当前路径索引
 function path_db:get_prev_pi(pi)
-	return self.path_connections_reserve[pi]
+	return self.path_connections_reverse[pi]
 end
 
 function path_db:nodes_from_start(pi, spi, ni)
@@ -607,8 +607,10 @@ function path_db:next_entity_node(e, dt)
 	local path = self.paths[n.pi][n.spi]
 	local next_node = path[n.ni + n.dir]
 	local new = false
+	local dx = next_node.x - e.pos.x
+	local dy = next_node.y - e.pos.y
 
-	if not next_node or V.dist(next_node.x, next_node.y, e.pos.x, e.pos.y) < 2 * e.motion.real_speed * dt then
+	if not next_node or math.sqrt(dx * dx + dy * dy) < 2 * e.motion.real_speed * dt then
 		n.ni = n.ni + n.dir
 
 		if n.ni < 1 or n.ni > #path then

@@ -3456,6 +3456,106 @@ function SU.y_enemy_walk_step(store, this, animation_name, sprite_id)
 	return true
 end
 
+function SU.y_enemy_walk_step_default(store, this)
+	local next
+	local step = this.motion.real_speed * store.tick_length
+	local pos = this.pos
+
+	if this.motion.forced_waypoint then
+		local w = this.motion.forced_waypoint
+		local dx = w.x - pos.x
+		local dy = w.y - pos.y
+		if math.sqrt(dx * dx + dy * dy) < 2 * step then
+			pos.x, pos.y = w.x, w.y
+			this.motion.forced_waypoint = nil
+
+			return false
+		end
+		next = w
+	else
+		-- this is a hack of P:next_entity_node() for performance. Dont't learn it -- CrazySpottedDove
+		local n = this.nav_path
+		local path = P.paths[n.pi][n.spi]
+		next = path[n.ni + n.dir]
+		local dx = next.x - pos.x
+		local dy = next.y - pos.y
+
+		if not next or math.sqrt(dx * dx + dy * dy) < 2 * step then
+			n.ni = n.ni + n.dir
+
+			if n.ni < 1 or n.ni > #path then
+				if P.path_connections[n.pi] and n.dir > 0 then
+					local newni = P.path_connections_spi_to_ni[n.pi][n.spi]
+
+					n.pi = P.path_connections[n.pi]
+					n.ni = newni + n.dir
+					path = P.paths[n.pi][n.spi]
+				else
+					log.debug("enemy %s ran out of nodes to walk", this.id)
+					coroutine.yield()
+
+					return false
+				end
+			end
+
+			if this.sound_events then
+				S:queue(this.sound_events.new_node, this.sound_events.new_node_args)
+			end
+			-- 只读引用
+			next = path[n.ni + n.dir]
+		end
+
+		if not next then
+			log.debug("enemy %s ran out of nodes to walk", this.id)
+			coroutine.yield()
+
+			return false
+		end
+	end
+
+	local m = this.motion
+	m.dest.x, m.dest.y = next.x, next.y
+	m.arrived = false
+
+	local dx, dy = next.x - pos.x, next.y - pos.y
+	local an, af = U.animation_name_with_direction(this.render.sprites[1], "walk", dx, dy)
+
+	-- U.animation_start_default(this, an, af, store.tick_ts, true)
+	for i = 1, #this.render.sprites do
+		local a = this.render.sprites[i]
+
+		if not a.ignore_start then
+			a.flip_x = af
+
+			if a.animated then
+				a.loop = true
+
+				a.name = an
+			end
+		end
+	end
+
+	if dx * dx + dy * dy <= step * step and not (this.teleport and this.teleport.pending) then
+		pos.x, pos.y = m.dest.x, m.dest.y
+		m.speed.x, m.speed.y = 0, 0
+		m.arrived = true
+	else
+		local v_angle = math.atan2(dy, dx)
+		if this.heading then
+			this.heading.angle = v_angle
+		end
+		local sx, sy = step * math.cos(v_angle), step * math.sin(v_angle)
+		pos.x, pos.y = pos.x + sx, pos.y + sy
+		m.speed.x, m.speed.y = sx / store.tick_length, sy / store.tick_length
+	end
+
+	coroutine.yield()
+
+	m.speed.x, m.speed.y = 0, 0
+
+	return true
+end
+
 ---敌人行走直到被拦截
 ---@param store table game.store
 ---@param this table 敌人实体

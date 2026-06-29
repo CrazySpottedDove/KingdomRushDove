@@ -68,7 +68,7 @@ function(store, this)
         @constelse
         if not blocker then
 
-			SU.y_enemy_walk_step(store, this)
+			SU.y_enemy_walk_step_default(store, this)
 		else
 			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 		end
