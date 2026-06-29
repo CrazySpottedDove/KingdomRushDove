@@ -16288,7 +16288,7 @@ function scripts.rabbit_kamihare.update(this, store)
 	while true do
 		local targets = U.find_enemies_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
-		if targets or store.tick_ts - start_ts > this.duration or not P:is_node_valid(this.nav_path.pi, this.nav_path.ni) or not SU.y_enemy_walk_step(store, this) then
+		if targets or store.tick_ts - start_ts > this.duration or not P:is_node_valid(this.nav_path.pi, this.nav_path.ni) or not SU.y_enemy_walk_step_default(store, this) then
 			break
 		end
 	end

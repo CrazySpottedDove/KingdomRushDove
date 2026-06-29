@@ -5243,7 +5243,7 @@ function scripts.enemy_cannibal.update(this, store)
 					this.vis.bans = bor(this.vis.bans, F_BLOCK)
 					this.motion.forced_waypoint = v(target.pos.x, target.pos.y)
 
-					while SU.y_enemy_walk_step(store, this) do
+					while SU.y_enemy_walk_step_default(store, this) do
 						if this.health.dead then
 							goto label_12_0
 						end
@@ -5864,7 +5864,7 @@ function scripts.enemy_nightscale.update(this, store)
 						U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 						coroutine.yield()
 					else
-						SU.y_enemy_walk_step(store, this)
+						SU.y_enemy_walk_step_default(store, this)
 					end
 				end
 
@@ -6487,7 +6487,7 @@ function scripts.enemy_blacksurge.update(this, store)
 							this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + this.regen.health)
 						end
 
-						SU.y_enemy_walk_step(store, this)
+						SU.y_enemy_walk_step_default(store, this)
 					end
 				end
 
@@ -6824,7 +6824,7 @@ function scripts.enemy_headless_horseman.update(this, store)
 		U.y_animation_play(this, "rise", this.pos.x > this.motion.forced_waypoint.x, store.tick_ts, 1)
 	end
 
-	while SU.y_enemy_walk_step(store, this) do
+	while SU.y_enemy_walk_step_default(store, this) do
 	-- block empty
 	end
 
@@ -6913,7 +6913,7 @@ function scripts.enemy_headless_horseman.update(this, store)
 
 				this.vis.bans = F_ALL
 
-				while SU.y_enemy_walk_step(store, this) do
+				while SU.y_enemy_walk_step_default(store, this) do
 				-- block empty
 				end
 
@@ -8309,7 +8309,7 @@ function scripts.enemy_gunboat.update(this, store)
 				goto label_188_0
 			end
 
-			SU.y_enemy_walk_step(store, this)
+			SU.y_enemy_walk_step_default(store, this)
 		end
 	end
 end
@@ -12250,7 +12250,7 @@ function scripts.enemy_catapult.update(this, store)
 
 			local stop_ni = phase == 1 and this.stop_ni or nil
 
-			while SU.y_enemy_walk_step(store, this) do
+			while SU.y_enemy_walk_step_default(store, this) do
 				if this.health.dead then
 					goto label_238_0
 				end
@@ -12927,7 +12927,7 @@ function scripts.enemy_twilight_scourger_banshee.update(this, store)
 			ps.particle_system.alphas[1] = this.render.sprites[1].alpha
 		end
 
-		if not SU.y_enemy_walk_step(store, this) and kamikaze_target then
+		if not SU.y_enemy_walk_step_default(store, this) and kamikaze_target then
 			if kamikaze_target.tower and kamikaze_target.tower.upgrade_to then
 				for _, e in pairs(store.towers) do
 					if e.tower.holder_id == kamikaze_target.tower.holder_id and V.veq(e.pos, kamikaze_target.pos) then
@@ -18613,7 +18613,7 @@ function scripts.decal_tree_ewok.update(this, store)
 		if store.tick_ts - wait_ts > this.wait_time then
 			U.y_animation_play(this, table.random(this.dance_animations), nil, store.tick_ts, 2)
 
-			while SU.y_enemy_walk_step(store, this) do
+			while SU.y_enemy_walk_step_default(store, this) do
 				coroutine.yield()
 			end
 
@@ -33363,7 +33363,7 @@ function scripts.enemy_cutthroat_rat.update(this, store)
 				local invis_ts = store.tick_ts
 
 				while store.tick_ts - invis_ts < ah.duration and not this.health.dead and this.enemy.can_do_magic and not this.unit.is_stunned do
-					SU.y_enemy_walk_step(store, this)
+					SU.y_enemy_walk_step_default(store, this)
 				end
 
 				this.render.sprites[1].alpha = 255
@@ -33582,7 +33582,7 @@ function scripts.enemy_hyena5.update(this, store)
 					this.vis.bans = bor(this.vis.bans, F_BLOCK)
 					this.motion.forced_waypoint = V.v(target.pos.x, target.pos.y)
 
-					while SU.y_enemy_walk_step(store, this) do
+					while SU.y_enemy_walk_step_default(store, this) do
 						if this.health.dead then
 							goto label_43_0
 						end
@@ -35898,7 +35898,7 @@ function scripts.enemy_specter.update(this, store)
 					this.motion.forced_waypoint = c.pos
 					this.vis.bans = bor(this.vis.bans, F_BLOCK)
 
-					while SU.y_enemy_walk_step(store, this) do
+					while SU.y_enemy_walk_step_default(store, this) do
 						if corruption_break_fn() then
 							goto label_118_0
 						end
@@ -36168,7 +36168,7 @@ function scripts.enemy_deathwood.update(this, store)
 
 		S:queue(this.wake_up_sound)
 
-		while SU.y_enemy_walk_step(store, this) do
+		while SU.y_enemy_walk_step_default(store, this) do
 			if this.unit.is_stunned then
 				SU.y_enemy_stun(store, this)
 			end
@@ -36295,7 +36295,7 @@ function scripts.enemy_animated_armor.update(this, store)
 		U.speed_div_self(this, 2)
 
 		if this.enemy.counts.mod_teleport == 0 and not this.unit.is_stunned then
-			while SU.y_enemy_walk_step(store, this) do
+			while SU.y_enemy_walk_step_default(store, this) do
 				if this.unit.is_stunned then
 					SU.y_enemy_stun(store, this)
 				end
@@ -37878,7 +37878,7 @@ function scripts.enemy_crocs_tank.update(this, store)
 							end
 						end
 
-						SU.y_enemy_walk_step(store, this)
+						SU.y_enemy_walk_step_default(store, this)
 
 						this.elapsed_time = store.tick_ts - a.ts
 					end
@@ -40837,7 +40837,7 @@ function scripts.stage_20_arborean_oldtree_tree.update(this, store)
 	local did_sound_repeat = false
 
 	while true do
-		if this.nav_path.ni < 5 or not SU.y_enemy_walk_step(store, this) then
+		if this.nav_path.ni < 5 or not SU.y_enemy_walk_step_default(store, this) then
 			break
 		end
 
@@ -48917,7 +48917,7 @@ function scripts.enemy_storm_spirit.update(this, store)
 				this.render.sprites[1].ignore_start = true
 
 				while not U.animation_finished_default(this) do
-					SU.y_enemy_walk_step(store, this)
+					SU.y_enemy_walk_step_default(store, this)
 				end
 
 				this.render.sprites[1].ignore_start = false
@@ -70237,7 +70237,7 @@ function scripts.boss_murglum.update(this, store, script)
 			end
 
 			if ignore_soldiers or not blocker and not ranged then
-				SU.y_enemy_walk_step(store, this)
+				SU.y_enemy_walk_step_default(store, this)
 			else
 				U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 			end

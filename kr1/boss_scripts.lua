@@ -2355,7 +2355,7 @@ function scripts.eb_efreeti.update(this, store)
 			end
 
 			if not U.get_blocker(store, this) then
-				if not SU.y_enemy_walk_step(store, this) then
+				if not SU.y_enemy_walk_step_default(store, this) then
 					return
 				end
 			else
@@ -2660,7 +2660,7 @@ function scripts.eb_gorilla.update(this, store)
 				end
 
 				if not U.get_blocker(store, this) then
-					if not SU.y_enemy_walk_step(store, this) then
+					if not SU.y_enemy_walk_step_default(store, this) then
 						return
 					end
 
@@ -3730,7 +3730,7 @@ function scripts.eb_leviathan.update(this, store)
 				a_t.ts = store.tick_ts
 			end
 
-			if not SU.y_enemy_walk_step(store, this) then
+			if not SU.y_enemy_walk_step_default(store, this) then
 				return
 			end
 		end
@@ -6855,7 +6855,7 @@ function scripts.boss_cult_leader.update(this, store)
 					update_armor()
 				end
 
-				SU.y_enemy_walk_step(store, this)
+				SU.y_enemy_walk_step_default(store, this)
 			else
 				U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 			end

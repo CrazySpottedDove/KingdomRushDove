@@ -902,7 +902,7 @@ function M.make_script_utils(U)
 				end
 			end
 			if not blocker and not ranged then
-				SU.y_enemy_walk_step(store, this)
+				SU.y_enemy_walk_step_default(store, this)
 			else
 				U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 			end

@@ -148,7 +148,7 @@ local function analyze_line(line)
 	end
 	-- constvar
 	if fb == 99 and t:find("^constvar%s+", 1) then
-		local cvn, cve = t:match("^constvar%s+(%w+)%s*=%s*(.-)$")
+		local cvn, cve = t:match("^constvar%s+([%w_]+)%s*=%s*(.-)$")
 		if cvn then
 			M._prof.al_hits = M._prof.al_hits + 1
 			return {
@@ -576,10 +576,14 @@ local function transform_returns_to_assign(body, var_names, label_suffix)
 						ve = ve + 1
 					end
 					local expr = body:sub(vs2, ve - 1):match("^%s*(.-)%s*$") or ""
-					if #expr == 0 then
-						out[#out + 1] = vs .. " = nil"
-					else
-						out[#out + 1] = vs .. " = " .. expr
+					if #var_names > 0 then
+						if #expr == 0 then
+							out[#out + 1] = vs .. " = nil"
+						else
+							out[#out + 1] = vs .. " = " .. expr
+						end
+					elseif #expr > 0 then
+						out[#out + 1] = "_ = " .. expr
 					end
 					out[#out + 1] = "\ngoto " .. label .. "\n"
 					i = ve
@@ -935,9 +939,14 @@ _exec_tpl = function(tpl, info, env, scope_vars, out)
 		sub = transform_returns_to_assign(sub, vns, "_" .. cf_counter)
 		M._prof.xret_dt = M._prof.xret_dt + (os.clock() - t1)
 		M._prof.xret_count = M._prof.xret_count + 1
+	else
+		cf_counter = cf_counter + 1
+		sub = transform_returns_to_assign(sub, {}, "_" .. cf_counter)
 	end
 	if lhs then
 		sub = lhs .. "\ndo\n" .. sub .. "\nend\n"
+	else
+		sub = "do\n" .. sub .. "\nend\n"
 	end
 	out[#out + 1] = sub
 end

@@ -124,6 +124,9 @@ end
 
 function M:_compile(e, template)
 	local code = CU.process(template, self.env, e)
+	-- if e.template_name == "enemy_goblin" then
+	-- print(code)
+	-- end
 
 	-- 相同代码字符串 ⇒ 函数必然相同，直接复用
 	local t_cache = _fn_cache[template]

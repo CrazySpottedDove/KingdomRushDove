@@ -3457,30 +3457,28 @@ function SU.y_enemy_walk_step(store, this, animation_name, sprite_id)
 end
 
 function SU.y_enemy_walk_step_default(store, this)
-	local next
 	local step = this.motion.real_speed * store.tick_length
+	local m = this.motion
 	local pos = this.pos
 
-	if this.motion.forced_waypoint then
-		local w = this.motion.forced_waypoint
+	if m.forced_waypoint then
+		local w = m.forced_waypoint
 		local dx = w.x - pos.x
 		local dy = w.y - pos.y
 		if math.sqrt(dx * dx + dy * dy) < 2 * step then
 			pos.x, pos.y = w.x, w.y
-			this.motion.forced_waypoint = nil
+			m.forced_waypoint = nil
 
 			return false
 		end
-		next = w
+		m.dest.x, m.dest.y = w.x, w.y
 	else
 		-- this is a hack of P:next_entity_node() for performance. Dont't learn it -- CrazySpottedDove
 		local n = this.nav_path
 		local path = P.paths[n.pi][n.spi]
-		next = path[n.ni + n.dir]
-		local dx = next.x - pos.x
-		local dy = next.y - pos.y
+		local next = path[n.ni + n.dir]
 
-		if not next or math.sqrt(dx * dx + dy * dy) < 2 * step then
+		if not next or math.sqrt((next.x - pos.x) * (next.x - pos.x) + (next.y - pos.y) * (next.y - pos.y)) < 2 * step then
 			n.ni = n.ni + n.dir
 
 			if n.ni < 1 or n.ni > #path then
@@ -3491,7 +3489,6 @@ function SU.y_enemy_walk_step_default(store, this)
 					n.ni = newni + n.dir
 					path = P.paths[n.pi][n.spi]
 				else
-					log.debug("enemy %s ran out of nodes to walk", this.id)
 					coroutine.yield()
 
 					return false
@@ -3506,19 +3503,81 @@ function SU.y_enemy_walk_step_default(store, this)
 		end
 
 		if not next then
-			log.debug("enemy %s ran out of nodes to walk", this.id)
 			coroutine.yield()
 
 			return false
 		end
+		m.dest.x, m.dest.y = next.x, next.y
 	end
 
-	local m = this.motion
-	m.dest.x, m.dest.y = next.x, next.y
 	m.arrived = false
 
-	local dx, dy = next.x - pos.x, next.y - pos.y
-	local an, af = U.animation_name_with_direction(this.render.sprites[1], "walk", dx, dy)
+	local dx, dy = m.dest.x - pos.x, m.dest.y - pos.y
+	local an
+	local af = false
+	do
+		local _sprite = this.render.sprites[1]
+		local _angles = _sprite.angles and _sprite.angles["walk"]
+
+		if _angles then
+			local _angle_count = #_angles
+
+			if _angle_count == 1 then
+				an, af = _angles[1], dx < 0
+			elseif _angle_count == 2 then
+				local _coordinate_idx = dy > 0 and 1 or 2
+				an = _angles[_coordinate_idx]
+				af = (_sprite.angles_flip_horizontal and _sprite.angles_flip_horizontal[_coordinate_idx]) and (dx >= 0) or (dx < 0)
+			else
+				local _angle = math.atan2(dy, dx) % 6.2831853071795862
+				local _coordinate_idx = 1
+				local _a1, _a2, _a3, _a4 = 45, 135, 225, 315
+				if _sprite.angles_custom and _sprite.angles_custom["walk"] then
+					_a1, _a2, _a3, _a4 = _sprite.angles_custom["walk"][1], _sprite.angles_custom["walk"][2], _sprite.angles_custom["walk"][3], _sprite.angles_custom["walk"][4]
+				end
+
+				local _stickiness = _sprite.angles_stickiness and _sprite.angles_stickiness["walk"]
+				local _angle_deg = _angle * 57.295779513082323
+
+				if _stickiness then
+					local _skew_factor = _sprite._last_skew_factor
+					if _skew_factor then
+						local _skew = _stickiness * _skew_factor
+						_a1, _a3 = _a1 - _skew, _a3 - _skew
+						_a2, _a4 = _a2 + _skew, _a4 + _skew
+					end
+					if _a1 <= _angle_deg and _angle_deg < _a2 then
+						_coordinate_idx = 2
+						_sprite._last_skew_factor = 1
+					elseif _a3 <= _angle_deg and _angle_deg < _a4 then
+						_coordinate_idx = 3
+						_sprite._last_skew_factor = 1
+					else
+						_sprite._last_skew_factor = -1
+						if dx < 0 then
+							af = true
+						end
+					end
+				else
+					if _a1 <= _angle_deg and _angle_deg < _a2 then
+						_coordinate_idx = 2
+					elseif _a3 <= _angle_deg and _angle_deg < _a4 then
+						_coordinate_idx = 3
+					elseif dx < 0 then
+						af = true
+					end
+				end
+
+				if _sprite.angles_flip_vertical and _sprite.angles_flip_vertical["walk"] then
+					af = dx < 0
+				end
+
+				an = _angles[_coordinate_idx]
+			end
+		else
+			an, af = "walk", dx < 0
+		end
+	end
 
 	-- U.animation_start_default(this, an, af, store.tick_ts, true)
 	for i = 1, #this.render.sprites do
@@ -3606,7 +3665,7 @@ function SU.y_enemy_walk_until_blocked(store, this, ignore_soldiers, func)
 		end
 
 		if ignore_soldiers or not blocker and not ranged then
-			SU.y_enemy_walk_step(store, this)
+			SU.y_enemy_walk_step_default(store, this)
 		else
 			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 		end
@@ -3660,7 +3719,7 @@ function SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func(store, this)
 		end
 
 		if not blocker and not ranged then
-			SU.y_enemy_walk_step(store, this)
+			SU.y_enemy_walk_step_default(store, this)
 		else
 			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 		end
@@ -3693,7 +3752,7 @@ function SU.y_enemy_walk_until_blocked_off__ignore_soldiers__func__ranged(store,
 		end
 
 		if not blocker then
-			SU.y_enemy_walk_step(store, this)
+			SU.y_enemy_walk_step_default(store, this)
 		else
 			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 		end
@@ -3746,7 +3805,7 @@ function SU.y_enemy_walk_until_blocked_on__ranged_off__ignore_soldiers__func(sto
 		end
 
 		if not blocker and not ranged then
-			SU.y_enemy_walk_step(store, this)
+			SU.y_enemy_walk_step_default(store, this)
 		else
 			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 		end

@@ -607,10 +607,8 @@ function path_db:next_entity_node(e, dt)
 	local path = self.paths[n.pi][n.spi]
 	local next_node = path[n.ni + n.dir]
 	local new = false
-	local dx = next_node.x - e.pos.x
-	local dy = next_node.y - e.pos.y
 
-	if not next_node or math.sqrt(dx * dx + dy * dy) < 2 * e.motion.real_speed * dt then
+	if not next_node or math.sqrt((next_node.x - e.pos.x) * (next_node.x - e.pos.x) + (next_node.y - e.pos.y) * (next_node.y - e.pos.y)) < 2 * e.motion.real_speed * dt then
 		n.ni = n.ni + n.dir
 
 		if n.ni < 1 or n.ni > #path then
