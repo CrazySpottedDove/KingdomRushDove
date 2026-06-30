@@ -1,4 +1,4 @@
--- 插件详情弹窗（README 查看器）
+-- Markdown 文档查看弹窗
 -- 支持 markdown 的简单渲染（标题、加粗、代码块等）
 local class = require("middleclass")
 local V = require("lib.klua.vector")
@@ -18,26 +18,23 @@ local RS = GGLabel.static.ref_h / REF_H
 -- ─────────────────────────────────────────────
 -- 颜色常量（所有文字颜色集中定义，方便统一调亮）
 -- ─────────────────────────────────────────────
--- 注意：colors.text 使用 0~255 整数 RGBA，不做归一化
-local C_TEXT_TITLE = {250, 232, 180, 255} -- 标题/表头 - 亮金色
-local C_TEXT_BODY = {205, 196, 168, 255} -- 正文/列表 - 明亮暖白（比原来亮很多）
-local C_TEXT_TABLE = {215, 206, 178, 255} -- 表格数据 - 介于正文和标题之间
-local C_TEXT_QUOTE = {195, 186, 158, 255} -- 引用 - 中暖色
-local C_TEXT_CODE = {195, 215, 180, 255} -- 代码 - 绿色调保持不变
-local C_TEXT_EMPTY = {210, 195, 150, 255} -- 空状态 - 暖色
--- ─────────────────────────────────────────────
+local C_TEXT_TITLE = {250, 232, 180, 255}
+local C_TEXT_BODY = {205, 196, 168, 255}
+local C_TEXT_TABLE = {215, 206, 178, 255}
+local C_TEXT_QUOTE = {195, 186, 158, 255}
+local C_TEXT_CODE = {195, 215, 180, 255}
+local C_TEXT_EMPTY = {210, 195, 150, 255}
 
 -- ─────────────────────────────────────────────
--- 字号常量（统一管理，方便整体缩放）
+-- 字号常量
 -- ─────────────────────────────────────────────
-local FS_TITLE = 18 -- 面板标题
-local FS_HEADING = {24, 21, 19, 17, 16, 14} -- H1~H6
-local FS_BODY = 16 -- 正文/列表项
-local FS_CODE = 15 -- 代码
-local FS_TABLE = 15 -- 表格单元格
-local FS_QUOTE = 14 -- 引用
-local FS_EMPTY = 15 -- 空状态
--- ─────────────────────────────────────────────
+local FS_TITLE = 18
+local FS_HEADING = {24, 21, 19, 17, 16, 14}
+local FS_BODY = 16
+local FS_CODE = 15
+local FS_TABLE = 15
+local FS_QUOTE = 14
+local FS_EMPTY = 15
 
 -- ─────────────────────────────────────────────
 -- Markdown 解析：将 markdown 文本解析为块列表
@@ -54,37 +51,25 @@ local BlockType = {
 	EMPTY = "empty"
 }
 
---- 去除行内 markdown 标记，保留纯文本
 local function strip_inline_markdown(text)
 	if not text then
 		return ""
 	end
-	-- 行内代码 `text`
 	text = text:gsub("`([^`]+)`", "%1")
-	-- 加粗 **text** 或 __text__
 	text = text:gsub("%*%*(.-)%*%*", "%1")
 	text = text:gsub("__(.-)__", "%1")
-	-- 斜体 *text*：* 几乎不会出现在普通文本中，直接匹配
 	text = text:gsub("%*(.-)%*", "%1")
-	-- 斜体 _text_：只在单词边界时才算，防止吞噬 hero_auto_rally 中的下划线
-	-- 规则：前面是[非单词字符或行首]，后面是[非单词字符或行尾]
 	text = text:gsub("([^%w])_([^_]-)_([^%w])", "%1%2%3")
 	text = text:gsub("^_([^_]-)_([^%w])", "%1%2")
 	text = text:gsub("([^%w])_([^_]-)_$", "%1%2")
 	text = text:gsub("^_([^_]-)_$", "%1")
-	-- 删除线 ~~text~~
 	text = text:gsub("~~(.-)~~", "%1")
-	-- 链接 [text](url) 只保留 text
 	text = text:gsub("%[([^%]]*)%]%([^%)]*%)", "%1")
-	-- 图片 ![alt](url) 完全去除
 	text = text:gsub("!%[[^%]]*%]%([^%)]*%)", "")
-	-- HTML 标签
 	text = text:gsub("<[^>]+>", "")
 	return text
 end
 
------------------------------------------------------------------------
--- 纯字符串辅助：检查一行是否全部由同一个字符重复组成（如 --- *** ___）
 local function is_all_same_char(s)
 	if #s < 3 then
 		return false
@@ -101,7 +86,6 @@ local function is_all_same_char(s)
 	return true
 end
 
--- 纯字符串辅助：提取前导 fence 字符（``` 或 ~~~）
 local function fence_prefix(s)
 	if #s == 0 then
 		return nil
@@ -124,7 +108,6 @@ local function fence_prefix(s)
 	return nil
 end
 
--- 纯字符串辅助：检查是否为表格分隔行（|------| 或 |:---:|）
 local function is_table_sep(s)
 	if s:sub(1, 1) ~= "|" then
 		return false
@@ -135,7 +118,6 @@ local function is_table_sep(s)
 	if #s < 3 then
 		return false
 	end
-	-- 内层允许 - : 空格以及列分隔符 |
 	for i = 2, #s - 1 do
 		local c = s:sub(i, i)
 		if c ~= "-" and c ~= ":" and c ~= " " and c ~= "|" then
@@ -145,12 +127,10 @@ local function is_table_sep(s)
 	return true
 end
 
--- trim 空白
 local function trim(s)
 	return s:match("^%s*(.-)%s*$") or s
 end
 
---- 简易 markdown 渲染：逐行分类并生成块列表（纯字符串操作，无 goto）
 local function parse_markdown(text)
 	if not text or text == "" then
 		return {}
@@ -158,8 +138,6 @@ local function parse_markdown(text)
 
 	text = text:gsub("\r\n?", "\n")
 	local raw = {}
-	-- 逐行分割，避免 gmatch("([^\n]*)") 在相邻 \n 之间产生幽灵空串 ""
-	-- 但仍保留真实的空行（EMPTY block 需要）
 	local pos = 1
 	local len = #text
 	while pos <= len do
@@ -194,7 +172,6 @@ local function parse_markdown(text)
 	while idx <= #raw do
 		local l = raw[idx]
 
-		-- ─── 代码块内部 ────────────────────
 		if in_code then
 			local trimmed_close = l:match("^%s*(.-)%s*$")
 			if trimmed_close and trimmed_close == c_marker then
@@ -213,7 +190,6 @@ local function parse_markdown(text)
 			end
 			idx = idx + 1
 
-		-- ─── 代码块开口 ────────────────────
 		else
 			local fp = fence_prefix(l)
 			if fp then
@@ -222,14 +198,12 @@ local function parse_markdown(text)
 				c_lines = {}
 				idx = idx + 1
 
-			-- ─── 空行 ──────────────────────
 			elseif l:match("^%s*$") then
 				blocks[#blocks + 1] = {
 					block_type = BlockType.EMPTY
 				}
 				idx = idx + 1
 
-			-- ─── 水平分割线 ────────────────
 			else
 				local trimmed = l:match("^%s*(.-)%s*$")
 				if trimmed and is_all_same_char(trimmed) then
@@ -238,7 +212,6 @@ local function parse_markdown(text)
 					}
 					idx = idx + 1
 
-				-- ─── 标题 ──────────────────
 				else
 					local hash = 0
 					for i = 1, (#l) do
@@ -257,7 +230,6 @@ local function parse_markdown(text)
 						}
 						idx = idx + 1
 
-					-- ─── 引用 ──────────────
 					elseif l:sub(1, 1) == ">" then
 						local bq = l:match("^%>%s?(.+)$")
 						blocks[#blocks + 1] = {
@@ -266,7 +238,6 @@ local function parse_markdown(text)
 						}
 						idx = idx + 1
 
-					-- ─── 列表项 ────────────
 					else
 						local li_ws, li_t = l:match("^(%s*)[%*%+%-]%s+(.+)$")
 						if not li_t then
@@ -280,9 +251,6 @@ local function parse_markdown(text)
 							}
 							idx = idx + 1
 
-						-- ─── 表格 ──────────
-						-- 收集连续的表格行，合并为一个 TABLE block
-						-- 跳过表格行之间可能的真实空行（某些 markdown 风格）
 						elseif l:sub(1, 1) == "|" then
 							local table_rows = {}
 							local sep_found = false
@@ -290,8 +258,6 @@ local function parse_markdown(text)
 								local tl = raw[idx]
 								local ttrimmed = tl:match("^%s*(.-)%s*$") or tl
 
-								-- 空行（可能是 gmatch 伪影，也可能是真实的空行）
-								-- 向前窥探：如果后续还有 | 行则跳过，属于同一表格
 								if tl:match("^%s*$") then
 									local peek = idx + 1
 									local has_more_table = false
@@ -338,7 +304,6 @@ local function parse_markdown(text)
 								}
 							end
 
-						-- ─── 默认段落 ──────
 						else
 							blocks[#blocks + 1] = {
 								block_type = BlockType.PARAGRAPH,
@@ -363,17 +328,16 @@ local function parse_markdown(text)
 end
 
 -- ─────────────────────────────────────────────
--- ModDetailView
+-- MarkdownView
 -- ─────────────────────────────────────────────
-ModDetailView = class("ModDetailView", KView)
+MarkdownView = class("MarkdownView", KView)
 
-function ModDetailView:initialize(sw, sh, title, content, fallback_text)
+function MarkdownView:initialize(sw, sh, title, content, fallback_text)
 	KView.initialize(self, V.v(sw, sh))
 	self._content = content or ""
 	self._fallback_text = fallback_text or "暂无说明文档"
 	self._title = utf8_util.sanitize(title or "详情")
 
-	-- 面板尺寸
 	local panel_w = math.min(PANEL_MAX_W, sw - PANEL_MARGIN)
 	panel_w = math.max(PANEL_MIN_W, panel_w)
 	panel_w = math.min(panel_w, sw - 12)
@@ -381,10 +345,8 @@ function ModDetailView:initialize(sw, sh, title, content, fallback_text)
 	panel_h = math.max(PANEL_MIN_H, panel_h)
 	panel_h = math.min(panel_h, sh - 12)
 
-	-- 背景遮罩
 	self.colors.background = {0, 0, 0, 160}
 
-	-- 面板
 	self._panel = KView:new(V.v(panel_w, panel_h))
 	self._panel.colors.background = {33, 24, 4, 255}
 	self._panel.anchor = V.v(panel_w / 2, panel_h / 2)
@@ -395,7 +357,6 @@ function ModDetailView:initialize(sw, sh, title, content, fallback_text)
 	}
 	self:add_child(self._panel)
 
-	-- 标题
 	local header_bg = KView:new(V.v(panel_w, 44))
 	header_bg.colors.background = {38, 28, 8, 220}
 	header_bg.shape = {
@@ -417,7 +378,6 @@ function ModDetailView:initialize(sw, sh, title, content, fallback_text)
 	title_lbl.pos = V.v(16, 0)
 	self._panel:add_child(title_lbl)
 
-	-- 关闭按钮
 	local close_btn = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
 	close_btn.pos = V.v(panel_w - 23, 23)
 	close_btn.scale:set(1.5, 1.5)
@@ -428,7 +388,6 @@ function ModDetailView:initialize(sw, sh, title, content, fallback_text)
 	end
 	self._panel:add_child(close_btn)
 
-	-- 滚动区域
 	local scroll_top = 52
 	local scroll_bottom = 16
 	local scroll_w = panel_w - 40
@@ -442,7 +401,6 @@ function ModDetailView:initialize(sw, sh, title, content, fallback_text)
 	self._scroll.colors.scroller_foreground = {110, 90, 50, 255}
 	self._scroll.scroller_width = 18
 
-	-- 确保所有子视图传播鼠标事件，使整个滚动态区域可拖动（不仅滚动条）
 	local orig_add_row = self._scroll.add_row
 	function self._scroll:add_row(view)
 		local function set_propagate(v)
@@ -458,19 +416,17 @@ function ModDetailView:initialize(sw, sh, title, content, fallback_text)
 
 	self._panel:add_child(self._scroll)
 
-	-- 渲染内容
 	self:_render_content(content)
 end
 
-function ModDetailView:show()
--- KView 没有 show 方法，hidden 默认为 false，无需额外操作
+function MarkdownView:show()
 end
 
-function ModDetailView:hide()
+function MarkdownView:hide()
 	self.parent:remove_child(self)
 end
 
-function ModDetailView:_render_content(content)
+function MarkdownView:_render_content(content)
 	self._scroll:clear_rows()
 
 	local has_content = content and content ~= ""
@@ -483,7 +439,6 @@ function ModDetailView:_render_content(content)
 	local blocks = parse_markdown(content)
 
 	for _, block in ipairs(blocks) do
-		-- print("Rendering block type:", block.block_type, "text:", block.text)
 		if block.block_type == BlockType.EMPTY then
 			self:_add_spacer_row(12)
 		elseif block.block_type == BlockType.HORIZONTAL_RULE then
@@ -504,7 +459,7 @@ function ModDetailView:_render_content(content)
 	end
 end
 
-function ModDetailView:_add_empty_row(message)
+function MarkdownView:_add_empty_row(message)
 	local scroll_w = self._scroll.size.x - self._scroll.scroller_width - 2 * self._scroll.scroller_margin - 4
 	local row = KView:new(V.v(scroll_w, 50))
 	local lbl = GGLabel:new(V.v(scroll_w, 50))
@@ -522,12 +477,12 @@ function ModDetailView:_add_empty_row(message)
 	self._scroll:add_row(row)
 end
 
-function ModDetailView:_add_spacer_row(height)
+function MarkdownView:_add_spacer_row(height)
 	local scroll_w = self._scroll.size.x - self._scroll.scroller_width - 2 * self._scroll.scroller_margin - 4
 	self._scroll:add_row(KView:new(V.v(scroll_w, height)))
 end
 
-function ModDetailView:_add_hr_row(scroll_w)
+function MarkdownView:_add_hr_row(scroll_w)
 	self:_add_spacer_row(6)
 	local hr = KView:new(V.v(scroll_w, 3))
 	hr.colors.background = {95, 75, 40, 200}
@@ -539,7 +494,7 @@ function ModDetailView:_add_hr_row(scroll_w)
 	self:_add_spacer_row(6)
 end
 
-function ModDetailView:_add_heading_row(text, level, scroll_w)
+function MarkdownView:_add_heading_row(text, level, scroll_w)
 	local font_size_map = FS_HEADING
 	local paddings = {8, 6, 4, 3, 2, 2}
 	local fs = font_size_map[level] or FS_BODY
@@ -562,7 +517,7 @@ function ModDetailView:_add_heading_row(text, level, scroll_w)
 	self:_add_spacer_row(4)
 end
 
-function ModDetailView:_add_paragraph_row(text, scroll_w)
+function MarkdownView:_add_paragraph_row(text, scroll_w)
 	if not text or text == "" then
 		return
 	end
@@ -573,10 +528,9 @@ function ModDetailView:_add_paragraph_row(text, scroll_w)
 	lbl.vertical_align = "top"
 	lbl.colors.text = C_TEXT_BODY
 	lbl.text = utf8_util.sanitize(text)
-	lbl.fit_lines = 9999 -- 不限行数，不缩小字号，文本自由换行
+	lbl.fit_lines = 9999
 	lbl.line_height = 1.45
 
-	-- 计算文本换行后的实际高度
 	local _, wrapped_lines = lbl:get_wrap_lines()
 	local font_height = lbl:get_font_height()
 	local text_h = math.max(font_height, wrapped_lines * font_height * lbl.line_height)
@@ -589,7 +543,7 @@ function ModDetailView:_add_paragraph_row(text, scroll_w)
 	self._scroll:add_row(row)
 end
 
-function ModDetailView:_add_code_row(text, scroll_w)
+function MarkdownView:_add_code_row(text, scroll_w)
 	local padding_v = 10
 	local padding_h = 16
 	local code_lbl = GGLabel:new(V.v(scroll_w - padding_h - 8, 200))
@@ -602,7 +556,6 @@ function ModDetailView:_add_code_row(text, scroll_w)
 	code_lbl.fit_lines = 9999
 	code_lbl.line_height = 1.35
 
-	-- 使用 GGLabel API 精确计算文本高度
 	local _, wrapped_lines = code_lbl:get_wrap_lines()
 	local font_height = code_lbl:get_font_height()
 	local text_h = math.max(font_height, wrapped_lines * font_height * code_lbl.line_height)
@@ -616,7 +569,6 @@ function ModDetailView:_add_code_row(text, scroll_w)
 		args = {"fill", 0, 0, scroll_w, h, 8, 8}
 	}
 
-	-- 左侧彩色竖条，强调代码块
 	local accent_bar = KView:new(V.v(5, h))
 	accent_bar.colors.background = {60, 140, 90, 220}
 	accent_bar.shape = {
@@ -631,7 +583,7 @@ function ModDetailView:_add_code_row(text, scroll_w)
 	self:_add_spacer_row(8)
 end
 
-function ModDetailView:_add_table_block(block, scroll_w)
+function MarkdownView:_add_table_block(block, scroll_w)
 	local rows = block.rows
 	if not rows or #rows == 0 then
 		return
@@ -639,7 +591,6 @@ function ModDetailView:_add_table_block(block, scroll_w)
 
 	local header_count = block.header_count or 0
 
-	-- 计算最大列数
 	local max_cells = 0
 	for _, row in ipairs(rows) do
 		max_cells = math.max(max_cells, #row)
@@ -653,18 +604,15 @@ function ModDetailView:_add_table_block(block, scroll_w)
 	local line_height_v = font_size * 1.35
 
 	for row_idx, cells in ipairs(rows) do
-		-- 估算行高
 		local max_cell_lines = 1
 		for _, c in ipairs(cells) do
 			local approx_lines = math.max(1, math.ceil(#c / math.max(1, math.floor(cell_w / (font_size * 0.65)))))
 			max_cell_lines = math.max(max_cell_lines, approx_lines)
 		end
 
-		-- 行高 = 文字高度 + 上下留白
 		local row_h = math.max(26, max_cell_lines * line_height_v + 12)
 		local row = KView:new(V.v(scroll_w, row_h))
 
-		-- 底部细线
 		local bottom_line = KView:new(V.v(scroll_w, 1))
 		bottom_line.colors.background = {80, 65, 35, 180}
 		bottom_line.pos = V.v(0, row_h - 2)
@@ -675,12 +623,10 @@ function ModDetailView:_add_table_block(block, scroll_w)
 		for idx, cell_text in ipairs(cells) do
 			local lbl = GGLabel:new(V.v(cell_w - 4, row_h))
 			if is_header then
-				-- 表头行：粗体（使用 h 字体族）+ 金色文字
 				lbl.font_name = "h"
 				lbl.font_size = font_size
 				lbl.colors.text = C_TEXT_TITLE
 			else
-				-- 数据行：正常体
 				lbl.font_name = "body"
 				lbl.font_size = font_size
 				lbl.colors.text = C_TEXT_TABLE
@@ -698,7 +644,7 @@ function ModDetailView:_add_table_block(block, scroll_w)
 	end
 end
 
-function ModDetailView:_add_quote_row(text, scroll_w)
+function MarkdownView:_add_quote_row(text, scroll_w)
 	local lbl = GGLabel:new(V.v(scroll_w - 20, 200))
 	lbl.font_name = "body"
 	lbl.font_size = FS_QUOTE * RS
@@ -706,10 +652,9 @@ function ModDetailView:_add_quote_row(text, scroll_w)
 	lbl.vertical_align = "top"
 	lbl.colors.text = C_TEXT_QUOTE
 	lbl.text = utf8_util.sanitize(text)
-	lbl.fit_lines = 9999 -- 不限行数，不缩小字号
+	lbl.fit_lines = 9999
 	lbl.line_height = 1.4
 
-	-- 计算文本换行后的实际高度
 	local _, wrapped_lines = lbl:get_wrap_lines()
 	local font_height = lbl:get_font_height()
 	local text_h = math.max(font_height, wrapped_lines * font_height * lbl.line_height)
@@ -718,7 +663,6 @@ function ModDetailView:_add_quote_row(text, scroll_w)
 
 	lbl.size = V.v(scroll_w - 20, h)
 
-	-- 引用左侧竖线
 	local quote_bar = KView:new(V.v(4, h))
 	quote_bar.colors.background = {161, 122, 45, 200}
 	quote_bar.pos = V.v(0, 0)
@@ -729,7 +673,7 @@ function ModDetailView:_add_quote_row(text, scroll_w)
 	self._scroll:add_row(row)
 end
 
-function ModDetailView:_add_list_item_row(text, indent, scroll_w)
+function MarkdownView:_add_list_item_row(text, indent, scroll_w)
 	local lbl = GGLabel:new(V.v(scroll_w - indent * 20 - 20, 200))
 	lbl.font_name = "body"
 	lbl.font_size = FS_BODY * RS
@@ -737,10 +681,9 @@ function ModDetailView:_add_list_item_row(text, indent, scroll_w)
 	lbl.vertical_align = "top"
 	lbl.colors.text = C_TEXT_BODY
 	lbl.text = utf8_util.sanitize("• " .. text)
-	lbl.fit_lines = 9999 -- 不限行数，不缩小字号
+	lbl.fit_lines = 9999
 	lbl.line_height = 1.4
 
-	-- 计算文本换行后的实际高度
 	local _, wrapped_lines = lbl:get_wrap_lines()
 	local font_height = lbl:get_font_height()
 	local text_h = math.max(font_height, wrapped_lines * font_height * lbl.line_height)
@@ -753,4 +696,4 @@ function ModDetailView:_add_list_item_row(text, indent, scroll_w)
 	self._scroll:add_row(row)
 end
 
-return ModDetailView
+return MarkdownView

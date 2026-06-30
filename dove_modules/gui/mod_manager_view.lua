@@ -11,7 +11,7 @@ local json = require("lib.json")
 local persistence = require("lib.klua.persistence")
 local mod_paths = require("mod_paths")
 local editable_panel_view = require("dove_modules.gui.editable_panel_view")
-local mod_detail_view = require("dove_modules.gui.mod_detail_view")
+local markdown_view = require("dove_modules.gui.markdown_view")
 local zip = require("lib.zip")
 
 local km = require("lib.klua.macros")
@@ -1756,7 +1756,7 @@ function ModManagerView:_show_local_mod_detail(mod_data)
 		content = nil
 	end
 
-	local detail = mod_detail_view:new(self._sw, self._sh, mod_data.config.name or mod_data.name, content, fallback)
+	local detail = markdown_view:new(self._sw, self._sh, mod_data.config.name or mod_data.name, content, fallback)
 	self:add_child(detail)
 	detail:show()
 end
@@ -1784,7 +1784,7 @@ function ModManagerView:_show_store_mod_detail(item)
 		if tonumber(resp.code) ~= 200 then
 			-- 可能没有 README，使用 item.desc 作为备选
 			self:_set_status("插件无 README 文档", 100)
-			local detail = mod_detail_view:new(self._sw, self._sh, item.name or item.entry, nil, item.desc or "暂无说明文档")
+			local detail = markdown_view:new(self._sw, self._sh, item.name or item.entry, nil, item.desc or "暂无说明文档")
 			self:add_child(detail)
 			detail:show()
 			return true, nil
@@ -1795,7 +1795,7 @@ function ModManagerView:_show_store_mod_detail(item)
 			content = nil
 		end
 		self:_set_status("已获取详情", 100)
-		local detail = mod_detail_view:new(self._sw, self._sh, item.name or item.entry, content, item.desc or "暂无说明文档")
+		local detail = markdown_view:new(self._sw, self._sh, item.name or item.entry, content, item.desc or "暂无说明文档")
 		self:add_child(detail)
 		detail:show()
 		return true, nil
