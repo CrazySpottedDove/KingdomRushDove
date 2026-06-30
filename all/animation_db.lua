@@ -79,6 +79,14 @@ function animation_db.extract_frame_from(a)
 	return {frame_count, frame_names}
 end
 
+--- 提供给插件的 animations 注册接口
+---@param animations table
+function animation_db:register_animations(animations)
+	for k, v in pairs(animations) do
+		self.db[k] = self.extract_frame_from(v)
+	end
+end
+
 function animation_db:load()
 	if self.loaded then
 		return
