@@ -339,6 +339,7 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 
 	self.mode_btn = header_btn("前往商店", header_group_x, header_top_y)
 	self.mode_btn.on_press = function()
+		self._category_panel.hidden = true
 		local prev_mode = self.mode
 		self.mode = (self.mode == "local") and "store" or "local"
 		self:_refresh_header_buttons()
@@ -365,17 +366,75 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 
 	self.category_btn = header_btn("分类：全部", header_group_x + (header_btn_w + header_btn_gap) * 2, header_top_y)
 	self.category_btn.on_press = function()
-		self.category_idx = self.category_idx % #CATEGORY_OPTIONS + 1
-		self.store_page = 1
-		self:_refresh_header_buttons()
-		if self.mode == "store" then
-			self:_start_task("刷新商店列表", function()
-				return self:_fetch_store_list()
-			end)
-		else
-			-- 本地模式，直接显示对应分类的条目，无需网络请求
-			self:_render_current_list()
+		self:_toggle_category_panel()
+	end
+
+	-- 分类选择下拉面板
+	self._category_panel = KView:new(V.v(380, 180))
+	self._category_panel.colors.background = {35, 25, 12, 240}
+	self._category_panel.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, 380, 180, 10, 10}
+	}
+	self._category_panel.hidden = true
+	self.back:add_child(self._category_panel)
+	local cat_panel_x = math.max(20, panel_w - 20 - 380)
+	self._category_panel.pos = V.v(cat_panel_x, sep_y + 2)
+
+	local CAT_COLS = 2
+	local CAT_GAP = 6
+	local CAT_PAD = 12
+	local cat_btn_w = math.floor((380 - CAT_PAD * 2 - CAT_GAP * (CAT_COLS - 1)) / CAT_COLS)
+	local cat_btn_h = 32
+	self._category_buttons = {}
+	for i, opt in ipairs(CATEGORY_OPTIONS) do
+		local col = (i - 1) % CAT_COLS
+		local row = math.floor((i - 1) / CAT_COLS)
+		local bx = CAT_PAD + col * (cat_btn_w + CAT_GAP)
+		local by = CAT_PAD + row * (cat_btn_h + CAT_GAP)
+		local btn = ModActionButton:new(opt.label, V.v(cat_btn_w, cat_btn_h))
+		btn.pos = V.v(bx, by)
+		btn._category_index = i
+
+		local orig_enter = btn.on_enter
+		local orig_exit = btn.on_exit
+
+		function btn:on_enter()
+			orig_enter(self)
+			if self._is_selected then
+				self.colors.background = {58, 183, 90, 245}
+				self._label.colors.text = {195, 255, 178, 255}
+			end
 		end
+
+		function btn:on_exit()
+			orig_exit(self)
+			if self._is_selected then
+				self.colors.background = {35, 148, 68, 215}
+				self._label.colors.text = {195, 255, 178, 255}
+			end
+		end
+
+		btn.on_press = function()
+			if self.category_idx == i then
+				self._category_panel.hidden = true
+				return
+			end
+			self.category_idx = i
+			self.store_page = 1
+			self:_refresh_header_buttons()
+			if self.mode == "store" then
+				self:_start_task("刷新商店列表", function()
+					return self:_fetch_store_list()
+				end)
+			else
+				self:_render_current_list()
+			end
+			self._category_panel.hidden = true
+		end
+
+		self._category_panel:add_child(btn)
+		self._category_buttons[i] = btn
 	end
 
 	self.refresh_btn = header_btn("刷新商店", header_group_x, header_row2_y)
@@ -768,6 +827,34 @@ function ModManagerView:_refresh_header_buttons()
 		else
 			self.my_plugins_btn:set_text("切换我的插件")
 			self.my_plugins_btn:_refresh()
+		end
+	end
+end
+
+function ModManagerView:_toggle_category_panel()
+	if not self._category_panel then
+		return
+	end
+	if self._category_panel.hidden then
+		self:_refresh_category_buttons_highlight()
+		self._category_panel.hidden = false
+		self._category_panel:order_to_front()
+	else
+		self._category_panel.hidden = true
+	end
+end
+
+function ModManagerView:_refresh_category_buttons_highlight()
+	if not self._category_buttons then
+		return
+	end
+	for i, btn in ipairs(self._category_buttons) do
+		local selected = i == self.category_idx
+		btn._is_selected = selected
+		btn:_refresh()
+		if selected then
+			btn.colors.background = {35, 148, 68, 215}
+			btn._label.colors.text = {195, 255, 178, 255}
 		end
 	end
 end
@@ -1590,6 +1677,7 @@ function ModManagerView:show()
 	self:_capture_state()
 	self:_render_current_list()
 	self.task_dialog.hidden = true
+	self._category_panel.hidden = true
 	self:_set_status("前往插件商店后会自动拉取第一页", 0)
 	self:_sanitize_view_texts(self.back)
 	ModManagerView.super.show(self)
