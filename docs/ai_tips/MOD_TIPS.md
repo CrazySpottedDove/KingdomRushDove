@@ -53,7 +53,6 @@ return {
     name = "mod名称",
     version = "1.0",
     entry = "入口文件名称（无.lua后缀）"
-    game_version = {"kr1", "kr2"},  -- 支持的游戏版本
     desc = "描述",
     url = "链接",
     by = "作者",

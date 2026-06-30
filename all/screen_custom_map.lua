@@ -110,15 +110,6 @@ local function scan_maps()
 		if info and info.type == "directory" then
 			local cfg = load_lua_file(base .. "/config.lua")
 			local supported = true
-			if type(cfg) == "table" and type(cfg.game_version) == "table" and #cfg.game_version > 0 then
-				supported = false
-				for _, game_version in ipairs(cfg.game_version) do
-					if game_version == KR_GAME then
-						supported = true
-						break
-					end
-				end
-			end
 			if supported and type(cfg) == "table" then
 				local level_name = cfg.level_name or string.format("level%02d", tonumber(cfg.level_idx) or 1)
 				local level_idx = tonumber(cfg.level_idx) or tonumber(level_name:match("level(%d+)")) or 1

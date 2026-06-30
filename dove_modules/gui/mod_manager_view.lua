@@ -180,17 +180,6 @@ local function normalize_headers(h)
 	return out
 end
 
-local function in_game_version(plugin)
-	local gv = plugin.game_version
-	if type(gv) ~= "table" then
-		return true
-	end
-	if #gv == 0 then
-		return true
-	end
-	return table.contains(gv, KR_GAME)
-end
-
 require("dove_modules.gui.mod_manager_components")
 
 ModManagerView = class("ModManagerView", PopUpView)
@@ -948,11 +937,9 @@ function ModManagerView:_decode_store_page(body, fallback_page)
 	local filtered = {}
 	local by_entry = {}
 	for _, item in ipairs(items) do
-		if in_game_version(item) then
-			filtered[#filtered + 1] = item
-			if item.entry and not by_entry[item.entry] then
-				by_entry[item.entry] = item
-			end
+		filtered[#filtered + 1] = item
+		if item.entry and not by_entry[item.entry] then
+			by_entry[item.entry] = item
 		end
 	end
 

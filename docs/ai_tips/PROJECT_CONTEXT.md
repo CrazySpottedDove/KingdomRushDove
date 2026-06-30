@@ -307,7 +307,6 @@ CALL_ORIGINAL(obj, fn_name, ...)
 return {
 	name = "mod名称",
 	version = "1.0",
-	game_version = { "kr1" },
 	enabled = true,
 	priority = 0, -- 越小越先初始化（高优先级）
 }

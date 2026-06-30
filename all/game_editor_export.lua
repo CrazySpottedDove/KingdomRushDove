@@ -274,7 +274,6 @@ function EditorExportView:_do_export()
 		desc = desc or "",
 		url = url ~= "" and url or "",
 		category = category ~= "" and category or "level",
-		game_version = {KR_GAME},
 		level_idx = self.level_idx,
 		level_name = level_name,
 		enabled = true,

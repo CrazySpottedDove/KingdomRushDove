@@ -60,7 +60,6 @@ end
 ---@param config table 模组配置表
 ---@return string 格式化的模组信息字符串
 function mod_db.get_debug_info(config)
-	local game_version = mod_utils.table_tostring(config.game_version)
 	local o = "\n"
 
 	local function f(...)
@@ -72,8 +71,7 @@ function mod_db.get_debug_info(config)
 	f("%-9s: %-20s", "name", config.name or "unknown") -- 模组名称
 	f(" | %-13s: %s\n", "version", config.version or "unknown") -- 模组版本
 	f("%-9s: %-20s", "by", config.by or "unknown") -- 作者信息
-	f(" | %-13s: %s\n", "game_version", game_version) -- 兼容游戏版本
-	f("%-9s: %-20d\n", "priority", config.priority) -- 优先级
+	f(" | %-13s: %s\n", "priority", config.priority or 0) -- 优先级
 	f("%-9s: %s\n", "desc", config.desc or "unknown") -- 模组描述
 	f("%-9s: %s", "url", config.url or "unknown") -- 模组发布地址
 
@@ -101,15 +99,6 @@ function mod_db.check_get_available_mods()
 		end
 
 		if not config.enabled then
-			goto continue
-		end
-
-		local game_version = config.game_version
-		local game_version_type = type(game_version)
-
-		if not (game_version_type == "string" and game_version == KR_GAME or game_version_type == "table" and table.contains(game_version, KR_GAME)) then
-			log.error("Mod '%s' is not compatible. Required game version: %s", config.name, mod_utils.table_tostring(game_version) or "unknown", config.name)
-
 			goto continue
 		end
 
