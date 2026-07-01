@@ -27457,7 +27457,7 @@ scripts.bolt_tower_deep_devils = {
 			b.bullet.target_id = target.id
 			b.bullet.source_id = this.bullet.source_id
 			b.bullet.damage_factor = this.bullet.damage_factor
-			b.chain = {}
+			b.chain = {this.bullet.target_id}
 			queue_insert(store, b)
 		end
 		return true
@@ -27467,7 +27467,7 @@ scripts.bolt_tower_deep_devils = {
 scripts.ray_deep_devils = {
 	insert = function(this, store)
 		if this.chain then
-			if #this.chain <= 1 then
+			if #this.chain <= 2 then
 				local target = U.detect_foremost_enemy_in_range_filter_on(this.pos, 120, this.bullet.damage_flags, this.bullet.damage_bans, function(e)
 					return not table.arraycontains(this.chain, e.id)
 				end)
