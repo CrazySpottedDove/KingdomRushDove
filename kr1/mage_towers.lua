@@ -4464,4 +4464,4 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].size_names = nil
 tt.render.sprites[1].size_scales = {vv(1.0), vv(1.3), vv(1.8)}
 tt.render.sprites[1].z = Z_EFFECTS
-tt.modifier.vis_bans = bor(F_BOSS, F_MINIBOSS, F_FLYING)
+tt.modifier.vis_bans = F_BOSS
