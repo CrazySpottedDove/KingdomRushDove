@@ -45,7 +45,8 @@ GS.mage_towers = {
 	"tower_dragons_lvl4",
 	"tower_infernal_mage",
 	"tower_orc_shaman",
-	"tower_spirit_mausoleum"
+	"tower_spirit_mausoleum",
+	"tower_deep_devils"
 }
 GS.engineer_towers = {
 	"tower_engineer_1",

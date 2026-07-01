@@ -70,7 +70,8 @@ game.required_textures = {
 	"kr4_warmongers_tower_balloon",
 	"kr4_fallen_ones_spirit_mausoleum",
 	"kr4_elves_tower_barrack",
-	"kr4_warmongers_tower_archer"
+	"kr4_warmongers_tower_archer",
+	"kr4_deep_devils_tower"
 }
 game.ref_h = REF_H
 game.ref_w = REF_W
@@ -113,7 +114,8 @@ game.required_sounds = {
 	"tower_balloon",
 	"tower_spirit_mausoleum",
 	"kr4_elves_barrack",
-	"tower_goblirang"
+	"tower_goblirang",
+	"tower_deep_devils"
 }
 game.plugin_required_textures = {}
 game.plugin_required_sounds = {}

@@ -1052,7 +1052,9 @@ upgrades.soldiers = {
 	"soldier_zombie_big",
 	"soldier_gargoyle",
 	"soldier_elves_harasser",
-	"soldier_elves_espectral_harasser"
+	"soldier_elves_espectral_harasser",
+	"soldier_deep_devils",
+	"soldier_deep_devils_chosen"
 }
 
 upgrades.barrack_soldiers = {
@@ -1131,10 +1133,11 @@ upgrades.towers_with_barrack = {
 	"tower_grim_cemetery",
 	"tower_twilight_elves_barrack",
 	"tower_balloon",
-	"tower_spirit_mausoleum"
+	"tower_spirit_mausoleum",
+	"tower_deep_devils"
 }
 
-upgrades.non_barrack_towers_with_barrack_attribute = {"tower_sorcerer", "tower_mech", "tower_necromancer", "tower_frankenstein", "tower_druid", "tower_dark_elf_lvl4", "tower_bone_flingers", "tower_balloon", "tower_spirit_mausoleum"}
+upgrades.non_barrack_towers_with_barrack_attribute = {"tower_sorcerer", "tower_mech", "tower_necromancer", "tower_frankenstein", "tower_druid", "tower_dark_elf_lvl4", "tower_bone_flingers", "tower_balloon", "tower_spirit_mausoleum", "tower_deep_devils"}
 
 upgrades.mage_towers = GS.mage_towers
 
@@ -1161,7 +1164,9 @@ upgrades.mage_tower_bolts = {
 	"bolt_faerie_dragon_lvl4",
 	"bolt_infernal_mage",
 	"bolt_orc_shaman",
-	"bolt_tower_spirit_mausoleum"
+	"bolt_tower_spirit_mausoleum",
+	"bolt_tower_deep_devils",
+	"ray_deep_devils"
 }
 
 local other_bolts = {

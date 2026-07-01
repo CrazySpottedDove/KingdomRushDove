@@ -40,7 +40,6 @@ tt.powers.thorn = CC("power")
 tt.powers.thorn.price_base = 225
 tt.powers.thorn.price_inc = 175
 tt.powers.thorn.aura = "aura_ranger_thorn"
-
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_archer_%04i"
 tt.render.sprites[1].offset = vec_2(0, 15)

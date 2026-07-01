@@ -23915,11 +23915,6 @@ function scripts.soldier_dark_knight.update(this, store)
 	end
 
 	local brk, sta
-	local function sync_flip()
-		local f = this.render.sprites[1].flip_x
-		this.render.sprites[2].flip_x = f
-		this.render.sprites[3].flip_x = f
-	end
 
 	local p_instakill = this.powers.instakill
 	local p_spike = this.powers.spike
@@ -23969,7 +23964,6 @@ function scripts.soldier_dark_knight.update(this, store)
 
 		if this.unit.is_stunned then
 			SU.soldier_idle(store, this)
-			sync_flip()
 			goto dark_knight_continue
 		end
 
@@ -24055,7 +24049,6 @@ function scripts.soldier_dark_knight.update(this, store)
 		end
 
 		SU.soldier_idle(store, this)
-		sync_flip()
 		SU.soldier_regen(store, this)
 
 		::dark_knight_continue::
@@ -26945,12 +26938,9 @@ function scripts.soldier_elves_harasser.update(this, store, script)
 				goto label_44_1
 			end
 
-			-- if this.ranged and not this.ranged.range_while_blocking then
 			brk, sta = SU.y_soldier_ranged_attacks(store, this)
 			if brk or sta == A_DONE then
 				goto label_44_1
-			-- elseif sta == A_IN_COOLDOWN and not this.ranged.go_back_during_cooldown then
-			-- goto label_44_0
 			end
 
 			if SU.soldier_go_back_step(store, this) then
@@ -27324,6 +27314,279 @@ function scripts.goblirang.update(this, store)
 		goto label_193_0
 	end
 
+	queue_remove(store, this)
+end
+
+scripts.tower_deep_devils = {}
+
+function scripts.tower_deep_devils.remove(this, store)
+	scripts.tower_barrack.remove(this, store)
+
+	SU.queue_remove_clean_table(store, this.sentinels)
+
+	return true
+end
+
+function scripts.tower_deep_devils.update(this, store)
+	local ab = this.attacks.list[1]
+	local pow_a = this.powers.amph
+	local pow_n = this.powers.net
+	local pow_s = this.powers.storm
+	ab.ts = store.tick_ts
+	local b = this.barrack
+	local tpos = tpos(this)
+
+	while true do
+		if not this.tower.blocked then
+			if pow_s.changed then
+				pow_s.changed = nil
+				if #this.sentinels == 0 then
+					local s = E:create_entity("storm_deep_devils")
+					s.pos:copy(this.pos)
+					queue_insert(store, s)
+					table.insert(this.sentinels, s)
+					s.owner = this
+				end
+				this.sentinels[1].ranged.attacks[1].bullet = "ray_storm_deep_devils" .. pow_s.level
+			end
+			if pow_a.changed then
+				pow_a.changed = nil
+				b.soldier_type = "soldier_deep_devils_chosen"
+				local dg2 = E:get_template("soldier_deep_devils_chosen")
+
+				for _, s in ipairs(b.soldiers) do
+					if s and s.health then
+						s.health.armor = dg2.health.armor
+						s.health.hp_max = dg2.health.hp_max
+						s.health.hp = dg2.health.hp_max
+						s.melee.attacks[1].damage_max = dg2.melee.attacks[1].damage_max
+						s.melee.attacks[1].damage_min = dg2.melee.attacks[1].damage_min
+						s.ranged.attacks[1].bullet = dg2.ranged.attacks[1].bullet
+						s.render.sprites[3].hidden = false
+					end
+				end
+			end
+			if pow_n.changed then
+				pow_n.changed = nil
+				for _, s in ipairs(b.soldiers) do
+					s.ranged.attacks[2].disabled = false
+					s.ranged.attacks[2].cooldown = pow_n.cooldown[pow_n.level]
+					s.ranged.attacks[2].bullet = "net_deep_devils" .. pow_n.level
+					s.render.sprites[1].prefix = "deep_devils_reef_tower_redspine_lv4_layer1"
+				end
+			end
+
+			for i = 1, b.max_soldiers do
+				local s = b.soldiers[i]
+				if not s or s.health.dead and not store.entities[s.id] then
+					s = E:create_entity(b.soldier_type)
+					s.soldier.tower_id = this.id
+					s.soldier.tower_soldier_idx = i
+					s.pos = V.v(this.pos.x + b.respawn_offset.x, this.pos.y + b.respawn_offset.y)
+					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers)
+					s.nav_rally.new = true
+					if pow_n.level > 0 then
+						s.ranged.attacks[2].disabled = false
+						s.ranged.attacks[2].cooldown = pow_n.cooldown[pow_n.level]
+						s.ranged.attacks[2].bullet = "net_deep_devils" .. pow_n.level
+						s.render.sprites[1].prefix = "deep_devils_reef_tower_redspine_lv4_layer1"
+						s.render.sprites[3].hidden = false
+					end
+					U.soldier_inherit_tower_buff_factor(s, this)
+					queue_insert(store, s)
+					b.soldiers[i] = s
+					signal.emit("tower-spawn", this, s)
+				end
+			end
+
+			if ready_to_attack(ab, store, this.tower.cooldown_factor) then
+				local target = U.detect_foremost_enemy_in_range_filter_off(tpos, this.attacks.range, ab.vis_flags, ab.vis_bans)
+				if target then
+					ab.ts = store.tick_ts
+
+					local anim, _, coord = U.animation_name_with_direction(this.render.sprites[4], "shoot", target.pos.x - tpos.x, target.pos.y - tpos.y)
+					U.animation_start(this, anim, nil, store.tick_ts, false, 4)
+					U.y_wait_unconditional(store, ab.shoot_time)
+
+					local bullet_start = ab.bullet_start_offset[coord]
+					local b = E:create_entity(ab.bullet)
+					b.pos.x = this.pos.x + bullet_start.x
+					b.pos.y = this.pos.y + bullet_start.y
+					b.bullet.damage_factor = this.tower.damage_factor
+					b.bullet.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+					b.bullet.target_id = target.id
+					queue_insert(store, b)
+				else
+					ab.ts = ab.ts + 0.1
+				end
+			end
+		end
+
+		if b.rally_new then
+			b.rally_new = false
+			signal.emit("rally-point-changed", this)
+			local all_dead = true
+			for i, s in ipairs(b.soldiers) do
+				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+				s.nav_rally.new = true
+				all_dead = all_dead and s.health.dead
+			end
+			if not all_dead then
+				S:queue(this.sound_events.change_rally_point)
+			end
+		end
+		coroutine.yield()
+	end
+end
+
+scripts.bolt_tower_deep_devils = {
+	remove = function(this, store)
+		local target = U.detect_foremost_enemy_in_range_filter_on(this.pos, 100, this.bullet.damage_flags, this.bullet.damage_bans, function(e)
+			return e.id ~= this.bullet.target_id
+		end)
+		if target then
+			local b = E:create_entity("ray_deep_devils")
+			local old_target = store.entities[this.bullet.target_id]
+			if old_target then
+				b.pos:set(old_target.pos.x + old_target.unit.hit_offset.x, old_target.pos.y + old_target.unit.hit_offset.y)
+			else
+				b.pos:copy(this.pos)
+			end
+			b.bullet.from:copy(b.pos)
+			b.bullet.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+			b.bullet.target_id = target.id
+			b.bullet.source_id = this.bullet.source_id
+			b.bullet.damage_factor = this.bullet.damage_factor
+			b.chain = {}
+			queue_insert(store, b)
+		end
+		return true
+	end
+}
+
+scripts.ray_deep_devils = {
+	insert = function(this, store)
+		if this.chain then
+			if #this.chain <= 1 then
+				local target = U.detect_foremost_enemy_in_range_filter_on(this.pos, 100, this.bullet.damage_flags, this.bullet.damage_bans, function(e)
+					return not table.arraycontains(this.chain, e.id)
+				end)
+				if target then
+					local b = E:create_entity("ray_deep_devils")
+					local old_target = store.entities[this.bullet.target_id]
+					if old_target then
+						b.pos:set(old_target.pos.x + old_target.unit.hit_offset.x, old_target.pos.y + old_target.unit.hit_offset.y)
+					else
+						b.pos:copy(this.pos)
+					end
+					b.bullet.from:copy(b.pos)
+					b.bullet.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+					b.bullet.target_id = target.id
+					b.bullet.source_id = this.bullet.source_id
+					b.bullet.damage_factor = this.bullet.damage_factor
+					b.chain = this.chain
+					this.chain[#this.chain + 1] = target.id
+					queue_insert(store, b)
+				end
+			end
+		end
+		return true
+	end
+}
+
+scripts.storm_deep_devils = {}
+
+function scripts.storm_deep_devils.update(this, store)
+	local sb_sid = 1
+	local sb = this.render.sprites[sb_sid]
+	local ra = this.ranged.attacks[1]
+	local owner = this.owner
+	local target
+	local fade_time = fts(10)
+
+	local function hide()
+		if not this.render.sprites[1].hidden then
+			local stop_ts = store.tick_ts + fade_time
+			while store.tick_ts < stop_ts do
+				this.render.sprites[1].alpha = 255 * (stop_ts - store.tick_ts) / fade_time
+				coroutine.yield()
+			end
+			this.render.sprites[1].alpha = 0
+			this.render.sprites[1].hidden = true
+		end
+	end
+
+	local function show()
+		if this.render.sprites[1].hidden then
+			this.render.sprites[1].hidden = false
+			local stop_ts = store.tick_ts + fade_time
+			while store.tick_ts < stop_ts do
+				this.render.sprites[1].alpha = 255 * (1 - (stop_ts - store.tick_ts) / fade_time)
+				coroutine.yield()
+			end
+			this.render.sprites[1].alpha = 255
+		end
+	end
+
+	while store.entities[owner.id] do
+		-- 过远距离，放弃当前敌人
+		if not U.is_inside_ellipse(this.pos, tpos(owner), owner.attacks.range * 1.2) then
+			target = nil
+		end
+		-- 索敌
+		if (not target or target.health.dead) and ready_to_attack(ra, store, owner.tower.cooldown_factor) then
+			target = U.detect_foremost_enemy_in_range_filter_off(tpos(owner), owner.attacks.range, ra.vis_flags, ra.vis_bans)
+			if not target then
+				ra.ts = ra.ts + 0.1
+				hide()
+			else
+				-- 这是一个新的敌人，先 hide，然后再在敌人的位置 show
+				hide()
+				if not store.entities[owner.id] then
+					break
+				end
+				target = U.detect_foremost_enemy_in_range_filter_off(tpos(owner), owner.attacks.range, ra.vis_flags, ra.vis_bans)
+				if target then
+					this.pos = target.pos
+					if target.unit.hit_offset then
+						this.render.sprites[1].offset:set(target.unit.hit_offset.x, target.unit.hit_offset.y + 50)
+					end
+					show()
+				end
+			end
+		end
+
+		if not store.entities[owner.id] then
+			break
+		end
+
+		if target then
+			if ready_to_attack(ra, store, owner.tower.cooldown_factor) then
+				ra.ts = store.tick_ts
+				U.animation_start_default(this, "shoot", false, store.tick_ts, false)
+				local damage_factor = owner.tower.damage_factor
+				U.y_wait_unconditional(store, ra.shoot_time * owner.tower.cooldown_factor)
+
+				local b = E:create_entity(ra.bullet)
+				b.pos.x, b.pos.y = this.pos.x + sb.offset.x, this.pos.y + sb.offset.y
+				b.bullet.from:copy(b.pos)
+				b.bullet.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+				b.bullet.target_id = target.id
+				b.bullet.source_id = this.id
+				b.bullet.damage_factor = damage_factor
+				queue_insert(store, b)
+
+				U.y_animation_wait_default(this)
+				U.animation_start_default(this, "idle", false, store.tick_ts, true)
+			end
+		else
+			hide()
+		end
+
+		coroutine.yield()
+	end
+
+	hide()
 	queue_remove(store, this)
 end
 

@@ -1297,7 +1297,7 @@ function SU.y_soldier_new_rally(store, this)
 
 		local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
-		U.animation_start_default(this, an, af, store.tick_ts, true)
+		U.animation_start(this, an, af, store.tick_ts, true, nil, true)
 
 		while not this.motion.arrived do
 			if this.health.dead or this.unit.is_stunned then
@@ -2786,7 +2786,9 @@ function SU.soldier_idle(store, this, force_ts)
 		this.idle_flip.ts_counter = 0
 
 		if math.random() < this.idle_flip.chance then
-			this.render.sprites[1].flip_x = not this.render.sprites[1].flip_x
+			for i = 1, #this.render.sprites do
+				this.render.sprites[i].flip_x = not this.render.sprites[i].flip_x
+			end
 		end
 
 		if this.idle_flip.animations then

@@ -218,6 +218,14 @@ return {
 			tt_title = _("TOWER_SPIRIT_MAUSOLEUM_NAME"),
 			tt_desc = _("TOWER_SPIRIT_MAUSOLEUM_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_deep_devils",
+			image = "kr4_main_icons_0017",
+			type = "deep_devils",
+			place = 26,
+			tt_title = _("TOWER_DEEP_DEVILS_NAME"),
+			tt_desc = _("TOWER_DEEP_DEVILS_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	engineer = {{M(tpl.common_upgrade, {
@@ -3347,6 +3355,46 @@ return {
 		}, {
 			tt_title = _("TOWER_SPIRIT_MAUSOLEUM_POSSESSION_NAME_3"),
 			tt_desc = _("TOWER_SPIRIT_MAUSOLEUM_POSSESSION_DESCRIPTION_3")
+		}}
+	}), tpl.rally, tpl.sell}},
+	deep_devils = {{M(tpl.upgrade_power, {
+		action_arg = "amph",
+		image = "kr4_special_icons_0059",
+		place = 6,
+		sounds = {"DeepDevilAmphTaunt"},
+		tt_phrase = _("TOWER_DEEP_DEVILS_AMPH_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_DEEP_DEVILS_AMPH_NAME_1"),
+			tt_desc = _("TOWER_DEEP_DEVILS_AMPH_DESCRIPTION_1")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "net",
+		image = "kr4_special_icons_0058",
+		place = 5,
+		sounds = {"DeepDevilNetTaunt"},
+		tt_phrase = _("TOWER_DEEP_DEVILS_NET_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_DEEP_DEVILS_NET_NAME_1"),
+			tt_desc = _("TOWER_DEEP_DEVILS_NET_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_DEEP_DEVILS_NET_NAME_2"),
+			tt_desc = _("TOWER_DEEP_DEVILS_NET_DESCRIPTION_2")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "storm",
+		image = "kr4_special_icons_0057",
+		place = 7,
+		sounds = {"DeepDevilStormTaunt"},
+		tt_phrase = _("TOWER_DEEP_DEVILS_STORM_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_DEEP_DEVILS_STORM_NAME_1"),
+			tt_desc = _("TOWER_DEEP_DEVILS_STORM_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_DEEP_DEVILS_STORM_NAME_2"),
+			tt_desc = _("TOWER_DEEP_DEVILS_STORM_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_DEEP_DEVILS_STORM_NAME_3"),
+			tt_desc = _("TOWER_DEEP_DEVILS_STORM_DESCRIPTION_3")
 		}}
 	}), tpl.rally, tpl.sell}},
 	orc_shaman = {{M(tpl.upgrade_power, {
