@@ -65,7 +65,22 @@ require("gg_views_custom")
 
 local data = require("data.game_gui_data")
 local damage_icons = require("kr1-desktop.data.damage_icons")
+local kr5_balloon = require("kr5_balloon")
 local game_gui = {}
+
+game_gui.timer = timer
+game_gui.kr5_taunt_entity = nil
+game_gui.kr5_gui_balloon = nil
+
+local function balloon_at_this_level(at_level_idx)
+	if not at_level_idx or at_level_idx == false then
+		return true
+	end
+
+	local store = game_gui.game and game_gui.game.store
+
+	return store and at_level_idx == store.level_idx
+end
 
 game_gui.required_textures = {"gui_common", "gui_ico", "gui_portraits", "achievements", "encyclopedia_creeps", "gui_notifications", "gui_notifications_bg", "ballon", "view_options"}
 game_gui.plugin_required_textures = {}
@@ -228,9 +243,30 @@ local signals = {
 
 	["show-balloon"] = function(id, at_level_idx)
 		log.debug("balloon:%s at_level_idx:%s", id, at_level_idx)
-		if not at_level_idx or at_level_idx == game.store.level_idx then
+
+		if balloon_at_this_level(at_level_idx) then
 			game_gui:show_balloon(id)
 		end
+	end,
+
+	["show-balloon_tutorial"] = function(taunt_id, at_level_idx)
+		if balloon_at_this_level(at_level_idx) then
+			game_gui:show_balloon(taunt_id)
+		end
+	end,
+
+	["show-balloon_tutorial-pos"] = function(taunt_id, at_level_idx, pos)
+		if balloon_at_this_level(at_level_idx) and pos then
+			game_gui:show_balloon(taunt_id, pos)
+		end
+	end,
+
+	["hide-balloon-tutorial"] = function()
+		game_gui:hide_balloon()
+	end,
+
+	["turn-off-balloon"] = function()
+		game_gui:hide_balloon()
 	end,
 
 	["got-achievement"] = function(id)
@@ -694,6 +730,8 @@ function game_gui:update(dt)
 				end
 			end
 		end
+		kr5_balloon.update(self, dt)
+
 		self.window:update(dt)
 	end
 end
@@ -1722,10 +1760,34 @@ function game_gui:queue_notification_icon(id, force)
 	self.hud_noti_queue:add(id, force)
 end
 
-function game_gui:show_balloon(id)
-	local b = TutorialBalloon:new(id)
+function game_gui:show_balloon(id, pos_override)
+	local store = self.game and self.game.store
 
-	self.layer_gui_game:add_child(b)
+	if data.tutorial_balloons[id] then
+		if store then
+			kr5_balloon.clear(self, store)
+		end
+
+		local b = TutorialBalloon:new(id)
+
+		self.layer_gui_game:add_child(b)
+
+		return b
+	end
+
+	if store and kr5_balloon.show(self, store, id, pos_override) then
+		return true
+	end
+
+	log.error("Balloon with id:%s not found", id)
+end
+
+function game_gui:hide_balloon()
+	local store = self.game and self.game.store
+
+	if store then
+		kr5_balloon.clear(self, store)
+	end
 end
 
 function game_gui:show_achievement(id)
@@ -5359,6 +5421,10 @@ function TutorialBalloon:initialize(id)
 		end)
 	elseif self.hide_cond == "wave_sent" then
 		sig_reg("next-wave-sent", function()
+			self:remove(true)
+		end)
+	elseif self.hide_cond == "custom_event_wait" then
+		sig_reg("turn-off-balloon", function()
 			self:remove(true)
 		end)
 	end

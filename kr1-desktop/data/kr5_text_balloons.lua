@@ -1,0 +1,5120 @@
+-- KR5演出文本
+local V = require("lib.klua.vector")
+local v = V.v
+
+return {
+		TB_BUILD = {
+			flags = "yellow_text centered",
+			hide_cond = "tap_twice",
+			scale_world = true,
+			origin = "world",
+			text = "INGAME_BALLOON_TAP_TWICE_BUILD",
+			prefix = "tutorial_text_background",
+			size = v(200, 58),
+			padding = v(100, 8),
+			offset = v(645, 610)
+		},
+		TB_POWER1 = {
+			text = "INGAME_BALLOON_NEW_POWER",
+			hide_cond = "power_selected_1",
+			flags = "callout-bottom-add_as_child",
+			origin = "id:power_button_1:top-center",
+			scale_world = false,
+			size = v(250, 58),
+			offset = v(0, -10)
+		},
+		TB_POWER2 = {
+			text = "INGAME_BALLOON_NEW_POWER",
+			hide_cond = "power_selected_2",
+			flags = "callout-bottom-add_as_child",
+			origin = "id:power_button_2:top-center",
+			scale_world = false,
+			size = v(250, 58),
+			offset = v(0, -10)
+		},
+		TB_POWER3 = {
+			text = "INGAME_BALLOON_NEW_POWER",
+			hide_cond = "custom_event_wait",
+			flags = "callout-bottom-add_as_child",
+			origin = "id:power_button_3:top-center",
+			scale_world = false,
+			size = v(250, 58),
+			offset = v(0, -10)
+		},
+		TB_WAVE = {
+			flags = "yellow_text centered right",
+			hide_cond = "wave_sent",
+			scale_world = true,
+			origin = "world-middle-right-safe",
+			text = "INGAME_BALLOON_TAP_TO_CALL",
+			prefix = "tutorial_text_background",
+			size = v(200, 58),
+			padding = v(60, 8),
+			offset = v(-90, 200)
+		},
+		TB_START = {
+			flags = "yellow_text centered right",
+			hide_cond = "wave_sent",
+			scale_world = true,
+			origin = "world",
+			text = "INGAME_BALLOON_TAP_TWICE_WAVE",
+			prefix = "tutorial_text_background",
+			size = v(200, 58),
+			padding = v(60, 8),
+			offset = v(1050, 490)
+		},
+		TB_GOLD = {
+			flags = "yellow_text",
+			hide_cond = "custom_event_wait",
+			scale_world = true,
+			origin = "world",
+			text = "INGAME_BALLOON_GOLD",
+			prefix = "tutorial_text_background",
+			size = v(200, 58),
+			padding = v(60, 8),
+			offset = v(680, 615)
+		},
+		TB_GOAL = {
+			flags = "yellow_text centered",
+			hide_cond = "custom_event_wait",
+			scale_world = true,
+			origin = "world-center-middle",
+			text = "INGAME_BALLOON_GOAL",
+			prefix = "tutorial_text_background",
+			size = v(240, 58),
+			padding = v(60, 8),
+			offset = v(-440, 0)
+		},
+		TB_HERO2 = {
+			text = "INGAME_BALLOON_NEW_HERO",
+			hide_cond = "custom_event_wait",
+			flags = "callout-bottom-left-add_as_child",
+			scale_world = false,
+			origin = "id:hero_portrait_2:top-center",
+			size = v(200, 58),
+			padding = v(60, 8),
+			offset = v(0, -3)
+		},
+		LV01_ARBOREAN01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-bottom-right centered dialog",
+			text = "TAUNT_TUTORIAL_ARBOREAN_BARRACK_0001",
+			size = v(200, 40),
+			offset = v(980, 560),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				107,
+				255,
+				10,
+				255
+			},
+			line_color = {
+				107,
+				255,
+				10,
+				255
+			}
+		},
+		LV01_ARBOREAN02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-right-bottom centered dialog",
+			text = "TAUNT_TUTORIAL_ARBOREAN_ALL_0001",
+			size = v(200, 40),
+			offset = v(980, 560),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				107,
+				255,
+				10,
+				255
+			},
+			line_color = {
+				107,
+				255,
+				10,
+				255
+			}
+		},
+		LV02_VEZNAN01 = {
+			time = 4,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE02_VEZNAN_0001",
+			size = v(200, 40),
+			offset = v(320, 395),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				107,
+				255,
+				10,
+				255
+			},
+			line_color = {
+				107,
+				255,
+				10,
+				255
+			}
+		},
+		LV02_VEZNAN02 = {
+			time = 4,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE02_VEZNAN_0002",
+			size = v(200, 40),
+			offset = v(320, 395),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				107,
+				255,
+				10,
+				255
+			},
+			line_color = {
+				107,
+				255,
+				10,
+				255
+			}
+		},
+		LV02_RAELYN01 = {
+			time = 1,
+			origin = "world",
+			flags = "callout-right-bottom centered dialog",
+			text = "TAUNT_STAGE02_RAELYN_0001",
+			size = v(200, 40),
+			offset = v(420, 400),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV06_CULTIST01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE06_CULTIST_GREETING_0001",
+			size = v(200, 40),
+			offset = v(630, 625),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV06_CULTIST02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE06_CULTIST_GREETING_0002",
+			size = v(200, 40),
+			offset = v(630, 625),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV06_BOSS01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-right-bottom centered dialog",
+			text = "TAUNT_STAGE06_BOSS_PIG_RESPONSE_0001",
+			size = v(200, 40),
+			offset = v(545, 625),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV06_BOSS02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-right-bottom centered dialog",
+			text = "TAUNT_STAGE06_BOSS_PIG_PREBATTLE_0001",
+			size = v(200, 40),
+			offset = v(545, 625),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV06_BOSS_TAUNT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_BOSS_PIG_FROM_POOL_0001",
+			size = v(200, 40),
+			offset = v(545, 650),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV06_BOSS_TAUNT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_BOSS_PIG_FROM_POOL_0002",
+			size = v(200, 40),
+			offset = v(545, 650),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV06_BOSS_TAUNT_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_BOSS_PIG_FROM_POOL_0003",
+			size = v(200, 40),
+			offset = v(545, 650),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV06_BOSS_TAUNT_04 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_BOSS_PIG_FROM_POOL_0004",
+			size = v(200, 40),
+			offset = v(545, 650),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV06_BOSS_TAUNT_05 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_BOSS_PIG_FROM_POOL_0005",
+			size = v(200, 40),
+			offset = v(545, 650),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV06_BOSS_TAUNT_06 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_BOSS_PIG_FROM_POOL_0006",
+			size = v(200, 40),
+			offset = v(545, 650),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV11_CULTIST01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE11_CULTIST_LEADER_0001",
+			size = v(200, 40),
+			offset = v(730, 504),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV11_CULTIST02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE11_CULTIST_LEADER_0002",
+			size = v(200, 40),
+			offset = v(730, 504),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV11_CULTIST03 = {
+			time = 2,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE11_CULTIST_LEADER_0003",
+			size = v(200, 40),
+			offset = v(730, 504),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV11_CULTIST04 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE11_CULTIST_LEADER_0004",
+			size = v(200, 40),
+			offset = v(730, 504),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV11_VEZNAN01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left centered dialog",
+			text = "TAUNT_STAGE11_VEZNAN_0001",
+			size = v(200, 40),
+			offset = v(113, 600),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				107,
+				255,
+				10,
+				255
+			},
+			line_color = {
+				107,
+				255,
+				10,
+				255
+			}
+		},
+		LV11_CULTIST05_ESCAPE = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE11_CULTIST_LEADER_0005",
+			size = v(200, 40),
+			offset = v(730, 504),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV11_CULTIST_TAUNT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE11_CULTIST_LEADER_FIGHT_0001",
+			size = v(200, 40),
+			offset = v(730, 504),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV11_CULTIST_TAUNT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE11_CULTIST_LEADER_FIGHT_0002",
+			size = v(200, 40),
+			offset = v(730, 504),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV11_CULTIST_TAUNT_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE11_CULTIST_LEADER_FIGHT_0003",
+			size = v(200, 40),
+			offset = v(730, 504),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV11_CULTIST_TAUNT_04 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE11_CULTIST_LEADER_FIGHT_0004",
+			size = v(200, 40),
+			offset = v(730, 504),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV11_CULTIST_TAUNT_05 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE11_CULTIST_LEADER_FIGHT_0005",
+			size = v(200, 40),
+			offset = v(730, 504),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV11_CULTIST_TAUNT_06 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE11_CULTIST_LEADER_FIGHT_0006",
+			size = v(200, 40),
+			offset = v(730, 504),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV11_CULTIST_TAUNT_IN_BOSSFIGHT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE11_CULTIST_LEADER_IN_BOSSFIGHT_0001",
+			size = v(200, 40),
+			offset = v(730, 504),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV11_CULTIST_TAUNT_IN_BOSSFIGHT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE11_CULTIST_LEADER_IN_BOSSFIGHT_0002",
+			size = v(200, 40),
+			offset = v(730, 504),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV11_CULTIST_TAUNT_IN_BOSSFIGHT_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE11_CULTIST_LEADER_IN_BOSSFIGHT_0003",
+			size = v(200, 40),
+			offset = v(730, 504),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV11_CULTIST_TAUNT_IN_BOSSFIGHT_04 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE11_CULTIST_LEADER_IN_BOSSFIGHT_0004",
+			size = v(200, 40),
+			offset = v(730, 504),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV11_CULTIST_TAUNT_IN_BOSSFIGHT_05 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE11_CULTIST_LEADER_IN_BOSSFIGHT_0005",
+			size = v(200, 40),
+			offset = v(730, 504),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV11_CULTIST_TAUNT_IN_BOSSFIGHT_06 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE11_CULTIST_LEADER_IN_BOSSFIGHT_0006",
+			size = v(200, 40),
+			offset = v(730, 504),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV15_CULTIST01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-right-bottom centered dialog",
+			text = "TAUNT_STAGE15_CULTIST_0001",
+			size = v(200, 40),
+			offset = v(915, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV15_CULTIST02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-right-bottom centered dialog",
+			text = "TAUNT_STAGE15_CULTIST_0002",
+			size = v(200, 40),
+			offset = v(915, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV15_CULTIST03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-right-bottom centered dialog",
+			text = "TAUNT_STAGE15_CULTIST_0003",
+			size = v(200, 40),
+			offset = v(915, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV15_CULTIST04 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-right-bottom centered dialog",
+			text = "TAUNT_STAGE15_CULTIST_0004",
+			size = v(200, 40),
+			offset = v(915, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV15_DENAS01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE15_DENAS_0001",
+			size = v(200, 40),
+			offset = v(560, 490),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				0,
+				204,
+				204,
+				255
+			},
+			line_color = {
+				0,
+				204,
+				204,
+				255
+			}
+		},
+		LV15_CULTIST01_BOSSFIGHT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-right-bottom centered dialog",
+			text = "TAUNT_STAGE15_CULTIST_BEFORE_BOSSFIGHT_0001",
+			size = v(200, 40),
+			offset = v(915, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV15_CULTIST01_BOSSFIGHT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-right-bottom centered dialog",
+			text = "TAUNT_STAGE15_CULTIST_BEFORE_BOSSFIGHT_0002",
+			size = v(200, 40),
+			offset = v(915, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV15_CULTIST01_BOSSFIGHT_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-right-bottom centered dialog",
+			text = "TAUNT_STAGE15_CULTIST_BEFORE_BOSSFIGHT_0003",
+			size = v(200, 40),
+			offset = v(915, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV15_CULTIST01_BOSSFIGHT_04 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-right-bottom centered dialog",
+			text = "TAUNT_STAGE15_CULTIST_BEFORE_BOSSFIGHT_0004",
+			size = v(200, 40),
+			offset = v(915, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV15_CULTIST01_BOSSFIGHT_05 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-right-bottom centered dialog",
+			text = "TAUNT_STAGE15_CULTIST_BEFORE_BOSSFIGHT_0005",
+			size = v(200, 40),
+			offset = v(915, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV15_CULTIST01_BOSSFIGHT_06 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-right-bottom centered dialog",
+			text = "TAUNT_STAGE15_CULTIST_BEFORE_BOSSFIGHT_0006",
+			size = v(200, 40),
+			offset = v(915, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				250,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				250,
+				50,
+				80,
+				255
+			}
+		},
+		LV16_DENAS01_BOSSFIGHT_01 = {
+			time = 2.5,
+			origin = "world",
+			flags = "callout-right-bottom centered dialog",
+			text = "TAUNT_STAGE16_DENAS_AFTER_BOSSFIGHT_0001",
+			size = v(200, 40),
+			offset = v(510, 595),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				0,
+				204,
+				204,
+				255
+			},
+			line_color = {
+				0,
+				204,
+				204,
+				255
+			}
+		},
+		LV18_ERIDAN_PREPARATION_TAUNT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE18_ERIDAN_PREPARATION_0001",
+			size = v(200, 40),
+			offset = v(225, 610),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				20,
+				220,
+				180,
+				255
+			},
+			line_color = {
+				20,
+				220,
+				180,
+				255
+			}
+		},
+		LV18_ERIDAN_PREPARATION_TAUNT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE18_ERIDAN_PREPARATION_0002",
+			size = v(200, 40),
+			offset = v(225, 610),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				20,
+				220,
+				180,
+				255
+			},
+			line_color = {
+				20,
+				220,
+				180,
+				255
+			}
+		},
+		LV18_ERIDAN_PREPARATION_TAUNT_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE18_ERIDAN_PREPARATION_0003",
+			size = v(200, 40),
+			offset = v(225, 610),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				20,
+				220,
+				180,
+				255
+			},
+			line_color = {
+				20,
+				220,
+				180,
+				255
+			}
+		},
+		LV18_ERIDAN_PREPARATION_TAUNT_04 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE18_ERIDAN_PREPARATION_0004",
+			size = v(200, 40),
+			offset = v(225, 610),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				20,
+				220,
+				180,
+				255
+			},
+			line_color = {
+				20,
+				220,
+				180,
+				255
+			}
+		},
+		LV18_ERIDAN_FIGHT_TAUNT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE18_ERIDAN_FIGHT_0001",
+			size = v(200, 40),
+			offset = v(225, 610),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				20,
+				220,
+				180,
+				255
+			},
+			line_color = {
+				20,
+				220,
+				180,
+				255
+			}
+		},
+		LV18_ERIDAN_FIGHT_TAUNT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE18_ERIDAN_FIGHT_0002",
+			size = v(200, 40),
+			offset = v(225, 610),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				20,
+				220,
+				180,
+				255
+			},
+			line_color = {
+				20,
+				220,
+				180,
+				255
+			}
+		},
+		LV18_ERIDAN_FIGHT_TAUNT_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE18_ERIDAN_FIGHT_0003",
+			size = v(200, 40),
+			offset = v(225, 610),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				20,
+				220,
+				180,
+				255
+			},
+			line_color = {
+				20,
+				220,
+				180,
+				255
+			}
+		},
+		LV18_ERIDAN_FIGHT_TAUNT_04 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE18_ERIDAN_FIGHT_0004",
+			size = v(200, 40),
+			offset = v(225, 610),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				20,
+				220,
+				180,
+				255
+			},
+			line_color = {
+				20,
+				220,
+				180,
+				255
+			}
+		},
+		LV18_ERIDAN_FIGHT_TAUNT_05 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE18_ERIDAN_FIGHT_0005",
+			size = v(200, 40),
+			offset = v(225, 610),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				20,
+				220,
+				180,
+				255
+			},
+			line_color = {
+				20,
+				220,
+				180,
+				255
+			}
+		},
+		LV18_ERIDAN_FIGHT_TAUNT_06 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE18_ERIDAN_FIGHT_0006",
+			size = v(200, 40),
+			offset = v(225, 610),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				20,
+				220,
+				180,
+				255
+			},
+			line_color = {
+				20,
+				220,
+				180,
+				255
+			}
+		},
+		LV18_ERIDAN_FIGHT_TAUNT_07 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE18_ERIDAN_FIGHT_0007",
+			size = v(200, 40),
+			offset = v(225, 610),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				20,
+				220,
+				180,
+				255
+			},
+			line_color = {
+				20,
+				220,
+				180,
+				255
+			}
+		},
+		LV18_ERIDAN_FIGHT_TAUNT_08 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE18_ERIDAN_FIGHT_0008",
+			size = v(200, 40),
+			offset = v(225, 610),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				20,
+				220,
+				180,
+				255
+			},
+			line_color = {
+				20,
+				220,
+				180,
+				255
+			}
+		},
+		LV19_NAVIRA_START_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE19_BOSS_NAVIRA_START_0001",
+			size = v(200, 40),
+			offset = v(810, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV19_NAVIRA_START_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE19_BOSS_NAVIRA_START_0002",
+			size = v(200, 40),
+			offset = v(810, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV19_NAVIRA_START_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE19_BOSS_NAVIRA_START_0003",
+			size = v(200, 40),
+			offset = v(810, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV19_NAVIRA_TAUNT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE19_BOSS_NAVIRA_FIGHT_0001",
+			size = v(200, 40),
+			offset = v(810, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV19_NAVIRA_TAUNT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE19_BOSS_NAVIRA_FIGHT_0002",
+			size = v(200, 40),
+			offset = v(810, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV19_NAVIRA_TAUNT_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE19_BOSS_NAVIRA_FIGHT_0003",
+			size = v(200, 40),
+			offset = v(810, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV19_NAVIRA_TAUNT_04 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE19_BOSS_NAVIRA_FIGHT_0004",
+			size = v(200, 40),
+			offset = v(810, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV19_NAVIRA_TAUNT_05 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE19_BOSS_NAVIRA_FIGHT_0005",
+			size = v(200, 40),
+			offset = v(810, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV19_NAVIRA_TAUNT_06 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE19_BOSS_NAVIRA_FIGHT_0006",
+			size = v(200, 40),
+			offset = v(810, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV19_NAVIRA_BEFORE_BOSSFIGHT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE19_BOSS_NAVIRA_BEFORE_BOSSFIGHT_0001",
+			size = v(200, 40),
+			offset = v(810, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV19_NAVIRA_BEFORE_BOSSFIGHT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE19_BOSS_NAVIRA_BEFORE_BOSSFIGHT_0002",
+			size = v(200, 40),
+			offset = v(810, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV19_NAVIRA_BEFORE_BOSSFIGHT_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE19_BOSS_NAVIRA_BEFORE_BOSSFIGHT_0003",
+			size = v(200, 40),
+			offset = v(810, 590),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV22_BOSS_BEFORE_FIGHT_EAT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "LV22_BOSS_BEFORE_FIGHT_EAT_01",
+			size = v(200, 40),
+			offset = v(494, 592),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV22_BOSS_BEFORE_FIGHT_EAT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "LV22_BOSS_BEFORE_FIGHT_EAT_02",
+			size = v(200, 40),
+			offset = v(494, 592),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV22_BOSS_BEFORE_FIGHT_EAT_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "LV22_BOSS_BEFORE_FIGHT_EAT_03",
+			size = v(200, 40),
+			offset = v(494, 592),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV22_BOSS_BEFORE_FIGHT_EAT_04 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "LV22_BOSS_BEFORE_FIGHT_EAT_04",
+			size = v(200, 40),
+			offset = v(494, 592),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV22_BOSS_BEFORE_FIGHT_EAT_05 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "LV22_BOSS_BEFORE_FIGHT_EAT_05",
+			size = v(200, 40),
+			offset = v(494, 592),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV22_BOSS_BEFORE_FIGHT_EAT_06 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "LV22_BOSS_BEFORE_FIGHT_EAT_03",
+			size = v(200, 40),
+			offset = v(494, 592),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV22_BOSS_BEFORE_FIGHT_EAT_07 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "LV22_BOSS_BEFORE_FIGHT_EAT_04",
+			size = v(200, 40),
+			offset = v(494, 592),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV22_BOSS_BEFORE_FIGHT_EAT_08 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "LV22_BOSS_BEFORE_FIGHT_EAT_05",
+			size = v(200, 40),
+			offset = v(494, 592),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV22_MAGE_BEFORE_FIGHT_RESPONSE_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "LV22_MAGE_BEFORE_FIGHT_RESPONSE_01",
+			size = v(200, 40),
+			offset = v(410, 540),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				107,
+				255,
+				10,
+				255
+			},
+			line_color = {
+				107,
+				255,
+				10,
+				255
+			}
+		},
+		LV22_MAGE_BEFORE_FIGHT_RESPONSE_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "LV22_MAGE_BEFORE_FIGHT_RESPONSE_02",
+			size = v(200, 40),
+			offset = v(410, 540),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				107,
+				255,
+				10,
+				255
+			},
+			line_color = {
+				107,
+				255,
+				10,
+				255
+			}
+		},
+		LV22_MAGE_BEFORE_FIGHT_RESPONSE_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "LV22_MAGE_BEFORE_FIGHT_RESPONSE_03",
+			size = v(200, 40),
+			offset = v(410, 540),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				107,
+				255,
+				10,
+				255
+			},
+			line_color = {
+				107,
+				255,
+				10,
+				255
+			}
+		},
+		LV22_MAGE_BEFORE_FIGHT_RESPONSE_04 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "LV22_MAGE_BEFORE_FIGHT_RESPONSE_04",
+			size = v(200, 40),
+			offset = v(410, 540),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				107,
+				255,
+				10,
+				255
+			},
+			line_color = {
+				107,
+				255,
+				10,
+				255
+			}
+		},
+		LV22_MAGE_BEFORE_FIGHT_RESPONSE_05 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "LV22_MAGE_BEFORE_FIGHT_RESPONSE_05",
+			size = v(200, 40),
+			offset = v(410, 540),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				107,
+				255,
+				10,
+				255
+			},
+			line_color = {
+				107,
+				255,
+				10,
+				255
+			}
+		},
+		LV22_MAGE_BEFORE_FIGHT_RESPONSE_06 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "LV22_MAGE_BEFORE_FIGHT_RESPONSE_05",
+			size = v(200, 40),
+			offset = v(410, 540),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				107,
+				255,
+				10,
+				255
+			},
+			line_color = {
+				107,
+				255,
+				10,
+				255
+			}
+		},
+		LV22_MAGE_BEFORE_FIGHT_RESPONSE_07 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "LV22_MAGE_BEFORE_FIGHT_RESPONSE_05",
+			size = v(200, 40),
+			offset = v(410, 540),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				107,
+				255,
+				10,
+				255
+			},
+			line_color = {
+				107,
+				255,
+				10,
+				255
+			}
+		},
+		LV22_MAGE_BEFORE_FIGHT_RESPONSE_08 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "LV22_MAGE_BEFORE_FIGHT_RESPONSE_05",
+			size = v(200, 40),
+			offset = v(410, 540),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				107,
+				255,
+				10,
+				255
+			},
+			line_color = {
+				107,
+				255,
+				10,
+				255
+			}
+		},
+		LV22_BOSS_INTRO_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "LV22_BOSS_INTRO_01",
+			size = v(200, 40),
+			offset = v(494, 592),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV22_BOSS_INTRO_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "LV22_BOSS_INTRO_02",
+			size = v(200, 40),
+			offset = v(494, 592),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV22_MAGE_INTRO_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "LV22_MAGE_INTRO_01",
+			size = v(200, 40),
+			offset = v(410, 540),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				107,
+				255,
+				10,
+				255
+			},
+			line_color = {
+				107,
+				255,
+				10,
+				255
+			}
+		},
+		LV22_MAGE_INTRO_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "LV22_MAGE_INTRO_02",
+			size = v(200, 40),
+			offset = v(410, 540),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				107,
+				255,
+				10,
+				255
+			},
+			line_color = {
+				107,
+				255,
+				10,
+				255
+			}
+		},
+		TAUNT_STAGE22_BOSS_CROCS_BEFORE_BOSSFIGHT_0001 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE22_BOSS_CROCS_BEFORE_BOSSFIGHT_0001",
+			size = v(200, 40),
+			offset = v(494, 592),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		TAUNT_STAGE22_BOSS_CROCS_BEFORE_BOSSFIGHT_0002 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_STAGE22_BOSS_CROCS_BEFORE_BOSSFIGHT_0002",
+			size = v(200, 40),
+			offset = v(494, 592),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV24_MACHINIST_BEFORE_BOSSFIGHT_01 = {
+			time = 1.25,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE24_BOSS_MACHINIST_BEFORE_BOSSFIGHT_0001",
+			size = v(200, 40),
+			offset = v(20, 460),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV24_MACHINIST_BEFORE_BOSSFIGHT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE24_BOSS_MACHINIST_BEFORE_BOSSFIGHT_0002",
+			size = v(200, 40),
+			offset = v(0, 430),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV24_MACHINIST_BEFORE_BOSSFIGHT_03 = {
+			time = 2.5,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE24_BOSS_MACHINIST_BEFORE_BOSSFIGHT_0003",
+			size = v(200, 40),
+			offset = v(10, 445),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV25_MACHINIST_END_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_STAGE25_BOSS_MACHINIST_END_0001",
+			size = v(200, 40),
+			offset = v(545, 450),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV25_MACHINIST_END_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_STAGE25_BOSS_MACHINIST_END_0002",
+			size = v(200, 40),
+			offset = v(545, 450),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV26_GRYMBEARD_PREPARATION_TAUNT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE26_BOSS_GRYMBEARD_PREPARATION_0001",
+			size = v(200, 40),
+			offset = v(135, 570),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV26_GRYMBEARD_PREPARATION_TAUNT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE26_BOSS_GRYMBEARD_PREPARATION_0002",
+			size = v(200, 40),
+			offset = v(135, 570),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV26_GRYMBEARD_PREPARATION_TAUNT_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE26_BOSS_GRYMBEARD_PREPARATION_0003",
+			size = v(200, 40),
+			offset = v(135, 570),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV26_GRYMBEARD_PREPARATION_TAUNT_04 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE26_BOSS_GRYMBEARD_PREPARATION_0004",
+			size = v(200, 40),
+			offset = v(135, 570),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV26_GRYMBEARD_FIGHT_TAUNT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE26_BOSS_GRYMBEARD_FIGHT_0001",
+			size = v(200, 40),
+			offset = v(135, 570),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV26_GRYMBEARD_FIGHT_TAUNT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE26_BOSS_GRYMBEARD_FIGHT_0002",
+			size = v(200, 40),
+			offset = v(135, 570),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV26_GRYMBEARD_FIGHT_TAUNT_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE26_BOSS_GRYMBEARD_FIGHT_0003",
+			size = v(200, 40),
+			offset = v(135, 570),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV26_GRYMBEARD_FIGHT_TAUNT_04 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE26_BOSS_GRYMBEARD_FIGHT_0004",
+			size = v(200, 40),
+			offset = v(135, 570),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV26_GRYMBEARD_BEFORE_BOSSFIGHT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE26_BOSS_GRYMBEARD_BEFORE_BOSSFIGHT_0001",
+			size = v(200, 40),
+			offset = v(140, 570),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV26_GRYMBEARD_BEFORE_BOSSFIGHT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE26_BOSS_GRYMBEARD_BEFORE_BOSSFIGHT_0002",
+			size = v(200, 40),
+			offset = v(135, 570),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV26_GRYMBEARD_BEFORE_BOSSFIGHT_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE26_BOSS_GRYMBEARD_BEFORE_BOSSFIGHT_0003",
+			size = v(200, 40),
+			offset = v(130, 570),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV26_GRYMBEARD_AFTER_BOSSFIGHT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE26_BOSS_GRYMBEARD_AFTER_BOSSFIGHT_0001",
+			size = v(200, 40),
+			offset = v(130, 570),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV26_GRYMBEARD_AFTER_BOSSFIGHT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE26_BOSS_GRYMBEARD_AFTER_BOSSFIGHT_0002",
+			size = v(200, 40),
+			offset = v(130, 570),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV27_GRYMBEARD_PREPARATION_TAUNT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE27_BOSS_GRYMBEARD_PREPARATION_0001",
+			size = v(200, 40),
+			offset = v(135, 570),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV27_GRYMBEARD_PREPARATION_TAUNT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE27_BOSS_GRYMBEARD_PREPARATION_0002",
+			size = v(200, 40),
+			offset = v(135, 570),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV27_GRYMBEARD_PREPARATION_TAUNT_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE27_BOSS_GRYMBEARD_PREPARATION_0003",
+			size = v(200, 40),
+			offset = v(135, 570),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV27_GRYMBEARD_PREPARATION_TAUNT_04 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_STAGE27_BOSS_GRYMBEARD_PREPARATION_0004",
+			size = v(200, 40),
+			offset = v(135, 570),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV27_GRYMBEARD_FIGHT_TAUNT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_STAGE27_BOSS_GRYMBEARD_FIGHT_0001",
+			size = v(200, 40),
+			offset = v(590, 630),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV27_GRYMBEARD_FIGHT_TAUNT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_STAGE27_BOSS_GRYMBEARD_FIGHT_0002",
+			size = v(200, 40),
+			offset = v(590, 630),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV27_GRYMBEARD_FIGHT_TAUNT_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_STAGE27_BOSS_GRYMBEARD_FIGHT_0003",
+			size = v(200, 40),
+			offset = v(590, 630),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV27_GRYMBEARD_FIGHT_TAUNT_04 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_STAGE27_BOSS_GRYMBEARD_FIGHT_0004",
+			size = v(200, 40),
+			offset = v(590, 630),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV27_GRYMBEARD_FIGHT_TAUNT_05 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_STAGE27_BOSS_GRYMBEARD_FIGHT_0005",
+			size = v(200, 40),
+			offset = v(590, 630),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV27_GRYMBEARD_FIGHT_TAUNT_06 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_STAGE27_BOSS_GRYMBEARD_FIGHT_0006",
+			size = v(200, 40),
+			offset = v(590, 630),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				221,
+				107,
+				57,
+				255
+			},
+			line_color = {
+				221,
+				107,
+				57,
+				255
+			}
+		},
+		LV30_BOSS_INTRO_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL30_BOSS_INTRO_01",
+			size = v(200, 40),
+			offset = v(533, 652),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV30_BOSS_INTRO_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL30_BOSS_INTRO_02",
+			size = v(200, 40),
+			offset = v(533, 652),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV30_BOSS_INTRO_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL30_BOSS_INTRO_03",
+			size = v(200, 40),
+			offset = v(533, 652),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV30_BOSS_PREFIGHT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL30_BOSS_PREFIGHT_01",
+			size = v(200, 40),
+			offset = v(533, 652),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV30_BOSS_PREFIGHT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL30_BOSS_PREFIGHT_02",
+			size = v(200, 40),
+			offset = v(533, 652),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV30_BOSS_PREFIGHT_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL30_BOSS_PREFIGHT_03",
+			size = v(200, 40),
+			offset = v(533, 652),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV30_BOSS_ABILITY_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL30_BOSS_ABILITY_01",
+			size = v(200, 40),
+			offset = v(533, 652),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV30_BOSS_ABILITY_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL30_BOSS_ABILITY_02",
+			size = v(200, 40),
+			offset = v(533, 652),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV30_BOSS_ABILITY_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL30_BOSS_ABILITY_03",
+			size = v(200, 40),
+			offset = v(533, 652),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV30_BOSS_ABILITY_04 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL30_BOSS_ABILITY_04",
+			size = v(200, 40),
+			offset = v(533, 652),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV30_BOSS_ABILITY_05 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL30_BOSS_ABILITY_05",
+			size = v(200, 40),
+			offset = v(533, 652),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV30_BOSS_ABILITY_06 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL30_BOSS_ABILITY_06",
+			size = v(200, 40),
+			offset = v(533, 652),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV30_BOSS_ABILITY_07 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL30_BOSS_ABILITY_07",
+			size = v(200, 40),
+			offset = v(533, 652),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV32_BOSS_INTRO_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL32_BOSS_INTRO_01",
+			size = v(200, 40),
+			offset = v(512, 490),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV32_BOSS_INTRO_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL32_BOSS_INTRO_02",
+			size = v(200, 40),
+			offset = v(512, 490),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV32_BOSS_INTRO_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL32_BOSS_INTRO_03",
+			size = v(200, 40),
+			offset = v(512, 490),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV32_BOSS_PREFIGHT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL32_BOSS_PREFIGHT_01",
+			size = v(200, 40),
+			offset = v(512, 490),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV32_BOSS_PREFIGHT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL32_BOSS_PREFIGHT_02",
+			size = v(200, 40),
+			offset = v(512, 490),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV32_BOSS_PREFIGHT_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL32_BOSS_PREFIGHT_03",
+			size = v(200, 40),
+			offset = v(512, 490),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV32_BOSS_ABILITY_01_LOW = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL32_BOSS_ABILITY_01",
+			size = v(200, 40),
+			offset = v(512, 490),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV32_BOSS_ABILITY_02_LOW = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL32_BOSS_ABILITY_02",
+			size = v(200, 40),
+			offset = v(512, 490),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV32_BOSS_ABILITY_03_LOW = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL32_BOSS_ABILITY_03",
+			size = v(200, 40),
+			offset = v(512, 490),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV32_BOSS_ABILITY_04_LOW = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL32_BOSS_ABILITY_04",
+			size = v(200, 40),
+			offset = v(512, 490),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV32_BOSS_ABILITY_05_LOW = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL32_BOSS_ABILITY_05",
+			size = v(200, 40),
+			offset = v(512, 490),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV32_BOSS_ABILITY_01_HIGH = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL32_BOSS_ABILITY_01",
+			size = v(200, 40),
+			offset = v(512, 500),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV32_BOSS_ABILITY_02_HIGH = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL32_BOSS_ABILITY_02",
+			size = v(200, 40),
+			offset = v(512, 500),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV32_BOSS_ABILITY_03_HIGH = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL32_BOSS_ABILITY_03",
+			size = v(200, 40),
+			offset = v(512, 500),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV32_BOSS_ABILITY_04_HIGH = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL32_BOSS_ABILITY_04",
+			size = v(200, 40),
+			offset = v(512, 500),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV32_BOSS_ABILITY_05_HIGH = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL32_BOSS_ABILITY_05",
+			size = v(200, 40),
+			offset = v(512, 500),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV32_BOSS_DEATH = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL32_BOSS_FINAL_01",
+			size = v(200, 40),
+			offset = v(512, 500),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV34_BOSS_INTRO_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL34_BOSS_INTRO_01",
+			size = v(200, 40),
+			offset = v(600, 450),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV34_BOSS_BOSSFIGHT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL34_BOSS_BOSSFIGHT_01",
+			size = v(200, 40),
+			offset = v(600, 450),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV34_BOSS_BOSS_WAVES_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL34_BOSS_WAVES_01",
+			size = v(200, 40),
+			offset = v(600, 450),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV34_BOSS_BOSS_WAVES_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL34_BOSS_WAVES_02",
+			size = v(200, 40),
+			offset = v(600, 450),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV34_BOSS_BOSS_DEATH_01_UP = {
+			time = 2,
+			origin = "world",
+			flags = "callout-center-down centered dialog",
+			text = "TAUNT_LVL34_BOSS_DEATH_01",
+			size = v(200, 40),
+			offset = v(512, 500),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV34_BOSS_BOSS_DEATH_01_DOWN = {
+			time = 2,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL34_BOSS_DEATH_01",
+			size = v(200, 40),
+			offset = v(512, 500),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV35_BOSS_INTRO_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL35_BOSS_INTRO_01",
+			size = v(200, 40),
+			offset = v(512, 550),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV35_BOSS_INTRO_02 = {
+			time = 1.5,
+			origin = "world",
+			flags = "callout--side-right centered dialog",
+			text = "TAUNT_LVL35_BOSS_INTRO_02",
+			size = v(200, 40),
+			offset = v(1050, 570),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV35_BOSS_INTRO_03 = {
+			time = 2,
+			origin = "world",
+			flags = "callout-side-left centered dialog",
+			text = "TAUNT_LVL35_BOSS_INTRO_03",
+			size = v(200, 40),
+			offset = v(-40, 550),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV35_BOSS_DESTROY_HOUSE_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL35_BOSS_DESTROY_HOUSE_01",
+			size = v(200, 40),
+			offset = v(512, 550),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV35_BOSS_DESTROY_HOUSE_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL35_BOSS_DESTROY_HOUSE_02",
+			size = v(200, 40),
+			offset = v(512, 550),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV35_BOSS_DESTROY_HOUSE_03 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL35_BOSS_DESTROY_HOUSE_03",
+			size = v(200, 40),
+			offset = v(512, 550),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV35_BOSS_PREFIGHT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-top centered dialog",
+			text = "TAUNT_LVL35_BOSS_PREFIGHT_01",
+			size = v(200, 40),
+			offset = v(512, 550),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV35_BOSS_DEATH = {
+			time = 1.5,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL35_BOSS_DEATH_01",
+			size = v(200, 40),
+			offset = v(512, 500),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV37_BOSS_INTRO_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout--side-right centered dialog",
+			text = "TAUNT_LVL37_BOSS_INTRO_01",
+			size = v(200, 40),
+			offset = v(1000, 370),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV37_BOSS_INTRO_HERO = {
+			time = 3,
+			origin = "world",
+			flags = "callout--side-left centered dialog",
+			text = "TAUNT_LVL37_BOSS_INTRO_HERO",
+			size = v(200, 40),
+			offset = v(475, 420),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV37_BOSS_INTRO_HERO_FLYING = {
+			time = 3,
+			origin = "world",
+			flags = "callout--side-left centered dialog",
+			text = "TAUNT_LVL37_BOSS_INTRO_HERO",
+			size = v(200, 40),
+			offset = v(500, 480),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV38_INTRO_TAUNT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_LVL38_INTRO_01",
+			size = v(200, 40),
+			offset = v(445, 400),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV38_INTRO_TAUNT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_LVL38_INTRO_02",
+			size = v(200, 40),
+			offset = v(445, 400),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV38_INTRO_TAUNT_FLY_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_LVL38_INTRO_01",
+			size = v(200, 40),
+			offset = v(445, 480),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV38_INTRO_TAUNT_FLY_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_LVL38_INTRO_02",
+			size = v(200, 40),
+			offset = v(445, 480),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV38_INTRO_DRAGON_SUN_TAUNT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_LVL38_DRAGON_SUN_INTRO_01",
+			size = v(200, 40),
+			offset = v(445, 470),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV38_INTRO_DRAGON_SUN_TAUNT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-left-bottom centered dialog",
+			text = "TAUNT_LVL38_DRAGON_SUN_INTRO_02",
+			size = v(200, 40),
+			offset = v(445, 470),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV39_INTRO_TAUNT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL39_INTRO_01",
+			size = v(200, 40),
+			offset = v(809, 365),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV39_INTRO_TAUNT_FLY_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL39_INTRO_01",
+			size = v(200, 40),
+			offset = v(809, 435),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV39_INTRO_DRAGON_SUN_TAUNT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout-center-bottom centered dialog",
+			text = "TAUNT_LVL39_DRAGON_SUN_INTRO_01",
+			size = v(200, 40),
+			offset = v(809, 435),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV39_INTRO_BOSS_TAUNT = {
+			time = 3,
+			origin = "world",
+			flags = "callout--side-left centered dialog",
+			text = "TAUNT_LVL39_BOSS_INTRO_01",
+			size = v(200, 40),
+			offset = v(590, 480),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV39_BOSSFIGHT_START_TAUNT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout--side-left centered dialog",
+			text = "TAUNT_LVL39_BOSSFIGHT_START_TAUNT_01",
+			size = v(200, 40),
+			offset = v(590, 480),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV39_BOSSFIGHT_START_TAUNT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout--side-left centered dialog",
+			text = "TAUNT_LVL39_BOSSFIGHT_START_TAUNT_02",
+			size = v(200, 40),
+			offset = v(590, 480),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV39_BOSSFIGHT_FIRST_HIT_TAUNT = {
+			time = 3,
+			origin = "world",
+			flags = "callout--side-left centered dialog",
+			text = "TAUNT_LVL39_BOSSFIGHT_FIRST_HIT_TAUNT",
+			size = v(200, 40),
+			offset = v(590, 480),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV39_BOSSFIGHT_SECOND_MINIBOSS_SPAWNS_TAUNT = {
+			time = 3,
+			origin = "world",
+			flags = "callout--side-left centered dialog",
+			text = "TAUNT_LVL39_SECOND_MINIBOSS_SPAWNS_TAUNT",
+			size = v(200, 40),
+			offset = v(590, 480),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV39_BOSSFIGHT_THIRD_HIT_TAUNT = {
+			time = 3,
+			origin = "world",
+			flags = "callout--side-left centered dialog",
+			text = "TAUNT_LVL39_THIRD_HIT_TAUNT",
+			size = v(200, 40),
+			offset = v(590, 480),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				50,
+				80,
+				255
+			},
+			line_color = {
+				255,
+				50,
+				80,
+				255
+			}
+		},
+		LV40_INTRO_TAUNT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout--side-right centered dialog",
+			text = "TAUNT_LVL40_INTRO_TAUNT_01",
+			size = v(200, 40),
+			offset = v(915, 470),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV40_MOVING_ISLAND_START_TAUNT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout--side-right centered dialog",
+			text = "TAUNT_LVL40_MOVING_ISLAND_START_TAUNT_01",
+			size = v(200, 40),
+			offset = v(915, 470),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV40_WAVE_10_TAUNT_01 = {
+			time = 4,
+			origin = "world",
+			flags = "callout--side-left dialog",
+			text = "TAUNT_LVL40_WAVE_10_TAUNT_01",
+			size = v(200, 40),
+			offset = v(50, 499),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV40_BOSSFIGHT_START_TAUNT_01 = {
+			time = 3,
+			origin = "world",
+			flags = "callout--side-left centered dialog",
+			text = "TAUNT_LVL40_BOSSFIGHT_START_TAUNT_01",
+			size = v(200, 40),
+			offset = v(50, 499),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		},
+		LV40_BOSSFIGHT_START_TAUNT_02 = {
+			time = 3,
+			origin = "world",
+			flags = "callout--side-left centered dialog",
+			text = "TAUNT_LVL40_BOSSFIGHT_START_TAUNT_02",
+			size = v(200, 40),
+			offset = v(50, 499),
+			padding = v(40, 15),
+			bg_color = {
+				37,
+				43,
+				47,
+				255
+			},
+			text_color = {
+				255,
+				190,
+				20,
+				255
+			},
+			line_color = {
+				255,
+				190,
+				20,
+				255
+			}
+		}
+}

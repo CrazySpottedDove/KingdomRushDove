@@ -223,4 +223,102 @@ function GU.incoming_wave_report(group, path_index, game_mode)
 	return table.concat(out, "\n")
 end
 
+local V = require("lib.klua.vector")
+local v = V.v
+
+function GU.rounded_rectangle(x, y, width, height, segments, tip_offset, custom_scale)
+	local border = 6 * custom_scale
+	local vector = v(-border, 0)
+	local angle_steps = math.pi * 0.5 / segments
+	local asCos = math.cos(angle_steps)
+	local asSin = math.sin(angle_steps)
+	local corner_x = x + border
+	local corner_y = y + border
+	local vertices = {
+		"fill"
+	}
+
+	local function roundedCorner()
+		table.insert(vertices, vector.x + corner_x)
+		table.insert(vertices, vector.y + corner_y)
+
+		for i = 1, segments do
+			asCos = math.cos(angle_steps * i)
+			asSin = math.sin(angle_steps * i)
+
+			local rx = vector.x * asCos - vector.y * asSin
+			local ry = vector.x * asSin + vector.y * asCos
+
+			table.insert(vertices, rx + corner_x)
+			table.insert(vertices, ry + corner_y)
+		end
+	end
+
+	if tip_offset and tip_offset.y == 0 then
+		table.insert(vertices, x + tip_offset.x)
+	else
+		table.insert(vertices, x + width * 0.5)
+	end
+
+	table.insert(vertices, y)
+
+	corner_x = x + width - border
+	corner_y = y + border
+	vector.x = 0
+	vector.y = -border
+
+	roundedCorner()
+
+	if tip_offset then
+		local tip_radius = 4 * custom_scale
+		local tip_height = 9 * custom_scale
+
+		corner_x = x + width - border
+		corner_y = y + height - border
+		vector.x = border
+		vector.y = 0
+
+		if tip_offset.y ~= 0 then
+			table.insert(vertices, x + width)
+			table.insert(vertices, y + tip_offset.y - tip_radius)
+			table.insert(vertices, x + width + tip_height)
+			table.insert(vertices, y + tip_offset.y)
+			table.insert(vertices, x + width)
+			table.insert(vertices, y + tip_offset.y + tip_radius)
+			roundedCorner()
+		else
+			roundedCorner()
+			table.insert(vertices, x + tip_offset.x + tip_radius)
+			table.insert(vertices, y + height)
+			table.insert(vertices, x + tip_offset.x)
+			table.insert(vertices, y + height + tip_height)
+			table.insert(vertices, x + tip_offset.x - tip_radius)
+			table.insert(vertices, y + height)
+		end
+	else
+		table.insert(vertices, x + width)
+		table.insert(vertices, y + height - 7 * custom_scale)
+		table.insert(vertices, x + width + 3 * custom_scale)
+		table.insert(vertices, y + height + 3 * custom_scale)
+		table.insert(vertices, x + width - 7 * custom_scale)
+		table.insert(vertices, y + height)
+	end
+
+	corner_x = x + border
+	corner_y = y + height - border
+	vector.x = 0
+	vector.y = border
+
+	roundedCorner()
+
+	corner_x = x + border
+	corner_y = y + border
+	vector.x = -border
+	vector.y = 0
+
+	roundedCorner()
+
+	return vertices
+end
+
 return GU

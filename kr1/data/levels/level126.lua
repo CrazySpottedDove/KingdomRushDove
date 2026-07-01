@@ -1,4 +1,4 @@
-local log=require("lib.klua.log"):new("level01")
+﻿local log=require("lib.klua.log"):new("level01")
 local signal=require("lib.hump.signal")
 local E=require("entity_db")
 local S=require("sound_db")
@@ -18,8 +18,6 @@ return
 end
 function level:update(store)
 if store.level_mode==GAME_MODE_CAMPAIGN then
-local c_taunt=E:create_entity("taunts_s26_controller")
-LU.queue_insert(store,c_taunt)
 local boss_decal,bubbles,fist_spawner,fist_spawner_light
 for i,v in pairs(store.entities) do
 if v.template_name=="decal_stage_26_boss" then
@@ -42,7 +40,7 @@ signal.emit("pan-zoom-camera",1.5,{x=200,y=700},2)
 signal.emit("show-curtains")
 signal.emit("hide-gui")
 signal.emit("start-cinematic")
-U.y_wait_unconditional(store,1.5)
+U.y_wait(store,1.5)
 signal.emit("show-balloon_tutorial","LV26_GRYMBEARD_BEFORE_BOSSFIGHT_01",false)
 S:queue("Stage26PreBFCinematic")
 U.y_animation_play(boss_decal,"grab",nil,store.tick_ts,1)
@@ -54,7 +52,7 @@ U.animation_start_default(fist_spawner_light,"run",nil,store.tick_ts,true)
 U.y_animation_play(boss_decal,"return_idle",nil,store.tick_ts,1)
 signal.emit("show-balloon_tutorial","LV26_GRYMBEARD_BEFORE_BOSSFIGHT_02",false)
 U.animation_start_default(boss_decal,"machine_breakdown",nil,store.tick_ts,false)
-U.y_wait_unconditional(store,fts(135))
+U.y_wait(store,fts(135))
 bubbles.render.sprites[1].hidden=false
 U.y_animation_play(bubbles,"start",nil,store.tick_ts,1)
 U.animation_start_default(bubbles,"loop",nil,store.tick_ts,true)
@@ -76,9 +74,9 @@ signal.emit("start-cinematic")
 boss_decal.render.sprites[1].prefix="DLC_Enanos_S4_Boss02Def"
 S:queue("Stage26Outro")
 U.animation_start_default(boss_decal,"death",nil,store.tick_ts,false)
-U.y_wait_unconditional(store,fts(20))
+U.y_wait(store,fts(20))
 LU.queue_remove(store,bubbles)
-U.y_wait_unconditional(store,fts(60))
+U.y_wait(store,fts(60))
 LU.kill_all_enemies(store,true,false)
 U.y_animation_wait_default(boss_decal)
 LU.kill_all_enemies(store,true,false)

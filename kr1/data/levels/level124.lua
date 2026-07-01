@@ -1,4 +1,4 @@
-local log=require("lib.klua.log"):new("level01")
+﻿local log=require("lib.klua.log"):new("level01")
 local signal=require("lib.hump.signal")
 local E=require("entity_db")
 local S=require("sound_db")
@@ -27,8 +27,6 @@ controller_machinist=e
 break
 end
 end
-local c_taunt=E:create_entity("taunts_s24_controller")
-LU.queue_insert(store,c_taunt)
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
 end
@@ -36,7 +34,7 @@ signal.emit("pan-zoom-camera",1.5,{x=200,y=450},2)
 signal.emit("show-curtains")
 signal.emit("hide-gui")
 signal.emit("start-cinematic")
-U.y_wait_unconditional(store,1.5)
+U.y_wait(store,1.5)
 controller_machinist.bossfight=true
 local machinist
 for _,e in pairs(store.entities) do
@@ -45,11 +43,11 @@ machinist=e
 break
 end
 end
-U.y_wait_unconditional(store,2.3)
+U.y_wait(store,2.3)
 signal.emit("show-balloon_tutorial","LV24_MACHINIST_BEFORE_BOSSFIGHT_01",false)
-U.y_wait_unconditional(store,3)
+U.y_wait(store,3)
 signal.emit("show-balloon_tutorial","LV24_MACHINIST_BEFORE_BOSSFIGHT_02",false)
-U.y_wait_unconditional(store,2)
+U.y_wait(store,2)
 local boss=E:create_entity("boss_machinist")
 boss.nav_path.pi=7
 boss.nav_path.spi=1
@@ -59,12 +57,12 @@ boss.tween.ts=store.tick_ts
 boss.vis._bans=boss.vis.bans
 boss.vis.bans=F_ALL
 LU.queue_insert(store,boss)
-U.y_wait_unconditional(store,2.5)
+U.y_wait(store,2.5)
 while machinist and not machinist.ended_cinematic do
 coroutine.yield()
 end
 coroutine.yield()
-U.y_wait_unconditional(store,1)
+U.y_wait(store,1)
 signal.emit("hide-curtains")
 signal.emit("pan-zoom-camera",2,{x=400,y=384},1.5)
 signal.emit("show-gui")
@@ -79,7 +77,7 @@ signal.emit("pan-zoom-camera",1.5,cam_pos,2)
 signal.emit("show-curtains")
 signal.emit("hide-gui")
 signal.emit("start-cinematic")
-U.y_wait_unconditional(store,7)
+U.y_wait(store,7)
 signal.emit("hide-curtains")
 signal.emit("pan-zoom-camera",2,{x=512,y=384},OVm(1,1.3))
 signal.emit("show-gui")

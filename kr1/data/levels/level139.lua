@@ -1,4 +1,4 @@
-local log=require("lib.klua.log"):new("level01")
+﻿local log=require("lib.klua.log"):new("level01")
 local signal=require("lib.hump.signal")
 local E=require("entity_db")
 local S=require("sound_db")
@@ -51,15 +51,15 @@ signal.emit("show-curtains")
 signal.emit("hide-gui")
 signal.emit("start-cinematic")
 signal.emit("pan-zoom-camera",1,{x=530,y=1000},1.18)
-U.y_wait_unconditional(store,1.5)
+U.y_wait(store,1.5)
 if fly_hero then
 signal.emit("show-balloon_tutorial","LV39_INTRO_TAUNT_FLY_01",false)
 else
 signal.emit("show-balloon_tutorial","LV39_INTRO_TAUNT_01",false)
 end
-U.y_wait_unconditional(store,4.5)
+U.y_wait(store,4.5)
 boss_controller.do_taunt="LV39_INTRO_BOSS_TAUNT"
-U.y_wait_unconditional(store,3)
+U.y_wait(store,3)
 signal.emit("hide-curtains")
 signal.emit("show-gui")
 signal.emit("end-cinematic",true)
@@ -72,7 +72,7 @@ while not self.bossfight_ended do
 coroutine.yield()
 end
 signal.emit("boss_fight_end")
-U.y_wait_unconditional(store,1)
+U.y_wait(store,1)
 signal.emit("fade-out",1)
 store.waves_finished=true
 store.level.run_complete=true

@@ -15,6 +15,7 @@ local S = require("sound_db")
 local U = require("utils")
 local LU = require("level_utils")
 local UP = require("kr1.upgrades")
+local kr5_tb = require("kr5_taunt_balloon")
 
 local V = require("lib.klua.vector")
 local bit = require("bit")
@@ -4347,13 +4348,35 @@ function SU.y_show_taunt_set(store, taunts, set_name, index, pos, duration, wait
 		return nil
 	end
 
-	index = index or (set.idxs and table.random(set.idxs)) or (set.start_idx ~= nil and set.end_idx ~= nil and math.random(set.start_idx, set.end_idx))
+	if index == false then
+		index = nil
+	end
+
+	index = index or (set.idxs and table.random(set.idxs)) or (set.end_idx ~= nil and math.random(set.start_idx or 1, set.end_idx))
 
 	if index == nil then
 		return nil
 	end
 
 	duration = duration or taunts.duration
+
+	if kr5_tb.is_kr5(store) then
+		local taunt_id = string.format(set.format, index)
+		local bd = kr5_tb.get_def(taunt_id)
+
+		if bd and kr5_tb.is_gui_balloon(bd) then
+			signal.emit("show-balloon_tutorial", taunt_id, false)
+
+			if wait then
+				local wait_duration = duration or kr5_tb.taunt_duration(bd.time) or taunts.duration
+
+				U.y_wait(store, wait_duration)
+			end
+
+			return nil
+		end
+	end
+
 	pos = pos or set.pos or taunts.pos
 
 	if not pos then
@@ -4376,7 +4399,7 @@ function SU.y_show_taunt_set(store, taunts, set_name, index, pos, duration, wait
 	queue_insert(store, t)
 
 	if wait then
-		U.y_wait_unconditional(store, duration)
+		U.y_wait(store, duration)
 	end
 
 	return t
