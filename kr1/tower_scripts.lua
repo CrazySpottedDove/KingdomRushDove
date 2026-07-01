@@ -27534,7 +27534,7 @@ function scripts.storm_deep_devils.update(this, store)
 		if not store.entities[owner.id] then
 			return false
 		end
-		target = U.detect_foremost_enemy_in_range_filter_off(tpos(owner), owner.attacks.range, ra.vis_flags, ra.vis_bans)
+		target = U.detect_foremost_enemy_in_range_filter_off(tpos(owner), owner.attacks.range * 1.1, ra.vis_flags, ra.vis_bans)
 		if target then
 			this.pos = target.pos
 			if target.unit.hit_offset then
@@ -27552,7 +27552,7 @@ function scripts.storm_deep_devils.update(this, store)
 		end
 		-- 索敌
 		if (not target or target.health.dead) and ready_to_attack(ra, store, owner.tower.cooldown_factor) then
-			target = U.detect_foremost_enemy_in_range_filter_off(tpos(owner), owner.attacks.range, ra.vis_flags, ra.vis_bans)
+			target = U.detect_foremost_enemy_in_range_filter_off(tpos(owner), owner.attacks.range * 1.1, ra.vis_flags, ra.vis_bans)
 			if not target then
 				ra.ts = ra.ts + 0.1
 				hide()
@@ -27590,7 +27590,7 @@ function scripts.storm_deep_devils.update(this, store)
 				if not store.entities[owner.id] then
 					break
 				end
-				local new_target = U.detect_foremost_enemy_in_range_filter_off(tpos(owner), owner.attacks.range, ra.vis_flags, ra.vis_bans)
+				local new_target = U.detect_foremost_enemy_in_range_filter_off(tpos(owner), owner.attacks.range * 1.1, ra.vis_flags, ra.vis_bans)
 				if new_target and new_target.id ~= target.id then
 					if not retarget() then
 						break
