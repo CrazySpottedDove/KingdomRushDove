@@ -4221,7 +4221,7 @@ AC(tt, "barrack", "attacks", "powers")
 image_y = 90
 tt.tower.type = "deep_devils"
 tt.tower.level = 1
-tt.tower.price = 330
+tt.tower.price = 335
 tt.tower.menu_offset = v(0, 15)
 tt.info.enc_icon = 16
 tt.info.portrait = "kr4_info_portraits_towers_0017"
