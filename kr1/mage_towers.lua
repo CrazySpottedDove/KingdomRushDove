@@ -4441,18 +4441,18 @@ tt.bullet.damage_type = DAMAGE_MAGICAL
 tt.bullet.hit_time = fts(4)
 tt.track_target = true
 
-tt = RT("ray_storm_deep_devils", "ray_deep_devils")
+tt = RT("ray_storm_deep_devils1", "ray_deep_devils")
 tt.main_script.insert = nil
 tt.bullet.damage_min = 20
 tt.bullet.damage_max = 20
 tt.bullet.mods = {"mod_ray_high_elven_sentinel_hit_dd"}
 tt.sound_events.insert = "DeepDevilLightning"
 
-tt = RT("ray_storm_deep_devils2", "ray_storm_deep_devils")
+tt = RT("ray_storm_deep_devils2", "ray_storm_deep_devils1")
 tt.bullet.damage_min = 40
 tt.bullet.damage_max = 40
 
-tt = RT("ray_storm_deep_devils3", "ray_storm_deep_devils")
+tt = RT("ray_storm_deep_devils3", "ray_storm_deep_devils1")
 tt.bullet.damage_min = 60
 tt.bullet.damage_max = 60
 
