@@ -1188,39 +1188,35 @@ end
 
 function ModManagerView:_reload_local_mods()
 	mod_paths.ensure_storage_ready()
-	local main_cfg = mod_paths.load_main_config()
 
 	self.local_mods = {}
 	self.local_by_entry = {}
 	self.local_by_name = {}
 
 	local mods_dir = mod_paths.LOCAL_MODS_DIR
-	local not_mod_path = main_cfg.not_mod_path or {"mod_template", "all"}
 	local items = FS.getDirectoryItems(mods_dir) or {}
 	for _, name in ipairs(items) do
-		if not table.contains(not_mod_path, name) then
-			local dir_path = mods_dir .. "/" .. name
-			if FS.getInfo(dir_path, "directory") then
-				local config_path = dir_path .. "/config.lua"
-				local mc = mod_paths.load_lua_table(config_path)
-				if mc then
-					local has_config = false
-					local config_info = love.filesystem.getInfo(dir_path .. "/" .. name .. "_config.lua")
-					if config_info and config_info.type == "file" then
-						has_config = true
-					end
-					local mod_data = {
-						name = name,
-						path = dir_path,
-						config_path = config_path,
-						config = mc,
-						entry = mc.entry or name,
-						has_config = has_config
-					}
-					self.local_mods[#self.local_mods + 1] = mod_data
-					self.local_by_name[name] = mod_data
-					self.local_by_entry[mod_data.entry] = mod_data
+		local dir_path = mods_dir .. "/" .. name
+		if FS.getInfo(dir_path, "directory") then
+			local config_path = dir_path .. "/config.lua"
+			local mc = mod_paths.load_lua_table(config_path)
+			if mc then
+				local has_config = false
+				local config_info = love.filesystem.getInfo(dir_path .. "/" .. name .. "_config.lua")
+				if config_info and config_info.type == "file" then
+					has_config = true
 				end
+				local mod_data = {
+					name = name,
+					path = dir_path,
+					config_path = config_path,
+					config = mc,
+					entry = mc.entry or name,
+					has_config = has_config
+				}
+				self.local_mods[#self.local_mods + 1] = mod_data
+				self.local_by_name[name] = mod_data
+				self.local_by_entry[mod_data.entry] = mod_data
 			end
 		end
 	end

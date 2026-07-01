@@ -10,7 +10,6 @@
 ```
 mods/
 ├── mod_main.lua          # Mod 系统入口，负责扫描/加载/初始化所有启用的 mod
-├── mod_hook.lua          # 系统级钩子（图片/声音/关卡数据覆盖）
 ├── mod_globals.lua       # 全局变量和辅助函数（暴露到全局命名空间）
 ├── mod_main_config.lua   # Mod 系统默认配置（总开关、路径白名单等）
 ├── mod_template/         # Mod 模板（示例）
@@ -41,7 +40,6 @@ game 启动
           → 正序为每个 mod 添加 require 路径
           → 倒序 require 每个 mod（得到 hook 表）
           → 正序调用 hook:init(mod_data)（高优先级覆盖低优先级）
-          → mod_hook:after_init()（注册系统级资源覆盖钩子）
 ```
 
 ---
@@ -111,30 +109,11 @@ return hook
 
 ---
 
-## 六、mod_hook.lua — 系统级资源覆盖
-
-这些钩子由框架自动注册，mod 只需在对应目录放文件即可触发：
-
-| 钩子 | 触发条件 | 作用 |
-|------|---------|------|
-| `I.load_atlas` | `mod/_assets/images/<name>.lua` 存在 | 覆盖图集资源 |
-| `I.queue_load_atlas` | 同上 | 队列加载时覆盖图集 |
-| `S.init` | `mod/_assets/sounds/settings.lua` 等存在 | 覆盖音效配置 |
-| `S.load_group` | `mod/_assets/sounds/files/` 存在 | 覆盖音效文件 |
-| `LU.load_level` | `mod/data/levels/` 存在 | 覆盖关卡数据 |
-| `P.load` | `mod/data/waves/` 存在 | 覆盖波次路径数据 |
-
----
-
 ## 七、mod_main_config.lua — 总控配置
 
 ```lua
 return {
 	enabled = true, -- 总开关，false 时禁用整个 mod 系统
-	not_mod_path = { "mod_template", "all" }, -- 不视为 mod 的目录
-	ignored_path = { "_assets" }, -- 扫描子目录时忽略的名称
-	ppref = "", -- require 前缀（一般为空）
-	check_paths = { ... }, -- 检查每个 mod 是否含有这些路径（用于 check_paths 功能）
 }
 ```
 

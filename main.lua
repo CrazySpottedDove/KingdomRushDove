@@ -697,7 +697,7 @@ local function find_mod_from_traceback(traceback)
 
 	local config = MOD_REGISTRY and MOD_REGISTRY[first_mod_dir]
 	if config then
-		return string.format("%s  (%s)", config.name or first_mod_dir, config.entry or first_mod_dir)
+		return string.format("%s:%s (%s)", config.name or first_mod_dir, config.version, config.entry or first_mod_dir)
 	end
 
 	return first_mod_dir

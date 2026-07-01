@@ -262,6 +262,7 @@ function director:unload_item(item)
 		local game = item
 
 		self:unload_texture_groups(replace_locale(game.game_gui.required_textures), game.game_gui.ref_res, "game_gui")
+		self:unload_plugin_texture_groups(game.game_gui.plugin_required_textures, game.game_gui.ref_res, "game_gui")
 
 		local groups = {}
 
@@ -286,11 +287,11 @@ function director:unload_item(item)
 		end
 
 		self:unload_texture_groups(groups, game.ref_res, "game")
+		self:unload_plugin_texture_groups(game.plugin_required_textures, game.ref_res, "game")
 		I:unload_atlas("temp_game_texts", game.store.screen_scale)
 
-		if item.required_sounds then
-			self:unload_sound_groups(item.required_sounds)
-		end
+		self:unload_sound_groups(item.required_sounds)
+		self:unload_sound_groups(item.plugin_required_sounds)
 
 		if game.store.level.required_sounds then
 			self:unload_sound_groups(game.store.level.required_sounds)
@@ -317,15 +318,13 @@ function director:unload_item(item)
 		local textures = item.required_textures
 
 		if textures then
-			local scale = self:get_texture_scale(item.item_name, item.ref_res)
-
-			for _, group in pairs(replace_locale(textures, item.locale_at_requirement)) do
-				I:unload_atlas(group, scale)
-			end
+			self:unload_texture_groups(replace_locale(textures, item.locale_at_requirement), item.ref_res, item.item_name)
+			self:unload_plugin_texture_groups(item.plugin_required_textures, item.ref_res, item.item_name)
 		end
 
 		if item.required_sounds then
 			self:unload_sound_groups(item.required_sounds)
+			self:unload_sound_groups(item.plugin_required_sounds)
 		end
 
 		if item.destroy then

@@ -12,7 +12,6 @@ mod_paths.ensure_storage_ready()
 
 require("mod_globals")
 
-local mod_hook = require("mod_hook")
 local mod_utils = require("mod_utils")
 local hook_utils = require("hook_utils")
 local mod_db = require("mod_db")
@@ -58,15 +57,11 @@ function mod_main:init(director)
 		return false
 	end
 
-	self:front_init()
+	-- self:front_init()
 	director:init(main.params)
 	self:after_init()
 
 	return true
-end
-
-function mod_main:front_init()
-	mod_hook:front_init()
 end
 
 --- 初始化所有已启用的模组
@@ -76,13 +71,12 @@ function mod_main:after_init()
 	MOD_REGISTRY = {}
 
 	-- 正序增加模组路径
-	for i = 1, mod_db.mods_count do
-		local mod_data = mod_db.mods_datas[i]
+	-- for i = 1, mod_db.mods_count do
+	-- local mod_data = mod_db.mods_datas[i]
 
-		-- 添加模组路径到package.path
-		mod_utils.add_path(mod_data)
-		log.debug("Current package.path: %s", package.path)
-	end
+	-- 添加模组路径到package.path
+	-- mod_utils.add_path(mod_data)
+	-- end
 
 	-- 倒序加载模组，确保加载模块顺序正确
 	for i = mod_db.mods_count, 1, -1 do
@@ -116,8 +110,6 @@ function mod_main:after_init()
 		local mod_data = mod_db.mods_datas[i]
 		MOD_REGISTRY[mod_data.name] = mod_data.config
 	end
-
-	mod_hook:after_init()
 end
 
 return mod_main

@@ -85,7 +85,6 @@ KingdomRushDove/
 │   └── assets_index.lua      # 资源路径索引
 ├── mods/                     # Mod 系统
 │   ├── mod_main.lua          # Mod 系统入口
-│   ├── mod_hook.lua          # 系统级资源覆盖钩子
 │   ├── mod_globals.lua       # 全局变量注入
 │   ├── mod_main_config.lua   # Mod 系统默认配置模板
 │   ├── all/                  # Mod 公共工具（hook_utils / mod_db / mod_utils）
@@ -268,7 +267,6 @@ Windows/Linux/Android 分别使用 `librender_sort.dll`、`librender_sort.so`、
 ```
 mods/
 ├── mod_main.lua          # 入口：扫描/加载/初始化所有启用 mod
-├── mod_hook.lua          # 系统级资源覆盖（图集/音效/关卡/波次）
 ├── mod_globals.lua       # 全局变量注入（simulation/game/E/U/signal 等）
 ├── mod_main_config.lua   # 默认配置模板
 ├── all/
@@ -288,7 +286,6 @@ mod_main:init(director)
       → 正序为每个 mod 添加 require 路径
       → 倒序 require 每个 mod（得到 hook 表）
       → 正序调用 hook:init(mod_data)（高优先级覆盖低优先级）
-      → mod_hook:after_init()（注册资源覆盖钩子）
 ```
 
 ### 7.3 hook_utils — 钩子机制
@@ -352,18 +349,6 @@ return hook
 | `IS_KR5` | 是否为 kr5 版本 |
 | `IS_LOVE_11` | 是否为 LÖVE 11+ |
 | `DAMAGE_*` / `DR_*` | 伤害类型/结果常量（来自 constants.lua） |
-
-### 7.7 系统级资源覆盖（mod_hook）
-
-mod 只需在对应目录放置文件即可触发：
-
-| 钩子目标 | mod 文件位置 | 效果 |
-|---------|------------|------|
-| `I.load_atlas` / `queue_load_atlas` | `mod/_assets/images/<name>.lua` | 覆盖图集 |
-| `S.init` | `mod/_assets/sounds/settings.lua` | 覆盖音效配置 |
-| `S.load_group` | `mod/_assets/sounds/files/` | 覆盖音效文件 |
-| `LU.load_level` | `mod/data/levels/` | 覆盖关卡数据 |
-| `P.load` | `mod/data/waves/` | 覆盖波次路径 |
 
 ---
 
