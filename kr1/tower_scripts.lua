@@ -27528,6 +27528,23 @@ function scripts.storm_deep_devils.update(this, store)
 		end
 	end
 
+	local function retarget()
+		-- 这是一个新的敌人，先 hide，然后再在敌人的位置 show
+		hide()
+		if not store.entities[owner.id] then
+			return false
+		end
+		target = U.detect_foremost_enemy_in_range_filter_off(tpos(owner), owner.attacks.range, ra.vis_flags, ra.vis_bans)
+		if target then
+			this.pos = target.pos
+			if target.unit.hit_offset then
+				this.render.sprites[1].offset:set(target.unit.hit_offset.x, target.unit.hit_offset.y + 50)
+			end
+			show()
+		end
+		return true
+	end
+
 	while store.entities[owner.id] do
 		-- 过远距离，放弃当前敌人
 		if not U.is_inside_ellipse(this.pos, tpos(owner), owner.attacks.range * 1.2) then
@@ -27540,18 +27557,8 @@ function scripts.storm_deep_devils.update(this, store)
 				ra.ts = ra.ts + 0.1
 				hide()
 			else
-				-- 这是一个新的敌人，先 hide，然后再在敌人的位置 show
-				hide()
-				if not store.entities[owner.id] then
+				if not retarget() then
 					break
-				end
-				target = U.detect_foremost_enemy_in_range_filter_off(tpos(owner), owner.attacks.range, ra.vis_flags, ra.vis_bans)
-				if target then
-					this.pos = target.pos
-					if target.unit.hit_offset then
-						this.render.sprites[1].offset:set(target.unit.hit_offset.x, target.unit.hit_offset.y + 50)
-					end
-					show()
 				end
 			end
 		end
@@ -27578,6 +27585,17 @@ function scripts.storm_deep_devils.update(this, store)
 
 				U.y_animation_wait_default(this)
 				U.animation_start_default(this, "idle", false, store.tick_ts, true)
+
+				-- 尝试寻找更好的目标
+				if not store.entities[owner.id] then
+					break
+				end
+				local new_target = U.detect_foremost_enemy_in_range_filter_off(tpos(owner), owner.attacks.range, ra.vis_flags, ra.vis_bans)
+				if new_target and new_target.id ~= target.id then
+					if not retarget() then
+						break
+					end
+				end
 			end
 		else
 			hide()
