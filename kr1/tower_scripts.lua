@@ -27441,7 +27441,7 @@ end
 
 scripts.bolt_tower_deep_devils = {
 	remove = function(this, store)
-		local target = U.detect_foremost_enemy_in_range_filter_on(this.pos, 100, this.bullet.damage_flags, this.bullet.damage_bans, function(e)
+		local target = U.detect_foremost_enemy_in_range_filter_on(this.pos, 120, this.bullet.damage_flags, this.bullet.damage_bans, function(e)
 			return e.id ~= this.bullet.target_id
 		end)
 		if target then
@@ -27468,7 +27468,7 @@ scripts.ray_deep_devils = {
 	insert = function(this, store)
 		if this.chain then
 			if #this.chain <= 1 then
-				local target = U.detect_foremost_enemy_in_range_filter_on(this.pos, 100, this.bullet.damage_flags, this.bullet.damage_bans, function(e)
+				local target = U.detect_foremost_enemy_in_range_filter_on(this.pos, 120, this.bullet.damage_flags, this.bullet.damage_bans, function(e)
 					return not table.arraycontains(this.chain, e.id)
 				end)
 				if target then
