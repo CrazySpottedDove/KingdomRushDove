@@ -4289,7 +4289,7 @@ tt.particle_system.emission_rate = 60
 tt.particle_system.particle_lifetime = {fts(6), fts(6)}
 
 tt = RT("bolt_tower_deep_devils", "bolt")
-tt.bullet.damage_max = 100
+tt.bullet.damage_max = 105
 tt.bullet.damage_min = 60
 tt.bullet.hit_fx = "fx_bolt_deep_devils_hit"
 tt.bullet.max_speed = 600
