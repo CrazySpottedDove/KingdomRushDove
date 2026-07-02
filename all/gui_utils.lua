@@ -234,9 +234,7 @@ function GU.rounded_rectangle(x, y, width, height, segments, tip_offset, custom_
 	local asSin = math.sin(angle_steps)
 	local corner_x = x + border
 	local corner_y = y + border
-	local vertices = {
-		"fill"
-	}
+	local vertices = {"fill"}
 
 	local function roundedCorner()
 		table.insert(vertices, vector.x + corner_x)

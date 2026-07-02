@@ -18,28 +18,12 @@ local function build_callout_balloon(parent, max_size, flags, text, text_padding
 	local text_font_size = 28
 	local text_align, text_vertical_align = "left", "middle"
 	local text_line_height = 0.85
-	local fit_lines, direction
+	local fit_lines
 	local padding = text_padding or V.v(10, 10)
-	local separation = 0
 
-	background_color = background_color or {
-		254,
-		243,
-		213,
-		255
-	}
-	line_color = line_color or {
-		127,
-		104,
-		86,
-		255
-	}
-	text_color = text_color or {
-		70,
-		56,
-		47,
-		255
-	}
+	background_color = background_color or {254, 243, 213, 255}
+	line_color = line_color or {127, 104, 86, 255}
+	text_color = text_color or {70, 56, 47, 255}
 
 	local tip_offset = V.v(30, 0)
 	local tip_size = 15
