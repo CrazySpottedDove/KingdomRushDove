@@ -71,7 +71,8 @@ game.required_textures = {
 	"kr4_fallen_ones_spirit_mausoleum",
 	"kr4_elves_tower_barrack",
 	"kr4_warmongers_tower_archer",
-	"kr4_deep_devils_tower"
+	"kr4_deep_devils_tower",
+	"kr4_dinos_ignis_altar"
 }
 game.ref_h = REF_H
 game.ref_w = REF_W
@@ -115,8 +116,10 @@ game.required_sounds = {
 	"tower_spirit_mausoleum",
 	"kr4_elves_barrack",
 	"tower_goblirang",
-	"tower_deep_devils"
+	"tower_deep_devils",
+	"tower_ignis_altar"
 }
+game.required_exoskeletons = {"ignis_altar_lava_golem", "ignis_altar_lvl4", "ignis_altar_decal", "ignis_altar_decal_lava"}
 game.plugin_required_textures = {}
 game.plugin_required_sounds = {}
 game.simulation_systems = {

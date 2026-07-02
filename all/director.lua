@@ -461,6 +461,8 @@ function director:queue_load_item_named(name)
 			EXO:queue_load(game.store.level.required_exoskeletons)
 		end
 
+		EXO:queue_load(game.required_exoskeletons)
+
 		if configer.config().enabled and configer.config().enable_hero_menu then
 			local hero_data = require("data.map_data").hero_data
 

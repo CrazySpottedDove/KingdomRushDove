@@ -1054,7 +1054,8 @@ upgrades.soldiers = {
 	"soldier_elves_harasser",
 	"soldier_elves_espectral_harasser",
 	"soldier_deep_devils",
-	"soldier_deep_devils_chosen"
+	"soldier_deep_devils_chosen",
+	"soldier_ignis_altar_elemental"
 }
 
 upgrades.barrack_soldiers = {
@@ -1134,10 +1135,23 @@ upgrades.towers_with_barrack = {
 	"tower_twilight_elves_barrack",
 	"tower_balloon",
 	"tower_spirit_mausoleum",
-	"tower_deep_devils"
+	"tower_deep_devils",
+	"tower_ignis_altar"
 }
 
-upgrades.non_barrack_towers_with_barrack_attribute = {"tower_sorcerer", "tower_mech", "tower_necromancer", "tower_frankenstein", "tower_druid", "tower_dark_elf_lvl4", "tower_bone_flingers", "tower_balloon", "tower_spirit_mausoleum", "tower_deep_devils"}
+upgrades.non_barrack_towers_with_barrack_attribute = {
+	"tower_sorcerer",
+	"tower_mech",
+	"tower_necromancer",
+	"tower_frankenstein",
+	"tower_druid",
+	"tower_dark_elf_lvl4",
+	"tower_bone_flingers",
+	"tower_balloon",
+	"tower_spirit_mausoleum",
+	"tower_deep_devils",
+	"tower_ignis_altar"
+}
 
 upgrades.mage_towers = GS.mage_towers
 
@@ -1238,7 +1252,8 @@ upgrades.engineer_advanced_tower = {
 	"tower_sparking_geode_lvl4",
 	"tower_rotten_forest",
 	"tower_rocket_riders",
-	"tower_balloon"
+	"tower_balloon",
+	"tower_ignis_altar"
 }
 
 local fps_based_keys = {
@@ -1469,7 +1484,7 @@ function upgrades:patch_templates(max_level)
 		for _, n in pairs(barrack_soldiers) do
 			local t = T(n)
 			if t.health.hp_max and not table.contains(special_soldiers, n) then
-				t.health.hp_max = math.ceil(t.health.hp_max * 0.8)
+				t.health.hp_max = t.health.hp_max * 0.8
 			end
 		end
 	end
@@ -1517,7 +1532,7 @@ function upgrades:patch_templates(max_level)
 
 	if u then
 		for _, n in ipairs(soldiers) do
-			T(n).health.dead_lifetime = math.floor(T(n).health.dead_lifetime * u.cooldown_factor)
+			T(n).health.dead_lifetime = T(n).health.dead_lifetime * u.cooldown_factor
 		end
 
 		for _, n in pairs(barrack_towers) do
@@ -1686,69 +1701,69 @@ function upgrades:patch_templates(max_level)
 
 	if u then
 		for _, n in ipairs(self.mage_tower_bolts) do
-			T(n).bullet.damage_min = math.ceil(T(n).bullet.damage_min * u.damage_factor)
-			T(n).bullet.damage_max = math.ceil(T(n).bullet.damage_max * u.damage_factor)
+			T(n).bullet.damage_min = T(n).bullet.damage_min * u.damage_factor
+			T(n).bullet.damage_max = T(n).bullet.damage_max * u.damage_factor
 		end
 
-		T("mod_ray_arcane").dps.damage_min = math.ceil(T("mod_ray_arcane").dps.damage_min * u.damage_factor)
-		T("mod_ray_arcane").dps.damage_max = math.ceil(T("mod_ray_arcane").dps.damage_max * u.damage_factor)
-		T("mod_pixie_pickpocket").modifier.damage_min = math.ceil(T("mod_pixie_pickpocket").modifier.damage_min * u.damage_factor)
-		T("mod_pixie_pickpocket").modifier.damage_max = math.ceil(T("mod_pixie_pickpocket").modifier.damage_max * u.damage_factor)
+		T("mod_ray_arcane").dps.damage_min = T("mod_ray_arcane").dps.damage_min * u.damage_factor
+		T("mod_ray_arcane").dps.damage_max = T("mod_ray_arcane").dps.damage_max * u.damage_factor
+		T("mod_pixie_pickpocket").modifier.damage_min = T("mod_pixie_pickpocket").modifier.damage_min * u.damage_factor
+		T("mod_pixie_pickpocket").modifier.damage_max = T("mod_pixie_pickpocket").modifier.damage_max * u.damage_factor
 
 		local d = T("tower_arcane_wizard_ray_disintegrate_mod").boss_damage_config
 
 		for k, v in pairs(d) do
-			d[k] = math.ceil(v * u.damage_factor)
+			d[k] = v * u.damage_factor
 		end
 
-		T("mod_lava_infernal_mage").dps.damage_min = math.ceil(T("mod_lava_infernal_mage").dps.damage_min * u.damage_factor)
-		T("mod_lava_infernal_mage").dps.damage_max = math.ceil(T("mod_lava_infernal_mage").dps.damage_max * u.damage_factor)
+		T("mod_lava_infernal_mage").dps.damage_min = T("mod_lava_infernal_mage").dps.damage_min * u.damage_factor
+		T("mod_lava_infernal_mage").dps.damage_max = T("mod_lava_infernal_mage").dps.damage_max * u.damage_factor
 	end
 
 	u = self:get_upgrade("mage_arcane_spell")
 
 	if u then
 		for _, n in ipairs(self.mage_tower_bolts) do
-			T(n).bullet.damage_min = math.ceil(T(n).bullet.damage_min * u.damage_factor)
-			T(n).bullet.damage_max = math.ceil(T(n).bullet.damage_max * u.damage_factor)
+			T(n).bullet.damage_min = T(n).bullet.damage_min * u.damage_factor
+			T(n).bullet.damage_max = T(n).bullet.damage_max * u.damage_factor
 		end
 
-		T("mod_ray_arcane").dps.damage_min = math.ceil(T("mod_ray_arcane").dps.damage_min * u.damage_factor)
-		T("mod_ray_arcane").dps.damage_max = math.ceil(T("mod_ray_arcane").dps.damage_max * u.damage_factor)
-		T("mod_pixie_pickpocket").modifier.damage_min = math.ceil(T("mod_pixie_pickpocket").modifier.damage_min * u.damage_factor)
-		T("mod_pixie_pickpocket").modifier.damage_max = math.ceil(T("mod_pixie_pickpocket").modifier.damage_max * u.damage_factor)
+		T("mod_ray_arcane").dps.damage_min = T("mod_ray_arcane").dps.damage_min * u.damage_factor
+		T("mod_ray_arcane").dps.damage_max = T("mod_ray_arcane").dps.damage_max * u.damage_factor
+		T("mod_pixie_pickpocket").modifier.damage_min = T("mod_pixie_pickpocket").modifier.damage_min * u.damage_factor
+		T("mod_pixie_pickpocket").modifier.damage_max = T("mod_pixie_pickpocket").modifier.damage_max * u.damage_factor
 
 		local d = T("tower_arcane_wizard_ray_disintegrate_mod").boss_damage_config
 
 		for k, v in pairs(d) do
-			d[k] = math.ceil(v * u.damage_factor)
+			d[k] = v * u.damage_factor
 		end
 
-		T("mod_lava_infernal_mage").dps.damage_min = math.ceil(T("mod_lava_infernal_mage").dps.damage_min * u.damage_factor)
-		T("mod_lava_infernal_mage").dps.damage_max = math.ceil(T("mod_lava_infernal_mage").dps.damage_max * u.damage_factor)
+		T("mod_lava_infernal_mage").dps.damage_min = T("mod_lava_infernal_mage").dps.damage_min * u.damage_factor
+		T("mod_lava_infernal_mage").dps.damage_max = T("mod_lava_infernal_mage").dps.damage_max * u.damage_factor
 	end
 
 	u = self:get_upgrade("mage_power")
 
 	if u then
 		for _, n in ipairs(self.mage_tower_bolts) do
-			T(n).bullet.damage_min = math.ceil(T(n).bullet.damage_min * u.damage_factor)
-			T(n).bullet.damage_max = math.ceil(T(n).bullet.damage_max * u.damage_factor)
+			T(n).bullet.damage_min = T(n).bullet.damage_min * u.damage_factor
+			T(n).bullet.damage_max = T(n).bullet.damage_max * u.damage_factor
 		end
 
-		T("mod_ray_arcane").dps.damage_min = math.ceil(T("mod_ray_arcane").dps.damage_min * u.damage_factor)
-		T("mod_ray_arcane").dps.damage_max = math.ceil(T("mod_ray_arcane").dps.damage_max * u.damage_factor)
-		T("mod_pixie_pickpocket").modifier.damage_min = math.ceil(T("mod_pixie_pickpocket").modifier.damage_min * u.damage_factor)
-		T("mod_pixie_pickpocket").modifier.damage_max = math.ceil(T("mod_pixie_pickpocket").modifier.damage_max * u.damage_factor)
+		T("mod_ray_arcane").dps.damage_min = T("mod_ray_arcane").dps.damage_min * u.damage_factor
+		T("mod_ray_arcane").dps.damage_max = T("mod_ray_arcane").dps.damage_max * u.damage_factor
+		T("mod_pixie_pickpocket").modifier.damage_min = T("mod_pixie_pickpocket").modifier.damage_min * u.damage_factor
+		T("mod_pixie_pickpocket").modifier.damage_max = T("mod_pixie_pickpocket").modifier.damage_max * u.damage_factor
 
 		local d = T("tower_arcane_wizard_ray_disintegrate_mod").boss_damage_config
 
 		for k, v in pairs(d) do
-			d[k] = math.ceil(v * u.damage_factor)
+			d[k] = v * u.damage_factor
 		end
 
-		T("mod_lava_infernal_mage").dps.damage_min = math.ceil(T("mod_lava_infernal_mage").dps.damage_min * u.damage_factor)
-		T("mod_lava_infernal_mage").dps.damage_max = math.ceil(T("mod_lava_infernal_mage").dps.damage_max * u.damage_factor)
+		T("mod_lava_infernal_mage").dps.damage_min = T("mod_lava_infernal_mage").dps.damage_min * u.damage_factor
+		T("mod_lava_infernal_mage").dps.damage_max = T("mod_lava_infernal_mage").dps.damage_max * u.damage_factor
 	end
 
 	u = self:get_upgrade("mage_slow_curse")
@@ -1771,20 +1786,22 @@ function upgrades:patch_templates(max_level)
 
 	if u then
 		for _, n in pairs(engineer_bombs) do
-			T(n).bullet.damage_min = math.ceil(T(n).bullet.damage_min * u.damage_factor)
-			T(n).bullet.damage_max = math.ceil(T(n).bullet.damage_max * u.damage_factor)
+			T(n).bullet.damage_min = T(n).bullet.damage_min * u.damage_factor
+			T(n).bullet.damage_max = T(n).bullet.damage_max * u.damage_factor
 		end
 
-		T("tower_dwaarp").attacks.list[1].damage_min = math.floor(T("tower_dwaarp").attacks.list[1].damage_min * u.damage_factor)
-		T("tower_dwaarp").attacks.list[1].damage_max = math.floor(T("tower_dwaarp").attacks.list[1].damage_max * u.damage_factor)
-		T("ray_tesla").bounce_damage_min = math.floor(T("ray_tesla").bounce_damage_min * u.damage_factor)
-		T("ray_tesla").bounce_damage_max = math.floor(T("ray_tesla").bounce_damage_max * u.damage_factor)
-		T("mod_ray_frankenstein").dps.damage_min = math.floor(T("mod_ray_frankenstein").dps.damage_min * u.damage_factor)
-		T("mod_ray_frankenstein").dps.damage_max = math.floor(T("mod_ray_frankenstein").dps.damage_max * u.damage_factor)
-		T("tower_flamespitter_lvl4").attacks.list[1].damage_min = math.floor(T("tower_flamespitter_lvl4").attacks.list[1].damage_min * u.damage_factor)
-		T("tower_flamespitter_lvl4").attacks.list[1].damage_max = math.floor(T("tower_flamespitter_lvl4").attacks.list[1].damage_max * u.damage_factor)
-		T("mod_tower_rotten_forest_burst_damage").dps.damage_min = math.floor(T("mod_tower_rotten_forest_burst_damage").dps.damage_min * u.damage_factor)
-		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = math.floor(T("mod_tower_rotten_forest_burst_damage").dps.damage_max * u.damage_factor)
+		T("tower_dwaarp").attacks.list[1].damage_min = T("tower_dwaarp").attacks.list[1].damage_min * u.damage_factor
+		T("tower_dwaarp").attacks.list[1].damage_max = T("tower_dwaarp").attacks.list[1].damage_max * u.damage_factor
+		T("ray_tesla").bounce_damage_min = T("ray_tesla").bounce_damage_min * u.damage_factor
+		T("ray_tesla").bounce_damage_max = T("ray_tesla").bounce_damage_max * u.damage_factor
+		T("mod_ray_frankenstein").dps.damage_min = T("mod_ray_frankenstein").dps.damage_min * u.damage_factor
+		T("mod_ray_frankenstein").dps.damage_max = T("mod_ray_frankenstein").dps.damage_max * u.damage_factor
+		T("tower_flamespitter_lvl4").attacks.list[1].damage_min = T("tower_flamespitter_lvl4").attacks.list[1].damage_min * u.damage_factor
+		T("tower_flamespitter_lvl4").attacks.list[1].damage_max = T("tower_flamespitter_lvl4").attacks.list[1].damage_max * u.damage_factor
+		T("mod_tower_rotten_forest_burst_damage").dps.damage_min = T("mod_tower_rotten_forest_burst_damage").dps.damage_min * u.damage_factor
+		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = T("mod_tower_rotten_forest_burst_damage").dps.damage_max * u.damage_factor
+		T("mod_ignis_altar_damage").damage_min = T("mod_ignis_altar_damage").damage_min * u.damage_factor
+		T("mod_ignis_altar_damage").damage_max = T("mod_ignis_altar_damage").damage_max * u.damage_factor
 	end
 
 	u = self:get_upgrade("engineer_range_finder")
@@ -1792,16 +1809,16 @@ function upgrades:patch_templates(max_level)
 	if u then
 		for _, n in pairs(engineer_towers) do
 			if n ~= "tower_mech" and n ~= "tower_balloon" then
-				T(n).attacks.range = math.ceil(T(n).attacks.range * u.range_factor)
+				T(n).attacks.range = T(n).attacks.range * u.range_factor
 			end
 		end
 
-		T("tower_bfg").attacks.list[2].range_base = math.ceil(T("tower_bfg").attacks.list[2].range_base * u.range_factor)
-		T("druid_shooter_sylvan").attacks.list[1].range = math.ceil(T("druid_shooter_sylvan").attacks.list[1].range * u.range_factor)
-		T("tower_flamespitter_lvl4").attacks.list[2].max_range = math.ceil(T("tower_flamespitter_lvl4").attacks.list[2].max_range * u.range_factor)
-		T("tower_flamespitter_lvl4").attacks.list[3].max_range = math.ceil(T("tower_flamespitter_lvl4").attacks.list[3].max_range * u.range_factor)
-		T("soldier_balloon").attacks.list[1].max_range = math.ceil(T("soldier_balloon").attacks.list[1].max_range * u.range_factor)
-		T("soldier_mecha").attacks.list[1].max_range = math.ceil(T("soldier_mecha").attacks.list[1].max_range * u.range_factor)
+		T("tower_bfg").attacks.list[2].range_base = T("tower_bfg").attacks.list[2].range_base * u.range_factor
+		T("druid_shooter_sylvan").attacks.list[1].range = T("druid_shooter_sylvan").attacks.list[1].range * u.range_factor
+		T("tower_flamespitter_lvl4").attacks.list[2].max_range = T("tower_flamespitter_lvl4").attacks.list[2].max_range * u.range_factor
+		T("tower_flamespitter_lvl4").attacks.list[3].max_range = T("tower_flamespitter_lvl4").attacks.list[3].max_range * u.range_factor
+		T("soldier_balloon").attacks.list[1].max_range = T("soldier_balloon").attacks.list[1].max_range * u.range_factor
+		T("soldier_mecha").attacks.list[1].max_range = T("soldier_mecha").attacks.list[1].max_range * u.range_factor
 	end
 
 	u = self:get_upgrade("engineer_magic_dust")
@@ -1819,12 +1836,14 @@ function upgrades:patch_templates(max_level)
 		-- 地震、喷火在他们的逻辑里处理这个科技。
 
 		-- 作为吃不到这个科技的补偿，腐森，特斯拉和弗兰肯斯坦的攻击得到伤害提升
-		T("ray_tesla").bounce_damage_min = math.floor(T("ray_tesla").bounce_damage_min * u.damage_factor)
-		T("ray_tesla").bounce_damage_max = math.floor(T("ray_tesla").bounce_damage_max * u.damage_factor)
-		T("mod_ray_frankenstein").dps.damage_min = math.floor(T("mod_ray_frankenstein").dps.damage_min * u.damage_factor)
-		T("mod_ray_frankenstein").dps.damage_max = math.floor(T("mod_ray_frankenstein").dps.damage_max * u.damage_factor)
-		T("mod_tower_rotten_forest_burst_damage").dps.damage_min = math.floor(T("mod_tower_rotten_forest_burst_damage").dps.damage_min * u.damage_factor)
-		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = math.floor(T("mod_tower_rotten_forest_burst_damage").dps.damage_max * u.damage_factor)
+		T("ray_tesla").bounce_damage_min = T("ray_tesla").bounce_damage_min * u.damage_factor
+		T("ray_tesla").bounce_damage_max = T("ray_tesla").bounce_damage_max * u.damage_factor
+		T("mod_ray_frankenstein").dps.damage_min = T("mod_ray_frankenstein").dps.damage_min * u.damage_factor
+		T("mod_ray_frankenstein").dps.damage_max = T("mod_ray_frankenstein").dps.damage_max * u.damage_factor
+		T("mod_tower_rotten_forest_burst_damage").dps.damage_min = T("mod_tower_rotten_forest_burst_damage").dps.damage_min * u.damage_factor
+		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = T("mod_tower_rotten_forest_burst_damage").dps.damage_max * u.damage_factor
+		T("mod_ignis_altar_damage").damage_min = T("mod_ignis_altar_damage").damage_min * u.damage_factor
+		T("mod_ignis_altar_damage").damage_max = T("mod_ignis_altar_damage").damage_max * u.damage_factor
 	end
 
 	u = self:get_upgrade("engineer_diffusion")
@@ -1848,7 +1867,13 @@ function upgrades:patch_templates(max_level)
 				end
 			end
 		end
-		T("tower_rotten_forest").attacks.range = math.ceil(T("tower_rotten_forest").attacks.range * u.radius_factor)
+		T("tower_rotten_forest").attacks.range = T("tower_rotten_forest").attacks.range * u.radius_factor
+		T("aura_bullet_ignis_altar").render.sprites[1].scale.x = T("aura_bullet_ignis_altar").render.sprites[1].scale.x * u.radius_factor
+		T("aura_bullet_ignis_altar").render.sprites[1].scale.y = T("aura_bullet_ignis_altar").render.sprites[1].scale.y * u.radius_factor
+		T("aura_bullet_ignis_altar").aura.radius = T("aura_bullet_ignis_altar").aura.radius * u.radius_factor
+		T("aura_bullet_tower_hermit_toad_engineer_basic").render.sprites[1].scale.x = T("aura_bullet_tower_hermit_toad_engineer_basic").render.sprites[1].scale.x * u.radius_factor
+		T("aura_bullet_tower_hermit_toad_engineer_basic").render.sprites[1].scale.y = T("aura_bullet_tower_hermit_toad_engineer_basic").render.sprites[1].scale.y * u.radius_factor
+		T("aura_bullet_tower_hermit_toad_engineer_basic").aura.radius = T("aura_bullet_tower_hermit_toad_engineer_basic").aura.radius * u.radius_factor
 	end
 
 	u = self:get_upgrade("engineer_field_logistics")
@@ -1873,7 +1898,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("engineer_gnomish_tinkering")
 
 	if u then
-		for _, a in ipairs({T("tower_dwaarp").attacks.list[2], T("tower_dwaarp").attacks.list[3], T("soldier_mecha").attacks.list[2], T("soldier_mecha").attacks.list[3], T("druid_shooter_sylvan").attacks.list[1], T("tower_entwood").attacks.list[3], T("tower_entwood").attacks.list[2], T("tower_dwaarp").attacks.list[3]}) do
+		for _, a in ipairs({T("tower_dwaarp").attacks.list[2], T("tower_dwaarp").attacks.list[3], T("soldier_mecha").attacks.list[2], T("soldier_mecha").attacks.list[3], T("druid_shooter_sylvan").attacks.list[1], T("tower_entwood").attacks.list[3], T("tower_entwood").attacks.list[2], T("tower_dwaarp").attacks.list[3], T("soldier_balloon").attacks.list[2], T("soldier_balloon").attacks.list[3]}) do
 			a.cooldown = a.cooldown * u.cooldown_factor
 		end
 
@@ -1943,12 +1968,17 @@ function upgrades:patch_templates(max_level)
 		at.cooldown = at.cooldown * u.cooldown_factor
 		at = T("rr_mine_box").attacks.list[1]
 		at.cooldown = at.cooldown * u.cooldown_factor
+
+		at = T("ignis_altar_subunit").attacks.list[1]
+		at.cooldown = at.cooldown * u.cooldown_factor
 	end
 
 	u = self:get_upgrade("engineer_efficiency")
 	if u then
-		T("mod_tower_rotten_forest_burst_damage").dps.damage_min = math.floor(T("mod_tower_rotten_forest_burst_damage").dps.damage_min * 1.25)
-		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = math.floor(T("mod_tower_rotten_forest_burst_damage").dps.damage_max * 1.25)
+		T("mod_tower_rotten_forest_burst_damage").dps.damage_min = T("mod_tower_rotten_forest_burst_damage").dps.damage_min * 1.25
+		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = T("mod_tower_rotten_forest_burst_damage").dps.damage_max * 1.25
+		T("mod_ignis_altar_damage").damage_min = T("mod_ignis_altar_damage").damage_min * 1.25
+		T("mod_ignis_altar_damage").damage_max = T("mod_ignis_altar_damage").damage_max * 1.25
 	end
 
 	if self.list_id == 1 or self.list_id == 2 then

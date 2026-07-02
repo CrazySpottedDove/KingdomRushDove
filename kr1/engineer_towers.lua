@@ -3038,3 +3038,235 @@ tt.render.sprites[1].animated = true
 tt.render.sprites[1].anchor.y = 0.21
 tt.render.sprites[1].offset.y = -15
 tt.render.sprites[1].z = Z_OBJECTS + 1
+
+-- ====================
+-- Tower: Ignis Altar (火山祭坛)
+-- ====================
+tt = RT("tower_ignis_altar", "tower")
+AC(tt, "attacks", "powers", "barrack")
+tt.tower.type = "ignis_altar"
+tt.tower.level = 1
+tt.tower.price = 300
+tt.tower.menu_offset = v(0, 25)
+tt.info.portrait = "kr4_info_portraits_towers_0020"
+tt.info.enc_icon = 20
+tt.info.fn = scripts.tower_ignis_altar.get_info
+tt.main_script.insert = scripts.tower_barrack.insert
+tt.main_script.update = scripts.tower_ignis_altar.update
+tt.main_script.remove = scripts.tower_ignis_altar.remove
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrains_%04i"
+tt.render.sprites[1].offset = v(0, 13)
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "ignis_altar_lvl4"
+tt.render.sprites[2].name = "idle"
+tt.render.sprites[2].exo = true
+tt.render.sprites[2].anchor = v(0.53, 0.16)
+tt.render.sprites[2].offset = v(0, 4)
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].name = "asst_lava_bubble"
+tt.render.sprites[3].offset = v(32, 39)
+tt.sound_events.insert = "IgnisAltarTaunt"
+tt.sound_events.change_rally_point = "RockElementalRally"
+tt.attacks.range = 195
+tt.attacks.list[1] = CC("bullet_attack")
+tt.attacks.list[1].bullet = "bullet_ignis_altar"
+tt.attacks.list[1].vis_flags = bor(F_RANGED, F_AREA)
+tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE, F_FLYING)
+tt.attacks.list[1].cooldown = 3.5
+tt.attacks.list[1].shoot_time = fts(11)
+tt.attacks.list[1].animation = "shoot"
+tt.attacks.list[1].charge_animation = "carga"
+tt.attacks.list[1].bullet_start_offset = v(-1, 90)
+tt.attacks.list[1].node_prediction = fts(36)
+tt.barrack.soldier_type = "soldier_ignis_altar_elemental"
+tt.barrack.rally_range = 195
+tt.barrack.max_soldiers = 0
+tt.shooter = "ignis_altar_subunit"
+tt.ui.click_rect = r(-42, 0, 84, 90)
+tt.powers.burning_elemental = CC("power")
+tt.powers.burning_elemental.price_base = 250
+tt.powers.burning_elemental.max_level = 1
+tt.powers.single_extinction = CC("power")
+tt.powers.single_extinction.price_base = 180
+tt.powers.single_extinction.price_inc = 100
+tt.powers.true_fire = CC("power")
+tt.powers.true_fire.price_base = 300
+tt.powers.true_fire.max_level = 1
+
+-- Ignis Altar Elemental Soldier
+tt = RT("soldier_ignis_altar_elemental", "soldier_militia")
+AC(tt, "nav_grid")
+tt.health.armor = 0
+tt.health.dead_lifetime = 10
+tt.health.hp_max = 450
+tt.health_bar.offset = v(0, 60)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.health.ignore_delete_after = true
+tt.idle_flip.chance = 0.4
+tt.idle_flip.cooldown = 5
+tt.info.fn = scripts.soldier_barrack.get_info
+tt.info.portrait = "kr4_info_portraits_soldiers_0032"
+tt.info.random_name_count = nil
+tt.info.random_name_format = nil
+tt.main_script.insert = scripts.soldier_barrack.insert
+tt.main_script.remove = scripts.soldier_barrack.remove
+tt.main_script.update = scripts.soldier_ignis_altar_elemental.update
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_min = 19
+tt.melee.attacks[1].damage_max = 43
+tt.melee.attacks[1].hit_time = 0.3
+tt.melee.attacks[1].mod_prefix = "mod_ignis_altar_burning_elemental_"
+tt.melee.attacks[1].vis_bans = bor(F_CLIFF)
+tt.melee.attacks[1].vis_flags = F_BLOCK
+tt.melee.range = 70
+tt.motion.max_speed = 30
+tt.raise_animation = "raise"
+tt.respawn_animation = "respawn"
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "ignis_altar_lava_golem"
+tt.render.sprites[1].name = tt.respawn_animation
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].anchor = v(0.5, 0.0881)
+tt.render.sprites[1].angles = {}
+tt.render.sprites[1].angles.walk = {"walk"}
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "asst_lavagolem_shadow"
+tt.render.sprites[2].anchor = v(0.5, 0.5)
+tt.render.sprites[2].offset = v(0, 0)
+tt.render.sprites[2].z = Z_DECALS + 1
+tt.soldier.melee_slot_offset = v(35, 0)
+tt.unit.hit_offset = v(0, 21)
+tt.unit.head_offset = v(13.7, 40.65)
+tt.unit.mod_offset = v(0, 21)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.fade_time_after_death = nil
+tt.unit.blood_color = BLOOD_ORANGE
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.vis.bans = bor(F_SKELETON, F_LYCAN, F_POISON, F_BURN)
+tt.ui.click_rect = r(-25, -2, 50, 52)
+tt.sound_events.insert = "RockElementalDeath"
+tt.sound_events.death = "RockElementalDeath"
+
+-- Subunit (debuff caster)
+tt = E:register_t("ignis_altar_subunit", "decal_scripted")
+AC(tt, "attacks")
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].prefix = "asst_torre_volcan_4_canibal2_head"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].offset = v(25, 5)
+tt.render.sprites[1].draw_order = 2
+tt.attacks.list[1] = CC("spell_attack")
+tt.attacks.list[1].disabled = true
+tt.attacks.list[1].spell_prefix = "mod_ignis_altar_single_extinction_"
+tt.attacks.list[1].spell = nil
+tt.attacks.list[1].cooldown = 18
+tt.attacks.list[1].range = 195
+tt.attacks.list[1].excluded_templates = {}
+tt.attacks.list[1].vis_flags = bor(F_RANGED, F_MOD)
+tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
+tt.owner = nil
+tt.main_script.update = scripts.ignis_altar_subunit.update
+
+-- Modifier: Single Extinction (base)
+tt = E:register_t("mod_ignis_altar_single_extinction_1", "modifier")
+AC(tt, "render")
+tt.modifier.duration = 10
+tt.modifier.use_mod_offset = true
+tt.modifier.vis_flags = F_MOD
+tt.modifier.vis_bans = bor(F_NIGHTMARE, F_BOSS)
+tt.received_damage_factor = 1.5
+tt.explosion_damage = 32
+tt.explosion_damage_type = DAMAGE_MAGICAL
+tt.explosion_range = 50
+tt.explosion_vis_flags = bor(F_AREA)
+tt.explosion_vis_bans = bor(F_FRIEND)
+tt.explosion_fx = "fx_ignis_altar"
+tt.explosion_sound = "IgnisAltarExplosion"
+tt.render.sprites[1].name = "ignis_altar_debuff"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].size_scales = {vv(1), vv(1.3), vv(1.5)}
+tt.render.sprites[1].offset = v(0, -10)
+tt.render.sprites[1].draw_order = DO_MOD_FX
+tt.main_script.insert = scripts.mod_damage_factors.insert
+tt.main_script.remove = scripts.mod_ignis_altar_single_extinction.remove
+tt.main_script.update = scripts.mod_track_target.update
+
+tt = RT("mod_ignis_altar_single_extinction_2", "mod_ignis_altar_single_extinction_1")
+tt.received_damage_factor = 1.75
+tt.explosion_damage = 54
+
+tt = RT("mod_ignis_altar_single_extinction_3", "mod_ignis_altar_single_extinction_2")
+tt.received_damage_factor = 2
+tt.explosion_damage = 76
+
+-- Bullet (main projectile)
+tt = RT("bullet_ignis_altar", "bomb")
+tt.bullet.level = 1
+tt.bullet.flight_time = fts(25)
+tt.bullet.pop = nil
+tt.bullet.hit_decal = nil
+tt.bullet.hit_fx = "fx_ignis_altar"
+tt.bullet.hit_payload = "aura_bullet_ignis_altar"
+tt.bullet.particles_name = "ps_bullet_ignis_altar"
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.bullet.damage_radius = 0
+tt.bullet.hide_radius = 1
+tt.sound_events.insert = "BombShootSound"
+tt.sound_events.hit = "TowerHermitToadShootEngineerImpact"
+tt.render.sprites[1].name = "asst_torre_volcan_proyectl_bola"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+
+-- FX: explosion
+tt = RT("fx_ignis_altar", "fx")
+tt.render.sprites[1].name = "ignis_altar_base_explosion"
+tt.render.sprites[1].offset = v(0, 2)
+
+-- Particle system: bullet trail
+tt = E:register_t("ps_bullet_ignis_altar")
+AC(tt, "pos", "particle_system")
+tt.particle_system.name = "ignis_altar_bullet_smoke"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.track_rotation = true
+tt.particle_system.emission_rate = 33
+tt.particle_system.particle_lifetime = {fts(15), fts(15)}
+tt.particle_system.z = tt.particle_system.z - 1
+
+-- Aura: ground DoT / slow zone
+tt = RT("aura_bullet_ignis_altar", "aura")
+AC(tt, "tween", "render")
+tt.aura.level = 1
+tt.aura.mods = {"mod_ignis_altar_damage"}
+tt.aura.radius = 50
+tt.aura.duration = 3.5
+tt.aura.cycle_time = 0.2
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
+tt.render.sprites[1].prefix = "ignis_altar_decal"
+tt.render.sprites[1].prefix_upgraded = "ignis_altar_decal_lava"
+tt.render.sprites[1].name = "start"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].exo = true
+tt.render.sprites[1].scale = vv(1)
+tt.render.sprites[1].z = Z_DECALS
+tt.mods_upgraded = {"mod_ignis_altar_damage", "mod_ignis_altar_slow"}
+tt.tween.disabled = true
+tt.tween.props[1].keys = {{0, 255}, {0.3, 0}}
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_bullet_ignis_altar.update
+
+-- Modifier: Electrical damage (DoT)
+tt = RT("mod_ignis_altar_damage", "mod_damage")
+tt.damage_min = 8
+tt.damage_max = 8
+tt.damage_type = DAMAGE_EXPLOSION
+
+-- Modifier: Slow
+tt = RT("mod_ignis_altar_slow", "mod_slow")
+tt.slow.factor = 0.5
+tt.modifier.duration = 0.3

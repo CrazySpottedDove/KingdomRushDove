@@ -4552,12 +4552,12 @@ function EncyclopediaView:detail_tower(index)
 		label.line_height = 0.75
 
 		if v == "health" then
-			label.text = di.hp_max
+			label.text = U.safe_int_string(di.hp_max)
 		elseif v == "armor" then
 			-- label.text = GU.armor_value_desc(di.armor)
 			label.text = U.safe_int_string(di.armor and di.armor * 100 or 0)
 		elseif v == "dmg" or v == "mdmg" then
-			label.text = di.damage_min .. "-" .. di.damage_max
+			label.text = U.safe_int_string(di.damage_min) .. "-" .. U.safe_int_string(di.damage_max)
 		elseif v == "respawn" then
 			label.text = string.format(_("%i sec."), di.respawn)
 		elseif v == "reload" then

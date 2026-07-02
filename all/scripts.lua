@@ -6767,16 +6767,13 @@ function scripts.mod_damage.insert(this, store)
 		return false
 	end
 
-	local d = E.create_damage()
-
-	d.value = math.random(this.damage_min, this.damage_max)
-	d.source_id = this.id
-	d.target_id = target.id
-	d.damage_type = this.damage_type
-
+	local value = math.random(this.damage_min, this.damage_max)
 	if this.damage_inc then
-		d.value = d.value + this.modifier.level * this.damage_inc
+		value = value + this.modifier.level * this.damage_inc
 	end
+	value = value * this.modifier.damage_factor
+
+	local d = E.assign_damage(this.damage_type, value, this.id, target.id)
 
 	queue_damage(store, d)
 

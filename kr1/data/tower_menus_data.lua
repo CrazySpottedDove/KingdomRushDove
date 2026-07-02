@@ -346,6 +346,14 @@ return {
 			tt_title = _("TOWER_BALLOON_NAME"),
 			tt_desc = _("TOWER_BALLOON_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_ignis_altar",
+			image = "kr4_main_icons_0020",
+			type = "ignis_altar",
+			place = 22,
+			tt_title = _("TOWER_IGNIS_ALTAR_NAME"),
+			tt_desc = _("TOWER_IGNIS_ALTAR_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	archer = {{M(tpl.common_upgrade, {
@@ -3656,6 +3664,46 @@ return {
 		tt_list = {{
 			tt_title = _("TOWER_TWILIGHT_ELVES_BARRACK_LAST_BREATH_NAME_1"),
 			tt_desc = _("TOWER_TWILIGHT_ELVES_BARRACK_LAST_BREATH_DESCRIPTION_1")
+		}}
+	}), tpl.rally, tpl.sell}},
+	ignis_altar = {{M(tpl.upgrade_power, {
+		action_arg = "burning_elemental",
+		image = "kr4_special_icons_0068",
+		sounds = {"IgnisAltarGolemstoneUpgrade"},
+		place = 6,
+		tt_phrase = _("TOWER_IGNIS_ALTAR_BURNING_ELEMENTAL_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_IGNIS_ALTAR_BURNING_ELEMENTAL_NAME_1"),
+			tt_desc = _("TOWER_IGNIS_ALTAR_BURNING_ELEMENTAL_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_IGNIS_ALTAR_BURNING_ELEMENTAL_NAME_2"),
+			tt_desc = _("TOWER_IGNIS_ALTAR_BURNING_ELEMENTAL_DESCRIPTION_2")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "single_extinction",
+		image = "kr4_special_icons_0070",
+		sounds = {"IgnisAltarFirewheelUpgrade"},
+		place = 5,
+		tt_phrase = _("TOWER_IGNIS_ALTAR_SINGLE_EXTINCTION_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_IGNIS_ALTAR_SINGLE_EXTINCTION_NAME_1"),
+			tt_desc = _("TOWER_IGNIS_ALTAR_SINGLE_EXTINCTION_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_IGNIS_ALTAR_SINGLE_EXTINCTION_NAME_2"),
+			tt_desc = _("TOWER_IGNIS_ALTAR_SINGLE_EXTINCTION_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_IGNIS_ALTAR_SINGLE_EXTINCTION_NAME_3"),
+			tt_desc = _("TOWER_IGNIS_ALTAR_SINGLE_EXTINCTION_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "true_fire",
+		image = "kr4_special_icons_0069",
+		sounds = {"IgnisAltarStickyLavaUpgrade"},
+		place = 7,
+		tt_phrase = _("TOWER_IGNIS_ALTAR_TRUE_FIRE_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_IGNIS_ALTAR_TRUE_FIRE_NAME_1"),
+			tt_desc = _("TOWER_IGNIS_ALTAR_TRUE_FIRE_DESCRIPTION_1")
 		}}
 	}), tpl.rally, tpl.sell}},
 	goblirang = {{M(tpl.upgrade_power, {

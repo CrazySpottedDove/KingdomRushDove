@@ -27608,4 +27608,348 @@ function scripts.storm_deep_devils.update(this, store)
 	queue_remove(store, this)
 end
 
+-- ====================
+-- Ignis Altar Tower
+-- ====================
+scripts.tower_ignis_altar = {}
+
+function scripts.tower_ignis_altar.get_info(this)
+	local mod = E:get_template("mod_ignis_altar_damage")
+	local o = scripts.tower_common.get_info(this)
+
+	o.damage_min = mod.damage_min * this.tower.damage_factor
+	o.damage_max = mod.damage_max * this.tower.damage_factor
+	o.damage_type = mod.damage_type
+	return o
+end
+
+function scripts.tower_ignis_altar.update(this, store)
+	this.shooter = E:create_entity("ignis_altar_subunit")
+	-- const&
+	this.shooter.pos = this.pos
+	this.shooter.owner = this
+	queue_insert(store, this.shooter)
+
+	local tower_sid = 2
+	local pow_elemental = this.powers.burning_elemental
+	local pow_extinction = this.powers.single_extinction
+	local pow_fire = this.powers.true_fire
+	local a1 = this.attacks.list[1]
+	a1.ts = store.tick_ts
+
+	if pow_extinction.level > 0 then
+		this.shooter.render.sprites[1].hidden = false
+	end
+	U.y_animation_play(this, a1.charge_animation, nil, store.tick_ts, nil, tower_sid)
+	U.animation_start(this, "idle", nil, store.tick_ts, true, tower_sid)
+
+	while true do
+		if not this.tower.blocked then
+			if pow_elemental.changed then
+				pow_elemental.changed = nil
+				this.barrack.max_soldiers = 1
+				local soldier = E:create_entity(this.barrack.soldier_type)
+				soldier.soldier.tower_id = this.id
+				soldier.soldier.tower_soldier_idx = 1
+				soldier.nav_rally.pos, soldier.nav_rally.center = U.rally_formation_position(1, this.barrack, this.barrack.max_soldiers, this.barrack.rally_angle_offset)
+				soldier.pos:copy(soldier.nav_rally.pos)
+				soldier.nav_rally.new = false
+				soldier.render.sprites[1].name = soldier.raise_animation
+				U.soldier_inherit_tower_buff_factor(soldier, this)
+				queue_insert(store, soldier)
+				this.barrack.soldiers[1] = soldier
+				signal.emit("tower-spawn", this, soldier)
+			end
+
+			if pow_extinction.changed then
+				pow_extinction.changed = nil
+				local attack = this.shooter.attacks.list[1]
+				attack.disabled = nil
+				attack.spell = attack.spell_prefix .. pow_extinction.level
+				this.shooter.render.sprites[1].hidden = false
+			end
+
+			if pow_fire.changed then
+				pow_fire.changed = nil
+			end
+
+			for i = 1, this.barrack.max_soldiers do
+				local s = this.barrack.soldiers[i]
+				if not s or (s.health.dead and store.tick_ts - s.health.death_ts > s.health.dead_lifetime) then
+					if s then
+						queue_remove(store, s)
+					end
+
+					local ns = E:create_entity(this.barrack.soldier_type)
+					ns.soldier.tower_id = this.id
+					ns.soldier.tower_soldier_idx = i
+					ns.pos:copy(s.pos)
+					ns.nav_rally.pos:copy(this.barrack.rally_pos)
+					ns.nav_rally.center:copy(ns.nav_rally.pos)
+					ns.nav_rally.new = true
+					U.soldier_inherit_tower_buff_factor(ns, this)
+					queue_insert(store, ns)
+					this.barrack.soldiers[i] = ns
+					signal.emit("tower-spawn", this, ns)
+				end
+			end
+
+			if this.barrack.rally_new then
+				this.barrack.rally_new = false
+				signal.emit("rally-point-changed", this)
+				local all_dead = true
+				for i, s in ipairs(this.barrack.soldiers) do
+					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, this.barrack, this.barrack.max_soldiers, this.barrack.rally_angle_offset)
+					s.nav_rally.new = true
+					all_dead = all_dead and s.health.dead
+				end
+				if not all_dead then
+					S:queue(this.sound_events.change_rally_point)
+				end
+			end
+
+			if ready_to_attack(a1, store, this.tower.cooldown_factor) then
+				local target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, a1.vis_flags, a1.vis_bans)
+				if target then
+					a1.ts = store.tick_ts
+					U.animation_start(this, a1.animation, nil, store.tick_ts, nil, tower_sid)
+					U.y_wait_unconditional(store, a1.shoot_time)
+					local new_target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, a1.vis_flags, a1.vis_bans)
+					if new_target then
+						target = new_target
+					end
+
+					local bullet = E:create_entity(a1.bullet)
+					bullet.pos = V.v(this.pos.x + a1.bullet_start_offset.x, this.pos.y + a1.bullet_start_offset.y)
+					bullet.bullet.from = V.vclone(bullet.pos)
+					bullet.bullet.to = U.calculate_enemy_ffe_pos(target, a1.node_prediction)
+					bullet.bullet.source_id = this.id
+					bullet.bullet.damage_factor = this.tower.damage_factor
+					bullet.bullet.level = pow_fire.level
+
+					queue_insert(store, bullet)
+
+					while not U.animation_finished(this, tower_sid) do
+						coroutine.yield()
+					end
+					U.y_animation_play(this, a1.charge_animation, nil, store.tick_ts, nil, tower_sid)
+					U.animation_start(this, "idle", nil, store.tick_ts, true, tower_sid)
+				else
+					a1.ts = a1.ts + 0.1
+				end
+			end
+		end
+		coroutine.yield()
+	end
+end
+
+function scripts.tower_ignis_altar.remove(this, store)
+	if this.shooter then
+		queue_remove(store, this.shooter)
+		this.shooter = nil
+	end
+	for i, s in ipairs(this.barrack.soldiers) do
+		if s.health then
+			s.health.dead = true
+		end
+		queue_remove(store, s)
+	end
+	return true
+end
+
+scripts.ignis_altar_subunit = {}
+
+function scripts.ignis_altar_subunit.update(this, store)
+	-- 等待补齐美术资源,从而可以补齐动画
+	local a1 = this.attacks.list[1]
+	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
+	local owner = this.owner
+	local function filter_fn(e)
+		return not U.has_modifier_in_list(store, e, {"mod_ignis_altar_single_extinction_1", "mod_ignis_altar_single_extinction_2", "mod_ignis_altar_single_extinction_3"})
+	end
+	while true do
+		if not owner.tower.blocked then
+			if ready_to_attack(a1, store, owner.tower.cooldown_factor) and not a1.disabled then
+				local enemy = U.find_biggest_enemy_in_range_filter_on(tpos(owner), owner.attacks.range, a1.vis_flags, a1.vis_bans, filter_fn)
+
+				if enemy then
+					local start_ts = store.tick_ts
+					U.y_animation_play_default(this, "activate", nil, store.tick_ts)
+
+					enemy = store.entities[enemy.id]
+					if not enemy or enemy.health.dead then
+						enemy = U.find_biggest_enemy_in_range_filter_on(tpos(owner), owner.attacks.range, a1.vis_flags, a1.vis_bans, filter_fn)
+					end
+
+					if enemy then
+						a1.ts = start_ts
+						local mod = E:create_entity(a1.spell)
+						mod.modifier.target_id = enemy.id
+						mod.modifier.source_id = this.id
+						queue_insert(store, mod)
+						U.animation_start_default(this, "active", nil, store.tick_ts, true)
+						coroutine.yield()
+						while store.entities[mod.id] do
+							coroutine.yield()
+						end
+						U.y_animation_play_default(this, "deactivate", nil, store.tick_ts)
+						U.animation_start_default(this, "idle", nil, store.tick_ts, true)
+					else
+						U.y_animation_play_default(this, "deactivate", nil, store.tick_ts)
+						U.animation_start_default(this, "idle", nil, store.tick_ts, true)
+						a1.ts = a1.ts + 0.1
+					end
+				else
+					a1.ts = a1.ts + 0.1
+				end
+			end
+		end
+		coroutine.yield()
+	end
+end
+
+scripts.mod_ignis_altar_single_extinction = {}
+
+function scripts.mod_ignis_altar_single_extinction.remove(this, store)
+	if scripts.mod_damage_factors.remove(this, store) then
+		local target = store.entities[this.modifier.target_id]
+		if target and target.health.dead then
+			S:queue("BombExplosionSound")
+
+			local fx = E:create_entity(this.explosion_fx)
+			fx.pos = V.vclone(target.pos)
+			fx.render.sprites[1].ts = store.tick_ts
+			fx.render.sprites[1].offset = V.v(0, 0)
+			queue_insert(store, fx)
+
+			local enemies = U.find_enemies_in_range_filter_off(target.pos, this.explosion_range, this.explosion_vis_flags, this.explosion_vis_bans)
+
+			if enemies then
+				for _, e in ipairs(enemies) do
+					local d = E.assign_damage(this.explosion_damage_type, this.explosion_damage * this.modifier.damage_factor, this.id, e.id)
+					queue_damage(store, d)
+				end
+			end
+		end
+		return true
+	end
+	return false
+end
+
+scripts.aura_bullet_ignis_altar = {
+	insert = function(this, store)
+		if this.aura.level > 0 then
+			this.aura.mods = this.mods_upgraded
+			this.render.sprites[1].prefix = this.render.sprites[1].prefix_upgraded
+		end
+	end
+}
+
+function scripts.aura_bullet_ignis_altar.update(this, store)
+	if this.aura.level > 0 then
+		this.aura.mods = this.mods_upgraded
+		this.render.sprites[1].prefix = this.render.sprites[1].prefix_upgraded
+	end
+
+	local last_hit_ts = store.tick_ts - this.aura.cycle_time
+
+	U.animation_start(this, "start", nil, store.tick_ts, false, 1)
+	local start_ended = false
+
+	while true do
+		if not start_ended and U.animation_finished(this, 1) then
+			start_ended = true
+			U.animation_start(this, "run", nil, store.tick_ts, true, 1)
+		end
+		if store.tick_ts - this.aura.ts > this.actual_duration then
+			break
+		end
+
+		if store.tick_ts - last_hit_ts > this.aura.cycle_time then
+			last_hit_ts = store.tick_ts
+
+			local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
+			if targets then
+				for i, target in ipairs(targets) do
+					local mods = this.aura.mods
+
+					for _, mod_name in ipairs(mods) do
+						local new_mod = E:create_entity(mod_name)
+
+						new_mod.modifier.target_id = target.id
+						new_mod.modifier.source_id = this.id
+						new_mod.modifier.damage_factor = this.aura.damage_factor
+
+						queue_insert(store, new_mod)
+					end
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+
+	this.tween.ts = store.tick_ts
+	this.tween.disabled = nil
+end
+
+scripts.soldier_ignis_altar_elemental = {}
+
+function scripts.soldier_ignis_altar_elemental.update(this, store, script)
+	local brk, sta
+
+	if this.vis._bans then
+		this.vis.bans = this.vis._bans
+		this.vis._bans = nil
+	end
+
+	this.health_bar.hidden = true
+	U.animation_start(this, this.render.sprites[1].name, nil, store.tick_ts, nil, 1)
+	while not U.animation_finished(this, 1) and not this.health.dead do
+		coroutine.yield()
+	end
+	if not this.health.dead then
+		this.health_bar.hidden = nil
+	end
+
+	while true do
+		if not this.health.dead or SU.y_soldier_revive(store, this) then
+		-- alive or revived
+		else
+			SU.y_soldier_death(store, this)
+			U.animation_start(this, "deathIdle", nil, store.tick_ts, true, 1)
+			return
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			while this.nav_rally.new do
+				if SU.y_soldier_new_rally(store, this) then
+					goto label_43_1
+				end
+			end
+
+			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+			if brk or sta ~= A_NO_TARGET then
+				goto label_43_1
+			end
+
+			if SU.soldier_go_back_step(store, this) then
+				goto label_43_1
+			end
+
+			::label_43_0::
+
+			SU.soldier_idle(store, this)
+
+			SU.soldier_regen(store, this)
+		end
+
+		::label_43_1::
+
+		coroutine.yield()
+	end
+end
+
 return scripts

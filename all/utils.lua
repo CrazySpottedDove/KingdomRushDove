@@ -646,6 +646,15 @@ function U.y_animation_play(entity, name, flip_x, ts, times, idx)
 	end
 end
 
+function U.y_animation_play_default(entity, name, flip_x, ts)
+	U.animation_start_default(entity, name, flip_x, ts, false)
+	local a = entity.render.sprites[1]
+	local times = a.loop and 1 or 0
+	while a.runs <= times do
+		coroutine.yield()
+	end
+end
+
 ---开始指定组的动画
 ---@param entity table 实体
 ---@param name string 动画名称

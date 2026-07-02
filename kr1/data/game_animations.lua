@@ -48630,5 +48630,64 @@ return {
 		prefix = "deep_devils_reef_tower_redspine_spear_decal_lvl4",
 		from = 9,
 		to = 9
+	},
+	--炸弹进火山
+	ignis_altar_lava_bubble_in = {
+		prefix = "asst_torre_volcan_decal_bubbles",
+		from = 1,
+		to = 9
+	},
+	--普攻发射动画（火山口）
+	ignis_altar_lava_bubble_shoot = {
+		prefix = "asst_torre_volcan_decal_bubbles",
+		from = 1,
+		to = 9
+	},
+	--普攻尾焰
+	ignis_altar_bullet_smoke = {
+		prefix = "asst_particle_f",
+		from = 1,
+		to = 6
+	},
+	--普攻爆炸效果
+	ignis_altar_base_explosion = {
+		prefix = "asst_lavaboomb",
+		from = 1,
+		to = 14
+	},
+	ignis_altar_debuff = {
+		prefix = "asst_lavadebuffb",
+		from = 1,
+		to = 9
+	},
+	ignis_altar_taunt3_fade = {
+		prefix = "asst_torre_volcan_decal",
+		from = 1,
+		to = 5
+	},
+	asst_lava_bubble = {
+		prefix = "asst_lava_bubble",
+		from = 1,
+		to = 6
+	},
+	asst_torre_volcan_4_canibal2_head_idle = {
+		prefix = "asst_torre_volcan_4_canibal2_head",
+		from = 1,
+		to = 1
+	},
+	asst_torre_volcan_4_canibal2_head_active = {
+		prefix = "asst_torre_volcan_4_canibal2_head",
+		from = 4,
+		to = 4
+	},
+	asst_torre_volcan_4_canibal2_head_activate = {
+		prefix = "asst_torre_volcan_4_canibal2_head",
+		from = 1,
+		to = 4
+	},
+	asst_torre_volcan_4_canibal2_head_deactivate = {
+		prefix = "asst_torre_volcan_4_canibal2_head",
+		from = 4,
+		to = 1
 	}
 }
