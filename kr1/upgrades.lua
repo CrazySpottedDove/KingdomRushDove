@@ -1242,7 +1242,8 @@ upgrades.engineer_bombs = {
 	"missile_rr",
 	"missile_rr_nitro",
 	"bomb_balloon",
-	"bullet_balloon_oil"
+	"bullet_balloon_oil",
+	"melting_furnace_coal"
 }
 
 upgrades.engineer_advanced_tower = {
@@ -1261,7 +1262,8 @@ upgrades.engineer_advanced_tower = {
 	"tower_rotten_forest",
 	"tower_rocket_riders",
 	"tower_balloon",
-	"tower_ignis_altar"
+	"tower_ignis_altar",
+	"tower_melting_furnace"
 }
 
 local fps_based_keys = {

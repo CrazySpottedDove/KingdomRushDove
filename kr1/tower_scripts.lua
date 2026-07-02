@@ -28970,4 +28970,308 @@ scripts.blazing_watcher_bolt_blast = {
 	end
 }
 
+scripts.tower_melting_furnace = {}
+
+function scripts.tower_melting_furnace.get_info(this)
+	local a = this.attacks.list[1]
+	local dt = a.damage_type
+	return {
+		damage_min = math.ceil(a.damage_min * this.tower.damage_factor),
+		damage_max = math.ceil(a.damage_max * this.tower.damage_factor),
+		range = this.attacks.range,
+		type = STATS_TYPE_TOWER,
+		cooldown = a.cooldown
+	}
+end
+
+function scripts.tower_melting_furnace.insert(this, store)
+	local points = {}
+	local inner_fx_radius = 100
+	local outer_fx_radius = 115
+
+	for i = 1, 12 do
+		local r = outer_fx_radius
+		if i % 2 == 0 then
+			r = inner_fx_radius
+		end
+		local p = {}
+		p.pos = U.point_on_ellipse(this.pos, r, 2 * math.pi * i / 12)
+		p.terrain = GR:cell_type(p.pos.x, p.pos.y)
+		if GR:cell_is(p.pos.x, p.pos.y, TERRAIN_WATER) or P:valid_node_nearby(p.pos.x, p.pos.y, 1) and not GR:cell_is(p.pos.x, p.pos.y, TERRAIN_CLIFF) then
+			table.insert(points, p)
+		end
+	end
+	this.fx_points = points
+	return true
+end
+
+function scripts.tower_melting_furnace.remove(this, store)
+	local mods = table.filter(store.entities, function(_, e)
+		return e.modifier and e.modifier.source_id == this.id
+	end)
+	for _, m in ipairs(mods) do
+		queue_remove(store, m)
+	end
+	return true
+end
+
+function scripts.tower_melting_furnace.update(this, store)
+	local a = this.attacks
+	local smash = a.list[1]
+	local coal = a.list[2]
+	local buff = a.list[3]
+	local fuel = a.list[4]
+	local pow_coal = this.powers.coal
+	local pow_heat = this.powers.heat
+	local pow_fuel = this.powers.fuel
+	local anim_id = 2
+
+	smash.ts = store.tick_ts - smash.cooldown
+
+	while true do
+		if this.tower.blocked then
+			coroutine.yield()
+		end
+
+		if pow_heat.changed then
+			pow_heat.changed = nil
+			if pow_heat.level == 1 then
+				buff.ts = store.tick_ts
+			end
+		end
+		if pow_fuel.changed then
+			pow_fuel.changed = nil
+			if pow_fuel.level == 1 then
+				fuel.ts = store.tick_ts
+			end
+		end
+		if pow_coal.changed then
+			pow_coal.changed = nil
+			if pow_coal.level == 1 then
+				coal.ts = store.tick_ts
+			end
+		end
+
+		if pow_heat.level > 0 and store.tick_ts - buff.ts > buff.cooldown then
+			buff.ts = store.tick_ts
+			local existing_mods = table.filter(store.entities, function(_, e)
+				return e.modifier and e.template_name == buff.mod and e.modifier.level >= pow_heat.level
+			end)
+			local busy_ids = table.map(existing_mods, function(_, v)
+				return v.modifier.target_id
+			end)
+			local towers = table.filter(store.entities, function(_, e)
+				return e.tower and e.tower.can_be_mod and not table.contains(busy_ids, e.id) and not table.contains(buff.excluded_templates, e.template_name) and U.is_inside_ellipse(e.pos, this.pos, buff.range) and e.id ~= this.id
+			end)
+			for _, tower in ipairs(towers) do
+				local new_mod = E:create_entity(buff.mod)
+				new_mod.modifier.level = pow_heat.level
+				new_mod.modifier.target_id = tower.id
+				new_mod.modifier.source_id = this.id
+				new_mod.pos = tower.pos
+				queue_insert(store, new_mod)
+			end
+		end
+
+		if pow_coal.level > 0 and not coal.disabled and store.tick_ts - coal.ts > coal.cooldown then
+			local trigger_enemy, _, trigger_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, coal.node_prediction, coal.vis_flags, coal.vis_bans)
+			if trigger_enemy then
+				coal.ts = store.tick_ts
+				S:queue(coal.sound)
+				U.animation_start(this, "shootFissure", nil, store.tick_ts)
+				this.render.sprites[10].hidden = false
+				this.tween.disabled = false
+				this.tween.props[1].ts = store.tick_ts
+				y_wait(store, coal.hit_time)
+				local enemy, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, coal.node_prediction, coal.vis_flags, coal.vis_bans)
+				local dest = enemy and pred_pos or trigger_pos
+				local fragment_count = pow_coal.fragment_count_base + pow_coal.fragment_count_inc * pow_coal.level
+				local target = enemy or trigger_enemy
+				local nearest_nodes = P:nearest_nodes(dest.x, dest.y, {target.nav_path.pi})
+				local n_offset = math.ceil(fragment_count / 2)
+				local ni_offset = n_offset * coal.fragment_node_spread
+				local ni, pi
+				if #nearest_nodes > 0 then
+					pi, _, ni = unpack(nearest_nodes[1])
+					ni_offset = km.clamp(fragment_count * coal.fragment_node_spread + 1 - ni, coal.fragment_node_spread + #P.paths[pi][1] - ni, ni_offset)
+				end
+				for i = 1, fragment_count do
+					local bf_dest
+					if #nearest_nodes > 0 then
+						bf_dest = P:node_pos(pi, 1, ni + ni_offset - i * coal.fragment_node_spread)
+					else
+						bf_dest = U.point_on_ellipse(dest, (50 * math.random() + 45) / 2, 2 * math.pi * i / fragment_count)
+					end
+					bf_dest.x = bf_dest.x + U.frandom(-coal.fragment_pos_spread.x, coal.fragment_pos_spread.x)
+					bf_dest.y = bf_dest.y + U.frandom(-coal.fragment_pos_spread.y, coal.fragment_pos_spread.y)
+					local b = E:create_entity(coal.bullet)
+					b.pos.x = this.pos.x + (n_offset - i) * coal.bullet_start_offset.x
+					b.pos.y = this.pos.y + coal.bullet_start_offset.y + math.random(-5, 5)
+					b.bullet.damage_factor = this.tower.damage_factor
+					b.bullet.from = vclone(b.pos)
+					b.bullet.to = vclone(bf_dest)
+					b.bullet.flight_time = b.bullet.flight_time + fts(i) * math.random(1, 2)
+					b.bullet.target_id = enemy and enemy.id or trigger_enemy.id
+					b.bullet.source_id = this.id
+					b.bullet.level = pow_coal.level
+					queue_insert(store, b)
+				end
+				y_animation_wait(this)
+				this.render.sprites[10].hidden = true
+				this.tween.disabled = true
+			end
+		end
+
+		local trigger_enemy, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, smash.vis_flags, smash.vis_bans)
+		if pow_fuel.level > 0 and not fuel.boost and store.tick_ts - fuel.ts > fuel.cooldown and trigger_enemy then
+			fuel.ts = store.tick_ts
+			fuel.boost = true
+			coal.disabled = true
+			S:queue("MeltingFurnaceBurningFuel")
+			U.animation_start(this, "bfIntro", nil, store.tick_ts)
+			y_animation_wait(this)
+			local mod = E:create_entity(fuel.mod)
+			mod.pos = this.pos
+			for k, v in pairs(mod.effect) do
+				this.attacks.list[1][k] = v
+			end
+			mod.modifier.target_id = this.id
+			mod.modifier.source_id = this.id
+			queue_insert(store, mod)
+			U.animation_start(this, "bfLoop", nil, store.tick_ts, true)
+			y_wait(store, fts(8))
+		end
+		if trigger_enemy and store.tick_ts - smash.ts > smash.cooldown then
+			smash.ts = store.tick_ts
+			S:queue(smash.sound)
+			U.animation_start(this, fuel.boost and "bfHit" or "shoot", nil, store.tick_ts)
+			y_wait(store, smash.hit_time)
+			local enemies = U.find_enemies_in_range(store, tpos(this), 0, a.range, smash.damage_flags, smash.damage_bans)
+			if enemies then
+				for _, enemy in ipairs(enemies) do
+					local d = E.assign_damage(smash.damage_type, math.ceil(this.tower.damage_factor * math.random(smash.damage_min, smash.damage_max)), this.id, enemy.id)
+					d.reduce_armor = smash.reduce_armor
+					queue_damage(store, d)
+					if smash.mod then
+						local mod = E:create_entity(smash.mod)
+						mod.modifier.target_id = enemy.id
+						queue_insert(store, mod)
+					end
+				end
+			end
+			for _, p in ipairs(this.fx_points) do
+				if band(p.terrain, TERRAIN_WATER) ~= 0 then
+					local smoke = E:create_entity("decal_dwaarp_smoke_water")
+					smoke.pos.x, smoke.pos.y = p.pos.x, p.pos.y
+					smoke.render.sprites[1].ts = store.tick_ts + math.random() * fts(5)
+					queue_insert(store, smoke)
+				else
+					local decal = E:create_entity("decal_tween")
+					decal.pos.x, decal.pos.y = p.pos.x, p.pos.y
+					decal.tween.props[1].keys = {{0, 255}, {0.8, 255}, {1.5, 0}}
+					decal.tween.props[1].name = "alpha"
+					decal.render.sprites[1].name = "darkarmy_melting_furnace_decal"
+					decal.render.sprites[1].animated = false
+					decal.render.sprites[1].z = Z_DECALS
+					decal.render.sprites[1].ts = store.tick_ts
+					queue_insert(store, decal)
+					local smoke = E:create_entity("decal_melting_furnace_smoke")
+					smoke.pos.x, smoke.pos.y = p.pos.x, p.pos.y
+					smoke.render.sprites[1].ts = store.tick_ts
+					queue_insert(store, smoke)
+				end
+			end
+			y_animation_wait(this)
+			U.animation_start(this, fuel.boost and "bfLoop" or "idle", nil, store.tick_ts, true)
+		else
+			if not fuel.boost and this.render.sprites[anim_id].name == "bfLoop" then
+				U.animation_start(this, "idle", nil, store.tick_ts, true)
+			end
+			coroutine.yield()
+		end
+	end
+end
+
+scripts.mod_furnace_fuel = {}
+
+function scripts.mod_furnace_fuel.update(this, store)
+	local m = this.modifier
+	local tower = store.entities[m.target_id]
+	if not tower or not tower.tower then
+		return
+	end
+	U.y_animation_play(this, "fadeIn", nil, store.tick_ts)
+	U.animation_start(this, "loop", nil, store.tick_ts, true)
+	y_wait(store, m.duration - fts(12))
+	U.y_animation_play(this, "fadeOut", nil, store.tick_ts)
+	queue_remove(store, this)
+end
+
+function scripts.mod_furnace_fuel.remove(this, store)
+	local tower = store.entities[this.modifier.target_id]
+	if not tower or not tower.tower then
+		return true
+	end
+	local backup = T("tower_melting_furnace").attacks.list[1]
+	for k, _ in pairs(this.effect) do
+		tower.attacks.list[1][k] = backup[k]
+	end
+	tower.attacks.list[2].disabled = false
+	tower.attacks.list[4].boost = false
+	return true
+end
+
+scripts.mod_furnace_buff = {}
+
+function scripts.mod_furnace_buff.insert(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+	if not target or not target.tower then
+		return false
+	end
+	if target.attacks or target.template_name == "tower_mech" then
+		target.tower.damage_factor = target.tower.damage_factor * (1 + this.extra_damage * m.level)
+	end
+	signal.emit("mod-applied", this, target)
+	return true
+end
+
+function scripts.mod_furnace_buff.remove(this, store)
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+	if target and (target.attacks or target.template_name == "tower_mech") then
+		target.tower.damage_factor = target.tower.damage_factor / (1 + this.extra_damage * m.level)
+	end
+	return true
+end
+
+scripts.lava_furnace = {}
+
+function scripts.lava_furnace.update(this, store)
+	local b = this.aura
+	local damage_every = b.cycle_time
+	local damage_factor = b.damage_factor or 1
+	local dps_ts = b.ts
+	while store.tick_ts - b.ts <= this.actual_duration do
+		if this.render.sprites[2].name == "start" and U.animation_finished(this, 2) then
+			U.animation_start(this, "run", nil, store.tick_ts, true)
+		end
+		if store.tick_ts - dps_ts > damage_every then
+			dps_ts = dps_ts + damage_every
+			local enemies = U.find_enemies_in_range(store, this.pos, 0, b.radius, b.vis_flags, b.vis_bans)
+			if enemies then
+				local d_value = math.random(b.damage_min, b.damage_max) + b.damage_inc * b.level
+				d_value = math.ceil(d_value * damage_factor)
+				for _, enemy in ipairs(enemies) do
+					local d = E.assign_damage(b.damage_type, d_value, this.id, enemy.id)
+					d.track_damage = true
+					queue_damage(store, d)
+				end
+			end
+		end
+		coroutine.yield()
+	end
+	queue_remove(store, this)
+end
+
 return scripts

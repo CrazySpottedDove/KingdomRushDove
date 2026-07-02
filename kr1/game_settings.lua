@@ -70,7 +70,8 @@ GS.engineer_towers = {
 	"tower_rotten_forest",
 	"tower_rocket_riders",
 	"tower_balloon",
-	"tower_ignis_altar"
+	"tower_ignis_altar",
+	"tower_melting_furnace"
 }
 GS.barrack_towers = {
 	"tower_barrack_1",

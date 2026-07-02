@@ -362,6 +362,14 @@ return {
 			tt_title = _("TOWER_IGNIS_ALTAR_NAME"),
 			tt_desc = _("TOWER_IGNIS_ALTAR_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_melting_furnace",
+			image = "kr4_main_icons_0006",
+			type = "melting_furnace",
+			place = 23,
+			tt_title = _("TOWER_MELTING_FURNACE_NAME"),
+			tt_desc = _("TOWER_MELTING_FURNACE_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	archer = {{M(tpl.common_upgrade, {
@@ -3855,6 +3863,43 @@ return {
 			tt_desc = _("TOWER_SHAOLIN_TOTAL_DESCRIPTION_3")
 		}}
 	}), tpl.rally, tpl.sell}},
+	melting_furnace = {{M(tpl.upgrade_power, {
+		action_arg = "coal",
+		image = "kr4_special_icons_0031",
+		place = 5,
+		sounds = {"MeltingFurnaceHotCoalTaunt"},
+		tt_phrase = _("TOWER_MELTING_FURNACE_COAL_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_MELTING_FURNACE_COAL_NAME_1"),
+			tt_desc = _("TOWER_MELTING_FURNACE_COAL_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_MELTING_FURNACE_COAL_NAME_2"),
+			tt_desc = _("TOWER_MELTING_FURNACE_COAL_DESCRIPTION_2")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "heat",
+		image = "kr4_special_icons_0032",
+		place = 6,
+		sounds = {"MeltingFurnaceAbrasiveHeatTaunt"},
+		tt_phrase = _("TOWER_MELTING_FURNACE_HEAT_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_MELTING_FURNACE_HEAT_NAME_1"),
+			tt_desc = _("TOWER_MELTING_FURNACE_HEAT_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_MELTING_FURNACE_HEAT_NAME_2"),
+			tt_desc = _("TOWER_MELTING_FURNACE_HEAT_DESCRIPTION_2")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "fuel",
+		image = "kr4_special_icons_0030",
+		place = 7,
+		sounds = {"MeltingFurnaceBurningFuelTaunt"},
+		tt_phrase = _("TOWER_MELTING_FURNACE_FUEL_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_MELTING_FURNACE_FUEL_NAME_1"),
+			tt_desc = _("TOWER_MELTING_FURNACE_FUEL_DESCRIPTION_1")
+		}}
+	}), tpl.sell}},
 	swamp_monster = {{M(tpl.change_mode, {
 		image = "kr4_quickmenu_action_icons_0003",
 		image_mode0 = "kr4_quickmenu_action_icons_0003",

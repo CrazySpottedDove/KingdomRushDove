@@ -3269,3 +3269,170 @@ tt.damage_type = DAMAGE_EXPLOSION
 tt = RT("mod_ignis_altar_slow", "mod_slow")
 tt.slow.factor = 0.5
 tt.modifier.duration = 0.3
+
+-- 熔炉
+tt = RT("tower_melting_furnace", "tower")
+AC(tt, "attacks", "powers", "tween")
+tt.tower.type = "melting_furnace"
+tt.tower.level = 1
+tt.tower.price = 300
+tt.info.portrait = "kr4_info_portraits_towers_0006"
+tt.info.fn = scripts.tower_melting_furnace.get_info
+tt.main_script.insert = scripts.tower_melting_furnace.insert
+tt.main_script.update = scripts.tower_melting_furnace.update
+tt.main_script.remove = scripts.tower_melting_furnace.remove
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrains_%04i"
+tt.render.sprites[1].offset = v(0, 10)
+for i = 2, 9 do
+	tt.render.sprites[i] = CC("sprite")
+	tt.render.sprites[i].prefix = "darkarmy_melting_furnace_tower_lvl4_layer" .. i - 1
+	tt.render.sprites[i].name = "idle"
+	tt.render.sprites[i].offset = v(0, 40)
+end
+tt.render.sprites[10] = CC("sprite")
+tt.render.sprites[10].name = "darkarmy_melting_furnace_red_glow"
+tt.render.sprites[10].animated = false
+tt.render.sprites[10].hidden = true
+tt.render.sprites[10].offset = v(0, 40)
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}, {fts(67), 255}, {fts(73), 0}}
+tt.tween.props[1].sprite_id = 10
+tt.tween.remove = false
+tt.tween.disabled = true
+tt.attacks.range = 186
+tt.attacks.list[1] = CC("area_attack")
+tt.attacks.list[1].vis_flags = F_RANGED
+tt.attacks.list[1].vis_bans = F_FLYING
+tt.attacks.list[1].damage_flags = F_AREA
+tt.attacks.list[1].damage_type = DAMAGE_PHYSICAL
+tt.attacks.list[1].damage_bans = F_FLYING
+tt.attacks.list[1].reduce_armor = 0.75
+tt.attacks.list[1].cooldown = 4
+tt.attacks.list[1].hit_time = 1.83
+tt.attacks.list[1].mod = "mod_furnace_stun"
+tt.attacks.list[1].damage_min = 48
+tt.attacks.list[1].damage_max = 57
+tt.attacks.list[1].sound = "MeltingFurnaceAttack"
+tt.attacks.list[2] = CC("bullet_attack")
+tt.attacks.list[2].vis_flags = bor(F_AREA)
+tt.attacks.list[2].vis_bans = bor(F_FLYING, F_CLIFF)
+tt.attacks.list[2].sound = "MeltingFurnaceHotCoal"
+tt.attacks.list[2].bullet = "melting_furnace_coal"
+tt.attacks.list[2].bullet_start_offset = v(8, 64)
+tt.attacks.list[2].fragment_node_spread = 7
+tt.attacks.list[2].fragment_pos_spread = v(6, 6)
+tt.attacks.list[2].range = 165
+tt.attacks.list[2].cooldown = 15
+tt.attacks.list[2].shoot_time = 0
+tt.attacks.list[2].hit_time = 1.73
+tt.attacks.list[2].node_prediction = 0.9
+tt.attacks.list[3] = CC("mod_attack")
+tt.attacks.list[3].mod = "mod_furnace_buff"
+tt.attacks.list[3].range = 265
+tt.attacks.list[3].cooldown = 0.5
+tt.attacks.list[3].off_range = 20
+tt.attacks.list[4] = CC("mod_attack")
+tt.attacks.list[4].mod = "mod_furnace_fuel"
+tt.attacks.list[4].cooldown = 30
+tt.powers.coal = CC("power")
+tt.powers.coal.price_base = 119
+tt.powers.coal.price_inc = 119
+tt.powers.coal.max_level = 2
+tt.powers.coal.fragment_count_base = 1
+tt.powers.coal.fragment_count_inc = 2
+tt.powers.heat = CC("power")
+tt.powers.heat.price_base = 170
+tt.powers.heat.price_inc = 170
+tt.powers.heat.max_level = 2
+tt.powers.fuel = CC("power")
+tt.powers.fuel.price_base = 212
+tt.powers.fuel.price_inc = 0
+tt.powers.fuel.max_level = 1
+tt.sound_events.insert = "MeltingFurnaceTaunt"
+
+-- Decal: smoke puff
+tt = E:register_t("decal_melting_furnace_smoke", "decal_timed")
+tt.render.sprites[1].prefix = "darkarmy_melting_furnace_smoke"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].z = Z_DECALS
+
+-- Modifier: Fuel
+tt = E:register_t("mod_furnace_fuel", "modifier")
+AC(tt, "render")
+tt.modifier.duration = 10
+tt.effect = {
+	sound = "MeltingFurnaceAttackFuel",
+	cooldown = 2,
+	hit_time = 0.267
+}
+tt.main_script.update = scripts.mod_furnace_fuel.update
+tt.main_script.remove = scripts.mod_furnace_fuel.remove
+tt.render.sprites[1].prefix = "darkarmy_melting_furnace_tower_lvl4_flames"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].offset.y = 28
+tt.render.sprites[1].draw_order = 10
+
+-- Modifier: Heat buff
+tt = E:register_t("mod_furnace_buff", "modifier")
+AC(tt, "render")
+tt.extra_damage = 0.15
+tt.main_script.insert = scripts.mod_furnace_buff.insert
+tt.main_script.remove = scripts.mod_furnace_buff.remove
+tt.render.sprites[1].name = "darkarmy_melting_furnace_tower_swords_run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].anchor.y = 0.21
+tt.render.sprites[1].offset = v(0, -10)
+tt.render.sprites[1].draw_order = 11
+
+-- Coal bullet
+tt = RT("melting_furnace_coal", "bomb")
+tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.flight_time = 0.7
+tt.bullet.hit_fx = nil
+tt.bullet.hit_decal = nil
+tt.bullet.hit_payload = "lava_furnace"
+tt.bullet.hide_radius = 2
+tt.bullet.rotation_speed = 2 * math.pi * 5 / 3
+tt.bullet.align_with_trajectory = false
+tt.render.sprites[1].name = "darkarmy_melting_furnace_tower_travel_particle"
+tt.render.sprites[1].animated = false
+tt.sound_events.hit = nil
+
+-- Lava aura
+tt = E:register_t("lava_furnace", "aura")
+AC(tt, "render", "tween")
+tt.aura.duration = 6
+tt.aura.cycle_time = 0.2
+tt.aura.radius = 37
+tt.aura.damage_min = 2
+tt.aura.damage_max = 2
+tt.aura.damage_inc = 3
+tt.aura.damage_type = DAMAGE_PHYSICAL
+tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
+tt.aura.vis_flags = bor(F_MOD, F_LAVA)
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.lava_furnace.update
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "darkarmy_melting_furnace_decal_fissure_0001"
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].prefix = "darkarmy_melting_furnace_tower_lvl4_fissure_hit"
+tt.render.sprites[2].name = "start"
+tt.render.sprites[2].loop = false
+tt.render.sprites[2].z = Z_DECALS
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].sprite_id = 1
+tt.tween.props[1].keys = {{0, 0}, {fts(12), 255}, {tt.aura.duration - 0.5, 255}, {tt.aura.duration, 0}}
+tt.tween.props[2] = CC("tween_prop")
+tt.tween.props[2].name = "alpha"
+tt.tween.props[2].sprite_id = 2
+tt.tween.props[2].keys = {{0, 255}, {tt.aura.duration - 0.5, 255}, {tt.aura.duration, 0}}
+
+-- Modifier: Furnace stun
+tt = RT("mod_furnace_stun", "mod_stun")
+tt.modifier.duration = 0.6
+tt.modifier.vis_bans = F_BOSS
+tt.render.sprites[1].hidden = true
