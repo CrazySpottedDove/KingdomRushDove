@@ -28310,4 +28310,373 @@ scripts.mod_gold_indicator = {
 	end
 }
 
+----------------------------------------------
+-- 炙热宝石 (Blazing Watcher, KR4)
+scripts.tower_blazing_watcher = {
+	get_info = function(this)
+		local o = scripts.tower_common.get_info(this)
+		o.damage_min = o.damage_min * this.attack_stage
+		o.damage_max = o.damage_max * this.attack_stage
+		o.cooldown = E:get_template("mod_tower_blazing_watcher_damage").dps.damage_every * this.tower.cooldown_factor
+		return o
+	end,
+	update = function(this, store)
+		local a = this.attacks
+		local ab = this.attacks.list[1]
+		local ad = this.attacks.list[2]
+		local pow_c = this.powers.charging
+		local pow_d = this.powers.disintegrate
+		local pow_e = this.powers.explosion
+		this.attack_stage = 1
+		ab.ts = store.tick_ts
+
+		local tpos = tpos(this)
+
+		while true do
+			if this.tower.blocked then
+				coroutine.yield()
+			else
+				if pow_c.changed then
+					pow_c.changed = nil
+				end
+				if pow_d.changed then
+					ad.disabled = false
+					ad.cooldown = pow_d.cooldown[pow_d.level]
+					pow_d.changed = nil
+				end
+				if pow_e.changed then
+					pow_e.changed = nil
+				end
+
+				if ready_to_use_power(pow_d, ad, store, this.tower.cooldown_factor) then
+					local target = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range, ad.vis_flags, ad.vis_bans)
+					if target then
+						ad.ts = store.tick_ts
+						S:queue(ad.sound)
+						U.animation_start_default(this, "in", nil, store.tick_ts, false)
+						U.animation_start(this, "chargedBlast", nil, store.tick_ts, false, 3)
+						U.y_animation_wait(this, 4)
+						U.animation_start_group(this, "loop", nil, store.tick_ts, true, "mage")
+						U.y_wait_unconditional(store, fts(18) * this.tower.cooldown_factor)
+
+						local b = E:create_entity(ad.bullet)
+						local start_offset = ad.bullet_start_offset
+						target = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range, ad.vis_flags, ad.vis_bans)
+
+						if target then
+							b.pos:set(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
+							b.bullet.from:copy(b.pos)
+							b.bullet.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+							b.bullet.target_id = target.id
+							b.bullet.source_id = this.id
+							b.bullet.level = this.tower.level
+							b.bullet.damage_factor = this.tower.damage_factor
+							b.tower_ref = this
+							queue_insert(store, b)
+						end
+
+						U.y_animation_wait(this, 3)
+						U.animation_start(this, "idle", false, store.tick_ts, true, 3)
+						U.y_animation_play_group(this, "out", nil, store.tick_ts, false, "mage")
+
+						U.animation_start_default(this, "idle", nil, store.tick_ts, true)
+					else
+						ad.ts = ad.ts + 0.1
+					end
+				end
+
+				if ready_to_attack(ab, store, this.tower.cooldown_factor) then
+					local _, targets = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, nil, ab.vis_flags, ab.vis_bans)
+					if targets then
+						ab.ts = store.tick_ts
+						S:queue(ab.sound)
+
+						U.animation_start_default(this, "in", nil, store.tick_ts, false)
+
+						U.y_wait_unconditional(store, fts(10) * this.tower.cooldown_factor)
+
+						local target, targets = U.find_foremost_enemy_in_range_filter_off(tpos, a.range, nil, ab.vis_flags, ab.vis_bans)
+						if targets then
+							target = targets[#targets]
+							local start_offset = ab.bullet_start_offset
+							local b = E:create_entity(ab.bullet)
+
+							b.pos:set(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
+							b.bullet.from:copy(b.pos)
+							b.bullet.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+							b.bullet.target_id = target.id
+							b.bullet.source_id = this.id
+							b.bullet.level = this.tower.level
+							b.bullet.damage_factor = this.tower.damage_factor
+							b.tower_ref = this
+							queue_insert(store, b)
+							U.y_animation_wait(this, 4)
+							U.animation_start_group(this, "loop", nil, store.tick_ts, true, "mage")
+							U.y_animation_wait(this, 3)
+							U.animation_start(this, "loop", nil, store.tick_ts, true, 3)
+
+							local last_ts = store.tick_ts
+							local charge_time = 0
+
+							while target and not target.health.dead and not this.tower.blocked and U.is_inside_ellipse(tpos, target.pos, a.range * 1.25) do
+								charge_time = charge_time + (store.tick_ts - last_ts) / this.tower.cooldown_factor
+								last_ts = store.tick_ts
+
+								if charge_time > 3.6 and pow_c.level > 0 then
+									if this.attack_stage < 4 then
+										U.animation_start(this, "level4Loop", nil, store.tick_ts, true, 3)
+									end
+									this.attack_stage = 4
+								elseif charge_time > 2.4 then
+									this.attack_stage = 3
+								elseif charge_time > 1.2 then
+									this.attack_stage = 2
+								end
+
+								coroutine.yield()
+							end
+							b.force_stop_ray = true
+						end
+
+						if this.attack_stage >= 4 then
+							U.animation_start(this, "level4Out", nil, store.tick_ts, false, 3)
+						else
+							U.animation_start(this, "out", nil, store.tick_ts, false, 3)
+						end
+						this.attack_stage = 1
+
+						U.y_animation_play_group(this, "out", nil, store.tick_ts, false, "mage")
+						U.animation_start(this, "idle", nil, store.tick_ts, true)
+						U.y_wait_unconditional(store, ab.action_time)
+					else
+						ab.ts = ab.ts + 0.1
+					end
+				end
+			end
+			coroutine.yield()
+		end
+	end
+}
+
+scripts.bullet_tower_blazing_watcher = {
+	update = function(this, store)
+		local attack_stage = 0
+		local b = this.bullet
+		local s = this.render.sprites[1]
+		local target = store.entities[b.target_id]
+		local tower = this.tower_ref
+
+		local function update_sprite()
+			if target then
+				b.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+			end
+
+			s.r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
+			s.scale.x = b.to:dist(this.pos) / this.image_width * 2.5
+		end
+
+		b.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+		U.animation_start(this, "in", nil, store.tick_ts, false, 1)
+
+		update_sprite()
+
+		while store.tick_ts - s.ts < b.hit_time * tower.tower.cooldown_factor do
+			coroutine.yield()
+			update_sprite()
+		end
+
+		local mod_dps
+		if target then
+			local mods = b.mods
+			for i = 1, #mods do
+				local m = E:create_entity(mods[i])
+				m.modifier.target_id = b.target_id
+				m.modifier.source_id = this.id
+				m.modifier.damage_factor = b.damage_factor
+
+				if mods[i] == "mod_tower_blazing_watcher_damage" then
+					m.tower_ref = tower
+					m.dps.damage_min = b.damage_min
+					m.dps.damage_max = b.damage_max
+					m.damage_hooks = b.damage_hooks
+					mod_dps = m
+				end
+
+				queue_insert(store, m)
+			end
+		end
+
+		this.render.sprites[2].hidden = false
+		local source = store.entities[b.source_id]
+		while target and not target.health.dead and not this.force_stop_ray and source do
+			update_sprite()
+
+			if attack_stage ~= tower.attack_stage then
+				attack_stage = tower.attack_stage
+				if attack_stage >= 4 then
+					U.animation_start(this, "loop4", nil, store.tick_ts, true, 1)
+					mod_dps.render.sprites[1].name = "blazing_watcher_hit_level4Run"
+					this.render.sprites[2].name = "level4Run"
+				elseif attack_stage == 3 then
+					U.animation_start(this, "loop3", nil, store.tick_ts, true, 1)
+				elseif attack_stage == 2 then
+					U.animation_start(this, "loop2", nil, store.tick_ts, true, 1)
+				else
+					U.animation_start(this, "loop", nil, store.tick_ts, true, 1)
+				end
+				local pow_explosion_level = tower.powers.explosion.level
+				if pow_explosion_level > 0 then
+					local e = E:create_entity("blazing_watcher_bolt_blast")
+					e.pos:copy(b.to)
+					e.attack_stage = attack_stage
+					e.bullet.damage_factor = b.damage_factor
+					e.bullet.level = pow_explosion_level
+					queue_insert(store, e)
+				end
+			end
+			if not store.entities[tower.id] then
+				break
+			end
+			target = store.entities[b.target_id]
+
+			coroutine.yield()
+			s.hidden = false
+			source = store.entities[b.source_id]
+		end
+
+		if not target or target.health.dead or this.force_stop_ray or not source then
+			S:stop(this.sound_events.insert)
+			S:queue(this.sound_events.interrupt)
+		end
+
+		this.render.sprites[2].hidden = true
+		if attack_stage >= 4 then
+			U.y_animation_play(this, "level4Out", nil, store.tick_ts, false, 1)
+		else
+			U.y_animation_play(this, "out", nil, store.tick_ts, false, 1)
+		end
+		this.render.sprites[1].hidden = true
+		queue_remove(store, this)
+	end
+}
+
+scripts.mod_tower_blazing_watcher_damage = {
+	update = function(this, store)
+		local m = this.modifier
+		local dps = this.dps
+		local target = store.entities[m.target_id]
+		local tower = this.tower_ref
+		if not target or target.health.dead then
+			queue_remove(store, this)
+			return
+		end
+
+		local source = store.entities[m.source_id]
+
+		this.pos = target.pos
+		this.render.sprites[1].offset = target.unit.hit_offset
+		dps.ts = store.tick_ts
+		m.ts = store.tick_ts
+
+		while true do
+			target = store.entities[m.target_id]
+			source = store.entities[m.source_id]
+
+			if not target or target.health.dead then
+				break
+			end
+
+			if store.tick_ts - dps.ts >= dps.damage_every * tower.tower.cooldown_factor then
+				dps.ts = dps.ts + dps.damage_every * tower.tower.cooldown_factor
+				local value = math.random(this.dps.damage_min, this.dps.damage_max) * m.damage_factor * this.damage_tiers[tower.attack_stage]
+				local d = E.assign_damage(dps.damage_type, value, this.id, target.id)
+				d.pop = dps.pop
+				d.pop_chance = dps.pop_chance
+				d.pop_conds = dps.pop_conds
+				d.hooks = m.damage_hooks
+				queue_damage(store, d)
+			end
+
+			if not source then
+				break
+			end
+			coroutine.yield()
+		end
+
+		this.tween.disabled = false
+		this.tween.ts = store.tick_ts
+	end
+}
+
+scripts.bullet_tower_blazing_watcher_chargedBlast = {
+	update = function(this, store)
+		local b = this.bullet
+		local s = this.render.sprites[1]
+		local target = store.entities[b.target_id]
+
+		local function update_sprite()
+			if target then
+				b.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+			end
+
+			s.r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
+			s.scale.x = b.to:dist(this.pos) / this.image_width * 2.5
+		end
+
+		U.animation_start(this, "chargedBlast", nil, store.tick_ts, false, 1)
+
+		update_sprite()
+		this.render.sprites[2].hidden = false
+
+		if target then
+			local fx = E:create_entity(b.hit_fx)
+			fx.pos:copy(b.to)
+			fx.render.sprites[1].ts = store.tick_ts
+			queue_insert(store, fx)
+
+			local d = SU.create_bullet_damage(b, target.id, this.id)
+			queue_damage(store, d)
+		end
+
+		while not U.animation_finished_default(this) do
+			coroutine.yield()
+			update_sprite()
+		end
+
+		this.render.sprites[1].hidden = true
+		this.render.sprites[2].hidden = true
+		queue_remove(store, this)
+	end
+}
+
+scripts.blazing_watcher_bolt_blast = {
+	update = function(this, store)
+		local b = this.bullet
+		local dradius = b.damage_radius
+		local dmin = b.damage_min * b.level * this.attack_stage
+		local dmax = b.damage_max * b.level * this.attack_stage
+		if this.attack_stage == 4 then
+			U.animation_start(this, "level4Run", nil, store.tick_ts, false)
+		else
+			U.animation_start(this, "run", nil, store.tick_ts, false)
+		end
+		S:queue(this.sound_events.insert)
+		local enemies = U.find_enemies_in_range_filter_off(this.pos, dradius, b.damage_flags, b.damage_bans)
+		if enemies then
+			for i = 1, #enemies do
+				local d = E.assign_damage(b.damage_type, math.random(dmin, dmax) * this.bullet.damage_factor, this.id, enemies[i].id)
+				queue_damage(store, d)
+				local m = E:create_entity("mod_blazing_watcher_bolt_blast")
+				m.modifier.source_id = this.id
+				m.modifier.target_id = enemies[i].id
+				m.modifier.level = this.attack_stage
+				m.slow.factor = 1 - (1 - m.slow.factor) * this.attack_stage
+				queue_insert(store, m)
+			end
+		end
+		U.y_animation_wait_default(this)
+		queue_remove(store, this)
+	end
+}
+
 return scripts

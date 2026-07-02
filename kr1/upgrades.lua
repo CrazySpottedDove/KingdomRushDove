@@ -1184,7 +1184,8 @@ upgrades.mage_tower_bolts = {
 	"bolt_orc_shaman",
 	"bolt_tower_spirit_mausoleum",
 	"bolt_tower_deep_devils",
-	"ray_deep_devils"
+	"ray_deep_devils",
+	"bullet_tower_blazing_watcher"
 }
 
 local other_bolts = {

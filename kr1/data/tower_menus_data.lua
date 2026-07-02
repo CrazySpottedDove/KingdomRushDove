@@ -226,6 +226,14 @@ return {
 			tt_title = _("TOWER_DEEP_DEVILS_NAME"),
 			tt_desc = _("TOWER_DEEP_DEVILS_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_blazing_watcher",
+			image = "kr4_main_icons_0016",
+			type = "blazing_watcher",
+			place = 27,
+			tt_title = _("TOWER_BLAZING_WATCHER_NAME"),
+			tt_desc = _("TOWER_BLAZING_WATCHER_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	engineer = {{M(tpl.common_upgrade, {
@@ -3412,6 +3420,49 @@ return {
 			tt_desc = _("TOWER_DEEP_DEVILS_STORM_DESCRIPTION_3")
 		}}
 	}), tpl.rally, tpl.sell}},
+	blazing_watcher = {{M(tpl.upgrade_power, {
+		action_arg = "charging",
+		image = "kr4_special_icons_0039",
+		place = 6,
+		halo = "glow_ico_special",
+		sounds = {"blazing_watcher_charging_upgrade"},
+		tt_phrase = _("TOWER_BLAZING_WATCHER_CHARGING_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_BLAZING_WATCHER_CHARGING_NAME_1"),
+			tt_desc = _("TOWER_BLAZING_WATCHER_CHARGING_DESCRIPTION_1")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "disintegrate",
+		image = "kr4_special_icons_0041",
+		place = 5,
+		halo = "glow_ico_special",
+		sounds = {"blazing_watcher_disintegrate_upgrade"},
+		tt_phrase = _("TOWER_BLAZING_WATCHER_DISINTEGRATE_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_BLAZING_WATCHER_DISINTEGRATE_NAME_1"),
+			tt_desc = _("TOWER_BLAZING_WATCHER_DISINTEGRATE_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_BLAZING_WATCHER_DISINTEGRATE_NAME_2"),
+			tt_desc = _("TOWER_BLAZING_WATCHER_DISINTEGRATE_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_BLAZING_WATCHER_DISINTEGRATE_NAME_3"),
+			tt_desc = _("TOWER_BLAZING_WATCHER_DISINTEGRATE_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "explosion",
+		image = "kr4_special_icons_0040",
+		place = 7,
+		halo = "glow_ico_special",
+		sounds = {"blazing_watcher_explosive_upgrade"},
+		tt_phrase = _("TOWER_BLAZING_WATCHER_EXPLOSION_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_BLAZING_WATCHER_EXPLOSION_NAME_1"),
+			tt_desc = _("TOWER_BLAZING_WATCHER_EXPLOSION_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_BLAZING_WATCHER_EXPLOSION_NAME_2"),
+			tt_desc = _("TOWER_BLAZING_WATCHER_EXPLOSION_DESCRIPTION_2")
+		}}
+	}), tpl.sell}},
 	orc_shaman = {{M(tpl.upgrade_power, {
 		action_arg = "vines",
 		image = "kr4_special_icons_0001",

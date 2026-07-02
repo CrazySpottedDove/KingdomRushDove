@@ -73,7 +73,8 @@ game.required_textures = {
 	"kr4_warmongers_tower_archer",
 	"kr4_deep_devils_tower",
 	"kr4_dinos_ignis_altar",
-	"kr4_shaolin_temple_tower"
+	"kr4_shaolin_temple_tower",
+	"kr4_dark_army_tower_blazing_watcher"
 }
 game.ref_h = REF_H
 game.ref_w = REF_W
@@ -119,7 +120,8 @@ game.required_sounds = {
 	"tower_goblirang",
 	"tower_deep_devils",
 	"tower_ignis_altar",
-	"tower_shaolin"
+	"tower_shaolin",
+	"tower_blazing_watcher"
 }
 game.required_exoskeletons = {"ignis_altar_lava_golem", "ignis_altar_lvl4", "ignis_altar_decal", "ignis_altar_decal_lava"}
 game.plugin_required_textures = {}
