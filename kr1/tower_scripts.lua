@@ -27722,7 +27722,18 @@ function scripts.tower_ignis_altar.update(this, store)
 					local bullet = E:create_entity(a1.bullet)
 					bullet.pos = V.v(this.pos.x + a1.bullet_start_offset.x, this.pos.y + a1.bullet_start_offset.y)
 					bullet.bullet.from = V.vclone(bullet.pos)
-					bullet.bullet.to = U.calculate_enemy_ffe_pos(target, a1.node_prediction)
+
+					local pred_pos = U.calculate_enemy_ffe_pos(target, a1.node_prediction)
+					local nodes = P:nearest_nodes(pred_pos.x, pred_pos.y, {target.nav_path.pi}, nil)
+					local node = nodes[1]
+					local radius = E:get_template("aura_bullet_ignis_altar").aura.radius
+					if node and node[4] < radius then
+						local node_pos = P:node_pos_ref(node[1], node[2], node[3] + 1)
+						bullet.bullet.to:copy(node_pos:dist(pred_pos) < radius and node_pos or P:node_pos_ref(node[1], node[2], node[3]))
+					else
+						bullet.bullet.to = U.calculate_enemy_ffe_pos(target, a1.node_prediction)
+					end
+
 					bullet.bullet.source_id = this.id
 					bullet.bullet.damage_factor = this.tower.damage_factor
 					bullet.bullet.level = pow_fire.level
