@@ -492,6 +492,14 @@ return {
 			tt_title = _("TOWER_SHAOLIN_NAME"),
 			tt_desc = _("TOWER_SHAOLIN_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_swamp_monster",
+			type = "swamp_monster",
+			image = "kr4_main_icons_0019",
+			place = 24,
+			tt_title = _("TOWER_SWAMP_MONSTER_NAME"),
+			tt_desc = _("TOWER_SWAMP_MONSTER_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	barrack = {{M(tpl.common_upgrade, {
@@ -3845,6 +3853,59 @@ return {
 		}, {
 			tt_title = _("TOWER_SHAOLIN_TOTAL_NAME_3"),
 			tt_desc = _("TOWER_SHAOLIN_TOTAL_DESCRIPTION_3")
+		}}
+	}), tpl.rally, tpl.sell}},
+	swamp_monster = {{M(tpl.change_mode, {
+		image = "kr4_quickmenu_action_icons_0003",
+		image_mode0 = "kr4_quickmenu_action_icons_0003",
+		image_mode1 = "kr4_quickmenu_action_icons_0004",
+		tt_title_mode0 = _("TOWER_SWAMP_MONSTER_CHANGE_MODE_BARRACK_NAME"),
+		tt_title_mode1 = _("TOWER_SWAMP_MONSTER_CHANGE_MODE_ARCHER_NAME"),
+		tt_phrase_mode0 = _("TOWER_SWAMP_MONSTER_CHANGE_MODE_BARRACK_NOTE"),
+		tt_phrase_mode1 = _("TOWER_SWAMP_MONSTER_CHANGE_MODE_ARCHER_NOTE"),
+		tt_desc_mode0 = _("TOWER_SWAMP_MONSTER_CHANGE_MODE_BARRACK_DESCRIPTION"),
+		tt_desc_mode1 = _("TOWER_SWAMP_MONSTER_CHANGE_MODE_ARCHER_DESCRIPTION")
+	}), M(tpl.upgrade_power, {
+		action_arg = "stun",
+		image = "kr4_special_icons_0066",
+		place = 5,
+		sounds = {"SwampMonsterSkillBTaunt"},
+		tt_phrase = _("TOWER_SWAMP_MONSTER_STUN_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SWAMP_MONSTER_STUN_NAME_1"),
+			tt_desc = _("TOWER_SWAMP_MONSTER_STUN_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SWAMP_MONSTER_STUN_NAME_2"),
+			tt_desc = _("TOWER_SWAMP_MONSTER_STUN_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_SWAMP_MONSTER_STUN_NAME_3"),
+			tt_desc = _("TOWER_SWAMP_MONSTER_STUN_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "instakill",
+		image = "kr4_special_icons_0065",
+		place = 6,
+		sounds = {"SwampMonsterSkillATaunt"},
+		tt_phrase = _("TOWER_SWAMP_MONSTER_INSTAKILL_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SWAMP_MONSTER_INSTAKILL_NAME_1"),
+			tt_desc = _("TOWER_SWAMP_MONSTER_INSTAKILL_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SWAMP_MONSTER_INSTAKILL_NAME_2"),
+			tt_desc = _("TOWER_SWAMP_MONSTER_INSTAKILL_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_SWAMP_MONSTER_INSTAKILL_NAME_3"),
+			tt_desc = _("TOWER_SWAMP_MONSTER_INSTAKILL_DESCRIPTION_3")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "eat",
+		image = "kr4_special_icons_0067",
+		place = 7,
+		sounds = {"SwampMonsterSkillCTaunt"},
+		tt_phrase = _("TOWER_SWAMP_MONSTER_EAT_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SWAMP_MONSTER_EAT_NAME_1"),
+			tt_desc = _("TOWER_SWAMP_MONSTER_EAT_DESCRIPTION_1")
 		}}
 	}), tpl.rally, tpl.sell}}
 }

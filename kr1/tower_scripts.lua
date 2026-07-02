@@ -28662,6 +28662,284 @@ scripts.bullet_tower_blazing_watcher_chargedBlast = {
 	end
 }
 
+scripts.tower_swamp_monster = {}
+
+function scripts.tower_swamp_monster.get_info(this)
+	if not this.tower_upgrade_persistent_data.current_mode or this.tower_upgrade_persistent_data.current_mode == 0 then
+		local s = E:create_entity(this.barrack.soldier_type)
+		for pn, p in pairs(this.powers) do
+			for i = 1, p.level do
+				SU.soldier_power_upgrade(s, pn)
+			end
+		end
+		local min, max
+		if s.melee.attacks then
+			for _, a in ipairs(s.melee.attacks) do
+				if a.damage_min then
+					min, max = a.damage_min, a.damage_max
+					break
+				end
+			end
+			if s.unit and min then
+				min, max = min * s.unit.damage_factor, max * s.unit.damage_factor
+			end
+		end
+		if min and max then
+			min, max = math.ceil(min), math.ceil(max)
+		end
+		local armor = band(s.health.immune_to, DAMAGE_PHYSICAL) ~= 0 and 1 or s.health.armor
+		local magic_armor = band(s.health.immune_to, DAMAGE_MAGICAL) ~= 0 and 1 or s.health.magic_armor
+		return {
+			type = STATS_TYPE_TOWER_BARRACK,
+			hp_max = s.health.hp_max,
+			damage_min = min,
+			damage_max = max,
+			armor = armor,
+			magic_armor = magic_armor,
+			respawn = s.health.dead_lifetime
+		}
+	else
+		local b = E:create_entity(this.attacks.list[1].bullet)
+		return {
+			damage_min = math.ceil(b.bullet.damage_min * this.tower.damage_factor),
+			damage_max = math.ceil(b.bullet.damage_max * this.tower.damage_factor),
+			range = this.attacks.range,
+			type = STATS_TYPE_TOWER,
+			cooldown = this.attacks.list[1].cooldown
+		}
+	end
+end
+
+function scripts.tower_swamp_monster.insert(this, store)
+	if not this.barrack.rally_pos and this.tower.default_rally_pos then
+		this.barrack.rally_pos = vclone(this.tower.default_rally_pos)
+	end
+	return true
+end
+
+function scripts.tower_swamp_monster.remove(this, store)
+	for _, s in ipairs(this.barrack.soldiers) do
+		if s.health then
+			s.health.dead = true
+		end
+		queue_remove(store, s)
+	end
+	return true
+end
+
+function scripts.tower_swamp_monster.update(this, store)
+	local ab = this.attacks.list[1]
+	local b = this.barrack
+	local collect_hp = this.tower_upgrade_persistent_data.collect_hp
+	local current_mode = this.tower_upgrade_persistent_data.current_mode
+
+	local function set_mode_visibility(mode)
+		for i = 3, 5 do
+			this.render.sprites[i].hidden = mode == 0
+		end
+		for i = 6, 7 do
+			this.render.sprites[i].hidden = mode == 1
+		end
+	end
+
+	local function check_change_mode()
+		if this.change_mode then
+			this.change_mode = false
+			if current_mode == 0 and this.barrack.soldiers[1].health.dead then
+				return false
+			end
+			if current_mode == 0 then
+				collect_hp = math.max(this.barrack.soldiers[1].health.hp, 1)
+				this.barrack.soldiers[1].health.dead = true
+				queue_remove(store, this.barrack.soldiers[1])
+				current_mode = 1
+			else
+				current_mode = 0
+			end
+			set_mode_visibility(current_mode)
+			S:queue("SwampMonsterTaunt")
+			this.tower_upgrade_persistent_data.current_mode = current_mode
+			return true
+		end
+		return false
+	end
+
+	set_mode_visibility(current_mode)
+	this.barrack.max_soldiers = current_mode == 0 and 1 or 0
+
+	while true do
+		for pn, p in pairs(this.powers) do
+			if p.changed then
+				p.changed = nil
+				for _, s in ipairs(b.soldiers) do
+					s.powers[pn].level = p.level
+					s.powers[pn].changed = true
+				end
+			end
+		end
+
+		check_change_mode()
+
+		if not this.tower.blocked then
+			for i = 1, b.max_soldiers do
+				local s = b.soldiers[i]
+				if not s or s.health.dead and not store.entities[s.id] then
+					s = E:create_entity(b.soldier_type)
+					s.soldier.tower_id = this.id
+					s.pos = v(this.pos.x + b.respawn_offset.x, this.pos.y + b.respawn_offset.y)
+					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers)
+					s.nav_rally.new = true
+					for pn, p in pairs(this.powers) do
+						s.powers[pn].level = p.level
+						s.powers[pn].changed = true
+					end
+					queue_insert(store, s)
+					b.soldiers[i] = s
+					signal.emit("tower-spawn", this, s)
+				end
+			end
+		end
+
+		if b.rally_new then
+			b.rally_new = false
+			signal.emit("rally-point-changed", this)
+			local all_dead = true
+			for i, s in ipairs(b.soldiers) do
+				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+				s.nav_rally.new = true
+				all_dead = all_dead and s.health.dead
+			end
+			if not all_dead then
+				S:queue(this.sound_events.change_rally_point)
+			end
+		end
+
+		if this.tower.blocked or current_mode == 0 then
+			coroutine.yield()
+		else
+			if ready_to_attack(ab, store) then
+				local target, _, pred_pos = U.find_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, false, ab.vis_flags, ab.vis_bans)
+				if target then
+					ab.ts = store.tick_ts
+					local start_offset = ab.bullet_start_offset
+					local an, af = U.animation_name_facing_point(this, "shoot", target.pos)
+					U.animation_start_group(this, an, af, store.tick_ts, false, "layers")
+					y_wait(store, ab.shoot_time)
+					if target then
+						local bl = E:create_entity(ab.bullet)
+						bl.bullet.from = v(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
+						bl.pos = vclone(bl.bullet.from)
+						bl.bullet.to = v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+						bl.bullet.target_id = target.id
+						bl.bullet.source_id = this.id
+						bl.bullet.damage_min = math.ceil(bl.bullet.damage_min * this.tower.damage_factor)
+						bl.bullet.damage_max = math.ceil(bl.bullet.damage_max * this.tower.damage_factor)
+
+						if this.powers.stun.level > 0 and random() < this.powers.stun.mod_chance[this.powers.stun.level] then
+							bl.bullet.mod = "mod_swamp_stun"
+						end
+						if this.powers.instakill.level > 0 and random() < this.powers.instakill.mod_chance[this.powers.instakill.level] and band(target.vis.flags, bor(F_BOSS, F_MINIBOSS)) == 0 then
+							bl.render.sprites[1].name = "Swamp_monster_tower_proyectile_instakill_lvl4"
+							bl.bullet.damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS)
+						end
+						if this.powers.eat.level > 0 then
+							local d = SU.create_bullet_damage(bl.bullet, target.id, this.id)
+							local will_kill = U.predict_damage(target, d) >= target.health.hp
+							if will_kill then
+								collect_hp = collect_hp + this.powers.eat.hp
+							end
+						end
+						queue_insert(store, bl)
+					end
+					U.animation_start_group(this, an == "shootUp" and "idleUp" or "idle", af, store.tick_ts, true, "layers")
+				end
+			end
+		end
+		this.tower_upgrade_persistent_data.collect_hp = collect_hp
+		coroutine.yield()
+	end
+end
+
+scripts.soldier_swamp_monster = {}
+
+function scripts.soldier_swamp_monster.get_info(this)
+	return {
+		type = STATS_TYPE_SOLDIER,
+		hp_max = this.health.hp_max,
+		hp = this.health.hp,
+		damage_min = this.melee.attacks[1].damage_min,
+		damage_max = this.melee.attacks[1].damage_max
+	}
+end
+
+function scripts.soldier_swamp_monster.insert(this, store)
+	if scripts.soldier_barrack.insert(this, store) then
+		local stun_chance = this.powers.stun.level * this.melee.attacks[2].chance_inc
+		local instakill_chance = this.powers.instakill.level * this.melee.attacks[3].chance_inc
+		this.melee.attacks[1].chance = 1 - stun_chance - instakill_chance
+		this.melee.attacks[2].chance = stun_chance
+		this.melee.attacks[3].chance = instakill_chance
+		return true
+	end
+	return false
+end
+
+function scripts.soldier_swamp_monster.update(this, store)
+	local brk, sta
+
+	while true do
+		for pn, p in pairs(this.powers) do
+			if p.changed then
+				p.changed = nil
+				SU.soldier_power_upgrade(this, pn)
+
+				local stun_chance = this.powers.stun.level * this.melee.attacks[2].chance_inc
+				local instakill_chance = this.powers.instakill.level * this.melee.attacks[3].chance_inc
+				this.melee.attacks[1].chance = 1 - stun_chance - instakill_chance
+				this.melee.attacks[2].chance = stun_chance
+				this.melee.attacks[3].chance = instakill_chance
+			end
+		end
+
+		if this.health.dead then
+			if SU.y_soldier_revive(store, this) then
+			-- revived
+			else
+				SU.y_soldier_death(store, this)
+				return
+			end
+		elseif this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			while this.nav_rally.new do
+				if SU.y_soldier_new_rally(store, this) then
+					goto continue
+				end
+			end
+
+			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+			if not brk and sta ~= A_NO_TARGET then
+				if brk or sta == A_DONE then
+					goto continue
+				elseif sta == A_IN_COOLDOWN then
+					goto idle
+				end
+
+				if SU.soldier_go_back_step(store, this) then
+					goto continue
+				end
+
+				::idle::
+				SU.soldier_idle(store, this)
+				SU.soldier_regen(store, this)
+			end
+		end
+		::continue::
+		coroutine.yield()
+	end
+end
+
 scripts.blazing_watcher_bolt_blast = {
 	update = function(this, store)
 		local b = this.bullet

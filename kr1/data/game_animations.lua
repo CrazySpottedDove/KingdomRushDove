@@ -48996,5 +48996,88 @@ return {
 		prefix = "blazing_watcher_tower_lvl4",
 		from = 1,
 		to = 1
+	},
+	swamp_monster_towers_lvl4_idle = {
+		prefix = "swamp_monster_towers_lvl4",
+		from = 1,
+		to = 1
+	},
+	swamp_monster_tower_shooter_lvl4_layerX_idle = {
+		layer_prefix = "swamp_monster_tower_shooter_lvl4_layer%i",
+		layer_from = 1,
+		layer_to = 3,
+		from = 1,
+		to = 1
+	},
+	swamp_monster_tower_shooter_lvl4_layerX_shootDown = {
+		layer_prefix = "swamp_monster_tower_shooter_lvl4_layer%i",
+		layer_from = 1,
+		layer_to = 3,
+		from = 2,
+		to = 33
+	},
+	swamp_monster_tower_shooter_lvl4_layerX_shootUp = {
+		layer_prefix = "swamp_monster_tower_shooter_lvl4_layer%i",
+		layer_from = 1,
+		layer_to = 3,
+		from = 34,
+		to = 60
+	},
+	swamp_monster_tower_shooter_lvl4_layerX_idleUp = {
+		layer_prefix = "swamp_monster_tower_shooter_lvl4_layer%i",
+		layer_from = 1,
+		layer_to = 3,
+		from = 61,
+		to = 61
+	},
+	swamp_monster_tower_smoke_run = {
+		prefix = "swamp_monster_tower_smoke",
+		from = 1,
+		to = 20
+	},
+	swamp_monster_tower_explosion_run = {
+		prefix = "swamp_monster_tower_explosion",
+		from = 1,
+		to = 18
+	},
+	swamp_monster_unit_lvl4_idle = {
+		prefix = "swamp_monster_unit_lvl4",
+		from = 1,
+		to = 1
+	},
+	swamp_monster_unit_lvl4_running = {
+		prefix = "swamp_monster_unit_lvl4",
+		from = 2,
+		to = 33
+	},
+	swamp_monster_unit_lvl4_attack = {
+		prefix = "swamp_monster_unit_lvl4",
+		from = 34,
+		to = 65
+	},
+	swamp_monster_unit_lvl4_death = {
+		prefix = "swamp_monster_unit_lvl4",
+		from = 66,
+		to = 104
+	},
+	swamp_monster_unit_lvl4_raise = {
+		prefix = "swamp_monster_unit_lvl4",
+		from = 105,
+		to = 122
+	},
+	swamp_monster_unit_lvl4_instakill = {
+		prefix = "swamp_monster_unit_lvl4",
+		from = 123,
+		to = 158
+	},
+	swamp_monster_unit_lvl4_stun = {
+		prefix = "swamp_monster_unit_lvl4",
+		from = 159,
+		to = 191
+	},
+	swamp_monster_unit_lvl4_out = {
+		prefix = "swamp_monster_unit_lvl4",
+		from = 192,
+		to = 205
 	}
 }

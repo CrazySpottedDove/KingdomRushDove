@@ -4166,3 +4166,4 @@ tt.bullet.reset_to_target_pos = true
 tt.bullet.damage_max = 4
 tt.bullet.damage_min = -4
 tt.bullet.damage_inc = 22
+

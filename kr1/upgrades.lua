@@ -1057,7 +1057,8 @@ upgrades.soldiers = {
 	"soldier_deep_devils",
 	"soldier_deep_devils_chosen",
 	"soldier_ignis_altar_elemental",
-	"soldier_dragon"
+	"soldier_dragon",
+	"soldier_swamp_monster"
 }
 
 upgrades.barrack_soldiers = {
@@ -1096,7 +1097,8 @@ upgrades.barrack_soldiers = {
 	"soldier_zombie_medium",
 	"soldier_zombie_big",
 	"soldier_elves_harasser",
-	"soldier_elves_espectral_harasser"
+	"soldier_elves_espectral_harasser",
+	"soldier_swamp_monster"
 }
 
 upgrades.towers_with_barrack = {
@@ -1135,6 +1137,7 @@ upgrades.towers_with_barrack = {
 	"tower_dark_knights",
 	"tower_grim_cemetery",
 	"tower_twilight_elves_barrack",
+	"tower_swamp_monster",
 	"tower_balloon",
 	"tower_spirit_mausoleum",
 	"tower_deep_devils",
