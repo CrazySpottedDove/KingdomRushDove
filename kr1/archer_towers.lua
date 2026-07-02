@@ -2524,7 +2524,6 @@ tt.powers.stun.mod = "mod_goblirang_stun"
 tt.powers.bees = CC("power")
 tt.powers.bees.price_base = 250
 tt.powers.bees.price_inc = 200
-
 tt.powers.big = CC("power")
 tt.powers.big.price_base = 200
 tt.powers.big.price_inc = 100
@@ -2721,3 +2720,164 @@ tt.main_script.insert = fn_group(function(this, store)
 end, tt.main_script.insert)
 tt.modifier.duration = 1
 tt.modifier.vis_bans = F_BOSS
+
+----------------------------------------------
+-- 少林寺 (Shaolin Temple, KR4)
+tt = E:register_t("tower_shaolin", "tower_archer_1")
+AC(tt, "powers", "barrack")
+image_y = 90
+tt.tower.type = "shaolin"
+tt.tower.level = 1
+tt.tower.price = 340
+tt.tower.size = TOWER_SIZE_LARGE
+tt.tower.menu_offset = v(0, 6)
+tt.info.portrait = "kr4_info_portraits_towers_0018"
+tt.info.enc_icon = 19
+tt.powers.total = CC("power")
+tt.powers.total.price_base = 200
+tt.powers.total.price_inc = 200
+tt.powers.total.max_level = 3
+tt.powers.dragon = CC("power")
+tt.powers.dragon.price_base = 250
+tt.powers.dragon.max_level = 1
+tt.powers.lion = CC("power")
+tt.powers.lion.price_base = 160
+tt.powers.lion.max_level = 1
+tt.barrack.soldier_type = "soldier_dragon"
+tt.barrack.rally_range = 180
+tt.barrack.respawn_offset = v(0, 0)
+tt.barrack.max_soldiers = 0
+tt.attacks.range = 192
+tt.attacks.list[1] = CC("bullet_attack")
+tt.attacks.list[1].bullet = "bullet_shaolin"
+tt.attacks.list[1].bullet_start_offset = v(10, 11)
+tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
+tt.attacks.list[1].vis_flags = bor(F_RANGED)
+tt.attacks.list[1].cooldown = 1.37
+tt.aura1 = nil
+tt.pixies = {}
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrains_0002"
+tt.render.sprites[1].offset = v(0, 10)
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "shaolin_temple_lvl4_0001"
+tt.render.sprites[2].offset = v(0, 30)
+tt.render.sprites[2].sort_y_offset = 30
+tt.render.sprites[3] = CC("sprite")
+tt.render.sprites[3].prefix = "shaolin_monk_lvl4_deco"
+tt.render.sprites[3].name = "idle"
+tt.render.sprites[3].offset = v(16, 18)
+tt.render.sprites[3].flip_x = true
+tt.render.sprites[4] = CC("sprite")
+tt.render.sprites[4].prefix = "shaolin_monk_lvl4_deco"
+tt.render.sprites[4].name = "idle"
+tt.render.sprites[4].offset = v(-16, 18)
+tt.render.sprites[5] = CC("sprite")
+tt.render.sprites[5].animated = true
+tt.render.sprites[5].hidden = true
+tt.render.sprites[5].prefix = "shaolin_temple_lvl4_lion"
+tt.render.sprites[5].name = "idle"
+tt.render.sprites[5].offset = v(0, 30)
+tt.sound_events.insert = "ShaolinTaunt"
+tt.main_script.insert = scripts.tower_barrack.insert
+tt.main_script.update = scripts.tower_shaolin.update
+tt.main_script.remove = scripts.tower_shaolin.remove
+
+-- Aura: Gold multiplier
+tt = E:register_t("aura_tower_shaolin_gold", "aura")
+tt.aura.vis_flags = bor(F_MOD)
+tt.aura.vis_bans = bor(F_FRIEND)
+tt.aura.cycle_time = 0.4
+tt.main_script.update = scripts.aura_tower_shaolin_gold.update
+tt.gold_factor = 1.1
+
+-- Soldier: Dragon Warrior
+tt = RT("soldier_dragon", "soldier_militia")
+AC(tt, "melee", "nav_grid")
+image_y = 64
+anchor_y = 0.15
+tt.health.armor = 0
+tt.health.armor_inc = 0
+tt.health.dead_lifetime = 13
+tt.health.hp_max = 400
+tt.health.hp_inc = 0
+tt.health_bar.offset = v(0, 45)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.info.portrait = "kr4_info_portraits_soldiers_0029"
+tt.info.random_name_format = nil
+tt.melee.attacks[1] = CC("area_attack")
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_inc = 0
+tt.melee.attacks[1].damage_max = 60
+tt.melee.attacks[1].damage_min = 40
+tt.melee.attacks[1].damage_radius = 37.5
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_decal = "decal_ground_hit"
+tt.melee.attacks[1].hit_fx = "fx_ground_hit"
+tt.melee.attacks[1].hit_offset = v(35, 0)
+tt.melee.attacks[1].hit_time = fts(14)
+tt.melee.attacks[1].pop = {"pop_whaam", "pop_kapow"}
+tt.melee.attacks[1].pop_chance = 0.3
+tt.melee.attacks[1].sound_hit = "AreaAttack"
+tt.melee.range = 60
+tt.motion.max_speed = 30
+tt.render.sprites[1].anchor.y = anchor_y
+tt.render.sprites[1].angles.walk = {"running"}
+tt.render.sprites[1].name = "raise"
+tt.render.sprites[1].prefix = "shaolin_dragon_warrior"
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "shaolin_dragon_warrior_shadow"
+tt.render.sprites[2].anchor.y = 0.15
+tt.render.sprites[2].z = Z_DECALS + 1
+tt.soldier.melee_slot_offset = v(15, 0)
+tt.ui.click_rect = r(-25, -2, 50, 52)
+tt.unit.blood_color = BLOOD_RED
+tt.unit.hit_offset = v(0, 15)
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 16)
+
+-- Hit FX
+tt = E:register_t("shaolin_monk_hit_fx", "fx")
+AC(tt, "sound_events")
+tt.render.sprites[1].name = "shaolin_monk_lvl4_hit_effect_run"
+tt.render.sprites[1].animated = true
+tt.sound_events.insert = "ShaolinAttack"
+
+-- Bullet (damage template for monks)
+tt = E:register_t("bullet_shaolin", "arrow")
+tt.bullet.damage_min = 14
+tt.bullet.damage_max = 26
+tt.bullet.hit_fx = "shaolin_monk_hit_fx"
+tt.bullet.damage_type = DAMAGE_PHYSICAL
+
+-- Decal: Monk (pixie)
+tt = E:register_t("decal_shaolin", "decal_scripted")
+AC(tt, "tween")
+tt.main_script.update = scripts.decal_shaolin.update
+tt.render.sprites[1].prefix = "shaolin_monk_lvl4"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].anchor.y = 2 / 9
+tt.render.sprites[1].z = Z_BULLETS
+tt.tween.disabled = true
+tt.tween.remove = false
+tt.tween.props[1].name = "offset"
+tt.tween.props[1].interp = "sine"
+tt.tween.props[1].keys = {{0, v(0, 0)}, {fts(6), v(0, 1)}, {fts(11), v(0, 0)}}
+tt.tween.props[1].loop = false
+tt.tween.props[1].disabled = true
+tt.tween.props[1].sprite_id = 1
+
+tt = E:register_t("mod_gold_indicator", "modifier")
+tt.modifier.duration = -1
+tt.main_script.update = scripts.mod_track_target.update
+tt.main_script.remove = scripts.mod_gold_indicator.remove
+
+-- Decal: Gold coin
+tt = E:register_t("fx_shaolin_gold", "fx")
+AC(tt, "render")
+tt.render.sprites[1] = CC("sprite")
+tt.render.sprites[1].name = "shaolin_abundance_coin_run"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_DECALS

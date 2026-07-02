@@ -32,14 +32,6 @@ local function build_callout_balloon(parent, max_size, flags, text, text_padding
 		text_align = "center"
 	end
 
-	if flag_has(flags, "direction_v") then
-		direction = "v"
-	end
-
-	if flag_has(flags, "direction_h") then
-		direction = "h"
-	end
-
 	if flag_has(flags, "dialog") then
 		text_font_size = 17
 	end

@@ -48689,5 +48689,106 @@ return {
 		prefix = "asst_torre_volcan_4_canibal2_head",
 		from = 4,
 		to = 1
+	},
+	-- 少林寺
+	shaolin_temple_lvl4_lion_idle = {
+		prefix = "shaolin_temple_lvl4_lion",
+		from = 1,
+		to = 1
+	},
+	shaolin_temple_lvl4_lion_run = {
+		prefix = "shaolin_temple_lvl4_lion",
+		from = 1,
+		to = 24
+	},
+	shaolin_abundance_coin_run = {
+		prefix = "shaolin_abundance_coin",
+		from = 1,
+		to = 36
+	},
+	shaolin_dragon_warrior_idle = {
+		prefix = "shaolin_dragon_warrior",
+		from = 1,
+		to = 1
+	},
+	shaolin_dragon_warrior_running = {
+		prefix = "shaolin_dragon_warrior",
+		from = 2,
+		to = 25
+	},
+	shaolin_dragon_warrior_attack = {
+		prefix = "shaolin_dragon_warrior",
+		from = 26,
+		to = 55
+	},
+	shaolin_dragon_warrior_death = {
+		prefix = "shaolin_dragon_warrior",
+		from = 56,
+		to = 95
+	},
+	shaolin_dragon_warrior_raise = {
+		prefix = "shaolin_dragon_warrior",
+		from = 96,
+		to = 115
+	},
+	shaolin_monk_lvl4_idle = {
+		prefix = "shaolin_monk_lvl4",
+		from = 1,
+		to = 1
+	},
+	shaolin_monk_lvl4_punchIn = {
+		prefix = "shaolin_monk_lvl4",
+		from = 1,
+		to = 9
+	},
+	shaolin_monk_lvl4_punchOut = {
+		prefix = "shaolin_monk_lvl4",
+		from = 10,
+		to = 17
+	},
+	shaolin_monk_lvl4_kickIn = {
+		prefix = "shaolin_monk_lvl4",
+		from = 18,
+		to = 26
+	},
+	shaolin_monk_lvl4_kickOut = {
+		prefix = "shaolin_monk_lvl4",
+		from = 27,
+		to = 34
+	},
+	shaolin_monk_lvl4_dragonPunchUp = {
+		prefix = "shaolin_monk_lvl4",
+		from = 35,
+		to = 36
+	},
+	shaolin_monk_lvl4_dragonPunchDown = {
+		prefix = "shaolin_monk_lvl4",
+		from = 37,
+		to = 37
+	},
+	shaolin_monk_lvl4_dragonPunchOut = {
+		prefix = "shaolin_monk_lvl4",
+		from = 37,
+		to = 44
+	},
+	shaolin_monk_lvl4_deco_idle = {
+		prefix = "shaolin_monk_lvl4_deco",
+		from = 1,
+		to = 1
+	},
+	shaolin_monk_lvl4_deco_out = {
+		prefix = "shaolin_monk_lvl4_deco",
+		from = 2,
+		to = 6
+	},
+	shaolin_monk_lvl4_deco_in = {
+		prefix = "shaolin_monk_lvl4_deco",
+		from = 6,
+		to = 20
+	},
+	shaolin_monk_lvl4_hit_effect_run = {
+		prefix = "shaolin_monk_lvl4_hit_effect",
+		from = 1,
+		to = 11
 	}
 }

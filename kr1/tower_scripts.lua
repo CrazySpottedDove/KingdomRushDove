@@ -27952,4 +27952,362 @@ function scripts.soldier_ignis_altar_elemental.update(this, store, script)
 	end
 end
 
+----------------------------------------------
+-- 少林寺 (Shaolin Temple)
+scripts.tower_shaolin = {}
+
+function scripts.tower_shaolin.insert(this, store)
+	this.aura1 = nil
+	for _, a in ipairs(this.auras.list) do
+		local e = E:create_entity(a.name)
+		e.pos = V.vclone(this.pos)
+		e.aura.level = 1
+		e.aura.source_id = this.id
+		e.aura.ts = store.tick_ts
+		if this.powers.lion.level >= 1 then
+			this.aura1 = e
+			queue_insert(store, e)
+		end
+	end
+	if not this.barrack.rally_pos and this.tower.default_rally_pos then
+		this.barrack.rally_pos = V.vclone(this.tower.default_rally_pos)
+	end
+	return true
+end
+
+function scripts.tower_shaolin.remove(this, store)
+	SU.queue_remove_clean_table(store, this.pixies)
+
+	if this.aura1 then
+		queue_remove(store, this.aura1)
+		this.aura1 = nil
+	end
+
+	for _, s in ipairs(this.barrack.soldiers) do
+		if s.health then
+			s.health.dead = true
+		end
+		queue_remove(store, s)
+	end
+
+	for i = #this.barrack.soldiers, 1, -1 do
+		local s = this.barrack.soldiers[i]
+		s.health.dead = true
+		queue_remove(store, s)
+		this.barrack.soldiers[i] = nil
+	end
+
+	return true
+end
+
+function scripts.tower_shaolin.update(this, store)
+	local a = this.attacks
+	a.ts = store.tick_ts
+	local aa = this.attacks.list[1]
+	this.idle_offsets = {v(-18, -1), v(21, -3), v(5, -9), v(-18, -1), v(21, -3), v(5, -9)}
+
+	local pow_l = this.powers.lion
+	local pow_t = this.powers.total
+	local pow_d = this.powers.dragon
+
+	local function spawn_pixies()
+		for i = #this.pixies + 1, 3 + pow_t.level do
+			local po = this.idle_offsets[i]
+			local e = E:create_entity("decal_shaolin")
+			e.idle_pos = po
+			e.pos:set(this.pos.x + po.x, this.pos.y + po.y)
+			queue_insert(store, e)
+			this.pixies[i] = e
+			e.render.sprites[1].hidden = true
+			e.owner = this
+		end
+	end
+
+	local function spawn_aura()
+		if not this.aura1 and pow_l.level > 0 then
+			this.render.sprites[5].hidden = false
+			local e = E:create_entity("aura_tower_shaolin_gold")
+			-- const&
+			e.pos = this.pos
+			e.aura.level = 1
+			e.aura.source_id = this.id
+			e.aura.ts = store.tick_ts
+			this.aura1 = e
+			queue_insert(store, e)
+		end
+	end
+
+	spawn_pixies()
+	spawn_aura()
+
+	while true do
+		if this.tower.blocked then
+		-- block empty
+		else
+			if pow_t.changed then
+				pow_t.changed = nil
+				spawn_pixies()
+			end
+
+			if pow_l.changed then
+				pow_l.changed = nil
+				spawn_aura()
+			end
+
+			if pow_d.changed then
+				pow_d.changed = nil
+				this.barrack.max_soldiers = 1
+			end
+
+			for i = 1, this.barrack.max_soldiers do
+				local s = this.barrack.soldiers[i]
+				if not s or (s.health.dead and store.tick_ts - s.health.death_ts > s.health.dead_lifetime) then
+					if s then
+						queue_remove(store, s)
+					end
+
+					local ns = E:create_entity(this.barrack.soldier_type)
+					ns.soldier.tower_id = this.id
+					ns.soldier.tower_soldier_idx = i
+					ns.pos:set(this.pos.x + this.barrack.respawn_offset.x, this.pos.y + this.barrack.respawn_offset.y)
+
+					if s then
+						ns.pos:copy(s.pos)
+					else
+						ns.pos:copy(this.barrack.rally_pos)
+					end
+
+					ns.nav_rally.pos:copy(this.barrack.rally_pos)
+					ns.nav_rally.center:copy(ns.nav_rally.pos)
+
+					if not ns.pos:equals(ns.nav_rally.pos) then
+						ns.nav_rally.new = true
+					end
+
+					U.soldier_inherit_tower_buff_factor(ns, this)
+					queue_insert(store, ns)
+					this.barrack.soldiers[i] = ns
+					signal.emit("tower-spawn", this, ns)
+				end
+			end
+
+			if ready_to_attack(aa, store, this.tower.cooldown_factor) then
+				local _, targets = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos(this), a.range, aa.vis_flags, aa.vis_bans)
+				if targets then
+					local count = #this.pixies
+					for i = 1, count do
+						local pixie = this.pixies[i]
+						local target = targets[km.zmod(i, #targets)]
+						pixie.target_id = target.id
+					end
+					aa.ts = store.tick_ts
+					U.y_animation_play(this, "out", nil, store.tick_ts, false, 3)
+					U.y_animation_play(this, "out", nil, store.tick_ts, false, 4)
+
+					local check_idx = 1
+					while check_idx <= count do
+						for i = check_idx, count do
+							if this.pixies[i].target_id then
+								break
+							else
+								check_idx = check_idx + 1
+							end
+						end
+						coroutine.yield()
+					end
+
+					U.y_animation_play(this, "in", nil, store.tick_ts, false, 3)
+					U.y_animation_play(this, "in", nil, store.tick_ts, false, 4)
+				else
+					aa.ts = aa.ts + 0.1
+				end
+			end
+		end
+
+		if this.barrack.rally_new then
+			this.barrack.rally_new = false
+			signal.emit("rally-point-changed", this)
+			local all_dead = true
+			for i, s in ipairs(this.barrack.soldiers) do
+				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, this.barrack, this.barrack.max_soldiers, this.barrack.rally_angle_offset)
+				s.nav_rally.new = true
+				all_dead = all_dead and s.health.dead
+			end
+			if not all_dead then
+				S:queue(this.sound_events.change_rally_point)
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.decal_shaolin = {}
+
+function scripts.decal_shaolin.update(this, store)
+	local punchInName = {"punchIn", "kickIn"}
+	local punchOutName = {"punchOut", "kickOut"}
+	this.is_stun = false
+
+	while true do
+		if this.target_id then
+			local target = store.entities[this.target_id]
+			if target and not target.health.dead then
+				if band(target.vis.bans, F_STUN) == 0 and band(target.vis.flags, F_BOSS) == 0 and (not target.enemy.blockers or #target.enemy.blockers == 0) then
+					SU.stun_inc(target)
+					this.is_stun = true
+				end
+
+				this.render.sprites[1].hidden = false
+				local is_air = band(target.vis.flags, F_FLYING) ~= 0 or band(target.vis.flags, F_BOSS) ~= 0
+				local random_action = 1
+				local slot_flip = false
+
+				if is_air then
+					this.pos.x = target.pos.x + target.unit.hit_offset.x
+					this.pos.y = target.pos.y
+					this.tween.disabled = false
+					this.tween.props[1].disabled = false
+					this.tween.props[1].ts = store.tick_ts
+					this.tween.props[1].keys[2][2].y = math.max(target.unit.hit_offset.y - 20, 5)
+					U.animation_start(this, "dragonPunchUp", nil, store.tick_ts)
+				else
+					slot_flip = math.abs(km.signed_unroll(target.heading.angle)) < math.pi * 0.5
+
+					this.pos.x = target.pos.x + target.enemy.melee_slot.x * (slot_flip and 1 or -1)
+					this.pos.y = target.pos.y + target.enemy.melee_slot.y
+					random_action = math.random(1, 2)
+					U.animation_start_default(this, punchInName[random_action], slot_flip, store.tick_ts)
+				end
+				U.y_wait(store, fts(6) * this.owner.tower.cooldown_factor)
+
+				if target and not target.health.dead then
+					local bullet = E:create_entity("bullet_shaolin")
+					local fx = E:create_entity(bullet.bullet.hit_fx)
+					if is_air then
+						fx.pos.x = target.pos.x + target.unit.hit_offset.x
+						fx.pos.y = target.pos.y + target.unit.hit_offset.y
+					else
+						fx.render.sprites[1].hidden = true
+					end
+					fx.render.sprites[1].ts = store.tick_ts
+					queue_insert(store, fx)
+
+					bullet.bullet.damage_factor = this.owner.tower.damage_factor
+					apply_precision(bullet)
+
+					local d = SU.create_bullet_damage_without_pops(bullet.bullet, target.id, this.id)
+					local mods = bullet.bullet.mods
+					if not mods then
+						if bullet.bullet.mod then
+							mods = {bullet.bullet.mod}
+						end
+					end
+					if mods then
+						for i = 1, #mods do
+							local mod_name = mods[i]
+							if U.flags_pass(target.vis, E:get_template(mod_name).modifier) then
+								local mod = E:create_entity(mod_name)
+
+								mod.modifier.source_id = this.id
+								mod.modifier.target_id = target.id
+								mod.modifier.level = bullet.bullet.level
+								mod.modifier.source_damage = d
+								mod.modifier.damage_factor = bullet.bullet.damage_factor
+
+								queue_insert(store, mod)
+							end
+						end
+					end
+					queue_damage(store, d)
+				end
+
+				if is_air then
+					U.animation_start_default(this, "dragonPunchDown", nil, store.tick_ts)
+					U.y_wait(store, fts(5) * this.owner.tower.cooldown_factor)
+					this.tween.disabled = true
+					this.tween.props[1].disabled = true
+					U.y_animation_play_default(this, "dragonPunchOut", nil, store.tick_ts)
+				else
+					U.y_animation_wait_default(this)
+					U.y_animation_play_default(this, punchOutName[random_action], slot_flip, store.tick_ts)
+				end
+
+				if this.is_stun then
+					SU.stun_dec(target)
+					this.is_stun = false
+				end
+
+				this.render.sprites[1].hidden = true
+				this.pos.x = this.owner.pos.x + this.idle_pos.x
+				this.pos.y = this.owner.pos.y + this.idle_pos.y
+			end
+			this.target_id = nil
+		end
+		coroutine.yield()
+	end
+end
+
+scripts.aura_tower_shaolin_gold = {
+	update = function(this, store)
+		local cycle_time = this.aura.cycle_time
+		local last_ts = store.tick_ts - cycle_time
+		local source = store.entities[this.aura.source_id]
+		while true do
+			if store.tick_ts - last_ts > cycle_time then
+				local targets = U.find_enemies_in_range_filter_off(this.pos, source.attacks.range, this.aura.vis_flags, this.aura.vis_bans)
+				if targets then
+					for i = 1, #targets do
+						local target = targets[i]
+						if not target._aura_tower_shaolin_gold_ids then
+							target._aura_tower_shaolin_gold_ids = {}
+						end
+						if not table.arraycontains(target._aura_tower_shaolin_gold_ids, this.id) then
+							target._aura_tower_shaolin_gold_ids[#target._aura_tower_shaolin_gold_ids + 1] = this.id
+							target.enemy.gold = math.ceil(target.enemy.gold * this.gold_factor)
+
+							local m = E:create_entity("mod_gold_indicator")
+							m.template_name = m.template_name .. this.id
+							m.modifier.target_id = target.id
+							m.modifier.source_id = this.id
+							queue_insert(store, m)
+						end
+					end
+				end
+			end
+			if this._gold_earned then
+				if U.animation_finished(source, 5, 1) then
+					U.animation_start(source, "run", nil, store.tick_ts, false, 5)
+				end
+				S:queue("AssassinGold")
+
+				this._gold_earned = false
+			end
+			coroutine.yield()
+		end
+	end
+}
+
+scripts.mod_gold_indicator = {
+	remove = function(this, store)
+		local target = store.entities[this.modifier.target_id]
+		if target and target.health.dead then
+			if not target._aura_tower_shaolin_gold_shown then
+				local fx = E:create_entity("fx_shaolin_gold")
+				fx.pos.x = target.pos.x + target.unit.hit_offset.x
+				fx.pos.y = target.pos.y + target.unit.hit_offset.y
+				fx.render.sprites[1].ts = store.tick_ts
+				queue_insert(store, fx)
+				target._aura_tower_shaolin_gold_shown = true
+			end
+
+			local source = store.entities[this.modifier.source_id]
+			if source then
+				source._gold_earned = true
+			end
+		end
+		return true
+	end
+}
+
 return scripts

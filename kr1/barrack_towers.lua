@@ -42,7 +42,6 @@ tt.powers.shield.max_level = 1
 tt.powers.holystrike = CC("power")
 tt.powers.holystrike.price_base = 200
 tt.powers.holystrike.price_inc = 150
-
 tt.barrack.soldier_type = "soldier_paladin"
 tt.barrack.rally_range = 160
 tt.render.sprites[1].name = "terrain_barrack_%04i"

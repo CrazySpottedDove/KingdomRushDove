@@ -477,6 +477,13 @@ return {
 			tt_title = _("TOWER_GOBLIRANG_NAME"),
 			tt_desc = _("TOWER_GOBLIRANG_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_shaolin",
+			image = "kr4_main_icons_0018",
+			place = 23,
+			tt_title = _("TOWER_SHAOLIN_NAME"),
+			tt_desc = _("TOWER_SHAOLIN_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	barrack = {{M(tpl.common_upgrade, {
@@ -3748,5 +3755,45 @@ return {
 			tt_title = _("TOWER_GOBLIRANG_BEES_NAME_3"),
 			tt_desc = _("TOWER_GOBLIRANG_BEES_DESCRIPTION_3")
 		}}
-	}), tpl.sell}}
+	}), tpl.sell}},
+	shaolin = {{M(tpl.upgrade_power, {
+		action_arg = "lion",
+		image = "kr4_special_icons_0061",
+		place = 5,
+		halo = "glow_ico_special",
+		sounds = {"ShaolinSkillBTaunt"},
+		tt_phrase = _("TOWER_SHAOLIN_LION_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SHAOLIN_LION_NAME_1"),
+			tt_desc = _("TOWER_SHAOLIN_LION_DESCRIPTION_1")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "dragon",
+		image = "kr4_special_icons_0062",
+		place = 6,
+		halo = "glow_ico_special",
+		sounds = {"ShaolinSkillATaunt"},
+		tt_phrase = _("TOWER_SHAOLIN_DRAGON_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SHAOLIN_DRAGON_NAME_1"),
+			tt_desc = _("TOWER_SHAOLIN_DRAGON_DESCRIPTION_1")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "total",
+		image = "kr4_special_icons_0063",
+		place = 7,
+		halo = "glow_ico_special",
+		sounds = {"ShaolinSkillCTaunt"},
+		tt_phrase = _("TOWER_SHAOLIN_TOTAL_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SHAOLIN_TOTAL_NAME_1"),
+			tt_desc = _("TOWER_SHAOLIN_TOTAL_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SHAOLIN_TOTAL_NAME_2"),
+			tt_desc = _("TOWER_SHAOLIN_TOTAL_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_SHAOLIN_TOTAL_NAME_3"),
+			tt_desc = _("TOWER_SHAOLIN_TOTAL_DESCRIPTION_3")
+		}}
+	}), tpl.rally, tpl.sell}}
 }

@@ -998,7 +998,8 @@ upgrades.arrows = {
 	"bullet_ogre_shipwreck_musket_volley_lvl1",
 	"bullet_ogre_shipwreck_musket_volley_lvl2",
 	"goblirang",
-	"goblirang_big"
+	"goblirang_big",
+	"bullet_shaolin"
 }
 
 upgrades.soldiers = {
@@ -1055,7 +1056,8 @@ upgrades.soldiers = {
 	"soldier_elves_espectral_harasser",
 	"soldier_deep_devils",
 	"soldier_deep_devils_chosen",
-	"soldier_ignis_altar_elemental"
+	"soldier_ignis_altar_elemental",
+	"soldier_dragon"
 }
 
 upgrades.barrack_soldiers = {
@@ -1136,7 +1138,8 @@ upgrades.towers_with_barrack = {
 	"tower_balloon",
 	"tower_spirit_mausoleum",
 	"tower_deep_devils",
-	"tower_ignis_altar"
+	"tower_ignis_altar",
+	"tower_shaolin"
 }
 
 upgrades.non_barrack_towers_with_barrack_attribute = {
@@ -1150,7 +1153,8 @@ upgrades.non_barrack_towers_with_barrack_attribute = {
 	"tower_balloon",
 	"tower_spirit_mausoleum",
 	"tower_deep_devils",
-	"tower_ignis_altar"
+	"tower_ignis_altar",
+	"tower_shaolin"
 }
 
 upgrades.mage_towers = GS.mage_towers

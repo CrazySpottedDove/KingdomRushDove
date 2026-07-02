@@ -820,7 +820,6 @@ tt.powers.nature.price_base = 300
 tt.powers.nature.price_inc = 300
 tt.powers.nature.max_level = 2
 tt.powers.nature.entity = "druid_shooter_nature"
-
 tt.powers.sylvan = CC("power")
 tt.powers.sylvan.price_base = 250
 tt.powers.sylvan.price_inc = 250
@@ -905,7 +904,7 @@ AC(tt, "count_group")
 tt.count_group.name = "soldier_druid_bear"
 tt.count_group.type = COUNT_GROUP_CONCURRENT
 tt.health.armor = 0.2
-tt.health.magic_armor = 0.2
+tt.health.magic_armor = 0.4
 tt.health.hp_max = 300
 tt.health_bar.offsets = {
 	idle = vec_2(0, 40),
