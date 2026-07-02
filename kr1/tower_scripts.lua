@@ -28108,7 +28108,9 @@ function scripts.tower_shaolin.update(this, store)
 					local count = #this.pixies
 					for i = 1, count do
 						local pixie = this.pixies[i]
-						local target = targets[km.zmod(i, #targets)]
+						local idx = km.zmod(i, #targets)
+						local target = targets[idx]
+						pixie.target_round = math.max((i - idx) / #targets, 1)
 						pixie.target_id = target.id
 					end
 					aa.ts = store.tick_ts
@@ -28204,7 +28206,7 @@ function scripts.decal_shaolin.update(this, store)
 					fx.render.sprites[1].ts = store.tick_ts
 					queue_insert(store, fx)
 
-					bullet.bullet.damage_factor = this.owner.tower.damage_factor
+					bullet.bullet.damage_factor = this.owner.tower.damage_factor / math.sqrt(this.target_round)
 					apply_precision(bullet)
 
 					local d = SU.create_bullet_damage_without_pops(bullet.bullet, target.id, this.id)
