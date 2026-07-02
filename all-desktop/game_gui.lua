@@ -1185,34 +1185,34 @@ function game_gui:set_mode(mode)
 end
 
 function game_gui:show_point_confirm(x, y)
-	if self.timer then
-		timer:cancel(self.timer)
+	if self.point_confirm_timer then
+		timer:cancel(self.point_confirm_timer)
 	end
 
 	self.point_confirm.pos.x, self.point_confirm.pos.y = x, y
 	self.point_confirm.hidden = false
 	self.point_confirm.alpha = 1
 	self.point_confirm.ts = 0
-	self.timer = timer:after(0.36666666666666664, function()
+	self.point_confirm_timer = timer:after(0.36666666666666664, function()
 		self.point_confirm.hidden = true
-		self.timer = nil
+		self.point_confirm_timer = nil
 	end)
 end
 
 function game_gui:show_rally_flag(x, y)
-	if self.timer then
-		timer:cancel(self.timer)
+	if self.rally_flag_timer then
+		timer:cancel(self.rally_flag_timer)
 	end
 
 	self.rallyflag.pos.x, self.rallyflag.pos.y = x, y
 	self.rallyflag.hidden = false
 	self.rallyflag.alpha = 1
 	self.rallyflag.ts = 0
-	self.timer = timer:tween(1.5, self.rallyflag, {
+	self.rally_flag_timer = timer:tween(1.5, self.rallyflag, {
 		alpha = 0
 	}, "out-quad", function()
 		self.rallyflag.hidden = true
-		self.timer = nil
+		self.rally_flag_timer = nil
 	end)
 end
 
