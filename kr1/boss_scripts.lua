@@ -62,34 +62,6 @@ local function queue_damage(store, damage)
 	store.damage_queue[#store.damage_queue + 1] = damage
 end
 
-local function y_show_taunt_set(store, taunts, set_name, index, wait)
-	if not taunts or not taunts.sets or set_name == nil then
-		return
-	end
-
-	local set = taunts.sets[set_name]
-
-	if not set or not set.format then
-		return
-	end
-
-	index = index or (set.idxs and table.random(set.idxs)) or (set.start_idx ~= nil and set.end_idx ~= nil and math.random(set.start_idx, set.end_idx))
-
-	if index == nil then
-		return
-	end
-
-	local duration = taunts.duration
-	local taunt_id = _(string.format(set.format, index))
-
-	log.info("show taunt " .. taunt_id)
-	signal.emit("show-balloon_tutorial", taunt_id, false)
-
-	if wait then
-		U.y_wait_unconditional(store, duration)
-	end
-end
-
 scripts.eb_juggernaut = {}
 
 function scripts.eb_juggernaut.insert(this, store)
@@ -6604,7 +6576,7 @@ function scripts.controller_stage_15_cult_leader_tower.update(this, store)
 			if not this.boss_fight_started and attack_cd <= store.tick_ts - last_attack_ts then
 				U.y_animation_play_group(this, "enter", nil, store.tick_ts, 1, "layers")
 				U.animation_start_group(this, "idleup", nil, store.tick_ts, true, "layers")
-				--y_show_taunt_set(store, this.taunts, "in_bossfight", false)
+				SU.y_show_taunt_set(store, this.taunts, "in_bossfight", false)
 				U.y_wait_unconditional(store, math.random(this.time_before_attack_min, this.time_before_attack_max))
 				U.y_animation_wait_group(this, "layers")
 
@@ -8519,7 +8491,7 @@ function scripts.controller_stage_19_navira.update(this, store)
 		coroutine.yield()
 
 		if taunt_cd < store.tick_ts - taunt_ts and (store.wave_group_number == 0 or LU.has_alive_enemies(store)) then
-			y_show_taunt_set(store, this.taunts, "pre_bossfight", false)
+			SU.y_show_taunt_set(store, this.taunts, "pre_bossfight", false)
 
 			taunt_ts = store.tick_ts
 			taunt_cd = math.random(this.taunts.delay_min, this.taunts.delay_max)

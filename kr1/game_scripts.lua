@@ -60,22 +60,6 @@ local function queue_damage(store, damage)
 	store.damage_queue[#store.damage_queue + 1] = damage
 end
 
-local function y_show_taunt_set(store, taunts, set_name, index, wait)
-	local set = taunts.sets[set_name]
-
-	index = index or set.idxs and table.random(set.idxs) or math.random(set.start_idx, set.end_idx)
-
-	local duration = taunts.duration
-	local taunt_id = _(string.format(set.format, index))
-
-	log.info("show taunt " .. taunt_id)
-	signal.emit("show-balloon_tutorial", taunt_id, false)
-
-	if wait then
-		U.y_wait_unconditional(store, duration)
-	end
-end
-
 local scripts = require("boss_scripts")
 
 scripts.mod_high_elven = {
@@ -28962,7 +28946,7 @@ function scripts.controller_stage_11_cult_leader.update(this, store)
 				taunt_set = "in_bossfight"
 			end
 
-			y_show_taunt_set(store, this.cultist.taunts, taunt_set, false)
+			SU.y_show_taunt_set(store, this.cultist.taunts, taunt_set, false)
 
 			this.last_taunt = store.tick_ts
 			taunt_delay = math.random(this.cultist.taunts.delay_min, this.cultist.taunts.delay_max)
@@ -32922,9 +32906,9 @@ function scripts.controller_stage_18_eridan.update(this, store)
 	while true do
 		if taunt_cd < store.tick_ts - taunt_ts and store.tick_ts - ai.ts < ai.cooldown - 3 then
 			if store.wave_group_number == 0 then
-				y_show_taunt_set(store, this.taunts, "preparation", false)
+				SU.y_show_taunt_set(store, this.taunts, "preparation", false)
 			else
-				y_show_taunt_set(store, this.taunts, "fight", false)
+				SU.y_show_taunt_set(store, this.taunts, "fight", false)
 			end
 
 			taunt_ts = store.tick_ts
@@ -39535,20 +39519,54 @@ end
 scripts.decal_boss_pig_pool = {}
 
 function scripts.decal_boss_pig_pool.update(this, store)
+	local function boss_pig_on_field()
+		for _, e in pairs(store.entities) do
+			if not e.pending_removal and e.template_name == "boss_pig" then
+				return true
+			end
+		end
+
+		return false
+	end
+
+	local function can_taunt()
+		if this.taunts_disabled or this.pending_removal or boss_pig_on_field() then
+			return false
+		end
+
+		local anim = this.render.sprites[1] and this.render.sprites[1].name
+
+		if anim == "salto" then
+			return false
+		end
+
+		return LU.has_alive_enemies(store)
+	end
+
 	while store.wave_group_number < 10 do
 		coroutine.yield()
 	end
 
-	while not store.waves_finished or LU.has_alive_enemies(store) do
+	while not this.taunts_disabled and (not store.waves_finished or LU.has_alive_enemies(store)) do
 		local delay = math.random(this.taunts.delay_min, this.taunts.delay_max)
 
-		U.y_wait_unconditional(store, delay)
+		U.y_wait(store, delay)
 
-		if store.waves_finished or not LU.has_alive_enemies(store) then
+		if this.taunts_disabled then
 			break
 		end
 
-		y_show_taunt_set(store, this.taunts, "from_pool", false)
+		if store.waves_finished and not LU.has_alive_enemies(store) then
+			break
+		end
+
+		if can_taunt() then
+			local set = this.taunts.sets.from_pool
+			local index = math.random(set.start_idx, set.end_idx)
+
+			signal.emit("show-balloon_tutorial", string.format(set.format, index), false)
+		end
+
 		coroutine.yield()
 	end
 end
@@ -42005,7 +42023,13 @@ function scripts.controller_stage_24_machinist.update(this, store)
 
 					queue_insert(store, machinist)
 					signal.emit("wave-notification", "icon", this.machinist_t)
-					U.y_wait_unconditional(store, 2)
+					U.y_wait(store, 2)
+
+					if store.level_mode == GAME_MODE_CAMPAIGN then
+						local taunt_idx = math.random(1, 3)
+
+						signal.emit("show-balloon_tutorial", string.format("LV24_MACHINIST_BEFORE_BOSSFIGHT_%02i", taunt_idx), false)
+					end
 
 					elevator.go_down = true
 
@@ -43398,7 +43422,7 @@ function scripts.controller_stage_26_taunts.update(this, store)
 
 	while store.wave_group_number == 0 do
 		if taunt_cd < store.tick_ts - taunt_ts then
-			y_show_taunt_set(store, this.taunts, "preparation", false)
+			SU.y_show_taunt_set(store, this.taunts, "preparation", false)
 
 			taunt_ts = store.tick_ts
 			taunt_cd = math.random(this.taunts.delay_min, this.taunts.delay_max)
@@ -43409,7 +43433,7 @@ function scripts.controller_stage_26_taunts.update(this, store)
 
 	while not store.waves_finished do
 		if taunt_cd < store.tick_ts - taunt_ts then
-			y_show_taunt_set(store, this.taunts, "fight", false)
+			SU.y_show_taunt_set(store, this.taunts, "fight", false)
 
 			taunt_ts = store.tick_ts
 			taunt_cd = math.random(this.taunts.delay_min, this.taunts.delay_max)
