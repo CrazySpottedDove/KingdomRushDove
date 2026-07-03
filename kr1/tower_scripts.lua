@@ -5743,9 +5743,7 @@ function scripts.tower_tricannon.update(this, store)
 						local pred = target_position_data.dest
 
 						if enemy then
-							local dest = P:predict_enemy_pos(enemy, ab.node_prediction)
-
-							pred = dest
+							pred = U.calculate_enemy_ffe_pos(enemy, ab.node_prediction)
 
 							table.insert(enemies_hitted, enemy.id)
 						end
