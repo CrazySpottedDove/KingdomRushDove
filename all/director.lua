@@ -476,14 +476,24 @@ function director:queue_load_item_named(name)
 		else
 			local slot = storage:load_slot()
 
-			if slot.heroes.selected then
-				for _, hero in pairs(slot.heroes.selected) do
-					if hero then
-						local hero_textures = {"go_" .. hero}
+			if configer.config().random_hero then
+				if not slot.heroes.selected then
+					slot.heroes.selected = {}
+				end
+				local hero_count = #slot.heroes.selected
+				local hero_data = require("data.map_data").hero_data
+				for i = 1, hero_count do
+					slot.heroes.selected[i] = hero_data[math.random(1, #hero_data)].name
+				end
+				storage:save_slot(slot)
+			end
 
-						self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res, true, "game")
-						self:load_sound_groups({hero})
-					end
+			if slot.heroes.selected then
+				for _, hero in ipairs(slot.heroes.selected) do
+					local hero_textures = {"go_" .. hero}
+
+					self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res, true, "game")
+					self:load_sound_groups({hero})
 				end
 			end
 		end

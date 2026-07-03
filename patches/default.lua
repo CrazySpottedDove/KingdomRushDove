@@ -40,6 +40,8 @@ return {
 	ban_random_towers = false,
 	-- 随机出怪
 	random_creeps = false,
+	-- 随机选择英雄
+	random_hero = false,
 	-- 随机造塔
 	build_random_towers = false,
 	-- 额外士兵数量
