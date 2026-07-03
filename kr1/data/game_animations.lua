@@ -49156,5 +49156,360 @@ return {
 		prefix = "darkarmy_melting_furnace_tower_lvl4_fissure_hit",
 		from = 14,
 		to = 21
+	},
+	wicked_sisters_cauldron_toViolet = {
+		prefix = "wicked_sisters_cauldron",
+		from = 1,
+		to = 30
+	},
+	wicked_sisters_cauldron_Violet = {
+		prefix = "wicked_sisters_cauldron",
+		from = 30,
+		to = 30
+	},
+	wicked_sisters_cauldron_toGreen = {
+		prefix = "wicked_sisters_cauldron",
+		from = 31,
+		to = 53
+	},
+	wicked_sisters_cauldron_Green = {
+		prefix = "wicked_sisters_cauldron",
+		from = 53,
+		to = 53
+	},
+	wicked_sisters_cauldron_fire_run = {
+		prefix = "wicked_sisters_cauldron_fire",
+		from = 1,
+		to = 12
+	},
+	wicked_sisters_cauldron_smoke_green = {
+		prefix = "wicked_sisters_cauldron_smoke",
+		from = 1,
+		to = 28
+	},
+	wicked_sisters_cauldron_smoke_violet = {
+		prefix = "wicked_sisters_cauldron_smoke",
+		from = 29,
+		to = 56
+	},
+	wicked_sisters_frog_idle = {
+		prefix = "wicked_sisters_frog",
+		from = 1,
+		to = 1
+	},
+	wicked_sisters_frog_talk = {
+		prefix = "wicked_sisters_frog",
+		from = 2,
+		to = 19
+	},
+	wicked_sisters_frog_walk = {
+		prefix = "wicked_sisters_frog",
+		from = 20,
+		to = 33
+	},
+	wicked_sisters_frog_walkingRightLeft = {
+		prefix = "wicked_sisters_frog",
+		from = 20,
+		to = 33
+	},
+	wicked_sisters_frog_walkingDown = {
+		prefix = "wicked_sisters_frog",
+		from = 34,
+		to = 47
+	},
+	wicked_sisters_frog_walkingUp = {
+		prefix = "wicked_sisters_frog",
+		from = 48,
+		to = 61
+	},
+	wicked_sisters_frog_death = {
+		prefix = "wicked_sisters_frog",
+		from = 48,
+		to = 61
+	},
+	wicked_sisters_froggification_hit_run = {
+		prefix = "wicked_sisters_froggification_hit",
+		from = 1,
+		to = 8
+	},
+	wicked_sisters_froggification_ray_travel = {
+		prefix = "wicked_sisters_froggification_ray",
+		from = 1,
+		to = 13
+	},
+	wicked_sisters_froggification_smoke_run = {
+		prefix = "wicked_sisters_froggification_smoke",
+		from = 1,
+		to = 18
+	},
+	wicked_sisters_lvl4_chimney_loop = {
+		prefix = "wicked_sisters_lvl4_chimney",
+		from = 1,
+		to = 27
+	},
+	wicked_sisters_lvl4_chimney_run = {
+		prefix = "wicked_sisters_lvl4_chimney",
+		from = 28,
+		to = 85
+	},
+	wicked_sisters_lvl4_kid_run = {
+		prefix = "wicked_sisters_lvl4_kid",
+		from = 1,
+		to = 100
+	},
+	wicked_sisters_lvl4_kid_loop = {
+		prefix = "wicked_sisters_lvl4_kid",
+		from = 51,
+		to = 51
+	},
+	wicked_sisters_lvl4_totem_start = {
+		prefix = "wicked_sisters_lvl4_totem",
+		from = 1,
+		to = 21
+	},
+	wicked_sisters_lvl4_totem_run = {
+		prefix = "wicked_sisters_lvl4_totem",
+		from = 22,
+		to = 22
+	},
+	wicked_sisters_lvl4_totem_end = {
+		prefix = "wicked_sisters_lvl4_totem",
+		from = 23,
+		to = 56
+	},
+	wicked_sisters_lvl4_totem_modifier_run = {
+		prefix = "wicked_sisters_lvl4_totem_modifier",
+		from = 1,
+		to = 16
+	},
+	wicked_sisters_tower_lvl4_idle = {
+		prefix = "wicked_sisters",
+		from = 5,
+		to = 5
+	},
+	wicked_sisters_witch_idle = {
+		prefix = "wicked_sisters_witch",
+		from = 1,
+		to = 1
+	},
+	wicked_sisters_witch_toGreen = {
+		prefix = "wicked_sisters_witch",
+		from = 2,
+		to = 91
+	},
+	wicked_sisters_witch_toViolet = {
+		prefix = "wicked_sisters_witch",
+		from = 91,
+		to = 178
+	},
+	wicked_sisters_witch_stir = {
+		prefix = "wicked_sisters_witch",
+		from = 178,
+		to = 309
+	},
+	wicked_witch_walk = {
+		prefix = "wicked_witch_layer1",
+		from = 1,
+		to = 18
+	},
+	wicked_witch_idle = {
+		prefix = "wicked_witch_layer1",
+		from = 1,
+		to = 18
+	},
+	wicked_witch_shoot = {
+		prefix = "wicked_witch_layer1",
+		from = 19,
+		to = 54
+	},
+	wicked_witch_shootGreen = {
+		prefix = "wicked_witch_layer1",
+		from = 55,
+		to = 90
+	},
+	wicked_witch_shootPower = {
+		prefix = "wicked_witch_layer1",
+		from = 91,
+		to = 146
+	},
+	wicked_witch_spawn = {
+		prefix = "wicked_witch_layer1",
+		from = 147,
+		to = 172
+	},
+	wicked_sisters_proyectile_travel = {
+		prefix = "wicked_sisters_proy_green",
+		from = 1,
+		to = 7
+	},
+	wicked_sisters_proyectile_hit_run = {
+		prefix = "wicked_sisters_proy_green",
+		from = 8,
+		to = 15
+	},
+	wicked_sisters_proyectile_violet_travel = {
+		prefix = "wicked_sisters_proy_pink",
+		from = 1,
+		to = 7
+	},
+	wicked_sisters_proyectile_hit_violet_run = {
+		prefix = "wicked_sisters_proy_pink",
+		from = 8,
+		to = 15
+	},
+	wicked_sisters_proyectile_particle_run = {
+		prefix = "wicked_sisters_proy_green_particle",
+		from = 1,
+		to = 20
+	},
+	worm_nest_level1_build = {
+		prefix = "worm_nest_level1",
+		from = 1,
+		to = 29
+	},
+	worm_nest_level1_idle = {
+		prefix = "worm_nest_level1",
+		from = 30,
+		to = 106
+	},
+	worm_nest_level1_shoot = {
+		prefix = "worm_nest_level1",
+		from = 107,
+		to = 154
+	},
+	worm_nest_level2_idle = {
+		prefix = "worm_nest_level2",
+		from = 1,
+		to = 76
+	},
+	worm_nest_level2_shoot = {
+		prefix = "worm_nest_level2",
+		from = 77,
+		to = 124
+	},
+	worm_nest_level3_idle = {
+		prefix = "worm_nest_level3",
+		from = 1,
+		to = 76
+	},
+	worm_nest_level3_shoot = {
+		prefix = "worm_nest_level3",
+		from = 77,
+		to = 124
+	},
+	worm_nest_level4_idle = {
+		prefix = "worm_nest_level4",
+		from = 1,
+		to = 76
+	},
+	worm_nest_level4_shoot = {
+		prefix = "worm_nest_level4",
+		from = 77,
+		to = 124
+	},
+	worm_nest_level4_spit = {
+		prefix = "worm_nest_level4",
+		from = 125,
+		to = 166
+	},
+	worm_nest_level4_instakill = {
+		prefix = "worm_nest_level4",
+		from = 167,
+		to = 296
+	},
+	worm_nest_level4_instakill_run = {
+		prefix = "worm_nest_level4_instakill",
+		from = 1,
+		to = 51
+	},
+	worm_nest_level4_instakill_decal_run = {
+		prefix = "worm_nest_level4_instakill_decal",
+		from = 1,
+		to = 14
+	},
+	worm_nest_level4_instakill_dust_run = {
+		prefix = "worm_nest_level4_instakill_dust",
+		from = 1,
+		to = 11
+	},
+	worm_nest_attack_in = {
+		prefix = "worm_nest_attack",
+		from = 1,
+		to = 26
+	},
+	worm_nest_attack_run = {
+		prefix = "worm_nest_attack",
+		from = 27,
+		to = 77
+	},
+	worm_nest_attack_out = {
+		prefix = "worm_nest_attack",
+		from = 78,
+		to = 103
+	},
+	worm_nest_level4_tremor_idle = {
+		prefix = "worm_nest_level4_tremor",
+		from = 43,
+		to = 43
+	},
+	worm_nest_level4_tremor_in = {
+		prefix = "worm_nest_level4_tremor",
+		from = 64,
+		to = 79
+	},
+	worm_nest_level4_tremor_running = {
+		prefix = "worm_nest_level4_tremor",
+		from = 1,
+		to = 14
+	},
+	worm_nest_level4_tremor_walk = {
+		prefix = "worm_nest_level4_tremor",
+		from = 1,
+		to = 14
+	},
+	worm_nest_level4_tremor_walkUp = {
+		prefix = "worm_nest_level4_tremor",
+		from = 15,
+		to = 28
+	},
+	worm_nest_level4_tremor_walkDown = {
+		prefix = "worm_nest_level4_tremor",
+		from = 29,
+		to = 42
+	},
+	worm_nest_level4_tremor_death = {
+		prefix = "worm_nest_level4_tremor",
+		from = 80,
+		to = 98
+	},
+	worm_nest_level4_tremor_attack = {
+		prefix = "worm_nest_level4_tremor",
+		from = 43,
+		to = 63
+	},
+	worm_nest_level4_tremor_raise = {
+		prefix = "worm_nest_level4_tremor",
+		from = 99,
+		to = 109
+	},
+	worm_nest_level4_spit_decal_in = {
+		prefix = "worm_nest_level4_spit_decal",
+		from = 1,
+		to = 18
+	},
+	worm_nest_level4_spit_decal_run = {
+		prefix = "worm_nest_level4_spit_decal",
+		from = 19,
+		to = 19
+	},
+	worm_nest_level4_spit_hit_run = {
+		prefix = "worm_nest_level4_spit_hit",
+		from = 1,
+		to = 7
+	},
+	worm_nest_level4_spit_trail_run = {
+		prefix = "worm_nest_level4_spit_trail",
+		from = 1,
+		to = 11
 	}
 }

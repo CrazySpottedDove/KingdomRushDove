@@ -23,7 +23,8 @@ GS.archer_towers = {
 	"tower_ogre_shipwreck",
 	"tower_goblirang",
 	"tower_shaolin",
-	"tower_swamp_monster"
+	"tower_swamp_monster",
+	"tower_wicked_sisters"
 }
 GS.mage_towers = {
 	"tower_mage_1",
@@ -49,7 +50,8 @@ GS.mage_towers = {
 	"tower_orc_shaman",
 	"tower_spirit_mausoleum",
 	"tower_deep_devils",
-	"tower_blazing_watcher"
+	"tower_blazing_watcher",
+	"tower_wicked_sisters"
 }
 GS.engineer_towers = {
 	"tower_engineer_1",
@@ -71,7 +73,8 @@ GS.engineer_towers = {
 	"tower_rocket_riders",
 	"tower_balloon",
 	"tower_ignis_altar",
-	"tower_melting_furnace"
+	"tower_melting_furnace",
+	"tower_sandworm"
 }
 GS.barrack_towers = {
 	"tower_barrack_1",

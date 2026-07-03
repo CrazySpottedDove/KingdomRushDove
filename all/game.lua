@@ -76,7 +76,9 @@ game.required_textures = {
 	"kr4_shaolin_temple_tower",
 	"kr4_dark_army_tower_blazing_watcher",
 	"kr4_swamp_monster_tower",
-	"kr4_dark_army_tower_melting_furnace"
+	"kr4_dark_army_tower_melting_furnace",
+	"kr4_wicked_sisters_tower",
+	"kr4_wormnest_tower"
 }
 game.ref_h = REF_H
 game.ref_w = REF_W
@@ -125,7 +127,9 @@ game.required_sounds = {
 	"tower_shaolin",
 	"tower_blazing_watcher",
 	"tower_swamp_monster",
-	"tower_melting_furnace"
+	"tower_melting_furnace",
+	"tower_wicked_sisters",
+	"tower_sandworm"
 }
 game.required_exoskeletons = {"ignis_altar_lava_golem", "ignis_altar_lvl4", "ignis_altar_decal", "ignis_altar_decal_lava"}
 game.plugin_required_textures = {}

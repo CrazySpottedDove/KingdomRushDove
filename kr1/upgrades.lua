@@ -1061,7 +1061,8 @@ upgrades.soldiers = {
 	"soldier_deep_devils_chosen",
 	"soldier_ignis_altar_elemental",
 	"soldier_dragon",
-	"soldier_swamp_monster"
+	"soldier_swamp_monster",
+	"soldier_wicked_sisters"
 }
 
 upgrades.barrack_soldiers = {
@@ -1101,7 +1102,8 @@ upgrades.barrack_soldiers = {
 	"soldier_zombie_big",
 	"soldier_elves_harasser",
 	"soldier_elves_espectral_harasser",
-	"soldier_swamp_monster"
+	"soldier_swamp_monster",
+	"soldier_wicked_sisters"
 }
 
 upgrades.towers_with_barrack = {
@@ -1141,6 +1143,7 @@ upgrades.towers_with_barrack = {
 	"tower_grim_cemetery",
 	"tower_twilight_elves_barrack",
 	"tower_swamp_monster",
+	"tower_wicked_sisters",
 	"tower_balloon",
 	"tower_spirit_mausoleum",
 	"tower_deep_devils",
@@ -1192,7 +1195,9 @@ upgrades.mage_tower_bolts = {
 	"bolt_tower_spirit_mausoleum",
 	"bolt_tower_deep_devils",
 	"ray_deep_devils",
-	"bullet_tower_blazing_watcher"
+	"bullet_tower_blazing_watcher",
+	"proy_green",
+	"proy_pink"
 }
 
 local other_bolts = {
@@ -1246,7 +1251,10 @@ upgrades.engineer_bombs = {
 	"missile_rr",
 	"missile_rr_nitro",
 	"bomb_balloon",
-	"bullet_balloon_oil"
+	"bullet_balloon_oil",
+	"bullet_tower_sandworm",
+	"tower_sandworm_spit",
+	"tower_sandworm_eat"
 }
 
 upgrades.engineer_advanced_tower = {
@@ -1266,7 +1274,8 @@ upgrades.engineer_advanced_tower = {
 	"tower_rocket_riders",
 	"tower_balloon",
 	"tower_ignis_altar",
-	"tower_melting_furnace"
+	"tower_melting_furnace",
+	"tower_sandworm"
 }
 
 local fps_based_keys = {

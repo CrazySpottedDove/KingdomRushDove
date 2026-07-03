@@ -234,6 +234,14 @@ return {
 			tt_title = _("TOWER_BLAZING_WATCHER_NAME"),
 			tt_desc = _("TOWER_BLAZING_WATCHER_DESCRIPTION")
 		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_wicked_sisters",
+			image = "kr4_main_icons_0017",
+			type = "wicked_sisters",
+			place = 28,
+			tt_title = _("TOWER_WICKED_SISTERS_NAME"),
+			tt_desc = _("TOWER_WICKED_SISTERS_DESCRIPTION")
+		}),
 		tpl.sell
 	}},
 	engineer = {{M(tpl.common_upgrade, {
@@ -369,6 +377,14 @@ return {
 			place = 23,
 			tt_title = _("TOWER_MELTING_FURNACE_NAME"),
 			tt_desc = _("TOWER_MELTING_FURNACE_DESCRIPTION")
+		}),
+		M(tpl.upgrade, {
+			action_arg = "tower_sandworm",
+			image = "kr4_main_icons_0022",
+			type = "sandworm",
+			place = 24,
+			tt_title = _("TOWER_SANDWORM_NAME"),
+			tt_desc = _("TOWER_SANDWORM_DESCRIPTION")
 		}),
 		tpl.sell
 	}},
@@ -3863,6 +3879,43 @@ return {
 			tt_desc = _("TOWER_SHAOLIN_TOTAL_DESCRIPTION_3")
 		}}
 	}), tpl.rally, tpl.sell}},
+	wicked_sisters = {{M(tpl.upgrade_power, {
+		action_arg = "silent",
+		image = "kr4_special_icons_0017",
+		place = 5,
+		sounds = {"WickedSistersSkillBTaunt"},
+		tt_phrase = _("TOWER_WICKED_SISTERS_SILENT_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_WICKED_SISTERS_SILENT_NAME_1"),
+			tt_desc = _("TOWER_WICKED_SISTERS_SILENT_DESCRIPTION_1")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "frog",
+		image = "kr4_special_icons_0018",
+		place = 6,
+		sounds = {"WickedSistersSkillATaunt"},
+		tt_phrase = _("TOWER_WICKED_SISTERS_FROG_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_WICKED_SISTERS_FROG_NAME_1"),
+			tt_desc = _("TOWER_WICKED_SISTERS_FROG_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_WICKED_SISTERS_FROG_NAME_2"),
+			tt_desc = _("TOWER_WICKED_SISTERS_FROG_DESCRIPTION_2")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "range",
+		image = "kr4_special_icons_0019",
+		place = 7,
+		sounds = {"WickedSistersSkillCTaunt"},
+		tt_phrase = _("TOWER_WICKED_SISTERS_RANGE_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_WICKED_SISTERS_RANGE_NAME_1"),
+			tt_desc = _("TOWER_WICKED_SISTERS_RANGE_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_WICKED_SISTERS_RANGE_NAME_2"),
+			tt_desc = _("TOWER_WICKED_SISTERS_RANGE_DESCRIPTION_2")
+		}}
+	}), tpl.rally, tpl.sell}},
 	melting_furnace = {{M(tpl.upgrade_power, {
 		action_arg = "coal",
 		image = "kr4_special_icons_0031",
@@ -3952,5 +4005,42 @@ return {
 			tt_title = _("TOWER_SWAMP_MONSTER_EAT_NAME_1"),
 			tt_desc = _("TOWER_SWAMP_MONSTER_EAT_DESCRIPTION_1")
 		}}
-	}), tpl.rally, tpl.sell}}
+	}), tpl.rally, tpl.sell}},
+	sandworm = {{M(tpl.upgrade_power, {
+		action_arg = "worm",
+		image = "kr4_special_icons_0020",
+		place = 6,
+		sounds = {"sandwormSkillATaunt"},
+		tt_phrase = _("TOWER_SANDWORM_WORM_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SANDWORM_WORM_NAME_1"),
+			tt_desc = _("TOWER_SANDWORM_WORM_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SANDWORM_WORM_NAME_2"),
+			tt_desc = _("TOWER_SANDWORM_WORM_DESCRIPTION_2")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "eat",
+		image = "kr4_special_icons_0021",
+		place = 5,
+		sounds = {"sandwormSkillBTaunt"},
+		tt_phrase = _("TOWER_SANDWORM_EAT_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SANDWORM_EAT_NAME_1"),
+			tt_desc = _("TOWER_SANDWORM_EAT_DESCRIPTION_1")
+		}}
+	}), M(tpl.upgrade_power, {
+		action_arg = "slime",
+		image = "kr4_special_icons_0022",
+		place = 7,
+		sounds = {"sandwormSkillCTaunt"},
+		tt_phrase = _("TOWER_SANDWORM_SLIME_NOTE"),
+		tt_list = {{
+			tt_title = _("TOWER_SANDWORM_SLIME_NAME_1"),
+			tt_desc = _("TOWER_SANDWORM_SLIME_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SANDWORM_SLIME_NAME_2"),
+			tt_desc = _("TOWER_SANDWORM_SLIME_DESCRIPTION_2")
+		}}
+	}), tpl.sell}}
 }

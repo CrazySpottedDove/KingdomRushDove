@@ -29150,4 +29150,380 @@ function scripts.lava_furnace.update(this, store)
 	queue_remove(store, this)
 end
 
+scripts.tower_wicked_sisters = {}
+
+function scripts.tower_wicked_sisters.get_info(this)
+	local min_table = {36, 90, 153, 254}
+	local max_table = {36, 90, 153, 254}
+	local min, max = min_table[1], max_table[1]
+	if this.tower_upgrade_persistent_data.current_mode == 1 then
+		local min2 = {13, 32, 58, 94}
+		local max2 = {30, 76, 135, 220}
+		min, max = math.ceil(min2[1] * this.tower.damage_factor), math.ceil(max2[1] * this.tower.damage_factor)
+	end
+	return {
+		type = STATS_TYPE_TOWER_MAGE,
+		damage_min = min,
+		damage_max = max,
+		damage_type = this.tower_upgrade_persistent_data.current_mode == 1 and DAMAGE_MAGICAL or DAMAGE_TRUE,
+		range = 150,
+		cooldown = 2.5
+	}
+end
+
+function scripts.tower_wicked_sisters.insert(this, store)
+	return scripts.tower_barrack.insert(this, store)
+end
+
+function scripts.tower_wicked_sisters.update(this, store)
+	local current_mode = this.tower_upgrade_persistent_data.current_mode
+	local function set_mode_visuals(mode)
+		if mode == 1 then
+			this.render.sprites[4].name = "Violet"
+			this.render.sprites[6].name = "violet"
+		else
+			this.render.sprites[4].name = "Green"
+			this.render.sprites[6].name = "green"
+		end
+	end
+	set_mode_visuals(current_mode)
+
+	local b = this.barrack
+	local witch
+
+	while true do
+		if not witch or witch.health.dead and not store.entities[witch.id] then
+			this.tower_upgrade_persistent_data.initialized = false
+			witch = E:create_entity(b.soldier_type)
+			witch.pos.x, witch.pos.y = this.pos.x, this.pos.y + 16
+			witch.nav_rally.pos.x, witch.nav_rally.pos.y = b.rally_pos.x, b.rally_pos.y
+			witch.nav_rally.center = vclone(witch.nav_rally.pos)
+			witch.soldier.tower_id = this.id
+			queue_insert(store, witch)
+			b.soldiers[1] = witch
+		end
+		witch.nav_rally.new = true
+		witch.wick_mode = current_mode
+
+		local function check_change_mode()
+			if this.change_mode then
+				this.change_mode = false
+				if current_mode == 2 then
+					current_mode = 1
+					witch.wick_mode = 1
+					this.render.sprites[6].hidden = true
+					U.animation_start(this, "toViolet", nil, store.tick_ts, false, 5)
+					U.y_animation_play(this, "toViolet", nil, store.tick_ts, false, 4)
+					U.animation_start(this, "Violet", nil, store.tick_ts, true, 4)
+					this.render.sprites[6].name = "violet"
+					this.render.sprites[6].hidden = false
+					y_animation_wait(this)
+					U.animation_start(this, "stir", nil, store.tick_ts, true, 5)
+				else
+					current_mode = 2
+					witch.wick_mode = 2
+					this.render.sprites[6].hidden = true
+					U.animation_start(this, "toGreen", nil, store.tick_ts, false, 5)
+					y_wait(store, fts(4))
+					U.y_animation_play(this, "toGreen", nil, store.tick_ts, false, 4)
+					U.animation_start(this, "Green", nil, store.tick_ts, true, 4)
+					this.render.sprites[6].name = "green"
+					this.render.sprites[6].hidden = false
+					y_animation_wait(this)
+					U.animation_start(this, "stir", nil, store.tick_ts, true, 5)
+				end
+				this.tower_upgrade_persistent_data.current_mode = current_mode
+				return true
+			end
+			return false
+		end
+
+		if b.rally_new then
+			b.rally_new = false
+			signal.emit("rally-point-changed", this)
+			S:queue(this.sound_events.change_rally_point)
+			for i, s in ipairs(b.soldiers) do
+				s.nav_rally.pos = vclone(b.rally_pos)
+				s.nav_rally.center = vclone(b.rally_pos)
+				s.nav_rally.new = true
+			end
+		end
+
+		if this.powers.silent.changed then
+			this.powers.silent.changed = nil
+			for _, s in ipairs(b.soldiers) do
+				s.powers.silent.changed = true
+				s.powers.silent.level = this.powers.silent.level
+			end
+		end
+
+		if this.powers.frog.changed then
+			this.powers.frog.changed = nil
+			for _, s in ipairs(b.soldiers) do
+				s.powers.frog.changed = true
+				s.powers.frog.level = this.powers.frog.level
+			end
+		end
+
+		if this.powers.range.changed then
+			this.powers.range.changed = nil
+			for _, s in ipairs(b.soldiers) do
+				s.powers.range.changed = true
+				s.powers.range.level = this.powers.range.level
+			end
+			this.barrack.rally_range = this.powers.range.range[this.powers.range.level]
+		end
+
+		if not this.tower.blocked and this.powers.silent.level > 0 then
+			local ta = this.attacks.list[1]
+			if store.tick_ts - ta.ts >= ta.cooldown then
+				local enemy, _, pred_pos = U.find_foremost_enemy(store, tpos(this), 0, ta.max_range[this.powers.range.level], false, ta.vis_flags, ta.vis_bans)
+				if enemy then
+					ta.ts = store.tick_ts
+					local node_offset = math.random(-4, 8)
+					local totem_node = enemy.nav_path.ni
+					if P:is_node_valid(enemy.nav_path.pi, enemy.nav_path.ni + node_offset) then
+						totem_node = totem_node + node_offset
+					end
+					local totem_pos = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, totem_node)
+					local b2 = E:create_entity(ta.bullet)
+					b2.pos.x, b2.pos.y = totem_pos.x, totem_pos.y
+					b2.aura.level = this.powers.silent.level
+					b2.aura.ts = store.tick_ts
+					b2.aura.source_id = this.id
+					b2.render.sprites[1].ts = store.tick_ts
+					b2.render.sprites[2].ts = store.tick_ts
+					b2.render.sprites[3].ts = store.tick_ts
+					queue_insert(store, b2)
+				end
+			end
+		end
+
+		check_change_mode()
+		coroutine.yield()
+	end
+end
+
+scripts.soldier_wicked_sisters = {}
+
+function scripts.soldier_wicked_sisters.insert(this, store)
+	this.attacks.order = U.attack_order(this.attacks.list)
+	this.idle_flip.ts = store.tick_ts
+	return true
+end
+
+function scripts.soldier_wicked_sisters.remove(this, store)
+	return true
+end
+
+function scripts.soldier_wicked_sisters.update(this, store)
+	local ab = this.attacks.list[1]
+	local am = this.attacks.list[2]
+	local pow_m = this.powers.frog
+
+	ab.ts = store.tick_ts - ab.cooldown / 2
+
+	local owner = store.entities[this.soldier.tower_id]
+	if not owner then
+		return
+	end
+
+	this.render.sprites[1].hidden = false
+	if not owner.tower_upgrade_persistent_data.initialized then
+		U.y_animation_play(this, "spawn", nil, store.tick_ts, false, 1)
+		owner.tower_upgrade_persistent_data.initialized = true
+	end
+
+	while true do
+		local r = this.nav_rally
+		while r.new do
+			r.new = false
+			U.set_destination(this, r.pos)
+			local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
+			U.animation_start(this, an, af, store.tick_ts, true, 1)
+			local ts = store.tick_ts
+			while not this.motion.arrived and not r.new do
+				U.walk(this, store.tick_length)
+				coroutine.yield()
+				this.motion.speed.x, this.motion.speed.y = 0, 0
+			end
+			coroutine.yield()
+		end
+
+		if pow_m.level > 0 then
+			if pow_m.changed then
+				pow_m.changed = nil
+				if pow_m.level == 1 then
+					am.ts = store.tick_ts
+				end
+				am.cooldown = pow_m.cooldown[pow_m.level]
+				am.disabled = false
+			end
+			if ready_to_attack(am, store) then
+				local target, _, pred_pos = U.find_foremost_enemy(store, this.pos, am.min_range, am.max_range, false, am.vis_flags, am.vis_bans)
+				if target then
+					am.ts = store.tick_ts
+					local an, af = U.animation_name_facing_point(this, am.animations, target.pos)
+					U.animation_start(this, an, af, store.tick_ts, false, 1)
+					y_wait(store, am.hit_times)
+					if target then
+						local b = E:create_entity(am.bullet)
+						b.bullet.damage_factor = owner.tower.damage_factor
+						b.pos.x = this.pos.x + (af and -1 or 1) * am.start_offset.x
+						b.pos.y = this.pos.y + am.start_offset.y
+						b.bullet.from = vclone(b.pos)
+						b.bullet.to = vclone(target.pos)
+						if target.unit and target.unit.hit_offset then
+							b.bullet.to.x = b.bullet.to.x + target.unit.hit_offset.x
+							b.bullet.to.y = b.bullet.to.y + target.unit.hit_offset.y
+						end
+						b.bullet.target_id = target.id
+						b.bullet.source_id = this.id
+						queue_insert(store, b)
+					end
+					y_animation_wait(this)
+				end
+			end
+		end
+
+		if ready_to_attack(ab, store) then
+			local trigger, trigger_pos = U.find_foremost_enemy(store, this.pos, ab.min_range, ab.max_range, false, ab.vis_flags, ab.vis_bans)
+			if trigger then
+				ab.ts = store.tick_ts
+				local wick_mode = this.wick_mode or 2
+				local an, af = U.animation_name_facing_point(this, ab.animations[wick_mode], trigger.pos)
+				U.animation_start(this, an, af, store.tick_ts, false, 1)
+				y_wait(store, ab.hit_times[wick_mode])
+				local target, target_pos = U.find_foremost_enemy(store, this.pos, ab.min_range, ab.max_range, false, ab.vis_flags, ab.vis_bans)
+				local b = E:create_entity(ab.bullet[wick_mode])
+				b.bullet.damage_factor = owner.tower.damage_factor
+				b.pos.x = this.pos.x + (af and -1 or 1) * ab.start_offsets[wick_mode].x
+				b.pos.y = this.pos.y + ab.start_offsets[wick_mode].y
+				b.bullet.from = vclone(b.pos)
+				b.bullet.source_id = this.id
+				if target then
+					b.bullet.to = target_pos
+					if target.unit and target.unit.hit_offset then
+						b.bullet.to.x = b.bullet.to.x + target.unit.hit_offset.x
+						b.bullet.to.y = b.bullet.to.y + target.unit.hit_offset.y
+					end
+					b.bullet.target_id = target.id
+				else
+					b.bullet.to = trigger_pos
+					b.bullet.target_id = trigger.id
+				end
+				if wick_mode == 1 and random() < 0.6 then
+					b.bullet.mod = "mod_wicked_sisters_stun"
+				end
+				queue_insert(store, b)
+				while not U.animation_finished(this) do
+					if this.nav_rally.new then
+						break
+					end
+					coroutine.yield()
+				end
+			end
+		end
+
+		if store.tick_ts - this.idle_flip.ts > this.idle_flip.cooldown then
+			this.idle_flip.ts = store.tick_ts
+			local new_pos = vclone(this.pos)
+			this.idle_flip.last_dir = -1 * this.idle_flip.last_dir
+			new_pos.x = new_pos.x + this.idle_flip.last_dir * (this.idle_flip.walk_dist or 27)
+			if not GR:cell_is(new_pos.x, new_pos.y, TERRAIN_WATER) then
+				r.new = true
+				r.pos = new_pos
+			end
+		end
+
+		U.animation_start(this, "idle", nil, store.tick_ts, true, 1)
+		coroutine.yield()
+	end
+end
+
+scripts.enemy_frog = {}
+
+function scripts.enemy_frog.update(this, store)
+	local clicks = 0
+	while true do
+		if this.health.dead then
+			SU.y_enemy_death(store, this)
+			return
+		end
+		if this.ui.clicked then
+			this.ui.clicked = nil
+			clicks = clicks + 1
+		end
+		if clicks >= (this.clicks_to_destroy or 3) then
+			this.health.hp = 0
+			this.health.last_damage_types = DAMAGE_EXPLOSION
+			coroutine.yield()
+		elseif this.unit.is_stunned then
+			U.animation_start(this, "idle", nil, store.tick_ts, -1)
+			coroutine.yield()
+		else
+			SU.y_enemy_walk_until_blocked(store, this, true)
+		end
+	end
+end
+
+scripts.aura_totem_wicked_sisters = {}
+
+function scripts.aura_totem_wicked_sisters.update(this, store)
+	local a = this.aura
+	local ring_sid = 1
+	local ground_sid = 2
+	local totem_sid = 3
+
+	if GR:cell_is(this.pos.x, this.pos.y, TERRAIN_WATER) then
+		local fx = E:create_entity("fx")
+		fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
+		fx.render.sprites[1].name = "totem_water_fx_enter"
+		fx.render.sprites[1].anchor.y = 0.09
+		fx.render.sprites[1].ts = store.tick_ts
+		queue_insert(store, fx)
+	end
+
+	this.render.sprites[ring_sid].ts = store.tick_ts
+	U.animation_start(this, "start", nil, store.tick_ts, 1, totem_sid)
+	while not U.animation_finished(this, totem_sid) do
+		coroutine.yield()
+	end
+
+	while store.tick_ts - this.aura.ts < a.duration + a.duration_inc * a.level do
+		local enemies = table.filter(store.entities, function(_, e)
+			return e.enemy and e.vis and e.health and not e.health.dead and band(e.vis.flags, a.vis_bans) == 0 and band(e.vis.bans, a.vis_flags) == 0 and U.is_inside_ellipse(e.pos, this.pos, a.radius)
+		end)
+		for _, enemy in ipairs(enemies) do
+			local new_mod = E:create_entity(a.mod)
+			new_mod.modifier.level = a.level
+			new_mod.modifier.target_id = enemy.id
+			new_mod.modifier.source_id = this.id
+			queue_insert(store, new_mod)
+		end
+		local last_hit_ts = store.tick_ts
+		while store.tick_ts - last_hit_ts < a.cycle_time do
+			coroutine.yield()
+		end
+	end
+
+	if GR:cell_is(this.pos.x, this.pos.y, TERRAIN_WATER) then
+		local fx = E:create_entity("fx")
+		fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
+		fx.render.sprites[1].name = "totem_water_fx_exit"
+		fx.render.sprites[1].anchor.y = 0.09
+		fx.render.sprites[1].ts = store.tick_ts
+		queue_insert(store, fx)
+	end
+
+	this.render.sprites[ground_sid].hidden = true
+	this.render.sprites[ring_sid].hidden = true
+	S:queue("TotemVanish")
+	U.animation_start(this, "end", nil, store.tick_ts, 1, totem_sid)
+	while not U.animation_finished(this, totem_sid) do
+		coroutine.yield()
+	end
+	queue_remove(store, this)
+end
+
 return scripts
