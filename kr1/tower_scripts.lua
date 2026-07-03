@@ -27602,9 +27602,7 @@ function scripts.storm_deep_devils.update(this, store)
 	queue_remove(store, this)
 end
 
--- ====================
--- Ignis Altar Tower
--- ====================
+-- 火山
 scripts.tower_ignis_altar = {}
 
 function scripts.tower_ignis_altar.get_info(this)
@@ -27637,7 +27635,7 @@ function scripts.tower_ignis_altar.update(this, store)
 	U.y_animation_play(this, a1.charge_animation, nil, store.tick_ts, nil, tower_sid)
 	U.animation_start(this, "idle", nil, store.tick_ts, true, tower_sid)
 
-	while true do
+	local stm_logic = function()
 		if not this.tower.blocked then
 			if pow_elemental.changed then
 				pow_elemental.changed = nil
@@ -27666,7 +27664,6 @@ function scripts.tower_ignis_altar.update(this, store)
 			if pow_fire.changed then
 				pow_fire.changed = nil
 			end
-
 			for i = 1, this.barrack.max_soldiers do
 				local s = this.barrack.soldiers[i]
 				if not s or (s.health.dead and store.tick_ts - s.health.death_ts > s.health.dead_lifetime) then
@@ -27691,63 +27688,74 @@ function scripts.tower_ignis_altar.update(this, store)
 					signal.emit("tower-spawn", this, ns)
 				end
 			end
-
-			if this.barrack.rally_new then
-				this.barrack.rally_new = false
-				signal.emit("rally-point-changed", this)
-				local all_dead = true
-				for i, s in ipairs(this.barrack.soldiers) do
-					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, this.barrack, this.barrack.max_soldiers, this.barrack.rally_angle_offset)
-					s.nav_rally.new = true
-					all_dead = all_dead and s.health.dead
-				end
-				if not all_dead then
-					S:queue(this.sound_events.change_rally_point)
-				end
+		end
+		if this.barrack.rally_new then
+			this.barrack.rally_new = false
+			signal.emit("rally-point-changed", this)
+			local all_dead = true
+			for i, s in ipairs(this.barrack.soldiers) do
+				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, this.barrack, this.barrack.max_soldiers, this.barrack.rally_angle_offset)
+				s.nav_rally.new = true
+				all_dead = all_dead and s.health.dead
 			end
-
-			if ready_to_attack(a1, store, this.tower.cooldown_factor) then
-				local target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, a1.vis_flags, a1.vis_bans)
-				if target then
-					a1.ts = store.tick_ts
-					U.animation_start(this, a1.animation, nil, store.tick_ts, nil, tower_sid)
-					U.y_wait_unconditional(store, a1.shoot_time)
-					local new_target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, a1.vis_flags, a1.vis_bans)
-					if new_target then
-						target = new_target
-					end
-
-					local bullet = E:create_entity(a1.bullet)
-					bullet.pos = V.v(this.pos.x + a1.bullet_start_offset.x, this.pos.y + a1.bullet_start_offset.y)
-					bullet.bullet.from = V.vclone(bullet.pos)
-
-					local pred_pos = U.calculate_enemy_ffe_pos(target, a1.node_prediction)
-					local nodes = P:nearest_nodes(pred_pos.x, pred_pos.y, {target.nav_path.pi}, nil)
-					local node = nodes[1]
-					local radius = E:get_template("aura_bullet_ignis_altar").aura.radius
-					if node and node[4] < radius then
-						local node_pos = P:node_pos_ref(node[1], node[2], node[3] + 1)
-						bullet.bullet.to:copy(node_pos:dist(pred_pos) < radius and node_pos or P:node_pos_ref(node[1], node[2], node[3]))
-					else
-						bullet.bullet.to = U.calculate_enemy_ffe_pos(target, a1.node_prediction)
-					end
-
-					bullet.bullet.source_id = this.id
-					bullet.bullet.damage_factor = this.tower.damage_factor
-					bullet.bullet.level = pow_fire.level
-
-					queue_insert(store, bullet)
-
-					while not U.animation_finished(this, tower_sid) do
-						coroutine.yield()
-					end
-					U.y_animation_play(this, a1.charge_animation, nil, store.tick_ts, nil, tower_sid)
-					U.animation_start(this, "idle", nil, store.tick_ts, true, tower_sid)
-				else
-					a1.ts = a1.ts + 0.1
-				end
+			if not all_dead then
+				S:queue(this.sound_events.change_rally_point)
 			end
 		end
+	end
+
+	local coro_logic = coroutine.create(function()
+		while true do
+			if not this.tower.blocked then
+				if ready_to_attack(a1, store, this.tower.cooldown_factor) then
+					local target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, a1.vis_flags, a1.vis_bans)
+					if target then
+						a1.ts = store.tick_ts
+						U.animation_start(this, a1.animation, nil, store.tick_ts, nil, tower_sid)
+						U.y_wait_unconditional(store, a1.shoot_time)
+						local new_target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), this.attacks.range, a1.vis_flags, a1.vis_bans)
+						if new_target then
+							target = new_target
+						end
+
+						local bullet = E:create_entity(a1.bullet)
+						bullet.pos = V.v(this.pos.x + a1.bullet_start_offset.x, this.pos.y + a1.bullet_start_offset.y)
+						bullet.bullet.from = V.vclone(bullet.pos)
+
+						local pred_pos = U.calculate_enemy_ffe_pos(target, a1.node_prediction)
+						local nodes = P:nearest_nodes(pred_pos.x, pred_pos.y, {target.nav_path.pi}, nil)
+						local node = nodes[1]
+						local radius = E:get_template("aura_bullet_ignis_altar").aura.radius
+						if node and node[4] < radius then
+							local node_pos = P:node_pos_ref(node[1], node[2], node[3] + 1)
+							bullet.bullet.to:copy(node_pos:dist(pred_pos) < radius and node_pos or P:node_pos_ref(node[1], node[2], node[3]))
+						else
+							bullet.bullet.to = U.calculate_enemy_ffe_pos(target, a1.node_prediction)
+						end
+
+						bullet.bullet.source_id = this.id
+						bullet.bullet.damage_factor = this.tower.damage_factor
+						bullet.bullet.level = pow_fire.level
+
+						queue_insert(store, bullet)
+
+						while not U.animation_finished(this, tower_sid) do
+							coroutine.yield()
+						end
+						U.y_animation_play(this, a1.charge_animation, nil, store.tick_ts, nil, tower_sid)
+						U.animation_start(this, "idle", nil, store.tick_ts, true, tower_sid)
+					else
+						a1.ts = a1.ts + 0.1
+					end
+				end
+			end
+			coroutine.yield()
+		end
+	end)
+
+	while true do
+		stm_logic()
+		coroutine.resume(coro_logic)
 		coroutine.yield()
 	end
 end
@@ -27961,8 +27969,7 @@ function scripts.soldier_ignis_altar_elemental.update(this, store, script)
 	end
 end
 
-----------------------------------------------
--- 少林寺 (Shaolin Temple)
+-- 少林
 scripts.tower_shaolin = {}
 
 function scripts.tower_shaolin.insert(this, store)
@@ -28321,8 +28328,7 @@ scripts.mod_gold_indicator = {
 	end
 }
 
-----------------------------------------------
--- 炙热宝石 (Blazing Watcher, KR4)
+-- 红钻
 scripts.tower_blazing_watcher = {
 	get_info = function(this)
 		local o = scripts.tower_common.get_info(this)
@@ -28871,6 +28877,7 @@ function scripts.tower_swamp_monster.update(this, store)
 	end
 end
 
+-- 熔炉
 scripts.tower_melting_furnace = {}
 
 function scripts.tower_melting_furnace.remove(this, store)
