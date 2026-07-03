@@ -2538,11 +2538,9 @@ tt.powers.empowerment.price_inc = b.empowerment.price[2]
 tt.powers.empowerment.damage_factor = b.empowerment.damage_factor
 tt.powers.empowerment.cooldown = b.empowerment.cooldown
 tt.powers.empowerment.duration = b.empowerment.duration
-
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_mage_%04i"
 tt.render.sprites[1].offset = vec_2(0, 13)
-
 for i = 2, 9 do
 	tt.render.sprites[i] = CC("sprite")
 	tt.render.sprites[i].prefix = "arcane_wizard_tower_lvl4_tower_layer" .. i - 1
@@ -2555,7 +2553,6 @@ for i = 2, 9 do
 	tt.render.sprites[i].angles.skill1 = {"skill1_back", "skill1"}
 	tt.render.sprites[i].angles.skill2 = {"skill2_back", "skill2"}
 end
-
 tt.render.sid_shooter = 8
 tt.main_script.update = scripts.tower_arcane_wizard5.update
 tt.main_script.remove = scripts.tower_arcane_wizard5.remove

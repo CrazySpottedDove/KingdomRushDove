@@ -95,6 +95,7 @@ return function(this, store)
                             mod.modifier.damage_factor = b.damage_factor
                             mod.modifier.target_id = enemy.id
                             mod.modifier.source_id = this.id
+                            mod.modifier.level = b.level
 
                             queue_insert(store, mod)
                         end

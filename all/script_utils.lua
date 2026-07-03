@@ -4567,7 +4567,7 @@ end
 ---增加塔冷却缩放（乘算）
 ---@param ts number 当前时间
 ---@param target table 塔实体
----@param cooldown_factor number 冷却系数
+---@param cooldown_factor number 冷却系数，小于 1 表示冷却加快
 function SU.insert_tower_cooldown_buff(ts, target, cooldown_factor)
 	if not target then
 		return

@@ -3211,7 +3211,7 @@ end
 
 --- 为需要路径特效的实体获取路径特效点列表，依赖于实体的 .attacks.range 属性，且会缓存结果以优化性能
 function U.get_path_fx_points(this, fx_radius, void_radius)
-	if this.attacks.range == this._fx_point_range and this._fx_points_cache then
+	if this.attacks.range == this._fx_point_range and this._fx_point_path_sum == P:active_path_id_sum() and this._fx_points_cache then
 		return this._fx_points_cache
 	end
 
@@ -3224,6 +3224,7 @@ function U.get_path_fx_points(this, fx_radius, void_radius)
 	end
 
 	this._fx_point_range = this.attacks.range
+	this._fx_point_path_sum = P:active_path_id_sum()
 
 	local points = {}
 

@@ -1246,8 +1246,7 @@ upgrades.engineer_bombs = {
 	"missile_rr",
 	"missile_rr_nitro",
 	"bomb_balloon",
-	"bullet_balloon_oil",
-	"melting_furnace_coal"
+	"bullet_balloon_oil"
 }
 
 upgrades.engineer_advanced_tower = {
@@ -1806,6 +1805,8 @@ function upgrades:patch_templates(max_level)
 
 		T("tower_dwaarp").attacks.list[1].damage_min = T("tower_dwaarp").attacks.list[1].damage_min * u.damage_factor
 		T("tower_dwaarp").attacks.list[1].damage_max = T("tower_dwaarp").attacks.list[1].damage_max * u.damage_factor
+		T("tower_melting_furnace").attacks.list[1].damage_min = T("tower_melting_furnace").attacks.list[1].damage_min * u.damage_factor
+		T("tower_melting_furnace").attacks.list[1].damage_max = T("tower_melting_furnace").attacks.list[1].damage_max * u.damage_factor
 		T("ray_tesla").bounce_damage_min = T("ray_tesla").bounce_damage_min * u.damage_factor
 		T("ray_tesla").bounce_damage_max = T("ray_tesla").bounce_damage_max * u.damage_factor
 		T("mod_ray_frankenstein").dps.damage_min = T("mod_ray_frankenstein").dps.damage_min * u.damage_factor
@@ -1882,12 +1883,14 @@ function upgrades:patch_templates(max_level)
 			end
 		end
 		T("tower_rotten_forest").attacks.range = T("tower_rotten_forest").attacks.range * u.radius_factor
+		T("tower_dwaarp").attacks.range = T("tower_dwaarp").attacks.range * u.radius_factor
 		T("aura_bullet_ignis_altar").render.sprites[1].scale.x = T("aura_bullet_ignis_altar").render.sprites[1].scale.x * u.radius_factor
 		T("aura_bullet_ignis_altar").render.sprites[1].scale.y = T("aura_bullet_ignis_altar").render.sprites[1].scale.y * u.radius_factor
 		T("aura_bullet_ignis_altar").aura.radius = T("aura_bullet_ignis_altar").aura.radius * u.radius_factor
 		T("aura_bullet_tower_hermit_toad_engineer_basic").render.sprites[1].scale.x = T("aura_bullet_tower_hermit_toad_engineer_basic").render.sprites[1].scale.x * u.radius_factor
 		T("aura_bullet_tower_hermit_toad_engineer_basic").render.sprites[1].scale.y = T("aura_bullet_tower_hermit_toad_engineer_basic").render.sprites[1].scale.y * u.radius_factor
 		T("aura_bullet_tower_hermit_toad_engineer_basic").aura.radius = T("aura_bullet_tower_hermit_toad_engineer_basic").aura.radius * u.radius_factor
+		T("tower_melting_furnace").attacks.range = T("tower_melting_furnace").attacks.range * u.radius_factor
 	end
 
 	u = self:get_upgrade("engineer_field_logistics")
@@ -1912,7 +1915,20 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("engineer_gnomish_tinkering")
 
 	if u then
-		for _, a in ipairs({T("tower_dwaarp").attacks.list[2], T("tower_dwaarp").attacks.list[3], T("soldier_mecha").attacks.list[2], T("soldier_mecha").attacks.list[3], T("druid_shooter_sylvan").attacks.list[1], T("tower_entwood").attacks.list[3], T("tower_entwood").attacks.list[2], T("tower_dwaarp").attacks.list[3], T("soldier_balloon").attacks.list[2], T("soldier_balloon").attacks.list[3]}) do
+		for _, a in ipairs({
+			T("tower_dwaarp").attacks.list[2],
+			T("tower_dwaarp").attacks.list[3],
+			T("soldier_mecha").attacks.list[2],
+			T("soldier_mecha").attacks.list[3],
+			T("druid_shooter_sylvan").attacks.list[1],
+			T("tower_entwood").attacks.list[3],
+			T("tower_entwood").attacks.list[2],
+			T("tower_dwaarp").attacks.list[3],
+			T("soldier_balloon").attacks.list[2],
+			T("soldier_balloon").attacks.list[3],
+			T("tower_melting_furnace").attacks.list[2],
+			T("tower_melting_furnace").attacks.list[4]
+		}) do
 			a.cooldown = a.cooldown * u.cooldown_factor
 		end
 

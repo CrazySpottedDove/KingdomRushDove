@@ -786,6 +786,17 @@ function path_db:nodes_as_list(id)
 	return out
 end
 
+-- 用于查询路径的活跃状态是否发生了改变。
+function path_db:active_path_id_sum()
+	local i = 0
+	for k, v in pairs(self.active_paths) do
+		if v then
+			i = i + k
+		end
+	end
+	return i
+end
+
 function path_db:load_curves(name)
 	local data = load_file_by_name(name)
 
