@@ -28778,11 +28778,8 @@ function scripts.tower_swamp_monster.update(this, store)
 					s.nav_rally.new = true
 
 					s.powers.stun.level = pow_s.level
-					s.powers.stun.changed = true
 					s.powers.instakill.level = pow_i.level
-					s.powers.instakill.changed = true
 					s.powers.eat.level = pow_e.level
-					s.powers.eat.changed = true
 
 					U.soldier_inherit_tower_buff_factor(s, this)
 					queue_insert(store, s)
