@@ -91,7 +91,7 @@ return function(this, store)
 
                         if U.flags_pass(enemy.vis, E:get_template(mod_name).modifier) then
                             local mod = E:create_entity(mod_name)
-
+                            mod.modifier.source_damage = d
                             mod.modifier.damage_factor = b.damage_factor
                             mod.modifier.target_id = enemy.id
                             mod.modifier.source_id = this.id

@@ -412,7 +412,6 @@ tt.sound_events.change_rally_point = "AmazonTaunt"
 tt.powers.whirlwind = CC("power")
 tt.powers.whirlwind.price_base = 250
 tt.powers.whirlwind.max_level = 1
-
 tt.powers.valkyrie = CC("power")
 tt.powers.valkyrie.price_base = 175
 tt.powers.valkyrie.max_level = 1
@@ -453,7 +452,6 @@ tt.melee.attacks[2].power_name = "whirlwind"
 tt.melee.cooldown = 1
 tt.melee.range = 64
 tt.motion.max_speed = 90
-tt.regen.cooldown = 0.5
 tt.render.sprites[1].anchor.y = anchor_y
 tt.render.sprites[1].prefix = "soldier_amazona"
 tt.sound_events.change_rally_point = "AmazonTaunt"

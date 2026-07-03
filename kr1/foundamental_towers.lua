@@ -591,14 +591,6 @@ tt.sound_events.insert = "TowerStoneDruidBoulderThrow"
 tt.sound_events.hit = "TowerStoneDruidBoulderExplote"
 tt.sound_events.hit_water = "RTWaterExplosion"
 
-tt = RT("rock_2", "rock_1")
-tt.bullet.damage_max = 30
-tt.bullet.damage_min = 18
-
-tt = RT("rock_3", "rock_1")
-tt.bullet.damage_max = 50
-tt.bullet.damage_min = 30
-
 tt = RT("mod_rock_slow", "mod_slow")
 tt.modifier.duration = 0.75
 

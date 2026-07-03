@@ -91,6 +91,12 @@ return function(this, store)
             context.expected_stop_time = b.ts + b.flight_time - store.tick_length
         constend
 
+        @constif(b.damage_min_inc)
+        b.damage_min = b.damage_min + b.damage_min_inc * b.level
+
+        @constif(b.damage_max_inc)
+        b.damage_max = b.damage_max + b.damage_max_inc * b.level
+
         context.state = 1
     end
 

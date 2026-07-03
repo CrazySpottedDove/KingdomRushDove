@@ -921,6 +921,9 @@ function love.errorhandler(msg)
 				elseif a == "b" then
 					-- show_last = not show_last
 					G.present()
+				elseif a == "r" then
+					-- debug专用：重启游戏！
+					require("all.restart").full()
 				end
 			elseif e == "touchpressed" then
 				local name = love.window.getTitle()

@@ -999,7 +999,10 @@ upgrades.arrows = {
 	"bullet_ogre_shipwreck_musket_volley_lvl2",
 	"goblirang",
 	"goblirang_big",
-	"bullet_shaolin"
+	"bullet_shaolin",
+	"bullet_swamp_monster",
+	"bullet_swamp_monster_bomb",
+	"bullet_swamp_monster_bomb_tosky"
 }
 
 upgrades.soldiers = {
@@ -1157,7 +1160,8 @@ upgrades.non_barrack_towers_with_barrack_attribute = {
 	"tower_spirit_mausoleum",
 	"tower_deep_devils",
 	"tower_ignis_altar",
-	"tower_shaolin"
+	"tower_shaolin",
+	"tower_swamp_monster"
 }
 
 upgrades.mage_towers = GS.mage_towers

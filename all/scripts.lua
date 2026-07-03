@@ -1809,6 +1809,7 @@ function scripts.tower_barrack.get_info(this)
 
 	if this.powers then
 		for pn, p in pairs(this.powers) do
+			s.powers[pn].level = p.level
 			for i = 1, p.level do
 				SU.soldier_power_upgrade(s, pn)
 			end
