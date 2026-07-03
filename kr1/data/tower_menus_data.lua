@@ -3912,7 +3912,7 @@ return {
 		tt_desc_mode1 = _("TOWER_SWAMP_MONSTER_CHANGE_MODE_ARCHER_DESCRIPTION")
 	}), M(tpl.upgrade_power, {
 		action_arg = "stun",
-		image = "kr4_special_icons_0066",
+		image = "kr4_special_icons_0065",
 		place = 5,
 		sounds = {"SwampMonsterSkillBTaunt"},
 		tt_phrase = _("TOWER_SWAMP_MONSTER_STUN_NOTE"),
@@ -3928,7 +3928,7 @@ return {
 		}}
 	}), M(tpl.upgrade_power, {
 		action_arg = "instakill",
-		image = "kr4_special_icons_0065",
+		image = "kr4_special_icons_0066",
 		place = 6,
 		sounds = {"SwampMonsterSkillATaunt"},
 		tt_phrase = _("TOWER_SWAMP_MONSTER_INSTAKILL_NOTE"),
