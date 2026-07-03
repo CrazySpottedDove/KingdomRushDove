@@ -5528,7 +5528,7 @@ local towers = {
 			damage = 7
 		},
 		basic_attack = {
-			damage_radius = 45,
+			damage_radius = 50,
 			cooldown = 3,
 			bomb_amount = {3, 3, 3, 3},
 			damage_min = {3, 8, 16, 24},
@@ -5538,7 +5538,7 @@ local towers = {
 		},
 		bombardment = {
 			range = 180,
-			damage_radius = 50,
+			damage_radius = 55,
 			price = {200, 250, 250},
 			cooldown = {15, 15, 15},
 			damage_min = {21, 27, 33},
