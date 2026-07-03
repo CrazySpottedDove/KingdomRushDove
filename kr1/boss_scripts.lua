@@ -4627,7 +4627,7 @@ function scripts.eb_drow_queen.update(this, store)
 		::label_337_0::
 
 		U.y_animation_play(this, "shoutStart", true, store.tick_ts, 1, sid_body)
-		U.animation_start(this, "shoutLoop", true, store.tick_ts, true, sid_body)
+		U.animation_start_specific(this, "shoutLoop", true, store.tick_ts, true, sid_body)
 
 		while pow_cooldown > store.tick_ts - cast_ts and this.shield.health.hp > 0 do
 			coroutine.yield()
@@ -4648,7 +4648,7 @@ function scripts.eb_drow_queen.update(this, store)
 			end
 
 			S:queue("ElvesMaliciaSpellCast")
-			U.animation_start(this, "cast", true, store.tick_ts, false, sid_body)
+			U.animation_start_specific(this, "cast", true, store.tick_ts, false, sid_body)
 
 			fx = E:create_entity("fx_drow_queen_cast")
 			fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
@@ -7331,7 +7331,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 		end
 	end
 
-	U.animation_start(this, "startidle1", false, store.tick_ts, false, 1)
+	U.animation_start_specific(this, "startidle1", false, store.tick_ts, false, 1)
 
 	for i = 1, #this.hit_point_pos do
 		local h = E:create_entity(this.hit_point_template)
@@ -7436,7 +7436,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 
 			if holder_by_id and #holder_by_id > 0 then
 				S:queue(this.sound_destroy_charge)
-				U.animation_start(this, "swaptowers1", false, store.tick_ts, nil, 1)
+				U.animation_start_specific(this, "swaptowers1", false, store.tick_ts, nil, 1)
 
 				if holder_by_id[1].tower and holder_by_id[1].tower.can_be_sold then
 					holder_by_id[1].tower.blocked = true
@@ -7527,7 +7527,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 
 				downgrade_last_ts = store.tick_ts
 				S:queue(this.sound_destroy_charge)
-				U.animation_start(this, "swaptowers1", false, store.tick_ts, nil, 1)
+				U.animation_start_specific(this, "swaptowers1", false, store.tick_ts, nil, 1)
 				for i = 1, downgrade_count do
 					local target = random_can_downgrade_towers[i]
 					target.tower.blocked = true
@@ -7692,7 +7692,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 
 				local start_ts = store.tick_ts
 
-				U.animation_start(this, "swaptowers1", false, store.tick_ts, nil, 1)
+				U.animation_start_specific(this, "swaptowers1", false, store.tick_ts, nil, 1)
 
 				local tower_index = 1
 
@@ -7820,7 +7820,7 @@ function scripts.controller_stage_16_overseer.update(this, store)
 				S:queue(this.sound_teleport_charge)
 				slow_last_ts = store.tick_ts
 
-				U.animation_start(this, "swaptowers1", false, store.tick_ts, nil, 1)
+				U.animation_start_specific(this, "swaptowers1", false, store.tick_ts, nil, 1)
 
 				for i = 1, slow_count do
 					local change_tower_fx = E:create_entity(this.change_towers_template)
@@ -8434,7 +8434,7 @@ function scripts.controller_stage_16_tentacle_bottom.update(this, store)
 
 			queue_insert(store, shake)
 			U.y_animation_wait_default(this)
-			U.animation_start(this, "idle2", false, store.tick_ts, true, 1)
+			U.animation_start_specific(this, "idle2", false, store.tick_ts, true, 1)
 		end
 
 		coroutine.yield()
@@ -13166,7 +13166,7 @@ function scripts.boss_redboy_teen.update(this, store)
 	end
 
 	set_exo_for_anim("jump_end_2")
-	U.animation_start(this, "jump_end_2", false, store.tick_ts, false, 1, true)
+	U.animation_start_specific(this, "jump_end_2", false, store.tick_ts, false, 1)
 	U.y_wait_unconditional(store, fts(3))
 
 	local shake = E:create_entity("aura_screen_shake")
@@ -13236,7 +13236,7 @@ function scripts.boss_redboy_teen.update(this, store)
 				this.nav_path.ni = P:nearest_nodes(this.pos.x, this.pos.y, {this.change_path_target.path})[1][3]
 
 				set_exo_for_anim("jump_end_2")
-				U.animation_start(this, "jump_end_2", false, store.tick_ts, false, 1, true)
+				U.animation_start_specific(this, "jump_end_2", false, store.tick_ts, false, 1)
 				U.y_wait_unconditional(store, fts(3))
 
 				local shake = E:create_entity("aura_screen_shake")

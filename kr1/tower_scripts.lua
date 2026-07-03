@@ -18,7 +18,6 @@ local SU = require("script_utils")
 local U = require("utils")
 local LU = require("level_utils")
 local UP = require("kr1.upgrades")
-local AU = require("all.animation_utils")
 local V = require("lib.klua.vector")
 local W = require("wave_db")
 local game_gui = require("game_gui")
@@ -192,9 +191,9 @@ scripts.tower_archer_dwarf = {
 					local shooter_idx = shots_count % 2 + 1
 					local shooter_sid = shooter_sprite_ids[shooter_idx]
 					local start_offset = a.bullet_start_offset[shooter_idx]
-					local an, af = AU.animation_name_facing_point_use_offset(this, a.animation, enemy.pos, shooter_sid, start_offset)
+					local an, af = U.animation_name_facing_point_use_offset(this, a.animation, enemy.pos, shooter_sid, start_offset)
 
-					animation_start(this, an, af, store.tick_ts, false, shooter_sid)
+					U.animation_start_once_specific(this, an, af, store.tick_ts, shooter_sid)
 
 					while store.tick_ts - a.ts < a.shoot_time do
 						coroutine.yield()
@@ -220,7 +219,7 @@ scripts.tower_archer_dwarf = {
 						coroutine.yield()
 					end
 
-					an, af = AU.animation_name_facing_point_use_offset(this, "idle", last_target_pos, shooter_sid, start_offset)
+					an, af = U.animation_name_facing_point_use_offset(this, "idle", last_target_pos, shooter_sid, start_offset)
 
 					animation_start(this, an, af, store.tick_ts, true, shooter_sid)
 				end
@@ -279,11 +278,11 @@ scripts.tower_ranger = {
 		local function shot_animation(attack, shooter_idx, enemy)
 			local ssid = shooter_sids[shooter_idx]
 			local soffset = sprites[ssid].offset
-			local an, af = AU.animation_name_facing_point_use_offset(this, attack.animation, enemy.pos, ssid, soffset)
+			local an, af = U.animation_name_facing_point_use_offset(this, attack.animation, enemy.pos, ssid, soffset)
 
 			animation_start(this, an, af, store.tick_ts, false, ssid)
 
-			return AU.animation_name_facing_point_use_offset(this, "idle", enemy.pos, ssid, soffset)
+			return U.animation_name_facing_point_use_offset(this, "idle", enemy.pos, ssid, soffset)
 		end
 
 		local function shot_bullet(attack, shooter_idx, enemy, level)
@@ -373,7 +372,7 @@ scripts.tower_ranger = {
 
 				if store.tick_ts - aa.ts > tw.long_idle_cooldown then
 					for _, sid in ipairs(shooter_sids) do
-						local an, af = AU.animation_name_facing_point(this, "idle", tw.long_idle_pos, sid)
+						local an, af = U.animation_name_facing_point_simple(this, "idle", tw.long_idle_pos, sid)
 
 						animation_start(this, an, af, store.tick_ts, true, sid)
 					end
@@ -408,7 +407,7 @@ scripts.tower_musketeer = {
 
 		local function shot_animation(attack, shooter_idx, enemy, animation)
 			local ssid = shooter_sids[shooter_idx]
-			local an, af, ai = AU.animation_name_facing_point_use_offset(this, animation or attack.animation, enemy.pos, ssid, sprites[ssid].offset)
+			local an, af, ai = U.animation_name_facing_point_use_offset(this, animation or attack.animation, enemy.pos, ssid, sprites[ssid].offset)
 
 			animation_start(this, an, af, store.tick_ts, false, ssid)
 
@@ -606,7 +605,7 @@ scripts.tower_musketeer = {
 
 				if store.tick_ts - aa.ts > tw.long_idle_cooldown then
 					for _, sid in ipairs(shooter_sids) do
-						local an, af = AU.animation_name_facing_point(this, "idle", tw.long_idle_pos, sid)
+						local an, af = U.animation_name_facing_point_simple(this, "idle", tw.long_idle_pos, sid)
 
 						animation_start(this, an, af, store.tick_ts, true, sid)
 					end
@@ -780,7 +779,7 @@ scripts.tower_crossbow = {
 
 						U.change_sprite_draw_order(this, shooter_sid, 5)
 
-						local an, af = AU.animation_name_facing_point_use_offset(this, "multishot_start", enemy.pos, shooter_sid, start_offset)
+						local an, af = U.animation_name_facing_point_use_offset(this, "multishot_start", enemy.pos, shooter_sid, start_offset)
 
 						animation_start(this, an, af, store.tick_ts, false, shooter_sid)
 
@@ -788,7 +787,7 @@ scripts.tower_crossbow = {
 							coroutine.yield()
 						end
 
-						an, af = AU.animation_name_facing_point_use_offset(this, "multishot_loop", enemy.pos, shooter_sid, start_offset)
+						an, af = U.animation_name_facing_point_use_offset(this, "multishot_loop", enemy.pos, shooter_sid, start_offset)
 
 						animation_start(this, an, af, store.tick_ts, true, shooter_sid)
 
@@ -849,7 +848,7 @@ scripts.tower_crossbow = {
 							loop_ts = store.tick_ts
 						end
 
-						local an, af = AU.animation_name_facing_point_use_offset(this, "multishot_end", last_enemy.pos, shooter_sid, start_offset)
+						local an, af = U.animation_name_facing_point_use_offset(this, "multishot_end", last_enemy.pos, shooter_sid, start_offset)
 
 						animation_start(this, an, af, store.tick_ts, false, shooter_sid)
 
@@ -878,7 +877,7 @@ scripts.tower_crossbow = {
 
 						U.change_sprite_draw_order(this, shooter_sid, 5)
 
-						local an, af = AU.animation_name_facing_point_use_offset(this, "shoot", enemy.pos, shooter_sid, start_offset)
+						local an, af = U.animation_name_facing_point_use_offset(this, "shoot", enemy.pos, shooter_sid, start_offset)
 
 						animation_start(this, an, af, store.tick_ts, false, shooter_sid)
 
@@ -918,7 +917,7 @@ scripts.tower_crossbow = {
 							coroutine.yield()
 						end
 
-						an, af = AU.animation_name_facing_point_use_offset(this, "idle", last_target_pos, shooter_sid, start_offset)
+						an, af = U.animation_name_facing_point_use_offset(this, "idle", last_target_pos, shooter_sid, start_offset)
 
 						animation_start(this, an, af, store.tick_ts, true, shooter_sid)
 
@@ -928,7 +927,7 @@ scripts.tower_crossbow = {
 
 				if store.tick_ts - math.max(aa.ts, ma.ts) > tw.long_idle_cooldown then
 					for _, sid in pairs(shooter_sprite_ids) do
-						local an, af = AU.animation_name_facing_point(this, "idle", tw.long_idle_pos, sid)
+						local an, af = U.animation_name_facing_point_simple(this, "idle", tw.long_idle_pos, sid)
 
 						animation_start(this, an, af, store.tick_ts, true, sid)
 					end
@@ -1028,7 +1027,7 @@ scripts.tower_totem = {
 						local shooter_idx = shots_count % 2 + 1
 						local shooter_sid = shooter_sprite_ids[shooter_idx]
 						local start_offset = aa.bullet_start_offset[shooter_idx]
-						local an, af = AU.animation_name_facing_point_use_offset(this, aa.animation, enemy.pos, shooter_sid, start_offset)
+						local an, af = U.animation_name_facing_point_use_offset(this, aa.animation, enemy.pos, shooter_sid, start_offset)
 
 						animation_start(this, an, af, store.tick_ts, false, shooter_sid)
 
@@ -1055,7 +1054,7 @@ scripts.tower_totem = {
 							coroutine.yield()
 						end
 
-						an, af = AU.animation_name_facing_point_use_offset(this, "idle", last_target_pos, shooter_sid, start_offset)
+						an, af = U.animation_name_facing_point_use_offset(this, "idle", last_target_pos, shooter_sid, start_offset)
 
 						animation_start(this, an, af, store.tick_ts, true, shooter_sid)
 					end
@@ -1063,7 +1062,7 @@ scripts.tower_totem = {
 
 				if store.tick_ts - aa.ts > tw.long_idle_cooldown then
 					for _, sid in pairs(shooter_sprite_ids) do
-						local an, af = AU.animation_name_facing_point(this, "idle", tw.long_idle_pos, sid)
+						local an, af = U.animation_name_facing_point_simple(this, "idle", tw.long_idle_pos, sid)
 
 						animation_start(this, an, af, store.tick_ts, true, sid)
 					end
@@ -16046,11 +16045,11 @@ function scripts.aura_bullet_tower_ballista_skill_bomb.update(this, store)
 	last_hit_ts = store.tick_ts - this.aura.cycle_time
 	this.tween.ts = store.tick_ts
 
-	U.animation_start(this, "in", false, store.tick_ts, false, 1)
+	U.animation_start_specific(this, "in", false, store.tick_ts, false, 1)
 
 	while true do
 		if U.animation_finished_default(this) and this.render.sprites[1].name ~= "idle" then
-			U.animation_start(this, "idle", false, store.tick_ts, true, 1)
+			U.animation_start_specific(this, "idle", false, store.tick_ts, true, 1)
 		end
 
 		if this.interrupt then
@@ -16078,7 +16077,7 @@ function scripts.aura_bullet_tower_ballista_skill_bomb.update(this, store)
 					end)
 
 					if #moving_targets > 0 then
-						U.animation_start(this, "ability1", false, store.tick_ts, false, 1)
+						U.animation_start_specific(this, "ability1", false, store.tick_ts, false, 1)
 
 						local junk_fx = E:create_entity(this.junk_fx)
 
@@ -16397,7 +16396,7 @@ function scripts.tower_barrel.update(this, store)
 
 						queue_insert(store, spawn_fx)
 						U.y_animation_wait(this, this.sid_tower)
-						U.animation_start(this, "idle", false, store.tick_ts, false, this.sid_tower)
+						U.animation_start_specific(this, "idle", false, store.tick_ts, false, this.sid_tower)
 
 						goto label_965_0
 					end
@@ -16559,7 +16558,7 @@ end
 scripts.controller_soldier_tower_barrel_skill_warrior_spawn = {}
 
 function scripts.controller_soldier_tower_barrel_skill_warrior_spawn.update(this, store)
-	U.animation_start(this, "idle", false, store.tick_ts, false, this.sid_drunk_man)
+	U.animation_start_specific(this, "idle", false, store.tick_ts, false, 1)
 	U.y_wait_unconditional(store, this.berzerker_spawn_delay)
 
 	local warrior_pos = v(this.pos.x + this.berzerker_spawn_offset.x, this.pos.y + this.berzerker_spawn_offset.y)
@@ -16569,7 +16568,7 @@ function scripts.controller_soldier_tower_barrel_skill_warrior_spawn.update(this
 	spawn_fx.pos = V.vclone(this.pos)
 
 	queue_insert(store, spawn_fx)
-	U.y_animation_wait(this, this.sid_drunk_man)
+	U.y_animation_wait(this, 1)
 
 	local w = this.soldier_ref
 
@@ -28391,7 +28390,7 @@ scripts.tower_blazing_watcher = {
 						end
 
 						U.y_animation_wait(this, 3)
-						U.animation_start(this, "idle", false, store.tick_ts, true, 3)
+						U.animation_start_specific(this, "idle", false, store.tick_ts, true, 3)
 						U.y_animation_play_group(this, "out", nil, store.tick_ts, false, "mage")
 
 						U.animation_start_default(this, "idle", nil, store.tick_ts, true)

@@ -7504,7 +7504,7 @@ function scripts.decal_black_dragon.update(this, store)
 			shadow.hidden = false
 
 			update_shadow()
-			U.animation_start(this, "flying", false, store.tick_ts, true, 1)
+			U.animation_start_specific(this, "flying", false, store.tick_ts, true, 1)
 
 			this.pos.x, this.pos.y = this.sleep_pos.x - 5, this.sleep_pos.y + 116
 
@@ -20557,7 +20557,7 @@ function scripts.decal_black_baby_dragon.update(this, store)
 
 			s.z = Z_OBJECTS_SKY
 
-			U.animation_start(this, "fly", true, store.tick_ts, true, 1)
+			U.animation_start_specific(this, "fly", true, store.tick_ts, true, 1)
 
 			local takeoff_dest = v(store.visible_coords.right + image_x * 0.5, this.pos.y + 200)
 			local takeoff_duration = 2
@@ -39613,7 +39613,7 @@ function scripts.decal_stage_06_door.update(this, store)
 			pig_dead = false
 			this.ui.can_click = true
 
-			U.animation_start(this, "walkingDown", false, store.tick_ts, true, 6)
+			U.animation_start_specific(this, "walkingDown", false, store.tick_ts, true, 6)
 
 			this.tween.disabled = false
 			this.tween.reverse = true
@@ -39664,7 +39664,7 @@ function scripts.decal_stage_06_door.update(this, store)
 				start_ts = store.tick_ts
 				door.hidden = false
 
-				U.animation_start(this, "ability1_1", false, store.tick_ts, true, 7)
+				U.animation_start_specific(this, "ability1_1", false, store.tick_ts, true, 7)
 
 				pig_handle.hidden = false
 
@@ -39703,10 +39703,10 @@ function scripts.decal_stage_06_door.update(this, store)
 				if pig_dead then
 					sp.spawn_data = nil
 
-					U.animation_start(this, "ability5_1", false, store.tick_ts, false, 4)
+					U.animation_start_specific(this, "ability5_1", false, store.tick_ts, false, 4)
 					S:queue("Stage06WoodenDoorClose")
 					S:queue(this.pig_death_sound)
-					U.animation_start(this, "death1_1", false, store.tick_ts, false, 7)
+					U.animation_start_specific(this, "death1_1", false, store.tick_ts, false, 7)
 					U.y_animation_wait(this, 7)
 
 					repeat
@@ -39723,7 +39723,7 @@ function scripts.decal_stage_06_door.update(this, store)
 					this.opened = true
 
 					U.animation_start_group(this, "idle1_1", nil, store.tick_ts, true, "layers")
-					U.animation_start(this, "ability2_1", false, store.tick_ts, true, 7)
+					U.animation_start_specific(this, "ability2_1", false, store.tick_ts, true, 7)
 
 					megaspawner_door.manual_wave = "DOOR" .. wave_counter
 					wave_counter = wave_counter + 1
@@ -39744,7 +39744,7 @@ function scripts.decal_stage_06_door.update(this, store)
 								pig_dead = true
 
 								S:queue(this.pig_death_sound)
-								U.animation_start(this, "death1_1", false, store.tick_ts, false, 7)
+								U.animation_start_specific(this, "death1_1", false, store.tick_ts, false, 7)
 								U.y_animation_wait(this, 7)
 							else
 								this.tween.props[3].disabled = false
@@ -39759,7 +39759,7 @@ function scripts.decal_stage_06_door.update(this, store)
 
 					if not pig_dead then
 						S:queue(this.pig_death_sound)
-						U.animation_start(this, "death1_1", false, store.tick_ts, false, 7)
+						U.animation_start_specific(this, "death1_1", false, store.tick_ts, false, 7)
 					end
 
 					log.info("close the door")
@@ -41499,7 +41499,7 @@ function scripts.tower_stage_22_arborean_mages.update(this, store)
 
 				U.y_wait_unconditional(store, total_wait_time - (store.tick_ts - start_wait_ts))
 				U.y_animation_play(this, "tauntOut", false, store.tick_ts, 1, 2)
-				U.animation_start(this, "idle", false, store.tick_ts, true, 2)
+				U.animation_start_specific(this, "idle", false, store.tick_ts, true, 2)
 				U.y_wait_unconditional(store, 8)
 			end
 
@@ -41514,7 +41514,7 @@ function scripts.tower_stage_22_arborean_mages.update(this, store)
 			if this.boss_eating then
 				this.boss_is_going_to_eat = false
 
-				U.animation_start(this, "idle", false, store.tick_ts, true, 2)
+				U.animation_start_specific(this, "idle", false, store.tick_ts, true, 2)
 
 				local total_wait_time = fts(119)
 				local start_wait_ts = store.tick_ts
@@ -41544,7 +41544,7 @@ function scripts.tower_stage_22_arborean_mages.update(this, store)
 
 				U.y_wait_unconditional(store, total_wait_time - (store.tick_ts - start_wait_ts))
 				U.y_animation_play(this, "tauntOut", false, store.tick_ts, 1, 2)
-				U.animation_start(this, "idle", false, store.tick_ts, true, 2)
+				U.animation_start_specific(this, "idle", false, store.tick_ts, true, 2)
 				U.y_wait_unconditional(store, 8)
 			end
 		end
@@ -60974,7 +60974,7 @@ function scripts.decal_stage_36_easter_egg_spyro.update(this, store, script)
 
 		if (store.wave_group_number > 2 or this.leave) and clicks < 2 then
 			S:queue("Stage36EasterEggSpyroJump")
-			U.animation_start(this, "fly_in", false, store.tick_ts, false, 1, true)
+			U.animation_start_specific(this, "fly_in", false, store.tick_ts, false, 1)
 
 			local wait_start_ts = store.tick_ts
 
@@ -65878,7 +65878,7 @@ function scripts.controller_stage_40_moving_island.update(this, store)
 	talk()
 	signal.emit("show-balloon_tutorial", "LV40_MOVING_ISLAND_START_TAUNT_01", false)
 	U.y_wait_unconditional(store, 3)
-	U.animation_start(this, "call_allies", true, store.tick_ts, false, this.sid_top_warden, true)
+	U.animation_start_specific(this, "call_allies", true, store.tick_ts, false, this.sid_top_warden)
 
 	for i = this.sid_right_rock + 1, this.sid_right_rock + 3 do
 		this.tween.props[i].ts = store.tick_ts

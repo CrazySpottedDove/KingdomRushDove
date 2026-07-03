@@ -122,7 +122,7 @@ shake.aura.duration=2
 shake.aura.freq_factor=4
 LU.queue_insert(store,shake)
 U.y_wait(store,1)
-U.animation_start(hole,"ability2_1",false,store.tick_ts,false,1)
+U.animation_start_specific(hole,"ability2_1",false,store.tick_ts,false,1)
 S:queue("Stage06BurrowOpen")
 U.y_wait(store,fts(10))
 local shake=E:create_entity("aura_screen_shake")
@@ -197,7 +197,7 @@ end
 return nil
 end
 local hole=get_entity("stage_06_hole")
-U.animation_start(hole,"open",false,store.tick_ts,false,1)
+U.animation_start_specific(hole,"open",false,store.tick_ts,false,1)
 local hole_mask=get_entity("stage_06_hole_mask")
 hole_mask.render.sprites[1].hidden=false
 while not store.waves_finished or LU.has_alive_enemies(store) do

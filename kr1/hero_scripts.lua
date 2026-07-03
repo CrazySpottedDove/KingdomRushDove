@@ -37392,7 +37392,7 @@ function scripts.drone_hero_mecha.update(this, store)
 	a.damage_min = a.damage_min_config[this.level]
 	a.damage_max = a.damage_max_config[this.level]
 
-	U.animation_start(this, "idle", true, store.tick_ts, true, 1)
+	U.animation_start_specific(this, "idle", true, store.tick_ts, true, 1)
 
 	local initial_pos_offset = {}
 

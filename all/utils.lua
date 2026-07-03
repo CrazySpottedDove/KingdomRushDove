@@ -412,7 +412,7 @@ function U.y_animation_wait(entity, idx, times)
 	end
 end
 
---- U.animation_start 的显示默认实现，性能更优
+--- U.animation_start 的显式默认实现，性能更优
 ---@param entity any
 ---@param name any
 ---@param flip_x any
@@ -441,6 +441,92 @@ function U.animation_start_default(entity, name, flip_x, ts, loop)
 			end
 		end
 	end
+end
+
+--- U.animation_start 的显式指定精灵索引实现，性能更优。该函数具有强制效用，不做任何检查，因为调用方直接指定了精灵索引，这提供了很强的语义约束。只应该是在确定有动画的时候，才调用该函数。
+--- @param entity table
+--- @param name string
+--- @param flip_x boolean
+--- @param ts number
+--- @param loop boolean
+--- @param idx number
+function U.animation_start_specific(entity, name, flip_x, ts, loop, idx)
+	local a = entity.render.sprites[idx]
+
+	a.flip_x = flip_x and true or false
+	a.loop = loop or a.loop_forced == true
+	if not a.loop then
+		a.ts = ts
+		a.runs = 0
+	end
+	a.name = name
+end
+
+--- U.animation_start 的显式指定精灵索引、指定次数实现，具有强制效用，不做检查，效果为让某一个索引的 sprite 更新 1 次。
+---@param entity any
+---@param name any
+---@param flip_x any
+---@param ts any
+---@param idx any
+function U.animation_start_once_specific(entity, name, flip_x, ts, idx)
+	local a = entity.render.sprites[idx]
+	a.flip_x = flip_x and true or false
+	a.loop = false
+	a.ts = ts
+	a.runs = 0
+	a.name = name
+end
+
+function U.animation_start_once_specific_no_flip(entity, name, ts, idx)
+	local a = entity.render.sprites[idx]
+	a.loop = false
+	a.ts = ts
+	a.runs = 0
+	a.name = name
+end
+
+--- 计算面向点的动画名称（基于 U.animation_name_for_angle 的简化版本）
+---@param e table 实体
+---@param group string 动画组名
+---@param point table 目标点 {x, y}
+---@param idx number? 精灵索引（可选）
+---@return string 动画名称, boolean 是否水平翻转, number 象限索引
+function U.animation_name_facing_point_simple(e, group, point, idx)
+	return U.animation_name_with_direction(e.render.sprites[idx or 1], group, point.x - e.pos.x, point.y - e.pos.y)
+end
+
+--- 计算面向点的动画名称（使用路径和偏移）
+---@param e table 实体
+---@param group string 动画组名
+---@param point table 目标点 {x, y}
+---@param idx number? 精灵索引（可选）
+---@param offset table 偏移量 {x, y}
+---@return string 动画名称, boolean 是否水平翻转, number 象限索引
+function U.animation_name_facing_point_use_path_and_offset(e, group, point, idx, offset)
+	local npos = P:node_pos_ref(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
+	return U.animation_name_with_direction(e.render.sprites[idx or 1], group, point.x - offset.x - npos.x, point.y - offset.y - npos.y)
+end
+
+--- 计算面向点的动画名称（使用路径）
+---@param e table 实体
+---@param group string 动画组名
+---@param point table 目标点 {x, y}
+---@param idx number? 精灵索引（可选）
+---@return string 动画名称, boolean 是否水平翻转, number 象限索引
+function U.animation_name_facing_point_use_path(e, group, point, idx)
+	local npos = P:node_pos_ref(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)
+	return U.animation_name_with_direction(e.render.sprites[idx or 1], group, point.x - npos.x, point.y - npos.y)
+end
+
+--- 计算面向点的动画名称（使用偏移）
+---@param e table 实体
+---@param group string 动画组名
+---@param point table 目标点 {x, y}
+---@param idx number? 精灵索引（可选）
+---@param offset table 偏移量 {x, y}
+---@return string 动画名称, boolean 是否水平翻转, number 象限索引
+function U.animation_name_facing_point_use_offset(e, group, point, idx, offset)
+	return U.animation_name_with_direction(e.render.sprites[idx or 1], group, point.x - offset.x - e.pos.x, point.y - offset.y - e.pos.y)
 end
 
 --- U.animation_finished 的显式默认实现，性能更优
@@ -651,6 +737,14 @@ function U.y_animation_play_default(entity, name, flip_x, ts)
 	local a = entity.render.sprites[1]
 	local times = a.loop and 1 or 0
 	while a.runs <= times do
+		coroutine.yield()
+	end
+end
+
+function U.y_animation_play_once_specific(entity, name, flip_x, ts, idx)
+	U.animation_start_once_specific(entity, name, flip_x, ts, idx)
+	local a = entity.render.sprites[idx]
+	while a.runs <= 0 do
 		coroutine.yield()
 	end
 end
