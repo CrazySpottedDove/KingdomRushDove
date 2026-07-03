@@ -1982,6 +1982,7 @@ tt.unit.hit_offset = vec_2(0, 15)
 tt.unit.mod_offset = vec_2(adx(23), ady(17))
 
 tt = RT("enemy_skeleton_blackburn", "enemy_skeleton")
+tt.info.i18n_key = "ENEMY_SKELETON"
 
 tt = RT("enemy_halloween_zombie", "enemy")
 AC(tt, "melee", "moon")
@@ -2018,8 +2019,10 @@ tt.sound_events.insert = "HWZombieAmbient"
 tt.vis.bans = bor(F_POISON)
 
 tt = RT("enemy_zombie_blackburn", "enemy_halloween_zombie")
+tt.info.i18n_key = "ENEMY_HALLOWEEN_ZOMBIE"
 
 tt = RT("enemy_skeleton_warrior", "enemy_skeleton_big")
+tt.info.i18n_key = "ENEMY_SKELETON_BIG"
 
 tt = RT("enemy_demon_cerberus", "enemy")
 AC(tt, "melee", "death_spawns")
