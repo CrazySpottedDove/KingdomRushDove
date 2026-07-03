@@ -48872,26 +48872,6 @@ return {
 		from = 13,
 		to = 24
 	},
-	blazing_watcher_mage_1_idle = {
-		prefix = "blazing_watcher_mage_1",
-		from = 1,
-		to = 1
-	},
-	blazing_watcher_mage_1_in = {
-		prefix = "blazing_watcher_mage_1",
-		from = 2,
-		to = 13
-	},
-	blazing_watcher_mage_1_loop = {
-		prefix = "blazing_watcher_mage_1",
-		from = 14,
-		to = 23
-	},
-	blazing_watcher_mage_1_out = {
-		prefix = "blazing_watcher_mage_1",
-		from = 24,
-		to = 29
-	},
 	blazing_watcher_mage_2_idle = {
 		prefix = "blazing_watcher_mage_2",
 		from = 1,
@@ -48949,6 +48929,26 @@ return {
 	},
 	blazing_watcher_mage_4_out = {
 		prefix = "blazing_watcher_mage_4",
+		from = 24,
+		to = 29
+	},
+	blazing_watcher_mage_5_idle = {
+		prefix = "blazing_watcher_mage_5",
+		from = 1,
+		to = 1
+	},
+	blazing_watcher_mage_5_in = {
+		prefix = "blazing_watcher_mage_5",
+		from = 2,
+		to = 13
+	},
+	blazing_watcher_mage_5_loop = {
+		prefix = "blazing_watcher_mage_5",
+		from = 14,
+		to = 23
+	},
+	blazing_watcher_mage_5_out = {
+		prefix = "blazing_watcher_mage_5",
 		from = 24,
 		to = 29
 	},
