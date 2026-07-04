@@ -50,6 +50,20 @@ tt.vis.bans = bor(F_BLOCK, F_SKELETON, F_EAT, F_POLYMORPH)
 tt.vis.flags = bor(F_ENEMY)
 tt.clicks_to_destroy = 8
 
+-- Frog enemy
+tt = RT("enemy_frog_ground", "enemy_sheep_ground")
+anchor_y = 0.2
+image_y = 38
+tt.info.portrait = "kr4_info_portraits_enemies_0056"
+tt.motion.max_speed = 20
+tt.render.sprites[1].anchor.y = anchor_y
+tt.render.sprites[1].prefix = "wicked_sisters_frog"
+tt.sound_events.insert = "WickedSistersFrogSound"
+tt.sound_events.death = "WickedSistersFrogSound"
+tt.unit.can_explode = true
+tt.unit.hide_after_death = true
+tt.clicks_to_destroy = 3
+
 tt = RT("enemy_sheep_fly", "enemy_sheep_ground")
 anchor_y = 0.038461538461538464
 image_y = 78

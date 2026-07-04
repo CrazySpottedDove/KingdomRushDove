@@ -4493,7 +4493,7 @@ function SU.insert_tower_range_buff(target, range_factor, allow_barrack)
 		target.attacks.range = target.attacks.range * range_factor
 	end
 
-	if target.template_name == "tower_mech" then
+	if target.template_name == "tower_mech" or target.template_name == "tower_wicked_sisters" then
 		for _, s in ipairs(target.barrack.soldiers) do
 			s.attacks.list[1].max_range = s.attacks.list[1].max_range * range_factor
 			s.attacks.list[2].max_range = s.attacks.list[2].max_range * range_factor
@@ -4613,7 +4613,7 @@ function SU.remove_tower_range_buff(target, range_factor, allow_barrack)
 		target.attacks.range = target.attacks.range / range_factor
 	end
 
-	if target.template_name == "tower_mech" then
+	if target.template_name == "tower_mech" or target.template_name == "tower_wicked_sisters" then
 		for _, s in ipairs(target.barrack.soldiers) do
 			s.attacks.list[1].max_range = s.attacks.list[1].max_range / range_factor
 			s.attacks.list[2].max_range = s.attacks.list[2].max_range / range_factor

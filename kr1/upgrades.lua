@@ -1061,8 +1061,7 @@ upgrades.soldiers = {
 	"soldier_deep_devils_chosen",
 	"soldier_ignis_altar_elemental",
 	"soldier_dragon",
-	"soldier_swamp_monster",
-	"soldier_wicked_sisters"
+	"soldier_swamp_monster"
 }
 
 upgrades.barrack_soldiers = {
@@ -1102,8 +1101,7 @@ upgrades.barrack_soldiers = {
 	"soldier_zombie_big",
 	"soldier_elves_harasser",
 	"soldier_elves_espectral_harasser",
-	"soldier_swamp_monster",
-	"soldier_wicked_sisters"
+	"soldier_swamp_monster"
 }
 
 upgrades.towers_with_barrack = {
@@ -1164,7 +1162,8 @@ upgrades.non_barrack_towers_with_barrack_attribute = {
 	"tower_deep_devils",
 	"tower_ignis_altar",
 	"tower_shaolin",
-	"tower_swamp_monster"
+	"tower_swamp_monster",
+	"tower_wicked_sisters"
 }
 
 upgrades.mage_towers = GS.mage_towers
@@ -1196,8 +1195,8 @@ upgrades.mage_tower_bolts = {
 	"bolt_tower_deep_devils",
 	"ray_deep_devils",
 	"bullet_tower_blazing_watcher",
-	"proy_green",
-	"proy_pink"
+	"wicked_sisters_proy_green",
+	"wicked_sisters_proy_pink"
 }
 
 local other_bolts = {
@@ -1704,6 +1703,10 @@ function upgrades:patch_templates(max_level)
 			local b = T(n).bullet
 			b.damage_hooks[#b.damage_hooks + 1] = mage_strike
 		end
+
+		-- 女巫的毒伤吃不到这个科技，进行伤害补偿
+		T("mod_wicked_sister_poison").dps.damage_min = T("mod_wicked_sister_poison").dps.damage_min * 1.15
+		T("mod_wicked_sister_poison").dps.damage_max = T("mod_wicked_sister_poison").dps.damage_max * 1.15
 	end
 
 	u = self:get_upgrade("mage_unsteady")
@@ -1717,6 +1720,9 @@ function upgrades:patch_templates(max_level)
 			local b = T(n).bullet
 			b.damage_hooks[#b.damage_hooks + 1] = mage_unsteady
 		end
+		-- 女巫的毒伤吃不到这个科技，进行伤害补偿
+		T("mod_wicked_sister_poison").dps.damage_min = T("mod_wicked_sister_poison").dps.damage_min * 1.1
+		T("mod_wicked_sister_poison").dps.damage_max = T("mod_wicked_sister_poison").dps.damage_max * 1.1
 	end
 
 	u = self:get_upgrade("mage_empowered_magic")
@@ -1740,6 +1746,8 @@ function upgrades:patch_templates(max_level)
 
 		T("mod_lava_infernal_mage").dps.damage_min = T("mod_lava_infernal_mage").dps.damage_min * u.damage_factor
 		T("mod_lava_infernal_mage").dps.damage_max = T("mod_lava_infernal_mage").dps.damage_max * u.damage_factor
+		T("mod_wicked_sister_poison").dps.damage_min = T("mod_wicked_sister_poison").dps.damage_min * u.damage_factor
+		T("mod_wicked_sister_poison").dps.damage_max = T("mod_wicked_sister_poison").dps.damage_max * u.damage_factor
 	end
 
 	u = self:get_upgrade("mage_arcane_spell")
@@ -1763,6 +1771,8 @@ function upgrades:patch_templates(max_level)
 
 		T("mod_lava_infernal_mage").dps.damage_min = T("mod_lava_infernal_mage").dps.damage_min * u.damage_factor
 		T("mod_lava_infernal_mage").dps.damage_max = T("mod_lava_infernal_mage").dps.damage_max * u.damage_factor
+		T("mod_wicked_sister_poison").dps.damage_min = T("mod_wicked_sister_poison").dps.damage_min * u.damage_factor
+		T("mod_wicked_sister_poison").dps.damage_max = T("mod_wicked_sister_poison").dps.damage_max * u.damage_factor
 	end
 
 	u = self:get_upgrade("mage_power")
@@ -1786,6 +1796,8 @@ function upgrades:patch_templates(max_level)
 
 		T("mod_lava_infernal_mage").dps.damage_min = T("mod_lava_infernal_mage").dps.damage_min * u.damage_factor
 		T("mod_lava_infernal_mage").dps.damage_max = T("mod_lava_infernal_mage").dps.damage_max * u.damage_factor
+		T("mod_wicked_sister_poison").dps.damage_min = T("mod_wicked_sister_poison").dps.damage_min * u.damage_factor
+		T("mod_wicked_sister_poison").dps.damage_max = T("mod_wicked_sister_poison").dps.damage_max * u.damage_factor
 	end
 
 	u = self:get_upgrade("mage_slow_curse")

@@ -2138,7 +2138,6 @@ tt.tween.props[prop_id].interp = "sine"
 
 tt = RT("enemy_tower_ray_sheep", "enemy")
 local b = balance.towers.ray.skill_sheep.sheep
-
 tt.enemy.gold = b.gold
 tt.health.armor = b.armor
 tt.health.magic_armor = b.magic_armor
@@ -4637,20 +4636,20 @@ AC(tt, "barrack", "attacks", "powers")
 tt.tower.type = "wicked_sisters"
 tt.tower.kind = TOWER_KIND_MAGE
 tt.tower.level = 1
-tt.tower.price = 250
-tt.info.portrait = "gui4_bottom_info_image_towers_0017"
+tt.tower.price = 230
+tt.info.portrait = "kr4_info_portraits_towers_0013"
 tt.info.fn = scripts.tower_wicked_sisters.get_info
-tt.main_script.insert = scripts.tower_wicked_sisters.insert
+tt.info.enc_icon = 17
+tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.update = scripts.tower_wicked_sisters.update
 tt.main_script.remove = scripts.tower_barrack.remove
 tt.barrack.soldier_type = "soldier_wicked_sisters"
-tt.barrack.rally_range = 165
-tt.barrack.rally_terrains = bor(TERRAIN_ICE, TERRAIN_CLIFF, TERRAIN_WATER, TERRAIN_LAND)
+tt.barrack.rally_range = 125
 tt.barrack.max_soldiers = 1
-tt.tower_upgrade_persistent_data.current_mode = 2
-tt.tower_upgrade_persistent_data.max_current_mode = 2
-tt.tower_upgrade_persistent_data.initialized = false
-
+tt.barrack.rally_anywhere = true
+tt.attacks.range = 125
+tt.tower_upgrade_persistent_data.current_mode = 0
+tt.tower_upgrade_persistent_data.max_current_mode = 1
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrains_%04i"
 tt.render.sprites[1].offset = v(0, 8)
@@ -4668,7 +4667,7 @@ tt.render.sprites[4].name = "Green"
 tt.render.sprites[4].offset = v(-2, 61)
 tt.render.sprites[5] = CC("sprite")
 tt.render.sprites[5].prefix = "wicked_sisters_witch"
-tt.render.sprites[5].name = "stir"
+tt.render.sprites[5].name = "idle"
 tt.render.sprites[5].offset = v(10, 63)
 tt.render.sprites[6] = CC("sprite")
 tt.render.sprites[6].prefix = "wicked_sisters_cauldron_smoke"
@@ -4681,97 +4680,82 @@ tt.render.sprites[7].offset = v(45, 67)
 tt.render.sprites[8] = CC("sprite")
 tt.render.sprites[8].prefix = "wicked_sisters_lvl4_kid"
 tt.render.sprites[8].name = "run"
-tt.render.sprites[8].offset = v(23, 51)
-
+tt.render.sprites[8].offset = v(13, 15)
 tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].bullet = "totem_silence_wicked_sisters"
 tt.attacks.list[1].cooldown = 15
-tt.attacks.list[1].max_range = {
-	[0] = 137.5,
-	[1] = 192.5,
-	[2] = 247.5
-}
-tt.attacks.list[1].vis_bans = bor(F_CLIFF, F_BOSS)
-
+tt.attacks.list[1].vis_bans = bor(F_CLIFF)
 tt.powers.silent = CC("power")
 tt.powers.silent.price_base = 153
 tt.powers.silent.max_level = 1
 tt.powers.silent.cooldown = 15
-
 tt.powers.frog = CC("power")
 tt.powers.frog.price_base = 195
 tt.powers.frog.price_inc = 153
 tt.powers.frog.cooldown = {22, 18}
 tt.powers.frog.max_level = 2
-
 tt.powers.range = CC("power")
 tt.powers.range.price_base = 85
 tt.powers.range.price_inc = 85
-tt.powers.range.range = {187.5, 247.5}
+tt.powers.range.range_factor = {1.4, 1.8}
+tt.powers.range.last_range_factor = 1
 tt.powers.range.max_level = 2
-
 tt.sound_events.insert = "WickedSistersTaunt"
 tt.sound_events.change_rally_point = "WickedSistersTauntChange"
-tt.ui.click_rect = r(-40, -10, 80, 50)
+tt.ui.click_rect = r(-40, -10, 80, 90)
+tt.stir_cooldown = 15
+tt.kid_cooldown = 20
 
 -- Soldier: flying witch
-tt = E:register_t("soldier_wicked_sisters", "soldier")
-AC(tt, "attacks", "powers", "nav_grid", "melee")
-tt.health.ignore_damage = true
-tt.ui.can_select = false
-tt.ui.click_rect = r(-15, 50, 30, 30)
-tt.melee.attacks = {}
-tt.health_bar = nil
-tt.regen = nil
+tt = E:register_t("soldier_wicked_sisters")
+AC(tt, "attacks", "powers", "render", "motion", "nav_rally", "main_script", "vis", "idle_flip", "pos")
+tt.witch_mode = 0
 tt.idle_flip.cooldown = 5
 tt.idle_flip.last_dir = fts(1)
-tt.main_script.insert = scripts.soldier_wicked_sisters.insert
-tt.main_script.remove = scripts.soldier_wicked_sisters.remove
+tt.main_script.insert = scripts.soldier_mecha.insert
 tt.main_script.update = scripts.soldier_wicked_sisters.update
-tt.vis.bans = F_RANGED
+tt.vis.bans = F_ALL
 tt.vis.flags = bor(tt.vis.flags, F_FLYING)
 tt.render.sprites[1] = CC("sprite")
 tt.render.sprites[1].prefix = "wicked_witch"
-tt.render.sprites[1].angles = {}
-tt.render.sprites[1].angles.walk = {"walk"}
+tt.render.sprites[1].angles = {
+	walk = {"walk"}
+}
 tt.render.sprites[1].offset = v(0, 35)
 tt.render.sprites[1].anchor.y = 0.11
-tt.render.sprites[1].hidden = true
 tt.render.sprites[2] = CC("sprite")
-tt.render.sprites[2].is_shadow = true
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "wicked_witch_shadow"
 tt.render.sprites[2].offset = v(0, 0)
 tt.render.sprites[2].z = Z_DECALS + 1
 tt.motion.max_speed = 75
 tt.attacks.list[1] = CC("bullet_attack")
-tt.attacks.list[1].bullet = {"proy_pink", "proy_green"}
+tt.attacks.list[1].bullet = {"wicked_sisters_proy_green", "wicked_sisters_proy_pink"}
 tt.attacks.list[1].vis_bans = 0
-tt.attacks.list[1].animations = {"shoot", "shootGreen"}
-tt.attacks.list[1].hit_times = {fts(21), fts(21)}
-tt.attacks.list[1].max_range = 150
+tt.attacks.list[1].animations = {"shootGreen", "shoot"}
+tt.attacks.list[1].hit_time = fts(21)
+tt.attacks.list[1].max_range = 125
 tt.attacks.list[1].min_range = 0
 tt.attacks.list[1].start_offsets = {v(0, 70), v(0, 70)}
 tt.attacks.list[1].cooldown = 2.5
 tt.attacks.list[2] = CC("bullet_attack")
 tt.attacks.list[2].bullet = "ray_wicked_sisters_polymorph"
-tt.attacks.list[2].animations = "shootPower"
+tt.attacks.list[2].animation = "shootPower"
 tt.attacks.list[2].cooldown = 22
-tt.attacks.list[2].max_range = 150
+tt.attacks.list[2].max_range = 125
 tt.attacks.list[2].min_range = 0
 tt.attacks.list[2].disabled = true
 tt.attacks.list[2].start_offset = v(-5, 100)
-tt.attacks.list[2].hit_times = fts(29)
-tt.attacks.list[2].vis_bans = bor(F_BOSS)
+tt.attacks.list[2].hit_time = fts(29)
+tt.attacks.list[2].vis_bans = bor(F_BOSS, F_FLYING)
 tt.attacks.list[2].vis_flags = bor(F_MOD, F_RANGED, F_POLYMORPH)
-tt.powers.range = CC("power")
 tt.powers.frog = CC("power")
 tt.powers.frog.cooldown = {22, 18}
 tt.powers.silent = CC("power")
 tt.powers.silent.cooldown = 15
 
 -- Green projectile
-tt = RT("proy_green", "arrow")
+tt = RT("wicked_sisters_proy_green", "arrow")
 tt.bullet.hit_distance = 32
 tt.bullet.hit_fx = "fx_wick_splat"
 tt.bullet.miss_fx = "fx_wick_splat"
@@ -4789,8 +4773,17 @@ tt.bullet.damage_max = 0
 tt.bullet.mod = "mod_wicked_sister_poison"
 tt.bullet.particles_name = "ps_bullet_tower_wicked_sisters_basic_trail"
 
+-- Poison modifier
+tt = RT("mod_wicked_sister_poison", "mod_poison")
+tt.modifier.duration = 2.4
+tt.dps.damage_max = 70
+tt.dps.damage_min = 70
+tt.dps.damage_every = 0.8
+tt.dps.kill = true
+tt.dps.damage_type = bor(DAMAGE_POISON, DAMAGE_NO_SHIELD_HIT)
+
 -- Pink projectile
-tt = RT("proy_pink", "arrow")
+tt = RT("wicked_sisters_proy_pink", "arrow")
 tt.bullet.hit_distance = 32
 tt.bullet.hit_fx = "fx_wick_pink_splat"
 tt.bullet.miss_fx = "fx_wick_pink_splat"
@@ -4803,9 +4796,19 @@ tt.render.sprites[1].animated = true
 tt.sound_events.insert = "WickedSistersAttack"
 tt.bullet.prediction_error = false
 tt.bullet.predict_target_pos = true
-tt.bullet.damage_min = 94
-tt.bullet.damage_max = 220
+tt.bullet.damage_min = 78
+tt.bullet.damage_max = 182
 tt.bullet.particles_name = "ps_bullet_tower_wicked_sisters_violet_trail"
+
+-- Stun modifier
+tt = RT("mod_wicked_sisters_stun", "mod_stun")
+AC(tt, "render")
+tt.modifier.duration = 2.0
+tt.modifier.vis_bans = F_BOSS
+tt.render.sprites[1].prefix = "stun"
+tt.render.sprites[1].name = "small"
+tt.render.sprites[1].z = Z_EFFECTS
+tt.render.sprites[1].size_names = {"small", "big", "big"}
 
 -- Hit FX
 tt = RT("fx_wick_splat", "fx")
@@ -4848,25 +4851,6 @@ tt.particle_system.animated = false
 tt.particle_system.name = "wicked_sisters_proy_pink_particle"
 tt.particle_system.particle_lifetime = {fts(8), fts(8)}
 
--- Poison modifier
-tt = RT("mod_wicked_sister_poison", "mod_poison")
-tt.modifier.duration = 2.4
-tt.dps.damage_max = 77
-tt.dps.damage_min = 84
-tt.dps.damage_every = 0.8
-tt.dps.kill = true
-tt.dps.damage_type = bor(DAMAGE_POISON, DAMAGE_NO_SHIELD_HIT)
-
--- Stun modifier
-tt = RT("mod_wicked_sisters_stun", "mod_stun")
-AC(tt, "render")
-tt.modifier.duration = 2.0
-tt.modifier.vis_bans = F_BOSS
-tt.render.sprites[1].prefix = "stun"
-tt.render.sprites[1].name = "small"
-tt.render.sprites[1].z = Z_EFFECTS
-tt.render.sprites[1].size_names = {"small", "big", "big"}
-
 -- Polymorph ray
 tt = RT("ray_wicked_sisters_polymorph", "bullet")
 tt.bullet.damage_type = DAMAGE_NONE
@@ -4900,79 +4884,34 @@ tt.polymorph.pop = {"pop_puff"}
 tt.polymorph.transfer_gold_factor = 1
 tt.polymorph.transfer_health_factor = 0.75
 tt.polymorph.transfer_lives_cost_factor = 1
-tt.polymorph.transfer_speed_factor = 0.5
-
--- Frog enemy
-tt = RT("enemy_frog_ground", "enemy")
-anchor_y = 0.2
-image_y = 38
-tt.enemy.gold = 0
-tt.enemy.melee_slot = v(18, 0)
-tt.health.hp_max = 80
-tt.health_bar.offset = v(0, ady(32))
-tt.info.portrait = "gui4_bottom_info_image_enemies_0056"
-tt.info.enc_icon = nil
-tt.main_script.insert = scripts.enemy_basic.insert
-tt.main_script.update = scripts.enemy_frog.update
-tt.motion.max_speed = 20
-tt.render.sprites[1].anchor.y = anchor_y
-tt.render.sprites[1].prefix = "wicked_sisters_frog"
-tt.sound_events.insert = "WickedSistersFrogSound"
-tt.sound_events.death = "WickedSistersFrogSound"
-tt.unit.can_explode = true
-tt.unit.hide_after_death = true
-tt.unit.hit_offset = v(0, 10)
-tt.unit.mod_offset = v(0, ady(15))
-tt.vis.bans = bor(F_BLOCK, F_SKELETON, F_EAT, F_POLYMORPH)
-tt.vis.flags = F_ENEMY
+tt.polymorph.transfer_speed_factor = nil
+tt.polymorph.duration = 6
 
 -- Silence totem aura
-local totem_silence = RT("totem_silence_wicked_sisters", "aura")
-AC(totem_silence, "render", "tween")
-totem_silence.aura.mod = "mod_silence_totem_wicked_sisters"
-totem_silence.aura.cycle_time = 0.3
-totem_silence.aura.duration = 10
-totem_silence.aura.duration_inc = 0
-totem_silence.aura.radius = 100
-totem_silence.aura.vis_bans = F_BOSS
-totem_silence.aura.vis_flags = F_MOD
-totem_silence.render.sprites[1].name = "TotemTower_GroundEffect-Violet_0002"
-totem_silence.render.sprites[1].animated = false
-totem_silence.render.sprites[1].scale = v(0.64, 0.64)
-totem_silence.render.sprites[1].hidden = true
-totem_silence.render.sprites[1].alpha = 50
-totem_silence.render.sprites[1].z = Z_DECALS
-totem_silence.render.sprites[2] = CC("sprite")
-totem_silence.render.sprites[2].name = "TotemTower_GroundEffect-Violet_0001"
-totem_silence.render.sprites[2].animated = false
-totem_silence.render.sprites[2].hidden = true
-totem_silence.render.sprites[2].z = Z_DECALS
-totem_silence.render.sprites[3] = CC("sprite")
-totem_silence.render.sprites[3].prefix = "wicked_sisters_lvl4_totem"
-totem_silence.render.sprites[3].name = "start"
-totem_silence.render.sprites[3].loop = false
-totem_silence.render.sprites[3].anchor = v(0.5, 0.11)
-totem_silence.main_script.update = scripts.aura_totem_wicked_sisters.update
-totem_silence.sound_events.insert = "TotemSpirits"
-totem_silence.tween.remove = false
-totem_silence.tween.props[1].name = "scale"
-totem_silence.tween.props[1].keys = {{0, v(0.64, 0.64)}, {fts(15), v(1, 1)}, {fts(30), v(1.6, 1.6)}}
-totem_silence.tween.props[1].loop = true
-totem_silence.tween.props[2] = CC("tween_prop")
-totem_silence.tween.props[2].keys = {{0, 50}, {fts(10), 255}, {fts(20), 255}, {fts(30), 0}}
-totem_silence.tween.props[2].loop = true
+tt = RT("totem_silence_wicked_sisters", "aura")
+AC(tt, "render")
+tt.aura.mod = "mod_silence_totem_wicked_sisters"
+tt.aura.cycle_time = 0.3
+tt.aura.duration = 10
+tt.aura.duration_inc = 0
+tt.aura.radius = 100
+tt.aura.vis_flags = F_MOD
+tt.render.sprites[1].prefix = "wicked_sisters_lvl4_totem"
+tt.render.sprites[1].name = "start"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].anchor = v(0.5, 0.11)
+tt.main_script.update = scripts.aura_totem_wicked_sisters.update
+tt.sound_events.insert = "TotemSpirits"
 
 -- Silence modifier
-local mod_silence = RT("mod_silence_totem_wicked_sisters", "modifier")
-AC(mod_silence, "render")
-mod_silence.modifier.duration = 1
-mod_silence.modifier.bans = {"mod_shaman_armor", "mod_shaman_magic_armor", "mod_shaman_priest_heal", "mod_xerxes_invisibility", "mod_twilight_evoker_heal", "mod_twilight_heretic_consume", "mod_gnoll_boss", "mod_shadow_champion"}
-mod_silence.modifier.remove_banned = true
-mod_silence.main_script.insert = scripts.mod_silence.insert
-mod_silence.main_script.remove = scripts.mod_silence.remove
-mod_silence.main_script.update = scripts.mod_track_target.update
-mod_silence.render.sprites[1].prefix = "wicked_sisters_lvl4_totem_modifier"
-mod_silence.render.sprites[1].size_names = {"run", "run", "run"}
-mod_silence.render.sprites[1].name = "run"
-mod_silence.render.sprites[1].loop = true
-mod_silence.render.sprites[1].draw_order = 2
+tt = RT("mod_silence_totem_wicked_sisters", "modifier")
+AC(tt, "render")
+tt.modifier.duration = 1
+tt.modifier.bans = {"mod_shaman_armor", "mod_shaman_magic_armor", "mod_shaman_priest_heal", "mod_xerxes_invisibility", "mod_twilight_evoker_heal", "mod_twilight_heretic_consume", "mod_gnoll_boss", "mod_shadow_champion"}
+tt.modifier.remove_banned = true
+tt.main_script.insert = scripts.mod_silence.insert
+tt.main_script.remove = scripts.mod_silence.remove
+tt.main_script.update = scripts.mod_track_target.update
+tt.render.sprites[1].name = "wicked_sisters_lvl4_totem_modifier_run"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].draw_order = 2

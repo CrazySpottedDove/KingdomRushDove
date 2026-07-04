@@ -749,6 +749,14 @@ function U.y_animation_play_once_specific(entity, name, flip_x, ts, idx)
 	end
 end
 
+function U.y_animation_play_once_specific_no_flip(entity, name, ts, idx)
+	U.animation_start_once_specific_no_flip(entity, name, ts, idx)
+	local a = entity.render.sprites[idx]
+	while a.runs <= 0 do
+		coroutine.yield()
+	end
+end
+
 ---开始指定组的动画
 ---@param entity table 实体
 ---@param name string 动画名称

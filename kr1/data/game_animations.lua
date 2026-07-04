@@ -49224,8 +49224,8 @@ return {
 	},
 	wicked_sisters_frog_death = {
 		prefix = "wicked_sisters_frog",
-		from = 48,
-		to = 61
+		from = 62,
+		to = 73
 	},
 	wicked_sisters_froggification_hit_run = {
 		prefix = "wicked_sisters_froggification_hit",
@@ -49255,9 +49255,9 @@ return {
 	wicked_sisters_lvl4_kid_run = {
 		prefix = "wicked_sisters_lvl4_kid",
 		from = 1,
-		to = 100
+		to = 51
 	},
-	wicked_sisters_lvl4_kid_loop = {
+	wicked_sisters_lvl4_kid_idle = {
 		prefix = "wicked_sisters_lvl4_kid",
 		from = 51,
 		to = 51
@@ -49282,11 +49282,6 @@ return {
 		from = 1,
 		to = 16
 	},
-	wicked_sisters_tower_lvl4_idle = {
-		prefix = "wicked_sisters",
-		from = 5,
-		to = 5
-	},
 	wicked_sisters_witch_idle = {
 		prefix = "wicked_sisters_witch",
 		from = 1,
@@ -49305,7 +49300,7 @@ return {
 	wicked_sisters_witch_stir = {
 		prefix = "wicked_sisters_witch",
 		from = 178,
-		to = 309
+		to = 254
 	},
 	wicked_witch_walk = {
 		prefix = "wicked_witch_layer1",

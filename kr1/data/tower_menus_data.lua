@@ -236,7 +236,7 @@ return {
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_wicked_sisters",
-			image = "kr4_main_icons_0017",
+			image = "kr4_main_icons_0013",
 			type = "wicked_sisters",
 			place = 28,
 			tt_title = _("TOWER_WICKED_SISTERS_NAME"),
@@ -380,7 +380,7 @@ return {
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_sandworm",
-			image = "kr4_main_icons_0022",
+			image = "kr4_main_icons_0021",
 			type = "sandworm",
 			place = 24,
 			tt_title = _("TOWER_SANDWORM_NAME"),
@@ -3879,9 +3879,19 @@ return {
 			tt_desc = _("TOWER_SHAOLIN_TOTAL_DESCRIPTION_3")
 		}}
 	}), tpl.rally, tpl.sell}},
-	wicked_sisters = {{M(tpl.upgrade_power, {
+	wicked_sisters = {{M(tpl.change_mode, {
+		image = "kr4_quickmenu_action_icons_0002",
+		image_mode0 = "kr4_quickmenu_action_icons_0002",
+		image_mode1 = "kr4_quickmenu_action_icons_0001",
+		tt_title_mode0 = _("TOWER_WICKED_SISTERS_CHANGE_MODE_MAGIC_NAME"),
+		tt_title_mode1 = _("TOWER_WICKED_SISTERS_CHANGE_MODE_POISON_NAME"),
+		tt_phrase_mode0 = _("TOWER_WICKED_SISTERS_CHANGE_MODE_MAGIC_NOTE"),
+		tt_phrase_mode1 = _("TOWER_WICKED_SISTERS_CHANGE_MODE_POISON_NOTE"),
+		tt_desc_mode0 = _("TOWER_WICKED_SISTERS_CHANGE_MODE_MAGIC_DESCRIPTION"),
+		tt_desc_mode1 = _("TOWER_WICKED_SISTERS_CHANGE_MODE_POISON_DESCRIPTION")
+	}), M(tpl.upgrade_power, {
 		action_arg = "silent",
-		image = "kr4_special_icons_0017",
+		image = "kr4_special_icons_0044",
 		place = 5,
 		sounds = {"WickedSistersSkillBTaunt"},
 		tt_phrase = _("TOWER_WICKED_SISTERS_SILENT_NOTE"),
@@ -3891,7 +3901,7 @@ return {
 		}}
 	}), M(tpl.upgrade_power, {
 		action_arg = "frog",
-		image = "kr4_special_icons_0018",
+		image = "kr4_special_icons_0045",
 		place = 6,
 		sounds = {"WickedSistersSkillATaunt"},
 		tt_phrase = _("TOWER_WICKED_SISTERS_FROG_NOTE"),
@@ -3904,7 +3914,7 @@ return {
 		}}
 	}), M(tpl.upgrade_power, {
 		action_arg = "range",
-		image = "kr4_special_icons_0019",
+		image = "kr4_special_icons_0046",
 		place = 7,
 		sounds = {"WickedSistersSkillCTaunt"},
 		tt_phrase = _("TOWER_WICKED_SISTERS_RANGE_NOTE"),
@@ -4008,7 +4018,7 @@ return {
 	}), tpl.rally, tpl.sell}},
 	sandworm = {{M(tpl.upgrade_power, {
 		action_arg = "worm",
-		image = "kr4_special_icons_0020",
+		image = "kr4_special_icons_0071",
 		place = 6,
 		sounds = {"sandwormSkillATaunt"},
 		tt_phrase = _("TOWER_SANDWORM_WORM_NOTE"),
@@ -4021,7 +4031,7 @@ return {
 		}}
 	}), M(tpl.upgrade_power, {
 		action_arg = "eat",
-		image = "kr4_special_icons_0021",
+		image = "kr4_special_icons_0072",
 		place = 5,
 		sounds = {"sandwormSkillBTaunt"},
 		tt_phrase = _("TOWER_SANDWORM_EAT_NOTE"),
@@ -4031,7 +4041,7 @@ return {
 		}}
 	}), M(tpl.upgrade_power, {
 		action_arg = "slime",
-		image = "kr4_special_icons_0022",
+		image = "kr4_special_icons_0073",
 		place = 7,
 		sounds = {"sandwormSkillCTaunt"},
 		tt_phrase = _("TOWER_SANDWORM_SLIME_NOTE"),

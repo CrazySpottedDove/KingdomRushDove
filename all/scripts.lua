@@ -7061,6 +7061,11 @@ function scripts.mod_polymorph.insert(this, store)
 		U.update_max_speed(e, pm.transfer_speed_factor * target.motion.max_speed)
 	end
 
+	if pm.duration then
+		e._before_polymorph_template_name = target.template_name
+		e._polymorph_duration = pm.duration
+	end
+
 	queue_insert(store, e)
 	signal.emit("mod-applied", this, target)
 	queue_remove(store, this)

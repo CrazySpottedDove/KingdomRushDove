@@ -47,7 +47,7 @@ end
 
 local dnum_palette = {
 	{0.00, 0.00, 0.00}, -- shadow
-	{1.00, 0.08, 0.08}, -- instakill
+	{1.00, 0.08, 0.08}, -- instakill/eat
 	{0.20, 1.00, 0.20}, -- poison
 	{0.30, 0.70, 1.00}, -- electrical
 	{1.00, 0.50, 0.80}, -- magical explosion
@@ -65,7 +65,7 @@ local dnum_palette = {
 }
 
 local function dnum_color_index(dtype)
-	if band(dtype, DAMAGE_INSTAKILL) ~= 0 then
+	if band(dtype, DAMAGE_INSTAKILL) ~= 0 or band(dtype, DAMAGE_EAT) ~= 0 then
 		return 2
 	elseif band(dtype, DAMAGE_POISON) ~= 0 then
 		return 3

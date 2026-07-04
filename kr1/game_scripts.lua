@@ -1501,11 +1501,12 @@ scripts.enemy_sheep = {
 		local clicks = 0
 		local hp_max = this.health.hp_max
 
-		if hp_max > 4000 then
-			this.clicks_to_destroy = 8
-		else
-			this.clicks_to_destroy = hp_max / 500
+		-- <4000 -> less clicks to destroy
+		if hp_max < 4000 then
+			this.clicks_to_destroy = math.ceil(hp_max / 4000 * this.clicks_to_destroy)
 		end
+
+		local start_ts = store.tick_ts
 
 		while true do
 			if this.health.dead then
@@ -1537,8 +1538,25 @@ scripts.enemy_sheep = {
 				coroutine.yield()
 			else
 				SU.y_enemy_walk_until_blocked(store, this, true, function(store, this)
-					return this.ui.clicked
+					return this.ui.clicked or this._polymorph_duration and store.tick_ts - start_ts > this._polymorph_duration
 				end)
+			end
+
+			if this._polymorph_duration then
+				if store.tick_ts - start_ts > this._polymorph_duration then
+					local e = E:create_entity(this._before_polymorph_template_name)
+					e.pos = V.vclone(this.pos)
+					e.nav_path = table.deepclone(this.nav_path)
+					e.enemy.gold = this.enemy.gold
+					e.health.hp_max = this.health.hp_max
+					e.health.hp = this.health.hp
+					queue_insert(store, e)
+
+					local d = E.assign_damage(bor(DAMAGE_EAT, DAMAGE_NO_LIFESTEAL), 1, this.id, this.id)
+					this.enemy.gold = 0
+					queue_damage(store, d)
+					return
+				end
 			end
 		end
 	end
@@ -71936,303 +71954,6 @@ function scripts.mod_mage_treasure.insert(this, store)
 	target.enemy.gold = target.enemy.gold + target._mage_treasure_extra_gold_step
 
 	return false
-end
-
-scripts.tower_sandworm = {}
-
-function scripts.tower_sandworm.get_info(this)
-	local b = E:get_template(this.attacks.list[1].bullet)
-	local damage_basic = {4, 9, 14, 19}
-	local damage_times = {14, 16, 18, 20}
-	local min = math.ceil(damage_basic[1] * this.tower.damage_factor) * damage_times[1]
-	local o = scripts.tower_common.get_info(this)
-	o.damage_min = min
-	o.damage_max = min
-	return o
-end
-
-function scripts.tower_sandworm.insert(this, store)
-	return true
-end
-
-function scripts.tower_sandworm.update(this, store)
-	local a = this.attacks
-	local ab = a.list[1]
-	local as = a.list[3]
-	local ae = a.list[2]
-	local aw = a.list[4]
-	local pow_e = this.powers.eat
-	local pow_s = this.powers.slime
-	local pow_w = this.powers.worm
-
-	a._last_target_pos = a._last_target_pos or v(REF_W, 0)
-	ab.ts = store.tick_ts - ab.cooldown + a.attack_delay_on_spawn
-
-	local attacks = {}
-	local pows = {}
-	this.bullet_loaded = false
-
-	if aw then
-		table.insert(attacks, aw)
-		table.insert(pows, pow_w)
-	end
-	if as then
-		table.insert(attacks, as)
-		table.insert(pows, pow_s)
-	end
-	if ae then
-		table.insert(attacks, ae)
-		table.insert(pows, pow_e)
-	end
-	if ab then
-		table.insert(attacks, ab)
-		table.insert(pows, nil)
-	end
-
-	while true do
-		if this.tower.blocked then
-			coroutine.yield()
-		else
-			if pow_s.level > 0 and pow_s.changed then
-				pow_s.changed = nil
-				as.disabled = false
-				as.cooldown = pow_s.cooldown[pow_s.level]
-				as.ts = store.tick_ts - as.cooldown
-			end
-			if pow_e.level > 0 and pow_e.changed then
-				pow_e.changed = nil
-				ae.disabled = false
-				ae.cooldown = pow_e.cooldown
-				ae.ts = store.tick_ts - ae.cooldown
-			end
-			if pow_w.level > 0 and pow_w.changed then
-				pow_w.changed = nil
-				aw.disabled = false
-				aw.cooldown = pow_w.cooldown[pow_w.level]
-				aw.ts = store.tick_ts - aw.cooldown
-			end
-
-			SU.towers_swaped(store, this, a.list)
-
-			for i, aa in ipairs(attacks) do
-				if aa and not aa.disabled and store.tick_ts - aa.ts > aa.cooldown then
-					if aa == aw then
-						aw.ts = store.tick_ts
-						local skelet = "sandworm_skelebomb"
-						if pow_w.level == 2 then
-							skelet = "sandworm_skelebomb2"
-						end
-						local enemy = U.find_random_enemy(store.entities, tpos(this), 0, aw.range, pow_w.vis_flags, pow_w.vis_bans)
-						local b = E:create_entity(skelet)
-						b.pos.x, b.pos.y = this.pos.x, this.pos.y
-						b.bullet.damage_factor = this.tower.damage_factor
-						b.bullet.from = V.vclone(b.pos)
-						local outer_fx_radius = 150
-						local inner_fx_radius = 100
-						for i = 1, 24 do
-							local r = outer_fx_radius
-							if i % 2 == 0 then
-								r = inner_fx_radius
-							end
-							if not enemy then
-								b.bullet.to = U.point_on_ellipse(this.pos, r / 2, 2 * math.pi * math.random(1, 24) / 24)
-								while GR:cell_is(b.bullet.to.x, b.bullet.to.y, TERRAIN_NOWALK) do
-									b.bullet.to = U.point_on_ellipse(this.pos, r / 2, 2 * math.pi * math.random(1, 24) / 24)
-									coroutine.yield()
-								end
-							else
-								b.bullet.to = enemy.pos
-							end
-							b.bullet.level = pow_w.level
-						end
-						queue_insert(store, b)
-					elseif aa == ab then
-						local enemy, _, pred_pos = U.find_foremost_enemy(store.entities, tpos(this), 0, aa.range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
-						if not enemy then
-							SU.delay_attack(store, aa, fts(10))
-						else
-							S:queue(aa.sound)
-							U.animation_start(this, "shoot", nil, store.tick_ts, false, 2)
-							U.y_wait(store, fts(11))
-							a._last_target_pos.x, a._last_target_pos.y = enemy.pos.x, enemy.pos.y
-							local trigger_pos = pred_pos
-							local enemy, _, pred_pos = U.find_foremost_enemy(store.entities, tpos(this), 0, aa.range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
-							if enemy then
-								local ni = enemy.nav_path.ni + P:predict_enemy_node_advance(enemy, aa.node_prediction)
-								pred_pos = P:node_pos(enemy.nav_path.pi, 1, ni)
-							end
-							local b = E:create_entity(aa.bullet)
-							b.bullet.damage_factor = this.tower.damage_factor
-							b.pos.x, b.pos.y = this.pos.x + aa.bullet_start_offset.x, this.pos.y + aa.bullet_start_offset.y
-							b.bullet.from = V.vclone(b.pos)
-							b.bullet.to = enemy and pred_pos or trigger_pos
-							b.bullet.source_id = this.id
-							b.bullet.level = 1
-							b.bullet.damage_factor = this.tower.damage_factor
-							b.tower_ref = this
-							queue_insert(store, b)
-							this.bullet_loaded = false
-							U.y_animation_wait(this, 2)
-							U.animation_start(this, "idle", nil, store.tick_ts, false, 2)
-							aa.ts = store.tick_ts
-						end
-					elseif aa == ae then
-						local enemy, _, pred_pos = U.find_foremost_enemy(store.entities, tpos(this), 0, aa.range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
-						if not enemy then
-							SU.delay_attack(store, aa, fts(10))
-						else
-							U.animation_start(this, "instakill", nil, store.tick_ts, false, 2)
-							S:queue("sandwormEatIn")
-							U.y_wait(store, fts(20))
-							a._last_target_pos.x, a._last_target_pos.y = enemy.pos.x, enemy.pos.y
-							local trigger_pos = pred_pos
-							local enemy, _, pred_pos = U.find_foremost_enemy(store.entities, tpos(this), 0, aa.range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
-							if enemy then
-								local ni = enemy.nav_path.ni + P:predict_enemy_node_advance(enemy, aa.node_prediction)
-								pred_pos = P:node_pos(enemy.nav_path.pi, 1, ni)
-							end
-							local b = E:create_entity(aa.bullet)
-							b.bullet.damage_factor = this.tower.damage_factor
-							b.pos.x, b.pos.y = this.pos.x + aa.bullet_start_offset.x, this.pos.y + aa.bullet_start_offset.y
-							b.bullet.from = V.vclone(b.pos)
-							b.bullet.to = enemy and pred_pos or trigger_pos
-							b.bullet.source_id = this.id
-							b.bullet.level = 1
-							b.bullet.damage_factor = this.tower.damage_factor
-							b.tower_ref = this
-							queue_insert(store, b)
-							this.bullet_loaded = false
-							U.y_wait(store, fts(20))
-							S:queue("sandwormEatOut")
-							U.y_animation_wait(this, 2)
-							U.animation_start(this, "idle", nil, store.tick_ts, false, 2)
-							aa.ts = store.tick_ts
-						end
-					elseif aa == as then
-						local enemy, _, pred_pos = U.find_foremost_enemy(store.entities, tpos(this), 0, aa.range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
-						if not enemy then
-							SU.delay_attack(store, aa, fts(10))
-						else
-							U.animation_start(this, "spit", nil, store.tick_ts, false, 2)
-							U.y_wait(store, fts(11))
-							a._last_target_pos.x, a._last_target_pos.y = enemy.pos.x, enemy.pos.y
-							local trigger_pos = pred_pos
-							local enemy, _, pred_pos = U.find_foremost_enemy(store.entities, tpos(this), 0, aa.range, aa.node_prediction, aa.vis_flags, aa.vis_bans)
-							if enemy then
-								local ni = enemy.nav_path.ni + P:predict_enemy_node_advance(enemy, aa.node_prediction)
-								pred_pos = P:node_pos(enemy.nav_path.pi, 1, ni)
-							end
-							local b = E:create_entity(aa.bullet)
-							b.bullet.damage_factor = this.tower.damage_factor
-							b.pos.x, b.pos.y = this.pos.x + aa.bullet_start_offset.x, this.pos.y + aa.bullet_start_offset.y
-							b.bullet.from = V.vclone(b.pos)
-							b.bullet.to = enemy and pred_pos or trigger_pos
-							b.bullet.source_id = this.id
-							b.bullet.level = pow_s.level
-							b.bullet.damage_factor = this.tower.damage_factor
-							b.tower_ref = this
-							queue_insert(store, b)
-							this.bullet_loaded = false
-							U.y_animation_wait(this, 2)
-							U.animation_start(this, "idle", nil, store.tick_ts, false, 2)
-							aa.ts = store.tick_ts
-						end
-					end
-				end
-			end
-			coroutine.yield()
-		end
-	end
-	return true
-end
-
-scripts.tower_sandworm_bomb = {}
-function scripts.tower_sandworm_bomb.update(this, store)
-	local b = this.bullet
-	local dmin = b.damage_min
-	local dmax = b.damage_max
-	local dradius = b.damage_radius
-	local tower = this.tower_ref
-
-	if b.level and b.level > 0 then
-		if b.damage_radius_inc then
-			dradius = dradius + b.level * b.damage_radius_inc
-		end
-		if b.damage_min_inc then
-			dmin = dmin + b.level * b.damage_min_inc
-		end
-		if b.damage_max_inc then
-			dmax = dmax + b.level * b.damage_max_inc
-		end
-	end
-
-	local ps
-	if b.particles_name then
-		ps = E:create_entity(b.particles_name)
-		ps.particle_system.track_id = this.id
-		queue_insert(store, ps)
-	end
-
-	while store.tick_ts - b.ts + store.tick_length < b.flight_time do
-		coroutine.yield()
-		b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
-		this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
-		if b.align_with_trajectory then
-			this.render.sprites[1].r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
-		elseif b.rotation_speed then
-			this.render.sprites[1].r = this.render.sprites[1].r + b.rotation_speed * store.tick_length
-		end
-		if b.hide_radius then
-			this.render.sprites[1].hidden = V.dist(this.pos.x, this.pos.y, b.from.x, b.from.y) < b.hide_radius or V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) < b.hide_radius
-		end
-	end
-
-	local enemies = table.filter(store.entities, function(k, v)
-		return v.enemy and v.vis and v.health and not v.health.dead and band(v.vis.flags, b.damage_bans) == 0 and band(v.vis.bans, b.damage_flags) == 0 and U.is_inside_ellipse(v.pos, b.to, dradius)
-	end)
-
-	for _, enemy in ipairs(enemies) do
-		local d = E:create_entity("damage")
-		d.damage_type = b.damage_type
-		d.reduce_armor = b.reduce_armor
-		d.reduce_magic_armor = b.reduce_magic_armor
-		d.value = U.frandom(dmin, dmax)
-		d.value = math.ceil(b.damage_factor * d.value)
-		d.source_id = this.id
-		d.target_id = enemy.id
-		if b.xp_gain_factor and b.xp_dest_id then
-			d.xp_gain_factor = b.xp_gain_factor
-			d.xp_dest_id = b.source_id
-		end
-		if band(d.damage_type, DAMAGE_INSTAKILL) ~= 0 and ((band(enemy.vis.flags, bor(F_BOSS, F_MINIBOSS)) ~= 0 or band(enemy.vis.bans, bor(F_INSTAKILL, F_DISINTEGRATED, F_EAT)) ~= 0)) then
-		else
-			queue_damage(store, d)
-		end
-	end
-
-	if b.hit_fx then
-		S:queue(this.sound_events.hit)
-		local sfx = E:create_entity(b.hit_fx)
-		sfx.pos = V.vclone(b.to)
-		sfx.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, sfx)
-	end
-
-	if b.hit_payload then
-		local hp = E:create_entity(b.hit_payload)
-		hp.pos.x, hp.pos.y = b.to.x, b.to.y
-		hp.source_id = b.source_id
-		if hp.aura then
-			hp.aura.duration = this.aura_duration[this.bullet.level]
-			hp.tween.props[1].keys = {{0, 255}, {hp.aura.duration - 0.5, 255}, {hp.aura.duration, 0}}
-		end
-		queue_insert(store, hp)
-	end
-
-	local p = SU.create_bullet_pop(store, this)
-	queue_insert(store, p)
-
-	queue_remove(store, this)
 end
 
 return scripts

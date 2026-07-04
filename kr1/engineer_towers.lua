@@ -3429,194 +3429,372 @@ tt.modifier.vis_bans = F_BOSS
 tt.render = nil
 
 -- 沙虫巢穴 START
-do
-	tt = RT("tower_sandworm", "tower")
-	AC(tt, "attacks", "powers")
-	tt.tower.type = "sandworm"
-	tt.tower.kind = TOWER_KIND_ENGINEER
-	tt.tower.level = 1
-	tt.tower.price = 350
-	tt.info.portrait = "gui4_bottom_info_image_towers_0025"
-	tt.render.sprites[1].animated = false
-	tt.render.sprites[1].name = "terrains_%04i"
-	tt.render.sprites[1].offset = v(0, 11)
-	tt.render.sprites[2] = CC("sprite")
-	tt.render.sprites[2].prefix = "worm_nest_level4"
-	tt.render.sprites[2].name = "idle"
-	tt.render.sprites[2].offset = v(0, 51)
-	tt.sound_events.insert = "sandwormTaunt"
-	tt.attacks.range = 177.5
-	tt.attacks.list[1] = CC("bullet_attack")
-	tt.attacks.list[1].bullet = "bullet_tower_sandworm"
-	tt.attacks.list[1].cooldown = 6.0
-	tt.attacks.list[1].shoot_time = fts(8)
-	tt.attacks.list[1].node_prediction = fts(25)
-	tt.attacks.list[1].bullet_start_offset = v(2, 55)
-	tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE, F_FLYING)
-	tt.attacks.list[1].vis_flags = bor(F_RANGED, F_AREA)
-	tt.attacks.list[2] = CC("bullet_attack")
-	tt.attacks.list[2].bullet = "tower_sandworm_eat"
-	tt.attacks.list[2].disabled = true
-	tt.attacks.list[2].cooldown = 45
-	tt.attacks.list[2].range = 300
-	tt.attacks.list[2].shoot_time = fts(75)
-	tt.attacks.list[2].animation = "instakill"
-	tt.attacks.list[2].bullet_start_offset = v(2, 55)
-	tt.attacks.list[2].vis_bans = bor(F_MINIBOSS, F_BOSS)
-	tt.attacks.list[2].node_prediction = fts(25)
-	tt.attacks.list[3] = CC("bullet_attack")
-	tt.attacks.list[3].bullet = "tower_sandworm_spit"
-	tt.attacks.list[3].disabled = true
-	tt.attacks.list[3].cooldown = 14
-	tt.attacks.list[3].animation = "spit"
-	tt.attacks.list[3].range = 275
-	tt.attacks.list[3].shoot_time = fts(20)
-	tt.attacks.list[3].vis_bans = bor(F_NIGHTMARE, F_FLYING)
-	tt.attacks.list[3].bullet_start_offset = v(2, 55)
-	tt.attacks.list[3].node_prediction = fts(25)
-	tt.attacks.list[4] = CC("bullet_attack")
-	tt.attacks.list[4].bullet = "sandworm_skelebomb"
-	tt.attacks.list[4].cooldown = 14
-	tt.attacks.list[4].disabled = true
-	tt.attacks.list[4].range = 177.5
-	tt.attacks.list[4].vis_bans = bor(F_CLIFF, F_FLYING)
-	tt.powers.eat = CC("power")
-	tt.powers.eat.price_base = 255
-	tt.powers.eat.max_level = 1
-	tt.powers.eat.cooldown = 45
-	tt.powers.slime = CC("power")
-	tt.powers.slime.price_base = 127
-	tt.powers.slime.price_inc = 127
-	tt.powers.slime.cooldown = {14, 12}
-	tt.powers.slime.max_level = 2
-	tt.powers.worm = CC("power")
-	tt.powers.worm.price_base = 144
-	tt.powers.worm.price_inc = 144
-	tt.powers.worm.max_level = 2
-	tt.powers.worm.cooldown = {14, 10}
-	tt.info.fn = scripts.tower_sandworm.get_info
-	tt.main_script.insert = scripts.tower_sandworm.insert
-	tt.main_script.update = scripts.tower_sandworm.update
-	tt.ui.click_rect = r(-30, 0, 65, 70)
-	tt.terror_offset = v(0, 10)
+tt = RT("tower_sandworm", "tower")
+AC(tt, "attacks", "powers")
+tt.tower.type = "sandworm"
+tt.tower.kind = TOWER_KIND_ENGINEER
+tt.tower.level = 1
+tt.tower.price = 350
+tt.info.portrait = "kr4_info_portraits_towers_0021"
+tt.info.enc_icon = 21
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrains_%04i"
+tt.render.sprites[1].offset = v(0, 11)
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].prefix = "worm_nest_level4"
+tt.render.sprites[2].name = "idle"
+tt.render.sprites[2].offset = v(0, 51)
+tt.sound_events.insert = "sandwormTaunt"
+tt.attacks.range = 177.5
+tt.attacks.list[1] = CC("bullet_attack")
+tt.attacks.list[1].bullet = "bullet_tower_sandworm"
+tt.attacks.list[1].cooldown = 6.0
+tt.attacks.list[1].shoot_time = fts(8)
+tt.attacks.list[1].node_prediction = fts(25)
+tt.attacks.list[1].bullet_start_offset = v(2, 55)
+tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE, F_FLYING)
+tt.attacks.list[1].vis_flags = bor(F_RANGED, F_AREA)
+tt.attacks.list[2] = CC("bullet_attack")
+tt.attacks.list[2].bullet = "tower_sandworm_eat"
+tt.attacks.list[2].disabled = true
+tt.attacks.list[2].cooldown = 45
+tt.attacks.list[2].range = 300
+tt.attacks.list[2].shoot_time = fts(75)
+tt.attacks.list[2].animation = "instakill"
+tt.attacks.list[2].bullet_start_offset = v(2, 55)
+tt.attacks.list[2].vis_bans = bor(F_MINIBOSS, F_BOSS)
+tt.attacks.list[2].node_prediction = fts(25)
+tt.attacks.list[3] = CC("bullet_attack")
+tt.attacks.list[3].bullet = "tower_sandworm_spit"
+tt.attacks.list[3].disabled = true
+tt.attacks.list[3].cooldown = 14
+tt.attacks.list[3].animation = "spit"
+tt.attacks.list[3].range = 275
+tt.attacks.list[3].shoot_time = fts(20)
+tt.attacks.list[3].vis_bans = bor(F_NIGHTMARE, F_FLYING)
+tt.attacks.list[3].bullet_start_offset = v(2, 55)
+tt.attacks.list[3].node_prediction = fts(25)
+tt.attacks.list[4] = CC("bullet_attack")
+tt.attacks.list[4].bullet = "sandworm_skelebomb"
+tt.attacks.list[4].cooldown = 14
+tt.attacks.list[4].disabled = true
+tt.attacks.list[4].range = 177.5
+tt.attacks.list[4].vis_bans = bor(F_CLIFF, F_FLYING)
+tt.powers.eat = CC("power")
+tt.powers.eat.price_base = 255
+tt.powers.eat.max_level = 1
+tt.powers.eat.cooldown = 45
+tt.powers.slime = CC("power")
+tt.powers.slime.price_base = 127
+tt.powers.slime.price_inc = 127
+tt.powers.slime.cooldown = {14, 12}
+tt.powers.slime.max_level = 2
+tt.powers.worm = CC("power")
+tt.powers.worm.price_base = 144
+tt.powers.worm.price_inc = 144
+tt.powers.worm.max_level = 2
+tt.powers.worm.cooldown = {14, 10}
+tt.info.fn = scripts.tower_sandworm.get_info
+tt.main_script.insert = scripts.tower_sandworm.insert
+tt.main_script.update = scripts.tower_sandworm.update
+tt.ui.click_rect = r(-30, 0, 65, 70)
+tt.terror_offset = v(0, 10)
 
-	tt = RT("bullet_tower_sandworm", "bomb")
-	tt.bullet.level = 1
-	tt.bullet.flight_time = fts(25)
-	tt.bullet.pop = nil
-	tt.bullet.align_with_trajectory = true
-	tt.bullet.ignore_hit_offset = true
-	tt.bullet.rotation_speed = nil
-	tt.bullet.hit_payload = "aura_bullet_tower_sandworm"
-	tt.bullet.damage_max = 19
-	tt.bullet.damage_min = 19
-	tt.bullet.damage_every = 0.25
-	tt.bullet.damage_type = DAMAGE_EXPLOSION
-	tt.bullet.damage_radius = 40
-	tt.sound_events.hit = "SandwormAttack"
-	tt.render.sprites[1].animated = false
-	tt.render.sprites[1].hidden = true
-	tt.render.sprites[1].anchor = v(0.4, 0.5)
-	tt.render.sprites[1].scale = v(1.5, 1.5)
-	tt.aura_duration = {3.5, 4, 4.5, 5}
-	tt.bullet.hit_fx = nil
-	tt.bullet.mod = nil
+tt = RT("bullet_tower_sandworm", "bomb")
+tt.bullet.level = 1
+tt.bullet.flight_time = fts(25)
+tt.bullet.pop = nil
+tt.bullet.align_with_trajectory = true
+tt.bullet.ignore_hit_offset = true
+tt.bullet.rotation_speed = nil
+tt.bullet.hit_payload = "aura_bullet_tower_sandworm"
+tt.bullet.damage_max = 19
+tt.bullet.damage_min = 19
+tt.bullet.damage_every = 0.25
+tt.bullet.damage_type = DAMAGE_EXPLOSION
+tt.bullet.damage_radius = 40
+tt.sound_events.hit = "SandwormAttack"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].anchor = v(0.4, 0.5)
+tt.render.sprites[1].scale = v(1.5, 1.5)
+tt.aura_duration = {3.5, 4, 4.5, 5}
+tt.bullet.hit_fx = nil
+tt.bullet.mod = nil
 
-	tt = RT("tower_sandworm_spit", "bomb")
-	tt.bullet.level = 1
-	tt.bullet.flight_time = fts(25)
-	tt.sound_events.insert = "sandwormSpit"
-	tt.sound_events.hit = "sandwormSpitSplat"
-	tt.bullet.hit_fx = "fx_bullet_tower_sandworm_slime_hit"
-	tt.bullet.pop = nil
-	tt.bullet.align_with_trajectory = true
-	tt.bullet.rotation_speed = nil
-	tt.bullet.hit_payload = "aura2_bullet_tower_sandworm"
-	tt.bullet.damage_max = 0
-	tt.bullet.damage_min = 0
-	tt.bullet.damage_type = DAMAGE_EXPLOSION
-	tt.bullet.damage_radius = 60
-	tt.render.sprites[1].animated = false
-	tt.render.sprites[1].name = "worm_nest_level4_spit_proyectile"
-	tt.render.sprites[1].anchor = v(0.4, 0.5)
-	tt.aura_duration = {5, 6}
+tt = RT("tower_sandworm_spit", "bomb")
+tt.bullet.level = 1
+tt.bullet.flight_time = fts(25)
+tt.sound_events.insert = "sandwormSpit"
+tt.sound_events.hit = "sandwormSpitSplat"
+tt.bullet.hit_fx = "fx_bullet_tower_sandworm_slime_hit"
+tt.bullet.pop = nil
+tt.bullet.align_with_trajectory = true
+tt.bullet.rotation_speed = nil
+tt.bullet.hit_payload = "aura2_bullet_tower_sandworm"
+tt.bullet.damage_max = 0
+tt.bullet.damage_min = 0
+tt.bullet.damage_type = DAMAGE_EXPLOSION
+tt.bullet.damage_radius = 60
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "worm_nest_level4_spit_proyectile"
+tt.render.sprites[1].anchor = v(0.4, 0.5)
+tt.aura_duration = {5, 6}
 
-	tt = RT("tower_sandworm_eat", "bomb")
-	tt.bullet.level = 1
-	tt.bullet.flight_time = fts(25)
-	tt.sound_events.hit = "sandwormEat"
-	tt.bullet.hit_fx = "worm_nest_level4_instakill_run"
-	tt.bullet.pop = nil
-	tt.bullet.align_with_trajectory = true
-	tt.bullet.rotation_speed = nil
-	tt.bullet.damage_max = 9999999
-	tt.bullet.damage_min = 9999999
-	tt.bullet.damage_type = bor(DAMAGE_EAT, DAMAGE_NO_SPAWNS)
-	tt.bullet.damage_radius = 40
-	tt.render.sprites[1].animated = true
-	tt.render.sprites[1].anchor = v(0.4, 0.5)
-	tt.render.sprites[1].scale = v(1.5, 1.5)
+tt = RT("tower_sandworm_eat", "bomb")
+tt.bullet.level = 1
+tt.bullet.flight_time = fts(25)
+tt.sound_events.hit = "sandwormEat"
+tt.bullet.hit_fx = "worm_nest_level4_instakill_run"
+tt.bullet.pop = nil
+tt.bullet.align_with_trajectory = true
+tt.bullet.rotation_speed = nil
+tt.bullet.damage_max = 9999999
+tt.bullet.damage_min = 9999999
+tt.bullet.damage_type = bor(DAMAGE_EAT, DAMAGE_NO_SPAWNS)
+tt.bullet.damage_radius = 40
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].anchor = v(0.4, 0.5)
+tt.render.sprites[1].scale = v(1.5, 1.5)
 
-	tt = RT("fx_bullet_tower_sandworm_slime_hit", "fx")
-	tt.render.sprites[1].name = "worm_nest_level4_spit_decal_in"
-	tt.render.sprites[1].z = Z_DECALS
+tt = RT("fx_bullet_tower_sandworm_slime_hit", "fx")
+tt.render.sprites[1].name = "worm_nest_level4_spit_decal_in"
+tt.render.sprites[1].z = Z_DECALS
 
-	tt = RT("worm_nest_level4_instakill_run", "fx")
-	tt.render.sprites[1].name = "worm_nest_level4_instakill_run"
+tt = RT("worm_nest_level4_instakill_run", "fx")
+tt.render.sprites[1].name = "worm_nest_level4_instakill_run"
 
-	tt = RT("mod_tower_sandworm_slow", "mod_slow")
-	tt.slow.factor = 0
-	tt.modifier.duration = 0
-	function tt.main_script.insert(this, store)
-		this.slow.factor = this.balance_slow_factor
-		this.modifier.duration = this.balance_duration
-		return scripts.mod_slow.insert(this, store)
-	end
-	tt.balance_slow_factor = 1
-	tt.balance_duration = 0
-
-	tt = E:register_t("aura_bullet_tower_sandworm", "aura")
-	AC(tt, "render", "tween")
-	tt.aura.mod = "mod_tower_sandworm_slow"
-	tt.aura.radius = 50
-	tt.aura.vis_flags = F_AREA
-	tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
-	tt.aura.cycle_time = fts(5)
-	tt.render.sprites[1].prefix = "worm_nest_attack"
-	tt.render.sprites[1].name = "run"
-	tt.render.sprites[1].animated = true
-	tt.render.sprites[1].z = Z_DECALS
-	tt.render.sprites[1].loop = true
-	tt.main_script.insert = scripts.aura_apply_mod.insert
-	tt.main_script.update = scripts.aura_apply_mod.update
-	tt.tween.props[1] = CC("tween_prop")
-	tt.tween.props[1].name = "alpha"
-	tt.tween.props[1].keys = {{0, 255}, {tt.aura.duration - 0.5, 255}, {tt.aura.duration, 0}}
-
-	tt = RT("mod2_tower_sandworm_slow", "mod_slow")
-	tt.balance_slow_factor = {0.5, 0.3}
-	tt.balance_duration = 0.3
-	function tt.main_script.insert(this, store)
-		this.slow.factor = this.balance_slow_factor[this.modifier.level]
-		this.modifier.duration = this.balance_duration
-		return scripts.mod_slow.insert(this, store)
-	end
-
-	tt = E:register_t("aura2_bullet_tower_sandworm", "aura")
-	AC(tt, "render", "tween")
-	tt.aura.mod = "mod2_tower_sandworm_slow"
-	tt.aura.radius = 50
-	tt.aura.vis_flags = F_AREA
-	tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
-	tt.aura.cycle_time = fts(5)
-	tt.render.sprites[1].prefix = "worm_nest_level4_spit_decal"
-	tt.render.sprites[1].name = "run"
-	tt.render.sprites[1].animated = true
-	tt.render.sprites[1].z = Z_DECALS
-	tt.render.sprites[1].loop = true
-	tt.main_script.insert = scripts.aura_apply_mod.insert
-	tt.main_script.update = scripts.aura_apply_mod.update
-	tt.tween.props[1] = CC("tween_prop")
-	tt.tween.props[1].name = "alpha"
-	tt.tween.props[1].keys = {{0, 255}, {tt.aura.duration - 0.5, 255}, {tt.aura.duration, 0}}
+tt = RT("mod_tower_sandworm_slow", "mod_slow")
+tt.slow.factor = 0
+tt.modifier.duration = 0
+function tt.main_script.insert(this, store)
+	this.slow.factor = this.balance_slow_factor
+	this.modifier.duration = this.balance_duration
+	return scripts.mod_slow.insert(this, store)
 end
+tt.balance_slow_factor = 1
+tt.balance_duration = 0
+
+tt = E:register_t("aura_bullet_tower_sandworm", "aura")
+AC(tt, "render", "tween")
+tt.aura.mod = "mod_tower_sandworm_slow"
+tt.aura.radius = 50
+tt.aura.vis_flags = F_AREA
+tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
+tt.aura.cycle_time = fts(5)
+tt.render.sprites[1].prefix = "worm_nest_attack"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].loop = true
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.tween.props[1] = CC("tween_prop")
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {tt.aura.duration - 0.5, 255}, {tt.aura.duration, 0}}
+
+tt = RT("mod2_tower_sandworm_slow", "mod_slow")
+tt.balance_slow_factor = {0.5, 0.3}
+tt.balance_duration = 0.3
+function tt.main_script.insert(this, store)
+	this.slow.factor = this.balance_slow_factor[this.modifier.level]
+	this.modifier.duration = this.balance_duration
+	return scripts.mod_slow.insert(this, store)
+end
+
+tt = E:register_t("aura2_bullet_tower_sandworm", "aura")
+AC(tt, "render", "tween")
+tt.aura.mod = "mod2_tower_sandworm_slow"
+tt.aura.radius = 50
+tt.aura.vis_flags = F_AREA
+tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
+tt.aura.cycle_time = fts(5)
+tt.render.sprites[1].prefix = "worm_nest_level4_spit_decal"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].loop = true
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.tween.props[1] = CC("tween_prop")
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {tt.aura.duration - 0.5, 255}, {tt.aura.duration, 0}}
+
+tt = E:register_t("mod_tower_sandworm_lava", "bullet")
+tt.main_script.update = scripts.tower_sandworm_lava.update
+
+tt.bullet.damage_type = DAMAGE_EXPLOSION
+
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.bullet.damage_radius = 50
+tt.bullet.damage_bans = bor(F_FLYING)
+tt.bullet.damage_flags = F_AREA
+--tt.sound_events.insert = "blazing_watcher_explosion"
+
+tt = RT("sandworm_skelebomb2", "bullet")
+
+AC(tt, "sound_events")
+
+tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.flight_time = 0.01
+tt.bullet.fragment_count = 1
+tt.bullet.fragment_name = "sandworm_skelefrag2"
+tt.bullet.hide_radius = 2
+tt.bullet.hit_fx = nil
+tt.bullet.hit_decal = nil
+tt.bullet.fragment_node_spread = 0
+tt.bullet.fragment_pos_spread = v(0, 0)
+tt.bullet.dest_pos_offset = v(0, 1)
+tt.bullet.dest_prediction_time = 0
+tt.main_script.insert = scripts.bomb_cluster.insert
+tt.main_script.update = scripts.sandworm_skeleflingerbomb.update
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].hidden = true
+tt.sound_events.hit = nil
+tt.sound_events.insert = nil
+
+tt = RT("sandworm_skelefrag2", "bomb")
+tt.bullet.damage_bans = F_ALL
+tt.bullet.damage_flags = 0
+tt.bullet.damage_max = 0
+tt.bullet.damage_min = 0
+tt.bullet.damage_radius = 1
+tt.bullet.hit_decal = nil
+tt.bullet.flight_time_base = 0
+tt.bullet.flight_time_factor = 0
+tt.bullet.flight_time = 0.01
+tt.bullet.pop = nil
+tt.bullet.hit_payload = "sandworm_skelespawn2"
+tt.main_script.update = scripts.bomb_kro_sw.update
+tt.bullet.hit_fx = nil
+tt.render.sprites[1].hidden = true
+tt.sound_events.hit = nil
+tt.sound_events.insert = nil
+
+tt = RT("sandworm_skelespawn2", "decal_scripted")
+
+E.add_comps(E, tt, "render", "spawner", "tween")
+
+tt.main_script.update = scripts.enemies_skelespawner_sw.update
+tt.render.sprites[1].anchor.y = 0.22
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].loop = false
+tt.spawner.animation_concurrent = nil
+tt.spawner.count = 1
+tt.spawner.cycle_time = fts(6)
+tt.spawner.check_node_valid = true
+tt.spawner.use_node_pos = true
+tt.spawner.entity = "soldier_flingers_skeleton_warrior_sw"
+tt.spawner.keep_gold = false
+tt.spawner.node_offset = 0
+tt.spawner.pos_offset = v(0, 0)
+tt.spawner.allowed_subpaths = {1, 2, 3}
+tt.spawner.random_subpath = true
+tt.tween.disabled = true
+tt.tween.props[1].keys = {{0, 255}, {4, 0}}
+tt.tween.remove = true
+
+tt = RT("sandworm_skelebomb", "bullet")
+
+AC(tt, "sound_events")
+
+tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.flight_time = 0.01
+tt.bullet.fragment_count = 1
+tt.bullet.fragment_name = "sandworm_skelefrag"
+tt.bullet.hide_radius = 2
+tt.bullet.hit_fx = nil
+tt.bullet.hit_decal = nil
+tt.bullet.fragment_node_spread = 0
+tt.bullet.fragment_pos_spread = v(0, 0)
+tt.bullet.dest_pos_offset = v(0, 1)
+tt.bullet.dest_prediction_time = 0
+tt.main_script.insert = scripts.bomb_cluster.insert
+tt.main_script.update = scripts.sandworm_skeleflingerbomb.update
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].hidden = true
+tt.sound_events.hit = nil
+tt.sound_events.insert = nil
+
+tt = RT("sandworm_skelefrag", "bomb")
+tt.bullet.damage_bans = F_ALL
+tt.bullet.damage_flags = 0
+tt.bullet.damage_max = 0
+tt.bullet.damage_min = 0
+tt.bullet.damage_radius = 1
+tt.bullet.hit_decal = nil
+tt.bullet.flight_time_base = 0
+tt.bullet.flight_time_factor = 0
+tt.bullet.flight_time = 0.01
+tt.bullet.pop = nil
+tt.bullet.hit_payload = "sandworm_skelespawn"
+tt.main_script.update = scripts.bomb_kro_sw.update
+tt.bullet.hit_fx = nil
+tt.render.sprites[1].hidden = true
+tt.sound_events.hit = nil
+tt.sound_events.insert = nil
+
+tt = RT("sandworm_skelespawn", "decal_scripted")
+
+E.add_comps(E, tt, "render", "spawner", "tween")
+
+tt.main_script.update = scripts.enemies_skelespawner_sw.update
+tt.render.sprites[1].anchor.y = 0.22
+tt.render.sprites[1].hidden = true
+tt.render.sprites[1].loop = false
+tt.spawner.animation_concurrent = nil
+tt.spawner.count = 1
+tt.spawner.cycle_time = fts(6)
+tt.spawner.entity = "soldier_flingers_skeleton_sw"
+tt.spawner.keep_gold = false
+tt.spawner.node_offset = 0
+tt.spawner.pos_offset = v(0, 0)
+tt.spawner.allowed_subpaths = {1, 2, 3}
+tt.spawner.random_subpath = true
+tt.tween.disabled = true
+tt.tween.props[1].keys = {{0, 255}, {4, 0}}
+tt.tween.remove = true
+
+tt = E:register_t("soldier_flingers_skeleton_sw", "unit")
+E:add_comps(tt, "soldier", "motion", "nav_path", "main_script", "vis", "info", "lifespan", "melee", "sound_events")
+anchor_y = 0.2
+image_y = 36
+tt.info.portrait = "kr4_info_portraits_soldiers_0033"
+tt.health.armor = 0
+tt.health.hp_inc = 0
+tt.health.hp_max = 80
+tt.health_bar.offset = v(0, 30)
+tt.info.fn = scripts.soldier_flingers_skeleton_sw.get_info
+tt.info.i18n_key = "SOLDIER_SANDWORM_SKELETON"
+tt.main_script.insert = scripts.soldier_flingers_skeleton_sw.insert
+tt.main_script.update = scripts.soldier_flingers_skeleton_sw.update
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_max = 8
+tt.melee.attacks[1].damage_min = 4
+tt.melee.attacks[1].hit_time = fts(4)
+tt.melee.attacks[1].vis_bans = bor(F_FLYING, F_CLIFF)
+tt.melee.attacks[1].vis_flags = F_BLOCK
+tt.melee.attacks[1].sound = "KRVGenericCombat"
+tt.melee.range = 60
+tt.motion.max_speed = 35
+tt.nav_path.dir = -1
+tt.render.sprites[1].anchor.y = 0.42
+tt.render.sprites[1].name = "raise"
+tt.render.sprites[1].prefix = "worm_nest_level4_tremor"
+tt.soldier.melee_slot_offset.x = 5
+tt.unit.hit_offset = v(0, 12)
+tt.unit.marker_offset = v(0, -2)
+tt.unit.mod_offset = v(0, ady(22))
+tt.vis.bans = bor(F_POISON, F_CANNIBALIZE, F_LYCAN)
+tt.vis.flags = F_FRIEND
+tt.sound_events.insert = "sandwormUpgTaunt"
+tt.sound_events.death = "sandwormSkillATaunt"
+
+tt = E:register_t("soldier_flingers_skeleton_warrior_sw", "soldier_flingers_skeleton_sw")
+tt.health.hp_max = 120
+tt.info.i18n_key = "SOLDIER_SANDWORM_SKELETON_2"
+tt.melee.attacks[1].damage_max = 10
+tt.melee.attacks[1].damage_min = 8
+tt.sound_events.insert = "sandwormUpgTaunt"
+tt.sound_events.death = "sandwormSkillATaunt"
