@@ -66,6 +66,8 @@ local persistent_textures = table.to_map({
 	"kr4_dark_army_tower_blazing_watcher",
 	"kr4_swamp_monster_tower",
 	"kr4_dark_army_tower_melting_furnace",
+	"kr4_wicked_sisters_tower",
+	"kr4_wormnest_tower",
 	-- game_gui
 	"gui_common",
 	"gui_ico",
