@@ -1061,7 +1061,9 @@ upgrades.soldiers = {
 	"soldier_deep_devils_chosen",
 	"soldier_ignis_altar_elemental",
 	"soldier_dragon",
-	"soldier_swamp_monster"
+	"soldier_swamp_monster",
+	"soldier_tower_sandworm_1",
+	"soldier_tower_sandworm_2"
 }
 
 upgrades.barrack_soldiers = {
