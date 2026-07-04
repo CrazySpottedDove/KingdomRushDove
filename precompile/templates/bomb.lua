@@ -60,6 +60,11 @@ return function(this, store)
     end
 
     if store.tick_ts >= context.expected_stop_time then
+        local dt = context.expected_stop_time - context.last_ts
+
+        this.pos.x = this.pos.x + context.v_x * dt
+        this.pos.y = this.pos.y + (context.v_y + 0.5 * b.g * dt) * dt
+
         local enemies = U.find_enemies_in_range_filter_off(this.pos, context.dradius, b.damage_flags, b.damage_bans)
         local mods
 
@@ -187,9 +192,10 @@ return function(this, store)
     end
 
     local dt = store.tick_ts - context.last_ts
+    local dv_y = b.g * dt
 
     this.pos.x = this.pos.x + context.v_x * dt
-    this.pos.y = this.pos.y + context.v_y * dt
+    this.pos.y = this.pos.y + (context.v_y + dv_y) * dt
 
     constif(b.align_with_trajectory)
         this.render.sprites[1].r = math.atan2(context.v_y, context.v_x)
@@ -200,7 +206,7 @@ return function(this, store)
     @constif(b.hide_radius)
     this.render.sprites[1].hidden = V.dist2(this.pos.x, this.pos.y, b.from.x, b.from.y) < b.hide_radius * b.hide_radius or V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) < b.hide_radius * b.hide_radius
 
-    context.v_y = context.v_y + b.g * dt
+    context.v_y = context.v_y + dv_y
     context.last_ts = store.tick_ts
 end
 ]]

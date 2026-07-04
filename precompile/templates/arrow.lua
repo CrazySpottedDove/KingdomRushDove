@@ -177,9 +177,10 @@ return function(this, store)
             end
         constelse
             local dt = store.tick_ts - context.last_ts
+            local dv_y = b.g * dt
 
             this.pos.x = this.pos.x + context.v_x * dt
-            this.pos.y = this.pos.y + context.v_y * dt
+            this.pos.y = this.pos.y + (context.v_y + 0.5 * dv_y) * dt
 
             constif(b.rotation_speed)
                 s.r = s.r + b.rotation_speed * store.tick_length
@@ -205,7 +206,7 @@ return function(this, store)
                 context.ps.particle_system.emit = not s.hidden
             constend
 
-            context.v_y = context.v_y + b.g * dt
+            context.v_y = context.v_y + dv_y
             context.last_ts = store.tick_ts
 
             if store.tick_ts > context.expected_stop_time then
