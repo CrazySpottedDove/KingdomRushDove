@@ -5295,7 +5295,7 @@ local function enemy_beat_back_logic(this, store)
 		dt = store.tick_ts - last_ts
 		last_ts = store.tick_ts
 		this.motion.real_speed = math.max(this.motion.real_speed + a * dt, 0)
-		local next_pos = P:next_entity_node(this, dt)
+		local next_pos = P:next_entity_node(this, dt) or this.pos:clone()
 		U.set_destination(this, next_pos)
 		U.walk(this, dt)
 		coroutine.yield()
