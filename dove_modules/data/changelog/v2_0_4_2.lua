@@ -1,1 +1,1 @@
-return {{date="2026-07-04",author="CrazySpottedDove",message="perf: 资源加载优化"},{date="2026-07-04",author="CrazySpottedDove",message="fix: 修正部分技能文本错误"}}
+return {{date="2026-07-04",author="CrazySpottedDove",message="perf: 资源加载优化"},{date="2026-07-04",author="CrazySpottedDove",message="fix: 修正部分技能文本错误"},{date="2026-07-04",author="CrazySpottedDove",message="feat: 优化了沙虫的动画和特效"}}
