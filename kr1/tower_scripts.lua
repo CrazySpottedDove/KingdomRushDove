@@ -24378,15 +24378,15 @@ function scripts.soldier_flingers_skeleton.update(this, store)
 	U.y_animation_play(this, "raise", nil, store.tick_ts, 1)
 
 	while true do
-		if this.clock then
-			if not this.clock.disabled and this.soldier.target_id then
+		if this.cloak then
+			if this.cloak.enabled and this.soldier.target_id then
 				U.bans_remove(this.vis, this.cloak.bans)
 				U.flags_remove(this.vis, this.cloak.flags)
-				this.clock.disabled = true
-			elseif this.clock.disabled and not this.soldier.target_id then
+				this.cloak.enabled = false
+			elseif not this.cloak.enabled and not this.soldier.target_id then
 				U.bans_add(this.vis, this.cloak.bans)
 				U.flags_add(this.vis, this.cloak.flags)
-				this.cloak.disabled = false
+				this.cloak.enabled = true
 			end
 		end
 
