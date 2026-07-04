@@ -3516,7 +3516,7 @@ tt = E:register_t("controller_tower_sandworm_eat")
 AC(tt, "render", "main_script", "pos")
 tt.main_script.update = scripts.controller_tower_sandworm_eat.update
 tt.render.sprites[1].name = "worm_nest_level4_instakill_dust_run"
-tt.render.sprites[1].z = Z_EFFECTS
+tt.render.sprites[1].draw_order = 2
 tt.render.sprites[1].fps = 30
 tt.radius = 60
 tt.vis_flags = bor(F_INSTAKILL, F_EAT)
@@ -3525,6 +3525,7 @@ tt.damage_type = bor(DAMAGE_EAT, DAMAGE_NO_SPAWNS)
 
 tt = E:register_t("decal_tower_sandworm_eat", "decal_tween")
 tt.render.sprites[1].name = "worm_nest_level4_instakill_decal_run"
+tt.render.sprites[1].z = Z_DECALS
 -- 砂砾落地动画结束后，停留在最后一帧，再通过tween渐隐消失
 tt.render.sprites[1].loop = false
 tt.tween.props[1].keys = {{0, 255}, {fts(51), 255}, {fts(51) + 0.5, 0}}
