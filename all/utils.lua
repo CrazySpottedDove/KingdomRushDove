@@ -3439,4 +3439,25 @@ function U.change_health_bar_sort_y_offset_run_time(health_bar, sort_y_offset)
 	end
 end
 
+--- 用于寻找保证可以包括某个点的情况下，离家最近的中心路径节点的位置
+---@param pos ffi.cdata
+---@param radius number
+---@param pi number
+---@note 当找不到合适的点的时候，返回点本身
+---@return ffi.cdata
+function U.find_best_center_node_containing_point(pos, radius, pi)
+	local nodes = P:nearest_nodes(pos.x, pos.y, {pi}, nil)
+	local node = nodes[1]
+	if node and node[4] < radius then
+		local node_pos = P:node_pos_ref(node[1], node[2], node[3])
+		if node_pos:dist(pos) < radius then
+			return node_pos:clone()
+		else
+			return P:node_pos(node[1], node[2], node[3])
+		end
+	else
+		return pos
+	end
+end
+
 return U

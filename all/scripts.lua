@@ -6238,6 +6238,11 @@ function scripts.mod_slow.insert(this, store)
 	end
 
 	log.paranoid("mod_slow.insert (%s)-%s for (%s)-%s", this.id, this.template_name, target.id, target.template_name)
+
+	if this.slow.factor_inc then
+		this.slow.factor = this.slow.factor + this.modifier.level * this.slow.factor_inc
+	end
+
 	U.speed_mul(target, this.slow.factor)
 
 	this.modifier.ts = store.tick_ts

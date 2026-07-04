@@ -49367,31 +49367,6 @@ return {
 		from = 30,
 		to = 106
 	},
-	worm_nest_level1_shoot = {
-		prefix = "worm_nest_level1",
-		from = 107,
-		to = 154
-	},
-	worm_nest_level2_idle = {
-		prefix = "worm_nest_level2",
-		from = 1,
-		to = 76
-	},
-	worm_nest_level2_shoot = {
-		prefix = "worm_nest_level2",
-		from = 77,
-		to = 124
-	},
-	worm_nest_level3_idle = {
-		prefix = "worm_nest_level3",
-		from = 1,
-		to = 76
-	},
-	worm_nest_level3_shoot = {
-		prefix = "worm_nest_level3",
-		from = 77,
-		to = 124
-	},
 	worm_nest_level4_idle = {
 		prefix = "worm_nest_level4",
 		from = 1,

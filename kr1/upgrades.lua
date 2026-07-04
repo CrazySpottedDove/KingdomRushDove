@@ -1250,10 +1250,7 @@ upgrades.engineer_bombs = {
 	"missile_rr",
 	"missile_rr_nitro",
 	"bomb_balloon",
-	"bullet_balloon_oil",
-	"bullet_tower_sandworm",
-	"tower_sandworm_spit",
-	"tower_sandworm_eat"
+	"bullet_balloon_oil"
 }
 
 upgrades.engineer_advanced_tower = {
@@ -1838,6 +1835,8 @@ function upgrades:patch_templates(max_level)
 		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = T("mod_tower_rotten_forest_burst_damage").dps.damage_max * u.damage_factor
 		T("mod_ignis_altar_damage").damage_min = T("mod_ignis_altar_damage").damage_min * u.damage_factor
 		T("mod_ignis_altar_damage").damage_max = T("mod_ignis_altar_damage").damage_max * u.damage_factor
+		T("aura_tower_sandworm").aura.damage_min = T("aura_tower_sandworm").aura.damage_min * u.damage_factor
+		T("aura_tower_sandworm").aura.damage_max = T("aura_tower_sandworm").aura.damage_max * u.damage_factor
 	end
 
 	u = self:get_upgrade("engineer_range_finder")
@@ -1880,6 +1879,8 @@ function upgrades:patch_templates(max_level)
 		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = T("mod_tower_rotten_forest_burst_damage").dps.damage_max * u.damage_factor
 		T("mod_ignis_altar_damage").damage_min = T("mod_ignis_altar_damage").damage_min * u.damage_factor
 		T("mod_ignis_altar_damage").damage_max = T("mod_ignis_altar_damage").damage_max * u.damage_factor
+		T("aura_tower_sandworm").aura.damage_min = T("aura_tower_sandworm").aura.damage_min * u.damage_factor
+		T("aura_tower_sandworm").aura.damage_max = T("aura_tower_sandworm").aura.damage_max * u.damage_factor
 	end
 
 	u = self:get_upgrade("engineer_diffusion")
@@ -1912,6 +1913,9 @@ function upgrades:patch_templates(max_level)
 		T("aura_bullet_tower_hermit_toad_engineer_basic").render.sprites[1].scale.y = T("aura_bullet_tower_hermit_toad_engineer_basic").render.sprites[1].scale.y * u.radius_factor
 		T("aura_bullet_tower_hermit_toad_engineer_basic").aura.radius = T("aura_bullet_tower_hermit_toad_engineer_basic").aura.radius * u.radius_factor
 		T("tower_melting_furnace").attacks.range = T("tower_melting_furnace").attacks.range * u.radius_factor
+		T("aura_tower_sandworm").render.sprites[1].scale.x = T("aura_tower_sandworm").render.sprites[1].scale.x * u.radius_factor
+		T("aura_tower_sandworm").render.sprites[1].scale.y = T("aura_tower_sandworm").render.sprites[1].scale.y * u.radius_factor
+		T("aura_tower_sandworm").aura.radius = T("aura_tower_sandworm").aura.radius * u.radius_factor
 	end
 
 	u = self:get_upgrade("engineer_field_logistics")
@@ -1948,7 +1952,8 @@ function upgrades:patch_templates(max_level)
 			T("soldier_balloon").attacks.list[2],
 			T("soldier_balloon").attacks.list[3],
 			T("tower_melting_furnace").attacks.list[2],
-			T("tower_melting_furnace").attacks.list[4]
+			T("tower_melting_furnace").attacks.list[4],
+			T("tower_sandworm").attacks.list[2]
 		}) do
 			a.cooldown = a.cooldown * u.cooldown_factor
 		end
@@ -2022,6 +2027,16 @@ function upgrades:patch_templates(max_level)
 
 		at = T("ignis_altar_subunit").attacks.list[1]
 		at.cooldown = at.cooldown * u.cooldown_factor
+
+		at = T("tower_sandworm").powers.worm
+		for i = 1, #at.cooldown do
+			at.cooldown[i] = at.cooldown[i] * u.cooldown_factor
+		end
+
+		at = T("tower_sandworm").powers.slime
+		for i = 1, #at.cooldown do
+			at.cooldown[i] = at.cooldown[i] * u.cooldown_factor
+		end
 	end
 
 	u = self:get_upgrade("engineer_efficiency")
@@ -2030,6 +2045,8 @@ function upgrades:patch_templates(max_level)
 		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = T("mod_tower_rotten_forest_burst_damage").dps.damage_max * 1.25
 		T("mod_ignis_altar_damage").damage_min = T("mod_ignis_altar_damage").damage_min * 1.25
 		T("mod_ignis_altar_damage").damage_max = T("mod_ignis_altar_damage").damage_max * 1.25
+		T("aura_tower_sandworm").aura.damage_min = T("aura_tower_sandworm").aura.damage_min * 1.25
+		T("aura_tower_sandworm").aura.damage_max = T("aura_tower_sandworm").aura.damage_max * 1.25
 	end
 
 	if self.list_id == 1 or self.list_id == 2 then
