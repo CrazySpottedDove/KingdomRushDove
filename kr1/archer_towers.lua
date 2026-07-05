@@ -2847,8 +2847,8 @@ tt.sound_events.insert = "ShaolinAttack"
 
 -- Bullet (damage template for monks)
 tt = E:register_t("bullet_shaolin", "arrow")
-tt.bullet.damage_min = 14
-tt.bullet.damage_max = 26
+tt.bullet.damage_min = 13
+tt.bullet.damage_max = 25
 tt.bullet.hit_fx = "shaolin_monk_hit_fx"
 tt.bullet.damage_type = DAMAGE_PHYSICAL
 
