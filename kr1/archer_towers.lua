@@ -141,12 +141,10 @@ tower_crossbow.tower.price = 230
 tower_crossbow.powers.multishot = CC("power")
 tower_crossbow.powers.multishot.price_base = 250
 tower_crossbow.powers.multishot.price_inc = 150
-
 tower_crossbow.powers.multishot.attack_idx = 2
 tower_crossbow.powers.eagle = CC("power")
 tower_crossbow.powers.eagle.price_base = 225
 tower_crossbow.powers.eagle.price_inc = 225
-
 tower_crossbow.main_script.update = scripts.tower_crossbow.update
 tower_crossbow.main_script.remove = scripts.tower_crossbow.remove
 tower_crossbow.attacks.range = 200

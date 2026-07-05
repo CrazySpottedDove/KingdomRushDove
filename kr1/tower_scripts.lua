@@ -687,7 +687,7 @@ scripts.tower_crossbow = {
 
 					local range = ea.range + km.clamp(1, 3, pow_e.level + 1) * ea.range_inc
 					local targets = table.filter(store.towers, function(_, e)
-						return not table.arraycontains(modded_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, range)
+						return not table.arraycontains(modded_ids, e.id) and U.is_inside_ellipse(e.pos, tpos, range)
 					end)
 
 					for _, target in ipairs(targets) do
@@ -739,7 +739,7 @@ scripts.tower_crossbow = {
 							return v.modifier.target_id
 						end)
 						local towers = table.filter(store.towers, function(_, e)
-							return e.tower.can_be_mod and not table.contains(busy_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, eagle_range)
+							return e.tower.can_be_mod and not table.contains(busy_ids, e.id) and U.is_inside_ellipse(e.pos, tpos, eagle_range)
 						end)
 
 						for _, tower in ipairs(towers) do
@@ -1928,7 +1928,7 @@ scripts.tower_high_elven = {
 					end
 
 					local targets = table.filter(store.towers, function(_, e)
-						return not table.contains(modded_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, range)
+						return not table.contains(modded_ids, e.id) and U.is_inside_ellipse(e.pos, tpos, range)
 					end)
 
 					for _, target in ipairs(targets) do
@@ -1970,7 +1970,7 @@ scripts.tower_high_elven = {
 						return v.modifier.target_id
 					end)
 					local towers = table.filter(store.towers, function(_, e)
-						return e.tower.can_be_mod and not table.contains(busy_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, pow_s.range)
+						return e.tower.can_be_mod and not table.contains(busy_ids, e.id) and U.is_inside_ellipse(e.pos, tpos, pow_s.range)
 					end)
 
 					for _, tower in ipairs(towers) do
