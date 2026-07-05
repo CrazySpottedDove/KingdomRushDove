@@ -3011,6 +3011,7 @@ AC(tt, "powers", "track_kills")
 image_y = 64
 anchor_y = 0.22
 tt.info.portrait = "kr4_info_portraits_soldiers_0030"
+tt.info.random_name_format = nil
 tt.health.armor = 0
 tt.health.armor_inc = 0
 tt.health.dead_lifetime = 20
