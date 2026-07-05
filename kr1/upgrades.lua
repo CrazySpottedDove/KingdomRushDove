@@ -1494,9 +1494,9 @@ function upgrades:patch_templates(max_level)
 				t.barrack.max_soldiers = t.barrack.max_soldiers + 1
 			end
 		end
-		local special_soldiers = {"soldier_baby_ashbite", "soldier_tower_pandas_green_lvl4", "soldier_tower_pandas_red_lvl4", "soldier_tower_pandas_blue_lvl4", "soldier_ogre_shipwreck_cook", "soldier_ogre_shipwreck_deckhand", "soldier_ogre_shipwreck_red_goblin", "soldier_ogre_shipwreck_red_goblin_elite"}
+		local special_soldiers = {"soldier_baby_ashbite", "soldier_tower_pandas_green_lvl4", "soldier_tower_pandas_red_lvl4", "soldier_tower_pandas_blue_lvl4", "soldier_ogre_shipwreck_cook", "soldier_ogre_shipwreck_deckhand", "soldier_ogre_shipwreck_red_goblin", "soldier_ogre_shipwreck_red_goblin_elite", "soldier_swamp_monster"}
 
-		for _, n in pairs(special_soldiers) do
+		for _, n in ipairs(special_soldiers) do
 			local t = T(n)
 			t.unit.damage_factor = t.unit.damage_factor * 1.3
 		end
