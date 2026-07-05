@@ -618,6 +618,13 @@ function path_db:next_entity_node(e, dt)
 				n.pi = self.path_connections[n.pi]
 				n.ni = newni + n.dir
 				path = self.paths[n.pi][n.spi]
+			-- 处理反向行动的情况
+			elseif self.path_connections_reverse[n.pi] and n.dir < 0 then
+				local newni = self.path_connections_spi_to_ni[self.path_connections_reverse[n.pi]][n.spi]
+
+				n.pi = self.path_connections_reverse[n.pi]
+				n.ni = newni + n.dir
+				path = self.paths[n.pi][n.spi]
 			else
 				return nil
 			end
