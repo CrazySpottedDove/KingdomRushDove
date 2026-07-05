@@ -3764,7 +3764,7 @@ tt = E:register_t("tower_grim_cemetery", "tower")
 E:add_comps(tt, "attacks", "powers", "barrack")
 tt.tower.type = "grim_cemetery"
 tt.tower.level = 1
-tt.tower.price = 180
+tt.tower.price = 190
 tt.info.fn = scripts.tower_grim_cemetery.get_info
 tt.info.portrait = "kr4_info_portraits_towers_0010"
 tt.info.enc_icon = 13
