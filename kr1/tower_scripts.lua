@@ -28114,6 +28114,7 @@ function scripts.tower_shaolin.update(this, store)
 						local target = targets[idx]
 						pixie.target_round = math.max((i - idx) / #targets, 1)
 						pixie.target_id = target.id
+						pixie.render.sprites[1].fps = this.render.sprites[3].fps or 30
 					end
 					aa.ts = store.tick_ts
 					U.y_animation_play(this, "out", nil, store.tick_ts, false, 3)
