@@ -3943,8 +3943,8 @@ tt.damage_exponent = 1.02
 tt.damage_exponent_inc = 0.02
 
 tt = RT("fireball_orc_shaman_meteorite", "bullet")
-tt.bullet.damage_min = 15
-tt.bullet.damage_max = 35
+tt.bullet.damage_min = 20
+tt.bullet.damage_max = 40
 tt.bullet.damage_min_inc = 20
 tt.bullet.damage_max_inc = 20
 tt.bullet.acceleration_factor = 0.05
