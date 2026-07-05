@@ -3086,8 +3086,8 @@ tt.powers.burning_elemental = CC("power")
 tt.powers.burning_elemental.price_base = 250
 tt.powers.burning_elemental.max_level = 1
 tt.powers.single_extinction = CC("power")
-tt.powers.single_extinction.price_base = 180
-tt.powers.single_extinction.price_inc = 100
+tt.powers.single_extinction.price_base = 225
+tt.powers.single_extinction.price_inc = 150
 tt.powers.true_fire = CC("power")
 tt.powers.true_fire.price_base = 300
 tt.powers.true_fire.max_level = 1
@@ -3175,9 +3175,9 @@ tt.modifier.use_mod_offset = true
 tt.modifier.vis_flags = F_MOD
 tt.modifier.vis_bans = bor(F_NIGHTMARE, F_BOSS)
 tt.received_damage_factor = 1.5
-tt.explosion_damage = 32
-tt.explosion_damage_type = DAMAGE_MAGICAL
-tt.explosion_range = 50
+tt.explosion_damage = 48
+tt.explosion_damage_type = DAMAGE_MAGICAL_EXPLOSION
+tt.explosion_range = 55
 tt.explosion_vis_flags = bor(F_AREA)
 tt.explosion_vis_bans = bor(F_FRIEND)
 tt.explosion_fx = "fx_ignis_altar"
@@ -3194,11 +3194,11 @@ tt.main_script.update = scripts.mod_track_target.update
 
 tt = RT("mod_ignis_altar_single_extinction_2", "mod_ignis_altar_single_extinction_1")
 tt.received_damage_factor = 1.75
-tt.explosion_damage = 54
+tt.explosion_damage = 81
 
 tt = RT("mod_ignis_altar_single_extinction_3", "mod_ignis_altar_single_extinction_2")
 tt.received_damage_factor = 2
-tt.explosion_damage = 76
+tt.explosion_damage = 113
 
 -- Bullet (main projectile)
 tt = RT("bullet_ignis_altar", "bomb")
