@@ -29673,7 +29673,7 @@ function scripts.tower_sandworm.update(this, store)
 					b.bullet.damage_factor = this.tower.damage_factor
 					b.pos:set(this.pos.x + as.bullet_start_offset.x, this.pos.y + as.bullet_start_offset.y)
 					b.bullet.from:copy(b.pos)
-					b.bullet.to = U.calculate_enemy_ffe_pos(target, b.bullet.flight_time)
+					b.bullet.to = U.find_best_center_node_containing_point(U.calculate_enemy_ffe_pos(target, b.bullet.flight_time), E:get_template("aura_bomb_tower_sandworm_spit").aura.radius, target.nav_path.pi)
 					b.bullet.source_id = this.id
 					b.bullet.level = pow_s.level
 					queue_insert(store, b)
