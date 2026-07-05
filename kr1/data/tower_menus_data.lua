@@ -4038,6 +4038,12 @@ return {
 		tt_list = {{
 			tt_title = _("TOWER_SANDWORM_EAT_NAME_1"),
 			tt_desc = _("TOWER_SANDWORM_EAT_DESCRIPTION_1")
+		}, {
+			tt_title = _("TOWER_SANDWORM_EAT_NAME_2"),
+			tt_desc = _("TOWER_SANDWORM_EAT_DESCRIPTION_2")
+		}, {
+			tt_title = _("TOWER_SANDWORM_EAT_NAME_3"),
+			tt_desc = _("TOWER_SANDWORM_EAT_DESCRIPTION_3")
 		}}
 	}), M(tpl.upgrade_power, {
 		action_arg = "slime",

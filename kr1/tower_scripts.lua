@@ -29563,6 +29563,7 @@ function scripts.tower_sandworm.update(this, store)
 			end
 			if pow_e.level > 0 and pow_e.changed then
 				pow_e.changed = nil
+				ae.cooldown = pow_e.cooldown[pow_e.level]
 			end
 			if pow_w.level > 0 and pow_w.changed then
 				pow_w.changed = nil

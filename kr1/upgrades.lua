@@ -1954,8 +1954,7 @@ function upgrades:patch_templates(max_level)
 			T("soldier_balloon").attacks.list[2],
 			T("soldier_balloon").attacks.list[3],
 			T("tower_melting_furnace").attacks.list[2],
-			T("tower_melting_furnace").attacks.list[4],
-			T("tower_sandworm").attacks.list[2]
+			T("tower_melting_furnace").attacks.list[4]
 		}) do
 			a.cooldown = a.cooldown * u.cooldown_factor
 		end
@@ -2036,6 +2035,11 @@ function upgrades:patch_templates(max_level)
 		end
 
 		at = T("tower_sandworm").powers.slime
+		for i = 1, #at.cooldown do
+			at.cooldown[i] = at.cooldown[i] * u.cooldown_factor
+		end
+
+		at = T("tower_sandworm").powers.eat
 		for i = 1, #at.cooldown do
 			at.cooldown[i] = at.cooldown[i] * u.cooldown_factor
 		end
