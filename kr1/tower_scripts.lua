@@ -25479,6 +25479,7 @@ function scripts.tower_grim_cemetery.remove(this, store)
 			if s.health then
 				s.health.dead = true
 			end
+			queue_remove(store, s)
 		end
 		queue_remove(store, this.aura_cemetery)
 		this.aura_cemetery = nil
