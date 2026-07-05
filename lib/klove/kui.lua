@@ -591,9 +591,9 @@ function KView:update(dt)
 end
 
 function KView:draw()
-	if self.hidden then
-		return
-	end
+	-- if self.hidden then
+	-- 	return
+	-- end
 	local pr, pg, pb, pa = G.getColor()
 	local current_alpha = pa * self.alpha
 
@@ -729,10 +729,12 @@ function KView:_draw_children()
 		if clip_x ~= nil and (clip_xw < c.pos.x or clip_x > c.pos.x + c.size.x or clip_yh < c.pos.y or clip_y > c.pos.y + c.size.y) then
 		-- block empty
 		else
-			G.push()
-			G.translate(c.pos.x, c.pos.y)
-			c:draw()
-			G.pop()
+			if not c.hidden then
+				G.push()
+				G.translate(c.pos.x, c.pos.y)
+				c:draw()
+				G.pop()
+			end
 		end
 	end
 
@@ -1043,9 +1045,9 @@ function KStaticView:initialize(size, image_name, image_scale)
 end
 
 function KStaticView:draw()
-	if self.hidden then
-		return
-	end
+	-- if self.hidden then
+	-- 	return
+	-- end
 
 	local pr, pg, pb, pa = G.getColor()
 	local current_alpha = pa * self.alpha
@@ -1152,11 +1154,12 @@ function KVirtualView:_draw_children()
 
 	for i = 1, #self.children do
 		local c = self.children[i]
-
-		G.push()
-		G.translate(c.pos.x, c.pos.y)
-		c:draw()
-		G.pop()
+		if not c.hidden then
+			G.push()
+			G.translate(c.pos.x, c.pos.y)
+			c:draw()
+			G.pop()
+		end
 	end
 
 	G.pop()
@@ -1170,9 +1173,9 @@ function KVirtualStaticView:initialize(size)
 end
 
 function KVirtualStaticView:draw()
-	if self.hidden then
-		return
-	end
+	-- if self.hidden then
+	-- 	return
+	-- end
 	local pr, pg, pb, pa = G.getColor()
 	local current_alpha = pa * self.alpha
 

@@ -6019,51 +6019,41 @@ function CriketMenuButton:initialize(item)
 	self.size = V.vclone(b.size)
 end
 
-CriketMenu = class("CriketMenu", KImageView)
+CriketMenu = class("CriketMenu", KVirtualView)
+
+local function calculate_menu_button_position(item_index)
+	local padding_x = 30
+	local padding_y = 10 + game_gui.hud_counters.size.y * game_gui.hud_counters.scale.y + game_gui.hud_counters.pos.y
+	local padding_button = 8
+	local button_size = 55
+
+	local sw = game_gui.sw
+	local columns = math.floor((sw - 2 * padding_x) / (button_size + padding_button))
+	local row_id, column_id = math.floor((item_index - 1) / columns) + 1, (item_index - 1) % columns + 1
+
+	-- 重新计算 padding_x 以使按钮居中
+	padding_x = (sw - (columns * button_size + (columns - 1) * padding_button)) / 2
+
+	return V.v((column_id - 1) * (button_size + padding_button) + padding_x, (row_id - 1) * (button_size + padding_button) + padding_y)
+end
 
 function CriketMenu:initialize()
-	CriketMenu.super.initialize(self, "gui_ring")
-
+	CriketMenu.super.initialize(self)
 	self.can_drag = false
 	self.propagate_on_click = true
 	self.propagate_on_down = true
 	self.propagate_on_up = true
 	self.propagate_on_enter = true
-	self.anchor = v(self.size.x * 0.5, self.size.y * 0.5)
 	self.clip = false
-end
-
-function CriketMenu:calculate_button_position(item_index)
-	local circle_volume = 6
-	local radius_mod = 65
-	local radius = radius_mod -- 默认半径
-
-	while item_index > circle_volume do
-		item_index = item_index - circle_volume
-		radius = radius + radius_mod -- 每圈增加80像素的半径
-		circle_volume = circle_volume + 6 -- 每圈增加6个按钮
-	end
-
-	-- 计算每个按钮之间的角度间隔
-	local angle_step = (2 * math.pi) / circle_volume
-	-- 计算当前按钮的角度（从顶部开始，顺时针）
-	local angle = (item_index - 1) * angle_step - math.pi * 0.5
-	-- 计算相对于圆心的位置
-	local x = math.cos(angle) * radius
-	local y = math.sin(angle) * radius
-
-	-- 返回相对于菜单中心的位置
-	return V.v(self.size.x * 0.5 + x, self.size.y * 0.5 + y)
 end
 
 function CriketMenu:show()
 	self:remove_children()
 	local criket_menu = require("kr1.data.criket_menu_data")
-	for index, item in pairs(criket_menu) do
+	for index, item in ipairs(criket_menu) do
 		local b = CriketMenuButton:new(item)
 
-		b.pos = self:calculate_button_position(index)
-		b.pos.x, b.pos.y = b.pos.x - b.size.x * 0.5, b.pos.y - b.size.y * 0.5
+		b.pos = calculate_menu_button_position(index)
 		b.item_props = item
 
 		local stm = self
@@ -6093,7 +6083,6 @@ function CriketMenu:show()
 		self:add_child(b)
 	end
 
-	self.pos = v(game_gui.sw * 0.5, game_gui.sh * 0.5)
 	self.scale = v(0.6, 0.6)
 	self.alpha = 0
 	self.hidden = false
@@ -6301,41 +6290,17 @@ function HeroMenuButton:initialize(item)
 	self.size = V.vclone(b.size)
 end
 
-HeroMenu = class("HeroMenu", KImageView)
+HeroMenu = class("HeroMenu", KVirtualView)
 
 function HeroMenu:initialize()
-	HeroMenu.super.initialize(self, "gui_ring")
+	HeroMenu.super.initialize(self)
 
 	self.can_drag = false
 	self.propagate_on_click = true
 	self.propagate_on_down = true
 	self.propagate_on_up = true
 	self.propagate_on_enter = true
-	self.anchor = v(self.size.x * 0.5, self.size.y * 0.5)
 	self.clip = false
-end
-
-function HeroMenu:calculate_button_position(item_index)
-	local circle_volume = 6
-	local radius_mod = 65
-	local radius = radius_mod -- 默认半径
-
-	while item_index > circle_volume do
-		item_index = item_index - circle_volume
-		radius = radius + radius_mod -- 每圈增加80像素的半径
-		circle_volume = circle_volume + 6 -- 每圈增加6个按钮
-	end
-
-	-- 计算每个按钮之间的角度间隔
-	local angle_step = (2 * math.pi) / circle_volume
-	-- 计算当前按钮的角度（从顶部开始，顺时针）
-	local angle = (item_index - 1) * angle_step - math.pi * 0.5
-	-- 计算相对于圆心的位置
-	local x = math.cos(angle) * radius
-	local y = math.sin(angle) * radius
-
-	-- 返回相对于菜单中心的位置
-	return V.v(self.size.x * 0.5 + x, self.size.y * 0.5 + y)
 end
 
 function HeroMenu:show()
@@ -6350,8 +6315,7 @@ function HeroMenu:show()
 		}
 		local b = HeroMenuButton:new(item)
 
-		b.pos = self:calculate_button_position(index)
-		b.pos.x, b.pos.y = b.pos.x - b.size.x * 0.5, b.pos.y - b.size.y * 0.5
+		b.pos = calculate_menu_button_position(index)
 		b.item_props = item
 
 		local stm = self
@@ -6375,7 +6339,6 @@ function HeroMenu:show()
 		self:add_child(b)
 	end
 
-	self.pos = v(game_gui.sw * 0.5, game_gui.sh * 0.5)
 	self.scale = v(0.6, 0.6)
 	self.alpha = 0
 	self.hidden = false
