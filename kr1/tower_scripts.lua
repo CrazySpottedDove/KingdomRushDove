@@ -27283,7 +27283,7 @@ function scripts.goblirang.update(this, store)
 						if mods then
 							for j = 1, #mods do
 								local mod_name = mods[j]
-								if U.flags_pass(t.vis, E:get_template(mod_name).modifier) then
+								if U.flags_pass(t.vis, E:get_template(mod_name).modifier) and (mod_name ~= "mod_goblirang_stun" or math.random() < 0.2) then
 									local mod = E:create_entity(mod_name)
 
 									mod.modifier.source_id = this.id

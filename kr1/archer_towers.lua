@@ -2715,9 +2715,6 @@ tt.render.sprites[1].animated = false
 tt.sound_events.insert = "GoblirangSound"
 
 tt = RT("mod_goblirang_stun", "mod_stun")
-tt.main_script.insert = fn_group(function(this, store)
-	return math.random() < 0.2
-end, tt.main_script.insert)
 tt.modifier.duration = 1
 tt.modifier.vis_bans = F_BOSS
 
