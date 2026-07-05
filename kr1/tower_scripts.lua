@@ -28894,6 +28894,9 @@ function scripts.tower_melting_furnace.remove(this, store)
 	for _, m in ipairs(mods) do
 		queue_remove(store, m)
 	end
+	this._fx_point_range = nil
+	this._fx_point_path_sum = nil
+	this._fx_points_cache = nil
 	return true
 end
 
@@ -29100,21 +29103,28 @@ end
 
 scripts.mod_furnace_fuel = {}
 
+function scripts.mod_furnace_fuel.insert(this, store)
+	local m = this.modifier
+	local tower = store.entities[m.target_id]
+	if not tower then
+		return false
+	end
+	if tower.template_name == "tower_melting_furnace" then
+		tower.attacks.list[1].sounds = "MeltingFurnaceAttackFuel"
+		tower.attacks.list[4].boost = true
+	end
+	SU.insert_tower_cooldown_buff(store.tick_ts, tower, this.cooldown_factor)
+end
+
 function scripts.mod_furnace_fuel.update(this, store)
 	local m = this.modifier
 	local tower = store.entities[m.target_id]
 	if not tower then
 		return
 	end
-	if tower.template_name == "tower_melting_furnace" then
-		tower.attacks.list[1].sounds = "MeltingFurnaceAttackFuel"
-		tower.attacks.list[4].boost = true
-	end
 	U.y_animation_play_default(this, "fadeIn", nil, store.tick_ts)
-	SU.insert_tower_cooldown_buff(store.tick_ts, tower, this.cooldown_factor)
 	U.animation_start_default(this, "loop", nil, store.tick_ts, true)
-	U.y_wait_unconditional(store, m.duration)
-	SU.remove_tower_cooldown_buff(store.tick_ts, tower, this.cooldown_factor)
+	U.y_wait_unconditional(store, m.duration - fts(13))
 	U.y_animation_play_default(this, "fadeOut", nil, store.tick_ts)
 	queue_remove(store, this)
 end
@@ -29124,6 +29134,9 @@ function scripts.mod_furnace_fuel.remove(this, store)
 	if not tower then
 		return true
 	end
+
+	SU.remove_tower_cooldown_buff(store.tick_ts, tower, this.cooldown_factor)
+
 	if tower.template_name == "tower_melting_furnace" then
 		tower.attacks.list[1].sound = "MeltingFurnaceAttack"
 		tower.attacks.list[4].boost = false

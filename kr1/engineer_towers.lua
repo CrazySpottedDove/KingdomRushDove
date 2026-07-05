@@ -3357,6 +3357,7 @@ tt = E:register_t("mod_furnace_fuel", "modifier")
 AC(tt, "render")
 tt.cooldown_factor = 0.6
 tt.modifier.duration = 10
+tt.main_script.insert = scripts.mod_furnace_fuel.insert
 tt.main_script.update = scripts.mod_furnace_fuel.update
 tt.main_script.remove = scripts.mod_furnace_fuel.remove
 tt.render.sprites[1].prefix = "darkarmy_melting_furnace_tower_lvl4_flames"
