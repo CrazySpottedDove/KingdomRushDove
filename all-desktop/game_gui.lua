@@ -6739,6 +6739,11 @@ function TowerMenu:update(dt)
 						c:enable()
 					end
 				else
+					if e.tower_upgrade_persistent_data.change_mode_disabled then
+						c:disable()
+					else
+						c:enable()
+					end
 					c.button:set_image(c.item["image_mode" .. current_mode])
 				end
 			elseif c.item_props.action == "tw_free_action" then
@@ -7366,16 +7371,12 @@ end
 function TowerMenuButton:disable()
 	self.click_disabled = true
 
-	if self.item.action ~= "tw_change_mode" then
-		-- self.button:set_image(self.item_image .. "_disabled")
-		self.button:disable()
+	self.button:disable()
 
-		if self.price_tag then
-			-- self.price_tag:set_image("price_tag_disabled")
-			self.price_tag:disable()
+	if self.price_tag then
+		self.price_tag:disable()
 
-			self.price_tag.colors.text = {156, 146, 132}
-		end
+		self.price_tag.colors.text = {156, 146, 132}
 	end
 end
 

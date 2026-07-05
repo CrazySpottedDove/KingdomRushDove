@@ -49075,11 +49075,6 @@ return {
 		from = 159,
 		to = 191
 	},
-	swamp_monster_unit_lvl4_out = {
-		prefix = "swamp_monster_unit_lvl4",
-		from = 192,
-		to = 205
-	},
 	darkarmy_melting_furnace_tower_swords_run = {
 		prefix = "darkarmy_melting_furnace_tower_swords",
 		from = 1,

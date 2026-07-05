@@ -28726,40 +28726,31 @@ end
 function scripts.tower_swamp_monster.update(this, store)
 	local ab = this.attacks.list[1]
 	local b = this.barrack
+	local mode_changing = false
 	local current_mode = this.tower_upgrade_persistent_data.current_mode
 	local tpos = tpos(this)
-
+	local spawn_pos = v(this.pos.x + this.monster_out_offset.x, this.pos.y + this.monster_out_offset.y)
 	local pow_s = this.powers.stun
 	local pow_i = this.powers.instakill
 	local pow_e = this.powers.eat
 
-	local function sync_mode()
-		if this.change_mode then
-			this.change_mode = false
-			if current_mode == 1 then
-				if not this.barrack.soldiers[1].health.dead then
-					this.barrack.soldiers[1].health.dead = true
-					queue_remove(store, this.barrack.soldiers[1])
-				end
-				current_mode = 0
-			else
-				current_mode = 1
-			end
-			S:queue("SwampMonsterTaunt")
-			this.tower_upgrade_persistent_data.current_mode = current_mode
-		end
-		for i = 3, 5 do
-			this.render.sprites[i].hidden = current_mode == 1
-		end
-		for i = 6, 7 do
-			this.render.sprites[i].hidden = current_mode == 0
-		end
-		this.barrack.max_soldiers = current_mode == 0 and 0 or 1
+	for i = 3, 5 do
+		this.render.sprites[i].hidden = current_mode == 1
+	end
+	for i = 6, 7 do
+		this.render.sprites[i].hidden = current_mode == 0
 	end
 
-	sync_mode()
-
 	while true do
+		if current_mode == 1 then
+			local s = this.barrack.soldiers[1]
+			if not s or s.health.dead then
+				this.tower_upgrade_persistent_data.change_mode_disabled = true
+			else
+				this.tower_upgrade_persistent_data.change_mode_disabled = false
+			end
+		end
+
 		if pow_s.changed then
 			pow_s.changed = nil
 			for _, s in ipairs(b.soldiers) do
@@ -28784,30 +28775,63 @@ function scripts.tower_swamp_monster.update(this, store)
 			end
 		end
 
-		sync_mode()
-
-		if not this.tower.blocked then
-			for i = 1, b.max_soldiers do
-				local s = b.soldiers[i]
-				if not s or s.health.dead and not store.entities[s.id] then
-					s = E:create_entity(b.soldier_type)
-					s.soldier.tower_id = this.id
-					s.pos:copy(this.pos)
-					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers)
+		if this.change_mode then
+			this.change_mode = false
+			if current_mode == 1 then
+				local s = this.barrack.soldiers[1]
+				if not s then
+					mode_changing = false
+					this.render.sprites[3].hidden = false
+					this.render.sprites[4].hidden = false
+					this.render.sprites[5].hidden = false
+					this.render.sprites[6].hidden = true
+					this.render.sprites[7].hidden = true
+				else
+					-- 兵营形态变化为箭塔形态，不可能存在 mode_changing，因为从箭塔变成兵营不存在过渡状态。
+					-- 我们直接考虑让沼泽巨人走回去，这里沼泽巨人一定活着，因为当沼泽巨人死亡时，ui 处于禁用状态。
 					s.nav_rally.new = true
-
-					s.powers.stun.level = pow_s.level
-					s.powers.instakill.level = pow_i.level
-					s.powers.eat.level = pow_e.level
-
-					U.soldier_inherit_tower_buff_factor(s, this)
-					queue_insert(store, s)
-					b.soldiers[i] = s
-					signal.emit("tower-spawn", this, s)
+					s.nav_rally.pos:copy(spawn_pos)
+					s.nav_rally.center:copy(spawn_pos)
+					s.ui.can_click = false
+					U.unblock_target(store, s)
+					U.bans_add(s.vis, F_ALL)
+					mode_changing = true
+					this.render.sprites[3].hidden = true
+					this.render.sprites[4].hidden = true
+					this.render.sprites[5].hidden = true
+					this.render.sprites[6].hidden = false
+					this.render.sprites[7].hidden = false
 				end
-			end
 
+				current_mode = 0
+			else
+				-- 箭塔形态变化为兵营形态。由于从兵营变成箭塔时，可能导致 mode_changing 为 true，所以这里需要考虑两种情况
+				if mode_changing then
+					-- 沼泽巨人还在走回来的路上，把它再派回去
+					local s = this.barrack.soldiers[1]
+					s.ui.can_click = true
+					s.nav_rally.new = true
+					s.nav_rally.pos:copy(b.rally_pos)
+					s.nav_rally.center:copy(b.rally_pos)
+					U.bans_remove(s.vis, F_ALL)
+					mode_changing = false
+				end
+				-- 如果 mode_changing 为 false，说明沼泽巨人已经走回来了，直接切换模式即可
+				current_mode = 1
+				this.render.sprites[3].hidden = true
+				this.render.sprites[4].hidden = true
+				this.render.sprites[5].hidden = true
+				this.render.sprites[6].hidden = false
+				this.render.sprites[7].hidden = false
+			end
+			S:queue("SwampMonsterTaunt")
+			this.tower_upgrade_persistent_data.current_mode = current_mode
+		end
+
+		-- 切换状态时，也不进行实际的操作
+		if not this.tower.blocked and not mode_changing then
 			if current_mode == 0 then
+				-- 箭塔状态，进行攻击
 				if ready_to_attack(ab, store, this.tower.cooldown_factor) then
 					local target = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, this.attacks.range, ab.vis_flags, ab.vis_bans)
 
@@ -28869,20 +28893,72 @@ function scripts.tower_swamp_monster.update(this, store)
 						ab.ts = ab.ts + 0.1
 					end
 				end
+			else
+				-- 兵营状态，检查士兵
+				local s = b.soldiers[1]
+				if not s then
+					local ns = E:create_entity(b.soldier_type)
+					ns.soldier.tower_id = this.id
+					ns.pos:copy(spawn_pos)
+					ns.nav_rally.pos:copy(b.rally_pos)
+					ns.nav_rally.center:copy(b.rally_pos)
+					ns.nav_rally.new = true
+					ns.powers.stun.level = pow_s.level
+					ns.powers.instakill.level = pow_i.level
+					ns.powers.eat.level = pow_e.level
+					U.soldier_inherit_tower_buff_factor(ns, this)
+					queue_insert(store, ns)
+					b.soldiers[1] = ns
+					signal.emit("tower-spawn", this, ns)
+				elseif s.health.dead and store.tick_ts - s.health.death_ts > s.health.dead_lifetime then
+					queue_remove(store, s)
+					local ns = E:create_entity(b.soldier_type)
+					ns.soldier.tower_id = this.id
+					ns.pos:copy(s.pos)
+					ns.nav_rally.pos:copy(b.rally_pos)
+					ns.nav_rally.center:copy(b.rally_pos)
+					ns.nav_rally.new = true
+					ns.powers.stun.level = pow_s.level
+					ns.powers.instakill.level = pow_i.level
+					ns.powers.eat.level = pow_e.level
+					U.soldier_inherit_tower_buff_factor(ns, this)
+					queue_insert(store, ns)
+					b.soldiers[1] = ns
+					signal.emit("tower-spawn", this, ns)
+				end
 			end
 		end
 
-		if b.rally_new then
-			b.rally_new = false
-			signal.emit("rally-point-changed", this)
-			local all_dead = true
-			for i, s in ipairs(b.soldiers) do
-				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
-				s.nav_rally.new = true
-				all_dead = all_dead and s.health.dead
+		-- 作为兵营时，检查士兵的调集
+		if current_mode == 1 then
+			if b.rally_new then
+				b.rally_new = false
+				signal.emit("rally-point-changed", this)
+				local all_dead = true
+				for i, s in ipairs(b.soldiers) do
+					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
+					s.nav_rally.new = true
+					all_dead = all_dead and s.health.dead
+				end
+				if not all_dead then
+					S:queue(this.sound_events.change_rally_point)
+				end
 			end
-			if not all_dead then
-				S:queue(this.sound_events.change_rally_point)
+		end
+
+		-- 处理 mode_changing 的情况
+		if mode_changing then
+			local s = b.soldiers[1]
+			if s.pos:equals(spawn_pos) then
+				mode_changing = false
+				s.health.dead = true
+				queue_remove(store, s)
+				this.render.sprites[3].hidden = false
+				this.render.sprites[4].hidden = false
+				this.render.sprites[5].hidden = false
+				this.render.sprites[6].hidden = true
+				this.render.sprites[7].hidden = true
+				b.soldiers[1] = nil
 			end
 		end
 
