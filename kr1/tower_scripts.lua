@@ -28445,7 +28445,7 @@ scripts.tower_blazing_watcher = {
 							local last_ts = store.tick_ts
 							local charge_time = 0
 
-							while target and not target.health.dead and not this.tower.blocked and U.is_inside_ellipse(tpos, target.pos, a.range * 1.25) do
+							while target and not target.health.dead and not this.tower.blocked and U.is_inside_ellipse(tpos, target.pos, a.range * 1.25) and not b.force_stop_ray do
 								charge_time = charge_time + (store.tick_ts - last_ts) / this.tower.cooldown_factor
 								last_ts = store.tick_ts
 
@@ -28569,6 +28569,12 @@ scripts.bullet_tower_blazing_watcher = {
 			coroutine.yield()
 			s.hidden = false
 			source = store.entities[b.source_id]
+
+			-- 输出 modifier 被移除，强制打断
+			if not store.entities[mod_dps.id] then
+				this.force_stop_ray = true
+				break
+			end
 		end
 
 		if not target or target.health.dead or this.force_stop_ray or not source then

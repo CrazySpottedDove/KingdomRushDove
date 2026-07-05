@@ -48706,10 +48706,12 @@ function scripts.enemy_nine_tailed_fox.update(this, store)
 					U.sprites_hide(this, nil, nil, true)
 
 					while not tp_trail.finished do
+						this.pos.x = tp_trail.pos.x
+						this.pos.y = tp_trail.pos.y
 						coroutine.yield()
 					end
 
-					this.pos = P:node_pos(this.nav_path.pi, this.nav_path.spi, target_ni)
+					this.pos:copy(P:node_pos_ref(this.nav_path.pi, this.nav_path.spi, target_ni))
 					this.nav_path.ni = target_ni
 
 					U.sprites_show(this, nil, nil, true)
