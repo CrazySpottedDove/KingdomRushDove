@@ -629,6 +629,7 @@ scripts.tower_crossbow = {
 
 		if this.eagle_previews then
 			SU.queue_remove_clean_table(store, this.eagle_previews)
+			this.eagle_previews = nil
 		end
 
 		return true
@@ -1861,6 +1862,7 @@ scripts.tower_high_elven = {
 
 		if this.sentinel_previews then
 			SU.queue_remove_clean_table(store, this.sentinel_previews)
+			this.sentinel_previews = nil
 		end
 
 		return true
@@ -1909,7 +1911,7 @@ scripts.tower_high_elven = {
 					sentinel_previews_level = pow_s.level
 
 					local mods = table.filter(store.modifiers, function(_, e)
-						return e.modifier and e.modifier.source_id == this.id
+						return e.modifier.source_id == this.id
 					end)
 					local modded_ids = {}
 
@@ -12949,7 +12951,6 @@ function scripts.tower_arcane_wizard5.update(this, store)
 	a._last_target_pos = a._last_target_pos or v(REF_W, 0)
 	ar.ts = store.tick_ts - ar.cooldown + a.attack_delay_on_spawn
 
-	local empowerments_previews
 	local first_time_empower = true
 
 	local function find_target(aa)
@@ -13000,11 +13001,11 @@ function scripts.tower_arcane_wizard5.update(this, store)
 
 			SU.towers_swaped(store, this, this.attacks.list)
 
-			if this.ui.hover_active and this.ui.args == "empowerment" and not empowerments_previews then
-				empowerments_previews = {}
+			if this.ui.hover_active and this.ui.args == "empowerment" and not this.empowerments_previews then
+				this.empowerments_previews = {}
 
 				local targets = table.filter(store.towers, function(k, v)
-					return U.is_inside_ellipse(v.pos, this.pos, ae.max_range) and not U.has_modifiers(store, v, ae.mod)
+					return U.is_inside_ellipse(v.pos, tpos(this), ae.max_range) and not U.has_modifiers(store, v, ae.mod)
 				end)
 
 				if targets then
@@ -13015,19 +13016,19 @@ function scripts.tower_arcane_wizard5.update(this, store)
 						decal.render.sprites[1].ts = store.tick_ts
 
 						queue_insert(store, decal)
-						table.insert(empowerments_previews, decal)
+						table.insert(this.empowerments_previews, decal)
 					end
 				end
-			elseif empowerments_previews and (not this.ui.hover_active or this.ui.args ~= "empowerment") then
-				for _, decal in pairs(empowerments_previews) do
+			elseif this.empowerments_previews and (not this.ui.hover_active or this.ui.args ~= "empowerment") then
+				for _, decal in ipairs(this.empowerments_previews) do
 					queue_remove(store, decal)
 				end
 
-				empowerments_previews = nil
+				this.empowerments_previews = nil
 			end
 
 			if pow_e.level > 0 and store.tick_ts - ae.ts > ae.cooldown then
-				local towers = U.find_towers_in_range(store.towers, this.pos, ae, function(t)
+				local towers = U.find_towers_in_range(store.towers, tpos(this), ae, function(t)
 					local has_mod, mods = U.has_modifiers(store, t, ae.mod)
 					local max_factor = 1
 
@@ -13280,6 +13281,14 @@ function scripts.tower_arcane_wizard5.remove(this, store)
 			-- end
 			end
 		end
+	end
+
+	if this.empowerments_previews then
+		for _, decal in ipairs(this.empowerments_previews) do
+			queue_remove(store, decal)
+		end
+
+		this.empowerments_previews = nil
 	end
 
 	return true
@@ -28976,6 +28985,14 @@ function scripts.tower_melting_furnace.remove(this, store)
 	for _, m in ipairs(mods) do
 		queue_remove(store, m)
 	end
+
+	if this.heat_previews then
+		for _, decal in ipairs(this.heat_previews) do
+			queue_remove(store, decal)
+		end
+		this.heat_previews = nil
+	end
+
 	this._fx_point_range = nil
 	this._fx_point_path_sum = nil
 	this._fx_points_cache = nil
@@ -29014,6 +29031,36 @@ function scripts.tower_melting_furnace.update(this, store)
 				if pow_coal.level == 1 then
 					a_coal.ts = store.tick_ts
 				end
+			end
+
+			if this.ui.hover_active and this.ui.args == "heat" and not this.heat_previews then
+				this.heat_previews = {}
+				local mods = table.filter(store.modifiers, function(_, e)
+					return e.modifier.source_id == this.id and e.template_name == "mod_furnace_buff"
+				end)
+
+				local modded_ids = {}
+				for _, m in ipairs(mods) do
+					table.insert(modded_ids, m.modifier.target_id)
+				end
+
+				local targets = table.filter(store.towers, function(_, e)
+					return not table.arraycontains(modded_ids, e.id) and U.is_inside_ellipse(e.pos, tpos, a_buff.range)
+				end)
+
+				for _, target in ipairs(targets) do
+					local decal = E:create_entity("decal_furnace_buff_preview")
+
+					decal.pos = target.pos
+					decal.render.sprites[1].ts = store.tick_ts
+					queue_insert(store, decal)
+					table.insert(this.heat_previews, decal)
+				end
+			elseif this.heat_previews and (not this.ui.hover_active or this.ui.args ~= "heat") then
+				for _, decal in ipairs(this.heat_previews) do
+					queue_remove(store, decal)
+				end
+				this.heat_previews = nil
 			end
 
 			if ready_to_use_power(pow_heat, a_buff, store, this.tower.cooldown_factor) then

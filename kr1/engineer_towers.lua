@@ -3377,6 +3377,13 @@ tt.render.sprites[1].anchor.y = 0.21
 tt.render.sprites[1].offset = v(0, -10)
 tt.render.sprites[1].draw_order = 11
 
+tt = E:register_t("decal_furnace_buff_preview", "decal")
+tt.render.sprites[1].name = "darkarmy_melting_furnace_tower_swords_run"
+tt.render.sprites[1].anchor.y = 0.21
+tt.render.sprites[1].offset = v(0, -10)
+tt.render.sprites[1].draw_order = 11
+tt.render.sprites[1].alpha = 150
+
 -- Coal bullet
 tt = RT("melting_furnace_coal", "bomb")
 tt.bullet.damage_type = DAMAGE_NONE
