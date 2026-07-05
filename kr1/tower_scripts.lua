@@ -1926,7 +1926,7 @@ scripts.tower_high_elven = {
 					end
 
 					local targets = table.filter(store.towers, function(_, e)
-						return e ~= this and not table.contains(modded_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, range)
+						return not table.contains(modded_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, range)
 					end)
 
 					for _, target in ipairs(targets) do

@@ -12072,7 +12072,6 @@ tt.timed_attacks.list[1].shoot_time = fts(4)
 tt.timed_attacks.list[1].bullet_start_offset = vec_2(8, 15)
 tt.timed_attacks.list[1].cooldown = nil
 tt.timed_attacks.list[1].disabled = true
-tt.timed_attacks.list[1].ignore_out_of_range_check = 1
 tt.timed_attacks.list[1].sound = "HeroVenomHeartseekerCast"
 tt.timed_attacks.list[1].min_cooldown = b.shared_cooldown
 tt.timed_attacks.list[1].vis_bans = bor(F_NIGHTMARE)

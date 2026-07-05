@@ -2164,7 +2164,6 @@ tt.attacks.list[1].prediction_time = fts(23)
 tt.attacks.list[1].ray_timing_max = b.basic_attack.ray_timing_max[4]
 tt.attacks.list[1].ray_timing_min = b.basic_attack.ray_timing_min[4]
 tt.attacks.list[1].targeting_style = b.basic_attack.targeting_style
-tt.attacks.list[1].ignore_out_of_range_check = 1
 tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
 tt.attacks.list[1].sound = "TowerElvenStargazersBasicAttack"
 tt.attacks.list[1].bullet_start_offset = {v(-30, 90), v(-15, 105), v(15, 105), v(30, 90)}
