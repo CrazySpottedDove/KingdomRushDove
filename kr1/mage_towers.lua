@@ -2576,7 +2576,6 @@ tt.attacks.list[2].vis_bans = bor(F_NIGHTMARE)
 tt.attacks.list[2].shoot_time = fts(31)
 tt.attacks.list[2].load_time = fts(13)
 tt.attacks.list[2].sound = "TowerArcaneWizardDisintegrate"
-tt.attacks.list[2].excluded_templates = {}
 tt.attacks.list[2].count = 5
 tt.attacks.list[3] = CC("custom_attack")
 tt.attacks.list[3].animation = "skill2"

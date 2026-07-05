@@ -686,7 +686,7 @@ scripts.tower_crossbow = {
 
 					local range = ea.range + km.clamp(1, 3, pow_e.level + 1) * ea.range_inc
 					local targets = table.filter(store.towers, function(_, e)
-						return e ~= this and not table.arraycontains(modded_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, range)
+						return not table.arraycontains(modded_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, range)
 					end)
 
 					for _, target in ipairs(targets) do
@@ -1139,7 +1139,7 @@ scripts.tower_pirate_watchtower = {
 					end
 
 					local targets = table.filter(store.towers, function(_, e)
-						return e.tower.can_be_mod and not table.contains(modded_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, pow_w.range)
+						return not table.contains(modded_ids, e.id) and U.is_inside_ellipse(e.pos, this.pos, pow_w.range)
 					end)
 
 					for _, target in ipairs(targets) do
@@ -1158,6 +1158,7 @@ scripts.tower_pirate_watchtower = {
 
 					this.watcher_previews = nil
 				end
+
 				if pow_c.changed then
 					pow_c.changed = nil
 					a.cooldown = pow_c.values[pow_c.level]
@@ -12952,9 +12953,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
 	local first_time_empower = true
 
 	local function find_target(aa)
-		local target = U.detect_foremost_enemy_in_range_filter_on(tpos(this), a.range, aa.vis_flags, aa.vis_bans, function(e)
-			return not aa.excluded_templates or not table.contains(aa.excluded_templates, e.template_name)
-		end)
+		local target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), a.range, aa.vis_flags, aa.vis_bans)
 
 		return target, target and U.calculate_enemy_ffe_pos(target, aa.node_prediction) or nil
 	end
