@@ -29114,6 +29114,7 @@ function scripts.mod_furnace_fuel.insert(this, store)
 		tower.attacks.list[4].boost = true
 	end
 	SU.insert_tower_cooldown_buff(store.tick_ts, tower, this.cooldown_factor)
+	return true
 end
 
 function scripts.mod_furnace_fuel.update(this, store)
