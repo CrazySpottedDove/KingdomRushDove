@@ -28457,14 +28457,14 @@ scripts.tower_blazing_watcher = {
 								charge_time = charge_time + (store.tick_ts - last_ts) / this.tower.cooldown_factor
 								last_ts = store.tick_ts
 
-								if charge_time > 3.6 and pow_c.level > 0 then
+								if charge_time > 3.24 and pow_c.level > 0 then
 									if this.attack_stage < 4 then
 										U.animation_start(this, "level4Loop", nil, store.tick_ts, true, 3)
 									end
 									this.attack_stage = 4
-								elseif charge_time > 2.4 then
+								elseif charge_time > 2.16 then
 									this.attack_stage = 3
-								elseif charge_time > 1.2 then
+								elseif charge_time > 1.08 then
 									this.attack_stage = 2
 								end
 
