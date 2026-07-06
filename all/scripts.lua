@@ -7058,8 +7058,9 @@ function scripts.mod_polymorph.insert(this, store)
 	end
 
 	if pm.transfer_health_factor then
-		e.health.hp_max = math.floor(target.health.hp_max * pm.transfer_health_factor)
+		e.health.hp_max = math.floor(target.health.hp * pm.transfer_health_factor)
 		e.health.hp = math.floor(target.health.hp * pm.transfer_health_factor)
+		e.health.patched = target.health.patched
 	end
 
 	if pm.transfer_speed_factor then

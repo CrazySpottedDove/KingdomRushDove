@@ -1548,8 +1548,9 @@ scripts.enemy_sheep = {
 					e.pos = V.vclone(this.pos)
 					e.nav_path = table.deepclone(this.nav_path)
 					e.enemy.gold = this.enemy.gold
-					e.health.hp_max = this.health.hp_max
+					e.health.hp_max = this.health.hp
 					e.health.hp = this.health.hp
+					e.health.patched = this.health.patched
 					queue_insert(store, e)
 
 					local d = E.assign_damage(bor(DAMAGE_EAT, DAMAGE_NO_LIFESTEAL), 1, this.id, this.id)
