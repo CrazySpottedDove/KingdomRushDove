@@ -119,7 +119,7 @@ for i = 4, #GS.barrack_towers do
 end
 
 GS.soldier_regen_factor = 0.2
-GS.gameplay_tips_count = 44
+GS.gameplay_tips_count = 51
 GS.early_wave_reward_per_second = 1
 GS.max_upgrade_level = 6
 GS.max_difficulty = DIFFICULTY_IMPOSSIBLE
