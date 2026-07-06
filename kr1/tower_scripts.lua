@@ -29164,7 +29164,7 @@ function scripts.tower_melting_furnace.update(this, store)
 				if U.find_first_enemy_in_range_filter_off(tpos, a.range, a_smash.damage_flags, a_smash.damage_bans) then
 					a_smash.ts = store.tick_ts
 					U.animation_start_default(this, a_fuel.boost and "bfHit" or "shoot", nil, store.tick_ts)
-					U.y_wait_unconditional(store, a_smash.hit_time)
+					U.y_wait_unconditional(store, a_smash.hit_times[a_fuel.boost and 2 or 1] * this.tower.cooldown_factor)
 					S:queue(a_smash.sound)
 					local enemies = U.find_enemies_in_range_filter_off(tpos, a.range, a_smash.damage_flags, a_smash.damage_bans)
 					if enemies then
