@@ -476,14 +476,22 @@ function director:queue_load_item_named(name)
 		else
 			local slot = storage:load_slot()
 
-			if configer.config().random_hero then
+			if configer.config().enabled and configer.config().random_hero then
 				if not slot.heroes.selected then
 					slot.heroes.selected = {}
 				end
 				local hero_count = #slot.heroes.selected
 				local hero_data = require("data.map_data").hero_data
+				local selected_idx = {}
 				for i = 1, hero_count do
-					slot.heroes.selected[i] = hero_data[math.random(1, #hero_data)].name
+					local candidate_idx = math.random(1, #hero_data)
+					local try_count = 0
+					while selected_idx[candidate_idx] and try_count < 100 do
+						candidate_idx = math.random(1, #hero_data)
+						try_count = try_count + 1
+					end
+					selected_idx[candidate_idx] = true
+					slot.heroes.selected[i] = hero_data[candidate_idx].name
 				end
 				storage:save_slot(slot)
 			end
