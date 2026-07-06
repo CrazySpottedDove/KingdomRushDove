@@ -28431,7 +28431,6 @@ scripts.tower_blazing_watcher = {
 										break
 									end
 								end
-								target = targets[#targets]
 							end
 
 							local start_offset = ab.bullet_start_offset
