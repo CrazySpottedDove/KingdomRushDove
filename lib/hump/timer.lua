@@ -10,8 +10,14 @@ end
 function Timer:update(dt)
 	local to_remove = {}
 
-	-- 每次更新时，遍历所有 active 的 handle，增加它们的时间，并调用它们的 during 函数
+	-- 快照所有 handle，避免回调中插入新 handle 导致 "invalid key to 'next'"
+	local handles = {}
 	for handle in pairs(self.functions) do
+		handles[#handles + 1] = handle
+	end
+
+	-- 每次更新时，遍历所有 active 的 handle，增加它们的时间，并调用它们的 during 函数
+	for _, handle in ipairs(handles) do
 		handle.time = handle.time + dt
 
 		handle.during(dt, math.max(handle.limit - handle.time, 0))
