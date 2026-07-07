@@ -3,7 +3,6 @@ local bit = require("bit")
 local bor = bit.bor
 local E = require("entity_db")
 local i18n = require("i18n")
-
 require("all.constants")
 
 local scale_scale = TEXTURE_SIZE_ALIAS.ipad / TEXTURE_SIZE_ALIAS.fullhd
