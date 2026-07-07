@@ -2748,7 +2748,7 @@ tt.attacks.list[1].bullet = "bullet_shaolin"
 tt.attacks.list[1].bullet_start_offset = v(10, 11)
 tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
 tt.attacks.list[1].vis_flags = bor(F_RANGED)
-tt.attacks.list[1].cooldown = 1.37
+tt.attacks.list[1].cooldown = 1.5
 tt.aura1 = nil
 tt.pixies = {}
 tt.render.sprites[1].animated = false
@@ -2842,8 +2842,8 @@ tt.sound_events.insert = "ShaolinAttack"
 
 -- Bullet (damage template for monks)
 tt = E:register_t("bullet_shaolin", "arrow")
-tt.bullet.damage_min = 13
-tt.bullet.damage_max = 25
+tt.bullet.damage_min = 15
+tt.bullet.damage_max = 27
 tt.bullet.hit_fx = "shaolin_monk_hit_fx"
 tt.bullet.damage_type = DAMAGE_PHYSICAL
 
