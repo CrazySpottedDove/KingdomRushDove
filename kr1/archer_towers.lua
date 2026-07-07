@@ -2784,8 +2784,11 @@ tt = E:register_t("aura_tower_shaolin_gold", "aura")
 tt.aura.vis_flags = bor(F_MOD)
 tt.aura.vis_bans = bor(F_FRIEND)
 tt.aura.cycle_time = 0.4
+tt.gold_base = 200
+tt.gold_earned_sum = 0
 tt.main_script.update = scripts.aura_tower_shaolin_gold.update
-tt.gold_factor = 1.1
+tt.gold_factor = 1.12
+tt.gold_factor_2 = 1.05
 
 -- Soldier: Dragon Warrior
 tt = RT("soldier_dragon", "soldier_militia")

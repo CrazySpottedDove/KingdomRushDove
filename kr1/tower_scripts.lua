@@ -28289,7 +28289,13 @@ scripts.aura_tower_shaolin_gold = {
 						end
 						if not table.arraycontains(target._aura_tower_shaolin_gold_ids, this.id) then
 							target._aura_tower_shaolin_gold_ids[#target._aura_tower_shaolin_gold_ids + 1] = this.id
-							target.enemy.gold = math.ceil(target.enemy.gold * this.gold_factor)
+							local gold = target.enemy.gold
+							if this.gold_earned_sum > this.gold_base then
+								target.enemy.gold = math.ceil(gold * this.gold_factor_2)
+							else
+								target.enemy.gold = math.ceil(gold * this.gold_factor)
+								this.gold_earned_sum = this.gold_earned_sum + (target.enemy.gold - gold)
+							end
 
 							local m = E:create_entity("mod_gold_indicator")
 							m.template_name = m.template_name .. this.id
