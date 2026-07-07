@@ -2205,7 +2205,7 @@ scripts.tower_arcane_wizard = {
 						if enemy.health.hp < exact_base_damage then
 							ad.ts = ad.ts - ad.cooldown + base_time
 						else
-							ad.ts = ad.ts - ad.cooldown + base_time + (enemy.health.hp - exact_base_damage) / (exact_upper_damage - exact_base_damage) * (ad.cooldown - base_time)
+							ad.ts = ad.ts - ad.cooldown + base_time + (enemy.health.hp - exact_base_damage) / (exact_upper_damage - exact_base_damage) * (ad.cooldown - base_time) / (0.7 + 0.3 * tw.cooldown_factor)
 						end
 					end
 				end
