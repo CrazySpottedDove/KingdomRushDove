@@ -10747,7 +10747,7 @@ end
 
 scripts.holygrail = {
 	side_effect = function(this, store)
-		U.heal(this, (this.health.hp_max - this.health.hp) * 0.2)
+		U.heal(this, (this.health.hp_max - this.health.hp) * (0.15 + this.powers.holygrail.level * 0.05))
 
 		this.melee.attacks[1].ts = store.tick_ts - this.melee.cooldown
 		this.melee.attacks[2].ts = store.tick_ts - this.melee.cooldown
@@ -10756,6 +10756,7 @@ scripts.holygrail = {
 
 		mod.modifier.source_id = this.id
 		mod.modifier.target_id = this.id
+		mod.modifier.level = this.powers.holygrail.level
 
 		queue_insert(store, mod)
 	end

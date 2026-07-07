@@ -8393,6 +8393,10 @@ scripts.mod_soldier_cooldown = {
 	insert = function(this, store)
 		local target = store.entities[this.modifier.target_id]
 
+		if this.cooldown_factor_inc then
+			this.cooldown_factor = this.cooldown_factor + this.cooldown_factor_inc * this.modifier.level
+		end
+
 		SU.insert_unit_cooldown_buff(store.tick_ts, target, this.cooldown_factor)
 
 		this.modifier.ts = store.tick_ts

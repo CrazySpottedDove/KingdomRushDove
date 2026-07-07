@@ -504,16 +504,13 @@ tower_templar.tower.type = "templar"
 tower_templar.tower.price = 185
 tower_templar.powers.holygrail = CC("power")
 tower_templar.powers.holygrail.price_base = 180
-tower_templar.powers.holygrail.price_inc = 135
-
+tower_templar.powers.holygrail.price_inc = 150
 tower_templar.powers.extralife = CC("power")
 tower_templar.powers.extralife.price_base = 150
 tower_templar.powers.extralife.price_inc = 150
-
 tower_templar.powers.blood = CC("power")
 tower_templar.powers.blood.price_base = 200
 tower_templar.powers.blood.price_inc = 150
-
 tower_templar.barrack.soldier_type = "soldier_templar"
 tower_templar.barrack.rally_range = 160
 tower_templar.render.sprites[1].name = "terrain_barrack_%04i"
@@ -598,7 +595,8 @@ tt.unit.marker_offset = vec_2(0, ady(7))
 tt.unit.mod_offset = vec_2(0, ady(23))
 
 tt = RT("mod_holygrail", "mod_soldier_cooldown")
-tt.cooldown_factor = 0.7
+tt.cooldown_factor = 0.8
+tt.cooldown_factor_inc = -0.1
 tt.modifier.duration = 8
 tt.modifier.allows_duplicate = true
 
