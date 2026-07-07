@@ -3488,8 +3488,8 @@ tt.powers.eat.price_inc = 50
 tt.powers.eat.max_level = 3
 tt.powers.eat.cooldown = {56, 52, 48}
 tt.powers.slime = CC("power")
-tt.powers.slime.price_base = 150
-tt.powers.slime.price_inc = 150
+tt.powers.slime.price_base = 200
+tt.powers.slime.price_inc = 200
 tt.powers.slime.cooldown = {14, 12}
 tt.powers.slime.max_level = 2
 tt.powers.worm = CC("power")
@@ -3578,11 +3578,11 @@ tt.render.sprites[1].name = "worm_nest_level4_instakill_run"
 
 tt = E:register_t("aura_bomb_tower_sandworm_spit", "aura")
 AC(tt, "render", "tween")
-tt.aura.mods = {"mod_tower_sandworm_slow"}
+tt.aura.mods = {"mod_tower_sandworm_slow", "mod_tower_sandworm_poison"}
 tt.aura.radius = 60
 tt.aura.vis_flags = F_AREA
 tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
-tt.aura.duration = 3
+tt.aura.duration = 4
 tt.aura.cycle_time = fts(5)
 tt.render.sprites[1].prefix = "worm_nest_level4_spit_decal"
 tt.render.sprites[1].name = "run"
@@ -3598,6 +3598,15 @@ tt.tween.props[1].keys = {{0, 255}, {tt.aura.duration - 0.5, 255}, {tt.aura.dura
 tt = E:register_t("mod_tower_sandworm_slow", "mod_slow")
 tt.slow.factor = 0.7
 tt.slow.factor_inc = -0.2
+
+tt = RT("mod_tower_sandworm_poison", "mod_poison")
+tt.dps.damage_every = 0.5
+tt.dps.damage_max = 0
+tt.dps.damage_min = 0
+tt.dps.damage_inc = 5
+tt.dps.kill = true
+tt.modifier.duration = 1
+tt.render.sprites[1].prefix = "poison_violet"
 
 tt = E:register_t("soldier_tower_sandworm_1", "soldier")
 E:add_comps(tt, "nav_path", "melee", "cloak")

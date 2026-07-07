@@ -24398,7 +24398,7 @@ function scripts.soldier_flingers_skeleton.update(this, store)
 			end
 		end
 
-		if this.health.dead or (not U.has_valid_rally_node_nearby(this.pos)) or not next_pos then
+		if this.health.dead or (not U.has_valid_rally_node_nearby(this.pos) and this.soldier.target_id == nil) or not next_pos then
 			this.health.hp = 0
 			SU.y_soldier_death(store, this)
 			queue_remove(store, this)

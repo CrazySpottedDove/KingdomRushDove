@@ -6726,9 +6726,9 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	TOWER_SANDWORM_EAT_DESCRIPTION_3 = "每隔48秒，沙虫破土而出，吞噬60范围内所有的非boss单位。当视野内无高于750点生命值的敌人时，沙虫不会释放该技能。",
 	TOWER_SANDWORM_EAT_NOTE = "沙陷小吃！",
 	TOWER_SANDWORM_SLIME_NAME_1 = "粘液球",
-	TOWER_SANDWORM_SLIME_DESCRIPTION_1 = "每隔14秒，射出一枚粘液球，制造一坨持续3秒的、黏糊糊的区域，使60范围内的敌人减速50%。",
+	TOWER_SANDWORM_SLIME_DESCRIPTION_1 = "每隔14秒，射出一枚粘液球，制造一坨持续4秒的、黏糊糊的区域，使60范围内的敌人减速50%，并施加中毒效果，每0.5秒造成5点伤害。",
 	TOWER_SANDWORM_SLIME_NAME_2 = "粘液球II",
-	TOWER_SANDWORM_SLIME_DESCRIPTION_2 = "每隔12秒，射出一枚粘液球，制造一坨持续3秒的、黏糊糊的区域，使60范围内的敌人减速70%。",
+	TOWER_SANDWORM_SLIME_DESCRIPTION_2 = "每隔12秒，射出一枚粘液球，制造一坨持续4秒的、黏糊糊的区域，使60范围内的敌人减速70%，并施加中毒效果，每0.5秒造成10点伤害。",
 	TOWER_SANDWORM_SLIME_NOTE = "粘粘有余！",
 	SOLDIER_TOWER_SANDWORM_1_NAME = "沙丘恐怖者"
 }
