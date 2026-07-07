@@ -1896,11 +1896,7 @@ function scripts.enemy_demon_legion.update(this, store)
 			this.health_bar.hidden = nil
 		end
 
-		if this._raise_vis_bans then
-			this.vis.bans = this._raise_vis_bans
-			this.health.ignore_damage = this._raise_ignore_damage
-		end
-
+		U.bans_remove(this.vis, F_ALL)
 		U.animation_start_default(this, "idle", af, store.tick_ts, true)
 	end
 
@@ -4528,10 +4524,7 @@ function scripts.enemy_base_portal.insert(this, store)
 	end
 
 	if this.render.sprites[1].name == "raise" and this.template_name == "enemy_demon_legion" then
-		this._raise_vis_bans = this.vis.bans
-		this._raise_ignore_damage = this.health.ignore_damage
-		this.vis.bans = bor(F_ALL)
-		this.health.ignore_damage = true
+		U.bans_add(this.vis, F_ALL)
 		this.health_bar.hidden = true
 	end
 
