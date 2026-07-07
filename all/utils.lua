@@ -3243,8 +3243,15 @@ function U.soldier_revive(soldier)
 	end
 	if soldier.unit.hide_during_death then
 		soldier.unit.hide_during_death = nil
-		U.sprites_show(soldier)
 	end
+	U.sprites_show(soldier)
+
+	for _, s in ipairs(soldier.render.sprites) do
+		if s.alpha then
+			s.alpha = 255
+		end
+	end
+
 	soldier.main_script.runs = 1
 	soldier.force_respawn = true
 end
