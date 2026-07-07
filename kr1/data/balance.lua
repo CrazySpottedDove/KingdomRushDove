@@ -5506,13 +5506,13 @@ local towers = {
 			price = {250, 175, 175},
 			teleport_nodes_back = {20, 25, 30},
 			cooldown = {25, 25, 25},
-			max_targets = {3, 4, 6}
+			max_targets = {4, 5, 6}
 		},
 		stars_death = {
 			max_range = 120,
 			stun = 0.8,
 			min_range = 0,
-			price = {225, 250, 250},
+			price = {225, 225, 225},
 			stars = {3, 4, 5},
 			chance = {1, 1, 1},
 			damage_min = {16, 28, 36},
