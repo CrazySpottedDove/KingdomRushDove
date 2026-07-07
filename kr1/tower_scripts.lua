@@ -11498,7 +11498,7 @@ function scripts.tower_stargazers.update(this, store)
 				local enemy = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, a.range, false, at_vis_flags, at_vis_bans, 100)
 
 				if enemy then
-					local enemies = U.find_enemies_in_range_filter_off(enemy.pos, 100, at_vis_flags, at_vis_bans)
+					local enemies = U.find_enemies_in_range_filter_off(enemy.pos, 100, at_vis_flags, at_vis_bans) or {}
 					local middle = v(enemy.pos.x, enemy.pos.y)
 					local count = at.max_targets[pow_t.level]
 
