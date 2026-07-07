@@ -412,6 +412,14 @@ function U.y_animation_wait(entity, idx, times)
 	end
 end
 
+function U.y_animation_wait_specific(entity, idx)
+	local a = entity.render.sprites[idx]
+	local times = a.loop and 1 or 0
+	while a.runs <= times do
+		coroutine.yield()
+	end
+end
+
 --- U.animation_start 的显式默认实现，性能更优
 ---@param entity any
 ---@param name any
@@ -459,6 +467,13 @@ function U.animation_start_specific(entity, name, flip_x, ts, loop, idx)
 		a.ts = ts
 		a.runs = 0
 	end
+	a.name = name
+end
+
+function U.animation_start_loop_specific(entity, name, flip_x, ts, idx)
+	local a = entity.render.sprites[idx]
+	a.flip_x = flip_x and true or false
+	a.loop = true
 	a.name = name
 end
 

@@ -221,7 +221,7 @@ scripts.tower_archer_dwarf = {
 
 					an, af = U.animation_name_facing_point_use_offset(this, "idle", last_target_pos, shooter_sid, start_offset)
 
-					animation_start(this, an, af, store.tick_ts, true, shooter_sid)
+					U.animation_start_loop_specific(this, an, af, store.tick_ts, shooter_sid)
 				end
 			end
 
@@ -280,7 +280,7 @@ scripts.tower_ranger = {
 			local soffset = sprites[ssid].offset
 			local an, af = U.animation_name_facing_point_use_offset(this, attack.animation, enemy.pos, ssid, soffset)
 
-			animation_start(this, an, af, store.tick_ts, false, ssid)
+			U.animation_start_once_specific(this, an, af, store.tick_ts, ssid)
 
 			return U.animation_name_facing_point_use_offset(this, "idle", enemy.pos, ssid, soffset)
 		end
@@ -357,24 +357,22 @@ scripts.tower_ranger = {
 
 						local idle_an, idle_af = shot_animation(aa, shooter_idx, enemy)
 
-						y_wait(store, aa.shoot_time)
+						U.y_wait_unconditional(store, aa.shoot_time)
 
 						if enemy.health.dead then
 							enemy = U.refind_foremost_enemy(enemy, store, aa.vis_flags, aa.vis_bans)
 						end
 
 						shot_bullet(aa, shooter_idx, enemy, pow_p.level)
-
-						y_animation_wait(this, shooter_sids[shooter_idx])
-						animation_start(this, idle_an, idle_af, store.tick_ts, false, shooter_sids[shooter_idx])
+						U.y_animation_wait_specific(this, shooter_sids[shooter_idx])
+						U.animation_start_once_specific(this, idle_an, idle_af, store.tick_ts, shooter_sids[shooter_idx])
 					end
 				end
 
 				if store.tick_ts - aa.ts > tw.long_idle_cooldown then
+					local an, af = U.animation_name_facing_point_simple(this, "idle", tw.long_idle_pos, shooter_sids[1])
 					for _, sid in ipairs(shooter_sids) do
-						local an, af = U.animation_name_facing_point_simple(this, "idle", tw.long_idle_pos, sid)
-
-						animation_start(this, an, af, store.tick_ts, true, sid)
+						U.animation_start_loop_specific(this, an, af, store.tick_ts, sid)
 					end
 				end
 
