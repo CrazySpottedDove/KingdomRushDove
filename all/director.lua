@@ -259,6 +259,7 @@ function director:unload_item(item)
 	end
 
 	if item.item_name == "game" then
+		_G.CUSTOM_MAP_ROOT = nil
 		local game = item
 
 		self:unload_texture_groups(replace_locale(game.game_gui.required_textures), game.game_gui.ref_res, "game_gui")
@@ -309,6 +310,20 @@ function director:unload_item(item)
 
 		if criket and criket.on then
 			self:unload_sound_groups(criket.required_sounds)
+		end
+
+		if game.store and game.store.level then
+			local level = game.store.level
+			if level.custom_required_textures then
+				for _, group in ipairs(level.custom_required_textures) do
+					I:unload_atlas(group, game.store.screen_scale)
+				end
+			end
+			if level.custom_required_sounds then
+				for _, group in ipairs(level.custom_required_sounds) do
+					S:unload_group(group)
+				end
+			end
 		end
 
 		game:destroy()
@@ -429,8 +444,16 @@ function director:queue_load_item_named(name)
 		local args = self.next_item_args
 
 		game.store = {}
-		game.store.level_idx = args.level_idx
-		game.store.level_name = "level" .. string.format("%02i", args.level_idx)
+		if args.custom_map_root then
+			_G.CUSTOM_MAP_ROOT = args.custom_map_root
+			game.store.level_name = args.custom_map_level_name
+			game.store.custom_map_entry = args.custom_map_entry
+			game.store.custom_map_return_to = args.custom_map_return_to
+			game.store.level_idx = 0
+		else
+			game.store.level_idx = args.level_idx
+			game.store.level_name = "level" .. string.format("%02i", args.level_idx)
+		end
 		game.store.level_mode = args.level_mode
 		game.store.level_difficulty = args.level_difficulty
 		game.store.screen_scale = self:get_texture_scale("game", REF_H)
@@ -462,6 +485,25 @@ function director:queue_load_item_named(name)
 		end
 
 		EXO:queue_load(game.required_exoskeletons)
+
+		if args.custom_map_root then
+			self:load_custom_map_assets(args, game)
+
+			local level = game.store.level
+			if level and level.custom_required_textures then
+				local scale = self:get_texture_scale("game", game.ref_res)
+				local texture_size = game.store.texture_size
+				for _, group in ipairs(level.custom_required_textures) do
+					local path = args.custom_map_root .. "/images/" .. texture_size
+					I:queue_load_atlas(scale, path, group)
+				end
+			end
+			if level and level.custom_required_sounds then
+				for _, group in ipairs(level.custom_required_sounds) do
+					S:queue_load_group(group)
+				end
+			end
+		end
 
 		if configer.config().enabled and configer.config().enable_hero_menu then
 			local hero_data = require("data.map_data").hero_data
@@ -580,6 +622,60 @@ function director:unload_plugin_texture_groups(groups, ref_height, item_name)
 
 	for group, _ in pairs(groups) do
 		I:unload_atlas(group, scale)
+	end
+end
+
+function director:load_custom_map_assets(args, game)
+	local root = args.custom_map_root
+	if not root then
+		return
+	end
+
+	if args.custom_map_bg_image and args.custom_map_bg_sprite then
+		local ok, img = pcall(love.graphics.newImage, args.custom_map_bg_image)
+		if ok and img then
+			I:add_image(args.custom_map_bg_sprite, img, "game_editor")
+		else
+			log.error("Failed to load custom background image: %s", tostring(args.custom_map_bg_image))
+		end
+	end
+
+	if args.custom_map_battle_music then
+		local sound_id = "custom_" .. game.store.level_name .. "_battle"
+		local ok, src = pcall(love.audio.newSource, args.custom_map_battle_music, "stream")
+		if ok and src then
+			local file_key = sound_id .. "__file"
+			S.sources[file_key] = {src}
+			S.source_uses[file_key] = 1
+			S.sounds[sound_id] = {
+				files = {
+					[1] = file_key
+				},
+				gain = 0.6,
+				loop = true,
+				source_group = "MUSIC",
+				stream = true
+			}
+		end
+	end
+
+	if args.custom_map_battle_prep_music then
+		local sound_id = "custom_" .. game.store.level_name .. "_battle_prep"
+		local ok, src = pcall(love.audio.newSource, args.custom_map_battle_prep_music, "stream")
+		if ok and src then
+			local file_key = sound_id .. "__file"
+			S.sources[file_key] = {src}
+			S.source_uses[file_key] = 1
+			S.sounds[sound_id] = {
+				files = {
+					[1] = file_key
+				},
+				gain = 0.6,
+				loop = true,
+				source_group = "MUSIC",
+				stream = true
+			}
+		end
 	end
 end
 

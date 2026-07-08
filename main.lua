@@ -26,10 +26,9 @@ function love.filesystem.loadWithPreference(filename, prefixs)
 		local prefix = prefixs[i]
 		local candidates = {}
 
-		-- 自定义地图运行时：当请求 KR_PATH_GAME 资源时，优先从插件根目录读取
-		-- if _G.CUSTOM_MAP_ROOT and prefix == KR_PATH_GAME then
-		-- 	candidates[#candidates + 1] = _G.CUSTOM_MAP_ROOT
-		-- end
+		if _G.CUSTOM_MAP_ROOT and prefix == KR_PATH_GAME then
+			candidates[#candidates + 1] = _G.CUSTOM_MAP_ROOT
+		end
 		candidates[#candidates + 1] = prefix
 
 		for _, base in ipairs(candidates) do

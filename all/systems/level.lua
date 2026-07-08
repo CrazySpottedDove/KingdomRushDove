@@ -35,6 +35,33 @@ local function queue_remove(store, e)
 	simulation:queue_remove_entity(e)
 end
 
+local CUSTOM_SLOT = "custom_slot.lua"
+
+local function save_custom_victory(store, stars)
+	if not store.custom_map_entry then
+		return
+	end
+
+	local data = storage:load_lua(CUSTOM_SLOT)
+	if type(data) ~= "table" then
+		data = {
+			maps = {}
+		}
+	end
+	data.maps = data.maps or {}
+
+	local progress = data.maps[store.custom_map_entry] or {}
+	progress.stars = math.max(stars, tonumber(progress.stars) or 0)
+	if store.level_mode == GAME_MODE_HEROIC then
+		progress.heroic = true
+	elseif store.level_mode == GAME_MODE_IRON then
+		progress.iron = true
+	end
+	data.maps[store.custom_map_entry] = progress
+
+	storage:write_lua(CUSTOM_SLOT, data)
+end
+
 function M.register(sys)
 	sys.level = {}
 	sys.level.name = "level"
@@ -300,13 +327,14 @@ function M.register(sys)
 				store.paused = true
 				store.defeat_count = (store.defeat_count or 0) + 1
 
-				local slot = storage:load_slot()
-
-				slot.last_victory = nil
-
 				signal.emit("game-defeat", store)
 				signal.emit("game-defeat-after", store)
-				storage:save_slot(slot, nil, true)
+
+				if not store.custom_map_entry then
+					local slot = storage:load_slot()
+					slot.last_victory = nil
+					storage:save_slot(slot, nil, true)
+				end
 			elseif store.level.run_complete and store.waves_finished and not LU.has_alive_enemies(store) then
 				if configer.criket() and configer.criket().on then
 					local stars = 3
@@ -327,6 +355,7 @@ function M.register(sys)
 						level_difficulty = store.level_difficulty
 					}
 
+					save_custom_victory(store, stars)
 					signal.emit("game-victory", store)
 					signal.emit("game-victory-after", store)
 
@@ -354,19 +383,22 @@ function M.register(sys)
 					level_difficulty = store.level_difficulty
 				}
 
-				local slot = storage:load_slot()
+				save_custom_victory(store, stars)
 
-				slot.last_victory = {
-					level_idx = store.level_idx,
-					level_difficulty = store.level_difficulty,
-					level_mode = store.level_mode,
-					stars = stars,
-					unlock_towers = store.level.unlock_towers
-				}
+				if not store.custom_map_entry then
+					local slot = storage:load_slot()
+					slot.last_victory = {
+						level_idx = store.level_idx,
+						level_difficulty = store.level_difficulty,
+						level_mode = store.level_mode,
+						stars = stars,
+						unlock_towers = store.level.unlock_towers
+					}
+					storage:save_slot(slot, nil, true)
+				end
 
 				signal.emit("game-victory", store)
 				signal.emit("game-victory-after", store)
-				storage:save_slot(slot, nil, true)
 			end
 		end
 	end

@@ -277,7 +277,9 @@ function game:init(screen_w, screen_h)
 	self.game_gui = game_gui
 	self.store.game_gui = game_gui
 	if not self.store.level.show_comic_idx or self.store.level_mode ~= GAME_MODE_CAMPAIGN then
-		S:queue(string.format("MusicBattlePrep_%02d", self.store.level_idx))
+		if self.store.level_idx and self.store.level_idx > 0 then
+			S:queue(string.format("MusicBattlePrep_%02d", self.store.level_idx))
+		end
 	end
 end
 
@@ -308,7 +310,9 @@ function game:restart()
 	self.simulation:init(self.store, self.simulation_systems)
 	self.game_gui:init(self.screen_w, self.screen_h, self)
 	S:stop_all()
-	S:queue(string.format("MusicBattlePrep_%02d", self.store.level_idx))
+	if self.store.level_idx > 0 then
+		S:queue(string.format("MusicBattlePrep_%02d", self.store.level_idx))
+	end
 
 	self:init_debug()
 	signal.emit("game-start", self.store)

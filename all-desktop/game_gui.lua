@@ -1718,8 +1718,9 @@ function game_gui:go_to_map()
 	S:stop_all()
 	S:resume()
 	signal.emit("game-quit", self.game.store)
+	local return_to = self.game.store.custom_map_return_to or "map"
 	game_gui.game.done_callback({
-		next_item_name = "map"
+		next_item_name = return_to
 	})
 end
 

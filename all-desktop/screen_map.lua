@@ -32,6 +32,7 @@ local kui_db = require("klove.kui_db")
 
 require("gg_views_custom")
 require("dove_modules.gui.numeric_keyboard_view")
+local SCU = require("screen_custom_map")
 -- if not IS_ANDROID then
 require("dove_modules.gui.mod_manager_view")
 require("dove_modules.gui.changelog_view")
@@ -66,6 +67,7 @@ screen_map.ref_w = 1920
 screen_map.ref_h = 1080
 screen_map.ref_res = TEXTURE_SIZE_ALIAS.fullhd
 screen_map.generation = 1
+screen_map.CUSTOM_GEN = "custom"
 
 local function ISW(...)
 	return i18n.sw(i18n, ...)
@@ -435,25 +437,12 @@ function screen_map:init(w, h)
 
 	self.window:add_child(e_button)
 
+	local change_btn_x = a_button.pos.x - 900
+	local change_btn_y = sh - 90
+
 	local change_button = GGButton:new("mapButtons_notxt_0011", "mapButtons_notxt_0012")
-
 	change_button.anchor = v(change_button.size.x / 2, change_button.size.y / 2)
-	change_button.pos = v(a_button.pos.x - 900, sh - 90)
-
-	function change_button.on_click(this, button, x, y)
-		local generation
-		if self.generation == 1 then
-			generation = 2
-		elseif self.generation == 2 then
-			generation = 3
-		elseif self.generation == 3 then
-			generation = 5
-		elseif self.generation == 5 then
-			generation = 1
-		end
-		self:change_generation(generation)
-	end
-
+	change_button.pos = v(change_btn_x, change_btn_y)
 	change_button.label.pos = v(50, 121)
 	change_button.label.size = v(126, 30)
 	change_button.label.text_size = change_button.label.size
@@ -463,6 +452,113 @@ function screen_map:init(w, h)
 	change_button.label.fit_lines = 1
 
 	self.window:add_child(change_button)
+
+	local gen_dropdown = KView:new(V.v(sw, sh))
+	gen_dropdown.hidden = true
+	gen_dropdown.propagate_on_click = true
+	self.window:add_child(gen_dropdown)
+
+	local gen_options = {{
+		label = "1代",
+		value = 1
+	}, {
+		label = "2代",
+		value = 2
+	}, {
+		label = "3代",
+		value = 3
+	}, {
+		label = "5代",
+		value = 5
+	}, {
+		label = "插件地图",
+		value = screen_map.CUSTOM_GEN
+	}}
+
+	local card_w = 160
+	local card_h = 120
+	local gap = 16
+	local total_w = #gen_options * (card_w + gap) - gap
+	local start_x = (sw - total_w) * 0.5
+	local start_y = (sh - card_h) * 0.5
+	local sm = self
+
+	for i, opt in ipairs(gen_options) do
+		local card = KView:new(V.v(card_w, card_h))
+		card.pos = V.v(start_x + (i - 1) * (card_w + gap), start_y)
+		card.colors.background = sm.generation == opt.value and {60, 45, 20, 240} or {35, 25, 12, 220}
+		card.shape = {
+			name = "rectangle",
+			args = {"fill", 0, 0, card_w, card_h, 12, 12}
+		}
+		local border_color = sm.generation == opt.value and {207, 164, 72, 255} or {100, 80, 40, 200}
+		local border = KView:new(V.v(card_w, card_h))
+		border.colors.background = border_color
+		border.shape = {
+			name = "rectangle",
+			args = {"line", 0, 0, card_w, card_h, 12, 12}
+		}
+		card:add_child(border)
+		card._border = border
+		border.propagate_on_click = true
+
+		local label = GGLabel:new(V.v(card_w - 16, 40))
+		label.pos = V.v(8, (card_h - 40) * 0.5)
+		label.font_name = "h"
+		label.font_size = 16
+		label.text_align = "center"
+		label.vertical_align = "middle"
+		label.colors.text = {241, 222, 171, 255}
+		label.text = opt.label
+		label.fit_lines = 2
+		label.fit_size = true
+		label.propagate_on_click = true
+		card:add_child(label)
+
+		function card.on_enter()
+			card.colors.background = {50, 35, 16, 240}
+			card._border.colors.background = {220, 180, 80, 255}
+		end
+		function card.on_exit()
+			card.colors.background = sm.generation == opt.value and {60, 45, 20, 240} or {35, 25, 12, 220}
+			card._border.colors.background = sm.generation == opt.value and {207, 164, 72, 255} or {100, 80, 40, 200}
+		end
+		function card.on_click()
+			S:queue("GUIButtonCommon")
+			gen_dropdown.hidden = true
+			for _, btn in ipairs({sm._change_btn, sm._u_btn, sm._e_btn, sm._a_btn, sm._h_btn}) do
+				if btn then
+					btn:enable()
+				end
+			end
+			if sm.generation ~= opt.value then
+				sm:change_generation(opt.value)
+			end
+		end
+
+		gen_dropdown:add_child(card)
+		if not gen_dropdown._cards then
+			gen_dropdown._cards = {}
+		end
+		gen_dropdown._cards[i] = card
+	end
+
+	function change_button.on_click()
+		S:queue("GUIButtonCommon")
+		if not gen_dropdown.hidden then
+			gen_dropdown.hidden = true
+		else
+			gen_dropdown.hidden = false
+			for i, card in ipairs(gen_dropdown._cards or {}) do
+				local opt = gen_options[i]
+				if opt then
+					local selected = sm.generation == opt.value
+					card.colors.background = selected and {60, 45, 20, 240} or {35, 25, 12, 220}
+					card._border.colors.background = selected and {207, 164, 72, 255} or {100, 80, 40, 200}
+				end
+			end
+		end
+	end
 
 	local u_button = GGButton:new("mapButtons_notxt_0010", "mapButtons_notxt_0011")
 
@@ -671,6 +767,13 @@ function screen_map:init(w, h)
 	end
 
 	main.screen_map_entered = true
+
+	-- store bottom button refs for state reset in change_generation
+	self._change_btn = change_button
+	self._u_btn = u_button
+	self._e_btn = e_button
+	self._a_btn = a_button
+	self._h_btn = h_button
 -- perf.tmp_stop("screen_map_init")
 end
 
@@ -955,6 +1058,17 @@ function screen_map:ensure_changelog_view()
 end
 
 function screen_map:destroy()
+	if self._custom_thumbnails then
+		for _, sn in ipairs(self._custom_thumbnails) do
+			I:remove_image(sn)
+		end
+		self._custom_thumbnails = nil
+	end
+	self._custom_maps = nil
+	self._custom_progress = nil
+	self._custom_map_view = nil
+	self._custom_level_select = nil
+
 	for sn, fn in pairs(self.signal_handlers) do
 		signal.remove(sn, fn)
 	end
@@ -1008,14 +1122,17 @@ function screen_map:change_generation(i)
 		return
 	end
 	S:queue("GUIButtonCommon")
-	self.generation = i
-	self.is_switching_map = true
-	local scale_x = self.window.scale.x
-	local scale_y = self.window.scale.y
-	local small_scale_x = self.window.scale.x * 0.95
-	local small_scale_y = self.window.scale.y * 0.95
-	local large_scale_x = self.window.scale.x * 1.05
-	local large_scale_y = self.window.scale.y * 1.05
+
+	if i == screen_map.CUSTOM_GEN then
+		if self.generation == screen_map.CUSTOM_GEN then
+			return
+		end
+		self.generation = screen_map.CUSTOM_GEN
+
+		self.map_view.hidden = true
+		self:ensure_custom_map_view()
+		return
+	end
 
 	local function reload_generation()
 		self.map_points = get_map_points_for_generation(self.generation)
@@ -1047,26 +1164,80 @@ function screen_map:change_generation(i)
 		queue_generation_music(self.generation)
 	end
 
-	timer:tween(0.4, self.window, {
-		alpha = 0,
-		scale = {
-			x = small_scale_x,
-			y = small_scale_y
-		}
-	}, "out-quad", function()
+	if self.generation == screen_map.CUSTOM_GEN then
+		self._custom_map_view.hidden = true
+		self.map_view.hidden = false
+		self.generation = i
 		reload_generation()
-		self.window.alpha = 0
-		self.window.scale = v(large_scale_x, large_scale_y)
+	else
+		self.generation = i
+		self.is_switching_map = true
+		local scale_x = self.window.scale.x
+		local scale_y = self.window.scale.y
+		local small_scale_x = self.window.scale.x * 0.95
+		local small_scale_y = self.window.scale.y * 0.95
+		local large_scale_x = self.window.scale.x * 1.05
+		local large_scale_y = self.window.scale.y * 1.05
+
 		timer:tween(0.4, self.window, {
-			alpha = 1,
+			alpha = 0,
 			scale = {
-				x = scale_x,
-				y = scale_y
+				x = small_scale_x,
+				y = small_scale_y
 			}
-		}, "in-quad", function()
-			self.is_switching_map = false
+		}, "out-quad", function()
+			reload_generation()
+			self.window.alpha = 0
+			self.window.scale = v(large_scale_x, large_scale_y)
+			timer:tween(0.4, self.window, {
+				alpha = 1,
+				scale = {
+					x = scale_x,
+					y = scale_y
+				}
+			}, "in-quad", function()
+				self.is_switching_map = false
+			end)
 		end)
+	end
+end
+
+function screen_map:ensure_custom_map_view()
+	if self._custom_map_view then
+		self._custom_map_view.hidden = false
+		return
+	end
+
+	if not self._custom_thumbnails then
+		self._custom_thumbnails = {}
+	end
+	if not self._custom_maps then
+		self._custom_maps = SCU.scan_maps(self._custom_thumbnails)
+	end
+	if not self._custom_progress then
+		self._custom_progress = SCU.load_progress()
+	end
+
+	local content_w = self.sw - 40
+	local list_view = SCU.CustomMapListView:new(V.v(content_w, self.sh - 8), self._custom_maps, function(map)
+		self:show_custom_level_select(map)
 	end)
+	list_view.pos = v(20, 8)
+	self.window:add_child(list_view)
+	self._custom_map_view = list_view
+end
+
+function screen_map:show_custom_level_select(map)
+	if self._custom_level_select then
+		self.window:remove_child(self._custom_level_select)
+	end
+
+	local ls = SCU.CustomLevelSelectView:new(self.sw, self.sh, map, function(outcome)
+		self.done_callback(outcome)
+	end)
+	self.window:add_child(ls)
+	self._custom_level_select = ls
+	ls:show()
 end
 
 function screen_map:keypressed(key, isrepeat)
@@ -1126,6 +1297,10 @@ function screen_map:keypressed(key, isrepeat)
 			return true
 		elseif self.changelog_view and not self.changelog_view.hidden then
 			self.changelog_view:hide()
+
+			return true
+		elseif self._custom_level_select and not self._custom_level_select.hidden then
+			self._custom_level_select:hide()
 
 			return true
 		end
@@ -3012,29 +3187,22 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 		end
 	end
 
-	local level_string = string.format("%02i", level_num)
-
 	self.back = KImageView:new("levelSelect_background")
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
 	self.back.pos = v(sw / 2 - 15, sh / 2 - 50)
-
 	self:add_child(self.back)
-
 	self.back.alpha = 0
 
 	-- 安卓设备上适当缩放界面以适配不同分辨率
 	if IS_ANDROID then
 		local scale = math.min(sw / self.back.size.x, sh / self.back.size.y) * 0.85
-
 		self.scale = v(scale, scale)
 		self.pos = v(sw * (1 - scale) / 2, sh * (1 - scale) / 2)
 	end
 
 	local close_button = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
-
 	close_button.pos = v(self.back.size.x - 50, 30)
 	self.close_button = close_button
-
 	self.back:add_child(close_button)
 
 	function close_button.on_click()
@@ -3044,16 +3212,13 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 
 	add_level_title(self.back, level_num .. " " .. _(string.format("LEVEL_%d_TITLE", level_num)), "left", ls_page_y + 22)
 
+	local level_string = string.format("%02i", level_num)
 	local stage_thumb = KImageView:new(string.format("stage_thumbs_%04i", level_string))
-
 	stage_thumb.pos = v(215, 190)
-
 	self.back:add_child(stage_thumb)
 
 	local thumb_frame = KImageView:new("levelSelect_thumbFrame")
-
 	thumb_frame.pos = v(202, 175)
-
 	self.back:add_child(thumb_frame)
 
 	local badge_x = 310
@@ -3086,15 +3251,11 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 
 	self.back:add_child(self.campaign)
 	add_level_title(self.campaign, _("Campaign"), "right")
-
 	add_level_description(self.campaign, _("LEVEL_" .. tostring(level_num) .. "_HISTORY"))
-
 	add_difficulty_stamp(self.campaign, GAME_MODE_CAMPAIGN, slot_data[GAME_MODE_CAMPAIGN], 690, 520)
 
 	local b = LevelSelectDifficultyButton:new()
-
 	b.pos = v(982, 522)
-
 	self.campaign:add_child(b)
 	add_level_battle_button(self.campaign, GAME_MODE_CAMPAIGN, level_num)
 	add_level_tab(self, GAME_MODE_CAMPAIGN, 175, stars)
@@ -6168,21 +6329,6 @@ function OptionsView:initialize(sw, sh)
 	self.back:add_child(fps_button)
 
 	if not IS_ANDROID then
-		-- 功能过于不完善，暂不开放
-		-- button_height = button_height + 100
-		-- local custom_map_button = GGOptionsButton:new("自定义地图")
-		-- custom_map_button:set_anchor_to_center()
-		-- custom_map_button.pos.x = self.back.size.x + 75
-		-- custom_map_button.pos.y = button_height
-		-- function custom_map_button.on_click()
-		-- 	S:queue("GUIButtonCommon")
-		-- 	screen_map.option_panel:hide()
-		-- 	screen_map.done_callback({
-		-- 		next_item_name = "custom_map"
-		-- 	})
-		-- end
-		-- self.back:add_child(custom_map_button)
-
 		button_height = button_height + 100
 		local editor_button = GGOptionsButton:new("地图编辑器")
 		editor_button:set_anchor_to_center()
