@@ -445,6 +445,8 @@ function director:queue_load_item_named(name)
 			game.store.level_name = args.custom_map_level_name
 			game.store.custom_map_entry = args.custom_map_entry
 			game.store.custom_map_return_to = args.custom_map_return_to
+			game.store.custom_battle_music = args.custom_battle_music
+			game.store.custom_battle_prep_music = args.custom_battle_prep_music
 			game.store.level_idx = 0
 		else
 			game.store.level_idx = args.level_idx

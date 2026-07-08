@@ -173,7 +173,11 @@ local signals = {
 			end
 
 			S:stop_group("MUSIC")
-			S:queue(string.format("MusicBattle_%02d", game_gui.game.store.level_idx))
+			if game_gui.game.store.custom_battle_music then
+				S:queue(game_gui.game.store.custom_battle_music)
+			else
+				S:queue(string.format("MusicBattle_%02d", game_gui.game.store.level_idx))
+			end
 		end
 
 		S:queue("GUINextWaveIncoming")
@@ -4139,7 +4143,11 @@ function VictoryView:show()
 		wait(0.5)
 		c_chain:enable()
 		r_chain:enable()
-		S:queue(string.format("MusicBattlePrep_%02d", level_idx))
+		if game_gui.game.store.custom_battle_prep_music then
+			S:queue(game_gui.game.store.custom_battle_prep_music)
+		else
+			S:queue(string.format("MusicBattlePrep_%02d", level_idx))
+		end
 	end)
 end
 

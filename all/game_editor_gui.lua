@@ -577,11 +577,94 @@ function gui:add_extension_tools_buttons()
 	-- 	self.editor:set_drop_import_mode(next_mode)
 	-- 	self:show_save_notification(next_mode and "已进入战斗音乐拖拽模式，请拖入 OGG / MP3 / WAV" or "已取消战斗音乐拖拽模式", next_mode ~= nil)
 	-- end)
-	-- add_btn("tools_export_plugin", "导出插件", function()
-	-- self:show_export_view()
-	-- end)
+	add_btn("tools_load_plugin", "插件关卡", function()
+		self:show_plugin_level_selector()
+	end)
 	layout:update_layout()
 	self:update_drop_import_buttons()
+end
+
+function gui:show_plugin_level_selector()
+	local mod_db = require("mod_db")
+	local levels = {}
+	for _, md in ipairs(mod_db.mods_datas or {}) do
+		local cfg = md.config
+		if cfg and cfg.category == "level" then
+			levels[#levels + 1] = md
+		end
+	end
+	if #levels == 0 then
+		self:show_save_notification("未找到插件关卡", false)
+		return
+	end
+
+	local sw, sh = self.window.size.x, self.window.size.y
+	local popup = PopUpView:new(V.v(sw, sh))
+	self.window:add_child(popup)
+
+	local pw, ph = 400, math.min(520, sh - 100)
+	local panel = KView:new(V.v(pw, ph))
+	panel.anchor = V.v(pw * 0.5, ph * 0.5)
+	panel.pos = V.v(sw * 0.5, sh * 0.5)
+	panel.colors.background = {46, 32, 18, 248}
+	panel.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, pw, ph, 12, 12}
+	}
+	popup:add_child(panel)
+
+	local title = GGLabel:new(V.v(pw - 20, 30))
+	title.pos = V.v(10, 8)
+	title.font_name = "h"
+	title.font_size = 18
+	title.text_align = "center"
+	title.text = "选择插件关卡"
+	title.colors.text = {241, 222, 171, 255}
+	panel:add_child(title)
+
+	local list = KScrollList:new(V.v(pw - 24, ph - 50))
+	list.pos = V.v(12, 40)
+	list.drag_scroll_threshold = 6
+	list.scroll_amount = 44
+	list.colors.scroller_background = {45, 36, 22, 200}
+	list.colors.scroller_foreground = {110, 90, 50, 255}
+	list.scroller_width = 16
+	panel:add_child(list)
+
+	for _, md in ipairs(levels) do
+		local btn = KView:new(V.v(pw - 54, 40))
+		btn.colors.background = {35, 25, 12, 220}
+		btn.shape = {
+			name = "rectangle",
+			args = {"fill", 0, 0, btn.size.x, btn.size.y, 6, 6}
+		}
+		list:add_row(btn)
+
+		local label = GGLabel:new(V.v(btn.size.x - 10, btn.size.y))
+		label.font_name = "body"
+		label.font_size = 14
+		label.text_align = "left"
+		label.vertical_align = "middle"
+		label.colors.text = {241, 222, 171, 255}
+		label.text = (md.config.name or md.entry) .. "  (" .. md.entry .. ")"
+		label.fit_lines = 1
+		label.fit_size = true
+		label.propagate_on_click = true
+		btn:add_child(label)
+
+		function btn.on_click()
+			popup:hide()
+			self.editor:load_plugin_level(md.entry)
+		end
+		function btn.on_enter()
+			btn.colors.background = {50, 35, 16, 240}
+		end
+		function btn.on_exit()
+			btn.colors.background = {35, 25, 12, 220}
+		end
+	end
+
+	popup:show()
 end
 
 function gui:update_drop_import_buttons()
@@ -978,7 +1061,13 @@ function gui:u2g(s)
 end
 
 function gui:level_loaded(level_idx)
-	wid("tools_level_name"):set_value(level_idx)
+	local name_w = wid("tools_level_name")
+	if type(level_idx) == "string" then
+		name_w.value = level_idx
+		name_w.lt.text = level_idx
+	else
+		name_w:set_value(level_idx)
+	end
 	self:update_paths_list()
 	self:update_grid_tool()
 	self:refresh_nav_tool()

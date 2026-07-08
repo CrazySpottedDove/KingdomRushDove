@@ -27,7 +27,13 @@ function love.filesystem.loadWithPreference(filename, prefixs)
 		local candidates = {}
 
 		if _G.CUSTOM_MAP_ROOT and prefix == KR_PATH_GAME then
-			candidates[#candidates + 1] = _G.CUSTOM_MAP_ROOT
+			if type(_G.CUSTOM_MAP_ROOT) == "table" then
+				for _, p in ipairs(_G.CUSTOM_MAP_ROOT) do
+					candidates[#candidates + 1] = p
+				end
+			else
+				candidates[#candidates + 1] = _G.CUSTOM_MAP_ROOT
+			end
 		end
 		candidates[#candidates + 1] = prefix
 

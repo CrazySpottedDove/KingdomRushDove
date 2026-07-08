@@ -458,7 +458,9 @@ function screen_map:init(w, h)
 
 	local gen_dropdown = KView:new(V.v(sw, sh))
 	gen_dropdown.hidden = true
-	gen_dropdown.propagate_on_click = true
+	gen_dropdown.propagate_on_click = false
+	gen_dropdown.colors.background = {0, 0, 0, 100}
+
 	self.window:add_child(gen_dropdown)
 
 	local gen_options = {{
@@ -552,6 +554,7 @@ function screen_map:init(w, h)
 			gen_dropdown.hidden = true
 		else
 			gen_dropdown.hidden = false
+			gen_dropdown:order_to_front()
 			for i, card in ipairs(gen_dropdown._cards or {}) do
 				local opt = gen_options[i]
 				if opt then
@@ -1220,7 +1223,6 @@ function screen_map:ensure_custom_map_view()
 	end
 
 	local content_w = self.sw - 40
-	local content_h = self.sh - 88
 	local list_view = SCU.CustomMapListView:new(V.v(content_w, self.sh - 8), self._custom_maps, function(map)
 		self:show_custom_level_select(map)
 	end)

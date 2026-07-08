@@ -111,6 +111,8 @@ local function scan_maps()
 					cfg = cfg,
 					level_data = level_data,
 					thumbnail_info = thumbnail_info,
+					battle_music = type(metadata) == "table" and metadata.battle_music or nil,
+					battle_prep_music = type(metadata) == "table" and metadata.battle_prep_music or nil,
 					has_heroic = FS.getInfo(wave_root .. entry .. "_waves_heroic.lua") ~= nil,
 					has_iron = FS.getInfo(wave_root .. entry .. "_waves_iron.lua") ~= nil
 				}
@@ -1030,7 +1032,9 @@ function CustomLevelSelectView:start_game()
 		custom_map_entry = map.entry,
 		custom_map_level_name = map.entry,
 		custom_map_root = map.base,
-		custom_map_return_to = "map"
+		custom_map_return_to = "map",
+		custom_battle_music = map.battle_music,
+		custom_battle_prep_music = map.battle_prep_music
 	})
 end
 

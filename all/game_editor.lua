@@ -617,6 +617,14 @@ function editor:load_level(idx, mode, recover)
 		EDITOR_PATH = "kr1"
 	end
 
+	-- 清理上一插件关卡资源
+	if self.store and self.store.level then
+		local old = self.store.level
+		if old.plugin_required_textures then
+			director:unload_plugin_texture_groups(old.plugin_required_textures, self.ref_res, "game_editor")
+		end
+	end
+
 	self.undo_stack = {}
 	self.undo_active = false
 	self.store = {}
@@ -794,6 +802,142 @@ function editor:load_level(idx, mode, recover)
 	end
 end
 
+--- 加载插件关卡
+---@param entry string 插件 entry
+---@param mode number 游戏模式
+function editor:load_plugin_level(entry, mode)
+	-- 清理上一插件关卡资源
+	if self.store and self.store.level then
+		local old = self.store.level
+		if old.plugin_required_textures then
+			director:unload_plugin_texture_groups(old.plugin_required_textures, self.ref_res, "game_editor")
+		end
+		if old.required_textures then
+			director:unload_texture_groups(old.required_textures, self.ref_res, "game_editor")
+		end
+	end
+
+	self.entry = entry
+	self.undo_stack = {}
+	self.undo_active = false
+	self.store = {}
+
+	simulation:init(self.store, self.simulation_systems, self.simulation_systems, TICK_LENGTH)
+	self.simulation = simulation
+
+	A:load()
+	E:ensure_loaded()
+
+	local s = self.store
+	s.level_idx = 0
+	s.level_name = entry
+	s.level_mode = mode or GAME_MODE_CAMPAIGN
+	s.level_difficulty = DIFFICULTY_EASY
+	s.custom_map_entry = entry
+
+	-- 搜索顺序：game_editor/plugins/<entry> → plugins/<entry>
+	_G.CUSTOM_MAP_ROOT = {"game_editor/plugins/" .. entry, "plugins/" .. entry}
+
+	s.level = LU.load_level(s, s.level_name)
+	if not s.level.data then
+		s.level.data = {
+			locked_hero = false,
+			level_terrain_style = "tower_holder_grass",
+			max_upgrade_level = 6,
+			entities_list = {},
+			invalid_path_ranges = {},
+			level_mode_overrides = {{}, {}, {}},
+			nav_mesh = {},
+			required_sounds = {},
+			required_textures = {},
+			required_exoskeletons = {}
+		}
+		for _, n in ipairs({
+			"required_textures",
+			"required_sounds",
+			"required_exoskeletons",
+			"locked_hero",
+			"locked_powers",
+			"locked_towers",
+			"max_upgrade_level",
+			"custom_spawn_pos",
+			"show_comic_idx",
+			"nav_mesh",
+			"unlock_towers",
+			"custom_start_pos",
+			"ignore_walk_backwards_paths"
+		}) do
+			if not s.level[n] then
+				s.level[n] = s.level.data[n]
+			else
+				s.level.data[n] = s.level[n]
+			end
+		end
+	end
+
+	director:load_texture_groups(s.level.required_textures, director.params.texture_size, self.ref_res, false, "game_editor")
+	if s.level.plugin_required_textures then
+		director:load_plugin_texture_groups(s.level.plugin_required_textures, self.ref_res, false, "game_editor")
+	end
+	if s.level.required_sounds then
+		director:load_sound_groups(s.level.required_sounds)
+	end
+	if s.level.plugin_required_sounds then
+		director:load_sound_groups(s.level.plugin_required_sounds)
+	end
+	if s.level.required_exoskeletons then
+		EXO:queue_load(s.level.required_exoskeletons)
+		EXO:load(s.level.required_exoskeletons)
+	end
+
+	if s.level.init then
+		s.level:init(s)
+	end
+
+	if s.level.data.entities_list then
+		LU.insert_entities(self.store, s.level.data.entities_list, true)
+	end
+
+	if not s.level.nav_mesh then
+		s.level.nav_mesh = {}
+		s.level.data.nav_mesh = s.level.nav_mesh
+	end
+
+	if s.level.load then
+		P.add_invalid_range = function()
+		end
+		s.level:load(s)
+	end
+
+	if not GR:load(s.level_name) then
+		local gox, goy = -192, 0
+		local bgw, bgh = 1408, 768
+		local gw, gh = math.ceil(bgw / GR.cell_size), math.ceil(bgh / GR.cell_size)
+		GR:init_grid(gw, gh, gox, goy, GR.cell_size)
+	end
+
+	P:load_curves(s.level_name)
+
+	self.entities_dirty = true
+	self.grid_dirty = true
+	self.path_curves = P.path_curves
+	self.path_connections = P.path_connections
+	self.active_paths = P.active_paths
+	self:update_curves()
+	self.paths_dirty = true
+
+	self.simulation:update(0.03333333333333333)
+
+	self.nav_entity_selected = nil
+	self:sanitize_nav_mesh(s.level.nav_mesh)
+	self.nav_dirty = true
+	self.undo_stack = {}
+	self.undo_active = true
+	self:load_wave_assets()
+
+	self.gui:level_loaded(entry)
+end
+
 function editor:load_wave_assets()
 	local level_name = self.store.level_name
 	local mode = self.store.level_mode
@@ -823,8 +967,20 @@ end
 function editor:save_wave_assets()
 	local level_name = self.store.level_name
 	local mode = self.store.level_mode
-	local cfg_path = wave_cfg_rel(level_name, mode)
-	local wave_path = wave_rel(level_name, mode)
+	local suffix = mode_suffix(mode)
+
+	local cfg_path, wave_path
+	if self.store.custom_map_entry then
+		local base = "game_editor/plugins/" .. self.store.custom_map_entry .. "/data"
+		love.filesystem.createDirectory(base .. "/waveconfigs")
+		love.filesystem.createDirectory(base .. "/waves")
+		cfg_path = base .. "/waveconfigs/" .. level_name .. "_waves_" .. suffix .. "_config.lua"
+		wave_path = base .. "/waves/" .. level_name .. "_waves_" .. suffix .. ".lua"
+	else
+		cfg_path = wave_cfg_rel(level_name, mode)
+		wave_path = wave_rel(level_name, mode)
+	end
+
 	self.wave_config = sanitize_wave_config(self.wave_config)
 	self.wave_data = sanitize_wave_data(self.wave_data, self.wave_config)
 	local ok_cfg = save_lua_table(cfg_path, self.wave_config)
@@ -1642,8 +1798,16 @@ function editor:serialize_level()
 	end
 end
 
+function editor:_plugin_save_path(name)
+	if self.store.custom_map_entry then
+		love.filesystem.createDirectory("game_editor/plugins/" .. self.store.custom_map_entry .. "/data/levels")
+		return "game_editor/plugins/" .. self.store.custom_map_entry .. "/data/levels/" .. name
+	end
+	return "game_editor/data/levels/" .. name
+end
+
 function editor:save_data()
-	local fn = "game_editor/data/levels/" .. self.store.level_name .. "_data.lua"
+	local fn = self:_plugin_save_path(self.store.level_name .. "_data.lua")
 	-- self:refresh_required_assets()
 	self:serialize_level()
 	local data = table.deepclone(self.store.level.data)
@@ -1652,7 +1816,7 @@ function editor:save_data()
 end
 
 function editor:save_curves()
-	local fn = "game_editor/data/levels/" .. self.store.level_name .. "_paths.lua"
+	local fn = self:_plugin_save_path(self.store.level_name .. "_paths.lua")
 	local t = {
 		connections = P.path_connections,
 		curves = P.path_curves,
@@ -1666,7 +1830,7 @@ function editor:save_curves()
 end
 
 function editor:save_grid()
-	local fn = "game_editor/data/levels/" .. self.store.level_name .. "_grid.lua"
+	local fn = self:_plugin_save_path(self.store.level_name .. "_grid.lua")
 	local data = table.deepclone(GR)
 	clear_key(data, {"cell_size", "cell_type_names", "grid_colors", "grid_h", "grid_w", "waypoints_cache"})
 	return storage:write_lua(fn, data)
@@ -1675,7 +1839,11 @@ end
 --- 将当前 store 对应的关卡数据全部保存
 function editor:level_save()
 	log.info("Saving level: %s", self.store.level_name)
-	love.filesystem.createDirectory("game_editor/data/levels")
+	if self.store.custom_map_entry then
+		love.filesystem.createDirectory("game_editor/plugins/" .. self.store.custom_map_entry)
+	else
+		love.filesystem.createDirectory("game_editor/data/levels")
+	end
 	local ok_curves = self:save_curves()
 	local ok_grid = self:save_grid()
 	local ok_data = self:save_data()
