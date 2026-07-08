@@ -76,7 +76,7 @@ local function load_progress()
 	return data
 end
 
-local function scan_maps(out_thumbnails)
+local function scan_maps()
 	local maps = {}
 
 	for _, mod_data in ipairs(mod_db.mods_datas) do
@@ -88,21 +88,20 @@ local function scan_maps(out_thumbnails)
 			local has_campaign = FS.getInfo(wave_root .. entry .. "_waves_campaign.lua") ~= nil
 			if has_campaign then
 				local level_data = storage:load_lua(base .. "/data/levels/" .. entry .. "_data.lua")
-				local thumbnail_view
-				if type(level_data) == "table" then
-					if level_data.thumbnail_sprite then
-						thumbnail_view = KImageView:new(level_data.thumbnail_sprite)
-					elseif level_data.thumbnail then
-						local path = base .. "/" .. level_data.thumbnail
-						local ok_img, img = pcall(love.graphics.newImage, path)
-						if ok_img and img then
-							local sprite_name = "custom_thumb_" .. entry
-							I:add_image(sprite_name, img, "game_editor")
-							if out_thumbnails then
-								out_thumbnails[#out_thumbnails + 1] = sprite_name
-							end
-							thumbnail_view = KImageView:new(sprite_name)
-						end
+				local metadata = storage:load_lua(base .. "/data/levels/" .. entry .. "_metadata.lua")
+				local thumbnail_info
+				if type(metadata) == "table" then
+					if metadata.thumbnail_sprite then
+						thumbnail_info = {
+							type = "sprite",
+							sprite = metadata.thumbnail_sprite
+						}
+					elseif metadata.thumbnail then
+						thumbnail_info = {
+							type = "file",
+							path = base .. "/" .. metadata.thumbnail,
+							sprite_name = "custom_thumb_" .. entry
+						}
 					end
 				end
 
@@ -111,7 +110,7 @@ local function scan_maps(out_thumbnails)
 					base = base,
 					cfg = cfg,
 					level_data = level_data,
-					thumbnail_view = thumbnail_view,
+					thumbnail_info = thumbnail_info,
 					has_heroic = FS.getInfo(wave_root .. entry .. "_waves_heroic.lua") ~= nil,
 					has_iron = FS.getInfo(wave_root .. entry .. "_waves_iron.lua") ~= nil
 				}
@@ -228,7 +227,7 @@ function CustomMapCard:initialize(map, card_w, card_h, on_select)
 	local thumb_w = card_w - thumb_margin * 2
 	local thumb_h = thumb_area_h - thumb_margin * 2
 
-	local thumb = map.thumbnail_view
+	local thumb = self:_load_thumbnail()
 	if thumb then
 		local scale_x = thumb_w / thumb.size.x
 		local scale_y = thumb_h / thumb.size.y
@@ -311,6 +310,31 @@ function CustomMapCard:initialize(map, card_w, card_h, on_select)
 	end
 	self:add_child(btn)
 	self._select_btn = btn
+end
+
+function CustomMapCard:_load_thumbnail()
+	local info = self.map.thumbnail_info
+	if not info then
+		return nil
+	end
+
+	if info.type == "sprite" then
+		return KImageView:new(info.sprite)
+	end
+
+	if info.type == "file" then
+		local ok_img, img = pcall(love.graphics.newImage, info.path)
+		if ok_img and img then
+			local I = require("lib.klove.image_db")
+			I:add_image(info.sprite_name, img, "custom_map")
+			if self._list_view then
+				self._list_view._custom_thumbs[#self._list_view._custom_thumbs + 1] = info.sprite_name
+			end
+			return KImageView:new(info.sprite_name)
+		end
+	end
+
+	return nil
 end
 
 function CustomMapCard:on_enter()
@@ -832,10 +856,26 @@ function CustomLevelSelectView:initialize(sw, sh, map, on_start, progress)
 		self.back:add_child(b)
 	end
 
-	if map.thumbnail_view and map.thumbnail_view.image_name then
-		local thumb = KImageView:new(map.thumbnail_view.image_name)
-		thumb.pos = v(215, 190)
-		self.back:add_child(thumb)
+	if map.thumbnail_info then
+		local sprite_name
+		if map.thumbnail_info.type == "sprite" then
+			sprite_name = map.thumbnail_info.sprite
+		elseif map.thumbnail_info.type == "file" then
+			sprite_name = map.thumbnail_info.sprite_name
+		end
+		if sprite_name then
+			local stage_thumb = KImageView:new(sprite_name)
+			-- thumb.pos = v(215, 190)
+			do
+				local stage_thumb_x, stage_thumb_y = 342, 246
+				local scale_x, scale_y = stage_thumb_x / stage_thumb.size.x, stage_thumb_y / stage_thumb.size.y
+				local s = math.min(scale_x, scale_y)
+				stage_thumb.scale = v(s, s)
+				local scaled_w, scaled_h = stage_thumb.size.x * s, stage_thumb.size.y * s
+				stage_thumb.pos:set(215 + (stage_thumb_x - scaled_w) / 2, 190 + (stage_thumb_y - scaled_h) / 2)
+			end
+			self.back:add_child(stage_thumb)
+		end
 	end
 
 	local thumb_frame = KImageView:new("levelSelect_thumbFrame")
@@ -981,12 +1021,6 @@ function CustomLevelSelectView:start_game()
 
 	local map = self._map
 	local mode = self._selected_mode
-	local level_data = type(map.level_data) == "table" and map.level_data or {}
-	local bg_image = level_data.background_image and (map.base .. "/" .. level_data.background_image) or nil
-	local bg_sprite = level_data.background_sprite
-	local battle_music = level_data.battle_music and (map.base .. "/" .. level_data.battle_music) or nil
-	local battle_prep_music = level_data.battle_prep_music and (map.base .. "/" .. level_data.battle_prep_music) or nil
-
 	local difficulty = self._diff_btn and self._diff_btn:get_difficulty() or DIFFICULTY_NORMAL
 
 	self._on_start({
@@ -996,11 +1030,7 @@ function CustomLevelSelectView:start_game()
 		custom_map_entry = map.entry,
 		custom_map_level_name = map.entry,
 		custom_map_root = map.base,
-		custom_map_return_to = "map",
-		custom_map_bg_image = bg_image,
-		custom_map_bg_sprite = bg_sprite,
-		custom_map_battle_music = battle_music,
-		custom_map_battle_prep_music = battle_prep_music
+		custom_map_return_to = "map"
 	})
 end
 
@@ -1042,6 +1072,7 @@ function CustomMapListView:initialize(size, maps, on_select)
 	self.propagate_on_click = true
 	self._maps = maps
 	self._on_select = on_select
+	self._custom_thumbs = {}
 
 	local avail_w = size.x
 	local avail_h = size.y - TOP_MARGIN - BOTTOM_MARGIN
@@ -1073,6 +1104,17 @@ function CustomMapListView:initialize(size, maps, on_select)
 	self._nav = nav
 
 	self:show_page(1)
+end
+
+function CustomMapListView:destroy()
+	if self._custom_thumbs then
+		local I = require("lib.klove.image_db")
+		for _, sn in ipairs(self._custom_thumbs) do
+			I:remove_image(sn)
+		end
+		self._custom_thumbs = nil
+	end
+	CustomMapListView.super.destroy(self)
 end
 
 function CustomMapListView:show_page(page)
@@ -1118,6 +1160,7 @@ function CustomMapListView:show_page(page)
 				self._on_select(m)
 			end
 		end)
+		card._list_view = self
 		card.pos = v(x, y)
 		self._page_view:add_child(card)
 	end

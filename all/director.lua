@@ -314,15 +314,11 @@ function director:unload_item(item)
 
 		if game.store and game.store.level then
 			local level = game.store.level
-			if level.custom_required_textures then
-				for _, group in ipairs(level.custom_required_textures) do
-					I:unload_atlas(group, game.store.screen_scale)
-				end
+			if level.plugin_required_textures then
+				self:unload_plugin_texture_groups(level.plugin_required_textures, game.ref_res, "game")
 			end
-			if level.custom_required_sounds then
-				for _, group in ipairs(level.custom_required_sounds) do
-					S:unload_group(group)
-				end
+			if level.plugin_required_sounds then
+				self:unload_sound_groups(level.plugin_required_sounds)
 			end
 		end
 
@@ -487,20 +483,13 @@ function director:queue_load_item_named(name)
 		EXO:queue_load(game.required_exoskeletons)
 
 		if args.custom_map_root then
-			self:load_custom_map_assets(args, game)
-
 			local level = game.store.level
-			if level and level.custom_required_textures then
-				local scale = self:get_texture_scale("game", game.ref_res)
-				local texture_size = game.store.texture_size
-				for _, group in ipairs(level.custom_required_textures) do
-					local path = args.custom_map_root .. "/images/" .. texture_size
-					I:queue_load_atlas(scale, path, group)
+			if level then
+				if level.plugin_required_textures then
+					self:load_plugin_texture_groups(level.plugin_required_textures, game.ref_res, true, "game")
 				end
-			end
-			if level and level.custom_required_sounds then
-				for _, group in ipairs(level.custom_required_sounds) do
-					S:queue_load_group(group)
+				if level.plugin_required_sounds then
+					self:load_sound_groups(level.plugin_required_sounds)
 				end
 			end
 		end
@@ -622,60 +611,6 @@ function director:unload_plugin_texture_groups(groups, ref_height, item_name)
 
 	for group, _ in pairs(groups) do
 		I:unload_atlas(group, scale)
-	end
-end
-
-function director:load_custom_map_assets(args, game)
-	local root = args.custom_map_root
-	if not root then
-		return
-	end
-
-	if args.custom_map_bg_image and args.custom_map_bg_sprite then
-		local ok, img = pcall(love.graphics.newImage, args.custom_map_bg_image)
-		if ok and img then
-			I:add_image(args.custom_map_bg_sprite, img, "game_editor")
-		else
-			log.error("Failed to load custom background image: %s", tostring(args.custom_map_bg_image))
-		end
-	end
-
-	if args.custom_map_battle_music then
-		local sound_id = "custom_" .. game.store.level_name .. "_battle"
-		local ok, src = pcall(love.audio.newSource, args.custom_map_battle_music, "stream")
-		if ok and src then
-			local file_key = sound_id .. "__file"
-			S.sources[file_key] = {src}
-			S.source_uses[file_key] = 1
-			S.sounds[sound_id] = {
-				files = {
-					[1] = file_key
-				},
-				gain = 0.6,
-				loop = true,
-				source_group = "MUSIC",
-				stream = true
-			}
-		end
-	end
-
-	if args.custom_map_battle_prep_music then
-		local sound_id = "custom_" .. game.store.level_name .. "_battle_prep"
-		local ok, src = pcall(love.audio.newSource, args.custom_map_battle_prep_music, "stream")
-		if ok and src then
-			local file_key = sound_id .. "__file"
-			S.sources[file_key] = {src}
-			S.source_uses[file_key] = 1
-			S.sounds[sound_id] = {
-				files = {
-					[1] = file_key
-				},
-				gain = 0.6,
-				loop = true,
-				source_group = "MUSIC",
-				stream = true
-			}
-		end
 	end
 end
 

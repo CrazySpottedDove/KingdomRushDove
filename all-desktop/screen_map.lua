@@ -1068,12 +1068,6 @@ function screen_map:ensure_changelog_view()
 end
 
 function screen_map:destroy()
-	if self._custom_thumbnails then
-		for _, sn in ipairs(self._custom_thumbnails) do
-			I:remove_image(sn)
-		end
-		self._custom_thumbnails = nil
-	end
 	self._custom_maps = nil
 	self._custom_progress = nil
 	self._custom_map_view = nil
@@ -1218,17 +1212,15 @@ function screen_map:ensure_custom_map_view()
 		return
 	end
 
-	if not self._custom_thumbnails then
-		self._custom_thumbnails = {}
-	end
 	if not self._custom_maps then
-		self._custom_maps = SCU.scan_maps(self._custom_thumbnails)
+		self._custom_maps = SCU.scan_maps()
 	end
 	if not self._custom_progress then
 		self._custom_progress = SCU.load_progress()
 	end
 
 	local content_w = self.sw - 40
+	local content_h = self.sh - 88
 	local list_view = SCU.CustomMapListView:new(V.v(content_w, self.sh - 8), self._custom_maps, function(map)
 		self:show_custom_level_select(map)
 	end)
@@ -3228,7 +3220,15 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 
 	local level_string = string.format("%02i", level_num)
 	local stage_thumb = KImageView:new(string.format("stage_thumbs_%04i", level_string))
-	stage_thumb.pos = v(215, 190)
+	-- stage_thumb.pos:set(215, 190)
+	do
+		local stage_thumb_x, stage_thumb_y = 342, 246
+		local scale_x, scale_y = stage_thumb_x / stage_thumb.size.x, stage_thumb_y / stage_thumb.size.y
+		local s = math.min(scale_x, scale_y)
+		stage_thumb.scale = v(s, s)
+		local scaled_w, scaled_h = stage_thumb.size.x * s, stage_thumb.size.y * s
+		stage_thumb.pos:set(215 + (stage_thumb_x - scaled_w) / 2, 190 + (stage_thumb_y - scaled_h) / 2)
+	end
 	self.back:add_child(stage_thumb)
 
 	local thumb_frame = KImageView:new("levelSelect_thumbFrame")

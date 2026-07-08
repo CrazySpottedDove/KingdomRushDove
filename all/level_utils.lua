@@ -95,6 +95,8 @@ function LU.load_level(store, name)
 			"required_textures",
 			"required_sounds",
 			"required_exoskeletons",
+			"plugin_required_textures",
+			"plugin_required_sounds",
 			"locked_hero",
 			"locked_powers",
 			"locked_towers",
@@ -104,7 +106,9 @@ function LU.load_level(store, name)
 			"nav_mesh",
 			"unlock_towers",
 			"custom_start_pos",
-			"ignore_walk_backwards_paths"
+			"ignore_walk_backwards_paths",
+			"plugin_required_textures",
+			"plugin_required_sounds"
 		}) do
 			level[n] = level.data[n]
 		end

@@ -88,6 +88,8 @@ image_db.db_images = {}
 image_db.db_atlas = {}
 -- 图像组引用计数，map<string(name-scale), number>
 image_db.atlas_uses = {}
+-- 原始图像文件引用计数，map<string, number>。不同图集可能引用同一张图片，释放时需确保没有其他图集在使用。
+image_db.image_uses = {}
 image_db.load_queue = {}
 image_db.load_queue_current = nil
 image_db.progress = 0
@@ -431,8 +433,16 @@ function image_db:unload_atlas(name, ref_scale)
 	local removed_images_count = 0
 
 	for k, _ in pairs(remove_images) do
+		if self.image_uses[k] then
+			self.image_uses[k] = self.image_uses[k] - 1
+			if self.image_uses[k] > 0 then
+				goto continue
+			end
+			self.image_uses[k] = nil
+		end
 		self.db_images[k] = nil
 		removed_images_count = removed_images_count + 1
+		::continue::
 	end
 
 	for _, k in pairs(remove_frames) do
@@ -514,6 +524,8 @@ function image_db:preload_atlas(ref_scale, path, name)
 		end
 
 		image_names[v.a_name] = true
+		local img_key = remove_extension_fast(v.a_name)
+		self.image_uses[img_key] = (self.image_uses[img_key] or 0) + 1
 
 		-- 我们重建 atlas 数据，除去了冗余数据，以做到内存占用的减少
 		self.db_atlas[k] = {
@@ -569,6 +581,8 @@ function image_db:preload_atlas_from_bytecode(ref_scale, path, name)
 	for i = 1, info.count do
 		local v = info.values[i]
 		image_names[v[1]] = true
+		local img_key = remove_extension_fast(v[1])
+		self.image_uses[img_key] = (self.image_uses[img_key] or 0) + 1
 		self.db_atlas[info.keys[i]] = {
 			atlas = remove_extension_fast(v[1]),
 			group = name_scale,
@@ -757,22 +771,43 @@ function image_db:add_image(name, image, group, scale)
 	}
 	self.db_images[name] = {image, w, h}
 
--- if not self.atlas_uses[name_scale] then
--- self.atlas_uses[name_scale] = 1
--- else
--- self.atlas_uses[name_scale] = self.atlas_uses[name_scale] + 1
--- end
+	if not self.atlas_uses[name_scale] then
+		self.atlas_uses[name_scale] = 1
+	else
+		self.atlas_uses[name_scale] = self.atlas_uses[name_scale] + 1
+	end
+
+	self.image_uses[name] = (self.image_uses[name] or 0) + 1
 end
 
 --- 移除图像文件
 ---@param name string 纹理名称
 function image_db:remove_image(name)
-	-- local name_scale = self.db_atlas[name].group
-	-- self.atlas_uses[name_scale] = self.atlas_uses[name_scale] - 1
-	-- if self.atlas_uses[name_scale] <= 0 then
+	local f = self.db_atlas[name]
+	if not f then
+		return
+	end
+
+	local name_scale = f.group
+	if self.atlas_uses[name_scale] then
+		self.atlas_uses[name_scale] = self.atlas_uses[name_scale] - 1
+		if self.atlas_uses[name_scale] > 0 then
+			return
+		end
+		self.atlas_uses[name_scale] = nil
+	end
+
+	local img_key = f.atlas
+	if self.image_uses[img_key] then
+		self.image_uses[img_key] = self.image_uses[img_key] - 1
+		if self.image_uses[img_key] > 0 then
+			return
+		end
+		self.image_uses[img_key] = nil
+	end
+
 	self.db_images[name] = nil
 	self.db_atlas[name] = nil
--- end
 end
 
 function image_db:i(name)
