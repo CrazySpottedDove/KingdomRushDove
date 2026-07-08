@@ -54,6 +54,9 @@ local CATEGORY_OPTIONS = {{
 	label = "敌人",
 	value = "enemy"
 }, {
+	label = "关卡",
+	value = "level"
+}, {
 	label = "其它",
 	value = "other"
 }}
