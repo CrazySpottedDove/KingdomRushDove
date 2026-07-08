@@ -18,6 +18,8 @@ local CARD_W = 260
 local CARD_H = 340
 local GAP = 24
 local PAGINATION_H = 60
+local TOP_MARGIN = 10
+local BOTTOM_MARGIN = 10
 
 local C = {
 	bg = {22, 18, 12, 255},
@@ -350,7 +352,52 @@ function CustomMapCard:on_exit()
 	self._border.colors.background = C.card_border
 end
 
--- ── Pagination ──
+-- ── Pagination (dark gold triangles, directly drawn) ──
+
+local ARROW_COLOR = {207, 164, 72, 255}
+local ARROW_HOVER = {240, 200, 100, 255}
+local ARROW_SIZE = 36
+local ARROW_THICK = 4
+
+local TriangleArrow = class("TriangleArrow", KView)
+
+function TriangleArrow:initialize(size, direction)
+	KView.initialize(self, size)
+	self._direction = direction
+	self._hover = false
+	self.propagate_on_click = false
+end
+
+function TriangleArrow:on_enter()
+	self._hover = true
+end
+
+function TriangleArrow:on_exit()
+	self._hover = false
+end
+
+function TriangleArrow:on_down()
+	self._hover = true
+end
+
+function TriangleArrow:on_up()
+	self._hover = true
+end
+
+function TriangleArrow:draw()
+	local G = love.graphics
+	local cx, cy = self.size.x * 0.5, self.size.y * 0.5
+	local s = ARROW_SIZE * 0.5
+	local color = self._hover and ARROW_HOVER or ARROW_COLOR
+	G.setColor(color[1] / 255, color[2] / 255, color[3] / 255, color[4] / 255)
+	G.setLineWidth(ARROW_THICK)
+	if self._direction == "left" then
+		G.line(cx + s, cy - s, cx - s, cy, cx + s, cy + s)
+	else
+		G.line(cx - s, cy - s, cx + s, cy, cx - s, cy + s)
+	end
+	G.setLineWidth(1)
+end
 
 local CustomMapPagination = class("CustomMapPagination", KView)
 
@@ -360,39 +407,32 @@ function CustomMapPagination:initialize(size, total_pages, on_page_change)
 	self._current_page = 1
 	self._on_page_change = on_page_change
 
-	local btn_w = 40
-	local btn_h = 80
+	local arrow_w = 50
+	local arrow_h = 80
 
-	self._prev_btn = CustomMapTextButton:new(v(btn_w, btn_h), "◀", 18)
-	self._prev_btn.pos = v(4, (size.y - btn_h) * 0.5)
-	function self._prev_btn.on_click()
+	self._prev_arrow = TriangleArrow:new(v(arrow_w, arrow_h), "left")
+	self._prev_arrow.pos = v(0, (size.y - arrow_h) * 0.5)
+	function self._prev_arrow.on_click()
 		if self._current_page > 1 then
 			self._current_page = self._current_page - 1
-			self:update_display()
 			if self._on_page_change then
 				self._on_page_change(self._current_page)
 			end
 		end
 	end
-	self:add_child(self._prev_btn)
+	self:add_child(self._prev_arrow)
 
-	self._next_btn = CustomMapTextButton:new(v(btn_w, btn_h), "▶", 18)
-	self._next_btn.pos = v(size.x - btn_w - 4, (size.y - btn_h) * 0.5)
-	function self._next_btn.on_click()
+	self._next_arrow = TriangleArrow:new(v(arrow_w, arrow_h), "right")
+	self._next_arrow.pos = v(size.x - arrow_w, (size.y - arrow_h) * 0.5)
+	function self._next_arrow.on_click()
 		if self._current_page < self._total_pages then
 			self._current_page = self._current_page + 1
-			self:update_display()
 			if self._on_page_change then
 				self._on_page_change(self._current_page)
 			end
 		end
 	end
-	self:add_child(self._next_btn)
-
-	self:update_display()
-end
-
-function CustomMapPagination:update_display()
+	self:add_child(self._next_arrow)
 end
 
 function CustomMapPagination:update_pages(new_total)
@@ -400,7 +440,6 @@ function CustomMapPagination:update_pages(new_total)
 	if self._current_page > self._total_pages then
 		self._current_page = math.max(self._total_pages, 1)
 	end
-	self:update_display()
 	if self._on_page_change then
 		self._on_page_change(self._current_page)
 	end
@@ -922,9 +961,11 @@ function CustomMapListView:initialize(size, maps, on_select)
 	self._maps = maps
 	self._on_select = on_select
 
+	local avail_w = size.x
+	local avail_h = size.y - TOP_MARGIN - BOTTOM_MARGIN
 	local total_maps = #maps
-	local cols = math.max(1, math.floor((size.x + GAP) / (CARD_W + GAP)))
-	local rows = math.max(1, math.floor((size.y + GAP) / (CARD_H + GAP)))
+	local cols = math.max(1, math.floor((avail_w + GAP) / (CARD_W + GAP)))
+	local rows = math.max(1, math.floor((avail_h + GAP) / (CARD_H + GAP)))
 	local cards_per_page = cols * rows
 	local total_pages = math.max(1, math.ceil(total_maps / cards_per_page))
 
@@ -980,7 +1021,7 @@ function CustomMapListView:show_page(page)
 
 	local total_w = self._cols * (CARD_W + GAP) - GAP
 	local start_x = (self._page_view.size.x - total_w) * 0.5
-	local start_y = (self._page_view.size.y - self._rows * (CARD_H + GAP) + GAP) * 0.5
+	local start_y = TOP_MARGIN + (self._page_view.size.y - TOP_MARGIN - BOTTOM_MARGIN - self._rows * (CARD_H + GAP) + GAP) * 0.5
 
 	for i, map in ipairs(page_maps) do
 		local col = (i - 1) % self._cols
@@ -1004,7 +1045,8 @@ return {
 	CARD_W = CARD_W,
 	CARD_H = CARD_H,
 	GAP = GAP,
-	PAGINATION_H = PAGINATION_H,
+	TOP_MARGIN = TOP_MARGIN,
+	BOTTOM_MARGIN = BOTTOM_MARGIN,
 	C = C,
 
 	-- Utilities
