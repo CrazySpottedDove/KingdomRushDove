@@ -52,11 +52,7 @@ local function save_custom_victory(store, stars)
 
 	local progress = data.maps[store.custom_map_entry] or {}
 	progress.stars = math.max(stars, tonumber(progress.stars) or 0)
-	if store.level_mode == GAME_MODE_HEROIC then
-		progress.heroic = true
-	elseif store.level_mode == GAME_MODE_IRON then
-		progress.iron = true
-	end
+	progress[store.level_mode] = math.max(store.level_difficulty, tonumber(progress[store.level_mode]) or 0)
 	data.maps[store.custom_map_entry] = progress
 
 	storage:write_lua(CUSTOM_SLOT, data)

@@ -6726,5 +6726,6 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	TOWER_SANDWORM_SLIME_NAME_2 = "粘液球II",
 	TOWER_SANDWORM_SLIME_DESCRIPTION_2 = "每隔12秒，射出一枚粘液球，制造一坨持续4秒的、黏糊糊的区域，使60范围内的敌人减速70%，并施加中毒效果，每0.5秒造成10点伤害。",
 	TOWER_SANDWORM_SLIME_NOTE = "粘粘有余！",
-	SOLDIER_TOWER_SANDWORM_1_NAME = "沙丘恐怖者"
+	SOLDIER_TOWER_SANDWORM_1_NAME = "沙丘恐怖者",
+	SELECT_CUSTOM_LEVEL = "选择"
 }

@@ -49,19 +49,11 @@ end
 function mod_main:init(director)
 	mod_db:init()
 	local mod_main_config = mod_paths.load_main_config()
-
-	if not mod_main_config.enabled then
-		director:init(main.params)
-		log.info("Mod module is disabled in config.lua")
-
-		return false
-	end
-
-	-- self:front_init()
 	director:init(main.params)
-	self:after_init()
 
-	return true
+	if mod_main_config.enabled then
+		self:after_init()
+	end
 end
 
 --- 初始化所有已启用的模组

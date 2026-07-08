@@ -2,27 +2,30 @@ local log = require("lib.klua.log"):new("screen_custom_map")
 local class = require("middleclass")
 local V = require("lib.klua.vector")
 local v = V.v
-local persistence = require("lib.klua.persistence")
 local FS = love.filesystem
+local storage = require("all.storage")
+local mod_db = require("mod_db")
 local S = require("sound_db")
 local km = require("lib.klua.macros")
 local GS = require("kr1.game_settings")
 local utf8 = require("utf8")
+local i18n = require("i18n")
 
 require("klove.kui")
 require("gg_views_custom")
 
-local PLUGINS_DIR = "plugins"
 local SAVE_FILE = "custom_slot.lua"
 local CARD_W = 260
 local CARD_H = 340
 local GAP = 24
-local PAGINATION_H = 60
 local TOP_MARGIN = 10
 local BOTTOM_MARGIN = 10
 
+local G = love.graphics
+
 local C = {
 	bg = {22, 18, 12, 255},
+	bg_warm = {35, 25, 15, 255},
 	panel_bg = {72, 56, 26, 210},
 	panel_border = {153, 119, 48, 200},
 	card_bg = {26, 18, 12, 220},
@@ -55,42 +58,15 @@ local function safe_text(v, fallback)
 	return tostring(v)
 end
 
-local function load_lua_file(path)
-	local ok_load, f_or_err = pcall(FS.load, path)
-	if not ok_load or not f_or_err then
-		return nil, f_or_err
-	end
-	local f = f_or_err
-	if type(f) ~= "function" then
-		return nil, "invalid lua chunk"
-	end
-	local ok, data = pcall(f)
-	if not ok then
-		local content = FS.read(path)
-		if type(content) == "string" and content ~= "" then
-			local wrapped = loadstring("return " .. content, "@" .. path .. "(wrapped)")
-			if wrapped then
-				local ok2, data2 = pcall(wrapped)
-				if ok2 and type(data2) == "table" then
-					return data2
-				end
-			end
-		end
-		return nil, data
-	end
-	return data
-end
-
 local function save_progress(data)
-	local out = "return " .. persistence.serialize_to_string(data) .. "\n"
-	local ok = FS.write(SAVE_FILE, out)
+	local ok = storage:write_lua(SAVE_FILE, data)
 	if not ok then
 		log.error("failed to save custom progress: %s", SAVE_FILE)
 	end
 end
 
 local function load_progress()
-	local data = load_lua_file(SAVE_FILE)
+	local data = storage:load_lua(SAVE_FILE)
 	if type(data) ~= "table" then
 		return {
 			maps = {}
@@ -102,49 +78,43 @@ end
 
 local function scan_maps(out_thumbnails)
 	local maps = {}
-	local ok, entries = pcall(FS.getDirectoryItems, PLUGINS_DIR)
-	if not ok or not entries then
-		return maps
-	end
 
-	for _, entry in ipairs(entries) do
-		local base = PLUGINS_DIR .. "/" .. entry
-		local info = FS.getInfo(base)
-		if info and info.type == "directory" then
-			local cfg = load_lua_file(base .. "/config.lua")
-			if type(cfg) == "table" and cfg.type == "level" then
-				local wave_root = base .. "/data/waves/"
-				local has_campaign = FS.getInfo(wave_root .. entry .. "_waves_campaign.lua") ~= nil
-				if has_campaign then
-					local level_data = load_lua_file(base .. "/data/levels/" .. entry .. "_data.lua")
-					local thumbnail_view
-					if type(level_data) == "table" then
-						if level_data.thumbnail_sprite then
-							thumbnail_view = KImageView:new(level_data.thumbnail_sprite)
-						elseif level_data.thumbnail then
-							local path = base .. "/" .. level_data.thumbnail
-							local ok_img, img = pcall(love.graphics.newImage, path)
-							if ok_img and img then
-								local sprite_name = "custom_thumb_" .. entry
-								I:add_image(sprite_name, img, "game_editor")
-								if out_thumbnails then
-									out_thumbnails[#out_thumbnails + 1] = sprite_name
-								end
-								thumbnail_view = KImageView:new(sprite_name)
+	for _, mod_data in ipairs(mod_db.mods_datas) do
+		local cfg = mod_data.config
+		if cfg and cfg.category == "level" then
+			local entry = mod_data.entry
+			local base = mod_data.path
+			local wave_root = base .. "/data/waves/"
+			local has_campaign = FS.getInfo(wave_root .. entry .. "_waves_campaign.lua") ~= nil
+			if has_campaign then
+				local level_data = storage:load_lua(base .. "/data/levels/" .. entry .. "_data.lua")
+				local thumbnail_view
+				if type(level_data) == "table" then
+					if level_data.thumbnail_sprite then
+						thumbnail_view = KImageView:new(level_data.thumbnail_sprite)
+					elseif level_data.thumbnail then
+						local path = base .. "/" .. level_data.thumbnail
+						local ok_img, img = pcall(love.graphics.newImage, path)
+						if ok_img and img then
+							local sprite_name = "custom_thumb_" .. entry
+							I:add_image(sprite_name, img, "game_editor")
+							if out_thumbnails then
+								out_thumbnails[#out_thumbnails + 1] = sprite_name
 							end
+							thumbnail_view = KImageView:new(sprite_name)
 						end
 					end
-
-					maps[#maps + 1] = {
-						entry = entry,
-						base = base,
-						cfg = cfg,
-						level_data = level_data,
-						thumbnail_view = thumbnail_view,
-						has_heroic = FS.getInfo(wave_root .. entry .. "_waves_heroic.lua") ~= nil,
-						has_iron = FS.getInfo(wave_root .. entry .. "_waves_iron.lua") ~= nil
-					}
 				end
+
+				maps[#maps + 1] = {
+					entry = entry,
+					base = base,
+					cfg = cfg,
+					level_data = level_data,
+					thumbnail_view = thumbnail_view,
+					has_heroic = FS.getInfo(wave_root .. entry .. "_waves_heroic.lua") ~= nil,
+					has_iron = FS.getInfo(wave_root .. entry .. "_waves_iron.lua") ~= nil
+				}
 			end
 		end
 	end
@@ -260,11 +230,13 @@ function CustomMapCard:initialize(map, card_w, card_h, on_select)
 
 	local thumb = map.thumbnail_view
 	if thumb then
-		thumb.pos = v(thumb_margin, thumb_margin)
 		local scale_x = thumb_w / thumb.size.x
 		local scale_y = thumb_h / thumb.size.y
 		local s = math.min(scale_x, scale_y)
 		thumb.scale = v(s, s)
+		local scaled_w = thumb.size.x * s
+		local scaled_h = thumb.size.y * s
+		thumb.pos = v(thumb_margin + (thumb_w - scaled_w) / 2, thumb_margin + (thumb_h - scaled_h) / 2)
 		thumb.propagate_on_click = true
 		thumb.propagate_on_down = true
 		thumb.propagate_on_up = true
@@ -296,7 +268,6 @@ function CustomMapCard:initialize(map, card_w, card_h, on_select)
 	end
 
 	local info_y = thumb_area_h + 8
-	local info_h = card_h - info_y - 8
 	local label_w = card_w - 16
 
 	local name_label = GGLabel:new(v(label_w, 24))
@@ -331,7 +302,7 @@ function CustomMapCard:initialize(map, card_w, card_h, on_select)
 
 	local btn_w = label_w * 0.6
 	local btn_h = 30
-	local btn = CustomMapTextButton:new(v(btn_w, btn_h), "Select", 14)
+	local btn = CustomMapTextButton:new(v(btn_w, btn_h), _("SELECT_CUSTOM_LEVEL"), 14)
 	btn.pos = v((card_w - btn_w) * 0.5, card_h - btn_h - 10)
 	function btn.on_click()
 		if self._on_select then
@@ -508,35 +479,97 @@ local function add_level_title(parent, text, style, y)
 	parent:add_child(d)
 end
 
+local function CJK(default, zh, ja, kr)
+	return i18n.cjk(i18n, default, zh, ja, kr)
+end
+
 local function add_level_description(parent, text)
 	local LEFT_MARGIN = ls_page_r_x + 10
-	local TEXT_TOP_POS = ls_page_y + 50
+	local FULL_PARAGRAPH_WIDTH = ls_page_w - 10
+	local TEXT_TOP_POS = ls_page_y + 50 + CJK(0, 0, 0, -4)
+	local RIGHT_PAGE_MAX_Y = 468
+	local font_name = "body"
+	local font_size = 17.5
+	local line_height = CJK(0.85, 0.85, 1.1, 0.9)
 	local bg = KImageView:new("levelSelect_capitular_bg")
 	bg.pos = v(LEFT_MARGIN - 10, TEXT_TOP_POS - 30)
 	parent:add_child(bg)
 
+	local FIRST_PARAGRAPH_WIDTH = ls_page_w - bg.size.x
 	local p = string.sub(text, utf8.offset(text, 2))
 	local first_letter_label = GGLabel:new(V.v(bg.size.x, bg.size.y))
-	first_letter_label.pos = v(bg.pos.x - 4, bg.pos.y)
+	first_letter_label.pos = v(bg.pos.x + CJK(-4, 0, 0, 0), bg.pos.y + CJK(0, -4, -6, -6))
 	first_letter_label.font_name = "capitals"
-	first_letter_label.font_size = 64
+	first_letter_label.font_size = CJK(64, 56, 56, 56)
 	first_letter_label.colors.text = {247, 234, 186}
 	first_letter_label.text_align = "center"
 	first_letter_label.vertical_align = "bottom"
 	first_letter_label.text = string.sub(text, 1, utf8.offset(text, 2) - 1)
 	parent:add_child(first_letter_label)
 
-	local desc = GGLabel:new(V.v(ls_page_w - 10, 200))
-	desc.pos = v(LEFT_MARGIN, TEXT_TOP_POS)
-	desc.font_name = "body"
-	desc.font_size = 17.5
-	desc.text_align = "left"
-	desc.vertical_align = "top"
-	desc.colors.text = {60, 50, 30, 255}
-	desc.fit_lines = 8
-	desc.line_height = 0.85
-	desc.text = text or ""
-	parent:add_child(desc)
+	local first_paragraph_1_label = GGLabel:new(V.v(FIRST_PARAGRAPH_WIDTH, 100))
+	first_paragraph_1_label.pos = v(bg.pos.x + bg.size.x - 2, TEXT_TOP_POS)
+	first_paragraph_1_label.font_name = font_name
+	first_paragraph_1_label.font_size = font_size
+	first_paragraph_1_label.line_height = line_height
+	first_paragraph_1_label.colors.text = {64, 57, 36}
+	first_paragraph_1_label.text_align = "left"
+	first_paragraph_1_label.text = p
+	parent:add_child(first_paragraph_1_label)
+
+	local _, _, p_lines = first_paragraph_1_label:get_wrap_lines()
+	local p_max_lines = math.ceil((bg.pos.y + bg.size.y - TEXT_TOP_POS - 3) / (first_paragraph_1_label:get_font_height() * line_height))
+	local p_1_nlines = math.min(p_max_lines, #p_lines)
+	for i = 1, #p_lines do
+		p_lines[i] = string.trim(p_lines[i])
+	end
+	local p_1 = table.concat(p_lines, "\n", 1, p_1_nlines)
+	local p_2 = table.concat(p_lines, CJK(" ", "", "", nil), p_1_nlines + 1)
+	first_paragraph_1_label.text = p_1
+
+	local p2_pos = v(LEFT_MARGIN, first_paragraph_1_label.pos.y + first_paragraph_1_label:get_font_height() * p_1_nlines * line_height)
+	local first_paragraph_2_label = GGLabel:new(V.v(FULL_PARAGRAPH_WIDTH, RIGHT_PAGE_MAX_Y - p2_pos.y))
+	first_paragraph_2_label.pos = p2_pos
+	first_paragraph_2_label.fit_size = true
+	first_paragraph_2_label.font_name = font_name
+	first_paragraph_2_label.font_size = font_size
+	first_paragraph_2_label.line_height = line_height
+	first_paragraph_2_label.colors.text = {64, 57, 36}
+	first_paragraph_2_label.text_align = "left"
+	parent:add_child(first_paragraph_2_label)
+	first_paragraph_2_label.text = p_2
+end
+
+local function add_level_rules(parent, y)
+	local upg_icon = KImageView:new("levelSelect_modeRules_0010")
+	upg_icon.pos = v(ls_page_r_x + 20, y)
+	parent:add_child(upg_icon)
+
+	local upg_label = GGLabel:new(V.v(90, upg_icon.size.y))
+	upg_label.pos = v(upg_icon.pos.x + upg_icon.size.x, upg_icon.pos.y + upg_icon.size.y / 2)
+	upg_label.anchor.y = upg_label.size.y / 2
+	upg_label.font_name = "body"
+	upg_label.font_size = 11
+	upg_label.text_align = "center"
+	upg_label.vertical_align = "middle"
+	upg_label.text = _("UPGRADE_LEVEL") .. "\n6"
+	upg_label.colors.text = {64, 57, 36}
+	parent:add_child(upg_label)
+
+	local hero_icon = KImageView:new("levelSelect_modeRules_0011")
+	hero_icon.pos = v(ls_page_r_x + ls_page_w / 2 + 20, y)
+	parent:add_child(hero_icon)
+
+	local hero_label = GGLabel:new(V.v(90, hero_icon.size.y))
+	hero_label.pos = v(hero_icon.pos.x + hero_icon.size.x, hero_icon.pos.y + hero_icon.size.y / 2)
+	hero_label.anchor.y = hero_label.size.y / 2
+	hero_label.font_name = "body"
+	hero_label.font_size = 11
+	hero_label.text_align = "center"
+	hero_label.vertical_align = "middle"
+	hero_label.text = _("HEROES")
+	hero_label.colors.text = {64, 57, 36}
+	parent:add_child(hero_label)
 end
 
 local function add_difficulty_stamp(parent, diff, x, y)
@@ -551,7 +584,8 @@ local CustomLevelSelectDifficultyButton = class("CustomLevelSelectDifficultyButt
 
 function CustomLevelSelectDifficultyButton:initialize()
 	KImageButton.initialize(self, "levelSelect_difficulty_0001")
-	self._difficulty = DIFFICULTY_NORMAL
+	local diff = screen_map.user_data.difficulty or DIFFICULTY_NORMAL
+	self._difficulty = diff
 	self:set_difficulty(self._difficulty)
 end
 
@@ -741,11 +775,12 @@ end
 
 local CustomLevelSelectView = class("CustomLevelSelectView", PopUpView)
 
-function CustomLevelSelectView:initialize(sw, sh, map, on_start)
+function CustomLevelSelectView:initialize(sw, sh, map, on_start, progress)
 	PopUpView.initialize(self, v(sw, sh))
 	self._map = map
 	self._on_start = on_start
 	self._selected_mode = GAME_MODE_CAMPAIGN
+	self._progress = progress or {}
 
 	self.back = KImageView:new("levelSelect_background")
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
@@ -778,15 +813,16 @@ function CustomLevelSelectView:initialize(sw, sh, map, on_start)
 	local badge_x_off = 35
 	local badge_y = 490
 	local badge_fmt = "levelSelect_badges_000%i"
+	local p = self._progress
 
 	for i = 1, 5 do
 		local n
 		if i == 5 then
-			n = 6
+			n = p[GAME_MODE_IRON] and 5 or 6
 		elseif i == 4 then
-			n = 4
+			n = p[GAME_MODE_HEROIC] and 3 or 4
 		else
-			n = 2
+			n = (p.stars or 0) >= i and 1 or 2
 		end
 		local bn = string.format(badge_fmt, n)
 		local b = KImageView:new(bn)
@@ -796,8 +832,8 @@ function CustomLevelSelectView:initialize(sw, sh, map, on_start)
 		self.back:add_child(b)
 	end
 
-	local thumb = map.thumbnail_view
-	if thumb then
+	if map.thumbnail_view and map.thumbnail_view.image_name then
+		local thumb = KImageView:new(map.thumbnail_view.image_name)
 		thumb.pos = v(215, 190)
 		self.back:add_child(thumb)
 	end
@@ -811,7 +847,9 @@ function CustomLevelSelectView:initialize(sw, sh, map, on_start)
 	self.back:add_child(self.campaign)
 	add_level_title(self.campaign, _("Campaign"), "right")
 	add_level_description(self.campaign, map.cfg.desc)
-	add_difficulty_stamp(self.campaign, 1, 690, 520)
+
+	local p = self._progress
+	add_difficulty_stamp(self.campaign, p[GAME_MODE_CAMPAIGN], 690, 520)
 
 	local diff_btn = CustomLevelSelectDifficultyButton:new()
 	diff_btn.pos = v(982, 522)
@@ -839,7 +877,8 @@ function CustomLevelSelectView:initialize(sw, sh, map, on_start)
 		add_level_title(self.heroic, _("Heroic"), "right")
 		add_level_description(self.heroic, _("LEVEL_MODE_HEROIC_DESCRIPTION"))
 		add_level_title(self.heroic, _("Challenge Rules"), "sub", rules_y)
-		add_difficulty_stamp(self.heroic, 1, 690, 520)
+		add_level_rules(self.heroic, rules_y + 38)
+		add_difficulty_stamp(self.heroic, p[GAME_MODE_HEROIC], 690, 520)
 
 		local diff_btn_h = CustomLevelSelectDifficultyButton:new()
 		diff_btn_h.pos = v(982, 522)
@@ -871,7 +910,23 @@ function CustomLevelSelectView:initialize(sw, sh, map, on_start)
 		add_level_title(self.iron, _("Iron"), "right")
 		add_level_description(self.iron, _("LEVEL_MODE_IRON_DESCRIPTION"))
 		add_level_title(self.iron, _("Challenge Rules"), "sub", rules_y)
-		add_difficulty_stamp(self.iron, 1, 690, 520)
+		add_level_rules(self.iron, rules_y + 38)
+
+		local b_x = 770
+		local b_y = rbbg.pos.y + 10
+		local b_o = 50
+		local opts = {"tower_build_archer", "tower_build_barrack", "tower_build_mage", "tower_build_engineer"}
+		local ov3 = type(map.level_data) == "table" and map.level_data.level_mode_overrides and map.level_data.level_mode_overrides[3]
+		local locked_towers = ov3 and ov3.locked_towers or {}
+		for i, v in ipairs(opts) do
+			local n = table.contains(locked_towers, v) and 2 * i or 2 * i - 1
+			local b = KImageView:new(string.format("levelSelect_modeRules_000%i", n))
+			b.pos = V.v(b_x, b_y)
+			b_x = b_x + b_o
+			self.iron:add_child(b)
+		end
+
+		add_difficulty_stamp(self.iron, p[GAME_MODE_IRON], 690, 520)
 
 		local diff_btn_i = CustomLevelSelectDifficultyButton:new()
 		diff_btn_i.pos = v(982, 522)
@@ -951,6 +1006,33 @@ end
 
 -- ── Screen Lifecycle ──
 
+-- ── Radial gradient background ──
+
+local GradientBg = class("GradientBg", KView)
+
+function GradientBg:initialize(size)
+	KView.initialize(self, size)
+	self.colors.background = C.bg_warm
+	self.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, size.x, size.y}
+	}
+end
+
+function GradientBg:_draw_self()
+	GradientBg.super._draw_self(self)
+	local cx, cy = self.size.x * 0.5, self.size.y * 0.5
+	local max_r = math.max(self.size.x, self.size.y) * 0.65
+	local steps = 24
+	for i = steps, 1, -1 do
+		local t = i / steps
+		local r = max_r * t
+		local a = 0.12 * (1 - t) * (1 - t)
+		G.setColor(68 / 255, 48 / 255, 22 / 255, a)
+		G.circle("fill", cx, cy, r, 48)
+	end
+end
+
 -- ── CustomMapListView: card grid + pagination, embeddable in any KWindow ──
 
 local CustomMapListView = class("CustomMapListView", KView)
@@ -973,6 +1055,9 @@ function CustomMapListView:initialize(size, maps, on_select)
 	self._rows = rows
 	self._cards_per_page = cards_per_page
 	self._current_page = 1
+
+	local bg = GradientBg:new(v(size.x, size.y))
+	self:add_child(bg)
 
 	local page_view = KView:new(v(size.x, size.y))
 	page_view.pos = v(0, 0)
@@ -1040,7 +1125,6 @@ end
 
 return {
 	-- Constants
-	PLUGINS_DIR = PLUGINS_DIR,
 	SAVE_FILE = SAVE_FILE,
 	CARD_W = CARD_W,
 	CARD_H = CARD_H,
@@ -1051,7 +1135,6 @@ return {
 
 	-- Utilities
 	safe_text = safe_text,
-	load_lua_file = load_lua_file,
 	save_progress = save_progress,
 	load_progress = load_progress,
 	scan_maps = scan_maps,
@@ -1067,6 +1150,7 @@ return {
 	-- Layout helpers
 	add_level_title = add_level_title,
 	add_level_description = add_level_description,
+	add_level_rules = add_level_rules,
 	add_difficulty_stamp = add_difficulty_stamp,
 	add_level_battle_button = add_level_battle_button,
 	add_level_tab = add_level_tab,

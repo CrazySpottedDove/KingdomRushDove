@@ -157,7 +157,7 @@ local function get_map_points_for_generation(generation)
 end
 
 local function queue_generation_music(generation)
-	if generation == 1 then
+	if generation == 1 or generation == screen_map.CUSTOM_GEN then
 		S:queue("MusicMap1")
 	elseif generation == 2 then
 		S:queue("MusicMap2")
@@ -198,7 +198,8 @@ function screen_map:init_coro(w, h, done_callback)
 
 		self.user_data = storage:load_slot()
 		self.generation = self.user_data.last_generation
-		self.map_points = get_map_points_for_generation(self.generation)
+		local map_gen = self.generation == screen_map.CUSTOM_GEN and 1 or self.generation
+		self.map_points = get_map_points_for_generation(map_gen)
 		self.unlock_data = {}
 		self.unlock_data.unlocked_levels = {}
 
@@ -254,7 +255,7 @@ function screen_map:init_coro(w, h, done_callback)
 			storage:save_slot(self.user_data)
 		end
 
-		if U.unlock_next_levels_in_ranges(self.unlock_data, levels, GS, self.generation) then
+		if self.generation ~= screen_map.CUSTOM_GEN and U.unlock_next_levels_in_ranges(self.unlock_data, levels, GS, self.generation) then
 			storage:save_slot(self.user_data)
 		end
 
@@ -278,15 +279,17 @@ function screen_map:init(w, h)
 
 	GGLabel.static.font_scale = scale
 	GGLabel.static.ref_h = self.ref_h
-
+	local map_gen = self.generation == screen_map.CUSTOM_GEN and 1 or self.generation
+	local saved_gen = self.generation
+	self.generation = map_gen
 	local map = MapView:new(sw, sh)
+	self.generation = saved_gen
 
 	self.window:add_child(map)
 
 	self.map_view = map
 
 	local vign = KImageView:new("map_vignette_small")
-
 	vign.scale = V.v(1.02 * sw / vign.size.x, 1.02 * sh / vign.size.y)
 	vign.pos.x, vign.pos.y = -2, -2
 	vign.propagate_on_click = true
@@ -762,6 +765,13 @@ function screen_map:init(w, h)
 		signal.register(sn, fn)
 	end
 
+	if self.generation == screen_map.CUSTOM_GEN then
+		if self.map_view then
+			self.map_view.hidden = true
+		end
+		self:ensure_custom_map_view()
+	end
+
 	if self.user_data.difficulty == nil or DEBUG_SHOW_DIFFICULTY then
 		self.difficulty_view:show()
 	end
@@ -1128,7 +1138,7 @@ function screen_map:change_generation(i)
 			return
 		end
 		self.generation = screen_map.CUSTOM_GEN
-
+		queue_generation_music(self.generation)
 		self.map_view.hidden = true
 		self:ensure_custom_map_view()
 		return
@@ -1223,7 +1233,7 @@ function screen_map:ensure_custom_map_view()
 		self:show_custom_level_select(map)
 	end)
 	list_view.pos = v(20, 8)
-	self.window:add_child(list_view)
+	self.window:add_child(list_view, 1)
 	self._custom_map_view = list_view
 end
 
@@ -1232,9 +1242,13 @@ function screen_map:show_custom_level_select(map)
 		self.window:remove_child(self._custom_level_select)
 	end
 
+	local progress = self._custom_progress and self._custom_progress.maps[map.entry] or {}
 	local ls = SCU.CustomLevelSelectView:new(self.sw, self.sh, map, function(outcome)
+		local user_data = storage:load_slot()
+		user_data.last_generation = screen_map.CUSTOM_GEN
+		storage:save_slot(user_data, nil, true)
 		self.done_callback(outcome)
-	end)
+	end, progress)
 	self.window:add_child(ls)
 	self._custom_level_select = ls
 	ls:show()
