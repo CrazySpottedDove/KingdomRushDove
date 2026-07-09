@@ -4348,6 +4348,7 @@ tt = E:register_t("soldier_deep_devils_chosen", "soldier_deep_devils")
 tt.ranged.attacks[1].bullet = "deep_devil_arrow_chosen"
 tt.melee.attacks[1].damage_max = 19
 tt.melee.attacks[1].damage_min = 11
+tt.render.sprites[3].hidden = false
 tt.health.armor = 0.4
 tt.health.hp_max = 230
 
