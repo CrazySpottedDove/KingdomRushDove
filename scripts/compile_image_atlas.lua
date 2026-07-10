@@ -8,8 +8,13 @@
 -- }
 local input_dir = arg[1] or "_assets/kr1-desktop/images/fullhd"
 
+local single_file = arg[2]
+
 local function list_lua_files(dir)
 	local files = {}
+	if single_file then
+		return {single_file}
+	end
 	local ok_lfs, lfs = pcall(require, "lfs")
 
 	if ok_lfs and lfs then
