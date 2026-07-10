@@ -16,7 +16,7 @@ local SU = require("script_utils")
 local U = require("utils")
 local LU = require("level_utils")
 local UP = require("kr1.upgrades")
-
+local SH = require("klove.shader_db")
 local V = require("lib.klua.vector")
 local v = V.v
 local W = require("wave_db")
@@ -39419,6 +39419,7 @@ function scripts.hero_eiskalt.update(this, store)
 						e.delay = (i - 1) * fts(U.frandom(2, 3))
 						e.bullet.source_id = this.id
 						e.bullet.level = skill.level
+						e.bullet.damage_factor = this.unit.damage_factor
 						queue_insert(store, e)
 						ni = ni + n_step
 						spi = km.zmod(spi + math.random(1, 2), 3)
@@ -39502,6 +39503,7 @@ function scripts.hero_eiskalt.update(this, store)
 						e.bullet.from = v(this.pos.x + (flip and -1 or 1) * a.spawn_offset.x, this.pos.y + a.spawn_offset.y)
 						e.bullet.to = v(target_node.x, target_node.y)
 						e.bullet.level = skill.level
+						e.bullet.damage_factor = this.unit.damage_factor
 						queue_insert(store, e)
 						U.y_animation_wait(this)
 						a.ts = store.tick_ts
@@ -39512,41 +39514,40 @@ function scripts.hero_eiskalt.update(this, store)
 		end
 
 		-- 普攻
-		for _, i in ipairs(this.ranged.order) do
-			a = this.ranged.attacks[i]
-			if ready_to_attack(a, store) then
-				local target = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range, 0, a.vis_flags, a.vis_bans)
-				if target and target.pos then
-					local start_ts = store.tick_ts
-					local an, af = U.animation_name_facing_point(this, a.animation, target.pos)
-					U.animation_start(this, an, af, store.tick_ts)
-					while store.tick_ts - start_ts < a.shoot_time do
-						if this.unit.is_stunned or this.health.dead then
-							goto eiskalt_attack_end
-						end
-						coroutine.yield()
+
+		a = this.ranged.attacks[1]
+		if ready_to_attack(a, store) then
+			local target = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range, 0, a.vis_flags, a.vis_bans)
+			if target and target.pos then
+				local start_ts = store.tick_ts
+				local an, af = U.animation_name_facing_point(this, a.animation, target.pos)
+				U.animation_start(this, an, af, store.tick_ts)
+				while store.tick_ts - start_ts < a.shoot_time do
+					if this.unit.is_stunned or this.health.dead then
+						goto eiskalt_attack_end
 					end
-					S:queue(a.sound)
-					local b = E:create_entity(a.bullet)
-					b.bullet.source_id = this.id
-					b.pos = V.vclone(this.pos)
-					b.pos.x = b.pos.x + (af and -1 or 1) * a.bullet_start_offset[1].x
-					b.pos.y = b.pos.y + a.bullet_start_offset[1].y
-					b.bullet.from = V.vclone(b.pos)
-					b.bullet.to = V.vclone(target.pos)
-					b.bullet.xp_dest_id = this.id
-					queue_insert(store, b)
-					a.ts = start_ts
-					while not U.animation_finished(this) do
-						if this.unit.is_stunned or this.health.dead then
-							goto eiskalt_attack_end
-						end
-						coroutine.yield()
+					coroutine.yield()
+				end
+				S:queue(a.sound)
+				local b = E:create_entity(a.bullet)
+				b.bullet.source_id = this.id
+				b.pos = V.vclone(this.pos)
+				b.pos.x = b.pos.x + (af and -1 or 1) * a.bullet_start_offset[1].x
+				b.pos.y = b.pos.y + a.bullet_start_offset[1].y
+				b.bullet.from = V.vclone(b.pos)
+				b.bullet.to = V.vclone(target.pos)
+				b.bullet.damage_factor = this.unit.damage_factor
+				queue_insert(store, b)
+				a.ts = start_ts
+				while not U.animation_finished(this) do
+					if this.unit.is_stunned or this.health.dead then
+						goto eiskalt_attack_end
 					end
+					coroutine.yield()
 				end
 			end
-			::eiskalt_attack_end::
 		end
+		::eiskalt_attack_end::
 
 		SU.soldier_idle(store, this)
 		SU.soldier_regen(store, this)
@@ -39580,6 +39581,27 @@ scripts.fireball_eiskalt = {
 	end
 }
 
+scripts.mod_eiskalt_cold = {
+	insert = function(this, store)
+		if not scripts.mod_slow.insert(this, store) then
+			return false
+		end
+		local target = store.entities[this.modifier.target_id]
+		U.entity_insert_shader(target, SH:get(this.shader), this.shader_args, this.id)
+		return true
+	end,
+	remove = function(this, store)
+		if not scripts.mod_slow.remove(this, store) then
+			return false
+		end
+		local target = store.entities[this.modifier.target_id]
+		if target then
+			U.entity_remove_shader(target, this.id)
+		end
+		return true
+	end
+}
+
 -- icepeaks
 scripts.eiskalt_icepeaks = {}
 
@@ -39597,18 +39619,26 @@ function scripts.eiskalt_icepeaks.update(this, store)
 	U.animation_start(this, "in", nil, store.tick_ts, false)
 	this.tween.ts = store.tick_ts
 	U.y_wait(store, b.hit_time)
-	local targets = U.find_enemies_in_range(store.enemies, this.pos, 0, b.damage_radius, b.damage_flags, b.damage_bans)
+	local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.damage_flags, b.damage_bans)
 	if targets then
 		for _, target in ipairs(targets) do
 			local d = E:create_entity("damage")
 			d.damage_type = b.damage_type
 			d.source_id = this.id
 			d.target_id = target.id
-			d.value = 0
-			if band(target.vis.flags, F_BOSS) == 0 then
-				d.value = target.health.hp_max * 0.1 * b.level
-			end
+			d.value = target.health.hp_max * 0.1 * b.level
 			queue_damage(store, d)
+
+			for i = 1, #b.mods do
+				local mod_name = b.mods[i]
+				if U.flags_pass(target.vis, E:get_template(mod_name).modifier) then
+					local m = E:create_entity(mod_name)
+					m.modifier.target_id = target.id
+					m.modifier.level = b.level
+					m.modifier.damage_factor = b.damage_factor
+					queue_insert(store, m)
+				end
+			end
 		end
 	end
 	U.y_wait(store, b.duration - (store.tick_ts - start_ts))
@@ -39646,7 +39676,6 @@ function scripts.aura_eiskalt_skill_rider.update(this, store)
 	local last_hit_ts = 0
 	local sid_rider = 1
 	local target_pos = this.pos
-	local fading = false
 	local path_ni = 1
 	local path_spi = 1
 	local path_pi = 1
@@ -39692,23 +39721,23 @@ function scripts.aura_eiskalt_skill_rider.update(this, store)
 	local function hit_enemies()
 		local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
 		if targets then
-			local mods = this.aura.mods
 			for i, target in ipairs(targets) do
 				local d = E.assign_damage(this.damage_type, this.damage_config[this.aura.level] * this.aura.damage_factor, this.id, target.id)
 				queue_damage(store, d)
 
-				local hit_fx = E:create_entity(this.hit_fx)
-				hit_fx.pos:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
-				hit_fx.render.sprites[1].ts = store.tick_ts
-				queue_insert(store, hit_fx)
+				if target.unit.blood_color ~= BLOOD_NONE then
+					local sfx = E:create_entity(this.hit_blood_fx)
+					sfx.pos:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+					sfx.render.sprites[1].ts = store.tick_ts
 
-				for i = 1, #mods do
-					local new_mod = E:create_entity(mods[i])
-					new_mod.modifier.target_id = target.id
-					new_mod.modifier.source_id = this.id
-					new_mod.modifier.damage_factor = this.aura.damage_factor
+					if sfx.use_blood_color and target.unit.blood_color then
+						sfx.render.sprites[1].name = target.unit.blood_color
+						sfx.render.sprites[1].r = this.render.sprites[1].r
+					end
 
-					queue_insert(store, new_mod)
+					sfx.sound_events = nil
+
+					queue_insert(store, sfx)
 				end
 			end
 		end
@@ -39721,9 +39750,6 @@ function scripts.aura_eiskalt_skill_rider.update(this, store)
 
 	U.animation_start(this, "spawn", flip_x, store.tick_ts, 1, sid_rider)
 	hit_enemies()
-
-	this.tween.props[1].disabled = true
-	this.tween.props[1].ts = store.tick_ts
 
 	local psA = E:create_entity(this.particles_name_A)
 
@@ -39777,39 +39803,22 @@ function scripts.aura_eiskalt_skill_rider.update(this, store)
 		psB.particle_system.emit_offset.x, psB.particle_system.emit_offset.y = V.rotate(r, psB.emit_offset_relative.x, psB.emit_offset_relative.y)
 	end
 
-	local function check_start_fade()
-		if fading then
-			return false
-		end
-
-		local fade_duration = this.tween.props[1].keys[2][1]
-
-		if this.aura.duration >= 0 and store.tick_ts - this.aura.ts + fade_duration > this.actual_duration then
-			return true
-		end
-
+	local function no_available_nodes()
 		local nearest = P:nearest_nodes(this.pos.x, this.pos.y, available_paths)
 
 		if #nearest > 0 then
 			path_pi, path_spi, path_ni = unpack(nearest[1])
 
-			return path_ni < 10
+			return path_ni < 2
+		else
+			return false
 		end
-
-		return false
 	end
 
 	while true do
 		this.render.sprites[1].offset.y = 0
-		if this.aura.duration >= 0 and store.tick_ts - this.aura.ts > this.actual_duration or fading and this.render.sprites[1].alpha <= 0 then
+		if this.aura.duration >= 0 and store.tick_ts - this.aura.ts > this.actual_duration or no_available_nodes() then
 			break
-		end
-
-		if check_start_fade() then
-			fading = true
-			this.tween.props[1].disabled = false
-			this.tween.reverse = true
-			this.tween.props[1].ts = store.tick_ts
 		end
 
 		if store.tick_ts - last_hit_ts >= this.aura.cycle_time then
@@ -39825,7 +39834,11 @@ function scripts.aura_eiskalt_skill_rider.update(this, store)
 		coroutine.yield()
 	end
 
-	queue_remove(store, this)
+	psA.particle_system.emit = false
+	psB.particle_system.emit = false
+	U.y_animation_play(this, "death", nil, store.tick_ts, 1, sid_rider)
+	this.tween.disabled = false
+	this.tween.ts = store.tick_ts
 end
 
 -- ultimate

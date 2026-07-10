@@ -3216,7 +3216,13 @@ function U.tower_block_dec(tower_entity)
 	end
 end
 
-function U.entity_insert_shader(entity, shader, shader_args)
+function U.entity_insert_shader(entity, shader, shader_args, id)
+	if not entity.render._runtime_shaders then
+		entity.render._runtime_shaders = {}
+	end
+	local runtime_shaders = entity.render._runtime_shaders
+	runtime_shaders[id] = {shader, shader_args}
+
 	for i = 1, #entity.render.sprites do
 		local sprite = entity.render.sprites[i]
 		sprite._shader = shader
@@ -3224,11 +3230,25 @@ function U.entity_insert_shader(entity, shader, shader_args)
 	end
 end
 
-function U.entity_remove_shader(entity)
+function U.entity_remove_shader(entity, id)
+	if not entity.render._runtime_shaders then
+		return
+	end
+	local runtime_shaders = entity.render._runtime_shaders
+	runtime_shaders[id] = nil
+	local last_key = nil
+	for k, v in pairs(runtime_shaders) do
+		last_key = k
+	end
+	local shader, shader_args = nil, nil
+	if last_key then
+		shader, shader_args = runtime_shaders[last_key][1], runtime_shaders[last_key][2]
+	end
+
 	for i = 1, #entity.render.sprites do
 		local sprite = entity.render.sprites[i]
-		sprite._shader = nil
-		sprite.shader_args = nil
+		sprite._shader = shader
+		sprite.shader_args = shader_args
 	end
 end
 

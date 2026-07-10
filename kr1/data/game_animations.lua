@@ -49544,16 +49544,6 @@ return {
 		from = 1,
 		to = 22
 	},
-	hero_eiskalt_frosty_spawn2 = {
-		prefix = "hero_eiskalt_frosty",
-		from = 1,
-		to = 1
-	},
-	hero_eiskalt_frosty_idle = {
-		prefix = "hero_eiskalt_frosty",
-		from = 1,
-		to = 1
-	},
 	hero_eiskalt_frosty_walkDown = {
 		prefix = "hero_eiskalt_frosty",
 		from = 1,

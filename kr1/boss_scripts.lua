@@ -8136,7 +8136,7 @@ function scripts.mod_slow_overseer.insert(this, store)
 		return false
 	end
 	SU.insert_tower_cooldown_buff(store.tick_ts, target, 1 / this.slow_factor)
-	U.entity_insert_shader(target, SH:get(this.shader), this.shader_args)
+	U.entity_insert_shader(target, SH:get(this.shader), this.shader_args, this.id)
 	return true
 end
 
@@ -8153,7 +8153,7 @@ function scripts.mod_slow_overseer.update(this, store)
 	end
 
 	SU.remove_tower_cooldown_buff(store.tick_ts, target, 1 / this.slow_factor)
-	U.entity_remove_shader(target)
+	U.entity_remove_shader(target, this.id)
 
 	queue_remove(store, this)
 end

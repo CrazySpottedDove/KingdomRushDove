@@ -3051,7 +3051,7 @@ function scripts.aura_chill_elora.update(this, store)
 		if store.tick_ts - last_hit_ts >= this.aura.cycle_time then
 			last_hit_ts = store.tick_ts
 
-			local targets = table.filter(store.entities, function(k, v)
+			local targets = table.filter(store.enemies, function(k, v)
 				return v.unit and v.vis and v.health and not v.health.dead and not v._last_on_ice and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= v.id)
 			end)
 

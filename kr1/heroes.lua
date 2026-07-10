@@ -19734,18 +19734,22 @@ tt.ultimate = {
 	disabled = true
 }
 
--- modifiers
-tt = RT("mod_eiskalt_chill_lvl1", "mod_slow")
+tt = RT("mod_eiskalt_cold", "mod_slow")
 tt.modifier.duration = 3
+tt.slow.factor = 0.7
+tt.main_script.insert = scripts.mod_eiskalt_cold.insert
+tt.main_script.remove = scripts.mod_eiskalt_cold.remove
+tt.shader = "p_tint"
+tt.shader_args = {
+	tint_color = {0.6235294117647059, 0.9176470588235294, 1, 1}
+}
+
+tt = RT("mod_eiskalt_chill", "mod_eiskalt_cold")
+tt.modifier.duration = 0.3
 tt.slow.factor = 0.5
 
-tt = RT("mod_eiskalt_chill_lvl2", "mod_slow")
-tt.modifier.duration = fts(11)
-tt.slow.factor = 0.5
-
-tt = RT("mod_eiskalt_chill_lvl3", "mod_slow")
-tt.modifier.duration = fts(15)
-tt.slow.factor = 0.5
+tt = RT("mod_eiskalt_cold_icepeak", "mod_eiskalt_cold")
+tt.modifier.duration = 2
 
 -- fx
 tt = RT("fx_aura_chill_eiskalt_smoke", "decal_scripted")
@@ -19758,10 +19762,10 @@ tt.tween.props[1].keys = {{fts(20), 255}, {fts(40), 0}}
 
 tt = RT("aura_chill_eiskalt", "aura")
 AC(tt, "render", "tween")
-tt.aura.cycle_time = fts(10)
+tt.aura.cycle_time = 0.2
 tt.aura.duration = 5
-tt.aura.mod = "mod_eiskalt_chill_lvl2"
-tt.aura.radius = 44.8
+tt.aura.mod = "mod_eiskalt_chill"
+tt.aura.radius = 50
 tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
 tt.aura.vis_flags = bor(F_ENEMY)
 tt.aura.hit_decal = "fx_aura_chill_eiskalt_smoke"
@@ -19774,34 +19778,6 @@ tt.render.sprites[1].z = Z_DECALS
 tt.tween.remove = true
 tt.tween.disabled = true
 tt.tween.props[1].keys = {{0, 255}, {0.2, 0}}
-
-tt = RT("fx_fireball_eiskalt_decal", "decal_tween")
-tt.render.sprites[1].name = "hero_eiskalt_proyectile_travel"
-tt.render.sprites[1].animated = true
-tt.tween.props[1].keys = {{fts(17), 255}, {fts(27), 0}}
-
-tt = RT("fx_fireball_eiskalt_ground", "fx")
-tt.render.sprites[1].name = "hero_eiskalt_explosion_run"
-tt.render.sprites[1].anchor.y = 0.2051
-tt.render.sprites[1].sort_y_offset = -5
-
-tt = RT("fx_fireball_eiskalt_air", "fx")
-tt.render.sprites[1].name = "hero_eiskalt_explosion_air_run"
-tt.render.sprites[1].anchor.y = 0.24
-tt.render.sprites[1].scale = v(0.7, 0.7)
-
-tt = RT("ps_fireball_eiskalt")
-AC(tt, "pos", "particle_system")
-tt.particle_system.name = "hero_eiskalt_particle_run"
-tt.particle_system.animated = true
-tt.particle_system.loop = false
-tt.particle_system.particle_lifetime = {fts(11), fts(16)}
-tt.particle_system.scale_var = {0.78, 1.43}
-tt.particle_system.scales_x = {1, 1.25}
-tt.particle_system.scales_y = {1, 1.25}
-tt.particle_system.emission_rate = 20
-tt.particle_system.emit_rotation_spread = math.pi
-tt.particle_system.alphas = {255, 0}
 
 -- bullet
 tt = RT("fireball_eiskalt", "bullet")
@@ -19819,7 +19795,7 @@ tt.bullet.damage_radius = b.basic_attack.damage_radius
 tt.bullet.xp_gain_factor = 0.8
 tt.bullet.particles_name = "ps_fireball_eiskalt"
 tt.bullet.vis_flags = F_RANGED
-tt.bullet.mods = {"mod_eiskalt_chill_lvl1"}
+tt.bullet.mods = {"mod_eiskalt_cold"}
 tt.main_script.update = scripts.fireball_dragon.update
 tt.main_script.remove = scripts.fireball_eiskalt.remove
 tt.sound_events.hit = "HeroEiskaltAttackHit"
@@ -19830,9 +19806,10 @@ tt.main_script.update = scripts.eiskalt_icepeaks.update
 tt.bullet.damage_radius = 27.5
 tt.bullet.damage_type = DAMAGE_TRUE
 tt.bullet.damage_flags = F_AREA
-tt.bullet.damage_bans = F_FRIEND
+tt.bullet.damage_bans = F_BOSS
 tt.bullet.hit_time = fts(4)
 tt.bullet.duration = 2
+tt.bullet.mods = {"mod_eiskalt_cold_icepeak"}
 tt.render.sprites[1].prefix = "hero_eiskalt_ice_peaks"
 tt.render.sprites[1].name = "in"
 tt.render.sprites[1].anchor.y = 0.0903
@@ -19840,9 +19817,6 @@ tt.render.sprites[1].z = Z_OBJECTS
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {fts(3), 0}, {fts(6), 255}, {tt.bullet.duration, 255}, {tt.bullet.duration + fts(10), 0}}
 tt.sound_events.delayed_insert = "HeroEiskaltPeak"
-
-tt = RT("fx_eiskalt_rider_hit", "fx")
-tt.render.sprites[1].name = "hero_eiskalt_proyectile_travel"
 
 tt = RT("ps_eiskalt_rider_trail_A")
 AC(tt, "pos", "particle_system")
@@ -19869,9 +19843,8 @@ tt.particle_system.z = Z_OBJECTS + 1
 tt.particle_system.particle_lifetime = {fts(9), fts(9)}
 tt.particle_system.emit_offset = v(0, 0)
 tt.emit_offset_relative = v(-10, 0)
-
 tt = RT("fx_eiskalt_frosty_spawn", "fx")
-tt.render.sprites[1].name = "hero_eiskalt_frosty_explotion_run"
+tt.render.sprites[1].name = "hero_eiskalt_frosty_spawn"
 tt.render.sprites[1].anchor.y = 0.4
 
 tt = RT("bullet_eiskalt_frosty", "bomb")
@@ -19885,7 +19858,6 @@ tt.render.sprites[1].name = "hero_eiskalt_frosty_projectile"
 
 tt = RT("aura_eiskalt_rider", "aura")
 AC(tt, "render", "nav_path", "tween", "motion")
-tt.aura.mods = {"mod_eiskalt_chill_lvl3"}
 tt.aura.radius = 75
 tt.aura.vis_flags = bor(F_AREA)
 tt.aura.vis_bans = bor(F_FLYING)
@@ -19900,13 +19872,14 @@ tt.render.sprites[1].angles.walk = {"walk", "walkUp", "walkDown"}
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_eiskalt_skill_rider.update
 tt.tween.props[1].name = "alpha"
-tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
+tt.tween.props[1].keys = {{0, 255}, {1, 0}}
 tt.tween.props[1].sprite_id = 1
-tt.tween.remove = false
+tt.tween.remove = true
+tt.tween.disabled = true
 tt.motion.max_speed = 60
 tt.damage_config = {8, 16, 24}
 tt.damage_type = DAMAGE_PHYSICAL
-tt.hit_fx = "fx_eiskalt_rider_hit"
+tt.hit_blood_fx = "fx_blood_splat"
 tt.particles_name_A = "ps_eiskalt_rider_trail_A"
 tt.particles_name_B = "ps_eiskalt_rider_trail_B"
 tt.sound_events.insert = "HeroEiskaltFrosty"
@@ -19937,7 +19910,6 @@ tt.excluded_templates = {"eb_umbra", "enemy_umbra_piece", "enemy_umbra_piece_fly
 tt.vis_flags = bor(F_RANGED, F_FREEZE)
 tt.vis_bans = 0
 tt.mod = "mod_eiskalt_freeze"
-
 tt.rain = {}
 tt.rain.alpha_max = 255
 tt.rain.alpha_min = 150
@@ -19954,3 +19926,31 @@ tt.rain.duration = 0.25
 tt.rain.ts = 0
 tt.freeze_alpha_min = 80
 tt.freeze_alpha_max = 112
+
+tt = RT("fx_fireball_eiskalt_decal", "decal_tween")
+tt.render.sprites[1].name = "hero_eiskalt_proyectile_travel"
+tt.render.sprites[1].animated = true
+tt.tween.props[1].keys = {{fts(17), 255}, {fts(27), 0}}
+
+tt = RT("fx_fireball_eiskalt_ground", "fx")
+tt.render.sprites[1].name = "hero_eiskalt_explosion_run"
+tt.render.sprites[1].anchor.y = 0.2051
+tt.render.sprites[1].sort_y_offset = -5
+
+tt = RT("fx_fireball_eiskalt_air", "fx")
+tt.render.sprites[1].name = "hero_eiskalt_explosion_air_run"
+tt.render.sprites[1].anchor.y = 0.24
+tt.render.sprites[1].scale = v(0.7, 0.7)
+
+tt = RT("ps_fireball_eiskalt")
+AC(tt, "pos", "particle_system")
+tt.particle_system.name = "hero_eiskalt_particle_run"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(11), fts(16)}
+tt.particle_system.scale_var = {0.78, 1.43}
+tt.particle_system.scales_x = {1, 1.25}
+tt.particle_system.scales_y = {1, 1.25}
+tt.particle_system.emission_rate = 20
+tt.particle_system.emit_rotation_spread = math.pi
+tt.particle_system.alphas = {255, 0}
