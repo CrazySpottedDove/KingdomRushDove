@@ -3151,6 +3151,41 @@ cycle_time = blc.damage_every
 radius = blc.damage_radius
 map["日炎风暴"] = str(cooldown_str(), "召唤一道纯粹太阳能量的巨型光柱，沿路径前进，每", cycle_time, "秒对", radius, "范围内敌人造成", damage_str(), "。")
 
+-- hero_eiskalt
+set_hero("hero_eiskalt")
+
+set_skill(h.hero.skills.explosion)
+local radius = s.damage_radius[max_lvl]
+map["冰爆"] = str("普通攻击在命中时爆炸，对", radius, "范围内敌人造成伤害。")
+
+blc = balance.hero_eiskalt.cold_fury
+set_skill(h.hero.skills.coldfury)
+cooldown = s.cooldown_time[max_lvl]
+map["永恒冻土"] = str("每隔", cooldown, "秒，冰龙冻结面前的大地，生成一片持续时间冻土带，减速并伤害其中的敌人。")
+
+blc = balance.hero_eiskalt.frosty
+set_skill(h.hero.skills.frosty)
+cooldown = h.timed_attacks.list[1].cooldown
+d[1].damage_min = s.damage_min[max_lvl]
+d[1].damage_max = s.damage_max[max_lvl]
+d[1].damage_type = DAMAGE_TRUE
+map["冰球术"] = str(cooldown_str(), "冰龙召唤一颗巨大的冰球沿路径滚动，造成", damage_str(), "，并在命中后召唤冰霜骑士追击敌人。")
+
+blc = balance.hero_eiskalt.icepeak
+set_skill(h.hero.skills.icepeak)
+cooldown = h.timed_attacks.list[2].cooldown
+local count = s.count[max_lvl]
+d[1].damage_min = s.damage_min[max_lvl]
+d[1].damage_max = s.damage_max[max_lvl]
+d[1].damage_type = DAMAGE_TRUE
+map["冰刺"] = str("每隔", cooldown, "秒，冰龙在敌人脚下召唤", count, "根冰刺，每根造成目标最大生命值10%的真实伤害。")
+
+blc = balance.hero_eiskalt.ultimate
+set_skill(h.hero.skills.ultimate)
+get_cooldown()
+local ulti_duration = s.duration[max_lvl]
+map["极寒风暴"] = str(cooldown_str(), "冰龙释放全部力量，化身极寒风暴，持续", ulti_duration, "秒，在此期间不断降下冰弹攻击敌人。")
+
 function H.dump()
 	for hero_name, skills in pairs(H) do
 		print("Hero:", hero_name)
