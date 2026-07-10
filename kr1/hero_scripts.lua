@@ -39362,12 +39362,6 @@ function scripts.hero_eiskalt.level_up(this, store)
 	end)
 end
 
-function scripts.hero_eiskalt.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
-	this.ranged.order = U.attack_order(this.ranged.attacks)
-	return true
-end
-
 function scripts.hero_eiskalt.update(this, store)
 	local h = this.health
 
@@ -39561,80 +39555,30 @@ function scripts.hero_eiskalt.update(this, store)
 	end
 end
 
--- fireball
-scripts.fireball_eiskalt = {}
+scripts.fireball_eiskalt = {
+	remove = function(this, store)
+		local target = store.entities[this.bullet.target_id]
 
-function scripts.fireball_eiskalt.update(this, store)
-	local b = this.bullet
-	local mspeed = b.min_speed
-
-	b.speed.x, b.speed.y = V.normalize(b.to.x - b.from.x, b.to.y - b.from.y)
-
-	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
-		if b.hit_radius then
-			local targets = U.find_enemies_in_range(store.enemies, this.pos, 0, b.hit_radius, b.damage_flags or b.vis_flags, b.damage_bans or 0)
-			if targets and #targets > 0 then
-				break
+		if not target or band(target.vis.flags, F_FLYING) == 0 then
+			for i = 1, 3 do
+				local fx = E:create_entity(this.bullet.hit_fx)
+				local angle = 2 * math.pi * i / 3
+				fx.pos:set(this.bullet.to.x + this.bullet.damage_radius * 0.25 * math.cos(angle), this.bullet.to.y + this.bullet.damage_radius * 0.25 * math.sin(angle))
+				fx.render.sprites[1].ts = store.tick_ts
+				queue_insert(store, fx)
+			end
+		else
+			for i = 1, 3 do
+				local fx = E:create_entity(this.bullet.hit_fx_air)
+				local angle = 2 * math.pi * i / 3
+				fx.pos:set(this.bullet.to.x + this.bullet.damage_radius * 0.25 * math.cos(angle), this.bullet.to.y + this.bullet.damage_radius * 0.25 * math.sin(angle))
+				fx.render.sprites[1].ts = store.tick_ts
+				queue_insert(store, fx)
 			end
 		end
-		b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
-		this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
-		this.render.sprites[1].r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
-		coroutine.yield()
+		return true
 	end
-
-	if b.hit_fx then
-		local sfx = E:create_entity(b.hit_fx)
-		sfx.pos = V.vclone(this.pos)
-		sfx.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, sfx)
-	end
-	if b.hit_fx_air then
-		local sfx = E:create_entity(b.hit_fx_air)
-		sfx.pos = V.vclone(this.pos)
-		sfx.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, sfx)
-	end
-	if b.hit_decal then
-		local decal = E:create_entity(b.hit_decal)
-		decal.pos = V.vclone(this.pos)
-		decal.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, decal)
-	end
-
-	S:queue(this.sound_events.hit)
-
-	local targets = U.find_enemies_in_range(store.enemies, this.pos, 0, b.damage_radius, b.vis_flags, 0)
-	if targets then
-		for _, target in ipairs(targets) do
-			local d = SU.create_bullet_damage(b, target.id, this.id)
-			queue_damage(store, d)
-
-			if b.mod or b.mods then
-				local mods = b.mods or {b.mod}
-				for _, mod_name in ipairs(mods) do
-					local m = E:create_entity(mod_name)
-					m.modifier.source_id = this.id
-					m.modifier.target_id = target.id
-					m.modifier.level = b.level
-					queue_insert(store, m)
-				end
-			end
-		end
-	end
-
-	if b.particles_name then
-		local ps = E:create_entity(b.particles_name)
-		ps.particle_system.emit = false
-	end
-	if b.pop then
-		local p = E:create_entity(b.pop)
-		p.pos = V.vclone(this.pos)
-		queue_insert(store, p)
-	end
-
-	queue_remove(store, this)
-end
+}
 
 -- icepeaks
 scripts.eiskalt_icepeaks = {}
@@ -39699,46 +39643,189 @@ end
 scripts.aura_eiskalt_skill_rider = {}
 
 function scripts.aura_eiskalt_skill_rider.update(this, store)
-	-- frozen rider behavior: walks path, damages enemies
-	local last_hit_ts = store.tick_ts - this.aura.cycle_time
+	local last_hit_ts = 0
+	local sid_rider = 1
+	local target_pos = this.pos
+	local fading = false
+	local path_ni = 1
+	local path_spi = 1
+	local path_pi = 1
+	local available_paths = {}
+
+	for k, v in pairs(P.paths) do
+		table.insert(available_paths, k)
+	end
+
+	if store.level.ignore_walk_backwards_paths then
+		available_paths = table.filter(available_paths, function(k, v)
+			return not table.contains(store.level.ignore_walk_backwards_paths, v)
+		end)
+	end
+
+	local nearest = P:nearest_nodes(this.pos.x, this.pos.y, available_paths)
+
+	if #nearest > 0 then
+		path_pi, path_spi, path_ni = unpack(nearest[1])
+
+		for _, n in ipairs(nearest) do
+			local _path_pi, _path_spi, _path_ni = unpack(n)
+
+			if _path_pi == this.path_id then
+				path_pi, path_spi, path_ni = _path_pi, _path_spi, _path_ni
+
+				break
+			end
+		end
+	end
+
+	path_spi = 1
+	path_ni = path_ni - 3
+
+	local distance = 0
+
+	last_hit_ts = store.tick_ts - this.aura.cycle_time
+
+	if this.aura.apply_delay then
+		last_hit_ts = last_hit_ts + this.aura.apply_delay
+	end
 
 	local function hit_enemies()
-		local targets = U.find_enemies_in_range(store.enemies, this.pos, 0, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
+		local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
 		if targets then
-			for _, target in ipairs(targets) do
-				if target.enemy and not target.health.dead then
-					if not U.has_modifier(store, target, this.aura.mod) then
-						this.damage_max = this.damage_max_config[this.aura.level]
-						this.damage_min = this.damage_min_config[this.aura.level]
-						local d = SU.create_attack_damage(this, target.id, this)
-						queue_damage(store, d)
-						local m = E:create_entity(this.aura.mod)
-						m.modifier.source_id = this.id
-						m.modifier.target_id = target.id
-						queue_insert(store, m)
-					end
+			local mods = this.aura.mods
+			for i, target in ipairs(targets) do
+				local d = E.assign_damage(this.damage_type, this.damage_config[this.aura.level] * this.aura.damage_factor, this.id, target.id)
+				queue_damage(store, d)
+
+				local hit_fx = E:create_entity(this.hit_fx)
+				hit_fx.pos:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+				hit_fx.render.sprites[1].ts = store.tick_ts
+				queue_insert(store, hit_fx)
+
+				for i = 1, #mods do
+					local new_mod = E:create_entity(mods[i])
+					new_mod.modifier.target_id = target.id
+					new_mod.modifier.source_id = this.id
+					new_mod.modifier.damage_factor = this.aura.damage_factor
+
+					queue_insert(store, new_mod)
 				end
 			end
 		end
 	end
 
-	this.tween.disabled = true
-	this.tween.ts = store.tick_ts
+	path_ni = path_ni - 3
+	target_pos = P:node_pos(path_pi, path_spi, path_ni)
+
+	local flip_x = target_pos.x < this.pos.x
+
+	U.animation_start(this, "spawn", flip_x, store.tick_ts, 1, sid_rider)
+	hit_enemies()
+
+	this.tween.props[1].disabled = true
+	this.tween.props[1].ts = store.tick_ts
+
+	local psA = E:create_entity(this.particles_name_A)
+
+	psA.particle_system.track_id = this.id
+	psA.particle_system.emit = true
+
+	queue_insert(store, psA)
+
+	local psB = E:create_entity(this.particles_name_B)
+
+	psB.particle_system.track_id = this.id
+	psB.particle_system.emit = true
+
+	queue_insert(store, psB)
+
+	local function rider_go_back_step()
+		if V.veq(this.pos, target_pos) then
+			this.motion.arrived = true
+
+			return false
+		else
+			U.set_destination(this, target_pos)
+
+			if U.walk(this, store.tick_length) then
+				return false
+			else
+				local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
+
+				U.animation_start(this, an, af, store.tick_ts, -1, sid_rider)
+
+				return true
+			end
+		end
+	end
+
+	local function run_backwards()
+		local last_pos = this.pos
+
+		distance = V.dist2(target_pos.x, target_pos.y, this.pos.x, this.pos.y)
+
+		if distance < 25 then
+			path_ni = path_ni - 3
+			target_pos = P:node_pos(path_pi, path_spi, path_ni)
+		end
+
+		rider_go_back_step()
+
+		local r = V.angleTo(target_pos.x - last_pos.x, target_pos.y - last_pos.y)
+
+		psA.particle_system.emit_offset.x, psA.particle_system.emit_offset.y = V.rotate(r, psA.emit_offset_relative.x, psA.emit_offset_relative.y)
+		psB.particle_system.emit_offset.x, psB.particle_system.emit_offset.y = V.rotate(r, psB.emit_offset_relative.x, psB.emit_offset_relative.y)
+	end
+
+	local function check_start_fade()
+		if fading then
+			return false
+		end
+
+		local fade_duration = this.tween.props[1].keys[2][1]
+
+		if this.aura.duration >= 0 and store.tick_ts - this.aura.ts + fade_duration > this.actual_duration then
+			return true
+		end
+
+		local nearest = P:nearest_nodes(this.pos.x, this.pos.y, available_paths)
+
+		if #nearest > 0 then
+			path_pi, path_spi, path_ni = unpack(nearest[1])
+
+			return path_ni < 10
+		end
+
+		return false
+	end
 
 	while true do
-		if store.tick_ts - last_hit_ts > this.aura.cycle_time then
+		this.render.sprites[1].offset.y = 0
+		if this.aura.duration >= 0 and store.tick_ts - this.aura.ts > this.actual_duration or fading and this.render.sprites[1].alpha <= 0 then
+			break
+		end
+
+		if check_start_fade() then
+			fading = true
+			this.tween.props[1].disabled = false
+			this.tween.reverse = true
+			this.tween.props[1].ts = store.tick_ts
+		end
+
+		if store.tick_ts - last_hit_ts >= this.aura.cycle_time then
 			last_hit_ts = store.tick_ts
+
 			hit_enemies()
 		end
-		if store.tick_ts - this.tween.ts > this.aura.duration then
-			this.tween.disabled = nil
-			this.tween.ts = store.tick_ts
-			U.y_wait(store, 1)
-			queue_remove(store, this)
-			return
-		end
+
+		run_backwards()
+
+		::label_651_0::
+
 		coroutine.yield()
 	end
+
+	queue_remove(store, this)
 end
 
 -- ultimate

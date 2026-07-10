@@ -19652,7 +19652,6 @@ tt.idle_flip.cooldown = 10
 tt.info.fn = scripts.hero_basic.get_info
 tt.info.hero_portrait = "kr4_hero_portraits_0012"
 tt.info.portrait = "kr4_info_portraits_heroes_0012"
-tt.main_script.insert = scripts.hero_eiskalt.insert
 tt.main_script.update = scripts.hero_eiskalt.update
 tt.motion.max_speed = b.speed
 tt.nav_rally.requires_node_nearby = false
@@ -19778,7 +19777,7 @@ tt.tween.props[1].keys = {{0, 255}, {0.2, 0}}
 
 tt = RT("fx_fireball_eiskalt_decal", "decal_tween")
 tt.render.sprites[1].name = "hero_eiskalt_proyectile_travel"
-tt.render.sprites[1].animated = false
+tt.render.sprites[1].animated = true
 tt.tween.props[1].keys = {{fts(17), 255}, {fts(27), 0}}
 
 tt = RT("fx_fireball_eiskalt_ground", "fx")
@@ -19820,8 +19819,9 @@ tt.bullet.damage_radius = b.basic_attack.damage_radius
 tt.bullet.xp_gain_factor = 0.8
 tt.bullet.particles_name = "ps_fireball_eiskalt"
 tt.bullet.vis_flags = F_RANGED
-tt.bullet.mod = "mod_eiskalt_chill_lvl1"
-tt.main_script.update = scripts.fireball_eiskalt.update
+tt.bullet.mods = {"mod_eiskalt_chill_lvl1"}
+tt.main_script.update = scripts.fireball_dragon.update
+tt.main_script.remove = scripts.fireball_eiskalt.remove
 tt.sound_events.hit = "HeroEiskaltAttackHit"
 
 tt = RT("eiskalt_icepeaks", "bullet")
@@ -19885,12 +19885,12 @@ tt.render.sprites[1].name = "hero_eiskalt_frosty_projectile"
 
 tt = RT("aura_eiskalt_rider", "aura")
 AC(tt, "render", "nav_path", "tween", "motion")
-tt.aura.mod = "mod_eiskalt_chill_lvl3"
+tt.aura.mods = {"mod_eiskalt_chill_lvl3"}
 tt.aura.radius = 75
 tt.aura.vis_flags = bor(F_AREA)
 tt.aura.vis_bans = bor(F_FLYING)
 tt.aura.duration = 6
-tt.aura.cycle_time = fts(5)
+tt.aura.cycle_time = 0.25
 tt.render.sprites[1] = CC("sprite")
 tt.render.sprites[1].prefix = "hero_eiskalt_frosty"
 tt.render.sprites[1].sort_y_offset = -60
@@ -19903,11 +19903,8 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 tt.tween.props[1].sprite_id = 1
 tt.tween.remove = false
-tt.motion.max_speed = 90
-tt.damage_min_config = {32, 64, 96}
-tt.damage_max_config = {32, 64, 96}
-tt.damage_max = tt.damage_max_config[1]
-tt.damage_min = tt.damage_min_config[1]
+tt.motion.max_speed = 60
+tt.damage_config = {8, 16, 24}
 tt.damage_type = DAMAGE_PHYSICAL
 tt.hit_fx = "fx_eiskalt_rider_hit"
 tt.particles_name_A = "ps_eiskalt_rider_trail_A"

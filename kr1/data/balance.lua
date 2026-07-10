@@ -1771,24 +1771,31 @@ local heroes = {
 	hero_eiskalt = {
 		speed = 90,
 		armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-		hp_max = {360, 390, 420, 450, 480, 510, 540, 570, 600, 630},
+		hp_max = {
+			275,
+			300,
+			325,
+			350,
+			375,
+			400,
+			425,
+			450,
+			475,
+			500,
+			525
+		},
 		basic_attack = {
 			damage_type = DAMAGE_TRUE,
 			min_range = 0,
 			max_range = 220,
 			cooldown = 2,
-			damage_radius = 20,
+			damage_radius = 1,
 			speed = 390,
-			damage_max = {24, 32, 41, 49, 57, 66, 74, 82, 90, 98},
-			damage_min = {17, 23, 29, 34, 39, 43, 49, 55, 60, 66}
+			damage_max = {23, 30, 36, 43, 50, 58, 65, 72, 79, 85},
+			damage_min = {17, 22, 26, 30, 34, 38, 43, 48, 53, 58}
 		},
 		explosion = {
-			damage_radius = {
-				[0] = 20,
-				40,
-				60,
-				80
-			}
+			damage_radius = {40, 60, 80}
 		},
 		cold_fury = {
 			cooldown_time = {20, 16, 12}

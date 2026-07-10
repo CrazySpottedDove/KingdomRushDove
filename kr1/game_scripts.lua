@@ -1165,6 +1165,10 @@ function scripts.fireball_dragon.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(hit_center, b.damage_radius, b.vis_flags, b.vis_bans)
 
 	if targets then
+		local mods = b.mods
+		if not mods and b.mod then
+			mods = {b.mod}
+		end
 		for _, e in ipairs(targets) do
 			local d = SU.create_bullet_damage(b, e.id, this.id)
 
@@ -1172,13 +1176,15 @@ function scripts.fireball_dragon.update(this, store)
 
 			queue_damage(store, d)
 
-			if b.mod then
-				local mod = E:create_entity(b.mod)
+			if mods then
+				for i = 1, #mods do
+					local mod = E:create_entity(mods[i])
 
-				mod.modifier.target_id = e.id
-				mod.xp_dest_id = b.source_id
+					mod.modifier.target_id = e.id
+					mod.xp_dest_id = b.source_id
 
-				queue_insert(store, mod)
+					queue_insert(store, mod)
+				end
 			end
 		end
 	end
