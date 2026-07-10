@@ -6829,7 +6829,7 @@ function scripts.boss_cult_leader.update(this, store)
 
 				SU.y_enemy_walk_step_default(store, this)
 			else
-				U.animation_start_default(this, "idle", nil, store.tick_ts, true)
+				U.animation_start_default(this, "standingidle", nil, store.tick_ts, true)
 			end
 
 			if terrain_type ~= band(GR:cell_type(this.pos.x, this.pos.y), bor(TERRAIN_WATER, bor(TERRAIN_LAND, TERRAIN_ICE))) then
