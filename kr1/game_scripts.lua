@@ -1189,7 +1189,7 @@ function scripts.fireball_dragon.update(this, store)
 						if U.flags_pass(target.vis, E:get_template(mods[i]).modifier) then
 							local mod = E:create_entity(mods[i])
 
-							mod.modifier.target_id = target.id
+							mod.modifier.target_id = e.id
 							mod.xp_dest_id = b.source_id
 
 							queue_insert(store, mod)
