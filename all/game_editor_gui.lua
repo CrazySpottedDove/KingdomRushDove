@@ -170,6 +170,30 @@ function gui:init(w, h, editor)
 	self:add_extension_tools_buttons()
 	self:apply_fixed_tool_layout()
 
+	do
+		local margin_x, margin_y = 28, 88
+		local gap_x = 18
+		local tools_w = wid("tools") and wid("tools").size and wid("tools").size.x or 200
+		local right_x = margin_x + tools_w + gap_x
+
+		local tl = wid("tools")
+		if tl then
+			tl.pos = V.v(margin_x, margin_y)
+		end
+		local el = wid("entities")
+		if el then
+			el.pos = V.v(right_x, margin_y)
+		end
+		local pl = wid("paths")
+		if pl then
+			pl.pos = V.v(right_x, margin_y)
+		end
+		local gl = wid("grid")
+		if gl then
+			gl.pos = V.v(right_x, margin_y)
+		end
+	end
+
 	wid("picker").size = V.v(self.sw, self.sh)
 	wid("picker").gui = self
 	wid("tools_save").on_click = function()
@@ -722,37 +746,18 @@ function gui:apply_fixed_tool_layout()
 	local entities = wid("entities")
 	local paths = wid("paths")
 	local grid = wid("grid")
-	local nav = wid("nav")
-
 	if not tools then
 		return
 	end
-
-	local margin_x = 28
-	local margin_y = 88
-	local gap_x = 18
-	local right_x = margin_x + tools.size.x + gap_x
-
-	tools.can_drag = false
-	tools.pos = V.v(margin_x, margin_y)
-
+	tools.can_drag = true
 	if entities then
-		entities.can_drag = false
-		entities.pos = V.v(right_x, margin_y)
+		entities.can_drag = true
 	end
-
 	if paths then
-		paths.can_drag = false
-		paths.pos = V.v(right_x, margin_y)
+		paths.can_drag = true
 	end
-
 	if grid then
-		grid.can_drag = false
-		grid.pos = V.v(right_x, margin_y)
-	end
-
-	if nav then
-		nav.can_drag = false
+		grid.can_drag = true
 	end
 end
 
