@@ -19723,7 +19723,7 @@ tt.timed_attacks.list[3].min_range = 20
 tt.timed_attacks.list[3].sound = "HeroEiskaltColdFury"
 tt.timed_attacks.list[3].step = 3
 tt.timed_attacks.list[3].nodes_offset = 6
-tt.timed_attacks.list[3].vis_bans = bor(F_FLYING, F_CLIFF)
+tt.timed_attacks.list[3].vis_bans = bor(F_FLYING, F_CLIFF, F_BOSS)
 tt.timed_attacks.list[3].vis_flags = bor(F_RANGED, F_MOD, F_AREA)
 tt.timed_attacks.list[3].xp_from_skill = "coldfury"
 tt.ultimate = {
@@ -19741,6 +19741,7 @@ tt.shader = "p_tint"
 tt.shader_args = {
 	tint_color = {0.6235294117647059, 0.9176470588235294, 1, 1}
 }
+tt.modifier.vis_bans = bor(tt.modifier.vis_bans, F_BOSS)
 
 tt = RT("mod_eiskalt_chill", "mod_eiskalt_cold")
 tt.modifier.duration = 0.3
@@ -19764,8 +19765,8 @@ tt.aura.cycle_time = 0.2
 tt.aura.duration = 5
 tt.aura.mod = "mod_eiskalt_chill"
 tt.aura.radius = 50
-tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
-tt.aura.vis_flags = bor(F_ENEMY)
+tt.aura.vis_bans = bor(F_FLYING, F_BOSS)
+tt.aura.vis_flags = bor(F_MOD)
 tt.aura.hit_decal = "fx_aura_chill_eiskalt_smoke"
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_chill_elora.update

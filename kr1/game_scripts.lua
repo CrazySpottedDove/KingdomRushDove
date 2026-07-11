@@ -1186,12 +1186,14 @@ function scripts.fireball_dragon.update(this, store)
 
 				if mods then
 					for i = 1, #mods do
-						local mod = E:create_entity(mods[i])
+						if U.flags_pass(target.vis, E:get_template(mods[i]).modifier) then
+							local mod = E:create_entity(mods[i])
 
-						mod.modifier.target_id = e.id
-						mod.xp_dest_id = b.source_id
+							mod.modifier.target_id = target.id
+							mod.xp_dest_id = b.source_id
 
-						queue_insert(store, mod)
+							queue_insert(store, mod)
+						end
 					end
 				end
 			end
@@ -1210,12 +1212,14 @@ function scripts.fireball_dragon.update(this, store)
 			end
 			if mods then
 				for i = 1, #mods do
-					local mod = E:create_entity(mods[i])
+					if U.flags_pass(target.vis, E:get_template(mods[i]).modifier) then
+						local mod = E:create_entity(mods[i])
 
-					mod.modifier.target_id = target.id
-					mod.xp_dest_id = b.source_id
+						mod.modifier.target_id = target.id
+						mod.xp_dest_id = b.source_id
 
-					queue_insert(store, mod)
+						queue_insert(store, mod)
+					end
 				end
 			end
 		end
@@ -3088,17 +3092,19 @@ function scripts.aura_chill_elora.update(this, store)
 			end)
 
 			for i, target in ipairs(targets) do
-				if not U.has_modifiers(store, target, this.aura.mod) then
-					SU.remove_modifiers_by_type(store, target, MOD_TYPE_SLOW, this.aura.mod)
+				if U.flags_pass(target.vis, E:get_template(this.aura.mod).modifier) then
+					if not U.has_modifiers(store, target, this.aura.mod) then
+						SU.remove_modifiers_by_type(store, target, MOD_TYPE_SLOW, this.aura.mod)
+					end
+
+					local new_mod = E:create_entity(this.aura.mod)
+
+					new_mod.modifier.level = this.aura.level
+					new_mod.modifier.target_id = target.id
+					new_mod.modifier.source_id = this.id
+
+					queue_insert(store, new_mod)
 				end
-
-				local new_mod = E:create_entity(this.aura.mod)
-
-				new_mod.modifier.level = this.aura.level
-				new_mod.modifier.target_id = target.id
-				new_mod.modifier.source_id = this.id
-
-				queue_insert(store, new_mod)
 			end
 		end
 
