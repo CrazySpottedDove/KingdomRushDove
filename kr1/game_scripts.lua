@@ -1149,6 +1149,13 @@ function scripts.fireball_dragon.update(this, store)
 	end
 
 	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * tl do
+		if target then
+			if band(target.vis.flags, F_FLYING) ~= 0 then
+				b.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+			else
+				b.to:set(target.pos.x, target.pos.y)
+			end
+		end
 		b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
 		this.pos.x, this.pos.y = this.pos.x + b.speed.x * tl, this.pos.y + b.speed.y * tl
 		this.render.sprites[1].r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
@@ -1162,25 +1169,50 @@ function scripts.fireball_dragon.update(this, store)
 		hit_center.y = hit_center.y - target.unit.hit_offset.y
 	end
 
-	local targets = U.find_enemies_in_range_filter_off(hit_center, b.damage_radius, b.vis_flags, b.vis_bans)
+	if b.damage_radius > 0 then
+		local targets = U.find_enemies_in_range_filter_off(hit_center, b.damage_radius, b.vis_flags, b.vis_bans)
 
-	if targets then
-		local mods = b.mods
-		if not mods and b.mod then
-			mods = {b.mod}
+		if targets then
+			local mods = b.mods
+			if not mods and b.mod then
+				mods = {b.mod}
+			end
+			for _, e in ipairs(targets) do
+				local d = SU.create_bullet_damage(b, e.id, this.id)
+
+				d.xp_dest_id = b.source_id
+
+				queue_damage(store, d)
+
+				if mods then
+					for i = 1, #mods do
+						local mod = E:create_entity(mods[i])
+
+						mod.modifier.target_id = e.id
+						mod.xp_dest_id = b.source_id
+
+						queue_insert(store, mod)
+					end
+				end
+			end
 		end
-		for _, e in ipairs(targets) do
-			local d = SU.create_bullet_damage(b, e.id, this.id)
+	else
+		local d = SU.create_bullet_damage(b, b.target_id, this.id)
 
-			d.xp_dest_id = b.source_id
+		d.xp_dest_id = b.source_id
 
-			queue_damage(store, d)
+		queue_damage(store, d)
 
+		if target and not target.health.dead then
+			local mods = b.mods
+			if not mods and b.mod then
+				mods = {b.mod}
+			end
 			if mods then
 				for i = 1, #mods do
 					local mod = E:create_entity(mods[i])
 
-					mod.modifier.target_id = e.id
+					mod.modifier.target_id = target.id
 					mod.xp_dest_id = b.source_id
 
 					queue_insert(store, mod)

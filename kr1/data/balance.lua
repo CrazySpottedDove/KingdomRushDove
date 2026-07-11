@@ -1789,7 +1789,6 @@ local heroes = {
 			min_range = 0,
 			max_range = 220,
 			cooldown = 2,
-			damage_radius = 1,
 			speed = 390,
 			damage_max = {23, 30, 36, 43, 50, 58, 65, 72, 79, 85},
 			damage_min = {17, 22, 26, 30, 34, 38, 43, 48, 53, 58}
@@ -1805,13 +1804,11 @@ local heroes = {
 			damage_max = {80, 160, 240}
 		},
 		icepeak = {
-			count = {8, 8, 8},
-			damage_min = {500, 1000, 1500},
-			damage_max = {500, 1000, 1500}
+			count = {8, 8, 8}
 		},
 		ultimate = {
-			cooldown = {70, 70, 70, 70},
-			duration = {6, 8, 12, 15}
+			cooldown = {50, 50, 50, 50},
+			duration = {3, 4, 8, 12}
 		}
 	}
 }

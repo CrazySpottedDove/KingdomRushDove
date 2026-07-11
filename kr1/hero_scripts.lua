@@ -27076,10 +27076,6 @@ end
 
 scripts.bolt_lumenir = {}
 
-function scripts.bolt_lumenir.insert(this, store)
-	return true
-end
-
 function scripts.bolt_lumenir.update(this, store)
 	local b = this.bullet
 	local fm = this.force_motion
@@ -27167,14 +27163,6 @@ function scripts.bolt_lumenir.update(this, store)
 	if target and not target.health.dead then
 		local d = SU.create_bullet_damage(b, target.id, this.id)
 
-		-- local u = UP:get_upgrade("mage_el_empowerment")
-		-- if u and not this.upgrades_disabled and math.random() < u.chance then
-		-- 	d.value = km.round(d.value * u.damage_factor)
-		-- 	if b.pop_mage_el_empowerment then
-		-- 		d.pop = b.pop_mage_el_empowerment
-		-- 		d.pop_conds = DR_DAMAGE
-		-- 	end
-		-- end
 		queue_damage(store, d)
 
 		if b.mod or b.mods then
@@ -27189,26 +27177,16 @@ function scripts.bolt_lumenir.update(this, store)
 				queue_insert(store, m)
 			end
 		end
-	-- if this.alter_reality_chance and UP:has_upgrade("mage_el_alter_reality") and math.random() < this.alter_reality_chance then
-	-- 	local mod = E:create_entity(this.alter_reality_mod)
-	-- 	mod.modifier.target_id = target.id
-	-- 	queue_insert(store, mod)
-	-- end
-	elseif b.damage_radius and b.damage_radius > 0 then
-		local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.vis_flags, b.vis_bans)
-
-		if targets then
-			for _, target in ipairs(targets) do
-				local d = SU.create_bullet_damage(b, target.id, this.id)
-
-				queue_damage(store, d)
-			end
-		end
 	end
 
 	this.render.sprites[1].hidden = true
 
-	if b.hit_fx then
+	if b.hif_fx_air and target and band(target.vis.flags, F_FLYING) ~= 0 then
+		local fx = E:create_entity(b.hif_fx_air)
+		fx.pos:copy(b.to)
+		fx.render.sprites[1].ts = store.tick_ts
+		queue_insert(store, fx)
+	elseif b.hit_fx then
 		local fx = E:create_entity(b.hit_fx)
 
 		fx.pos.x, fx.pos.y = b.to.x, b.to.y
@@ -39324,13 +39302,14 @@ scripts.hero_eiskalt = {}
 function scripts.hero_eiskalt.level_up(this, store)
 	local hl, ls = level_up_basic(this)
 
-	local b = E:get_template("fireball_eiskalt")
+	local b = E:get_template(this.ranged.attacks[1].bullet)
 	b.bullet.damage_max = ls.ranged_damage_max[hl]
 	b.bullet.damage_min = ls.ranged_damage_min[hl]
 
 	upgrade_skill(this, "explosion", function(this, s)
 		local b = E:get_template("fireball_eiskalt")
 		b.bullet.damage_radius = s.damage_radius[s.level]
+		b.bullet.xp_gain_factor = 1.08
 	end)
 
 	upgrade_skill(this, "coldfury", function(this, s)
@@ -39348,9 +39327,6 @@ function scripts.hero_eiskalt.level_up(this, store)
 	upgrade_skill(this, "icepeak", function(this, s)
 		local a = this.timed_attacks.list[2]
 		a.disabled = nil
-		local b = E:get_template("eiskalt_icepeaks")
-		b.damage_min = s.damage_min[s.level]
-		b.damage_max = s.damage_max[s.level]
 	end)
 
 	upgrade_skill(this, "ultimate", function(this, s)
@@ -39498,13 +39474,11 @@ function scripts.hero_eiskalt.update(this, store)
 				end
 				if target then
 					local pi, _, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
-					local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {pi}, nil, nil, NF_RALLY)
+					local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {pi}, {1}, nil, NF_RALLY)
 					if #nodes > 0 then
 						local start_ts = store.tick_ts
-						local dir = ni < nodes[1][3] and -1 or 1
-						local offset = math.random(a.range_nodes_min, a.range_nodes_min + 5)
-						local s_ni = km.clamp(1, #P:path(nodes[1][1]), nodes[1][3] + (dir > 0 and offset or -offset))
-						local target_node = P:node_pos_ref(nodes[1][1], nodes[1][2], s_ni)
+						local s_ni = km.clamp(1, #P:path(pi), ni + 4)
+						local target_node = P:node_pos_ref(nodes[1][1], 1, s_ni)
 						local flip = target_node.x < this.pos.x
 						S:queue(a.sound)
 						U.animation_start(this, "frosty", flip, store.tick_ts)
@@ -39543,9 +39517,11 @@ function scripts.hero_eiskalt.update(this, store)
 				S:queue(a.sound)
 				local b = E:create_entity(a.bullet)
 				b.bullet.source_id = this.id
+				b.bullet.target_id = target.id
 				b.pos:set(this.pos.x + (af and -1 or 1) * a.bullet_start_offset.x, this.pos.y + a.bullet_start_offset.y)
 				b.bullet.from:copy(b.pos)
 				b.bullet.to:copy(target.pos)
+				b.bullet.xp_dest_id = this.id
 				b.bullet.damage_factor = this.unit.damage_factor
 				queue_insert(store, b)
 				a.ts = start_ts
@@ -39661,19 +39637,12 @@ function scripts.eiskalt_cold_fury_smoke.update(this, store)
 	if this.delay then
 		U.y_wait(store, this.delay)
 	end
-	for _, s in pairs(this.render.sprites) do
+	for _, s in ipairs(this.render.sprites) do
 		s.ts = store.tick_ts
 	end
 	U.sprites_show(this)
 	this.tween.disabled = false
 	this.tween.ts = store.tick_ts
-end
-
--- chill aura
-scripts.aura_chill_eiskalt = {}
-
-function scripts.aura_chill_eiskalt.update(this, store)
-	scripts.aura_chill_elora.update(this, store)
 end
 
 -- skill rider (frosty)
@@ -39852,24 +39821,28 @@ end
 scripts.hero_eiskalt_ultimate = {}
 
 function scripts.hero_eiskalt_ultimate.update(this, store)
-	local targets = U.find_enemies_in_range(store.enemies, this.pos, 0, 9999, this.vis_flags, this.vis_bans, function(e)
-		return not table.contains(this.excluded_templates, e.template_name)
-	end)
-
-	local mod
-	if targets then
-		for _, target in ipairs(targets) do
-			if band(target.vis.flags, F_BOSS) == 0 and band(target.vis.bans, F_FREEZE) == 0 then
-				mod = E:create_entity(this.mod)
-				mod.modifier.target_id = target.id
-				mod.modifier.duration = this.duration
-				queue_insert(store, mod)
-			end
+	for _, e in pairs(store.enemies) do
+		if U.flags_pass(e.vis, this) and not table.arraycontains(this.excluded_templates, e.template_name) then
+			local mod = E:create_entity(this.mod)
+			mod.modifier.target_id = e.id
+			mod.modifier.duration = this.duration
+			queue_insert(store, mod)
 		end
 	end
 
+	local overlay = E:create_entity("overlay_eiskalt_whiteout")
+	overlay.render.sprites[1].ts = store.tick_ts
+	queue_insert(store, overlay)
+
 	local begin_ts = store.tick_ts
+	local breath_period = 3.5
+	local alpha_min = this.freeze_alpha_min
+	local alpha_max = this.freeze_alpha_max
 	while begin_ts + this.duration > store.tick_ts do
+		local elapsed = store.tick_ts - begin_ts
+		local breath = (math.sin(elapsed / breath_period * 2 * math.pi) + 1) * 0.5
+		overlay.render.sprites[1].alpha = alpha_min + (alpha_max - alpha_min) * breath
+
 		local rain = this.rain
 		if store.tick_ts - rain.ts >= rain.cooldown then
 			rain.ts = store.tick_ts
@@ -39895,6 +39868,7 @@ function scripts.hero_eiskalt_ultimate.update(this, store)
 		coroutine.yield()
 	end
 
+	queue_remove(store, overlay)
 	queue_remove(store, this)
 end
 --#endregion hero_eiskalt

@@ -14222,7 +14222,6 @@ tt.initial_impulse_angle = math.pi / 4
 tt.force_motion.a_step = 5
 tt.force_motion.max_a = 3000
 tt.force_motion.max_v = 600
-tt.main_script.insert = scripts.bolt_lumenir.insert
 tt.main_script.update = scripts.bolt_lumenir.update
 tt.render.sprites[1].name = "hero_lumenir_attack_projectile_idle"
 tt.render.sprites[1].z = Z_FLYING_HEROES
@@ -19602,11 +19601,11 @@ tt.hero.skills.explosion.damage_radius = b.explosion.damage_radius
 -- 2 冻土
 tt.hero.skills.coldfury = CC("hero_skill")
 tt.hero.skills.coldfury.xp_level_steps = {
-	[2] = 1,
-	[5] = 2,
-	[8] = 3
+	[3] = 1,
+	[6] = 2,
+	[9] = 3
 }
-tt.hero.skills.coldfury.xp_gain = {100, 200, 300}
+tt.hero.skills.coldfury.xp_gain = {120, 240, 360}
 tt.hero.skills.coldfury.cooldown_time = b.cold_fury.cooldown_time
 -- 3 雪球
 tt.hero.skills.frosty = CC("hero_skill")
@@ -19615,15 +19614,15 @@ tt.hero.skills.frosty.xp_level_steps = {
 	[5] = 2,
 	[8] = 3
 }
-tt.hero.skills.frosty.xp_gain = {120, 240, 360}
+tt.hero.skills.frosty.xp_gain = {100, 200, 300}
 tt.hero.skills.frosty.damage_min = b.frosty.damage_min
 tt.hero.skills.frosty.damage_max = b.frosty.damage_max
 -- 4 冰刺
 tt.hero.skills.icepeak = CC("hero_skill")
 tt.hero.skills.icepeak.xp_level_steps = {
-	[2] = 1,
-	[5] = 2,
-	[8] = 3
+	[3] = 1,
+	[6] = 2,
+	[9] = 3
 }
 tt.hero.skills.icepeak.xp_gain = {160, 320, 480}
 tt.hero.skills.icepeak.count = b.icepeak.count
@@ -19687,7 +19686,6 @@ tt.ranged.attacks[1].cooldown = b.basic_attack.cooldown
 tt.ranged.attacks[1].min_range = b.basic_attack.min_range
 tt.ranged.attacks[1].max_range = b.basic_attack.max_range
 tt.ranged.attacks[1].shoot_time = fts(13)
-tt.ranged.attacks[1].sync_animation = true
 tt.ranged.attacks[1].ignore_hit_offset = true
 tt.ranged.attacks[1].animation = "range_attack"
 tt.ranged.attacks[1].estimated_flight_time = fts(24)
@@ -19725,7 +19723,7 @@ tt.timed_attacks.list[3].min_range = 20
 tt.timed_attacks.list[3].sound = "HeroEiskaltColdFury"
 tt.timed_attacks.list[3].step = 3
 tt.timed_attacks.list[3].nodes_offset = 6
-tt.timed_attacks.list[3].vis_bans = bor(F_FLYING, F_FRIEND, F_CLIFF)
+tt.timed_attacks.list[3].vis_bans = bor(F_FLYING, F_CLIFF)
 tt.timed_attacks.list[3].vis_flags = bor(F_RANGED, F_MOD, F_AREA)
 tt.timed_attacks.list[3].xp_from_skill = "coldfury"
 tt.ultimate = {
@@ -19770,7 +19768,7 @@ tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
 tt.aura.vis_flags = bor(F_ENEMY)
 tt.aura.hit_decal = "fx_aura_chill_eiskalt_smoke"
 tt.main_script.insert = scripts.aura_apply_mod.insert
-tt.main_script.update = scripts.aura_chill_eiskalt.update
+tt.main_script.update = scripts.aura_chill_elora.update
 tt.render.sprites[1].name = "hero_eiskalt_cold_fury_ice"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].animated = false
@@ -19791,8 +19789,8 @@ tt.bullet.max_speed = b.basic_attack.speed
 tt.bullet.hit_fx = "fx_fireball_eiskalt_ground"
 tt.bullet.hit_fx_air = "fx_fireball_eiskalt_air"
 tt.bullet.hit_decal = "fx_fireball_eiskalt_decal"
-tt.bullet.damage_radius = b.basic_attack.damage_radius
-tt.bullet.xp_gain_factor = 0.8
+tt.bullet.damage_radius = 0
+tt.bullet.xp_gain_factor = 1.62
 tt.bullet.particles_name = "ps_fireball_eiskalt"
 tt.bullet.vis_flags = F_RANGED
 tt.bullet.mods = {"mod_eiskalt_cold"}
@@ -19851,6 +19849,8 @@ tt = RT("bullet_eiskalt_frosty", "bomb")
 tt.bullet.flight_time = fts(30)
 tt.bullet.hit_fx = "fx_eiskalt_frosty_spawn"
 tt.bullet.pop_chance = 0
+tt.bullet.damage_radius = 0
+tt.bullet.damage_type = DAMAGE_NONE
 tt.bullet.rotation_speed = 4 * math.pi
 tt.bullet.hit_payload = "aura_eiskalt_rider"
 tt.render.sprites[1].animated = false
@@ -19887,9 +19887,16 @@ tt.sound_events.insert = "HeroEiskaltFrosty"
 -- freeze modifier
 tt = RT("mod_eiskalt_freeze", "mod_freeze")
 AC(tt, "render")
-tt.modifier.duration = 1
+tt.modifier.duration = 12
 tt.render.sprites[1].prefix = "freeze_creep"
 tt.render.sprites[1].sort_y_offset = -2
+tt.custom_offsets = {
+	flying = vec_2(-5, 32)
+}
+tt.custom_suffixes = {
+	flying = "_air"
+}
+tt.custom_animations = {"start", "end"}
 
 -- snow drop fx
 tt = RT("fx_power_eiskalt_drop", "fx")
@@ -19907,8 +19914,8 @@ tt.cooldown = b.ultimate.cooldown[1]
 tt.duration = 12
 tt.main_script.update = scripts.hero_eiskalt_ultimate.update
 tt.excluded_templates = {"eb_umbra", "enemy_umbra_piece", "enemy_umbra_piece_flying", "enemy_tremor", "enemy_headless_horseman"}
-tt.vis_flags = bor(F_RANGED, F_FREEZE)
-tt.vis_bans = 0
+tt.vis_flags = bor(F_MOD, F_FREEZE)
+tt.vis_bans = F_BOSS
 tt.mod = "mod_eiskalt_freeze"
 tt.rain = {}
 tt.rain.alpha_max = 255
@@ -19917,7 +19924,7 @@ tt.rain.angle_between = 2 * math.pi / 180
 tt.rain.angle_max = -60 * math.pi / 180
 tt.rain.angle_min = -80 * math.pi / 180
 tt.rain.cooldown = 0.25
-tt.rain.count = 6
+tt.rain.count = 20
 tt.rain.delay_max = 0.25
 tt.rain.disabled = false
 tt.rain.distance_max = 550
@@ -19926,6 +19933,15 @@ tt.rain.duration = 0.25
 tt.rain.ts = 0
 tt.freeze_alpha_min = 80
 tt.freeze_alpha_max = 112
+
+-- whiteout overlay for ultimate (breathing white tint)
+tt = RT("overlay_eiskalt_whiteout", "decal")
+tt.pos = v(REF_W * 0.5, REF_H * 0.5)
+tt.render.sprites[1].name = "square_ffffff"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].scale = vec_2(math.ceil(REF_H * MAX_SCREEN_ASPECT * 2 / 64), math.ceil(REF_H * 2 / 64))
+tt.render.sprites[1].z = Z_SCREEN_FIXED
+tt.render.sprites[1].alpha = 0
 
 tt = RT("fx_fireball_eiskalt_decal", "decal_tween")
 tt.render.sprites[1].name = "hero_eiskalt_proyectile_travel"
