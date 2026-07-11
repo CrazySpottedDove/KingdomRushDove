@@ -124,14 +124,16 @@ function M.register(sys)
 
 		store.hero_xp_multiplier = GS.hero_xp_gain_per_difficulty_mode[store.level_difficulty] * (configer.config().enabled and configer.config().hero_xp_gain_multiplier or 1)
 
-		if store.level_idx <= 9 then
-			store.hero_xp_multiplier = 0.1 * store.level_idx * store.hero_xp_multiplier
-		elseif store.level_idx <= 35 and store.level_idx > 26 then
-			store.hero_xp_multiplier = 0.1 * (store.level_idx - 26) * store.hero_xp_multiplier
-		elseif store.level_idx <= 57 and store.level_idx > 48 then
-			store.hero_xp_multiplier = 0.1 * (store.level_idx - 48) * store.hero_xp_multiplier
-		elseif store.level_idx <= 109 and store.level_idx > 100 then
-			store.hero_xp_multiplier = 0.1 * (store.level_idx - 100) * store.hero_xp_multiplier
+		if not store.custom_map_entry then
+			if store.level_idx <= 9 then
+				store.hero_xp_multiplier = 0.1 * store.level_idx * store.hero_xp_multiplier
+			elseif store.level_idx <= 35 and store.level_idx > 26 then
+				store.hero_xp_multiplier = 0.1 * (store.level_idx - 26) * store.hero_xp_multiplier
+			elseif store.level_idx <= 57 and store.level_idx > 48 then
+				store.hero_xp_multiplier = 0.1 * (store.level_idx - 48) * store.hero_xp_multiplier
+			elseif store.level_idx <= 109 and store.level_idx > 100 then
+				store.hero_xp_multiplier = 0.1 * (store.level_idx - 100) * store.hero_xp_multiplier
+			end
 		end
 
 		if slot.locked_towers then

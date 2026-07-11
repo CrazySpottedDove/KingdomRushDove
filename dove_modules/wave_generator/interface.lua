@@ -87,36 +87,44 @@ end
 
 local function distribute_total_amount_to_groups_randomly(total, n, min_each)
 	min_each = tonumber(min_each) or 0
-	local result = {}
+	if min_each * n > total then
+		error("min_each * n 不能大于 total")
+	end
 
+	local remain = total - min_each * n
+
+	-- 生成 n 个随机权重（正数）
+	local weights = {}
+	local sum = 0
 	for i = 1, n do
-		local remaining_groups = n - i
+		local w = math.random() + 0.5 -- 避免 0
+		weights[i] = w
+		sum = sum + w
+	end
 
-		-- 后面至少需要这么多
-		local min_required = remaining_groups * min_each
-
-		-- 当前最多能拿多少（不能影响后面）
-		local max = total - min_required
-
-		-- 当前最少
-		local min = min_each
-
-		-- 做一个更自然的随机（靠近平均值）
-		local avg = total / (remaining_groups + 1)
-
-		-- 限制随机范围（避免极端）
-		local low = math.max(min, avg * 0.5)
-		local high = math.min(max, avg * 1.5)
-
-		local amount
-		if low > high then
-			amount = min
-		else
-			amount = math.random(math.floor(low), math.floor(high))
-		end
-
+	-- 按权重分配剩余（整数部分）
+	local result = {}
+	local allocated = 0
+	for i = 1, n do
+		local amount = min_each + math.floor(remain * weights[i] / sum)
 		result[i] = amount
-		total = total - amount
+		allocated = allocated + amount
+	end
+
+	-- 计算还差多少（因为 floor 丢失的零头）
+	local diff = total - allocated
+
+	-- 把 diff 逐个分配给前 diff 个组（每组 +1）
+	-- 这样保证总和精确，且分配公平（因为权重随机，谁拿到 +1 也是随机的）
+	for i = 1, diff do
+		result[i] = result[i] + 1
+	end
+
+	-- 可选：打乱顺序，让 "+1" 的奖励不总落在前几个
+	-- Fisher-Yates 洗牌
+	for i = #result, 2, -1 do
+		local j = math.random(i)
+		result[i], result[j] = result[j], result[i]
 	end
 
 	return result

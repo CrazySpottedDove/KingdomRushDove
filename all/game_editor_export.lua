@@ -47,13 +47,6 @@ local function load_lua_table(path)
 	return nil
 end
 
-local function sanitize_entry(s)
-	if not s then
-		return ""
-	end
-	return s:lower():gsub("[^%w_%-]", "_")
-end
-
 local function read_rel_or_abs(rel_path, abs_path)
 	local content = FS.read(rel_path)
 	if content then
@@ -237,12 +230,12 @@ end
 function EditorExportView:_do_export()
 	local level_name = self.editor.store.level_name or string.format("level%02d", self.level_idx)
 	local name = tostring(self._name_input.value or "")
-	local entry = sanitize_entry(self._entry_input.value or "")
+	local entry = tostring(self._entry_input.value or "")
 	local author = tostring(self._author_input.value or "")
 	local version = tostring(self._version_input.value or "")
 	local desc = tostring(self._desc_input.value or "")
 	local url = tostring(self._url_input and self._url_input.value or "")
-	local category = sanitize_entry(self._category_input and self._category_input.value or "")
+	local category = tostring(self._category_input and self._category_input.value or "")
 	local priority = tonumber(self._priority_input and self._priority_input.value or "") or 0
 	local ok_snapshot = self.editor:level_save()
 

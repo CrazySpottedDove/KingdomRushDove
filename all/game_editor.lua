@@ -835,8 +835,7 @@ function editor:load_plugin_level(entry, mode)
 	s.level_difficulty = DIFFICULTY_EASY
 	s.custom_map_entry = entry
 
-	-- 搜索顺序：game_editor/plugins/<entry> → plugins/<entry>
-	_G.CUSTOM_MAP_ROOT = {"game_editor/plugins/" .. entry, "plugins/" .. entry}
+	_G.CUSTOM_MAP_ROOT = {"plugins/" .. entry}
 
 	s.level = LU.load_level(s, s.level_name)
 	if not s.level.data then
@@ -971,7 +970,7 @@ function editor:save_wave_assets()
 
 	local cfg_path, wave_path
 	if self.store.custom_map_entry then
-		local base = "game_editor/plugins/" .. self.store.custom_map_entry .. "/data"
+		local base = "plugins/" .. self.store.custom_map_entry .. "/data"
 		love.filesystem.createDirectory(base .. "/waveconfigs")
 		love.filesystem.createDirectory(base .. "/waves")
 		cfg_path = base .. "/waveconfigs/" .. level_name .. "_waves_" .. suffix .. "_config.lua"
@@ -1800,8 +1799,8 @@ end
 
 function editor:_plugin_save_path(name)
 	if self.store.custom_map_entry then
-		love.filesystem.createDirectory("game_editor/plugins/" .. self.store.custom_map_entry .. "/data/levels")
-		return "game_editor/plugins/" .. self.store.custom_map_entry .. "/data/levels/" .. name
+		love.filesystem.createDirectory("plugins/" .. self.store.custom_map_entry .. "/data/levels")
+		return "plugins/" .. self.store.custom_map_entry .. "/data/levels/" .. name
 	end
 	return "game_editor/data/levels/" .. name
 end
@@ -1840,7 +1839,7 @@ end
 function editor:level_save()
 	log.info("Saving level: %s", self.store.level_name)
 	if self.store.custom_map_entry then
-		love.filesystem.createDirectory("game_editor/plugins/" .. self.store.custom_map_entry)
+		love.filesystem.createDirectory("plugins/" .. self.store.custom_map_entry)
 	else
 		love.filesystem.createDirectory("game_editor/data/levels")
 	end
@@ -2442,23 +2441,59 @@ return hook
 	}
 	storage:write_lua(plugin_dir .. "/config.lua", cfg)
 
-	love.filesystem.write(levels_dir .. "/" .. entry .. ".lua", "local level = {}\nreturn level\n")
+	local level_string = [[local LU = require("level_utils")
+local level = {}
 
-	local data = {
-		locked_hero = false,
-		level_terrain_style = "tower_holder_grass",
-		max_upgrade_level = 6,
-		entities_list = {},
-		invalid_path_ranges = {},
-		level_mode_overrides = {{}, {}, {}},
-		nav_mesh = {},
-		required_sounds = {},
-		required_textures = {},
-		required_exoskeletons = {}
-	}
-	storage:write_lua(levels_dir .. "/" .. entry .. "_data.lua", data)
+function level:update(store)
+	if store.selected_hero then
+		LU.insert_hero(store)
+	end
+	while not store.waves_finished or LU.has_alive_enemies(store) do
+		coroutine.yield()
+	end
+end
 
-	love.filesystem.write(levels_dir .. "/" .. entry .. "_metadata.lua", "return {\n\tthumbnail_sprite = nil,\n\tthumbnail = nil,\n\tbattle_music = nil,\n\tbattle_prep_music = nil\n}\n")
+return level
+]]
+
+	local level_data_string = [[return {
+	entities_list = {
+        {
+			pos = v(512, 384),
+			["render.sprites[1].z"] = 1000,
+            ["render.sprites[1].name"] = "",
+			template = "decal_background"
+		},
+	},
+	invalid_path_ranges = {},
+	level_mode_overrides = {
+		{},
+		{},
+		{locked_towers = {}},
+	},
+	level_terrain_style = "tower_holder_grass",
+	locked_hero = false,
+	max_upgrade_level = 6,
+	nav_mesh = {},
+	required_exoskeletons = {},
+	required_sounds = {},
+	required_textures = {},
+    plugin_required_textures = {},
+    plugin_required_sounds = {}
+}
+]]
+
+	local level_metadata_string = [[return {
+    thumbnail_sprite = nil,
+    thumbnail = nil,
+    battle_music = nil,
+    battle_prep_music = nil
+}
+]]
+
+	love.filesystem.write(levels_dir .. "/" .. entry .. ".lua", level_string)
+	love.filesystem.write(levels_dir .. "/" .. entry .. "_data.lua", level_data_string)
+	love.filesystem.write(levels_dir .. "/" .. entry .. "_metadata.lua", level_metadata_string)
 
 	local empty_paths = {
 		connections = {},
@@ -2469,8 +2504,7 @@ return hook
 	storage:write_lua(levels_dir .. "/" .. entry .. "_paths.lua", empty_paths)
 
 	local ox, oy = -192, 0
-	local gw = math.ceil((1920 + 192 * 2) / GR.cell_size)
-	local gh = math.ceil(1080 / GR.cell_size)
+	local gw, gh = 88, 48
 	local grid = {}
 	for i = 1, gw do
 		grid[i] = {}
@@ -2485,19 +2519,28 @@ return hook
 	}
 	storage:write_lua(levels_dir .. "/" .. entry .. "_grid.lua", grid_data)
 
-	local wave_config = {
-		lives = 20,
-		cash = 800,
-		groups = {}
-	}
-	storage:write_lua(waveconfigs_dir .. "/" .. entry .. "_waves_campaign_config.lua", wave_config)
+	love.filesystem.write(waveconfigs_dir .. "/" .. entry .. "_waves_campaign_config.lua", [=[return {
+	lives = 20,
+	cash = 1000,
+	groups = {{
+		interval = 30,
+		total_gold = 1000,
+		waves = {{
+			delay = 0,
+			rest = 5,
+			path_index = 1,
+			enemies = {"enemy_goblin"}
+		}}
+	}}
+}
+]=])
 
-	local wave_data = {
-		lives = 20,
-		cash = 800,
-		groups = {}
-	}
-	storage:write_lua(waves_dir .. "/" .. entry .. "_waves_campaign.lua", wave_data)
+	love.filesystem.write(waves_dir .. "/" .. entry .. "_waves_campaign.lua", [=[return {
+	lives = 20,
+	cash = 1000,
+	groups = {}
+}
+]=])
 
 	return true
 end
