@@ -2405,4 +2405,101 @@ function editor:sanitize_nav_mesh(nav_mesh)
 	end
 end
 
+--- 创建一个新的空白地图插件
+--- 在 plugins/<entry>/ 下生成默认 1920x1080 地图所需的所有文件
+---@param entry string 插件唯一标识
+---@return boolean
+function editor:create_plugin(entry)
+	local plugin_dir = "plugins/" .. entry
+	local levels_dir = plugin_dir .. "/data/levels"
+	local waves_dir = plugin_dir .. "/data/waves"
+	local waveconfigs_dir = plugin_dir .. "/data/waveconfigs"
+
+	love.filesystem.createDirectory(plugin_dir)
+	love.filesystem.createDirectory(levels_dir)
+	love.filesystem.createDirectory(waves_dir)
+	love.filesystem.createDirectory(waveconfigs_dir)
+
+	love.filesystem.write(plugin_dir .. "/README.md", "# " .. entry .. "\n\nTODO: 描述你的地图\n")
+
+	love.filesystem.write(plugin_dir .. "/" .. entry .. ".lua", [[local hook = require("hook_utils"):new()
+function hook:init(mod_data)
+	self.mod_data = mod_data
+end
+return hook
+]])
+
+	local cfg = {
+		name = entry,
+		entry = entry,
+		by = "匿名",
+		version = "1.0",
+		desc = "",
+		url = "",
+		category = "level",
+		enabled = true,
+		priority = 0
+	}
+	storage:write_lua(plugin_dir .. "/config.lua", cfg)
+
+	love.filesystem.write(levels_dir .. "/" .. entry .. ".lua", "local level = {}\nreturn level\n")
+
+	local data = {
+		locked_hero = false,
+		level_terrain_style = "tower_holder_grass",
+		max_upgrade_level = 6,
+		entities_list = {},
+		invalid_path_ranges = {},
+		level_mode_overrides = {{}, {}, {}},
+		nav_mesh = {},
+		required_sounds = {},
+		required_textures = {},
+		required_exoskeletons = {}
+	}
+	storage:write_lua(levels_dir .. "/" .. entry .. "_data.lua", data)
+
+	love.filesystem.write(levels_dir .. "/" .. entry .. "_metadata.lua", "return {\n\tthumbnail_sprite = nil,\n\tthumbnail = nil,\n\tbattle_music = nil,\n\tbattle_prep_music = nil\n}\n")
+
+	local empty_paths = {
+		connections = {},
+		curves = {},
+		paths = {},
+		active = {}
+	}
+	storage:write_lua(levels_dir .. "/" .. entry .. "_paths.lua", empty_paths)
+
+	local ox, oy = -192, 0
+	local gw = math.ceil((1920 + 192 * 2) / GR.cell_size)
+	local gh = math.ceil(1080 / GR.cell_size)
+	local grid = {}
+	for i = 1, gw do
+		grid[i] = {}
+		for j = 1, gh do
+			grid[i][j] = TERRAIN_LAND
+		end
+	end
+	local grid_data = {
+		ox = ox,
+		oy = oy,
+		grid = grid
+	}
+	storage:write_lua(levels_dir .. "/" .. entry .. "_grid.lua", grid_data)
+
+	local wave_config = {
+		lives = 20,
+		cash = 800,
+		groups = {}
+	}
+	storage:write_lua(waveconfigs_dir .. "/" .. entry .. "_waves_campaign_config.lua", wave_config)
+
+	local wave_data = {
+		lives = 20,
+		cash = 800,
+		groups = {}
+	}
+	storage:write_lua(waves_dir .. "/" .. entry .. "_waves_campaign.lua", wave_data)
+
+	return true
+end
+
 return editor

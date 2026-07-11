@@ -580,6 +580,9 @@ function gui:add_extension_tools_buttons()
 	add_btn("tools_load_plugin", "插件关卡", function()
 		self:show_plugin_level_selector()
 	end)
+	add_btn("tools_init_plugin", "初始化地图插件", function()
+		self:show_init_plugin_dialog()
+	end)
 	layout:update_layout()
 	self:update_drop_import_buttons()
 end
@@ -2661,6 +2664,93 @@ function gui.adds_missing_numbers()
 	end
 
 	gui.editor.nav_dirty = true
+end
+
+function gui:show_init_plugin_dialog()
+	local sw, sh = self.window.size.x, self.window.size.y
+	local popup = PopUpView:new(V.v(sw, sh))
+	self.window:add_child(popup)
+
+	local pw, ph = 380, 200
+	local panel = KView:new(V.v(pw, ph))
+	panel.anchor = V.v(pw * 0.5, ph * 0.5)
+	panel.pos = V.v(sw * 0.5, sh * 0.5)
+	panel.colors.background = {198, 177, 126, 255}
+	panel.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, pw, ph, 12, 12}
+	}
+	popup:add_child(panel)
+
+	local title = KLabel:new(V.v(pw, 36))
+	title.text = "初始化地图插件"
+	title.text_align = "center"
+	title.vertical_align = "middle"
+	title.font_size = 18
+	title.font_name = "h"
+	title.colors.text = {241, 222, 171, 255}
+	title.colors.background = {111, 82, 36, 255}
+	panel:add_child(title)
+
+	local entry_prop = KEProp:new("Entry:", "", true)
+	entry_prop.pos = V.v(20, 52)
+	entry_prop.size = V.v(pw - 40, 38)
+	if entry_prop.lt then
+		entry_prop.lt.colors.text = {58, 41, 20, 255}
+	end
+	if entry_prop.lv then
+		entry_prop.lv.colors.text = {58, 41, 20, 255}
+	end
+	panel:add_child(entry_prop)
+
+	local btn_y = 130
+	local btn_w1, btn_w2 = 110, 110
+	local gap = 16
+	local pair_w = btn_w1 + gap + btn_w2
+	local start_x = (pw - pair_w) / 2
+
+	local confirm_btn = KEButton:new("创建")
+	confirm_btn.size = V.v(btn_w1, 32)
+	confirm_btn.pos = V.v(start_x, btn_y)
+	confirm_btn.text_size = confirm_btn.size
+	confirm_btn.text_offset = V.v(0, (32 - KE_CONST.font_size) / 2)
+	confirm_btn.colors.background = {101, 139, 66, 255}
+	confirm_btn.colors.text = {255, 255, 255, 255}
+	function confirm_btn.on_click()
+		local entry = tostring(entry_prop.value or "")
+		if entry == "" then
+			self:show_save_notification("请输入合法 entry", false)
+			return
+		end
+		local FS = love.filesystem
+		if FS.getInfo("plugins/" .. entry) then
+			self:show_save_notification("插件已存在: " .. entry, false)
+			return
+		end
+		local ok = self.editor:create_plugin(entry)
+		if ok then
+			popup:hide()
+			self:show_save_notification("地图插件已创建: " .. entry, true)
+			self.editor:load_plugin_level(entry)
+		else
+			self:show_save_notification("创建失败", false)
+		end
+	end
+	panel:add_child(confirm_btn)
+
+	local cancel_btn = KEButton:new("取消")
+	cancel_btn.size = V.v(btn_w2, 32)
+	cancel_btn.pos = V.v(start_x + btn_w1 + gap, btn_y)
+	cancel_btn.text_size = cancel_btn.size
+	cancel_btn.text_offset = V.v(0, (32 - KE_CONST.font_size) / 2)
+	cancel_btn.colors.background = {120, 50, 50, 255}
+	cancel_btn.colors.text = {255, 255, 255, 255}
+	function cancel_btn.on_click()
+		popup:hide()
+	end
+	panel:add_child(cancel_btn)
+
+	popup:show()
 end
 
 return gui
