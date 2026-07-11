@@ -6730,5 +6730,5 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	SELECT_CUSTOM_LEVEL = "选择",
 	HERO_EISKALT_NAME = "艾斯酷特",
 	HERO_EISKALT_DESCRIPTION = "在痛苦中重生，在寒风中咆哮，这一次，绝不会再有未完成的誓言！",
-	HERO_EISKALT_SPECIAL = "冰爆，永恒冻土，冰球术，冰刺，极寒风暴"
+	HERO_EISKALT_SPECIAL = "寒冰吐息，暴烈之息，永恒冻土，雪崩，冰峰，冰川风暴"
 }

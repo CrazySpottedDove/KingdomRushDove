@@ -1800,8 +1800,8 @@ local heroes = {
 			cooldown_time = {20, 16, 12}
 		},
 		frosty = {
-			damage_min = {80, 160, 240},
-			damage_max = {80, 160, 240}
+			damage_min = {8, 16, 24},
+			damage_max = {8, 16, 24}
 		},
 		icepeak = {
 			count = {8, 8, 8}

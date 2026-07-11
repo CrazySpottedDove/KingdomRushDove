@@ -39320,8 +39320,9 @@ function scripts.hero_eiskalt.level_up(this, store)
 	upgrade_skill(this, "frosty", function(this, s)
 		local a = this.timed_attacks.list[1]
 		a.disabled = nil
-		a.damage_min = s.damage_min[s.level]
-		a.damage_max = s.damage_max[s.level]
+		local e = E:get_template("aura_eiskalt_rider")
+		e.aura.damage_min = s.damage_min[s.level]
+		e.aura.damage_max = s.damage_max[s.level]
 	end)
 
 	upgrade_skill(this, "icepeak", function(this, s)
@@ -39395,6 +39396,7 @@ function scripts.hero_eiskalt.update(this, store)
 						e.bullet.source_id = this.id
 						e.bullet.level = skill.level
 						e.bullet.damage_factor = this.unit.damage_factor
+						e._icepeak_timestamp = store.tick_ts
 						queue_insert(store, e)
 						ni = ni + n_step
 						spi = km.zmod(spi + math.random(1, 2), 3)
@@ -39605,21 +39607,24 @@ function scripts.eiskalt_icepeaks.update(this, store)
 	local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.damage_flags, b.damage_bans)
 	if targets then
 		for _, target in ipairs(targets) do
-			local d = E:create_entity("damage")
-			d.damage_type = b.damage_type
-			d.source_id = this.id
-			d.target_id = target.id
-			d.value = target.health.hp_max * 0.1 * b.level
-			queue_damage(store, d)
+			if target._icepeak_timestamp ~= this._icepeak_timestamp then
+				target._icepeak_timestamp = this._icepeak_timestamp
+				local d = E:create_entity("damage")
+				d.damage_type = b.damage_type
+				d.source_id = this.id
+				d.target_id = target.id
+				d.value = target.health.hp_max * 0.1 * b.level
+				queue_damage(store, d)
 
-			for i = 1, #b.mods do
-				local mod_name = b.mods[i]
-				if U.flags_pass(target.vis, E:get_template(mod_name).modifier) then
-					local m = E:create_entity(mod_name)
-					m.modifier.target_id = target.id
-					m.modifier.level = b.level
-					m.modifier.damage_factor = b.damage_factor
-					queue_insert(store, m)
+				for i = 1, #b.mods do
+					local mod_name = b.mods[i]
+					if U.flags_pass(target.vis, E:get_template(mod_name).modifier) then
+						local m = E:create_entity(mod_name)
+						m.modifier.target_id = target.id
+						m.modifier.level = b.level
+						m.modifier.damage_factor = b.damage_factor
+						queue_insert(store, m)
+					end
 				end
 			end
 		end
@@ -39698,7 +39703,7 @@ function scripts.aura_eiskalt_skill_rider.update(this, store)
 		local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
 		if targets then
 			for i, target in ipairs(targets) do
-				local d = E.assign_damage(this.damage_type, this.damage_config[this.aura.level] * this.aura.damage_factor, this.id, target.id)
+				local d = E.assign_damage(this.damage_type, math.random(this.aura.damage_min, this.aura.damage_max) * this.aura.damage_factor, this.id, target.id)
 				queue_damage(store, d)
 
 				if target.unit.blood_color ~= BLOOD_NONE then
