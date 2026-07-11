@@ -2,6 +2,7 @@ local interface = {}
 
 -- friend class
 local E = require("entity_db")
+local band = require("bit").band
 require("lib.klua.table")
 
 --- 提供默认配置
@@ -133,6 +134,7 @@ end
 --- 生成单子波
 --- @param config_wave table 该子波的配置数据
 local function generate_wave(config_wave)
+	local some_flying = false
 	-- 1. 根据金币总量，随机地生成一个数量列表，每个数量对应一个敌人类型
 	local gold = config_wave.gold
 	local enemies = {}
@@ -223,6 +225,9 @@ local function generate_wave(config_wave)
 				interval = 0,
 				interval_next = 0
 			}
+			if spawn_count > 0 and band(E:get_template(enemies[i]).vis.flags, F_FLYING) ~= 0 then
+				some_flying = true
+			end
 		end
 	end
 
@@ -242,7 +247,8 @@ local function generate_wave(config_wave)
 	return {
 		delay = config_wave.delay * 30,
 		path_index = config_wave.path_index,
-		spawns = table.random_order(spawns)
+		spawns = table.random_order(spawns),
+		some_flying = some_flying
 	}
 end
 

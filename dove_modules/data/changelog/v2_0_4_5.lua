@@ -1,1 +1,1 @@
-return {{date="2026-07-11",author="CrazySpottedDove",message="fix: 修正冰龙普攻无法范围减速的问题"}}
+return {{date="2026-07-11",author="CrazySpottedDove",message="fix: 修正冰龙普攻无法范围减速的问题"},{date="2026-07-11",author="CrazySpottedDove",message="feat: 使通过配置生成的出怪附带空军标签"}}
