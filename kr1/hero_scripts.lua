@@ -15835,8 +15835,6 @@ function scripts.hero_faustus.update(this, store)
 						coroutine.yield()
 					end
 
-					a.ts = start_ts
-
 					U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, nil, true)
 
 					::label_112_0::
@@ -39382,6 +39380,7 @@ function scripts.hero_eiskalt.update(this, store)
 		if ready_to_use_skill(this.ultimate, store) then
 			local enemy = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range)
 			if enemy and enemy.pos then
+				this.ultimate.ts = store.tick_ts
 				U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 				S:queue(this.sound_events.change_rally_point)
 				local e = E:create_entity(this.hero.skills.ultimate.controller_name)
@@ -39389,7 +39388,6 @@ function scripts.hero_eiskalt.update(this, store)
 				e.pos = V.vclone(enemy.pos)
 				e.level = this.hero.skills.ultimate.level
 				queue_insert(store, e)
-				this.ultimate.ts = store.tick_ts
 				SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
 			else
 				this.ultimate.ts = this.ultimate.ts + 1
@@ -39400,21 +39398,22 @@ function scripts.hero_eiskalt.update(this, store)
 		local a = this.timed_attacks.list[2]
 		local skill = this.hero.skills.icepeak
 		if ready_to_use_skill(a, store) then
-			local enemies = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
-			local target = enemies and enemies[1]
+			local target = U.find_nearest_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 			if target then
 				local pi, spi, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
 				local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {pi}, nil, nil, NF_RALLY)
 				if #nodes > 0 then
 					local flip = target.pos.x < this.pos.x
+					local start_ts = store.tick_ts
 					U.animation_start(this, "icePeaks", flip, store.tick_ts)
-					U.y_wait(store, a.spawn_time)
+					if SU.y_hero_wait(store, this, a.spawn_time) then
+						goto eiskalt_attack_end
+					end
 					local n_step = ni < nodes[1][3] and -4 or 4
-					ni = km.clamp(1, #P:path(nodes[1][2]), ni < nodes[1][3] and ni + 6 or ni)
+					ni = km.clamp(1, #P.paths[pi][spi], nodes[1][3] + n_step)
 					for i = 1, skill.count[skill.level] do
 						local e = E:create_entity(a.entity)
-						e.pos = P:node_pos(pi, spi, ni)
-						e.render.sprites[1].prefix = e.render.sprites[1].prefix
+						e.pos:copy(P:node_pos_ref(pi, spi, ni))
 						e.render.sprites[1].flip_x = math.random() > 0.5
 						e.delay = (i - 1) * fts(U.frandom(2, 3))
 						e.bullet.source_id = this.id
@@ -39423,11 +39422,17 @@ function scripts.hero_eiskalt.update(this, store)
 						queue_insert(store, e)
 						ni = ni + n_step
 						spi = km.zmod(spi + math.random(1, 2), 3)
+						if ni < 1 or ni > #P.paths[pi][spi] then
+							break
+						end
 					end
-					U.y_animation_wait(this)
-					a.ts = store.tick_ts
+					a.ts = start_ts
 					SU.hero_gain_xp_from_skill(this, skill)
+
+					SU.y_hero_animation_wait(this)
 				end
+			else
+				a.ts = a.ts + 0.1
 			end
 		end
 
@@ -39435,27 +39440,25 @@ function scripts.hero_eiskalt.update(this, store)
 		a = this.timed_attacks.list[3]
 		skill = this.hero.skills.coldfury
 		if ready_to_use_skill(a, store) then
-			local enemies = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
-			local target = enemies and enemies[1]
+			local target = U.detect_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 			if target then
 				local pi, spi, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
 				local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {pi}, nil, nil, NF_RALLY)
 				if #nodes > 0 then
 					local flip = target.pos.x < this.pos.x
+					local start_ts = store.tick_ts
 					U.animation_start(this, "coldFury", flip, store.tick_ts)
 					S:queue(a.sound)
 					if SU.y_hero_wait(store, this, a.cast_time) then
-						goto eiskalt_loop_end
+						goto eiskalt_attack_end
 					end
-					a.ts = store.tick_ts
-					SU.hero_gain_xp_from_skill(this, skill)
+
 					local delay = 0
 					local n_step = ni < nodes[1][3] and -a.step or a.step
-					ni = km.clamp(1, #P:path(nodes[1][2]), ni < nodes[1][3] and ni + a.nodes_offset or ni)
+					ni = km.clamp(1, #P.paths[pi][spi], ni - n_step)
 					for i = 1, 8 do
 						local b = E:create_entity(a.bullet)
-						b.pos = P:node_pos(pi, spi, ni)
-						b.render.sprites[1].prefix = b.render.sprites[1].prefix
+						b.pos:copy(P:node_pos_ref(pi, spi, ni))
 						b.render.sprites[1].flip_x = not flip
 						b.delay = delay
 						queue_insert(store, b)
@@ -39466,13 +39469,19 @@ function scripts.hero_eiskalt.update(this, store)
 						delay = delay + 0.05
 						ni = ni + n_step
 						spi = km.zmod(spi + 1, 3)
+						if ni < 1 or ni > #P.paths[pi][spi] then
+							break
+						end
 					end
+
+					a.ts = start_ts
+					SU.hero_gain_xp_from_skill(this, skill)
 					SU.y_hero_animation_wait(this)
 				end
+			else
+				a.ts = a.ts + 0.1
 			end
 		end
-
-		::eiskalt_loop_end::
 
 		-- 雪球
 		a = this.timed_attacks.list[1]
@@ -39481,7 +39490,7 @@ function scripts.hero_eiskalt.update(this, store)
 			local targets_info = U.find_enemies_in_paths(store.enemies, this.pos, a.range_nodes_min, a.range_nodes_max, nil, a.vis_flags, a.vis_bans)
 			if targets_info then
 				local target
-				for _, ti in pairs(targets_info) do
+				for _, ti in ipairs(targets_info) do
 					if GR:cell_is(ti.enemy.pos.x, ti.enemy.pos.y, TERRAIN_LAND) then
 						target = ti.enemy
 						break
@@ -39491,25 +39500,31 @@ function scripts.hero_eiskalt.update(this, store)
 					local pi, _, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
 					local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {pi}, nil, nil, NF_RALLY)
 					if #nodes > 0 then
+						local start_ts = store.tick_ts
 						local dir = ni < nodes[1][3] and -1 or 1
 						local offset = math.random(a.range_nodes_min, a.range_nodes_min + 5)
 						local s_ni = km.clamp(1, #P:path(nodes[1][1]), nodes[1][3] + (dir > 0 and offset or -offset))
-						local target_node = P:node_pos(nodes[1][1], nodes[1][2], s_ni, true)
+						local target_node = P:node_pos_ref(nodes[1][1], nodes[1][2], s_ni)
 						local flip = target_node.x < this.pos.x
 						S:queue(a.sound)
 						U.animation_start(this, "frosty", flip, store.tick_ts)
-						U.y_wait(store, a.spawn_time)
+						if SU.y_hero_wait(store, this, a.spawn_time) then
+							goto eiskalt_attack_end
+						end
 						local e = E:create_entity(a.entity)
 						e.bullet.from = v(this.pos.x + (flip and -1 or 1) * a.spawn_offset.x, this.pos.y + a.spawn_offset.y)
-						e.bullet.to = v(target_node.x, target_node.y)
+						e.bullet.to:copy(target_node)
 						e.bullet.level = skill.level
 						e.bullet.damage_factor = this.unit.damage_factor
 						queue_insert(store, e)
-						U.y_animation_wait(this)
-						a.ts = store.tick_ts
+						a.ts = start_ts
 						SU.hero_gain_xp_from_skill(this, skill)
+
+						SU.y_hero_animation_wait(this)
 					end
 				end
+			else
+				a.ts = a.ts + 0.1
 			end
 		end
 
@@ -39517,34 +39532,26 @@ function scripts.hero_eiskalt.update(this, store)
 
 		a = this.ranged.attacks[1]
 		if ready_to_attack(a, store) then
-			local target = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range, 0, a.vis_flags, a.vis_bans)
-			if target and target.pos then
+			local target = U.detect_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
+			if target then
 				local start_ts = store.tick_ts
 				local an, af = U.animation_name_facing_point(this, a.animation, target.pos)
 				U.animation_start(this, an, af, store.tick_ts)
-				while store.tick_ts - start_ts < a.shoot_time do
-					if this.unit.is_stunned or this.health.dead then
-						goto eiskalt_attack_end
-					end
-					coroutine.yield()
+				if SU.y_hero_wait(store, this, a.shoot_time) then
+					goto eiskalt_attack_end
 				end
 				S:queue(a.sound)
 				local b = E:create_entity(a.bullet)
 				b.bullet.source_id = this.id
-				b.pos = V.vclone(this.pos)
-				b.pos.x = b.pos.x + (af and -1 or 1) * a.bullet_start_offset[1].x
-				b.pos.y = b.pos.y + a.bullet_start_offset[1].y
-				b.bullet.from = V.vclone(b.pos)
-				b.bullet.to = V.vclone(target.pos)
+				b.pos:set(this.pos.x + (af and -1 or 1) * a.bullet_start_offset.x, this.pos.y + a.bullet_start_offset.y)
+				b.bullet.from:copy(b.pos)
+				b.bullet.to:copy(target.pos)
 				b.bullet.damage_factor = this.unit.damage_factor
 				queue_insert(store, b)
 				a.ts = start_ts
-				while not U.animation_finished(this) do
-					if this.unit.is_stunned or this.health.dead then
-						goto eiskalt_attack_end
-					end
-					coroutine.yield()
-				end
+				SU.y_hero_animation_wait(this)
+			else
+				a.ts = a.ts + 0.1
 			end
 		end
 		::eiskalt_attack_end::
@@ -39613,8 +39620,8 @@ function scripts.eiskalt_icepeaks.update(this, store)
 	end
 	U.sprites_show(this)
 	local start_ts = store.tick_ts
-	this.pos.x = this.pos.x + math.random(-4, 4)
-	this.pos.y = this.pos.y + math.random(-5, 5)
+	-- this.pos.x = this.pos.x + math.random(-4, 4)
+	-- this.pos.y = this.pos.y + math.random(-5, 5)
 	S:queue(this.sound_events.delayed_insert)
 	U.animation_start(this, "in", nil, store.tick_ts, false)
 	this.tween.ts = store.tick_ts
