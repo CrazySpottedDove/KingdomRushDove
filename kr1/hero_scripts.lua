@@ -39339,6 +39339,9 @@ end
 
 function scripts.hero_eiskalt.update(this, store)
 	local h = this.health
+	local function icepeak_filter_fn(e)
+		return e.health.hp_max >= BIG_ENEMY_HP
+	end
 
 	while true do
 		if h.dead then
@@ -39375,7 +39378,7 @@ function scripts.hero_eiskalt.update(this, store)
 		local a = this.timed_attacks.list[2]
 		local skill = this.hero.skills.icepeak
 		if ready_to_use_skill(a, store) then
-			local target = U.find_nearest_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
+			local target = U.find_nearest_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans, icepeak_filter_fn)
 			if target then
 				local pi, spi, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
 				local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {pi}, nil, nil, NF_RALLY)

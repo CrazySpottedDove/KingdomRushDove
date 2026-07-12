@@ -3180,7 +3180,7 @@ blc = balance.hero_eiskalt.icepeak
 set_skill(h.hero.skills.icepeak)
 cooldown = h.timed_attacks.list[2].cooldown
 local count = s.count[max_lvl]
-map["冰峰"] = str(cooldown_str(), "冰龙召唤", count, "根冰刺，每根造成目标最大生命值30%的真实伤害。")
+map["冰峰"] = str(cooldown_str(), "冰龙召唤", count, "根冰刺，每根造成目标最大生命值30%的真实伤害。该技能仅在存在最大生命值高于750的敌人时才会释放。")
 
 blc = balance.hero_eiskalt.ultimate
 set_skill(h.hero.skills.ultimate)

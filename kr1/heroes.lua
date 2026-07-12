@@ -19585,6 +19585,7 @@ b = balance.heroes.hero_eiskalt
 
 tt = RT("hero_eiskalt", "hero")
 AC(tt, "ranged", "timed_attacks")
+tt.regen.cooldown = 1
 tt.hero.level_stats.armor = b.armor
 tt.hero.level_stats.hp_max = b.hp_max
 tt.hero.level_stats.ranged_damage_min = b.basic_attack.damage_min
@@ -19704,7 +19705,7 @@ tt.timed_attacks.list[1].range_nodes_min = 10
 tt.timed_attacks.list[1].sound = "HeroEiskaltFrosty"
 tt.timed_attacks.list[2] = CC("spawn_attack")
 tt.timed_attacks.list[2].animation = "icePeaks"
-tt.timed_attacks.list[2].cooldown = 15
+tt.timed_attacks.list[2].cooldown = 18
 tt.timed_attacks.list[2].disabled = true
 tt.timed_attacks.list[2].entity = "eiskalt_icepeaks"
 tt.timed_attacks.list[2].spawn_time = fts(8)
