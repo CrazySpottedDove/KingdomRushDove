@@ -63410,6 +63410,7 @@ function scripts.mod_boss_stage_39_get_hit_dps.update(this, store, script)
 	end
 
 	this.pos = target.pos
+	this.damage_total = this.damage_total / target.health.damage_factor
 
 	while true do
 		target = store.entities[m.target_id]
@@ -63423,7 +63424,7 @@ function scripts.mod_boss_stage_39_get_hit_dps.update(this, store, script)
 		local damage_value = this.damage_total * damage_speed
 
 		if total_damage + damage_value > this.damage_total then
-			damage_value = this.damage_total - total_damage
+			damage_value = this.damage_total - total_damage + 1
 		end
 
 		do_damage(target, damage_value)
