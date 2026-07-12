@@ -19933,8 +19933,8 @@ tt.rain.distance_max = 550
 tt.rain.distance_min = 450
 tt.rain.duration = 0.25
 tt.rain.ts = 0
-tt.freeze_alpha_min = 80
-tt.freeze_alpha_max = 112
+tt.freeze_alpha_min = 0
+tt.freeze_alpha_max = 30
 
 -- whiteout overlay for ultimate (breathing white tint)
 tt = RT("overlay_eiskalt_whiteout", "decal")

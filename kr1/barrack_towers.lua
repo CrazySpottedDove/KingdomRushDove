@@ -403,6 +403,7 @@ tt.barrack.respawn_offset = vec_2(0, 0)
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_barrack_%04i"
 tt.render.sprites[1].offset = vec_2(0, 10)
+tt.render.sprites[3] = nil
 tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.remove = scripts.tower_barrack.remove
 tt.main_script.update = scripts.tower_barrack_mercenaries.update
