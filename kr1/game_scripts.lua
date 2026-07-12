@@ -54790,7 +54790,7 @@ function scripts.mod_stage_32_lava_splash.update(this, store)
 	while true do
 		target = store.entities[m.target_id]
 
-		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
+		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node or not this.paths_y[target.nav_path.pi] then
 			queue_remove(store, this)
 
 			return
