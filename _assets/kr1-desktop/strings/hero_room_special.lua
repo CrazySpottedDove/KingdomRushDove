@@ -3154,7 +3154,7 @@ map["日炎风暴"] = str(cooldown_str(), "召唤一道纯粹太阳能量的巨�
 -- hero_eiskalt
 set_hero("hero_eiskalt")
 
-map["寒冰吐息"] = str("艾斯酷特的普通攻击会减缓敌人30%的移速，持续3秒。")
+map["寒冰吐息"] = str("艾斯酷特的普通攻击会减缓敌人25%的移速，持续3秒。")
 
 set_skill(h.hero.skills.explosion)
 local radius = s.damage_radius[max_lvl]

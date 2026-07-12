@@ -1808,7 +1808,7 @@ local heroes = {
 		},
 		ultimate = {
 			cooldown = {50, 50, 50, 50},
-			duration = {3, 4, 8, 12}
+			duration = {3, 5, 7, 9}
 		}
 	}
 }

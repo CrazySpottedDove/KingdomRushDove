@@ -19734,7 +19734,7 @@ tt.ultimate = {
 
 tt = RT("mod_eiskalt_cold", "mod_slow")
 tt.modifier.duration = 3
-tt.slow.factor = 0.7
+tt.slow.factor = 0.75
 tt.main_script.insert = scripts.mod_eiskalt_cold.insert
 tt.main_script.remove = scripts.mod_eiskalt_cold.remove
 tt.shader = "p_tint"
