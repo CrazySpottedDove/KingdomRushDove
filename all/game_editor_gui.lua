@@ -205,7 +205,12 @@ function gui:init(w, h, editor)
 		end
 	end
 	wid("tools_load").on_click = function()
-		editor:load_level(wid("tools_level_name").value, wid("tools_game_mode").value)
+		if editor.store and editor.store.custom_map_entry then
+			local mode = wid("tools_game_mode") and wid("tools_game_mode").value or GAME_MODE_CAMPAIGN
+			editor:load_plugin_level(editor.store.custom_map_entry, mode)
+		else
+			editor:load_level(wid("tools_level_name").value, wid("tools_game_mode").value)
+		end
 	end
 	wid("tools_recover").on_click = function()
 		editor:load_level(editor.store.level_idx, editor.store.level_mode, true)
@@ -681,7 +686,8 @@ function gui:show_plugin_level_selector()
 
 		function btn.on_click()
 			popup:hide()
-			self.editor:load_plugin_level(md.entry)
+			local mode = wid("tools_game_mode") and wid("tools_game_mode").value or GAME_MODE_CAMPAIGN
+			self.editor:load_plugin_level(md.entry, mode)
 		end
 		function btn.on_enter()
 			btn.colors.background = {50, 35, 16, 240}
@@ -1075,6 +1081,10 @@ function gui:level_loaded(level_idx)
 		name_w.lt.text = level_idx
 	else
 		name_w:set_value(level_idx)
+	end
+	local mode_w = wid("tools_game_mode")
+	if mode_w and self.editor.store then
+		mode_w:set_value(self.editor.store.level_mode)
 	end
 	self:update_paths_list()
 	self:update_grid_tool()
@@ -2736,7 +2746,8 @@ function gui:show_init_plugin_dialog()
 		if ok then
 			popup:hide()
 			self:show_save_notification("地图插件已创建: " .. entry, true)
-			self.editor:load_plugin_level(entry)
+			local mode = wid("tools_game_mode") and wid("tools_game_mode").value or GAME_MODE_CAMPAIGN
+			self.editor:load_plugin_level(entry, mode)
 		else
 			self:show_save_notification("创建失败", false)
 		end
