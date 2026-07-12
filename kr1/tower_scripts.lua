@@ -3094,7 +3094,7 @@ scripts.tower_faerie_dragon = {
 
 				if pow_i.changed then
 					pow_i.changed = nil
-					this.aura_rate = this.aura_rate + this.aura_rate_inc
+					this.aura_rate = this.aura_rate_base + this.aura_rate_inc * pow_i.level
 				end
 
 				if #this.dragons > 0 and ready_to_attack(a, store, tw.cooldown_factor) then

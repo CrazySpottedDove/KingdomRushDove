@@ -1271,8 +1271,9 @@ tt.tower.price = 250
 tt.tower.type = "faerie_dragon"
 tt.tower.level = 1
 tt.aura = "aura_tower_faerie_dragon"
-tt.aura_rate = 0.3
+tt.aura_rate_base = 0.3
 tt.aura_rate_inc = 0.15
+tt.aura_rate = 0.3
 tt.sound_events.insert = "ElvesFaeryDragonDragonBuy"
 tt.dragons = {}
 
