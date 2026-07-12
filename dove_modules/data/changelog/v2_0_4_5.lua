@@ -1,1 +1,1 @@
-return {{date="2026-07-11",author="CrazySpottedDove",message="fix: 修正冰龙普攻无法范围减速的问题"},{date="2026-07-11",author="CrazySpottedDove",message="feat: 使通过配置生成的出怪附带空军标签"},{date="2026-07-12",author="CrazySpottedDove",message="feat: 使地图编辑器正确处理不同的游戏模式"}}
+return {{date="2026-07-11",author="CrazySpottedDove",message="fix: 修正冰龙普攻无法范围减速的问题"},{date="2026-07-11",author="CrazySpottedDove",message="feat: 使通过配置生成的出怪附带空军标签"},{date="2026-07-12",author="CrazySpottedDove",message="feat: 使地图编辑器正确处理不同的游戏模式"},{date="2026-07-12",author="CrazySpottedDove",message="fix: 修复熊猫士兵的i18n问题"}}

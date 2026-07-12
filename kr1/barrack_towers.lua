@@ -2024,8 +2024,8 @@ tt.sound_events.death_args = {
 	delay = fts(12)
 }
 tt.info.portrait = "kr5_info_portraits_soldiers_0031"
-tt.info.random_name_format = nil
-tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_FEMALE"
+tt.info.random_name_format = "SOLDIER_TOWER_PANDAS_GREEN_LVL4_%i_NAME"
+tt.info.random_name_count = 4
 tt.death_go_back_delay = fts(25)
 tt.unit.fade_time_after_death = 1
 tt.main_script.insert = scripts.soldier_tower_pandas.insert
@@ -2059,7 +2059,7 @@ tt.death_go_back_delay = fts(15)
 tt = RT("soldier_tower_pandas_blue_lvl4", "soldier_tower_pandas_green_lvl4")
 AC(tt, "attacks")
 tt.info.portrait = "kr5_info_portraits_soldiers_0030"
-tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_MALE"
+tt.info.random_name_format = "SOLDIER_TOWER_PANDAS_BLUE_LVL4_%i_NAME"
 tt.unit.level = 4
 tt.render.sprites[1].prefix = "tower_pandas_panda_blue_lvl4"
 tt.motion.max_speed = b.soldier.speed * 0.9
@@ -2103,7 +2103,7 @@ tt.sound_events.thunder_args = {
 tt = RT("soldier_tower_pandas_red_lvl4", "soldier_tower_pandas_green_lvl4")
 AC(tt, "attacks")
 tt.info.portrait = "kr5_info_portraits_soldiers_0029"
-tt.info.i18n_key = "SOLDIER_TOWER_PANDAS_MALE"
+tt.info.random_name_format = "SOLDIER_TOWER_PANDAS_RED_LVL4_%i_NAME"
 tt.unit.level = 4
 tt.render.sprites[1].prefix = "tower_pandas_panda_red_lvl4"
 tt.unit.fade_time_after_death = nil
