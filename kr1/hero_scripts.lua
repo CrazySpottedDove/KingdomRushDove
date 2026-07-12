@@ -39532,10 +39532,11 @@ function scripts.hero_eiskalt.update(this, store)
 				a.ts = a.ts + 0.1
 			end
 		end
-		::eiskalt_attack_end::
 
 		SU.soldier_idle(store, this)
 		SU.soldier_regen(store, this)
+
+		::eiskalt_attack_end::
 
 		coroutine.yield()
 	end
@@ -39598,8 +39599,6 @@ function scripts.eiskalt_icepeaks.update(this, store)
 	end
 	U.sprites_show(this)
 	local start_ts = store.tick_ts
-	-- this.pos.x = this.pos.x + math.random(-4, 4)
-	-- this.pos.y = this.pos.y + math.random(-5, 5)
 	S:queue(this.sound_events.delayed_insert)
 	U.animation_start(this, "in", nil, store.tick_ts, false)
 	this.tween.ts = store.tick_ts
