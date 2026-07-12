@@ -141,6 +141,17 @@ local function sanitize_wave_config(raw)
 		log.error("Invalid wave config, using default config instead: %s", err)
 		return wave_gen_interface.config_default()
 	end
+	if type(raw.groups) == "table" then
+		for _, group in ipairs(raw.groups) do
+			if type(group.waves) == "table" then
+				for _, wave in ipairs(group.waves) do
+					if wave.weight == nil then
+						wave.weight = 1
+					end
+				end
+			end
+		end
+	end
 	return raw
 end
 

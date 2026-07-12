@@ -76,6 +76,10 @@ function interface.validate_group(group)
 			return false, string.format("Wave %d: Enemies must be a table.", i)
 		end
 
+		if wave.weight ~= nil and (type(wave.weight) ~= "number" or wave.weight <= 0) then
+			return false, string.format("Wave %d: Weight must be a positive number.", i)
+		end
+
 		for j, enemy in ipairs(wave.enemies) do
 			if type(enemy) ~= "string" or enemy == "" then
 				return false, string.format("Wave %d: Enemy %d must be a non-empty string.", i, j)
@@ -86,7 +90,7 @@ function interface.validate_group(group)
 	return true
 end
 
-local function distribute_total_amount_to_groups_randomly(total, n, min_each)
+local function distribute_total_amount_to_groups_randomly(total, n, min_each, weights)
 	min_each = tonumber(min_each) or 0
 	if min_each * n > total then
 		error("min_each * n 不能大于 total")
@@ -94,12 +98,12 @@ local function distribute_total_amount_to_groups_randomly(total, n, min_each)
 
 	local remain = total - min_each * n
 
-	-- 生成 n 个随机权重（正数）
-	local weights = {}
+	-- 使用传入权重，若没有则用随机权重
+	local ws = {}
 	local sum = 0
 	for i = 1, n do
-		local w = math.random() + 0.5 -- 避免 0
-		weights[i] = w
+		local w = (weights and weights[i]) or (math.random() + 0.5)
+		ws[i] = w
 		sum = sum + w
 	end
 
@@ -107,7 +111,7 @@ local function distribute_total_amount_to_groups_randomly(total, n, min_each)
 	local result = {}
 	local allocated = 0
 	for i = 1, n do
-		local amount = min_each + math.floor(remain * weights[i] / sum)
+		local amount = min_each + math.floor(remain * ws[i] / sum)
 		result[i] = amount
 		allocated = allocated + amount
 	end
@@ -115,17 +119,18 @@ local function distribute_total_amount_to_groups_randomly(total, n, min_each)
 	-- 计算还差多少（因为 floor 丢失的零头）
 	local diff = total - allocated
 
-	-- 把 diff 逐个分配给前 diff 个组（每组 +1）
-	-- 这样保证总和精确，且分配公平（因为权重随机，谁拿到 +1 也是随机的）
-	for i = 1, diff do
-		result[i] = result[i] + 1
-	end
-
-	-- 可选：打乱顺序，让 "+1" 的奖励不总落在前几个
-	-- Fisher-Yates 洗牌
-	for i = #result, 2, -1 do
-		local j = math.random(i)
-		result[i], result[j] = result[j], result[i]
+	-- 把 diff 分配给权重最高的 diff 个组
+	if diff > 0 then
+		local idx = {}
+		for i = 1, n do
+			idx[i] = i
+		end
+		table.sort(idx, function(a, b)
+			return ws[a] > ws[b]
+		end)
+		for i = 1, diff do
+			result[idx[i]] = result[idx[i]] + 1
+		end
 	end
 
 	return result
@@ -260,9 +265,13 @@ function interface.generate_group(config_group)
 	local total_gold = config_group.total_gold
 	local config_waves = config_group.waves
 
-	-- 1. 金币量随机。把 total_gold 随机分配给每个子波
+	-- 1. 金币量随机。把 total_gold 随机分配给每个子波（按权重）
 	local wave_count = #config_waves
-	local golds = distribute_total_amount_to_groups_randomly(total_gold, wave_count)
+	local weights = {}
+	for i = 1, wave_count do
+		weights[i] = config_waves[i].weight or 1
+	end
+	local golds = distribute_total_amount_to_groups_randomly(total_gold, wave_count, 0, weights)
 
 	-- 2. 生成每个子波
 	local waves = {}

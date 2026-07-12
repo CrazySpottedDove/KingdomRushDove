@@ -290,17 +290,24 @@ function WaveConfigView:_build_form()
 		}
 
 		for wi, wave in ipairs(group.waves or {}) do
+			local wf_x = 40
+			local wf_step = 195
+
 			local w_delay = self:_create_prop(string.format("子波%d 延迟/秒(delay)", wi), wave.delay or 0)
-			w_delay.pos = v(40, y)
+			w_delay.pos = v(wf_x, y)
 			self._content:add_child(w_delay)
 
 			local w_rest = self:_create_prop(string.format("子波%d 留白/秒(rest)", wi), wave.rest or 0)
-			w_rest.pos = v(250, y)
+			w_rest.pos = v(wf_x + wf_step, y)
 			self._content:add_child(w_rest)
 
 			local w_path = self:_create_prop(string.format("子波%d 路径(path_index)", wi), wave.path_index or 1)
-			w_path.pos = v(460, y)
+			w_path.pos = v(wf_x + wf_step * 2, y)
 			self._content:add_child(w_path)
+
+			local w_weight = self:_create_prop(string.format("子波%d 权重(weight)", wi), wave.weight or 1)
+			w_weight.pos = v(wf_x + wf_step * 3, y)
+			self._content:add_child(w_weight)
 
 			y = y + 46
 			local enemies_props = {}
@@ -367,6 +374,7 @@ function WaveConfigView:_build_form()
 				delay = w_delay,
 				rest = w_rest,
 				path_index = w_path,
+				weight = w_weight,
 				enemies = enemies_props
 			}
 		end
@@ -406,6 +414,7 @@ function WaveConfigView:_read_config_from_form()
 				delay = tonumber(wf.delay.value) or 0,
 				rest = tonumber(wf.rest.value) or 0,
 				path_index = tonumber(wf.path_index.value) or 1,
+				weight = tonumber(wf.weight.value) or 1,
 				enemies = {}
 			}
 			for _, enemy_prop in ipairs(wf.enemies or {}) do
@@ -512,6 +521,7 @@ function WaveConfigView:_append_group()
 			delay = 0,
 			rest = 5,
 			path_index = 1,
+			weight = 1,
 			enemies = {"enemy_goblin"}
 		}}
 	}
@@ -538,6 +548,7 @@ function WaveConfigView:_append_wave(gi)
 		delay = 0,
 		rest = 5,
 		path_index = 1,
+		weight = 1,
 		enemies = {"enemy_goblin"}
 	}
 	self:_build_form()
