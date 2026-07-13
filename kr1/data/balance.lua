@@ -5509,15 +5509,9 @@ local towers = {
 			damage_every = fts(2)
 		},
 		disintegrate = {
-			range = 186,
-			price = {225, 250, 250},
-			cooldown = {30, 27, 24},
-			boss_damage = {
-				[0] = 192,
-				[1] = 192,
-				[2] = 288,
-				[3] = 360
-			}
+			price = {250, 150, 150},
+			cooldown = {18, 18, 18},
+			boss_damage = {200, 300, 400}
 		},
 		empowerment = {
 			max_range = 240,
@@ -5631,13 +5625,11 @@ local towers = {
 		lead = {
 			price = {225},
 			soldier_veteran = {
-				s_aura_damage_buff_factor = 0.25,
 				aura_duration = 8,
 				aura_range = 70,
 				extra_armor = 0.15,
 				extra_hp = 50,
 				aura_damage_buff_factor = 1.25,
-				regen_hp = 30,
 				basic_attack = {
 					extra_damage_max = 8,
 					extra_damage_min = 4

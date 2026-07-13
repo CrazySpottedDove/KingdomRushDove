@@ -13365,10 +13365,6 @@ function scripts.tower_arcane_wizard_ray_disintegrate_mod.update(this, store)
 		return
 	end
 
-	-- local is_boss = U.flag_has(target.vis.flags, bor(F_BOSS, F_MINIBOSS))
-	-- if not is_boss then
-	--     SU.stun_inc(target)
-	-- end
 	this.pos = target.pos
 	m.ts = store.tick_ts
 
@@ -13380,20 +13376,11 @@ function scripts.tower_arcane_wizard_ray_disintegrate_mod.update(this, store)
 		end
 
 		if store.tick_ts - m.ts >= m.duration then
-			-- if is_boss then
 			local d = E.assign_damage(m.damage_type, this.boss_damage_config[m.level] * m.damage_factor, this.id, target.id)
 
 			queue_damage(store, d)
 
 			break
-		-- else
-		--     local d = E.assign_damage(m.damage_type, m.damage, this.id, target.id)
-		--     d.pop = m.pop
-		--     d.pop_chance = m.pop_chance
-		--     d.pop_conds = m.pop_conds
-		--     queue_damage(store, d)
-		--     break
-		-- end
 		end
 
 		if this.render and m.use_mod_offset and target.unit.hit_offset then
