@@ -39295,6 +39295,8 @@ function scripts.hero_eiskalt.update(this, store)
 		return e.health.hp_max >= BIG_ENEMY_HP
 	end
 
+	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
@@ -40567,7 +40569,7 @@ function scripts.hero_dianyun.update(this, store)
 	local supreme_wave_attack = this.timed_attacks.list[3]
 	local brk
 
-	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+	U.y_animation_play_once_specific(this, "levelup", nil, store.tick_ts, 1)
 	this.health_bar.hidden = false
 
 	while true do
@@ -40582,13 +40584,13 @@ function scripts.hero_dianyun.update(this, store)
 		end
 
 		if SU.hero_level_up(store, this) then
-			U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+			U.y_animation_play_once_specific(this, "levelup", nil, store.tick_ts, 1)
 		end
 
 		if ready_to_use_skill(ricochet_attack, store) then
 			local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, ricochet_attack.max_range, ricochet_attack.vis_flags, ricochet_attack.vis_bans)
 			if target then
-				U.y_animation_play(this, ricochet_attack.animation, nil, store.tick_ts, 1)
+				U.y_animation_play_once_specific(this, ricochet_attack.animation, nil, store.tick_ts, 1)
 				if not SU.y_hero_wait(store, this, ricochet_attack.spawn_time) then
 					ricochet_attack.ts = store.tick_ts
 					local e = E:create_entity(ricochet_attack.entity)
@@ -40605,7 +40607,7 @@ function scripts.hero_dianyun.update(this, store)
 		end
 
 		if ready_to_use_skill(divine_rain_attack, store) then
-			U.y_animation_play(this, divine_rain_attack.animation, nil, store.tick_ts, 1)
+			U.y_animation_play_once_specific(this, divine_rain_attack.animation, nil, store.tick_ts, 1)
 			if not SU.y_hero_wait(store, this, divine_rain_attack.cast_time) then
 				divine_rain_attack.ts = store.tick_ts
 				local aura = E:create_entity(divine_rain_attack.bullet)
@@ -40618,7 +40620,7 @@ function scripts.hero_dianyun.update(this, store)
 		end
 
 		if ready_to_use_skill(supreme_wave_attack, store) then
-			U.y_animation_play(this, supreme_wave_attack.animation, nil, store.tick_ts, 1)
+			U.y_animation_play_once_specific(this, supreme_wave_attack.animation, nil, store.tick_ts, 1)
 			if not SU.y_hero_wait(store, this, supreme_wave_attack.spawn_time) then
 				supreme_wave_attack.ts = store.tick_ts
 				local spawner = E:create_entity(supreme_wave_attack.entity)
@@ -40633,7 +40635,7 @@ function scripts.hero_dianyun.update(this, store)
 			local enemy = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range)
 			if enemy and enemy.pos then
 				this.ultimate.ts = store.tick_ts
-				U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+				U.y_animation_play_once_specific(this, "levelup", nil, store.tick_ts, 1)
 				S:queue(this.sound_events.change_rally_point)
 				local e = E:create_entity(this.hero.skills.ultimate.controller_name)
 				e.damage_factor = this.unit.damage_factor

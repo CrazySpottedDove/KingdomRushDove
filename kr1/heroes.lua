@@ -20691,7 +20691,7 @@ tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
 tt.hero.fn_level_up = scripts.hero_dianyun.level_up
 tt.info.fn = scripts.hero_basic.get_info
 tt.info.hero_portrait = "kr4_hero_portraits_0013"
-tt.info.portrait = "kr4_info_portraits_heroes_0013"
+tt.info.portrait = "kr4_info_portraits_heroes_0014"
 tt.main_script.insert = scripts.hero_basic.insert
 tt.main_script.update = scripts.hero_dianyun.update
 tt.motion.max_speed = 90
@@ -20705,6 +20705,7 @@ tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].prefix = "hero_dianyun"
 tt.render.sprites[1].angles.walk = {"idle"}
 tt.render.sprites[1].z = Z_FLYING_HEROES
+tt.render.sprites[1].exo = true
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "hero_dianyun_shadow"
@@ -20901,7 +20902,7 @@ for i = 1, 3, 1 do
 	if i > 1 then
 		tt.render.sprites[i] = CC("sprite")
 	end
-	tt.render.sprites[i].name = "hero_storm_dragon_lightning_ricochet_fx_l" .. tostring(i)
+	tt.render.sprites[i].name = "hero_storm_dragon_lightning_ricochet_fx_l" .. i
 	tt.render.sprites[i].anchor = v(0.5, 0.5)
 	tt.render.sprites[i].z = Z_FLYING_HEROES + 1
 end
@@ -20912,6 +20913,7 @@ tt.render.sprites[1].prefix = "hero_dianyun_health_rain"
 tt.render.sprites[1].name = "run"
 tt.render.sprites[1].anchor = v(0.5, 0)
 tt.render.sprites[1].z = Z_FLYING_HEROES
+tt.render.sprites[1].exo = true
 tt.aura.duration = 5
 tt.aura.mods = {"mod_kr4_heal"}
 tt.aura.cycle_time = 0.5

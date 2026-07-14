@@ -1186,7 +1186,7 @@ function scripts.fireball_dragon.update(this, store)
 
 				if mods then
 					for i = 1, #mods do
-						if U.flags_pass(target.vis, E:get_template(mods[i]).modifier) then
+						if U.flags_pass(e.vis, E:get_template(mods[i]).modifier) then
 							local mod = E:create_entity(mods[i])
 
 							mod.modifier.target_id = e.id
