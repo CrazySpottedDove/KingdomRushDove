@@ -3204,87 +3204,103 @@ end
 set_hero("hero_asra")
 
 set_skill(h.hero.skills.spider_bite)
-cooldown = s.cooldown[max_lvl]
-map["蜘蛛啮"] = str(cooldown_str(), "用强力毒素打击敌人，令其几秒内身亡。")
+cooldown = h.melee.attacks[2].cooldown
+local poison_damage = s.damage_config[max_lvl]
+e = T("mod_asra_poison")
+local poison_every = e.dps.damage_every
+map["蜘蛛啮"] = str(cooldown_str(), "用淬毒匕首攻击敌人，每", poison_every, "秒造成", poison_damage, "点剧毒伤害，直至敌人死亡。")
 
 set_skill(h.hero.skills.onix_arrows)
+cooldown = h.ranged.attacks[2].cooldown
 d[1].damage_min = s.damage_min[max_lvl]
 d[1].damage_max = s.damage_max[max_lvl]
 d[1].damage_type = DAMAGE_MAGICAL
-map["岩蛇箭"] = str("向目标射出一簇", s.loops[max_lvl], "支箭，每支造成", damage_str(), "点魔法伤害。")
+map["岩蛇箭"] = str(cooldown_str(), "向目标射出一簇", s.loops[max_lvl], "支箭，每支造成", damage_str(), "。")
 
 set_skill(h.hero.skills.quiver_of_sorrow)
 map["哀恸箭袋"] = str("阿斯拉每打中一次远程攻击，就能击破目标", s.damage_armor[max_lvl] * 100, "点护甲。")
 
 set_skill(h.hero.skills.shield_of_shadows)
-map["暗影之盾"] = str("受到攻击后，阿斯拉会施放出一面", s.shield_max_damage[max_lvl], "点生命值的护盾。")
+cooldown = h.timed_attacks.list[1].cooldown
+e = T("hero_asra_unbreakable_mod")
+local shield_duration = e.modifier.duration
+map["暗影之盾"] = str(cooldown_str(), "受到攻击后，阿斯拉会施放出一面", s.shield_max_damage[max_lvl], "点生命值的护盾，持续", shield_duration, "秒。")
 
-blc = balance.heroes.hero_asra.ultimate
 set_skill(h.hero.skills.ultimate)
 get_cooldown()
 d[1].damage_min = s.damage_config[max_lvl]
 d[1].damage_max = s.damage_config[max_lvl]
 d[1].damage_type = DAMAGE_TRUE
-map["毒雨"] = str(cooldown_str(), "射出数支毒箭，对区域内所有敌人造成", damage_str(), "点伤害并附加剧毒。")
+e = T("mod_hero_asra_ultimate_poison")
+local ult_poison_every = e.dps.damage_every
+local ult_poison_duration = e.modifier.duration
+map["毒雨"] = str(cooldown_str(), "射出数支毒箭攻击大范围区域，每支对区域内所有敌人造成", damage_str(), "并附加剧毒，每", ult_poison_every, "秒造成", e.dps.damage_max, "点伤害，持续", ult_poison_duration, "秒。")
 
 -- hero_beresad
 set_hero("hero_beresad")
 
-blc = balance.heroes.hero_beresad.conflagration
 set_skill(h.hero.skills.conflagration)
 cooldown = s.cooldown[max_lvl]
-map["龙息术"] = str(cooldown_str(), "贝雷萨德喷出灼热的火焰，灼烧前方锥形区域内的所有敌人。")
+e = T("aura_beresad_firestorm")
+local conflagration_duration = e.aura.duration
+e = T("mod_beresad_firestorm")
+local conflagration_burn_every = e.dps.damage_every
+local conflagration_burn_damage = e.dps.damage_min
+map["龙息术"] = str(cooldown_str(), "贝雷萨德喷出灼热的火焰，灼烧前方区域，留下持续", conflagration_duration, "秒的焦土，每", conflagration_burn_every, "秒对范围内敌人造成", conflagration_burn_damage, "点真实伤害。")
 
-blc = balance.heroes.hero_beresad.fear_dragon
 set_skill(h.hero.skills.fear_dragon)
-cooldown = s.cooldown[max_lvl]
-map["恐惧之龙"] = str(cooldown_str(), "发出震耳欲聋的咆哮，恐惧范围内的敌人，使其逃跑。")
+get_cooldown()
+e = T("hero_beresad_modifier_fear")
+local fear_duration = e.modifier.duration
+map["恐惧之龙"] = str(cooldown_str(), "发出震耳欲聋的咆哮，恐惧", h.timed_attacks.list[1].max_range, "范围内敌人，使其逃跑", fear_duration, "秒。")
 
-blc = balance.heroes.hero_beresad.dragon_spawn
 set_skill(h.hero.skills.dragon_spawn)
-cooldown = s.cooldown[max_lvl]
-map["龙之爪牙"] = str(cooldown_str(), "召唤一个黑暗傀儡为其作战。")
+get_cooldown()
+e = T("hero_beresad_golem_lvl3")
+local golem_hp = e.health.hp_max
+local golem_damage_min = e.melee.attacks[1].damage_min
+local golem_damage_max = e.melee.attacks[1].damage_max
+map["龙之爪牙"] = str(cooldown_str(), "召唤一个黑暗傀儡为其作战。傀儡拥有", golem_hp, "点生命值，每次攻击造成", golem_damage_min, "-", golem_damage_max, "点伤害。")
 
-blc = balance.heroes.hero_beresad.remove_existence
 set_skill(h.hero.skills.remove_existence)
-cooldown = s.cooldown
-d[1].damage_max = s.damage_max[max_lvl]
+cooldown = h.ranged.attacks[3].cooldown
 d[1].damage_type = DAMAGE_TRUE
-map["湮灭射线"] = str(cooldown_str(), "射出一道湮灭光线，对目标造成", damage_str(), "点真实伤害。若目标因此死亡，则直接消灭。")
+map["湮灭射线"] = str(cooldown_str(), "射出一道湮灭光线。若目标因此死亡，则直接消灭。")
 
-blc = balance.heroes.hero_beresad.ultimate
 set_skill(h.hero.skills.ultimate)
 get_cooldown()
-map["地狱火雨"] = str(cooldown_str(), "召唤地狱火雨，覆盖大范围区域。")
+e = T("mod_beresad_ultimate")
+local ult_burn_every = e.dps.damage_every
+map["地狱火雨"] = str(cooldown_str(), "召唤地狱火雨覆盖大范围区域，每", ult_burn_every, "秒对范围内敌人造成灼烧效果。")
 
 -- hero_dianyun
 set_hero("hero_dianyun")
 
-blc = balance.heroes.hero_dianyun.ricochet
 set_skill(h.hero.skills.ricochet)
-cooldown = s.cooldown
+cooldown = h.timed_attacks.list[1].cooldown
 d[1].damage_min = s.damage_min[max_lvl]
 d[1].damage_max = s.damage_max[max_lvl]
 d[1].damage_type = DAMAGE_MAGICAL
-map["罅云揽星"] = str(cooldown_str(), "发射一道闪电，在", s.bounce[max_lvl], "个敌人之间弹射，每个造成", damage_str(), "点魔法伤害。")
+map["罅云揽星"] = str(cooldown_str(), "发射一道闪电，在", s.bounce[max_lvl], "个敌人之间弹射，每个造成", damage_str(), "。")
 
 set_skill(h.hero.skills.lord_storm)
 map["青霜流虹"] = str("普通攻击会同时攻击最多", s.max_targets[max_lvl], "个目标。")
 
-blc = balance.heroes.hero_dianyun.divine_rain
 set_skill(h.hero.skills.divine_rain)
-cooldown = s.cooldown
-map["轻雷霁光"] = str(cooldown_str(), "降下神圣之雨，每秒为周围友军回复", s.healing_points_tick[max_lvl], "点生命值，持续", s.duration, "秒。")
+cooldown = h.timed_attacks.list[2].cooldown
+duration = s.duration
+map["轻雷霁光"] = str(cooldown_str(), "降下神圣之雨，每秒为周围友军回复", s.healing_points_tick[max_lvl], "点生命值，持续", duration, "秒。")
 
-blc = balance.heroes.hero_dianyun.supreme_wave
 set_skill(h.hero.skills.supreme_wave)
-cooldown = s.cooldown
+cooldown = h.timed_attacks.list[3].cooldown
 map["势崩江河"] = str(cooldown_str(), "释放一道能量波，击晕路径上的敌人", s.stun_duration[max_lvl], "秒。")
 
-blc = balance.heroes.hero_dianyun.ultimate
 set_skill(h.hero.skills.ultimate)
 get_cooldown()
-map["雷电之子"] = str(cooldown_str(), "召唤一个雷电之子，自动攻击附近的敌人。")
+e = T("bolt_hero_dianyun_electric_son")
+local son_bolt_damage_min = e.bullet.damage_min or 0
+local son_bolt_damage_max = e.bullet.damage_max or 0
+map["雷电之子"] = str(cooldown_str(), "召唤一个雷电之子，自动攻击附近的敌人，每次造成", son_bolt_damage_min, "-", son_bolt_damage_max, "点法术伤害。")
 
 -- H.dump()
 

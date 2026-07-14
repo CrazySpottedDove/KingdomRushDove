@@ -40567,10 +40567,6 @@ function scripts.hero_dianyun.update(this, store)
 	local supreme_wave_attack = this.timed_attacks.list[3]
 	local brk
 
-	this.timed_attacks.list[1].ts = 0
-	this.timed_attacks.list[2].ts = 0
-	this.timed_attacks.list[3].ts = 0
-
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 	this.health_bar.hidden = false
 
@@ -40613,8 +40609,8 @@ function scripts.hero_dianyun.update(this, store)
 			if not SU.y_hero_wait(store, this, divine_rain_attack.cast_time) then
 				divine_rain_attack.ts = store.tick_ts
 				local aura = E:create_entity(divine_rain_attack.bullet)
-				aua.pos = V.vclone(this.pos)
-				aua.aura.source_id = this.id
+				aura.pos = V.vclone(this.pos)
+				aura.aura.source_id = this.id
 				queue_insert(store, aura)
 				SU.hero_gain_xp_from_skill(this, this.hero.skills.divine_rain)
 			end
@@ -40685,8 +40681,8 @@ function scripts.controller_lord_storm.update(this, store)
 			local b = E:create_entity(this.bullet)
 			b.pos = V.vclone(this.pos)
 			b.bullet.target_id = target.id
-			b.bullet.damage_max = this.damage_max or 0
-			b.bullet.damage_min = this.damage_min or 0
+			b.bullet.damage_max = this.damage_max
+			b.bullet.damage_min = this.damage_min
 			queue_insert(store, b)
 			count = count + 1
 		end
@@ -40718,13 +40714,7 @@ function scripts.hero_dianyun_lightning.update(this, store)
 		coroutine.yield()
 	end
 	if target and not target.health.dead then
-		local d = SU.create_bullet_damage(b, target.id, this.id)
-		queue_damage(store, d)
-		if b.mod then
-			local mod = E:create_entity(b.mod)
-			mod.modifier.target_id = target.id
-			queue_insert(store, mod)
-		end
+		SU.apply_single_bullet_simulation(this, store)
 	end
 	if b.hit_fx then
 		SU.insert_sprite(store, b.hit_fx, this.pos)
