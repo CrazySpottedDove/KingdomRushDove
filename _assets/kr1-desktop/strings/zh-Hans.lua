@@ -6730,5 +6730,14 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	SELECT_CUSTOM_LEVEL = "选择",
 	HERO_EISKALT_NAME = "艾斯酷特",
 	HERO_EISKALT_DESCRIPTION = "在痛苦中重生，在寒风中咆哮，这一次，绝不会再有未完成的誓言！",
-	HERO_EISKALT_SPECIAL = "寒冰吐息，暴烈之息，永恒冻土，雪崩，冰峰，冰川风暴"
+	HERO_EISKALT_SPECIAL = "寒冰吐息，暴烈之息，永恒冻土，雪崩，冰峰，冰川风暴",
+	HERO_ASRA_NAME = "阿斯拉",
+	HERO_ASRA_DESCRIPTION = "阿斯拉的记忆最远只能追溯到她当初咬牙经受的那些曲曲折折的训练。这一切的痛苦，只是为了让自己成为一名杀人如蒿的暗影刺客。她那冷酷无情、木然如已死之人的目光，远比她匕首的刃尖还要锋利。",
+	HERO_ASRA_SPECIAL = "蜘蛛啮，岩蛇箭，哀恸箭袋，暗影之盾，毒雨",
+	HERO_BERESAD_NAME = "贝雷萨德",
+	HERO_BERESAD_DESCRIPTION = "贝雷萨德那毁天灭地的力量，足以让最勇猛的战士也闻风丧胆。作为一条远古黑龙，他的怒火可以焚尽一切。",
+	HERO_BERESAD_SPECIAL = "龙息术，恐惧之龙，龙之爪牙，湮灭射线，地狱火雨",
+	HERO_DIANYUN_NAME = "电云",
+	HERO_DIANYUN_DESCRIPTION = "传说在千年之前，天空中有两条神龙争斗，落败的那条被封印在无尽之海，获胜的那条被尊为风暴龙王，名曰电云。",
+	HERO_DIANYUN_SPECIAL = "罅云揽星，青霜流虹，轻雷霁光，势崩江河，雷电之子"
 }

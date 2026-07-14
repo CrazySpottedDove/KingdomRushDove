@@ -49588,5 +49588,341 @@ return {
 		prefix = "hero_eiskalt_proyectile",
 		from = 1,
 		to = 10
+	},
+
+	-- hero_asra
+	hero_asra_idle = {
+		prefix = "hero_asra",
+		from = 1,
+		to = 14
+	},
+	hero_asra_walk = {
+		prefix = "hero_asra",
+		from = 15,
+		to = 32
+	},
+	hero_asra_running = {
+		prefix = "hero_asra",
+		from = 15,
+		to = 32
+	},
+	hero_asra_shoot = {
+		prefix = "hero_asra",
+		from = 33,
+		to = 59
+	},
+	hero_asra_shootDown = {
+		prefix = "hero_asra",
+		from = 60,
+		to = 86
+	},
+	hero_asra_shootUp = {
+		prefix = "hero_asra",
+		from = 87,
+		to = 112
+	},
+	hero_asra_multishotIn = {
+		prefix = "hero_asra",
+		from = 113,
+		to = 122
+	},
+	hero_asra_multishotLoop = {
+		prefix = "hero_asra",
+		from = 123,
+		to = 130
+	},
+	hero_asra_multishotOut = {
+		prefix = "hero_asra",
+		from = 131,
+		to = 138
+	},
+	hero_asra_death = {
+		prefix = "hero_asra",
+		from = 191,
+		to = 222
+	},
+	hero_asra_levelup = {
+		prefix = "hero_asra",
+		from = 223,
+		to = 240
+	},
+	hero_asra_respawn = {
+		prefix = "hero_asra",
+		from = 223,
+		to = 240
+	},
+	hero_asra_teleportOut = {
+		prefix = "hero_asra",
+		from = 266,
+		to = 276
+	},
+	hero_asra_teleportIn = {
+		prefix = "hero_asra",
+		from = 277,
+		to = 294
+	},
+	hero_asra_melee = {
+		prefix = "hero_asra",
+		from = 327,
+		to = 344
+	},
+	hero_asra_meleePoison = {
+		prefix = "hero_asra",
+		from = 345,
+		to = 383
+	},
+	hero_asra_special = {
+		prefix = "hero_asra",
+		from = 404,
+		to = 433
+	},
+	hero_asra_multishot_arrow_hit_run = {
+		prefix = "hero_asra_multishot_arrow_hit",
+		from = 1,
+		to = 5
+	},
+	hero_asra_shield_start = {
+		prefix = "hero_asra_shield",
+		from = 1,
+		to = 6
+	},
+	hero_asra_shield_end = {
+		prefix = "hero_asra_shield",
+		from = 31,
+		to = 36
+	},
+	hero_asra_shield_idle = {
+		prefix = "hero_asra_shield",
+		from = 1,
+		to = 36
+	},
+	hero_asra_special_poison_explosion_run = {
+		prefix = "hero_asra_special_poison_explosion",
+		from = 1,
+		to = 18
+	},
+
+	-- hero_beresad
+	hero_beresad_idle = {
+		prefix = "hero_beresad",
+		from = 1,
+		to = 18
+	},
+	hero_beresad_walk = {
+		prefix = "hero_beresad",
+		from = 1,
+		to = 18
+	},
+	hero_beresad_attack = {
+		prefix = "hero_beresad",
+		from = 67,
+		to = 84
+	},
+	hero_beresad_fear = {
+		prefix = "hero_beresad",
+		from = 19,
+		to = 66
+	},
+	hero_beresad_conflagration = {
+		prefix = "hero_beresad",
+		from = 115,
+		to = 154
+	},
+	hero_beresad_remove = {
+		prefix = "hero_beresad",
+		from = 85,
+		to = 114
+	},
+	hero_beresad_earthshake = {
+		prefix = "hero_beresad",
+		from = 155,
+		to = 179
+	},
+	hero_beresad_death = {
+		prefix = "hero_beresad",
+		from = 180,
+		to = 234
+	},
+	hero_beresad_respawn = {
+		prefix = "hero_beresad",
+		from = 235,
+		to = 280
+	},
+	hero_beresad_levelup = {
+		prefix = "hero_beresad",
+		from = 281,
+		to = 304
+	},
+	hero_beresad_attack_explosion_run = {
+		prefix = "hero_beresad_attack_explosion",
+		from = 1,
+		to = 22
+	},
+	hero_beresad_attack_explosion_air_run = {
+		prefix = "hero_beresad_attack_explosion_air",
+		from = 1,
+		to = 18
+	},
+	hero_beresad_attack_proyectile_travel = {
+		prefix = "hero_beresad_attack_proyectile",
+		from = 1,
+		to = 10
+	},
+	hero_beresad_attack_proyectile_particle_run = {
+		prefix = "hero_beresad_attack_proyectile_particle",
+		from = 1,
+		to = 14
+	},
+	hero_beresad_conflagration_fire_idle = {
+		prefix = "hero_beresad_conflagration_fire",
+		from = 1,
+		to = 24
+	},
+	hero_beresad_conflagration_modifier_run = {
+		prefix = "hero_beresad_conflagration_modifier",
+		from = 1,
+		to = 20
+	},
+	hero_beresad_conflagration_particle_travel = {
+		prefix = "hero_beresad_conflagration_particle",
+		from = 1,
+		to = 6
+	},
+	hero_beresad_golemspawn_explosion_run = {
+		prefix = "hero_beresad_golemspawn_explosion",
+		from = 1,
+		to = 18
+	},
+	hero_beresad_golemspawn_hit_run = {
+		prefix = "hero_beresad_golemspawn_hit",
+		from = 1,
+		to = 6
+	},
+	hero_beresad_golemspawn_particle_run = {
+		prefix = "hero_beresad_golemspawn_particle",
+		from = 1,
+		to = 19
+	},
+	hero_beresad_golem_idle = {
+		prefix = "hero_beresad_golem",
+		from = 42,
+		to = 53
+	},
+	hero_beresad_golem_walk = {
+		prefix = "hero_beresad_golem",
+		from = 54,
+		to = 78
+	},
+	hero_beresad_golem_running = {
+		prefix = "hero_beresad_golem",
+		from = 54,
+		to = 78
+	},
+	hero_beresad_golem_attack = {
+		prefix = "hero_beresad_golem",
+		from = 79,
+		to = 98
+	},
+	hero_beresad_golem_death = {
+		prefix = "hero_beresad_golem",
+		from = 120,
+		to = 134
+	},
+	hero_beresad_modifier_fear_run = {
+		prefix = "hero_beresad_modifier_fear",
+		from = 1,
+		to = 4
+	},
+	hero_beresad_remove_explosion_run = {
+		prefix = "hero_beresad_remove_explosion",
+		from = 1,
+		to = 18
+	},
+	hero_beresad_remove_ray_run = {
+		prefix = "hero_beresad_remove_ray",
+		from = 1,
+		to = 8
+	},
+	hero_beresad_ultimate_hit_run = {
+		prefix = "hero_beresad_ultimate_hit",
+		from = 1,
+		to = 11
+	},
+	hero_beresad_ultimate_modifier_run = {
+		prefix = "hero_beresad_ultimate_modifier",
+		from = 15,
+		to = 24
+	},
+
+	-- hero_dianyun
+	hero_storm_dragon_cloud_l1_idle = {
+		prefix = "hero_storm_dragon_cloud_layer1",
+		from = 1,
+		to = 59
+	},
+	hero_storm_dragon_cloud_l2_idle = {
+		prefix = "hero_storm_dragon_cloud_layer2",
+		from = 1,
+		to = 59
+	},
+	hero_storm_dragon_cloud_l3_idle = {
+		prefix = "hero_storm_dragon_cloud_layer3",
+		from = 1,
+		to = 59
+	},
+	hero_storm_dragon_supreme_wave = {
+		prefix = "hero_storm_dragon_supreme_wave",
+		from = 1,
+		to = 71
+	},
+	hero_storm_dragon_lightning_ricochet_cloud = {
+		prefix = "hero_storm_dragon_lightning_ricochet_cloud",
+		from = 1,
+		to = 18
+	},
+	hero_storm_dragon_lightning_ricochet = {
+		prefix = "hero_storm_dragon_lightning_ricochet",
+		from = 1,
+		to = 15
+	},
+	hero_storm_dragon_lightning_ricochet_hit = {
+		prefix = "hero_storm_dragon_lightning_ricochet_hit",
+		from = 1,
+		to = 10
+	},
+	hero_storm_dragon_lightning = {
+		prefix = "hero_storm_dragon_lightning",
+		from = 1,
+		to = 18
+	},
+	hero_storm_dragon_lightning_hit = {
+		prefix = "hero_storm_dragon_lightning_hit",
+		from = 1,
+		to = 10
+	},
+	hero_storm_dragon_lantern = {
+		prefix = "hero_storm_dragon_lantern",
+		from = 1,
+		to = 50
+	},
+	hero_storm_dragon_electric_son_spawn = {
+		prefix = "hero_storm_dragon_electric_son",
+		from = 1,
+		to = 25
+	},
+	hero_storm_dragon_electric_son_idle = {
+		prefix = "hero_storm_dragon_electric_son",
+		from = 26,
+		to = 53
+	},
+	hero_storm_dragon_electric_son_attack = {
+		prefix = "hero_storm_dragon_electric_son",
+		from = 54,
+		to = 81
+	},
+	hero_storm_dragon_electric_son_death = {
+		prefix = "hero_storm_dragon_electric_son",
+		from = 82,
+		to = 100
 	}
 }

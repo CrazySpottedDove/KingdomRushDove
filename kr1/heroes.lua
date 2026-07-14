@@ -6749,7 +6749,6 @@ tt.bullet.xp_gain_factor = 2.8
 
 tt = RT("hero_elves_archer_ultimate")
 AC(tt, "pos", "main_script")
-tt.can_fire_fn = scripts.hero_elves_archer_ultimate.can_fire_fn
 tt.cooldown = 40
 tt.bullet = "arrow_hero_elves_archer_ultimate"
 tt.spread = {6, 8, 10, 12}
@@ -6961,8 +6960,7 @@ tt.modifier.allows_duplicates = true
 
 tt = RT("hero_regson_ultimate")
 AC(tt, "pos", "main_script", "sound_events", "render")
--- tt.can_fire_fn = scripts.hero_regson_ultimate.can_fire_fn
-tt.main_script.update = scripts.hero_regson_ultimate.update
+-- tt.main_script.update = scripts.hero_regson_ultimate.update
 tt.render.sprites[1].name = "fx_regson_ultimate"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_EFFECTS
@@ -8057,7 +8055,6 @@ tt.guards_count = {2, 3, 4, 5}
 tt.guards_template = "soldier_elves_denas_guard"
 tt.main_script.update = scripts.hero_elves_denas_ultimate.update
 tt.sound_events.insert = "ElvesHeroDenasKingsguardTaunt"
-tt.can_fire_fn = scripts.hero_elves_denas_ultimate.can_fire_fn
 
 tt = RT("shield_elves_denas", "bullet")
 tt.bullet.damage_type = DAMAGE_TRUE
@@ -8404,7 +8401,6 @@ tt.aura.duration = nil
 tt.aura.range_nodes = 60
 tt.aura.nodes_step = -5
 tt.aura.vis_bans = bor(F_CLIFF, F_WATER)
-tt.can_fire_fn = scripts.hero_arivan_ultimate.can_fire_fn
 tt.cooldown = 64
 tt.main_script.update = scripts.hero_arivan_ultimate.update
 tt.motion.max_speed = 0.5 * FPS
@@ -9023,7 +9019,6 @@ tt.tween.props[1].keys = {{0, 0}, {0.15, 255}}
 
 tt = RT("hero_bravebark_ultimate")
 AC(tt, "pos", "main_script", "sound_events")
-tt.can_fire_fn = scripts.hero_bravebark_ultimate.can_fire_fn
 tt.cooldown = 32
 tt.count = nil
 tt.main_script.update = scripts.hero_bravebark_ultimate.update
@@ -13201,7 +13196,6 @@ tt = RT("controller_hero_witch_ultimate")
 b = balance.heroes.hero_witch.ultimate
 AC(tt, "pos", "main_script", "sound_events")
 tt.main_script.update = scripts.hero_witch_ultimate.update
-tt.can_fire_fn = scripts.hero_witch_ultimate.can_fire_fn
 tt.teleport_decal = "decal_hero_witch_ultimate"
 tt.vis_bans = bor(F_BOSS)
 tt.vis_flags = bor(F_TELEPORT)
@@ -13503,7 +13497,6 @@ tt.tween.props[1].keys = {{0, 0}, {0.5, 255}}
 tt = RT("hero_dragon_bone_ultimate")
 b = balance.heroes.hero_dragon_bone.ultimate
 AC(tt, "pos", "main_script", "sound_events")
-tt.can_fire_fn = scripts.hero_dragon_bone_ultimate.can_fire_fn
 tt.main_script.update = scripts.hero_dragon_bone_ultimate.update
 tt.range = b.range
 tt.spawn_delay = fts(5)
@@ -14146,7 +14139,6 @@ tt.ranged.attacks[1].bullet = "bolt_lumenir_mini_death"
 tt = RT("hero_lumenir_ultimate")
 b = balance.heroes.hero_lumenir.ultimate
 AC(tt, "pos", "main_script", "sound_events")
-tt.can_fire_fn = scripts.hero_lumenir_ultimate.can_fire_fn
 tt.main_script.update = scripts.hero_lumenir_ultimate.update
 tt.cooldown = 30
 tt.range = b.range
@@ -14853,7 +14845,6 @@ tt.modifier.duration = 0.5
 tt = RT("controller_hero_wukong_ultimate")
 b = balance.heroes.hero_wukong.ultimate
 AC(tt, "pos", "main_script", "sound_events")
-tt.can_fire_fn = scripts.controller_hero_wukong_ultimate.can_fire_fn
 tt.main_script.update = scripts.controller_hero_wukong_ultimate.update
 tt.damage_radius = 80
 tt.damage_times = {}
@@ -15596,7 +15587,6 @@ tt.duration = nil
 
 tt = E:register_t("hero_muyrn_ultimate")
 E:add_comps(tt, "pos", "main_script", "sound_events")
-tt.can_fire_fn = scripts.hero_muyrn_ultimate.can_fire_fn
 tt.main_script.update = scripts.hero_muyrn_ultimate.update
 tt.cooldown = nil
 tt.aura = "aura_hero_muyrn_ultimate"
@@ -16003,7 +15993,6 @@ tt.controller_passive = "controller_hero_dragon_arb_passive"
 tt = E:register_t("hero_dragon_arb_ultimate")
 b = balance.heroes.hero_dragon_arb.ultimate
 E:add_comps(tt, "pos", "main_script", "sound_events")
-tt.can_fire_fn = scripts.hero_dragon_arb_ultimate.can_fire_fn
 tt.main_script.update = scripts.hero_dragon_arb_ultimate.update
 tt.soldiers_target = {"soldier_hero_dragon_arb_spawn_lvl1", "soldier_hero_dragon_arb_spawn_lvl2", "soldier_hero_dragon_arb_spawn_lvl3"}
 tt.soldiers_polymorph_mod = "mod_hero_dragon_arb_ultimate_paragons_polymorph"
@@ -16895,7 +16884,6 @@ tt.modifier.duration = E:get_template("mod_hero_builder_demolition_man_hit_fx").
 
 tt = RT("controller_hero_builder_ultimate")
 AC(tt, "pos", "main_script", "sound_events")
-tt.can_fire_fn = scripts.hero_builder_ultimate.can_fire_fn
 tt.cooldown = nil
 tt.entity = "decal_hero_builder_ultimate_projectile"
 tt.main_script.update = scripts.hero_builder_ultimate.update
@@ -17304,7 +17292,6 @@ tt.main_script.update = scripts.mod_dps.update
 
 tt = RT("controller_hero_robot_ultimate")
 AC(tt, "pos", "main_script", "sound_events")
-tt.can_fire_fn = scripts.hero_robot_ultimate.can_fire_fn
 tt.cooldown = nil
 tt.offset_back = -5
 tt.entity = "aura_hero_robot_ultimate_train"
@@ -17608,7 +17595,6 @@ tt.ultimate = {
 tt = RT("hero_bird_ultimate")
 b = balance.heroes.hero_bird.ultimate
 AC(tt, "pos", "main_script", "sound_events")
-tt.can_fire_fn = scripts.hero_bird_ultimate.can_fire_fn
 tt.main_script.update = scripts.hero_bird_ultimate.update
 tt.child = "hero_bird_ultimate_child"
 tt.sound_cast = "HeroBirdBirdsOfPreyCast"
@@ -18026,7 +18012,6 @@ tt.sound_death_ulti = "HeroKratoaRageOutburstDeath"
 tt = RT("hero_lava_ultimate")
 AC(tt, "pos", "main_script", "sound_events")
 b = balance.heroes.hero_lava.ultimate
-tt.can_fire_fn = scripts.hero_lava_ultimate.can_fire_fn
 tt.cooldown = nil
 tt.fireball_count = nil
 tt.max_spread = b.max_spread
@@ -18417,7 +18402,6 @@ tt.modifier.duration = balance.heroes.hero_spider.tunneling.stun_duration
 tt = RT("controller_hero_spider_ultimate")
 b = balance.heroes.hero_spider.ultimate
 AC(tt, "pos", "main_script", "sound_events")
-tt.can_fire_fn = scripts.controller_hero_spider_ultimate.can_fire_fn
 tt.main_script.update = scripts.controller_hero_spider_ultimate.update
 tt.range = b.range
 tt.spawn_delay = fts(0)
@@ -19022,7 +19006,6 @@ tt.render.sprites[1].name = "hero_onagro_ultimate_projectile"
 
 tt = RT("controller_hero_mecha_ultimate")
 AC(tt, "pos", "main_script", "sound_events")
-tt.can_fire_fn = scripts.hero_mecha_ultimate.can_fire_fn
 tt.cooldown = nil
 tt.entity = "zeppelin_hero_mecha"
 tt.main_script.update = scripts.hero_mecha_ultimate.update
@@ -19973,3 +19956,1104 @@ tt.particle_system.scales_y = {1, 1.25}
 tt.particle_system.emission_rate = 20
 tt.particle_system.emit_rotation_spread = math.pi
 tt.particle_system.alphas = {255, 0}
+
+-- ======== 阿斯拉 ========
+tt = RT("hero_asra", "hero")
+AC(tt, "melee", "ranged", "timed_attacks", "teleport")
+tt.hero.level_stats.armor = {0.06, 0.07, 0.08, 0.09, 0.10, 0.11, 0.12, 0.13, 0.14, 0.15}
+tt.hero.level_stats.hp_max = {120, 144, 168, 192, 216, 240, 264, 288, 312, 336}
+tt.hero.level_stats.melee_damage_max = {9, 11, 13, 16, 18, 20, 23, 25, 27, 29}
+tt.hero.level_stats.melee_damage_min = {6, 8, 9, 11, 12, 13, 14, 17, 18, 19}
+tt.hero.level_stats.ranged_damage_max = {14, 16, 18, 20, 23, 26, 28, 32, 34, 36}
+tt.hero.level_stats.ranged_damage_min = {9, 10, 11, 13, 16, 17, 19, 20, 23, 24}
+tt.hero.skills.spider_bite = CC("hero_skill")
+tt.hero.skills.spider_bite.xp_level_steps = {
+	[3] = 1,
+	[6] = 2,
+	[9] = 3
+}
+tt.hero.skills.spider_bite.xp_gain = {300, 600, 900}
+tt.hero.skills.spider_bite.cooldown = {45, 45, 45}
+tt.hero.skills.spider_bite.damage_config = {7, 15, 35}
+tt.hero.skills.onix_arrows = CC("hero_skill")
+tt.hero.skills.onix_arrows.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.onix_arrows.xp_gain = {90, 180, 270}
+tt.hero.skills.onix_arrows.loops = {3, 4, 5}
+tt.hero.skills.onix_arrows.damage_min = {20, 28, 36}
+tt.hero.skills.onix_arrows.damage_max = {30, 42, 54}
+tt.hero.skills.quiver_of_sorrow = CC("hero_skill")
+tt.hero.skills.quiver_of_sorrow.xp_level_steps = {
+	[4] = 1,
+	[7] = 2,
+	[10] = 3
+}
+tt.hero.skills.quiver_of_sorrow.xp_gain = {80, 160, 240}
+tt.hero.skills.quiver_of_sorrow.damage_armor = {0.01, 0.02, 0.03}
+tt.hero.skills.shield_of_shadows = CC("hero_skill")
+tt.hero.skills.shield_of_shadows.xp_level_steps = {
+	[4] = 1,
+	[7] = 2,
+	[10] = 3
+}
+tt.hero.skills.shield_of_shadows.xp_gain = {120, 240, 360}
+tt.hero.skills.shield_of_shadows.shield_max_damage = {120, 400, 600}
+tt.hero.skills.ultimate = CC("hero_skill")
+tt.hero.skills.ultimate.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
+}
+tt.hero.skills.ultimate.xp_gain = {200, 400, 600, 800}
+tt.hero.skills.ultimate.controller_name = "hero_asra_ultimate"
+tt.hero.skills.ultimate.cooldown = {40, 40, 40, 40}
+tt.hero.skills.ultimate.damage_config = {10, 15, 30, 50}
+tt.health.dead_lifetime = 15
+tt.regen.cooldown = 1
+tt.health_bar.offset = v(0, 36)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.hero.fn_level_up = scripts.hero_asra.level_up
+tt.hero.tombstone_show_time = fts(90)
+tt.info.fn = scripts.hero_basic.get_info
+tt.info.hero_portrait = "kr4_hero_portraits_0002"
+tt.info.portrait = "kr4_info_portraits_heroes_0002"
+tt.main_script.update = scripts.hero_asra.update
+tt.motion.max_speed = FPS * 2.5
+tt.soldier.melee_slot_offset = v(5, 0)
+tt.sound_events.change_rally_point = "group_asra_taunt"
+tt.sound_events.death = "hero_asra_death"
+tt.sound_events.hero_room_select = "hero_asra_taunt_1"
+tt.sound_events.insert = "hero_asra_taunt_1"
+tt.sound_events.respawn = "HeroPaladinTauntIntro"
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 20)
+tt.teleport.min_distance = 150
+tt.teleport.delay = 0
+tt.teleport.sound = "hero_asra_teleport"
+tt.teleport.animations = {"teleportOut", "teleportIn"}
+tt.render.sprites[1].anchor.y = 0.12
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].scale = v(1.2, 1.2)
+tt.render.sprites[1].prefix = "hero_asra"
+tt.render.sprites[1].angles.walk = {"walk"}
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].is_shadow = true
+tt.render.sprites[2].name = "hero_asra_shadow"
+tt.render.sprites[2].anchor.y = 0.12
+tt.render.sprites[2].z = Z_DECALS + 1
+tt.melee.range = 60
+tt.melee.attacks[1] = CC("melee_attack")
+tt.melee.attacks[1].cooldown = 0.8
+tt.melee.attacks[1].damage_max = 10
+tt.melee.attacks[1].damage_min = 5
+tt.melee.attacks[1].animation = "melee"
+tt.melee.attacks[1].hit_time = fts(9)
+tt.melee.attacks[1].sound = "MeleeSword"
+tt.melee.attacks[1].vis_bans = bor(F_FLYING, F_CLIFF)
+tt.melee.attacks[1].vis_flags = F_BLOCK
+tt.melee.attacks[1].xp_gain_factor = 2.2
+tt.melee.attacks[2] = CC("melee_attack")
+tt.melee.attacks[2].cooldown = 45
+tt.melee.attacks[2].disabled = true
+tt.melee.attacks[2].sound = "hero_asra_spiderbite"
+tt.melee.attacks[2].damage_max = 1
+tt.melee.attacks[2].damage_min = 1
+tt.melee.attacks[2].animation = "meleePoison"
+tt.melee.attacks[2].hit_time = fts(9)
+tt.melee.attacks[2].mod = "mod_asra_poison"
+tt.melee.attacks[2].vis_bans = bor(F_FLYING, F_CLIFF)
+tt.melee.attacks[2].vis_flags = F_BLOCK
+tt.melee.attacks[2].xp_gain = 300
+tt.ranged.attacks[1] = CC("bullet_attack")
+tt.ranged.attacks[1].cooldown = 1
+tt.ranged.attacks[1].min_range = 25
+tt.ranged.attacks[1].max_range = 200
+tt.ranged.attacks[1].xp_gain_factor = 2.2
+tt.ranged.attacks[1].animation = "shoot"
+tt.ranged.attacks[1].bullet = "bullet_asra"
+tt.ranged.attacks[1].shoot_time = fts(11)
+tt.ranged.attacks[1].bullet_start_offset = {v(-8, 24)}
+tt.ranged.attacks[2] = CC("bullet_attack")
+tt.ranged.attacks[2].cooldown = 18
+tt.ranged.attacks[2].min_range = 25
+tt.ranged.attacks[2].max_range = 200
+tt.ranged.attacks[2].bullet = "bullet_onix_asra"
+tt.ranged.attacks[2].max_loops = 3
+tt.ranged.attacks[2].xp_gain = 90
+tt.ranged.attacks[2].disabled = true
+tt.ranged.attacks[2].shoot_times = {fts(5)}
+tt.ranged.attacks[2].bullet_start_offset = {v(-8, 24)}
+tt.ranged.attacks[2].animations = {"multishotIn", "multishotLoop", "multishotOut"}
+tt.timed_attacks.list[1] = CC("mod_attack")
+tt.timed_attacks.list[1].animation = "special"
+tt.timed_attacks.list[1].cooldown = 22
+tt.timed_attacks.list[1].max_range_trigger = 72
+tt.timed_attacks.list[1].max_range_effect = 140
+tt.timed_attacks.list[1].min_targets = 1
+tt.timed_attacks.list[1].max_targets = 3
+tt.timed_attacks.list[1].mod = "hero_asra_unbreakable_mod"
+tt.timed_attacks.list[1].disabled = true
+tt.timed_attacks.list[1].cast_time = fts(6)
+tt.timed_attacks.list[1].xp_from_skill = "shield_of_shadows"
+tt.timed_attacks.list[1].sound = "hero_asra_shield"
+tt.timed_attacks.list[1].vis_bans = bor(F_FLYING)
+tt.ultimate = {
+	ts = 0,
+	cooldown = 40,
+	disabled = true
+}
+
+tt = RT("bullet_asra", "arrow")
+tt.bullet.xp_gain_factor = 2.2
+tt.bullet.flight_time = fts(15)
+tt.bullet.hit_fx = "fx_arrow_asra_hit"
+tt.bullet.mod = "mod_arrow_asra"
+tt.bullet.damage_type = DAMAGE_PHYSICAL
+tt.bullet.damage_max = 0
+tt.bullet.damage_min = 0
+tt.render.sprites[1].name = "hero_asra_projectile"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].flip_x = true
+
+tt = RT("bullet_onix_asra", "arrow")
+tt.bullet.xp_gain_factor = 2.2
+tt.bullet.flight_time = fts(15)
+tt.bullet.hit_fx = "fx_arrow_asra_hit"
+tt.bullet.mod = "mod_arrow_asra"
+tt.bullet.damage_type = DAMAGE_PHYSICAL
+tt.bullet.damage_max = 0
+tt.bullet.damage_min = 0
+tt.render.sprites[1].name = "hero_asra_multishot_arrow"
+tt.render.sprites[1].animated = false
+
+tt = RT("fx_arrow_asra_hit", "fx")
+tt.render.sprites[1].name = "hero_asra_multishot_arrow_hit_run"
+
+tt = RT("mod_arrow_asra", "modifier")
+AC(tt, "main_script")
+tt.main_script.insert = scripts.mod_track_target.insert
+tt.main_script.remove = scripts.mod_track_target.remove
+tt.main_script.update = scripts.mod_track_target.update
+tt.modifier.duration = 3
+tt.modifier.damage_type = DAMAGE_ARMOR
+
+tt = RT("mod_asra_poison", "mod_poison")
+tt.modifier.duration = 99999
+tt.dps.damage_max = 7
+tt.dps.damage_min = 7
+tt.dps.damage_every = 0.5
+tt.dps.kill = true
+tt.dps.damage_type = bor(DAMAGE_POISON, DAMAGE_NO_SHIELD_HIT)
+
+tt = RT("hero_asra_ultimate")
+AC(tt, "pos", "main_script", "sound_events")
+tt.cooldown = nil
+tt.bullet = "arrow_hero_asra_ultimate"
+tt.sound = "hero_asra_ultimate_poison"
+tt.spread = {6, 6, 6, 6}
+tt.main_script.update = scripts.hero_asra_ultimate.update
+
+tt = RT("arrow_hero_asra_ultimate", "bullet")
+tt.main_script.update = scripts.arrow_hero_asra_ultimate.update
+tt.bullet.damage_radius = 45
+tt.bullet.damage_flags = F_AREA
+tt.bullet.damage_bans = F_FRIEND
+tt.bullet.damage_type = DAMAGE_TRUE
+tt.bullet.arrive_decal = "decal_hero_asra_ultimate"
+tt.bullet.max_speed = 1500
+tt.bullet.mod = "mod_hero_asra_ultimate_poison"
+tt.render.sprites[1].name = "hero_asra_special_arrow"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].scale = v(-1, 1)
+tt.render.sprites[1].anchor.x = 0.9629629629629629
+tt.sound_events.insert = "ArrowSound"
+
+tt = RT("mod_hero_asra_ultimate_poison", "mod_poison")
+tt.modifier.duration = 2.1
+tt.dps.damage_max = 7
+tt.dps.damage_min = 7
+tt.dps.damage_every = 0.5
+tt.dps.kill = true
+tt.dps.damage_type = bor(DAMAGE_POISON, DAMAGE_NO_SHIELD_HIT)
+
+tt = RT("decal_hero_asra_ultimate", "decal_tween")
+AC(tt, "main_script")
+tt.main_script.insert = scripts.decal_hero_asra_ultimate.insert
+tt.tween.props[1].keys = {{0, 255}, {1, 255}, {4, 0}}
+tt.tween.props[2] = CC("tween_prop")
+tt.tween.props[2].keys = {{0, 255}, {1, 255}, {4, 0}}
+tt.tween.props[2].sprite_id = 2
+tt.render.sprites[1].name = "hero_asra_special_poison_explosion_run"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].name = "fx_hero_elves_archer_ultimate_smoke"
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].loop = false
+tt.render.sprites[2].z = Z_OBJECTS
+
+tt = RT("hero_asra_unbreakable_mod", "modifier")
+AC(tt, "render", "health_bar", "health")
+tt.modifier.vis_flags = bor(F_MOD)
+tt.modifier.duration = 5
+tt.modifier.use_mod_offset = false
+tt.shield_max_damage = 120
+tt.damage_taken = 0
+tt.main_script.insert = scripts.hero_asra_unbreakable_mod.insert
+tt.main_script.remove = scripts.hero_asra_unbreakable_mod.remove
+tt.main_script.update = scripts.hero_asra_unbreakable_mod.update
+tt.health_bar.offset = v(0, 42)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.health_bar.colors = {}
+tt.health_bar.colors.fg = {255, 255, 0, 255}
+tt.health_bar.colors.bg = {0, 0, 0, 255}
+tt.health_bar.sort_y_offset = -2
+tt.health_bar.disable_fade = true
+tt.sprites_per_enemies = {"hero_asra_shield", "hero_asra_shield", "hero_asra_shield"}
+tt.animation_start = "start"
+tt.animation_loop = "idle"
+tt.animation_end = "end"
+tt.render.sprites[1].prefix = nil
+tt.render.sprites[1].offset = v(0, 20)
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].loop = true
+
+-- ======== 贝雷萨德 ========
+tt = RT("hero_beresad", "hero")
+AC(tt, "ranged", "timed_attacks", "auras")
+tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+tt.hero.level_stats.hp_max = {450, 480, 510, 540, 570, 600, 630, 660, 690, 720}
+tt.hero.level_stats.ranged_damage_min = {16, 19, 22, 26, 29, 33, 37, 40, 44, 46}
+tt.hero.level_stats.ranged_damage_max = {27, 34, 40, 47, 54, 61, 67, 76, 81, 87}
+tt.hero.skills.conflagration = CC("hero_skill")
+tt.hero.skills.conflagration.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.conflagration.xp_gain = {80, 160, 240}
+tt.hero.skills.conflagration.cooldown = {18, 16, 14}
+tt.hero.skills.fear_dragon = CC("hero_skill")
+tt.hero.skills.fear_dragon.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3
+}
+tt.hero.skills.fear_dragon.xp_gain = {30, 60, 90}
+tt.hero.skills.dragon_spawn = CC("hero_skill")
+tt.hero.skills.dragon_spawn.xp_level_steps = {
+	[3] = 1,
+	[6] = 2,
+	[9] = 3
+}
+tt.hero.skills.dragon_spawn.xp_gain = {80, 160, 240}
+tt.hero.skills.remove_existence = CC("hero_skill")
+tt.hero.skills.remove_existence.xp_level_steps = {
+	[4] = 1,
+	[7] = 2,
+	[10] = 3
+}
+tt.hero.skills.remove_existence.xp_gain = {210, 420, 630}
+tt.hero.skills.ultimate = CC("hero_skill")
+tt.hero.skills.ultimate.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
+}
+tt.hero.skills.ultimate.xp_gain = {200, 400, 600, 800}
+tt.hero.skills.ultimate.controller_name = "controller_beresad_ultimate"
+tt.hero.skills.ultimate.cooldown = {45, 40, 35, 30}
+tt.hero.skills.ultimate.duration = {4, 5, 6, 7}
+tt.health.dead_lifetime = 15
+tt.regen.cooldown = 1
+tt.health_bar.offset = v(0, 145)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM_LARGE
+tt.hero.fn_level_up = scripts.hero_beresad.level_up
+tt.hero.tombstone_show_time = nil
+tt.info.fn = scripts.hero_basic.get_info
+tt.info.hero_portrait = "kr4_hero_portraits_0008"
+tt.info.portrait = "kr4_info_portraits_heroes_0008"
+tt.main_script.insert = scripts.hero_basic.insert
+tt.main_script.update = scripts.hero_beresad.update
+tt.motion.max_speed = 3 * FPS
+tt.nav_rally.requires_node_nearby = false
+tt.nav_grid.ignore_waypoints = true
+tt.nav_grid.valid_terrains = TERRAIN_ALL_MASK
+tt.nav_grid.valid_terrains_dest = TERRAIN_ALL_MASK
+tt.regen.cooldown = 1
+tt.render.sprites[1].anchor.y = 0.04
+tt.render.sprites[1].prefix = "hero_beresad"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].angles.walk = {"idle"}
+tt.render.sprites[1].z = Z_FLYING_HEROES
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "hero_beresad_shadow"
+tt.render.sprites[2].z = Z_DECALS + 1
+tt.sound_events.change_rally_point = "group_beresad_taunt"
+tt.sound_events.death = "hero_beresad_death"
+tt.sound_events.hero_room_select = "hero_beresad_taunt_1"
+tt.sound_events.insert = "hero_beresad_taunt_1"
+tt.sound_events.respawn = "group_beresad_taunt"
+tt.vis.bans = bor(tt.vis.bans, F_BURN)
+tt.vis.flags = bor(tt.vis.flags, F_FLYING)
+tt.ranged.attacks[1] = CC("bullet_attack")
+tt.ranged.attacks[1].bullet = "bolt_beresad"
+tt.ranged.attacks[1].bullet_start_offset = {v(45, 85)}
+tt.ranged.attacks[1].cooldown = 2.2
+tt.ranged.attacks[1].min_range = 0
+tt.ranged.attacks[1].max_range = 220
+tt.ranged.attacks[1].shoot_time = fts(10)
+tt.ranged.attacks[1].animation = "attack"
+tt.ranged.attacks[1].sound = "hero_beresad_attack_shot"
+tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
+tt.ranged.attacks[1].vis_flags = bor(F_RANGED)
+tt.ranged.attacks[2] = CC("bullet_attack")
+tt.ranged.attacks[2].disabled = true
+tt.ranged.attacks[2].bullet = "controller_aura_beresad_firestorm"
+tt.ranged.attacks[2].bullet_start_offset = {v(45, 85)}
+tt.ranged.attacks[2].cooldown = 28
+tt.ranged.attacks[2].min_range = 0
+tt.ranged.attacks[2].max_range = 220
+tt.ranged.attacks[2].shoot_time = fts(13)
+tt.ranged.attacks[2].animation = "conflagration"
+tt.ranged.attacks[2].sound = "HeroDragonFlame"
+tt.ranged.attacks[2].xp_from_skill = "conflagration"
+tt.ranged.attacks[2].vis_bans = F_FLYING
+tt.ranged.attacks[3] = CC("bullet_attack")
+tt.ranged.attacks[3].disabled = true
+tt.ranged.attacks[3].bullet = "ray_beresad_disintegrate"
+tt.ranged.attacks[3].bullet_start_offset = {v(45, 85)}
+tt.ranged.attacks[3].cooldown = 70
+tt.ranged.attacks[3].min_range = 0
+tt.ranged.attacks[3].max_range = 220
+tt.ranged.attacks[3].shoot_time = fts(23)
+tt.ranged.attacks[3].animation = "remove"
+tt.ranged.attacks[3].xp_from_skill = "remove_existence"
+tt.ranged.attacks[3].sound = "hero_beresad_remove"
+tt.ranged.attacks[3].vis_bans = bor(F_FRIEND, F_BOSS, F_MINIBOSS)
+tt.timed_attacks.list[1] = CC("mod_attack")
+tt.timed_attacks.list[1].disabled = true
+tt.timed_attacks.list[1].mod = "hero_beresad_modifier_fear"
+tt.timed_attacks.list[1].min_range = 0
+tt.timed_attacks.list[1].max_range = 220
+tt.timed_attacks.list[1].cooldown = 22
+tt.timed_attacks.list[1].cast_time = fts(15)
+tt.timed_attacks.list[1].animation = "fear"
+tt.timed_attacks.list[1].sound = "hero_beresad_fear"
+tt.timed_attacks.list[1].vis_flags = bor(F_RANGED)
+tt.timed_attacks.list[1].vis_bans = bor(F_FRIEND, F_NIGHTMARE, F_FLYING, F_CLIFF, F_WATER)
+tt.timed_attacks.list[1].xp_from_skill = "fear_dragon"
+tt.timed_attacks.list[2] = CC("aura_attack")
+tt.timed_attacks.list[2].disabled = true
+tt.timed_attacks.list[2].bullet = "aura_beresad_fireball"
+tt.timed_attacks.list[2].min_range = 0
+tt.timed_attacks.list[2].max_range = 220
+tt.timed_attacks.list[2].cooldown = 45
+tt.timed_attacks.list[2].cast_time = fts(15)
+tt.timed_attacks.list[2].animation = "earthshake"
+tt.timed_attacks.list[2].sound = "HeroDracolichAttack"
+tt.timed_attacks.list[2].vis_flags = bor(F_RANGED)
+tt.timed_attacks.list[2].vis_bans = bor(F_FRIEND, F_NIGHTMARE, F_FLYING, F_CLIFF, F_WATER)
+tt.timed_attacks.list[2].xp_from_skill = "dragon_spawn"
+tt.ultimate = {
+	ts = 0,
+	cooldown = 45,
+	disabled = true
+}
+
+tt = RT("bolt_beresad", "bullet")
+AC(tt, "force_motion")
+tt.render.sprites[1].name = "hero_beresad_attack_proyectile_travel"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_BULLETS
+tt.render.sprites[1].anchor.x = 0.69
+tt.bullet.damage_type = DAMAGE_PHYSICAL
+tt.bullet.min_speed = 390
+tt.bullet.max_speed = 390
+tt.bullet.damage_radius = 33
+tt.bullet.xp_gain_factor = 0.8
+tt.bullet.hit_fx = "hero_beresad_attack_explosion"
+tt.bullet.hit_fx_air = "hero_beresad_attack_explosion_air"
+tt.bullet.particles_name = "hero_beresad_attack_particle"
+tt.bullet.vis_flags = F_RANGED
+-- tt.main_script.update = scripts.fireball_beresad.update
+tt.main_script.update = scripts.fireball_dragon.update
+tt.sound_events.hit = "hero_beresad_attack_impact"
+
+tt = RT("hero_beresad_attack_particle")
+AC(tt, "pos", "particle_system")
+tt.particle_system.name = "hero_beresad_attack_proyectile_particle_run"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.alphas = {255, 0}
+tt.particle_system.particle_lifetime = {fts(12), fts(12)}
+tt.particle_system.scales_x = {1, 1.25}
+tt.particle_system.scales_y = {1, 1.25}
+tt.particle_system.emission_rate = 30
+
+tt = RT("hero_beresad_attack_explosion", "fx")
+tt.render.sprites[1].name = "hero_beresad_attack_explosion_run"
+tt.render.sprites[1].anchor.y = 0.13
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -2
+
+tt = RT("hero_beresad_attack_explosion_air", "fx")
+tt.render.sprites[1].name = "hero_beresad_attack_explosion_air_run"
+tt.render.sprites[1].anchor.y = 0.13
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -2
+
+tt = RT("controller_aura_beresad_firestorm", "bullet")
+tt.render = nil
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.bullet.damage_radius = 65
+tt.bullet.hit_payload = {"aura_beresad_firestorm"}
+tt.bullet.flight_time = fts(12)
+tt.bullet.ignore_hit_offset = true
+tt.delay_betweeen_flames = fts(2)
+tt.flame_bullet = "beresad_breath_flame"
+tt.flames_count = 12
+tt.main_script.insert = scripts.flame.insert
+tt.main_script.update = scripts.flame.update
+
+tt = RT("beresad_breath_flame")
+AC(tt, "pos", "render")
+tt.render.sprites[1].name = "hero_beresad_conflagration_particle_travel"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_BULLETS
+tt.render.sprites[1].fps = 15
+
+tt = RT("hero_beresad_conflagration_particle")
+AC(tt, "pos", "particle_system")
+tt.particle_system.name = "hero_beresad_conflagration_particle_travel"
+tt.particle_system.animated = true
+tt.particle_system.emission_rate = 30
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.source_lifetime = fts(20)
+
+tt = RT("aura_beresad_firestorm", "aura")
+AC(tt, "render", "tween", "sound_events")
+tt.sound_events.insert = "hero_beresad_flameloop"
+tt.aura.cycle_time = 0.2
+tt.aura.duration = 5
+tt.aura.mod = "mod_beresad_firestorm"
+tt.aura.radius = 50
+tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
+tt.aura.vis_flags = bor(F_MOD)
+tt.aura.use_mod_offset = false
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.render.sprites[1].name = "hero_beresad_conflagration_fire_idle"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_DECALS
+tt.tween.remove = false
+tt.tween.props[1].keys = {{0, 255}, {"this.aura.duration-1", 255}, {"this.aura.duration", 0}}
+
+tt = RT("mod_beresad_firestorm", "modifier")
+AC(tt, "dps", "render")
+tt.dps.damage_min = 2
+tt.dps.damage_type = DAMAGE_TRUE
+tt.dps.damage_every = 0.2
+tt.dps.kill = true
+tt.modifier.allows_duplicates = true
+tt.modifier.duration = 0.2
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+tt.render.sprites[1].name = "hero_beresad_conflagration_modifier_run"
+tt.render.sprites[1].draw_order = 10
+
+tt = RT("hero_beresad_modifier_fear", "modifier")
+AC(tt, "render")
+tt.modifier.duration = 3
+tt.main_script.update = scripts.mod_track_target_with_fade.update
+tt.render.sprites[1].name = "hero_beresad_modifier_fear_run"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].draw_order = DO_MOD_FX
+
+tt = RT("aura_beresad_fireball", "aura")
+tt.main_script.update = scripts.aura_10yr_fireball.update
+tt.aura.entity = "bullet_golem_stone_beresad_lvl1"
+tt.aura.delay = fts(15)
+tt.aura.loops = 1
+tt.aura.min_range = 0
+tt.aura.max_range = 220
+tt.aura.vis_flags = bor(F_RANGED)
+tt.aura.vis_bans = bor(F_FRIEND, F_NIGHTMARE, F_FLYING, F_CLIFF, F_WATER)
+
+tt = RT("bullet_golem_stone_beresad_lvl1", "bullet")
+tt.bullet.min_speed = 24 * FPS
+tt.bullet.max_speed = 24 * FPS
+tt.bullet.acceleration_factor = 0.05
+tt.bullet.hit_fx = "hero_beresad_golemspawn_hit"
+tt.bullet.hit_decal = "hero_beresad_golemspawn_explosion"
+tt.bullet.hit_payload = "hero_beresad_golem_lvl1"
+tt.bullet.particles_name = "hero_beresad_golemspawn_particle"
+tt.bullet.damage_type = DAMAGE_TRUE
+tt.bullet.damage_flags = F_AREA
+tt.render.sprites[1].name = "hero_beresad_golemspawn_proyectile"
+tt.render.sprites[1].animated = false
+tt.main_script.update = scripts.power_beresad_fireball.update
+tt.sound_events.insert = "FireballRelease"
+tt.sound_events.hit = "FireballHit"
+
+tt = RT("bullet_golem_stone_beresad_lvl2", "bullet_golem_stone_beresad_lvl1")
+tt.bullet.hit_payload = "hero_beresad_golem_lvl2"
+
+tt = RT("bullet_golem_stone_beresad_lvl3", "bullet_golem_stone_beresad_lvl1")
+tt.bullet.hit_payload = "hero_beresad_golem_lvl3"
+
+tt = RT("hero_beresad_golem_lvl1", "soldier")
+AC(tt, "melee", "nav_grid")
+tt.main_script.update = scripts.soldier_golem_beresad.update
+tt.health_bar.offset = v(0, 50)
+tt.health.armor = 0
+tt.health.hp_max = 400
+tt.health.dead_lifetime = nil
+tt.regen.health = 0
+tt.regen.cooldown = 2
+tt.info.portrait = "kr4_info_portraits_soldiers_0012"
+tt.melee.attacks[1].cooldown = 1.5
+tt.render.sprites[1].prefix = "hero_beresad_golem"
+tt.render.sprites[1].name = "idle"
+tt.patrol_pos_offset = v(15, 10)
+tt.patrol_min_cd = 3
+tt.patrol_max_cd = 6
+
+tt = RT("hero_beresad_golem_lvl2", "hero_beresad_golem_lvl1")
+tt.health.hp_max = 600
+
+tt = RT("hero_beresad_golem_lvl3", "hero_beresad_golem_lvl1")
+tt.health.hp_max = 800
+
+tt = RT("hero_beresad_golemspawn_hit", "fx")
+tt.render.sprites[1].name = "hero_beresad_golemspawn_hit_run"
+tt.render.sprites[1].anchor.y = 0.15
+tt.render.sprites[1].z = Z_OBJECTS
+
+tt = RT("hero_beresad_golemspawn_explosion", "decal_tween")
+tt.render.sprites[1].name = "hero_beresad_golemspawn_explosion_run"
+tt.render.sprites[1].loop = false
+tt.tween.props[1].keys = {{fts(17), 255}, {fts(27), 0}}
+
+tt = RT("hero_beresad_golemspawn_particle")
+AC(tt, "pos", "particle_system")
+tt.particle_system.name = "hero_beresad_golemspawn_particle_run"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.alphas = {255, 0}
+tt.particle_system.particle_lifetime = {fts(12), fts(12)}
+tt.particle_system.scales_x = {1, 1.25}
+tt.particle_system.scales_y = {1, 1.25}
+tt.particle_system.emission_rate = 30
+
+tt = RT("ray_beresad_disintegrate", "bullet")
+tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.hit_time = 0
+tt.main_script.update = scripts.ray_simple.update
+tt.sound_events.insert = "ArcaneRaySound"
+tt.track_target = true
+tt.ray_duration = fts(10)
+tt.bullet.mod = "mod_ray_beresad_disintegrate"
+tt.image_width = 100
+tt.render.sprites[1].anchor = vec_2(0, 0.5)
+tt.render.sprites[1].name = "hero_beresad_remove_ray_run"
+tt.render.sprites[1].loop = false
+tt.sound_events.insert = "hero_beresad_remove"
+
+tt = RT("mod_ray_beresad_disintegrate", "modifier")
+AC(tt, "render")
+tt.main_script.update = scripts.mod_ray_arcane_disintegrate.update
+tt.modifier.pop = {"pop_zap_arcane"}
+tt.modifier.pop_conds = DR_KILL
+tt.modifier.damage_type = bor(DAMAGE_DISINTEGRATE, DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS)
+tt.render.sprites[1].name = "hero_beresad_remove_explosion_run"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_BULLETS
+tt.modifier.damage = 1
+tt.modifier.duration = fts(10)
+
+tt = RT("controller_beresad_ultimate")
+AC(tt, "pos", "main_script", "sound_events")
+tt.cooldown = nil
+tt.duration = 4.2
+tt.main_script.update = scripts.controller_beresad_ultimate.update
+tt.sound_events.insert = "hero_beresad_ultimate"
+tt.mod = "mod_beresad_ultimate"
+tt.mod_cooldown = 0.2
+tt.nodes_spread = 10
+tt.rain = {}
+tt.rain.alpha_max = 255
+tt.rain.alpha_min = 150
+tt.rain.angle_between = 2 * math.pi / 180
+tt.rain.angle_max = -60 * math.pi / 180
+tt.rain.angle_min = -80 * math.pi / 180
+tt.rain.cooldown = 0.1
+tt.rain.count = 50
+tt.rain.delay_max = 0.2
+tt.rain.disabled = true
+tt.rain.distance_max = 550
+tt.rain.distance_min = 450
+tt.rain.duration = 0.2
+tt.rain.ts = 0
+tt.rain.drop = "fx_power_beresad_drop"
+tt.rain.splash = "fx_power_beresad_rain_splash"
+
+tt = RT("fx_power_beresad_drop", "fx")
+AC(tt, "tween")
+tt.render.sprites[1].name = "asset_particle_"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_OBJECTS_SKY
+
+tt = RT("fx_power_beresad_rain_splash", "fx")
+tt.render.sprites[1].name = "hero_beresad_ultimate_hit_run"
+
+tt = RT("mod_beresad_ultimate", "modifier")
+AC(tt, "dps", "render")
+tt.dps.damage_type = DAMAGE_TRUE
+tt.dps.damage_every = 0.2
+tt.dps.kill = true
+tt.modifier.allows_duplicates = true
+tt.modifier.duration = 3.99
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+tt.render.sprites[1].name = "hero_beresad_ultimate_modifier_run"
+tt.render.sprites[1].draw_order = 10
+
+-- ======== 电云 ========
+tt = RT("hero_dianyun", "hero")
+AC(tt, "ranged", "timed_attacks", "auras")
+tt.hero.level_stats.hp_max = {385, 406, 428, 449, 470, 492, 514, 535, 557, 578}
+tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+tt.hero.level_stats.ranged_damage_min = {2, 4, 6, 9, 11, 13, 16, 18, 19, 21}
+tt.hero.level_stats.ranged_damage_max = {6, 11, 16, 20, 25, 31, 35, 40, 44, 49}
+tt.hero.skills.ricochet = CC("hero_skill")
+tt.hero.skills.ricochet.cooldown = 18
+tt.hero.skills.ricochet.damage_min = {34, 46, 57}
+tt.hero.skills.ricochet.damage_max = {34, 46, 57}
+tt.hero.skills.ricochet.bounce = {3, 5, 7}
+tt.hero.skills.ricochet.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.ricochet.xp_gain = {100, 200, 300}
+tt.hero.skills.lord_storm = CC("hero_skill")
+tt.hero.skills.lord_storm.max_targets = {2, 3, 4}
+tt.hero.skills.lord_storm.xp_level_steps = {
+	[3] = 1,
+	[6] = 2,
+	[9] = 3
+}
+tt.hero.skills.lord_storm.xp_gain = {80, 160, 240}
+tt.hero.skills.divine_rain = CC("hero_skill")
+tt.hero.skills.divine_rain.cooldown = 15
+tt.hero.skills.divine_rain.duration = 5
+tt.hero.skills.divine_rain.healing_points_tick = {8, 16, 24}
+tt.hero.skills.divine_rain.xp_level_steps = {
+	[4] = 1,
+	[7] = 2,
+	[10] = 3
+}
+tt.hero.skills.divine_rain.xp_gain = {100, 200, 300}
+tt.hero.skills.supreme_wave = CC("hero_skill")
+tt.hero.skills.supreme_wave.cooldown = 21
+tt.hero.skills.supreme_wave.stun_duration = {2, 3, 4}
+tt.hero.skills.supreme_wave.xp_level_steps = {
+	[3] = 1,
+	[6] = 2,
+	[9] = 3
+}
+tt.hero.skills.supreme_wave.xp_gain = {120, 240, 360}
+tt.hero.skills.ultimate = CC("hero_skill")
+tt.hero.skills.ultimate.controller_name = "hero_dianyun_ultimate"
+tt.hero.skills.ultimate.cooldown = {32, 32, 32, 32}
+tt.hero.skills.ultimate.bullets_to_death = {3, 5, 10, 15}
+tt.hero.skills.ultimate.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
+}
+tt.hero.skills.ultimate.xp_gain = {200, 400, 600, 800}
+tt.health.dead_lifetime = 15
+tt.regen.cooldown = 1
+tt.health_bar.offset = v(0, 130)
+tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
+tt.hero.fn_level_up = scripts.hero_dianyun.level_up
+tt.info.fn = scripts.hero_basic.get_info
+tt.info.hero_portrait = "kr4_hero_portraits_0013"
+tt.info.portrait = "kr4_info_portraits_heroes_0013"
+tt.main_script.insert = scripts.hero_basic.insert
+tt.main_script.update = scripts.hero_dianyun.update
+tt.motion.max_speed = 90
+tt.nav_rally.requires_node_nearby = false
+tt.nav_grid.ignore_waypoints = true
+tt.nav_grid.valid_terrains = TERRAIN_ALL_MASK
+tt.nav_grid.valid_terrains_dest = TERRAIN_ALL_MASK
+tt.regen.cooldown = 1
+tt.render.sprites[1].anchor.y = 0.04
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].prefix = "hero_dianyun"
+tt.render.sprites[1].angles.walk = {"idle"}
+tt.render.sprites[1].z = Z_FLYING_HEROES
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "hero_dianyun_shadow"
+tt.render.sprites[2].z = Z_DECALS + 1
+tt.render.sprites[3] = CC("sprite")
+tt.render.sprites[3].prefix = "hero_storm_dragon_cloud_l1"
+tt.render.sprites[3].offset = v(15, 50)
+tt.render.sprites[3].alpha = 204
+tt.render.sprites[3].z = Z_FLYING_HEROES + 1
+tt.render.sprites[4] = CC("sprite")
+tt.render.sprites[4].prefix = "hero_storm_dragon_cloud_l2"
+tt.render.sprites[4].offset = v(15, 50)
+tt.render.sprites[4].alpha = 204
+tt.render.sprites[4].z = Z_FLYING_HEROES + 1
+tt.render.sprites[5] = CC("sprite")
+tt.render.sprites[5].prefix = "hero_storm_dragon_cloud_l3"
+tt.render.sprites[5].offset = v(15, 50)
+tt.render.sprites[5].alpha = 204
+tt.render.sprites[5].z = Z_FLYING_HEROES + 1
+tt.render.sprites[6] = CC("sprite")
+tt.render.sprites[6].prefix = "hero_storm_dragon_cloud_l1"
+tt.render.sprites[6].scale = v(0.75, 0.75)
+tt.render.sprites[6].offset = v(-20, 60)
+tt.render.sprites[6].alpha = 204
+tt.render.sprites[6].z = Z_FLYING_HEROES
+tt.render.sprites[7] = CC("sprite")
+tt.render.sprites[7].prefix = "hero_storm_dragon_cloud_l1"
+tt.render.sprites[7].scale = v(0.666, 0.666)
+tt.render.sprites[7].offset = v(5, 70)
+tt.render.sprites[7].alpha = 204
+tt.render.sprites[7].z = Z_FLYING_HEROES + 1
+tt.render.sprites[8] = CC("sprite")
+tt.render.sprites[8].prefix = "hero_storm_dragon_cloud_l1"
+tt.render.sprites[8].scale = v(0.6, 0.6)
+tt.render.sprites[8].offset = v(-5, 83)
+tt.render.sprites[8].alpha = 204
+tt.render.sprites[8].z = Z_FLYING_HEROES
+tt.render.sprites[9] = CC("sprite")
+tt.render.sprites[9].prefix = "hero_storm_dragon_cloud_l1"
+tt.render.sprites[9].scale = v(0.666, 0.666)
+tt.render.sprites[9].offset = v(50, 60)
+tt.render.sprites[9].alpha = 204
+tt.render.sprites[9].z = Z_FLYING_HEROES - 2
+tt.render.sprites[10] = CC("sprite")
+tt.render.sprites[10].prefix = "hero_storm_dragon_cloud_l1"
+tt.render.sprites[10].scale = v(0.6, 0.6)
+tt.render.sprites[10].offset = v(57, 70)
+tt.render.sprites[10].alpha = 204
+tt.render.sprites[10].z = Z_FLYING_HEROES - 1
+tt.render.sprites[11] = CC("sprite")
+tt.render.sprites[11].prefix = "hero_storm_dragon_cloud_l1"
+tt.render.sprites[11].scale = v(0.75, 0.75)
+tt.render.sprites[11].offset = v(40, 80)
+tt.render.sprites[11].alpha = 204
+tt.render.sprites[11].z = Z_FLYING_HEROES - 2
+tt.render.sprites[12] = CC("sprite")
+tt.render.sprites[12].prefix = "hero_storm_dragon_cloud_l1"
+tt.render.sprites[12].scale = v(0.6, 0.6)
+tt.render.sprites[12].offset = v(-40, 75)
+tt.render.sprites[12].alpha = 204
+tt.render.sprites[12].z = Z_FLYING_HEROES
+tt.render.sprites[13] = CC("sprite")
+tt.render.sprites[13].prefix = "hero_storm_dragon_cloud_l1"
+tt.render.sprites[13].scale = v(0.6, 0.6)
+tt.render.sprites[13].offset = v(-40, 88)
+tt.render.sprites[13].alpha = 204
+tt.render.sprites[13].z = Z_FLYING_HEROES
+tt.render.sprites[14] = CC("sprite")
+tt.render.sprites[14].prefix = "hero_storm_dragon_cloud_l1"
+tt.render.sprites[14].scale = v(0.6, 0.6)
+tt.render.sprites[14].offset = v(-55, 88)
+tt.render.sprites[14].alpha = 204
+tt.render.sprites[14].z = Z_FLYING_HEROES + 1
+tt.sound_events.change_rally_point = "HeroDianyunTaunt"
+tt.sound_events.death = "HeroDianyunTauntDeath"
+tt.sound_events.respawn = "HeroLevelUp"
+tt.sound_events.hero_room_select = "HeroDianyunTauntSelect"
+tt.unit.mod_offset = v(0, 90)
+tt.unit.hit_offset = v(0, 85)
+tt.vis.flags = bor(tt.vis.flags, F_FLYING)
+tt.vis.bans = bor(tt.vis.bans, F_EAT, F_NET)
+tt.ranged.attacks[1] = CC("bullet_attack")
+tt.ranged.attacks[1].cooldown = 2
+tt.ranged.attacks[1].min_range = 0
+tt.ranged.attacks[1].max_range = 200
+tt.ranged.attacks[1].animation = "attack"
+tt.ranged.attacks[1].bullet = "hero_dianyun_lightning"
+tt.ranged.attacks[1].shoot_time = fts(14)
+tt.ranged.attacks[1].controller = "controller_lord_storm"
+tt.timed_attacks.list[1] = CC("spawn_attack")
+tt.timed_attacks.list[1].cooldown = 18
+tt.timed_attacks.list[1].disabled = true
+tt.timed_attacks.list[1].animation = "skill1"
+tt.timed_attacks.list[1].entity = "hero_dianyun_lightning_ricochet_cloud"
+tt.timed_attacks.list[1].spawn_time = fts(10)
+tt.timed_attacks.list[1].xp_from_skill = "ricochet"
+tt.timed_attacks.list[2] = CC("aura_attack")
+tt.timed_attacks.list[2].cooldown = 15
+tt.timed_attacks.list[2].disabled = true
+tt.timed_attacks.list[2].animation = "skill2"
+tt.timed_attacks.list[2].bullet = "aura_hero_dianyun_divine_rain"
+tt.timed_attacks.list[2].xp_from_skill = "divine_rain"
+tt.timed_attacks.list[3] = CC("spawn_attack")
+tt.timed_attacks.list[3].cooldown = 21
+tt.timed_attacks.list[3].disabled = true
+tt.timed_attacks.list[3].animation = "skill3"
+tt.timed_attacks.list[3].entity = "controller_decal_hero_dianyun_supreme_wave_spawner"
+tt.timed_attacks.list[3].spawn_time = fts(20)
+tt.timed_attacks.list[3].xp_from_skill = "supreme_wave"
+tt.auras.list[1] = CC("aura")
+tt.auras.list[1].cooldown = 0
+tt.auras.list[1].disabled = false
+tt.auras.list[1].aura = "aura_dianyun_passive"
+tt.controller_lord_storm = "controller_lord_storm"
+tt.ultimate = {
+	ts = 0,
+	cooldown = 32,
+	disabled = true
+}
+
+tt = RT("hero_dianyun_lightning", "bolt")
+tt.main_script.update = scripts.hero_dianyun_lightning.update
+tt.render.sprites[1].name = "hero_storm_dragon_lightning"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].anchor = v(0, 0.5)
+tt.render.sprites[1].r = -math.pi / 2
+tt.bullet.hit_time = fts(2)
+tt.bullet.hit_fx = "fx_hero_dianyun_lightning_hit"
+tt.bullet.mod = "mod_hero_dianyun_lightning"
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.sound_events.insert = "WarmongerMageAttack"
+
+tt = RT("fx_hero_dianyun_lightning_hit", "fx")
+tt.render.sprites[1].name = "hero_storm_dragon_lightning_hit"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+
+tt = RT("mod_hero_dianyun_lightning", "mod_stun")
+AC(tt, "tween")
+tt.modifier.vis_flags = bor(F_STUN, F_MOD)
+tt.modifier.vis_bans = bor(F_BOSS)
+tt.modifier.duration = fts(20)
+tt.render.sprites[1].prefix = "hero_storm_dragon_lightning_modifier"
+tt.render.sprites[1].anchor = v(0.5, 0.625)
+tt.render.sprites[1].size_names = nil
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{tt.modifier.duration - fts(8), 255}, {tt.modifier.duration, 0}}
+
+tt = RT("controller_lord_storm")
+AC(tt, "pos", "main_script")
+tt.bullet = "hero_dianyun_lightning"
+tt.spawn_pos_offset = v(0, 81)
+tt.delay_between_rays = 0.5
+tt.max_targets = 1
+tt.range = 200
+tt.main_script.update = scripts.controller_lord_storm.update
+
+tt = RT("hero_dianyun_lightning_ricochet_cloud", "bolt")
+tt.main_script.update = scripts.hero_dianyun_lightning_ricochet_cloud.update
+tt.render.sprites[1].name = "hero_storm_dragon_lightning_ricochet_cloud"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].anchor = v(0, 0.5)
+tt.render.sprites[1].r = -math.pi / 2
+tt.bullet.hit_time = fts(2)
+tt.bullet.hit_fx = "fx_hero_dianyun_lightning_ricochet_hit"
+tt.bullet.mod = "mod_hero_dianyun_storm_ray"
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.bounce_bullet = "hero_dianyun_lightning_ricochet"
+tt.bounce_range = 90
+tt.bounce_vis_flags = bor(F_RANGED)
+tt.bounce_vis_bans = bor(F_NIGHTMARE)
+tt.bounce_delay = fts(2)
+tt.sound_events.insert = "WarmongerMageAttack"
+
+tt = RT("fx_hero_dianyun_lightning_ricochet_hit", "fx")
+tt.render.sprites[1].name = "hero_storm_dragon_lightning_ricochet_hit"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+
+tt = RT("mod_hero_dianyun_storm_ray", "mod_hero_dianyun_lightning")
+tt.render.sprites[1].prefix = "hero_storm_ray_modifier"
+
+tt = RT("hero_dianyun_lightning_ricochet", "bolt")
+tt.main_script.update = scripts.hero_dianyun_lightning_ricochet.update
+tt.render.sprites[1].name = "hero_storm_dragon_lightning_ricochet"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].anchor = v(0, 0.5)
+tt.bullet.hit_time = fts(2)
+tt.bullet.hit_fx = "fx_hero_dianyun_lightning_ricochet_hit"
+tt.bullet.mod = "mod_hero_dianyun_storm_ray"
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.sound_events.insert = "WarmongerMageAttack"
+
+tt = RT("fx_hero_dianyun_lightning_ricochet", "fx")
+for i = 1, 3, 1 do
+	if i > 1 then
+		tt.render.sprites[i] = CC("sprite")
+	end
+	tt.render.sprites[i].name = "hero_storm_dragon_lightning_ricochet_fx_l" .. tostring(i)
+	tt.render.sprites[i].anchor = v(0.5, 0.5)
+	tt.render.sprites[i].z = Z_FLYING_HEROES + 1
+end
+
+tt = RT("aura_hero_dianyun_divine_rain", "aura")
+AC(tt, "render", "tween")
+tt.render.sprites[1].prefix = "hero_dianyun_health_rain"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].anchor = v(0.5, 0)
+tt.render.sprites[1].z = Z_FLYING_HEROES
+tt.aura.duration = 5
+tt.aura.mods = {"mod_kr4_heal"}
+tt.aura.cycle_time = 0.5
+tt.aura.radius = 60
+tt.aura.vis_bans = bor(F_ENEMY)
+tt.aura.vis_flags = bor(F_MOD, F_AREA)
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 0}, {0.3, 255}, {tt.aura.duration - 0.3, 255}, {tt.aura.duration, 0}}
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+
+tt = RT("mod_kr4_heal", "modifier")
+AC(tt, "hps", "render")
+tt.modifier.duration = 0.6
+tt.hps.heal_min = nil
+tt.hps.heal_max = nil
+tt.hps.heal_every = 0.5
+tt.render.sprites[1].name = "kr4_heal_loop"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].draw_order = DO_MOD_FX
+tt.main_script.insert = scripts.mod_hps.insert
+tt.main_script.update = scripts.mod_hps.update
+
+tt = RT("aura_hero_dianyun_supreme_wave", "aura")
+AC(tt, "render")
+tt.render.sprites[1].name = "hero_storm_dragon_supreme_wave"
+tt.render.sprites[1].anchor = v(0.5, 0.2)
+tt.render.sprites[1].z = Z_DECALS + 1
+tt.aura.duration = fts(70)
+tt.aura.mods = {"mod_kr4_stun", "mod_supreme_wave_damage"}
+tt.aura.cycle_time = 10
+tt.aura.radius = 50
+tt.aura.vis_bans = bor(F_FRIEND)
+tt.aura.vis_flags = bor(F_MOD, F_AREA)
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+
+tt = RT("mod_kr4_stun", "mod_stun")
+tt.modifier.vis_flags = bor(F_STUN, F_MOD)
+tt.modifier.vis_bans = bor(F_BOSS)
+tt.render.sprites[1].prefix = "kr4_stun"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].size_names = nil
+tt.modifier.use_mod_offset = nil
+tt.modifier.health_bar_offset = v(0, -2)
+
+tt = RT("mod_supreme_wave_damage", "mod_damage")
+tt.damage_max = 1
+tt.damage_min = 1
+tt.damage_type = DAMAGE_MAGICAL
+
+tt = RT("floor_decal_hero_dianyun_supreme_wave", "decal_tween")
+tt.render.sprites[1].name = "hero_storm_dragon_supreme_wave_decal"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_DECALS
+tt.tween.props[1].keys = {{0, 0}, {fts(14), 0}, {fts(14), 255}, {fts(49), 0}}
+tt.tween.props[2] = CC("tween_prop")
+tt.tween.props[2].name = "scale"
+tt.tween.props[2].keys = {{0, v(0, 0)}, {fts(14), v(0, 0)}, {fts(14), v(0.7, 0.7)}, {fts(49), v(1, 1)}}
+tt.tween.props[2].sprite_id = 1
+
+tt = RT("controller_decal_hero_dianyun_supreme_wave_spawner")
+AC(tt, "main_script")
+tt.main_script.update = scripts.controller_decal_hero_dianyun_supreme_wave_spawner.update
+
+tt = RT("aura_dianyun_passive", "aura")
+AC(tt, "render", "tween")
+tt.aura.mod = "mod_dianyun_passive"
+tt.aura.cycle_time = fts(3)
+tt.aura.duration = -1
+tt.aura.radius = 200
+tt.aura.track_source = true
+tt.aura.track_dead = true
+tt.aura.vis_flags = F_MOD
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+
+tt = RT("mod_dianyun_passive", "modifier")
+AC(tt, "render")
+tt.modifier.duration = fts(4)
+tt.modifier.vis_flags = F_MOD
+tt.main_script.insert = scripts.mod_dianyun_passive.insert
+tt.main_script.remove = scripts.mod_dianyun_passive.remove
+tt.main_script.update = scripts.mod_track_target.update
+tt.fx = "fx_hero_dianyun_lantern"
+tt.gold_reward = 1
+
+tt = RT("fx_hero_dianyun_lantern", "fx")
+tt.render.sprites[1].name = "hero_storm_dragon_lantern"
+tt.render.sprites[1].anchor = v(0.5, 0.111)
+tt.render.sprites[1].draw_order = DO_MOD_FX
+
+tt = RT("hero_dianyun_ultimate")
+AC(tt, "pos", "main_script", "sound_events")
+tt.main_script.update = scripts.hero_dianyun_ultimate.update
+tt.entity = "hero_dianyun_electric_son"
+tt.sound_events.insert = "HeroDianyunSon"
+
+tt = RT("hero_dianyun_electric_son", "decal_scripted")
+AC(tt, "ranged")
+tt.main_script.update = scripts.hero_dianyun_electric_son.update
+tt.render.sprites[1].prefix = "hero_storm_dragon_electric_son"
+tt.render.sprites[1].anchor = v(0.5, 0.16)
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].name = "hero_storm_dragon_electric_son_shadow"
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].is_shadow = true
+tt.render.sprites[2].anchor = v(0.5, 0.16)
+tt.ranged.attacks[1] = CC("bullet_attack")
+tt.ranged.attacks[1].animation = "attack"
+tt.ranged.attacks[1].cooldown = 2
+tt.ranged.attacks[1].bullet = "bolt_hero_dianyun_electric_son"
+tt.ranged.attacks[1].shoot_time = 0.4
+tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
+tt.ranged.attacks[1].basic_attack = true
+tt.ranged.attacks[1].bullet_start_offset = v(10, 40)
+
+tt = RT("bolt_hero_dianyun_electric_son", "bolt")
+AC(tt, "force_motion")
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.bullet.damage_min = 120
+tt.bullet.damage_max = 180
+tt.bullet.hit_fx = "fx_hero_dianyun_lightning_hit"
+tt.bullet.max_speed = 600
+tt.bullet.align_with_trajectory = true
+tt.bullet.min_speed = 30
+tt.bullet.pop_chance = 0
+tt.bullet.shot_index = 1
+tt.initial_impulse = 10
+tt.initial_impulse_duration = 10
+tt.initial_impulse_angle = math.pi / 4
+tt.force_motion.a_step = 5
+tt.force_motion.max_a = 3000
+tt.force_motion.max_v = 600
+tt.render.sprites[1].name = "hero_storm_dragon_electric_son_bolt"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_BULLETS
+tt.main_script.insert = nil
+tt.sound_events.insert = "BoltReleaseSound"

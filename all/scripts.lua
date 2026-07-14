@@ -5436,6 +5436,66 @@ function scripts.mod_track_target.update(this, store)
 	end
 end
 
+scripts.mod_track_target_with_fade = {
+	update = function(this, store)
+		local m = this.modifier
+		m.ts = store.tick_ts
+
+		local target = store.entities[m.target_id]
+		if not target or not target.pos then
+			queue_remove(store, this)
+			return
+		end
+		this.pos = target.pos
+
+		if this.tween then
+			this.tween.reverse = false
+			this.tween.remove = false
+			if this.fade_in then
+				this.tween.disabled = false
+				this.tween.ts = store.tick_ts
+			else
+				this.tween.disabled = true
+			end
+		end
+
+		while true do
+			target = store.entities[m.target_id]
+			if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
+				if this.tween and this.fade_out then
+					this.tween.reverse = true
+					this.tween.remove = true
+					this.tween.disabled = false
+					this.tween.ts = store.tick_ts
+				else
+					queue_remove(store, this)
+				end
+				return
+			end
+
+			if this.render and target.unit then
+				local s = this.render.sprites[1]
+				local flip_sign = 1
+
+				if target.render then
+					flip_sign = target.render.sprites[1].flip_x and -1 or 1
+				end
+
+				if m.health_bar_offset and target.health_bar then
+					local hb = target.health_bar.offset
+					local hbo = m.health_bar_offset
+
+					s.offset.x, s.offset.y = hb.x + hbo.x * flip_sign, hb.y + hbo.y
+				elseif m.use_mod_offset and target.unit.mod_offset then
+					s.offset.x, s.offset.y = target.unit.mod_offset.x * flip_sign, target.unit.mod_offset.y
+				end
+			end
+
+			coroutine.yield()
+		end
+	end
+}
+
 scripts.mod_freeze = {}
 
 function scripts.mod_freeze.insert(this, store)
