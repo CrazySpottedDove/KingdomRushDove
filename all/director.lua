@@ -279,13 +279,25 @@ function director:unload_item(item)
 
 				groups = table.append(groups, hero_textures)
 			end
+
+			for _, required_exoskeletons in pairs(GS.hero_exoskeletons) do
+				EXO:unload(required_exoskeletons)
+			end
 		elseif game.store.selected_hero then
 			for _, hero in pairs(game.store.selected_hero) do
-				if hero then
-					groups = table.append(groups, {"go_" .. hero})
+				groups = table.append(groups, {"go_" .. hero})
+				local required_exoskeletons = GS.hero_exoskeletons[hero]
+				if required_exoskeletons then
+					EXO:unload(required_exoskeletons)
 				end
 			end
 		end
+
+		if game.store.level.required_exoskeletons then
+			EXO:unload(game.store.level.required_exoskeletons)
+		end
+
+		EXO:unload(game.required_exoskeletons)
 
 		self:unload_texture_groups(groups, game.ref_res, "game")
 		self:unload_plugin_texture_groups(game.plugin_required_textures, game.ref_res, "game")
@@ -506,6 +518,10 @@ function director:queue_load_item_named(name)
 				self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res, true, "game")
 				self:load_sound_groups({hero})
 			end
+
+			for _, required_exoskeletons in pairs(GS.hero_exoskeletons) do
+				EXO:queue_load(required_exoskeletons)
+			end
 		else
 			local slot = storage:load_slot()
 
@@ -535,6 +551,10 @@ function director:queue_load_item_named(name)
 
 					self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res, true, "game")
 					self:load_sound_groups({hero})
+					local required_exoskeletons = GS.hero_exoskeletons[hero]
+					if required_exoskeletons then
+						EXO:queue_load(required_exoskeletons)
+					end
 				end
 			end
 		end

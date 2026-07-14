@@ -2,15 +2,17 @@
 local log = require("lib.klua.log"):new("exoskeleton")
 local FS = love.filesystem
 local A = require("animation_db")
-local perf = require("dove_modules.perf.perf")
 local EXO = {}
 
 EXO.exos = {}
 EXO.exos_count = {}
 EXO.db = {}
-EXO.supported_extensions = {"exo3", "exo", "lua"}
+-- EXO.supported_extensions = {"exo3", "exo", "lua"}
 EXO.base_path = KR_PATH_GAME .. "/data/exoskeletons"
 EXO.exo_lists_to_load = {}
+
+-- 持久化的 exo，永远不会卸载，避免重复加载卸载的开销
+local persistent_exos = table.to_map({"ignis_altar_lava_golem", "ignis_altar_lvl4", "ignis_altar_decal", "ignis_altar_decal_lava"})
 
 -- TODO: 为 EXO 添加 unload 方法，避免 exo 数据过多导致内存占用过高的问题；优化 EXO 数据结构。
 
@@ -26,19 +28,10 @@ function EXO:get_exo_by_frame(exo_frame)
 	return self.exos[exo_frame.exo_name]
 end
 
---- 简短查看当前 EXO 的加载情况
-function EXO:dump()
-	local exo_names = ""
-	for k, v in pairs(self.exos) do
-		exo_names = exo_names .. k .. ", "
-	end
-	log.error("EXO:dump - currently loaded exos: %s", exo_names)
-end
-
 --- 加载 exo 数据，在进入对局时，A:load()后调用
 function EXO:load()
 	-- perf.tmp_start("EXO:load")
-	for _, exo_list in pairs(self.exo_lists_to_load) do
+	for _, exo_list in ipairs(self.exo_lists_to_load) do
 		for _, exo_name in ipairs(exo_list) do
 			if not self.exos[exo_name] then
 				local exo = self:load_lua(exo_name, EXO.exo_path)
@@ -61,8 +54,11 @@ function EXO:load()
 				end
 
 				self.exos[exo_name] = exo
-				self.exos_count[exo_name] = (self.exos_count[exo_name] or 0) + 1
 			end
+			if not self.exos_count[exo_name] then
+				self.exos_count[exo_name] = 0
+			end
+			self.exos_count[exo_name] = self.exos_count[exo_name] + 1
 		end
 	end
 
@@ -71,36 +67,25 @@ function EXO:load()
 -- perf.tmp_stop("EXO:load")
 end
 
-function EXO:load_groups(groups)
-	if not groups then
-		return
-	end
-
-	for _, g in pairs(groups) do
-		local exo_names = {}
-		local group_path = EXO.base_path .. "/" .. g
-
-		if FS.isDirectory(group_path) then
-			local items = FS.getDirectoryItems(group_path)
-
-			for i = 1, #items do
-				local item = items[i]
-
-				for _, ext in pairs(EXO.supported_extensions) do
-					local ext_s = "." .. ext .. "$"
-
-					if string.match(item, ext_s) then
-						local name = string.gsub(item, ext_s, "")
-
-						table.insert(exo_names, name)
-
-						break
+--- 卸载 exo 数据
+---@param exo_list table of string exo_name
+function EXO:unload(exo_list)
+	for _, exo_name in ipairs(exo_list) do
+		if not persistent_exos[exo_name] then
+			self.exos_count[exo_name] = self.exos_count[exo_name] - 1
+			if self.exos_count[exo_name] <= 0 then
+				local exo = self.exos[exo_name]
+				for _, animation in ipairs(exo.animations) do
+					local name = exo.name .. "_" .. animation.name
+					local db_animation = A.db
+					for i = 1, db_animation[name][1] do
+						self.db[db_animation[name][2][i]] = nil
 					end
+					db_animation[name] = nil
 				end
+				self.exos[exo_name] = nil
 			end
 		end
-
-		EXO:load(exo_names, g, group_path)
 	end
 end
 
@@ -124,35 +109,6 @@ function EXO:load_lua(exo_name, exo_path)
 	end
 
 	return exo
-end
-
-function EXO:load_animations_to_animation_db(exo)
-	local db = A.db
-
-	for _, animation in ipairs(exo.animations) do
-		local name = exo.name .. "_" .. animation.name
-
-		if not db[name] then
-			db[name] = A.extract_frame_from({
-				from = 1,
-				to = #animation.frames,
-				prefix = name
-			})
-		end
-	end
-end
-
-function EXO:load_fake_sprites_to_db(exo)
-	for _, animation in ipairs(exo.animations) do
-		local ani_name = animation.name
-
-		for idx, frame in ipairs(animation.frames) do
-			local sprite_name = string.format("%s_%s_%04d", exo.name, ani_name, idx)
-
-			self.db[sprite_name] = frame
-			frame.exo_name = exo.name
-		end
-	end
 end
 
 function EXO:f(frame_name)
@@ -194,5 +150,76 @@ function EXO:get_last_attach_point_xform(entity, sprite_id, name)
 
 	return f and f.last_attach_point_xform and f.last_attach_point_xform[idx]
 end
+
+--- 简短查看当前 EXO 的加载情况
+function EXO:dump()
+	local exo_names = ""
+	for k, v in pairs(self.exos) do
+		exo_names = exo_names .. k .. ", "
+	end
+	log.error("EXO:dump - currently loaded exos: %s", exo_names)
+end
+
+-- function EXO:load_groups(groups)
+-- 	if not groups then
+-- 		return
+-- 	end
+
+-- 	for _, g in pairs(groups) do
+-- 		local exo_names = {}
+-- 		local group_path = EXO.base_path .. "/" .. g
+
+-- 		if FS.isDirectory(group_path) then
+-- 			local items = FS.getDirectoryItems(group_path)
+
+-- 			for i = 1, #items do
+-- 				local item = items[i]
+
+-- 				for _, ext in pairs(EXO.supported_extensions) do
+-- 					local ext_s = "." .. ext .. "$"
+
+-- 					if string.match(item, ext_s) then
+-- 						local name = string.gsub(item, ext_s, "")
+
+-- 						table.insert(exo_names, name)
+
+-- 						break
+-- 					end
+-- 				end
+-- 			end
+-- 		end
+
+-- 		EXO:load(exo_names, g, group_path)
+-- 	end
+-- end
+
+-- function EXO:load_animations_to_animation_db(exo)
+-- 	local db = A.db
+
+-- 	for _, animation in ipairs(exo.animations) do
+-- 		local name = exo.name .. "_" .. animation.name
+
+-- 		if not db[name] then
+-- 			db[name] = A.extract_frame_from({
+-- 				from = 1,
+-- 				to = #animation.frames,
+-- 				prefix = name
+-- 			})
+-- 		end
+-- 	end
+-- end
+
+-- function EXO:load_fake_sprites_to_db(exo)
+-- 	for _, animation in ipairs(exo.animations) do
+-- 		local ani_name = animation.name
+
+-- 		for idx, frame in ipairs(animation.frames) do
+-- 			local sprite_name = string.format("%s_%s_%04d", exo.name, ani_name, idx)
+
+-- 			self.db[sprite_name] = frame
+-- 			frame.exo_name = exo.name
+-- 		end
+-- 	end
+-- end
 
 return EXO

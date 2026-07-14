@@ -1266,4 +1266,9 @@ GS.wraith = {
 	soldier_tower_ghost_lvl4 = true
 }
 
+GS.hero_exoskeletons = {
+	hero_dianyun = {"hero_dianyun", "hero_dianyun_health_rain"},
+	hero_beresad = {"hero_beresad_ultimate_particles_animations"}
+}
+
 return GS

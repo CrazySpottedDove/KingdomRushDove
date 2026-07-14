@@ -49853,7 +49853,6 @@ return {
 		from = 15,
 		to = 24
 	},
-
 	-- hero_dianyun
 	hero_storm_dragon_cloud_l1_idle = {
 		prefix = "hero_storm_dragon_cloud_layer1",
