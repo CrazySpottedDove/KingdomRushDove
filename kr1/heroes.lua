@@ -20642,6 +20642,7 @@ tt.render.sprites[1].draw_order = 10
 -- ======== 电云 ========
 tt = RT("hero_dianyun", "hero")
 AC(tt, "ranged", "timed_attacks")
+tt.ui.click_rect = r(-25, 70, 60, 60)
 tt.hero.level_stats.hp_max = {320, 338, 356, 374, 392, 410, 428, 446, 464, 482}
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.ranged_damage_min = {6, 7, 8, 9, 10, 11, 13, 15, 17, 19}

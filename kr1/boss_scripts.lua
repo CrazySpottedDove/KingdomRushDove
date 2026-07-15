@@ -189,22 +189,6 @@ end
 
 scripts.eb_jt = {}
 
-function scripts.eb_jt.get_info(this)
-	local ma = this.melee.attacks[1]
-	local min, max = ma.damage_min, ma.damage_max
-
-	return {
-		type = STATS_TYPE_ENEMY,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		armor = this.health.armor,
-		magic_armor = this.health.magic_armor,
-		lives = this.enemy.lives_cost
-	}
-end
-
 function scripts.eb_jt.on_damage(this, store, damage)
 	local pd = U.predict_damage(this, damage)
 

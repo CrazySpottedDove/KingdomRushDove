@@ -190,7 +190,6 @@ tt.health.hp_max = 12000
 tt.health.on_damage = scripts.eb_jt.on_damage
 tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
 tt.health_bar.offset = vec_2(0, ady(172))
-tt.info.fn = scripts.eb_jt.get_info
 tt.info.enc_icon = 33
 tt.info.portrait = "info_portraits_enemies_0026"
 tt.main_script.insert = scripts.enemy_basic.insert
