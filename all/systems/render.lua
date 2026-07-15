@@ -313,13 +313,13 @@ function M.register(sys)
 									end
 								end
 							else
-								if not MISSED_SS[fn] then
-									-- fallback, 仅在开发时启用，用于检查美术资源
-									local e = store.entities[s._render_e_id]
-									print(string.format("Failed to get EXO frame for entity %s, frame id: %d", e.template_name, i))
-									print(string.format("EXO name: %s", fn or "nil"))
-									MISSED_SS[fn] = true
-								end
+								-- if not MISSED_SS[fn] then
+								-- 	-- fallback, 仅在开发时启用，用于检查美术资源
+								-- 	local e = store.entities[s._render_e_id]
+								-- 	print(string.format("Failed to get EXO frame for entity %s, frame id: %d", e.template_name, i))
+								-- 	print(string.format("EXO name: %s", fn or "nil"))
+								-- 	MISSED_SS[fn] = true
+								-- end
 								s.exo_frame = {}
 							end
 						else
@@ -328,27 +328,27 @@ function M.register(sys)
 
 							-- DEBUG:仅在开发时启用，用于检查美术资源
 							if s.ss == nil then
-								local e = store.entities[s._render_e_id]
-								if s.animation then
-									if not MISSED_SS[s.animation] then
-										print(string.format("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i))
-										print(string.format("Animation name: %s", s.animation))
-										MISSED_SS[s.animation] = true
-									end
-								elseif s.animated then
-									if not MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] then
-										print(string.format("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i))
-										print(string.format("Animated prefix: %s", s.prefix))
-										print(string.format("Animated name: %s", s.name))
-										MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] = true
-									end
-								else
-									if not MISSED_SS[s.name] then
-										print(string.format("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i))
-										print(string.format("Static sprite name: %s", s.name))
-										MISSED_SS[s.name] = true
-									end
-								end
+							-- local e = store.entities[s._render_e_id]
+							-- if s.animation then
+							-- 	if not MISSED_SS[s.animation] then
+							-- 		print(string.format("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i))
+							-- 		print(string.format("Animation name: %s", s.animation))
+							-- 		MISSED_SS[s.animation] = true
+							-- 	end
+							-- elseif s.animated then
+							-- 	if not MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] then
+							-- 		print(string.format("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i))
+							-- 		print(string.format("Animated prefix: %s", s.prefix))
+							-- 		print(string.format("Animated name: %s", s.name))
+							-- 		MISSED_SS[(s.prefix or "nil") .. "_" .. s.name] = true
+							-- 	end
+							-- else
+							-- 	if not MISSED_SS[s.name] then
+							-- 		print(string.format("Failed to get sprite for entity %s, frame id: %d", e.template_name or e.id, i))
+							-- 		print(string.format("Static sprite name: %s", s.name))
+							-- 		MISSED_SS[s.name] = true
+							-- 	end
+							-- end
 							end
 						end
 					end

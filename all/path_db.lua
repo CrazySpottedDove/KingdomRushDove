@@ -349,6 +349,7 @@ end
 --- 该函数的开销较少，在能够满足要求时，应使用该函数，避免使用 nearest_nodes 进行全路径搜索
 ---@param pos ffi.cdata vector
 ---@param nav_path ffi.cdata nav_path
+---@return number ni
 function path_db:nearest_node_with_nav_path_info(pos, nav_path)
 	local path = self.paths[nav_path.pi][nav_path.spi]
 

@@ -6739,5 +6739,5 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	HERO_BERESAD_SPECIAL = "龙息术，恐惧之龙，龙之爪牙，湮灭射线，地狱火雨",
 	HERO_DIANYUN_NAME = "电云",
 	HERO_DIANYUN_DESCRIPTION = "传说在千年之前，天空中有两条神龙争斗，落败的那条被封印在无尽之海，获胜的那条被尊为风暴龙王，名曰电云。",
-	HERO_DIANYUN_SPECIAL = "罅云揽星，青霜流虹，轻雷霁光，势崩江河，雷电之子"
+	HERO_DIANYUN_SPECIAL = "孔明灯，闪电打击，暴风领主，神圣雨露，至尊波，雷电之子"
 }

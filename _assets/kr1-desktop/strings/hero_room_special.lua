@@ -3280,28 +3280,32 @@ set_skill(h.hero.skills.ricochet)
 cooldown = h.ranged.attacks[2].cooldown
 d[1].damage_min = s.damage_min[max_lvl]
 d[1].damage_max = s.damage_max[max_lvl]
-d[1].damage_type = DAMAGE_MAGICAL
-map["罅云揽星"] = str(cooldown_str(), "发射一道闪电，在", s.bounce[max_lvl], "个敌人之间弹射，每个造成", damage_str(), "。")
+d[1].damage_type = T("hero_dianyun_lightning_ricochet").bullet.damage_type
+map["闪电打击"] = str(cooldown_str(), "发射一道闪电，在", s.bounce[max_lvl], "个敌人之间弹射，每次造成", damage_str(), "。")
 
 set_skill(h.hero.skills.lord_storm)
-map["青霜流虹"] = str("普通攻击会同时攻击最多", s.max_targets[max_lvl], "个目标。")
+map["暴风领主"] = str("普通攻击会同时攻击最多", s.max_targets[max_lvl], "个目标。")
 
 set_skill(h.hero.skills.divine_rain)
 cooldown = h.timed_attacks.list[1].cooldown
 duration = s.duration
-map["轻雷霁光"] = str(cooldown_str(), "降下神圣之雨，每秒为周围友军回复", s.healing_points_tick[max_lvl], "点生命值，持续", duration, "秒。")
+cycle_time = T("aura_hero_dianyun_divine_rain").aura.cycle_time
+map["神圣雨露"] = str(cooldown_str(), "降下神圣之雨，每", cycle_time, "秒为周围友军回复", s.healing_points_tick[max_lvl], "点生命值，持续", duration, "秒。")
 
 set_skill(h.hero.skills.supreme_wave)
 cooldown = h.timed_attacks.list[2].cooldown
-map["势崩江河"] = str(cooldown_str(), "释放一道能量波，击晕路径上的敌人", s.stun[max_lvl], "秒。")
+map["势崩江河"] = str(cooldown_str(), "电云以自己为中心释放数道能量波，击晕路径上的敌人", s.stun[max_lvl], "秒。")
 
 set_skill(h.hero.skills.ultimate)
 get_cooldown()
 e = T("bolt_hero_dianyun_electric_son")
-local son_bolt_damage_min = e.bullet.damage_min or 0
-local son_bolt_damage_max = e.bullet.damage_max or 0
-map["雷电之子"] = str(cooldown_str(), "召唤一个雷电之子，自动攻击附近的敌人，每次造成", son_bolt_damage_min, "-", son_bolt_damage_max, "点法术伤害。")
+d[1].damage_max = e.bullet.damage_max
+d[1].damage_min = e.bullet.damage_min
+d[1].damage_type = e.bullet.damage_type
+count = s.bullets_to_death[max_lvl]
+map["雷电之子"] = str(cooldown_str(), "召唤一个雷电之子，自动攻击附近的敌人，每次造成", damage_str(), "，最多攻击", count, "次。")
 
+map["孔明灯"] = str("电云附近200范围内死亡的敌人会化为孔明灯，额外产出1枚金币。")
 -- H.dump()
 
 return H

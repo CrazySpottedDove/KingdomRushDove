@@ -49899,6 +49899,11 @@ return {
 		to = 6,
 		from = 1
 	},
+	hero_storm_ray_modifier_loop = {
+		prefix = "hero_storm_ray_modifier",
+		to = 6,
+		from = 1
+	},
 	hero_storm_dragon_lightning_ricochet_fx_layer1 = {
 		prefix = "hero_storm_dragon_lightning_ricochet_fx_layer1",
 		from = 1,

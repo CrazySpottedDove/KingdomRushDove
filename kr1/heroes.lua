@@ -20641,16 +20641,15 @@ tt.render.sprites[1].draw_order = 10
 
 -- ======== 电云 ========
 tt = RT("hero_dianyun", "hero")
-AC(tt, "ranged", "timed_attacks", "auras")
-tt.hero.level_stats.hp_max = {385, 406, 428, 449, 470, 492, 514, 535, 557, 578}
-tt.hero.level_stats.regen_health = {22, 25, 28, 31, 34, 37, 40, 43, 46, 49}
+AC(tt, "ranged", "timed_attacks")
+tt.hero.level_stats.hp_max = {320, 338, 356, 374, 392, 410, 428, 446, 464, 482}
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.ranged_damage_min = {6, 7, 8, 9, 10, 11, 13, 15, 17, 19}
 tt.hero.level_stats.ranged_damage_max = {6, 10, 14, 18, 22, 27, 31, 35, 39, 43}
 tt.hero.skills.ricochet = CC("hero_skill")
-tt.hero.skills.ricochet.damage_min = {45, 60, 75}
-tt.hero.skills.ricochet.damage_max = {45, 60, 75}
-tt.hero.skills.ricochet.bounce = {3, 5, 7}
+tt.hero.skills.ricochet.damage_min = {30, 40, 50}
+tt.hero.skills.ricochet.damage_max = {30, 40, 50}
+tt.hero.skills.ricochet.bounce = {3, 5, 6}
 tt.hero.skills.ricochet.xp_level_steps = {
 	[2] = 1,
 	[5] = 2,
@@ -20811,11 +20810,9 @@ tt.ranged.attacks[1].xp_gain_factor = 2
 tt.ranged.attacks[2] = CC("bullet_attack")
 tt.ranged.attacks[2].disabled = true
 tt.ranged.attacks[2].cooldown = 18
-tt.ranged.attacks[2].min_cooldown = 1
 tt.ranged.attacks[2].min_range = 0
 tt.ranged.attacks[2].max_range = 200
 tt.ranged.attacks[2].bullet = "hero_dianyun_lightning_ricochet_cloud"
-tt.ranged.attacks[2].spawn_pos_offset = v(0, 81)
 tt.ranged.attacks[2].start_fx = "fx_hero_dianyun_lightning_ricochet"
 tt.ranged.attacks[2].start_offset = v(0, 90)
 tt.ranged.attacks[2].vis_bans = bor(F_NIGHTMARE)
@@ -20848,20 +20845,13 @@ tt.timed_attacks.list[2].controller = "controller_decal_hero_dianyun_supreme_wav
 tt.timed_attacks.list[2].animation = "supremeWave"
 tt.timed_attacks.list[2].vis_flags = bor(F_RANGED)
 tt.timed_attacks.list[2].vis_bans = bor(F_NIGHTMARE, F_CLIFF, F_BOSS)
-tt.timed_attacks.list[2].min_range = 0
+tt.timed_attacks.list[2].min_range = 22.5
 tt.timed_attacks.list[2].max_range = 100
 tt.timed_attacks.list[2].min_targets = 3
 tt.timed_attacks.list[2].crowds_range = 150
-tt.timed_attacks.list[2].start_nodes_offset = 3
-tt.timed_attacks.list[2].distance_to_start_node = 20
 tt.timed_attacks.list[2].max_objects = 5
-tt.timed_attacks.list[2].nodes_between_objects = 6
-tt.timed_attacks.list[2].delay_between_objects = fts(3)
 tt.timed_attacks.list[2].xp_from_skill = "supreme_wave"
 tt.timed_attacks.list[2].cooldown = 21
-tt.auras.list[1] = CC("aura_attack")
-tt.auras.list[1].cooldown = 0
-tt.auras.list[1].name = "aura_dianyun_passive"
 tt._aura_lantern = nil
 tt.ultimate = {
 	ts = 0,
@@ -20900,22 +20890,15 @@ tt = RT("controller_lord_storm")
 AC(tt, "main_script")
 tt.main_script.update = scripts.controller_lord_storm.update
 
-tt = RT("hero_dianyun_lightning_ricochet_cloud", "bolt")
+tt = RT("hero_dianyun_lightning_ricochet_cloud", "bullet")
 tt.main_script.update = scripts.hero_dianyun_lightning_ricochet_cloud.update
 tt.render.sprites[1].name = "hero_storm_dragon_lightning_ricochet_cloud"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].anchor = v(0, 0.5)
 tt.render.sprites[1].r = -math.pi / 2
-tt.bullet.hit_time = fts(2)
-tt.bullet.hit_fx = "fx_hero_dianyun_lightning_ricochet_hit"
-tt.bullet.mod = "mod_hero_dianyun_storm_ray"
-tt.bullet.damage_type = DAMAGE_MAGICAL
-tt.bounce_bullet = "hero_dianyun_lightning_ricochet"
-tt.bounce_range = 90
-tt.bounce_vis_flags = bor(F_RANGED)
-tt.bounce_vis_bans = bor(F_NIGHTMARE)
-tt.bounce_delay = fts(2)
-tt.sound_events.insert = "WarmongerMageAttack"
+tt.bullet.hit_time = fts(3)
+tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.payload = "hero_dianyun_lightning_ricochet"
 
 tt = RT("fx_hero_dianyun_lightning_ricochet_hit", "fx")
 tt.render.sprites[1].name = "hero_storm_dragon_lightning_ricochet_hit"
@@ -20924,26 +20907,23 @@ tt.render.sprites[1].anchor = v(0.5, 0.5)
 tt = RT("mod_hero_dianyun_storm_ray", "mod_hero_dianyun_lightning")
 tt.render.sprites[1].prefix = "hero_storm_ray_modifier"
 
-tt = RT("hero_dianyun_lightning_ricochet", "bolt")
+tt = RT("hero_dianyun_lightning_ricochet", "bullet")
 tt.main_script.update = scripts.hero_dianyun_lightning_ricochet.update
 tt.render.sprites[1].name = "hero_storm_dragon_lightning_ricochet"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].anchor = v(0, 0.5)
 tt.bullet.hit_time = fts(2)
 tt.bullet.hit_fx = "fx_hero_dianyun_lightning_ricochet_hit"
-tt.bullet.mod = "mod_hero_dianyun_storm_ray"
+tt.bullet.mods = {"mod_hero_dianyun_storm_ray"}
 tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.bounce = 0
+tt.bounce_delay = fts(3)
+tt.bounce_range = 120
+tt.bounce_vis_flags = F_RANGED
+tt.bounce_vis_bans = F_NONE
+tt.image_width = 69
 tt.sound_events.insert = "WarmongerMageAttack"
-
-tt = RT("fx_hero_dianyun_lightning_ricochet", "fx")
-for i = 1, 3 do
-	if i > 1 then
-		tt.render.sprites[i] = CC("sprite")
-	end
-	tt.render.sprites[i].name = "hero_storm_dragon_lightning_ricochet_fx_layer" .. i
-	tt.render.sprites[i].anchor = v(0.5, 0.5)
-	tt.render.sprites[i].z = Z_FLYING_HEROES + 1
-end
+tt.seen_targets = {}
 
 tt = RT("aura_hero_dianyun_divine_rain", "aura")
 AC(tt, "render", "tween")
@@ -20953,7 +20933,7 @@ tt.render.sprites[1].anchor = v(0.5, 0)
 tt.render.sprites[1].z = Z_FLYING_HEROES
 tt.render.sprites[1].exo = true
 tt.aura.duration = 5
-tt.aura.mods = {"mod_kr4_heal"}
+tt.aura.mods = {"mod_hero_dianyun_divine_rain"}
 tt.aura.cycle_time = 0.5
 tt.aura.radius = 60
 tt.aura.vis_bans = bor(F_ENEMY)
@@ -20963,16 +20943,12 @@ tt.tween.props[1].keys = {{0, 0}, {0.3, 255}, {tt.aura.duration - 0.3, 255}, {tt
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 
-tt = RT("mod_kr4_heal", "modifier")
-AC(tt, "hps", "render")
-tt.modifier.duration = 0.6
-tt.hps.heal_min = nil
-tt.hps.heal_max = nil
+tt = RT("mod_hero_dianyun_divine_rain", "modifier")
+AC(tt, "hps")
 tt.hps.heal_every = 0.5
-tt.render.sprites[1].name = "kr4_heal_loop"
-tt.render.sprites[1].anchor = v(0.5, 0.5)
-tt.render.sprites[1].loop = true
-tt.render.sprites[1].draw_order = DO_MOD_FX
+tt.hps.heal_min = 0
+tt.hps.heal_max = 0
+tt.modifier.duration = 0.6
 tt.main_script.insert = scripts.mod_hps.insert
 tt.main_script.update = scripts.mod_hps.update
 
@@ -20982,7 +20958,7 @@ tt.render.sprites[1].name = "hero_storm_dragon_supreme_wave"
 tt.render.sprites[1].anchor = v(0.5, 0.2)
 tt.render.sprites[1].z = Z_DECALS + 1
 tt.aura.duration = fts(70)
-tt.aura.mods = {"mod_kr4_stun", "mod_supreme_wave_damage"}
+tt.aura.mods = {"mod_supreme_wave_stun"}
 tt.aura.cycle_time = 10
 tt.aura.radius = 50
 tt.aura.vis_bans = bor(F_FRIEND)
@@ -20990,19 +20966,8 @@ tt.aura.vis_flags = bor(F_MOD, F_AREA)
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 
-tt = RT("mod_kr4_stun", "mod_stun")
-tt.modifier.vis_flags = bor(F_STUN, F_MOD)
-tt.modifier.vis_bans = bor(F_BOSS)
-tt.render.sprites[1].prefix = "kr4_stun"
-tt.render.sprites[1].anchor = v(0.5, 0.5)
-tt.render.sprites[1].size_names = nil
-tt.modifier.use_mod_offset = nil
-tt.modifier.health_bar_offset = v(0, -2)
-
-tt = RT("mod_supreme_wave_damage", "mod_damage")
-tt.damage_max = 1
-tt.damage_min = 1
-tt.damage_type = DAMAGE_MAGICAL
+tt = RT("mod_supreme_wave_stun", "mod_stun")
+tt.modifier.duration = 2
 
 tt = RT("floor_decal_hero_dianyun_supreme_wave", "decal_tween")
 tt.render.sprites[1].name = "hero_storm_dragon_supreme_wave_decal"
@@ -21017,8 +20982,12 @@ tt.tween.props[2].keys = {{0, v(0, 0)}, {fts(14), v(0, 0)}, {fts(14), v(0.7, 0.7
 tt.tween.props[2].sprite_id = 1
 
 tt = RT("controller_decal_hero_dianyun_supreme_wave_spawner")
-AC(tt, "pos", "main_script")
+AC(tt, "main_script", "nav_path")
 tt.main_script.update = scripts.controller_decal_hero_dianyun_supreme_wave_spawner.update
+tt.entity = "aura_hero_dianyun_supreme_wave"
+tt.floor_decal = "floor_decal_hero_dianyun_supreme_wave"
+tt.delay_between_objects = fts(3)
+tt.max_objects = 5
 
 tt = RT("aura_dianyun_passive", "aura")
 tt.aura.mod = "mod_dianyun_passive"
@@ -21055,14 +21024,13 @@ tt.sound_events.insert = "HeroDianyunSon"
 tt = RT("hero_dianyun_electric_son", "decal_scripted")
 AC(tt, "ranged", "idle_flip")
 tt.main_script.update = scripts.hero_dianyun_electric_son.update
-tt.duration = 240
+tt.duration = 180
 tt.bullets_to_death = 3
 tt.render.sprites[1].prefix = "hero_storm_dragon_electric_son"
 tt.render.sprites[1].anchor = v(0.5, 0.16)
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].name = "hero_storm_dragon_electric_son_shadow"
 tt.render.sprites[2].animated = false
-tt.render.sprites[2].is_shadow = true
 tt.render.sprites[2].anchor = v(0.5, 0.16)
 tt.ranged.attacks[1] = CC("bullet_attack")
 tt.ranged.attacks[1].animation = "attack"
@@ -21070,11 +21038,11 @@ tt.ranged.attacks[1].cooldown = 2
 tt.ranged.attacks[1].bullet = "bolt_hero_dianyun_electric_son"
 tt.ranged.attacks[1].shoot_time = 0.4
 tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
-tt.ranged.attacks[1].basic_attack = true
+tt.ranged.attacks[1].min_range = 0
+tt.ranged.attacks[1].max_range = 160
 tt.ranged.attacks[1].bullet_start_offset = v(10, 40)
 
 tt = RT("bolt_hero_dianyun_electric_son", "bolt")
-AC(tt, "force_motion")
 tt.bullet.damage_type = DAMAGE_MAGICAL
 tt.bullet.damage_min = 120
 tt.bullet.damage_max = 180
@@ -21083,16 +21051,19 @@ tt.bullet.max_speed = 600
 tt.bullet.align_with_trajectory = true
 tt.bullet.min_speed = 30
 tt.bullet.pop_chance = 0
-tt.bullet.shot_index = 1
-tt.initial_impulse = 10
-tt.initial_impulse_duration = 10
-tt.initial_impulse_angle = math.pi / 4
-tt.force_motion.a_step = 5
-tt.force_motion.max_a = 3000
-tt.force_motion.max_v = 600
 tt.render.sprites[1].name = "hero_storm_dragon_electric_son_bolt"
 tt.render.sprites[1].anchor = v(0.5, 0.5)
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_BULLETS
 tt.main_script.insert = nil
-tt.sound_events.insert = "BoltReleaseSound"
+tt.sound_events.insert = "BoltSound"
+
+tt = RT("decal_hero_dianyun_lightning_ricochet", "decal")
+for i = 1, 3 do
+	if i > 1 then
+		tt.render.sprites[i] = CC("sprite")
+	end
+	tt.render.sprites[i].name = "hero_storm_dragon_lightning_ricochet_fx_layer" .. i
+	tt.render.sprites[i].anchor = v(0.5, 0.5)
+	tt.render.sprites[i].z = Z_FLYING_HEROES + 1
+end
