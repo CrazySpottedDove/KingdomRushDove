@@ -49894,6 +49894,26 @@ return {
 		from = 1,
 		to = 18
 	},
+	hero_storm_dragon_lightning_modifier_loop = {
+		prefix = "hero_storm_dragon_lightning_modifier",
+		to = 6,
+		from = 1
+	},
+	hero_storm_dragon_lightning_ricochet_fx_layer1 = {
+		prefix = "hero_storm_dragon_lightning_ricochet_fx_layer1",
+		from = 1,
+		to = 100
+	},
+	hero_storm_dragon_lightning_ricochet_fx_layer2 = {
+		prefix = "hero_storm_dragon_lightning_ricochet_fx_layer2",
+		from = 1,
+		to = 100
+	},
+	hero_storm_dragon_lightning_ricochet_fx_layer3 = {
+		prefix = "hero_storm_dragon_lightning_ricochet_fx_layer3",
+		from = 1,
+		to = 100
+	},
 	hero_storm_dragon_lightning_hit = {
 		prefix = "hero_storm_dragon_lightning_hit",
 		from = 1,

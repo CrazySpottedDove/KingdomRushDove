@@ -6921,8 +6921,9 @@ tt.timed_attacks.list[1].vis_bans = F_FLYING
 tt.timed_attacks.list[1].mod = "mod_regson_slash"
 tt.ultimate = {
 	ts = 0,
-	cooldown = 200,
-	disabled = true
+	cooldown = 32,
+	disabled = true,
+	range = 160
 }
 tt.path_extra = 0
 
@@ -20108,38 +20109,34 @@ tt.ultimate = {
 }
 
 tt = RT("bullet_asra", "arrow")
-tt.bullet.xp_gain_factor = 2.2
-tt.bullet.flight_time = fts(15)
+tt.bullet.xp_gain_factor = 6
+tt.bullet.flight_time = fts(9)
+tt.bullet.flight_time_factor = fts(1 / 60)
+tt.bullet.hit_distance = 50
 tt.bullet.hit_fx = "fx_arrow_asra_hit"
-tt.bullet.mod = "mod_arrow_asra"
+tt.bullet.mod = {"mod_arrow_asra"}
 tt.bullet.damage_type = DAMAGE_PHYSICAL
-tt.bullet.damage_max = 0
-tt.bullet.damage_min = 0
+tt.bullet.miss_decal = "hero_asra_projectile_decal"
 tt.render.sprites[1].name = "hero_asra_projectile"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].flip_x = true
 
 tt = RT("bullet_onix_asra", "arrow")
-tt.bullet.xp_gain_factor = 2.2
-tt.bullet.flight_time = fts(15)
+tt.bullet.flight_time = fts(6)
 tt.bullet.hit_fx = "fx_arrow_asra_hit"
-tt.bullet.mod = "mod_arrow_asra"
-tt.bullet.damage_type = DAMAGE_PHYSICAL
-tt.bullet.damage_max = 0
-tt.bullet.damage_min = 0
+tt.bullet.mod = {"mod_arrow_asra"}
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.bullet.miss_decal = "hero_asra_multishot_arrow_decal"
 tt.render.sprites[1].name = "hero_asra_multishot_arrow"
 tt.render.sprites[1].animated = false
 
 tt = RT("fx_arrow_asra_hit", "fx")
 tt.render.sprites[1].name = "hero_asra_multishot_arrow_hit_run"
 
-tt = RT("mod_arrow_asra", "modifier")
-AC(tt, "main_script")
-tt.main_script.insert = scripts.mod_track_target.insert
-tt.main_script.remove = scripts.mod_track_target.remove
-tt.main_script.update = scripts.mod_track_target.update
-tt.modifier.duration = 3
-tt.modifier.damage_type = DAMAGE_ARMOR
+tt = RT("mod_arrow_asra", "mod_damage")
+tt.damage_min = 0
+tt.damage_max = 0
+tt.damage_type = DAMAGE_ARMOR
 
 tt = RT("mod_asra_poison", "mod_poison")
 tt.modifier.duration = 99999
@@ -20240,6 +20237,8 @@ tt.hero.skills.conflagration.xp_gain = {80, 160, 240}
 tt.hero.skills.conflagration.cooldown = {18, 16, 14}
 tt.hero.skills.fear_dragon = CC("hero_skill")
 tt.hero.skills.fear_dragon.cooldown = {20, 18, 16}
+tt.hero.skills.fear_dragon.cooldown = {20, 18, 16}
+tt.hero.skills.fear_dragon.duration = {3, 5, 7}
 tt.hero.skills.fear_dragon.xp_level_steps = {
 	[1] = 1,
 	[4] = 2,
@@ -20255,6 +20254,9 @@ tt.hero.skills.dragon_spawn.xp_level_steps = {
 }
 tt.hero.skills.dragon_spawn.xp_gain = {80, 160, 240}
 tt.hero.skills.remove_existence = CC("hero_skill")
+tt.hero.skills.remove_existence.cooldown = {70, 60, 50}
+tt.hero.skills.remove_existence.damage_min = {40, 60, 90}
+tt.hero.skills.remove_existence.damage_max = {60, 90, 120}
 tt.hero.skills.remove_existence.xp_level_steps = {
 	[4] = 1,
 	[7] = 2,
@@ -20306,16 +20308,22 @@ tt.sound_events.respawn = "group_beresad_taunt"
 tt.vis.bans = bor(tt.vis.bans, F_BURN)
 tt.vis.flags = bor(tt.vis.flags, F_FLYING)
 tt.ranged.attacks[1] = CC("bullet_attack")
+tt.ranged.attacks[1].basic_attack = true
+tt.ranged.attacks[1].skill = "range_unit"
+tt.ranged.attacks[1].chance = 1
 tt.ranged.attacks[1].bullet = "bolt_beresad"
 tt.ranged.attacks[1].bullet_start_offset = {v(45, 85)}
-tt.ranged.attacks[1].cooldown = 2.2
+tt.ranged.attacks[1].cooldown = 1.5
 tt.ranged.attacks[1].min_range = 0
-tt.ranged.attacks[1].max_range = 220
+tt.ranged.attacks[1].max_range = 175
 tt.ranged.attacks[1].shoot_time = fts(10)
+tt.ranged.attacks[1].sync_animation = true
 tt.ranged.attacks[1].animation = "attack"
 tt.ranged.attacks[1].sound = "hero_beresad_attack_shot"
 tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
 tt.ranged.attacks[1].vis_flags = bor(F_RANGED)
+tt.ranged.attacks[1].ignore_hit_offset = true
+tt.ranged.attacks[1].estimated_flight_time = 1
 tt.ranged.attacks[2] = CC("bullet_attack")
 tt.ranged.attacks[2].disabled = true
 tt.ranged.attacks[2].bullet = "controller_aura_beresad_firestorm"
@@ -20334,7 +20342,7 @@ tt.ranged.attacks[3].bullet = "ray_beresad_disintegrate"
 tt.ranged.attacks[3].bullet_start_offset = {v(45, 85)}
 tt.ranged.attacks[3].cooldown = 70
 tt.ranged.attacks[3].min_range = 0
-tt.ranged.attacks[3].max_range = 220
+tt.ranged.attacks[3].max_range = 175
 tt.ranged.attacks[3].shoot_time = fts(23)
 tt.ranged.attacks[3].animation = "remove"
 tt.ranged.attacks[3].xp_from_skill = "remove_existence"
@@ -20635,12 +20643,13 @@ tt.render.sprites[1].draw_order = 10
 tt = RT("hero_dianyun", "hero")
 AC(tt, "ranged", "timed_attacks", "auras")
 tt.hero.level_stats.hp_max = {385, 406, 428, 449, 470, 492, 514, 535, 557, 578}
+tt.hero.level_stats.regen_health = {22, 25, 28, 31, 34, 37, 40, 43, 46, 49}
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-tt.hero.level_stats.ranged_damage_min = {2, 4, 6, 9, 11, 13, 16, 18, 19, 21}
-tt.hero.level_stats.ranged_damage_max = {6, 11, 16, 20, 25, 31, 35, 40, 44, 49}
+tt.hero.level_stats.ranged_damage_min = {6, 7, 8, 9, 10, 11, 13, 15, 17, 19}
+tt.hero.level_stats.ranged_damage_max = {6, 10, 14, 18, 22, 27, 31, 35, 39, 43}
 tt.hero.skills.ricochet = CC("hero_skill")
-tt.hero.skills.ricochet.damage_min = {34, 46, 57}
-tt.hero.skills.ricochet.damage_max = {34, 46, 57}
+tt.hero.skills.ricochet.damage_min = {45, 60, 75}
+tt.hero.skills.ricochet.damage_max = {45, 60, 75}
 tt.hero.skills.ricochet.bounce = {3, 5, 7}
 tt.hero.skills.ricochet.xp_level_steps = {
 	[2] = 1,
@@ -20651,22 +20660,22 @@ tt.hero.skills.ricochet.xp_gain = {100, 200, 300}
 tt.hero.skills.lord_storm = CC("hero_skill")
 tt.hero.skills.lord_storm.max_targets = {2, 3, 4}
 tt.hero.skills.lord_storm.xp_level_steps = {
-	[3] = 1,
-	[6] = 2,
-	[9] = 3
+	[1] = 1,
+	[4] = 2,
+	[7] = 3
 }
 tt.hero.skills.lord_storm.xp_gain = {80, 160, 240}
 tt.hero.skills.divine_rain = CC("hero_skill")
 tt.hero.skills.divine_rain.duration = 5
 tt.hero.skills.divine_rain.healing_points_tick = {8, 16, 24}
 tt.hero.skills.divine_rain.xp_level_steps = {
-	[4] = 1,
-	[7] = 2,
-	[10] = 3
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
 }
 tt.hero.skills.divine_rain.xp_gain = {100, 200, 300}
 tt.hero.skills.supreme_wave = CC("hero_skill")
-tt.hero.skills.supreme_wave.stun_duration = {2, 3, 4}
+tt.hero.skills.supreme_wave.stun = {2, 3, 4}
 tt.hero.skills.supreme_wave.xp_level_steps = {
 	[3] = 1,
 	[6] = 2,
@@ -20689,12 +20698,13 @@ tt.regen.cooldown = 1
 tt.health_bar.offset = v(0, 130)
 tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
 tt.hero.fn_level_up = scripts.hero_dianyun.level_up
+tt.hero.tombstone_show_time = fts(90)
 tt.info.fn = scripts.hero_basic.get_info
 tt.info.hero_portrait = "kr4_hero_portraits_0013"
 tt.info.portrait = "kr4_info_portraits_heroes_0014"
-tt.main_script.insert = scripts.hero_basic.insert
+tt.main_script.insert = scripts.hero_dianyun.insert
 tt.main_script.update = scripts.hero_dianyun.update
-tt.motion.max_speed = 90
+tt.motion.max_speed = 42
 tt.nav_rally.requires_node_nearby = false
 tt.nav_grid.ignore_waypoints = true
 tt.nav_grid.valid_terrains = TERRAIN_ALL_MASK
@@ -20709,6 +20719,7 @@ tt.render.sprites[1].exo = true
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "hero_dianyun_shadow"
+tt.render.sprites[2].offset = v(0, 0)
 tt.render.sprites[2].z = Z_DECALS + 1
 tt.render.sprites[3] = CC("sprite")
 tt.render.sprites[3].prefix = "hero_storm_dragon_cloud_l1"
@@ -20789,54 +20800,86 @@ tt.vis.flags = bor(tt.vis.flags, F_FLYING)
 tt.vis.bans = bor(tt.vis.bans, F_EAT, F_NET)
 tt.ranged.attacks[1] = CC("bullet_attack")
 tt.ranged.attacks[1].cooldown = 2
+tt.ranged.attacks[1].bullet = "hero_dianyun_lightning"
 tt.ranged.attacks[1].min_range = 0
 tt.ranged.attacks[1].max_range = 200
-tt.ranged.attacks[1].animation = "attack"
-tt.ranged.attacks[1].bullet = "hero_dianyun_lightning"
-tt.ranged.attacks[1].shoot_time = fts(14)
-tt.ranged.attacks[1].controller = "controller_lord_storm"
-tt.timed_attacks.list[1] = CC("spawn_attack")
-tt.timed_attacks.list[1].cooldown = 18
+tt.ranged.attacks[1].max_targets = 1
+tt.ranged.attacks[1].vis_bans = bor(F_NIGHTMARE)
+tt.ranged.attacks[1].vis_flags = bor(F_RANGED)
+tt.ranged.attacks[1].xp_gain_factor = 2
+-- ricochet
+tt.ranged.attacks[2] = CC("bullet_attack")
+tt.ranged.attacks[2].disabled = true
+tt.ranged.attacks[2].cooldown = 18
+tt.ranged.attacks[2].min_cooldown = 1
+tt.ranged.attacks[2].min_range = 0
+tt.ranged.attacks[2].max_range = 200
+tt.ranged.attacks[2].bullet = "hero_dianyun_lightning_ricochet_cloud"
+tt.ranged.attacks[2].spawn_pos_offset = v(0, 81)
+tt.ranged.attacks[2].start_fx = "fx_hero_dianyun_lightning_ricochet"
+tt.ranged.attacks[2].start_offset = v(0, 90)
+tt.ranged.attacks[2].vis_bans = bor(F_NIGHTMARE)
+tt.ranged.attacks[2].vis_flags = bor(F_RANGED)
+tt.ranged.attacks[2].min_targets = 2
+tt.ranged.attacks[2].crowds_range = 90
+tt.ranged.attacks[2].xp_from_skill = "ricochet"
+-- divine rain
+tt.timed_attacks.list[1] = CC("aura_attack")
 tt.timed_attacks.list[1].disabled = true
-tt.timed_attacks.list[1].animation = "skill1"
-tt.timed_attacks.list[1].entity = "hero_dianyun_lightning_ricochet_cloud"
-tt.timed_attacks.list[1].spawn_time = fts(10)
-tt.timed_attacks.list[1].xp_from_skill = "ricochet"
+tt.timed_attacks.list[1].aura = "aura_hero_dianyun_divine_rain"
+tt.timed_attacks.list[1].min_targets = 2
+tt.timed_attacks.list[1].crowds_range = 50
+tt.timed_attacks.list[1].health_trigger_factor = 0.75
+tt.timed_attacks.list[1].min_range = 0
+tt.timed_attacks.list[1].max_range = 110
+tt.timed_attacks.list[1].cast_time = fts(20)
+tt.timed_attacks.list[1].animation = "healingRain"
+tt.timed_attacks.list[1].vis_flags = bor(F_RANGED)
+tt.timed_attacks.list[1].vis_bans = bor(F_ENEMY)
+tt.timed_attacks.list[1].xp_from_skill = "divine_rain"
+tt.timed_attacks.list[1].cooldown = 18
+-- supreme wave
 tt.timed_attacks.list[2] = CC("aura_attack")
-tt.timed_attacks.list[2].cooldown = 15
 tt.timed_attacks.list[2].disabled = true
-tt.timed_attacks.list[2].animation = "skill2"
-tt.timed_attacks.list[2].bullet = "aura_hero_dianyun_divine_rain"
-tt.timed_attacks.list[2].xp_from_skill = "divine_rain"
-tt.timed_attacks.list[3] = CC("spawn_attack")
-tt.timed_attacks.list[3].cooldown = 21
-tt.timed_attacks.list[3].disabled = true
-tt.timed_attacks.list[3].animation = "skill3"
-tt.timed_attacks.list[3].entity = "controller_decal_hero_dianyun_supreme_wave_spawner"
-tt.timed_attacks.list[3].spawn_time = fts(20)
-tt.timed_attacks.list[3].xp_from_skill = "supreme_wave"
-tt.auras.list[1] = CC("aura")
+tt.timed_attacks.list[2].cast_time = fts(24)
+tt.timed_attacks.list[2].entity = "aura_hero_dianyun_supreme_wave"
+tt.timed_attacks.list[2].floor_decal = "floor_decal_hero_dianyun_supreme_wave"
+tt.timed_attacks.list[2].controller = "controller_decal_hero_dianyun_supreme_wave_spawner"
+tt.timed_attacks.list[2].animation = "supremeWave"
+tt.timed_attacks.list[2].vis_flags = bor(F_RANGED)
+tt.timed_attacks.list[2].vis_bans = bor(F_NIGHTMARE, F_CLIFF, F_BOSS)
+tt.timed_attacks.list[2].min_range = 0
+tt.timed_attacks.list[2].max_range = 100
+tt.timed_attacks.list[2].min_targets = 3
+tt.timed_attacks.list[2].crowds_range = 150
+tt.timed_attacks.list[2].start_nodes_offset = 3
+tt.timed_attacks.list[2].distance_to_start_node = 20
+tt.timed_attacks.list[2].max_objects = 5
+tt.timed_attacks.list[2].nodes_between_objects = 6
+tt.timed_attacks.list[2].delay_between_objects = fts(3)
+tt.timed_attacks.list[2].xp_from_skill = "supreme_wave"
+tt.timed_attacks.list[2].cooldown = 21
+tt.auras.list[1] = CC("aura_attack")
 tt.auras.list[1].cooldown = 0
-tt.auras.list[1].disabled = false
-tt.auras.list[1].aura = "aura_dianyun_passive"
-tt.controller_lord_storm = "controller_lord_storm"
+tt.auras.list[1].name = "aura_dianyun_passive"
+tt._aura_lantern = nil
 tt.ultimate = {
 	ts = 0,
 	cooldown = 32,
 	disabled = true
 }
 
-tt = RT("hero_dianyun_lightning", "bolt")
+tt = RT("hero_dianyun_lightning", "bullet")
 tt.main_script.update = scripts.hero_dianyun_lightning.update
 tt.render.sprites[1].name = "hero_storm_dragon_lightning"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].anchor = v(0, 0.5)
 tt.render.sprites[1].r = -math.pi / 2
-tt.bullet.hit_time = fts(2)
+tt.bullet.hit_time = fts(3)
 tt.bullet.hit_fx = "fx_hero_dianyun_lightning_hit"
-tt.bullet.mod = "mod_hero_dianyun_lightning"
+tt.bullet.mods = {"mod_hero_dianyun_lightning"}
+tt.bullet.xp_gain_factor = 2
 tt.bullet.damage_type = DAMAGE_MAGICAL
-tt.sound_events.insert = "WarmongerMageAttack"
 
 tt = RT("fx_hero_dianyun_lightning_hit", "fx")
 tt.render.sprites[1].name = "hero_storm_dragon_lightning_hit"
@@ -20846,7 +20889,7 @@ tt = RT("mod_hero_dianyun_lightning", "mod_stun")
 AC(tt, "tween")
 tt.modifier.vis_flags = bor(F_STUN, F_MOD)
 tt.modifier.vis_bans = bor(F_BOSS)
-tt.modifier.duration = fts(20)
+tt.modifier.duration = 0.9
 tt.render.sprites[1].prefix = "hero_storm_dragon_lightning_modifier"
 tt.render.sprites[1].anchor = v(0.5, 0.625)
 tt.render.sprites[1].size_names = nil
@@ -20854,12 +20897,7 @@ tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{tt.modifier.duration - fts(8), 255}, {tt.modifier.duration, 0}}
 
 tt = RT("controller_lord_storm")
-AC(tt, "pos", "main_script")
-tt.bullet = "hero_dianyun_lightning"
-tt.spawn_pos_offset = v(0, 81)
-tt.delay_between_rays = 0.5
-tt.max_targets = 1
-tt.range = 200
+AC(tt, "main_script")
 tt.main_script.update = scripts.controller_lord_storm.update
 
 tt = RT("hero_dianyun_lightning_ricochet_cloud", "bolt")
@@ -20898,11 +20936,11 @@ tt.bullet.damage_type = DAMAGE_MAGICAL
 tt.sound_events.insert = "WarmongerMageAttack"
 
 tt = RT("fx_hero_dianyun_lightning_ricochet", "fx")
-for i = 1, 3, 1 do
+for i = 1, 3 do
 	if i > 1 then
 		tt.render.sprites[i] = CC("sprite")
 	end
-	tt.render.sprites[i].name = "hero_storm_dragon_lightning_ricochet_fx_l" .. i
+	tt.render.sprites[i].name = "hero_storm_dragon_lightning_ricochet_fx_layer" .. i
 	tt.render.sprites[i].anchor = v(0.5, 0.5)
 	tt.render.sprites[i].z = Z_FLYING_HEROES + 1
 end
@@ -20979,11 +21017,10 @@ tt.tween.props[2].keys = {{0, v(0, 0)}, {fts(14), v(0, 0)}, {fts(14), v(0.7, 0.7
 tt.tween.props[2].sprite_id = 1
 
 tt = RT("controller_decal_hero_dianyun_supreme_wave_spawner")
-AC(tt, "main_script")
+AC(tt, "pos", "main_script")
 tt.main_script.update = scripts.controller_decal_hero_dianyun_supreme_wave_spawner.update
 
 tt = RT("aura_dianyun_passive", "aura")
-AC(tt, "render", "tween")
 tt.aura.mod = "mod_dianyun_passive"
 tt.aura.cycle_time = fts(3)
 tt.aura.duration = -1
@@ -20991,12 +21028,12 @@ tt.aura.radius = 200
 tt.aura.track_source = true
 tt.aura.track_dead = true
 tt.aura.vis_flags = F_MOD
+tt.aura.vis_bans = F_FRIEND
 tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 
 tt = RT("mod_dianyun_passive", "modifier")
-AC(tt, "render")
-tt.modifier.duration = fts(4)
+tt.modifier.duration = -1
 tt.modifier.vis_flags = F_MOD
 tt.main_script.insert = scripts.mod_dianyun_passive.insert
 tt.main_script.remove = scripts.mod_dianyun_passive.remove
@@ -21016,8 +21053,10 @@ tt.entity = "hero_dianyun_electric_son"
 tt.sound_events.insert = "HeroDianyunSon"
 
 tt = RT("hero_dianyun_electric_son", "decal_scripted")
-AC(tt, "ranged")
+AC(tt, "ranged", "idle_flip")
 tt.main_script.update = scripts.hero_dianyun_electric_son.update
+tt.duration = 240
+tt.bullets_to_death = 3
 tt.render.sprites[1].prefix = "hero_storm_dragon_electric_son"
 tt.render.sprites[1].anchor = v(0.5, 0.16)
 tt.render.sprites[2] = CC("sprite")

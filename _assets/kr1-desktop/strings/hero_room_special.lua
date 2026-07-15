@@ -3277,7 +3277,7 @@ map["地狱火雨"] = str(cooldown_str(), "召唤地狱火雨覆盖大范围区�
 set_hero("hero_dianyun")
 
 set_skill(h.hero.skills.ricochet)
-cooldown = h.timed_attacks.list[1].cooldown
+cooldown = h.ranged.attacks[2].cooldown
 d[1].damage_min = s.damage_min[max_lvl]
 d[1].damage_max = s.damage_max[max_lvl]
 d[1].damage_type = DAMAGE_MAGICAL
@@ -3287,13 +3287,13 @@ set_skill(h.hero.skills.lord_storm)
 map["青霜流虹"] = str("普通攻击会同时攻击最多", s.max_targets[max_lvl], "个目标。")
 
 set_skill(h.hero.skills.divine_rain)
-cooldown = h.timed_attacks.list[2].cooldown
+cooldown = h.timed_attacks.list[1].cooldown
 duration = s.duration
 map["轻雷霁光"] = str(cooldown_str(), "降下神圣之雨，每秒为周围友军回复", s.healing_points_tick[max_lvl], "点生命值，持续", duration, "秒。")
 
 set_skill(h.hero.skills.supreme_wave)
-cooldown = h.timed_attacks.list[3].cooldown
-map["势崩江河"] = str(cooldown_str(), "释放一道能量波，击晕路径上的敌人", s.stun_duration[max_lvl], "秒。")
+cooldown = h.timed_attacks.list[2].cooldown
+map["势崩江河"] = str(cooldown_str(), "释放一道能量波，击晕路径上的敌人", s.stun[max_lvl], "秒。")
 
 set_skill(h.hero.skills.ultimate)
 get_cooldown()

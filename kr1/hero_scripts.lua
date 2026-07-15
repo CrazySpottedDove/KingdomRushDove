@@ -21,6 +21,7 @@ local V = require("lib.klua.vector")
 local v = V.v
 local W = require("wave_db")
 local bit = require("bit")
+require("table.clear")
 local band = bit.band
 local bor = bit.bor
 local bnot = bit.bnot
@@ -40539,35 +40540,67 @@ function scripts.hero_dianyun.level_up(this, store)
 	b.bullet.damage_min = ls.ranged_damage_min[hl]
 
 	upgrade_skill(this, "ricochet", function(this, s)
-		this.timed_attacks.list[1].disabled = nil
+		this.ranged.attacks[2].disabled = nil
+
+		local cloud = E:get_template("hero_dianyun_lightning_ricochet_cloud")
+		cloud.bullet.damage_min = s.damage_min[s.level]
+		cloud.bullet.damage_max = s.damage_max[s.level]
+		cloud.bounce = s.bounce[s.level]
+
+		local bounce = E:get_template(cloud.bounce_bullet)
+		bounce.bullet.damage_min = s.damage_min[s.level]
+		bounce.bullet.damage_max = s.damage_max[s.level]
 	end)
 
 	upgrade_skill(this, "lord_storm", function(this, s)
-		local c = E:get_template("controller_lord_storm")
-		c.max_targets = s.max_targets[s.level]
+		this.ranged.attacks[1].max_targets = s.max_targets[s.level]
 	end)
 
 	upgrade_skill(this, "divine_rain", function(this, s)
-		this.timed_attacks.list[2].disabled = nil
+		this.timed_attacks.list[1].disabled = nil
+
+		local aura = E:get_template("aura_hero_dianyun_divine_rain")
+		local mod = E:get_template(aura.aura.mods[1])
+		mod.hps.heal_min = s.healing_points_tick[s.level]
+		mod.hps.heal_max = s.healing_points_tick[s.level]
 	end)
 
 	upgrade_skill(this, "supreme_wave", function(this, s)
-		this.timed_attacks.list[3].disabled = nil
+		this.timed_attacks.list[2].disabled = nil
+
+		local aura = E:get_template("aura_hero_dianyun_supreme_wave")
+		local mod = E:get_template(aura.aura.mods[1])
+		mod.modifier.duration = s.stun[s.level]
 	end)
 
 	upgrade_skill(this, "ultimate", function(this, s)
 		this.ultimate.disabled = nil
+
 		local u = E:get_template("hero_dianyun_ultimate")
-		u.bullets_to_death = s.bullets_to_death[s.level]
+		local entity = E:get_template(u.entity)
+		entity.bullets_to_death = s.bullets_to_death[s.level]
 	end)
+end
+
+function scripts.hero_dianyun.insert(this, store)
+	this.hero.fn_level_up(this, store, true)
+	this.ranged.order = U.attack_order(this.ranged.attacks)
+	local e = E:create_entity("aura_dianyun_passive")
+	e.pos:copy(this.pos)
+	e.aura.source_id = this.id
+	e.aura.ts = store.tick_ts
+	queue_insert(store, e)
+	e = E:create_entity("controller_lord_storm")
+	e.source_id = this.id
+	queue_insert(store, e)
+	return true
 end
 
 function scripts.hero_dianyun.update(this, store)
 	local h = this.health
-	local ricochet_attack = this.timed_attacks.list[1]
-	local divine_rain_attack = this.timed_attacks.list[2]
-	local supreme_wave_attack = this.timed_attacks.list[3]
-	local brk
+	local ricochet_attack = this.ranged.attacks[2]
+	local divine_rain_attack = this.timed_attacks.list[1]
+	local supreme_wave_attack = this.timed_attacks.list[2]
 
 	U.y_animation_play_once_specific(this, "levelup", nil, store.tick_ts, 1)
 	this.health_bar.hidden = false
@@ -40575,6 +40608,12 @@ function scripts.hero_dianyun.update(this, store)
 	while true do
 		if h.dead then
 			SU.y_hero_death_and_respawn(store, this)
+			-- 恢复 aura。
+			local e = E:create_entity("aura_dianyun_passive")
+			e.pos:copy(this.pos)
+			e.aura.source_id = this.id
+			e.aura.ts = store.tick_ts
+			queue_insert(store, e)
 		end
 
 		while this.nav_rally.new do
@@ -40588,29 +40627,48 @@ function scripts.hero_dianyun.update(this, store)
 		end
 
 		if ready_to_use_skill(ricochet_attack, store) then
-			local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, ricochet_attack.max_range, ricochet_attack.vis_flags, ricochet_attack.vis_bans)
-			if target then
-				U.y_animation_play_once_specific(this, ricochet_attack.animation, nil, store.tick_ts, 1)
-				if not SU.y_hero_wait(store, this, ricochet_attack.spawn_time) then
-					ricochet_attack.ts = store.tick_ts
-					local e = E:create_entity(ricochet_attack.entity)
-					e.pos = V.vclone(this.pos)
-					e.bullet.target_id = target.id
-					e.level = this.hero.skills.ricochet.level
-					queue_insert(store, e)
-					SU.hero_gain_xp_from_skill(this, this.hero.skills.ricochet)
+			local targets = U.find_enemies_in_range(store.enemies, this.pos, ricochet_attack.min_range, ricochet_attack.max_range, ricochet_attack.vis_flags, ricochet_attack.vis_bans)
+			local amount = 0
+			local crowd_target
+			if targets and #targets >= ricochet_attack.min_targets then
+				for _, t in ipairs(targets) do
+					local crowd = U.find_enemies_in_range(store.enemies, t.pos, 0, ricochet_attack.crowds_range, ricochet_attack.vis_flags, ricochet_attack.vis_bans)
+					if crowd and #crowd >= ricochet_attack.min_targets and #crowd > amount then
+						amount = #crowd
+						crowd_target = crowd[1]
+					end
 				end
-				goto label_dianyun_0
+			end
+			if crowd_target then
+				local fx = E:create_entity(ricochet_attack.start_fx)
+				fx.pos = this.pos
+				for _, sprite in ipairs(fx.render.sprites) do
+					sprite.ts = store.tick_ts
+					sprite.flip_x = this.render.sprites[1].flip_x
+					sprite.offset = ricochet_attack.start_offset
+				end
+				queue_insert(store, fx)
+				local bullet = E:create_entity(ricochet_attack.bullet)
+				bullet.pos = crowd_target.pos
+				bullet.spawn_pos_offset = ricochet_attack.spawn_pos_offset
+				bullet.bullet.source_id = this.id
+				bullet.bullet.target_id = crowd_target.id
+				bullet.level = this.hero.skills.ricochet.level
+				bullet.bullet.damage_factor = this.unit.damage_factor
+				queue_insert(store, bullet)
+				ricochet_attack.ts = store.tick_ts
+				SU.hero_gain_xp_from_skill(this, this.hero.skills.ricochet)
 			else
 				ricochet_attack.ts = ricochet_attack.ts + 0.1
 			end
+			goto label_dianyun_0
 		end
 
 		if ready_to_use_skill(divine_rain_attack, store) then
 			U.y_animation_play_once_specific(this, divine_rain_attack.animation, nil, store.tick_ts, 1)
 			if not SU.y_hero_wait(store, this, divine_rain_attack.cast_time) then
 				divine_rain_attack.ts = store.tick_ts
-				local aura = E:create_entity(divine_rain_attack.bullet)
+				local aura = E:create_entity(divine_rain_attack.aura)
 				aura.pos = V.vclone(this.pos)
 				aura.aura.source_id = this.id
 				queue_insert(store, aura)
@@ -40621,10 +40679,13 @@ function scripts.hero_dianyun.update(this, store)
 
 		if ready_to_use_skill(supreme_wave_attack, store) then
 			U.y_animation_play_once_specific(this, supreme_wave_attack.animation, nil, store.tick_ts, 1)
-			if not SU.y_hero_wait(store, this, supreme_wave_attack.spawn_time) then
+			if not SU.y_hero_wait(store, this, supreme_wave_attack.cast_time) then
 				supreme_wave_attack.ts = store.tick_ts
-				local spawner = E:create_entity(supreme_wave_attack.entity)
+				local spawner = E:create_entity(supreme_wave_attack.controller)
 				spawner.pos = V.vclone(this.pos)
+				spawner.entity = supreme_wave_attack.entity
+				spawner.floor_decal = supreme_wave_attack.floor_decal
+				spawner.delay_between_objects = supreme_wave_attack.delay_between_objects
 				queue_insert(store, spawner)
 				SU.hero_gain_xp_from_skill(this, this.hero.skills.supreme_wave)
 			end
@@ -40648,11 +40709,8 @@ function scripts.hero_dianyun.update(this, store)
 			end
 		end
 
-		brk = SU.y_soldier_ranged_attacks(store, this)
-		if not brk then
-			SU.soldier_idle(store, this)
-			SU.soldier_regen(store, this)
-		end
+		SU.soldier_idle(store, this)
+		SU.soldier_regen(store, this)
 
 		::label_dianyun_0::
 		coroutine.yield()
@@ -40669,60 +40727,81 @@ function scripts.hero_dianyun_ultimate.update(this, store)
 	queue_remove(store, this)
 end
 
-scripts.controller_lord_storm = {}
+scripts.controller_lord_storm = {
+	update = function(this, store)
+		local hitted_targets = {}
+		local function filter_fn(e)
+			return not table.arraycontains(hitted_targets, e.id)
+		end
 
-function scripts.controller_lord_storm.update(this, store)
-	local max_targets = this.max_targets or 1
-	local count = 0
-	local targets = U.find_enemies_in_range(store.enemies, this.pos, 0, this.range, F_RANGED, 0)
-	if targets then
-		for _, target in ipairs(targets) do
-			if count >= max_targets then
-				break
+		while true do
+			local hero = store.entities[this.source_id]
+			if not hero then
+				queue_remove(store, this)
+				return
 			end
-			local b = E:create_entity(this.bullet)
-			b.pos = V.vclone(this.pos)
-			b.bullet.target_id = target.id
-			b.bullet.damage_max = this.damage_max
-			b.bullet.damage_min = this.damage_min
-			queue_insert(store, b)
-			count = count + 1
+			if not hero.health.dead then
+				local a = hero.ranged.attacks[1]
+				if ready_to_attack(a, store, hero.unit.cooldown_factor) then
+					if U.find_first_enemy_in_range_filter_off(hero.pos, a.max_range, a.vis_flags, a.vis_bans) then
+						a.ts = store.tick_ts
+
+						for i = 1, a.max_targets do
+							local target = U.detect_foremost_enemy_in_range_filter_on(hero.pos, a.max_range, a.vis_flags, a.vis_bans, filter_fn)
+							if target then
+								local bullet = E:create_entity(a.bullet)
+								bullet.bullet.source_id = hero.id
+								bullet.bullet.target_id = target.id
+								bullet.bullet.xp_dest_id = hero.id
+								bullet.bullet.damage_factor = hero.unit.damage_factor
+								bullet.render.sprites[1].ts = store.tick_ts
+								queue_insert(store, bullet)
+								hitted_targets[#hitted_targets + 1] = target.id
+								U.y_wait_unconditional(store, 0.5 * hero.unit.cooldown_factor)
+							else
+								break
+							end
+						end
+
+						table.clear(hitted_targets)
+					else
+						a.ts = a.ts + 0.1
+					end
+				end
+			end
+			coroutine.yield()
 		end
 	end
-	queue_remove(store, this)
-end
+}
 
-scripts.hero_dianyun_lightning = {}
+scripts.hero_dianyun_lightning = {
+	update = function(this, store)
+		local b = this.bullet
+		local target = store.entities[b.target_id]
+		if not target then
+			queue_remove(store, this)
+			return
+		end
 
-function scripts.hero_dianyun_lightning.update(this, store)
-	local b = this.bullet
-	local target = b.target_id and store.entities[b.target_id]
-	if not target then
+		-- const&
+		this.pos = target.pos
+		this.render.sprites[1].offset.y = target.unit.hit_offset.y + 81
+
+		U.y_wait_unconditional(store, b.hit_time)
+		if not target.health.dead then
+			SU.apply_single_bullet_simulation(this, target, store)
+		end
+
+		S:queue("WarmongerMageAttack")
+		local e = E:create_entity(b.hit_fx)
+		e.pos:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+		e.render.sprites[1].ts = store.tick_ts
+		queue_insert(store, e)
+
+		U.y_animation_wait_default(this, 1)
 		queue_remove(store, this)
-		return
 	end
-	local speed = b.max_speed or 800
-	local dist = V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y)
-	while dist > speed * store.tick_length * 2 do
-		if not store.entities[b.target_id] then
-			break
-		end
-		target = store.entities[b.target_id]
-		local dx, dy = target.pos.x - this.pos.x, target.pos.y - this.pos.y
-		dist = V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y)
-		local nx, ny = V.normalize(dx, dy)
-		this.pos.x = this.pos.x + nx * speed * store.tick_length
-		this.pos.y = this.pos.y + ny * speed * store.tick_length
-		coroutine.yield()
-	end
-	if target and not target.health.dead then
-		SU.apply_single_bullet_simulation(this, store)
-	end
-	if b.hit_fx then
-		SU.insert_sprite(store, b.hit_fx, this.pos)
-	end
-	queue_remove(store, this)
-end
+}
 
 scripts.hero_dianyun_lightning_ricochet_cloud = {}
 
@@ -40836,51 +40915,92 @@ scripts.mod_dianyun_passive = {}
 
 function scripts.mod_dianyun_passive.insert(this, store)
 	local target = store.entities[this.modifier.target_id]
-	if not target or not target.health or target.health.dead or target.unit.is_enemy then
+	if not target or target.health.dead then
 		return false
 	end
 	return true
 end
 
 function scripts.mod_dianyun_passive.remove(this, store)
-	local target = store.entities[this.modifier.target_id]
-	if target and target.health and target.health.dead then
-		local lantern = E:create_entity("fx_hero_dianyun_lantern")
-		if lantern then
-			lantern.pos = V.vclone(this.pos)
-			queue_insert(store, lantern)
-		end
+	local m = this.modifier
+	local target = store.entities[m.target_id]
+	local aura = store.entities[m.source_id]
+	if not aura or not target then
+		return true
 	end
+	local fx = E:create_entity(this.fx)
+	fx.pos = V.vclone(target.pos)
+	fx.render.sprites[1].ts = store.tick_ts
+	queue_insert(store, fx)
+	store.player_gold = store.player_gold + this.gold_reward
 	return true
 end
 
 scripts.hero_dianyun_electric_son = {}
 
 function scripts.hero_dianyun_electric_son.update(this, store)
-	local spawn_ts = store.tick_ts
-	U.y_animation_play(this, "spawn", nil, store.tick_ts, 1)
-	while store.tick_ts < spawn_ts + fts(25) do
-		coroutine.yield()
-	end
-	local attack_ts = store.tick_ts
-	while store.tick_ts < spawn_ts + 180 do
-		if store.tick_ts - attack_ts > 1.5 then
-			local target = U.find_enemies_in_range(store.enemies, this.pos, 0, 200, F_RANGED, 0)
-			if target and #target > 0 then
-				local t = target[1]
-				U.y_animation_play(this, "attack", nil, store.tick_ts, 1)
-				local bolt = E:create_entity("bolt_hero_dianyun_electric_son")
-				bolt.pos = V.vclone(this.pos)
-				bolt.bullet.target_id = t.id
-				bolt.bullet.damage_max = 10 * this.damage_factor
-				bolt.bullet.damage_min = 5 * this.damage_factor
-				queue_insert(store, bolt)
-				attack_ts = store.tick_ts
+	local attack = this.ranged.attacks[1]
+
+	local function idle()
+		U.animation_start(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop, 1)
+		if store.tick_ts - this.idle_flip.ts > 2 * store.tick_length then
+			this.idle_flip.ts_counter = 0
+		end
+		this.idle_flip.ts = store.tick_ts
+		this.idle_flip.ts_counter = this.idle_flip.ts_counter + store.tick_length
+		if this.idle_flip.ts_counter > this.idle_flip.cooldown then
+			this.idle_flip.ts_counter = 0
+			if math.random() < this.idle_flip.chance then
+				this.render.sprites[1].flip_x = not this.render.sprites[1].flip_x
+			end
+			if this.idle_flip.animations then
+				this.idle_flip.last_animation = table.random(this.idle_flip.animations)
 			end
 		end
+	end
+
+	U.y_animation_play(this, "spawn", nil, store.tick_ts)
+	attack.ts = store.tick_ts - attack.cooldown
+	local start_ts = store.tick_ts
+	local bullets_shot = 0
+
+	while true do
+		if store.tick_ts - start_ts > this.duration or bullets_shot >= (this.bullets_to_death or 3) then
+			U.y_animation_play(this, "death", nil, store.tick_ts)
+			break
+		end
+
+		if store.tick_ts - attack.ts >= attack.cooldown then
+			local target = U.find_foremost_enemy(store.entities, this.pos, attack.min_range, attack.max_range, nil, attack.vis_flags, attack.vis_bans)
+			if target and target.health and not target.health.dead and target.pos then
+				local ts = store.tick_ts
+				local an, af, ai = U.animation_name_facing_point(this, attack.animation, target.pos)
+				U.animation_start(this, an, af, store.tick_ts, false, 1)
+				U.y_wait(store, attack.shoot_time)
+				local b = E:create_entity(attack.bullet)
+				local flipSign = af and -1 or 1
+				b.bullet.from = V.v(this.pos.x + attack.bullet_start_offset.x * flipSign, this.pos.y + attack.bullet_start_offset.y)
+				b.bullet.to = V.v(target.pos.x, target.pos.y)
+				if target.unit and target.unit.hit_offset then
+					b.bullet.to.x = target.pos.x + target.unit.hit_offset.x
+					b.bullet.to.y = target.pos.y + target.unit.hit_offset.y
+				end
+				b.bullet.target_id = target.id
+				b.bullet.source_id = this.id
+				b.pos = V.vclone(b.bullet.from)
+				queue_insert(store, b)
+				bullets_shot = bullets_shot + 1
+				attack.ts = ts
+				U.y_animation_wait(this)
+			else
+				attack.ts = attack.ts + 0.2 * FPS
+			end
+		end
+
+		idle()
 		coroutine.yield()
 	end
-	U.y_animation_play(this, "death", nil, store.tick_ts, 1)
+
 	queue_remove(store, this)
 end
 --#endregion hero_dianyun
