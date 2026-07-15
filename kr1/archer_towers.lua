@@ -2893,21 +2893,21 @@ tt.main_script.remove = scripts.tower_barrack.remove
 tt.main_script.update = scripts.tower_swamp_monster.update
 tt.tower.type = "swamp_monster"
 tt.tower.price = 300
-tt.monster_out_offset = v(0, -5)
+tt.monster_out_offset = v(0, 2)
 tt.barrack.max_soldiers = 1
 tt.barrack.soldier_type = "soldier_swamp_monster"
 tt.barrack.rally_range = 150
 tt.barrack.rally_angle_offset = -0.4
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrains_%04i"
-tt.render.sprites[1].offset = v(0, 10)
+tt.render.sprites[1].offset = v(0, 17)
 tt.render.sprites[2].name = "swamp_monster_towers_lvl4_0001"
-tt.render.sprites[2].offset = v(0, 20)
+tt.render.sprites[2].offset = v(0, 27)
 for i = 3, 5 do
 	tt.render.sprites[i] = CC("sprite")
 	tt.render.sprites[i].prefix = "swamp_monster_tower_shooter_lvl4_layer" .. i - 2
 	tt.render.sprites[i].name = "idle"
-	tt.render.sprites[i].offset = v(0, -5)
+	tt.render.sprites[i].offset = v(0, 2)
 	tt.render.sprites[i].anchor.y = 0.228
 	tt.render.sprites[i].group = "layers"
 	tt.render.sprites[i].angles = {
@@ -2920,7 +2920,7 @@ for i = 6, 7 do
 	tt.render.sprites[i] = CC("sprite")
 	tt.render.sprites[i].prefix = "swamp_monster_tower_smoke"
 	tt.render.sprites[i].name = "run"
-	tt.render.sprites[i].offset = v(i == 6 and -5 or 5, 15)
+	tt.render.sprites[i].offset = v(i == 6 and -5 or 5, 22)
 end
 
 tt.attacks.range = 330
@@ -2929,7 +2929,7 @@ tt.attacks.list[1].shoot_time = fts(11)
 tt.attacks.list[1].bullet = "bullet_swamp_monster"
 tt.attacks.list[1].bullet_bomb = "bullet_swamp_monster_bomb"
 tt.attacks.list[1].bullet_bomb_tosky = "bullet_swamp_monster_bomb_tosky"
-tt.attacks.list[1].bullet_start_offset = v(0, 55)
+tt.attacks.list[1].bullet_start_offset = v(0, 62)
 tt.attacks.list[1].cooldown = 2.3
 tt.attacks.list[1].animation = "shoot"
 tt.attacks.list[1].sound = "SwampMonsterAttack"
