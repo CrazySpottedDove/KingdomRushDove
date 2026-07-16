@@ -3160,14 +3160,12 @@ set_skill(h.hero.skills.explosion)
 local radius = s.damage_radius[max_lvl]
 map["暴烈之息"] = str("普通攻击在命中时爆炸，对", radius, "范围内敌人造成伤害。")
 
-blc = balance.hero_eiskalt.cold_fury
 set_skill(h.hero.skills.coldfury)
 cooldown = s.cooldown_time[max_lvl]
 duration = T("aura_chill_eiskalt").aura.duration
 slow_factor = 1 - T("mod_eiskalt_chill").slow.factor
 map["永恒冻土"] = str(cooldown_str(), "艾斯酷特制造一片持续", duration, "秒的冻土带，使敌人减速", slow_factor * 100, "%。")
 
-blc = balance.hero_eiskalt.frosty
 set_skill(h.hero.skills.frosty)
 cooldown = h.timed_attacks.list[1].cooldown
 d[1].damage_min = s.damage_min[max_lvl]
@@ -3176,29 +3174,15 @@ d[1].damage_type = T("aura_eiskalt_rider").damage_type
 cycle_time = T("aura_eiskalt_rider").aura.cycle_time
 map["雪崩"] = str(cooldown_str(), "艾斯酷特召唤一颗巨大的冰球沿路径滚动，对附近的敌人每", cycle_time, "秒造成", damage_str(), "。")
 
-blc = balance.hero_eiskalt.icepeak
 set_skill(h.hero.skills.icepeak)
 cooldown = h.timed_attacks.list[2].cooldown
 local count = s.count[max_lvl]
 map["冰峰"] = str(cooldown_str(), "冰龙召唤", count, "根冰刺，每根造成目标最大生命值30%的真实伤害。该技能仅在存在最大生命值高于750的敌人时才会释放。")
 
-blc = balance.hero_eiskalt.ultimate
 set_skill(h.hero.skills.ultimate)
-get_cooldown()
+cooldown = h.ultimate.cooldown
 duration = s.duration[max_lvl]
 map["冰川风暴"] = str(cooldown_str(), "冰龙释放全部力量，冻结战场上所有敌人，持续", duration, "秒。")
-
-function H.dump()
-	for hero_name, skills in pairs(H) do
-		print("Hero:", hero_name)
-		if type(skills) == "table" then
-			for skill_name, skill_description in pairs(skills) do
-				print(skill_name)
-				print(skill_description)
-			end
-		end
-	end
-end
 
 -- hero_asra
 set_hero("hero_asra")
@@ -3306,6 +3290,18 @@ count = s.bullets_to_death[max_lvl]
 map["雷电之子"] = str(cooldown_str(), "召唤一个雷电之子，自动攻击附近的敌人，每次造成", damage_str(), "，最多攻击", count, "次。")
 
 map["孔明灯"] = str("电云附近200范围内死亡的敌人会化为孔明灯，额外产出1枚金币。")
+
+-- function H.dump()
+-- 	for hero_name, skills in pairs(H) do
+-- 		print("Hero:", hero_name)
+-- 		if type(skills) == "table" then
+-- 			for skill_name, skill_description in pairs(skills) do
+-- 				print(skill_name)
+-- 				print(skill_description)
+-- 			end
+-- 		end
+-- 	end
+-- end
 -- H.dump()
 
 return H

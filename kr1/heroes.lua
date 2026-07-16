@@ -19570,10 +19570,10 @@ b = balance.heroes.hero_eiskalt
 tt = RT("hero_eiskalt", "hero")
 AC(tt, "ranged", "timed_attacks")
 tt.regen.cooldown = 1
-tt.hero.level_stats.armor = b.armor
-tt.hero.level_stats.hp_max = b.hp_max
-tt.hero.level_stats.ranged_damage_min = b.basic_attack.damage_min
-tt.hero.level_stats.ranged_damage_max = b.basic_attack.damage_max
+tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+tt.hero.level_stats.hp_max = {300, 325, 350, 375, 400, 425, 450, 475, 500, 525}
+tt.hero.level_stats.ranged_damage_min = {17, 22, 26, 30, 34, 38, 43, 48, 53, 58}
+tt.hero.level_stats.ranged_damage_max = {23, 30, 36, 43, 50, 58, 65, 72, 79, 85}
 -- 1 爆炸
 tt.hero.skills.explosion = CC("hero_skill")
 tt.hero.skills.explosion.xp_level_steps = {
@@ -19582,7 +19582,7 @@ tt.hero.skills.explosion.xp_level_steps = {
 	[8] = 3
 }
 tt.hero.skills.explosion.xp_gain = {80, 160, 240}
-tt.hero.skills.explosion.damage_radius = b.explosion.damage_radius
+tt.hero.skills.explosion.damage_radius = {40, 60, 80}
 -- 2 冻土
 tt.hero.skills.coldfury = CC("hero_skill")
 tt.hero.skills.coldfury.xp_level_steps = {
@@ -19591,7 +19591,7 @@ tt.hero.skills.coldfury.xp_level_steps = {
 	[9] = 3
 }
 tt.hero.skills.coldfury.xp_gain = {120, 240, 360}
-tt.hero.skills.coldfury.cooldown_time = b.cold_fury.cooldown_time
+tt.hero.skills.coldfury.cooldown_time = {20, 16, 12}
 -- 3 雪球
 tt.hero.skills.frosty = CC("hero_skill")
 tt.hero.skills.frosty.xp_level_steps = {
@@ -19600,8 +19600,8 @@ tt.hero.skills.frosty.xp_level_steps = {
 	[8] = 3
 }
 tt.hero.skills.frosty.xp_gain = {100, 200, 300}
-tt.hero.skills.frosty.damage_min = b.frosty.damage_min
-tt.hero.skills.frosty.damage_max = b.frosty.damage_max
+tt.hero.skills.frosty.damage_min = {10, 20, 30}
+tt.hero.skills.frosty.damage_max = {10, 20, 30}
 -- 4 冰刺
 tt.hero.skills.icepeak = CC("hero_skill")
 tt.hero.skills.icepeak.xp_level_steps = {
@@ -19610,9 +19610,7 @@ tt.hero.skills.icepeak.xp_level_steps = {
 	[9] = 3
 }
 tt.hero.skills.icepeak.xp_gain = {160, 320, 480}
-tt.hero.skills.icepeak.count = b.icepeak.count
-tt.hero.skills.icepeak.damage_min = b.icepeak.damage_min
-tt.hero.skills.icepeak.damage_max = b.icepeak.damage_max
+tt.hero.skills.icepeak.count = {8, 8, 8}
 -- 大招
 tt.hero.skills.ultimate = CC("hero_skill")
 tt.hero.skills.ultimate.xp_level_steps = {
@@ -19623,8 +19621,7 @@ tt.hero.skills.ultimate.xp_level_steps = {
 }
 tt.hero.skills.ultimate.xp_gain = {200, 400, 600, 800}
 tt.hero.skills.ultimate.controller_name = "hero_eiskalt_ultimate"
-tt.hero.skills.ultimate.cooldown = b.ultimate.cooldown
-tt.hero.skills.ultimate.duration = b.ultimate.duration
+tt.hero.skills.ultimate.duration = {3.5, 5, 6.5, 8}
 tt.health.dead_lifetime = 15
 tt.health_bar.offset = v(0, 157)
 tt.health_bar.type = HEALTH_BAR_SIZE_LARGE
@@ -19637,7 +19634,7 @@ tt.info.fn = scripts.hero_basic.get_info
 tt.info.hero_portrait = "kr4_hero_portraits_0012"
 tt.info.portrait = "kr4_info_portraits_heroes_0012"
 tt.main_script.update = scripts.hero_eiskalt.update
-tt.motion.max_speed = b.speed
+tt.motion.max_speed = 90
 tt.nav_rally.requires_node_nearby = false
 tt.nav_grid.ignore_waypoints = true
 tt.nav_grid.valid_terrains = TERRAIN_ALL_MASK
@@ -19667,9 +19664,9 @@ tt.vis.flags = bor(tt.vis.flags, F_FLYING)
 tt.ranged.attacks[1] = CC("bullet_attack")
 tt.ranged.attacks[1].bullet = "fireball_eiskalt"
 tt.ranged.attacks[1].bullet_start_offset = v(46, 52)
-tt.ranged.attacks[1].cooldown = b.basic_attack.cooldown
-tt.ranged.attacks[1].min_range = b.basic_attack.min_range
-tt.ranged.attacks[1].max_range = b.basic_attack.max_range
+tt.ranged.attacks[1].cooldown = 2
+tt.ranged.attacks[1].min_range = 0
+tt.ranged.attacks[1].max_range = 220
 tt.ranged.attacks[1].shoot_time = fts(13)
 tt.ranged.attacks[1].ignore_hit_offset = true
 tt.ranged.attacks[1].animation = "range_attack"
@@ -19689,7 +19686,7 @@ tt.timed_attacks.list[1].range_nodes_min = 10
 tt.timed_attacks.list[1].sound = "HeroEiskaltFrosty"
 tt.timed_attacks.list[2] = CC("spawn_attack")
 tt.timed_attacks.list[2].animation = "icePeaks"
-tt.timed_attacks.list[2].cooldown = 18
+tt.timed_attacks.list[2].cooldown = 21
 tt.timed_attacks.list[2].disabled = true
 tt.timed_attacks.list[2].entity = "eiskalt_icepeaks"
 tt.timed_attacks.list[2].spawn_time = fts(8)
@@ -19713,7 +19710,7 @@ tt.timed_attacks.list[3].vis_flags = bor(F_RANGED, F_MOD, F_AREA)
 tt.timed_attacks.list[3].xp_from_skill = "coldfury"
 tt.ultimate = {
 	ts = 0,
-	cooldown = b.ultimate.cooldown[1],
+	cooldown = 50,
 	disabled = true
 }
 
@@ -19769,9 +19766,9 @@ tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "hero_eiskalt_proyectile_0001"
 tt.render.sprites[1].z = Z_BULLETS
 tt.render.sprites[1].anchor.x = 0.69
-tt.bullet.damage_type = b.basic_attack.damage_type
-tt.bullet.min_speed = b.basic_attack.speed
-tt.bullet.max_speed = b.basic_attack.speed
+tt.bullet.damage_type = DAMAGE_TRUE
+tt.bullet.min_speed = 390
+tt.bullet.max_speed = 390
 tt.bullet.hit_fx = "fx_fireball_eiskalt_ground"
 tt.bullet.hit_fx_air = "fx_fireball_eiskalt_air"
 tt.bullet.hit_decal = "fx_fireball_eiskalt_decal"
@@ -19849,8 +19846,8 @@ tt.aura.vis_flags = bor(F_AREA)
 tt.aura.vis_bans = bor(F_FLYING)
 tt.aura.duration = 6
 tt.aura.cycle_time = 0.25
-tt.aura.damage_min = b.frosty.damage_min
-tt.aura.damage_max = b.frosty.damage_max
+tt.aura.damage_min = 9
+tt.aura.damage_max = 9
 tt.render.sprites[1] = CC("sprite")
 tt.render.sprites[1].prefix = "hero_eiskalt_frosty"
 tt.render.sprites[1].sort_y_offset = -60
@@ -19897,8 +19894,7 @@ tt.render.sprites[1].z = Z_OBJECTS_SKY
 -- ultimate controller
 tt = RT("hero_eiskalt_ultimate")
 AC(tt, "pos", "main_script", "sound_events")
-tt.cooldown = b.ultimate.cooldown[1]
-tt.duration = 12
+tt.duration = 3.5
 tt.main_script.update = scripts.hero_eiskalt_ultimate.update
 tt.excluded_templates = {"eb_umbra", "enemy_umbra_piece", "enemy_umbra_piece_flying", "enemy_tremor", "enemy_headless_horseman"}
 tt.vis_flags = bor(F_MOD, F_FREEZE)
@@ -20692,7 +20688,7 @@ tt.hero.skills.ultimate.xp_level_steps = {
 	[7] = 3,
 	[10] = 4
 }
-tt.hero.skills.ultimate.xp_gain = {200, 400, 600, 800}
+tt.hero.skills.ultimate.xp_gain = {100, 200, 300, 400}
 tt.health.dead_lifetime = 15
 tt.regen.cooldown = 1
 tt.health_bar.offset = v(0, 130)
