@@ -28685,7 +28685,7 @@ scripts.bullet_tower_blazing_watcher_proc = {
 		target = store.entities[b.target_id]
 		if target and not target.health.dead then
 			local pct = this.bullet_proc_pct
-			local dmg = math.ceil(target.health.hp_max * pct) * b.damage_factor
+			local dmg = math.ceil(target.health.hp_max * pct + math.random(b.damage_min, b.damage_max)) * b.damage_factor
 			local d = E.assign_damage(DAMAGE_MAGICAL, dmg, this.id, target.id)
 			d.pop = this.bullet.pop
 			d.pop_conds = this.bullet.pop_conds
