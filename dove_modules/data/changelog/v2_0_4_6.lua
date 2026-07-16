@@ -1,1 +1,1 @@
-return {{date="2026-07-16",author="CrazySpottedDove",message="fix: 修复电云的被动超出范围依然生效的问题"}}
+return {{date="2026-07-16",author="CrazySpottedDove",message="fix: 修复电云的被动超出范围依然生效的问题"},{date="2026-07-16",author="CrazySpottedDove",message="fix: 修复随机选择英雄在开启局内英雄菜单时不生效的问题"}}

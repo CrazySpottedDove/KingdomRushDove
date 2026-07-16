@@ -508,6 +508,28 @@ function director:queue_load_item_named(name)
 			end
 		end
 
+		local slot = storage:load_slot()
+
+		if configer.config().enabled and configer.config().random_hero then
+			if not slot.heroes.selected then
+				slot.heroes.selected = {}
+			end
+			local hero_count = #slot.heroes.selected
+			local hero_data = require("data.map_data").hero_data
+			local selected_idx = {}
+			for i = 1, hero_count do
+				local candidate_idx = math.random(1, #hero_data)
+				local try_count = 0
+				while selected_idx[candidate_idx] and try_count < 100 do
+					candidate_idx = math.random(1, #hero_data)
+					try_count = try_count + 1
+				end
+				selected_idx[candidate_idx] = true
+				slot.heroes.selected[i] = hero_data[candidate_idx].name
+			end
+			storage:save_slot(slot)
+		end
+
 		if configer.config().enabled and configer.config().enable_hero_menu then
 			local hero_data = require("data.map_data").hero_data
 
@@ -523,28 +545,6 @@ function director:queue_load_item_named(name)
 				EXO:queue_load(required_exoskeletons)
 			end
 		else
-			local slot = storage:load_slot()
-
-			if configer.config().enabled and configer.config().random_hero then
-				if not slot.heroes.selected then
-					slot.heroes.selected = {}
-				end
-				local hero_count = #slot.heroes.selected
-				local hero_data = require("data.map_data").hero_data
-				local selected_idx = {}
-				for i = 1, hero_count do
-					local candidate_idx = math.random(1, #hero_data)
-					local try_count = 0
-					while selected_idx[candidate_idx] and try_count < 100 do
-						candidate_idx = math.random(1, #hero_data)
-						try_count = try_count + 1
-					end
-					selected_idx[candidate_idx] = true
-					slot.heroes.selected[i] = hero_data[candidate_idx].name
-				end
-				storage:save_slot(slot)
-			end
-
 			if slot.heroes.selected then
 				for _, hero in ipairs(slot.heroes.selected) do
 					local hero_textures = {"go_" .. hero}
