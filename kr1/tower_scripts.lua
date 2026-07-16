@@ -28404,7 +28404,7 @@ scripts.tower_blazing_watcher = {
 							local last_ts = store.tick_ts
 							local charge_time = 0
 
-							while target and not target.health.dead and not this.tower.blocked and U.is_inside_ellipse(tpos, target.pos, a.range * 1.25) and not b.force_stop_ray do
+							while store.entities[target.id] and not target.health.dead and not this.tower.blocked and U.is_inside_ellipse(tpos, target.pos, a.range * 1.25) and not b.force_stop_ray do
 								charge_time = charge_time + (store.tick_ts - last_ts) / this.tower.cooldown_factor
 								last_ts = store.tick_ts
 
