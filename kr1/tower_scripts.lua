@@ -1481,13 +1481,13 @@ scripts.tower_silver = {
 
 			local lidx = is_long(enemy) and 2 or 1
 			local soffset = this.render.sprites[sid].offset
-			local an, af, ai = animation_name_facing_point(this, attack.animations[lidx], enemy.pos, sid, soffset)
+			local an, af, ai = U.animation_name_facing_point_use_offset(this, attack.animations[lidx], enemy.pos, sid, soffset)
 
-			animation_start(this, an, af, store.tick_ts, false, sid)
+			U.animation_start_once_specific(this, an, af, store.tick_ts, sid)
 
-			local shoot_time = attack.shoot_times[lidx]
+			local shoot_time = attack.shoot_times[lidx] * tw.cooldown_factor
 
-			y_wait(store, shoot_time)
+			U.y_wait_unconditional(store, shoot_time)
 
 			if enemy.health.dead then
 				enemy = U.refind_foremost_enemy(enemy, store, attack.vis_flags, attack.vis_bans)
@@ -1501,26 +1501,24 @@ scripts.tower_silver = {
 
 			local bl = b.bullet
 
-			bl.from = vclone(b.pos)
-			bl.to = v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
+			bl.from:copy(b.pos)
+			bl.to:set(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 			bl.target_id = enemy.id
 			bl.level = level or 0
 			bl.damage_factor = tw.damage_factor
 
 			apply_precision(b)
 
-			local dist = V.dist(bl.to.x, bl.to.y, bl.from.x, bl.from.y)
+			bl.flight_time = bl.flight_time_min + bl.to:dist(bl.from) * bl.flight_time_factor
 
-			bl.flight_time = bl.flight_time_min + dist * bl.flight_time_factor
-
-			if attack.critical_chances and random() < attack.critical_chances[lidx] then
+			if random() < a.critical_chances[lidx] then
 				bl.damage_factor = 2 * bl.damage_factor
 				bl.pop = {"pop_crit"}
 				bl.pop_conds = DR_DAMAGE
 				bl.damage_type = DAMAGE_TRUE
 			end
 
-			if b.template_name == "arrow_silver_sentence" or b.template_name == "arrow_silver_sentence_long" then
+			if b.template_name == "arrow_silver_sentence" then
 				bl.damage_factor = bl.damage_factor * (4 + 2 * pow_s.level)
 
 				if band(enemy.vis.flags, F_BOSS) ~= 0 then
@@ -1543,11 +1541,11 @@ scripts.tower_silver = {
 				queue_insert(store, fx)
 			end
 
-			y_animation_wait(this, sid)
+			U.y_animation_wait_specific(this, sid)
 
-			an, af = animation_name_facing_point(this, "idle", enemy.pos, sid, soffset)
+			an, af = U.animation_name_facing_point_use_offset(this, "idle", enemy.pos, sid, soffset)
 
-			animation_start(this, an, af, store.tick_ts, true, sid)
+			U.animation_start_loop_specific(this, an, af, store.tick_ts, sid)
 		end
 
 		local function reset_cooldowns(long)

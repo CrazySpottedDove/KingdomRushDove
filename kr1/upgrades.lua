@@ -974,7 +974,6 @@ upgrades.arrows = {
 	"arrow_silver",
 	"arrow_silver_long",
 	"arrow_silver_sentence",
-	"arrow_silver_sentence_long",
 	"arrow_silver_mark",
 	"arrow_silver_mark_long",
 	"arrow_hero_elves_archer",
