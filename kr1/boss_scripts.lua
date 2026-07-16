@@ -426,19 +426,6 @@ end
 
 scripts.eb_veznan = {}
 
-function scripts.eb_veznan.get_info(this)
-	return {
-		type = STATS_TYPE_ENEMY,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_min = this.melee.attacks[1].damage_min,
-		damage_max = this.melee.attacks[1].damage_max,
-		armor = this.health.armor,
-		magic_armor = this.health.magic_armor,
-		lives = this.enemy.lives_cost
-	}
-end
-
 function scripts.eb_veznan.on_damage(this, store, damage)
 	if this.phase == "battle" then
 		local pd = U.predict_damage(this, damage)
@@ -1170,22 +1157,6 @@ end
 
 scripts.eb_greenmuck = {}
 
-function scripts.eb_greenmuck.get_info(this)
-	local ma = this.melee.attacks[1]
-	local min, max = ma.damage_min, ma.damage_max
-
-	return {
-		type = STATS_TYPE_ENEMY,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		armor = this.health.armor,
-		magic_armor = this.health.magic_armor,
-		lives = this.enemy.lives_cost
-	}
-end
-
 function scripts.eb_greenmuck.update(this, store)
 	local ba = this.timed_attacks.list[1]
 
@@ -1280,22 +1251,6 @@ end
 
 scripts.eb_kingpin = {}
 
-function scripts.eb_kingpin.get_info(this)
-	local ma = this.melee.attacks[1]
-	local min, max = ma.damage_min, ma.damage_max
-
-	return {
-		type = STATS_TYPE_ENEMY,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		armor = this.health.armor,
-		magic_armor = this.health.magic_armor,
-		lives = this.enemy.lives_cost
-	}
-end
-
 function scripts.eb_kingpin.update(this, store)
 	local hs = this.timed_attacks.list[1]
 	local ho = this.timed_attacks.list[2]
@@ -1379,22 +1334,6 @@ end
 
 scripts.eb_ulgukhai = {}
 
-function scripts.eb_ulgukhai.get_info(this)
-	local ma = this.melee.attacks[1]
-	local min, max = ma.damage_min, ma.damage_max
-
-	return {
-		type = STATS_TYPE_ENEMY,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		armor = this.health.armor,
-		magic_armor = this.health.magic_armor,
-		lives = this.enemy.lives_cost
-	}
-end
-
 function scripts.eb_ulgukhai.update(this, store)
 	::label_163_0::
 
@@ -1447,20 +1386,6 @@ end
 
 scripts.eb_moloch = {}
 
--- function scripts.eb_moloch.get_info(this)
--- 	local ma = this.melee.attacks[1]
--- 	local min, max = ma.damage_min, ma.damage_max
--- 	return {
--- 		type = STATS_TYPE_ENEMY,
--- 		hp = this.health.hp,
--- 		hp_max = this.health.hp_max,
--- 		damage_min = min,
--- 		damage_max = max,
--- 		armor = this.health.armor,
--- 		magic_armor = this.health.magic_armor,
--- 		lives = this.enemy.lives_cost
--- 	}
--- end
 function scripts.eb_moloch.update(this, store)
 	local ha = this.timed_attacks.list[1]
 
@@ -1591,20 +1516,6 @@ end
 
 scripts.eb_myconid = {}
 
--- function scripts.eb_myconid.get_info(this)
--- 	local ma = this.melee.attacks[1]
--- 	local min, max = ma.damage_min, ma.damage_max
--- 	return {
--- 		type = STATS_TYPE_ENEMY,
--- 		hp = this.health.hp,
--- 		hp_max = this.health.hp_max,
--- 		damage_min = min,
--- 		damage_max = max,
--- 		armor = this.health.armor,
--- 		magic_armor = this.health.magic_armor,
--- 		lives = this.enemy.lives_cost
--- 	}
--- end
 function scripts.eb_myconid.update(this, store)
 	local sa = this.timed_attacks.list[1]
 	local si = 1
@@ -1727,22 +1638,6 @@ function scripts.eb_myconid.update(this, store)
 end
 
 scripts.eb_blackburn = {}
-
-function scripts.eb_blackburn.get_info(this)
-	local ma = this.melee.attacks[1]
-	local min, max = ma.damage_min, ma.damage_max
-
-	return {
-		type = STATS_TYPE_ENEMY,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		armor = this.health.armor,
-		magic_armor = this.health.magic_armor,
-		lives = this.enemy.lives_cost
-	}
-end
 
 function scripts.eb_blackburn.update(this, store)
 	local sa = this.timed_attacks.list[1]
@@ -2322,19 +2217,6 @@ function scripts.eb_efreeti.update(this, store)
 end
 
 scripts.eb_gorilla = {}
-
-function scripts.eb_gorilla.get_info(this)
-	return {
-		type = STATS_TYPE_ENEMY,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_min = this.melee.attacks[1].damage_min,
-		damage_max = this.melee.attacks[1].damage_max,
-		armor = this.health.armor,
-		magic_armor = this.health.magic_armor,
-		lives = this.enemy.lives_cost
-	}
-end
 
 function scripts.eb_gorilla.insert(this, store)
 	if this.melee then
@@ -3746,18 +3628,6 @@ end
 
 scripts.eb_dracula = {}
 
--- function scripts.eb_dracula.get_info(this)
---     return {
---         damage_min = 150,
---         damage_max = 200,
---         type = STATS_TYPE_ENEMY,
---         hp = this.health.hp,
---         hp_max = this.health.hp_max,
---         armor = this.health.armor,
---         magic_armor = this.health.magic_armor,
---         lives = this.enemy.lives_cost
---     }
--- end
 function scripts.eb_dracula.insert(this, store)
 	this.melee.order = U.attack_order(this.melee.attacks)
 
@@ -3993,177 +3863,6 @@ function scripts.eb_saurian_king.update(this, store)
 		end
 		ha.ts = ha.ts + 0.1
 		return false
-	end
-
-	local function hammer_hit(idx)
-		S:queue("SaurianKingBossQuake", {
-			delay = fts(4)
-		})
-
-		local a = E:create_entity("aura_screen_shake")
-
-		a.aura.amplitude = idx / #ha.max_damages
-
-		queue_insert(store, a)
-
-		local dmin, dmax = ha.min_damages[idx], ha.max_damages[idx]
-		local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, ha.damage_radius, ha.vis_flags, ha.vis_bans)
-
-		if targets then
-			for i = 1, #targets do
-				local target = targets[i]
-				local dist_factor = U.dist_factor_inside_ellipse(target.pos, this.pos, ha.damage_radius, ha.max_damage_radius)
-				local d = E.assign_damage(ha.damage_type, dmax - (dmax - dmin) * dist_factor, this.id, target.id)
-
-				queue_damage(store, d)
-			end
-		end
-
-		local fx = E:create_entity("decal_saurian_king_hammer")
-		local o = ha.fx_offsets[km.zmod(idx, 2)]
-
-		fx.pos = v(this.pos.x + o.x * (this.render.sprites[1].flip_x and -1 or 1), o.y + this.pos.y)
-		fx.render.sprites[1].ts = store.tick_ts
-
-		queue_insert(store, fx)
-	end
-
-	ha.ts = store.tick_ts
-
-	::label_281_0::
-
-	while true do
-		if this.health.dead then
-			LU.kill_all_enemies(store, true)
-			S:stop_all()
-			S:queue(this.sound_events.death)
-			U.y_animation_play(this, "death", nil, store.tick_ts)
-			signal.emit("boss-killed", this)
-
-			return true
-		end
-
-		if this.unit.is_stunned then
-			U.animation_start_default(this, "idle", nil, store.tick_ts, true)
-
-			ha.ts = store.tick_ts
-
-			coroutine.yield()
-		else
-			if ready_to_hammer() then
-				U.y_animation_play(this, ha.animations[1], nil, store.tick_ts)
-
-				for i = 1, #ha.max_damages * 0.5 do
-					if this.health.dead then
-						goto label_281_1
-					end
-
-					if this.unit.is_stunned then
-						goto label_281_1
-					end
-
-					U.animation_start_default(this, ha.animations[2], nil, store.tick_ts)
-					S:queue(ha.sound, {
-						delay = fts(3)
-					})
-					U.y_wait_unconditional(store, ha.hit_times[1])
-
-					if this.unit.is_stunned then
-						goto label_281_1
-					end
-
-					hammer_hit(2 * i - 1)
-					S:queue(ha.sound, {
-						delay = fts(10)
-					})
-					U.y_wait_unconditional(store, ha.hit_times[2])
-
-					if this.unit.is_stunned then
-						goto label_281_1
-					end
-
-					hammer_hit(2 * i)
-					U.y_animation_wait_default(this)
-				end
-
-				ha.ts = store.tick_ts
-			end
-
-			::label_281_1::
-
-			local ok, blocker = SU.y_enemy_walk_until_blocked(store, this, false, function(this, store)
-				return ready_to_hammer()
-			end)
-
-			if not ok then
-			-- block empty
-			else
-				if blocker then
-					if not SU.y_wait_for_blocker(store, this, blocker) then
-						goto label_281_0
-					end
-
-					while SU.can_melee_blocker(store, this, blocker) and not ready_to_hammer() do
-						if not SU.y_enemy_melee_attacks(store, this, blocker) then
-							goto label_281_0
-						end
-
-						coroutine.yield()
-					end
-				end
-
-				coroutine.yield()
-			end
-		end
-	end
-end
-
-scripts.mod_saurian_king_tongue = {}
-
-function scripts.mod_saurian_king_tongue.insert(this, store)
-	local m = this.modifier
-	local target = store.entities[m.target_id]
-
-	if not target then
-		return false
-	end
-
-	local d = E.assign_damage(target.hero and DAMAGE_TRUE or DAMAGE_EAT, math.random(m.damage_min, m.damage_max), this.id, target.id)
-
-	queue_damage(store, d)
-
-	return false
-end
-
-scripts.eb_saurian_king = {}
-
-function scripts.eb_saurian_king.get_info(this)
-	local m = E:get_template("mod_saurian_king_tongue")
-	local min, max = m.modifier.damage_min, m.modifier.damage_max
-
-	return {
-		type = STATS_TYPE_ENEMY,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		armor = this.health.armor,
-		magic_armor = this.health.magic_armor,
-		lives = this.enemy.lives_cost
-	}
-end
-
-function scripts.eb_saurian_king.insert(this, store)
-	this.melee.order = U.attack_order(this.melee.attacks)
-
-	return true
-end
-
-function scripts.eb_saurian_king.update(this, store)
-	local ha = this.timed_attacks.list[1]
-
-	local function ready_to_hammer()
-		return store.tick_ts - ha.ts > ha.cooldown
 	end
 
 	local function hammer_hit(idx)
@@ -4975,21 +4674,6 @@ end
 
 scripts.eb_spider = {}
 
-function scripts.eb_spider.get_info(this)
-	local b = E:get_template(this.ranged.attacks[1].bullet)
-
-	return {
-		type = STATS_TYPE_ENEMY,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_min = b.bullet.damage_min,
-		damage_max = b.bullet.damage_max,
-		armor = this.health.armor,
-		magic_armor = this.health.magic_armor,
-		lives = this.enemy.lives_cost
-	}
-end
-
 function scripts.eb_spider.update(this, store)
 	local boss_rounds = store.level.boss_rounds
 	local round_idx = 1
@@ -5331,19 +5015,6 @@ function scripts.eb_spider.update(this, store)
 end
 
 scripts.eb_bram = {}
-
-function scripts.eb_bram.get_info(this)
-	return {
-		type = STATS_TYPE_ENEMY,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_min = this.melee.attacks[1].damage_min,
-		damage_max = this.melee.attacks[1].damage_max,
-		armor = this.health.armor,
-		magic_armor = this.health.magic_armor,
-		lives = this.enemy.lives_cost
-	}
-end
 
 function scripts.eb_bram.update(this, store)
 	local ac = this.timed_attacks.list[1]
