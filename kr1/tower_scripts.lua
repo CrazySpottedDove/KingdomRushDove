@@ -1651,7 +1651,8 @@ scripts.tower_wild_magus = {
 		local ea = this.attacks.list[2]
 		local wa = this.attacks.list[3]
 		local aidx = 2
-		local last_enemy, last_enemy_shots
+		local last_enemy = nil
+		local last_enemy_shots = 0
 		local pow_e, pow_w = this.powers.eldritch, this.powers.ward
 		local tpos = tpos(this)
 		local tw = this.tower
@@ -1686,6 +1687,7 @@ scripts.tower_wild_magus = {
 						ea.ts = ea.ts + fts(5)
 					else
 						ea.ts = store.tick_ts
+						last_enemy = nil
 
 						local so = this.render.sprites[shooter_sid].offset
 						local an, af, ai = animation_name_facing_point(this, ea.animation, enemy.pos, shooter_sid, so)
@@ -1722,6 +1724,7 @@ scripts.tower_wild_magus = {
 
 					if enemy then
 						wa.ts = store.tick_ts
+						last_enemy = nil
 
 						local so = this.render.sprites[shooter_sid].offset
 						local an, af = animation_name_facing_point(this, wa.animation, enemy.pos, shooter_sid, so)
