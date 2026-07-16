@@ -49,7 +49,13 @@ package:
 # 	git commit -m "UPDATE VERSION COMMIT HASH"
 	git checkout master
 	git merge dev
-	git push server master
+	@if ping -c 1 -W 1 10.112.99.5 > /dev/null 2>&1; then \
+		echo "内网，使用 IPv4 直连"; \
+		git push ssh://dove@10.112.99.5:60001/srv/git/KingdomRushDove.git master; \
+	else \
+		echo "外网，使用域名(IPv6)"; \
+		git push server master; \
+	fi
 	git push origin master
 # 	git push gitee master
 	git checkout dev
@@ -130,7 +136,13 @@ android_hd_build:
 
 push:
 	git push origin dev
-	git push server dev
+	@if ping -c 1 -W 1 10.112.99.5 > /dev/null 2>&1; then \
+		echo "内网，使用 IPv4 直连"; \
+		git push ssh://dove@10.112.99.5:60001/srv/git/KingdomRushDove.git dev; \
+	else \
+		echo "外网，使用域名(IPv6)"; \
+		git push server dev; \
+	fi
 
 format:
 	dlfmt --json-task ./dlfmt_task.json
