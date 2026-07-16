@@ -40684,13 +40684,14 @@ function scripts.hero_dianyun.update(this, store)
 
 		if ready_to_use_skill(this.ultimate, store) then
 			local enemy = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range)
-			if enemy and enemy.pos then
+			if enemy then
 				this.ultimate.ts = store.tick_ts
 				U.y_animation_play_once_specific(this, "levelup", nil, store.tick_ts, 1)
 				S:queue(this.sound_events.change_rally_point)
+				local ni = P:nearest_node_with_nav_path_info(this.pos, enemy.nav_path)
 				local e = E:create_entity(this.hero.skills.ultimate.controller_name)
 				e.damage_factor = this.unit.damage_factor
-				e.pos = V.vclone(enemy.pos)
+				e.pos:copy(P:node_pos_ref(enemy.nav_path.pi, enemy.nav_path.spi, ni))
 				e.level = this.hero.skills.ultimate.level
 				queue_insert(store, e)
 				SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
