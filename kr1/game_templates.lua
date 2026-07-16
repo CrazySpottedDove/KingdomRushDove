@@ -14600,6 +14600,9 @@ tt.spawn_vis_flags = bor(F_AREA)
 tt.spawn_sfx = "Stage15ReinforcementDenasSpawn"
 tt.timeout_controller = "controller_soldier_reinforcement_stage_15_denas_timeout"
 
+tt = E:register_t("mod_soldier_reinforcement_stage_15_denas_spawn_stun", "mod_stun")
+tt.modifier.duration = 2
+
 tt = E:register_t("controller_soldier_reinforcement_stage_15_denas_timeout")
 E:add_comps(tt, "main_script")
 tt.main_script.update = scripts.controller_soldier_reinforcement_stage_15_denas_timeout.update
