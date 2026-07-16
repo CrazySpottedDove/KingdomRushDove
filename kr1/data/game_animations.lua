@@ -48847,11 +48847,11 @@ return {
 		from = 49,
 		to = 54
 	},
-	blazing_watcher_gem_chargedBlast = {
-		prefix = "blazing_watcher_gem",
-		from = 55,
-		to = 110
-	},
+	-- blazing_watcher_gem_chargedBlast = {
+	-- 	prefix = "blazing_watcher_gem",
+	-- 	from = 55,
+	-- 	to = 110
+	-- },
 	blazing_watcher_gem_sparkles_run = {
 		prefix = "blazing_watcher_gem_sparkles",
 		from = 1,

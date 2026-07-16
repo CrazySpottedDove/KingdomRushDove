@@ -4482,15 +4482,6 @@ tt.attacks.list[1].bullet_start_offset = v(1, 76)
 tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
 tt.attacks.list[1].vis_flags = bor(F_RANGED)
 tt.attacks.list[1].payload_bullet = "blazing_watcher_bolt_blast"
-tt.attacks.list[2] = CC("bullet_attack")
-tt.attacks.list[2].bullet = "blazing_watcher_ray_chargedBlast"
-tt.attacks.list[2].cooldown = 25
-tt.attacks.list[2].vis_flags = bor(F_DISINTEGRATED, F_INSTAKILL)
-tt.attacks.list[2].vis_bans = bor(F_BOSS)
-tt.attacks.list[2].bullet_start_offset = v(1, 76)
-tt.attacks.list[2].node_prediction = fts(10)
-tt.attacks.list[2].disabled = true
-tt.attacks.list[2].sound = "blazing_watcher_disintegrate"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrains_%04i"
 tt.render.sprites[1].offset = v(0, 14)
@@ -4527,10 +4518,11 @@ tt.mage_offset = v(0, 80)
 tt.sound_events.insert = "kr4_blazing_watcher_taunt"
 tt.main_script.update = scripts.tower_blazing_watcher.update
 tt.powers.disintegrate = CC("power")
-tt.powers.disintegrate.price_base = 250
-tt.powers.disintegrate.price_inc = 100
+tt.powers.disintegrate.price_base = 175
+tt.powers.disintegrate.price_inc = 150
 tt.powers.disintegrate.max_level = 3
-tt.powers.disintegrate.cooldown = {25, 22, 19}
+tt.powers.disintegrate.proc_chance = 0.15
+tt.powers.disintegrate.damage_pct = {0.02, 0.04, 0.06}
 tt.powers.charging = CC("power")
 tt.powers.charging.price_base = 200
 tt.powers.charging.max_level = 1
@@ -4564,24 +4556,6 @@ tt.sound_events.insert = "blazing_watcher_attack_loop"
 tt.sound_events.interrupt = "blazing_watcher_attack_end"
 tt.vis_flags = F_RANGED
 
--- Disintegrate bullet
-tt = RT("blazing_watcher_ray_chargedBlast", "bullet_tower_blazing_watcher")
-tt.main_script.update = scripts.bullet_tower_blazing_watcher_chargedBlast.update
-tt.sound_events.insert = nil
-tt.sound_events.interrupt = nil
-tt.bullet.damage_min = 1
-tt.bullet.damage_max = 1
-tt.bullet.damage_type = bor(DAMAGE_DISINTEGRATE, DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS, DAMAGE_IGNORE_SHIELD)
-tt.bullet.pop = {"pop_zap_arcane"}
-tt.bullet.pop_conds = DR_KILL
-tt.bullet.hit_fx = "fx_blazing_watcher_ray_chargedBlast_mod_hit"
-tt.image_width = 150
-tt.render.sprites[1].prefix = "blazing_watcher_ray"
-tt.render.sprites[1].name = "chargedBlast"
-tt.render.sprites[1].loop = false
-tt.bullet.hit_time = fts(1)
-tt.hit_fx_only_no_target = false
-
 -- DPS mod (ray damage over time)
 tt = E:register_t("mod_tower_blazing_watcher_damage", "modifier")
 AC(tt, "render", "dps", "tween")
@@ -4605,7 +4579,31 @@ tt.tween.props[1].keys = {{0, 255}, {fts(2), 0}}
 tt.tween.remove = true
 tt.tween.disabled = true
 
--- FX for disintegrate
+-- Proc ray (triggered by disintegrate passive during normal attack)
+tt = RT("blazing_watcher_ray_proc", "bullet_tower_blazing_watcher")
+tt.main_script.update = scripts.bullet_tower_blazing_watcher_proc.update
+tt.sound_events.insert = nil
+tt.sound_events.interrupt = nil
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.bullet.damage_min = 0
+tt.bullet.damage_max = 0
+tt.bullet.pop = {"pop_zap_arcane"}
+tt.bullet.pop_conds = DR_KILL
+tt.bullet.hit_time = fts(10)
+tt.bullet.hit_fx = "fx_blazing_watcher_ray_chargedBlast_mod_hit"
+tt.render.sprites = {}
+tt.image_width = 135
+for i = 1, 6 do
+	local s = CC("sprite")
+	s.anchor = v(0, 0.5)
+	s.prefix = "blazing_watcher_ray"
+	s.name = "chargedBlast"
+	s.scale = vv(1)
+	s.loop = false
+	s.z = Z_BULLETS + 1
+	tt.render.sprites[i] = s
+end
+
 tt = E:register_t("fx_blazing_watcher_ray_chargedBlast_mod_hit", "fx")
 tt.render.sprites[1].name = "blazing_watcher_charged_blast_explotion_run"
 tt.render.sprites[1].loop = false
