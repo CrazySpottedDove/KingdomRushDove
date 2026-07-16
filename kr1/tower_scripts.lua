@@ -28370,7 +28370,7 @@ scripts.tower_blazing_watcher = {
 						S:queue(ad.sound)
 						U.animation_start_default(this, "in", nil, store.tick_ts, false)
 						U.animation_start(this, "chargedBlast", nil, store.tick_ts, false, 3)
-						U.y_animation_wait(this, 4)
+						U.y_animation_wait_specific(this, 4)
 						U.animation_start_group(this, "loop", nil, store.tick_ts, true, "mage")
 						U.y_wait_unconditional(store, fts(18) * this.tower.cooldown_factor)
 
@@ -28390,7 +28390,7 @@ scripts.tower_blazing_watcher = {
 							queue_insert(store, b)
 						end
 
-						U.y_animation_wait(this, 3)
+						U.y_animation_wait_specific(this, 3)
 						U.animation_start_specific(this, "idle", false, store.tick_ts, true, 3)
 						U.y_animation_play_group(this, "out", nil, store.tick_ts, false, "mage")
 
@@ -28436,9 +28436,9 @@ scripts.tower_blazing_watcher = {
 							b.bullet.damage_factor = this.tower.damage_factor
 							b.tower_ref = this
 							queue_insert(store, b)
-							U.y_animation_wait(this, 4)
+							U.y_animation_wait_specific(this, 4)
 							U.animation_start_group(this, "loop", nil, store.tick_ts, true, "mage")
-							U.y_animation_wait(this, 3)
+							U.y_animation_wait_specific(this, 3)
 							U.animation_start_specific(this, "loop", nil, store.tick_ts, true, 3)
 
 							local last_ts = store.tick_ts
