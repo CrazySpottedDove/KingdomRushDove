@@ -21003,7 +21003,7 @@ tt.main_script.insert = scripts.aura_apply_mod.insert
 tt.main_script.update = scripts.aura_apply_mod.update
 
 tt = RT("mod_dianyun_passive", "modifier")
-tt.modifier.duration = -1
+tt.modifier.duration = 1
 tt.modifier.vis_flags = F_MOD
 tt.main_script.insert = scripts.mod_dianyun_passive.insert
 tt.main_script.remove = scripts.mod_dianyun_passive.remove

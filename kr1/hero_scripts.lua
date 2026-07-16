@@ -40991,7 +40991,7 @@ scripts.mod_dianyun_passive = {
 		local m = this.modifier
 		local target = store.entities[m.target_id]
 		local aura = store.entities[m.source_id]
-		if not aura or not target then
+		if not aura or not target or not target.health.dead then
 			return true
 		end
 		local fx = E:create_entity(this.fx)
