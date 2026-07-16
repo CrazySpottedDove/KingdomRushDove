@@ -731,10 +731,6 @@ function M.register(sys)
 
 				if e.render then
 					h.fading_after = store.tick_ts + h.dead_lifetime - FADE_OUT_DURATION
-					h._fade_init_alphas = {}
-					for i = 1, #e.render.sprites do
-						h._fade_init_alphas[i] = e.render.sprites[i].alpha
-					end
 				else
 					h.delete_after = store.tick_ts + h.dead_lifetime
 				end
@@ -757,6 +753,12 @@ function M.register(sys)
 						queue_remove(store, e)
 					else
 						local sprites = e.render.sprites
+						if not h._fade_init_alphas then
+							h._fade_init_alphas = {}
+							for i = 1, #sprites do
+								h._fade_init_alphas[i] = sprites[i].alpha
+							end
+						end
 						for i = 1, #sprites do
 							sprites[i].alpha = h._fade_init_alphas[i] * (1 - progress)
 						end
