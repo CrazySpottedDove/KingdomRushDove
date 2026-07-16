@@ -4537,7 +4537,7 @@ tt.bullet.damage_min = 13
 tt.bullet.damage_max = 20
 tt.bullet.hit_time = fts(4)
 tt.bullet.mods = {"mod_tower_blazing_watcher_damage"}
-tt.image_width = 152.5
+tt.image_width = 145
 tt.main_script.update = scripts.bullet_tower_blazing_watcher.update
 tt.render.sprites[1].anchor = v(0, 0.5)
 tt.render.sprites[1].prefix = "blazing_watcher_ray"
@@ -4599,7 +4599,7 @@ for i = 1, 6 do
 	s.name = "chargedBlast"
 	s.scale = vv(1)
 	s.loop = false
-	s.z = Z_BULLETS + 1
+	s.z = Z_BULLETS
 	tt.render.sprites[i] = s
 end
 
