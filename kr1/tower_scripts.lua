@@ -28433,7 +28433,6 @@ scripts.tower_blazing_watcher = {
 
 						U.y_animation_play_group(this, "out", nil, store.tick_ts, false, "mage")
 						U.animation_start(this, "idle", nil, store.tick_ts, true)
-						U.y_wait_unconditional(store, ab.action_time)
 					else
 						ab.ts = ab.ts + 0.1
 					end

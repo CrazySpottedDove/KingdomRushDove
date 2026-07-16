@@ -4477,7 +4477,6 @@ tt.attacks.range = 192
 tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].bullet = "bullet_tower_blazing_watcher"
 tt.attacks.list[1].cooldown = 1.2
-tt.attacks.list[1].action_time = 0.1
 tt.attacks.list[1].bullet_start_offset = v(1, 76)
 tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
 tt.attacks.list[1].vis_flags = bor(F_RANGED)
