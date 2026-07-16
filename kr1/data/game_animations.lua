@@ -10169,62 +10169,62 @@ return {
 	},
 	denas_hero_attack_a = {
 		from = 129,
-		prefix = "denas_hero",
+		prefix = "denas_hero15",
 		to = 150
 	},
 	denas_hero_attack_a_to_idle = {
 		from = 151,
-		prefix = "denas_hero",
+		prefix = "denas_hero15",
 		to = 154
 	},
 	denas_hero_attack_b = {
 		from = 155,
-		prefix = "denas_hero",
+		prefix = "denas_hero15",
 		to = 180
 	},
 	denas_hero_attack_c = {
 		from = 181,
-		prefix = "denas_hero",
+		prefix = "denas_hero15",
 		to = 222
 	},
 	denas_hero_idle_a = {
 		from = 40,
-		prefix = "denas_hero",
+		prefix = "denas_hero15",
 		to = 65
 	},
 	denas_hero_idle_b = {
 		from = 128,
-		prefix = "denas_hero",
+		prefix = "denas_hero15",
 		to = 128
 	},
 	denas_hero_out = {
 		from = 223,
-		prefix = "denas_hero",
+		prefix = "denas_hero15",
 		to = 256
 	},
 	denas_hero_spawn = {
 		from = 1,
-		prefix = "denas_hero",
+		prefix = "denas_hero15",
 		to = 39
 	},
 	denas_hero_sword_in = {
 		from = 80,
-		prefix = "denas_hero",
+		prefix = "denas_hero15",
 		to = 97
 	},
 	denas_hero_sword_out = {
 		from = 66,
-		prefix = "denas_hero",
+		prefix = "denas_hero15",
 		to = 79
 	},
 	denas_hero_sword_out_walk = {
 		from = 98,
-		prefix = "denas_hero",
+		prefix = "denas_hero15",
 		to = 107
 	},
 	denas_hero_walk = {
 		from = 108,
-		prefix = "denas_hero",
+		prefix = "denas_hero15",
 		to = 127
 	},
 	denas_hit_fx_Idle = {
