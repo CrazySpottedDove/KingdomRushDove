@@ -2843,6 +2843,10 @@ function SU.soldier_power_upgrade(this, power_name)
 		SU.armor_inc(this, this.health.armor_inc)
 	end
 
+	if this.health.magic_armor_power_name == pn and this.health.magic_armor_inc then
+		SU.magic_armor_inc(this, this.health.magic_armor_inc)
+	end
+
 	if this.ranged then
 		for _, a in ipairs(this.ranged.attacks) do
 			if a.power_name == pn then
