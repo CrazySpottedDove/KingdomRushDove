@@ -7438,9 +7438,9 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 		rider.path_id = enemy.nav_path.pi
 
 		queue_insert(store, rider)
-		y_animation_wait(this, this.render.sid_mage)
-
 		attack.ts = start_ts
+
+		y_animation_wait(this, this.render.sid_mage)
 	end
 
 	local target, pred_pos = find_target(a.list[1])
@@ -17254,8 +17254,6 @@ function scripts.tower_hermit_toad.update(this, store)
 
 					local bullet = E:create_entity(attack.bullet)
 
-					bullet.pos = V.vclone(this.pos)
-
 					local offset_x = af and -attack.bullet_start_offset[angle_idx].x or attack.bullet_start_offset[angle_idx].x
 					local offset_y = attack.bullet_start_offset[angle_idx].y
 
@@ -17266,6 +17264,7 @@ function scripts.tower_hermit_toad.update(this, store)
 					bullet.bullet.source_id = this.id
 
 					queue_insert(store, bullet)
+					attack.ts = start_ts
 
 					local bullet_from = V.vclone(bullet.bullet.from)
 					local bullet_to = V.vclone(bullet.bullet.to)
@@ -17379,7 +17378,6 @@ function scripts.tower_hermit_toad.update(this, store)
 					y_toad_animation_finished_check_change_mode()
 					resume_pipe_ps()
 
-					attack.ts = start_ts
 					last_ts = start_ts
 					last_idle_ts = store.tick_ts
 

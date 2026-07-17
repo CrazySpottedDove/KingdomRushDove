@@ -40757,7 +40757,7 @@ scripts.controller_lord_storm = {
 				end
 				local ricochet_attack = hero.ranged.attacks[2]
 				if not ricochet_decal then
-					if ready_to_use_skill(ricochet_attack, store, this.unit.cooldown_factor) then
+					if ready_to_use_skill(ricochet_attack, store, hero.unit.cooldown_factor) then
 						ricochet_decal = E:create_entity("decal_hero_dianyun_lightning_ricochet")
 						ricochet_decal.pos = hero.pos
 						for _, sprite in ipairs(ricochet_decal.render.sprites) do
@@ -40768,7 +40768,7 @@ scripts.controller_lord_storm = {
 						queue_insert(store, ricochet_decal)
 					end
 				else
-					if ready_to_use_skill(ricochet_attack, store, this.unit.cooldown_factor) then
+					if ready_to_use_skill(ricochet_attack, store, hero.unit.cooldown_factor) then
 						local target, targets = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(hero.pos, ricochet_attack.max_range, nil, ricochet_attack.vis_flags, ricochet_attack.vis_bans, ricochet_attack.crowds_range)
 						if target and #targets > ricochet_attack.min_targets then
 							local bullet = E:create_entity(ricochet_attack.bullet)
