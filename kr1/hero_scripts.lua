@@ -38,10 +38,6 @@ local function ready_to_attack(attack, store, factor)
 	return store.tick_ts - attack.ts > attack.cooldown * (factor or 1)
 end
 
-local function get_attack_ready(attack, store)
-	attack.ts = store.tick_ts - attack.cooldown
-end
-
 local function fts(v)
 	return v / FPS
 end
@@ -94,8 +90,8 @@ end
 ---@param skill_attack table 攻击或技能
 ---@param store table game.store
 ---@return boolean
-local function ready_to_use_skill(skill_attack, store)
-	return (not skill_attack.disabled) and (store.tick_ts - skill_attack.ts > skill_attack.cooldown)
+local function ready_to_use_skill(skill_attack, store, factor)
+	return (not skill_attack.disabled) and (store.tick_ts - skill_attack.ts > skill_attack.cooldown * (factor or 1))
 end
 
 local function update_regen(this)
@@ -285,7 +281,7 @@ scripts.hero_gerald = {
 
 				skill = this.hero.skills.paladin
 
-				if ready_to_use_skill(paladin, store) then
+				if ready_to_use_skill(paladin, store, this.unit.cooldown_factor) then
 					local nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, nil, NF_RALLY)
 
 					if #nodes < 1 then
@@ -316,7 +312,7 @@ scripts.hero_gerald = {
 
 				skill = this.hero.skills.courage
 
-				if ready_to_use_skill(courage, store) then
+				if ready_to_use_skill(courage, store, this.unit.cooldown_factor) then
 					local triggers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, courage.range, courage.vis_flags, courage.vis_bans)
 
 					if not triggers or #triggers < courage.min_count then
@@ -614,7 +610,7 @@ scripts.hero_alleria = {
 				a = this.timed_attacks.list[1]
 				skill = this.hero.skills.callofwild
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					if a.pet then
 						SU.delay_attack(store, a, 0.25)
 					else
@@ -981,7 +977,7 @@ scripts.hero_mirage = {
 					U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 				end
 
-				if ready_to_use_skill(a_l, store) then
+				if ready_to_use_skill(a_l, store, this.unit.cooldown_factor) then
 					local target
 
 					if U.blocker_rank(store, this) ~= nil and U.is_blocked_valid(store, this) and band(store.entities[this.soldier.target_id].vis.bans, a_l.vis_flags) == 0 then
@@ -1066,7 +1062,7 @@ scripts.hero_mirage = {
 					end
 				end
 
-				if ready_to_use_skill(a_sd, store) then
+				if ready_to_use_skill(a_sd, store, this.unit.cooldown_factor) then
 					local targets = U.find_enemies_between_range_filter_on(this.pos, a_sd.min_range, a_sd.max_range, a_sd.vis_flags, a_sd.vis_bans, function(v)
 						return (not GR:cell_is(v.pos.x, v.pos.y, TERRAIN_WATER)) and (not GR:cell_is(v.pos.x, v.pos.y, TERRAIN_FAERIE))
 					end)
@@ -1496,7 +1492,7 @@ scripts.hero_wizard = {
 				a = a_disintegrate
 				skill = skill_disintegrate
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local targets = U.find_enemies_in_range_filter_on(this.pos, a.max_range, a.vis_flags, a.vis_bans, filter_fn)
 
 					if not targets then
@@ -1544,7 +1540,7 @@ scripts.hero_wizard = {
 				a = a_missile
 				skill = skill_missile
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
 					if target then
@@ -1774,7 +1770,7 @@ scripts.hero_alric = {
 					U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 				end
 
-				if ready_to_use_skill(swa, store) then
+				if ready_to_use_skill(swa, store, this.unit.cooldown_factor) then
 					local target_info = U.find_enemies_in_paths(store.enemies, this.pos, 0, swa.range_nodes, nil, swa.vis_flags, swa.vis_bans, true)
 
 					if target_info then
@@ -1967,7 +1963,7 @@ scripts.hero_bolin = {
 				a = this.timed_attacks.list[2]
 				skill = this.hero.skills.tar
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 					if not target then
@@ -2017,7 +2013,7 @@ scripts.hero_bolin = {
 				a = this.timed_attacks.list[3]
 				skill = this.hero.skills.mines
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local nearest = P:nearest_nodes(this.pos.x, this.pos.y)
 
 					if not nearest or #nearest < 1 then
@@ -2083,7 +2079,7 @@ scripts.hero_bolin = {
 				-- block empty
 				else
 					-- 连射或普攻
-					if ready_to_use_skill(this.timed_attacks.list[5], store) then
+					if ready_to_use_skill(this.timed_attacks.list[5], store, this.unit.cooldown_factor) then
 						a = this.timed_attacks.list[5]
 					elseif math.random() < this.timed_attacks.list[4].chance then
 						a = this.timed_attacks.list[4]
@@ -2509,7 +2505,7 @@ scripts.hero_denas = {
 				a = this.timed_attacks.list[2]
 				skill = this.hero.skills.tower_buff
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local towers = U.find_towers_in_range(store.towers, this.pos, a, function(t)
 						return t.tower.can_be_mod
 					end)
@@ -2565,7 +2561,7 @@ scripts.hero_denas = {
 				a = this.timed_attacks.list[3]
 				skill = this.hero.skills.catapult
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 					if not target then
@@ -3093,7 +3089,7 @@ scripts.hero_beastmaster = {
 					a.ts = store.tick_ts
 				end
 
-				if ready_to_use_skill(a, store) and #this.boars < a.max then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) and #this.boars < a.max then
 					local positions = distribute_boars(this.pos.x, this.pos.y, a.max)
 
 					if not positions then
@@ -3172,7 +3168,7 @@ scripts.hero_beastmaster = {
 				a = this.timed_attacks.list[1]
 				skill = this.hero.skills.stampede
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local target_info = U.find_enemies_in_paths(store.enemies, this.pos, a.range_nodes_min, a.range_nodes_max, 60, a.vis_flags, a.vis_bans, true)
 
 					if not target_info then
@@ -3525,7 +3521,7 @@ scripts.hero_van_helsing = {
 				a = this.timed_attacks.list[1]
 				skill = this.hero.skills.multishoot
 
-				if ready_to_use_skill(a, store) and not shot_ready() then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) and not shot_ready() then
 					local target, targets = U.find_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.shoot_time, a.vis_flags, a.vis_bans)
 
 					if not target then
@@ -3612,7 +3608,7 @@ scripts.hero_van_helsing = {
 				a = this.timed_attacks.list[2]
 				skill = this.hero.skills.silverbullet
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local target = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.shoot_time, a.vis_flags, a.vis_bans, function(e)
 						return math.abs(P:nodes_to_defend_point(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni)) < a.nodes_to_defend
 					end)
@@ -3690,7 +3686,7 @@ scripts.hero_van_helsing = {
 				a = this.timed_attacks.list[3]
 				skill = this.hero.skills.holygrenade
 
-				if ready_to_use_skill(a, store) and not shot_ready() then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) and not shot_ready() then
 					local g = E:get_template("van_helsing_grenade")
 					local target, _, pred_pos = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.shoot_time + g.bullet.flight_time, a.vis_flags, a.vis_bans, U.enemy_is_silent_target)
 
@@ -4333,7 +4329,7 @@ scripts.hero_priest = {
 				a = this.timed_attacks.list[2]
 				skill = this.hero.skills.consecrate
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local towers = table.filter(store.towers, function(_, e)
 						return e.tower and e.tower.can_be_mod and not e.tower.blocked and V.dist(e.pos.x, e.pos.y, this.pos.x, this.pos.y) < a.range
 					end)
@@ -4528,7 +4524,7 @@ scripts.soldier_magnus_illusion = {
 				SU.soldier_idle(store, this)
 			else
 				-- enable arcane rain attack
-				if ready_to_use_skill(arcane_rain, store) then
+				if ready_to_use_skill(arcane_rain, store, this.unit.cooldown_factor) then
 					local target = U.find_random_enemy(store, this.pos, arcane_rain.min_range, arcane_rain.max_range, arcane_rain.vis_flags, arcane_rain.vis_bans)
 
 					if not target then
@@ -4693,7 +4689,7 @@ scripts.hero_magnus = {
 				skill = this.hero.skills.mirage
 				a = this.timed_attacks.list[1]
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					S:queue(a.sound)
 					U.animation_start_default(this, a.animation, nil, store.tick_ts)
 
@@ -4735,7 +4731,7 @@ scripts.hero_magnus = {
 				skill = this.hero.skills.arcane_rain
 				a = this.timed_attacks.list[2]
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 					if not target then
@@ -5081,7 +5077,7 @@ scripts.hero_giant = {
 				a = this.timed_attacks.list[1]
 				skill = this.hero.skills.stomp
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local targets = U.find_enemies_between_range_filter_off(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 					if not targets then
@@ -6341,7 +6337,7 @@ scripts.hero_ingvar = {
 				a = ba
 				skill = this.hero.skills.bear
 
-				if not this.is_bear and ready_to_use_skill(a, store) and this.health.hp < this.health.hp_max * a.transform_health_factor then
+				if not this.is_bear and ready_to_use_skill(a, store, this.unit.cooldown_factor) and this.health.hp < this.health.hp_max * a.transform_health_factor then
 					SU.hero_gain_xp_from_skill(this, skill)
 					go_bear()
 				elseif this.is_bear and store.tick_ts - a.ts >= a.duration then
@@ -6351,7 +6347,7 @@ scripts.hero_ingvar = {
 				a = this.timed_attacks.list[1]
 				skill = this.hero.skills.ancestors_call
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					if this.is_bear then
 						local compensation = ba.duration - (store.tick_ts - ba.ts)
 
@@ -7201,7 +7197,7 @@ scripts.hero_10yr = {
 				a = ra
 				skill = this.hero.skills.rain
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local start_ts, au
 					local fired_aura = false
 					local targets = U.find_enemies_between_range_filter_off(this.pos, a.min_range, a.trigger_range, a.vis_flags, a.vis_bans)
@@ -7263,7 +7259,7 @@ scripts.hero_10yr = {
 				a = giant_ra
 				skill = this.hero.skills.rain
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local start_ts, au
 					local fired_aura = false
 					local targets = U.find_enemies_between_range_filter_off(this.pos, a.min_range, a.trigger_range, a.vis_flags, a.vis_bans)
@@ -9288,7 +9284,7 @@ scripts.hero_minotaur = {
 				a = this.timed_attacks.list[1]
 				skill = this.hero.skills.doomspin
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local targets = U.find_enemies_between_range_filter_off(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 					if not targets or #targets < a.min_count then
@@ -9334,7 +9330,7 @@ scripts.hero_minotaur = {
 				a = this.timed_attacks.list[2]
 				skill = this.hero.skills.roaroffury
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local towers = table.filter(store.towers, function(_, e)
 						return e.tower and e.tower.can_be_mod and not e.tower.blocked and not table.contains(a.excluded_templates, e.template_name)
 					end)
@@ -9385,7 +9381,7 @@ scripts.hero_minotaur = {
 				a = this.timed_attacks.list[3]
 				skill = this.hero.skills.bullrush
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local target = U.find_first_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans, function(e)
 						if not e.heading or not e.nav_path then
 							return false
@@ -9507,7 +9503,7 @@ scripts.hero_minotaur = {
 				a = this.timed_attacks.list[4]
 				skill = this.hero.skills.daedalusmaze
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, {1, 2, 3}, true, NF_NO_EXIT)
 
 					if #nearest_nodes < 1 then
@@ -9784,7 +9780,7 @@ scripts.hero_monkey_god = {
 				a = this.timed_attacks.list[1]
 				skill = this.hero.skills.angrygod
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local targets = U.find_enemies_between_range_filter_off(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 					if not targets or #targets < a.min_count then
@@ -10023,7 +10019,7 @@ scripts.hero_elves_archer = {
 					U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 				end
 
-				if ready_to_use_skill(this.ultimate, store) then
+				if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 					local enemy = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range, true)
 
 					if enemy and enemy.pos then
@@ -10047,7 +10043,7 @@ scripts.hero_elves_archer = {
 				end
 
 				skill = this.hero.skills.guards
-				if ready_to_use_skill(guard_attack, store) then
+				if ready_to_use_skill(guard_attack, store, this.unit.cooldown_factor) then
 					local nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, nil, NF_RALLY)
 
 					if #nodes < 1 then
@@ -10081,7 +10077,7 @@ scripts.hero_elves_archer = {
 				if not target then
 				-- block empty
 				else
-					if ready_to_use_skill(this.ranged.attacks[2], store) then
+					if ready_to_use_skill(this.ranged.attacks[2], store, this.unit.cooldown_factor) then
 						goto bow_ready_in_sword
 					end
 
@@ -10547,7 +10543,7 @@ scripts.hero_regson = {
 
 				local a = this.timed_attacks.list[1]
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local targets = U.find_enemies_in_range_filter_off(this.pos, 200, a.vis_flags, a.vis_bans)
 
 					if targets and #targets > a.min_count then
@@ -10653,7 +10649,7 @@ scripts.hero_regson = {
 					end
 				end
 
-				if ready_to_use_skill(this.ultimate, store) then
+				if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 					local enemy = U.find_biggest_enemy_in_range_filter_off(this.pos, 200, F_RANGED, F_NONE)
 
 					if enemy and enemy.pos and enemy.health.hp > BIG_ENEMY_HP then
@@ -11124,7 +11120,7 @@ function scripts.hero_lynn.update(this, store)
 				U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local enemy = U.find_biggest_enemy_in_range_filter_on(this.pos, this.timed_attacks.list[1].range, F_RANGED, F_NONE, function(e, origin)
 					return e.health.hp <= this.ultimate.curse_damage_all * this.unit.damage_factor * e.health.damage_factor
 				end)
@@ -11152,7 +11148,7 @@ function scripts.hero_lynn.update(this, store)
 			a = this.timed_attacks.list[1]
 			skill = this.hero.skills.despair
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local targets = U.find_enemies_in_range_filter_off(this.pos, a.range, a.vis_flags, a.vis_bans)
 
 				if not targets or #targets < a.min_count then
@@ -11200,7 +11196,7 @@ function scripts.hero_lynn.update(this, store)
 			a = this.timed_attacks.list[2]
 			skill = this.hero.skills.weakening
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local blocked = U.get_blocked(store, this)
 
 				if not blocked or blocked.health.armor < 0.1 and blocked.health.magic_armor < 0.1 or not U.is_blocked_valid(store, this) then
@@ -11589,7 +11585,7 @@ function scripts.hero_wilbur.update(this, store)
 		-- block empty
 		end
 
-		if ready_to_use_skill(this.ultimate, store) then
+		if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 			local target = U.find_foremost_enemy_in_range_filter_off(this.pos, this.ranged.attacks[1].max_range, 0, F_RANGED, 0)
 
 			if target and target.pos then
@@ -11611,7 +11607,7 @@ function scripts.hero_wilbur.update(this, store)
 		a = this.timed_attacks.list[1]
 		skill = this.hero.skills.smoke
 
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			local target = U.find_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
 
 			if not target then
@@ -11639,7 +11635,7 @@ function scripts.hero_wilbur.update(this, store)
 		a = this.timed_attacks.list[2]
 		skill = this.hero.skills.box
 
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			local target_info = U.find_enemies_in_paths(store.enemies, this.pos, a.range_nodes_min, a.range_nodes_max, a.max_path_dist, a.vis_flags, a.vis_bans, true, function(e)
 				return not U.flag_has(P:path_terrain_props(e.nav_path.pi), TERRAIN_FAERIE)
 			end)
@@ -12083,7 +12079,7 @@ function scripts.hero_veznan.update(this, store)
 			a = this.timed_attacks.list[1]
 			skill = this.hero.skills.soulburn
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local triggers = U.find_enemies_in_range_filter_on(this.pos, a.range, a.vis_flags, a.vis_bans, function(e)
 					return skill.level == 3 or e.health.hp_max <= a.total_hp
 				end)
@@ -12178,7 +12174,7 @@ function scripts.hero_veznan.update(this, store)
 			a = this.timed_attacks.list[3]
 			skill = this.hero.skills.arcanenova
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local target, targets = U.find_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.cast_time, a.vis_flags, a.vis_bans)
 
 				if not target or #targets < 2 then
@@ -12237,7 +12233,7 @@ function scripts.hero_veznan.update(this, store)
 			a = this.timed_attacks.list[2]
 			skill = this.hero.skills.shackles
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local triggers = U.find_enemies_in_range_filter_off(this.pos, a.range, a.vis_flags, a.vis_bans)
 
 				if not triggers then
@@ -12273,7 +12269,7 @@ function scripts.hero_veznan.update(this, store)
 				end
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range)
 
 				if target and target.pos and U.has_valid_rally_node_nearby(target.pos) then
@@ -12479,7 +12475,7 @@ function scripts.hero_durax.update(this, store)
 			a = this.timed_attacks.list[1]
 			skill = this.hero.skills.lethal_prism
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local triggers = U.find_enemies_in_range_filter_off(this.pos, a.range, a.vis_flags, a.vis_bans)
 
 				if not triggers then
@@ -12536,7 +12532,7 @@ function scripts.hero_durax.update(this, store)
 			a = this.timed_attacks.list[2]
 			skill = this.hero.skills.crystallites
 
-			if not this.clone and ready_to_use_skill(a, store) then
+			if not this.clone and ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local nearest = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true, NF_RALLY)
 
 				if #nearest < 1 then
@@ -12585,7 +12581,7 @@ function scripts.hero_durax.update(this, store)
 				end
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = U.find_foremost_enemy_in_range_filter_off(this.pos, this.ranged.attacks[1].max_range, 0, F_RANGED, 0)
 
 				if target and target.pos and scripts.hero_durax_ultimate.can_fire_fn(nil, target.pos.x, target.pos.y, store) then
@@ -12802,7 +12798,7 @@ function scripts.hero_elves_denas.update(this, store)
 			a = this.timed_attacks.list[1]
 			skill = this.hero.skills.celebrity
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local target = U.find_random_enemy(store, this.pos, 0, a.range, a.vis_flags, a.vis_bans, function(e)
 					return e.unit and not e.unit.is_stunned
 				end)
@@ -12859,7 +12855,7 @@ function scripts.hero_elves_denas.update(this, store)
 				end
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range)
 
 				if target and target.pos and U.has_valid_rally_node_nearby(target.pos) then
@@ -12885,7 +12881,7 @@ function scripts.hero_elves_denas.update(this, store)
 			a = this.timed_attacks.list[2]
 			skill = this.hero.skills.sybarite
 
-			if ready_to_use_skill(a, store) and this.health.hp <= this.health.hp_max - a.lost_health then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) and this.health.hp <= this.health.hp_max - a.lost_health then
 				U.animation_start_default(this, a.animation, nil, store.tick_ts)
 
 				if SU.y_soldier_wait(store, this, a.hit_time) then
@@ -12909,7 +12905,7 @@ function scripts.hero_elves_denas.update(this, store)
 			a = this.ranged.attacks[1]
 			skill = this.hero.skills.shield_strike
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local target, _, pred_pos = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, shield_strike_filter_fn)
 
 				if target then
@@ -13309,7 +13305,7 @@ function scripts.hero_arivan.update(this, store)
 			a = this.timed_attacks.list[2]
 			skill = this.hero.skills.stone_dance
 
-			if ready_to_use_skill(a, store) and #a.aura.stones < a.aura.max_stones then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) and #a.aura.stones < a.aura.max_stones then
 				S:queue(a.sound)
 				U.animation_start_default(this, a.animation, nil, store.tick_ts)
 				U.y_wait_unconditional(store, a.hit_time)
@@ -13343,7 +13339,7 @@ function scripts.hero_arivan.update(this, store)
 			a = this.timed_attacks.list[1]
 			skill = this.hero.skills.seal_of_fire
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local target = U.find_nearest_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 				if not target then
@@ -13418,7 +13414,7 @@ function scripts.hero_arivan.update(this, store)
 				end
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range, true, true)
 
 				if target and target.pos and valid_twister_node_nearby(target.pos) then
@@ -13864,7 +13860,7 @@ function scripts.hero_phoenix.update(this, store)
 		-- block empty
 		end
 
-		if ready_to_use_skill(this.ultimate, store) then
+		if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 			local targets = U.find_enemies_in_range_filter_off(this.pos, this.ranged.attacks[1].max_range, this.ranged.attacks[1].vis_flags, this.ranged.attacks[1].vis_bans)
 
 			if targets and valid_land_node_nearby(this.pos) then
@@ -13890,7 +13886,7 @@ function scripts.hero_phoenix.update(this, store)
 		a = this.timed_attacks.list[1]
 		skill = this.hero.skills.inmolate
 
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			local targets = U.find_enemies_in_range_filter_off(this.pos, a.range, a.vis_flags, a.vis_bans)
 
 			if not targets or #targets < a.min_count then
@@ -13907,7 +13903,7 @@ function scripts.hero_phoenix.update(this, store)
 		a = this.timed_attacks.list[2]
 		skill = this.hero.skills.flaming_path
 
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			local targets = U.find_towers_in_range(store.towers, this.pos, a, function(e, o)
 				local enemies = U.find_enemies_in_range_filter_off(e.pos, a.enemies_range, a.enemies_vis_flags, a.enemies_vis_bans)
 
@@ -14129,7 +14125,7 @@ function scripts.hero_bravebark.update(this, store)
 			a = this.springsap
 			skill = this.hero.skills.springsap
 
-			if ready_to_use_skill(a, store) and U.is_soldiers_around_need_heal(store.soldiers, this.pos, a.trigger_hp_factor, a.radius) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) and U.is_soldiers_around_need_heal(store.soldiers, this.pos, a.trigger_hp_factor, a.radius) then
 				a.ts = store.tick_ts
 
 				SU.hero_gain_xp_from_skill(this, skill)
@@ -14165,7 +14161,7 @@ function scripts.hero_bravebark.update(this, store)
 			a = this.timed_attacks.list[2]
 			skill = this.hero.skills.oakseeds
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local target = U.find_foremost_enemy_in_range_filter_off(this.pos, a.max_range, 0.5, a.vis_flags, a.vis_bans)
 
 				if not target then
@@ -14223,7 +14219,7 @@ function scripts.hero_bravebark.update(this, store)
 			a = this.timed_attacks.list[1]
 			skill = this.hero.skills.rootspikes
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local triggers = U.find_enemies_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
 				if not triggers or #triggers < a.trigger_count then
@@ -14274,7 +14270,7 @@ function scripts.hero_bravebark.update(this, store)
 				end
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = find_target_at_critical_moment(this, store, this.ultimate.range, true)
 
 				if target and target.pos and valid_land_node_nearby(target.pos) then
@@ -14498,7 +14494,7 @@ function scripts.hero_catha.update(this, store)
 			a = this.timed_attacks.list[1]
 			skill = this.hero.skills.fury
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local targets = U.find_enemies_between_range_filter_off(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 				if not targets then
@@ -14544,7 +14540,7 @@ function scripts.hero_catha.update(this, store)
 			a = this.timed_attacks.list[2]
 			skill = this.hero.skills.soul
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans, function(e)
 					return e.health.hp / e.health.hp_max < a.max_hp_factor and not table.contains(a.excluded_templates, e.template_name)
 				end)
@@ -14602,7 +14598,7 @@ function scripts.hero_catha.update(this, store)
 			a = this.timed_attacks.list[3]
 			skill = this.hero.skills.tale
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local targets = U.find_enemies_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
 				if not targets then
@@ -14645,7 +14641,7 @@ function scripts.hero_catha.update(this, store)
 				end
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range)
 				local target_found = false
 
@@ -14901,7 +14897,7 @@ function scripts.hero_lilith.update(this, store)
 			a = this.timed_attacks.list[1]
 			skill = this.hero.skills.infernal_wheel
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local target = U.find_random_enemy(store, this.pos, 0, a.range, a.vis_flags, a.vis_bans)
 
 				if not target then
@@ -14938,7 +14934,7 @@ function scripts.hero_lilith.update(this, store)
 				end
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target, target_num = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range)
 
 				if target and target.pos and valid_land_node_nearby(target.pos) then
@@ -15269,7 +15265,7 @@ function scripts.hero_xin.update(this, store)
 			a = this.timed_attacks.list[3]
 			skill = this.hero.skills.mind_over_body
 
-			if ready_to_use_skill(a, store) and this.health.hp / this.health.hp_max <= a.min_health_factor then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) and this.health.hp / this.health.hp_max <= a.min_health_factor then
 				SU.hero_gain_xp_from_skill(this, skill)
 
 				this.health.ignore_damage = true
@@ -15300,7 +15296,7 @@ function scripts.hero_xin.update(this, store)
 			a = this.timed_attacks.list[2]
 			skill = this.hero.skills.inspire
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local enemies = U.find_enemies_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
 				if not enemies then
@@ -15337,7 +15333,7 @@ function scripts.hero_xin.update(this, store)
 			a = this.timed_attacks.list[1]
 			skill = this.hero.skills.daring_strike
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local blocked_enemy = this.soldier.target_id and store.entities[this.soldier.target_id]
 
 				if not blocked_enemy and SU.soldier_pick_melee_target(store, this) then
@@ -15469,7 +15465,7 @@ function scripts.hero_xin.update(this, store)
 				a.ts = store.tick_ts
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = find_target_at_critical_moment(this, store, this.ultimate.range)
 
 				if target and target.pos and valid_land_node_nearby(target.pos) then
@@ -15689,7 +15685,7 @@ function scripts.hero_faustus.update(this, store)
 		-- block empty
 		end
 
-		if ready_to_use_skill(this.ultimate, store) then
+		if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 			local target = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range, true)
 
 			if target and target.pos and valid_land_node_nearby(target.pos) then
@@ -15984,7 +15980,7 @@ function scripts.hero_rag.update(this, store)
 			a = this.timed_attacks.list[4]
 			skill = this.hero.skills.raggified
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans, function(e)
 					return e.health.hp < a.max_target_hp * this.unit.damage_factor and GR:cell_is_only(e.pos.x, e.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE))
 				end)
@@ -16003,7 +15999,7 @@ function scripts.hero_rag.update(this, store)
 			a = this.timed_attacks.list[2]
 			skill = this.hero.skills.kamihare
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local target_info = U.find_enemies_in_paths(store.enemies, this.pos, a.range_nodes_min, a.range_nodes_max, nil, a.vis_flags, a.vis_bans, true, function(e)
 					return not U.flag_has(P:path_terrain_props(e.nav_path.pi), bor(TERRAIN_FAERIE, TERRAIN_WATER))
 				end)
@@ -16071,7 +16067,7 @@ function scripts.hero_rag.update(this, store)
 			a = this.timed_attacks.list[1]
 			skill = this.hero.skills.angry_gnome
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 				if not target then
@@ -16093,7 +16089,7 @@ function scripts.hero_rag.update(this, store)
 			a = this.timed_attacks.list[3]
 			skill = this.hero.skills.hammer_time
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local nodes, start_node, end_node, next_node, damage_ts
 				local target, targets = U.find_nearest_enemy(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 				local total_hp = not targets and 0 or table.reduce(targets, function(e, hp_sum)
@@ -16185,7 +16181,7 @@ function scripts.hero_rag.update(this, store)
 				end
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range, false, false, bor(F_FLYING, F_BOSS))
 
 				if target and target.pos and valid_land_node_nearby(target.pos) then
@@ -16425,7 +16421,7 @@ function scripts.hero_bruce.update(this, store)
 			a = this.timed_attacks.list[1]
 			skill = this.hero.skills.kings_roar
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local targets = U.find_enemies_in_range_filter_off(this.pos, a.range, a.vis_flags, a.vis_bans)
 
 				if not targets or #targets < a.min_count then
@@ -16460,7 +16456,7 @@ function scripts.hero_bruce.update(this, store)
 				end
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = find_target_at_critical_moment(this, store, 150)
 
 				if target and target.pos and U.has_valid_rally_node_nearby(target.pos) then
@@ -16693,7 +16689,7 @@ function scripts.hero_bolverk.update(this, store)
 			this.melee.attacks[2].cooldown = this.melee.attacks[2].raw_cooldown * factor
 			a = this.timed_attacks.list[1]
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local targets = U.find_enemies_between_range_filter_off(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 				if not targets or #targets < a.min_count then
@@ -16817,7 +16813,7 @@ scripts.hero_dwarf = {
 
 				a = this.timed_attacks.list[2]
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					if U.find_first_enemy_in_range_filter_off(this.pos, 120, F_BLOCK, bor(F_FLYING, F_CLIFF, F_WATER)) ~= nil then
 						local nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, nil, NF_RALLY)
 
@@ -16864,7 +16860,7 @@ scripts.hero_dwarf = {
 
 				a = this.timed_attacks.list[1]
 
-				if ready_to_use_skill(a, store) then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 					local targets = U.find_enemies_in_range_filter_off(this.pos, ring.damage_radius * a.scale, a.vis_flags, a.vis_bans)
 					local bigger_begin_time = store.tick_ts
 
@@ -17034,7 +17030,7 @@ function scripts.hero_dragon.update(this, store)
 		a = this.timed_attacks.list[1]
 		skill = this.hero.skills.feast
 
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			local target = U.find_nearest_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 			if not target then
@@ -18101,7 +18097,7 @@ function scripts.hero_hunter.update(this, store)
 				U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local enemy = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range)
 
 				if enemy and enemy.pos and U.has_valid_rally_node_nearby(enemy.pos) then
@@ -18185,7 +18181,7 @@ function scripts.hero_hunter.update(this, store)
 			skill = this.hero.skills.ricochet
 			a = ricochet_attack
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local enemy, enemies = U.find_foremost_enemy_between_range_filter_off(tpos(this), a.min_range, a.max_range_trigger, a.node_prediction, a.vis_flags, a.vis_bans)
 
 				if not enemy then
@@ -18228,7 +18224,7 @@ function scripts.hero_hunter.update(this, store)
 			skill = this.hero.skills.shoot_around
 			a = shoot_around_attack
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local enemies = U.find_enemies_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
 				if not enemies or #enemies < a.min_targets then
@@ -18285,7 +18281,7 @@ function scripts.hero_hunter.update(this, store)
 			skill = this.hero.skills.beasts
 			a = beasts_attack
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local enemies = U.find_enemies_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
 				if not enemies or #enemies < 1 then
@@ -19496,7 +19492,7 @@ function scripts.hero_space_elf.update(this, store)
 				end
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range, false, false, bor(F_BOSS, F_FLYING), ultimate_filter_fn)
 
 				if target and U.has_valid_rally_node_nearby(target.pos) then
@@ -19522,7 +19518,7 @@ function scripts.hero_space_elf.update(this, store)
 			a = this.timed_attacks.list[1]
 			skill = this.hero.skills.astral_reflection
 
-			if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) and store.tick_ts - last_ts > a.min_cooldown then
 				local targets = U.find_enemies_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
 				if not targets or #targets == 0 then
@@ -19569,7 +19565,7 @@ function scripts.hero_space_elf.update(this, store)
 			a = this.timed_attacks.list[2]
 			skill = this.hero.skills.black_aegis
 
-			if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) and store.tick_ts - last_ts > a.min_cooldown then
 				local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.range, a.vis_flags, a.vis_bans, function(e)
 					return e.soldier.target_id
 				end)
@@ -19617,7 +19613,7 @@ function scripts.hero_space_elf.update(this, store)
 			a = this.timed_attacks.list[3]
 			skill = this.hero.skills.void_rift
 
-			if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) and store.tick_ts - last_ts > a.min_cooldown then
 				local enemies = U.find_enemies_in_range_filter_off(this.pos, a.max_range_trigger, a.vis_flags, a.vis_bans)
 
 				if not enemies or #enemies < a.min_targets then
@@ -19810,7 +19806,7 @@ function scripts.hero_space_elf.update(this, store)
 			a = this.timed_attacks.list[4]
 			skill = this.hero.skills.spatial_distortion
 
-			if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown and store.wave_group_number > 0 then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) and store.tick_ts - last_ts > a.min_cooldown and store.wave_group_number > 0 then
 				local towers = spatial_distortion_get_towers(a)
 
 				if not towers then
@@ -20522,7 +20518,7 @@ function scripts.hero_raelyn.update(this, store)
 				U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = find_target_at_critical_moment(this, store, 140, false, true, F_FLYING)
 
 				if target and U.has_valid_rally_node_nearby(target.pos) then
@@ -20552,7 +20548,7 @@ function scripts.hero_raelyn.update(this, store)
 			skill = this.hero.skills.inspire_fear
 			a = inspire_fear_attack
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local enemies = U.find_enemies_in_range_filter_off(this.pos, a.max_range_trigger, a.vis_flags, a.vis_bans)
 
 				if not enemies or #enemies < a.min_targets then
@@ -20609,7 +20605,7 @@ function scripts.hero_raelyn.update(this, store)
 			skill = this.hero.skills.unbreakable
 			a = unbreakable_attack
 
-			if ready_to_use_skill(a, store) and not U.has_modifiers(store, this, a.mod) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) and not U.has_modifiers(store, this, a.mod) then
 				local enemies = U.find_enemies_in_range_filter_off(this.pos, a.max_range_trigger, a.vis_flags, a.vis_bans)
 
 				if not enemies or #enemies < a.min_targets then
@@ -20705,7 +20701,7 @@ function scripts.hero_raelyn.update(this, store)
 			skill = this.hero.skills.onslaught
 			a = onslaught_attack
 
-			if ready_to_use_skill(a, store) and not onslaught_on then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) and not onslaught_on then
 				local enemies = U.find_enemies_in_range_filter_off(this.pos, a.max_range_trigger, a.vis_flags, a.vis_bans)
 
 				if not enemies or #enemies < a.min_targets then
@@ -21342,7 +21338,7 @@ function scripts.hero_venom.update(this, store)
 			skill = this.hero.skills.eat_enemy
 			a = eat_enemy_attack
 
-			if (not ready_to_use_skill(eat_enemy_attack, store) or this.soldier.target_id == nil) or not this.motion.arrived then
+			if (not ready_to_use_skill(eat_enemy_attack, store, this.unit.cooldown_factor) or this.soldier.target_id == nil) or not this.motion.arrived then
 			-- block empty
 			else
 				local target = store.entities[this.soldier.target_id]
@@ -21416,7 +21412,7 @@ function scripts.hero_venom.update(this, store)
 					-- 此时必为人形
 					if target.health.hp <= target.health.hp_max * eat_enemy_attack.hp_trigger then
 						do_eat_enemy_attack()
-					elseif ready_to_use_skill(inner_beast_attack, store) and target.health.hp <= target.health.hp_max * eat_enemy_attack.hp_trigger_normal * 1.5 then
+					elseif ready_to_use_skill(inner_beast_attack, store, this.unit.cooldown_factor) and target.health.hp <= target.health.hp_max * eat_enemy_attack.hp_trigger_normal * 1.5 then
 						inner_beast_attack.ts = store.tick_ts - 0.5 * inner_beast_attack.cooldown
 						eat_enemy_attack.hp_trigger = eat_enemy_attack.hp_trigger_normal * 1.5
 
@@ -21425,7 +21421,7 @@ function scripts.hero_venom.update(this, store)
 				end
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = find_target_at_critical_moment(this, store, 160, false, true, F_FLYING)
 
 				if target and U.has_valid_rally_node_nearby(target.pos) then
@@ -21451,7 +21447,7 @@ function scripts.hero_venom.update(this, store)
 			a = inner_beast_attack
 			skill = this.hero.skills.inner_beast
 
-			if not this.is_transformed and ready_to_use_skill(a, store) and this.health.hp <= this.health.hp_max * skill.trigger_hp and store.tick_ts - last_ts > a.min_cooldown and this.soldier.target_id and store.entities[this.soldier.target_id] and not store.entities[this.soldier.target_id].health.dead and this.motion.arrived then
+			if not this.is_transformed and ready_to_use_skill(a, store, this.unit.cooldown_factor) and this.health.hp <= this.health.hp_max * skill.trigger_hp and store.tick_ts - last_ts > a.min_cooldown and this.soldier.target_id and store.entities[this.soldier.target_id] and not store.entities[this.soldier.target_id].health.dead and this.motion.arrived then
 				y_transform_in()
 			end
 
@@ -21474,7 +21470,7 @@ function scripts.hero_venom.update(this, store)
 			skill = this.hero.skills.floor_spikes
 			a = floor_spikes_attack
 
-			if not this.is_transformed and ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
+			if not this.is_transformed and ready_to_use_skill(a, store, this.unit.cooldown_factor) and store.tick_ts - last_ts > a.min_cooldown then
 				local enemies = U.find_enemies_between_range_filter_off(this.pos, a.range_trigger_min, a.range_trigger_max, a.vis_flags, a.vis_bans)
 
 				if not enemies or #enemies < a.min_targets then
@@ -21594,7 +21590,7 @@ function scripts.hero_venom.update(this, store)
 			skill = this.hero.skills.ranged_tentacle
 			a = ranged_tentacle_attack
 
-			if not this.is_transformed and ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
+			if not this.is_transformed and ready_to_use_skill(a, store, this.unit.cooldown_factor) and store.tick_ts - last_ts > a.min_cooldown then
 				local target = U.find_foremost_enemy_between_range_filter_off(tpos(this), a.min_range, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans)
 
 				if not target then
@@ -21657,7 +21653,7 @@ function scripts.hero_venom.update(this, store)
 
 			::label_294_1::
 
-			if not this.soldier.target_id and ready_to_use_skill(eat_enemy_attack, store) then
+			if not this.soldier.target_id and ready_to_use_skill(eat_enemy_attack, store, this.unit.cooldown_factor) then
 				local targets = U.find_enemies_in_range_filter_on(this.nav_rally.center, this.melee.range, F_BLOCK, F_CLIFF, function(e)
 					return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and e.health.hp < e.health.hp_max * eat_enemy_attack.hp_trigger
 				end)
@@ -22234,7 +22230,7 @@ function scripts.hero_dragon_gem.update(this, store)
 			U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 		end
 
-		if ready_to_use_skill(this.ultimate, store) then
+		if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 			local target = find_target_at_critical_moment(this, store, 160, true, false, F_FLYING)
 
 			if target and U.has_valid_rally_node_nearby(target.pos) then
@@ -23794,7 +23790,7 @@ function scripts.hero_witch.update(this, store)
 				U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = U.find_teleport_moment(store, this.pos, this.ranged.attacks[1].max_range, MANY_ENEMY_COUNT)
 
 				if target and U.has_valid_rally_node_nearby(target.pos) then
@@ -23807,7 +23803,7 @@ function scripts.hero_witch.update(this, store)
 			skill = this.hero.skills.soldiers
 			a = skill_soldiers_attack
 
-			if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) and store.tick_ts - last_ts > a.min_cooldown then
 				local enemies = U.find_enemies_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
 				if not enemies or #enemies < a.min_targets then
@@ -23843,7 +23839,7 @@ function scripts.hero_witch.update(this, store)
 			a = this.timed_attacks.list[3]
 			skill = this.hero.skills.path_aoe
 
-			if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) and store.tick_ts - last_ts > a.min_cooldown then
 				local _, targets, pred_pos = U.find_foremost_enemy_with_max_coverage(store, this.pos, 0, a.max_range, a.node_prediction, a.vis_flags, a.vis_bans, nil, nil, E:get_template("aura_hero_witch_path_aoe").aura.radius)
 
 				if not targets or #targets < a.min_targets or not pred_pos then
@@ -23986,7 +23982,7 @@ function scripts.hero_witch.update(this, store)
 
 				a = this.timed_attacks.list[2]
 
-				if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
+				if ready_to_use_skill(a, store, this.unit.cooldown_factor) and store.tick_ts - last_ts > a.min_cooldown then
 					local enemy = U.find_foremost_enemy_in_range_filter_on(this.pos, a.range, false, a.vis_flags, a.vis_bans, function(e)
 						return e.health and e.health.hp_max <= a.hp_max and P:nodes_to_goal(e.nav_path.pi, e.nav_path.spi, e.nav_path.ni) >= a.max_nodes_to_goal
 					end)
@@ -24981,7 +24977,7 @@ function scripts.hero_dragon_bone.update(this, store)
 
 		a = this.ultimate
 
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, basic_ranged.max_range, F_BLOCK, F_NONE)
 
 			if target and U.has_valid_rally_node_nearby(target.pos) then
@@ -24993,7 +24989,7 @@ function scripts.hero_dragon_bone.update(this, store)
 
 		a = cloud_attack
 
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			local _, targets, pred_pos = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.shoot_time + fts(10), a.vis_flags, a.vis_bans, function(v, o)
 				return GR:cell_is(v.pos.x, v.pos.y, TERRAIN_LAND)
 			end)
@@ -25042,7 +25038,7 @@ function scripts.hero_dragon_bone.update(this, store)
 
 		a = nova_attack
 
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			if not GR:cell_is(this.pos.x, this.pos.y, TERRAIN_LAND) then
 				goto label_664_4
 			end
@@ -25096,7 +25092,7 @@ function scripts.hero_dragon_bone.update(this, store)
 
 		a = rain_attack
 
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 			if not target then
@@ -25163,7 +25159,7 @@ function scripts.hero_dragon_bone.update(this, store)
 
 		a = burst_attack
 
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			local target, targets = U.find_foremost_enemy_between_range_filter_on(this.pos, a.min_range, a.max_range, a.spawn_time + a.node_prediction, a.vis_flags, a.vis_bans, function(v, o)
 				return GR:cell_is(v.pos.x, v.pos.y, bor(TERRAIN_LAND, TERRAIN_ICE))
 			end)
@@ -25297,7 +25293,7 @@ function scripts.hero_dragon_bone.update(this, store)
 
 		a = basic_ranged
 
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 
 			local flight_time = a.estimated_flight_time or 1
 			local pos_offset = v(this.pos.x + a.ignore_offset.x, this.pos.y + a.ignore_offset.y)
@@ -26199,7 +26195,7 @@ function scripts.hero_lumenir.update(this, store)
 
 		a = this.ultimate
 
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, basic_ranged.max_range, F_RANGED, F_NONE)
 
 			if target and U.has_valid_rally_node_nearby(target.pos) then
@@ -26211,7 +26207,7 @@ function scripts.hero_lumenir.update(this, store)
 
 		a = shield_attack
 
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			if store.wave_group_number > 0 then
 				local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.range, a.vis_flags, a.vis_bans)
 
@@ -26259,7 +26255,7 @@ function scripts.hero_lumenir.update(this, store)
 
 		a = celestial_judgement_attack
 
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			local target = U.find_biggest_enemy_in_range_filter_off(this.pos, a.range, a.vis_flags, a.vis_bans)
 
 			if target then
@@ -26291,7 +26287,7 @@ function scripts.hero_lumenir.update(this, store)
 
 		a = mini_dragon_attack
 
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			if store.wave_group_number > 0 then
 				local hero = find_hero()
 
@@ -26308,7 +26304,7 @@ function scripts.hero_lumenir.update(this, store)
 
 		a = fire_balls_attack
 
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			local targets_info = U.find_enemies_in_paths(store.enemies, this.pos, a.range_nodes_min, a.range_nodes_max, nil, a.vis_flags, a.vis_bans)
 
 			if not targets_info or #targets_info < a.min_targets then
@@ -26386,7 +26382,7 @@ function scripts.hero_lumenir.update(this, store)
 
 		a = basic_ranged
 
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			-- local pos_offset = v(this.pos.x + a.ignore_offset.x, this.pos.y + a.ignore_offset.y)
 			local targets = U.find_enemies_between_range_filter_off(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
@@ -27592,7 +27588,7 @@ function scripts.hero_wukong.update(this, store)
 
 			a = this.ultimate
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local target = find_target_at_critical_moment(this, store, hair_clones_attack.max_range, false, false)
 
 				if target and U.has_valid_rally_node_nearby(target.pos) then
@@ -27610,7 +27606,7 @@ function scripts.hero_wukong.update(this, store)
 			skill = this.hero.skills.hair_clones
 			a = hair_clones_attack
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local _, enemies, pred_pos = U.find_foremost_enemy_in_range_filter_on(this.pos, a.max_range, a.cast_time, a.vis_flags, a.vis_bans, function(e, origin)
 					local node_offset = P:predict_enemy_node_advance(e, a.cast_time)
 					local e_ni = e.nav_path.ni + node_offset + 8
@@ -27723,7 +27719,7 @@ function scripts.hero_wukong.update(this, store)
 			skill = this.hero.skills.giant_staff
 			a = giant_staff_attack
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				if this.soldier.target_id == nil then
 					SU.delay_attack(store, a, fts(5))
 				elseif not this.motion.arrived then
@@ -27849,7 +27845,7 @@ function scripts.hero_wukong.update(this, store)
 			skill = this.hero.skills.pole_ranged
 			a = pole_ranged_attack
 
-			if ready_to_use_skill(a, store) then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				first_ranged_target, ranged_targets, first_ranged_target_pred_pos = U.find_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.shoot_time + fts(4), a.vis_flags, a.vis_bans)
 
 				if ranged_targets and #ranged_targets >= a.min_targets then
@@ -28611,7 +28607,7 @@ function scripts.hero_vesper.update(this, store)
 				end
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local enemy = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range, true)
 
 				if enemy and enemy.pos then
@@ -29243,7 +29239,7 @@ function scripts.hero_muyrn.update(this, store)
 				end
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local enemy = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range, true, true)
 
 				if enemy and enemy.pos then
@@ -30450,7 +30446,7 @@ function scripts.hero_dragon_arb.update(this, store)
 			U.y_animation_play_group(this, "levelup", nil, store.tick_ts, 1, this.render.sprites[1].group)
 		end
 
-		if ready_to_use_skill(this.ultimate, store) and find_target_at_critical_moment(this, store, 200) then
+		if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) and find_target_at_critical_moment(this, store, 200) then
 			if not this.ultimate_active then
 				local ue = E:create_entity(this.hero.skills.ultimate.controller_name)
 
@@ -32659,7 +32655,7 @@ function scripts.hero_builder.update(this, store)
 				U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = U.find_foremost_enemy_in_range_filter_off(this.pos, 200, 0, F_AREA, 0)
 
 				if target and target.pos then
@@ -33419,7 +33415,7 @@ function scripts.hero_robot.update(this, store)
 				U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = U.find_foremost_enemy_in_range_filter_off(this.pos, 200, 0, F_AREA, 0)
 
 				if target and target.pos then
@@ -34623,7 +34619,7 @@ function scripts.hero_bird.update(this, store)
 			U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 		end
 
-		if ready_to_use_skill(this.ultimate, store) then
+		if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 			local target = U.find_foremost_enemy_in_range_filter_off(this.pos, 200, 0, F_AREA, 0)
 
 			if target and target.pos then
@@ -35548,7 +35544,7 @@ function scripts.hero_lava.update(this, store)
 				U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = U.find_foremost_enemy_in_range_filter_off(this.pos, 200, 0, F_AREA, 0)
 
 				if target and target.pos then
@@ -36295,7 +36291,7 @@ function scripts.hero_spider.update(this, store)
 				U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = U.find_foremost_enemy_in_range_filter_off(this.pos, 200, 0, F_AREA, 0)
 
 				if target and target.pos then
@@ -36931,7 +36927,7 @@ function scripts.hero_mecha.update(this, store)
 				U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = U.find_foremost_enemy_in_range_filter_off(this.pos, 200, 0, F_AREA, 0)
 
 				if target and target.pos then
@@ -38331,7 +38327,7 @@ function scripts.hero_dragon_sun.update(this, store)
 				U.y_animation_play(this, "levelup", nil, store.tick_ts, 1, this.render.sprites[1].group)
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local target = U.find_foremost_enemy_in_range_filter_off(this.pos, 200, 0, F_AREA, 0)
 
 				if target and target.pos then
@@ -39312,7 +39308,7 @@ function scripts.hero_eiskalt.update(this, store)
 		end
 
 		-- 大招
-		if ready_to_use_skill(this.ultimate, store) then
+		if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 			local enemy = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range)
 			if enemy and enemy.pos then
 				this.ultimate.ts = store.tick_ts
@@ -39332,7 +39328,7 @@ function scripts.hero_eiskalt.update(this, store)
 		-- 冰刺
 		local a = this.timed_attacks.list[2]
 		local skill = this.hero.skills.icepeak
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			local target = U.find_nearest_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans, icepeak_filter_fn)
 			if target then
 				local pi, spi, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
@@ -39375,7 +39371,7 @@ function scripts.hero_eiskalt.update(this, store)
 		-- 冻土
 		a = this.timed_attacks.list[3]
 		skill = this.hero.skills.coldfury
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			local target = U.detect_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 			if target then
 				local pi, spi, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
@@ -39422,7 +39418,7 @@ function scripts.hero_eiskalt.update(this, store)
 		-- 雪球
 		a = this.timed_attacks.list[1]
 		skill = this.hero.skills.frosty
-		if ready_to_use_skill(a, store) then
+		if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 			local targets_info = U.find_enemies_in_paths(store.enemies, this.pos, a.range_nodes_min, a.range_nodes_max, nil, a.vis_flags, a.vis_bans)
 			if targets_info then
 				local target
@@ -39957,7 +39953,7 @@ function scripts.hero_asra.update(this, store)
 				end
 			end
 
-			if ready_to_use_skill(this.ultimate, store) then
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 				local enemy = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range)
 				if enemy and enemy.pos then
 					this.ultimate.ts = store.tick_ts
@@ -40251,7 +40247,7 @@ function scripts.hero_beresad.update(this, store)
 			U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 		end
 
-		if ready_to_use_skill(fear_attack, store) then
+		if ready_to_use_skill(fear_attack, store, this.unit.cooldown_factor) then
 			local enemies = U.find_enemies_in_range(store.enemies, this.pos, 0, fear_attack.max_range, fear_attack.vis_flags, fear_attack.vis_bans)
 			if enemies and #enemies > 0 then
 				S:queue(fear_attack.sound)
@@ -40271,7 +40267,7 @@ function scripts.hero_beresad.update(this, store)
 			end
 		end
 
-		if ready_to_use_skill(golem_attack, store) then
+		if ready_to_use_skill(golem_attack, store, this.unit.cooldown_factor) then
 			S:queue(golem_attack.sound)
 			U.y_animation_play(this, golem_attack.animation, nil, store.tick_ts, 1)
 			if not SU.y_hero_wait(store, this, golem_attack.cast_time) then
@@ -40281,7 +40277,7 @@ function scripts.hero_beresad.update(this, store)
 			goto label_beresad_0
 		end
 
-		if ready_to_use_skill(this.ultimate, store) then
+		if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 			local enemy = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range)
 			if enemy and enemy.pos then
 				this.ultimate.ts = store.tick_ts
@@ -40626,7 +40622,7 @@ function scripts.hero_dianyun.update(this, store)
 			U.y_animation_play_once_specific(this, "levelup", nil, store.tick_ts, 1)
 		end
 
-		if ready_to_use_skill(divine_rain_attack, store) then
+		if ready_to_use_skill(divine_rain_attack, store, this.unit.cooldown_factor) then
 			if U.is_soldiers_around_need_heal(store.soldiers, this.pos, divine_rain_attack.health_trigger_factor, divine_rain_attack.max_range) then
 				local start_ts = store.tick_ts
 				U.animation_start_once_specific(this, divine_rain_attack.animation, nil, store.tick_ts, 1)
@@ -40654,7 +40650,7 @@ function scripts.hero_dianyun.update(this, store)
 			end
 		end
 
-		if ready_to_use_skill(supreme_wave_attack, store) then
+		if ready_to_use_skill(supreme_wave_attack, store, this.unit.cooldown_factor) then
 			local targets = U.find_enemies_between_range_filter_off(this.pos, supreme_wave_attack.min_range, supreme_wave_attack.max_range, supreme_wave_attack.vis_flags, supreme_wave_attack.vis_bans)
 
 			if targets and #targets >= supreme_wave_attack.min_targets then
@@ -40682,7 +40678,7 @@ function scripts.hero_dianyun.update(this, store)
 			end
 		end
 
-		if ready_to_use_skill(this.ultimate, store) then
+		if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
 			local enemy = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range)
 			if enemy then
 				this.ultimate.ts = store.tick_ts
@@ -40761,7 +40757,7 @@ scripts.controller_lord_storm = {
 				end
 				local ricochet_attack = hero.ranged.attacks[2]
 				if not ricochet_decal then
-					if ready_to_use_skill(ricochet_attack, store) then
+					if ready_to_use_skill(ricochet_attack, store, this.unit.cooldown_factor) then
 						ricochet_decal = E:create_entity("decal_hero_dianyun_lightning_ricochet")
 						ricochet_decal.pos = hero.pos
 						for _, sprite in ipairs(ricochet_decal.render.sprites) do
@@ -40772,7 +40768,7 @@ scripts.controller_lord_storm = {
 						queue_insert(store, ricochet_decal)
 					end
 				else
-					if ready_to_use_skill(ricochet_attack, store) then
+					if ready_to_use_skill(ricochet_attack, store, this.unit.cooldown_factor) then
 						local target, targets = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(hero.pos, ricochet_attack.max_range, nil, ricochet_attack.vis_flags, ricochet_attack.vis_bans, ricochet_attack.crowds_range)
 						if target and #targets > ricochet_attack.min_targets then
 							local bullet = E:create_entity(ricochet_attack.bullet)

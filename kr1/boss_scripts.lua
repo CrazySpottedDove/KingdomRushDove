@@ -42,10 +42,6 @@ local function ready_to_attack(attack, store, factor)
 	return store.tick_ts - attack.ts > attack.cooldown * (factor or 1)
 end
 
-local function get_attack_ready(attack, store)
-	attack.ts = store.tick_ts - attack.cooldown
-end
-
 local function fts(v)
 	return v / FPS
 end
