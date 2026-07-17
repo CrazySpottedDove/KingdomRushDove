@@ -558,40 +558,48 @@ function EditablePanelView:initialize(sw, sh, title, keyboard, controller)
 
 	self.back = KImageView:new("options_bg_notxt")
 	self.pos = v(0, 0)
+	-- 原生尺寸 720×570，back.size 会随 ref_res 缩放（ref_scale = back.size.y/570）
+	local NATIVE_W = 720
+	local NATIVE_H = 570
+	local rs = self.back.size.y / NATIVE_H
+
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
 	self.back.pos = v(sw / 2, sh / 2 - 50)
-	self.back.scale = v(1.45, 1.45)
+
+	-- 背景缩放：使弹窗在坐标系下完整显示
+	local back_scale = math.min(1.45, (sh - 80) / self.back.size.y)
+	back_scale = math.max(back_scale, 0.7)
+	self.back.scale = v(back_scale, back_scale)
+
 	self.header = title
 	self.controller = controller
-
 	self:add_child(self.back)
-
 	self.back.alpha = 1
 
-	-- 添加标题
-	local header = GGPanelHeader:new(self.header, 242)
-
-	header.pos = V.v(240, CJK(41, 39, nil, 39))
-
+	-- 标题（位置大小均按 rs 缩放）
+	local header = GGPanelHeader:new(self.header, 242 * rs)
+	header.pos = V.v(240 * rs, CJK(41, 39, nil, 39) * rs)
 	self.back:add_child(header)
 
-	local controls_y = 448
+	-- 控件组：尺寸和位置均按 rs 缩放
+	local dg_local_h = 438 * rs
+	self.data_group = EditableGroup:new(V.v(self.back.size.x, dg_local_h), keyboard, controller)
+	self.data_group.pos = V.v(100 * rs, 100 * rs)
+	self.data_group.scale = v(1 / back_scale, 1 / back_scale)
 
-	-- 创建配置组
-	self.data_group = EditableGroup:new(V.v(self.back.size.x, controls_y - 10), keyboard, controller)
-	self.data_group.pos = V.v(100, 100)
-	self.data_group.scale = v(1 / 1.45, 1 / 1.45)
-
-	-- 设置数据改变回调
 	self.data_group:set_on_data_change_callback(function(key, value, all_data)
 	end)
 	self.back:add_child(self.data_group)
 
-	-- 底部按钮（无分页，改为滚动列表）
+	-- 按钮 Y：控件组视觉高度 = dg_local_h*(1/back_scale)*back_scale = dg_local_h（rs 已含）
+	local GAP_VISUAL = 66
+	local controls_y = 100 * rs + math.ceil((dg_local_h + GAP_VISUAL) / back_scale)
+
+	-- 底部按钮（位置按 rs 缩放）
 	local cancel_btn = GGOptionsButton:new(CJK("Cancel", "取消"))
 	cancel_btn.scale = V.v(0.62, 0.62)
 	cancel_btn.anchor = V.v(cancel_btn.size.x / 2, cancel_btn.size.y / 2)
-	cancel_btn.pos = V.v(self.back.size.x / 2 - 110, controls_y)
+	cancel_btn.pos = V.v(NATIVE_W / 2 * rs - 110 * rs, controls_y)
 	function cancel_btn.on_click()
 		S:queue("GUIButtonCommon")
 		self:hide()
@@ -602,7 +610,7 @@ function EditablePanelView:initialize(sw, sh, title, keyboard, controller)
 	local done_btn = GGOptionsButton:new(_("BUTTON_DONE"))
 	done_btn.scale = V.v(0.62, 0.62)
 	done_btn.anchor = V.v(done_btn.size.x / 2, done_btn.size.y / 2)
-	done_btn.pos = V.v(self.back.size.x / 2 + 110, controls_y)
+	done_btn.pos = V.v(NATIVE_W / 2 * rs + 110 * rs, controls_y)
 	function done_btn.on_click()
 		S:queue("GUIButtonCommon")
 		self:save()

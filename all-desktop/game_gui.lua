@@ -2,6 +2,7 @@
 if DEBUG then
 	package.loaded["data.game_gui_data"] = nil
 	package.loaded.gg_views_custom = nil
+	package.loaded["dove_modules.gui.editable_panel_view"] = nil
 end
 
 local log = require("lib.klua.log"):new("game_gui")
@@ -32,6 +33,7 @@ local v = V.v
 -- Dove modules
 local RichTextLabel = require("dove_modules.gui.rich_text_label")
 local text_diff = require("dove_modules.gui.text_utils")
+local EditablePanelView = require("dove_modules.gui.editable_panel_view")
 local P = require("path_db")
 local GR = require("grid_db")
 local GS = require("kr1.game_settings")
@@ -942,6 +944,12 @@ function game_gui:keypressed(key, isrepeat)
 		return
 	end
 
+	if self.window.responder then
+		-- 输入权转交
+		self.window.responder:on_keypressed(key, isrepeat)
+		return
+	end
+
 	local ks = configer.keyset()
 
 	if ks.pow_1 == key and not self.power_1:is_disabled() then
@@ -1078,6 +1086,10 @@ end
 
 function game_gui:keyreleased(key, isrepeat)
 	return
+end
+
+function game_gui:textinput(t)
+	self.window:textinput(t)
 end
 
 function game_gui:focus(focus)
@@ -1596,7 +1608,7 @@ function game_gui:hide()
 
 	self.manual_gui_hide = true
 
-	self:disable_keys()
+	-- self:disable_keys()
 	self:deselect_all()
 	self.pickview:disable()
 	self.hud_bottom:hide()
@@ -1621,7 +1633,7 @@ function game_gui:show()
 
 	self.manual_gui_hide = nil
 
-	self:enable_keys()
+	-- self:enable_keys()
 	self.pickview:enable()
 	self.hud_bottom:show()
 	self.hud_pause:show()

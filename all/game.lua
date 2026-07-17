@@ -464,6 +464,10 @@ function game:keypressed(key, isrepeat)
 	return self.game_gui:keypressed(key, isrepeat)
 end
 
+function game:textinput(t)
+	self.game_gui:textinput(t)
+end
+
 function game:keyreleased(key, isrepeat)
 	self.game_gui:keyreleased(key, isrepeat)
 end
