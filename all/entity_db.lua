@@ -839,8 +839,9 @@ function entity_db:patch_config(config)
 			end
 		end
 		if t.tower then
-			t.tower.cooldown_factor = t.tower.cooldown_factor / config.tower_cooldown_divider
-			SU.change_fps(0, t, 1 / t.tower.cooldown_factor)
+			t.tower.cooldown_factor_divider = config.tower_cooldown_divider * t.tower.cooldown_factor_divider
+			t.tower.cooldown_factor = 1.0 / t.tower.cooldown_factor_divider
+			SU.change_fps(0, t, t.tower.cooldown_factor_divider)
 			t.tower.damage_factor = t.tower.damage_factor * config.tower_damage_multiplier
 			if t.attacks then
 				t.attacks.range = t.attacks.range * config.tower_range_multiplier

@@ -878,7 +878,7 @@ tt = RT("mod_high_elven", "modifier")
 AC(tt, "render", "tween")
 tt.damage_factor = 0.09
 tt.damage_factor_inc = 0.045
-tt.cooldown_factor = 0.955
+tt.cooldown_factor = 0.94
 tt.cooldown_factor_inc = -0.03
 tt.main_script.insert = scripts.mod_high_elven.insert
 tt.main_script.remove = scripts.mod_high_elven.remove

@@ -4573,16 +4573,20 @@ function SU.insert_tower_cooldown_buff(ts, target, cooldown_factor)
 		return
 	end
 
-	target.tower.cooldown_factor = target.tower.cooldown_factor * cooldown_factor
+	local divider_inc = 1 - cooldown_factor
 
-	SU.change_fps(ts, target, 1 / (target.tower.cooldown_factor))
+	target.tower.cooldown_factor_divider = target.tower.cooldown_factor_divider + divider_inc
+	target.tower.cooldown_factor = 1.0 / target.tower.cooldown_factor_divider
+
+	SU.change_fps(ts, target, target.tower.cooldown_factor_divider)
 
 	if target.barrack then
 		for _, s in pairs(target.barrack.soldiers) do
 			if s.unit then
-				s.unit.cooldown_factor = s.unit.cooldown_factor * cooldown_factor
+				s.unit.cooldown_factor_divider = s.unit.cooldown_factor_divider + divider_inc
+				s.unit.cooldown_factor = 1.0 / s.unit.cooldown_factor_divider
 
-				SU.change_fps(ts, s, 1 / (s.unit.cooldown_factor))
+				SU.change_fps(ts, s, s.unit.cooldown_factor_divider)
 			end
 		end
 	end
@@ -4594,10 +4598,16 @@ function SU.insert_unit_cooldown_buff(ts, target, cooldown_factor)
 	end
 
 	if target.unit then
-		target.unit.cooldown_factor = target.unit.cooldown_factor * cooldown_factor
+		target.unit.cooldown_factor_divider = target.unit.cooldown_factor_divider + (1 - cooldown_factor)
+		target.unit.cooldown_factor = 1.0 / target.unit.cooldown_factor_divider
 
-		SU.change_fps(ts, target, 1 / (target.unit.cooldown_factor))
+		SU.change_fps(ts, target, target.unit.cooldown_factor_divider)
 	end
+end
+
+function SU.soldier_inherit_tower_buff_factor(soldier, tower, ts)
+	soldier.unit.damage_factor = soldier.unit.damage_factor * tower.tower.damage_factor
+	SU.insert_unit_cooldown_buff(ts, soldier, tower.tower.cooldown_factor)
 end
 
 ---移除塔攻击范围加成（乘算逆操作）
@@ -4634,16 +4644,19 @@ function SU.remove_tower_cooldown_buff(ts, target, cooldown_factor)
 		return
 	end
 
-	target.tower.cooldown_factor = target.tower.cooldown_factor / cooldown_factor
+	local divider_dec = 1 - cooldown_factor
+	target.tower.cooldown_factor_divider = target.tower.cooldown_factor_divider - divider_dec
+	target.tower.cooldown_factor = 1.0 / target.tower.cooldown_factor_divider
 
-	SU.change_fps(ts, target, 1 / (target.tower.cooldown_factor))
+	SU.change_fps(ts, target, target.tower.cooldown_factor_divider)
 
 	if target.barrack then
 		for _, s in pairs(target.barrack.soldiers) do
 			if s.unit then
-				s.unit.cooldown_factor = s.unit.cooldown_factor / cooldown_factor
+				s.unit.cooldown_factor_divider = s.unit.cooldown_factor_divider - divider_dec
+				s.unit.cooldown_factor = 1.0 / s.unit.cooldown_factor_divider
 
-				SU.change_fps(ts, s, 1 / (s.unit.cooldown_factor))
+				SU.change_fps(ts, s, s.unit.cooldown_factor_divider)
 			end
 		end
 	end
@@ -4655,9 +4668,10 @@ function SU.remove_unit_cooldown_buff(ts, target, cooldown_factor)
 	end
 
 	if target.unit then
-		target.unit.cooldown_factor = target.unit.cooldown_factor / cooldown_factor
+		target.unit.cooldown_factor_divider = target.unit.cooldown_factor_divider - (1 - cooldown_factor)
+		target.unit.cooldown_factor = 1.0 / target.unit.cooldown_factor_divider
 
-		SU.change_fps(ts, target, 1 / (target.unit.cooldown_factor))
+		SU.change_fps(ts, target, target.unit.cooldown_factor_divider)
 	end
 end
 

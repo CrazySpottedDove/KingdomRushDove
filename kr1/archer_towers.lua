@@ -218,7 +218,7 @@ local mod_crossbow_eagle = RT("mod_crossbow_eagle", "modifier")
 AC(mod_crossbow_eagle, "render", "tween")
 mod_crossbow_eagle.range_factor = 1.025
 mod_crossbow_eagle.range_factor_inc = 0.025
-mod_crossbow_eagle.cooldown_factor = 0.95
+mod_crossbow_eagle.cooldown_factor = 0.9
 mod_crossbow_eagle.cooldown_factor_inc = -0.05
 mod_crossbow_eagle.main_script.insert = scripts.mod_crossbow_eagle.insert
 mod_crossbow_eagle.main_script.remove = scripts.mod_crossbow_eagle.remove

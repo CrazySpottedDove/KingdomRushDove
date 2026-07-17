@@ -444,7 +444,7 @@ local s_range_factor = b.range_factor - 1
 local s_cooldown_factor = 1 - b.cooldown_factor
 local range = h.timed_attacks.list[2].max_range
 
-map["皇家号令"] = str(cooldown_str(), "迪纳斯发出皇家号令，使", range, "范围内友军防御塔攻击范围提升", s_range_factor * 100, "%，冷却下降", s_cooldown_factor * 100, "%，持续", duration, "秒。")
+map["皇家号令"] = str(cooldown_str(), "迪纳斯发出皇家号令，使", range, "范围内友军防御塔攻击范围提升", s_range_factor * 100, "%，攻速提升", s_cooldown_factor * 100, "%，持续", duration, "秒。")
 
 set_skill(h.hero.skills.catapult)
 

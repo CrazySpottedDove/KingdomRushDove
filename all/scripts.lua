@@ -1818,7 +1818,7 @@ function scripts.tower_barrack.get_info(this)
 		end
 	end
 
-	U.soldier_inherit_tower_buff_factor(s, this)
+	SU.soldier_inherit_tower_buff_factor(s, this, 0)
 
 	local s_info = s.info.fn(s)
 
@@ -1905,7 +1905,7 @@ function scripts.tower_barrack.update(this, store)
 						end
 					end
 
-					U.soldier_inherit_tower_buff_factor(s, this)
+					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 					queue_insert(store, s)
 
 					b.soldiers[i] = s
@@ -2003,7 +2003,7 @@ function scripts.tower_barrack_mercenaries.update(this, store)
 					end
 				end
 
-				U.soldier_inherit_tower_buff_factor(s, this)
+				SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 				queue_insert(store, s)
 
 				b.soldiers[i] = s
@@ -2046,7 +2046,7 @@ function scripts.tower_barrack_mercenaries.update(this, store)
 				end
 			end
 
-			U.soldier_inherit_tower_buff_factor(s, this)
+			SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 			queue_insert(store, s)
 
 			for i, ss in ipairs(b.soldiers) do

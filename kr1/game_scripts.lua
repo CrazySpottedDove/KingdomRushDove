@@ -536,7 +536,7 @@ function scripts.necromancer_aura.update(this, store)
 						e.nav_rally.center = V.vclone(e.pos)
 						e.nav_rally.pos = V.vclone(e.pos)
 						e.soldier.tower_id = source.id
-						U.soldier_inherit_tower_buff_factor(e, source)
+						SU.soldier_inherit_tower_buff_factor(e, source, store.tick_ts)
 						skeletons[#skeletons + 1] = e
 
 						queue_insert(store, e)
@@ -10641,7 +10641,7 @@ function scripts.druid_shooter_nature.update(this, store)
 					s.pos = V.vclone(s.nav_rally.pos)
 					s.nav_rally.new = true
 
-					U.soldier_inherit_tower_buff_factor(s, this.owner)
+					SU.soldier_inherit_tower_buff_factor(s, this.owner, store.tick_ts)
 					queue_insert(store, s)
 
 					b.soldiers[i] = s

@@ -1446,7 +1446,8 @@ function upgrades:patch_templates(max_level)
 	if u then
 		for _, n in pairs(archer_towers) do
 			local t = T(n)
-			t.tower.cooldown_factor = t.tower.cooldown_factor * u.cooldown_factor
+			t.tower.cooldown_factor_divider = t.tower.cooldown_factor_divider + (1 - u.cooldown_factor)
+			t.tower.cooldown_factor = 1.0 / t.tower.cooldown_factor_divider
 			if t.render then
 				for _, s in pairs(t.render.sprites) do
 					if not s._origin_fps then
@@ -1456,9 +1457,9 @@ function upgrades:patch_templates(max_level)
 							s._origin_fps = s.fps
 						end
 					end
-					s.fps = s._origin_fps * u.cooldown_factor
+					s.fps = s._origin_fps * t.tower.cooldown_factor
 				end
-				scale_fps_based_keys(t, 1 / u.cooldown_factor)
+				scale_fps_based_keys(t, t.tower.cooldown_factor_divider)
 			end
 		end
 	end

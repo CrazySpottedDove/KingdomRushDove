@@ -390,6 +390,7 @@ unit.fade_time_after_death = nil
 unit.spawner_id = nil
 unit.price = 0
 unit.cooldown_factor = 1
+unit.cooldown_factor_divider = 1
 unit.damage_buff = 0
 
 local tower = E:register_c("tower")
@@ -398,6 +399,7 @@ tower.can_be_sold = true
 tower.can_do_magic = true
 tower.damage_factor = 1
 tower.cooldown_factor = 1
+tower.cooldown_factor_divider = 1
 tower.default_rally_pos = v(0, 0)
 tower.flip_x = nil
 tower.hide_dust = nil

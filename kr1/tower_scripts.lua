@@ -2418,7 +2418,7 @@ scripts.tower_sorcerer = {
 						ns.health.armor = ns.health.armor + ns.health.armor_inc * ns.unit.level
 						ns.health.hp_max = ns.health.hp_max + ns.health.hp_inc * ns.unit.level
 
-						U.soldier_inherit_tower_buff_factor(ns, this)
+						SU.soldier_inherit_tower_buff_factor(ns, this, store.tick_ts)
 
 						local ma = ns.melee.attacks[1]
 
@@ -2855,7 +2855,7 @@ scripts.tower_necromancer = {
 						s.melee.attacks[1].damage_min = s.melee.attacks[1].damage_min + s.melee.attacks[1].damage_inc * s.unit.level
 						s.melee.attacks[1].damage_max = s.melee.attacks[1].damage_max + s.melee.attacks[1].damage_inc * s.unit.level
 
-						U.soldier_inherit_tower_buff_factor(s, this)
+						SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 						queue_insert(store, s)
 
 						b.soldiers[1] = s
@@ -4923,7 +4923,7 @@ scripts.tower_frankenstein = {
 
 							s.soldier.tower_id = this.id
 
-							U.soldier_inherit_tower_buff_factor(s, this)
+							SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 
 							s.pos = v(this.pos.x + 2, this.pos.y - 10)
 							s.nav_rally.pos = v(b.rally_pos.x, b.rally_pos.y)
@@ -4985,7 +4985,7 @@ scripts.tower_frankenstein = {
 						s.nav_rally.new = true
 						s.unit.level = l
 
-						U.soldier_inherit_tower_buff_factor(s, this)
+						SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 
 						s.health.armor = s.health.armor_lvls[l]
 						s.melee.attacks[1].damage_min = s.melee.attacks[1].damage_min_lvls[l]
@@ -5468,7 +5468,7 @@ function scripts.tower_baby_ashbite.update(this, store)
 			end
 		end
 
-		U.soldier_inherit_tower_buff_factor(s, this)
+		SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 		queue_insert(store, s)
 		table.insert(b.soldiers, s)
 		signal.emit("tower-spawn", this, s)
@@ -5505,7 +5505,7 @@ function scripts.tower_baby_ashbite.update(this, store)
 						end
 					end
 
-					U.soldier_inherit_tower_buff_factor(s, this)
+					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 					queue_insert(store, s)
 
 					b.soldiers[i] = s
@@ -6494,7 +6494,7 @@ function scripts.controller_tower_dark_elf_soldiers.update(this, store)
 
 					s = E:create_entity(b.soldier_type)
 
-					U.soldier_inherit_tower_buff_factor(s, this.tower_ref)
+					SU.soldier_inherit_tower_buff_factor(s, this.tower_ref, store.tick_ts)
 
 					s.soldier.tower_id = this.tower_ref.id
 					s.soldier.tower_soldier_idx = i
@@ -6744,7 +6744,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
 			tower.tower_upgrade_persistent_data.souls_extra_damage_min = tower.tower_upgrade_persistent_data.souls_extra_damage_min + tower.powers.skill_buff.damage_min
 			tower.tower_upgrade_persistent_data.souls_extra_damage_max = tower.tower_upgrade_persistent_data.souls_extra_damage_max + tower.powers.skill_buff.damage_max
 
-			if tower.tower_upgrade_persistent_data.souls_extra_damage_min / tower.powers.skill_buff.damage_min <= 22 then
+			if tower.tower_upgrade_persistent_data.souls_extra_damage_min / tower.powers.skill_buff.damage_min <= 25 then
 				SU.insert_tower_cooldown_buff(store.tick_ts, tower, 0.99)
 			end
 		else
@@ -9097,7 +9097,7 @@ function scripts.tower_pandas.update(this, store)
 				s.pos = vclone(s.nav_rally.pos)
 				s.nav_rally.new = true
 
-				U.soldier_inherit_tower_buff_factor(s, this)
+				SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 				queue_insert(store, s)
 
 				b.soldiers[#b.soldiers + 1] = s
@@ -9829,7 +9829,7 @@ function scripts.soldier_tower_pandas.update(this, store)
 	end
 
 	U.sprites_show(this, nil, nil, true)
-	U.soldier_inherit_tower_buff_factor(this, tower)
+	SU.soldier_inherit_tower_buff_factor(this, tower, store.tick_ts)
 
 	if this.do_level_up_smoke then
 		local smoke = E:create_entity("fx_panda_smoke_level_up")
@@ -13499,7 +13499,7 @@ function scripts.tower_rocket_gunners.update(this, store)
 					s.soldier.tower_id = this.id
 					s.soldier.tower_soldier_idx = i
 
-					U.soldier_inherit_tower_buff_factor(s, this)
+					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 
 					s.pos = v(V.add(this.pos.x, this.pos.y, b.respawn_offset.x, b.respawn_offset.y))
 					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, 3, formation_offset)
@@ -16170,7 +16170,7 @@ function scripts.tower_paladin_rider.update(this, store)
 						end
 					end
 
-					U.soldier_inherit_tower_buff_factor(s, this)
+					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 					queue_insert(store, s)
 
 					b.soldiers[i] = s
@@ -18576,7 +18576,7 @@ function scripts.tower_dwarf.update(this, store)
 						s.powers.incendiary_ammo.level = pow_i.level
 						s.powers.incendiary_ammo.changed = true
 					end
-					U.soldier_inherit_tower_buff_factor(s, this)
+					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 					queue_insert(store, s)
 
 					b.soldiers[i] = s
@@ -18926,7 +18926,7 @@ function scripts.tower_ghost.update(this, store)
 						end
 					end
 
-					U.soldier_inherit_tower_buff_factor(s, this)
+					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 					queue_insert(store, s)
 
 					b.soldiers[i] = s
@@ -23540,7 +23540,7 @@ function scripts.tower_orc_warriors.update(this, store)
 			s.powers[pn].level = p.level
 		end
 
-		U.soldier_inherit_tower_buff_factor(s, this)
+		SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 
 		queue_insert(store, s)
 		queue_remove(store, old)
@@ -23618,7 +23618,7 @@ function scripts.tower_orc_warriors.update(this, store)
 						end
 					end
 
-					U.soldier_inherit_tower_buff_factor(s, this)
+					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 					queue_insert(store, s)
 					b.soldiers[i] = s
 					signal.emit("tower-spawn", this, s)
@@ -23830,7 +23830,7 @@ function scripts.tower_dark_knights.update(this, store)
 						sp.shield.changed = true
 					end
 
-					U.soldier_inherit_tower_buff_factor(s, this)
+					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 					queue_insert(store, s)
 					b.soldiers[i] = s
 					signal.emit("tower-spawn", this, s)
@@ -24120,7 +24120,7 @@ function scripts.tower_bone_flingers.update(this, store)
 		e.nav_path.ni = ni
 		e.nav_rally.center.x, e.nav_rally.center.y = e_pos.x, e_pos.y
 		e.nav_rally.pos.x, e.nav_rally.pos.y = e_pos.x, e_pos.y
-		U.soldier_inherit_tower_buff_factor(e, this)
+		SU.soldier_inherit_tower_buff_factor(e, this, store.tick_ts)
 
 		queue_insert(store, e)
 		return true
@@ -24196,7 +24196,7 @@ function scripts.tower_bone_flingers.update(this, store)
 					s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, barrack, barrack.max_soldiers, formation_offset)
 					s.pos = last_soldier_pos[i] or V.vclone(s.nav_rally.pos)
 					s.nav_rally.new = true
-					U.soldier_inherit_tower_buff_factor(s, this)
+					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 
 					queue_insert(store, s)
 					barrack.soldiers[i] = s
@@ -24749,7 +24749,7 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 
 						s.powers.armor.level = p_armor.level
 
-						U.soldier_inherit_tower_buff_factor(s, this)
+						SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 						queue_insert(store, s)
 
 						b.soldiers[i] = s
@@ -25379,7 +25379,7 @@ function scripts.tower_grim_cemetery.get_info(this)
 		soldier_type = "soldier_zombie_big"
 	end
 	local s = E:create_entity(soldier_type)
-	U.soldier_inherit_tower_buff_factor(s, this)
+	SU.soldier_inherit_tower_buff_factor(s, this, 0)
 	local s_info = s.info.fn(s)
 	s_info.type = STATS_TYPE_TOWER_BARRACK
 
@@ -25511,7 +25511,7 @@ function scripts.grim_cemetery_aura.update(this, store, script)
 		e.nav_rally.pos:copy(e.pos)
 		e.soldier.tower_id = source.id
 
-		U.soldier_inherit_tower_buff_factor(e, source)
+		SU.soldier_inherit_tower_buff_factor(e, source, store.tick_ts)
 
 		queue_insert(store, e)
 
@@ -26439,7 +26439,7 @@ function scripts.tower_spirit_mausoleum.update(this, store)
 						new_s.nav_rally.new = false
 					end
 					new_s.render.sprites[1].name = "raise"
-					U.soldier_inherit_tower_buff_factor(new_s, this)
+					SU.soldier_inherit_tower_buff_factor(new_s, this, store.tick_ts)
 					queue_insert(store, new_s)
 					barrack.soldiers[i] = new_s
 					signal.emit("tower-spawn", this, new_s)
@@ -26879,7 +26879,7 @@ function scripts.soldier_elves_harasser.update(this, store, script)
 				unit.pos:copy(this.pos)
 				unit.nav_rally.pos:copy(this.pos)
 				unit.nav_rally.center = unit.nav_rally.pos
-				U.soldier_inherit_tower_buff_factor(unit, tower)
+				SU.soldier_inherit_tower_buff_factor(unit, tower, store.tick_ts)
 				unit._espectral_tower_ref = tower
 				queue_insert(store, unit)
 				this.render.sprites[1].hidden = true
@@ -27382,7 +27382,7 @@ function scripts.tower_deep_devils.update(this, store)
 						s.render.sprites[1].prefix = "deep_devils_reef_tower_redspine_lv4_layer1"
 						s.render.sprites[3].hidden = false
 					end
-					U.soldier_inherit_tower_buff_factor(s, this)
+					SU.soldier_inherit_tower_buff_factor(s, this, store.tick_ts)
 					queue_insert(store, s)
 					b.soldiers[i] = s
 					signal.emit("tower-spawn", this, s)
@@ -27645,7 +27645,7 @@ function scripts.tower_ignis_altar.update(this, store)
 				soldier.pos:copy(soldier.nav_rally.pos)
 				soldier.nav_rally.new = false
 				soldier.render.sprites[1].name = soldier.raise_animation
-				U.soldier_inherit_tower_buff_factor(soldier, this)
+				SU.soldier_inherit_tower_buff_factor(soldier, this, store.tick_ts)
 				queue_insert(store, soldier)
 				this.barrack.soldiers[1] = soldier
 				signal.emit("tower-spawn", this, soldier)
@@ -27680,7 +27680,7 @@ function scripts.tower_ignis_altar.update(this, store)
 					if not ns.pos:equals(ns.nav_rally.pos) then
 						ns.nav_rally.new = true
 					end
-					U.soldier_inherit_tower_buff_factor(ns, this)
+					SU.soldier_inherit_tower_buff_factor(ns, this, store.tick_ts)
 					queue_insert(store, ns)
 					this.barrack.soldiers[i] = ns
 					signal.emit("tower-spawn", this, ns)
@@ -28089,7 +28089,7 @@ function scripts.tower_shaolin.update(this, store)
 						ns.nav_rally.new = true
 					end
 
-					U.soldier_inherit_tower_buff_factor(ns, this)
+					SU.soldier_inherit_tower_buff_factor(ns, this, store.tick_ts)
 					queue_insert(store, ns)
 					this.barrack.soldiers[i] = ns
 					signal.emit("tower-spawn", this, ns)
@@ -28946,7 +28946,7 @@ function scripts.tower_swamp_monster.update(this, store)
 					ns.powers.stun.level = pow_s.level
 					ns.powers.instakill.level = pow_i.level
 					ns.powers.eat.level = pow_e.level
-					U.soldier_inherit_tower_buff_factor(ns, this)
+					SU.soldier_inherit_tower_buff_factor(ns, this, store.tick_ts)
 					queue_insert(store, ns)
 					b.soldiers[1] = ns
 					signal.emit("tower-spawn", this, ns)
@@ -28961,7 +28961,7 @@ function scripts.tower_swamp_monster.update(this, store)
 					ns.powers.stun.level = pow_s.level
 					ns.powers.instakill.level = pow_i.level
 					ns.powers.eat.level = pow_e.level
-					U.soldier_inherit_tower_buff_factor(ns, this)
+					SU.soldier_inherit_tower_buff_factor(ns, this, store.tick_ts)
 					queue_insert(store, ns)
 					b.soldiers[1] = ns
 					signal.emit("tower-spawn", this, ns)
@@ -29842,7 +29842,7 @@ function scripts.tower_sandworm.update(this, store)
 					end
 				end
 
-				U.soldier_inherit_tower_buff_factor(e, this)
+				SU.soldier_inherit_tower_buff_factor(e, this, store.tick_ts)
 				queue_insert(store, e)
 			end
 
