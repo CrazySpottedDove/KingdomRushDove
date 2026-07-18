@@ -19970,7 +19970,7 @@ tt.hero.skills.spider_bite.xp_level_steps = {
 	[9] = 3
 }
 tt.hero.skills.spider_bite.xp_gain = {300, 600, 900}
-tt.hero.skills.spider_bite.damage_config = {20, 30, 40}
+tt.hero.skills.spider_bite.damage_config = {20, 35, 50}
 tt.hero.skills.onix_arrows = CC("hero_skill")
 tt.hero.skills.onix_arrows.xp_level_steps = {
 	[2] = 1,
@@ -20140,8 +20140,8 @@ tt.damage_type = DAMAGE_ARMOR
 
 tt = RT("mod_asra_poison", "mod_poison")
 tt.modifier.duration = 99999
-tt.dps.damage_max = 7
-tt.dps.damage_min = 7
+tt.dps.damage_max = 20
+tt.dps.damage_min = 20
 tt.dps.damage_every = 0.5
 tt.dps.kill = true
 tt.dps.damage_type = bor(DAMAGE_POISON, DAMAGE_NO_SHIELD_HIT)

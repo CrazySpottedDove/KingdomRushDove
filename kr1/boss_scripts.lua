@@ -258,7 +258,7 @@ function scripts.eb_jt.update(this, store)
 				end)
 
 				if not towers then
-					SU.delay_attack(store, fa, 0.5)
+					fa.ts = fa.ts + 0.5
 				else
 					SU.hide_modifiers(store, this, true)
 					U.animation_start_default(this, "freeze", nil, store.tick_ts, false)
