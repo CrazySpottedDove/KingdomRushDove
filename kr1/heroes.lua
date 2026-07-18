@@ -19978,7 +19978,7 @@ tt.hero.skills.onix_arrows.xp_level_steps = {
 	[8] = 3
 }
 tt.hero.skills.onix_arrows.xp_gain = {90, 180, 270}
-tt.hero.skills.onix_arrows.loops = {3, 4, 5}
+tt.hero.skills.onix_arrows.loops = {4, 5, 6}
 tt.hero.skills.onix_arrows.damage_min = {20, 35, 50}
 tt.hero.skills.onix_arrows.damage_max = {30, 50, 70}
 tt.hero.skills.quiver_of_sorrow = CC("hero_skill")
@@ -20101,7 +20101,7 @@ tt.unbreakable = {
 }
 
 tt = RT("bullet_asra", "arrow")
-tt.bullet.xp_gain_factor = 2.2
+tt.bullet.xp_gain_factor = 2.5
 tt.bullet.flight_time = fts(9)
 tt.bullet.flight_time_factor = fts(1 / 60)
 tt.bullet.hit_distance = 50
