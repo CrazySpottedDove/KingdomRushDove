@@ -49701,6 +49701,76 @@ return {
 		from = 1,
 		to = 18
 	},
+	hero_asra_multishotDownIn = {
+		prefix = "hero_asra",
+		from = 139,
+		to = 148
+	},
+	hero_asra_multishotDownLoop = {
+		prefix = "hero_asra",
+		from = 149,
+		to = 156
+	},
+	hero_asra_multishotDownOut = {
+		prefix = "hero_asra",
+		from = 157,
+		to = 164
+	},
+	hero_asra_multishotUpIn = {
+		prefix = "hero_asra",
+		from = 165,
+		to = 174
+	},
+	hero_asra_multishotUpLoop = {
+		prefix = "hero_asra",
+		from = 175,
+		to = 182
+	},
+	hero_asra_multishotUpOut = {
+		prefix = "hero_asra",
+		from = 183,
+		to = 190
+	},
+	hero_asra_level2Walk = {
+		prefix = "hero_asra",
+		from = 241,
+		to = 253
+	},
+	hero_asra_level3Walk = {
+		prefix = "hero_asra",
+		from = 254,
+		to = 265
+	},
+	hero_asra_meleeInit = {
+		prefix = "hero_asra",
+		from = 295,
+		to = 312
+	},
+	hero_asra_idleBlock = {
+		prefix = "hero_asra",
+		from = 313,
+		to = 326
+	},
+	hero_asra_meleeEnd = {
+		prefix = "hero_asra",
+		from = 384,
+		to = 403
+	},
+	hero_asra_damage_multiplier_decal_run = {
+		prefix = "hero_asra_damage_multiplier_decal",
+		from = 1,
+		to = 54
+	},
+	hero_asra_poison_modifier_explotion = {
+		prefix = "hero_asra_poison_modifier",
+		from = 1,
+		to = 9
+	},
+	hero_asra_poison_modifier_run = {
+		prefix = "hero_asra_poison_modifier",
+		from = 10,
+		to = 21
+	},
 
 	-- hero_beresad
 	hero_beresad_idle = {

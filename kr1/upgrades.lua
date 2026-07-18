@@ -978,6 +978,8 @@ upgrades.arrows = {
 	"arrow_silver_mark_long",
 	"arrow_hero_elves_archer",
 	"arrow_hero_alleria",
+	"bullet_asra",
+	"bullet_onix_asra",
 	"multishot_crossbow",
 	"knife_catha",
 	"bullet_tower_dark_elf_lvl4",

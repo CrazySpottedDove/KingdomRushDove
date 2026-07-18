@@ -3198,27 +3198,30 @@ set_skill(h.hero.skills.onix_arrows)
 cooldown = h.ranged.attacks[2].cooldown
 d[1].damage_min = s.damage_min[max_lvl]
 d[1].damage_max = s.damage_max[max_lvl]
-d[1].damage_type = DAMAGE_MAGICAL
-map["岩蛇箭"] = str(cooldown_str(), "向目标射出一簇", s.loops[max_lvl], "支箭，每支造成", damage_str(), "。")
+d[1].damage_type = T("bullet_onix_asra").bullet.damage_type
+map["岩蛇箭"] = str(cooldown_str(), "向目标射出", s.loops[max_lvl], "支箭，每支造成", damage_str(), "。")
 
 set_skill(h.hero.skills.quiver_of_sorrow)
-map["哀恸箭袋"] = str("阿斯拉每打中一次远程攻击，就能击破目标", s.damage_armor[max_lvl] * 100, "点护甲。")
+map["哀恸箭袋"] = str("阿斯拉每次射击都可削减目标", s.damage_armor[max_lvl] * 100, "点护甲。")
 
 set_skill(h.hero.skills.shield_of_shadows)
-cooldown = h.timed_attacks.list[1].cooldown
+cooldown = h.unbreakable.cooldown
 e = T("hero_asra_unbreakable_mod")
 local shield_duration = e.modifier.duration
-map["暗影之盾"] = str(cooldown_str(), "受到攻击后，阿斯拉会施放出一面", s.shield_max_damage[max_lvl], "点生命值的护盾，持续", shield_duration, "秒。")
+map["暗影之盾"] = str(cooldown_str(), "受到攻击后，阿斯拉会施放出一面可抵挡", s.shield_max_damage[max_lvl], "点伤害的护盾，持续", shield_duration, "秒。")
 
 set_skill(h.hero.skills.ultimate)
-get_cooldown()
+cooldown = h.ultimate.cooldown
 d[1].damage_min = s.damage_config[max_lvl]
 d[1].damage_max = s.damage_config[max_lvl]
-d[1].damage_type = DAMAGE_TRUE
+d[1].damage_type = T("arrow_hero_asra_ultimate").bullet.damage_type
 e = T("mod_hero_asra_ultimate_poison")
 local ult_poison_every = e.dps.damage_every
 local ult_poison_duration = e.modifier.duration
-map["毒雨"] = str(cooldown_str(), "射出数支毒箭攻击大范围区域，每支对区域内所有敌人造成", damage_str(), "并附加剧毒，每", ult_poison_every, "秒造成", e.dps.damage_max, "点伤害，持续", ult_poison_duration, "秒。")
+d[2].damage_min = s.damage_poison_config[max_lvl]
+d[2].damage_max = s.damage_poison_config[max_lvl]
+d[2].damage_type = e.dps.damage_type
+map["毒雨"] = str(cooldown_str(), "射出数支毒箭攻击大范围区域，每支对区域内所有敌人造成", damage_str(), "并附加剧毒，每", ult_poison_every, "秒造成", damage_str(2), "，持续", ult_poison_duration, "秒。")
 
 -- hero_beresad
 set_hero("hero_beresad")

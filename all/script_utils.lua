@@ -5537,6 +5537,7 @@ end
 
 --- 处理单体子弹命中时的伤害与modifier效果
 ---@param bullet_entity table
+---@param target table
 ---@param store table
 function SU.apply_single_bullet_simulation(bullet_entity, target, store)
 	local b = bullet_entity.bullet
@@ -5553,6 +5554,33 @@ function SU.apply_single_bullet_simulation(bullet_entity, target, store)
 				m.modifier.level = b.level
 				m.modifier.damage_factor = b.damage_factor
 				queue_insert(store, m)
+			end
+		end
+	end
+end
+
+--- 处理子弹命中多个目标时的伤害与 modifier 效果
+---@param bullet_entity table
+---@param targets table
+---@param store table
+function SU.apply_batch_bullet_simulation(bullet_entity, targets, store)
+	local b = bullet_entity.bullet
+	local mods = b.mods or (b.mod and {b.mod})
+	for i = 1, #targets do
+		local target = targets[i]
+		local d = SU.create_bullet_damage(b, target.id, bullet_entity.id)
+		queue_damage(store, d)
+		if mods then
+			for j = 1, #mods do
+				local mod_name = mods[j]
+				if U.flags_pass(target.vis, E:get_template(mod_name).modifier) then
+					local m = E:create_entity(mod_name)
+					m.modifier.source_id = bullet_entity.id
+					m.modifier.target_id = target.id
+					m.modifier.level = b.level
+					m.modifier.damage_factor = b.damage_factor
+					queue_insert(store, m)
+				end
 			end
 		end
 	end

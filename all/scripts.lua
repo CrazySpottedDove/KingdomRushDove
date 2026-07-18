@@ -9658,4 +9658,131 @@ function scripts.mod_jump_passive.update(this, store)
 	queue_remove(store, this)
 end
 
+--  护盾的逻辑
+scripts.mod_shield = {
+	insert = function(this, store)
+		local m = this.modifier
+		local target = store.entities[this.modifier.target_id]
+
+		if not target or target.health.dead then
+			return false
+		end
+
+		m.ts = store.tick_ts
+
+		this.on_damages_index = U.insert_on_damage(target, scripts.mod_shield.on_damage)
+
+		this._hit_sources = {}
+		this._blood_color = target.unit.blood_color
+		target.unit.blood_color = BLOOD_NONE
+
+		if not target._shields then
+			target._shields = {}
+		end
+		target._shields[this.id] = this
+		this.health.hp = this.shield_max_damage
+		this.health.hp_max = this.shield_max_damage
+
+		return true
+	end,
+	remove = function(this, store)
+		local m = this.modifier
+		local target = store.entities[m.target_id]
+
+		if target then
+			U.remove_on_damage(target, this.on_damages_index)
+			target._shields[this.id] = nil
+			-- TODO: blood color bug fix
+			target.unit.blood_color = this._blood_color
+		end
+
+		return true
+	end,
+	update = function(this, store)
+		local m = this.modifier
+
+		this.modifier.ts = store.tick_ts
+
+		local target = store.entities[m.target_id]
+
+		if not target or not target.pos then
+			queue_remove(store, this)
+
+			return
+		end
+
+		this.pos = target.pos
+
+		U.y_animation_play(this, this.animation_start, nil, store.tick_ts, false)
+
+		while true do
+			target = store.entities[m.target_id]
+
+			if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node or this.shield_broken then
+				U.y_animation_play(this, this.animation_end, nil, store.tick_ts, 1)
+				queue_remove(store, this)
+
+				return
+			end
+
+			if this.render and target.unit then
+				local s = this.render.sprites[1]
+				local flip_sign = 1
+
+				if target.render then
+					flip_sign = target.render.sprites[1].flip_x and -1 or 1
+				end
+
+				if m.health_bar_offset and target.health_bar then
+					local hb = target.health_bar.offset
+					local hbo = m.health_bar_offset
+
+					s.offset.x, s.offset.y = hb.x + hbo.x * flip_sign, hb.y + hbo.y
+				elseif m.use_mod_offset and target.unit.mod_offset then
+					s.offset.x, s.offset.y = target.unit.mod_offset.x * flip_sign, target.unit.mod_offset.y
+				end
+			end
+
+			U.y_animation_play(this, this.animation_loop, nil, store.tick_ts, 1)
+			coroutine.yield()
+		end
+	end,
+	on_damage = function(this, store, damage)
+		local blocked = false
+		for _, mod in pairs(this._shields) do
+			-- 通知 update 脚本移除即可,不要直接移除.
+			if mod.shield_broken then
+				goto continue
+			end
+
+			if U.flag_has(damage.damage_type, bor(DAMAGE_INSTAKILL, DAMAGE_DISINTEGRATE, DAMAGE_EAT, DAMAGE_IGNORE_SHIELD)) then
+				mod.shield_broken = true
+				mod.health.hp = 0
+
+				goto continue
+			else
+				mod.damage_taken = mod.damage_taken + damage.value
+			end
+
+			mod.health.hp = math.max(mod.shield_max_damage - mod.damage_taken, 0)
+
+			if mod.damage_taken >= mod.shield_max_damage then
+				mod.shield_broken = true
+
+				if mod.damage_taken - mod.shield_max_damage > 0 then
+					damage.value = mod.damage_taken - mod.shield_max_damage
+					goto continue
+				else
+					blocked = true
+				end
+			else
+				blocked = true
+			end
+			::continue::
+		end
+
+		return not blocked
+	end
+}
+
 return scripts

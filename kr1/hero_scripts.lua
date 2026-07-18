@@ -19192,7 +19192,7 @@ function scripts.hero_space_elf.level_up(this, store)
 		local m = E:get_template(a.mod)
 
 		m.modifier.duration = s.duration[s.level]
-		m.shield_base = s.shield_base[s.level]
+		m.shield_max_damage = s.shield_base[s.level]
 		m.explosion_damage = s.explosion_damage[s.level]
 	end)
 	upgrade_skill(this, "void_rift", function(this, s)
@@ -19971,41 +19971,6 @@ end
 
 scripts.mod_hero_space_elf_black_aegis = {}
 
-function scripts.mod_hero_space_elf_black_aegis.insert(this, store)
-	local m = this.modifier
-	local target = store.entities[this.modifier.target_id]
-
-	if not target or not target.health or target.health.dead then
-		return false
-	end
-
-	m.ts = store.tick_ts
-
-	this.on_damages_index = U.insert_on_damage(target, scripts.mod_hero_space_elf_black_aegis.on_damage)
-	this._hit_sources = {}
-	this._blood_color = target.unit.blood_color
-	target.unit.blood_color = BLOOD_NONE
-	target._shield_mod_black_aegis = this
-	this.health.hp = this.shield_base
-	this.health.hp_max = this.shield_base
-
-	return true
-end
-
-function scripts.mod_hero_space_elf_black_aegis.remove(this, store)
-	local m = this.modifier
-	local target = store.entities[m.target_id]
-
-	if target then
-		U.remove_on_damage(target, this.on_damages_index)
-
-		target._shield_mod_black_aegis = nil
-		target.unit.blood_color = this._blood_color
-	end
-
-	return true
-end
-
 function scripts.mod_hero_space_elf_black_aegis.update(this, store)
 	local m = this.modifier
 
@@ -20094,44 +20059,6 @@ function scripts.mod_hero_space_elf_black_aegis.update(this, store)
 		U.y_animation_play(this, this.animation_loop, nil, store.tick_ts, 1)
 		coroutine.yield()
 	end
-end
-
-function scripts.mod_hero_space_elf_black_aegis.on_damage(this, store, damage)
-	local mod = this._shield_mod_black_aegis
-
-	if not mod then
-		log.error("mod_hero_space_elf_black_aegis.on_damage for enemy %s has no mod pointer", this.id)
-
-		return true
-	end
-
-	if mod.shield_broken then
-		return true
-	end
-
-	if U.flag_has(damage.damage_type, bor(DAMAGE_INSTAKILL, DAMAGE_DISINTEGRATE, DAMAGE_EAT, DAMAGE_IGNORE_SHIELD)) then
-		mod.shield_broken = true
-
-		queue_remove(store, mod)
-
-		return true
-	else
-		mod.damage_taken = mod.damage_taken + damage.value
-	end
-
-	mod.health.hp = mod.shield_base - mod.damage_taken
-
-	if mod.damage_taken >= mod.shield_base then
-		mod.shield_broken = true
-
-		if mod.damage_taken - mod.shield_base > 0 then
-			damage.value = mod.damage_taken - mod.shield_base
-
-			return true
-		end
-	end
-
-	return false
 end
 
 scripts.aura_hero_space_elf_void_rift = {}
@@ -20759,133 +20686,6 @@ function scripts.hero_raelyn.update(this, store)
 
 		coroutine.yield()
 	end
-end
-
-scripts.hero_raelyn_unbreakable_mod = {}
-
-function scripts.hero_raelyn_unbreakable_mod.insert(this, store)
-	local m = this.modifier
-	local target = store.entities[this.modifier.target_id]
-
-	if not target or not target.health or target.health.dead then
-		return false
-	end
-
-	m.ts = store.tick_ts
-
-	this.on_damages_index = U.insert_on_damage(target, scripts.hero_raelyn_unbreakable_mod.on_damage)
-
-	this._hit_sources = {}
-	this._blood_color = target.unit.blood_color
-	target.unit.blood_color = BLOOD_NONE
-	target._shield_mod_unbreakable = this
-	this.health.hp = this.shield_max_damage
-	this.health.hp_max = this.shield_max_damage
-
-	return true
-end
-
-function scripts.hero_raelyn_unbreakable_mod.remove(this, store)
-	local m = this.modifier
-	local target = store.entities[m.target_id]
-
-	if target then
-		U.remove_on_damage(target, this.on_damages_index)
-		target._shield_mod_unbreakable = nil
-		target.unit.blood_color = this._blood_color
-	end
-
-	return true
-end
-
-function scripts.hero_raelyn_unbreakable_mod.update(this, store)
-	local m = this.modifier
-
-	this.modifier.ts = store.tick_ts
-
-	local target = store.entities[m.target_id]
-
-	if not target or not target.pos then
-		queue_remove(store, this)
-
-		return
-	end
-
-	this.pos = target.pos
-
-	U.y_animation_play(this, this.animation_start, nil, store.tick_ts, false)
-
-	while true do
-		target = store.entities[m.target_id]
-
-		if not target or target.health.dead or m.duration >= 0 and store.tick_ts - m.ts > m.duration or m.last_node and target.nav_path.ni > m.last_node then
-			U.y_animation_play(this, this.animation_end, nil, store.tick_ts, 1)
-			queue_remove(store, this)
-
-			return
-		end
-
-		if this.render and target.unit then
-			local s = this.render.sprites[1]
-			local flip_sign = 1
-
-			if target.render then
-				flip_sign = target.render.sprites[1].flip_x and -1 or 1
-			end
-
-			if m.health_bar_offset and target.health_bar then
-				local hb = target.health_bar.offset
-				local hbo = m.health_bar_offset
-
-				s.offset.x, s.offset.y = hb.x + hbo.x * flip_sign, hb.y + hbo.y
-			elseif m.use_mod_offset and target.unit.mod_offset then
-				s.offset.x, s.offset.y = target.unit.mod_offset.x * flip_sign, target.unit.mod_offset.y
-			end
-		end
-
-		U.y_animation_play(this, this.animation_loop, nil, store.tick_ts, 1)
-		coroutine.yield()
-	end
-end
-
-function scripts.hero_raelyn_unbreakable_mod.on_damage(this, store, damage)
-	local mod = this._shield_mod_unbreakable
-
-	if not mod then
-		log.error("hero_raelyn_unbreakable_mod.on_damage for enemy %s has no mod pointer", this.id)
-
-		return true
-	end
-
-	if mod.shield_broken then
-		return true
-	end
-
-	if U.flag_has(damage.damage_type, bor(DAMAGE_INSTAKILL, DAMAGE_DISINTEGRATE, DAMAGE_EAT, DAMAGE_IGNORE_SHIELD)) then
-		mod.shield_broken = true
-
-		queue_remove(store, mod)
-
-		return true
-	else
-		mod.damage_taken = mod.damage_taken + damage.value
-	end
-
-	mod.health.hp = mod.shield_max_damage - mod.damage_taken
-
-	if mod.damage_taken >= mod.shield_max_damage then
-		mod.shield_broken = true
-
-		queue_remove(store, mod)
-
-		if mod.damage_taken - mod.shield_max_damage > 0 then
-			damage.value = mod.damage_taken - mod.shield_max_damage
-
-			return true
-		end
-	end
-
-	return false
 end
 
 scripts.hero_raelyn_ultimate = {}
@@ -39864,36 +39664,27 @@ function scripts.hero_asra.level_up(this, store, initial)
 
 	upgrade_skill(this, "quiver_of_sorrow", function(this, s)
 		local e = E:get_template("mod_arrow_asra")
-		if e.damage_min ~= nil then
-			e.damage_min = s.damage_armor[s.level]
-			e.damage_max = s.damage_armor[s.level]
-		end
+		e.damage_min = s.damage_armor[s.level]
+		e.damage_max = s.damage_armor[s.level]
 	end)
 
 	upgrade_skill(this, "shield_of_shadows", function(this, s)
-		this.timed_attacks.list[1].disabled = nil
-		this.timed_attacks.list[1].xp_gain = s.xp_gain[s.level]
+		this.unbreakable.disabled = nil
 	end)
 
 	upgrade_skill(this, "ultimate", function(this, s)
 		this.ultimate.disabled = nil
-		local u = E:get_template("hero_asra_ultimate")
-		u.cooldown = s.cooldown[s.level]
 		local e = E:get_template("mod_hero_asra_ultimate_poison")
-		e.dps.damage_min = s.damage_config[s.level]
-		e.dps.damage_max = s.damage_config[s.level]
+		e.dps.damage_min = s.damage_poison_config[s.level]
+		e.dps.damage_max = s.damage_poison_config[s.level]
+		e = E:get_template("arrow_hero_asra_ultimate")
+		e.bullet.damage_min = s.damage_config[s.level]
+		e.bullet.damage_max = s.damage_config[s.level]
 	end)
 end
 
 function scripts.hero_asra.update(this, store)
 	local h = this.health
-	local unbreakable_attack = this.timed_attacks.list[1]
-
-	unbreakable_attack.ts = 0
-	this.melee.attacks[1].ts = 0
-	this.melee.attacks[2].ts = 0
-	this.ranged.attacks[1].ts = 0
-	this.ranged.attacks[2].ts = 0
 
 	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 	this.health_bar.hidden = false
@@ -39918,53 +39709,11 @@ function scripts.hero_asra.update(this, store)
 
 			local brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
-			local skill = this.hero.skills.shield_of_shadows
-			local a = unbreakable_attack
-			if not a.disabled and store.tick_ts - a.ts > a.cooldown and not U.has_modifier(store, this, a.mod) then
-				local enemies = U.find_enemies_in_range(store.enemies, this.pos, 0, a.max_range_trigger, a.vis_flags, a.vis_bans)
-				if enemies and #enemies >= a.min_targets then
-					local start_ts = store.tick_ts
-					S:queue(a.sound)
-					U.y_animation_play(this, a.animation, nil, store.tick_ts, 1)
-					if not SU.y_hero_wait(store, this, a.cast_time) then
-						a.ts = start_ts
-						SU.hero_gain_xp_from_skill(this, skill)
-						enemies = U.find_enemies_in_range(store.enemies, this.pos, 0, a.max_range_effect, a.vis_flags, a.vis_bans)
-						if enemies and #enemies > 0 then
-							enemies = table.slice(enemies, 1, a.max_targets)
-							local m = E:create_entity(a.mod)
-							m.shield_max_damage = skill.shield_max_damage[skill.level]
-							m.modifier.source_id = this.id
-							m.modifier.target_id = this.id
-							local mod_prefix
-							if #enemies <= #m.sprites_per_enemies then
-								mod_prefix = m.sprites_per_enemies[#enemies]
-							else
-								mod_prefix = m.sprites_per_enemies[#m.sprites_per_enemies]
-							end
-							m.render.sprites[1].prefix = mod_prefix
-							queue_insert(store, m)
-						end
-						SU.y_hero_animation_wait(this)
-					end
-					goto label_asra_0
-				else
-					a.ts = a.ts + 0.1
-				end
-			end
-
 			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
-				local enemy = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range)
+				local enemy = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range, true)
+
 				if enemy and enemy.pos then
-					this.ultimate.ts = store.tick_ts
-					U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
-					S:queue(this.sound_events.change_rally_point)
-					local e = E:create_entity(this.hero.skills.ultimate.controller_name)
-					e.damage_factor = this.unit.damage_factor
-					e.pos = V.vclone(enemy.pos)
-					e.level = this.hero.skills.ultimate.level
-					queue_insert(store, e)
-					SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
+					apply_ultimate(this, store, enemy, "special")
 				else
 					this.ultimate.ts = this.ultimate.ts + 1
 				end
@@ -39990,100 +39739,19 @@ function scripts.hero_asra.update(this, store)
 	end
 end
 
-scripts.hero_asra_unbreakable_mod = {}
-
-function scripts.hero_asra_unbreakable_mod.insert(this, store)
-	local m = this.modifier
-	local target = store.entities[this.modifier.target_id]
-	if not target or not target.health or target.health.dead then
+-- 受到伤害时, 如果护盾可用, 免疫本次伤害并使用护盾.
+function scripts.hero_asra.on_damage(this, store, damage)
+	if ready_to_use_skill(this.unbreakable, store, this.unit.cooldown_factor) then
+		this.unbreakable.ts = store.tick_ts
+		local m = E:create_entity(this.unbreakable.mod)
+		m.modifier.target_id = this.id
+		m.modifier.source_id = this.id
+		queue_insert(store, m)
+		S:queue(this.unbreakable.sound)
+		SU.hero_gain_xp_from_skill(this, this.hero.skills.shield_of_shadows)
 		return false
 	end
-	m.ts = store.tick_ts
-	this.on_damages_index = U.insert_on_damage(target, scripts.hero_asra_unbreakable_mod.on_damage)
-	this._hit_sources = {}
-	this._blood_color = target.unit.blood_color
-	target.unit.blood_color = BLOOD_NONE
-	target._shield_mod_asra = this
-	this.health.hp = this.shield_max_damage
-	this.health.hp_max = this.shield_max_damage
 	return true
-end
-
-function scripts.hero_asra_unbreakable_mod.remove(this, store)
-	local m = this.modifier
-	local target = store.entities[m.target_id]
-	if target then
-		U.remove_on_damage(target, this.on_damages_index)
-		target._shield_mod_asra = nil
-		if this._blood_color then
-			target.unit.blood_color = this._blood_color
-		end
-	end
-	return true
-end
-
-function scripts.hero_asra_unbreakable_mod.update(this, store)
-	local m = this.modifier
-	this.modifier.ts = store.tick_ts
-	local target = store.entities[m.target_id]
-	if not target or not target.pos then
-		queue_remove(store, this)
-		return
-	end
-	this.pos = target.pos
-	U.y_animation_play(this, this.animation_start, nil, store.tick_ts, 1)
-	while true do
-		target = store.entities[m.target_id]
-		if not target or target.health.dead or (m.duration >= 0 and store.tick_ts - m.ts > m.duration) or (m.last_node and target.nav_path.ni > m.last_node) then
-			U.y_animation_play(this, this.animation_end, nil, store.tick_ts, 1)
-			queue_remove(store, this)
-			return
-		end
-		if this.render and target.unit then
-			local s = this.render.sprites[1]
-			local flip_sign = 1
-			if target.render then
-				flip_sign = target.render.sprites[1].flip_x and -1 or 1
-			end
-			if m.health_bar_offset and target.health_bar then
-				local hb = target.health_bar.offset
-				local hbo = m.health_bar_offset
-				s.offset.x, s.offset.y = hb.x + hbo.x * flip_sign, hb.y + hbo.y
-			elseif m.use_mod_offset and target.unit.mod_offset then
-				s.offset.x, s.offset.y = target.unit.mod_offset.x * flip_sign, target.unit.mod_offset.y
-			end
-		end
-		U.y_animation_play(this, this.animation_loop, nil, store.tick_ts, 1)
-		coroutine.yield()
-	end
-end
-
-function scripts.hero_asra_unbreakable_mod.on_damage(this, store, damage)
-	local mod = this._shield_mod_asra
-	if not mod then
-		log.error("hero_asra_unbreakable_mod.on_damage for enemy %s has no mod pointer", this.id)
-		return true
-	end
-	if mod.shield_broken then
-		return true
-	end
-	if U.flag_has(damage.damage_type, bor(DAMAGE_INSTAKILL, DAMAGE_DISINTEGRATE, DAMAGE_EAT, DAMAGE_IGNORE_SHIELD)) then
-		mod.shield_broken = true
-		queue_remove(store, mod)
-		return true
-	else
-		mod.damage_taken = mod.damage_taken + damage.value
-	end
-	mod.health.hp = mod.shield_max_damage - mod.damage_taken
-	if mod.damage_taken >= mod.shield_max_damage then
-		mod.shield_broken = true
-		queue_remove(store, mod)
-		if mod.damage_taken - mod.shield_max_damage > 0 then
-			damage.value = mod.damage_taken - mod.shield_max_damage
-			return true
-		end
-	end
-	return false
 end
 
 scripts.hero_asra_ultimate = {}
@@ -40095,8 +39763,7 @@ function scripts.hero_asra_ultimate.update(this, store)
 		pos.x = pos.x + math.random(-4, 4)
 		pos.y = pos.y + math.random(-5, 5)
 		local b = E:create_entity(this.bullet)
-		b.bullet.damage_max = this.damage[this.level]
-		b.bullet.damage_min = this.damage[this.level]
+		b.bullet.damage_factor = this.damage_factor
 		b.bullet.from = V.v(pos.x + math.random(-170, -140), pos.y + REF_H)
 		b.bullet.to = pos
 		b.pos = V.vclone(b.bullet.from)
@@ -40107,7 +39774,7 @@ function scripts.hero_asra_ultimate.update(this, store)
 	if #nearest > 0 then
 		local pi, spi, ni = unpack(nearest[1])
 		spawn_arrow(pi, spi, ni)
-		local count = this.spread[this.level]
+		local count = this.spread
 		local sequence = {}
 		for i = 1, count do
 			sequence[i] = i
@@ -40137,34 +39804,28 @@ scripts.arrow_hero_asra_ultimate = {}
 function scripts.arrow_hero_asra_ultimate.update(this, store)
 	local b = this.bullet
 	local speed = b.max_speed
+	local ps = E:create_entity(b.particles_name)
+	ps.particle_system.track_id = this.id
+	ps.particle_system.emit = true
+	queue_insert(store, ps)
 	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) >= 2 * (speed * store.tick_length) do
 		b.speed.x, b.speed.y = V.mul(speed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
 		this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
 		this.render.sprites[1].r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
 		coroutine.yield()
 	end
-	local targets = U.find_targets_in_range(store.entities, b.to, 0, b.damage_radius, b.damage_flags, b.damage_bans)
+	local targets = U.find_enemies_in_range_filter_off(b.to, b.damage_radius, b.damage_flags, b.damage_bans)
 	if targets then
-		for _, target in ipairs(targets) do
-			local d = SU.create_bullet_damage(b, target.id, this.id)
-			queue_damage(store, d)
-			if b.mod then
-				local mod = E:create_entity(b.mod)
-				mod.modifier.target_id = target.id
-				mod.modifier.damage_factor = b.damage_factor
-				queue_insert(store, mod)
-			end
-		end
+		SU.apply_batch_bullet_simulation(this, targets, store)
 	end
-	if b.hit_fx then
-		SU.insert_sprite(store, b.hit_fx, this.pos)
-	end
-	if b.arrive_decal then
-		local decal = E:create_entity(b.arrive_decal)
-		decal.pos = V.vclone(b.to)
-		decal.render.sprites[1].ts = store.tick_ts
-		queue_insert(store, decal)
-	end
+
+	local decal = E:create_entity(b.arrive_decal)
+	decal.pos = V.vclone(b.to)
+	decal.render.sprites[1].ts = store.tick_ts
+	queue_insert(store, decal)
+
+	ps.particle_system.emit = false
+
 	queue_remove(store, this)
 end
 
@@ -40173,7 +39834,6 @@ scripts.decal_hero_asra_ultimate = {}
 function scripts.decal_hero_asra_ultimate.insert(this, store)
 	this.render.sprites[1].ts = store.tick_ts
 	this.render.sprites[1].r = U.frandom(-10, 5) * math.pi / 180
-	this.render.sprites[2].ts = store.tick_ts
 	return true
 end
 --#endregion hero_asra
