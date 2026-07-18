@@ -39084,6 +39084,8 @@ function scripts.hero_eiskalt.level_up(this, store)
 		local u = E:get_template("hero_eiskalt_ultimate")
 		u.duration = s.duration[s.level]
 	end)
+
+	this.health.hp = this.health.hp_max
 end
 
 function scripts.hero_eiskalt.update(this, store)
@@ -39634,7 +39636,7 @@ end
 --#region hero_asra
 scripts.hero_asra = {}
 
-function scripts.hero_asra.level_up(this, store, initial)
+function scripts.hero_asra.level_up(this, store)
 	local hl, ls = level_up_basic(this)
 
 	local b = E:get_template(this.ranged.attacks[1].bullet)
@@ -39681,6 +39683,8 @@ function scripts.hero_asra.level_up(this, store, initial)
 		e.bullet.damage_min = s.damage_config[s.level]
 		e.bullet.damage_max = s.damage_config[s.level]
 	end)
+
+	this.health.hp = this.health.hp_max
 end
 
 function scripts.hero_asra.update(this, store)
@@ -39878,6 +39882,8 @@ function scripts.hero_beresad.level_up(this, store, initial)
 	upgrade_skill(this, "ultimate", function(this, s)
 		this.ultimate.disabled = nil
 	end)
+
+	this.health.hp = this.health.hp_max
 end
 
 function scripts.hero_beresad.update(this, store)
@@ -40233,10 +40239,12 @@ function scripts.hero_dianyun.level_up(this, store)
 		local entity = E:get_template(u.entity)
 		entity.bullets_to_death = s.bullets_to_death[s.level]
 	end)
+
+	this.health.hp = this.health.hp_max
 end
 
 function scripts.hero_dianyun.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
+	this.hero.fn_level_up(this, store)
 	this.ranged.order = U.attack_order(this.ranged.attacks)
 	local e = E:create_entity("aura_dianyun_passive")
 	e.pos:copy(this.pos)
