@@ -20075,6 +20075,7 @@ tt.ranged.attacks[1].animation = "shoot"
 tt.ranged.attacks[1].bullet = "bullet_asra"
 tt.ranged.attacks[1].shoot_time = fts(11)
 tt.ranged.attacks[1].bullet_start_offset = {v(12, 12)}
+tt.ranged.attacks[1].check_target_before_shot = true
 tt.ranged.attacks[2] = CC("bullet_attack")
 tt.ranged.attacks[2].cooldown = 13.5
 tt.ranged.attacks[2].min_range = 25
