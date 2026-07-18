@@ -20101,7 +20101,7 @@ tt.unbreakable = {
 }
 
 tt = RT("bullet_asra", "arrow")
-tt.bullet.xp_gain_factor = 2.5
+tt.bullet.xp_gain_factor = 2.4
 tt.bullet.flight_time = fts(8)
 tt.bullet.flight_time_factor = fts(1 / 60)
 tt.bullet.g = 0
