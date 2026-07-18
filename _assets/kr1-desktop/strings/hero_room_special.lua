@@ -3187,6 +3187,8 @@ map["冰川风暴"] = str(cooldown_str(), "冰龙释放全部力量，冻结战�
 -- hero_asra
 set_hero("hero_asra")
 
+map["暗影之舞"] = str("远距离移动时，阿斯拉瞬移并移除所有状态效果，并使自己攻速提升25%，持续8秒。")
+
 set_skill(h.hero.skills.spider_bite)
 cooldown = h.melee.attacks[2].cooldown
 local poison_damage = s.damage_config[max_lvl]

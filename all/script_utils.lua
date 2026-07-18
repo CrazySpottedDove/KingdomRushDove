@@ -942,6 +942,10 @@ function SU.y_hero_new_rally(store, this)
 
 			U.y_animation_play(this, tp.animations[2], nil, store.tick_ts)
 
+			if tp.side_effect then
+				tp.side_effect(this, store)
+			end
+
 			tp.pending = false
 			this.health_bar.hidden = false
 			this.vis.bans = vis_bans

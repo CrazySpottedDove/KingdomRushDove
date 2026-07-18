@@ -20032,6 +20032,7 @@ tt.teleport.min_distance = 120
 tt.teleport.delay = 0
 tt.teleport.sound = "hero_asra_teleport"
 tt.teleport.animations = {"teleportOut", "teleportIn"}
+tt.teleport.side_effect = scripts.hero_asra.teleport_side_effect
 tt.render.sprites[1].anchor.y = 0.12
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].scale = v(1.2, 1.2)
@@ -20039,7 +20040,6 @@ tt.render.sprites[1].prefix = "hero_asra"
 tt.render.sprites[1].angles.walk = {"walk"}
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
-tt.render.sprites[2].is_shadow = true
 tt.render.sprites[2].name = "hero_asra_shadow"
 tt.render.sprites[2].anchor.y = 0.12
 tt.render.sprites[2].z = Z_DECALS + 1
@@ -20067,7 +20067,8 @@ tt.melee.attacks[2].vis_bans = bor(F_FLYING, F_CLIFF)
 tt.melee.attacks[2].vis_flags = bor(F_BLOCK, F_MOD, F_POISON)
 tt.melee.attacks[2].xp_gain = 300
 tt.ranged.attacks[1] = CC("bullet_attack")
-tt.ranged.attacks[1].cooldown = 1
+-- 实际攻速受动画限制为 1 秒, 但允许玩家通过走 A 到达极限攻速
+tt.ranged.attacks[1].cooldown = 0.5
 tt.ranged.attacks[1].min_range = 25
 tt.ranged.attacks[1].max_range = 200
 tt.ranged.attacks[1].animation = "shoot"
@@ -20102,8 +20103,9 @@ tt.unbreakable = {
 
 tt = RT("bullet_asra", "arrow")
 tt.bullet.xp_gain_factor = 2.5
-tt.bullet.flight_time = fts(9)
+tt.bullet.flight_time = fts(8)
 tt.bullet.flight_time_factor = fts(1 / 60)
+tt.bullet.g = 0
 tt.bullet.hit_distance = 50
 tt.bullet.hit_fx = "fx_arrow_asra_hit"
 tt.bullet.mods = {"mod_arrow_asra"}
@@ -20115,6 +20117,7 @@ tt.render.sprites[1].flip_x = true
 
 tt = RT("bullet_onix_asra", "arrow")
 tt.bullet.flight_time = fts(6)
+tt.bullet.g = 0
 tt.bullet.hit_fx = "fx_arrow_asra_hit"
 tt.bullet.mods = {"mod_arrow_asra"}
 tt.bullet.damage_type = DAMAGE_AGAINST_MAGIC_ARMOR
@@ -20122,6 +20125,10 @@ tt.bullet.miss_decal = "hero_asra_multishot_arrow_decal"
 tt.bullet.miss_decal_rotation = math.pi
 tt.render.sprites[1].name = "hero_asra_multishot_arrow"
 tt.render.sprites[1].animated = false
+
+tt = RT("mod_hero_asra_shadow_dance", "mod_soldier_cooldown")
+tt.modifier.duration = 8
+tt.cooldown_factor = 0.75
 
 tt = RT("fx_arrow_asra_hit", "fx")
 tt.render.sprites[1].name = "hero_asra_multishot_arrow_hit_run"

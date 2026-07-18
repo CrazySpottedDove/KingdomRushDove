@@ -39687,6 +39687,14 @@ function scripts.hero_asra.level_up(this, store)
 	this.health.hp = this.health.hp_max
 end
 
+function scripts.hero_asra.teleport_side_effect(this, store)
+	SU.remove_modifiers(store, this)
+	local m = E:create_entity("mod_hero_asra_shadow_dance")
+	m.modifier.source_id = this.id
+	m.modifier.target_id = this.id
+	queue_insert(store, m)
+end
+
 function scripts.hero_asra.update(this, store)
 	local h = this.health
 
