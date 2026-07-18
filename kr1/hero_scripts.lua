@@ -39648,7 +39648,6 @@ function scripts.hero_asra.level_up(this, store)
 
 	upgrade_skill(this, "spider_bite", function(this, s)
 		this.melee.attacks[2].disabled = nil
-		this.melee.attacks[2].xp_gain = s.xp_gain[s.level]
 		local e = E:get_template(this.melee.attacks[2].mod)
 		e.dps.damage_max = s.damage_config[s.level]
 		e.dps.damage_min = s.damage_config[s.level]
@@ -39658,7 +39657,6 @@ function scripts.hero_asra.level_up(this, store)
 		this.ranged.attacks[2].disabled = nil
 		this.ranged.attacks[2].max_loops = s.loops[s.level]
 		this.ranged.attacks[2].loops = s.loops[s.level]
-		this.ranged.attacks[2].xp_gain = s.xp_gain[s.level]
 		local e = E:get_template(this.ranged.attacks[2].bullet)
 		e.bullet.damage_max = s.damage_max[s.level]
 		e.bullet.damage_min = s.damage_min[s.level]
@@ -39688,7 +39686,7 @@ function scripts.hero_asra.level_up(this, store)
 end
 
 function scripts.hero_asra.teleport_side_effect(this, store)
-	SU.remove_modifiers(store, this)
+	SU.remove_modifiers(store, this, nil, "mod_hero_asra_unbreakable_broken")
 	local m = E:create_entity("mod_hero_asra_shadow_dance")
 	m.modifier.source_id = this.id
 	m.modifier.target_id = this.id
@@ -39848,6 +39846,22 @@ function scripts.decal_hero_asra_ultimate.insert(this, store)
 	this.render.sprites[1].r = U.frandom(-10, 5) * math.pi / 180
 	return true
 end
+
+scripts.hero_asra_unreakable_mod = {
+	remove = function(this, store)
+		if not scripts.mod_shield.remove(this, store) then
+			return false
+		end
+		local target = store.entities[this.modifier.target_id]
+		if target then
+			local mod = E:create_entity("mod_hero_asra_unbreakable_broken")
+			mod.modifier.target_id = target.id
+			mod.modifier.source_id = target.id
+			queue_insert(store, mod)
+		end
+		return true
+	end
+}
 --#endregion hero_asra
 
 --#region hero_beresad

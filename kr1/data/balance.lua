@@ -6013,7 +6013,7 @@ local towers = {
 			damage_max = {11, 28, 53, 93},
 			range = {170, 170, 170, 205},
 			debuff = {
-				damage_reduction = {0.25, 0.25, 0.25, 0.25},
+				damage_factor = {0.75, 0.75, 0.75, 0.75},
 				duration = {4, 4, 4, 4}
 			}
 		},

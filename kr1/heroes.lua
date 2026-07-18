@@ -19977,7 +19977,6 @@ tt.hero.skills.onix_arrows.xp_level_steps = {
 	[5] = 2,
 	[8] = 3
 }
-tt.hero.skills.onix_arrows.xp_gain = {90, 180, 270}
 tt.hero.skills.onix_arrows.loops = {4, 5, 6}
 tt.hero.skills.onix_arrows.damage_min = {20, 35, 50}
 tt.hero.skills.onix_arrows.damage_max = {30, 50, 70}
@@ -19987,7 +19986,6 @@ tt.hero.skills.quiver_of_sorrow.xp_level_steps = {
 	[5] = 2,
 	[8] = 3
 }
-tt.hero.skills.quiver_of_sorrow.xp_gain = {80, 160, 240}
 tt.hero.skills.quiver_of_sorrow.damage_armor = {0.01, 0.02, 0.03}
 tt.hero.skills.shield_of_shadows = CC("hero_skill")
 tt.hero.skills.shield_of_shadows.xp_level_steps = {
@@ -20065,7 +20063,7 @@ tt.melee.attacks[2].hit_time = fts(31)
 tt.melee.attacks[2].mod = "mod_asra_poison"
 tt.melee.attacks[2].vis_bans = bor(F_FLYING, F_CLIFF)
 tt.melee.attacks[2].vis_flags = bor(F_BLOCK, F_MOD, F_POISON)
-tt.melee.attacks[2].xp_gain = 300
+tt.melee.attacks[2].xp_from_skill = "spider_bite"
 tt.ranged.attacks[1] = CC("bullet_attack")
 -- 实际攻速受动画限制为 1 秒, 但允许玩家通过走 A 到达极限攻速
 tt.ranged.attacks[1].cooldown = 0.5
@@ -20126,6 +20124,7 @@ tt.bullet.miss_decal = "hero_asra_multishot_arrow_decal"
 tt.bullet.miss_decal_rotation = math.pi
 tt.render.sprites[1].name = "hero_asra_multishot_arrow"
 tt.render.sprites[1].animated = false
+tt.bullet.xp_gain_factor = 2.4
 
 tt = RT("mod_hero_asra_shadow_dance", "mod_soldier_cooldown")
 tt.modifier.duration = 8
@@ -20206,7 +20205,7 @@ tt.shield_max_damage = 200
 tt.damage_taken = 0
 tt.main_script.insert = scripts.mod_shield.insert
 tt.main_script.update = scripts.mod_shield.update
-tt.main_script.remove = scripts.mod_shield.remove
+tt.main_script.remove = scripts.hero_asra_unreakable_mod.remove
 tt.health_bar.offset = v(0, 42)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.health_bar.colors = {}
@@ -20221,6 +20220,21 @@ tt.render.sprites[1].prefix = "hero_asra_shield"
 tt.render.sprites[1].offset = v(0, 20)
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].loop = true
+
+tt = RT("mod_hero_asra_unbreakable_broken", "modifier")
+AC(tt, "render")
+tt.modifier.duration = 6
+tt.modifier.vis_flags = F_MOD
+tt.render.sprites[1].name = "paladin_soldiers_lvl4_captain_armor_mod_decal"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].scale = v(1.2, 1.2)
+tt.modifier.use_mod_offset = false
+tt.inflicted_damage_factor = 1.5
+tt.main_script.insert = scripts.mod_damage_factors.insert
+tt.main_script.remove = scripts.mod_damage_factors.remove
+tt.main_script.update = scripts.mod_track_target.update
 
 -- ======== 贝雷萨德 ========
 tt = RT("hero_beresad", "hero")

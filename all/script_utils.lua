@@ -1504,7 +1504,7 @@ function SU.y_soldier_do_loopable_ranged_attack(store, this, target, attack)
 			end
 
 			b = E:create_entity(attack.bullet)
-			b.pos = V.vclone(this.pos)
+			b.pos:copy(this.pos)
 
 			if attack.bullet_start_offset then
 				local offset = attack.bullet_start_offset[ai]
@@ -1518,8 +1518,8 @@ function SU.y_soldier_do_loopable_ranged_attack(store, this, target, attack)
 				b.pos.x, b.pos.y = b.pos.x + (af and -1 or 1) * offset.x, b.pos.y + offset.y
 			end
 
-			b.bullet.from = V.vclone(b.pos)
-			b.bullet.to = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+			b.bullet.from:copy(b.pos)
+			b.bullet.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 			b.bullet.target_id = target.id
 			b.bullet.shot_index = si
 			b.bullet.loop_index = i
@@ -1538,7 +1538,9 @@ function SU.y_soldier_do_loopable_ranged_attack(store, this, target, attack)
 
 			if attack.check_target_before_shot then
 				if target.health.dead or target.health.hp - U.predict_damage(target, SU.create_bullet_damage_without_pops(b.bullet, target.id, b.id)) < 0 then
-					local new_target = attack.filter_fn and U.detect_foremost_enemy_between_range_filter_on(target.pos, 5, 100, attack.vis_flags, attack.vis_bans, attack.filter_fn) or U.detect_foremost_enemy_between_range_filter_off(this.pos, 5, 100, attack.vis_flags, attack.vis_bans)
+					local new_target = U.detect_foremost_enemy_between_range_filter_on(target.pos, attack.min_range, attack.max_range, attack.vis_flags, attack.vis_bans, function(e)
+						return e.id ~= target.id and (not attack.filter_fn or attack.filter_fn(e))
+					end)
 					if new_target then
 						target = new_target
 					end

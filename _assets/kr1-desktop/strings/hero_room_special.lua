@@ -3210,7 +3210,9 @@ set_skill(h.hero.skills.shield_of_shadows)
 cooldown = h.unbreakable.cooldown
 e = T("hero_asra_unbreakable_mod")
 local shield_duration = e.modifier.duration
-map["暗影之盾"] = str(cooldown_str(), "受到攻击后，阿斯拉会施放出一面可抵挡", s.shield_max_damage[max_lvl], "点伤害的护盾，持续", shield_duration, "秒。")
+factor = T("mod_hero_asra_unbreakable_broken").inflicted_damage_factor - 1
+duration = T("mod_hero_asra_unbreakable_broken").modifier.duration
+map["暗影之盾"] = str(cooldown_str(), "受到攻击后，阿斯拉会施放出一面可抵挡", s.shield_max_damage[max_lvl], "点伤害的护盾，持续", shield_duration, "秒。护盾效果移除时，阿斯拉的伤害提升", factor * 100, "%，持续", duration, "秒。")
 
 set_skill(h.hero.skills.ultimate)
 cooldown = h.ultimate.cooldown
