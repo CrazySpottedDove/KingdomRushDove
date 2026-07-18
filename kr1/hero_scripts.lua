@@ -39645,6 +39645,8 @@ function scripts.hero_asra.level_up(this, store)
 
 	this.melee.attacks[1].damage_min = ls.melee_damage_min[hl]
 	this.melee.attacks[1].damage_max = ls.melee_damage_max[hl]
+	this.melee.attacks[2].damage_min = ls.melee_damage_min[hl]
+	this.melee.attacks[2].damage_max = ls.melee_damage_max[hl]
 
 	upgrade_skill(this, "spider_bite", function(this, s)
 		this.melee.attacks[2].disabled = nil
