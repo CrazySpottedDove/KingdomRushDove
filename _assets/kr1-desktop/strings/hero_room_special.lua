@@ -3230,39 +3230,54 @@ map["毒雨"] = str(cooldown_str(), "射出数支毒箭攻击大范围区域，�
 -- hero_beresad
 set_hero("hero_beresad")
 
+map["金之欲"] = str("被贝雷萨德普攻与大招杀死的敌人额外掉落4枚金币。")
+
 set_skill(h.hero.skills.conflagration)
 cooldown = s.cooldown[max_lvl]
 e = T("aura_beresad_firestorm")
 local conflagration_duration = e.aura.duration
 e = T("mod_beresad_firestorm")
 local conflagration_burn_every = e.dps.damage_every
-local conflagration_burn_damage = e.dps.damage_min
-map["龙息术"] = str(cooldown_str(), "贝雷萨德喷出灼热的火焰，灼烧前方区域，留下持续", conflagration_duration, "秒的焦土，每", conflagration_burn_every, "秒对范围内敌人造成", conflagration_burn_damage, "点真实伤害。")
+d[1].damage_min = s.damage[max_lvl]
+d[1].damage_max = s.damage[max_lvl]
+d[1].damage_type = e.dps.damage_type
+map["爆炎"] = str(cooldown_str(), "贝雷萨德喷出灼热的火焰，灼烧前方区域，留下持续", conflagration_duration, "秒的焦土，每", conflagration_burn_every, "秒造成", damage_str(), "。")
 
 set_skill(h.hero.skills.fear_dragon)
-get_cooldown()
-e = T("hero_beresad_modifier_fear")
-local fear_duration = e.modifier.duration
-map["恐惧之龙"] = str(cooldown_str(), "发出震耳欲聋的咆哮，恐惧", h.timed_attacks.list[1].max_range, "范围内敌人，使其逃跑", fear_duration, "秒。")
+cooldown = h.timed_attacks.list[1].cooldown
+duration = s.duration[max_lvl]
+local max_targets = h.timed_attacks.list[1].max_targets
+local speed_factor = (T("mod_beresad_fear_indicator").slow.factor - 1) * 100
+map["惧龙"] = str(cooldown_str(), "发出震耳欲聋的咆哮，恐惧最多", max_targets, "名敌人", "，使其逃跑并加速", speed_factor, "%，持续", duration, "秒。")
 
 set_skill(h.hero.skills.dragon_spawn)
 get_cooldown()
-e = T("hero_beresad_golem_lvl3")
-local golem_hp = e.health.hp_max
-local golem_damage_min = e.melee.attacks[1].damage_min
-local golem_damage_max = e.melee.attacks[1].damage_max
-map["龙之爪牙"] = str(cooldown_str(), "召唤一个黑暗傀儡为其作战。傀儡拥有", golem_hp, "点生命值，每次攻击造成", golem_damage_min, "-", golem_damage_max, "点伤害。")
+
+local golem_hp = s.hp[max_lvl]
+d[1].damage_min = s.damage_min[max_lvl]
+d[1].damage_max = s.damage_max[max_lvl]
+d[1].damage_type = T("hero_beresad_golem").melee.attacks[1].damage_type
+d[2].damage_min = s.explode_damage_min[max_lvl]
+d[2].damage_max = s.explode_damage_max[max_lvl]
+d[2].damage_type = T("bomb_beresad_golem").bullet.damage_type
+duration = T("hero_beresad_golem").reinforcement.duration
+map["龙生"] = str(cooldown_str(), "发射一个傀儡，落地时造成", damage_str(2), "。傀儡拥有", golem_hp, "点生命值，每次攻击造成", damage_str(), "，驻场", duration, "秒。傀儡无法恢复生命值，但也不受火焰、剧毒、流血、狼人化、尸骸化的影响。")
 
 set_skill(h.hero.skills.remove_existence)
-cooldown = h.ranged.attacks[3].cooldown
-d[1].damage_type = DAMAGE_TRUE
-map["湮灭射线"] = str(cooldown_str(), "射出一道湮灭光线。若目标因此死亡，则直接消灭。")
+get_cooldown()
+d[1].damage_min = s.damage_min[max_lvl]
+d[1].damage_max = s.damage_max[max_lvl]
+d[1].damage_type = T("mod_ray_beresad_disintegrate").explode_damage_type
+map["片甲不留"] = str(cooldown_str(), "射出一道湮灭光线，秒杀目标，并对附近敌人造成", damage_str(), "。该技能只会对生命值高于750的敌人释放。")
 
 set_skill(h.hero.skills.ultimate)
-get_cooldown()
-e = T("mod_beresad_ultimate")
-local ult_burn_every = e.dps.damage_every
-map["地狱火雨"] = str(cooldown_str(), "召唤地狱火雨覆盖大范围区域，每", ult_burn_every, "秒对范围内敌人造成灼烧效果。")
+cooldown = h.ultimate.cooldown
+d[1].damage_min = s.damage[max_lvl]
+d[1].damage_max = s.damage[max_lvl]
+d[1].damage_type = T("mod_beresad_ultimate").dps.damage_type
+cycle_time = T("mod_beresad_ultimate").dps.damage_every
+duration = T("controller_beresad_ultimate").duration
+map["地狱火"] = str(cooldown_str(), "召唤地狱火雨，每", cycle_time, "秒对所有敌人造成", damage_str(), "，持续", duration, "秒。")
 
 -- hero_dianyun
 set_hero("hero_dianyun")

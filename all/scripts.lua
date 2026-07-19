@@ -5959,6 +5959,170 @@ function scripts.mod_dps.update(this, store)
 	queue_remove(store, this)
 end
 
+scripts.mod_dps_with_fade = {
+	update = function(this, store)
+		local m = this.modifier
+		local target = store.entities[m.target_id]
+
+		if not target then
+			queue_remove(store, this)
+
+			return
+		end
+		local cycles = 0
+		local dps = this.dps
+
+		local dmin = dps.damage_min
+		local dmax = dps.damage_max
+		if dps.damage_inc ~= 0 then
+			dmin = dmin + m.level * dps.damage_inc
+			dmax = dmax + m.level * dps.damage_inc
+		end
+
+		local fx_ts = 0
+
+		this.pos = target.pos
+
+		local start_animation_ended = true
+		if this.start_animation then
+			start_animation_ended = false
+			U.animation_start_default(this, this.start_animation, nil, store.tick_ts)
+		end
+
+		::effect::
+
+		while true do
+			target = store.entities[m.target_id]
+
+			if not target or target.health.dead then
+				break
+			end
+
+			if not start_animation_ended and U.animation_finished_default(this) then
+				start_animation_ended = true
+				U.animation_start_default(this, this.loop_animation, nil, store.tick_ts, true)
+			end
+
+			if store.tick_ts - m.ts >= m.duration - 1e-09 then
+				if dps.damage_last then
+					local d = E.create_damage()
+
+					d.source_id = this.id
+					d.target_id = target.id
+					d.value = dps.damage_last * m.damage_factor
+					d.damage_type = dps.damage_type
+					d.pop = dps.pop
+					d.pop_chance = dps.pop_chance
+					d.pop_conds = dps.pop_conds
+
+					queue_damage(store, d)
+				end
+				break
+			end
+
+			if (this.render and this.modifier.use_mod_offset) then
+				if target.unit.mod_offset then
+					local so = this.render.sprites[1].offset
+
+					so.x, so.y = target.unit.mod_offset.x, target.unit.mod_offset.y
+				end
+			end
+
+			if dps.damage_every then
+				if store.tick_ts - dps.ts >= dps.damage_every then
+					dps.ts = dps.ts + dps.damage_every
+
+					local damage_value = math.random(dmin, dmax)
+
+					if (dps.damage_first) then
+						cycles = cycles + 1
+						if cycles == 1 then
+							damage_value = dps.damage_first
+						end
+					end
+
+					damage_value = damage_value * m.damage_factor
+
+					if (not dps.kill) then
+						damage_value = km.clamp(0, target.health.hp - 1, damage_value)
+					end
+
+					local d = E.create_damage()
+
+					d.source_id = this.id
+					d.target_id = target.id
+					d.value = damage_value
+					d.damage_type = dps.damage_type
+					d.pop = dps.pop
+					d.pop_chance = dps.pop_chance
+					d.pop_conds = dps.pop_conds
+
+					queue_damage(store, d)
+
+					if (dps.fx) then
+						if not dps.fx_every or store.tick_ts - fx_ts >= dps.fx_every then
+							fx_ts = store.tick_ts
+
+							local fx = E:create_entity(dps.fx)
+
+							if (dps.fx_tracks_target) then
+								fx.pos = target.pos
+
+								if (this.modifier.use_mod_offset) then
+									if target.unit.mod_offset then
+										fx.render.sprites[1].offset.x = target.unit.mod_offset.x
+										fx.render.sprites[1].offset.y = target.unit.mod_offset.y
+									end
+								end
+							else
+								fx.pos = V.vclone(this.pos)
+
+								if (this.modifier.use_mod_offset) then
+									if target.unit.mod_offset then
+										fx.pos.x, fx.pos.y = fx.pos.x + target.unit.mod_offset.x, fx.pos.y + target.unit.mod_offset.y
+									end
+								end
+							end
+
+							fx.render.sprites[1].ts = store.tick_ts
+							fx.render.sprites[1].runs = 0
+
+							if (fx.render.sprites[1].size_names) then
+								fx.render.sprites[1].name = fx.render.sprites[1].size_names[target.unit.size]
+							end
+
+							if (dps.fx_target_flip) then
+								if target.render then
+									fx.render.sprites[1].flip_x = target.render.sprites[1].flip_x
+								end
+							end
+
+							queue_insert(store, fx)
+						end
+					end
+				end
+			end
+
+			coroutine.yield()
+		end
+
+		if this.stop_animation then
+			U.animation_start_default(this, this.stop_animation, nil, store.tick_ts)
+			while not U.animation_finished_default(this) do
+				if store.tick_ts - m.ts < m.duration - 1e-09 and target and not target.health.dead then
+					start_animation_ended = true
+					U.animation_start_default(this, this.loop_animation, nil, store.tick_ts, true)
+					goto effect
+				end
+				coroutine.yield()
+			end
+		end
+
+		queue_remove(store, this)
+	end
+
+}
+
 scripts.mod_hps = {}
 
 function scripts.mod_hps.insert(this, store)

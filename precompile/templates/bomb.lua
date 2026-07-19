@@ -177,6 +177,10 @@ return function(this, store)
 
             if hp.unit then
                 hp.unit.damage_factor = this.bullet.damage_factor * hp.unit.damage_factor
+                if hp.nav_rally and hp.nav_rally.pos.x == 0 and hp.nav_rally.pos.y == 0 then
+                    hp.nav_rally.pos:copy(hp.pos)
+                    hp.nav_rally.center:copy(hp.pos)
+                end
             end
 
             if hp.aura then

@@ -49803,7 +49803,7 @@ return {
 		from = 85,
 		to = 114
 	},
-	hero_beresad_earthshake = {
+	hero_beresad_golem = {
 		prefix = "hero_beresad",
 		from = 155,
 		to = 179
@@ -49873,15 +49873,15 @@ return {
 		from = 1,
 		to = 19
 	},
+	hero_beresad_golem_raise = {
+		prefix = "hero_beresad_golem",
+		from = 1,
+		to = 41
+	},
 	hero_beresad_golem_idle = {
 		prefix = "hero_beresad_golem",
 		from = 42,
 		to = 53
-	},
-	hero_beresad_golem_walk = {
-		prefix = "hero_beresad_golem",
-		from = 54,
-		to = 78
 	},
 	hero_beresad_golem_running = {
 		prefix = "hero_beresad_golem",
@@ -49891,11 +49891,40 @@ return {
 	hero_beresad_golem_attack = {
 		prefix = "hero_beresad_golem",
 		from = 79,
-		to = 98
+		to = 100
+	},
+	hero_beresad_golem_attack2 = {
+		prefix = "hero_beresad_golem",
+		frames = {
+			100,
+			101,
+			102,
+			103,
+			104,
+			105,
+			106,
+			107,
+			108,
+			109,
+			110,
+			111,
+			112,
+			113,
+			114,
+			115,
+			116,
+			117,
+			118,
+			119,
+			120,
+			121,
+			99,
+			100
+		}
 	},
 	hero_beresad_golem_death = {
 		prefix = "hero_beresad_golem",
-		from = 120,
+		from = 122,
 		to = 134
 	},
 	hero_beresad_modifier_fear_run = {
@@ -49908,6 +49937,11 @@ return {
 		from = 1,
 		to = 18
 	},
+	hero_beresad_remove_explosion_fx = {
+		prefix = "hero_beresad_remove_explosion_decal",
+		from = 1,
+		to = 19
+	},
 	hero_beresad_remove_ray_run = {
 		prefix = "hero_beresad_remove_ray",
 		from = 1,
@@ -49918,10 +49952,20 @@ return {
 		from = 1,
 		to = 11
 	},
-	hero_beresad_ultimate_modifier_run = {
+	hero_beresad_ultimate_modifier_start = {
+		prefix = "hero_beresad_ultimate_modifier",
+		from = 1,
+		to = 14
+	},
+	hero_beresad_ultimate_modifier_loop = {
 		prefix = "hero_beresad_ultimate_modifier",
 		from = 15,
 		to = 24
+	},
+	hero_beresad_ultimate_modifier_stop = {
+		prefix = "hero_beresad_ultimate_modifier",
+		from = 25,
+		to = 33
 	},
 	-- hero_dianyun
 	hero_storm_dragon_cloud_l1_idle = {

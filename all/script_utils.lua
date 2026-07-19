@@ -1676,7 +1676,7 @@ function SU.y_soldier_do_ranged_attack(store, this, target, attack, pred_pos)
 		b.level = attack.level
 		b.damage_factor = this.unit.damage_factor
 
-		if type(b.damages_min) == "table" then
+		if type(b.damage_min) == "table" then
 			b.damage_min = b.damage_min[b.level]
 		end
 
@@ -5459,6 +5459,7 @@ end
 local function enemy_scared_logic(this, store)
 	this.nav_path.dir = -1
 	this._scare_data.ts = store.tick_ts
+
 	while store.tick_ts - this._scare_data.ts < this._scare_data.duration do
 		if this.health.dead then
 			break
@@ -5478,6 +5479,9 @@ local function enemy_scared_logic(this, store)
 		coroutine.yield()
 	end
 
+	if this._scare_data.friend_mod then
+		SU.remove_modifiers(store, this, this._scare_data.friend_mod)
+	end
 	this._scare_data = nil
 	this.nav_path.dir = 1
 end
@@ -5488,57 +5492,6 @@ function SU.scare_enemy(target, scare_data)
 		return true
 	end
 	return false
-end
-
-function SU.make_bullet_damage_targets(this, store, target)
-	local b = this.bullet
-
-	if b.level and b.level > 0 then
-		if b.damage_radii then
-			b.damage_radius = b.damage_radii[b.level]
-		end
-	end
-
-	if b.damage_radius and b.damage_radius > 0 then
-		local targetPos = V.vclone(b.to)
-		if not b.ignore_hit_offset and target and target.unit and target.unit.hit_offset then
-			local flip_sign = target.render and target.render.sprites[1].flip_x and -1 or 1
-			targetPos.x = targetPos.x - target.unit.hit_offset.x * flip_sign
-			targetPos.y = targetPos.y - target.unit.hit_offset.y
-		end
-		local targets = U.find_targets_in_range(store.entities, targetPos, 0, b.damage_radius, b.vis_flags, b.vis_bans)
-		if targets then
-			for _, t in ipairs(targets) do
-				local d = SU.create_bullet_damage(b, t.id, b.source_id or this.id)
-				queue_damage(store, d)
-				if b.mod or b.mods then
-					local mods = b.mods or {b.mod}
-					for _, mod_name in ipairs(mods) do
-						local m = E:create_entity(mod_name)
-						m.modifier.source_id = b.source_id or this.id
-						m.modifier.target_id = t.id
-						m.modifier.level = b.level
-						m.modifier.source_damage = d
-						queue_insert(store, m)
-					end
-				end
-			end
-		end
-	elseif target and target.health and not target.health.dead then
-		local d = SU.create_bullet_damage(b, target.id, this.id)
-		queue_damage(store, d)
-		if b.mod or b.mods then
-			local mods = b.mods or {b.mod}
-			for _, mod_name in ipairs(mods) do
-				local m = E:create_entity(mod_name)
-				m.modifier.source_id = b.source_id or this.id
-				m.modifier.target_id = target.id
-				m.modifier.level = b.level
-				m.modifier.source_damage = d
-				queue_insert(store, m)
-			end
-		end
-	end
 end
 
 --- 处理单体子弹命中时的伤害与modifier效果

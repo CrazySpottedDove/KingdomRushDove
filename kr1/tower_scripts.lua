@@ -24411,32 +24411,6 @@ function scripts.soldier_flingers_skeleton.update(this, store)
 	end
 end
 
-local function ogre_shipwreck_flush_rally_if_needed(this, store, b)
-	if not b.rally_new then
-		return
-	end
-
-	b.rally_new = false
-
-	signal.emit("rally-point-changed", this)
-
-	local all_dead = true
-
-	for i = 1, b.max_soldiers do
-		local s = b.soldiers[i]
-
-		if s then
-			s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, b.rally_angle_offset)
-			s.nav_rally.new = true
-			all_dead = all_dead and s.health.dead
-		end
-	end
-
-	if not all_dead then
-		S:queue(this.sound_events.change_rally_point)
-	end
-end
-
 scripts.tower_ogre_shipwreck = {}
 
 function scripts.tower_ogre_shipwreck.remove(this, store)
@@ -24717,8 +24691,6 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 		if not tw.blocked then
 			SU.tower_update_silenced_powers(store, this)
 
-			-- ogre_shipwreck_flush_rally_if_needed(this, store, b)
-
 			for i = 1, b.max_soldiers do
 				local s = b.soldiers[i]
 
@@ -24729,7 +24701,6 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 						U.animation_start(this, "open", nil, store.tick_ts, false, this.render.sid_ogre_door_b)
 
 						while not (U.animation_finished(this, this.render.sid_ogre_door_a) and U.animation_finished(this, this.render.sid_ogre_door_b)) do
-							-- ogre_shipwreck_flush_rally_if_needed(this, store, b)
 							coroutine.yield()
 						end
 
@@ -24769,7 +24740,6 @@ function scripts.tower_ogre_shipwreck.update(this, store)
 			U.animation_start(this, "close", nil, store.tick_ts, false, this.render.sid_ogre_door_b)
 
 			while not (U.animation_finished(this, this.render.sid_ogre_door_a) and U.animation_finished(this, this.render.sid_ogre_door_b)) do
-				-- ogre_shipwreck_flush_rally_if_needed(this, store, b)
 				coroutine.yield()
 			end
 
@@ -25847,7 +25817,8 @@ function scripts.aura_grim_cemetery_hand.update(this, store, script)
 			if targets then
 				for _, target in ipairs(targets) do
 					if SU.scare_enemy(target, {
-						duration = this.scare_duration
+						duration = this.scare_duration,
+						friend_mod = "mod_grim_cemetery_scare"
 					}) then
 						if not target._cemetery_scare_count then
 							target._cemetery_scare_count = 1
