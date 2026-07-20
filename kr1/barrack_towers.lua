@@ -157,16 +157,14 @@ tt.info.enc_icon = 18
 tt.tower.type = "barbarian"
 tt.tower.price = 195
 tt.powers.dual = CC("power")
-tt.powers.dual.price_base = 250
+tt.powers.dual.price_base = 225
 tt.powers.dual.price_inc = 100
-
 tt.powers.twister = CC("power")
 tt.powers.twister.price_base = 150
 tt.powers.twister.price_inc = 100
 tt.powers.throwing = CC("power")
 tt.powers.throwing.price_base = 150
 tt.powers.throwing.price_inc = 100
-
 tt.barrack.soldier_type = "soldier_barbarian"
 tt.barrack.max_soldiers = 4
 tt.barrack.rally_range = 165
