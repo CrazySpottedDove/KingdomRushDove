@@ -21094,3 +21094,508 @@ for i = 1, 3 do
 	tt.render.sprites[i].anchor = v(0.5, 0.5)
 	tt.render.sprites[i].z = Z_FLYING_HEROES + 1
 end
+
+-- ======== 伊斯菲特 ========
+tt = RT("hero_isfet", "hero")
+AC(tt, "melee", "ranged", "timed_attacks", "dodge", "auras")
+anchor_x, anchor_y = 0.5, 0.12
+image_x, image_y = 92, 110
+tt.melee.range = 65
+tt.health_bar.offset = v(0, 46)
+tt.health.dead_lifetime = 15
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.hero.tombstone_show_time = fts(90)
+tt.info.fn = scripts.hero_basic.get_info
+tt.main_script.update = scripts.hero_isfet.update
+tt.hero.fn_level_up = scripts.hero_isfet.level_up
+tt.info.hero_portrait = "kr4_hero_portraits_0016"
+tt.info.portrait = "kr4_info_portraits_heroes_0017"
+tt.main_script.insert = scripts.hero_isfet.insert
+tt.motion.max_speed = 1.33 * FPS
+tt.soldier.melee_slot_offset = v(5, 0)
+tt.sound_events.change_rally_point = "group_hero_isfet_taunt"
+tt.sound_events.death = "hero_isfet_taunt_death"
+tt.sound_events.hero_room_select = "group_hero_isfet_taunt"
+tt.sound_events.insert = "group_hero_isfet_taunt"
+tt.sound_events.respawn = "HeroLevelUp"
+tt.unit.marker_offset = v(0, 0)
+tt.unit.hit_offset = v(0, 18)
+tt.unit.mod_offset = v(0, 18)
+tt.hero.skills.black_cloud = CC("hero_skill")
+tt.hero.skills.black_cloud.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.black_cloud.xp_gain = {50, 100, 150}
+tt.hero.skills.black_cloud.damage = {4, 6, 9}
+tt.hero.skills.frog_curse = CC("hero_skill")
+tt.hero.skills.frog_curse.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.frog_curse.xp_gain = {50, 100, 150}
+tt.hero.skills.frog_curse.health_threshold = {510, 1200, 2000}
+tt.hero.skills.rain = CC("hero_skill")
+tt.hero.skills.rain.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.rain.xp_gain = {50, 100, 150}
+tt.hero.skills.rain.count = {4, 7, 10}
+tt.hero.skills.blood_pool = CC("hero_skill")
+tt.hero.skills.blood_pool.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.blood_pool.xp_gain = {50, 100, 150}
+tt.hero.skills.blood_pool.damage_factor = {1.25, 1.5, 1.75}
+tt.hero.skills.ultimate = CC("hero_skill")
+tt.hero.skills.ultimate.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
+}
+tt.hero.skills.ultimate.xp_gain = {160, 320, 480}
+tt.hero.skills.ultimate.controller_name = "controller_hero_isfet_ultimate"
+tt.hero.skills.ultimate.cooldown = {48, 48, 48, 48}
+tt.hero.skills.ultimate.damage = {4, 6, 12, 20}
+tt.isfet_necromancy = {
+	range = 300,
+	chance = 0.5,
+	max_units = 2,
+	cycle_time = 0.1,
+	entity = "hero_isfet_mummy"
+}
+tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+tt.hero.level_stats.hp_max = {204, 228, 252, 276, 300, 324, 348, 372, 396, 420}
+tt.hero.level_stats.melee_damage_max = {7, 8, 9, 11, 13, 14, 15, 16, 18, 20}
+tt.hero.level_stats.melee_damage_min = {4, 5, 6, 7, 8, 9, 10, 12, 12, 13}
+tt.hero.level_stats.ranged_damage_max = {22, 26, 31, 35, 39, 44, 48, 53, 58, 62}
+tt.hero.level_stats.ranged_damage_min = {12, 14, 16, 19, 21, 24, 26, 29, 31, 33}
+tt.regen.cooldown = 1
+tt.render.sprites[1].anchor = v(0.5, 0.28)
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].offset = v(0, 0)
+tt.render.sprites[1].prefix = "hero_isfet"
+tt.render.sprites[1].angles.walk = {"walk"}
+tt.render.sprites[1].z = Z_FLYING_HEROES
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].is_shadow = true
+tt.render.sprites[2].offset = v(0, 20)
+tt.render.sprites[2].name = "hero_isfet_shadow"
+tt.render.sprites[2].z = Z_DECALS + 1
+tt.melee.attacks[1] = CC("melee_attack")
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_max = nil
+tt.melee.attacks[1].damage_min = nil
+tt.melee.attacks[1].hit_time = fts(9)
+tt.melee.attacks[1].sound = "MeleeSword"
+tt.melee.attacks[1].vis_bans = bor(F_FLYING, F_CLIFF)
+tt.melee.attacks[1].vis_flags = F_BLOCK
+tt.melee.attacks[1].xp_gain_factor = 1
+tt.ranged.attacks[1] = CC("bullet_attack")
+tt.ranged.attacks[1].cooldown = 1.5
+tt.ranged.attacks[1].min_range = 25
+tt.ranged.attacks[1].max_range = 175
+tt.ranged.attacks[1].animation = "rangedAttack"
+tt.ranged.attacks[1].bullet = "bolt_isfet"
+tt.ranged.attacks[1].shoot_time = fts(32)
+tt.ranged.attacks[1].sound_shoot = "ember_lords_mage_attack"
+tt.ranged.attacks[1].bullet_start_offset = {v(-12, 44)}
+tt.timed_attacks.list[1] = CC("mod_attack")
+tt.timed_attacks.list[1].animation = "specialCloud"
+tt.timed_attacks.list[1].cooldown = 45
+tt.timed_attacks.list[1].cast_time = fts(17)
+tt.timed_attacks.list[1].trigger_range = 300
+tt.timed_attacks.list[1].min_targets = 2
+tt.timed_attacks.list[1].entity = "aura_isfet_locust_swarm"
+tt.timed_attacks.list[1].sound = "hero_isfet_blackcloud"
+tt.timed_attacks.list[1].sound_delay = 0.23
+tt.timed_attacks.list[1].spawn_offset = v(45, 35)
+tt.timed_attacks.list[1].disabled = true
+tt.timed_attacks.list[1].vis_flags = F_RANGED
+tt.timed_attacks.list[1].vis_bans = F_FLYING
+tt.timed_attacks.list[2] = CC("mod_attack")
+tt.timed_attacks.list[2].animation = "specialFrog"
+tt.timed_attacks.list[2].cooldown = 35
+tt.timed_attacks.list[2].cast_time = fts(17)
+tt.timed_attacks.list[2].min_range = 150
+tt.timed_attacks.list[2].max_range = 330
+tt.timed_attacks.list[2].projectile = "projectile_isfet_frog_curse"
+tt.timed_attacks.list[2].sound = "hero_isfet_polymorph_spell"
+tt.timed_attacks.list[2].disabled = true
+tt.timed_attacks.list[2].vis_flags = bor(F_RANGED, F_INSTAKILL)
+tt.timed_attacks.list[2].vis_bans = bor(F_FLYING, F_BOSS)
+tt.timed_attacks.list[3] = CC("mod_attack")
+tt.timed_attacks.list[3].animation_in = "specialFirestormIn"
+tt.timed_attacks.list[3].animation_loop = "specialFirestormLoop"
+tt.timed_attacks.list[3].animation_out = "specialFirestormOut"
+tt.timed_attacks.list[3].cooldown = 70
+tt.timed_attacks.list[3].range = 120
+tt.timed_attacks.list[3].loop_duration = 1.5
+tt.timed_attacks.list[3].entity = "controller_isfet_fire_ice_rain"
+tt.timed_attacks.list[3].sound = "hero_isfet_fireice_cast"
+tt.timed_attacks.list[3].sound_delay = 0.26
+tt.timed_attacks.list[3].disabled = true
+tt.timed_attacks.list[3].vis_flags = F_RANGED
+tt.timed_attacks.list[3].vis_bans = F_FLYING
+tt.timed_attacks.list[4] = CC("mod_attack")
+tt.timed_attacks.list[4].animation = "specialBlood"
+tt.timed_attacks.list[4].cooldown = 20
+tt.timed_attacks.list[4].cast_time = fts(7)
+tt.timed_attacks.list[4].min_range = 60
+tt.timed_attacks.list[4].max_range = 175
+tt.timed_attacks.list[4].crowd_range = 100
+tt.timed_attacks.list[4].min_targets = 2
+tt.timed_attacks.list[4].entity = "aura_isfet_blood_pool"
+tt.timed_attacks.list[4].sound = "hero_mortemis_rotten"
+tt.timed_attacks.list[4].sound_delay = 0.32
+tt.timed_attacks.list[4].disabled = true
+tt.timed_attacks.list[4].vis_flags = F_RANGED
+tt.timed_attacks.list[4].vis_bans = F_FLYING
+tt.ultimate = {
+	ts = 0,
+	cooldown = 48,
+	disabled = true
+}
+tt.hero.skills.ultimate.cooldown = tt.ultimate.cooldown
+
+tt = RT("bolt_isfet", "bolt")
+AC(tt, "force_motion")
+tt.render.sprites[1].prefix = "hero_isfet_bolt"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_BULLETS
+tt.bullet.damage_type = DAMAGE_MAGICAL
+tt.height_attack = 70
+tt.initial_vel_y = 50
+tt.transition_time = 1
+tt.target_distance_detection = 20
+tt.main_script.update = scripts.hero_isfet_bolt.update
+tt.bullet.damage_max = 10
+tt.bullet.damage_min = 10
+tt.bullet.acceleration_factor = 0.3
+tt.bullet.min_speed = 30
+tt.bullet.max_speed = 300
+tt.bullet.hit_fx = "hero_isfet_bolt_hit"
+tt.bullet.particles_name = "ps_hero_isfet_bolt_trail"
+tt.bullet.max_speed = 1800
+tt.bullet.min_speed = 150
+tt.initial_impulse = 9000
+tt.initial_impulse_duration = 0.1
+tt.initial_impulse_angle = math.pi / 2
+tt.force_motion.a_step = 10
+tt.force_motion.max_a = 1800
+tt.force_motion.max_v = 450
+tt.sound_events.insert = nil
+
+tt = RT("hero_isfet_bolt_hit", "fx")
+tt.render.sprites[1].name = "hero_isfet_bolt_hit"
+
+tt = RT("ps_hero_isfet_bolt_trail")
+AC(tt, "pos", "particle_system")
+tt.particle_system.name = "hero_isfet_bolt_particle"
+tt.particle_system.animated = false
+tt.particle_system.loop = false
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.emission_rate = 45
+tt.particle_system.emit_area_spread = v(8, 8)
+tt.particle_system.emit_rotation_spread = math.pi * 2
+tt.particle_system.scales_y = {1, 1.5}
+tt.particle_system.scales_x = {1, 1.5}
+
+tt = RT("aura_isfet_necromancy")
+AC(tt, "pos", "main_script")
+tt.main_script.update = scripts.aura_isfet_necromancy.update
+
+tt = RT("hero_isfet_mummy", "soldier_militia")
+AC(tt, "melee", "nav_path")
+tt.main_script.update = scripts.hero_isfet_mummy.update
+tt.health.hp_max = 180
+tt.health.armor = 0
+tt.health.dead_lifetime = 0
+tt.health_bar.offset = v(0, 32)
+tt.health_bar.type = HEALTH_BAR_SIZE_SMALL
+tt.info.fn = scripts.soldier_barrack.get_info
+tt.info.portrait = "kr4_info_portraits_soldiers_0011"
+tt.lifetime = 50
+tt.motion.max_speed = 20
+tt.nav_path.dir = -1
+tt.render.sprites[1].anchor = v(0.5, 0.065)
+tt.render.sprites[1].prefix = "hero_isfet_mummy"
+tt.render.sprites[1].name = "spawn"
+tt.render.sprites[1].angles = {}
+tt.render.sprites[1].angles.walk = {"walk", "walkUp", "walkDown"}
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "hero_isfet_mummy_shadow"
+tt.render.sprites[2].z = Z_DECALS + 1
+tt.melee.range = 60
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].damage_min = 8
+tt.melee.attacks[1].damage_max = 12
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].animation = "melee"
+tt.melee.attacks[1].hit_time = fts(9)
+tt.melee.attacks[1].vis_flags = F_BLOCK
+tt.melee.attacks[1].vis_bans = bor(F_FLYING, F_CLIFF)
+tt.soldier.melee_slot_offset = v(5, 0)
+tt.ui.can_click = false
+tt.unit.hit_offset = v(0, 11)
+tt.unit.mod_offset = v(0, 12)
+tt.spawn_sound = "group_party_sarcophagus_mummy_moan"
+tt.spawn_sound_delay = 0.2
+
+tt = RT("aura_isfet_locust_swarm", "aura")
+AC(tt, "nav_path", "motion", "render")
+tt.main_script.update = scripts.aura_isfet_locust_swarm.update
+tt.aura.duration = 7
+tt.infection_aura = "aura_isfet_locust_infection"
+tt.motion.max_speed = 30
+tt.nav_path.dir = -1
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].prefix = "hero_isfet_cloud"
+tt.render.sprites[1].name = "spawn"
+tt.render.sprites[1].offset = v(0, 20)
+tt.render.sprites[1].angles = {}
+tt.render.sprites[1].angles.walk = {"walk"}
+tt.render.sprites[1].z = Z_FLYING_HEROES
+
+tt = RT("aura_isfet_locust_infection", "aura")
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.aura.duration = 7
+tt.aura.cycle_time = 0.1
+tt.aura.radius = 110
+tt.aura.track_source = true
+tt.aura.mods = {"mod_isfet_locust_damage", "mod_isfet_locust_silence"}
+tt.aura.vis_flags = bor(F_RANGED, F_MOD)
+tt.aura.vis_bans = bor(F_FRIEND)
+
+tt = RT("mod_isfet_locust_damage", "modifier")
+AC(tt, "dps")
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+tt.modifier.duration = 5
+tt.modifier.resets_same = true
+tt.modifier.replaces_lower = true
+tt.modifier.vis_flags = F_MOD
+tt.dps.damage_min = 4
+tt.dps.damage_max = 4
+tt.dps.damage_every = 0.25
+tt.dps.damage_type = DAMAGE_EXPLOSION
+tt.dps.kill = true
+
+tt = RT("mod_isfet_locust_silence", "modifier")
+AC(tt, "render")
+tt.main_script.insert = scripts.mod_silence.insert
+tt.main_script.remove = scripts.mod_silence.remove
+tt.main_script.update = scripts.mod_track_target.update
+tt.modifier.duration = 5
+tt.modifier.resets_same = true
+tt.modifier.replaces_lower = true
+tt.modifier.use_mod_offset = true
+tt.modifier.vis_flags = F_MOD
+tt.render.sprites[1].prefix = "hero_isfet_cloud_modifier"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].draw_order = 2
+
+tt = RT("projectile_isfet_frog_curse")
+AC(tt, "pos", "main_script", "render")
+tt.main_script.update = scripts.projectile_isfet_frog_curse.update
+tt.duration = 0.6
+tt.sound_hit = "hero_isfet_polymorph_spell_impact"
+tt.sound_frog = "hero_isfet_polymorph_spell_frog"
+tt.render.sprites[1].prefix = "hero_isfet_frog_ray"
+tt.render.sprites[1].name = "travel"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].z = Z_BULLETS
+
+tt = RT("fx_isfet_frog_smoke", "fx")
+tt.render.sprites[1].prefix = "hero_isfet_frog_smoke"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].anchor = v(0.5, 0.34)
+tt.render.sprites[1].offset = v(0, 2)
+
+tt = RT("decal_isfet_frog")
+AC(tt, "pos", "main_script", "render")
+tt.main_script.update = scripts.decal_isfet_frog.update
+tt.lifetime = 6
+tt.render.sprites[1].prefix = "hero_isfet_frog"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].anchor = v(0.5, 0.11)
+tt.render.sprites[1].z = Z_DECALS + 1
+
+tt = RT("controller_isfet_fire_ice_rain")
+AC(tt, "pos", "main_script")
+tt.main_script.update = scripts.controller_isfet_fire_ice_rain.update
+tt.spawn_delay = 0.2
+tt.radius = 60
+tt.projectiles = {"projectile_isfet_rain_fire", "projectile_isfet_rain_ice"}
+tt.scale_min = 0.65
+tt.scale_max = 0.8
+
+tt = RT("projectile_isfet_rain")
+AC(tt, "pos", "main_script", "render")
+tt.main_script.update = scripts.projectile_isfet_rain.update
+tt.flight_time = 0.25
+tt.damage = 60
+tt.damage_radius = 30
+tt.damage_type = DAMAGE_TRUE
+tt.vis_flags = F_RANGED
+tt.vis_bans = F_FLYING
+
+tt = RT("projectile_isfet_rain_fire", "projectile_isfet_rain")
+tt.kind = "fire"
+tt.mod = "mod_isfet_rain_burn"
+tt.hit_fx = "fx_isfet_rain_fire"
+tt.release_sound = "group_hero_isfet_fire_proyectil"
+tt.hit_sound = "bomb_hit_sound"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "hero_isfet_fireice_fire_proy"
+tt.render.sprites[1].z = Z_BULLETS
+tt.render.sprites[1].flip_x = true
+
+tt = RT("projectile_isfet_rain_ice", "projectile_isfet_rain")
+tt.kind = "ice"
+tt.mod = "mod_isfet_rain_freeze"
+tt.hit_fx = "fx_isfet_rain_ice"
+tt.release_sound = "group_hero_isfet_ice_proyectile"
+tt.hit_sound = "bomb_hit_sound"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "hero_isfet_fireice_ice_proy"
+tt.render.sprites[1].anchor = v(0, 0.5)
+tt.render.sprites[1].z = Z_BULLETS
+tt.render.sprites[1].flip_x = true
+
+tt = RT("fx_isfet_rain_fire", "fx")
+tt.render.sprites[1].prefix = "hero_isfet_fireice_fire_explotion"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].anchor = v(0.5, 0.341)
+tt.render.sprites[1].offset = v(0, 3)
+
+tt = RT("fx_isfet_rain_ice", "fx")
+tt.render.sprites[1].prefix = "hero_isfet_fireice_ice_explotion"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].anchor = v(0.5, 0.341)
+tt.render.sprites[1].offset = v(0, 3)
+
+tt = RT("mod_isfet_rain_burn", "modifier")
+AC(tt, "dps")
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+tt.modifier.duration = 8
+tt.modifier.resets_same = true
+tt.modifier.vis_flags = F_MOD
+tt.dps.damage_min = 3
+tt.dps.damage_max = 3
+tt.dps.damage_every = 0.2
+tt.dps.damage_type = DAMAGE_TRUE
+
+tt = RT("mod_isfet_rain_freeze", "mod_freeze")
+tt.modifier.duration = 8
+tt.modifier.resets_same = true
+tt.modifier.vis_bans = F_BOSS
+
+tt = RT("aura_isfet_blood_pool", "aura")
+AC(tt, "render")
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.aura.duration = 6
+tt.aura.cycle_time = 0.2
+tt.aura.radius = 75
+tt.aura.mod = "mod_isfet_blood_vulnerability"
+tt.aura.vis_flags = F_MOD
+tt.aura.vis_bans = bor(F_FRIEND)
+tt.sound = "hero_isfet_bloodpool"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "hero_isfet_blood_decal"
+tt.render.sprites[1].z = Z_DECALS
+for i, offset in ipairs({v(12, 16), v(13, 0), v(-15, 17), v(-10, 1)}) do
+	tt.render.sprites[i + 1] = CC("sprite")
+	tt.render.sprites[i + 1].prefix = "hero_isfet_blood_bubble"
+	tt.render.sprites[i + 1].name = "run"
+	tt.render.sprites[i + 1].loop = true
+	tt.render.sprites[i + 1].anchor = v(0.5, 0)
+	tt.render.sprites[i + 1].offset = offset
+end
+
+tt = RT("mod_isfet_blood_vulnerability", "modifier")
+AC(tt, "render")
+tt.main_script.insert = scripts.mod_damage_factors.insert
+tt.main_script.remove = scripts.mod_damage_factors.remove
+tt.main_script.update = scripts.mod_track_target.update
+tt.modifier.duration = 6
+tt.modifier.resets_same = true
+tt.modifier.replaces_lower = true
+tt.modifier.use_mod_offset = true
+tt.modifier.vis_flags = F_MOD
+tt.received_damage_factor = 1.25
+tt.render.sprites[1].prefix = "hero_isfet_blood_modifier"
+tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].draw_order = 2
+
+tt = RT("controller_hero_isfet_ultimate")
+AC(tt, "pos", "main_script", "render")
+tt.main_script.update = scripts.controller_hero_isfet_ultimate.update
+tt.cloud_radius = 120
+tt.damage_radius = 80
+tt.damage = {4, 6, 12, 20}
+tt.duration = 4
+tt.tick_time = 0.2
+tt.cooldown = 48
+tt.damage_type = DAMAGE_TRUE
+tt.damage_flags = F_RANGED
+tt.damage_bans = F_FLYING
+tt.slow_aura = "aura_isfet_ultimate_slow"
+tt.sound = "hero_isfet_ultimate"
+tt.lightning_fx = "fx_isfet_ultimate_lightning"
+tt.lightning_hit_fx = "fx_isfet_ultimate_lightning_hit"
+tt.lightning_origin_y = 90
+tt.lightning_destination_y = -8
+tt.render.sprites[1] = CC("sprite")
+tt.render.sprites[1].prefix = "hero_isfet_storm_clouds"
+tt.render.sprites[1].name = "in"
+tt.render.sprites[1].anchor = v(0.5, 0.14)
+tt.render.sprites[1].offset = v(0, 100)
+tt.render.sprites[1].z = Z_FLYING_HEROES
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "hero_isfet_storm_shadow"
+tt.render.sprites[2].z = Z_DECALS
+
+tt = RT("aura_isfet_ultimate_slow", "aura")
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+tt.aura.duration = 4
+tt.aura.cycle_time = 0.2
+tt.aura.radius = 120
+tt.aura.track_source = true
+tt.aura.mod = "mod_isfet_ultimate_slow"
+tt.aura.vis_flags = bor(F_RANGED, F_MOD)
+tt.aura.vis_bans = F_FLYING
+
+tt = RT("mod_isfet_ultimate_slow", "mod_slow")
+tt.modifier.duration = 0.25
+tt.modifier.resets_same = true
+tt.slow.factor = 0.4
+
+tt = RT("fx_isfet_ultimate_lightning", "fx")
+tt.render.sprites[1].prefix = "hero_isfet_storm_lightning"
+tt.render.sprites[1].name = "travel"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].z = Z_BULLETS
+
+tt = RT("fx_isfet_ultimate_lightning_hit", "fx")
+tt.render.sprites[1].prefix = "hero_isfet_storm_lightning_hit"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].z = Z_BULLETS

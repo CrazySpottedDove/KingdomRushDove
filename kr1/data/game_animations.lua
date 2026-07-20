@@ -50062,5 +50062,290 @@ return {
 		prefix = "hero_storm_dragon_electric_son",
 		from = 82,
 		to = 100
+	},
+	hero_isfet_idle = {
+		prefix = "hero_isfet_layer1",
+		from = 1,
+		to = 20
+	},
+	hero_isfet_walk = {
+		prefix = "hero_isfet_layer1",
+		from = 21,
+		to = 46
+	},
+	hero_isfet_attack = {
+		prefix = "hero_isfet_layer1",
+		from = 47,
+		to = 73
+	},
+	hero_isfet_rangedAttack = {
+		prefix = "hero_isfet_layer1",
+		from = 74,
+		to = 117
+	},
+	hero_isfet_specialFrog = {
+		prefix = "hero_isfet_layer1",
+		from = 118,
+		to = 164
+	},
+	hero_isfet_specialBlood = {
+		prefix = "hero_isfet_layer1",
+		from = 165,
+		to = 198
+	},
+	hero_isfet_specialCloud = {
+		prefix = "hero_isfet_layer1",
+		from = 199,
+		to = 270
+	},
+	hero_isfet_specialFirestormIn = {
+		prefix = "hero_isfet_layer1",
+		from = 271,
+		to = 282
+	},
+	hero_isfet_specialFirestormLoop = {
+		prefix = "hero_isfet_layer1",
+		from = 283,
+		to = 317
+	},
+	hero_isfet_specialFirestormOut = {
+		prefix = "hero_isfet_layer1",
+		from = 318,
+		to = 338
+	},
+	hero_isfet_levelup = {
+		prefix = "hero_isfet_layer1",
+		from = 339,
+		to = 364
+	},
+	hero_isfet_death = {
+		prefix = "hero_isfet_layer1",
+		from = 365,
+		to = 465
+	},
+	hero_isfet_deathIdle = {
+		prefix = "hero_isfet_layer1",
+		from = 466,
+		to = 466
+	},
+	hero_isfet_respawn = {
+		prefix = "hero_isfet_layer1",
+		from = 467,
+		to = 531
+	},
+	hero_isfet_smoke_run = {
+		prefix = "hero_isfet_smoke",
+		from = 1,
+		to = 21
+	},
+	hero_isfet_cloud_spawn = {
+		prefix = "hero_isfet_cloud",
+		from = 1,
+		to = 6
+	},
+	hero_isfet_cloud_idle = {
+		prefix = "hero_isfet_cloud",
+		from = 7,
+		to = 24
+	},
+	hero_isfet_cloud_walk = {
+		prefix = "hero_isfet_cloud",
+		from = 7,
+		to = 24
+	},
+	hero_isfet_cloud_death = {
+		prefix = "hero_isfet_cloud",
+		from = 25,
+		to = 35
+	},
+	hero_isfet_cloud_modifier_init = {
+		prefix = "hero_isfet_cloud_modifier",
+		from = 1,
+		to = 5
+	},
+	hero_isfet_cloud_modifier_loop = {
+		prefix = "hero_isfet_cloud_modifier",
+		from = 6,
+		to = 21
+	},
+	hero_isfet_cloud_modifier_end = {
+		prefix = "hero_isfet_cloud_modifier",
+		from = 22,
+		to = 35
+	},
+	hero_isfet_blood_modifier_init = {
+		prefix = "hero_isfet_blood_modifier",
+		from = 1,
+		to = 3
+	},
+	hero_isfet_blood_modifier_loop = {
+		prefix = "hero_isfet_blood_modifier",
+		from = 4,
+		to = 27
+	},
+	hero_isfet_blood_modifier_end = {
+		prefix = "hero_isfet_blood_modifier",
+		from = 28,
+		to = 40
+	},
+	hero_isfet_bolt_travel = {
+		prefix = "hero_isfet_bolt",
+		from = 1,
+		to = 3
+	},
+	hero_isfet_bolt_flying = {
+		prefix = "hero_isfet_bolt",
+		from = 1,
+		to = 3
+	},
+	hero_isfet_bolt_hit = {
+		prefix = "hero_isfet_bolt",
+		from = 4,
+		to = 10
+	},
+	hero_isfet_frog_idle = {
+		prefix = "hero_isfet_frog",
+		from = 1,
+		to = 1
+	},
+	hero_isfet_frog_talk = {
+		prefix = "hero_isfet_frog",
+		from = 2,
+		to = 19
+	},
+	hero_isfet_frog_walk = {
+		prefix = "hero_isfet_frog",
+		from = 20,
+		to = 33
+	},
+	hero_isfet_frog_death = {
+		prefix = "hero_isfet_frog",
+		from = 34,
+		to = 45
+	},
+	hero_isfet_frog_smoke_run = {
+		prefix = "hero_isfet_frog_smoke",
+		from = 1,
+		to = 21
+	},
+	hero_isfet_blood_bubble_run = {
+		prefix = "hero_isfet_blood_bubble",
+		from = 1,
+		to = 35
+	},
+	hero_isfet_mummy_spawn = {
+		prefix = "hero_isfet_mummy",
+		from = 149,
+		to = 177
+	},
+	hero_isfet_mummy_idle = {
+		prefix = "hero_isfet_mummy",
+		from = 1,
+		to = 1
+	},
+	hero_isfet_mummy_walk = {
+		prefix = "hero_isfet_mummy",
+		from = 2,
+		to = 29
+	},
+	hero_isfet_mummy_walkUp = {
+		prefix = "hero_isfet_mummy",
+		from = 54,
+		to = 77
+	},
+	hero_isfet_mummy_walkDown = {
+		prefix = "hero_isfet_mummy",
+		from = 30,
+		to = 53
+	},
+	hero_isfet_mummy_melee = {
+		prefix = "hero_isfet_mummy",
+		from = 78,
+		to = 107
+	},
+	hero_isfet_mummy_death = {
+		prefix = "hero_isfet_mummy",
+		from = 108,
+		to = 148
+	},
+	hero_isfet_fireice_fire_explotion_run = {
+		prefix = "hero_isfet_fireice_fire_explotion",
+		from = 1,
+		to = 24
+	},
+	hero_isfet_fireice_ice_decal_run = {
+		prefix = "hero_isfet_fireice_ice_decal",
+		from = 1,
+		to = 13
+	},
+	hero_isfet_fireice_ice_explotion_run = {
+		prefix = "hero_isfet_fireice_ice_explotion",
+		from = 1,
+		to = 24
+	},
+	hero_isfet_fireice_ice_particle2_run = {
+		prefix = "hero_isfet_fireice_ice_particle2",
+		from = 1,
+		to = 23
+	},
+	hero_isfet_fireice_ice_particle_run = {
+		prefix = "hero_isfet_fireice_ice_particle",
+		from = 1,
+		to = 23
+	},
+	hero_isfet_fireice_ice_rocks_run = {
+		prefix = "hero_isfet_fireice_ice_rocks",
+		from = 1,
+		to = 33
+	},
+	hero_isfet_fireice_fire_particle2_run = {
+		prefix = "hero_isfet_fireice_fire_particle2",
+		from = 1,
+		to = 23
+	},
+	hero_isfet_fireice_fire_particle_run = {
+		prefix = "hero_isfet_fireice_fire_particle",
+		from = 1,
+		to = 23
+	},
+	hero_isfet_fireice_fire_rocks_run = {
+		prefix = "hero_isfet_fireice_fire_rocks",
+		from = 1,
+		to = 33
+	},
+	hero_isfet_frog_ray_travel = {
+		prefix = "hero_isfet_frog_ray",
+		from = 1,
+		to = 18
+	},
+	hero_isfet_storm_clouds_in = {
+		prefix = "hero_isfet_storm_clouds",
+		from = 1,
+		to = 14
+	},
+	hero_isfet_storm_clouds_run = {
+		prefix = "hero_isfet_storm_clouds",
+		from = 15,
+		to = 74
+	},
+	hero_isfet_storm_clouds_out = {
+		prefix = "hero_isfet_storm_clouds",
+		from = 75,
+		to = 95
+	},
+	hero_isfet_storm_lightning_travel = {
+		prefix = "hero_isfet_storm_lightning",
+		from = 1,
+		to = 18
+	},
+	hero_isfet_storm_lightning_hit_run = {
+		prefix = "hero_isfet_storm_lightning_hit",
+		from = 1,
+		to = 10
+	},
+	hero_isfet_storm_lightning_modifier_run = {
+		prefix = "hero_isfet_storm_lightning_modifier",
+		from = 1,
+		to = 6
 	}
 }

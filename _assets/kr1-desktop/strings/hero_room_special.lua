@@ -3313,6 +3313,39 @@ map["雷电之子"] = str(cooldown_str(), "召唤一个雷电之子，自动攻�
 
 map["孔明灯"] = str("电云附近200范围内死亡的敌人会化为孔明灯，额外产出1枚金币。")
 
+set_hero("hero_isfet")
+
+set_skill(h.hero.skills.black_cloud)
+cooldown = h.timed_attacks.list[1].cooldown
+d[1].damage_min = ss("damage")
+d[1].damage_max = ss("damage")
+d[1].damage_type = DAMAGE_EXPLOSION
+map["黑色蝗虫"] = str(cooldown_str(), "召唤一片致命的蝗虫云，沿路径移动，对碰到的敌人每0.25秒造成", damage_str(), "。")
+
+set_skill(h.hero.skills.frog_curse)
+cooldown = h.timed_attacks.list[2].cooldown
+map["青蛙诅咒"] = str(cooldown_str(), "向生命值低于", s.health_threshold[max_lvl], "的敌人释放诅咒，将其变成一只青蛙（即直接秒杀）。")
+
+set_skill(h.hero.skills.rain)
+cooldown = h.timed_attacks.list[3].cooldown
+count = ss("count")
+map["冰火雨"] = str(cooldown_str(), "召唤", count, "颗陨石落向目标区域，每颗造成60点真实伤害，并燃烧或冰冻敌人。")
+
+set_skill(h.hero.skills.blood_pool)
+cooldown = h.timed_attacks.list[4].cooldown
+d[1].damage_min = ss("damage_factor")
+factor = ss("damage_factor")
+map["血之折磨"] = str(cooldown_str(), "召唤一池沸腾的血液，使范围内的敌人受到的伤害增加", (factor - 1) * 100, "%。")
+
+set_skill(h.hero.skills.ultimate)
+cooldown = h.ultimate.cooldown
+d[1].damage_min = ss("damage")
+d[1].damage_max = ss("damage")
+d[1].damage_type = DAMAGE_TRUE
+map["黑暗风暴"] = str(cooldown_str(), "召唤一场致命的风暴，对区域内的敌人每0.2秒造成", damage_str(), "伤害并减速60%。")
+
+map["倒下的仆从"] = str("当靠近伊斯菲特的敌人死亡时，有50%概率作为木乃伊复活为其作战。")
+
 -- function H.dump()
 -- 	for hero_name, skills in pairs(H) do
 -- 		print("Hero:", hero_name)

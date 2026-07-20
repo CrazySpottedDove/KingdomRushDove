@@ -6738,5 +6738,8 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	HERO_BERESAD_SPECIAL = "龙息术，恐惧之龙，龙之爪牙，湮灭射线，地狱火雨",
 	HERO_DIANYUN_NAME = "电云",
 	HERO_DIANYUN_DESCRIPTION = "传说在千年之前，天空中有两条神龙争斗，落败的那条被封印在无尽之海，获胜的那条被尊为风暴龙王，名曰电云。",
-	HERO_DIANYUN_SPECIAL = "孔明灯，闪电打击，暴风领主，神圣雨露，至尊波，雷电之子"
+	HERO_DIANYUN_SPECIAL = "孔明灯，闪电打击，暴风领主，神圣雨露，至尊波，雷电之子",
+	HERO_ISFET_NAME = "伊斯菲特",
+	HERO_ISFET_DESCRIPTION = "在很久以前，伊斯菲特，一个被遗忘传说中的术士，利用黑暗魔法揭开了巨灵咒语的秘密。在他沉睡于一个古老金字塔中时，维兹南的邪恶气息使他作为一个不朽的神秘力量返回，准备再次塑造沙漠的命运。",
+	HERO_ISFET_SPECIAL = "黑色蝗虫，青蛙诅咒，冰火雨，血之折磨，黑暗风暴"
 }
