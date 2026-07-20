@@ -4139,7 +4139,7 @@ function scripts.ray_simple.update(this, store)
 	end
 
 	if this.ray_duration then
-		while store.tick_ts - s.ts < this.ray_duration and target and not target.health.dead do
+		while store.tick_ts - s.ts < this.ray_duration and target and store.entities[target.id] do
 			if this.track_target then
 				update_sprite()
 			end

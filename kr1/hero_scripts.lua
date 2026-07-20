@@ -40266,7 +40266,7 @@ scripts.mod_ray_beresad_disintegrate = {
 				queue_damage(store, d)
 			end
 		end
-		return true
+		return false
 	end
 }
 

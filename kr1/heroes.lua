@@ -20580,13 +20580,15 @@ tt.particle_system.scales_y = {1, 1.25}
 tt.particle_system.emission_rate = 30
 
 tt = RT("ray_beresad_disintegrate", "bullet")
-tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.damage_type = bor(DAMAGE_DISINTEGRATE, DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS)
 tt.bullet.hit_time = 0
 tt.bullet.hit_fx = "fx_ray_beresad_disintegrate"
+tt.bullet.pop = {"pop_zap_arcane"}
+tt.bullet.pop_conds = DR_KILL
 tt.main_script.update = scripts.ray_simple.update
 tt.sound_events.insert = "ArcaneRaySound"
 tt.track_target = true
-tt.ray_duration = fts(10)
+tt.ray_duration = fts(8)
 tt.bullet.mod = "mod_ray_beresad_disintegrate"
 tt.image_width = 100
 tt.render.sprites[1].anchor = vec_2(0, 0.5)
@@ -20596,20 +20598,13 @@ tt.sound_events.insert = "hero_beresad_remove"
 
 tt = RT("fx_ray_beresad_disintegrate", "fx")
 tt.render.sprites[1].name = "hero_beresad_remove_explosion_fx"
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].name = "hero_beresad_remove_explosion_run"
+tt.render.sprites[2].z = Z_BULLETS
+tt.render.sprites[2].anchor.y = 0.1
 
 tt = RT("mod_ray_beresad_disintegrate", "modifier")
-AC(tt, "render")
 tt.main_script.insert = scripts.mod_ray_beresad_disintegrate.insert
-tt.main_script.update = scripts.mod_ray_arcane_disintegrate.update
-tt.modifier.pop = {"pop_zap_arcane"}
-tt.modifier.pop_conds = DR_KILL
-tt.modifier.damage_type = bor(DAMAGE_DISINTEGRATE, DAMAGE_INSTAKILL, DAMAGE_NO_SPAWNS)
-tt.render.sprites[1].name = "hero_beresad_remove_explosion_run"
-tt.render.sprites[1].loop = false
-tt.render.sprites[1].z = Z_BULLETS
-tt.render.sprites[1].anchor.y = 0.1
-tt.modifier.damage = 1
-tt.modifier.duration = fts(18)
 tt.explode_radius = 50
 tt.explode_damage_type = DAMAGE_TRUE
 tt.explode_damage_min = 8
