@@ -23728,7 +23728,7 @@ function scripts.hero_witch.update(this, store)
 					local enemy, _, enemy_pos = U.find_foremost_enemy_between_range_filter_off(this.pos, basic_ranged.min_range, basic_ranged.max_range, basic_ranged.node_prediction, basic_ranged.vis_flags, basic_ranged.vis_bans)
 
 					if not enemy then
-						SU.delay_attack(store, basic_ranged, fts(10))
+						basic_ranged.ts = basic_ranged.ts + fts(10)
 					else
 						local start_ts = store.tick_ts
 						local enemy_id = enemy.id
@@ -24405,8 +24405,9 @@ function scripts.mod_hero_witch_skill_polymorph.insert(this, store)
 
 		pumpkin.pos = target.pos
 		pumpkin.nav_path = target.nav_path
-		pumpkin.health.hp_max = target.health.hp_max * this.entity_hp[this.modifier.level]
+		pumpkin.health.hp_max = target.health.hp * this.entity_hp[this.modifier.level]
 		pumpkin.health.hp = target.health.hp * this.entity_hp[this.modifier.level]
+		pumpkin.health.patched = target.health.patched
 		pumpkin.enemy.gold = target.enemy.gold
 
 		queue_insert(store, pumpkin)
@@ -24459,7 +24460,9 @@ function scripts.mod_hero_witch_skill_polymorph.remove(this, store)
 
 			target.pos = V.vclone(pumpkin.pos)
 			target.nav_path = pumpkin.nav_path
-			target.health.hp = target.health.hp_max * pumpkin.health.hp / pumpkin.health.hp_max
+			target.health.patched = pumpkin.health.patched
+			target.health.hp = target.health.hp * pumpkin.health.hp / pumpkin.health.hp_max
+			target.health.hp_max = target.health.hp
 
 			queue_insert(store, target)
 
