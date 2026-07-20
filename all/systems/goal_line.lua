@@ -27,7 +27,7 @@ function M.register(sys)
 
 			if end_node <= node_index and not P.path_connections[e.nav_path.pi] and e.enemy.remove_at_goal_line then
 				signal.emit("enemy-reached-goal", e)
-				store.lives = km.clamp(-10000, 10000, store.lives - e.enemy.lives_cost)
+				store.lives = km.clamp(-1000000, 1000000, store.lives - e.enemy.lives_cost)
 				store.player_gold = store.player_gold + e.enemy.gold
 				queue_remove(store, e)
 			end
