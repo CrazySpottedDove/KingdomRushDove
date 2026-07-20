@@ -348,7 +348,6 @@ tower_archmage.powers.twister.attack_idx = 2
 tower_archmage.powers.blast = CC("power")
 tower_archmage.powers.blast.price_base = 200
 tower_archmage.powers.blast.price_inc = 200
-
 tower_archmage.main_script.insert = scripts.tower_archmage.insert
 tower_archmage.main_script.remove = scripts.tower_archmage.remove
 tower_archmage.main_script.update = scripts.tower_archmage.update
