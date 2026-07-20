@@ -10099,7 +10099,6 @@ tt.damage_inc = 25
 
 tt = RT("hero_faustus_ultimate")
 AC(tt, "pos", "main_script", "sound_events")
-tt.cooldown = 32
 tt.main_script.update = scripts.hero_faustus_ultimate.update
 tt.sound_events.insert = "ElvesHeroFaustusUltimate"
 tt.separation_nodes = 20

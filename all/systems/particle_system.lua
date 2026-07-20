@@ -171,7 +171,7 @@ function M.register(sys)
 					end
 
 					if ps.emit_speed then
-						local angle = ps.emission_rate + (random() - 0.5) * ps.emit_spread
+						local angle = ps.emit_direction + (random() - 0.5) * ps.emit_spread
 						local len = random() * (ps.emit_speed[2] - ps.emit_speed[1]) + ps.emit_speed[1]
 
 						p.speed_x = cos(angle) * len
