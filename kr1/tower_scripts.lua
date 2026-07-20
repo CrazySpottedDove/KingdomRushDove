@@ -9924,12 +9924,12 @@ function scripts.soldier_tower_pandas.update(this, store)
 			return false
 		end
 
-		if not (store.tick_ts - a_i.ts > a_i.cooldown) then
+		if not ready_to_attack(a_i, store, this.unit.cooldown_factor) then
 			return false
 		end
 
 		if not U.has_enough_enemies_in_range(store, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans, nil, a_i.min_targets) then
-			SU.delay_attack(store, a_i, fts(10))
+			a_i.ts = a_i.ts + fts(10)
 
 			return false
 		end
@@ -9950,14 +9950,14 @@ function scripts.soldier_tower_pandas.update(this, store)
 			return false
 		end
 
-		if not (store.tick_ts - a_i.ts > a_i.cooldown) then
+		if not ready_to_attack(a_i, store, this.unit.cooldown_factor) then
 			return false
 		end
 
 		if not U.has_enemy_in_range(store, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans, function(e)
 			return not e.enemy.counts or not e.enemy.counts.mod_teleport or e.enemy.counts.mod_teleport < a_i.max_times_applied
 		end) then
-			SU.delay_attack(store, a_i, fts(10))
+			a_i.ts = a_i.ts + fts(10)
 
 			return false
 		end
@@ -11890,7 +11890,7 @@ function scripts.tower_sand.update(this, store)
 					local nearest_nodes = P:nearest_nodes(pred_pos.x, pred_pos.y, {enemies[1].nav_path.pi})
 
 					if #nearest_nodes == 0 then
-						SU.delay_attack(store, bba, fts(10))
+						bba.ts = bba.ts + fts(10)
 					else
 						bba.ts = store.tick_ts
 
@@ -13042,7 +13042,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
 				end)
 
 				if not towers or #towers <= 0 then
-					SU.delay_attack(store, ae, ae.cooldown)
+					ae.ts = ae.ts + ae.cooldown
 				else
 					local start_ts = store.tick_ts
 
