@@ -18393,7 +18393,7 @@ tt.ranged.attacks[1].min_range = b.basic_ranged.min_range
 tt.ranged.attacks[1].shoot_time = fts(17)
 tt.ranged.attacks[1].vis_bans = bor(F_WATER, F_NIGHTMARE)
 tt.ranged.attacks[1].vis_flags = bor(F_RANGED)
-tt.ranged.attacks[1].xp_gain_factor = b.basic_ranged.xp_gain_factor
+tt.vis.bans = bor(tt.vis.bans, F_POISON)
 
 tt = RT("mod_hero_spider_tunneling_stun", "mod_stun")
 tt.modifier.duration = balance.heroes.hero_spider.tunneling.stun_duration
