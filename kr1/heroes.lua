@@ -3676,7 +3676,7 @@ tt.hero.skills.swordsmanship.xp_level_steps = {
 	[7] = 3
 }
 tt.hero.skills.looting = CC("hero_skill")
-tt.hero.skills.looting.percent = {0.1, 0.2, 0.3}
+tt.hero.skills.looting.percent = {0.15, 0.225, 0.3}
 tt.hero.skills.looting.xp_level_steps = {
 	[1] = 1,
 	[4] = 2,
