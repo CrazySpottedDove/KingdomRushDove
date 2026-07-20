@@ -19571,8 +19571,8 @@ AC(tt, "ranged", "timed_attacks")
 tt.regen.cooldown = 1
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 tt.hero.level_stats.hp_max = {300, 325, 350, 375, 400, 425, 450, 475, 500, 525}
-tt.hero.level_stats.ranged_damage_min = {17, 22, 26, 30, 34, 38, 43, 48, 53, 58}
-tt.hero.level_stats.ranged_damage_max = {23, 30, 36, 43, 50, 58, 65, 72, 79, 85}
+tt.hero.level_stats.ranged_damage_min = {17, 21, 25, 29, 33, 37, 42, 47, 52, 57}
+tt.hero.level_stats.ranged_damage_max = {23, 29, 35, 42, 49, 56, 63, 70, 77, 84}
 -- 1 爆炸
 tt.hero.skills.explosion = CC("hero_skill")
 tt.hero.skills.explosion.xp_level_steps = {
