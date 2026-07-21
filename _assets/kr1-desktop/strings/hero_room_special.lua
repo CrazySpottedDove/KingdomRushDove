@@ -1562,7 +1562,7 @@ map["护卫"] = str("每隔", cooldown, "秒，艾利丹召唤一名可调集的
 set_hero("hero_regson")
 set_skill(h.hero.skills.slash)
 
-a = h.melee.attacks[6]
+a = h.melee.attacks[5]
 cooldown = a.cooldown
 radius = a.damage_radius
 e = E:get_template("mod_regson_slash")
@@ -1582,7 +1582,7 @@ factor = ss("heal_factor")
 map["死战之志"] = str("每当身边有敌人死亡，雷格森就会吸收他们的灵魂，为自己恢复敌人最大生命值", factor * 100, "%的生命，并减少刃舞和影袭剩余冷却时间的3.5%。")
 
 set_skill(h.hero.skills.blade)
-get_damage(h.melee.attacks[4])
+get_damage(h.melee.attacks[3])
 set_damage_value(ss("damage"))
 
 e = E:get_template("aura_regson_blade")
