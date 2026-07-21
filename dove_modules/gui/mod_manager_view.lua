@@ -1298,7 +1298,7 @@ function ModManagerView:_download_zip(item)
 			headers = {
 				["Range"] = string.format("bytes=%d-%d", downloaded, end_pos)
 			}
-		}, 20)
+		}, 120)
 		if err then
 			return nil, "下载失败：" .. err
 		end
@@ -1966,6 +1966,161 @@ function ModManagerView:_developer_login()
 	return true, nil
 end
 
+function ModManagerView:_compute_dir_hashes(dir)
+	local hashes = {}
+	local sizes = {}
+	local total_bytes = 0
+
+	local skip_dirs = {".git", ".backup", ".tmp"}
+
+	local function walk(path, prefix)
+		local items = FS.getDirectoryItems(path) or {}
+		for _, name in ipairs(items) do
+			if prefix == "" then
+				local is_skip = false
+				for _, sd in ipairs(skip_dirs) do
+					if name == sd then
+						is_skip = true
+						break
+					end
+				end
+				if is_skip then
+					goto continue
+				end
+				if name:lower():match("^cover%.") then
+					goto continue
+				end
+			end
+
+			local full_path = path .. "/" .. name
+			local rel_path = (prefix ~= "" and prefix .. "/" .. name) or name
+			local info = FS.getInfo(full_path)
+			if info then
+				if info.type == "directory" then
+					walk(full_path, rel_path)
+				elseif info.type == "file" then
+					local data = FS.read(full_path)
+					if data then
+						local hash_data = love.data.hash("sha256", data)
+						hashes[rel_path] = love.data.encode("string", "hex", hash_data)
+						sizes[rel_path] = #data
+						total_bytes = total_bytes + #data
+					end
+				end
+			end
+			::continue::
+		end
+	end
+
+	walk(dir, "")
+	local file_count = 0
+	for _ in pairs(hashes) do
+		file_count = file_count + 1
+	end
+	return {
+		hashes = hashes,
+		sizes = sizes,
+		total_bytes = total_bytes
+	}
+end
+
+function ModManagerView:_hash_check(entry, version, hashes)
+	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
+	if not base then
+		return false, "无法选择插件商店地址"
+	end
+	local resp, err = self:_request(base .. "/hash_check", {
+		method = "POST",
+		headers = {
+			["Authorization"] = "Bearer " .. (self._developer_token or ""),
+			["Content-Type"] = "application/json"
+		},
+		data = json.encode({
+			entry = entry,
+			version = version,
+			hashes = hashes
+		})
+	}, 30)
+	if err then
+		return false, "哈希比对失败：" .. err
+	end
+	if tonumber(resp.code) ~= 200 then
+		return false, nil
+	end
+	local ok, body = pcall(json.decode, resp.body)
+	if not ok or type(body) ~= "table" then
+		return false, "哈希比对响应解析失败"
+	end
+	print(string.format("[mod_manager] 对比哈希得：修改%d个文件，删除%d个文件", #(body.changed or {}), #(body.deleted or {})))
+	return true, body
+end
+
+function ModManagerView:_upload_patch(mod_data, entry, version, changed, deleted, upload_cover)
+	local tmp = "tmp/plugin_patch/" .. entry
+	remove_dir_recursive("tmp/plugin_patch")
+	FS.createDirectory("tmp")
+	FS.createDirectory("tmp/plugin_patch")
+	FS.createDirectory(tmp)
+
+	for _, rel_path in ipairs(changed) do
+		local src = mod_data.path .. "/" .. rel_path
+		local dst = tmp .. "/" .. rel_path
+		local parent = dst:match("^(.*/)")
+		if parent and not FS.getInfo(parent, "directory") then
+			local parts = {}
+			for seg in parent:gmatch("[^/]+") do
+				parts[#parts + 1] = seg
+				local p = table.concat(parts, "/")
+				if not FS.getInfo(p, "directory") then
+					FS.createDirectory(p)
+				end
+			end
+		end
+		local data = FS.read(src)
+		if data then
+			FS.write(dst, data)
+		end
+	end
+
+	FS.write(tmp .. "/_patch_manifest.json", json.encode({
+		deleted = deleted
+	}))
+	local patch_data = zip.create_from_dir(tmp, {})
+	remove_dir_recursive("tmp/plugin_patch")
+	if not patch_data then
+		return false, "打包增量失败"
+	end
+
+	print(string.format("[mod_manager] 增量补丁大小:%d bytes", #patch_data))
+
+	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
+	if not base then
+		return false, "无法选择插件商店地址"
+	end
+
+	self:_set_status("正在增量上传插件：" .. entry, 40)
+	local resp, err = self:_request(base .. "/upload", {
+		method = "POST",
+		headers = {
+			["Authorization"] = "Bearer " .. self._developer_token,
+			["Content-Type"] = "application/octet-stream",
+			["X-Upload-Mode"] = "patch",
+			["X-Plugin-Entry"] = entry,
+			["X-Plugin-Version"] = version
+		},
+		data = patch_data
+	}, 120)
+
+	if err then
+		return false, "增量上传失败：" .. err
+	end
+	if tonumber(resp.code) ~= 200 then
+		return false, "增量上传失败：HTTP " .. tostring(resp.code) .. " " .. tostring(resp.body)
+	end
+
+	return true, nil
+end
+
 function ModManagerView:_upload_plugin(mod_data, upload_cover)
 	if not self._developer_token then
 		local ok, err = self:_developer_login()
@@ -1975,7 +2130,7 @@ function ModManagerView:_upload_plugin(mod_data, upload_cover)
 	end
 
 	local entry = mod_data.config.entry or mod_data.name
-	self:_set_status("正在打包插件：" .. entry, 10)
+	local version = mod_data.config.version or ""
 
 	local cover_data = nil
 	local cover_ext = nil
@@ -1990,6 +2145,49 @@ function ModManagerView:_upload_plugin(mod_data, upload_cover)
 		end
 	end
 
+	-- 计算本地文件哈希
+	self:_set_status("正在计算文件哈希：" .. entry, 5)
+	local dir_info = self:_compute_dir_hashes(mod_data.path)
+	if dir_info.total_bytes == 0 then
+		return false, "插件目录为空"
+	end
+
+	-- 与服务端比对哈希，决定全量还是增量
+	local use_full = true
+	local hash_ok, hash_resp = self:_hash_check(entry, version, dir_info.hashes)
+	if hash_ok and hash_resp and type(hash_resp.changed) == "table" and type(hash_resp.deleted) == "table" then
+		local changed = hash_resp.changed
+		local deleted = hash_resp.deleted
+		local changed_bytes = 0
+		for _, p in ipairs(changed) do
+			changed_bytes = changed_bytes + (dir_info.sizes[p] or 0)
+		end
+		use_full = changed_bytes > dir_info.total_bytes * 0.6
+
+		if #changed == 0 and #deleted == 0 then
+			print("插件无变更，无需上传！")
+			self:_refresh_local_view("插件无变更，无需上传：" .. entry)
+			return true, nil
+		end
+		if not use_full and #changed > 0 then
+			local ok_patch, err_patch = self:_upload_patch(mod_data, entry, version, changed, deleted, upload_cover)
+			if ok_patch then
+				if cover_data and cover_ext then
+					self:_upload_cover(entry, cover_data, cover_ext)
+				end
+				self:_refresh_local_view("增量上传成功：" .. entry)
+				return true, nil
+			end
+			log.error("[mod_manager] 补丁上传失败，回退到全量上传：%s", tostring(err_patch))
+			use_full = true
+		end
+	end
+	if not hash_ok then
+		log.error("[mod_manager] 哈希检查失败，回退到全量上传：%s", tostring(hash_resp))
+	end
+
+	-- 全量上传（增量不可用或变更量过大时回落）
+	print("[mod_manager] 全量上传插件：%s", entry)
 	self:_set_status("正在压缩插件：" .. entry, 20)
 	local zip_data = zip.create_from_dir(mod_data.path, {
 		exclude = {"^cover%..+$"},
@@ -2027,40 +2225,46 @@ function ModManagerView:_upload_plugin(mod_data, upload_cover)
 	end
 
 	self:_set_status("已上传插件，正在处理…", 80)
-
 	if cover_data and cover_ext then
-		self:_set_status("正在上传封面…", 90)
-		local mime = "application/octet-stream"
-		if cover_ext == "png" then
-			mime = "image/png"
-		elseif cover_ext == "jpg" or cover_ext == "jpeg" then
-			mime = "image/jpeg"
-		elseif cover_ext == "gif" then
-			mime = "image/gif"
-		elseif cover_ext == "webp" then
-			mime = "image/webp"
-		end
-		local cover_resp, cover_err = self:_request(base .. "/" .. url_encode(entry) .. "/cover", {
-			method = "POST",
-			headers = {
-				["Authorization"] = "Bearer " .. self._developer_token,
-				["Content-Type"] = mime
-			},
-			data = cover_data
-		}, 30)
-
-		if cover_err then
-			self:_refresh_local_view("插件上传成功，但封面上传失败：" .. cover_err)
-			return true, nil
-		end
-		if tonumber(cover_resp.code) ~= 200 then
-			self:_refresh_local_view("插件上传成功，但封面上传失败：HTTP " .. tostring(cover_resp.code))
-			return true, nil
-		end
+		self:_upload_cover(entry, cover_data, cover_ext)
 	end
 
 	self:_refresh_local_view("上传成功：" .. entry)
 	return true, nil
+end
+
+function ModManagerView:_upload_cover(entry, cover_data, cover_ext)
+	self:_set_status("正在上传封面…", 90)
+	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
+	if not base then
+		return
+	end
+
+	local mime = "application/octet-stream"
+	if cover_ext == "png" then
+		mime = "image/png"
+	elseif cover_ext == "jpg" or cover_ext == "jpeg" then
+		mime = "image/jpeg"
+	elseif cover_ext == "gif" then
+		mime = "image/gif"
+	elseif cover_ext == "webp" then
+		mime = "image/webp"
+	end
+
+	local resp, err = self:_request(base .. "/" .. url_encode(entry) .. "/cover", {
+		method = "POST",
+		headers = {
+			["Authorization"] = "Bearer " .. self._developer_token,
+			["Content-Type"] = mime
+		},
+		data = cover_data
+	}, 30)
+
+	if err then
+		self:_refresh_local_view("插件上传成功，但封面上传失败：" .. err)
+	elseif tonumber(resp.code) ~= 200 then
+		self:_refresh_local_view("插件上传成功，但封面上传失败：HTTP " .. tostring(resp.code))
+	end
 end
 
 function ModManagerView:_capture_state()
