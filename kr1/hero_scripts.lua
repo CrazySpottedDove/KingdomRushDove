@@ -11247,6 +11247,7 @@ scripts.hero_regson = {
 						ultimate_entity.level = this.hero.skills.ultimate.level
 						ultimate_entity.damage_factor = this.unit.damage_factor
 						ultimate_entity.pos = V.vclone(enemy.pos)
+						ultimate_entity.target_id = enemy.id
 
 						queue_insert(store, ultimate_entity)
 
@@ -11537,15 +11538,19 @@ scripts.hero_regson_ultimate = {}
 function scripts.hero_regson_ultimate.update(this, store)
 	local is_boss
 	local sp = this.render.sprites[1]
-	local targets = table.filter(store.enemies, function(_, e)
-		return e.pos and e.ui and e.ui.can_click and e.nav_path and not e.health.dead and band(e.vis.flags, this.vis_bans) == 0 and band(e.vis.bans, this.vis_flags) == 0 and U.is_inside_ellipse(V.v(e.pos.x + e.unit.hit_offset.x, e.pos.y + e.unit.hit_offset.y), V.v(this.pos.x, this.pos.y), this.range) and P:is_node_valid(e.nav_path.pi, e.nav_path.ni, NF_POWER_1)
-	end)
+	local target = store.entities[this.target_id]
 
-	table.sort(targets, function(e1, e2)
-		return V.dist(e1.pos.x + e1.unit.hit_offset.x, e1.pos.y + e1.unit.hit_offset.y, this.pos.x, this.pos.y) < V.dist(e2.pos.x + e2.unit.hit_offset.x, e2.pos.y + e2.unit.hit_offset.y, this.pos.x, this.pos.y)
-	end)
+	if not target then
+		local targets = table.filter(store.enemies, function(_, e)
+			return e.pos and e.ui and e.ui.can_click and e.nav_path and not e.health.dead and band(e.vis.flags, this.vis_bans) == 0 and band(e.vis.bans, this.vis_flags) == 0 and U.is_inside_ellipse(V.v(e.pos.x + e.unit.hit_offset.x, e.pos.y + e.unit.hit_offset.y), V.v(this.pos.x, this.pos.y), this.range) and P:is_node_valid(e.nav_path.pi, e.nav_path.ni, NF_POWER_1)
+		end)
 
-	local target = targets[1]
+		table.sort(targets, function(e1, e2)
+			return V.dist(e1.pos.x + e1.unit.hit_offset.x, e1.pos.y + e1.unit.hit_offset.y, this.pos.x, this.pos.y) < V.dist(e2.pos.x + e2.unit.hit_offset.x, e2.pos.y + e2.unit.hit_offset.y, this.pos.x, this.pos.y)
+		end)
+
+		target = targets[1]
+	end
 
 	if not target then
 	-- block empty
