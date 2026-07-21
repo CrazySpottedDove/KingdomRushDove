@@ -8366,6 +8366,16 @@ tt.force_motion.max_flight_height = 60
 tt.main_script.update = scripts.decal_regson_heal_ball.update
 tt.fx_spawn = "fx_regson_heal_ball_spawn"
 tt.fx_receive = "fx_regson_heal"
+tt.side_effect = function(hero, store)
+	local cool_next = hero.melee.attacks[5].cooldown * hero.unit.cooldown_factor - (hero.melee.attacks[5].ts - store.tick_ts)
+	if cool_next > 0 then
+		hero.melee.attacks[5].ts = hero.melee.attacks[5].ts - cool_next * 0.035
+	end
+	cool_next = hero.timed_attacks.list[1].cooldown * hero.unit.cooldown_factor - (hero.timed_attacks.list[1].ts - store.tick_ts)
+	if cool_next > 0 then
+		hero.timed_attacks.list[1].ts = hero.timed_attacks.list[1].ts - cool_next * 0.035
+	end
+end
 
 tt = RT("fx_regson_heal_ball_spawn", "fx")
 tt.render.sprites[1].name = "fx_regson_heal_ball_spawn"
@@ -8384,7 +8394,7 @@ tt.render.sprites[1].scale = vec_1(0.9)
 tt.render.sprites[1].alpha = 200
 tt.render.sprites[2].scale = vec_1(0.9)
 tt.side_effect = function(hero, store)
-	local cool_next = hero.melee.attacks[3].cooldown - (hero.melee.attacks[3].ts - store.tick_ts)
+	local cool_next = hero.melee.attacks[3].cooldown * hero.unit.cooldown_factor - (hero.melee.attacks[3].ts - store.tick_ts)
 
 	if cool_next > 0 then
 		hero.melee.attacks[3].ts = hero.melee.attacks[3].ts - cool_next * 0.1

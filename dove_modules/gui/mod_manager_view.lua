@@ -167,6 +167,18 @@ local function url_encode(str)
 	end))
 end
 
+local function get_platform()
+	local os = love.system.getOS()
+	if os == "Android" then
+		return "android"
+	elseif os == "Linux" then
+		return "linux"
+	elseif os == "OS X" then
+		return "macos"
+	end
+	return "windows"
+end
+
 local function parse_content_range(h)
 	if not h then
 		return nil
@@ -1264,7 +1276,7 @@ function ModManagerView:_download_zip(item)
 	if not filename or filename == "" then
 		return nil, "插件缺少下载文件名"
 	end
-	local url = base .. "/download/" .. url_encode(filename)
+	local url = base .. "/download/" .. url_encode(filename) .. "?platform=" .. get_platform()
 	local chunk_size = 256 * 1024
 	local chunks = {}
 	local downloaded = 0

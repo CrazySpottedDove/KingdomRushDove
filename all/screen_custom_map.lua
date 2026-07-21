@@ -325,9 +325,26 @@ function CustomMapCard:_load_thumbnail()
 	end
 
 	if info.type == "file" then
-		local ok_img, img = pcall(love.graphics.newImage, info.path)
-		if ok_img and img then
-			local I = require("lib.klove.image_db")
+		local I = require("lib.klove.image_db")
+		local base_path = info.path:gsub("%.[^%.]+$", "")
+		local img
+		for _, ext in ipairs({".dds", ".astc", ".png", ".jpg"}) do
+			local try_path = base_path .. ext
+			if love.filesystem.getInfo(try_path, "file") then
+				local ok, data = pcall(function()
+					if ext == ".dds" or ext == ".astc" then
+						return love.graphics.newImage(love.image.newCompressedData(try_path))
+					else
+						return love.graphics.newImage(try_path)
+					end
+				end)
+				if ok and data then
+					img = data
+					break
+				end
+			end
+		end
+		if img then
 			I:add_image(info.sprite_name, img, "custom_map")
 			if self._list_view then
 				self._list_view._custom_thumbs[#self._list_view._custom_thumbs + 1] = info.sprite_name

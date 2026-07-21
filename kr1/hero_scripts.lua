@@ -11012,11 +11012,11 @@ scripts.hero_regson = {
 		end
 
 		upgrade_skill(this, "blade", function(this, s)
+			this.melee.attacks[3].damage_max = s.damage[s.level] * 0.5
+			this.melee.attacks[3].damage_min = s.damage[s.level] * 0.5
+			this.melee.attacks[4].chance = s.instakill_chance[s.level]
 			this.melee.attacks[4].damage_max = s.damage[s.level] * 0.5
 			this.melee.attacks[4].damage_min = s.damage[s.level] * 0.5
-			this.melee.attacks[5].chance = s.instakill_chance[s.level]
-			this.melee.attacks[5].damage_max = s.damage[s.level] * 0.5
-			this.melee.attacks[5].damage_min = s.damage[s.level] * 0.5
 		end)
 		upgrade_skill(this, "heal", function(this, s)
 			local hb = E:get_template("decal_regson_heal_ball")
@@ -11027,7 +11027,7 @@ scripts.hero_regson = {
 			this.path_extra = s.extra_hp[s.level]
 		end)
 		upgrade_skill(this, "slash", function(this, s)
-			local a = this.melee.attacks[6]
+			local a = this.melee.attacks[5]
 
 			a.disabled = nil
 
@@ -11302,13 +11302,13 @@ function scripts.aura_regson_blade.update(this, store)
 			this.blade_active = false
 			this.blade_ts = store.tick_ts
 
-			for i = 1, 3 do
+			for i = 1, 2 do
 				hero.melee.attacks[i].disabled = nil
 			end
 
-			hero.melee.attacks[6].disabled = hero.hero.skills.slash.level < 1
+			hero.melee.attacks[5].disabled = hero.hero.skills.slash.level < 1
 
-			for i = 4, 5 do
+			for i = 3, 4 do
 				hero.melee.attacks[i].disabled = true
 			end
 
@@ -11319,13 +11319,13 @@ function scripts.aura_regson_blade.update(this, store)
 			this.blade_active = true
 			this.blade_active_ts = store.tick_ts
 
-			for i = 1, 3 do
+			for i = 1, 2 do
 				hero.melee.attacks[i].disabled = true
 			end
 
-			hero.melee.attacks[6].disabled = true
+			hero.melee.attacks[5].disabled = true
 
-			for i = 4, 5 do
+			for i = 3, 4 do
 				hero.melee.attacks[i].disabled = nil
 			end
 
@@ -11475,7 +11475,7 @@ function scripts.decal_regson_heal_ball.update(this, store)
 		end
 
 		if not hero.health.dead then
-			hero.health.hp = km.clamp(0, hero.health.hp_max, hero.health.hp + this.source_hp * this.hp_factor)
+			hero.health.hp = km.clamp(0, math.max(hero.health.hp_max, hero.health.hp), hero.health.hp + this.source_hp * this.hp_factor)
 
 			local fx = E:create_entity(this.fx_receive)
 
@@ -11553,8 +11553,7 @@ function scripts.hero_regson_ultimate.update(this, store)
 		is_boss = band(target.vis.flags, F_BOSS) ~= 0
 
 		if not is_boss then
-			this._target_prev_bans = target.vis.bans
-			target.vis.bans = F_ALL
+			U.bans_add(target.vis, F_ALL)
 		end
 
 		SU.stun_inc(target)
@@ -11582,7 +11581,7 @@ function scripts.hero_regson_ultimate.update(this, store)
 		SU.stun_dec(target)
 
 		if not is_boss then
-			target.vis.bans = this._target_prev_bans
+			U.bans_remove(target.vis, F_ALL)
 		end
 	end
 

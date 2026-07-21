@@ -1579,7 +1579,7 @@ map["影袭"] = str(cooldown_str(), "雷格森跃入暗影，短时间内", coun
 set_skill(h.hero.skills.heal)
 
 factor = ss("heal_factor")
-map["死战之志"] = str("每当身边有敌人死亡，雷格森就会吸收他们的灵魂，为自己恢复敌人最大生命值", factor * 100, "%的生命。")
+map["死战之志"] = str("每当身边有敌人死亡，雷格森就会吸收他们的灵魂，为自己恢复敌人最大生命值", factor * 100, "%的生命，并减少刃舞和影袭剩余冷却时间的3.5%。")
 
 set_skill(h.hero.skills.blade)
 get_damage(h.melee.attacks[4])
