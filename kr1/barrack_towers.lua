@@ -139,7 +139,8 @@ tt.modifier.remove_banned = true
 tt = RT("mod_paladin_silence", "modifier")
 AC(tt, "render")
 tt.modifier.duration = 4
-tt.modifier.bans = {"mod_shaman_armor", "mod_shaman_magic_armor", "mod_shaman_priest_heal"}
+tt.modifier.bans = {"mod_shaman_armor", "mod_shaman_magic_armor", "mod_shaman_priest_heal", "mod_troll_rage"}
+tt.modifier.ban_types = {MOD_TYPE_BUFF}
 tt.modifier.remove_banned = true
 tt.main_script.insert = scripts.mod_silence.insert
 tt.main_script.remove = scripts.mod_silence.remove

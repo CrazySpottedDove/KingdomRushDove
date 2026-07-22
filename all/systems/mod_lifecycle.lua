@@ -1,7 +1,7 @@
 local M = {}
 
 function M.register(sys)
-	local table_contains = table.contains
+	local table_contains = table.arraycontains
 	local function queue_remove(store, e)
 		simulation:queue_remove_entity(e)
 	end

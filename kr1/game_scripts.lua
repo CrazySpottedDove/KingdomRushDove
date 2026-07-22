@@ -4247,29 +4247,6 @@ end
 
 scripts.mod_gulaemon_fly = {}
 
--- function scripts.mod_gulaemon_fly.queue(this, store, insertion)
---     local target = store.entities[this.modifier.target_id]
---     if not target then
---         return
---     end
---     if insertion then
---         log.debug("%s (%s) queue/insertion", this.template_name, this.id)
---         U.speed_mul(target, this.speed_factor)
---     else
---         log.debug("%s (%s) queue/removal", this.template_name, this.id)
---         U.speed_div(target, this.speed_factor)
---     end
--- end
--- function scripts.mod_gulaemon_fly.dequeue(this, store, insertion)
---     local target = store.entities[this.modifier.target_id]
---     if not target then
---         return
---     end
---     if insertion then
---         log.debug("%s (%s) dequeue/insertion", this.template_name, this.id)
---         U.speed_div(target, this.speed_factor)
---     end
--- end
 function scripts.mod_gulaemon_fly.insert(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]

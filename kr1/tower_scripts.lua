@@ -14446,7 +14446,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
 			target = U.detect_foremost_enemy_in_range_filter_on(soldier_floor_pos, attack.max_range, attack.vis_flags, attack.vis_bans, attack.filter_fn)
 		end
 
-		if target and not target.health.dead and band(target.vis.bans, bor(F_RANGED, F_INSTAKILL)) == 0 then
+		if target and not target.health.dead then
 			b.target_id = target.id
 
 			local hit_offset = v(0, 0)
@@ -27092,13 +27092,13 @@ function scripts.tower_goblirang.update(this, store)
 					shooter_idx = km.zmod(shooter_idx + 1, #shooter_sids)
 					local ssid = shooter_sids[shooter_idx]
 					local soffset = this.render.sprites[ssid].offset
-					local an, af = U.animation_name_facing_point(this, ah.animation, enemy.pos, ssid, soffset)
-					local idle_an, idle_af = U.animation_name_facing_point(this, "idle", enemy.pos, shooter_sids[shooter_idx], soffset)
-					U.animation_start(this, an, af, store.tick_ts, false, ssid)
-					U.y_wait(store, ah.shoot_time)
+					local an, af = U.animation_name_facing_point_use_offset(this, ah.animation, enemy.pos, ssid, soffset)
+					local idle_an, idle_af = U.animation_name_facing_point_use_offset(this, "idle", enemy.pos, ssid, soffset)
+					U.animation_start_once_specific(this, an, af, store.tick_ts, ssid)
+					U.y_wait_unconditional(store, ah.shoot_time)
 					shot_bullet_bees(ah, shooter_idx, enemy, pow_t.level)
-					U.y_animation_wait(this, shooter_sids[shooter_idx])
-					U.animation_start(this, idle_an, idle_af, store.tick_ts, true, shooter_sids[shooter_idx])
+					U.y_animation_wait_specific(this, ssid)
+					U.animation_start_loop_specific(this, idle_an, idle_af, store.tick_ts, ssid)
 				else
 					ah.ts = ah.ts + 0.1
 				end
@@ -27110,21 +27110,21 @@ function scripts.tower_goblirang.update(this, store)
 					ab.ts = store.tick_ts
 					local sid1 = shooter_sids[1]
 					local sid2 = shooter_sids[2]
-					local an_base, af = U.animation_name_facing_point(this, ab.animation, enemy.pos, sid1)
-					local idle_an, idle_af = U.animation_name_facing_point(this, "idle", enemy.pos, sid1)
+					local an_base, af = U.animation_name_facing_point_simple(this, ab.animation, enemy.pos, sid1)
+					local idle_an, idle_af = U.animation_name_facing_point_simple(this, "idle", enemy.pos, sid1)
 					local an1 = an_base .. "In1"
 					local an2 = an_base .. "In2"
-					U.animation_start(this, an1, af, store.tick_ts, false, sid1)
-					U.animation_start(this, an2, af, store.tick_ts, false, sid2)
-					U.y_wait(store, ab.shoot_time)
+					U.animation_start_once_specific(this, an1, af, store.tick_ts, sid1)
+					U.animation_start_once_specific(this, an2, af, store.tick_ts, sid2)
+					U.y_wait_unconditional(store, ab.shoot_time)
 					local bid = shot_bullet(ab, shooter_idx, enemy, pow_b.level, true)
-					U.y_animation_wait(this, sid1)
-					U.y_animation_wait(this, sid2)
+					U.y_animation_wait_specific(this, sid1)
+					U.y_animation_wait_specific(this, sid2)
 
 					an1 = an_base .. "Idle1"
 					an2 = an_base .. "Idle2"
-					U.animation_start(this, an1, af, store.tick_ts, true, sid1)
-					U.animation_start(this, an2, af, store.tick_ts, true, sid2)
+					U.animation_start_loop_specific(this, an1, af, store.tick_ts, sid1)
+					U.animation_start_loop_specific(this, an2, af, store.tick_ts, sid2)
 
 					repeat
 						coroutine.yield()
@@ -27132,45 +27132,45 @@ function scripts.tower_goblirang.update(this, store)
 
 					an1 = an_base .. "Out1"
 					an2 = an_base .. "Out2"
-					U.animation_start(this, an1, af, store.tick_ts, false, sid1)
-					U.animation_start(this, an2, af, store.tick_ts, false, sid2)
-					U.y_animation_wait(this, sid1)
-					U.y_animation_wait(this, sid2)
+					U.animation_start_once_specific(this, an1, af, store.tick_ts, sid1)
+					U.animation_start_once_specific(this, an2, af, store.tick_ts, sid2)
+					U.y_animation_wait_specific(this, sid1)
+					U.y_animation_wait_specific(this, sid2)
 
-					U.animation_start(this, idle_an, idle_af, store.tick_ts, true, sid1)
-					U.animation_start(this, idle_an, idle_af, store.tick_ts, true, sid2)
+					U.animation_start_loop_specific(this, idle_an, idle_af, store.tick_ts, sid1)
+					U.animation_start_loop_specific(this, idle_an, idle_af, store.tick_ts, sid2)
 				else
 					ab.ts = ab.ts + 0.1
 				end
 			end
 
 			if ready_to_attack(aa, store, this.tower.cooldown_factor) then
-				local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range, aa.vis_flags, aa.vis_bans)
+				local enemy = U.detect_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, a.range, aa.vis_flags, aa.vis_bans)
 				if enemy then
 					aa.ts = store.tick_ts
 					shooter_idx = km.zmod(shooter_idx + 1, #shooter_sids)
 					local ssid = shooter_sids[shooter_idx]
 					local soffset = this.render.sprites[ssid].offset
-					local an_base, af = U.animation_name_facing_point(this, aa.animation, enemy.pos, ssid, soffset)
-					local idle_an, idle_af = U.animation_name_facing_point(this, "idle", enemy.pos, shooter_sids[shooter_idx], soffset)
+					local an_base, af = U.animation_name_facing_point_use_offset(this, aa.animation, enemy.pos, ssid, soffset)
+					local idle_an, idle_af = U.animation_name_facing_point_use_offset(this, "idle", enemy.pos, ssid, soffset)
 					local an = an_base .. "In"
-					U.animation_start(this, an, af, store.tick_ts, false, ssid)
-					U.y_wait(store, aa.shoot_time)
+					U.animation_start_once_specific(this, an, af, store.tick_ts, ssid)
+					U.y_wait_unconditional(store, aa.shoot_time)
 
 					local bid = shot_bullet(aa, shooter_idx, enemy, pow_p.level)
 
-					U.y_animation_wait(this, shooter_sids[shooter_idx])
+					U.y_animation_wait_specific(this, ssid)
 
 					an = an_base .. "Idle"
-					U.animation_start(this, an, af, store.tick_ts, true, shooter_sids[shooter_idx])
+					U.animation_start_loop_specific(this, an, af, store.tick_ts, ssid)
 
 					repeat
 						coroutine.yield()
 					until not store.entities[bid]
 
 					an = an_base .. "Out"
-					U.y_animation_play(this, an, af, store.tick_ts, 1, shooter_sids[shooter_idx])
-					U.animation_start(this, idle_an, idle_af, store.tick_ts, false, shooter_sids[shooter_idx])
+					U.y_animation_play_once_specific(this, an, af, store.tick_ts, ssid)
+					U.animation_start_loop_specific(this, idle_an, idle_af, store.tick_ts, ssid)
 				else
 					aa.ts = aa.ts + 0.1
 				end
