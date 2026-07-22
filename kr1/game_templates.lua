@@ -8373,7 +8373,7 @@ tt.side_effect = function(hero, store)
 	end
 	cool_next = hero.timed_attacks.list[1].cooldown * hero.unit.cooldown_factor - (hero.timed_attacks.list[1].ts - store.tick_ts)
 	if cool_next > 0 then
-		hero.timed_attacks.list[1].ts = hero.timed_attacks.list[1].ts - cool_next * 0.035
+		hero.timed_attacks.list[1].ts = hero.timed_attacks.list[1].ts - cool_next * 0.0175
 	end
 end
 
