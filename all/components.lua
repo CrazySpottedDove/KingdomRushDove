@@ -912,6 +912,7 @@ hps.heal_min = 0
 hps.heal_max = 0
 hps.heal_min_inc = nil
 hps.heal_max_inc = nil
+-- hps.overflow_factor = number -> 用于生命溢出
 hps.fx = nil
 hps.ts = 0
 

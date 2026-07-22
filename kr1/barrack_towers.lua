@@ -130,6 +130,7 @@ tt.hps.heal_min = 0
 tt.hps.heal_max = 0
 tt.hps.heal_min_inc = 44
 tt.hps.heal_max_inc = 66
+tt.hps.overflow_factor = 5
 tt.main_script.insert = scripts.mod_hps.insert
 tt.main_script.update = scripts.mod_hps.update
 tt.modifier.duration = fts(1)

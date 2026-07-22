@@ -6207,7 +6207,7 @@ function scripts.mod_hps.update(this, store)
 		if hps.heal_every and store.tick_ts - hps.ts >= hps.heal_every then
 			hps.ts = store.tick_ts
 
-			local heal_amount = U.heal(target, math.random(heal_min, heal_max))
+			local heal_amount = hps.overflow_factor and U.heal_with_overflow(target, math.random(heal_min, heal_max), hps.overflow_factor) or U.heal(target, math.random(heal_min, heal_max))
 
 			signal.emit("entity-healed", this, target, heal_amount)
 
