@@ -968,7 +968,7 @@ tt.main_script.insert = function(this, store)
 
 	SU.armor_inc(target, buff.armor)
 
-	target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp + heal)
+	U.heal(target, heal)
 
 	for _, s in pairs(this.render.sprites) do
 		s.ts = store.tick_ts

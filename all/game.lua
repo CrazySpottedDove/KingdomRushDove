@@ -1504,7 +1504,7 @@ if IS_ANDROID then
 		self.game_gui.window:draw_child(self.game_gui.layer_gui)
 		perf.stop("game_gui_draw")
 
-		d.damage_numbers_draw(self)
+		d.numbers_draw(self)
 	end
 else
 	function game:draw_game()
@@ -1548,7 +1548,7 @@ else
 		self.game_gui.window:draw_child(self.game_gui.layer_gui)
 		perf.stop("game_gui_draw")
 
-		d.damage_numbers_draw(self)
+		d.numbers_draw(self)
 
 	-- self:after_draw_debug(rox, roy, gs)
 	end

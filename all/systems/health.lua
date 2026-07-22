@@ -25,27 +25,40 @@ typedef struct {
     int    alive;
     int    digits_len;
     int    width;
-} DNum;
+} Num;
 ]]
 
+local dnum_enabled = false
+local hnum_enabled = false
+
 local MAX_DNUMS = 300
-local dnum_pool = ffi.new("DNum[?]", MAX_DNUMS)
+local dnum_pool = ffi.new("Num[?]", MAX_DNUMS)
 local dnum_digits = {}
 local dnum_write_cur = 0
 local dnum_on_applied_impl
-local dnum_draw_impl
+local num_draw_impl
 local dnum_atlas_quads
 local dnum_atlas_widths
-local dnum_batch
-local DNUM_MAX_CHARS = 12
-local DNUM_BATCH_CAP = MAX_DNUMS * DNUM_MAX_CHARS * 2
 
 for i = 0, MAX_DNUMS - 1 do
 	dnum_pool[i].alive = 0
 	dnum_digits[i] = {}
 end
 
-local dnum_palette = {
+local MAX_HNUMS = 100
+local hnum_pool = ffi.new("Num[?]", MAX_HNUMS)
+local hnum_digits = {}
+local hnum_write_cur = 0
+local hnum_on_applied_impl
+local HNUM_COLOR = 17
+
+for i = 0, MAX_HNUMS - 1 do
+	hnum_pool[i].alive = 0
+	hnum_digits[i] = {}
+end
+
+local num_batch
+local num_palette = {
 	{0.00, 0.00, 0.00}, -- shadow
 	{1.00, 0.08, 0.08}, -- instakill/eat
 	{0.20, 1.00, 0.20}, -- poison
@@ -61,8 +74,12 @@ local dnum_palette = {
 	{0.75, 0.75, 0.80}, -- against armor
 	{0.00, 0.85, 0.85}, -- mixed
 	{0.95, 0.95, 0.95}, -- true
-	{1.00, 0.88, 0.55} -- default
+	{1.00, 0.88, 0.55}, -- default
+	{0.30, 1.00, 0.30} -- heal
 }
+
+local NUM_MAX_CHARS = 12
+local NUM_BATCH_CAP = (MAX_DNUMS + MAX_HNUMS) * NUM_MAX_CHARS * 2
 
 local function dnum_color_index(dtype)
 	if band(dtype, DAMAGE_INSTAKILL) ~= 0 or band(dtype, DAMAGE_EAT) ~= 0 then
@@ -121,7 +138,7 @@ local function dnum_build_atlas()
 	local widths = {}
 	local h = font:getHeight()
 	local atlas_w = 0
-	local color_count = #dnum_palette
+	local color_count = #num_palette
 
 	for i = 0, 9 do
 		local c = tostring(i)
@@ -138,7 +155,7 @@ local function dnum_build_atlas()
 	G.clear(0, 0, 0, 0)
 	G.setFont(font)
 	for ci = 1, color_count do
-		local p = dnum_palette[ci]
+		local p = num_palette[ci]
 		local y = (ci - 1) * h
 		local x = 0
 		dnum_set_color(p[1], p[2], p[3], 1)
@@ -157,14 +174,14 @@ local function dnum_build_atlas()
 
 	dnum_atlas_quads = quads
 	dnum_atlas_widths = widths
-	dnum_batch = G.newSpriteBatch(canvas, DNUM_BATCH_CAP, "stream")
+	num_batch = G.newSpriteBatch(canvas, NUM_BATCH_CAP, "stream")
 end
 
 local function dnum_on_applied_disabled(store, d, target)
 	return
 end
 
-local function dnum_draw_disabled(g)
+local function num_draw_disabled(g)
 	return
 end
 
@@ -224,8 +241,8 @@ end
 
 local last_alpha = 1
 
-local function dnum_draw_enabled(g)
-	perf.start("damage number")
+local function num_draw_enabled(g)
+	perf.start("number")
 	local now = g.store.tick_ts
 	local c = g.camera
 	local zoom = c.zoom
@@ -238,76 +255,187 @@ local function dnum_draw_enabled(g)
 		roy = roy + g.store.world_offset.y
 	end
 
-	dnum_batch:clear()
+	num_batch:clear()
 
-	for i = 0, MAX_DNUMS - 1 do
-		local n = dnum_pool[i]
-		if n.alive ~= 0 then
-			local t = now - n.ts
-			if t >= n.duration then
-				n.alive = 0
-			else
-				local remain = 1 - t / n.duration
-				local alpha = remain < 0.4 and (remain * 2.5) or 1
+	if dnum_enabled then
+		for i = 0, MAX_DNUMS - 1 do
+			local n = dnum_pool[i]
+			if n.alive ~= 0 then
+				local t = now - n.ts
+				if t >= n.duration then
+					n.alive = 0
+				else
+					local remain = 1 - t / n.duration
+					local alpha = remain < 0.4 and (remain * 2.5) or 1
 
-				local wx = n.x + n.vx * t
-				local wy = n.y + n.vy * t + 12 * t * t
-				local sx = wx * gs + rox
-				local sy = wy * gs + roy
-				local fs = n.font_scale
-				if t < 0.12 then
-					fs = fs * (1.5 - t * 4.66)
+					local wx = n.x + n.vx * t
+					local wy = n.y + n.vy * t + 12 * t * t
+					local sx = wx * gs + rox
+					local sy = wy * gs + roy
+					local fs = n.font_scale
+					if t < 0.12 then
+						fs = fs * (1.5 - t * 4.66)
+					end
+
+					local len = n.digits_len
+					local tw = n.width * fs
+					local sx_c = floor(sx - tw * 0.5)
+					local sy_f = floor(sy)
+					local cursor = sx_c
+					local digits = dnum_digits[i]
+					local shadow_quads = dnum_atlas_quads[1]
+					local color_quads = dnum_atlas_quads[n.color_idx]
+					if last_alpha ~= alpha then
+						num_batch:setColor(1, 1, 1, alpha)
+						last_alpha = alpha
+					end
+					for j = 1, len do
+						local digit = digits[j]
+						local cw = dnum_atlas_widths[digit]
+
+						num_batch:add(shadow_quads[digit], cursor + fs, sy_f + fs, 0, fs, fs)
+						num_batch:add(color_quads[digit], cursor, sy_f, 0, fs, fs)
+						cursor = cursor + cw * fs
+					end
 				end
+			end
+		end
+	end
 
-				local len = n.digits_len
-				local tw = n.width * fs
-				local sx_c = floor(sx - tw * 0.5)
-				local sy_f = floor(sy)
-				local cursor = sx_c
-				local digits = dnum_digits[i]
-				local shadow_quads = dnum_atlas_quads[1]
-				local color_quads = dnum_atlas_quads[n.color_idx]
-				if last_alpha ~= alpha then
-					dnum_batch:setColor(1, 1, 1, alpha)
-					last_alpha = alpha
-				end
-				for j = 1, len do
-					local digit = digits[j]
-					local cw = dnum_atlas_widths[digit]
+	if hnum_enabled then
+		for i = 0, MAX_HNUMS - 1 do
+			local n = hnum_pool[i]
+			if n.alive ~= 0 then
+				local t = now - n.ts
+				if t >= n.duration then
+					n.alive = 0
+				else
+					local remain = 1 - t / n.duration
+					local alpha = remain < 0.4 and (remain * 2.5) or 1
 
-					dnum_batch:add(shadow_quads[digit], cursor + fs, sy_f + fs, 0, fs, fs)
-					dnum_batch:add(color_quads[digit], cursor, sy_f, 0, fs, fs)
-					cursor = cursor + cw * fs
+					local wx = n.x + n.vx * t
+					local wy = n.y + n.vy * t + 12 * t * t
+					local sx = wx * gs + rox
+					local sy = wy * gs + roy
+					local fs = n.font_scale
+					if t < 0.12 then
+						fs = fs * (1.5 - t * 4.66)
+					end
+
+					local len = n.digits_len
+					local tw = n.width * fs
+					local sx_c = floor(sx - tw * 0.5)
+					local sy_f = floor(sy)
+					local cursor = sx_c
+					local digits = hnum_digits[i]
+					local shadow_quads = dnum_atlas_quads[1]
+					local color_quads = dnum_atlas_quads[n.color_idx]
+					if last_alpha ~= alpha then
+						num_batch:setColor(1, 1, 1, alpha)
+						last_alpha = alpha
+					end
+					for j = 1, len do
+						local digit = digits[j]
+						local cw = dnum_atlas_widths[digit]
+						num_batch:add(shadow_quads[digit], cursor + fs, sy_f + fs, 0, fs, fs)
+						num_batch:add(color_quads[digit], cursor, sy_f, 0, fs, fs)
+						cursor = cursor + cw * fs
+					end
 				end
 			end
 		end
 	end
 
 	dnum_set_color(1, 1, 1, 1)
-	G.draw(dnum_batch)
+	G.draw(num_batch)
 	dnum_set_color(1, 1, 1, 1)
-	perf.stop("damage number")
+	perf.stop("number")
 end
 
 dnum_on_applied_impl = dnum_on_applied_disabled
-dnum_draw_impl = dnum_draw_disabled
 
 local function dnum_init(store)
 	dnum_write_cur = 0
 	for i = 0, MAX_DNUMS - 1 do
 		dnum_pool[i].alive = 0
 	end
-	if configer.ui_settings().damage_numbers_enabled ~= false then
-		if not dnum_batch then
+	dnum_enabled = configer.ui_settings().damage_numbers_enabled ~= false
+	if dnum_enabled then
+		if not num_batch then
 			dnum_build_atlas()
 		end
 		dnum_on_applied_impl = dnum_on_applied_enabled
-		dnum_draw_impl = dnum_draw_enabled
 	else
 		dnum_on_applied_impl = dnum_on_applied_disabled
-		dnum_draw_impl = dnum_draw_disabled
 	end
-	store.damage_numbers_draw = dnum_draw_impl
+end
+
+local function hnum_on_applied_disabled(store, target, heal_amount)
+end
+
+local function hnum_draw_disabled(g)
+end
+
+local function hnum_on_applied_enabled(store, target, heal_amount)
+	if not target.pos then
+		return
+	end
+
+	local hp_max = target.health and target.health.hp_max or 0
+	local font_scale, duration, vy = dnum_display_params(heal_amount, hp_max)
+
+	local world_y = target.pos.y
+	local health_bar = target.health_bar
+	if health_bar then
+		world_y = world_y + health_bar.offset.y
+	end
+
+	local slot = hnum_write_cur
+	hnum_write_cur = (hnum_write_cur + 1) % MAX_HNUMS
+
+	local n = hnum_pool[slot]
+	n.x = target.pos.x + (random() - 0.5) * 20
+	n.y = REF_H - world_y - 20
+	n.vx = (random() - 0.5) * 8
+	n.vy = vy - random() * 8
+	n.color_idx = HNUM_COLOR
+	n.font_scale = font_scale
+	n.duration = duration
+	n.ts = store.tick_ts
+	n.alive = 1
+
+	local txt = tostring(floor(heal_amount))
+	local digits = hnum_digits[slot]
+	local len = #txt
+	local tw = 0
+	for i = 1, len do
+		local digit = string.byte(txt, i) - 48
+		digits[i] = digit
+		tw = tw + dnum_atlas_widths[digit]
+	end
+	n.digits_len = len
+	n.width = tw
+end
+
+hnum_on_applied_impl = hnum_on_applied_disabled
+
+local function hnum_init(store)
+	hnum_write_cur = 0
+	for i = 0, MAX_HNUMS - 1 do
+		hnum_pool[i].alive = 0
+	end
+	hnum_enabled = configer.ui_settings().heal_numbers_enabled ~= false
+	if hnum_enabled then
+		if not num_batch then
+			dnum_build_atlas()
+		end
+		hnum_on_applied_impl = hnum_on_applied_enabled
+	else
+		hnum_on_applied_impl = hnum_on_applied_disabled
+	end
+	U.hnum_on_applied_impl = function(target, heal_amount)
+		hnum_on_applied_impl(store, target, heal_amount)
+	end
 end
 
 --- 从 damage.source_id 沿 modifier.source_id / bullet.source_id 追溯
@@ -588,6 +716,13 @@ function M.register(sys)
 		store.damage_queue_swapper = {}
 		store.damages_applied_swapper = {}
 		dnum_init(store)
+		hnum_init(store)
+		if dnum_enabled or hnum_enabled then
+			num_draw_impl = num_draw_enabled
+		else
+			num_draw_impl = num_draw_disabled
+		end
+		store.numbers_draw = num_draw_impl
 	end
 
 	function sys.health:on_insert_unconditional(entity, store)

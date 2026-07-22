@@ -1386,7 +1386,7 @@ function SU.y_soldier_revive(store, this)
 
 		signal.emit("entity-revived", this, r.revive_count)
 
-		this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + this.health.hp_max * r.health_recover)
+		U.heal(this, this.health.hp_max * r.health_recover)
 
 		if r.animation then
 			while not U.animation_finished_default(this) do
@@ -2822,7 +2822,7 @@ function SU.soldier_regen(store, this)
 
 		if this.regen.ts_counter > this.regen.cooldown then
 			if this.health.hp < this.health.hp_max then
-				this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + this.regen.health)
+				U.heal(this, this.regen.health)
 
 				signal.emit("health-regen", this, this.regen.health)
 			end
@@ -3001,7 +3001,7 @@ function SU.soldier_courage_upgrade(store, this)
 
 	if upg and this.soldier and this.health and store.tick_ts - this.soldier.courage_ts > upg.regen_cooldown then
 		this.soldier.courage_ts = store.tick_ts
-		this.health.hp = km.clamp(0, this.health.hp_max, km.round(this.health.hp + this.health.hp_max * upg.regen_factor))
+		U.heal(this, km.round(this.health.hp_max * upg.regen_factor))
 	end
 end
 

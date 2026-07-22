@@ -705,11 +705,7 @@ function scripts.amazona_gain_mod.update(this, store)
 				target.melee.attacks[2].damage_radius = whirwind_radius_base * target.render.sprites[1].scale.x
 			end
 
-			target.health.hp = target.health.hp + heal_base * target.render.sprites[1].scale.x
-
-			if target.health.hp_max < target.health.hp then
-				target.health.hp = target.health.hp_max
-			end
+			U.heal(target, heal_base * target.render.sprites[1].scale.x)
 
 			has_kills = true
 		end
@@ -3287,8 +3283,7 @@ function scripts.aura_ingvar_bear_regenerate.update(this, store)
 		-- block empty
 		elseif store.tick_ts - this.aura.ts >= this.regen.cooldown then
 			this.aura.ts = store.tick_ts
-			hero.health.hp = hero.health.hp + this.regen.health
-			hero.health.hp = km.clamp(0, hero.health.hp_max, hero.health.hp)
+			U.heal(hero, this.regen.health)
 		end
 
 		coroutine.yield()
@@ -5280,7 +5275,7 @@ function scripts.enemy_cannibal.update(this, store)
 							break
 						end
 
-						this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + math.ceil(this.cannibalize.hps * store.tick_length))
+						U.heal(this, math.ceil(this.cannibalize.hps * store.tick_length))
 
 						coroutine.yield()
 					end
@@ -6497,7 +6492,7 @@ function scripts.enemy_blacksurge.update(this, store)
 					else
 						if store.tick_ts - h.ts < this.regen.duration and store.tick_ts - this.regen.ts > this.regen.cooldown then
 							this.regen.ts = store.tick_ts
-							this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + this.regen.health)
+							U.heal(this, this.regen.health)
 						end
 
 						SU.y_enemy_walk_step_default(store, this)
@@ -7206,7 +7201,7 @@ function scripts.mod_elvira_lifesteal.insert(this, store)
 			heal_hp = heal_hp * this.moon.heal_hp_factor
 		end
 
-		source.health.hp = km.clamp(0, source.health.hp_max, source.health.hp + heal_hp)
+		U.heal(source, heal_hp)
 	end
 
 	if target and target.health then
@@ -9456,7 +9451,7 @@ function scripts.mod_dracula_lifesteal.update(this, store)
 	while not source.health.dead and store.tick_ts - m.ts < m.duration do
 		if store.tick_ts - last_ts > this.cycle_time then
 			last_ts = store.tick_ts
-			source.health.hp = km.clamp(0, source.health.hp_max, source.health.hp + this.heal_hp)
+			U.heal(source, this.heal_hp)
 		end
 
 		coroutine.yield()
@@ -14551,7 +14546,7 @@ function scripts.enemy_grim_devourers.update(this, store)
 							goto label_316_1
 						end
 
-						this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + this.cannibalize.hp_per_cycle)
+						U.heal(this, this.cannibalize.hp_per_cycle)
 
 						U.y_wait_unconditional(store, 0.03333333333333333)
 					end
@@ -14612,7 +14607,7 @@ function scripts.mod_shadow_champion.insert(this, store)
 		return false
 	end
 
-	target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp + target.health.hp_max * this.heal_factor)
+	U.heal(target, target.health.hp_max * this.heal_factor)
 	target.unit.damage_factor = target.unit.damage_factor * this.inflicted_damage_factor
 
 	return true
@@ -16065,7 +16060,7 @@ function scripts.aura_bruce_hps.update(this, store)
 	while true do
 		if store.tick_ts - hps.ts > hps.heal_every then
 			hps.ts = store.tick_ts
-			owner.health.hp = km.clamp(0, owner.health.hp_max, owner.health.hp + hps.heal_max)
+			U.heal(owner, hps.heal_max)
 		end
 
 		coroutine.yield()
@@ -21995,14 +21990,13 @@ scripts.mod_cricet_add_hp = {}
 
 function scripts.mod_cricet_add_hp.insert(this, store)
 	local target = store.enemies[this.modifier.target_id]
-	local health = target.health
 	local s = this.render.sprites[1]
 
 	if not target or not target.health or target.health.dead then
 		return false
 	end
 
-	health.hp = health.hp + health.hp_max * this.hps.heal
+	U.heal(target, target.health.hp_max * this.hps.heal)
 	s.ts = store.tick_ts
 
 	return true
@@ -26642,7 +26636,7 @@ function scripts.enemy_unblinded_abomination_stage_8.update(this, store)
 
 			if this.regen.ts_counter > this.regen.cooldown then
 				if this.health.hp < this.health.hp_max then
-					this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + this.regen.health)
+					U.heal(this, this.regen.health)
 
 					signal.emit("health-regen", this, this.regen.health)
 				end
@@ -28308,14 +28302,7 @@ function scripts.mod_stage_10_obelisk_heal.update(this, store)
 		if hps.heal_every and store.tick_ts - hps.ts >= hps.heal_every then
 			hps.ts = store.tick_ts
 
-			local hp_start = target.health.hp
-
-			target.health.hp = target.health.hp + math.random(heal_min, heal_max)
-			target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp)
-
-			local heal_amount = target.health.hp - hp_start
-
-			target.health.hp_healed = (target.health.hp_healed or 0) + heal_amount
+			local heal_amount = U.heal(target, math.random(heal_min, heal_max))
 
 			signal.emit("entity-healed", this, target, heal_amount)
 
@@ -31061,14 +31048,7 @@ function scripts.mod_glare.update(this, store)
 		if hps.heal_every and store.tick_ts - hps.ts >= hps.heal_every then
 			hps.ts = store.tick_ts
 
-			local hp_start = target.health.hp
-
-			target.health.hp = target.health.hp + math.random(heal_min, heal_max)
-			target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp)
-
-			local heal_amount = target.health.hp - hp_start
-
-			target.health.hp_healed = (target.health.hp_healed or 0) + heal_amount
+			local heal_amount = U.heal(target, math.random(heal_min, heal_max))
 
 			signal.emit("entity-healed", this, target, heal_amount)
 		end
@@ -42246,7 +42226,7 @@ function scripts.enemy_machinist.update(this, store)
 
 			if this.regen.ts_counter > this.regen.cooldown then
 				if this.health.hp < this.health.hp_max then
-					this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + this.regen.health)
+					U.heal(this, this.regen.health)
 
 					signal.emit("health-regen", this, this.regen.health)
 				end
@@ -48178,7 +48158,7 @@ function scripts.enemy_drainbrood.update(this, store)
 										heal_hp = heal_hp + damage * heal_hp_damage_factor
 									end
 
-									this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + heal_hp)
+									U.heal(this, heal_hp)
 								end
 
 								break
@@ -50389,14 +50369,7 @@ function scripts.mod_wukong_flaming_ground_healing.update(this, store)
 		if hps.heal_every and store.tick_ts - hps.ts >= hps.heal_every then
 			hps.ts = store.tick_ts
 
-			local hp_start = target.health.hp
-
-			target.health.hp = target.health.hp + math.random(heal_min, heal_max)
-			target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp)
-
-			local heal_amount = target.health.hp - hp_start
-
-			target.health.hp_healed = (target.health.hp_healed or 0) + heal_amount
+			local heal_amount = U.heal(target, math.random(heal_min, heal_max))
 
 			signal.emit("entity-healed", this, target, heal_amount)
 
@@ -61852,7 +61825,7 @@ function scripts.enemy_miniboss_stage_39.update(this, store, script)
 
 			if this.regen.ts_counter > this.regen.cooldown then
 				if this.health.hp < this.health.hp_max then
-					this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + this.regen.health)
+					U.heal(this, this.regen.health)
 
 					signal.emit("health-regen", this, this.regen.health)
 				end
@@ -63031,12 +63004,12 @@ function scripts.controller_stage_39_boss.update(this, store)
 			local health_diff = this.health.hp_max - this.health.hp
 			local health_regen = km.clamp(1e+99, min_regen_per_tick, health_diff * 3 * store.tick_length)
 
-			this.health.hp = this.health.hp + health_regen
+			U.heal(this, health_regen)
 
 			coroutine.yield()
 		end
 
-		this.health.hp = this.health.hp_max
+		U.heal(this, this.health.hp_max)
 
 		U.y_animation_wait_default(this)
 		U.y_animation_play(this, "angry_out", nil, store.tick_ts, 1, 1)
@@ -66292,7 +66265,7 @@ function scripts.soldier_warden_stage_40_moving_island.update(this, store)
 		end
 
 		if this.health.hp < this.health.hp_max then
-			this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + this.regen.health)
+			U.heal(this, this.regen.health)
 
 			signal.emit("health-regen", this, this.regen.health)
 		end

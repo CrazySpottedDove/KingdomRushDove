@@ -3138,19 +3138,49 @@ function U.remove_silence(target, ts)
 	end
 end
 
+--- 治疗数字回调（health.lua 初始化时注入具体实现，默认空函数防御）
+U.hnum_on_applied_impl = function()
+end
+
 --- 治疗目标
 ---@param target table
 ---@param amount number
+---@return number 实际治疗量
 function U.heal(target, amount)
 	local h = target.health
-	-- 目标拥有额外治疗，这里退出，避免生命值反而减小
-	if h.hp > h.hp_max then
-		return
+	local current_hp = h.hp
+	if current_hp >= h.hp_max then
+		return 0
 	end
-	h.hp = h.hp + amount
+	h.hp = current_hp + amount
 	if h.hp > h.hp_max then
 		h.hp = h.hp_max
 	end
+	local healed = h.hp - current_hp
+	U.hnum_on_applied_impl(target, healed)
+	return healed
+end
+
+--- 带有溢出效果的治疗
+---@param target any
+---@param amount any
+---@param overflow_factor number 最多溢出到生命值为最大生命值的多少倍
+---@return number 实际治疗量
+function U.heal_with_overflow(target, amount, overflow_factor)
+	local h = target.health
+	local upper_bound = h.hp_max * overflow_factor
+	local current_hp = h.hp
+	if current_hp >= upper_bound then
+		return 0
+	end
+	h.hp = current_hp + amount
+	if h.hp > upper_bound then
+		h.hp = upper_bound
+	end
+	local healed = h.hp - current_hp
+
+	U.hnum_on_applied_impl(target, healed)
+	return healed
 end
 
 ---更新实体受伤回调

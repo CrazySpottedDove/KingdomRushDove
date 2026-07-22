@@ -2655,7 +2655,7 @@ scripts.aura_beastmaster_regeneration = {
 		while true do
 			if not hero.health.dead and store.tick_ts - hps.ts >= hps.heal_every then
 				hps.ts = store.tick_ts
-				hero.health.hp = km.clamp(0, hero.health.hp_max, hero.health.hp + hps.heal_max)
+				U.heal(hero, hps.heal_max)
 			end
 
 			coroutine.yield()
@@ -11476,7 +11476,7 @@ function scripts.decal_regson_heal_ball.update(this, store)
 		end
 
 		if not hero.health.dead then
-			hero.health.hp = km.clamp(0, math.max(hero.health.hp_max, hero.health.hp), hero.health.hp + this.source_hp * this.hp_factor)
+			U.heal(hero, this.source_hp * this.hp_factor)
 
 			local fx = E:create_entity(this.fx_receive)
 
@@ -13590,7 +13590,7 @@ function scripts.mod_elves_denas_sybarite.insert(this, store)
 	end
 
 	target.unit.damage_factor = target.unit.damage_factor * this.inflicted_damage_factor
-	target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp + this.heal_hp)
+	U.heal(target, this.heal_hp)
 	this.render.sprites[1].ts = store.tick_ts
 
 	return true
@@ -18154,11 +18154,9 @@ function scripts.hero_hunter.update(this, store)
 					queue_insert(store, fx)
 					queue_damage(store, SU.create_attack_damage(a, target.id, this))
 
-					this.health.hp = this.health.hp + target.health.hp_max * a.heal_factor
+					U.heal(this, target.health.hp_max * a.heal_factor)
 
-					if this.health.hp > this.health.hp_max then
-						this.health.hp = this.health.hp_max
-					elseif this.health.hp > 0 and this.health.dead then
+					if this.health.hp > 0 and this.health.dead then
 						this.health.dead = false
 					end
 
@@ -21462,11 +21460,7 @@ function scripts.hero_venom.update(this, store)
 
 			if sta == A_DONE then
 				if this.is_transformed then
-					this.health.hp = this.health.hp + this.health.hp_max * this.beast.regen_health
-
-					if this.health.hp > this.health.hp_max then
-						this.health.hp = this.health.hp_max
-					end
+					U.heal(this, this.health.hp_max * this.beast.regen_health)
 
 					if this.health.dead and this.health.hp > 0 then
 						this.health.dead = false
@@ -31930,14 +31924,7 @@ function scripts.mod_hero_dragon_arb_plant_linirea_heal.update(this, store, scri
 		if hps.heal_every and store.tick_ts - hps.ts >= hps.heal_every then
 			hps.ts = store.tick_ts
 
-			local hp_start = target.health.hp
-
-			target.health.hp = target.health.hp + math.random(heal_min, heal_max)
-			target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp)
-
-			local heal_amount = target.health.hp - hp_start
-
-			target.health.hp_healed = (target.health.hp_healed or 0) + heal_amount
+			local heal_amount = U.heal(target, math.random(heal_min, heal_max))
 
 			signal.emit("entity-healed", this, target, heal_amount)
 
@@ -32759,7 +32746,7 @@ function scripts.mod_hero_builder_lunch_break.insert(this, store)
 		return false
 	end
 
-	target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp + this.heal_hp)
+	U.heal(target, this.heal_hp)
 
 	return true
 end

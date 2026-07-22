@@ -7041,7 +7041,8 @@ function UISettingsPanelView:initialize(sw, sh, keyboard, controller)
 	EditablePanelView.initialize(self, sw, sh, "UI设置", keyboard, controller)
 	self:set_key_label_map({
 		hud_scale = "局内技能按钮缩放",
-		damage_numbers_enabled = "显示伤害数字"
+		damage_numbers_enabled = "显示伤害数字",
+		heal_numbers_enabled = "显示治疗数字"
 	})
 end
 

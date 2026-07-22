@@ -2461,7 +2461,7 @@ function scripts.eb_gorilla.update(this, store)
 
 				if store.tick_ts - a_heal.ts > a_heal.cooldown and this.health.hp / this.health.hp_max < 0.9 then
 					a_heal.ts = store.tick_ts
-					this.health.hp = this.health.hp + km.clamp(0, this.health.hp_max, a_heal.points)
+					U.heal(this, a_heal.points)
 
 					S:queue(a_heal.sound)
 
@@ -3809,7 +3809,7 @@ function scripts.mod_dracula_lifesteal.update(this, store)
 	while not source.health.dead and store.tick_ts - m.ts < m.duration do
 		if store.tick_ts - last_ts > this.cycle_time then
 			last_ts = store.tick_ts
-			source.health.hp = km.clamp(0, source.health.hp_max, source.health.hp + this.heal_hp)
+			U.heal(source, this.heal_hp)
 		end
 
 		coroutine.yield()
@@ -4132,7 +4132,7 @@ function scripts.mod_gnoll_boss.insert(this, store)
 
 	this._hp_bonus = math.floor(target.health.hp_max * this.extra_health_factor)
 	target.health.hp_max = target.health.hp_max + this._hp_bonus
-	target.health.hp = target.health.hp + this._hp_bonus
+	U.heal(target, this._hp_bonus)
 	target.unit.damage_factor = target.unit.damage_factor * this.inflicted_damage_factor
 
 	return true
@@ -5375,7 +5375,7 @@ function scripts.eb_bajnimen.update(this, store)
 				while store.tick_ts - start_ts <= a.duration do
 					if store.tick_ts - tick_ts >= a.heal_every then
 						tick_ts = tick_ts + a.heal_every
-						this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + hp_heal)
+						U.heal(this, hp_heal)
 					end
 
 					coroutine.yield()
@@ -8600,7 +8600,7 @@ function scripts.boss_navira.on_corrupt(this, store)
 		return
 	end
 
-	this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + this.corruption_kr5.hp)
+	U.heal(this, this.corruption_kr5.hp)
 	this.corruption_kr5.enabled = false
 	this.corruption_ts = store.tick_ts
 
@@ -9765,19 +9765,15 @@ function scripts.boss_crocs.update(this, store)
 					local tick_time = (this.evolution_health_update_time - this.evolution_health_update_tick_time) / this.hp_ticks
 
 					for i = 1, this.hp_ticks do
-						this.health.hp = this.health.hp + tick_hp
-						this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp)
+						U.heal(this, tick_hp)
 
 						U.y_wait_unconditional(store, tick_time)
 					end
 
-					this.health.hp = this.health.hp + this.hp_restore_fixed_amount * 0.5
-					this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp)
+					U.heal(this, this.hp_restore_fixed_amount * 0.5)
 				end
 
 				local heal_amount = this.health.hp - hp_start
-
-				this.health.hp_healed = (this.health.hp_healed or 0) + heal_amount
 
 				if heal_amount > 0 then
 					signal.emit("entity-healed", this, this, heal_amount)
@@ -9983,8 +9979,6 @@ function scripts.mod_croc_boss_evolution_polymorph.insert(this, store)
 
 		queue_insert(store, entity_poly)
 
-		entity_poly.health.hp_healed = target.health.hp_healed or 0
-
 		local hp_start = target.health.hp
 		entity_poly.health.patched = target.health.patched
 		entity_poly.health.hp_max = target.health.hp_max
@@ -10000,8 +9994,6 @@ function scripts.mod_croc_boss_evolution_polymorph.insert(this, store)
 		end
 
 		local heal_amount = entity_poly.health.hp - hp_start
-
-		entity_poly.health.hp_healed = entity_poly.health.hp_healed + heal_amount
 
 		if heal_amount > 0 then
 			signal.emit("entity-healed", this, entity_poly, heal_amount)

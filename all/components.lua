@@ -25,7 +25,6 @@ E:register_c_ffi("constant_spiked_armor", constant_spiked_armor.new(0, DAMAGE_PH
 local health = E:register_c("health")
 health.hp_max = 10
 health.hp = nil
-health.hp_healed = nil
 health.dead = false
 health.dead_lifetime = 2
 health.ignore_damage = false

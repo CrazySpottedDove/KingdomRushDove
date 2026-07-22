@@ -20426,14 +20426,7 @@ function scripts.tower_arborean_emissary_gift_of_nature_heal_mod.update(this, st
 		if hps.heal_every and store.tick_ts - hps.ts >= hps.heal_every then
 			hps.ts = store.tick_ts
 
-			local hp_start = target.health.hp
-
-			target.health.hp = target.health.hp + math.random(heal_min, heal_max)
-			target.health.hp = km.clamp(0, target.health.hp_max * hps.extra_factor, target.health.hp)
-
-			local heal_amount = target.health.hp - hp_start
-
-			target.health.hp_healed = (target.health.hp_healed or 0) + heal_amount
+			local heal_amount = U.heal_with_overflow(target, math.random(heal_min, heal_max), hps.extra_factor)
 
 			signal.emit("entity-healed", this, target, heal_amount)
 

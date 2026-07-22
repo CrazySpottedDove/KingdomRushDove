@@ -4842,8 +4842,7 @@ function scripts.aura_unit_regen.update(this, store)
 
 				if (this.regen.ignore_stun or not target.unit.is_stunned) and (this.regen.ignore_mods or not U.flag_has(target.vis.bans, F_MOD)) then
 					if target.health.hp < target.health.hp_max then
-						target.health.hp = target.health.hp + this.regen.health
-						target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp)
+						U.heal(target, this.regen.health)
 					end
 				end
 			end
@@ -4867,7 +4866,7 @@ function scripts.aura_hero_regen.update(this, store)
 
 			if regen.ts_counter > regen.cooldown then
 				if owner.health.hp < owner.health.hp_max then
-					owner.health.hp = km.clamp(0, owner.health.hp_max, owner.health.hp + owner.regen.health)
+					U.heal(owner, owner.regen.health)
 
 					signal.emit("health-regen", owner, regen.health)
 				end
@@ -6208,14 +6207,7 @@ function scripts.mod_hps.update(this, store)
 		if hps.heal_every and store.tick_ts - hps.ts >= hps.heal_every then
 			hps.ts = store.tick_ts
 
-			local hp_start = target.health.hp
-
-			target.health.hp = target.health.hp + math.random(heal_min, heal_max)
-			target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp)
-
-			local heal_amount = target.health.hp - hp_start
-
-			target.health.hp_healed = (target.health.hp_healed or 0) + heal_amount
+			local heal_amount = U.heal(target, math.random(heal_min, heal_max))
 
 			signal.emit("entity-healed", this, target, heal_amount)
 
@@ -6722,14 +6714,16 @@ function scripts.mod_heal_on_damage.update(this, store)
 
 		local has_damaged = false
 
+		local heal_total = 0
+
 		for _, v in pairs(target.track_damage.damaged) do
 			local _, actual_damage = unpack(v)
 
 			if actual_damage > 0 then
-				target.health.hp = target.health.hp + hf * actual_damage
+				heal_total = heal_total + hf * actual_damage
 
 				if this.heal_base then
-					target.health.hp = target.health.hp + this.heal_base
+					heal_total = heal_total + this.heal_base
 				end
 			end
 
@@ -6738,7 +6732,7 @@ function scripts.mod_heal_on_damage.update(this, store)
 
 		if has_damaged then
 			target.track_damage.damaged = {}
-			target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp)
+			U.heal(target, heal_total)
 
 			if this.heal_bans then
 				local mods = U.find_modifiers_with_flags(this, this.heal_bans)
@@ -6819,11 +6813,11 @@ function scripts.mod_heal_on_kill.update(this, store)
 			this.render.sprites[1].offset.x, this.render.sprites[1].offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
 		end
 
-		local has_kills = false
+		local heal_total = 0
 
 		for _, kid in pairs(target.track_kills.killed) do
 			if hok.hp then
-				target.health.hp = target.health.hp + hok.hp
+				heal_total = heal_total + hok.hp
 			end
 
 			has_kills = true
@@ -6831,7 +6825,7 @@ function scripts.mod_heal_on_kill.update(this, store)
 
 		if has_kills then
 			target.track_kills.killed = {}
-			target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp)
+			U.heal(target, heal_total)
 
 			if this.render then
 				this.render.sprites[1].ts = store.tick_ts
@@ -6945,8 +6939,7 @@ function scripts.mod_gain_on_kill.update(this, store)
 			end
 
 			if this.gain.heal then
-				target.health.hp = target.health.hp + this.gain.heal
-				target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp)
+				U.heal(target, this.gain.heal)
 			end
 
 			if this.gain.size then
@@ -6984,7 +6977,7 @@ function scripts.mod_simple_lifesteal.insert(this, store)
 	local source = store.entities[this.modifier.source_id]
 
 	if source and source.health then
-		source.health.hp = km.clamp(0, source.health.hp_max, source.health.hp + this.heal_hp)
+		U.heal(source, this.heal_hp)
 	end
 
 	return false
@@ -8127,8 +8120,7 @@ function scripts.werewolf_regen_aura.update(this, store)
 		-- block empty
 		elseif target.regen and store.tick_ts - this.aura.ts >= target.regen.cooldown then
 			this.aura.ts = store.tick_ts
-			target.health.hp = target.health.hp + target.regen.health
-			target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp)
+			U.heal(target, target.regen.health)
 		end
 
 		coroutine.yield()
@@ -9270,7 +9262,7 @@ function scripts.instant_heal_mod.insert(this, store)
 		return false
 	end
 
-	target.health.hp = km.clamp(0, target.health.hp_max, target.health.hp + this.heal_hp)
+	U.heal(target, this.heal_hp)
 	this.render.sprites[1].ts = store.tick_ts
 
 	return true
@@ -9488,7 +9480,7 @@ function scripts.mod_lifesteal_kr5.insert(this, store)
 			heal_hp = heal_hp + damage * heal_hp_damage_factor
 		end
 
-		source.health.hp = km.clamp(0, source.health.hp_max, source.health.hp + heal_hp)
+		U.heal(source, heal_hp)
 
 		if this.heal_fx then
 			local fx = E:create_entity(this.heal_fx)

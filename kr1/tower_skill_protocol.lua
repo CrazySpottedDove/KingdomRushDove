@@ -2,7 +2,7 @@ local E = require("entity_db")
 local V = require("lib.klua.vector")
 local log = require("lib.klua.log"):new("tower_skill")
 local EL = require("kr1.data.endless")
-
+local U = require("utils")
 local SkillData = require("kr1.data.tower_skills_endless")
 
 local TowerSkill = {}
@@ -84,7 +84,7 @@ local function execute_effect(cfg, tower, store, targets)
 		for _, t in ipairs(targets) do
 			if t.health and t.health.hp_max then
 				local add = math.floor(t.health.hp_max * (effect.percent or 0))
-				t.health.hp = math.min(t.health.hp_max, t.health.hp + add)
+				U.heal(t, add)
 			end
 		end
 		return applied_count

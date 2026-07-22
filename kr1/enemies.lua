@@ -624,7 +624,7 @@ tt.melee.attacks[1].side_effect = function(this, store, attack, target)
 	if this.enemy.can_do_magic then
 		local regen = (this.health.hp_max - this.health.hp) * 0.04
 
-		this.health.hp = this.health.hp + regen
+		U.heal(this, regen)
 	end
 end
 tt.motion.max_speed = 0.7 * FPS
