@@ -5580,7 +5580,7 @@ local towers = {
 			}
 		},
 		lead = {
-			price = {225},
+			price = {200},
 			soldier_veteran = {
 				aura_duration = 8,
 				aura_range = 70,
