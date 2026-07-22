@@ -11006,7 +11006,7 @@ scripts.hero_regson = {
 	level_up = function(this, store)
 		local hl, ls = level_up_basic(this)
 
-		for i = 1, 3 do
+		for i = 1, 2 do
 			this.melee.attacks[i].damage_min = ls.melee_damage_min[hl]
 			this.melee.attacks[i].damage_max = ls.melee_damage_max[hl]
 		end
