@@ -6459,7 +6459,7 @@ function scripts.enemy_blacksurge.update(this, store)
 				SU.remove_modifiers(store, this)
 				U.unblock_all(store, this)
 
-				this.vis.bans = h.vis_bans
+				U.bans_add(this.vis, h.vis_bans)
 				this.health.immune_to = bnot(bor(DAMAGE_INSTAKILL, DAMAGE_EAT))
 
 				local orig_prefix = this.render.sprites[1].prefix
@@ -6507,7 +6507,7 @@ function scripts.enemy_blacksurge.update(this, store)
 
 				::label_46_1::
 
-				this.vis.bans = 0
+				U.bans_remove(this.vis, h.vis_bans)
 				this.health.immune_to = DAMAGE_NONE
 				this.render.sprites[1].prefix = orig_prefix
 
