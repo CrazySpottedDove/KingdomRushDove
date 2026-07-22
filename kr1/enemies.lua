@@ -6911,9 +6911,11 @@ tt.tween.props[1].keys = {{0, 255}, {4, 0}}
 tt.tween.remove = true
 
 tt = RT("enemy_jungle_spider_tiny_with_gold", "enemy_jungle_spider_tiny")
+tt.info.i18n_key = "ENEMY_JUNGLE_SPIDER_TINY"
 tt.enemy.gold = 1
 
 tt = RT("enemy_spider_rotten_tiny_with_gold", "enemy_spider_rotten_tiny")
+tt.info.i18n_key = "ENEMY_SPIDER_ROTTEN_TINY"
 tt.enemy.gold = 1
 
 tt = RT("enemy_redgale", "enemy_bluegale")
