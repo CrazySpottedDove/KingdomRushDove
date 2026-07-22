@@ -5591,7 +5591,7 @@ local towers = {
 					extra_damage_max = 8,
 					extra_damage_min = 4
 				},
-				aura_cooldown = {20}
+				aura_cooldown = {16}
 			}
 		},
 		healing_prayer = {
@@ -5601,11 +5601,11 @@ local towers = {
 			health_trigger_factor = {0.25, 0.25, 0.25},
 			heal = {4, 7, 10},
 			s_healing = {16, 28, 40},
-			cooldown = {28, 25, 22},
+			cooldown = {28, 24, 20},
 			beat_back_radius = 50,
 			beat_back_distance = 50,
 			beat_back_damage_value = {40, 80, 120},
-			beat_back_damage_type = DAMAGE_MAGICAL
+			beat_back_damage_type = DAMAGE_MAGICAL_EXPLOSION
 		}
 	},
 	royal_archers = {
