@@ -58,17 +58,19 @@ function RU.init()
 				if not f.hidden and not f.marked_to_remove then
 					if f.exo_frame then
 						local exo = EXO:get_exo_by_frame(f.exo_frame)
-						for part_idx, part in ipairs(f.exo_frame) do
+						local f_sx = f.flip_x and -1 or 1
+						local f_sy = f.flip_y and -1 or 1
+						local flipf = f_sx * f_sy
+						local render_base_x = f.pos.x + f.offset.x
+						local render_base_y = REF_H - (f.pos.y + f.offset.y)
+
+						for part_idx = 1, #f.exo_frame do
+							local part = f.exo_frame[part_idx]
 							do
-								local part_type, part_name_idx, alpha, x, y, sx, sy, r, kx, ky = part[1], part[2], part[3], part[4], part[5], part[6], part[7], part[8], part[9], part[10]
+								local part_type, part_name_idx, alpha, x, y, sx, sy, rotation, kx, ky = part[1], part[2], part[3], part[4], part[5], part[6], part[7], part[8], part[9], part[10]
 
 								if not part.hidden then
 									if part_type == 8 then
-										local f_sx = f.flip_x and -1 or 1
-										local f_sy = f.flip_y and -1 or 1
-
-										local flipf = f_sx * f_sy
-
 										sx = sx * f_sx
 										sy = sy * f_sy
 
@@ -82,18 +84,16 @@ function RU.init()
 										local p_x_s = x * f_sx
 										local p_y_s = y * f_sy
 
-										r = -f.r * flipf + r
-
 										if f.r ~= 0 then
 											local cr = math.cos(-f.r)
 											local sr = math.sin(-f.r)
 											local p_x = p_x_s * cr - p_y_s * sr
 											local p_y = p_x_s * sr + p_y_s * cr
 
-											x = p_x + f.pos.x + f.offset.x
+											x = p_x + render_base_x
 											y = -p_y + f.pos.y + f.offset.y
 										else
-											x = p_x_s + f.pos.x + f.offset.x
+											x = p_x_s + render_base_y
 											y = -p_y_s + f.pos.y + f.offset.y
 										end
 
@@ -108,7 +108,7 @@ function RU.init()
 										local l = f.last_attach_point_xform[part_name_idx]
 
 										l.x, l.y = x, y
-										l.r = r * flipf
+										l.r = -f.r + rotation * flipf
 										l.sx, l.sy = sx, sy
 
 										goto label_6_0
@@ -119,12 +119,6 @@ function RU.init()
 
 									-- 计算最终渲染坐标
 									local ref_scale = ss.ref_scale or 1
-
-									local f_sx = f.flip_x and -1 or 1
-									local f_sy = f.flip_y and -1 or 1
-
-									local flipf = f_sx * f_sy
-
 									sx = sx * f_sx * ref_scale
 									sy = sy * f_sy * ref_scale
 
@@ -138,20 +132,17 @@ function RU.init()
 									local p_x_s = x * f_sx
 									local p_y_s = y * f_sy
 
-									r = -f.r * flipf + r
-
-									-- local final_x, final_y
 									if f.r ~= 0 then
 										local cr = math.cos(-f.r)
 										local sr = math.sin(-f.r)
 										local p_x = p_x_s * cr - p_y_s * sr
 										local p_y = p_x_s * sr + p_y_s * cr
 
-										x = p_x + f.pos.x + f.offset.x
-										y = REF_H - (-p_y + f.pos.y + f.offset.y)
+										x = p_x + render_base_x
+										y = p_y + render_base_y
 									else
-										x = p_x_s + f.pos.x + f.offset.x
-										y = REF_H - (-p_y_s + f.pos.y + f.offset.y)
+										x = p_x_s + render_base_x
+										y = p_y_s + render_base_y
 									end
 
 									-- 视锥体剔除：直接用渲染坐标比较
@@ -165,12 +156,10 @@ function RU.init()
 										if batch_count == BATCH_SIZE or f._shader ~= current_shader or ss.atlas and ss.atlas ~= current_atlas then
 											if batch_count > 0 then
 												G.draw(batch)
-												bi = bi + 1
-												if bi_count < bi then
-													RU.add_batches(10)
-													bi_count = #RU.batches
-												end
+
+												bi = bi % bi_count + 1
 												batch = batches[bi]
+
 												if last_texture then
 													batch:setTexture(last_texture)
 												end
@@ -197,22 +186,19 @@ function RU.init()
 											end
 										end
 
-										local cr, cg, cb = 1, 1, 1
-
 										if f.color then
-											cr, cg, cb = f.color[1] / 255, f.color[2] / 255, f.color[3] / 255
+											r, g, b = f.color[1] / 255, f.color[2] / 255, f.color[3] / 255
 										else
-											cr, cg, cb = 1, 1, 1
+											r, g, b = 1, 1, 1
 										end
 
-										local ca = f.alpha * (alpha or 1)
-										if ca ~= la or cr ~= lr or cg ~= lg or cb ~= lb then
-											batch:setColor(cr, cg, cb, ca / 255)
-											lr, lg, lb, la = cr, cg, cb, ca
+										a = f.alpha * (alpha or 1)
+										if a ~= la or r ~= lr or g ~= lg or b ~= lb then
+											batch:setColor(r, g, b, a / 255)
+											lr, lg, lb, la = r, g, b, a
 										end
 
-										batch:add(ss.quad, x, y, r * flipf, sx, sy, 0.5 * ss.size[1] - ss.trim[1] - pox / ref_scale, 0.5 * ss.size[2] - ss.trim[2] - poy / ref_scale, kx, ky)
-
+										batch:add(ss.quad, x, y, -f.r + rotation * flipf, sx, sy, 0.5 * ss.size[1] - ss.trim[1] - pox / ref_scale, 0.5 * ss.size[2] - ss.trim[2] - poy / ref_scale, kx, ky)
 										batch_count = batch_count + 1
 									end
 
@@ -265,12 +251,10 @@ function RU.init()
 								batch:clear()
 								lr, lg, lb, la = nil, nil, nil, nil -- 重置颜色状态
 								if ss.atlas then
-									local im, _, _ = I:i(ss.atlas)
-
 									current_atlas = ss.atlas
-									last_texture = im
+									last_texture = I:i(ss.atlas)
 
-									batch:setTexture(im)
+									batch:setTexture(last_texture)
 								end
 								batch_count = 0
 								if f._shader ~= current_shader then
@@ -356,18 +340,21 @@ function RU.init()
 				-- block empty
 				elseif f.exo_frame then
 					local exo = EXO:get_exo_by_frame(f.exo_frame)
-					for part_idx, part in ipairs(f.exo_frame) do
+					local f_sx = f.flip_x and -1 or 1
+					local f_sy = f.flip_y and -1 or 1
+					local flipf = f_sx * f_sy
+					local render_base_x = f.pos.x + f.offset.x
+					local render_base_y = REF_H - (f.pos.y + f.offset.y)
+
+					for part_idx = 1, #f.exo_frame do
+						local part = f.exo_frame[part_idx]
 						do
-							local part_type, part_name_idx, alpha, x, y, sx, sy, r, kx, ky = part[1], part[2], part[3], part[4], part[5], part[6], part[7], part[8], part[9], part[10]
+							local part_type, part_name_idx, alpha, x, y, sx, sy, rotation, kx, ky = part[1], part[2], part[3], part[4], part[5], part[6], part[7], part[8], part[9], part[10]
 
 							if part.hidden then
 							-- block empty
 							else
 								if part_type == 8 then
-									local f_sx = f.flip_x and -1 or 1
-									local f_sy = f.flip_y and -1 or 1
-									local flipf = f_sx * f_sy
-
 									sx = sx * f_sx
 									sy = sy * f_sy
 
@@ -381,18 +368,16 @@ function RU.init()
 									local p_x_s = x * f_sx
 									local p_y_s = y * f_sy
 
-									r = -f.r * flipf + r
-
 									if f.r ~= 0 then
 										local cr = math.cos(-f.r)
 										local sr = math.sin(-f.r)
 										local p_x = p_x_s * cr - p_y_s * sr
 										local p_y = p_x_s * sr + p_y_s * cr
 
-										x = p_x + f.pos.x + f.offset.x
+										x = p_x + render_base_x
 										y = -p_y + f.pos.y + f.offset.y
 									else
-										x = p_x_s + f.pos.x + f.offset.x
+										x = p_x_s + render_base_y
 										y = -p_y_s + f.pos.y + f.offset.y
 									end
 
@@ -407,7 +392,7 @@ function RU.init()
 									local l = f.last_attach_point_xform[part_name_idx]
 
 									l.x, l.y = x, y
-									l.r = r * flipf
+									l.r = -f.r + rotation * flipf
 									l.sx, l.sy = sx, sy
 
 									goto label_6_0
@@ -420,14 +405,7 @@ function RU.init()
 									if batch_count > 0 then
 										G.draw(batch)
 
-										bi = bi + 1
-
-										if bi_count < bi then
-											RU.add_batches(10)
-
-											bi_count = #RU.batches
-										end
-
+										bi = bi % bi_count + 1
 										batch = batches[bi]
 
 										if last_texture then
@@ -461,24 +439,21 @@ function RU.init()
 									end
 								end
 
-								local cr, cg, cb = 1, 1, 1
-
 								if f.color then
-									cr, cg, cb = f.color[1] / 255, f.color[2] / 255, f.color[3] / 255
+									r, g, b = f.color[1] / 255, f.color[2] / 255, f.color[3] / 255
+								else
+									r, g, b = 1, 1, 1
 								end
 
-								local ca = f.alpha * (alpha or 1)
+								a = f.alpha * (alpha or 1)
 
-								if ca ~= la or cr ~= lr or cg ~= lg or cb ~= lb then
-									batch:setColor(cr, cg, cb, ca / 255)
+								if a ~= la or r ~= lr or g ~= lg or b ~= lb then
+									batch:setColor(r, g, b, a / 255)
 
-									lr, lg, lb, la = cr, cg, cb, ca
+									lr, lg, lb, la = r, g, b, a
 								end
 
 								local ref_scale = ss.ref_scale or 1
-								local f_sx = f.flip_x and -1 or 1
-								local f_sy = f.flip_y and -1 or 1
-								local flipf = f_sx * f_sy
 
 								sx = sx * f_sx * ref_scale
 								sy = sy * f_sy * ref_scale
@@ -512,23 +487,20 @@ function RU.init()
 								local p_x_s = x * f_sx
 								local p_y_s = y * f_sy
 
-								r = -f.r * flipf + r
-
 								if f.r ~= 0 then
 									local cr = math.cos(-f.r)
 									local sr = math.sin(-f.r)
 									local p_x = p_x_s * cr - p_y_s * sr
 									local p_y = p_x_s * sr + p_y_s * cr
 
-									x = p_x + f.pos.x + f.offset.x
-									y = REF_H - (-p_y + f.pos.y + f.offset.y)
+									x = p_x + render_base_x
+									y = p_y + render_base_y
 								else
-									x = p_x_s + f.pos.x + f.offset.x
-									y = REF_H - (-p_y_s + f.pos.y + f.offset.y)
+									x = p_x_s + render_base_x
+									y = p_y_s + render_base_y
 								end
 
-								batch:add(ss.quad, x, y, r * flipf, sx, sy, ox, oy, kx, ky)
-
+								batch:add(ss.quad, x, y, -f.r + rotation * flipf, sx, sy, ox, oy, kx, ky)
 								batch_count = batch_count + 1
 							end
 						end
@@ -552,10 +524,7 @@ function RU.init()
 
 						batch:clear()
 
-						lr = nil
-						lg = nil
-						lb = nil
-						la = nil
+						lr, lg, lb, la = nil, nil, nil, nil
 
 						if ss.atlas then
 							local im, _, _ = I:i(ss.atlas)

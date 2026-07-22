@@ -54659,12 +54659,8 @@ scripts.controller_stage_32_lava_splash = {}
 
 function scripts.controller_stage_32_lava_splash.update(this, store)
 	while true do
-		local enemies = table.filter(store.entities, function(k, v)
+		local enemies = table.filter(store.enemies, function(k, v)
 			if v.pending_removal then
-				return false
-			end
-
-			if not v.enemy or not v.vis or not v.nav_path then
 				return false
 			end
 
