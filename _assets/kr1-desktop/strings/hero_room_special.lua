@@ -3230,7 +3230,7 @@ map["毒雨"] = str(cooldown_str(), "射出数支毒箭攻击大范围区域，�
 -- hero_beresad
 set_hero("hero_beresad")
 
-map["金之欲"] = str("被贝雷萨德普攻与大招杀死的敌人额外掉落4枚金币。")
+map["金之欲"] = str("被贝雷萨德普攻杀死的敌人额外掉落6枚金币，被地狱火杀死的敌人额外掉落3枚金币。")
 
 set_skill(h.hero.skills.conflagration)
 cooldown = s.cooldown[max_lvl]

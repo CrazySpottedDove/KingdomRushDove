@@ -40158,7 +40158,7 @@ scripts.bolt_beresad = {
 				end
 
 				queue_insert(store, fx)
-				store.player_gold = store.player_gold + 4
+				store.player_gold = store.player_gold + 6
 			end
 		end
 		return true
@@ -40180,7 +40180,7 @@ scripts.mod_beresad_ultimate = {
 				end
 
 				queue_insert(store, fx)
-				store.player_gold = store.player_gold + 4
+				store.player_gold = store.player_gold + 3
 			end
 		end
 		return true
