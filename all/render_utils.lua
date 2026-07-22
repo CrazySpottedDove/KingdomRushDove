@@ -74,15 +74,15 @@ function RU.init()
 										sx = sx * f_sx
 										sy = sy * f_sy
 
+										local p_x_s = x * f_sx
+										local p_y_s = y * f_sy
+
 										if f.scale then
 											sy = sy * f.scale.y
 											sx = sx * f.scale.x
-											f_sx = f_sx * f.scale.x
-											f_sy = f_sy * f.scale.y
+											p_x_s = p_x_s * f.scale.x
+											p_y_s = p_y_s * f.scale.y
 										end
-
-										local p_x_s = x * f_sx
-										local p_y_s = y * f_sy
 
 										if f.r ~= 0 then
 											local cr = math.cos(-f.r)
@@ -122,15 +122,15 @@ function RU.init()
 									sx = sx * f_sx * ref_scale
 									sy = sy * f_sy * ref_scale
 
+									local p_x_s = x * f_sx
+									local p_y_s = y * f_sy
+
 									if f.scale then
 										sy = sy * f.scale.y
 										sx = sx * f.scale.x
-										f_sx = f_sx * f.scale.x
-										f_sy = f_sy * f.scale.y
+										p_x_s = p_x_s * f.scale.x
+										p_y_s = p_y_s * f.scale.y
 									end
-
-									local p_x_s = x * f_sx
-									local p_y_s = y * f_sy
 
 									if f.r ~= 0 then
 										local cr = math.cos(-f.r)
@@ -358,15 +358,15 @@ function RU.init()
 									sx = sx * f_sx
 									sy = sy * f_sy
 
+									local p_x_s = x * f_sx
+									local p_y_s = y * f_sy
+
 									if f.scale then
 										sy = sy * f.scale.y
 										sx = sx * f.scale.x
-										f_sx = f_sx * f.scale.x
-										f_sy = f_sy * f.scale.y
+										p_x_s = p_x_s * f.scale.x
+										p_y_s = p_y_s * f.scale.y
 									end
-
-									local p_x_s = x * f_sx
-									local p_y_s = y * f_sy
 
 									if f.r ~= 0 then
 										local cr = math.cos(-f.r)
@@ -454,15 +454,17 @@ function RU.init()
 								end
 
 								local ref_scale = ss.ref_scale or 1
-
 								sx = sx * f_sx * ref_scale
 								sy = sy * f_sy * ref_scale
+
+								local p_x_s = x * f_sx
+								local p_y_s = y * f_sy
 
 								if f.scale then
 									sy = sy * f.scale.y
 									sx = sx * f.scale.x
-									f_sx = f_sx * f.scale.x
-									f_sy = f_sy * f.scale.y
+									p_x_s = p_x_s * f.scale.x
+									p_y_s = p_y_s * f.scale.y
 								end
 
 								local ox = 0.5 * ss.size[1] - ss.trim[1] - pox / ref_scale
@@ -483,9 +485,6 @@ function RU.init()
 								-- 		sx = sx * f.scale.y
 								-- 	end
 								-- end
-
-								local p_x_s = x * f_sx
-								local p_y_s = y * f_sy
 
 								if f.r ~= 0 then
 									local cr = math.cos(-f.r)
