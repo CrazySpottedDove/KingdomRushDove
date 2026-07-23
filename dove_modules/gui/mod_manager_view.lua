@@ -1591,7 +1591,7 @@ function ModManagerView:_install_or_update_item(item)
 			end
 			local patch_data, err = self:_download_patch(entry, get_platform(), item.version or "", changed, deleted)
 			if patch_data then
-				local _, local_cfg_saved = self:_preserve_local_config(target_dir, entry, local_cfg)
+				local _, local_cfg_saved = self:_preserve_local_config(target_dir, entry, local_mod)
 				self:_set_status("正在应用增量更新：" .. (item.name or item.entry), 90)
 				local ok_apply, err_apply = self:_apply_patch_to_dir(target_dir, patch_data)
 				if ok_apply then
