@@ -4405,10 +4405,10 @@ function scripts.graveyard_s110.update(this, store)
 
 				t._in_graveyard = true
 
-				for _, s in ipairs(g.spawns_by_health) do
+				for i, s in ipairs(g.spawns_by_health) do
 					local e, s_pos, pi, ni
 
-					if t.health.hp_max > s[2] then
+					if t.health.hp_max > s[2] and (not g.spawns_by_health[i + 1] or g.spawns_by_health[i + 1][1] ~= t.template_name) then
 					-- block empty
 					else
 						s_pos = table.random(g.spawn_pos)
