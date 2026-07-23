@@ -410,7 +410,7 @@ tt.sound_events.travel = "ArchmageBoltTravel"
 tt.sound_events.summon = "ArchmageBoltSummon"
 
 tt = RT("bolt_blast", "bullet")
-tt.main_script.insert = scripts.bolt_blast.insert
+tt.main_script.insert = nil
 tt.main_script.update = scripts.bolt_blast.update
 tt.render.sprites[1].prefix = "bolt_blast"
 tt.render.sprites[1].name = "hit"

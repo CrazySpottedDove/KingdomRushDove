@@ -3806,6 +3806,7 @@ function scripts.bolt_trace_target.update(this, store)
 
 				m.modifier.target_id = b.target_id
 				m.modifier.level = b.level
+				m.modifier.damage_factor = b.damage_factor
 
 				queue_insert(store, m)
 			end
@@ -3824,6 +3825,10 @@ function scripts.bolt_trace_target.update(this, store)
 		local hp = b.payload
 
 		hp.pos.x, hp.pos.y = b.to.x, b.to.y
+
+		if b.payload.bullet then
+			b.payload.bullet.damage_factor = b.damage_factor
+		end
 
 		queue_insert(store, hp)
 	end
@@ -3847,30 +3852,20 @@ end
 
 scripts.bolt_blast = {}
 
-function scripts.bolt_blast.insert(this, store)
-	return true
-end
-
 function scripts.bolt_blast.update(this, store)
 	local b = this.bullet
 	local dradius = b.damage_radius + b.level * b.damage_radius_inc
 	local dmin = b.damage_min + b.level * b.damage_inc
 	local dmax = b.damage_max + b.level * b.damage_inc
-	local explode_pos = V.v(this.pos.x, this.pos.y - 8)
 
 	U.animation_start_default(this, "hit", nil, store.tick_ts, false)
 
-	local d_value = U.frandom(dmin, dmax)
-	local enemies = U.find_enemies_in_range_filter_off(explode_pos, dradius, b.damage_flags, b.damage_bans)
+	local d_value = U.frandom(dmin, dmax) * b.damage_factor
+	local enemies = U.find_enemies_in_range_filter_off_consider_hit_offset(this.pos, dradius, b.damage_flags, b.damage_bans)
 
 	if enemies then
 		for _, enemy in ipairs(enemies) do
-			local d = E.create_damage()
-
-			d.source_id = this.id
-			d.target_id = enemy.id
-			d.value = d_value
-			d.damage_type = b.damage_type
+			local d = E.assign_damage(b.damage_type, d_value, this.id, enemy.id)
 			d.track_damage = true
 
 			queue_damage(store, d)

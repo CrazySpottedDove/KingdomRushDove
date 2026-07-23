@@ -144,6 +144,48 @@ function seek.find_enemies_in_range_filter_off(origin, range, flags, bans)
 	return count ~= 0 and result or nil
 end
 
+function seek.find_enemies_in_range_filter_off_consider_hit_offset(origin, range, flags, bans)
+	local x = origin.x
+	local y = origin.y
+
+	local r_outer_sq = range * range
+
+	-- 保证覆盖 unit.hit_offset 的范围
+	range = range + 100
+
+	local min_col = max(1, _x_to_col(x - range))
+	local max_col = min(_cols, _x_to_col(x + range))
+	local b = range * _aspect
+	local min_row = max(1, _y_to_row(y - b))
+	local max_row = min(_rows, _y_to_row(y + b))
+	local count = 0
+	local index_base = (min_row - 1) * _cols - 1
+
+	local result = {}
+
+	for _ = min_row, max_row do
+		for col = min_col, max_col do
+			local cell = id_arrays[index_base + col]
+			local array = cell.array
+
+			for i = 0, cell.size - 1 do
+				local entity = entities[array[i]]
+				local dx = entity.pos.x + entity.unit.hit_offset.x - x
+				local dy = (entity.pos.y + entity.unit.hit_offset.y - y) * _aspect_inv
+
+				if (dx * dx + dy * dy <= r_outer_sq) and enemy_filter_simple(entity, flags, bans) then
+					count = count + 1
+					result[count] = entity
+				end
+			end
+		end
+
+		index_base = index_base + _cols
+	end
+
+	return count ~= 0 and result or nil
+end
+
 function seek.find_enemies_in_range_filter_on(origin, range, flags, bans, filter_fn)
 	local x = origin.x
 	local y = origin.y

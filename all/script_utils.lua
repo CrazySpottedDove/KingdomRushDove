@@ -2738,6 +2738,7 @@ function SU.y_soldier_melee_block_and_attacks(store, this)
 	end
 
 	if attack_done then
+		U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 		return false, A_DONE
 	else
 		return true
@@ -4193,6 +4194,7 @@ function SU.y_enemy_melee_attacks(store, this, target)
 
 							mod.modifier.target_id = target.id
 							mod.modifier.source_id = this.id
+							mod.modifier.damage_factor = this.unit.damage_factor
 
 							queue_insert(store, mod)
 						end
@@ -4230,6 +4232,7 @@ function SU.y_enemy_melee_attacks(store, this, target)
 
 									mod.modifier.target_id = e.id
 									mod.modifier.source_id = this.id
+									mod.modifier.damage_factor = this.unit.damage_factor
 
 									queue_insert(store, mod)
 								end
