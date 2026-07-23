@@ -1463,97 +1463,9 @@ function ModManagerView:_install_plugin(item, is_update)
 		storage:write_lua(target_dir .. "/config.lua", new_cfg)
 	end
 
-	-- 写入 .pluginupload 哈希清单，用于后续增量更新
-	self:_write_plugin_manifest(target_dir, target_name, new_cfg and new_cfg.version or "")
-
 	self:_refresh_local_view((is_update and "插件更新完成：" or "插件安装完成：") .. (item.name or item.entry))
 	self._active_download_name = ""
 	return true, nil
-end
-
-function ModManagerView:_write_plugin_manifest(target_dir, entry, version)
-	local hashes = {}
-	local function walk(path, prefix)
-		local items = FS.getDirectoryItems(path) or {}
-		for _, name in ipairs(items) do
-			local full_path = path .. "/" .. name
-			local rel_path = (prefix ~= "" and prefix .. "/" .. name) or name
-			local info = FS.getInfo(full_path)
-			if info then
-				if info.type == "directory" then
-					walk(full_path, rel_path)
-				elseif info.type == "file" then
-					local data = FS.read(full_path)
-					if data then
-						local hash_data = love.data.hash("sha256", data)
-						hashes[rel_path] = love.data.encode("string", "hex", hash_data)
-					end
-				end
-			end
-		end
-	end
-	walk(target_dir, "")
-	local manifest = {
-		version = version,
-		platform = get_platform(),
-		hashes = hashes
-	}
-	if not FS.getInfo(".pluginupload", "directory") then
-		FS.createDirectory(".pluginupload")
-	end
-	FS.write(".pluginupload/" .. entry .. ".json", json.encode(manifest))
-end
-
-function ModManagerView:_read_plugin_manifest(entry, target_dir)
-	local data = FS.read(".pluginupload/" .. entry .. ".json")
-	if data then
-		local ok, manifest = pcall(json.decode, data)
-		if ok and type(manifest) == "table" then
-			return manifest
-		end
-	end
-
-	-- 缓存不存在且提供了插件目录，现场计算
-	if target_dir and FS.getInfo(target_dir, "directory") then
-		local version = ""
-		local cfg = mod_paths.load_lua_table(target_dir .. "/config.lua")
-		if cfg then
-			version = cfg.version or ""
-		end
-		local hashes = {}
-		local function walk(path, prefix)
-			local items = FS.getDirectoryItems(path) or {}
-			for _, name in ipairs(items) do
-				local full_path = path .. "/" .. name
-				local rel_path = (prefix ~= "" and prefix .. "/" .. name) or name
-				local info = FS.getInfo(full_path)
-				if info then
-					if info.type == "directory" then
-						walk(full_path, rel_path)
-					elseif info.type == "file" then
-						local file_data = FS.read(full_path)
-						if file_data then
-							local hash_data = love.data.hash("sha256", file_data)
-							hashes[rel_path] = love.data.encode("string", "hex", hash_data)
-						end
-					end
-				end
-			end
-		end
-		walk(target_dir, "")
-		local manifest = {
-			version = version,
-			platform = get_platform(),
-			hashes = hashes
-		}
-		if not FS.getInfo(".pluginupload", "directory") then
-			FS.createDirectory(".pluginupload")
-		end
-		FS.write(".pluginupload/" .. entry .. ".json", json.encode(manifest))
-		return manifest
-	end
-
-	return nil
 end
 
 function ModManagerView:_apply_patch_to_dir(target_dir, patch_data)
@@ -1629,7 +1541,6 @@ function ModManagerView:_apply_patch_to_dir(target_dir, patch_data)
 	remove_dir_recursive(tmp)
 	return true, nil
 end
-
 function ModManagerView:_download_patch(entry, platform, version, changed, deleted)
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
@@ -1664,12 +1575,13 @@ function ModManagerView:_install_or_update_item(item)
 		return self:_install_plugin(item, false)
 	end
 
-	-- 尝试增量更新
+	-- 尝试增量更新：现场计算本地文件哈希
 	local entry = utf8_util.sanitize(item.entry or "")
 	local target_dir = mod_paths.LOCAL_MODS_DIR .. "/" .. entry
-	local manifest = self:_read_plugin_manifest(entry, target_dir)
-	if manifest and type(manifest.hashes) == "table" and manifest.platform then
-		local hash_ok, hash_resp = self:_hash_check(entry, item.version or "", manifest.hashes, manifest.platform)
+	if FS.getInfo(target_dir, "directory") then
+		local local_cfg = mod_paths.load_lua_table(target_dir .. "/config.lua")
+		local dir_info = self:_compute_dir_hashes(target_dir)
+		local hash_ok, hash_resp = self:_hash_check(entry, item.version or "", dir_info.hashes, get_platform(), "download")
 		if hash_ok and hash_resp and type(hash_resp.changed) == "table" then
 			local changed = hash_resp.changed
 			local deleted = hash_resp.deleted
@@ -1677,38 +1589,29 @@ function ModManagerView:_install_or_update_item(item)
 				self:_set_status("插件已是最新：" .. (item.name or item.entry), 100)
 				return true, nil
 			end
-			local patch_data, err = self:_download_patch(entry, manifest.platform, item.version or "", changed, deleted)
+			local patch_data, err = self:_download_patch(entry, get_platform(), item.version or "", changed, deleted)
 			if patch_data then
-				local _, local_cfg = self:_preserve_local_config(target_dir, entry, local_mod)
+				local _, local_cfg_saved = self:_preserve_local_config(target_dir, entry, local_cfg)
 				self:_set_status("正在应用增量更新：" .. (item.name or item.entry), 90)
 				local ok_apply, err_apply = self:_apply_patch_to_dir(target_dir, patch_data)
 				if ok_apply then
-					if local_cfg then
-						self:_restore_local_config(target_dir, entry, local_cfg)
+					if local_cfg_saved then
+						self:_restore_local_config(target_dir, entry, local_cfg_saved)
 					end
-					if local_mod and local_mod.config then
-						local cfg_path = target_dir .. "/config.lua"
-						local installed_cfg = mod_paths.load_lua_table(cfg_path)
-						if installed_cfg then
-							installed_cfg.enabled = local_mod.config.enabled ~= false
-							installed_cfg.last_used_at = os.time()
-							storage:write_lua(cfg_path, installed_cfg)
-						end
+					local installed_cfg = mod_paths.load_lua_table(target_dir .. "/config.lua")
+					if installed_cfg then
+						installed_cfg.enabled = local_cfg and local_cfg.enabled ~= false
+						installed_cfg.last_used_at = os.time()
+						storage:write_lua(target_dir .. "/config.lua", installed_cfg)
 					end
-					local new_cfg = mod_paths.load_lua_table(target_dir .. "/config.lua")
-					self:_write_plugin_manifest(target_dir, entry, new_cfg and new_cfg.version or "")
 					self:_refresh_local_view("插件增量更新完成：" .. (item.name or item.entry))
 					return true, nil
 				end
-				print("[mod_manager] 增量补丁引用失败: " .. tostring(err_apply))
-			else
-				print("[mod_manager] 增量补丁下载失败: " .. tostring(err))
 			end
 		end
 	end
 
 	-- 回落全量更新
-	print("[mod_manager] 增量更新不可用，回退全量更新：" .. entry)
 	return self:_install_plugin(item, true)
 end
 
@@ -2294,10 +2197,19 @@ function ModManagerView:_compute_dir_hashes(dir)
 	}
 end
 
-function ModManagerView:_hash_check(entry, version, hashes, platform)
+function ModManagerView:_hash_check(entry, version, hashes, platform, mode)
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
 		return false, "无法选择插件商店地址"
+	end
+	local body_data = {
+		entry = entry,
+		version = version,
+		platform = platform,
+		hashes = hashes
+	}
+	if mode then
+		body_data.mode = mode
 	end
 	local resp, err = self:_request(base .. "/hash_check", {
 		method = "POST",
@@ -2305,12 +2217,7 @@ function ModManagerView:_hash_check(entry, version, hashes, platform)
 			["Authorization"] = "Bearer " .. (self._developer_token or ""),
 			["Content-Type"] = "application/json"
 		},
-		data = json.encode({
-			entry = entry,
-			version = version,
-			platform = platform,
-			hashes = hashes
-		})
+		data = json.encode(body_data)
 	}, 30)
 	if err then
 		return false, "哈希比对失败：" .. err
@@ -2322,7 +2229,6 @@ function ModManagerView:_hash_check(entry, version, hashes, platform)
 	if not ok or type(body) ~= "table" then
 		return false, "哈希比对响应解析失败"
 	end
-	print(string.format("[mod_manager] 对比哈希得：修改%d个文件，删除%d个文件 (%s)", #(body.changed or {}), #(body.deleted or {}), entry))
 	return true, body
 end
 
@@ -2361,8 +2267,6 @@ function ModManagerView:_upload_patch(mod_data, entry, version, changed, deleted
 	if not patch_data then
 		return false, "打包增量失败"
 	end
-
-	print(string.format("[mod_manager] 增量补丁大小:%d bytes", #patch_data))
 
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
@@ -2458,7 +2362,6 @@ function ModManagerView:_upload_plugin(mod_data, upload_cover)
 	end
 
 	-- 全量上传（增量不可用或变更量过大时回落）
-	print("[mod_manager] 全量上传插件：%s", entry)
 	self:_set_status("正在压缩插件：" .. entry, 20)
 	local zip_data = zip.create_from_dir(mod_data.path, {
 		exclude = {"^cover%..+$"},
