@@ -1443,15 +1443,14 @@ function ModManagerView:_install_plugin(item, is_update)
 	end
 	if preserved_local_config then
 		local installed_local_cfg_path = target_dir .. "/" .. target_name .. "_config.lua"
-		local merged_local_cfg = table.deepclone(preserved_local_config)
 		if FS.getInfo(installed_local_cfg_path, "file") then
 			local remote_local_cfg, read_err = mod_paths.load_lua_table(installed_local_cfg_path)
 			if not remote_local_cfg then
 				return false, "更新后读取远端本地配置失败：" .. installed_local_cfg_path .. " (" .. tostring(read_err) .. ")"
 			end
-			merge_missing_or_mismatch_fields(merged_local_cfg, remote_local_cfg)
+			merge_missing_or_mismatch_fields(preserved_local_config, remote_local_cfg)
 		end
-		local wok = storage:write_lua(installed_local_cfg_path, merged_local_cfg)
+		local wok = storage:write_lua(installed_local_cfg_path, preserved_local_config)
 		if not wok then
 			return false, "更新后写入本地配置失败：" .. installed_local_cfg_path
 		end
@@ -1464,16 +1463,287 @@ function ModManagerView:_install_plugin(item, is_update)
 		storage:write_lua(target_dir .. "/config.lua", new_cfg)
 	end
 
+	-- 写入 .pluginupload 哈希清单，用于后续增量更新
+	self:_write_plugin_manifest(target_dir, target_name, new_cfg and new_cfg.version or "")
+
 	self:_refresh_local_view((is_update and "插件更新完成：" or "插件安装完成：") .. (item.name or item.entry))
 	self._active_download_name = ""
 	return true, nil
 end
 
+function ModManagerView:_write_plugin_manifest(target_dir, entry, version)
+	local hashes = {}
+	local function walk(path, prefix)
+		local items = FS.getDirectoryItems(path) or {}
+		for _, name in ipairs(items) do
+			local full_path = path .. "/" .. name
+			local rel_path = (prefix ~= "" and prefix .. "/" .. name) or name
+			local info = FS.getInfo(full_path)
+			if info then
+				if info.type == "directory" then
+					walk(full_path, rel_path)
+				elseif info.type == "file" then
+					local data = FS.read(full_path)
+					if data then
+						local hash_data = love.data.hash("sha256", data)
+						hashes[rel_path] = love.data.encode("string", "hex", hash_data)
+					end
+				end
+			end
+		end
+	end
+	walk(target_dir, "")
+	local manifest = {
+		version = version,
+		platform = get_platform(),
+		hashes = hashes
+	}
+	if not FS.getInfo(".pluginupload", "directory") then
+		FS.createDirectory(".pluginupload")
+	end
+	FS.write(".pluginupload/" .. entry .. ".json", json.encode(manifest))
+end
+
+function ModManagerView:_read_plugin_manifest(entry, target_dir)
+	local data = FS.read(".pluginupload/" .. entry .. ".json")
+	if data then
+		local ok, manifest = pcall(json.decode, data)
+		if ok and type(manifest) == "table" then
+			return manifest
+		end
+	end
+
+	-- 缓存不存在且提供了插件目录，现场计算
+	if target_dir and FS.getInfo(target_dir, "directory") then
+		local version = ""
+		local cfg = mod_paths.load_lua_table(target_dir .. "/config.lua")
+		if cfg then
+			version = cfg.version or ""
+		end
+		local hashes = {}
+		local function walk(path, prefix)
+			local items = FS.getDirectoryItems(path) or {}
+			for _, name in ipairs(items) do
+				local full_path = path .. "/" .. name
+				local rel_path = (prefix ~= "" and prefix .. "/" .. name) or name
+				local info = FS.getInfo(full_path)
+				if info then
+					if info.type == "directory" then
+						walk(full_path, rel_path)
+					elseif info.type == "file" then
+						local file_data = FS.read(full_path)
+						if file_data then
+							local hash_data = love.data.hash("sha256", file_data)
+							hashes[rel_path] = love.data.encode("string", "hex", hash_data)
+						end
+					end
+				end
+			end
+		end
+		walk(target_dir, "")
+		local manifest = {
+			version = version,
+			platform = get_platform(),
+			hashes = hashes
+		}
+		if not FS.getInfo(".pluginupload", "directory") then
+			FS.createDirectory(".pluginupload")
+		end
+		FS.write(".pluginupload/" .. entry .. ".json", json.encode(manifest))
+		return manifest
+	end
+
+	return nil
+end
+
+function ModManagerView:_apply_patch_to_dir(target_dir, patch_data)
+	local tmp = "tmp/plugin_patch_apply"
+	remove_dir_recursive(tmp)
+	FS.createDirectory("tmp")
+	FS.createDirectory(tmp)
+
+	local ok, err = zip.unzip_to_dir(patch_data, tmp)
+	if not ok then
+		remove_dir_recursive(tmp)
+		return false, err
+	end
+
+	-- 读取 patch manifest
+	local patch_manifest_data = FS.read(tmp .. "/_patch_manifest.json")
+	local deleted_files = {}
+	if patch_manifest_data then
+		local ok_m, manifest = pcall(json.decode, patch_manifest_data)
+		if ok_m and type(manifest) == "table" and type(manifest.deleted) == "table" then
+			deleted_files = manifest.deleted
+		end
+	end
+
+	-- 覆盖变更文件（跳过 manifest 文件本身）
+	local items = FS.getDirectoryItems(tmp) or {}
+	for _, name in ipairs(items) do
+		if name == "_patch_manifest.json" then
+			goto continue
+		end
+		local src = tmp .. "/" .. name
+		local info = FS.getInfo(src)
+		if info then
+			local dst = target_dir .. "/" .. name
+			local function cp_dir(s, d)
+				if not FS.getInfo(d, "directory") then
+					FS.createDirectory(d)
+				end
+				local subs = FS.getDirectoryItems(s) or {}
+				for _, sub in ipairs(subs) do
+					local ss = s .. "/" .. sub
+					local sd = d .. "/" .. sub
+					local si = FS.getInfo(ss)
+					if si then
+						if si.type == "directory" then
+							cp_dir(ss, sd)
+						else
+							local data = FS.read(ss)
+							if data then
+								FS.write(sd, data)
+							end
+						end
+					end
+				end
+			end
+			if info.type == "directory" then
+				cp_dir(src, dst)
+			else
+				local data = FS.read(src)
+				if data then
+					FS.write(dst, data)
+				end
+			end
+		end
+		::continue::
+	end
+
+	-- 删除已删除的文件
+	for _, del_path in ipairs(deleted_files) do
+		remove_dir_recursive(target_dir .. "/" .. del_path)
+	end
+
+	remove_dir_recursive(tmp)
+	return true, nil
+end
+
+function ModManagerView:_download_patch(entry, platform, version, changed, deleted)
+	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
+	if not base then
+		return nil, "无法选择插件商店地址"
+	end
+	local resp, err = self:_request(base .. "/download_patch", {
+		method = "POST",
+		headers = {
+			["Content-Type"] = "application/json"
+		},
+		data = json.encode({
+			entry = entry,
+			version = version,
+			platform = platform,
+			changed = changed,
+			deleted = deleted
+		})
+	}, 60)
+	if err then
+		return nil, "增量更新请求失败：" .. err
+	end
+	if tonumber(resp.code) ~= 200 then
+		return nil, "增量更新请求失败：HTTP " .. tostring(resp.code)
+	end
+	return resp.body, nil
+end
+
 function ModManagerView:_install_or_update_item(item)
 	local local_mod = self.local_by_entry[item.entry]
 	local need_update = local_mod and has_update(local_mod.config.version, item.version)
-	local is_update = need_update == true
-	return self:_install_plugin(item, is_update)
+	if not need_update then
+		return self:_install_plugin(item, false)
+	end
+
+	-- 尝试增量更新
+	local entry = utf8_util.sanitize(item.entry or "")
+	local target_dir = mod_paths.LOCAL_MODS_DIR .. "/" .. entry
+	local manifest = self:_read_plugin_manifest(entry, target_dir)
+	if manifest and type(manifest.hashes) == "table" and manifest.platform then
+		local hash_ok, hash_resp = self:_hash_check(entry, item.version or "", manifest.hashes, manifest.platform)
+		if hash_ok and hash_resp and type(hash_resp.changed) == "table" then
+			local changed = hash_resp.changed
+			local deleted = hash_resp.deleted
+			if #changed == 0 and #deleted == 0 then
+				self:_set_status("插件已是最新：" .. (item.name or item.entry), 100)
+				return true, nil
+			end
+			local patch_data, err = self:_download_patch(entry, manifest.platform, item.version or "", changed, deleted)
+			if patch_data then
+				local _, local_cfg = self:_preserve_local_config(target_dir, entry, local_mod)
+				self:_set_status("正在应用增量更新：" .. (item.name or item.entry), 90)
+				local ok_apply, err_apply = self:_apply_patch_to_dir(target_dir, patch_data)
+				if ok_apply then
+					if local_cfg then
+						self:_restore_local_config(target_dir, entry, local_cfg)
+					end
+					if local_mod and local_mod.config then
+						local cfg_path = target_dir .. "/config.lua"
+						local installed_cfg = mod_paths.load_lua_table(cfg_path)
+						if installed_cfg then
+							installed_cfg.enabled = local_mod.config.enabled ~= false
+							installed_cfg.last_used_at = os.time()
+							storage:write_lua(cfg_path, installed_cfg)
+						end
+					end
+					local new_cfg = mod_paths.load_lua_table(target_dir .. "/config.lua")
+					self:_write_plugin_manifest(target_dir, entry, new_cfg and new_cfg.version or "")
+					self:_refresh_local_view("插件增量更新完成：" .. (item.name or item.entry))
+					return true, nil
+				end
+				print("[mod_manager] 增量补丁引用失败: " .. tostring(err_apply))
+			else
+				print("[mod_manager] 增量补丁下载失败: " .. tostring(err))
+			end
+		end
+	end
+
+	-- 回落全量更新
+	print("[mod_manager] 增量更新不可用，回退全量更新：" .. entry)
+	return self:_install_plugin(item, true)
+end
+
+function ModManagerView:_preserve_local_config(target_dir, entry, local_mod)
+	local local_cfg = nil
+	local local_cfg_path = local_mod and (local_mod.path .. "/" .. local_mod.name .. "_config.lua") or (target_dir .. "/" .. entry .. "_config.lua")
+	if FS.getInfo(local_cfg_path, "file") then
+		local ok, cfg = pcall(FS.load, local_cfg_path)
+		if ok and type(cfg()) == "table" then
+			local_cfg = cfg()
+		end
+	end
+	return local_cfg_path, local_cfg
+end
+
+function ModManagerView:_restore_local_config(target_dir, entry, local_cfg)
+	local path = target_dir .. "/" .. entry .. "_config.lua"
+	if not local_cfg then
+		return
+	end
+	-- 读取新安装的配置，将新增字段合并到用户保留的旧配置中
+	local new_cfg = nil
+	if FS.getInfo(path, "file") then
+		local ok, chunk = pcall(FS.load, path)
+		if ok and type(chunk) == "function" then
+			local ok2, result = pcall(chunk)
+			if ok2 and type(result) == "table" then
+				new_cfg = result
+			end
+		end
+	end
+	if new_cfg then
+		merge_missing_or_mismatch_fields(local_cfg, new_cfg)
+	end
+	storage:write_lua(path, local_cfg)
 end
 
 function ModManagerView:_update_all_plugins()
@@ -1518,7 +1788,7 @@ function ModManagerView:_update_all_plugins()
 			return false, "cancelled"
 		end
 		self:_set_status(string.format("一键更新（%d/%d）：%s", i, #pending, row.remote.name or row.remote.entry), (i - 1) * 100 / #pending)
-		local ok, err = self:_install_plugin(row.remote, true)
+		local ok, err = self:_install_or_update_item(row.remote)
 		if not ok then
 			return false, err
 		end
@@ -1604,7 +1874,7 @@ function ModManagerView:_render_local_list()
 					text = "更新",
 					on_press = function()
 						self:_start_task("更新插件", function()
-							return self:_install_plugin(remote, true)
+							return self:_install_or_update_item(remote)
 						end)
 					end
 				}
@@ -2024,7 +2294,7 @@ function ModManagerView:_compute_dir_hashes(dir)
 	}
 end
 
-function ModManagerView:_hash_check(entry, version, hashes)
+function ModManagerView:_hash_check(entry, version, hashes, platform)
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
 		return false, "无法选择插件商店地址"
@@ -2038,6 +2308,7 @@ function ModManagerView:_hash_check(entry, version, hashes)
 		data = json.encode({
 			entry = entry,
 			version = version,
+			platform = platform,
 			hashes = hashes
 		})
 	}, 30)
@@ -2051,7 +2322,7 @@ function ModManagerView:_hash_check(entry, version, hashes)
 	if not ok or type(body) ~= "table" then
 		return false, "哈希比对响应解析失败"
 	end
-	print(string.format("[mod_manager] 对比哈希得：修改%d个文件，删除%d个文件", #(body.changed or {}), #(body.deleted or {})))
+	print(string.format("[mod_manager] 对比哈希得：修改%d个文件，删除%d个文件 (%s)", #(body.changed or {}), #(body.deleted or {}), entry))
 	return true, body
 end
 
