@@ -5462,6 +5462,8 @@ end
 local function enemy_scared_logic(this, store)
 	this.nav_path.dir = -1
 	this._scare_data.ts = store.tick_ts
+	U.unblock_all(store, this)
+	U.bans_add(this.vis, F_BLOCK)
 
 	while store.tick_ts - this._scare_data.ts < this._scare_data.duration do
 		if this.health.dead then
@@ -5485,6 +5487,7 @@ local function enemy_scared_logic(this, store)
 	if this._scare_data.friend_mod then
 		SU.remove_modifiers(store, this, this._scare_data.friend_mod)
 	end
+	U.bans_remove(this.vis, F_BLOCK)
 	this._scare_data = nil
 	this.nav_path.dir = 1
 end
