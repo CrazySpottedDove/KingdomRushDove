@@ -3188,7 +3188,6 @@ tt.render.sprites[2].hide_after_runs = 1
 tt = RT("tower_paladin_covenant_lvl4", "tower")
 AC(tt, "powers", "barrack")
 tt.info.portrait = "kr5_portraits_towers_0001"
-tt.info.room_portrait = "quickmenu_main_icons_main_icons_0001_0001"
 tt.info.enc_icon = 8
 tt.info.fn = scripts.tower_barrack.get_info
 tt.tower.price = b.price[4]

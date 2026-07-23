@@ -2875,12 +2875,6 @@ return {
 		tt_list = {{
 			tt_title = _("TOWER_PALADIN_COVENANT_LVL4_LEAD_1_NAME"),
 			tt_desc = _("TOWER_PALADIN_COVENANT_LVL4_LEAD_1_DESCRIPTION")
-		}, {
-			tt_title = _("TOWER_PALADIN_COVENANT_LVL4_LEAD_2_NAME"),
-			tt_desc = _("TOWER_PALADIN_COVENANT_LVL4_LEAD_2_DESCRIPTION")
-		}, {
-			tt_title = _("TOWER_PALADIN_COVENANT_LVL4_LEAD_3_NAME"),
-			tt_desc = _("TOWER_PALADIN_COVENANT_LVL4_LEAD_3_DESCRIPTION")
 		}}
 	}), M(tpl.upgrade_power, {
 		action_arg = "healing_prayer",
