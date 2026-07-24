@@ -69,8 +69,8 @@ function screen:update(dt)
 	local init_coro = self.director_ref.queued_item_init_co
 
 	-- 优先保证资源加载的并行线程启动
-	local i_done = I:queue_load_done()
 	local s_done = S:queue_load_done()
+	local i_done = I:queue_load_done()
 
 	-- 同时执行初始化逻辑协程，让 lua 端也不要闲着
 	if init_coro and coroutine.status(init_coro) ~= "dead" then

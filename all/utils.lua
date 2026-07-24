@@ -3143,14 +3143,14 @@ end
 U.hnum_on_applied_impl = function()
 end
 
---- 治疗目标
+--- 治疗目标。负数治疗会被 clamp 到 0.
 ---@param target table
 ---@param amount number
 ---@return number 实际治疗量
 function U.heal(target, amount)
 	local h = target.health
 	local current_hp = h.hp
-	if current_hp >= h.hp_max then
+	if current_hp >= h.hp_max or amount <= 0 then
 		return 0
 	end
 	h.hp = current_hp + amount
