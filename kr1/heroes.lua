@@ -21768,7 +21768,7 @@ tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
 tt.modifier.duration = 1
 
 tt = RT("soldier_hero_orc_goblin", "soldier_militia")
-AC(tt, "reinforcement", "tween")
+AC(tt, "reinforcement", "tween", "nav_grid")
 tt.controable = true
 tt.controable_other = true
 tt.health.armor = 0
@@ -21780,6 +21780,8 @@ tt.unit.head_offset = v(0, 29)
 tt.unit.mod_offset = v(0, 16)
 tt.unit.marker_offset = v(0, 0)
 tt.info.portrait = "kr4_info_portraits_soldiers_0016"
+tt.info.random_name_count = nil
+tt.info.random_name_format = nil
 tt.main_script.insert = scripts.soldier_reinforcement.insert
 tt.main_script.update = scripts.soldier_reinforcement.update
 tt.motion.max_speed = 75
@@ -21814,7 +21816,7 @@ tt.tween.disabled = true
 tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_LYCAN)
 
 tt = RT("soldier_hero_orc_spear_goblin", "soldier_hero_orc_goblin")
-AC(tt, "ranged", "nav_grid")
+AC(tt, "ranged")
 tt.render.sprites[1].prefix = "hero_orc_spear_goblin"
 tt.melee.attacks[1].damage_min = 8
 tt.melee.attacks[1].damage_max = 11

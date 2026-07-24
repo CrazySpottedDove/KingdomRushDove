@@ -6741,5 +6741,7 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	HERO_ISFET_SPECIAL = "黑色蝗虫，青蛙诅咒，冰火雨，血之折磨，黑暗风暴",
 	HERO_ORC_NAME = "维鲁克",
 	HERO_ORC_DESCRIPTION = "维鲁克是一位备受尊敬的兽人部落勇士，曾经为了支持好战分子中的一位领袖，毅然逃出角斗坑，摆脱了自己奴隶的身份。重获自由的他，目前正致力于援助他那些身陷困境的绿皮同僚。",
-	HERO_ORC_SPECIAL = "战之欲，角斗立场，蛮力，瞄准砍击，振臂一呼，好战分子"
+	HERO_ORC_SPECIAL = "战之欲，角斗立场，蛮力，瞄准砍击，振臂一呼，好战分子",
+	SOLDIER_HERO_ORC_GOBLIN_NAME = "哥布林",
+	SOLDIER_HERO_ORC_SPEAR_GOBLIN_NAME = "好战分子"
 }
