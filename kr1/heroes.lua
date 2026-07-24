@@ -21633,8 +21633,8 @@ tt.sound_events.insert = "hero_orc_taunt_1"
 tt.sound_events.respawn = "hero_orc_taunt_1"
 tt.hero.level_stats.armor = {0.12, 0.14, 0.16, 0.18, 0.2, 0.22, 0.24, 0.26, 0.28, 0.3}
 tt.hero.level_stats.hp_max = {240, 276, 312, 348, 384, 420, 456, 492, 528, 564}
-tt.hero.level_stats.melee_damage_max = {16, 19, 22, 25, 28, 31, 34, 37, 40, 43}
-tt.hero.level_stats.melee_damage_min = {5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
+tt.hero.level_stats.melee_damage_max = {19, 22, 25, 28, 31, 34, 37, 40, 43, 46}
+tt.hero.level_stats.melee_damage_min = {6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
 tt.regen.cooldown = 1
 tt.hero.skills.duelist = CC("hero_skill")
 tt.hero.skills.duelist.xp_level_steps = {
@@ -21678,11 +21678,11 @@ tt.hero.skills.ultimate.xp_level_steps = {
 	[7] = 3,
 	[10] = 4
 }
-tt.hero.skills.ultimate.hp_max = {70, 100, 130, 180}
-tt.hero.skills.ultimate.damage_min = {8, 16, 24, 28}
-tt.hero.skills.ultimate.damage_max = {12, 24, 36, 42}
-tt.hero.skills.ultimate.ranged_damage_min = {5, 10, 19, 29}
-tt.hero.skills.ultimate.ranged_damage_max = {7, 14, 29, 43}
+tt.hero.skills.ultimate.hp_max = {90, 120, 150, 180}
+tt.hero.skills.ultimate.damage_min = {16, 20, 24, 28}
+tt.hero.skills.ultimate.damage_max = {18, 26, 34, 42}
+tt.hero.skills.ultimate.ranged_damage_min = {11, 17, 23, 29}
+tt.hero.skills.ultimate.ranged_damage_max = {13, 23, 33, 43}
 -- 近战攻击
 tt.melee.range = 60
 tt.ui.click_rect = r(-23, -5, 46, 50)
