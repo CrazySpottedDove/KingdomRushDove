@@ -21685,7 +21685,7 @@ tt.hero.skills.ultimate.ranged_damage_min = {5, 10, 19, 29}
 tt.hero.skills.ultimate.ranged_damage_max = {7, 14, 29, 43}
 -- 近战攻击
 tt.melee.range = 60
-tt.ui.click_rect = r(-29, -5, 58, 105)
+tt.ui.click_rect = r(-23, -5, 46, 50)
 tt.unit.head_offset = v(0, 48)
 tt.unit.hit_offset = v(0, 30)
 tt.unit.mod_offset = v(0, 30)
