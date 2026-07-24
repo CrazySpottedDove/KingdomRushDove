@@ -21745,6 +21745,7 @@ tt.main_script.update = scripts.aura_unit_regen.update
 tt.regen.cooldown = 1
 tt.regen.health = 18
 tt.regen.ignore_stun = true
+tt.regen.ignore_mods = true
 
 tt = RT("aura_hero_orc_aimed_slash", "aura")
 AC(tt, "render")
