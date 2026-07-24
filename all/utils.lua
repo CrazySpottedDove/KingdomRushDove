@@ -3171,7 +3171,7 @@ function U.heal_with_overflow(target, amount, overflow_factor)
 	local h = target.health
 	local upper_bound = h.hp_max * overflow_factor
 	local current_hp = h.hp
-	if current_hp >= upper_bound then
+	if current_hp >= upper_bound or amount <= 0 then
 		return 0
 	end
 	h.hp = current_hp + amount
