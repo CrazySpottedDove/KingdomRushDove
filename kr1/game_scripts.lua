@@ -31431,7 +31431,7 @@ function scripts.tower_stage_13_sunray.update(this, store)
 	local ab, as = this.attacks.list[1], this.attacks.list[2]
 	local min_attacks_before_special = this.min_attacks_before_special
 	local max_attacks_before_special = this.max_attacks_before_special
-	local attacks_before_special
+	local attacks_before_special = math.random(min_attacks_before_special, max_attacks_before_special)
 	local attacks_count = 0
 	local last_ts = store.tick_ts - ab.cooldown
 	local times_repaired = 0
@@ -31460,7 +31460,7 @@ function scripts.tower_stage_13_sunray.update(this, store)
 		end
 
 		S:queue(this.repair.sound)
-		U.y_animation_play(this, "activate", false, store.tick_ts)
+		U.y_animation_play(this, "activate", false, store.tick_ts, 1, 2)
 		U.animation_start_default(this, "idle", false, store.tick_ts, true)
 
 		ab.ts = store.tick_ts - ab.cooldown + this.attacks.attack_delay_on_spawn
@@ -31516,6 +31516,7 @@ function scripts.tower_stage_13_sunray.update(this, store)
 				b.bullet.from = V.vclone(b.pos)
 				b.bullet.to = target_pos
 				b.bullet.source_id = this.id
+				b.bullet.damage_factor = this.tower.damage_factor
 				b.tower_ref = this
 				b.target_pos = target_pos
 
@@ -31559,11 +31560,11 @@ function scripts.tower_stage_13_sunray.update(this, store)
 						show_decal = 0
 					end
 
-					if U.animation_finished_default(this) and this.render.sprites[1].name == as.animation_in then
+					if U.animation_finished(this, 2) and this.render.sprites[2].name == as.animation_in then
 						U.animation_start_default(this, as.animation_loop, nil, store.tick_ts, true)
 					end
 
-					if store.tick_ts - as.ts > as.duration - fts(1) and this.render.sprites[1].name ~= as.animation_out then
+					if store.tick_ts - as.ts > as.duration - fts(1) and this.render.sprites[2].name ~= as.animation_out then
 						S:queue(as.sound_destroy)
 						U.animation_start_default(this, as.animation_out, nil, store.tick_ts)
 					end
@@ -31572,7 +31573,7 @@ function scripts.tower_stage_13_sunray.update(this, store)
 				end
 
 				queue_remove(store, aura)
-				U.y_animation_wait_default(this)
+				U.y_animation_wait(this, 2)
 				U.animation_start(this, "idleinactive", false, store.tick_ts, true, 1, true)
 
 				this.repair.active = false
@@ -31590,7 +31591,7 @@ function scripts.tower_stage_13_sunray.update(this, store)
 
 			last_ts = store.tick_ts
 
-			U.y_animation_play(this, ab.animation_in, nil, store.tick_ts)
+			U.y_animation_play(this, ab.animation_in, nil, store.tick_ts, 1, 2)
 			U.animation_start_default(this, ab.animation_loop, nil, store.tick_ts, true)
 			S:queue(ab.sound)
 
@@ -31621,13 +31622,14 @@ function scripts.tower_stage_13_sunray.update(this, store)
 			b.bullet.to = V.vclone(enemy_pos)
 			b.bullet.target_id = enemy_id
 			b.bullet.source_id = this.id
+			b.bullet.damage_factor = this.tower.damage_factor
 			b.tower_ref = this
 
 			queue_insert(store, b)
 			U.y_wait(store, ab.duration, function()
 				return not enemy or enemy.health.dead
 			end)
-			U.y_animation_play(this, ab.animation_out, nil, store.tick_ts)
+			U.y_animation_play(this, ab.animation_out, nil, store.tick_ts, 1, 2)
 
 			attacks_count = attacks_count + 1
 
@@ -31723,7 +31725,6 @@ function scripts.mod_sunray.update(this, store)
 		end
 
 		if total_cycles <= cycles then
-			log.paranoid(">>>>> id:%s - mod_ray_arcane cycles:%s raw_damage:%s dps_damage:%s first_damage:%s total_damage:%s", this.id, cycles, raw_damage, dps_damage, first_damage, total_damage)
 			apply_damage(extra_damage)
 
 			break

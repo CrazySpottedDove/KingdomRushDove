@@ -3001,7 +3001,7 @@ return {
 		place = 5,
 		tt_title = _("TOWER_STAGE_13_SUNRAY_REPAIR_NAME"),
 		tt_desc = _("TOWER_STAGE_13_SUNRAY_REPAIR_DESCRIPTION")
-	}}},
+	}, tpl.sell}},
 	tower_stage_18_elven_barrack = {{{
 		check = "main_icons_0019",
 		action_arg = "soldier_tower_stage_18_elven_barrack",
