@@ -21831,6 +21831,7 @@ tt.ranged.attacks[1].cooldown = 1
 tt.ranged.attacks[1].max_range = 175
 tt.ranged.attacks[1].min_range = 25
 tt.ranged.attacks[1].shoot_time = fts(10)
+tt.ranged.attacks[1].check_target_before_shot = true
 
 tt = RT("arrow_soldier_hero_orc_spear_goblin", "arrow")
 tt.bullet.damage_max = 11

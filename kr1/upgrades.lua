@@ -2181,9 +2181,6 @@ function upgrades:patch_templates(max_level)
 
 		local v = self:get_upgrade("reinforcement_level_6")
 
-		if v then
-		end
-
 		if u then
 			for i = 1, 3 do
 				if v then

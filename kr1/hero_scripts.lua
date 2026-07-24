@@ -41938,9 +41938,13 @@ scripts.aura_hero_orc_aimed_slash = {
 					end
 				else
 					if last_buff_level > 0 then
-						target.unit.damage_factor = target.unit.damage_factor / (1 + last_buff_level * this.damage_factor_inc)
-						last_buff_level = 0
-						this.render.sprites[1].hidden = true
+						target.unit.damage_factor = target.unit.damage_factor / (1 + last_buff_level * this.damage_factor_inc) * (1 + this.damage_factor_inc * (last_buff_level - 1))
+						last_buff_level = last_buff_level - 1
+						upgrade_ts = store.tick_ts
+
+						if last_buff_level <= 0 then
+							this.render.sprites[1].hidden = true
+						end
 					end
 				end
 			end

@@ -2738,7 +2738,6 @@ function SU.y_soldier_melee_block_and_attacks(store, this)
 	end
 
 	if attack_done then
-		U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 		return false, A_DONE
 	else
 		return true
