@@ -1,1 +1,1 @@
-return {{date="2026-07-24",author="CrazySpottedDove",message="fix: 修正维鲁克的点击框范围"},{date="2026-07-24",author="CrazySpottedDove",message="perf: 删除冗余的四代防御塔音效"}}
+return {{date="2026-07-24",author="CrazySpottedDove",message="fix: 修正维鲁克的点击框范围"},{date="2026-07-24",author="CrazySpottedDove",message="perf: 删除冗余的四代防御塔音效"},{date="2026-07-24",author="CrazySpottedDove",message="perf: 删除更多冗余的四代防御塔音效"}}
