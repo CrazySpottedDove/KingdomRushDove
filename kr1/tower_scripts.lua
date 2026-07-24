@@ -489,7 +489,7 @@ scripts.tower_musketeer = {
 								goto continue_ax
 							end
 
-							for _, axx in ipairs({aa, asi, asn}) do
+							for _, axx in ipairs({asi, asn}) do
 								axx.ts = store.tick_ts
 							end
 
@@ -521,7 +521,7 @@ scripts.tower_musketeer = {
 				end
 
 				if ready_to_use_power(pow_sh, ash, store, tw.cooldown_factor) then
-					local enemy = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, ash.range * 1.5, nil, ash.vis_flags, ash.vis_bans, ash.min_spread + 48)
+					local enemy = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, ash.range * 1.5, nil, ash.vis_flags, ash.vis_bans, ash.min_spread)
 
 					if not enemy then
 						ash.ts = ash.ts + fts(5)
@@ -529,14 +529,12 @@ scripts.tower_musketeer = {
 						local distance = V.dist(tpos.x, tpos.y, enemy.pos.x, enemy.pos.y)
 
 						ash.ts = store.tick_ts
-						aa.ts = store.tick_ts
 
 						local distance_factor = 1
-						local spread_factor = 1
+						local spread_factor = km.clamp(0.75, 1.5, distance / ash.range)
 
 						if distance > ash.range then
 							distance_factor = 0.6
-							spread_factor = 1.5
 							ash.ts = ash.ts - 0.4 * ash.cooldown
 						end
 
@@ -552,7 +550,7 @@ scripts.tower_musketeer = {
 						sprites[fsid].flip_x = fuse_idx < shooter_idx
 						U.change_sprite_draw_order(this, ssid, 5)
 
-						y_wait(store, ash.shoot_time)
+						U.y_wait_unconditional(store, ash.shoot_time)
 
 						local shooting_right = tpos.x < enemy.pos.x
 						local soffset = sprites[ssid].offset
