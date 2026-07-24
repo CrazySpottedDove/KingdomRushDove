@@ -21769,6 +21769,8 @@ tt.modifier.duration = 1
 
 tt = RT("soldier_hero_orc_goblin", "soldier_militia")
 AC(tt, "reinforcement", "tween")
+tt.controable = true
+tt.controable_other = true
 tt.health.armor = 0
 tt.health.magic_armor = 0
 tt.health.hp_max = 35

@@ -3369,7 +3369,7 @@ get_damage(e.melee.attacks[1])
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
 count = h.timed_attacks.list[1].count
-map["振臂一呼"] = str(cooldown_str(), "呼叫", count, "名拥有", health_str(), "的哥布林助战，每次攻击造成", damage_str(), "，驻场", e.reinforcement.duration, "秒。")
+map["振臂一呼"] = str(cooldown_str(), "呼叫", count, "名拥有", health_str(), "的哥布林助战，每次攻击造成", damage_str(), "，驻场", e.reinforcement.duration, "秒。哥布林可调集。")
 
 set_skill(h.hero.skills.ultimate)
 e = T("soldier_hero_orc_spear_goblin")
