@@ -3048,6 +3048,7 @@ tt.melee.attacks[2].pop_chance = 0.3
 tt.melee.attacks[2].sound_hit = "SwampMonsterExplosion"
 tt.melee.attacks[2].chance = 0
 tt.melee.attacks[2].chance_inc = 0.2
+tt.melee.attacks[2].chance_base = tt.melee.attacks[2].chance
 tt.melee.attacks[2].disabled = true
 tt.melee.attacks[2].power_name = "stun"
 tt.melee.attacks[3] = CC("area_attack")
@@ -3090,7 +3091,7 @@ tt.powers.instakill = CC("power")
 tt.powers.stun = CC("powers")
 tt.powers.stun.on_power_upgrade = function(this, power_name, power)
 	this.melee.attacks[3].mod = "mod_swamp_stun"
-	this.melee.attacks[3].mod_chance = this.melee.attacks[2].chance + this.melee.attacks[2].chance_inc * power.level
+	this.melee.attacks[3].mod_chance = this.melee.attacks[2].chance_base + this.melee.attacks[2].chance_inc * power.level
 end
 tt.powers.eat = CC("powers")
 tt.powers.eat.on_power_upgrade = function(this, power_name, power)

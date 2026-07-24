@@ -6780,6 +6780,7 @@ function scripts.mod_heal_on_kill.update(this, store)
 	end
 
 	this.pos = target.pos
+	local has_kills = false
 
 	while true do
 		target = store.entities[m.target_id]
@@ -6827,6 +6828,8 @@ function scripts.mod_heal_on_kill.update(this, store)
 				this.render.sprites[1].hidden = false
 				this.render.sprites[1].runs = 0
 			end
+
+			has_kills = false
 		end
 
 		coroutine.yield()
