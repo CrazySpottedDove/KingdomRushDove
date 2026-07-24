@@ -8072,6 +8072,28 @@ end
 
 scripts.power_reinforcements_control = {}
 
+function scripts.power_reinforcements_control.insert(this, store)
+	local i = math.random(1, 3)
+	local e = E:create_entity("re_current_" .. i)
+
+	e.pos.x = this.pos.x + 10
+	e.pos.y = this.pos.y - 10
+	e.nav_rally.center:copy(this.pos)
+	e.nav_rally.pos:copy(e.pos)
+	queue_insert(store, e)
+
+	i = math.random(1, 3)
+	e = E:create_entity("re_current_" .. i)
+	e.pos.x = this.pos.x - 10
+	e.pos.y = this.pos.y + 10
+	e.nav_rally.center:copy(this.pos)
+	e.nav_rally.pos:copy(e.pos)
+
+	queue_insert(store, e)
+
+	return false
+end
+
 function scripts.power_reinforcements_control.can_select_point(this, x, y)
 	return P:valid_node_nearby(x, y, nil, NF_RALLY) and GR:cell_is_only(x, y, bor(TERRAIN_LAND, TERRAIN_ICE))
 end

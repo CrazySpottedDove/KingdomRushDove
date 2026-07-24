@@ -2657,21 +2657,8 @@ end
 function Power2Button:fire(wx, wy)
 	Power2Button.super.fire(self, wx, wy)
 
-	local i = math.random(1, 3)
-	local e = E:create_entity("re_current_" .. i)
-
-	e.pos.x = wx + 10
-	e.pos.y = wy - 10
-	e.nav_rally.center = V.v(wx, wy)
-	e.nav_rally.pos = V.vclone(e.pos)
-	game_gui.game.simulation:insert_entity(e)
-	i = math.random(1, 3)
-	e = E:create_entity("re_current_" .. i)
-	e.pos.x = wx - 10
-	e.pos.y = wy + 10
-	e.nav_rally.center = V.v(wx, wy)
-	e.nav_rally.pos = V.vclone(e.pos)
-
+	local e = E:create_entity("user_power_2")
+	e.pos.x, e.pos.y = wx, wy
 	game_gui.game.simulation:insert_entity(e)
 
 	signal.emit("power-used", 2)

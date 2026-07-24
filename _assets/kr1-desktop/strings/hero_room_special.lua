@@ -3346,6 +3346,57 @@ map["黑暗风暴"] = str(cooldown_str(), "召唤一场致命的风暴，对区�
 
 map["倒下的仆从"] = str("当靠近伊斯菲特的敌人死亡时，有50%概率作为木乃伊复活为其作战。")
 
+set_hero("hero_orc")
+
+set_skill(h.hero.skills.duelist)
+cooldown = h.melee.attacks[3].cooldown
+d[1].damage_min = ss("damage_config")
+d[1].damage_max = ss("damage_config")
+d[1].damage_type = h.melee.attacks[3].damage_type
+map["瞄准砍击"] = str(cooldown_str(), "维鲁克连续斩击两次，每次造成", damage_str(), "。")
+
+set_skill(h.hero.skills.brute_force)
+cooldown = ss("cooldown")
+duration = ss("duration")
+map["蛮力"] = str(cooldown_str(), "维鲁克猛砍地面，造成范围普攻伤害，并使附近敌人眩晕", duration, "秒。")
+
+set_skill(h.hero.skills.inspiring_leader)
+cooldown = ss("cooldown")
+e = T("soldier_hero_orc_goblin")
+get_health(e)
+health[1].hp_max = ss("hp_max")
+get_damage(e.melee.attacks[1])
+d[1].damage_min = ss("damage_min")
+d[1].damage_max = ss("damage_max")
+count = h.timed_attacks.list[1].count
+map["振臂一呼"] = str(cooldown_str(), "呼叫", count, "名拥有", health_str(), "的哥布林助战，每次攻击造成", damage_str(), "，驻场", e.reinforcement.duration, "秒。")
+
+set_skill(h.hero.skills.ultimate)
+e = T("soldier_hero_orc_spear_goblin")
+get_health(e)
+get_damage(e.melee.attacks[1])
+d[1].damage_min = ss("damage_min")
+d[1].damage_max = ss("damage_max")
+duration = e.reinforcement.duration
+e = T(e.ranged.attacks[1].bullet)
+get_damage(e.bullet, 2)
+d[2].damage_min = ss("ranged_damage_min")
+d[2].damage_max = ss("ranged_damage_max")
+
+map["好战分子"] = str("维鲁克将一名投矛哥布林编入援军，每次近战攻击造成", damage_str(), "，远程攻击造成", damage_str(2), "，驻场", duration, "秒。")
+
+e = T("aura_hero_orc_regen")
+amount = e.regen.health
+cooldown = e.regen.cooldown
+map["战之欲"] = str(cooldown_str(), "维鲁克恢复", amount, "点生命值。")
+
+set_skill(h.hero.skills.aimed_slash)
+amount = ss("max_buff_level")
+e = T("aura_hero_orc_aimed_slash")
+amount_2 = e.damage_factor_inc
+cycle_time = e.upgrade_cycle_time
+map["角斗立场"] = str("处于战斗状态时，维鲁克提升自身伤害", amount_2 * 100, "%，每", cycle_time, "秒叠加1层，最多叠加", amount, "层。")
+
 -- function H.dump()
 -- 	for hero_name, skills in pairs(H) do
 -- 		print("Hero:", hero_name)

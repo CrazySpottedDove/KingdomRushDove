@@ -54,7 +54,7 @@ local function queue_damage(store, damage)
 	table.insert(store.damage_queue, damage)
 end
 
-local function apply_ultimate(this, store, target, animation_name)
+local function apply_ultimate(this, store, pos, animation_name)
 	if animation_name then
 		U.y_animation_play(this, animation_name, nil, store.tick_ts, 1)
 	end
@@ -63,7 +63,7 @@ local function apply_ultimate(this, store, target, animation_name)
 
 	local e = E:create_entity(this.hero.skills.ultimate.controller_name)
 
-	e.pos.x, e.pos.y = target.pos.x, target.pos.y
+	e.pos:copy(pos)
 	e.damage_factor = this.unit.damage_factor
 	e.level = this.hero.skills.ultimate.level
 
@@ -106,6 +106,14 @@ end
 local function inc_magic_armor_by_skill(this, amount)
 	this.health.raw_magic_armor = this.health.raw_magic_armor + amount
 	this.health.magic_armor = km.clamp(0, 1, this.health.magic_armor + amount)
+end
+
+local function update_hp(this)
+	if not this.health.hp then
+		this.health.hp = this.health.hp_max
+	else
+		U.heal(this, this.health.hp_max)
+	end
 end
 
 ---升级基础属性
@@ -224,7 +232,7 @@ scripts.hero_gerald = {
 			a.damage_max = s.damage_max[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	fn_can_dodge = function(store, this, ranged_attack, attack, source)
 		if (source and source.vis and band(source.vis.flags, F_BOSS) ~= 0) and math.random() > this.dodge.low_chance_factor then
@@ -379,7 +387,7 @@ scripts.soldier_alleria_wildcat = {
 		local hp_factor = GS.difficulty_soldier_hp_max_factor[store.level_difficulty]
 
 		this.health.hp_max = skill.hp_base + skill.hp_inc * skill.level * hp_factor
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 
 		local at = this.melee.attacks[1]
 
@@ -562,7 +570,7 @@ scripts.hero_alleria = {
 			b.bullet.target_num = s.count_base + s.count_inc * s.level
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	update = function(this, store)
 		local h = this.health
@@ -858,7 +866,7 @@ scripts.hero_mirage = {
 			la.damage_max = s.damage_max[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	update = function(this, store)
 		local h = this.health
@@ -1451,7 +1459,7 @@ scripts.hero_wizard = {
 
 		m.damage_max = ls.ranged_damage_max[hl] + this.arcanefocus_extra
 		m.damage_min = ls.ranged_damage_min[hl] + this.arcanefocus_extra
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	update = function(this, store)
 		local h = this.health
@@ -1741,7 +1749,7 @@ scripts.hero_alric = {
 
 		update_regen(this)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	update = function(this, store)
 		local h = this.health
@@ -1933,7 +1941,7 @@ scripts.hero_bolin = {
 			this.timed_attacks.list[5].disabled = nil
 		end
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	update = function(this, store)
 		local h = this.health
@@ -2425,7 +2433,7 @@ scripts.hero_denas = {
 			r.bullet.damage_max = s.damage_max[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	update = function(this, store)
 		local h = this.health
@@ -2909,7 +2917,7 @@ scripts.beastmaster_pet = {
 			this.health.hp_max = s.wolf_hp_max[s.level]
 		end
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end
 }
 -- 兽王
@@ -2969,7 +2977,7 @@ scripts.hero_beastmaster = {
 			this.falcons_max = s.count[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 		this.timed_attacks.list[2].ts = -this.timed_attacks.list[2].cooldown
 	end,
 	insert = function(this, store)
@@ -3412,7 +3420,7 @@ scripts.hero_van_helsing = {
 			this.info.hero_portrait_always_on = true
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	insert = function(this, store)
 		this.hero.fn_level_up(this, store)
@@ -3480,7 +3488,7 @@ scripts.hero_van_helsing = {
 					this.force_respawn = false
 					this.vis.flags = flags
 					this.render.sprites[1].prefix = prefix
-					this.health.hp = this.health.hp_max
+					update_hp(this)
 					this.health.dead = false
 					this.health.ignore_damage = false
 					this.info.hero_portrait = this.info.hero_portrait_alive
@@ -3920,7 +3928,7 @@ scripts.hero_malik = {
 			au.aura.damage_max = s.damage_max[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	update = function(this, store)
 		local h = this.health
@@ -4138,7 +4146,7 @@ scripts.hero_priest = {
 		update_regen(this)
 		inc_armor_by_skill(this, this.blessedarmor_extra)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	update = function(this, store)
 		local h = this.health
@@ -4659,7 +4667,7 @@ scripts.hero_magnus = {
 			r.damage_max = s.damage[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	update = function(this, store)
 		local h = this.health
@@ -4988,7 +4996,7 @@ scripts.hero_giant = {
 			mod.damage_max = ls.melee_damage_max[hl] + s.extra_damage[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	insert = function(this, store)
 		this.hero.fn_level_up(this, store)
@@ -5223,7 +5231,7 @@ scripts.hero_dracolich = {
 			m.spread_active = true
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end
 }
 
@@ -5661,7 +5669,7 @@ scripts.hero_pirate = {
 
 		update_regen(this)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end
 }
 
@@ -5920,7 +5928,7 @@ scripts.hero_elora = {
 			b.bullet.damage_max = s.damage_max[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end
 }
 
@@ -6141,7 +6149,7 @@ scripts.hero_hacksaw = {
 			a.cooldown = s.cooldown[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	side_effect = function(this, store, attack, target)
 		local fx = E:create_entity("fx_coin_jump")
@@ -6245,7 +6253,7 @@ scripts.hero_ingvar = {
 			a.damage_max = s.damage_max[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	get_info = function(this)
 		local info = scripts.soldier_barrack.get_info(this)
@@ -6458,7 +6466,7 @@ scripts.hero_ignus = {
 			aura.aura.damage_max = s.damage_max[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	update = function(this, store)
 		local h = this.health
@@ -6784,7 +6792,7 @@ scripts.hero_oni = {
 			this.unyield_max = s.unyield_max[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	on_damage = function(this, store, damage)
 		if this.timed_attacks.list[1].ts then
@@ -6970,7 +6978,7 @@ scripts.hero_thor = {
 			mod.thunderclap.max_range = s.max_range[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end
 }
 
@@ -7089,7 +7097,7 @@ scripts.hero_10yr = {
 			a.damage_max = s.spin_damage_max[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	update = function(this, store)
 		local h = this.health
@@ -7676,7 +7684,7 @@ scripts.hero_dragon = {
 			b.bullet.mod = "mod_dragon_reign"
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	update = function(this, store)
 		local h = this.health
@@ -8301,7 +8309,7 @@ scripts.hero_vampiress = {
 
 		a.damage_min = ls.melee_damage_min[hl] + this.gain_count * gain.damage
 		a.damage_max = ls.melee_damage_max[hl] + this.gain_count * gain.damage
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end
 }
 
@@ -8508,7 +8516,7 @@ scripts.hero_alien = {
 			this.selfdestruct.damage = s.damage[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 		this.ranged.attacks[1].ts = -this.ranged.attacks[1].cooldown
 		this.timed_attacks.list[1].ts = -this.timed_attacks.list[1].cooldown
 		this.timed_attacks.list[2].ts = -this.timed_attacks.list[2].cooldown
@@ -8719,7 +8727,7 @@ scripts.hero_monk = {
 			this.dodge.cooldown = s.cooldown[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 		this.melee.attacks[4].ts = -this.melee.attacks[4].cooldown
 		this.melee.attacks[5].ts = -this.melee.attacks[5].cooldown
 		this.timed_attacks.list[1].ts = -this.timed_attacks.list[1].cooldown
@@ -9076,7 +9084,7 @@ scripts.hero_voodoo_witch = {
 			a.count = s.count[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end
 }
 
@@ -9300,7 +9308,7 @@ scripts.hero_crab = {
 			this.burrow.damage = s.damage[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end
 }
 
@@ -9811,7 +9819,7 @@ scripts.hero_minotaur = {
 			a.damage_max = s.damage_max[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	update = function(this, store)
 		local h = this.health
@@ -10218,7 +10226,7 @@ scripts.hero_monkey_god = {
 			m.received_damage_factor = s.received_damage_factor[s.level]
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	insert = function(this, store)
 		this.hero.fn_level_up(this, store)
@@ -10539,7 +10547,7 @@ scripts.hero_elves_archer = {
 			this.ultimate.disabled = nil
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	insert = function(this, store)
 		this.hero.fn_level_up(this, store)
@@ -11052,7 +11060,7 @@ scripts.hero_regson = {
 
 		update_regen(this)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	insert = function(this, store)
 		this.hero.fn_level_up(this, store)
@@ -11682,7 +11690,7 @@ function scripts.hero_lynn.level_up(this, store)
 		this.ultimate.curse_damage_all = s.damage[s.level] * 10
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_lynn.update(this, store)
@@ -12133,7 +12141,7 @@ function scripts.hero_wilbur.level_up(this, store)
 	end)
 	U.update_max_speed(this, this.motion.max_speed_base * this.engine_factor)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_wilbur.insert(this, store)
@@ -12638,7 +12646,7 @@ function scripts.hero_veznan.level_up(this, store)
 	this.timed_attacks.list[1].range = this.timed_attacks.list[1].range_base * this.hermeticinsight_factor
 	this.timed_attacks.list[2].range = this.timed_attacks.list[2].range_base * this.hermeticinsight_factor
 	this.timed_attacks.list[3].max_range = this.timed_attacks.list[3].max_range_base * this.hermeticinsight_factor
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_veznan.update(this, store)
@@ -13010,7 +13018,7 @@ function scripts.hero_durax.level_up(this, store)
 		upgrade_all_skill()
 	end
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_durax.update(this, store)
@@ -13342,7 +13350,7 @@ function scripts.hero_elves_denas.level_up(this, store)
 		this.ultimate.cooldown = s.cooldown[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_elves_denas.insert(this, store)
@@ -13776,7 +13784,7 @@ function scripts.hero_arivan.level_up(this, store)
 
 	this.melee.attacks[1].damage_min = this.melee_raw_min + this.stone_extra
 	this.melee.attacks[1].damage_max = this.melee_raw_max + this.stone_extra
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_arivan.on_damage(this, store, damage)
@@ -14372,7 +14380,7 @@ function scripts.hero_phoenix.level_up(this, store, initiaal)
 		au.aura.damage_min = s.damage_min[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_phoenix.insert(this, store)
@@ -14671,7 +14679,7 @@ function scripts.hero_bravebark.level_up(this, store)
 		u.damage = s.damage[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_bravebark.update(this, store)
@@ -15053,7 +15061,7 @@ function scripts.hero_catha.level_up(this, store)
 		this.ultimate.range = s.range[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_catha.update(this, store)
@@ -15391,7 +15399,7 @@ function scripts.hero_lilith.level_up(this, store)
 		b.bullet.damage_max = s.meteor_damage[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_lilith.insert(this, store)
@@ -15758,7 +15766,7 @@ function scripts.hero_xin.level_up(this, store, initial)
 		end
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_xin.update(this, store)
@@ -16242,7 +16250,7 @@ function scripts.hero_faustus.level_up(this, store)
 		this.ranged.attacks[2].bullet_count = s.count[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_faustus.insert(this, store)
@@ -16539,7 +16547,7 @@ function scripts.hero_rag.level_up(this, store, initial)
 		u.max_count = s.max_count[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_rag.update(this, store)
@@ -16964,7 +16972,7 @@ function scripts.hero_bruce.level_up(this, store)
 
 	update_regen(this)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_bruce.insert(this, store)
@@ -17236,7 +17244,7 @@ function scripts.hero_bolverk.level_up(this, store)
 		this.berserker_factor = s.factor[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_bolverk.insert(this, store)
@@ -17370,7 +17378,7 @@ scripts.hero_dwarf = {
 			a.disabled = nil
 		end)
 
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end,
 	update = function(this, store)
 		local h = this.health
@@ -17665,7 +17673,7 @@ function scripts.hero_hunter.level_up(this, store)
 		mod.inflicted_damage_factor = s.damage_factor[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 	this.hero.melee_active_status = {}
 
 	for index, attack in ipairs(this.melee.attacks) do
@@ -19227,7 +19235,7 @@ function scripts.hero_space_elf.level_up(this, store)
 		this.ultimate.cooldown = s.cooldown[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 	this.hero.melee_active_status = {}
 
 	for index, attack in ipairs(this.melee.attacks) do
@@ -20361,7 +20369,7 @@ function scripts.hero_raelyn.level_up(this, store)
 		hit_aura.aura.damage_min = a.damage_min * s.damage_factor[s.level]
 	end
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 	this.hero.melee_active_status = {}
 
 	for index, attack in ipairs(this.melee.attacks) do
@@ -20884,7 +20892,7 @@ function scripts.hero_venom.level_up(this, store, initial)
 		aura.aura.duration = s.duration[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_venom.insert(this, store)
@@ -21835,7 +21843,7 @@ function scripts.hero_dragon_gem.level_up(this, store, initial)
 		decal.damage_max = s.damage_max[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_dragon_gem.insert(this, store)
@@ -23448,7 +23456,7 @@ function scripts.hero_witch.level_up(this, store, initial)
 		mend.modifier.duration = s.duration[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 	this.hero.melee_active_status = {}
 
 	for index, attack in ipairs(this.melee.attacks) do
@@ -23583,7 +23591,7 @@ function scripts.hero_witch.update(this, store)
 				local target = U.find_teleport_moment(store, this.pos, this.ranged.attacks[1].max_range, MANY_ENEMY_COUNT)
 
 				if target and U.has_valid_rally_node_nearby(target.pos) then
-					apply_ultimate(this, store, target, "levelup")
+					apply_ultimate(this, store, target.pos, "levelup")
 				else
 					this.ultimate.ts = this.ultimate.ts + 1
 				end
@@ -24727,7 +24735,7 @@ function scripts.hero_dragon_bone.level_up(this, store, initial)
 		dog.melee.attacks[1].damage_max = s.damage_max[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_dragon_bone.insert(this, store)
@@ -24773,7 +24781,7 @@ function scripts.hero_dragon_bone.update(this, store)
 			local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, basic_ranged.max_range, F_BLOCK, F_NONE)
 
 			if target and U.has_valid_rally_node_nearby(target.pos) then
-				apply_ultimate(this, store, target, "levelup")
+				apply_ultimate(this, store, target.pos, "levelup")
 			else
 				a.ts = a.ts + 1
 			end
@@ -25897,7 +25905,7 @@ function scripts.hero_lumenir.level_up(this, store, initial)
 		soldier.max_attack_count = s.max_attack_count
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_lumenir.insert(this, store)
@@ -25991,7 +25999,7 @@ function scripts.hero_lumenir.update(this, store)
 			local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, basic_ranged.max_range, F_RANGED, F_NONE)
 
 			if target and U.has_valid_rally_node_nearby(target.pos) then
-				apply_ultimate(this, store, target, "levelup")
+				apply_ultimate(this, store, target.pos, "levelup")
 			else
 				a.ts = a.ts + 1
 			end
@@ -27093,7 +27101,7 @@ function scripts.hero_wukong.level_up(this, store, initial)
 		u_slow_mod.slow.factor = s.slow_factor[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 	this.hero.melee_active_status = {}
 
 	for index, attack in ipairs(this.melee.attacks) do
@@ -27384,7 +27392,7 @@ function scripts.hero_wukong.update(this, store)
 				local target = find_target_at_critical_moment(this, store, hair_clones_attack.max_range, false, false)
 
 				if target and U.has_valid_rally_node_nearby(target.pos) then
-					apply_ultimate(this, store, target, "levelup")
+					apply_ultimate(this, store, target.pos, "levelup")
 					U.heal(this, h.hp_max)
 
 					if this.health.dead then
@@ -28301,7 +28309,7 @@ function scripts.hero_vesper.level_up(this, store, initial)
 		this.ultimate.cooldown = s.cooldown[sl]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 	this.hero.melee_active_status = {}
 
 	for index, attack in ipairs(this.melee.attacks) do
@@ -28882,7 +28890,7 @@ function scripts.hero_muyrn.level_up(this, store)
 		m_damage.dps.damage_max = s.damage_max[sl]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_muyrn.insert(this, store)
@@ -29995,7 +30003,7 @@ function scripts.hero_dragon_arb.level_up(this, store)
 		mod.fast.factor = s.speed_factor[sl]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_dragon_arb.insert(this, store)
@@ -32380,7 +32388,7 @@ function scripts.hero_builder.level_up(this, store)
 		m.modifier.duration = s.stun_duration[sl]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_builder.insert(this, store)
@@ -33015,7 +33023,7 @@ function scripts.hero_robot.level_up(this, store)
 		mod.dps.damage_max = s.burning_damage_max[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 	this.hero.melee_active_status = {}
 
 	for index, attack in ipairs(this.melee.attacks) do
@@ -34359,7 +34367,7 @@ function scripts.hero_bird.level_up(this, store, initial)
 		child.duration = s.duration[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_bird.insert(this, store)
@@ -35084,7 +35092,7 @@ function scripts.hero_lava.level_up(this, store, initial)
 		bc.bullet.damage_max = b.bullet.damage_max
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_lava.insert(this, store)
@@ -35275,7 +35283,7 @@ function scripts.hero_lava.update(this, store)
 			this.vis.bans = bans
 			this.vis.flags = flags
 			this.render.sprites[1].prefix = prefix
-			this.health.hp = this.health.hp_max
+			update_hp(this)
 			this.health.dead = false
 			this.health.ignore_damage = false
 
@@ -35716,7 +35724,7 @@ function scripts.hero_spider.level_up(this, store, initial)
 		spider.melee.attacks[1].damage_max = s.damage_max[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 
 	this.hero.melee_active_status = {}
 
@@ -36400,7 +36408,7 @@ function scripts.hero_mecha.level_up(this, store, initial)
 		bullet.bullet.damage_max = s.damage_max[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_mecha.insert(this, store)
@@ -37607,7 +37615,7 @@ function scripts.hero_dragon_sun.level_up(this, store)
 		bullet.bullet.damage_min = s.damage_min[sl]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_dragon_sun.insert(this, store)
@@ -39070,7 +39078,7 @@ function scripts.hero_eiskalt.level_up(this, store)
 		u.duration = s.duration[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_eiskalt.update(this, store)
@@ -39669,7 +39677,7 @@ function scripts.hero_asra.level_up(this, store)
 		e.bullet.damage_max = s.damage_config[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_asra.teleport_side_effect(this, store)
@@ -39710,7 +39718,7 @@ function scripts.hero_asra.update(this, store)
 				local enemy = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range, true)
 
 				if enemy and enemy.pos then
-					apply_ultimate(this, store, enemy, "special")
+					apply_ultimate(this, store, enemy.pos, "special")
 				else
 					this.ultimate.ts = this.ultimate.ts + 1
 				end
@@ -39882,6 +39890,8 @@ function scripts.hero_beresad.level_up(this, store, initial)
 		e.health.hp_max = s.hp[s.level]
 		e.melee.attacks[1].damage_min = s.damage_min[s.level]
 		e.melee.attacks[1].damage_max = s.damage_max[s.level]
+		e.melee.attacks[2].damage_min = s.damage_min[s.level]
+		e.melee.attacks[2].damage_max = s.damage_max[s.level]
 		e = E:get_template("bomb_beresad_golem")
 		e.bullet.damage_min = s.explode_damage_min[s.level]
 		e.bullet.damage_max = s.explode_damage_max[s.level]
@@ -39902,7 +39912,7 @@ function scripts.hero_beresad.level_up(this, store, initial)
 		m.dps.damage_max = s.damage[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_beresad.update(this, store)
@@ -40386,7 +40396,7 @@ function scripts.hero_dianyun.level_up(this, store)
 		entity.bullets_to_death = s.bullets_to_death[s.level]
 	end)
 
-	this.health.hp = this.health.hp_max
+	update_hp(this)
 end
 
 function scripts.hero_dianyun.insert(this, store)
@@ -40953,7 +40963,7 @@ function scripts.hero_isfet.level_up(this, store, initial)
 	controller.cooldown = s.cooldown[s.level]
 
 	if initial then
-		this.health.hp = this.health.hp_max
+		update_hp(this)
 	end
 end
 
@@ -41735,5 +41745,212 @@ function scripts.controller_hero_isfet_ultimate.update(this, store)
 	queue_remove(store, this)
 end
 --#endregion hero_isfet
+
+--#region hero_orc
+scripts.hero_orc = {}
+
+function scripts.hero_orc.level_up(this, store, initial)
+	local hl, ls = level_up_basic(this)
+
+	this.melee.attacks[1].damage_min = ls.melee_damage_min[hl]
+	this.melee.attacks[1].damage_max = ls.melee_damage_max[hl]
+	this.melee.attacks[2].damage_min = ls.melee_damage_min[hl]
+	this.melee.attacks[2].damage_max = ls.melee_damage_max[hl]
+	this.melee.attacks[4].damage_min = ls.melee_damage_min[hl]
+	this.melee.attacks[4].damage_max = ls.melee_damage_max[hl]
+
+	upgrade_skill(this, "duelist", function(this, s)
+		this.melee.attacks[3].disabled = nil
+		this.melee.attacks[3].damage_min = s.damage_config[s.level]
+		this.melee.attacks[3].damage_max = s.damage_config[s.level]
+	end)
+
+	upgrade_skill(this, "brute_force", function(this, s)
+		this.melee.attacks[4].disabled = nil
+		this.melee.attacks[4].cooldown = s.cooldown[s.level]
+		local e = E:get_template(this.melee.attacks[4].mod)
+		e.modifier.duration = s.duration[s.level]
+	end)
+
+	upgrade_skill(this, "inspiring_leader", function(this, s)
+		this.timed_attacks.list[1].disabled = nil
+		this.timed_attacks.list[1].cooldown = s.cooldown[s.level]
+		local e = E:get_template(this.timed_attacks.list[1].entity)
+		e.melee.attacks[1].damage_min = s.damage_min[s.level]
+		e.melee.attacks[1].damage_max = s.damage_max[s.level]
+		e.health.hp_max = s.hp_max[s.level]
+	end)
+
+	upgrade_skill(this, "aimed_slash", function(this, s)
+		E:get_template("aura_hero_orc_aimed_slash").max_buff_level = s.max_buff_level[s.level]
+	end)
+
+	upgrade_skill(this, "ultimate", function(this, s)
+		local e = E:get_template("soldier_hero_orc_spear_goblin")
+		e.melee.attacks[1].damage_min = s.damage_min[s.level]
+		e.melee.attacks[1].damage_max = s.damage_max[s.level]
+		e.health.hp_max = s.hp_max[s.level]
+
+		e = E:get_template(e.ranged.attacks[1].bullet)
+		e.bullet.damage_min = s.ranged_damage_min[s.level]
+		e.bullet.damage_max = s.ranged_damage_max[s.level]
+	end)
+
+	update_hp(this)
+end
+
+function scripts.hero_orc.update(this, store)
+	local h = this.health
+	local sa = this.timed_attacks.list[1]
+
+	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
+	this.health_bar.hidden = false
+
+	do
+		local e = E:create_entity("aura_hero_orc_regen")
+		e.aura.source_id = this.id
+		queue_insert(store, e)
+
+		e = E:create_entity("aura_hero_orc_aimed_slash")
+		e.aura.source_id = this.id
+		e.aura.target_id = this.id
+		e.pos = this.pos
+		queue_insert(store, e)
+
+		e = E:get_template("user_power_2")
+		if not e._hero_orc_ultimate_applied then
+			local origin_insert = e.main_script.insert
+			e.main_script.insert = function(this, store)
+				e = E:create_entity("fx_hero_orc_ultimate")
+				e.pos:copy(this.pos)
+				e.render.sprites[1].ts = store.tick_ts
+				queue_insert(store, e)
+
+				e = E:create_entity("soldier_hero_orc_spear_goblin")
+
+				e.pos:copy(this.pos)
+				e.nav_rally.center:copy(this.pos)
+				e.nav_rally.pos:copy(this.pos)
+				queue_insert(store, e)
+
+				return origin_insert(this, store)
+			end
+			e._hero_orc_ultimate_applied = true
+		end
+	end
+
+	while true do
+		if h.dead then
+			SU.y_hero_death_and_respawn(store, this)
+
+			local e = E:create_entity("aura_hero_orc_regen")
+			e.aura.source_id = this.id
+			queue_insert(store, e)
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			while this.nav_rally.new do
+				if SU.y_hero_new_rally(store, this) then
+					goto continue
+				end
+			end
+
+			if SU.hero_level_up(store, this) then
+				U.y_animation_play(this, "levelup", nil, store.tick_ts)
+			end
+
+			if ready_to_use_skill(sa, store, this.unit.cooldown_factor) then
+				local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, this.melee.range, sa.vis_flags, sa.vis_bans)
+				if target then
+					S:queue(sa.sound)
+					U.animation_start_once_specific(this, sa.animation, target.pos.x < this.pos.x, store.tick_ts, 1)
+
+					if SU.y_hero_wait(store, this, sa.spawn_time) then
+						goto continue
+					end
+
+					sa.ts = store.tick_ts
+					SU.hero_gain_xp_from_skill(this, this.hero.skills.inspiring_leader)
+					local ni = P:nearest_node_with_nav_path_info(this.pos, target.nav_path)
+
+					for i = 1, sa.count do
+						local e = E:create_entity(sa.entity)
+						e.pos:copy(P:node_pos_ref(target.nav_path.pi, km.zmod(i + 1, 3), ni))
+						e.nav_rally.center:copy(e.pos)
+						e.nav_rally.pos:copy(e.pos)
+						queue_insert(store, e)
+					end
+
+					if SU.y_hero_animation_wait(this) then
+						goto continue
+					end
+				else
+					sa.ts = sa.ts + 0.1
+				end
+			end
+
+			local brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+			if brk or sta ~= A_NO_TARGET then
+			-- block empty
+			elseif SU.soldier_go_back_step(store, this) then
+			-- block empty
+			else
+				SU.soldier_idle(store, this)
+				SU.soldier_regen(store, this)
+			end
+		end
+
+		::continue::
+
+		coroutine.yield()
+	end
+end
+
+scripts.aura_hero_orc_aimed_slash = {
+	update = function(this, store)
+		local a = this.aura
+		local target = store.entities[a.target_id]
+		if not target then
+			queue_remove(store, this)
+			return
+		end
+
+		local last_buff_level = 0
+		a.ts = store.tick_ts
+		local upgrade_ts = store.tick_ts
+
+		while store.entities[target.id] do
+			if store.tick_ts - a.ts > a.cycle_time then
+				a.ts = store.tick_ts
+				if target.soldier.target_id then
+					if last_buff_level == 0 then
+						upgrade_ts = store.tick_ts - this.upgrade_cycle_time
+					end
+
+					if store.tick_ts - upgrade_ts >= this.upgrade_cycle_time and last_buff_level < this.max_buff_level then
+						target.unit.damage_factor = target.unit.damage_factor * (1 + this.damage_factor_inc * (last_buff_level + 1)) / (1 + this.damage_factor_inc * last_buff_level)
+						last_buff_level = last_buff_level + 1
+						upgrade_ts = store.tick_ts
+						this.render.sprites[1].hidden = false
+					end
+				else
+					if last_buff_level > 0 then
+						target.unit.damage_factor = target.unit.damage_factor / (1 + last_buff_level * this.damage_factor_inc)
+						last_buff_level = 0
+						this.render.sprites[1].hidden = true
+					end
+				end
+			end
+
+			coroutine.yield()
+		end
+
+		queue_remove(store, this)
+	end
+}
+--#endregion hero_orc
 
 return scripts
