@@ -29888,7 +29888,7 @@ scripts.controller_tower_sandworm_eat = {
 		end
 
 		-- 动画同步开始
-		S:queue("sandwormEatOut")
+		S:queue("sandwormEat")
 		local decal = E:create_entity("decal_tower_sandworm_eat")
 		decal.pos:set(this.pos.x, this.pos.y - 20)
 		decal.render.sprites[1].ts = store.tick_ts
@@ -29898,7 +29898,7 @@ scripts.controller_tower_sandworm_eat = {
 		end
 		queue_insert(store, decal)
 		U.y_animation_play_once_specific_no_flip(this, "worm_nest_level4_instakill_run", store.tick_ts, 1)
-
+		S:queue("sandwormEatOut")
 		queue_remove(store, this)
 	end
 }

@@ -3461,6 +3461,7 @@ tt.attacks.list[1].cooldown = 6.0
 tt.attacks.list[1].shoot_time = fts(11)
 tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE, F_FLYING)
 tt.attacks.list[1].vis_flags = bor(F_RANGED, F_AREA)
+tt.attacks.list[1].sound = "sandwormAttack"
 tt.attacks.list[2] = CC("bullet_attack")
 tt.attacks.list[2].bullet = "tower_sandworm_eat"
 tt.attacks.list[2].cooldown = 56
