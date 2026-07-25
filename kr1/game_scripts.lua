@@ -16402,7 +16402,7 @@ function scripts.mod_blood_elves.insert(this, store)
 		return false
 	end
 
-	for _, m in pairs(modifiers) do
+	for _, m in ipairs(modifiers) do
 		if m.dps then
 			m.dps.fx = nil
 		end
