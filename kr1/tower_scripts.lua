@@ -22470,9 +22470,8 @@ function scripts.tower_rotten_forest.update(this, store, script)
 					for i = 1, 2 do
 						local entity = E:create_entity(a_tree.entity)
 						local pred_pos = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, enemy.nav_path.ni)
-						entity.default_rally_pos = pred_pos
-						entity.pos = pred_pos
-
+						entity.pos:set(pred_pos.x + math.random(5, -5), pred_pos.y + math.random(5, -5))
+						SU.soldier_inherit_tower_buff_factor(entity, this, store.tick_ts)
 						queue_insert(store, entity)
 					end
 				end
