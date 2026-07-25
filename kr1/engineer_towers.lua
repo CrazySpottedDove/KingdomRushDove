@@ -1085,6 +1085,7 @@ tt.bullet.hit_fx = "fx_fiery_nut_explosion"
 tt.bullet.hit_decal = nil
 tt.bullet.reduce_armor = 0.1
 tt.render.sprites[1].name = "artillery_tree_proys_0002"
+tt.sound_events.insert = "TowerEntwoodFieryExplote"
 tt.sound_events.hit = "TowerEntwoodFieryExplote"
 
 tt = RT("aura_fiery_nut", "aura")
@@ -2413,7 +2414,7 @@ tt.aura.max_count = 5
 tt.aura.max_count_inc = 0
 tt.aura.min_count = 2
 tt.aura.hit_time = fts(17)
-tt.aura.hit_sound = "ThornSound"
+tt.aura.hit_sound = "RottenForestSevil"
 tt.main_script.update = scripts.aura_rotten_forest_thorn.update
 
 tt = E:register_t("decal_rotten_forest_smoke", "decal_scripted")
@@ -2742,7 +2743,6 @@ tt.main_script.insert = nil
 tt.main_script.update = scripts.bomb_rr_fragment.update
 tt.render.sprites[1].name = "warmongers_rocket_tower_lvl4_cluster_projectile_000"
 tt.sound_events.hit_water = nil
-tt.sound_events.insert = nil
 tt.bullet.particles_name = "ps_rr_fragment"
 
 tt = RT("ps_rr_fragment", "ps_missile")

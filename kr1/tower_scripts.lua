@@ -22667,12 +22667,16 @@ function scripts.decal_rotten_forest_smoke.update(this, store)
 
 			if not U.find_first_enemy_in_range_filter_off(this.pos, range, vis_flags, vis_bans) then
 				if current == "loop" then
-					U.y_animation_play(this, "out", nil, store.tick_ts, false, 2)
-					U.animation_start(this, "idle", nil, store.tick_ts, true, 2)
+					U.y_animation_play_once_specific_no_flip(this, "out", store.tick_ts, 2)
+					U.animation_start_loop_specific(this, "idle", nil, store.tick_ts, 2)
 				end
-			elseif current == "idle" then
-				U.y_animation_play(this, "introLoop", nil, store.tick_ts, false, 2)
-				U.animation_start(this, "loop", nil, store.tick_ts, true, 2)
+			else
+				if current == "idle" then
+					U.y_animation_play_once_specific_no_flip(this, "introLoop", store.tick_ts, 2)
+				else
+					S:queue("RottenForestAttack")
+					U.y_animation_play_once_specific_no_flip(this, "loop", store.tick_ts, 2)
+				end
 			end
 		end
 
@@ -25298,6 +25302,7 @@ function scripts.missile_rr.remove(this, store)
 	local source = store.entities[this.bullet.source_id]
 	if source then
 		if source.powers.engine.level > 0 then
+			S:queue("RocketRidersEngine")
 			local start_pos = V.vclone(this.pos)
 			local damage_radius = E:get_template("bomb_rr_fragment").bullet.damage_radius + 1
 
