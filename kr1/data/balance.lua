@@ -6061,11 +6061,6 @@ local towers = {
 		}
 	},
 	sand = {
-		stats = {
-			cooldown = 8,
-			range = 5,
-			damage = 6
-		},
 		price = {80, 120, 170, 240},
 		basic_attack = {
 			cooldown = 0.8,
@@ -6093,7 +6088,6 @@ local towers = {
 		},
 		skill_big_blade = {
 			range = 200,
-			min_targets = 3,
 			slow_factor = 0.7,
 			radius = 50,
 			damage_every = 0.25,

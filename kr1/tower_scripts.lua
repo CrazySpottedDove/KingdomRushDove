@@ -11843,6 +11843,7 @@ function scripts.tower_sand.update(this, store)
 		b.bullet.source_id = this.id
 		b.bullet.level = level
 		b.bullet.damage_factor = this.tower.damage_factor
+		apply_precision(b)
 		b.bounces = 0
 
 		queue_insert(store, b)
@@ -11879,10 +11880,10 @@ function scripts.tower_sand.update(this, store)
 			check_upgrades_purchase()
 			SU.towers_swaped(store, this, this.attacks.list)
 
-			if bba.cooldown and ready_to_attack(bba, store, tw.cooldown_factor) then
-				local _, enemies, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, bba.range, bba.shoot_time[1] + fts(20), bba.vis_flags, bba.vis_bans)
+			if ready_to_attack(bba, store, tw.cooldown_factor) then
+				local _, enemies, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, bba.range, bba.shoot_time[1] + E:get_template("aura_tower_sand_skill_big_blade").flight_time, bba.vis_flags, bba.vis_bans)
 
-				if not enemies or #enemies < bba.min_targets then
+				if not enemies then
 					bba.ts = bba.ts + fts(10)
 				else
 					local nearest_nodes = P:nearest_nodes(pred_pos.x, pred_pos.y, {enemies[1].nav_path.pi})
@@ -11905,7 +11906,7 @@ function scripts.tower_sand.update(this, store)
 				end
 			end
 
-			if ga.cooldown and ready_to_attack(ga, store, tw.cooldown_factor) then
+			if ready_to_attack(ga, store, tw.cooldown_factor) then
 				at = ga
 			elseif ready_to_attack(ba, store, tw.cooldown_factor) then
 				at = ba
@@ -12128,8 +12129,8 @@ function scripts.controller_tower_sand_lvl4_skill_big_blade.update(this, store)
 	end
 
 	local pi, _, ni = unpack(this.target_node)
-	local pos1 = P:node_pos(pi, 2, ni + 3)
-	local pos2 = P:node_pos(pi, 3, ni - 3)
+	local pos1 = P:node_pos(pi, 1, ni + 3)
+	local pos2 = P:node_pos(pi, 1, ni - 3)
 
 	y_wait(store, bba.shoot_time[1])
 	shoot_big_blade(1, pos1)
@@ -12162,16 +12163,18 @@ function scripts.aura_tower_sand_skill_big_blade.update(this, store)
 	queue_insert(store, ps)
 	U.animation_start_default(this, "idle", nil, store.tick_ts, true)
 
+	local vx, vy = V.normalize(this.dest_pos.x - this.pos.x, this.dest_pos.y - this.pos.y)
+	local v = this.dest_pos:dist(this.pos) / this.flight_time
+	vx, vy = vx * v, vy * v
+
 	while true do
 		local d = this.dest_pos
-		local s = this.speed
 		local p = this.pos
 
 		if reached_dest then
 		-- block empty
-		elseif V.dist2(p.x, p.y, d.x, d.y) > this.fixed_speed * store.tick_length * (this.fixed_speed * store.tick_length) then
-			s.x, s.y = V.mul(this.fixed_speed, V.normalize(d.x - p.x, d.y - p.y))
-			p.x, p.y = p.x + s.x * store.tick_length, p.y + s.y * store.tick_length
+		elseif V.dist2(p.x, p.y, d.x, d.y) > (v * store.tick_length) * (v * store.tick_length) then
+			p.x, p.y = p.x + vx * store.tick_length, p.y + vy * store.tick_length
 		else
 			reached_dest = true
 			this.render.sprites[1].prefix = "tower_sand_lvl4_skill_2_decal"
