@@ -148,6 +148,9 @@ local function sanitize_wave_config(raw)
 					if wave.weight == nil then
 						wave.weight = 1
 					end
+					-- -- 自动生成字段，去除掉，避免冗余 config 数据
+					wave.gold = nil
+					wave.interval = nil
 				end
 			end
 		end

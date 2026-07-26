@@ -93,6 +93,7 @@ end
 local function distribute_total_amount_to_groups_randomly(total, n, min_each, weights)
 	min_each = tonumber(min_each) or 0
 	if min_each * n > total then
+		print("min_each: ", min_each, "n: ", n, "total: ", total)
 		error("min_each * n 不能大于 total")
 	end
 
