@@ -335,7 +335,7 @@ function image_db:queue_load_done()
 						else
 							if self._queue_image_info[key] then
 								local info = self._queue_image_info[key]
-								self:add_image(key, im, info.group, info.scale)
+								self:add_image(info.sprite_name, im, info.group, info.scale)
 								self._queue_image_info[key] = nil
 							else
 								if self.use_canvas and not im:isCompressed() then
@@ -793,14 +793,15 @@ end
 ---@param path string 文件所在目录
 ---@param group string 纹理组名称
 ---@param scale number 纹理参考缩放比例
-function image_db:queue_load_image(a_name, path, group, scale)
+function image_db:queue_load_image(sprite_name, a_name, path, group, scale)
 	local key = remove_extension_fast(a_name)
 	if self._queue_image_info[key] or self.db_atlas[key] then
 		return
 	end
 	self._queue_image_info[key] = {
 		group = group,
-		scale = scale
+		scale = scale,
+		sprite_name = sprite_name
 	}
 	local insert_index = #self.image_name_queue + 1
 	self.image_name_queue[insert_index] = a_name

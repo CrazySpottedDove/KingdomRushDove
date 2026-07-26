@@ -115,7 +115,7 @@ local function scan_maps()
 						thumbnail_info = {
 							type = "file",
 							path = base .. "/" .. metadata.thumbnail,
-							sprite_name = base_thumb:gsub("%.[^%.]+$", "")
+							sprite_name = "__custom_level_bg_" .. (base_thumb:gsub("%.[^%.]+$", ""))
 						}
 					end
 				end
@@ -1286,7 +1286,8 @@ function CustomMapListView:update(dt)
 	if not self._loading_started then
 		self._loading_started = true
 		for _, item in ipairs(self._thumb_files) do
-			I:queue_load_image(item.fn, item.dir, item.fn, 1)
+			local base = item.fn:gsub("%.[^%.]+$", "")
+			I:queue_load_image("__custom_level_bg_" .. base, item.fn, item.dir, item.fn, 1)
 		end
 		self._thumb_files = nil
 	end
