@@ -6079,7 +6079,6 @@ local towers = {
 			max_bounces = 4,
 			range_effect = 190,
 			price = {200, 200, 200},
-			cooldown = {8, 8, 8},
 			damage_min = {52, 102, 152},
 			damage_max = {52, 102, 152},
 			s_damage = {52, 102, 152},
@@ -6097,7 +6096,6 @@ local towers = {
 			damage_max = {8, 14, 17},
 			s_damage_min = {20, 32, 48},
 			s_damage_max = {32, 42, 68},
-			cooldown = {16, 16, 16},
 			duration = {4, 5, 6},
 			damage_type = DAMAGE_STAB
 		}

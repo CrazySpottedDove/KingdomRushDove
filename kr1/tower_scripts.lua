@@ -11797,6 +11797,8 @@ function scripts.tower_sand.update(this, store)
 
 	ba.ts = store.tick_ts - ba.cooldown + a.attack_delay_on_spawn
 
+	local pow_b = this.powers.skill_big_blade
+	local pow_g = this.powers.skill_gold
 	local ga = a.list[2]
 	local bba = a.list[3]
 	local shooter_sids = {3, 4}
@@ -11849,19 +11851,6 @@ function scripts.tower_sand.update(this, store)
 		queue_insert(store, b)
 	end
 
-	local function check_upgrades_purchase()
-		for _, pow in pairs(this.powers) do
-			if pow.changed then
-				pow.changed = nil
-
-				local pa = this.attacks.list[pow.attack_idx]
-
-				pa.cooldown = pow.cooldown[pow.level]
-				pa.ts = store.tick_ts - pa.cooldown
-			end
-		end
-	end
-
 	for idx, ssid in ipairs(shooter_sids) do
 		local soffset = this.render.sprites[ssid].offset
 		local an, af = animation_name_facing_point(this, "idle", a._last_target_pos[idx], ssid, soffset)
@@ -11877,10 +11866,17 @@ function scripts.tower_sand.update(this, store)
 		if this.tower.blocked then
 			coroutine.yield()
 		else
-			check_upgrades_purchase()
+			if pow_b.changed then
+				pow_b.changed = nil
+			end
+
+			if pow_g.changed then
+				pow_g.changed = nil
+			end
+
 			SU.towers_swaped(store, this, this.attacks.list)
 
-			if ready_to_attack(bba, store, tw.cooldown_factor) then
+			if ready_to_use_power(pow_b, bba, store, tw.cooldown_factor) then
 				local _, enemies, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, bba.range, bba.shoot_time[1] + E:get_template("aura_tower_sand_skill_big_blade").flight_time, bba.vis_flags, bba.vis_bans)
 
 				if not enemies then
@@ -11906,7 +11902,7 @@ function scripts.tower_sand.update(this, store)
 				end
 			end
 
-			if ready_to_attack(ga, store, tw.cooldown_factor) then
+			if ready_to_use_power(pow_g, ga, store, tw.cooldown_factor) then
 				at = ga
 			elseif ready_to_attack(ba, store, tw.cooldown_factor) then
 				at = ba
@@ -11925,7 +11921,6 @@ function scripts.tower_sand.update(this, store)
 					S:queue(at.sound)
 
 					while store.tick_ts - at.ts < at.shoot_time do
-						check_upgrades_purchase()
 						coroutine.yield()
 					end
 
