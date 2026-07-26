@@ -589,26 +589,6 @@ function screen_map:init(w, h)
 	self.hero_portrait_width = self.hero_icon_portrait.size.x
 	self.hero_portrait_height = self.hero_icon_portrait.size.y
 
-	self.skill_star = KImageView:new("mapButtons_portrait_hero_points")
-	self.skill_star.anchor = v(self.skill_star.size.x / 2, self.skill_star.size.y / 2)
-	self.skill_star.pos = v(h_button.pos.x + 40, h_button.pos.y - 45)
-	self.skill_star.propagate_on_click = true
-	self.skill_star.hidden = true
-
-	self.window:add_child(self.skill_star)
-
-	local points_label = KLabel:new(V.v(self.skill_star.size.x, 24))
-
-	points_label.pos = v(-1, 11)
-	points_label.font = F:f("Comic Book Italic", "22")
-	points_label.colors.text = {78, 43, 7}
-	points_label.text_align = "center"
-	points_label.propagate_on_click = true
-
-	self.skill_star:add_child(points_label)
-
-	self.skill_label = points_label
-
 	-- Category filter for custom maps (between "切换地图" and "英雄殿堂")
 	self._cat_filter = "all"
 	local cat_filter_btn = GGButton:new("mapButtons_notxt_0010", "mapButtons_notxt_0011")
@@ -1214,10 +1194,6 @@ function screen_map:update(dt)
 
 	if self.heroTip then
 		self.heroTip.scale = v(math.sin(self.stime * 0.5) * 0.02 + 0.98, math.sin(self.stime * 0.5) * 0.02 + 0.98)
-	end
-
-	if not self.skill_star.hidden then
-		self.skill_star.scale = v(math.sin(self.stime) * 0.05 + 0.95, math.sin(self.stime) * 0.05 + 0.95)
 	end
 
 	if self.endlessTip then
