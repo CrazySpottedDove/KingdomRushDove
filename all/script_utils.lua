@@ -5398,7 +5398,10 @@ local function enemy_betray_logic(this, store)
 			end
 
 			local nearest_nodes = P:nearest_nodes(this.pos.x, this.pos.y, {this.nav_path.pi}, {this.nav_path.spi}, true)
-			this.nav_path.ni = nearest_nodes[1][3]
+
+			if nearest_nodes[1] then
+				this.nav_path.ni = nearest_nodes[1][3]
+			end
 
 			SU.soldier_idle(store, this)
 
