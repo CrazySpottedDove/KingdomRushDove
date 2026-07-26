@@ -93,6 +93,9 @@ function font_db:f(alias, size)
 		real_size = math.floor(real_size + 0.5)
 	end
 
+	-- 避免 real_size 为 0 导致错误
+	real_size = math.max(real_size, 1)
+
 	local name_size = name .. "-" .. real_size
 	local tf = self.fonts[name_size]
 
@@ -107,7 +110,7 @@ function font_db:f(alias, size)
 		if font_file then
 			log.debug("creating font %s-%s (orig size:%s) from file %s ", name, real_size, size, font_file)
 
-			local font = G.newFont(font_file, tonumber(real_size), "light")
+			local font = G.newFont(font_file, real_size, "light")
 
 			self.fonts[name_size] = font
 
