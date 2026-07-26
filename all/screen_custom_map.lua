@@ -111,10 +111,11 @@ local function scan_maps()
 							sprite = metadata.thumbnail_sprite
 						}
 					elseif metadata.thumbnail then
+						local base_thumb = metadata.thumbnail:match("([^/\\]+)$") or metadata.thumbnail
 						thumbnail_info = {
 							type = "file",
 							path = base .. "/" .. metadata.thumbnail,
-							sprite_name = "custom_thumb_" .. entry
+							sprite_name = base_thumb:gsub("%.[^%.]+$", "")
 						}
 					end
 				end
@@ -214,10 +215,11 @@ end
 
 local CustomMapCard = class("CustomMapCard", KView)
 
-function CustomMapCard:initialize(map, card_w, card_h, on_select)
+function CustomMapCard:initialize(map, card_w, card_h, on_select, list_view)
 	KView.initialize(self, v(card_w, card_h))
 	self.map = map
 	self._on_select = on_select
+	self._list_view = list_view
 	self.colors.background = C.card_bg
 	self._default_bg = C.card_bg
 	self._hover_bg = C.card_hover
@@ -244,6 +246,8 @@ function CustomMapCard:initialize(map, card_w, card_h, on_select)
 	local thumb_w = card_w - thumb_margin * 2
 	local thumb_h = thumb_area_h - thumb_margin * 2
 
+	-- Try cache first; only create placeholder if async loading is needed
+	self._thumb_loaded = false
 	local thumb = self:_load_thumbnail()
 	if thumb then
 		local scale_x = thumb_w / thumb.size.x
@@ -257,7 +261,9 @@ function CustomMapCard:initialize(map, card_w, card_h, on_select)
 		thumb.propagate_on_down = true
 		thumb.propagate_on_up = true
 		self:add_child(thumb)
-	else
+		self._thumb_loaded = true
+	elseif self.map.thumbnail_info and self.map.thumbnail_info.type == "file" then
+		-- Placeholder for async loading
 		local placeholder = KView:new(v(thumb_w, thumb_h))
 		placeholder.pos = v(thumb_margin, thumb_margin)
 		placeholder.colors.background = C.thumb_placeholder
@@ -269,6 +275,7 @@ function CustomMapCard:initialize(map, card_w, card_h, on_select)
 		placeholder.propagate_on_down = true
 		placeholder.propagate_on_up = true
 		self:add_child(placeholder)
+		self._placeholder = placeholder
 
 		local ph_label = GGLabel:new(v(thumb_w, thumb_h))
 		ph_label.font_name = "body"
@@ -276,11 +283,13 @@ function CustomMapCard:initialize(map, card_w, card_h, on_select)
 		ph_label.text_align = "center"
 		ph_label.vertical_align = "middle"
 		ph_label.colors.text = C.meta
-		ph_label.text = "No Thumbnail"
+		ph_label.text = "Loading..."
 		ph_label.propagate_on_click = true
 		ph_label.propagate_on_down = true
 		ph_label.propagate_on_up = true
 		self:add_child(ph_label)
+		self._ph_label = ph_label
+		self._list_view:_register_pending_thumb(self.map.thumbnail_info.sprite_name, self)
 	end
 
 	local info_y = thumb_area_h + 8
@@ -325,8 +334,46 @@ function CustomMapCard:initialize(map, card_w, card_h, on_select)
 			self._on_select(self.map)
 		end
 	end
+	if not self._thumb_loaded then
+		btn:set_disabled(true)
+	end
 	self:add_child(btn)
 	self._select_btn = btn
+end
+
+function CustomMapCard:replace_placeholder_with_thumb(thumb)
+	if self._placeholder then
+		self:remove_child(self._placeholder)
+		self._placeholder = nil
+	end
+	if self._ph_label then
+		self:remove_child(self._ph_label)
+		self._ph_label = nil
+	end
+	local tw = self.size.x - 24
+	local th_area = self.size.y * 0.55
+	local th = th_area - 24
+	local s = math.min(tw / thumb.size.x, th / thumb.size.y)
+	thumb.scale = v(s, s)
+	local scaled_w = thumb.size.x * s
+	local scaled_h = thumb.size.y * s
+	thumb.pos = v(12 + (tw - scaled_w) / 2, 12 + (th - scaled_h) / 2)
+	thumb.propagate_on_click = true
+	thumb.propagate_on_down = true
+	thumb.propagate_on_up = true
+	self:add_child(thumb)
+	self._thumb_loaded = true
+	if self._select_btn then
+		self._select_btn:set_disabled(false)
+	end
+end
+
+function CustomMapCard:on_thumbnail_loaded(sprite_name)
+	local I = require("lib.klove.image_db")
+	if not I.db_images[sprite_name] then
+		return
+	end
+	self:replace_placeholder_with_thumb(KImageView:new(sprite_name))
 end
 
 function CustomMapCard:_load_thumbnail()
@@ -342,31 +389,6 @@ function CustomMapCard:_load_thumbnail()
 	if info.type == "file" then
 		local I = require("lib.klove.image_db")
 		if I.db_images[info.sprite_name] then
-			return KImageView:new(info.sprite_name)
-		end
-		local base_path = info.path:gsub("%.[^%.]+$", "")
-		local img
-		for _, ext in ipairs({".dds", ".astc", ".png", ".jpg"}) do
-			local try_path = base_path .. ext
-			if love.filesystem.getInfo(try_path, "file") then
-				local ok, data = pcall(function()
-					if ext == ".dds" or ext == ".astc" then
-						return love.graphics.newImage(love.image.newCompressedData(try_path))
-					else
-						return love.graphics.newImage(try_path)
-					end
-				end)
-				if ok and data then
-					img = data
-					break
-				end
-			end
-		end
-		if img then
-			I:add_image(info.sprite_name, img, "custom_map")
-			if self._list_view then
-				self._list_view._custom_thumbs[#self._list_view._custom_thumbs + 1] = info.sprite_name
-			end
 			return KImageView:new(info.sprite_name)
 		end
 	end
@@ -1114,6 +1136,7 @@ function CustomMapListView:initialize(size, maps, on_select)
 	self._category_filter = "all"
 	self._on_select = on_select
 	self._custom_thumbs = {}
+	self._pending_thumbnails = {}
 
 	local avail_w = size.x
 	local avail_h = size.y - TOP_MARGIN - BOTTOM_MARGIN
@@ -1144,22 +1167,49 @@ function CustomMapListView:initialize(size, maps, on_select)
 	self:add_child(nav)
 	self._nav = nav
 
+	-- Collect thumbnail file info; defer actual queueing to first update()
+	-- to avoid triggering director's loading mechanism during screen_map init.
+	self._loading_started = false
+	self._thumb_files = {}
+	for _, map in ipairs(self._all_maps) do
+		local info = map.thumbnail_info
+		if info and info.type == "file" then
+			local I = require("lib.klove.image_db")
+			if not I.db_images[info.sprite_name] then
+				local base_path = info.path:gsub("%.[^%.]+$", "")
+				for _, ext in ipairs({".dds", ".astc", ".png", ".jpg"}) do
+					local try_path = base_path .. ext
+					if love.filesystem.getInfo(try_path, "file") then
+						local dir = try_path:match("^(.+)/[^/]+$") or ""
+						local fn = try_path:match("([^/]+)$")
+						self._thumb_files[#self._thumb_files + 1] = {
+							fn = fn,
+							dir = dir
+						}
+						break
+					end
+				end
+			end
+		end
+	end
+
 	self:show_page(1)
 end
 
 function CustomMapListView:destroy()
-	if self._custom_thumbs then
-		local I = require("lib.klove.image_db")
-		for _, sn in ipairs(self._custom_thumbs) do
-			I:remove_image(sn)
-		end
-		self._custom_thumbs = nil
+	self._pending_thumbnails = {}
+	local I = require("lib.klove.image_db")
+	for i = #self._custom_thumbs, 1, -1 do
+		local sn = self._custom_thumbs[i]
+		I:remove_image(sn)
+		self._custom_thumbs[i] = nil
 	end
 	CustomMapListView.super.destroy(self)
 end
 
 function CustomMapListView:show_page(page)
 	self._current_page = page
+	self._pending_thumbnails = {}
 	local start_idx = (page - 1) * self._cards_per_page + 1
 	local end_idx = math.min(start_idx + self._cards_per_page - 1, #self._filtered_maps)
 	local page_maps = {}
@@ -1200,8 +1250,7 @@ function CustomMapListView:show_page(page)
 			if self._on_select then
 				self._on_select(m)
 			end
-		end)
-		card._list_view = self
+		end, self)
 		card.pos = v(x, y)
 		self._page_view:add_child(card)
 	end
@@ -1222,6 +1271,36 @@ function CustomMapListView:set_category_filter(category)
 	local total_maps = #self._filtered_maps
 	local total_pages = math.max(1, math.ceil(total_maps / self._cards_per_page))
 	self._nav:update_pages(total_pages)
+end
+
+function CustomMapListView:_register_pending_thumb(sprite_name, card)
+	if not self._pending_thumbnails[sprite_name] then
+		self._pending_thumbnails[sprite_name] = {}
+	end
+	self._pending_thumbnails[sprite_name][#self._pending_thumbnails[sprite_name] + 1] = card
+end
+
+function CustomMapListView:update(dt)
+	local I = require("lib.klove.image_db")
+
+	if not self._loading_started then
+		self._loading_started = true
+		for _, item in ipairs(self._thumb_files) do
+			I:queue_load_image(item.fn, item.dir, item.fn, 1)
+		end
+		self._thumb_files = nil
+	end
+
+	I:queue_load_done()
+	for sprite_name, cards in pairs(self._pending_thumbnails) do
+		if I.db_images[sprite_name] then
+			self._custom_thumbs[#self._custom_thumbs + 1] = sprite_name
+			for _, card in ipairs(cards) do
+				card:on_thumbnail_loaded(sprite_name)
+			end
+			self._pending_thumbnails[sprite_name] = nil
+		end
+	end
 end
 
 return {

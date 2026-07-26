@@ -98,6 +98,7 @@ image_db.missing_sprites = {}
 image_db.threads = {}
 image_db.image_name_queue = {}
 image_db.image_path_queue = {}
+image_db._queue_image_info = {}
 image_db.queue_load_total_images = 0
 image_db.queue_load_done_images = 0
 image_db.use_canvas = true
@@ -253,7 +254,7 @@ end
 
 --- 等待所有加载队列中的纹理加载完毕
 function image_db:queue_load_done()
-	if #self.load_queue == 0 and #self.threads == 0 then
+	if #self.load_queue == 0 and #self.threads == 0 and #self.image_name_queue == 0 then
 		self.progress = 1
 
 		return true
@@ -298,7 +299,6 @@ function image_db:queue_load_done()
 
 		for j = #self.image_name_queue, 1, -1 do
 			local cin = self.threads[last_thread_used][2]
-
 			cin:push(self.image_name_queue[j])
 			cin:push(self.image_path_queue[j])
 			self.image_name_queue[j] = nil
@@ -333,23 +333,29 @@ function image_db:queue_load_done()
 						if not im then
 							log.error("Image could not be created: %s", key)
 						else
-							if self.use_canvas and not im:isCompressed() then
-								log.paranoid(" +++ creating canvas %s", im)
-
-								local c = G.newCanvas(w, h)
-
-								G.setCanvas(c)
-								G.setBlendMode("replace", "premultiplied")
-								G.draw(im)
-								G.setBlendMode("alpha", "alphamultiply")
-								G.setCanvas()
-
-								self.db_images[key] = {c, w, h}
-								im = nil
+							if self._queue_image_info[key] then
+								local info = self._queue_image_info[key]
+								self:add_image(key, im, info.group, info.scale)
+								self._queue_image_info[key] = nil
 							else
-								log.paranoid(" +++ keeping image %s", im)
+								if self.use_canvas and not im:isCompressed() then
+									log.paranoid(" +++ creating canvas %s", im)
 
-								self.db_images[key] = {im, w, h}
+									local c = G.newCanvas(w, h)
+
+									G.setCanvas(c)
+									G.setBlendMode("replace", "premultiplied")
+									G.draw(im)
+									G.setBlendMode("alpha", "alphamultiply")
+									G.setCanvas()
+
+									self.db_images[key] = {c, w, h}
+									im = nil
+								else
+									log.paranoid(" +++ keeping image %s", im)
+
+									self.db_images[key] = {im, w, h}
+								end
 							end
 
 							self.queue_load_done_images = self.queue_load_done_images + 1
@@ -780,6 +786,28 @@ function image_db:add_image(name, image, group, scale)
 	self.image_uses[name] = (self.image_uses[name] or 0) + 1
 end
 
+--- 将单张图片加入线程批量加载队列。加载完成后以 remove_extension_fast(a_name)
+--- 为 name 调用 add_image(name, im, group, scale) 注册到 db_atlas / db_images。
+--- 注意，该方法不会重复加载同一文件，因此也没有维持真正的引用计数，一次卸载即会直接卸载。因此，该方法常用于批量的临时加载图像资源。
+---@param a_name string 文件名（含扩展名）
+---@param path string 文件所在目录
+---@param group string 纹理组名称
+---@param scale number 纹理参考缩放比例
+function image_db:queue_load_image(a_name, path, group, scale)
+	local key = remove_extension_fast(a_name)
+	if self._queue_image_info[key] or self.db_atlas[key] then
+		return
+	end
+	self._queue_image_info[key] = {
+		group = group,
+		scale = scale
+	}
+	local insert_index = #self.image_name_queue + 1
+	self.image_name_queue[insert_index] = a_name
+	self.image_path_queue[insert_index] = path
+	self.queue_load_total_images = self.queue_load_total_images + 1
+end
+
 --- 移除图像文件
 ---@param name string 纹理名称
 function image_db:remove_image(name)
@@ -788,26 +816,23 @@ function image_db:remove_image(name)
 		return
 	end
 
-	local name_scale = f.group
-	if self.atlas_uses[name_scale] then
-		self.atlas_uses[name_scale] = self.atlas_uses[name_scale] - 1
-		if self.atlas_uses[name_scale] > 0 then
-			return
-		end
-		self.atlas_uses[name_scale] = nil
-	end
-
 	local img_key = f.atlas
 	if self.image_uses[img_key] then
 		self.image_uses[img_key] = self.image_uses[img_key] - 1
-		if self.image_uses[img_key] > 0 then
-			return
+		if self.image_uses[img_key] <= 0 then
+			self.image_uses[img_key] = nil
+			self.db_images[name] = nil
 		end
-		self.image_uses[img_key] = nil
 	end
 
-	self.db_images[name] = nil
-	self.db_atlas[name] = nil
+	local name_scale = f.group
+	if self.atlas_uses[name_scale] then
+		self.atlas_uses[name_scale] = self.atlas_uses[name_scale] - 1
+		if self.atlas_uses[name_scale] <= 0 then
+			self.atlas_uses[name_scale] = nil
+			self.db_atlas[name] = nil
+		end
+	end
 end
 
 function image_db:i(name)
