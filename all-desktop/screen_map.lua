@@ -440,132 +440,6 @@ function screen_map:init(w, h)
 
 	self.window:add_child(e_button)
 
-	local change_btn_x = a_button.pos.x - 900
-	local change_btn_y = sh - 90
-
-	local change_button = GGButton:new("mapButtons_notxt_0010", "mapButtons_notxt_0011")
-	change_button.anchor = v(change_button.size.x / 2, change_button.size.y / 2)
-	change_button.pos = v(change_btn_x, change_btn_y)
-	change_button.label.pos = v(50, 121)
-	change_button.label.size = v(126, 30)
-	change_button.label.text_size = change_button.label.size
-	change_button.label.font_size = 18
-	change_button.label.vertical_align = CJK("middle", "top", nil, "top")
-	change_button.label.text = "切换地图"
-	change_button.label.fit_lines = 1
-
-	self.window:add_child(change_button)
-
-	local gen_dropdown = KView:new(V.v(sw, sh))
-	gen_dropdown.hidden = true
-	gen_dropdown.propagate_on_click = false
-	gen_dropdown.colors.background = {0, 0, 0, 100}
-
-	self.window:add_child(gen_dropdown)
-
-	local gen_options = {{
-		label = "1代",
-		value = 1
-	}, {
-		label = "2代",
-		value = 2
-	}, {
-		label = "3代",
-		value = 3
-	}, {
-		label = "5代",
-		value = 5
-	}, {
-		label = "插件地图",
-		value = screen_map.CUSTOM_GEN
-	}}
-
-	local card_w = 160
-	local card_h = 120
-	local gap = 16
-	local total_w = #gen_options * (card_w + gap) - gap
-	local start_x = (sw - total_w) * 0.5
-	local start_y = (sh - card_h) * 0.5
-	local sm = self
-
-	for i, opt in ipairs(gen_options) do
-		local card = KView:new(V.v(card_w, card_h))
-		card.pos = V.v(start_x + (i - 1) * (card_w + gap), start_y)
-		card.colors.background = sm.generation == opt.value and {60, 45, 20, 240} or {35, 25, 12, 220}
-		card.shape = {
-			name = "rectangle",
-			args = {"fill", 0, 0, card_w, card_h, 12, 12}
-		}
-		local border_color = sm.generation == opt.value and {207, 164, 72, 255} or {100, 80, 40, 200}
-		local border = KView:new(V.v(card_w, card_h))
-		border.colors.background = border_color
-		border.shape = {
-			name = "rectangle",
-			args = {"line", 0, 0, card_w, card_h, 12, 12}
-		}
-		card:add_child(border)
-		card._border = border
-		border.propagate_on_click = true
-
-		local label = GGLabel:new(V.v(card_w - 16, 40))
-		label.pos = V.v(8, (card_h - 40) * 0.5)
-		label.font_name = "h"
-		label.font_size = 16
-		label.text_align = "center"
-		label.vertical_align = "middle"
-		label.colors.text = {241, 222, 171, 255}
-		label.text = opt.label
-		label.fit_lines = 2
-		label.fit_size = true
-		label.propagate_on_click = true
-		card:add_child(label)
-
-		function card.on_enter()
-			card.colors.background = {50, 35, 16, 240}
-			card._border.colors.background = {220, 180, 80, 255}
-		end
-		function card.on_exit()
-			card.colors.background = sm.generation == opt.value and {60, 45, 20, 240} or {35, 25, 12, 220}
-			card._border.colors.background = sm.generation == opt.value and {207, 164, 72, 255} or {100, 80, 40, 200}
-		end
-		function card.on_click()
-			S:queue("GUIButtonCommon")
-			gen_dropdown.hidden = true
-			for _, btn in ipairs({sm._change_btn, sm._u_btn, sm._e_btn, sm._a_btn, sm._h_btn}) do
-				if btn then
-					btn:enable()
-				end
-			end
-			if sm.generation ~= opt.value then
-				sm:change_generation(opt.value)
-			end
-		end
-
-		gen_dropdown:add_child(card)
-		if not gen_dropdown._cards then
-			gen_dropdown._cards = {}
-		end
-		gen_dropdown._cards[i] = card
-	end
-
-	function change_button.on_click()
-		S:queue("GUIButtonCommon")
-		if not gen_dropdown.hidden then
-			gen_dropdown.hidden = true
-		else
-			gen_dropdown.hidden = false
-			gen_dropdown:order_to_front()
-			for i, card in ipairs(gen_dropdown._cards or {}) do
-				local opt = gen_options[i]
-				if opt then
-					local selected = sm.generation == opt.value
-					card.colors.background = selected and {60, 45, 20, 240} or {35, 25, 12, 220}
-					card._border.colors.background = selected and {207, 164, 72, 255} or {100, 80, 40, 200}
-				end
-			end
-		end
-	end
-
 	local u_button = GGButton:new("mapButtons_notxt_0010", "mapButtons_notxt_0011")
 
 	u_button.anchor = v(u_button.size.x / 2, u_button.size.y / 2)
@@ -734,6 +608,239 @@ function screen_map:init(w, h)
 	self.skill_star:add_child(points_label)
 
 	self.skill_label = points_label
+
+	-- Category filter for custom maps (between "切换地图" and "英雄殿堂")
+	self._cat_filter = "all"
+	local cat_filter_btn = GGButton:new("mapButtons_notxt_0010", "mapButtons_notxt_0011")
+	cat_filter_btn.anchor = v(cat_filter_btn.size.x / 2, cat_filter_btn.size.y / 2)
+	cat_filter_btn.pos = v(h_button.pos.x - 170, sh - 90)
+	cat_filter_btn.label.pos = v(50, 121)
+	cat_filter_btn.label.size = v(126, 30)
+	cat_filter_btn.label.text_size = cat_filter_btn.label.size
+	cat_filter_btn.label.font_size = 18
+	cat_filter_btn.label.vertical_align = CJK("middle", "top", nil, "top")
+	cat_filter_btn.label.text = "全部"
+	cat_filter_btn.label.fit_lines = 1
+	cat_filter_btn.hidden = self.generation ~= screen_map.CUSTOM_GEN
+	self.window:add_child(cat_filter_btn)
+	self._cat_filter_btn = cat_filter_btn
+
+	local cat_dropdown = KView:new(V.v(sw, sh))
+	cat_dropdown.hidden = true
+	cat_dropdown.propagate_on_click = false
+	cat_dropdown.colors.background = {0, 0, 0, 100}
+	self.window:add_child(cat_dropdown)
+	self._cat_dropdown = cat_dropdown
+
+	local cat_options = SCU.CATEGORY_FILTERS
+	local cw, ch, cgap = 160, 120, 16
+	local ctotal_w = #cat_options * (cw + cgap) - cgap
+	local csx = (sw - ctotal_w) * 0.5
+	local csy = (sh - ch) * 0.5
+	local sm2 = self
+
+	for i, opt in ipairs(cat_options) do
+		local card = KView:new(V.v(cw, ch))
+		card.pos = V.v(csx + (i - 1) * (cw + cgap), csy)
+		card.colors.background = i == 1 and {60, 45, 20, 240} or {35, 25, 12, 220}
+		card.shape = {
+			name = "rectangle",
+			args = {"fill", 0, 0, cw, ch, 12, 12}
+		}
+		local border_color = i == 1 and {207, 164, 72, 255} or {100, 80, 40, 200}
+		local border = KView:new(V.v(cw, ch))
+		border.colors.background = border_color
+		border.shape = {
+			name = "rectangle",
+			args = {"line", 0, 0, cw, ch, 12, 12}
+		}
+		card:add_child(border)
+		card._border = border
+		border.propagate_on_click = true
+
+		local label = GGLabel:new(V.v(cw - 16, 40))
+		label.pos = V.v(8, (ch - 40) * 0.5)
+		label.font_name = "h"
+		label.font_size = 16
+		label.text_align = "center"
+		label.vertical_align = "middle"
+		label.colors.text = {241, 222, 171, 255}
+		label.text = opt.label
+		label.fit_lines = 2
+		label.fit_size = true
+		label.propagate_on_click = true
+		card:add_child(label)
+
+		function card.on_enter()
+			card.colors.background = {50, 35, 16, 240}
+			card._border.colors.background = {220, 180, 80, 255}
+		end
+		function card.on_exit()
+			local is_selected = sm2._cat_filter == opt.value
+			card.colors.background = is_selected and {60, 45, 20, 240} or {35, 25, 12, 220}
+			card._border.colors.background = is_selected and {207, 164, 72, 255} or {100, 80, 40, 200}
+		end
+		function card.on_click()
+			S:queue("GUIButtonCommon")
+			cat_dropdown.hidden = true
+			sm2._cat_filter = opt.value
+			cat_filter_btn.label.text = opt.label
+			if sm2._custom_map_view then
+				sm2._custom_map_view:set_category_filter(opt.value)
+			end
+		end
+
+		cat_dropdown:add_child(card)
+		if not cat_dropdown._cards then
+			cat_dropdown._cards = {}
+		end
+		cat_dropdown._cards[i] = card
+	end
+
+	function cat_filter_btn.on_click()
+		S:queue("GUIButtonCommon")
+		if not cat_dropdown.hidden then
+			cat_dropdown.hidden = true
+		else
+			cat_dropdown.hidden = false
+			cat_dropdown:order_to_front()
+			for i, card in ipairs(cat_dropdown._cards or {}) do
+				local opt = cat_options[i]
+				if opt then
+					local selected = sm2._cat_filter == opt.value
+					card.colors.background = selected and {60, 45, 20, 240} or {35, 25, 12, 220}
+					card._border.colors.background = selected and {207, 164, 72, 255} or {100, 80, 40, 200}
+				end
+			end
+		end
+	end
+
+	local change_btn_x = cat_filter_btn.pos.x - 170
+	local change_btn_y = sh - 90
+
+	local change_button = GGButton:new("mapButtons_notxt_0010", "mapButtons_notxt_0011")
+	change_button.anchor = v(change_button.size.x / 2, change_button.size.y / 2)
+	change_button.pos = v(change_btn_x, change_btn_y)
+	change_button.label.pos = v(50, 121)
+	change_button.label.size = v(126, 30)
+	change_button.label.text_size = change_button.label.size
+	change_button.label.font_size = 18
+	change_button.label.vertical_align = CJK("middle", "top", nil, "top")
+	change_button.label.text = "切换地图"
+	change_button.label.fit_lines = 1
+
+	self.window:add_child(change_button)
+
+	local gen_dropdown = KView:new(V.v(sw, sh))
+	gen_dropdown.hidden = true
+	gen_dropdown.propagate_on_click = false
+	gen_dropdown.colors.background = {0, 0, 0, 100}
+
+	self.window:add_child(gen_dropdown)
+
+	local gen_options = {{
+		label = "1代",
+		value = 1
+	}, {
+		label = "2代",
+		value = 2
+	}, {
+		label = "3代",
+		value = 3
+	}, {
+		label = "5代",
+		value = 5
+	}, {
+		label = "插件地图",
+		value = screen_map.CUSTOM_GEN
+	}}
+
+	local card_w = 160
+	local card_h = 120
+	local gap = 16
+	local total_w = #gen_options * (card_w + gap) - gap
+	local start_x = (sw - total_w) * 0.5
+	local start_y = (sh - card_h) * 0.5
+	local sm = self
+
+	for i, opt in ipairs(gen_options) do
+		local card = KView:new(V.v(card_w, card_h))
+		card.pos = V.v(start_x + (i - 1) * (card_w + gap), start_y)
+		card.colors.background = sm.generation == opt.value and {60, 45, 20, 240} or {35, 25, 12, 220}
+		card.shape = {
+			name = "rectangle",
+			args = {"fill", 0, 0, card_w, card_h, 12, 12}
+		}
+		local border_color = sm.generation == opt.value and {207, 164, 72, 255} or {100, 80, 40, 200}
+		local border = KView:new(V.v(card_w, card_h))
+		border.colors.background = border_color
+		border.shape = {
+			name = "rectangle",
+			args = {"line", 0, 0, card_w, card_h, 12, 12}
+		}
+		card:add_child(border)
+		card._border = border
+		border.propagate_on_click = true
+
+		local label = GGLabel:new(V.v(card_w - 16, 40))
+		label.pos = V.v(8, (card_h - 40) * 0.5)
+		label.font_name = "h"
+		label.font_size = 16
+		label.text_align = "center"
+		label.vertical_align = "middle"
+		label.colors.text = {241, 222, 171, 255}
+		label.text = opt.label
+		label.fit_lines = 2
+		label.fit_size = true
+		label.propagate_on_click = true
+		card:add_child(label)
+
+		function card.on_enter()
+			card.colors.background = {50, 35, 16, 240}
+			card._border.colors.background = {220, 180, 80, 255}
+		end
+		function card.on_exit()
+			card.colors.background = sm.generation == opt.value and {60, 45, 20, 240} or {35, 25, 12, 220}
+			card._border.colors.background = sm.generation == opt.value and {207, 164, 72, 255} or {100, 80, 40, 200}
+		end
+		function card.on_click()
+			S:queue("GUIButtonCommon")
+			gen_dropdown.hidden = true
+			for _, btn in ipairs({sm._change_btn, sm._u_btn, sm._e_btn, sm._a_btn, sm._h_btn}) do
+				if btn then
+					btn:enable()
+				end
+			end
+			if sm.generation ~= opt.value then
+				sm:change_generation(opt.value)
+			end
+		end
+
+		gen_dropdown:add_child(card)
+		if not gen_dropdown._cards then
+			gen_dropdown._cards = {}
+		end
+		gen_dropdown._cards[i] = card
+	end
+
+	function change_button.on_click()
+		S:queue("GUIButtonCommon")
+		if not gen_dropdown.hidden then
+			gen_dropdown.hidden = true
+		else
+			gen_dropdown.hidden = false
+			gen_dropdown:order_to_front()
+			for i, card in ipairs(gen_dropdown._cards or {}) do
+				local opt = gen_options[i]
+				if opt then
+					local selected = sm.generation == opt.value
+					card.colors.background = selected and {60, 45, 20, 240} or {35, 25, 12, 220}
+					card._border.colors.background = selected and {207, 164, 72, 255} or {100, 80, 40, 200}
+				end
+			end
+		end
+	end
+
 	self:refresh_upgrade_button_state()
 	self:refresh_hero_button_state()
 
@@ -1138,6 +1245,9 @@ function screen_map:change_generation(i)
 		queue_generation_music(self.generation)
 		self.map_view.hidden = true
 		self:ensure_custom_map_view()
+		if self._cat_filter_btn then
+			self._cat_filter_btn.hidden = false
+		end
 		return
 	end
 
@@ -1175,6 +1285,16 @@ function screen_map:change_generation(i)
 		self._custom_map_view.hidden = true
 		self.map_view.hidden = false
 		self.generation = i
+		if self._cat_filter_btn then
+			self._cat_filter_btn.hidden = true
+		end
+		if self._cat_dropdown then
+			self._cat_dropdown.hidden = true
+		end
+		self._cat_filter = "all"
+		if self._cat_filter_btn then
+			self._cat_filter_btn.label.text = "全部"
+		end
 		reload_generation()
 	else
 		self.generation = i

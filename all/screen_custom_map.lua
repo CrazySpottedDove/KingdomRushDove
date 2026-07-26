@@ -51,6 +51,20 @@ local C = {
 	thumb_placeholder = {40, 30, 18, 220}
 }
 
+local CATEGORY_FILTERS = {{
+	label = "全部",
+	value = "all"
+}, {
+	label = "常规",
+	value = "normal"
+}, {
+	label = "挑战",
+	value = "challenge"
+}, {
+	label = "整活",
+	value = "creative"
+}}
+
 local function safe_text(v, fallback)
 	if v == nil or v == "" then
 		return fallback or ""
@@ -111,6 +125,7 @@ local function scan_maps()
 					cfg = cfg,
 					level_data = level_data,
 					thumbnail_info = thumbnail_info,
+					category = type(metadata) == "table" and (metadata.category or "normal") or "normal",
 					battle_music = type(metadata) == "table" and metadata.battle_music or nil,
 					battle_prep_music = type(metadata) == "table" and metadata.battle_prep_music or nil,
 					has_heroic = FS.getInfo(wave_root .. entry .. "_waves_heroic.lua") ~= nil,
@@ -326,6 +341,9 @@ function CustomMapCard:_load_thumbnail()
 
 	if info.type == "file" then
 		local I = require("lib.klove.image_db")
+		if I.db_images[info.sprite_name] then
+			return KImageView:new(info.sprite_name)
+		end
 		local base_path = info.path:gsub("%.[^%.]+$", "")
 		local img
 		for _, ext in ipairs({".dds", ".astc", ".png", ".jpg"}) do
@@ -1091,13 +1109,15 @@ local CustomMapListView = class("CustomMapListView", KView)
 function CustomMapListView:initialize(size, maps, on_select)
 	KView.initialize(self, size)
 	self.propagate_on_click = true
-	self._maps = maps
+	self._all_maps = maps
+	self._filtered_maps = maps
+	self._category_filter = "all"
 	self._on_select = on_select
 	self._custom_thumbs = {}
 
 	local avail_w = size.x
 	local avail_h = size.y - TOP_MARGIN - BOTTOM_MARGIN
-	local total_maps = #maps
+	local total_maps = #self._filtered_maps
 	local cols = math.max(1, math.floor((avail_w + GAP) / (CARD_W + GAP)))
 	local rows = math.max(1, math.floor((avail_h + GAP) / (CARD_H + GAP)))
 	local cards_per_page = cols * rows
@@ -1141,10 +1161,10 @@ end
 function CustomMapListView:show_page(page)
 	self._current_page = page
 	local start_idx = (page - 1) * self._cards_per_page + 1
-	local end_idx = math.min(start_idx + self._cards_per_page - 1, #self._maps)
+	local end_idx = math.min(start_idx + self._cards_per_page - 1, #self._filtered_maps)
 	local page_maps = {}
 	for i = start_idx, end_idx do
-		page_maps[#page_maps + 1] = self._maps[i]
+		page_maps[#page_maps + 1] = self._filtered_maps[i]
 	end
 
 	local children = self._page_view.children
@@ -1162,7 +1182,7 @@ function CustomMapListView:show_page(page)
 		empty.text_align = "center"
 		empty.vertical_align = "middle"
 		empty.colors.text = C.meta
-		empty.text = "No custom maps found.\nPlace level-type plugins in the plugins/ directory."
+		empty.text = "还没有地图插件，前往插件管理器的地图分类下载吧！"
 		self._page_view:add_child(empty)
 		return
 	end
@@ -1187,6 +1207,23 @@ function CustomMapListView:show_page(page)
 	end
 end
 
+function CustomMapListView:set_category_filter(category)
+	self._category_filter = category
+	if category == "all" then
+		self._filtered_maps = self._all_maps
+	else
+		self._filtered_maps = {}
+		for _, map in ipairs(self._all_maps) do
+			if map.category == category then
+				self._filtered_maps[#self._filtered_maps + 1] = map
+			end
+		end
+	end
+	local total_maps = #self._filtered_maps
+	local total_pages = math.max(1, math.ceil(total_maps / self._cards_per_page))
+	self._nav:update_pages(total_pages)
+end
+
 return {
 	-- Constants
 	SAVE_FILE = SAVE_FILE,
@@ -1196,6 +1233,7 @@ return {
 	TOP_MARGIN = TOP_MARGIN,
 	BOTTOM_MARGIN = BOTTOM_MARGIN,
 	C = C,
+	CATEGORY_FILTERS = CATEGORY_FILTERS,
 
 	-- Utilities
 	safe_text = safe_text,

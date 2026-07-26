@@ -2498,7 +2498,8 @@ return level
     thumbnail_sprite = nil,
     thumbnail = nil,
     battle_music = nil,
-    battle_prep_music = nil
+    battle_prep_music = nil,
+    category = "normal"
 }
 ]]
 
