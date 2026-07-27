@@ -16571,7 +16571,7 @@ function scripts.controller_soldier_tower_barrel_skill_warrior_spawn.update(this
 
 	w.health.armor = this.tower_ref.powers.skill_warrior.armor[w.level]
 
-	U.soldier_inherit_tower_buff_factor(w, this.tower_ref)
+	SU.soldier_inherit_tower_buff_factor(w, this.tower_ref, store.tick_ts)
 	queue_insert(store, w)
 	queue_remove(store, this)
 end

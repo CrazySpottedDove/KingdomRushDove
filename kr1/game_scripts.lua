@@ -1992,7 +1992,7 @@ end
 scripts.enemy_demon_gulaemon = {}
 
 function scripts.enemy_demon_gulaemon.update(this, store)
-	local cont, blocker, is_flying
+	local cont, blocker
 	local a = this.timed_actions.list[1]
 	local sp = this.render.sprites[1]
 
@@ -2000,7 +2000,7 @@ function scripts.enemy_demon_gulaemon.update(this, store)
 	a.ts = store.tick_ts
 
 	local function ready_for_takeoff()
-		return not is_flying and enemy_ready_to_magic_attack(this, store, a) and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > a.nodes_limit_start
+		return not this.is_flying and enemy_ready_to_magic_attack(this, store, a) and P:nodes_to_defend_point(this.nav_path.pi, this.nav_path.spi, this.nav_path.ni) > a.nodes_limit_start
 	end
 
 	local function ready_to_land()
@@ -2038,7 +2038,7 @@ function scripts.enemy_demon_gulaemon.update(this, store)
 				end
 
 				this.health_bar.hidden = this.health.dead
-				is_flying = false
+				this.is_flying = false
 
 				patch_offsets(-1)
 
@@ -2052,14 +2052,14 @@ function scripts.enemy_demon_gulaemon.update(this, store)
 				goto label_113_0
 			end
 
-			cont, blocker = SU.y_enemy_walk_until_blocked(store, this, is_flying, ready_to_land)
+			cont, blocker = SU.y_enemy_walk_until_blocked(store, this, this.is_flying, ready_to_land)
 
 			if not cont then
 			-- block empty
 			else
-				if blocker and not is_flying then
+				if blocker and not this.is_flying then
 					if ready_for_takeoff() then
-						is_flying = true
+						this.is_flying = true
 
 						U.cleanup_blockers(store, this)
 
