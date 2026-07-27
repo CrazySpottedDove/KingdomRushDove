@@ -120,6 +120,7 @@ calc_love_fingerprint() {
             -path "./.plugins" -prune -o \
             -path "./mods/local" -prune -o \
             -path "./.deepseek" -prune -o \
+            -path "./.codewhale" -prune -o \
             -type f ! -name "*.dds" ! -name "*.exe" \
             ! -name "client.log" ! -name "client" \
             ! -name "https.dll" ! -name "https.so" \
@@ -212,6 +213,7 @@ if [ "$rebuild_love" -eq 1 ]; then
         "precompile/tests/*"
         ".deepseek/*"
         ".opencode/*"
+        ".codewhale/*"
     )
     if [ "$AUDIO_COMPRESS_MODE" = "1" ]; then
         # 音频将由压缩步骤单独写入 staging，避免先拷贝原始 ogg。
