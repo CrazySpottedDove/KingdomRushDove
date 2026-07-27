@@ -1098,7 +1098,7 @@ function scripts.soldier_reinforcement.update(this, store)
 				end
 			end
 
-			if this.melee.continue_in_cooldown and stam == A_IN_COOLDOWN then
+			if this.melee and this.melee.continue_in_cooldown and stam == A_IN_COOLDOWN then
 				goto label_34_1
 			end
 

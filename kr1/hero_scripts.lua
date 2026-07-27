@@ -4673,10 +4673,6 @@ scripts.hero_magnus = {
 		local h = this.health
 		local a, skill, brk, sta
 
-		local function d2r(d)
-			return d * math.pi / 180
-		end
-
 		U.y_animation_play(this, "levelUp", nil, store.tick_ts, 1)
 
 		this.health_bar.hidden = false
@@ -4712,7 +4708,7 @@ scripts.hero_magnus = {
 					a.ts = store.tick_ts
 
 					for i = 1, a.count do
-						local angle = d2r(360 * i / a.count)
+						local angle = 2 * math.pi * i / a.count
 						local o = V.v(V.rotate(angle, a.initial_pos.x, a.initial_pos.y))
 						local r = V.v(V.rotate(angle, a.initial_rally.x, a.initial_rally.y))
 						local e = E:create_entity(a.entity)
@@ -41963,21 +41959,15 @@ scripts.hero_oloch = {}
 function scripts.hero_oloch.level_up(this, store, initial)
 	local hl, ls = level_up_basic(this)
 
-	if this.melee then
-		this.melee.attacks[1].damage_min = ls.melee_damage_min[hl]
-		this.melee.attacks[1].damage_max = ls.melee_damage_max[hl]
-	end
+	this.melee.attacks[1].damage_min = ls.melee_damage_min[hl]
+	this.melee.attacks[1].damage_max = ls.melee_damage_max[hl]
 
-	if this.ranged then
-		local bt = E:get_template(this.ranged.attacks[1].bullet)
-		bt.bullet.damage_min = ls.ranged_damage_min[hl]
-		bt.bullet.damage_max = ls.ranged_damage_max[hl]
-	end
+	local bt = E:get_template(this.ranged.attacks[1].bullet)
+	bt.bullet.damage_min = ls.ranged_damage_min[hl]
+	bt.bullet.damage_max = ls.ranged_damage_max[hl]
 
-	if this.selfdestruct then
-		this.selfdestruct.damage_min = ls.selfdestruct_damage_config[hl]
-		this.selfdestruct.damage_max = ls.selfdestruct_damage_config[hl]
-	end
+	this.selfdestruct.damage_min = ls.selfdestruct_damage_config[hl]
+	this.selfdestruct.damage_max = ls.selfdestruct_damage_config[hl]
 
 	upgrade_skill(this, "duplication", function(this, s)
 		this.timed_attacks.list[1].disabled = nil
@@ -41998,63 +41988,38 @@ function scripts.hero_oloch.level_up(this, store, initial)
 	end)
 
 	upgrade_skill(this, "hellish_infusion", function(this, s)
-		this.auras.list[1].disabled = nil
-		this.auras.list[1].cooldown = s.cooldown[s.level]
-		this.auras.list[1].damage_inc = s.damage_factor_config[s.level]
-		local m = E:get_template(this.auras.list[1].mod)
-		m.range_factor = s.damage_factor_config[s.level]
+		this.timed_attacks.list[3].disabled = nil
+		this.timed_attacks.list[3].cooldown = s.cooldown[s.level]
+		local m = E:get_template(this.timed_attacks.list[3].mod)
+		m.damage_factor = s.damage_factor_config[s.level]
 	end)
 
 	upgrade_skill(this, "demonic_blast", function(this, s)
 		this.ranged.attacks[2].disabled = nil
-		this.ranged.attacks[2].xp_gain = s.xp_gain[s.level]
 		local b = E:get_template(this.ranged.attacks[2].bullet)
 		b.bullet.damage_max = s.damage_max[s.level]
 		b.bullet.damage_min = s.damage_min[s.level]
 	end)
 
 	upgrade_skill(this, "ultimate", function(this, s)
-		local u = E:get_template(s.controller_name)
-		u.cooldown = s.cooldown[s.level]
-		u.max_targets = s.max_targets[s.level]
+		this.ultimate.cooldown = s.cooldown[s.level]
+		this.ultimate.disabled = nil
 		local e = E:get_template("mod_hero_oloch_ultimate_teleport")
 		e.nodes_offset = s.offset_config[s.level]
 	end)
+
+	update_hp(this)
 end
 
 function scripts.hero_oloch.update(this, store)
 	local h = this.health
 	local he = this.hero
 	local a, skill, brk, sta
-	local heat_aura_attack = this.auras.list[1]
 
-	this.melee.attacks[1].ts = 0
-	this.ranged.attacks[1].ts = 0
-	this.ranged.attacks[2].ts = 0
-	this.timed_attacks.list[1].ts = 0
-	this.timed_attacks.list[2].ts = 0
-	heat_aura_attack.ts = 0
+	local ha = this.timed_attacks.list[3]
 
-	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
-
+	U.y_animation_play_once_specific_no_flip(this, "levelup", store.tick_ts, 1)
 	this.health_bar.hidden = false
-
-	local function explosion(r, damage, dty)
-		local targets = U.find_enemies_in_range(store.enemies, this.pos, 0, r, 0, bit.bor(F_FLYING, F_CLIFF))
-
-		if targets then
-			for _, target in ipairs(targets) do
-				local d = E:create_entity("damage")
-
-				d.value = damage
-				d.damage_type = dty
-				d.target_id = target.id
-				d.source_id = this.id
-
-				queue_damage(store, d)
-			end
-		end
-	end
 
 	while true do
 		if h.dead then
@@ -42071,22 +42036,14 @@ function scripts.hero_oloch.update(this, store)
 			end
 
 			if SU.hero_level_up(store, this) then
-				U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+				U.y_animation_play_once_specific_no_flip(this, "levelup", store.tick_ts, 1)
 			end
 
 			-- 大招
 			if ready_to_use_skill(this.ultimate, store) then
-				local target = find_target_at_critical_moment(this, store, this.ultimate.range or this.ranged.attacks[1].max_range)
+				local target = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range)
 				if target then
-					U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
-					S:queue(this.sound_events.change_rally_point)
-					local e = E:create_entity(he.skills.ultimate.controller_name)
-					e.pos = V.vclone(target.pos)
-					e.level = he.skills.ultimate.level
-					e.damage_factor = this.unit.damage_factor
-					queue_insert(store, e)
-					this.ultimate.ts = store.tick_ts
-					SU.hero_gain_xp_from_skill(this, he.skills.ultimate)
+					apply_ultimate(this, store, target.pos, "levelup")
 				else
 					this.ultimate.ts = this.ultimate.ts + 1
 				end
@@ -42095,15 +42052,13 @@ function scripts.hero_oloch.update(this, store)
 			-- 1技能 分身
 			skill = he.skills.duplication
 			a = this.timed_attacks.list[1]
-			if not a.disabled and store.tick_ts - a.ts >= a.cooldown then
-				local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
+				local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 				if target then
 					S:queue(a.sound)
-					U.animation_start(this, a.animation, nil, store.tick_ts)
+					U.animation_start_once_specific(this, a.animation, target.pos.x < this.pos.x, store.tick_ts, 1)
 
-					if U.y_wait(store, a.cast_time, function()
-						return SU.hero_interrupted(this)
-					end) then
+					if SU.y_hero_wait(store, this, a.cast_time) then
 						goto label_40884_0
 					end
 
@@ -42111,10 +42066,8 @@ function scripts.hero_oloch.update(this, store)
 
 					a.ts = store.tick_ts
 
-					local rotations = a.entity_rotations[a.count]
-
 					for i = 1, a.count do
-						local angle = rotations[i]
+						local angle = 2 * math.pi * i / a.count
 						local o = V.v(V.rotate(angle, a.initial_pos.x, a.initial_pos.y))
 						local r = V.v(V.rotate(angle, a.initial_rally.x, a.initial_rally.y))
 						local e = E:create_entity(a.entity)
@@ -42132,34 +42085,39 @@ function scripts.hero_oloch.update(this, store)
 						queue_insert(store, e)
 					end
 
-					if not U.y_animation_wait(this) then
+					if SU.y_hero_animation_wait(this) then
 						goto label_40884_0
 					end
 				else
-					a.ts = a.ts + 0.4 * FPS
+					a.ts = a.ts + 0.1
 				end
 			end
 
 			-- 2技能 岩浆池
 			a = this.timed_attacks.list[2]
 			skill = he.skills.magma_eruption
-			if not a.disabled and store.tick_ts - a.ts > a.cooldown then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 				if not target then
-					a.ts = a.ts + 0.4 * FPS
+					a.ts = a.ts + 0.1
 				else
 					local pi, spi, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
 					local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {pi}, nil, nil, NF_RALLY)
 
 					if #nodes < 1 then
-						a.ts = a.ts + 0.4 * FPS
+						a.ts = a.ts + 0.1
 					else
-						local s_pi, s_spi, s_ni = unpack(nodes[1])
+						local s_pi, _, s_ni = unpack(nodes[1])
 						local flip = target.pos.x < this.pos.x
 
-						U.animation_start(this, a.animation, flip, store.tick_ts)
-						U.y_wait(store, a.spawn_time)
+						U.animation_start_once_specific(this, a.animation, flip, store.tick_ts, 1)
+						if SU.y_hero_wait(store, this, a.spawn_time) then
+							goto label_40884_0
+						end
+
+						a.ts = store.tick_ts
+						SU.hero_gain_xp_from_skill(this, skill)
 
 						local delay = 0
 						local n_step = ni < s_ni and -4 or 4
@@ -42175,52 +42133,60 @@ function scripts.hero_oloch.update(this, store)
 							e.delay = delay
 							e.bullet.source_id = this.id
 							e.bullet.level = skill.level
+							e.bullet.damage_factor = this.unit.damage_factor
 
 							queue_insert(store, e)
 
 							delay = delay + fts(U.frandom(1, 3))
 							ni = ni + n_step
 							spi = km.zmod(spi + math.random(1, 2), 3)
-							U.y_wait(store, fts(5))
+							U.y_wait_unconditional(store, fts(5) * this.unit.cooldown_factor)
 						end
 
-						U.y_animation_wait(this)
-
-						a.ts = store.tick_ts
-
-						SU.hero_gain_xp_from_skill(this, skill)
-
-						goto label_40884_0
+						if SU.y_hero_animation_wait(this) then
+							goto label_40884_0
+						end
 					end
 				end
 			end
 
 			-- 3技能 地狱注入
-			if store.tick_ts - heat_aura_attack.ts > heat_aura_attack.cooldown and he.skills.hellish_infusion.level >= 1 then
-				heat_aura_attack.ts = store.tick_ts
-				local eagle_range = heat_aura_attack.range
-				U.y_animation_play(this, heat_aura_attack.animation, nil, store.tick_ts, 1)
-				SU.hero_gain_xp_from_skill(this, he.skills.hellish_infusion)
-				local existing_mods = table.filter(store.entities, function(_, e)
-					return e.modifier and e.template_name == heat_aura_attack.mod and e.modifier.level >= he.skills.hellish_infusion.level
-				end)
-				local busy_ids = table.map(existing_mods, function(k, v)
-					return v.modifier.target_id
-				end)
-				local towers = table.filter(store.entities, function(_, e)
-					return e.tower and e ~= this.owner and e.tower.can_be_mod and not table.contains(busy_ids, e.id) and not table.contains(heat_aura_attack.excluded_templates, e.template_name) and U.is_inside_ellipse(e.pos, this.pos, eagle_range)
-				end)
+			if ready_to_use_skill(ha, store, this.unit.cooldown_factor) then
+				local has_tower = false
+				for _, e in pairs(store.towers) do
+					if e.tower.can_be_mod and U.is_inside_ellipse(e.pos, this.pos, ha.range) then
+						has_tower = true
+						break
+					end
+				end
 
-				for _, tower in ipairs(towers) do
-					local new_mod = E:create_entity(heat_aura_attack.mod)
+				if has_tower then
+					U.animation_start_once_specific_no_flip(this, ha.animation, store.tick_ts, 1)
 
-					new_mod.modifier.level = he.skills.hellish_infusion.level
-					new_mod.modifier.target_id = tower.id
-					new_mod.modifier.source_id = this.id
-					new_mod.modifier.duration = 1
-					new_mod.pos = tower.pos
+					if SU.y_hero_wait(store, this, ha.cast_time) then
+						goto label_40884_0
+					end
 
-					queue_insert(store, new_mod)
+					SU.hero_gain_xp_from_skill(this, he.skills.hellish_infusion)
+					ha.ts = store.tick_ts
+
+					local towers = table.filter(store.towers, function(_, e)
+						return e.tower.can_be_mod and U.is_inside_ellipse(e.pos, this.pos, ha.range)
+					end)
+
+					for _, tower in ipairs(towers) do
+						local new_mod = E:create_entity(ha.mod)
+						new_mod.modifier.target_id = tower.id
+						new_mod.modifier.source_id = this.id
+						new_mod.pos = tower.pos
+						queue_insert(store, new_mod)
+					end
+
+					if SU.y_hero_animation_wait(this) then
+						goto label_40884_0
+					end
+				else
+					ha.ts = ha.ts + 0.1
 				end
 			end
 
@@ -42250,132 +42216,64 @@ function scripts.hero_oloch.update(this, store)
 	end
 end
 
-scripts.soldier_oloch_illusion = {}
-
-function scripts.soldier_oloch_illusion.get_info(this)
-	local t = scripts.soldier_barrack.get_info(this)
-
-	t.respawn = nil
-
-	return t
-end
-
 scripts.oloch_magma = {}
 
 function scripts.oloch_magma.update(this, store)
 	local b = this.bullet
 
 	U.sprites_hide(this)
-
-	if this.delay then
-		U.y_wait(store, this.delay)
-	end
-
+	U.y_wait_unconditional(store, this.delay)
 	U.sprites_show(this)
 
 	this.pos.x = this.pos.x + math.random(-4, 4)
 	this.pos.y = this.pos.y + math.random(-5, 5)
 
 	S:queue(this.sound_events.delayed_insert)
-	if not this.render.sprites[1].hidden then
-		U.animation_start(this, "run", nil, store.tick_ts, false, 1)
-	end
+	U.animation_start_once_specific_no_flip(this, "run", store.tick_ts, 1)
+
 	this.tween.ts = store.tick_ts
 
-	U.y_wait(store, fts(15))
+	U.y_wait_unconditional(store, fts(15))
 
-	local targets = U.find_enemies_in_range(store.enemies, this.pos, 0, b.damage_radius, b.damage_flags, b.damage_bans)
+	local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.damage_flags, b.damage_bans)
 
 	if targets then
 		for _, target in ipairs(targets) do
-			local d = E:create_entity("damage")
-
-			d.damage_type = b.damage_type
-			d.source_id = this.id
-			d.target_id = target.id
-			d.value = b.damage_min
+			local d = SU.create_bullet_damage_without_pops(b, target.id, this.id)
 			queue_damage(store, d)
-
-			if b.mod then
-				local m = E:create_entity(b.mod)
-
-				m.modifier.source_id = this.id
-				m.modifier.target_id = target.id
-				m.modifier.xp_dest_id = b.source_id
-
-				queue_insert(store, m)
-			end
 		end
 	end
 
-	if b.hit_payload then
-		local p = E:create_entity(b.hit_payload)
-		p.pos.x, p.pos.y = this.pos.x, this.pos.y
-		p.render.sprites[1].ts = 0
+	local p = E:create_entity(b.hit_payload)
+	p.pos.x, p.pos.y = this.pos.x, this.pos.y
+	p.render.sprites[1].ts = 0
 
-		queue_insert(store, p)
-	end
+	queue_insert(store, p)
 
-	if not this.render.sprites[1].hidden then
-		U.y_wait(store, fts(10))
-	end
+	U.y_wait_unconditional(store, fts(10))
 
 	queue_remove(store, this)
 end
 
-scripts.range_mod_oloch = {}
+scripts.mod_oloch_heat = {}
 
-function scripts.range_mod_oloch.insert(this, store, script)
+function scripts.mod_oloch_heat.update(this, store)
 	local m = this.modifier
 	local target = store.entities[m.target_id]
 
-	if not target or not target.tower then
-		log.error("cannot insert range_mod_oloch to entity %s - ", target.id, target.template_name)
-
-		return false
-	end
-
-	if target.tower and target.tower.damage_factor then
-		target.tower.damage_factor = target.tower.damage_factor * this.range_factor
-	end
-
-	signal.emit("mod-applied", this, target)
-
-	return true
-end
-
-function scripts.range_mod_oloch.update(this, store)
-	local m = this.modifier
-	local target = store.entities[m.target_id]
-
-	if target then
-		this.pos = target.pos
+	if not target then
+		queue_remove(store, this)
+		return
 	end
 
 	m.ts = store.tick_ts
+	this.tween.ts = store.tick_ts
 
-	if this.tween then
-		this.tween.ts = store.tick_ts
-	end
-
-	U.animation_start(this, "run", nil, store.tick_ts, true, 1)
-
-	while store.tick_ts - m.ts < 7 do
+	while store.tick_ts - m.ts < m.duration do
 		coroutine.yield()
 	end
 
 	queue_remove(store, this)
-end
-
-function scripts.range_mod_oloch.remove(this, store, script)
-	local m = this.modifier
-	local target = store.entities[m.target_id]
-
-	if target and target.tower and target.tower.damage_factor then
-		target.tower.damage_factor = target.tower.damage_factor / this.range_factor
-	end
-
-	return true
 end
 
 scripts.hero_oloch_ultimate = {}
@@ -42388,7 +42286,7 @@ function scripts.hero_oloch_ultimate.update(this, store)
 	end
 
 	local pi, spi, ni = unpack(nodes[1])
-	local npos = P:node_pos(pi, spi, ni)
+	local npos = P:node_pos_ref(pi, spi, ni)
 
 	S:queue(this.sound_cast)
 
@@ -42398,49 +42296,28 @@ function scripts.hero_oloch_ultimate.update(this, store)
 	d.render.sprites[1].ts = store.tick_ts
 
 	queue_insert(store, d)
-	U.y_wait(store, fts(5))
+	U.y_wait_unconditional(store, fts(5))
 
 	local target, targets = U.find_nearest_enemy(store, npos, 0, this.radius, this.vis_flags, this.vis_bans)
 
-	if not target or not targets or #targets < 1 then
+	if not target then
 		return true
 	end
 
 	local num_targets = math.min(#targets, this.max_targets)
 
+	S:queue(this.sound_teleport_in)
+	S:queue(this.sound_teleport_out, {
+		delay = E:get_template(this.mod_teleport).hold_time
+	})
 	for i = 1, num_targets do
 		local t = targets[i]
-		local mod_mark = E:create_entity(this.mod_mark)
-
-		mod_mark.modifier.target_id = t.id
-		mod_mark.modifier.source_id = this.id
-
-		queue_insert(store, mod_mark)
-		S:queue(this.sound_teleport_in)
-
 		local mod_teleport = E:create_entity(this.mod_teleport)
-
+		mod_teleport.modifier.level = this.level
 		mod_teleport.modifier.target_id = t.id
 		mod_teleport.modifier.source_id = this.id
 
 		queue_insert(store, mod_teleport)
-		S:queue(this.sound_teleport_out, {
-			delay = mod_teleport.hold_time
-		})
-	end
-
-	queue_remove(store, this)
-end
-
-scripts.mod_hero_oloch_ultimate_teleport = {}
-
-function scripts.mod_hero_oloch_ultimate_teleport.remove(this, store)
-	local target = store.entities[this.modifier.target_id]
-
-	if target then
-		target.health.ignore_damage = false
-
-		SU.stun_dec(target)
 	end
 
 	queue_remove(store, this)

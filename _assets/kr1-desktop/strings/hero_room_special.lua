@@ -3421,21 +3421,25 @@ duration = e.reinforcement.duration
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
 d[1].damage_type = DAMAGE_MAGICAL
-map["自我复制"] = str(cooldown_str(), "奥洛克制造出两个自己的幻象来攻击敌人，拥有", hp_str(), "，每次攻击造成", damage_str(), "魔法伤害，持续", duration, "秒。")
+map["自我复制"] = str(cooldown_str(), "奥洛克制造出两个自己的幻象来攻击敌人，拥有", hp_str(), "，每次攻击造成", damage_str(), "，持续", duration, "秒。")
 
 set_skill(h.hero.skills.magma_eruption)
 cooldown = h.timed_attacks.list[2].cooldown
 count = ss("count")
 d[1].damage_min = ss("damage_config")
 d[1].damage_max = ss("damage_config")
-d[1].damage_type = DAMAGE_TRUE
+e = T("oloch_magma")
+d[1].damage_type = e.bullet.damage_type
 e = T("mod_oloch_magma")
-local aura_damage = ss("damage_aura_config")
-map["岩浆喷发"] = str(cooldown_str(), "喷发出", count, "个熔岩间歇泉，每个造成", damage_str(), "真实伤害，并留下一片熔岩区域持续灼烧敌人，每0.5秒造成", aura_damage, "点物理伤害。")
+d[2].damage_min = ss("damage_aura_config")
+d[2].damage_max = ss("damage_aura_config")
+d[2].damage_type = e.dps.damage_type
+cycle_time = e.dps.damage_every
+map["岩浆喷发"] = str(cooldown_str(), "喷发出", count, "个熔岩间歇泉，每个造成", damage_str(), "，并留下一片熔岩区域持续灼烧敌人，每", cycle_time, "秒造成", damage_str(2), "。")
 
 set_skill(h.hero.skills.hellish_infusion)
-cooldown = h.auras.list[1].cooldown
-duration = T("range_mod_oloch").modifier.duration
+cooldown = h.timed_attacks.list[1].cooldown
+duration = T("mod_oloch_heat").modifier.duration
 local factor = ss("damage_factor_config")
 map["地狱注入"] = str(cooldown_str(), "向附近防御塔注入能量，给予它们", (factor - 1) * 100, "%伤害加成，持续", duration, "秒。")
 
@@ -3443,11 +3447,21 @@ set_skill(h.hero.skills.demonic_blast)
 cooldown = h.ranged.attacks[2].cooldown
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
-d[1].damage_type = DAMAGE_MAGICAL
-map["恶魔飞爆"] = str(cooldown_str(), "召唤一只大火球掷向敌人，造成", damage_str(), "魔法伤害。")
+d[1].damage_type = T("bolt_oloch_big").bullet.damage_type
+map["恶魔飞爆"] = str(cooldown_str(), "召唤一只大火球掷向敌人，造成", damage_str(), "。")
 
 set_skill(h.hero.skills.ultimate)
 cooldown = h.ultimate.cooldown
-map["孤立缄印"] = str(cooldown_str(), "将一组敌人标记并传送回一段距离。")
+count = T("controller_hero_oloch_ultimate").max_targets
+d[1].damage_min = T("mod_hero_oloch_ultimate_teleport").damage_base + T("mod_hero_oloch_ultimate_teleport").damage_inc * max_lvl
+d[1].damage_max = d[1].damage_min
+d[1].damage_type = T("mod_hero_oloch_ultimate_teleport").damage_type
+map["孤立缄印"] = str(cooldown_str(), "将最多", count, "名敌人传送回一段距离，并对他们造成", damage_str(), "。")
+
+d[1].damage_min = table.tail(h.hero.level_stats.selfdestruct_damage_config)
+d[1].damage_max = table.tail(h.hero.level_stats.selfdestruct_damage_config)
+d[1].damage_type = h.selfdestruct.damage_type
+radius = h.selfdestruct.damage_radius
+map["炼狱业火"] = str("奥洛克阵亡后爆炸，对", radius, "范围内的敌人造成", damage_str(), "。")
 
 return H

@@ -6746,5 +6746,6 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	SOLDIER_HERO_ORC_SPEAR_GOBLIN_NAME = "好战分子",
 	HERO_OLOCH_NAME = "奥洛克",
 	HERO_OLOCH_DESCRIPTION = "恶魔奥洛克受过黑暗技艺方面的训练，曾帮助维兹南越狱，以换取他的一部分力量。现在他一边协助维兹南作战，一边等待着时机来实行自己那阴险的计划，好让这份协定变得对他有利。",
-	HERO_OLOCH_SPECIAL = "自我复制，岩浆喷发，地狱注入，恶魔飞爆，孤立缄印"
+	HERO_OLOCH_SPECIAL = "炼狱业火，自我复制，岩浆喷发，地狱注入，恶魔飞爆，孤立缄印",
+	HERO_OLOCH_ILLUSION_NAME = "奥洛克的幻影"
 }

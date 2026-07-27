@@ -1224,7 +1224,10 @@ local other_bolts = {
 	"bullet_tower_pandas_air_lvl4",
 	"tower_arcane_wizard5_ray_disintegrate",
 	"hero_muyrn_bullet",
-	"bolt_hero_spider_basic_attack"
+	"bolt_hero_spider_basic_attack",
+	"bolt_oloch",
+	"bolt_oloch_big",
+	"bolt_oloch_duplication"
 }
 
 upgrades.bolts = table.append(other_bolts, upgrades.mage_tower_bolts)
