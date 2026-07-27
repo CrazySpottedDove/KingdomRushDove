@@ -795,7 +795,7 @@ end
 ---@param scale number 纹理参考缩放比例
 function image_db:queue_load_image(sprite_name, a_name, path, group, scale)
 	local key = remove_extension_fast(a_name)
-	if self._queue_image_info[key] or self.db_atlas[key] then
+	if self._queue_image_info[key] or self.db_atlas[sprite_name] then
 		return
 	end
 	self._queue_image_info[key] = {
