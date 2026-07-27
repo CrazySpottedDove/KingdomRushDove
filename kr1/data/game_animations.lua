@@ -50558,20 +50558,10 @@ return {
 		to = 15,
 		from = 1
 	},
-	hero_oloch_duplication_walk = {
-		prefix = "hero_oloch_duplication",
-		to = 33,
-		from = 16
-	},
 	hero_oloch_duplication_running = {
 		prefix = "hero_oloch_duplication",
 		to = 33,
 		from = 16
-	},
-	hero_oloch_duplication_melee = {
-		prefix = "hero_oloch_duplication",
-		to = 51,
-		from = 34
 	},
 	hero_oloch_duplication_attack = {
 		prefix = "hero_oloch_duplication",
