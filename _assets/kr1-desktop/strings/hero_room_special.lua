@@ -3435,7 +3435,7 @@ d[2].damage_min = ss("damage_aura_config")
 d[2].damage_max = ss("damage_aura_config")
 d[2].damage_type = e.dps.damage_type
 cycle_time = e.dps.damage_every
-map["岩浆喷发"] = str(cooldown_str(), "喷发出", count, "个熔岩间歇泉，每个造成", damage_str(), "，并留下一片熔岩区域持续灼烧敌人，每", cycle_time, "秒造成", damage_str(2), "。")
+map["岩浆喷发"] = str(cooldown_str(), "喷发出", count, "个熔岩泉，每个造成", damage_str(), "，并留下一片熔岩区域持续灼烧敌人，每", cycle_time, "秒造成", damage_str(2), "。")
 
 set_skill(h.hero.skills.hellish_infusion)
 cooldown = h.timed_attacks.list[1].cooldown
