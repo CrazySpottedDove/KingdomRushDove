@@ -81,7 +81,7 @@ rsync -a \
     --exclude='config.json' \
     --exclude='.deepseek/' \
     --exclude='.opencode/' \
-    --exclude='.codewhale/ \
+    --exclude='.codewhale/' \
     ./ "$DEST_DIR/"
 
 # Download Windows 7za.exe if not cached
