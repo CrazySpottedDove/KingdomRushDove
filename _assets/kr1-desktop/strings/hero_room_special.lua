@@ -3451,7 +3451,7 @@ d[1].damage_type = T("bolt_oloch_big").bullet.damage_type
 map["恶魔飞爆"] = str(cooldown_str(), "召唤一只大火球掷向敌人，造成", damage_str(), "。")
 
 set_skill(h.hero.skills.ultimate)
-cooldown = h.ultimate.cooldown
+cooldown = ss("cooldown")
 count = T("controller_hero_oloch_ultimate").max_targets
 d[1].damage_min = T("mod_hero_oloch_ultimate_teleport").damage_base + T("mod_hero_oloch_ultimate_teleport").damage_inc * max_lvl
 d[1].damage_max = d[1].damage_min
