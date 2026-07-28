@@ -21857,12 +21857,11 @@ tt.render.sprites[1].name = "hero_orc_spear_goblin_fx_run"
 -- 主英雄模板
 tt = RT("hero_oloch", "hero")
 AC(tt, "melee", "ranged", "timed_attacks", "selfdestruct")
-tt.melee.range = 20
+tt.melee.range = 30
 tt.health_bar.offset = v(0, 52)
 tt.health.dead_lifetime = 15
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.tombstone_show_time = fts(90)
-tt.info.fn = scripts.hero_basic.get_info
 tt.main_script.update = scripts.hero_oloch.update
 tt.hero.fn_level_up = scripts.hero_oloch.level_up
 tt.info.portrait = "kr4_info_portraits_heroes_0003"
@@ -21961,7 +21960,7 @@ tt.melee.attacks[1].vis_bans = bor(F_FLYING, F_CLIFF)
 tt.melee.attacks[1].vis_flags = F_BLOCK
 tt.ranged.attacks[1] = CC("bullet_attack")
 tt.ranged.attacks[1].cooldown = 1.8
-tt.ranged.attacks[1].min_range = 20
+tt.ranged.attacks[1].min_range = 30
 tt.ranged.attacks[1].max_range = 170
 tt.ranged.attacks[1].animation = "shoot"
 tt.ranged.attacks[1].bullet = "bolt_oloch"
@@ -21973,7 +21972,7 @@ tt.ranged.attacks[2].cooldown = 27
 tt.ranged.attacks[2].disabled = true
 tt.ranged.attacks[2].animation = "megaBolt"
 tt.ranged.attacks[2].sound = "hero_oloch_demonic_cast"
-tt.ranged.attacks[2].min_range = 20
+tt.ranged.attacks[2].min_range = 30
 tt.ranged.attacks[2].max_range = 185
 tt.ranged.attacks[2].bullet = "bolt_oloch_big"
 tt.ranged.attacks[2].shoot_time = fts(45)
@@ -21981,7 +21980,7 @@ tt.ranged.attacks[2].bullet_start_offset = {v(0, 52)}
 tt.ranged.attacks[2].check_target_before_shot = true
 tt.timed_attacks.list[1] = CC("spawn_attack")
 tt.timed_attacks.list[1].animation = "duplication"
-tt.timed_attacks.list[1].cooldown = 22.5
+tt.timed_attacks.list[1].cooldown = 25
 tt.timed_attacks.list[1].cast_time = fts(12)
 tt.timed_attacks.list[1].disabled = true
 tt.timed_attacks.list[1].entity = "soldier_oloch_illusion"
@@ -22019,16 +22018,28 @@ tt.selfdestruct.damage_min = 50
 tt.selfdestruct.hit_time = fts(29)
 tt.selfdestruct.sound = "BombExplosionSound"
 tt.selfdestruct.sound_args = {
-	delay = fts(40)
+	delay = fts(29)
 }
 
 -- 1技能 分身
 tt = RT("soldier_oloch_illusion", "soldier_militia")
-AC(tt, "reinforcement", "ranged", "tween")
+AC(tt, "reinforcement", "ranged", "tween", "selfdestruct", "nav_grid")
+tt.controable = true
+tt.controable_other = true
 tt.melee = nil
+tt.selfdestruct.animation = "death"
+tt.selfdestruct.damage_radius = 70
+tt.selfdestruct.damage_type = DAMAGE_PHYSICAL
+tt.selfdestruct.damage_max = 50
+tt.selfdestruct.damage_min = 50
+tt.selfdestruct.hit_time = fts(29)
+tt.selfdestruct.sound = "BombExplosionSound"
+tt.selfdestruct.sound_args = {
+	delay = fts(29)
+}
 tt.health.hp_max = 300
 tt.health_bar.offset = v(0, 52)
-tt.health.dead_lifetime = fts(14)
+tt.health.dead_lifetime = 2
 tt.info.portrait = "kr4_info_portraits_heroes_0003"
 tt.info.random_name_format = nil
 tt.info.fn = scripts.soldier_reinforcement.get_info
@@ -22036,6 +22047,7 @@ tt.main_script.insert = scripts.soldier_reinforcement.insert
 tt.main_script.update = scripts.soldier_reinforcement.update
 tt.reinforcement.duration = 10
 tt.reinforcement.fade = nil
+tt.motion.max_speed = 65
 tt.ranged.attacks[1] = CC("bullet_attack")
 tt.ranged.attacks[1].bullet = "bolt_oloch_duplication"
 tt.ranged.attacks[1].bullet_start_offset = {v(-8, 44)}
@@ -22044,18 +22056,37 @@ tt.ranged.attacks[1].min_range = 0
 tt.ranged.attacks[1].shoot_time = fts(31)
 tt.ranged.attacks[1].cooldown = 1.8
 tt.ranged.attacks[1].check_target_before_shot = true
+tt.ranged.attacks[2] = CC("bullet_attack")
+tt.ranged.attacks[2].cooldown = 27
+tt.ranged.attacks[2].disabled = true
+tt.ranged.attacks[2].animation = "megaBolt"
+tt.ranged.attacks[2].sound = "hero_oloch_demonic_cast"
+tt.ranged.attacks[2].min_range = 20
+tt.ranged.attacks[2].max_range = 185
+tt.ranged.attacks[2].bullet = "bolt_oloch_big_duplication"
+tt.ranged.attacks[2].shoot_time = fts(45)
+tt.ranged.attacks[2].bullet_start_offset = {v(0, 52)}
+tt.ranged.attacks[2].check_target_before_shot = true
 tt.regen.cooldown = 1
-tt.render.sprites[1].prefix = "hero_oloch_duplication"
+tt.render.sprites[1].anchor.y = 0.12
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].offset = v(0, -18)
+tt.render.sprites[1].prefix = "hero_oloch"
+tt.render.sprites[1].angles.walk = {"walk"}
 tt.render.sprites[1].alpha = 180
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].offset = v(0, -18)
+tt.render.sprites[2].name = "hero_oloch_shadow"
+tt.render.sprites[2].anchor.y = 0.12
+tt.render.sprites[2].z = Z_DECALS + 1
 tt.tween.props[1].name = "offset"
-tt.tween.props[1].keys = {{0, v(0, 0)}, {fts(6), v(0, 0)}}
+tt.tween.props[1].keys = {{0, v(0, -18)}, {fts(6), v(0, -18)}}
 tt.tween.remove = false
 tt.tween.run_once = true
 tt.ui.click_rect = r(-13, -5, 26, 32)
 tt.unit.marker_offset = v(0, 0)
-tt.unit.mod_offset = v(0, 15)
+tt.unit.mod_offset = v(0, 20)
 tt.vis.bans = bor(F_LYCAN, F_SKELETON, F_CANNIBALIZE, F_RANGED)
 
 -- 2技能 岩浆池
@@ -22145,17 +22176,9 @@ tt.render.sprites[1].name = "hero_oloch_bolt_0001"
 tt.render.sprites[1].animated = false
 tt.sound_events.insert = "InfernalMageAttack"
 
-tt = RT("bolt_oloch_duplication", "bolt")
-tt.bullet.damage_max = 78
-tt.bullet.damage_min = 42
-tt.bullet.damage_type = DAMAGE_MAGICAL
-tt.bullet.hit_fx = "fx_bolt_oloch_hit"
-tt.bullet.max_speed = 600
-tt.bullet.particles_name = "ps_bolt_oloch"
-tt.render.sprites[1].anchor = v(0.5, 0.5)
-tt.render.sprites[1].name = "hero_oloch_bolt_0001"
-tt.render.sprites[1].animated = false
-tt.sound_events.insert = "InfernalMageAttack"
+tt = RT("bolt_oloch_duplication", "bolt_oloch")
+tt.bullet.xp_gain_factor = nil
+tt.render.sprites[1].alpha = 180
 
 -- 4技能 大火球
 tt = RT("bolt_oloch_big", "bolt")
@@ -22170,6 +22193,10 @@ tt.render.sprites[1].anchor = v(0.5, 0.5)
 tt.render.sprites[1].name = "hero_oloch_mega_bolt_0001"
 tt.render.sprites[1].animated = false
 tt.sound_events.insert = "hero_oloch_demonic_travel"
+
+tt = RT("bolt_oloch_big_duplication", "bolt_oloch_big")
+tt.bullet.xp_gain_factor = nil
+tt.render.sprites[1].alpha = 180
 
 tt = RT("fx_bolt_oloch_hit", "fx")
 tt.render.sprites[1].prefix = "hero_oloch_bolt"

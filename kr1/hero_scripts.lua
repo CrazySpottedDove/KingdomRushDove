@@ -41968,6 +41968,9 @@ function scripts.hero_oloch.level_up(this, store, initial)
 
 	this.selfdestruct.damage_min = ls.selfdestruct_damage_config[hl]
 	this.selfdestruct.damage_max = ls.selfdestruct_damage_config[hl]
+	local e = E:get_template(this.timed_attacks.list[1].entity)
+	e.selfdestruct.damage_min = ls.selfdestruct_damage_config[hl] * 0.4
+	e.selfdestruct.damage_max = ls.selfdestruct_damage_config[hl] * 0.4
 
 	upgrade_skill(this, "duplication", function(this, s)
 		this.timed_attacks.list[1].disabled = nil
@@ -41999,6 +42002,11 @@ function scripts.hero_oloch.level_up(this, store, initial)
 		local b = E:get_template(this.ranged.attacks[2].bullet)
 		b.bullet.damage_max = s.damage_max[s.level]
 		b.bullet.damage_min = s.damage_min[s.level]
+		local e = E:get_template(this.timed_attacks.list[1].entity)
+		e.ranged.attacks[2].disabled = nil
+		local b2 = E:get_template(e.ranged.attacks[2].bullet)
+		b2.bullet.damage_max = s.damage_max[s.level] * 0.6
+		b2.bullet.damage_min = s.damage_min[s.level] * 0.6
 	end)
 
 	upgrade_skill(this, "ultimate", function(this, s)
@@ -42078,7 +42086,7 @@ function scripts.hero_oloch.update(this, store)
 						e.pos.x, e.pos.y = this.pos.x + o.x, this.pos.y + o.y
 						e.tween.ts = store.tick_ts
 						e.tween.props[1].keys[1][2].x = -o.x
-						e.tween.props[1].keys[1][2].y = -o.y
+						e.tween.props[1].keys[1][2].y = -o.y + e.tween.props[1].keys[1][2].y
 						e.render.sprites[1].flip_x = this.render.sprites[1].flip_x
 						e.owner = this
 

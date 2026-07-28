@@ -1410,8 +1410,49 @@ function SU.y_soldier_death(store, this)
 	U.unblock_target(store, this)
 
 	local h = this.health
+	if this.selfdestruct and not this.selfdestruct.disabled and band(h.last_damage_types, bor(DAMAGE_EAT, DAMAGE_HOST, DAMAGE_DISINTEGRATE)) == 0 then
+		local sd = this.selfdestruct
 
-	if band(h.last_damage_types, DAMAGE_DISINTEGRATE) ~= 0 then
+		this.unit.hide_after_death = true
+		this.health_bar.hidden = true
+
+		U.animation_start_default(this, sd.animation, nil, store.tick_ts)
+		S:queue(this.sound_events.death, this.sound_events.death_args)
+		S:queue(sd.sound, sd.sound_args)
+		U.y_wait_unconditional(store, sd.hit_time)
+		S:queue(sd.sound_hit)
+
+		if sd.hit_fx then
+			SU.insert_sprite(store, sd.hit_fx, this.pos)
+		end
+
+		local targets = U.find_enemies_in_range_filter_off(this.pos, sd.damage_radius, sd.vis_flags, sd.vis_bans)
+
+		if targets then
+			for _, t in ipairs(targets) do
+				local d = E.create_damage()
+
+				d.damage_type = sd.damage_type
+				d.value = ((sd.damage and sd.damage or math.random(sd.damage_min, sd.damage_max)) + this.unit.damage_buff) * this.unit.damage_factor
+				d.source_id = this.id
+				d.target_id = t.id
+
+				queue_damage(store, d)
+
+				if sd.mod then
+					local m = E:create_entity(sd.mod)
+
+					m.modifier.target_id = t.id
+					m.modifier.source_id = this.id
+					m.modifier.damage_factor = this.unit.damage_factor
+
+					queue_insert(store, m)
+				end
+			end
+		end
+
+		U.y_animation_wait_default(this)
+	elseif band(h.last_damage_types, DAMAGE_DISINTEGRATE) ~= 0 then
 		this.unit.hide_during_death = true
 
 		local fx = E:create_entity("fx_soldier_desintegrate")

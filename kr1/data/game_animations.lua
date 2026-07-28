@@ -50553,41 +50553,42 @@ return {
 		to = 17,
 		from = 1
 	},
-	hero_oloch_duplication_idle = {
-		prefix = "hero_oloch_duplication",
-		to = 15,
-		from = 1
-	},
-	hero_oloch_duplication_running = {
-		prefix = "hero_oloch_duplication",
-		to = 33,
-		from = 16
-	},
-	hero_oloch_duplication_attack = {
-		prefix = "hero_oloch_duplication",
-		to = 51,
-		from = 34
-	},
-	hero_oloch_duplication_shoot = {
-		prefix = "hero_oloch_duplication",
-		to = 88,
-		from = 52
-	},
-	hero_oloch_duplication_death = {
-		prefix = "hero_oloch_duplication",
-		to = 1,
-		from = 1
-	},
-	hero_oloch_eternal_bidding_in_run = {
-		prefix = "hero_oloch_eternal_bidding_in",
-		to = 19,
-		from = 1
-	},
-	hero_oloch_eternal_bidding_out_run = {
-		prefix = "hero_oloch_eternal_bidding_out",
-		to = 23,
-		from = 1
-	},
+	-- hero_oloch_duplication_idle = {
+	-- 	prefix = "hero_oloch_duplication",
+	-- 	to = 15,
+	-- 	from = 1
+	-- },
+	-- hero_oloch_duplication_running = {
+	-- 	prefix = "hero_oloch_duplication",
+	-- 	to = 33,
+	-- 	from = 16
+	-- },
+	-- hero_oloch_duplication_attack = {
+	-- 	prefix = "hero_oloch_duplication",
+	-- 	to = 51,
+	-- 	from = 34
+	-- },
+	-- hero_oloch_duplication_shoot = {
+	-- 	prefix = "hero_oloch_duplication",
+	-- 	to = 88,
+	-- 	from = 52
+	-- },
+	-- hero_oloch_duplication_death = {
+	-- 	prefix = "hero_oloch_duplication",
+	-- 	to = 1,
+	-- 	from = 1
+	-- },
+	-- 暂未使用，疑似召唤物的 spawn fx
+	-- hero_oloch_eternal_bidding_in_run = {
+	-- 	prefix = "hero_oloch_eternal_bidding_in",
+	-- 	to = 19,
+	-- 	from = 1
+	-- },
+	-- hero_oloch_eternal_bidding_out_run = {
+	-- 	prefix = "hero_oloch_eternal_bidding_out",
+	-- 	to = 23,
+	-- 	from = 1
+	-- },
 	hero_oloch_hellish_infusion_run = {
 		prefix = "hero_oloch_hellish_infusion",
 		to = 24,

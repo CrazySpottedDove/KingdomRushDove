@@ -3421,7 +3421,7 @@ duration = e.reinforcement.duration
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
 d[1].damage_type = DAMAGE_MAGICAL
-map["自我复制"] = str(cooldown_str(), "奥洛克制造出两个自己的幻象来攻击敌人，拥有", hp_str(), "，每次攻击造成", damage_str(), "，持续", duration, "秒。")
+map["自我复制"] = str(cooldown_str(), "奥洛克制造出两个自己的幻象来攻击敌人，拥有", hp_str(), "，每次攻击造成", damage_str(), "，持续", duration, "秒。分身继承恶魔飞爆和炼狱业火技能，且可自由调集。")
 
 set_skill(h.hero.skills.magma_eruption)
 cooldown = h.timed_attacks.list[2].cooldown
