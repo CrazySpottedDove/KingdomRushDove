@@ -42049,7 +42049,7 @@ function scripts.hero_oloch.update(this, store)
 
 			-- 大招
 			if ready_to_use_skill(this.ultimate, store) then
-				local target = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range)
+				local target = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range, nil, nil, F_BOSS)
 				if target then
 					apply_ultimate(this, store, target.pos, "levelup")
 				else
