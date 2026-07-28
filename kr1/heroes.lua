@@ -21896,13 +21896,13 @@ tt.hero.skills.magma_eruption.count = {3, 4, 5}
 tt.hero.skills.magma_eruption.damage_config = {30, 50, 70}
 tt.hero.skills.magma_eruption.damage_aura_config = {9, 12, 15}
 tt.hero.skills.hellish_infusion = CC("hero_skill")
-tt.hero.skills.hellish_infusion.xp_gain = {360, 480, 540}
+tt.hero.skills.hellish_infusion.xp_gain = {150, 300, 450}
 tt.hero.skills.hellish_infusion.xp_level_steps = {
 	[3] = 1,
 	[6] = 2,
 	[9] = 3
 }
-tt.hero.skills.hellish_infusion.cooldown = {36, 27, 18}
+tt.hero.skills.hellish_infusion.cooldown = {18, 18, 18}
 tt.hero.skills.hellish_infusion.damage_factor_config = {1.1, 1.2, 1.3}
 tt.hero.skills.demonic_blast = CC("hero_skill")
 tt.hero.skills.demonic_blast.xp_level_steps = {
