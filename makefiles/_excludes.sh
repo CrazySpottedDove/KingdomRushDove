@@ -18,7 +18,7 @@
 
 gitignore_excludes() {
     [ ! -f .gitignore ] && return
-    while IFS= read -r line; do
+    while IFS= read -r line || [ -n "$line" ]; do
         case "$line" in
             '' | '#'*) continue ;;
         esac

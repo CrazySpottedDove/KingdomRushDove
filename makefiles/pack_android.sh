@@ -77,13 +77,13 @@ if [ "$HD_MODE" -eq 1 ]; then
     ARCHIVE_DIR=".versions/王国保卫战Dove版-v${current_id}-安卓手机端-高清版.zip"
     OUTPUT_FINAL=$VERSION_DIR/王国保卫战Dove版-v${current_id}-安卓手机端-高清版.apk
     CACHE_DIR=".versions/.android_image_cache_hd"
-    CACHE_KEY="resize=100%|strip=1|astc=1|tool=$IM_CMD"
+    CACHE_KEY="resize=100%|strip=1|astc=1|tool=$IM_CMD|pngsrc=1"
     AUDIO_CACHE_DIR=".versions/.android_audio_cache_hd"
 else
     ARCHIVE_DIR=".versions/王国保卫战Dove版-v${current_id}-安卓手机端.zip"
     OUTPUT_FINAL=$VERSION_DIR/王国保卫战Dove版-v${current_id}-安卓手机端.apk
     CACHE_DIR=".versions/.android_image_cache"
-    CACHE_KEY="resize=50%|strip=1|astc=1|tool=$IM_CMD"
+    CACHE_KEY="resize=50%|strip=1|astc=1|tool=$IM_CMD|pngsrc=1"
     AUDIO_CACHE_DIR=".versions/.android_audio_cache"
 fi
 
@@ -140,6 +140,11 @@ calc_love_fingerprint() {
         find "$DDS_ASSETS_DIR" -type f -name "*.dds" -print0 2>/dev/null \
         | sort -z \
         | xargs -0 stat -c 'DDS|%n|%s|%Y' 2>/dev/null || true
+
+        # .images 中的原始 png（优先于 dds→png 转换）
+        find ".images" -maxdepth 1 -type f -name "*.png" -print0 2>/dev/null \
+        | sort -z \
+        | xargs -0 stat -c 'IMG|%n|%s|%Y' 2>/dev/null || true
     } | sha256sum | awk '{print $1}'
 }
 
@@ -245,10 +250,9 @@ if [ "$rebuild_love" -eq 1 ]; then
         printf "%s\0" "${dds_files[@]}" | xargs -0 -P "$JOBS" -I {} bash -c '
             should_resize() {
                 if [ "$HD_MODE" = "1" ]; then
-                    return 1 # 不缩放
+                    return 1
                 fi
                 local filename="$1"
-                # 从 resize_map 读取（只用文件名匹配，不含路径）
                 local result=$(grep "^${filename}.dds=" "$RESIZE_MAP_FILE" 2>/dev/null | cut -d= -f2)
                 [ "$result" = "1" ]
             }
@@ -264,15 +268,29 @@ if [ "$rebuild_love" -eq 1 ]; then
             mkdir -p "$(dirname "$dest")"
             mkdir -p "$(dirname "$cache_file")"
 
-            if [ -f "$cache_file" ] && [ "$cache_file" -nt "$src" ]; then
+            # 优先使用 .images 中的原始 PNG（同尺寸时避免 dds→png 损耗）
+            png_alt=".images/${base_name_only}.png"
+            use_png=0
+            if [ -f "$png_alt" ]; then
+                png_dim=$("$IM_CMD" identify -format "%wx%h" "$png_alt" 2>/dev/null || true)
+                dds_dim=$("$IM_CMD" identify -format "%wx%h" "$src" 2>/dev/null || true)
+                if [ -n "$png_dim" ] && [ "$png_dim" = "$dds_dim" ]; then
+                    use_png=1
+                fi
+            fi
+
+            src_actual="$src"
+            [ "$use_png" = "1" ] && src_actual="$png_alt"
+
+            if [ -f "$cache_file" ] && [ "$cache_file" -nt "$src_actual" ]; then
                 cp -f "$cache_file" "$dest"
             else
                 temp_png="/tmp/temp_${RANDOM}.png"
 
                 if should_resize "$base_name_only"; then
-                    "$IM_CMD" "$src" -resize 50% -strip "png:$temp_png" 2>/dev/null
+                    "$IM_CMD" "$src_actual" -resize 50% -strip "png:$temp_png" 2>/dev/null
                 else
-                    "$IM_CMD" "$src" -strip "png:$temp_png" 2>/dev/null
+                    "$IM_CMD" "$src_actual" -strip "png:$temp_png" 2>/dev/null
                 fi
 
                 astcenc -cs "$temp_png" "$cache_file" 8x8 -thorough -silent 2>/dev/null
