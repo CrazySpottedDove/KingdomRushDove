@@ -1,1 +1,1 @@
-return {{date="2026-07-28",author="CrazySpottedDove",message="perf: 删除多余的一份美术资源"}}
+return {{date="2026-07-28",author="CrazySpottedDove",message="perf: 删除多余的一份美术资源"},{date="2026-07-30",author="CrazySpottedDove",message="feat: 整理美术资源，高清化5代、4代防御塔，并删除冗余纹理"}}
