@@ -263,7 +263,6 @@ tower_totem.powers.weakness.attack_idx = 2
 tower_totem.powers.silence = CC("power")
 tower_totem.powers.silence.price_base = 150
 tower_totem.powers.silence.price_inc = 150
-
 tower_totem.powers.silence.attack_idx = 3
 tower_totem.main_script.update = scripts.tower_totem.update
 tower_totem.attacks.range = 180

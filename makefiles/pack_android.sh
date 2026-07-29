@@ -51,6 +51,8 @@ else
     current_id=$(date +%s)
 fi
 
+source makefiles/_excludes.sh
+
 # 并行任务数（可通过环境变量 JOBS 调整）
 JOBS=${JOBS:-$(nproc 2>/dev/null || echo 4)}
 
@@ -121,6 +123,8 @@ calc_love_fingerprint() {
             -path "./mods/local" -prune -o \
             -path "./.deepseek" -prune -o \
             -path "./.codewhale" -prune -o \
+            -path "./.images" -prune -o \
+            -path "./.images_backup" -prune -o \
             -type f ! -name "*.dds" ! -name "*.exe" \
             ! -name "client.log" ! -name "client" \
             ! -name "https.dll" ! -name "https.so" \
@@ -166,38 +170,40 @@ if [ "$rebuild_love" -eq 1 ]; then
 
     echo "Staging package files -> $stage_dir"
 
-    EXCLUDES=(
+    # .gitignore 中这些条目是游戏必需的资源，不要排除
+    GITIGNORE_ALLOW=(
+        "_assets/all-desktop/cursors"
+        "_assets/all-desktop/fonts"
+        "_assets/kr1-desktop/icons"
+        "_assets/kr1-desktop/strings/de.lua"
+        "_assets/kr1-desktop/strings/en.lua"
+        "_assets/kr1-desktop/strings/es.lua"
+        "_assets/kr1-desktop/strings/fr.lua"
+        "_assets/kr1-desktop/strings/it.lua"
+        "_assets/kr1-desktop/strings/ja.lua"
+        "_assets/kr1-desktop/strings/ko.lua"
+        "_assets/kr1-desktop/strings/pt.lua"
+        "_assets/kr1-desktop/strings/ru.lua"
+        "_assets/kr1-desktop/strings/zh-Hant.lua"
+    )
+    # .gitignore 之外也要排除的（手写维护）
+    MANUAL_EXCLUDES=(
         "*.dds"
-        ".versions/*"
-        "tmp/*"
         "*.exe"
-        ".git/*"
-        "KingdomRushDoveUpdater"
-        "client.log"
-        "client"
-        "https.dll"
-        "https.so"
         "run.bat"
         "launch.bat"
         "存档位置.lnk"
-        "dlfmt"
-        ".dlfmt_cache.json"
-        "update.lua"
-        ".gdb_history"
+        "https.dll"
+        "https.so"
         "docs/*"
         "precompile/tests/*"
-        ".plugins/*"
         "all/librender_sort.so"
         "all/librender_sort.dll"
-        "love_env/*"
-        ".vscode/*"
-        "mods/local/*"
         "Makefile"
         "makefiles/*"
         "scripts/*"
         "dlfmt_task.json"
         "README.md"
-        "KingdomRushDove版启动器.exe"
         "current_version_commit_hash.txt"
         ".gitignore"
         "游玩必读说明，务必阅读.url"
@@ -205,25 +211,20 @@ if [ "$rebuild_love" -eq 1 ]; then
         "_assets/tmp_download/*"
         "lldebugger.lua"
         "kr1/data/waveconfigs/*"
-        "config.json"
         "kr1/data/game_animations.lua"
         "_assets/kr1-desktop/images/fullhd/*.lua"
         "_assets/kr1-desktop/images/fullhd/*.luac"
         "_assets/kr1-desktop/images/fullhd/*.png"
-        "precompile/tests/*"
-        ".deepseek/*"
-        ".opencode/*"
-        ".codewhale/*"
     )
     if [ "$AUDIO_COMPRESS_MODE" = "1" ]; then
         # 音频将由压缩步骤单独写入 staging，避免先拷贝原始 ogg。
-        EXCLUDES+=("_assets/kr1-desktop/sounds/files/*.ogg")
+        MANUAL_EXCLUDES+=("_assets/kr1-desktop/sounds/files/*.ogg")
     fi
-    RSYNC_EXCLUDES=()
-    for pattern in "${EXCLUDES[@]}"; do
-        RSYNC_EXCLUDES+=("--exclude=$pattern")
-    done
-    rsync -a --delete "${RSYNC_EXCLUDES[@]}" ./ "$stage_dir"/
+    EXCLUDE_ARGS=()
+    while IFS= read -r arg; do
+        EXCLUDE_ARGS+=("$arg")
+    done < <(gitignore_excludes)
+    rsync -a --delete "${EXCLUDE_ARGS[@]}" ./ "$stage_dir"/
 
     # 分析图像大小，生成缩放映射
     echo "Analyzing image sizes from Lua definitions..."

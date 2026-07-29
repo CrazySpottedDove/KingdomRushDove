@@ -60,3 +60,6 @@ config.json
 .deepseek/
 .opencode/
 .codewhale/
+.images/
+.images_backup/
+args.lua

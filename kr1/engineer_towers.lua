@@ -2130,13 +2130,11 @@ tt.powers.crystalize.price_base = b.crystalize.price[1]
 tt.powers.crystalize.price_inc = b.crystalize.price[2]
 tt.powers.crystalize.cooldown = b.crystalize.cooldown
 tt.powers.crystalize.max_level = #b.crystalize.cooldown
-
 tt.powers.spike_burst = CC("power")
 tt.powers.spike_burst.price_base = b.spike_burst.price[1]
 tt.powers.spike_burst.price_inc = b.spike_burst.price[2]
 tt.powers.spike_burst.max_level = #b.spike_burst.cooldown
 tt.powers.spike_burst.cooldown = b.spike_burst.cooldown
-
 tt.wakeup_duration = fts(45)
 tt.tower.type = "sparking_geode"
 tt.tower.kind = TOWER_KIND_ENGINEER

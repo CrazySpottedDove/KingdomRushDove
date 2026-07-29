@@ -2854,11 +2854,6 @@ return {
 		prefix = "ballista_tower_special_hit",
 		to = 25
 	},
-	ballista_tower_tower_construction = {
-		from = 1,
-		prefix = "ballista_tower_tower_construction",
-		to = 1
-	},
 	balooning_spider_exo_creep_air_death = {
 		from = 47,
 		prefix = "balooning_spider_exo_creep",
@@ -22126,10 +22121,11 @@ return {
 		prefix = "harrasser",
 		to = 94
 	},
+	-- 没招了，为了解决闪烁，直接让它是静态的好了。
 	harrasser_idle = {
 		from = 1,
 		prefix = "harrasser",
-		to = 8
+		to = 1
 	},
 	harrasser_run = {
 		from = 9,

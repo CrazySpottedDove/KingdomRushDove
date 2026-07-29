@@ -14,7 +14,14 @@
 				"kr1-desktop/data",
 				"all-desktop/data",
 				"dove_modules/data",
-				".versions"
+				".versions",
+				".images",
+				".git",
+				".opencode",
+				".codewhale",
+				".vscode",
+				"love_env",
+				"tmp"
 			]
 		},
 		{

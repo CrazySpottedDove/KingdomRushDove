@@ -60,29 +60,34 @@ fi
 DEST_DIR="$STAGE_DIR/$TOPDIR/KingdomRushDove"
 mkdir -p "$DEST_DIR"
 
-rsync -a \
-    --exclude='.versions/' \
-    --exclude='.git/' \
-    --exclude='tmp/' \
-    --exclude='love_env/' \
-    --exclude='KingdomRushDoveUpdater' \
-    --exclude='client.log' \
-    --exclude='update.lua' \
-    --exclude='dlfmt' \
-    --exclude='.dlfmt_cache.json' \
-    --exclude='client' \
-    --exclude='client.exe' \
-    --exclude='.gdb_history' \
-    --exclude='https.so' \
-    --exclude='all/librender_sort.so' \
-    --exclude='*.aluac' \
-    --exclude='mods/local/' \
-    --exclude='.plugins/' \
-    --exclude='config.json' \
-    --exclude='.deepseek/' \
-    --exclude='.opencode/' \
-    --exclude='.codewhale/' \
-    ./ "$DEST_DIR/"
+source makefiles/_excludes.sh
+GITIGNORE_ALLOW=(
+    "_assets/all-desktop/cursors"
+    "_assets/all-desktop/fonts"
+    "_assets/kr1-desktop/icons"
+    "_assets/kr1-desktop/images/fullhd/*.png"
+    "_assets/kr1-desktop/images/fullhd/*.dds"
+    "_assets/kr1-desktop/sounds/files"
+    "_assets/kr1-desktop/strings/de.lua"
+    "_assets/kr1-desktop/strings/en.lua"
+    "_assets/kr1-desktop/strings/es.lua"
+    "_assets/kr1-desktop/strings/fr.lua"
+    "_assets/kr1-desktop/strings/it.lua"
+    "_assets/kr1-desktop/strings/ja.lua"
+    "_assets/kr1-desktop/strings/ko.lua"
+    "_assets/kr1-desktop/strings/pt.lua"
+    "_assets/kr1-desktop/strings/ru.lua"
+    "_assets/kr1-desktop/strings/zh-Hant.lua"
+)
+MANUAL_EXCLUDES=(
+    "https.so"
+    "all/librender_sort.so"
+)
+EXCLUDE_ARGS=()
+while IFS= read -r arg; do
+    EXCLUDE_ARGS+=("$arg")
+done < <(gitignore_excludes)
+rsync -a "${EXCLUDE_ARGS[@]}" ./ "$DEST_DIR/"
 
 # Download Windows 7za.exe if not cached
 SZ7ZA_EXE=".versions/7za.exe"

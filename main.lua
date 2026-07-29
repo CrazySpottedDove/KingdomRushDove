@@ -400,8 +400,13 @@ local function load(arg)
 
 	MU.basic_init()
 
+	-- 这里要检查 args 是否存在，不存在就不load了
+	local success, loaded_args = pcall(require, "args")
+	if success and loaded_args then
+		arg = table.append(arg, loaded_args, true)
+	end
+
 	if DEBUG then
-		arg = table.append(arg, require("args"), true)
 		require("debug_tools")
 	end
 

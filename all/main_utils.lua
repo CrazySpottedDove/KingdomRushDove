@@ -113,6 +113,10 @@ function mu.parse_args(arg, params)
 	if has_arg("wpos") then
 		params.wpos = string.split(argv("wpos"), ",")
 	end
+
+	if has_arg("atlas_manager_on") then
+		params.atlas_manager_on = true
+	end
 end
 
 function mu.default_params(params, game_name, game_target, game_platform)

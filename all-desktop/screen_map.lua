@@ -1443,6 +1443,10 @@ function screen_map:keypressed(key, isrepeat)
 	elseif key == "f4" then
 		hide_others()
 		self:ensure_ui_settings_panel_view():show()
+	elseif main.params.atlas_manager_on and key == "f12" then
+		self.done_callback({
+			next_item_name = "atlas_manager"
+		})
 	elseif key == "1" then
 		if self.generation ~= 1 then
 			hide_others()
