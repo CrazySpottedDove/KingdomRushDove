@@ -12963,27 +12963,11 @@ function scripts.tower_arcane_wizard5.update(this, store)
 		else
 			if pow_d.changed then
 				pow_d.changed = nil
-				local new_cd_d = pow_d.cooldown and pow_d.cooldown[pow_d.level]
-				if new_cd_d then
-					ad.cooldown = new_cd_d
-				end
-
-				if pow_d.level == 1 and ad.cooldown then
-					ad.ts = store.tick_ts - ad.cooldown
-				end
+				ad.cooldown = pow_d.cooldown[pow_d.level]
 			end
 
 			if pow_e.changed then
 				pow_e.changed = nil
-				local new_cd_e = pow_e.cooldown and pow_e.cooldown[pow_e.level]
-				if new_cd_e then
-					ae.cooldown = new_cd_e
-					ae.ts = store.tick_ts - ae.cooldown
-				else
-					-- 这里一般是 level=0 或配置没给到，直接走禁用分支，不让协程因为 cooldown=nil 崩掉
-					-- 我补充两句：这里宁可保守禁用，也不伪造默认冷却，避免未解锁技能误触发。
-					ae.ts = store.tick_ts
-				end
 			end
 
 			SU.towers_swaped(store, this, this.attacks.list)
@@ -13123,7 +13107,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
 					-- local b = E:create_entity(ad.bullet)
 					local start_offset = table.safe_index(ad.bullet_start_offset, ai)
 
-					y_wait(store, ad.load_time)
+					y_wait(store, ad.load_time * tw.cooldown_factor)
 
 					local fx = E:create_entity("fx_tower_arcane_wizard_disintegrate_ray_hit_start")
 
@@ -13134,13 +13118,12 @@ function scripts.tower_arcane_wizard5.update(this, store)
 
 					this.ray_fx_start = fx
 
-					y_wait(store, ad.shoot_time - ad.load_time)
+					y_wait(store, ad.shoot_time - ad.load_time * tw.cooldown_factor)
 
 					local _, enemies = U.find_foremost_enemy_in_range_filter_on(tpos(this), a.range, ad.node_prediction, ad.vis_flags, ad.vis_bans, function(e)
 						return not ad.excluded_templates or not table.contains(ad.excluded_templates, e.template_name)
 					end)
 
-					-- enemy, pred_pos = find_target(aa)
 					if enemies then
 						for i = 1, ad.count do
 							if enemies then
@@ -13149,8 +13132,6 @@ function scripts.tower_arcane_wizard5.update(this, store)
 
 							local b = bullets[i]
 
-							-- b.bullet.damage_min = b.bullet.damage_min_config[this.tower.level]
-							-- b.bullet.damage_max = b.bullet.damage_max_config[this.tower.level]
 							b.pos.x, b.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
 							b.bullet.from = vclone(b.pos)
 							b.bullet.to = vclone(enemy_pos)
@@ -13162,9 +13143,10 @@ function scripts.tower_arcane_wizard5.update(this, store)
 
 							queue_insert(store, b)
 						end
+						ad.ts = last_ts
+					else
+						ad.ts = ad.ts + 3
 					end
-
-					ad.ts = last_ts
 
 					U.y_animation_wait_group(this, "layers")
 
