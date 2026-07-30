@@ -10386,7 +10386,7 @@ tt.hero.level_stats.melee_damage_max = {27, 31, 34, 38, 41, 45, 49, 52, 56, 59}
 tt.hero.level_stats.melee_damage_min = {18, 20, 23, 25, 28, 30, 32, 35, 37, 40}
 tt.hero.skills.sharp_claws = CC("hero_skill")
 tt.hero.skills.sharp_claws.damage = {3, 6, 9}
-tt.hero.skills.sharp_claws.extra_damage = {15, 30, 45}
+tt.hero.skills.sharp_claws.extra_damage = {25, 50, 75}
 tt.hero.skills.sharp_claws.xp_gain = {10, 20, 30}
 tt.hero.skills.sharp_claws.xp_level_steps = {
 	[1] = 1,
@@ -10402,7 +10402,7 @@ tt.hero.skills.kings_roar.xp_level_steps = {
 	[9] = 3
 }
 tt.hero.skills.lions_fur = CC("hero_skill")
-tt.hero.skills.lions_fur.extra_hp = {45, 90, 135}
+tt.hero.skills.lions_fur.extra_hp = {50, 100, 150}
 tt.hero.skills.lions_fur.xp_level_steps = {
 	[1] = 1,
 	[4] = 2,
