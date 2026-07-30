@@ -78,6 +78,7 @@ GITIGNORE_ALLOW=(
     "_assets/kr1-desktop/strings/pt.lua"
     "_assets/kr1-desktop/strings/ru.lua"
     "_assets/kr1-desktop/strings/zh-Hant.lua"
+    "KingdomRushDove版启动器*"
 )
 MANUAL_EXCLUDES=(
     "https.so"
@@ -175,8 +176,12 @@ Section "Install"
   Delete "\$INSTDIR\\$GAME_7Z"
   Delete "\$INSTDIR\\7za.exe"
 
+  SetOutPath "\$INSTDIR\\KingdomRushDove"
   CreateDirectory "\$SMPROGRAMS\\王国保卫战 Dove 版"
-  nsExec::Exec \`powershell -ExecutionPolicy Bypass -Command "\$\$ws=New-Object -ComObject WScript.Shell;\$\$s=\$\$ws.CreateShortcut('\$DESKTOP\\王国保卫战 Dove 版.lnk');\$\$s.TargetPath='\$INSTDIR\\KingdomRushDove\\KingdomRushDove版启动器.exe';\$\$s.WorkingDirectory='\$INSTDIR\\KingdomRushDove';\$\$s.Save();\$\$s=\$\$ws.CreateShortcut('\$SMPROGRAMS\\王国保卫战 Dove 版\\王国保卫战 Dove 版.lnk');\$\$s.TargetPath='\$INSTDIR\\KingdomRushDove\\KingdomRushDove版启动器.exe';\$\$s.WorkingDirectory='\$INSTDIR\\KingdomRushDove';\$\$s.Save()"\`
+  DetailPrint "正在创建桌面快捷方式..."
+  CreateShortCut "\$DESKTOP\\王国保卫战 Dove 版.lnk" "\$INSTDIR\\KingdomRushDove\\KingdomRushDove版启动器.exe"
+  DetailPrint "正在创建开始菜单快捷方式..."
+  CreateShortCut "\$SMPROGRAMS\\王国保卫战 Dove 版\\王国保卫战 Dove 版.lnk" "\$INSTDIR\\KingdomRushDove\\KingdomRushDove版启动器.exe"
 
   WriteUninstaller "\$INSTDIR\\uninstall.exe"
 

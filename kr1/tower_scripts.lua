@@ -7994,7 +7994,7 @@ function scripts.mod_tower_necromancer_curse.insert(this, store)
 		end
 	end
 
-	if band(target.vis.flags, F_FLYING) ~= 0 or band(target.vis.flags, F_NIGHTMARE) ~= 0 then
+	if band(target.vis.flags, F_FLYING) ~= 0 then
 		return true
 	end
 

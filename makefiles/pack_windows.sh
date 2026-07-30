@@ -79,6 +79,7 @@ GITIGNORE_ALLOW=(
     "_assets/kr1-desktop/strings/pt.lua"
     "_assets/kr1-desktop/strings/ru.lua"
     "_assets/kr1-desktop/strings/zh-Hant.lua"
+    "KingdomRushDove版启动器*"
 )
 MANUAL_EXCLUDES=(
     "https.so"

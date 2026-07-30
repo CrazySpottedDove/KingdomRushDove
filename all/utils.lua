@@ -3318,7 +3318,7 @@ end
 
 --- 判断敌人是否是可沉默的对象
 function U.enemy_is_silent_target(e)
-	return (band(e.vis.flags, F_SPELLCASTER) ~= 0 or e.ranged or e.timed_attacks or e.auras or e.death_spawns) and e.enemy.can_do_magic
+	return (e.ranged or e.timed_attacks or e.auras or e.death_spawns) and e.enemy.can_do_magic
 end
 
 --- 判断是否有友军需要治疗

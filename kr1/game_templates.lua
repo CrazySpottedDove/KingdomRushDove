@@ -5298,7 +5298,7 @@ tt.aura.mod = "mod_enervation_faustus"
 tt.aura.cycle_time = 0
 tt.aura.cycles = 1
 tt.aura.radius = 100
-tt.aura.vis_flags = bor(F_RANGED, F_SPELLCASTER)
+tt.aura.vis_flags = bor(F_RANGED)
 tt.aura.vis_bans = bor(F_BOSS, F_FRIEND, F_HERO)
 tt.aura.targets_per_cycle = nil
 
@@ -13337,7 +13337,7 @@ tt.bullet_attack.cooldown_min = b.cooldown_min
 tt.bullet_attack.cooldown_max = b.cooldown_max
 tt.bullet_attack.bullet_start_offset = {v(20, 20), v(-20, 20)}
 tt.bullet_attack.animation = "shoot"
-tt.bullet_attack.vis_bans = bor(F_MINIBOSS, F_NIGHTMARE)
+tt.bullet_attack.vis_bans = bor(F_MINIBOSS)
 tt.idle_rest_cooldown = 2
 
 tt = E:register_t("arrow_soldier_elf_stage_08", "arrow5_45degrees")

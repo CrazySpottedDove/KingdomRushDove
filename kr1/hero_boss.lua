@@ -745,7 +745,7 @@ local function inherit_from_hero_template(new_template, old_template)
 		t.dodge = table.deepclone(old_t.dodge)
 	end
 
-	t.vis.flags = bor(bor(t.vis.flags, F_SPELLCASTER), U.flag_clear(old_t.vis.flags, bor(F_HERO, F_FRIEND)))
+	t.vis.flags = bor(t.vis.flags, U.flag_clear(old_t.vis.flags, bor(F_HERO, F_FRIEND)))
 	t.vis.bans = bor(t.vis.bans, old_t.vis.bans)
 	t.health.hp_max = old_t.hero.level_stats.hp_max[10]
 	t.health.armor = old_t.hero.level_stats.armor[10]
