@@ -699,26 +699,6 @@ return {
 		prefix = "SunrayTower_SmallRay",
 		to = 11
 	},
-	Tower_construction_construction = {
-		from = 1,
-		prefix = "Tower_construction",
-		to = 1
-	},
-	Tower_lvl1_lvl1 = {
-		from = 1,
-		prefix = "Tower_lvl1",
-		to = 1
-	},
-	Tower_lvl2_lvl2 = {
-		from = 1,
-		prefix = "Tower_lvl2",
-		to = 1
-	},
-	Tower_lvl3_lvl3 = {
-		from = 1,
-		prefix = "Tower_lvl3",
-		to = 1
-	},
 	Tower_lvl4_door_close = {
 		from = 10,
 		prefix = "Tower_lvl4_door",
@@ -10361,11 +10341,6 @@ return {
 		from = 1,
 		prefix = "dlc2_generic_tap_hand",
 		to = 10
-	},
-	dlc_dragons_tower_construction_run = {
-		from = 1,
-		prefix = "dlc_dragons_tower_construction",
-		to = 1
 	},
 	dlc_dragons_tower_decal_projectile_run = {
 		from = 1,
@@ -22311,11 +22286,6 @@ return {
 		from = 1,
 		prefix = "hermit_toad_tower_bubbles",
 		to = 26
-	},
-	hermit_toad_tower_construction = {
-		from = 1,
-		prefix = "hermit_toad_tower_construction",
-		to = 1
 	},
 	hermit_toad_tower_decal2_run = {
 		from = 1,
@@ -39095,11 +39065,6 @@ return {
 		from = 9,
 		prefix = "sparking_geode_base",
 		to = 26
-	},
-	sparking_geode_construction_run = {
-		from = 1,
-		prefix = "sparking_geode_construction",
-		to = 1
 	},
 	sparking_geode_crystal_big_idle = {
 		from = 20,

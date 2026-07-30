@@ -9850,6 +9850,13 @@ end
 
 function scripts.mod_boss_crocs_tower_eat.update(this, store)
 	local target = store.entities[this.modifier.target_id]
+
+	if not target then
+		queue_remove(store, this)
+
+		return
+	end
+
 	local boss = store.entities[this.modifier.source_id]
 
 	this.pos = target.pos

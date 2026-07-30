@@ -21043,8 +21043,8 @@ function scripts.tower_dragons.update(this, store)
 
 		if this.render.sprites[3].hidden then
 			this.render.sprites[3].hidden = false
-			this.render.sprites[3].ts = dragon_sprite.ts
 		end
+		this.render.sprites[3].ts = dragon_sprite.ts
 	end
 
 	update_head()
@@ -21110,9 +21110,7 @@ function scripts.tower_dragons.update(this, store)
 	end
 
 	local function go_awake()
-		if this.render.sprites[3] then
-			this.render.sprites[3].hidden = true
-		end
+		this.render.sprites[3].hidden = true
 
 		U.y_animation_play(this, "tap_in", nil, store.tick_ts, 1, 2)
 		U.animation_start(this, "idle", nil, store.tick_ts, true, 2, true)
@@ -21628,20 +21626,21 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 	end
 
 	local function do_hit(target)
-		local d = SU.create_bullet_damage(b, target.id, this.id)
+		if target then
+			local d = SU.create_bullet_damage(b, target.id, this.id)
+			queue_damage(store, d)
 
-		queue_damage(store, d)
+			if b.mod or b.mods then
+				local mods = b.mods or {b.mod}
 
-		if b.mod or b.mods then
-			local mods = b.mods or {b.mod}
+				for _, mod_name in ipairs(mods) do
+					local m = E:create_entity(mod_name)
 
-			for _, mod_name in ipairs(mods) do
-				local m = E:create_entity(mod_name)
+					m.modifier.target_id = b.target_id
+					m.modifier.level = b.level
 
-				m.modifier.target_id = b.target_id
-				m.modifier.level = b.level
-
-				queue_insert(store, m)
+					queue_insert(store, m)
+				end
 			end
 		end
 
@@ -21697,6 +21696,8 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 					end
 				end
 			end
+		else
+			do_hit(nil)
 		end
 	end
 
@@ -21704,10 +21705,10 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 
 	local fx = E:create_entity(b.hit_fx)
 
-	fx.pos.x, fx.pos.y = b.to.x, b.to.y
-
 	if target then
 		fx.pos.x, fx.pos.y = target.pos.x, target.pos.y + target.unit.hit_offset.y
+	else
+		fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
 	end
 
 	fx.render.sprites[1].ts = store.tick_ts
@@ -21715,7 +21716,12 @@ function scripts.bullet_tower_dragons_dragon_split.update(this, store)
 
 	queue_insert(store, fx)
 
-	if target and target.vis and band(target.vis.flags, F_FLYING) == 0 then
+	if not target then
+		local decal = E:create_entity(b.hit_decal)
+		decal.pos:copy(this.pos)
+		decal.render.sprites[1].ts = store.tick_ts
+		queue_insert(store, decal)
+	elseif target.vis and band(target.vis.flags, F_FLYING) == 0 then
 		local decal = E:create_entity(b.hit_decal)
 
 		decal.pos = V.vclone(target.pos)
@@ -21770,7 +21776,7 @@ function scripts.faerie_dragon_lvl4.update(this, store)
 	sp.offset.y = this.flight_height
 
 	if not this.skip_spawn then
-		U.y_animation_play(this, "spawn", nil, store.tick_ts, 1)
+		U.y_animation_play(this, "spawn", nil, store.tick_ts, 0)
 	end
 
 	while true do
@@ -21847,7 +21853,6 @@ function scripts.faerie_dragon_lvl4.update(this, store)
 
 				ca.target_id = nil
 				U.animation_start_default(this, "idle", nil, store.tick_ts, true)
-			-- dest.x, dest.y = this.idle_pos.x, this.idle_pos.y
 			end
 			coroutine.yield()
 			if not ca.active then

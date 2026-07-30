@@ -282,7 +282,9 @@ if [ "$rebuild_love" -eq 1 ]; then
             fi
 
             src_actual="$src"
-            [ "$use_png" = "1" ] && src_actual="$png_alt"
+            if [ "$use_png" = "1" ]; then
+                src_actual="$png_alt"
+            fi
 
             if [ -f "$cache_file" ] && [ "$cache_file" -nt "$src_actual" ]; then
                 cp -f "$cache_file" "$dest"
