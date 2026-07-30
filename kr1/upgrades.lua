@@ -1031,6 +1031,7 @@ upgrades.soldiers = {
 	"soldier_ewok",
 	"soldier_baby_ashbite",
 	"soldier_tower_dark_elf",
+	"soldier_tower_barrel_skill_warrior",
 	"soldier_tower_demon_pit_basic_attack_lvl4",
 	"big_guy_tower_demon_pit_lvl4",
 	"soldier_tower_necromancer_skeleton_lvl4",

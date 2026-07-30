@@ -6462,17 +6462,14 @@ function scripts.controller_tower_dark_elf_soldiers.update(this, store)
 				local s = b.soldiers[i]
 
 				if s and store.entities[s.id] then
-					s.health.hp_max = power_data.hp[this.pow_level]
-
-					if s.war_rations_hp_factor then
-						s.health.hp_max = math.ceil(s.health.hp_max * s.war_rations_hp_factor)
-					end
-
+					s.health.hp_max = s.health.hp_max + power_data.hp[this.pow_level] - power_data.hp[1]
 					s.health.hp = s.health.hp_max
-					s.melee.attacks[1].damage_min = power_data.damage_min[this.pow_level]
-					s.melee.attacks[1].damage_max = power_data.damage_max[this.pow_level]
-					s.melee.attacks[2].damage_min = power_data.damage_min[this.pow_level]
-					s.melee.attacks[2].damage_max = power_data.damage_max[this.pow_level]
+
+					s.melee.attacks[1].damage_min = s.melee.attacks[1].damage_min + power_data.damage_min[this.pow_level] - power_data.damage_min[1]
+					s.melee.attacks[1].damage_max = s.melee.attacks[1].damage_max + power_data.damage_max[this.pow_level] - power_data.damage_max[1]
+					s.melee.attacks[2].damage_min = s.melee.attacks[2].damage_min + power_data.damage_min[this.pow_level] - power_data.damage_min[1]
+					s.melee.attacks[2].damage_max = s.melee.attacks[2].damage_max + power_data.damage_max[this.pow_level] - power_data.damage_max[1]
+
 					s.dodge.chance = power_data.dodge_chance[this.pow_level]
 				end
 			end
@@ -6502,10 +6499,6 @@ function scripts.controller_tower_dark_elf_soldiers.update(this, store)
 					s.source_id = this.tower_ref.id
 					s.nav_rally.new = true
 					s.health.hp_max = power_data.hp[this.pow_level]
-
-					if s.war_rations_hp_factor then
-						s.health.hp_max = math.ceil(s.health.hp_max * s.war_rations_hp_factor)
-					end
 
 					s.melee.attacks[1].damage_min = power_data.damage_min[this.pow_level]
 					s.melee.attacks[1].damage_max = power_data.damage_max[this.pow_level]
@@ -16563,13 +16556,8 @@ function scripts.controller_soldier_tower_barrel_skill_warrior_spawn.update(this
 
 	w.pos = V.vclone(warrior_pos)
 	w.level = this.tower_ref.powers.skill_warrior.level
-	w.health.hp_max = this.tower_ref.powers.skill_warrior.hp_max[w.level]
-
-	if w.war_rations_hp_factor then
-		w.health.hp_max = math.ceil(w.health.hp_max * w.war_rations_hp_factor)
-	end
-
-	w.health.armor = this.tower_ref.powers.skill_warrior.armor[w.level]
+	w.health.hp_max = this.tower_ref.powers.skill_warrior.hp_max[w.level] - this.tower_ref.powers.skill_warrior.hp_max[1] + w.health.hp_max
+	w.health.armor = this.tower_ref.powers.skill_warrior.armor[w.level] - this.tower_ref.powers.skill_warrior.armor[1] + w.health.armor
 
 	SU.soldier_inherit_tower_buff_factor(w, this.tower_ref, store.tick_ts)
 	queue_insert(store, w)
@@ -16722,10 +16710,6 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store)
 				SU.damage_inc(this, (a1.damage_min_config[warrior_level] + a1.damage_max_config[warrior_level] - a1.damage_min_config[current_level] - a1.damage_max_config[current_level]) / 2)
 
 				this.health.hp_max = tower.powers.skill_warrior.hp_max[this.level]
-
-				if this.war_rations_hp_factor then
-					this.health.hp_max = math.ceil(this.health.hp_max * this.war_rations_hp_factor)
-				end
 
 				this.health.hp = this.health.hp_max
 				current_level = warrior_level
