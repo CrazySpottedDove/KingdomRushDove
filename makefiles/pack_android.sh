@@ -229,7 +229,9 @@ if [ "$rebuild_love" -eq 1 ]; then
     while IFS= read -r arg; do
         EXCLUDE_ARGS+=("$arg")
     done < <(gitignore_excludes)
-    rsync -a --delete "${EXCLUDE_ARGS[@]}" ./ "$stage_dir"/
+    rsync -a --delete \
+        --include="_assets/kr1-desktop/images/fullhd/*.aluac" \
+        "${EXCLUDE_ARGS[@]}" ./ "$stage_dir"/
 
     # 分析图像大小，生成缩放映射
     echo "Analyzing image sizes from Lua definitions..."
