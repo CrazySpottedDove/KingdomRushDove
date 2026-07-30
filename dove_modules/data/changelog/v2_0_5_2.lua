@@ -1,1 +1,1 @@
-return {{date="2026-07-30",author="CrazySpottedDove",message="fix: 恢复被误删的数据文件"},{date="2026-07-30",author="CrazySpottedDove",message="fix: 修正安卓打包脚本"},{date="2026-07-30",author="CrazySpottedDove",message="fix: 修复龙巢播放2次生龙动画和有时候显示两颗龙头的问题"}}
+return {{date="2026-07-30",author="CrazySpottedDove",message="fix: 恢复被误删的数据文件"},{date="2026-07-30",author="CrazySpottedDove",message="fix: 修正安卓打包脚本"},{date="2026-07-30",author="CrazySpottedDove",message="fix: 修复龙巢播放2次生龙动画和有时候显示两颗龙头的问题"},{date="2026-07-30",author="CrazySpottedDove",message="perf: 删除冗余的动画数据"}}

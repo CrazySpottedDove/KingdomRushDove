@@ -1689,11 +1689,6 @@ return {
 		prefix = "arborean_emissary_basic_attack_modifier_decal_big",
 		to = 1
 	},
-	arborean_emissary_build = {
-		from = 1,
-		prefix = "arborean_emissary_build",
-		to = 1
-	},
 	arborean_emissary_gift_of_nature_heal = {
 		from = 1,
 		prefix = "arborean_emissary_gift_of_nature_heal",
@@ -12666,11 +12661,6 @@ return {
 		prefix = "elderportal_teleport_big",
 		to = 10
 	},
-	elderportal_tower_tower_build = {
-		from = 1,
-		prefix = "elderportal_tower_tower_build",
-		to = 1
-	},
 	elderportal_tower_tower_idle = {
 		from = 1,
 		prefix = "elderportal_tower_tower",
@@ -12680,11 +12670,6 @@ return {
 		from = 65,
 		prefix = "elderportal_tower_tower",
 		to = 127
-	},
-	elderportal_tower_tower_preview = {
-		from = 1,
-		prefix = "elderportal_tower_tower_preview",
-		to = 1
 	},
 	elderportal_tower_tower_shoot = {
 		from = 2,
@@ -43205,11 +43190,6 @@ return {
 		prefix = "tower_sand_basic_hit",
 		to = 6
 	},
-	tower_sand_build = {
-		from = 1,
-		prefix = "tower_sand_build",
-		to = 1
-	},
 	tower_sand_lvl4_particle_idle = {
 		from = 1,
 		prefix = "tower_sand_lvl4_particle",
@@ -49313,16 +49293,6 @@ return {
 		from = 1,
 		to = 20
 	},
-	worm_nest_level1_build = {
-		prefix = "worm_nest_level1",
-		from = 1,
-		to = 29
-	},
-	worm_nest_level1_idle = {
-		prefix = "worm_nest_level1",
-		from = 30,
-		to = 106
-	},
 	worm_nest_level4_idle = {
 		prefix = "worm_nest_level4",
 		from = 1,
@@ -49438,7 +49408,6 @@ return {
 		from = 1,
 		to = 11
 	},
-
 	-- hero_eiskalt
 	hero_eiskalt_idle = {
 		prefix = "hero_eiskalt",
