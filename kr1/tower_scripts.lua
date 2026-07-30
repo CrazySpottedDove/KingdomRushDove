@@ -27916,7 +27916,18 @@ function scripts.tower_shaolin.insert(this, store)
 end
 
 function scripts.tower_shaolin.remove(this, store)
-	SU.queue_remove_clean_table(store, this.pixies)
+	for i = #this.pixies, 1, -1 do
+		local p = this.pixies[i]
+		if p.target_id and p.is_stun then
+			local target = store.entities[p.target_id]
+			if target then
+				SU.stun_dec(target)
+				p.is_stun = false
+			end
+		end
+		queue_remove(store, p)
+		this.pixies[i] = nil
+	end
 
 	if this.aura1 then
 		queue_remove(store, this.aura1)
