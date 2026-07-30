@@ -459,10 +459,11 @@ function screen_map:init(w, h)
 	u_button.label.text_size = u_button.label.size
 	u_button.label.font_size = 18
 	u_button.label.vertical_align = CJK("middle", "top", nil, "top")
-	u_button.label.text = _("UPGRADES")
+	u_button.label.text = _("UPGRADES_" .. self.user_data.upgrade_list_id)
 	u_button.label.fit_lines = 1
 
 	self.window:add_child(u_button)
+	self.u_button = u_button
 
 	if self.unlock_data.new_level == 2 then
 		self.upgradeTip = KImageView:new("mapBaloon_buyUpgrade_notxt")
@@ -719,16 +720,16 @@ function screen_map:init(w, h)
 	self.window:add_child(gen_dropdown)
 
 	local gen_options = {{
-		label = "1代",
+		label = "一代",
 		value = 1
 	}, {
-		label = "2代",
+		label = "二代",
 		value = 2
 	}, {
-		label = "3代",
+		label = "三代",
 		value = 3
 	}, {
-		label = "5代",
+		label = "五代",
 		value = 5
 	}, {
 		label = "插件地图",
@@ -3773,6 +3774,7 @@ UpgradesView = class("UpgradesView", PopUpView)
 function UpgradesView:initialize(sw, sh)
 	-- perf.tmp_start("UpgradesView:initialize")
 	PopUpView.initialize(self, V.v(sw, sh))
+	UPGR:set_list_id(screen_map.user_data.upgrade_list_id)
 
 	self.back = KImageView:new("Upgrades_BG_notxt")
 	self.back.anchor = v(self.back.size.x / 2, self.back.size.y / 2)
@@ -3782,11 +3784,12 @@ function UpgradesView:initialize(sw, sh)
 
 	self.back.alpha = 1
 
-	local header = GGPanelHeader:new(_("UPGRADES"), 274)
+	local header = GGPanelHeader:new(_("UPGRADES_" .. UPGR.list_id), 274)
 
 	header.pos = V.v(308, CJK(27, 25, nil, 25))
 
 	self.back:add_child(header)
+	self.header = header
 
 	local close_button = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
 
@@ -3809,6 +3812,93 @@ function UpgradesView:initialize(sw, sh)
 	self.done_button = GGUpgradesButton:new(_("BUTTON_DONE"))
 	self.done_button.pos = v(680, 630)
 	self.back:add_child(self.done_button)
+
+	self.list_dropdown = KView:new(V.v(self.size.x, self.size.y))
+	self.list_dropdown.hidden = true
+	self.list_dropdown.propagate_on_click = false
+	self.list_dropdown.colors.background = {0, 0, 0, 100}
+
+	self:add_child(self.list_dropdown)
+
+	self.list_options = {{
+		label = "科技一",
+		value = 1
+	}, {
+		label = "科技二",
+		value = 2
+	}, {
+		label = "科技三",
+		value = 3
+	}, {
+		label = "科技四",
+		value = 4
+	}}
+	local list_options = self.list_options
+
+	local card_w = 160
+	local card_h = 120
+	local gap = 16
+	local total_w = #list_options * (card_w + gap) - gap
+	local start_x = (self.size.x - total_w) * 0.5
+	local start_y = (self.size.y - card_h) * 0.5
+
+	for i, opt in ipairs(list_options) do
+		local card = KView:new(V.v(card_w, card_h))
+		card.pos = V.v(start_x + (i - 1) * (card_w + gap), start_y)
+		card.colors.background = UPGR.list_id == opt.value and {60, 45, 20, 240} or {35, 25, 12, 220}
+		card.shape = {
+			name = "rectangle",
+			args = {"fill", 0, 0, card_w, card_h, 12, 12}
+		}
+		local border_color = UPGR.list_id == opt.value and {207, 164, 72, 255} or {100, 80, 40, 200}
+		local border = KView:new(V.v(card_w, card_h))
+		border.colors.background = border_color
+		border.shape = {
+			name = "rectangle",
+			args = {"line", 0, 0, card_w, card_h, 12, 12}
+		}
+		card:add_child(border)
+		card._border = border
+		border.propagate_on_click = true
+
+		local label = GGLabel:new(V.v(card_w - 16, 40))
+		label.pos = V.v(8, (card_h - 40) * 0.5)
+		label.font_name = "h"
+		label.font_size = 16
+		label.text_align = "center"
+		label.vertical_align = "middle"
+		label.colors.text = {241, 222, 171, 255}
+		label.text = opt.label
+		label.fit_lines = 2
+		label.fit_size = true
+		label.propagate_on_click = true
+		card:add_child(label)
+
+		function card.on_enter()
+			card.colors.background = {50, 35, 16, 240}
+			card._border.colors.background = {220, 180, 80, 255}
+		end
+		function card.on_exit()
+			card.colors.background = UPGR.list_id == opt.value and {60, 45, 20, 240} or {35, 25, 12, 220}
+			card._border.colors.background = UPGR.list_id == opt.value and {207, 164, 72, 255} or {100, 80, 40, 200}
+		end
+		function card.on_click()
+			S:queue("GUIButtonCommon")
+			self.list_dropdown.hidden = true
+			if UPGR.list_id ~= opt.value then
+				UPGR:set_list_id(opt.value)
+				self.header.text = _("UPGRADES_" .. UPGR.list_id)
+				screen_map.u_button.label.text = _("UPGRADES_" .. UPGR.list_id)
+				self:rebuild_upgrade_buttons()
+			end
+		end
+
+		self.list_dropdown:add_child(card)
+		if not self.list_dropdown._cards then
+			self.list_dropdown._cards = {}
+		end
+		self.list_dropdown._cards[i] = card
+	end
 
 	-- 添加科技组切换功能
 	self.toggle_button = GGUpgradesButton:new("切换科技")
@@ -3848,7 +3938,6 @@ function UpgradesView:initialize(sw, sh)
 	self.upgrade_buttons = {}
 
 	local init_bought_list = screen_map.user_data.upgrades
-	UPGR:set_list_id(screen_map.user_data.upgrade_list_id)
 
 	self.spent_stars = 0
 
@@ -4099,6 +4188,7 @@ function UpgradesView:hide()
 	UpgradesView.super.hide(self)
 
 	self.tip_panel.hidden = true
+	self.list_dropdown.hidden = true
 end
 
 function UpgradesView:rebuild_upgrade_buttons()
@@ -4170,8 +4260,20 @@ function UpgradesView:enable()
 
 	function self.toggle_button.on_click(button, x, y)
 		S:queue("GUIButtonCommon")
-		UPGR:toggle_list_id()
-		self:rebuild_upgrade_buttons()
+		if not self.list_dropdown.hidden then
+			self.list_dropdown.hidden = true
+		else
+			self.list_dropdown.hidden = false
+			self.list_dropdown:order_to_front()
+			for i, card in ipairs(self.list_dropdown._cards or {}) do
+				local opt = self.list_options[i]
+				if opt then
+					local selected = UPGR.list_id == opt.value
+					card.colors.background = selected and {60, 45, 20, 240} or {35, 25, 12, 220}
+					card._border.colors.background = selected and {207, 164, 72, 255} or {100, 80, 40, 200}
+				end
+			end
+		end
 	end
 
 	if self.spent_stars > 0 then

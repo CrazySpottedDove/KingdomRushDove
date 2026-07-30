@@ -25460,3 +25460,7 @@ tt.main_script.insert = scripts.mod_mage_treasure.insert
 
 tt = RT("mod_archer_magic", "modifier")
 tt.main_script.insert = scripts.mod_archer_magic.insert
+
+tt = RT("controller_mage_purge_field")
+AC(tt, "main_script")
+tt.main_script.update = scripts.controller_mage_purge_field.update

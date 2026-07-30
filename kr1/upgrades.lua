@@ -911,6 +911,270 @@ upgrades.list = {{
 		class = "rain",
 		level = 6
 	}
+}, {
+	archer_salvage = {
+		cost_factor = 0.95,
+		class = "archers",
+		price = 1,
+		level = 1,
+		icon = 13
+	},
+	archer_eagle_eye = {
+		range_factor = 1.25,
+		class = "archers",
+		price = 1,
+		level = 2,
+		icon = 14
+	},
+	archer_logger = {
+		cost_factor = 0.9,
+		class = "archers",
+		price = 2,
+		level = 3,
+		icon = 2,
+		from_kr = 2
+	},
+	archer_far_shots = {
+		range_factor = 1.05,
+		class = "archers",
+		price = 2,
+		level = 4,
+		icon = 16
+	},
+	archer_fast_shots = {
+		cooldown_factor = 0.925,
+		class = "archers",
+		price = 3,
+		level = 5,
+		icon = 5,
+		from_kr = 2
+	},
+	archer_el_bloodletting_shoot = {
+		price = 4,
+		icon = 5,
+		class = "archers",
+		level = 6,
+		from_kr = 3
+	},
+	barrack_survival = {
+		health_factor = 1.1,
+		class = "barracks",
+		price = 1,
+		level = 1,
+		icon = 8
+	},
+	barrack_better_armor = {
+		class = "barracks",
+		armor_increase = 0.1,
+		price = 1,
+		level = 2,
+		icon = 9
+	},
+	barrack_improved_deployment = {
+		cooldown_factor = 0.8,
+		rally_range_factor = 1.25,
+		class = "barracks",
+		price = 2,
+		level = 3,
+		icon = 10
+	},
+	barrack_survival_2 = {
+		health_factor = 1.05,
+		class = "barracks",
+		price = 2,
+		level = 4,
+		icon = 11
+	},
+	barrack_mobilize = {
+		class = "barracks",
+		price_factor = 0.8,
+		price = 3,
+		level = 5,
+		icon = 7,
+		from_kr = 2
+	},
+	barrack_el_enchanted_armor = {
+		class = "barracks",
+		factor = 0.9,
+		magic_armor_inc = 0.1,
+		icon = 8,
+		price = 4,
+		level = 6,
+		from_kr = 3
+	},
+	mage_spell_reach = {
+		range_factor = 1.15,
+		class = "mages",
+		price = 1,
+		level = 1,
+		icon = 18
+	},
+	mage_empowered_magic = {
+		damage_factor = 1.15,
+		class = "mages",
+		price = 1,
+		level = 2,
+		icon = 19
+	},
+	mage_rune_analysis = {
+		cost_factor = 0.95,
+		class = "mages",
+		price = 2,
+		level = 3,
+		icon = 20
+	},
+	mage_slow_curse = {
+		mod = "mod_slow_curse",
+		class = "mages",
+		price = 2,
+		level = 4,
+		icon = 22
+	},
+	mage_spell_reach_2 = {
+		from_kr = 2,
+		range_factor = 1.1,
+		class = "mages",
+		price = 3,
+		level = 5,
+		icon = 11
+	},
+	mage_purge_field = {
+		class = "mages",
+		price = 4,
+		level = 6,
+		icon = 21
+	},
+	engineer_concentrated_fire = {
+		damage_factor = 1.25,
+		class = "engineers",
+		price = 1,
+		level = 1,
+		icon = 23
+	},
+	engineer_range_finder = {
+		range_factor = 1.1,
+		class = "engineers",
+		price = 1,
+		level = 2,
+		icon = 24
+	},
+	engineer_emergency_expansion = {
+		class = "engineers",
+		cost_factor = 0.8,
+		damage_factor = 0.8875,
+		price = 2,
+		level = 3,
+		icon = 25
+	},
+	engineer_industrialization = {
+		class = "engineers",
+		cost_factor = 0.8,
+		price = 3,
+		level = 4,
+		icon = 26
+	},
+	engineer_efficiency = {
+		price = 3,
+		class = "engineers",
+		level = 5,
+		icon = 27
+	},
+	engineer_gnomish_tinkering = {
+		from_kr = 2,
+		cooldown_factor_electric = 0.9,
+		cooldown_factor = 0.88,
+		class = "engineers",
+		icon = 19,
+		price = 4,
+		level = 6
+	},
+	thunder_level_1 = {
+		hits = 6,
+		class = "rain",
+		icon = 21,
+		price = 2,
+		level = 1,
+		from_kr = 3
+	},
+	thunder_level_2 = {
+		price = 2,
+		icon = 22,
+		class = "rain",
+		level = 2,
+		from_kr = 3
+	},
+	thunder_level_3 = {
+		price = 3,
+		icon = 23,
+		class = "rain",
+		level = 3,
+		from_kr = 3
+	},
+	thunder_level_4 = {
+		price = 3,
+		icon = 24,
+		class = "rain",
+		level = 4,
+		from_kr = 3
+	},
+	thunder_level_5 = {
+		price = 3,
+		icon = 25,
+		class = "rain",
+		level = 5,
+		from_kr = 3
+	},
+	thunder_level_6 = {
+		from_kr = 3,
+		price = 4,
+		icon = 10,
+		class = "rain",
+		level = 6
+	},
+	reinforcement_level_1 = {
+		class = "reinforcements",
+		template_name = "re_farmer_well_fed",
+		price = 2,
+		level = 1,
+		icon = 28
+	},
+	reinforcement_level_2 = {
+		class = "reinforcements",
+		template_name = "re_conscript",
+		price = 3,
+		level = 2,
+		icon = 29
+	},
+	reinforcement_level_3 = {
+		class = "reinforcements",
+		template_name = "re_warrior",
+		price = 3,
+		level = 3,
+		icon = 30
+	},
+	reinforcement_level_4 = {
+		class = "reinforcements",
+		template_name = "re_legionnaire",
+		price = 3,
+		level = 4,
+		icon = 1
+	},
+	reinforcement_level_5 = {
+		class = "reinforcements",
+		template_name = "re_legionnaire_ranged",
+		price = 4,
+		level = 5,
+		icon = 2
+	},
+	reinforcement_level_6 = {
+		from_kr = 3,
+		class = "reinforcements",
+		duration_inc = 1,
+		cooldown_dec = 2,
+		icon = 29,
+		price = 4,
+		level = 6
+	}
 }}
 upgrades.list_count = #upgrades.list
 
@@ -1680,6 +1944,54 @@ function upgrades:patch_templates(max_level)
 		end
 	end
 
+	u = self:get_upgrade("mage_rune_analysis")
+
+	if u then
+		for _, n in ipairs(mage_towers) do
+			local t = T(n)
+			t.tower.price = math.ceil(t.tower.price * u.cost_factor)
+			if t.powers then
+				for _, p in pairs(t.powers) do
+					if p.price_base then
+						p.price_base = math.ceil(p.price_base * u.cost_factor)
+					end
+					if p.price_inc then
+						p.price_inc = math.ceil(p.price_inc * u.cost_factor)
+					end
+				end
+			end
+		end
+	end
+
+	u = self:get_upgrade("mage_purge_field")
+
+	if u then
+		for _, n in ipairs(mage_towers) do
+			local t = T(n)
+			if t.main_script.insert then
+				local insert = t.main_script.insert
+				t.main_script.insert = function(this, store)
+					if not insert(this, store) then
+						return false
+					end
+					local e = E:create_entity("controller_mage_purge_field")
+					e.target_id = this.id
+					simulation:queue_insert_entity(e)
+
+					return true
+				end
+			else
+				t.main_script.insert = function(this, store)
+					local e = E:create_entity("controller_mage_purge_field")
+					e.target_id = this.id
+					simulation:queue_insert_entity(e)
+
+					return true
+				end
+			end
+		end
+	end
+
 	u = self:get_upgrade("mage_old_folk")
 	if u then
 		for _, n in ipairs(mage_towers) do
@@ -1934,6 +2246,34 @@ function upgrades:patch_templates(max_level)
 		end
 	end
 
+	u = self:get_upgrade("engineer_emergency_expansion")
+
+	if u then
+		for _, n in pairs(engineer_towers) do
+			T(n).tower.price = math.floor(T(n).tower.price * u.cost_factor)
+		end
+		for _, n in pairs(self.engineer_bombs) do
+			T(n).bullet.damage_min = T(n).bullet.damage_min * u.damage_factor
+			T(n).bullet.damage_max = T(n).bullet.damage_max * u.damage_factor
+		end
+		T("tower_dwaarp").attacks.list[1].damage_min = T("tower_dwaarp").attacks.list[1].damage_min * u.damage_factor
+		T("tower_dwaarp").attacks.list[1].damage_max = T("tower_dwaarp").attacks.list[1].damage_max * u.damage_factor
+		T("tower_melting_furnace").attacks.list[1].damage_min = T("tower_melting_furnace").attacks.list[1].damage_min * u.damage_factor
+		T("tower_melting_furnace").attacks.list[1].damage_max = T("tower_melting_furnace").attacks.list[1].damage_max * u.damage_factor
+		T("ray_tesla").bounce_damage_min = T("ray_tesla").bounce_damage_min * u.damage_factor
+		T("ray_tesla").bounce_damage_max = T("ray_tesla").bounce_damage_max * u.damage_factor
+		T("mod_ray_frankenstein").dps.damage_min = T("mod_ray_frankenstein").dps.damage_min * u.damage_factor
+		T("mod_ray_frankenstein").dps.damage_max = T("mod_ray_frankenstein").dps.damage_max * u.damage_factor
+		T("tower_flamespitter_lvl4").attacks.list[1].damage_min = T("tower_flamespitter_lvl4").attacks.list[1].damage_min * u.damage_factor
+		T("tower_flamespitter_lvl4").attacks.list[1].damage_max = T("tower_flamespitter_lvl4").attacks.list[1].damage_max * u.damage_factor
+		T("mod_tower_rotten_forest_burst_damage").dps.damage_min = T("mod_tower_rotten_forest_burst_damage").dps.damage_min * u.damage_factor
+		T("mod_tower_rotten_forest_burst_damage").dps.damage_max = T("mod_tower_rotten_forest_burst_damage").dps.damage_max * u.damage_factor
+		T("mod_ignis_altar_damage").damage_min = T("mod_ignis_altar_damage").damage_min * u.damage_factor
+		T("mod_ignis_altar_damage").damage_max = T("mod_ignis_altar_damage").damage_max * u.damage_factor
+		T("aura_tower_sandworm").aura.damage_min = T("aura_tower_sandworm").aura.damage_min * u.damage_factor
+		T("aura_tower_sandworm").aura.damage_max = T("aura_tower_sandworm").aura.damage_max * u.damage_factor
+	end
+
 	u = self:get_upgrade("engineer_industrialization")
 
 	if u then
@@ -2063,7 +2403,7 @@ function upgrades:patch_templates(max_level)
 
 	if self.list_id == 1 or self.list_id == 2 then
 		E:set_template("user_power_1", T("power_fireball_control"))
-	elseif self.list_id == 3 then
+	elseif self.list_id == 3 or self.list_id == 4 then
 		E:set_template("user_power_1", T("power_thunder_control"))
 	end
 
