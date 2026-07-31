@@ -23268,7 +23268,9 @@ function scripts.mod_orc_shaman_heal_enemy.insert(this, store)
 
 		local exponent = this.damage_exponent + this.damage_exponent_inc * this.modifier.level
 		this._on_damage_index = U.insert_on_damage(target, function(this, store, damage)
-			damage.value = damage.value ^ exponent
+			if damage.value > 0 then
+				damage.value = damage.value ^ exponent
+			end
 			return true
 		end)
 		local factor = this.damage_factor_magical + this.damage_factor_magical_inc * this.modifier.level

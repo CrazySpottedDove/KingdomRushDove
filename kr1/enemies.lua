@@ -2361,7 +2361,7 @@ tt.vis.flags = bor(tt.vis.flags, F_MOCKING)
 tt = RT("aura_abomination", "aura")
 AC(tt, "render", "tween")
 tt.aura.active = false
-tt.aura.allowed_templates = {"enemy_halloween_zombie", "enemy_zombie_blackburn", "enemy_cannibal_zombie"}
+tt.aura.allowed_templates = {"enemy_halloween_zombie", "enemy_zombie_blackburn"}
 tt.aura.cooldown = 0
 tt.aura.delay = fts(30)
 tt.aura.duration = -1
