@@ -136,7 +136,6 @@ function mu.default_params(params, game_name, game_target, game_platform)
 	d("volume_fx", 1)
 	d("highdpi", false)
 	d("pause_on_switch", false)
-	d("image_db_uses_canvas", false)
 
 	if params.locale and not i18n.locale_names[params.locale] then
 		log.error("Invalid locale %s in settings.lua. Falling back to default.", params.locale)

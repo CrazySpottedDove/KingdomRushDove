@@ -81,7 +81,6 @@ image_db.image_path_queue = {}
 image_db._queue_image_info = {}
 image_db.queue_load_total_images = 0
 image_db.queue_load_done_images = 0
-image_db.use_canvas = true
 -- by dove
 image_db.supportedformats = love.graphics.getImageFormats()
 
@@ -318,24 +317,7 @@ function image_db:queue_load_done()
 								self:add_image(info.sprite_name, im, info.group, info.scale)
 								self._queue_image_info[key] = nil
 							else
-								if self.use_canvas and not im:isCompressed() then
-									log.paranoid(" +++ creating canvas %s", im)
-
-									local c = G.newCanvas(w, h)
-
-									G.setCanvas(c)
-									G.setBlendMode("replace", "premultiplied")
-									G.draw(im)
-									G.setBlendMode("alpha", "alphamultiply")
-									G.setCanvas()
-
-									self.db_images[key] = {c, w, h}
-									im = nil
-								else
-									log.paranoid(" +++ keeping image %s", im)
-
-									self.db_images[key] = {im, w, h}
-								end
+								self.db_images[key] = {im, w, h}
 							end
 
 							self.queue_load_done_images = self.queue_load_done_images + 1

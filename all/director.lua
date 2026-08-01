@@ -62,8 +62,6 @@ function director:init(params)
 	end
 	-- perf.tmp_stop("sound_db_init")
 
-	I.use_canvas = params.image_db_uses_canvas
-
 	-- perf.tmp_start("achivements_init")
 	AC:init()
 	-- perf.tmp_stop("achivements_init")
