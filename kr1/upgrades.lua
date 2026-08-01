@@ -339,7 +339,7 @@ upgrades.list = {{
 	},
 	archer_fast_shots = {
 		from_kr = 2,
-		cooldown_factor = 0.925,
+		cooldown_factor = 0.9,
 		class = "archers",
 		price = 3,
 		level = 5,
@@ -941,12 +941,13 @@ upgrades.list = {{
 		level = 4,
 		icon = 16
 	},
-	archer_fast_shots = {
-		cooldown_factor = 0.925,
+	archer_fly_killer = {
+		damage_factor = 1.08,
+		damage_factor_fly = 1.2,
 		class = "archers",
 		price = 3,
 		level = 5,
-		icon = 5,
+		icon = 4,
 		from_kr = 2
 	},
 	archer_el_bloodletting_shoot = {
@@ -1730,6 +1731,40 @@ function upgrades:patch_templates(max_level)
 					s.fps = s._origin_fps * t.tower.cooldown_factor
 				end
 				scale_fps_based_keys(t, t.tower.cooldown_factor_divider)
+			end
+		end
+	end
+
+	u = self:get_upgrade("archer_fly_killer")
+	if u then
+		for _, n in ipairs(archer_towers) do
+			local t = T(n)
+			t.tower.damage_factor = t.tower.damage_factor * u.damage_factor
+		end
+		local damage_factor_fly = u.damage_factor_fly
+		for _, n in ipairs(self.arrows) do
+			local tpl = T(n)
+
+			if tpl.main_script.insert then
+				local original_insert = tpl.main_script.insert
+				tpl.main_script.insert = function(this, store)
+					if not original_insert(this, store) then
+						return false
+					end
+					local target = store.entities[this.bullet.target_id]
+					if target and bit.band(target.vis.flags, F_FLYING) ~= 0 then
+						this.bullet.damage_factor = this.bullet.damage_factor * damage_factor_fly
+					end
+					return true
+				end
+			else
+				tpl.main_script.insert = function(this, store)
+					local target = store.entities[this.bullet.target_id]
+					if target and bit.band(target.vis.flags, F_FLYING) ~= 0 then
+						this.bullet.damage_factor = this.bullet.damage_factor * damage_factor_fly
+					end
+					return true
+				end
 			end
 		end
 	end
