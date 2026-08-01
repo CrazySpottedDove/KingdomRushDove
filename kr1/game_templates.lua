@@ -8649,66 +8649,6 @@ tt.particle_system.particle_lifetime = {0.7, 0.85}
 
 tt = RT("mod_endless_archer_insight", "mod_health_damage_factor_inc")
 
--- package.loaded.soldier_enemies = nil
--- require("soldier_enemies")
-tt = RT("cricet_random_eff_aura", "decal_scripted")
--- AC(tt, "editor")
-tt.render.sprites[1].prefix = "cricet_random_eff"
-tt.render.sprites[1].z = Z_DECALS
-tt.render.sprites[1].loop = false
-tt.main_script.update = scripts.cricet_random_eff_aura.update
-tt.vis_flags = F_MOD
-tt.vis_bans = 0
-tt.trigger_range = 50
-tt.mod = "cricet_random_eff_mod"
-
-tt = RT("cricet_random_eff_mod", "decal_scripted")
-tt.render.sprites[1].prefix = "cricet_random_eff_mod"
-tt.render.sprites[1].name = "give"
-tt.render.sprites[1].z = Z_EFFECTS
-tt.render.sprites[1].loop = false
-tt.main_script.insert = scripts.cricet_random_eff_mod.insert
-tt.main_script.update = scripts.cricet_random_eff_mod.update
-tt.vis_flags = F_MOD
-tt.vis_bans = 0
-tt.range = 50
-tt.random_mods = {"mod_cricet_add_hp", "mod_cricet_protection", "mod_cricet_attack", "mod_cricet_faster"}
-
-tt = RT("mod_cricet_add_hp", "mod_shaman_heal")
-tt.main_script.insert = scripts.mod_cricet_add_hp.insert
-tt.main_script.update = scripts.mod_cricet_add_hp.update
-tt.hps.heal = 0.4
-
-tt = RT("mod_cricet_protection", "modifier")
-AC(tt, "render")
-tt.render.sprites[1].prefix = "criket_random_eff_mod_protection"
-tt.render.sprites[1].loop = true
-tt.main_script.insert = scripts.mod_cricet_protection.insert
-tt.main_script.update = scripts.mod_cricet_protection.update
-tt.main_script.remove = scripts.mod_cricet_protection.remove
-tt.modifier.protection = 1.3
-tt.modifier.duration = -1
-
-tt = RT("mod_cricet_attack", "modifier")
-AC(tt, "render")
-tt.render.sprites[1].prefix = "criket_random_eff_mod_attack"
-tt.render.sprites[1].loop = true
-tt.main_script.insert = scripts.mod_cricet_attack.insert
-tt.main_script.update = scripts.mod_cricet_attack.update
-tt.main_script.remove = scripts.mod_cricet_attack.remove
-tt.modifier.damage_factor = 1.5
-tt.modifier.duration = -1
-
-tt = RT("mod_cricet_faster", "modifier")
-AC(tt, "render")
-tt.render.sprites[1].prefix = "criket_random_eff_mod_faster"
-tt.render.sprites[1].loop = true
-tt.main_script.insert = scripts.mod_cricet_faster.insert
-tt.main_script.update = scripts.mod_cricet_faster.update
-tt.main_script.remove = scripts.mod_cricet_faster.remove
-tt.modifier.speed_factor = 1.3
-tt.modifier.duration = -1
-
 tt = RT("endless_barrack_synergy_aura", "aura")
 tt.aura.mod = "mod_endless_barrack_synergy"
 tt.aura.radius = 180

@@ -5908,41 +5908,6 @@ return {
 		prefix = "corrupted_stalker_creep",
 		to = 96
 	},
-	cricet_random_eff_end = {
-		from = 13,
-		prefix = "cricet_random_eff",
-		to = 27
-	},
-	cricet_random_eff_idle = {
-		from = 1,
-		prefix = "cricet_random_eff",
-		to = 1
-	},
-	cricet_random_eff_mod_give = {
-		from = 1,
-		prefix = "cricet_random_eff_a",
-		to = 21
-	},
-	cricet_random_eff_start = {
-		from = 2,
-		prefix = "cricet_random_eff",
-		to = 12
-	},
-	criket_random_eff_mod_attack_idle = {
-		from = 1,
-		prefix = "criket_random_eff_mod_attack",
-		to = 1
-	},
-	criket_random_eff_mod_faster_idle = {
-		from = 1,
-		prefix = "criket_random_eff_mod_faster",
-		to = 1
-	},
-	criket_random_eff_mod_protection_idle = {
-		from = 1,
-		prefix = "criket_random_eff_mod_protection",
-		to = 1
-	},
 	croco_sheepy_action1 = {
 		from = 26,
 		prefix = "croco_sheepy",
