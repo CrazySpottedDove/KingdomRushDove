@@ -1963,7 +1963,6 @@ tt.bullet.mod = "mod_bullet_tower_barrel_lvl4"
 
 tt = RT("bullet_tower_barrel_skill_barrel", "bomb")
 local b = balance.towers.barrel.skill_barrel
-
 tt.bullet.damage_max = 0
 tt.bullet.damage_min = 0
 tt.bullet.hit_fx = nil

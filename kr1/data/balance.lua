@@ -6007,13 +6007,13 @@ local towers = {
 		price = {120, 180, 260, 360},
 		basic_attack = {
 			damage_radius = 60,
-			cooldown = 3,
+			cooldown = 2.64,
 			damage_min = {7, 18, 35, 60},
-			damage_max = {11, 28, 53, 93},
+			damage_max = {11, 28, 53, 90},
 			range = {170, 170, 170, 205},
 			debuff = {
-				damage_factor = {0.75, 0.75, 0.75, 0.75},
-				duration = {4, 4, 4, 4}
+				damage_factor = {0.5, 0.5, 0.5, 0.5},
+				duration = {3, 3, 3, 3}
 			}
 		},
 		skill_warrior = {
