@@ -5427,24 +5427,6 @@ end
 
 scripts.tower_baby_ashbite = {}
 
-function scripts.tower_baby_ashbite.get_info(this)
-	local e = E:get_template("soldier_baby_ashbite")
-	local b = E:get_template(e.ranged.attacks[1].bullet)
-	local min, max = b.bullet.damage_min * this.tower.damage_factor, b.bullet.damage_max * this.tower.damage_factor
-
-	return {
-		type = STATS_TYPE_TOWER_BARRACK,
-		hp_max = e.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		-- damage_icon = this.info.damage_icon,
-		damage_type = b.bullet.damage_type,
-		armor = e.health.armor,
-		magic_armor = e.health.magic_armor,
-		respawn = e.health.dead_lifetime
-	}
-end
-
 function scripts.tower_baby_ashbite.update(this, store)
 	local b = this.barrack
 

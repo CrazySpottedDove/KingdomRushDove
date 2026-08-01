@@ -685,7 +685,6 @@ tt.tower.type = "holder_baby_ashbite"
 tt.tower.kind = TOWER_KIND_BARRACK
 tt.info.fn = scripts.tower_holder_blocked_elemental_holder.get_info
 tt.info.portrait = "kr5_portraits_towers_0019"
-tt.info.damage_icon = "fireball"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_barrack_%04i" --"terrains_holders_%04i"
 tt.render.sprites[1].offset = v(0, 13)
