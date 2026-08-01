@@ -2827,7 +2827,8 @@ function InfoBar:initialize()
 	local label_height = 14
 	local stat_labels = {}
 
-	stat_labels[STATS_TYPE_TOWER_BARRACK] = {{"label", "l_hp", "base_info_icons_hp", 0.8 * s_4}, {"label", "l_damage", "base_info_icons_sword", 0.8 * s_4}, {"label", "l_armor", "base_info_icons_armor", 0.8 * s_4}, {"label", "l_magic_armor", "base_info_icons_magic_armor", 0.8 * s_4}, {"label", "l_respawn", "base_info_icons_lifetime", 0.8 * s_4}}
+	-- stat_labels[STATS_TYPE_TOWER_BARRACK] = {{"label", "l_hp", "base_info_icons_hp", 0.8 * s_4}, {"label", "l_damage", "base_info_icons_sword", 0.8 * s_4}, {"label", "l_armor", "base_info_icons_armor", 0.8 * s_4}, {"label", "l_magic_armor", "base_info_icons_magic_armor", 0.8 * s_4}, {"label", "l_respawn", "base_info_icons_lifetime", 0.8 * s_4}}
+	stat_labels[STATS_TYPE_TOWER_BARRACK] = {{"label", "l_hp", "base_info_icons_hp", 0.8 * s_4}, {"label", "l_damage", "base_info_icons_sword", 2.55 * s_12}, {"label", "l_ranged_damage", "base_info_icons_arrow", 2.55 * s_12}, {"label", "l_armor", "base_info_icons_armor", 1.2 * s_12}, {"label", "l_magic_armor", "base_info_icons_magic_armor", 1.2 * s_12}, {"label", "l_respawn", "base_info_icons_lifetime", 1.2 * s_12}}
 	stat_labels[STATS_TYPE_SOLDIER] = {{"bar", "b_hp", "base_info_bar_bg", "base_info_bar", 3.3 * s_12}, {"label", "l_hp", nil, 3.3 * s_12, "center", true, v(0, CJK(1, 0, 3, -1))}, {"label", "l_damage", "base_info_icons_sword", 2.55 * s_12}, {"label", "l_ranged_damage", "base_info_icons_arrow", 2.55 * s_12}, {"label", "l_armor", "base_info_icons_armor", 1.2 * s_12}, {"label", "l_magic_armor", "base_info_icons_magic_armor", 1.2 * s_12}, {"label", "l_respawn", "base_info_icons_lifetime", 1.2 * s_12}}
 	stat_labels[STATS_TYPE_ENEMY] = table.deepclone(stat_labels[STATS_TYPE_SOLDIER])
 	stat_labels[STATS_TYPE_ENEMY][7] = {"label", "l_lives", "base_info_icons_cost", 1.2 * s_12}
@@ -3056,10 +3057,14 @@ function InfoBar:update_stats()
 
 	if stats.type == STATS_TYPE_TOWER_BARRACK then
 		sv.l_hp.text = string.format("%i", stats.hp_max)
-		-- sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
-		sv.l_damage.text = GU.damage_value_and_cooldown_desc(stats.damage_min, stats.damage_max, stats.cooldown)
 
+		sv.l_damage.text = GU.damage_value_and_cooldown_desc(stats.damage_min, stats.damage_max, stats.cooldown)
 		sv.l_damage:set_image(damage_icon, V.v(sv.l_damage.size.x, sv.l_damage.size.y))
+
+		sv.l_ranged_damage.text = GU.damage_value_and_cooldown_desc(stats.ranged_damage_min, stats.ranged_damage_max, stats.ranged_cooldown)
+		sv.l_ranged_damage:set_image(ranged_damage_icon, V.v(sv.l_ranged_damage.size.x, sv.l_ranged_damage.size.y))
+		sv.l_ranged_damage.text = GU.damage_value_and_cooldown_desc(stats.ranged_damage_min, stats.ranged_damage_max, stats.ranged_cooldown)
+		sv.l_ranged_damage:set_image(ranged_damage_icon, V.v(sv.l_ranged_damage.size.x, sv.l_ranged_damage.size.y))
 
 		sv.l_armor.text = GU.armor_value_desc_detailed(stats.armor)
 		sv.l_magic_armor.text = GU.armor_value_desc_detailed(stats.magic_armor)
@@ -3082,12 +3087,10 @@ function InfoBar:update_stats()
 
 		sv.l_hp.text = string.format("%i / %i", stats.hp, stats.hp_max)
 
-		-- sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
 		sv.l_damage.text = GU.damage_value_and_cooldown_desc(stats.damage_min, stats.damage_max, stats.cooldown)
 
 		sv.l_damage:set_image(damage_icon, V.v(sv.l_damage.size.x, sv.l_damage.size.y))
 
-		-- sv.l_ranged_damage.text = GU.damage_value_desc(stats.ranged_damage_min, stats.ranged_damage_max)
 		sv.l_ranged_damage.text = GU.damage_value_and_cooldown_desc(stats.ranged_damage_min, stats.ranged_damage_max, stats.ranged_cooldown)
 
 		sv.l_ranged_damage:set_image(ranged_damage_icon, V.v(sv.l_ranged_damage.size.x, sv.l_ranged_damage.size.y))
@@ -3098,12 +3101,10 @@ function InfoBar:update_stats()
 	elseif stats.type == STATS_TYPE_SOLDIER then
 		sv.b_hp.bar.scale.x = math.min(stats.hp / stats.hp_max, 1)
 		sv.l_hp.text = string.format("%i / %i", stats.hp, stats.hp_max)
-		-- sv.l_damage.text = GU.damage_value_desc(stats.damage_min, stats.damage_max)
 		sv.l_damage.text = GU.damage_value_and_cooldown_desc(stats.damage_min, stats.damage_max, stats.cooldown)
 
 		sv.l_damage:set_image(damage_icon, V.v(sv.l_damage.size.x, sv.l_damage.size.y))
 
-		-- sv.l_ranged_damage.text = GU.damage_value_desc(stats.ranged_damage_min, stats.ranged_damage_max)
 		sv.l_ranged_damage.text = GU.damage_value_and_cooldown_desc(stats.ranged_damage_min, stats.ranged_damage_max, stats.ranged_cooldown)
 
 		sv.l_ranged_damage:set_image(ranged_damage_icon, V.v(sv.l_ranged_damage.size.x, sv.l_ranged_damage.size.y))
