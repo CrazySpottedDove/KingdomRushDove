@@ -150,8 +150,6 @@ function director:get_texture_scale(item_name, ref_res, forced_texture_size)
 		scale = scale / factors[item_name]
 	end
 
-	log.debug("item:%s ref_res:%s texture_size:%s forced_texture_size:%s-> scale:%s", item_name, ref_res, self.params.texture_size, forced_texture_size, scale)
-
 	return scale
 end
 
@@ -533,12 +531,17 @@ function director:queue_load_item_named(name)
 		if configer.config().enabled and configer.config().enable_hero_menu then
 			local hero_data = require("data.map_data").hero_data
 
+			local hero_textures = {}
+			local hero_sounds = {}
 			for _, data in pairs(hero_data) do
 				local hero = data.name
-				local hero_textures = {"go_" .. hero}
+				hero_textures[#hero_textures + 1] = "go_" .. hero
+				hero_sounds[#hero_sounds + 1] = hero
+			end
 
+			if #hero_textures > 0 then
 				self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res, true, "game")
-				self:load_sound_groups({hero})
+				self:load_sound_groups(hero_sounds)
 			end
 
 			for _, required_exoskeletons in pairs(GS.hero_exoskeletons) do
@@ -546,15 +549,22 @@ function director:queue_load_item_named(name)
 			end
 		else
 			if slot.heroes.selected then
-				for _, hero in ipairs(slot.heroes.selected) do
-					local hero_textures = {"go_" .. hero}
+				local hero_textures = {}
+				local hero_sounds = {}
+				for i = 1, #slot.heroes.selected do
+					local hero = slot.heroes.selected[i]
+					hero_sounds[i] = hero
+					hero_textures[i] = "go_" .. hero
 
-					self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res, true, "game")
-					self:load_sound_groups({hero})
 					local required_exoskeletons = GS.hero_exoskeletons[hero]
 					if required_exoskeletons then
 						EXO:queue_load(required_exoskeletons)
 					end
+				end
+
+				if #slot.heroes.selected > 0 then
+					self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res, true, "game")
+					self:load_sound_groups(hero_sounds)
 				end
 			end
 		end
@@ -570,12 +580,9 @@ function director:queue_load_item_named(name)
 
 			self:load_texture_groups(replace_locale(item.required_textures), self.params.texture_size, item.ref_res, true, "comic")
 
-			-- self.queued_item = item
 			item.game_item = game
-			self.queued_item = game
-		else
-			self.queued_item = game
 		end
+		self.queued_item = game
 	end
 
 	log.debug("queued item: %s", self.queued_item.item_name)
@@ -658,6 +665,17 @@ function director:update(dt)
 	local updated = false
 	S:update(dt)
 
+	-- 更新活跃的 item
+	local ai = self.active_item
+
+	if ai then
+		if ai.limit_fps then
+			ai.next_frame_ts = ai.limit_fps and ai.next_frame_ts + 1 / ai.limit_fps or nil
+		end
+
+		updated = ai:update(dt)
+	end
+
 	-- 发现有 next_item_name，说明当前 item 发出了切换请求。因此，把 next_item_name 放入加载队列中
 	if self.next_item_name then
 		self.queued_item_init = false
@@ -668,78 +686,52 @@ function director:update(dt)
 		self:queue_load_item_named(self.last_item_name)
 	end
 
-	-- 更新活跃的 item
-	if self.active_item then
-		local active_item = self.active_item
+	if self.queue_unload_item then
+		self:unload_item(self.queue_unload_item)
 
-		if active_item.limit_fps then
-			active_item.next_frame_ts = active_item.limit_fps and active_item.next_frame_ts + 1 / active_item.limit_fps or nil
-		end
-
-		updated = active_item:update(dt)
+		self.queue_unload_item = nil
 	end
 
-	local ai = self.active_item
-	local aits = ai and ai.is_transition and ai.transition_state or nil
+	if self.queued_item and self:queued_item_ready(dt) then
+		local ai = self.active_item
 
-	if aits == "closing" or aits == "opening" then
-	-- block empty
-	else
-		if self.queue_unload_item and (not aits or aits == "closed") then
-			self:unload_item(self.queue_unload_item)
+		if ai and ai.hold_enabled then
+		-- block empty
+		else
+			if not self.queued_item_init then
+				local item = self.queued_item
 
-			self.queue_unload_item = nil
-		end
-
-		if self.queued_item and self:queued_item_ready(dt) then
-			local ai = self.active_item
-
-			if ai and ai.hold_enabled then
-			-- block empty
-			else
-				if not self.queued_item_init then
-					local item = self.queued_item
-
-					local function cb(outcome)
-						self:item_done_callback(item.item_name, outcome)
-					end
-
-					self.queued_item:init(self.params.width, self.params.height, cb)
-
-					self.queued_item.done_callback_called = nil
-					self.queued_item_init = true
-
-					self.queued_item:update(2 * TICK_LENGTH)
-
-					goto label_14_0
+				local function cb(outcome)
+					self:item_done_callback(item.item_name, outcome)
 				end
 
-				if ai then
-					if ai.transition_state == "closing" then
-						goto label_14_0
-					elseif ai.transition_state == "opening" then
-						goto label_14_0
-					end
-				end
+				self.queued_item:init(self.params.width, self.params.height, cb)
 
-				self:unload_item(self.active_item)
+				self.queued_item.done_callback_called = nil
+				self.queued_item_init = true
 
-				self.active_item = self.queued_item
-				self.queued_item = nil
-				self.queued_item_init = nil
+				self.queued_item:update(2 * TICK_LENGTH)
 
-				local item = self.active_item
-				local fps
-
-				if item.max_fps then
-					fps = item.max_fps
-				else
-					fps = not self.params.vsync and DRAW_FPS or nil
-				end
-
-				item.limit_fps = fps
-				item.next_frame_ts = love.timer.getTime()
+				goto label_14_0
 			end
+
+			self:unload_item(ai)
+
+			self.active_item = self.queued_item
+			self.queued_item = nil
+			self.queued_item_init = nil
+
+			local item = self.active_item
+			local fps
+
+			if item.max_fps then
+				fps = item.max_fps
+			else
+				fps = not self.params.vsync and DRAW_FPS or nil
+			end
+
+			item.limit_fps = fps
+			item.next_frame_ts = love.timer.getTime()
 		end
 	end
 
@@ -754,15 +746,11 @@ function director:draw()
 			G.setScissor(self.scissor_x, self.scissor_y, self.scissor_w, self.scissor_h)
 		end
 
-		local ai = self.active_item
-
-		if ai.transition_state == "closing" and self.queue_unload_item then
-			self.queue_unload_item:draw()
-		elseif self.queued_item and self.queued_item_init then
+		if self.queued_item and self.queued_item_init then
 			self.queued_item:draw()
 		end
 
-		ai:draw()
+		self.active_item:draw()
 
 		if self.scissor_w and self.scissor_enabled then
 			G.setScissor()

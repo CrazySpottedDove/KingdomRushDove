@@ -12757,7 +12757,7 @@ tt.bullet.damage_type = DAMAGE_NONE
 
 tt = RT("mod_desert_spider_lamber", "mod_freeze")
 tt.modifier.duration = 6
-tt.modifier.vis_flags = F_MOD
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.main_script.insert = scripts.mod_desert_spider_lamber.insert
 tt.main_script.remove = scripts.mod_desert_spider_lamber.remove
 tt.freeze_decal_name = "decal_desert_spider_lamber"

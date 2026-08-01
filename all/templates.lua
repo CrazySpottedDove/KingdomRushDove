@@ -610,6 +610,7 @@ tt.damage_type = DAMAGE_MAGICAL_EXPLOSION
 
 tt = E:register_t("mod_freeze", "modifier")
 tt.modifier.duration = 5
+tt.modifier.vis_flags = bor(F_MOD, F_FREEZE)
 tt.modifier.type = MOD_TYPE_FREEZE
 tt.main_script.insert = scripts.mod_freeze.insert
 tt.main_script.update = scripts.mod_freeze.update
