@@ -397,8 +397,6 @@ MOD_TYPE_STUN = "stun"
 MOD_TYPE_TELEPORT = "teleport"
 MOD_TYPE_TIMELAPSE = "timelapse"
 MOD_TYPE_BUFF = "buff"
-SGN_PS_SYNC_SLOTS_FINISHED = "platform-service-sync-slots-finished"
-SGN_DIRECTOR_ITEM_SHOWN = "director-item-shown"
 -- 索敌模式
 MODE_FIND_FOREMOST = 0
 MODE_FIND_MAXHP = 1

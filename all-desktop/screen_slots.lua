@@ -1,5 +1,4 @@
 -- chunkname: @./all-desktop/screen_slots.lua
-local log = require("lib.klua.log"):new("screen_slots")
 local class = require("middleclass")
 local F = require("lib.klove.font_db")
 local I = require("lib.klove.image_db")
@@ -199,25 +198,7 @@ function SlotView:delete_slot()
 	self:get_child_by_id("slot_empty").hidden = false
 end
 
-screen.signal_handlers = {
-	[SGN_PS_SYNC_SLOTS_FINISHED] = function(service_name, success, request_id, status_code)
-		log.debug(SGN_PS_SYNC_SLOTS_FINISHED .. " : %s %s", service_name, success)
-
-		if service_name == "cloudsave" then
-			screen.cloudsave_req_id = nil
-
-			if not wid("cloudsave_progress_view").hidden then
-				screen:hide_cloudsave_progress()
-
-				if success then
-					screen.slot_panel:show()
-				else
-					screen:show_cloudsave_error(status_code)
-				end
-			end
-		end
-	end
-}
+screen.signal_handlers = {}
 
 function screen:init(w, h, done_callback)
 	self.done_callback = done_callback
@@ -415,20 +396,6 @@ function screen:init(w, h, done_callback)
 		S:queue("MusicMainMenu")
 	end
 
-	wid("cloudsave_cancel_button").on_click = function(this)
-		S:queue("GUIButtonCommon")
-
-		screen.cloudsave_req_id = nil
-
-		screen:hide_cloudsave_progress()
-		screen.slot_panel:show()
-	end
-	wid("cloudsave_close_button").on_click = function(this)
-		S:queue("GUIButtonCommon")
-		screen:hide_cloudsave_error()
-		screen.slot_panel:show()
-	end
-
 	for sn, fn in pairs(self.signal_handlers) do
 		signal.register(sn, fn)
 	end
@@ -503,23 +470,6 @@ function screen:handle_quit_button()
 	self.done_callback({
 		quit = true
 	})
-end
-
-function screen:show_cloudsave_progress()
-	wid("cloudsave_progress_view").hidden = false
-end
-
-function screen:hide_cloudsave_progress()
-	wid("cloudsave_progress_view").hidden = true
-end
-
-function screen:show_cloudsave_error(error_code)
-	wid("cloudsave_error_view").hidden = false
-	wid("cloudsave_error_code_label").text = string.format("Error code: %s", error_code)
-end
-
-function screen:hide_cloudsave_error()
-	wid("cloudsave_error_view").hidden = true
 end
 
 return screen

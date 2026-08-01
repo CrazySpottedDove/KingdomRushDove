@@ -728,8 +728,6 @@ function director:update(dt)
 				self.queued_item = nil
 				self.queued_item_init = nil
 
-				signal.emit(SGN_DIRECTOR_ITEM_SHOWN, self.active_item.item_name, self.active_item)
-
 				local item = self.active_item
 				local fps
 
