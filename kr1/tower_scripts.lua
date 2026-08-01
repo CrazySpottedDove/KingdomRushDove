@@ -21963,60 +21963,40 @@ function scripts.tower_shadow_archer.update(this, store)
 					local soffset = this.render.sprites[sid].offset
 					local ani, flip = U.animation_name_facing_point(this, "teleportOut", enemy.pos, sid, soffset)
 					U.y_animation_play(this, ani, flip, store.tick_ts, false, sid)
-					local enemies = U.find_enemies_in_range_filter_off(tpos, a.range, as.vis_flags, as.vis_bans)
+					local enemy = U.find_biggest_enemy_in_range_filter_off(tpos, a.range, as.vis_flags, as.vis_bans)
 
-					if enemies then
-						table.sort(enemies, function(e1, e2)
-							if U.enemy_is_silent_target(e1) and not U.enemy_is_silent_target(e2) then
-								return true
+					if enemy then
+						enemy._tower_shadow_archer_to_kill = true
+						SU.stun_inc(enemy)
+						S:queue("TowerShadowInstakill")
+						local lpos, lflip = U.melee_slot_position({
+							soldier = {
+								melee_slot_offset = v(0, 0)
+							}
+						}, enemy, 1, true)
+						shooter.offset = v(lpos.x - shooter.pos.x, lpos.y - shooter.pos.y + 18)
+						U.animation_start(this, "teleportInAttack", lflip, store.tick_ts, false, sid)
+						U.y_wait_unconditional(store, as.shoot_time)
+
+						if not enemy.health.dead then
+							local d = E.assign_damage(bor(DAMAGE_INSTAKILL, DAMAGE_FX_EXPLODE), 0, this.id, enemy.id)
+							queue_damage(store, d)
+
+							as.ts = start_ts
+							if (enemy.ranged or enemy.timed_attacks or enemy.auras or enemy.death_spawns) then
+								as.ts = as.ts - as.cooldown * 0.5 * this.tower.cooldown_factor
 							end
-							if not U.enemy_is_silent_target(e1) and U.enemy_is_silent_target(e2) then
-								return false
-							end
-							if e1.health.hp > e2.health.hp then
-								return true
-							end
-							return false
-						end)
-
-						enemy = nil
-						for i = 1, #enemies do
-							if not enemies[i]._tower_shadow_archer_to_kill then
-								enemy = enemies[i]
-								break
-							end
-						end
-
-						if enemy then
-							enemy._tower_shadow_archer_to_kill = true
-							SU.stun_inc(enemy)
-							S:queue("TowerShadowInstakill")
-							local lpos, lflip = U.melee_slot_position({
-								soldier = {
-									melee_slot_offset = v(0, 0)
-								}
-							}, enemy, 1, true)
-							shooter.offset = v(lpos.x - shooter.pos.x, lpos.y - shooter.pos.y + 18)
-							U.animation_start(this, "teleportInAttack", lflip, store.tick_ts, false, sid)
-							U.y_wait_unconditional(store, as.shoot_time)
-
-							if not enemy.health.dead then
-								local d = E.assign_damage(bor(DAMAGE_INSTAKILL, DAMAGE_FX_EXPLODE), 0, this.id, enemy.id)
-								queue_damage(store, d)
-
-								as.ts = start_ts
-							else
-								as.ts = as.ts + 5
-							end
-
-							U.y_animation_wait(this, sid)
-							SU.stun_dec(enemy)
-							U.y_animation_play(this, "teleportOutAttack", lflip, store.tick_ts, false, sid)
-							this.render.sprites[sid].offset = soffset
-							enemy._tower_shadow_archer_to_kill = nil
 						else
-							as.ts = as.ts + fts(10)
+							as.ts = as.ts + 5
 						end
+
+						U.y_animation_wait(this, sid)
+						SU.stun_dec(enemy)
+						U.y_animation_play(this, "teleportOutAttack", lflip, store.tick_ts, false, sid)
+						this.render.sprites[sid].offset = soffset
+						enemy._tower_shadow_archer_to_kill = nil
+					else
+						as.ts = as.ts + fts(10)
 					end
 
 					U.y_animation_play(this, "teleportIn", flip, store.tick_ts, false, sid)
@@ -26970,6 +26950,7 @@ function scripts.tower_goblirang.update(this, store)
 		b.bullet.from:set(start_x, start_y)
 		local rate = km.clamp(0.2, 1, V.dist(start_x, start_y, enemy.pos.x, enemy.pos.y) / a.range)
 		b.bullet.flight_time = b.bullet.flight_time * this.tower.cooldown_factor
+		b.bullet.target_id = enemy.id
 		local flight_time = b.bullet.flight_time
 		local epos = U.calculate_enemy_ffe_pos(enemy, flight_time * rate * rate)
 		epos.x = epos.x + enemy.unit.hit_offset.x
