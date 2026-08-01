@@ -21963,9 +21963,11 @@ function scripts.tower_shadow_archer.update(this, store)
 					local soffset = this.render.sprites[sid].offset
 					local ani, flip = U.animation_name_facing_point(this, "teleportOut", enemy.pos, sid, soffset)
 					U.y_animation_play(this, ani, flip, store.tick_ts, false, sid)
+					local idle_anim = enemy.pos.y > tpos.y and "idleUp" or "idleDown"
 					local enemy = U.find_biggest_enemy_in_range_filter_off(tpos, a.range, as.vis_flags, as.vis_bans)
 
 					if enemy then
+						idle_anim = enemy.pos.y > tpos.y and "idleUp" or "idleDown"
 						enemy._tower_shadow_archer_to_kill = true
 						SU.stun_inc(enemy)
 						S:queue("TowerShadowInstakill")
@@ -22000,7 +22002,7 @@ function scripts.tower_shadow_archer.update(this, store)
 					end
 
 					U.y_animation_play(this, "teleportIn", flip, store.tick_ts, false, sid)
-					U.animation_start(this, "idle", flip, store.tick_ts, false, sid)
+					U.animation_start_loop_specific(this, idle_anim, flip, store.tick_ts, sid)
 				else
 					as.ts = as.ts + fts(10)
 				end
