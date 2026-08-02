@@ -99,12 +99,13 @@ require "love.audio"
 require "love.sound"
 local file_count = 0
 while true do
-local file = cin:demand()
-if file == 'QUIT' then
+local req = cin:demand()
+if req == 'QUIT' then
 goto quit
 end
-local mode = cin:demand()
-local id = cin:demand()
+local file = req[1]
+local mode = req[2]
+local id = req[3]
 local info = love.filesystem.getInfo(file)
 if (not info) or (info.type ~= 'file') then
 cout:push({'ERROR','Not a file',file})
@@ -275,9 +276,7 @@ function sound_db:queue_load_done()
 		for i = #self.load_file_queue, 1, -1 do
 			local cin = self.threads[last_thread_used][2]
 
-			cin:push(self.load_path_queue[i])
-			cin:push(self.load_mode_queue[i])
-			cin:push(self.load_file_queue[i])
+			cin:push({self.load_path_queue[i], self.load_mode_queue[i], self.load_file_queue[i]})
 			self.load_path_queue[i] = nil
 			self.load_file_queue[i] = nil
 			self.load_mode_queue[i] = nil
