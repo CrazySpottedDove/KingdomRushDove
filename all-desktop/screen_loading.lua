@@ -85,8 +85,8 @@ function screen:update(dt)
 	if self.pixel_art_view then
 		self.pixel_art_view:update(dt)
 	end
-	print("Loading progress: ", I.progress, S.progress, self.progress)
-	print("Corotine status: ", init_coro and coroutine.status(init_coro) or "no coroutine")
+	-- print("Loading progress: ", I.progress, S.progress, self.progress)
+	-- print("Corotine status: ", init_coro and coroutine.status(init_coro) or "no coroutine")
 	self.progress = km.clamp(0, 1, 0.6 * I.progress + 0.4 * S.progress)
 	self.progress_display = self.progress_display + (self.progress - self.progress_display) * math.min(dt * 7, 1)
 
