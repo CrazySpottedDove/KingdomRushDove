@@ -250,9 +250,9 @@ local function generate_formation_wave(config_wave, enemies, counts, interval)
 	local function roll_size(left)
 		local r = math.random()
 		if left >= 6 then
-			if r < 0.60 then
+			if r < 0.50 then
 				return 3
-			elseif r < 0.85 then
+			elseif r < 0.75 then
 				return 2
 			end
 			return 1

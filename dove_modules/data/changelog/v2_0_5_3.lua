@@ -1,1 +1,1 @@
-return {{date="2026-08-01",author="CrazySpottedDove",message="perf: 删除冗余美术资源"},{date="2026-08-01",author="CrazySpottedDove",message="chore: 修改打包脚本，废弃非高清安卓端"},{date="2026-08-02",author="CrazySpottedDove",message="feat: 出怪编辑器添加波长和军阵配置项"}}
+return {{date="2026-08-01",author="CrazySpottedDove",message="perf: 删除冗余美术资源"},{date="2026-08-01",author="CrazySpottedDove",message="chore: 修改打包脚本，废弃非高清安卓端"},{date="2026-08-02",author="CrazySpottedDove",message="feat: 出怪编辑器添加波长和军阵配置项"},{date="2026-08-02",author="CrazySpottedDove",message="feat: 调整军阵概率分布"}}
