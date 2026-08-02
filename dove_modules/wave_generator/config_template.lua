@@ -16,6 +16,7 @@ return {
 			rest = 5,
 			path_index = 1, -- 出怪路径序号
 			weight = 1, -- 金币分配权重
+			formation = false, -- 是否以阵型出怪（true: 3/2/1 路同时出怪，利用 fixed_sub_path）
 			-- 这里，我们不再具体让玩家定义 spawn 的内容了，而是采用一种类似于随机生成的方式，减少玩家手动编写的压力。
 			-- 所有本 wave 可能出现的怪物
 			enemies = {"enemy_goblin"}

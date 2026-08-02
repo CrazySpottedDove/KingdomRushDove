@@ -1640,11 +1640,11 @@ function gui:update_entity_prop(prop_view)
 	local prop_value = prop_view.value
 	local picker = wid("picker")
 
-	if not self._last_prop_value then
-		self._last_prop_value = V.v(prop_value.x, prop_value.y)
-	end
-
 	if prop_type == PT_COORDS then
+		if not self._last_prop_value then
+			self._last_prop_value = V.v(prop_value.x, prop_value.y)
+		end
+
 		local state = self.are_axes_in_range(prop_value, self._last_prop_value)
 
 		if state then

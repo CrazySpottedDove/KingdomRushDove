@@ -289,27 +289,74 @@ function WaveConfigView:_build_form()
 			waves = {}
 		}
 
+		g_interval.on_change = function()
+			local interval = tonumber(g_interval.value) or 0
+			for _, wf in ipairs(self._fields.groups[gi].waves or {}) do
+				if wf.wave_length then
+					local delay = tonumber(wf.delay.value) or 0
+					local rest = tonumber(wf.rest.value) or 0
+					wf.wave_length:set_value(tostring(math.max(0, interval - delay - rest)), true)
+				end
+			end
+		end
+
 		for wi, wave in ipairs(group.waves or {}) do
 			local wf_x = 40
 			local wf_step = 195
+
+			local function wave_length_from(delay_s, rest_s)
+				local interval = tonumber(g_interval.value) or 0
+				local delay = tonumber(delay_s) or 0
+				local rest = tonumber(rest_s) or 0
+				return math.max(0, interval - delay - rest)
+			end
 
 			local w_delay = self:_create_prop(string.format("子波%d 延迟/秒(delay)", wi), wave.delay or 0)
 			w_delay.pos = v(wf_x, y)
 			self._content:add_child(w_delay)
 
+			local w_wave_length = self:_create_prop(string.format("子波%d 波长/秒(interval)", wi), wave_length_from(wave.delay, wave.rest))
+			w_wave_length.pos = v(wf_x + wf_step, y)
+			self._content:add_child(w_wave_length)
+
 			local w_rest = self:_create_prop(string.format("子波%d 留白/秒(rest)", wi), wave.rest or 0)
-			w_rest.pos = v(wf_x + wf_step, y)
+			w_rest.pos = v(wf_x + wf_step * 2, y)
 			self._content:add_child(w_rest)
 
 			local w_path = self:_create_prop(string.format("子波%d 路径(path_index)", wi), wave.path_index or 1)
-			w_path.pos = v(wf_x + wf_step * 2, y)
+			w_path.pos = v(wf_x + wf_step * 3, y)
 			self._content:add_child(w_path)
 
 			local w_weight = self:_create_prop(string.format("子波%d 权重(weight)", wi), wave.weight or 1)
-			w_weight.pos = v(wf_x + wf_step * 3, y)
+			w_weight.pos = v(wf_x + wf_step * 4, y)
 			self._content:add_child(w_weight)
 
+			-- 波长与留白互可导出：延迟 + 波长 + 留白 = 子波所属大波的时长
+			w_wave_length.on_change = function()
+				local interval = tonumber(g_interval.value) or 0
+				local delay = tonumber(w_delay.value) or 0
+				local length = math.max(0, tonumber(w_wave_length.value) or 0)
+				w_rest:set_value(tostring(math.max(0, interval - delay - length)), true)
+			end
+
+			w_rest.on_change = function()
+				local interval = tonumber(g_interval.value) or 0
+				local delay = tonumber(w_delay.value) or 0
+				local rest = math.max(0, tonumber(w_rest.value) or 0)
+				w_wave_length:set_value(tostring(math.max(0, interval - delay - rest)), true)
+			end
+
+			w_delay.on_change = function()
+				w_wave_length:set_value(tostring(wave_length_from(w_delay.value, w_rest.value)), true)
+			end
+
 			y = y + 46
+
+			local w_formation = KEPropBool:new("阵型(formation)", wave.formation == true)
+			w_formation.pos = v(wf_x, y)
+			self._content:add_child(w_formation)
+			y = y + 46
+
 			local enemies_props = {}
 			local wave_enemies = wave.enemies or {"enemy_goblin"}
 			for ei, enemy_name in ipairs(wave_enemies) do
@@ -372,9 +419,11 @@ function WaveConfigView:_build_form()
 
 			self._fields.groups[gi].waves[wi] = {
 				delay = w_delay,
+				wave_length = w_wave_length,
 				rest = w_rest,
 				path_index = w_path,
 				weight = w_weight,
+				formation = w_formation,
 				enemies = enemies_props
 			}
 		end
@@ -415,6 +464,7 @@ function WaveConfigView:_read_config_from_form()
 				rest = tonumber(wf.rest.value) or 0,
 				path_index = tonumber(wf.path_index.value) or 1,
 				weight = tonumber(wf.weight.value) or 1,
+				formation = wf.formation and wf.formation.value == true or false,
 				enemies = {}
 			}
 			for _, enemy_prop in ipairs(wf.enemies or {}) do
@@ -433,8 +483,95 @@ function WaveConfigView:_read_config_from_form()
 	return cfg
 end
 
+function WaveConfigView:_config_issues(cfg)
+	local issues = {}
+	for gi, group in ipairs(cfg.groups or {}) do
+		local interval = tonumber(group.interval) or 0
+		for wi, wave in ipairs(group.waves or {}) do
+			local delay = tonumber(wave.delay) or 0
+			local rest = tonumber(wave.rest) or 0
+			if delay + rest > interval then
+				issues[#issues + 1] = string.format("第 %d 波 · 子波 %d：延迟 %d + 留白 %d = %d 秒，超过大波时长 %d 秒", gi, wi, delay, rest, delay + rest, interval)
+			end
+		end
+	end
+	return issues
+end
+
+function WaveConfigView:_show_config_issues(issues)
+	if not self.editor or not self.editor.gui then
+		return
+	end
+	local sw, sh = self.editor.gui.sw, self.editor.gui.sh
+	local popup = PopUpView:new(V.v(sw, sh))
+	self.editor.gui.window:add_child(popup)
+
+	local pw = 600
+	local line_h = 24
+	local max_show = 12
+	local shown = math.min(#issues, max_show)
+	local extra = #issues - shown
+	local ph = 96 + (shown + (extra > 0 and 1 or 0)) * line_h
+	local panel = KView:new(V.v(pw, ph))
+	panel.anchor = V.v(pw * 0.5, ph * 0.5)
+	panel.pos = V.v(sw * 0.5, sh * 0.5)
+	panel.colors.background = C.bg
+	popup:add_child(panel)
+
+	local title = KLabel:new(V.v(pw, 32))
+	title.text = "出怪配置存在不合法数据，已取消"
+	title.text_align = "center"
+	title.vertical_align = "middle"
+	title.colors.background = {170, 64, 64, 255}
+	title.colors.text = {255, 255, 255, 255}
+	panel:add_child(title)
+
+	local y = 38
+	for i = 1, shown do
+		local issue = issues[i]
+		local lb = KLabel:new(V.v(pw - 24, line_h))
+		lb.pos = V.v(12, y)
+		lb.text = issue
+		lb.text_align = "left"
+		lb.vertical_align = "middle"
+		lb.font_name = KE_CONST.font_name
+		lb.font_size = KE_CONST.font_size
+		lb.colors.text = C.text
+		panel:add_child(lb)
+		y = y + line_h
+	end
+	if extra > 0 then
+		local lb = KLabel:new(V.v(pw - 24, line_h))
+		lb.pos = V.v(12, y)
+		lb.text = string.format("…… 共 %d 处，请逐波修正后重试", #issues)
+		lb.text_align = "left"
+		lb.vertical_align = "middle"
+		lb.font_name = KE_CONST.font_name
+		lb.font_size = KE_CONST.font_size
+		lb.colors.text = {150, 60, 60, 255}
+		panel:add_child(lb)
+		y = y + line_h
+	end
+
+	local ok_btn = KEButton:new("知道了")
+	ok_btn.size = V.v(110, 30)
+	ok_btn.pos = V.v((pw - 110) / 2, ph - 40)
+	function ok_btn.on_click()
+		popup:hide()
+	end
+	hook_button_feedback(ok_btn)
+	panel:add_child(ok_btn)
+
+	popup:show()
+end
+
 function WaveConfigView:_save_config()
 	local cfg = self:_read_config_from_form()
+	local issues = self:_config_issues(cfg)
+	if #issues > 0 then
+		self:_show_config_issues(issues)
+		return
+	end
 	self.editor.wave_config = cfg
 	if self.editor:save_wave_assets() then
 		self.editor.gui:show_save_notification("出怪配置已保存", true)
@@ -522,6 +659,7 @@ function WaveConfigView:_append_group()
 			rest = 5,
 			path_index = 1,
 			weight = 1,
+			formation = false,
 			enemies = {"enemy_goblin"}
 		}}
 	}
@@ -549,6 +687,7 @@ function WaveConfigView:_append_wave(gi)
 		rest = 5,
 		path_index = 1,
 		weight = 1,
+		formation = false,
 		enemies = {"enemy_goblin"}
 	}
 	self:_build_form()
