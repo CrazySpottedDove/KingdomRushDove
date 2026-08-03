@@ -16249,14 +16249,6 @@ function scripts.hero_faustus.level_up(this, store)
 	update_hp(this)
 end
 
-function scripts.hero_faustus.insert(this, store)
-	this.hero.fn_level_up(this, store)
-
-	this.ranged.order = U.attack_order(this.ranged.attacks)
-
-	return true
-end
-
 function scripts.hero_faustus.update(this, store)
 	local h = this.health
 
@@ -16299,7 +16291,7 @@ function scripts.hero_faustus.update(this, store)
 			end
 		end
 
-		for _, i in pairs(this.ranged.order) do
+		for _, i in ipairs(this.ranged.order) do
 			local a = this.ranged.attacks[i]
 
 			if a.disabled then
@@ -16309,10 +16301,9 @@ function scripts.hero_faustus.update(this, store)
 			elseif store.tick_ts - a.ts < a.cooldown * this.unit.cooldown_factor then
 			-- block empty
 			else
-
 				local flight_time = a.estimated_flight_time or 1
 				local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans, function(e)
-					if not U.enemy_is_silent_target(e) then
+					if i == 4 and not U.enemy_is_silent_target(e) then
 						return false
 					end
 
