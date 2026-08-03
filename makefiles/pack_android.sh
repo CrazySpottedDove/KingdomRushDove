@@ -391,18 +391,9 @@ if [ "$rebuild_love" -eq 1 ]; then
     fi
 
     # 安卓端默认帧率 60（仅打包生效，仓库源码保持 144；游戏内仍可选更高帧率）
-    # 注意：必须在 dlfmt 压缩之前执行，否则压缩会去掉等号两侧空格导致匹配失败
     if [ -f "$stage_dir/settings_template.lua" ]; then
         sed -i 's/\bfps = 144\b/fps = 60/' "$stage_dir/settings_template.lua"
         echo "Patched Android default fps to 60"
-    fi
-
-    # 压缩全部 Lua 源码（dlfmt compress 输出为合法 Lua，体积更小、解析更快；仅作用于打包副本，不改仓库源码）
-    if command -v dlfmt >/dev/null 2>&1; then
-        echo "Compressing Lua sources for Android..."
-        dlfmt --compress-directory "$stage_dir"
-    else
-        echo "WARNING: dlfmt not found, skipping Lua source compression"
     fi
 
     echo "Creating final archive -> $ARCHIVE_DIR"
