@@ -6356,7 +6356,7 @@ local towers = {
 			price = {225, 225},
 			cooldown = {27.5, 20},
 			max_targets = {4, 5},
-			duration = {5, 5},
+			duration = {5, 6},
 			received_damage_factor = {1.25, 1.25},
 			s_received_damage_factor = {0.25, 0.25}
 		},

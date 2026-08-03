@@ -1,1 +1,1 @@
-return {{date="2026-08-03",author="CrazySpottedDove",message="balance: 下调蛤蟆窝瓜技能冷却"}}
+return {{date="2026-08-03",author="CrazySpottedDove",message="balance: 下调蛤蟆窝瓜技能冷却"},{date="2026-08-03",author="CrazySpottedDove",message="balance: 提高巨像晶化技能2级持续时间1秒"}}
