@@ -100,6 +100,34 @@ LOVE_ANDROID="../Application/love-android"
 OUTPUT_RAW="app/build/outputs/apk/embedNoRecord/release/app-embed-noRecord-release.apk"
 LOVE_FINGERPRINT_FILE=".versions/.love_input_fingerprint"
 
+# 自动生成安卓 versionCode / versionName（单调递增，防止覆盖安装被系统拒绝）
+LOVE_GRADLE_PROPERTIES="$LOVE_ANDROID/gradle.properties"
+compute_version_code() {
+	local vid="$1" major minor patch build
+
+	if [[ "$vid" =~ ^([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]; then
+		major=${BASH_REMATCH[1]}
+		minor=${BASH_REMATCH[2]}
+		patch=${BASH_REMATCH[3]}
+		build=${BASH_REMATCH[4]}
+		echo $((major * 1000000 + minor * 10000 + patch * 100 + build))
+	else
+		date +%s
+	fi
+}
+
+if [[ "$current_id" == *"."* ]]; then
+	version_code="$(compute_version_code "$current_id")"
+else
+	version_code="$(date +%s)"
+fi
+
+if [ -f "$LOVE_GRADLE_PROPERTIES" ]; then
+	sed -i "s/^app.version_code=.*/app.version_code=$version_code/" "$LOVE_GRADLE_PROPERTIES"
+	sed -i "s/^app.version_name=.*/app.version_name=$current_id/" "$LOVE_GRADLE_PROPERTIES"
+	echo "Android versionCode=$version_code versionName=$current_id -> $LOVE_GRADLE_PROPERTIES"
+fi
+
 mkdir -p "$CACHE_DIR"
 if [ ! -f "$CACHE_KEY_FILE" ] || [ "$(cat "$CACHE_KEY_FILE" 2>/dev/null || true)" != "$CACHE_KEY" ]; then
     echo "Cache key changed, rebuilding image cache..."
@@ -360,6 +388,20 @@ if [ "$rebuild_love" -eq 1 ]; then
         rsync -a "$audio_tmpdir/_assets/kr1-desktop/sounds/files/" "$stage_dir/_assets/kr1-desktop/sounds/files/"
     else
         echo "Skipping Android audio optimization (AUDIO_COMPRESS_MODE=0)."
+    fi
+
+    # 压缩全部 Lua 源码（dlfmt compress 输出为合法 Lua，体积更小、解析更快；仅作用于打包副本，不改仓库源码）
+    if command -v dlfmt >/dev/null 2>&1; then
+        echo "Compressing Lua sources for Android..."
+        dlfmt --compress-directory "$stage_dir"
+    else
+        echo "WARNING: dlfmt not found, skipping Lua source compression"
+    fi
+
+    # 安卓端默认帧率 60（仅打包生效，仓库源码保持 144；游戏内仍可选更高帧率）
+    if [ -f "$stage_dir/settings_template.lua" ]; then
+        sed -i 's/\bfps = 144\b/fps = 60/' "$stage_dir/settings_template.lua"
+        echo "Patched Android default fps to 60"
     fi
 
     echo "Creating final archive -> $ARCHIVE_DIR"
