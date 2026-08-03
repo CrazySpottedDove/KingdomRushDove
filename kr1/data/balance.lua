@@ -5448,7 +5448,7 @@ local enemies = {
 	}
 }
 patch_hp(enemies, 0.8)
-patch_damage_max(enemies, 1.3)
+patch_damage_max(enemies, 1.25)
 local towers = {
 	arcane_wizard = {
 		shared_min_cooldown = 2,
