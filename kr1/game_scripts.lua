@@ -11387,7 +11387,7 @@ function scripts.soldier_drow.update(this, store)
 				end
 
 				if pn == "blade_mail" then
-					this.health.spiked_armor = this.health.spiked_armor - p.spiked_armor_inc * (p.level - p.last_level)
+					this.health.spiked_armor = this.health.spiked_armor + p.spiked_armor_inc * (p.level - p.last_level)
 					p.last_level = p.level
 					aura.hidden = nil
 				end
