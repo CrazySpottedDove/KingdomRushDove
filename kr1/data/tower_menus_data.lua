@@ -1008,7 +1008,7 @@ return {
 		image = "special_icons_0017",
 		place = 1,
 		sounds = {"EngineerBfgMissileTaunt"},
-		tt_phrase = _("TOWER_BFG_MISSILE_NOTE_1"),
+		tt_phrase = _("TOWER_BFG_MISSILE_NOTE"),
 		tt_list = {{
 			tt_title = _("TOWER_BFG_MISSILE_NAME_1"),
 			tt_desc = _("TOWER_BFG_MISSILE_DESCRIPTION_1")
@@ -1024,7 +1024,7 @@ return {
 		image = "special_icons_0018",
 		place = 2,
 		sounds = {"EngineerBfgClusterTaunt"},
-		tt_phrase = _("TOWER_BFG_CLUSTER_NOTE_1"),
+		tt_phrase = _("TOWER_BFG_CLUSTER_NOTE"),
 		tt_list = {{
 			tt_title = _("TOWER_BFG_CLUSTER_NAME_1"),
 			tt_desc = _("TOWER_BFG_CLUSTER_DESCRIPTION_1")
