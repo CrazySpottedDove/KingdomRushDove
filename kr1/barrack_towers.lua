@@ -1374,6 +1374,7 @@ tt.melee.attacks[2].track_damage = true
 tt.melee.attacks[2].damage_max = 0
 tt.melee.attacks[2].damage_min = 0
 tt.melee.attacks[2].damage_inc = 50
+tt.melee.attacks[2].damage_type = DAMAGE_RUDE
 tt.melee.attacks[2].cooldown = 5.7
 tt.melee.attacks[2].hit_time = fts(12)
 tt.melee.attacks[2].power_name = "life_drain"
@@ -1409,7 +1410,7 @@ tt.vis.flags = bor(tt.vis.flags, F_DARK_ELF)
 
 tt = RT("dagger_drow", "bullet")
 tt.bullet.damage_max = 16
-tt.bullet.damage_min = 11
+tt.bullet.damage_min = 12
 tt.bullet.hide_radius = 6
 tt.bullet.hit_distance = 22
 tt.bullet.hit_fx = "fx_dagger_drow_hit"
