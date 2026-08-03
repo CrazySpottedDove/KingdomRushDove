@@ -7384,7 +7384,6 @@ function scripts.hero_10yr.get_info(this)
 		damage_min = min,
 		damage_max = max,
 		damage_type = a.damage_type,
-		-- damage_icon = this.info.damage_icon,
 		armor = this.health.armor,
 		magic_armor = this.health.magic_armor,
 		respawn = this.health.dead_lifetime

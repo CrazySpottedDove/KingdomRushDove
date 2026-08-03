@@ -5453,11 +5453,6 @@ local towers = {
 	arcane_wizard = {
 		shared_min_cooldown = 2,
 		price = {110, 150, 220, 280},
-		stats = {
-			cooldown = 5,
-			range = 5,
-			damage = 8
-		},
 		basic_attack = {
 			cooldown = 2,
 			damage_min = {12, 25, 48, 87},
@@ -5481,11 +5476,6 @@ local towers = {
 	elven_stargazers = {
 		shared_min_cooldown = 2,
 		price = {130, 180, 260, 330},
-		stats = {
-			cooldown = 3,
-			range = 5,
-			damage = 9
-		},
 		basic_attack = {
 			ray_timing = 0.15,
 			cooldown = 2.7,
@@ -5515,11 +5505,6 @@ local towers = {
 	tricannon = {
 		shared_min_cooldown = 3,
 		price = {140, 200, 280, 400},
-		stats = {
-			cooldown = 2,
-			range = 4,
-			damage = 7
-		},
 		basic_attack = {
 			damage_radius = 50,
 			cooldown = 3,
@@ -5559,11 +5544,6 @@ local towers = {
 		max_soldiers = 3,
 		rally_range = 145,
 		price = {70, 120, 180, 185},
-		stats = {
-			damage = 2,
-			armor = 5,
-			hp = 9
-		},
 		soldier = {
 			dead_lifetime = 12,
 			speed = 75,
@@ -5608,11 +5588,6 @@ local towers = {
 		}
 	},
 	royal_archers = {
-		stats = {
-			cooldown = 8,
-			range = 7,
-			damage = 5
-		},
 		price = {70, 100, 160, 230},
 		basic_attack = {
 			cooldown = 0.7,
@@ -5651,11 +5626,6 @@ local towers = {
 		rally_range = 179.20000000000002,
 		shared_min_cooldown = 1.5,
 		price = {100, 130, 170, 230},
-		stats = {
-			cooldown = 6,
-			range = 9,
-			damage = 3
-		},
 		basic_attack = {
 			cooldown = 1.2,
 			damage_min = {3, 7, 11, 10},
@@ -5695,11 +5665,6 @@ local towers = {
 	},
 	demon_pit = {
 		price = {80, 140, 220, 300},
-		stats = {
-			damage = 4,
-			armor = 1,
-			hp = 3
-		},
 		basic_attack = {
 			armor = 0,
 			max_speed = 90,
@@ -5763,11 +5728,6 @@ local towers = {
 	rocket_gunners = {
 		max_soldiers = 2,
 		price = {100, 140, 190, 210},
-		stats = {
-			cooldown = 5,
-			range = 10,
-			damage = 7
-		},
 		rally_range = {130, 145, 160, 180},
 		sting_missiles = {
 			cooldown = {16, 16, 16}
@@ -5828,11 +5788,6 @@ local towers = {
 		spawn_delay_min = 4,
 		spawn_delay_max = 4,
 		price = {100, 140, 200, 260},
-		stats = {
-			cooldown = 6,
-			range = 7,
-			damage = 4
-		},
 		basic_attack = {
 			cooldown = 1.5,
 			damage_min = {4, 12, 20, 46},
@@ -5898,11 +5853,6 @@ local towers = {
 	},
 	ballista = {
 		turn_speed = 30,
-		stats = {
-			cooldown = 3,
-			range = 6,
-			damage = 8
-		},
 		price = {90, 130, 180, 260},
 		basic_attack = {
 			burst_count = 5,
@@ -5937,11 +5887,6 @@ local towers = {
 	},
 	flamespitter = {
 		turn_speed = 8,
-		stats = {
-			cooldown = 3,
-			range = 5,
-			damage = 5
-		},
 		price = {130, 190, 270, 360},
 		burning = {
 			cycle_time = 0.25,
@@ -5999,11 +5944,6 @@ local towers = {
 	},
 	barrel = {
 		rally_range = 145,
-		stats = {
-			cooldown = 2,
-			range = 3,
-			damage = 5
-		},
 		price = {120, 180, 260, 360},
 		basic_attack = {
 			damage_radius = 60,
@@ -6103,11 +6043,6 @@ local towers = {
 		max_soldiers = 2,
 		rally_range = 155,
 		price = {90, 150, 220, 235},
-		stats = {
-			damage = 3,
-			armor = 6,
-			hp = 6
-		},
 		soldier = {
 			dead_lifetime = 8,
 			speed = 75,
@@ -6147,11 +6082,6 @@ local towers = {
 	},
 	ray = {
 		shared_min_cooldown = 2,
-		stats = {
-			cooldown = 2,
-			range = 4,
-			damage = 9
-		},
 		price = {120, 170, 230, 330},
 		basic_attack = {
 			cooldown = 1.5,
@@ -6194,11 +6124,6 @@ local towers = {
 	},
 	dark_elf = {
 		rally_range = 170,
-		stats = {
-			cooldown = 2,
-			range = 9,
-			damage = 8
-		},
 		soldier = {
 			dead_lifetime = 10,
 			speed = 95,
@@ -6235,11 +6160,6 @@ local towers = {
 		}
 	},
 	hermit_toad = {
-		stats = {
-			cooldown = 5,
-			range = 8,
-			damage = 5
-		},
 		price = {120, 160, 240, 280},
 		engineer_basic_attack = {
 			damage_radius = 60,
@@ -6280,11 +6200,6 @@ local towers = {
 		max_soldiers = 2,
 		rally_range = 180,
 		price = {60, 130, 180, 180},
-		stats = {
-			damage = 5,
-			armor = 4,
-			hp = 7
-		},
 		soldier = {
 			dead_lifetime = 8,
 			speed = 75,
@@ -6332,11 +6247,6 @@ local towers = {
 	sparking_geode = {
 		shared_min_cooldown = 2,
 		price = {110, 130, 210, 350},
-		stats = {
-			cooldown = 7,
-			range = 8,
-			damage = 4
-		},
 		basic_attack = {
 			cooldown = 2,
 			bounce_range = 140,
@@ -6374,11 +6284,6 @@ local towers = {
 	},
 	pandas = {
 		rally_range = 180,
-		stats = {
-			damage = 6,
-			armor = 0,
-			hp = 8
-		},
 		price = {110, 150, 210, 270},
 		ranged_attack = {
 			cooldown = 0.5,
