@@ -4686,7 +4686,6 @@ tt.hero.tombstone_show_time = fts(90)
 tt.info.fn = scripts.hero_basic.get_info
 tt.info.hero_portrait = "hero_portraits_0003"
 tt.info.portrait = "info_portraits_heroes_0003"
-tt.info.ultimate_icon = "0013"
 tt.main_script.update = scripts.hero_baby_malik.update
 tt.motion.max_speed = 3 * FPS
 tt.regen.cooldown = 1

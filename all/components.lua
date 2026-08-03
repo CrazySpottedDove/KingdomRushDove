@@ -360,8 +360,6 @@ info.hero_portrait = nil
 info.i18n_key = nil
 info.enc_icon = nil
 info.damage_icon = nil
-info.ultimate_icon = nil
-info.ultimate_pointer_style = nil
 
 local unit = E:register_c("unit")
 unit.name = nil
