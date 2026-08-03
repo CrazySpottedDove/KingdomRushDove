@@ -2361,18 +2361,15 @@ tt.powers.teleport = CC("power")
 tt.powers.teleport.price = b.teleport.price
 tt.powers.teleport.cooldown = b.teleport.cooldown
 tt.powers.teleport.teleport_nodes_back = b.teleport.teleport_nodes_back
-
 tt.powers.teleport.price_base = b.teleport.price[1]
 tt.powers.teleport.price_inc = b.teleport.price[2]
 tt.powers.stars_death = CC("power")
 tt.powers.stars_death.price = b.stars_death.price
-
 tt.powers.stars_death.price_base = b.stars_death.price[1]
 tt.powers.stars_death.price_inc = b.stars_death.price[2]
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_mage_%04i"
 tt.render.sprites[1].offset = vec_2(0, 15)
-
 for i = 2, 9 do
 	tt.render.sprites[i] = CC("sprite")
 	tt.render.sprites[i].prefix = "elven_stargazers_tower_lvl4_tower_layer" .. i - 1
@@ -2383,7 +2380,6 @@ for i = 2, 9 do
 	tt.render.sprites[i].angles.idle = {"idle_back", "idle"}
 	tt.render.sprites[i].angles.attack = {"attack_back", "attack"}
 end
-
 tt.render.sprites[10] = CC("sprite")
 tt.render.sprites[10].prefix = "elven_stargazers_tower_ray_start_lvl4"
 tt.render.sprites[10].name = "start"
@@ -2425,7 +2421,6 @@ tt.ui.click_rect = r(-40, 0, 85, 93)
 
 tt = RT("tower_elven_stargazers_ray", "bullet")
 local b = balance.towers.elven_stargazers
-
 tt.bullet.damage_type = DAMAGE_MAGICAL
 tt.bullet.damage_min = b.basic_attack.damage_min[4]
 tt.bullet.damage_max = b.basic_attack.damage_max[4]
