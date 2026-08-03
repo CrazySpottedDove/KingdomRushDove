@@ -7872,12 +7872,6 @@ scripts.shock_djinn = {}
 function scripts.shock_djinn.insert(this, store)
 	local target = store.entities[this.spell.target_id]
 
-	if not target or band(target.vis.bans, F_POLYMORPH) ~= 0 then
-		queue_remove(store, this)
-
-		return false
-	end
-
 	if target.health.dead then
 		queue_remove(store, this)
 

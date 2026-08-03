@@ -5550,18 +5550,6 @@ tt.dps.damage_type = DAMAGE_TRUE
 tt.dps.fx_every = fts(12)
 tt.main_script.insert = scripts.mod_blood_elves.insert
 
-tt = RT("mod_shocking_impact", "mod_slow")
-tt.modifier.duration = 0.5
-tt.slow.factor = 0.5
-
-for _, n in pairs({"barrack_1", "barrack_2", "barrack_3", "blade", "forest", "drow"}) do
-
-	tt = RT("mod_moon_forged_blades_" .. n, "mod_damage")
-	tt.damage_max = math.ceil(0.15 * E:get_template("soldier_" .. n).melee.attacks[1].damage_min)
-	tt.damage_min = math.ceil(0.15 * E:get_template("soldier_" .. n).melee.attacks[1].damage_max)
-	tt.damage_type = DAMAGE_MAGICAL
-end
-
 tt = RT("eldritch_enemy_decal", "decal_tween")
 tt.tween.disabled = true
 tt.tween.remove = true
