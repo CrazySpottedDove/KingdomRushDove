@@ -98,13 +98,12 @@ function M.register(sys)
 		coroutine.yield()
 
 		store.selected_hero = slot.heroes.selected
+		UP:patch_templates(store.level.max_upgrade_level or GS.max_upgrade_level)
+		E:patch_config(configer.config())
 
 		if store.level.init then
 			store.level:init(store)
 		end
-
-		UP:patch_templates(store.level.max_upgrade_level or GS.max_upgrade_level)
-		E:patch_config(configer.config())
 		coroutine.yield()
 
 		if store.level.data then
