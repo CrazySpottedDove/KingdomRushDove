@@ -47444,11 +47444,6 @@ return {
 		from = 1,
 		to = 10
 	},
-	warmongers_mage_tower_ray_modifier_run_loop = {
-		prefix = "warmongers_mage_tower_ray_modifier",
-		from = 1,
-		to = 6
-	},
 	warmongers_mage_tower_ray_modifier_loop = {
 		prefix = "warmongers_mage_tower_ray_modifier",
 		from = 1,

@@ -1780,12 +1780,15 @@ scripts.tower_wild_magus = {
 						b.pos.x = this.pos.x + so.x + bo.x * (af and -1 or 1)
 						b.pos.y = this.pos.y + so.y + bo.y
 						b.tween.ts = store.tick_ts
-						b.bullet.from = vclone(b.pos)
-						b.bullet.to = v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
+						b.bullet.from:copy(b.pos)
+						b.bullet.to:set(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
 						b.bullet.target_id = enemy.id
 						b.bullet.damage_factor = tw.damage_factor
 
-						if last_enemy and last_enemy == enemy then
+						if not enemy.enemy.can_do_magic then
+							last_enemy = enemy
+							last_enemy_shots = 0
+						elseif last_enemy and last_enemy == enemy then
 							last_enemy_shots = last_enemy_shots + 1
 
 							local dmg_dec = km.clamp(0, b.bullet.damage_same_target_max, last_enemy_shots * b.bullet.damage_same_target_inc)

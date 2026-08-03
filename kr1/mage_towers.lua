@@ -1111,17 +1111,14 @@ tt.render.sprites[7].anchor.y = 0
 tt.render.sprites[7].animated = true
 tt.render.sprites[7].offset = vec_2(0, 22)
 tt.render.sprites[7].hidden = true
-
 for i = 1, 10 do
 	local s = CC("sprite")
-
 	s.name = string.format("mage_wild_stones_%04i", i)
 	s.animated = false
 	s.offset.y = 36
 	s.sort_y_offset = i < 4 and 1 or -1
 	tt.render.sprites[#tt.render.sprites + 1] = s
 end
-
 tt.render.sid_tower = 3
 tt.render.sid_shooter = 4
 tt.render.sid_rune = 7
@@ -1149,10 +1146,8 @@ tt.tween.props[6].keys = {{0, 0}, {fts(2), 0}, {fts(16), 255}, {fts(25), 255}, {
 tt.tween.props[6].sprite_id = 5
 tt.tween.props[7] = table.deepclone(tt.tween.props[6])
 tt.tween.props[7].sprite_id = 6
-
 for i = 1, 10 do
 	local t = CC("tween_prop")
-
 	t.sprite_id = tt.render.sid_rune + i
 	t.name = "offset"
 	t.keys = {{0, vec_2(0, 35)}, {1, vec_2(0, 37)}, {2, vec_2(0, 35)}}
@@ -3866,8 +3861,8 @@ tt.modifier.duration = fts(20)
 tt.modifier.vis_bans = F_BOSS
 tt.render.sprites[1].prefix = "warmongers_mage_tower_ray_modifier"
 tt.render.sprites[1].name = "loop"
+tt.render.sprites[1].size_names = nil
 tt.render.sprites[1].loop = true
-tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_EFFECTS
 
 tt = RT("aura_orc_shaman_healing_roots", "aura")
