@@ -151,7 +151,7 @@ local common_quiz = {
 	{
 		q = "反馈问题时需要提供什么信息？",
 		opts = {"蓝屏/控制台信息；崩溃前截图(电脑端)", "问题如何产生，表现为什么", "所有选项都需要"},
-		ans = 1
+		ans = 3
 	},
 	{
 		q = "不遵守反馈要求会有什么后果？",
@@ -331,7 +331,7 @@ local pc_only_quiz = {
 local android_only_quiz = {{
 	q = "安卓端建议使用多少帧率？",
 	opts = {"30帧", "144帧", "30或60帧"},
-	ans = 1
+	ans = 3
 }, {
 	q = "Dove版对手机端的定位是什么？",
 	opts = {"提供最基础的游玩服务", "和电脑端完全一致的体验", "专门为手机端优化"},
@@ -995,7 +995,7 @@ function MUST_READ:draw_quiz_mode(w, h)
 	if cooldown > 0 then
 		love.graphics.setColor(1, 0.5, 0)
 		love.graphics.setFont(small_font)
-		local cooldown_text = string.format("提交冷却中... %.1f秒", cooldown)
+		local cooldown_text = string.format("回答错误，提交冷却中... %.1f秒", cooldown)
 		love.graphics.printf(cooldown_text, card_x, card_y + card_h - 40, card_w, "center")
 	else
 		love.graphics.setColor(0.5, 1, 0.5)

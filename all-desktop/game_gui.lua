@@ -7467,6 +7467,12 @@ function TowerMenuButton:initialize(item, entity)
 		price_tag = tostring(entity.tower_holder.unblock_price)
 	elseif item.action == "upgrade_power" then
 		local power = entity.powers[item.action_arg]
+
+		-- DEBUG USE
+		if not power then
+			log.error("Power not found for action_arg %s, entity %s", item.action_arg, entity.template_name)
+		end
+
 		local price = power.level == 0 and power.price_base or power.price_inc
 
 		price_tag = tostring(price)
