@@ -2370,6 +2370,11 @@ end
 ---@param entity table 实体
 ---@return number 真实最大速度
 function U.real_max_speed(entity)
+	local factor = entity.motion.factor
+	-- 对极低速度倍率做补偿，避免减速效果叠加时的收益曲线过于陡峭
+	if factor < 0.25 then
+		factor = factor * (1 + 40 * (0.25 - factor) * (0.25 - factor))
+	end
 	return km.clamp(1, 10000, (entity.motion.max_speed + entity.motion.buff) * entity.motion.factor)
 end
 
