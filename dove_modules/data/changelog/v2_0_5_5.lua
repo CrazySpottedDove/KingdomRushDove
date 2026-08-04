@@ -1,1 +1,1 @@
-return {{date="2026-08-04",author="CrazySpottedDove",message="feat: version->2.0.5.5"}}
+return {{date="2026-08-04",author="CrazySpottedDove",message="feat: version->2.0.5.5"},{date="2026-08-04",author="CrazySpottedDove",message="balance: 修复刺客秒杀回血的bug，并使刺客秒杀触发的回血可以溢出"}}

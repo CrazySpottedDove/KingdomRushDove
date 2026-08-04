@@ -84,7 +84,7 @@ download:
 
 android:
 	@bash $(MAKE_FILE_DIR)/package.sh
-# 	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh
+	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh
 	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh hd
 
 windows:
@@ -113,7 +113,7 @@ installer_build:
 
 android_quick:
 	@bash $(MAKE_FILE_DIR)/package.sh
-# 	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh quick
+	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh quick
 	JOBS=8 bash $(MAKE_FILE_DIR)/pack_android.sh hd quick
 
 linux_quick:

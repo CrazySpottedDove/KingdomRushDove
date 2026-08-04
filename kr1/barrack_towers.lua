@@ -625,7 +625,6 @@ tower_assassin.powers.pickpocket = CC("power")
 tower_assassin.powers.pickpocket.price_base = 100
 tower_assassin.powers.pickpocket.price_inc = 75
 tower_assassin.powers.pickpocket.max_level = 3
-
 tower_assassin.powers.counter = CC("power")
 tower_assassin.powers.counter.price_base = 125
 tower_assassin.powers.counter.price_inc = 125
