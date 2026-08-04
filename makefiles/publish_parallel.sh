@@ -122,7 +122,7 @@ cleanup_local_group() {
 
 cleanup_local_versions() {
     shopt -s nullglob
-    # local android=(.versions/王国保卫战Dove版-v*-安卓手机端-压缩版.apk)
+    local android=(.versions/王国保卫战Dove版-v*-安卓手机端-低配版.apk)
     local android_hd=(.versions/王国保卫战Dove版-v*-安卓手机端.apk)
     # local windows=(.versions/王国保卫战Dove版-v*-Windows电脑端.zip)
     local windows_installer=(.versions/王国保卫战Dove版-v*-Windows电脑端-安装程序.exe)
@@ -139,7 +139,7 @@ cleanup_local_versions() {
 }
 
 start_all_uploads() {
-    # start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-安卓手机端-压缩版.apk" "$SERVER_DIR_ANDROID" "$QUARK_DIR_ANDROID" "android"
+    start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-安卓手机端-低配版.apk" "$SERVER_DIR_ANDROID" "$QUARK_DIR_ANDROID" "android"
     start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-安卓手机端.apk" "$SERVER_DIR_ANDROID" "$QUARK_DIR_ANDROID" "android_hd"
     # start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-Windows电脑端.zip" "$SERVER_DIR_WINDOWS" "$QUARK_DIR_WINDOWS" "windows"
     start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-Windows电脑端-安装程序.exe" "$SERVER_DIR_WINDOWS" "$QUARK_DIR_WINDOWS" "windows_installer"
@@ -168,7 +168,7 @@ else
 
     # echo "[STEP] build android"
     # JOBS="$JOBS" bash makefiles/pack_android.sh no-upload
-    # start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-安卓手机端-压缩版.apk" "$SERVER_DIR_ANDROID" "$QUARK_DIR_ANDROID" "android"
+    start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-安卓手机端-低配版.apk" "$SERVER_DIR_ANDROID" "$QUARK_DIR_ANDROID" "android"
 
     echo "[STEP] build android hd"
     JOBS="$JOBS" bash makefiles/pack_android.sh hd no-upload
