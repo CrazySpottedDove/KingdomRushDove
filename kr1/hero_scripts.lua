@@ -42388,7 +42388,11 @@ end
 
 function scripts.hero_margosa.melee_side_effect(this, store, damage, target)
 	local value = U.predict_damage(target, damage)
-	U.heal(this, value * this.vampiric_touch_rate)
+	if this.is_buffed then
+		U.heal_with_overflow(this, value * this.vampiric_touch_rate, 2)
+	else
+		U.heal(this, value * this.vampiric_touch_rate)
+	end
 end
 
 function scripts.hero_margosa.update(this, store)
@@ -42401,6 +42405,7 @@ function scripts.hero_margosa.update(this, store)
 	local function go_buffed()
 		U.heal_with_overflow(this, this.health.hp_max, 2)
 		this.melee.attacks[1].cooldown = 0.8
+		this.melee.attacks[1].damage_type = DAMAGE_TRUE
 		this.unit.damage_factor = this.unit.damage_factor * ultimate.damage_factor
 		this.vampiric_touch_rate = 0.8
 		U.speed_mul_self(this, ultimate.speed_factor)
@@ -42416,9 +42421,11 @@ function scripts.hero_margosa.update(this, store)
 	local function go_normal()
 		U.heal(this, this.health.hp_max)
 		this.melee.attacks[1].cooldown = 1.2
+		this.melee.attacks[1].damage_type = DAMAGE_RUDE
 		this.unit.damage_factor = this.unit.damage_factor / ultimate.damage_factor
 		this.vampiric_touch_rate = this.hero.skills.vampiric_touch.track_rate[this.hero.skills.vampiric_touch.level]
 		U.speed_div_self(this, ultimate.speed_factor)
+		ultimate.ts = ultimate.ts - ultimate.cooldown * (1 - math.max((store.tick_ts - ultimate.ts) / ultimate.duration, 1))
 		this.is_buffed = false
 
 		U.y_animation_play(this, "toMargosa", nil, store.tick_ts, 1)
@@ -42535,9 +42542,12 @@ function scripts.hero_margosa.update(this, store)
 			-- 2技能 绝望迷雾
 			skill = this.hero.skills.myst_form
 
-			if not this.is_buffed and ready_to_use_skill(am, store, this.unit.cooldown_factor) then
+			if ready_to_use_skill(am, store, this.unit.cooldown_factor) then
 				if U.find_first_enemy_in_range_filter_off(this.pos, am.max_range, am.vis_flags, am.vis_bans) then
 					local start_ts = store.tick_ts
+					if this.is_buffed then
+						go_normal()
+					end
 					U.animation_start(this, am.animation, nil, store.tick_ts, false, 1)
 					S:queue(am.sound)
 
@@ -42576,35 +42586,54 @@ function scripts.hero_margosa.update(this, store)
 			-- 3技能 黑暗呼唤
 			skill = this.hero.skills.dark_call
 
-			if not this.is_buffed and ready_to_use_skill(ad, store, this.unit.cooldown_factor) then
-				local target = U.detect_foremost_enemy_between_range_filter_off(this.pos, 150, 99999, ad.vis_flags, ad.vis_bans)
-				if target then
+			if ready_to_use_skill(ad, store, this.unit.cooldown_factor) then
+				if U.find_first_enemy_between_range_filter_off(this.pos, 150, 9999, ad.vis_flags, ad.vis_bans) then
 					local start_ts = store.tick_ts
+					if this.is_buffed then
+						go_normal()
+					end
 					U.animation_start_once_specific_no_flip(this, ad.animation, store.tick_ts, 1)
+
 					if SU.y_hero_wait(store, this, ad.cast_time) then
 						goto label_4590_1
 					end
 
-					local expect_pos = U.melee_slot_enemy_position(target, this, 1)
-					local nearest = P:nearest_nodes(expect_pos.x, expect_pos.y, nil, nil, true)
+					local _, targets = U.find_foremost_enemy_between_range_filter_off(this.pos, 150, 9999, nil, ad.vis_flags, ad.vis_bans)
 
-					if nearest[1] then
-						local pi, spi, ni = unpack(nearest[1])
-						local nav_path = E:clone_c("nav_path")
-						nav_path.pi = pi
-						nav_path.spi = spi
-						nav_path.ni = ni
-						local target_reset_nearest = P:nearest_node_with_nav_path_info(target.pos, nav_path)
-						target.nav_path.pi = pi
-						target.nav_path.spi = spi
-						target.nav_path.ni = target_reset_nearest
-						local offset = P:nodes_to_goal(pi, spi, ni) - P:nodes_to_goal(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni)
-						local mod_teleport = E:create_entity(ad.mod_teleport)
-						mod_teleport.nodes_offset = -offset
-						mod_teleport.modifier.target_id = target.id
-						mod_teleport.modifier.source_id = this.id
+					local count = 0
 
-						queue_insert(store, mod_teleport)
+					if targets then
+						for _, target in ipairs(targets) do
+							if count >= ad.max_count then
+								break
+							end
+
+							local expect_pos = U.melee_slot_enemy_position(target, this, count + 1)
+							local nearest = P:nearest_nodes(expect_pos.x, expect_pos.y, nil, nil, true)
+
+							if nearest[1] then
+								local pi, spi, ni = unpack(nearest[1])
+								local nav_path = E:clone_c("nav_path")
+								nav_path.pi = pi
+								nav_path.spi = spi
+								nav_path.ni = ni
+								local target_reset_nearest = P:nearest_node_with_nav_path_info(target.pos, nav_path)
+								target.nav_path.pi = pi
+								target.nav_path.spi = spi
+								target.nav_path.ni = target_reset_nearest
+								local offset = P:nodes_to_goal(pi, spi, ni) - P:nodes_to_goal(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni)
+								local mod_teleport = E:create_entity(ad.mod_teleport)
+								mod_teleport.nodes_offset = -offset
+								mod_teleport.modifier.target_id = target.id
+								mod_teleport.modifier.source_id = this.id
+
+								queue_insert(store, mod_teleport)
+								count = count + 1
+							end
+						end
+					end
+
+					if count > 0 then
 						SU.hero_gain_xp_from_skill(this, skill)
 						ad.ts = start_ts
 					else
@@ -42792,7 +42821,7 @@ function scripts.shadow_bat.update(this, store)
 					dest = U.point_on_ellipse(this.idle_pos, 30, U.frandom(0, 2 * math.pi))
 				end
 
-				force_move_step(dest, this.flight_speed_idle, this.ramp_dist_idle)
+				fly_to(dest, this.flight_speed_idle)
 			end
 		end
 

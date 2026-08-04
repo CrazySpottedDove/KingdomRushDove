@@ -6781,5 +6781,5 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	HERO_OLOCH_ILLUSION_NAME = "奥洛克的幻影",
 	HERO_MARGOSA_NAME = "苦楝夫人",
 	HERO_MARGOSA_DESCRIPTION = "在瓦西里勋爵落败时所受的伤，早已深深地铭刻在了苦楝夫人的记忆里。她在一座与世隔绝的洞穴里恢复了元气。而她的实力和她对利尼瑞亚的仇恨都与日俱增。现在她重返人间，只为满足自己对血的渴望。",
-	HERO_MARGOSA_SPECIAL = "熟吸蝙蝠，绝望迷雾，黑暗呼唤，吸血鬼之触，野兽形态"
+	HERO_MARGOSA_SPECIAL = "熟吸蝙蝠，绝望迷雾，黑暗呼唤，吸血鬼之触，野兽形态，嗜血本能"
 }
