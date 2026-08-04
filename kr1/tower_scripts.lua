@@ -4049,7 +4049,7 @@ function scripts.soldier_assassin.on_damage(this, store, damage)
 end
 
 function scripts.soldier_assassin.instakill_effect(this, store, damage, target)
-	U.heal(this, this.health.hp_max, 2)
+	U.heal_with_overflow(this, this.health.hp_max, 2)
 end
 
 -- 大树
