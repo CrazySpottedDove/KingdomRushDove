@@ -204,7 +204,7 @@ function scripts.eb_jt.on_damage(this, store, damage)
 	return true
 end
 
-function scripts.eb_jt.heal(this, store, attack, target)
+function scripts.eb_jt.heal(this, store, damage, target)
 	U.heal(this, 100)
 end
 
@@ -6587,11 +6587,7 @@ function scripts.boss_cult_leader.update(this, store)
 								d.pop_chance = ma.pop_chance
 								d.pop_conds = ma.pop_conds
 
-								if ma.instakill then
-									d.damage_type = DAMAGE_INSTAKILL
-
-									queue_damage(store, d)
-								elseif ma.damage_min then
+								if ma.damage_min then
 									d.damage_type = ma.damage_type
 									d.value = math.ceil(this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max))
 

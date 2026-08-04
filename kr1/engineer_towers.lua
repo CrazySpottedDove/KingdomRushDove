@@ -1891,6 +1891,7 @@ AC(tt, "tween", "nav_grid")
 b = balance.towers.barrel.skill_warrior.entity
 tt.health_bar.offset = vec_2(0, 50)
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.health.hp_max = b.hp_max[1]
 tt.motion.max_speed = b.speed
 tt.info.enc_icon = 12
 tt.info.portrait = "kr5_info_portraits_soldiers_0012"

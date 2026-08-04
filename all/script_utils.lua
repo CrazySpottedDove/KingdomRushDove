@@ -2312,9 +2312,7 @@ function SU.y_soldier_do_loopable_melee_attack(store, this, target, attack)
 			elseif this.soldier and this.soldier.target_id == target.id then
 				local d = E.create_damage()
 
-				if attack.instakill then
-					d.damage_type = DAMAGE_INSTAKILL
-				elseif attack.fn_damage then
+				if attack.fn_damage then
 					d.damage_type = attack.damage_type
 					d.value = attack.fn_damage(this, store, attack, target)
 				else
@@ -2439,15 +2437,9 @@ function SU.y_soldier_do_single_melee_attack(store, this, target, attack)
 
 	-- 要求攻击的敌人被这个士兵拦截
 	if not SU.unit_dodges(store, target, false, attack, this) and table.arraycontains(target.enemy.blockers, this.id) then
-		if attack.side_effect then
-			attack.side_effect(this, store, attack, target)
-		end
+		if attack.damage_type ~= DAMAGE_NONE and attack.fn_damage or attack.damage_min then
+			local d = E.assign_damage(attack.damage_type, ((attack.fn_damage and attack.fn_damage(this, store, attack, target) or math.random(attack.damage_min, attack.damage_max)) + this.unit.damage_buff) * this.unit.damage_factor, this.id, target.id)
 
-		if attack.damage_type ~= DAMAGE_NONE then
-			local d = E.create_damage()
-
-			d.source_id = this.id
-			d.target_id = target.id
 			d.xp_gain_factor = attack.xp_gain_factor
 			d.xp_dest_id = attack.xp_dest_id
 			d.track_kills = this.track_kills ~= nil
@@ -2456,20 +2448,12 @@ function SU.y_soldier_do_single_melee_attack(store, this, target, attack)
 			d.pop_chance = attack.pop_chance
 			d.pop_conds = attack.pop_conds
 
-			if attack.instakill then
-				d.damage_type = DAMAGE_INSTAKILL
-			elseif attack.fn_damage then
-				d.damage_type = attack.damage_type
-				d.value = (attack.fn_damage(this, store, attack, target) + this.unit.damage_buff) * this.unit.damage_factor
-			elseif attack.damage_min then
-				d.damage_type = attack.damage_type
-				d.value = this.unit.damage_factor * (math.random(attack.damage_min, attack.damage_max) + this.unit.damage_buff)
-			end
-
 			queue_damage(store, d)
-		end
 
-		-- warmongers 血怒窗口由接敌逻辑刷新（见 soldier_orc_warrior.update），这里不重复刷。
+			if attack.side_effect then
+				attack.side_effect(this, store, d, target)
+			end
+		end
 
 		if attack.mod then
 			local mod = E:create_entity(attack.mod)
@@ -4204,27 +4188,17 @@ function SU.y_enemy_melee_attacks(store, this, target)
 					S:queue(ma.sound_hit, ma.sound_hit_args)
 
 					if ma.type == "melee" and not dodged and table.arraycontains(this.enemy.blockers, target.id) then
-						if ma.side_effect then
-							ma.side_effect(this, store, ma, target)
-						end
+						if ma.damage_min then
+							local d = E.assign_damage(ma.damage_type, this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max), this.id, target.id)
+							d.track_kills = this.track_kills ~= nil
+							d.track_damage = ma.track_damage
+							d.pop = ma.pop
+							d.pop_chance = ma.pop_chance
+							d.pop_conds = ma.pop_conds
 
-						local d = E.create_damage()
-
-						d.source_id = this.id
-						d.target_id = target.id
-						d.track_kills = this.track_kills ~= nil
-						d.track_damage = ma.track_damage
-						d.pop = ma.pop
-						d.pop_chance = ma.pop_chance
-						d.pop_conds = ma.pop_conds
-
-						if ma.instakill then
-							d.damage_type = DAMAGE_INSTAKILL
-
-							queue_damage(store, d)
-						elseif ma.damage_min then
-							d.damage_type = ma.damage_type
-							d.value = this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max)
+							if ma.side_effect then
+								ma.side_effect(this, store, d, target)
+							end
 
 							queue_damage(store, d)
 						end
@@ -4239,44 +4213,43 @@ function SU.y_enemy_melee_attacks(store, this, target)
 							queue_insert(store, mod)
 						end
 					elseif ma.type == "area" then
-						if ma.side_effect then
-							ma.side_effect(this, store, ma, target)
-						end
-
 						local targets = table.filter(store.soldiers, function(_, e)
 							return not e.health.dead and band(e.vis.flags, ma.vis_bans) == 0 and band(e.vis.bans, ma.vis_flags) == 0 and U.is_inside_ellipse(e.pos, hit_pos, ma.damage_radius) and (not ma.fn_filter or ma.fn_filter(this, store, ma, e))
 						end)
+						local first_damage
+						local max_count = ma.count and math.max(#target, ma.count) or #targets
 
-						for i, e in ipairs(targets) do
-							if e == target and dodged then
-							-- block empty
-							else
-								if ma.count and i > ma.count then
-									break
+						for i = 1, max_count do
+							local e = targets[i]
+							local d = E.assign_damage(ma.damage_type, this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max), this.id, e.id)
+							d.pop = ma.pop
+							d.pop_chance = ma.pop_chance
+							d.pop_conds = ma.pop_conds
+
+							if e == target then
+								if dodged then
+									goto next_target
 								end
-
-								local d = E.create_damage()
-
-								d.source_id = this.id
-								d.target_id = e.id
-								d.damage_type = ma.damage_type
-								d.value = this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max)
-								d.pop = ma.pop
-								d.pop_chance = ma.pop_chance
-								d.pop_conds = ma.pop_conds
-
-								queue_damage(store, d)
-
-								if ma.mod then
-									local mod = E:create_entity(ma.mod)
-
-									mod.modifier.target_id = e.id
-									mod.modifier.source_id = this.id
-									mod.modifier.damage_factor = this.unit.damage_factor
-
-									queue_insert(store, mod)
-								end
+								first_damage = d
 							end
+
+							queue_damage(store, d)
+
+							if ma.mod then
+								local mod = E:create_entity(ma.mod)
+
+								mod.modifier.target_id = e.id
+								mod.modifier.source_id = this.id
+								mod.modifier.damage_factor = this.unit.damage_factor
+
+								queue_insert(store, mod)
+							end
+
+							::next_target::
+						end
+
+						if ma.side_effect and first_damage then
+							ma.side_effect(this, store, first_damage, target)
 						end
 					end
 

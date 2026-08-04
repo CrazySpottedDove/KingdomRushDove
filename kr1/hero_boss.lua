@@ -172,10 +172,6 @@ local function enemy_do_counter_attack(store, this, target)
 		S:queue(ma.sound_hit, ma.sound_hit_args)
 
 		if ma.type == "melee" and not dodged and table.contains(this.enemy.blockers, target.id) then
-			if ma.side_effect then
-				ma.side_effect(this, store, ma, target)
-			end
-
 			local d = E.create_damage()
 
 			d.source_id = this.id
@@ -186,15 +182,15 @@ local function enemy_do_counter_attack(store, this, target)
 			d.pop_chance = ma.pop_chance
 			d.pop_conds = ma.pop_conds
 
-			if ma.instakill then
-				d.damage_type = DAMAGE_INSTAKILL
-
-				queue_damage(store, d)
-			elseif ma.damage_min then
+			if ma.damage_min then
 				d.damage_type = ma.damage_type
 				d.value = this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max)
 
 				queue_damage(store, d)
+			end
+
+			if ma.side_effect then
+				ma.side_effect(this, store, d, target)
 			end
 
 			if ma.mod then
@@ -388,9 +384,7 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 				else
 					local d = E.create_damage()
 
-					if attack.instakill then
-						d.damage_type = DAMAGE_INSTAKILL
-					elseif attack.fn_damage then
+					if attack.fn_damage then
 						d.damage_type = attack.damage_type
 						d.value = attack.fn_damage(this, store, attack, target)
 					else
@@ -501,10 +495,6 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 			S:queue(ma.sound_hit, ma.sound_hit_args)
 
 			if ma.type == "melee" and not dodged and table.contains(this.enemy.blockers, target.id) then
-				if ma.side_effect then
-					ma.side_effect(this, store, ma, target)
-				end
-
 				local d = E.create_damage()
 
 				d.source_id = this.id
@@ -515,15 +505,15 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 				d.pop_chance = ma.pop_chance
 				d.pop_conds = ma.pop_conds
 
-				if ma.instakill then
-					d.damage_type = DAMAGE_INSTAKILL
-
-					queue_damage(store, d)
-				elseif ma.damage_min then
+				if ma.damage_min then
 					d.damage_type = ma.damage_type
 					d.value = this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max)
 
 					queue_damage(store, d)
+				end
+
+				if ma.side_effect then
+					ma.side_effect(this, store, d, target)
 				end
 
 				if ma.mod then
@@ -535,11 +525,8 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 					queue_insert(store, mod)
 				end
 			elseif ma.type == "area" then
-				if ma.side_effect then
-					ma.side_effect(this, store, ma, target)
-				end
-
 				local targets = U.find_soldiers_in_range(store.soldiers or store.entities, hit_pos, 0, ma.damage_radius, ma.vis_flags, ma.vis_bans, ma.fn_filter) or {}
+				local first_damage
 
 				for i, e in ipairs(targets) do
 					if e == target and dodged then
@@ -556,6 +543,8 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 
 						queue_damage(store, d)
 
+						first_damage = first_damage or d
+
 						if ma.mod then
 							local mod = E:create_entity(ma.mod)
 
@@ -565,6 +554,10 @@ local function enemy_do_single_melee_attack(store, this, target, ma)
 							queue_insert(store, mod)
 						end
 					end
+				end
+
+				if ma.side_effect then
+					ma.side_effect(this, store, first_damage, target)
 				end
 			end
 

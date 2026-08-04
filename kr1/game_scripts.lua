@@ -17226,7 +17226,7 @@ function scripts.mod_gnoll_blighter.update(this, store)
 	queue_remove(store, this)
 end
 
-function scripts.redcap_heal_side_effect(this, store, attack, target)
+function scripts.redcap_heal_side_effect(this, store, damage, target)
 	local m = E:create_entity("mod_redcap_heal")
 	m.modifier.source_id = this.id
 	m.modifier.target_id = this.id
@@ -38032,11 +38032,7 @@ function scripts.enemy_crocs_hydra.update(this, store)
 							d.pop_chance = ma.pop_chance
 							d.pop_conds = ma.pop_conds
 
-							if ma.instakill then
-								d.damage_type = DAMAGE_INSTAKILL
-
-								queue_damage(store, d)
-							elseif ma.damage_min then
+							if ma.damage_min then
 								d.damage_type = ma.damage_type
 								d.value = math.ceil(this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max))
 
@@ -50407,11 +50403,7 @@ function scripts.enemy_fan_guard.update(this, store)
 							d.pop_chance = ma.pop_chance
 							d.pop_conds = ma.pop_conds
 
-							if ma.instakill then
-								d.damage_type = DAMAGE_INSTAKILL
-
-								queue_damage(store, d)
-							elseif ma.damage_min then
+							if ma.damage_min then
 								d.damage_type = ma.damage_type
 								d.value = math.ceil(this.unit.damage_factor * math.random(ma.damage_min, ma.damage_max))
 

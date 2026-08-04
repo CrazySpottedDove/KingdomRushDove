@@ -1777,7 +1777,7 @@ tt.melee.attacks[1].cooldown = 1.2
 tt.melee.attacks[1].hit_time = fts(15)
 tt.melee.attacks[1].sound = "MeleeSword"
 tt.melee.attacks[1].xp_gain_factor = 2.6
-tt.melee.attacks[1].side_effect = function(this, store, attack, target)
+tt.melee.attacks[1].side_effect = function(this, store, damage, target)
 	SU.armor_dec(target, 0.05)
 
 	this.ranged.attacks[1].ts = this.ranged.attacks[1].ts - (target.health.armor) * 0.5
@@ -1901,7 +1901,7 @@ tt.melee.attacks[2].shared_cooldown = true
 tt.melee.attacks[2].sound = "HeroThorElectricAttack"
 tt.melee.attacks[2].mod = "mod_hero_thor_chainlightning"
 tt.melee.attacks[2].xp_from_skill = "chainlightning"
-tt.melee.attacks[2].side_effect = function(this, store, attack, target)
+tt.melee.attacks[2].side_effect = function(this, store, damage, target)
 	this.ranged.attacks[1].ts = this.ranged.attacks[1].ts - 1
 end
 tt.ranged.attacks[1] = CC("bullet_attack")
@@ -4721,7 +4721,7 @@ tt.melee.attacks[1].hit_time = fts(9)
 tt.melee.attacks[1].sound = "MeleeSword"
 tt.melee.attacks[1].damage_type = DAMAGE_TRUE
 tt.melee.attacks[1].xp_gain_factor = 2.5
-tt.melee.attacks[1].side_effect = function(this, store, attack, target)
+tt.melee.attacks[1].side_effect = function(this, store, damage, target)
 	U.heal(this, 3)
 end
 tt.melee.attacks[2] = CC("melee_attack")
@@ -5170,7 +5170,7 @@ tt.melee.attacks[1].vis_bans = bor(F_FLYING, F_CLIFF)
 tt.melee.attacks[1].vis_flags = F_BLOCK
 tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
 tt.melee.attacks[1].xp_gain_factor = 3
-tt.melee.attacks[1].side_effect = function(this, store, attack, target)
+tt.melee.attacks[1].side_effect = function(this, store, damage, target)
 	SU.armor_dec(target, 0.1)
 end
 tt.melee.attacks[1].sound = "MeleeSword"
@@ -5178,7 +5178,7 @@ tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
 tt.melee.attacks[2].animation = "attack2"
 tt.melee.attacks[2].chance = 0.33
 tt.melee.attacks[2].hit_time = fts(14)
-tt.melee.attacks[2].side_effect = function(this, store, attack, target)
+tt.melee.attacks[2].side_effect = function(this, store, damage, target)
 	this.melee.attacks[4].ts = this.melee.attacks[4].ts - 1
 	this.melee.attacks[5].ts = this.melee.attacks[5].ts - 1
 end
@@ -5186,7 +5186,7 @@ tt.melee.attacks[3] = table.deepclone(tt.melee.attacks[1])
 tt.melee.attacks[3].animation = "attack3"
 tt.melee.attacks[3].chance = 0.5
 tt.melee.attacks[3].hit_time = fts(5)
-tt.melee.attacks[3].side_effect = function(this, store, attack, target)
+tt.melee.attacks[3].side_effect = function(this, store, damage, target)
 	this.timed_attacks.list[1].ts = this.timed_attacks.list[1].ts - 1
 	this.timed_attacks.list[2].ts = this.timed_attacks.list[2].ts - 1
 end
@@ -5214,7 +5214,7 @@ tt.melee.attacks[5].damage_type = DAMAGE_TRUE
 tt.melee.attacks[5].hit_time = fts(6)
 tt.melee.attacks[5].sound = "HeroMonkHadoken"
 tt.melee.attacks[5].xp_from_skill = "tigerstyle"
-tt.melee.attacks[5].side_effect = function(this, store, attack, target)
+tt.melee.attacks[5].side_effect = function(this, store, damage, target)
 	U.heal(this, 30)
 end
 tt.timed_attacks.list[1] = CC("area_attack")
@@ -6326,7 +6326,7 @@ tt.melee.attacks[5].xp_from_skill = "monkeypalm"
 tt.melee.attacks[5].sound = "HeroMonkeyGodMonkeyPalm"
 tt.melee.attacks[5].hit_time = fts(12)
 tt.melee.attacks[5].cooldown = 10
-tt.melee.attacks[5].side_effect = function(this, store, attack, target)
+tt.melee.attacks[5].side_effect = function(this, store, damage, target)
 	this.timed_attacks.list[1].ts = this.timed_attacks.list[1].ts - 4
 end
 tt.melee.range = 64
@@ -6876,7 +6876,7 @@ tt.melee.attacks[3].xp_from_skill = "blade"
 tt.melee.attacks[4] = table.deepclone(tt.melee.attacks[3])
 tt.melee.attacks[4].chance = nil
 tt.melee.attacks[4].disabled = true
-tt.melee.attacks[4].instakill = true
+tt.melee.attacks[4].damage_type = DAMAGE_INSTAKILL
 tt.melee.attacks[4].vis_bans = bor(F_BOSS)
 tt.melee.attacks[4].vis_flags = bor(F_INSTAKILL)
 tt.melee.attacks[5] = CC("area_attack")
@@ -9339,14 +9339,14 @@ tt.melee.attacks[1].hit_time = fts(14)
 tt.melee.attacks[1].shared_cooldown = true
 tt.melee.attacks[1].sound = "MeleeSword"
 tt.melee.attacks[1].xp_gain_factor = 3.2
-tt.melee.attacks[1].side_effect = function(this, store, attack, target)
+tt.melee.attacks[1].side_effect = function(this, store, damage, target)
 	this.revive.protect = this.revive.protect + 0.01
 end
 tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
 tt.melee.attacks[2].animation = "attack2"
 tt.melee.attacks[2].chance = 1
 tt.melee.attacks[3] = CC("melee_attack")
-tt.melee.attacks[3].side_effect = function(this, store, attack, target)
+tt.melee.attacks[3].side_effect = function(this, store, damage, target)
 	this.revive.protect = this.revive.protect + 0.01
 end
 tt.melee.attacks[3].disabled = true
@@ -9363,13 +9363,13 @@ tt.melee.attacks[3].xp_from_skill = "reapers_harvest"
 tt.melee.attacks[3].hit_decal = "decal_lilith_reapers_harvest"
 tt.melee.attacks[3].hit_offset = vec_2(30, 0)
 tt.melee.attacks[4] = table.deepclone(tt.melee.attacks[3])
-tt.melee.attacks[4].side_effect = function(this, store, attack, target)
+tt.melee.attacks[4].side_effect = function(this, store, damage, target)
 	this.revive.protect = this.revive.protect + 0.02
 	this.soul_eater.last_ts = store.tick_ts - E:get_template("aura_lilith_soul_eater").aura.cooldown
 
 	U.heal(this, this.health.hp_max * 0.2)
 end
-tt.melee.attacks[4].instakill = true
+tt.melee.attacks[4].damage_type = DAMAGE_INSTAKILL
 tt.melee.attacks[4].chance = 0.1
 tt.melee.attacks[4].origin_chance = 0.1
 tt.melee.attacks[4].vis_bans = bor(F_BOSS)
@@ -9602,13 +9602,13 @@ tt.melee.attacks[1].hit_time = fts(12)
 tt.melee.attacks[1].xp_gain_factor = 4.3
 tt.melee.attacks[1].sound_hit = "ElvesHeroXinPoleHit"
 tt.melee.attacks[1].shared_cooldown = true
-tt.melee.attacks[1].side_effect = function(this, store, attack, target)
+tt.melee.attacks[1].side_effect = function(this, store, damage, target)
 	this.timed_attacks.list[3].ts = this.timed_attacks.list[3].ts - this.timed_attacks.list[3].cooldown * 0.1
 end
 tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
 tt.melee.attacks[2].chance = 0.5
 tt.melee.attacks[2].animation = "attack2"
-tt.melee.attacks[2].side_effect = function(this, store, attack, target)
+tt.melee.attacks[2].side_effect = function(this, store, damage, target)
 	if this.mind_over_body_active then
 		this.melee.attacks[3].ts = this.melee.attacks[3].ts - this.melee.attacks[3].cooldown * 0.1
 		this.timed_attacks.list[1].ts = this.timed_attacks.list[1].ts - this.timed_attacks.list[1].cooldown * 0.1
@@ -10627,7 +10627,7 @@ tt.melee.attacks[2].hit_time = fts(9)
 tt.melee.attacks[2].sound = "ElvesHeroBolverkSlash"
 tt.melee.attacks[2].xp_gain_factor = 1.8
 tt.melee.attacks[2].disabled = true
-tt.melee.attacks[2].side_effect = function(this, store, attack, target)
+tt.melee.attacks[2].side_effect = function(this, store, damage, target)
 	U.heal(this, (this.health.hp_max - this.health.hp) * 0.12)
 end
 tt.melee.range = 55
@@ -14738,7 +14738,6 @@ tt.timed_attacks.list[2].staff_dust_template_front = "fx_hero_wukong_giant_staff
 tt.timed_attacks.list[2].staff_offset = v(17, 0)
 tt.timed_attacks.list[2].vis_flags = F_INSTAKILL
 tt.timed_attacks.list[2].vis_bans = F_BOSS
-tt.timed_attacks.list[2].instakill = true
 tt.timed_attacks.list[2].damage_type = bor(DAMAGE_INSTAKILL, DAMAGE_NO_DODGE)
 tt.timed_attacks.list[2].area_vis_flags = F_AREA
 tt.timed_attacks.list[2].area_vis_bans = F_NONE
@@ -22204,3 +22203,252 @@ tt.damage_inc = 20
 
 tt = RT("fx_hero_oloch_ultimate", "fx")
 tt.render.sprites[1].name = "hero_oloch_teleport_modifier_run"
+
+-- ======== 苦楝夫人 ========
+tt = RT("hero_margosa", "hero")
+AC(tt, "melee", "timed_attacks")
+anchor_y = 0.12
+anchor_x = 0.5
+image_y = 110
+image_x = 92
+tt.melee.range = 80
+tt.regen.cooldown = 1
+tt.hero.level_stats.armor = {0.06, 0.07, 0.08, 0.09, 0.10, 0.11, 0.12, 0.13, 0.14, 0.15}
+tt.hero.level_stats.hp_max = {300, 324, 348, 372, 396, 420, 444, 468, 492, 516}
+tt.hero.level_stats.melee_damage_min = {15, 17, 20, 23, 25, 28, 31, 33, 35, 39}
+tt.hero.level_stats.melee_damage_max = {26, 30, 33, 36, 39, 42, 46, 52, 54, 57}
+-- 1 熟吸蝙蝠
+tt.hero.skills.bat_familiar = CC("hero_skill")
+tt.hero.skills.bat_familiar.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.bat_familiar.damage_min_config = {3, 6, 9}
+tt.hero.skills.bat_familiar.damage_max_config = {7, 14, 21}
+-- 2 绝望迷雾
+tt.hero.skills.myst_form = CC("hero_skill")
+tt.hero.skills.myst_form.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.myst_form.xp_gain = {150, 300, 450}
+tt.hero.skills.myst_form.damage_factor = {0.75, 0.5, 0.25}
+tt.hero.skills.myst_form.damage_config = {3, 4, 5}
+-- 3 黑暗呼唤
+tt.hero.skills.dark_call = CC("hero_skill")
+tt.hero.skills.dark_call.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.dark_call.xp_gain = {180, 360, 540}
+tt.hero.skills.dark_call.duration = {2, 3, 4}
+-- 4 吸血鬼之触
+tt.hero.skills.vampiric_touch = CC("hero_skill")
+tt.hero.skills.vampiric_touch.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3
+}
+tt.hero.skills.vampiric_touch.track_rate = {0.3, 0.4, 0.5}
+-- 大招 野兽形态
+tt.hero.skills.ultimate = CC("hero_skill")
+tt.hero.skills.ultimate.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
+}
+tt.hero.skills.ultimate.xp_gain = {160, 320, 480}
+tt.hero.skills.ultimate.duration = {11, 14, 17, 20}
+tt.health.dead_lifetime = 15
+tt.health_bar.offset = v(0, 36)
+tt.health_bar.offset_normal = v(0, 36)
+tt.health_bar.offset_buffed = v(0, 44)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.hero.tombstone_show_time = fts(90)
+tt.vampiric_touch_rate = tt.hero.skills.vampiric_touch.track_rate[1]
+tt.info.hero_portrait = "kr4_hero_portraits_0006"
+tt.info.portrait = "kr4_info_portraits_heroes_0004"
+tt.main_script.update = scripts.hero_margosa.update
+tt.hero.fn_level_up = scripts.hero_margosa.level_up
+tt.motion.max_speed = 2.2 * FPS
+tt.nav_rally.requires_node_nearby = false
+tt.nav_grid.valid_terrains = bor(TERRAIN_LAND, TERRAIN_WATER, TERRAIN_SHALLOW, TERRAIN_NOWALK, TERRAIN_ICE)
+tt.render.sprites[1].anchor = v(0.5, 0.04)
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].offset = v(0, -8)
+tt.render.sprites[1].prefix = "hero_lady_margosa"
+tt.render.sprites[1].angles.walk = {"walk"}
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].offset = v(0, 20)
+tt.render.sprites[2].name = "hero_lady_margosa_shadow"
+tt.render.sprites[2].z = Z_DECALS + 1
+tt.soldier.melee_slot_offset = v(5, 0)
+tt.sound_events.change_rally_point = "group_margosa_taunt"
+tt.sound_events.death = "hero_margosa_death"
+tt.sound_events.hero_room_select = "hero_margosa_taunt_1"
+tt.sound_events.insert = "hero_margosa_taunt_1"
+tt.sound_events.respawn = "HeroPaladinTauntIntro"
+tt.treewalk = {}
+tt.treewalk.min_distance = 120
+tt.treewalk.speed_factor = 2.5
+tt.treewalk.animations = {"toBat", "fly", "toHuman"}
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 20)
+tt.crow_entity = "bat_reinforcement_special_dark_army"
+tt.melee.attacks[1] = CC("melee_attack")
+tt.melee.attacks[1].cooldown = 1.2
+tt.melee.attacks[1].damage_max = 1
+tt.melee.attacks[1].damage_min = 1
+tt.melee.attacks[1].hit_time = fts(18)
+tt.melee.attacks[1].hit_decal = "decal_hero_lady_margosa_beast_attack_effect"
+tt.melee.attacks[1].hit_offset = v(0, 10)
+tt.melee.attacks[1].sound = "MeleeSword"
+tt.melee.attacks[1].vis_bans = bor(F_FLYING, F_CLIFF)
+tt.melee.attacks[1].vis_flags = F_BLOCK
+tt.melee.attacks[1].xp_gain_factor = 2
+tt.melee.attacks[1].side_effect = scripts.hero_margosa.melee_side_effect
+tt.timed_attacks.list[1] = CC("spawn_attack")
+tt.timed_attacks.list[1].animation = "mystForm"
+tt.timed_attacks.list[1].cooldown = 20
+tt.timed_attacks.list[1].disabled = true
+tt.timed_attacks.list[1].entity = "aura_fog_hero_margosa"
+tt.timed_attacks.list[1].sound = "hero_margosa_ancientform"
+tt.timed_attacks.list[1].spawn_time = fts(13)
+tt.timed_attacks.list[1].vis_flags = F_RANGED
+tt.timed_attacks.list[1].vis_bans = 0
+tt.timed_attacks.list[1].min_range = 0
+tt.timed_attacks.list[1].max_range = 100
+tt.timed_attacks.list[2] = CC("mod_attack")
+tt.timed_attacks.list[2].disabled = true
+tt.timed_attacks.list[2].animation = "darkCall"
+tt.timed_attacks.list[2].sound = "hero_margosa_darkcall"
+tt.timed_attacks.list[2].cooldown = 25
+tt.timed_attacks.list[2].cast_time = fts(27)
+tt.timed_attacks.list[2].vis_flags = bor(F_TELEPORT, F_STUN)
+tt.timed_attacks.list[2].vis_bans = bor(F_BOSS, F_FLYING)
+tt.timed_attacks.list[2].mod_teleport = "mod_hero_margosa_teleport"
+tt.ultimate = {
+	ts = 0,
+	cooldown = 40,
+	disabled = true,
+	range = 150,
+	duration = tt.hero.skills.ultimate.duration[1],
+	damage_factor = 2,
+	speed_factor = 1.4
+}
+
+tt = RT("decal_hero_lady_margosa_beast_attack_effect", "fx")
+tt.render.sprites[1].name = "hero_lady_margosa_beast_attack_effect_run"
+
+-- 传送眩晕
+tt = RT("mod_hero_margosa_stun", "mod_stun")
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
+tt.modifier.duration = 2
+
+tt = RT("mod_hero_margosa_teleport", "mod_teleport")
+tt.main_script.remove = scripts.mod_hero_margosa_teleport.remove
+tt.modifier.vis_flags = bor(F_MOD)
+tt.modifier.vis_bans = bor(F_BOSS)
+tt.modifier.duration = 1
+tt.nodes_offset = 0
+tt.dest_valid_node = true
+tt.max_times_applied = 10
+tt.delay_start = fts(3)
+tt.hold_time = 0.34
+tt.delay_end = fts(3)
+tt.fx_start = "hero_lady_margosa_teleport_effect_in"
+tt.fx_end = "hero_lady_margosa_teleport_effect_out"
+tt.end_mod = "mod_hero_margosa_stun"
+
+tt = RT("hero_lady_margosa_teleport_effect_in", "fx")
+tt.render.sprites[1].name = "hero_lady_margosa_teleport_effect_in"
+
+tt = RT("hero_lady_margosa_teleport_effect_out", "fx")
+tt.render.sprites[1].name = "hero_lady_margosa_teleport_effect_out"
+
+-- 绝望迷雾
+tt = RT("aura_fog_hero_margosa", "aura")
+AC(tt, "render")
+tt.render.sprites[1].prefix = "hero_lady_margosa_myst_form_effect"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].scale = v(2, 2)
+tt.render.sprites[1].anchor = v(0.5, 0.2)
+tt.render.sprites[1].z = Z_DECALS + 1
+tt.aura.duration = 8
+tt.aura.mods = {"mod_dmg_fog_hero_margosa", "mod_err_fog_hero_margosa", "mod_slow_fog_hero_margosa"}
+tt.aura.cycle_time = 0.2
+tt.aura.radius = 70
+tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
+tt.aura.vis_flags = bor(F_MOD, F_AREA)
+tt.aura.with_fade = true
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
+
+tt = RT("mod_err_fog_hero_margosa", "modifier")
+tt.modifier.duration = 2
+tt.modifier.vis_flags = F_MOD
+tt.modifier.type = MOD_TYPE_POISON
+tt.modifier.level = 1
+tt.modifier.resets_same = true
+tt.modifier.replaces_lower = true
+tt.inflicted_damage_factor = 0.75
+tt.main_script.insert = scripts.mod_damage_factors.insert
+tt.main_script.remove = scripts.mod_damage_factors.remove
+tt.main_script.update = scripts.mod_track_target.update
+
+tt = RT("mod_slow_fog_hero_margosa", "mod_slow")
+tt.slow.factor = 0.5
+
+tt = RT("mod_dmg_fog_hero_margosa", "modifier")
+AC(tt, "dps")
+tt.modifier.duration = 2
+tt.dps.damage_min = 2
+tt.dps.damage_max = 2
+tt.dps.damage_inc = 0
+tt.dps.damage_type = DAMAGE_TRUE
+tt.dps.damage_every = 0.2
+tt.main_script.insert = scripts.mod_dps.insert
+tt.main_script.update = scripts.mod_dps.update
+
+-- 熟吸蝙蝠
+tt = RT("bat_reinforcement_special_dark_army", "decal_scripted")
+AC(tt, "force_motion", "custom_attack")
+tt.flight_height = 50
+tt.flight_speed_idle = 150
+tt.ramp_dist_idle = 0
+tt.flight_speed_busy = 150
+tt.ramp_dist_busy = 10
+tt.idle_pos = nil
+tt.main_script.update = scripts.shadow_bat.update
+tt.custom_attack.min_range = 10
+tt.custom_attack.max_range = 10
+tt.custom_attack.range = 165
+tt.custom_attack.damage_min = 2
+tt.custom_attack.damage_max = 2
+tt.custom_attack.hit_fx = "fx_hero_lady_margosa_bat_hit_blood_red"
+tt.custom_attack.cooldown = 0.5
+tt.custom_attack.damage_type = DAMAGE_PHYSICAL
+tt.custom_attack.vis_flags = F_RANGED
+tt.custom_attack.vis_bans = 0
+tt.custom_attack.sound_chance = 0
+tt.custom_attack.sound = "ShadowArcherCrowAttack"
+tt.render.sprites[1].prefix = "hero_lady_margosa_bat"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].draw_order = 2
+tt.render.sprites[1].loop_forced = true
+tt.render.sprites[1].sort_y_offset = -12
+tt.render.sprites[1].scale = v(-0.7, 0.7)
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "decal_flying_shadow"
+tt.render.sprites[2].offset = v(0, 0)
+tt.owner = nil
+
+tt = RT("fx_hero_lady_margosa_bat_hit_blood_red", "fx")
+tt.render.sprites[1].name = "hero_lady_margosa_bat_hit_blood_red"

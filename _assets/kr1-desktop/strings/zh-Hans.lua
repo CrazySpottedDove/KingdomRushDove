@@ -6778,5 +6778,8 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	HERO_OLOCH_NAME = "奥洛克",
 	HERO_OLOCH_DESCRIPTION = "恶魔奥洛克受过黑暗技艺方面的训练，曾帮助维兹南越狱，以换取他的一部分力量。现在他一边协助维兹南作战，一边等待着时机来实行自己那阴险的计划，好让这份协定变得对他有利。",
 	HERO_OLOCH_SPECIAL = "炼狱业火，自我复制，岩浆喷发，地狱注入，恶魔飞爆，孤立缄印",
-	HERO_OLOCH_ILLUSION_NAME = "奥洛克的幻影"
+	HERO_OLOCH_ILLUSION_NAME = "奥洛克的幻影",
+	HERO_MARGOSA_NAME = "苦楝夫人",
+	HERO_MARGOSA_DESCRIPTION = "在瓦西里勋爵落败时所受的伤，早已深深地铭刻在了苦楝夫人的记忆里。她在一座与世隔绝的洞穴里恢复了元气。而她的实力和她对利尼瑞亚的仇恨都与日俱增。现在她重返人间，只为满足自己对血的渴望。",
+	HERO_MARGOSA_SPECIAL = "熟吸蝙蝠，绝望迷雾，黑暗呼唤，吸血鬼之触，野兽形态"
 }

@@ -3464,4 +3464,38 @@ d[1].damage_type = h.selfdestruct.damage_type
 radius = h.selfdestruct.damage_radius
 map["炼狱业火"] = str("奥洛克阵亡后爆炸，对", radius, "范围内的敌人造成", damage_str(), "。")
 
+-- 苦楝夫人
+set_hero("hero_margosa")
+
+set_skill(h.hero.skills.bat_familiar)
+d[1].damage_min = ss("damage_min_config")
+d[1].damage_max = ss("damage_max_config")
+d[1].damage_type = T("bat_reinforcement_special_dark_army").custom_attack.damage_type
+map["熟吸蝙蝠"] = str("召唤一只吸血蝙蝠伴她作战，每次攻击造成", damage_str(), "。")
+
+set_skill(h.hero.skills.myst_form)
+cooldown = h.timed_attacks.list[1].cooldown
+d[1].damage_min = ss("damage_config")
+d[1].damage_max = ss("damage_config")
+d[1].damage_type = T("mod_dmg_fog_hero_margosa").dps.damage_type
+cycle_time = T("mod_dmg_fog_hero_margosa").dps.damage_every
+duration = T("aura_fog_hero_margosa").aura.duration
+factor = 1 - ss("damage_factor")
+map["绝望迷雾"] = str(cooldown_str(), "使自己被魔法迷雾环绕。迷雾中的敌人每", cycle_time, "秒受到", damage_str(), "，并使敌人造成的伤害降低", factor * 100, "%，持续", duration, "秒。")
+
+set_skill(h.hero.skills.dark_call)
+cooldown = h.timed_attacks.list[2].cooldown
+duration = ss("duration")
+map["黑暗呼唤"] = str(cooldown_str(), "将一名敌人传送到她身前，阻止对方继续前行，并使其眩晕", duration, "秒。")
+
+set_skill(h.hero.skills.vampiric_touch)
+factor = ss("track_rate")
+map["吸血鬼之触"] = str("每次攻击用所造成伤害的", factor * 100, "%恢复自身生命值。")
+
+set_skill(h.hero.skills.ultimate)
+cooldown = h.ultimate.cooldown
+duration = ss("duration")
+local dmg_factor = h.ultimate.damage_factor
+map["野兽形态"] = str(cooldown_str(), "当生命值耗尽或附近有敌人时，苦楝夫人变身为渴血的野兽，生命值恢复至全满，伤害提升", (dmg_factor - 1) * 100, "%，攻击速度与移动速度大幅提升，并强化吸血效果，持续", duration, "秒。")
+
 return H

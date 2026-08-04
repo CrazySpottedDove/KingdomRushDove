@@ -45,52 +45,117 @@ constif(band(a.vis_bans, F_FRIEND) ~= 0 and a.allowed_templates or a.excluded_te
 constend
 return function(this, store)
     local context = this.main_script.context
+
     if context.state == 0 then
-        context.state = 1
-        @constif(a.apply_duration)
-        context.first_hit_ts = store.tick_ts
+        constif(a.with_fade)
+            U.animation_start_default(this, "in", false, store.tick_ts, false)
+            context.state = 2
+        constelse
+            context.state = 1
+            @constif(a.apply_duration)
+            context.first_hit_ts = store.tick_ts
 
-        @constif(a.cycles)
-        context.cycles_count = 0
+            @constif(a.cycles)
+            context.cycles_count = 0
 
-        @constif(a.max_count)
-        context.victims_count = 0
+            @constif(a.max_count)
+            context.victims_count = 0
 
-        constif(this.ps_names)
-            context.ps_instances = {}
-            constfor i = 1, #this.ps_names do
-                local ps = E:create_entity(this.ps_names[i])
+            constif(this.ps_names)
+                context.ps_instances = {}
+                constfor i = 1, #this.ps_names do
+                    local ps = E:create_entity(this.ps_names[i])
 
-                @constif(this.ps_spread_follow_radius)
-                ps.particle_system.emit_area_spread = V.vv(this.aura.radius)
+                    @constif(this.ps_spread_follow_radius)
+                    ps.particle_system.emit_area_spread = V.vv(this.aura.radius)
 
-                ps.particle_system.track_id = this.id
-                queue_insert(store, ps)
-                context.ps_instances[i] = ps
+                    ps.particle_system.track_id = this.id
+                    queue_insert(store, ps)
+                    context.ps_instances[i] = ps
+                constend
             constend
+
+            constif(a.track_source)
+                local source = store.entities[this.aura.source_id]
+                if source and source.pos then
+                    this.pos = source.pos
+                end
+            constend
+
+            constif(a.track_target)
+                local target = store.entities[this.aura.target_id]
+                if target and target.pos then
+                    this.pos = target.pos
+                end
+            constend
+
+            @constif(a.apply_delay)
+            context.last_hit_ts = store.tick_ts - this.aura.apply_delay - this.aura.cycle_time
+            @constelse
+            context.last_hit_ts = store.tick_ts - this.aura.cycle_time
+
+            context.mods = this.aura.mods or {this.aura.mod}
         constend
-
-        constif(a.track_source)
-            local source = store.entities[this.aura.source_id]
-            if source and source.pos then
-                this.pos = source.pos
-            end
-        constend
-
-        constif(a.track_target)
-            local target = store.entities[this.aura.target_id]
-            if target and target.pos then
-                this.pos = target.pos
-            end
-        constend
-
-        @constif(a.apply_delay)
-        context.last_hit_ts = store.tick_ts - this.aura.apply_delay - this.aura.cycle_time
-        @constelse
-        context.last_hit_ts = store.tick_ts - this.aura.cycle_time
-
-        context.mods = this.aura.mods or {this.aura.mod}
     end
+
+    constif(a.with_fade)
+    if context.state == 2 then
+        if U.animation_finished_default(this) then
+            context.state = 1
+            U.animation_start_default(this, "run", false, store.tick_ts, true)
+            @constif(a.apply_duration)
+            context.first_hit_ts = store.tick_ts
+
+            @constif(a.cycles)
+            context.cycles_count = 0
+
+            @constif(a.max_count)
+            context.victims_count = 0
+
+            constif(this.ps_names)
+                context.ps_instances = {}
+                constfor i = 1, #this.ps_names do
+                    local ps = E:create_entity(this.ps_names[i])
+
+                    @constif(this.ps_spread_follow_radius)
+                    ps.particle_system.emit_area_spread = V.vv(this.aura.radius)
+
+                    ps.particle_system.track_id = this.id
+                    queue_insert(store, ps)
+                    context.ps_instances[i] = ps
+                constend
+            constend
+
+            constif(a.track_source)
+                local source = store.entities[this.aura.source_id]
+                if source and source.pos then
+                    this.pos = source.pos
+                end
+            constend
+
+            constif(a.track_target)
+                local target = store.entities[this.aura.target_id]
+                if target and target.pos then
+                    this.pos = target.pos
+                end
+            constend
+
+            @constif(a.apply_delay)
+            context.last_hit_ts = store.tick_ts - this.aura.apply_delay - this.aura.cycle_time
+            @constelse
+            context.last_hit_ts = store.tick_ts - this.aura.cycle_time
+
+            context.mods = this.aura.mods or {this.aura.mod}
+        else
+            return
+        end
+    elseif context.state == 3 then
+        if U.animation_finished_default(this) then
+            queue_remove(store, this)
+        end
+        return
+    end
+    constend
 
     if this.interrupt then
         context.last_hit_ts = 1e+99
@@ -98,14 +163,24 @@ return function(this, store)
 
     constif(a.cycles)
     if context.cycles_count >= this.aura.cycles then
-        queue_remove(store, this)
+        constif(a.with_fade)
+            context.state = 3
+            U.animation_start_default(this, "out", false, store.tick_ts, false)
+        constelse
+            queue_remove(store, this)
+        constend
         return
     end
     constend
 
     constif(a.duration >= 0)
     if store.tick_ts - this.aura.ts > this.actual_duration then
-        queue_remove(store, this)
+        constif(a.with_fade)
+            context.state = 3
+            U.animation_start_default(this, "out", false, store.tick_ts, false)
+        constelse
+            queue_remove(store, this)
+        constend
         return
     end
     constend
@@ -115,7 +190,12 @@ return function(this, store)
 
         constif(a.track_source and not a.track_dead)
         if not source or (source.health and source.health.dead) then
-            queue_remove(store, this)
+            constif(a.with_fade)
+                context.state = 3
+                U.animation_start_default(this, "out", false, store.tick_ts, false)
+            constelse
+                queue_remove(store, this)
+            constend
             return
         end
         constend

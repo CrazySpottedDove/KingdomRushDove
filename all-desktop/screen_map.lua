@@ -2934,9 +2934,6 @@ local function add_level_description(parent, text)
 
 	first_paragraph_1_label.text = p_1
 
-	log.debug("Lines:\n%s", getdump(p_lines))
-	log.debug("p_1_nlines:%i", p_1_nlines)
-
 	local p2_pos = v(LEFT_MARGIN, first_paragraph_1_label.pos.y + first_paragraph_1_label:get_font_height() * p_1_nlines * line_height)
 	local first_paragraph_2_label = GGLabel:new(V.v(FULL_PARAGRAPH_WIDTH, RIGHT_PAGE_MAX_Y - p2_pos.y))
 

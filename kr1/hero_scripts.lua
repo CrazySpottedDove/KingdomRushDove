@@ -6147,7 +6147,7 @@ scripts.hero_hacksaw = {
 
 		update_hp(this)
 	end,
-	side_effect = function(this, store, attack, target)
+	side_effect = function(this, store, damage, target)
 		local fx = E:create_entity("fx_coin_jump")
 
 		fx.pos.x, fx.pos.y = target.pos.x, target.pos.y
@@ -8518,7 +8518,7 @@ scripts.hero_alien = {
 	end
 }
 
-function scripts.hero_alien.vibroblades_side_effect(this, store, attack, damage)
+function scripts.hero_alien.vibroblades_side_effect(this, store, damage, target)
 	local d = E.assign_damage(this.hero.skills.vibroblades.damage_type, this.vibroblades_extra * this.unit.damage_factor, this.id, damage.target_id)
 
 	queue_damage(store, d)
@@ -13840,7 +13840,7 @@ function scripts.hero_arivan.insert(this, store)
 	return true
 end
 
-function scripts.hero_arivan.generate_stone_effect(this, store, attack, target)
+function scripts.hero_arivan.generate_stone_effect(this, store, damage, target)
 	local a = this.timed_attacks.list[2]
 	local stone_chance = 0.2
 
@@ -42321,5 +42321,484 @@ function scripts.hero_oloch_ultimate.update(this, store)
 	queue_remove(store, this)
 end
 --#endregion hero_oloch
+
+--#region hero_margosa
+
+scripts.hero_margosa = {}
+
+function scripts.hero_margosa.level_up(this, store)
+	local hl, ls = level_up_basic(this)
+
+	this.melee.attacks[1].damage_min = ls.melee_damage_min[hl]
+	this.melee.attacks[1].damage_max = ls.melee_damage_max[hl]
+
+	-- 1 熟吸蝙蝠
+	upgrade_skill(this, "bat_familiar", function(this, s)
+		local t = E:get_template(this.crow_entity)
+
+		t.custom_attack.damage_min = s.damage_min_config[s.level]
+		t.custom_attack.damage_max = s.damage_max_config[s.level]
+
+		for _, t in pairs(store.entities) do
+			if t.template_name == this.crow_entity then
+				t.custom_attack.damage_min = s.damage_min_config[s.level]
+				t.custom_attack.damage_max = s.damage_max_config[s.level]
+			end
+		end
+	end)
+
+	-- 2 绝望迷雾
+	upgrade_skill(this, "myst_form", function(this, s)
+		this.timed_attacks.list[1].disabled = nil
+
+		local e = E:get_template("mod_dmg_fog_hero_margosa")
+
+		e.dps.damage_min = s.damage_config[s.level]
+		e.dps.damage_max = s.damage_config[s.level]
+
+		local e2 = E:get_template("mod_err_fog_hero_margosa")
+		e2.inflicted_damage_factor = s.damage_factor[s.level]
+		e2.modifier.level = s.level
+	end)
+
+	-- 3 黑暗呼唤
+	upgrade_skill(this, "dark_call", function(this, s)
+		this.timed_attacks.list[2].disabled = nil
+
+		local e = E:get_template("mod_hero_margosa_stun")
+
+		e.modifier.duration = s.duration[s.level]
+	end)
+
+	-- 4 吸血鬼之触
+	upgrade_skill(this, "vampiric_touch", function(this, s)
+		if not this.is_buffed then
+			this.vampiric_touch_rate = s.track_rate[s.level]
+		end
+	end)
+
+	-- 大招
+	upgrade_skill(this, "ultimate", function(this, s)
+		this.ultimate.disabled = nil
+		this.ultimate.duration = s.duration[s.level]
+	end)
+
+	update_hp(this)
+end
+
+function scripts.hero_margosa.melee_side_effect(this, store, damage, target)
+	local value = U.predict_damage(target, damage)
+	U.heal(this, value * this.vampiric_touch_rate)
+end
+
+function scripts.hero_margosa.update(this, store)
+	local h = this.health
+	local am = this.timed_attacks.list[1]
+	local ad = this.timed_attacks.list[2]
+	local ultimate = this.ultimate
+	local skill, brk, sta
+
+	local function go_buffed()
+		U.heal_with_overflow(this, this.health.hp_max, 2)
+		this.melee.attacks[1].cooldown = 0.8
+		this.unit.damage_factor = this.unit.damage_factor * ultimate.damage_factor
+		this.vampiric_touch_rate = 0.8
+		U.speed_mul_self(this, ultimate.speed_factor)
+		this.is_buffed = true
+
+		U.y_animation_play(this, "toBeast", nil, store.tick_ts, 1)
+		U.y_animation_wait(this, 1)
+
+		this.render.sprites[1].prefix = "hero_lady_margosa_beast"
+		U.change_health_bar_offset_run_time(this.health_bar, this.health_bar.offset_buffed.y)
+	end
+
+	local function go_normal()
+		U.heal(this, this.health.hp_max)
+		this.melee.attacks[1].cooldown = 1.2
+		this.unit.damage_factor = this.unit.damage_factor / ultimate.damage_factor
+		this.vampiric_touch_rate = this.hero.skills.vampiric_touch.track_rate[this.hero.skills.vampiric_touch.level]
+		U.speed_div_self(this, ultimate.speed_factor)
+		this.is_buffed = false
+
+		U.y_animation_play(this, "toMargosa", nil, store.tick_ts, 1)
+		U.y_animation_wait(this, 1)
+
+		this.render.sprites[1].prefix = "hero_lady_margosa"
+		U.change_health_bar_offset_run_time(this.health_bar, this.health_bar.offset_normal.y)
+	end
+
+	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+
+	this.health_bar.hidden = false
+
+	do
+		local e = E:create_entity(this.crow_entity)
+
+		e.pos = V.vclone(this.pos)
+		e.idle_pos = V.v(this.pos.x + 20, this.pos.y + 6)
+		e.owner = this
+
+		queue_insert(store, e)
+	end
+
+	while true do
+		if h.dead then
+			if not this.is_buffed and ready_to_use_skill(ultimate, store, this.unit.cooldown_factor) then
+				h.dead = false
+				go_buffed()
+			elseif this.is_buffed then
+				h.dead = false
+				go_normal()
+			else
+				SU.y_hero_death_and_respawn(store, this)
+			end
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			while this.nav_rally.new do
+				local r = this.nav_rally
+				local tw = this.treewalk
+				local force_treewalk = false
+
+				for _, p in ipairs(this.nav_grid.waypoints) do
+					if GR:cell_is(p.x, p.y, bor(TERRAIN_WATER, TERRAIN_SHALLOW, TERRAIN_NOWALK)) then
+						force_treewalk = true
+
+						break
+					end
+				end
+
+				if (force_treewalk or V.dist(this.pos.x, this.pos.y, r.pos.x, r.pos.y) > tw.min_distance) and not this.is_buffed then
+					r.new = false
+					U.unblock_target(store, this)
+					U.bans_add(this.vis, F_ALL)
+					this.health.immune_to = F_ALL
+
+					U.speed_mul_self(this, tw.speed_factor)
+					this.unit.marker_hidden = true
+					this.health_bar.hidden = true
+
+					S:queue(this.sound_events.change_rally_point)
+					U.y_animation_play(this, tw.animations[1], nil, store.tick_ts)
+					U.y_animation_wait(this, 1)
+
+					::label_45283_0::
+
+					local dest = r.pos
+					local n = this.nav_grid
+
+					while not V.veq(this.pos, dest) do
+						local w = table.remove(n.waypoints, 1) or dest
+
+						U.set_destination(this, w)
+
+						local an, af = U.animation_name_facing_point(this, tw.animations[2], this.motion.dest)
+
+						U.animation_start(this, an, af, store.tick_ts, true)
+
+						while not this.motion.arrived do
+							if r.new then
+								r.new = false
+
+								goto label_45283_0
+							end
+
+							U.walk(this, store.tick_length)
+							coroutine.yield()
+
+							this.motion.speed.x, this.motion.speed.y = 0, 0
+						end
+					end
+
+					SU.hide_modifiers(store, this, true)
+					U.y_animation_play(this, tw.animations[3], nil, store.tick_ts)
+					U.y_animation_wait(this, 1)
+					SU.show_modifiers(store, this, true)
+
+					U.speed_div_self(this, tw.speed_factor)
+					U.bans_remove(this.vis, F_ALL)
+					this.health.immune_to = 0
+					this.unit.marker_hidden = nil
+					this.health_bar.hidden = nil
+				elseif SU.y_hero_new_rally(store, this) then
+					goto label_4590_1
+				end
+			end
+
+			if SU.hero_level_up(store, this) and not this.is_buffed then
+				U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+			end
+
+			-- 2技能 绝望迷雾
+			skill = this.hero.skills.myst_form
+
+			if not this.is_buffed and ready_to_use_skill(am, store, this.unit.cooldown_factor) then
+				if U.find_first_enemy_in_range_filter_off(this.pos, am.max_range, am.vis_flags, am.vis_bans) then
+					local start_ts = store.tick_ts
+					U.animation_start(this, am.animation, nil, store.tick_ts, false, 1)
+					S:queue(am.sound)
+
+					if SU.y_hero_wait(store, this, am.spawn_time) then
+						goto label_4590_1
+					end
+
+					am.ts = start_ts
+					SU.hero_gain_xp_from_skill(this, skill)
+
+					local inner_fx_radius = 35
+
+					for i = 1, 6 do
+						local r = inner_fx_radius
+						local pos = U.point_on_ellipse(this.pos, r, 2 * math.pi * (6 - i) / 6)
+
+						if GR:cell_is(pos.x, pos.y, TERRAIN_WATER) or P:valid_node_nearby(pos.x, pos.y, 1) and not GR:cell_is(pos.x, pos.y, TERRAIN_CLIFF) then
+							local e = E:create_entity(am.entity)
+
+							e.pos = pos
+							e.aura.source_id = this.id
+							e.aura.ts = store.tick_ts
+
+							queue_insert(store, e)
+						end
+					end
+
+					if SU.y_hero_animation_wait(this) then
+						goto label_4590_1
+					end
+				else
+					am.ts = am.ts + 0.1
+				end
+			end
+
+			-- 3技能 黑暗呼唤
+			skill = this.hero.skills.dark_call
+
+			if not this.is_buffed and ready_to_use_skill(ad, store, this.unit.cooldown_factor) then
+				local target = U.detect_foremost_enemy_between_range_filter_off(this.pos, 150, 99999, ad.vis_flags, ad.vis_bans)
+				if target then
+					local start_ts = store.tick_ts
+					U.animation_start_once_specific_no_flip(this, ad.animation, store.tick_ts, 1)
+					if SU.y_hero_wait(store, this, ad.cast_time) then
+						goto label_4590_1
+					end
+
+					local expect_pos = U.melee_slot_enemy_position(target, this, 1)
+					local nearest = P:nearest_nodes(expect_pos.x, expect_pos.y, nil, nil, true)
+
+					if nearest[1] then
+						local pi, spi, ni = unpack(nearest[1])
+						local nav_path = E:clone_c("nav_path")
+						nav_path.pi = pi
+						nav_path.spi = spi
+						nav_path.ni = ni
+						local target_reset_nearest = P:nearest_node_with_nav_path_info(target.pos, nav_path)
+						target.nav_path.pi = pi
+						target.nav_path.spi = spi
+						target.nav_path.ni = target_reset_nearest
+						local offset = P:nodes_to_goal(pi, spi, ni) - P:nodes_to_goal(target.nav_path.pi, target.nav_path.spi, target.nav_path.ni)
+						local mod_teleport = E:create_entity(ad.mod_teleport)
+						mod_teleport.nodes_offset = -offset
+						mod_teleport.modifier.target_id = target.id
+						mod_teleport.modifier.source_id = this.id
+
+						queue_insert(store, mod_teleport)
+						SU.hero_gain_xp_from_skill(this, skill)
+						ad.ts = start_ts
+					else
+						ad.ts = ad.ts + 4
+					end
+
+					if SU.y_hero_animation_wait(this) then
+						goto label_4590_1
+					end
+				else
+					ad.ts = ad.ts + 0.1
+				end
+			end
+
+			-- 大招 野兽形态
+			skill = this.hero.skills.ultimate
+
+			if this.is_buffed then
+				if store.tick_ts - ultimate.ts >= ultimate.duration then
+					go_normal()
+				end
+			else
+				if ready_to_use_skill(ultimate, store, this.unit.cooldown_factor) then
+					local t = find_target_at_critical_moment(this, store, ultimate.range, nil, nil, F_FLYING)
+					if t then
+						go_buffed()
+						ultimate.ts = store.tick_ts
+						SU.hero_gain_xp_from_skill(this, skill)
+					else
+						ultimate.ts = ultimate.ts + 1
+					end
+				end
+			end
+
+			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+			if brk or sta ~= A_NO_TARGET then
+			-- block empty
+			elseif SU.soldier_go_back_step(store, this) then
+			-- block empty
+			else
+				SU.soldier_idle(store, this)
+				SU.soldier_regen(store, this)
+			end
+		end
+
+		::label_4590_1::
+
+		coroutine.yield()
+	end
+end
+
+scripts.mod_hero_margosa_teleport = {}
+
+function scripts.mod_hero_margosa_teleport.remove(this, store)
+	local target = store.entities[this.modifier.target_id]
+
+	if target then
+		target.health.ignore_damage = false
+
+		SU.stun_dec(target)
+
+		local mod_stun = E:create_entity(this.end_mod)
+
+		mod_stun.modifier.target_id = target.id
+		mod_stun.modifier.source_id = this.modifier.source_id
+
+		queue_insert(store, mod_stun)
+	end
+
+	return true
+end
+
+scripts.shadow_bat = {}
+
+function scripts.shadow_bat.update(this, store)
+	local sp = this.render.sprites[1]
+	local fm = this.force_motion
+	local ca = this.custom_attack
+	local dest = V.vclone(this.idle_pos)
+	local mytarget
+	local chasing
+	local seek_ts = 0
+	local seek_interval = 0.2
+	local hit_range = 6
+
+	this.dead = false
+
+	U.y_animation_play(this, "summon", nil, store.tick_ts, 1)
+	U.y_animation_wait(this, 1)
+
+	local function force_move_step(dest, max_speed, ramp_radius)
+		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
+		local dist = V.len(dx, dy)
+		local df = not (ramp_radius and not (ramp_radius < dist)) and 1 or math.max(dist / ramp_radius, 0.1)
+
+		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(495, V.mul(10 * df, dx, dy)))
+		fm.v.x, fm.v.y = V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y))
+		fm.v.x, fm.v.y = V.trim(max_speed, fm.v.x, fm.v.y)
+		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
+		fm.a.x, fm.a.y = V.mul(-0.05 / store.tick_length, fm.v.x, fm.v.y)
+		sp.flip_x = this.pos.x < dest.x
+	end
+
+	-- 直线匀速飞向目标（不走弹簧-阻尼，确保实际速度达到 flight_speed_busy）
+	local function fly_to(pos, max_speed)
+		local dx, dy = V.sub(pos.x, pos.y, this.pos.x, this.pos.y)
+		local dist = V.len(dx, dy)
+
+		if dist > 0 then
+			local step = math.min(dist, max_speed * store.tick_length)
+
+			this.pos.x, this.pos.y = this.pos.x + dx / dist * step, this.pos.y + dy / dist * step
+		end
+
+		fm.a.x, fm.a.y = 0, 0
+		fm.v.x, fm.v.y = 0, 0
+		sp.flip_x = this.pos.x < pos.x
+	end
+
+	sp.offset.y = this.flight_height
+
+	while true do
+		this.idle_pos = V.vclone(this.owner.pos)
+
+		if (this.owner.health.dead or this.owner.health.hp == 0) and this.dead == false then
+			U.y_animation_play(this, "death", nil, store.tick_ts, 1)
+			U.y_animation_wait(this, 1)
+
+			this.dead = true
+		end
+
+		if not this.owner.health.dead and this.dead == true then
+			U.y_animation_play(this, "summon", nil, store.tick_ts, 1)
+			U.y_animation_wait(this, 1)
+
+			this.dead = false
+		end
+
+		if not this.dead then
+			-- 目标失效：目标死亡，或已离开主人索敌范围，立即放弃换目标
+			if mytarget and (mytarget.health.dead or V.dist(this.owner.pos.x, this.owner.pos.y, mytarget.pos.x, mytarget.pos.y) > ca.range) then
+				mytarget = nil
+			end
+
+			-- 无目标：只在主人周围索敌；空索敌时降低频率（不每帧查询）
+			if not mytarget and store.tick_ts - seek_ts >= seek_interval then
+				seek_ts = store.tick_ts
+				mytarget = U.find_nearest_enemy(store, this.owner.pos, 0, ca.range, ca.vis_flags, ca.vis_bans)
+			end
+
+			if mytarget then
+				local target = mytarget
+				local dist = V.dist(this.pos.x, this.pos.y, target.pos.x, target.pos.y)
+
+				if dist > hit_range then
+					if not chasing then
+						chasing = true
+						U.animation_start(this, "idle", nil, store.tick_ts, true)
+					end
+
+					fly_to(target.pos, this.flight_speed_busy)
+				elseif ready_to_attack(ca, store, this.owner.unit.cooldown_factor) then
+					U.animation_start(this, "attack", nil, store.tick_ts, true)
+
+					local d = E.assign_damage(ca.damage_type, math.random(ca.damage_min, ca.damage_max) * this.owner.unit.damage_factor, this.id, target.id)
+
+					queue_damage(store, d)
+
+					ca.ts = store.tick_ts
+					chasing = false
+
+					if this.custom_attack.sound_chance > math.random() then
+						S:queue(this.custom_attack.sound)
+					end
+				else
+					-- 已贴近目标但冷却未好：跟随目标保持贴近
+					fly_to(target.pos, this.flight_speed_busy * 0.4)
+				end
+			else
+				chasing = false
+
+				if V.dist(dest.x, dest.y, this.pos.x, this.pos.y) < 10 then
+					U.animation_start(this, "idle", nil, store.tick_ts, true)
+					dest = U.point_on_ellipse(this.idle_pos, 30, U.frandom(0, 2 * math.pi))
+				end
+
+				force_move_step(dest, this.flight_speed_idle, this.ramp_dist_idle)
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+--#endregion hero_margosa
 
 return scripts

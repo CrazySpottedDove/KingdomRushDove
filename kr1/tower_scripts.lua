@@ -87,7 +87,7 @@ end
 
 scripts.soldier_templar = {}
 
-function scripts.soldier_templar.side_effect_1(this, store, attack, target)
+function scripts.soldier_templar.side_effect_1(this, store, damage, target)
 	this.revive.protect = this.revive.protect + 0.01
 	if target then
 		local d = E.assign_damage(DAMAGE_TRUE, math.ceil(this.health.hp_max * 0.02 * this.powers.extralife.level), this.id, target.id)
@@ -95,7 +95,7 @@ function scripts.soldier_templar.side_effect_1(this, store, attack, target)
 	end
 end
 
-function scripts.soldier_templar.side_effect_2(this, store, attack, target)
+function scripts.soldier_templar.side_effect_2(this, store, damage, target)
 	this.revive.protect = this.revive.protect + 0.01
 	if target then
 		target.health.damage_factor = target.health.damage_factor * 1.035
@@ -4046,6 +4046,10 @@ function scripts.soldier_assassin.on_damage(this, store, damage)
 		end
 	end
 	return true
+end
+
+function scripts.soldier_assassin.instakill_effect(this, store, damage, target)
+	U.heal(this, this.heatlh.hp_max)
 end
 
 -- 大树
@@ -16593,18 +16597,6 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store)
 			U.unblock_target(store, this)
 			U.set_destination(this, r.pos)
 
-			-- if r.delay_max then
-			-- 	U.animation_start_default(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
-
-			-- 	local index = this.soldier.tower_soldier_idx or 0
-			-- 	local tower = store.entities[this.soldier.tower_id]
-			-- 	local total = tower and tower.barrack.max_soldiers or 1
-
-			-- 	if SU.y_soldier_wait(store, this, index / total * r.delay_max) then
-			-- 		goto label_972_0
-			-- 	end
-			-- end
-
 			local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
 
 			U.animation_start_default(this, an, af, store.tick_ts, true)
@@ -16633,20 +16625,6 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store)
 
 					break
 				end
-
-				-- if r._first_time then
-				-- 	r._first_time = false
-
-				-- 	local target = U.find_foremost_enemy_in_range_filter_on(r.center, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF), function(e)
-				-- 		return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
-				-- 	end)
-
-				-- 	if target then
-				-- 		out = false
-
-				-- 		break
-				-- 	end
-				-- end
 
 				U.walk(this, store.tick_length)
 				coroutine.yield()
@@ -16677,8 +16655,7 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store)
 				SU.damage_inc(this, (a1.damage_min_config[warrior_level] + a1.damage_max_config[warrior_level] - a1.damage_min_config[current_level] - a1.damage_max_config[current_level]) / 2)
 
 				this.health.hp_max = tower.powers.skill_warrior.hp_max[this.level]
-
-				this.health.hp = this.health.hp_max
+				U.heal(this, this.health.hp_max)
 				current_level = warrior_level
 			end
 		end
@@ -16728,11 +16705,7 @@ function scripts.soldier_tower_barrel_skill_warrior.update(this, store)
 			this.health.death_finished_ts = store.tick_ts
 
 			if this.ui then
-				-- if IS_TRILOGY then
-				-- this.ui.can_click = not this.unit.hide_after_death
-				-- else
 				this.ui.can_click = this.ui.can_click and not this.unit.hide_after_death
-				-- end
 				this.ui.z = -1
 			end
 
