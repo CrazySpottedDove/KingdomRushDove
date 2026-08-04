@@ -4217,7 +4217,7 @@ function SU.y_enemy_melee_attacks(store, this, target)
 							return not e.health.dead and band(e.vis.flags, ma.vis_bans) == 0 and band(e.vis.bans, ma.vis_flags) == 0 and U.is_inside_ellipse(e.pos, hit_pos, ma.damage_radius) and (not ma.fn_filter or ma.fn_filter(this, store, ma, e))
 						end)
 						local first_damage
-						local max_count = ma.count and math.max(#target, ma.count) or #targets
+						local max_count = ma.count and math.min(#targets, ma.count) or #targets
 
 						for i = 1, max_count do
 							local e = targets[i]

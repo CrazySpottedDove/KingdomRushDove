@@ -22262,7 +22262,7 @@ tt.hero.skills.ultimate.xp_level_steps = {
 	[7] = 3,
 	[10] = 4
 }
-tt.hero.skills.ultimate.xp_gain = {160, 320, 480}
+tt.hero.skills.ultimate.xp_gain = {160, 320, 480, 640}
 tt.hero.skills.ultimate.duration = {11, 14, 17, 20}
 tt.health.dead_lifetime = 15
 tt.health_bar.offset = v(0, 36)
@@ -22340,7 +22340,7 @@ tt.ultimate = {
 	disabled = true,
 	range = 150,
 	duration = tt.hero.skills.ultimate.duration[1],
-	damage_factor = 2.5,
+	damage_factor = 2.75,
 	speed_factor = 1.5
 }
 tt.vis.bans = bor(tt.vis.bans, F_POISON)
