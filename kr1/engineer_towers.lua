@@ -2316,7 +2316,7 @@ tt = E:register_t("tower_rotten_forest", "tower")
 E:add_comps(tt, "attacks", "powers", "auras")
 tt.tower.type = "rotten_forest"
 tt.tower.level = 1
-tt.tower.price = 320
+tt.tower.price = 315
 tt.tower.menu_offset = v(0, 19)
 tt.aura1 = nil
 tt.aura2 = nil
@@ -2333,7 +2333,6 @@ tt.sound_events.insert = "RottenForestTaunt"
 tt.ui.click_rect = r(-37, -6, 74, 62)
 tt.attacks.list[1] = E:clone_c("custom_attack")
 tt.attacks.list[1].cooldown = 23
-tt.attacks.list[1].cast_time = 0.6
 tt.attacks.list[1].entity = "soldier_rotten_forest_tree"
 tt.attacks.list[1].spawn_offset = v(25, 0)
 tt.attacks.list[1].disabled = true
@@ -2442,7 +2441,7 @@ tt.aura.radius = 186 -- 跟随防御塔
 tt.aura.vis_flags = bor(F_MOD)
 tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
 tt.aura.duration = 1e+99
-tt.aura.cycle_time = 0.4
+tt.aura.cycle_time = 0.45
 tt.main_script.insert = scripts.aura_tower_rotten_forest_spike_burst.insert
 tt.main_script.update = scripts.aura_tower_rotten_forest_spike_burst.update
 
@@ -2452,16 +2451,16 @@ tt.aura.radius = 186 -- 跟随防御塔
 tt.aura.vis_flags = bor(F_MOD)
 tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
 tt.aura.duration = 1e+99
-tt.aura.cycle_time = 0.4
+tt.aura.cycle_time = 0.45
 tt.main_script.insert = scripts.aura_tower_rotten_forest_fog.insert
 tt.main_script.update = scripts.aura_tower_rotten_forest_fog.update
 
 tt = E:register_t("mod_tower_rotten_forest_fog_slow", "mod_slow")
-tt.modifier.duration = 0.4 + fts(1)
+tt.modifier.duration = 0.45 + fts(1)
 tt.slow.factor = 0.9
 
 tt = E:register_t("mod_tower_rotten_forest_fog_miss", "modifier")
-tt.modifier.duration = 0.4 + fts(1)
+tt.modifier.duration = 0.45 + fts(1)
 tt.modifier.vis_flags = F_MOD
 tt.modifier.level = 1
 tt.inflicted_damage_factor = 0.75
@@ -2470,18 +2469,18 @@ tt.main_script.remove = scripts.mod_damage_factors.remove
 tt.main_script.update = scripts.mod_track_target.update
 
 tt = E:register_t("mod_tower_rotten_forest_burst_slow", "mod_slow")
-tt.modifier.duration = 0.4 + fts(1)
+tt.modifier.duration = 0.45 + fts(1)
 tt.slow.factor = 0.7
 
 tt = E:register_t("mod_tower_rotten_forest_burst_damage", "modifier")
 E:add_comps(tt, "dps")
-tt.modifier.duration = 0.4
+tt.modifier.duration = 0.45
 tt.modifier.vis_bans = bor(F_FLYING)
 tt.modifier.allows_duplicates = true
-tt.dps.damage_every = 0.4
-tt.dps.damage_min = 7
-tt.dps.damage_max = 7
-tt.dps.damage_type = DAMAGE_PHYSICAL
+tt.dps.damage_every = 0.45
+tt.dps.damage_min = 4
+tt.dps.damage_max = 4
+tt.dps.damage_type = DAMAGE_STAB
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
 
