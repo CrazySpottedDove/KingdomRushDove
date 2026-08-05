@@ -50661,7 +50661,7 @@ return {
 	},
 	hero_lady_margosa_beast_attack_effect_run = {
 		prefix = "hero_lady_margosa_beast_attack_effect",
-		from = 1,
+		from = 19,
 		to = 32
 	},
 	hero_lady_margosa_myst_form_effect_in = {
