@@ -42803,6 +42803,14 @@ function scripts.shadow_bat.update(this, store)
 
 					queue_damage(store, d)
 
+					if target.unit.blood_color ~= BLOOD_NONE then
+						local fx = E:create_entity(ca.hit_fx)
+						fx.pos:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+						fx.render.sprites[1].ts = store.tick_ts
+						fx.render.sprites[1].name = target.unit.blood_color
+						queue_insert(store, fx)
+					end
+
 					ca.ts = store.tick_ts
 					chasing = false
 

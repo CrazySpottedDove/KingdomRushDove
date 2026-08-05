@@ -22434,7 +22434,7 @@ tt.custom_attack.max_range = 10
 tt.custom_attack.range = 165
 tt.custom_attack.damage_min = 2
 tt.custom_attack.damage_max = 2
-tt.custom_attack.hit_fx = "fx_hero_lady_margosa_bat_hit_blood_red"
+tt.custom_attack.hit_fx = "fx_hero_lady_margosa_bat_hit_blood"
 tt.custom_attack.cooldown = 0.5
 tt.custom_attack.damage_type = DAMAGE_PHYSICAL
 tt.custom_attack.vis_flags = F_RANGED
@@ -22453,5 +22453,6 @@ tt.render.sprites[2].name = "decal_flying_shadow"
 tt.render.sprites[2].offset = v(0, 0)
 tt.owner = nil
 
-tt = RT("fx_hero_lady_margosa_bat_hit_blood_red", "fx")
-tt.render.sprites[1].name = "hero_lady_margosa_bat_hit_blood_red"
+tt = RT("fx_hero_lady_margosa_bat_hit_blood", "fx")
+tt.render.sprites[1].prefix = "hero_lady_margosa_bat_hit_blood"
+tt.render.sprites[1].name = "red"

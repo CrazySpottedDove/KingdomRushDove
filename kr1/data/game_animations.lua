@@ -50649,7 +50649,7 @@ return {
 		from = 1,
 		to = 8
 	},
-	hero_lady_margosa_bat_hit_blood_sparks = {
+	hero_lady_margosa_bat_hit_blood_orange = {
 		prefix = "hero_lady_margosa_bat_sparks",
 		from = 1,
 		to = 8
@@ -50658,6 +50658,11 @@ return {
 		prefix = "hero_lady_margosa_bat_blood",
 		from = 1,
 		to = 8
+	},
+	hero_lady_margosa_bat_hit_blood_gray = {
+		prefix = "bleeding_small_gray",
+		from = 1,
+		to = 12
 	},
 	hero_lady_margosa_beast_attack_effect_run = {
 		prefix = "hero_lady_margosa_beast_attack_effect",
