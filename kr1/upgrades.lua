@@ -943,7 +943,7 @@ upgrades.list = {{
 	},
 	archer_fly_killer = {
 		damage_factor = 1.08,
-		damage_factor_fly = 1.2,
+		damage_factor_fly = 1.25,
 		class = "archers",
 		price = 3,
 		level = 5,
@@ -986,9 +986,9 @@ upgrades.list = {{
 		level = 4,
 		icon = 11
 	},
-	barrack_mobilize = {
+	barrack_skill_master = {
 		class = "barracks",
-		price_factor = 0.8,
+		price_factor = 0.9,
 		price = 3,
 		level = 5,
 		icon = 7,
@@ -1018,7 +1018,7 @@ upgrades.list = {{
 		icon = 19
 	},
 	mage_rune_analysis = {
-		cost_factor = 0.95,
+		cost_factor = 0.94,
 		class = "mages",
 		price = 2,
 		level = 3,
@@ -1031,9 +1031,10 @@ upgrades.list = {{
 		level = 4,
 		icon = 22
 	},
-	mage_spell_reach_2 = {
+	mage_harmony = {
 		from_kr = 2,
-		range_factor = 1.1,
+		range_factor = 1.06,
+		damage_factor = 1.06,
 		class = "mages",
 		price = 3,
 		level = 5,
@@ -1061,8 +1062,8 @@ upgrades.list = {{
 	},
 	engineer_emergency_expansion = {
 		class = "engineers",
-		cost_factor = 0.8,
-		damage_factor = 0.8875,
+		cost_factor = 0.75,
+		damage_factor = 0.88,
 		price = 2,
 		level = 3,
 		icon = 25
@@ -1125,10 +1126,10 @@ upgrades.list = {{
 		level = 5,
 		from_kr = 3
 	},
-	thunder_level_6 = {
+	thunder_typhoon = {
 		from_kr = 3,
 		price = 4,
-		icon = 10,
+		icon = 21,
 		class = "rain",
 		level = 6
 	},
@@ -1896,8 +1897,26 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("barrack_mobilize")
 	if u then
-		for _, n in ipairs(GS.barrack_towers) do
+		for _, n in ipairs(barrack_towers) do
 			T(n).tower.price = math.floor(T(n).tower.price * u.price_factor)
+		end
+	end
+
+	u = self:get_upgrade("barrack_skill_master")
+	if u then
+		for _, n in ipairs(barrack_towers) do
+			T(n).tower.price = math.floor(T(n).tower.price * u.price_factor)
+			local powers = T(n).powers
+			if powers then
+				for _, p in pairs(powers) do
+					if p.price_base then
+						p.price_base = math.ceil(p.price_base * u.price_factor)
+					end
+					if p.price_inc then
+						p.price_inc = math.ceil(p.price_inc * u.price_factor)
+					end
+				end
+			end
 		end
 	end
 
@@ -2150,6 +2169,42 @@ function upgrades:patch_templates(max_level)
 		T("mod_lava_infernal_mage").dps.damage_max = T("mod_lava_infernal_mage").dps.damage_max * u.damage_factor
 		T("mod_wicked_sister_poison").dps.damage_min = T("mod_wicked_sister_poison").dps.damage_min * u.damage_factor
 		T("mod_wicked_sister_poison").dps.damage_max = T("mod_wicked_sister_poison").dps.damage_max * u.damage_factor
+	end
+
+	u = self:get_upgrade("mage_harmony")
+
+	if u then
+		for _, n in ipairs(mage_towers) do
+			T(n).attacks.range = T(n).attacks.range * u.range_factor
+		end
+
+		for _, n in ipairs(self.mage_tower_bolts) do
+			local damage = (T(n).bullet.damage_min + T(n).bullet.damage_max) * 0.5 * u.damage_factor
+			T(n).bullet.damage_min = damage
+			T(n).bullet.damage_max = damage
+		end
+
+		local damage = (T("mod_ray_arcane").dps.damage_min + T("mod_ray_arcane").dps.damage_max) * 0.5 * u.damage_factor
+		T("mod_ray_arcane").dps.damage_min = damage
+		T("mod_ray_arcane").dps.damage_max = damage
+
+		damage = (T("mod_pixie_pickpocket").modifier.damage_min + T("mod_pixie_pickpocket").modifier.damage_max) * 0.5 * u.damage_factor
+		T("mod_pixie_pickpocket").modifier.damage_min = damage
+		T("mod_pixie_pickpocket").modifier.damage_max = damage
+
+		local d = T("tower_arcane_wizard_ray_disintegrate_mod").boss_damage_config
+
+		for k, v in pairs(d) do
+			d[k] = v * u.damage_factor
+		end
+
+		damage = (T("mod_lava_infernal_mage").dps.damage_min + T("mod_lava_infernal_mage").dps.damage_max) * 0.5 * u.damage_factor
+		T("mod_lava_infernal_mage").dps.damage_min = damage
+		T("mod_lava_infernal_mage").dps.damage_max = damage
+
+		damage = (T("mod_wicked_sister_poison").dps.damage_min + T("mod_wicked_sister_poison").dps.damage_max) * 0.5 * u.damage_factor
+		T("mod_wicked_sister_poison").dps.damage_min = damage
+		T("mod_wicked_sister_poison").dps.damage_max = damage
 	end
 
 	u = self:get_upgrade("mage_slow_curse")
@@ -2547,6 +2602,14 @@ function upgrades:patch_templates(max_level)
 			end
 			return true
 		end
+	end
+
+	u = self:get_upgrade("thunder_typhoon")
+
+	if u then
+		T("power_thunder_control").thunders[1].count = 10
+		T("power_thunder_control").thunders[2].count = 10
+		T("power_thunder_control").slow.factor = 0.25
 	end
 
 	if self.levels.reinforcements > 0 then
