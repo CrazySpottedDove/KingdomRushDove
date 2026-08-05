@@ -22444,7 +22444,6 @@ tt.custom_attack.sound = "ShadowArcherCrowAttack"
 tt.render.sprites[1].prefix = "hero_lady_margosa_bat"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].draw_order = 2
--- tt.render.sprites[1].loop_forced = true
 tt.render.sprites[1].sort_y_offset = -12
 tt.render.sprites[1].scale = v(-0.7, 0.7)
 tt.render.sprites[2] = CC("sprite")

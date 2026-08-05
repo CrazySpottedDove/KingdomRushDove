@@ -873,6 +873,14 @@ function scripts.soldier_barbarian.on_power_upgrade(this, power_name, power)
 		this.melee.attacks[2].damage_type = DAMAGE_RUDE
 		this.ranged.attacks[1].bullet = "axe_barbarian_rude"
 	end
+
+	local a = this.melee.attacks[2]
+	if not a.damage_min_base then
+		a.damage_min_base = a.damage_min
+		a.damage_max_base = a.damage_max
+	end
+	a.damage_min = a.damage_min_base + power.level * this.melee.attacks[1].damage_inc * 0.5
+	a.damage_max = a.damage_max_base + power.level * this.melee.attacks[1].damage_inc * 0.5
 end
 
 scripts.soldier_sasquash = {}
