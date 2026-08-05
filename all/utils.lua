@@ -1975,33 +1975,33 @@ function U.predict_damage(entity, damage)
 		damage.hooks[i](entity, damage, protection)
 	end
 
-	local rounded_damage = damage.value
+	local dvalue = damage.value
 
 	if band(damage.damage_type, DAMAGE_STAB) ~= 0 then
-		rounded_damage = rounded_damage * 2
+		dvalue = dvalue * 2
 	end
 
 	if band(damage.damage_type, bor(DAMAGE_MAGICAL, DAMAGE_MAGICAL_EXPLOSION)) ~= 0 then
-		rounded_damage = rounded_damage * entity.health.damage_factor_magical
+		dvalue = dvalue * entity.health.damage_factor_magical
 	end
 
 	if band(damage.damage_type, DAMAGE_ELECTRICAL) ~= 0 and entity.health.damage_factor_electrical then
-		rounded_damage = rounded_damage * entity.health.damage_factor_electrical
+		dvalue = dvalue * entity.health.damage_factor_electrical
 	end
 
 	-- 该类攻击对护甲高的敌人伤害更高
 	local against_extra = 0
 	if band(damage.damage_type, DAMAGE_AGAINST_ARMOR) ~= 0 or band(damage.damage_type, DAMAGE_AGAINST_MAGIC_ARMOR) ~= 0 then
-		against_extra = rounded_damage * protection * protection * 2 * entity.health.damage_factor
+		against_extra = dvalue * protection * protection * 2 * entity.health.damage_factor
 	end
 
-	rounded_damage = km.round(rounded_damage * entity.health.damage_factor * (1 - protection) + against_extra)
+	dvalue = dvalue * entity.health.damage_factor * (1 - protection) + against_extra
 
-	if band(damage.damage_type, DAMAGE_NO_KILL) ~= 0 and entity.health and rounded_damage >= entity.health.hp then
-		rounded_damage = entity.health.hp - 1
+	if band(damage.damage_type, DAMAGE_NO_KILL) ~= 0 and entity.health and dvalue >= entity.health.hp then
+		dvalue = entity.health.hp - 1
 	end
 
-	return rounded_damage
+	return dvalue
 end
 
 ---检查是否已见过
