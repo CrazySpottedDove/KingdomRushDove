@@ -1202,7 +1202,7 @@ tt.attacks.list[1] = CC("custom_attack")
 tt.attacks.list[1].cooldown = 3
 tt.attacks.list[1].vis_flags = bor(F_RANGED)
 tt.attacks.list[1].vis_bans = 0
-tt.attacks.range = 240
+tt.attacks.range = 245
 tt.info.fn = scripts.tower_faerie_dragon.get_info
 tt.info.portrait = "kr3_info_portraits_towers_0018"
 tt.main_script.update = scripts.tower_faerie_dragon.update
@@ -1216,8 +1216,8 @@ tt.powers.more_dragons.changed = true
 tt.powers.more_dragons.max_level = 3
 tt.powers.more_dragons.idle_offsets = {vec_2(14, 3), vec_2(-12, 7), vec_2(28, -3)}
 tt.powers.improve_shot = CC("power")
-tt.powers.improve_shot.price_base = 200
-tt.powers.improve_shot.price_inc = 200
+tt.powers.improve_shot.price_base = 175
+tt.powers.improve_shot.price_inc = 175
 tt.powers.improve_shot.max_level = 2
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_mage_%04i"
@@ -1259,7 +1259,7 @@ anchor_y = 0.5
 image_y = 30
 tt.flight_height = 80
 tt.flight_speed_idle = 80
-tt.flight_speed_busy = 120
+tt.flight_speed_busy = 150
 tt.ramp_dist_idle = 80
 tt.ramp_dist_busy = 80
 tt.idle_pos = nil
@@ -1273,7 +1273,6 @@ tt.render.sprites[1].anchor.y = anchor_y
 tt.render.sprites[1].prefix = "faerie_dragon"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].draw_order = 2
-tt.render.sprites[1].loop_forced = true
 tt.render.sprites[1].sort_y_offset = -12
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
@@ -1290,7 +1289,7 @@ tt.bullet.damage_max = 100
 tt.bullet.min_speed = 90
 tt.bullet.max_speed = 180
 tt.bullet.hit_fx = "fx_bolt_faerie_dragon"
-tt.bullet.mod = "mod_faerie_dragon"
+tt.bullet.mods = {"mod_faerie_dragon_l0"}
 tt.sound_events.insert = "ElvesFaeryDragonAttack"
 
 tt = RT("fx_bolt_faerie_dragon", "fx")
@@ -1299,9 +1298,9 @@ tt.render.sprites[1].name = "faerie_dragon_proy_hit"
 tt = RT("fx_faerie_dragon_shoot", "fx")
 tt.render.sprites[1].name = "faerie_dragon_shoot_fx"
 
-tt = RT("mod_faerie_dragon", "mod_freeze")
+tt = RT("mod_faerie_dragon_l0", "mod_freeze")
 AC(tt, "render")
-tt.modifier.duration = 0.9
+tt.modifier.duration = 1
 tt.modifier.vis_bans = F_BOSS
 tt.modifier.vis_flags = bor(F_STUN, F_MOD)
 tt.render.sprites[1].prefix = "mod_faerie_dragon"
@@ -1314,13 +1313,10 @@ tt.custom_animations = {"start", "end"}
 tt.freeze_decal_name = "decal_faerie_dragon_freeze_enemy"
 tt.sound_events.insert = "ElvesFaeryDragonAttackCristalization"
 
-tt = RT("mod_faerie_dragon_l0", "mod_faerie_dragon")
-tt.modifier.duration = 0.9
-
-tt = RT("mod_faerie_dragon_l1", "mod_faerie_dragon")
+tt = RT("mod_faerie_dragon_l1", "mod_faerie_dragon_l0")
 tt.modifier.duration = 1.25
 
-tt = RT("mod_faerie_dragon_l2", "mod_faerie_dragon")
+tt = RT("mod_faerie_dragon_l2", "mod_faerie_dragon_l0")
 tt.modifier.duration = 1.5
 
 -- 侏儒花园

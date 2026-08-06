@@ -19539,7 +19539,7 @@ end
 
 scripts.aura_tower_faerie_dragon = {
 	update = function(this, store)
-		local last_ts = store.tick_ts
+		local a = this.aura
 
 		while true do
 			local source = store.entities[this.aura.source_id]
@@ -19550,22 +19550,24 @@ scripts.aura_tower_faerie_dragon = {
 				return
 			end
 
-			if store.tick_ts - last_ts >= source.attacks.list[1].cooldown then
-				last_ts = store.tick_ts
+			if store.tick_ts - a.ts >= source.attacks.list[1].cooldown * source.tower.cooldown_factor then
+				a.ts = store.tick_ts
 
-				local targets = U.find_enemies_in_range_filter_off(this.pos, source.attacks.range, bor(F_MOD, F_STUN), F_BOSS)
+				local targets = U.find_enemies_in_range_filter_off(this.pos, source.attacks.range, bor(F_MOD, F_STUN), F_NONE)
 
 				if targets then
 					for _, target in ipairs(targets) do
 						if math.random() < source.aura_rate then
-							local mod = E:create_entity(this.aura.mod)
+							if band(target.vis.flags, F_BOSS) == 0 then
+								local mod = E:create_entity(a.mod)
 
-							mod.modifier.target_id = target.id
-							mod.modifier.source_id = this.aura.source_id
+								mod.modifier.target_id = target.id
+								mod.modifier.source_id = a.source_id
 
-							queue_insert(store, mod)
+								queue_insert(store, mod)
+							end
 
-							local d = E.assign_damage(this.aura.damage_type, this.aura.damage * source.tower.damage_factor, source.id, target.id)
+							local d = E.assign_damage(a.damage_type, a.damage * source.tower.damage_factor, source.id, target.id)
 
 							queue_damage(store, d)
 						end
@@ -19663,12 +19665,8 @@ function scripts.faerie_dragon.update(this, store)
 					b.bullet.target_id = target.id
 					b.bullet.source_id = this.id
 
-					if not b.bullet.mods then
-						b.bullet.mods = {b.mods}
-					end
-
 					for i, modname in ipairs(b.bullet.mods) do
-						if modname == "mod_faerie_dragon" then
+						if modname == "mod_faerie_dragon_l0" then
 							b.bullet.mods[i] = "mod_faerie_dragon_l" .. this.owner.powers.improve_shot.level
 
 							break

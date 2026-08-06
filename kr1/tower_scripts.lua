@@ -3045,7 +3045,7 @@ scripts.tower_faerie_dragon = {
 
 		aura.pos = vclone(this.pos)
 		aura.aura.source_id = this.id
-		aura.aura.ts = store.tick_ts
+		aura.aura.ts = store.tick_ts + math.random(0, 30) / 30
 
 		queue_insert(store, aura)
 
