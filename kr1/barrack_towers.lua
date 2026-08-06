@@ -309,7 +309,6 @@ tt.ui.click_rect = r(-40, -10, 80, 90)
 tt.powers.bleed = CC("power")
 tt.powers.bleed.price_base = 100
 tt.powers.bleed.price_inc = 100
-
 tt.powers.cripple = CC("power")
 tt.powers.cripple.price_base = 200
 tt.powers.cripple.price_inc = 125
@@ -328,7 +327,6 @@ tt.melee.attacks[1].damage_max = 50
 tt.melee.attacks[1].damage_min = 25
 tt.melee.attacks[1].cooldown = 1
 tt.melee.attacks[1].hit_time = fts(5)
-tt.melee.attacks[1].track_damage = true
 tt.melee.attacks[1].damage_type = bor(DAMAGE_PHYSICAL, DAMAGE_NO_DODGE)
 tt.melee.attacks[1].power_name = "bleed"
 tt.melee.range = 60
@@ -819,11 +817,6 @@ tt.tower.price = 185
 tt.barrack.max_soldiers = 4
 tt.mercenary = true
 tt.info.portrait = "kr2_info_portraits_towers_0013"
-tt.info.fn = function()
-	local tpl = E:get_template("tower_barrack_mercenaries")
-
-	return scripts.tower_barrack.get_info(tpl)
-end
 tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.remove = scripts.tower_barrack.remove
 tt.main_script.update = scripts.tower_barrack_mercenaries.update
@@ -1068,7 +1061,6 @@ tt.powers.swirling = CC("power")
 tt.powers.swirling.price_base = 250
 tt.powers.swirling.price_inc = 150
 tt.powers.swirling.max_level = 1
-
 tt.render.sprites[2].name = "barracks_towers_layer1_0076"
 tt.render.sprites[3].prefix = "tower_blade_door"
 tt.sound_events.change_rally_point = "ElvesBarrackBladesingerTaunt"
@@ -1546,7 +1538,6 @@ tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"running"}
 tt.render.sprites[1].prefix = "soldier_ewok"
 tt.soldier.melee_slot_offset = vec_2(5, 0)
--- tt.sound_events.insert = "ElvesEwokTaunt"
 tt.ui.click_rect = r(-10, -2, 20, 25)
 tt.unit.hit_offset = vec_2(0, 12)
 tt.unit.mod_offset = vec_2(0, 10)
@@ -1579,8 +1570,6 @@ tt.info.portrait = "kr3_info_portraits_towers_0019"
 tt.render.sprites[1].name = "babyAshbite_tower_layer1_0001"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].offset = vec_2(0, 6)
--- tt.render.sprites[1].hidden = true
--- tt.render.sprites[1].hover_off_hidden = true
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].name = "babyAshbite_tower_layer1_0001"
 tt.render.sprites[2].animated = false
