@@ -15429,22 +15429,8 @@ function scripts.bolt_elves.update(this, store)
 	if target and not target.health.dead then
 		local d = SU.create_bullet_damage(b, target.id, this.id)
 
-		-- local u = UP:get_upgrade("mage_el_empowerment")
-		-- if u and not this.upgrades_disabled and math.random() < u.chance then
-		--     d.value = km.round(d.value * u.damage_factor)
-		--     if b.pop_mage_el_empowerment then
-		--         d.pop = b.pop_mage_el_empowerment
-		--         d.pop_conds = DR_DAMAGE
-		--     end
-		-- end
 		queue_damage(store, d)
 
-		-- if this.alter_reality_chance and UP:has_upgrade("mage_el_alter_reality") and math.random() <
-		--     this.alter_reality_chance then
-		--     local mod = E:create_entity(this.alter_reality_mod)
-		--     mod.modifier.target_id = target.id
-		--     queue_insert(store, mod)
-		-- end
 		if this.bullet.mods then
 			for _, mod_name in pairs(this.bullet.mods) do
 				local m = E:create_entity(mod_name)

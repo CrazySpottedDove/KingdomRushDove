@@ -953,8 +953,6 @@ tt = RT("high_elven_sentinel_extra", "high_elven_sentinel")
 tt.main_script.update = scripts.high_elven_sentinel_extra.update
 
 tt = RT("bolt_high_elven_weak", "bolt_elves")
-tt.alter_reality_chance = 0.03
-tt.alter_reality_mod = "mod_teleport_high_elven"
 tt.bullet.damage_max = 6
 tt.bullet.damage_min = 4
 tt.bullet.hit_fx = "fx_bolt_high_elven_weak_hit"
@@ -966,8 +964,6 @@ tt.render.sprites[1].prefix = "bolt_high_elven_weak"
 tt.render.sprites[1].scale = vec_2(0.8, 0.8)
 
 tt = RT("bolt_high_elven_strong", "bolt_elves")
-tt.alter_reality_chance = 0.03
-tt.alter_reality_mod = "mod_teleport_high_elven"
 tt.bullet.align_with_trajectory = true
 tt.bullet.damage_max = 28
 tt.bullet.damage_min = 17
@@ -1158,8 +1154,6 @@ end
 
 tt = RT("bolt_wild_magus", "bolt")
 AC(tt, "tween")
-tt.alter_reality_chance = 0.01
-tt.alter_reality_mod = "mod_teleport_wild_magus"
 tt.render.sprites[1].prefix = "bolt_wild_magus"
 tt.bullet.damage_max = 34
 tt.bullet.damage_min = 26
@@ -1193,26 +1187,7 @@ tt.render.sprites[1].sort_y_offset = -1
 tt.render.sprites[1].z = Z_OBJECTS
 tt.main_script.update = scripts.mod_eldritch.update
 tt.modifier.remove_banned = true
-tt.modifier.bans = {
-	"mod_faerie_dragon_l0",
-	"mod_faerie_dragon_l1",
-	"mod_faerie_dragon_l2",
-	"mod_arivan_freeze",
-	"mod_arivan_ultimate_freeze",
-	"mod_crystal_arcane_freeze",
-	"mod_crystal_unstable_teleport",
-	"mod_metropolis_portal",
-	"mod_teleport_mage",
-	"mod_teleport_wild_magus",
-	"mod_teleport_high_elven",
-	"mod_teleport_faustus",
-	"mod_pixie_teleport",
-	"mod_teleport_scroll",
-	"mod_teleport_ainyl",
-	"mod_twilight_avenger_last_service",
-	"mod_lynn_ultimate",
-	"mod_shield_ainyl"
-}
+tt.modifier.bans = {"mod_metropolis_portal", "mod_teleport_scroll", "mod_teleport_ainyl", "mod_twilight_avenger_last_service", "mod_shield_ainyl"}
 tt.modifier.vis_flags = bor(F_MOD, F_EAT)
 tt.damage_levels = {80, 180, 260}
 tt.damage_radius = 87.5

@@ -4911,8 +4911,6 @@ tt = RT("fx_paralyzing_tree_3", "fx_paralyzing_tree_1")
 tt.render.sprites[1].name = "fx_paralyzing_tree_3"
 
 tt = RT("bolt_elves_1", "bolt_elves")
-tt.alter_reality_chance = 0.1
-tt.alter_reality_mod = "mod_teleport_mage"
 tt.bullet.damage_min = 4
 tt.bullet.damage_max = 6
 tt.bullet.particles_name = "ps_bolt_elves_1"
@@ -5516,26 +5514,6 @@ tt.aura.radius = 195
 tt.aura.cycles_count = 1
 tt.aura.vis_bans = bor(F_BOSS, F_FRIEND)
 tt.aura.vis_flags = bor(F_RANGED, F_MOD)
-
-tt = RT("mod_teleport_mage", "mod_teleport")
-tt.modifier.vis_flags = bor(F_MOD, F_TELEPORT)
-tt.modifier.vis_bans = bor(F_BOSS)
-tt.max_times_applied = 2
-tt.nodes_offset = -20
-tt.nodeslimit = 10
-tt.delay_start = fts(2)
-tt.hold_time = 0.34
-tt.delay_end = fts(2)
-tt.fx_start = "fx_teleport_violet"
-tt.fx_end = "fx_teleport_violet"
-
-tt = RT("mod_teleport_wild_magus", "mod_teleport_mage")
-tt.fx_start = "fx_teleport_orange"
-tt.fx_end = "fx_teleport_orange"
-
-tt = RT("mod_teleport_high_elven", "mod_teleport_mage")
-tt.fx_start = "fx_teleport_blue"
-tt.fx_end = "fx_teleport_blue"
 
 tt = RT("mod_blood_elves", "mod_blood")
 tt.modifier.allows_duplicates = true
@@ -6153,7 +6131,12 @@ tt.render.sprites[1].z = Z_DECALS
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}, {"this.modifier.duration-(10/30)", 255}, {"this.modifier.duration", 0}}
 
-tt = RT("mod_pixie_teleport", "mod_teleport_mage")
+tt = RT("mod_pixie_teleport", "mod_teleport")
+tt.modifier.vis_flags = bor(F_MOD, F_TELEPORT)
+tt.modifier.vis_bans = bor(F_BOSS)
+tt.nodeslimit = 10
+tt.delay_start = fts(2)
+tt.delay_end = fts(2)
 tt.max_times_applied = nil
 tt.hold_time = fts(10)
 tt.nodes_offset = -50
