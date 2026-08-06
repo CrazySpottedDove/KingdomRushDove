@@ -7007,6 +7007,16 @@ function scripts.soldier_tower_demon_pit.update(this, store)
 		S:queue(this.sound_events.raise)
 	end
 
+	do
+		local target = SU.soldier_pick_melee_target(store, this)
+		if target then
+			U.block_enemy(store, this, target)
+			local slot_pos, _, _ = U.melee_slot_position(this, target)
+			U.set_destination(this, slot_pos)
+			this.nav_rally.pos:copy(slot_pos)
+		end
+	end
+
 	this.health_bar.hidden = true
 	U.y_animation_play(this, "landing", nil, store.tick_ts, 1)
 
@@ -7185,6 +7195,16 @@ function scripts.big_guy_tower_demon_pit.update(this, store)
 
 	if this.sound_events and this.sound_events.raise then
 		S:queue(this.sound_events.raise)
+	end
+
+	do
+		local target = SU.soldier_pick_melee_target(store, this)
+		if target then
+			U.block_enemy(store, this, target)
+			local slot_pos, _, _ = U.melee_slot_position(this, target)
+			U.set_destination(this, slot_pos)
+			this.nav_rally.pos:copy(slot_pos)
+		end
 	end
 
 	this.health_bar.hidden = true
