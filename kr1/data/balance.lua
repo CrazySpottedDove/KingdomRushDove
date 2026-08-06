@@ -5664,12 +5664,11 @@ local towers = {
 		}
 	},
 	demon_pit = {
-		price = {80, 140, 220, 300},
+		price = {80, 140, 220, 290},
 		basic_attack = {
 			armor = 0,
 			max_speed = 90,
 			duration = 10,
-			regen_health = 1,
 			range = {160, 160, 160, 180},
 			cooldown = {4, 4, 4, 4},
 			hp_max = {12, 16, 20, 25},
@@ -5681,8 +5680,8 @@ local towers = {
 			},
 			stun_duration = 0.4,
 			damage_radius = 45,
-			damage_min = 42,
-			damage_max = 70,
+			damage_min = 48,
+			damage_max = 76,
 			damage_type = DAMAGE_PHYSICAL
 		},
 		big_guy = {
@@ -5718,8 +5717,8 @@ local towers = {
 			damage_type = DAMAGE_TRUE
 		},
 		demon_explosion = {
-			damage_min = {2, 5, 8, 15},
-			damage_max = {4, 8, 12, 20},
+			damage_min = {2, 5, 8, 25},
+			damage_max = {4, 8, 12, 30},
 			range = {45, 45, 45, 45},
 			damage_type = DAMAGE_EXPLOSION,
 			stun_duration = {0.25, 0.4, 0.6, 0.8}

@@ -1729,12 +1729,21 @@ function upgrades:patch_templates(max_level)
 	local barrack_soldiers = self.barrack_soldiers
 	local barrack_towers = self.towers_with_barrack
 
+	local function apply_soldier_health_factor(health_factor)
+		for _, n in ipairs(soldiers) do
+			T(n).health.hp_max = T(n).health.hp_max * health_factor
+		end
+		-- 特殊处理
+		local tt = E:get_template("big_guy_tower_demon_pit_lvl4")
+		for i = 1, #tt.health_level do
+			tt.health_level[i] = tt.health_level[i] * health_factor
+		end
+	end
+
 	u = self:get_upgrade("barrack_survival")
 
 	if u then
-		for _, n in ipairs(soldiers) do
-			T(n).health.hp_max = km.round(T(n).health.hp_max * u.health_factor)
-		end
+		apply_soldier_health_factor(u.health_factor)
 	end
 
 	u = self:get_upgrade("barrack_bodies")
@@ -1815,9 +1824,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("barrack_survival_2")
 
 	if u then
-		for _, n in ipairs(soldiers) do
-			T(n).health.hp_max = km.round(T(n).health.hp_max * u.health_factor)
-		end
+		apply_soldier_health_factor(u.health_factor)
 	end
 
 	u = self:get_upgrade("barrack_barbed_armor")
