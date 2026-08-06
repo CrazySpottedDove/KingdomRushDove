@@ -979,8 +979,8 @@ upgrades.list = {{
 	},
 	mage_harmony = {
 		from_kr = 2,
-		range_factor = 1.06,
-		damage_factor = 1.06,
+		range_factor = 1.07,
+		damage_factor = 1.07,
 		class = "mages",
 		price = 3,
 		level = 5,
