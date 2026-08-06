@@ -1807,6 +1807,10 @@ function upgrades:patch_templates(max_level)
 		for _, n in ipairs(soldiers) do
 			T(n).health.armor = T(n).health.armor + u.armor_increase
 		end
+		local tt = T("soldier_frankenstein")
+		for i = 1, #tt.health.armor_lvls do
+			tt.health.armor_lvls[i] = tt.health.armor_lvls[i] + u.armor_increase
+		end
 	end
 
 	u = self:get_upgrade("barrack_improved_deployment")

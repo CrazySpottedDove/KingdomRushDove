@@ -629,14 +629,12 @@ tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "HalloweenTesla_layer1_0001"
 tt.render.sprites[2].offset = vec_2(0, 40)
-
 for i = 1, 4 do
 	tt.render.sprites[i + 2] = CC("sprite")
 	tt.render.sprites[i + 2].prefix = "tower_frankenstein_l" .. i + 1
 	tt.render.sprites[i + 2].name = "idle"
 	tt.render.sprites[i + 2].offset = vec_2(0, 40)
 end
-
 for i = 1, 2 do
 	tt.render.sprites[i + 6] = CC("sprite")
 	tt.render.sprites[i + 6].prefix = "tower_frankenstein_charge_l" .. i
@@ -644,7 +642,6 @@ for i = 1, 2 do
 	tt.render.sprites[i + 6].offset = vec_2(0, 40)
 	tt.render.sprites[i + 6].loop = false
 end
-
 tt.render.sprites[9] = CC("sprite")
 tt.render.sprites[9].prefix = "tower_frankenstein_drcrazy"
 tt.render.sprites[9].name = "idle"
@@ -655,7 +652,6 @@ tt.render.sprites[10].animated = false
 tt.render.sprites[10].name = "Halloween_Frankie_lvl1_0051"
 tt.render.sprites[10].offset = vec_2(2, 10)
 tt.render.sprites[10].flip_x = true
-
 for i = 1, 2 do
 	tt.render.sprites[i + 10] = CC("sprite")
 	tt.render.sprites[i + 10].prefix = "tower_frankenstein_helmet_l" .. i
@@ -663,7 +659,6 @@ for i = 1, 2 do
 	tt.render.sprites[i + 10].offset = vec_2(0, 40)
 	tt.render.sprites[i + 10].loop = false
 end
-
 tt.sound_events.change_rally_point = "HWFrankensteinTaunt"
 tt.sound_events.insert = "HWFrankensteinUpgradeLightning"
 
@@ -741,8 +736,8 @@ tt.melee.attacks[1].vis_flags = F_BLOCK
 tt.melee.attacks[2] = CC("area_attack")
 tt.melee.attacks[2].animation = "pound"
 tt.melee.attacks[2].cooldown = 6
-tt.melee.attacks[2].damage_max = 150
-tt.melee.attacks[2].damage_min = 150
+tt.melee.attacks[2].damage_max = 160
+tt.melee.attacks[2].damage_min = 160
 tt.melee.attacks[2].damage_radius = 65
 tt.melee.attacks[2].damage_type = DAMAGE_ELECTRICAL
 tt.melee.attacks[2].disabled = true
