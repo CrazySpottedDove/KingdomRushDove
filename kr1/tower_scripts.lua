@@ -5178,7 +5178,7 @@ function scripts.mod_druid_sylvan.update(this, store)
 
 	if not target or not target.health or target.health.dead then
 		if target then
-			local new_target = U.find_first_enemy_in_range_filter_on(target.pos, a.max_range, a.vis_flags, a.vis_bans, function(v)
+			local new_target = U.detect_foremost_enemy_in_range_filter_on(target.pos, a.max_range, a.vis_flags, a.vis_bans, function(v)
 				return not U.has_modifier(store, v, "mod_druid_sylvan")
 			end)
 
@@ -5260,7 +5260,7 @@ function scripts.mod_druid_sylvan.update(this, store)
 		end
 
 		if target.health.dead then
-			local new_target = U.find_first_enemy_in_range_filter_on(target.pos, a.max_range, a.vis_flags, a.vis_bans, function(v)
+			local new_target = U.detect_foremost_enemy_in_range_filter_on(target.pos, a.max_range, a.vis_flags, a.vis_bans, function(v)
 				return not U.has_modifier(store, v, "mod_druid_sylvan")
 			end)
 

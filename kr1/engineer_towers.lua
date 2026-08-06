@@ -800,9 +800,10 @@ tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.update = scripts.tower_druid.update
 tt.main_script.remove = scripts.tower_druid.remove
 tt.attacks.range = 190
+-- 射击共 22 帧，召唤石头共 28 帧，实际攻速 fts(50)
 tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].bullet = "rock_druid"
-tt.attacks.list[1].cooldown = 1.4
+tt.attacks.list[1].cooldown = fts(50)
 tt.attacks.list[1].shoot_time = fts(9)
 tt.attacks.list[1].max_loaded_bullets = 3
 tt.attacks.list[1].storage_offsets = {vec_2(-25, 77), vec_2(34, 72), vec_2(5, 99)}
