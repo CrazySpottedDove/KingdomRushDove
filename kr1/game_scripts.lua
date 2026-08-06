@@ -71628,13 +71628,13 @@ scripts.controller_mage_purge_field = {
 		end
 
 		local last_ts = store.tick_ts
-		local last_damage_factor_inc = 0.15
+		local last_damage_factor_inc = 0.14
 		target.tower.damage_factor = target.tower.damage_factor + last_damage_factor_inc
 		while store.entities[this.target_id] do
 			if store.tick_ts - last_ts >= 1 then
 				last_ts = store.tick_ts
 				local enemies = U.find_enemies_in_range_filter_off(tpos(target), target.attacks.range, F_NONE, F_NONE)
-				local new_damage_factor_inc = 0.15 + math.min((enemies and #enemies or 0) * 0.01, 0.3)
+				local new_damage_factor_inc = 0.14 + math.min((enemies and #enemies or 0) * 0.01, 0.3)
 				target.tower.damage_factor = target.tower.damage_factor + new_damage_factor_inc - last_damage_factor_inc
 				last_damage_factor_inc = new_damage_factor_inc
 			end

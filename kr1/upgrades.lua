@@ -153,7 +153,7 @@ upgrades.list = {{
 		icon = 15,
 		price = 4,
 		level = 6,
-		damage_factors = {1.2, 1.23, 1.26, 1.29, 1.32, 1.34, 1.36, 1.38, 1.40}
+		damage_factors = {1.18, 1.21, 1.24, 1.27, 1.29, 1.31, 1.33, 1.35, 1.36}
 	},
 	engineer_concentrated_fire = {
 		damage_factor = 1.25,
@@ -436,7 +436,7 @@ upgrades.list = {{
 		icon = 15,
 		price = 4,
 		level = 6,
-		damage_factors = {1.2, 1.23, 1.26, 1.29, 1.32, 1.34, 1.36, 1.38, 1.40}
+		damage_factors = {1.18, 1.21, 1.24, 1.27, 1.29, 1.31, 1.33, 1.35, 1.36}
 	},
 	engineer_range_finder = {
 		from_kr = 2,
@@ -721,7 +721,7 @@ upgrades.list = {{
 		icon = 15,
 		price = 4,
 		level = 6,
-		damage_factors = {1.2, 1.23, 1.26, 1.29, 1.32, 1.34, 1.36, 1.38, 1.40}
+		damage_factors = {1.18, 1.21, 1.24, 1.27, 1.29, 1.31, 1.33, 1.35, 1.36}
 	},
 	engineer_concentrated_fire = {
 		damage_factor = 1.25,
