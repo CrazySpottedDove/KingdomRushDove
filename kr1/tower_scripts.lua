@@ -26792,12 +26792,17 @@ function scripts.soldier_elves_harasser.update(this, store, script)
 				this.render.sprites[1].hidden = true
 				this.render.sprites[2].hidden = true
 				U.replace_blocker(store, this, unit)
-				U.y_wait_unconditional(store, this.health.dead_lifetime)
-				queue_remove(store, this)
+
+				if not U.y_wait_conditional(store, this.health.dead_lifetime, function()
+					return not this.health.dead
+				end) then
+					queue_remove(store, this)
+					return
+				end
 			else
 				SU.y_soldier_death(store, this)
+				return
 			end
-			return
 		end
 
 		if this.unit.is_stunned then

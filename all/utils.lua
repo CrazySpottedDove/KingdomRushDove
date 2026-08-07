@@ -337,6 +337,18 @@ function U.y_wait_unconditional(store, time)
 	while store.tick_ts < stop_ts do
 		coroutine.yield()
 	end
+end
+
+function U.y_wait_conditional(store, time, break_func)
+	local stop_ts = store.tick_ts + time
+
+	while store.tick_ts < stop_ts do
+		if break_func(store, time) then
+			return true
+		end
+
+		coroutine.yield()
+	end
 
 	return false
 end
