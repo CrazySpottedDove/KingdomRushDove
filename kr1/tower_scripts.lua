@@ -16235,12 +16235,6 @@ end
 -- 酒桶 BEGIN
 scripts.tower_barrel = {}
 
-function scripts.tower_barrel.insert(this, store)
-	this.barrack.rally_pos = V.vclone(this.tower.default_rally_pos)
-
-	return true
-end
-
 function scripts.tower_barrel.update(this, store)
 	local a = this.attacks
 	local ba = a.list[1]
@@ -16440,6 +16434,22 @@ function scripts.tower_barrel.update(this, store)
 		coroutine.yield()
 	end
 end
+
+scripts.bullet_tower_barrel_lvl4 = {
+	remove = function(this, store)
+		local soldiers = U.find_soldiers_in_range(store.soldiers, this.pos, 0, this.bullet.damage_radius, F_MOD, F_NONE)
+		if soldiers then
+			for _, soldier in ipairs(soldiers) do
+				local m = E:create_entity("mod_bullet_tower_barrel_lvl4_soldier")
+				m.modifier.source_id = this.id
+				m.modifier.target_id = soldier.id
+				queue_insert(store, m)
+			end
+		end
+
+		return true
+	end
+}
 
 scripts.aura_bullet_tower_barrel_skill_barrel = {}
 

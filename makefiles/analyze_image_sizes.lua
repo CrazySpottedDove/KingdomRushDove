@@ -66,13 +66,7 @@ local function extract_sizes_from_lua(lua_file)
 			sizes[asset.a_name] = {
 				width = asset.a_size[1],
 				height = asset.a_size[2],
-				ref_scale = ref_scale,
-				-- 原始尺寸：a_size × ref_scale
-				expected_original_w = asset.a_size[1] * ref_scale,
-				expected_original_h = asset.a_size[2] * ref_scale,
-				-- AI 放大尺寸：a_size × ref_scale × 2
-				expected_enlarged_w = asset.a_size[1] * ref_scale * 2,
-				expected_enlarged_h = asset.a_size[2] * ref_scale * 2
+				ref_scale = ref_scale
 			}
 		end
 	end
@@ -114,8 +108,8 @@ for entry in lfs.dir(IMAGES_DIR) do
 
 			if size_info then
 				-- 检查是否需要缩放
-				-- 如果实际 = a_size × ref_scale × 2（AI 放大过）→ 需要缩放
-				local is_enlarged = (actual_w == size_info.expected_enlarged_w and actual_h == size_info.expected_enlarged_h)
+				-- 只要 a_size × ref_scale <= 实际尺寸 × 0.5（图像被放大过一半以上），就需要缩放
+				local is_enlarged = (size_info.width * size_info.ref_scale <= actual_w * 0.5 and size_info.height * size_info.ref_scale <= actual_h * 0.5)
 
 				resize_map[filename] = is_enlarged and 1 or 0
 			else

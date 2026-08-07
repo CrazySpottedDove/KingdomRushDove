@@ -1788,7 +1788,7 @@ tt.tower.price = b.price[1]
 tt.tower.menu_offset = vec_2(0, 18)
 tt.info.portrait = "kr5_portraits_towers_0017"
 tt.info.enc_icon = 1
-tt.main_script.insert = scripts.tower_barrel.insert
+tt.main_script.insert = scripts.tower_barrack.insert
 tt.main_script.update = scripts.tower_barrel.update
 tt.attacks.range = b.basic_attack.range[4]
 tt.attacks.attack_delay_on_spawn = fts(10)
@@ -1940,6 +1940,7 @@ tt.bullet.pop_chance = 0.5
 tt.bullet.particles_name = "ps_bullet_tower_barrel"
 tt.bullet.align_with_trajectory = false
 tt.bullet.rotation_speed = 0
+tt.main_script.remove = scripts.bullet_tower_barrel_lvl4.remove
 tt.sound_events.hit_water = nil
 tt.sound_events.hit = "TowerBarrelBasicAttackImpact"
 tt.sound_events.insert = nil
@@ -1950,6 +1951,36 @@ tt.render.sprites[1].hidden = false
 tt.bullet.damage_max = b.damage_max[4]
 tt.bullet.damage_min = b.damage_min[4]
 tt.bullet.mod = "mod_bullet_tower_barrel_lvl4"
+
+tt = RT("mod_bullet_tower_barrel_lvl4_soldier", "modifier")
+AC(tt, "render")
+b = balance.towers.barrel.basic_attack.buff
+tt.modifier.vis_flags = F_MOD
+tt.main_script.insert = scripts.mod_damage_factors.insert
+tt.main_script.remove = scripts.mod_damage_factors.remove
+tt.main_script.update = scripts.mod_track_target.update
+tt.render.sprites[1].name = "barrel_tower_projectile_mod_idle"
+tt.render.sprites[1].draw_order = DO_MOD_FX
+tt.render.sprites[1].size_names = {"barrel_tower_projectile_mod_idle", "barrel_tower_projectile_mod_idle", "barrel_tower_projectile_mod_big_idle"}
+tt.inflicted_damage_factor = b.damage_factor
+tt.modifier.duration = b.duration
+
+tt = RT("mod_bullet_tower_barrel_lvl4", "modifier")
+b = balance.towers.barrel.basic_attack.debuff
+AC(tt, "render")
+tt.modifier.vis_flags = F_MOD
+tt.modifier.type = MOD_TYPE_POISON
+tt.modifier.resets_same = true
+tt.modifier.replaces_lower = true
+tt.main_script.insert = scripts.mod_damage_factors.insert
+tt.main_script.remove = scripts.mod_damage_factors.remove
+tt.main_script.update = scripts.mod_track_target.update
+tt.render.sprites[1].name = "barrel_tower_projectile_mod_idle"
+tt.render.sprites[1].draw_order = DO_MOD_FX
+tt.render.sprites[1].size_names = {"barrel_tower_projectile_mod_idle", "barrel_tower_projectile_mod_idle", "barrel_tower_projectile_mod_big_idle"}
+tt.modifier.level = 4
+tt.modifier.duration = b.duration[4]
+tt.inflicted_damage_factor = b.damage_factor[4]
 
 tt = RT("bullet_tower_barrel_skill_barrel", "bomb")
 local b = balance.towers.barrel.skill_barrel
@@ -2020,23 +2051,6 @@ tt.sid_barrel = 2
 
 tt = RT("mod_tower_barrel_skill_barrel_attract", "mod_attract")
 tt.attract_radius = 45
-
-tt = RT("mod_bullet_tower_barrel_lvl4", "modifier")
-b = balance.towers.barrel.basic_attack.debuff
-AC(tt, "render")
-tt.modifier.vis_flags = F_MOD
-tt.modifier.type = MOD_TYPE_POISON
-tt.modifier.resets_same = true
-tt.modifier.replaces_lower = true
-tt.main_script.insert = scripts.mod_damage_factors.insert
-tt.main_script.remove = scripts.mod_damage_factors.remove
-tt.main_script.update = scripts.mod_track_target.update
-tt.render.sprites[1].name = "barrel_tower_projectile_mod_idle"
-tt.render.sprites[1].draw_order = DO_MOD_FX
-tt.render.sprites[1].size_names = {"barrel_tower_projectile_mod_idle", "barrel_tower_projectile_mod_idle", "barrel_tower_projectile_mod_big_idle"}
-tt.modifier.level = 4
-tt.modifier.duration = b.duration[4]
-tt.inflicted_damage_factor = b.damage_factor[4]
 
 tt = RT("mod_tower_barrel_skill_barrel_poison", "mod_poison")
 b = balance.towers.barrel.skill_barrel.poison

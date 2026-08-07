@@ -5953,6 +5953,10 @@ local towers = {
 			debuff = {
 				damage_factor = {0.5, 0.5, 0.5, 0.5},
 				duration = {3, 3, 3, 3}
+			},
+			buff = {
+				damage_factor = 1.25,
+				duration = 3
 			}
 		},
 		skill_warrior = {
