@@ -99,6 +99,14 @@ function M.register(sys)
 
 		store.selected_hero = slot.heroes.selected
 		UP:patch_templates(store.level.max_upgrade_level or GS.max_upgrade_level)
+
+		-- 防护：避免某些不合适的插件破坏存档中的科技。这表现为 user_power_1 未正确设置具体模板
+		if E:get_template("user_power_1").template_name == "user_power_1" then
+			slot.upgrade_list_id = 1
+			UP:patch_templates(store.level.max_upgrade_level or GS.max_upgrade_level)
+			storage:save_slot(slot, nil, true)
+		end
+
 		E:patch_config(configer.config())
 
 		if store.level.init then
