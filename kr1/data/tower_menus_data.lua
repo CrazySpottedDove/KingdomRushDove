@@ -1494,8 +1494,8 @@ return {
 		action_arg = "soldier_sasquash",
 		image = "main_icons_0017",
 		place = 5,
-		tt_title = _("SPECIAL_SASQUASH_NAME"),
-		tt_desc = _("SPECIAL_SASQUASH_DESCRIPTION")
+		tt_title = _("TOWER_SASQUASH_NAME"),
+		tt_desc = _("TOWER_SASQUASH_DESCRIPTION")
 	}), tpl.rally}},
 	sunray = {{M(tpl.upgrade_power, {
 		no_upgrade_lights = true,
@@ -2005,8 +2005,8 @@ return {
 		action_arg = "tower_ewok",
 		image = "main_icons_0015",
 		place = 5,
-		tt_title = _("ELVES_EWOK_TOWER_BROKEN_NAME"),
-		tt_desc = _("ELVES_EWOK_TOWER_BROKEN_DESCRIPTION")
+		tt_title = _("ELVES_EWOK_NAME"),
+		tt_desc = _("ELVES_EWOK_DESCRIPTION")
 	})}},
 	ewok = {{M(tpl.upgrade_power, {
 		action_arg = "armor",
@@ -2117,8 +2117,8 @@ return {
 	baby_black_dragon = {{M(tpl.buy_attack, {
 		action_arg = 1,
 		image = "kr3_main_icons_0011",
-		tt_title = _("ELVES_BABY_BERESAD_SPECIAL_NAME_1"),
-		tt_desc = _("ELVES_BABY_BERESAD_SPECIAL_DESCRIPTION_1")
+		tt_title = _("TOWER_BLACK_BABY_DRAGON_NAME"),
+		tt_desc = _("TOWER_BLACK_BABY_DRAGON_DESCRIPTION")
 	})}},
 	holder_baby_ashbite = {{M(tpl.upgrade, {
 		action_arg = "tower_baby_ashbite",
@@ -3198,9 +3198,6 @@ return {
 		}, {
 			tt_title = _("TOWER_SHADOW_ARCHER_CROW_NAME_2"),
 			tt_desc = _("TOWER_SHADOW_ARCHER_CROW_DESCRIPTION_2")
-		}, {
-			tt_title = _("TOWER_SHADOW_ARCHER_CROW_NAME_3"),
-			tt_desc = _("TOWER_SHADOW_ARCHER_CROW_DESCRIPTION_3")
 		}}
 	}), tpl.sell}},
 	bone_flingers = {{M(tpl.upgrade_power, {
@@ -3361,9 +3358,6 @@ return {
 		}, {
 			tt_title = _("TOWER_INFERNAL_MAGE_TELEPORT_NAME_2"),
 			tt_desc = _("TOWER_INFERNAL_MAGE_TELEPORT_DESCRIPTION_2")
-		}, {
-			tt_title = _("TOWER_INFERNAL_MAGE_TELEPORT_NAME_3"),
-			tt_desc = _("TOWER_INFERNAL_MAGE_TELEPORT_DESCRIPTION_3")
 		}}
 	}), tpl.sell}},
 	spirit_mausoleum = {{M(tpl.upgrade_power, {
@@ -3609,9 +3603,6 @@ return {
 		}, {
 			tt_title = _("TOWER_ROCKET_RIDERS_NITRO_NAME_2"),
 			tt_desc = _("TOWER_ROCKET_RIDERS_NITRO_DESCRIPTION_2")
-		}, {
-			tt_title = _("TOWER_ROCKET_RIDERS_NITRO_NAME_3"),
-			tt_desc = _("TOWER_ROCKET_RIDERS_NITRO_DESCRIPTION_3")
 		}}
 	}), M(tpl.upgrade_power, {
 		action_arg = "engine",
@@ -3625,9 +3616,6 @@ return {
 		}, {
 			tt_title = _("TOWER_ROCKET_RIDERS_ENGINE_NAME_2"),
 			tt_desc = _("TOWER_ROCKET_RIDERS_ENGINE_DESCRIPTION_2")
-		}, {
-			tt_title = _("TOWER_ROCKET_RIDERS_ENGINE_NAME_3"),
-			tt_desc = _("TOWER_ROCKET_RIDERS_ENGINE_DESCRIPTION_3")
 		}}
 	}), tpl.sell}},
 	grim_cemetery = {{M(tpl.upgrade_power, {
@@ -3665,9 +3653,6 @@ return {
 		}, {
 			tt_title = _("TOWER_GRIM_CEMETERY_PESTILENCE_NAME_2"),
 			tt_desc = _("TOWER_GRIM_CEMETERY_PESTILENCE_DESCRIPTION_2")
-		}, {
-			tt_title = _("TOWER_GRIM_CEMETERY_PESTILENCE_NAME_3"),
-			tt_desc = _("TOWER_GRIM_CEMETERY_PESTILENCE_DESCRIPTION_3")
 		}}
 	}), tpl.sell}},
 	balloon = {{M(tpl.upgrade_power, {
@@ -3759,9 +3744,6 @@ return {
 		tt_list = {{
 			tt_title = _("TOWER_IGNIS_ALTAR_BURNING_ELEMENTAL_NAME_1"),
 			tt_desc = _("TOWER_IGNIS_ALTAR_BURNING_ELEMENTAL_DESCRIPTION_1")
-		}, {
-			tt_title = _("TOWER_IGNIS_ALTAR_BURNING_ELEMENTAL_NAME_2"),
-			tt_desc = _("TOWER_IGNIS_ALTAR_BURNING_ELEMENTAL_DESCRIPTION_2")
 		}}
 	}), M(tpl.upgrade_power, {
 		action_arg = "single_extinction",
