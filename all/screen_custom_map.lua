@@ -65,6 +65,12 @@ local CATEGORY_FILTERS = {{
 	value = "creative"
 }}
 
+local CATEGORY_COLORS = {
+	normal = {112, 84, 32, 255},
+	challenge = {124, 40, 32, 255},
+	creative = {96, 54, 128, 255}
+}
+
 local function safe_text(v, fallback)
 	if v == nil or v == "" then
 		return fallback or ""
@@ -92,6 +98,7 @@ end
 
 local function scan_maps()
 	local maps = {}
+	local progress_data = load_progress()
 
 	for _, mod_data in ipairs(mod_db.mods_datas) do
 		local cfg = mod_data.config
@@ -130,13 +137,19 @@ local function scan_maps()
 					battle_music = type(metadata) == "table" and metadata.battle_music or nil,
 					battle_prep_music = type(metadata) == "table" and metadata.battle_prep_music or nil,
 					has_heroic = FS.getInfo(wave_root .. entry .. "_waves_heroic.lua") ~= nil,
-					has_iron = FS.getInfo(wave_root .. entry .. "_waves_iron.lua") ~= nil
+					has_iron = FS.getInfo(wave_root .. entry .. "_waves_iron.lua") ~= nil,
+					progress = type(progress_data) == "table" and progress_data.maps[entry] or {}
 				}
 			end
 		end
 	end
 
 	table.sort(maps, function(a, b)
+		local t_a = a.cfg.last_used_at or 0
+		local t_b = b.cfg.last_used_at or 0
+		if t_a ~= t_b then
+			return t_a > t_b
+		end
 		return (a.cfg.name or a.entry) < (b.cfg.name or b.entry)
 	end)
 	return maps
@@ -304,11 +317,59 @@ function CustomMapCard:initialize(map, card_w, card_h, on_select, list_view)
 	name_label.colors.text = C.title
 	name_label.fit_lines = 1
 	name_label.fit_size = true
+	name_label.text_size = v(152, 24)
 	name_label.text = safe_text(map.cfg.name, map.entry)
 	name_label.propagate_on_click = true
 	name_label.propagate_on_down = true
 	name_label.propagate_on_up = true
 	self:add_child(name_label)
+
+	local cat_label
+	local cat_color = nil
+	for _, f in ipairs(CATEGORY_FILTERS) do
+		if f.value == map.category then
+			cat_label = f.label
+			cat_color = CATEGORY_COLORS[f.value]
+			break
+		end
+	end
+	if cat_color then
+		local cat = GGLabel:new(v(80, 20))
+		cat.font_name = "h"
+		cat.font_size = 15
+		cat.text_align = "center"
+		cat.vertical_align = "middle"
+		cat.colors.text = C.meta
+		cat.fit_lines = 1
+		cat.fit_size = true
+		cat.text = cat_label
+		cat.propagate_on_click = true
+		cat.propagate_on_down = true
+		cat.propagate_on_up = true
+
+		local tw = cat:get_text_width(cat_label)
+		local pad_x = 8
+		local cat_w = math.max(tw + pad_x * 2, 20)
+		local cat_h = 20
+		local cat_block = KView:new(v(cat_w, cat_h))
+		cat_block.colors.background = cat_color
+		cat_block.shape = {
+			name = "rectangle",
+			args = {"fill", 0, 0, cat_w, cat_h, 4, 4}
+		}
+		cat_block.pos = v(card_w - 8 - cat_w, info_y + 2)
+		cat_block.propagate_on_click = true
+		cat_block.propagate_on_down = true
+		cat_block.propagate_on_up = true
+		self:add_child(cat_block)
+		self._cat_block = cat_block
+
+		cat.size = v(cat_w, cat_h)
+		cat.text_size = v(cat_w, cat_h)
+		cat.pos = v(0, 0)
+		cat_block:add_child(cat)
+		self._cat_label = cat
+	end
 
 	local author_label = GGLabel:new(v(label_w, 18))
 	author_label.pos = v(8, info_y + 26)
@@ -325,6 +386,8 @@ function CustomMapCard:initialize(map, card_w, card_h, on_select, list_view)
 	author_label.propagate_on_up = true
 	self:add_child(author_label)
 
+	self:_add_badges(info_y)
+
 	local btn_w = label_w * 0.6
 	local btn_h = 30
 	local btn = CustomMapTextButton:new(v(btn_w, btn_h), _("SELECT_CUSTOM_LEVEL"), 14)
@@ -339,6 +402,36 @@ function CustomMapCard:initialize(map, card_w, card_h, on_select, list_view)
 	end
 	self:add_child(btn)
 	self._select_btn = btn
+end
+
+function CustomMapCard:_add_badges(info_y)
+	local p = self.map.progress or {}
+	local badge_scale = 0.6
+	local badge_x_off = 26
+	local badge_fmt = "levelSelect_badges_000%i"
+	local x = 8
+	local y = info_y + 50
+
+	local function add_one(bn)
+		local b = KImageView:new(string.format(badge_fmt, bn))
+		b.scale = v(badge_scale, badge_scale)
+		b.pos = v(x, y)
+		b.propagate_on_click = true
+		b.propagate_on_down = true
+		b.propagate_on_up = true
+		self:add_child(b)
+		x = x + badge_x_off
+	end
+
+	for i = 1, 3 do
+		add_one((p.stars or 0) >= i and 1 or 2)
+	end
+	if self.map.has_heroic then
+		add_one(p[GAME_MODE_HEROIC] and 3 or 4)
+	end
+	if self.map.has_iron then
+		add_one(p[GAME_MODE_IRON] and 5 or 6)
+	end
 end
 
 function CustomMapCard:replace_placeholder_with_thumb(thumb)
@@ -1082,6 +1175,18 @@ function CustomLevelSelectView:start_game()
 	local mode = self._selected_mode
 	local difficulty = self._diff_btn and self._diff_btn:get_difficulty() or DIFFICULTY_NORMAL
 
+	if map.base then
+		local mod_paths = require("mod_paths")
+		local cfg = mod_paths.load_lua_table(map.base .. "/config.lua")
+		if cfg then
+			cfg.last_used_at = os.time()
+			mod_paths.write_lua_table(map.base .. "/config.lua", cfg)
+			if map.cfg then
+				map.cfg.last_used_at = cfg.last_used_at
+			end
+		end
+	end
+
 	self._on_start({
 		next_item_name = "game",
 		level_mode = mode,
@@ -1314,6 +1419,7 @@ return {
 	BOTTOM_MARGIN = BOTTOM_MARGIN,
 	C = C,
 	CATEGORY_FILTERS = CATEGORY_FILTERS,
+	CATEGORY_COLORS = CATEGORY_COLORS,
 
 	-- Utilities
 	safe_text = safe_text,
