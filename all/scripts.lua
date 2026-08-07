@@ -1475,6 +1475,22 @@ function scripts.hero_basic.insert(this, store)
 		this.ranged.order = U.attack_order(this.ranged.attacks)
 	end
 
+	if this.auras then
+		for i = 1, #this.auras.list do
+			local a = this.auras.list[i]
+			if a.cooldown == 0 then
+				local e = E:create_entity(a.name)
+
+				e.pos.x = this.pos.x
+				e.pos.y = this.pos.y
+				e.aura.source_id = this.id
+				e.aura.ts = store.tick_ts
+
+				queue_insert(store, e)
+			end
+		end
+	end
+
 	return true
 end
 

@@ -4994,20 +4994,20 @@ scripts.hero_giant = {
 
 		update_hp(this)
 	end,
-	insert = function(this, store)
-		this.hero.fn_level_up(this, store)
+	-- insert = function(this, store)
+	-- 	this.hero.fn_level_up(this, store)
 
-		this.melee.order = U.attack_order(this.melee.attacks)
-		this.ranged.order = U.attack_order(this.ranged.attacks)
+	-- 	this.melee.order = U.attack_order(this.melee.attacks)
+	-- 	this.ranged.order = U.attack_order(this.ranged.attacks)
 
-		local e = E:create_entity(this.auras.list[1].name)
+	-- 	local e = E:create_entity(this.auras.list[1].name)
 
-		e.aura.source_id = this.id
+	-- 	e.aura.source_id = this.id
 
-		queue_insert(store, e)
+	-- 	queue_insert(store, e)
 
-		return true
-	end,
+	-- 	return true
+	-- end,
 	update = function(this, store)
 		local h = this.health
 		local a, skill, brk, sta
@@ -6305,13 +6305,13 @@ scripts.hero_ingvar = {
 			ba.ts = store.tick_ts
 		end
 
-		for _, an in pairs(this.auras.list) do
-			local aura = E:create_entity(an.name)
+		-- for _, an in pairs(this.auras.list) do
+		-- 	local aura = E:create_entity(an.name)
 
-			aura.aura.source_id = this.id
+		-- 	aura.aura.source_id = this.id
 
-			queue_insert(store, aura)
-		end
+		-- 	queue_insert(store, aura)
+		-- end
 
 		U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
@@ -42837,5 +42837,552 @@ function scripts.shadow_bat.update(this, store)
 	end
 end
 --#endregion hero_margosa
+
+--#region hero_mortemis
+scripts.hero_mortemis = {}
+
+function scripts.hero_mortemis.level_up(this, store)
+	local hl, ls = level_up_basic(this)
+
+	this.melee.attacks[1].damage_min = ls.melee_damage_min[hl]
+	this.melee.attacks[1].damage_max = ls.melee_damage_max[hl]
+
+	local bt = E:get_template(this.ranged.attacks[1].bullet)
+	bt.bullet.damage_min = ls.ranged_damage_min[hl]
+	bt.bullet.damage_max = ls.ranged_damage_max[hl]
+
+	-- 1技能 恐吓
+	upgrade_skill(this, "call_haunted", function(this, s)
+		this.timed_attacks.list[1].disabled = nil
+
+		local e = E:get_template(this.timed_attacks.list[1].entity)
+
+		e.modifier.duration = s.duration[s.level]
+	end)
+
+	-- 2技能 毒池
+	upgrade_skill(this, "deadly_fumes", function(this, s)
+		this.timed_attacks.list[2].disabled = nil
+
+		local e = E:get_template("mod_mortemis_magma")
+
+		e.dps.damage_min = s.damage_config[s.level]
+		e.dps.damage_max = s.damage_config[s.level]
+	end)
+
+	-- 3技能 削甲（光环实体由 hero_basic.insert 自动创建，运行时按技能等级判断是否生效）
+	upgrade_skill(this, "grim_presence", function(this, s)
+		this.render.sprites[2].name = "hero_mortemis_aura"
+		this.render.sprites[2].offset = v(0, 0)
+
+		local e1 = E:get_template("mod_mortemis_curse_armor")
+
+		e1.armor_buff.max_factor = s.armor_reduction[s.level]
+
+		local e2 = E:get_template("mod_mortemis_curse_magic_armor")
+
+		e2.armor_buff.max_factor = s.armor_reduction[s.level]
+	end)
+
+	-- 4技能 不死人之奴（光环实体运行时从技能读取 max_skeletons_tower，此处无需配置）
+	upgrade_skill(this, "undead_servitude", function(this, s)
+	end)
+
+	-- 大招 腐朽近卫
+	upgrade_skill(this, "ultimate", function(this, s)
+		this.ultimate.disabled = nil
+
+		local e = E:get_template("hero_mortemis_spawner_seed")
+
+		e.bullet.hit_payload = s.entity[s.level]
+
+		local e2 = E:get_template("hero_mortemis_ultimate")
+
+		e2.cooldown = s.cooldown[s.level]
+	end)
+
+	update_hp(this)
+end
+
+function scripts.hero_mortemis.update(this, store)
+	local h = this.health
+	local he = this.hero
+	local a, skill, brk, sta
+
+	this.timed_attacks.list[1].ts = 0
+	this.timed_attacks.list[2].ts = 0
+	this.melee.attacks[1].ts = 0
+	this.ranged.attacks[1].ts = 0
+
+	U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+
+	this.health_bar.hidden = false
+
+	while true do
+		if h.dead then
+			local ds = this.death_spawns
+
+			for i = 1, ds.quantity do
+				local e = E:create_entity(ds.name)
+
+				e.pos = V.v(this.pos.x, this.pos.y)
+				e.bullet.from = V.v(this.pos.x, this.pos.y)
+				e.bullet.to = V.v(this.pos.x + ds.pos_list[i][1], this.pos.y + ds.pos_list[i][2])
+				e.bullet.source_id = this.id
+				e.bullet.damage_factor = this.unit.damage_factor
+
+				queue_insert(store, e)
+			end
+
+			SU.y_hero_death_and_respawn(store, this)
+		end
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			while this.nav_rally.new do
+				if SU.y_hero_new_rally(store, this) then
+					local mods = table.filter(store.entities, function(_, e)
+						return e.modifier and e.modifier.source_id == this.id
+					end)
+
+					for _, m in pairs(mods) do
+						queue_remove(store, m)
+					end
+
+					goto label_2791_0
+				end
+			end
+
+			if SU.hero_level_up(store, this) then
+				U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+			end
+
+			-- 1技能 恐吓
+			a = this.timed_attacks.list[1]
+			skill = this.hero.skills.call_haunted
+
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
+				local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
+
+				if targets then
+					local cnt = 0
+
+					a.ts = store.tick_ts
+					U.animation_start(this, a.animation, nil, store.tick_ts, false)
+					S:queue(a.sound)
+					U.y_wait(store, fts(25))
+
+					for _, e in pairs(targets) do
+						cnt = cnt + 1
+
+						local mod = E:create_entity(a.entity)
+
+						mod.modifier.target_id = e.id
+						mod.modifier.source_id = this.id
+						mod.modifier.level = skill.level
+
+						queue_insert(store, mod)
+
+						if cnt == a.max_target then
+							break
+						end
+					end
+
+					U.y_animation_wait(this, 1)
+					U.y_animation_play(this, "idle", nil, store.tick_ts, 1)
+					SU.hero_gain_xp_from_skill(this, skill)
+
+					goto label_2791_0
+				else
+					a.ts = a.ts + 0.1
+				end
+			end
+
+			-- 2技能 毒池
+			a = this.timed_attacks.list[2]
+			skill = this.hero.skills.deadly_fumes
+
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
+				local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
+
+				if not target then
+					a.ts = a.ts + 0.1
+				else
+					local pi, spi, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
+					local nodes = P:nearest_nodes(this.pos.x, this.pos.y, {pi}, nil, nil, NF_RALLY)
+
+					if #nodes < 1 then
+						a.ts = a.ts + 0.1
+					else
+						local s_pi, s_spi, s_ni = unpack(nodes[1])
+						local flip = target.pos.x < this.pos.x
+
+						S:queue(a.sound)
+						U.animation_start(this, a.animation, flip, store.tick_ts)
+						U.y_wait(store, a.spawn_time)
+
+						local delay = 0
+						local n_step = ni < s_ni and -4 or 4
+
+						ni = km.clamp(1, #P:path(s_pi), ni < s_ni and ni + 6 or ni)
+
+						for i = 1, skill.count[skill.level] do
+							local e = E:create_entity(a.entity)
+
+							e.pos = P:node_pos(pi, spi, ni)
+							e.render.sprites[1].flip_x = not flip
+							e.delay = delay
+							e.bullet.source_id = this.id
+							e.bullet.level = skill.level
+
+							queue_insert(store, e)
+
+							delay = delay + fts(U.frandom(1, 3))
+							ni = ni + n_step
+							spi = km.zmod(spi + math.random(1, 2), 3)
+
+							U.y_wait(store, fts(5))
+						end
+
+						U.y_animation_wait(this, 1)
+						a.ts = store.tick_ts
+						SU.hero_gain_xp_from_skill(this, skill)
+
+						goto label_2791_0
+					end
+				end
+			end
+
+			-- 大招 腐朽近卫
+			skill = this.hero.skills.ultimate
+
+			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
+				local target = find_target_at_critical_moment(this, store, this.ranged.attacks[1].max_range, nil, nil, F_FLYING)
+
+				if target and target.pos then
+					U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+					S:queue(this.sound_events.change_rally_point)
+
+					local e = E:create_entity(this.hero.skills.ultimate.controller_name)
+
+					e.damage_factor = this.unit.damage_factor
+					e.pos = V.vclone(target.pos)
+					e.level = this.hero.skills.ultimate.level
+
+					queue_insert(store, e)
+
+					this.ultimate.ts = store.tick_ts
+					SU.hero_gain_xp_from_skill(this, skill)
+				else
+					this.ultimate.ts = this.ultimate.ts + 1
+				end
+			end
+
+			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+			if brk or sta ~= A_NO_TARGET then
+			-- block empty
+			else
+				brk, sta = SU.y_soldier_ranged_attacks(store, this)
+
+				if brk then
+					SU.hero_gain_xp_from_skill(this, this.hero.skills.deadly_fumes)
+				elseif SU.soldier_go_back_step(store, this) then
+				-- block empty
+				else
+					SU.soldier_idle(store, this)
+					SU.soldier_regen(store, this)
+				end
+			end
+		end
+
+		::label_2791_0::
+
+		coroutine.yield()
+	end
+end
+
+scripts.hero_mortemis_zombie = {}
+
+function scripts.hero_mortemis_zombie.insert(this, store)
+	if this.nav_rally.pos.x == 0 and this.nav_rally.pos.y == 0 then
+		this.nav_rally.center = V.vclone(this.pos)
+		this.nav_rally.pos = V.vclone(this.pos)
+	end
+
+	return scripts.soldier_reinforcement.insert(this, store)
+end
+
+scripts.bolt_mortemis = {}
+
+function scripts.bolt_mortemis.update(this, store)
+	local b = this.bullet
+	local s = this.render.sprites[1]
+	local mspeed = b.min_speed
+	local target, ps
+	local new_target = false
+	local target_invalid = false
+
+	if b.particles_name then
+		ps = E:create_entity(b.particles_name)
+
+		ps.particle_system.track_id = this.id
+
+		queue_insert(store, ps)
+	end
+
+	S:queue(this.sound_events.travel)
+
+	s.z = Z_BULLETS
+	s.sort_y_offset = nil
+
+	U.animation_start(this, "flying", nil, store.tick_ts, s.loop)
+
+	if ps then
+		ps.particle_system.emit = true
+	end
+
+	while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * store.tick_length do
+		coroutine.yield()
+
+		if not target_invalid then
+			target = store.entities[b.target_id]
+		end
+
+		if target and not new_target then
+			local tpx, tpy = target.pos.x, target.pos.y
+
+			if not b.ignore_hit_offset then
+				tpx, tpy = tpx + target.unit.hit_offset.x, tpy + target.unit.hit_offset.y
+			end
+
+			local d = math.max(math.abs(tpx - b.to.x), math.abs(tpy - b.to.y))
+
+			if d > b.max_track_distance or band(target.vis.bans, F_RANGED) ~= 0 then
+				target_invalid = true
+				target = nil
+			end
+		end
+
+		if target and target.health and not target.health.dead then
+			if b.ignore_hit_offset then
+				b.to.x, b.to.y = target.pos.x, target.pos.y
+			else
+				b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
+			end
+
+			new_target = false
+		end
+
+		mspeed = mspeed + FPS * math.ceil(mspeed * (1 / FPS) * b.acceleration_factor)
+		mspeed = km.clamp(b.min_speed, b.max_speed, mspeed)
+		b.speed.x, b.speed.y = V.mul(mspeed, V.normalize(b.to.x - this.pos.x, b.to.y - this.pos.y))
+		this.pos.x, this.pos.y = this.pos.x + b.speed.x * store.tick_length, this.pos.y + b.speed.y * store.tick_length
+
+		if not b.ignore_rotation then
+			s.r = V.angleTo(b.to.x - this.pos.x, b.to.y - this.pos.y)
+		end
+
+		if ps then
+			ps.particle_system.emit_direction = s.r
+		end
+	end
+
+	this.pos.x, this.pos.y = b.to.x, b.to.y
+
+	if target and not target.health.dead then
+		local d = SU.create_bullet_damage(b, target.id, this.id)
+
+		d.xp_dest_id = b.source_id
+
+		local damage_value = d.value
+
+		queue_damage(store, d)
+
+		local source_entity = store.entities[b.source_id]
+
+		if b.heal_factor and source_entity and not source_entity.health.dead then
+			U.heal(source_entity, damage_value * b.heal_factor)
+		end
+
+		if b.mod or b.mods then
+			local mods = b.mods or {b.mod}
+
+			for _, mod_name in pairs(mods) do
+				local m = E:create_entity(mod_name)
+
+				m.modifier.target_id = b.target_id
+				m.modifier.level = b.level
+
+				queue_insert(store, m)
+			end
+		end
+
+		if b.hit_payload then
+			local hp = b.hit_payload
+
+			hp.pos.x, hp.pos.y = this.pos.x, this.pos.y
+
+			queue_insert(store, hp)
+		end
+	end
+
+	if b.payload then
+		local hp = b.payload
+
+		hp.pos.x, hp.pos.y = b.to.x, b.to.y
+
+		queue_insert(store, hp)
+	end
+
+	if b.hit_fx then
+		local sfx = E:create_entity(b.hit_fx)
+
+		sfx.pos.x, sfx.pos.y = b.to.x, b.to.y
+		sfx.render.sprites[1].ts = store.tick_ts
+		sfx.render.sprites[1].runs = 0
+
+		if target and sfx.render.sprites[1].size_names then
+			sfx.render.sprites[1].name = sfx.render.sprites[1].size_names[target.unit.size]
+		end
+
+		queue_insert(store, sfx)
+	end
+
+	queue_remove(store, this)
+end
+
+scripts.aura_mortemis_curse_armor = {}
+
+function scripts.aura_mortemis_curse_armor.update(this, store)
+	local aura = this.aura
+	local last_ts = store.tick_ts - aura.cycle_time
+
+	while true do
+		local source = store.entities[aura.source_id]
+
+		if not source or not source.pos then
+			queue_remove(store, this)
+
+			return
+		end
+
+		this.pos.x, this.pos.y = source.pos.x, source.pos.y
+
+		local skill = source.hero and source.hero.skills and source.hero.skills.grim_presence
+
+		if skill and skill.level >= 1 and not source.health.dead and store.tick_ts - last_ts >= aura.cycle_time then
+			last_ts = store.tick_ts
+
+			local targets = U.find_enemies_in_range_filter_off(this.pos, aura.radius, aura.vis_flags, aura.vis_bans)
+
+			if targets then
+				for _, t in ipairs(targets) do
+					for _, mod_name in ipairs(aura.mods) do
+						local new_mod = E:create_entity(mod_name)
+
+						new_mod.modifier.level = skill.level
+						new_mod.modifier.target_id = t.id
+						new_mod.modifier.source_id = aura.source_id
+
+						queue_insert(store, new_mod)
+					end
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.aura_mortemis_zombie = {}
+
+function scripts.aura_mortemis_zombie.update(this, store)
+	local last_ts = store.tick_ts
+	local cg = store.count_groups[this.count_group_type]
+
+	while true do
+		local source = store.entities[this.aura.source_id]
+
+		if not source or not source.pos then
+			queue_remove(store, this)
+
+			return
+		end
+
+		this.pos.x, this.pos.y = source.pos.x, source.pos.y
+
+		if store.tick_ts - last_ts >= this.aura.cycle_time then
+			last_ts = store.tick_ts
+
+			local skill = source.hero and source.hero.skills and source.hero.skills.undead_servitude
+
+			if skill and skill.level >= 1 and not source.health.dead then
+				local max_skeletons_tower = skill.max_skeletons_tower[skill.level]
+				local tower_skeletons_count = 0
+
+				for _, e in pairs(store.entities) do
+					if e and e.health and not e.health.dead and e.soldier and e.soldier.tower_id == source.id and e.template_name ~= "soldier_death_rider" then
+						tower_skeletons_count = tower_skeletons_count + 1
+					end
+				end
+
+				local max_spawns = math.min(max_skeletons_tower - tower_skeletons_count, this.count_group_max - (cg[this.count_group_name] or 0))
+
+				if max_spawns >= 1 then
+					local dead_enemies = table.filter(store.entities, function(_, v)
+						return v.enemy and v.vis and v.health and v.health.dead and band(v.health.last_damage_types, bor(DAMAGE_EAT)) == 0 and band(v.vis.bans, F_SKELETON) == 0 and store.tick_ts - v.health.death_ts >= v.health.dead_lifetime - this.aura.cycle_time and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius)
+					end)
+
+					dead_enemies = table.slice(dead_enemies, 1, max_spawns)
+
+					for _, dead in pairs(dead_enemies) do
+						U.bans_add(dead.vis, F_SKELETON)
+						dead.health.delete_after = 0
+
+						local e = E:create_entity(this.spawn_name .. skill.level)
+
+						e.pos = V.vclone(dead.pos)
+
+						if dead.enemy.necromancer_offset then
+							e.pos.x = e.pos.x + dead.enemy.necromancer_offset.x * (dead.render.sprites[1].flip_x and -1 or 1)
+							e.pos.y = e.pos.y + dead.enemy.necromancer_offset.y
+						end
+
+						e.nav_rally.center = V.vclone(e.pos)
+						e.nav_rally.pos = V.vclone(e.pos)
+						e.soldier.tower_id = source.id
+
+						queue_insert(store, e)
+					end
+				end
+			end
+		end
+
+		coroutine.yield()
+	end
+end
+
+scripts.controller_hero_mortemis_ultimate = {}
+
+function scripts.controller_hero_mortemis_ultimate.update(this, store)
+	local e = E:create_entity(this.bullet)
+
+	e.pos = V.v(this.pos.x, this.pos.y)
+	e.bullet.from = V.v(this.pos.x, this.pos.y)
+	e.bullet.to = V.v(this.pos.x, this.pos.y)
+	e.bullet.source_id = this.id
+	e.bullet.damage_factor = this.damage_factor
+	e.bullet.level = this.level
+
+	queue_insert(store, e)
+
+	S:queue(this.sound)
+
+	queue_remove(store, this)
+end
+
+--#endregion hero_mortemis
 
 return scripts

@@ -3503,4 +3503,47 @@ duration = ss("duration")
 local dmg_factor = h.ultimate.damage_factor
 map["野兽形态"] = str(cooldown_str(), "当生命值耗尽或附近有敌人时，苦楝夫人变身为渴血的野兽，生命值恢复至全满，普通攻击变为真实伤害，伤害提升", (dmg_factor - 1) * 100, "%，攻击速度与移动速度大幅提升，吸血效果强化，持续", duration, "秒。变身期间使用绝望迷雾或黑暗呼唤将提前退出野兽形态。")
 
+-- 墨忒弥斯
+set_hero("hero_mortemis")
+
+map["巫妖"] = str("普通攻击发射灵魂弹幕，并吸收所造成伤害的", T("bolt_mortemis").bullet.heal_factor * 100, "%转化为自身生命值。")
+
+set_skill(h.hero.skills.call_haunted)
+cooldown = h.timed_attacks.list[1].cooldown
+duration = ss("duration")
+map["夜鬼哭"] = str(cooldown_str(), "利用死者痛苦的低语控制一名敌人的心神，使其惊恐逃跑，持续", duration, "秒。")
+
+set_skill(h.hero.skills.deadly_fumes)
+cooldown = h.timed_attacks.list[2].cooldown
+d[1].damage_min = ss("damage_config")
+d[1].damage_max = ss("damage_config")
+d[1].damage_type = T("mod_mortemis_magma").dps.damage_type
+cycle_time = T("mod_mortemis_magma").dps.damage_every
+duration = T("mortemis_poisonpool").aura.duration
+map["腐朽之地"] = str(cooldown_str(), "腐蚀一片区域，使上面的敌人每", cycle_time, "秒受到", damage_str(), "，持续", duration, "秒。")
+
+set_skill(h.hero.skills.grim_presence)
+local reduction = -1 * ss("armor_reduction")
+map["无望之人"] = str("墨忒弥斯周围的敌人只要与他接近，就会丧失", reduction * 100, "%的护甲和魔法抗性。")
+
+set_skill(h.hero.skills.undead_servitude)
+count = ss("max_skeletons_tower")
+map["不死人之奴"] = str("敌人死在墨忒弥斯身边后会化为一只僵尸重生。同一时间最多可有", count, "只僵尸。")
+
+set_skill(h.hero.skills.ultimate)
+cooldown = ss("cooldown")
+e = T("hero_mortemis_gargantuar_lvl4")
+get_health(e)
+d[1].damage_min = e.melee.attacks[1].damage_min
+d[1].damage_max = e.melee.attacks[1].damage_max
+d[1].damage_type = e.melee.attacks[1].damage_type
+map["腐朽近卫"] = str(cooldown_str(), "召唤出一只巨大的僵尸巨怪，拥有", hp_str(), "，每次攻击对周围敌人造成", damage_str(), "。")
+
+e = T("hero_mortemis_zombie_lvl0")
+get_health(e)
+d[1].damage_min = e.melee.attacks[1].damage_min
+d[1].damage_max = e.melee.attacks[1].damage_max
+d[1].damage_type = e.melee.attacks[1].damage_type
+map["黑暗军"] = str("墨忒弥斯死时，身边将生出", h.death_spawns.quantity, "只僵尸，每只拥有", hp_str(), "，每次攻击造成", damage_str(), "。")
+
 return H
