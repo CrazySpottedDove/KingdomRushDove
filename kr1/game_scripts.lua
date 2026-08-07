@@ -16397,7 +16397,7 @@ function scripts.mod_blood_elves.insert(this, store)
 	end
 
 	local pred_damage = U.predict_damage(target, source_damage)
-	local actual_damage = this.damage_factor * pred_damage
+	local actual_damage = math.min(this.damage_factor * pred_damage, 1)
 
 	this.dps.damage_min = actual_damage
 	this.dps.damage_max = actual_damage
