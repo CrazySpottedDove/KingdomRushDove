@@ -370,6 +370,10 @@ local function load(arg)
 		})
 	end
 
+	-- 默认关闭系统文本输入（IME），避免非英文输入法拦截游戏快捷键
+	-- 需要输入文本时由 KWindow:set_responder 临时开启，输入结束自动恢复关闭
+	love.keyboard.setTextInput(false)
+
 	if love.filesystem.isFused() and not love.filesystem.getInfo(KR_PATH_ALL_TARGET) then
 		log.info("")
 		log.info("mounting asset files...")

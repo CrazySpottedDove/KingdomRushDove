@@ -2519,6 +2519,9 @@ function atlas_manager:leave()
 	end
 	self._leaving = true
 	print("[atlas_manager] leave: start")
+	if ui.window then
+		ui.window:set_responder()
+	end
 	self:unload_all_textures()
 	self:release_preview()
 	state._merged_idata = nil

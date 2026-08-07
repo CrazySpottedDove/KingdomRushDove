@@ -145,6 +145,8 @@ NumericKeyboardView = class("NumericKeyboardView", PopUpView)
 function NumericKeyboardView:initialize(sw, sh)
 	PopUpView.initialize(self, V.v(sw, sh))
 
+	self.is_virtual_keyboard = true
+
 	local rs = GGLabel.static.ref_h / REF_H
 	local safe_margin = 24
 

@@ -103,6 +103,33 @@ server  ssh://dove@10.112.99.5:60001/srv/git/KingdomRushDove.git (push)
 `dlfmt_task.json`，选择使用
 `dlfmt: 运行 JSON 任务`，以保证整个项目格式一致，且压缩了必要的数据资源。
 
+## 文本输入（textinput / IME）规范
+
+背景：`love.keypressed` 在用户的系统输入法处于非英文（如中文拼音）状态时，字母键会被 IME
+组词拦截，导致按键事件不触发。为让游戏快捷键在任意输入法下可用，游戏默认关闭系统文本输入，
+仅在真正需要输入文本时临时开启。
+
+机制：
+
+- `main.lua` 启动时调用 `love.keyboard.setTextInput(false)`，全局默认关闭。
+- `KWindow:set_responder(view)` 是唯一的开关点：传入的 view 带有 `on_textinput` 方法时自动
+  `setTextInput(true)`，否则（包括传 nil 归还输入权）自动 `setTextInput(false)`。
+- `KWindow:destroy()` 会归还输入权并强制关闭文本输入，避免 IME 残留。
+
+规则：
+
+- 新增任何需要键盘输入的控件（文本、数字、枚举等），都必须实现 `on_textinput(t)` 方法，并
+  通过 `KWindow:set_responder(self)` 注册为响应者；输入结束后调用
+  `KWindow:set_responder()`（传 nil）归还输入权。禁止直接调用 `love.keyboard.setTextInput`
+  或直接给 `window.responder` 赋值，否则会被自动开关逻辑漏掉。
+- 自定义虚拟键盘（不需要系统 IME，如 `NumericKeyboardView`）必须在 initialize 中设置
+  `self.is_virtual_keyboard = true`，这样即使实现 `on_textinput` 也不会弹系统输入法。
+- 离开页面/界面时必须归还输入权：窗口被 `destroy()` 会自动处理；持久化窗口（不销毁）则须在
+  退出路径中显式调用 `window:set_responder()`（参考 `atlas_manager:leave()`）。
+- 目前所有 `on_textinput` 均通过 `set_responder` 转交，覆盖的控件清单：
+  `KENum/KEEnum/KEProp`（游戏编辑器属性）、`EditableItem`（可编辑面板）、atlas_manager 的
+  `name_input` 与 `inp`、`NumericKeyboardView`（虚拟键盘，不启用 IME）。
+
 ## 规则
 
 - 任何直接修改 `enemy.can_do_magic` 的行为都是危险的。

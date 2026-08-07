@@ -1742,6 +1742,17 @@ end
 
 function KWindow:set_responder(view)
 	self.responder = view
+	-- 输入权交给带 on_textinput 的响应者时才开启系统文本输入（IME），
+	-- 否则关闭，避免非英文输入法拦截按键导致 love.keypressed 无法触发。
+	-- 虚拟键盘（is_virtual_keyboard）不开启 IME。
+	local enable = view ~= nil and view.on_textinput ~= nil and not view.is_virtual_keyboard
+	love.keyboard.setTextInput(enable)
+end
+
+function KWindow:destroy()
+	self.responder = nil
+	KWindow.super.destroy(self)
+	love.keyboard.setTextInput(false)
 end
 
 function KWindow:keypressed(key, isrepeat)
