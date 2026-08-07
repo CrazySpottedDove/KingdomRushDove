@@ -3847,7 +3847,7 @@ function DefeatView:initialize()
 
 	self:add_child(b)
 
-	b = GGOptionsButton(_("Quit"))
+	b = GGOptionsButton(_("QUIT"))
 	b.pos.x, b.pos.y = V.csnap(self.size.x - mx - b.size.x * 0.5, y + b.size.y * 0.5)
 
 	function b.on_click()
