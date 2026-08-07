@@ -5951,12 +5951,12 @@ local towers = {
 			damage_max = {11, 28, 53, 90},
 			range = {170, 170, 170, 215},
 			debuff = {
-				damage_factor = {0.5, 0.5, 0.5, 0.5},
-				duration = {3, 3, 3, 3}
+				damage_factor = {0.5, 0.5, 0.5, 0.6},
+				duration = {3, 3, 3, 5}
 			},
 			buff = {
 				damage_factor = 1.25,
-				duration = 3
+				duration = 5
 			}
 		},
 		skill_warrior = {
