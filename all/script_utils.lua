@@ -4841,24 +4841,6 @@ function SU.reset_all_attacks_ts(e, store, cooldown_factor)
 	end
 end
 
-function SU.towers_swaped(store, this, attacks)
-	if this.tower_upgrade_persistent_data.swaped then
-		for _, a in ipairs(attacks) do
-			a.ts = store.tick_ts
-		end
-
-		if this.powers then
-			for _, pow in pairs(this.powers) do
-				if pow.level > 0 and pow.show_rally then
-					this.tower.show_rally = true
-				end
-			end
-		end
-
-		this.tower_upgrade_persistent_data.swaped = nil
-	end
-end
-
 --- 清空一个表，并将表中全部实体移出游戏队列
 ---@param store table
 ---@param tbl table array

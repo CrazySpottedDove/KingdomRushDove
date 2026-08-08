@@ -6056,7 +6056,6 @@ function scripts.tower_dark_elf.update(this, store)
 		else
 			check_upgrades_purchase()
 			check_change_mode()
-			SU.towers_swaped(store, this, this.attacks.list)
 
 			if store.tick_ts - attack.ts > attack.cooldown * this.tower.cooldown_factor then
 				target, pred_pos = find_target(attack, attack.node_prediction_prepare + attack.node_prediction)
@@ -6851,8 +6850,6 @@ function scripts.tower_demon_pit.update(this, store)
 				ag.ts = store.tick_ts - ag.cooldown
 			end
 
-			SU.towers_swaped(store, this, this.attacks.list)
-
 			for i, aa in ipairs(attacks) do
 				local pow = pows[i]
 
@@ -7316,13 +7313,6 @@ function scripts.tower_necromancer_lvl4.update(this, store)
 	this.attacks.list[1].ts = store.tick_ts - this.attacks.list[1].cooldown + this.attacks.attack_delay_on_spawn
 
 	local max_skulls = #this.attacks.list[1].bullet_spawn_offset
-
-	if this.tower_upgrade_persistent_data.swaped then
-		this.tower_upgrade_persistent_data = E:clone_c("tower_upgrade_persistent_data")
-		this.tower_upgrade_persistent_data.swaped = true
-
-		SU.towers_swaped(store, this, this.attacks.list)
-	end
 
 	if not this.tower_upgrade_persistent_data.current_skulls then
 		this.tower_upgrade_persistent_data.current_skulls = 0
@@ -10307,8 +10297,6 @@ function scripts.tower_ray.update(this, store)
 				as.cooldown = pow_s.cooldown[1]
 			end
 
-			SU.towers_swaped(store, this, this.attacks.list)
-
 			for i, aa in ipairs(attacks) do
 				if not aa.disabled and ready_to_attack(aa, store, this.tower.cooldown_factor) then
 					if aa == as then
@@ -11362,8 +11350,6 @@ function scripts.tower_stargazers.update(this, store)
 			aa.count = shots
 		end
 
-		SU.towers_swaped(store, this, a.list)
-
 		while tw.blocked do
 			coroutine.yield()
 		end
@@ -11875,8 +11861,6 @@ function scripts.tower_sand.update(this, store)
 			if pow_g.changed then
 				pow_g.changed = nil
 			end
-
-			SU.towers_swaped(store, this, this.attacks.list)
 
 			if ready_to_use_power(pow_b, bba, store, tw.cooldown_factor) then
 				local _, enemies, pred_pos = U.find_foremost_enemy_in_range_filter_off(this.pos, bba.range, bba.shoot_time[1] + E:get_template("aura_tower_sand_skill_big_blade").flight_time, bba.vis_flags, bba.vis_bans)
@@ -12509,8 +12493,6 @@ function scripts.tower_royal_archers.update(this, store)
 				pow_r._last_level = pow_r.level
 			end
 
-			SU.towers_swaped(store, this, this.attacks.list)
-
 			for i = 1, #co_shooters do
 				coroutine.resume(co_shooters[i])
 			end
@@ -12978,8 +12960,6 @@ function scripts.tower_arcane_wizard5.update(this, store)
 			if pow_e.changed then
 				pow_e.changed = nil
 			end
-
-			SU.towers_swaped(store, this, this.attacks.list)
 
 			if this.ui.hover_active and this.ui.args == "empowerment" and not this.empowerments_previews then
 				this.empowerments_previews = {}
@@ -14890,8 +14870,6 @@ function scripts.tower_flamespitter.update(this, store)
 				end
 			end
 
-			SU.towers_swaped(store, this, this.attacks.list)
-
 			if idle_cooldown < store.tick_ts - last_ts_idle and (not target or not pred_pos) then
 				local new_angle
 
@@ -15420,8 +15398,6 @@ function scripts.tower_ballista.update(this, store)
 				pow_s.damage_factor = pow_s.damage_factor_config[pow_s.level]
 				pow_s.changed = nil
 			end
-
-			SU.towers_swaped(store, this, a.list)
 
 			if idle_cooldown < store.tick_ts - last_ts_idle and (not target or not pred_pos) then
 				local new_angle
@@ -16274,12 +16250,6 @@ function scripts.tower_barrel.update(this, store)
 				bba.cooldown = pow_b.cooldown[pow_b.level]
 				pow_b.ts = store.tick_ts - bba.cooldown
 			end
-
-			if this.tower_upgrade_persistent_data.swaped then
-				this.tower_upgrade_persistent_data = E:clone_c("tower_upgrade_persistent_data")
-			end
-
-			SU.towers_swaped(store, this, this.attacks.list)
 
 			if ready_to_use_power(pow_b, bba, store, tw.cooldown_factor) then
 				local targets = U.find_enemies_in_range_filter_off(tpos, a.range, bba.vis_flags, bba.vis_bans)
@@ -17174,7 +17144,6 @@ function scripts.tower_hermit_toad.update(this, store)
 			coroutine.yield()
 		else
 			check_change_mode()
-			SU.towers_swaped(store, this, this.attacks.list)
 			check_upgrades_purchase()
 
 			if ready_to_use_power(pow_instakill, attack_instakill, store, tw.cooldown_factor) then
@@ -17855,10 +17824,6 @@ function scripts.tower_sparking_geode.update(this, store)
 			return true
 		end
 
-		if this.tower_upgrade_persistent_data.swaped then
-			return true
-		end
-
 		if can_crystalize() then
 			return true
 		end
@@ -17876,7 +17841,6 @@ function scripts.tower_sparking_geode.update(this, store)
 
 	while true do
 		update_powers()
-		SU.towers_swaped(store, this, this.attacks.list)
 
 		if tw.blocked then
 		-- block empty
@@ -18842,7 +18806,7 @@ function scripts.tower_ghost.update(this, store)
 	while true do
 		local b = this.barrack
 
-		if sa.changed or this.tower_upgrade_persistent_data.swaped then
+		if sa.changed then
 			sa.changed = nil
 
 			for _, s in ipairs(b.soldiers) do
@@ -18851,7 +18815,7 @@ function scripts.tower_ghost.update(this, store)
 			end
 		end
 
-		if ed.changed or this.tower_upgrade_persistent_data.swaped then
+		if ed.changed then
 			ed.changed = nil
 
 			for _, s in ipairs(b.soldiers) do
@@ -18859,8 +18823,6 @@ function scripts.tower_ghost.update(this, store)
 				s.powers.extra_damage.changed = true
 			end
 		end
-
-		this.tower_upgrade_persistent_data.swaped = nil
 
 		if not this.tower.blocked then
 			for i = 1, b.max_soldiers do
@@ -19681,8 +19643,6 @@ function scripts.tower_arborean_emissary.update(this, store)
 				aw.damage_max = pow_w.damage_max[pow_w.level]
 				pow_w.changed = nil
 			end
-
-			SU.towers_swaped(store, this, this.attacks.list)
 
 			if ready_to_use_power(pow_g, ag, store, tw.cooldown_factor) then
 				if U.is_soldiers_around_need_heal(store.soldiers, tpos, 0.99, a.range) then

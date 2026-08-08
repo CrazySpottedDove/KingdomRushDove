@@ -431,7 +431,7 @@ tower_upgrade_persistent_data.current_mode = 0
 tower_upgrade_persistent_data.max_current_mode = 0
 tower_upgrade_persistent_data.upgrade_functions = {}
 
--- Runtime fields (7): --   current_golems, current_skeletons, current_skulls, fire_skulls, skeletons_ref, skulls_ref, swaped
+-- Runtime fields (7): --   current_golems, current_skeletons, current_skulls, fire_skulls, skeletons_ref, skulls_ref
 local enemy = E:register_c("enemy")
 enemy.can_do_magic = true
 enemy.can_accept_magic = true
