@@ -5624,7 +5624,6 @@ local towers = {
 	},
 	arborean_emissary = {
 		rally_range = 179.20000000000002,
-		shared_min_cooldown = 1.5,
 		price = {100, 130, 170, 230},
 		basic_attack = {
 			cooldown = 1.2,

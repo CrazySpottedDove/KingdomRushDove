@@ -3017,6 +3017,7 @@ tt.initial_impulse = 900
 tt.initial_impulse_duration = fts(10)
 tt.initial_impulse_angle = {math.pi, math.pi / 2, -math.pi}
 tt.initial_destination = {v(-20, 30), v(20, 30), v(0, 50)}
+tt.patrol_range = 40
 
 local fly_strenght = 10
 local fly_frequency = 30
@@ -3033,7 +3034,7 @@ tt.tween.props[2].keys = {{0, 255}, {fts(10), 0}}
 tt.tween.props[2].disabled = true
 tt.tween.remove = false
 tt.particles_name = "ps_tower_arborean_emissary_gift_of_nature_wisps"
-tt.positions = {{{0, v(100, 0)}, {0.3, v(100, 50)}, {0.5, v(50, 0)}, {0.7, v(0, 20)}, {0.8, v(10, -10)}, {1, v(0, 0)}}, {{0, v(0, 0)}, {0.3, v(20, -20)}, {0.7, v(-20, -20)}, {1, v(0, 0)}}, {{0, v(0, 0)}, {0.1, v(-100, 0)}, {0.2, v(-100, -50)}, {0.5, v(-50, 0)}, {0.6, v(-50, 0)}, {0.7, v(0, 0)}, {0.8, v(-20, -10)}, {1, v(0, 0)}}}
+tt.positions = {{{0, v(0, 0)}, {0.25, v(20, -10)}, {0.5, v(0, -25)}, {0.75, v(-20, -10)}, {1, v(0, 0)}}, {{0, v(0, -10)}, {0.25, v(15, 5)}, {0.5, v(0, -10)}, {0.75, v(-15, 5)}, {1, v(0, 0)}}, {{0, v(0, 0)}, {0.25, v(-20, -10)}, {0.5, v(0, -25)}, {0.75, v(20, -10)}, {1, v(0, 0)}}}
 
 tt = RT("tower_arborean_emissary_lvl4", "tower")
 AC(tt, "attacks", "powers")
@@ -3053,7 +3054,6 @@ tt.powers.gift_of_nature.price_base = b.gift_of_nature.price[2]
 tt.powers.gift_of_nature.price_inc = b.gift_of_nature.price[3]
 tt.powers.gift_of_nature.cooldown = b.gift_of_nature.cooldown
 tt.powers.gift_of_nature.aura_duration = b.gift_of_nature.duration
-
 tt.powers.wave_of_roots = CC("power")
 tt.powers.wave_of_roots.price_base = b.wave_of_roots.price[2]
 tt.powers.wave_of_roots.price_inc = b.wave_of_roots.price[3]
@@ -3061,7 +3061,6 @@ tt.powers.wave_of_roots.count = b.wave_of_roots.count
 tt.powers.wave_of_roots.cooldown = b.wave_of_roots.cooldown
 tt.powers.wave_of_roots.damage_min = b.wave_of_roots.damage_min
 tt.powers.wave_of_roots.damage_max = b.wave_of_roots.damage_max
-
 tt.ui.click_rect = r(-43, 0, 86, 68)
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].name = "terrain_mage_%04i"
@@ -3074,7 +3073,6 @@ tt.render.sprites[2].group = "layers"
 tt.main_script.insert = scripts.tower_mage.insert
 tt.main_script.update = scripts.tower_arborean_emissary.update
 tt.sound_events.insert = "TowerArboreanEmissaryTaunt"
-tt.attacks.min_cooldown = b.shared_min_cooldown
 tt.attacks.range = b.basic_attack.range[4]
 tt.attacks.attack_delay_on_spawn = fts(5)
 tt.attacks.list[1] = CC("bullet_attack")
@@ -3241,6 +3239,8 @@ tt.entity = "decal_tower_arborean_emissary_gift_of_nature_wisp"
 tt.aura = "aura_tower_arborean_emissary_gift_of_nature"
 tt.start_offset = {v(-35, 67), v(35, 68), v(0, 50)}
 tt.end_offset = {v(-50, 60), v(0, 80), v(50, 60)}
+tt.search_range = 200
+tt.need_heal_factor = 0.99
 
 local b_dragons = balance.towers.dragons
 

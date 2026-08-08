@@ -19627,7 +19627,7 @@ function scripts.tower_arborean_emissary.update(this, store)
 		aw.damage_max = pow_w.damage_max[pow_w.level]
 	end
 
-	local last_ts = store.tick_ts - a.min_cooldown + a.attack_delay_on_spawn
+	local last_ts = store.tick_ts - ab.cooldown + a.attack_delay_on_spawn
 
 	while true do
 		if tw.blocked then
@@ -19665,6 +19665,7 @@ function scripts.tower_arborean_emissary.update(this, store)
 						e.duration = pow_g.aura_duration[pow_g.level]
 						e.tower_pos = V.vclone(this.pos)
 						e.power_level = pow_g.level
+						e.target_id = target.id
 
 						queue_insert(store, e)
 						U.y_animation_wait_group(this, "layers")
@@ -19798,6 +19799,13 @@ function scripts.decal_tower_arborean_emissary_gift_of_nature_wisp.update(this, 
 	local sf = this.render.sprites[1]
 	local patrol_start = V.vclone(this.to)
 	local starting_pos = V.vclone(this.initial_pos)
+	local initial_target = this.target_id and store.entities[this.target_id]
+
+	if initial_target and not initial_target.health.dead then
+		this.last_target_pos = V.v(initial_target.pos.x, initial_target.pos.y)
+	else
+		this.last_target_pos = V.vclone(this.to)
+	end
 
 	this.tween.props[1].disabled = true
 	this.tween.props[2].disabled = true
@@ -19820,18 +19828,23 @@ function scripts.decal_tower_arborean_emissary_gift_of_nature_wisp.update(this, 
 	end
 
 	local function get_patrol_pos()
-		local phase = (store.tick_ts - patrol_ts) / this.duration
+		local phase = patrol_ts and (store.tick_ts - patrol_ts) / this.duration or 0
 		local current_phase_i = current_phase(phase)
 		local patrol_next_pos = V.vclone(this.positions[this.wisp_order][current_phase_i][2])
+		local tx, ty = patrol_start.x, patrol_start.y
+		local target = this.target_id and store.entities[this.target_id]
 
-		patrol_next_pos.x = patrol_next_pos.x + patrol_start.x
-		patrol_next_pos.y = patrol_next_pos.y + patrol_start.y
+		if target and not target.health.dead then
+			tx, ty = target.pos.x, target.pos.y
+			this.last_target_pos.x, this.last_target_pos.y = tx, ty
+		elseif this.last_target_pos then
+			tx, ty = this.last_target_pos.x, this.last_target_pos.y
+		end
 
-		local easing = "quad-inout"
-		local new_pos_x = U.ease_value(this.pos.x, patrol_next_pos.x, phase, easing)
-		local new_pos_y = U.ease_value(this.pos.y, patrol_next_pos.y, phase, easing)
+		patrol_next_pos.x = patrol_next_pos.x + tx + this.end_offset[this.wisp_order].x
+		patrol_next_pos.y = patrol_next_pos.y + ty + this.end_offset[this.wisp_order].y
 
-		return new_pos_x, new_pos_y
+		return patrol_next_pos
 	end
 
 	local function move_start(dest)
@@ -19844,16 +19857,6 @@ function scripts.decal_tower_arborean_emissary_gift_of_nature_wisp.update(this, 
 		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(max_a, V.mul(a_step, dx, dy)))
 		fm.v.x, fm.v.y = V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y))
 		fm.v.x, fm.v.y = V.trim(max_v, fm.v.x, fm.v.y)
-		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
-		fm.a.x, fm.a.y = V.mul(-1 * fm.fr / store.tick_length, fm.v.x, fm.v.y)
-	end
-
-	local function move_patrol(dest)
-		local dx, dy = V.sub(dest.x, dest.y, this.pos.x, this.pos.y)
-
-		fm.a.x, fm.a.y = V.add(fm.a.x, fm.a.y, V.trim(fm.max_a, V.mul(fm.a_step, dx, dy)))
-		fm.v.x, fm.v.y = V.add(fm.v.x, fm.v.y, V.mul(store.tick_length, fm.a.x, fm.a.y))
-		fm.v.x, fm.v.y = V.trim(fm.max_v, fm.v.x, fm.v.y)
 		this.pos.x, this.pos.y = V.add(this.pos.x, this.pos.y, V.mul(store.tick_length, fm.v.x, fm.v.y))
 		fm.a.x, fm.a.y = V.mul(-1 * fm.fr / store.tick_length, fm.v.x, fm.v.y)
 	end
@@ -19913,19 +19916,6 @@ function scripts.decal_tower_arborean_emissary_gift_of_nature_wisp.update(this, 
 			break
 		end
 
-		if this.reach_target then
-			local patrol_dest = {}
-
-			patrol_dest.x, patrol_dest.y = get_patrol_pos()
-			fm.ramp_radius = 1
-			fm.max_a = 300
-			fm.max_v = 150
-
-			move_patrol(patrol_dest)
-
-			goto label_1007_0
-		end
-
 		if this.initial_impulse and store.tick_ts - start_ts < this.initial_impulse_duration then
 			local initial_destination = this.initial_destination[this.wisp_order]
 			local init = {}
@@ -19937,12 +19927,38 @@ function scripts.decal_tower_arborean_emissary_gift_of_nature_wisp.update(this, 
 			goto label_1007_0
 		end
 
-		this.reach_target = move_step(this.to)
+		do
+			local patrol_dest = get_patrol_pos()
 
-		if this.reach_target then
-			patrol_ts = store.tick_ts
-			this.tween.disabled = false
-			this.tween.props[1].ts = store.tick_ts - this.wisp_order * fts(15)
+			if V.len(patrol_dest.x - this.pos.x, patrol_dest.y - this.pos.y) <= this.patrol_range then
+				fm.ramp_radius = 1
+				fm.max_a = 300
+				fm.max_v = 150
+
+				move_step(patrol_dest)
+
+				if not patrol_ts then
+					patrol_ts = store.tick_ts
+					this.reach_target = true
+					this.tween.disabled = false
+					this.tween.props[1].ts = store.tick_ts - this.wisp_order * fts(15)
+				end
+			else
+				local target = this.target_id and store.entities[this.target_id]
+				local dest = this.to
+
+				if target and not target.health.dead then
+					dest:set(target.pos.x + this.end_offset[this.wisp_order].x, target.pos.y + this.end_offset[this.wisp_order].y)
+					this.last_target_pos.x, this.last_target_pos.y = target.pos.x, target.pos.y
+				elseif this.last_target_pos then
+					dest:set(this.last_target_pos.x + this.end_offset[this.wisp_order].x, this.last_target_pos.y + this.end_offset[this.wisp_order].y)
+				end
+				fm.ramp_radius = 1
+				fm.max_a = 1200
+				fm.max_v = 300
+
+				move_step(dest)
+			end
 		end
 
 		::label_1007_0::
@@ -20382,6 +20398,42 @@ scripts.controller_tower_arborean_emissary_gift_of_nature = {}
 
 function scripts.controller_tower_arborean_emissary_gift_of_nature.update(this, store)
 	local wisps = {}
+	local target_id = this.target_id
+
+	local function current_target()
+		local t = target_id and store.entities[target_id]
+
+		if t and t.health and not t.health.dead then
+			return t
+		end
+
+		return nil
+	end
+
+	local function find_retarget(center)
+		local candidates = table.filter(store.soldiers, function(k, v)
+			return not v.reinforcement and not v.health.dead and v.health.hp < this.need_heal_factor * v.health.hp_max and U.is_inside_ellipse(v.pos, center, this.search_range)
+		end)
+
+		if #candidates == 0 then
+			return nil
+		end
+
+		return table.find_best(candidates, function(t)
+			return 1 - t.health.hp / t.health.hp_max
+		end)
+	end
+
+	local function wisp_centroid()
+		local cx, cy = 0, 0
+
+		for _, w in ipairs(wisps) do
+			cx = cx + w.pos.x - w.end_offset[w.wisp_order].x
+			cy = cy + w.pos.y - w.end_offset[w.wisp_order].y
+		end
+
+		return cx / #wisps, cy / #wisps
+	end
 
 	for i = 1, 3 do
 		local e = E:create_entity(this.entity)
@@ -20392,6 +20444,8 @@ function scripts.controller_tower_arborean_emissary_gift_of_nature.update(this, 
 		e.to = V.v(this.pos.x + this.end_offset[i].x, this.pos.y + this.end_offset[i].y)
 		e.duration = this.duration
 		e.wisp_order = i
+		e.target_id = target_id
+		e.end_offset = this.end_offset
 
 		queue_insert(store, e)
 		table.insert(wisps, e)
@@ -20409,10 +20463,11 @@ function scripts.controller_tower_arborean_emissary_gift_of_nature.update(this, 
 
 	::label_1022_0::
 
-	-- aura 无 render
+	-- aura 无 render，位置跟随蜜蜂实际所在（特效）位置，而非士兵坐标
+	local ax, ay = wisp_centroid()
 	local a = E:create_entity(this.aura)
 
-	a.pos = this.pos
+	a.pos = V.v(ax, ay)
 	a.aura.duration = this.duration
 	a.aura.level = this.power_level
 
@@ -20424,6 +20479,23 @@ function scripts.controller_tower_arborean_emissary_gift_of_nature.update(this, 
 		if store.tick_ts - aura_ts > this.duration then
 			break
 		end
+
+		local target = current_target()
+
+		if not target then
+			local new_target = find_retarget(a.pos)
+
+			if new_target then
+				target_id = new_target.id
+
+				for _, w in ipairs(wisps) do
+					w.target_id = target_id
+				end
+			end
+		end
+
+		local wx, wy = wisp_centroid()
+		a.pos.x, a.pos.y = wx, wy
 
 		coroutine.yield()
 	end
