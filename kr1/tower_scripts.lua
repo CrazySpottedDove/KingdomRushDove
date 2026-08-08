@@ -1734,7 +1734,7 @@ scripts.tower_wild_magus = {
 						this.render.sprites[6].ts, this.render.sprites[6].hidden = store.tick_ts, false
 						this.tween.props[6].ts = store.tick_ts
 						this.tween.props[7].ts = store.tick_ts
-						this.render.sprites[rune_sid].ts, this.render.sprites[rune_sid].hidden = store.tick_ts
+						this.render.sprites[rune_sid].ts, this.render.sprites[rune_sid].hidden = store.tick_ts, false
 
 						y_wait(store, wa.cast_time)
 
@@ -1750,7 +1750,7 @@ scripts.tower_wild_magus = {
 
 						wa.ts = store.tick_ts
 
-						y_animation_wait(this, rune_sid)
+						y_animation_wait(this, rune_sid, 0)
 
 						this.render.sprites[rune_sid].hidden = true
 
