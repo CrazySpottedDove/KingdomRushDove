@@ -87,10 +87,6 @@ function M.register(sys)
 		W:load(store.level_name, store.level_mode, store.level_mode_override == GAME_MODE_ENDLESS)
 		coroutine.yield()
 
-		if configer.config().enabled and configer.config().random_creeps then
-			W:randomize_creeps()
-		end
-
 		A:load()
 		coroutine.yield()
 
@@ -111,6 +107,11 @@ function M.register(sys)
 
 		if store.level.init then
 			store.level:init(store)
+		end
+
+		-- 随机化敌人放在 level:init 后面，避免 level 中定义的敌人未定义导致随机化失败的问题
+		if configer.config().enabled and configer.config().random_creeps then
+			W:randomize_creeps()
 		end
 		coroutine.yield()
 
