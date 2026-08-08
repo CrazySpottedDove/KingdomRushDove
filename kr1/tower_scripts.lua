@@ -16371,20 +16371,35 @@ function scripts.tower_barrel.update(this, store)
 			end
 
 			if ready_to_attack(ba, store, tw.cooldown_factor) then
-				local enemy = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range, ba.vis_flags, ba.vis_bans)
+				local target = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range, ba.vis_flags, ba.vis_bans)
 
-				if not enemy then
+				if not target then
+					target = U.find_nearest_soldier(store.soldiers, tpos, 0, a.range, F_MOD, F_NONE, function(s)
+						return not U.has_modifier(store, s, "mod_bullet_tower_barrel_lvl4_soldier")
+					end)
+				end
+
+				if not target then
 					ba.ts = ba.ts + fts(10)
 				else
 					ba.ts = store.tick_ts
 
-					local trigger_pos = U.calculate_enemy_ffe_pos(enemy, ba.shoot_time + ba.node_prediction)
+					local trigger_pos = target.enemy and U.calculate_enemy_ffe_pos(target, ba.shoot_time + ba.node_prediction) or target.pos
 					local flip_x = trigger_pos.x > this.pos.x
 
 					U.animation_start(this, ba.animation, flip_x, store.tick_ts, false, this.sid_viking)
 					U.y_wait_unconditional(store, ba.shoot_time)
 
-					local enemy, _, pred_pos = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, a.range, ba.node_prediction, ba.vis_flags, ba.vis_bans, E:get_template("bullet_tower_barrel_lvl4").bullet.damage_radius)
+					local target, _, pred_pos = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, a.range, ba.node_prediction, ba.vis_flags, ba.vis_bans, E:get_template("bullet_tower_barrel_lvl4").bullet.damage_radius)
+					if not target then
+						target = U.find_nearest_soldier(store.soldiers, tpos, 0, a.range, F_MOD, F_NONE, function(s)
+							return not U.has_modifier(store, s, "mod_bullet_tower_barrel_lvl4_soldier")
+						end)
+						if target then
+							pred_pos = target.pos
+						end
+					end
+
 					local offset_x = ba.bullet_start_offset.x
 
 					if flip_x then
@@ -16398,7 +16413,7 @@ function scripts.tower_barrel.update(this, store)
 					b.bullet.damage_factor = tw.damage_factor
 					b.pos.x, b.pos.y = this.pos.x + offset_x, this.pos.y + ba.bullet_start_offset.y
 					b.bullet.from = V.vclone(b.pos)
-					b.bullet.to = enemy and pred_pos or trigger_pos
+					b.bullet.to = target and pred_pos or trigger_pos
 					b.bullet.source_id = this.id
 
 					queue_insert(store, b)
