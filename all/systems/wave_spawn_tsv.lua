@@ -92,7 +92,7 @@ function M.register(sys)
 				coroutine.yield()
 			end
 		else
-			U.y_wait(store, wait_time, function(store, wait_time)
+			U.y_wait_conditional(store, wait_time, function(store, wait_time)
 				return store.send_next_wave or store.force_next_wave
 			end)
 		end
@@ -155,7 +155,7 @@ function M.register(sys)
 
 		for count = 1, spawn_multiplier do
 			if wait_time and wait_time > 0 then
-				U.y_wait(store, wait_time / spawn_multiplier, function(store, wait_time)
+				U.y_wait_conditional(store, wait_time / spawn_multiplier, function(store, wait_time)
 					return store.force_next_wave
 				end)
 			end
@@ -195,7 +195,7 @@ function M.register(sys)
 		local wait_time = cmd.wait_time
 
 		if wait_time and wait_time > 0 then
-			U.y_wait(store, wait_time, function(store, wait_time)
+			U.y_wait_conditional(store, wait_time, function(store, wait_time)
 				return store.force_next_wave
 			end)
 		end
@@ -215,7 +215,7 @@ function M.register(sys)
 		local wait_time = cmd.wait_time
 
 		if wait_time and wait_time > 0 then
-			U.y_wait(store, wait_time, function(store, wait_time)
+			U.y_wait_conditional(store, wait_time, function(store, wait_time)
 				return store.force_next_wave
 			end)
 		end
@@ -249,7 +249,7 @@ function M.register(sys)
 			end
 		else
 			cmd.wait_time = km.clamp(30, 60, cmd.wait_time)
-			U.y_wait(store, cmd.wait_time, function(store, wait_time)
+			U.y_wait_conditional(store, cmd.wait_time, function(store, wait_time)
 				if store.wait_signal_done or store.force_next_wave then
 					store.wait_signal_done = "interrupted"
 
@@ -266,7 +266,7 @@ function M.register(sys)
 		local wait_time = cmd.wait_time
 
 		if wait_time and wait_time > 0 then
-			U.y_wait(store, wait_time, function(store, wait_time)
+			U.y_wait_conditional(store, wait_time, function(store, wait_time)
 				return store.force_next_wave
 			end)
 		end
@@ -285,7 +285,7 @@ function M.register(sys)
 						coroutine.yield()
 					end
 				else
-					U.y_wait(store, cmd.wait_time, function(store, wait_time)
+					U.y_wait_conditional(store, cmd.wait_time, function(store, wait_time)
 						return store.force_next_wave
 					end)
 				end

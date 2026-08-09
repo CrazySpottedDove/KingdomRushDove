@@ -683,7 +683,7 @@ function scripts.eb_veznan.update(this, store)
 			end
 
 			if sda.animation_end_extra_time and sda.animation_end_extra_time > 0 then
-				if U.y_wait(store, sda.animation_end_extra_time, function(st, time)
+				if U.y_wait_conditional(store, sda.animation_end_extra_time, function(st, time)
 					return this.unit.is_stunned or this.phase_signal
 				end) then
 					return abort_soul_drain()
@@ -737,7 +737,7 @@ function scripts.eb_veznan.update(this, store)
 	this.phase = "welcome"
 
 	for i, d in ipairs(this.taunts.sets.welcome.delays) do
-		if U.y_wait(store, d, battle_started) then
+		if U.y_wait_conditional(store, d, battle_started) then
 			break
 		end
 
@@ -4503,7 +4503,7 @@ function scripts.eb_drow_queen.update(this, store)
 	while not this.phase_signal do
 		local delay = math.random(this.taunts.delay_min, this.taunts.delay_max)
 
-		if U.y_wait(store, delay, function()
+		if U.y_wait_conditional(store, delay, function()
 			return this.phase_signal ~= nil
 		end) then
 			break
@@ -5037,7 +5037,7 @@ function scripts.eb_bram.update(this, store)
 	while not this.phase_signal do
 		local delay = math.random(this.taunts.delay_min, this.taunts.delay_max)
 
-		if U.y_wait(store, delay, function()
+		if U.y_wait_conditional(store, delay, function()
 			return this.phase_signal ~= nil
 		end) then
 			break
@@ -8165,7 +8165,7 @@ function scripts.controller_stage_19_navira.update(this, store)
 			queue_insert(store, rot_controller)
 
 			for _, v in pairs(balls) do
-				if U.y_wait(store, this.fire_balls_wait_between_balls, break_fn) then
+				if U.y_wait_conditional(store, this.fire_balls_wait_between_balls, break_fn) then
 					goto label_1337_0
 				end
 
@@ -8176,7 +8176,7 @@ function scripts.controller_stage_19_navira.update(this, store)
 				U.animation_start_default(v, "idle", nil, store.tick_ts, true)
 			end
 
-			if U.y_wait(store, this.fire_balls_wait_before_shoot, break_fn) then
+			if U.y_wait_conditional(store, this.fire_balls_wait_before_shoot, break_fn) then
 				break
 			end
 
@@ -9876,7 +9876,7 @@ function scripts.mod_boss_crocs_tower_eat.update(this, store)
 	target.ui.can_click = false
 	target.tower.type = target.tower._type
 
-	local not_finished = U.y_wait(store, fts(6), function(store, time)
+	local not_finished = U.y_wait_conditional(store, fts(6), function(store, time)
 		return boss and boss.health and boss.health.dead
 	end)
 

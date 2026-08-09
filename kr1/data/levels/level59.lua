@@ -101,7 +101,7 @@ local t_elapsed=store.tick_ts-start_ts
 local t_total=group[2]
 local t_actual=km.clamp(0,t_total,t_total-t_elapsed)
 log.debug("wave_number:%s waiting:%s type:%s",wave_number,t_actual,group[1])
-if U.y_wait(store,t_actual,function(store,time)
+if U.y_wait_conditional(store,t_actual,function(store,time)
 return store.wave_group_number~=wave_number or self.boss.health.dead
 end) then
 return

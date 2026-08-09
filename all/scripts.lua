@@ -231,7 +231,7 @@ function scripts.delayed_play.update(this, store)
 					if d.play_duration then
 						U.animation_start_default(this, d.play_animation, nil, store.tick_ts, true)
 
-						if U.y_wait(store, d.play_duration, function()
+						if U.y_wait_conditional(store, d.play_duration, function()
 							return d.click_interrupts and this.ui.clicked
 						end) then
 							goto label_9_0
@@ -952,7 +952,7 @@ function scripts.enemies_spawner.update(this, store)
 
 			local wait_time = sp.random_cycle and U.frandom(unpack(sp.random_cycle)) or sp.cycle_time
 
-			U.y_wait(store, wait_time, function()
+			U.y_wait_conditional(store, wait_time, function()
 				return sp.interrupt
 			end)
 		end
@@ -7847,7 +7847,7 @@ function scripts.taunts_controller.update(this, store)
 
 				::label_161_0::
 
-				if U.y_wait(store, t_actual, function(store, time)
+				if U.y_wait_conditional(store, t_actual, function(store, time)
 					return store.wave_group_number ~= wave_number or this.interrupt
 				end) then
 					goto label_161_1
@@ -8968,7 +8968,7 @@ function scripts.delayed_play_kr5.update(this, store)
 					if d.play_duration then
 						U.animation_start_default(this, d.play_animation, nil, store.tick_ts, true)
 
-						if U.y_wait(store, d.play_duration, function()
+						if U.y_wait_conditional(store, d.play_duration, function()
 							return d.click_interrupts and this.ui.clicked
 						end) then
 							goto label_15_0

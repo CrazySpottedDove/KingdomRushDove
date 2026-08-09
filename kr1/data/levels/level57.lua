@@ -52,7 +52,7 @@ local interrupted=false
 for _,seq in pairs(wave_seq) do
 local action,delay,data=unpack(seq)
 log.debug(" seq. action:%s delay:%s",action,delay)
-interrupted=U.y_wait(store,delay-(store.tick_ts-start_ts),function(store,time)
+interrupted=U.y_wait_conditional(store,delay-(store.tick_ts-start_ts),function(store,time)
 return this_wave~=store.wave_group_number or store.waves_finished
 end)
 if not interrupted or action==OPEN_PATH then

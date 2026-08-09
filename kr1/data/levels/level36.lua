@@ -171,7 +171,7 @@ local bomb_origins={V.v(595,446),V.v(623,459),V.v(634,442)}
 local bomb_count=0
 local start_ts=store.tick_ts
 while store.tick_ts-start_ts<30 do
-if U.y_wait(store,self.volcano_bomb_delay,function(store)
+if U.y_wait_conditional(store,self.volcano_bomb_delay,function(store)
 return store.waves_finished and not LU.has_alive_enemies(store)
 end) then
 return

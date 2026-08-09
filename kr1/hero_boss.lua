@@ -49,7 +49,7 @@ local function ady(v)
 end
 
 local function y_enemy_wait(store, this, time)
-	return U.y_wait(store, time, function(store, time)
+	return U.y_wait_conditional(store, time, function(store, time)
 		return this.health.dead or this.unit.is_stunned
 	end)
 end

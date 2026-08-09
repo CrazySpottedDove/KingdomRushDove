@@ -4739,14 +4739,14 @@ function scripts.burning_floor_controller.update(this, store)
 
 			local delay, duration = unpack(wdata)
 
-			if U.y_wait(store, delay, wave_changed) then
+			if U.y_wait_conditional(store, delay, wave_changed) then
 			-- block empty
 			else
 				for _, a in pairs(auras) do
 					a.aura.active = true
 				end
 
-				U.y_wait(store, duration, wave_changed)
+				U.y_wait_conditional(store, duration, wave_changed)
 
 				for _, a in pairs(auras) do
 					a.aura.active = false
@@ -4781,7 +4781,7 @@ function scripts.aura_burning_floor.update(this, store)
 		this.tween.reverse = false
 		this.tween.ts = store.tick_ts
 
-		while not U.y_wait(store, a.cycle_time, function()
+		while not U.y_wait_conditional(store, a.cycle_time, function()
 			return not a.active
 		end) do
 			local targets = U.find_soldiers_in_range(store.soldiers, this.pos, 0, a.radius, a.vis_flags, a.vis_bans)
@@ -5753,7 +5753,7 @@ function scripts.enemy_cannibal_volcano.update(this, store)
 
 					local help_banner = show_help_banner()
 
-					if U.y_wait(store, scream_every, function()
+					if U.y_wait_conditional(store, scream_every, function()
 						return this.health.dead or #this.enemy.blockers > 0
 					end) then
 						queue_remove(store, help_banner)
@@ -9176,16 +9176,16 @@ function scripts.moon_controller.update(this, store)
 			local delay = d_delay - (store.tick_ts - wave_start_ts)
 			local transit_time = this.transit_time
 
-			if U.y_wait(store, delay - transit_time, fn_new_wave) then
+			if U.y_wait_conditional(store, delay - transit_time, fn_new_wave) then
 			-- block empty
 			else
 				moon.tween.props[1].keys = {{0, math.pi / 5}, {transit_time, math.pi * 0.5}}
 				moon.tween.disabled = nil
 				moon.tween.ts = store.tick_ts
 
-				if U.y_wait(store, 0.15 * transit_time, fn_new_wave) then
+				if U.y_wait_conditional(store, 0.15 * transit_time, fn_new_wave) then
 				-- block empty
-				elseif U.y_wait(store, 0.85 * transit_time, fn_new_wave) then
+				elseif U.y_wait_conditional(store, 0.85 * transit_time, fn_new_wave) then
 				-- block empty
 				else
 					moon_light.tween.ts = store.tick_ts
@@ -9244,7 +9244,7 @@ function scripts.moon_controller.update(this, store)
 				moon.tween.props[1].keys = {{0, moon_s.r}, {transit_time, 4 * math.pi / 5}}
 				moon.tween.ts = store.tick_ts
 
-				if U.y_wait(store, transit_time, fn_new_wave) then
+				if U.y_wait_conditional(store, transit_time, fn_new_wave) then
 					transit_time = (transit_time - (store.tick_ts - moon.tween.ts)) / 4
 					moon.tween.props[1].keys = {{0, moon_s.r}, {transit_time, 4 * math.pi / 5}}
 					moon.tween.ts = store.tick_ts
@@ -14081,7 +14081,7 @@ function scripts.enemy_mactans.update(this, store)
 				touch_duration = aura.step_nodes * aura.step_delay
 			end
 
-			if U.y_wait(store, touch_duration, function(store, time)
+			if U.y_wait_conditional(store, touch_duration, function(store, time)
 				return this.ui.clicked or is_tb and not store.entities[tower.id]
 			end) then
 				queue_remove(store, webbing)
@@ -16524,7 +16524,7 @@ function scripts.mod_timelapse.update(this, store)
 
 	U.y_animation_wait_default(this)
 	U.animation_start(this, "loop", nil, store.tick_ts, true, 1)
-	U.y_wait(store, m.duration - (store.tick_ts - m.ts) - fts(10), function(store, time)
+	U.y_wait_conditional(store, m.duration - (store.tick_ts - m.ts) - fts(10), function(store, time)
 		return this.interrupt or target.health.dead
 	end)
 	S:queue("TowerHighMageTimeCastEnd")
@@ -17730,7 +17730,7 @@ function scripts.mod_bloodsydian_warlock.update(this, store)
 
 	this.incubation_time = this.incubation_time + U.frandom(-this.incubation_time_variance, this.incubation_time_variance)
 
-	U.y_wait(store, this.incubation_time, function()
+	U.y_wait_conditional(store, this.incubation_time, function()
 		return target.health.dead
 	end)
 	U.sprites_show(target, nil, nil, true)
@@ -17888,7 +17888,7 @@ function scripts.mactans_controller.update(this, store)
 
 					log.debug("mactans_controller wave_number:%s delay:%s waiting:%s type:%s", wave_number, t_total, t_actual, group[2])
 
-					if U.y_wait(store, t_actual, function(store, time)
+					if U.y_wait_conditional(store, t_actual, function(store, time)
 						return store.wave_group_number ~= wave_number or store.waves_finished
 					end) then
 						goto label_487_0
@@ -19217,7 +19217,7 @@ function scripts.decal_s08_peakaboo.update(this, store)
 
 	this.ui.clicked = nil
 
-	if U.y_wait(store, U.frandom(2, 4), function(store, time)
+	if U.y_wait_conditional(store, U.frandom(2, 4), function(store, time)
 		return this.ui.clicked
 	end) then
 	-- block empty
@@ -19970,7 +19970,7 @@ function scripts.decal_s10_gnome.update(this, store)
 	this.ui.clicked = nil
 	delay = U.frandom(this.min_delay, this.max_delay)
 
-	if U.y_wait(store, delay, function()
+	if U.y_wait_conditional(store, delay, function()
 		return this.ui.clicked
 	end) then
 	-- block empty
@@ -19998,7 +19998,7 @@ function scripts.decal_s10_gnome.update(this, store)
 		elseif action == "walk" then
 			local from, to = unpack(this.walk_points)
 
-			if y_walk(from, to, this.walk_time) or U.y_wait(store, U.frandom(10, 15), function()
+			if y_walk(from, to, this.walk_time) or U.y_wait_conditional(store, U.frandom(10, 15), function()
 				return this.ui.clicked
 			end) or y_walk(to, from, this.walk_time) then
 				goto label_552_1
@@ -20324,7 +20324,7 @@ function scripts.decal_drow_queen_portal.update(this, store)
 				queue_insert(store, fx)
 				coroutine.yield()
 
-				if interval > 0 and U.y_wait(store, fts(interval), function()
+				if interval > 0 and U.y_wait_conditional(store, fts(interval), function()
 					return this.pack == nil
 				end) then
 					log.debug("(%s)decal_drow_queen_portal interrupted", this.id)
@@ -20372,7 +20372,7 @@ function scripts.decal_s12_lemur.update(this, store)
 
 	local show_time = U.frandom(this.show_time[1], this.show_time[2])
 
-	if U.y_wait(store, show_time, function()
+	if U.y_wait_conditional(store, show_time, function()
 		return this.ui.clicked == true
 	end) then
 		U.y_animation_play(this, "action", nil, store.tick_ts)
@@ -20839,7 +20839,7 @@ function scripts.decal_emit_breath_baby_ashbite.update(this, store)
 	emit_ps.pos.x, emit_ps.pos.y = this.pos.x, this.pos.y
 
 	queue_insert(store, emit_ps)
-	U.y_wait(store, this.duration, function()
+	U.y_wait_conditional(store, this.duration, function()
 		return soldier.health.dead or soldier.nav_rally.new
 	end)
 
@@ -21099,7 +21099,7 @@ function scripts.decal_s15_malicia.update(this, store)
 			ray.hidden = false
 
 			U.animation_start(this, "attack", nil, store.tick_ts, true, 1)
-			U.y_wait(store, ray_duration, function()
+			U.y_wait_conditional(store, ray_duration, function()
 				return this.phase_signal == "stop"
 			end)
 
@@ -21309,13 +21309,13 @@ function scripts.malik_slave_controller.update(this, store)
 
 		local t1 = U.frandom(1, 2)
 
-		if U.y_wait(store, t1, is_free) then
+		if U.y_wait_conditional(store, t1, is_free) then
 			break
 		end
 
 		sign.tween.ts = store.tick_ts
 
-		if U.y_wait(store, this.wait_time - t1, is_free) then
+		if U.y_wait_conditional(store, this.wait_time - t1, is_free) then
 			break
 		end
 
@@ -21521,7 +21521,7 @@ function scripts.decal_s19_drizzt_gnoll.update(this, store)
 
 	U.animation_start_default(this, "joke", nil, store.tick_ts, true)
 
-	if U.y_wait(store, 2, function()
+	if U.y_wait_conditional(store, 2, function()
 		return this.set_phase == "scared"
 	end) then
 		this.phase = "scared"
@@ -28678,7 +28678,7 @@ function scripts.controller_stage_11_cult_leader.update(this, store)
 
 						do_chain_ability()
 
-						if U.y_wait(store, this.cultist_attack_time, break_fn) then
+						if U.y_wait_conditional(store, this.cultist_attack_time, break_fn) then
 							U.y_animation_play(this.cultist, "attackleave", false, store.tick_ts)
 							U.animation_start_default(this.cultist, "idle", nil, store.tick_ts, true)
 
@@ -28698,7 +28698,7 @@ function scripts.controller_stage_11_cult_leader.update(this, store)
 
 					do_shield_ability()
 
-					if U.y_wait(store, this.cultist_attack_time, break_fn) then
+					if U.y_wait_conditional(store, this.cultist_attack_time, break_fn) then
 						U.y_animation_play(this.cultist, "attackleave", false, store.tick_ts)
 						U.animation_start_default(this.cultist, "idle", nil, store.tick_ts, true)
 
@@ -28847,7 +28847,7 @@ function scripts.enemy_stage_11_cult_leader_illusion.update(this, store)
 
 	this.render.sprites[1].hidden = true
 
-	U.y_wait(store, this.spawn_charge_time, function()
+	U.y_wait_conditional(store, this.spawn_charge_time, function()
 		return this.veznan_hit
 	end)
 
@@ -31292,7 +31292,7 @@ function scripts.tower_stage_13_sunray.update(this, store)
 			b.tower_ref = this
 
 			queue_insert(store, b)
-			U.y_wait(store, ab.duration, function()
+			U.y_wait_conditional(store, ab.duration, function()
 				return not enemy or enemy.health.dead
 			end)
 			U.y_animation_play(this, ab.animation_out, nil, store.tick_ts, 1, 2)
@@ -33955,7 +33955,7 @@ function scripts.enemy_unblinded_priest.update(this, store)
 				U.y_animation_play(this, "transformation_start", nil, store.tick_ts, 1)
 				U.animation_start_default(this, "transformation_loop", nil, store.tick_ts, true)
 
-				if U.y_wait(store, this.transformation_time, function()
+				if U.y_wait_conditional(store, this.transformation_time, function()
 					return this.health.dead or this.unit.is_stunned
 				end) then
 					S:stop(this.transformation_sound)
@@ -34593,7 +34593,7 @@ function scripts.enemy_blinker.update(this, store)
 
 				local check_aura_ts = store.tick_ts
 
-				U.y_wait(store, ar.duration, function()
+				U.y_wait_conditional(store, ar.duration, function()
 					if this.unit.is_stunned or this.health.dead then
 						return true
 					end
@@ -35544,7 +35544,7 @@ function scripts.enemy_specter.update(this, store)
 				U.y_animation_play(this, "approach_in", nil, store.tick_ts)
 				U.animation_start_default(this, "approach_idle", nil, store.tick_ts, true)
 
-				if U.y_wait(store, this.chase_delay, corruption_break_fn) then
+				if U.y_wait_conditional(store, this.chase_delay, corruption_break_fn) then
 				-- block empty
 				else
 					S:queue(this.sound_rush)
@@ -38443,7 +38443,7 @@ function scripts.trees_guardian_tree.update(this, store)
 					S:queue(this.sound_pre_cast)
 					U.animation_start_group(this, a.animation, nil, store.tick_ts, false, "layers")
 
-					if U.y_wait(store, a.shoot_time, false) then
+					if U.y_wait_unconditional(store, a.shoot_time) then
 						goto label_790_0
 					end
 
@@ -39223,7 +39223,7 @@ function scripts.decal_boss_pig_pool.update(this, store)
 	while not this.taunts_disabled and (not store.waves_finished or LU.has_alive_enemies(store)) do
 		local delay = math.random(this.taunts.delay_min, this.taunts.delay_max)
 
-		U.y_wait(store, delay)
+		U.y_wait_unconditional(store, delay)
 
 		if this.taunts_disabled then
 			break
@@ -41696,7 +41696,7 @@ function scripts.controller_stage_24_machinist.update(this, store)
 
 					queue_insert(store, machinist)
 					signal.emit("wave-notification", "icon", this.machinist_t)
-					U.y_wait(store, 2)
+					U.y_wait_unconditional(store, 2)
 
 					if store.level_mode == GAME_MODE_CAMPAIGN then
 						local taunt_idx = math.random(1, 3)
@@ -47080,7 +47080,7 @@ function scripts.enemy_spider_priest.update(this, store)
 				U.y_animation_play(this, "transform_start", nil, store.tick_ts, 1)
 				U.animation_start_default(this, "transform_loop", nil, store.tick_ts, true)
 
-				if U.y_wait(store, this.transformation_time, function()
+				if U.y_wait_conditional(store, this.transformation_time, function()
 					return this.health.dead or this.unit.is_stunned
 				end) then
 					S:stop(this.transformation_sound)
@@ -48232,7 +48232,7 @@ function scripts.enemy_fire_fox.update(this, store)
 				U.y_animation_play(this, "transformation_in", nil, store.tick_ts, 1)
 				U.animation_start_default(this, "transformation_loop", nil, store.tick_ts, true)
 
-				if U.y_wait(store, this.transform_duration, function()
+				if U.y_wait_conditional(store, this.transform_duration, function()
 					return this.health.dead or this.unit.is_stunned
 				end) then
 					S:stop(this.transformation_sound)
@@ -51432,7 +51432,7 @@ function scripts.enemy_hellfire_warlock.update(this, store)
 	end
 
 	local function y_summon_wait(time)
-		return U.y_wait(store, time, function(store, time)
+		return U.y_wait_conditional(store, time, function(store, time)
 			return SU.enemy_interrupted(this) or #this.enemy.blockers > 0
 		end)
 	end
@@ -69520,7 +69520,7 @@ function scripts.enemy_alfa_storm.update(this, store, script)
 
 				local blockable_ts = store.tick_ts + fts(40)
 
-				if U.y_wait(store, a_special.cast_time, function(store, time)
+				if U.y_wait_conditional(store, a_special.cast_time, function(store, time)
 					return SU.enemy_interrupted(this) or this.enemy.blockers and #this.enemy.blockers > 0 and store.tick_ts < blockable_ts
 				end) then
 					SU.delay_attack(store, a_special, fts(10))

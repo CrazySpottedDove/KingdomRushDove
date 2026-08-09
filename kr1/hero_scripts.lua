@@ -1992,7 +1992,7 @@ scripts.hero_bolin = {
 							U.animation_start_default(this, "tar", flip, store.tick_ts)
 							SU.hero_gain_xp_from_skill(this, skill)
 
-							if U.y_wait(store, a.shoot_time, function()
+							if U.y_wait_conditional(store, a.shoot_time, function()
 								return SU.hero_interrupted(this)
 							end) then
 							-- block empty
@@ -2056,7 +2056,7 @@ scripts.hero_bolin = {
 						U.animation_start_default(this, "mine", flip, store.tick_ts)
 						SU.hero_gain_xp_from_skill(this, skill)
 
-						if U.y_wait(store, a.shoot_time, function()
+						if U.y_wait_conditional(store, a.shoot_time, function()
 							return SU.hero_interrupted(this)
 						end) then
 						-- block empty
@@ -2114,7 +2114,7 @@ scripts.hero_bolin = {
 							U.set_destination(this, this.pos)
 
 							for si, st in ipairs(a.shoot_times) do
-								if U.y_wait(store, a.shoot_times[si], function()
+								if U.y_wait_conditional(store, a.shoot_times[si], function()
 									return SU.hero_interrupted(this)
 								end) then
 									goto label_47_0
@@ -2142,7 +2142,7 @@ scripts.hero_bolin = {
 
 								U.animation_start_default(this, an, af, store.tick_ts, false)
 
-								if U.y_wait(store, a.shoot_time, function()
+								if U.y_wait_conditional(store, a.shoot_time, function()
 									return SU.hero_interrupted(this)
 								end) then
 									goto label_47_0
@@ -3646,7 +3646,7 @@ scripts.hero_van_helsing = {
 
 						U.animation_start_default(this, an, af, store.tick_ts, false)
 
-						if U.y_wait(store, a.crosshair_time, function()
+						if U.y_wait_conditional(store, a.crosshair_time, function()
 							return SU.hero_interrupted(this)
 						end) then
 						-- block empty
@@ -3659,7 +3659,7 @@ scripts.hero_van_helsing = {
 
 							queue_insert(store, m)
 
-							if U.y_wait(store, a.shoot_time - a.crosshair_time, function()
+							if U.y_wait_conditional(store, a.shoot_time - a.crosshair_time, function()
 								return SU.hero_interrupted(this)
 							end) then
 								queue_remove(store, m)
@@ -3705,7 +3705,7 @@ scripts.hero_van_helsing = {
 
 						U.animation_start_default(this, an, af, store.tick_ts, false)
 
-						if U.y_wait(store, a.shoot_time, function()
+						if U.y_wait_conditional(store, a.shoot_time, function()
 							return SU.hero_interrupted(this)
 						end) then
 						-- block empty
@@ -4546,7 +4546,7 @@ scripts.soldier_magnus_illusion = {
 
 						U.animation_start_default(this, arcane_rain.animation, flip, store.tick_ts)
 
-						if U.y_wait(store, arcane_rain.cast_time, function()
+						if U.y_wait_conditional(store, arcane_rain.cast_time, function()
 							return SU.soldier_interrupted(this)
 						end) then
 							goto label_34_0
@@ -4697,7 +4697,7 @@ scripts.hero_magnus = {
 					S:queue(a.sound)
 					U.animation_start_default(this, a.animation, nil, store.tick_ts)
 
-					if U.y_wait(store, a.cast_time, function()
+					if U.y_wait_conditional(store, a.cast_time, function()
 						return SU.hero_interrupted(this)
 					end) then
 						goto label_75_0
@@ -4747,7 +4747,7 @@ scripts.hero_magnus = {
 
 						U.animation_start_default(this, a.animation, flip, store.tick_ts)
 
-						if U.y_wait(store, a.cast_time, function()
+						if U.y_wait_conditional(store, a.cast_time, function()
 							return SU.hero_interrupted(this)
 						end) then
 							goto label_75_0
@@ -6637,7 +6637,7 @@ scripts.hero_ignus = {
 							U.animation_start_default(this, a.animation, flip, store.tick_ts)
 							S:queue(a.sound)
 
-							if U.y_wait(store, a.cast_time, function()
+							if U.y_wait_conditional(store, a.cast_time, function()
 								return SU.hero_interrupted(this)
 							end) then
 								goto label_71_0
@@ -9887,7 +9887,7 @@ scripts.hero_minotaur = {
 
 						U.animation_start_default(this, an, af, store.tick_ts, false)
 
-						if U.y_wait(store, a.hit_time, function()
+						if U.y_wait_conditional(store, a.hit_time, function()
 							return SU.hero_interrupted(this)
 						end) then
 						-- block empty
@@ -9930,7 +9930,7 @@ scripts.hero_minotaur = {
 						S:queue(a.sound)
 						U.animation_start_default(this, a.animation, nil, store.tick_ts)
 
-						if U.y_wait(store, a.shoot_time, function()
+						if U.y_wait_conditional(store, a.shoot_time, function()
 							return SU.hero_interrupted(this)
 						end) then
 						-- block empty
@@ -14769,7 +14769,7 @@ function scripts.hero_bravebark.update(this, store)
 
 					U.animation_start_default(this, a.animation, af, store.tick_ts)
 
-					if U.y_wait(store, a.spawn_time, function()
+					if U.y_wait_conditional(store, a.spawn_time, function()
 						return SU.hero_interrupted(this)
 					end) then
 					-- block empty
@@ -14824,7 +14824,7 @@ function scripts.hero_bravebark.update(this, store)
 
 					U.animation_start_default(this, a.animation, af, store.tick_ts)
 
-					if U.y_wait(store, a.hit_time, function()
+					if U.y_wait_conditional(store, a.hit_time, function()
 						return SU.hero_interrupted(this)
 					end) then
 					-- block empty
@@ -15096,7 +15096,7 @@ function scripts.hero_catha.update(this, store)
 					S:queue(a.sound)
 					U.animation_start_default(this, a.animation, nil, store.tick_ts)
 
-					if U.y_wait(store, a.shoot_time, function()
+					if U.y_wait_conditional(store, a.shoot_time, function()
 						return SU.hero_interrupted(this)
 					end) then
 					-- block empty
@@ -15144,7 +15144,7 @@ function scripts.hero_catha.update(this, store)
 					S:queue(a.sound)
 					U.animation_start_default(this, a.animation, nil, store.tick_ts)
 
-					if U.y_wait(store, a.shoot_time, function()
+					if U.y_wait_conditional(store, a.shoot_time, function()
 						return SU.hero_interrupted(this)
 					end) then
 					-- block empty
@@ -15200,7 +15200,7 @@ function scripts.hero_catha.update(this, store)
 					S:queue(a.sound, a.sound_args)
 					U.animation_start_default(this, a.animation, nil, store.tick_ts)
 
-					if U.y_wait(store, a.spawn_time, function()
+					if U.y_wait_conditional(store, a.spawn_time, function()
 						return SU.hero_interrupted(this)
 					end) then
 					-- block empty
@@ -20242,7 +20242,7 @@ function scripts.mod_hero_space_elf_ultimate.update(this, store)
 	tween_levitate.disabled = false
 
 	U.animation_start(this, "idle", nil, store.tick_ts, true, 1)
-	U.y_wait(store, m.duration - (store.tick_ts - m.ts) - fts(10), function(store, time)
+	U.y_wait_conditional(store, m.duration - (store.tick_ts - m.ts) - fts(10), function(store, time)
 		return this.interrupt or target.health.dead
 	end)
 
@@ -27189,7 +27189,7 @@ function scripts.hero_wukong.update(this, store)
 	end
 
 	local function y_wukong_wait_for_second_idle(store, this, time)
-		return U.y_wait(store, time, function(store, time)
+		return U.y_wait_conditional(store, time, function(store, time)
 			if SU.soldier_pick_melee_target(store, this) then
 				return true
 			end
@@ -39325,14 +39325,14 @@ function scripts.eiskalt_icepeaks.update(this, store)
 	local b = this.bullet
 	U.sprites_hide(this)
 	if this.delay then
-		U.y_wait(store, this.delay)
+		U.y_wait_unconditional(store, this.delay)
 	end
 	U.sprites_show(this)
 	local start_ts = store.tick_ts
 	S:queue(this.sound_events.delayed_insert)
 	U.animation_start(this, "in", nil, store.tick_ts, false)
 	this.tween.ts = store.tick_ts
-	U.y_wait(store, b.hit_time)
+	U.y_wait_unconditional(store, b.hit_time)
 	local targets = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.damage_flags, b.damage_bans)
 	if targets then
 		for _, target in ipairs(targets) do
@@ -39358,7 +39358,7 @@ function scripts.eiskalt_icepeaks.update(this, store)
 			end
 		end
 	end
-	U.y_wait(store, b.duration - (store.tick_ts - start_ts))
+	U.y_wait_unconditional(store, b.duration - (store.tick_ts - start_ts))
 	U.y_animation_play(this, "out", nil, store.tick_ts, false)
 	queue_remove(store, this)
 end
@@ -39369,7 +39369,7 @@ scripts.eiskalt_cold_fury_smoke = {}
 function scripts.eiskalt_cold_fury_smoke.update(this, store)
 	U.sprites_hide(this)
 	if this.delay then
-		U.y_wait(store, this.delay)
+		U.y_wait_unconditional(store, this.delay)
 	end
 	for _, s in ipairs(this.render.sprites) do
 		s.ts = store.tick_ts
@@ -39768,13 +39768,13 @@ function scripts.hero_asra_ultimate.update(this, store)
 		while #sequence > 0 do
 			local i = table.remove(sequence, math.random(1, #sequence))
 			local delay = U.frandom(0, 1 / count)
-			U.y_wait(store, delay / 2)
+			U.y_wait_unconditional(store, delay / 2)
 			if P:is_node_valid(pi, ni + i) then
 				spawn_arrow(pi, nil, ni + i)
 			else
 				spawn_arrow(pi, nil, ni - i)
 			end
-			U.y_wait(store, delay / 2)
+			U.y_wait_unconditional(store, delay / 2)
 			if P:is_node_valid(pi, ni - i) then
 				spawn_arrow(pi, nil, ni - i)
 			else
@@ -40846,7 +40846,7 @@ function scripts.hero_dianyun_electric_son.update(this, store)
 				local ts = store.tick_ts
 				local an, af = U.animation_name_facing_point(this, attack.animation, target.pos)
 				U.animation_start(this, an, af, store.tick_ts, false, 1)
-				U.y_wait(store, attack.shoot_time)
+				U.y_wait_unconditional(store, attack.shoot_time)
 				local b = E:create_entity(attack.bullet)
 				local flipSign = af and -1 or 1
 				b.bullet.from = V.v(this.pos.x + attack.bullet_start_offset.x * flipSign, this.pos.y + attack.bullet_start_offset.y)
@@ -41025,7 +41025,7 @@ function scripts.hero_isfet.update(this, store)
 		SU.hero_gain_xp_from_skill(this, skill)
 		S:queue(frog_attack.sound)
 		U.animation_start(this, frog_attack.animation, target.pos.x < this.pos.x, store.tick_ts, false)
-		U.y_wait(store, frog_attack.cast_time)
+		U.y_wait_unconditional(store, frog_attack.cast_time)
 
 		local projectile = E:create_entity(frog_attack.projectile)
 		local offset = target.pos.x < this.pos.x and V.v(-13, 27) or V.v(13, 27)
@@ -41183,7 +41183,7 @@ function scripts.hero_isfet.update(this, store)
 					controller.source_id = this.id
 					controller.count = rain_attack.count
 					queue_insert(store, controller)
-					U.y_wait(store, rain_attack.loop_duration)
+					U.y_wait_unconditional(store, rain_attack.loop_duration)
 					U.y_animation_play(this, rain_attack.animation_out, nil, store.tick_ts, 1)
 					goto label_isfet_end
 				end
@@ -41370,7 +41370,7 @@ function scripts.hero_isfet_bolt.update(this, store)
 
 	if ps and ps.particle_system.emit then
 		ps.particle_system.emit = false
-		U.y_wait(store, ps.particle_system.particle_lifetime[2])
+		U.y_wait_unconditional(store, ps.particle_system.particle_lifetime[2])
 	end
 
 	queue_remove(store, this)
@@ -41620,7 +41620,7 @@ function scripts.controller_isfet_fire_ice_rain.update(this, store)
 		projectile.render.sprites[1].scale = V.v(scale, scale)
 		S:queue(projectile.release_sound)
 		queue_insert(store, projectile)
-		U.y_wait(store, this.spawn_delay)
+		U.y_wait_unconditional(store, this.spawn_delay)
 	end
 
 	queue_remove(store, this)
@@ -42901,7 +42901,6 @@ end
 
 function scripts.hero_mortemis.update(this, store)
 	local h = this.health
-	local he = this.hero
 	local a, skill, brk, sta
 
 	this.timed_attacks.list[1].ts = 0
@@ -42966,7 +42965,7 @@ function scripts.hero_mortemis.update(this, store)
 					a.ts = store.tick_ts
 					U.animation_start(this, a.animation, nil, store.tick_ts, false)
 					S:queue(a.sound)
-					U.y_wait(store, fts(25))
+					U.y_wait_unconditional(store, fts(25))
 
 					for _, e in pairs(targets) do
 						cnt = cnt + 1
@@ -43010,12 +43009,12 @@ function scripts.hero_mortemis.update(this, store)
 					if #nodes < 1 then
 						a.ts = a.ts + 0.1
 					else
-						local s_pi, s_spi, s_ni = unpack(nodes[1])
+						local s_pi, _, s_ni = unpack(nodes[1])
 						local flip = target.pos.x < this.pos.x
 
 						S:queue(a.sound)
 						U.animation_start(this, a.animation, flip, store.tick_ts)
-						U.y_wait(store, a.spawn_time)
+						U.y_wait_unconditional(store, a.spawn_time)
 
 						local delay = 0
 						local n_step = ni < s_ni and -4 or 4
@@ -43037,7 +43036,7 @@ function scripts.hero_mortemis.update(this, store)
 							ni = ni + n_step
 							spi = km.zmod(spi + math.random(1, 2), 3)
 
-							U.y_wait(store, fts(5))
+							U.y_wait_unconditional(store, fts(5))
 						end
 
 						U.y_animation_wait(this, 1)

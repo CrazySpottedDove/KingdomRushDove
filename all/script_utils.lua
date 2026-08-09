@@ -794,7 +794,7 @@ end
 ---@param time number 等待时间
 ---@return boolean 是否提前结束
 function SU.y_soldier_wait(store, this, time)
-	return U.y_wait(store, time, function(store, time)
+	return U.y_wait_conditional(store, time, function(store, time)
 		return SU.soldier_interrupted(this)
 	end)
 end
@@ -2985,20 +2985,18 @@ function SU.soldier_power_upgrade(this, power_name)
 		end
 	end
 
-	if this.dodge and this.dodge.power_name == pn then
+	if this.dodge then
 		local d = this.dodge
-
-		if d.chance_inc then
-			d.chance = d.chance + d.chance_inc
+		if d.power_name == pn then
+			if d.chance_inc then
+				d.chance = d.chance + d.chance_inc
+			end
 		end
-	end
-
-	if this.dodge and this.dodge.counter_attack and this.dodge.counter_attack.power_name == pn then
-		local d = this.dodge
-
-		if d.counter_attack.damage_inc then
-			d.counter_attack.damage_min = d.counter_attack.damage_min + d.counter_attack.damage_inc
-			d.counter_attack.damage_max = d.counter_attack.damage_max + d.counter_attack.damage_inc
+		if d.counter_attack and d.counter_attack.power_name == pn then
+			if d.counter_attack.damage_inc then
+				d.counter_attack.damage_min = d.counter_attack.damage_min + d.counter_attack.damage_inc
+				d.counter_attack.damage_max = d.counter_attack.damage_max + d.counter_attack.damage_inc
+			end
 		end
 	end
 
@@ -3054,7 +3052,7 @@ end
 ---@param time number 等待时间
 ---@return boolean 是否提前结束
 function SU.y_enemy_wait(store, this, time)
-	return U.y_wait(store, time, function(store, time)
+	return U.y_wait_conditional(store, time, function(store, time)
 		return SU.enemy_interrupted(this)
 	end)
 end
@@ -4383,7 +4381,7 @@ function SU.y_show_taunt_set(store, taunts, set_name, index, pos, duration, wait
 			if wait then
 				local wait_duration = duration or kr5_tb.taunt_duration(bd.time) or taunts.duration
 
-				U.y_wait(store, wait_duration)
+				U.y_wait_unconditional(store, wait_duration)
 			end
 
 			return nil
@@ -4412,7 +4410,7 @@ function SU.y_show_taunt_set(store, taunts, set_name, index, pos, duration, wait
 	queue_insert(store, t)
 
 	if wait then
-		U.y_wait(store, duration)
+		U.y_wait_unconditional(store, duration)
 	end
 
 	return t
