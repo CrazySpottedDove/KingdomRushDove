@@ -8232,8 +8232,6 @@ function scripts.soldier_tower_necromancer_skeleton.update(this, store)
 			idle_ts = store.tick_ts
 			patrol_cd = random(this.patrol_min_cd, this.patrol_max_cd)
 		else
-			SU.soldier_courage_upgrade(store, this)
-
 			if this.melee then
 				brk, stam = SU.y_soldier_melee_block_and_attacks(store, this)
 
@@ -9978,8 +9976,6 @@ function scripts.soldier_tower_pandas.update(this, store)
 					goto label_1248_0
 				end
 			end
-
-			SU.soldier_courage_upgrade(store, this)
 
 			if this.powers then
 				for pn, p in pairs(this.powers) do
@@ -20664,7 +20660,6 @@ function scripts.soldier_priests_barrack.update(this, store)
 		if this.unit.is_stunned then
 			SU.soldier_idle(store, this)
 		else
-			SU.soldier_courage_upgrade(store, this)
 
 			if this.dodge and this.dodge.active then
 				this.dodge.active = false
@@ -20826,7 +20821,6 @@ function scripts.soldier_abomination_priests_barrack.update(this, store)
 		if this.unit.is_stunned then
 			SU.soldier_idle(store, this)
 		else
-			SU.soldier_courage_upgrade(store, this)
 
 			if this.dodge and this.dodge.active then
 				this.dodge.active = false
@@ -26949,7 +26943,6 @@ function scripts.soldier_elves_espectral_harasser.update(this, store, script)
 		if this.unit.is_stunned then
 			SU.soldier_idle(store, this)
 		else
-			SU.soldier_courage_upgrade(store, this)
 
 			if not this.soldier.target_id then
 				local target = U.detect_foremost_enemy_in_range_filter_off(tpos(this._espectral_tower_ref), this._espectral_tower_ref.barrack.rally_range, F_BLOCK, F_CLIFF)

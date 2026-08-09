@@ -23797,8 +23797,6 @@ function scripts.soldier_earth_elemental.update(this, store)
 			idle_ts = store.tick_ts
 			patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
 		else
-			SU.soldier_courage_upgrade(store, this)
-
 			if this.melee then
 				brk, stam = SU.y_soldier_melee_block_and_attacks(store, this)
 
@@ -28361,8 +28359,6 @@ function scripts.soldier_stage_10_ymca.update(this, store)
 		if this.unit.is_stunned then
 			SU.soldier_idle(store, this)
 		else
-			SU.soldier_courage_upgrade(store, this)
-
 			while this.nav_rally.new do
 				if SU.y_hero_new_rally(store, this) then
 					goto label_1168_1
@@ -58759,8 +58755,6 @@ function scripts.soldier_stage_35_cannonball.update(this, store)
 			idle_ts = store.tick_ts
 			patrol_cd = math.random(this.patrol_min_cd, this.patrol_max_cd)
 		else
-			SU.soldier_courage_upgrade(store, this)
-
 			if not moving_forward then
 				if search_enemies_ts < store.tick_ts then
 					search_enemies_ts = store.tick_ts + fts(7)
@@ -66101,8 +66095,6 @@ function scripts.soldier_warden_stage_40_island_stopped.update(this, store, scri
 		if this.unit.is_stunned then
 			SU.soldier_idle(store, this)
 		else
-			SU.soldier_courage_upgrade(store, this)
-
 			while this.nav_rally.new do
 				if SU.y_hero_new_rally(store, this) then
 					goto label_2582_1
@@ -70842,8 +70834,6 @@ function scripts.soldier_dragon_warden_warrior.update(this, store, script)
 		if this.unit.is_stunned then
 			SU.soldier_idle(store, this)
 		else
-			SU.soldier_courage_upgrade(store, this)
-
 			while this.nav_rally.new do
 				if SU.y_hero_new_rally(store, this) then
 					goto label_2457_1

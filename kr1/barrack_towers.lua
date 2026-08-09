@@ -3978,7 +3978,7 @@ tt.sound_events.insert = "kr4_elves_barrack_taunt"
 tt.ui.click_rect = r(-40, 0, 80, 70)
 
 tt = RT("soldier_elves_harasser", "soldier_militia")
-AC(tt, "dodge", "ranged", "nav_grid", "powers", "death_spawns")
+AC(tt, "dodge", "ranged", "powers", "death_spawns")
 tt.info.random_name_count = 10
 tt.info.random_name_format = "ELVES_SOLDIER_HARASSER_%i_NAME"
 tt.info.portrait = "kr4_info_portraits_soldiers_0017"

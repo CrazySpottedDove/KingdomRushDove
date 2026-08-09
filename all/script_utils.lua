@@ -3017,19 +3017,6 @@ function SU.soldier_power_upgrade(this, power_name)
 	end
 end
 
----士兵勇气升级
----@param store table game.store
----@param this table 士兵实体
----@return nil
-function SU.soldier_courage_upgrade(store, this)
-	local upg = UP:get_upgrade("barrack_courage")
-
-	if upg and this.soldier and this.health and store.tick_ts - this.soldier.courage_ts > upg.regen_cooldown then
-		this.soldier.courage_ts = store.tick_ts
-		U.heal(this, km.round(this.health.hp_max * upg.regen_factor))
-	end
-end
-
 ---判断敌人是否可被近战拦截
 ---@param store table game.store
 ---@param this table 敌人实体

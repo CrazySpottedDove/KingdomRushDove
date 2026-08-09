@@ -24612,8 +24612,6 @@ function scripts.soldier_hero_witch_decoy.update(this, store)
 		if this.unit.is_stunned then
 			SU.soldier_idle(store, this)
 		else
-			SU.soldier_courage_upgrade(store, this)
-
 			if this.melee then
 				brk, stam = SU.y_soldier_melee_block_and_attacks(store, this)
 
@@ -27897,8 +27895,6 @@ function scripts.soldier_hero_wukong_zhu_apprentice.update(this, store)
 		if this.unit.is_stunned then
 			SU.soldier_idle(store, this)
 		else
-			SU.soldier_courage_upgrade(store, this)
-
 			while this.nav_rally.new do
 				if SU.y_hero_new_rally(store, this) then
 					goto label_895_0
@@ -35594,7 +35590,6 @@ function scripts.soldier_hero_lava_double_trouble.update(this, store, script)
 		if this.unit.is_stunned then
 			SU.soldier_idle(store, this)
 		else
-			SU.soldier_courage_upgrade(store, this)
 
 			while this.nav_rally.new do
 				if SU.y_hero_new_rally(store, this) then
