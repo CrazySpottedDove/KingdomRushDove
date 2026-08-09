@@ -2247,7 +2247,7 @@ AC(tt, "pos", "particle_system")
 tt.particle_system.name = "elven_stargazers_tower_rising_star_particle_trail_idle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
-tt.particle_system.emission_rate = 20
+tt.particle_system.emission_rate = 40
 tt.particle_system.animation_fps = 30
 tt.particle_system.emit_rotation_spread = math.pi * 2
 tt.particle_system.emit_area_spread = vec_2(2, 2)
@@ -2287,7 +2287,6 @@ tt.timed.duration = fts(32)
 tt.timed.runs = INT_32_MAX
 
 tt = RT("fx_tower_elven_stargazers_ray_hit", "fx")
-AC(tt)
 tt.render.sprites[1].name = "elven_stargazers_tower_ray_end_end"
 tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_BULLETS + 1
@@ -2394,7 +2393,6 @@ tt.bullet.hit_time = fts(2)
 tt.bullet.out_fx = "fx_tower_elven_stargazers_ray_hit_start"
 tt.bullet.mod = "mod_tower_elven_stargazers_ray_hit"
 tt.bullet.hit_fx = "fx_tower_elven_stargazers_ray_hit"
-tt.hit_fx_only_no_target = true
 tt.image_width = 169
 tt.main_script.update = scripts.ray5_simple.update
 tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
@@ -2407,7 +2405,7 @@ tt.sound_events.insert = "TowerElvenStargazersBasicAttack"
 tt = RT("arrow_tower_stargazers_death_star", "arrow")
 b = balance.towers.elven_stargazers
 tt.main_script.insert = scripts.arrow.insert
-tt.main_script.update = scripts.arrow.update
+tt.main_script.update = scripts.arrow_missile.update
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].name = "elven_stargazers_tower_rising_star_star_idle"
 tt.bullet.particles_name = "ps_stargazers_death_star_trail"

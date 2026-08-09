@@ -11293,9 +11293,9 @@ function scripts.tower_stargazers.create_star_death(this, store, enemy, factor)
 				local target = targets[km.zmod(i, targets_count)]
 				local b = E:create_entity(mod_star_m.bullet)
 
-				b.pos = vclone(e_pos)
-				b.bullet.from = vclone(b.pos)
-				b.bullet.to = v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+				b.pos:copy(e_pos)
+				b.bullet.from:copy(e_pos)
+				b.bullet.to:set(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
 				b.bullet.target_id = target.id
 				b.bullet.level = pow_s.level
 				b.bullet.damage_factor = factor * this.tower.damage_factor
