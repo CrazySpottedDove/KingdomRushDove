@@ -40338,7 +40338,7 @@ function scripts.tower_stage_18_elven_barrack.remove(this, store)
 			s.health.hp = 0
 			s.health.dead = true
 			s.health_bar.hidden = true
-			s.regen = nil
+			s.regen.health = 0
 		end
 	end
 

@@ -82,6 +82,7 @@ function M.register(sys)
 		coroutine.yield()
 
 		DI:patch_templates()
+		E:precompute()
 		coroutine.yield()
 
 		W:load(store.level_name, store.level_mode, store.level_mode_override == GAME_MODE_ENDLESS)

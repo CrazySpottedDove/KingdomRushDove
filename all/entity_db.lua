@@ -57,6 +57,10 @@ function entity_db:load()
 -- self:test_tween()
 end
 
+--- 在 DI:patch_templates() 后调用，负责进行一些预计算工作，减少运行时检查开销
+function entity_db:precompute()
+end
+
 --- 在第一次初始化 entity_db 时调用，对 entity_db 里的实体运行逻辑进行类似编译的操作，减少运行时的动态分支，以提高脚本执行性能
 function entity_db:precompile()
 	local compiler = require("precompile.interface")

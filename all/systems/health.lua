@@ -701,6 +701,7 @@ end
 local FADE_OUT_DURATION = 0.4
 require("table.clear")
 function M.register(sys)
+	local GS = require("kr1.game_settings")
 	local function queue_insert(store, e)
 		simulation:queue_insert_entity(e)
 	end
@@ -730,6 +731,17 @@ function M.register(sys)
 	function sys.health:on_insert_unconditional(entity, store)
 		if entity.health and not entity.health.hp then
 			entity.health.hp = entity.health.hp_max
+		end
+
+		if entity.health then
+			if not entity.health.hp then
+				entity.health.hp = entity.health.hp_max
+			end
+			if entity.regen then
+				if not entity.regen.health then
+					entity.regen.health = math.ceil(entity.health.hp_max * GS.soldier_regen_factor)
+				end
+			end
 		end
 
 		return true

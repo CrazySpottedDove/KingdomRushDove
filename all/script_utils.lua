@@ -2786,7 +2786,7 @@ function SU.soldier_go_back_step(store, this)
 		if U.walk_off__accel__unsnapped(this, store.tick_length) then
 			return false
 		else
-			local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
+			local an, af = U.animation_name_facing_point_simple(this, "walk", this.motion.dest)
 
 			U.animation_start_default(this, an, af, store.tick_ts, true)
 
@@ -2829,18 +2829,13 @@ function SU.soldier_idle(store, this, force_ts)
 	end
 end
 
----士兵回血
+---士兵回血: 应保证调用时，实体拥有 regen 属性
 ---@param store table game.store
 ---@param this table 士兵实体
----@return nil
 function SU.soldier_regen(store, this)
-	if not this.regen then
-		return
-	end
-
-	if not this.regen.health then
-		this.regen.health = math.ceil(this.health.hp_max * GS.soldier_regen_factor)
-	end
+	-- if not this.regen then
+	-- return
+	-- end
 
 	if store.tick_ts - this.regen.last_hit_ts > this.regen.last_hit_standoff_time then
 		this.regen.ts_counter = this.regen.ts_counter + store.tick_length
@@ -3446,7 +3441,6 @@ function SU.y_enemy_walk_step(store, this, animation_name, sprite_id)
 		next, new = P:next_entity_node(this, store.tick_length)
 
 		if not next then
-			log.debug("enemy %s ran out of nodes to walk", this.id)
 			coroutine.yield()
 
 			return false
@@ -5302,9 +5296,9 @@ local function enemy_beat_back_logic(this, store)
 		dt = store.tick_ts - last_ts
 		last_ts = store.tick_ts
 		this.motion.real_speed = math.max(this.motion.real_speed + a * dt, 0)
-		local next_pos = P:next_entity_node(this, dt) or this.pos:clone()
+		local next_pos = P:next_entity_node(this, dt) or this.pos
 		U.set_destination(this, next_pos)
-		U.walk(this, dt)
+		U.walk_off__accel__unsnapped(this, dt)
 		coroutine.yield()
 		this.motion.speed.x, this.motion.speed.y = 0, 0
 	end
