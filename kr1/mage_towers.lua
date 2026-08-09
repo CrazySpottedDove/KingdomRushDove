@@ -675,7 +675,7 @@ local mod_death_rider = RT("mod_death_rider", "modifier")
 AC(mod_death_rider, "render")
 mod_death_rider.inflicted_damage_factor = 1.1
 mod_death_rider.inflicted_damage_factor_inc = 0.2
-mod_death_rider.extra_armor = 0.25
+mod_death_rider.extra_armor = 0.3
 mod_death_rider.extra_armor_inc = 0.05
 mod_death_rider.modifier.duration = 1
 mod_death_rider.modifier.use_mod_offset = false
