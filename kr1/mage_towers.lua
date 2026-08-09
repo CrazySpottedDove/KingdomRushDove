@@ -472,7 +472,7 @@ tower_necromancer.info.portrait = "kr2_info_portraits_towers_0005"
 tower_necromancer.info.enc_icon = 15
 tower_necromancer.powers.pestilence = CC("power")
 tower_necromancer.powers.pestilence.price_base = 200
-tower_necromancer.powers.pestilence.price_inc = 200
+tower_necromancer.powers.pestilence.price_inc = 180
 tower_necromancer.powers.pestilence.attack_idx = 2
 tower_necromancer.powers.rider = CC("power")
 tower_necromancer.powers.rider.price_base = 275
@@ -533,7 +533,7 @@ tower_necromancer.sound_events.change_rally_point = "DeathKnightTaunt"
 
 tt = RT("bolt_necromancer_tower", "bolt")
 tt.render.sprites[1].prefix = "bolt_necromancer"
-tt.bullet.damage_min = 20
+tt.bullet.damage_min = 22
 tt.bullet.damage_max = 70
 tt.bullet.hit_fx = "fx_bolt_necromancer_hit"
 tt.bullet.particles_name = "ps_bolt_necromancer_trail"
