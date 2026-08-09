@@ -7094,7 +7094,7 @@ local EditablePanelView = require("dove_modules.gui.editable_panel_view")
 ConfigPanelView = class("ConfigPanelView", EditablePanelView)
 
 function ConfigPanelView:initialize(sw, sh, keyboard, controller)
-	EditablePanelView.initialize(self, sw, sh, "自定义配置", keyboard, controller)
+	EditablePanelView.initialize(self, sw, sh, "自定义配置", keyboard, controller, configer.default("config"))
 	self:set_key_label_map({
 		hero_full_level_at_start = "英雄开局满级",
 		reverse_path = "路线倒转",
@@ -7139,7 +7139,7 @@ end
 CriketPanelView = class("CriketPanelView", EditablePanelView)
 
 function CriketPanelView:initialize(sw, sh, keyboard, controller)
-	EditablePanelView.initialize(self, sw, sh, "斗蛐蛐配置", keyboard, controller)
+	EditablePanelView.initialize(self, sw, sh, "斗蛐蛐配置", keyboard, controller, configer.default("criket"))
 	self:set_key_label_map({
 		on = "启用斗蛐蛐"
 	-- fps_transformed = "请勿修改本条",
@@ -7166,7 +7166,7 @@ end
 KeysetPanelView = class("KeysetPanelView", EditablePanelView)
 
 function KeysetPanelView:initialize(sw, sh, keyboard, controller)
-	EditablePanelView.initialize(self, sw, sh, "键位设置", keyboard, controller)
+	EditablePanelView.initialize(self, sw, sh, "键位设置", keyboard, controller, configer.default("keyset"))
 	self:set_key_label_map({
 		pow_1 = "火雨",
 		pow_2 = "援军",
@@ -7211,7 +7211,7 @@ end
 LaunchOptionsPanelView = class("LaunchOptionsPanelView", EditablePanelView)
 
 function LaunchOptionsPanelView:initialize(sw, sh, keyboard, controller)
-	EditablePanelView.initialize(self, sw, sh, "启动选项", keyboard, controller)
+	EditablePanelView.initialize(self, sw, sh, "启动选项", keyboard, controller, require("settings_template").launch_options)
 	self:set_key_label_map({
 		skip_settings = "跳过设置",
 		skip_must_read = "跳过作者的话",
@@ -7237,7 +7237,7 @@ end
 UISettingsPanelView = class("UIPanelView", EditablePanelView)
 
 function UISettingsPanelView:initialize(sw, sh, keyboard, controller)
-	EditablePanelView.initialize(self, sw, sh, "UI设置", keyboard, controller)
+	EditablePanelView.initialize(self, sw, sh, "UI设置", keyboard, controller, configer.default("ui_settings"))
 	self:set_key_label_map({
 		hud_scale = "局内技能按钮缩放",
 		damage_numbers_enabled = "显示伤害数字",

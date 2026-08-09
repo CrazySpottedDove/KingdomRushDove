@@ -87,6 +87,14 @@ function Configer.reload(name)
 	return Configer.get_all(name)
 end
 
+function Configer.default(name)
+	local entry = REGISTRY[name]
+	if not entry then
+		return nil
+	end
+	return table.deepclone(entry.default)
+end
+
 function Configer.reset(name)
 	local entry = REGISTRY[name]
 	local data = table.deepclone(entry.default)

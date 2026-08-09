@@ -161,6 +161,83 @@ local function merge_missing_or_mismatch_fields(local_cfg, remote_cfg)
 	end
 end
 
+local function deep_equal(a, b)
+	if type(a) ~= type(b) then
+		return false
+	end
+	if type(a) ~= "table" then
+		return a == b
+	end
+	for k, v in pairs(a) do
+		if not deep_equal(v, b[k]) then
+			return false
+		end
+	end
+	for k in pairs(b) do
+		if a[k] == nil then
+			return false
+		end
+	end
+	return true
+end
+
+-- 提取配置中的默认数值（排除保留字段本身）
+local function extract_default_config(cfg)
+	local default = {}
+	for k, v in pairs(cfg or {}) do
+		if k ~= "__default_config" and k ~= "key_label_map" then
+			default[k] = table.deepclone(v)
+		end
+	end
+	return default
+end
+
+-- 依据 __default_config 合并远端新配置到本地旧配置：
+-- 若本地某条配置与旧的默认配置相同（用户未自定义），且新版本默认值已变化，则采用新版本默认值；
+-- 用户自定义过的字段则保留本地值；本地新增字段也保留。
+-- 旧版本插件没有 __default_config 记录时，沿用 merge_missing_or_mismatch_fields 策略保留用户配置。
+local function merge_plugin_config_with_defaults(preserved_local_cfg, remote_cfg)
+	local old_default = preserved_local_cfg and preserved_local_cfg.__default_config
+	local new_default = extract_default_config(remote_cfg)
+
+	local result
+	if type(old_default) ~= "table" then
+		-- 本地不存在默认配置数据：无法判断用户是否自定义，保留本地配置并补充新增字段
+		result = table.deepclone(preserved_local_cfg or {})
+		merge_missing_or_mismatch_fields(result, remote_cfg)
+	else
+		result = table.deepclone(new_default)
+		for k, v in pairs(preserved_local_cfg) do
+			if k ~= "__default_config" and k ~= "key_label_map" then
+				if old_default[k] == nil then
+					-- 用户新增字段，保留
+					result[k] = table.deepclone(v)
+				elseif not deep_equal(v, old_default[k]) then
+					-- 用户自定义过，保留用户值
+					result[k] = table.deepclone(v)
+				end
+			-- 其余：用户未修改，采用新版本默认值
+			end
+		end
+	end
+
+	result.__default_config = new_default
+	return result
+end
+
+-- 本地配置文件缺少 __default_config 记录时，自动生成并保存
+local function ensure_default_config_recorded(config_path)
+	local cfg = mod_paths.load_lua_table(config_path)
+	if not cfg or type(cfg) ~= "table" then
+		return
+	end
+	if type(cfg.__default_config) == "table" then
+		return
+	end
+	cfg.__default_config = extract_default_config(cfg)
+	storage:write_lua(config_path, cfg)
+end
+
 local function url_encode(str)
 	return (str:gsub("([^%w%-%.%_%~%/])", function(c)
 		return string.format("%%%02X", string.byte(c))
@@ -1448,12 +1525,15 @@ function ModManagerView:_install_plugin(item, is_update)
 			if not remote_local_cfg then
 				return false, "更新后读取远端本地配置失败：" .. installed_local_cfg_path .. " (" .. tostring(read_err) .. ")"
 			end
-			merge_missing_or_mismatch_fields(preserved_local_config, remote_local_cfg)
+			preserved_local_config = merge_plugin_config_with_defaults(preserved_local_config, remote_local_cfg)
 		end
 		local wok = storage:write_lua(installed_local_cfg_path, preserved_local_config)
 		if not wok then
 			return false, "更新后写入本地配置失败：" .. installed_local_cfg_path
 		end
+	else
+		-- 本地不存在配置（或旧配置），为新版本配置记录默认配置数据
+		ensure_default_config_recorded(target_dir .. "/" .. target_name .. "_config.lua")
 	end
 	remove_dir_recursive("tmp/mod_store_stage")
 
@@ -1597,6 +1677,9 @@ function ModManagerView:_install_or_update_item(item)
 				if ok_apply then
 					if local_cfg_saved then
 						self:_restore_local_config(target_dir, entry, local_cfg_saved)
+					else
+						-- 本地没有旧配置，为新版本配置记录默认配置数据
+						ensure_default_config_recorded(target_dir .. "/" .. entry .. "_config.lua")
 					end
 					local installed_cfg = mod_paths.load_lua_table(target_dir .. "/config.lua")
 					if installed_cfg then
@@ -1644,7 +1727,7 @@ function ModManagerView:_restore_local_config(target_dir, entry, local_cfg)
 		end
 	end
 	if new_cfg then
-		merge_missing_or_mismatch_fields(local_cfg, new_cfg)
+		local_cfg = merge_plugin_config_with_defaults(local_cfg, new_cfg)
 	end
 	storage:write_lua(path, local_cfg)
 end

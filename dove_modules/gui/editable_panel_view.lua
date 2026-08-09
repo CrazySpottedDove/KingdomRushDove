@@ -553,7 +553,7 @@ end
 
 local EditablePanelView = class("EditablePanelView", PopUpView)
 
-function EditablePanelView:initialize(sw, sh, title, keyboard, controller)
+function EditablePanelView:initialize(sw, sh, title, keyboard, controller, default_data)
 	PopUpView.initialize(self, V.v(sw, sh))
 
 	self.back = KImageView:new("options_bg_notxt")
@@ -599,7 +599,7 @@ function EditablePanelView:initialize(sw, sh, title, keyboard, controller)
 	local cancel_btn = GGOptionsButton:new(CJK("Cancel", "取消"))
 	cancel_btn.scale = V.v(0.62, 0.62)
 	cancel_btn.anchor = V.v(cancel_btn.size.x / 2, cancel_btn.size.y / 2)
-	cancel_btn.pos = V.v(NATIVE_W / 2 * rs - 110 * rs, controls_y)
+	cancel_btn.pos = V.v(NATIVE_W / 2 * rs - 135 * rs, controls_y)
 	function cancel_btn.on_click()
 		S:queue("GUIButtonCommon")
 		self:hide()
@@ -607,10 +607,21 @@ function EditablePanelView:initialize(sw, sh, title, keyboard, controller)
 	self.cancel_button = cancel_btn
 	self.back:add_child(cancel_btn)
 
+	local reset_btn = GGOptionsButton:new(CJK("Reset", "重置"))
+	reset_btn.scale = V.v(0.62, 0.62)
+	reset_btn.anchor = V.v(reset_btn.size.x / 2, reset_btn.size.y / 2)
+	reset_btn.pos = V.v(NATIVE_W / 2 * rs, controls_y)
+	function reset_btn.on_click()
+		S:queue("GUIButtonCommon")
+		self:reset()
+	end
+	self.reset_button = reset_btn
+	self.back:add_child(reset_btn)
+
 	local done_btn = GGOptionsButton:new(_("BUTTON_DONE"))
 	done_btn.scale = V.v(0.62, 0.62)
 	done_btn.anchor = V.v(done_btn.size.x / 2, done_btn.size.y / 2)
-	done_btn.pos = V.v(NATIVE_W / 2 * rs + 110 * rs, controls_y)
+	done_btn.pos = V.v(NATIVE_W / 2 * rs + 135 * rs, controls_y)
 	function done_btn.on_click()
 		S:queue("GUIButtonCommon")
 		self:save()
@@ -618,10 +629,27 @@ function EditablePanelView:initialize(sw, sh, title, keyboard, controller)
 	end
 	self.done_button = done_btn
 	self.back:add_child(done_btn)
+
+	self:set_default_data(default_data)
 end
 
 function EditablePanelView:set_key_label_map(map)
 	self.data_group:set_key_label_map(map)
+end
+
+function EditablePanelView:set_default_data(default_data)
+	self.default_data = default_data
+	if self.reset_button then
+		self.reset_button.hidden = default_data == nil
+	end
+end
+
+function EditablePanelView:reset()
+	if self.default_data == nil then
+		return
+	end
+	self.data_group:clear_focus()
+	self.data_group:set_all_data(self.default_data)
 end
 
 function EditablePanelView:load()

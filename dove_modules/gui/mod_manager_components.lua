@@ -300,6 +300,9 @@ function ModItemRow:initialize(opts, row_w)
 				end
 				local config = storage:load_lua(config_view._config_path, true)
 				config_view:set_key_label_map(config.key_label_map or {})
+				if type(config.__default_config) == "table" then
+					config_view:set_default_data(config.__default_config)
+				end
 				opts._controller:add_child(config_view)
 				config_view:show()
 			end
