@@ -26928,7 +26928,13 @@ function scripts.soldier_elves_espectral_harasser.update(this, store, script)
 	ps.particle_system.track_id = this.id
 	queue_insert(store, ps)
 
+	local immune_stop_ts = store.tick_ts + this.immune_duration
+	this.health.ignore_damage = true
+
 	while true do
+		if store.tick_ts >= immune_stop_ts then
+			this.health.ignore_damage = false
+		end
 		if this.health.dead or this.reinforcement.duration and store.tick_ts - this.reinforcement.ts > this.reinforcement.duration then
 			ps.particle_system.emit = nil
 			if this.health.hp > 0 then
@@ -26942,7 +26948,6 @@ function scripts.soldier_elves_espectral_harasser.update(this, store, script)
 		if this.unit.is_stunned then
 			SU.soldier_idle(store, this)
 		else
-
 			if not this.soldier.target_id then
 				local target = U.detect_foremost_enemy_in_range_filter_off(tpos(this._espectral_tower_ref), this._espectral_tower_ref.barrack.rally_range, F_BLOCK, F_CLIFF)
 				if target then

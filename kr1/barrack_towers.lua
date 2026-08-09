@@ -4069,6 +4069,7 @@ tt.health_bar.type = HEALTH_BAR_SIZE_SMALL
 tt.idle_flip.chance = 0.4
 tt.idle_flip.cooldown = 5
 tt.reinforcement.duration = 12
+tt.immune_duration = 4
 tt.reinforcement.fade = false
 tt.main_script.insert = scripts.soldier_reinforcement.insert
 tt.main_script.update = scripts.soldier_elves_espectral_harasser.update
