@@ -817,6 +817,27 @@ local function disabled_all_mods()
 	return false
 end
 
+-- 构建当前已启用（已加载或正在加载）的插件列表（名称 + 版本）文本。
+-- 数据源仅 MOD_REGISTRY，没有则输出 "(无)"。
+local function build_enabled_plugins_text()
+	local lines = {"===== 已启用插件列表 (name : version) ====="}
+
+	local listed = 0
+
+	if type(MOD_REGISTRY) == "table" then
+		for mod_dir, config in pairs(MOD_REGISTRY) do
+			lines[#lines + 1] = string.format("  %s : %s", config and config.name or mod_dir, config and config.version or "?")
+			listed = listed + 1
+		end
+	end
+
+	if listed == 0 then
+		lines[#lines + 1] = "  (无)"
+	end
+
+	return table.concat(lines, "\n")
+end
+
 function love.errorhandler(msg)
 	local error_canvas = G.newCanvas(G.getWidth(), G.getHeight())
 	-- local last_canvas = G.getCanvas()
@@ -830,6 +851,10 @@ function love.errorhandler(msg)
 	local stack_msg = debug.traceback("Error: " .. tostring(msg), 3):gsub("\n[^\n]+$", "")
 
 	stack_msg = (stack_msg or "") .. "\n" .. last_log_msg
+
+	local plugins_text = build_enabled_plugins_text()
+
+	stack_msg = stack_msg .. "\n" .. plugins_text
 
 	log.error(stack_msg)
 	close_log()
@@ -891,6 +916,8 @@ function love.errorhandler(msg)
 	end
 
 	table.insert(tip, "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下蓝屏的图与蓝屏前的图，反馈并用语言简要说明发生了什么。按b以查看蓝屏前图片，按ESC以退出。\n")
+
+	table.insert(err, "\n" .. plugins_text)
 
 	table.insert(err, "\n\nLast error msgs\n")
 	table.insert(err, last_log_msg)
