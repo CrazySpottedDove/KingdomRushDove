@@ -2353,6 +2353,7 @@ tt.render.sprites[2].offset = v(0, 30)
 tt.render.sprites[3] = E:clone_c("sprite")
 tt.render.sprites[3].name = "rotten_forest_tower_mist_run"
 tt.render.sprites[3].offset = v(0, 30)
+tt.render.sprites[3].hidden = true
 tt.auras.list[1] = E:clone_c("aura_attack")
 tt.auras.list[1].name = "aura_tower_rotten_forest_spike_burst"
 tt.auras.list[1].cooldown = 0

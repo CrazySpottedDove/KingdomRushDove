@@ -22345,7 +22345,6 @@ end
 function scripts.tower_rotten_forest.update(this, store, script)
 	local a = this.attacks
 	local a_tree = this.attacks.list[1]
-	local warp_sid = 3
 	local pow_w = this.powers.warp
 	local pow_t = this.powers.tree
 	local pow_f = this.powers.fog
@@ -22361,13 +22360,14 @@ function scripts.tower_rotten_forest.update(this, store, script)
 		else
 			if pow_w.changed then
 				pow_w.changed = nil
-				this.render.sprites[warp_sid].hidden = false
 
-				local ta = E:create_entity(pow_w.aura)
-				ta.aura.source_id = this.id
-				ta.pos = tpos
+				if not pow_w.aura_spawned then
+					local ta = E:create_entity(pow_w.aura)
+					ta.aura.source_id = this.id
+					ta.pos = tpos
 
-				queue_insert(store, ta)
+					queue_insert(store, ta)
+				end
 			end
 			if pow_t.changed then
 				a_tree.disabled = false
@@ -22375,6 +22375,7 @@ function scripts.tower_rotten_forest.update(this, store, script)
 			end
 			if pow_f.changed then
 				if not this.aura2 then
+					this.render.sprites[3].hidden = false
 					local e = E:create_entity(this.auras.list[2].name)
 					e.pos:copy(this.pos)
 					e.aura.level = this.powers.fog.level
@@ -22486,6 +22487,8 @@ function scripts.tower_rotten_forest.remove(this, store, script)
 	end
 
 	this._fx_point_range = nil
+
+	this.powers.warp.aura_spawned = nil
 
 	return true
 end
