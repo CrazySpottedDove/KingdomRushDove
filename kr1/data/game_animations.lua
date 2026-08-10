@@ -50709,16 +50709,16 @@ return {
 		from = 16,
 		to = 38
 	},
-	hero_mortemis_melee = {
+	hero_mortemis_attack = {
 		prefix = "hero_mortemis",
 		from = 39,
 		to = 69
 	},
-	hero_mortemis_attackOut = {
-		prefix = "hero_mortemis",
-		from = 114,
-		to = 119
-	},
+	-- hero_mortemis_attackOut = {
+	-- 	prefix = "hero_mortemis",
+	-- 	from = 114,
+	-- 	to = 119
+	-- },
 	hero_mortemis_shoot = {
 		prefix = "hero_mortemis",
 		from = 70,
@@ -50779,16 +50779,16 @@ return {
 	-- 	from = 1,
 	-- 	to = 6
 	-- },
-	-- hero_mortemis_soul_proyectile_travel = {
-	-- 	prefix = "hero_mortemis_soul_proyectile",
-	-- 	from = 7,
-	-- 	to = 14
-	-- },
-	-- hero_mortemis_soul_proyectile_hit = {
-	-- 	prefix = "hero_mortemis_soul_proyectile",
-	-- 	from = 15,
-	-- 	to = 19
-	-- },
+	hero_mortemis_soul_proyectile_travel = {
+		prefix = "hero_mortemis_soul_proyectile",
+		from = 7,
+		to = 14
+	},
+	hero_mortemis_soul_proyectile_hit = {
+		prefix = "hero_mortemis_soul_proyectile",
+		from = 15,
+		to = 19
+	},
 	hero_mortemis_zombie_idle = {
 		prefix = "hero_mortemis_zombie",
 		from = 1,

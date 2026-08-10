@@ -22661,7 +22661,7 @@ tt = RT("mod_mortemis_magma", "mod_poison")
 tt.dps.damage_min = 1
 tt.dps.damage_max = 1
 tt.dps.damage_inc = 0
-tt.dps.damage_every = fts(6)
+tt.dps.damage_every = fts(4)
 tt.dps.kill = true
 tt.modifier.duration = 1
 
