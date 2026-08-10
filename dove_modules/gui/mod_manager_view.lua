@@ -181,11 +181,13 @@ local function deep_equal(a, b)
 	return true
 end
 
+local preserved_keys = table.to_map({"__default_config", "key_label_map", "key_order_list"})
+
 -- 提取配置中的默认数值（排除保留字段本身）
 local function extract_default_config(cfg)
 	local default = {}
 	for k, v in pairs(cfg or {}) do
-		if k ~= "__default_config" and k ~= "key_label_map" then
+		if not preserved_keys[k] then
 			default[k] = table.deepclone(v)
 		end
 	end
@@ -208,7 +210,7 @@ local function merge_plugin_config_with_defaults(preserved_local_cfg, remote_cfg
 	else
 		result = table.deepclone(new_default)
 		for k, v in pairs(preserved_local_cfg) do
-			if k ~= "__default_config" and k ~= "key_label_map" then
+			if not preserved_keys[k] then
 				if old_default[k] == nil then
 					-- 用户新增字段，保留
 					result[k] = table.deepclone(v)

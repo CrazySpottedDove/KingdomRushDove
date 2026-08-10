@@ -349,6 +349,11 @@ function EditableGroup:clear_focus()
 	end
 end
 
+function EditableGroup:set_key_order_list(key_order_list)
+	self.key_order_list = key_order_list
+	self:_rebuild_and_render()
+end
+
 function EditableGroup:set_key_label_map(map)
 	self.key_label_map = map or {}
 	self:_rebuild_and_render()
@@ -380,26 +385,30 @@ function EditableGroup:_clear_items()
 end
 
 function EditableGroup:_collect_sorted_keys()
-	local keys = {}
+	if self.key_order_list then
+		self.sorted_keys = self.key_order_list
+	else
+		local keys = {}
 
-	for key, value in pairs(self.data) do
-		if self:_is_editable_type(value) and self.key_label_map[key] then
-			keys[#keys + 1] = key
+		for key, value in pairs(self.data) do
+			if self:_is_editable_type(value) and self.key_label_map[key] then
+				keys[#keys + 1] = key
+			end
 		end
+
+		table.sort(keys, function(a, b)
+			local la = tostring(self.key_label_map[a] or a)
+			local lb = tostring(self.key_label_map[b] or b)
+
+			if la == lb then
+				return tostring(a) < tostring(b)
+			end
+
+			return la < lb
+		end)
+
+		self.sorted_keys = keys
 	end
-
-	table.sort(keys, function(a, b)
-		local la = tostring(self.key_label_map[a] or a)
-		local lb = tostring(self.key_label_map[b] or b)
-
-		if la == lb then
-			return tostring(a) < tostring(b)
-		end
-
-		return la < lb
-	end)
-
-	self.sorted_keys = keys
 end
 
 function EditableGroup:_render_list()
@@ -414,115 +423,119 @@ function EditableGroup:_render_list()
 		local value = self.data[key]
 		local label = self.key_label_map[key]
 
-		if type(value) == "table" and table.isarray(value) then
-			-- ======== 数组类型：标题行 + 每项各占一行 ========
-			-- 标题行：纯展示，但视觉上与普通 EditableItem 的 key/value 区域对齐
-			local header_row = KView:new(V.v(self.list.size.x, self.item_height))
-			header_row.propagate_on_down = true
-			header_row.propagate_on_up = true
-			header_row.propagate_on_touch_down = true
-			header_row.propagate_on_touch_up = true
-			header_row.propagate_on_touch_move = true
+		-- 避免插件作者字打错了导致崩溃，这里做防御性编程
+		if value and label then
 
-			-- 数组标题：与普通 EditableItem 的 key_label 位置、字体完全一致
-			local header_label = GGLabel:new(V.v(item_w - 190, item_h))
-			header_label.pos = V.v(self.padding.x + 10, item_y)
-			header_label.font_name = "body"
-			header_label.font_size = 16
-			header_label.text = label
-			header_label.text_align = "left"
-			header_label.vertical_align = "middle"
-			header_label.fit_lines = 1
-			header_label.fit_size = true
-			header_label.colors.text = {200, 220, 220, 255}
-			header_row:add_child(header_label)
+			if type(value) == "table" and table.isarray(value) then
+				-- ======== 数组类型：标题行 + 每项各占一行 ========
+				-- 标题行：纯展示，但视觉上与普通 EditableItem 的 key/value 区域对齐
+				local header_row = KView:new(V.v(self.list.size.x, self.item_height))
+				header_row.propagate_on_down = true
+				header_row.propagate_on_up = true
+				header_row.propagate_on_touch_down = true
+				header_row.propagate_on_touch_up = true
+				header_row.propagate_on_touch_move = true
 
-			-- [N items]：与普通 EditableItem 的 value_label 位置、大小完全一致
-			local count_label = GGLabel:new(V.v(170, item_h))
-			count_label.pos = V.v(self.padding.x + item_w - 180, item_y)
-			count_label.font_name = "body"
-			count_label.font_size = 16
-			count_label.text = ""
-			count_label.text_align = "center"
-			count_label.vertical_align = "middle"
-			count_label.fit_lines = 1
-			count_label.fit_size = true
-			count_label.colors.text = {200, 200, 200, 255}
-			header_row:add_child(count_label)
+				-- 数组标题：与普通 EditableItem 的 key_label 位置、字体完全一致
+				local header_label = GGLabel:new(V.v(item_w - 190, item_h))
+				header_label.pos = V.v(self.padding.x + 10, item_y)
+				header_label.font_name = "body"
+				header_label.font_size = 16
+				header_label.text = label
+				header_label.text_align = "left"
+				header_label.vertical_align = "middle"
+				header_label.fit_lines = 1
+				header_label.fit_size = true
+				header_label.colors.text = {200, 220, 220, 255}
+				header_row:add_child(header_label)
 
-			self.list:add_row(header_row)
+				-- [N items]：与普通 EditableItem 的 value_label 位置、大小完全一致
+				local count_label = GGLabel:new(V.v(170, item_h))
+				count_label.pos = V.v(self.padding.x + item_w - 180, item_y)
+				count_label.font_name = "body"
+				count_label.font_size = 16
+				count_label.text = ""
+				count_label.text_align = "center"
+				count_label.vertical_align = "middle"
+				count_label.fit_lines = 1
+				count_label.fit_size = true
+				count_label.colors.text = {200, 200, 200, 255}
+				header_row:add_child(count_label)
 
-			-- 每项各占一行：相对于标题缩进，数值与普通 value_label 右对齐
-			local indent = 0
-			local elem_item_w = item_w - indent
+				self.list:add_row(header_row)
 
-			for i, elem in ipairs(value) do
-				local elem_row = KView:new(V.v(self.list.size.x, self.item_height))
-				elem_row.propagate_on_down = true
-				elem_row.propagate_on_up = true
-				elem_row.propagate_on_touch_down = true
-				elem_row.propagate_on_touch_up = true
-				elem_row.propagate_on_touch_move = true
+				-- 每项各占一行：相对于标题缩进，数值与普通 value_label 右对齐
+				local indent = 0
+				local elem_item_w = item_w - indent
 
-				-- 使用 EditableItem，key_text 为 "→"，缩进放置
-				local elem_item = EditableItem:new("[" .. i .. "]", elem, V.v(elem_item_w, item_h), self.keyboard, self.controller, self)
-				elem_item.pos = V.v(self.padding.x + indent, item_y)
-				elem_item.propagate_on_down = true
-				elem_item.propagate_on_up = true
-				elem_item.propagate_on_touch_down = true
-				elem_item.propagate_on_touch_up = true
-				elem_item.propagate_on_touch_move = true
+				for i, elem in ipairs(value) do
+					local elem_row = KView:new(V.v(self.list.size.x, self.item_height))
+					elem_row.propagate_on_down = true
+					elem_row.propagate_on_up = true
+					elem_row.propagate_on_touch_down = true
+					elem_row.propagate_on_touch_up = true
+					elem_row.propagate_on_touch_move = true
 
-				-- 箭头样式微调
-				elem_item.key_label.colors.text = {180, 180, 180, 255}
-				elem_item.key_label.colors.text_default = {180, 180, 180, 255}
-				elem_item.key_label.colors.text_hover = {220, 220, 220, 255}
+					-- 使用 EditableItem，key_text 为 "→"，缩进放置
+					local elem_item = EditableItem:new("[" .. i .. "]", elem, V.v(elem_item_w, item_h), self.keyboard, self.controller, self)
+					elem_item.pos = V.v(self.padding.x + indent, item_y)
+					elem_item.propagate_on_down = true
+					elem_item.propagate_on_up = true
+					elem_item.propagate_on_touch_down = true
+					elem_item.propagate_on_touch_up = true
+					elem_item.propagate_on_touch_move = true
 
-				local saved_key = key
-				local saved_idx = i
+					-- 箭头样式微调
+					elem_item.key_label.colors.text = {180, 180, 180, 255}
+					elem_item.key_label.colors.text_default = {180, 180, 180, 255}
+					elem_item.key_label.colors.text_hover = {220, 220, 220, 255}
 
-				elem_item.on_change_callback = function(_, new_value)
-					if self.data[saved_key] and self.data[saved_key][saved_idx] ~= nil then
-						self.data[saved_key][saved_idx] = new_value
+					local saved_key = key
+					local saved_idx = i
 
-						if self.on_data_change_callback then
-							self.on_data_change_callback(saved_key, self.data[saved_key], self:get_all_data())
+					elem_item.on_change_callback = function(_, new_value)
+						if self.data[saved_key] and self.data[saved_key][saved_idx] ~= nil then
+							self.data[saved_key][saved_idx] = new_value
+
+							if self.on_data_change_callback then
+								self.on_data_change_callback(saved_key, self.data[saved_key], self:get_all_data())
+							end
 						end
+					end
+
+					elem_row:add_child(elem_item)
+					self.list:add_row(elem_row)
+					self.items[key .. "[" .. i .. "]"] = elem_item
+				end
+			else
+				-- ======== 基本类型：使用 EditableItem ========
+				local row = KView:new(V.v(self.list.size.x, self.item_height))
+				row.propagate_on_down = true
+				row.propagate_on_up = true
+				row.propagate_on_touch_down = true
+				row.propagate_on_touch_up = true
+				row.propagate_on_touch_move = true
+
+				local item = EditableItem:new(label, value, V.v(item_w, item_h), self.keyboard, self.controller, self)
+
+				item.pos = V.v(self.padding.x, item_y)
+				item.propagate_on_down = true
+				item.propagate_on_up = true
+				item.propagate_on_touch_down = true
+				item.propagate_on_touch_up = true
+				item.propagate_on_touch_move = true
+
+				item.on_change_callback = function(_, new_value)
+					self.data[key] = new_value
+					if self.on_data_change_callback then
+						self.on_data_change_callback(key, new_value, self:get_all_data())
 					end
 				end
 
-				elem_row:add_child(elem_item)
-				self.list:add_row(elem_row)
-				self.items[key .. "[" .. i .. "]"] = elem_item
+				row:add_child(item)
+				self.list:add_row(row)
+				self.items[key] = item
 			end
-		else
-			-- ======== 基本类型：使用 EditableItem ========
-			local row = KView:new(V.v(self.list.size.x, self.item_height))
-			row.propagate_on_down = true
-			row.propagate_on_up = true
-			row.propagate_on_touch_down = true
-			row.propagate_on_touch_up = true
-			row.propagate_on_touch_move = true
-
-			local item = EditableItem:new(label, value, V.v(item_w, item_h), self.keyboard, self.controller, self)
-
-			item.pos = V.v(self.padding.x, item_y)
-			item.propagate_on_down = true
-			item.propagate_on_up = true
-			item.propagate_on_touch_down = true
-			item.propagate_on_touch_up = true
-			item.propagate_on_touch_move = true
-
-			item.on_change_callback = function(_, new_value)
-				self.data[key] = new_value
-				if self.on_data_change_callback then
-					self.on_data_change_callback(key, new_value, self:get_all_data())
-				end
-			end
-
-			row:add_child(item)
-			self.list:add_row(row)
-			self.items[key] = item
 		end
 	end
 end
@@ -642,6 +655,10 @@ function EditablePanelView:set_default_data(default_data)
 	if self.reset_button then
 		self.reset_button.hidden = default_data == nil
 	end
+end
+
+function EditablePanelView:set_key_order_list(key_order_list)
+	self.data_group:set_key_order_list(key_order_list)
 end
 
 function EditablePanelView:reset()
