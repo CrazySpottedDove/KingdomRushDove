@@ -8114,9 +8114,9 @@ return {
 		to = 12
 	},
 	decal_rally_feedback = {
-		from = 1,
-		prefix = "decal_rally_feedback",
-		to = 30
+		from = 17,
+		prefix = "rally_feedback",
+		to = 25
 	},
 	decal_rhino_walkingDown = {
 		from = 23,

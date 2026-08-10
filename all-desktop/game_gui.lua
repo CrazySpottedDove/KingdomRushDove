@@ -1498,13 +1498,15 @@ function game_gui:select_entity(e)
 
 				game_gui:show_rally_range(ux, uy, tower.barrack.rally_range)
 			end
+
+			local m = E:create_entity("entity_marker_controller")
+			m.target = tower
+			self.game.simulation:insert_entity(m)
+			self.selected_entity_marker = m
 		else
 			local m = E:create_entity("entity_marker_controller")
-
 			m.target = e
-
 			self.game.simulation:insert_entity(m)
-
 			self.selected_entity_marker = m
 		end
 	end
