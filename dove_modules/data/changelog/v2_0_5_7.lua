@@ -1,1 +1,1 @@
-return {{date="2026-08-10",author="CrazySpottedDove",message="feat: 新增英雄：墨忒弥斯"},{date="2026-08-10",author="CrazySpottedDove",message="balance: 提高电云10%移速"},{date="2026-08-10",author="CrazySpottedDove",message="fix: 修复英雄殿堂蓝屏问题"}}
+return {{date="2026-08-10",author="CrazySpottedDove",message="feat: 新增英雄：墨忒弥斯"},{date="2026-08-10",author="CrazySpottedDove",message="balance: 提高电云10%移速"},{date="2026-08-10",author="CrazySpottedDove",message="fix: 修复英雄殿堂蓝屏问题"},{date="2026-08-10",author="CrazySpottedDove",message="fix: 修复女巫误吃了箭塔科技的bug"}}

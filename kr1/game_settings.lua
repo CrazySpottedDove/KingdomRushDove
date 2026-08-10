@@ -23,8 +23,7 @@ GS.archer_towers = {
 	"tower_ogre_shipwreck",
 	"tower_goblirang",
 	"tower_shaolin",
-	"tower_swamp_monster",
-	"tower_wicked_sisters"
+	"tower_swamp_monster"
 }
 GS.mage_towers = {
 	"tower_mage_1",
