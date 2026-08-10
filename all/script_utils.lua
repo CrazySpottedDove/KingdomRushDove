@@ -5469,6 +5469,9 @@ local function enemy_scared_logic(this, store)
 	this.nav_path.dir = 1
 end
 
+--- 恐惧敌人
+---@param target table 敌人
+---@param scare_data table 恐惧相关数据{duration, friend_mod}
 function SU.scare_enemy(target, scare_data)
 	if U.overwrite_main_script(target, enemy_scared_logic) then
 		target._scare_data = scare_data

@@ -22462,29 +22462,29 @@ image_x, image_y = 92, 110
 
 tt = RT("hero_mortemis", "hero")
 AC(tt, "melee", "ranged", "timed_attacks", "death_spawns", "auras")
-tt.melee.range = 60
+tt.melee.range = 45
 tt.regen.cooldown = 1
 tt.hero.level_stats.armor = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-tt.hero.level_stats.hp_max = {90, 120, 150, 180, 210, 240, 270, 300, 330, 360}
-tt.hero.level_stats.melee_damage_max = {7, 8, 10, 12, 13, 14, 16, 18, 19, 21}
-tt.hero.level_stats.melee_damage_min = {4, 5, 5, 6, 6, 8, 9, 9, 10, 11}
-tt.hero.level_stats.ranged_damage_min = {7, 8, 10, 12, 13, 14, 16, 18, 19, 21}
-tt.hero.level_stats.ranged_damage_max = {35, 46, 58, 69, 75, 81, 92, 103, 115, 120}
+tt.hero.level_stats.hp_max = {140, 160, 180, 200, 220, 240, 270, 300, 330, 360}
+tt.hero.level_stats.melee_damage_max = {9, 10, 11, 12, 13, 14, 16, 18, 19, 21}
+tt.hero.level_stats.melee_damage_min = {5, 6, 6, 7, 7, 8, 9, 9, 10, 11}
+tt.hero.level_stats.ranged_damage_min = {9, 10, 11, 12, 13, 14, 16, 18, 19, 21}
+tt.hero.level_stats.ranged_damage_max = {48, 54, 60, 69, 75, 81, 92, 103, 115, 120}
 tt.hero.skills.call_haunted = CC("hero_skill")
 tt.hero.skills.call_haunted.xp_level_steps = {
 	[2] = 1,
 	[5] = 2,
 	[8] = 3
 }
-tt.hero.skills.call_haunted.xp_gain = {75, 150, 225}
-tt.hero.skills.call_haunted.duration = {6, 7, 8}
+tt.hero.skills.call_haunted.xp_gain = {150, 300, 450}
+tt.hero.skills.call_haunted.duration = {4, 6, 8}
 tt.hero.skills.deadly_fumes = CC("hero_skill")
 tt.hero.skills.deadly_fumes.xp_level_steps = {
 	[2] = 1,
 	[5] = 2,
 	[8] = 3
 }
-tt.hero.skills.deadly_fumes.xp_gain = {60, 120, 180}
+tt.hero.skills.deadly_fumes.xp_gain = {100, 200, 300}
 tt.hero.skills.deadly_fumes.count = {1, 1, 1}
 tt.hero.skills.deadly_fumes.damage_config = {1, 2, 3}
 tt.hero.skills.grim_presence = CC("hero_skill")
@@ -22493,7 +22493,6 @@ tt.hero.skills.grim_presence.xp_level_steps = {
 	[4] = 2,
 	[7] = 3
 }
-tt.hero.skills.grim_presence.xp_gain = {100, 200, 300}
 tt.hero.skills.grim_presence.armor_reduction = {-0.1, -0.2, -0.3}
 tt.hero.skills.undead_servitude = CC("hero_skill")
 tt.hero.skills.undead_servitude.xp_level_steps = {
@@ -22501,8 +22500,9 @@ tt.hero.skills.undead_servitude.xp_level_steps = {
 	[4] = 2,
 	[7] = 3
 }
-tt.hero.skills.undead_servitude.xp_gain = {100, 200, 300}
-tt.hero.skills.undead_servitude.max_skeletons_tower = {4, 5, 6}
+tt.hero.skills.undead_servitude.hp_max = {60, 110, 160}
+tt.hero.skills.undead_servitude.damage_min = {2, 4, 6}
+tt.hero.skills.undead_servitude.damage_max = {4, 6, 8}
 tt.hero.skills.ultimate = CC("hero_skill")
 tt.hero.skills.ultimate.xp_level_steps = {
 	[1] = 1,
@@ -22510,10 +22510,11 @@ tt.hero.skills.ultimate.xp_level_steps = {
 	[7] = 3,
 	[10] = 4
 }
-tt.hero.skills.ultimate.xp_gain = {100, 200, 300, 400}
-tt.hero.skills.ultimate.entity = {"hero_mortemis_gargantuar_lvl1", "hero_mortemis_gargantuar_lvl2", "hero_mortemis_gargantuar_lvl3", "hero_mortemis_gargantuar_lvl4"}
 tt.hero.skills.ultimate.controller_name = "hero_mortemis_ultimate"
-tt.hero.skills.ultimate.cooldown = {48, 48, 48, 48}
+tt.hero.skills.ultimate.hp_max = {500, 600, 700, 800}
+tt.hero.skills.ultimate.damage_min = {5, 8, 16, 25}
+tt.hero.skills.ultimate.damage_max = {13, 25, 50, 75}
+tt.hero.skills.ultimate.xp_gain = {120, 240, 360, 480}
 tt.ultimate = {
 	ts = 0,
 	cooldown = 48,
@@ -22525,9 +22526,9 @@ tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.hero.tombstone_show_time = fts(90)
 tt.main_script.update = scripts.hero_mortemis.update
 tt.hero.fn_level_up = scripts.hero_mortemis.level_up
-tt.info.portrait = "kr4_info_portraits_heroes_0004"
-tt.info.hero_portrait = "kr4_hero_portraits_0007"
-tt.motion.max_speed = 1.83 * FPS
+tt.info.portrait = "kr4_info_portraits_heroes_0005"
+tt.info.hero_portrait = "kr4_hero_portraits_0004"
+tt.motion.max_speed = 60
 tt.soldier.melee_slot_offset = v(5, 0)
 tt.sound_events.change_rally_point = "group_mortemis_taunt"
 tt.sound_events.death = "hero_mortemis_death"
@@ -22536,7 +22537,7 @@ tt.sound_events.insert = "hero_mortemis_taunt_1"
 tt.sound_events.respawn = "HeroPaladinTauntIntro"
 tt.unit.marker_offset = v(0, 0)
 tt.unit.mod_offset = v(0, 20)
-tt.death_spawns.name = "hero_mortemis_smaller_spawner_seed"
+tt.death_spawns.name = "hero_mortemis_zombie"
 tt.death_spawns.quantity = 3
 tt.death_spawns.pos_list = {{0, -20}, {15, 20}, {-15, 20}}
 tt.death_spawns.concurrent_with_death = true
@@ -22546,7 +22547,6 @@ tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].offset = v(0, -25)
 tt.render.sprites[1].prefix = "hero_mortemis"
 tt.render.sprites[1].angles.walk = {"walk"}
-tt.render.sprites[1].z = Z_FLYING_HEROES
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].animated = false
 tt.render.sprites[2].offset = v(0, 20)
@@ -22558,55 +22558,46 @@ tt.melee.attacks[1].hit_time = fts(17)
 tt.melee.attacks[1].sound = "MeleeSword"
 tt.melee.attacks[1].vis_bans = bor(F_FLYING, F_CLIFF)
 tt.melee.attacks[1].vis_flags = F_BLOCK
-tt.melee.attacks[1].xp_gain_factor = 2
+tt.melee.attacks[1].xp_gain_factor = 2.5
 tt.ranged.attacks[1] = CC("bullet_attack")
 tt.ranged.attacks[1].cooldown = 1.8
 tt.ranged.attacks[1].min_range = 25
 tt.ranged.attacks[1].max_range = 150
-tt.ranged.attacks[1].track_damage = true
+tt.ranged.attacks[1].check_target_before_shot = true
 tt.ranged.attacks[1].bullet = "bolt_mortemis"
 tt.ranged.attacks[1].shoot_time = fts(25)
 tt.ranged.attacks[1].bullet_start_offset = {v(-12, 36)}
-tt.timed_attacks.list[1] = CC("bullet_attack")
-tt.timed_attacks.list[1].skill = "range_unit"
+tt.timed_attacks.list[1] = CC("mod_attack")
 tt.timed_attacks.list[1].xp_from_skill = "call_haunted"
 tt.timed_attacks.list[1].disabled = true
-tt.timed_attacks.list[1].entity = "hero_mortemis_modifier_fear"
-tt.timed_attacks.list[1].max_target = 1
+tt.timed_attacks.list[1].mod = "hero_mortemis_modifier_fear"
+tt.timed_attacks.list[1].max_target = 3
 tt.timed_attacks.list[1].min_range = 0
 tt.timed_attacks.list[1].max_range = 120
-tt.timed_attacks.list[1].cooldown = 30
-tt.timed_attacks.list[1].cast_time = fts(15)
-tt.timed_attacks.list[1].node_prediction = fts(17)
+tt.timed_attacks.list[1].cooldown = 27
+tt.timed_attacks.list[1].cast_time = fts(19)
 tt.timed_attacks.list[1].animation = "callHunted"
 tt.timed_attacks.list[1].sound = "hero_mortemis_call"
-tt.timed_attacks.list[1].bullet_start_offset = {v(41, 72)}
-tt.timed_attacks.list[1].vis_flags = bor(F_RANGED)
-tt.timed_attacks.list[1].vis_bans = bor(F_FRIEND, F_NIGHTMARE, F_FLYING, F_CLIFF, F_WATER)
+tt.timed_attacks.list[1].vis_flags = bor(F_RANGED, F_SCARE, F_MOD)
+tt.timed_attacks.list[1].vis_bans = bor(F_FLYING, F_CLIFF, F_WATER)
 tt.timed_attacks.list[2] = CC("spawn_attack")
 tt.timed_attacks.list[2].xp_from_skill = "deadly_fumes"
 tt.timed_attacks.list[2].animation = "deadlyFumes"
 tt.timed_attacks.list[2].sound = "hero_mortemis_rotten"
-tt.timed_attacks.list[2].cooldown = 25
+tt.timed_attacks.list[2].cooldown = 20
 tt.timed_attacks.list[2].disabled = true
-tt.timed_attacks.list[2].entity = "mortemis_poison_bullet"
-tt.timed_attacks.list[2].spawn_time = fts(30)
+tt.timed_attacks.list[2].entity = "mortemis_poisonpool"
+tt.timed_attacks.list[2].spawn_time = fts(16)
 tt.timed_attacks.list[2].vis_flags = bor(F_RANGED)
 tt.timed_attacks.list[2].vis_bans = bor(F_FLYING)
 tt.timed_attacks.list[2].min_range = 0
-tt.timed_attacks.list[2].max_range = 175
-tt.timed_attacks.list[2].damage_max = 200
-tt.timed_attacks.list[2].damage_min = 200
+tt.timed_attacks.list[2].max_range = 150
 tt.auras.list[1] = CC("aura_attack")
 tt.auras.list[1].name = "aura_mortemis_curse_armor"
 tt.auras.list[1].cooldown = 0
--- tt.auras.list[1].range = 100
--- tt.auras.list[1].damage_inc = 1.0
 tt.auras.list[2] = CC("aura_attack")
 tt.auras.list[2].name = "aura_mortemis_zombie"
 tt.auras.list[2].cooldown = 0
--- tt.auras.list[3].range = 150
--- tt.auras.list[3].damage_inc = 1.0
 
 -- 普攻与被动
 tt = RT("bolt_mortemis", "bolt")
@@ -22649,134 +22640,70 @@ tt.render.sprites[1].anchor = v(0.5, 0.5)
 tt.render.sprites[1].loop = true
 tt.render.sprites[1].draw_order = DO_MOD_FX
 
--- 2技能 毒雾
-tt = RT("mortemis_poison_bullet", "bullet")
-AC(tt, "tween")
-tt.main_script.update = scripts.oloch_magma.update
-tt.bullet.damage_max = 0
-tt.bullet.damage_min = 0
-tt.bullet.damage_radius = 50
-tt.bullet.hit_payload = "mortemis_poisonpool"
-tt.bullet.damage_type = DAMAGE_TRUE
-tt.bullet.damage_flags = F_AREA
-tt.bullet.damage_bans = F_FRIEND
-tt.bullet.mod = nil
-tt.bullet.hit_time = fts(4)
-tt.bullet.duration = 2
-tt.render.sprites[1].prefix = "hero_mortemis_fumes_floor_decal"
-tt.render.sprites[1].name = "start"
-tt.render.sprites[1].scale = v(0, 0)
-tt.render.sprites[1].anchor.y = 0.09027777777777778
-tt.render.sprites[1].z = Z_OBJECTS
-tt.tween.remove = false
-tt.tween.props[1].keys = {{0, 0}, {fts(3), 0}, {fts(6), 255}, {tt.bullet.duration, 255}, {tt.bullet.duration + fts(10), 0}}
-tt.sound_events.delayed_insert = "hero_mortemis_rotten"
-tt.delay = 0
-
 tt = RT("mortemis_poisonpool", "aura")
 AC(tt, "render", "tween")
 tt.aura.cycle_time = 0.3
 tt.aura.duration = 10
 tt.aura.mod = "mod_mortemis_magma"
-tt.aura.radius = 50
+tt.aura.radius = 60
 tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
 tt.aura.vis_flags = bor(F_MOD)
-tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.insert = scripts.mortemis_poisonpool.insert
 tt.main_script.update = scripts.aura_apply_mod.update
-tt.render.sprites[1].name = "hero_mortemis_fumes_floor_decal_run"
+tt.render.sprites[1].name = "hero_mortemis_fumes_decal"
 tt.render.sprites[1].offset.y = 0
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].scale = v(1.4, 1.4)
+tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_DECALS
 tt.tween.remove = false
-tt.tween.props[1].keys = {{0, 255}, {"this.aura.duration-1", 255}, {"this.aura.duration", 0}}
+tt.tween.props[1].keys = {{0, 0}, {0.5, 255}, {"this.aura.duration-0.5", 255}, {"this.aura.duration", 0}}
 
-tt = RT("mod_mortemis_magma", "modifier")
-AC(tt, "dps", "render")
+tt = RT("mod_mortemis_magma", "mod_poison")
 tt.dps.damage_min = 1
 tt.dps.damage_max = 1
 tt.dps.damage_inc = 0
-tt.dps.damage_type = DAMAGE_POISON
 tt.dps.damage_every = fts(6)
 tt.dps.kill = true
-tt.main_script.insert = scripts.mod_dps.insert
-tt.main_script.update = scripts.mod_dps.update
 tt.modifier.duration = 1
-tt.modifier.allows_duplicates = false
-tt.render.sprites[1].name = "hero_mortemis_fumes_fx_run"
-tt.render.sprites[1].draw_order = 10
-tt.render.sprites[1].size_scales = {vv(1), vv(1.4), vv(1.8)}
 
 -- 3技能 削甲
 tt = RT("mod_mortemis_curse_armor", "modifier")
-AC(tt, "armor_buff")
-tt.modifier.duration = 120
+AC(tt, "armor_buff", "render")
+tt.modifier.duration = 2
 tt.modifier.vis_flags = F_MOD
-tt.armor_buff.magic = false
+tt.armor_buff.both = true
 tt.armor_buff.max_factor = -0.1
 tt.armor_buff.cycle_time = 1e+99
 tt.main_script.insert = scripts.mod_armor_buff.insert
 tt.main_script.remove = scripts.mod_armor_buff.remove
 tt.main_script.update = scripts.mod_armor_buff.update
-
-tt = RT("mod_mortemis_curse_magic_armor", "modifier")
-AC(tt, "armor_buff")
-tt.modifier.duration = 120
-tt.modifier.vis_flags = F_MOD
-tt.armor_buff.magic = true
-tt.armor_buff.max_factor = -0.1
-tt.armor_buff.cycle_time = 1e+99
-tt.main_script.insert = scripts.mod_armor_buff.insert
-tt.main_script.remove = scripts.mod_armor_buff.remove
-tt.main_script.update = scripts.mod_armor_buff.update
+tt.render.sprites[1].name = "hero_mortemis_aura"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].scale = v(0.9, 0.9)
+tt.render.sprites[1].z = Z_DECALS
+tt.modifier.use_mod_offset = false
 
 -- 3技能光环 削甲（aura 实体由 hero_basic.insert 在 hero 插入时自动创建）
 tt = RT("aura_mortemis_curse_armor", "aura")
-tt.main_script.update = scripts.aura_mortemis_curse_armor.update
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_apply_mod.update
 tt.aura.cycle_time = 0.5
 tt.aura.duration = -1
-tt.aura.radius = 100
-tt.aura.mods = {"mod_mortemis_curse_armor", "mod_mortemis_curse_magic_armor"}
+tt.aura.radius = 150
+tt.aura.mods = {"mod_mortemis_curse_armor"}
+tt.aura.requires_alive_source = true
+tt.aura.track_source = true
+tt.aura.track_dead = true
+tt.aura.vis_bans = F_FRIEND
+tt.aura.vis_flags = bor(F_MOD, F_AREA)
 
 -- 4技能光环 不死人之奴
 tt = RT("aura_mortemis_zombie", "aura")
-tt.spawn_name = "hero_mortemis_zombie_lvl"
+tt.spawn_name = "hero_mortemis_zombie"
 tt.main_script.update = scripts.aura_mortemis_zombie.update
 tt.aura.cycle_time = 0.5
 tt.aura.duration = -1
 tt.aura.radius = 150
-tt.count_group_name = "skeletons"
-tt.count_group_type = COUNT_GROUP_CONCURRENT
-tt.count_group_max = 30
-
-tt = RT("hero_mortemis_smaller_spawner_seed", "bomb")
-tt.bullet.damage_min = 0
-tt.bullet.damage_max = 0
-tt.bullet.damage_radius = 50
-tt.bullet.flight_time = fts(1)
-tt.bullet.rotation_speed = 2 * FPS * math.pi / 22
-tt.bullet.hit_fx = "hero_mortemis_spawner_seed_decal"
-tt.bullet.hit_fx_water = "hero_mortemis_spawner_seed_decal"
-tt.bullet.hit_decal = "hero_mortemis_spawner_seed_decal"
-tt.bullet.hit_payload = "hero_mortemis_zombie_lvl0"
-tt.bullet.pop_chance = 0
-tt.bullet.pop = nil
-tt.sound_events.hit = nil
-tt.sound_events.hit_water = nil
-tt.render.sprites[1].name = nil
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].hidden = true
-
-tt = RT("fx_hero_mortemis_smaller_spawner_hit", "fx_fade")
-tt.render.sprites[1].name = "hero_mortemis_zombie_golem_spawn"
-tt.render.sprites[1].anchor.y = 0.5
-tt.render.sprites[1].z = Z_OBJECTS
-tt.tween.props[1].keys = {{0, 255}, {fts(56), 255}, {fts(71), 0}}
-
-tt = RT("hero_mortemis_zombie_spawner_seed_decal", "decal_timed")
-tt.render.sprites[1].name = "hero_mortemis_zombie_golem_attack_rocks_front_run"
-tt.render.sprites[1].anchor.y = 0.5
-tt.render.sprites[1].z = Z_DECALS
+tt.max_count = 6
 
 tt = RT("hero_mortemis_zombie", "soldier_militia")
 AC(tt, "reinforcement")
@@ -22784,15 +22711,15 @@ tt.health.armor = 0
 tt.health.magic_armor = 0
 tt.health.hp_max = 50
 tt.health_bar.offset = v(0, 35)
+tt.health.dead_lifetime = 2
 tt.unit.hit_offset = v(0, 16)
 tt.unit.head_offset = v(0, 29)
 tt.unit.mod_offset = v(0, 16)
 tt.unit.marker_offset = v(0, 0)
-tt.info.fn = scripts.soldier_reinforcement.get_info
-tt.info.portrait = "kr4_info_portraits_soldiers_0011"
+tt.info.portrait = "kr4_info_portraits_soldiers_0021"
 tt.info.random_name_format = nil
 tt.info.random_name_count = nil
-tt.main_script.insert = scripts.hero_mortemis_zombie.insert
+tt.main_script.insert = scripts.soldier_reinforcement.insert
 tt.main_script.update = scripts.soldier_reinforcement.update
 tt.motion.max_speed = 45
 tt.render.sprites[1].prefix = "hero_mortemis_zombie"
@@ -22816,36 +22743,16 @@ tt.melee.attacks[1].hit_time = fts(17)
 tt.melee.attacks[1].sound = "MeleeSword"
 tt.melee.attacks[1].vis_bans = bor(F_FLYING, F_CLIFF)
 tt.melee.attacks[1].vis_flags = F_BLOCK
-tt.melee.attacks[1].xp_gain_factor = 1
 tt.melee.attacks[1].sound_args = {
 	delay = fts(13)
 }
-tt.regen.health = -2
-tt.regen.cooldown = 2
-tt.reinforcement.duration = 50
+tt.regen.health = 0
+tt.regen.cooldown = 9999
+tt.reinforcement.duration = 32
+tt.reinforcement.fade = false
+tt.reinforcement.fade_in = false
+tt.reinforcement.fade_out = false
 tt.ui.click_rect = r(-20, -5, 40, 28)
-
-tt = RT("hero_mortemis_zombie_lvl0", "hero_mortemis_zombie")
-tt.health.hp_max = 50
-tt.melee.attacks[1].damage_max = 3
-tt.melee.attacks[1].damage_min = 1
-
-tt = RT("hero_mortemis_zombie_lvl1", "hero_mortemis_zombie")
-tt.health.hp_max = 50
-tt.melee.attacks[1].damage_max = 3
-tt.melee.attacks[1].damage_min = 1
-
-tt = RT("hero_mortemis_zombie_lvl2", "hero_mortemis_zombie")
-tt.regen.health = -6
-tt.health.hp_max = 110
-tt.melee.attacks[1].damage_max = 6
-tt.melee.attacks[1].damage_min = 3
-
-tt = RT("hero_mortemis_zombie_lvl3", "hero_mortemis_zombie")
-tt.regen.health = -10
-tt.health.hp_max = 160
-tt.melee.attacks[1].damage_max = 8
-tt.melee.attacks[1].damage_min = 6
 
 -- 大招
 tt = RT("hero_mortemis_ultimate")
@@ -22853,55 +22760,28 @@ AC(tt, "pos", "main_script", "sound_events")
 tt.cooldown = 48
 tt.main_script.update = scripts.controller_hero_mortemis_ultimate.update
 tt.sound_events.insert = "hero_mortemis_bodyguard"
-tt.bullet = "hero_mortemis_spawner_seed"
+tt.entity = "hero_mortemis_golem"
 tt.vis_flags = bor(F_RANGED, F_BLOCK)
 tt.vis_bans = F_FLYING
 tt.sound = "hero_mortemis_bodyguard"
 
-tt = RT("hero_mortemis_spawner_seed", "bomb")
-tt.bullet.damage_min = 0
-tt.bullet.damage_max = 0
-tt.bullet.damage_radius = 50
-tt.bullet.flight_time = fts(1)
-tt.bullet.rotation_speed = 2 * FPS * math.pi / 22
-tt.bullet.hit_fx = "hero_mortemis_spawner_seed_decal"
-tt.bullet.hit_fx_water = "hero_mortemis_spawner_seed_decal"
-tt.bullet.hit_decal = "hero_mortemis_spawner_seed_decal"
-tt.bullet.hit_payload = "hero_mortemis_gargantuar_lvl1"
-tt.bullet.pop_chance = 0
-tt.bullet.pop = nil
-tt.sound_events.hit = nil
-tt.sound_events.hit_water = nil
-tt.render.sprites[1].name = nil
-tt.render.sprites[1].animated = false
-tt.render.sprites[1].hidden = true
-
-tt = RT("fx_hero_mortemis_spawner_hit", "fx_fade")
-tt.render.sprites[1].name = "hero_mortemis_zombie_golem_spawn"
-tt.render.sprites[1].anchor.y = 0.5
-tt.render.sprites[1].z = Z_OBJECTS
-tt.tween.props[1].keys = {{0, 255}, {fts(56), 255}, {fts(71), 0}}
-
-tt = RT("hero_mortemis_spawner_seed_decal", "decal_timed")
-tt.render.sprites[1].name = "hero_mortemis_zombie_golem_attack_rocks_front_run"
-tt.render.sprites[1].anchor.y = 0.5
-tt.render.sprites[1].z = Z_DECALS
-
-tt = RT("hero_mortemis_ghoul", "soldier_militia")
-AC(tt, "reinforcement")
+tt = RT("hero_mortemis_golem", "soldier_militia")
+AC(tt, "reinforcement", "nav_grid")
+tt.controable = true
+tt.controable_other = true
 tt.health.armor = 0
 tt.health.magic_armor = 0
+tt.health.dead_lifetime = 2
 tt.health.hp_max = 500
 tt.health_bar.offset = v(0, 52)
 tt.unit.hit_offset = v(0, 16)
 tt.unit.head_offset = v(0, 29)
 tt.unit.mod_offset = v(0, 16)
 tt.unit.marker_offset = v(0, 0)
-tt.info.fn = scripts.soldier_reinforcement.get_info
-tt.info.portrait = "kr4_info_portraits_soldiers_0016"
+tt.info.portrait = "kr4_info_portraits_soldiers_0022"
 tt.info.random_name_format = nil
 tt.info.random_name_count = nil
-tt.main_script.insert = scripts.hero_mortemis_zombie.insert
+tt.main_script.insert = scripts.soldier_reinforcement.insert
 tt.main_script.update = scripts.soldier_reinforcement.update
 tt.motion.max_speed = 45
 tt.render.sprites[1].prefix = "hero_mortemis_zombie_golem"
@@ -22923,10 +22803,10 @@ tt.melee.attacks[1].count = 99
 tt.melee.attacks[1].damage_max = 10
 tt.melee.attacks[1].damage_min = 10
 tt.melee.attacks[1].damage_radius = 40
-tt.melee.attacks[1].mod = "hero_mortemis_ghoul_stun"
+tt.melee.attacks[1].mod = "hero_mortemis_golem_stun"
 tt.melee.attacks[1].damage_type = DAMAGE_TRUE
 tt.melee.attacks[1].hit_decal = "decal_ground_hit"
-tt.melee.attacks[1].hit_fx = "fx_ground_hit"
+tt.melee.attacks[1].hit_fx = "hero_mortemis_zombie_golem_attack_rocks"
 tt.melee.attacks[1].hit_offset = v(30, 0)
 tt.melee.attacks[1].hit_time = fts(23)
 tt.melee.attacks[1].sound = "AreaAttack"
@@ -22936,29 +22816,13 @@ tt.melee.attacks[1].sound_args = {
 tt.regen.health = 0
 tt.regen.cooldown = 2
 tt.reinforcement.duration = 20
+tt.reinforcement.fade = false
+tt.reinforcement.fade_in = false
+tt.reinforcement.fade_out = false
 tt.ui.click_rect = r(-20, -5, 40, 28)
 
-tt = RT("hero_mortemis_gargantuar_lvl1", "hero_mortemis_ghoul")
-tt.health.hp_max = 500
-tt.melee.attacks[1].damage_max = 13
-tt.melee.attacks[1].damage_min = 5
+tt = RT("hero_mortemis_zombie_golem_attack_rocks", "fx")
+tt.render.sprites[1].name = "hero_mortemis_zombie_golem_attack_rocks"
 
-tt = RT("hero_mortemis_gargantuar_lvl2", "hero_mortemis_ghoul")
-tt.health.hp_max = 600
-tt.melee.attacks[1].damage_max = 25
-tt.melee.attacks[1].damage_min = 8
-
-tt = RT("hero_mortemis_gargantuar_lvl3", "hero_mortemis_ghoul")
-tt.health.hp_max = 650
-tt.melee.attacks[1].damage_max = 50
-tt.melee.attacks[1].damage_min = 16
-
-tt = RT("hero_mortemis_gargantuar_lvl4", "hero_mortemis_ghoul")
-tt.health.hp_max = 700
-tt.melee.attacks[1].damage_max = 75
-tt.melee.attacks[1].damage_min = 25
-
-tt = RT("hero_mortemis_ghoul_stun", "mod_stun")
-tt.modifier.vis_flags = bor(F_MOD, F_STUN)
-tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
+tt = RT("hero_mortemis_golem_stun", "mod_stun")
 tt.modifier.duration = 1.2

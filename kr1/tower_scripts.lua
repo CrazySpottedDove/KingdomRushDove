@@ -3453,8 +3453,6 @@ function scripts.tower_pixie.update(this, store)
 								pixie.attack = attack
 								pixie.attack_level = pow_t.level
 								a.ts = store.tick_ts
-
-								break
 							end
 						end
 					end

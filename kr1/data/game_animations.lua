@@ -50714,21 +50714,6 @@ return {
 		from = 39,
 		to = 69
 	},
-	hero_mortemis_attack = {
-		prefix = "hero_mortemis",
-		from = 39,
-		to = 69
-	},
-	hero_mortemis_attackIn = {
-		prefix = "hero_mortemis",
-		from = 70,
-		to = 95
-	},
-	hero_mortemis_attackLoop = {
-		prefix = "hero_mortemis",
-		from = 96,
-		to = 113
-	},
 	hero_mortemis_attackOut = {
 		prefix = "hero_mortemis",
 		from = 114,
@@ -50769,16 +50754,16 @@ return {
 		from = 1,
 		to = 18
 	},
-	hero_mortemis_fumes_floor_decal_start = {
-		prefix = "hero_mortemis_fumes_floor_decal",
-		from = 1,
-		to = 4
-	},
-	hero_mortemis_fumes_floor_decal_run = {
-		prefix = "hero_mortemis_fumes_floor_decal",
-		from = 5,
-		to = 5
-	},
+	-- hero_mortemis_fumes_floor_decal_start = {
+	-- 	prefix = "hero_mortemis_fumes_floor_decal",
+	-- 	from = 1,
+	-- 	to = 5
+	-- },
+	-- hero_mortemis_fumes_floor_decal_run = {
+	-- 	prefix = "hero_mortemis_fumes_floor_decal",
+	-- 	from = 5,
+	-- 	to = 5
+	-- },
 	hero_mortemis_fumes_fx_run = {
 		prefix = "hero_mortemis_fumes_fx",
 		from = 1,
@@ -50789,21 +50774,21 @@ return {
 		from = 1,
 		to = 5
 	},
-	hero_mortemis_soul_proyectile_run = {
-		prefix = "hero_mortemis_soul_proyectile",
-		from = 1,
-		to = 6
-	},
-	hero_mortemis_soul_proyectile_travel = {
-		prefix = "hero_mortemis_soul_proyectile",
-		from = 7,
-		to = 14
-	},
-	hero_mortemis_soul_proyectile_hit = {
-		prefix = "hero_mortemis_soul_proyectile",
-		from = 15,
-		to = 19
-	},
+	-- hero_mortemis_soul_proyectile_run = {
+	-- 	prefix = "hero_mortemis_soul_proyectile",
+	-- 	from = 1,
+	-- 	to = 6
+	-- },
+	-- hero_mortemis_soul_proyectile_travel = {
+	-- 	prefix = "hero_mortemis_soul_proyectile",
+	-- 	from = 7,
+	-- 	to = 14
+	-- },
+	-- hero_mortemis_soul_proyectile_hit = {
+	-- 	prefix = "hero_mortemis_soul_proyectile",
+	-- 	from = 15,
+	-- 	to = 19
+	-- },
 	hero_mortemis_zombie_idle = {
 		prefix = "hero_mortemis_zombie",
 		from = 1,
@@ -50854,12 +50839,7 @@ return {
 		from = 102,
 		to = 126
 	},
-	hero_mortemis_zombie_golem_attack_effect_run = {
-		prefix = "hero_mortemis_zombie_golem_attack_effect",
-		from = 1,
-		to = 8
-	},
-	hero_mortemis_zombie_golem_attack_rocks_front_run = {
+	hero_mortemis_zombie_golem_attack_rocks = {
 		prefix = "hero_mortemis_zombie_golem_attack_rocks_front",
 		from = 1,
 		to = 19

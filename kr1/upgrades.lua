@@ -1440,7 +1440,8 @@ local other_bolts = {
 	"bolt_hero_spider_basic_attack",
 	"bolt_oloch",
 	"bolt_oloch_big",
-	"bolt_oloch_duplication"
+	"bolt_oloch_duplication",
+	"bolt_mortemis"
 }
 
 upgrades.bolts = table.append(other_bolts, upgrades.mage_tower_bolts)
@@ -1727,7 +1728,8 @@ function upgrades:patch_templates(max_level)
 
 	local soldiers = self.soldiers
 	local barrack_soldiers = self.barrack_soldiers
-	local barrack_towers = self.towers_with_barrack
+	local towers_with_barrack = self.towers_with_barrack
+	local barrack_towers = GS.barrack_towers
 
 	local function apply_soldier_health_factor(health_factor)
 		for _, n in ipairs(soldiers) do
@@ -1772,7 +1774,7 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("barrack_march")
 	if u then
-		for _, n in pairs(barrack_towers) do
+		for _, n in pairs(towers_with_barrack) do
 			T(n).barrack.rally_range = T(n).barrack.rally_range * u.rally_range_factor
 		end
 		for _, n in ipairs(soldiers) do
@@ -1782,7 +1784,7 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("barrack_rally")
 	if u then
-		for _, n in pairs(barrack_towers) do
+		for _, n in pairs(towers_with_barrack) do
 			T(n).barrack.rally_range = T(n).barrack.rally_range * u.rally_range_factor
 		end
 	end
@@ -1820,7 +1822,7 @@ function upgrades:patch_templates(max_level)
 			T(n).health.dead_lifetime = T(n).health.dead_lifetime * u.cooldown_factor
 		end
 
-		for _, n in pairs(barrack_towers) do
+		for _, n in pairs(towers_with_barrack) do
 			T(n).barrack.rally_range = T(n).barrack.rally_range * u.rally_range_factor
 		end
 	end
@@ -1879,7 +1881,7 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("barrack_dominant")
 	if u then
-		for _, n in ipairs(barrack_towers) do
+		for _, n in ipairs(towers_with_barrack) do
 			T(n).barrack.rally_range = T(n).barrack.rally_range * u.rally_range_factor
 		end
 		for _, n in ipairs(soldiers) do

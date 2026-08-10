@@ -425,7 +425,7 @@ function scripts.pestilence.insert(this, store)
 		points[i] = v(this.pos.x + math.random(-42, 42), this.pos.y + math.random(-42, 42))
 	end
 
-	for _, dest in pairs(points) do
+	for _, dest in ipairs(points) do
 		local decal = E:create_entity("decal_tween")
 
 		decal.pos.x, decal.pos.y = dest.x, dest.y
@@ -441,7 +441,7 @@ function scripts.pestilence.insert(this, store)
 
 	local smoke_offsets = {v(-17, 5), v(6, 13), v(3, -5), v(23, 3)}
 
-	for _, dest in pairs(points) do
+	for _, dest in ipairs(points) do
 		for i, off in ipairs(smoke_offsets) do
 			local sm = E:create_entity("decal_tween")
 
@@ -457,7 +457,7 @@ function scripts.pestilence.insert(this, store)
 		end
 	end
 
-	for _, dest in pairs(points) do
+	for _, dest in ipairs(points) do
 		local s = E:create_entity("decal_timed")
 
 		s.pos.x, s.pos.y = dest.x, dest.y

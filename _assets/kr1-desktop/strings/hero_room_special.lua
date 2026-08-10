@@ -3510,8 +3510,9 @@ map["巫妖"] = str("普通攻击发射灵魂弹幕，并吸收所造成伤害�
 
 set_skill(h.hero.skills.call_haunted)
 cooldown = h.timed_attacks.list[1].cooldown
+count = h.timed_attacks.list[1].max_target
 duration = ss("duration")
-map["夜鬼哭"] = str(cooldown_str(), "利用死者痛苦的低语控制一名敌人的心神，使其惊恐逃跑，持续", duration, "秒。")
+map["夜鬼哭"] = str(cooldown_str(), "墨忒弥斯利用死者痛苦的低语控制", count, "名敌人的心神，使其惊恐逃跑，持续", duration, "秒。")
 
 set_skill(h.hero.skills.deadly_fumes)
 cooldown = h.timed_attacks.list[2].cooldown
@@ -3524,25 +3525,38 @@ map["腐朽之地"] = str(cooldown_str(), "腐蚀一片区域，使上面的敌�
 
 set_skill(h.hero.skills.grim_presence)
 local reduction = -1 * ss("armor_reduction")
-map["无望之人"] = str("墨忒弥斯周围的敌人只要与他接近，就会丧失", reduction * 100, "%的护甲和魔法抗性。")
+radius = T("aura_mortemis_curse_armor").aura.radius
+map["无望之人"] = str("墨忒弥斯身边", radius, "范围内的敌人减少", reduction * 100, "点护甲和魔法抗性。")
 
 set_skill(h.hero.skills.undead_servitude)
-count = ss("max_skeletons_tower")
-map["不死人之奴"] = str("敌人死在墨忒弥斯身边后会化为一只僵尸重生。同一时间最多可有", count, "只僵尸。")
+count = T("aura_mortemis_zombie").max_count
+radius = T("aura_mortemis_zombie").aura.radius
+health[1].hp_max = ss("hp_max")
+health[1].armor = T("hero_mortemis_zombie").armor
+health[1].magic_armor = T("hero_mortemis_zombie").magic_armor
+d[1].damage_min = ss("damage_min")
+d[1].damage_max = ss("damage_max")
+d[1].damage_type = T("hero_mortemis_zombie").melee.attacks[1].damage_type
+duration = T("hero_mortemis_zombie").reinforcement.duration
+map["不死人之奴"] = str("墨忒弥斯身边", radius, "范围内的敌人死亡后会化为一只僵尸作战。僵尸拥有", health_str(), "，每次攻击造成", damage_str()"，驻场", duration, "秒。同一范围内，最多存在", count, "只僵尸。")
 
 set_skill(h.hero.skills.ultimate)
-cooldown = ss("cooldown")
-e = T("hero_mortemis_gargantuar_lvl4")
+cooldown = h.ultimate.cooldown
+e = T("hero_mortemis_golem")
 get_health(e)
-d[1].damage_min = e.melee.attacks[1].damage_min
-d[1].damage_max = e.melee.attacks[1].damage_max
+health[1].hp_max = ss("hp_max")
+d[1].damage_min = ss("damage_min")
+d[1].damage_max = ss("damage_max")
 d[1].damage_type = e.melee.attacks[1].damage_type
-map["腐朽近卫"] = str(cooldown_str(), "召唤出一只巨大的僵尸巨怪，拥有", hp_str(), "，每次攻击对周围敌人造成", damage_str(), "。")
+duration = e.reinforcement.duration
+duration_2 = T("hero_mortemis_golem_stun").modifier.duration
+map["腐朽近卫"] = str(cooldown_str(), "召唤出一只可调集的僵尸巨怪，拥有", hp_str(), "，每次攻击对周围敌人造成", damage_str(), "，并使他们眩晕", duration_2, "秒。僵尸巨怪驻场", duration, "秒。")
 
-e = T("hero_mortemis_zombie_lvl0")
-get_health(e)
-d[1].damage_min = e.melee.attacks[1].damage_min
-d[1].damage_max = e.melee.attacks[1].damage_max
+set_skill(h.hero.skills.undead_servitude)
+e = T("hero_mortemis_zombie")
+health[1].hp_max = ss("hp_max")
+d[1].damage_min = ss("damage_min")
+d[1].damage_max = ss("damage_max")
 d[1].damage_type = e.melee.attacks[1].damage_type
 map["黑暗军"] = str("墨忒弥斯死时，身边将生出", h.death_spawns.quantity, "只僵尸，每只拥有", hp_str(), "，每次攻击造成", damage_str(), "。")
 

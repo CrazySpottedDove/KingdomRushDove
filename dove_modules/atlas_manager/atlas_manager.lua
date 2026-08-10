@@ -404,7 +404,6 @@ local function draw_popup()
 		G2.setFont(font)
 		local tab_h = 22
 		local tab_y = 34
-		local tab_x = 10
 		local total = 0
 		local tabs_w = {}
 		for i, f in ipairs(state.preview_files) do
@@ -795,7 +794,6 @@ function atlas_manager:build_controls()
 end
 
 local function make_dialog_text_input(w, initial)
-	local rs = 1
 	local inp = KView:new(V.v(w, 22))
 	inp.colors.background = {22, 28, 42, 255}
 	inp.shape = {
@@ -2763,7 +2761,6 @@ function atlas_manager:do_merge()
 	end
 	local all_frames = {}
 	for _, sel in ipairs(selected) do
-		local src = sel.frame
 		all_frames[sel.frame_name] = self:_make_merge_frame(sel)
 	end
 	state.merge_pages = nil

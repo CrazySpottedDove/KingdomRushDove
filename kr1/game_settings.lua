@@ -1265,7 +1265,9 @@ GS.wraith = {
 	soldier_gargoyle = true,
 	soldier_tower_ghost_lvl4 = true,
 	hero_margosa = true,
-	hero_mortemis = true
+	hero_mortemis = true,
+	hero_mortemis_zombie = true,
+	hero_mortemis_golem = true
 }
 
 GS.hero_exoskeletons = {
