@@ -4012,7 +4012,6 @@ tt.dodge.chance_inc = 0.1
 tt.dodge.power_name = "backstab"
 tt.dodge.counter_attack = CC("melee_attack")
 tt.dodge.counter_attack.animation = "backstabHit"
-tt.dodge.counter_attack.cooldown = 0.5
 tt.dodge.counter_attack.damage_type = DAMAGE_PHYSICAL
 tt.dodge.counter_attack.damage_max = 20
 tt.dodge.counter_attack.damage_min = 15
@@ -4143,4 +4142,3 @@ tt.bullet.reset_to_target_pos = true
 tt.bullet.damage_max = 4
 tt.bullet.damage_min = -4
 tt.bullet.damage_inc = 22
-

@@ -3532,13 +3532,13 @@ set_skill(h.hero.skills.undead_servitude)
 count = T("aura_mortemis_zombie").max_count
 radius = T("aura_mortemis_zombie").aura.radius
 health[1].hp_max = ss("hp_max")
-health[1].armor = T("hero_mortemis_zombie").armor
-health[1].magic_armor = T("hero_mortemis_zombie").magic_armor
+health[1].armor = T("hero_mortemis_zombie").health.armor
+health[1].magic_armor = T("hero_mortemis_zombie").health.magic_armor
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
 d[1].damage_type = T("hero_mortemis_zombie").melee.attacks[1].damage_type
 duration = T("hero_mortemis_zombie").reinforcement.duration
-map["不死人之奴"] = str("墨忒弥斯身边", radius, "范围内的敌人死亡后会化为一只僵尸作战。僵尸拥有", health_str(), "，每次攻击造成", damage_str()"，驻场", duration, "秒。同一范围内，最多存在", count, "只僵尸。")
+map["不死人之奴"] = str("墨忒弥斯身边", radius, "范围内的敌人死亡后会化为一只僵尸作战。僵尸拥有", health_str(), "，每次攻击造成", damage_str(), "，驻场", duration, "秒。同一范围内，最多存在", count, "只僵尸。")
 
 set_skill(h.hero.skills.ultimate)
 cooldown = h.ultimate.cooldown
