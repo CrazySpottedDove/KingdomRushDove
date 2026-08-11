@@ -1,4 +1,5 @@
 local M = {}
+local log = require("lib.klua.log"):new("render")
 local perf = require("dove_modules.perf.perf")
 local A = require("animation_db")
 local I = require("lib.klove.image_db")
@@ -113,8 +114,9 @@ function M.register(sys)
 		store.render_frames = {}
 		store.render_frames_swapper = {}
 		store.render_frames_count = 0
-		store.render_frames_ffi = ffi.new("RenderFrameFFI[16384]")
-		store.render_frames_ffi_tmp = ffi.new("RenderFrameFFI[16384]")
+		store.render_frames_ffi_cap = 8192
+		store.render_frames_ffi = ffi.new("RenderFrameFFI[8192]")
+		store.render_frames_ffi_tmp = ffi.new("RenderFrameFFI[8192]")
 
 		local hb_quad = love.graphics.newQuad(unpack(HEALTH_BAR_CORNER_DOT_QUAD))
 
@@ -257,6 +259,12 @@ function M.register(sys)
 
 	function sys.render:on_render_update(dt, ts, store)
 		perf.start("render")
+
+		if store.render_frames_count > store.render_frames_ffi_cap then
+			store.render_frames_ffi_cap = store.render_frames_ffi_cap * 2
+			store.render_frames_ffi = ffi.new("RenderFrameFFI[" .. store.render_frames_ffi_cap .. "]")
+			store.render_frames_ffi_tmp = ffi.new("RenderFrameFFI[" .. store.render_frames_ffi_cap .. "]")
+		end
 
 		local render_frames = store.render_frames
 		local render_frames_ffi = store.render_frames_ffi
