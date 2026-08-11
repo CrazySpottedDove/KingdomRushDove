@@ -1,1 +1,1 @@
-return {{date="2026-08-10",author="CrazySpottedDove",message="feat: 为插件配置项提供顺序自定义接口"},{date="2026-08-11",author="CrazySpottedDove",message="fix: 修复部分数值配置项消失的问题"}}
+return {{date="2026-08-10",author="CrazySpottedDove",message="feat: 为插件配置项提供顺序自定义接口"},{date="2026-08-11",author="CrazySpottedDove",message="fix: 修复部分数值配置项消失的问题"},{date="2026-08-11",author="CrazySpottedDove",message="perf: 清理configer.criket代码"}}

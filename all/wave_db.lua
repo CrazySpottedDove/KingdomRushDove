@@ -55,39 +55,6 @@ local function is_file(path)
 	return info and info.type == "file"
 end
 
---- 斗蛐蛐时使用，改为加载斗蛐蛐文件
----@param criket table
-function wave_db:patch_waves(criket)
-	self.db.groups = {}
-
-	local criket_groups = criket.groups
-
-	if not criket.fps_transformed then
-		criket.fps_transformed = true
-
-		for _, group in pairs(criket_groups) do
-			for key, value in pairs(group) do
-				if key == "delay" then
-					value = value * FPS
-				elseif key == "spawns" then
-					for _, single_spawn in pairs(value) do
-						for k, v in pairs(single_spawn) do
-							if k == "interval" or k == "interval_next" then
-								single_spawn[k] = v * FPS
-							end
-						end
-					end
-				end
-			end
-		end
-	end
-
-	self.db.groups[1] = {
-		interval = 0,
-		waves = criket_groups
-	}
-end
-
 -- tsv
 
 function wave_db:parse_column_names(cmd, row, row_idx)
