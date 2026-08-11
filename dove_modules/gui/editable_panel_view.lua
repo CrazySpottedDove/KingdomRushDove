@@ -424,8 +424,7 @@ function EditableGroup:_render_list()
 		local label = self.key_label_map[key]
 
 		-- 避免插件作者字打错了导致崩溃，这里做防御性编程
-		if value and label then
-
+		if value ~= nil and label ~= nil then
 			if type(value) == "table" and table.isarray(value) then
 				-- ======== 数组类型：标题行 + 每项各占一行 ========
 				-- 标题行：纯展示，但视觉上与普通 EditableItem 的 key/value 区域对齐
