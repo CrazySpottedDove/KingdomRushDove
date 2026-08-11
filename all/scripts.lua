@@ -8229,7 +8229,9 @@ function scripts.mod_lycanthropy.update(this, store)
 		e.health.hp_max = this.spawn_hp_max or e.health.hp_max
 
 		if target.nav_path then
-			e.nav_path = table.deepclone(target.nav_path)
+			e.nav_path.pi = target.nav_path.pi
+			e.nav_path.spi = target.nav_path.spi
+			e.nav_path.ni = target.nav_path.ni
 		else
 			local nearest = P:nearest_nodes(e.pos.x, e.pos.y, nil, {1, 2, 3}, true, NF_RALLY)
 
