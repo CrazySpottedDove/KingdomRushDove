@@ -22826,3 +22826,307 @@ tt.render.sprites[1].name = "hero_mortemis_zombie_golem_attack_rocks"
 
 tt = RT("hero_mortemis_golem_stun", "mod_stun")
 tt.modifier.duration = 1.2
+
+-- ======== 极狗 ========
+anchor_x, anchor_y = 0.5, 0.12
+image_x, image_y = 92, 110
+
+tt = RT("hero_jigou", "hero")
+AC(tt, "melee", "timed_attacks", "ranged", "auras")
+tt.auras.list[1] = CC("aura_attack")
+tt.auras.list[1].name = "aura_jigou_regen"
+tt.auras.list[1].cooldown = 0
+tt.melee.range = 60
+tt.health_bar.offset = v(0, 56)
+tt.health.dead_lifetime = 15
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.hero.tombstone_show_time = fts(90)
+tt.hero.skills.ice_shard = CC("hero_skill")
+tt.hero.skills.ice_shard.damage_min = {35, 88, 158}
+tt.hero.skills.ice_shard.damage_max = {65, 163, 193}
+tt.hero.skills.ice_shard.max_range = {200, 250, 300}
+tt.hero.skills.ice_shard.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.ice_shard.xp_gain = {60, 120, 180}
+tt.hero.skills.frozen_breath = CC("hero_skill")
+tt.hero.skills.frozen_breath.count = {3, 4, 5}
+tt.hero.skills.frozen_breath.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.frozen_breath.xp_gain = {60, 120, 180}
+tt.hero.skills.earthshake = CC("hero_skill")
+tt.hero.skills.earthshake.loops = {4, 8, 13}
+tt.hero.skills.earthshake.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.earthshake.xp_gain = {60, 120, 180}
+tt.hero.skills.glacial_form = CC("hero_skill")
+tt.hero.skills.glacial_form.duration = {3, 6, 9}
+tt.hero.skills.glacial_form.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3
+}
+tt.hero.skills.glacial_form.xp_gain = {60, 120, 180}
+tt.hero.skills.ultimate = CC("hero_skill")
+tt.hero.skills.ultimate.damage_config = {15, 30, 150, 260}
+tt.hero.skills.ultimate.slow_factor = {0.85, 0.7, 0.55, 0.4}
+tt.hero.skills.ultimate.cooldown = {44, 44, 44, 44}
+tt.hero.skills.ultimate.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
+}
+tt.hero.skills.ultimate.xp_gain = {160, 320, 480, 640}
+tt.hero.skills.ultimate.controller_name = "hero_jigou_ultimate"
+tt.hero.level_stats.armor = {0.06, 0.08, 0.10, 0.12, 0.14, 0.16, 0.18, 0.20, 0.22, 0.24}
+tt.hero.level_stats.hp_max = {360, 420, 480, 540, 600, 660, 720, 780, 840, 900}
+tt.hero.level_stats.melee_damage_min = {19, 24, 30, 35, 40, 46, 51, 57, 62, 67}
+tt.hero.level_stats.melee_damage_max = {26, 35, 43, 52, 60, 69, 77, 85, 94, 102}
+tt.regen.cooldown = 1
+tt.ultimate = {
+	ts = 0,
+	cooldown = 44,
+	disabled = true,
+	range = 200
+}
+tt.info.hero_portrait = "kr4_hero_portraits_0007"
+tt.info.portrait = "kr4_info_portraits_heroes_0007"
+tt.main_script.update = scripts.hero_jigou.update
+tt.hero.fn_level_up = scripts.hero_jigou.level_up
+tt.motion.max_speed = 1.4 * FPS
+tt.soldier.melee_slot_offset = v(5, 0)
+tt.sound_events.change_rally_point = "group_jigou_taunt"
+tt.sound_events.death = "hero_jigou_death"
+tt.sound_events.hero_room_select = "hero_jigou_taunt_1"
+tt.sound_events.insert = "group_jigou_taunt"
+tt.sound_events.respawn = "HeroPaladinTauntIntro"
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 20)
+tt.render.sprites[1].anchor = v(0.5, 0.04)
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].prefix = "hero_jigou"
+tt.render.sprites[1].offset = v(0, -28)
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].offset = v(0, 16)
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "hero_jigou_shadow"
+tt.render.sprites[2].z = Z_DECALS + 1
+tt.melee.attacks[1] = CC("area_attack")
+tt.melee.attacks[1].cooldown = 2
+tt.melee.attacks[1].count = 3
+tt.melee.attacks[1].damage_max = 20
+tt.melee.attacks[1].damage_min = 10
+tt.melee.attacks[1].damage_radius = 37.5
+tt.melee.attacks[1].animation = "attack"
+tt.melee.attacks[1].damage_type = DAMAGE_PHYSICAL
+tt.melee.attacks[1].hit_decal = "decal_ground_hit"
+tt.melee.attacks[1].hit_fx = "fx_ground_hit"
+tt.melee.attacks[1].hit_offset = v(35, 0)
+tt.melee.attacks[1].hit_time = fts(14)
+tt.melee.attacks[1].pop = {"pop_whaam", "pop_kapow"}
+tt.melee.attacks[1].pop_chance = 0.3
+tt.melee.attacks[1].sound_hit = "AreaAttack"
+tt.melee.attacks[1].vis_bans = bor(F_FLYING, F_CLIFF)
+tt.melee.attacks[1].vis_flags = F_BLOCK
+tt.melee.attacks[1].xp_gain_factor = 1
+tt.melee.attacks[2] = CC("area_attack")
+tt.melee.attacks[2].animation = "iceland"
+tt.melee.attacks[2].animations = {"specialIn", "specialLoop", "specialOut"}
+tt.melee.attacks[2].cooldown = 30
+tt.melee.attacks[2].count = 99
+tt.melee.attacks[2].loops = 4
+tt.melee.attacks[2].damage_radius = 100
+tt.melee.attacks[2].damage_type = DAMAGE_NONE
+tt.melee.attacks[2].disabled = true
+tt.melee.attacks[2].hit_time = fts(10)
+tt.melee.attacks[2].mod = "mod_jigou_slash"
+tt.melee.attacks[2].sound = "hero_jigou_earthshake"
+tt.melee.attacks[2].xp_from_skill = "earthshake"
+tt.ranged.attacks[1] = CC("bullet_attack")
+tt.ranged.attacks[1].cooldown = 10
+tt.ranged.attacks[1].disabled = true
+tt.ranged.attacks[1].min_range = 25
+tt.ranged.attacks[1].max_range = 200
+tt.ranged.attacks[1].animation = "shoot"
+tt.ranged.attacks[1].bullet = "bullet_jigou"
+tt.ranged.attacks[1].xp_from_skill = "ice_shard"
+tt.ranged.attacks[1].shoot_time = fts(37)
+tt.ranged.attacks[1].node_prediction = fts(37)
+tt.ranged.attacks[1].bullet_start_offset = {v(-8, 24)}
+tt.timed_attacks.list[1] = CC("mod_attack")
+tt.timed_attacks.list[1].animation = "igloo"
+tt.timed_attacks.list[1].cooldown = 40
+tt.timed_attacks.list[1].disabled = true
+tt.timed_attacks.list[1].hit_time = {fts(10)}
+tt.timed_attacks.list[1].health_trigger_factor = 0.25
+tt.timed_attacks.list[1].lost_health = 0.25
+tt.timed_attacks.list[1].duration = 3
+tt.timed_attacks.list[1].mods = {"jigou_healing_mod"}
+tt.timed_attacks.list[1].sound = "TowerPaladinCovenantHealingPrayer"
+tt.timed_attacks.list[2] = CC("aura_attack")
+tt.timed_attacks.list[2].animation = "chill"
+tt.timed_attacks.list[2].bullet = "aura_chill_jigou"
+tt.timed_attacks.list[2].cast_time = fts(18)
+tt.timed_attacks.list[2].cooldown = 20
+tt.timed_attacks.list[2].disabled = true
+tt.timed_attacks.list[2].max_range = 160
+tt.timed_attacks.list[2].min_range = 19.2
+tt.timed_attacks.list[2].sound = "hero_jigou_breath"
+tt.timed_attacks.list[2].step = 3
+tt.timed_attacks.list[2].nodes_offset = 6
+tt.timed_attacks.list[2].vis_bans = bor(F_FLYING, F_FRIEND)
+tt.timed_attacks.list[2].vis_flags = F_RANGED
+tt.timed_attacks.list[2].xp_from_skill = "frozen_breath"
+
+tt = RT("aura_jigou_regen", "aura_beastmaster_regeneration")
+tt.hps.heal_min = 6
+tt.hps.heal_max = 6
+tt.hps.heal_every = 0.2
+
+-- 2技能 霜冻吐息
+tt = RT("aura_chill_jigou", "aura")
+AC(tt, "render", "tween")
+tt.aura.cycle_time = fts(10)
+tt.aura.duration = 1
+tt.aura.mod = "mod_jigou_freeze"
+tt.aura.radius = 60
+tt.aura.vis_bans = bor(F_FRIEND)
+tt.aura.vis_flags = bor(F_ENEMY)
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_chill_jigou.update
+tt.render.sprites[1].prefix = "hero_jigou_frozen_breath_fx"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].z = Z_DECALS
+tt.tween.remove = true
+tt.tween.disabled = true
+tt.tween.props[1].keys = {{0, 255}, {0.2, 0}}
+
+tt = RT("mod_jigou_freeze", "mod_freeze")
+AC(tt, "render")
+tt.modifier.duration = 3
+tt.render.sprites[1].prefix = "freeze_creep"
+tt.render.sprites[1].sort_y_offset = -2
+tt.render.sprites[1].loop = false
+tt.custom_offsets = {}
+tt.custom_offsets.flying = v(-5, 32)
+tt.custom_suffixes = {}
+tt.custom_suffixes.flying = "_air"
+tt.custom_animations = {"start", "end"}
+
+-- 1技能 雪球
+tt = RT("bullet_jigou", "bomb")
+tt.main_script.update = scripts.bomb.update
+tt.bullet.flight_time = fts(28)
+tt.bullet.damage_radius = 60
+tt.bullet.damage_max = 63
+tt.bullet.damage_min = 35
+tt.bullet.hit_fx = "fx_jigou_stone_explosion"
+tt.bullet.hit_decal = nil
+tt.bullet.pop = {"pop_artillery"}
+tt.render.sprites[1].name = "hero_jigou_iceshard"
+tt.sound_events.insert = "hero_jigou_glacial"
+tt.sound_events.hit = "TowerStoneDruidBoulderExplote"
+tt.sound_events.hit_water = "RTWaterExplosion"
+
+tt = RT("fx_jigou_stone_explosion", "fx")
+tt.render.sprites[1].name = "hero_jigou_iceshard_hit_run"
+tt.render.sprites[1].anchor.y = 0.23684210526315788
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -5
+
+tt = RT("fx_jigou_igloo_explosion", "fx")
+tt.render.sprites[1].name = "hero_jigou_igloo_end_run"
+tt.render.sprites[1].anchor.y = 0.23684210526315788
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = -5
+
+-- 3技能 猛击地球
+tt = RT("mod_jigou_slash", "modifier")
+AC(tt, "render")
+tt.damage_type = DAMAGE_PHYSICAL
+tt.damage_max = 17
+tt.damage_min = 17
+tt.mod = "mod_jigou_stun"
+tt.delay_per_idx = 0.13
+tt.hit_time = fts(4)
+tt.main_script.update = scripts.mod_jigou_slash.update
+tt.modifier.duration = fts(11)
+tt.render.sprites[1].name = "hero_jigou_attack_fx_run"
+tt.render.sprites[1].sort_y_offset = -2
+tt.render.sprites[1].loop = false
+
+tt = RT("mod_jigou_stun", "mod_stun")
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
+tt.modifier.duration = 0.5
+
+-- 4技能 冰川形态
+tt = RT("jigou_healing_mod", "modifier")
+AC(tt, "hps", "render")
+tt.modifier.duration = 3
+tt.modifier.resets_same = false
+tt.hps.heal_min = {37, 52, 67}
+tt.hps.heal_max = {37, 52, 67}
+tt.hps.heal_every = 1
+tt.main_script.insert = function(this, store)
+	this.hps.heal_min = this.hps.heal_min[this.modifier.level]
+	this.hps.heal_max = this.hps.heal_max[this.modifier.level]
+	this.modifier.duration = this.modifier.level * 3
+
+	return scripts.mod_hps.insert(this, store)
+end
+tt.main_script.update = scripts.mod_hps.update
+tt.main_script.remove = scripts.tower_paladin_covenant_soldier_lvl4_healing_mod.remove
+
+-- 大招 冰区
+tt = RT("hero_jigou_ultimate")
+AC(tt, "pos", "main_script", "sound_events")
+tt.cooldown = 44
+tt.main_script.update = scripts.controller_jigou_ultimate.update
+tt.aura = "aura_jigou_ultimate"
+tt.vis_flags = bor(F_RANGED, F_BLOCK)
+tt.vis_bans = F_FLYING
+tt.sound = "hero_jigou_icezone"
+
+tt = RT("aura_jigou_ultimate", "aura")
+tt.aura.fx = "decal_jigou_ultimate_spike"
+tt.aura.damage_radius = 50
+tt.aura.last_attack_damage_radius = 60
+tt.aura.damage_type = DAMAGE_PHYSICAL
+tt.aura.vis_flags = bor(F_RANGED)
+tt.aura.vis_bans = bor(F_FRIEND)
+tt.aura.step_delay = fts(2)
+tt.aura.step_nodes = 2
+tt.aura.steps = 9
+tt.main_script.update = scripts.aura_jigou_ultimate.update
+tt.stun = {}
+tt.stun.vis_flags = bor(F_RANGED, F_STUN)
+tt.stun.vis_bans = bor(F_FLYING)
+tt.stun.mod = "mod_jigou_ultimate_slow"
+tt.aura.damage_min = 15
+tt.aura.damage_max = 15
+tt.aura.stun_chance = 1
+tt.aura.min_nodes = 0
+tt.aura.max_nodes = 25
+tt.aura.min_count = 1
+
+tt = RT("mod_jigou_ultimate_slow", "mod_slow")
+tt.modifier.duration = 6
+tt.slow.factor = 0.85
+
+tt = RT("decal_jigou_ultimate_spike", "decal_bomb_crater")
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].name = "hero_jigou_ultimate_ice_shards"
+tt.render.sprites[2].scale = v(1.5, 1.5)
+tt.render.sprites[2].hide_after_runs = 1
+tt.render.sprites[2].anchor.y = 0.24

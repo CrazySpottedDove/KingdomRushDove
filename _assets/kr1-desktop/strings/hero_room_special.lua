@@ -3560,4 +3560,47 @@ d[1].damage_max = ss("damage_max")
 d[1].damage_type = e.melee.attacks[1].damage_type
 map["黑暗军"] = str("墨忒弥斯死时，身边将生出", h.death_spawns.quantity, "只僵尸，每只拥有", hp_str(), "，每次攻击造成", damage_str(), "。")
 
+-- 极狗
+set_hero("hero_jigou")
+
+map["雪人血"] = str("极狗能持续恢复自己的生命值。普通攻击猛击地面，对周围", h.melee.attacks[1].count, "名敌人造成范围伤害。")
+
+set_skill(h.hero.skills.ice_shard)
+cooldown = h.ranged.attacks[1].cooldown
+d[1].damage_min = ss("damage_min")
+d[1].damage_max = ss("damage_max")
+d[1].damage_type = T("bullet_jigou").bullet.damage_type
+radius = T("bullet_jigou").bullet.damage_radius
+map["雪球"] = str(cooldown_str(), "向敌人投掷一块冻结的石头，对", radius, "范围内敌人造成", damage_str(), "。")
+
+set_skill(h.hero.skills.frozen_breath)
+cooldown = h.timed_attacks.list[2].cooldown
+count = ss("count")
+duration = T("mod_jigou_freeze").modifier.duration
+map["霜冻吐息"] = str(cooldown_str(), "呼出肺中的空气，冻结", count, "条路径上的敌人，使其无法行动", duration, "秒。")
+
+set_skill(h.hero.skills.earthshake)
+cooldown = h.melee.attacks[2].cooldown
+local loops = ss("loops")
+d[1].damage_min = T("mod_jigou_slash").damage_min
+d[1].damage_max = T("mod_jigou_slash").damage_max
+d[1].damage_type = T("mod_jigou_slash").damage_type
+local stun_dur = T("mod_jigou_stun").modifier.duration
+map["猛击地球"] = str(cooldown_str(), "暴怒地跳跃，令大地剧烈震动，猛击", loops, "次，对周围敌人造成", damage_str(), "并使其眩晕", stun_dur, "秒。")
+
+set_skill(h.hero.skills.glacial_form)
+cooldown = h.timed_attacks.list[1].cooldown
+duration = ss("duration")
+heal = T("jigou_healing_mod").hps.heal_min[max_lvl]
+map["冰川形态"] = str("生命值低于", h.timed_attacks.list[1].lost_health * 100, "%时，极狗蜷缩进冰屋，", duration, "秒内无法被伤害，并每秒恢复", heal, "点生命值。")
+
+set_skill(h.hero.skills.ultimate)
+cooldown = h.ultimate.cooldown
+d[1].damage_min = ss("damage_config")
+d[1].damage_max = ss("damage_config")
+d[1].damage_type = T("aura_jigou_ultimate").aura.damage_type
+duration = T("mod_jigou_ultimate_slow").modifier.duration
+local slow = 1 - ss("slow_factor")
+map["冰区"] = str(cooldown_str(), "制造出一块布满冰雪的区域，沿敌阵路径延伸，对沿途敌人造成", damage_str(), "并使其移动速度降低", slow * 100, "%，持续", duration, "秒。")
+
 return H

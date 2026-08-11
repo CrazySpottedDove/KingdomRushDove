@@ -6731,5 +6731,8 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	HERO_MORTEMIS_DESCRIPTION = "老巫师王因不愿死去，而以自己的人性为代价，换取了巫术的不传之秘。现在他以不死人的身份加入了维兹南的军队，只为追求当初许诺给他的黑暗力量。",
 	HERO_MORTEMIS_SPECIAL = "夜鬼哭，腐朽之地，无望之人，不死人之奴，腐朽近卫，黑暗军",
 	HERO_MORTEMIS_ZOMBIE_NAME = "僵尸",
-	HERO_MORTEMIS_GOLEM_NAME = "僵尸巨怪"
+	HERO_MORTEMIS_GOLEM_NAME = "僵尸巨怪",
+	HERO_JIGOU_NAME = "极狗",
+	HERO_JIGOU_DESCRIPTION = "这头凶蛮可怕的野兽原本被囚禁在北国冰山，从沉睡中醒来只为向维兹南俯首听命。它会按照主人的号令，毫不容情地粉碎一切敌人。",
+	HERO_JIGOU_SPECIAL = "雪球，霜冻吐息，猛击地球，冰川形态，冰区，雪人血"
 }
