@@ -716,7 +716,7 @@ local function add_level_description(parent, text)
 	first_paragraph_2_label.text = p_2
 end
 
-local function add_level_rules(parent, y)
+local function add_level_rules(parent, y, upg_level, has_hero)
 	local upg_icon = KImageView:new("levelSelect_modeRules_0010")
 	upg_icon.pos = v(ls_page_r_x + 20, y)
 	parent:add_child(upg_icon)
@@ -728,11 +728,11 @@ local function add_level_rules(parent, y)
 	upg_label.font_size = 11
 	upg_label.text_align = "center"
 	upg_label.vertical_align = "middle"
-	upg_label.text = _("UPGRADE_LEVEL") .. "\n6"
+	upg_label.text = _("UPGRADE_LEVEL") .. "\n" .. upg_level
 	upg_label.colors.text = {64, 57, 36}
 	parent:add_child(upg_label)
 
-	local hero_icon = KImageView:new("levelSelect_modeRules_0011")
+	local hero_icon = KImageView:new(has_hero and "levelSelect_modeRules_0011" or "levelSelect_modeRules_0009")
 	hero_icon.pos = v(ls_page_r_x + ls_page_w / 2 + 20, y)
 	parent:add_child(hero_icon)
 
@@ -743,7 +743,7 @@ local function add_level_rules(parent, y)
 	hero_label.font_size = 11
 	hero_label.text_align = "center"
 	hero_label.vertical_align = "middle"
-	hero_label.text = _("HEROES")
+	hero_label.text = has_hero and _("HEROES") or _("NO HEROES")
 	hero_label.colors.text = {64, 57, 36}
 	parent:add_child(hero_label)
 end
@@ -1058,18 +1058,26 @@ function CustomLevelSelectView:initialize(sw, sh, map, on_start, progress)
 
 	-- Heroic page
 	local rules_y = 290
+	local upg_level = map.level_data.max_upgrade_level
+	local locked_hero = map.level_data.locked_hero
 
 	self.heroic = KView:new()
 	self.back:add_child(self.heroic)
 	self.heroic.hidden = true
 	if map.has_heroic then
+		if map.level_data.level_mode_overrides and map.level_data.level_mode_overrides[2] and map.level_data.level_mode_overrides[2].max_upgrade_level then
+			upg_level = map.level_data.level_mode_overrides[2].max_upgrade_level
+		end
+		if map.level_data.level_mode_overrides and map.level_data.level_mode_overrides[2] and map.level_data.level_mode_overrides[2].locked_hero ~= nil then
+			locked_hero = map.level_data.level_mode_overrides[2].locked_hero
+		end
 		local rbg = KImageView:new("levelSelect_modebg_notxt_0001")
 		rbg.pos = v(ls_page_r_x + (ls_page_w - rbg.size.x) / 2, rules_y + 20)
 		self.heroic:add_child(rbg)
 		add_level_title(self.heroic, _("Heroic"), "right")
 		add_level_description(self.heroic, _("LEVEL_MODE_HEROIC_DESCRIPTION"))
 		add_level_title(self.heroic, _("Challenge Rules"), "sub", rules_y)
-		add_level_rules(self.heroic, rules_y + 38)
+		add_level_rules(self.heroic, rules_y + 38, upg_level, not locked_hero)
 		add_difficulty_stamp(self.heroic, p[GAME_MODE_HEROIC], 690, 520)
 
 		local diff_btn_h = CustomLevelSelectDifficultyButton:new()
@@ -1092,6 +1100,12 @@ function CustomLevelSelectView:initialize(sw, sh, map, on_start, progress)
 	self.back:add_child(self.iron)
 	self.iron.hidden = true
 	if map.has_iron then
+		if map.level_data.level_mode_overrides and map.level_data.level_mode_overrides[3] and map.level_data.level_mode_overrides[3].max_upgrade_level then
+			upg_level = map.level_data.level_mode_overrides[3].max_upgrade_level
+		end
+		if map.level_data.level_mode_overrides and map.level_data.level_mode_overrides[3] and map.level_data.level_mode_overrides[3].locked_hero ~= nil then
+			locked_hero = map.level_data.level_mode_overrides[3].locked_hero
+		end
 		local rbg = KImageView:new("levelSelect_modebg_notxt_0001")
 		rbg.pos = v(ls_page_r_x + (ls_page_w - rbg.size.x) / 2, rules_y + 20)
 		self.iron:add_child(rbg)
@@ -1102,7 +1116,7 @@ function CustomLevelSelectView:initialize(sw, sh, map, on_start, progress)
 		add_level_title(self.iron, _("Iron"), "right")
 		add_level_description(self.iron, _("LEVEL_MODE_IRON_DESCRIPTION"))
 		add_level_title(self.iron, _("Challenge Rules"), "sub", rules_y)
-		add_level_rules(self.iron, rules_y + 38)
+		add_level_rules(self.iron, rules_y + 38, upg_level, not locked_hero)
 
 		local b_x = 770
 		local b_y = rbbg.pos.y + 10
