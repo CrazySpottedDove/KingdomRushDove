@@ -6015,6 +6015,7 @@ local towers = {
 			max_bounces = {1, 2, 3, 4}
 		},
 		skill_gold = {
+			cooldown = 8,
 			range_trigger = 150,
 			gold_chance = 1,
 			max_bounces = 4,
@@ -6027,6 +6028,7 @@ local towers = {
 			gold_extra = {4, 8, 12}
 		},
 		skill_big_blade = {
+			cooldown = 16,
 			range = 200,
 			slow_factor = 0.7,
 			radius = 50,
