@@ -46,9 +46,7 @@ return function(this, store)
 
 	constif(this.powers)
 	for pn, p in pairs(this.powers) do
-		for i = 1, p.level do
-			SU.soldier_power_upgrade(this, pn)
-		end
+		SU.soldier_power_upgrade(this, pn)
 	end
 	constend
 

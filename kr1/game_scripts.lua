@@ -7835,13 +7835,13 @@ function scripts.spell_djinn.insert(this, store)
 
 	if instakill then
 		d.damage_type = DAMAGE_EAT
-		target.vis.bans = bor(F_POLYMORPH, target.vis.bans)
+		U.bans_add(target.vis, F_POLYMORPH)
 	else
 		d.value = damage_spell
 		d.damage_type = DAMAGE_TRUE
 
 		if math.random() < this.invalid_rate then
-			target.vis.bans = bor(F_POLYMORPH, target.vis.bans)
+			U.bans_add(target.vis, F_POLYMORPH)
 		end
 	end
 
@@ -20749,9 +20749,7 @@ function scripts.soldier_baby_ashbite.insert(this, store)
 
 	if this.powers then
 		for pn, p in pairs(this.powers) do
-			for i = 1, p.level do
-				SU.soldier_power_upgrade(this, pn)
-			end
+			SU.soldier_power_upgrade(this, pn)
 		end
 	end
 

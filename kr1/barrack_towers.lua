@@ -1477,9 +1477,9 @@ tt.powers.armor = CC("power")
 tt.powers.shield = CC("power")
 tt.powers.tear = CC("power")
 tt.powers.shield.on_power_upgrade = function(this, power_name, power)
-	this.dodge.duration = this.dodge.duration + 1
-	this.dodge.heal = this.dodge.heal + 25
-	this.dodge.cooldown = this.dodge.cooldown - 1
+	this.dodge.duration = 4 + power.level
+	this.dodge.heal = 25 * power.level
+	this.dodge.cooldown = 20 - power.level
 end
 tt.dodge.animation_end = "shield_end"
 tt.dodge.animation_hit = "shield_hit"

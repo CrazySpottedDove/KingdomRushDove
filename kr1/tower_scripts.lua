@@ -8732,9 +8732,7 @@ function scripts.tower_pandas.get_info(this)
 
 	if this.powers then
 		for pn, p in pairs(this.powers) do
-			for i = 1, p.level do
-				SU.soldier_power_upgrade(s, pn)
-			end
+			SU.soldier_power_upgrade(s, pn)
 		end
 	end
 

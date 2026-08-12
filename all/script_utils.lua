@@ -2859,39 +2859,44 @@ end
 function SU.soldier_power_upgrade(this, power_name)
 	local pn = power_name
 	local pow = this.powers and this.powers[pn]
+	local level_inc = pow.level - (pow._last_level or 0)
+	if level_inc <= 0 then
+		return
+	end
+	pow._last_level = pow.level
 
 	if this.health.power_name == pn and this.health.hp_inc then
-		this.health.hp_max = this.health.hp_max + this.health.hp_inc
+		this.health.hp_max = this.health.hp_max + this.health.hp_inc * level_inc
 		this.health.hp = this.health.hp_max
 	end
 
 	if this.health.armor_power_name == pn and this.health.armor_inc then
-		SU.armor_inc(this, this.health.armor_inc)
+		SU.armor_inc(this, this.health.armor_inc * level_inc)
 	end
 
 	if this.health.magic_armor_power_name == pn and this.health.magic_armor_inc then
-		SU.magic_armor_inc(this, this.health.magic_armor_inc)
+		SU.magic_armor_inc(this, this.health.magic_armor_inc * level_inc)
 	end
 
 	if this.ranged then
 		for _, a in ipairs(this.ranged.attacks) do
 			if a.power_name == pn then
-				a.level = a.level + 1
+				a.level = pow.level
 
 				if a.disabled then
 					a.disabled = nil
 				end
 
 				if a.cooldown_inc then
-					a.cooldown = a.cooldown + a.cooldown_inc
+					a.cooldown = a.cooldown + a.cooldown_inc * level_inc
 				end
 
 				if a.range_inc then
-					a.max_range = a.max_range + a.range_inc
+					a.max_range = a.max_range + a.range_inc * level_inc
 				end
 
 				if a.chance_inc then
-					a.chance = a.chance + a.chance_inc
+					a.chance = a.chance + a.chance_inc * level_inc
 				end
 			end
 		end
@@ -2903,29 +2908,29 @@ function SU.soldier_power_upgrade(this, power_name)
 
 		for _, a in ipairs(this.melee.attacks) do
 			if a.power_name == pn then
-				a.level = a.level + 1
+				a.level = pow.level
 
 				if a.disabled then
 					a.disabled = nil
 				end
 
 				if a.chance_inc then
-					a.chance = a.chance + a.chance_inc
+					a.chance = a.chance + a.chance_inc * level_inc
 					this.melee.order = U.attack_order(this.melee.attacks)
 				end
 
 				if a.damage_inc then
-					a.damage_min = a.damage_min + a.damage_inc
-					a.damage_max = a.damage_max + a.damage_inc
+					a.damage_min = a.damage_min + a.damage_inc * level_inc
+					a.damage_max = a.damage_max + a.damage_inc * level_inc
 				end
 
 				if a.damage_min_inc and a.damage_max_inc then
-					a.damage_min = a.damage_min + a.damage_min_inc
-					a.damage_max = a.damage_max + a.damage_max_inc
+					a.damage_min = a.damage_min + a.damage_min_inc * level_inc
+					a.damage_max = a.damage_max + a.damage_max_inc * level_inc
 				end
 
 				if a.cooldown_inc then
-					a.cooldown = a.cooldown + a.cooldown_inc
+					a.cooldown = a.cooldown + a.cooldown_inc * level_inc
 					cooldown_changed = true
 				end
 			end
@@ -2944,7 +2949,7 @@ function SU.soldier_power_upgrade(this, power_name)
 		for _, a in ipairs(this.timed_actions.list) do
 			if a.power_name == pn then
 				if a.level then
-					a.level = a.level + 1
+					a.level = pow.level
 				end
 
 				if a.disabled then
@@ -2958,7 +2963,7 @@ function SU.soldier_power_upgrade(this, power_name)
 		for _, a in ipairs(this.timed_attacks.list) do
 			if a.power_name == pn then
 				if a.level then
-					a.level = a.level + 1
+					a.level = pow.level
 				end
 
 				if a.disabled then
@@ -2972,11 +2977,11 @@ function SU.soldier_power_upgrade(this, power_name)
 		this.revive.disabled = nil
 
 		if this.revive.chance_inc then
-			this.revive.chance = this.revive.chance + this.revive.chance_inc
+			this.revive.chance = this.revive.chance + this.revive.chance_inc * level_inc
 		end
 
 		if this.revive.health_recover then
-			this.revive.health_recover = this.revive.health_recover + this.revive.health_recover_inc
+			this.revive.health_recover = this.revive.health_recover + this.revive.health_recover_inc * level_inc
 		end
 	end
 
@@ -2984,13 +2989,13 @@ function SU.soldier_power_upgrade(this, power_name)
 		local d = this.dodge
 		if d.power_name == pn then
 			if d.chance_inc then
-				d.chance = d.chance + d.chance_inc
+				d.chance = d.chance + d.chance_inc * level_inc
 			end
 		end
 		if d.counter_attack and d.counter_attack.power_name == pn then
 			if d.counter_attack.damage_inc then
-				d.counter_attack.damage_min = d.counter_attack.damage_min + d.counter_attack.damage_inc
-				d.counter_attack.damage_max = d.counter_attack.damage_max + d.counter_attack.damage_inc
+				d.counter_attack.damage_min = d.counter_attack.damage_min + d.counter_attack.damage_inc * level_inc
+				d.counter_attack.damage_max = d.counter_attack.damage_max + d.counter_attack.damage_inc * level_inc
 			end
 		end
 	end
@@ -2999,7 +3004,7 @@ function SU.soldier_power_upgrade(this, power_name)
 		local pi = this.pickpocket
 
 		if pi.chance_inc then
-			pi.chance = pi.chance + pi.chance_inc
+			pi.chance = pi.chance + pi.chance_inc * level_inc
 		end
 	end
 

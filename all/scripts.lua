@@ -1304,9 +1304,7 @@ function scripts.soldier_barrack.insert(this, store)
 
 	if this.powers then
 		for pn, p in pairs(this.powers) do
-			for i = 1, p.level do
-				SU.soldier_power_upgrade(this, pn)
-			end
+			SU.soldier_power_upgrade(this, pn)
 		end
 	end
 
@@ -1834,9 +1832,7 @@ function scripts.tower_barrack.get_info(this)
 			if s.powers[pn] then
 				s.powers[pn].level = p.level
 			end
-			for i = 1, p.level do
-				SU.soldier_power_upgrade(s, pn)
-			end
+			SU.soldier_power_upgrade(s, pn)
 		end
 	end
 
