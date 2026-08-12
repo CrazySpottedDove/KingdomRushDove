@@ -1,1 +1,1 @@
-return {{date="2026-08-12",author="CrazySpottedDove",message="fix: 修复沙镖技能冷却文本丢失的问题"},{date="2026-08-12",author="CrazySpottedDove",message="perf: 优化render系统对hidden帧的处理，减少开销"}}
+return {{date="2026-08-12",author="CrazySpottedDove",message="fix: 修复沙镖技能冷却文本丢失的问题"},{date="2026-08-12",author="CrazySpottedDove",message="perf: 优化render系统对hidden帧的处理，减少开销"},{date="2026-08-12",author="CrazySpottedDove",message="fix: 增强对不规范soldier_upgrade_power的保护"}}

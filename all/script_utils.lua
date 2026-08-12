@@ -2859,6 +2859,9 @@ end
 function SU.soldier_power_upgrade(this, power_name)
 	local pn = power_name
 	local pow = this.powers and this.powers[pn]
+	if not pow then
+		return
+	end
 	local level_inc = pow.level - (pow._last_level or 0)
 	if level_inc <= 0 then
 		return
