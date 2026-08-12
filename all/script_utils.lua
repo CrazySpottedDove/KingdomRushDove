@@ -1987,26 +1987,32 @@ end
 ---@return boolean 是否提前结束, number 状态码
 ---@desc 状态码：A_NO_TARGET(1) 无目标, A_IN_COOLDOWN(2) 冷却中, A_DONE(3) 完成
 function SU.y_soldier_timed_attacks(store, this)
+	local no_target = true
 	for _, a in ipairs(this.timed_attacks.list) do
-		if a.disabled or store.tick_ts - a.ts < a.cooldown then
+		if a.disabled or store.tick_ts - a.ts < a.cooldown * this.unit.cooldown_factor then
 		-- block empty
 		else
 			local target = U.detect_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
-			if not target then
-				return false, A_NO_TARGET
-			elseif math.random() < a.chance then
-				local attack_done = SU.y_soldier_do_timed_attack(store, this, target, a)
+			if target then
+				no_target = false
+				if math.random() < a.chance then
+					local attack_done = SU.y_soldier_do_timed_attack(store, this, target, a)
 
-				if attack_done then
-					return false, A_DONE
+					if attack_done then
+						return false, A_DONE
+					else
+						return true
+					end
 				else
-					return true
+					a.ts = store.tick_ts
 				end
-			else
-				a.ts = store.tick_ts
 			end
 		end
+	end
+
+	if no_target then
+		return false, A_NO_TARGET
 	end
 
 	return false, A_IN_COOLDOWN
