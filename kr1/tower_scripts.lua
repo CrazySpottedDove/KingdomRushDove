@@ -19572,18 +19572,6 @@ end
 
 scripts.tower_paladin_covenant_soldier_lvl4_healing_mod = {}
 
-function scripts.tower_paladin_covenant_soldier_lvl4_healing_mod.remove(this, store)
-	local target = store.entities[this.modifier.source_id]
-
-	if target then
-		target.health.damage_factor = target.health._damage_factor
-	end
-
-	return true
-end
-
-scripts.tower_paladin_covenant_soldier_lvl4_healing_mod = {}
-
 function scripts.tower_paladin_covenant_soldier_lvl4_healing_mod.insert(this, store)
 	this.hps.heal_min = this.hps.heal_min[this.modifier.level]
 	this.hps.heal_max = this.hps.heal_max[this.modifier.level]
@@ -23884,7 +23872,7 @@ function scripts.soldier_dark_knight.update(this, store)
 		local enemies = U.find_enemies_in_range_filter_on(this.pos, shield_attack.range, shield_attack.vis_flags, shield_attack.vis_bans, SU.is_valid_mock_target)
 		if enemies then
 			for i = 1, #enemies do
-				if not table.contains(mocked_targets, enemies[i]) then
+				if not table.arraycontains(mocked_targets, enemies[i]) then
 					SU.mock_enemy(this, enemies[i])
 					mocked_targets[#mocked_targets + 1] = enemies[i]
 					this.melee.attacks[2].chance = this.melee.attacks[2].chance + shield_attack.instakill_chance_inc

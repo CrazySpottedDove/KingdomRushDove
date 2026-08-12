@@ -5,6 +5,15 @@ return function(this, store)
 	constvar b = this.bullet
 	local b = this.bullet
 
+    constif(b.use_hit_offset)
+        if b.target_id then
+            local target = store.entities[b.target_id]
+            if target then
+                b._hit_offset_record = target.unit.hit_offset
+            end
+        end
+    constend
+
 	b.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
 	b.ts = store.tick_ts
 	b.last_pos = V.vclone(b.from)
@@ -65,7 +74,20 @@ return function(this, store)
         this.pos.x = this.pos.x + context.v_x * dt
         this.pos.y = this.pos.y + (context.v_y + 0.5 * b.g * dt) * dt
 
+        constif(b.use_hit_offset)
+        local enemies
+        if b._hit_offset_record then
+            local hit_pos = V.vclone(this.pos)
+            hit_pos.x = hit_pos.x - b._hit_offset_record.x
+            hit_pos.y = hit_pos.y - b._hit_offset_record.y
+            enemies = U.find_enemies_in_range_filter_off(hit_pos, context.dradius, b.damage_flags, b.damage_bans)
+        else
+            enemies = U.find_enemies_in_range_filter_off(this.pos, context.dradius, b.damage_flags, b.damage_bans)
+        end
+        constelse
         local enemies = U.find_enemies_in_range_filter_off(this.pos, context.dradius, b.damage_flags, b.damage_bans)
+        constend
+
         local mods
 
         if b.mod then

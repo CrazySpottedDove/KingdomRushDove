@@ -4994,20 +4994,6 @@ scripts.hero_giant = {
 
 		update_hp(this)
 	end,
-	-- insert = function(this, store)
-	-- 	this.hero.fn_level_up(this, store)
-
-	-- 	this.melee.order = U.attack_order(this.melee.attacks)
-	-- 	this.ranged.order = U.attack_order(this.ranged.attacks)
-
-	-- 	local e = E:create_entity(this.auras.list[1].name)
-
-	-- 	e.aura.source_id = this.id
-
-	-- 	queue_insert(store, e)
-
-	-- 	return true
-	-- end,
 	update = function(this, store)
 		local h = this.health
 		local a, skill, brk, sta
@@ -42909,7 +42895,8 @@ function scripts.hero_mortemis.update(this, store)
 
 			for i = 1, ds.quantity do
 				local e = E:create_entity(ds.name)
-				e.pos:set(this.pos.x + ds.pos_list[i][1], this.pos.y + ds.pos_list[i][2])
+				local angle = 2 * math.pi * (i - 1) / ds.quantity
+				e.pos:set(this.pos.x + ds.spawn_radius * math.cos(angle), this.pos.y + ds.spawn_radius * math.sin(angle))
 				e.nav_rally.pos:copy(e.pos)
 				e.nav_rally.center:copy(e.pos)
 
@@ -43363,6 +43350,8 @@ function scripts.hero_jigou.level_up(this, store)
 		local m = E:get_template("jigou_healing_mod")
 
 		m.modifier.duration = s.duration[s.level]
+		m.hps.heal_min = s.hps[s.level]
+		m.hps.heal_max = s.hps[s.level]
 	end)
 
 	-- 大招 冰区
@@ -43374,11 +43363,8 @@ function scripts.hero_jigou.level_up(this, store)
 
 		a.aura.damage_min = s.damage_config[s.level]
 		a.aura.damage_max = s.damage_config[s.level]
-		u.cooldown = s.cooldown[s.level]
-		this.ultimate.cooldown = s.cooldown[s.level]
 
 		local a2 = E:get_template("mod_jigou_ultimate_slow")
-
 		a2.slow.factor = s.slow_factor[s.level]
 	end)
 
@@ -43387,13 +43373,26 @@ end
 
 function scripts.hero_jigou.update(this, store)
 	local h = this.health
-	local attack_healing = this.timed_attacks.list[1]
+	local a_mock = this.timed_attacks.list[1]
 	local chill_attack = this.timed_attacks.list[2]
 	local skill, brk, sta
 
 	this.health_bar.hidden = true
 	U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 	this.health_bar.hidden = false
+
+	local mocked_targets = {}
+	local function do_mock()
+		local enemies = U.find_enemies_in_range_filter_on(this.pos, a_mock.range, a_mock.vis_flags, a_mock.vis_bans, SU.is_valid_mock_target)
+		if enemies then
+			for i = 1, #enemies do
+				if not table.arraycontains(mocked_targets, enemies[i]) then
+					SU.mock_enemy(this, enemies[i])
+					mocked_targets[#mocked_targets + 1] = enemies[i]
+				end
+			end
+		end
+	end
 
 	while true do
 		if h.dead then
@@ -43411,54 +43410,90 @@ function scripts.hero_jigou.update(this, store)
 			if SU.hero_level_up(store, this) then
 				U.y_animation_play(this, "levelup", nil, store.tick_ts)
 			end
-			-- 4技能 冰川形态
-			do
-				local a = attack_healing
 
-				if not a.disabled and this.health.hp <= this.health.hp_max * a.lost_health and store.tick_ts - a.ts > a.cooldown then
-					U.animation_start(this, a.animation .. "_start", nil, store.tick_ts)
-					S:queue(a.sound)
+			if ready_to_use_skill(a_mock, store, this.unit.cooldown_factor) then
+				if U.find_first_enemy_in_range_filter_on(this.pos, this.melee.range, a_mock.vis_flags, a_mock.vis_bans, SU.is_valid_mock_target) then
+					local start_ts = store.tick_ts
+					U.animation_start(this, a_mock.animation .. "_start", nil, store.tick_ts)
+					S:queue(a_mock.sound)
 
-					if SU.y_soldier_wait(store, this, a.hit_time[this.unit.is_captain and 2 or 1]) then
-					-- block empty
-					else
-						a.ts = store.tick_ts
-
-						for _, m in ipairs(a.mods) do
-							local mod = E:create_entity(m)
-
-							mod.modifier.target_id = this.id
-							mod.modifier.source_id = this.id
-							mod.modifier.level = this.hero.skills.glacial_form.level
-
-							queue_insert(store, mod)
-						end
-
-						this.health._damage_factor = this.health.damage_factor
-						this.health.damage_factor = 0
-
-						if SU.y_soldier_animation_wait(this) then
-						-- block empty
-						else
-							U.animation_start(this, a.animation .. "_loop", nil, store.tick_ts, true)
-
-							if SU.y_soldier_wait(store, this, a.duration - (store.tick_ts - a.ts)) then
-							-- block empty
-							else
-								U.animation_start(this, a.animation .. "_end", nil, store.tick_ts)
-
-								local fx = E:create_entity("fx_jigou_igloo_explosion")
-
-								fx.pos.x = this.pos.x
-								fx.pos.y = this.pos.y
-								queue_insert(store, fx)
-
-								if SU.y_soldier_animation_wait(this) then
-								-- block empty
-								end
-							end
-						end
+					if SU.y_hero_wait(store, this, a_mock.hit_time) then
+						goto label_1561_0
 					end
+
+					a_mock.ts = start_ts
+					for _, m in ipairs(a_mock.mods) do
+						local mod = E:create_entity(m)
+
+						mod.modifier.target_id = this.id
+						mod.modifier.source_id = this.id
+						mod.modifier.level = this.hero.skills.glacial_form.level
+
+						queue_insert(store, mod)
+					end
+
+					local aura = E:create_entity("aura_jigou_slow")
+					aura.aura.radius = this.melee.range
+					aura.aura.duration = a_mock.duration
+					aura.aura.source_id = this.id
+					aura.pos:copy(this.pos)
+					queue_insert(store, aura)
+
+					this.health.damage_factor = this.health.damage_factor * a_mock.damage_factor
+					SU.hero_gain_xp_from_skill(this, this.hero.skills.glacial_form)
+
+					do_mock()
+					U.y_animation_wait_default(this)
+
+					U.animation_start(this, a_mock.animation .. "_loop", nil, store.tick_ts, true)
+					start_ts = store.tick_ts
+					local last_mock_ts = start_ts
+					while store.tick_ts - start_ts < a_mock.duration do
+						if this.nav_rally.new then
+							break
+						end
+						if this.health.dead then
+							break
+						end
+
+						if store.tick_ts - last_mock_ts > 0.1 then
+							last_mock_ts = store.tick_ts
+							do_mock()
+						end
+						coroutine.yield()
+					end
+
+					U.animation_start(this, a_mock.animation .. "_end", nil, store.tick_ts)
+
+					local fx = E:create_entity("fx_jigou_igloo_explosion")
+					fx.pos:copy(this.pos)
+					fx.render.sprites[1].ts = store.tick_ts
+					queue_insert(store, fx)
+					this.health.damage_factor = this.health.damage_factor / a_mock.damage_factor
+
+					local enemy_continue_to_block
+					if not this.nav_rally.new and #mocked_targets > 0 and not this.soldier.target_id then
+						enemy_continue_to_block = table.find_best(mocked_targets, function(e)
+							return e.health.hp
+						end)
+					end
+
+					for i = #mocked_targets, 1, -1 do
+						SU.unmock_enemy(mocked_targets[i])
+						mocked_targets[i] = nil
+					end
+
+					if enemy_continue_to_block then
+						U.block_enemy(store, this, enemy_continue_to_block)
+					end
+
+					queue_remove(store, aura)
+
+					if SU.y_hero_animation_wait(this) then
+						goto label_1561_0
+					end
+				else
+					a_mock.ts = a_mock.ts + 0.1
 				end
 			end
 
@@ -43466,8 +43501,8 @@ function scripts.hero_jigou.update(this, store)
 			local a = chill_attack
 			skill = this.hero.skills.frozen_breath
 
-			if not a.disabled and store.tick_ts - a.ts > a.cooldown then
-				local target = U.find_random_enemy(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
+				local target = U.detect_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
 
 				if not target then
 					a.ts = a.ts + 0.13333333333333333
@@ -43484,8 +43519,14 @@ function scripts.hero_jigou.update(this, store)
 
 						U.animation_start(this, "frozenBreath", flip, store.tick_ts)
 						S:queue(a.sound)
-						U.y_wait(store, a.cast_time)
+						if SU.y_hero_wait(store, this, a.cast_time) then
+							goto label_1561_0
+						end
 
+						target = U.detect_foremost_enemy_between_range_filter_off(this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans)
+						if target then
+							pi, spi, ni = target.nav_path.pi, target.nav_path.spi, target.nav_path.ni
+						end
 						a.ts = start_ts
 
 						SU.hero_gain_xp_from_skill(this, skill)
@@ -43510,6 +43551,10 @@ function scripts.hero_jigou.update(this, store)
 							ni = ni + n_step
 							spi = km.zmod(spi + 1, 3)
 						end
+
+						if SU.y_hero_animation_wait(this) then
+							goto label_1561_0
+						end
 					end
 				end
 			end
@@ -43518,38 +43563,23 @@ function scripts.hero_jigou.update(this, store)
 			skill = this.hero.skills.ultimate
 
 			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
-				local target = find_target_at_critical_moment(this, this.ultimate.range, F_RANGED, F_NONE, nil, true)
+				local target = find_target_at_critical_moment(this, this.ultimate.range, F_RANGED, F_NONE, nil, true, true)
 
 				if target then
-					U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
-					S:queue(this.sound_events.change_rally_point)
-
-					local e = E:create_entity(this.hero.skills.ultimate.controller_name)
-
-					e.pos:copy(target.pos)
-					e.damage_factor = this.unit.damage_factor
-					e.level = this.hero.skills.ultimate.level
-
-					queue_insert(store, e)
-
-					this.ultimate.ts = store.tick_ts
-
-					SU.hero_gain_xp_from_skill(this, skill)
+					apply_ultimate(this, store, target.pos, "levelup")
 				else
 					this.ultimate.ts = this.ultimate.ts + 1
 				end
 			end
 
-			-- 近战普攻/3技能
-			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+			brk, sta = SU.y_soldier_ranged_attacks(store, this)
 
-			-- 远程1技能
-			if brk or sta ~= A_NO_TARGET then
+			if brk then
 			-- block empty
 			else
-				brk, sta = SU.y_soldier_ranged_attacks(store, this)
+				brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
-				if brk then
+				if brk or sta ~= A_NO_TARGET then
 				-- block empty
 				elseif SU.soldier_go_back_step(store, this) then
 				-- block empty
@@ -43566,71 +43596,13 @@ function scripts.hero_jigou.update(this, store)
 	end
 end
 
-scripts.aura_chill_jigou = {}
-
-function scripts.aura_chill_jigou.update(this, store)
-	local last_hit_ts = 0
-
-	U.sprites_hide(this)
-
-	if this.delay then
-		U.y_wait(store, this.delay)
-	end
-
-	for _, s in ipairs(this.render.sprites) do
-		s.ts = store.tick_ts
-	end
-
-	U.sprites_show(this)
-
-	last_hit_ts = store.tick_ts - this.aura.cycle_time
-
-	while true do
-		if this.interrupt then
-			last_hit_ts = 1e+99
-		end
-
-		if this.aura.duration >= 0 and store.tick_ts - this.aura.ts > this.aura.duration then
-			this.tween.disabled = false
-			this.tween.ts = store.tick_ts
-
-			return
-		end
-
-		if store.tick_ts - last_hit_ts >= this.aura.cycle_time then
-			last_hit_ts = store.tick_ts
-
-			local targets = table.filter(store.entities, function(k, v)
-				return v.unit and v.vis and v.health and not v.health.dead and not v._last_on_ice and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= v.id)
-			end)
-
-			for i, target in ipairs(targets) do
-				if not U.has_modifiers(store, target, this.aura.mod) then
-					SU.remove_modifiers_by_type(store, target, MOD_TYPE_SLOW, this.aura.mod)
-				end
-
-				local new_mod = E:create_entity(this.aura.mod)
-
-				new_mod.modifier.level = this.aura.level
-				new_mod.modifier.target_id = target.id
-				new_mod.modifier.source_id = this.id
-				new_mod.modifier.damage_factor = this.damage_factor
-
-				queue_insert(store, new_mod)
-			end
-		end
-
-		coroutine.yield()
-	end
-end
-
 scripts.controller_jigou_ultimate = {}
 
 function scripts.controller_jigou_ultimate.update(this, store)
 	local e = E:create_entity(this.aura)
 
 	e.pos.x, e.pos.y = this.pos.x, this.pos.y
-	e.damage_factor = this.damage_factor
+	e.aura.damage_factor = this.damage_factor
 
 	queue_insert(store, e)
 
@@ -43668,14 +43640,14 @@ function scripts.aura_jigou_ultimate.update(this, store)
 			for _, t in ipairs(targets) do
 				local d = E:create_entity("damage")
 
-				d.value = math.random(a.damage_min, a.damage_max) * this.damage_factor
+				d.value = math.random(a.damage_min, a.damage_max) * this.aura.damage_factor
 				d.damage_type = a.damage_type
 				d.source_id = this.id
 				d.target_id = t.id
 
 				queue_damage(store, d)
 
-				if (last_attack or math.random() < a.stun_chance) and U.flags_pass(t.vis, this.stun) then
+				if U.flags_pass(t.vis, this.stun) then
 					local m = E:create_entity(this.stun.mod)
 
 					m.modifier.source_id = this.id
@@ -43690,9 +43662,7 @@ function scripts.aura_jigou_ultimate.update(this, store)
 	local pi, spi, ni, tni, target, origin
 	local target_info = U.find_enemies_in_paths(store.enemies, this.pos, a.min_nodes, a.max_nodes, nil, a.vis_flags, a.vis_bans)
 
-	if not target_info or #target_info < a.min_count then
-		log.error("aura_jigou_ultimate could not find valid enemies in the hero paths")
-	else
+	if target_info then
 		target = target_info[1].enemy
 		origin = target_info[1].origin
 		pi, spi, ni = unpack(origin)
@@ -43738,56 +43708,6 @@ function scripts.aura_jigou_ultimate.update(this, store)
 	queue_remove(store, this)
 end
 
-scripts.mod_jigou_slash = {}
-
-function scripts.mod_jigou_slash.update(this, store)
-	local m = this.modifier
-	local sp = this.render.sprites[1]
-	local target = store.entities[m.target_id]
-
-	if not target or not target.pos or target.health.dead then
-		queue_remove(store, this)
-
-		return
-	end
-
-	sp.hidden = true
-	m.ts = store.tick_ts
-	this.pos.x, this.pos.y = target.pos.x, target.pos.y
-
-	if target.unit and target.unit.mod_offset then
-		sp.offset.x, sp.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y + 5
-		sp.flip_x = not target.render.sprites[1].flip_x
-	end
-
-	local delay = (m.target_idx or 0) * this.delay_per_idx
-
-	U.y_wait(store, delay)
-
-	sp.hidden = nil
-
-	U.animation_start(this, this.name, nil, store.tick_ts)
-	U.y_wait(store, this.hit_time)
-
-	local d = E:create_entity("damage")
-
-	d.source_id = this.id
-	d.target_id = target.id
-	d.damage_type = this.damage_type
-	d.value = math.random(this.damage_min, this.damage_max) * m.damage_factor
-
-	queue_damage(store, d)
-
-	local mod = E:create_entity(this.mod)
-
-	mod.modifier.target_id = target.id
-	mod.modifier.source_id = this.id
-
-	queue_insert(store, mod)
-
-	U.y_animation_wait(this)
-	queue_remove(store, this)
-end
 --#endregion hero_jigou
 
 return scripts

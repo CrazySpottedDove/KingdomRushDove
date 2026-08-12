@@ -3064,7 +3064,7 @@ function scripts.aura_chill_elora.update(this, store)
 		U.y_wait_unconditional(store, this.delay)
 	end
 
-	for _, s in pairs(this.render.sprites) do
+	for _, s in ipairs(this.render.sprites) do
 		s.ts = store.tick_ts
 	end
 
@@ -3094,16 +3094,14 @@ function scripts.aura_chill_elora.update(this, store)
 			for i, target in ipairs(targets) do
 				if U.flags_pass(target.vis, E:get_template(this.aura.mod).modifier) then
 					if not U.has_modifiers(store, target, this.aura.mod) then
-						SU.remove_modifiers_by_type(store, target, MOD_TYPE_SLOW, this.aura.mod)
+						local new_mod = E:create_entity(this.aura.mod)
+
+						new_mod.modifier.level = this.aura.level
+						new_mod.modifier.target_id = target.id
+						new_mod.modifier.source_id = this.id
+
+						queue_insert(store, new_mod)
 					end
-
-					local new_mod = E:create_entity(this.aura.mod)
-
-					new_mod.modifier.level = this.aura.level
-					new_mod.modifier.target_id = target.id
-					new_mod.modifier.source_id = this.id
-
-					queue_insert(store, new_mod)
 				end
 			end
 		end

@@ -3088,7 +3088,6 @@ tt.hps.heal_max = b.healing_prayer.heal
 tt.hps.heal_every = b.healing_prayer.heal_every
 tt.main_script.insert = scripts.tower_paladin_covenant_soldier_lvl4_healing_mod.insert
 tt.main_script.update = scripts.mod_hps.update
-tt.main_script.remove = scripts.tower_paladin_covenant_soldier_lvl4_healing_mod.remove
 
 tt = RT("tower_paladin_covenant_soldier_lvl4_healing_mod_fx", "modifier")
 AC(tt, "render", "tween")
@@ -3711,7 +3710,7 @@ tt.dodge.shield.damage_every = fts(5)
 tt.dodge.shield.hit_time = 0.6
 tt.dodge.shield.damage_factor = 0.4
 tt.dodge.shield.vis_flags = F_BLOCK
-tt.dodge.shield.vis_bans = F_BOSS
+tt.dodge.shield.vis_bans = bor(F_BOSS, F_FLYING)
 tt.dodge.shield.instakill_chance_inc = 0.006
 tt.dodge.shield.sound = "TowerDarkKnightsShield"
 tt.dodge.shield.range = 80
