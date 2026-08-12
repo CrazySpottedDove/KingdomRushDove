@@ -1460,7 +1460,7 @@ if IS_ANDROID then
 		G.push()
 		G.translate(rox, roy)
 		G.scale(gs, gs)
-		local last_idx = draw_frames_range(d.render_frames, 1, Z_SCREEN_FIXED - 1, cull_bounds)
+		local last_idx = draw_frames_range(d.render_frames, d.render_frames_start_idx, Z_SCREEN_FIXED - 1, cull_bounds)
 		G.pop()
 
 		if self.shown_path then
@@ -1504,7 +1504,7 @@ else
 		G.push()
 		G.translate(rox, roy)
 		G.scale(gs, gs)
-		local last_idx = draw_frames_range(d.render_frames, 1, Z_SCREEN_FIXED - 1)
+		local last_idx = draw_frames_range(d.render_frames, d.render_frames_start_idx, Z_SCREEN_FIXED - 1)
 		G.pop()
 
 		if self.DBG_DRAW_PATHS or self.shown_path then

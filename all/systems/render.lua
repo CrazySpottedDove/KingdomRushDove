@@ -114,6 +114,7 @@ function M.register(sys)
 		store.render_frames = {}
 		store.render_frames_swapper = {}
 		store.render_frames_count = 0
+		store.render_frames_start_idx = 1
 		store.render_frames_ffi_cap = 8192
 		store.render_frames_ffi = ffi.new("RenderFrameFFI[8192]")
 		store.render_frames_ffi_tmp = ffi.new("RenderFrameFFI[8192]")
@@ -268,7 +269,12 @@ function M.register(sys)
 
 		local render_frames = store.render_frames
 		local render_frames_ffi = store.render_frames_ffi
+		local new_frames = store.render_frames_swapper
+		-- 必须保留该行！怀疑对象的写入更替引发了一些 GC 问题，导致性能暴跌。在清理后可以恢复正常
+		table_clear(new_frames)
+
 		local n = 0
+		local start_idx = 1
 
 		for i = 1, store.render_frames_count do
 			local s = render_frames[i]
@@ -407,32 +413,34 @@ function M.register(sys)
 					end
 				end
 
-				local ffi_f = render_frames_ffi[n]
-				ffi_f.z = s.z
-				ffi_f.sort_y = s.sort_y or (s.sort_y_offset or 0) + s.pos.y
-				ffi_f.draw_order = s._draw_order
-				ffi_f.lua_index = i
-
-				n = n + 1
+				if s.hidden then
+					new_frames[start_idx] = s
+					start_idx = start_idx + 1
+				else
+					local ffi_f = render_frames_ffi[n]
+					ffi_f.z = s.z
+					ffi_f.sort_y = s.sort_y or (s.sort_y_offset or 0) + s.pos.y
+					ffi_f.draw_order = s._draw_order
+					ffi_f.lua_index = i
+					n = n + 1
+				end
 			end
 		end
 
 		lib_render_sort.ffi_sort(render_frames_ffi, store.render_frames_ffi_tmp, n)
 
-		local new_frames = store.render_frames_swapper
-		-- 必须保留该行！怀疑对象的写入更替引发了一些 GC 问题，导致性能暴跌。在清理后可以恢复正常
-		table_clear(new_frames)
-
 		local i = 0
 		while i < n do
 			local ffi_f = render_frames_ffi[i]
+			new_frames[i + start_idx] = render_frames[ffi_f.lua_index]
 			i = i + 1
-			new_frames[i] = render_frames[ffi_f.lua_index]
 		end
 
 		store.render_frames = new_frames
 		store.render_frames_swapper = render_frames
-		store.render_frames_count = n
+		store.render_frames_count = n + start_idx - 1
+		store.render_frames_start_idx = start_idx
+
 		perf.set_frames(n)
 		perf.stop("render")
 	end
