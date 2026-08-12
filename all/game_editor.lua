@@ -1642,7 +1642,7 @@ function editor:draw()
 	G.translate(rox, roy)
 	G.scale(gs, gs)
 
-	RU.draw_frames_range(self.store.render_frames, 1, Z_GUI - 1)
+	RU.draw_frames_range(self.store.render_frames, self.store.render_frames_start_idx, Z_GUI - 1)
 
 	G.pop()
 

@@ -4669,6 +4669,9 @@ tt.motion.max_speed = 75
 tt.attacks.list[1] = CC("bullet_attack")
 tt.attacks.list[1].bullet = {"wicked_sisters_proy_green", "wicked_sisters_proy_pink"}
 tt.attacks.list[1].vis_bans = 0
+tt.attacks.list[1].vis_flags_0 = bor(F_RANGED, F_POISON)
+tt.attacks.list[1].vis_flags_1 = F_RANGED
+tt.attacks.list[1].vis_flags = tt.attacks.list[1].vis_flags_0
 tt.attacks.list[1].animations = {"shootGreen", "shoot"}
 tt.attacks.list[1].hit_time = fts(21)
 tt.attacks.list[1].max_range = 125
@@ -4713,8 +4716,8 @@ tt.bullet.particles_name = "ps_bullet_tower_wicked_sisters_basic_trail"
 -- Poison modifier
 tt = RT("mod_wicked_sister_poison", "mod_poison")
 tt.modifier.duration = 2.4
-tt.dps.damage_max = 70
-tt.dps.damage_min = 70
+tt.dps.damage_max = 61
+tt.dps.damage_min = 61
 tt.dps.damage_every = 0.8
 tt.dps.kill = true
 tt.dps.damage_type = bor(DAMAGE_POISON, DAMAGE_NO_SHIELD_HIT)
@@ -4733,8 +4736,8 @@ tt.render.sprites[1].animated = true
 tt.sound_events.insert = "WickedSistersAttack"
 tt.bullet.prediction_error = false
 tt.bullet.predict_target_pos = true
-tt.bullet.damage_min = 78
-tt.bullet.damage_max = 182
+tt.bullet.damage_min = 100
+tt.bullet.damage_max = 162
 tt.bullet.particles_name = "ps_bullet_tower_wicked_sisters_violet_trail"
 
 -- Stun modifier

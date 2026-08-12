@@ -2177,7 +2177,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("engineer_range_finder")
 
 	if u then
-		for _, n in pairs(engineer_towers) do
+		for _, n in ipairs(engineer_towers) do
 			if n ~= "tower_mech" and n ~= "tower_balloon" then
 				T(n).attacks.range = T(n).attacks.range * u.range_factor
 			end
@@ -2220,7 +2220,7 @@ function upgrades:patch_templates(max_level)
 
 	u = self:get_upgrade("engineer_diffusion")
 	if u then
-		for _, n in pairs(engineer_bombs) do
+		for _, n in ipairs(engineer_bombs) do
 			local n = T(n)
 			local b = n.bullet
 			if b.damage_radius then
@@ -2256,7 +2256,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("engineer_field_logistics")
 
 	if u then
-		for _, n in pairs(engineer_towers) do
+		for _, n in ipairs(engineer_towers) do
 			T(n).tower.price = math.floor(T(n).tower.price * u.cost_factor)
 		end
 	end
@@ -2264,10 +2264,10 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("engineer_emergency_expansion")
 
 	if u then
-		for _, n in pairs(engineer_towers) do
+		for _, n in ipairs(engineer_towers) do
 			T(n).tower.price = math.floor(T(n).tower.price * u.cost_factor)
 		end
-		for _, n in pairs(self.engineer_bombs) do
+		for _, n in ipairs(self.engineer_bombs) do
 			T(n).bullet.damage_min = T(n).bullet.damage_min * u.damage_factor
 			T(n).bullet.damage_max = T(n).bullet.damage_max * u.damage_factor
 		end
@@ -2292,7 +2292,7 @@ function upgrades:patch_templates(max_level)
 	u = self:get_upgrade("engineer_industrialization")
 
 	if u then
-		for _, n in pairs(self.engineer_advanced_tower) do
+		for _, n in ipairs(self.engineer_advanced_tower) do
 			for pk, pv in pairs(T(n).powers) do
 				pv.price_base = math.floor(pv.price_base * u.cost_factor)
 				pv.price_inc = math.floor(pv.price_inc * u.cost_factor)

@@ -29351,6 +29351,7 @@ function scripts.tower_wicked_sisters.update(this, store)
 		queue_insert(store, witch)
 		b.soldiers[1] = witch
 		witch.wick_mode = current_mode
+		witch.attacks.list[1].vis_flags = current_mode == 0 and witch.attacks.list[1].vis_flags_0 or witch.attacks.list[1].vis_flags_1
 		witch.nav_rally.new = true
 		U.y_animation_play_once_specific_no_flip(witch, "spawn", store.tick_ts, 1)
 	end
@@ -29370,6 +29371,7 @@ function scripts.tower_wicked_sisters.update(this, store)
 				-- 变成法伤形态
 				current_mode = 1
 				witch.wick_mode = 1
+				witch.attacks.list[1].vis_flags = witch.attacks.list[1].vis_flags_1
 				this.render.sprites[6].hidden = true
 				U.animation_start_once_specific_no_flip(this, "toViolet", store.tick_ts, 5)
 				U.y_animation_play_once_specific_no_flip(this, "toViolet", store.tick_ts, 4)
@@ -29380,6 +29382,7 @@ function scripts.tower_wicked_sisters.update(this, store)
 			else
 				current_mode = 0
 				witch.wick_mode = 0
+				witch.attacks.list[1].vis_flags = witch.attacks.list[1].vis_flags_0
 				this.render.sprites[6].hidden = true
 				U.animation_start_once_specific_no_flip(this, "toGreen", store.tick_ts, 5)
 				U.y_wait_unconditional(store, fts(this.tower.cooldown_factor * 4))
