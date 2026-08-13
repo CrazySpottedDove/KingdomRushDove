@@ -1155,7 +1155,6 @@ tt.timed_attacks.list[1].damage_min = nil
 tt.timed_attacks.list[1].damage_type = DAMAGE_TRUE
 tt.timed_attacks.list[1].max_range = 125
 tt.timed_attacks.list[1].hits = nil
-tt.timed_attacks.list[1].min_count = 2
 tt.timed_attacks.list[1].vis_flags = bor(F_RANGED, F_STUN)
 tt.timed_attacks.list[1].vis_bans = bor(F_FLYING, F_BOSS, F_WATER)
 tt.timed_attacks.list[1].disabled = true

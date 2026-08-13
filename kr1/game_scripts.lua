@@ -10824,27 +10824,25 @@ function scripts.soldier_blade.update(this, store)
 	end
 
 	while true do
-		if this.powers then
-			for pn, p in pairs(this.powers) do
-				if p.changed then
-					p.changed = nil
+		for pn, p in pairs(this.powers) do
+			if p.changed then
+				p.changed = nil
 
-					SU.soldier_power_upgrade(this, pn)
+				SU.soldier_power_upgrade(this, pn)
 
-					if pn == "blade_dance" then
-						if p.level >= 1 then
-							bda.disabled = nil
-							bda.ts = store.tick_ts
-						end
-
-						bda.damage_min = p.damage_min[p.level]
-						bda.damage_max = p.damage_max[p.level]
-						bda.hits = p.hits[p.level]
+				if pn == "blade_dance" then
+					if p.level >= 1 then
+						bda.disabled = nil
+						bda.ts = store.tick_ts
 					end
 
-					if pn == "swirling" and p.level >= 1 then
-						bda.cooldown = bda.cooldown - 1.8
-					end
+					bda.damage_min = p.damage_min[p.level]
+					bda.damage_max = p.damage_max[p.level]
+					bda.hits = p.hits[p.level]
+				end
+
+				if pn == "swirling" and p.level >= 1 then
+					bda.cooldown = bda.cooldown - 1.8
 				end
 			end
 		end
@@ -10870,7 +10868,7 @@ function scripts.soldier_blade.update(this, store)
 
 					ca.ts = 0
 					this.health.ignore_damage = true
-					this.vis.bans = bor(this.vis.bans, F_NET)
+					U.bans_add(this.vis, F_NET)
 
 					S:queue(ca.sound)
 					U.animation_start_default(this, ca.animation, nil, store.tick_ts, true)
@@ -10884,7 +10882,7 @@ function scripts.soldier_blade.update(this, store)
 
 							if targets then
 								for _, target in ipairs(targets) do
-									local d = E.assign_damage(ca.damage_type, ca.damage_max, this.id, target.id)
+									local d = E.assign_damage(ca.damage_type, math.random(ca.damage_min, ca.damage_max) * this.unit.damage_factor, this.id, target.id)
 
 									queue_damage(store, d)
 								-- AC:inc_check("PERFECT_PARRY", d.value)
@@ -10895,7 +10893,7 @@ function scripts.soldier_blade.update(this, store)
 						coroutine.yield()
 					end
 
-					this.vis.bans = band(this.vis.bans, bnot(F_NET))
+					U.bans_remove(this.vis, F_NET)
 					this.health.ignore_damage = false
 
 					SU.soldier_idle(store, this)
@@ -10909,11 +10907,11 @@ function scripts.soldier_blade.update(this, store)
 				end
 			end
 
-			if not bda.disabled and store.tick_ts - bda.ts > bda.cooldown then
+			if not bda.disabled and ready_to_attack(bda, store, this.unit.cooldown_factor) then
 				local targets = U.find_enemies_in_range_filter_off(this.pos, bda.max_range, bda.vis_flags, bda.vis_bans)
 
-				if not targets or #targets < bda.min_count then
-					SU.delay_attack(store, bda, fts(6))
+				if not targets then
+					bda.ts = bda.ts + 0.1
 
 					goto label_53_1
 				end
@@ -10921,8 +10919,7 @@ function scripts.soldier_blade.update(this, store)
 				bda.ts = store.tick_ts
 				bda.in_progress = true
 				this.health.ignore_damage = true
-				this.vis._bans = this.vis.bans
-				this.vis.bans = F_ALL
+				U.bans_add(this.vis, F_ALL)
 
 				local initial_pos = V.vclone(this.pos)
 				local visited = {}
@@ -10962,7 +10959,7 @@ function scripts.soldier_blade.update(this, store)
 					U.animation_start_default(this, an, sflip, store.tick_ts)
 					U.y_wait_unconditional(store, bda.hit_time)
 
-					local d = E.assign_damage(bda.damage_type, U.frandom(bda.damage_min, bda.damage_max), this.id, target.id)
+					local d = E.assign_damage(bda.damage_type, U.frandom(bda.damage_min, bda.damage_max) * this.unit.damage_factor, this.id, target.id)
 
 					queue_damage(store, d)
 					U.y_animation_wait_default(this)
@@ -10974,8 +10971,7 @@ function scripts.soldier_blade.update(this, store)
 				U.y_animation_play(this, "dance_in", nil, store.tick_ts)
 
 				this.health.ignore_damage = false
-				this.vis.bans = this.vis._bans
-				this.vis._bans = nil
+				U.bans_remove(this.vis, F_ALL)
 				-- AC:inc_check("BLADE_DANCE")
 				bda.in_progress = nil
 
