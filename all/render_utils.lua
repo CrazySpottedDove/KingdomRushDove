@@ -10,6 +10,9 @@ RU.batches = {}
 RU.bi = 1
 RU.frustum_culling_enabled = IS_ANDROID
 
+-- magic number
+-- 0.00392156862745098: 1 / 255
+
 function RU.init()
 	local temp_canvas = G.newCanvas(2, 2)
 
@@ -24,13 +27,13 @@ function RU.init()
 		-- 安卓专用渲染函数：视锥体剔除
 		function RU.draw_frames_range(frames, start_idx, max_z, cull_bounds)
 			local current_atlas, lr, lg, lb, la
-			local r, g, b, a = 255, 255, 255, 255
+			local r, g, b, a = 1, 1, 1, 255
 			local batch_count = 0
 			local last_idx = start_idx
 			local BATCH_SIZE = RU.BATCH_SIZE
 			local batches = RU.batches
 			local bi = RU.bi
-			local bi_count = #RU.batches
+			local bi_count = #batches
 			local batch = batches[bi]
 			local last_texture = RU.last_texture
 			local current_shader
@@ -55,7 +58,7 @@ function RU.init()
 				end
 				last_idx = i
 
-				if not f.hidden and not f.marked_to_remove then
+				if not f.hidden then
 					if f.exo_frame then
 						local exo = EXO:get_exo_by_frame(f.exo_frame)
 						local f_sx = f.flip_x and -1 or 1
@@ -67,10 +70,11 @@ function RU.init()
 						for part_idx = 1, #f.exo_frame do
 							local part = f.exo_frame[part_idx]
 							do
-								local part_type, part_name_idx, alpha, x, y, sx, sy, rotation, kx, ky = part[1], part[2], part[3], part[4], part[5], part[6], part[7], part[8], part[9], part[10]
+								-- local part_type, part_name_idx, alpha, x, y, sx, sy, rotation, kx, ky = part[1], part[2], part[3], part[4], part[5], part[6], part[7], part[8], part[9], part[10]
 
 								if not part.hidden then
-									if part_type == 8 then
+									local part_name_idx, x, y, sx, sy, rotation = part[2], part[4], part[5], part[6], part[7], part[8]
+									if part[1] == 8 then
 										sx = sx * f_sx
 										sy = sy * f_sy
 
@@ -114,8 +118,8 @@ function RU.init()
 										goto label_6_0
 									end
 
-									local part_name, pox, poy = exo.parts[part_name_idx][1], exo.parts[part_name_idx][2], exo.parts[part_name_idx][3]
-									local ss = I:s(part_name)
+									-- local part_name, pox, poy = exo.parts[part_name_idx][1], exo.parts[part_name_idx][2], exo.parts[part_name_idx][3]
+									local ss = I:s(exo.parts[part_name_idx][1])
 
 									-- 计算最终渲染坐标
 									local ref_scale = ss.ref_scale or 1
@@ -159,17 +163,15 @@ function RU.init()
 
 												bi = bi % bi_count + 1
 												batch = batches[bi]
-
-												if last_texture then
-													batch:setTexture(last_texture)
-												end
 											end
 											batch:clear()
 											lr, lg, lb, la = nil, nil, nil, nil -- 重置颜色状态
 											if ss.atlas then
 												current_atlas = ss.atlas
 												last_texture = I:i(ss.atlas)
+											end
 
+											if last_texture then
 												batch:setTexture(last_texture)
 											end
 											batch_count = 0
@@ -187,18 +189,18 @@ function RU.init()
 										end
 
 										if f.color then
-											r, g, b = f.color[1] / 255, f.color[2] / 255, f.color[3] / 255
+											r, g, b = f.color[1] * 0.00392156862745098, f.color[2] * 0.00392156862745098, f.color[3] * 0.00392156862745098
 										else
 											r, g, b = 1, 1, 1
 										end
 
-										a = f.alpha * (alpha or 1)
+										a = f.alpha * (part[3] or 1)
 										if a ~= la or r ~= lr or g ~= lg or b ~= lb then
-											batch:setColor(r, g, b, a / 255)
+											batch:setColor(r, g, b, a * 0.00392156862745098)
 											lr, lg, lb, la = r, g, b, a
 										end
 
-										batch:add(ss.quad, x, y, -f.r + rotation * flipf, sx, sy, 0.5 * ss.size[1] - ss.trim[1] - pox / ref_scale, 0.5 * ss.size[2] - ss.trim[2] - poy / ref_scale, kx, ky)
+										batch:add(ss.quad, x, y, -f.r + rotation * flipf, sx, sy, 0.5 * ss.size[1] - ss.trim[1] - exo.parts[part_name_idx][2] / ref_scale, 0.5 * ss.size[2] - ss.trim[2] - exo.parts[part_name_idx][3] / ref_scale, part[9], part[10])
 										batch_count = batch_count + 1
 									end
 
@@ -217,7 +219,6 @@ function RU.init()
 						local y = REF_H - (f.pos.y + f.offset.y)
 						-- 视锥体剔除
 						local visible = true
-						ss = f.ss
 						local ref_scale = ss.ref_scale or 1
 						local sy = (f.flip_y and -1 or 1) * ref_scale
 						local sx = (f.flip_x and -1 or 1) * ref_scale
@@ -243,17 +244,15 @@ function RU.init()
 
 									bi = bi % bi_count + 1
 									batch = batches[bi]
-
-									if last_texture then
-										batch:setTexture(last_texture)
-									end
 								end
 								batch:clear()
 								lr, lg, lb, la = nil, nil, nil, nil -- 重置颜色状态
 								if ss.atlas then
 									current_atlas = ss.atlas
 									last_texture = I:i(ss.atlas)
+								end
 
+								if last_texture then
 									batch:setTexture(last_texture)
 								end
 								batch_count = 0
@@ -271,13 +270,13 @@ function RU.init()
 							end
 
 							if f.color then
-								r, g, b = f.color[1] / 255, f.color[2] / 255, f.color[3] / 255
+								r, g, b = f.color[1] * 0.00392156862745098, f.color[2] * 0.00392156862745098, f.color[3] * 0.00392156862745098
 							else
 								r, g, b = 1, 1, 1
 							end
 							a = f.alpha
 							if a ~= la or r ~= lr or g ~= lg or b ~= lb then
-								batch:setColor(r, g, b, a / 255)
+								batch:setColor(r, g, b, a * 0.00392156862745098)
 								lr, lg, lb, la = r, g, b, a
 							end
 
@@ -311,10 +310,9 @@ function RU.init()
 			local batch_count = 0
 			local BATCH_SIZE = RU.BATCH_SIZE
 			local last_idx = start_idx
-			local frame_draw_params = RU.frame_draw_params
 			local batches = RU.batches
 			local bi = RU.bi
-			local bi_count = #RU.batches
+			local bi_count = #batches
 			local batch = batches[bi]
 			local last_texture = RU.last_texture
 			local current_shader
@@ -336,7 +334,7 @@ function RU.init()
 
 				last_idx = i
 
-				if f.hidden or f.marked_to_remove then
+				if f.hidden then
 				-- block empty
 				elseif f.exo_frame then
 					local exo = EXO:get_exo_by_frame(f.exo_frame)
@@ -349,12 +347,13 @@ function RU.init()
 					for part_idx = 1, #f.exo_frame do
 						local part = f.exo_frame[part_idx]
 						do
-							local part_type, part_name_idx, alpha, x, y, sx, sy, rotation, kx, ky = part[1], part[2], part[3], part[4], part[5], part[6], part[7], part[8], part[9], part[10]
+							-- local part_type, part_name_idx, alpha, x, y, sx, sy, rotation, kx, ky = part[1], part[2], part[3], part[4], part[5], part[6], part[7], part[8], part[9], part[10]
 
 							if part.hidden then
 							-- block empty
 							else
-								if part_type == 8 then
+								local part_name_idx, x, y, sx, sy, rotation = part[2], part[4], part[5], part[6], part[7], part[8]
+								if part[1] == 8 then
 									sx = sx * f_sx
 									sy = sy * f_sy
 
@@ -398,8 +397,8 @@ function RU.init()
 									goto label_6_0
 								end
 
-								local part_name, pox, poy = exo.parts[part_name_idx][1], exo.parts[part_name_idx][2], exo.parts[part_name_idx][3]
-								local ss = I:s(part_name)
+								-- local part_name, pox, poy = exo.parts[part_name_idx][1], exo.parts[part_name_idx][2], exo.parts[part_name_idx][3]
+								local ss = I:s(exo.parts[part_name_idx][1])
 
 								if batch_count == BATCH_SIZE or f._shader ~= current_shader or ss.atlas and ss.atlas ~= current_atlas then
 									if batch_count > 0 then
@@ -407,10 +406,6 @@ function RU.init()
 
 										bi = bi % bi_count + 1
 										batch = batches[bi]
-
-										if last_texture then
-											batch:setTexture(last_texture)
-										end
 									end
 
 									batch:clear()
@@ -420,7 +415,9 @@ function RU.init()
 									if ss.atlas then
 										current_atlas = ss.atlas
 										last_texture = I:i(ss.atlas)
+									end
 
+									if last_texture then
 										batch:setTexture(last_texture)
 									end
 
@@ -440,15 +437,15 @@ function RU.init()
 								end
 
 								if f.color then
-									r, g, b = f.color[1] / 255, f.color[2] / 255, f.color[3] / 255
+									r, g, b = f.color[1] * 0.00392156862745098, f.color[2] * 0.00392156862745098, f.color[3] * 0.00392156862745098
 								else
 									r, g, b = 1, 1, 1
 								end
 
-								a = f.alpha * (alpha or 1)
+								a = f.alpha * (part[3] or 1)
 
 								if a ~= la or r ~= lr or g ~= lg or b ~= lb then
-									batch:setColor(r, g, b, a / 255)
+									batch:setColor(r, g, b, a * 0.00392156862745098)
 
 									lr, lg, lb, la = r, g, b, a
 								end
@@ -466,9 +463,6 @@ function RU.init()
 									p_x_s = p_x_s * f.scale.x
 									p_y_s = p_y_s * f.scale.y
 								end
-
-								local ox = 0.5 * ss.size[1] - ss.trim[1] - pox / ref_scale
-								local oy = 0.5 * ss.size[2] - ss.trim[2] - poy / ref_scale
 
 								-- 暂无任何纹理使用 textureRotated，这个实际上是属于补丁，我们先禁用
 								-- if ss.textureRotated then
@@ -499,7 +493,7 @@ function RU.init()
 									y = p_y_s + render_base_y
 								end
 
-								batch:add(ss.quad, x, y, -f.r + rotation * flipf, sx, sy, ox, oy, kx, ky)
+								batch:add(ss.quad, x, y, -f.r + rotation * flipf, sx, sy, 0.5 * ss.size[1] - ss.trim[1] - exo.parts[part_name_idx][2] / ref_scale, 0.5 * ss.size[2] - ss.trim[2] - exo.parts[part_name_idx][3] / ref_scale, part[9], part[10])
 								batch_count = batch_count + 1
 							end
 						end
@@ -515,10 +509,6 @@ function RU.init()
 
 							bi = bi % bi_count + 1
 							batch = batches[bi]
-
-							if last_texture then
-								batch:setTexture(last_texture)
-							end
 						end
 
 						batch:clear()
@@ -526,12 +516,12 @@ function RU.init()
 						lr, lg, lb, la = nil, nil, nil, nil
 
 						if ss.atlas then
-							local im, _, _ = I:i(ss.atlas)
-
 							current_atlas = ss.atlas
-							last_texture = im
+							last_texture = I:i(ss.atlas)
+						end
 
-							batch:setTexture(im)
+						if last_texture then
+							batch:setTexture(last_texture)
 						end
 
 						batch_count = 0
@@ -550,7 +540,7 @@ function RU.init()
 					end
 
 					if f.color then
-						r, g, b = f.color[1] / 255, f.color[2] / 255, f.color[3] / 255
+						r, g, b = f.color[1] * 0.00392156862745098, f.color[2] * 0.00392156862745098, f.color[3] * 0.00392156862745098
 					else
 						r, g, b = 1, 1, 1
 					end
@@ -558,12 +548,20 @@ function RU.init()
 					a = f.alpha
 
 					if a ~= la or r ~= lr or g ~= lg or b ~= lb then
-						batch:setColor(r, g, b, a / 255)
+						batch:setColor(r, g, b, a * 0.00392156862745098)
 
 						lr, lg, lb, la = r, g, b, a
 					end
 
-					batch:add(frame_draw_params(f))
+					local ss = f.ss
+					local ref_scale = ss.ref_scale or 1
+					local sy = (f.flip_y and -1 or 1) * ref_scale
+					local sx = (f.flip_x and -1 or 1) * ref_scale
+					if f.scale then
+						sy = sy * f.scale.y
+						sx = sx * f.scale.x
+					end
+					batch:add(ss.quad, f.pos.x + f.offset.x, REF_H - (f.pos.y + f.offset.y), -f.r, sx, sy, f.anchor.x * ss.size[1] - ss.trim[1], (1 - f.anchor.y) * ss.size[2] - ss.trim[2])
 
 					batch_count = batch_count + 1
 				end
@@ -595,23 +593,23 @@ function RU.destroy()
 	RU.last_texture = nil
 end
 
---- get frame draw params
+--- get frame draw params(已被内联)
 ---@param f table sprite
 ---@return userdata quad, number x, number y, number r, number sx, number sy, number ox, number oy
 ---@note 要绘画的quad, x坐标, y坐标, 旋转弧度, x缩放, y缩放, x原点偏移, y原点偏移
-function RU.frame_draw_params(f)
-	local ss = f.ss
-	local ref_scale = ss.ref_scale or 1
-	local sy = (f.flip_y and -1 or 1) * ref_scale
-	local sx = (f.flip_x and -1 or 1) * ref_scale
+-- function RU.frame_draw_params(f)
+-- 	local ss = f.ss
+-- 	local ref_scale = ss.ref_scale or 1
+-- 	local sy = (f.flip_y and -1 or 1) * ref_scale
+-- 	local sx = (f.flip_x and -1 or 1) * ref_scale
 
-	if f.scale then
-		sy = sy * f.scale.y
-		sx = sx * f.scale.x
-	end
+-- 	if f.scale then
+-- 		sy = sy * f.scale.y
+-- 		sx = sx * f.scale.x
+-- 	end
 
-	return ss.quad, f.pos.x + f.offset.x, REF_H - (f.pos.y + f.offset.y), -f.r, sx, sy, f.anchor.x * ss.size[1] - ss.trim[1], (1 - f.anchor.y) * ss.size[2] - ss.trim[2]
-end
+-- 	return ss.quad, f.pos.x + f.offset.x, REF_H - (f.pos.y + f.offset.y), -f.r, sx, sy, f.anchor.x * ss.size[1] - ss.trim[1], (1 - f.anchor.y) * ss.size[2] - ss.trim[2]
+-- end
 
 function RU.add_batches(count)
 	local temp_canvas = G.newCanvas(2, 2)
