@@ -48,7 +48,7 @@ package:
 # 	git add .
 # 	git commit -m "UPDATE VERSION COMMIT HASH"
 	git checkout master
-	git merge dev
+	git merge --ff-only dev
 	@if ping -c 1 -W 1 10.112.99.5 > /dev/null 2>&1; then \
 		echo "内网，使用 IPv4 直连"; \
 		git push ssh://dove@10.112.99.5:60001/srv/git/KingdomRushDove.git master; \
