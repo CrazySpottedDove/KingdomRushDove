@@ -10959,7 +10959,7 @@ function scripts.soldier_blade.update(this, store)
 					U.animation_start_default(this, an, sflip, store.tick_ts)
 					U.y_wait_unconditional(store, bda.hit_time)
 
-					local d = E.assign_damage(bda.damage_type, U.frandom(bda.damage_min, bda.damage_max) * this.unit.damage_factor, this.id, target.id)
+					local d = E.assign_damage(bda.damage_type, (math.random(bda.damage_min, bda.damage_max) + this.unit.damage_buff) * this.unit.damage_factor, this.id, target.id)
 
 					queue_damage(store, d)
 					U.y_animation_wait_default(this)
@@ -10980,12 +10980,10 @@ function scripts.soldier_blade.update(this, store)
 
 			::label_53_1::
 
-			if this.melee then
-				brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
-				if brk or sta ~= A_NO_TARGET then
-					goto label_53_2
-				end
+			if brk or sta ~= A_NO_TARGET then
+				goto label_53_2
 			end
 
 			if SU.soldier_go_back_step(store, this) then
@@ -11074,10 +11072,10 @@ function scripts.soldier_forest.update(this, store)
 				end
 			end
 
-			if pow_e.level > 0 and store.tick_ts - ea.ts > ea.cooldown then
+			if pow_e.level > 0 and ready_to_attack(ea, store, this.unit.cooldown_factor) then
 				for _, s in pairs(tower.barrack.soldiers) do
 					if s and not s.health.dead and s._casting_eerie then
-						SU.delay_attack(store, ea, fts(6))
+						ea.ts = ea.ts + 0.1
 
 						goto label_56_0
 					end
@@ -11089,7 +11087,7 @@ function scripts.soldier_forest.update(this, store)
 				end)
 
 				if not target then
-					SU.delay_attack(store, ea, fts(6))
+					ea.ts = ea.ts + 0.1
 				else
 					this._casting_eerie = true
 					ea.ts = store.tick_ts
@@ -11107,6 +11105,7 @@ function scripts.soldier_forest.update(this, store)
 
 					a.aura.source_id = this.id
 					a.aura.level = pow_e.level
+					a.aura.damage_factor = this.unit.damage_factor
 
 					local ni = target.nav_path.ni + P:predict_enemy_node_advance(target, fts(10))
 
@@ -11124,13 +11123,13 @@ function scripts.soldier_forest.update(this, store)
 
 			::label_56_0::
 
-			if pow_c.level > 0 and store.tick_ts - ca.ts > ca.cooldown then
+			if pow_c.level > 0 and ready_to_attack(ca, store, this.unit.cooldown_factor) then
 				if not U.is_soldiers_around_need_heal(store.soldiers, this.pos, ca.trigger_hp_factor, ca.max_range) then
-					SU.delay_attack(store, ca, fts(6))
+					ca.ts = ca.ts + fts(6)
 				else
 					for _, s in pairs(tower.barrack.soldiers) do
 						if s and not s.health.dead and s._casting_circle then
-							SU.delay_attack(store, ca, fts(6))
+							ca.ts = ca.ts + fts(6)
 
 							goto label_56_1
 						end
@@ -11180,22 +11179,18 @@ function scripts.soldier_forest.update(this, store)
 
 			::label_56_1::
 
-			if this.melee then
-				brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+			brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
 
-				if brk then
-					goto label_56_3
-				end
+			if brk then
+				goto label_56_3
 			end
 
-			if this.ranged then
-				brk, sta = SU.y_soldier_ranged_attacks(store, this)
+			brk, sta = SU.y_soldier_ranged_attacks(store, this)
 
-				if brk or sta == A_DONE then
-					goto label_56_3
-				elseif sta == A_IN_COOLDOWN or this.motion.arrived then
-					goto label_56_2
-				end
+			if brk or sta == A_DONE then
+				goto label_56_3
+			elseif sta == A_IN_COOLDOWN or this.motion.arrived then
+				goto label_56_2
 			end
 
 			if SU.soldier_go_back_step(store, this) then
@@ -11350,9 +11345,6 @@ function scripts.soldier_drow.insert(this, store)
 			if pn == "blade_mail" and p.level > 0 then
 				this.render.sprites[2].hidden = nil
 
-				for level = 1, p.level do
-					this.health.spiked_armor = this.health.spiked_armor + p.spiked_armor_inc
-				end
 				this.health.spiked_armor = this.health.spiked_armor + p.spiked_armor_inc * (p.level - p.last_level)
 				p.last_level = p.level
 			end
