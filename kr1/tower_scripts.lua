@@ -1737,17 +1737,23 @@ scripts.tower_wild_magus = {
 
 						U.y_wait_unconditional(store, wa.cast_time)
 
-						for i = 1, math.min(#enemies, pow_w.target_count[pow_w.level]) do
-							local target = enemies[i]
-							local mod = E:create_entity(wa.spell)
+						-- 额外探查 25 范围，减少目标数浪费现象
+						enemy, enemies = U.find_foremost_enemy_in_range_filter_on(tpos, a.range + 25, false, wa.vis_flags, wa.vis_bans, U.enemy_is_silent_target)
 
-							mod.modifier.target_id = target.id
-							mod.modifier.level = pow_w.level
+						if enemies then
+							for i = 1, math.min(#enemies, pow_w.target_count[pow_w.level]) do
+								local target = enemies[i]
+								local mod = E:create_entity(wa.spell)
 
-							queue_insert(store, mod)
+								mod.modifier.target_id = target.id
+								mod.modifier.level = pow_w.level
+
+								queue_insert(store, mod)
+							end
+							wa.ts = store.tick_ts
+						else
+							wa.ts = wa.ts + 2
 						end
-
-						wa.ts = store.tick_ts
 
 						y_animation_wait(this, rune_sid, 0)
 
