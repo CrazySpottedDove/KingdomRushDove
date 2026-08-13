@@ -26814,6 +26814,7 @@ function scripts.soldier_elves_harasser.update(this, store, script)
 				unit.nav_rally.pos:copy(this.pos)
 				unit.nav_rally.center = unit.nav_rally.pos
 				SU.soldier_inherit_tower_buff_factor(unit, tower, store.tick_ts)
+				unit.dodge.chance = this.dodge.chance
 				unit._espectral_tower_ref = tower
 				queue_insert(store, unit)
 				this.render.sprites[1].hidden = true

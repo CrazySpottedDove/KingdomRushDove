@@ -4058,7 +4058,8 @@ tt.vis.flags = bor(tt.vis.flags, F_DARK_ELF)
 tt.main_script.update = scripts.soldier_elves_harasser.update
 
 tt = RT("soldier_elves_espectral_harasser", "soldier_militia")
-AC(tt, "reinforcement")
+AC(tt, "reinforcement", "dodge")
+tt.dodge.silent = true
 tt.info.portrait = "kr4_info_portraits_soldiers_0018"
 tt.health.armor = 0
 tt.health.hp_max = 250
