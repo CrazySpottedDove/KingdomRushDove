@@ -13530,7 +13530,6 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 	this.melee.attacks[1].level = this.unit.level
 	this.ranged.attacks[1].level = this.unit.level
 	this.vis.flags = bor(this.vis.flags, F_FLYING)
-	this._max_speed = this.motion.max_speed
 
 	if this.vis._bans then
 		this.vis.bans = this.vis._bans
@@ -13668,7 +13667,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 				this.tween.props[1].disabled = false
 				this.tween.props[1].ts = store.tick_ts
 				this.render.sprites[1].sort_y_offset = 0
-				this.motion.max_speed = this.speed_flight
+				U.update_max_speed(this, this.speed_flight)
 				this.melee.attacks[1].disabled = true
 				this.current_mode = MODE_FLY
 			else
@@ -13702,11 +13701,11 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 						if dist_to_break < dist then
 							local ease_step = (store.tick_ts - start_ts) / time_to_accel
 
-							this.motion.max_speed = U.ease_value(0, this._max_speed, ease_step, "quad-in")
+							U.update_max_speed(this, U.ease_value(0, this.speed_flight, ease_step, "quad-in"))
 						else
 							local ease_step = dist / dist_to_break
 
-							this.motion.max_speed = U.ease_value(20, this._max_speed, ease_step, "quad-in")
+							U.update_max_speed(this, U.ease_value(20, this.speed_flight, ease_step, "quad-in"))
 						end
 					end
 
@@ -13949,11 +13948,11 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
 			this.tween.disabled = false
 			this.tween.props[1].disabled = false
 			this.tween.props[1].ts = store.tick_ts
-			this.motion.max_speed = this.speed_flight
+			U.update_max_speed(this, this.speed_flight)
 			this.melee.attacks[1].disabled = true
 			this.vis.flags = bor(this.vis.flags, F_FLYING)
 		else
-			this.motion.max_speed = this.speed_ground
+			U.update_max_speed(this, this.speed_ground)
 			this.melee.attacks[1].disabled = false
 			this.ranged.attacks[1].animation = "attack_floor"
 

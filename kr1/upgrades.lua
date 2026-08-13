@@ -1780,6 +1780,8 @@ function upgrades:patch_templates(max_level)
 		for _, n in ipairs(soldiers) do
 			T(n).motion.max_speed = T(n).motion.max_speed + u.speed_inc
 		end
+		T("soldier_tower_rocket_gunners_lvl4").speed_flight = T("soldier_tower_rocket_gunners_lvl4").speed_flight + u.speed_inc
+		T("soldier_tower_rocket_gunners_lvl4").speed_ground = T("soldier_tower_rocket_gunners_lvl4").speed_ground + u.speed_inc
 	end
 
 	u = self:get_upgrade("barrack_rally")
@@ -1887,6 +1889,8 @@ function upgrades:patch_templates(max_level)
 		for _, n in ipairs(soldiers) do
 			T(n).motion.max_speed = T(n).motion.max_speed * u.speed_factor
 		end
+		T("soldier_tower_rocket_gunners_lvl4").speed_flight = T("soldier_tower_rocket_gunners_lvl4").speed_flight * u.speed_factor
+		T("soldier_tower_rocket_gunners_lvl4").speed_ground = T("soldier_tower_rocket_gunners_lvl4").speed_ground * u.speed_factor
 	end
 
 	local mage_towers = self.mage_towers
