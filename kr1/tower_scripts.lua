@@ -26891,7 +26891,7 @@ end
 
 function scripts.soldier_elves_harasser.backstab_side_effect(this, store, damage, target)
 	if this.powers.backstab.level > 0 then
-		this.ranged.attacks.list[2].ts = this.ranged.attacks.list[2].ts - this.unit.cooldown_factor
+		this.ranged.attacks[2].ts = this.ranged.attacks[2].ts - this.unit.cooldown_factor
 	end
 end
 
