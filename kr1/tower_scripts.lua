@@ -26889,6 +26889,12 @@ function scripts.soldier_elves_harasser.update(this, store, script)
 	end
 end
 
+function scripts.soldier_elves_harasser.backstab_side_effect(this, store, damage, target)
+	if this.powers.backstab.level > 0 then
+		this.ranged.attacks.list[2].ts = this.ranged.attacks.list[2].ts - this.unit.cooldown_factor
+	end
+end
+
 scripts.soldier_elves_espectral_harasser = {}
 function scripts.soldier_elves_espectral_harasser.update(this, store, script)
 	local brk, stam
