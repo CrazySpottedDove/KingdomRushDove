@@ -6538,6 +6538,9 @@ function OptionsView:initialize(sw, sh)
 		main.params.fps = new_fps
 		DRAW_FPS = new_fps
 		TICK_LENGTH = 1 / new_fps
+		local settings = storage:load_settings()
+		settings.fps = new_fps
+		storage:save_settings(settings)
 		fps_button.label.text = "帧率:" .. new_fps
 	end
 
