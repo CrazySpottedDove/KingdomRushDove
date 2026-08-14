@@ -181,7 +181,6 @@ tt.powers.polymorph.price_base = 300
 tt.powers.polymorph.price_inc = 100
 tt.powers.polymorph.cooldown_base = 22
 tt.powers.polymorph.cooldown_inc = -2
-
 tt.powers.polymorph.attack_idx = 2
 tt.powers.elemental = CC("power")
 tt.powers.elemental.price_base = 325
