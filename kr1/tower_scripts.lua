@@ -3761,7 +3761,6 @@ scripts.tower_dwaarp = {
 		local lava_ready = false
 		local drill_ready = false
 		local std_ready = false
-		local anim_id = 3
 
 		aa.ts = store.tick_ts
 
@@ -3794,13 +3793,14 @@ scripts.tower_dwaarp = {
 				end
 
 				if ready_to_attack(aa, store, this.tower.cooldown_factor) then
-					if ready_to_use_power(pow_l, la, store, this.tower.cooldown_factor) then
-						lava_ready = true
-						this.render.sprites[4].hidden = false
-						this.render.sprites[5].hidden = false
-					end
-
 					std_ready = true
+				end
+
+				if ready_to_use_power(pow_l, la, store, this.tower.cooldown_factor) then
+					lava_ready = true
+					std_ready = true
+					this.render.sprites[4].hidden = false
+					this.render.sprites[5].hidden = false
 				end
 
 				if not drill_ready and not std_ready then
@@ -3819,7 +3819,7 @@ scripts.tower_dwaarp = {
 							da.ts = store.tick_ts
 
 							S:queue(da.sound)
-							animation_start(this, "drill", nil, store.tick_ts, false, anim_id)
+							U.animation_start_once_specific_no_flip(this, "drill", store.tick_ts, 3)
 
 							while store.tick_ts - da.ts < da.hit_time do
 								coroutine.yield()
@@ -3842,9 +3842,7 @@ scripts.tower_dwaarp = {
 								queue_insert(store, drill)
 							end
 
-							while not animation_finished(this, anim_id) do
-								coroutine.yield()
-							end
+							U.y_animation_wait_specific(this, 3)
 						end
 					end
 
@@ -3852,15 +3850,16 @@ scripts.tower_dwaarp = {
 						local trigger_enemy = U.find_first_enemy_in_range_filter_off(tpos(this), a.range, aa.vis_flags, aa.vis_bans)
 
 						if trigger_enemy then
-							aa.ts = store.tick_ts
-
+							local start_ts = store.tick_ts
 							if lava_ready then
-								la.ts = store.tick_ts
+								la.ts = start_ts
+							else
+								aa.ts = start_ts
 							end
 
-							animation_start(this, "shoot", nil, store.tick_ts, false, anim_id)
+							U.animation_start_once_specific_no_flip(this, "shoot", start_ts, 3)
 
-							while store.tick_ts - aa.ts < aa.hit_time do
+							while store.tick_ts - start_ts < aa.hit_time do
 								coroutine.yield()
 							end
 
@@ -3873,7 +3872,7 @@ scripts.tower_dwaarp = {
 								else
 									dvalue = random(aa.damage_min, aa.damage_max)
 								end
-								dvalue = this.tower.damage_factor * dvalue
+								dvalue = this.tower.damage_factor * dvalue * (lava_ready and (pow_l.level + 1) or 1)
 
 								local u = UP:get_upgrade("engineer_magic_dust")
 
@@ -3886,7 +3885,7 @@ scripts.tower_dwaarp = {
 
 									queue_damage(store, d)
 
-									for _, m in ipairs(aa.mods) do
+									for _, m in ipairs(lava_ready and la.mods or aa.mods) do
 										if U.flags_pass(enemy.vis, E:get_template(m).modifier) then
 											local mod = E:create_entity(m)
 
@@ -3903,11 +3902,9 @@ scripts.tower_dwaarp = {
 							if lava_ready then
 								local lava = E:create_entity(la.bullet)
 								lava.pos = tpos(this)
-								-- lava.pos.x, lava.pos.y = p.pos.x, p.pos.y
 								lava.aura.ts = store.tick_ts
 								lava.aura.source_id = this.id
 								lava.aura.level = pow_l.level
-								-- lava.aura.radius = lava.aura.radius
 								lava.aura.radius = a.range
 								lava.aura.damage_factor = this.tower.damage_factor
 
@@ -4002,20 +3999,22 @@ scripts.tower_dwaarp = {
 
 							S:queue(aa.sound)
 
-							while not animation_finished(this, anim_id) do
-								coroutine.yield()
-							end
+							U.y_animation_wait_specific(this, 3)
 
 							std_ready = false
 							lava_ready = false
 							this.render.sprites[4].hidden = true
 							this.render.sprites[5].hidden = true
 						else
-							aa.ts = aa.ts + 0.1
+							if lava_ready then
+								la.ts = la.ts + 0.1
+							else
+								aa.ts = aa.ts + 0.1
+							end
 							std_ready = false
 						end
 
-						animation_start(this, "idle", nil, store.tick_ts, true, anim_id)
+						U.animation_start_loop_specific(this, "idle", nil, store.tick_ts, 3)
 						coroutine.yield()
 					end
 				end
