@@ -115,7 +115,7 @@ local function dnum_color_index(dtype)
 	end
 end
 
-local FONT_SCALE_FACTOR = IS_ANDROID and 1.2 or 1.0
+local FONT_SCALE_FACTOR = IS_ANDROID and 1.3 or 1.0
 
 local function dnum_display_params(damage, hp_max)
 	local ratio = (hp_max > 0) and (damage / hp_max) or 0
