@@ -826,7 +826,7 @@ local function build_enabled_plugins_text()
 
 	if type(MOD_REGISTRY) == "table" then
 		for mod_dir, config in pairs(MOD_REGISTRY) do
-			lines[#lines + 1] = string.format("  %s : %s", config and config.name or mod_dir, config and config.version or "?")
+			lines[#lines + 1] = string.format("  %s(%s) : %s", config.name, config.entry, config.version or "?")
 			listed = listed + 1
 		end
 	end
