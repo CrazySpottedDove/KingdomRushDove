@@ -644,7 +644,7 @@ area_attack.ts = 0
 -- Runtime fields (52): --   absorb_radius, absorb_time, animation, animation_end_fail, animation_end_success, animation_loop, animation_start, bullet, cast_time, chance, cooldown, cooldown_init, damage_bans, damage_max, damage_min,
 --   damage_radius, damage_type, decal, disabled, drain_center_offset, first_cooldown, fx, fx_end_units, hit_decal, hit_decal_offset, hit_fx, hit_fx_offset, hit_offset, hit_time, hit_times,
 --   include_blocked, loop_duration, max_damage, max_range, max_targets, min_count, min_damage, min_range, min_targets, minimum_fires, mod, mod_end, mod_loop, mod_loop_every, nodes_limit,
---   removes_charged_status, sound, sound_args, sound_hit, uninterruptible, vis_bans, vis_flags
+--   removes_charged_status, sound, sound_args, sound_hit, vis_bans, vis_flags
 local aura_attack = E:register_c("aura_attack")
 aura_attack.type = "aura"
 aura_attack.bullet = nil
