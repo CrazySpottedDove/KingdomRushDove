@@ -1808,6 +1808,7 @@ tt.timed_attacks.list[1].damage_min = 150
 tt.timed_attacks.list[1].damage_max_hero = 120
 tt.timed_attacks.list[1].damage_min_hero = 100
 tt.timed_attacks.list[1].damage_type = bor(DAMAGE_PHYSICAL, DAMAGE_NO_DODGE)
+tt.timed_attacks.list[1].vis_bans = F_FLYING
 tt.timed_attacks.list[1].sound = "ElvesHyenaStomp"
 tt.timed_attacks.list[2] = CC("custom_attack")
 tt.timed_attacks.list[2].animation = "scream"
