@@ -123,8 +123,6 @@ game.simulation_systems = {
 	"endless_patch",
 	"health",
 	"count_groups",
-	"hero_xp_tracking",
-	"pops",
 	"goal_line",
 	"tower_upgrade",
 	"tower_skill",

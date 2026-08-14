@@ -352,7 +352,7 @@ function M.register(sys)
 						stars = 2
 					end
 
-					configer.criket().time_cost = store.tick_ts - configer.criket().start_time
+					configer.criket().time_cost = ts - configer.criket().start_time
 					store.game_outcome = {
 						victory = true,
 						lives_left = store.lives,

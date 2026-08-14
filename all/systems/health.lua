@@ -702,22 +702,13 @@ local FADE_OUT_DURATION = 0.4
 require("table.clear")
 function M.register(sys)
 	local GS = require("kr1.game_settings")
-	local function queue_insert(store, e)
-		simulation:queue_insert_entity(e)
-	end
-
-	local function queue_remove(store, e)
-		simulation:queue_remove_entity(e)
-	end
 
 	sys.health = {}
 	sys.health.name = "health"
 
 	function sys.health:init(store)
 		store.damage_queue = {}
-		store.damages_applied = {}
 		store.damage_queue_swapper = {}
-		store.damages_applied_swapper = {}
 		dnum_init(store)
 		hnum_init(store)
 		if dnum_enabled or hnum_enabled then
@@ -747,13 +738,60 @@ function M.register(sys)
 		return true
 	end
 
+	function sys.health.on_damage_applied(store, d, e)
+		dnum_on_applied_impl(store, d, e)
+		-- pops system begin
+		if d.pop then
+			local source = store.entities[d.source_id]
+			local pop_entity = (source and (source.enemy or source.soldier)) and source or e
+			if pop_entity then
+				local pop_chance = d.pop_chance
+				local pop_conds = d.pop_conds
+				if (not pop_chance or random() < pop_chance) and (not pop_conds or band(d.damage_result, pop_conds) ~= 0) then
+					local name = d.pop[random(1, #d.pop)]
+					local e = E:create_entity(name)
+
+					if e.pop_over_target then
+						pop_entity = e
+					end
+
+					local pos_y = pop_entity.pos.y + e.pop_y_offset
+
+					if pop_entity.unit then
+						if pop_entity.unit.pop_offset then
+							pos_y = pos_y + pop_entity.unit.pop_offset.y
+						elseif pop_entity == e and pop_entity.unit.hit_offset then
+							pos_y = pos_y + pop_entity.unit.hit_offset.y
+						end
+					end
+
+					e.pos:set(pop_entity.pos.x, pos_y)
+					e.render.sprites[1].r = random(-21, 21) * 0.017453292519943295
+					e.render.sprites[1].ts = store.tick_ts
+
+					simulation:queue_insert_entity(e)
+				end
+			end
+		end
+		-- pops system end
+
+		-- hero_xp_tracking system begin
+		if d.xp_gain_factor then
+			local id = d.xp_dest_id or d.source_id
+			local source = store.entities[id]
+
+			if source and source.hero then
+				local amount = d.damage_applied * d.xp_gain_factor
+				source.hero.xp_queued = source.hero.xp_queued + amount
+			end
+		end
+	-- hero_xp_tracking system end
+	end
+
 	function sys.health:on_update(dt, ts, store)
 		perf.start("health")
 		local new_damage_queue = store.damage_queue_swapper
 		table.clear(new_damage_queue)
-		local damages_applied = store.damages_applied_swapper
-		table.clear(damages_applied)
-		local damages_applied_count = 0
 
 		local damage_queue = store.damage_queue
 		local damage_queue_len = #damage_queue
@@ -771,96 +809,85 @@ function M.register(sys)
 
 					h.last_damage_types = bor(h.last_damage_types, d.damage_type)
 
-					if band(d.damage_type, DAMAGE_EAT) ~= 0 then
-						local eat_amt = math.max(h.hp, 0)
-
-						d.damage_applied = eat_amt
-						d.damage_result = bor(d.damage_result, DR_KILL)
-						damage_trace_record_event(store, e, d, "eat", eat_amt, starting_hp, 0)
-						h.hp = 0
-						damages_applied_count = damages_applied_count + 1
-						damages_applied[damages_applied_count] = d
-						dnum_on_applied_impl(store, d, e)
-					elseif band(d.damage_type, DAMAGE_ARMOR) ~= 0 then
+					if band(d.damage_type, DAMAGE_ARMOR) ~= 0 then
 						SU.armor_dec(e, d.value)
 						d.damage_result = bor(d.damage_result, DR_ARMOR)
-						damage_trace_record_event(store, e, d, "armor", d.value, h.hp, h.hp)
+					-- damage_trace_record_event(store, e, d, "armor", d.value, h.hp, h.hp)
 					elseif band(d.damage_type, DAMAGE_MAGICAL_ARMOR) ~= 0 then
 						SU.magic_armor_dec(e, d.value)
 						d.damage_result = bor(d.damage_result, DR_MAGICAL_ARMOR)
-						damage_trace_record_event(store, e, d, "magic_armor", d.value, h.hp, h.hp)
+					-- damage_trace_record_event(store, e, d, "magic_armor", d.value, h.hp, h.hp)
 					else
-						local actual_damage = U.predict_damage(e, d)
+						if band(d.damage_type, DAMAGE_EAT) ~= 0 then
+							local eat_amt = math.max(h.hp, 0)
 
-						h.hp = h.hp - actual_damage
-						d.damage_applied = actual_damage
-						damage_trace_record_event(store, e, d, "hp", actual_damage, starting_hp, h.hp)
-
-						if starting_hp > 0 and h.hp <= 0 then
+							d.damage_applied = eat_amt
 							d.damage_result = bor(d.damage_result, DR_KILL)
-						end
+							-- damage_trace_record_event(store, e, d, "eat", eat_amt, starting_hp, 0)
+							h.hp = 0
+							self.on_damage_applied(store, d, e)
+						else
+							local actual_damage = U.predict_damage(e, d)
 
-						if actual_damage > 0 then
-							d.damage_result = bor(d.damage_result, DR_DAMAGE)
+							h.hp = h.hp - actual_damage
+							d.damage_applied = actual_damage
+							-- damage_trace_record_event(store, e, d, "hp", actual_damage, starting_hp, h.hp)
 
-							if e.regen then
-								e.regen.last_hit_ts = store.tick_ts
+							if starting_hp > 0 and h.hp <= 0 then
+								d.damage_result = bor(d.damage_result, DR_KILL)
 							end
 
-							if d.track_damage then
-								signal.emit("entity-damaged", e, d)
+							if actual_damage > 0 then
+								d.damage_result = bor(d.damage_result, DR_DAMAGE)
 
-								local source = entities[d.source_id]
+								if e.regen then
+									e.regen.last_hit_ts = ts
+								end
 
-								if source and source.track_damage then
-									source.track_damage.damaged[#source.track_damage.damaged + 1] = {e.id, actual_damage}
+								if d.track_damage then
+									signal.emit("entity-damaged", e, d)
+
+									local source = entities[d.source_id]
+
+									if source and source.track_damage then
+										source.track_damage.damaged[#source.track_damage.damaged + 1] = {e.id, actual_damage}
+									end
+								end
+								self.on_damage_applied(store, d, e)
+							end
+
+							if h.spiked_armor > 0 and d.source_id then
+								local t = entities[d.source_id]
+
+								if t and t.health and not t.health.dead then
+									new_damage_queue[#new_damage_queue + 1] = E.assign_damage(DAMAGE_TRUE, h.spiked_armor * d.value, e.id, t.id)
 								end
 							end
-							dnum_on_applied_impl(store, d, e)
-						end
 
-						if h.spiked_armor > 0 and d.source_id then
-							local t = entities[d.source_id]
+							if h.constant_spiked_armor and d.source_id then
+								local t = entities[d.source_id]
 
-							if t and t.health and not t.health.dead then
-								local sad = E.create_damage()
-
-								sad.damage_type = DAMAGE_TRUE
-								sad.value = h.spiked_armor * d.value
-								sad.source_id = e.id
-								sad.target_id = t.id
-								new_damage_queue[#new_damage_queue + 1] = sad
+								if t and t.health and not t.health.dead then
+									new_damage_queue[#new_damage_queue + 1] = E.assign_damage(h.constant_spiked_armor.damage_type, h.constant_spiked_armor.value, e.id, t.id)
+								end
 							end
 						end
 
-						if h.constant_spiked_armor and d.source_id then
-							local t = entities[d.source_id]
+						-- 处理击杀跟踪
+						if starting_hp > 0 and h.hp <= 0 then
+							signal.emit("entity-killed", e, d)
 
-							if t and t.health and not t.health.dead then
-								local sad = E.create_damage()
+							if d.track_kills then
+								local source = entities[d.source_id]
 
-								sad.damage_type = h.constant_spiked_armor.damage_type
-								sad.value = h.constant_spiked_armor.value
-								sad.source_id = e.id
-								sad.target_id = t.id
-								new_damage_queue[#new_damage_queue + 1] = sad
+								if source and source.track_kills then
+									source.track_kills.killed[#source.track_kills.killed + 1] = e.id
+								end
 							end
 						end
 
-						damages_applied_count = damages_applied_count + 1
-						damages_applied[damages_applied_count] = d
-					end
+					-- 处理 on_damage_applied 事件
 
-					if starting_hp > 0 and h.hp <= 0 then
-						signal.emit("entity-killed", e, d)
-
-						if d.track_kills then
-							local source = entities[d.source_id]
-
-							if source and source.track_kills then
-								source.track_kills.killed[#source.track_kills.killed + 1] = e.id
-							end
-						end
 					end
 				end
 			end
@@ -873,15 +900,15 @@ function M.register(sys)
 			local h = e.health
 
 			if h.hp <= 0 and not h.dead and not h.ignore_damage then
-				damage_trace_print_death(store, e)
+				-- damage_trace_print_death(store, e)
 				h.hp = 0
 				h.dead = true
-				h.death_ts = store.tick_ts
+				h.death_ts = ts
 
 				if e.render then
-					h.fading_after = store.tick_ts + h.dead_lifetime - FADE_OUT_DURATION
+					h.fading_after = ts + h.dead_lifetime - FADE_OUT_DURATION
 				else
-					h.delete_after = store.tick_ts + h.dead_lifetime
+					h.delete_after = ts + h.dead_lifetime
 				end
 
 				if e.health_bar then
@@ -895,11 +922,11 @@ function M.register(sys)
 			if not h.dead then
 				h.last_damage_types = 0
 			elseif not h.ignore_delete_after then
-				if h.fading_after and store.tick_ts > h.fading_after then
-					local progress = (store.tick_ts - h.fading_after) / FADE_OUT_DURATION
+				if h.fading_after and ts > h.fading_after then
+					local progress = (ts - h.fading_after) / FADE_OUT_DURATION
 
 					if progress >= 1.0 then
-						queue_remove(store, e)
+						simulation:queue_remove_entity(e)
 					else
 						local sprites = e.render.sprites
 						if not h._fade_init_alphas then
@@ -912,8 +939,8 @@ function M.register(sys)
 							sprites[i].alpha = h._fade_init_alphas[i] * (1 - progress)
 						end
 					end
-				elseif h.delete_after and store.tick_ts > h.delete_after then
-					queue_remove(store, e)
+				elseif h.delete_after and ts > h.delete_after then
+					simulation:queue_remove_entity(e)
 				end
 			end
 		end
@@ -922,15 +949,15 @@ function M.register(sys)
 			local h = e.health
 
 			if h.hp <= 0 and not h.dead and not h.ignore_damage then
-				damage_trace_print_death(store, e)
+				-- damage_trace_print_death(store, e)
 				h.hp = 0
 				h.dead = true
-				h.death_ts = store.tick_ts
+				h.death_ts = ts
 
 				if e.render then
-					h.fading_after = store.tick_ts + h.dead_lifetime - FADE_OUT_DURATION
+					h.fading_after = ts + h.dead_lifetime - FADE_OUT_DURATION
 				else
-					h.delete_after = store.tick_ts + h.dead_lifetime
+					h.delete_after = ts + h.dead_lifetime
 				end
 
 				if e.health_bar then
@@ -941,11 +968,11 @@ function M.register(sys)
 			if not h.dead then
 				h.last_damage_types = 0
 			elseif not e.hero and not h.ignore_delete_after then
-				if h.fading_after and store.tick_ts > h.fading_after then
-					local progress = (store.tick_ts - h.fading_after) / FADE_OUT_DURATION
+				if h.fading_after and ts > h.fading_after then
+					local progress = (ts - h.fading_after) / FADE_OUT_DURATION
 
 					if progress >= 1.0 then
-						queue_remove(store, e)
+						simulation:queue_remove_entity(e)
 					else
 						local sprites = e.render.sprites
 						if not h._fade_init_alphas then
@@ -958,8 +985,8 @@ function M.register(sys)
 							sprites[i].alpha = h._fade_init_alphas[i] * (1 - progress)
 						end
 					end
-				elseif h.delete_after and store.tick_ts > h.delete_after then
-					queue_remove(store, e)
+				elseif h.delete_after and ts > h.delete_after then
+					simulation:queue_remove_entity(e)
 				end
 			end
 		end
@@ -970,8 +997,6 @@ function M.register(sys)
 
 		store.damage_queue_swapper = damage_queue
 		store.damage_queue = new_damage_queue
-		store.damages_applied_swapper = store.damages_applied
-		store.damages_applied = damages_applied
 		perf.stop("health")
 	end
 end

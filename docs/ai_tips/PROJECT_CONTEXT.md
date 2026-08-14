@@ -158,7 +158,6 @@ love.run()
 | `store.particle_systems` | 粒子系统索引 |
 | `store.entities_with_tween/timed/lights/ui` | 按组件类型的快速索引 |
 | `store.damage_queue` | 待结算伤害队列（通过 `queue_damage(store, d)` 写入） |
-| `store.damages_applied` | 当帧已结算伤害列表（每帧由 sys.health 更新） |
 | `store.render_frames` | 排序后的可渲染帧列表（由 sys.render 维护，渲染层消费） |
 | `store.tick_ts` | 游戏累计时间（秒），暂停时不增长 |
 | `store.paused` / `store.step` | 暂停/单步模式 |
@@ -188,7 +187,7 @@ simulation:do_tick(dt)
 "level", "wave_spawn", "wave_spawn_tsv", "mod_lifecycle",
 "main_script", "events", "timed", "tween", "endless_patch",
 "health",           -- ★ 伤害结算核心
-"count_groups", "hero_xp_tracking", "pops",
+"count_groups",
 "goal_line", "tower_upgrade", "game_upgrades",
 "texts", "particle_system",
 "render",           -- ★ 渲染帧维护与排序
@@ -357,7 +356,7 @@ return hook
 ### damage_numbers（伤害数字显示）
 
 - 路径：`mods/local/damage_numbers/`
-- 技术：Hook `simulation.do_tick`（每帧末读 `store.damages_applied`）+ Hook `game.draw_game`（叠加浮动文字）
+- 技术：Hook `simulation.do_tick` + Hook `game.draw_game`（叠加浮动文字）
 - 实现亮点：FFI `DNum` 结构体池（300 槽环形写入），避免 GC；颜色按 `DAMAGE_*` 类型映射；字号/速度按伤害占 HP 比例分级
 - 坐标约定：屏幕-Y 空间（`y = REF_H - world_y`），vy < 0 = 向上
 

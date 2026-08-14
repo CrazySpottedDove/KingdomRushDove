@@ -67,7 +67,7 @@ function M.register(sys)
 					local dust = E:create_entity("fx_tower_sell_dust")
 
 					dust.pos.x, dust.pos.y = th.pos.x, th.pos.y + 35
-					dust.render.sprites[1].ts = store.tick_ts
+					dust.render.sprites[1].ts = ts
 
 					queue_insert(store, dust)
 
@@ -205,7 +205,7 @@ function M.register(sys)
 					local dust = E:create_entity("fx_tower_buy_dust")
 
 					dust.pos.x, dust.pos.y = ne.pos.x, ne.pos.y + 10
-					dust.render.sprites[1].ts = store.tick_ts
+					dust.render.sprites[1].ts = ts
 
 					queue_insert(store, dust)
 				end
