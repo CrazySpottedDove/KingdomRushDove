@@ -6745,7 +6745,11 @@ function scripts.mod_heal_on_damage.update(this, store)
 
 		if has_damaged then
 			target.track_damage.damaged = {}
-			U.heal(target, heal_total)
+			if this.heal_overflow_factor then
+				U.heal_with_overflow(target, heal_total, this.heal_overflow_factor)
+			else
+				U.heal(target, heal_total)
+			end
 
 			if this.heal_bans then
 				local mods = U.find_modifiers_with_flags(this, this.heal_bans)
