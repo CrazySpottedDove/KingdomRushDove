@@ -3872,7 +3872,7 @@ scripts.tower_dwaarp = {
 								else
 									dvalue = random(aa.damage_min, aa.damage_max)
 								end
-								dvalue = this.tower.damage_factor * dvalue * (lava_ready and (pow_l.level + 1) or 1)
+								dvalue = this.tower.damage_factor * dvalue * (lava_ready and (pow_l.level * 0.7 + 1) or 1)
 
 								local u = UP:get_upgrade("engineer_magic_dust")
 
