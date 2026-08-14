@@ -32347,24 +32347,14 @@ function scripts.hero_builder.level_up(this, store)
 
 		local projectile = E:get_template(uc.entity)
 		local aura = E:get_template(projectile.bullet.aura)
-
 		aura.aura.damage_min = s.damage[sl]
 		aura.aura.damage_max = s.damage[sl]
-
 		local m = E:get_template(aura.aura.mod)
 
 		m.modifier.duration = s.stun_duration[sl]
 	end)
 
 	update_hp(this)
-end
-
-function scripts.hero_builder.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
-
-	this.melee.order = U.attack_order(this.melee.attacks)
-
-	return true
 end
 
 function scripts.hero_builder.update(this, store)
@@ -32374,26 +32364,8 @@ function scripts.hero_builder.update(this, store)
 	local lunch_break_attack = this.timed_attacks.list[2]
 	local demolition_man_attack = this.timed_attacks.list[3]
 	local defensive_turret_attack = this.timed_attacks.list[4]
-	local last_ts = store.tick_ts
 	local last_target
-	local last_target_ts = store.tick_ts
 	local base_speed = this.motion.max_speed
-
-	if not overtime_work_attack.disabled then
-		overtime_work_attack.ts = store.tick_ts - overtime_work_attack.cooldown
-	end
-
-	if not lunch_break_attack.disabled then
-		lunch_break_attack.ts = store.tick_ts - lunch_break_attack.cooldown
-	end
-
-	if not demolition_man_attack.disabled then
-		demolition_man_attack.ts = store.tick_ts - demolition_man_attack.cooldown
-	end
-
-	if not defensive_turret_attack.disabled then
-		defensive_turret_attack.ts = store.tick_ts - defensive_turret_attack.cooldown
-	end
 
 	this.health_bar.hidden = false
 	while true do
@@ -32417,19 +32389,10 @@ function scripts.hero_builder.update(this, store)
 			end
 
 			if ready_to_use_skill(this.ultimate, store, this.unit.cooldown_factor) then
-				local target = U.find_foremost_enemy_in_range_filter_off(this.pos, 200, 0, F_AREA, 0)
+				local target = find_target_at_critical_moment(this, 200, F_AREA, F_FLYING, nil, nil, true)
 
-				if target and target.pos then
-					local e = E:create_entity(this.hero.skills.ultimate.controller_name)
-
-					e.level = this.hero.skills.ultimate.level
-					e.pos = V.vclone(target.pos)
-
-					queue_insert(store, e)
-
-					this.ultimate.ts = store.tick_ts
-
-					SU.hero_gain_xp_from_skill(this, this.hero.skills.ultimate)
+				if target then
+					apply_ultimate(this, store, target.pos, "levelup")
 				else
 					this.ultimate.ts = this.ultimate.ts + 1
 				end
@@ -32438,7 +32401,7 @@ function scripts.hero_builder.update(this, store)
 			skill = this.hero.skills.overtime_work
 			a = overtime_work_attack
 
-			if not a.disabled and store.tick_ts - a.ts > a.cooldown and store.tick_ts - last_ts > a.min_cooldown then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local enemies = U.find_enemies_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
 				if not enemies or #enemies < a.min_targets then
@@ -32456,7 +32419,6 @@ function scripts.hero_builder.update(this, store)
 					end
 
 					a.ts = start_ts
-					last_ts = start_ts
 
 					SU.hero_gain_xp_from_skill(this, skill)
 
@@ -32500,7 +32462,7 @@ function scripts.hero_builder.update(this, store)
 			a = lunch_break_attack
 			skill = this.hero.skills.lunch_break
 
-			if not a.disabled and this.health.hp <= this.health.hp_max * a.lost_health and store.tick_ts - a.ts > a.cooldown and store.tick_ts - last_ts > a.min_cooldown then
+			if this.health.hp <= this.health.hp_max * a.lost_health and ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local start_ts = store.tick_ts
 
 				U.animation_start_default(this, a.animation, nil, store.tick_ts, false)
@@ -32510,7 +32472,6 @@ function scripts.hero_builder.update(this, store)
 				end
 
 				a.ts = start_ts
-				last_ts = start_ts
 
 				S:queue(a.sound, {
 					delay = fts(10)
@@ -32531,10 +32492,9 @@ function scripts.hero_builder.update(this, store)
 
 			if this.soldier.target_id and not last_target or this.soldier.target_id ~= last_target then
 				last_target = this.soldier.target_id
-				last_target_ts = store.tick_ts
 			end
 
-			if not a.disabled and store.tick_ts - a.ts > a.cooldown and store.tick_ts - last_target_ts > a.min_fight_cooldown and store.tick_ts - last_ts > a.min_cooldown then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local enemies = U.find_enemies_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
 				if not enemies or #enemies < a.min_targets then
@@ -32561,7 +32521,6 @@ function scripts.hero_builder.update(this, store)
 					end
 
 					a.ts = start_ts
-					last_ts = start_ts
 
 					SU.hero_gain_xp_from_skill(this, skill)
 
@@ -32592,7 +32551,7 @@ function scripts.hero_builder.update(this, store)
 			skill = this.hero.skills.defensive_turret
 			a = defensive_turret_attack
 
-			if not a.disabled and store.tick_ts - a.ts > a.cooldown and store.tick_ts - last_ts > a.min_cooldown then
+			if ready_to_use_skill(a, store, this.unit.cooldown_factor) then
 				local enemies = U.find_enemies_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
 
 				if not enemies or #enemies < a.min_targets then
@@ -32661,7 +32620,6 @@ function scripts.hero_builder.update(this, store)
 						end
 
 						a.ts = start_ts
-						last_ts = start_ts
 
 						SU.hero_gain_xp_from_skill(this, skill)
 
@@ -32796,27 +32754,13 @@ end
 scripts.hero_builder_ultimate = {}
 
 function scripts.hero_builder_ultimate.update(this, store)
-	local function spawn_ball(pi, spi, ni)
-		local pos = P:node_pos(pi, spi, ni)
-		local b = E:create_entity(this.entity)
-
-		b.bullet.from = V.v(pos.x, pos.y + REF_H)
-		b.bullet.to = pos
-		b.pos = V.vclone(b.bullet.from)
-		b.sound = this.sound
-
-		queue_insert(store, b)
-	end
-
-	local nearest = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
-
-	if #nearest > 0 then
-		local pi, _, ni = unpack(nearest[1])
-
-		if P:is_node_valid(pi, ni) then
-			spawn_ball(pi, 1, ni)
-		end
-	end
+	local b = E:create_entity(this.entity)
+	b.bullet.from:set(this.pos.x, this.pos.y + REF_H)
+	b.bullet.to:copy(this.pos)
+	b.bullet.damage_factor = this.damage_factor
+	b.sound = this.sound
+	b.pos:copy(b.bullet.from)
+	queue_insert(store, b)
 
 	queue_remove(store, this)
 end
@@ -32835,24 +32779,7 @@ function scripts.decal_hero_builder_ultimate_projectile.update(this, store)
 		coroutine.yield()
 	end
 
-	local targets = U.find_targets_in_range(store.entities, b.to, 0, b.damage_radius, b.damage_flags, b.damage_bans)
-
-	if targets then
-		for _, target in ipairs(targets) do
-			local d = E.assign_damage(b.damage_type, b.damage_max, this.id, target.id)
-
-			queue_damage(store, d)
-
-			if b.mod then
-				local mod = E:create_entity(b.mod)
-
-				mod.modifier.target_id = target.id
-				mod.modifier.source_id = this.id
-
-				queue_insert(store, mod)
-			end
-		end
-	end
+	this.pos:copy(b.to)
 
 	local shake = E:create_entity("aura_screen_shake")
 
@@ -32862,13 +32789,10 @@ function scripts.decal_hero_builder_ultimate_projectile.update(this, store)
 
 	queue_insert(store, shake)
 
-	if b.aura then
-		local aura = E:create_entity(b.aura)
-
-		aura.pos = V.vclone(b.to)
-
-		queue_insert(store, aura)
-	end
+	local aura = E:create_entity(b.aura)
+	aura.pos = V.vclone(b.to)
+	aura.aura.damage_factor = b.damage_factor
+	queue_insert(store, aura)
 
 	SU.insert_sprite(store, this.bullet.arrive_decal, this.pos)
 	queue_remove(store, this)

@@ -659,7 +659,8 @@ local heroes = {
 		},
 		ultimate = {
 			radius = 80,
-			cooldown = {40, 40, 40, 40},
+			-- cooldown = {40, 40, 40, 40},
+			cooldown = {5, 5, 5, 5},
 			stun_duration = {2, 2, 2, 2},
 			damage = {120, 180, 240, 300},
 			damage_type = DAMAGE_AGAINST_ARMOR
