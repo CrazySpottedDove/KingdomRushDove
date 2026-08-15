@@ -23316,7 +23316,7 @@ tt.render.sprites[1].name = "run"
 tt.render.sprites[1].scale = v(1.2, 1.2)
 tt.render.sprites[1].anchor.y = 0.13
 tt.render.sprites[1].z = Z_OBJECTS
-tt.render.sprites[1].sort_y_offset = 0
+tt.render.sprites[1].sort_y_offset = -2
 
 -- 1技能 自爆机器人
 tt = RT("bullet_tramin_robot", "bomb")
@@ -23338,7 +23338,7 @@ tt = RT("fx_explosion_tramin_robot", "fx")
 tt.render.sprites[1].name = "hero_tramin_bombot_landing"
 tt.render.sprites[1].anchor.y = 0.13
 tt.render.sprites[1].z = Z_OBJECTS
-tt.render.sprites[1].sort_y_offset = 0
+tt.render.sprites[1].sort_y_offset = -2
 
 tt = RT("aura_bomb_tramin_skill1", "aura_rabbit_kamihare")
 tt.aura.damage_min = 110
@@ -23359,7 +23359,7 @@ tt.render.sprites[1].offset = v(0, 0)
 tt.render.sprites[1].scale = v(1, 1)
 tt.render.sprites[1].anchor.y = 0.13
 tt.render.sprites[1].z = Z_OBJECTS
-tt.render.sprites[1].sort_y_offset = 0
+tt.render.sprites[1].sort_y_offset = -2
 
 -- 4技能 火箭弹
 tt = RT("missle_tramin", "bullet")
