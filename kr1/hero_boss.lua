@@ -690,11 +690,9 @@ tt = RT("hero_boss", "enemy")
 tt.render.sprites[1].angles = {}
 tt.render.sprites[1].angles.walk = {"running"}
 tt.render.sprites[1].name = "idle"
-tt.enemy.gold = 0
 tt.enemy.lives_cost = 5
 tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
 tt.health_bar.offset = v(0, ady(60))
-tt.vis.flags = F_ENEMY
 
 local function inherit_from_hero_template(new_template, old_template)
 
@@ -1110,8 +1108,6 @@ a = tt.melee.attacks[1]
 a.damage_min = 14
 a.damage_max = 16
 a.vis_flags = 0
-tt.main_script.insert = scripts.enemy_basic.insert
-tt.main_script.update = scripts.enemy_mixed.update
 tt.info.fn = scripts.enemy_basic.get_info
 
 tt = RT("arrow_eb_alleria", "arrow")
@@ -1199,7 +1195,6 @@ tt.main_script.insert = function(this, store)
 	return scripts.arrow.insert(this, store)
 end
 tt = inherit_from_soldier_template("enemy_elf", "soldier_elf")
-tt.main_script.update = scripts.enemy_mixed.update
 a = tt.melee.attacks[1]
 a.mod = "mod_enemy_elf_bleed"
 a = tt.ranged.attacks[1]
@@ -1231,7 +1226,6 @@ tt.bullet.damage_max = 95
 tt = RT("mod_enemy_elf_bleed", "mod_blood")
 tt.dps.damage_max = 20
 tt.dps.damage_min = 20
-tt.dps.damage_every = 1
 tt.modifier.allows_duplicate = true
 tt = inherit_from_soldier_template("enemy_blade", "soldier_blade")
 tt.dodge.chance = 0.3
@@ -1440,7 +1434,6 @@ end
 tt.render.sprites[1].alpha = 180
 tt = inherit_from_soldier_template("enemy_forest", "soldier_forest")
 tt.ranged.attacks[1].disabled = true
-tt.ranged.attacks[2].disabled = nil
 tt.ranged.attacks[2].bullet = "spear_enemy_forest_oak"
 tt.timed_attacks.list[1].cooldown = tt.timed_attacks.list[1].cooldown * 2
 tt.timed_attacks.list[1].vis_bans = F_FRIEND
@@ -1943,7 +1936,6 @@ end
 tt = RT("aura_eb_10yr_fireball", "aura_10yr_fireball")
 tt.aura.entity = "fireball_eb_10yr"
 tt.aura.loops = 5
-tt.aura.vis_flags = F_RANGED
 tt.aura.vis_bans = F_FLYING
 tt.main_script.update = function(this, store)
 	local start_y = store.visible_coords and store.visible_coords.top or REF_H
@@ -2176,12 +2168,10 @@ tt.modifier.vis_bans = F_FLYING
 
 tt = RT("eb_gerald_strong", "eb_gerald")
 tt.health.hp_max = 1600
-tt.enemy.gold = 100
 tt.enemy.lives_cost = 3
 
 tt = RT("eb_alleria_strong", "eb_alleria")
 tt.health.hp_max = 1600
-tt.enemy.gold = 100
 tt.enemy.lives_cost = 3
 a = tt.melee.attacks[1]
 a.damage_max = 100
@@ -2192,7 +2182,6 @@ a = tt.ranged.attacks[2]
 a.bullet = "arrow_multishot_eb_alleria_strong"
 
 tt = RT("arrow_eb_alleria_strong", "arrow_eb_alleria")
-tt.bullet.flight_time = fts(15)
 tt.bullet.damage_max = 60
 tt.bullet.damage_min = 40
 
@@ -2219,17 +2208,14 @@ tt.ranged.attacks[2].bullet = "spear_enemy_forest_oak_strong"
 tt = RT("spear_enemy_forest_oak_strong", "spear_enemy_forest_oak")
 tt.bullet.damage_max = 640
 tt.bullet.damage_min = 640
-tt.bullet.damage_inc = 0
 
 tt = RT("eb_10yr_strong", "eb_10yr")
 tt.health.hp_max = 1600
 tt.enemy.gold = 150
-tt.enemy.lives_cost = 5
 
 tt = inherit_from_soldier_template("enemy_sand_warrior", "soldier_sand_warrior")
 local sand_warrior = E:get_template("soldier_sand_warrior")
 tt.health.hp_max = tt.health.hp_max + sand_warrior.health.hp_inc * 3
-tt.main_script.update = scripts.enemy_mixed.update
 
 tt = inherit_from_hero_template("eb_alric", "hero_alric")
 local alric = E:get_template("hero_alric")

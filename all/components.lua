@@ -252,7 +252,6 @@ particle_system.loop = true
 particle_system.name = nil
 particle_system.names = nil
 particle_system.particle_lifetime = {0.9, 1}
-particle_system.scale_same_aspect = true
 particle_system.scale_var = nil
 particle_system.scales_x = nil
 particle_system.scales_y = nil

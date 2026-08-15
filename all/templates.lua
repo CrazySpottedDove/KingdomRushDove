@@ -94,18 +94,15 @@ tt = E:register_t("decal_delayed_click_play", "decal")
 E:add_comps(tt, "main_script", "delayed_play", "ui")
 tt.render.sprites[1].loop = false
 tt.main_script.update = scripts.delayed_play.update
-tt.ui.can_click = true
 
 tt = E:register_t("decal_click_play", "decal")
 E:add_comps(tt, "main_script", "click_play", "ui")
 tt.render.sprites[1].loop = false
 tt.main_script.update = scripts.click_play.update
-tt.ui.can_click = true
 
 tt = E:register_t("decal_click_pause", "decal")
 E:add_comps(tt, "main_script", "ui")
 tt.main_script.update = scripts.click_pause.update
-tt.ui.can_click = true
 
 tt = E:register_t("decal_sequence", "decal")
 E:add_comps(tt, "main_script", "sequence")
@@ -179,8 +176,6 @@ tt = E:register_t("entity_marker_controller")
 E:add_comps(tt, "main_script")
 tt.main_script.insert = scripts.entity_marker_controller.insert
 tt.main_script.update = scripts.entity_marker_controller.update
-tt.target = nil
-tt.done = nil
 
 -- banned for no assets
 tt = E:register_t("clickable_hover_controller")
@@ -194,8 +189,6 @@ tt.render.sprites[1].draw_order = -1
 tt.tween.props[1].keys = {{0, HOVER_PULSE_ALPHA_MAX_INGAME}, {HOVER_PULSE_PERIOD * 0.5, HOVER_PULSE_ALPHA_MIN_INGAME}, {HOVER_PULSE_PERIOD, HOVER_PULSE_ALPHA_MAX_INGAME}}
 tt.tween.props[1].loop = true
 tt.tween.remove = false
-tt.target = nil
-tt.done = nil
 
 tt = E:register_t("decal_rally_range", "decal")
 tt.actual_radius = 137
@@ -327,7 +320,6 @@ tt.main_script.insert = scripts.bolt_enemy.insert
 tt.main_script.update = scripts.bolt_enemy.update
 tt.bullet.pop = nil
 tt.bullet.pop_conds = nil
-tt.bullet.damage_type = DAMAGE_MAGICAL
 
 local fx = E:register_t("fx")
 E:add_comps(fx, "pos", "render", "timed")
@@ -489,13 +481,11 @@ E:add_comps(modifier, "pos", "modifier", "sound_events", "main_script")
 
 tt = E:register_t("mod_blood", "modifier")
 E:add_comps(tt, "dps")
-tt.modifier.level = 1
 tt.modifier.duration = 3
 tt.modifier.vis_flags = F_BLOOD
 tt.dps.damage_min = 10
 tt.dps.damage_max = 10
 tt.dps.damage_inc = 15
-tt.dps.damage_every = 1
 tt.dps.damage_type = DAMAGE_TRUE
 tt.dps.fx = "fx_bleeding"
 tt.dps.fx_target_flip = true
@@ -599,10 +589,8 @@ tt.modifier.replaces_lower = false
 tt.modifier.resets_same = false
 tt.modifier.type = MOD_TYPE_TELEPORT
 tt.nodeslimit = 10
-tt.delay_start = nil
 tt.hold_time = 0.3
 tt.delay_end = nil
-tt.fx_start = nil
 tt.fx_end = nil
 tt.damage_base = 0
 tt.damage_inc = 0
@@ -644,7 +632,6 @@ lava.main_script.update = scripts.aura_apply_mod.update
 tt = E:register_t("tunnel", "aura")
 E:add_comps(tt, "tunnel")
 tt.main_script.update = scripts.tunnel.update
-tt.tunnel.speed_factor = 2
 
 tt = E:register_t("tunnel_KR5", "tunnel")
 tt.main_script.insert = scripts.tunnel_KR5.insert
@@ -674,7 +661,6 @@ ps_power_fireball.particle_system.alphas = {255, 0}
 ps_power_fireball.particle_system.scales_x = {1, 2.5}
 ps_power_fireball.particle_system.scales_y = {1, 2.5}
 ps_power_fireball.particle_system.scale_var = {0.4, 0.9}
-ps_power_fireball.particle_system.scale_same_aspect = false
 ps_power_fireball.particle_system.emit_spread = math.pi
 ps_power_fireball.particle_system.emission_rate = 60
 
@@ -692,13 +678,11 @@ ps_water_trail.particle_system.z = Z_OBJECTS
 tt = E:register_t("ps_missile")
 E:add_comps(tt, "pos", "particle_system")
 tt.particle_system.name = "particle_smokelet"
-tt.particle_system.animated = false
 tt.particle_system.particle_lifetime = {1.6, 1.8}
 tt.particle_system.alphas = {255, 0}
 tt.particle_system.scales_x = {1, 3}
 tt.particle_system.scales_y = {1, 3}
 tt.particle_system.scale_var = {0.4, 0.95}
-tt.particle_system.scale_same_aspect = false
 tt.particle_system.emit_spread = math.pi
 tt.particle_system.emission_rate = 30
 
@@ -714,7 +698,6 @@ tt.pop_y_offset = 30
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].z = Z_EFFECTS
 tt.render.sprites[1].hidden = false
-tt.tween.remove = true
 tt.tween.props[1].name = "scale"
 tt.tween.props[1].keys = {{0, v(0.75, 0.75)}, {0.1, v(1.2, 1.2)}, {0.2, v(1, 1)}, {0.3, v(1.1, 1.1)}, {0.4, v(1, 1)}, {0.9, v(1, 1)}}
 
@@ -850,7 +833,6 @@ tt.render.sprites[2].animated = false
 tt.render.sprites[2].name = "line_white_dotted"
 tt.render.sprites[2].anchor.x = 0
 tt.render.sprites[2].scale = vv(scale_scale)
-tt.tower_id = nil
 tt.image_width = 180
 tt.editor_script.update = scripts.editor_rally_point.update
 tt.editor_script.remove = scripts.editor_rally_point.remove
@@ -914,9 +896,6 @@ anchor_y = 0.17
 tt.health.dead_lifetime = 10
 tt.health.hp_max = 50
 tt.health_bar.offset = v(0, 25.16)
-tt.health_bar.type = HEALTH_BAR_SIZE_SMALL
-tt.idle_flip.chance = 0.4
-tt.idle_flip.cooldown = 5
 tt.info.fn = scripts.soldier_barrack.get_info
 tt.info.portrait = "info_portraits_soldiers_0001"
 tt.info.random_name_count = 40
@@ -1010,7 +989,6 @@ tt = E:register_t("mega_spawner")
 E:add_comps(tt, "main_script", "editor", "editor_script")
 tt.main_script.insert = scripts.mega_spawner.insert
 tt.main_script.update = scripts.mega_spawner.update
-tt.manual_wave = nil
 tt.interrupt = false
 tt.editor_script.insert = scripts.editor_mega_spawner.insert
 tt.editor_script.remove = scripts.editor_mega_spawner.remove
@@ -1070,13 +1048,9 @@ tt.aura.damage_type = DAMAGE_PHYSICAL
 tt.aura.vis_flags = bor(F_MOD)
 tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
 tt.render.sprites[1].name = "fireball_vapor"
-tt.render.sprites[1].animated = true
-tt.render.sprites[1].z = Z_OBJECTS
 tt.render.sprites[1].sort_y_offset = -2
 tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}, {"this.aura.duration-0.5", 255}, {"this.aura.duration", 0}}
-tt.tween.props[1].loop = false
-tt.tween.props[1].sprite_id = 1
 
 tt = E:register_t("power_scorched_earth", "power_scorched_water")
 tt.render.sprites[1].name = "decal_scorched_earth_base"
@@ -1093,7 +1067,6 @@ tt.tween.props[2].keys = {{0, 0}, {0.5, 255}, {1, 0}}
 
 tt = E:register_t("mod_health_damage_factor_inc", "modifier")
 tt.main_script.insert = scripts.mod_health_damage_factor_inc.insert
-tt.main_script.update = nil
 tt.modifier.health_damage_factor_inc = 0.01
 
 tt = E:register_t("power_reinforcements_control")
@@ -1135,8 +1108,6 @@ E:add_comps(tt, "main_script")
 tt.main_script.update = scripts.controller_tower_swap.update
 tt.path_marker_entity = "decal_path_hero_movement"
 tt.swap_sound = "TowerGhostTeleport"
-tt.tower_1 = nil
-tt.tower_2 = nil
 tt.delay = 0.25
 tt.delay_empty = 0.25
 tt.fx_out = "tower_ghost_teleport_out"
