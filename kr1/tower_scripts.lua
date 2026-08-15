@@ -1738,10 +1738,32 @@ scripts.tower_wild_magus = {
 						U.y_wait_unconditional(store, wa.cast_time)
 
 						-- 额外探查 25 范围，减少目标数浪费现象
-						enemy, enemies = U.find_foremost_enemy_in_range_filter_on(tpos, a.range + 25, false, wa.vis_flags, wa.vis_bans, U.enemy_is_silent_target)
+						enemy, enemies = U.find_foremost_enemy_in_range_filter_on(tpos, a.range, false, wa.vis_flags, wa.vis_bans, U.enemy_is_silent_target)
 
 						if enemies then
-							for i = 1, math.min(#enemies, pow_w.target_count[pow_w.level]) do
+							local count = #enemies
+							while count < pow_w.target_count[pow_w.level] do
+								local _, extra_enemies = U.find_foremost_enemy_in_range_filter_on(enemies[#enemies].pos, 100, nil, wa.vis_flags, wa.vis_bans, function(e)
+									return not table.arraycontains(enemies, e) and U.enemy_is_silent_target(e)
+								end)
+								if not extra_enemies then
+									_, extra_enemies = U.find_foremost_enemy_in_range_filter_on(enemies[#enemies].pos, 100, nil, wa.vis_flags, wa.vis_bans, function(e)
+										return not table.arraycontains(enemies, e)
+									end)
+								end
+								if extra_enemies then
+									for i = 1, #extra_enemies do
+										enemies[#enemies + 1] = extra_enemies[i]
+										count = count + 1
+										if count >= pow_w.target_count[pow_w.level] then
+											break
+										end
+									end
+								else
+									break
+								end
+							end
+							for i = 1, count do
 								local target = enemies[i]
 								local mod = E:create_entity(wa.spell)
 
