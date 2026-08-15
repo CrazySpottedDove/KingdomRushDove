@@ -96,6 +96,14 @@ function animation_db:load()
 	self.loaded = true
 end
 
+function animation_db:has_animation(animation_name)
+	return self.db[animation_name] ~= nil
+end
+
+function animation_db:animation_duration(animation_name)
+	return self.db[animation_name][1] / self.fps
+end
+
 -- 完成从动画名称到具体帧名（如soldier_0001）的转换
 function animation_db:fn(animation_name, time_offset, loop, fps)
 	local a = self.db[animation_name]

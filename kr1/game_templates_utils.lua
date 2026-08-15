@@ -54,3 +54,11 @@ function fn_group(...)
 		return true
 	end
 end
+
+function update_node_prediction(a)
+	if a.check_target_before_shot then
+		a.node_prediction = E:get_template(a.bullet).bullet.flight_time
+	else
+		a.node_prediction = a.shoot_time + E:get_template(a.bullet).bullet.flight_time
+	end
+end

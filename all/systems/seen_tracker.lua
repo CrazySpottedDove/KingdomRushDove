@@ -20,8 +20,6 @@ function M.register(sys)
 		if (entity.tower or entity.enemy) and not entity.ignore_seen_tracker then
 			U.mark_seen(store, entity.template_name)
 		end
-
-	-- return true
 	end
 
 	function sys.seen_tracker:on_update(dt, ts, store)

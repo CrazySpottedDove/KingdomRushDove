@@ -24,16 +24,12 @@ function M.register(sys)
 		if entity.enemy then
 			store.enemy_spatial_index.insert_entity(entity)
 		end
-
-	-- return true
 	end
 
 	function sys.spatial_index:on_remove_unconditional(entity, store)
 		if entity.enemy then
 			store.enemy_spatial_index.remove_entity(entity)
 		end
-
-		return true
 	end
 
 	function sys.spatial_index:on_update(dt, ts, store)

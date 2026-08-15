@@ -19,8 +19,6 @@ function M.register(sys)
 				table.insert(store.event_handlers[ev.name], ev)
 			end
 		end
-
-		return true
 	end
 
 	function sys.events:on_remove_unconditional(entity, store)
@@ -31,8 +29,6 @@ function M.register(sys)
 				end
 			end
 		end
-
-	-- return true
 	end
 end
 

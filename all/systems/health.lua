@@ -720,10 +720,6 @@ function M.register(sys)
 	end
 
 	function sys.health:on_insert_unconditional(entity, store)
-		if entity.health and not entity.health.hp then
-			entity.health.hp = entity.health.hp_max
-		end
-
 		if entity.health then
 			if not entity.health.hp then
 				entity.health.hp = entity.health.hp_max
@@ -734,8 +730,6 @@ function M.register(sys)
 				end
 			end
 		end
-
-		return true
 	end
 
 	function sys.health.on_damage_applied(store, d, e)

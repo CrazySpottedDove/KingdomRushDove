@@ -1839,7 +1839,6 @@ tt.modifier.duration = 3
 tt.modifier.allows_duplicates = true
 tt.main_script.insert = scripts.mod_track_target.insert
 tt.main_script.update = scripts.mod_track_target.update
-tt.main_script.remove = scripts.mod_track_target.remove
 
 -- 死灵法师_END
 -- 红法 BEGIN

@@ -57,8 +57,6 @@ function M.register(sys)
 				end
 			end
 		end
-
-	-- return true
 	end
 end
 

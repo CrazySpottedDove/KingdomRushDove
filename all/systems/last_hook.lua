@@ -85,8 +85,6 @@ function M.register(sys)
 		for _, hook in pairs(d.last_hooks.on_insert) do
 			hook(e, d)
 		end
-
-		return true
 	end
 
 	function sys.last_hook:on_remove_unconditional(e, d)
@@ -155,8 +153,6 @@ function M.register(sys)
 		if e._applied_mods then
 			e._applied_mods = nil
 		end
-
-	-- return true
 	end
 end
 

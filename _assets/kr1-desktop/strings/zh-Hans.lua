@@ -6733,5 +6733,8 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	HERO_MORTEMIS_GOLEM_NAME = "僵尸巨怪",
 	HERO_JIGOU_NAME = "极狗",
 	HERO_JIGOU_DESCRIPTION = "这头凶蛮可怕的野兽原本被囚禁在北国冰山，从沉睡中醒来只为向维兹南俯首听命。它会按照主人的号令，毫不容情地粉碎一切敌人。",
-	HERO_JIGOU_SPECIAL = "雪球，霜冻吐息，猛击大地，冰川形态，冰区，雪人血"
+	HERO_JIGOU_SPECIAL = "雪球，霜冻吐息，猛击大地，冰川形态，冰区，雪人血",
+	HERO_TRAMIN_NAME = "特拉敏大师",
+	HERO_TRAMIN_DESCRIPTION = "头脑机敏绝伦的特拉敏，曾是好战分子们那些绝妙发明背后的主创，现在俨然已经成为维兹南的部队中最不可或缺的核心人物之一。充裕的研究经费让他得以肆意发挥自己的天赋，而他的成果也完全对得起这笔投入。",
+	HERO_TRAMIN_SPECIAL = "自爆机器人，饮硝狂奔，闪光弹，火箭弹幕，疯狂炸弹人，火箭跳"
 }

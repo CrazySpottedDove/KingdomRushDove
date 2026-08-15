@@ -8435,7 +8435,6 @@ tt = RT("fx_lighting_arivan_ultimate_hit", "modifier")
 AC(tt, "render")
 tt.render.sprites[1].name = "arivan_twister_ray_hit"
 tt.main_script.insert = scripts.mod_track_target.insert
-tt.main_script.remove = scripts.mod_track_target.remove
 tt.main_script.update = scripts.mod_track_target.update
 tt.modifier.duration = fts(12)
 
@@ -8677,7 +8676,6 @@ tt.bullet.min_speed = 420
 tt.bullet.particles_name = "ps_missile_phoenix"
 tt.bullet.retarget_range = math.huge
 tt.bullet.speed_var = 60
-tt.bullet.turn_helicoidal_factor = 2
 tt.bullet.turn_speed = 10 * math.pi / 180 * 30
 tt.bullet.vis_bans = 0
 tt.bullet.vis_flags = F_RANGED
@@ -11055,7 +11053,6 @@ tt = RT("mod_hero_hunter_skill_shoot_around_hit_fx", "modifier")
 AC(tt, "render")
 tt.render.sprites[1].name = "shothit_run"
 tt.main_script.insert = scripts.mod_track_target.insert
-tt.main_script.remove = scripts.mod_track_target.remove
 tt.main_script.update = scripts.mod_track_target.update
 tt.modifier.duration = fts(10)
 
@@ -11065,7 +11062,6 @@ AC(tt, "render", "tween")
 tt.render.sprites[1].name = "mistystep_clone1_run"
 tt.render.sprites[1].anchor = vec_2(0.5, 0.28)
 tt.main_script.insert = scripts.mod_track_target.insert
-tt.main_script.remove = scripts.mod_track_target.remove
 tt.main_script.update = scripts.mod_hero_hunter_ricochet_attack.update
 tt.modifier.duration = fts(8)
 tt.modifier.use_mod_offset = true
@@ -12166,7 +12162,6 @@ AC(tt, "render", "tween")
 tt.modifier.duration = fts(43)
 tt.main_script.insert = scripts.mod_track_target.insert
 tt.main_script.update = scripts.mod_hero_venom_eat_enemy_regen.update
-tt.main_script.remove = scripts.mod_track_target.remove
 tt.render.sprites[1].prefix = "hero_venom_heal_fx_back"
 tt.render.sprites[1].name = "idle"
 tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
@@ -15527,7 +15522,6 @@ E:add_comps(tt, "render")
 tt.render.sprites[1].name = "hero_nyru_leaf_whirlwind_hit"
 tt.render.sprites[1].sort_y_offset = -1
 tt.main_script.insert = scripts.mod_track_target.insert
-tt.main_script.remove = scripts.mod_track_target.remove
 tt.main_script.update = scripts.mod_track_target.update
 tt.modifier.duration = fts(20)
 
@@ -16832,7 +16826,6 @@ tt = RT("mod_hero_builder_demolition_man_hit_fx", "modifier")
 AC(tt, "render")
 tt.render.sprites[1].name = "hero_obdul_skill_3_hit"
 tt.main_script.insert = scripts.mod_track_target.insert
-tt.main_script.remove = scripts.mod_track_target.remove
 tt.main_script.update = scripts.mod_track_target.update
 tt.modifier.duration = fts(7)
 
@@ -23129,3 +23122,344 @@ tt.render.sprites[2].name = "hero_jigou_ultimate_ice_shards"
 tt.render.sprites[2].scale = v(1.5, 1.5)
 tt.render.sprites[2].hide_after_runs = 1
 tt.render.sprites[2].anchor.y = 0.24
+
+-- ======== 特拉敏大师 ========
+tt = RT("bullet_tramin", "bomb")
+tt.bullet.flight_time = fts(18)
+tt.bullet.hit_fx = "fx_explosion_tramin"
+tt.bullet.hit_decal = nil
+tt.bullet.damage_min = 40
+tt.bullet.damage_max = 40
+tt.bullet.damage_radius = 36
+tt.bullet.xp_gain_factor = 1.6
+tt.bullet.use_hit_offset = true
+tt.render.sprites[1].name = "hero_tramin_bomb_proyectile"
+
+-- 3技能 闪光弹
+tt = RT("bullet_tramin_flashlight", "bomb")
+tt.bullet.flight_time = fts(18)
+tt.bullet.hit_fx = "fx_explosion_tramin_flashlight"
+tt.bullet.hit_decal = nil
+tt.bullet.hit_fx_water = nil
+tt.bullet.damage_radius = 65
+tt.bullet.mod = "mod_tramin_stun"
+tt.bullet.pop = nil
+tt.bullet.use_hit_offset = true
+tt.render.sprites[1].name = "hero_tramin_bombot_proyectile"
+
+tt = RT("hero_tramin", "hero")
+AC(tt, "melee", "ranged", "timed_attacks")
+tt.melee.range = 25
+tt.health_bar.offset = v(0, 40)
+tt.health.dead_lifetime = 15
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.hero.tombstone_show_time = fts(90)
+tt.hero.skills.bombots = CC("hero_skill")
+tt.hero.skills.bombots.xp_gain = {60, 120, 180}
+tt.hero.skills.bombots.xp_level_steps = {
+	[3] = 1,
+	[6] = 2,
+	[9] = 3
+}
+tt.hero.skills.bombots.damage_min = {28, 42, 56}
+tt.hero.skills.bombots.damage_max = {52, 78, 104}
+tt.hero.skills.nitro_rush = CC("hero_skill")
+tt.hero.skills.nitro_rush.xp_gain = {100, 200, 300}
+tt.hero.skills.nitro_rush.xp_level_steps = {
+	[2] = 1,
+	[5] = 2,
+	[8] = 3
+}
+tt.hero.skills.nitro_rush.duration = {10, 16, 22}
+tt.hero.skills.flashbang = CC("hero_skill")
+tt.hero.skills.flashbang.xp_gain = {60, 120, 180}
+tt.hero.skills.flashbang.xp_level_steps = {
+	[3] = 1,
+	[6] = 2,
+	[9] = 3
+}
+tt.hero.skills.flashbang.duration = {1, 2, 3}
+tt.hero.skills.rocket_barrage = CC("hero_skill")
+tt.hero.skills.rocket_barrage.xp_gain = {80, 160, 240, 320}
+tt.hero.skills.rocket_barrage.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
+}
+tt.hero.skills.rocket_barrage.count = {2, 4, 6, 8}
+tt.hero.skills.rocket_barrage.damage_min = {25, 32, 39, 40}
+tt.hero.skills.rocket_barrage.damage_max = {46, 59, 72, 80}
+tt.hero.skills.ultimate = CC("hero_skill")
+tt.hero.skills.ultimate.controller_name = "hero_tramin_ultimate"
+tt.hero.skills.ultimate.entity_count = {4, 6, 8, 10}
+tt.hero.skills.ultimate.damage_config = {80, 120, 170, 200}
+tt.hero.skills.ultimate.xp_gain = {150, 300, 450, 600}
+tt.hero.skills.ultimate.xp_level_steps = {
+	[1] = 1,
+	[4] = 2,
+	[7] = 3,
+	[10] = 4
+}
+tt.ultimate = {
+	ts = 0,
+	cooldown = 56,
+	disabled = true
+}
+tt.hero.level_stats.armor = {0.02, 0.04, 0.06, 0.08, 0.11, 0.14, 0.16, 0.19, 0.21, 0.24}
+tt.hero.level_stats.hp_max = {180, 204, 228, 252, 276, 300, 324, 348, 372, 396}
+tt.hero.level_stats.melee_damage_min = {4, 5, 5, 6, 6, 7, 7, 8, 8, 9}
+tt.hero.level_stats.melee_damage_max = {11, 12, 13, 15, 16, 17, 19, 20, 23, 24}
+tt.hero.level_stats.ranged_damage_min = {9, 10, 11, 12, 12, 13, 14, 15, 16, 16}
+tt.hero.level_stats.ranged_damage_max = {16, 18, 20, 23, 26, 29, 32, 35, 36, 39}
+tt.regen.cooldown = 1
+tt.max_dist_walk = 160
+tt.info.hero_portrait = "kr4_hero_portraits_0005"
+tt.info.portrait = "kr4_info_portraits_heroes_0006"
+tt.main_script.update = scripts.hero_tramin.update
+tt.hero.fn_level_up = scripts.hero_tramin.level_up
+tt.motion.max_speed = 2.7 * FPS
+tt.soldier.melee_slot_offset = v(5, 0)
+tt.sound_events.change_rally_point = "group_tramin_taunt"
+tt.sound_events.death = "hero_tramin_death"
+tt.sound_events.hero_room_select = "hero_tramin_taunt_1"
+tt.sound_events.insert = "HeroPaladinTauntIntro"
+tt.sound_events.respawn = "HeroPaladinTauntIntro"
+tt.unit.marker_offset = v(0, 0)
+tt.unit.mod_offset = v(0, 20)
+tt.nav_grid.ignore_waypoints = true
+tt.flight_time = 0.9
+tt.render.sprites[1].anchor = v(0.5, 0.04)
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].prefix = "hero_tramin"
+tt.render.sprites[1].offset = v(0, -27)
+tt.render.sprites[2] = CC("sprite")
+tt.render.sprites[2].offset = v(0, 17)
+tt.render.sprites[2].animated = false
+tt.render.sprites[2].name = "hero_tramin_shadow"
+tt.render.sprites[2].scale = v(1, 1)
+tt.render.sprites[2].z = Z_DECALS + 1
+tt.melee.attacks[1] = CC("melee_attack")
+tt.melee.attacks[1].cooldown = 1
+tt.melee.attacks[1].hit_time = fts(9)
+tt.melee.attacks[1].sound = "MeleeSword"
+tt.melee.attacks[1].vis_bans = bor(F_FLYING, F_CLIFF)
+tt.melee.attacks[1].vis_flags = F_BLOCK
+tt.melee.attacks[1].xp_gain_factor = 1
+tt.ranged.attacks[1] = CC("bullet_attack")
+tt.ranged.attacks[1].cooldown = 1.5
+tt.ranged.attacks[1].min_range = 25
+tt.ranged.attacks[1].max_range = 180
+tt.ranged.attacks[1].bullet = "bullet_tramin"
+tt.ranged.attacks[1].shoot_time = fts(11)
+tt.ranged.attacks[1].check_target_before_shot = true
+update_node_prediction(tt.ranged.attacks[1])
+tt.ranged.attacks[1].bullet_start_offset = {v(-8, 24)}
+-- 1技能 自爆机器人
+tt.ranged.attacks[2] = CC("bullet_attack")
+tt.ranged.attacks[2].cooldown = 20
+tt.ranged.attacks[2].min_range = 25
+tt.ranged.attacks[2].max_range = 180
+tt.ranged.attacks[2].xp_from_skill = "bombots"
+tt.ranged.attacks[2].disabled = true
+tt.ranged.attacks[2].bullet = "bullet_tramin_robot"
+tt.ranged.attacks[2].animation = "throwBombot"
+tt.ranged.attacks[2].node_prediction = fts(35)
+tt.ranged.attacks[2].shoot_time = fts(11)
+tt.ranged.attacks[2].bullet_start_offset = {v(-8, 24)}
+-- 3技能 闪光弹
+tt.ranged.attacks[3] = CC("bullet_attack")
+tt.ranged.attacks[3].cooldown = 24
+tt.ranged.attacks[3].disabled = true
+tt.ranged.attacks[3].min_range = 25
+tt.ranged.attacks[3].max_range = 180
+tt.ranged.attacks[3].xp_from_skill = "flashbang"
+tt.ranged.attacks[3].bullet = "bullet_tramin_flashlight"
+tt.ranged.attacks[3].animation = "throwFlashbang"
+tt.ranged.attacks[3].shoot_time = fts(11)
+tt.ranged.attacks[3].bullet_start_offset = {v(-8, 24)}
+tt.ranged.attacks[3].check_target_before_shot = true
+update_node_prediction(tt.ranged.attacks[3])
+-- 4技能 火箭弹幕
+tt.timed_attacks.list[1] = CC("bullet_attack")
+tt.timed_attacks.list[1].animation_pre = "toRocketRain"
+tt.timed_attacks.list[1].animation = "RocketRain"
+tt.timed_attacks.list[1].animation_last = "RocketRain"
+tt.timed_attacks.list[1].animation_post = "outRocketRain"
+tt.timed_attacks.list[1].cooldown = 18
+tt.timed_attacks.list[1].disabled = true
+tt.timed_attacks.list[1].xp_from_skill = "rocket_barrage"
+tt.timed_attacks.list[1].bullet = "missle_tramin"
+tt.timed_attacks.list[1].start_offsets = {v(4, 40)}
+tt.timed_attacks.list[1].hit_times = {fts(3)}
+tt.timed_attacks.list[1].launch_vector = v(math.random(10, 40), math.random(30, 120))
+tt.timed_attacks.list[1].vis_flags = F_RANGED
+tt.timed_attacks.list[1].min_range = 0
+tt.timed_attacks.list[1].max_range = 375
+-- 2技能 饮硝狂奔
+tt.timed_attacks.list[2] = CC("aura_attack")
+tt.timed_attacks.list[2].animation = "drink"
+tt.timed_attacks.list[2].cooldown = 40
+tt.timed_attacks.list[2].cooldown_factor = 0.75
+tt.timed_attacks.list[2].disabled = true
+tt.timed_attacks.list[2].xp_from_skill = "nitro_rush"
+tt.timed_attacks.list[2].sound = "hero_tramin_nitro"
+tt.timed_attacks.list[2].hit_times = {fts(3)}
+tt.timed_attacks.list[2].vis_flags = F_RANGED
+tt.timed_attacks.list[2].vis_bans = bor(F_FLYING)
+tt.timed_attacks.list[2].min_range = 0
+tt.timed_attacks.list[2].max_range = 180
+
+tt = RT("fx_explosion_tramin", "fx")
+tt.render.sprites[1].prefix = "hero_tramin_basic_melee_explotion"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].scale = v(1.2, 1.2)
+tt.render.sprites[1].anchor.y = 0.13
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 0
+
+-- 1技能 自爆机器人
+tt = RT("bullet_tramin_robot", "bomb")
+tt.bullet.flight_time = fts(25)
+tt.bullet.rotation_speed = 20 * FPS * math.pi / 180
+tt.bullet.hit_fx = "fx_explosion_tramin_robot"
+tt.bullet.hit_decal = nil
+tt.bullet.hit_fx_water = nil
+tt.bullet.damage_min = 40
+tt.bullet.min_speed = 300
+tt.bullet.damage_max = 40
+tt.bullet.damage_radius = 40
+tt.bullet.hit_payload = "bomb_tramin_skill1"
+tt.bullet.pop = nil
+tt.render.sprites[1].name = "hero_tramin_bombot_proyectile"
+tt.sound_events.hit = nil
+
+tt = RT("fx_explosion_tramin_robot", "fx")
+tt.render.sprites[1].name = "hero_tramin_bombot_landing"
+tt.render.sprites[1].anchor.y = 0.13
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 0
+
+tt = RT("aura_bomb_tramin_skill1", "aura_rabbit_kamihare")
+tt.aura.damage_min = 110
+tt.aura.damage_max = 155
+tt.aura.radius = 30
+tt.aura.damage_type = DAMAGE_EXPLOSION
+tt.sound_events.insert = "BombExplosionSound"
+
+tt = RT("mod_tramin_stun", "mod_stun")
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.vis_bans = bor(F_FLYING, F_BOSS)
+tt.modifier.duration = 1
+
+tt = RT("fx_explosion_tramin_flashlight", "fx")
+tt.render.sprites[1].prefix = "hero_tramin_flashbang_explotion"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].offset = v(0, 0)
+tt.render.sprites[1].scale = v(1, 1)
+tt.render.sprites[1].anchor.y = 0.13
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 0
+
+-- 4技能 火箭弹
+tt = RT("missle_tramin", "bullet")
+tt.render.sprites[1].name = "hero_tramin_misil_proyectile"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].loop = true
+tt.render.sprites[1].flip_x = true
+tt.bullet.damage_type = DAMAGE_EXPLOSION
+tt.bullet.min_speed = 300
+tt.bullet.max_speed = 600
+tt.bullet.turn_speed = 10 * math.pi / 180 * 30
+tt.bullet.acceleration_factor = 0.2
+tt.bullet.hit_fx = "hero_tramin_tnt_proyectile_hit"
+tt.bullet.hit_fx_air = "hero_tramin_tnt_proyectile_hit"
+tt.bullet.hit_fx_water = "fx_explosion_water"
+tt.bullet.damage_min = 25
+tt.bullet.damage_max = 46
+tt.bullet.damage_radius = 40
+tt.bullet.vis_flags = F_RANGED
+tt.bullet.damage_flags = F_AREA
+tt.bullet.particles_name = "ps_missile_tramin"
+tt.bullet.retarget_range = 99999
+tt.main_script.insert = scripts.missile.insert
+tt.main_script.update = scripts.missile.update
+tt.sound_events.insert = "RocketLaunchSound"
+tt.sound_events.hit = "BombExplosionSound"
+tt.sound_events.hit_water = "RTWaterExplosion"
+
+tt = RT("ps_missile_tramin")
+AC(tt, "pos", "particle_system")
+tt.particle_system.name = "hero_tramin_misil_proyectile_particle_run"
+tt.particle_system.animated = true
+tt.particle_system.animation_fps = 50
+tt.particle_system.loop = false
+tt.particle_system.alphas = {255, 0}
+tt.particle_system.particle_lifetime = {fts(8), fts(8)}
+tt.particle_system.track_rotation = true
+tt.particle_system.scales_x = {1, 1.25}
+tt.particle_system.scales_y = {1, 1.25}
+tt.particle_system.emission_rate = 30
+
+tt = RT("ps_jatpack_tramin", "ps_missile_tramin")
+tt.particle_system.name = "hero_tramin_jetpack_particle_run"
+
+tt = RT("hero_tramin_tnt_proyectile_hit", "fx")
+tt.render.sprites[1].prefix = "hero_tramin_tnt_proyectile_hit"
+tt.render.sprites[1].name = "run"
+tt.render.sprites[1].anchor.y = 0.13
+tt.render.sprites[1].z = Z_OBJECTS
+tt.render.sprites[1].sort_y_offset = 0
+
+tt = RT("mod_tramin_drink", "modifier")
+AC(tt, "render")
+tt.modifier.duration = -1
+tt.modifier.use_mod_offset = false
+tt.main_script.insert = scripts.mod_track_target.insert
+tt.main_script.update = scripts.mod_track_target.update
+tt.render.sprites[1].name = "hero_tramin_drink_decal"
+tt.render.sprites[1].z = Z_DECALS
+
+-- 大招 疯狂炸弹人
+tt = RT("hero_tramin_ultimate")
+AC(tt, "pos", "main_script", "sound_events")
+tt.cooldown = 56
+tt.main_script.update = scripts.hero_tramin_ultimate.update
+tt.bullet = "box_tramin"
+tt.bullet_start_offset = v(35, 115)
+tt.payload = "aura_box_tramin"
+tt.range_nodes_max = 200
+tt.range_nodes_min = 10
+tt.max_path_dist = 50
+tt.vis_flags = bor(F_RANGED, F_BLOCK)
+tt.vis_bans = F_FLYING
+
+tt = RT("box_tramin", "bomb")
+tt.bullet.damage_type = DAMAGE_NONE
+tt.bullet.flight_time = fts(30)
+tt.bullet.hide_radius = nil
+tt.bullet.pop = nil
+tt.bullet.hit_fx = nil
+tt.bullet.hit_decal = nil
+tt.bullet.g = -1 / (fts(1) * fts(1))
+tt.bullet.rotation_speed = -15 * FPS * math.pi / 180
+tt.sound_events.insert = nil
+tt.render.sprites[1].name = "hero_tramin_ultimate_box_0001"
+tt.render.sprites[1].animated = false
+
+tt = RT("aura_box_tramin", "decal_scripted")
+AC(tt, "spawner", "sound_events")
+tt.render.sprites[1].anchor.y = 0.25
+tt.render.sprites[1].name = "hero_tramin_ultimate_box_open"
+tt.render.sprites[1].loop = false
+tt.spawner.entity = "bomb_tramin_ultimate"
+tt.spawner.spawn_time = fts(10)
+tt.spawner.count = 3
+tt.main_script.update = scripts.aura_box_tramin.update
+
+tt = RT("aura_bomb_tramin_ultimate", "aura_rabbit_kamihare")
+tt.aura.damage_min = 110
+tt.aura.damage_max = 155
+tt.aura.radius = 30
+tt.aura.damage_type = DAMAGE_EXPLOSION
+tt.sound_events.insert = "BombExplosionSound"

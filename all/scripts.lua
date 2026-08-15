@@ -2367,7 +2367,6 @@ function scripts.arrow_missile.update(this, store)
 	local rot_dir = 1
 	local retarget_range = b.retarget_range or 300
 	local turn_speed = b.turn_speed or 5 * math.pi / 3
-	local turn_helicoidal_factor = b.turn_helicoidal_factor or 1.5
 	local acceleration_factor = b.acceleration_factor or 0.12
 	local min_speed = b.min_speed or 300
 	local max_speed = b.max_speed or 500
@@ -2465,7 +2464,7 @@ function scripts.arrow_missile.update(this, store)
 				end
 			end
 		else
-			target = U.find_first_enemy_in_range_filter_off(this_pos, retarget_range, b.vis_flags, b.vis_bans)
+			target = U.detect_foremost_enemy_in_range_filter_off(this_pos, retarget_range, b.vis_flags, b.vis_bans)
 		end
 
 		target_num = target_num - 1
@@ -2484,7 +2483,7 @@ function scripts.arrow_missile.update(this, store)
 				if not target or target.health and target.health.dead or band(target.vis.bans, b.vis_flags) ~= 0 then
 					local ref_pos = target and target.pos or this_pos
 
-					target = U.find_first_enemy_in_range_filter_off(ref_pos, retarget_range, b.vis_flags, b.vis_bans)
+					target = U.detect_foremost_enemy_in_range_filter_off(ref_pos, retarget_range, b.vis_flags, b.vis_bans)
 
 					if b.rot_dir_from_long_angle and target then
 						rot_dir = target.pos.x < this_pos.x and -1 or 1
@@ -2506,7 +2505,7 @@ function scripts.arrow_missile.update(this, store)
 					local dir = V.angleTo(b.speed.x, b.speed.y)
 
 					if dir > math.pi / 3 and dir < 2 * math.pi / 3 then
-						rot = rot * turn_helicoidal_factor
+						rot = rot * 2
 					end
 
 					b.speed.x, b.speed.y = V.rotate(rot, b.speed.x, b.speed.y)
@@ -3048,7 +3047,7 @@ function scripts.missile.update(this, store)
 		local ref_pos = target and target.pos or this.pos
 
 		-- target = U.find_foremost_enemy(store, ref_pos, 0, b.retarget_range, false, b.vis_flags)
-		target = U.find_first_enemy(store, ref_pos, 0, b.retarget_range, b.vis_flags, F_NONE)
+		target = U.detect_foremost_enemy_in_range_filter_off(ref_pos, b.retarget_range, b.vis_flags, F_NONE)
 	end
 
 	-- 找到了目标。就更新目标位置
@@ -3071,7 +3070,8 @@ function scripts.missile.update(this, store)
 			local ref_pos = target and target.pos or this.pos
 
 			-- target = U.find_foremost_enemy(store, ref_pos, 0, b.retarget_range, false, b.vis_flags)
-			target = U.find_first_enemy(store, ref_pos, 0, b.retarget_range, b.vis_flags, F_NONE, function(e)
+
+			target = U.detect_foremost_enemy_in_range_filter_on(ref_pos, b.retarget_range, b.vis_flags, F_NONE, function(e)
 				return not e._missile_count or e._missile_count < max_same_target_count
 			end)
 
@@ -3096,15 +3096,17 @@ function scripts.missile.update(this, store)
 			end
 		end
 
-		local d_angle = V.angleTo(b.speed.x, b.speed.y, b.to.x - this.pos.x, b.to.y - this.pos.y)
+		local d_angle = math.abs(V.angleTo(b.speed.x, b.speed.y, b.to.x - this.pos.x, b.to.y - this.pos.y))
 
-		if max_seek_angle < math.abs(d_angle) then
+		if max_seek_angle < d_angle then
 			local rot = b.turn_speed * store.tick_length * rot_dir
 			local dir = V.angleTo(b.speed.x, b.speed.y)
 
 			if dir > math.pi / 3 and dir < 2 * math.pi / 3 then
-				rot = rot * (b.turn_helicoidal_factor or 1.5)
+				rot = rot * 2
 			end
+
+			-- 当 d_angle 接近于 90 度时，容易发生导弹绕着目标旋转的情况。此时，降低导弹的速度。
 
 			b.speed.x, b.speed.y = V.rotate(rot, b.speed.x, b.speed.y)
 		else
@@ -3298,7 +3300,7 @@ function scripts.enemy_missile.update(this, store)
 			local dir = V.angleTo(b.speed.x, b.speed.y)
 
 			if dir > math.pi / 3 and dir < 2 * math.pi / 3 then
-				rot = rot * (b.turn_helicoidal_factor or 1.5)
+				rot = rot * 2
 			end
 
 			b.speed.x, b.speed.y = V.rotate(rot, b.speed.x, b.speed.y)

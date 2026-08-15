@@ -753,10 +753,7 @@ end
 ---@param g number 重力加速度
 ---@return number x坐标, number y坐标
 function SU.position_in_parabola(t, from, speed, g)
-	local x = speed.x * t + from.x
-	local y = g * t * t * 0.5 + speed.y * t + from.y
-
-	return x, y
+	return speed.x * t + from.x, g * t * t * 0.5 + speed.y * t + from.y
 end
 
 ---抛物线y坐标

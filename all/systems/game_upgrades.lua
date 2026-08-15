@@ -98,8 +98,6 @@ function M.register(sys)
 			dps_wicked_sister.damage_min = dps_wicked_sister._orig_damage_min * f
 			dps_wicked_sister.damage_max = dps_wicked_sister._orig_damage_max * f
 		end
-
-	-- return true
 	end
 
 	function sys.game_upgrades:on_remove_unconditional(entity, store)

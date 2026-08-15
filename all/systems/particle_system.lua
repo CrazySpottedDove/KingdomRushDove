@@ -71,8 +71,6 @@ function M.register(sys)
 
 			store.particle_systems[entity.id] = nil
 		end
-
-		return true
 	end
 
 	function sys.particle_system:on_render_update(dt, ts, store)

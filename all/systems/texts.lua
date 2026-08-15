@@ -41,8 +41,6 @@ function M.register(sys)
 				entity.render.sprites[sprite_id].animated = false
 			end
 		end
-
-		return true
 	end
 
 	function sys.texts:on_remove_unconditional(entity, store)
@@ -56,8 +54,6 @@ function M.register(sys)
 				end
 			end
 		end
-
-		return true
 	end
 end
 

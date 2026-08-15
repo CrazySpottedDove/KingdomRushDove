@@ -3606,4 +3606,44 @@ duration = T("mod_jigou_ultimate_slow").modifier.duration
 local slow = 1 - ss("slow_factor")
 map["冰区"] = str(cooldown_str(), "极狗制造出一块布满冰雪的区域，沿敌阵路径延伸，对沿途敌人造成", damage_str(), "，并使其移动速度降低", slow * 100, "%，持续", duration, "秒。")
 
+-- 特拉敏大师
+set_hero("hero_tramin")
+
+map["火箭跳"] = str("远距离调遣时，特拉敏驱散特殊效果，并用火箭跳跃快速转移。")
+
+set_skill(h.hero.skills.bombots)
+cooldown = h.ranged.attacks[2].cooldown
+d[1].damage_min = ss("damage_min")
+d[1].damage_max = ss("damage_max")
+d[1].damage_type = T("aura_bomb_tramin_skill1").aura.damage_type
+radius = T("aura_bomb_tramin_skill1").aura.radius
+map["自爆机器人"] = str(cooldown_str(), "向敌人投掷一个自爆机器人，落地后沿路径冲向敌人并自爆，对", radius, "范围内敌人造成", damage_str(), "。")
+
+set_skill(h.hero.skills.nitro_rush)
+cooldown = h.timed_attacks.list[2].cooldown
+duration = ss("duration")
+factor = 1 - h.timed_attacks.list[2].cooldown_factor
+map["饮硝狂奔"] = str(cooldown_str(), "特拉敏喝下一杯硝酸甘油，使自身攻速加快", factor * 100, "%，普攻冷却额外缩短一半，持续", duration, "秒。")
+
+set_skill(h.hero.skills.flashbang)
+cooldown = h.ranged.attacks[3].cooldown
+duration = ss("duration")
+map["闪光弹"] = str(cooldown_str(), "向敌人掷出一枚闪光弹，令其眩晕", duration, "秒，并造成普攻伤害。")
+
+set_skill(h.hero.skills.rocket_barrage)
+cooldown = h.timed_attacks.list[1].cooldown
+count = ss("count")
+d[1].damage_min = ss("damage_min")
+d[1].damage_max = ss("damage_max")
+d[1].damage_type = T("missle_tramin").bullet.damage_type
+map["火箭弹幕"] = str(cooldown_str(), "向敌人发射", count, "枚追踪导弹，每枚造成", damage_str(), "。")
+
+set_skill(h.hero.skills.ultimate)
+cooldown = h.ultimate.cooldown
+count = ss("entity_count")
+d[1].damage_min = ss("damage_config")
+d[1].damage_max = ss("damage_config")
+d[1].damage_type = T("aura_bomb_tramin_ultimate").aura.damage_type
+map["疯狂炸弹人"] = str(cooldown_str(), "投下一个能造出炸弹的盒子，放出", count, "颗炸弹沿路径前进，每颗爆炸对敌人造成", damage_str(), "。")
+
 return H

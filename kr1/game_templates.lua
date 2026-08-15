@@ -4365,7 +4365,6 @@ AC(tt, "sound_events")
 tt.render.sprites[1].prefix = "bomb_wilbur"
 tt.render.sprites[1].anchor.y = 0.11666666666666667
 tt.render.sprites[1].random_ts = 0.5
-tt.main_script.update = scripts.rabbit_kamihare.update
 tt.motion.max_speed = 2 * FPS
 tt.duration = 100
 tt.custom_attack.max_range = 30
@@ -4375,6 +4374,47 @@ tt.custom_attack.aura = "aura_bomb_wilbur"
 tt.custom_attack.hit_fx = nil
 tt.sound_events.insert = "ElvesHeroGyroBombsMarch"
 tt.sound_events.remove_stop = "ElvesHeroGyroBombsMarch"
+
+-- ======== 特拉敏大师 ========
+tt = RT("bomb_tramin_skill1", "bomb_wilbur")
+tt.render.sprites[1].prefix = "hero_tramin_bombot"
+tt.render.sprites[1].name = "walk"
+tt.render.sprites[1].anchor.y = 0.11666666666666667
+tt.render.sprites[1].random_ts = 0.5
+tt.render.sprites[1].angles.walk = {"walk"}
+tt.custom_attack.aura = "aura_bomb_tramin_skill1"
+tt.sound_events.insert = nil
+tt.sound_events.remove_stop = nil
+
+tt = RT("bomb_tramin_ultimate_1", "bomb_wilbur")
+tt.render.sprites[1].prefix = "hero_tramin_ultimate_bomb_1"
+tt.render.sprites[1].name = "walk"
+tt.render.sprites[1].anchor.y = 0.11666666666666667
+tt.render.sprites[1].random_ts = 0.5
+tt.render.sprites[1].angles.walk = {"walk"}
+tt.custom_attack.hit_fx = "fx_bomb_tramin_ultimate_explosion"
+tt.custom_attack.aura = "aura_bomb_tramin_ultimate"
+tt.sound_events.insert = nil
+tt.sound_events.remove_stop = nil
+
+tt = RT("bomb_tramin_ultimate_2", "bomb_tramin_ultimate_1")
+tt.render.sprites[1].prefix = "hero_tramin_ultimate_bomb_2"
+
+tt = RT("bomb_tramin_ultimate_3", "bomb_tramin_ultimate_1")
+tt.render.sprites[1].prefix = "hero_tramin_ultimate_bomb_3"
+
+tt = RT("bomb_tramin_ultimate_4", "bomb_tramin_ultimate_1")
+tt.render.sprites[1].prefix = "hero_tramin_ultimate_bomb_4"
+
+tt = RT("bomb_tramin_ultimate_5", "bomb_tramin_ultimate_1")
+tt.render.sprites[1].prefix = "hero_tramin_ultimate_bomb_5"
+
+tt = RT("bomb_tramin_ultimate_6", "bomb_tramin_ultimate_1")
+tt.render.sprites[1].prefix = "hero_tramin_ultimate_bomb_6"
+
+tt = RT("fx_bomb_tramin_ultimate_explosion", "fx")
+tt.render.sprites[1].name = "hero_tramin_ultimate_explosion"
+tt.render.sprites[1].sort_y_offset = -2
 
 tt = RT("soldier_re_0", "soldier_militia")
 

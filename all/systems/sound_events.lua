@@ -21,8 +21,6 @@ function M.register(sys)
 				S:queue(s, se.insert_args)
 			end
 		end
-
-	-- return true
 	end
 
 	function sys.sound_events:on_remove_unconditional(entity, store)
@@ -53,8 +51,6 @@ function M.register(sys)
 				end
 			end
 		end
-
-		return true
 	end
 end
 

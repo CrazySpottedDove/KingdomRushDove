@@ -151,6 +151,7 @@ calc_love_fingerprint() {
             -path "./mods/local" -prune -o \
             -path "./.deepseek" -prune -o \
             -path "./.codewhale" -prune -o \
+            -path "./.agents" -prune -o \
             -path "./.images" -prune -o \
             -path "./.images_backup" -prune -o \
             -type f ! -name "*.dds" ! -name "*.exe" \
