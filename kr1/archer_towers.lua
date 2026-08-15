@@ -349,7 +349,6 @@ totem_silence.aura.cycle_time = 0.3
 totem_silence.aura.duration = 2
 totem_silence.aura.duration_inc = 2
 totem_silence.aura.radius = 80
-totem_silence.aura.vis_bans = F_BOSS
 totem_silence.aura.vis_flags = F_MOD
 totem_silence.render.sprites[1].name = "TotemTower_GroundEffect-Violet_0002"
 totem_silence.render.sprites[1].animated = false

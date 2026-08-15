@@ -51089,11 +51089,6 @@ return {
 		from = 126,
 		to = 147
 	},
-	hero_tramin_shoot = {
-		prefix = "hero_tramin",
-		from = 126,
-		to = 147
-	},
 	hero_tramin_throwFlashbang = {
 		prefix = "hero_tramin",
 		from = 148,

@@ -23253,6 +23253,7 @@ tt.ranged.attacks[1].max_range = 180
 tt.ranged.attacks[1].bullet = "bullet_tramin"
 tt.ranged.attacks[1].shoot_time = fts(11)
 tt.ranged.attacks[1].check_target_before_shot = true
+tt.ranged.attacks[1].animation = "throwBomb"
 update_node_prediction(tt.ranged.attacks[1])
 tt.ranged.attacks[1].bullet_start_offset = {v(-8, 24)}
 -- 1技能 自爆机器人
