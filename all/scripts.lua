@@ -523,6 +523,346 @@ function scripts.fx_coin_shower.update(this, store)
 	queue_remove(store, this)
 end
 
+scripts.soldier_barrack = {}
+
+function scripts.soldier_barrack.get_info(this)
+	local attacks, damage_type
+	local min, max, cooldown
+	local no_ranged = true
+
+	if this.melee and this.melee.attacks then
+		attacks = this.melee.attacks
+
+		for _, a in ipairs(attacks) do
+			if a.damage_min then
+				min, max = a.damage_min + this.unit.damage_buff, a.damage_max + this.unit.damage_buff
+				damage_type = a.damage_type
+				cooldown = a.cooldown
+				break
+			end
+		end
+
+		if min then
+			min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
+			if cooldown then
+				cooldown = cooldown * this.unit.cooldown_factor
+			end
+		end
+	end
+
+	local ranged_min, ranged_max, ranged_cooldown
+	local ranged_damage_type
+
+	if this.ranged and this.ranged.attacks then
+		for _, a in ipairs(this.ranged.attacks) do
+			if not a.disabled and a.bullet then
+				local b = E:get_template(a.bullet)
+				local level = a.level
+
+				if b and b.bullet.damage_min and b.bullet.damage_max then
+					if level and b.bullet.damage_inc then
+						ranged_min, ranged_max = b.bullet.damage_min + this.unit.damage_buff + (b.bullet.damage_inc * level), b.bullet.damage_max + this.unit.damage_buff + (b.bullet.damage_inc * level)
+					else
+						ranged_min, ranged_max = b.bullet.damage_min + this.unit.damage_buff, b.bullet.damage_max + this.unit.damage_buff
+					end
+					ranged_cooldown = a.cooldown
+					ranged_damage_type = b.bullet.damage_type
+
+					break
+				end
+			end
+		end
+
+		if ranged_min then
+			ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
+			if ranged_cooldown then
+				ranged_cooldown = ranged_cooldown * this.unit.cooldown_factor
+			end
+		end
+	end
+
+	if not ranged_damage_type and this.timed_attacks then
+		for _, a in ipairs(this.timed_attacks.list) do
+			if a.bullet and not a.disabled then
+				local b = E:get_template(a.bullet)
+				if b.bullet and b.bullet.damage_min and b.bullet.damage_max then
+					ranged_min, ranged_max = (b.bullet.damage_min + this.unit.damage_buff) * this.unit.damage_factor, (b.bullet.damage_max + this.unit.damage_buff) * this.unit.damage_factor
+					if a.shoot_times then
+						ranged_min, ranged_max = ranged_min * #a.shoot_times, ranged_max * #a.shoot_times
+					end
+					ranged_damage_type = b.bullet.damage_type
+					ranged_cooldown = a.cooldown
+					if ranged_cooldown then
+						ranged_cooldown = ranged_cooldown * this.unit.cooldown_factor
+					end
+					break
+				end
+			end
+		end
+	end
+
+	if ranged_damage_type then
+		no_ranged = false
+	end
+
+	local melee_count = 0
+
+	if this.melee and this.melee.attacks then
+		melee_count = #this.melee.attacks
+	end
+
+	if no_ranged and melee_count > 1 then
+		while melee_count > 1 do
+			local a = this.melee.attacks[melee_count]
+
+			if a.damage_min and not a.disabled then
+				ranged_min, ranged_max = a.damage_min + this.unit.damage_buff, a.damage_max + this.unit.damage_buff
+				ranged_cooldown = a.cooldown
+				ranged_damage_type = a.damage_type
+
+				ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
+				if ranged_cooldown then
+					ranged_cooldown = ranged_cooldown * this.unit.cooldown_factor
+				end
+
+				break
+			end
+
+			melee_count = melee_count - 1
+		end
+	end
+
+	return {
+		type = STATS_TYPE_SOLDIER,
+		hp = this.health.hp,
+		hp_max = this.health.hp_max,
+		damage_min = min,
+		damage_max = max,
+		damage_type = damage_type,
+		ranged_damage_min = ranged_min,
+		ranged_damage_max = ranged_max,
+		ranged_damage_type = ranged_damage_type,
+		armor = this.health.armor,
+		magic_armor = this.health.magic_armor,
+		respawn = this.health.dead_lifetime,
+		no_ranged = no_ranged,
+		cooldown = cooldown,
+		ranged_cooldown = ranged_cooldown
+	}
+end
+
+function scripts.soldier_barrack.insert(this, store)
+	if this.melee then
+		this.melee.order = U.attack_order(this.melee.attacks)
+	end
+
+	if this.ranged then
+		this.ranged.order = U.attack_order(this.ranged.attacks)
+	end
+
+	if this.auras then
+		for i = 1, #this.auras.list do
+			local a = this.auras.list[i]
+			if a.cooldown == 0 then
+				local e = E:create_entity(a.name)
+
+				e.pos.x = this.pos.x
+				e.pos.y = this.pos.y
+				e.aura.level = this.unit.level
+				e.aura.source_id = this.id
+				e.aura.ts = store.tick_ts
+
+				queue_insert(store, e)
+			end
+		end
+	end
+
+	if this.track_kills and this.track_kills.mod then
+		local mod_name = this.track_kills.mod
+		local m = E:create_entity(mod_name)
+
+		m.modifier.target_id = this.id
+		m.modifier.source_id = this.id
+		m.pos.x = this.pos.x
+		m.pos.y = this.pos.y
+
+		queue_insert(store, m)
+	end
+
+	if this.track_damage and this.track_damage.mod then
+		local e = E:create_entity(this.track_damage.mod)
+
+		e.pos.x = this.pos.x
+		e.pos.y = this.pos.y
+		e.modifier.target_id = this.id
+		e.modifier.source_id = this.id
+
+		queue_insert(store, e)
+	end
+
+	if this.powers then
+		for pn, p in pairs(this.powers) do
+			SU.soldier_power_upgrade(this, pn)
+		end
+	end
+
+	if this.info and this.info.random_name_format then
+		this.info.i18n_key = string.format(string.gsub(this.info.random_name_format, "_NAME", ""), math.random(this.info.random_name_count))
+	end
+
+	this.vis._bans = this.vis.bans
+	this.vis.bans = F_ALL
+
+	if this.render then
+		for i = 1, #this.render.sprites do
+			this.render.sprites[i].ts = store.tick_ts - U.frandom(0, 1)
+		end
+	end
+
+	return true
+end
+
+function scripts.soldier_barrack.update(this, store)
+	local brk, sta
+
+	if this.vis._bans then
+		this.vis.bans = this.vis._bans
+		this.vis._bans = nil
+	end
+
+	if this.render.sprites[1].name == "raise" then
+		this.health_bar.hidden = true
+		U.animation_start_default(this, "raise", nil, store.tick_ts, false)
+
+		while not U.animation_finished_default(this) and not this.health.dead do
+			coroutine.yield()
+		end
+
+		if not this.health.dead then
+			this.health_bar.hidden = nil
+		end
+	end
+
+	while true do
+		if this.powers then
+			for pn, p in pairs(this.powers) do
+				if p.changed then
+					p.changed = nil
+
+					SU.soldier_power_upgrade(this, pn)
+				end
+			end
+		end
+
+		if this.cloak and this.soldier.target_id then
+			this.vis.flags = band(this.vis.flags, bnot(this.cloak.flags))
+			this.vis.bans = band(this.vis.bans, bnot(this.cloak.bans))
+			this.render.sprites[1].alpha = 255
+		end
+
+		if not this.health.dead or SU.y_soldier_revive(store, this) then
+		-- block empty
+		else
+			SU.y_soldier_death(store, this)
+
+			return
+		end
+
+		scripts.soldier_revive_resist(this, store)
+
+		if this.unit.is_stunned then
+			SU.soldier_idle(store, this)
+		else
+			if this.dodge and this.dodge.active then
+				this.dodge.active = false
+
+				if this.dodge.counter_attack and this.powers[this.dodge.counter_attack.power_name].level > 0 then
+					this.dodge.counter_attack_pending = true
+				elseif this.dodge.animation then
+					U.animation_start_default(this, this.dodge.animation, nil, store.tick_ts, false)
+
+					while not U.animation_finished_default(this) do
+						coroutine.yield()
+					end
+				end
+
+				signal.emit("soldier-dodge", this)
+			end
+
+			while this.nav_rally.new do
+				if SU.y_soldier_new_rally(store, this) then
+					goto label_39_1
+				end
+			end
+
+			if this.timed_actions then
+				brk, sta = SU.y_soldier_timed_actions(store, this)
+
+				if brk then
+					goto label_39_1
+				end
+			end
+
+			if this.timed_attacks then
+				brk, sta = SU.y_soldier_timed_attacks(store, this)
+
+				if brk then
+					goto label_39_1
+				end
+			end
+
+			if this.ranged and this.ranged.range_while_blocking then
+				brk, sta = SU.y_soldier_ranged_attacks(store, this)
+
+				if brk then
+					goto label_39_1
+				end
+			end
+
+			if this.melee then
+				brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+				if brk or sta ~= A_NO_TARGET then
+					goto label_39_1
+				end
+			end
+
+			if this.ranged and not this.ranged.range_while_blocking then
+				brk, sta = SU.y_soldier_ranged_attacks(store, this)
+
+				if brk or sta == A_DONE then
+					goto label_39_1
+				elseif sta == A_IN_COOLDOWN and not this.ranged.go_back_during_cooldown then
+					goto label_39_0
+				end
+			end
+
+			if SU.soldier_go_back_step(store, this) then
+				goto label_39_1
+			end
+
+			::label_39_0::
+
+			SU.soldier_idle(store, this)
+
+			if this.cloak then
+				this.vis.flags = bor(this.vis.flags, this.cloak.flags)
+				this.vis.bans = bor(this.vis.bans, this.cloak.bans)
+
+				if this.cloak.alpha then
+					this.render.sprites[1].alpha = this.cloak.alpha
+				end
+			end
+
+			SU.soldier_regen(store, this)
+		end
+
+		::label_39_1::
+
+		coroutine.yield()
+	end
+end
+
 scripts.enemy_basic = {}
 
 function scripts.enemy_basic.get_info(this)
@@ -1022,11 +1362,9 @@ function scripts.delayed_spawn.update(this, store)
 	queue_remove(store, this)
 end
 
-scripts.soldier_reinforcement = {}
-
-function scripts.soldier_reinforcement.get_info(this)
-	return scripts.soldier_barrack.get_info(this)
-end
+scripts.soldier_reinforcement = {
+	get_info = scripts.soldier_barrack.get_info
+}
 
 function scripts.soldier_reinforcement.insert(this, store)
 	if this.melee then
@@ -1125,351 +1463,12 @@ function scripts.soldier_reinforcement.update(this, store)
 	end
 end
 
-scripts.soldier_barrack = {}
-
-function scripts.soldier_barrack.get_info(this)
-	local attacks, damage_type
-	local min, max, cooldown
-	local no_ranged = true
-
-	if this.melee and this.melee.attacks then
-		attacks = this.melee.attacks
-
-		for _, a in ipairs(attacks) do
-			if a.damage_min then
-				min, max = a.damage_min + this.unit.damage_buff, a.damage_max + this.unit.damage_buff
-				damage_type = a.damage_type
-				cooldown = a.cooldown
-				break
-			end
-		end
-
-		if min then
-			min, max = min * this.unit.damage_factor, max * this.unit.damage_factor
-			if cooldown then
-				cooldown = cooldown * this.unit.cooldown_factor
-			end
-		end
-	end
-
-	local ranged_min, ranged_max, ranged_cooldown
-	local ranged_damage_type
-
-	if this.ranged and this.ranged.attacks then
-		for _, a in ipairs(this.ranged.attacks) do
-			if not a.disabled and a.bullet then
-				local b = E:get_template(a.bullet)
-				local level = a.level
-
-				if b and b.bullet.damage_min and b.bullet.damage_max then
-					if level and b.bullet.damage_inc then
-						ranged_min, ranged_max = b.bullet.damage_min + this.unit.damage_buff + (b.bullet.damage_inc * level), b.bullet.damage_max + this.unit.damage_buff + (b.bullet.damage_inc * level)
-					else
-						ranged_min, ranged_max = b.bullet.damage_min + this.unit.damage_buff, b.bullet.damage_max + this.unit.damage_buff
-					end
-					ranged_cooldown = a.cooldown
-					ranged_damage_type = b.bullet.damage_type
-
-					break
-				end
-			end
-		end
-
-		if ranged_min then
-			ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
-			if ranged_cooldown then
-				ranged_cooldown = ranged_cooldown * this.unit.cooldown_factor
-			end
-		end
-	end
-
-	if not ranged_damage_type and this.timed_attacks then
-		for _, a in ipairs(this.timed_attacks.list) do
-			if a.bullet and not a.disabled then
-				local b = E:get_template(a.bullet)
-				if b.bullet and b.bullet.damage_min and b.bullet.damage_max then
-					ranged_min, ranged_max = (b.bullet.damage_min + this.unit.damage_buff) * this.unit.damage_factor, (b.bullet.damage_max + this.unit.damage_buff) * this.unit.damage_factor
-					if a.shoot_times then
-						ranged_min, ranged_max = ranged_min * #a.shoot_times, ranged_max * #a.shoot_times
-					end
-					ranged_damage_type = b.bullet.damage_type
-					ranged_cooldown = a.cooldown
-					if ranged_cooldown then
-						ranged_cooldown = ranged_cooldown * this.unit.cooldown_factor
-					end
-					break
-				end
-			end
-		end
-	end
-
-	if ranged_damage_type then
-		no_ranged = false
-	end
-
-	local melee_count = 0
-
-	if this.melee and this.melee.attacks then
-		melee_count = #this.melee.attacks
-	end
-
-	if no_ranged and melee_count > 1 then
-		while melee_count > 1 do
-			local a = this.melee.attacks[melee_count]
-
-			if a.damage_min and not a.disabled then
-				ranged_min, ranged_max = a.damage_min + this.unit.damage_buff, a.damage_max + this.unit.damage_buff
-				ranged_cooldown = a.cooldown
-				ranged_damage_type = a.damage_type
-
-				ranged_min, ranged_max = ranged_min * this.unit.damage_factor, ranged_max * this.unit.damage_factor
-				if ranged_cooldown then
-					ranged_cooldown = ranged_cooldown * this.unit.cooldown_factor
-				end
-
-				break
-			end
-
-			melee_count = melee_count - 1
-		end
-	end
-
-	return {
-		type = STATS_TYPE_SOLDIER,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		damage_type = damage_type,
-		ranged_damage_min = ranged_min,
-		ranged_damage_max = ranged_max,
-		ranged_damage_type = ranged_damage_type,
-		armor = this.health.armor,
-		magic_armor = this.health.magic_armor,
-		respawn = this.health.dead_lifetime,
-		no_ranged = no_ranged,
-		cooldown = cooldown,
-		ranged_cooldown = ranged_cooldown
-	}
-end
-
-function scripts.soldier_barrack.insert(this, store)
-	if this.melee then
-		this.melee.order = U.attack_order(this.melee.attacks)
-	end
-
-	if this.ranged then
-		this.ranged.order = U.attack_order(this.ranged.attacks)
-	end
-
-	if this.auras then
-		for i = 1, #this.auras.list do
-			local a = this.auras.list[i]
-			if a.cooldown == 0 then
-				local e = E:create_entity(a.name)
-
-				e.pos.x = this.pos.x
-				e.pos.y = this.pos.y
-				e.aura.level = this.unit.level
-				e.aura.source_id = this.id
-				e.aura.ts = store.tick_ts
-
-				queue_insert(store, e)
-			end
-		end
-	end
-
-	if this.track_kills and this.track_kills.mod then
-		local mod_name = this.track_kills.mod
-		local m = E:create_entity(mod_name)
-
-		m.modifier.target_id = this.id
-		m.modifier.source_id = this.id
-		m.pos.x = this.pos.x
-		m.pos.y = this.pos.y
-
-		queue_insert(store, m)
-	end
-
-	if this.track_damage and this.track_damage.mod then
-		local e = E:create_entity(this.track_damage.mod)
-
-		e.pos.x = this.pos.x
-		e.pos.y = this.pos.y
-		e.modifier.target_id = this.id
-		e.modifier.source_id = this.id
-
-		queue_insert(store, e)
-	end
-
-	if this.powers then
-		for pn, p in pairs(this.powers) do
-			SU.soldier_power_upgrade(this, pn)
-		end
-	end
-
-	if this.info and this.info.random_name_format then
-		this.info.i18n_key = string.format(string.gsub(this.info.random_name_format, "_NAME", ""), math.random(this.info.random_name_count))
-	end
-
-	this.vis._bans = this.vis.bans
-	this.vis.bans = F_ALL
-
-	if this.render then
-		for i = 1, #this.render.sprites do
-			this.render.sprites[i].ts = store.tick_ts - U.frandom(0, 1)
-		end
-	end
-
-	return true
-end
-
-function scripts.soldier_barrack.update(this, store)
-	local brk, sta
-
-	if this.vis._bans then
-		this.vis.bans = this.vis._bans
-		this.vis._bans = nil
-	end
-
-	if this.render.sprites[1].name == "raise" then
-		this.health_bar.hidden = true
-		U.animation_start_default(this, "raise", nil, store.tick_ts, false)
-
-		while not U.animation_finished_default(this) and not this.health.dead do
-			coroutine.yield()
-		end
-
-		if not this.health.dead then
-			this.health_bar.hidden = nil
-		end
-	end
-
-	while true do
-		if this.powers then
-			for pn, p in pairs(this.powers) do
-				if p.changed then
-					p.changed = nil
-
-					SU.soldier_power_upgrade(this, pn)
-				end
-			end
-		end
-
-		if this.cloak and this.soldier.target_id then
-			this.vis.flags = band(this.vis.flags, bnot(this.cloak.flags))
-			this.vis.bans = band(this.vis.bans, bnot(this.cloak.bans))
-			this.render.sprites[1].alpha = 255
-		end
-
-		if not this.health.dead or SU.y_soldier_revive(store, this) then
-		-- block empty
-		else
-			SU.y_soldier_death(store, this)
-
-			return
-		end
-
-		scripts.soldier_revive_resist(this, store)
-
-		if this.unit.is_stunned then
-			SU.soldier_idle(store, this)
-		else
-			if this.dodge and this.dodge.active then
-				this.dodge.active = false
-
-				if this.dodge.counter_attack and this.powers[this.dodge.counter_attack.power_name].level > 0 then
-					this.dodge.counter_attack_pending = true
-				elseif this.dodge.animation then
-					U.animation_start_default(this, this.dodge.animation, nil, store.tick_ts, false)
-
-					while not U.animation_finished_default(this) do
-						coroutine.yield()
-					end
-				end
-
-				signal.emit("soldier-dodge", this)
-			end
-
-			while this.nav_rally.new do
-				if SU.y_soldier_new_rally(store, this) then
-					goto label_39_1
-				end
-			end
-
-			if this.timed_actions then
-				brk, sta = SU.y_soldier_timed_actions(store, this)
-
-				if brk then
-					goto label_39_1
-				end
-			end
-
-			if this.timed_attacks then
-				brk, sta = SU.y_soldier_timed_attacks(store, this)
-
-				if brk then
-					goto label_39_1
-				end
-			end
-
-			if this.ranged and this.ranged.range_while_blocking then
-				brk, sta = SU.y_soldier_ranged_attacks(store, this)
-
-				if brk then
-					goto label_39_1
-				end
-			end
-
-			if this.melee then
-				brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
-
-				if brk or sta ~= A_NO_TARGET then
-					goto label_39_1
-				end
-			end
-
-			if this.ranged and not this.ranged.range_while_blocking then
-				brk, sta = SU.y_soldier_ranged_attacks(store, this)
-
-				if brk or sta == A_DONE then
-					goto label_39_1
-				elseif sta == A_IN_COOLDOWN and not this.ranged.go_back_during_cooldown then
-					goto label_39_0
-				end
-			end
-
-			if SU.soldier_go_back_step(store, this) then
-				goto label_39_1
-			end
-
-			::label_39_0::
-
-			SU.soldier_idle(store, this)
-
-			if this.cloak then
-				this.vis.flags = bor(this.vis.flags, this.cloak.flags)
-				this.vis.bans = bor(this.vis.bans, this.cloak.bans)
-
-				if this.cloak.alpha then
-					this.render.sprites[1].alpha = this.cloak.alpha
-				end
-			end
-
-			SU.soldier_regen(store, this)
-		end
-
-		::label_39_1::
-
-		coroutine.yield()
-	end
-end
-
-scripts.hero_basic = {}
-scripts.hero_basic.get_info = scripts.soldier_barrack.get_info
+scripts.hero_basic = {
+	get_info = scripts.soldier_barrack.get_info
+}
 
 function scripts.hero_basic.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
+	this.hero.fn_level_up(this, store)
 
 	if this.melee then
 		this.melee.order = U.attack_order(this.melee.attacks)

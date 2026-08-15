@@ -5217,14 +5217,6 @@ scripts.hero_dracolich = {
 	end
 }
 
-function scripts.hero_dracolich.insert(this, store)
-	this.hero.fn_level_up(this, store)
-
-	this.ranged.order = U.attack_order(this.ranged.attacks)
-
-	return true
-end
-
 function scripts.hero_dracolich.update(this, store)
 	local h = this.health
 	local a, skill, force_idle_ts
@@ -8510,15 +8502,6 @@ function scripts.hero_alien.vibroblades_side_effect(this, store, damage, target)
 	queue_damage(store, d)
 end
 
-function scripts.hero_alien.insert(this, store)
-	this.hero.fn_level_up(this, store)
-
-	this.melee.order = U.attack_order(this.melee.attacks)
-	this.ranged.order = U.attack_order(this.ranged.attacks)
-
-	return true
-end
-
 function scripts.hero_alien.update(this, store)
 	local h = this.health
 	local a, skill, brk, sta
@@ -9070,7 +9053,7 @@ scripts.hero_voodoo_witch = {
 }
 
 function scripts.hero_voodoo_witch.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
+	this.hero.fn_level_up(this, store)
 
 	this.ranged.order = U.attack_order(this.ranged.attacks)
 	this.melee.order = U.attack_order(this.melee.attacks)
@@ -9316,14 +9299,6 @@ function scripts.hero_crab.on_damage(this, store, damage)
 
 		return false
 	end
-
-	return true
-end
-
-function scripts.hero_crab.insert(this, store)
-	this.hero.fn_level_up(this, store)
-
-	this.melee.order = U.attack_order(this.melee.attacks)
 
 	return true
 end
@@ -12923,16 +12898,6 @@ end
 
 scripts.hero_durax = {}
 
-function scripts.hero_durax.get_info(this)
-	local info = scripts.hero_basic.get_info(this)
-
-	if this.clone then
-		info.respawn = nil
-	end
-
-	return info
-end
-
 function scripts.hero_durax.level_up(this, store)
 	local hl, ls = level_up_basic(this)
 
@@ -13332,14 +13297,6 @@ function scripts.hero_elves_denas.level_up(this, store)
 	end)
 
 	update_hp(this)
-end
-
-function scripts.hero_elves_denas.insert(this, store)
-	this.hero.fn_level_up(this, store)
-
-	this.melee.order = U.attack_order(this.melee.attacks)
-
-	return true
 end
 
 function scripts.hero_elves_denas.update(this, store)
@@ -17224,14 +17181,6 @@ function scripts.hero_bolverk.level_up(this, store)
 	update_hp(this)
 end
 
-function scripts.hero_bolverk.insert(this, store)
-	this.hero.fn_level_up(this, store)
-
-	this.melee.order = U.attack_order(this.melee.attacks)
-
-	return true
-end
-
 function scripts.hero_bolverk.update(this, store)
 	local h = this.health
 	local brk, sta, a
@@ -17656,15 +17605,6 @@ function scripts.hero_hunter.level_up(this, store)
 	for index, attack in ipairs(this.melee.attacks) do
 		this.hero.melee_active_status[index] = attack.disabled
 	end
-end
-
-function scripts.hero_hunter.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
-
-	this.melee.order = U.attack_order(this.melee.attacks)
-	this.ranged.order = U.attack_order(this.ranged.attacks)
-
-	return true
 end
 
 function scripts.hero_hunter.update(this, store)
@@ -20872,14 +20812,6 @@ function scripts.hero_venom.level_up(this, store, initial)
 	update_hp(this)
 end
 
-function scripts.hero_venom.insert(this, store)
-	this.hero.fn_level_up(this, store)
-
-	this.melee.order = U.attack_order(this.melee.attacks)
-
-	return true
-end
-
 function scripts.hero_venom.update(this, store)
 	local h = this.health
 	local a, skill, brk, sta
@@ -21821,14 +21753,6 @@ function scripts.hero_dragon_gem.level_up(this, store, initial)
 	end)
 
 	update_hp(this)
-end
-
-function scripts.hero_dragon_gem.insert(this, store)
-	this.hero.fn_level_up(this, store)
-
-	this.ranged.order = U.attack_order(this.ranged.attacks)
-
-	return true
 end
 
 function scripts.hero_dragon_gem.update(this, store)
@@ -23441,14 +23365,6 @@ function scripts.hero_witch.level_up(this, store, initial)
 	end
 end
 
-function scripts.hero_witch.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
-
-	this.melee.order = U.attack_order(this.melee.attacks)
-
-	return true
-end
-
 function scripts.hero_witch.can_dodge(store, this, ranged_attack, attack, enemy)
 	local skill = this.hero.skills.disengage
 
@@ -24713,14 +24629,6 @@ function scripts.hero_dragon_bone.level_up(this, store, initial)
 	update_hp(this)
 end
 
-function scripts.hero_dragon_bone.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
-
-	this.ranged.order = U.attack_order(this.ranged.attacks)
-
-	return true
-end
-
 function scripts.hero_dragon_bone.update(this, store)
 	local h = this.health
 	local a
@@ -25881,14 +25789,6 @@ function scripts.hero_lumenir.level_up(this, store, initial)
 	end)
 
 	update_hp(this)
-end
-
-function scripts.hero_lumenir.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
-
-	this.ranged.order = U.attack_order(this.ranged.attacks)
-
-	return true
 end
 
 function scripts.hero_lumenir.update(this, store)
@@ -27082,14 +26982,6 @@ function scripts.hero_wukong.level_up(this, store, initial)
 	for index, attack in ipairs(this.melee.attacks) do
 		this.hero.melee_active_status[index] = attack.disabled
 	end
-end
-
-function scripts.hero_wukong.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
-
-	this.melee.order = U.attack_order(this.melee.attacks)
-
-	return true
 end
 
 function scripts.hero_wukong.update(this, store)
@@ -28866,15 +28758,6 @@ function scripts.hero_muyrn.level_up(this, store)
 	update_hp(this)
 end
 
-function scripts.hero_muyrn.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
-
-	this.melee.order = U.attack_order(this.melee.attacks)
-	this.ranged.order = U.attack_order(this.ranged.attacks)
-
-	return true
-end
-
 function scripts.hero_muyrn.update(this, store)
 	local h = this.health
 	local a, skill, brk, sta
@@ -29977,14 +29860,6 @@ function scripts.hero_dragon_arb.level_up(this, store)
 	end)
 
 	update_hp(this)
-end
-
-function scripts.hero_dragon_arb.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
-
-	this.ranged.order = U.attack_order(this.ranged.attacks)
-
-	return true
 end
 
 function scripts.hero_dragon_arb.update(this, store)
@@ -32928,14 +32803,6 @@ function scripts.hero_robot.level_up(this, store)
 	end
 end
 
-function scripts.hero_robot.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
-
-	this.melee.order = U.attack_order(this.melee.attacks)
-
-	return true
-end
-
 function scripts.hero_robot.update(this, store)
 	local h = this.health
 	local a, skill, brk, sta
@@ -34267,14 +34134,6 @@ function scripts.hero_bird.level_up(this, store, initial)
 	update_hp(this)
 end
 
-function scripts.hero_bird.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
-
-	this.ranged.order = U.attack_order(this.ranged.attacks)
-
-	return true
-end
-
 function scripts.hero_bird.update(this, store)
 	local h = this.health
 	local cluster_bomb_attack = this.timed_attacks.list[1]
@@ -34992,14 +34851,6 @@ function scripts.hero_lava.level_up(this, store, initial)
 	update_hp(this)
 end
 
-function scripts.hero_lava.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
-
-	this.melee.order = U.attack_order(this.melee.attacks)
-
-	return true
-end
-
 function scripts.hero_lava.update(this, store)
 	local h = this.health
 	local a, skill, brk, sta
@@ -35627,15 +35478,6 @@ function scripts.hero_spider.level_up(this, store, initial)
 	for index, attack in ipairs(this.melee.attacks) do
 		this.hero.melee_active_status[index] = attack.disabled
 	end
-end
-
-function scripts.hero_spider.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
-
-	this.melee.order = U.attack_order(this.melee.attacks)
-	this.ranged.order = U.attack_order(this.ranged.attacks)
-
-	return true
 end
 
 function scripts.hero_spider.update(this, store)
@@ -36305,14 +36147,6 @@ function scripts.hero_mecha.level_up(this, store, initial)
 	end)
 
 	update_hp(this)
-end
-
-function scripts.hero_mecha.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
-
-	this.ranged.order = U.attack_order(this.ranged.attacks)
-
-	return true
 end
 
 function scripts.hero_mecha.update(this, store)
@@ -37512,14 +37346,6 @@ function scripts.hero_dragon_sun.level_up(this, store)
 	end)
 
 	update_hp(this)
-end
-
-function scripts.hero_dragon_sun.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
-
-	this.ranged.order = U.attack_order(this.ranged.attacks)
-
-	return true
 end
 
 function scripts.hero_dragon_sun.update(this, store)
@@ -40793,12 +40619,6 @@ end
 
 --#region hero_isfet
 scripts.hero_isfet = {}
-
-function scripts.hero_isfet.insert(this, store)
-	this.hero.fn_level_up(this, store, true)
-	this.ranged.order = U.attack_order(this.ranged.attacks)
-	return true
-end
 
 function scripts.hero_isfet.level_up(this, store, initial)
 	local hl = this.hero.level
