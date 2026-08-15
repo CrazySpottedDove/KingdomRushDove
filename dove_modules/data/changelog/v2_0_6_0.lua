@@ -1,1 +1,1 @@
-return {{date="2026-08-15",author="CrazySpottedDove",message="fix: 修正特拉敏爆炸特效图层效果"},{date="2026-08-15",author="CrazySpottedDove",message="feat: 移除了图腾无法沉默boss的限制"},{date="2026-08-15",author="CrazySpottedDove",message="balance: 优化了狂法沉默的传播逻辑"}}
+return {{date="2026-08-15",author="CrazySpottedDove",message="fix: 修正特拉敏爆炸特效图层效果"},{date="2026-08-15",author="CrazySpottedDove",message="feat: 移除了图腾无法沉默boss的限制"},{date="2026-08-15",author="CrazySpottedDove",message="balance: 优化了狂法沉默的传播逻辑"},{date="2026-08-15",author="CrazySpottedDove",message="fix: 修复柏林的减速未生效的问题"}}

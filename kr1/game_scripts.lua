@@ -3132,18 +3132,17 @@ function scripts.aura_slow_bolin.update(this, store)
 		if store.tick_ts - last_hit_ts >= this.aura.cycle_time then
 			last_hit_ts = store.tick_ts
 
-			local targets = table.filter(store.soldiers, function(k, v)
-				return v.vis and v.health and not v.health.dead and band(v.vis.flags, this.aura.vis_bans) == 0 and band(v.vis.bans, this.aura.vis_flags) == 0 and U.is_inside_ellipse(v.pos, this.pos, this.aura.radius) and (not this.aura.allowed_templates or table.contains(this.aura.allowed_templates, v.template_name)) and (not this.aura.excluded_templates or not table.contains(this.aura.excluded_templates, v.template_name)) and (not this.aura.filter_source or this.aura.source_id ~= v.id)
-			end)
+			local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags, this.aura.vis_bans)
+			if targets then
+				for i, target in ipairs(targets) do
+					local new_mod = E:create_entity(this.aura.mod)
 
-			for i, target in ipairs(targets) do
-				local new_mod = E:create_entity(this.aura.mod)
+					new_mod.modifier.level = this.aura.level
+					new_mod.modifier.target_id = target.id
+					new_mod.modifier.source_id = this.id
 
-				new_mod.modifier.level = this.aura.level
-				new_mod.modifier.target_id = target.id
-				new_mod.modifier.source_id = this.id
-
-				queue_insert(store, new_mod)
+					queue_insert(store, new_mod)
+				end
 			end
 		end
 
