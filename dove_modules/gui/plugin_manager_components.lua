@@ -8,6 +8,7 @@ local storage = require("all.storage")
 local editable_panel_view = require("dove_modules.gui.editable_panel_view")
 local km = require("lib.klua.macros")
 local utf8_util = require("lib.utf8_utils")
+local utf8 = require("utf8")
 
 require("gg_views_custom")
 
@@ -378,4 +379,146 @@ end
 
 function PluginItemRow:on_exit()
 	self.colors.background = {self._base_bg[1], self._base_bg[2], self._base_bg[3], self._base_bg[4]}
+end
+
+-- ─────────────────────────────────────────────
+-- PluginSearchBox：商店搜索框（单行文本输入）
+-- 走系统 IME（is_virtual_keyboard = false → setTextInput(true)），
+-- 桌面端支持中文输入法选字，手机端弹出系统软键盘。
+-- ─────────────────────────────────────────────
+PluginSearchBox = class("PluginSearchBox", KView)
+
+function PluginSearchBox:initialize(opts)
+	local rs = GGLabel.static.ref_h / REF_H
+	local w = opts.width or 320
+	local h = opts.height or 32
+	KView.initialize(self, V.v(w, h))
+	self.colors.background = {30, 22, 12, 230}
+	self.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, w, h, 6, 6}
+	}
+	self._controller = opts.controller
+	self._placeholder = opts.placeholder or "搜索插件"
+	self._text = ""
+	self._focused = false
+	self._cursor_visible = true
+	self._cursor_timer = 0
+	self.on_change = opts.on_change
+	self.on_submit = opts.on_submit
+
+	self._label = GGLabel:new(V.v(w - 28, h))
+	self._label.font_name = "body"
+	self._label.font_size = 13 * rs
+	self._label.text_align = "left"
+	self._label.vertical_align = "middle"
+	self._label.fit_lines = 1
+	self._label.colors.text = {240, 228, 200, 255}
+	self._label.pos = V.v(10, 0)
+	self:add_child(self._label)
+	self:_refresh()
+end
+
+function PluginSearchBox:get_text()
+	return self._text
+end
+
+function PluginSearchBox:set_text(text)
+	self._text = text or ""
+	self:_refresh()
+	if self.on_change then
+		self.on_change(self._text)
+	end
+end
+
+function PluginSearchBox:_refresh()
+	if self._text ~= "" then
+		self._label.colors.text = {240, 228, 200, 255}
+		self._label.text = utf8_util.sub(self._text, 24)
+	elseif self._focused then
+		self._label.colors.text = {180, 168, 138, 255}
+		self._label.text = "输入后搜索"
+	else
+		self._label.colors.text = {150, 138, 112, 255}
+		self._label.text = self._placeholder
+	end
+end
+
+function PluginSearchBox:set_focused(focused)
+	self._focused = focused
+	self:_refresh()
+	if focused then
+		self.colors.background = {44, 34, 18, 245}
+		if self._controller and self._controller.set_responder then
+			self._controller:set_responder(self)
+		end
+	else
+		self.colors.background = {30, 22, 12, 230}
+		-- 归还 IME 焦点（关闭系统输入法，避免拦截游戏快捷键）
+		if self._controller and self._controller.set_responder then
+			self._controller:set_responder()
+		end
+	end
+end
+
+function PluginSearchBox:on_click()
+	S:queue("GUIButtonCommon")
+	self:set_focused(true)
+end
+
+function PluginSearchBox:on_textinput(t)
+	self._text = utf8_util.sub(self._text .. t, 60)
+	self:_refresh()
+	if self.on_change then
+		self.on_change(self._text)
+	end
+	return true
+end
+
+function PluginSearchBox:on_keypressed(key)
+	if key == "backspace" then
+		local text = self._text
+		local byteoffset = utf8.offset(text, -1)
+
+		if byteoffset then
+			if byteoffset > 1 then
+				self._text = string.sub(text, 1, byteoffset - 1)
+			else
+				self._text = ""
+			end
+		end
+		self:_refresh()
+		if self.on_change then
+			self.on_change(self._text)
+		end
+		return true
+	elseif key == "return" or key == "kpenter" then
+		S:queue("GUIButtonCommon")
+		if self.on_submit then
+			self.on_submit(self._text)
+		end
+		self:set_focused(false)
+		return true
+	elseif key == "escape" then
+		if self._text ~= "" then
+			self:set_text("")
+		end
+		self:set_focused(false)
+		return true
+	end
+	return false
+end
+
+function PluginSearchBox:update(dt)
+	PluginSearchBox.super.update(self, dt)
+	if self._focused then
+		self._cursor_timer = self._cursor_timer + dt
+
+		if self._cursor_timer >= 0.5 then
+			self._cursor_timer = 0
+			self._cursor_visible = not self._cursor_visible
+			local text = self._text ~= "" and self._text or ""
+			self._label.text = utf8_util.sub(text, 24) .. (self._cursor_visible and "|" or "")
+		end
+	end
 end

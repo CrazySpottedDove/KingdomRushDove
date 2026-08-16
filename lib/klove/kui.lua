@@ -910,6 +910,25 @@ function KView:view_to_view(x, y, dest_view)
 	return dest_view:screen_to_view(ix, iy)
 end
 
+--- 返回本视图在 LÖVE 窗口坐标下的输入矩形（供系统 IME 候选框定位）
+--- view_to_screen 已含 window.scale，结果为 LÖVE 窗口像素（getWidth 空间）
+---@return table|nil {x=,y=,w=,h=}
+function KView:get_input_rect()
+	if not self.size then
+		return nil
+	end
+
+	local x1, y1 = self:view_to_screen(0, 0)
+	local x2, y2 = self:view_to_screen(self.size.x, self.size.y)
+
+	return {
+		x = x1,
+		y = y1,
+		w = math.max(1, x2 - x1),
+		h = math.max(1, y2 - y1)
+	}
+end
+
 --- 向上递归查询 window
 function KView:get_window()
 	local this = self
@@ -1745,7 +1764,20 @@ function KWindow:set_responder(view)
 	-- 输入权交给带 on_textinput 的响应者时才开启系统文本输入（IME），
 	-- 否则关闭，避免非英文输入法拦截按键导致 love.keypressed 无法触发。
 	-- 虚拟键盘（is_virtual_keyboard）不开启 IME。
+	-- SDL UILess 自绘候选：候选框位置由 ime_rect 决定（IME_PositionCandidateList 在矩形下方绘制），
+	-- 传输入控件矩形即可让候选跟随输入框（TSF 输入法的系统候选不受控，UILess 自绘才可控）。
 	local enable = view ~= nil and view.on_textinput ~= nil and not view.is_virtual_keyboard
+	if enable then
+		local rect = view.get_input_rect and view:get_input_rect()
+
+		if rect and rect.w and rect.w > 0 then
+			-- LÖVE 窗口像素 → SDL 客户区物理像素（LÖVE 的 setTextInput 矩形直接透传 SDL，不含 DPI 换算）
+			local dpi = love.window.getDPIScale()
+			love.keyboard.setTextInput(true, math.floor(rect.x * dpi + 0.5), math.floor(rect.y * dpi + 0.5), math.max(1, math.floor(rect.w * dpi + 0.5)), math.max(1, math.floor(rect.h * dpi + 0.5)))
+
+			return
+		end
+	end
 	love.keyboard.setTextInput(enable)
 end
 

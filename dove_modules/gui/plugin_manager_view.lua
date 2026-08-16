@@ -418,7 +418,10 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	local header_row_gap = math.max(6, math.floor(6 * touch_scale + 0.5))
 	local header_row2_y = header_top_y + header_btn_h + header_row_gap
 	local sep_y = header_row2_y + header_btn_h + 6
-	local hint_y = sep_y + 4
+	-- 商店搜索行（store 模式显示）：sep 下方独立一行
+	local search_h = math.floor(32 * touch_scale + 0.5)
+	local search_y = sep_y + 8
+	local hint_y = search_y + search_h + 6
 	local pager_y = hint_y + math.max(0, math.floor((hint_h - pager_btn_h) / 2))
 	local list_top_y = math.max(LIST_TOP_Y, hint_y + hint_h + 10)
 	local footer_y = panel_h - 44
@@ -436,7 +439,8 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self.mode = "local"
 	self.sort_idx = 1
 	self.category_idx = 1
-	self._uninstalled_only = false
+	self._uninstalled_only = true -- 商店默认只看未安装
+	self._search_query = ""
 	self.store_page = 1
 	self.store_total_pages = 1
 	self.store_items = {}
@@ -683,6 +687,27 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	sep.colors.background = {95, 75, 40, 255}
 	sep.pos = V.v(20, sep_y)
 	self.back:add_child(sep)
+
+	-- 商店搜索框（store 模式显示；本地模式隐藏）
+	local search_box_w = math.floor(340 * touch_scale + 0.5)
+	self.search_box = PluginSearchBox:new({
+		width = search_box_w,
+		height = search_h,
+		controller = self._controller,
+		placeholder = "搜索插件（支持中文）",
+		on_change = function(text)
+			self._search_query = text
+			-- 本地模式过滤无网络成本，输入即生效；商店模式等待回车提交
+			if self.mode == "local" then
+				self:_render_current_list()
+			end
+		end,
+		on_submit = function(text)
+			self:_on_search_submit(text)
+		end
+	})
+	self.search_box.pos = V.v(20, search_y)
+	self.back:add_child(self.search_box)
 
 	-- 状态提示文本与翻页标签
 	self.hint_lbl = GGLabel:new(V.v(panel_w - 40, hint_h))
@@ -1008,6 +1033,8 @@ function PluginManagerView:_refresh_header_buttons()
 		self.uninstalled_btn:_refresh()
 	end
 	local in_store = self.mode == "store"
+	self.uninstalled_btn.hidden = not in_store
+	-- 搜索框常驻：商店模式搜索远端，本地模式过滤本地
 	local task_running = self._active_task ~= nil
 	self.refresh_btn:set_text(in_store and "刷新商店" or "查询远端")
 	self.sort_btn:set_enabled(in_store and not self._active_task)
@@ -1201,12 +1228,16 @@ end
 
 function PluginManagerView:_get_store_page(base, sort_val, category_val, page, use_cache)
 	local exclude_param = self:_build_exclude_param()
-	local key = table.concat({base or "", sort_val or "", category_val or "", tostring(page or 1), tostring(STORE_PAGE_SIZE), exclude_param}, "::")
+	local q_param = ""
+	if self._search_query and self._search_query ~= "" then
+		q_param = "&q=" .. url_encode(self._search_query)
+	end
+	local key = table.concat({base or "", sort_val or "", category_val or "", tostring(page or 1), tostring(STORE_PAGE_SIZE), exclude_param, q_param}, "::")
 	if use_cache ~= false and self._store_page_cache[key] then
 		return true, self._store_page_cache[key], true
 	end
 
-	local url = string.format("%s/list?page=%d&page_size=%d&sort=%s&category=%s%s", base, page, STORE_PAGE_SIZE, sort_val, category_val, exclude_param)
+	local url = string.format("%s/list?page=%d&page_size=%d&sort=%s&category=%s%s%s", base, page, STORE_PAGE_SIZE, sort_val, category_val, exclude_param, q_param)
 	local resp, err = self:_request(url, {
 		method = "GET"
 	}, 20)
@@ -1224,6 +1255,19 @@ function PluginManagerView:_get_store_page(base, sort_val, category_val, page, u
 	local parsed = self:_decode_store_page(body, page)
 	self._store_page_cache[key] = parsed
 	return true, parsed, false
+end
+
+--- 搜索提交（回车）：商店模式请求远端，本地模式重绘本地过滤
+function PluginManagerView:_on_search_submit(text)
+	self._search_query = text
+	if self.mode == "store" then
+		self.store_page = 1
+		self:_start_task("搜索插件", function()
+			return self:_fetch_store_list()
+		end)
+	else
+		self:_render_current_list()
+	end
 end
 
 function PluginManagerView:_fetch_store_list()
@@ -2064,6 +2108,15 @@ function PluginManagerView:_render_local_list()
 	for _, plugin_data in ipairs(self.local_plugins) do
 		local cfg = plugin_data.config
 		local plugin_category = cfg.category or "other"
+		-- 搜索过滤（本地即时）
+		if self._search_query and self._search_query ~= "" then
+			local q = self._search_query:lower()
+			local hit = (cfg.name and cfg.name:lower():find(q, 1, true)) or (cfg.desc and cfg.desc:lower():find(q, 1, true)) or (cfg.by and cfg.by:lower():find(q, 1, true)) or (plugin_data.entry and plugin_data.entry:lower():find(q, 1, true))
+
+			if not hit then
+				goto continue
+			end
+		end
 		-- 过滤分类
 		if (category_option.value == "all" or category_option.value == plugin_category) and (not self._my_plugins_only or cfg.by == self._developer_config.account) then
 			local remote = self.remote_by_entry[plugin_data.entry]
@@ -2152,6 +2205,7 @@ function PluginManagerView:_render_local_list()
 			self.plugin_list:add_row(KView:new(V.v(list_w, 10)))
 			self._plugin_rows[#self._plugin_rows + 1] = row
 		end
+		::continue::
 	end
 end
 
