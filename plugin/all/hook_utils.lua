@@ -24,6 +24,37 @@ function hook_utils:new()
 	return new
 end
 
+-- 重建 fn_name 的调用链：把已按 priority 排序的 hooks 扁平化成一条闭包链并赋给 obj[fn_name]。
+-- 闭包只在 HOOK/UNHOOK 时创建一次，运行时调用零分配（对比旧实现每次调用都新建 call_next 闭包链）。
+-- 无钩子时直接把 original 还原回 obj[fn_name]，调用开销与未启用钩子完全一致。
+-- 语义（责任链）：handler 签名 function(next, self_or_first_arg, ...)，
+--   next 是把后续 handler 与 original 串起来的函数；链尾调用 original 时参数由各 handler 通过 next(...) 传递。
+-- 注意：与旧实现的差异——旧实现中重复调用 next 会推进到链的下一环；预编译链中重复调用 next 会再次执行同一个后续 handler（标准责任链语义）。插件中 next 应恰好调用一次。
+local function rebuild_chain(obj, fn_name)
+	local hook_info = obj.__hooks[fn_name]
+	local hooks = hook_info.hooks
+	local count = #hooks
+
+	if count == 0 then
+		obj[fn_name] = hook_info.original
+
+		return
+	end
+
+	local next_fn = hook_info.original
+
+	for i = count, 1, -1 do
+		local handler = hooks[i].handler
+		local next_prev = next_fn
+
+		next_fn = function(...)
+			return handler(next_prev, ...)
+		end
+	end
+
+	obj[fn_name] = next_fn
+end
+
 ---增加钩子
 ---@param obj table 对象
 ---@param fn_name string 函数名
@@ -37,6 +68,11 @@ function hook_utils.HOOK(obj, fn_name, handler, priority)
 
 	if not obj[fn_name] then
 		log.error("尝试添加钩子到不存在的函数%s!", fn_name)
+		return
+	end
+
+	if type(handler) ~= "function" then
+		log.error("钩子处理器必须是函数: %s.%s（实际为 %s）", tostring(obj), tostring(fn_name), type(handler))
 		return
 	end
 
@@ -55,10 +91,6 @@ function hook_utils.HOOK(obj, fn_name, handler, priority)
 			original = obj[fn_name], -- 保存原函数
 			hooks = {} -- 钩子处理器列表
 		}
-		-- 2.2 创建新的包装函数
-		obj[fn_name] = function(...)
-			return hook_utils:execute_hook_chain(obj, fn_name, ...)
-		end
 	end
 
 	-- 步骤3: 添加新的钩子处理器
@@ -69,46 +101,9 @@ function hook_utils.HOOK(obj, fn_name, handler, priority)
 	table.sort(obj.__hooks[fn_name].hooks, function(a, b)
 		return a.priority < b.priority
 	end)
-end
 
----链式调用钩子
----@param obj table 对象
----@param fn_name string 函数名
----@param ... any 参数
----@return function 钩子函数
-function hook_utils:execute_hook_chain(obj, fn_name, ...)
-	-- 获取这个函数的钩子信息
-	local hook_info = obj.__hooks[fn_name]
-	local hooks = hook_info.hooks
-	local original = hook_info.original
-
-	-- 情况1: 没有钩子，直接调用原函数
-	if #hooks == 0 then
-		return original(obj, ...)
-	end
-
-	-- 情况2: 有钩子，创建执行链
-	-- 当前执行位置
-	local current_index = 1
-
-	-- 定义链式调用函数
-	local function call_next(...)
-		if current_index > #hooks then
-			-- 所有钩子都执行完了，调用原始函数
-			return original(...)
-		else
-			-- 执行当前钩子，并递增进度
-			local current_handler = hooks[current_index].handler
-
-			current_index = current_index + 1
-
-			-- 调用钩子处理器，传递下一个调用的函数
-			return current_handler(call_next, ...)
-		end
-	end
-
-	-- 开始执行钩子链
-	return call_next(...)
+	-- 步骤4: 重建预编译调用链
+	rebuild_chain(obj, fn_name)
 end
 
 -- 移除特定钩子
@@ -117,7 +112,8 @@ function hook_utils.UNHOOK(obj, fn_name, handler_to_remove)
 		return false
 	end
 
-	local hooks = obj.__hooks[fn_name].hooks
+	local hook_info = obj.__hooks[fn_name]
+	local hooks = hook_info.hooks
 	local removed_count = 0
 
 	-- 从后往前遍历，避免删除时索引错乱
@@ -129,6 +125,11 @@ function hook_utils.UNHOOK(obj, fn_name, handler_to_remove)
 
 			removed_count = removed_count + 1
 		end
+	end
+
+	-- 钩子集合变化后必须重建链，否则已编译闭包仍引用已删除的 handler
+	if removed_count > 0 then
+		rebuild_chain(obj, fn_name)
 	end
 
 	return removed_count > 0
