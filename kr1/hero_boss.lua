@@ -1351,7 +1351,7 @@ tt.main_script.update = function(this, store)
 
 				local targets = U.find_soldiers_in_range(entities, this.pos, 0, bda.max_range, bda.vis_flags, bda.vis_bans)
 
-				if not targets or #targets < bda.min_count then
+				if not targets then
 					SU.delay_attack(store, bda, fts(6))
 
 					goto label_53_1

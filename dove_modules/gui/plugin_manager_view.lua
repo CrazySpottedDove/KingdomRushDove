@@ -396,6 +396,10 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	panel_h = math.min(panel_h, sh - 12)
 	local ui_scale = math.max(panel_w / PANEL_MIN_W, panel_h / PANEL_MIN_H)
 	local touch_scale = km.clamp(ui_scale * (IS_ANDROID and 1.12 or 1.0), 1.0, 1.35)
+	-- 供下载任务管理视图复用同一套动态布局（随屏幕缩放，与主面板一致）
+	self._panel_w = panel_w
+	self._panel_h = panel_h
+	self._dl_touch_scale = touch_scale
 	local header_btn_w = math.floor(132 * touch_scale + 0.5)
 	local header_btn_h = math.floor(30 * touch_scale + 0.5)
 	local header_btn_gap = math.floor(10 * touch_scale + 0.5)
@@ -419,7 +423,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	local list_top_y = math.max(LIST_TOP_Y, hint_y + hint_h + 10)
 	local footer_y = panel_h - 44
 	local scroll_h = math.max(260, footer_y - list_top_y - 14)
-	local header_group_x = panel_w - 20 - (header_btn_w * 3 + header_btn_gap * 2)
+	local header_group_x = panel_w - 20 - (header_btn_w * 4 + header_btn_gap * 3)
 	self._row_action_button_size = V.v(km.clamp(math.floor(122 * touch_scale + 0.5), 122, 160), km.clamp(math.floor(34 * touch_scale + 0.5), 34, 38))
 	self._row_toggle_size = V.v(km.clamp(math.floor(84 * touch_scale + 0.5), 84, 110), km.clamp(math.floor(36 * touch_scale + 0.5), 36, 44))
 	self._row_status_width = km.clamp(math.floor(300 * touch_scale + 0.5), 300, 380)
@@ -453,6 +457,13 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self._selected_site = nil
 	self._active_download_name = ""
 	self._http_thread = nil
+	-- 下载任务队列（串行）：_dl_queue 是 FIFO 队列，_dl_running 是当前执行中的任务
+	self._dl_queue = {}
+	self._dl_running = nil
+	self._dl_seq = 0
+	self._dl_view_open = false
+	self._dl_view_dirty = false
+	self._dl_row_by_id = {}
 	self._unsaved_changes = false
 	self._pending_close = false
 	self._saved_state = {}
@@ -620,9 +631,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 
 	self.update_all_btn = header_btn("一键更新全部", header_group_x + header_btn_w + header_btn_gap, header_row2_y)
 	self.update_all_btn.on_press = function()
-		self:_start_task("一键更新插件", function()
-			return self:_update_all_plugins()
-		end)
+		self:_update_all_plugins()
 	end
 
 	self.my_plugins_btn = header_btn("我的插件", header_group_x + (header_btn_w + header_btn_gap) * 2, header_row2_y)
@@ -634,6 +643,11 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 		self:_refresh_header_buttons()
 	end
 	self.my_plugins_btn.hidden = not self._developer_mode
+
+	self.dl_manager_btn = header_btn("下载管理", header_group_x + (header_btn_w + header_btn_gap) * 3, header_row2_y)
+	self.dl_manager_btn.on_press = function()
+		self:_toggle_dl_view()
+	end
 
 	-- 分页控件与状态提示
 	local pager_gap = 10
@@ -1041,7 +1055,7 @@ function PluginManagerView:_render_progress()
 	self.progress_fill.size = V.v(w, self.progress_fill.size.y)
 end
 
-function PluginManagerView:_request(url, options, timeout_sec)
+function PluginManagerView:_request(url, options, timeout_sec, cancel_fn)
 	timeout_sec = timeout_sec or 20
 	self._request_id = self._request_id + 1
 	local req_id = self._request_id
@@ -1055,7 +1069,7 @@ function PluginManagerView:_request(url, options, timeout_sec)
 
 	local start_t = love.timer.getTime()
 	while true do
-		if self._cancel_requested then
+		if self._cancel_requested or (cancel_fn and cancel_fn()) then
 			return nil, "cancelled"
 		end
 		if love.timer.getTime() - start_t > timeout_sec then
@@ -1216,16 +1230,21 @@ function PluginManagerView:_fetch_remote_entries_for_local()
 		return false, "没有可用插件商店地址"
 	end
 
+	-- 收集需要查询的 entry（去重），已命中缓存的直接计入
 	local target_entries = {}
-	local total_targets = 0
+	local pending = {}
 	for _, plugin_data in ipairs(self.local_plugins) do
 		local entry = utf8_util.sanitize(plugin_data.entry)
-		if entry ~= "" then
-			if not target_entries[entry] then
-				total_targets = total_targets + 1
-			end
+		if entry ~= "" and not target_entries[entry] then
 			target_entries[entry] = true
+			if not self._remote_entry_cache[entry] then
+				pending[#pending + 1] = entry
+			end
 		end
+	end
+	local total_targets = 0
+	for _ in pairs(target_entries) do
+		total_targets = total_targets + 1
 	end
 	if total_targets == 0 then
 		self._remote_lookup_done = true
@@ -1240,32 +1259,44 @@ function PluginManagerView:_fetch_remote_entries_for_local()
 			found_count = found_count + 1
 		end
 	end
-	local sort_val = SORT_OPTIONS[self.sort_idx].value
-	local category_val = "all"
-	local page = 1
-	while true do
+
+	-- 批量查询：一次请求查询一批 entry，替代逐页翻完整个商店（减轻服务器带宽压力）
+	local BATCH_SIZE = 100
+	for i = 1, #pending, BATCH_SIZE do
 		if self._cancel_requested then
 			return false, "cancelled"
 		end
-		local ok, page_data_or_err = self:_get_store_page(base, sort_val, category_val, page, true)
-		if not ok then
-			return false, page_data_or_err
+		local batch = {}
+		local batch_end = math.min(i + BATCH_SIZE - 1, #pending)
+		for j = i, batch_end do
+			batch[#batch + 1] = pending[j]
 		end
-		local page_data = page_data_or_err
-		for entry, item in pairs(page_data.by_entry) do
-			if target_entries[entry] and not self._remote_entry_cache[entry] then
-				self._remote_entry_cache[entry] = item
+		self:_set_status(string.format("正在批量查询远端条目…（%d/%d）", i, #pending), 5)
+		local resp, err = self:_request(base .. "/entries", {
+			method = "POST",
+			headers = {
+				["Content-Type"] = "application/json"
+			},
+			data = json.encode({
+				entries = batch
+			})
+		}, 30)
+		if err then
+			return false, "批量查询失败：" .. err
+		end
+		if tonumber(resp.code) ~= 200 then
+			return false, "批量查询失败：HTTP " .. tostring(resp.code)
+		end
+		local ok, body = pcall(json.decode, resp.body)
+		if not ok or type(body) ~= "table" or type(body.items) ~= "table" then
+			return false, "批量查询响应解析失败"
+		end
+		for _, item in ipairs(body.items) do
+			if item.entry and not self._remote_entry_cache[item.entry] then
+				self._remote_entry_cache[item.entry] = item
 				found_count = found_count + 1
 			end
 		end
-		self:_set_status(string.format("正在查询远端条目… 第 %d 页（已匹配 %d/%d）", page, found_count, total_targets), 5)
-		if found_count >= total_targets then
-			break
-		end
-		if page >= page_data.total_pages then
-			break
-		end
-		page = page + 1
 		coroutine.yield()
 	end
 
@@ -1346,7 +1377,7 @@ function PluginManagerView:_delete_local_plugin_by_name(plugin_name)
 	return true, nil
 end
 
-function PluginManagerView:_download_zip(item)
+function PluginManagerView:_download_zip(item, task)
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
 		return nil, "无法选择插件商店地址"
@@ -1362,8 +1393,15 @@ function PluginManagerView:_download_zip(item)
 	local total = nil
 	self._active_download_name = item.name or item.entry or filename
 
+	local function is_cancelled()
+		return (task and task.cancelled) or self._cancel_requested
+	end
+
 	while not total or downloaded < total do
-		if self._cancel_requested then
+		if is_cancelled() then
+			if task then
+				task.progress = 0
+			end
 			return nil, "cancelled"
 		end
 		local end_pos
@@ -1377,7 +1415,9 @@ function PluginManagerView:_download_zip(item)
 			headers = {
 				["Range"] = string.format("bytes=%d-%d", downloaded, end_pos)
 			}
-		}, 120)
+		}, 120, function()
+			return task and task.cancelled
+		end)
 		if err then
 			return nil, "下载失败：" .. err
 		end
@@ -1398,6 +1438,9 @@ function PluginManagerView:_download_zip(item)
 		downloaded = downloaded + #body
 
 		local percent = total and (downloaded * 100 / math.max(total, 1)) or 0
+		if task then
+			task.progress = percent
+		end
 		self:_set_status(string.format("下载插件中：%s  %.1f%%", self._active_download_name, percent), percent)
 
 		if code == 200 then
@@ -1438,14 +1481,13 @@ function PluginManagerView:_collect_plugin_root_candidates(base_dir)
 	return candidates
 end
 
-function PluginManagerView:_install_plugin(item, is_update)
-	self._cancel_requested = false
+function PluginManagerView:_install_plugin(item, is_update, task)
 	self:_set_status((is_update and "正在更新插件：" or "正在安装插件：") .. (item.name or item.entry), 0)
-	local zip_data, err = self:_download_zip(item)
+	local zip_data, err = self:_download_zip(item, task)
 	if not zip_data then
 		return false, err
 	end
-	if self._cancel_requested then
+	if (task and task.cancelled) or self._cancel_requested then
 		return false, "cancelled"
 	end
 
@@ -1457,6 +1499,9 @@ function PluginManagerView:_install_plugin(item, is_update)
 	FS.createDirectory(stage_root)
 
 	self:_set_status("正在解压插件：" .. (item.name or item.entry), 92)
+	if task then
+		task.progress = 92
+	end
 	local ok, unzip_err = zip.unzip_to_dir(zip_data, stage_root)
 	if not ok then
 		return false, unzip_err
@@ -1547,6 +1592,9 @@ function PluginManagerView:_install_plugin(item, is_update)
 
 	self:_refresh_local_view((is_update and "插件更新完成：" or "插件安装完成：") .. (item.name or item.entry))
 	self._active_download_name = ""
+	if task then
+		task.progress = 100
+	end
 	return true, nil
 end
 
@@ -1650,11 +1698,14 @@ function PluginManagerView:_download_patch(entry, platform, version, changed, de
 	return resp.body, nil
 end
 
-function PluginManagerView:_install_or_update_item(item)
+function PluginManagerView:_install_or_update_item(item, task)
+	if task and task.cancelled then
+		return false, "cancelled"
+	end
 	local local_plugin = self.local_by_entry[item.entry]
 	local need_update = local_plugin and has_update(local_plugin.config.version, item.version)
 	if not need_update then
-		return self:_install_plugin(item, false)
+		return self:_install_plugin(item, false, task)
 	end
 
 	-- 尝试增量更新：现场计算本地文件哈希
@@ -1672,9 +1723,15 @@ function PluginManagerView:_install_or_update_item(item)
 				return true, nil
 			end
 			local patch_data = self:_download_patch(entry, get_platform(), item.version or "", changed, deleted)
+			if task and task.cancelled then
+				return false, "cancelled"
+			end
 			if patch_data then
 				local _, local_cfg_saved = self:_preserve_local_config(target_dir, entry, local_plugin)
 				self:_set_status("正在应用增量更新：" .. (item.name or item.entry), 90)
+				if task then
+					task.progress = 90
+				end
 				local ok_apply = self:_apply_patch_to_dir(target_dir, patch_data)
 				if ok_apply then
 					if local_cfg_saved then
@@ -1690,6 +1747,9 @@ function PluginManagerView:_install_or_update_item(item)
 						storage:write_lua(target_dir .. "/config.lua", installed_cfg)
 					end
 					self:_refresh_local_view("插件增量更新完成：" .. (item.name or item.entry))
+					if task then
+						task.progress = 100
+					end
 					return true, nil
 				end
 			end
@@ -1697,7 +1757,161 @@ function PluginManagerView:_install_or_update_item(item)
 	end
 
 	-- 回落全量更新
-	return self:_install_plugin(item, true)
+	return self:_install_plugin(item, true, task)
+end
+
+-- ─────────────────────────────────────────────
+-- 下载任务队列（串行执行，服务器带宽低）
+-- ─────────────────────────────────────────────
+
+--- 查找某插件 entry 是否在下载队列中（未终态：排队/下载/取消中）
+---@param entry string 插件 entry
+---@return table|nil 任务对象
+function PluginManagerView:_find_dl_task_by_entry(entry)
+	if self._dl_running and self._dl_running.item.entry == entry then
+		return self._dl_running
+	end
+	for _, t in ipairs(self._dl_queue) do
+		if t.item.entry == entry and (t.state == "queued" or t.state == "running" or t.state == "cancelling") then
+			return t
+		end
+	end
+	return nil
+end
+
+--- 加入下载队列；同一 entry 已在队列/运行中时忽略
+---@param item table 商店条目
+---@param is_update boolean 是否更新（用于完成文案）
+---@return table|nil 任务对象（重复入队返回 nil）
+function PluginManagerView:_enqueue_download(item, is_update)
+	if not item or not item.entry then
+		return nil
+	end
+	local entry = item.entry
+	if self._dl_running and self._dl_running.item.entry == entry then
+		self:_set_status("该插件正在下载中：" .. (item.name or entry), 0)
+		return nil
+	end
+	for _, t in ipairs(self._dl_queue) do
+		if t.item.entry == entry and (t.state == "queued" or t.state == "running") then
+			self:_set_status("该插件已在下载队列中：" .. (item.name or entry), 0)
+			return nil
+		end
+	end
+	self._dl_seq = self._dl_seq + 1
+	local task = {
+		id = self._dl_seq,
+		item = item,
+		is_update = is_update == true,
+		state = "queued",
+		progress = 0,
+		error = nil,
+		cancelled = false,
+		coro = nil
+	}
+	table.insert(self._dl_queue, task)
+	self:_set_status(string.format("已加入下载队列：%s（队列共 %d 项）", item.name or entry, #self._dl_queue), 0)
+	self:_refresh_header_buttons()
+	self:_render_current_list()
+	if self._dl_view_open then
+		self._dl_view_dirty = true
+	end
+	return task
+end
+
+--- 启动一个任务（下载+安装协程）
+function PluginManagerView:_start_dl_task(task)
+	task.state = "running"
+	task.coro = coroutine.create(function()
+		local ok, err = self:_install_or_update_item(task.item, task)
+		return {
+			ok = ok,
+			err = err,
+			cancelled = task.cancelled
+		}
+	end)
+	self._dl_running = task
+end
+
+--- 每帧驱动队列：推进运行中任务、启动下一个排队任务
+function PluginManagerView:_update_dl_queue()
+	if self._dl_running then
+		local task = self._dl_running
+		local ok, result = coroutine.resume(task.coro)
+		if not ok then
+			task.state = "failed"
+			task.error = tostring(result)
+			self._dl_running = nil
+			self._dl_view_dirty = true
+			log.error("download task failed: %s", tostring(result))
+			self:_render_current_list()
+		elseif coroutine.status(task.coro) == "dead" then
+			if result and result.cancelled then
+				task.state = "cancelled"
+			elseif result and result.ok then
+				task.state = "done"
+			else
+				task.state = "failed"
+				task.error = result and result.err or "unknown"
+			end
+			self._dl_running = nil
+			self._dl_view_dirty = true
+			-- 任务终态：刷新主列表，恢复「安装/更新」按钮与状态
+			self:_render_current_list()
+		end
+	end
+	if not self._dl_running then
+		for _, task in ipairs(self._dl_queue) do
+			if task.state == "queued" then
+				self:_start_dl_task(task)
+				self._dl_view_dirty = true
+				break
+			end
+		end
+	end
+	if self._dl_view_open then
+		if self._dl_view_dirty then
+			-- 结构变化（入队/终态/删除）：重建列表，并保持滚动位置
+			self._dl_view_dirty = false
+			self:_render_dl_task_view()
+		elseif self._dl_running then
+			-- 下载中：只刷新进度与状态文本，避免重建导致滚动位置丢失
+			self:_update_dl_view_progress()
+		end
+	end
+end
+
+--- 取消任务（排队中直接取消；运行中标记取消，协程在下一个网络边界退出）
+function PluginManagerView:_cancel_dl_task(task)
+	if task.state == "queued" then
+		task.state = "cancelled"
+		self:_render_current_list()
+	elseif task.state == "running" then
+		task.cancelled = true
+		task.state = "cancelling"
+	end
+	self:_refresh_header_buttons()
+	if self._dl_view_open then
+		self._dl_view_dirty = true
+	end
+end
+
+--- 从队列移除终态任务
+function PluginManagerView:_remove_dl_task(task)
+	if task.state == "running" or task.state == "queued" or task.state == "cancelling" then
+		return false
+	end
+	for i, t in ipairs(self._dl_queue) do
+		if t == task then
+			table.remove(self._dl_queue, i)
+			break
+		end
+	end
+	self:_refresh_header_buttons()
+	if self._dl_view_open then
+		self._dl_view_dirty = true
+	end
+	return true
 end
 
 function PluginManagerView:_preserve_local_config(target_dir, entry, local_plugin)
@@ -1771,18 +1985,14 @@ function PluginManagerView:_update_all_plugins()
 		self:_set_status("没有可更新的插件", 0)
 		return true, nil
 	end
-	for i, row in ipairs(pending) do
-		if self._cancel_requested then
-			return false, "cancelled"
+	-- 全部加入下载队列（串行执行，不阻塞 UI）
+	local enqueued = 0
+	for _, row in ipairs(pending) do
+		if self:_enqueue_download(row.remote, true) then
+			enqueued = enqueued + 1
 		end
-		self:_set_status(string.format("一键更新（%d/%d）：%s", i, #pending, row.remote.name or row.remote.entry), (i - 1) * 100 / #pending)
-		local ok, err = self:_install_or_update_item(row.remote)
-		if not ok then
-			return false, err
-		end
-		coroutine.yield()
 	end
-	self:_set_status(string.format("一键更新完成，共 %d 个插件", #pending), 100)
+	self:_set_status(string.format("已加入更新队列，共 %d 个插件", enqueued), 0)
 	return true, nil
 end
 
@@ -1844,8 +2054,11 @@ function PluginManagerView:_render_local_list()
 					self:_show_local_plugin_detail(plugin_data)
 				end
 			}
+			-- 作者自己的插件：本地视图同样禁止删除，防止误删
+			local is_own = self._developer_mode and cfg and cfg.by == self._developer_config.account
 			actions[#actions + 1] = {
-				text = "删除",
+				text = is_own and "我的插件" or "删除",
+				enabled = not is_own,
 				on_press = function()
 					self:_start_task("删除插件", function()
 						local ok, err = self:_delete_local_plugin_by_name(plugin_data.name)
@@ -1858,12 +2071,11 @@ function PluginManagerView:_render_local_list()
 				end
 			}
 			if remote and has_update(cfg.version, remote.version) then
+				local dl_task = self:_find_dl_task_by_entry(remote.entry)
 				actions[#actions + 1] = {
-					text = "更新",
+					text = dl_task and "更新中" or "更新",
 					on_press = function()
-						self:_start_task("更新插件", function()
-							return self:_install_or_update_item(remote)
-						end)
+						self:_enqueue_download(remote, true)
 					end
 				}
 			end
@@ -1912,8 +2124,15 @@ function PluginManagerView:_render_store_list()
 		local local_plugin = self.local_by_entry[item.entry] or self.local_by_name[item.entry]
 		local installed = local_plugin ~= nil
 		local needs_update = installed and has_update(local_plugin.config.version, item.version)
+		local dl_task = self:_find_dl_task_by_entry(item.entry)
 		local status
-		if installed then
+		if dl_task then
+			if dl_task.state == "running" or dl_task.state == "cancelling" then
+				status = "正在下载…"
+			else
+				status = "已加入下载队列"
+			end
+		elseif installed then
 			if needs_update then
 				status = string.format("已安装：v%s（可更新到 v%s）", utf8_util.sanitize(local_plugin.config.version), utf8_util.sanitize(item.version))
 			else
@@ -1930,17 +2149,28 @@ function PluginManagerView:_render_store_list()
 				self:_show_store_plugin_detail(item)
 			end
 		}
-		actions[#actions + 1] = {
-			text = installed and (needs_update and "更新" or "重装") or "安装",
-			on_press = function()
-				self:_start_task("安装插件", function()
-					return self:_install_or_update_item(item)
-				end)
-			end
-		}
-		if installed then
+		if dl_task then
+			-- 已在下载队列：按钮改为排队提示（点击不再重复入队，_enqueue_download 会提示）
 			actions[#actions + 1] = {
-				text = "删除",
+				text = dl_task.state == "running" and "下载中" or "排队中",
+				on_press = function()
+					self:_enqueue_download(item, installed and needs_update)
+				end
+			}
+		else
+			actions[#actions + 1] = {
+				text = installed and (needs_update and "更新" or "重装") or "安装",
+				on_press = function()
+					self:_enqueue_download(item, installed and needs_update)
+				end
+			}
+		end
+		if installed then
+			-- 作者自己的插件：商店视图中禁用删除按钮，防止误删本地插件
+			local is_own = self._developer_mode and local_plugin.config and local_plugin.config.by == self._developer_config.account
+			actions[#actions + 1] = {
+				text = is_own and "我的插件" or "删除",
+				enabled = not is_own,
 				on_press = function()
 					self:_start_task("删除插件", function()
 						local ok, err = self:_delete_local_plugin_by_name(local_plugin.name)
@@ -1973,10 +2203,17 @@ end
 
 function PluginManagerView:_render_current_list()
 	self._disabled_warning.hidden = self.global_toggle.value
+	-- 渲染前后保存/恢复滚动位置，避免重绘列表（如安装/更新完成后）把视野弹回顶部
+	local plugin_list = self.plugin_list
+	local saved_scroll = plugin_list and plugin_list.scroll_origin_y or 0
 	if self.mode == "store" then
 		self:_render_store_list()
 	else
 		self:_render_local_list()
+	end
+	if plugin_list then
+		local max_scroll = -(plugin_list._bottom_y - plugin_list.size.y)
+		plugin_list.scroll_origin_y = km.clamp(max_scroll, 0, saved_scroll)
 	end
 	self:_sanitize_view_texts(self.back)
 	self:_refresh_header_buttons()
@@ -2041,6 +2278,7 @@ function PluginManagerView:update(dt)
 	end
 	self:_sanitize_view_texts(self.back)
 	self:_render_progress()
+	self:_update_dl_queue()
 	if not self._active_task then
 		if self._cover_yes_btn.hidden and self._cover_no_btn.hidden then
 			self.task_dialog.hidden = true
@@ -2578,6 +2816,240 @@ end
 
 function PluginManagerView:destroy()
 	self:_stop_http_thread()
+end
+
+-- ─────────────────────────────────────────────
+-- 下载任务管理视图
+-- ─────────────────────────────────────────────
+
+local DL_STATE_TEXT = {
+	queued = "排队中",
+	running = "下载中",
+	cancelling = "取消中",
+	done = "完成",
+	failed = "失败",
+	cancelled = "已取消"
+}
+
+function PluginManagerView:_build_dl_view()
+	if self._dl_view then
+		return
+	end
+	local rs = GGLabel.static.ref_h / REF_H
+	local vw, vh = self._sw, self._sh
+	self._dl_view = KView:new(V.v(vw, vh))
+	self._dl_view.colors.background = {0, 0, 0, 150}
+	self._dl_view.hidden = true
+	self:add_child(self._dl_view)
+
+	local pw, ph = self._panel_w or math.min(880, vw - 60), self._panel_h or math.min(700, vh - 80)
+	local us = self._dl_touch_scale or 1
+	local panel = KView:new(V.v(pw, ph))
+	panel.colors.background = {40, 29, 10, 245}
+	panel.anchor = V.v(pw / 2, ph / 2)
+	panel.pos = V.v(vw / 2, vh / 2)
+	panel.shape = {
+		name = "rectangle",
+		args = {"fill", 0, 0, pw, ph, 14, 14}
+	}
+	self._dl_view:add_child(panel)
+
+	local title = GGLabel:new(V.v(pw - 80, 30))
+	title.font_name = "h"
+	title.font_size = 16 * rs
+	title.text_align = "left"
+	title.vertical_align = "middle"
+	title.colors.text = {244, 221, 165, 255}
+	title.text = "下载任务管理"
+	title.pos = V.v(20, 12)
+	panel:add_child(title)
+
+	local hint = GGLabel:new(V.v(pw - 40, 20))
+	hint.font_size = 12 * rs
+	hint.font_name = "body"
+	hint.text_align = "left"
+	hint.vertical_align = "middle"
+	hint.colors.text = {200, 185, 150, 255}
+	hint.text = "任务完成后点「清除记录」仅移除列表项，不会删除已安装的插件；卸载插件请在本地列表操作。"
+	hint.pos = V.v(20, 44)
+	panel:add_child(hint)
+
+	local close_btn = KImageButton:new("levelSelect_closeBtn_0001", "levelSelect_closeBtn_0002", "levelSelect_closeBtn_0003")
+	close_btn.pos = V.v(pw - 23, 23)
+	close_btn.scale:set(1.2, 1.2)
+	close_btn:set_anchor_to_center()
+	close_btn.on_click = function()
+		S:queue("GUIButtonCommon")
+		self:_toggle_dl_view()
+	end
+	panel:add_child(close_btn)
+
+	self._dl_list = KScrollList:new(V.v(pw - 40, ph - 118))
+	self._dl_list.pos = V.v(20, 74)
+	self._dl_list.colors.scroller_background = {45, 36, 22, 200}
+	self._dl_list.colors.scroller_foreground = {110, 90, 50, 255}
+	self._dl_list.scroller_width = math.max(10, math.floor(14 * us + 0.5))
+	self._dl_list.scroll_amount = math.floor(66 * us + 0.5)
+	panel:add_child(self._dl_list)
+end
+
+function PluginManagerView:_toggle_dl_view()
+	self:_build_dl_view()
+	self._dl_view_open = not self._dl_view_open
+	self._dl_view.hidden = not self._dl_view_open
+	if self._dl_view_open then
+		self._dl_view_dirty = false
+		self:_render_dl_task_view()
+		self._dl_view:order_to_front()
+	end
+end
+
+function PluginManagerView:_render_dl_task_view()
+	if not self._dl_view or not self._dl_list then
+		return
+	end
+	local rs = GGLabel.static.ref_h / REF_H
+	local us = self._dl_touch_scale or 1
+	-- 重建前保存滚动位置（clear_rows 会重置 scroll_origin_y），避免重建弹回顶部
+	local saved_scroll = self._dl_list.scroll_origin_y
+	self._dl_list:clear_rows()
+	self._dl_row_by_id = {}
+	local list_w = self._dl_list.size.x - self._dl_list.scroller_width - 2 * self._dl_list.scroller_margin
+
+	if #self._dl_queue == 0 then
+		local lbl = GGLabel:new(V.v(list_w, 40))
+		lbl.font_size = 13 * rs
+		lbl.text_align = "center"
+		lbl.colors.text = {200, 185, 150, 255}
+		lbl.font_name = "body"
+		lbl.text = "暂无下载任务"
+		self._dl_list:add_row(lbl)
+		return
+	end
+
+	local row_h = math.floor(66 * us + 0.5)
+	local row_gap = math.max(4, math.floor(8 * us + 0.5))
+	for _, task in ipairs(self._dl_queue) do
+		local row = KView:new(V.v(list_w, row_h))
+		row.colors.background = {62, 48, 22, 220}
+		row.shape = {
+			name = "rectangle",
+			args = {"fill", 0, 0, list_w, row_h, 8, 8}
+		}
+
+		-- 名称：固定字号，超长按字符截断，避免 GGLabel fit_lines 自动缩放字体导致各任务字号不一致
+		local name_lbl = GGLabel:new(V.v(list_w - 300 * us, math.floor(22 * us + 0.5)))
+		name_lbl.font_size = 13 * rs
+		name_lbl.text_align = "left"
+		name_lbl.vertical_align = "middle"
+		name_lbl.font_name = "body"
+		name_lbl.colors.text = {240, 228, 200, 255}
+		name_lbl.text = utf8_util.sub(task.item.name or task.item.entry or ("#" .. tostring(task.id)), 22)
+		name_lbl.pos = V.v(12, math.floor(6 * us + 0.5))
+		row:add_child(name_lbl)
+
+		local state_lbl = GGLabel:new(V.v(math.floor(140 * us + 0.5), math.floor(22 * us + 0.5)))
+		state_lbl.font_size = 13 * rs
+		state_lbl.text_align = "right"
+		state_lbl.vertical_align = "middle"
+		state_lbl.colors.text = {214, 193, 144, 255}
+		state_lbl.text = DL_STATE_TEXT[task.state] or task.state
+		state_lbl.pos = V.v(list_w - math.floor(152 * us + 0.5), math.floor(6 * us + 0.5))
+		state_lbl.font_name = "body"
+		row:add_child(state_lbl)
+		task._state_lbl = state_lbl
+		task._error_lbl = nil
+
+		-- 进度条 + 百分比
+		local bar_w = list_w - 230 * us
+		local bar_h = math.max(4, math.floor(8 * us + 0.5))
+		local bar_bg = KView:new(V.v(bar_w, bar_h))
+		bar_bg.colors.background = {30, 22, 10, 220}
+		bar_bg.pos = V.v(12, math.floor(34 * us + 0.5))
+		bar_bg.shape = {
+			name = "rectangle",
+			args = {"fill", 0, 0, bar_w, bar_h, 4, 4}
+		}
+		row:add_child(bar_bg)
+		local bar_fill = KView:new(V.v(0, bar_h))
+		bar_fill.colors.background = {227, 190, 68, 235}
+		bar_fill.pos = V.v(0, 0)
+		bar_fill.shape = {
+			name = "rectangle",
+			args = {"fill", 0, 0, 0, bar_h, 4, 4}
+		}
+		bar_bg:add_child(bar_fill)
+		task._bar_fill = bar_fill
+		task._bar_w = bar_w
+		task._bar_h = bar_h
+		local fill_w = bar_w * task.progress / 100
+		bar_fill.shape.args[4] = fill_w
+		bar_fill.size = V.v(fill_w, bar_h)
+
+		local progress_lbl = GGLabel:new(V.v(math.floor(60 * us + 0.5), math.floor(20 * us + 0.5)))
+		progress_lbl.font_size = 12 * rs
+		progress_lbl.text_align = "left"
+		progress_lbl.vertical_align = "middle"
+		progress_lbl.colors.text = {227, 190, 68, 255}
+		progress_lbl.text = (task.state == "done" and "100%" or tostring(math.floor(task.progress + 0.5)) .. "%")
+		progress_lbl.pos = V.v(12 + bar_w + math.floor(10 * us + 0.5), math.floor(28 * us + 0.5))
+		progress_lbl.font_name = "body"
+		row:add_child(progress_lbl)
+		task._progress_lbl = progress_lbl
+
+		if task.error and task.error ~= "" then
+			local err_lbl = GGLabel:new(V.v(list_w - 200 * us, math.floor(18 * us + 0.5)))
+			err_lbl.font_size = 11 * rs
+			err_lbl.text_align = "left"
+			err_lbl.colors.text = {255, 150, 130, 255}
+			err_lbl.text = utf8_util.sub(utf8_util.sanitize(task.error), 30)
+			err_lbl.pos = V.v(12, math.floor(44 * us + 0.5))
+			err_lbl.font_name = "body"
+			row:add_child(err_lbl)
+			task._error_lbl = err_lbl
+		end
+
+		local btn
+		if task.state == "queued" or task.state == "running" or task.state == "cancelling" then
+			btn = PluginActionButton:new("取消", V.v(math.floor(64 * us + 0.5), math.floor(28 * us + 0.5)))
+			btn.on_press = function()
+				self:_cancel_dl_task(task)
+			end
+		else
+			btn = PluginActionButton:new("清除记录", V.v(math.floor(76 * us + 0.5), math.floor(28 * us + 0.5)))
+			btn.on_press = function()
+				self:_remove_dl_task(task)
+			end
+		end
+		btn.pos = V.v(list_w - math.floor(84 * us + 0.5), math.floor(30 * us + 0.5))
+		row:add_child(btn)
+
+		self._dl_list:add_row(row)
+		self._dl_list:add_row(KView:new(V.v(list_w, row_gap)))
+		self._dl_row_by_id[task.id] = task
+	end
+
+	-- 恢复滚动位置（clamp 到有效范围）
+	local max_scroll = -(self._dl_list._bottom_y - self._dl_list.size.y)
+	self._dl_list.scroll_origin_y = km.clamp(max_scroll, 0, saved_scroll)
+end
+
+--- 每帧刷新管理视图中的进度条与状态文本（不重建行）
+function PluginManagerView:_update_dl_view_progress()
+	for _, task in ipairs(self._dl_queue) do
+		if task._bar_fill then
+			local w = task._bar_w * task.progress / 100
+			task._bar_fill.shape.args[4] = w
+			task._bar_fill.size = V.v(w, task._bar_h or 8)
+		end
+		if task._progress_lbl then
+			local pct = task.state == "done" and 100 or math.floor(task.progress + 0.5)
+			task._progress_lbl.text = pct .. "%"
+		end
+		if task._state_lbl then
+			task._state_lbl.text = DL_STATE_TEXT[task.state] or task.state
+		end
+	end
 end
 
 return PluginManagerView

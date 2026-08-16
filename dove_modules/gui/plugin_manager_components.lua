@@ -327,6 +327,9 @@ function PluginItemRow:initialize(opts, row_w)
 	for _, action in ipairs(actions) do
 		local btn = PluginActionButton:new(action.text, V.v(action_w, action_h))
 		btn.pos = V.v(x, action_y)
+		if action.enabled == false then
+			btn:set_enabled(false)
+		end
 		btn.on_press = function()
 			if action.on_press then
 				action.on_press()
