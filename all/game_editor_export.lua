@@ -187,7 +187,7 @@ function EditorExportView:initialize(sw, sh, editor)
 
 	local info_lbl = KLabel:new(V.v(pw - 56, 148))
 	info_lbl.pos = v(28, fy)
-	info_lbl.text = string.format("导出目录：game_editor/plugins/$entry/\n关卡标识：%s\n配置格式遵循 mods/mod_template/config.lua，并附加 level_name / 背景图 / 音乐字段。\n若 campaign 出怪不存在，会自动生成空占位文件。", level_name)
+	info_lbl.text = string.format("导出目录：game_editor/plugins/$entry/\n关卡标识：%s\n配置格式遵循 plugin/plugin_template/config.lua，并附加 level_name / 背景图 / 音乐字段。\n若 campaign 出怪不存在，会自动生成空占位文件。", level_name)
 	info_lbl.text_align = "left"
 	info_lbl.colors.text = C.text
 	info_lbl.font_size = 12

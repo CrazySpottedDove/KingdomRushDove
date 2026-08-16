@@ -1,4 +1,4 @@
--- chunkname: @./mods/all/hook_utils.lua
+-- chunkname: @./plugin/all/hook_utils.lua
 local log = require("lib.klua.log"):new("hook_utils")
 local hook_utils = {}
 

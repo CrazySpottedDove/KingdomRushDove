@@ -87,7 +87,7 @@ registry.register({
 - `EU.patch_upgrade_in_game` 对非法 key 做保护：
   - 若 `endless.upgrade_levels[key]` 不存在，忽略并记录错误日志
   - 若 `upgrade_max_levels[key]` 缺失配置，忽略并记录错误日志
-- 目的：避免模组或配置异常导致局内升级流程崩溃。
+- 目的：避免插件或配置异常导致局内升级流程崩溃。
 
 - `EU.patch_upgrades` 对历史/异常存档中的非法 key 做保护：
   - 跳过无 `upgrade_max_levels` 配置的 key

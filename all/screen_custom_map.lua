@@ -4,7 +4,7 @@ local V = require("lib.klua.vector")
 local v = V.v
 local FS = love.filesystem
 local storage = require("all.storage")
-local mod_db = require("mod_db")
+local plugin_db = require("plugin_db")
 local S = require("sound_db")
 local km = require("lib.klua.macros")
 local GS = require("kr1.game_settings")
@@ -100,11 +100,11 @@ local function scan_maps()
 	local maps = {}
 	local progress_data = load_progress()
 
-	for _, mod_data in ipairs(mod_db.mods_datas) do
-		local cfg = mod_data.config
+	for _, plugin_data in ipairs(plugin_db.plugins_datas) do
+		local cfg = plugin_data.config
 		if cfg and cfg.category == "level" then
-			local entry = mod_data.entry
-			local base = mod_data.path
+			local entry = plugin_data.entry
+			local base = plugin_data.path
 			local wave_root = base .. "/data/waves/"
 			local has_campaign = FS.getInfo(wave_root .. entry .. "_waves_campaign.lua") ~= nil
 			if has_campaign then
@@ -1190,11 +1190,11 @@ function CustomLevelSelectView:start_game()
 	local difficulty = self._diff_btn and self._diff_btn:get_difficulty() or DIFFICULTY_NORMAL
 
 	if map.base then
-		local mod_paths = require("mod_paths")
-		local cfg = mod_paths.load_lua_table(map.base .. "/config.lua")
+		local plugin_paths = require("plugin_paths")
+		local cfg = plugin_paths.load_lua_table(map.base .. "/config.lua")
 		if cfg then
 			cfg.last_used_at = os.time()
-			mod_paths.write_lua_table(map.base .. "/config.lua", cfg)
+			plugin_paths.write_lua_table(map.base .. "/config.lua", cfg)
 			if map.cfg then
 				map.cfg.last_used_at = cfg.last_used_at
 			end

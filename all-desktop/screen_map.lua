@@ -34,7 +34,7 @@ require("gg_views_custom")
 require("dove_modules.gui.numeric_keyboard_view")
 local SCU = require("screen_custom_map")
 -- if not IS_ANDROID then
-require("dove_modules.gui.mod_manager_view")
+require("dove_modules.gui.plugin_manager_view")
 require("dove_modules.gui.changelog_view")
 -- end
 
@@ -182,7 +182,7 @@ screen_map.signal_handlers = {}
 local scroll_hotpot_width = 100
 
 local function should_block_map_scroll(this)
-	return (this.level_select and not this.level_select.hidden) or (this.hero_room and not this.hero_room.hidden) or (this.upgrades and not this.upgrades.hidden) or (this.encyclopedia and not this.encyclopedia.hidden) or (this.achievements and not this.achievements.hidden) or (this.option_panel and not this.option_panel.hidden) or (this.config_panel_view and not this.config_panel_view.hidden) or (this.criket_panel_view and not this.criket_panel_view.hidden) or (this.keyset_panel_view and not this.keyset_panel_view.hidden) or (this.launch_options_panel_view and not this.launch_options_panel_view.hidden) or (this.ui_settings_panel_view and not this.ui_settings_panel_view.hidden) or (this.mod_manager_view and not this.mod_manager_view.hidden) or (this.changelog_view and not this.changelog_view.hidden)
+	return (this.level_select and not this.level_select.hidden) or (this.hero_room and not this.hero_room.hidden) or (this.upgrades and not this.upgrades.hidden) or (this.encyclopedia and not this.encyclopedia.hidden) or (this.achievements and not this.achievements.hidden) or (this.option_panel and not this.option_panel.hidden) or (this.config_panel_view and not this.config_panel_view.hidden) or (this.criket_panel_view and not this.criket_panel_view.hidden) or (this.keyset_panel_view and not this.keyset_panel_view.hidden) or (this.launch_options_panel_view and not this.launch_options_panel_view.hidden) or (this.ui_settings_panel_view and not this.ui_settings_panel_view.hidden) or (this.plugin_manager_view and not this.plugin_manager_view.hidden) or (this.changelog_view and not this.changelog_view.hidden)
 end
 
 function screen_map:init_coro(w, h, done_callback)
@@ -1129,20 +1129,20 @@ function screen_map:ensure_launch_options_panel_view()
 	return launch_options_panel_view
 end
 
-function screen_map:ensure_mod_manager_view()
+function screen_map:ensure_plugin_manager_view()
 	-- if IS_ANDROID then
 	-- 	return nil
 	-- end
 
-	if self.mod_manager_view then
-		return self.mod_manager_view
+	if self.plugin_manager_view then
+		return self.plugin_manager_view
 	end
 
-	local mod_manager_view = ModManagerView:new(self.sw, self.sh, self.numeric_keyboard, self.window)
-	self.window:add_child(mod_manager_view)
-	self.mod_manager_view = mod_manager_view
+	local plugin_manager_view = PluginManagerView:new(self.sw, self.sh, self.numeric_keyboard, self.window)
+	self.window:add_child(plugin_manager_view)
+	self.plugin_manager_view = plugin_manager_view
 
-	return mod_manager_view
+	return plugin_manager_view
 end
 
 function screen_map:ensure_changelog_view()
@@ -1396,8 +1396,8 @@ function screen_map:keypressed(key, isrepeat)
 			return true
 		-- end
 		-- if not IS_ANDROID then
-		elseif self.mod_manager_view and not self.mod_manager_view.hidden then
-			self.mod_manager_view:hide()
+		elseif self.plugin_manager_view and not self.plugin_manager_view.hidden then
+			self.plugin_manager_view:hide()
 
 			return true
 		elseif self.changelog_view and not self.changelog_view.hidden then
@@ -1440,7 +1440,7 @@ function screen_map:keypressed(key, isrepeat)
 	-- elseif key == "f3" and not IS_ANDROID then
 	elseif key == "f3" then
 		hide_others()
-		self:ensure_mod_manager_view():show()
+		self:ensure_plugin_manager_view():show()
 	elseif key == "f4" then
 		hide_others()
 		self:ensure_ui_settings_panel_view():show()
@@ -1728,7 +1728,7 @@ if IS_ANDROID then
 	local TOUCH_SCROLL_THRESHOLD = 15 -- 滑动阈值，像素
 	local TOUCH_SCROLL_SENSITIVITY = 2.25 -- 灵敏度系数，0.5~1.0之间
 	local function should_block_map_touch(this)
-		return (this.mod_manager_view and not this.mod_manager_view.hidden) or (this.hero_room and not this.hero_room.hidden) or (this.config_panel_view and not this.config_panel_view.hidden) or (this.criket_panel_view and not this.criket_panel_view.hidden) or (this.keyset_panel_view and not this.keyset_panel_view.hidden) or (this.launch_options_panel_view and not this.launch_options_panel_view.hidden) or (this.ui_settings_panel_view and not this.ui_settings_panel_view.hidden)
+		return (this.plugin_manager_view and not this.plugin_manager_view.hidden) or (this.hero_room and not this.hero_room.hidden) or (this.config_panel_view and not this.config_panel_view.hidden) or (this.criket_panel_view and not this.criket_panel_view.hidden) or (this.keyset_panel_view and not this.keyset_panel_view.hidden) or (this.launch_options_panel_view and not this.launch_options_panel_view.hidden) or (this.ui_settings_panel_view and not this.ui_settings_panel_view.hidden)
 	end
 
 	function screen_map:touchpressed(id, x, y, dx, dy, pressure)
@@ -6466,17 +6466,17 @@ function OptionsView:initialize(sw, sh)
 
 	-- if not IS_ANDROID then
 	button_height = button_height + 100
-	local mod_manager_button = GGOptionsButton:new("模组管理器")
-	mod_manager_button:set_anchor_to_center()
-	mod_manager_button.pos.x = -75
-	mod_manager_button.pos.y = button_height
-	function mod_manager_button.on_click()
+	local plugin_manager_button = GGOptionsButton:new("插件管理器")
+	plugin_manager_button:set_anchor_to_center()
+	plugin_manager_button.pos.x = -75
+	plugin_manager_button.pos.y = button_height
+	function plugin_manager_button.on_click()
 		S:queue("GUIButtonCommon")
 		screen_map.option_panel:hide()
-		screen_map:ensure_mod_manager_view():show()
+		screen_map:ensure_plugin_manager_view():show()
 	end
 
-	self.back:add_child(mod_manager_button)
+	self.back:add_child(plugin_manager_button)
 	-- end
 
 	button_height = button_height + 100

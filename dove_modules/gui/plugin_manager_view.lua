@@ -1,6 +1,6 @@
--- chunkname: @./all-desktop/mod_manager_view.lua
--- 模组管理器 + 插件商店（游戏内）
-local log = require("lib.klua.log"):new("mod_manager_view")
+-- chunkname: @./all-desktop/plugin_manager_view.lua
+-- 插件管理器 + 插件商店（游戏内）
+local log = require("lib.klua.log"):new("plugin_manager_view")
 local class = require("middleclass")
 local V = require("lib.klua.vector")
 local FS = love.filesystem
@@ -9,7 +9,7 @@ local restart = require("all.restart")
 local storage = require("all.storage")
 local json = require("lib.json")
 local persistence = require("lib.klua.persistence")
-local mod_paths = require("mod_paths")
+local plugin_paths = require("plugin_paths")
 local editable_panel_view = require("dove_modules.gui.editable_panel_view")
 local markdown_view = require("dove_modules.gui.markdown_view")
 local zip = require("lib.zip")
@@ -74,8 +74,8 @@ local SORT_OPTIONS = {{
 
 local HTTP_WORKER = [[
 local https = require("https")
-local req_ch = love.thread.getChannel("mod_store_http_req")
-local resp_ch = love.thread.getChannel("mod_store_http_resp")
+local req_ch = love.thread.getChannel("plugin_store_http_req")
+local resp_ch = love.thread.getChannel("plugin_store_http_resp")
 while true do
 	local req = req_ch:demand()
 	if req == "quit" then
@@ -229,7 +229,7 @@ end
 
 -- 本地配置文件缺少 __default_config 记录时，自动生成并保存
 local function ensure_default_config_recorded(config_path)
-	local cfg = mod_paths.load_lua_table(config_path)
+	local cfg = plugin_paths.load_lua_table(config_path)
 	if not cfg or type(cfg) ~= "table" then
 		return
 	end
@@ -274,7 +274,7 @@ local function normalize_headers(h)
 	return out
 end
 
-require("dove_modules.gui.mod_manager_components")
+require("dove_modules.gui.plugin_manager_components")
 
 -- ─────────────────────────────────────────────
 -- 下拉选择面板公共辅助函数
@@ -308,7 +308,7 @@ local function create_dropdown(self, cfg)
 		local bx = pad + col * (btn_w + gap)
 		local by = pad + row * (btn_h + gap)
 
-		local btn = ModActionButton:new(opt.label, V.v(btn_w, btn_h))
+		local btn = PluginActionButton:new(opt.label, V.v(btn_w, btn_h))
 		btn.pos = V.v(bx, by)
 
 		local orig_enter = btn.on_enter
@@ -377,9 +377,9 @@ local function toggle_dropdown(panel, other_panel, buttons, get_idx)
 	end
 end
 
-ModManagerView = class("ModManagerView", PopUpView)
+PluginManagerView = class("PluginManagerView", PopUpView)
 
-function ModManagerView:initialize(sw, sh, keyboard, controller)
+function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	PopUpView.initialize(self, V.v(sw, sh))
 	self._keyboard = keyboard
 	self._controller = controller
@@ -439,10 +439,10 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	self._remote_entry_cache = {}
 	self._remote_lookup_done = false
 	self.remote_by_entry = self._remote_entry_cache
-	self.local_mods = {}
+	self.local_plugins = {}
 	self.local_by_entry = {}
 	self.local_by_name = {}
-	self._mod_rows = {}
+	self._plugin_rows = {}
 	self._progress_target = 0
 	self._progress_value = 0
 	self._status_text = "点击“刷新商店”加载插件列表"
@@ -502,7 +502,7 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	global_lbl.pos = V.v(20, global_label_y)
 	self.back:add_child(global_lbl)
 
-	self.global_toggle = ModToggleButton:new(false, V.v(global_toggle_w, global_toggle_h))
+	self.global_toggle = PluginToggleButton:new(false, V.v(global_toggle_w, global_toggle_h))
 	self.global_toggle.anchor = V.v(self.global_toggle.size.x / 2, self.global_toggle.size.y / 2)
 	self.global_toggle.pos = V.v(panel_w - 24 - self.global_toggle.size.x / 2, global_toggle_center_y)
 	self.global_toggle.on_change = function(_, v)
@@ -515,7 +515,7 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	local function header_btn(text, x, y, w, h)
 		w = w or header_btn_w
 		h = h or header_btn_h
-		local btn = ModActionButton:new(text, V.v(w, h))
+		local btn = PluginActionButton:new(text, V.v(w, h))
 		btn.pos = V.v(x, y)
 		self.back:add_child(btn)
 		return btn
@@ -745,7 +745,7 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	local task_btn_w = km.clamp(math.floor(110 * touch_scale + 0.5), 110, 150)
 	local task_btn_h = km.clamp(math.floor(28 * touch_scale + 0.5), 28, 34)
 	self._confirm_btn_h = task_btn_h
-	self.task_cancel_btn = ModActionButton:new("断开请求", V.v(task_btn_w, task_btn_h))
+	self.task_cancel_btn = PluginActionButton:new("断开请求", V.v(task_btn_w, task_btn_h))
 	self.task_cancel_btn.pos = V.v(self.task_dialog.size.x - task_btn_w - 12, self.task_dialog.size.y - task_btn_h - 12)
 	self.task_cancel_btn.on_press = function()
 		self._cancel_requested = true
@@ -757,36 +757,36 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	self._confirm_btn_gap = cover_btn_gap
 	local cover_btn_w = math.floor(task_btn_w * 0.8)
 	self._confirm_btn_w = cover_btn_w
-	self._cover_yes_btn = ModActionButton:new("上传封面", V.v(cover_btn_w, task_btn_h))
+	self._cover_yes_btn = PluginActionButton:new("上传封面", V.v(cover_btn_w, task_btn_h))
 	self._cover_yes_btn.on_press = function()
 		S:queue("GUIButtonCommon")
-		local mod_data = self._upload_pending_data
+		local plugin_data = self._upload_pending_data
 		local has_cover = self._upload_pending_cover ~= nil
 		self:_reset_cover_prompt()
-		if mod_data then
+		if plugin_data then
 			self:_start_task("上传插件", function()
-				return self:_upload_plugin(mod_data, has_cover)
+				return self:_upload_plugin(plugin_data, has_cover)
 			end)
 		end
 	end
 	self._cover_yes_btn.hidden = true
 	self.task_dialog:add_child(self._cover_yes_btn)
 
-	self._cover_no_btn = ModActionButton:new("跳过封面", V.v(cover_btn_w, task_btn_h))
+	self._cover_no_btn = PluginActionButton:new("跳过封面", V.v(cover_btn_w, task_btn_h))
 	self._cover_no_btn.on_press = function()
 		S:queue("GUIButtonCommon")
-		local mod_data = self._upload_pending_data
+		local plugin_data = self._upload_pending_data
 		self:_reset_cover_prompt()
-		if mod_data then
+		if plugin_data then
 			self:_start_task("上传插件", function()
-				return self:_upload_plugin(mod_data, false)
+				return self:_upload_plugin(plugin_data, false)
 			end)
 		end
 	end
 	self._cover_no_btn.hidden = true
 	self.task_dialog:add_child(self._cover_no_btn)
 
-	self._confirm_cancel_btn = ModActionButton:new("取消", V.v(cover_btn_w, task_btn_h))
+	self._confirm_cancel_btn = PluginActionButton:new("取消", V.v(cover_btn_w, task_btn_h))
 	self._confirm_cancel_btn.on_press = function()
 		S:queue("GUIButtonCommon")
 		self:_reset_cover_prompt()
@@ -807,15 +807,15 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	self._disabled_warning.hidden = true
 	self.back:add_child(self._disabled_warning)
 
-	self.mod_list = KScrollList:new(V.v(panel_w - 40, scroll_h))
-	self.mod_list.pos = V.v(20, list_top_y)
-	self.mod_list.drag_scroll_threshold = IS_ANDROID and 20 or 6
-	self.mod_list.scroll_amount = ROW_H
-	self.mod_list.colors.scroller_background = {45, 36, 22, 200}
-	self.mod_list.colors.scroller_foreground = {110, 90, 50, 255}
+	self.plugin_list = KScrollList:new(V.v(panel_w - 40, scroll_h))
+	self.plugin_list.pos = V.v(20, list_top_y)
+	self.plugin_list.drag_scroll_threshold = IS_ANDROID and 20 or 6
+	self.plugin_list.scroll_amount = ROW_H
+	self.plugin_list.colors.scroller_background = {45, 36, 22, 200}
+	self.plugin_list.colors.scroller_foreground = {110, 90, 50, 255}
 	-- 加宽滑块
-	self.mod_list.scroller_width = 24
-	self.back:add_child(self.mod_list)
+	self.plugin_list.scroller_width = 24
+	self.back:add_child(self.plugin_list)
 
 	-- 底部按钮（保存并重启 / 浏览器商店 / 关闭）
 	local y_btn = footer_y
@@ -891,7 +891,7 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 		local total_w = #buttons * bw + (#buttons - 1) * gap
 		local x = (self._confirm_dialog.size.x - total_w) / 2
 		for _, b in ipairs(buttons) do
-			local btn = ModActionButton:new(b.text, V.v(bw, bh))
+			local btn = PluginActionButton:new(b.text, V.v(bw, bh))
 			btn.pos = V.v(x, b.y)
 			btn.on_press = function()
 				S:queue("GUIButtonCommon")
@@ -943,12 +943,12 @@ function ModManagerView:initialize(sw, sh, keyboard, controller)
 	self:_start_http_thread()
 end
 
-function ModManagerView:_start_http_thread()
+function PluginManagerView:_start_http_thread()
 	if self._http_thread then
 		return
 	end
-	local req_ch = love.thread.getChannel("mod_store_http_req")
-	local resp_ch = love.thread.getChannel("mod_store_http_resp")
+	local req_ch = love.thread.getChannel("plugin_store_http_req")
+	local resp_ch = love.thread.getChannel("plugin_store_http_resp")
 	while req_ch:getCount() > 0 do
 		req_ch:pop()
 	end
@@ -959,16 +959,16 @@ function ModManagerView:_start_http_thread()
 	self._http_thread:start()
 end
 
-function ModManagerView:_stop_http_thread()
+function PluginManagerView:_stop_http_thread()
 	if not self._http_thread then
 		return
 	end
-	love.thread.getChannel("mod_store_http_req"):push("quit")
+	love.thread.getChannel("plugin_store_http_req"):push("quit")
 	self._http_thread:wait()
 	self._http_thread = nil
 end
 
-function ModManagerView:_refresh_header_buttons()
+function PluginManagerView:_refresh_header_buttons()
 	self.mode_btn:set_text(self.mode == "local" and "前往商店" or "回到本地")
 	self.sort_btn:set_text("排序：" .. SORT_OPTIONS[self.sort_idx].label)
 	self.category_btn:set_text("分类：" .. CATEGORY_OPTIONS[self.category_idx].label)
@@ -999,31 +999,31 @@ function ModManagerView:_refresh_header_buttons()
 	end
 end
 
-function ModManagerView:_toggle_sort_panel()
+function PluginManagerView:_toggle_sort_panel()
 	toggle_dropdown(self._sort_panel, self._category_panel, self._sort_buttons, function()
 		return self.sort_idx
 	end)
 end
 
-function ModManagerView:_refresh_sort_buttons_highlight()
+function PluginManagerView:_refresh_sort_buttons_highlight()
 	refresh_dropdown(self._sort_buttons, function()
 		return self.sort_idx
 	end)
 end
 
-function ModManagerView:_toggle_category_panel()
+function PluginManagerView:_toggle_category_panel()
 	toggle_dropdown(self._category_panel, self._sort_panel, self._category_buttons, function()
 		return self.category_idx
 	end)
 end
 
-function ModManagerView:_refresh_category_buttons_highlight()
+function PluginManagerView:_refresh_category_buttons_highlight()
 	refresh_dropdown(self._category_buttons, function()
 		return self.category_idx
 	end)
 end
 
-function ModManagerView:_set_status(text, progress)
+function PluginManagerView:_set_status(text, progress)
 	self._status_text = utf8_util.sanitize(text or "")
 	self.hint_lbl.text = self._status_text
 	if self.task_status_lbl then
@@ -1034,19 +1034,19 @@ function ModManagerView:_set_status(text, progress)
 	end
 end
 
-function ModManagerView:_render_progress()
+function PluginManagerView:_render_progress()
 	self._progress_value = self._progress_value + (self._progress_target - self._progress_value) * 0.2
 	local w = (self.progress_bg.size.x) * (self._progress_value / 100)
 	self.progress_fill.shape.args[4] = w
 	self.progress_fill.size = V.v(w, self.progress_fill.size.y)
 end
 
-function ModManagerView:_request(url, options, timeout_sec)
+function PluginManagerView:_request(url, options, timeout_sec)
 	timeout_sec = timeout_sec or 20
 	self._request_id = self._request_id + 1
 	local req_id = self._request_id
-	local req_ch = love.thread.getChannel("mod_store_http_req")
-	local resp_ch = love.thread.getChannel("mod_store_http_resp")
+	local req_ch = love.thread.getChannel("plugin_store_http_req")
+	local resp_ch = love.thread.getChannel("plugin_store_http_resp")
 	req_ch:push({
 		id = req_id,
 		url = url,
@@ -1071,7 +1071,7 @@ function ModManagerView:_request(url, options, timeout_sec)
 	end
 end
 
-function ModManagerView:_select_store_base_url()
+function PluginManagerView:_select_store_base_url()
 	if self._selected_site and self._selected_site ~= "" then
 		return self._selected_site:gsub("/+$", "") .. "/plugins"
 	end
@@ -1107,7 +1107,7 @@ function ModManagerView:_select_store_base_url()
 	return nil
 end
 
-function ModManagerView:_decode_store_page(body, fallback_page)
+function PluginManagerView:_decode_store_page(body, fallback_page)
 	local items = body.items or {}
 	local filtered = {}
 	local by_entry = {}
@@ -1148,7 +1148,7 @@ function ModManagerView:_decode_store_page(body, fallback_page)
 	}
 end
 
-function ModManagerView:_get_store_page(base, sort_val, category_val, page, use_cache)
+function PluginManagerView:_get_store_page(base, sort_val, category_val, page, use_cache)
 	local key = table.concat({base or "", sort_val or "", category_val or "", tostring(page or 1), tostring(STORE_PAGE_SIZE)}, "::")
 	if use_cache ~= false and self._store_page_cache[key] then
 		return true, self._store_page_cache[key], true
@@ -1174,7 +1174,7 @@ function ModManagerView:_get_store_page(base, sort_val, category_val, page, use_
 	return true, parsed, false
 end
 
-function ModManagerView:_fetch_store_list()
+function PluginManagerView:_fetch_store_list()
 	self._cancel_requested = false
 	local base = self:_select_store_base_url()
 	if not base then
@@ -1201,9 +1201,9 @@ function ModManagerView:_fetch_store_list()
 	return true, nil
 end
 
-function ModManagerView:_fetch_remote_entries_for_local()
+function PluginManagerView:_fetch_remote_entries_for_local()
 	self._cancel_requested = false
-	if #self.local_mods == 0 then
+	if #self.local_plugins == 0 then
 		self.remote_by_entry = self._remote_entry_cache
 		self._remote_lookup_done = true
 		self:_set_status("本地没有已安装插件", 0)
@@ -1218,8 +1218,8 @@ function ModManagerView:_fetch_remote_entries_for_local()
 
 	local target_entries = {}
 	local total_targets = 0
-	for _, mod_data in ipairs(self.local_mods) do
-		local entry = utf8_util.sanitize(mod_data.entry)
+	for _, plugin_data in ipairs(self.local_plugins) do
+		local entry = utf8_util.sanitize(plugin_data.entry)
 		if entry ~= "" then
 			if not target_entries[entry] then
 				total_targets = total_targets + 1
@@ -1280,27 +1280,27 @@ function ModManagerView:_fetch_remote_entries_for_local()
 	return true, nil
 end
 
-function ModManagerView:_reload_local_mods()
-	mod_paths.ensure_storage_ready()
+function PluginManagerView:_reload_local_plugins()
+	plugin_paths.ensure_storage_ready()
 
-	self.local_mods = {}
+	self.local_plugins = {}
 	self.local_by_entry = {}
 	self.local_by_name = {}
 
-	local mods_dir = mod_paths.LOCAL_MODS_DIR
-	local items = FS.getDirectoryItems(mods_dir) or {}
+	local plugins_dir = plugin_paths.LOCAL_PLUGINS_DIR
+	local items = FS.getDirectoryItems(plugins_dir) or {}
 	for _, name in ipairs(items) do
-		local dir_path = mods_dir .. "/" .. name
+		local dir_path = plugins_dir .. "/" .. name
 		if FS.getInfo(dir_path, "directory") then
 			local config_path = dir_path .. "/config.lua"
-			local mc = mod_paths.load_lua_table(config_path)
+			local mc = plugin_paths.load_lua_table(config_path)
 			if mc then
 				local has_config = false
 				local config_info = love.filesystem.getInfo(dir_path .. "/" .. name .. "_config.lua")
 				if config_info and config_info.type == "file" then
 					has_config = true
 				end
-				local mod_data = {
+				local plugin_data = {
 					name = name,
 					path = dir_path,
 					config_path = config_path,
@@ -1308,13 +1308,13 @@ function ModManagerView:_reload_local_mods()
 					entry = mc.entry or name,
 					has_config = has_config
 				}
-				self.local_mods[#self.local_mods + 1] = mod_data
-				self.local_by_name[name] = mod_data
-				self.local_by_entry[mod_data.entry] = mod_data
+				self.local_plugins[#self.local_plugins + 1] = plugin_data
+				self.local_by_name[name] = plugin_data
+				self.local_by_entry[plugin_data.entry] = plugin_data
 			end
 		end
 	end
-	table.sort(self.local_mods, function(a, b)
+	table.sort(self.local_plugins, function(a, b)
 		local t_a = a.config.last_used_at or 0
 		local t_b = b.config.last_used_at or 0
 		if t_a ~= t_b then
@@ -1324,29 +1324,29 @@ function ModManagerView:_reload_local_mods()
 	end)
 end
 
-function ModManagerView:_refresh_local_view(status_text)
+function PluginManagerView:_refresh_local_view(status_text)
 	if status_text then
 		self:_set_status(status_text, 100)
 	end
-	self:_reload_local_mods()
+	self:_reload_local_plugins()
 	self:_render_current_list()
 end
 
-function ModManagerView:_delete_local_mod_by_name(mod_name)
-	local mod_data = self.local_by_name[mod_name]
-	if not mod_data then
+function PluginManagerView:_delete_local_plugin_by_name(plugin_name)
+	local plugin_data = self.local_by_name[plugin_name]
+	if not plugin_data then
 		return false, "本地插件不存在"
 	end
-	local ok = remove_dir_recursive(mod_data.path)
+	local ok = remove_dir_recursive(plugin_data.path)
 	if not ok then
-		return false, "删除失败：" .. mod_data.path
+		return false, "删除失败：" .. plugin_data.path
 	end
-	self:_reload_local_mods()
+	self:_reload_local_plugins()
 	self:_render_current_list()
 	return true, nil
 end
 
-function ModManagerView:_download_zip(item)
+function PluginManagerView:_download_zip(item)
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
 		return nil, "无法选择插件商店地址"
@@ -1414,7 +1414,7 @@ function ModManagerView:_download_zip(item)
 	return table.concat(chunks), nil
 end
 
-function ModManagerView:_collect_mod_root_candidates(base_dir)
+function PluginManagerView:_collect_plugin_root_candidates(base_dir)
 	local candidates = {}
 	local visited = {}
 
@@ -1438,7 +1438,7 @@ function ModManagerView:_collect_mod_root_candidates(base_dir)
 	return candidates
 end
 
-function ModManagerView:_install_plugin(item, is_update)
+function PluginManagerView:_install_plugin(item, is_update)
 	self._cancel_requested = false
 	self:_set_status((is_update and "正在更新插件：" or "正在安装插件：") .. (item.name or item.entry), 0)
 	local zip_data, err = self:_download_zip(item)
@@ -1450,10 +1450,10 @@ function ModManagerView:_install_plugin(item, is_update)
 	end
 
 	local entry = utf8_util.sanitize(item.entry or "")
-	local stage_root = "tmp/mod_store_stage/" .. (entry ~= "" and entry or ("pkg_" .. tostring(os.time())))
-	remove_dir_recursive("tmp/mod_store_stage")
+	local stage_root = "tmp/plugin_store_stage/" .. (entry ~= "" and entry or ("pkg_" .. tostring(os.time())))
+	remove_dir_recursive("tmp/plugin_store_stage")
 	FS.createDirectory("tmp")
-	FS.createDirectory("tmp/mod_store_stage")
+	FS.createDirectory("tmp/plugin_store_stage")
 	FS.createDirectory(stage_root)
 
 	self:_set_status("正在解压插件：" .. (item.name or item.entry), 92)
@@ -1462,10 +1462,10 @@ function ModManagerView:_install_plugin(item, is_update)
 		return false, unzip_err
 	end
 
-	local candidates = self:_collect_mod_root_candidates(stage_root)
+	local candidates = self:_collect_plugin_root_candidates(stage_root)
 	local selected_dir = nil
 	for _, c in ipairs(candidates) do
-		local cfg = mod_paths.load_lua_table(c .. "/config.lua")
+		local cfg = plugin_paths.load_lua_table(c .. "/config.lua")
 		local c_entry = cfg and utf8_util.sanitize(cfg.entry or "")
 		if entry ~= "" and (c_entry == entry or basename(c) == entry) then
 			selected_dir = c
@@ -1483,24 +1483,24 @@ function ModManagerView:_install_plugin(item, is_update)
 	end
 
 	local target_name = (entry ~= "" and entry) or basename(selected_dir)
-	local target_dir = mod_paths.LOCAL_MODS_DIR .. "/" .. target_name
-	local local_mod = nil
+	local target_dir = plugin_paths.LOCAL_PLUGINS_DIR .. "/" .. target_name
+	local local_plugin = nil
 	local preserved_enabled = nil
 	local preserved_local_config = nil
 	if is_update then
-		local_mod = (entry ~= "" and self.local_by_entry[entry]) or self.local_by_name[target_name]
-		if local_mod and local_mod.config then
-			preserved_enabled = local_mod.config.enabled ~= false
+		local_plugin = (entry ~= "" and self.local_by_entry[entry]) or self.local_by_name[target_name]
+		if local_plugin and local_plugin.config then
+			preserved_enabled = local_plugin.config.enabled ~= false
 		else
-			local existing_cfg = mod_paths.load_lua_table(target_dir .. "/config.lua")
+			local existing_cfg = plugin_paths.load_lua_table(target_dir .. "/config.lua")
 			if existing_cfg then
 				preserved_enabled = existing_cfg.enabled ~= false
 			end
 		end
 
-		local local_cfg_path = local_mod and (local_mod.path .. "/" .. local_mod.name .. "_config.lua") or (target_dir .. "/" .. target_name .. "_config.lua")
+		local local_cfg_path = local_plugin and (local_plugin.path .. "/" .. local_plugin.name .. "_config.lua") or (target_dir .. "/" .. target_name .. "_config.lua")
 		if FS.getInfo(local_cfg_path, "file") then
-			local local_cfg, read_err = mod_paths.load_lua_table(local_cfg_path)
+			local local_cfg, read_err = plugin_paths.load_lua_table(local_cfg_path)
 			if not local_cfg then
 				return false, "更新前读取本地配置失败：" .. local_cfg_path .. " (" .. tostring(read_err) .. ")"
 			end
@@ -1510,7 +1510,7 @@ function ModManagerView:_install_plugin(item, is_update)
 	remove_dir_recursive(target_dir)
 	copy_dir_recursive(selected_dir, target_dir)
 	if preserved_enabled ~= nil then
-		local installed_cfg = mod_paths.load_lua_table(target_dir .. "/config.lua")
+		local installed_cfg = plugin_paths.load_lua_table(target_dir .. "/config.lua")
 		if not installed_cfg then
 			return false, "更新后读取配置失败：" .. target_dir .. "/config.lua"
 		end
@@ -1523,7 +1523,7 @@ function ModManagerView:_install_plugin(item, is_update)
 	if preserved_local_config then
 		local installed_local_cfg_path = target_dir .. "/" .. target_name .. "_config.lua"
 		if FS.getInfo(installed_local_cfg_path, "file") then
-			local remote_local_cfg, read_err = mod_paths.load_lua_table(installed_local_cfg_path)
+			local remote_local_cfg, read_err = plugin_paths.load_lua_table(installed_local_cfg_path)
 			if not remote_local_cfg then
 				return false, "更新后读取远端本地配置失败：" .. installed_local_cfg_path .. " (" .. tostring(read_err) .. ")"
 			end
@@ -1537,9 +1537,9 @@ function ModManagerView:_install_plugin(item, is_update)
 		-- 本地不存在配置（或旧配置），为新版本配置记录默认配置数据
 		ensure_default_config_recorded(target_dir .. "/" .. target_name .. "_config.lua")
 	end
-	remove_dir_recursive("tmp/mod_store_stage")
+	remove_dir_recursive("tmp/plugin_store_stage")
 
-	local new_cfg = mod_paths.load_lua_table(target_dir .. "/config.lua")
+	local new_cfg = plugin_paths.load_lua_table(target_dir .. "/config.lua")
 	if new_cfg then
 		new_cfg.last_used_at = os.time()
 		storage:write_lua(target_dir .. "/config.lua", new_cfg)
@@ -1550,7 +1550,7 @@ function ModManagerView:_install_plugin(item, is_update)
 	return true, nil
 end
 
-function ModManagerView:_apply_patch_to_dir(target_dir, patch_data)
+function PluginManagerView:_apply_patch_to_dir(target_dir, patch_data)
 	local tmp = "tmp/plugin_patch_apply"
 	remove_dir_recursive(tmp)
 	FS.createDirectory("tmp")
@@ -1623,7 +1623,7 @@ function ModManagerView:_apply_patch_to_dir(target_dir, patch_data)
 	remove_dir_recursive(tmp)
 	return true, nil
 end
-function ModManagerView:_download_patch(entry, platform, version, changed, deleted)
+function PluginManagerView:_download_patch(entry, platform, version, changed, deleted)
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
 		return nil, "无法选择插件商店地址"
@@ -1650,18 +1650,18 @@ function ModManagerView:_download_patch(entry, platform, version, changed, delet
 	return resp.body, nil
 end
 
-function ModManagerView:_install_or_update_item(item)
-	local local_mod = self.local_by_entry[item.entry]
-	local need_update = local_mod and has_update(local_mod.config.version, item.version)
+function PluginManagerView:_install_or_update_item(item)
+	local local_plugin = self.local_by_entry[item.entry]
+	local need_update = local_plugin and has_update(local_plugin.config.version, item.version)
 	if not need_update then
 		return self:_install_plugin(item, false)
 	end
 
 	-- 尝试增量更新：现场计算本地文件哈希
 	local entry = utf8_util.sanitize(item.entry or "")
-	local target_dir = mod_paths.LOCAL_MODS_DIR .. "/" .. entry
+	local target_dir = plugin_paths.LOCAL_PLUGINS_DIR .. "/" .. entry
 	if FS.getInfo(target_dir, "directory") then
-		local local_cfg = mod_paths.load_lua_table(target_dir .. "/config.lua")
+		local local_cfg = plugin_paths.load_lua_table(target_dir .. "/config.lua")
 		local dir_info = self:_compute_dir_hashes(target_dir)
 		local hash_ok, hash_resp = self:_hash_check(entry, item.version or "", dir_info.hashes, get_platform(), "download")
 		if hash_ok and hash_resp and type(hash_resp.changed) == "table" then
@@ -1673,7 +1673,7 @@ function ModManagerView:_install_or_update_item(item)
 			end
 			local patch_data = self:_download_patch(entry, get_platform(), item.version or "", changed, deleted)
 			if patch_data then
-				local _, local_cfg_saved = self:_preserve_local_config(target_dir, entry, local_mod)
+				local _, local_cfg_saved = self:_preserve_local_config(target_dir, entry, local_plugin)
 				self:_set_status("正在应用增量更新：" .. (item.name or item.entry), 90)
 				local ok_apply = self:_apply_patch_to_dir(target_dir, patch_data)
 				if ok_apply then
@@ -1683,7 +1683,7 @@ function ModManagerView:_install_or_update_item(item)
 						-- 本地没有旧配置，为新版本配置记录默认配置数据
 						ensure_default_config_recorded(target_dir .. "/" .. entry .. "_config.lua")
 					end
-					local installed_cfg = mod_paths.load_lua_table(target_dir .. "/config.lua")
+					local installed_cfg = plugin_paths.load_lua_table(target_dir .. "/config.lua")
 					if installed_cfg then
 						installed_cfg.enabled = local_cfg and local_cfg.enabled ~= false
 						installed_cfg.last_used_at = os.time()
@@ -1700,9 +1700,9 @@ function ModManagerView:_install_or_update_item(item)
 	return self:_install_plugin(item, true)
 end
 
-function ModManagerView:_preserve_local_config(target_dir, entry, local_mod)
+function PluginManagerView:_preserve_local_config(target_dir, entry, local_plugin)
 	local local_cfg = nil
-	local local_cfg_path = local_mod and (local_mod.path .. "/" .. local_mod.name .. "_config.lua") or (target_dir .. "/" .. entry .. "_config.lua")
+	local local_cfg_path = local_plugin and (local_plugin.path .. "/" .. local_plugin.name .. "_config.lua") or (target_dir .. "/" .. entry .. "_config.lua")
 	if FS.getInfo(local_cfg_path, "file") then
 		local ok, cfg = pcall(FS.load, local_cfg_path)
 		if ok and type(cfg()) == "table" then
@@ -1712,7 +1712,7 @@ function ModManagerView:_preserve_local_config(target_dir, entry, local_mod)
 	return local_cfg_path, local_cfg
 end
 
-function ModManagerView:_restore_local_config(target_dir, entry, local_cfg)
+function PluginManagerView:_restore_local_config(target_dir, entry, local_cfg)
 	local path = target_dir .. "/" .. entry .. "_config.lua"
 	if not local_cfg then
 		return
@@ -1734,16 +1734,16 @@ function ModManagerView:_restore_local_config(target_dir, entry, local_cfg)
 	storage:write_lua(path, local_cfg)
 end
 
-function ModManagerView:_update_all_plugins()
+function PluginManagerView:_update_all_plugins()
 	self._cancel_requested = false
-	if #self.local_mods == 0 then
+	if #self.local_plugins == 0 then
 		self:_set_status("本地没有已安装插件", 0)
 		return true, nil
 	end
 	local need_remote_lookup = not next(self._remote_entry_cache)
 	if not need_remote_lookup then
-		for _, mod_data in ipairs(self.local_mods) do
-			local entry = utf8_util.sanitize(mod_data.entry)
+		for _, plugin_data in ipairs(self.local_plugins) do
+			local entry = utf8_util.sanitize(plugin_data.entry)
 			if entry ~= "" and not self._remote_entry_cache[entry] then
 				need_remote_lookup = true
 				break
@@ -1758,11 +1758,11 @@ function ModManagerView:_update_all_plugins()
 	end
 	self.remote_by_entry = self._remote_entry_cache
 	local pending = {}
-	for _, mod_data in ipairs(self.local_mods) do
-		local remote = self.remote_by_entry[mod_data.entry]
-		if remote and has_update(mod_data.config.version, remote.version) then
+	for _, plugin_data in ipairs(self.local_plugins) do
+		local remote = self.remote_by_entry[plugin_data.entry]
+		if remote and has_update(plugin_data.config.version, remote.version) then
 			pending[#pending + 1] = {
-				local_mod = mod_data,
+				local_plugin = plugin_data,
 				remote = remote
 			}
 		end
@@ -1786,7 +1786,7 @@ function ModManagerView:_update_all_plugins()
 	return true, nil
 end
 
-function ModManagerView:_start_task(name, fn)
+function PluginManagerView:_start_task(name, fn)
 	if self._active_task then
 		return
 	end
@@ -1805,20 +1805,20 @@ function ModManagerView:_start_task(name, fn)
 	self:_refresh_header_buttons()
 end
 
-function ModManagerView:_render_local_list()
-	self.mod_list:clear_rows()
-	self._mod_rows = {}
-	local list_w = self.mod_list.size.x - self.mod_list.scroller_width - 2 * self.mod_list.scroller_margin - 4
+function PluginManagerView:_render_local_list()
+	self.plugin_list:clear_rows()
+	self._plugin_rows = {}
+	local list_w = self.plugin_list.size.x - self.plugin_list.scroller_width - 2 * self.plugin_list.scroller_margin - 4
 	local global_disabled = not self.global_toggle.value
 
 	local category_option = CATEGORY_OPTIONS[self.category_idx]
 
-	for _, mod_data in ipairs(self.local_mods) do
-		local cfg = mod_data.config
-		local mod_category = cfg.category or "other"
+	for _, plugin_data in ipairs(self.local_plugins) do
+		local cfg = plugin_data.config
+		local plugin_category = cfg.category or "other"
 		-- 过滤分类
-		if (category_option.value == "all" or category_option.value == mod_category) and (not self._my_plugins_only or cfg.by == self._developer_config.account) then
-			local remote = self.remote_by_entry[mod_data.entry]
+		if (category_option.value == "all" or category_option.value == plugin_category) and (not self._my_plugins_only or cfg.by == self._developer_config.account) then
+			local remote = self.remote_by_entry[plugin_data.entry]
 			local status = ""
 
 			if remote and has_update(cfg.version, remote.version) then
@@ -1834,23 +1834,23 @@ function ModManagerView:_render_local_list()
 				actions[#actions + 1] = {
 					text = "上传",
 					on_press = function()
-						self:_handle_upload_plugin(mod_data)
+						self:_handle_upload_plugin(plugin_data)
 					end
 				}
 			end
 			actions[#actions + 1] = {
 				text = "详情",
 				on_press = function()
-					self:_show_local_mod_detail(mod_data)
+					self:_show_local_plugin_detail(plugin_data)
 				end
 			}
 			actions[#actions + 1] = {
 				text = "删除",
 				on_press = function()
 					self:_start_task("删除插件", function()
-						local ok, err = self:_delete_local_mod_by_name(mod_data.name)
+						local ok, err = self:_delete_local_plugin_by_name(plugin_data.name)
 						if ok then
-							self:_set_status("已删除插件：" .. mod_data.name, 0)
+							self:_set_status("已删除插件：" .. plugin_data.name, 0)
 							return true, nil
 						end
 						return false, err
@@ -1868,9 +1868,9 @@ function ModManagerView:_render_local_list()
 				}
 			end
 
-			local row = ModItemRow:new({
-				mod_data = mod_data,
-				title = cfg.name or mod_data.name,
+			local row = PluginItemRow:new({
+				plugin_data = plugin_data,
+				title = cfg.name or plugin_data.name,
 				meta = string.format("本地版本 v%s  作者: %s", utf8_util.sanitize(cfg.version), utf8_util.sanitize(cfg.by)),
 				desc = cfg.desc or "",
 				status = status,
@@ -1898,24 +1898,24 @@ function ModManagerView:_render_local_list()
 			if global_disabled then
 				row:set_dimmed(true)
 			end
-			self.mod_list:add_row(row)
-			self.mod_list:add_row(KView:new(V.v(list_w, 10)))
-			self._mod_rows[#self._mod_rows + 1] = row
+			self.plugin_list:add_row(row)
+			self.plugin_list:add_row(KView:new(V.v(list_w, 10)))
+			self._plugin_rows[#self._plugin_rows + 1] = row
 		end
 	end
 end
 
-function ModManagerView:_render_store_list()
-	self.mod_list:clear_rows()
-	local list_w = self.mod_list.size.x - self.mod_list.scroller_width - 2 * self.mod_list.scroller_margin - 4
+function PluginManagerView:_render_store_list()
+	self.plugin_list:clear_rows()
+	local list_w = self.plugin_list.size.x - self.plugin_list.scroller_width - 2 * self.plugin_list.scroller_margin - 4
 	for _, item in ipairs(self.store_items) do
-		local local_mod = self.local_by_entry[item.entry] or self.local_by_name[item.entry]
-		local installed = local_mod ~= nil
-		local needs_update = installed and has_update(local_mod.config.version, item.version)
+		local local_plugin = self.local_by_entry[item.entry] or self.local_by_name[item.entry]
+		local installed = local_plugin ~= nil
+		local needs_update = installed and has_update(local_plugin.config.version, item.version)
 		local status
 		if installed then
 			if needs_update then
-				status = string.format("已安装：v%s（可更新到 v%s）", utf8_util.sanitize(local_mod.config.version), utf8_util.sanitize(item.version))
+				status = string.format("已安装：v%s（可更新到 v%s）", utf8_util.sanitize(local_plugin.config.version), utf8_util.sanitize(item.version))
 			else
 				status = "已安装且最新"
 			end
@@ -1927,7 +1927,7 @@ function ModManagerView:_render_store_list()
 		actions[#actions + 1] = {
 			text = "详情",
 			on_press = function()
-				self:_show_store_mod_detail(item)
+				self:_show_store_plugin_detail(item)
 			end
 		}
 		actions[#actions + 1] = {
@@ -1943,9 +1943,9 @@ function ModManagerView:_render_store_list()
 				text = "删除",
 				on_press = function()
 					self:_start_task("删除插件", function()
-						local ok, err = self:_delete_local_mod_by_name(local_mod.name)
+						local ok, err = self:_delete_local_plugin_by_name(local_plugin.name)
 						if ok then
-							self:_set_status("已删除插件：" .. local_mod.name, 0)
+							self:_set_status("已删除插件：" .. local_plugin.name, 0)
 							return true, nil
 						end
 						return false, err
@@ -1954,7 +1954,7 @@ function ModManagerView:_render_store_list()
 			}
 		end
 
-		local row = ModItemRow:new({
+		local row = PluginItemRow:new({
 			title = item.name or item.entry,
 			meta = string.format("v%s  下载:%s  作者:%s", utf8_util.sanitize(item.version), utf8_util.sanitize(item.downloads), utf8_util.sanitize(item.by)),
 			desc = item.desc or "",
@@ -1966,12 +1966,12 @@ function ModManagerView:_render_store_list()
 			action_bottom_margin = self._row_action_bottom_margin,
 			actions = actions
 		}, list_w)
-		self.mod_list:add_row(row)
-		self.mod_list:add_row(KView:new(V.v(list_w, 10)))
+		self.plugin_list:add_row(row)
+		self.plugin_list:add_row(KView:new(V.v(list_w, 10)))
 	end
 end
 
-function ModManagerView:_render_current_list()
+function PluginManagerView:_render_current_list()
 	self._disabled_warning.hidden = self.global_toggle.value
 	if self.mode == "store" then
 		self:_render_store_list()
@@ -1982,7 +1982,7 @@ function ModManagerView:_render_current_list()
 	self:_refresh_header_buttons()
 end
 
-function ModManagerView:_sanitize_view_texts(view)
+function PluginManagerView:_sanitize_view_texts(view)
 	if not view then
 		return
 	end
@@ -2000,17 +2000,17 @@ function ModManagerView:_sanitize_view_texts(view)
 	end
 end
 
-function ModManagerView:show()
-	mod_paths.ensure_storage_ready()
+function PluginManagerView:show()
+	plugin_paths.ensure_storage_ready()
 	self._unsaved_changes = false
 	self:_start_http_thread()
-	-- 从磁盘读取初始状态，但仅在此处（后续 _reload_local_mods 不会覆盖用户未保存的修改）
-	local cfg = mod_paths.load_main_config()
+	-- 从磁盘读取初始状态，但仅在此处（后续 _reload_local_plugins 不会覆盖用户未保存的修改）
+	local cfg = plugin_paths.load_main_config()
 	local saved_cb = self.global_toggle.on_change
 	self.global_toggle.on_change = nil
 	self.global_toggle:set_value(cfg.enabled ~= false)
 	self.global_toggle.on_change = saved_cb
-	self:_reload_local_mods()
+	self:_reload_local_plugins()
 	self:_capture_state()
 	self:_render_current_list()
 	self.task_dialog.hidden = true
@@ -2018,10 +2018,10 @@ function ModManagerView:show()
 	self._sort_panel.hidden = true
 	self:_set_status("前往插件商店后会自动拉取第一页", 0)
 	self:_sanitize_view_texts(self.back)
-	ModManagerView.super.show(self)
+	PluginManagerView.super.show(self)
 end
 
-function ModManagerView:hide()
+function PluginManagerView:hide()
 	if self._unsaved_changes then
 		self._confirm_dialog.hidden = false
 		self._confirm_dialog:order_to_front()
@@ -2029,11 +2029,11 @@ function ModManagerView:hide()
 	end
 	self._cancel_requested = true
 	self:_stop_http_thread()
-	ModManagerView.super.hide(self)
+	PluginManagerView.super.hide(self)
 end
 
-function ModManagerView:update(dt)
-	ModManagerView.super.update(self, dt)
+function PluginManagerView:update(dt)
+	PluginManagerView.super.update(self, dt)
 	if self._pending_close then
 		self._pending_close = false
 		self:hide()
@@ -2052,7 +2052,7 @@ function ModManagerView:update(dt)
 		self._active_task = nil
 		self.task_dialog.hidden = true
 		self:_set_status("操作失败：" .. tostring(result), 0)
-		log.error("mod manager task failed: %s", tostring(result))
+		log.error("plugin manager task failed: %s", tostring(result))
 		self:_refresh_header_buttons()
 		return
 	end
@@ -2072,7 +2072,7 @@ function ModManagerView:update(dt)
 	end
 end
 
-function ModManagerView:_reset_cover_prompt()
+function PluginManagerView:_reset_cover_prompt()
 	self._upload_pending_data = nil
 	self._upload_pending_cover = nil
 	self._cover_yes_btn.hidden = true
@@ -2082,11 +2082,11 @@ function ModManagerView:_reset_cover_prompt()
 	self._cover_yes_btn:set_text("上传封面")
 end
 
-function ModManagerView:_show_local_mod_detail(mod_data)
+function PluginManagerView:_show_local_plugin_detail(plugin_data)
 	-- 读取本地 README.md
-	local readme_path = mod_data.path .. "/README.md"
+	local readme_path = plugin_data.path .. "/README.md"
 	local content = nil
-	local fallback = mod_data.config.desc or "暂无说明文档"
+	local fallback = plugin_data.config.desc or "暂无说明文档"
 	if FS.getInfo(readme_path, "file") then
 		content = FS.read(readme_path) or nil
 	end
@@ -2094,12 +2094,12 @@ function ModManagerView:_show_local_mod_detail(mod_data)
 		content = nil
 	end
 
-	local detail = markdown_view:new(self._sw, self._sh, mod_data.config.name or mod_data.name, content, fallback)
+	local detail = markdown_view:new(self._sw, self._sh, plugin_data.config.name or plugin_data.name, content, fallback)
 	self:add_child(detail)
 	detail:show()
 end
 
-function ModManagerView:_show_store_mod_detail(item)
+function PluginManagerView:_show_store_plugin_detail(item)
 	-- 网络获取商店插件的 README
 	self:_start_task("获取插件详情", function()
 		local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
@@ -2140,9 +2140,9 @@ function ModManagerView:_show_store_mod_detail(item)
 	end)
 end
 
-function ModManagerView:_handle_upload_plugin(mod_data)
+function PluginManagerView:_handle_upload_plugin(plugin_data)
 	local cover_name = nil
-	local items = FS.getDirectoryItems(mod_data.path) or {}
+	local items = FS.getDirectoryItems(plugin_data.path) or {}
 	for _, name in ipairs(items) do
 		if name:lower():match("^cover%.") then
 			cover_name = name
@@ -2150,7 +2150,7 @@ function ModManagerView:_handle_upload_plugin(mod_data)
 		end
 	end
 
-	self._upload_pending_data = mod_data
+	self._upload_pending_data = plugin_data
 	self._upload_pending_cover = cover_name
 	self.task_dialog.hidden = false
 	self.task_cancel_btn.hidden = true
@@ -2166,7 +2166,7 @@ function ModManagerView:_handle_upload_plugin(mod_data)
 		self._cover_no_btn.hidden = false
 	else
 		self.task_title_lbl.text = "上传插件"
-		self.task_status_lbl.text = "确认上传 " .. (mod_data.config.name or mod_data.name) .. " 到商店？"
+		self.task_status_lbl.text = "确认上传 " .. (plugin_data.config.name or plugin_data.name) .. " 到商店？"
 		self._cover_yes_btn:set_text("确认上传")
 		self._cover_yes_btn.hidden = false
 		self._cover_no_btn.hidden = true
@@ -2190,7 +2190,7 @@ function ModManagerView:_handle_upload_plugin(mod_data)
 	end
 end
 
-function ModManagerView:_developer_login()
+function PluginManagerView:_developer_login()
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
 		return false, "无法选择插件商店地址"
@@ -2224,7 +2224,7 @@ function ModManagerView:_developer_login()
 	return true, nil
 end
 
-function ModManagerView:_compute_dir_hashes(dir)
+function PluginManagerView:_compute_dir_hashes(dir)
 	local hashes = {}
 	local sizes = {}
 	local total_bytes = 0
@@ -2282,7 +2282,7 @@ function ModManagerView:_compute_dir_hashes(dir)
 	}
 end
 
-function ModManagerView:_hash_check(entry, version, hashes, platform, mode)
+function PluginManagerView:_hash_check(entry, version, hashes, platform, mode)
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
 		return false, "无法选择插件商店地址"
@@ -2317,7 +2317,7 @@ function ModManagerView:_hash_check(entry, version, hashes, platform, mode)
 	return true, body
 end
 
-function ModManagerView:_upload_patch(mod_data, entry, version, changed, deleted, upload_cover)
+function PluginManagerView:_upload_patch(plugin_data, entry, version, changed, deleted, upload_cover)
 	local tmp = "tmp/plugin_patch/" .. entry
 	remove_dir_recursive("tmp/plugin_patch")
 	FS.createDirectory("tmp")
@@ -2325,7 +2325,7 @@ function ModManagerView:_upload_patch(mod_data, entry, version, changed, deleted
 	FS.createDirectory(tmp)
 
 	for _, rel_path in ipairs(changed) do
-		local src = mod_data.path .. "/" .. rel_path
+		local src = plugin_data.path .. "/" .. rel_path
 		local dst = tmp .. "/" .. rel_path
 		local parent = dst:match("^(.*/)")
 		if parent and not FS.getInfo(parent, "directory") then
@@ -2381,7 +2381,7 @@ function ModManagerView:_upload_patch(mod_data, entry, version, changed, deleted
 	return true, nil
 end
 
-function ModManagerView:_upload_plugin(mod_data, upload_cover)
+function PluginManagerView:_upload_plugin(plugin_data, upload_cover)
 	if not self._developer_token then
 		local ok, err = self:_developer_login()
 		if not ok then
@@ -2389,16 +2389,16 @@ function ModManagerView:_upload_plugin(mod_data, upload_cover)
 		end
 	end
 
-	local entry = mod_data.config.entry or mod_data.name
-	local version = mod_data.config.version or ""
+	local entry = plugin_data.config.entry or plugin_data.name
+	local version = plugin_data.config.version or ""
 
 	local cover_data = nil
 	local cover_ext = nil
 	if upload_cover then
-		local items = FS.getDirectoryItems(mod_data.path) or {}
+		local items = FS.getDirectoryItems(plugin_data.path) or {}
 		for _, name in ipairs(items) do
 			if name:lower():match("^cover%.") then
-				cover_data = FS.read(mod_data.path .. "/" .. name)
+				cover_data = FS.read(plugin_data.path .. "/" .. name)
 				cover_ext = name:match("%.([^%.]+)$")
 				break
 			end
@@ -2407,7 +2407,7 @@ function ModManagerView:_upload_plugin(mod_data, upload_cover)
 
 	-- 计算本地文件哈希
 	self:_set_status("正在计算文件哈希：" .. entry, 5)
-	local dir_info = self:_compute_dir_hashes(mod_data.path)
+	local dir_info = self:_compute_dir_hashes(plugin_data.path)
 	if dir_info.total_bytes == 0 then
 		return false, "插件目录为空"
 	end
@@ -2430,7 +2430,7 @@ function ModManagerView:_upload_plugin(mod_data, upload_cover)
 			return true, nil
 		end
 		if not use_full and #changed > 0 then
-			local ok_patch, err_patch = self:_upload_patch(mod_data, entry, version, changed, deleted, upload_cover)
+			local ok_patch, err_patch = self:_upload_patch(plugin_data, entry, version, changed, deleted, upload_cover)
 			if ok_patch then
 				if cover_data and cover_ext then
 					self:_upload_cover(entry, cover_data, cover_ext)
@@ -2438,17 +2438,17 @@ function ModManagerView:_upload_plugin(mod_data, upload_cover)
 				self:_refresh_local_view("增量上传成功：" .. entry)
 				return true, nil
 			end
-			log.error("[mod_manager] 补丁上传失败，回退到全量上传：%s", tostring(err_patch))
+			log.error("[plugin_manager] 补丁上传失败，回退到全量上传：%s", tostring(err_patch))
 			use_full = true
 		end
 	end
 	if not hash_ok then
-		log.error("[mod_manager] 哈希检查失败，回退到全量上传：%s", tostring(hash_resp))
+		log.error("[plugin_manager] 哈希检查失败，回退到全量上传：%s", tostring(hash_resp))
 	end
 
 	-- 全量上传（增量不可用或变更量过大时回落）
 	self:_set_status("正在压缩插件：" .. entry, 20)
-	local zip_data = zip.create_from_dir(mod_data.path, {
+	local zip_data = zip.create_from_dir(plugin_data.path, {
 		exclude = {"^cover%..+$"},
 		skip_dirs = {".git", ".backup", ".tmp"}
 	})
@@ -2492,7 +2492,7 @@ function ModManagerView:_upload_plugin(mod_data, upload_cover)
 	return true, nil
 end
 
-function ModManagerView:_upload_cover(entry, cover_data, cover_ext)
+function PluginManagerView:_upload_cover(entry, cover_data, cover_ext)
 	self:_set_status("正在上传封面…", 90)
 	local base = self._selected_site and (self._selected_site:gsub("/+$", "") .. "/plugins") or self:_select_store_base_url()
 	if not base then
@@ -2526,40 +2526,40 @@ function ModManagerView:_upload_cover(entry, cover_data, cover_ext)
 	end
 end
 
-function ModManagerView:_capture_state()
+function PluginManagerView:_capture_state()
 	self._saved_state = {
 		global_enabled = self.global_toggle.value,
-		mod_enabled = {}
+		plugin_enabled = {}
 	}
-	for _, mod_data in ipairs(self.local_mods) do
-		self._saved_state.mod_enabled[mod_data.name] = mod_data.config.enabled ~= false
+	for _, plugin_data in ipairs(self.local_plugins) do
+		self._saved_state.plugin_enabled[plugin_data.name] = plugin_data.config.enabled ~= false
 	end
 	self._unsaved_changes = false
 end
 
-function ModManagerView:_check_unsaved()
+function PluginManagerView:_check_unsaved()
 	if self.global_toggle.value ~= self._saved_state.global_enabled then
 		return true
 	end
-	for _, mod_data in ipairs(self.local_mods) do
-		local saved = self._saved_state.mod_enabled[mod_data.name]
-		if saved ~= nil and (mod_data.config.enabled ~= false) ~= saved then
+	for _, plugin_data in ipairs(self.local_plugins) do
+		local saved = self._saved_state.plugin_enabled[plugin_data.name]
+		if saved ~= nil and (plugin_data.config.enabled ~= false) ~= saved then
 			return true
 		end
 	end
 	return false
 end
 
-function ModManagerView:save()
-	local base_cfg = mod_paths.load_main_config()
+function PluginManagerView:save()
+	local base_cfg = plugin_paths.load_main_config()
 	base_cfg.enabled = self.global_toggle.value
-	local ok = storage:write_lua(mod_paths.MAIN_CONFIG_PATH, base_cfg)
+	local ok = storage:write_lua(plugin_paths.MAIN_CONFIG_PATH, base_cfg)
 	if not ok then
-		log.error("写入 %s 失败", mod_paths.MAIN_CONFIG_PATH)
+		log.error("写入 %s 失败", plugin_paths.MAIN_CONFIG_PATH)
 	end
 
-	for _, mod_data in ipairs(self.local_mods) do
-		local cfg = mod_data.config or {}
+	for _, plugin_data in ipairs(self.local_plugins) do
+		local cfg = plugin_data.config or {}
 		local out = {}
 		for k, v in pairs(cfg) do
 			out[k] = v
@@ -2568,16 +2568,16 @@ function ModManagerView:save()
 		if out.enabled then
 			out.last_used_at = os.time()
 		end
-		local wok = storage:write_lua(mod_data.config_path, out)
+		local wok = storage:write_lua(plugin_data.config_path, out)
 		if not wok then
-			log.error("写入 %s 失败", mod_data.config_path)
+			log.error("写入 %s 失败", plugin_data.config_path)
 		end
 	end
 	self:_capture_state()
 end
 
-function ModManagerView:destroy()
+function PluginManagerView:destroy()
 	self:_stop_http_thread()
 end
 
-return ModManagerView
+return PluginManagerView

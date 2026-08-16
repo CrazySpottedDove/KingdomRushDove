@@ -115,8 +115,8 @@ local search_roots = {
 	"_assets",
 	string.format("_assets/all-%s", KR_TARGET),
 	string.format("_assets/%s-%s", KR_GAME, KR_TARGET),
-	"mods",
-	"mods/all",
+	"plugin",
+	"plugin/all",
 	"plugins"
 }
 
@@ -276,7 +276,7 @@ local loader
 local function load_director()
 	local director = require("director")
 	main.handler = director
-	require("mods.mod_main"):init(director)
+	require("plugin.plugin_main"):init(director)
 end
 
 local function load_update_manager()
@@ -648,20 +648,20 @@ local function escape_lua_pattern(s)
 	return (tostring(s):gsub("([%(%)%.%%%+%-%*%?%[%]%^%$])", "%%%1"))
 end
 
-local function find_mod_dir_by_entry_in_line(line)
-	if type(line) ~= "string" or type(MOD_REGISTRY) ~= "table" then
+local function find_plugin_dir_by_entry_in_line(line)
+	if type(line) ~= "string" or type(PLUGIN_REGISTRY) ~= "table" then
 		return nil
 	end
 
 	local padded_line = " " .. line .. " "
 
-	for mod_dir, config in pairs(MOD_REGISTRY) do
-		local entry = (type(config) == "table" and config.entry) or mod_dir
+	for plugin_dir, config in pairs(PLUGIN_REGISTRY) do
+		local entry = (type(config) == "table" and config.entry) or plugin_dir
 		if type(entry) == "string" and entry ~= "" then
 			local escaped_entry = escape_lua_pattern(entry)
 			local token_pattern = "[^%w_]" .. escaped_entry .. "[^%w_]"
 			if padded_line:match(token_pattern) then
-				return mod_dir
+				return plugin_dir
 			end
 		end
 	end
@@ -669,25 +669,25 @@ local function find_mod_dir_by_entry_in_line(line)
 	return nil
 end
 
-local function find_mod_from_traceback(traceback)
+local function find_plugin_from_traceback(traceback)
 	if not traceback then
 		return nil
 	end
 
-	local first_mod_dir = nil
-	local first_mod_idx = nil
+	local first_plugin_dir = nil
+	local first_plugin_idx = nil
 	local first_hookutils_idx = nil
 	local idx = 0
 
 	for line in traceback:gmatch("[^\n]+") do
 		idx = idx + 1
 
-		if first_mod_dir == nil then
-			local dir = find_mod_dir_by_entry_in_line(line)
+		if first_plugin_dir == nil then
+			local dir = find_plugin_dir_by_entry_in_line(line)
 
 			if dir then
-				first_mod_dir = dir
-				first_mod_idx = idx
+				first_plugin_dir = dir
+				first_plugin_idx = idx
 			end
 		end
 
@@ -695,50 +695,50 @@ local function find_mod_from_traceback(traceback)
 			first_hookutils_idx = idx
 		end
 
-		if first_mod_dir and first_hookutils_idx then
+		if first_plugin_dir and first_hookutils_idx then
 			break
 		end
 	end
 
-	if not first_mod_dir then
+	if not first_plugin_dir then
 		return nil
 	end
 
 	-- hook_utils 帧比插件帧更靠内层 → 错误在原始函数中，不归因插件
-	if first_hookutils_idx and first_hookutils_idx < first_mod_idx then
+	if first_hookutils_idx and first_hookutils_idx < first_plugin_idx then
 		return nil
 	end
 
-	local config = MOD_REGISTRY and MOD_REGISTRY[first_mod_dir]
+	local config = PLUGIN_REGISTRY and PLUGIN_REGISTRY[first_plugin_dir]
 	if config then
-		return string.format("%s:%s (%s)", config.name or first_mod_dir, config.version, config.entry or first_mod_dir)
+		return string.format("%s:%s (%s)", config.name or first_plugin_dir, config.version, config.entry or first_plugin_dir)
 	end
 
-	return first_mod_dir
+	return first_plugin_dir
 end
 
-local function find_mod_dir_from_traceback(traceback)
+local function find_plugin_dir_from_traceback(traceback)
 	if not traceback then
 		return nil
 	end
 
-	local first_mod_dir = nil
-	local first_mod_idx = nil
+	local first_plugin_dir = nil
+	local first_plugin_idx = nil
 	local first_hookutils_idx = nil
 	local idx = 0
 
 	for line in traceback:gmatch("[^\n]+") do
 		idx = idx + 1
 
-		if first_mod_dir == nil then
-			local dir = find_mod_dir_by_entry_in_line(line)
+		if first_plugin_dir == nil then
+			local dir = find_plugin_dir_by_entry_in_line(line)
 			if not dir then
 				dir = line:match("[/\\]plugins[/\\]([^/\\]+)[/\\]") or line:match("plugins[/\\]([^/\\]+)[/\\]") or line:match("[/\\]mods[/\\]local[/\\]([^/\\]+)[/\\]") or line:match("mods[/\\]local[/\\]([^/\\]+)[/\\]")
 			end
 
 			if dir then
-				first_mod_dir = dir
-				first_mod_idx = idx
+				first_plugin_dir = dir
+				first_plugin_idx = idx
 			end
 		end
 
@@ -746,64 +746,64 @@ local function find_mod_dir_from_traceback(traceback)
 			first_hookutils_idx = idx
 		end
 
-		if first_mod_dir and first_hookutils_idx then
+		if first_plugin_dir and first_hookutils_idx then
 			break
 		end
 	end
 
-	if not first_mod_dir then
+	if not first_plugin_dir then
 		return nil
 	end
 
-	if first_hookutils_idx and first_hookutils_idx < first_mod_idx then
+	if first_hookutils_idx and first_hookutils_idx < first_plugin_idx then
 		return nil
 	end
 
-	return first_mod_dir
+	return first_plugin_dir
 end
 
-local function auto_disable_crashing_mod(traceback)
-	local mod_dir = find_mod_dir_from_traceback(traceback)
-	if not mod_dir then
+local function auto_disable_crashing_plugin(traceback)
+	local plugin_dir = find_plugin_dir_from_traceback(traceback)
+	if not plugin_dir then
 		return nil, nil
 	end
 
-	local cfg_path = "plugins/" .. mod_dir .. "/config.lua"
+	local cfg_path = "plugins/" .. plugin_dir .. "/config.lua"
 	if not love.filesystem.getInfo(cfg_path, "file") then
-		return mod_dir, false
+		return plugin_dir, false
 	end
 
 	local chunk, err = love.filesystem.load(cfg_path)
 	if not chunk then
-		log.error("auto_disable_crashing_mod: load failed for %s: %s", cfg_path, tostring(err))
-		return mod_dir, false
+		log.error("auto_disable_crashing_plugin: load failed for %s: %s", cfg_path, tostring(err))
+		return plugin_dir, false
 	end
 
 	local ok, cfg = pcall(chunk)
 	if not ok or type(cfg) ~= "table" then
-		log.error("auto_disable_crashing_mod: invalid config for %s", cfg_path)
-		return mod_dir, false
+		log.error("auto_disable_crashing_plugin: invalid config for %s", cfg_path)
+		return plugin_dir, false
 	end
 
 	if cfg.enabled == false then
-		return mod_dir, true
+		return plugin_dir, true
 	end
 
 	cfg.enabled = false
 	local persistence = require("lib.klua.persistence")
 	local written = love.filesystem.write(cfg_path, persistence.serialize_to_string(cfg))
 	if not written then
-		log.error("auto_disable_crashing_mod: write failed for %s", cfg_path)
-		return mod_dir, false
+		log.error("auto_disable_crashing_plugin: write failed for %s", cfg_path)
+		return plugin_dir, false
 	end
 
-	log.error("auto_disable_crashing_mod: disabled mod %s after crash", mod_dir)
-	return mod_dir, true
+	log.error("auto_disable_crashing_plugin: disabled plugin %s after crash", plugin_dir)
+	return plugin_dir, true
 end
 
-local function disabled_all_mods()
-	-- 只要把模组管理器的总开关关闭即可
-	local cfg_path = "plugins/mod_main_config.lua"
+local function disabled_all_plugins()
+	-- 只要把插件管理器的总开关关闭即可
+	local cfg_path = "plugins/plugin_main_config.lua"
 	if not love.filesystem.getInfo(cfg_path, "file") then
 		return false
 	end
@@ -818,14 +818,14 @@ local function disabled_all_mods()
 end
 
 -- 构建当前已启用（已加载或正在加载）的插件列表（名称 + 版本）文本。
--- 数据源仅 MOD_REGISTRY，没有则输出 "(无)"。
+-- 数据源仅 PLUGIN_REGISTRY，没有则输出 "(无)"。
 local function build_enabled_plugins_text()
 	local lines = {"===== 已启用插件列表 (name : version) ====="}
 
 	local listed = 0
 
-	if type(MOD_REGISTRY) == "table" then
-		for mod_dir, config in pairs(MOD_REGISTRY) do
+	if type(PLUGIN_REGISTRY) == "table" then
+		for plugin_dir, config in pairs(PLUGIN_REGISTRY) do
 			lines[#lines + 1] = string.format("  %s(%s) : %s", config.name, config.entry, config.version or "?")
 			listed = listed + 1
 		end
@@ -890,20 +890,20 @@ function love.errorhandler(msg)
 	table.insert(err, msg .. "\n\n")
 
 	-- 归因：检查错误是否由某个插件导致（stack_msg 包含完整 traceback）
-	local blamed_mod = find_mod_from_traceback(stack_msg)
-	if blamed_mod then
-		table.insert(tip, string.format("插件导致崩溃：%s\n", blamed_mod))
+	local blamed_plugin = find_plugin_from_traceback(stack_msg)
+	if blamed_plugin then
+		table.insert(tip, string.format("插件导致崩溃：%s\n", blamed_plugin))
 	end
 
 	-- 某个没被定位的插件导致了游戏进都进不去，采用保守措施，把所有插件全都禁用
-	if not blamed_mod and not main.screen_map_entered then
-		if disabled_all_mods() then
+	if not blamed_plugin and not main.screen_map_entered then
+		if disabled_all_plugins() then
 			table.insert(tip, "检测到未知插件导致崩溃，已自动禁用所有插件。\n重启游戏后将跳过所有插件。")
 		end
 	else
-		local disabled_mod_dir, disabled_ok = auto_disable_crashing_mod(stack_msg)
-		if disabled_mod_dir and disabled_ok then
-			table.insert(tip, string.format("已自动禁用崩溃插件：%s\n重启游戏后将跳过该插件。", disabled_mod_dir))
+		local disabled_plugin_dir, disabled_ok = auto_disable_crashing_plugin(stack_msg)
+		if disabled_plugin_dir and disabled_ok then
+			table.insert(tip, string.format("已自动禁用崩溃插件：%s\n重启游戏后将跳过该插件。", disabled_plugin_dir))
 		end
 	end
 

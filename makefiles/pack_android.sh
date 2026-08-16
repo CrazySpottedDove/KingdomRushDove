@@ -148,7 +148,6 @@ calc_love_fingerprint() {
             -path "./tmp" -prune -o \
             -path "./docs" -prune -o \
             -path "./.plugins" -prune -o \
-            -path "./mods/local" -prune -o \
             -path "./.deepseek" -prune -o \
             -path "./.codewhale" -prune -o \
             -path "./.agents" -prune -o \

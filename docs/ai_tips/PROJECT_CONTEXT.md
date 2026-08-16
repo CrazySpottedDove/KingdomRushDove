@@ -1,6 +1,6 @@
 # KingdomRushDove 项目全局上下文
 
-> 本文档为跨会话共享记忆文档，综合整理项目架构、核心系统、开发规范及已有 mod 信息。
+> 本文档为跨会话共享记忆文档，综合整理项目架构、核心系统、开发规范及已有 plugin 信息。
 > 更新时间：2026-03-05
 
 ---
@@ -83,20 +83,20 @@ KingdomRushDove/
 │       └── exoskeletons/     # 骨骼动画数据
 ├── _assets/                  # 资源索引（不含实际图片/音频）
 │   └── assets_index.lua      # 资源路径索引
-├── mods/                     # Mod 系统
-│   ├── mod_main.lua          # Mod 系统入口
-│   ├── mod_globals.lua       # 全局变量注入
-│   ├── mod_main_config.lua   # Mod 系统默认配置模板
-│   ├── all/                  # Mod 公共工具（hook_utils / mod_db / mod_utils）
-│   ├── mod_template/         # Mod 开发模板（示例）
-│   └── local/                # 用户安装的 mod（不纳入版控）
-│       ├── mod_main_config.lua  # 本地配置（enabled=true 启用 mod 系统）
-│       ├── damage_numbers/   # 已有 mod：伤害数字显示
-│       └── enhanced_vesper/  # 已有 mod：增强维斯珀英雄
+├── plugin/                     # Plugin 系统
+│   ├── plugin_main.lua          # Plugin 系统入口
+│   ├── plugin_globals.lua       # 全局变量注入
+│   ├── plugin_main_config.lua   # Plugin 系统默认配置模板
+│   ├── all/                  # Plugin 公共工具（hook_utils / plugin_db / plugin_utils）
+│   ├── plugin_template/         # Plugin 开发模板（示例）
+│   （用户安装的 plugin 位于存档目录 plugins/，不纳入版控）
+│       ├── plugin_main_config.lua  # 本地配置（enabled=true 启用 plugin 系统）
+│       ├── damage_numbers/   # 已有 plugin：伤害数字显示
+│       └── enhanced_vesper/  # 已有 plugin：增强维斯珀英雄
 ├── dove_modules/             # dove 版特有功能模块
 │   ├── perf/                 # 性能计数器（perf.lua / perf_ui.lua）
 │   ├── updater/              # 自动更新管理器
-│   ├── gui/                  # 自定义 GUI（boss_health_bar / mod_manager_view）
+│   ├── gui/                  # 自定义 GUI（boss_health_bar / plugin_manager_view）
 │   └── notice/               # 公告（must_read / author_words）
 ├── lib/                      # 第三方/通用库
 │   ├── klua/                 # Lua 工具库（log, table, vector, macros...）
@@ -125,14 +125,14 @@ love.run()
           1. "settings"        → screen_settings 设置屏幕
           2. "must_read"       → dove_modules.notice.must_read 必读公告
           3. "update_manager"  → dove_modules.updater.update_manager 更新检查
-          4. "director"        → director:init() + mod_main:init(director)
+          4. "director"        → director:init() + plugin_main:init(director)
   → love.update(dt) → main.handler:update(dt)
   → love.draw()     → main.handler:draw()
 ```
 
 `main.handler` 是当前活跃的场景对象，随阶段切换而替换。
 
-**Mod 系统在 `director:init()` 之后、`mod_main:after_init()` 中完成注册**，保证核心系统先初始化。
+**Plugin 系统在 `director:init()` 之后、`plugin_main:after_init()` 中完成注册**，保证核心系统先初始化。
 
 ---
 
@@ -166,7 +166,7 @@ love.run()
 | `store.pending_inserts` / `store.pending_removals` | 实体插入/移除队列 |
 | `store.entity_count` | 当前活跃实体数 |
 | `store.game_gui` | game_gui 引用（允许 store 层影响 HUD） |
-| `store.last_hooks` | `on_insert/on_remove` 扩展点，供 mod 注入自定义逻辑 |
+| `store.last_hooks` | `on_insert/on_remove` 扩展点，供 plugin 注入自定义逻辑 |
 | `store.ephemeral` | 临时数据，重启时清空 |
 
 ### 4.3 simulation 调度流程
@@ -184,7 +184,7 @@ simulation:do_tick(dt)
 ### 4.4 系统执行顺序（`game.simulation_systems`）
 
 ```lua
-"level", "wave_spawn", "wave_spawn_tsv", "mod_lifecycle",
+"level", "wave_spawn", "wave_spawn_tsv", "mod_lifecycle",  -- ECS 修饰器(modifier)生命周期，与插件系统无关
 "main_script", "events", "timed", "tween", "endless_patch",
 "health",           -- ★ 伤害结算核心
 "count_groups",
@@ -233,7 +233,7 @@ Windows/Linux/Android 分别使用 `librender_sort.dll`、`librender_sort.so`、
 ### sys.last_hook — 分类索引维护
 
 最后一个 on_insert/on_remove 处理器，维护所有分类快速索引。
-提供 `store.last_hooks.on_insert/on_remove` 扩展点供外部（mod）追加逻辑。
+提供 `store.last_hooks.on_insert/on_remove` 扩展点供外部（plugin）追加逻辑。
 
 ### sys.spatial_index — 空间索引
 
@@ -259,32 +259,32 @@ Windows/Linux/Android 分别使用 `librender_sort.dll`、`librender_sort.so`、
 
 ---
 
-## 七、Mod 系统
+## 七、Plugin 系统
 
 ### 7.1 架构
 
 ```
-mods/
-├── mod_main.lua          # 入口：扫描/加载/初始化所有启用 mod
-├── mod_globals.lua       # 全局变量注入（simulation/game/E/U/signal 等）
-├── mod_main_config.lua   # 默认配置模板
+plugin/
+├── plugin_main.lua          # 入口：扫描/加载/初始化所有启用 plugin
+├── plugin_globals.lua       # 全局变量注入（simulation/game/E/U/signal 等）
+├── plugin_main_config.lua   # 默认配置模板
 ├── all/
 │   ├── hook_utils.lua    # HOOK/UNHOOK/CALL_ORIGINAL
-│   ├── mod_db.lua        # Mod 数据库（扫描/排序）
-│   └── mod_utils.lua     # 路径工具
-└── local/                # 用户安装的 mod（不纳入版控）
+│   ├── plugin_db.lua        # Plugin 数据库（扫描/排序）
+│   └── plugin_utils.lua     # 路径工具
+（用户安装的 plugin 位于存档目录 plugins/，不纳入版控）
 ```
 
 ### 7.2 加载顺序
 
 ```
-mod_main:init(director)
-  → mod_db:init()          # 扫描 mods/local/，按 priority 排序
+plugin_main:init(director)
+  → plugin_db:init()          # 扫描 plugins/，按 priority 排序
   → director:init(params)  # 核心游戏初始化
-  → mod_main:after_init()
-      → 正序为每个 mod 添加 require 路径
-      → 倒序 require 每个 mod（得到 hook 表）
-      → 正序调用 hook:init(mod_data)（高优先级覆盖低优先级）
+  → plugin_main:after_init()
+      → 正序为每个 plugin 添加 require 路径
+      → 倒序 require 每个 plugin（得到 hook 表）
+      → 正序调用 hook:init(plugin_data)（高优先级覆盖低优先级）
 ```
 
 ### 7.3 hook_utils — 钩子机制
@@ -301,21 +301,21 @@ CALL_ORIGINAL(obj, fn_name, ...)
 
 ```lua
 return {
-	name = "mod名称",
+	name = "plugin名称",
 	version = "1.0",
 	enabled = true,
 	priority = 0, -- 越小越先初始化（高优先级）
 }
 ```
 
-### 7.5 mod 主文件结构
+### 7.5 plugin 主文件结构
 
 ```lua
 local hook_utils = require("hook_utils")
 local HOOK = hook_utils.HOOK
 local hook = hook_utils:new()
 
-function hook:init(mod_data)
+function hook:init(plugin_data)
 	HOOK(some_object, "method_name", self.some_object.method_name)
 end
 
@@ -327,7 +327,7 @@ end
 return hook
 ```
 
-### 7.6 mod 内全局可用对象（由 mod_globals.lua 注入）
+### 7.6 plugin 内全局可用对象（由 plugin_globals.lua 注入）
 
 | 全局变量 | 说明 |
 |---------|------|
@@ -351,18 +351,18 @@ return hook
 
 ---
 
-## 八、已有 Mod
+## 八、已有 Plugin
 
 ### damage_numbers（伤害数字显示）
 
-- 路径：`mods/local/damage_numbers/`
+- 路径：`plugins/damage_numbers/`
 - 技术：Hook `simulation.do_tick` + Hook `game.draw_game`（叠加浮动文字）
 - 实现亮点：FFI `DNum` 结构体池（300 槽环形写入），避免 GC；颜色按 `DAMAGE_*` 类型映射；字号/速度按伤害占 HP 比例分级
 - 坐标约定：屏幕-Y 空间（`y = REF_H - world_y`），vy < 0 = 向上
 
 ### enhanced_vesper（增强维斯珀英雄）
 
-- 路径：`mods/local/enhanced_vesper/`
+- 路径：`plugins/enhanced_vesper/`
 - 技术：Hook `E.load`，加载后 require 自定义 scripts/templates 文件
 - 特点：通过 `config_skills.lua` 暴露可配置技能参数
 
@@ -420,9 +420,9 @@ DR_NONE=0, DR_DAMAGE=1, DR_KILL=2, DR_ARMOR=4, DR_MAGICAL_ARMOR=8
 "_assets",
 "_assets/all-desktop",
 "_assets/kr1-desktop",
-"mods",
-"mods/all",
-"mods/local"
+"plugin",
+"plugin/all",
+"plugins"
 ```
 
 因此 `require("game")` 会在这些路径中依次查找 `game.lua`，`require("data.xxx")` 会在每个根目录下查找 `data/xxx.lua`。
@@ -474,5 +474,5 @@ perf.reset() -- 每帧重置
 |------|------|
 | `simulation_understanding.md` | simulation.lua 详解（ECS 调度、实体生命周期、store 字段） |
 | `systems_understanding.md` | systems.lua 详解（各系统钩子、伤害结算、渲染排序） |
-| `mods_understanding.md` | mods/ 目录详解（加载流程、hook 机制、mod 开发步骤） |
+| `plugins_understanding.md` | plugin/ 目录详解（加载流程、hook 机制、plugin 开发步骤） |
 | `PROJECT_CONTEXT.md` | **本文件**（全局概览，跨会话共享记忆） |

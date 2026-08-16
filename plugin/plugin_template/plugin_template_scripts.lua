@@ -3,7 +3,7 @@ local S = require("sound_db")
 local P = require("path_db")
 local UP = require("kr1.upgrades")
 local scripts = require("scripts")
-local mod_utils = require("mod_utils")
+local plugin_utils = require("plugin_utils")
 
 -- 这里可以覆盖函数，示例：
 -- function scripts.hero_alleria.update(this, store)

@@ -1,4 +1,4 @@
--- 模组管理器的 UI 组件（ModActionButton / ModToggleButton / ModItemRow）
+-- 插件管理器的 UI 组件（PluginActionButton / PluginToggleButton / PluginItemRow）
 local class = require("middleclass")
 local V = require("lib.klua.vector")
 local FS = love.filesystem
@@ -16,11 +16,11 @@ local ROW_PAD = 16
 local ACCENT_W = 6
 
 -- ─────────────────────────────────────────────
--- ModActionButton
+-- PluginActionButton
 -- ─────────────────────────────────────────────
-ModActionButton = class("ModActionButton", KButton)
+PluginActionButton = class("PluginActionButton", KButton)
 
-function ModActionButton:initialize(text, size)
+function PluginActionButton:initialize(text, size)
 	local rs = GGLabel.static.ref_h / REF_H
 	local w = size and size.x or 110
 	local h = size and size.y or 34
@@ -45,17 +45,17 @@ function ModActionButton:initialize(text, size)
 	self:_refresh()
 end
 
-function ModActionButton:set_text(text)
+function PluginActionButton:set_text(text)
 	self._text = utf8_util.sanitize(text)
 	self:_refresh()
 end
 
-function ModActionButton:set_enabled(v)
+function PluginActionButton:set_enabled(v)
 	self.enabled = v ~= false
 	self:_refresh()
 end
 
-function ModActionButton:_refresh()
+function PluginActionButton:_refresh()
 	if not self.enabled then
 		self.colors.background = {88, 78, 64, 180}
 		self._label.colors.text = {160, 150, 130, 220}
@@ -69,17 +69,17 @@ function ModActionButton:_refresh()
 	self._label.text = self._text
 end
 
-function ModActionButton:on_enter()
+function PluginActionButton:on_enter()
 	self._hover = true
 	self:_refresh()
 end
 
-function ModActionButton:on_exit()
+function PluginActionButton:on_exit()
 	self._hover = false
 	self:_refresh()
 end
 
-function ModActionButton:on_click()
+function PluginActionButton:on_click()
 	if not self.enabled then
 		return
 	end
@@ -90,11 +90,11 @@ function ModActionButton:on_click()
 end
 
 -- ─────────────────────────────────────────────
--- ModToggleButton
+-- PluginToggleButton
 -- ─────────────────────────────────────────────
-ModToggleButton = class("ModToggleButton", KButton)
+PluginToggleButton = class("PluginToggleButton", KButton)
 
-function ModToggleButton:initialize(initial_value, size)
+function PluginToggleButton:initialize(initial_value, size)
 	local rs = GGLabel.static.ref_h / REF_H
 	local w = size and size.x or 84
 	local h = size and size.y or 36
@@ -117,7 +117,7 @@ function ModToggleButton:initialize(initial_value, size)
 	self:_refresh()
 end
 
-function ModToggleButton:set_value(v)
+function PluginToggleButton:set_value(v)
 	self.value = v
 	self:_refresh()
 	if self.on_change then
@@ -125,7 +125,7 @@ function ModToggleButton:set_value(v)
 	end
 end
 
-function ModToggleButton:_refresh()
+function PluginToggleButton:_refresh()
 	if self.value then
 		self.colors.background = self._hover and {58, 183, 90, 245} or {35, 148, 68, 215}
 		self._label.colors.text = {195, 255, 178, 255}
@@ -137,27 +137,27 @@ function ModToggleButton:_refresh()
 	end
 end
 
-function ModToggleButton:on_enter()
+function PluginToggleButton:on_enter()
 	self._hover = true
 	self:_refresh()
 end
 
-function ModToggleButton:on_exit()
+function PluginToggleButton:on_exit()
 	self._hover = false
 	self:_refresh()
 end
 
-function ModToggleButton:on_click()
+function PluginToggleButton:on_click()
 	S:queue("GUIButtonCommon")
 	self:set_value(not self.value)
 end
 
 -- ─────────────────────────────────────────────
--- ModItemRow
+-- PluginItemRow
 -- ─────────────────────────────────────────────
-ModItemRow = class("ModItemRow", KView)
+PluginItemRow = class("PluginItemRow", KView)
 
-function ModItemRow:initialize(opts, row_w)
+function PluginItemRow:initialize(opts, row_w)
 	row_w = row_w or 760
 	KView.initialize(self, V.v(row_w, ROW_H))
 	self.opts = opts or {}
@@ -255,7 +255,7 @@ function ModItemRow:initialize(opts, row_w)
 	local toggle_bottom = 0
 	local action_right = row_w - right_pad
 	if self.opts.show_toggle then
-		local toggle = ModToggleButton:new(self.opts.enabled ~= false, V.v(toggle_w, km.clamp(toggle_h, 36, 44)))
+		local toggle = PluginToggleButton:new(self.opts.enabled ~= false, V.v(toggle_w, km.clamp(toggle_h, 36, 44)))
 		local toggle_top_margin = self.opts.toggle_top_margin or 16
 		local toggle_top = math.max(toggle_top_margin, status_y + status_h + 14)
 		toggle_bottom = toggle_top + toggle.size.y
@@ -269,8 +269,8 @@ function ModItemRow:initialize(opts, row_w)
 		end
 		self:add_child(toggle)
 		self.toggle = toggle
-		if self.opts.mod_data.has_config then
-			local config_button = ModToggleButton:new(true, V.v(toggle_w, km.clamp(toggle_h, 36, 44)))
+		if self.opts.plugin_data.has_config then
+			local config_button = PluginToggleButton:new(true, V.v(toggle_w, km.clamp(toggle_h, 36, 44)))
 			config_button.pos = V.v(row_w - 2 * right_pad - toggle_w * 3 / 2, toggle_top + toggle.size.y / 2)
 			config_button.anchor = V.v(toggle.size.x / 2, toggle.size.y / 2)
 			config_button._label.text = "配置"
@@ -278,23 +278,23 @@ function ModItemRow:initialize(opts, row_w)
 			function config_button:on_click()
 				S:queue("GUIButtonCommon")
 				local config_view = editable_panel_view:new(opts._sw, opts._sh, opts.title, opts._keyboard, opts._controller)
-				config_view._config_path = opts.mod_data.path .. "/" .. opts.mod_data.name .. "_config.lua"
+				config_view._config_path = opts.plugin_data.path .. "/" .. opts.plugin_data.name .. "_config.lua"
 				function config_view:load()
 					local config = storage:load_lua(self._config_path, true)
 					self.data_group:set_all_data(config)
 				end
 				function config_view:save()
-					local config = storage:load_lua(opts.mod_data.path .. "/" .. opts.mod_data.name .. "_config.lua", true)
+					local config = storage:load_lua(opts.plugin_data.path .. "/" .. opts.plugin_data.name .. "_config.lua", true)
 					for k, v in pairs(self.data_group:get_all_data()) do
 						config[k] = v
 					end
 					storage:write_lua(self._config_path, config)
-					local cfg_chunk, _ = FS.load(opts.mod_data.config_path)
+					local cfg_chunk, _ = FS.load(opts.plugin_data.config_path)
 					if cfg_chunk then
-						local ok, mod_cfg = pcall(cfg_chunk)
-						if ok and type(mod_cfg) == "table" then
-							mod_cfg.last_used_at = os.time()
-							FS.write(opts.mod_data.config_path, persistence.serialize_to_string(mod_cfg))
+						local ok, plugin_cfg = pcall(cfg_chunk)
+						if ok and type(plugin_cfg) == "table" then
+							plugin_cfg.last_used_at = os.time()
+							FS.write(opts.plugin_data.config_path, persistence.serialize_to_string(plugin_cfg))
 						end
 					end
 				end
@@ -325,7 +325,7 @@ function ModItemRow:initialize(opts, row_w)
 
 	self._action_buttons = {}
 	for _, action in ipairs(actions) do
-		local btn = ModActionButton:new(action.text, V.v(action_w, action_h))
+		local btn = PluginActionButton:new(action.text, V.v(action_w, action_h))
 		btn.pos = V.v(x, action_y)
 		btn.on_press = function()
 			if action.on_press then
@@ -347,7 +347,7 @@ function ModItemRow:initialize(opts, row_w)
 	end
 end
 
-function ModItemRow:_refresh_accent(enabled)
+function PluginItemRow:_refresh_accent(enabled)
 	if enabled then
 		self._accent.colors.background = {55, 185, 80, 235}
 	else
@@ -355,7 +355,7 @@ function ModItemRow:_refresh_accent(enabled)
 	end
 end
 
-function ModItemRow:set_dimmed(dimmed)
+function PluginItemRow:set_dimmed(dimmed)
 	if dimmed then
 		self._accent.colors.background = {80, 72, 58, 200}
 		self.colors.background = {18, 14, 10, 180}
@@ -369,10 +369,10 @@ function ModItemRow:set_dimmed(dimmed)
 	self._hover_bg = dimmed and {18, 14, 10, 200} or {40, 30, 18, 230}
 end
 
-function ModItemRow:on_enter()
+function PluginItemRow:on_enter()
 	self.colors.background = {self._hover_bg[1], self._hover_bg[2], self._hover_bg[3], self._hover_bg[4]}
 end
 
-function ModItemRow:on_exit()
+function PluginItemRow:on_exit()
 	self.colors.background = {self._base_bg[1], self._base_bg[2], self._base_bg[3], self._base_bg[4]}
 end

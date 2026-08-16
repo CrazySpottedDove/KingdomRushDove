@@ -617,9 +617,9 @@ function gui:add_extension_tools_buttons()
 end
 
 function gui:show_plugin_level_selector()
-	local mod_db = require("mod_db")
+	local plugin_db = require("plugin_db")
 	local levels = {}
-	for _, md in ipairs(mod_db.mods_datas or {}) do
+	for _, md in ipairs(plugin_db.plugins_datas or {}) do
 		local cfg = md.config
 		if cfg and cfg.category == "level" then
 			levels[#levels + 1] = md
