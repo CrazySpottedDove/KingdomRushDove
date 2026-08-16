@@ -436,6 +436,7 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self.mode = "local"
 	self.sort_idx = 1
 	self.category_idx = 1
+	self._uninstalled_only = false
 	self.store_page = 1
 	self.store_total_pages = 1
 	self.store_items = {}
@@ -556,6 +557,18 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self.category_btn = header_btn("分类：全部", header_group_x + (header_btn_w + header_btn_gap) * 2, header_top_y)
 	self.category_btn.on_press = function()
 		self:_toggle_category_panel()
+	end
+
+	self.uninstalled_btn = header_btn("只看未安装", header_group_x + (header_btn_w + header_btn_gap) * 3, header_top_y)
+	self.uninstalled_btn.on_press = function()
+		self._uninstalled_only = not self._uninstalled_only
+		self:_refresh_header_buttons()
+		if self.mode == "store" then
+			self.store_page = 1
+			self:_start_task("刷新商店列表", function()
+				return self:_fetch_store_list()
+			end)
+		end
 	end
 
 	-- 排序选择下拉面板
@@ -986,6 +999,14 @@ function PluginManagerView:_refresh_header_buttons()
 	self.mode_btn:set_text(self.mode == "local" and "前往商店" or "回到本地")
 	self.sort_btn:set_text("排序：" .. SORT_OPTIONS[self.sort_idx].label)
 	self.category_btn:set_text("分类：" .. CATEGORY_OPTIONS[self.category_idx].label)
+	if self._uninstalled_only then
+		self.uninstalled_btn:set_text("只看未安装")
+		self.uninstalled_btn.colors.background = {161, 122, 45, 245}
+		self.uninstalled_btn._label.colors.text = {255, 240, 190, 255}
+	else
+		self.uninstalled_btn:set_text("显示全部")
+		self.uninstalled_btn:_refresh()
+	end
 	local in_store = self.mode == "store"
 	local task_running = self._active_task ~= nil
 	self.refresh_btn:set_text(in_store and "刷新商店" or "查询远端")
@@ -1162,13 +1183,30 @@ function PluginManagerView:_decode_store_page(body, fallback_page)
 	}
 end
 
+--- 构造「只看未安装」的 exclude 查询参数（本地已安装 entry 逗号连接）
+---@return string 空串或 "&exclude=..."
+function PluginManagerView:_build_exclude_param()
+	if not self._uninstalled_only then
+		return ""
+	end
+	local entries = {}
+	for entry, _ in pairs(self.local_by_entry) do
+		entries[#entries + 1] = entry
+	end
+	if #entries == 0 then
+		return ""
+	end
+	return "&exclude=" .. url_encode(table.concat(entries, ","))
+end
+
 function PluginManagerView:_get_store_page(base, sort_val, category_val, page, use_cache)
-	local key = table.concat({base or "", sort_val or "", category_val or "", tostring(page or 1), tostring(STORE_PAGE_SIZE)}, "::")
+	local exclude_param = self:_build_exclude_param()
+	local key = table.concat({base or "", sort_val or "", category_val or "", tostring(page or 1), tostring(STORE_PAGE_SIZE), exclude_param}, "::")
 	if use_cache ~= false and self._store_page_cache[key] then
 		return true, self._store_page_cache[key], true
 	end
 
-	local url = string.format("%s/list?page=%d&page_size=%d&sort=%s&category=%s", base, page, STORE_PAGE_SIZE, sort_val, category_val)
+	local url = string.format("%s/list?page=%d&page_size=%d&sort=%s&category=%s%s", base, page, STORE_PAGE_SIZE, sort_val, category_val, exclude_param)
 	local resp, err = self:_request(url, {
 		method = "GET"
 	}, 20)
@@ -2122,6 +2160,10 @@ function PluginManagerView:_render_store_list()
 	local list_w = self.plugin_list.size.x - self.plugin_list.scroller_width - 2 * self.plugin_list.scroller_margin - 4
 	for _, item in ipairs(self.store_items) do
 		local local_plugin = self.local_by_entry[item.entry] or self.local_by_name[item.entry]
+		-- 只看未安装：本地再过滤一次（防本页请求后刚安装的条目残留）
+		if self._uninstalled_only and local_plugin then
+			goto continue
+		end
 		local installed = local_plugin ~= nil
 		local needs_update = installed and has_update(local_plugin.config.version, item.version)
 		local dl_task = self:_find_dl_task_by_entry(item.entry)
@@ -2198,6 +2240,7 @@ function PluginManagerView:_render_store_list()
 		}, list_w)
 		self.plugin_list:add_row(row)
 		self.plugin_list:add_row(KView:new(V.v(list_w, 10)))
+		::continue::
 	end
 end
 
