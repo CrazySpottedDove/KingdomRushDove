@@ -3646,4 +3646,50 @@ d[1].damage_max = ss("damage_config")
 d[1].damage_type = T("aura_bomb_tramin_ultimate").aura.damage_type
 map["疯狂炸弹人"] = str(cooldown_str(), "投下一个能造出炸弹的盒子，放出", count, "颗炸弹沿路径前进，每颗爆炸对敌人造成", damage_str(), "。")
 
+-- 毁灭坦克 SG-11
+-- set_hero("hero_tank")
+
+-- map["多刺蛞蝓"] = str("坦克每次移动并碾过敌人，都会对敌人造成伤害。")
+
+-- set_skill(h.hero.skills.heat_missiles)
+-- cooldown = h.timed_attacks.list[1].cooldown
+-- count = ss("count")
+-- d[1].damage_min = ss("damage_max_config")
+-- d[1].damage_max = ss("damage_max_config")
+-- d[1].damage_type = T("missle_tank").bullet.damage_type
+-- map["炽热导弹"] = str(cooldown_str(), "发射", count, "枚寻的导弹，在整个战场上搜寻敌人，每枚造成", damage_str(), "。")
+
+-- set_skill(h.hero.skills.ground_slam)
+-- cooldown = h.timed_attacks.list[2].cooldown
+-- e = T("aura_tank_skill2_bomb")
+-- d[1].damage_min = ss("damage_min_config")
+-- d[1].damage_max = ss("damage_max_config")
+-- d[1].damage_type = e.aura.damage_type
+-- local stun_dur = T("mod_tank_skill2_stun").modifier.duration
+-- map["猛击地"] = str(cooldown_str(), "猛击地面，对路径上的敌人造成", damage_str(), "，并令其眩晕", stun_dur, "秒。")
+
+-- set_skill(h.hero.skills.expendables)
+-- e = T("hero_tank_expendables_lvl3")
+-- get_health(e)
+-- get_damage(e.melee.attacks[1])
+-- map["敢死队"] = str("召唤严阵以待的士兵保护坦克。每名士兵拥有", hp_str(), "，每次近战攻击造成", damage_str(), "。")
+
+-- set_skill(h.hero.skills.scorching_cannon)
+-- cooldown = h.timed_attacks.list[3].cooldown
+-- e = T("mod_roundfire_hero_tank")
+-- d[1].damage_min = ss("damage_config")
+-- d[1].damage_max = ss("damage_config")
+-- d[1].damage_type = e.dps.damage_type
+-- local fire_every = e.dps.damage_every
+-- map["灼热大炮"] = str(cooldown_str(), "点燃喷火器并原地旋转，对周围敌人每", fire_every, "秒造成", damage_str(), "，持续", T("aura_roundfire_hero_tank").aura.duration, "秒。")
+
+-- set_skill(h.hero.skills.ultimate)
+-- cooldown = h.ultimate.cooldown
+-- e = T("mod_bullet_zeppelin_hero_tank")
+-- d[1].damage_min = ss("damage_config")
+-- d[1].damage_max = ss("damage_config")
+-- d[1].damage_type = e.dps.damage_type
+-- local ult_every = e.dps.damage_every
+-- map["女武神的呼唤"] = str(cooldown_str(), "呼叫飞机投下一颗凝固汽油弹，点燃路径上的敌人，每", ult_every, "秒造成", damage_str(), "，持续", T("aura_bullet_zeppelin_hero_tank").aura.duration, "秒。")
+
 return H

@@ -2856,6 +2856,10 @@ function scripts.bomb.update(this, store)
 			hp.aura.damage_factor = this.bullet.damage_factor * hp.aura.damage_factor
 		end
 
+		if not hp.unit and not hp.aura then
+			hp.damage_factor = this.bullet.damage_factor
+		end
+
 		queue_insert(store, hp)
 	end
 

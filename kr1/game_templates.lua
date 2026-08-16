@@ -6629,7 +6629,6 @@ tt = RT("soldier_gryphon_guard", "soldier_barrack_1")
 AC(tt, "ranged")
 tt.health.hp_max = 1
 tt.health.immune_to = DAMAGE_ALL_TYPES
-tt.health_bar = nil
 tt.melee.attacks[1].hit_time = fts(9)
 tt.melee.range = 0
 tt.ranged.attacks[1].bullet = "arrow_soldier_gryphon_guard"
