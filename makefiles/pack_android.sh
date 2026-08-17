@@ -390,10 +390,10 @@ if [ "$rebuild_love" -eq 1 ]; then
         echo "Skipping Android audio optimization (AUDIO_COMPRESS_MODE=0)."
     fi
 
-    # 安卓端默认帧率 60（仅打包生效，仓库源码保持 144；游戏内仍可选更高帧率）
+    # 安卓端默认帧率 30（仅打包生效，仓库源码保持 144；游戏内仍可选更高帧率）
     if [ -f "$stage_dir/settings_template.lua" ]; then
-        sed -i 's/\bfps = 144\b/fps = 60/' "$stage_dir/settings_template.lua"
-        echo "Patched Android default fps to 60"
+        sed -i 's/\bfps = 144\b/fps = 30/' "$stage_dir/settings_template.lua"
+        echo "Patched Android default fps to 30"
     fi
 
     echo "Creating final archive -> $ARCHIVE_DIR"
