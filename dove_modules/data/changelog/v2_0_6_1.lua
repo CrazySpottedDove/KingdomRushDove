@@ -1,1 +1,1 @@
-return {{date="2026-08-17",author="CrazySpottedDove",message="chore: 取消追踪args.lua"},{date="2026-08-17",author="CrazySpottedDove",message="feat: 切换安卓端默认帧率为30"}}
+return {{date="2026-08-17",author="CrazySpottedDove",message="chore: 取消追踪args.lua"},{date="2026-08-17",author="CrazySpottedDove",message="feat: 切换安卓端默认帧率为30"},{date="2026-08-17",author="CrazySpottedDove",message="fix: 修复解锁一代奥术时的文本"}}
