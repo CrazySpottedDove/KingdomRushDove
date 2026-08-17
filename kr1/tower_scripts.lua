@@ -5799,6 +5799,7 @@ function scripts.tower_tricannon.remove(this, store)
 		queue_remove(store, this.decal_mod)
 
 		this.decal_mod = nil
+		this.attacks.list[3].active = false
 	end
 
 	return true
