@@ -219,6 +219,7 @@ exo_forest_3=v
 end
 end
 if store.level_mode==GAME_MODE_CAMPAIGN then
+signal.emit("wave-notification","view","TOWER_PANDAS")
 while phase_2_start_wave>store.wave_group_number do
 coroutine.yield()
 end

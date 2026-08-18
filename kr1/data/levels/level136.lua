@@ -38,6 +38,8 @@ controller.modos=true
 P:activate_path(2)
 P:activate_path(3)
 P:activate_path(4)
+else
+signal.emit("wave-notification","view","TOWER_DRAGONS")
 end
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()
