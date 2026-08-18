@@ -17,7 +17,6 @@ local boss=E:create_entity("eb_moloch")
 boss.pos=V.vclone(boss.pos_sitting)
 LU.queue_insert(store,boss)
 self.boss=boss
-U.mark_seen(store,boss.template_name)
 coroutine.yield()
 U.y_wait_unconditional(store,1)
 while store.wave_group_number<boss.wave_active do

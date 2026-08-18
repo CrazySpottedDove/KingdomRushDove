@@ -29,7 +29,6 @@ U.y_wait_unconditional(store,1)
 while store.wave_group_number~=store.wave_group_total do
 coroutine.yield()
 end
-signal.emit("wave-notification","icon",boss.template_name)
 boss.sleeping=nil
 while not store.waves_finished or LU.has_alive_enemies(store) do
 coroutine.yield()

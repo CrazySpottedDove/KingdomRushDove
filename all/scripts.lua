@@ -7724,11 +7724,6 @@ function scripts.mega_spawner.update(this, store)
 							goto label_156_1
 						end
 
-						if not U.is_seen(store, template) then
-							signal.emit("wave-notification", "icon", template)
-							U.mark_seen(store, template)
-						end
-
 						local e = E:create_entity(template)
 
 						e.nav_path.pi = node.pi

@@ -1,5 +1,4 @@
 return {
-	gems = 0,
 	achievements = {},
 	levels = {
 		[1] = {},
@@ -16,8 +15,12 @@ return {
 		mages = 0
 	},
 	upgrade_list_id = 1,
-	seen = {},
-	bag = {},
+	seen = {
+		enemy_goblin = true,
+		enemy_bouncer = true,
+		enemy_gnoll_reaver = true,
+		enemy_hog_invader = true
+	},
 	heroes = {
 		selected = {}
 	},

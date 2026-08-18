@@ -4481,11 +4481,6 @@ function scripts.s11_lava_spawner.update(this, store)
 		queue_insert(store, e)
 
 		cooldown = this.cooldown_after
-
-		if not U.is_seen(store, this.entity) then
-			signal.emit("wave-notification", "icon", this.entity)
-			U.mark_seen(store, this.entity)
-		end
 	end
 end
 
@@ -5398,31 +5393,6 @@ end
 
 scripts.enemy_alien_breeder = {}
 
-function scripts.enemy_alien_breeder.get_info(this)
-	local min, max = 10, 20
-
-	return {
-		type = STATS_TYPE_ENEMY,
-		hp = this.health.hp,
-		hp_max = this.health.hp_max,
-		damage_min = min,
-		damage_max = max,
-		armor = this.health.armor,
-		magic_armor = this.health.magic_armor,
-		lives = this.enemy.lives_cost
-	}
-end
-
-function scripts.enemy_alien_breeder.insert(this, store)
-	if not scripts.enemy_basic.insert(this, store) then
-		return false
-	end
-
-	signal.emit("wave-notification", "icon", "enemy_alien_breeder")
-
-	return true
-end
-
 function scripts.enemy_alien_breeder.update(this, store)
 	local dead_when_hugging = false
 
@@ -5548,8 +5518,6 @@ function scripts.enemy_alien_breeder.update(this, store)
 						queue_remove(store, this)
 
 						if not U.is_wraith(blocker.template_name) then
-							signal.emit("wave-notification", "icon", "enemy_alien_reaper")
-
 							local e = E:create_entity("enemy_alien_reaper")
 
 							e.nav_path.pi, e.nav_path.spi = this.nav_path.pi, this.nav_path.spi
@@ -7153,7 +7121,6 @@ end
 scripts.elvira_bat = {}
 
 function scripts.elvira_bat.update(this, store)
-	signal.emit("wave-notification", "icon", "enemy_elvira")
 	U.animation_start_default(this, "fly", nil, store.tick_ts, true)
 	U.set_destination(this, this.motion.forced_waypoint)
 
@@ -26677,7 +26644,6 @@ function scripts.aura_stage_09_spawn_nightmare_convert.update(this, store)
 					entity.source_id = this.id
 
 					queue_insert(store, entity)
-					signal.emit("wave-notification", "icon", "enemy_armored_nightmare")
 					S:queue(this.sound_spawn)
 					U.y_wait_unconditional(store, fts(5))
 
@@ -31705,8 +31671,6 @@ function scripts.controller_stage_14_amalgam.update(this, store)
 
 	amalgam.render.sprites[1].hidden = false
 
-	signal.emit("wave-notification", "icon", this.amalgam_t)
-
 	amalgams_spawned = amalgams_spawned + 1
 
 	goto label_1255_0
@@ -33613,7 +33577,6 @@ function scripts.enemy_lesser_sister.update(this, store)
 
 				this.spawned_nightmares = this.spawned_nightmares + 1
 
-				signal.emit("wave-notification", "icon", "enemy_lesser_sister_nightmare")
 				U.y_animation_wait_default(this)
 			end
 
@@ -33957,7 +33920,6 @@ function scripts.enemy_unblinded_priest.update(this, store)
 				end
 
 				SU.do_death_spawns(store, this)
-				signal.emit("wave-notification", "icon", "enemy_unblinded_abomination")
 				queue_remove(store, this)
 
 				return
@@ -34407,8 +34369,6 @@ function scripts.enemy_crystal_golem.update(this, store)
 				return
 			end
 			if this.wake_up then
-				signal.emit("wave-notification", "icon", "enemy_crystal_golem")
-
 				this.health.hp_max = this.health._hp_max
 
 				local nearest_nodes = P:nearest_nodes(this.walk_pos.x, this.walk_pos.y, {this.selected_path})
@@ -34826,7 +34786,6 @@ function scripts.enemy_vile_spawner.update(this, store)
 
 					queue_insert(store, b)
 					U.y_wait_unconditional(store, a.delay_between)
-					signal.emit("wave-notification", "icon", "enemy_lesser_eye")
 				end
 
 				U.y_animation_wait_default(this)
@@ -35413,14 +35372,6 @@ function scripts.enemy_corrupted_elf.update(this, store)
 end
 
 scripts.enemy_specter = {}
-
-function scripts.enemy_specter.insert(this, store)
-	if not U.is_seen(store, "enemy_specter") then
-		signal.emit("wave-notification", "icon", "enemy_specter")
-	end
-
-	return scripts.enemy_basic.insert(this, store)
-end
 
 function scripts.enemy_specter.update(this, store)
 	local search_cd = 0.5
@@ -40090,7 +40041,6 @@ function scripts.tower_stage_17_weirdwood.update(this, store)
 					e.selected_path = pi
 
 					queue_insert(store, e)
-					signal.emit("wave-notification", "icon", "enemy_deathwood")
 
 					local mods = table.filter(store.entities, function(_, ee)
 						return ee.modifier and ee.modifier.target_id == e.id
@@ -40371,7 +40321,6 @@ function scripts.spawner_stage_18_elven_barrack.update(this, store)
 			e.enemy.gold = 0
 
 			queue_insert(store, e)
-			signal.emit("wave-notification", "icon", "enemy_animated_armor")
 			U.y_ease_keys(store, {s1, s2, s3}, {"alpha", "alpha", "alpha"}, {255, 255, 255}, {0, 0, 0}, 0.25, {"linear", "linear", "linear"})
 			U.y_wait_unconditional(store, this.spawn_cd)
 
@@ -41680,7 +41629,6 @@ function scripts.controller_stage_24_machinist.update(this, store)
 					machinist.source_id = this.id
 
 					queue_insert(store, machinist)
-					signal.emit("wave-notification", "icon", this.machinist_t)
 					U.y_wait_unconditional(store, 2)
 
 					if store.level_mode == GAME_MODE_CAMPAIGN then
@@ -43380,7 +43328,6 @@ function scripts.controller_stage_26_hulk_spawner.update(this, store)
 			hulk.source_id = this.id
 
 			queue_insert(store, hulk)
-			signal.emit("wave-notification", "icon", "enemy_darksteel_hulk")
 			U.y_animation_wait_default(spawner_decal)
 			U.y_wait_unconditional(store, fts(60))
 			U.y_animation_play(spawner_decal, "reset", nil, store.tick_ts, 1)
@@ -44836,7 +44783,6 @@ function scripts.enemy_surveillance_sentry.update(this, store)
 
 	while true do
 		if this.health.dead then
-			signal.emit("wave-notification", "icon", "enemy_rolling_sentry")
 			SU.y_enemy_death(store, this)
 
 			return
@@ -45082,7 +45028,6 @@ function scripts.enemy_mad_tinkerer.update(this, store)
 
 				this.spawned_drones = this.spawned_drones + 1
 
-				signal.emit("wave-notification", "icon", "enemy_scrap_drone")
 				U.y_wait_unconditional(store, fts(13))
 
 				this.specter_target = nil
@@ -45758,8 +45703,6 @@ function scripts.enemy_darksteel_guardian.update(this, store)
 
 			coroutine.yield()
 		end
-
-		signal.emit("wave-notification", "icon", "enemy_darksteel_guardian")
 
 		this.health.hp_max = this.health._hp_max
 
@@ -47081,7 +47024,6 @@ function scripts.enemy_spider_priest.update(this, store)
 				end
 
 				SU.do_death_spawns(store, this)
-				signal.emit("wave-notification", "icon", this.death_spawns.name)
 				queue_remove(store, this)
 
 				return
@@ -47492,7 +47434,6 @@ function scripts.enemy_spider_sister.update(this, store)
 
 				this.spawned_nightmares = this.spawned_nightmares + 1
 
-				signal.emit("wave-notification", "icon", a.entity)
 				U.y_animation_wait_default(this)
 			end
 
@@ -47570,7 +47511,6 @@ function scripts.enemy_glarebrood_crystal.update(this, store)
 			end
 
 			SU.do_death_spawns(store, this)
-			signal.emit("wave-notification", "icon", this.death_spawns.name)
 			queue_remove(store, this)
 
 			return
@@ -48236,7 +48176,6 @@ function scripts.enemy_fire_fox.update(this, store)
 				this.death_spawns.fx = nil
 
 				SU.do_death_spawns(store, this)
-				signal.emit("wave-notification", "icon", this.death_spawns.name)
 				queue_remove(store, this)
 
 				return
@@ -57480,7 +57419,6 @@ function scripts.controller_stage_35_golden_beast.update(this, store)
 			e.do_jump_anim = this
 
 			queue_insert(store, e)
-			signal.emit("wave-notification", "icon", "enemy_golden_eyed")
 			U.y_animation_wait_default(this)
 			U.animation_start_default(this, "loop_empty", nil, store.tick_ts, true)
 			U.y_wait_unconditional(store, this.empty_wait)
@@ -61447,14 +61385,6 @@ function scripts.bullet_boss_stage_37_geisers_bossfight.update(this, store, scri
 end
 
 scripts.enemy_miniboss_stage_39 = {}
-
-function scripts.enemy_miniboss_stage_39.insert(this, store, script)
-	if not U.is_seen(store, "enemy_miniboss_stage_39") then
-		signal.emit("wave-notification", "icon", "enemy_miniboss_stage_39")
-	end
-
-	return scripts.enemy_basic.insert(this, store, script)
-end
 
 function scripts.enemy_miniboss_stage_39.update(this, store, script)
 	local function regen(store, this)
@@ -66493,14 +66423,6 @@ end
 
 scripts.enemy_evolved_lava = {}
 
-function scripts.enemy_evolved_lava.insert(this, store, script)
-	if not U.is_seen(store, "enemy_evolved_lava") then
-		signal.emit("wave-notification", "icon", "enemy_evolved_lava")
-	end
-
-	return scripts.enemy_dragons.insert(this, store, script)
-end
-
 function scripts.enemy_evolved_lava.update(this, store, script)
 	U.speed_mul_self(this, this.speed_fly_mult)
 	if this.render.sprites[1].name == "raise" then
@@ -67377,14 +67299,6 @@ function scripts.mod_enemy_basic_acid_armor_reduction.remove(this, store)
 end
 
 scripts.enemy_evolved_acid = {}
-
-function scripts.enemy_evolved_acid.insert(this, store, script)
-	if not U.is_seen(store, "enemy_evolved_acid") then
-		signal.emit("wave-notification", "icon", "enemy_evolved_acid")
-	end
-
-	return scripts.enemy_dragons.insert(this, store, script)
-end
 
 function scripts.enemy_evolved_acid.update(this, store, script)
 	local a_summon = this.timed_attacks.list[1]
@@ -68644,14 +68558,6 @@ end
 
 scripts.enemy_evolved_shadow = {}
 
-function scripts.enemy_evolved_shadow.insert(this, store, script)
-	if not U.is_seen(store, "enemy_evolved_shadow") then
-		signal.emit("wave-notification", "icon", "enemy_evolved_shadow")
-	end
-
-	return scripts.enemy_dragons.insert(this, store, script)
-end
-
 function scripts.enemy_evolved_shadow.update(this, store, script)
 	local hide_delay_ts = store.tick_ts
 
@@ -69155,14 +69061,6 @@ function scripts.enemy_basic_storm.update(this, store, script)
 end
 
 scripts.enemy_evolved_storm = {}
-
-function scripts.enemy_evolved_storm.insert(this, store, script)
-	if not U.is_seen(store, "enemy_evolved_storm") then
-		signal.emit("wave-notification", "icon", "enemy_evolved_storm")
-	end
-
-	return scripts.enemy_dragons.insert(this, store, script)
-end
 
 function scripts.enemy_evolved_storm.update(this, store, script)
 	local a_area = this.timed_attacks.list[1]

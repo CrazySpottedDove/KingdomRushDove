@@ -49,16 +49,6 @@ function M.register(sys)
 				local s = spawns[i]
 				local path = P.paths[pi]
 
-				if not U.is_seen(store, s.creep) then
-					signal.emit("wave-notification", "icon", s.creep)
-					U.mark_seen(store, s.creep)
-				end
-
-				if s.creep_aux and not U.is_seen(store, s.creep_aux) then
-					signal.emit("wave-notification", "icon", s.creep_aux)
-					U.mark_seen(store, s.creep_aux)
-				end
-
 				for j = 1, s.max do
 					U.y_wait_unconditional(store, fts(s.interval or 0) / spawn_multipier)
 
@@ -160,7 +150,7 @@ function M.register(sys)
 					group.group_idx = 1
 
 					for _, wave in ipairs(group.waves) do
-						if wave.notification and wave.notification ~= "" then
+						if wave.notification then
 							signal.emit("wave-notification", "view", wave.notification)
 						end
 					end
@@ -215,7 +205,7 @@ function M.register(sys)
 				for _, wave in ipairs(group.waves) do
 					wave.group_idx = i
 
-					if i ~= 1 and wave.notification and wave.notification ~= "" then
+					if i ~= 1 and wave.notification then
 						signal.emit("wave-notification", "view", wave.notification)
 					end
 

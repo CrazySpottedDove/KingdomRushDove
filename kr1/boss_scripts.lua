@@ -6078,7 +6078,6 @@ function scripts.bullet_boss_corrupted_denas_spawn_entities.update(this, store)
 		end
 
 		queue_insert(store, hp)
-		signal.emit("wave-notification", "icon", "enemy_glareling")
 	end
 
 	queue_remove(store, this)

@@ -20,7 +20,6 @@ local boss=E:create_entity("eb_veznan")
 boss.pos=V.vclone(boss.pos_castle)
 LU.queue_insert(store,boss)
 self.boss=boss
-U.mark_seen(store,boss.template_name)
 coroutine.yield()
 U.y_wait_unconditional(store,1)
 self.boss.phase_signal="welcome"

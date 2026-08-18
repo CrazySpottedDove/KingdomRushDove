@@ -5304,29 +5304,14 @@ function EncyclopediaView:load_creeps(index)
 	self.creep:add_child(right_deco)
 
 	local creeps_per_page = 64
-	local creeps_data = GS.encyclopedia_enemies
-	local max_creeps = #creeps_data
+	local max_creeps = #GS.encyclopedia_enemies
 
 	for d = 1, creeps_per_page do
 		local i = d + creeps_per_page * (index - 1)
 
 		if i <= max_creeps then
-			local t = E:get_template(creeps_data[i].name)
-			local from_kr
-
-			if i <= 68 then
-				from_kr = 1
-			elseif i <= 128 then
-				if i == 117 or i == 120 or i == 121 or i == 122 then
-					from_kr = 1
-				else
-					from_kr = 2
-				end
-			elseif i <= 173 then
-				from_kr = 3
-			else
-				from_kr = 5
-			end
+			local t = E:get_template(GS.encyclopedia_enemies[i])
+			local from_kr = U.get_enemy_encyclopedia_creep_from_kr(i)
 
 			local f = string.format("encyclopedia_creep_thumbs_%04i", t.info.enc_icon)
 			local enemy_thumb_fmt = U.splicing_from_kr(from_kr, f)
@@ -5381,23 +5366,23 @@ function EncyclopediaView:load_creeps(index)
 		end
 	end
 
-	local first_creep = creeps_data[(index - 1) * creeps_per_page + 1]
+	local first_creep = GS.encyclopedia_enemies[(index - 1) * creeps_per_page + 1]
 
-	if first_creep and screen_map.user_data.seen[first_creep.name] then
+	if first_creep and screen_map.user_data.seen[first_creep] then
 		self:detail_creep((index - 1) * creeps_per_page + 1)
 	else
 		self.select_sprite2.hidden = true
 	end
 end
 
-function EncyclopediaView:create_creep(icon, pos, information, enabled)
+function EncyclopediaView:create_creep(icon, pos, idx, enabled)
 	if not screen_map.user_data.seen then
 		screen_map.user_data.seen = {}
 	end
 
-	local creep_data = GS.encyclopedia_enemies[information]
+	local creep_name = GS.encyclopedia_enemies[idx]
 
-	if creep_data.always_shown or screen_map.user_data.seen[creep_data.name] then
+	if screen_map.user_data.seen[creep_name] then
 		local b = KButton:new()
 
 		b:set_image(icon)
@@ -5418,7 +5403,7 @@ function EncyclopediaView:create_creep(icon, pos, information, enabled)
 
 		function b.on_click()
 			S:queue("GUINotificationPaperOver")
-			self:creep_clicked(information, pos)
+			self:creep_clicked(idx, pos)
 		end
 	else
 		local b = KImageView:new("encyclopedia_creep_thumbs_lock")
@@ -5431,11 +5416,11 @@ function EncyclopediaView:create_creep(icon, pos, information, enabled)
 	end
 end
 
-function EncyclopediaView:creep_clicked(information, pos)
+function EncyclopediaView:creep_clicked(idx, pos)
 	self.select_sprite2.hidden = false
 	self.select_sprite2.pos = pos
 
-	self:detail_creep(information)
+	self:detail_creep(idx)
 end
 
 function EncyclopediaView:detail_creep(index)
@@ -5451,9 +5436,9 @@ function EncyclopediaView:detail_creep(index)
 
 	self.back:add_child(self.right_panel)
 
-	local creep_data = GS.encyclopedia_enemies[index]
-	local ce = E:create_entity(creep_data.name)
-	local name_prefix = ce.info.i18n_key or string.upper(creep_data.name)
+	local creep_name = GS.encyclopedia_enemies[index]
+	local ce = E:create_entity(creep_name)
+	local name_prefix = ce.info.i18n_key or string.upper(creep_name)
 	local title_label = GGLabel:new(V.v(280, 50))
 
 	title_label.pos = v(300, 44)
@@ -5485,21 +5470,7 @@ function EncyclopediaView:detail_creep(index)
 
 	self.right_panel:add_child(right_decoration)
 
-	local from_kr
-
-	if index <= 68 then
-		from_kr = 1
-	elseif index <= 128 then
-		if index == 117 or index == 120 or index == 121 or index == 122 then
-			from_kr = 1
-		else
-			from_kr = 2
-		end
-	elseif index <= 173 then
-		from_kr = 3
-	else
-		from_kr = 5
-	end
+	local from_kr = U.get_enemy_encyclopedia_creep_from_kr(index)
 
 	local f = string.format("encyclopedia_creeps_%04i", ce.info.enc_icon)
 	local enemy_fmt = U.splicing_from_kr(from_kr, f)
@@ -5566,7 +5537,7 @@ function EncyclopediaView:detail_creep(index)
 		end
 	end
 
-	local special_key = string.upper(creep_data.name) .. "_SPECIAL"
+	local special_key = string.upper(creep_name) .. "_SPECIAL"
 	local special = _(special_key)
 
 	if special == special_key then

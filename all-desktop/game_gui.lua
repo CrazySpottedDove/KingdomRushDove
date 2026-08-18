@@ -162,18 +162,6 @@ local signals = {
 				unlock_user_power(3)
 			end
 
-			if game_gui.bag_button then
-				local slot = storage:load_slot()
-				if slot.bag then
-					for _, v in pairs(slot.bag) do
-						if v > 0 then
-							game_gui.bag_button:set_mode("unlocked")
-							break
-						end
-					end
-				end
-			end
-
 			S:stop_group("MUSIC")
 			if game_gui.game.store.custom_battle_music then
 				S:queue(game_gui.game.store.custom_battle_music)
@@ -239,7 +227,6 @@ local signals = {
 	end,
 
 	["wave-notification"] = function(t, id, force)
-		log.debug("wave_notification - type:%s, id:%s", t, id)
 		if t == "view" then
 			game_gui:show_notification(id, force)
 		elseif t == "icon" then
@@ -289,9 +276,6 @@ local signals = {
 		game_gui.power_2:set_mode("ready")
 		if game_gui.power_3 then
 			game_gui.power_3:set_mode("ready")
-		end
-		if game_gui.bag_button then
-			game_gui.bag_button:set_mode("unlocked")
 		end
 	end,
 
@@ -1461,10 +1445,6 @@ function game_gui:select_entity(e)
 		self:set_mode(GUI_MODE_RALLY_CONTROABLE)
 	end
 
-	if game_gui.bag_button then
-		game_gui.bag_button:deselect()
-	end
-
 	game_gui.hud_bottom.infobar:show()
 
 	if e.enemy or e.soldier or e.barrack then
@@ -1533,10 +1513,6 @@ function game_gui:deselect_all()
 	self:deselect_powers()
 	self:deselect_entity()
 	self:hide_rally_range()
-
-	if self.bag_button then
-		self.bag_button:deselect()
-	end
 end
 
 function game_gui:deselect_heroes()
@@ -4288,31 +4264,18 @@ function MousePointer:update_pointer(mode)
 		self.timer = nil
 	end
 
-	local pointer, pointer_image
+	local pointer
 	local pointers = self.pointers[mode]
 
 	if pointers then
-		if mode == GUI_MODE_BAG_ITEM and game_gui.bag_button and game_gui.bag_button.selected_item then
-			local item = pointers[game_gui.bag_button.selected_item]
+		local e = game_gui.selected_entity
 
-			if item then
-				pointer = item.pointer
-				pointer_image = item.image
-
-				pointer.children[1]:set_image(pointer_image)
-			end
+		if e and e.user_selection and e.user_selection.custom_pointer_name and pointers[e.user_selection.custom_pointer_name] then
+			pointer = pointers[e.user_selection.custom_pointer_name]
 		else
-			local e = game_gui.selected_entity
-
-			if e and e.user_selection and e.user_selection.custom_pointer_name and pointers[e.user_selection.custom_pointer_name] then
-				pointer = pointers[e.user_selection.custom_pointer_name]
-			else
-				pointer = pointers.default
-			end
+			pointer = pointers.default
 		end
 	end
-
-	log.paranoid("pointer: %s", pointer and pointer.image_name)
 
 	if not pointer then
 		self.hidden = true
@@ -4759,8 +4722,6 @@ function NotificationView:show(id, no_transition, force_show)
 	local n = data.notifications[id]
 
 	if not n then
-		log.debug("Notification with id:%s not found", id)
-
 		return
 	end
 
@@ -4788,14 +4749,29 @@ function NotificationView:show(id, no_transition, force_show)
 
 	if table.contains({N_ENEMY, N_POWER, N_TOWER}, n.layout) then
 		local n_prefix = n.prefix or id
+		local n_image = n.image
 
 		if n.layout == N_ENEMY then
 			local t = E:get_template(id)
 
-			n_prefix = t and t.info and t.info.i18n_key or n_prefix
+			if t and t.info then
+				n_prefix = t.info.i18n_key or n_prefix
+				if t.info.enc_icon then
+					local from_kr
+					for i = 1, #GS.encyclopedia_enemies do
+						if GS.encyclopedia_enemies[i] == t.template_name then
+							from_kr = U.get_enemy_encyclopedia_creep_from_kr(i)
+							break
+						end
+					end
+					if from_kr then
+						n_image = U.splicing_from_kr(from_kr, string.format("encyclopedia_creeps_%04i", t.info.enc_icon))
+					end
+				end
+			end
 		end
 
-		local views, pw, ph = create_layout(n.layout, n.image, n_prefix, n.sub)
+		local views, pw, ph = create_layout(n.layout, n_image, n_prefix, n.sub)
 		local v_title = create_noti_title(n.layout)
 
 		v_title.anchor = V.v(0, v_title.size.y)
@@ -5120,8 +5096,6 @@ function NotificationQueue:add(id, force)
 	local n = data.notifications[id]
 
 	if not n then
-		log.warning("Notification with id:%s not found", id)
-
 		return
 	end
 

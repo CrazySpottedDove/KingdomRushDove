@@ -233,16 +233,10 @@ function storage:save_slot(data_table, idx, should_sync)
 	idx = idx or self.active_slot_idx
 
 	if not idx then
-		log.error("slot idx is nil")
+		log.error("tried save slot, but slot idx is nil")
 
 		return nil
 	end
-
-	-- if data_table then
-	-- 	data_table.version_string = version.string
-	-- end
-
-	log.debug("saving slot:%s should sync:%s", idx, should_sync)
 
 	local fn = string.format(self.SLOT_FILE_FMT, idx)
 	local success = self:write_lua(fn, data_table)
@@ -363,20 +357,12 @@ function storage:get_best_slot(slot_a, slot_b)
 
 	local prog_a = self:get_slot_progress(slot_a)
 	local prog_b = self:get_slot_progress(slot_b)
-	local gems_a = slot_a.gems or 0
-	local gems_b = slot_b.gems or 0
 	local crowns_a = slot_a.crowns or 0
 	local crowns_b = slot_b.crowns or 0
 
 	if prog_a < prog_b then
 		return slot_b
 	elseif prog_b < prog_a then
-		return slot_a
-	end
-
-	if gems_a < gems_b then
-		return slot_b
-	elseif gems_b < gems_a then
 		return slot_a
 	end
 

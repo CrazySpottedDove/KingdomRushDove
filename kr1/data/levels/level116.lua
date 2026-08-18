@@ -18,6 +18,7 @@ end
 end
 function level:update(store)
 if store.level_mode==GAME_MODE_CAMPAIGN then
+U.mark_seen(store,"controller_stage_16_overseer")
 local overseer=table.filter(store.entities,function(k,v)
 return v.template_name=="controller_stage_16_overseer"
 end)[1]

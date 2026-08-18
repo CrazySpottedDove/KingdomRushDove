@@ -167,11 +167,6 @@ function M.register(sys)
 			end
 
 			for _, o in pairs(cmd.spawns) do
-				if not U.is_seen(store, o.enemy) then
-					signal.emit("wave-notification", "icon", o.enemy)
-					U.mark_seen(store, o.enemy)
-				end
-
 				local e = E:create_entity(o.enemy)
 
 				if e then

@@ -20,6 +20,7 @@ local game_gui = require("game_gui")
 local SH = require("klove.shader_db")
 local G = love.graphics
 local bit = require("bit")
+local storage = require("all.storage")
 local adaptive_fps = require("dove_modules.perf.adaptive_fps")
 
 require("all.constants")
@@ -280,11 +281,21 @@ if DEBUG then
 	end
 end
 
+function game:flush_seen()
+	if self.store.seen_dirty then
+		local slot = storage:load_slot()
+		slot.seen = self.store.seen
+		storage:save_slot(slot)
+		self.store.seen_dirty = false
+	end
+end
+
 function game:restart()
 	self.store.restarted = true
 	self.store.restart_count = (self.store.restart_count or 0) + 1
 	self.store.ephemeral = {}
 
+	self:flush_seen()
 	self.simulation:init(self.store, self.simulation_systems)
 	self.game_gui:init(self.screen_w, self.screen_h, self)
 	S:stop_all()
@@ -299,6 +310,7 @@ function game:restart()
 end
 
 function game:destroy()
+	self:flush_seen()
 	self.game_gui:destroy()
 
 	self.game_gui = nil
@@ -837,24 +849,8 @@ if DEBUG then
 				self.DBG_DRAW_CLICKABLE = not self.DBG_DRAW_CLICKABLE
 			end
 		elseif key == "v" then
-			if shift then
-				local storage = require("all.storage")
-				local slot = storage:load_slot()
-
-				if self.game_gui.window:get_child_by_id("bag_contents_view") then
-					for _, v in pairs(self.game_gui.window:get_child_by_id("bag_contents_view").children) do
-						v:enable()
-
-						v:ci("bag_item_qty").text = 9999
-						slot.bag[v.item] = 9999
-					end
-				end
-
-				storage:save_slot(slot)
-			else
-				signal.emit("debug-ready-user-powers")
-				signal.emit("debug-ready-plants-crystals")
-			end
+			signal.emit("debug-ready-user-powers")
+			signal.emit("debug-ready-plants-crystals")
 		elseif key == "b" then
 			self.DBG_DRAW_TOWER_RANGE = not self.DBG_DRAW_TOWER_RANGE
 			self.DBG_DRAW_UNIT_RANGE = not self.DBG_DRAW_UNIT_RANGE

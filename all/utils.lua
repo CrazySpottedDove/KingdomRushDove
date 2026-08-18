@@ -2757,6 +2757,22 @@ function U.pop_bans(t, ref)
 	end
 end
 
+function U.get_enemy_encyclopedia_creep_from_kr(index)
+	if index <= 68 then
+		return 1
+	elseif index <= 128 then
+		if index == 117 or index == 120 or index == 121 or index == 122 then
+			return 1
+		else
+			return 2
+		end
+	elseif index <= 173 then
+		return 3
+	else
+		return 5
+	end
+end
+
 ---根据来自哪代拼接字符串
 ---@param from_kr integer? 代
 ---@param str string 字符串

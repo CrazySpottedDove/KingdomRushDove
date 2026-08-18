@@ -143,7 +143,6 @@ entity.pos.y=U.ease_value(from.y,to.y,phase,easing)
 coroutine.yield()
 end
 end
-signal.emit("wave-notification","icon","enemy_executioner")
 local lumberjack=E:create_entity("decal_lumberjack")
 lumberjack.pos=v(1160,440)
 LU.queue_insert(store,lumberjack)
