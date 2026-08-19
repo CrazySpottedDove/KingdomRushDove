@@ -5511,7 +5511,7 @@ local towers = {
 			cooldown = 3,
 			bomb_amount = {3, 3, 3, 3},
 			damage_min = {3, 8, 16, 24},
-			damage_max = {5, 12, 24, 36},
+			damage_max = {5, 12, 24, 37},
 			range = {180, 180, 180, 180},
 			time_between_bombs = fts(1)
 		},
