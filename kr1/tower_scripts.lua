@@ -23324,7 +23324,7 @@ function scripts.bullet_orc_shaman_shock.update(this, store)
 
 	U.animation_start_default(this, "hit", nil, store.tick_ts, false)
 
-	local enemies = U.find_enemies_in_range_filter_off(this.pos, b.damage_radius, b.damage_flags, b.damage_bans)
+	local enemies = U.find_enemies_in_range_filter_off(this._effect_pos, b.damage_radius, b.damage_flags, b.damage_bans)
 
 	if enemies then
 		for i = 1, #enemies do
@@ -23338,8 +23338,6 @@ function scripts.bullet_orc_shaman_shock.update(this, store)
 	queue_remove(store, this)
 end
 
--- 普攻 bolt 的命中特效需要：贴 hit_offset + 锁死角度 + 只重播 ray_hit 层。
--- 这段放在塔脚本里，避免去碰 all/scripts.lua 的公共 bolt.update。
 scripts.bolt_orc_shaman = {}
 
 function scripts.bolt_orc_shaman.update(this, store)
@@ -23370,15 +23368,13 @@ function scripts.bolt_orc_shaman.update(this, store)
 
 		if b.payload then
 			local hp = b.payload
-			-- Electroshock 这段在 KRV 里使用了额外的 destination_offset(y = -8) 来落回地面，
-			-- 而我们 bolt_orc_shaman 的 b.to 在跟踪阶段会覆盖掉这份 y 修正。
-			-- 所以：只对 payload = bolt_orc_shaman_shock 做落点 y 修正，避免影响普攻两道闪电。
 			if target.unit and target.unit.hit_offset then
 				hp.pos.x = target.pos.x
 				hp.pos.y = target.pos.y + target.unit.hit_offset.y - 8
 			else
 				hp.pos.x, hp.pos.y = b.to.x, b.to.y
 			end
+			hp._effect_pos = target.pos
 			queue_insert(store, hp)
 		end
 	end
@@ -23386,9 +23382,6 @@ function scripts.bolt_orc_shaman.update(this, store)
 	local sfx = E:create_entity(b.hit_fx)
 	local r = math.pi * 1.5
 
-	-- 口径：让整个命中特效整体落在 b.to（脚底/地面），
-	-- 然后只把两道闪电层（sprites[1]/[2]）再额外往上抬回 hit_offset，
-	-- 这样 electroshock（sprites[3]）就会留在地面，不跟着敌人头顶走。
 	sfx.pos.x, sfx.pos.y = b.to.x, b.to.y
 	local sp1 = sfx.render.sprites[1]
 	local sp2 = sfx.render.sprites[2]

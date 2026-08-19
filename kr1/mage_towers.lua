@@ -3483,8 +3483,6 @@ tt.tween.props[4].name = "scale"
 tt.tween.props[4].keys = {{0, v(1, 1)}, {fts(4), v(1.64, 1.64)}, {fts(6), v(2.07, 2.07)}}
 tt.tween.props[4].sprite_id = 2
 
-tt = RT("pop_magic_electrical", "pop_zapow")
-
 tt = RT("tower_orc_shaman", "tower_mage_1")
 AC(tt, "powers")
 tt.tower.type = "orc_shaman"
@@ -3570,7 +3568,7 @@ tt.bullet.damage_max = 221
 tt.bullet.damage_type = DAMAGE_MAGICAL
 tt.bullet.hit_fx = "fx_bolt_orc_shaman_hit"
 tt.bullet.mod = "mod_orc_shaman_stun"
-tt.bullet.pop = {"pop_magic_electrical"}
+tt.bullet.pop = {"pop_zapow"}
 tt.main_script.update = scripts.bolt_orc_shaman.update
 tt.sound_events.insert = "OrcShamanAttack"
 
