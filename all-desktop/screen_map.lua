@@ -4848,8 +4848,6 @@ function EncyclopediaView:detail_tower(index)
 	local tower_fmt = U.splicing_from_kr(t.from_kr, f)
 	local portrait = KImageView:new(tower_fmt)
 
-	title_label.text = tower_fmt
-
 	portrait.anchor = v(portrait.size.x / 2, portrait.size.y / 2)
 	portrait.pos = v(300, 175)
 	portrait.scale = v(0.7, 0.708)

@@ -1241,8 +1241,8 @@ AC(tt, "powers")
 tt.barrack.soldier_type = "soldier_drow"
 tt.info.portrait = "kr3_info_portraits_towers_0016"
 tt.powers.life_drain = CC("power")
-tt.powers.life_drain.price_base = 225
-tt.powers.life_drain.price_inc = 200
+tt.powers.life_drain.price_base = 235
+tt.powers.life_drain.price_inc = 210
 tt.powers.double_dagger = CC("power")
 tt.powers.double_dagger.price_base = 165
 tt.powers.double_dagger.price_inc = 165
