@@ -294,7 +294,7 @@ function M.register(sys)
 
 	function sys.wave_spawn_tsv:init(store)
 		if W.format ~= "tsv" then
-			return "skip"
+			return false
 		end
 
 		store.wave_group_number = 0

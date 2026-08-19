@@ -275,11 +275,7 @@ function path_db:get_start_node(pi)
 end
 
 function path_db:get_end_node(pi)
-	local ni = self.path_end_node[pi]
-
-	ni = ni or #self.paths[pi]
-
-	return ni
+	return self.path_end_node[pi] or #self.paths[pi]
 end
 
 --- 返回该路径上一条连接的路径 pi

@@ -287,7 +287,7 @@ function sound_db:queue_load_done()
 	end
 
 	for i = #self.threads, 1, -1 do
-		local th, _, cout = unpack(self.threads[i])
+		local th, cout = self.threads[i][1], self.threads[i][3]
 
 		if th:isRunning() then
 			while true do

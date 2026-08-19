@@ -110,7 +110,7 @@ function M.register(sys)
 
 	function sys.wave_spawn:init(store)
 		if W.format ~= "lua" then
-			return "skip"
+			return false
 		end
 		store.wave_group_number = 0
 		store.waves_finished = false
