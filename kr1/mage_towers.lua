@@ -4192,7 +4192,7 @@ tt.powers.disintegrate.price_inc = 160
 tt.powers.disintegrate.proc_chance = 0.15
 tt.powers.disintegrate.damage_pct = {0.01, 0.02, 0.03}
 tt.powers.charging = CC("power")
-tt.powers.charging.price_base = 200
+tt.powers.charging.price_base = 190
 tt.powers.charging.max_level = 1
 tt.powers.explosion = CC("power")
 tt.powers.explosion.price_base = 225
@@ -4235,7 +4235,7 @@ tt.render.sprites[1].name = "blazing_watcher_hit_run"
 tt.render.sprites[1].z = Z_BULLETS + 1
 tt.render.sprites[1].scale = vv(1)
 tt.damage_from_bullet = true
-tt.damage_tiers = {1, 2, 3, 4}
+tt.damage_tiers = {1.375, 2.25, 3.125, 4}
 tt.tween.props[1].keys = {{0, 255}, {fts(2), 0}}
 tt.tween.disabled = true
 
