@@ -66,26 +66,23 @@ sound_db.sounds_uses = {}
 sound_db.missing_sources_warned = {}
 sound_db.missing_sources_summary_printed = false
 
-local function is_file(path)
-	local info = love.filesystem.getInfo(path)
-
-	return info and info.type == "file"
-end
-
 -- 音频加载的动态线程数计算
 local function calculate_audio_thread_count()
 	local cpu_count = love.system.getProcessorCount() or 4
-	-- 音频加载的线程数应该比图像加载更保守
 	local thread_count
 
-	if cpu_count <= 2 then
-		thread_count = 2 -- 低端设备：2个线程
+	if cpu_count <= 1 then
+		thread_count = 2
+	elseif cpu_count <= 2 then
+		thread_count = 4
 	elseif cpu_count <= 4 then
-		thread_count = 3 -- 四核：3个线程
+		thread_count = 6
 	elseif cpu_count <= 8 then
-		thread_count = 4 -- 八核：4个线程
+		thread_count = 8
+	elseif cpu_count <= 16 then
+		thread_count = 12
 	else
-		thread_count = 6 -- 高端CPU：最多6个线程
+		thread_count = 16
 	end
 
 	return thread_count
