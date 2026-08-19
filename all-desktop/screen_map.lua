@@ -186,19 +186,20 @@ local function should_block_map_scroll(this)
 end
 
 function screen_map:init_coro(w, h, done_callback)
+	self.progress = 0
 	return coroutine.create(function()
 		self.done_callback = done_callback
 		self.original_w, self.original_h = w, h
 
 		achievements_data = require("data.achievements_data")
 		map_data = require("data.map_data")
-		screen_map.hero_data = map_data.hero_data
-		screen_map.tower_data = map_data.tower_data
-		screen_map.level_data = map_data.level_data
+		self.hero_data = map_data.hero_data
+		self.tower_data = map_data.tower_data
+		self.level_data = map_data.level_data
 
 		self.user_data = storage:load_slot()
 		self.generation = self.user_data.last_generation
-		local map_gen = self.generation == screen_map.CUSTOM_GEN and 1 or self.generation
+		local map_gen = self.generation == self.CUSTOM_GEN and 1 or self.generation
 		self.map_points = get_map_points_for_generation(map_gen)
 		self.unlock_data = {}
 		self.unlock_data.unlocked_levels = {}
@@ -255,13 +256,15 @@ function screen_map:init_coro(w, h, done_callback)
 			storage:save_slot(self.user_data)
 		end
 
-		if self.generation ~= screen_map.CUSTOM_GEN and U.unlock_next_levels_in_ranges(self.unlock_data, levels, GS, self.generation) then
+		if self.generation ~= self.CUSTOM_GEN and U.unlock_next_levels_in_ranges(self.unlock_data, levels, GS, self.generation) then
 			storage:save_slot(self.user_data)
 		end
 
 		self.total_stars = U.count_stars(self.user_data)
+		self.progress = 0.5
 		coroutine.yield()
 		E:ensure_loaded()
+		self.progress = 1
 	end)
 end
 

@@ -72,6 +72,7 @@ function M.register(sys)
 
 		GR:load(store.level_name)
 		P:load(store.level_name, store.visible_coords)
+		game.progress = 0.2
 		coroutine.yield()
 
 		if configer.config().enabled and configer.config().reverse_path then
@@ -79,19 +80,24 @@ function M.register(sys)
 		end
 
 		E:Load()
+		game.progress = 0.3
 		coroutine.yield()
 
 		DI:patch_templates()
 		E:precompute()
+		game.progress = 0.4
 		coroutine.yield()
 
 		W:load(store.level_name, store.level_mode, store.level_mode_override == GAME_MODE_ENDLESS)
+		game.progress = 0.5
 		coroutine.yield()
 
 		A:load()
+		game.progress = 0.6
 		coroutine.yield()
 
 		EXO:load()
+		game.progress = 0.7
 		coroutine.yield()
 
 		store.selected_hero = slot.heroes.selected
@@ -114,6 +120,7 @@ function M.register(sys)
 		if configer.config().enabled and configer.config().random_creeps then
 			W:randomize_creeps()
 		end
+		game.progress = 0.8
 		coroutine.yield()
 
 		if store.level.data then

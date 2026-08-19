@@ -41,6 +41,10 @@ if ! command -v curl >/dev/null 2>&1; then
     echo "ERROR: curl not found" >&2
     exit 1
 fi
+if ! command -v magick >/dev/null 2>&1 && ! command -v convert >/dev/null 2>&1; then
+    echo "ERROR: ImageMagick (magick/convert) not found" >&2
+    exit 1
+fi
 
 STAGE_DIR=".versions/_pack_tmp_${current_id}"
 rm -rf "$STAGE_DIR"
@@ -117,8 +121,23 @@ echo "Archive created: $GAME_7Z_ABS ($SZ7Z_SIZE)"
 cp "$SZ7ZA_EXE" "$STAGE_DIR/7za.exe"
 
 # Determine icon path
-ICON_FILE="$STAGE_DIR/$TOPDIR/game.ico"
-[ -f "$ICON_FILE" ] || ICON_FILE="$STAGE_DIR/$TOPDIR/love.ico"
+ICON_SRC="./_assets/kr1-desktop/icons/krdove.png"
+ICON_FILE=""
+if [ -f "$ICON_SRC" ]; then
+    ICON_FILE="$STAGE_DIR/$TOPDIR/krdove.ico"
+    if command -v magick >/dev/null 2>&1; then
+        magick "$ICON_SRC" -define icon:auto-resize=256,128,64,48,32,16 "$ICON_FILE"
+    else
+        convert "$ICON_SRC" -define icon:auto-resize=256,128,64,48,32,16 "$ICON_FILE"
+    fi
+elif [ -f "$STAGE_DIR/$TOPDIR/game.ico" ]; then
+    ICON_FILE="$STAGE_DIR/$TOPDIR/game.ico"
+elif [ -f "$STAGE_DIR/$TOPDIR/love.ico" ]; then
+    ICON_FILE="$STAGE_DIR/$TOPDIR/love.ico"
+else
+    echo "ERROR: no installer icon source found" >&2
+    exit 1
+fi
 ICON_NSIS="${TOPDIR}/$(basename "$ICON_FILE")"
 
 # Generate NSIS script

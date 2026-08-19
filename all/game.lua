@@ -230,6 +230,7 @@ local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_d
 
 	RU.init()
 
+	self.progress = 0.1
 	coroutine.yield()
 
 	self.store.ephemeral = {}
@@ -237,12 +238,13 @@ local function game_init_impl(self, screen_w, screen_h, done_callback, on_step_d
 	simulation:init(self.store, self.simulation_systems)
 
 	self.simulation = simulation
-
+	self.progress = 1
 	self:init_debug()
 	signal.emit("game-start", self.store)
 end
 
 function game:init_coro(screen_w, screen_h, done_callback)
+	self.progress = 0
 	return coroutine.create(function()
 		game_init_impl(self, screen_w, screen_h, done_callback)
 	end)

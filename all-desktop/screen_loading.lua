@@ -35,11 +35,9 @@ screen.art_layout = {
 -- 允许 director 在初始化 screen 时为其传入一个协程，screen 可以在加载过程中执行协程代码，从而在等待加载资源的同时完成一些初始化任务
 function screen:init(w, h, director_ref)
 	self.hold_enabled = true
-	self.progress = 0
-	self.progress_display = 0
-	self.anim_t = 0
+	self.progress = {0, 0, 0}
 	self.font_title = F:f("body", 34)
-	self.font_percent = F:f("body", 28)
+	self.font_percent = F:f("body", 24)
 	self.font_tip = F:f("body", 20)
 	self.tip = _(string.format("TIP_%i", math.random(1, GS.gameplay_tips_count)))
 	self.director_ref = director_ref
@@ -56,8 +54,6 @@ end
 
 function screen:destroy()
 	self.progress = nil
-	self.progress_display = nil
-	self.anim_t = nil
 	self.font_title = nil
 	self.font_percent = nil
 	self.font_tip = nil
@@ -81,35 +77,28 @@ function screen:update(dt)
 	end
 
 	-- 加载完成之后，再更新动画状态，保证动画状态是最新的
-	self.anim_t = self.anim_t + dt
 	if self.pixel_art_view then
 		self.pixel_art_view:update(dt)
 	end
 	-- print("Loading progress: ", I.progress, S.progress, self.progress)
 	-- print("Corotine status: ", init_coro and coroutine.status(init_coro) or "no coroutine")
-	self.progress = km.clamp(0, 1, 0.6 * I.progress + 0.4 * S.progress)
-	self.progress_display = self.progress_display + (self.progress - self.progress_display) * math.min(dt * 7, 1)
+	self.progress[1] = I.progress
+	self.progress[2] = S.progress
+	self.progress[3] = (init_coro and coroutine.status(init_coro) ~= "dead") and (self.director_ref.queued_item.progress or 0) or 1
 
 	-- 检查工作是否已经完成
 	if i_done and s_done then
 		-- 没有初始化协程，那就结束
 		if not init_coro then
 			self.hold_enabled = false
-			self.progress = 1
-			self.progress_display = 1
 		else
 			-- 有初始化协程，需要保证初始化协程也已经结束
 			if coroutine.status(init_coro) == "dead" then
 				self.hold_enabled = false
-				self.progress = 1
-				self.progress_display = 1
 				-- 执行剩余的必须在资源加载完后执行的 init 工作
 				self.director_ref.queued_item:init(self.w, self.h)
 				self.director_ref.queued_item_init = true
 				self.director_ref.queued_item.done_callback_called = nil
-			else
-				self.progress = 0.99
-				self.progress_display = 0.99
 			end
 		end
 	end
@@ -132,7 +121,6 @@ function screen:draw()
 		g.rectangle("fill", 0, y, w, 1)
 	end
 
-	local phase = math.floor(self.anim_t * 14)
 	local layout = self.art_layout
 	local sprite_alpha = (layout.alpha or 1) * a
 
@@ -169,45 +157,55 @@ function screen:draw()
 	local hide_bar = layout.hide_bar
 	local bar_w = math.floor(math.min(740, w * 0.68))
 	local bar_h = math.max(14, math.floor(h / 48))
-	local bar_x = math.floor((w - bar_w) * 0.5)
-	local bar_y = math.floor(h * 0.72)
+	local bar_gap = math.max(12, math.floor(bar_h * 0.75))
+	local label_w = 92
+	local side_gap = 10
+	local total_h = bar_h * 3 + bar_gap * 2
+	local pct_w = math.max(88, font_percent:getWidth("100%") + 8)
+	local bar_x = math.floor((w - (label_w + side_gap + bar_w + side_gap + pct_w)) * 0.5) + label_w + side_gap
+	local title_y = math.floor(h * 0.45)
+	local bar_y = math.floor(h * 0.52)
 
 	if not hide_bar then
-		local inner_w = bar_w - 4
-		local fill_w = math.floor(inner_w * self.progress_display)
+		local labels = {_("IMAGE"), _("SOUND"), _("CORO")}
+		local colors = {{0.44, 0.74, 1.0}, {0.56, 0.92, 0.56}, {0.92, 0.54, 0.21}}
+		for i = 1, 3 do
+			local y = bar_y + (i - 1) * (bar_h + bar_gap)
+			local inner_w = bar_w - 4
+			local progress = self.progress[i]
+			local fill_w = inner_w * progress
 
-		g.setColor(0.08, 0.08, 0.10, a)
-		g.rectangle("fill", bar_x, bar_y, bar_w, bar_h)
-		g.setColor(0.22, 0.22, 0.26, a)
-		g.rectangle("line", bar_x, bar_y, bar_w, bar_h)
+			local c = colors[i]
+			g.setColor(0.08, 0.08, 0.10, a)
+			g.rectangle("fill", bar_x, y, bar_w, bar_h)
+			g.setColor(0.22, 0.22, 0.26, a)
+			g.rectangle("line", bar_x, y, bar_w, bar_h)
 
-		if fill_w > 0 then
-			g.setColor(0.92, 0.54, 0.21, a)
-			g.rectangle("fill", bar_x + 2, bar_y + 2, fill_w, bar_h - 4)
-
-			local stripe_start = (phase * 2) % 8
-			g.setColor(1, 0.76, 0.40, 0.35 * a)
-			for x = stripe_start, fill_w, 8 do
-				g.rectangle("fill", bar_x + 2 + x, bar_y + 2, 3, bar_h - 4)
+			if fill_w > 0 then
+				g.setColor(c[1], c[2], c[3], a)
+				g.rectangle("fill", bar_x + 2, y + 2, fill_w, bar_h - 4)
 			end
+
+			g.setFont(font_tip)
+			g.setColor(0.9, 0.92, 0.96, a)
+			g.printf(labels[i], bar_x - label_w - side_gap, y + math.floor((bar_h - font_tip:getHeight()) * 0.5), label_w, "right")
+
+			g.setFont(font_percent)
+			local pct_text = string.format("%d%%", math.floor(progress * 100 + 0.5))
+			local pct_x = bar_x + bar_w + side_gap + pct_w - font_percent:getWidth(pct_text)
+			g.print(pct_text, pct_x, y + math.floor((bar_h - font_percent:getHeight()) * 0.5))
 		end
 	end
-
-	local percent_text = string.format("%d%%", math.floor(self.progress_display * 100 + 0.5))
 	local title = "Loading..."
 	local title_w = font_title:getWidth(title)
-	local percent_w = font_percent:getWidth(percent_text)
 
 	g.setFont(font_title)
 	g.setColor(1, 1, 1, a)
-	g.print(title, math.floor((w - title_w) * 0.5), bar_y - 90)
-
-	g.setFont(font_percent)
-	g.print(percent_text, math.floor((w - percent_w) * 0.5), bar_y - 45)
+	g.print(title, math.floor((w - title_w) * 0.5), title_y)
 
 	g.setFont(font_tip)
 	g.setColor(0.82, 0.86, 0.92, a)
-	g.printf(self.tip, math.floor(w * 0.1), bar_y + bar_h + 18, math.floor(w * 0.8), "center")
+	g.printf(self.tip, math.floor(w * 0.1), bar_y + total_h + 12, math.floor(w * 0.8), "center")
 	g.setFont(old_font)
 end
 

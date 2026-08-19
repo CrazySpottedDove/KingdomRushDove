@@ -6761,5 +6761,8 @@ PLEASE DON'T"] = "单击此处以跳过。\n请不要",
 	HERO_TRAMIN_SPECIAL = "自爆机器人，饮硝狂奔，闪光弹，火箭弹幕，疯狂炸弹人，火箭跳",
 	HERO_TANK_NAME = "毁灭坦克 SG-11",
 	HERO_TANK_DESCRIPTION = "经历了无数年的研发，一代又一代的原型都以毁灭告终。最终就只剩下这一辆毁灭坦克。没有任何军队胆敢直面这样一位灾星。",
-	HERO_TANK_SPECIAL = "多刺蛞蝓，炽热导弹，猛击地，敢死队，灼热大炮，女武神的呼唤"
+	HERO_TANK_SPECIAL = "多刺蛞蝓，炽热导弹，猛击地，敢死队，灼热大炮，女武神的呼唤",
+	CORO = "协程",
+	IMAGE = "图像",
+	SOUND = "音频"
 }
