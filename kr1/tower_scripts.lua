@@ -23169,6 +23169,37 @@ function scripts.tower_orc_shaman.update(this, store)
 				pow_s.changed = nil
 			end
 
+			if ready_to_use_power(pow_v, va, store, this.tower.cooldown_factor) then
+				-- local target = U.is_soldiers_around_need_heal(store.soldiers, tpos, va.min_health_factor, a.range)
+				local target = U.find_first_enemy_in_range_filter_on(tpos, a.range, va.vis_flags, va.vis_bans, heal_filter_fn)
+
+				if not target then
+					va.ts = va.ts + 0.3
+				else
+					S:queue("OrcShamanHealingRoots", {
+						delay = 0.3
+					})
+					do_shoot_animation(va, target)
+
+					local new_target = U.find_foremost_enemy_in_range_filter_on(tpos, a.range, nil, va.vis_flags, va.vis_bans, heal_filter_fn)
+
+					if new_target then
+						target = new_target
+					end
+
+					local aura = E:create_entity(va.aura)
+					aura.pos:copy(target.pos)
+					aura.aura.level = pow_v.level
+					aura.aura.source_id = this.id
+					aura.aura.heal_inc = pow_v.heal_inc
+					aura.aura.damage_factor = this.tower.damage_factor
+					queue_insert(store, aura)
+					va.ts = last_ts
+
+					U.y_animation_wait(this, shooter_sid, 1)
+				end
+			end
+
 			if ready_to_attack(ba, store, this.tower.cooldown_factor) then
 				local target = U.find_first_enemy_in_range_filter_off(tpos, a.range, ba.vis_flags, ba.vis_bans)
 
@@ -23237,37 +23268,6 @@ function scripts.tower_orc_shaman.update(this, store)
 						queue_insert(store, b)
 						U.y_wait_unconditional(store, fts(6) * this.tower.cooldown_factor)
 					end
-
-					U.y_animation_wait(this, shooter_sid, 1)
-				end
-			end
-
-			if ready_to_use_power(pow_v, va, store, this.tower.cooldown_factor) then
-				-- local target = U.is_soldiers_around_need_heal(store.soldiers, tpos, va.min_health_factor, a.range)
-				local target = U.find_first_enemy_in_range_filter_on(tpos, a.range, va.vis_flags, va.vis_bans, heal_filter_fn)
-
-				if not target then
-					va.ts = va.ts + 0.3
-				else
-					S:queue("OrcShamanHealingRoots", {
-						delay = 0.3
-					})
-					do_shoot_animation(va, target)
-
-					local new_target = U.find_foremost_enemy_in_range_filter_on(tpos, a.range, nil, va.vis_flags, va.vis_bans, heal_filter_fn)
-
-					if new_target then
-						target = new_target
-					end
-
-					local aura = E:create_entity(va.aura)
-					aura.pos:copy(target.pos)
-					aura.aura.level = pow_v.level
-					aura.aura.source_id = this.id
-					aura.aura.heal_inc = pow_v.heal_inc
-					aura.aura.damage_factor = this.tower.damage_factor
-					queue_insert(store, aura)
-					va.ts = last_ts
 
 					U.y_animation_wait(this, shooter_sid, 1)
 				end
