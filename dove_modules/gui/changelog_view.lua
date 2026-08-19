@@ -100,7 +100,7 @@ function ChangelogView:_build_ui(rs, panel_w, panel_h)
 	local nav_y = 58
 	local lbl_w = 200
 
-	local prev_btn = ModActionButton:new("上版本", V.v(BTN_W, BTN_H))
+	local prev_btn = PluginActionButton:new("上版本", V.v(BTN_W, BTN_H))
 	prev_btn.pos = V.v(20, nav_y)
 	self.back:add_child(prev_btn)
 	prev_btn.on_press = function()
@@ -124,15 +124,16 @@ function ChangelogView:_build_ui(rs, panel_w, panel_h)
 	self.back:add_child(ver_lbl)
 	self._ver_lbl = ver_lbl
 
-	local pick_btn = ModActionButton:new("选择", V.v(54, BTN_H))
+	local pick_btn = PluginActionButton:new("选择", V.v(54, BTN_H))
 	pick_btn.pos = V.v((panel_w - lbl_w) / 2 + lbl_w + 4, nav_y)
+
 	self.back:add_child(pick_btn)
 	pick_btn.on_press = function()
 		S:queue("GUIButtonCommon")
 		self:_show_version_picker()
 	end
 
-	local next_btn = ModActionButton:new("下版本", V.v(BTN_W, BTN_H))
+	local next_btn = PluginActionButton:new("下版本", V.v(BTN_W, BTN_H))
 	next_btn.pos = V.v(panel_w - 20 - BTN_W, nav_y)
 	self.back:add_child(next_btn)
 	next_btn.on_press = function()
