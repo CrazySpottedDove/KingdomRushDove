@@ -208,7 +208,7 @@ local function merge_plugin_config_with_defaults(preserved_local_cfg, remote_cfg
 		result = table.deepclone(preserved_local_cfg or {})
 		merge_missing_or_mismatch_fields(result, remote_cfg)
 	else
-		result = table.deepclone(new_default)
+		result = table.deepclone(remote_cfg)
 		for k, v in pairs(preserved_local_cfg) do
 			if not preserved_keys[k] then
 				if old_default[k] == nil then
