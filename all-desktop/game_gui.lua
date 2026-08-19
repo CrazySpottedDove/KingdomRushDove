@@ -4781,6 +4781,7 @@ function NotificationView:show(id, no_transition, force_show)
 		b_ok.pos = V.v(475, 254)
 
 		function b_ok.on_click(this)
+			self.show_next = n.next
 			this:disable()
 			self:hide()
 		end
@@ -4832,6 +4833,7 @@ function NotificationView:show(id, no_transition, force_show)
 		b_ok.pos = V.v(450, ph1 + ph2 - 30 - 40)
 
 		function b_ok.on_click(this)
+			self.show_next = n.next
 			this:disable()
 			self:hide()
 		end
@@ -4900,6 +4902,7 @@ function NotificationView:show(id, no_transition, force_show)
 		b_ok.pos = V.v(450, v_paper.size.y - 15)
 
 		function b_ok.on_click(this)
+			self.show_next = n.next
 			this:disable()
 			self:hide()
 		end

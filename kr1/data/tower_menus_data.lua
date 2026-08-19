@@ -623,8 +623,8 @@ return {
 			action_arg = "tower_ewok",
 			image = "kr3_main_icons_0009",
 			place = 19,
-			tt_title = _("ELVES_EWOK_NAME"),
-			tt_desc = _("ELVES_EWOK_DESCRIPTION")
+			tt_title = _("TOWER_EWOK_NAME"),
+			tt_desc = _("TOWER_EWOK_DESCRIPTION")
 		}),
 		M(tpl.upgrade, {
 			action_arg = "tower_baby_ashbite",
@@ -2005,8 +2005,8 @@ return {
 		action_arg = "tower_ewok",
 		image = "main_icons_0015",
 		place = 5,
-		tt_title = _("ELVES_EWOK_NAME"),
-		tt_desc = _("ELVES_EWOK_DESCRIPTION")
+		tt_title = _("TOWER_EWOK_HOLDER_NAME"),
+		tt_desc = _("TOWER_EWOK_HOLDER_DESCRIPTION")
 	})}},
 	ewok = {{M(tpl.upgrade_power, {
 		action_arg = "armor",
