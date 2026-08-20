@@ -99,8 +99,8 @@ if [ "$NO_UPLOAD_MODE" = "1" ]; then
 fi
 
 # 如果传入了参数 quick，则使用内网 scp 传输
-if [ "$QUICK_MODE" = "1" ]; then
-    scp -P 60001 "$ARCHIVE_DIR" dove@10.112.99.5:/srv/files/王国保卫战Dove版-Linux端/
-else
-    scp -P 60001 "$ARCHIVE_DIR" dove@krdovedownload6.crazyspotteddove.top:/srv/files/王国保卫战Dove版-Linux端/
-fi
+# if [ "$QUICK_MODE" = "1" ]; then
+#     scp -P 60001 "$ARCHIVE_DIR" dove@10.112.99.5:/srv/files/王国保卫战Dove版-Linux端/
+# else
+#     scp -P 60001 "$ARCHIVE_DIR" dove@krdovedownload6.crazyspotteddove.top:/srv/files/王国保卫战Dove版-Linux端/
+# fi

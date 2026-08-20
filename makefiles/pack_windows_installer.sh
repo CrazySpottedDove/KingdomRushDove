@@ -239,8 +239,8 @@ if [ "$NO_UPLOAD_MODE" = "1" ]; then
     exit 0
 fi
 
-if [ "$QUICK_MODE" = "1" ]; then
-    scp -P 60001 "$INSTALLER_FILE" dove@10.112.99.5:/srv/files/王国保卫战Dove版-Windows端/
-else
-    scp -P 60001 "$INSTALLER_FILE" dove@krdovedownload6.crazyspotteddove.top:/srv/files/王国保卫战Dove版-Windows端/
-fi
+# if [ "$QUICK_MODE" = "1" ]; then
+#     scp -P 60001 "$INSTALLER_FILE" dove@10.112.99.5:/srv/files/王国保卫战Dove版-Windows端/
+# else
+#     scp -P 60001 "$INSTALLER_FILE" dove@krdovedownload6.crazyspotteddove.top:/srv/files/王国保卫战Dove版-Windows端/
+# fi

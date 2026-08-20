@@ -160,19 +160,19 @@ run_upload_phase() {
     done
 }
 
-if [ "$MODE" = "upload-only" ]; then
-    start_all_uploads
-else
+# if [ "$MODE" = "upload-only" ]; then
+#     start_all_uploads
+# else
     echo "[STEP] package branch sync"
     bash makefiles/package.sh
 
-    # echo "[STEP] build android"
-    # JOBS="$JOBS" bash makefiles/pack_android.sh no-upload
-    start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-安卓手机端-低配版.apk" "$SERVER_DIR_ANDROID" "$QUARK_DIR_ANDROID" "android"
+    echo "[STEP] build android"
+    JOBS="$JOBS" bash makefiles/pack_android.sh no-upload
+    # start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-安卓手机端-低配版.apk" "$SERVER_DIR_ANDROID" "$QUARK_DIR_ANDROID" "android"
 
     echo "[STEP] build android hd"
     JOBS="$JOBS" bash makefiles/pack_android.sh hd no-upload
-    start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-安卓手机端.apk" "$SERVER_DIR_ANDROID" "$QUARK_DIR_ANDROID" "android_hd"
+    # start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-安卓手机端.apk" "$SERVER_DIR_ANDROID" "$QUARK_DIR_ANDROID" "android_hd"
 
     # echo "[STEP] build windows"
     # bash makefiles/pack_windows.sh no-upload
@@ -180,12 +180,12 @@ else
 
     echo "[STEP] build windows installer"
     bash makefiles/pack_windows_installer.sh no-upload
-    start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-Windows电脑端-安装程序.exe" "$SERVER_DIR_WINDOWS" "$QUARK_DIR_WINDOWS" "windows_installer"
+    # start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-Windows电脑端-安装程序.exe" "$SERVER_DIR_WINDOWS" "$QUARK_DIR_WINDOWS" "windows_installer"
 
     echo "[STEP] build linux"
     bash makefiles/pack_linux.sh no-upload
-    start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-Linux电脑端.zip" "$SERVER_DIR_LINUX" "$QUARK_DIR_LINUX" "linux"
-fi
+    # start_upload_pair ".versions/王国保卫战Dove版-v${current_id}-Linux电脑端.zip" "$SERVER_DIR_LINUX" "$QUARK_DIR_LINUX" "linux"
+# fi
 
 run_upload_phase
 
