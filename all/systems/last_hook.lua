@@ -14,28 +14,7 @@ function M.register(sys)
 	end
 
 	function sys.last_hook:on_insert_unconditional(e, d)
-		if e.enemy then
-			d.enemies[e.id] = e
-
-			if not e.health.patched then
-				if d.level_difficulty == DIFFICULTY_IMPOSSIBLE and d.wave_group_number > 6 then
-					if d.wave_group_number <= 15 then
-						e.health.hp_max = e.health.hp_max * (1 + (d.wave_group_number - 6) * 0.0167)
-					else
-						e.health.hp_max = e.health.hp_max * 1.15
-					end
-				end
-
-				e.health.hp = e.health.hp_max
-				e.health.patched = true
-			end
-
-			if e.enemy.lives_cost == 20 then
-				simulation.store.game_gui:set_boss(e)
-			end
-
-			d.enemy_count = d.enemy_count + 1
-		elseif e.soldier and e.health then
+		if e.soldier and e.health then
 			d.soldiers[e.id] = e
 		elseif e.modifier then
 			d.modifiers[e.id] = e
@@ -53,8 +32,6 @@ function M.register(sys)
 				local mods = target._applied_mods
 				mods[#mods + 1] = e
 			end
-		elseif e.tower then
-			d.towers[e.id] = e
 		elseif e.aura then
 			d.auras[e.id] = e
 		end
@@ -97,8 +74,6 @@ function M.register(sys)
 					end
 				end
 			end
-		elseif e.tower then
-			d.towers[e.id] = nil
 		elseif e.aura then
 			d.auras[e.id] = nil
 		end

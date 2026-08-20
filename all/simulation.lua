@@ -23,7 +23,6 @@ function simulation:init(store, system_names)
 	-- 优化分类索引
 	d.soldiers = {}
 	d.modifiers = {}
-	d.towers = {}
 	d.auras = {}
 	d.entities_with_timed = {}
 	d.entities_with_ui = {}
