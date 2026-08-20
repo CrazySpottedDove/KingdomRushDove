@@ -43875,6 +43875,19 @@ function scripts.aura_box_tramin.update(this, store)
 	U.y_ease_key(store, this.render.sprites[1], "alpha", 255, 0, 1)
 	queue_remove(store, this)
 end
+
+scripts.bomb_tramin_skill1 = {
+	insert = function(this, store)
+		local nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, true)
+		if #nodes < 1 then
+			return false
+		end
+		this.nav_path.pi = nodes[1][1]
+		this.nav_path.spi = nodes[1][2]
+		this.nav_path.ni = nodes[1][3]
+		return true
+	end
+}
 --#endregion hero_tramin
 
 -- ======== 毁灭坦克 SG-11 ========

@@ -4206,6 +4206,7 @@ tt.sound_events.remove_stop = "ElvesHeroGyroBombsMarch"
 
 -- ======== 特拉敏大师 ========
 tt = RT("bomb_tramin_skill1", "bomb_wilbur")
+tt.main_script.insert = scripts.bomb_tramin_skill1.insert
 tt.render.sprites[1].prefix = "hero_tramin_bombot"
 tt.render.sprites[1].name = "walk"
 tt.render.sprites[1].angles.walk = {"walk"}
