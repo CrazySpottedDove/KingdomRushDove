@@ -7,10 +7,6 @@ local V = require("lib.klua.vector")
 local cos = math.cos
 local PI = math.pi
 
-local function queue_remove(store, e)
-	simulation:queue_remove_entity(e)
-end
-
 --- LERP FUNCTIONS BEGIN
 local function lerp_boolean_multiply(a, b, t, s, key)
 	s[key] = a[2] and s[key]
@@ -341,7 +337,7 @@ function M.register(sys)
 
 				if finished then
 					if tween.remove then
-						queue_remove(store, e)
+						simulation:queue_remove_entity(e)
 					end
 
 					if tween.run_once then
