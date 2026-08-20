@@ -1,7 +1,6 @@
 local M = {}
 
 function M.register(sys)
-
 	sys.last_hook = {}
 	sys.last_hook.name = "last_hook"
 
@@ -78,10 +77,7 @@ function M.register(sys)
 	end
 
 	function sys.last_hook:on_remove_unconditional(e, d)
-		if e.enemy then
-			d.enemies[e.id] = nil
-			d.enemy_count = d.enemy_count - 1
-		elseif e.soldier then
+		if e.soldier then
 			d.soldiers[e.id] = nil
 			d.dead_soldier_count = d.dead_soldier_count + 1
 		elseif e.modifier then

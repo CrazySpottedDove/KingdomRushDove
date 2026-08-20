@@ -698,7 +698,7 @@ local function damage_trace_print_death(store, target)
 	print("[DAMAGE_TRACE] ========== end death trace ==========")
 end
 
-local FADE_OUT_DURATION = 0.4
+-- local FADE_OUT_DURATION = 0.4
 require("table.clear")
 function M.register(sys)
 	local GS = require("kr1.game_settings")
@@ -879,65 +879,19 @@ function M.register(sys)
 								end
 							end
 						end
-
-					-- 处理 on_damage_applied 事件
-
 					end
 				end
 			end
 		end
 
-		local enemies = store.enemies
+		for i = damage_queue_len + 1, #damage_queue do
+			new_damage_queue[#new_damage_queue + 1] = damage_queue[i]
+		end
+
+		store.damage_queue_swapper = damage_queue
+		store.damage_queue = new_damage_queue
+
 		local soldiers = store.soldiers
-
-		for _, e in pairs(enemies) do
-			local h = e.health
-
-			if h.hp <= 0 and not h.dead and not h.ignore_damage then
-				-- damage_trace_print_death(store, e)
-				h.hp = 0
-				h.dead = true
-				h.death_ts = ts
-
-				if e.render then
-					h.fading_after = ts + h.dead_lifetime - FADE_OUT_DURATION
-				else
-					h.delete_after = ts + h.dead_lifetime
-				end
-
-				if e.health_bar then
-					e.health_bar.hidden = true
-				end
-
-				store.player_gold = store.player_gold + e.enemy.gold
-				signal.emit("got-enemy-gold", e, e.enemy.gold)
-			end
-
-			if not h.dead then
-				h.last_damage_types = 0
-			elseif not h.ignore_delete_after then
-				if h.fading_after and ts > h.fading_after then
-					local progress = (ts - h.fading_after) / FADE_OUT_DURATION
-
-					if progress >= 1.0 then
-						simulation:queue_remove_entity(e)
-					else
-						local sprites = e.render.sprites
-						if not h._fade_init_alphas then
-							h._fade_init_alphas = {}
-							for i = 1, #sprites do
-								h._fade_init_alphas[i] = sprites[i].alpha
-							end
-						end
-						for i = 1, #sprites do
-							sprites[i].alpha = h._fade_init_alphas[i] * (1 - progress)
-						end
-					end
-				elseif h.delete_after and ts > h.delete_after then
-					simulation:queue_remove_entity(e)
-				end
-			end
-		end
 
 		for _, e in pairs(soldiers) do
 			local h = e.health
@@ -949,7 +903,7 @@ function M.register(sys)
 				h.death_ts = ts
 
 				if e.render then
-					h.fading_after = ts + h.dead_lifetime - FADE_OUT_DURATION
+					h.fading_after = ts + h.dead_lifetime - 0.4
 				else
 					h.delete_after = ts + h.dead_lifetime
 				end
@@ -963,7 +917,7 @@ function M.register(sys)
 				h.last_damage_types = 0
 			elseif not e.hero and not h.ignore_delete_after then
 				if h.fading_after and ts > h.fading_after then
-					local progress = (ts - h.fading_after) / FADE_OUT_DURATION
+					local progress = (ts - h.fading_after) / 0.4
 
 					if progress >= 1.0 then
 						simulation:queue_remove_entity(e)
@@ -985,12 +939,6 @@ function M.register(sys)
 			end
 		end
 
-		for i = damage_queue_len + 1, #damage_queue do
-			new_damage_queue[#new_damage_queue + 1] = damage_queue[i]
-		end
-
-		store.damage_queue_swapper = damage_queue
-		store.damage_queue = new_damage_queue
 		perf.stop("health")
 	end
 end

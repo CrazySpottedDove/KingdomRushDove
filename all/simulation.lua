@@ -21,20 +21,14 @@ function simulation:init(store, system_names)
 	d.step = false
 	d.entities = {}
 	-- 优化分类索引
-	d.enemies = {}
 	d.soldiers = {}
 	d.modifiers = {}
 	d.towers = {}
 	d.auras = {}
-	-- d.entities_with_main_script_on_update = {}
-	-- d.entities_with_main_script_on_update_index = {}
-	-- d.entities_with_main_script_on_update_count = 0
 	d.entities_with_timed = {}
 	d.entities_with_ui = {}
 	d.pending_inserts = {}
 	d.pending_removals = {}
-	-- d.entity_count = 0
-	-- d.entity_max = 0
 	d.speed_factor = 1
 	self.systems_on_insert = {}
 	self.systems_on_insert_unconditional = {}
