@@ -175,9 +175,9 @@ love.run()
 simulation:do_tick(dt)
   1. tick_ts += dt
   2. 批量处理 pending_inserts（倒序，避免当帧递归）
-     → on_queue → on_insert（任意返回 false → 取消插入）
+     → on_insert（任意返回 false → 取消插入）
   3. 批量处理 pending_removals
-     → on_dequeue → on_remove（任意返回 false → 取消移除）
+     → on_remove（任意返回 false → 取消移除）
   4. 依次调用所有系统 on_update(dt, tick_ts, store)
 ```
 

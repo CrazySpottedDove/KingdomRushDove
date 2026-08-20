@@ -37,8 +37,6 @@ function simulation:init(store, system_names)
 	-- d.entity_count = 0
 	-- d.entity_max = 0
 	d.speed_factor = 1
-	self.systems_on_queue = {}
-	self.systems_on_dequeue = {}
 	self.systems_on_insert = {}
 	self.systems_on_insert_unconditional = {}
 	self.systems_on_remove = {}
@@ -56,14 +54,6 @@ function simulation:init(store, system_names)
 	end
 
 	for _, s in ipairs(systems_order) do
-		if s.on_queue then
-			table.insert(self.systems_on_queue, s)
-		end
-
-		if s.on_dequeue then
-			table.insert(self.systems_on_dequeue, s)
-		end
-
 		if s.on_insert then
 			table.insert(self.systems_on_insert, s)
 		end
@@ -85,8 +75,6 @@ function simulation:init(store, system_names)
 		end
 	end
 
-	self.systems_on_queue_count = #self.systems_on_queue
-	self.systems_on_dequeue_count = #self.systems_on_dequeue
 	self.systems_on_insert_count = #self.systems_on_insert
 	self.systems_on_insert_unconditional_count = #self.systems_on_insert_unconditional
 	self.systems_on_remove_count = #self.systems_on_remove
@@ -116,8 +104,6 @@ function simulation:init(store, system_names)
 	end
 
 	-- 重建 systems.on_xxx_count
-	self.systems_on_queue = {}
-	self.systems_on_dequeue = {}
 	self.systems_on_insert = {}
 	self.systems_on_insert_unconditional = {}
 	self.systems_on_remove = {}
@@ -126,14 +112,6 @@ function simulation:init(store, system_names)
 	self.systems_on_render_update = {}
 
 	for _, s in ipairs(systems_order) do
-		if s.on_queue then
-			table.insert(self.systems_on_queue, s)
-		end
-
-		if s.on_dequeue then
-			table.insert(self.systems_on_dequeue, s)
-		end
-
 		if s.on_insert then
 			table.insert(self.systems_on_insert, s)
 		end
@@ -159,8 +137,6 @@ function simulation:init(store, system_names)
 		end
 	end
 
-	self.systems_on_queue_count = #self.systems_on_queue
-	self.systems_on_dequeue_count = #self.systems_on_dequeue
 	self.systems_on_insert_count = #self.systems_on_insert
 	self.systems_on_insert_unconditional_count = #self.systems_on_insert_unconditional
 	self.systems_on_remove_count = #self.systems_on_remove
@@ -244,11 +220,6 @@ function simulation:queue_insert_entity(e)
 	--     error("Attempt to queue a nil entity" .. debug.traceback())
 	-- end
 	local d = self.store
-
-	for i = 1, self.systems_on_queue_count do
-		self.systems_on_queue[i]:on_queue(e, d, true)
-	end
-
 	d.pending_inserts[#d.pending_inserts + 1] = e
 end
 
@@ -260,12 +231,8 @@ function simulation:queue_remove_entity(e)
 
 	local d = self.store
 
-	for i = 1, self.systems_on_dequeue_count do
-		self.systems_on_dequeue[i]:on_dequeue(e, d, false)
-	end
-
 	e.pending_removal = true
-	self.store.pending_removals[#self.store.pending_removals + 1] = e
+	d.pending_removals[#d.pending_removals + 1] = e
 end
 
 --- 我们乐观地认为，不可能存在对同一实体的重复插入。如果有，也是先移除了，然后重新插入
@@ -274,10 +241,6 @@ function simulation:insert_entity(e)
 
 	for i = 1, self.systems_on_insert_count do
 		if not self.systems_on_insert[i]:on_insert(e, d) then
-			for j = 1, self.systems_on_dequeue_count do
-				self.systems_on_dequeue[j]:on_dequeue(e, d, true)
-			end
-
 			return
 		end
 	end
@@ -301,10 +264,6 @@ function simulation:remove_entity(e)
 
 	for i = 1, self.systems_on_remove_count do
 		if not self.systems_on_remove[i]:on_remove(e, d) then
-			for j = 1, self.systems_on_dequeue_count do
-				self.systems_on_dequeue[j]:on_dequeue(e, d, false)
-			end
-
 			print(string.format("remove %s aborted", e.template_name))
 
 			return
