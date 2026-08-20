@@ -64,10 +64,6 @@ function M.register(sys)
 			d.entities_with_timed[e.id] = e
 		end
 
-		if e.lights then
-			d.entities_with_lights[e.id] = e
-		end
-
 		if e.ui then
 			d.entities_with_ui[e.id] = e
 		end
@@ -113,10 +109,6 @@ function M.register(sys)
 
 		if e.timed then
 			d.entities_with_timed[e.id] = nil
-		end
-
-		if e.lights then
-			d.entities_with_lights[e.id] = nil
 		end
 
 		if e.ui then

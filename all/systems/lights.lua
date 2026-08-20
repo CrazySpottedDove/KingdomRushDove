@@ -10,31 +10,28 @@ function M.register(sys)
 
 	function sys.lights:init(store)
 		store.lights = {}
+		store.entities_with_lights = {}
 	end
 
-	function sys.lights:on_insert(entity, store)
-		local d = store
-
+	function sys.lights:on_insert_unconditional(entity, store)
 		if entity.lights then
+			store.entities_with_lights[entity.id] = entity
 			for i = 1, #entity.lights do
 				local l = entity.lights[i]
 
 				l.pos = V.v(entity.pos.x, entity.pos.y)
-				d.lights[#d.lights + 1] = l
+				store.lights[#store.lights + 1] = l
 			end
 		end
-
-		return true
 	end
 
-	function sys.lights:on_remove(entity, store)
+	function sys.lights:on_remove_unconditional(entity, store)
 		if entity.lights then
+			store.entities_with_lights[entity.id] = nil
 			for i = #entity.lights, 1, -1 do
 				entity.lights[i].marked_to_remove = true
 			end
 		end
-
-		return true
 	end
 
 	function sys.lights:on_update(dt, ts, store)

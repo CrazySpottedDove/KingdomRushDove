@@ -17,7 +17,6 @@ function M.register(sys)
 				simulation:queue_remove_entity(e)
 			end
 		end
-
 	end
 end
 
