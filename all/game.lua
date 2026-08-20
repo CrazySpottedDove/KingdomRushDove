@@ -128,7 +128,6 @@ game.simulation_systems = {
 	"tower_upgrade",
 	"tower_skill",
 	"game_upgrades",
-	"texts",
 	"particle_system",
 	"render",
 	"timed",

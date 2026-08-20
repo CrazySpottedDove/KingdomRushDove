@@ -189,7 +189,7 @@ simulation:do_tick(dt)
 "health",           -- ★ 伤害结算核心
 "count_groups",
 "goal_line", "tower_upgrade", "game_upgrades",
-"texts", "particle_system",
+"particle_system",
 "render",           -- ★ 渲染帧维护与排序
 "sound_events", "seen_tracker", "spatial_index",
 "last_hook",        -- ★ 最后钩子，维护各分类索引
