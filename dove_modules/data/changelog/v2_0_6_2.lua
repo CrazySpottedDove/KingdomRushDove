@@ -1,1 +1,1 @@
-return {{date="2026-08-20",author="CrazySpottedDove",message="fix: 修复特拉敏无法正常召唤炸弹机器人的问题"},{date="2026-08-20",author="CrazySpottedDove",message="chore: 更新打包脚本"}}
+return {{date="2026-08-20",author="CrazySpottedDove",message="fix: 修复特拉敏无法正常召唤炸弹机器人的问题"},{date="2026-08-20",author="CrazySpottedDove",message="chore: 更新打包脚本"},{date="2026-08-21",author="CrazySpottedDove",message="perf: 优化U.find_entity_at_pos方法"}}

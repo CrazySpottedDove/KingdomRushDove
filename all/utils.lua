@@ -1555,35 +1555,30 @@ end
 ---@param y number Y坐标
 ---@param filter_func function? 过滤函数（可选）
 ---@return table? 找到的实体
-function U.find_entity_at_pos(entities, x, y, filter_func)
-	local found = {}
+function U.find_entity_at_pos(entities, x, y)
+	local found = nil
 
 	for _, e in pairs(entities) do
 		-- if e.pos and e.ui and e.ui.can_click then
 		if e.ui.can_click then
 			local r = e.ui.click_rect
 
-			if x > e.pos.x + r.pos.x and x < e.pos.x + r.pos.x + r.size.x and y > e.pos.y + r.pos.y and y < e.pos.y + r.pos.y + r.size.y and (not filter_func or filter_func(e)) then
-				table.insert(found, e)
+			if x > e.pos.x + r.pos.x and x < e.pos.x + r.pos.x + r.size.x and y > e.pos.y + r.pos.y and y < e.pos.y + r.pos.y + r.size.y then
+				-- table.insert(found, e)
+				if not found then
+					found = e
+				else
+					if e.ui.z > found.ui.z then
+						found = e
+					elseif e.ui.z == found.ui.z and e.pos.y < found.pos.y then
+						found = e
+					end
+				end
 			end
 		end
 	end
 
-	table.sort(found, function(e1, e2)
-		if e1.ui.z == e2.ui.z then
-			return e1.pos.y < e2.pos.y
-		else
-			return e1.ui.z > e2.ui.z
-		end
-	end)
-
-	if #found > 0 then
-		local e = found[1]
-
-		return e
-	else
-		return nil
-	end
+	return found
 end
 
 ---搜索指定位置的所有实体

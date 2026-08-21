@@ -591,9 +591,6 @@ function KView:update(dt)
 end
 
 function KView:draw()
-	-- if self.hidden then
-	-- 	return
-	-- end
 	local pr, pg, pb, pa = G.getColor()
 	local current_alpha = pa * self.alpha
 
@@ -864,19 +861,21 @@ end
 function KView:screen_to_view(x, y)
 	local this = self
 	local view_list = {}
+	local view_count = 0
 
 	repeat
-		table.insert(view_list, this)
+		view_count = view_count + 1
+		view_list[view_count] = this
 
 		this = this.parent
 	until not this
 
-	for i = #view_list, 1, -1 do
+	for i = view_count, 1, -1 do
 		local v = view_list[i]
 
 		x = (x - v.pos.x) / v.scale.x + v.anchor.x
 		y = (y - v.pos.y) / v.scale.y + v.anchor.y
-		if v.parent and v.parent:isInstanceOf(KScrollList) then
+		if i < view_count and v.parent:isInstanceOf(KScrollList) then
 			y = y + v.scroll_origin_y / v.scale.y
 		end
 	end

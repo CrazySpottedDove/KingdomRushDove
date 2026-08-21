@@ -5643,7 +5643,8 @@ function AchievementBanner:hide()
 	end)}
 end
 
-PickView = class("PickView", KView)
+-- 逻辑节点，用于处理鼠标悬停防御塔，选中实体的逻辑。
+PickView = class("PickView", KVirtualView)
 
 function PickView:initialize(w, h)
 	PickView.super.initialize(self)
@@ -5736,8 +5737,6 @@ end
 
 function PickView:on_down(button, x, y)
 	local wx, wy = game_gui:u2g(V.v(x, y))
-
-	log.debug("button:%d, screen:%s,%s  world:%s,%s", button, x, y, wx, wy)
 
 	if button == 1 then
 		if game_gui.mode == GUI_MODE_RALLY_TOWER then
