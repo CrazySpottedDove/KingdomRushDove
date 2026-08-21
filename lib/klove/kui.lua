@@ -822,10 +822,6 @@ function KView:hit_all(x, y, filter)
 end
 
 function KView:hit_topmost(x, y, filter)
-	if self.hidden or self._disabled then
-		return nil
-	end
-
 	if self.clip and (x < 0 or x > self.size.x or y < 0 or y > self.size.y) then
 		return nil
 	end
@@ -833,22 +829,19 @@ function KView:hit_topmost(x, y, filter)
 	-- 从最上层的子视图开始检查
 	for i = #self.children, 1, -1 do
 		local c = self.children[i]
-		local cx = (x - c.pos.x + c.anchor.x * c.scale.x) / c.scale.x
-		local cy = (y - c.pos.y + c.anchor.y * c.scale.y - (self.scroll_origin_y or 0)) / c.scale.y
-
-		local hit = c:hit_topmost(cx, cy, filter)
-		if hit then
-			-- 如果在子视图中找到命中，立即返回
-			return hit
+		if not (c.hidden or c._disabled) then
+			local hit = c:hit_topmost((x - c.pos.x) / c.scale.x + c.anchor.x, (y - c.pos.y - (self.scroll_origin_y or 0)) / c.scale.y + c.anchor.y, filter)
+			if hit then
+				-- 如果在子视图中找到命中，立即返回
+				return hit
+			end
 		end
 	end
 
 	-- 如果没有子视图命中，再检查自身
 	local hr = self.hit_rect
-	if (hr and x >= hr.pos.x and x <= hr.pos.x + hr.size.x and y >= hr.pos.y and y <= hr.pos.y + hr.size.y) or (not hr and x >= 0 and x <= self.size.x and y >= 0 and y <= self.size.y) then
-		if filter == nil or filter(self) then
-			return self
-		end
+	if filter(self) and ((hr and x >= hr.pos.x and x <= hr.pos.x + hr.size.x and y >= hr.pos.y and y <= hr.pos.y + hr.size.y) or (not hr and x >= 0 and x <= self.size.x and y >= 0 and y <= self.size.y)) then
+		return self
 	end
 
 	-- 没有任何命中
@@ -1142,9 +1135,6 @@ end
 -- KVirtualView，只作为逻辑容器使用，不绘制自己，仅绘制孩子
 KVirtualView = class("KVirtualView", KView)
 function KVirtualView:draw()
-	if self.hidden then
-		return
-	end
 	local pr, pg, pb, pa = G.getColor()
 	local current_alpha = pa * self.alpha
 
@@ -1253,6 +1243,9 @@ function KWindow:initialize(size)
 	KWindow.super.initialize(self, size)
 
 	self.origin = V.v(0, 0)
+	self._last_mouse_pos = V.v(0, 0)
+	self._last_mouse_screen_pos = V.v(0, 0)
+
 	self.drag_threshold = 4
 	self.focused = nil
 end
@@ -1275,9 +1268,6 @@ function KWindow:draw_child(child)
 	G.pop()
 end
 
---- 通过递归的方式，将坐标从世界坐标转换到相对坐标
----@param x any
----@param y any
 function KWindow:screen_to_view(x, y)
 	return vround((x - self.pos.x) / self.scale.x + self.anchor.x, (y - self.pos.y) / self.scale.y + self.anchor.y)
 end
@@ -1285,11 +1275,7 @@ end
 function KWindow:get_mouse_position()
 	local x, y = love.mouse.getPosition()
 
-	x, y = x - self.origin.x, y - self.origin.y
-
-	local any_button_down = love.mouse.isDown(1, 2)
-
-	return x, y, any_button_down
+	return x - self.origin.x, y - self.origin.y, love.mouse.isDown(1, 2)
 end
 
 function KWindow:mousepressed(x, y, button, istouch)
@@ -1508,8 +1494,13 @@ function KWindow:touchmoved(id, x, y, dx, dy, pressure)
 	end
 end
 
+local function KWindow_hit_topmost_filter(v)
+	return not v.propagate_on_enter or v.on_enter ~= nil or v.on_exit ~= nil
+end
+
+KWindow._update_core = KWindow.super.update
+
 function KWindow:update(dt)
-	KWindow.super.update(self, dt)
 	local x, y = 0, 0
 	local button_1_down = false
 	local touches = love.touch.getTouches()
@@ -1523,16 +1514,8 @@ function KWindow:update(dt)
 		button_1_down = love.mouse.isDown(1)
 	end
 
-	local wx, wy = self:screen_to_view(x, y)
-	local dv = self._drag_view
-
 	if button_1_down then
-		if not self._last_mouse_pos then
-			self._last_mouse_pos = V.v(x, y)
-		end
-
-		local lx, ly = self._last_mouse_pos.x, self._last_mouse_pos.y
-		local dx, dy = x - lx, y - ly
+		local dx, dy = x - self._last_mouse_pos.x, y - self._last_mouse_pos.y
 
 		if self._mouse_down_pos then
 			local mdx, mdy = self._mouse_down_pos.x, self._mouse_down_pos.y
@@ -1542,6 +1525,8 @@ function KWindow:update(dt)
 				goto label_70_0
 			end
 		end
+
+		local dv = self._drag_view
 
 		if dv ~= nil then
 			local csv = self._click_start_view
@@ -1564,16 +1549,15 @@ function KWindow:update(dt)
 		end
 
 		::label_70_0::
-
-		self._last_mouse_pos = V.v(x, y)
-	else
-		self._last_mouse_pos = nil
 	end
 
+	-- 更新鼠标位置，供 update 中的孩子使用
+	self._last_mouse_screen_pos.x, self._last_mouse_screen_pos.y = self:screen_to_view(x, y)
+	self._last_mouse_pos.x, self._last_mouse_pos.y = x, y
+	self._update_core(self, dt)
+
 	local lev = self._last_enter_view
-	local nev = self:hit_topmost(wx, wy, function(v)
-		return not v.hidden and (not v.propagate_on_enter or v.on_enter ~= nil or v.on_exit ~= nil)
-	end)
+	local nev = self:hit_topmost(self._last_mouse_screen_pos.x, self._last_mouse_screen_pos.y, KWindow_hit_topmost_filter)
 
 	if lev ~= nev then
 		if lev and lev.on_exit then

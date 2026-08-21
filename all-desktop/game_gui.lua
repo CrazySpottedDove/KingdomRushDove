@@ -4,12 +4,13 @@ if DEBUG then
 	package.loaded.gg_views_custom = nil
 	package.loaded["dove_modules.gui.editable_panel_view"] = nil
 end
-
 local log = require("lib.klua.log"):new("game_gui")
 local km = require("lib.klua.macros")
 
 require("lib.klua.table")
 require("klove.kui")
+
+local KF = require("klove.kui_fast_fn")
 
 local kui_db = require("klove.kui_db")
 local timer = require("hump.timer"):new()
@@ -405,6 +406,7 @@ function game_gui:init(w, h, game)
 	}
 	point_confirm.hidden = true
 	point_confirm.anchor = v(point_confirm.size.x * 0.5, point_confirm.size.y * 0.5)
+	point_confirm.update = KF.update_only_own_animation
 
 	local rallyflag = KImageView:new("rally_feedback_0005")
 
@@ -415,6 +417,7 @@ function game_gui:init(w, h, game)
 	}
 	rallyflag.hidden = true
 	rallyflag.anchor = v(rallyflag.size.x * 0.5, rallyflag.size.y * 0.5)
+	rallyflag.update = KF.update_only_own_animation
 
 	local hud_bottom = HudBottomView:new(sw, sh, hud_scale)
 
@@ -428,8 +431,7 @@ function game_gui:init(w, h, game)
 
 	incoming_tooltip.hidden = true
 
-	local mouse_pointer = MousePointer:new()
-
+	local mouse_pointer = MousePointer:new(window)
 	mouse_pointer.hidden = true
 
 	local hud_pause = HudPauseButton:new()
@@ -491,6 +493,7 @@ function game_gui:init(w, h, game)
 	else
 		comic_transition.hidden = true
 	end
+	comic_transition.update = KF.update_empty
 
 	-- local layer_gui = KView:new()
 	local layer_gui = KVirtualView:new()
@@ -602,6 +605,8 @@ function game_gui:init(w, h, game)
 	for name, handler in pairs(signals) do
 		signal.register(name, handler)
 	end
+
+	window._update_core = KF.update_only_propagate_to_children
 
 -- DEBUG_USE
 -- self:enable_perf()
@@ -718,7 +723,6 @@ function game_gui:update(dt)
 			end
 		end
 		kr5_balloon.update(self, dt)
-
 		self.window:update(dt)
 	end
 end
@@ -797,92 +801,6 @@ end
 function game_gui:keypressed(key, isrepeat)
 	if isrepeat then
 		return
-	end
-
-	if DBG_SLIDE_EDITOR and game_gui.SEL_VIEW then
-		local inc = 1
-		local shift = love.keyboard.isDown("lshift")
-		local ctrl = love.keyboard.isDown("lctrl")
-
-		if shift then
-			inc = 20
-		end
-
-		local av = game_gui.SEL_VIEW
-
-		if ctrl then
-			if key == "up" then
-				av.size.y = av.size.y - inc
-			elseif key == "down" then
-				av.size.y = av.size.y + inc
-			elseif key == "right" then
-				av.size.x = av.size.x + inc
-			elseif key == "left" then
-				av.size.x = av.size.x - inc
-			end
-		elseif key == "up" then
-			av.pos.y = av.pos.y - inc
-		elseif key == "down" then
-			av.pos.y = av.pos.y + inc
-		elseif key == "right" then
-			av.pos.x = av.pos.x + inc
-		elseif key == "left" then
-			av.pos.x = av.pos.x - inc
-		end
-
-		if key == "7" then
-			av.r = av.r - 5 * math.pi / 180
-		elseif key == "8" then
-			av.r = av.r + 5 * math.pi / 180
-		end
-
-		if key == "-" then
-			av.font_size = km.clamp(1, 200, av.font_size - 1)
-			av.font = nil
-		elseif key == "=" then
-			av.font_size = km.clamp(1, 200, av.font_size + 1)
-			av.font = nil
-		end
-
-		if key == "0" then
-			if av.text_align == "left" then
-				av.text_align = "center"
-			elseif av.text_align == "center" then
-				av.text_align = "right"
-			elseif av.text_align == "right" then
-				av.text_align = "left"
-			end
-		end
-
-		if key == "h" then
-			av.hidden = not av.hidden
-		end
-
-		if key == "9" then
-			if not av.colors.background then
-				av.colors.background = {0, 200, 200, 150}
-			else
-				av.colors.background = nil
-			end
-		end
-
-		if key == "space" or key == "return" then
-			local out = string.format("pos=v(%s,%s), size=v(%s,%s), font_size=%s, text_align='%s'\n", av.pos.x, av.pos.y, av.size.x, av.size.y, av.font_size, av.text_align)
-
-			log.debug("\n%s\n", out)
-
-			if av and av.parent then
-				local out = "---------------------------\n"
-
-				for _, vv in ipairs(av.parent.children) do
-					out = out .. string.format("pos=v(%s,%s), size=v(%s,%s), r=%s, font_size=%s, text_align='%s'\n", vv.pos.x, vv.pos.y, vv.size.x, vv.size.y, vv.r, vv.font_size, vv.text_align)
-				end
-
-				out = out .. "---------------------------\n"
-
-				log.debug("\n%s\n", out)
-			end
-		end
 	end
 
 	if key == KEYPRESS_ESCAPE then
@@ -1905,10 +1823,7 @@ function SpeedStateIndicator:update(dt)
 	end
 
 	-- 动态颜色效果
-	local r = math.floor((math.sin(store.ts) + 1) * 127.5 + 127.5)
-	local g = math.floor((math.sin(store.ts + 2) + 1) * 127.5 + 127.5)
-	local b = math.floor((math.sin(store.ts + 4) + 1) * 127.5 + 127.5)
-	self.label.colors.text = {r, g, b, 180}
+	self.label.colors.text[1], self.label.colors.text[2], self.label.colors.text[3] = math.floor((math.sin(store.ts) + 1) * 127.5 + 127.5), math.floor((math.sin(store.ts + 2) + 1) * 127.5 + 127.5), math.floor((math.sin(store.ts + 4) + 1) * 127.5 + 127.5)
 end
 
 TimeRewardFx = class("TimeRewardFx", KView)
@@ -1965,38 +1880,7 @@ function TimeRewardFx:initialize(amount)
 	}, "out-quad")
 end
 
-SpriteDigits = class("SpriteDigits", KView)
-
-function SpriteDigits:initialize(prefix, format, ...)
-	KView.initialize(self)
-
-	local text_width = 0
-	local offset = v(0, 0)
-	local reward_string = string.format(format, ...)
-	local img_fmt = prefix .. "_%04i"
-
-	for i = 1, #reward_string do
-		local c = string.sub(reward_string, i, i)
-		local index
-
-		index = c == "+" and 11 or c == "-" and 11 or c == "s" and 12 or tonumber(c)
-
-		local v = KImageView:new(string.format(img_fmt, index))
-
-		v.pos.x, v.pos.y = offset.x, offset.y
-
-		local char_size = km.round(0.7 * v.size.x)
-
-		offset.x = offset.x + char_size
-		text_width = text_width + char_size
-
-		self:add_child(v)
-
-		self.size.y = math.max(v.size.y, self.size.y)
-	end
-
-	self.size.x = text_width
-end
+TimeRewardFx.update = KF.update_empty
 
 WaveRewardFx = class("WaveRewardFx", KImageView)
 
@@ -2048,6 +1932,8 @@ function WaveRewardFx:initialize(reward)
 	end)
 end
 
+WaveRewardFx.update = KF.update_only_own_animation
+
 HeroPortrait = class("HeroPortrait", KButton)
 
 function HeroPortrait:initialize(hero_entity)
@@ -2058,7 +1944,9 @@ function HeroPortrait:initialize(hero_entity)
 	self.hero_id = hero_entity.id
 	self.portrait_image_name = hero_entity.info.hero_portrait
 	self.portrait = KImageView:new(self.portrait_image_name)
+	self.portrait._disabled = true
 	self.portrait_bo = KImageView:new("hero_portraits_0000")
+	self.portrait_bo._disabled = true
 	self.portrait.propagate_on_click = true
 
 	self:add_child(self.portrait)
@@ -2070,12 +1958,14 @@ function HeroPortrait:initialize(hero_entity)
 	self.ov_cooldown.colors.background = {0, 0, 0, 150}
 	self.ov_cooldown.propagate_on_click = true
 	self.ov_cooldown.hidden = true
+	self.ov_cooldown._disabled = true
 
 	self:add_child(self.ov_cooldown)
 
 	self.frame = KImageView:new("heroPortrait_0001")
 	self.frame.disabled_tint_color = {0.7843137254902, 0.7843137254902, 0.7843137254902, 1}
 	self.frame.propagate_on_click = true
+	self.frame._disabled = true
 
 	self:add_child(self.frame)
 
@@ -2087,6 +1977,7 @@ function HeroPortrait:initialize(hero_entity)
 	self.level.text_align = "center"
 	self.level.text = "1"
 	self.level.propagate_on_click = true
+	self.level._disabled = true
 
 	self:add_child(self.level)
 
@@ -2094,8 +1985,9 @@ function HeroPortrait:initialize(hero_entity)
 	self.bar_health.pos = v(23, 83)
 	self.bar_health.anchor = v(0, 0)
 	self.bar_health.propagate_on_click = true
-	self.bar_health._overflow_color = {1, 0.7843137254902, 0, 1}
+	self.bar_health._overflow_color = {0, 0.7843137254902, 1, 1}
 	self.bar_health.normal_color = {1, 1, 1, 1}
+	self.bar_health._disabled = true
 
 	self:add_child(self.bar_health)
 
@@ -2103,18 +1995,21 @@ function HeroPortrait:initialize(hero_entity)
 	self.bar_level.pos = v(23, 89)
 	self.bar_level.anchor = v(0, 0)
 	self.bar_level.propagate_on_click = true
+	self.bar_level._disabled = true
 
 	self:add_child(self.bar_level)
 
 	self.ov_selected = KImageView:new("heroPortrait_selected")
 	self.ov_selected.hidden = true
 	self.ov_selected.propagate_on_click = true
+	self.ov_selected._disabled = true
 
 	self:add_child(self.ov_selected)
 
 	self.ov_hover = KImageView:new("heroPortrait_0003")
 	self.ov_hover.hidden = true
 	self.ov_hover.propagate_on_click = true
+	self.ov_hover._disabled = true
 
 	self:add_child(self.ov_hover)
 
@@ -2126,6 +2021,8 @@ function HeroPortrait:initialize(hero_entity)
 		from = 2
 	}
 	self.ov_levelup.ts = 100
+	self.ov_levelup.update = KF.update_only_own_animation
+	self.ov_levelup._disabled = true
 
 	self:add_child(self.ov_levelup)
 	self:update_xp(hero_entity)
@@ -2261,7 +2158,7 @@ function HeroPortrait:update(dt)
 
 			self.ov_cooldown.scale.y = phase - 1
 		end
-	elseif not e.health.dead and (self:is_disabled() or not self.ov_cooldown.hidden) then
+	elseif (self:is_disabled() or not self.ov_cooldown.hidden) then
 		self:enable()
 
 		self.ov_cooldown.hidden = true
@@ -2274,7 +2171,6 @@ function HeroPortrait:update(dt)
 		self.portrait_image_name = e.info.hero_portrait
 	end
 
-	-- HeroPortrait.super.update(self, dt)
 	self.ov_levelup:update(dt)
 end
 
@@ -2920,7 +2816,6 @@ function InfoBar:update(dt)
 	if self.hidden then
 		return
 	end
-	-- InfoBar.super.update(self, dt)
 
 	local e = game_gui.selected_entity
 
@@ -3073,6 +2968,7 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 	if bg_bar.size.x * ui_scale < sw then
 		bg_bar.scale.x = sw / bg_bar.size.x
 	end
+	bg_bar._disabled = true
 
 	self:add_child(bg_bar)
 
@@ -3086,11 +2982,12 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 	self:add_child(powers)
 
 	local base_powers = KImageView:new("base_powers_bg")
-
 	base_powers.anchor = v(103, base_powers.size.y)
 	base_powers.pos = v(123.5, powers.size.y)
-
+	base_powers._disabled = true
 	powers:add_child(base_powers)
+
+	self.power_buttons = {}
 
 	local power_1 = Power1Button:new()
 
@@ -3099,6 +2996,8 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 
 	powers:add_child(power_1)
 
+	self.power_buttons[1] = power_1
+
 	local power_2 = Power2Button:new()
 
 	power_2.cooldown_time = E:get_template("re_current_1").cooldown
@@ -3106,12 +3005,15 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 
 	powers:add_child(power_2)
 
+	self.power_buttons[2] = power_2
+
 	for i = 1, 2 do
 		local pb = powers.children[1 + i]
 		local pn = KImageView:new("power_nbrs_000" .. i)
 
 		pn.anchor = v(pn.size.x * 0.5, pn.size.y)
 		pn.pos = v(pb.pos.x + pb.size.x * 0.5, powers.size.y)
+		pn._disabled = true
 
 		powers:add_child(pn)
 	end
@@ -3123,6 +3025,7 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 	bg_center.anchor = v(bg_center.size.x * 0.5, bg_center.size.y)
 	bg_center.pos = v(x_center, sh)
 	bg_center.scale = v(ui_scale, ui_scale)
+	bg_center._disabled = true
 	self.bg_center = bg_center
 
 	self:add_child(bg_center)
@@ -3134,6 +3037,7 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 	infobar.pos_hidden = V.vclone(infobar.pos)
 	infobar.scale = v(ui_scale, ui_scale)
 	infobar.hidden = true
+	infobar._disabled = true
 	self.infobar = infobar
 
 	self:add_child(infobar)
@@ -3210,6 +3114,7 @@ function HudBottomView:add_hero(hero_entity)
 		separator.propagate_on_click = true
 		separator.propagate_on_down = true
 		separator.propagate_on_up = true
+		separator._disabled = true
 
 		self.herobar:add_child(separator)
 	else
@@ -3223,7 +3128,9 @@ function HudBottomView:add_hero(hero_entity)
 end
 
 function HudBottomView:update(dt)
-	self.powers:update(dt)
+	for i = 1, #self.power_buttons do
+		self.power_buttons[i]:update(dt)
+	end
 	self.infobar:update(dt)
 	self.herobar:update(dt)
 end
@@ -3237,7 +3144,7 @@ function HudCountersView:initialize(level_mode)
 	self.heart_x = 70
 	self.heart_y = 50
 	-- 对于不可交互的UI元素，应当直接设置其为 disabled，以减少碰撞检测的开销
-	self.disabled = true
+	self._disabled = true
 
 	local lbl_lives = GGLabel:new(V.v(71, 35))
 
@@ -3283,11 +3190,6 @@ function HudCountersView:initialize(level_mode)
 	self.lbl_lives_value = -1
 	self.lbl_gold_value = -1
 	self.lbl_wave_value = -1
-
--- 启用文本缓存优化（这些Label文本频繁变化，但每次只绘制不变的缓存）
--- lbl_lives:enable_text_cache()
--- lbl_gold:enable_text_cache()
--- lbl_wave:enable_text_cache()
 end
 
 function HudCountersView:update(dt)
@@ -3379,6 +3281,8 @@ function OverlayView:hide()
 	end)
 end
 
+OverlayView.update = KF.update_empty
+
 HudPauseButton = class("HudPauseButton", KImageView)
 
 function HudPauseButton:initialize()
@@ -3398,9 +3302,7 @@ function HudPauseButton:initialize()
 end
 
 --- 阻断 update，减小开销
-function HudPauseButton:update(dt)
-	return
-end
+HudPauseButton.update = KF.update_empty
 
 function HudPauseButton:hide()
 	if not self._original_pos_y then
@@ -3732,12 +3634,7 @@ function PauseView:hide()
 	end
 end
 
-function PauseView:update(dt)
-	if self.hidden then
-		return
-	end
-	PauseView.super.update(self, dt)
-end
+PauseView.update = KF.update_empty
 
 DefeatView = class("DefeatView", KView)
 
@@ -3811,9 +3708,7 @@ function DefeatView:show()
 	}, "out-back", nil, 1)
 end
 
--- 禁用 update 减小开销
-function DefeatView:update(dt)
-end
+DefeatView.update = KF.update_empty
 
 VictoryParticles = class("VictoryParticles", KView)
 
@@ -4104,9 +3999,11 @@ end
 
 MousePointer = class("MousePointer", KVirtualView)
 
-function MousePointer:initialize()
+function MousePointer:initialize(window)
 	MousePointer.super.initialize(self)
 
+	self.window = window
+	self.pos = window._last_mouse_screen_pos
 	self.propagate_on_click = true
 	self.propagate_on_down = true
 	self.propagate_on_up = true
@@ -4120,6 +4017,7 @@ function MousePointer:initialize()
 		from = 1
 	}
 	rally_tower.loop = true
+	rally_tower.update = KF.update_only_own_animation
 
 	local ipc = KImageView:new("error_feedback_0001")
 
@@ -4129,11 +4027,12 @@ function MousePointer:initialize()
 		prefix = "error_feedback",
 		from = 1
 	}
+	ipc.update = KF.update_only_own_animation
 
 	local pirate_camp = KImageView:new("pointer_pirate_cannons")
-
 	pirate_camp.anchor = v(pirate_camp.size.x * 0.5, pirate_camp.size.y * 0.5)
 	pirate_camp.alpha = 0.75
+	pirate_camp.update = KF.update_only_own_animation
 
 	local p1b, p2b, p3b, sunray_tower
 
@@ -4146,6 +4045,7 @@ function MousePointer:initialize()
 			from = 1
 		}
 		p1b.loop = true
+		p1b.update = KF.update_only_own_animation
 
 		local p1i = KImageView:new("pointer_user_power_0001")
 
@@ -4162,6 +4062,7 @@ function MousePointer:initialize()
 			from = 1
 		}
 		p1b.loop = true
+		p1b.update = KF.update_only_own_animation
 
 		local p1i = KImageView:new("pointer_hero_power_0017")
 
@@ -4179,12 +4080,11 @@ function MousePointer:initialize()
 		from = 1
 	}
 	p2b.loop = true
+	p2b.update = KF.update_only_own_animation
 
 	local p2i = KImageView:new("pointer_user_power_0002")
-
 	p2i.anchor = V.v(p2i.size.x * 0.5, p2i.size.y * 100 / 100)
 	p2i.pos.x, p2i.pos.y = p2b.size.x * 0.5, p2b.size.y * 0.5
-
 	p2b:add_child(p2i)
 
 	sunray_tower = KImageView:new("pointer_point_orange_0001")
@@ -4195,6 +4095,7 @@ function MousePointer:initialize()
 		from = 1
 	}
 	sunray_tower.loop = true
+	sunray_tower.update = KF.update_only_own_animation
 
 	local drop = KImageView:new("pointer_sunray_tower")
 
@@ -4306,14 +4207,9 @@ function MousePointer:update(dt)
 		return
 	end
 
-	if not self.window then
-		self.window = self:get_window()
+	for i = 1, #self.children do
+		self.children[i]:update(dt)
 	end
-
-	local x, y = self.window:get_mouse_position()
-
-	self.pos.x, self.pos.y = self.window:screen_to_view(x, y)
-	MousePointer.super.update(self, dt)
 end
 
 NotificationView = class("NotificationView", KView)
@@ -4502,29 +4398,9 @@ function NotificationView:show(id, no_transition, force_show)
 
 			table.insert(views, lv)
 
-			if DBG_SLIDE_EDITOR then
-				function lv.on_click(this)
-					if game_gui.SEL_VIEW and game_gui.SEL_VIEW._debug_old_bg_color then
-						if game_gui.SEL_VIEW._debug_old_bg_color == "none" then
-							game_gui.SEL_VIEW.colors.background = nil
-						else
-							game_gui.SEL_VIEW.colors.background = game_gui.SEL_VIEW._debug_old_bg_color
-						end
-
-						game_gui.SEL_VIEW._debug_old_bg_color = nil
-					end
-
-					game_gui.SEL_VIEW = this
-					this._debug_old_bg_color = this.colors and this.colors.background or "none"
-					this.colors.background = {255, 0, 0, 100}
-
-					log.debug("NotificationView - SEL_VIEW: %s", this.text)
-				end
-			else
-				lv.propagate_on_click = true
-				lv.propagate_on_down = true
-				lv.propagate_on_up = true
-			end
+			lv.propagate_on_click = true
+			lv.propagate_on_down = true
+			lv.propagate_on_up = true
 		end
 
 		return views, v_paper.size.x, v_paper.size.y
@@ -4670,30 +4546,6 @@ function NotificationView:show(id, no_transition, force_show)
 		v_photo.pos = V.v(134, 160 + offset_y)
 
 		table.insert(views, v_photo)
-
-		if DBG_SLIDE_EDITOR then
-			for _, v in pairs(views) do
-				if v:isInstanceOf(GGLabel) then
-					function v.on_click(this)
-						if game_gui.SEL_VIEW and game_gui.SEL_VIEW._debug_old_bg_color then
-							if game_gui.SEL_VIEW._debug_old_bg_color == "none" then
-								game_gui.SEL_VIEW.colors.background = nil
-							else
-								game_gui.SEL_VIEW.colors.background = game_gui.SEL_VIEW._debug_old_bg_color
-							end
-
-							game_gui.SEL_VIEW._debug_old_bg_color = nil
-						end
-
-						game_gui.SEL_VIEW = this
-						this._debug_old_bg_color = this.colors and this.colors.background or "none"
-						this.colors.background = {255, 0, 0, 100}
-
-						log.debug("create_layout - SEL_VIEW: %s", this.text)
-					end
-				end
-			end
-		end
 
 		return views, v_paper.size.x, v_paper.size.y
 	end
@@ -5263,17 +5115,9 @@ function TutorialBalloon:initialize(id)
 
 			table.insert(views, lv)
 
-			if DBG_SLIDE_EDITOR then
-				function lv.on_click(this)
-					game_gui.SEL_VIEW = this
-
-					log.debug("SEL_VIEW: %s", this.text)
-				end
-			else
-				lv.propagate_on_click = true
-				lv.propagate_on_down = true
-				lv.propagate_on_up = true
-			end
+			lv.propagate_on_click = true
+			lv.propagate_on_down = true
+			lv.propagate_on_up = true
 		end
 
 		for _, v in pairs(views) do
@@ -5411,8 +5255,6 @@ function TutorialBalloon:loop_tween()
 end
 
 function TutorialBalloon:hide()
-	log.debug("TutorialBalloon:hide %s", self.id)
-
 	if self.hidden or not self.parent then
 		return
 	end
@@ -5435,8 +5277,6 @@ function TutorialBalloon:hide()
 end
 
 function TutorialBalloon:remove(animated)
-	log.debug("TutorialBalloon:remove animated:%s, id:%s, parent:%s", animated, self.id, self.parent)
-
 	for _, h in pairs(self.sig_handles) do
 		local name, fn = unpack(h)
 
@@ -5469,8 +5309,6 @@ function TutorialBalloon:remove(animated)
 end
 
 function TutorialBalloon:show()
-	log.debug("TutorialBalloon:show id:%s", self.id)
-
 	if not self.hidden then
 		return
 	end
@@ -5608,7 +5446,6 @@ function AchievementBanner:hide()
 		end
 	end
 
-	self.timers = {}
 	self.active = false
 	self.timers = {timer:tween(0.5, self.pos, {
 		y = -1
@@ -5621,6 +5458,8 @@ function AchievementBanner:hide()
 		end
 	end)}
 end
+
+AchievementBanner.update = KF.update_empty
 
 -- 逻辑节点，用于处理鼠标悬停防御塔，选中实体的逻辑。
 PickView = class("PickView", KVirtualView)
@@ -5876,12 +5715,13 @@ function PickView:on_down(button, x, y)
 	end
 end
 
-RangeCircle = class("RangeCircle", KView)
+RangeCircle = class("RangeCircle", KVirtualView)
 
 function RangeCircle:initialize(sprite_name)
 	RangeCircle.super.initialize(self)
 
 	self.range_shown = nil
+	self._disabled = true
 
 	local tl = KImageView:new(sprite_name)
 	local tr = KImageView:new(sprite_name)
@@ -5912,8 +5752,7 @@ function RangeCircle:initialize(sprite_name)
 	self.actual_radius = v(tl.size.x, tl.size.y)
 end
 
-function RangeCircle:update(dt)
-end
+RangeCircle.update = KF.update_empty
 
 CriketMenuButton = class("CriketMenuButton", KView)
 
@@ -6066,12 +5905,7 @@ function CriketMenu:hide()
 	end)}
 end
 
-function CriketMenu:update(dt)
-	if self.hidden then
-		return
-	end
-	CriketMenu.super.update(self, dt)
-end
+CriketMenu.update = KF.update_empty
 
 function CriketMenu:button_enter(button)
 	if button.halo then
@@ -6303,12 +6137,7 @@ function HeroMenu:button_enter(button)
 	end
 end
 
-function HeroMenu:update(dt)
-	if self.hidden then
-		return
-	end
-	HeroMenu.super.update(self, dt)
-end
+HeroMenu.update = KF.update_empty
 
 function HeroMenu:button_exit(button)
 	if button.halo then
@@ -6549,8 +6378,6 @@ function TowerMenu:update(dt)
 	if self.hidden then
 		return
 	end
-
-	TowerMenu.super.update(self, dt)
 
 	if not game_gui.selected_entity or not game_gui.selected_entity.tower then
 		return
@@ -7087,7 +6914,7 @@ function TowerMenuTooltip:initialize()
 	self.phrase_label = phrase_label
 
 	-- 不可交互组件，设置 disabled。
-	self.disabled = true
+	self._disabled = true
 
 	self:add_child(phrase_label)
 end
@@ -8090,7 +7917,6 @@ function EndlessSelectRewardView:save()
 	game_gui.overlay:hide()
 end
 
-function EndlessSelectRewardView:update(dt)
-end
+EndlessSelectRewardView.update = KF.update_empty
 
 return game_gui
