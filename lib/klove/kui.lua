@@ -1244,6 +1244,7 @@ function KImageView:initialize(image_name, size, image_scale)
 	end
 end
 
+-- kui 的顶层模块，无 parent
 KWindow = class("KWindow", KView)
 
 KWindow:append_serialize_keys("origin")
@@ -1272,6 +1273,13 @@ function KWindow:draw_child(child)
 	G.translate(-self.anchor.x, -self.anchor.y)
 	child:draw()
 	G.pop()
+end
+
+--- 通过递归的方式，将坐标从世界坐标转换到相对坐标
+---@param x any
+---@param y any
+function KWindow:screen_to_view(x, y)
+	return vround((x - self.pos.x) / self.scale.x + self.anchor.x, (y - self.pos.y) / self.scale.y + self.anchor.y)
 end
 
 function KWindow:get_mouse_position()
@@ -1581,8 +1589,6 @@ function KWindow:update(dt)
 end
 
 function KWindow:focus_view(v)
-	log.debug("focus_view:%s", v)
-
 	local c = self.focused
 
 	if c then

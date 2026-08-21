@@ -693,16 +693,13 @@ function game_gui:update(dt)
 			end
 		end
 
-		local st = game_gui.swap_entity
-
-		if game_gui.mode == GUI_MODE_SWAP_TOWER and st and st.tower and st.tower.blocked then
-			game_gui:hide_ghost_hover()
-
-			game_gui.swap_entity = nil
-		end
-
-		-- if game_gui.mode == GUI_MODE_IDLE or game_gui.mode == GUI_MODE_SWAP_TOWER then
 		if game_gui.mode == GUI_MODE_SWAP_TOWER then
+			local st = game_gui.swap_entity
+			if st and st.tower and st.tower.blocked then
+				game_gui:hide_ghost_hover()
+
+				game_gui.swap_entity = nil
+			end
 			local x, y = game_gui.window:get_mouse_position()
 			local lx, ly = game_gui._last_mouse_pos_x, game_gui._last_mouse_pos_y
 
@@ -1094,24 +1091,6 @@ function game_gui:u2g(s)
 	-- return px, py
 	local px = ((s.x - self.sw / 2) * game_gui.gui_scale / game.camera.zoom + game.camera.x) / game.game_scale
 	local py = game.ref_h - ((s.y - self.sh / 2) * game_gui.gui_scale / game.camera.zoom + game.camera.y) / game.game_scale
-
-	return px, py
-end
-
-function game_gui:g2u_old(p, snap)
-	local sx = (p.x * self.game.game_scale + self.game.game_ref_origin.x - self.window.origin.x) / self.gui_scale
-	local sy = (-1 * (p.y * self.game.game_scale + self.game.game_ref_origin.y - self.sh * self.gui_scale) - self.window.origin.y) / self.gui_scale
-
-	if snap then
-		sx, sy = math.floor(sx + 0.5), math.floor(sy + 0.5)
-	end
-
-	return sx, sy
-end
-
-function game_gui:u2g_old(s)
-	local px = (s.x * self.gui_scale + self.window.origin.x - self.game.game_ref_origin.x) / self.game.game_scale
-	local py = (self.sh * self.gui_scale - (s.y * self.gui_scale + self.window.origin.y) - self.game.game_ref_origin.y) / self.game.game_scale
 
 	return px, py
 end
