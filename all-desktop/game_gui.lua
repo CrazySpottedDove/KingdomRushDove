@@ -1823,8 +1823,6 @@ function SpeedStateIndicator:update(dt)
 	self.label.colors.text[1], self.label.colors.text[2], self.label.colors.text[3] = math.floor((math.sin(store.ts) + 1) * 127.5 + 127.5), math.floor((math.sin(store.ts + 2) + 1) * 127.5 + 127.5), math.floor((math.sin(store.ts + 4) + 1) * 127.5 + 127.5)
 end
 
-SpeedStateIndicator.draw = KF.draw_without_children_and_clip
-
 TimeRewardFx = class("TimeRewardFx", KView)
 
 function TimeRewardFx:initialize(amount)
