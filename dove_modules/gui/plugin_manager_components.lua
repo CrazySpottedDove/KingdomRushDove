@@ -19,13 +19,13 @@ local ACCENT_W = 6
 -- ─────────────────────────────────────────────
 -- PluginActionButton
 -- ─────────────────────────────────────────────
-PluginActionButton = class("PluginActionButton", KButton)
+PluginActionButton = class("PluginActionButton", KButtonNoText)
 
 function PluginActionButton:initialize(text, size)
 	local rs = GGLabel.static.ref_h / REF_H
 	local w = size and size.x or 110
 	local h = size and size.y or 34
-	KButton.initialize(self, V.v(w, h))
+	KButtonNoText.initialize(self, V.v(w, h))
 	self.text = ""
 	self._text = utf8_util.sanitize(text or "")
 	self.enabled = true
@@ -93,13 +93,13 @@ end
 -- ─────────────────────────────────────────────
 -- PluginToggleButton
 -- ─────────────────────────────────────────────
-PluginToggleButton = class("PluginToggleButton", KButton)
+PluginToggleButton = class("PluginToggleButton", KButtonNoText)
 
 function PluginToggleButton:initialize(initial_value, size)
 	local rs = GGLabel.static.ref_h / REF_H
 	local w = size and size.x or 84
 	local h = size and size.y or 36
-	KButton.initialize(self, V.v(w, h))
+	KButtonNoText.initialize(self, V.v(w, h))
 	self.shape = {
 		name = "rectangle",
 		args = {"fill", 0, 0, w, h, 9, 9}

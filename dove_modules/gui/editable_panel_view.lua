@@ -15,11 +15,11 @@ local function CJK(default, zh, ja, kr)
 	return i18n.cjk(i18n, default, zh, ja, kr)
 end
 
-local EditableItem = class("EditableItem", KButton)
+local EditableItem = class("EditableItem", KButtonNoText)
 function EditableItem:initialize(key_text, initial_value, size, keyboard, controller, editable_group)
 	size = size or V.v(300, 40)
 
-	KButton.initialize(self, size)
+	KButtonNoText.initialize(self, size)
 	self.keyboard = keyboard
 	self.controller = controller
 	self.editable_group = editable_group
