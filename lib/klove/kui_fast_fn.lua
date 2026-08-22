@@ -164,6 +164,7 @@ local M = {
 		G.pop()
 		G.setColor(pr, pg, pb, pa)
 	end
+-- _draw_self_KView_
 }
 
 return M

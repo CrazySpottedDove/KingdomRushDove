@@ -516,17 +516,7 @@ end
 ---image 为 string 时，若有 size，使用 size 设置 self.size，否则使用 image 数据库中该名称的尺寸设置 self.size
 ---image 为 nil 时，若有 size，使用 size 设置 self.size，否则 self.size 不变
 function KView:set_image(image, size)
-	local w, h = 0, 0
-
-	if image and type(image) == "userdata" then
-		self.image = image
-
-		if size then
-			w, h = size.x, size.y
-		else
-			w, h = self.image:getDimensions()
-		end
-	elseif image and type(image) == "string" then
+	if type(image) == "string" then
 		self.image_name = image
 
 		local ss = I:s(image)
@@ -541,15 +531,13 @@ function KView:set_image(image, size)
 		local ref_scale = (ss.ref_scale or 1) * self.image_scale
 
 		if size then
-			w, h = size.x, size.y
+			self.size.x, self.size.y = size.x, size.y
 		else
-			w, h = ss.size[1] * ref_scale, ss.size[2] * ref_scale
+			self.size.x, self.size.y = ss.size[1] * ref_scale, ss.size[2] * ref_scale
 		end
 	elseif size then
-		w, h = size.x, size.y
+		self.size.x, self.size.y = size.x, size.y
 	end
-
-	self.size.x, self.size.y = w, h
 end
 
 --- 解引用释放资源
@@ -683,12 +671,6 @@ function KView:_draw_self()
 		local ref_scale = (ss.ref_scale or 1) * self.image_scale
 
 		G.draw(self.image, ss.quad, ss.trim[1] * ref_scale, ss.trim[2] * ref_scale, 0, ref_scale)
-	elseif self.image then
-		local iw, ih = self.image:getDimensions()
-		local ix = (self.size.x - iw * self.image_scale) * 0.5
-		local iy = (self.size.y - ih * self.image_scale) * 0.5
-
-		G.draw(self.image, ix, iy, 0, self.image_scale, self.image_scale)
 	end
 
 	G.setColor(pr, pg, pb, pa)
