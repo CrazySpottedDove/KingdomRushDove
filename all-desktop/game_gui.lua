@@ -1964,7 +1964,6 @@ function HeroPortrait:initialize(hero_entity)
 	self.ov_cooldown.hidden = true
 	self.ov_cooldown._disabled = true
 	self.ov_cooldown.draw = KF.draw_without_children_and_clip
-	self.ov_cooldown._draw_self = KF._draw_self_KView_colored
 
 	self:add_child(self.ov_cooldown)
 
