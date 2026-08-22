@@ -495,41 +495,37 @@ function game_gui:init(w, h, game)
 	end
 	comic_transition.update = KF.update_empty
 
-	-- local layer_gui = KView:new()
 	local layer_gui = KVirtualView:new()
-
 	layer_gui.id = "layer_gui"
 	layer_gui.pos = v(0, 0)
 	layer_gui.size = v(sw, sh)
 	layer_gui.propagate_on_click = true
 	layer_gui.propagate_on_down = true
+	layer_gui.draw = KF.draw_transparent
 
-	-- local layer_gui_game = KView:new()
 	local layer_gui_game = KVirtualView:new()
-
 	layer_gui_game.id = "layer_gui_game"
 	layer_gui_game.pos = v(0, 0)
 	layer_gui_game.size = v(sw, sh)
 	layer_gui_game.propagate_on_click = true
 	layer_gui_game.propagate_on_down = true
+	layer_gui_game.draw = KF.draw_transparent
 
-	-- local layer_gui_hud = KView:new()
 	local layer_gui_hud = KVirtualView:new()
-
 	layer_gui_hud.id = "layer_gui_hud"
 	layer_gui_hud.pos = v(0, 0)
 	layer_gui_hud.size = v(sw, sh)
 	layer_gui_hud.propagate_on_click = true
 	layer_gui_hud.propagate_on_down = true
+	layer_gui_hud.draw = KF.draw_transparent
 
-	-- local layer_gui_top = KView:new()
 	local layer_gui_top = KVirtualView:new()
-
 	layer_gui_top.id = "layer_gui_top"
 	layer_gui_top.pos = v(0, 0)
 	layer_gui_top.size = v(sw, sh)
 	layer_gui_top.propagate_on_click = true
 	layer_gui_top.propagate_on_down = true
+	layer_gui_top.draw = KF.draw_transparent
 
 	layer_gui_game:add_child(rallyrange)
 	layer_gui_game:add_child(tower_range)
@@ -954,7 +950,7 @@ function game_gui:keypressed(key, isrepeat)
 		game_gui.game.store.player_gold = game_gui.game.store.player_gold + 99999
 	elseif ks.healthy == key then
 		game_gui.game.store.lives = game_gui.game.store.lives + 100
-	elseif ks.fps == key then
+	elseif configer.ui_settings().perf_enabled and ks.fps == key then
 		require("dove_modules.perf.perf_ui").toggle()
 	elseif ks.random_towers == key then
 		game_gui:build_random_towers()
@@ -3559,16 +3555,18 @@ function PauseView:initialize()
 		end
 		self:add_child(btn_force_wave)
 
-		button_height = button_height + 100
-		local btn_perf = GGOptionsButton:new("性能检测")
-		btn_perf:set_anchor_to_center()
-		btn_perf.pos.x = right_x
-		btn_perf.pos.y = button_height
-		function btn_perf.on_click()
-			S:queue("GUIButtonCommon")
-			require("dove_modules.perf.perf_ui").toggle()
+		if configer.ui_settings().perf_enabled then
+			button_height = button_height + 100
+			local btn_perf = GGOptionsButton:new("性能检测")
+			btn_perf:set_anchor_to_center()
+			btn_perf.pos.x = right_x
+			btn_perf.pos.y = button_height
+			function btn_perf.on_click()
+				S:queue("GUIButtonCommon")
+				require("dove_modules.perf.perf_ui").toggle()
+			end
+			self:add_child(btn_perf)
 		end
-		self:add_child(btn_perf)
 	end
 
 	mx = 45

@@ -165,6 +165,10 @@ local M = {
 		G.pop()
 		G.setColor(pr, pg, pb, pa)
 	end,
+	-- 确认该节点 scale, r, anchor, alpha 都是默认值，且没有 clip, 没有 children, 没有 focus 绘制逻辑，只进行透明的 draw 转发
+	draw_transparent = function(self)
+		self:_draw_children()
+	end,
 	_draw_self_KView_no_color = function(self)
 		local ss = self.image_ss
 		local ref_scale = ss.ref_scale * self.image_scale
@@ -238,7 +242,6 @@ local M = {
 		self.image = I:i(ss.atlas)
 		local ref_scale = ss.ref_scale * self.image_scale
 		G.draw(self.image, ss.quad, ss.trim[1] * ref_scale, ss.trim[2] * ref_scale, 0, ref_scale)
-
 		G.setColor(pr, pg, pb, pa)
 	end
 }

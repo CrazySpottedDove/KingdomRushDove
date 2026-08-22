@@ -1524,7 +1524,37 @@ else
 		perf.stop("game_draw")
 		perf.start("game_gui_draw")
 		-- KFD.draw(self.game_gui.window, self.game_gui.layer_gui)
-		self.game_gui.window:draw_child(self.game_gui.layer_gui)
+
+		-- 手动内联 game_gui 绘制逻辑
+		local window = self.game_gui.window
+		G.push()
+		G.translate(window.origin.x, window.origin.y)
+		G.scale(window.scale.x, window.scale.y)
+		G.rotate(-window.r)
+		G.translate(-window.anchor.x, -window.anchor.y)
+		local layer_gui = self.game_gui.layer_gui
+
+		local c = layer_gui.children[1]
+		if not c.hidden then
+			G.push()
+			G.translate(c.pos.x, c.pos.y)
+			c:draw()
+			G.pop()
+		end
+
+		c = layer_gui.children[2]
+		if not c.hidden then
+			G.push()
+			G.translate(c.pos.x, c.pos.y)
+			c:draw()
+			G.pop()
+		end
+
+		layer_gui.children[3]:draw()
+		layer_gui.children[4]:draw()
+		layer_gui.children[5]:draw()
+
+		G.pop()
 		perf.stop("game_gui_draw")
 
 		d.numbers_draw(self)

@@ -63,6 +63,7 @@ function M.register(sys)
 	sys.level.name = "level"
 
 	function sys.level:init_coroutined(store)
+		perf.set_enabled(configer.ui_settings().perf_enabled)
 		perf.clear()
 		local slot = storage:load_slot(nil, true)
 

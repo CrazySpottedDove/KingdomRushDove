@@ -48,6 +48,9 @@ function love.filesystem.loadWithPreference(filename, prefixs)
 end
 
 local perf = require("dove_modules.perf.perf")
+local configer = require("dove_modules.configer")
+perf.set_enabled(configer.ui_settings().perf_enabled)
+
 love.graphics.setColor_old = function(r, g, b, a)
 	if type(r) == "table" then
 		-- 支持 table 形式
