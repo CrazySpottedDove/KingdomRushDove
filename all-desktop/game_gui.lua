@@ -10,7 +10,7 @@ local km = require("lib.klua.macros")
 require("lib.klua.table")
 require("klove.kui")
 
-local KF = require("klove.kui_fast_fn")
+local KF = require("lib.klove.kui_fast_fn")
 
 local kui_db = require("klove.kui_db")
 local timer = require("hump.timer"):new()
@@ -1826,6 +1826,8 @@ function SpeedStateIndicator:update(dt)
 	self.label.colors.text[1], self.label.colors.text[2], self.label.colors.text[3] = math.floor((math.sin(store.ts) + 1) * 127.5 + 127.5), math.floor((math.sin(store.ts + 2) + 1) * 127.5 + 127.5), math.floor((math.sin(store.ts + 4) + 1) * 127.5 + 127.5)
 end
 
+SpeedStateIndicator.draw = KF.draw_without_children_and_clip
+
 TimeRewardFx = class("TimeRewardFx", KView)
 
 function TimeRewardFx:initialize(amount)
@@ -1945,8 +1947,10 @@ function HeroPortrait:initialize(hero_entity)
 	self.portrait_image_name = hero_entity.info.hero_portrait
 	self.portrait = KImageView:new(self.portrait_image_name)
 	self.portrait._disabled = true
+	self.portrait.draw = KF.draw_without_children_and_clip
 	self.portrait_bo = KImageView:new("hero_portraits_0000")
 	self.portrait_bo._disabled = true
+	self.portrait_bo.draw = KF.draw_without_children_and_clip
 	self.portrait.propagate_on_click = true
 
 	self:add_child(self.portrait)
@@ -1959,6 +1963,7 @@ function HeroPortrait:initialize(hero_entity)
 	self.ov_cooldown.propagate_on_click = true
 	self.ov_cooldown.hidden = true
 	self.ov_cooldown._disabled = true
+	self.ov_cooldown.draw = KF.draw_without_children_and_clip
 
 	self:add_child(self.ov_cooldown)
 
@@ -1966,6 +1971,7 @@ function HeroPortrait:initialize(hero_entity)
 	self.frame.disabled_tint_color = {0.7843137254902, 0.7843137254902, 0.7843137254902, 1}
 	self.frame.propagate_on_click = true
 	self.frame._disabled = true
+	self.frame.draw = KF.draw_without_children_and_clip
 
 	self:add_child(self.frame)
 
@@ -1978,6 +1984,7 @@ function HeroPortrait:initialize(hero_entity)
 	self.level.text = "1"
 	self.level.propagate_on_click = true
 	self.level._disabled = true
+	self.level.draw = KF.draw_without_children_and_clip
 
 	self:add_child(self.level)
 
@@ -1988,6 +1995,7 @@ function HeroPortrait:initialize(hero_entity)
 	self.bar_health._overflow_color = {0, 0.7843137254902, 1, 1}
 	self.bar_health.normal_color = {1, 1, 1, 1}
 	self.bar_health._disabled = true
+	self.bar_health.draw = KF.draw_without_children_and_clip
 
 	self:add_child(self.bar_health)
 
@@ -1996,6 +2004,7 @@ function HeroPortrait:initialize(hero_entity)
 	self.bar_level.anchor = v(0, 0)
 	self.bar_level.propagate_on_click = true
 	self.bar_level._disabled = true
+	self.bar_level.draw = KF.draw_without_children_and_clip
 
 	self:add_child(self.bar_level)
 
@@ -2003,6 +2012,7 @@ function HeroPortrait:initialize(hero_entity)
 	self.ov_selected.hidden = true
 	self.ov_selected.propagate_on_click = true
 	self.ov_selected._disabled = true
+	self.ov_selected.draw = KF.draw_without_children_and_clip
 
 	self:add_child(self.ov_selected)
 
@@ -2010,6 +2020,7 @@ function HeroPortrait:initialize(hero_entity)
 	self.ov_hover.hidden = true
 	self.ov_hover.propagate_on_click = true
 	self.ov_hover._disabled = true
+	self.ov_hover.draw = KF.draw_without_children_and_clip
 
 	self:add_child(self.ov_hover)
 
@@ -2023,6 +2034,7 @@ function HeroPortrait:initialize(hero_entity)
 	self.ov_levelup.ts = 100
 	self.ov_levelup.update = KF.update_only_own_animation
 	self.ov_levelup._disabled = true
+	self.ov_levelup.draw = KF.draw_without_children_and_clip
 
 	self:add_child(self.ov_levelup)
 	self:update_xp(hero_entity)
@@ -2160,6 +2172,10 @@ function HeroPortrait:update(dt)
 		end
 	elseif (self:is_disabled() or not self.ov_cooldown.hidden) then
 		self:enable()
+		-- workaround: 手动消除 disabled tint，理由见 kui.lua TODO(apply_disabled_tint)
+		for _, c in ipairs(self.children) do
+			c.colors.tint = nil
+		end
 
 		self.ov_cooldown.hidden = true
 		self.ov_levelup.ts = 0
@@ -2173,6 +2189,8 @@ function HeroPortrait:update(dt)
 
 	self.ov_levelup:update(dt)
 end
+
+HeroPortrait.draw = KF.draw_without_clip_and_scroll
 
 PowerButton = class("PowerButton", KButton)
 
@@ -2192,6 +2210,8 @@ function PowerButton:initialize(default_image, mask_image)
 	cv.colors.background = {0, 0, 0, 150}
 	cv.hidden = true
 	cv.propagate_on_click = true
+	cv._disabled = true
+	cv.draw = KF.draw_without_children_and_clip
 
 	self:add_child(cv)
 
@@ -2199,7 +2219,8 @@ function PowerButton:initialize(default_image, mask_image)
 
 	if mask_image then
 		self.mask = KImageView:new(mask_image)
-
+		self.mask.draw = KF.draw_without_children_and_clip
+		self.mask._disabled = true
 		self:add_child(self.mask)
 	end
 end
@@ -2306,6 +2327,8 @@ function PowerButton:early_wave_bonus(remaining_time)
 		self:add_child(reward_fx)
 	end
 end
+
+PowerButton.draw = KF.draw_without_clip_and_scroll
 
 Power1Button = class("Power1Button", PowerButton)
 
@@ -2969,7 +2992,7 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 		bg_bar.scale.x = sw / bg_bar.size.x
 	end
 	bg_bar._disabled = true
-
+	bg_bar.draw = KF.draw_without_children_and_clip
 	self:add_child(bg_bar)
 
 	local powers = GG9View:new("bg_bottom_left", V.v(247, 36), V.r(140, 36, 10, 1))
@@ -2977,6 +3000,7 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 	powers.anchor = v(0, powers.size.y)
 	powers.pos = v(105, sh)
 	powers.scale = v(ui_scale, ui_scale)
+	powers.draw = KF.draw_without_clip_and_scroll
 	self.powers = powers
 
 	self:add_child(powers)
@@ -2985,6 +3009,7 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 	base_powers.anchor = v(103, base_powers.size.y)
 	base_powers.pos = v(123.5, powers.size.y)
 	base_powers._disabled = true
+	base_powers.draw = KF.draw_without_children_and_clip
 	powers:add_child(base_powers)
 
 	self.power_buttons = {}
@@ -3014,6 +3039,7 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 		pn.anchor = v(pn.size.x * 0.5, pn.size.y)
 		pn.pos = v(pb.pos.x + pb.size.x * 0.5, powers.size.y)
 		pn._disabled = true
+		pn.draw = KF.draw_without_children_and_clip
 
 		powers:add_child(pn)
 	end
@@ -3026,6 +3052,7 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 	bg_center.pos = v(x_center, sh)
 	bg_center.scale = v(ui_scale, ui_scale)
 	bg_center._disabled = true
+	bg_center.draw = KF.draw_without_children_and_clip
 	self.bg_center = bg_center
 
 	self:add_child(bg_center)
@@ -3115,6 +3142,7 @@ function HudBottomView:add_hero(hero_entity)
 		separator.propagate_on_down = true
 		separator.propagate_on_up = true
 		separator._disabled = true
+		separator.draw = KF.draw_without_children_and_clip
 
 		self.herobar:add_child(separator)
 	else
@@ -3135,6 +3163,8 @@ function HudBottomView:update(dt)
 	self.herobar:update(dt)
 end
 
+HudBottomView.draw = KF.draw_without_clip_and_scroll
+
 HudCountersView = class("HudCountersView", KView)
 
 function HudCountersView:initialize(level_mode)
@@ -3154,6 +3184,7 @@ function HudCountersView:initialize(level_mode)
 	lbl_lives.font_name = "hud"
 	lbl_lives.font_size = 12
 	lbl_lives.colors.text = {255, 255, 255}
+	lbl_lives.draw = KF.draw_without_children_and_clip
 
 	local lbl_gold = GGLabel:new(V.v(71, 35))
 
@@ -3163,6 +3194,7 @@ function HudCountersView:initialize(level_mode)
 	lbl_gold.font_name = "hud"
 	lbl_gold.font_size = 12
 	lbl_gold.colors.text = {255, 255, 255}
+	lbl_gold.draw = KF.draw_without_children_and_clip
 
 	local lbl_wave = GGLabel:new(V.v(game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS and 25 or 74, 28))
 
@@ -3176,6 +3208,7 @@ function HudCountersView:initialize(level_mode)
 	lbl_wave.fit_lines = 1
 	lbl_wave.colors.text = {255, 255, 255}
 	lbl_wave.colors.background = DEBUG_BACKGROUND_COLOR
+	lbl_wave.draw = KF.draw_without_children_and_clip
 
 	self:add_child(lbl_lives)
 	self:add_child(lbl_gold)
@@ -3244,6 +3277,8 @@ function HudCountersView:show()
 	end)
 end
 
+HudCountersView.draw = KF.draw_without_clip_and_scroll
+
 OverlayView = class("OverlayView", KView)
 
 function OverlayView:initialize(sw, sh)
@@ -3292,6 +3327,7 @@ function HudPauseButton:initialize()
 
 	button.anchor = v(button.size.x * 0.5, 0)
 	button.pos = v(self.size.x * 0.5, 25)
+	button.draw = KF.draw_without_children_and_clip
 
 	function button.on_click()
 		S:queue("GUIButtonCommon")
@@ -3303,6 +3339,7 @@ end
 
 --- 阻断 update，减小开销
 HudPauseButton.update = KF.update_empty
+HudPauseButton.draw = KF.draw_without_clip_and_scroll
 
 function HudPauseButton:hide()
 	if not self._original_pos_y then
@@ -4910,7 +4947,6 @@ NotificationQueue = class("NotificationQueue", KView)
 function NotificationQueue:initialize(w, h)
 	NotificationQueue.super.initialize(self, V.v(w, h))
 
-	self.clip = false
 	self.colors.background = {0, 0, 0, 0}
 	self.space_y = 10
 end
@@ -5468,7 +5504,6 @@ function PickView:initialize(w, h)
 	PickView.super.initialize(self)
 
 	self.size = v(w, h)
-	self.clip = false
 	self.colors.background = {0, 0, 0, 0}
 end
 
@@ -5715,6 +5750,8 @@ function PickView:on_down(button, x, y)
 	end
 end
 
+PickView.draw = KF.draw_empty
+
 RangeCircle = class("RangeCircle", KVirtualView)
 
 function RangeCircle:initialize(sprite_name)
@@ -5740,6 +5777,10 @@ function RangeCircle:initialize(sprite_name)
 	tr.propagate_on_down = true
 	bl.propagate_on_down = true
 	br.propagate_on_down = true
+	tl.draw = KF.draw_without_children_and_clip
+	tr.draw = KF.draw_without_children_and_clip
+	bl.draw = KF.draw_without_children_and_clip
+	br.draw = KF.draw_without_children_and_clip
 
 	self:add_child(tl)
 	self:add_child(tr)
@@ -5753,6 +5794,7 @@ function RangeCircle:initialize(sprite_name)
 end
 
 RangeCircle.update = KF.update_empty
+RangeCircle.draw = KF.draw_without_clip_and_scroll
 
 CriketMenuButton = class("CriketMenuButton", KView)
 
@@ -5829,7 +5871,6 @@ function CriketMenu:initialize()
 	self.propagate_on_down = true
 	self.propagate_on_up = true
 	self.propagate_on_enter = true
-	self.clip = false
 end
 
 function CriketMenu:show()
@@ -6055,7 +6096,6 @@ function HeroMenu:initialize()
 	self.propagate_on_down = true
 	self.propagate_on_up = true
 	self.propagate_on_enter = true
-	self.clip = false
 end
 
 function HeroMenu:show()
@@ -6165,7 +6205,6 @@ function TowerMenu:initialize()
 	self.propagate_on_up = true
 	self.propagate_on_enter = true
 	self.anchor = v(self.size.x * 0.5, self.size.y * 0.5)
-	self.clip = false
 end
 
 function TowerMenu:show(tower_menu)
@@ -7763,6 +7802,8 @@ end
 function SelectGroup:set_on_data_change_callback(callback)
 	self.on_data_change_callback = callback
 end
+
+SelectGroup._draw_children = KF._draw_children_with_clip_view
 
 SelectPanelView = class("SelectPanelView", PopUpView)
 

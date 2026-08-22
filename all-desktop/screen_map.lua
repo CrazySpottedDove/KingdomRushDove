@@ -941,7 +941,6 @@ function screen_map:refresh_hero_button_state()
 		p1.clip = false
 		p1.clip_fn = nil
 		p1.size.x = W
-		p1.image_offset = nil
 		p1.pos.x = 0
 		p1.pos.y = 0
 		p1.hidden = false
@@ -955,7 +954,6 @@ function screen_map:refresh_hero_button_state()
 		p1.clip = false
 		p1.clip_fn = nil
 		p1.size.x = W
-		p1.image_offset = nil
 		p1.pos.x = 0
 		p1.pos.y = 0
 		p1.hidden = false
@@ -971,7 +969,6 @@ function screen_map:refresh_hero_button_state()
 		p1.image_scale = 1
 		p1.clip = true
 		p1.size.x = W
-		p1.image_offset = nil
 		p1.pos.x = 0
 		p1.pos.y = 0
 		p1.clip_fn = function()
@@ -983,7 +980,6 @@ function screen_map:refresh_hero_button_state()
 		p2.image_scale = 1
 		p2.clip = true
 		p2.size.x = W
-		p2.image_offset = nil
 		p2.pos.x = 0
 		p2.pos.y = 0
 		p2.clip_fn = function()

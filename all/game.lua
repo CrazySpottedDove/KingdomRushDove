@@ -22,6 +22,7 @@ local G = love.graphics
 local bit = require("bit")
 local storage = require("all.storage")
 local adaptive_fps = require("dove_modules.perf.adaptive_fps")
+-- local KFD = require("klove.kui_fast_draw")
 
 require("all.constants")
 
@@ -446,6 +447,12 @@ function game:keypressed(key, isrepeat)
 			return true
 		end
 	end
+
+	-- if key == "f9" then
+	-- 	KFD.toggle()
+
+	-- 	return true
+	-- end
 
 	return self.game_gui:keypressed(key, isrepeat)
 end
@@ -1471,6 +1478,7 @@ if IS_ANDROID then
 
 		perf.stop("game_draw")
 		perf.start("game_gui_draw")
+		-- KFD.draw(self.game_gui.window, self.game_gui.layer_gui)
 		self.game_gui.window:draw_child(self.game_gui.layer_gui)
 		perf.stop("game_gui_draw")
 
@@ -1515,6 +1523,7 @@ else
 
 		perf.stop("game_draw")
 		perf.start("game_gui_draw")
+		-- KFD.draw(self.game_gui.window, self.game_gui.layer_gui)
 		self.game_gui.window:draw_child(self.game_gui.layer_gui)
 		perf.stop("game_gui_draw")
 

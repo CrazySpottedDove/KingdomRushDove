@@ -1,3 +1,4 @@
+local G = love.graphics
 local M = {
 	-- 空 update 实现
 	update_empty = function(self, dt)
@@ -13,6 +14,155 @@ local M = {
 		for i = 1, #self.children do
 			self.children[i]:update(dt)
 		end
+	end,
+	_draw_children_with_clip_view = function(self)
+		local cv = self.clip_view
+		local clip_x, clip_y = cv:view_to_view(0, 0, self)
+		local clip_xw, clip_yh = cv:view_to_view(cv.size.x, cv.size.y, self)
+
+		for i = 1, #self.children do
+			local c = self.children[i]
+			if not (c.hidden or (clip_xw < c.pos.x or clip_x > c.pos.x + c.size.x or clip_yh < c.pos.y or clip_y > c.pos.y + c.size.y)) then
+				G.push()
+				G.translate(c.pos.x, c.pos.y)
+				c:draw()
+				G.pop()
+			end
+		end
+	end,
+	_draw_children_with_padding = function(self)
+		G.push()
+		G.translate(self.padding.x, self.padding.y)
+
+		for i = 1, #self.children do
+			local c = self.children[i]
+			if not c.hidden then
+				G.push()
+				G.translate(c.pos.x, c.pos.y)
+				c:draw()
+				G.pop()
+			end
+		end
+
+		G.pop()
+	end,
+	draw_without_clip_and_scroll = function(self)
+		local pr, pg, pb, pa = G.getColor()
+		local current_alpha = pa * self.alpha
+
+		G.setColor(1, 1, 1, current_alpha)
+		G.push()
+		-- 转移坐标系
+		G.scale(self.scale.x, self.scale.y)
+		G.rotate(-self.r)
+		G.translate(-self.anchor.x, -self.anchor.y)
+
+		self:_draw_self()
+		self:_draw_children()
+
+		if self._focused then
+			if self.draw_focus then
+				self:draw_focus()
+			end
+
+			if self.colors.focused_outline then
+				G.setColor_old(self.colors.focused_outline)
+				G.rectangle("line", -1, -1, self.size.x + 1, self.size.y + 1)
+			end
+		end
+
+		G.pop()
+		G.setColor(pr, pg, pb, pa)
+	end,
+	-- 叶子节点
+	draw_without_children = function(self)
+		local pr, pg, pb, pa = G.getColor()
+		local current_alpha = pa * self.alpha
+
+		G.setColor(1, 1, 1, current_alpha)
+		G.push()
+		-- 转移坐标系
+		G.scale(self.scale.x, self.scale.y)
+		G.rotate(-self.r)
+		G.translate(-self.anchor.x, -self.anchor.y)
+
+		if self.clip then
+			if not self.clip_fn then
+				self.clip_fn = function()
+					G.rectangle("fill", 0, 0, self.size.x, self.size.y)
+				end
+			end
+
+			G.stencil(self.clip_fn)
+			G.setStencilTest("greater", 0)
+		end
+
+		self:_draw_self()
+
+		if self.clip then
+			G.setStencilTest()
+		end
+
+		if self._focused then
+			if self.draw_focus then
+				self:draw_focus()
+			end
+
+			if self.colors.focused_outline then
+				G.setColor_old(self.colors.focused_outline)
+				G.rectangle("line", -1, -1, self.size.x + 1, self.size.y + 1)
+			end
+		end
+
+		G.pop()
+		G.setColor(pr, pg, pb, pa)
+	end,
+	-- 无 clip 的叶子节点
+	draw_without_children_and_clip = function(self)
+		local pr, pg, pb, pa = G.getColor()
+		local current_alpha = pa * self.alpha
+
+		G.setColor(1, 1, 1, current_alpha)
+		G.push()
+		-- 转移坐标系
+		G.scale(self.scale.x, self.scale.y)
+		G.rotate(-self.r)
+		G.translate(-self.anchor.x, -self.anchor.y)
+
+		self:_draw_self()
+
+		if self._focused then
+			if self.draw_focus then
+				self:draw_focus()
+			end
+
+			if self.colors.focused_outline then
+				G.setColor_old(self.colors.focused_outline)
+				G.rectangle("line", -1, -1, self.size.x + 1, self.size.y + 1)
+			end
+		end
+
+		G.pop()
+		G.setColor(pr, pg, pb, pa)
+	end,
+	-- 没有孩子，自己也没有回绘制逻辑
+	draw_empty = function(self)
+	end,
+	-- 自己没有绘制逻辑，没有 focuse 逻辑，只是一个逻辑节点，用于管理孩子
+	draw_virtual = function(self)
+		local pr, pg, pb, pa = G.getColor()
+		local current_alpha = pa * self.alpha
+
+		G.setColor(1, 1, 1, current_alpha)
+		G.push()
+		-- 转移坐标系
+		G.scale(self.scale.x, self.scale.y)
+		G.rotate(-self.r)
+		G.translate(-self.anchor.x, -self.anchor.y)
+
+		self:_draw_children()
+		G.pop()
+		G.setColor(pr, pg, pb, pa)
 	end
 }
 

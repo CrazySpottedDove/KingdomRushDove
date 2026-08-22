@@ -4,6 +4,7 @@ local V = require("lib.klua.vector")
 local S = require("sound_db")
 local i18n = require("i18n")
 local utf8 = require("utf8")
+local KF = require("lib.klove.kui_fast_fn")
 require("lib.klua.table")
 
 require("klove.kui")
@@ -348,6 +349,8 @@ function EditableGroup:clear_focus()
 		item:set_focused(false)
 	end
 end
+
+EditableGroup._draw_children = KF._draw_children_with_padding
 
 function EditableGroup:set_key_order_list(key_order_list)
 	self.key_order_list = key_order_list

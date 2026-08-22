@@ -7844,7 +7844,7 @@ scripts.shock_djinn = {}
 function scripts.shock_djinn.insert(this, store)
 	local target = store.entities[this.spell.target_id]
 
-	if target.health.dead then
+	if not target or target.health.dead then
 		queue_remove(store, this)
 
 		return false

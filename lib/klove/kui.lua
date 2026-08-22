@@ -4,7 +4,7 @@ local log = require("lib.klua.log"):new("kui")
 require("lib.klua.table")
 local perf = require("dove_modules.perf.perf")
 local km = require("lib.klua.macros")
-
+local KF = require("lib.klove.kui_fast_fn")
 local V = require("lib.klua.vector")
 local I = require("lib.klove.image_db")
 local F = require("lib.klove.font_db")
@@ -446,7 +446,7 @@ end
 
 KView = class("KView", KObject)
 
-KView:append_serialize_keys("pos", "size", "padding", "anchor", "scale", "r", "hit_rect", "clip", "alpha", "disabled_tint_color", "colors", "image_scale", "image_name", "image_offset", "focus_nav_offset", "focus_nav_dir", "animation")
+KView:append_serialize_keys("pos", "size", "padding", "anchor", "scale", "r", "hit_rect", "clip", "alpha", "disabled_tint_color", "colors", "image_scale", "image_name", "focus_nav_offset", "focus_nav_dir", "animation")
 
 KView.static.serialize_children = true
 KView.static.init_arg_names = {"size"}
@@ -483,7 +483,6 @@ function KView:initialize(size, image_name, image_scale)
 	self.scroll_origin_y = 0
 	self.colors = {}
 	self.image_scale = image_scale or 1
-	self.image_offset = nil
 	self.animation = nil
 	self.ts = 0
 	self._disabled = false
@@ -602,31 +601,25 @@ function KView:draw()
 	G.translate(-self.anchor.x, -self.anchor.y)
 
 	if self.clip then
-		local this = self
-
-		if self.clip_fn then
-			self._stencil_fn = self.clip_fn
-		else
-			function self._stencil_fn()
-				G.rectangle("fill", 0, 0, this.size.x, this.size.y)
+		if not self.clip_fn then
+			self.clip_fn = function()
+				G.rectangle("fill", 0, 0, self.size.x, self.size.y)
 			end
 		end
 
-		G.stencil(self._stencil_fn)
+		G.stencil(self.clip_fn)
 		G.setStencilTest("greater", 0)
 	end
 
 	self:_draw_self()
 
-	if self.scroll_origin_y then
+	if self.scroll_origin_y ~= 0 then
 		G.push()
 		G.translate(0, self.scroll_origin_y)
-	end
-
-	self:_draw_children()
-
-	if self.scroll_origin_y then
+		self:_draw_children()
 		G.pop()
+	else
+		self:_draw_children()
 	end
 
 	if self.clip then
@@ -684,11 +677,6 @@ function KView:_draw_self()
 		end
 	end
 
-	if self.image_offset then
-		G.push()
-		G.translate(self.image_offset.x, self.image_offset.y)
-	end
-
 	if self.image_ss then
 		local ss = self.image_ss
 		local ref_scale = (ss.ref_scale or 1) * self.image_scale
@@ -702,40 +690,19 @@ function KView:_draw_self()
 		G.draw(self.image, ix, iy, 0, self.image_scale, self.image_scale)
 	end
 
-	if self.image_offset then
-		G.pop()
-	end
-
 	G.setColor(pr, pg, pb, pa)
 end
 
 function KView:_draw_children()
-	local clip_x, clip_y, clip_xw, clip_yh
-	local cv = self.clip_view
-
-	if cv then
-		clip_x, clip_y = self.clip_view:view_to_view(0, 0, self)
-		clip_xw, clip_yh = self.clip_view:view_to_view(cv.size.x, cv.size.y, self)
-	end
-
-	G.push()
-	G.translate(self.padding.x, self.padding.y)
-
 	for i = 1, #self.children do
 		local c = self.children[i]
-		if clip_x ~= nil and (clip_xw < c.pos.x or clip_x > c.pos.x + c.size.x or clip_yh < c.pos.y or clip_y > c.pos.y + c.size.y) then
-		-- block empty
-		else
-			if not c.hidden then
-				G.push()
-				G.translate(c.pos.x, c.pos.y)
-				c:draw()
-				G.pop()
-			end
+		if not c.hidden then
+			G.push()
+			G.translate(c.pos.x, c.pos.y)
+			c:draw()
+			G.pop()
 		end
 	end
-
-	G.pop()
 end
 
 function KView:animation_frame(animation, time_offset, loop, fps)
@@ -999,6 +966,7 @@ function KView:is_focused()
 	return self._focused == true
 end
 
+-- TODO: 这里有一个糟糕的设计，你会发现，_disabled 同时和 tint 与 hit_topmost 相关联。有时我只是想通过 _disabled 来避免 hit_topmost 的检查，但却会导致 tint 应用受影响。
 function KView:apply_disabled_tint(color)
 	self.colors.tint = color or self.disabled_tint_color
 
@@ -1079,17 +1047,13 @@ function KStaticView:draw()
 		G.origin()
 
 		if self.clip then
-			local this = self
-
-			if self.clip_fn then
-				self._stencil_fn = self.clip_fn
-			else
-				function self._stencil_fn()
-					G.rectangle("fill", 0, 0, this.size.x, this.size.y)
+			if not self.clip_fn then
+				self.clip_fn = function()
+					G.rectangle("fill", 0, 0, self.size.x, self.size.y)
 				end
 			end
 
-			G.stencil(self._stencil_fn)
+			G.stencil(self.clip_fn)
 			G.setStencilTest("greater", 0)
 		end
 
@@ -1134,44 +1098,8 @@ end
 
 -- KVirtualView，只作为逻辑容器使用，不绘制自己，仅绘制孩子
 KVirtualView = class("KVirtualView", KView)
-function KVirtualView:draw()
-	local pr, pg, pb, pa = G.getColor()
-	local current_alpha = pa * self.alpha
-
-	G.setColor(1, 1, 1, current_alpha)
-	G.push()
-	-- 转移坐标系
-	G.scale(self.scale.x, self.scale.y)
-	G.rotate(-self.r)
-	G.translate(-self.anchor.x, -self.anchor.y)
-
-	self:_draw_children()
-	G.pop()
-	G.setColor(pr, pg, pb, pa)
-end
-
-function KVirtualView:update(dt)
-	for i = 1, #self.children do
-		self.children[i]:update(dt)
-	end
-end
-
-function KVirtualView:_draw_children()
-	G.push()
-	G.translate(self.padding.x, self.padding.y)
-
-	for i = 1, #self.children do
-		local c = self.children[i]
-		if not c.hidden then
-			G.push()
-			G.translate(c.pos.x, c.pos.y)
-			c:draw()
-			G.pop()
-		end
-	end
-
-	G.pop()
-end
+KVirtualView.draw = KF.draw_virtual
+KVirtualView.update = KF.update_only_propagate_to_children
 
 KVirtualStaticView = class("KVirtualStaticView", KVirtualView)
 function KVirtualStaticView:initialize(size)
@@ -1927,13 +1855,13 @@ function KButton:initialize(size, image_name)
 	self.propagate_on_touch_move = false
 end
 
-function KButton:update(dt)
-	KButton.super.update(self, dt)
-end
+-- function KButton:update(dt)
+-- 	KButton.super.update(self, dt)
+-- end
 
-function KButton:draw()
-	KButton.super.draw(self)
-end
+-- function KButton:draw()
+-- 	KButton.super.draw(self)
+-- end
 
 KImageButton = class("KImageButton", KButton)
 
@@ -2015,8 +1943,6 @@ KScrollList = class("KScrollList", KView)
 KScrollList:append_serialize_keys("scroll_amount", "scroll_acceleration", "scroller_width", "scroller_margin", "scroller_hidden", "drag_scroll_threshold")
 
 function KScrollList:initialize(size)
-	log.debug("KScrollList")
-
 	self.scroll_origin_y = 0
 	self._bottom_y = 0
 	self.scroll_amount = 1

@@ -256,6 +256,9 @@ function screen:init(w, h, done_callback, ending_version)
 		self.scroll_paused = nil
 	end
 
+	local KF = require("lib.klove.kui_fast_fn")
+	scroller._draw_children = KF._draw_children_with_clip_view
+
 	self.scroller = scroller
 
 	window:add_child(scroller)
