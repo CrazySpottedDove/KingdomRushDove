@@ -1378,6 +1378,7 @@ function game_gui:deselect_entity()
 	self.hud_bottom.infobar:hide()
 	self:hide_melee_range()
 	self:hide_ranged_range()
+	self:hide_rally_range()
 
 	if self.selected_entity_marker then
 		self.selected_entity_marker.done = true
