@@ -36,7 +36,6 @@ screen.art_layout = {
 function screen:init(w, h, director_ref)
 	self.hold_enabled = true
 	self.progress = {0, 0, 0}
-	self.font_title = F:f("body", 34)
 	self.font_percent = F:f("body", 24)
 	self.font_tip = F:f("body", 20)
 	self.tip = _(string.format("TIP_%i", math.random(1, GS.gameplay_tips_count)))
@@ -111,7 +110,6 @@ function screen:draw()
 	local w, h = g.getDimensions()
 	local a = 1
 	local old_font = g.getFont()
-	local font_title = self.font_title or old_font
 	local font_percent = self.font_percent or old_font
 	local font_tip = self.font_tip or old_font
 
@@ -163,8 +161,7 @@ function screen:draw()
 	local total_h = bar_h * 3 + bar_gap * 2
 	local pct_w = math.max(88, font_percent:getWidth("100%") + 8)
 	local bar_x = math.floor((w - (label_w + side_gap + bar_w + side_gap + pct_w)) * 0.5) + label_w + side_gap
-	local title_y = math.floor(h * 0.45)
-	local bar_y = math.floor(h * 0.52)
+	local bar_y = math.floor(h * 0.46)
 
 	if not hide_bar then
 		local labels = {_("IMAGE"), _("SOUND"), _("CORO")}
@@ -196,16 +193,10 @@ function screen:draw()
 			g.print(pct_text, pct_x, y + math.floor((bar_h - font_percent:getHeight()) * 0.5))
 		end
 	end
-	local title = "Loading..."
-	local title_w = font_title:getWidth(title)
-
-	g.setFont(font_title)
-	g.setColor(1, 1, 1, a)
-	g.print(title, math.floor((w - title_w) * 0.5), title_y)
 
 	g.setFont(font_tip)
 	g.setColor(0.82, 0.86, 0.92, a)
-	g.printf(self.tip, math.floor(w * 0.1), bar_y + total_h + 12, math.floor(w * 0.8), "center")
+	g.printf(self.tip, math.floor(w * 0.1), bar_y + total_h + 30, math.floor(w * 0.8), "center")
 	g.setFont(old_font)
 end
 
