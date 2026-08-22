@@ -835,9 +835,7 @@ local function build_enabled_plugins_text()
 		end
 	end
 
-	if listed == 0 then
-		lines[#lines + 1] = "  (无)"
-	end
+	lines[#lines + 1] = "===== 已启用插件总数: " .. listed .. " ====="
 
 	return table.concat(lines, "\n")
 end
