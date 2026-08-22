@@ -677,7 +677,7 @@ local function add_level_description(parent, text)
 	first_letter_label.pos = v(bg.pos.x + CJK(-4, 0, 0, 0), bg.pos.y + CJK(0, -4, -6, -6))
 	first_letter_label.font_name = "capitals"
 	first_letter_label.font_size = CJK(64, 56, 56, 56)
-	first_letter_label.colors.text = {247, 234, 186}
+	first_letter_label.colors.text = {247, 234, 186, 255}
 	first_letter_label.text_align = "center"
 	first_letter_label.vertical_align = "bottom"
 	first_letter_label.text = string.sub(text, 1, utf8.offset(text, 2) - 1)
@@ -688,7 +688,7 @@ local function add_level_description(parent, text)
 	first_paragraph_1_label.font_name = font_name
 	first_paragraph_1_label.font_size = font_size
 	first_paragraph_1_label.line_height = line_height
-	first_paragraph_1_label.colors.text = {64, 57, 36}
+	first_paragraph_1_label.colors.text = {64, 57, 36, 255}
 	first_paragraph_1_label.text_align = "left"
 	first_paragraph_1_label.text = p
 	parent:add_child(first_paragraph_1_label)
@@ -710,7 +710,7 @@ local function add_level_description(parent, text)
 	first_paragraph_2_label.font_name = font_name
 	first_paragraph_2_label.font_size = font_size
 	first_paragraph_2_label.line_height = line_height
-	first_paragraph_2_label.colors.text = {64, 57, 36}
+	first_paragraph_2_label.colors.text = {64, 57, 36, 255}
 	first_paragraph_2_label.text_align = "left"
 	parent:add_child(first_paragraph_2_label)
 	first_paragraph_2_label.text = p_2
@@ -729,7 +729,7 @@ local function add_level_rules(parent, y, upg_level, has_hero)
 	upg_label.text_align = "center"
 	upg_label.vertical_align = "middle"
 	upg_label.text = _("UPGRADE_LEVEL") .. "\n" .. upg_level
-	upg_label.colors.text = {64, 57, 36}
+	upg_label.colors.text = {64, 57, 36, 255}
 	parent:add_child(upg_label)
 
 	local hero_icon = KImageView:new(has_hero and "levelSelect_modeRules_0011" or "levelSelect_modeRules_0009")
@@ -744,7 +744,7 @@ local function add_level_rules(parent, y, upg_level, has_hero)
 	hero_label.text_align = "center"
 	hero_label.vertical_align = "middle"
 	hero_label.text = has_hero and _("HEROES") or _("NO HEROES")
-	hero_label.colors.text = {64, 57, 36}
+	hero_label.colors.text = {64, 57, 36, 255}
 	parent:add_child(hero_label)
 end
 

@@ -514,7 +514,7 @@ function screen_map:init(w, h)
 
 	points_label.pos = v(0, 19)
 	points_label.font = F:f("Comic Book Italic", "22")
-	points_label.colors.text = {78, 43, 7}
+	points_label.colors.text = {78, 43, 7, 255}
 	points_label.text = "1"
 	points_label.text_align = "center"
 	points_label.propagate_on_click = true
@@ -2901,7 +2901,7 @@ local function add_level_description(parent, text)
 	first_letter_label.pos = v(bg.pos.x + CJK(-4, 0, 0, 0), bg.pos.y + CJK(0, -4, -6, -6))
 	first_letter_label.font_name = "capitals"
 	first_letter_label.font_size = CJK(64, 56, 56, 56)
-	first_letter_label.colors.text = {247, 234, 186}
+	first_letter_label.colors.text = {247, 234, 186, 255}
 	first_letter_label.text_align = "center"
 	first_letter_label.vertical_align = "bottom"
 	first_letter_label.text = string.sub(text, 1, utf8.offset(text, 2) - 1)
@@ -2914,7 +2914,7 @@ local function add_level_description(parent, text)
 	first_paragraph_1_label.font_name = font_name
 	first_paragraph_1_label.font_size = font_size
 	first_paragraph_1_label.line_height = line_height
-	first_paragraph_1_label.colors.text = {64, 57, 36}
+	first_paragraph_1_label.colors.text = {64, 57, 36, 255}
 	first_paragraph_1_label.text_align = "left"
 	first_paragraph_1_label.text = p
 
@@ -2941,7 +2941,7 @@ local function add_level_description(parent, text)
 	first_paragraph_2_label.font_name = font_name
 	first_paragraph_2_label.font_size = font_size
 	first_paragraph_2_label.line_height = line_height
-	first_paragraph_2_label.colors.text = {64, 57, 36}
+	first_paragraph_2_label.colors.text = {64, 57, 36, 255}
 	first_paragraph_2_label.text_align = "left"
 
 	parent:add_child(first_paragraph_2_label)
@@ -3079,7 +3079,7 @@ local function add_level_rules(parent, level_num, y)
 	upg_label.text_align = "center"
 	upg_label.vertical_align = "middle"
 	upg_label.text = upg_desc
-	upg_label.colors.text = {64, 57, 36}
+	upg_label.colors.text = {64, 57, 36, 255}
 
 	parent:add_child(upg_label)
 
@@ -3098,7 +3098,7 @@ local function add_level_rules(parent, level_num, y)
 	hero_label.text_align = "center"
 	hero_label.vertical_align = "middle"
 	hero_label.text = has_hero and _("HEROES") or _("NO HEROES")
-	hero_label.colors.text = {64, 57, 36}
+	hero_label.colors.text = {64, 57, 36, 255}
 
 	parent:add_child(hero_label)
 end
@@ -3460,7 +3460,7 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 	name_label.pos = v(10, 10)
 	name_label.font_name = "body"
 	name_label.font_size = 18
-	name_label.colors.text = {255, 255, 255}
+	name_label.colors.text = {255, 255, 255, 255}
 	name_label.text = _("Heroic")
 	name_label.text_align = "left"
 
@@ -3469,7 +3469,7 @@ function LevelSelectView:initialize(sw, sh, level_num, stars, heroic, iron, slot
 	desc_label.pos = v(10, name_label.pos.y + name_label.size.y + 5)
 	desc_label.font_name = "body"
 	desc_label.font_size = 18
-	desc_label.colors.text = {245, 203, 6}
+	desc_label.colors.text = {245, 203, 6, 255}
 	desc_label.text_align = "left"
 	desc_label.text = _("LEVEL_MODE_LOCKED_DESCRIPTION")
 	desc_label.line_height = 0.9
@@ -3608,7 +3608,7 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 	wl.font_name = "body"
 	wl.font_size = 20
 	wl.fit_size = true
-	wl.colors.text = {64, 57, 36}
+	wl.colors.text = {64, 57, 36, 255}
 	wl.colors.background = {0, 0, 0, 0}
 	wl.text = "99"
 
@@ -3625,7 +3625,7 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 	wd.font_size = 16
 	wd.text_align = "center"
 	wd.vertical_align = "top"
-	wd.colors.text = {64, 57, 36}
+	wd.colors.text = {64, 57, 36, 255}
 
 	self.back:add_child(wd)
 
@@ -3644,7 +3644,7 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 	sl.font_size = 20
 	sl.fit_size = true
 	sl.fit_lines = 1
-	sl.colors.text = {64, 57, 36}
+	sl.colors.text = {64, 57, 36, 255}
 	sl.colors.background = {0, 0, 0, 0}
 	sl.text = "999999"
 
@@ -3661,7 +3661,7 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 	sd.font_size = 16
 	sd.text_align = "center"
 	sd.vertical_align = "top"
-	sd.colors.text = {64, 57, 36}
+	sd.colors.text = {64, 57, 36, 255}
 
 	self.back:add_child(sd)
 	self:load_score()
@@ -3704,7 +3704,7 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 	heart_label.font_size = 13
 	heart_label.text_align = "center"
 	heart_label.vertical_align = "middle"
-	heart_label.colors.text = {64, 57, 36}
+	heart_label.colors.text = {64, 57, 36, 255}
 
 	right_page:add_child(heart_label)
 
@@ -3717,7 +3717,7 @@ function EndlessLevelSelectView:initialize(sw, sh, level_num, slot_data)
 	skull_label.font_size = 13
 	skull_label.text_align = "center"
 	skull_label.vertical_align = "middle"
-	skull_label.colors.text = {64, 57, 36}
+	skull_label.colors.text = {64, 57, 36, 255}
 
 	right_page:add_child(skull_label)
 
@@ -3909,7 +3909,7 @@ function UpgradesView:initialize(sw, sh)
 	self.stars_label = KLabel:new(V.v(self.star_container.size.x, self.star_container.size.y))
 	self.stars_label.pos = v(85 + self.star_container.size.x / 3.2, 648)
 	self.stars_label.font = F:f("Comic Book Italic", "32")
-	self.stars_label.colors.text = {231, 222, 175}
+	self.stars_label.colors.text = {231, 222, 175, 255}
 	self.stars_label.text = "0"
 
 	self.back:add_child(self.stars_label)
@@ -3979,7 +3979,7 @@ function UpgradesView:initialize(sw, sh)
 	name_label.pos = v(20, 8)
 	name_label.font_name = "body"
 	name_label.font_size = 18
-	name_label.colors.text = {255, 255, 255}
+	name_label.colors.text = {255, 255, 255, 255}
 	name_label.text = "title_name"
 	name_label.text_align = "left"
 	name_label.fit_lines = 1
@@ -3992,7 +3992,7 @@ function UpgradesView:initialize(sw, sh)
 	desc_label.pos = v(20, 33)
 	desc_label.font_name = "body"
 	desc_label.font_size = 18
-	desc_label.colors.text = {245, 203, 6}
+	desc_label.colors.text = {245, 203, 6, 255}
 	desc_label.text_align = "left"
 	desc_label.text = "desc_name"
 	desc_label.line_height = CJK(0.85, nil, 1, 0.9)
@@ -4005,7 +4005,7 @@ function UpgradesView:initialize(sw, sh)
 	price_label.pos = v(295, 8)
 	price_label.font_name = "numbers"
 	price_label.font_size = 18
-	price_label.colors.text = {255, 255, 255}
+	price_label.colors.text = {255, 255, 255, 255}
 	price_label.text = "2"
 	price_label.text_align = "left"
 	self.tip_panel.price = price_label
@@ -4818,7 +4818,7 @@ function EncyclopediaView:detail_tower(index)
 	title_label.anchor.x = title_label.size.x / 2
 	title_label.font_name = "h_book"
 	title_label.font_size = 22
-	title_label.colors.text = {148, 94, 58}
+	title_label.colors.text = {148, 94, 58, 255}
 	title_label.text = _(string.upper(dt.info.i18n_key or tower_name) .. "_NAME")
 	title_label.text_align = "center"
 	title_label.fit_lines = 1
@@ -4867,7 +4867,7 @@ function EncyclopediaView:detail_tower(index)
 	desc_label.font_name = "body"
 	desc_label.font_size = 16
 	desc_label.line_height = CJK(0.85, nil, 1.1, 0.9)
-	desc_label.colors.text = {0, 0, 0}
+	desc_label.colors.text = {0, 0, 0, 255}
 	desc_label.text = _(string.upper(dt.info.i18n_key or tower_name) .. "_DESCRIPTION")
 	desc_label.text_align = "center"
 	desc_label.fit_lines = 4
@@ -4994,7 +4994,7 @@ function EncyclopediaView:detail_tower(index)
 	special_label.font_name = "body"
 	special_label.font_size = 15
 	special_label.line_height = CJK(0.85, nil, 1.1, 0.9)
-	special_label.colors.text = {0, 0, 0}
+	special_label.colors.text = {0, 0, 0, 255}
 	special_label.text = _(string.upper(tower_name) .. "_SPECIAL")
 	special_label.text_align = "center"
 	special_label.fit_lines = 4
@@ -5150,7 +5150,7 @@ function EncyclopediaView:detail_tower_second(index)
 		label.font_name = "body"
 		label.font_size = 14
 		label.line_height = 0.85
-		label.colors.text = {0, 0, 0}
+		label.colors.text = {0, 0, 0, 255}
 
 		if t.from_kr == 5 then
 			label.text = _(string.upper(string.format("%s_%s_1_NAME", dt.info.i18n_key or tower_name, k)))
@@ -5444,7 +5444,7 @@ function EncyclopediaView:detail_creep(index)
 	title_label.anchor.x = title_label.size.x / 2
 	title_label.font_name = "h_book"
 	title_label.font_size = 22
-	title_label.colors.text = {148, 94, 58}
+	title_label.colors.text = {148, 94, 58, 255}
 	title_label.text = _(name_prefix .. "_NAME")
 	title_label.text_align = "center"
 	title_label.fit_lines = 1
@@ -5495,7 +5495,7 @@ function EncyclopediaView:detail_creep(index)
 	desc_label.font_name = "body"
 	desc_label.font_size = 16
 	desc_label.line_height = CJK(1, nil, 1.1, 0.9)
-	desc_label.colors.text = {0, 0, 0}
+	desc_label.colors.text = {0, 0, 0, 255}
 	desc_label.text = _(name_prefix .. "_DESCRIPTION")
 	desc_label.text_align = "center"
 	desc_label.fit_lines = 4
@@ -5563,7 +5563,7 @@ function EncyclopediaView:detail_creep(index)
 	desc_label.font_size = 15
 	desc_label.text = special
 	desc_label.text_align = "center"
-	desc_label.colors.text = {148, 94, 58}
+	desc_label.colors.text = {148, 94, 58, 255}
 	desc_label.vertical_align = "middle"
 	desc_label.fit_lines = 1
 
@@ -6556,7 +6556,7 @@ function OptionsView:initialize(sw, sh)
 	self.difficulty.font_name = CJK("body", nil, nil, "h")
 	self.difficulty.font_size = 24
 	self.difficulty.text = _(self.difficulty_labels[self.difficulty_idx])
-	self.difficulty.colors.text = {214, 189, 131}
+	self.difficulty.colors.text = {214, 189, 131, 255}
 	self.difficulty.colors.text_default = {214, 189, 131}
 	self.difficulty.colors.text_hover = {255, 223, 0}
 	self.difficulty.fit_size = true
@@ -6717,7 +6717,7 @@ function DifficultyButton:initialize(label_text, desc_text, difficulty)
 	desc.line_height = CJK(1, nil, nil, 0.8)
 	desc.text_align = "center"
 	desc.vertical_align = "top"
-	desc.colors.text = {255, 232, 189}
+	desc.colors.text = {255, 232, 189, 255}
 	desc.propagate_on_up = true
 	desc.propagate_on_down = true
 	desc.propagate_on_click = true
@@ -6839,7 +6839,7 @@ function DifficultyView:initialize(sw, sh)
 	tip.font_size = 20
 	tip.text_align = "left"
 	tip.vertical_align = "middle"
-	tip.colors.text = {255, 232, 189}
+	tip.colors.text = {255, 232, 189, 255}
 	tip.propagate_on_up = true
 	tip.propagate_on_down = true
 	tip.propagate_on_click = true
@@ -6910,7 +6910,7 @@ function AchievementsView:initialize(sw, sh)
 		ach.title.pos = v(118, 2)
 		ach.title.font_name = "h"
 		ach.title.font_size = 18
-		ach.title.colors.text = {233, 224, 117}
+		ach.title.colors.text = {233, 224, 117, 255}
 		ach.title.text_align = "left"
 		ach.title.vertical_align = "bottom"
 		ach.title.fit_lines = 1
@@ -6921,7 +6921,7 @@ function AchievementsView:initialize(sw, sh)
 		ach.desc.pos = v(118, CJK(33, nil, 36, 36))
 		ach.desc.font_name = "body"
 		ach.desc.font_size = 15
-		ach.desc.colors.text = {156, 152, 126}
+		ach.desc.colors.text = {156, 152, 126, 255}
 		ach.desc.line_height = CJK(0.75, nil, 1.1, 0.9)
 		ach.desc.text_align = "left"
 		ach.desc.fit_lines = CJK(4, nil, nil, 2)
@@ -6984,11 +6984,11 @@ function AchievementsView:createPage(pagenum)
 			box.desc.text = desc
 
 			if isActive then
-				box.desc.colors.text = {156, 152, 126}
-				box.title.colors.text = {233, 224, 177}
+				box.desc.colors.text = {156, 152, 126, 255}
+				box.title.colors.text = {233, 224, 177, 255}
 			else
-				box.desc.colors.text = {107, 98, 87}
-				box.title.colors.text = {107, 98, 87}
+				box.desc.colors.text = {107, 98, 87, 255}
+				box.title.colors.text = {107, 98, 87, 255}
 			end
 
 			function box.img.on_click(this, button, x, y)

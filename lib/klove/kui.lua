@@ -1753,7 +1753,7 @@ function KLabel:initialize(size, image_name)
 	end
 
 	if not self.colors.text then
-		self.colors.text = {0, 0, 0}
+		self.colors.text = {0, 0, 0, 255}
 	end
 end
 
@@ -1837,7 +1837,7 @@ function KTextLabel:initialize(size)
 	end
 
 	if not self.colors.text then
-		self.colors.text = {0, 0, 0}
+		self.colors.text = {0, 0, 0, 255}
 	end
 end
 
@@ -1849,21 +1849,19 @@ function KTextLabel:_draw_self()
 
 	local pr, pg, pb, pa = G.getColor()
 
-	if self.colors.text then
-		local new_c1, new_c2, new_c3, new_c4 = self.colors.text[1], self.colors.text[2], self.colors.text[3], self.colors.text[4] or 255
+	local new_c1, new_c2, new_c3, new_c4 = self.colors.text[1], self.colors.text[2], self.colors.text[3], self.colors.text[4]
 
-		if self.colors.tint then
-			local tint_c = self.colors.tint
-			new_c1 = new_c1 * tint_c[1]
-			new_c2 = new_c2 * tint_c[2]
-			new_c3 = new_c3 * tint_c[3]
-			new_c4 = new_c4 * tint_c[4]
-		end
-
-		new_c4 = new_c4 * self.alpha * pa / 255
-
-		G.setColor_old(new_c1, new_c2, new_c3, new_c4)
+	if self.colors.tint then
+		local tint_c = self.colors.tint
+		new_c1 = new_c1 * tint_c[1]
+		new_c2 = new_c2 * tint_c[2]
+		new_c3 = new_c3 * tint_c[3]
+		new_c4 = new_c4 * tint_c[4]
 	end
+
+	new_c4 = new_c4 * self.alpha * pa / 255
+
+	G.setColor_old(new_c1, new_c2, new_c3, new_c4)
 
 	local voff = self.font_adj and self.font_adj.top or 0
 

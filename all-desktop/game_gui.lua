@@ -1980,7 +1980,7 @@ function HeroPortrait:initialize(hero_entity)
 	self.level.pos = v(66, 65)
 	self.level.font_name = "TOONISH"
 	self.level.font_size = 14
-	self.level.colors.text = {255, 255, 255}
+	self.level.colors.text = {255, 255, 255, 255}
 	self.level.text_align = "center"
 	self.level.text = "1"
 	self.level.propagate_on_click = true
@@ -3195,7 +3195,7 @@ function HudCountersView:initialize(level_mode)
 	lbl_lives.text_align = "left"
 	lbl_lives.font_name = "hud"
 	lbl_lives.font_size = 12
-	lbl_lives.colors.text = {255, 255, 255}
+	lbl_lives.colors.text = {255, 255, 255, 255}
 	lbl_lives.draw = KF.draw_without_children_and_clip
 
 	local lbl_gold = GGTextLabel:new(V.v(71, 35))
@@ -3205,7 +3205,7 @@ function HudCountersView:initialize(level_mode)
 	lbl_gold.text_align = "left"
 	lbl_gold.font_name = "hud"
 	lbl_gold.font_size = 12
-	lbl_gold.colors.text = {255, 255, 255}
+	lbl_gold.colors.text = {255, 255, 255, 255}
 	lbl_gold.draw = KF.draw_without_children_and_clip
 
 	local lbl_wave = GGTextLabel:new(V.v(game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS and 25 or 74, 28))
@@ -3218,7 +3218,7 @@ function HudCountersView:initialize(level_mode)
 	lbl_wave.fit_step = 0.25
 	lbl_wave.fit_size = true
 	lbl_wave.fit_lines = 1
-	lbl_wave.colors.text = {255, 255, 255}
+	lbl_wave.colors.text = {255, 255, 255, 255}
 	lbl_wave.colors.background = DEBUG_BACKGROUND_COLOR
 	lbl_wave.draw = KF.draw_without_children_and_clip
 
@@ -3831,7 +3831,7 @@ function VictoryView:initialize(level_mode)
 	ct.text = _("VICTORY")
 	ct.font_name = "h_noti"
 	ct.font_size = 78
-	ct.colors.text = {76, 56, 23}
+	ct.colors.text = {76, 56, 23, 255}
 	ct.max_angle = math.pi / 6
 	self.ct = ct
 
@@ -4411,7 +4411,7 @@ function NotificationView:show(id, no_transition, force_show)
 				thickness = 0.1,
 				glow_color = {0, 0, 0, 1}
 			}}
-			l2.colors.text = {255, 254, 200}
+			l2.colors.text = {255, 254, 200, 255}
 			l2.fit_lines = 1
 
 			b:add_child(l2)
@@ -5072,7 +5072,7 @@ function NotificationIcon:initialize(image, notification_id, layout)
 	title.font_name = "h_noti"
 	title.text_align = "center"
 	title.vertical_align = "bottom"
-	title.colors.text = {253, 248, 73}
+	title.colors.text = {253, 248, 73, 255}
 	title.shaders = {"p_bands", "p_outline", "p_edge_blur"}
 
 	if layout == N_TIP or layout == N_POWER then
@@ -5436,7 +5436,7 @@ function AchievementBanner:initialize(id)
 	l_title.pos = V.v(68, CJK(35, 33, nil, 33))
 	l_title.font_name = "h"
 	l_title.font_size = 12
-	l_title.colors.text = {234, 205, 132}
+	l_title.colors.text = {234, 205, 132, 255}
 	l_title.text = "TITLE"
 	l_title.text_align = "left"
 	l_title.propagate_on_click = true
@@ -5448,7 +5448,7 @@ function AchievementBanner:initialize(id)
 
 	l_desc.font_name = "body"
 	l_desc.font_size = 10
-	l_desc.colors.text = {246, 227, 176}
+	l_desc.colors.text = {246, 227, 176, 255}
 	l_desc.text = "DESC"
 	l_desc.text_align = "left"
 	l_desc.propagate_on_click = true
@@ -6913,7 +6913,7 @@ function TowerMenuTooltip:initialize()
 	title.pos = v(margin.x, margin.y + CJK(0, -2, nil, nil))
 	title.font_name = "h"
 	title.font_size = 12.8
-	title.colors.text = {205, 245, 55}
+	title.colors.text = {205, 245, 55, 255}
 	title.text_align = "left"
 	title.text = "ARCHER TOWER"
 	title.fit_lines = 1
@@ -6946,7 +6946,7 @@ function TowerMenuTooltip:initialize()
 	damage_label.pos = v(p13, self.size.y - bottom_margin)
 	damage_label.font_name = "sans"
 	damage_label.font_size = font_size
-	damage_label.colors.text = {205, 245, 55}
+	damage_label.colors.text = {205, 245, 55, 255}
 	damage_label.text_offset = text_offset
 	damage_label.text_align = "left"
 	damage_label.text = "6-8"
@@ -6959,7 +6959,7 @@ function TowerMenuTooltip:initialize()
 	cooldown_label.pos = v(p23, self.size.y - bottom_margin)
 	cooldown_label.font_name = "sans"
 	cooldown_label.font_size = font_size
-	cooldown_label.colors.text = {205, 245, 55}
+	cooldown_label.colors.text = {205, 245, 55, 255}
 	cooldown_label.text_offset = text_offset
 	cooldown_label.text_align = "left"
 	cooldown_label.text = "Average"
@@ -6972,7 +6972,7 @@ function TowerMenuTooltip:initialize()
 	health_label.pos = v(p23, self.size.y - bottom_margin)
 	health_label.font_name = "sans"
 	health_label.font_size = font_size
-	health_label.colors.text = {205, 245, 55}
+	health_label.colors.text = {205, 245, 55, 255}
 	health_label.text_offset = text_offset
 	health_label.text_align = "left"
 	health_label.text = "100"
@@ -6985,7 +6985,7 @@ function TowerMenuTooltip:initialize()
 	armor_label.pos = v(p33, self.size.y - bottom_margin)
 	armor_label.font_name = "sans"
 	armor_label.font_size = font_size
-	armor_label.colors.text = {205, 245, 55}
+	armor_label.colors.text = {205, 245, 55, 255}
 	armor_label.text_offset = text_offset
 	armor_label.text_align = "left"
 	armor_label.text = "Medium"
@@ -6998,7 +6998,7 @@ function TowerMenuTooltip:initialize()
 	phrase_label.pos = v(margin.x, self.size.y - 22)
 	phrase_label.font_name = "sans"
 	phrase_label.font_size = font_size
-	phrase_label.colors.text = {170, 160, 125}
+	phrase_label.colors.text = {170, 160, 125, 255}
 	phrase_label.text_align = "left"
 	self.phrase_label = phrase_label
 
@@ -7203,7 +7203,7 @@ function TowerMenuButton:enable()
 		self.price_tag:set_image("price_tag")
 		self.price_tag:enable()
 
-		self.price_tag.colors.text = {255, 224, 0}
+		self.price_tag.colors.text = {255, 224, 0, 255}
 	end
 end
 
@@ -7215,7 +7215,7 @@ function TowerMenuButton:disable()
 	if self.price_tag then
 		self.price_tag:disable()
 
-		self.price_tag.colors.text = {156, 146, 132}
+		self.price_tag.colors.text = {156, 146, 132, 255}
 	end
 end
 
@@ -7325,7 +7325,7 @@ function TowerMenuButton:initialize(item, entity)
 		pt.text_offset.y = CJK(5, 2, 7, 3)
 		pt.font_name = "body"
 		pt.font_size = 11
-		pt.colors.text = {255, 224, 0}
+		pt.colors.text = {255, 224, 0, 255}
 		pt.disabled_tint_color = nil
 		pt.propagate_on_click = true
 		pt.text = price_tag

@@ -370,21 +370,19 @@ function GGTextLabel:_draw_self()
 		G.printf(self.text, self.text_offset.x + sox, self.text_offset.y + soy + voff, self.text_size.x * font_scale, self.text_align, 0, 1 / font_scale)
 	end
 
-	if self.colors.text then
-		local new_c1, new_c2, new_c3, new_c4 = self.colors.text[1], self.colors.text[2], self.colors.text[3], self.colors.text[4] or 255
+	local new_c1, new_c2, new_c3, new_c4 = self.colors.text[1], self.colors.text[2], self.colors.text[3], self.colors.text[4]
 
-		if self.colors.tint then
-			local tint_c = self.colors.tint
-			new_c1 = new_c1 * tint_c[1]
-			new_c2 = new_c2 * tint_c[2]
-			new_c3 = new_c3 * tint_c[3]
-			new_c4 = new_c4 * tint_c[4]
-		end
-
-		new_c4 = new_c4 * self.alpha * pa / 255
-
-		G.setColor_old(new_c1, new_c2, new_c3, new_c4)
+	if self.colors.tint then
+		local tint_c = self.colors.tint
+		new_c1 = new_c1 * tint_c[1]
+		new_c2 = new_c2 * tint_c[2]
+		new_c3 = new_c3 * tint_c[3]
+		new_c4 = new_c4 * tint_c[4]
 	end
+
+	new_c4 = new_c4 * self.alpha * pa / 255
+
+	G.setColor_old(new_c1, new_c2, new_c3, new_c4)
 
 	G.printf(self.text, self.text_offset.x, self.text_offset.y + voff, self.text_size.x * font_scale, self.text_align, 0, 1 / font_scale)
 	G.setColor(pr, pg, pb, pa)
