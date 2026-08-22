@@ -527,6 +527,10 @@ if IS_ANDROID then
 		end
 	end
 
+	if not love.filesystem.getInfo(".nomedia") then
+		love.filesystem.write(".nomedia", "")
+	end
+
 	function love.run()
 		love.math.setRandomSeed(os.time())
 
