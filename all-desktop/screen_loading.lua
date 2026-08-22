@@ -29,7 +29,9 @@ screen.art_layout = {
 	-- enable_bob = false,
 	enable_glow = true,
 	-- enable_glow = false,
-	hide_bar = false
+	hide_bar = false,
+	bar_alpha = 1,
+	text_alpha = 1
 }
 
 -- 允许 director 在初始化 screen 时为其传入一个协程，screen 可以在加载过程中执行协程代码，从而在等待加载资源的同时完成一些初始化任务
@@ -108,7 +110,7 @@ end
 function screen:draw()
 	local g = love.graphics
 	local w, h = g.getDimensions()
-	local a = 1
+	local a = self.art_layout.bar_alpha
 	local old_font = g.getFont()
 	local font_percent = self.font_percent or old_font
 	local font_tip = self.font_tip or old_font
@@ -120,7 +122,7 @@ function screen:draw()
 	end
 
 	local layout = self.art_layout
-	local sprite_alpha = (layout.alpha or 1) * a
+	local sprite_alpha = (layout.alpha or 1)
 
 	if self.bg_image then
 		local ss = self.bg_image
@@ -192,10 +194,17 @@ function screen:draw()
 			local pct_x = bar_x + bar_w + side_gap + pct_w - font_percent:getWidth(pct_text)
 			g.print(pct_text, pct_x, y + math.floor((bar_h - font_percent:getHeight()) * 0.5))
 		end
+	else
+		-- 隐藏进度条的情况下，选择使用透明度遮罩来显示整体进度百分比。
+		local avg_progress = (self.progress[1] + self.progress[2] + self.progress[3]) / 3
+
+		local mask_alpha = 0.5 * (1 - avg_progress)
+		g.setColor(0, 0, 0, mask_alpha)
+		g.rectangle("fill", 0, 0, w, h)
 	end
 
 	g.setFont(font_tip)
-	g.setColor(0.82, 0.86, 0.92, a)
+	g.setColor(0.82, 0.86, 0.92, self.art_layout.text_alpha)
 	g.printf(self.tip, math.floor(w * 0.1), bar_y + total_h + 30, math.floor(w * 0.8), "center")
 	g.setFont(old_font)
 end
