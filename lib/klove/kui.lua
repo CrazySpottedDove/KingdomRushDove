@@ -656,14 +656,10 @@ function KView:_draw_self()
 	end
 
 	if self.animation then
-		local fn, runs = self:animation_frame(self.animation, self.ts, self.loop, self.fps)
+		local fn = self:animation_frame(self.animation, self.ts, self.loop, self.fps)
 
 		self.image_ss = I:s(fn)
 		self.image = I:i(self.image_ss.atlas)
-
-		if self.animation.hide_at_end and runs >= 1 then
-			self.hidden = true
-		end
 	end
 
 	if self.image_ss then
@@ -723,18 +719,13 @@ function KView:animation_frame(animation, time_offset, loop, fps)
 
 	local len = #frames
 	local elapsed = math.ceil(time_offset * fps)
-	local runs = math.floor(elapsed / len)
-	local idx
-
-	if loop then
-		idx = km.zmod(elapsed, len)
-	else
-		idx = km.clamp(1, len, elapsed)
-	end
+	-- local runs = math.floor(elapsed / len)
+	local idx = loop and km.zmod(elapsed, len) or km.clamp(1, len, elapsed)
 
 	local frame = frames[idx]
 
-	return string.format("%s_%04i", a.prefix, frame), runs
+	-- return string.format("%s_%04i", a.prefix, frame), runs
+	return string.format("%s_%04i", a.prefix, frame)
 end
 
 function KView:hit_all(x, y, filter)
@@ -1763,32 +1754,25 @@ function KLabel:_draw_self()
 	KLabel.super._draw_self(self)
 	self:_load_font()
 
-	if self.font then
-		G.setFont(self.font)
-		self.font:setLineHeight(self.line_height)
-	end
+	G.setFont(self.font)
+	self.font:setLineHeight(self.line_height)
 
 	local pr, pg, pb, pa = G.getColor()
 
 	if self.colors.text then
-		local new_c = {self.colors.text[1], self.colors.text[2], self.colors.text[3], self.colors.text[4]}
-
-		if not new_c[4] then
-			new_c[4] = 255
-		end
+		local new_c1, new_c2, new_c3, new_c4 = self.colors.text[1], self.colors.text[2], self.colors.text[3], self.colors.text[4] or 255
 
 		if self.colors.tint then
 			local tint_c = self.colors.tint
-
-			new_c[1] = new_c[1] * tint_c[1]
-			new_c[2] = new_c[2] * tint_c[2]
-			new_c[3] = new_c[3] * tint_c[3]
-			new_c[4] = new_c[4] * tint_c[4]
+			new_c1 = new_c1 * tint_c[1]
+			new_c2 = new_c2 * tint_c[2]
+			new_c3 = new_c3 * tint_c[3]
+			new_c4 = new_c4 * tint_c[4]
 		end
 
-		new_c[4] = self.alpha * pa / 255 * new_c[4]
+		new_c4 = new_c4 * self.alpha * pa / 255
 
-		G.setColor_old(new_c)
+		G.setColor_old(new_c1, new_c2, new_c3, new_c4)
 	end
 
 	local voff = self.font_adj and self.font_adj.top or 0
@@ -1814,7 +1798,90 @@ function KLabel:_load_font()
 			self.font = F:f(self.font_name, self.font_size)
 			self.font_adj = F:f_adj(self.font_name, self.font_size)
 		else
-			log.debug("Font not specified for %s", self)
+			log.error("Font not specified for %s", self)
+
+			self.font = G:getFont()
+			self.font_adj = {
+				size = 1
+			}
+		end
+	end
+end
+
+KTextLabel = class("KTextLabel", KView)
+KTextLabel:append_serialize_keys("text", "text_offset", "text_align", "text_size", "colors", "line_height", "font_name", "font_size")
+KTextLabel.static.init_arg_names = {"size"}
+
+function KTextLabel:initialize(size)
+	self.text = ""
+	self.text_offset = V.v(0, 0)
+	self.font = nil
+	self.font_name = nil
+	self.font_size = nil
+	self.text_align = "center"
+	self.line_height = 1
+	self._loaded_font_name = nil
+	self._loaded_font_size = nil
+
+	KView.initialize(self, size)
+
+	if not self.text_size then
+		self.text_size = self.size
+	end
+
+	if not self.colors.text then
+		self.colors.text = {0, 0, 0}
+	end
+end
+
+function KTextLabel:_draw_self()
+	self:_load_font()
+
+	G.setFont(self.font)
+	self.font:setLineHeight(self.line_height)
+
+	local pr, pg, pb, pa = G.getColor()
+
+	if self.colors.text then
+		local new_c1, new_c2, new_c3, new_c4 = self.colors.text[1], self.colors.text[2], self.colors.text[3], self.colors.text[4] or 255
+
+		if self.colors.tint then
+			local tint_c = self.colors.tint
+			new_c1 = new_c1 * tint_c[1]
+			new_c2 = new_c2 * tint_c[2]
+			new_c3 = new_c3 * tint_c[3]
+			new_c4 = new_c4 * tint_c[4]
+		end
+
+		new_c4 = new_c4 * self.alpha * pa / 255
+
+		G.setColor_old(new_c1, new_c2, new_c3, new_c4)
+	end
+
+	local voff = self.font_adj and self.font_adj.top or 0
+
+	G.printf(self.text, self.text_offset.x, self.text_offset.y + voff, self.text_size.x, self.text_align)
+	G.setColor(pr, pg, pb, pa)
+end
+
+function KTextLabel:get_wrap_lines()
+	self:_load_font()
+
+	local width, wrapped = self.font:getWrap(self.text, self.text_size.x)
+
+	return width, #wrapped, wrapped
+end
+
+function KTextLabel:_load_font()
+	if not self.font or self._loaded_font_name ~= self.font_name or self._loaded_font_size ~= self.font_size then
+		self._loaded_font_name = self.font_name
+		self._loaded_font_size = self.font_size
+
+		if self.font_name and self.font_size then
+			self.font = F:f(self.font_name, self.font_size)
+			self.font_adj = F:f_adj(self.font_name, self.font_size)
+		else
+			log.error("Font not specified for %s", self)
 
 			self.font = G:getFont()
 			self.font_adj = {
@@ -1838,15 +1905,19 @@ function KButton:initialize(size, image_name)
 	self.propagate_on_touch_move = false
 end
 
--- function KButton:update(dt)
--- 	KButton.super.update(self, dt)
--- end
+KButtonNoText = class("KButtonNoText", KImageView)
+function KButtonNoText:initialize(size, image_name)
+	KImageView.initialize(self, image_name, size)
 
--- function KButton:draw()
--- 	KButton.super.draw(self)
--- end
+	self.propagate_on_up = false
+	self.propagate_on_down = false
+	self.propagate_on_click = false
+	self.propagate_on_touch_down = false
+	self.propagate_on_touch_up = false
+	self.propagate_on_touch_move = false
+end
 
-KImageButton = class("KImageButton", KButton)
+KImageButton = class("KImageButton", KButtonNoText)
 
 KImageButton:append_serialize_keys("default_image_name", "hover_image_name", "click_image_name", "disable_image_name")
 
@@ -1858,7 +1929,7 @@ function KImageButton:initialize(default_image_name, hover_image_name, click_ima
 	self.click_image_name = click_image_name or hover_image_name or default_image_name
 	self.disable_image_name = disable_image_name
 
-	KButton.initialize(self, nil, default_image_name)
+	KButtonNoText.initialize(self, nil, default_image_name)
 end
 
 function KImageButton:on_enter(drag_view)
@@ -2104,102 +2175,6 @@ function KScrollList:on_scroll(button)
 	self._target_y = km.clamp(-(self._bottom_y - self.size.y), 0, current + (button == "wu" and 1 or -1) * self.scroll_amount)
 
 	return false
-end
-
-KTable = class("KTable", KView)
-
-KTable:append_serialize_keys("cell_view", "start_view", "end_view")
-
-function KTable:initialize(size, cell_view, start_view, end_view)
-	KView.initialize(self, size)
-
-	self.clip = true
-	self.propagate_on_scroll = false
-	self.cell_view = cell_view
-	self.start_view = start_view
-	self.end_view = end_view
-	self._total_height = 0
-end
-
-function KTable:set_data(data)
-	self.data = data
-	self._first_cell_y = 0
-
-	local height = self.cell_view.size.y * #data
-
-	if self.start_view then
-		height = height + self.start_view.size.y
-	end
-
-	if self.end_view then
-		height = height + self.end_view.size.y
-	end
-
-	self._total_height = height
-	self._first_cell_y = self.start_view and self.start_view.size.y or 0
-	self._last_cell_y = #data * self.cell_view.size.y + self._first_cell_y
-end
-
-function KTable:update(dt)
-	local sy = self.scroll_origin_y
-
-	if not self.data or not self.cell_view then
-		return
-	end
-
-	if self.start_view then
-		local sv = self.start_view
-
-		if -sy <= sv.size.y and not table.contains(self.children, sv) then
-			sv:prepare(0, self.data[0])
-			self:add_child(sv)
-			table.insert(self._visible_cells, sv)
-		elseif -sv > sv.size.y and table.contains(self.children, sv) then
-			self:remove_child(sv)
-		end
-	end
-
-	-- if self.end_view then
-	-- local th = self._total_height
-	-- local ev = self.end_view
-
-	-- if -sy >= th - ev.size.y and not table.contains(self.children, ev) then
-	-- 	sv:prepare(#self.data + 1, self.data[#data + 1])
-	-- 	self:add_child(ev)
-	-- elseif -sv < th - ev.size.y and table.contains(self.children, ev) then
-	-- 	self:remove_child(ev)
-	-- end
-	-- end
-
-	local cy = self.cell_view.size.y
-	local start_vis_idx = math.ceil((-sy - self._first_cell_y) / cy)
-	local end_vis_idx = math.ceil((-sy - self._first_cell_y + self.size.y) / cy)
-
-	for i = #self.children, 1, -1 do
-		local v = self.children[i]
-
-		if v.cell_idx and (start_vis_idx > v.cell_idx or end_vis_idx < v.cell_idx) then
-			self:remove_child(v)
-			table.insert(self.cell_pool, v)
-
-			self._vis_idx[v.cell_idx] = nil
-		end
-	end
-
-	for i = start_vis_idx, end_vis_idx do
-		if not self._vis_idx[i] then
-			local v = table.remove(self.cell_pool) or self.cell_view:clone()
-
-			v.cell_idx = i
-			v.pos.y = self._first_cell_y + (i - 1) * v.size.y
-
-			v:prepare(i, self.data[i])
-
-			self._vis_idx[i] = v
-
-			self:add_child(v)
-		end
-	end
 end
 
 KVideoView = class("KVideoView", KView)

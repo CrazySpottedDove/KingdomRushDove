@@ -1783,7 +1783,7 @@ function SpeedStateIndicator:initialize()
 	self.pos = v(120, 50) -- GUI坐标系中的位置
 
 	-- 创建文本标签
-	local label = GGLabel:new(V.v(300, 50))
+	local label = GGTextLabel:new(V.v(300, 50))
 	label.pos = v(0, 0)
 	label.font_name = "hud" -- 使用hud字体，支持中文
 	label.font_size = 16
@@ -1936,7 +1936,7 @@ end
 
 WaveRewardFx.update = KF.update_only_own_animation
 
-HeroPortrait = class("HeroPortrait", KButton)
+HeroPortrait = class("HeroPortrait", KButtonNoText)
 
 function HeroPortrait:initialize(hero_entity)
 	HeroPortrait.super.initialize(self, V.v(102, 101))
@@ -1945,13 +1945,17 @@ function HeroPortrait:initialize(hero_entity)
 	self.disabled_tint_color = {0.7843137254902, 0.7843137254902, 0.7843137254902, 1}
 	self.hero_id = hero_entity.id
 	self.portrait_image_name = hero_entity.info.hero_portrait
+
 	self.portrait = KImageView:new(self.portrait_image_name)
+	self.portrait.propagate_on_click = true
 	self.portrait._disabled = true
 	self.portrait.draw = KF.draw_without_children_and_clip
+	self.portrait._draw_self = KF._draw_self_KView_colored
+
 	self.portrait_bo = KImageView:new("hero_portraits_0000")
 	self.portrait_bo._disabled = true
 	self.portrait_bo.draw = KF.draw_without_children_and_clip
-	self.portrait.propagate_on_click = true
+	self.portrait_bo._draw_self = KF._draw_self_KView_colored
 
 	self:add_child(self.portrait)
 	self:add_child(self.portrait_bo)
@@ -1964,6 +1968,7 @@ function HeroPortrait:initialize(hero_entity)
 	self.ov_cooldown.hidden = true
 	self.ov_cooldown._disabled = true
 	self.ov_cooldown.draw = KF.draw_without_children_and_clip
+	self.ov_cooldown._draw_self = KF._draw_self_KView_colored
 
 	self:add_child(self.ov_cooldown)
 
@@ -1972,10 +1977,11 @@ function HeroPortrait:initialize(hero_entity)
 	self.frame.propagate_on_click = true
 	self.frame._disabled = true
 	self.frame.draw = KF.draw_without_children_and_clip
+	self.frame._draw_self = KF._draw_self_KView_colored
 
 	self:add_child(self.frame)
 
-	self.level = GGLabel:new(V.v(16, 16))
+	self.level = GGTextLabel:new(V.v(16, 16))
 	self.level.pos = v(66, 65)
 	self.level.font_name = "TOONISH"
 	self.level.font_size = 14
@@ -1996,6 +2002,7 @@ function HeroPortrait:initialize(hero_entity)
 	self.bar_health.normal_color = {1, 1, 1, 1}
 	self.bar_health._disabled = true
 	self.bar_health.draw = KF.draw_without_children_and_clip
+	self.bar_health._draw_self = KF._draw_self_KView_colored
 
 	self:add_child(self.bar_health)
 
@@ -2005,6 +2012,7 @@ function HeroPortrait:initialize(hero_entity)
 	self.bar_level.propagate_on_click = true
 	self.bar_level._disabled = true
 	self.bar_level.draw = KF.draw_without_children_and_clip
+	self.bar_level._draw_self = KF._draw_self_KView_colored
 
 	self:add_child(self.bar_level)
 
@@ -2013,6 +2021,7 @@ function HeroPortrait:initialize(hero_entity)
 	self.ov_selected.propagate_on_click = true
 	self.ov_selected._disabled = true
 	self.ov_selected.draw = KF.draw_without_children_and_clip
+	self.ov_selected._draw_self = KF._draw_self_KView_colored
 
 	self:add_child(self.ov_selected)
 
@@ -2021,6 +2030,7 @@ function HeroPortrait:initialize(hero_entity)
 	self.ov_hover.propagate_on_click = true
 	self.ov_hover._disabled = true
 	self.ov_hover.draw = KF.draw_without_children_and_clip
+	self.ov_hover._draw_self = KF._draw_self_KView_colored
 
 	self:add_child(self.ov_hover)
 
@@ -2035,6 +2045,7 @@ function HeroPortrait:initialize(hero_entity)
 	self.ov_levelup.update = KF.update_only_own_animation
 	self.ov_levelup._disabled = true
 	self.ov_levelup.draw = KF.draw_without_children_and_clip
+	self.ov_levelup._draw_self = KF._draw_self_KView_colored_animated
 
 	self:add_child(self.ov_levelup)
 	self:update_xp(hero_entity)
@@ -2192,7 +2203,7 @@ end
 
 HeroPortrait.draw = KF.draw_without_clip_and_scroll
 
-PowerButton = class("PowerButton", KButton)
+PowerButton = class("PowerButton", KButtonNoText)
 
 function PowerButton:initialize(default_image, mask_image)
 	PowerButton.super.initialize(self, nil, default_image)
@@ -2656,7 +2667,7 @@ function InfoBar:initialize()
 
 	self:add_child(portrait_bo)
 
-	local l_name = GGLabel:new(V.v(130, 15))
+	local l_name = GGTextLabel:new(V.v(130, 15))
 
 	l_name.pos = v(97, 8)
 	l_name.font_name = "infobar_name"
@@ -2701,7 +2712,7 @@ function InfoBar:initialize()
 			l = GGLabel:new(V.v(w, label_height), icon)
 			l.text_offset = padding
 		else
-			l = GGLabel:new(V.v(w, label_height))
+			l = GGTextLabel:new(V.v(w, label_height))
 		end
 
 		l.font_name = "infobar_stats"
@@ -2993,6 +3004,7 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 	end
 	bg_bar._disabled = true
 	bg_bar.draw = KF.draw_without_children_and_clip
+	bg_bar._draw_self = KF._draw_self_KView_no_color
 	self:add_child(bg_bar)
 
 	local powers = GG9View:new("bg_bottom_left", V.v(247, 36), V.r(140, 36, 10, 1))
@@ -3040,6 +3052,7 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 		pn.pos = v(pb.pos.x + pb.size.x * 0.5, powers.size.y)
 		pn._disabled = true
 		pn.draw = KF.draw_without_children_and_clip
+		pn._draw_self = KF._draw_self_KView_no_color
 
 		powers:add_child(pn)
 	end
@@ -3053,6 +3066,7 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 	bg_center.scale = v(ui_scale, ui_scale)
 	bg_center._disabled = true
 	bg_center.draw = KF.draw_without_children_and_clip
+	bg_center._draw_self = KF._draw_self_KView_no_color
 	self.bg_center = bg_center
 
 	self:add_child(bg_center)
@@ -3143,6 +3157,7 @@ function HudBottomView:add_hero(hero_entity)
 		separator.propagate_on_up = true
 		separator._disabled = true
 		separator.draw = KF.draw_without_children_and_clip
+		separator._draw_self = KF._draw_self_KView_no_color
 
 		self.herobar:add_child(separator)
 	else
@@ -3176,7 +3191,7 @@ function HudCountersView:initialize(level_mode)
 	-- 对于不可交互的UI元素，应当直接设置其为 disabled，以减少碰撞检测的开销
 	self._disabled = true
 
-	local lbl_lives = GGLabel:new(V.v(71, 35))
+	local lbl_lives = GGTextLabel:new(V.v(71, 35))
 
 	lbl_lives.pos = v(80, CJK(44, 39, 46, 39))
 	lbl_lives.text = "0"
@@ -3186,7 +3201,7 @@ function HudCountersView:initialize(level_mode)
 	lbl_lives.colors.text = {255, 255, 255}
 	lbl_lives.draw = KF.draw_without_children_and_clip
 
-	local lbl_gold = GGLabel:new(V.v(71, 35))
+	local lbl_gold = GGTextLabel:new(V.v(71, 35))
 
 	lbl_gold.pos = v(136, CJK(44, 39, 46, 39))
 	lbl_gold.text = "1000"
@@ -3196,7 +3211,7 @@ function HudCountersView:initialize(level_mode)
 	lbl_gold.colors.text = {255, 255, 255}
 	lbl_gold.draw = KF.draw_without_children_and_clip
 
-	local lbl_wave = GGLabel:new(V.v(game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS and 25 or 74, 28))
+	local lbl_wave = GGTextLabel:new(V.v(game_gui.game.store.level_mode_override == GAME_MODE_ENDLESS and 25 or 74, 28))
 
 	lbl_wave.pos = v(240, 38)
 	lbl_wave.text_align = "left"
@@ -3340,6 +3355,7 @@ end
 --- 阻断 update，减小开销
 HudPauseButton.update = KF.update_empty
 HudPauseButton.draw = KF.draw_without_clip_and_scroll
+HudPauseButton._draw_self = KF._draw_self_KView_no_color
 
 function HudPauseButton:hide()
 	if not self._original_pos_y then
@@ -3688,7 +3704,7 @@ function DefeatView:initialize()
 
 	self:add_child(header)
 
-	local l_tip = GGLabel:new(V.v(246, 90))
+	local l_tip = GGTextLabel:new(V.v(246, 90))
 
 	l_tip.anchor.x = l_tip.size.x * 0.5
 	l_tip.text = _(string.format("TIP_%i", math.random(1, GS.gameplay_tips_count)))
@@ -4417,7 +4433,7 @@ function NotificationView:show(id, no_transition, force_show)
 		table.insert(views, v_paper)
 
 		for i, d in pairs(layout_data) do
-			local lv = GGLabel:new(V.v(d.size.x, d.size.y))
+			local lv = GGTextLabel:new(V.v(d.size.x, d.size.y))
 
 			lv.font_name = "body_slides"
 			lv.font_size = 18
@@ -4462,7 +4478,7 @@ function NotificationView:show(id, no_transition, force_show)
 		table.insert(views, v_paper)
 
 		if layout == N_ENEMY then
-			local l_name = GGLabel:new(V.v(label_w, 36))
+			local l_name = GGTextLabel:new(V.v(label_w, 36))
 
 			l_name.pos = V.v(ox, CJK(oy, nil, nil, oy - 5))
 			l_name.text = _(prefix .. "_NAME")
@@ -4476,7 +4492,7 @@ function NotificationView:show(id, no_transition, force_show)
 
 			oy = oy + my + l_name.size.y
 
-			local l_desc = GGLabel:new(V.v(label_w, 100))
+			local l_desc = GGTextLabel:new(V.v(label_w, 100))
 
 			l_desc.pos = V.v(ox, oy)
 			l_desc.text = _(prefix .. "_DESCRIPTION")
@@ -4491,7 +4507,7 @@ function NotificationView:show(id, no_transition, force_show)
 
 			oy = oy + my + l_desc.size.y
 
-			local l_extra = GGLabel:new(V.v(label_w, 90))
+			local l_extra = GGTextLabel:new(V.v(label_w, 90))
 
 			l_extra.pos = V.v(ox, oy + 1)
 			l_extra.text = string.gsub(_(prefix .. "_EXTRA"), "- ", "* ")
@@ -4505,7 +4521,7 @@ function NotificationView:show(id, no_transition, force_show)
 
 			oy = oy + my + l_extra.size.y
 		elseif layout == N_POWER then
-			local l_name = GGLabel:new(V.v(label_w, 35))
+			local l_name = GGTextLabel:new(V.v(label_w, 35))
 
 			l_name.pos = V.v(ox, oy)
 			l_name.text = _(prefix .. "_NAME")
@@ -4520,7 +4536,7 @@ function NotificationView:show(id, no_transition, force_show)
 
 			oy = oy + my + l_name.size.y
 
-			local l_desc = GGLabel:new(V.v(label_w, 85))
+			local l_desc = GGTextLabel:new(V.v(label_w, 85))
 
 			l_desc.pos = V.v(ox, CJK(oy, nil, nil, oy + 8))
 			l_desc.text = _(prefix .. "_LARGE_DESCRIPTION")
@@ -4536,7 +4552,7 @@ function NotificationView:show(id, no_transition, force_show)
 		elseif layout == N_TOWER then
 			oy = oy + 20
 
-			local l_sub = GGLabel:new(V.v(label_w, 20))
+			local l_sub = GGTextLabel:new(V.v(label_w, 20))
 
 			l_sub.pos = V.v(ox + 2, oy + CJK(4, nil, nil, -4))
 			l_sub.text = _(subtitle)
@@ -4549,7 +4565,7 @@ function NotificationView:show(id, no_transition, force_show)
 
 			oy = oy + my + l_sub.size.y
 
-			local l_name = GGLabel:new(V.v(label_w, 40))
+			local l_name = GGTextLabel:new(V.v(label_w, 40))
 
 			l_name.pos = V.v(ox, CJK(oy, nil, nil, oy - 2))
 			l_name.text = _(prefix .. "_NAME")
@@ -4563,7 +4579,7 @@ function NotificationView:show(id, no_transition, force_show)
 
 			oy = oy + my + l_name.size.y
 
-			local l_extra = GGLabel:new(V.v(label_w, 100))
+			local l_extra = GGTextLabel:new(V.v(label_w, 100))
 
 			l_extra.pos = V.v(ox, oy)
 			l_extra.text = _(prefix .. "_EXTRA")
@@ -4727,7 +4743,7 @@ function NotificationView:show(id, no_transition, force_show)
 		v_paper.propagate_on_click = true
 		v_paper.propagate_on_down = true
 
-		local l_1 = GGLabel:new(V.v(490, 32))
+		local l_1 = GGTextLabel:new(V.v(490, 32))
 
 		l_1.pos = V.v(ox, oy)
 		l_1.text = string.format(_("NOTIFICATION_NEW_TOWERS_SUB_TITLE"), n.level)
@@ -4737,7 +4753,7 @@ function NotificationView:show(id, no_transition, force_show)
 		l_1.text_align = "center"
 		oy = oy + my + l_1.size.y
 
-		local l_2 = GGLabel:new(V.v(490, 85))
+		local l_2 = GGTextLabel:new(V.v(490, 85))
 
 		l_2.pos = V.v(ox, oy)
 		l_2.text = string.format(_("NOTIFICATION_NEW_TOWERS_SUB_DESCRIPTION"), n.level)
@@ -5138,7 +5154,7 @@ function TutorialBalloon:initialize(id)
 		local views = {}
 
 		for i, d in pairs(data.notification_slides[id]) do
-			local lv = GGLabel:new(V.v(d.size.x, d.size.y))
+			local lv = GGTextLabel:new(V.v(d.size.x, d.size.y))
 
 			lv.font_name = "body"
 			lv.font_size = 18
@@ -5369,7 +5385,7 @@ AchievementBanner = class("AchievementBanner", KImageView)
 function AchievementBanner:initialize(id)
 	AchievementBanner.super.initialize(self, "Achievements_Box_Big")
 
-	local header = GGLabel:new(V.v(78, 13))
+	local header = GGTextLabel:new(V.v(78, 13))
 
 	header.pos.x, header.pos.y = 95, 8.5 + CJK(0, -1, 0, 0)
 	header.text = _("ACHIEVEMENT")
@@ -5391,7 +5407,7 @@ function AchievementBanner:initialize(id)
 
 	self:add_child(icon)
 
-	local l_title = GGLabel:new(V.v(180, 14))
+	local l_title = GGTextLabel:new(V.v(180, 14))
 
 	l_title.pos = V.v(68, CJK(35, 33, nil, 33))
 	l_title.font_name = "h"
@@ -5404,7 +5420,7 @@ function AchievementBanner:initialize(id)
 
 	self:add_child(l_title)
 
-	local l_desc = GGLabel:new(V.v(180, 32))
+	local l_desc = GGTextLabel:new(V.v(180, 32))
 
 	l_desc.font_name = "body"
 	l_desc.font_size = 10
@@ -5781,6 +5797,10 @@ function RangeCircle:initialize(sprite_name)
 	tr.draw = KF.draw_without_children_and_clip
 	bl.draw = KF.draw_without_children_and_clip
 	br.draw = KF.draw_without_children_and_clip
+	tl._draw_self = KF._draw_self_KView_no_color
+	tr._draw_self = KF._draw_self_KView_no_color
+	bl._draw_self = KF._draw_self_KView_no_color
+	br._draw_self = KF._draw_self_KView_no_color
 
 	self:add_child(tl)
 	self:add_child(tr)
@@ -5794,7 +5814,6 @@ function RangeCircle:initialize(sprite_name)
 end
 
 RangeCircle.update = KF.update_empty
-RangeCircle.draw = KF.draw_without_clip_and_scroll
 
 CriketMenuButton = class("CriketMenuButton", KView)
 
@@ -6858,7 +6877,7 @@ function TowerMenuTooltip:initialize()
 	TowerMenuTooltip.super.initialize(self, "tooltip_bg_standard")
 
 	local margin = v(10, 14)
-	local title = GGLabel:new(V.v(self.size.x - 2 * margin.x, 16))
+	local title = GGTextLabel:new(V.v(self.size.x - 2 * margin.x, 16))
 
 	title.pos = v(margin.x, margin.y + CJK(0, -2, nil, nil))
 	title.font_name = "h"
@@ -6943,7 +6962,7 @@ function TowerMenuTooltip:initialize()
 
 	self:add_child(armor_label)
 
-	local phrase_label = GGLabel:new(V.v(self.size.x - 2 * margin.x, 16))
+	local phrase_label = GGTextLabel:new(V.v(self.size.x - 2 * margin.x, 16))
 
 	phrase_label.pos = v(margin.x, self.size.y - 22)
 	phrase_label.font_name = "sans"
@@ -7350,7 +7369,7 @@ function IncomingTooltip:initialize()
 
 	self:add_child(arrow)
 
-	local title = GGLabel:new(V.v(180, 30))
+	local title = GGTextLabel:new(V.v(180, 30))
 
 	title.text = _("INCOMING WAVE")
 	title.font_name = "h"
@@ -7358,7 +7377,7 @@ function IncomingTooltip:initialize()
 	title.text_align = "center"
 	title.colors.text = {255, 115, 55, 255}
 
-	local report = GGLabel:new(V.v(180, 90))
+	local report = GGTextLabel:new(V.v(180, 90))
 
 	report.font_name = "body"
 	report.font_size = 12
@@ -7466,14 +7485,19 @@ function WaveFlag:initialize(flying, duration, report, path_index, world_pos)
 
 	local halo = KImageView:new("nextwaveTimer_glow_0001")
 	halo.draw = KF.draw_without_children_and_clip
+	halo._draw_self = KF._draw_self_KView_no_color
 	local bg_circle = KImageView:new("nextwaveTimer_Full")
 	bg_circle.draw = KF.draw_without_children
+	bg_circle._draw_self = KF._draw_self_KView_no_color
 	local circle = KImageView:new("nextwaveTimer_0001")
 	circle.draw = KF.draw_without_children_and_clip
+	circle._draw_self = KF._draw_self_KView_no_color
 	local icon = KImageView:new(flying and "nextwaveTimer_0003" or "nextwaveTimer_0002")
 	icon.draw = KF.draw_without_children_and_clip
+	icon._draw_self = KF._draw_self_KView_no_color
 	local pointer = KImageView:new("nextwaveTimer_0020")
 	pointer.draw = KF.draw_without_children_and_clip
+	pointer._draw_self = KF._draw_self_KView_no_color
 
 	self.size.x, self.size.y = halo.size.x, halo.size.y
 	self.anchor.x, self.anchor.y = self.size.x * 0.5, self.size.y * 0.5
@@ -7626,17 +7650,17 @@ end
 
 WaveFlag.draw = KF.draw_without_clip_and_scroll
 
-SelectItem = class("SelectItem", KButton)
+SelectItem = class("SelectItem", KButtonNoText)
 
 function SelectItem:initialize(key_text, size)
 	size = size or V.v(400, 80) -- 增加高度以容纳两行文本
 
-	KButton.initialize(self, size)
+	KButtonNoText.initialize(self, size)
 
 	self.key = key_text
 	self.on_change_callback = nil
 	-- 标题标签（原来的key_label改为title_label）
-	self.title_label = GGLabel:new(V.v(self.size.x - 20, 20))
+	self.title_label = GGTextLabel:new(V.v(self.size.x - 20, 20))
 	self.title_label.pos = V.v(15, 8)
 	self.title_label.font_name = "body"
 	self.title_label.font_size = 16
@@ -7648,7 +7672,7 @@ function SelectItem:initialize(key_text, size)
 	self.title_label.colors.text_hover = {255, 255, 100, 255}
 	self.title_label.propagate_on_click = true
 	-- 描述标签（新增）
-	self.desc_label = GGLabel:new(V.v(self.size.x - 20, 40))
+	self.desc_label = GGTextLabel:new(V.v(self.size.x - 20, 40))
 	self.desc_label.pos = V.v(15, 32)
 	self.desc_label.font_name = "body"
 	self.desc_label.font_size = 12

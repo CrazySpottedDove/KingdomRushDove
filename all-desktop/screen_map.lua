@@ -2596,7 +2596,7 @@ function LevelFlagView:initialize(level_num)
 	self.mode = "default"
 	self.animations = {}
 	self.level_num = level_num
-	self.button = KButton:new(V.v(self.size.x, self.size.y))
+	self.button = KButtonNoText:new(V.v(self.size.x, self.size.y))
 
 	self:add_child(self.button)
 
@@ -4748,7 +4748,7 @@ function EncyclopediaView:create_tower(icon, pos, information, enabled)
 
 		self.towers:add_child(tower)
 	else
-		local tower = KButton:new()
+		local tower = KButtonNoText:new()
 
 		tower:set_image(icon)
 
@@ -5382,7 +5382,7 @@ function EncyclopediaView:create_creep(icon, pos, idx, enabled)
 	local creep_name = GS.encyclopedia_enemies[idx]
 
 	if screen_map.user_data.seen[creep_name] then
-		local b = KButton:new()
+		local b = KButtonNoText:new()
 
 		b:set_image(icon)
 

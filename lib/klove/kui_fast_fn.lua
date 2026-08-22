@@ -1,4 +1,5 @@
 local G = love.graphics
+local I = require("lib.klove.image_db")
 local M = {
 	-- 空 update 实现
 	update_empty = function(self, dt)
@@ -163,8 +164,83 @@ local M = {
 		self:_draw_children()
 		G.pop()
 		G.setColor(pr, pg, pb, pa)
+	end,
+	_draw_self_KView_no_color = function(self)
+		local ss = self.image_ss
+		local ref_scale = (ss.ref_scale or 1) * self.image_scale
+
+		G.draw(self.image, ss.quad, ss.trim[1] * ref_scale, ss.trim[2] * ref_scale, 0, ref_scale)
+	end,
+	_draw_self_KView_no_color_animated = function(self)
+		local fn = self:animation_frame(self.animation, self.ts, self.loop, self.fps)
+		local ss = I:s(fn)
+		self.image_ss = ss
+		self.image = I:i(ss.atlas)
+		local ref_scale = (ss.ref_scale or 1) * self.image_scale
+		G.draw(self.image, ss.quad, ss.trim[1] * ref_scale, ss.trim[2] * ref_scale, 0, ref_scale)
+	end,
+	_draw_self_KView_colored = function(self)
+		local pr, pg, pb, pa = G.getColor()
+
+		if self.colors.background then
+			G.setColor(self.colors.background[1] / 255, self.colors.background[2] / 255, self.colors.background[3] / 255, self.colors.background[4] * pa / 255)
+
+			if self.shape then
+				local fn = G[self.shape.name]
+
+				if fn then
+					fn(unpack(self.shape.args))
+				end
+			else
+				G.rectangle("fill", 0, 0, self.size.x, self.size.y)
+			end
+		end
+
+		if self.colors.tint then
+			local tint = self.colors.tint
+
+			G.setColor(tint[1], tint[2], tint[3], tint[4] * pa)
+		end
+
+		local ss = self.image_ss
+		local ref_scale = (ss.ref_scale or 1) * self.image_scale
+
+		G.draw(self.image, ss.quad, ss.trim[1] * ref_scale, ss.trim[2] * ref_scale, 0, ref_scale)
+
+		G.setColor(pr, pg, pb, pa)
+	end,
+	_draw_self_KView_colored_animated = function(self)
+		local pr, pg, pb, pa = G.getColor()
+
+		if self.colors.background then
+			G.setColor(self.colors.background[1] / 255, self.colors.background[2] / 255, self.colors.background[3] / 255, self.colors.background[4] * pa / 255)
+
+			if self.shape then
+				local fn = G[self.shape.name]
+
+				if fn then
+					fn(unpack(self.shape.args))
+				end
+			else
+				G.rectangle("fill", 0, 0, self.size.x, self.size.y)
+			end
+		end
+
+		if self.colors.tint then
+			local tint = self.colors.tint
+
+			G.setColor(tint[1], tint[2], tint[3], tint[4] * pa)
+		end
+
+		local fn = self:animation_frame(self.animation, self.ts, self.loop, self.fps)
+		local ss = I:s(fn)
+		self.image_ss = ss
+		self.image = I:i(ss.atlas)
+		local ref_scale = (ss.ref_scale or 1) * self.image_scale
+		G.draw(self.image, ss.quad, ss.trim[1] * ref_scale, ss.trim[2] * ref_scale, 0, ref_scale)
+
+		G.setColor(pr, pg, pb, pa)
 	end
--- _draw_self_KView_
 }
 
 return M
