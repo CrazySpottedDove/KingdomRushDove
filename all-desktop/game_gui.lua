@@ -6487,6 +6487,7 @@ function TowerMenu:update(dt)
 
 	for _, c in ipairs(self.children) do
 		if c:isInstanceOf(TowerMenuButton) and c.item_props then
+			c:update(dt)
 			if c.item_props.action == "tw_point" and e.user_selection then
 				if not e.user_selection.allowed then
 					c:disable()
