@@ -541,7 +541,6 @@ function GG9View:initialize(image_name, size, slice_rect)
 	end
 
 	local oss = I:s(image_name)
-
 	if not oss then
 		log.error("Image not found %s", image_name)
 
@@ -572,8 +571,6 @@ function GG9View:initialize(image_name, size, slice_rect)
 	local cwf, chf = (size.x / ref_scale - tw1 - tw3) / tw2, (size.y / ref_scale - th1 - th3) / th2
 	local cw, ch = km.round(cwf), km.round(chf)
 	local sw, sh = (size.x / ref_scale - tw1 - tw3) / (cw * tw2), (size.y / ref_scale - th1 - th3) / (ch * th2)
-
-	log.debug("GG9View - NEAREST EXACT SIZE: %s,%s --> %s,%s", size.x, size.y, tw1 + tw2 * cw + tw3, th1 + th2 * ch + th3)
 
 	if cw < 1 or ch < 1 then
 		log.error("GG9View: specified size %s,%s is smaller than which is possible for the slice_rect:%s,%s,%s,%s", size.x, size.y, slice_rect.pos.x, slice_rect.pos.y, slice_rect.size.x, slice_rect.size.y)
@@ -616,9 +613,43 @@ function GG9View:initialize(image_name, size, slice_rect)
 	view_size.x, view_size.y = view_size.x * ref_scale, view_size.y * ref_scale
 
 	KView.initialize(self, view_size, canvas)
-
+	self.image = canvas
 	self.size = view_size
 	self.image_scale = ref_scale
+end
+
+function GG9View:_draw_self()
+	local pr, pg, pb, pa = G.getColor()
+
+	if self.colors.background then
+		G.setColor(self.colors.background[1] / 255, self.colors.background[2] / 255, self.colors.background[3] / 255, self.colors.background[4] * pa / 255)
+
+		if self.shape then
+			local fn = G[self.shape.name]
+
+			if fn then
+				fn(unpack(self.shape.args))
+			else
+				log.error("shape %s was not found in love.graphics", self.shape.name)
+			end
+		else
+			G.rectangle("fill", 0, 0, self.size.x, self.size.y)
+		end
+	end
+
+	if self.colors.tint then
+		local tint = self.colors.tint
+
+		G.setColor(tint[1], tint[2], tint[3], tint[4] * pa)
+	end
+
+	local iw, ih = self.image:getDimensions()
+	local ix = (self.size.x - iw * self.image_scale) * 0.5
+	local iy = (self.size.y - ih * self.image_scale) * 0.5
+
+	G.draw(self.image, ix, iy, 0, self.image_scale, self.image_scale)
+
+	G.setColor(pr, pg, pb, pa)
 end
 
 GGEllipseText = class("GGEllipseText", KView)
