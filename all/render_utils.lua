@@ -122,7 +122,7 @@ function RU.init()
 									local ss = I:s(exo.parts[part_name_idx][1])
 
 									-- 计算最终渲染坐标
-									local ref_scale = ss.ref_scale or 1
+									local ref_scale = ss.ref_scale
 									sx = sx * f_sx * ref_scale
 									sy = sy * f_sy * ref_scale
 
@@ -219,7 +219,7 @@ function RU.init()
 						local y = REF_H - (f.pos.y + f.offset.y)
 						-- 视锥体剔除
 						local visible = true
-						local ref_scale = ss.ref_scale or 1
+						local ref_scale = ss.ref_scale
 						local sy = (f.flip_y and -1 or 1) * ref_scale
 						local sx = (f.flip_x and -1 or 1) * ref_scale
 						if f.scale then
@@ -228,7 +228,7 @@ function RU.init()
 						end
 
 						if cull_bounds then
-							-- local ref_scale = ss.ref_scale or 1
+							-- local ref_scale = ss.ref_scale
 							-- local sx_abs = math.abs(f.scale and f.scale.x or 1) * ref_scale
 							-- local sy_abs = math.abs(f.scale and f.scale.y or 1) * ref_scale
 							-- local w, h = ss.size[1] * sx_abs, ss.size[2] * sy_abs
@@ -450,7 +450,7 @@ function RU.init()
 									lr, lg, lb, la = r, g, b, a
 								end
 
-								local ref_scale = ss.ref_scale or 1
+								local ref_scale = ss.ref_scale
 								sx = sx * f_sx * ref_scale
 								sy = sy * f_sy * ref_scale
 
@@ -554,7 +554,7 @@ function RU.init()
 					end
 
 					local ss = f.ss
-					local ref_scale = ss.ref_scale or 1
+					local ref_scale = ss.ref_scale
 					local sy = (f.flip_y and -1 or 1) * ref_scale
 					local sx = (f.flip_x and -1 or 1) * ref_scale
 					if f.scale then
@@ -599,7 +599,7 @@ end
 ---@note 要绘画的quad, x坐标, y坐标, 旋转弧度, x缩放, y缩放, x原点偏移, y原点偏移
 -- function RU.frame_draw_params(f)
 -- 	local ss = f.ss
--- 	local ref_scale = ss.ref_scale or 1
+-- 	local ref_scale = ss.ref_scale
 -- 	local sy = (f.flip_y and -1 or 1) * ref_scale
 -- 	local sx = (f.flip_x and -1 or 1) * ref_scale
 

@@ -2231,7 +2231,6 @@ function PowerButton:initialize(default_image, mask_image)
 	if mask_image then
 		self.mask = KImageView:new(mask_image)
 		self.mask.draw = KF.draw_without_children_and_clip
-		self.mask._disabled = true
 		self:add_child(self.mask)
 	end
 end
@@ -3022,6 +3021,7 @@ function HudBottomView:initialize(sw, sh, ui_scale)
 	base_powers.pos = v(123.5, powers.size.y)
 	base_powers._disabled = true
 	base_powers.draw = KF.draw_without_children_and_clip
+	base_powers._draw_self = KF._draw_self_KView_no_color
 	powers:add_child(base_powers)
 
 	self.power_buttons = {}
@@ -3178,8 +3178,6 @@ function HudBottomView:update(dt)
 	self.herobar:update(dt)
 end
 
-HudBottomView.draw = KF.draw_without_clip_and_scroll
-
 HudCountersView = class("HudCountersView", KView)
 
 function HudCountersView:initialize(level_mode)
@@ -3293,6 +3291,7 @@ function HudCountersView:show()
 end
 
 HudCountersView.draw = KF.draw_without_clip_and_scroll
+HudCountersView._draw_self = KF._draw_self_KView_no_color
 
 OverlayView = class("OverlayView", KView)
 
@@ -3769,7 +3768,7 @@ function VictoryParticles:initialize(w, h)
 	VictoryParticles.super.initialize(self)
 
 	local ss = I:s("victory_star")
-	local p_scale = ss.ref_scale or 1
+	local p_scale = ss.ref_scale
 	local c = G.newCanvas(ss.size[1], ss.size[2])
 
 	G.setCanvas(c)

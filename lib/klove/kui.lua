@@ -528,11 +528,10 @@ function KView:set_image(image, size)
 		self.image_ss = ss
 		self.image = I:i(ss.atlas)
 
-		local ref_scale = (ss.ref_scale or 1) * self.image_scale
-
 		if size then
 			self.size.x, self.size.y = size.x, size.y
 		else
+			local ref_scale = ss.ref_scale * self.image_scale
 			self.size.x, self.size.y = ss.size[1] * ref_scale, ss.size[2] * ref_scale
 		end
 	elseif size then
@@ -664,7 +663,7 @@ function KView:_draw_self()
 
 	if self.image_ss then
 		local ss = self.image_ss
-		local ref_scale = (ss.ref_scale or 1) * self.image_scale
+		local ref_scale = ss.ref_scale * self.image_scale
 
 		G.draw(self.image, ss.quad, ss.trim[1] * ref_scale, ss.trim[2] * ref_scale, 0, ref_scale)
 	end

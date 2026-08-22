@@ -547,7 +547,7 @@ function GG9View:initialize(image_name, size, slice_rect)
 		return nil
 	end
 
-	local ref_scale = oss.ref_scale or 1
+	local ref_scale = oss.ref_scale
 	local oim = I:i(oss.atlas)
 	local pr, pg, pb, pa = G.getColor()
 

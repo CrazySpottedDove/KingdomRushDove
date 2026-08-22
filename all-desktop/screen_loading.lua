@@ -127,7 +127,7 @@ function screen:draw()
 	if self.bg_image then
 		local ss = self.bg_image
 		local img = I:i(ss.atlas)
-		local iw, ih = ss.size[1] * (ss.ref_scale or 1), ss.size[2] * (ss.ref_scale or 1)
+		local iw, ih = ss.size[1] * ss.ref_scale, ss.size[2] * ss.ref_scale
 		local scale = layout.mode == "fullscreen" and math.max(w / iw, h / ih) or math.min(w / iw, h / ih)
 		local sw, sh = iw * scale, ih * scale
 		g.setColor(1, 1, 1, sprite_alpha)
