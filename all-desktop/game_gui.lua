@@ -7465,10 +7465,15 @@ function WaveFlag:initialize(flying, duration, report, path_index, world_pos)
 	self.world_pos = world_pos -- 存储世界坐标
 
 	local halo = KImageView:new("nextwaveTimer_glow_0001")
+	halo.draw = KF.draw_without_children_and_clip
 	local bg_circle = KImageView:new("nextwaveTimer_Full")
+	bg_circle.draw = KF.draw_without_children
 	local circle = KImageView:new("nextwaveTimer_0001")
+	circle.draw = KF.draw_without_children_and_clip
 	local icon = KImageView:new(flying and "nextwaveTimer_0003" or "nextwaveTimer_0002")
+	icon.draw = KF.draw_without_children_and_clip
 	local pointer = KImageView:new("nextwaveTimer_0020")
+	pointer.draw = KF.draw_without_children_and_clip
 
 	self.size.x, self.size.y = halo.size.x, halo.size.y
 	self.anchor.x, self.anchor.y = self.size.x * 0.5, self.size.y * 0.5
@@ -7477,13 +7482,13 @@ function WaveFlag:initialize(flying, duration, report, path_index, world_pos)
 
 	self.hit_rect = V.r(hrs * self.size.x, hrs * self.size.y, (1 - 2 * hrs) * self.size.x, (1 - 2 * hrs) * self.size.y)
 
-	for _, v in pairs({halo, bg_circle, circle, icon}) do
+	for _, v in ipairs({halo, bg_circle, circle, icon}) do
 		v.anchor.x, v.anchor.y = v.size.x * 0.5, v.size.y * 0.5
 	end
 
 	pointer.anchor.x, pointer.anchor.y = pointer.size.x * 0.5, pointer.size.y
 
-	for _, v in pairs({halo, bg_circle, circle, icon, pointer}) do
+	for _, v in ipairs({halo, bg_circle, circle, icon, pointer}) do
 		v.pos.x, v.pos.y = self.size.x * 0.5, self.size.y * 0.5
 		v.propagate_on_click = true
 
@@ -7618,6 +7623,8 @@ function WaveFlag:update(dt)
 		end
 	end
 end
+
+WaveFlag.draw = KF.draw_without_clip_and_scroll
 
 SelectItem = class("SelectItem", KButton)
 

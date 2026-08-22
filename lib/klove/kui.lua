@@ -590,6 +590,7 @@ function KView:update(dt)
 end
 
 function KView:draw()
+	-- print(self, game and game.simulation and game.simulation.store and game.simulation.store.tick_ts)
 	local pr, pg, pb, pa = G.getColor()
 	local current_alpha = pa * self.alpha
 
