@@ -7007,7 +7007,7 @@ function TowerMenuTooltip:show(entity, item)
 
 			self.damage_label:set_image("tooltip_icons_0007", V.v(self.damage_label.size.x, self.damage_label.size.y))
 
-			self.health_label.text = stats.hp_max
+			self.health_label.text = string.format("%i", stats.hp_max)
 			self.armor_label.text = GU.armor_value_desc_detailed(stats.armor)
 			self.damage_label.hidden = false
 			self.health_label.hidden = false
