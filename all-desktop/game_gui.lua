@@ -1609,14 +1609,10 @@ function game_gui:show_early_wave_reward()
 		S:queue("GUICoins")
 
 		local reward_fx = WaveRewardFx:new(game_gui.game.store.early_wave_reward)
-		local x, y = self.window:get_mouse_position()
-		local wx, wy = self.window:screen_to_view(x, y)
 
-		wy = wy - reward_fx.size.y
-		reward_fx.pos = V.v(wx, wy)
+		reward_fx.pos:set(self.window._last_mouse_screen_pos.x, self.window._last_mouse_screen_pos.y - reward_fx.size.y)
 
 		self.layer_gui_hud:add_child(reward_fx)
-		log.debug("show early wave reward at %s,%s", wx, wy)
 	end
 end
 
@@ -5586,11 +5582,7 @@ function PickView:update(dt)
 		return
 	end
 
-	local x, y = game_gui.window:get_mouse_position()
-
-	x, y = game_gui.window:screen_to_view(x, y)
-
-	local wx, wy = game_gui:u2g(V.v(x, y))
+	local wx, wy = game_gui:u2g(game_gui.window._last_mouse_screen_pos)
 	local e = game_gui:entity_at_pos(wx, wy)
 
 	if e and e.tower and e.tower.can_hover and e.ui and e.ui.can_click and not self.last_tower_hover then
