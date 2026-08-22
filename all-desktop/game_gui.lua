@@ -407,6 +407,8 @@ function game_gui:init(w, h, game)
 	point_confirm.hidden = true
 	point_confirm.anchor = v(point_confirm.size.x * 0.5, point_confirm.size.y * 0.5)
 	point_confirm.update = KF.update_only_own_animation
+	point_confirm.draw = KF.draw_without_children_and_clip
+	point_confirm._draw_self = KF._draw_self_KView_no_color_animated
 
 	local rallyflag = KImageView:new("rally_feedback_0005")
 
@@ -418,6 +420,8 @@ function game_gui:init(w, h, game)
 	rallyflag.hidden = true
 	rallyflag.anchor = v(rallyflag.size.x * 0.5, rallyflag.size.y * 0.5)
 	rallyflag.update = KF.update_only_own_animation
+	rallyflag.draw = KF.draw_without_children_and_clip
+	rallyflag._draw_self = KF._draw_self_KView_no_color_animated
 
 	local hud_bottom = HudBottomView:new(sw, sh, hud_scale)
 
@@ -4068,6 +4072,8 @@ function MousePointer:initialize(window)
 	}
 	rally_tower.loop = true
 	rally_tower.update = KF.update_only_own_animation
+	rally_tower.draw = KF.draw_without_children_and_clip
+	rally_tower._draw_self = KF._draw_self_KView_no_color_animated
 
 	local ipc = KImageView:new("error_feedback_0001")
 
@@ -4078,11 +4084,14 @@ function MousePointer:initialize(window)
 		from = 1
 	}
 	ipc.update = KF.update_only_own_animation
+	ipc.draw = KF.draw_without_children_and_clip
+	ipc._draw_self = KF._draw_self_KView_no_color_animated
 
 	local pirate_camp = KImageView:new("pointer_pirate_cannons")
 	pirate_camp.anchor = v(pirate_camp.size.x * 0.5, pirate_camp.size.y * 0.5)
 	pirate_camp.alpha = 0.75
-	pirate_camp.update = KF.update_only_own_animation
+	pirate_camp.update = KF.update_empty
+	pirate_camp.draw = KF.draw_without_children_and_clip
 
 	local p1b, p2b, p3b, sunray_tower
 
@@ -4103,6 +4112,10 @@ function MousePointer:initialize(window)
 		p1i.pos.x, p1i.pos.y = p1b.size.x * 0.5, p1b.size.y * 0.5
 
 		p1b:add_child(p1i)
+		p1b.draw = KF.draw_without_clip_and_scroll
+		p1b._draw_self = KF._draw_self_KView_no_color_animated
+		p1i.draw = KF.draw_without_children_and_clip
+		p1i._draw_self = KF._draw_self_KView_no_color
 	elseif E:get_template("user_power_1").template_name == "power_thunder_control" then
 		p1b = KImageView:new("pointer_area_orange_0001")
 		p1b.anchor = V.v(p1b.size.x / 2, p1b.size.y / 2)
@@ -4120,6 +4133,10 @@ function MousePointer:initialize(window)
 		p1i.pos.x, p1i.pos.y = p1b.size.x / 2, p1b.size.y / 2
 
 		p1b:add_child(p1i)
+		p1b.draw = KF.draw_without_clip_and_scroll
+		p1b._draw_self = KF._draw_self_KView_no_color_animated
+		p1i.draw = KF.draw_without_children_and_clip
+		p1i._draw_self = KF._draw_self_KView_no_color
 	end
 
 	p2b = KImageView:new("pointer_point_orange_0001")
@@ -4131,11 +4148,15 @@ function MousePointer:initialize(window)
 	}
 	p2b.loop = true
 	p2b.update = KF.update_only_own_animation
+	p2b.draw = KF.draw_without_clip_and_scroll
+	p2b._draw_self = KF._draw_self_KView_no_color_animated
 
 	local p2i = KImageView:new("pointer_user_power_0002")
 	p2i.anchor = V.v(p2i.size.x * 0.5, p2i.size.y * 100 / 100)
 	p2i.pos.x, p2i.pos.y = p2b.size.x * 0.5, p2b.size.y * 0.5
 	p2b:add_child(p2i)
+	p2i.draw = KF.draw_without_children_and_clip
+	p2i._draw_self = KF._draw_self_KView_no_color
 
 	sunray_tower = KImageView:new("pointer_point_orange_0001")
 	sunray_tower.anchor = V.v(sunray_tower.size.x * 0.5, sunray_tower.size.y * 0.5)
@@ -4146,6 +4167,8 @@ function MousePointer:initialize(window)
 	}
 	sunray_tower.loop = true
 	sunray_tower.update = KF.update_only_own_animation
+	sunray_tower.draw = KF.draw_without_clip_and_scroll
+	sunray_tower._draw_self = KF._draw_self_KView_no_color_animated
 
 	local drop = KImageView:new("pointer_sunray_tower")
 
@@ -4153,6 +4176,8 @@ function MousePointer:initialize(window)
 	drop.pos.x, drop.pos.y = sunray_tower.size.x * 0.5, sunray_tower.size.y * 0.5
 
 	sunray_tower:add_child(drop)
+	drop.draw = KF.draw_without_children_and_clip
+	drop._draw_self = KF._draw_self_KView_no_color
 
 	self.cross = ipc
 	self.pointers = {

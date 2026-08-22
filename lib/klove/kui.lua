@@ -672,15 +672,18 @@ function KView:_draw_self()
 end
 
 function KView:_draw_children()
+	local px, py = 0, 0
+
 	for i = 1, #self.children do
 		local c = self.children[i]
 		if not c.hidden then
-			G.push()
-			G.translate(c.pos.x, c.pos.y)
+			G.translate(c.pos.x - px, c.pos.y - py)
 			c:draw()
-			G.pop()
+			px, py = c.pos.x, c.pos.y
 		end
 	end
+
+	G.translate(-px, -py)
 end
 
 function KView:animation_frame(animation, time_offset, loop, fps)

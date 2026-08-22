@@ -20,32 +20,33 @@ local M = {
 		local cv = self.clip_view
 		local clip_x, clip_y = cv:view_to_view(0, 0, self)
 		local clip_xw, clip_yh = cv:view_to_view(cv.size.x, cv.size.y, self)
+		local px, py = 0, 0
 
 		for i = 1, #self.children do
 			local c = self.children[i]
 			if not (c.hidden or (clip_xw < c.pos.x or clip_x > c.pos.x + c.size.x or clip_yh < c.pos.y or clip_y > c.pos.y + c.size.y)) then
-				G.push()
-				G.translate(c.pos.x, c.pos.y)
+				G.translate(c.pos.x - px, c.pos.y - py)
 				c:draw()
-				G.pop()
+				px, py = c.pos.x, c.pos.y
 			end
 		end
+
+		G.translate(-px, -py)
 	end,
 	_draw_children_with_padding = function(self)
-		G.push()
 		G.translate(self.padding.x, self.padding.y)
+		local px, py = 0, 0
 
 		for i = 1, #self.children do
 			local c = self.children[i]
 			if not c.hidden then
-				G.push()
-				G.translate(c.pos.x, c.pos.y)
+				G.translate(c.pos.x - px, c.pos.y - py)
 				c:draw()
-				G.pop()
+				px, py = c.pos.x, c.pos.y
 			end
 		end
 
-		G.pop()
+		G.translate(-px - self.padding.x, -py - self.padding.y)
 	end,
 	draw_without_clip_and_scroll = function(self)
 		local pr, pg, pb, pa = G.getColor()
