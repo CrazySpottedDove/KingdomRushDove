@@ -1550,9 +1550,20 @@ else
 			G.pop()
 		end
 
-		layer_gui.children[3]:draw()
-		layer_gui.children[4]:draw()
-		layer_gui.children[5]:draw()
+		c = layer_gui.children[3]
+		if not c.hidden then
+			c:draw()
+		end
+
+		c = layer_gui.children[4]
+		if not c.hidden then
+			c:draw()
+		end
+
+		c = layer_gui.children[5]
+		if not c.hidden then
+			c:draw()
+		end
 
 		G.pop()
 		perf.stop("game_gui_draw")
