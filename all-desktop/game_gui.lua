@@ -4300,12 +4300,12 @@ function NotificationView:show(id, no_transition, force_show)
 		218,
 		215,
 		157,
-		[N_ENEMY] = {"notifications_tit_newenemy_bg", _("NEW ENEMY!"), {247, 244, 185}},
-		[N_TOWER] = {"notifications_tit_towers_bg", _("NEW TOWER UNLOCKED"), {247, 244, 185}},
-		[N_TOWER_4] = {"notifications_tit_towers_bg", _("NEW TOWER UPGRADES"), {247, 244, 185}},
-		[N_TOWER_2] = {"notifications_tit_towers_bg", _("NEW TOWERS UNLOCKED"), {247, 244, 185}},
-		[N_POWER] = {"notifications_tit_newpower_bg", _("NEW SPECIAL POWER!"), {247, 244, 185}},
-		[N_TIP] = {"notifications_tit_generics_bg_0001", _("HINT"), {247, 244, 185}},
+		[N_ENEMY] = {"notifications_tit_newenemy_bg", _("NEW ENEMY!"), {247, 244, 185, 255}},
+		[N_TOWER] = {"notifications_tit_towers_bg", _("NEW TOWER UNLOCKED"), {247, 244, 185, 255}},
+		[N_TOWER_4] = {"notifications_tit_towers_bg", _("NEW TOWER UPGRADES"), {247, 244, 185, 255}},
+		[N_TOWER_2] = {"notifications_tit_towers_bg", _("NEW TOWERS UNLOCKED"), {247, 244, 185, 255}},
+		[N_POWER] = {"notifications_tit_newpower_bg", _("NEW SPECIAL POWER!"), {247, 244, 185, 255}},
+		[N_TIP] = {"notifications_tit_generics_bg_0001", _("HINT"), {247, 244, 185, 255}},
 		[N_TUTORIAL] = {"tutorial_tit_instructions_bg", _("INSTRUCTIONS")}
 	}
 
@@ -4441,12 +4441,12 @@ function NotificationView:show(id, no_transition, force_show)
 
 	local function create_slide(layout_name, paper, layout_data)
 		local colors = {
-			black = {0, 0, 0},
-			white = {255, 255, 255},
-			gray = {48, 41, 35},
-			red = {216, 55, 18},
-			dark_red = {183, 63, 13},
-			blue = {0, 124, 178}
+			black = {0, 0, 0, 255},
+			white = {255, 255, 255, 255},
+			gray = {48, 41, 35, 255},
+			red = {216, 55, 18, 255},
+			dark_red = {183, 63, 13, 255},
+			blue = {0, 124, 178, 255}
 		}
 		local views = {}
 		local v_paper = KImageView:new(paper)
