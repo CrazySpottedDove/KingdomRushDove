@@ -2853,6 +2853,8 @@ function InfoBar:update(dt)
 	self:update_stats(dt)
 end
 
+InfoBar.draw = KF.draw_without_clip_and_scroll
+
 function InfoBar:update_portrait()
 	local e = game_gui.selected_entity
 
@@ -3169,6 +3171,8 @@ function HudBottomView:update(dt)
 	self.herobar:update(dt)
 end
 
+HudBottomView.draw = KF.draw_transparent
+
 HudCountersView = class("HudCountersView", KView)
 
 function HudCountersView:initialize(level_mode)
@@ -3322,6 +3326,7 @@ function OverlayView:hide()
 end
 
 OverlayView.update = KF.update_empty
+OverlayView.draw = KF.draw_without_children_and_clip
 
 HudPauseButton = class("HudPauseButton", KImageView)
 
@@ -4256,6 +4261,8 @@ function MousePointer:update(dt)
 		self.children[i]:update(dt)
 	end
 end
+
+MousePointer.draw = KF.draw_transparent
 
 NotificationView = class("NotificationView", KView)
 
@@ -5582,7 +5589,16 @@ function PickView:update(dt)
 		return
 	end
 
-	local wx, wy = game_gui:u2g(game_gui.window._last_mouse_screen_pos)
+	local x, y = game_gui.window._last_mouse_screen_pos.x, game_gui.window._last_mouse_screen_pos.y
+
+	-- 常态优化：鼠标未动则跳过悬停检测（鼠标移动后自动恢复）
+	if x == self._last_hover_x and y == self._last_hover_y then
+		return
+	end
+
+	self._last_hover_x, self._last_hover_y = x, y
+
+	local wx, wy = game_gui:u2g(V.v(x, y))
 	local e = game_gui:entity_at_pos(wx, wy)
 
 	if e and e.tower and e.tower.can_hover and e.ui and e.ui.can_click and not self.last_tower_hover then
@@ -6580,6 +6596,8 @@ function TowerMenu:update(dt)
 	end
 end
 
+TowerMenu.draw = KF.draw_without_clip_and_scroll
+
 function TowerMenu:button_enter(button, item, entity)
 	if button.halo then
 		button.halo.hidden = false
@@ -7145,6 +7163,8 @@ function TowerMenuTooltip:update(dt)
 		end
 	end
 end
+
+TowerMenuTooltip.draw = KF.draw_without_clip_and_scroll
 
 TowerMenuButton = class("TowerMenuButton", KView)
 

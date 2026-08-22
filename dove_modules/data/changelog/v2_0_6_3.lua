@@ -1,1 +1,1 @@
-return {{date="2026-08-22",author="CrazySpottedDove",message="fix: 修正game_gui一处重载不合适的问题"},{date="2026-08-22",author="CrazySpottedDove",message="perf: 减少game_gui:update重复计算mouse_screen_pos"}}
+return {{date="2026-08-22",author="CrazySpottedDove",message="fix: 修正game_gui一处重载不合适的问题"},{date="2026-08-22",author="CrazySpottedDove",message="perf: 减少game_gui:update重复计算mouse_screen_pos"},{date="2026-08-22",author="CrazySpottedDove",message="perf: 鼠标位置不动时跳过ui碰撞检测"}}

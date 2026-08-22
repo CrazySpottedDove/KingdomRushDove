@@ -1415,8 +1415,10 @@ function KWindow:update(dt)
 		button_1_down = love.mouse.isDown(1)
 	end
 
+	local pmx, pmy = self._last_mouse_pos.x, self._last_mouse_pos.y
+
 	if button_1_down then
-		local dx, dy = x - self._last_mouse_pos.x, y - self._last_mouse_pos.y
+		local dx, dy = x - pmx, y - pmy
 
 		if self._mouse_down_pos then
 			local mdx, mdy = self._mouse_down_pos.x, self._mouse_down_pos.y
@@ -1457,19 +1459,22 @@ function KWindow:update(dt)
 	self._last_mouse_pos.x, self._last_mouse_pos.y = x, y
 	self._update_core(self, dt)
 
-	local lev = self._last_enter_view
-	local nev = self:hit_topmost(self._last_mouse_screen_pos.x, self._last_mouse_screen_pos.y, KWindow_hit_topmost_filter)
+	-- 常态优化：鼠标未动且未拖拽时跳过 enter/exit 检测（鼠标移动后自动恢复）
+	if x ~= pmx or y ~= pmy or self._drag_view then
+		local lev = self._last_enter_view
+		local nev = self:hit_topmost(self._last_mouse_screen_pos.x, self._last_mouse_screen_pos.y, KWindow_hit_topmost_filter)
 
-	if lev ~= nev then
-		if lev and lev.on_exit then
-			lev:on_exit(self._drag_view)
+		if lev ~= nev then
+			if lev and lev.on_exit then
+				lev:on_exit(self._drag_view)
+			end
+
+			if nev and nev.on_enter and not self.disable_mouse_enter then
+				nev:on_enter(self._drag_view)
+			end
+
+			self._last_enter_view = nev
 		end
-
-		if nev and nev.on_enter and not self.disable_mouse_enter then
-			nev:on_enter(self._drag_view)
-		end
-
-		self._last_enter_view = nev
 	end
 end
 
