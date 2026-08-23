@@ -2431,9 +2431,12 @@ function editor:create_plugin(entry)
 
 	love.filesystem.write(plugin_dir .. "/README.md", "# " .. entry .. "\n\nTODO: 描述你的地图\n")
 
-	love.filesystem.write(plugin_dir .. "/" .. entry .. ".lua", [[local hook = require("hook_utils"):new()
+	love.filesystem.write(plugin_dir .. "/" .. entry .. ".lua", [[local hook=require("hook_utils"):new()
 function hook:init(plugin_data)
-	self.plugin_data = plugin_data
+	self.plugin_data=plugin_data
+end
+hook.reload=hook.init
+function hook:unload(plugin_data)
 end
 return hook
 ]])

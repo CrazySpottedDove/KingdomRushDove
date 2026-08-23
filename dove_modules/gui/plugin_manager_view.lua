@@ -2939,19 +2939,21 @@ function PluginManagerView:_clear_pending_changes()
 	}
 end
 
---- 汇总本次打开期间的最终修改（按最终状态与打开时状态比较，
---- 同一插件多次切换开闭只产生一次有效变更，避免先 reload 后 unload 的无效操作）
+--- 汇总本次打开期间的最终修改（按最终状态与运行时加载状态比较，
+--- 同一插件多次切换开闭只产生一次有效变更，避免先 reload 后 unload 的无效操作）。
+--- 基准使用 plugin_main 的运行时加载状态而非磁盘快照：
+--- 新下载/新安装的插件（未应用过）不在运行时加载集合中，点「应用」时会被正确热加载。
 ---@return table {unloads=..., reloads=..., configs=...}
 function PluginManagerView:_collect_changes()
 	local new_global = self.global_toggle.value
-	local old_global = self._saved_state.global_enabled
 	local changes = {
 		unloads = {},
 		reloads = {},
 		configs = {}
 	}
 	for _, plugin_data in ipairs(self.local_plugins) do
-		local old_eff = old_global and self._saved_state.plugin_enabled[plugin_data.name] == true
+		-- 应用前该插件是否正在运行（运行时真实状态）
+		local old_eff = plugin_main:is_loaded(plugin_data)
 		local new_eff = new_global and plugin_data.config.enabled ~= false
 		if old_eff and not new_eff then
 			-- 启用 → 未启用：热卸载
@@ -2979,19 +2981,48 @@ function PluginManagerView:_collect_changes()
 	return changes
 end
 
+--- 是否存在需要落盘的开关状态修改。
+--- 运行时动作（reload/unload/on_config_change）之外，仍需把最终开关状态写入磁盘；
+--- 典型场景：新下载的插件被关闭——插件从未加载，没有运行时动作，
+--- 但 config.lua 必须写入禁用状态，否则下次打开管理器会显示仍为启用。
+function PluginManagerView:_has_disk_changes()
+	if self.global_toggle.value ~= self._saved_state.global_enabled then
+		return true
+	end
+	for _, plugin_data in ipairs(self.local_plugins) do
+		local saved = self._saved_state.plugin_enabled[plugin_data.name]
+		-- saved == nil：本会话新安装的插件（打开管理器时尚不存在），最终状态必须落盘
+		if saved == nil or (plugin_data.config.enabled ~= false) ~= saved then
+			return true
+		end
+	end
+	return false
+end
+
 --- 应用按钮：先检查本次所有修改能否热重载；任一修改无法热重载则沿用原「保存并重启」逻辑。
 --- 热应用成功后自动关闭管理器；部分失败时保持打开并在状态栏提示。
+--- 没有任何需要应用的修改时直接关闭，不提示。
 function PluginManagerView:apply()
 	local changes = self:_collect_changes()
+	local has_runtime_actions = changes.unloads[1] or changes.reloads[1] or changes.configs[1]
 	local has_pending_config = next(self._pending.plugins) ~= nil
 	local has_pending_deleted = next(self._pending.deleted) ~= nil
-	if not changes.unloads[1] and not changes.reloads[1] and not changes.configs[1] and not has_pending_config and not has_pending_deleted then
-		self:_set_status("没有需要应用的修改", 0)
+
+	if not has_runtime_actions and not has_pending_config and not has_pending_deleted and not self:_has_disk_changes() then
+		-- 没有任何需要应用的修改：直接关闭
+		self._pending_close = true
 		return
 	end
 
-	-- 先落盘（含延迟的插件配置修改），确保热加载/重启读取的都是新配置
+	-- 先落盘（含延迟的插件配置修改与开闭状态），确保热加载/重启读取的都是新配置
 	self:save()
+
+	if not has_runtime_actions then
+		-- 只有磁盘层面的修改（如新下载的插件被关闭）：无需热重载或重启
+		self:_clear_pending_changes()
+		self._pending_close = true
+		return
+	end
 
 	local hot_ok, reason = plugin_main:can_hot_apply(changes)
 	if not hot_ok then
@@ -3005,6 +3036,10 @@ function PluginManagerView:apply()
 	-- 热重载路径：执行 reload/unload/on_config_change
 	local ok, errors = plugin_main:apply_hot(changes)
 	self:_clear_pending_changes()
+	-- 通知宿主（如 screen_map）刷新自制关卡列表等依赖插件运行状态的界面
+	if self.on_applied then
+		self.on_applied()
+	end
 	if ok then
 		self:_set_status("已热应用插件修改，无需重启", 0)
 		-- 应用成功自动关闭管理器

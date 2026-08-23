@@ -38,6 +38,16 @@ require("dove_modules.gui.plugin_manager_view")
 require("dove_modules.gui.changelog_view")
 -- end
 
+--- 自制关卡列表内容签名（entry 集合），用于判断插件热加载/热卸载后列表是否变化
+local function custom_maps_signature(maps)
+	local entries = {}
+	for i, m in ipairs(maps) do
+		entries[i] = m.entry
+	end
+	table.sort(entries)
+	return table.concat(entries, ",")
+end
+
 screen_map = {}
 screen_map.required_sounds = {"common", "music_screen_map"}
 screen_map.required_textures = {
@@ -1140,6 +1150,10 @@ function screen_map:ensure_plugin_manager_view()
 	local plugin_manager_view = PluginManagerView:new(self.sw, self.sh, self.numeric_keyboard, self.window)
 	self.window:add_child(plugin_manager_view)
 	self.plugin_manager_view = plugin_manager_view
+	-- 应用插件修改后立即刷新自制关卡列表（热加载/热卸载即时反映，无需切换标签页）
+	plugin_manager_view.on_applied = function()
+		self:refresh_custom_map_view()
+	end
 
 	return plugin_manager_view
 end
@@ -1159,6 +1173,7 @@ end
 
 function screen_map:destroy()
 	self._custom_maps = nil
+	self._custom_maps_sig = nil
 	self._custom_progress = nil
 	self._custom_map_view = nil
 	self._custom_level_select = nil
@@ -1305,26 +1320,39 @@ function screen_map:change_generation(i)
 	end
 end
 
-function screen_map:ensure_custom_map_view()
-	if self._custom_map_view then
-		self._custom_map_view.hidden = false
+--- 刷新自制关卡列表视图：重新扫描并对比内容签名，
+--- 插件热加载/热卸载导致列表变化时重建视图（保留原隐藏状态），无变化时不动
+function screen_map:refresh_custom_map_view()
+	local maps = SCU.scan_maps()
+	if self._custom_map_view and self._custom_maps_sig == custom_maps_signature(maps) then
 		return
 	end
-
-	if not self._custom_maps then
-		self._custom_maps = SCU.scan_maps()
+	local was_hidden = self._custom_map_view and self._custom_map_view.hidden
+	if self._custom_map_view then
+		self.window:remove_child(self._custom_map_view)
+		self._custom_map_view = nil
 	end
-	if not self._custom_progress then
-		self._custom_progress = SCU.load_progress()
-	end
+	self._custom_maps = maps
+	self._custom_maps_sig = custom_maps_signature(maps)
 
 	local content_w = self.sw - 40
-	local list_view = SCU.CustomMapListView:new(V.v(content_w, self.sh - 8), self._custom_maps, function(map)
+	local list_view = SCU.CustomMapListView:new(V.v(content_w, self.sh - 8), maps, function(map)
 		self:show_custom_level_select(map)
 	end)
 	list_view.pos = v(20, 8)
 	self.window:add_child(list_view, 1)
 	self._custom_map_view = list_view
+	if was_hidden then
+		self._custom_map_view.hidden = true
+	end
+end
+
+function screen_map:ensure_custom_map_view()
+	if not self._custom_progress then
+		self._custom_progress = SCU.load_progress()
+	end
+	self:refresh_custom_map_view()
+	self._custom_map_view.hidden = false
 end
 
 function screen_map:show_custom_level_select(map)

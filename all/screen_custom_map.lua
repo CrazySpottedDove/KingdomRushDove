@@ -4,7 +4,7 @@ local V = require("lib.klua.vector")
 local v = V.v
 local FS = love.filesystem
 local storage = require("all.storage")
-local plugin_db = require("plugin_db")
+local plugin_main = require("plugin.plugin_main")
 local S = require("sound_db")
 local km = require("lib.klua.macros")
 local GS = require("kr1.game_settings")
@@ -100,7 +100,10 @@ local function scan_maps()
 	local maps = {}
 	local progress_data = load_progress()
 
-	for _, plugin_data in ipairs(plugin_db.plugins_datas) do
+	-- 以运行时已加载插件为准（plugin_main.loaded_plugins），
+	-- 使关卡插件热加载后立即出现在列表中、热卸载后立即移除，与其它插件行为一致
+	for _, loaded in ipairs(plugin_main.loaded_plugins) do
+		local plugin_data = loaded[2]
 		local cfg = plugin_data.config
 		if cfg and cfg.category == "level" then
 			local entry = plugin_data.entry
