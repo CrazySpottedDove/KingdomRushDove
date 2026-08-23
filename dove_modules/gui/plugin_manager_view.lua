@@ -475,10 +475,12 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self._saved_state = {}
 	-- 本次打开期间的修改记忆（点「应用」或关闭管理器后清空，避免下次打开污染）：
 	--   plugins[name] = {config_changed = bool, config = table}  待应用的插件配置修改（延迟写盘）
-	--   deleted[name] = plugin_data                               本会话已删除的插件（应用时尝试热卸载）
+	--   deleted[name] = plugin_data                               本会话已删除的插件（运行中则应用时重启）
+	--   updated[name] = true                                      本会话已更新的插件（运行中则应用时重启）
 	self._pending = {
 		plugins = {},
-		deleted = {}
+		deleted = {},
+		updated = {}
 	}
 
 	-- 开发者模式
@@ -1448,7 +1450,7 @@ function PluginManagerView:_delete_local_plugin_by_name(plugin_name)
 	if not plugin_data then
 		return false, "本地插件不存在"
 	end
-	-- 记忆删除：点「应用」时若插件仍在运行则尝试热卸载，否则回退重启
+	-- 记忆删除：点「应用」时若插件仍在运行（文件已移除），无法安全热应用，直接重启
 	self._pending.deleted[plugin_name] = plugin_data
 	local ok = remove_dir_recursive(plugin_data.path)
 	if not ok then
@@ -1615,6 +1617,8 @@ function PluginManagerView:_install_plugin(item, is_update, task)
 	local preserved_enabled = nil
 	local preserved_local_config = nil
 	if is_update then
+		-- 记忆更新：应用时若该插件正在运行（文件已替换），无法安全热应用，直接重启
+		self._pending.updated[target_name] = true
 		local_plugin = (entry ~= "" and self.local_by_entry[entry]) or self.local_by_name[target_name]
 		if local_plugin and local_plugin.config then
 			preserved_enabled = local_plugin.config.enabled ~= false
@@ -1816,6 +1820,8 @@ function PluginManagerView:_install_or_update_item(item, task)
 				end
 				local ok_apply = self:_apply_patch_to_dir(target_dir, patch_data)
 				if ok_apply then
+					-- 记忆更新：应用时若该插件正在运行（文件已替换），直接重启
+					self._pending.updated[entry] = true
 					if local_cfg_saved then
 						self:_restore_local_config(target_dir, entry, local_cfg_saved)
 					else
@@ -2341,7 +2347,8 @@ function PluginManagerView:show()
 	-- 每次打开都清空修改记忆，避免上次会话残留污染
 	self._pending = {
 		plugins = {},
-		deleted = {}
+		deleted = {},
+		updated = {}
 	}
 	self:_start_http_thread()
 	-- 从磁盘读取初始状态，但仅在此处（后续 _reload_local_plugins 不会覆盖用户未保存的修改）
@@ -2935,7 +2942,8 @@ end
 function PluginManagerView:_clear_pending_changes()
 	self._pending = {
 		plugins = {},
-		deleted = {}
+		deleted = {},
+		updated = {}
 	}
 end
 
@@ -2943,6 +2951,7 @@ end
 --- 同一插件多次切换开闭只产生一次有效变更，避免先 reload 后 unload 的无效操作）。
 --- 基准使用 plugin_main 的运行时加载状态而非磁盘快照：
 --- 新下载/新安装的插件（未应用过）不在运行时加载集合中，点「应用」时会被正确热加载。
+--- 注：更新/删除正在运行的插件不在此列——文件已替换/移除，无法安全热应用，统一走重启。
 ---@return table {unloads=..., reloads=..., configs=...}
 function PluginManagerView:_collect_changes()
 	local new_global = self.global_toggle.value
@@ -2972,13 +2981,24 @@ function PluginManagerView:_collect_changes()
 			end
 		end
 	end
-	-- 本会话已删除的插件：若运行时仍加载，视为卸载
+	return changes
+end
+
+--- 更新/删除正在运行的插件时无法安全热应用（文件已替换/移除，
+--- 热卸载也无法撤销模板注册等全部副作用），应用时直接重启
+function PluginManagerView:_needs_restart()
 	for _, plugin_data in pairs(self._pending.deleted) do
 		if plugin_main:is_loaded(plugin_data) then
-			changes.unloads[#changes.unloads + 1] = plugin_data
+			return true
 		end
 	end
-	return changes
+	for name in pairs(self._pending.updated) do
+		local plugin_data = self.local_by_name[name]
+		if plugin_data and plugin_main:is_loaded(plugin_data) then
+			return true
+		end
+	end
+	return false
 end
 
 --- 是否存在需要落盘的开关状态修改。
@@ -3007,8 +3027,9 @@ function PluginManagerView:apply()
 	local has_runtime_actions = changes.unloads[1] or changes.reloads[1] or changes.configs[1]
 	local has_pending_config = next(self._pending.plugins) ~= nil
 	local has_pending_deleted = next(self._pending.deleted) ~= nil
+	local needs_restart = self:_needs_restart()
 
-	if not has_runtime_actions and not has_pending_config and not has_pending_deleted and not self:_has_disk_changes() then
+	if not has_runtime_actions and not has_pending_config and not has_pending_deleted and not needs_restart and not self:_has_disk_changes() then
 		-- 没有任何需要应用的修改：直接关闭
 		self._pending_close = true
 		return
@@ -3017,6 +3038,13 @@ function PluginManagerView:apply()
 	-- 先落盘（含延迟的插件配置修改与开闭状态），确保热加载/重启读取的都是新配置
 	self:save()
 
+	if needs_restart then
+		-- 更新/删除了正在运行的插件：文件已替换/移除，无法安全热应用，直接重启
+		self:_stop_http_thread()
+		restart.tmp()
+		return
+	end
+
 	if not has_runtime_actions then
 		-- 只有磁盘层面的修改（如新下载的插件被关闭）：无需热重载或重启
 		self:_clear_pending_changes()
@@ -3024,10 +3052,9 @@ function PluginManagerView:apply()
 		return
 	end
 
-	local hot_ok, reason = plugin_main:can_hot_apply(changes)
+	local hot_ok, _ = plugin_main:can_hot_apply(changes)
 	if not hot_ok then
 		-- 存在无法热重载的修改：沿用原重启逻辑
-		log.info("hot apply not possible: %s", tostring(reason))
 		self:_stop_http_thread()
 		restart.tmp()
 		return

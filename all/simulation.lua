@@ -171,7 +171,7 @@ function simulation:do_tick(dt)
 	-- 批量插入
 	local last_count = #d.pending_inserts
 
-	for i = last_count, 1, -1 do
+	for i = 1, last_count do
 		self:insert_entity(d.pending_inserts[i])
 	end
 
@@ -187,7 +187,7 @@ function simulation:do_tick(dt)
 	last_count = #d.pending_removals
 
 	-- 批量移除
-	for i = last_count, 1, -1 do
+	for i = 1, last_count do
 		self:remove_entity(d.pending_removals[i])
 	end
 
