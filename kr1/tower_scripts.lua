@@ -28429,6 +28429,10 @@ scripts.bullet_tower_blazing_watcher = {
 		local b = this.bullet
 		local s = this.render.sprites[1]
 		local target = store.entities[b.target_id]
+		if not target then
+			queue_remove(store, this)
+			return
+		end
 		local tower = this.tower_ref
 
 		local function update_sprite()

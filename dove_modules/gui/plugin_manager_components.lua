@@ -1,9 +1,7 @@
 -- 插件管理器的 UI 组件（PluginActionButton / PluginToggleButton / PluginItemRow）
 local class = require("middleclass")
 local V = require("lib.klua.vector")
-local FS = love.filesystem
 local S = require("sound_db")
-local persistence = require("lib.klua.persistence")
 local storage = require("all.storage")
 local editable_panel_view = require("dove_modules.gui.editable_panel_view")
 local km = require("lib.klua.macros")
@@ -15,6 +13,27 @@ require("gg_views_custom")
 local ROW_H = 156
 local ROW_PAD = 16
 local ACCENT_W = 6
+
+--- 深比较两个值（插件配置为无环的 storage 数据，无需防环）
+local function deep_equal(a, b)
+	if type(a) ~= type(b) then
+		return false
+	end
+	if type(a) ~= "table" then
+		return a == b
+	end
+	for k, v in pairs(a) do
+		if not deep_equal(v, b[k]) then
+			return false
+		end
+	end
+	for k in pairs(b) do
+		if a[k] == nil then
+			return false
+		end
+	end
+	return true
+end
 
 -- ─────────────────────────────────────────────
 -- PluginActionButton
@@ -278,28 +297,45 @@ function PluginItemRow:initialize(opts, row_w)
 			config_button._enable_text = "配置"
 			function config_button:on_click()
 				S:queue("GUIButtonCommon")
+				local config_path = opts.plugin_data.path .. "/" .. opts.plugin_data.name .. "_config.lua"
+				local manager = opts.manager
+				-- 读取当前配置：优先管理器中的待应用修改（延迟写盘期间编辑面板显示最新值），其次磁盘
+				local function read_current_config()
+					if manager then
+						local pending = manager:_get_pending_config(opts.plugin_data.name)
+						if pending then
+							return pending
+						end
+					end
+					return storage:load_lua(config_path, true)
+				end
 				local config_view = editable_panel_view:new(opts._sw, opts._sh, opts.title, opts._keyboard, opts._controller)
-				config_view._config_path = opts.plugin_data.path .. "/" .. opts.plugin_data.name .. "_config.lua"
+				config_view._config_path = config_path
 				function config_view:load()
-					local config = storage:load_lua(self._config_path, true)
-					self.data_group:set_all_data(config)
+					self.data_group:set_all_data(read_current_config())
 				end
 				function config_view:save()
-					local config = storage:load_lua(opts.plugin_data.path .. "/" .. opts.plugin_data.name .. "_config.lua", true)
+					-- 合并编辑值到当前配置（优先待应用配置，其次磁盘）
+					local config = read_current_config() or {}
 					for k, v in pairs(self.data_group:get_all_data()) do
 						config[k] = v
 					end
-					storage:write_lua(self._config_path, config)
-					local cfg_chunk, _ = FS.load(opts.plugin_data.config_path)
-					if cfg_chunk then
-						local ok, plugin_cfg = pcall(cfg_chunk)
-						if ok and type(plugin_cfg) == "table" then
-							plugin_cfg.last_used_at = os.time()
-							FS.write(opts.plugin_data.config_path, persistence.serialize_to_string(plugin_cfg))
+					if manager then
+						-- 延迟写盘：仅记忆修改，点插件管理器「应用」时才落盘并触发 on_config_change。
+						-- 与磁盘原配置深比较：什么都没改（或改回原值）时不产生待应用修改，
+						-- 避免关闭管理器时误报「有未保存的修改」。
+						local disk_config = storage:load_lua(config_path, true)
+						if deep_equal(config, disk_config) then
+							manager:_clear_pending_config(opts.plugin_data.name)
+						else
+							manager:_set_pending_config(opts.plugin_data.name, config)
 						end
+					else
+						-- 无管理器上下文（理论上不会发生）：保持原行为直接写盘
+						storage:write_lua(config_path, config)
 					end
 				end
-				local config = storage:load_lua(config_view._config_path, true)
+				local config = read_current_config()
 				config_view:set_key_label_map(config.key_label_map or {})
 				if type(config.key_order_list) == "table" then
 					config_view:set_key_order_list(config.key_order_list)

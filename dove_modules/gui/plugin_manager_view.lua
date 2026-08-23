@@ -10,6 +10,7 @@ local storage = require("all.storage")
 local json = require("lib.json")
 local persistence = require("lib.klua.persistence")
 local plugin_paths = require("plugin_paths")
+local plugin_main = require("plugin.plugin_main")
 local editable_panel_view = require("dove_modules.gui.editable_panel_view")
 local markdown_view = require("dove_modules.gui.markdown_view")
 local zip = require("lib.zip")
@@ -472,6 +473,13 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self._unsaved_changes = false
 	self._pending_close = false
 	self._saved_state = {}
+	-- 本次打开期间的修改记忆（点「应用」或关闭管理器后清空，避免下次打开污染）：
+	--   plugins[name] = {config_changed = bool, config = table}  待应用的插件配置修改（延迟写盘）
+	--   deleted[name] = plugin_data                               本会话已删除的插件（应用时尝试热卸载）
+	self._pending = {
+		plugins = {},
+		deleted = {}
+	}
 
 	-- 开发者模式
 	self._developer_config = {
@@ -869,17 +877,15 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	self.plugin_list.scroller_width = 24
 	self.back:add_child(self.plugin_list)
 
-	-- 底部按钮（保存并重启 / 浏览器商店 / 关闭）
+	-- 底部按钮（应用 / 浏览器商店 / 关闭）
 	local y_btn = footer_y
-	local save_btn = GGOptionsButton:new("保存并重启")
+	local save_btn = GGOptionsButton:new("应用")
 	save_btn:set_anchor_to_center()
 	save_btn.pos = V.v(panel_w / 3, y_btn)
 	self.back:add_child(save_btn)
 	save_btn.on_click = function()
 		S:queue("GUIButtonCommon")
-		self:save()
-		self:_stop_http_thread()
-		restart.tmp()
+		self:apply()
 	end
 
 	local shop_btn = GGOptionsButton:new("浏览器商店")
@@ -955,34 +961,26 @@ function PluginManagerView:initialize(sw, sh, keyboard, controller)
 	end
 
 	center_row({{
-		text = "保存调整",
+		text = "应用",
 		y = row_y1,
 		action = function()
-			self:save()
 			self._confirm_dialog.hidden = true
-			self._unsaved_changes = false
-			self._pending_close = true
+			-- 应用成功会通过 _pending_close 自动关闭；不可热重载时走重启逻辑
+			self:apply()
 		end
 	}, {
-		text = "舍弃调整",
+		text = "直接退出",
 		y = row_y1,
 		action = function()
 			self._confirm_dialog.hidden = true
+			-- 舍弃本次全部修改（含未应用的插件配置，配置不写盘）
+			self:_clear_pending_changes()
 			self._unsaved_changes = false
 			self._pending_close = true
 		end
 	}})
 
 	center_row({{
-		text = "保存并重启",
-		y = row_y2,
-		action = function()
-			self:save()
-			self._confirm_dialog.hidden = true
-			self:_stop_http_thread()
-			restart.tmp()
-		end
-	}, {
 		text = "取消",
 		y = row_y2,
 		action = function()
@@ -1450,6 +1448,8 @@ function PluginManagerView:_delete_local_plugin_by_name(plugin_name)
 	if not plugin_data then
 		return false, "本地插件不存在"
 	end
+	-- 记忆删除：点「应用」时若插件仍在运行则尝试热卸载，否则回退重启
+	self._pending.deleted[plugin_name] = plugin_data
 	local ok = remove_dir_recursive(plugin_data.path)
 	if not ok then
 		return false, "删除失败：" .. plugin_data.path
@@ -2192,6 +2192,7 @@ function PluginManagerView:_render_local_list()
 					end
 					self._unsaved_changes = self:_check_unsaved()
 				end,
+				manager = self, -- 供配置编辑器延迟写盘与记忆待应用修改
 				actions = global_disabled and {} or actions,
 				_sw = self._sw,
 				_sh = self._sh,
@@ -2337,6 +2338,11 @@ end
 function PluginManagerView:show()
 	plugin_paths.ensure_storage_ready()
 	self._unsaved_changes = false
+	-- 每次打开都清空修改记忆，避免上次会话残留污染
+	self._pending = {
+		plugins = {},
+		deleted = {}
+	}
 	self:_start_http_thread()
 	-- 从磁盘读取初始状态，但仅在此处（后续 _reload_local_plugins 不会覆盖用户未保存的修改）
 	local cfg = plugin_paths.load_main_config()
@@ -2361,6 +2367,8 @@ function PluginManagerView:hide()
 		self._confirm_dialog:order_to_front()
 		return
 	end
+	-- 关闭管理器：清理本次修改记忆，避免下次打开污染
+	self:_clear_pending_changes()
 	self._cancel_requested = true
 	self:_stop_http_thread()
 	PluginManagerView.super.hide(self)
@@ -2882,7 +2890,128 @@ function PluginManagerView:_check_unsaved()
 			return true
 		end
 	end
+	-- 本会话存在待应用的插件配置修改
+	for _, info in pairs(self._pending.plugins) do
+		if info.config_changed then
+			return true
+		end
+	end
 	return false
+end
+
+--- 配置编辑器保存时调用：记忆待应用配置（延迟写盘，点「应用」才落盘并触发 on_config_change）
+---@param plugin_name string 插件目录名
+---@param config table 编辑后的完整用户配置（<name>_config.lua 内容）
+function PluginManagerView:_set_pending_config(plugin_name, config)
+	local info = self._pending.plugins[plugin_name] or {}
+	info.config_changed = true
+	info.config = table.deepclone(config or {})
+	self._pending.plugins[plugin_name] = info
+	self._unsaved_changes = self:_check_unsaved()
+end
+
+--- 清除某插件的待应用配置（编辑结果与磁盘原配置一致时调用，
+--- 避免仅打开过配置界面未做修改也提示「有未保存的修改」）
+---@param plugin_name string 插件目录名
+function PluginManagerView:_clear_pending_config(plugin_name)
+	if self._pending.plugins[plugin_name] then
+		self._pending.plugins[plugin_name] = nil
+		self._unsaved_changes = self:_check_unsaved()
+	end
+end
+
+--- 读取待应用配置（配置编辑器加载时优先显示待定值，未修改则显示磁盘值）
+---@param plugin_name string 插件目录名
+---@return table|nil
+function PluginManagerView:_get_pending_config(plugin_name)
+	local info = self._pending.plugins[plugin_name]
+	if info and info.config then
+		return info.config
+	end
+	return nil
+end
+
+--- 清空本次修改记忆（应用完成或关闭管理器时调用）
+function PluginManagerView:_clear_pending_changes()
+	self._pending = {
+		plugins = {},
+		deleted = {}
+	}
+end
+
+--- 汇总本次打开期间的最终修改（按最终状态与打开时状态比较，
+--- 同一插件多次切换开闭只产生一次有效变更，避免先 reload 后 unload 的无效操作）
+---@return table {unloads=..., reloads=..., configs=...}
+function PluginManagerView:_collect_changes()
+	local new_global = self.global_toggle.value
+	local old_global = self._saved_state.global_enabled
+	local changes = {
+		unloads = {},
+		reloads = {},
+		configs = {}
+	}
+	for _, plugin_data in ipairs(self.local_plugins) do
+		local old_eff = old_global and self._saved_state.plugin_enabled[plugin_data.name] == true
+		local new_eff = new_global and plugin_data.config.enabled ~= false
+		if old_eff and not new_eff then
+			-- 启用 → 未启用：热卸载
+			changes.unloads[#changes.unloads + 1] = plugin_data
+		elseif not old_eff and new_eff then
+			-- 未启用 → 启用：热加载（配置由 reload 自行读取）
+			changes.reloads[#changes.reloads + 1] = plugin_data
+		elseif new_eff then
+			local info = self._pending.plugins[plugin_data.name]
+			if info and info.config_changed and info.config then
+				-- 保持启用且配置有修改：配置热加载（携带新配置数据）
+				changes.configs[#changes.configs + 1] = {
+					plugin_data = plugin_data,
+					config = info.config
+				}
+			end
+		end
+	end
+	-- 本会话已删除的插件：若运行时仍加载，视为卸载
+	for _, plugin_data in pairs(self._pending.deleted) do
+		if plugin_main:is_loaded(plugin_data) then
+			changes.unloads[#changes.unloads + 1] = plugin_data
+		end
+	end
+	return changes
+end
+
+--- 应用按钮：先检查本次所有修改能否热重载；任一修改无法热重载则沿用原「保存并重启」逻辑。
+--- 热应用成功后自动关闭管理器；部分失败时保持打开并在状态栏提示。
+function PluginManagerView:apply()
+	local changes = self:_collect_changes()
+	local has_pending_config = next(self._pending.plugins) ~= nil
+	local has_pending_deleted = next(self._pending.deleted) ~= nil
+	if not changes.unloads[1] and not changes.reloads[1] and not changes.configs[1] and not has_pending_config and not has_pending_deleted then
+		self:_set_status("没有需要应用的修改", 0)
+		return
+	end
+
+	-- 先落盘（含延迟的插件配置修改），确保热加载/重启读取的都是新配置
+	self:save()
+
+	local hot_ok, reason = plugin_main:can_hot_apply(changes)
+	if not hot_ok then
+		-- 存在无法热重载的修改：沿用原重启逻辑
+		log.info("hot apply not possible: %s", tostring(reason))
+		self:_stop_http_thread()
+		restart.tmp()
+		return
+	end
+
+	-- 热重载路径：执行 reload/unload/on_config_change
+	local ok, errors = plugin_main:apply_hot(changes)
+	self:_clear_pending_changes()
+	if ok then
+		self:_set_status("已热应用插件修改，无需重启", 0)
+		-- 应用成功自动关闭管理器
+		self._pending_close = true
+	else
+		self:_set_status("热应用部分失败：" .. table.concat(errors, "；"), 0)
+	end
 end
 
 function PluginManagerView:save()
@@ -2906,6 +3035,20 @@ function PluginManagerView:save()
 		local wok = storage:write_lua(plugin_data.config_path, out)
 		if not wok then
 			log.error("写入 %s 失败", plugin_data.config_path)
+		end
+	end
+
+	-- 写入本会话待应用的插件用户配置（<name>_config.lua）：延迟到应用时才落盘
+	for name, info in pairs(self._pending.plugins) do
+		if info.config then
+			local plugin_data = self.local_by_name[name]
+			if plugin_data then
+				local cfg_path = plugin_data.path .. "/" .. plugin_data.name .. "_config.lua"
+				local wok = storage:write_lua(cfg_path, info.config)
+				if not wok then
+					log.error("写入 %s 失败", cfg_path)
+				end
+			end
 		end
 	end
 	self:_capture_state()

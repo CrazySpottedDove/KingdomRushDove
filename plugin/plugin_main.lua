@@ -93,4 +93,191 @@ function plugin_main:after_init()
 	end
 end
 
+-- ─────────────────────────────────────────────
+-- 热重载支持（插件管理器「应用」按钮）
+--
+-- 插件可选的三个接口（init 为必需，启动时调用）：
+--   reload(plugin_data)        热加载：运行时插件由未启用→启用时调用，模块为全新加载实例
+--   unload(plugin_data)        热卸载：运行时插件由启用→未启用时调用，应撤销 init 注册的一切
+--   on_config_change(new_config) 配置热加载：插件配置修改并「应用」时调用，参数为新配置数据（已写盘）
+-- 任一相关插件缺少对应接口时，插件管理器会回退到原来的「保存并重启」逻辑。
+-- ─────────────────────────────────────────────
+
+--- 运行时按名称查找已加载插件
+---@param plugin_data table 插件数据（按 name 匹配）
+---@return table|nil 已加载条目 {plugin, plugin_data}
+function plugin_main:find_loaded(plugin_data)
+	if not plugin_data or not plugin_data.name then
+		return nil
+	end
+	for i = 1, #self.loaded_plugins do
+		local entry = self.loaded_plugins[i]
+		if entry and entry[2] and entry[2].name == plugin_data.name then
+			return entry
+		end
+	end
+	return nil
+end
+
+--- 判断插件当前是否已加载（运行时）
+---@param plugin_data table 插件数据
+---@return boolean
+function plugin_main:is_loaded(plugin_data)
+	return self:find_loaded(plugin_data) ~= nil
+end
+
+--- 加载（或取缓存）插件模块。热应用检查与执行共用同一缓存，
+--- 避免检查阶段加载过的模块在执行阶段被再次执行（模块顶层代码只跑一次）。
+---@param plugin_data table 插件数据
+---@return table|nil 插件 hook 表
+function plugin_main:_hot_module(plugin_data)
+	if not self._hot_module_cache then
+		self._hot_module_cache = {}
+	end
+	local cached = self._hot_module_cache[plugin_data.name]
+	if cached ~= nil then
+		return cached
+	end
+	local plugin, err = load_plugin_module(plugin_data)
+	if not plugin then
+		log.error("Failed to hot-load plugin '%s': %s", plugin_data.name, tostring(err))
+		self._hot_module_cache[plugin_data.name] = false
+		return nil
+	end
+	self._hot_module_cache[plugin_data.name] = plugin
+	return plugin
+end
+
+--- 按优先级插入已加载列表（与启动时顺序一致：高优先级在前）
+function plugin_main:_insert_loaded(plugin, plugin_data)
+	local priority = plugin_data.priority or 0
+	local idx = #self.loaded_plugins + 1
+	for i = 1, #self.loaded_plugins do
+		if (self.loaded_plugins[i][2].priority or 0) < priority then
+			idx = i
+			break
+		end
+	end
+	table.insert(self.loaded_plugins, idx, {plugin, plugin_data})
+end
+
+--- 检查热应用可行性：计划中的每一项变更都具备对应接口才算可行。
+---@param plan table {unloads={plugin_data}, reloads={plugin_data}, configs={{plugin_data=..., config=新配置}}}
+---@return boolean ok 是否全部可热重载
+---@return string|nil reason 不可行的原因汇总（ok 为 false 时返回）
+function plugin_main:can_hot_apply(plan)
+	self._hot_module_cache = {}
+	plan = plan or {}
+	local reasons = {}
+
+	for _, pd in ipairs(plan.unloads or {}) do
+		local entry = self:find_loaded(pd)
+		if entry and type(entry[1].unload) ~= "function" then
+			reasons[#reasons + 1] = string.format("插件「%s」不支持热卸载（缺少 unload 接口）", pd.name or "?")
+		end
+	end
+
+	for _, pd in ipairs(plan.reloads or {}) do
+		local plugin = self:_hot_module(pd)
+		if not plugin then
+			reasons[#reasons + 1] = string.format("插件「%s」模块加载失败，无法热加载", pd.name or "?")
+		elseif type(plugin.reload) ~= "function" then
+			reasons[#reasons + 1] = string.format("插件「%s」不支持热加载（缺少 reload 接口）", pd.name or "?")
+		end
+	end
+
+	for _, item in ipairs(plan.configs or {}) do
+		local pd = item.plugin_data
+		local entry = self:find_loaded(pd)
+		if entry and type(entry[1].on_config_change) ~= "function" then
+			reasons[#reasons + 1] = string.format("插件「%s」不支持配置热加载（缺少 on_config_change 接口）", pd.name or "?")
+		end
+	end
+
+	if #reasons > 0 then
+		return false, table.concat(reasons, "；")
+	end
+	return true, nil
+end
+
+--- 执行热应用：先卸载、再加载、最后配置热加载。
+--- 单个插件回调出错不中断其余插件（错误汇总返回，由调用方提示）。
+---@param plan table 同 can_hot_apply
+---@return boolean ok 是否全部成功
+---@return table errors 错误信息列表（ok 为 false 时非空）
+function plugin_main:apply_hot(plan)
+	plan = plan or {}
+	local errors = {}
+
+	local function sort_plugins(list, desc)
+		table.sort(list, function(a, b)
+			local pa = a.priority or 0
+			local pb = b.priority or 0
+			if desc then
+				return pa > pb
+			end
+			return pa < pb
+		end)
+	end
+
+	-- 1. 热卸载（高优先级先卸载，与启动初始化顺序相反）
+	local unloads = plan.unloads or {}
+	sort_plugins(unloads, true)
+	for _, pd in ipairs(unloads) do
+		local entry = self:find_loaded(pd)
+		if entry then
+			local plugin = entry[1]
+			if type(plugin.unload) == "function" then
+				local ok, err = pcall(plugin.unload, plugin, pd)
+				if not ok then
+					errors[#errors + 1] = string.format("插件「%s」卸载失败：%s", pd.name or "?", tostring(err))
+					log.error("plugin unload failed: %s", tostring(err))
+				end
+			end
+			for i = #self.loaded_plugins, 1, -1 do
+				if self.loaded_plugins[i] == entry then
+					table.remove(self.loaded_plugins, i)
+					break
+				end
+			end
+			PLUGIN_REGISTRY[pd.name] = nil
+		end
+	end
+
+	-- 2. 热加载（低优先级先加载，与启动 init 顺序一致）
+	local reloads = plan.reloads or {}
+	sort_plugins(reloads, false)
+	for _, pd in ipairs(reloads) do
+		local plugin = self:_hot_module(pd)
+		if plugin then
+			self:_insert_loaded(plugin, pd)
+			PLUGIN_REGISTRY[pd.name] = pd.config
+			if type(plugin.reload) == "function" then
+				local ok, err = pcall(plugin.reload, plugin, pd)
+				if not ok then
+					errors[#errors + 1] = string.format("插件「%s」热加载失败：%s", pd.name or "?", tostring(err))
+					log.error("plugin reload failed: %s", tostring(err))
+				end
+			end
+		end
+	end
+
+	-- 3. 配置热加载（参数为新配置数据，同时已由插件管理器写盘）
+	for _, item in ipairs(plan.configs or {}) do
+		local pd = item.plugin_data
+		local new_config = item.config
+		local entry = self:find_loaded(pd)
+		if entry and type(entry[1].on_config_change) == "function" then
+			local ok, err = pcall(entry[1].on_config_change, entry[1], new_config)
+			if not ok then
+				errors[#errors + 1] = string.format("插件「%s」配置热加载失败：%s", pd.name or "?", tostring(err))
+				log.error("plugin on_config_change failed: %s", tostring(err))
+			end
+		end
+	end
+
+	self._hot_module_cache = {}
+	return #errors == 0, errors
+end
+
 return plugin_main
