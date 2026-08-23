@@ -844,11 +844,6 @@ local function build_enabled_plugins_text()
 end
 
 function love.errorhandler(msg)
-	local error_canvas = G.newCanvas(G.getWidth(), G.getHeight())
-	-- local last_canvas = G.getCanvas()
-
-	G.setCanvas(error_canvas)
-
 	local last_log_msg = log.last_log_msgs and table.concat(log.last_log_msgs, "")
 
 	msg = tostring(msg)
@@ -876,22 +871,26 @@ function love.errorhandler(msg)
 
 	G.reset()
 
-	local font = G.setNewFont(math.floor(love.window.toPixels(15)))
-	local cn_font = G.setNewFont("_assets/all-desktop/fonts/msyh.ttc", math.floor(love.window.toPixels(16)))
+	-- 崩溃前的画面仍保留在默认帧缓冲中：直接在其上合成报错界面，不使用 canvas。
+	-- （安卓端 canvas 尺寸与默认帧缓冲不一致会导致只渲染出左上角一块、文字异常大的问题）
+	-- 字号按参考高度缩放（与游戏内一致），不使用 toPixels（安卓端物理/逻辑像素混用会放大文字）
+	local ref_h = REF_H or 768
+	local scale = math.max(1, G.getHeight() / ref_h)
+	local font = G.setNewFont("_assets/all-desktop/fonts/msyh.ttc", math.floor(15 * scale))
+	local cn_font = G.setNewFont("_assets/all-desktop/fonts/msyh.ttc", math.floor(16 * scale))
+	local title_font = G.setNewFont("_assets/all-desktop/fonts/msyh.ttc", math.floor(26 * scale))
 
-	G.setBackgroundColor(0.349, 0.616, 0.863)
-	G.setColor(1, 1, 1, 1)
+	-- 半透明黑色遮罩：默认背景为 0.5 透明度的崩溃前画面
+	G.setColor(0, 0, 0, 0.5)
+	G.rectangle("fill", 0, 0, G.getWidth(), G.getHeight())
 
 	local trace = debug.traceback()
 
-	G.origin()
-
-	local err = {}
 	local tip = {}
+	local err = {}
 
-	table.insert(tip, string.format("Version %s\n", version.id))
-	table.insert(err, "\n\n\n\n\nError\n")
-
+	table.insert(tip, string.format("Version %s", version.id))
+	table.insert(err, "Error\n")
 	table.insert(err, msg .. "\n\n")
 
 	-- 归因：检查错误是否由某个插件导致（stack_msg 包含完整 traceback）
@@ -912,15 +911,16 @@ function love.errorhandler(msg)
 		end
 	end
 
+	local trace_lines = {}
 	for l in string.gmatch(trace, "(.-)\n") do
 		if not string.match(l, "boot.lua") then
-			l = string.gsub(l, "stack traceback:", "Traceback\n")
+			l = string.gsub(l, "stack traceback:", "Traceback")
 
-			table.insert(err, l)
+			table.insert(trace_lines, l)
 		end
 	end
 
-	table.insert(tip, "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下蓝屏的图与蓝屏前的图，反馈并用语言简要说明发生了什么。按b以查看蓝屏前图片，按ESC以退出。\n")
+	table.insert(tip, "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下本界面，反馈并用语言详细说明发生了什么。")
 
 	table.insert(err, "\n" .. plugins_text)
 
@@ -937,19 +937,69 @@ function love.errorhandler(msg)
 	p = string.gsub(p, "\t", "")
 	p = string.gsub(p, "%[string \"(.-)\"%]", "%1")
 
-	local pos = love.window.toPixels(70)
-	local text_width = G.getWidth() - pos
+	-- 分区渲染：不同类型的信息使用不同颜色（更醒目）
+	local margin = math.floor(28 * scale)
+	local wrap_w = G.getWidth() - margin * 2
 
-	G.clear(G.getBackgroundColor())
+	local function text_height(f, text, wrap)
+		-- LÖVE 11 的 Font:getWrap(text, wrap) 返回 (最大行宽 number, 行表 table)
+		local _, lines = f:getWrap(text, wrap)
+		return (type(lines) == "table" and #lines or 1) * f:getHeight()
+	end
 
-	local _, tip_wrapped = cn_font:getWrap(pt, text_width)
-	local tip_height = cn_font:getHeight() * #tip_wrapped + love.window.toPixels(16)
+	local sections = {}
+	-- 标题：亮红
+	sections[#sections + 1] = {
+		text = "Error",
+		color = {1, 0.3, 0.3, 1},
+		font = title_font
+	}
+	-- 错误消息：红
+	sections[#sections + 1] = {
+		text = msg,
+		color = {1, 0.45, 0.45, 1},
+		font = cn_font
+	}
+	-- 版本与插件归因/自动禁用提示：亮黄
+	sections[#sections + 1] = {
+		text = pt,
+		color = {1, 0.82, 0.35, 1},
+		font = cn_font
+	}
+	-- 堆栈：浅灰
+	sections[#sections + 1] = {
+		text = table.concat(trace_lines, "\n"),
+		color = {0.8, 0.8, 0.88, 1},
+		font = font
+	}
+	-- 最近日志：橙
+	if last_log_msg and last_log_msg ~= "" then
+		sections[#sections + 1] = {
+			text = "Last error msgs\n" .. last_log_msg,
+			color = {1, 0.62, 0.32, 1},
+			font = font
+		}
+	end
+	-- 已启用插件列表：天蓝
+	sections[#sections + 1] = {
+		text = plugins_text,
+		color = {0.45, 0.85, 1, 1},
+		font = font
+	}
+	-- 操作提示：亮绿
+	sections[#sections + 1] = {
+		text = "按ESC以退出。",
+		color = {0.62, 1, 0.62, 1},
+		font = cn_font
+	}
 
-	G.setFont(cn_font)
-	G.printf(pt, pos, pos, text_width)
-
-	G.setFont(font)
-	G.printf(p, pos, pos + tip_height, text_width)
+	local y = margin
+	for _, sec in ipairs(sections) do
+		G.setFont(sec.font)
+		G.setColor(sec.color[1], sec.color[2], sec.color[3], sec.color[4])
+		G.printf(sec.text, margin, y, wrap_w)
+		y = y + text_height(sec.font, sec.text, wrap_w) + math.floor(5 * scale)
+	end
 	G.present()
 
 	if LLDEBUGGER then
@@ -964,9 +1014,6 @@ function love.errorhandler(msg)
 			elseif e == "keypressed" then
 				if a == "escape" then
 					return 1
-				elseif a == "b" then
-					-- show_last = not show_last
-					G.present()
 				end
 			elseif e == "touchpressed" then
 				local name = love.window.getTitle()

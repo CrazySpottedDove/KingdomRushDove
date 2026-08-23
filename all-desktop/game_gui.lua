@@ -834,6 +834,7 @@ function game_gui:keypressed(key, isrepeat)
 	if ks.pow_1 == key and not self.power_1:is_disabled() then
 		self.power_1:toggle_selection()
 	elseif ks.pow_2 == key and not self.power_2:is_disabled() then
+		error(2)
 		self.power_2:toggle_selection()
 	elseif ks.hero_1 == key then
 		if self.heroes and self.heroes[1] then
