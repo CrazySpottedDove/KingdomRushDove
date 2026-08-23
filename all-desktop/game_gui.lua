@@ -7867,8 +7867,6 @@ function SelectGroup:set_on_data_change_callback(callback)
 	self.on_data_change_callback = callback
 end
 
-SelectGroup._draw_children = KF._draw_children_with_clip_view
-
 SelectPanelView = class("SelectPanelView", PopUpView)
 
 function SelectPanelView:initialize(sw, sh, title)
