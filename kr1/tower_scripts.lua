@@ -18551,7 +18551,8 @@ function scripts.tower_dwarf.update(this, store)
 			local all_dead = true
 
 			for i, s in ipairs(b.soldiers) do
-				s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers, angle_offset)
+				s.nav_rally.pos = U.rally_formation_position(i, b, b.max_soldiers, angle_offset)
+				s.nav_rally.center:copy(s.nav_rally.pos)
 				s.nav_rally.new = true
 				all_dead = all_dead and s.health.dead
 			end
@@ -18597,18 +18598,6 @@ function scripts.soldier_tower_dwarf.update(this, store)
 			U.unblock_target(store, this)
 			U.set_destination(this, r.pos)
 
-			-- if r.delay_max then
-			-- 	U.animation_start_default(this, this.idle_flip.last_animation, nil, store.tick_ts, this.idle_flip.loop)
-
-			-- 	local index = this.soldier.tower_soldier_idx or 0
-			-- 	local tower = store.entities[this.soldier.tower_id]
-			-- 	local total = tower and tower.barrack.max_soldiers or 1
-
-			-- 	if SU.y_soldier_wait(store, this, index / total * r.delay_max) then
-			-- 		goto label_1205_0
-			-- 	end
-			-- end
-
 			local offset = V.v(r.pos.x - r.center.x, r.pos.y - r.center.y)
 			local old_center = V.v(this.pos.x - offset.x, this.pos.y - offset.y)
 
@@ -18630,21 +18619,7 @@ function scripts.soldier_tower_dwarf.update(this, store)
 						break
 					end
 
-					-- if r._first_time then
-					-- 	r._first_time = false
-
-					-- 	local target = U.find_foremost_enemy_in_range_filter_on(r.center, this.melee.range, false, F_BLOCK, bit.bor(F_CLIFF), function(e)
-					-- 		return (not e.enemy.max_blockers or #e.enemy.blockers == 0) and band(GR:cell_type(e.pos.x, e.pos.y), TERRAIN_NOWALK) == 0 and (not this.melee.fn_can_pick or this.melee.fn_can_pick(this, e))
-					-- 	end)
-
-					-- 	if target then
-					-- 		out = false
-
-					-- 		break
-					-- 	end
-					-- end
-
-					U.walk(this, store.tick_length)
+					U.walk_off__accel__unsnapped(this, store.tick_length)
 					coroutine.yield()
 
 					this.motion.speed.x, this.motion.speed.y = 0, 0
