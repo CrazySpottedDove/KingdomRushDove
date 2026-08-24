@@ -226,7 +226,7 @@ local function dnum_on_applied_enabled(store, d, target)
 	n.ts = store.tick_ts
 	n.alive = 1
 
-	local txt = tostring(floor(d.damage_applied))
+	local txt = tostring(math.ceil(d.damage_applied))
 
 	local digits = dnum_digits[slot]
 	local len = #txt
@@ -406,7 +406,7 @@ local function hnum_on_applied_enabled(store, target, heal_amount)
 	n.ts = store.tick_ts
 	n.alive = 1
 
-	local txt = tostring(floor(heal_amount))
+	local txt = tostring(math.ceil(heal_amount))
 	local digits = hnum_digits[slot]
 	local len = #txt
 	local tw = 0
