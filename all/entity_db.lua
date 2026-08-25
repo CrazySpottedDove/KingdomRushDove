@@ -74,62 +74,62 @@ function entity_db:precompile()
 -- CU.profile_report()
 end
 
---- 返回一个实体数据库的影子副本，通过元表可访问所有的entity_db的成员和方法，但是自身也拥有独立的entities和components。
---- 通过影子副本进行 E:register_t()，可以以 entity_db 已注册的模板作为父模板，并注册到独立的 entities 列表中。
-function entity_db:shadow()
-	-- 1. 影子自己的实体表：读缺失键时回退到原 entity_db.entities
-	local shadow_entities = setmetatable({}, {
-		__index = self.entities
-	})
+-- --- 返回一个实体数据库的影子副本，通过元表可访问所有的entity_db的成员和方法，但是自身也拥有独立的entities和components。
+-- --- 通过影子副本进行 E:register_t()，可以以 entity_db 已注册的模板作为父模板，并注册到独立的 entities 列表中。
+-- function entity_db:shadow()
+-- 	-- 1. 影子自己的实体表：读缺失键时回退到原 entity_db.entities
+-- 	local shadow_entities = setmetatable({}, {
+-- 		__index = self.entities
+-- 	})
 
-	-- 2. 影子自己的组件表：读缺失键时回退到原 entity_db.components
-	local shadow_components = setmetatable({}, {
-		__index = self.components
-	})
+-- 	-- 2. 影子自己的组件表：读缺失键时回退到原 entity_db.components
+-- 	local shadow_components = setmetatable({}, {
+-- 		__index = self.components
+-- 	})
 
-	-- 3. 影子自己的克隆器表：读缺失键时回退到原 entity_db.components_cloner
-	local shadow_cloners = setmetatable({}, {
-		__index = self.components_cloner
-	})
+-- 	-- 3. 影子自己的克隆器表：读缺失键时回退到原 entity_db.components_cloner
+-- 	local shadow_cloners = setmetatable({}, {
+-- 		__index = self.components_cloner
+-- 	})
 
-	-- 影子本体
-	local shadow = {
-		entities = shadow_entities,
-		components = shadow_components,
-		components_cloner = shadow_cloners,
-		last_id = 1,
-		loaded = true -- 影子默认已“加载”，避免调用 Load()
-	}
+-- 	-- 影子本体
+-- 	local shadow = {
+-- 		entities = shadow_entities,
+-- 		components = shadow_components,
+-- 		components_cloner = shadow_cloners,
+-- 		last_id = 1,
+-- 		loaded = true -- 影子默认已“加载”，避免调用 Load()
+-- 	}
 
-	-- 影子本体的元表：方法（如 register_t）回退到原 entity_db
-	setmetatable(shadow, {
-		__index = self
-	})
+-- 	-- 影子本体的元表：方法（如 register_t）回退到原 entity_db
+-- 	setmetatable(shadow, {
+-- 		__index = self
+-- 	})
 
-	return shadow
-end
+-- 	return shadow
+-- end
 
---- 将影子数据库中注册的模板合并进实体数据库中
----@param shadowed_entity_db any
-function entity_db:merge_shadow(shadowed_entity_db)
-	local compiler = require("precompile.interface")
-	local incremental_components_cloner = require("precompile.interface"):compile_component_cloners(shadowed_entity_db.components)
-	for name, component in pairs(shadowed_entity_db.components) do
-		self.components[name] = component
-	end
-	for name, cloner in pairs(incremental_components_cloner) do
-		self.components_cloner[name] = cloner
-	end
-	for name, entity in pairs(shadowed_entity_db.entities) do
-		compiler:compile(entity)
-		self.entities[name] = entity
-	end
-	if self.entities_backup then
-		for name, entity in pairs(shadowed_entity_db.entities) do
-			self.entities_backup[name] = entity
-		end
-	end
-end
+-- --- 将影子数据库中注册的模板合并进实体数据库中
+-- ---@param shadowed_entity_db any
+-- function entity_db:merge_shadow(shadowed_entity_db)
+-- 	local compiler = require("precompile.interface")
+-- 	local incremental_components_cloner = require("precompile.interface"):compile_component_cloners(shadowed_entity_db.components)
+-- 	for name, component in pairs(shadowed_entity_db.components) do
+-- 		self.components[name] = component
+-- 	end
+-- 	for name, cloner in pairs(incremental_components_cloner) do
+-- 		self.components_cloner[name] = cloner
+-- 	end
+-- 	for name, entity in pairs(shadowed_entity_db.entities) do
+-- 		compiler:compile(entity)
+-- 		self.entities[name] = entity
+-- 	end
+-- 	if self.entities_backup then
+-- 		for name, entity in pairs(shadowed_entity_db.entities) do
+-- 			self.entities_backup[name] = entity
+-- 		end
+-- 	end
+-- end
 
 --- 确认 entity_db 已加载
 --- @return boolean (true: 执行加载逻辑；false: 已加载)
