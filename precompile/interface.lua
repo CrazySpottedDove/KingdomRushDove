@@ -1,4 +1,17 @@
-local M = {}
+local M = {
+	enemy_basic = require("precompile.templates.enemy_basic"),
+	enemy_mixed = require("precompile.templates.enemy_mixed"),
+	enemy_passive = require("precompile.templates.enemy_passive"),
+	aura_apply_mod = require("precompile.templates.aura_apply_mod"),
+	aura_apply_damage = require("precompile.templates.aura_apply_damage"),
+	mod_dps = require("precompile.templates.mod_dps"),
+	soldier_barrack = require("precompile.templates.soldier_barrack"),
+	-- soldier_reinforcement = require("precompile.templates.soldier_reinforcement")
+	mod_track_target = require("precompile.templates.mod_track_target"),
+	arrow = require("precompile.templates.arrow"),
+	bomb = require("precompile.templates.bomb"),
+	bolt = require("precompile.templates.bolt")
+}
 local CU = require("precompile.compile_utils")
 local _fn_cache = {}
 ------- 提供环境变量
@@ -215,22 +228,6 @@ function M:_compile(e, template)
 	return result
 end
 
--- 引入所有的编译器规则
-function M:init()
-	self.enemy_basic = require("precompile.templates.enemy_basic")
-	self.enemy_mixed = require("precompile.templates.enemy_mixed")
-	self.enemy_passive = require("precompile.templates.enemy_passive")
-	self.aura_apply_mod = require("precompile.templates.aura_apply_mod")
-	self.aura_apply_damage = require("precompile.templates.aura_apply_damage")
-	self.mod_dps = require("precompile.templates.mod_dps")
-	-- self.soldier_reinforcement = require("precompile.templates.soldier_reinforcement")
-	self.soldier_barrack = require("precompile.templates.soldier_barrack")
-	self.mod_track_target = require("precompile.templates.mod_track_target")
-	self.arrow = require("precompile.templates.arrow")
-	self.bomb = require("precompile.templates.bomb")
-	self.bolt = require("precompile.templates.bolt")
-end
-
 function M:compile(e)
 	if e.main_script then
 		local m = e.main_script
@@ -326,8 +323,8 @@ function M:compile(e)
 end
 
 --- 为所有 components 生成优化的克隆函数
-function M:compile_component_cloners()
-	return GenCC.compile_all(E.components, self.env)
+function M:compile_component_cloners(components)
+	return GenCC.compile_all(components, self.env)
 end
 
 return M
