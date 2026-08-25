@@ -4634,7 +4634,7 @@ function scripts.soldier_mecha.update(this, store)
 					S:queue("MechSteam")
 				end
 
-				U.walk(this, store.tick_length)
+				U.walk_off__accel__unsnapped(this, store.tick_length)
 				coroutine.yield()
 
 				this.motion.speed.x, this.motion.speed.y = 0, 0
@@ -4657,7 +4657,7 @@ function scripts.soldier_mecha.update(this, store)
 				local _, targets = U.find_foremost_enemy_between_range_filter_off(this.pos, ao.min_range, ao.max_range, true, ao.vis_flags, ao.vis_bans)
 
 				if not targets then
-				-- block empty
+					ao.ts = ao.ts + 0.1
 				else
 					local target = table.random(targets)
 
@@ -4680,6 +4680,9 @@ function scripts.soldier_mecha.update(this, store)
 					simulation:queue_insert_entity(b)
 
 					while not U.animation_finished_default(this) do
+						if this.nav_rally.new then
+							break
+						end
 						coroutine.yield()
 					end
 
@@ -4701,7 +4704,7 @@ function scripts.soldier_mecha.update(this, store)
 				local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, am.max_range, am.vis_flags, am.vis_bans)
 
 				if not target then
-				-- block empty
+					am.ts = am.ts + 0.1
 				else
 					am.ts = store.tick_ts
 
@@ -4759,10 +4762,11 @@ function scripts.soldier_mecha.update(this, store)
 					animation_start(this, am.animation_post, nil, store.tick_ts, false, 1)
 
 					while not U.animation_finished_default(this) do
+						if this.nav_rally.new then
+							break
+						end
 						coroutine.yield()
 					end
-
-					am.ts = store.tick_ts
 
 					goto label_67_0
 				end
