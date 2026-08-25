@@ -64,7 +64,6 @@ end
 --- 在第一次初始化 entity_db 时调用，对 entity_db 里的实体运行逻辑进行类似编译的操作，减少运行时的动态分支，以提高脚本执行性能
 function entity_db:precompile()
 	local compiler = require("precompile.interface")
-	compiler:init()
 	perf.tmp_start("precompile")
 	for _, e in pairs(self.entities) do
 		compiler:compile(e)
